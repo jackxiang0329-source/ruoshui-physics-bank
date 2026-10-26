@@ -137,7 +137,11 @@ Qab=s.Rational(3,2)*P0*V00
 Qbc=5*P0*V00
 verify('T008',equal(Qab+Qbc,s.Rational(13,2)*P0*V00) and equal((P0*V00)/(Qab+Qbc),s.Rational(2,13)) and equal(Qab+Qbc-3*P0*V00-s.Rational(5,2)*P0*V00,P0*V00),'矩形循环吸放热、净功和效率一致')
 delta,I0=s.symbols('delta I0',real=True)
-verify('W007',equal(I0*(5+4*s.cos(delta)),I0+4*I0+4*I0*s.cos(delta)),'相干振幅比与干涉光强一致')
+interference7=I0*(5+4*s.cos(delta))
+verify('W007',equal(interference7,I0+4*I0+4*I0*s.cos(delta))
+       and equal(interference7.subs(delta,0),9*I0)
+       and equal(interference7.subs(delta,s.pi),I0),
+       '不等强相干波叠加及最大、最小光强极限值')
 beta8,wd8=s.symbols('beta8 wd8',positive=True)
 Td8=2*s.pi/wd8
 verify('W008',equal(s.exp(-2*beta8*3*Td8),s.exp(-12*s.pi*beta8/wd8)),'同相位间隔三周期能量衰减')
@@ -202,14 +206,20 @@ verify('Q010',equal(gamma10,s.Rational(5,4))
 
 
 # Batch 5: mixed-type problems, one independent formula or physical relation per question.
-vv,theta11=s.symbols('vv theta11',positive=True)
-verify('M011',equal(vv*s.cos(theta11),vv*s.cos(theta11)) and
-       equal(s.sqrt((vv*s.cos(theta11))**2),vv*s.Abs(s.cos(theta11))), '斜抛最高点水平速度不为零且加速度仍为重力')
+vx11,vy11,t11=s.symbols('vx11 vy11 t11',positive=True)
+height11=vy11*t11-g*t11**2/2
+verify('M011',equal(s.diff(height11,t11).subs(t11,vy11/g),0)
+       and equal(s.diff(height11,t11,2),-g)
+       and equal(s.diff(vx11*t11,t11),vx11),
+       '斜抛最高点竖直速度为零、竖直加速度恒为重力且水平速度保持不变')
 slope12=s.Rational(4,5);intercept12=s.Rational(4,25)
 verify('M012',equal(4*s.pi**2/slope12,5*s.pi**2) and
        equal(intercept12/slope12,s.Rational(1,5)),'振子拟合斜率与有效质量')
-q11=s.symbols('q11',positive=True)
-verify('E011',equal((q11/eps)*eps,q11),'高斯总通量仅由包围电荷决定')
+q11,r11=s.symbols('q11 r11',positive=True)
+E11=q11/(4*s.pi*eps*r11**2)
+verify('E011',equal(E11*4*s.pi*r11**2,q11/eps)
+       and equal(s.diff(E11*4*s.pi*r11**2,r11),0),
+       '库仑场通过球面总通量及其对高斯面半径的独立性')
 verify('E012',equal((2*s.log(2))/s.log(2)/s.Rational(2,10**6),10**6),'RC半衰时间、电容与电阻关系')
 verify('T011',equal(s.log(s.Rational(3,4))+s.log(s.Rational(3,2)),s.log(s.Rational(9,8))) and s.log(s.Rational(9,8))>0,'两块恒热容金属接触的总熵增及平衡温度')
 heat_hot=s.Rational(15,100)*4200*(80-40)
