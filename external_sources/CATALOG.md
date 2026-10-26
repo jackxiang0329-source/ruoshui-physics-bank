@@ -4,23 +4,23 @@
 
 | 来源 | 已发现上游题源文件 | 已实际归档 | 文件格式 | 权利与技术限制 |
 |---|---:|---:|---|---|
-| [UBC Open Physics Bank](https://github.com/open-resources/physics_bank) | 897 | 147 | MyST Markdown | 逐题CC BY 4.0或CC BY-NC-SA 4.0；参数、配图和来源原著权利仍需核查 |
+| [UBC Open Physics Bank](https://github.com/open-resources/physics_bank) | 897 | 157 | MyST Markdown | 逐题CC BY 4.0或CC BY-NC-SA 4.0；参数、配图和来源原著权利仍需核查 |
 | [WeBWorK BrockPhysics / University Physics](https://github.com/openwebwork/webwork-open-problem-library) | 214 | 59 | PG | OPL缺省CC BY-NC-SA 3.0，有权利例外；需WeBWorK及宏依赖 |
 | [WeBWorK BrockPhysics / College Physics 热学](https://github.com/openwebwork/webwork-open-problem-library/tree/main/Contrib/BrockPhysics/College_Physics_Urone) | 215 | 21 | PG | 相同默认许可及例外；涉及气体动理论、热传递、热力学 |
-| **合计** | **1,326** | **227** | | **待审核可正式组卷：0** |
+| **合计** | **1,326** | **237** | | **待审核可正式组卷：0** |
 
-**关键区别：** 1,326是从上游固定Git树发现的文件路径，不代表1,326份试题已经拉取。已真正复制到本仓库的是227份，剩余**1,099个候选文件路径尚未下载正文**。不同文件可能包含多小问、相近题、依赖外部媒体或无法直接渲染；不能把文件数当作独立有效题数。
+**关键区别：** 1,326是从上游固定Git树发现的文件路径，不代表1,326份试题已经拉取。已真正复制到本仓库的是237份，剩余**1,089个候选文件路径尚未下载正文**。不同文件可能包含多小问、相近题、依赖外部媒体或无法直接渲染；不能把文件数当作独立有效题数。
 
 ## 文件与索引
 
 - `ubc_opbp/raw/`、`webwork_opl/raw/`、`webwork_thermal/raw/`：真实题目源代码及Markdown，保留原始作者与许可证说明。
 - 各自 `index.json`：逐题ID、Git源版本、blob SHA、版权信号、原始位置、是否有图片或运行依赖。
 - `catalog/upstream_manifest.json`：1,326项上游文件路径清单；`downloaded=true` 才表示本仓库已有对应的题目源文件。
-- [`curation_queue.csv`](curation_queue.csv)：227条分类筛选记录，含力学、热学、电磁学、振动与波动、光学、近代物理6个模块、权利审查和组卷禁用状态。
+- [`curation_queue.csv`](curation_queue.csv)：237条分类筛选记录，含力学、热学、电磁学、振动与波动、光学、近代物理6个模块、权利审查和组卷禁用状态。
 
 ## 完整性与质量状态
 
-经远端Git树检查，227份归档文件全部存在，**227/227份的blob SHA与上游原始文件逐条一致**，未发现完全相同的源文件SHA。此结论只说明当前拷贝的字节准确，不证明题目在物理上正确，也不代表语义级去重已完成。
+经远端Git树检查，237份归档文件全部存在，**237/237份的blob SHA与上游原始文件逐条一致**，未发现完全相同的源文件SHA。此结论只说明当前拷贝的字节准确，不证明题目在物理上正确，也不代表语义级去重已完成。
 
 外部题源**全部 `exam_ready=no`**，主要原因包括：
 
