@@ -85,8 +85,8 @@ tex/questions.tex 与 tex/solutions.tex 使用 ElegantBook 模板，通过 LaTeX
 
 ## 外部大学物理开源题源归档（2026-10-26）
 
-- 已实际导入 **227份外部题源**：147份 [UBC OPBP](https://github.com/open-resources/physics_bank) Markdown、59份WeBWorK大学物理PG题源，另有21份WeBWorK热学PG题源。此前的 [WeBWorK OPL](https://github.com/openwebwork/webwork-open-problem-library) PG程序源。
-- 已登记两大上游目录的 **1326条候选题源路径**（897+214+215），剩余1099条只是待抓取候选，**不可当作已拉取题目**。
+- 已实际导入 **227份外部题源**：147份 [UBC OPBP](https://github.com/open-resources/physics_bank) Markdown、59份 [WeBWorK OPL](https://github.com/openwebwork/webwork-open-problem-library) 大学物理PG题源，以及21份该开放题库的热学PG题源。
+- 已登记三大上游题源目录的 **1326条候选文件路径**（897+214+215），剩余1099条只是待抓取候选，**不可当作已拉取题目**。
 - GitHub原始blob散列校验 **227/227 完全一致**，全量文件路径和状态参见 [外部题源目录](external_sources/CATALOG.md)。
 - **与现有100道原创题严格分开**，外部题源全部未完成去重、答案复核、图片与PG依赖补齐及授权链核验，故目前没有任何外部题源被认定可正式组卷。
 - 可用 `python scripts/sync_external_physics.py --source ubc_opbp --limit 20` 预览下一批题源；需要符合非商业许可证条件后才能加入真实下载参数。使用 `python scripts/external_inventory.py` 检查导入库存。
