@@ -34,6 +34,13 @@ class SafeImportTests(unittest.TestCase):
         self.assertEqual(oer.git_blob_sha(raw),
                          hashlib.sha1(b"blob 6\0hello\n").hexdigest())
 
+    def test_openstax_priority_without_license_assumptions(self):
+        hinted = {"path": "019.Magnetism/OSUP/example.md"}
+        generic = {"path": "004.Kinematics/example.md"}
+        self.assertLess(oer.source_priority(hinted), oer.source_priority(generic))
+        self.assertEqual(oer.license_verdict("## Attribution\nCC BY-NC-SA 4.0")[1],
+                         "restrictive_or_mixed_license")
+
     def test_media_is_never_silently_approved(self):
         self.assertTrue(oer.media_required("assets:\n- figure.png\n"))
         self.assertTrue(oer.media_required('Here: <img src="x.png">'))

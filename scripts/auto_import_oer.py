@@ -12,6 +12,7 @@ import os
 import re
 import unicodedata
 from collections import Counter
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.error import HTTPError, URLError
@@ -96,6 +97,13 @@ def media_required(text):
     if value:
         return True
     return bool(re.search(r"(?m)^assets:\s*\r?\n\s*-\s+\S", text))
+
+
+def source_priority(item):
+    """Prefer recognizable OpenStax / CC-BY candidates; still verify every file."""
+    name = item.get("path", "")
+    hint = bool(re.search(r"OSUP|OpenStax|OSCP", name, re.I))
+    return (0 if hint else 1, 0 if category(name.split("/")[0]) else 1, name)
 
 
 def fetch_bytes(url, timeout):
@@ -219,8 +227,12 @@ def execute(limit, scan_limit, timeout, dry_run=False, root=BASE):
     for source in manifest["sources"]:
         if source["id"] != "ubc_opbp":
             skipped["upstream_default_noncommercial_manual_review"] += 1
-    for item in ubc["files"]:
-        if report["added_count"] >= limit or report["checked_candidates"] >= scan_limit:
+
+    # Pre-filter cheap/known rejections before requesting remote files.
+    # This prevents old NC results from consuming the new, larger network budget.
+    targets = []
+    for item in sorted(ubc["files"], key=source_priority):
+        if len(targets) >= scan_limit:
             break
         if item.get("downloaded"):
             continue
@@ -244,72 +256,91 @@ def execute(limit, scan_limit, timeout, dry_run=False, root=BASE):
             if not dry_run:
                 blocked_cache[key] = {"sha": item["sha"], "reason": reason}
             continue
-        report["checked_candidates"] += 1
-        if dry_run:
-            report["added"].append({"path": rel, "state": "eligible_for_fetch_not_checked"})
-            continue
-        uri = source_url(ubc, rel)
-        try:
-            raw = fetch_bytes(uri, timeout)
-            if git_blob_sha(raw) != item["sha"]:
-                raise ValueError("upstream_git_blob_sha_mismatch")
-            text = raw.decode("utf-8")
-            license_name, reason = license_verdict(text)
-            if not reason and media_required(text):
-                reason = "missing_media_assets_manual_review"
-            if not reason:
-                normalized = canonical(text)
-                normalized_sha = hashlib.sha256(normalized.encode("utf-8")).hexdigest()
-                if not normalized or normalized_sha in known_canonical:
-                    reason = "duplicate_normalized_content"
-            if reason:
-                skipped[reason] += 1
-                blocked_cache[key] = {"sha": item["sha"], "reason": reason}
-                continue
-            id_number += 1
-            pid = PREFIX + "-" + f"{id_number:03d}"
-            dest = root / SOURCE_DIR / "raw" / (pid + ".md")
-            if dest.exists():
-                raise ValueError("unexpected_destination_collision")
-            dest.parent.mkdir(parents=True, exist_ok=True)
-            dest.write_bytes(raw)
-            fullpath = ubc["root"].rstrip("/") + "/" + rel
-            index["records"].append({
-                "id": pid,
-                "path": fullpath,
-                "license": license_name,
-                "license_source": "explicit per-file Attribution; rights-chain review pending",
-                "license_review": "automated_signal_only",
-                "author": author_name(text),
-                "source": source_field(text),
-                "requires_media": False,
-                "source_sha": item["sha"],
-                "source_url": uri.replace("raw.githubusercontent.com/", "github.com/").replace(
-                    "/" + ubc["revision"] + "/", "/blob/" + ubc["revision"] + "/", 1),
-                "topic": rel.split("/")[0],
-                "module": category(rel.split("/")[0]),
-                "format": "ubc-myst-markdown",
-                "review_status": "needs_academic_review",
-                "semantic_dedup": "pending",
-                "import_status": "raw_imported_not_exam_ready",
-                "exam_eligible": False,
-                "copyright_notice_preserved": True,
-            })
-            item["downloaded"] = True
-            known_paths.add(fullpath)
-            known_blobs.add(item["sha"])
-            known_canonical.add(normalized_sha)
-            report["added_count"] += 1
-            report["added"].append({
-                "id": pid, "source": SOURCE_LABELS["ubc_opbp"],
-                "path": rel, "git_blob_sha": item["sha"],
-                "module": category(rel.split("/")[0]), "license": license_name,
-            })
-        except (UnicodeDecodeError, ValueError, URLError, HTTPError,
-                TimeoutError, OSError) as exc:
-            reason = str(exc)[:180] or exc.__class__.__name__
-            skipped["fetch_or_integrity_failure"] += 1
-            report["failures"].append({"source": "ubc_opbp", "path": rel, "reason": reason})
+        targets.append(item)
+
+    report["checked_candidates"] = len(targets)
+    report["candidate_budget"] = scan_limit
+    report["import_budget"] = limit
+    report["fetch_workers"] = 12
+
+    if dry_run:
+        report["added"] = [{"path": x["path"], "state": "eligible_for_fetch_not_checked"}
+                           for x in targets]
+    else:
+        # Download in parallel, then inspect and register in deterministic order.
+        # Never let concurrent threads write manifests/indexes or assign IDs.
+        with ThreadPoolExecutor(max_workers=12) as executor:
+            futures = [(item, source_url(ubc, item["path"]),
+                        executor.submit(fetch_bytes, source_url(ubc, item["path"]), timeout))
+                       for item in targets]
+            for item, uri, future in futures:
+                rel = item["path"]
+                key = ubc["revision"] + ":" + rel
+                try:
+                    raw = future.result()
+                    if git_blob_sha(raw) != item["sha"]:
+                        raise ValueError("upstream_git_blob_sha_mismatch")
+                    text = raw.decode("utf-8")
+                    license_name, reason = license_verdict(text)
+                    if not reason and media_required(text):
+                        reason = "missing_media_assets_manual_review"
+                    if not reason:
+                        normalized = canonical(text)
+                        normalized_sha = hashlib.sha256(normalized.encode("utf-8")).hexdigest()
+                        if not normalized or normalized_sha in known_canonical:
+                            reason = "duplicate_normalized_content"
+                    if reason:
+                        skipped[reason] += 1
+                        blocked_cache[key] = {"sha": item["sha"], "reason": reason}
+                        continue
+                    if report["added_count"] >= limit:
+                        skipped["import_limit_reached"] += 1
+                        continue
+                    id_number += 1
+                    pid = PREFIX + "-" + f"{id_number:03d}"
+                    dest = root / SOURCE_DIR / "raw" / (pid + ".md")
+                    if dest.exists():
+                        raise ValueError("unexpected_destination_collision")
+                    dest.parent.mkdir(parents=True, exist_ok=True)
+                    dest.write_bytes(raw)
+                    fullpath = ubc["root"].rstrip("/") + "/" + rel
+                    index["records"].append({
+                        "id": pid,
+                        "path": fullpath,
+                        "license": license_name,
+                        "license_source": "explicit per-file Attribution; rights-chain review pending",
+                        "license_review": "automated_signal_only",
+                        "author": author_name(text),
+                        "source": source_field(text),
+                        "requires_media": False,
+                        "source_sha": item["sha"],
+                        "source_url": uri.replace("raw.githubusercontent.com/", "github.com/").replace(
+                            "/" + ubc["revision"] + "/", "/blob/" + ubc["revision"] + "/", 1),
+                        "topic": rel.split("/")[0],
+                        "module": category(rel.split("/")[0]),
+                        "format": "ubc-myst-markdown",
+                        "review_status": "needs_academic_review",
+                        "semantic_dedup": "pending",
+                        "import_status": "raw_imported_not_exam_ready",
+                        "exam_eligible": False,
+                        "copyright_notice_preserved": True,
+                    })
+                    item["downloaded"] = True
+                    known_paths.add(fullpath)
+                    known_blobs.add(item["sha"])
+                    known_canonical.add(normalized_sha)
+                    report["added_count"] += 1
+                    report["added"].append({
+                        "id": pid, "source": SOURCE_LABELS["ubc_opbp"],
+                        "path": rel, "git_blob_sha": item["sha"],
+                        "module": category(rel.split("/")[0]), "license": license_name,
+                    })
+                except (UnicodeDecodeError, ValueError, URLError, HTTPError,
+                        TimeoutError, OSError) as exc:
+                    reason = str(exc)[:180] or exc.__class__.__name__
+                    skipped["fetch_or_integrity_failure"] += 1
+                    report["failures"].append({"source": "ubc_opbp", "path": rel,
+                                               "reason": reason})
 
     report["skipped_reasons"] = dict(skipped)
     report["source_additions"] = dict(Counter(x["source"] for x in report["added"]
@@ -337,8 +368,8 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--execute", action="store_true",
                         help="Write verified raw candidates, indexes and run logs.")
-    parser.add_argument("--limit", type=int, default=12, help="Max new candidates each run")
-    parser.add_argument("--scan-limit", type=int, default=60, help="Max fresh candidates checked")
+    parser.add_argument("--limit", type=int, default=100, help="Max new candidates each run")
+    parser.add_argument("--scan-limit", type=int, default=500, help="Max fresh candidates checked")
     parser.add_argument("--timeout", type=int, default=15)
     args = parser.parse_args()
     if not 1 <= args.limit <= 100 or not 1 <= args.scan_limit <= 500:

@@ -23,7 +23,7 @@ concurrency:
 jobs:
   collect-verify-commit:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 28
     steps:
       - name: Checkout default branch
         uses: actions/checkout@v4
@@ -37,7 +37,7 @@ jobs:
       - name: Test safe import and license filters
         run: python -m unittest discover -s tests -p 'test_auto_import_oer.py' -v
       - name: Fetch, verify, deduplicate and classify candidates
-        run: python scripts/auto_import_oer.py --execute --limit 12 --scan-limit 60
+        run: python scripts/auto_import_oer.py --execute --limit 100 --scan-limit 500 --timeout 12
       - name: Rebuild exam-review candidate list (not the approved question bank)
         run: python scripts/rebuild_external_queue.py
       - name: Audit imported raw files
