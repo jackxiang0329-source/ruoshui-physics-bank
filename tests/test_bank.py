@@ -9,7 +9,7 @@ sys.path.insert(0,str(ROOT/'scripts'))
 from build import TOPICS, check, load_bank, render
 from assemble_exam import assemble, assign_points
 from check_review import validate as validate_reviews, digest_for
-from audit_milestone import audit
+from audit_milestone import audit, verify_index_metadata
 
 class BankTests(unittest.TestCase):
     @classmethod
@@ -102,6 +102,22 @@ class BankTests(unittest.TestCase):
         self.assertEqual(summary['defined_formula_checks'],summary['written_questions'])
         self.assertEqual(summary['qa_pending']+summary['qa_approved_declared'],
                          summary['written_questions'])
+
+    def test_csv_field_drift_is_detected_before_publication(self):
+        p=self.items[0]
+        good={
+            'id':p['id'],'topic':p['topic'],'kind':p['kind'],
+            'level':str(p['level']),'estimated_minutes':str(p['estimated_minutes']),
+            'title':p['title'],'tags':';'.join(p['tags']),
+            'quality_status':p['quality_status'],
+        }
+        self.assertEqual([],verify_index_metadata([good],[p]))
+        for changed in ('title','kind','level','estimated_minutes',
+                        'tags','quality_status'):
+            altered=good.copy()
+            altered[changed]='DELIBERATELY_INVALID'
+            errors=verify_index_metadata([altered],[p])
+            self.assertTrue(errors,msg='Audit missed '+changed)
 
     def test_generated_subfolder_relative_paths(self):
         source=render([self.items[0]],False,ROOT/'generated',ROOT)

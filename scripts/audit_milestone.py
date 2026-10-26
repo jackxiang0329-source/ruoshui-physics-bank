@@ -15,6 +15,29 @@ from pathlib import Path
 from build import ROOT, TOPICS, load_bank, check
 
 
+def verify_index_metadata(rows, problems):
+    """Compare CSV values against authoritative per-item metadata, not just IDs."""
+    errors=[]
+    expected_by_id={item['id']: item for item in problems}
+    required=['id','topic','kind','level','estimated_minutes','title','tags','quality_status']
+    for row in rows:
+        pid=row.get('id','')
+        if pid not in expected_by_id:
+            errors.append(f'CSV含未知题号: {pid}')
+            continue
+        item=expected_by_id[pid]
+        expected={
+            'id':pid,'topic':item['topic'],'kind':item['kind'],
+            'level':str(item['level']),'estimated_minutes':str(item['estimated_minutes']),
+            'title':item['title'],'tags':';'.join(item['tags']),
+            'quality_status':item['quality_status'],
+        }
+        for key in required:
+            if row.get(key)!=expected[key]:
+                errors.append(f'{pid}: CSV {key} 与独立元数据不一致')
+    return errors
+
+
 def audit(root=ROOT, minimum=100):
     problems=load_bank(root)
     errors,counts=check(problems,root)
@@ -49,6 +72,15 @@ def audit(root=ROOT, minimum=100):
         errors.append('CSV题号集与单题源不一致')
     if len(rowids)!=len(set(rowids)):
         errors.append('CSV索引重复题号')
+    errors.extend(verify_index_metadata(rows, problems))
+
+    report_file=root/'data'/'qa_report.json'
+    if report_file.exists():
+        report=json.loads(report_file.read_text(encoding='utf-8'))
+        if report.get('problem_count')!=len(problems):
+            errors.append('qa_report.json 的题量与独立题源不一致')
+        if report.get('module_counts')!=dict(counts):
+            errors.append('qa_report.json 的模块数量与独立题源不一致')
 
     source=(root/'scripts'/'check_physics.py').read_text(encoding='utf-8')
     checked=re.findall(r"verify\('([METWOQ]\d{3,5})'",source)
