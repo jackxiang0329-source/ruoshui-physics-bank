@@ -1,134 +1,162 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Build questions/solutions with deterministic order and run structural QA.
-
-Usage: python scripts/build.py [--compile] [--project-root PATH]
-Requires: Python >=3.9. Optional PDF compile: latexmk + XeLaTeX + ctex.
-"""
-import argparse, collections, csv, json, re, shutil, subprocess, sys
+"""Canonical sources: bank/ID/meta.json, bank/ID/question.tex, bank/ID/solution.tex."""
+import argparse
+import collections
+import csv
+import io
+import json
+import os
+import re
+import shutil
+import subprocess
+import sys
 from pathlib import Path
 
-TOPICS=['力学','电磁学','热学','振动与波动','光学','近代物理']
-TEX_PREAMBLE = r'''\documentclass[UTF8,a4paper,11pt]{ctexart}
-\usepackage[a4paper,top=2.35cm,bottom=2.1cm,left=2.3cm,right=2.3cm]{geometry}
-\usepackage{amsmath,amssymb,mathtools,booktabs,array,xcolor}
-\usepackage{fancyhdr,lastpage,hyperref}
-\definecolor{ink}{HTML}{15324B}
-\definecolor{accent}{HTML}{167D8D}
-\definecolor{dim}{HTML}{506778}
-\hypersetup{colorlinks=true,linkcolor=accent,urlcolor=accent,pdfauthor={三千弱水大学物理原创试题库}}
-\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small\color{dim} 三千弱水 · 大学物理原创题库}
-\fancyhead[R]{\small\color{dim} 阶段一 · 样板题}\fancyfoot[C]{\small\thepage/\pageref{LastPage}}
-\renewcommand{\headrulewidth}{0.3pt}
-\setlength{\parindent}{2em}\setlength{\parskip}{.35em}
-\allowdisplaybreaks
-'''
-TEX_END=r'\end{document}'+'\n'
+ROOT = Path(__file__).resolve().parent.parent
+TOPICS = ['力学','电磁学','热学','振动与波动','光学','近代物理']
+TEMPLATE = r"""\documentclass[lang=cn,color=blue,11pt]{elegantbook}
+\usepackage{amsmath,amssymb,mathtools,booktabs}
+\title{大学物理原创试题库}
+\subtitle{__SUBTITLE__}
+\author{三千弱水 · Ruoshui Physics Bank}
+\date{2026年10月}
+\version{0.2}
+\hypersetup{pdftitle={大学物理原创试题库 · __SUBTITLE__}}
+\begin{document}
+\maketitle
+\tableofcontents
+\mainmatter
+__BODY__
+\end{document}
+"""
 
+def load_bank(root=ROOT):
+    items = []
+    for path in sorted((root/'bank').glob('*/meta.json')):
+        item=json.loads(path.read_text(encoding='utf-8'))
+        item['_dir']=path.parent
+        items.append(item)
+    return items
 
-def cover(is_solution,n):
-    name='参考解答与推导' if is_solution else '试题册'
-    sub='Solutions and Derivations' if is_solution else 'Original Examination Problems'
-    return r'''\begin{titlepage}
-\thispagestyle{empty}
-\vspace*{1.5cm}
-{\color{accent}\rule{\linewidth}{2.4pt}}
-\vspace{2.1cm}
-\begin{center}
-{\fontsize{32}{42}\selectfont\bfseries\color{ink} 大学物理原创试题库}\par
-\vspace{.55cm}
-{\fontsize{21}{30}\selectfont\color{ink} '''+name+r'''}\par
-\vspace{.35cm}
-{\large\color{dim} '''+sub+r'''}\par
-\vspace{2.0cm}
-{\Huge\color{accent}\bfseries '''+str(n)+r'''\quad 道}\par
-\vspace{.65cm}
-{\large 力学 · 电磁学 · 热学 · 振动与波动 · 光学 · 近代物理}\par
-\vspace{1.25cm}
-{\color{dim}\rule{.55\linewidth}{.6pt}}\par
-\vspace{.8cm}
-{\large 三千弱水 · Ruoshui Physics Bank}\par
-\vspace{.3cm}
-{\color{dim}\small 2026 年 10 月 · 第一批样板 · 不代表六轮人工质检已完成}\par
-\end{center}
-\vfill
-{\color{accent}\rule{\linewidth}{2.4pt}}
-\end{titlepage}
-'''
-
-
-def check(problems):
+def check(items,root=ROOT):
     errors=[]
-    ids=[p.get('id','') for p in problems]
-    counts=collections.Counter(p.get('topic','') for p in problems)
-    if len(set(ids))!=len(ids): errors.append('题目ID重复')
-    if len(set(p.get('question','').strip() for p in problems))!=len(problems): errors.append('题面完全重复')
-    for p in problems:
+    ids=[p.get('id','') for p in items]
+    counts=collections.Counter(p.get('topic','') for p in items)
+    if not items: errors.append('题库为空')
+    if len(set(ids))!=len(ids): errors.append('ID重复')
+    seen=set()
+    for p in items:
         uid=p.get('id','?')
-        if not re.fullmatch(r'[ME T WOQ]'.replace(' ', '')+r'\d{3}', uid): errors.append(f'{uid}: ID格式')
-        if p.get('topic') not in TOPICS: errors.append(f'{uid}: 未知知识模块')
-        if not isinstance(p.get('level'),int) or not 1<=p['level']<=5: errors.append(f'{uid}: 难度无效')
-        if not isinstance(p.get('estimated_minutes'),int) or not 1<=p['estimated_minutes']<=120: errors.append(f'{uid}: 预计用时无效')
-        if not isinstance(p.get('tags'),list) or not p['tags'] or not all(isinstance(x,str) and x.strip() for x in p['tags']): errors.append(f'{uid}: 知识点标签无效')
-        for k in ['title','question','solution','answer','quality_status','kind']:
-            if not str(p.get(k,'')).strip(): errors.append(f'{uid}: 缺失 {k}')
-        for k in ['question','solution','answer']:
-            s=p.get(k,'')
-            if s.count('$')%2: errors.append(f'{uid}: {k} 行内数学定界符不成对')
-            if '\\write18' in s or '\\input{' in s or '\\include{' in s: errors.append(f'{uid}: 不允许外部TeX命令')
-    if any(counts.get(x,0)==0 for x in TOPICS): errors.append('六大模块未全部覆盖')
+        if not re.fullmatch(r'[METWOQ]\d{3,5}',uid):
+            errors.append(uid+': ID无效')
+        folder=root/'bank'/uid
+        if p.get('_dir')!=folder: errors.append(uid+': 目录不一致')
+        if p.get('topic') not in TOPICS: errors.append(uid+': 模块无效')
+        if type(p.get('level')) is not int or not 1<=p['level']<=5: errors.append(uid+': 难度无效')
+        if type(p.get('estimated_minutes')) is not int or not 1<=p['estimated_minutes']<=120: errors.append(uid+': 用时无效')
+        if not isinstance(p.get('tags'),list) or not p['tags']: errors.append(uid+': 标签缺失')
+        if p.get('format')!='latex-fragment-v1': errors.append(uid+': 片段格式无效')
+        for field in ('title','kind','quality_status','answer'):
+            if not str(p.get(field,'')).strip(): errors.append(uid+': 缺失 '+field)
+        for section in ('question','solution'):
+            fragment=folder/(section+'.tex')
+            if not fragment.exists():
+                errors.append(uid+': 缺少 '+fragment.name)
+                continue
+            body=fragment.read_text(encoding='utf-8')
+            if not body.strip(): errors.append(uid+': 片段为空')
+            if body.count('$')%2: errors.append(uid+': 数学定界符可能不平衡')
+            forbidden=(r'\write18',r'\input',r'\include',r'\documentclass',r'\openout',r'\catcode',r'\begin{document}')
+            if any(f in body for f in forbidden): errors.append(uid+': 片段含不安全或非独立TeX命令')
+            if section=='question':
+                normalized=re.sub(r'\s+','',re.sub(r'(?m)^%.*$','',body))
+                if normalized in seen: errors.append(uid+': 题面完全重复')
+                seen.add(normalized)
     return errors,counts
 
+def escape(text):
+    special={'&':r'\&','%':r'\%','$':r'\$','#':r'\#','_':r'\_','{':r'\{','}':r'\}'}
+    return ''.join(special.get(x,x) for x in str(text))
 
-def render(problems,has_solution):
-    title='大学物理原创试题库 · 参考解答' if has_solution else '大学物理原创试题库 · 试题'
-    out=TEX_PREAMBLE+'\\hypersetup{pdftitle={'+title+'}}\n\\begin{document}\n'+cover(has_solution,len(problems))
-    out+=r'\tableofcontents\clearpage'+'\n'
+def render(items,with_solutions=False,output_dir=None,root=ROOT):
+    output_dir=(output_dir or root/'tex').resolve()
+    subtitle='参考解答与推导' if with_solutions else '题目选编'
+    lines=[]
     for topic in TOPICS:
-        ps=[p for p in problems if p['topic']==topic]
-        out+='\\section{'+topic+'}\n'
-        if not ps:
-            continue
-        for p in ps:
-            out+=r'\noindent{\large\bfseries\color{ink} '+p['id']+' · '+p['title']+r'}\quad{\small\color{dim}[难度 '+str(p['level'])+' / 5 · '+p['kind']+r']}\par'+'\n'
-            out+=r'\noindent\textbf{题目}：'+p['question']+'\n'
-            if has_solution:
-                out+=r'\par\noindent\textbf{解答}：'+p['solution']+'\n'
-                out+=r'\par\noindent\textbf{结论}：\(\displaystyle '+p['answer']+r'\)\par'+'\n'
-            out+=r'\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}'+'\n'
-    return out+TEX_END
+        group=sorted((p for p in items if p['topic']==topic),key=lambda p:p['id'])
+        if not group: continue
+        lines.extend(['\\chapter{'+topic+'}',''])
+        for p in group:
+            uid=p['id']
+            lines.append('\\noindent{\\large\\bfseries 【'+uid+'】 '+escape(p['title'])+
+                         '}\\quad{\\small 难度 '+str(p['level'])+'/5 · '+escape(p['kind'])+'}\\par')
+            relative=(root/'bank'/uid/'question.tex')
+            lines.append('\\noindent\\textbf{题目：}\\input{'+Path(os.path.relpath(relative,output_dir)).as_posix()+'}')
+            if with_solutions:
+                relative=(root/'bank'/uid/'solution.tex')
+                lines.append('\\par\\noindent\\textbf{解答：}\\input{'+Path(os.path.relpath(relative,output_dir)).as_posix()+'}')
+                lines.append('\\par\\noindent\\textbf{答案：}\\(\\displaystyle '+p['answer']+'\\)\\par')
+            lines.append('\\par\\smallskip\\noindent\\hrulefill\\par\\medskip')
+    return TEMPLATE.replace('__SUBTITLE__',subtitle).replace('__BODY__','\n'.join(lines))
 
+def render_index(items):
+    buf=io.StringIO(newline='')
+    w=csv.writer(buf)
+    w.writerow(['id','topic','kind','level','estimated_minutes','title','tags','quality_status'])
+    for p in sorted(items,key=lambda p:(TOPICS.index(p['topic']),p['id'])):
+        w.writerow([p['id'],p['topic'],p['kind'],p['level'],p['estimated_minutes'],
+                    p['title'],';'.join(p['tags']),p['quality_status']])
+    return '\ufeff'+buf.getvalue()
 
 def main():
-    parser=argparse.ArgumentParser()
-    parser.add_argument('--compile',action='store_true',help='Compile pdf with latexmk/xelatex')
-    parser.add_argument('--project-root',type=Path,default=Path(__file__).resolve().parent.parent)
-    args=parser.parse_args(); root=args.project_root.resolve()
-    problems=json.loads((root/'data/problems.json').read_text(encoding='utf-8'))
-    errors,counts=check(problems)
+    ap=argparse.ArgumentParser()
+    ap.add_argument('--check',action='store_true',help='check versioned masters match individual items')
+    ap.add_argument('--compile',action='store_true',help='compile with XeLaTeX')
+    ap.add_argument('--project-root',type=Path,default=ROOT)
+    args=ap.parse_args()
+    root=args.project_root.resolve()
+    items=load_bank(root)
+    errors,counts=check(items,root)
     if errors:
-        print('\n'.join('ERROR: '+x for x in errors),file=sys.stderr); return 1
-    (root/'tex').mkdir(exist_ok=True,parents=True)
-    (root/'pdf').mkdir(exist_ok=True,parents=True)
-    for flag,name in [(False,'questions'),(True,'solutions')]:
-        (root/'tex'/f'{name}.tex').write_text(render(problems,flag),encoding='utf-8')
-    with (root/'data/index.csv').open('w',encoding='utf-8-sig',newline='') as f:
-        w=csv.writer(f);w.writerow(['id','topic','kind','level','estimated_minutes','title','tags','quality_status'])
-        w.writerows([p['id'],p['topic'],p['kind'],p['level'],p['estimated_minutes'],p['title'],';'.join(p['tags']),p['quality_status']] for p in problems)
-    report={'problem_count':len(problems),'module_counts':dict(counts),'schema_check':'passed','id_uniqueness':'passed','exact_question_dedup':'passed','latex_math_delimiters':'passed','compile_status':'not_requested','independent_solution_review':'pending','textbook_fulltext_comparison':'not_performed','six_round_quality_review':'not_performed'}
+        print('\n'.join('ERROR: '+err for err in errors),file=sys.stderr)
+        return 1
+    outputs={
+        root/'tex'/'questions.tex': render(items,False,root/'tex',root),
+        root/'tex'/'solutions.tex': render(items,True,root/'tex',root),
+        root/'data'/'index.csv': render_index(items)}
+    if args.check:
+        missing=[str(f.relative_to(root)) for f,content in outputs.items()
+                 if not f.exists() or f.read_text(encoding='utf-8')!=content]
+        if missing:
+            print('STALE generated documents: '+', '.join(missing),file=sys.stderr)
+            return 2
+    else:
+        for f,content in outputs.items():
+            f.parent.mkdir(parents=True,exist_ok=True)
+            f.write_text(content,encoding='utf-8')
+    report={'problem_count':len(items),'module_counts':dict(counts),'schema_check':'passed',
+            'template':'ElegantBook v4.7','source':'bank/ID/*.tex',
+            'independent_solution_review':'pending','six_round_quality_review':'not_performed',
+            'compile_status':'not_requested'}
     if args.compile:
-        if not shutil.which('latexmk'): print('ERROR: latexmk not found',file=sys.stderr); return 2
-        for name in ['questions','solutions']:
-            cmd=['latexmk','-xelatex','-interaction=nonstopmode','-halt-on-error','-file-line-error','-outdir='+str(root/'pdf'),str(root/'tex'/f'{name}.tex')]
-            proc=subprocess.run(cmd,cwd=root/'tex',capture_output=True,text=True)
-            if proc.returncode:
-                print(proc.stdout[-3500:],file=sys.stderr);print(proc.stderr[-1000:],file=sys.stderr)
-                report['compile_status']=f'failed_at_{name}'
-                (root/'data/qa_report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
-                return 3
+        if args.check: ap.error('--compile cannot be combined with --check')
+        if not shutil.which('latexmk'):
+            print('latexmk executable missing',file=sys.stderr)
+            return 3
+        for basename in ('questions','solutions'):
+            process=subprocess.run(['latexmk','-xelatex','-interaction=nonstopmode',
+                                    '-halt-on-error',basename+'.tex'],
+                                   cwd=root/'tex',capture_output=True,text=True)
+            if process.returncode:
+                print(process.stdout[-5000:]+'\n'+process.stderr[-1000:],file=sys.stderr)
+                return 4
         report['compile_status']='passed'
-    (root/'data/qa_report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    if not args.check:
+        (root/'data'/'qa_report.json').write_text(
+            json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(report,ensure_ascii=False,indent=2))
     return 0
 
-if __name__=='__main__':sys.exit(main())
+if __name__=='__main__':
+    sys.exit(main())

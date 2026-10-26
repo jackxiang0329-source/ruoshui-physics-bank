@@ -1,156 +1,133 @@
-\documentclass[UTF8,a4paper,11pt]{ctexart}
-\usepackage[a4paper,top=2.35cm,bottom=2.1cm,left=2.3cm,right=2.3cm]{geometry}
-\usepackage{amsmath,amssymb,mathtools,booktabs,array,xcolor}
-\usepackage{fancyhdr,lastpage,hyperref}
-\definecolor{ink}{HTML}{15324B}
-\definecolor{accent}{HTML}{167D8D}
-\definecolor{dim}{HTML}{506778}
-\hypersetup{colorlinks=true,linkcolor=accent,urlcolor=accent,pdfauthor={三千弱水大学物理原创试题库}}
-\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small\color{dim} 三千弱水 · 大学物理原创题库}
-\fancyhead[R]{\small\color{dim} 阶段一 · 样板题}\fancyfoot[C]{\small\thepage/\pageref{LastPage}}
-\renewcommand{\headrulewidth}{0.3pt}
-\setlength{\parindent}{2em}\setlength{\parskip}{.35em}
-\allowdisplaybreaks
-\hypersetup{pdftitle={大学物理原创试题库 · 试题}}
+\documentclass[lang=cn,color=blue,11pt]{elegantbook}
+\usepackage{amsmath,amssymb,mathtools,booktabs}
+\title{大学物理原创试题库}
+\subtitle{题目选编}
+\author{三千弱水 · Ruoshui Physics Bank}
+\date{2026年10月}
+\version{0.2}
+\hypersetup{pdftitle={大学物理原创试题库 · 题目选编}}
 \begin{document}
-\begin{titlepage}
-\thispagestyle{empty}
-\vspace*{1.5cm}
-{\color{accent}\rule{\linewidth}{2.4pt}}
-\vspace{2.1cm}
-\begin{center}
-{\fontsize{32}{42}\selectfont\bfseries\color{ink} 大学物理原创试题库}\par
-\vspace{.55cm}
-{\fontsize{21}{30}\selectfont\color{ink} 试题册}\par
-\vspace{.35cm}
-{\large\color{dim} Original Examination Problems}\par
-\vspace{2.0cm}
-{\Huge\color{accent}\bfseries 36\quad 道}\par
-\vspace{.65cm}
-{\large 力学 · 电磁学 · 热学 · 振动与波动 · 光学 · 近代物理}\par
-\vspace{1.25cm}
-{\color{dim}\rule{.55\linewidth}{.6pt}}\par
-\vspace{.8cm}
-{\large 三千弱水 · Ruoshui Physics Bank}\par
-\vspace{.3cm}
-{\color{dim}\small 2026 年 10 月 · 第一批样板 · 不代表六轮人工质检已完成}\par
-\end{center}
-\vfill
-{\color{accent}\rule{\linewidth}{2.4pt}}
-\end{titlepage}
-\tableofcontents\clearpage
-\section{力学}
-\noindent{\large\bfseries\color{ink} M001 · 加速电梯中的落体}\quad{\small\color{dim}[难度 2 / 5 · 计算题]}\par
-\noindent\textbf{题目}：一电梯以恒定加速度 $a>0$ 竖直向上运动。相对电梯静止的小球从距地板 $h$ 处无初速释放。忽略空气阻力，求小球落到地板的时间。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
-\noindent{\large\bfseries\color{ink} M002 · 传送带上的滑移}\quad{\small\color{dim}[难度 2 / 5 · 计算题]}\par
-\noindent\textbf{题目}：水平传送带以恒速 $v>0$ 运动，质量为 $m$ 的物块轻放在带上，初速为零。动摩擦因数为 $\mu>0$，求达到带速所需时间和其间物块相对传送带的滑移距离。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
-\noindent{\large\bfseries\color{ink} M003 · 圆柱纯滚动下坡}\quad{\small\color{dim}[难度 3 / 5 · 推导题]}\par
-\noindent\textbf{题目}：质量为 $m$、半径为 $R$ 的均匀实心圆柱，在倾角 $\theta$ 的粗糙斜面上由静止无滑动滚下，求质心加速度；下降竖直高度 $H$ 后的速度。设静摩擦足够大。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
-\noindent{\large\bfseries\color{ink} M004 · 完全非弹性碰撞能损}\quad{\small\color{dim}[难度 2 / 5 · 计算题]}\par
-\noindent\textbf{题目}：光滑水平面上，质量为 $m$ 的小车以速度 $v$ 撞上静止的质量为 $2m$ 的小车，碰后两车粘在一起。求共同速度及损失的机械能。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
-\noindent{\large\bfseries\color{ink} M005 · 位置依赖的驱动力与末速}\quad{\small\color{dim}[难度 3 / 5 · 计算题]}\par
-\noindent\textbf{题目}：质量为 $m>0$ 的质点在水平光滑直轨道上运动，受沿正 $x$ 方向的力 $F(x)=kx$（$k>0$）。质点从 $x=a>0$ 静止出发，运动至 $x=b>a$。求到达 $b$ 时的速率和通过该区间的功。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
-\noindent{\large\bfseries\color{ink} M006 · 计入滑轮转动惯量的阿特伍德机}\quad{\small\color{dim}[难度 4 / 5 · 推导题]}\par
-\noindent\textbf{题目}：两物体质量分别为 $m_1,m_2$，且 $m_2>m_1>0$，由质量可忽略且不可伸长的细绳跨过半径为 $R$、转动惯量为 $I$ 的滑轮连接。绳不打滑，滑轮轴无摩擦，求加速度及两侧张力。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
-\section{电磁学}
-\noindent{\large\bfseries\color{ink} E001 · 非均匀带电细杆的轴向场}\quad{\small\color{dim}[难度 4 / 5 · 推导题]}\par
-\noindent\textbf{题目}：细杆沿 $x$ 轴从 $x=0$ 延至 $L$，线电荷密度 $\lambda(x)=\lambda_0 x/L$，其中 $\lambda_0>0$。求 $x=2L$ 处的电场大小及方向。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
-\noindent{\large\bfseries\color{ink} E002 · 无限长均匀带电圆柱}\quad{\small\color{dim}[难度 3 / 5 · 推导题]}\par
-\noindent\textbf{题目}：半径 $R$ 的无限长非导体实心圆柱均匀带正体电荷密度 $\rho$。忽略端部效应，分别求柱内 $r<R$、柱外 $r>R$ 的电场。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
-\noindent{\large\bfseries\color{ink} E003 · 断开电源后的介质插入}\quad{\small\color{dim}[难度 2 / 5 · 概念推导题]}\par
-\noindent\textbf{题目}：一平行板电容器先充电，随后与电源断开。忽略边缘效应，将相对介电常数为 $\kappa>1$ 的均匀电介质完全填入极板间。求电容、电压及储能相对原值的比。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
-\noindent{\large\bfseries\color{ink} E004 · 匀强磁场中的旋转线圈}\quad{\small\color{dim}[难度 2 / 5 · 计算题]}\par
-\noindent\textbf{题目}：单匝面积为 $A$、总电阻为 $R$ 的矩形闭合线圈，以角速度 $\omega$ 绕线圈平面内的一条轴匀速转动。匀强磁场大小为 $B$。在 $t=0$ 时磁场与线圈法向平行，求感应电动势与电流。忽略自感。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
-\noindent{\large\bfseries\color{ink} E005 · 同轴圆柱电容器的单位长度电容}\quad{\small\color{dim}[难度 3 / 5 · 推导题]}\par
-\noindent\textbf{题目}：两同轴理想导体圆柱半径为 $a$、$b$（$0<a<b$），长度 $L\gg b$，其间充满介电常数为 $\varepsilon$ 的线性均匀介质。内外导体分别带单位长度电荷 $+\lambda$、$-\lambda$，忽略端部效应，求单位长度电容及电场能量。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
-\noindent{\large\bfseries\color{ink} E006 · 时变圆形磁场激发的环形电场}\quad{\small\color{dim}[难度 4 / 5 · 推导题]}\par
-\noindent\textbf{题目}：在理想化模型中，沿 $z$ 方向的均匀磁场仅存在于半径 $R$ 的圆柱区域 $r<R$ 内，其磁感应强度按 $B(t)=B_0+\beta t$ 变化，圆柱外磁场为零。忽略端部效应。求空间中感应电场的环向分量 $E_\varphi(r)$，规定正方向为从 $+z$ 方向观察的逆时针方向。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
-\section{热学}
-\noindent{\large\bfseries\color{ink} T001 · 绝热系统中的热平衡}\quad{\small\color{dim}[难度 3 / 5 · 推导题]}\par
-\noindent\textbf{题目}：一绝热容器由固定、导热但不透气的隔板分成两室，内装同一种单原子理想气体，物质的量为 $n_1,n_2$，初温为 $T_1,T_2$。求最终共同温度。两室体积保持不变。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
-\noindent{\large\bfseries\color{ink} T002 · 卡诺热机热量核算}\quad{\small\color{dim}[难度 2 / 5 · 计算题]}\par
-\noindent\textbf{题目}：理想卡诺热机在 $T_h=500\,\mathrm K$ 和 $T_c=300\,\mathrm K$ 的两个热源间工作，每循环输出净功 $400\,\mathrm J$。求效率、从高温热源吸热及向低温热源放热。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
-\noindent{\large\bfseries\color{ink} T003 · 单原子气体的等压升温}\quad{\small\color{dim}[难度 2 / 5 · 推导题]}\par
-\noindent\textbf{题目}：$n$ mol 单原子理想气体在压强不变时，由温度 $T_0$ 膨胀至体积为原来的两倍。求气体对外做功 $W$、内能增量 $\Delta U$ 和吸热量 $Q$。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
-\noindent{\large\bfseries\color{ink} T004 · 理想气体的自由膨胀}\quad{\small\color{dim}[难度 3 / 5 · 推导题]}\par
-\noindent\textbf{题目}：容器绝热且刚性，其中 $n$ mol 理想气体初占体积 $V$，抽去隔板后向真空自由膨胀至 $2V$。求温度变化、内能变化及熵变。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
-\noindent{\large\bfseries\color{ink} T005 · 理想气体可逆等温压缩}\quad{\small\color{dim}[难度 2 / 5 · 计算题]}\par
-\noindent\textbf{题目}：$n$ 摩尔理想气体在温度 $T>0$ 下准静态等温地从体积 $V_1$ 压缩到 $V_2<V_1$。采用“气体对外做功为正”的约定，求气体做功、吸收的热量及内能变化。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
-\noindent{\large\bfseries\color{ink} T006 · 等热容量气体的隔热热接触}\quad{\small\color{dim}[难度 4 / 5 · 推导题]}\par
-\noindent\textbf{题目}：两个刚性容器分别装有相同物质的量 $n$ 的同种理想气体，定容摩尔热容相同且为常数 $C_V$。初温为 $T_1,T_2>0$。打开两容器之间的导热连接（无气体交换），整套装置与外界绝热。求最终共同温度及体系的总熵变。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
-\section{振动与波动}
-\noindent{\large\bfseries\color{ink} W001 · 行波的传播方向}\quad{\small\color{dim}[难度 2 / 5 · 计算题]}\par
-\noindent\textbf{题目}：一平面简谐波位移为 $y(x,t)=0.020\cos(4\pi x-20\pi t)$（SI制）。求振幅、波长、频率、波速及传播方向。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
-\noindent{\large\bfseries\color{ink} W002 · 弹簧连接方式与周期}\quad{\small\color{dim}[难度 2 / 5 · 推导题]}\par
-\noindent\textbf{题目}：两根劲度系数均为 $k$ 的轻弹簧，分别以串联和并联方式连接相同的质量 $m$，作水平无阻尼简谐运动。求两种方式的周期之比。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
-\noindent{\large\bfseries\color{ink} W003 · 运动声源的多普勒效应}\quad{\small\color{dim}[难度 2 / 5 · 计算题]}\par
-\noindent\textbf{题目}：静止观察者面前，一频率为 $500\,\mathrm{Hz}$ 的声源沿连线方向以 $20\,\mathrm{m/s}$ 向观察者匀速运动。声速为 $340\,\mathrm{m/s}$，求观察频率。忽略风。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
-\noindent{\large\bfseries\color{ink} W004 · 两端固定弦的第三谐波}\quad{\small\color{dim}[难度 2 / 5 · 概念推导题]}\par
-\noindent\textbf{题目}：长度为 $L$ 的均匀细弦两端固定，横波速度为 $v$。求第三谐波频率及弦内部（不含两端）有多少个节点。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
-\noindent{\large\bfseries\color{ink} W005 · 双频振动的拍频}\quad{\small\color{dim}[难度 2 / 5 · 推导题]}\par
-\noindent\textbf{题目}：同一点上叠加两同振幅、同初相、振动方向相同的简谐振动 $x_1=A\cos(2\pi f_1t)$、$x_2=A\cos(2\pi f_2t)$，其中 $f_1,f_2>0$ 且很接近。写出合振动，并求拍频。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
-\noindent{\large\bfseries\color{ink} W006 · 拉紧弦的本征频率}\quad{\small\color{dim}[难度 3 / 5 · 推导题]}\par
-\noindent\textbf{题目}：一均匀细弦长为 $L$，两端固定，张力为 $F$，线密度为 $\mu$，小幅横振的波速为 $v=\sqrt{F/\mu}$。求全部非零固有频率、相邻固有频率间距以及第三阶模态的弦内节点个数。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
-\section{光学}
-\noindent{\large\bfseries\color{ink} O001 · 两次相位反转的薄膜反射}\quad{\small\color{dim}[难度 3 / 5 · 推导题]}\par
-\noindent\textbf{题目}：空气、折射率为 $n_f=1.50$ 的薄膜、折射率为 $n_s=1.70$ 的基底依次叠放。波长为 $600\,\mathrm{nm}$ 的单色光垂直入射，求反射光第一次出现非零膜厚的相长干涉对应的最小膜厚。忽略多次反射。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
-\noindent{\large\bfseries\color{ink} O002 · 单缝衍射首暗纹}\quad{\small\color{dim}[难度 2 / 5 · 计算题]}\par
-\noindent\textbf{题目}：波长 $500\,\mathrm{nm}$ 的单色光垂直照射宽度为 $0.20\,\mathrm{mm}$ 的单缝，观察屏位于缝后 $2.0\,\mathrm m$。在小角近似下求中央亮纹中心到第一级暗纹的距离。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
-\noindent{\large\bfseries\color{ink} O003 · 杨氏双缝条纹间距}\quad{\small\color{dim}[难度 2 / 5 · 计算题]}\par
-\noindent\textbf{题目}：两缝间距为 $d=0.50\,\mathrm{mm}$，屏距 $L=2.0\,\mathrm m$，入射真空波长为 $500\,\mathrm{nm}$ 的相干单色光，且小角近似成立。求相邻明纹间距。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
-\noindent{\large\bfseries\color{ink} O004 · 布儒斯特角}\quad{\small\color{dim}[难度 2 / 5 · 计算题]}\par
-\noindent\textbf{题目}：光从折射率为 $n_1=1$ 的介质射向折射率为 $n_2=\sqrt3$ 的非吸收介质，求使反射光完全线偏振的入射角（布儒斯特角）。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
-\noindent{\large\bfseries\color{ink} O005 · 凸透镜的物像位置和放大率}\quad{\small\color{dim}[难度 2 / 5 · 计算题]}\par
-\noindent\textbf{题目}：薄凸透镜焦距为 $f>0$，一实物垂直光轴放在透镜前方 $s=3f$ 处，采用近轴成像。求像距、像的性质和横向放大率。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
-\noindent{\large\bfseries\color{ink} O006 · 双缝一侧插入透明薄片的条纹平移}\quad{\small\color{dim}[难度 3 / 5 · 推导题]}\par
-\noindent\textbf{题目}：双缝间距 $d$，屏距 $D\gg d$，用真空中波长为 $\lambda$ 的单色光照明。在一条缝前插入厚度为 $t$、折射率为 $n>1$ 的均匀薄片。忽略薄片引起的折射几何偏转并采用小角度近似，求干涉条纹在屏上平移的距离大小和对应的条纹数。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
-\section{近代物理}
-\noindent{\large\bfseries\color{ink} Q001 · 光电效应截止电压}\quad{\small\color{dim}[难度 2 / 5 · 计算题]}\par
-\noindent\textbf{题目}：某金属逸出功为 $2.0\,\mathrm{eV}$，照射光子能量为 $3.0\,\mathrm{eV}$。求光电子最大初动能及遏止电压的大小。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
-\noindent{\large\bfseries\color{ink} Q002 · 加速电子的德布罗意波长}\quad{\small\color{dim}[难度 3 / 5 · 计算题]}\par
-\noindent\textbf{题目}：电子从静止出发，经 $150\,\mathrm V$ 电势差加速。忽略相对论修正，求其德布罗意波长。取 $h=6.626\times10^{-34}\,\mathrm{J\,s}$、$m_e=9.109\times10^{-31}\,\mathrm{kg}$、$e=1.602\times10^{-19}\,\mathrm C$。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
-\noindent{\large\bfseries\color{ink} Q003 · 一维无限深势阱跃迁}\quad{\small\color{dim}[难度 3 / 5 · 推导题]}\par
-\noindent\textbf{题目}：质量为 $m$ 的粒子处于宽度为 $L$ 的一维无限深势阱中，能级为 $E_n=n^2\pi^2\hbar^2/(2mL^2)$。求粒子由 $n=2$ 跃迁到 $n=1$ 时发射光子的频率。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
-\noindent{\large\bfseries\color{ink} Q004 · 放射性衰变与活度}\quad{\small\color{dim}[难度 2 / 5 · 计算题]}\par
-\noindent\textbf{题目}：某放射性核素的半衰期为 $T_{1/2}$，初始核数为 $N_0$、初始活度为 $A_0$。经过两个半衰期后，求剩余核数、累积衰变核数和活度。假设无新核产生。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
-\noindent{\large\bfseries\color{ink} Q005 · 高速不稳定粒子的存活比例}\quad{\small\color{dim}[难度 3 / 5 · 推导题]}\par
-\noindent\textbf{题目}：某不稳定粒子的固有平均寿命为 $\tau_0$，相对实验室以恒速 $v=\beta c$（$0<\beta<1$）直线运动，其固有时衰变服从指数分布。求实验室中平均寿命、平均飞行距离，以及飞过长度 $L$ 后尚未衰变的比例。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
-\noindent{\large\bfseries\color{ink} Q006 · 改变照射频率后的遏止电压}\quad{\small\color{dim}[难度 2 / 5 · 计算题]}\par
-\noindent\textbf{题目}：某金属光电阈频为 $f_0$。用频率为 $f_1>f_0$ 的单色光照射时，遏止电压为 $U_1$。保持其他条件不变，将入射频率提高到 $f_2>f_1$，求新遏止电压及增量。电子电荷量的绝对值为 $e$。
-\vspace{1.0em}\par\noindent{\color{accent}\rule{\linewidth}{.35pt}}\vspace{.8em}
+\maketitle
+\tableofcontents
+\mainmatter
+\chapter{力学}
+
+\noindent{\large\bfseries 【M001】 加速电梯中的落体}\quad{\small 难度 2/5 · 计算题}\par
+\noindent\textbf{题目：}\input{../bank/M001/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
+\noindent{\large\bfseries 【M002】 传送带上的滑移}\quad{\small 难度 2/5 · 计算题}\par
+\noindent\textbf{题目：}\input{../bank/M002/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
+\noindent{\large\bfseries 【M003】 圆柱纯滚动下坡}\quad{\small 难度 3/5 · 推导题}\par
+\noindent\textbf{题目：}\input{../bank/M003/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
+\noindent{\large\bfseries 【M004】 完全非弹性碰撞能损}\quad{\small 难度 2/5 · 计算题}\par
+\noindent\textbf{题目：}\input{../bank/M004/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
+\noindent{\large\bfseries 【M005】 位置依赖的驱动力与末速}\quad{\small 难度 3/5 · 计算题}\par
+\noindent\textbf{题目：}\input{../bank/M005/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
+\noindent{\large\bfseries 【M006】 计入滑轮转动惯量的阿特伍德机}\quad{\small 难度 4/5 · 推导题}\par
+\noindent\textbf{题目：}\input{../bank/M006/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
+\chapter{电磁学}
+
+\noindent{\large\bfseries 【E001】 非均匀带电细杆的轴向场}\quad{\small 难度 4/5 · 推导题}\par
+\noindent\textbf{题目：}\input{../bank/E001/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
+\noindent{\large\bfseries 【E002】 无限长均匀带电圆柱}\quad{\small 难度 3/5 · 推导题}\par
+\noindent\textbf{题目：}\input{../bank/E002/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
+\noindent{\large\bfseries 【E003】 断开电源后的介质插入}\quad{\small 难度 2/5 · 概念推导题}\par
+\noindent\textbf{题目：}\input{../bank/E003/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
+\noindent{\large\bfseries 【E004】 匀强磁场中的旋转线圈}\quad{\small 难度 2/5 · 计算题}\par
+\noindent\textbf{题目：}\input{../bank/E004/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
+\noindent{\large\bfseries 【E005】 同轴圆柱电容器的单位长度电容}\quad{\small 难度 3/5 · 推导题}\par
+\noindent\textbf{题目：}\input{../bank/E005/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
+\noindent{\large\bfseries 【E006】 时变圆形磁场激发的环形电场}\quad{\small 难度 4/5 · 推导题}\par
+\noindent\textbf{题目：}\input{../bank/E006/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
+\chapter{热学}
+
+\noindent{\large\bfseries 【T001】 绝热系统中的热平衡}\quad{\small 难度 3/5 · 推导题}\par
+\noindent\textbf{题目：}\input{../bank/T001/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
+\noindent{\large\bfseries 【T002】 卡诺热机热量核算}\quad{\small 难度 2/5 · 计算题}\par
+\noindent\textbf{题目：}\input{../bank/T002/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
+\noindent{\large\bfseries 【T003】 单原子气体的等压升温}\quad{\small 难度 2/5 · 推导题}\par
+\noindent\textbf{题目：}\input{../bank/T003/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
+\noindent{\large\bfseries 【T004】 理想气体的自由膨胀}\quad{\small 难度 3/5 · 推导题}\par
+\noindent\textbf{题目：}\input{../bank/T004/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
+\noindent{\large\bfseries 【T005】 理想气体可逆等温压缩}\quad{\small 难度 2/5 · 计算题}\par
+\noindent\textbf{题目：}\input{../bank/T005/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
+\noindent{\large\bfseries 【T006】 等热容量气体的隔热热接触}\quad{\small 难度 4/5 · 推导题}\par
+\noindent\textbf{题目：}\input{../bank/T006/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
+\chapter{振动与波动}
+
+\noindent{\large\bfseries 【W001】 行波的传播方向}\quad{\small 难度 2/5 · 计算题}\par
+\noindent\textbf{题目：}\input{../bank/W001/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
+\noindent{\large\bfseries 【W002】 弹簧连接方式与周期}\quad{\small 难度 2/5 · 推导题}\par
+\noindent\textbf{题目：}\input{../bank/W002/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
+\noindent{\large\bfseries 【W003】 运动声源的多普勒效应}\quad{\small 难度 2/5 · 计算题}\par
+\noindent\textbf{题目：}\input{../bank/W003/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
+\noindent{\large\bfseries 【W004】 两端固定弦的第三谐波}\quad{\small 难度 2/5 · 概念推导题}\par
+\noindent\textbf{题目：}\input{../bank/W004/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
+\noindent{\large\bfseries 【W005】 双频振动的拍频}\quad{\small 难度 2/5 · 推导题}\par
+\noindent\textbf{题目：}\input{../bank/W005/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
+\noindent{\large\bfseries 【W006】 拉紧弦的本征频率}\quad{\small 难度 3/5 · 推导题}\par
+\noindent\textbf{题目：}\input{../bank/W006/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
+\chapter{光学}
+
+\noindent{\large\bfseries 【O001】 两次相位反转的薄膜反射}\quad{\small 难度 3/5 · 推导题}\par
+\noindent\textbf{题目：}\input{../bank/O001/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
+\noindent{\large\bfseries 【O002】 单缝衍射首暗纹}\quad{\small 难度 2/5 · 计算题}\par
+\noindent\textbf{题目：}\input{../bank/O002/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
+\noindent{\large\bfseries 【O003】 杨氏双缝条纹间距}\quad{\small 难度 2/5 · 计算题}\par
+\noindent\textbf{题目：}\input{../bank/O003/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
+\noindent{\large\bfseries 【O004】 布儒斯特角}\quad{\small 难度 2/5 · 计算题}\par
+\noindent\textbf{题目：}\input{../bank/O004/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
+\noindent{\large\bfseries 【O005】 凸透镜的物像位置和放大率}\quad{\small 难度 2/5 · 计算题}\par
+\noindent\textbf{题目：}\input{../bank/O005/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
+\noindent{\large\bfseries 【O006】 双缝一侧插入透明薄片的条纹平移}\quad{\small 难度 3/5 · 推导题}\par
+\noindent\textbf{题目：}\input{../bank/O006/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
+\chapter{近代物理}
+
+\noindent{\large\bfseries 【Q001】 光电效应截止电压}\quad{\small 难度 2/5 · 计算题}\par
+\noindent\textbf{题目：}\input{../bank/Q001/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
+\noindent{\large\bfseries 【Q002】 加速电子的德布罗意波长}\quad{\small 难度 3/5 · 计算题}\par
+\noindent\textbf{题目：}\input{../bank/Q002/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
+\noindent{\large\bfseries 【Q003】 一维无限深势阱跃迁}\quad{\small 难度 3/5 · 推导题}\par
+\noindent\textbf{题目：}\input{../bank/Q003/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
+\noindent{\large\bfseries 【Q004】 放射性衰变与活度}\quad{\small 难度 2/5 · 计算题}\par
+\noindent\textbf{题目：}\input{../bank/Q004/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
+\noindent{\large\bfseries 【Q005】 高速不稳定粒子的存活比例}\quad{\small 难度 3/5 · 推导题}\par
+\noindent\textbf{题目：}\input{../bank/Q005/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
+\noindent{\large\bfseries 【Q006】 改变照射频率后的遏止电压}\quad{\small 难度 2/5 · 计算题}\par
+\noindent\textbf{题目：}\input{../bank/Q006/question.tex}
+\par\smallskip\noindent\hrulefill\par\medskip
 \end{document}
