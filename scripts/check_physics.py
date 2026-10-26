@@ -205,5 +205,6 @@ if set(results)!=ids:
 report={'total_questions':len(ids), 'formula_consistency_checks_passed':len(results),
     'status':'passed', 'limitation':'公式/数值一致性检查，不是独立完整物理题解审核，也不是六轮质检',
     'checks':dict(sorted(results.items()))}
-(ROOT/'data/qa_physics_spotchecks.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+(ROOT/'generated').mkdir(parents=True,exist_ok=True)
+(ROOT/'generated'/'qa_physics_current.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(f'PASS: {len(results)}/{len(ids)} formula / numerical consistency checks; expert review still pending.')

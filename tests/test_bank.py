@@ -51,9 +51,7 @@ class BankTests(unittest.TestCase):
         self.assertEqual(8,len(selected))
         self.assertEqual(2,sum(p['topic']=='力学' for p in selected))
         self.assertEqual(2,sum(p['topic']=='电磁学' for p in selected))
-        self.assertTrue(all(p['topic'] not in ('力学','电磁学')
-                            for p in selected if p['id'] not in
-                            {x['id'] for x in selected if x['topic'] in ('力学','电磁学')}))
+        self.assertEqual(4,sum(p['topic'] not in ('力学','电磁学') for p in selected))
 
     def test_exam_duration_and_reproducibility(self):
         a=assemble(self.items,6,123,[],1,5,True,max_minutes=120)

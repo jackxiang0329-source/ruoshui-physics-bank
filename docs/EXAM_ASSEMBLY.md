@@ -31,3 +31,7 @@ python scripts/assemble_exam.py --count 12 --seed 20261026 --topic-quota '力学
 ## 当前限制
 
 算法并未完成标准期末考试“选择题/填空题/计算题”精细分值模型、交叉题型精确配额、单题禁止同源/相似题、防知识点重叠、难度分布最优化与多卷互斥。后续应在经过学校真实试卷样式抽样校准后扩展，而不是声称已达到正式考试组卷水平。
+
+## 可审核的QA报告输出
+
+物理公式核验脚本 `scripts/check_physics.py` 运行后把当次全量结果保存到 `generated/qa_physics_current.json`（不提交，CI运行时通过Artifacts下载），历史 `data/qa_physics_spotchecks.json` 仅记录早期36题的旧版本结果。若CI尚未启动成功，则不能把新报告说成已生成。

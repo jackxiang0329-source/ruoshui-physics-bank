@@ -35,8 +35,12 @@ tex/questions.tex 与 tex/solutions.tex 使用 ElegantBook 模板，通过 LaTeX
 
 ### 历史质检文件说明
 
-`data/qa_physics_spotchecks.json` 的36项结果仅是早期历史快照，不能据此判断现有48题整体已通过自动检查；`scripts/check_physics.py` 现含60道题的检验定义。完整仓库构建仍受GitHub Actions作业未启动问题影响。
+`data/qa_physics_spotchecks.json` 的36项结果仅是早期历史快照，不能据此判断现有60题整体已通过自动检查；`scripts/check_physics.py` 现含60道题的检验定义。完整仓库构建仍受GitHub Actions作业未启动问题影响。
 
 ## 2026-10-26 新增题（第4组）
 
 新增12道：M009–M010、E009–E010、T009–T010、W009–W010、O009–O010、Q009–Q010；每题保留独立题干、解析和元数据。已扩展代数关系检查定义，但完整执行与ElegantBook PDF编译仍取决于仓库CI恢复。所有题目均处于待独立复核状态。
+
+### 按考试需求组卷与质量报告
+
+现支持 `--topic-quota`、`--kind`、`--max-minutes`、`--total-points` 等组卷约束。详见 [docs/EXAM_ASSEMBLY.md](docs/EXAM_ASSEMBLY.md)。完整物理公式检查运行时将结果写入暂存的 `generated/qa_physics_current.json`，不再覆盖已提交的36题历史质检快照；GitHub Actions能运行后，这份当前报告和试卷清单将上传为Artifacts。正式组卷仍需六轮真实审核凭证，自动校验不能替代独立学术复核。

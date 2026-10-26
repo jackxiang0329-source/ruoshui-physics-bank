@@ -21,7 +21,7 @@ jobs:
           cache: 'pip'
       - name: Install Python QA requirements
         run: python -m pip install -r requirements.txt
-      - name: Physics formula consistency on original 36 samples
+      - name: Physics formula consistency for all current items
         run: python scripts/check_physics.py
       - name: Validate all independent TeX fragments and indexed masters
         run: python scripts/build.py --check
@@ -30,7 +30,15 @@ jobs:
       - name: Unit tests for selection, paths and QA gate
         run: python -m unittest discover -s tests -v
       - name: Draft exam assembly smoke test (never approved for real exams)
-        run: python scripts/assemble_exam.py --count 6 --seed 20261026 --allow-pending
+        run: python scripts/assemble_exam.py --count 6 --seed 20261026 --topic-quota '力学=1' --topic-quota '电磁学=1' --max-minutes 180 --total-points 100 --allow-pending
+      - name: Upload validation and draft manifest
+        uses: actions/upload-artifact@v4
+        with:
+          name: ruoshui-physics-validation
+          if-no-files-found: error
+          path: |
+            generated/qa_physics_current.json
+            generated/exam_manifest.json
       - name: Build ElegantBook with XeLaTeX
         uses: xu-cheng/latex-action@v4
         with:
