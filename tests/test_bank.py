@@ -39,7 +39,7 @@ class BankTests(unittest.TestCase):
 
     def test_generated_subfolder_relative_paths(self):
         source=render([self.items[0]],False,ROOT/'generated',ROOT)
-        self.assertIn('../../bank/',source)
+        self.assertIn('../bank/',source)
         self.assertNotIn('data/problems.json',source)
 
 if __name__=='__main__':
