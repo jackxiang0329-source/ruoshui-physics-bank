@@ -82,3 +82,11 @@ tex/questions.tex 与 tex/solutions.tex 使用 ElegantBook 模板，通过 LaTeX
 审核门禁的回归测试已修正：允许未来经真实六轮审核的题目由待复核升级为通过，仍强制校验审核记录和题源散列值，避免测试把审批状态永久锁死。
 
 质检新增 `tests/test_physical_assumptions.py`，专门防止热学隔板热容、光学传播介质、同轴电容器储能单位等条件在编辑时被漏删，并对4道推导题做有限的独立代数一致性检查。GitHub Actions尚未成功执行该测试。
+
+## 外部大学物理开源题源归档（2026-10-26）
+
+- 已实际导入 **100份外部题源**：80份 [UBC OPBP](https://github.com/open-resources/physics_bank) Markdown、20份 [WeBWorK OPL](https://github.com/openwebwork/webwork-open-problem-library) PG程序源。
+- 已登记两大上游目录的 **1111条候选题源路径**（897+214），剩余1011条只是待抓取候选，**不可当作已拉取题目**。
+- GitHub原始blob散列校验 **100/100 完全一致**，全量文件路径和状态参见 [外部题源目录](external_sources/CATALOG.md)。
+- **与现有100道原创题严格分开**，外部题源全部未完成去重、答案复核、图片与PG依赖补齐及授权链核验，故目前没有任何外部题源被认定可正式组卷。
+- 可用 `python scripts/sync_external_physics.py --source ubc_opbp --limit 20` 预览下一批题源；需要符合非商业许可证条件后才能加入真实下载参数。使用 `python scripts/external_inventory.py` 检查导入库存。

@@ -1,6 +1,6 @@
 # 外部开放题源区
 
-此区与原创题库 `bank/` 完全隔离。已分批拉取40份 UBC OPBP 原始 Markdown 题目（非仅链接），来源仓库 open-resources/physics_bank，固定上游版本 `59de2e82f4fa6fc1ca24c15a088f07428fd4480e`。
+此区与原创题库 `bank/` 完全隔离。已分批拉取80份 UBC OPBP 原始 Markdown 题目（非仅链接），来源仓库 open-resources/physics_bank，固定上游版本 `59de2e82f4fa6fc1ca24c15a088f07428fd4480e`。
 
 - 原始文件位于 `ubc_opbp/raw/`，含逐题作者、出典、授权声明和模板参数；不擅自删去原许可证信息。
 - 来源题可能含外部配图、随机参数或不包含公开答案。详见 `ubc_opbp/index.json` 的 `requires_media`、`license`、`review_status`。
@@ -9,4 +9,4 @@
 - 用途：先进行来源和许可证核验、规范化、去重及内容审查，随后才可有选择地编入组卷系统。
 
 
-其他已拉取的WeBWorK PG题源见 `webwork_opl/raw/`，与UBC合计52份。现已建立包含1111条上游文件路径的发现目录（仅其中52份有已复制正文），详见 [CATALOG.md](CATALOG.md)。
+其他已拉取的WeBWorK PG题源见 `webwork_opl/raw/`，与UBC合计100份。现已建立包含1111条上游文件路径的发现目录（仅其中100份有已复制正文），详见 [CATALOG.md](CATALOG.md)。

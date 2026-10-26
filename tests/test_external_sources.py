@@ -13,7 +13,7 @@ from sync_external_physics import SETTINGS, file_blob_sha, license_signal, sync
 class ExternalPhysicsTests(unittest.TestCase):
     def test_imported_sources_are_separate_from_original_100(self):
         report = inventory(ROOT / "external_sources")
-        self.assertGreaterEqual(report["imported_raw_files"], 52)
+        self.assertGreaterEqual(report["imported_raw_files"], 100)
         self.assertEqual(0, report["exam_eligible"])
         self.assertEqual([], report["blocking_issues"])
 
@@ -29,6 +29,15 @@ class ExternalPhysicsTests(unittest.TestCase):
             self.assertEqual(imported, declared)
             self.assertEqual(row["raw_imported"], len(imported))
             self.assertLessEqual(len(imported), row["listed"])
+
+    def test_every_imported_file_is_byte_identical_to_recorded_upstream_blob(self):
+        base = ROOT / "external_sources"
+        for directory, suffix in (("ubc_opbp", ".md"),("webwork_opl", ".pg")):
+            index = json.loads((base / directory / "index.json").read_text(encoding="utf-8"))
+            for record in index["records"]:
+                raw = (base / directory / "raw" / (record["id"] + suffix)).read_bytes()
+                self.assertEqual(record["source_sha"], file_blob_sha(raw),
+                                 msg="Source bytes differ from upstream Git SHA: " + record["id"])
 
     def test_strict_git_blob_integrity(self):
         data = b"simple physics equation test\n"
