@@ -33,11 +33,19 @@ class BankTests(unittest.TestCase):
         self.assertIn(r'\input{../bank/M001/solution.tex}',source)
 
     def test_pending_default_gate(self):
-        with self.assertRaises(ValueError):
-            assemble(self.items,1,12,[],1,5,False)
-        selected=assemble(self.items,6,12,[],1,5,True)
-        self.assertEqual(6,len(selected))
-        self.assertEqual(6,len(set(x['topic'] for x in selected)))
+        verified=[p for p in self.items if p['quality_status']=='质检通过']
+        if not verified:
+            with self.assertRaises(ValueError):
+                assemble(self.items,1,12,[],1,5,False)
+        else:
+            errors, _, approved=validate_reviews(ROOT)
+            self.assertEqual([],errors)
+            self.assertEqual(approved,len(verified))
+            selected=assemble(self.items,1,12,[],1,5,False)
+            self.assertTrue(all(p['quality_status']=='质检通过' for p in selected))
+        draft=assemble(self.items,6,12,[],1,5,True)
+        self.assertEqual(6,len(draft))
+        self.assertEqual(6,len(set(x['topic'] for x in draft)))
 
     def test_single_choice_options_are_structured_and_displayed(self):
         choices=[p for p in self.items if p['kind']=='选择题']
@@ -54,7 +62,7 @@ class BankTests(unittest.TestCase):
         errors,total,approved=validate_reviews(ROOT)
         self.assertEqual([],errors)
         self.assertGreaterEqual(total,100)
-        self.assertGreaterEqual(approved,0)
+        self.assertEqual(approved,sum(p['quality_status']=='质检通过' for p in self.items))
         self.assertEqual(64,len(digest_for(ROOT,'M007')))
 
     def test_exact_topic_quotas(self):

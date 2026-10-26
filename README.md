@@ -78,3 +78,5 @@ tex/questions.tex 与 tex/solutions.tex 使用 ElegantBook 模板，通过 LaTeX
 `python scripts/audit_milestone.py` 现逐题比对两册ElegantBook的题名、题型、难度和解析册标准答案与 `bank/ID/meta.json` 是否一致；新增故意篡改题名和答案的负面测试。此校验检测生成文件同步错误，不能验证答案表达式在物理上是否正确。
 
 首批100题条件充分性质检又修订了T001（明确隔板/容器热容忽略）与O003（明确空气折射率近似1），避免原答案受未给定物理参数影响；详见 `docs/reviews/A0-round1-independent-derivations.md`。
+
+审核门禁的回归测试已修正：允许未来经真实六轮审核的题目由待复核升级为通过，仍强制校验审核记录和题源散列值，避免测试把审批状态永久锁死。

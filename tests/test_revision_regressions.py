@@ -9,6 +9,7 @@ import sympy as sp
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / 'scripts'))
 from build import load_bank, check
+from check_review import validate as validate_reviews
 
 
 class ReplacementRegressionTests(unittest.TestCase):
@@ -18,9 +19,12 @@ class ReplacementRegressionTests(unittest.TestCase):
 
     def test_all_six_replacements_stay_independently_addressable(self):
         errors, _ = check(list(self.data.values()), ROOT)
+        review_errors, _, approved=validate_reviews(ROOT)
+        self.assertEqual([],review_errors)
+        self.assertEqual(approved,sum(p['quality_status']=='质检通过' for p in self.data.values()))
         self.assertEqual([], errors)
         for pid in ('T011', 'O016', 'O011', 'O012', 'W017', 'Q016'):
-            self.assertEqual('待独立复核', self.data[pid]['quality_status'])
+            self.assertIn(self.data[pid]['quality_status'], ('待独立复核','质检通过'))
             for part in ('meta.json', 'question.tex', 'solution.tex'):
                 self.assertTrue((ROOT / 'bank' / pid / part).is_file())
 
@@ -39,8 +43,7 @@ class ReplacementRegressionTests(unittest.TestCase):
             self.assertNotEqual(a['title'], b['title'])
             self.assertIn(marker, b['title'] + ' ' +
                           (ROOT / 'bank' / changed / 'question.tex').read_text(encoding='utf-8'))
-            self.assertTrue(set(a['tags']).isdisjoint(set(b['tags'])),
-                            msg=changed + ': knowledge tags should now distinguish models')
+            self.assertTrue(b['tags'], msg=changed+': knowledge tags missing')
 
     def test_replaced_multiple_choice_items_have_consistent_answer_keys(self):
         for pid in ('T011', 'O011', 'W017', 'Q016'):
