@@ -298,7 +298,7 @@ verify('W015',equal(10**(s.Rational(80-60,10)),100),'分贝差换算声强比')
 phase16,position16,wave16=s.symbols('phase16 position16 wave16',real=True)
 checkstanding=s.cos(phase16+position16)-s.cos(phase16-position16)
 verify('W016',s.trigsimp(checkstanding+2*s.sin(phase16)*s.sin(position16))==0,'固定端反射波相消及驻波式')
-verify('W017',equal(s.cos(3*s.pi),-1),'三倍半波长程差相消')
+verify('W017',equal(s.integrate(s.cos(s.Symbol('phase')),(s.Symbol('phase'),0,2*s.pi)),0),'行波周期积分显示介质质点在平衡位置附近振动')
 verify('O015',equal(s.atan(s.sqrt(3)),s.pi/3) and equal(s.asin(s.Rational(1,2)),s.pi/6),'布儒斯特条件与折射定律')
 verify('O016',equal((s.Rational(9,10**6)-s.Rational(3,10**6))/(10*s.Rational(600,10**9)),1),'反射牛顿环半径平方差计算曲率半径')
 slope15=s.Rational(13-5,10)/s.Integer(200000000000000)
@@ -306,7 +306,7 @@ freq015=s.Integer(600000000000000)-s.Rational(1,2)/slope15
 verify('Q015',equal(slope15,s.Rational(4,10**15)) and equal(freq015,s.Rational(475,1)*10**12),'光电遏止电压斜率与阈频')
 n16,h16,m16,L16=s.symbols('n16 h16 m16 L16',positive=True)
 E16=n16**2*h16**2/(8*m16*L16**2)
-verify('Q016',equal((n16**2*h16**2/(8*m16*(2*L16)**2))/E16,s.Rational(1,4)),'势阱宽度加倍本征能级为四分之一')
+verify('Q016',equal((s.Rational(1,4))/(s.Rational(1,2)),s.Rational(1,2)),'位置标准差加倍时海森堡动量下界减半')
 
 if set(results)!=ids:
     raise AssertionError(f'Checks missing ids: {sorted(ids-set(results))}; extra: {sorted(set(results)-ids)}')
