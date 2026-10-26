@@ -2,7 +2,7 @@
 
 ## 目标与阶段
 
-- **A0：0–100题**：证明数据格式、XeLaTeX编译、自动验证与人工审核门禁可行。目前36题。
+- **A0：0–100题**：证明数据格式、XeLaTeX编译、自动验证与人工审核门禁可行。目前48题，六模块各8题，首批100题还差52题。
 - **A1：101–1,000题**：按每批100题扩展，形成模块、题型、难度分层。
 - **A2：1,001–10,000题**：以审核通过为前提持续扩充，生成考试试卷与答案册。
 - 建议每批100题完成六轮审查后封版；未审题不计入「正式可用题」数量。
@@ -35,4 +35,4 @@
 
 ## GitHub发布与自动化
 
-独立仓库优先使用 `jackxiang0329-source/ruoshui-university-physics`。`publish.ps1` / `publish.sh` 用于建仓和首次推送，GitHub Actions 生成 PDF 构建结果。目录 `pdf/` 保存已验证的输出快照，题目源数据为 `data/problems.json`。
+独立仓库优先使用 `jackxiang0329-source/ruoshui-university-physics`。`publish.ps1` / `publish.sh` 用于建仓和首次推送，GitHub Actions 生成 PDF 构建结果。旧 `pdf/` 为ElegantBook切换之前的历史PDF。新PDF须由GitHub Actions成功构建后以Artifacts交付；**权威题源**已改为 `bank/ID/{meta.json,question.tex,solution.tex}`，`data/problems.json` 只保留作为36题迁移档案。

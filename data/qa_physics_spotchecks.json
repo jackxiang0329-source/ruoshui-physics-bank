@@ -1,7 +1,7 @@
 {
   "total_questions": 36,
   "formula_consistency_checks_passed": 36,
-  "status": "passed",
+  "status": "historical_snapshot_only",
   "limitation": "公式/数值一致性检查，不是独立完整物理题解审核，也不是六轮质检",
   "checks": {
     "E001": {
@@ -148,5 +148,10 @@
       "status": "formula_consistency_passed",
       "scope": "弦频率等间隔与内节点数"
     }
-  }
+  },
+  "snapshot_question_count": 36,
+  "current_bank_question_count": 48,
+  "new_12_check_definitions": "added_to_scripts/check_physics.py",
+  "full_48_repository_ci_execution": "pending_runner_infrastructure",
+  "explanation": "下列36项为之前批次的既有公式数值检查记录，不能代表目前48题通过全部检测；新增12题在独立计算中公式关系通过，但GitHub Actions在步骤前失败，尚未执行完整48题脚本。"
 }

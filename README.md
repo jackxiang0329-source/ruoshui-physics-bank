@@ -32,3 +32,7 @@ tex/questions.tex 与 tex/solutions.tex 使用 ElegantBook 模板，通过 LaTeX
 ### 六轮审核自动门禁
 
 运行 `python scripts/check_review.py` 可以检查所有宣称「质检通过」题目的六轮证据记录、审核人字段、源文件SHA绑定。未建立真实审核凭证前不得改成通过。当前48道全部待审。审核凭证格式见 [qa/README.md](qa/README.md)。
+
+### 历史质检文件说明
+
+`data/qa_physics_spotchecks.json` 的36项结果仅是早期历史快照，不能据此判断现有48题整体已通过自动检查；`scripts/check_physics.py` 现含48道题的检验定义。完整仓库构建仍受GitHub Actions作业未启动问题影响。
