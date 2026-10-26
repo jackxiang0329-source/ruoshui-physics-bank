@@ -40,7 +40,7 @@ class BankTests(unittest.TestCase):
 
     def test_single_choice_options_are_structured_and_displayed(self):
         choices=[p for p in self.items if p['kind']=='选择题']
-        self.assertEqual(9,len(choices))
+        self.assertEqual(14,len(choices))
         self.assertTrue(all(p['correct_option'] in ('A','B','C','D') for p in choices))
         for item in choices:
             tex=(ROOT/'bank'/item['id']/'question.tex').read_text(encoding='utf-8')
@@ -52,7 +52,7 @@ class BankTests(unittest.TestCase):
     def test_approval_requires_six_review_records(self):
         errors,total,approved=validate_reviews(ROOT)
         self.assertEqual([],errors)
-        self.assertEqual(84,total)
+        self.assertEqual(100,total)
         self.assertEqual(0,approved)
         self.assertEqual(64,len(digest_for(ROOT,'M007')))
 

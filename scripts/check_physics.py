@@ -270,6 +270,44 @@ verify('Q013',equal(s.Rational(1,100)*s.Rational(1863,2),s.Rational(1863,200)),
 vel14=(s.Rational(3,5)+s.Rational(1,2))/(1+s.Rational(3,5)*s.Rational(1,2))
 verify('Q014',equal(vel14,s.Rational(11,13)),'同向亚光速相对论速度合成')
 
+
+# Batch 7: formula/numerical spot checks for sixteen new independent items.
+v0_15=s.symbols('v0_15',positive=True)
+V15=s.sqrt(2*10*s.Rational(5,100))
+verify('M015',equal(V15,1) and equal((s.Rational(198,100)+s.Rational(2,100))*V15/s.Rational(2,100),100),'弹道摆两阶段动量与机械能核算')
+amp16,kk16,mm16=s.symbols('amp16 kk16 mm16',positive=True)
+vel16=s.sqrt(3)*amp16*s.sqrt(kk16/mm16)/2
+verify('M016',equal(mm16*vel16**2/2,3*kk16*amp16**2/8) and equal(3*s.Rational(1,8)/s.Rational(1,2),s.Rational(3,4)),'半振幅处弹簧动能与速率')
+rr17,vv17=s.symbols('rr17 vv17',positive=True)
+verify('M017',equal(rr17*(vv17**2/rr17),vv17**2),'匀速圆周运动法向加速度')
+CC15,VV15=s.symbols('CC15 VV15',positive=True)
+verify('E015',equal(CC15*VV15**2-CC15*VV15**2/2,CC15*VV15**2/2),'恒压RC充电电源功与电容储能差额')
+B16=s.sqrt(2*200/s.Rational(176000000000))/s.Rational(5,100)
+verify('E016',abs(float(B16)-9.534625892455922e-4)<1e-6,'电子束磁偏转独立SI数值')
+flux17,R17=s.symbols('flux17 R17',positive=True)
+verify('E017',equal((2*flux17/R17)/(flux17/R17),2),'感应电动势加倍与欧姆定律')
+T15,mass15=kappa,s.symbols('mass15',positive=True)[0]
+verify('T015',equal(s.sqrt(4*T15)/s.sqrt(T15),2),'方均根速率按根号绝对温度缩放')
+water16=s.Rational(1,4)*4200*20
+iceheat16=s.Rational(1,20)*4200*20
+verify('T016',equal((water16-iceheat16)/s.Rational(1,20),336000),'冰熔化潜热的量热平衡核算')
+volume17,n17,R17gas,T17=s.symbols('volume17 n17 R17gas T17',positive=True)
+work17=s.integrate(n17*R17gas*T17/x,(x,volume17,volume17/3))
+verify('T017',equal(work17,-n17*R17gas*T17*s.log(3)),'可逆等温压缩功与熵变符号')
+verify('W015',equal(10**(s.Rational(80-60,10)),100),'分贝差换算声强比')
+phase16,position16,wave16=s.symbols('phase16 position16 wave16',real=True)
+checkstanding=s.cos(phase16+position16)-s.cos(phase16-position16)
+verify('W016',s.trigsimp(checkstanding+2*s.sin(phase16)*s.sin(position16))==0,'固定端反射波相消及驻波式')
+verify('W017',equal(s.cos(3*s.pi),-1),'三倍半波长程差相消')
+verify('O015',equal(s.atan(s.sqrt(3)),s.pi/3) and equal(s.asin(s.Rational(1,2)),s.pi/6),'布儒斯特条件与折射定律')
+verify('O016',equal(2*s.Rational(75,10**6)/250,s.Rational(600,10**9)),'迈克耳孙镜面往返光程与计纹换算')
+slope15=s.Rational(13-5,10)/s.Integer(200000000000000)
+freq015=s.Integer(600000000000000)-s.Rational(1,2)/slope15
+verify('Q015',equal(slope15,s.Rational(4,10**15)) and equal(freq015,s.Rational(475,1)*10**12),'光电遏止电压斜率与阈频')
+n16,h16,m16,L16=s.symbols('n16 h16 m16 L16',positive=True)
+E16=n16**2*h16**2/(8*m16*L16**2)
+verify('Q016',equal((n16**2*h16**2/(8*m16*(2*L16)**2))/E16,s.Rational(1,4)),'势阱宽度加倍本征能级为四分之一')
+
 if set(results)!=ids:
     raise AssertionError(f'Checks missing ids: {sorted(ids-set(results))}; extra: {sorted(set(results)-ids)}')
 report={'total_questions':len(ids), 'formula_consistency_checks_passed':len(results),
