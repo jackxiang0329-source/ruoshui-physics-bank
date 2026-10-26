@@ -12,7 +12,7 @@ import re
 import sys
 from pathlib import Path
 
-from build import ROOT, TOPICS, load_bank, check
+from build import ROOT, TOPICS, load_bank, check, escape
 
 
 def verify_index_metadata(rows, problems):
@@ -35,6 +35,31 @@ def verify_index_metadata(rows, problems):
         for key in required:
             if row.get(key)!=expected[key]:
                 errors.append(f'{pid}: CSV {key} 与独立元数据不一致')
+    return errors
+
+
+def verify_master_metadata(items, question_book, solution_book):
+    """Detect metadata edits not reflected in either rendered ElegantBook master."""
+    errors=[]
+    for item in items:
+        uid=item['id']
+        header=(r'\noindent{\large\bfseries 【'+uid+'】 '+escape(item['title'])+
+                r'}\quad{\small 难度 '+str(item['level'])+'/5 · '+
+                escape(item['kind'])+r'}\par')
+        for name,body in [('questions.tex',question_book),('solutions.tex',solution_book)]:
+            if body.count(header)!=1:
+                errors.append(f'{uid}: {name} 题目标题/题型/难度没有按元数据同步')
+        answer=(r'\par\noindent\textbf{答案：}\(\displaystyle '+
+                item['answer']+r'\)\par')
+        # The solutions book should contain exactly one keyed answer per ID.
+        marker=r'\input{../bank/'+uid+r'/solution.tex}'
+        start=solution_book.find(marker)
+        if start<0:
+            errors.append(f'{uid}: 解析册缺失独立解答引用')
+        else:
+            found=solution_book.find(answer,start,start+len(marker)+600)
+            if found<0:
+                errors.append(f'{uid}: 解析册标准答案与元数据不一致')
     return errors
 
 
@@ -81,6 +106,12 @@ def audit(root=ROOT, minimum=100):
             errors.append('qa_report.json 的题量与独立题源不一致')
         if report.get('module_counts')!=dict(counts):
             errors.append('qa_report.json 的模块数量与独立题源不一致')
+
+    qbook=root/'tex'/'questions.tex'
+    sbook=root/'tex'/'solutions.tex'
+    if qbook.exists() and sbook.exists():
+        errors.extend(verify_master_metadata(
+            problems,qbook.read_text(encoding='utf-8'),sbook.read_text(encoding='utf-8')))
 
     source=(root/'scripts'/'check_physics.py').read_text(encoding='utf-8')
     checked=re.findall(r"verify\('([METWOQ]\d{3,5})'",source)

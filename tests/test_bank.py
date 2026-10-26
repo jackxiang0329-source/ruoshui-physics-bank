@@ -9,7 +9,7 @@ sys.path.insert(0,str(ROOT/'scripts'))
 from build import TOPICS, check, load_bank, render
 from assemble_exam import assemble, assign_points
 from check_review import validate as validate_reviews, digest_for
-from audit_milestone import audit, verify_index_metadata
+from audit_milestone import audit, verify_index_metadata, verify_master_metadata
 
 class BankTests(unittest.TestCase):
     @classmethod
@@ -118,6 +118,18 @@ class BankTests(unittest.TestCase):
             altered[changed]='DELIBERATELY_INVALID'
             errors=verify_index_metadata([altered],[p])
             self.assertTrue(errors,msg='Audit missed '+changed)
+
+    def test_master_metadata_and_answer_drift_is_detected(self):
+        qbook=(ROOT/'tex'/'questions.tex').read_text(encoding='utf-8')
+        sbook=(ROOT/'tex'/'solutions.tex').read_text(encoding='utf-8')
+        self.assertEqual([], verify_master_metadata(self.items,qbook,sbook))
+        item=self.items[0]
+        broken_question=qbook.replace(item['title'],'题名意外改动',1)
+        self.assertTrue(verify_master_metadata(self.items,broken_question,sbook))
+        original=r'\displaystyle '+item['answer']
+        self.assertIn(original,sbook)
+        broken_solution=sbook.replace(original,r'\displaystyle 123456',1)
+        self.assertTrue(verify_master_metadata(self.items,qbook,broken_solution))
 
     def test_generated_subfolder_relative_paths(self):
         source=render([self.items[0]],False,ROOT/'generated',ROOT)

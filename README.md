@@ -72,3 +72,7 @@ tex/questions.tex 与 tex/solutions.tex 使用 ElegantBook 模板，通过 LaTeX
 ### 修改后题目回归测试
 
 已增加 `tests/test_revision_regressions.py` 对近期6道实质改写题进行结构、选项、主册索引和部分数值关系的防回归检查。可随既有 `python -m unittest discover -s tests -v` 调用，但 GitHub Actions 当前无法进入作业执行步骤，**尚无该测试成功运行的远端证据**。
+
+### 解析册与单题答案绑定校验
+
+`python scripts/audit_milestone.py` 现逐题比对两册ElegantBook的题名、题型、难度和解析册标准答案与 `bank/ID/meta.json` 是否一致；新增故意篡改题名和答案的负面测试。此校验检测生成文件同步错误，不能验证答案表达式在物理上是否正确。
