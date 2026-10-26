@@ -80,3 +80,5 @@ tex/questions.tex 与 tex/solutions.tex 使用 ElegantBook 模板，通过 LaTeX
 首批100题条件充分性质检又修订了T001（明确隔板/容器热容忽略）与O003（明确空气折射率近似1），避免原答案受未给定物理参数影响；详见 `docs/reviews/A0-round1-independent-derivations.md`。
 
 审核门禁的回归测试已修正：允许未来经真实六轮审核的题目由待复核升级为通过，仍强制校验审核记录和题源散列值，避免测试把审批状态永久锁死。
+
+质检新增 `tests/test_physical_assumptions.py`，专门防止热学隔板热容、光学传播介质、同轴电容器储能单位等条件在编辑时被漏删，并对4道推导题做有限的独立代数一致性检查。GitHub Actions尚未成功执行该测试。
