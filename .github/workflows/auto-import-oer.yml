@@ -3,6 +3,7 @@ name: Auto-import university physics OER
 on:
   schedule:
     # Every 30 minutes, offset from minute 0 to reduce GitHub scheduler congestion (UTC).
+    # Public-repo runner verification: trigger also on workflow edits.
     - cron: '7,37 * * * *'
   workflow_dispatch:
   push:
