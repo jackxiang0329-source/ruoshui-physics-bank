@@ -1,12 +1,16 @@
-# 外部开放题源区
+# 外部大学物理习题资源区
 
-此区与原创题库 `bank/` 完全隔离。已分批拉取147份 UBC OPBP 原始 Markdown 题目（非仅链接），来源仓库 open-resources/physics_bank，固定上游版本 `59de2e82f4fa6fc1ca24c15a088f07428fd4480e`。
+此目录与 `bank/` 的100道独立原创题完全隔离。
 
-- 原始文件位于 `ubc_opbp/raw/`，含逐题作者、出典、授权声明和模板参数；不擅自删去原许可证信息。
-- 来源题可能含外部配图、随机参数或不包含公开答案。详见 `ubc_opbp/index.json` 的 `requires_media`、`license`、`review_status`。
-- **全部为待处理资源，非可直接组卷的已验收题**。不可混入现有100道原创题，亦不自动在网站展示答案。
-- UBC项目的仓库级许可声明与逐题授权可能不同；逐条以真实声明与原著权利要求为准，尤其要遵守非商业（NC）和相同方式共享（SA）限制。
-- 用途：先进行来源和许可证核验、规范化、去重及内容审查，随后才可有选择地编入组卷系统。
+## 当前入库（2026-10-26）
 
+实际保存227份与上游Git文件逐一校验一致的题源：
+- 147份UBC OPBP开放物理习题（Markdown/MyST），见 `ubc_opbp/raw/`；
+- 59份WeBWorK BrockPhysics现代大学物理题源（PG），见 `webwork_opl/raw/`；
+- 21份WeBWorK BrockPhysics热学题源（PG），见 `webwork_thermal/raw/`。
 
-其他已拉取的WeBWorK PG题源见 `webwork_opl/raw/`，与UBC合计206份。现已建立包含1111条上游文件路径的发现目录（仅其中206份有已复制正文），详见 [CATALOG.md](CATALOG.md)。
+另有1,099条已发现但尚未复制正文的上游候选文件路径。三类来源均保存了固定版本、原作者、许可证信号与逐文件blob SHA。
+
+全部外部题源均为**待版权核验、待物理/答案审核、待去重的候选项**；不自动进入ElegantBook正式题库或组卷系统。CC BY-NC-SA中的NC限制商业使用，SA涉及改编共享义务；某些原题、答案、图像或程序依赖可能不受当前条款覆盖，需单独确认。
+
+详细目录与工具：[`CATALOG.md`](CATALOG.md)、[`curation_queue.csv`](curation_queue.csv)，以及 `scripts/sync_external_physics.py`、`scripts/external_inventory.py`、`scripts/rebuild_external_queue.py`。
