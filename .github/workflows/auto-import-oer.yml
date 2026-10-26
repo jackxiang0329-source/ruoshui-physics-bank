@@ -5,6 +5,12 @@ on:
     # Every 30 minutes, offset from minute 0 to reduce GitHub scheduler congestion (UTC).
     - cron: '7,37 * * * *'
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/auto-import-oer.yml'
+      - 'scripts/auto_import_oer.py'
+      - 'tests/test_auto_import_oer.py'
 
 permissions:
   contents: write
