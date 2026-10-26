@@ -150,8 +150,9 @@
     }
   },
   "snapshot_question_count": 36,
-  "current_bank_question_count": 48,
-  "new_12_check_definitions": "added_to_scripts/check_physics.py",
+  "current_bank_question_count": 60,
+  "new_12_check_definitions": "batch 3: M007..Q008; batch 4: M009..Q010 defined in scripts/check_physics.py",
   "full_48_repository_ci_execution": "pending_runner_infrastructure",
-  "explanation": "下列36项为之前批次的既有公式数值检查记录，不能代表目前48题通过全部检测；新增12题在独立计算中公式关系通过，但GitHub Actions在步骤前失败，尚未执行完整48题脚本。"
+  "explanation": "Historical 36-question formula-check snapshot only. New 24 formula-check definitions are in the source, but full 60-question CI execution is not yet verified. No expert six-round review has been completed.",
+  "full_60_repository_ci_execution": "pending_runner_infrastructure"
 }
