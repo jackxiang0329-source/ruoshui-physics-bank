@@ -1,0 +1,36 @@
+{
+  "timestamp_utc": "2026-10-26T15:49:52+00:00",
+  "github_run_id": "40353144198",
+  "mode": "execute",
+  "sources": {
+    "ubc_opbp": "UBC Open Physics Bank",
+    "webwork_brockphysics": "WeBWorK BrockPhysics (NC; manual review)",
+    "webwork_brock_thermal": "WeBWorK Thermal (NC; manual review)"
+  },
+  "added_count": 0,
+  "added": [],
+  "checked_candidates": 60,
+  "skipped_reasons": {
+    "upstream_default_noncommercial_manual_review": 2,
+    "outside_supported_physics_modules": 60
+  },
+  "failures": [],
+  "pending_rights_and_academic_review": true,
+  "exam_ready_added": 0,
+  "source_additions": {},
+  "remaining_not_downloaded": 1089,
+  "upstream_checks": [
+    {
+      "repository": "open-resources/physics_bank",
+      "latest_revision": "59de2e82f4fa6fc1ca24c15a088f07428fd4480e",
+      "pinned_revisions": [
+        "59de2e82f4fa6fc1ca24c15a088f07428fd4480e"
+      ],
+      "newer_revision_detected": false
+    },
+    {
+      "repository": "openwebwork/webwork-open-problem-library",
+      "check_error": "source_file_too_large"
+    }
+  ]
+}
