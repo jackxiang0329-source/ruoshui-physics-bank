@@ -1,10 +1,11 @@
 # 六轮质量审核制度与本批状态
 
-## 已执行（可重现）
+## 自动工具现状（与人工审核分开）
 
-- `python scripts/build.py --compile`：字段、ID 唯一性、精确题面去重、数学模式成对以及 XeLaTeX 构建。
-- `python scripts/check_physics.py`：对每题至少一个数值、代数或边界公式执行交叉核验（相互独立的表达式计算），但不是对题设物理模型和中文逻辑的完整证明。
-- PDF 经过文本提取/页面渲染抽查。
+- `scripts/build.py --check`、`scripts/audit_milestone.py`、`scripts/check_review.py`：已提交源码，但GitHub Actions作业在执行步骤前失败，当前尚无这些工具针对最新版100题成功运行的CI记录。
+- `scripts/check_physics.py`：100题有逐题公式或数值检查定义，但**不能**凭定义数量宣称100道自动检查已实际通过。
+- ElegantBook题目册和解析册：主TeX已经配置；新版PDF的云端XeLaTeX编译**尚未验证通过**。早期旧模板PDF不代表新版结果。
+- 先前部分题目有有限的人工抽查和独立数学关系核对；这些只形成待核验线索，未构成出版级六轮独立审核。
 
 ## 尚待六轮人工/独立审核
 
