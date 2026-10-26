@@ -221,8 +221,8 @@ mu12=s.Rational(5,1000)
 velocity12=200*2*s.Rational(20,100)
 verify('W012',equal(mu12*velocity12**2,32),'相邻波节半波长与弦张力')
 delta11=s.symbols('delta11',positive=True)
-verify('O011',equal(delta11/2,delta11*s.Rational(1,2)),'双缝间距加倍导致条纹间距减半')
-verify('O012',equal(s.Rational(500,10**9)*2/s.Rational(5,1000),s.Rational(2,10**4)),'单缝首暗纹测缝宽单位换算')
+verify('O011',equal(1/s.Rational(4,3),s.Rational(3,4)),'近轴视深比例的折射定律核算')
+verify('O012',equal(1/s.Rational(625,1000),s.Rational(8,5)),'临界角正弦值反推折射率')
 freq11,W11,e11=s.symbols('freq11 W11 e11',positive=True)
 K11=hplanck*freq11-W11
 verify('Q011',equal(s.diff(K11,s.Symbol('intensity')),0) and
