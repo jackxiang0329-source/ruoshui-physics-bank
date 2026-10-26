@@ -286,7 +286,7 @@ B16=s.sqrt(2*200/s.Rational(176000000000))/s.Rational(5,100)
 verify('E016',abs(float(B16)-9.534625892455922e-4)<1e-6,'电子束磁偏转独立SI数值')
 flux17,R17=s.symbols('flux17 R17',positive=True)
 verify('E017',equal((2*flux17/R17)/(flux17/R17),2),'感应电动势加倍与欧姆定律')
-T15,mass15=kappa,s.symbols('mass15',positive=True)[0]
+T15=s.symbols('T15',positive=True)
 verify('T015',equal(s.sqrt(4*T15)/s.sqrt(T15),2),'方均根速率按根号绝对温度缩放')
 water16=s.Rational(1,4)*4200*20
 iceheat16=s.Rational(1,20)*4200*20
