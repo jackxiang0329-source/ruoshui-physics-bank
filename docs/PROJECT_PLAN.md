@@ -36,3 +36,9 @@
 ## GitHub发布与自动化
 
 独立仓库优先使用 `jackxiang0329-source/ruoshui-university-physics`。`publish.ps1` / `publish.sh` 用于建仓和首次推送，GitHub Actions 生成 PDF 构建结果。旧 `pdf/` 为ElegantBook切换之前的历史PDF。新PDF须由GitHub Actions成功构建后以Artifacts交付；**权威题源**已改为 `bank/ID/{meta.json,question.tex,solution.tex}`，`data/problems.json` 只保留作为36题迁移档案。
+
+## A0里程碑状态记录（2026-10-26）
+
+- 已撰写100道题（六模块题量17、17、17、17、16、16），每题均有单独 metadata / question.tex / solution.tex；题量目标达成。
+- 新增 `scripts/audit_milestone.py` 检查题量和数据同步；GitHub Actions Runner持续在步骤开始前失败，不能宣称云端 PDF 或全量100题自动核验已通过。
+- 当前100题仍全部待独立复核，正式审核通过数为零。必须完成独立推导、题目条件审查、授权范围内查重、中文编辑和出版逐页校验，再讨论A0的质量验收及扩大到1,000题。

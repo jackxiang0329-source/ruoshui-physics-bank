@@ -26,3 +26,7 @@
 ## 自动审核门禁（2026-10-26 更新）
 
 新增 `scripts/check_review.py`：题目仍为待独立复核时不予正式选用；若人为改成「质检通过」而没有 `qa/ID.json` 六轮批准凭证，CI 将拒绝。凭证以原题 `question.tex` 和 `solution.tex` 的 SHA-256 绑定，避免审核后偷换内容。门禁仅核对证据形式，不能替代人工独立复核。见 `qa/README.md`。
+
+## 首批100题审查状态
+
+题量100已达成，但六轮审核尚未实际完成。`scripts/audit_milestone.py` 与 `scripts/check_physics.py` 提供机器完整性/部分公式检测，均不可自动生成真实审核人记录或替代专家审阅。仓库CI运行异常也不应解释为某一题已不合格或已合格。

@@ -25,6 +25,8 @@ jobs:
         run: python scripts/check_physics.py
       - name: Validate all independent TeX fragments and indexed masters
         run: python scripts/build.py --check
+      - name: Audit 100-question milestone and source-reference coverage
+        run: python scripts/audit_milestone.py
       - name: Enforce evidence-backed six-round approval gate
         run: python scripts/check_review.py
       - name: Unit tests for selection, paths and QA gate
