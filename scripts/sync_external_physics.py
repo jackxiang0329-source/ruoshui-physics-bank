@@ -36,11 +36,17 @@ SETTINGS = {
         "extension": ".pg",
         "prefix": "OPL",
     },
+    "webwork_brock_thermal": {
+        "source_dir": "webwork_thermal",
+        "root_path": "Contrib/BrockPhysics/College_Physics_Urone",
+        "extension": ".pg",
+        "prefix": "THM",
+    },
 }
 
 
 def license_signal(text, source):
-    if source == "webwork_brockphysics":
+    if source.startswith("webwork_"):
         # This is the OPL default only. Contributors may specify exceptions.
         return "CC BY-NC-SA 3.0 default, subject to source overrides"
     if not re.search(r"^## Attribution", text, re.M):
@@ -86,7 +92,7 @@ def sync(source, limit, download=False, include_noncommercial=False):
                 "next_paths": [x["path"] for x in targets], "network_calls": 0}
 
     # Avoid accidentally mixing source licenses into a commercial application.
-    if source == "webwork_brockphysics" and not include_noncommercial:
+    if source.startswith("webwork_") and not include_noncommercial:
         raise ValueError("OPL默认含NC许可。仅在可遵守非商业条款时使用--include-noncommercial。")
 
     accepted, blocked, failed = [], [], []
