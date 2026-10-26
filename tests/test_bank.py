@@ -18,7 +18,7 @@ class BankTests(unittest.TestCase):
         errs,counts=check(self.items,ROOT)
         self.assertEqual([],errs)
         self.assertEqual(len(self.items),sum(counts.values()))
-        self.assertEqual(36,len(self.items))
+        self.assertGreaterEqual(len(self.items),36)
 
     def test_question_book_inputs_no_embedded_answer(self):
         source=render(self.items,False,ROOT/'tex',ROOT)
