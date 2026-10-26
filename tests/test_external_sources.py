@@ -13,7 +13,7 @@ from sync_external_physics import SETTINGS, file_blob_sha, license_signal, sync
 class ExternalPhysicsTests(unittest.TestCase):
     def test_imported_sources_are_separate_from_original_100(self):
         report = inventory(ROOT / "external_sources")
-        self.assertGreaterEqual(report["imported_raw_files"], 100)
+        self.assertGreaterEqual(report["imported_raw_files"], 206)
         self.assertEqual(0, report["exam_eligible"])
         self.assertEqual([], report["blocking_issues"])
 
@@ -38,6 +38,16 @@ class ExternalPhysicsTests(unittest.TestCase):
                 raw = (base / directory / "raw" / (record["id"] + suffix)).read_bytes()
                 self.assertEqual(record["source_sha"], file_blob_sha(raw),
                                  msg="Source bytes differ from upstream Git SHA: " + record["id"])
+
+    def test_curation_queue_tracks_every_imported_question(self):
+        import csv
+        from rebuild_external_queue import candidates
+        with (ROOT / "external_sources" / "curation_queue.csv").open(
+                encoding="utf-8-sig", newline="") as stream:
+            records=list(csv.DictReader(stream))
+        expected=candidates(ROOT / "external_sources")
+        self.assertEqual(expected,records)
+        self.assertTrue(all(row["exam_ready"] == "no" for row in records))
 
     def test_strict_git_blob_integrity(self):
         data = b"simple physics equation test\n"
