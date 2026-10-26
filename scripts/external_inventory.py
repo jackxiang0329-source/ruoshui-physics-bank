@@ -28,7 +28,7 @@ def inventory(root=EXT):
     results = []
     issues = []
     all_ids = set()
-    for source, extension in (("ubc_opbp", ".md"), ("webwork_opl", ".pg")):
+    for source, extension in (("ubc_opbp", ".md"), ("webwork_opl", ".pg"), ("webwork_thermal", ".pg")):
         file = root / source / "index.json"
         if not file.exists():
             issues.append(f"缺少外部题源索引: {file.name} / {source}")
@@ -41,7 +41,7 @@ def inventory(root=EXT):
                 continue
             all_ids.add(pid)
             # Never trust an imported manifest to select arbitrary filesystem paths.
-            if not re.fullmatch(r"(UBC|OPL)-[0-9]{3,7}", pid):
+            if not re.fullmatch(r"(UBC|OPL|THM)-[0-9]{3,7}", pid):
                 issues.append(f"不合法外部ID: {pid}")
                 continue
             local = root / source / "raw" / (pid + extension)
@@ -56,7 +56,7 @@ def inventory(root=EXT):
                 issues.append(f"UBC来源题缺少原始署名区: {pid}")
             if not item.get("source_url") and not item.get("upstream_url"):
                 issues.append(f"缺少可追溯的原始链接: {pid}")
-            blocked = ("WeBWorK" if source == "webwork_opl" else
+            blocked = ("WeBWorK" if source.startswith("webwork_") else
                        "external_media" if item.get("requires_media") else
                        "parametric_or_answer_pending")
             results.append({
