@@ -84,7 +84,8 @@ def license_verdict(text):
 
 
 def media_required(text):
-    if re.search(r"(?i)<img\b|!\[[^\]]*\]\([^)]+\)", text):
+    question_text = re.split(r"(?im)^##\s+Attribution\b", text, maxsplit=1)[0]
+    if re.search(r"(?i)<img\b|!\[[^\]]*\]\([^)]+\)", question_text):
         return True
     match = re.search(r"(?m)^assets:\s*([^\r\n]*)", text)
     if not match:
@@ -155,12 +156,12 @@ def upstream_revision_checks(manifest, timeout):
     results = []
     repositories = sorted({x["repository"] for x in manifest["sources"]})
     for repo in repositories:
-        link = "https://api.github.com/repos/" + repo + "/commits/HEAD"
+        link = "https://api.github.com/repos/" + repo + "/git/ref/heads/main"
         row = {"repository": repo}
         try:
             raw = fetch_bytes(link, timeout)
             payload = json.loads(raw.decode("utf-8"))
-            sha = payload.get("sha", "")
+            sha = payload.get("object", {}).get("sha", "")
             row["latest_revision"] = sha
             row["pinned_revisions"] = sorted({
                 x["revision"] for x in manifest["sources"]
@@ -228,7 +229,6 @@ def execute(limit, scan_limit, timeout, dry_run=False, root=BASE):
         previous = blocked_cache.get(key)
         if previous and previous.get("sha") == item["sha"]:
             continue
-        report["checked_candidates"] += 1
         reason = None
         if (not rel.endswith(".md") or rel.startswith("/")
                 or ".." in Path(rel).parts):
@@ -244,6 +244,7 @@ def execute(limit, scan_limit, timeout, dry_run=False, root=BASE):
             if not dry_run:
                 blocked_cache[key] = {"sha": item["sha"], "reason": reason}
             continue
+        report["checked_candidates"] += 1
         if dry_run:
             report["added"].append({"path": rel, "state": "eligible_for_fetch_not_checked"})
             continue
