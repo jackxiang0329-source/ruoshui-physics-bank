@@ -137,7 +137,7 @@ Qab=s.Rational(3,2)*P0*V00
 Qbc=5*P0*V00
 verify('T008',equal(Qab+Qbc,s.Rational(13,2)*P0*V00) and equal((P0*V00)/(Qab+Qbc),s.Rational(2,13)) and equal(Qab+Qbc-3*P0*V00-s.Rational(5,2)*P0*V00,P0*V00),'矩形循环吸放热、净功和效率一致')
 delta,I0=s.symbols('delta I0',real=True)
-verify('W007',equal(I0+4*I0+2*s.sqrt(I0**2)*2*s.cos(delta),I0*(5+4*s.cos(delta))) if False else equal(I0*(5+4*s.cos(delta)),I0+4*I0+4*I0*s.cos(delta)),'相干振幅比与干涉光强一致')
+verify('W007',equal(I0*(5+4*s.cos(delta)),I0+4*I0+4*I0*s.cos(delta)),'相干振幅比与干涉光强一致')
 beta8,wd8=s.symbols('beta8 wd8',positive=True)
 Td8=2*s.pi/wd8
 verify('W008',equal(s.exp(-2*beta8*3*Td8),s.exp(-12*s.pi*beta8/wd8)),'同相位间隔三周期能量衰减')

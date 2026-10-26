@@ -8,6 +8,7 @@ ROOT=Path(__file__).resolve().parent.parent
 sys.path.insert(0,str(ROOT/'scripts'))
 from build import TOPICS, check, load_bank, render
 from assemble_exam import assemble
+from check_review import validate as validate_reviews, digest_for
 
 class BankTests(unittest.TestCase):
     @classmethod
@@ -36,6 +37,13 @@ class BankTests(unittest.TestCase):
         selected=assemble(self.items,6,12,[],1,5,True)
         self.assertEqual(6,len(selected))
         self.assertEqual(6,len(set(x['topic'] for x in selected)))
+
+    def test_approval_requires_six_review_records(self):
+        errors,total,approved=validate_reviews(ROOT)
+        self.assertEqual([],errors)
+        self.assertEqual(48,total)
+        self.assertEqual(0,approved)
+        self.assertEqual(64,len(digest_for(ROOT,'M007')))
 
     def test_generated_subfolder_relative_paths(self):
         source=render([self.items[0]],False,ROOT/'generated',ROOT)

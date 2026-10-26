@@ -25,6 +25,8 @@ jobs:
         run: python scripts/check_physics.py
       - name: Validate all independent TeX fragments and indexed masters
         run: python scripts/build.py --check
+      - name: Enforce evidence-backed six-round approval gate
+        run: python scripts/check_review.py
       - name: Unit tests for selection, paths and QA gate
         run: python -m unittest discover -s tests -v
       - name: Draft exam assembly smoke test (never approved for real exams)

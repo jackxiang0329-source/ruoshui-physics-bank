@@ -28,3 +28,7 @@ tex/questions.tex 与 tex/solutions.tex 使用 ElegantBook 模板，通过 LaTeX
 ## 2026-10-26 新增题（第3组）
 
 新增12道：M007–M008、E007–E008、T007–T008、W007–W008、O007–O008、Q007–Q008。独立题干、解答与元数据均已入库；`scripts/check_physics.py` 增加12项对应公式核对。此检查需在 CI/运行环境执行，不能当作专家独立审稿；当前仍不开放正式考试选题。
+
+### 六轮审核自动门禁
+
+运行 `python scripts/check_review.py` 可以检查所有宣称「质检通过」题目的六轮证据记录、审核人字段、源文件SHA绑定。未建立真实审核凭证前不得改成通过。当前48道全部待审。审核凭证格式见 [qa/README.md](qa/README.md)。
