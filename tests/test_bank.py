@@ -38,6 +38,17 @@ class BankTests(unittest.TestCase):
         self.assertEqual(6,len(selected))
         self.assertEqual(6,len(set(x['topic'] for x in selected)))
 
+    def test_single_choice_options_are_structured_and_displayed(self):
+        choices=[p for p in self.items if p['kind']=='选择题']
+        self.assertEqual(6,len(choices))
+        self.assertTrue(all(p['correct_option'] in ('A','B','C','D') for p in choices))
+        for item in choices:
+            tex=(ROOT/'bank'/item['id']/'question.tex').read_text(encoding='utf-8')
+            self.assertEqual(4,len(item['choices']))
+            for label,value in item['choices']:
+                self.assertIn('\\textbf{'+label+'.} '+value,tex)
+            self.assertEqual('\\mathrm{'+item['correct_option']+'}',item['answer'])
+
     def test_approval_requires_six_review_records(self):
         errors,total,approved=validate_reviews(ROOT)
         self.assertEqual([],errors)

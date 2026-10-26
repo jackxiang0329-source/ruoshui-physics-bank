@@ -150,9 +150,10 @@
     }
   },
   "snapshot_question_count": 36,
-  "current_bank_question_count": 60,
-  "new_12_check_definitions": "batch 3: M007..Q008; batch 4: M009..Q010 defined in scripts/check_physics.py",
+  "current_bank_question_count": 72,
+  "new_12_check_definitions": "batch 3: M007..Q008; batch 4: M009..Q010; batch 5: M011..Q012",
   "full_48_repository_ci_execution": "pending_runner_infrastructure",
-  "explanation": "Historical 36-question formula-check snapshot only. New 24 formula-check definitions are in the source, but full 60-question CI execution is not yet verified. No expert six-round review has been completed.",
-  "full_60_repository_ci_execution": "pending_runner_infrastructure"
+  "explanation": "The 36 recorded results are a historical snapshot, not a new 72-item success report. Later 36 formula relations are defined in scripts/check_physics.py; full live execution awaits a usable CI runner.",
+  "full_60_repository_ci_execution": "pending_runner_infrastructure",
+  "full_72_repository_ci_execution": "pending_runner_infrastructure"
 }

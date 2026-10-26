@@ -59,6 +59,34 @@ def check(items,root=ROOT):
         if p.get('format')!='latex-fragment-v1': errors.append(uid+': 片段格式无效')
         for field in ('title','kind','quality_status','answer'):
             if not str(p.get(field,'')).strip(): errors.append(uid+': 缺失 '+field)
+        if p.get('kind') == '选择题':
+            choices = p.get('choices')
+            answer = p.get('correct_option')
+            if not isinstance(choices, list) or len(choices) != 4:
+                errors.append(uid+': 选择题必须包含4个结构化选项')
+            else:
+                labels = [row[0] if isinstance(row,list) and len(row)==2 else None
+                          for row in choices]
+                if labels != ['A','B','C','D']:
+                    errors.append(uid+': 选项键必须按A、B、C、D排序且互不重复')
+                if not all(isinstance(row,list) and len(row)==2
+                           and isinstance(row[1],str) and row[1].strip()
+                           for row in choices):
+                    errors.append(uid+': 选项内容不能为空')
+                fragment = folder/'question.tex'
+                if fragment.exists():
+                    qtext = fragment.read_text(encoding='utf-8')
+                    for row in choices:
+                        if isinstance(row,list) and len(row)==2 and isinstance(row[0],str):
+                            expected = '\\textbf{'+row[0]+'.} '+str(row[1])
+                            if expected not in qtext:
+                                errors.append(uid+': 元数据选项与独立TeX不一致 '+row[0])
+            if answer not in ('A','B','C','D'):
+                errors.append(uid+': 单选题正确选项必须为A-D')
+            elif p.get('answer') != '\\mathrm{'+answer+'}':
+                errors.append(uid+': 单选题答案表达式与正确选项不一致')
+        elif 'correct_option' in p or 'choices' in p:
+            errors.append(uid+': 非单选题不能包含单选题元数据')
         for section in ('question','solution'):
             fragment=folder/(section+'.tex')
             if not fragment.exists():
