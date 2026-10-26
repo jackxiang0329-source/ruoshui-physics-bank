@@ -40,7 +40,7 @@ class BankTests(unittest.TestCase):
 
     def test_single_choice_options_are_structured_and_displayed(self):
         choices=[p for p in self.items if p['kind']=='选择题']
-        self.assertEqual(6,len(choices))
+        self.assertEqual(9,len(choices))
         self.assertTrue(all(p['correct_option'] in ('A','B','C','D') for p in choices))
         for item in choices:
             tex=(ROOT/'bank'/item['id']/'question.tex').read_text(encoding='utf-8')
@@ -52,7 +52,7 @@ class BankTests(unittest.TestCase):
     def test_approval_requires_six_review_records(self):
         errors,total,approved=validate_reviews(ROOT)
         self.assertEqual([],errors)
-        self.assertEqual(72,total)
+        self.assertEqual(84,total)
         self.assertEqual(0,approved)
         self.assertEqual(64,len(digest_for(ROOT,'M007')))
 
@@ -84,6 +84,15 @@ class BankTests(unittest.TestCase):
     def test_topic_quota_impossible_is_rejected(self):
         with self.assertRaises(ValueError):
             assemble(self.items,5,1,[],1,5,True,quotas={'力学':6})
+
+    def test_new_integrated_items_have_independent_fragments(self):
+        ids=('M013','M014','E013','E014','T013','T014',
+             'W013','W014','O013','O014','Q013','Q014')
+        for pid in ids:
+            folder=ROOT/'bank'/pid
+            self.assertTrue((folder/'meta.json').is_file())
+            self.assertTrue((folder/'question.tex').is_file())
+            self.assertTrue((folder/'solution.tex').is_file())
 
     def test_generated_subfolder_relative_paths(self):
         source=render([self.items[0]],False,ROOT/'generated',ROOT)

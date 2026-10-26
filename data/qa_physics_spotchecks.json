@@ -150,10 +150,11 @@
     }
   },
   "snapshot_question_count": 36,
-  "current_bank_question_count": 72,
-  "new_12_check_definitions": "batch 3: M007..Q008; batch 4: M009..Q010; batch 5: M011..Q012",
+  "current_bank_question_count": 84,
+  "new_12_check_definitions": "batch 3 M007-Q008; batch 4 M009-Q010; batch 5 M011-Q012; batch 6 M013-Q014",
   "full_48_repository_ci_execution": "pending_runner_infrastructure",
-  "explanation": "The 36 recorded results are a historical snapshot, not a new 72-item success report. Later 36 formula relations are defined in scripts/check_physics.py; full live execution awaits a usable CI runner.",
+  "explanation": "These 36 results are an immutable historical snapshot. The 48 subsequent symbolic checks live in scripts/check_physics.py, with the complete 84-item CI run still pending.",
   "full_60_repository_ci_execution": "pending_runner_infrastructure",
-  "full_72_repository_ci_execution": "pending_runner_infrastructure"
+  "full_72_repository_ci_execution": "pending_runner_infrastructure",
+  "full_84_repository_ci_execution": "pending_runner_infrastructure"
 }

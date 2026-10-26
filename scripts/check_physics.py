@@ -231,6 +231,45 @@ A1=s.Integer(850)-50;A2=s.Integer(250)-50
 verify('Q012',equal(A2/A1,s.Rational(1,4)) and
        equal(s.Rational(1,2)*2,1),'扣本底后两个半衰期与计数率比')
 
+
+# Batch 6: twelve independent relation checks (not a full expert review).
+ome13,rad13,g13=s.Integer(4),s.Rational(1,4),s.Integer(10)
+verify('M013',equal(ome13**2*rad13/g13,s.Rational(2,5)),'临界转盘静摩擦系数')
+mass14,u14=s.symbols('mass14 u14',positive=True)
+verify('M014',equal(mass14*(2*u14)+2*mass14*(-u14),0)
+       and equal(mass14*(2*u14)**2/2+2*mass14*u14**2/2,3*mass14*u14**2),
+       '系统水平总动量守恒与内部能量释放')
+B13=s.Rational(1,2);ell13=s.Rational(1,5);speed13=s.Integer(2);res13=s.Rational(1,2);d13=s.Rational(3,10)
+emf13=B13*ell13*speed13;current13=emf13/res13;drag13=B13*ell13*current13
+verify('E013',equal(emf13,s.Rational(1,5)) and equal(current13,s.Rational(2,5))
+       and equal(drag13,s.Rational(1,25))
+       and equal(current13**2*res13*d13/speed13,drag13*d13),
+       '入磁线框感生电流、阻力、做功与焦耳热守恒')
+verify('E014',equal(s.Rational(1,2)*s.Rational(2,1000)*s.Rational(1,100),s.Rational(1,100000)),
+       '霍尔电压单位和洛伦兹力平衡')
+eta13=1-s.Rational(300,600)
+verify('T013',equal(eta13,s.Rational(1,2)) and equal(eta13*800,400),'卡诺热机效率上界')
+lambda14,area14,len14=s.symbols('lambda14 area14 len14',positive=True)
+flux14=60/(len14/(lambda14*area14)+len14/(2*lambda14*area14))
+verify('T014',equal(flux14,40*lambda14*area14/len14)
+       and equal(360-flux14*len14/(lambda14*area14),320),
+       '两段一维热阻串联的热流及接面温度')
+v13,L13=s.symbols('v13 L13',positive=True)
+verify('W013',equal((3*v13/(4*L13))/(v13/(4*L13)),3)
+       and equal((5*v13/(4*L13))/(v13/(4*L13)),5),'一闭一开管奇次模')
+k14,kc14,mm14=s.symbols('k14 kc14 mm14',positive=True)
+verify('W014',equal(((k14+kc14)-kc14)/mm14,k14/mm14)
+       and equal(((k14+kc14)+kc14)/mm14,(k14+2*kc14)/mm14),
+       '双质点耦合弹簧同相与反相本征值')
+verify('O013',equal(s.Rational(600,2*1500),s.Rational(1,5)),'二级光栅1500刻线瑞利分辨')
+verify('O014',equal(1/(s.Rational(1,30)+s.Rational(1,15)),10)
+       and equal(1/(s.Rational(1,20)+s.Rational(1,20)),10)
+       and equal(-s.Rational(15,30),-s.Rational(1,2)),'两次近轴薄透镜测量一致')
+verify('Q013',equal(s.Rational(1,100)*s.Rational(1863,2),s.Rational(1863,200)),
+       '质量亏损按原子质量单位换算为兆电子伏')
+vel14=(s.Rational(3,5)+s.Rational(1,2))/(1+s.Rational(3,5)*s.Rational(1,2))
+verify('Q014',equal(vel14,s.Rational(11,13)),'同向亚光速相对论速度合成')
+
 if set(results)!=ids:
     raise AssertionError(f'Checks missing ids: {sorted(ids-set(results))}; extra: {sorted(set(results)-ids)}')
 report={'total_questions':len(ids), 'formula_consistency_checks_passed':len(results),
