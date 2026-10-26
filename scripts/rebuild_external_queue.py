@@ -25,6 +25,7 @@ COLUMNS = ["id","source","module","original_topic","author","license",
 def candidates(root=BASE):
     ubc = json.loads((root/"ubc_opbp"/"index.json").read_text(encoding="utf-8"))
     opl = json.loads((root/"webwork_opl"/"index.json").read_text(encoding="utf-8"))
+    thermal = json.loads((root/"webwork_thermal"/"index.json").read_text(encoding="utf-8"))
     rows=[]
     for p in ubc["records"]:
         rows.append({
@@ -44,6 +45,17 @@ def candidates(root=BASE):
             "answer_verified":"no","semantic_dedup":"pending",
             "license_review":"pending","exam_ready":"no","source_url":p["upstream_url"],
             "raw_path":f"external_sources/webwork_opl/raw/{p['id']}.pg",
+        })
+    for p in thermal["records"]:
+        rows.append({
+            "id":p["id"],"source":"WeBWorK Thermal","module":"热学",
+            "original_topic":p["chapter"]+" / "+p.get("section",""),
+            "author":p.get("author",""),"license":p["license"],
+            "requires_media":"unknown","requires_engine":"yes",
+            "answer_verified":"no","semantic_dedup":"pending",
+            "license_review":"pending","exam_ready":"no",
+            "source_url":p["upstream_url"],
+            "raw_path":f"external_sources/webwork_thermal/raw/{p['id']}.pg",
         })
     if len({r["id"] for r in rows}) != len(rows):
         raise ValueError("Duplicated external problem IDs")
