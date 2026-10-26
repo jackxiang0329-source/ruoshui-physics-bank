@@ -68,3 +68,7 @@ tex/questions.tex 与 tex/solutions.tex 使用 ElegantBook 模板，通过 LaTeX
 ## 首批100题质量复盘（正在进行）
 
 已新增 [第一轮问题筛查记录](docs/reviews/A0-round1-triage.md)，修正了T011数学排版并把T011、O016两道与既有题模高度重合的题目改写为不同模型；所有修改均保留稳定题号和单题独立TeX。这里的第一轮**只是筛查与修订，尚非100题逐题第一轮审核完成**；六轮审核批准仍为0题。当前CI仍未启动到具体测试及编译步骤。
+
+### 修改后题目回归测试
+
+已增加 `tests/test_revision_regressions.py` 对近期6道实质改写题进行结构、选项、主册索引和部分数值关系的防回归检查。可随既有 `python -m unittest discover -s tests -v` 调用，但 GitHub Actions 当前无法进入作业执行步骤，**尚无该测试成功运行的远端证据**。
