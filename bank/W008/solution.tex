@@ -1,0 +1,15 @@
+% W008: reference solution
+阻尼振动周期为 $T_d=2\pi/\omega_d$。相隔整数个周期时，余弦和正弦的相位相同，而指数包络缩小为
+\[
+x(t+3T_d)=e^{-3\beta T_d}x(t).
+\]
+求导 $\dot x=A e^{-\beta t}[-\beta\cos(\omega_dt+\varphi)-\omega_d\sin(\omega_dt+\varphi)]$，所以同样有
+\[
+\dot x(t+3T_d)=e^{-3\beta T_d}\dot x(t).
+\]
+机械能为位移与速度的二次型，因此
+\[
+\frac{E(t+3T_d)}{E(t)}=e^{-6\beta T_d}
+=\exp\!\left(-\frac{12\pi\beta}{\omega_d}\right).
+\]
+这里比较的是相位完全相同的两个时刻；不应将包络能量指数律误写为瞬时任意两时刻严格相等的关系。

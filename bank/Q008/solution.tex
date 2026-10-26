@@ -1,0 +1,13 @@
+% Q008: reference solution
+粒子的区间概率由归一化概率密度积分得到：
+\[
+P=\int_0^{L/4}\!|\psi_1(x)|^2\,\mathrm dx
+=\frac2L\int_0^{L/4}\sin^2\!\left(\frac{\pi x}{L}\right)\mathrm dx.
+\]
+利用 $\sin^2u=\tfrac12(1-\cos2u)$，
+\[
+P=\left[\frac{x}{L}-\frac{1}{2\pi}
+\sin\!\left(\frac{2\pi x}{L}\right)\right]_{0}^{L/4}
+=\frac14-\frac{1}{2\pi}\approx0.09085.
+\]
+由于基态概率密度在靠近阱壁处趋于零，左四分之一区域的概率显著小于长度比例 $1/4$，与物理图像一致。

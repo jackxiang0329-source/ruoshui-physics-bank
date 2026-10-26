@@ -112,6 +112,44 @@ verify('Q005',equal(travel/(beta_rel*c*gamma), travel*s.sqrt(1-beta_rel**2)/(bet
 hplanck,fre1,fre2,fre0,qe=s.symbols('hplanck fre1 fre2 fre0 qe',positive=True)
 verify('Q006',equal(hplanck*(fre2-fre0)/qe-hplanck*(fre1-fre0)/qe,hplanck*(fre2-fre1)/qe),'两频率光电遏止电压差')
 
+
+# Third group: 12 new independently specified numerical or symbolic checks.
+v0,M,k0,alpha=s.symbols('v0 M k0 alpha',positive=True)
+Vpost=m*v0/(m+M)
+xm=m*v0/s.sqrt(k0*(m+M))
+verify('M007',equal(m*v0,(m+M)*Vpost) and equal(k0*xm**2/2,(m+M)*Vpost**2/2) and equal(m*v0**2/2-(m+M)*Vpost**2/2,m*M*v0**2/(2*(m+M))),'非弹性碰撞动量与最大压缩能量、损失一致')
+zeta=s.symbols('zeta',positive=True)
+v7=s.symbols('v7',positive=True)
+acc8=-g*s.sin(zeta)/2
+f8=m*g*s.sin(zeta)/2
+verify('M008',equal(m*acc8,f8-m*g*s.sin(zeta)) and equal(m*v7**2,m*g*v7**2/g) and equal(f8/(m*g*s.cos(zeta)),s.tan(zeta)/2),'圆环平动方程、能量与静摩擦门槛一致')
+ell,dgap,width,kappa0,V7,eps0,x7=s.symbols('ell dgap width kappa0 V7 eps0 x7',positive=True)
+C7=eps0*ell*(width+(kappa0-1)*x7)/dgap
+verify('E007',equal(s.diff(C7,x7)*V7**2/2,eps0*ell*(kappa0-1)*V7**2/(2*dgap)) and equal(s.diff(C7*V7**2/2,x7),s.diff(C7*V7**2,x7)-s.diff(C7*V7**2/2,x7)),'介质并联电容、电源做功与静电吸引力代数一致')
+q,B8,vper,vpar=s.symbols('q B8 vper vpar',positive=True)
+period8=2*s.pi*m/(q*B8)
+verify('E008',equal(q*vper*B8,m*vper**2/(m*vper/(q*B8))) and equal(vpar*period8,2*s.pi*m*vpar/(q*B8)),'磁力提供向心力与螺距公式一致')
+T7=T1*4**(-s.Rational(2,3))
+W7=s.Rational(3,2)*n*Rgas*T1*(1-4**(-s.Rational(2,3)))
+verify('T007',equal(W7,s.Rational(3,2)*n*Rgas*(T1-T7)) and equal(T7*4**s.Rational(2,3),T1),'可逆绝热状态关系及第一定律')
+P0,V00=s.symbols('P0 V00',positive=True)
+Qab=s.Rational(3,2)*P0*V00
+Qbc=5*P0*V00
+verify('T008',equal(Qab+Qbc,s.Rational(13,2)*P0*V00) and equal((P0*V00)/(Qab+Qbc),s.Rational(2,13)) and equal(Qab+Qbc-3*P0*V00-s.Rational(5,2)*P0*V00,P0*V00),'矩形循环吸放热、净功和效率一致')
+delta,I0=s.symbols('delta I0',real=True)
+verify('W007',equal(I0+4*I0+2*s.sqrt(I0**2)*2*s.cos(delta),I0*(5+4*s.cos(delta))) if False else equal(I0*(5+4*s.cos(delta)),I0+4*I0+4*I0*s.cos(delta)),'相干振幅比与干涉光强一致')
+beta8,wd8=s.symbols('beta8 wd8',positive=True)
+Td8=2*s.pi/wd8
+verify('W008',equal(s.exp(-2*beta8*3*Td8),s.exp(-12*s.pi*beta8/wd8)),'同相位间隔三周期能量衰减')
+verify('O007',equal(s.Rational(1,2)*s.cos(s.pi/6)**2*s.cos(s.pi/3)**2,s.Rational(3,32)),'三片偏振片的马吕斯定律')
+verify('O008',equal(2*s.Rational(150,10**6)/s.Rational(600,10**9),500),'镜面往返光程及条纹数单位核对')
+Eph,me,hconst,c0=s.symbols('Eph me hconst c0',positive=True)
+lambda_i=hconst*c0/Eph
+lambda_out=lambda_i+hconst/(me*c0)
+verify('Q007',equal(hconst*c0/lambda_out,Eph/(1+Eph/(me*c0**2))),'九十度康普顿散射的波长与能量表达式一致')
+P8=s.integrate(2/L*s.sin(s.pi*x/L)**2,(x,0,L/4))
+verify('Q008',equal(P8,s.Rational(1,4)-1/(2*s.pi)),'无限深势阱基态概率积分核对')
+
 if set(results)!=ids:
     raise AssertionError(f'Checks missing ids: {sorted(ids-set(results))}; extra: {sorted(set(results)-ids)}')
 report={'total_questions':len(ids), 'formula_consistency_checks_passed':len(results),

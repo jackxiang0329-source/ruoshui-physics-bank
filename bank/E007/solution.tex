@@ -1,0 +1,18 @@
+% E007: reference solution
+插入部分和未插入部分承受相同电压，等效为两只并联电容器：
+\[
+C(x)=\frac{\kappa\varepsilon_0\ell x}{d}
++\frac{\varepsilon_0\ell(w-x)}{d}
+=\frac{\varepsilon_0\ell}{d}[w+(\kappa-1)x].
+\]
+当电源恒压时，电容器储能为 $U_c=\tfrac12C(x)V^2$；但插入过程同时伴随电源做功 $\mathrm dW_{\rm src}=V\mathrm dQ=V^2\mathrm dC$。准静态能量守恒给出
+\[
+F\,\mathrm dx=\mathrm dW_{\rm src}-\mathrm dU_c
+=\frac12V^2\mathrm dC.
+\]
+因此
+\[
+F=\frac12V^2\frac{\mathrm dC}{\mathrm dx}
+=\frac{\varepsilon_0\ell(\kappa-1)V^2}{2d}>0.
+\]
+正号表示介质被吸入；若仅对 $U_c$ 取负梯度，会漏掉恒压电源参与的能量交换，从而得到错误方向。
