@@ -1,15 +1,17 @@
+# Python, LaTeX and draft outputs
 __pycache__/
-.pytest_cache/
 *.pyc
+.venv/
+generated/
 *.aux
 *.log
-*.out
 *.toc
+*.out
+*.synctex.gz
 *.fls
 *.fdb_latexmk
 *.xdv
-*.synctex.gz
-_render/
-.DS_Store
-
-generated/
+*.bbl
+*.blg
+*.run.xml
+*.bcf

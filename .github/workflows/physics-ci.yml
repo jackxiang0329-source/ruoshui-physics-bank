@@ -1,28 +1,35 @@
-name: Physics Bank Validation and PDF Build
+name: Physics Source QA and ElegantBook PDF
+
 on:
   push:
     branches: [main]
   pull_request:
   workflow_dispatch:
+
 permissions:
   contents: read
+
 jobs:
   validate-and-build:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
           cache: 'pip'
-      - name: Install Python QA dependencies
+      - name: Install Python QA requirements
         run: python -m pip install -r requirements.txt
-      - name: Check physics formula consistency
+      - name: Physics formula consistency on original 36 samples
         run: python scripts/check_physics.py
-      - name: Validate and generate TeX
-        run: python scripts/build.py
-      - name: Compile XeLaTeX documents
+      - name: Validate all independent TeX fragments and indexed masters
+        run: python scripts/build.py --check
+      - name: Unit tests for selection, paths and QA gate
+        run: python -m unittest discover -s tests -v
+      - name: Draft exam assembly smoke test (never approved for real exams)
+        run: python scripts/assemble_exam.py --count 6 --seed 20261026 --allow-pending
+      - name: Build ElegantBook with XeLaTeX
         uses: xu-cheng/latex-action@v4
         with:
           root_file: |
@@ -30,10 +37,10 @@ jobs:
             solutions.tex
           working_directory: tex
           latexmk_use_xelatex: true
-      - name: Upload PDF artifacts
+      - name: Upload generated PDFs as CI artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: ruoshui-physics-pdfs
+          name: ruoshui-elegantbook-pdf
           if-no-files-found: error
           path: |
             tex/questions.pdf
