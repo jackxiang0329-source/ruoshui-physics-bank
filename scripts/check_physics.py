@@ -10,8 +10,9 @@ from pathlib import Path
 import sympy as s
 
 ROOT=Path(__file__).resolve().parent.parent
-problems=json.loads((ROOT/'data/problems.json').read_text(encoding='utf-8'))
-ids={x['id'] for x in problems}
+from build import load_bank
+# Use the live per-question metadata rather than the archived monolithic JSON.
+ids={x['id'] for x in load_bank(ROOT)}
 results={}
 
 def verify(pid, condition, detail):
