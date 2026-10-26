@@ -35,3 +35,7 @@ scripts/build.py --check 用于检查单题源合法性、ID/字段、题目精�
 最新PDF由 GitHub Actions 构建；旧 pdf/ 目录仍是改模板之前的历史PDF。仓库Actions若失败，应据具体步骤日志定位；若作业在运行任何步骤前即失败，则不能归咎于具体 LaTeX 源码。
 
 模板参考： https://ctan.org/pkg/elegantbook ；后续试卷单页样式可评估 ElegantPaper https://ctan.org/pkg/elegantpaper 。
+
+## 六、按考试约束选题
+
+已扩展 `scripts/assemble_exam.py`，支持题型筛选、模块精确配额、难度与预计时长上限、总分整数分配、随机种子重现，并输出JSON清单。详见 [EXAM_ASSEMBLY.md](EXAM_ASSEMBLY.md)。`\input` 独立性保持不变。尚待独立复核的题只能加 `--allow-pending` 组草稿卷。

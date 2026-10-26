@@ -90,7 +90,8 @@ def render(items,with_solutions=False,output_dir=None,root=ROOT):
         for p in group:
             uid=p['id']
             lines.append('\\noindent{\\large\\bfseries 【'+uid+'】 '+escape(p['title'])+
-                         '}\\quad{\\small 难度 '+str(p['level'])+'/5 · '+escape(p['kind'])+'}\\par')
+                         '}\\quad{\\small 难度 '+str(p['level'])+'/5 · '+escape(p['kind'])+
+                         (' · '+str(p['exam_points'])+'分' if 'exam_points' in p else '')+'}\\par')
             relative=(root/'bank'/uid/'question.tex')
             lines.append('\\noindent\\textbf{题目：}\\input{'+Path(os.path.relpath(relative,output_dir)).as_posix()+'}')
             if with_solutions:

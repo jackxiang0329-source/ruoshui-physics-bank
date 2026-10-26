@@ -7,7 +7,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parent.parent
 sys.path.insert(0,str(ROOT/'scripts'))
 from build import TOPICS, check, load_bank, render
-from assemble_exam import assemble
+from assemble_exam import assemble, assign_points
 from check_review import validate as validate_reviews, digest_for
 
 class BankTests(unittest.TestCase):
@@ -44,6 +44,37 @@ class BankTests(unittest.TestCase):
         self.assertEqual(60,total)
         self.assertEqual(0,approved)
         self.assertEqual(64,len(digest_for(ROOT,'M007')))
+
+    def test_exact_topic_quotas(self):
+        selected=assemble(self.items,8,42,[],1,5,True,
+                          quotas={'力学':2,'电磁学':2})
+        self.assertEqual(8,len(selected))
+        self.assertEqual(2,sum(p['topic']=='力学' for p in selected))
+        self.assertEqual(2,sum(p['topic']=='电磁学' for p in selected))
+        self.assertTrue(all(p['topic'] not in ('力学','电磁学')
+                            for p in selected if p['id'] not in
+                            {x['id'] for x in selected if x['topic'] in ('力学','电磁学')}))
+
+    def test_exam_duration_and_reproducibility(self):
+        a=assemble(self.items,6,123,[],1,5,True,max_minutes=120)
+        b=assemble(self.items,6,123,[],1,5,True,max_minutes=120)
+        self.assertEqual([p['id'] for p in a],[p['id'] for p in b])
+        self.assertLessEqual(sum(p['estimated_minutes'] for p in a),120)
+        with self.assertRaises(ValueError):
+            assemble(self.items,6,123,[],1,5,True,max_minutes=1)
+
+    def test_difficulty_weighted_scores(self):
+        selected=assemble(self.items,10,42,[],1,5,True)
+        scores=assign_points(selected,100)
+        self.assertEqual(len(selected),len(scores))
+        self.assertTrue(all(isinstance(s,int) and s>0 for s in scores))
+        self.assertEqual(100,sum(scores))
+        with self.assertRaises(ValueError):
+            assign_points(selected,9)
+
+    def test_topic_quota_impossible_is_rejected(self):
+        with self.assertRaises(ValueError):
+            assemble(self.items,5,1,[],1,5,True,quotas={'力学':6})
 
     def test_generated_subfolder_relative_paths(self):
         source=render([self.items[0]],False,ROOT/'generated',ROOT)
