@@ -3,6 +3,10 @@ name: Physics Source QA and ElegantBook PDF
 on:
   push:
     branches: [main]
+    # External candidate imports are audited in auto-import-oer.yml.
+    # Do not rebuild all PDFs for a 30-minute raw-source/log-only update.
+    paths-ignore:
+      - 'external_sources/**'
   pull_request:
   workflow_dispatch:
 
