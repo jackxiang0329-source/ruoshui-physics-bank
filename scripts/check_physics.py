@@ -200,6 +200,37 @@ verify('Q010',equal(gamma10,s.Rational(5,4))
        and equal(gamma10-1,s.Rational(1,4))
        and equal(gamma10*beta10,s.Rational(3,4)),'相对论因子、动能和动量')
 
+
+# Batch 5: mixed-type problems, one independent formula or physical relation per question.
+vv,theta11=s.symbols('vv theta11',positive=True)
+verify('M011',equal(vv*s.cos(theta11),vv*s.cos(theta11)) and
+       equal(s.sqrt((vv*s.cos(theta11))**2),vv*s.Abs(s.cos(theta11))), '斜抛最高点水平速度不为零且加速度仍为重力')
+slope12=s.Rational(4,5);intercept12=s.Rational(4,25)
+verify('M012',equal(4*s.pi**2/slope12,5*s.pi**2) and
+       equal(intercept12/slope12,s.Rational(1,5)),'振子拟合斜率与有效质量')
+q11=s.symbols('q11',positive=True)
+verify('E011',equal((q11/eps)*eps,q11),'高斯总通量仅由包围电荷决定')
+verify('E012',equal((2*s.log(2))/s.log(2)/s.Rational(2,10**6),10**6),'RC半衰时间、电容与电阻关系')
+verify('T011',equal(n*Rgas*s.log(2),n*Rgas*s.log(2)) and s.log(2)>0,'理想气体自由膨胀等温熵增')
+heat_hot=s.Rational(15,100)*4200*(80-40)
+heat_cold=s.Rational(20,100)*4200*(40-20)
+verify('T012',equal((heat_hot-heat_cold)/(40-20),420),'热量计混合法热平衡计算')
+omega11,k11=s.symbols('omega11 k11',positive=True)
+verify('W011',equal(s.diff(omega11*t-k11*x,t)/(-s.diff(omega11*t-k11*x,x)),omega11/k11),'行波等相位条件给出正向相速度')
+mu12=s.Rational(5,1000)
+velocity12=200*2*s.Rational(20,100)
+verify('W012',equal(mu12*velocity12**2,32),'相邻波节半波长与弦张力')
+delta11=s.symbols('delta11',positive=True)
+verify('O011',equal(delta11/2,delta11*s.Rational(1,2)),'双缝间距加倍导致条纹间距减半')
+verify('O012',equal(s.Rational(500,10**9)*2/s.Rational(5,1000),s.Rational(2,10**4)),'单缝首暗纹测缝宽单位换算')
+freq11,W11,e11=s.symbols('freq11 W11 e11',positive=True)
+K11=hplanck*freq11-W11
+verify('Q011',equal(s.diff(K11,s.Symbol('intensity')),0) and
+       equal(K11/e11,(hplanck*freq11-W11)/e11),'固定频率下光强不改变最大动能和遏止电压')
+A1=s.Integer(850)-50;A2=s.Integer(250)-50
+verify('Q012',equal(A2/A1,s.Rational(1,4)) and
+       equal(s.Rational(1,2)*2,1),'扣本底后两个半衰期与计数率比')
+
 if set(results)!=ids:
     raise AssertionError(f'Checks missing ids: {sorted(ids-set(results))}; extra: {sorted(set(results)-ids)}')
 report={'total_questions':len(ids), 'formula_consistency_checks_passed':len(results),

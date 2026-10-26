@@ -41,7 +41,7 @@ class BankTests(unittest.TestCase):
     def test_approval_requires_six_review_records(self):
         errors,total,approved=validate_reviews(ROOT)
         self.assertEqual([],errors)
-        self.assertEqual(60,total)
+        self.assertEqual(72,total)
         self.assertEqual(0,approved)
         self.assertEqual(64,len(digest_for(ROOT,'M007')))
 
