@@ -89,6 +89,21 @@ def candidates(root=BASE):
                 "source_url":p["source_url"],
                 "raw_path":f"external_sources/hf_physics_dpo/raw/{p['id']}.md",
             })
+    # SeePhys text-only rows retain source provenance; all require rights and science review.
+    see_path = root / "hf_seephys" / "index.json"
+    if see_path.exists():
+        data = json.loads(see_path.read_text(encoding="utf-8"))
+        for p in data["records"]:
+            rows.append({
+                "id": p["id"], "source": "Hugging Face SeePhys (text-only)",
+                "module": p["module"], "original_topic": p["source_subject"],
+                "author": p["author"], "license": p["license"],
+                "requires_media": "no", "requires_engine": "no",
+                "answer_verified": "no", "semantic_dedup": "pending",
+                "license_review": "pending", "exam_ready": "no",
+                "source_url": p["source_url"],
+                "raw_path": "external_sources/hf_seephys/raw/" + p["id"] + ".md",
+            })
     if len({r["id"] for r in rows}) != len(rows):
         raise ValueError("Duplicated external problem IDs")
     return rows

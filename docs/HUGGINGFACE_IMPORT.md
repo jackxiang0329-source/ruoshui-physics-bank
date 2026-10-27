@@ -11,3 +11,5 @@
 - 频率：GitHub Actions cron UTC 每小时 7 和 37 分；实际触发可延迟。仅对已注册的适配器自动下载，不应宣传为无限制爬取整个互联网。
 
 候选对比与来源权利需持续复核：UGPhysics/ugphysics (CC BY-NC-SA 4.0)、PrismaX/PhysUniBench (CC BY 4.0，配图依赖)、yale-nlp/physics-verified (MIT 声明但高校试卷来源权利待确认)、desimfj/PHYSICS (MIT 声明但原始题权利链未审核)。
+
+SeePhys/SeePhys：原始数据混合文字和图片题。本适配器只导入 `images` 为空且题干不依赖图示的条目，前后核验 Apache-2.0 元数据与数据集修订，单轮扫描 250、最多新增 100。所有条目记录 SHA256、原行号和待审核状态，不能作为已审定大学考试真题。

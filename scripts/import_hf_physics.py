@@ -52,7 +52,7 @@ def write(path,obj):
 def read(path,fallback):
     return json.loads(path.read_text(encoding="utf-8")) if path.is_file() else fallback
 
-def run(limit=100,scan_limit=500,timeout=20,revision_provider=None,page_provider=None,base=BASE):
+def run(limit=500,scan_limit=1000,timeout=20,revision_provider=None,page_provider=None,base=BASE):
     directory=base/"hf_physics_dpo"
     mp,ip=directory/"manifest.json",directory/"index.json"
     m=read(mp,{"dataset":DATASET,"config":"default","split":"train","revision":None,"next_offset":0,"total_rows":None})
@@ -149,9 +149,9 @@ def run(limit=100,scan_limit=500,timeout=20,revision_provider=None,page_provider
     return report
 if __name__=="__main__":
     a=argparse.ArgumentParser()
-    a.add_argument("--limit",type=int,default=100)
-    a.add_argument("--scan-limit",type=int,default=500)
+    a.add_argument("--limit",type=int,default=500)
+    a.add_argument("--scan-limit",type=int,default=1000)
     a.add_argument("--timeout",type=int,default=20)
     opts=a.parse_args()
-    if not 1<=opts.limit<=100 or not 1<=opts.scan_limit<=500:a.error("limits exceeded")
+    if not 1<=opts.limit<=500 or not 1<=opts.scan_limit<=1000:a.error("limits exceeded")
     run(opts.limit,opts.scan_limit,opts.timeout)

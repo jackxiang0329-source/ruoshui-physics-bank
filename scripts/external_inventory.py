@@ -30,7 +30,7 @@ def inventory(root=EXT):
     all_ids = set()
     for source, extension in (("ubc_opbp", ".md"), ("webwork_opl", ".pg"),
                               ("webwork_thermal", ".pg"), ("intro_physics", ".md"),
-                              ("hf_physics_dpo", ".md")):
+                              ("hf_physics_dpo", ".md"), ("hf_seephys", ".md")):
         file = root / source / "index.json"
         if not file.exists():
             issues.append(f"缺少外部题源索引: {file.name} / {source}")
@@ -43,7 +43,7 @@ def inventory(root=EXT):
                 continue
             all_ids.add(pid)
             # Never trust an imported manifest to select arbitrary filesystem paths.
-            if not re.fullmatch(r"(?:UBC|OPL|THM|IP|HFDPO)-[0-9]{3,7}", pid):
+            if not re.fullmatch(r"(?:UBC|OPL|THM|IP|HFDPO|SEEP)-[0-9]{3,7}", pid):
                 issues.append(f"不合法外部ID: {pid}")
                 continue
             local = root / source / "raw" / (pid + extension)
@@ -58,7 +58,8 @@ def inventory(root=EXT):
                 issues.append(f"UBC来源题缺少原始署名区: {pid}")
             if not item.get("source_url") and not item.get("upstream_url"):
                 issues.append(f"缺少可追溯的原始链接: {pid}")
-            blocked = ("unverified_generated_data" if source == "hf_physics_dpo" else
+            blocked = ("unverified_multimodal_source" if source == "hf_seephys" else
+                       "unverified_generated_data" if source == "hf_physics_dpo" else
                        "extracted_example_needs_review" if source == "intro_physics" else
                        "WeBWorK" if source.startswith("webwork_") else
                        "external_media" if item.get("requires_media") else
