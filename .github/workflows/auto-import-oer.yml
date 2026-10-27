@@ -27,6 +27,8 @@ on:
       - 'scripts/reclassify_external_topics.py'
       - 'tests/test_reclassify_external_topics.py'
       - 'scripts/build.py'
+      - 'scripts/curation_triage.py'
+      - 'tests/test_curation_triage.py'
 
 permissions:
   contents: write
@@ -63,6 +65,8 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_report_external_coverage.py' -v
       - name: Test cross-source topic reclassification
         run: python -m unittest discover -s tests -p 'test_reclassify_external_topics.py' -v
+      - name: Test editorial review priority and duplicate-digest reporting
+        run: python -m unittest discover -s tests -p 'test_curation_triage.py' -v
       - name: Fetch, verify, deduplicate and classify candidates
         run: python scripts/auto_import_oer.py --execute --limit 100 --scan-limit 500 --timeout 12
       - name: Fetch and extract CC BY physics examples from new upstream source
@@ -92,6 +96,8 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_external_sources.py' -v
       - name: Summarize source, subject and exam-readiness coverage
         run: python scripts/report_external_coverage.py
+      - name: Generate human-review shortlist and cross-source digest audit
+        run: python scripts/curation_triage.py
       - name: Regenerate independent bank masters and verify consistent index
         run: |
           python scripts/build.py
@@ -120,5 +126,7 @@ jobs:
             external_sources/logs/seephys_import_latest.json
             external_sources/logs/college_physics_latest.json
             external_sources/logs/topic_backfill_latest.json
+            external_sources/catalog/review_triage_report.json
+            external_sources/catalog/review_priority.csv
           if-no-files-found: warn
           retention-days: 30
