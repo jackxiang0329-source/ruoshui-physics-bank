@@ -104,6 +104,21 @@ def candidates(root=BASE):
                 "source_url": p["source_url"],
                 "raw_path": "external_sources/hf_seephys/raw/" + p["id"] + ".md",
             })
+    # CC BY 3.0 College Physics chapter problem excerpts: raw HTML/MathML, not exam-ready.
+    college_index_path = root / "college_physics" / "index.json"
+    if college_index_path.exists():
+        cp = json.loads(college_index_path.read_text(encoding="utf-8"))
+        for p in cp["records"]:
+            rows.append({
+                "id":p["id"],"source":"OpenStax College Physics (historical mirror)",
+                "module":p["module"],"original_topic":p["title"],
+                "author":p["author"],"license":p["license"],
+                "requires_media":"no","requires_engine":"yes",
+                "answer_verified":"no","semantic_dedup":"pending",
+                "license_review":"pending","exam_ready":"no",
+                "source_url":p["source_url"],
+                "raw_path":"external_sources/college_physics/raw/"+p["id"]+".md",
+            })
     if len({r["id"] for r in rows}) != len(rows):
         raise ValueError("Duplicated external problem IDs")
     return rows

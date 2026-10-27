@@ -20,6 +20,8 @@ on:
       - 'tests/test_import_hf_physics.py'
       - 'scripts/import_seephys.py'
       - 'tests/test_import_seephys.py'
+      - 'scripts/import_college_physics.py'
+      - 'tests/test_import_college_physics.py'
 
 permissions:
   contents: write
@@ -50,6 +52,8 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_import_hf_physics.py' -v
       - name: Unit-test SeePhys text-only importer and provenance rules
         run: python -m unittest discover -s tests -p 'test_import_seephys.py' -v
+      - name: Test CC BY College Physics source parser and figure exclusion
+        run: python -m unittest discover -s tests -p 'test_import_college_physics.py' -v
       - name: Fetch, verify, deduplicate and classify candidates
         run: python scripts/auto_import_oer.py --execute --limit 100 --scan-limit 500 --timeout 12
       - name: Fetch and extract CC BY physics examples from new upstream source
@@ -66,6 +70,9 @@ jobs:
       - name: Import only standalone SeePhys text questions (media excluded)
         continue-on-error: true
         run: python scripts/import_seephys.py --limit 100 --scan-limit 250 --timeout 20
+      - name: Acquire CC BY College Physics course exercises from pinned GitHub source
+        continue-on-error: true
+        run: python scripts/import_college_physics.py --limit 100 --max-files 25 --timeout 15
       - name: Rebuild exam-review candidate list (not the approved question bank)
         run: python scripts/rebuild_external_queue.py
       - name: Audit imported raw files
@@ -92,5 +99,6 @@ jobs:
             external_sources/logs/intro_physics_latest.json
             external_sources/logs/huggingface_import_latest.json
             external_sources/logs/seephys_import_latest.json
+            external_sources/logs/college_physics_latest.json
           if-no-files-found: warn
           retention-days: 30
