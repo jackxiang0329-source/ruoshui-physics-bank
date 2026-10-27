@@ -1,19 +1,16 @@
 {
   "unclassified_hf_domains": {},
   "unclassified_college_chapters": {
-    "Coulomb’s Law": 18,
-    "Resistance and Resistivity": 17,
-    "Resistors in Series and Parallel": 16,
-    "Applications of Electrostatics": 13,
-    "DC Voltmeters and Ammeters": 8,
-    "Equipotential Lines": 5
+    "Transformers": 10,
+    "The Hall Effect": 9,
+    "Back Emf": 6
   },
-  "generated_utc": "2026-10-27T09:21:10.319078+00:00",
-  "raw_candidate_count": 5749,
+  "generated_utc": "2026-10-27T09:23:22.809855+00:00",
+  "raw_candidate_count": 6499,
   "exam_ready_external_count": 0,
   "by_source": {
-    "Hugging Face Physics-DPO (synthetic)": 3900,
-    "OpenStax College Physics (historical mirror)": 1450,
+    "Hugging Face Physics-DPO (synthetic)": 4400,
+    "OpenStax College Physics (historical mirror)": 1700,
     "UBC OPBP": 265,
     "WeBWorK BrockPhysics": 59,
     "Introductory Physics (PHYS 2425)": 53,
@@ -21,23 +18,23 @@
     "Hugging Face SeePhys (text-only)": 1
   },
   "by_module": {
-    "力学": 2277,
-    "电磁学": 1105,
-    "热学": 693,
-    "近代物理": 653,
-    "振动与波动": 454,
-    "光学": 416,
-    "待分类": 78,
-    "物理基础": 73
+    "力学": 2457,
+    "电磁学": 1489,
+    "热学": 752,
+    "近代物理": 728,
+    "振动与波动": 498,
+    "光学": 468,
+    "物理基础": 81,
+    "待分类": 26
   },
   "source_module_matrix": {
     "Hugging Face Physics-DPO (synthetic)": {
-      "力学": 1419,
-      "电磁学": 802,
-      "近代物理": 563,
-      "热学": 417,
-      "光学": 382,
-      "振动与波动": 317
+      "力学": 1592,
+      "电磁学": 899,
+      "近代物理": 638,
+      "热学": 476,
+      "光学": 434,
+      "振动与波动": 361
     },
     "Hugging Face SeePhys (text-only)": {
       "待分类": 1
@@ -47,14 +44,14 @@
       "物理基础": 3
     },
     "OpenStax College Physics (historical mirror)": {
-      "力学": 712,
+      "力学": 719,
+      "电磁学": 449,
       "热学": 255,
-      "电磁学": 162,
       "振动与波动": 114,
-      "待分类": 77,
-      "物理基础": 70,
+      "物理基础": 78,
       "近代物理": 31,
-      "光学": 29
+      "光学": 29,
+      "待分类": 25
     },
     "UBC OPBP": {
       "电磁学": 141,
@@ -70,8 +67,8 @@
     }
   },
   "license_signals": {
-    "Apache-2.0 (source metadata; rights review pending)": 3900,
-    "CC BY 3.0 Unported": 1450,
+    "Apache-2.0 (source metadata; rights review pending)": 4400,
+    "CC BY 3.0 Unported": 1700,
     "CC-BY-NC-SA 4.0": 121,
     "CC BY 4.0": 108,
     "CC BY 4.0 (repository-level; rights review pending)": 53,
@@ -82,28 +79,28 @@
     "CC BY-NC-SA 3.0 default, subject to source overrides": 6,
     "Apache-2.0 (dataset label; per-item rights review pending)": 1
   },
-  "unclassified_count": 78,
+  "unclassified_count": 26,
   "unclassified_id_examples": [
     "SEEP-00001",
-    "CP-01201",
-    "CP-01202",
-    "CP-01203",
-    "CP-01204",
-    "CP-01205",
-    "CP-01206",
-    "CP-01207",
-    "CP-01208",
-    "CP-01209",
-    "CP-01210",
-    "CP-01211",
-    "CP-01212",
-    "CP-01213",
-    "CP-01214",
-    "CP-01215",
-    "CP-01216",
-    "CP-01217",
-    "CP-01218",
-    "CP-01285"
+    "CP-01509",
+    "CP-01510",
+    "CP-01511",
+    "CP-01512",
+    "CP-01513",
+    "CP-01514",
+    "CP-01515",
+    "CP-01516",
+    "CP-01517",
+    "CP-01608",
+    "CP-01609",
+    "CP-01610",
+    "CP-01611",
+    "CP-01612",
+    "CP-01613",
+    "CP-01614",
+    "CP-01615",
+    "CP-01616",
+    "CP-01617"
   ],
   "missing_raw_files": 0,
   "quality_note": "Source-count not verified-unique; semantic dedup, solutions, physics validity and license chains remain pending."
