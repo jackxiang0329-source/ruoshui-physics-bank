@@ -3,10 +3,22 @@ name: Physics Source QA and ElegantBook PDF
 on:
   push:
     branches: [main]
-    # External candidate imports are audited in auto-import-oer.yml.
-    # Do not rebuild all PDFs for a 30-minute raw-source/log-only update.
-    paths-ignore:
-      - 'external_sources/**'
+    # External candidate importers have their own dedicated QA workflow.
+    # PDF compilation runs on changes to the approved source bank or its build tooling.
+    paths:
+      - 'bank/**'
+      - 'tex/**'
+      - 'data/index.csv'
+      - 'scripts/build.py'
+      - 'scripts/check_physics.py'
+      - 'scripts/check_review.py'
+      - 'scripts/check_tex_controls.py'
+      - 'scripts/audit_milestone.py'
+      - 'scripts/assemble_exam.py'
+      - 'tests/test_bank.py'
+      - 'tests/test_revision_regressions.py'
+      - 'tests/test_physical_assumptions.py'
+      - '.github/workflows/physics-ci.yml'
   pull_request:
   workflow_dispatch:
 
