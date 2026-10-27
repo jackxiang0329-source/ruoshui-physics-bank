@@ -31,3 +31,8 @@ title: "Motion"
   self.assertEqual(cp.group("Displacement"),"力学")
   self.assertEqual(cp.group("Addition of Velocities"),"力学")
   self.assertEqual(cp.group("Problem-Solving Strategies"),"物理基础")
+  self.assertEqual(cp.group("Falling Objects"),"力学")
+  self.assertEqual(cp.group("Impulse"),"力学")
+  self.assertEqual(cp.group("Physics: An Introduction"),"物理基础")
+  self.assertEqual(cp.group("Vector Addition and Subtraction: Analytical Methods"),"力学")
+  self.assertEqual(cp.group("Satellites and Kepler’s Laws"),"力学")
