@@ -86,6 +86,9 @@ def norm(s):
     return re.sub(r"\s+"," ",re.sub(r"<[^>]+>"," ",s).casefold()).strip()
 def group(title):
     name=title.casefold()
+    # In OpenStax this chapter discusses stereo speakers and phase, not geometrical optics.
+    if name == "superposition and interference":
+        return "振动与波动"
     return next((label for label,keys in MODULES if any(k in name for k in keys)),"待分类")
 def block(html,start):
     """Slice one balanced <div> element including any nested <div>s."""

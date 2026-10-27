@@ -51,6 +51,7 @@ title: "Motion"
   self.assertEqual(cp.group("Transformers"),"电磁学")
   self.assertEqual(cp.group("The Hall Effect"),"电磁学")
   self.assertEqual(cp.group("Back Emf"),"电磁学")
+  self.assertEqual(cp.group("Superposition and Interference"),"振动与波动")
   self.assertEqual(cp.group("Vision Correction"),"光学")
   self.assertEqual(cp.group("Polarization"),"光学")
   self.assertEqual(cp.group("Young’s Double Slit Experiment"),"光学")
