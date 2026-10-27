@@ -14,6 +14,7 @@ on:
       - 'tests/test_auto_import_oer.py'
       - 'scripts/import_intro_physics.py'
       - 'tests/test_import_intro_physics.py'
+      - 'scripts/discover_oer_sources.py'
 
 permissions:
   contents: write
@@ -44,6 +45,10 @@ jobs:
         run: python scripts/auto_import_oer.py --execute --limit 100 --scan-limit 500 --timeout 12
       - name: Fetch and extract CC BY physics examples from new upstream source
         run: python scripts/import_intro_physics.py --limit 100 --timeout 15
+      - name: Discover new public university-physics source repositories
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/discover_oer_sources.py
       - name: Rebuild exam-review candidate list (not the approved question bank)
         run: python scripts/rebuild_external_queue.py
       - name: Audit imported raw files
