@@ -10,12 +10,12 @@ BASE=Path(__file__).resolve().parent.parent/"external_sources"
 DATASET="yusufbaykaloglu/Physics-DPO-Dataset"
 PATH=BASE/"hf_physics_dpo"
 MODULES={
- "力学":("gravitation","mechanic","force","dynamics","kinematic","conservation","orbital","energy","momentum","rotation","fluid"),
- "热学":("thermo","heat","temperature","gas_","entropy"),
- "电磁学":("electromagnet","electric","magnet","circuit","capacitor"),
- "光学":("optics","diffraction","refraction","interference","laser"),
- "振动与波动":("wave","oscillation","acoustic","vibration","sound"),
- "近代物理":("quantum","atomic","nuclear","relativity","particle","solid_state"),
+ "力学":("gravitation","mechanic","force","dynamics","kinematic","conservation","orbital","energy","momentum","rotation","fluid","viscous","bernoulli","friction","drag","elasticity","statics"),
+ "热学":("thermo","thermal","heat","temperature","gas_","entropy","kinetic_theory","phase_transition"),
+ "电磁学":("electromagnet","electric","magnet","circuit","capacitor","capacitance","electrostatics","gauss_law","maxwell","kirchhoff","current_and_resistance"),
+ "光学":("optics","diffraction","refraction","interference","laser","polarization"),
+ "振动与波动":("wave","oscillation","oscillatory","acoustic","vibration","sound"),
+ "近代物理":("quantum","atomic","nuclear","relativity","particle","solid_state","superconductivity","semiconductor"),
 }
 def checksum(s):
     t=re.sub(r"\s+"," ",unicodedata.normalize("NFKC",s).casefold()).strip()

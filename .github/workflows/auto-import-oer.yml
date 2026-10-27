@@ -24,6 +24,8 @@ on:
       - 'tests/test_import_college_physics.py'
       - 'scripts/report_external_coverage.py'
       - 'tests/test_report_external_coverage.py'
+      - 'scripts/reclassify_external_topics.py'
+      - 'tests/test_reclassify_external_topics.py'
       - 'scripts/build.py'
 
 permissions:
@@ -59,6 +61,8 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_import_college_physics.py' -v
       - name: Test source coverage and strict exam eligibility gate
         run: python -m unittest discover -s tests -p 'test_report_external_coverage.py' -v
+      - name: Test cross-source topic reclassification
+        run: python -m unittest discover -s tests -p 'test_reclassify_external_topics.py' -v
       - name: Fetch, verify, deduplicate and classify candidates
         run: python scripts/auto_import_oer.py --execute --limit 100 --scan-limit 500 --timeout 12
       - name: Fetch and extract CC BY physics examples from new upstream source
@@ -78,6 +82,8 @@ jobs:
       - name: Acquire CC BY College Physics course exercises from pinned GitHub source
         continue-on-error: true
         run: python scripts/import_college_physics.py --limit 250 --max-files 40 --timeout 15
+      - name: Reclassify previously imported Hugging Face and College Physics candidates
+        run: python scripts/reclassify_external_topics.py
       - name: Rebuild exam-review candidate list (not the approved question bank)
         run: python scripts/rebuild_external_queue.py
       - name: Audit imported raw files
@@ -111,5 +117,6 @@ jobs:
             external_sources/logs/huggingface_import_latest.json
             external_sources/logs/seephys_import_latest.json
             external_sources/logs/college_physics_latest.json
+            external_sources/logs/topic_backfill_latest.json
           if-no-files-found: warn
           retention-days: 30

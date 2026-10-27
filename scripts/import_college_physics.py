@@ -34,7 +34,9 @@ SKIP = re.compile(
 MODULES = [
     ("物理基础", ("unit", "measure", "problem-solving", "significant figure", "scope and scale",
                  "physics: an introduction", "approximation")),
-    ("热学", ("thermodynam", "temperature", "heat", "gas", "entropy")),
+    ("热学", ("thermodynam", "temperature", "heat", "gas", "entropy", "humidity",
+              "evaporation", "boiling", "thermal expansion", "conduction",
+              "convection", "phase change", "diffusion", "osmosis", "molecular transport")),
     ("光学", ("optics", "lens", "refraction", "diffraction", "interference", "light")),
     ("电磁学", ("electric", "magnet", "capacit", "circuit", "current", "charge", "induct")),
     ("振动与波动", ("wave", "oscill", "sound", "vibrat", "resonan")),
@@ -46,7 +48,7 @@ MODULES = [
              "vector", "satellite", "kepler", "archimedes", "cohesion", "adhesion",
              "surface tension", "capillary", "bernoulli", "rocket propulsion",
              "density", "pascal", "viscosity", "laminar", "poiseuille",
-             "simple machine", "stability")),
+             "simple machine", "stability", "turbulence")),
 ]
 def source_url(path):
     return "https://raw.githubusercontent.com/" + REPO + "/" + REV + "/" + "/".join(quote(x,safe="") for x in path.split("/"))
