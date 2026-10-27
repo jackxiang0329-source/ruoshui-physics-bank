@@ -6,7 +6,7 @@
 
 版权信息：仓库 LICENSE.txt 声明 Copyright 2014 OpenStax College, **Creative Commons Attribution 3.0 Unported**，已固定 Git blob SHA，导入前会再次读取核验许可。
 
-源材料约 283 章/节 Markdown 文件（含题目、HTML / MathML）；每轮最多读取 40 个独立章节、最多新增 250 条图像依赖较少的独立题干。过滤图片引用、跨章节引用及不完整题，保留原题 HTML/MathML 与逐题来源和许可。原题样式含不适宜直接排版的 HTML，后续需经过 TeX 转换、逐题版权链检查、语义去重、题意及答案复核方可用于组卷。
+源材料约 283 章/节 Markdown 文件（含题目、HTML / MathML）；每轮最多读取 50 个独立章节、最多新增 500 条图像依赖较少的独立题干。过滤图片引用、跨章节引用及不完整题，保留原题 HTML/MathML 与逐题来源和许可。原题样式含不适宜直接排版的 HTML，后续需经过 TeX 转换、逐题版权链检查、语义去重、题意及答案复核方可用于组卷。
 
 仅在 external_sources/college_physics/raw/ 及对应索引、总审核队列归档；不得自动放入 bank/。与 OpenStax 的另一个 **University Physics bundle (CC BY-NC-SA 4.0)** 仓库不同，后者因 NC/SA 限制不在本自动导入白名单内。
 

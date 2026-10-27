@@ -46,3 +46,6 @@ title: "Motion"
   self.assertEqual(cp.group("Coulomb’s Law"),"电磁学")
   self.assertEqual(cp.group("Resistance and Resistivity"),"电磁学")
   self.assertEqual(cp.group("DC Voltmeters and Ammeters"),"电磁学")
+  self.assertEqual(cp.group("Transformers"),"电磁学")
+  self.assertEqual(cp.group("The Hall Effect"),"电磁学")
+  self.assertEqual(cp.group("Back Emf"),"电磁学")

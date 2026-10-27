@@ -81,7 +81,7 @@ jobs:
         run: python scripts/import_seephys.py --limit 100 --scan-limit 250 --timeout 20
       - name: Acquire CC BY College Physics course exercises from pinned GitHub source
         continue-on-error: true
-        run: python scripts/import_college_physics.py --limit 250 --max-files 40 --timeout 15
+        run: python scripts/import_college_physics.py --limit 500 --max-files 50 --timeout 15
       - name: Reclassify previously imported Hugging Face and College Physics candidates
         run: python scripts/reclassify_external_topics.py
       - name: Rebuild exam-review candidate list (not the approved question bank)
