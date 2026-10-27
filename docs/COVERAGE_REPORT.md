@@ -9,3 +9,5 @@
 手动更新：`python scripts/rebuild_external_queue.py && python scripts/report_external_coverage.py`。
 
 历史分类回填：scripts/reclassify_external_topics.py 在每轮采集完成后按照源数据 domain / 章节标题更新 hf_physics_dpo 与 college_physics 的索引，保留原始字段，不更改题干、版权状态或正式组卷门禁。变更数量记入 external_sources/logs/topic_backfill_latest.json。
+
+2026-10-27 新增 OpenStax 后段课程分类：几何光学、波动光学、原子结构、相对论、量子物理优先按明确章标题自动标记；题干本身和答案仍需学术审核。OpenStax 待处理章节正常趋于 0 后，自动导入器不会重复抓取已完成模块。
