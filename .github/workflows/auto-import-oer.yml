@@ -15,6 +15,9 @@ on:
       - 'scripts/import_intro_physics.py'
       - 'tests/test_import_intro_physics.py'
       - 'scripts/discover_oer_sources.py'
+      - 'scripts/import_hf_physics.py'
+      - 'scripts/discover_hf_physics.py'
+      - 'tests/test_import_hf_physics.py'
 
 permissions:
   contents: write
@@ -41,6 +44,8 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_auto_import_oer.py' -v
       - name: Test independent university-physics source extractor
         run: python -m unittest discover -s tests -p 'test_import_intro_physics.py' -v
+      - name: Unit-test Hugging Face ingestion, cursor and copyright guardrails
+        run: python -m unittest discover -s tests -p 'test_import_hf_physics.py' -v
       - name: Fetch, verify, deduplicate and classify candidates
         run: python scripts/auto_import_oer.py --execute --limit 100 --scan-limit 500 --timeout 12
       - name: Fetch and extract CC BY physics examples from new upstream source
@@ -49,6 +54,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/discover_oer_sources.py
+      - name: Search Hugging Face for physics datasets (metadata only)
+        run: python scripts/discover_hf_physics.py
+      - name: Import synthetic Hugging Face physics questions into unverified staging
+        continue-on-error: true
+        run: python scripts/import_hf_physics.py --limit 100 --scan-limit 500 --timeout 20
       - name: Rebuild exam-review candidate list (not the approved question bank)
         run: python scripts/rebuild_external_queue.py
       - name: Audit imported raw files
@@ -73,5 +83,6 @@ jobs:
           path: |
             external_sources/logs/latest.json
             external_sources/logs/intro_physics_latest.json
+            external_sources/logs/huggingface_import_latest.json
           if-no-files-found: warn
           retention-days: 30

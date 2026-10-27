@@ -72,6 +72,23 @@ def candidates(root=BASE):
                 "source_url": p["source_url"],
                 "raw_path": f"external_sources/intro_physics/raw/{p['id']}.md",
             })
+    # Hugging Face synthetic prompts are merely staging candidates, never verified exams.
+    hf_index = root / "hf_physics_dpo" / "index.json"
+    if hf_index.exists():
+        data = json.loads(hf_index.read_text(encoding="utf-8"))
+        for p in data["records"]:
+            rows.append({
+                "id":p["id"],"source":"Hugging Face Physics-DPO (synthetic)",
+                "module":p.get("module","待分类"),
+                "original_topic":p.get("domain",""),
+                "author":p.get("author","Dataset contributors"),
+                "license":p.get("license","Apache-2.0 signal"),
+                "requires_media":"no","requires_engine":"no",
+                "answer_verified":"no","semantic_dedup":"pending",
+                "license_review":"pending","exam_ready":"no",
+                "source_url":p["source_url"],
+                "raw_path":f"external_sources/hf_physics_dpo/raw/{p['id']}.md",
+            })
     if len({r["id"] for r in rows}) != len(rows):
         raise ValueError("Duplicated external problem IDs")
     return rows

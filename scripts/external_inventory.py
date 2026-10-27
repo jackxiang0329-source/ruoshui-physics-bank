@@ -28,7 +28,9 @@ def inventory(root=EXT):
     results = []
     issues = []
     all_ids = set()
-    for source, extension in (("ubc_opbp", ".md"), ("webwork_opl", ".pg"), ("webwork_thermal", ".pg")):
+    for source, extension in (("ubc_opbp", ".md"), ("webwork_opl", ".pg"),
+                              ("webwork_thermal", ".pg"), ("intro_physics", ".md"),
+                              ("hf_physics_dpo", ".md")):
         file = root / source / "index.json"
         if not file.exists():
             issues.append(f"缺少外部题源索引: {file.name} / {source}")
@@ -41,7 +43,7 @@ def inventory(root=EXT):
                 continue
             all_ids.add(pid)
             # Never trust an imported manifest to select arbitrary filesystem paths.
-            if not re.fullmatch(r"(UBC|OPL|THM)-[0-9]{3,7}", pid):
+            if not re.fullmatch(r"(?:UBC|OPL|THM|IP|HFDPO)-[0-9]{3,7}", pid):
                 issues.append(f"不合法外部ID: {pid}")
                 continue
             local = root / source / "raw" / (pid + extension)
@@ -50,19 +52,21 @@ def inventory(root=EXT):
                 continue
             raw = local.read_text(encoding="utf-8")
             notice = item.get("license", "")
-            if "CC" not in notice:
+            if "CC" not in notice and "Apache" not in notice and "MIT" not in notice:
                 issues.append(f"授权待核验: {pid}")
             if source == "ubc_opbp" and "## Attribution" not in raw:
                 issues.append(f"UBC来源题缺少原始署名区: {pid}")
             if not item.get("source_url") and not item.get("upstream_url"):
                 issues.append(f"缺少可追溯的原始链接: {pid}")
-            blocked = ("WeBWorK" if source.startswith("webwork_") else
+            blocked = ("unverified_generated_data" if source == "hf_physics_dpo" else
+                       "extracted_example_needs_review" if source == "intro_physics" else
+                       "WeBWorK" if source.startswith("webwork_") else
                        "external_media" if item.get("requires_media") else
                        "parametric_or_answer_pending")
             results.append({
                 "id": pid,
                 "source": source,
-                "topic": item.get("topic") or item.get("chapter") or "unknown",
+                "topic": item.get("topic") or item.get("chapter") or item.get("module") or "unknown",
                 "license_signal": notice,
                 "author": item.get("author", ""),
                 "sha256": hashlib.sha256(raw.encode("utf-8")).hexdigest(),
