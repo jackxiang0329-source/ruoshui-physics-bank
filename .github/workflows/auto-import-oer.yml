@@ -12,6 +12,8 @@ on:
       - '.github/workflows/auto-import-oer.yml'
       - 'scripts/auto_import_oer.py'
       - 'tests/test_auto_import_oer.py'
+      - 'scripts/import_intro_physics.py'
+      - 'tests/test_import_intro_physics.py'
 
 permissions:
   contents: write
@@ -36,8 +38,12 @@ jobs:
           python-version: '3.11'
       - name: Test safe import and license filters
         run: python -m unittest discover -s tests -p 'test_auto_import_oer.py' -v
+      - name: Test independent university-physics source extractor
+        run: python -m unittest discover -s tests -p 'test_import_intro_physics.py' -v
       - name: Fetch, verify, deduplicate and classify candidates
         run: python scripts/auto_import_oer.py --execute --limit 100 --scan-limit 500 --timeout 12
+      - name: Fetch and extract CC BY physics examples from new upstream source
+        run: python scripts/import_intro_physics.py --limit 100 --timeout 15
       - name: Rebuild exam-review candidate list (not the approved question bank)
         run: python scripts/rebuild_external_queue.py
       - name: Audit imported raw files
@@ -59,6 +65,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: oer-import-report
-          path: external_sources/logs/latest.json
+          path: |
+            external_sources/logs/latest.json
+            external_sources/logs/intro_physics_latest.json
           if-no-files-found: warn
           retention-days: 30

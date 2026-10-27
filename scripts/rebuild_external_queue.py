@@ -57,6 +57,21 @@ def candidates(root=BASE):
             "source_url":p["upstream_url"],
             "raw_path":f"external_sources/webwork_thermal/raw/{p['id']}.pg",
         })
+    # Extracted examples from the separately pinned, repository-licensed university physics source.
+    physics_index_path = root / "intro_physics" / "index.json"
+    if physics_index_path.exists():
+        physics_index = json.loads(physics_index_path.read_text(encoding="utf-8"))
+        for p in physics_index["records"]:
+            rows.append({
+                "id": p["id"], "source": "Introductory Physics (PHYS 2425)",
+                "module": p["module"], "original_topic": p["title"],
+                "author": "Billy Quarles", "license": p["license"],
+                "requires_media": "no", "requires_engine": "no",
+                "answer_verified": "no", "semantic_dedup": "pending",
+                "license_review": "pending", "exam_ready": "no",
+                "source_url": p["source_url"],
+                "raw_path": f"external_sources/intro_physics/raw/{p['id']}.md",
+            })
     if len({r["id"] for r in rows}) != len(rows):
         raise ValueError("Duplicated external problem IDs")
     return rows
