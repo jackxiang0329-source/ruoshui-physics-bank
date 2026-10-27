@@ -45,3 +45,4 @@ class TriageTests(unittest.TestCase):
             report=(base/"catalog"/"review_priority.csv").read_text(encoding="utf-8-sig")
             self.assertIn("CP-00001",report)
             self.assertIn("semantic_dedup",report)
+            self.assertEqual(result["excluded_from_priority_due_to_unknown_subject"], {})

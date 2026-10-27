@@ -77,6 +77,7 @@ def generate(root=BASE):
     all_ids = set()
     by_source = defaultdict(list)
     licensing_excluded = Counter()
+    unclassified_excluded = Counter()
     for item in originals:
         problem_id = item.get("id", "")
         if not problem_id or problem_id in all_ids:
@@ -94,6 +95,9 @@ def generate(root=BASE):
             raise ValueError("Unsafe source file path: " + problem_id)
         if not path.is_file():
             raise ValueError("Missing raw file for triage: " + problem_id)
+        if item.get("module", "").strip() in ("", "待分类"):
+            unclassified_excluded[src] += 1
+            continue
         by_source[src].append(item)
     selected = []
     contribution = {}
@@ -124,6 +128,7 @@ def generate(root=BASE):
         "priority_review_count": len(selected),
         "priority_sources": contribution,
         "excluded_from_priority_due_to_license_signal": dict(licensing_excluded),
+        "excluded_from_priority_due_to_unknown_subject": dict(unclassified_excluded),
         "content_digest_overlaps": digest_overlaps(root),
         "exam_ready_added": 0,
         "notes": "Priority list is not a license approval, independently solved exam, or full cross-source semantic dedup.",
