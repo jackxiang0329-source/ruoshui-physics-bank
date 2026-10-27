@@ -39,3 +39,7 @@ title: "Motion"
   self.assertEqual(cp.group("Archimedes’ Principle"),"力学")
   self.assertEqual(cp.group("Bernoulli’s Equation"),"力学")
   self.assertEqual(cp.group("Viscosity and Laminar Flow"),"力学")
+  self.assertEqual(cp.group("The Simple Pendulum"),"振动与波动")
+  self.assertEqual(cp.group("Hearing"),"振动与波动")
+  self.assertEqual(cp.group("Conductors and Insulators"),"电磁学")
+  self.assertEqual(cp.group("Aberrations"),"光学")
