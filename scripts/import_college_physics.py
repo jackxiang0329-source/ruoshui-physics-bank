@@ -43,7 +43,10 @@ MODULES = [
              "rotat", "gravity", "gravitat", "energy", "fluid", "pressure", "mechanic", "work",
              "displace", "velocit", "elast", "stress", "strain", "newton", "friction",
              "equilibrium", "torque", "collision", "falling object", "impulse", "power",
-             "vector", "satellite", "kepler")),
+             "vector", "satellite", "kepler", "archimedes", "cohesion", "adhesion",
+             "surface tension", "capillary", "bernoulli", "rocket propulsion",
+             "density", "pascal", "viscosity", "laminar", "poiseuille",
+             "simple machine", "stability")),
 ]
 def source_url(path):
     return "https://raw.githubusercontent.com/" + REPO + "/" + REV + "/" + "/".join(quote(x,safe="") for x in path.split("/"))

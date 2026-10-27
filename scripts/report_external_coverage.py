@@ -51,7 +51,25 @@ def audit(root=ROOT):
         raise ValueError("Missing external raw files: "+json.dumps(missing[:8],ensure_ascii=False))
     if approved:
         raise ValueError("Unreviewed external source marked exam-ready: "+",".join(approved[:8]))
+    # Summarize upstream taxonomy signals to enable auditable, conservative
+    # class mappings on future runs without fetching huge indexes in ChatGPT.
+    missing_hf_domains=Counter()
+    hf_path=root/"external_sources"/"hf_physics_dpo"/"index.json"
+    if hf_path.exists():
+        hf_idx=json.loads(hf_path.read_text(encoding="utf-8"))
+        for rec in hf_idx.get("records",[]):
+            if rec.get("module")=="待分类":
+                missing_hf_domains[str(rec.get("domain","unknown"))]+=1
+    missing_cp_titles=Counter()
+    college_path=root/"external_sources"/"college_physics"/"index.json"
+    if college_path.exists():
+        college_idx=json.loads(college_path.read_text(encoding="utf-8"))
+        for rec in college_idx.get("records",[]):
+            if rec.get("module")=="待分类":
+                missing_cp_titles[str(rec.get("title","unknown"))]+=1
     return {
+      "unclassified_hf_domains":dict(missing_hf_domains.most_common(100)),
+      "unclassified_college_chapters":dict(missing_cp_titles.most_common(100)),
       "generated_utc":datetime.now(timezone.utc).isoformat(),
       "raw_candidate_count":len(records),
       "exam_ready_external_count":0,

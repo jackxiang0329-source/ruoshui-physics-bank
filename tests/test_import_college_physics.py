@@ -36,3 +36,6 @@ title: "Motion"
   self.assertEqual(cp.group("Physics: An Introduction"),"物理基础")
   self.assertEqual(cp.group("Vector Addition and Subtraction: Analytical Methods"),"力学")
   self.assertEqual(cp.group("Satellites and Kepler’s Laws"),"力学")
+  self.assertEqual(cp.group("Archimedes’ Principle"),"力学")
+  self.assertEqual(cp.group("Bernoulli’s Equation"),"力学")
+  self.assertEqual(cp.group("Viscosity and Laminar Flow"),"力学")
