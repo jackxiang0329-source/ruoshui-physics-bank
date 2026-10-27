@@ -1,43 +1,74 @@
 {
-  "generated_utc": "2026-10-27T09:10:55.494644+00:00",
-  "raw_candidate_count": 3698,
+  "unclassified_hf_domains": {
+    "current_and_resistance": 71,
+    "viscous_flow": 71,
+    "kinetic_theory": 71,
+    "phase_transitions": 69,
+    "bernoulli_applications": 67,
+    "superconductivity": 66,
+    "gauss_law": 61,
+    "maxwell_equations": 61,
+    "thermal_physics": 61,
+    "polarization": 61,
+    "oscillatory_motion": 60,
+    "semiconductors": 57,
+    "kirchhoffs_laws": 57,
+    "friction_and_drag": 54,
+    "elasticity": 53,
+    "electrostatics": 53,
+    "capacitance": 51,
+    "statics": 42
+  },
+  "unclassified_college_chapters": {
+    "Humidity, Evaporation, and Boiling": 26,
+    "Thermal Expansion of Solids and Liquids": 17,
+    "Conduction": 13,
+    "The Onset of Turbulence": 12,
+    "Convection": 11,
+    "Molecular Transport Phenomena: Diffusion, Osmosis, and Related Processes": 7,
+    "Phase Changes": 4
+  },
+  "generated_utc": "2026-10-27T09:16:13.004067+00:00",
+  "raw_candidate_count": 4248,
   "exam_ready_external_count": 0,
   "by_source": {
-    "Hugging Face Physics-DPO (synthetic)": 2600,
-    "OpenStax College Physics (historical mirror)": 700,
+    "Hugging Face Physics-DPO (synthetic)": 2900,
+    "OpenStax College Physics (historical mirror)": 950,
     "UBC OPBP": 265,
     "WeBWorK BrockPhysics": 59,
     "Introductory Physics (PHYS 2425)": 53,
     "WeBWorK Thermal": 21
   },
   "by_module": {
-    "力学": 1331,
-    "待分类": 1067,
-    "电磁学": 400,
-    "近代物理": 323,
-    "光学": 207,
-    "振动与波动": 176,
-    "热学": 121,
+    "力学": 1528,
+    "待分类": 1176,
+    "电磁学": 422,
+    "近代物理": 384,
+    "热学": 238,
+    "光学": 234,
+    "振动与波动": 193,
     "物理基础": 73
   },
   "source_module_matrix": {
     "Hugging Face Physics-DPO (synthetic)": {
-      "待分类": 970,
-      "力学": 652,
-      "近代物理": 264,
-      "电磁学": 259,
-      "光学": 202,
-      "振动与波动": 153,
-      "热学": 100
+      "待分类": 1086,
+      "力学": 730,
+      "近代物理": 294,
+      "电磁学": 281,
+      "光学": 229,
+      "振动与波动": 170,
+      "热学": 110
     },
     "Introductory Physics (PHYS 2425)": {
       "力学": 50,
       "物理基础": 3
     },
     "OpenStax College Physics (historical mirror)": {
-      "力学": 533,
-      "待分类": 97,
-      "物理基础": 70
+      "力学": 652,
+      "热学": 107,
+      "待分类": 90,
+      "物理基础": 70,
+      "近代物理": 31
     },
     "UBC OPBP": {
       "电磁学": 141,
@@ -53,8 +84,8 @@
     }
   },
   "license_signals": {
-    "Apache-2.0 (source metadata; rights review pending)": 2600,
-    "CC BY 3.0 Unported": 700,
+    "Apache-2.0 (source metadata; rights review pending)": 2900,
+    "CC BY 3.0 Unported": 950,
     "CC-BY-NC-SA 4.0": 121,
     "CC BY 4.0": 108,
     "CC BY 4.0 (repository-level; rights review pending)": 53,
@@ -64,7 +95,7 @@
     "CC BY-NC-SA 3.0 default, check overrides and source rights": 6,
     "CC BY-NC-SA 3.0 default, subject to source overrides": 6
   },
-  "unclassified_count": 1067,
+  "unclassified_count": 1176,
   "unclassified_id_examples": [
     "HFDPO-00005",
     "HFDPO-00006",

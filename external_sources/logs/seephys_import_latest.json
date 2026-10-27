@@ -1,18 +1,23 @@
 {
-  "timestamp_utc": "2026-10-27T09:10:53.370913+00:00",
-  "run_id": "40478775468",
+  "timestamp_utc": "2026-10-27T09:16:10.384468+00:00",
+  "run_id": "40479452544",
   "source": "SeePhys/SeePhys",
   "revision_observed": "9e98ec058e44f65a9f6fc84de60b0f3f05c4d124",
   "added_count": 0,
   "added_ids": [],
-  "scanned": 250,
-  "offset_before": 1000,
-  "offset_after": 1250,
+  "scanned": 75,
+  "offset_before": 1250,
+  "offset_after": 1325,
   "total_rows": 2000,
   "skipped": {
-    "multimodal_or_incomplete_question": 250
+    "multimodal_or_incomplete_question": 75
   },
-  "failures": [],
+  "failures": [
+    {
+      "at_row": 1325,
+      "reason": "HTTP Error 502: Bad Gateway"
+    }
+  ],
   "exam_ready_added": 0,
   "note": "Only self-contained text; multimedia skipped; not university exam-verified."
 }
