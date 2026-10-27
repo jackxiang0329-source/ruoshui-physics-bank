@@ -156,7 +156,7 @@ def main():
         root/'data'/'index.csv': render_index(items)}
     if args.check:
         missing=[str(f.relative_to(root)) for f,content in outputs.items()
-                 if not f.exists() or f.read_text(encoding='utf-8')!=content]
+                 if not f.exists() or f.read_bytes()!=content.encode('utf-8')]
         if missing:
             print('STALE generated documents: '+', '.join(missing),file=sys.stderr)
             return 2
