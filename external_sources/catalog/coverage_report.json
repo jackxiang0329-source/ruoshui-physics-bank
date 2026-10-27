@@ -1,74 +1,58 @@
 {
-  "unclassified_hf_domains": {
-    "current_and_resistance": 71,
-    "viscous_flow": 71,
-    "kinetic_theory": 71,
-    "phase_transitions": 69,
-    "bernoulli_applications": 67,
-    "superconductivity": 66,
-    "gauss_law": 61,
-    "maxwell_equations": 61,
-    "thermal_physics": 61,
-    "polarization": 61,
-    "oscillatory_motion": 60,
-    "semiconductors": 57,
-    "kirchhoffs_laws": 57,
-    "friction_and_drag": 54,
-    "elasticity": 53,
-    "electrostatics": 53,
-    "capacitance": 51,
-    "statics": 42
-  },
+  "unclassified_hf_domains": {},
   "unclassified_college_chapters": {
-    "Humidity, Evaporation, and Boiling": 26,
-    "Thermal Expansion of Solids and Liquids": 17,
-    "Conduction": 13,
-    "The Onset of Turbulence": 12,
-    "Convection": 11,
-    "Molecular Transport Phenomena: Diffusion, Osmosis, and Related Processes": 7,
-    "Phase Changes": 4
+    "Hearing": 16,
+    "The Simple Pendulum": 14,
+    "Conductors and Insulators": 11,
+    "Aberrations": 2
   },
-  "generated_utc": "2026-10-27T09:16:13.004067+00:00",
-  "raw_candidate_count": 4248,
+  "generated_utc": "2026-10-27T09:19:20.185913+00:00",
+  "raw_candidate_count": 4999,
   "exam_ready_external_count": 0,
   "by_source": {
-    "Hugging Face Physics-DPO (synthetic)": 2900,
-    "OpenStax College Physics (historical mirror)": 950,
+    "Hugging Face Physics-DPO (synthetic)": 3400,
+    "OpenStax College Physics (historical mirror)": 1200,
     "UBC OPBP": 265,
     "WeBWorK BrockPhysics": 59,
     "Introductory Physics (PHYS 2425)": 53,
-    "WeBWorK Thermal": 21
+    "WeBWorK Thermal": 21,
+    "Hugging Face SeePhys (text-only)": 1
   },
   "by_module": {
-    "力学": 1528,
-    "待分类": 1176,
-    "电磁学": 422,
-    "近代物理": 384,
-    "热学": 238,
-    "光学": 234,
-    "振动与波动": 193,
-    "物理基础": 73
+    "力学": 2083,
+    "电磁学": 835,
+    "热学": 636,
+    "近代物理": 581,
+    "振动与波动": 379,
+    "光学": 368,
+    "物理基础": 73,
+    "待分类": 44
   },
   "source_module_matrix": {
     "Hugging Face Physics-DPO (synthetic)": {
-      "待分类": 1086,
-      "力学": 730,
-      "近代物理": 294,
-      "电磁学": 281,
-      "光学": 229,
-      "振动与波动": 170,
-      "热学": 110
+      "力学": 1247,
+      "电磁学": 692,
+      "近代物理": 491,
+      "热学": 362,
+      "光学": 336,
+      "振动与波动": 272
+    },
+    "Hugging Face SeePhys (text-only)": {
+      "待分类": 1
     },
     "Introductory Physics (PHYS 2425)": {
       "力学": 50,
       "物理基础": 3
     },
     "OpenStax College Physics (historical mirror)": {
-      "力学": 652,
-      "热学": 107,
-      "待分类": 90,
+      "力学": 690,
+      "热学": 253,
+      "振动与波动": 84,
       "物理基础": 70,
-      "近代物理": 31
+      "待分类": 43,
+      "近代物理": 31,
+      "光学": 27,
+      "电磁学": 2
     },
     "UBC OPBP": {
       "电磁学": 141,
@@ -84,8 +68,8 @@
     }
   },
   "license_signals": {
-    "Apache-2.0 (source metadata; rights review pending)": 2900,
-    "CC BY 3.0 Unported": 950,
+    "Apache-2.0 (source metadata; rights review pending)": 3400,
+    "CC BY 3.0 Unported": 1200,
     "CC-BY-NC-SA 4.0": 121,
     "CC BY 4.0": 108,
     "CC BY 4.0 (repository-level; rights review pending)": 53,
@@ -93,30 +77,31 @@
     "CC-BY 4.0": 36,
     "WeBWorK OPL default CC BY-NC-SA 3.0; review file/source exceptions": 21,
     "CC BY-NC-SA 3.0 default, check overrides and source rights": 6,
-    "CC BY-NC-SA 3.0 default, subject to source overrides": 6
+    "CC BY-NC-SA 3.0 default, subject to source overrides": 6,
+    "Apache-2.0 (dataset label; per-item rights review pending)": 1
   },
-  "unclassified_count": 1176,
+  "unclassified_count": 44,
   "unclassified_id_examples": [
-    "HFDPO-00005",
-    "HFDPO-00006",
-    "HFDPO-00009",
-    "HFDPO-00012",
-    "HFDPO-00013",
-    "HFDPO-00018",
-    "HFDPO-00020",
-    "HFDPO-00027",
-    "HFDPO-00029",
-    "HFDPO-00032",
-    "HFDPO-00036",
-    "HFDPO-00039",
-    "HFDPO-00044",
-    "HFDPO-00046",
-    "HFDPO-00053",
-    "HFDPO-00063",
-    "HFDPO-00065",
-    "HFDPO-00068",
-    "HFDPO-00070",
-    "HFDPO-00072"
+    "SEEP-00001",
+    "CP-01043",
+    "CP-01044",
+    "CP-01045",
+    "CP-01046",
+    "CP-01047",
+    "CP-01048",
+    "CP-01049",
+    "CP-01050",
+    "CP-01051",
+    "CP-01052",
+    "CP-01053",
+    "CP-01054",
+    "CP-01055",
+    "CP-01056",
+    "CP-01136",
+    "CP-01137",
+    "CP-01156",
+    "CP-01157",
+    "CP-01158"
   ],
   "missing_raw_files": 0,
   "quality_note": "Source-count not verified-unique; semantic dedup, solutions, physics validity and license chains remain pending."
