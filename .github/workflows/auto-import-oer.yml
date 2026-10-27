@@ -72,14 +72,18 @@ jobs:
         run: python scripts/import_seephys.py --limit 100 --scan-limit 250 --timeout 20
       - name: Acquire CC BY College Physics course exercises from pinned GitHub source
         continue-on-error: true
-        run: python scripts/import_college_physics.py --limit 100 --max-files 25 --timeout 15
+        run: python scripts/import_college_physics.py --limit 250 --max-files 40 --timeout 15
       - name: Rebuild exam-review candidate list (not the approved question bank)
         run: python scripts/rebuild_external_queue.py
       - name: Audit imported raw files
         run: python scripts/external_inventory.py
+      - name: Regenerate independent bank masters and verify consistent index
+        run: |
+          python scripts/build.py
+          python scripts/build.py --check
       - name: Commit imported sources, manifests and per-run logs
         run: |
-          git add external_sources/
+          git add external_sources/ tex/questions.tex tex/solutions.tex data/index.csv data/qa_report.json
           if git diff --cached --quiet; then
             echo 'No changes to commit'
             exit 0

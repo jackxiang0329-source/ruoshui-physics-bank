@@ -124,7 +124,7 @@ def build_manifest(timeout):
         raise ValueError("source_manifest_expected_modules_missing")
     return {"repository":REPO,"revision":REV,"license":"CC BY 3.0 Unported",
             "imported":0,"modules":files}
-def run(limit=100,max_files=25,timeout=15,base=BASE):
+def run(limit=250,max_files=40,timeout=15,base=BASE):
     root=base/SOURCE
     mp,ip=root/"source_manifest.json",root/"index.json"
     index=load(ip,{"records":[],"count":0,"exam_eligible_count":0})
@@ -197,10 +197,10 @@ def run(limit=100,max_files=25,timeout=15,base=BASE):
     return report
 if __name__=="__main__":
     p=argparse.ArgumentParser()
-    p.add_argument("--limit",type=int,default=100)
-    p.add_argument("--max-files",type=int,default=25)
+    p.add_argument("--limit",type=int,default=250)
+    p.add_argument("--max-files",type=int,default=40)
     p.add_argument("--timeout",type=int,default=15)
     a=p.parse_args()
-    if not 1<=a.limit<=100 or not 1<=a.max_files<=50:
-        p.error("limit must be <=100; max-files <=50")
+    if not 1<=a.limit<=250 or not 1<=a.max_files<=50:
+        p.error("limit must be <=250; max-files <=50")
     run(a.limit,a.max_files,a.timeout)
