@@ -1,16 +1,32 @@
 {
   "unclassified_hf_domains": {},
   "unclassified_college_chapters": {
-    "Transformers": 10,
-    "The Hall Effect": 9,
-    "Back Emf": 6
+    "Vision Correction": 24,
+    "Polarization": 23,
+    "Bohr’s Theory of the Hydrogen Atom": 20,
+    "Image Formation by Mirrors": 19,
+    "Young’s Double Slit Experiment": 14,
+    "Simultaneity And Time Dilation": 14,
+    "Limits of Resolution: The Rayleigh Criterion": 12,
+    "Probability: The Heisenberg Uncertainty Principle": 11,
+    "Microscopes": 9,
+    "Telescopes": 6,
+    "Discovery of the Atom": 6,
+    "Physics of the Eye": 5,
+    "Color and Color Vision": 4,
+    "Discovery of the Parts of the Atom: Electrons and Nuclei": 4,
+    "Total Internal Reflection": 3,
+    "Einstein’s Postulates": 3,
+    "Length Contraction": 3,
+    "The Law of Reflection": 1,
+    "Patterns in Spectra Reveal More Quantization": 1
   },
-  "generated_utc": "2026-10-27T09:23:22.809855+00:00",
-  "raw_candidate_count": 6499,
+  "generated_utc": "2026-10-27T10:20:51.754065+00:00",
+  "raw_candidate_count": 7474,
   "exam_ready_external_count": 0,
   "by_source": {
-    "Hugging Face Physics-DPO (synthetic)": 4400,
-    "OpenStax College Physics (historical mirror)": 1700,
+    "Hugging Face Physics-DPO (synthetic)": 4900,
+    "OpenStax College Physics (historical mirror)": 2175,
     "UBC OPBP": 265,
     "WeBWorK BrockPhysics": 59,
     "Introductory Physics (PHYS 2425)": 53,
@@ -18,23 +34,23 @@
     "Hugging Face SeePhys (text-only)": 1
   },
   "by_module": {
-    "力学": 2457,
-    "电磁学": 1489,
-    "热学": 752,
-    "近代物理": 728,
-    "振动与波动": 498,
-    "光学": 468,
-    "物理基础": 81,
-    "待分类": 26
+    "力学": 2669,
+    "电磁学": 1716,
+    "近代物理": 838,
+    "热学": 795,
+    "光学": 632,
+    "振动与波动": 560,
+    "待分类": 183,
+    "物理基础": 81
   },
   "source_module_matrix": {
     "Hugging Face Physics-DPO (synthetic)": {
-      "力学": 1592,
-      "电磁学": 899,
-      "近代物理": 638,
-      "热学": 476,
-      "光学": 434,
-      "振动与波动": 361
+      "力学": 1783,
+      "电磁学": 1011,
+      "近代物理": 706,
+      "热学": 519,
+      "光学": 490,
+      "振动与波动": 391
     },
     "Hugging Face SeePhys (text-only)": {
       "待分类": 1
@@ -44,14 +60,14 @@
       "物理基础": 3
     },
     "OpenStax College Physics (historical mirror)": {
-      "力学": 719,
-      "电磁学": 449,
+      "力学": 740,
+      "电磁学": 564,
       "热学": 255,
-      "振动与波动": 114,
+      "待分类": 182,
+      "振动与波动": 146,
+      "光学": 137,
       "物理基础": 78,
-      "近代物理": 31,
-      "光学": 29,
-      "待分类": 25
+      "近代物理": 73
     },
     "UBC OPBP": {
       "电磁学": 141,
@@ -67,8 +83,8 @@
     }
   },
   "license_signals": {
-    "Apache-2.0 (source metadata; rights review pending)": 4400,
-    "CC BY 3.0 Unported": 1700,
+    "Apache-2.0 (source metadata; rights review pending)": 4900,
+    "CC BY 3.0 Unported": 2175,
     "CC-BY-NC-SA 4.0": 121,
     "CC BY 4.0": 108,
     "CC BY 4.0 (repository-level; rights review pending)": 53,
@@ -79,28 +95,28 @@
     "CC BY-NC-SA 3.0 default, subject to source overrides": 6,
     "Apache-2.0 (dataset label; per-item rights review pending)": 1
   },
-  "unclassified_count": 26,
+  "unclassified_count": 183,
   "unclassified_id_examples": [
     "SEEP-00001",
-    "CP-01509",
-    "CP-01510",
-    "CP-01511",
-    "CP-01512",
-    "CP-01513",
-    "CP-01514",
-    "CP-01515",
-    "CP-01516",
-    "CP-01517",
-    "CP-01608",
-    "CP-01609",
-    "CP-01610",
-    "CP-01611",
-    "CP-01612",
-    "CP-01613",
-    "CP-01614",
-    "CP-01615",
-    "CP-01616",
-    "CP-01617"
+    "CP-01744",
+    "CP-01761",
+    "CP-01762",
+    "CP-01763",
+    "CP-01785",
+    "CP-01786",
+    "CP-01787",
+    "CP-01788",
+    "CP-01789",
+    "CP-01790",
+    "CP-01791",
+    "CP-01792",
+    "CP-01793",
+    "CP-01794",
+    "CP-01795",
+    "CP-01796",
+    "CP-01797",
+    "CP-01798",
+    "CP-01799"
   ],
   "missing_raw_files": 0,
   "quality_note": "Source-count not verified-unique; semantic dedup, solutions, physics validity and license chains remain pending."
