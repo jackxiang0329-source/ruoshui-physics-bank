@@ -1,0 +1,92 @@
+{
+  "generated_utc": "2026-10-27T09:10:55.494644+00:00",
+  "raw_candidate_count": 3698,
+  "exam_ready_external_count": 0,
+  "by_source": {
+    "Hugging Face Physics-DPO (synthetic)": 2600,
+    "OpenStax College Physics (historical mirror)": 700,
+    "UBC OPBP": 265,
+    "WeBWorK BrockPhysics": 59,
+    "Introductory Physics (PHYS 2425)": 53,
+    "WeBWorK Thermal": 21
+  },
+  "by_module": {
+    "力学": 1331,
+    "待分类": 1067,
+    "电磁学": 400,
+    "近代物理": 323,
+    "光学": 207,
+    "振动与波动": 176,
+    "热学": 121,
+    "物理基础": 73
+  },
+  "source_module_matrix": {
+    "Hugging Face Physics-DPO (synthetic)": {
+      "待分类": 970,
+      "力学": 652,
+      "近代物理": 264,
+      "电磁学": 259,
+      "光学": 202,
+      "振动与波动": 153,
+      "热学": 100
+    },
+    "Introductory Physics (PHYS 2425)": {
+      "力学": 50,
+      "物理基础": 3
+    },
+    "OpenStax College Physics (historical mirror)": {
+      "力学": 533,
+      "待分类": 97,
+      "物理基础": 70
+    },
+    "UBC OPBP": {
+      "电磁学": 141,
+      "力学": 96,
+      "振动与波动": 23,
+      "光学": 5
+    },
+    "WeBWorK BrockPhysics": {
+      "近代物理": 59
+    },
+    "WeBWorK Thermal": {
+      "热学": 21
+    }
+  },
+  "license_signals": {
+    "Apache-2.0 (source metadata; rights review pending)": 2600,
+    "CC BY 3.0 Unported": 700,
+    "CC-BY-NC-SA 4.0": 121,
+    "CC BY 4.0": 108,
+    "CC BY 4.0 (repository-level; rights review pending)": 53,
+    "CC BY-NC-SA 3.0 default, check source-specific overrides": 47,
+    "CC-BY 4.0": 36,
+    "WeBWorK OPL default CC BY-NC-SA 3.0; review file/source exceptions": 21,
+    "CC BY-NC-SA 3.0 default, check overrides and source rights": 6,
+    "CC BY-NC-SA 3.0 default, subject to source overrides": 6
+  },
+  "unclassified_count": 1067,
+  "unclassified_id_examples": [
+    "HFDPO-00005",
+    "HFDPO-00006",
+    "HFDPO-00009",
+    "HFDPO-00012",
+    "HFDPO-00013",
+    "HFDPO-00018",
+    "HFDPO-00020",
+    "HFDPO-00027",
+    "HFDPO-00029",
+    "HFDPO-00032",
+    "HFDPO-00036",
+    "HFDPO-00039",
+    "HFDPO-00044",
+    "HFDPO-00046",
+    "HFDPO-00053",
+    "HFDPO-00063",
+    "HFDPO-00065",
+    "HFDPO-00068",
+    "HFDPO-00070",
+    "HFDPO-00072"
+  ],
+  "missing_raw_files": 0,
+  "quality_note": "Source-count not verified-unique; semantic dedup, solutions, physics validity and license chains remain pending."
+}
