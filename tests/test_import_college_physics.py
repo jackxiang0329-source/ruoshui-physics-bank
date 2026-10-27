@@ -28,3 +28,6 @@ title: "Motion"
  def test_topics(self):
   self.assertEqual(cp.group("Magnetic Field"),"电磁学")
   self.assertEqual(cp.group("Thermodynamics"),"热学")
+  self.assertEqual(cp.group("Displacement"),"力学")
+  self.assertEqual(cp.group("Addition of Velocities"),"力学")
+  self.assertEqual(cp.group("Problem-Solving Strategies"),"物理基础")
