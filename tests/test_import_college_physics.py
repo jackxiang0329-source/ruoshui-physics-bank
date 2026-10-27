@@ -1,4 +1,6 @@
 import sys, unittest
+from unittest.mock import patch
+from urllib.error import HTTPError
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"scripts"))
 import import_college_physics as cp
@@ -55,3 +57,24 @@ title: "Motion"
   self.assertEqual(cp.group("Bohr’s Theory of the Hydrogen Atom"),"近代物理")
   self.assertEqual(cp.group("Simultaneity And Time Dilation"),"近代物理")
   self.assertEqual(cp.group("The Heisenberg Uncertainty Principle"),"近代物理")
+
+ def test_transient_503_is_retried_only_three_times(self):
+  class FakeReply:
+   def __enter__(self): return self
+   def __exit__(self,*args): return False
+   def read(self,n): return b"physics exercise"
+  with patch.object(cp, "urlopen", side_effect=[
+       HTTPError("test",503,"transient",None,None), FakeReply()]) as mock_url, patch.object(cp.time,"sleep") as sleeper:
+   self.assertEqual(cp.get("https://example.org/source",100,1),b"physics exercise")
+   self.assertEqual(mock_url.call_count,2)
+   self.assertEqual(sleeper.call_count,1)
+ def test_404_does_not_retry(self):
+  with patch.object(cp,"urlopen",side_effect=HTTPError("test",404,"not found",None,None)) as mock_url, patch.object(cp.time,"sleep") as sleeper:
+   with self.assertRaises(HTTPError):
+    cp.get("https://example.org/missing",100,1)
+   self.assertEqual(mock_url.call_count,1)
+   self.assertEqual(sleeper.call_count,0)
+ def test_modern_and_wave_chapters(self):
+  self.assertEqual(cp.group("Half-Life and Activity"),"近代物理")
+  self.assertEqual(cp.group("Quarks: Is That All There Is?"),"近代物理")
+  self.assertEqual(cp.group("Doppler Effect and Sonic Booms"),"振动与波动")

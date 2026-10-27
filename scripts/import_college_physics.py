@@ -8,6 +8,8 @@ import argparse
 import hashlib
 import json
 import re
+import time
+from urllib.error import HTTPError, URLError
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
@@ -43,11 +45,13 @@ MODULES = [
     ("电磁学", ("electric", "magnet", "capacit", "circuit", "current", "charge", "induct", "conductor", "insulator", "coulomb", "resist", "electrostat",
                    "voltmeter", "ammeter", "equipotential", "transformer",
                    "hall effect", "back emf")),
-    ("振动与波动", ("wave", "oscill", "sound", "vibrat", "resonan", "hearing", "pendulum")),
+    ("振动与波动", ("wave", "oscill", "sound", "vibrat", "resonan", "hearing", "pendulum", "doppler", "sonic boom")),
     ("近代物理", ("quantum", "nuclear", "atomic", "relativ", "particle", "radiation",
                  "bohr", "heisenberg", "simultaneity", "time dilation", "contraction",
                  "discovery of the atom", "nuclei", "einstein", "quantiz",
-                 "spectra", "uncertainty principle")),
+                 "spectra", "uncertainty principle", "quark", "half-life", "pauli",
+                 "fusion", "fission", "substructure", "nucleus", "tunneling",
+                 "dark matter", "medical imaging", "superstring")),
     ("力学", ("motion", "velocity", "acceleration", "kinemat", "force", "momentum",
              "rotat", "gravity", "gravitat", "energy", "fluid", "pressure", "mechanic", "work",
              "displace", "velocit", "elast", "stress", "strain", "newton", "friction",
@@ -55,16 +59,27 @@ MODULES = [
              "vector", "satellite", "kepler", "archimedes", "cohesion", "adhesion",
              "surface tension", "capillary", "bernoulli", "rocket propulsion",
              "density", "pascal", "viscosity", "laminar", "poiseuille",
-             "simple machine", "stability", "turbulence")),
+             "simple machine", "stability", "turbulence", "complexity", "chaos")),
 ]
 def source_url(path):
     return "https://raw.githubusercontent.com/" + REPO + "/" + REV + "/" + "/".join(quote(x,safe="") for x in path.split("/"))
 def get(url,limit,timeout):
-    with urlopen(Request(url, headers={"User-Agent":"RuoshuiPhysicsOER/2.4"}),timeout=timeout) as r:
-        data = r.read(limit+1)
-    if len(data)>limit:
-        raise ValueError("source_exceeds_size_limit")
-    return data
+    """Bounded retries for transient upstream outages. Never bypass SHA/license checks."""
+    request = Request(url, headers={"User-Agent":"RuoshuiPhysicsOER/2.4"})
+    for attempt in range(3):
+        try:
+            with urlopen(request, timeout=timeout) as response:
+                data = response.read(limit + 1)
+            if len(data) > limit:
+                raise ValueError("source_exceeds_size_limit")
+            return data
+        except HTTPError as exc:
+            if attempt == 2 or exc.code not in (429, 500, 502, 503, 504):
+                raise
+        except (URLError, TimeoutError):
+            if attempt == 2:
+                raise
+        time.sleep(1.5 * (attempt + 1))
 def sha_blob(raw):
     return hashlib.sha1(b"blob "+str(len(raw)).encode()+b"\0"+raw).hexdigest()
 def norm(s):
