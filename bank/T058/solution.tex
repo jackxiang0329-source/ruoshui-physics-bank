@@ -1,0 +1,114 @@
+(1) 按指标模 \(3\) 运算，主方程为
+\[
+ \dot p_i=a_{i-1}p_{i-1}+b_i p_{i+1}-(a_i+b_{i-1})p_i
+ =J_{i-1}-J_i,\qquad \sum_i p_i=1.
+\]
+记三棵以各状态为根的入向生成树权重
+\[
+ \tau_0=b_0b_1+b_0a_2+a_1a_2,\quad
+ \tau_1=a_0b_1+a_0a_2+b_1b_2,\quad
+ \tau_2=a_0a_1+a_1b_2+b_0b_2,\quad Z=\tau_0+\tau_1+\tau_2>0.
+\]
+由树定理（亦可将 \(\dot p_0=\dot p_1=0\) 联立归一化直接解出），
+\(\boxed{p_i^*=\tau_i/Z}\)。代入边流，逐项约去交叉项：
+\[
+ a_0\tau_0-b_0\tau_1
+ =a_1\tau_1-b_1\tau_2
+ =a_2\tau_2-b_2\tau_0=a_0a_1a_2-b_0b_1b_2.
+\]
+故
+\[
+ \boxed{J=\frac{a_0a_1a_2-b_0b_1b_2}{Z}}.
+\]
+因各速率正且有限，链不可约，稳态唯一。全部边流为零当且仅当
+\(a_0a_1a_2=b_0b_1b_2\)，即 Kolmogorov 环路详细平衡条件。
+
+(2) 稳态的系统 Shannon 熵导数为零，介质和系统合计的熵产生率写为
+\[
+ \dot S_{\rm tot}
+ =k_{\rm B}\sum_{i=0}^2 J_i
+ \ln\frac{a_i p_i^*}{b_i p_{i+1}^*}
+ =k_{\rm B}J\left[\sum_i\ln\frac{a_i}{b_i}
+       +\sum_i\ln\frac{p_i^*}{p_{i+1}^*}\right]
+ =\boxed{k_{\rm B}J\mathcal A}.
+\]
+第二个和为零，因为三个概率因子沿闭环望远镜相消。设
+\(u=\prod_i a_i>0,\ w=\prod_i b_i>0\)，则
+\[
+ \frac{\dot S_{\rm tot}}{k_{\rm B}}
+ =\frac{(u-w)\ln(u/w)}Z\ge0
+\]
+由对数严格递增性成立；等号仅当 \(u=w\)，即详细平衡。一个完整顺时针循环向环境耗散的净热可记为 \(k_{\rm B}T\mathcal A\)，这里把驱动功按局域详细平衡计入热账本。
+近线性响应区令 \(\mathcal A=\varepsilon_0+\varepsilon_1+\varepsilon_2\)；
+分子
+\[
+ \prod a_i-\prod b_i
+ =2r_0r_1r_2\sinh(\mathcal A/2)
+ =r_0r_1r_2\mathcal A+O(\varepsilon^3),
+\]
+分母在平衡点为 \(Z_0=3(r_0r_1+r_1r_2+r_2r_0)\)。
+因此
+\[
+ \boxed{J=\frac{\mathcal A}{3\sum_i r_i^{-1}}+O(\varepsilon^2)},\qquad
+ \boxed{\dot S_{\rm tot}
+ =\frac{k_{\rm B}\mathcal A^2}{3\sum_i r_i^{-1}}+O(\varepsilon^3)}.
+\]
+此处 \(O(\varepsilon^m)\) 表示所有 \(\varepsilon_i\) 同阶趋零。
+
+(3) 以列向量概率为约定，计数场 \(\chi\) 的倾斜生成元是
+\[
+ L_\chi=\begin{pmatrix}
+ -(a+b)&b e^{-\chi}&a e^\chi\\
+ a e^\chi&-(a+b)&b e^{-\chi}\\
+ b e^{-\chi}&a e^\chi&-(a+b)
+ \end{pmatrix}.
+\]
+令 \(\zeta=e^{2\pi i/3}\)，三支本征值构成集合
+\[
+ \lambda_m(\chi)=-(a+b)+a e^\chi\zeta^m+b e^{-\chi}\zeta^{-m},
+ \quad m=0,1,2.
+\]
+对实数 \(\chi\)，正的倾斜非对角元保证最大实部本征值为 \(m=0\)，故
+\[
+ \boxed{\lambda(\chi)=a(e^\chi-1)+b(e^{-\chi}-1)}.
+\]
+取单跳熵亲和势 \(A_1=\ln(a/b)=\mathcal A/3\)，直接代入得到
+\(\boxed{\lambda(\chi)=\lambda(-A_1-\chi)}\)，即涨落对称性。
+对 \(\chi=0\) 求导给
+\[
+ \boxed{\lim_{t\to\infty}\langle X\rangle/t=a-b},\qquad
+ \boxed{\lim_{t\to\infty}\operatorname{Var}(X)/t=a+b}.
+\]
+稳态单边流 \(J=(a-b)/3\)，因每次完整循环贡献三个净跳数，故与(1)一致。
+
+(4) 由于从任意状态出发顺、逆跳的危险率始终分别为 \(a,b\)，可把两类跳数独立表示为
+\(N_+\sim{\rm Poisson}(at)\)、\(N_-\sim{\rm Poisson}(bt)\)，且 \(X=N_+-N_-\)。对两个泊松分布卷积，得 Skellam 分布
+\[
+ \boxed{\Pr[X=n]=e^{-(a+b)t}
+ \left(\frac ab\right)^{n/2}
+ I_{|n|}(2t\sqrt{ab})},\quad n\in\mathbb Z,
+\]
+其中 \(I_m\) 为第一类修正贝塞尔函数。由 \(I_{-n}=I_n\) 立即得到有限时间关系
+\[
+ \boxed{\frac{\Pr[X=n]}{\Pr[X=-n]}=\left(\frac ab\right)^n=e^{nA_1}},
+\]
+并且熵产生随机变量 \(\Delta S_{\rm tot}=k_{\rm B}A_1X\)（稳态均匀分布使端点系统熵变化为零）。
+对 \(\lambda\) 作 Legendre--Fenchel 变换：驻点方程
+\(v=a e^{\chi_*}-b e^{-\chi_*}\)，令
+\(D_v=\sqrt{v^2+4ab}\)，则
+\(e^{\chi_*}=(v+D_v)/(2a)\)，所以
+\[
+ \boxed{I(v)=a+b-D_v+v\ln\frac{v+D_v}{2a}},
+ \qquad \Pr(X/t\simeq v)\asymp e^{-tI(v)}.
+\]
+因 \((D_v-v)(D_v+v)=4ab\)，可核对
+\(I(v)-I(-v)=-v\ln(a/b)\)，与涨落关系一致。
+精确地，\(\langle X\rangle=(a-b)t\)、\(\operatorname{Var}X=(a+b)t\)、
+\(\langle\Delta S_{\rm tot}\rangle=k_{\rm B}(a-b)t\ln(a/b)\)。
+因此不确定性关系等价于
+\[
+ \frac{a+b}{a-b}\ln\frac ab\ge2.
+\]
+置 \(z=(a-b)/(a+b)\in(-1,1)\)，左边为
+\(z^{-1}\ln[(1+z)/(1-z)]=2(1+z^2/3+\cdots)\ge2\)，严格不等式在 \(a\ne b\) 成立，\(a\to b\) 时趋于 \(2\)。
+\([a_i]=[b_i]=[J]=[\lambda]=[I]=\mathrm{s}^{-1}\)，\(X,\mathcal A\) 无量纲，\([\dot S_{\rm tot}]=k_{\rm B}/\mathrm{s}\)；近平衡时平均流与熵产生都趋零，须以极限理解不确定性关系。

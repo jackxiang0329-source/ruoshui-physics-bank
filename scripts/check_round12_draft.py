@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fifty-six executable draft subpart checks, NOT the required 200-item final gate."""
+"""Sixty executable draft subpart checks, NOT the required 200-item final gate."""
 import json
 import math
 import mpmath as mp
@@ -402,7 +402,53 @@ assert abs(dtNum-2*mp.diff(thNum,omNum))<mp.mpf('1e-27')
 assert thNum(omNum)>0 and dtNum<0
 supplemental.append(dict(id='E061',method='independent_numerical_derivative',name='high precision circular dispersion group delay and Faraday derivative relation',passed=True))
 
-result={'status':'draft-only','new_problem_count':14,'passed_count':len(checks),'tests':checks,'independent_expert_review':'pending','supplemental_numeric_checks':supplemental}
+
+# T058: three-state driven Markov ring; four genuinely distinct subpart checks.
+a058=s.symbols('a058:3',positive=True); b058=s.symbols('b058:3',positive=True)
+a0x,a1x,a2x=a058; b0x,b1x,b2x=b058
+tau0x=b0x*b1x+b0x*a2x+a1x*a2x
+tau1x=a0x*b1x+a0x*a2x+b1x*b2x
+tau2x=a0x*a1x+a1x*b2x+b0x*b2x
+Zx=tau0x+tau1x+tau2x
+Dx=a0x*a1x*a2x-b0x*b1x*b2x
+record('T058',1,'symbolic_stationary_master_equation',
+       'all three stationary tree-theorem edge currents equal the cycle-product difference',
+       all(eq(x,Dx) for x in (a0x*tau0x-b0x*tau1x,a1x*tau1x-b1x*tau2x,a2x*tau2x-b2x*tau0x)))
+rx=s.symbols('r058:3',positive=True); ex=s.symbols('eps058:3',real=True); ux=s.symbols('u058',real=True)
+subs058={}
+for i in range(3):
+    subs058[a058[i]]=rx[i]*s.exp(ux*ex[i]/2)
+    subs058[b058[i]]=rx[i]*s.exp(-ux*ex[i]/2)
+Jx=Dx/Zx
+linx=s.diff(Jx.subs(subs058),ux).subs(ux,0)
+record('T058',2,'linear_response_and_entropy_inequality',
+       'cycle-affinity linear response and strictly positive sample entropy production',
+       eq(linx,sum(ex)/(3*sum(1/r for r in rx))) and
+       (Dx/Zx*s.log(a0x*a1x*a2x/(b0x*b1x*b2x))).subs(
+           {a0x:2,a1x:3,a2x:5,b0x:1,b1x:2,b2x:2}).evalf()>0)
+aa058,bb058,xx058=s.symbols('aa058 bb058 xx058',positive=True)
+lam058=aa058*(s.exp(xx058)-1)+bb058*(s.exp(-xx058)-1)
+record('T058',3,'tilted_generator_and_fluctuation_symmetry',
+       'counting-field eigenvalue has Gallavotti-Cohen symmetry and both exact cumulant rates',
+       eq(lam058,lam058.subs(xx058,-s.log(aa058/bb058)-xx058)) and
+       eq(s.diff(lam058,xx058).subs(xx058,0),aa058-bb058) and
+       eq(s.diff(lam058,xx058,2).subs(xx058,0),aa058+bb058))
+record('T058',4,'uncertainty_bound_and_near_equilibrium_limit',
+       'exact thermodynamic uncertainty product approaches two at equilibrium and exceeds two away from it',
+       eq(s.limit((aa058+bb058)/(aa058-bb058)*s.log(aa058/bb058),aa058,bb058),2) and
+       float(((aa058+bb058)/(aa058-bb058)*s.log(aa058/bb058)).subs({aa058:3,bb058:1}))>2)
+aNum058=mp.mpf('2.7');bNum058=mp.mpf('0.8');tNum058=mp.mpf('1.3')
+skell058=lambda n:mp.exp(-(aNum058+bNum058)*tNum058)*(aNum058/bNum058)**(mp.mpf(n)/2)*mp.besseli(abs(n),2*tNum058*mp.sqrt(aNum058*bNum058))
+assert abs(skell058(3)/skell058(-3)-(aNum058/bNum058)**3)<mp.mpf('1e-27')
+vNum058=mp.mpf('1.2')
+def rate058(v):
+    d=mp.sqrt(v*v+4*aNum058*bNum058)
+    return aNum058+bNum058-d+v*mp.log((v+d)/(2*aNum058))
+assert abs(rate058(vNum058)-rate058(-vNum058)+vNum058*mp.log(aNum058/bNum058))<mp.mpf('1e-27')
+supplemental.append(dict(id='T058',method='independent_high_precision_probability_and_LDP',
+                         name='Skellam finite-time fluctuation ratio and rate-function symmetry checked independently',passed=True))
+
+result={'status':'draft-only','new_problem_count':15,'passed_count':len(checks),'tests':checks,'independent_expert_review':'pending','supplemental_numeric_checks':supplemental}
 path=Path(__file__).resolve().parents[1]/'data/round12_draft_validation_report.json'
 path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
 print(json.dumps({'status':result['status'],'checked_subparts':len(checks)},ensure_ascii=False))

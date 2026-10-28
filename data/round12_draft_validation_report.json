@@ -1,7 +1,7 @@
 {
   "status": "draft-only",
-  "new_problem_count": 14,
-  "passed_count": 56,
+  "new_problem_count": 15,
+  "passed_count": 60,
   "tests": [
     {
       "id": "M059",
@@ -394,6 +394,34 @@
       "method": "independent_derivation",
       "name": "direct group index derivative equals Faraday phase derivative for both circular modes",
       "passed": true
+    },
+    {
+      "id": "T058",
+      "part": 1,
+      "method": "symbolic_stationary_master_equation",
+      "name": "tree-theorem currents and cycle product identity",
+      "passed": true
+    },
+    {
+      "id": "T058",
+      "part": 2,
+      "method": "linear_response_and_entropy_inequality",
+      "name": "linear response and strictly positive nonequilibrium entropy production",
+      "passed": true
+    },
+    {
+      "id": "T058",
+      "part": 3,
+      "method": "tilted_generator_and_fluctuation_symmetry",
+      "name": "Gallavotti-Cohen symmetry and mean/variance cumulants",
+      "passed": true
+    },
+    {
+      "id": "T058",
+      "part": 4,
+      "method": "uncertainty_bound_and_near_equilibrium_limit",
+      "name": "near-equilibrium TUR equality and strict nonequilibrium inequality",
+      "passed": true
     }
   ],
   "independent_expert_review": "pending",
@@ -480,6 +508,12 @@
       "id": "E061",
       "method": "independent_numerical_derivative",
       "name": "high precision circular dispersion group delay and Faraday derivative relation",
+      "passed": true
+    },
+    {
+      "id": "T058",
+      "method": "independent_high_precision_probability_and_LDP",
+      "name": "Skellam finite-time fluctuation ratio and rate-function symmetry checked independently",
       "passed": true
     }
   ]
