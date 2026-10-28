@@ -1,7 +1,7 @@
 {
   "status": "draft-only",
-  "new_problem_count": 13,
-  "passed_count": 52,
+  "new_problem_count": 14,
+  "passed_count": 56,
   "tests": [
     {
       "id": "M059",
@@ -366,6 +366,34 @@
       "method": "conservation",
       "name": "paraxial wave equation and negative edge transverse flux hold identically",
       "passed": true
+    },
+    {
+      "id": "E061",
+      "part": 1,
+      "method": "symbolic",
+      "name": "electron Lorentz circular diagonalization gives exact magnetized plasma birefringence",
+      "passed": true
+    },
+    {
+      "id": "E061",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "both positive cold plasma cutoffs solve their distinct quadratic dispersion equations",
+      "passed": true
+    },
+    {
+      "id": "E061",
+      "part": 3,
+      "method": "limit",
+      "name": "high frequency circular index difference has correct Faraday rotation cubic inverse frequency",
+      "passed": true
+    },
+    {
+      "id": "E061",
+      "part": 4,
+      "method": "independent_derivation",
+      "name": "direct group index derivative equals Faraday phase derivative for both circular modes",
+      "passed": true
     }
   ],
   "independent_expert_review": "pending",
@@ -446,6 +474,12 @@
       "id": "O058",
       "method": "independent_numerical_derivative",
       "name": "Fresnel edge transverse flux from high precision erfc derivative",
+      "passed": true
+    },
+    {
+      "id": "E061",
+      "method": "independent_numerical_derivative",
+      "name": "high precision circular dispersion group delay and Faraday derivative relation",
       "passed": true
     }
   ]

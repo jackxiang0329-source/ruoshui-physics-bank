@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fifty-two executable draft subpart checks, NOT the required 200-item final gate."""
+"""Fifty-six executable draft subpart checks, NOT the required 200-item final gate."""
 import json
 import math
 import mpmath as mp
@@ -323,6 +323,33 @@ assert abs(pshock/xshock-2*gshock/(gshock+1))<mp.mpf('0.00001')
 supplemental.append(dict(id='T057',method='independent_numerical',name='high-Mach Rankine-Hugoniot strong shock ratios',passed=True))
 
 
+
+# E061: cold magnetized plasma, circular eigenmodes and Faraday group delay.
+wpE,wcE,omP=s.symbols('wpE wcE omP',positive=True)
+np2=1-wpE**2/(omP*(omP+wcE))
+nm2=1-wpE**2/(omP*(omP-wcE))
+record('E061',1,'symbolic','electron Lorentz circular diagonalization gives exact magnetized plasma birefringence',
+       eq(np2-nm2,2*wpE**2*wcE/(omP*(omP**2-wcE**2)))
+       and eq(np2.subs(wcE,0),nm2.subs(wcE,0)))
+cutpE=(s.sqrt(wcE**2+4*wpE**2)-wcE)/2
+cutmE=(s.sqrt(wcE**2+4*wpE**2)+wcE)/2
+record('E061',2,'independent_derivation','both positive cold plasma cutoffs solve their distinct quadratic dispersion equations',
+       eq(cutpE*(cutpE+wcE),wpE**2)
+       and eq(cutmE*(cutmE-wcE),wpE**2)
+       and eq(cutmE-cutpE,wcE))
+zE=s.symbols('zE',positive=True)
+nDiffE=s.sqrt(1-wpE**2*zE**2/(1+wcE*zE))-s.sqrt(1-wpE**2*zE**2/(1-wcE*zE))
+record('E061',3,'limit','high frequency circular index difference has correct Faraday rotation cubic inverse frequency',
+       eq(s.series(nDiffE,zE,0,5).removeO().coeff(zE,3),wpE**2*wcE))
+npE=s.sqrt(np2);nmE=s.sqrt(nm2)
+gpE=npE+wpE**2*(2*omP+wcE)/(2*npE*omP*(omP+wcE)**2)
+gmE=nmE+wpE**2*(2*omP-wcE)/(2*nmE*omP*(omP-wcE)**2)
+record('E061',4,'independent_derivation','direct group index derivative equals Faraday phase derivative for both circular modes',
+       eq(s.diff(omP*npE,omP),gpE)
+       and eq(s.diff(omP*nmE,omP),gmE)
+       and eq(gpE-gmE,s.diff(omP*(npE-nmE),omP)))
+
+
 # Supplemental numeric checks are independent of the four per-question evidence records.
 aN=mp.mpf('3');gN=mp.mpf('0.5');LN=mp.mpf('2')
 TN=2/gN*mp.acosh(mp.exp(gN*gN*LN/(2*aN)))
@@ -364,7 +391,18 @@ jedge=mp.im(mp.conj(fn(0))*mp.diff(fn,mp.mpf('0')))/knu
 assert abs(jedge+1/(4*mp.sqrt(mp.pi*knu*zn)))<mp.mpf('1e-27')
 supplemental.append(dict(id='O058',method='independent_numerical_derivative',name='Fresnel edge transverse flux from high precision erfc derivative',passed=True))
 
-result={'status':'draft-only','new_problem_count':13,'passed_count':len(checks),'tests':checks,'independent_expert_review':'pending','supplemental_numeric_checks':supplemental}
+
+# E061: independently differentiated high precision Faraday phase.
+wpNum=mp.mpf('2.1');wcNum=mp.mpf('0.7');omNum=mp.mpf('7.4');cNum=mp.mpf('3');lenNum=mp.mpf('1.8')
+kpNum=lambda w:w/cNum*mp.sqrt(1-wpNum**2/(w*(w+wcNum)))
+kmNum=lambda w:w/cNum*mp.sqrt(1-wpNum**2/(w*(w-wcNum)))
+thNum=lambda w:lenNum*(kpNum(w)-kmNum(w))/2
+dtNum=lenNum*(mp.diff(kpNum,omNum)-mp.diff(kmNum,omNum))
+assert abs(dtNum-2*mp.diff(thNum,omNum))<mp.mpf('1e-27')
+assert thNum(omNum)>0 and dtNum<0
+supplemental.append(dict(id='E061',method='independent_numerical_derivative',name='high precision circular dispersion group delay and Faraday derivative relation',passed=True))
+
+result={'status':'draft-only','new_problem_count':14,'passed_count':len(checks),'tests':checks,'independent_expert_review':'pending','supplemental_numeric_checks':supplemental}
 path=Path(__file__).resolve().parents[1]/'data/round12_draft_validation_report.json'
 path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
 print(json.dumps({'status':result['status'],'checked_subparts':len(checks)},ensure_ascii=False))
