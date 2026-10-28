@@ -18,10 +18,15 @@ def configs(root=ROOT):
     translation_map={x["id"]:x for x in trans}
     if len(translation_map)!=len(trans):
         raise ValueError("duplicate translation identifiers")
-    return taxonomy,docs,modules,by_id,translation_map
+    extra_doc=json.loads(translations_file.read_text(encoding="utf-8")) if translations_file.exists() else {}
+    supplements=extra_doc.get("additional_entries",[])
+    supplemental_map={x["id"]:x for x in supplements}
+    if len(supplemental_map)!=len(supplements) or set(translation_map)&set(supplemental_map):
+        raise ValueError("duplicate source-bound translation identifiers")
+    return taxonomy,docs,modules,by_id,translation_map,supplemental_map
 
 def classify(row,configs,root=ROOT):
-    taxonomy,lessons,modules,pref,translations=configs
+    taxonomy,lessons,modules,pref,translations,supplemental=configs
     pid=row["id"]
     module=row.get("module","待分类")
     if module not in modules:
@@ -54,6 +59,20 @@ def classify(row,configs,root=ROOT):
             if not (root/zh_path).is_file():
                 raise ValueError("translation manifest has no bilingual file: "+pid)
             status="中英对照初校；待独立复核"
+    if pid in supplemental:
+        entry=supplemental[pid]
+        if row["raw_path"]!=entry["raw_path"]:
+            raise ValueError("source path mismatch: "+pid)
+        module=entry["module"]
+        topic=entry["subtopic"]
+        chapter_basis="逐题英文摘录初核；仍待独立双语审稿"
+        ptype="未核验"
+        type_basis="题型尚未独立确认"
+        code=modules[module]["code"]
+        zh_path=f"localized/zh_CN/{code}/supplementary/{pid}.md"
+        if not (root/zh_path).is_file():
+            raise ValueError("missing supplementary bilingual file: "+pid)
+        status="中英对照初校；待独立复核"
     if module=="待分类":
         chapter_basis="一级学科未确认；隔离待分类"
     return {
@@ -88,6 +107,10 @@ def generate(root=ROOT):
         module=next(m for m in cfg[0]["modules"] if m["code"]==lesson["module"])
         path=out/"按知识点"/module["folder"]/(lesson["topic"]+".csv")
         save(path,by_topic.get((module["name"],lesson["label"]),[]))
+    supplemental_rows=[x for x in rows if x["id"] in cfg[5]]
+    for name,meta in cfg[2].items():
+        save(out/"按知识点"/meta["folder"]/"补充题源.csv",
+             [x for x in supplemental_rows if x["学科"]==name])
     translated=sum(bool(x["中文译稿"]) for x in rows)
     fine_pending=sum(x["知识点"]=="未细分（待核验）" for x in rows)
     report={"candidate_total":len(rows),"translated_drafts":translated,"mapped_topic_count":len(by_topic),
@@ -107,6 +130,13 @@ def generate(root=ROOT):
         module=next(m for m in cfg[0]["modules"] if m["code"]==lesson["module"])
         target=f'按知识点/{module["folder"]}/{lesson["topic"]}.csv'
         lines.append(f'- {module["name"]} / {lesson["label"]}：[题目索引]({target})')
+    lines.extend(["", "## 补充题源中文译稿（逐题初核）", ""])
+    for name,meta in cfg[2].items():
+        count=sum(x["学科"]==name for x in supplemental_rows)
+        if count:
+            lines.append("- " + name + "（" + str(count) +
+                         "）：[补充题源索引](按知识点/" + meta["folder"] +
+                         "/补充题源.csv)")
     lines+=["","[全量题目索引](题目总索引.csv) · [翻译与目录规范](../../docs/大学物理目录与翻译规范.md) · [中英术语表](../../localization/zh_CN/术语表.md)",
             "","注：知识点来源于固定章节才细分；其他候选只沿用现有学科、细分类保留待核验。译稿不代表答案已验证。",""]
     (out/"中文分类导航.md").write_text("\n".join(lines),encoding="utf-8")
