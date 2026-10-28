@@ -404,7 +404,7 @@ supplemental.append(dict(id='E061',method='independent_numerical_derivative',nam
 
 
 # T058: three-state driven Markov ring; four genuinely distinct subpart checks.
-a058=s.symbols('a058:3',positive=True); b058=s.symbols('b058:3',positive=True)
+a058=s.symbols('a058_:3',positive=True); b058=s.symbols('b058_:3',positive=True)
 a0x,a1x,a2x=a058; b0x,b1x,b2x=b058
 tau0x=b0x*b1x+b0x*a2x+a1x*a2x
 tau1x=a0x*b1x+a0x*a2x+b1x*b2x
@@ -414,7 +414,7 @@ Dx=a0x*a1x*a2x-b0x*b1x*b2x
 record('T058',1,'symbolic_stationary_master_equation',
        'all three stationary tree-theorem edge currents equal the cycle-product difference',
        all(eq(x,Dx) for x in (a0x*tau0x-b0x*tau1x,a1x*tau1x-b1x*tau2x,a2x*tau2x-b2x*tau0x)))
-rx=s.symbols('r058:3',positive=True); ex=s.symbols('eps058:3',real=True); ux=s.symbols('u058',real=True)
+rx=s.symbols('r058_:3',positive=True); ex=s.symbols('eps058_:3',real=True); ux=s.symbols('u058',real=True)
 subs058={}
 for i in range(3):
     subs058[a058[i]]=rx[i]*s.exp(ux*ex[i]/2)
