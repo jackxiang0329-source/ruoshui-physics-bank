@@ -2,7 +2,7 @@
 
 > 仅供编辑复核：尚未通过独立双语、答案或版权审核；不可正式组卷。
 
-共 347 道。英文原文均以保留源指纹的上游快照为依据。
+共 384 道。英文原文均以保留源指纹的上游快照为依据。
 
 <a id="cp-00001"></a>
 
@@ -7626,6 +7626,1032 @@ A car’s bumper is designed to withstand a 4.0-km/h (1.1-m/s) collision with an
 
 - 原件：external_sources/college_physics/raw/CP-00334.md
 - 原件 Git blob SHA：f7286ab389c7f3c4dceee32e4b13b66547150b73
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00335"></a>
+
+## CP-00335｜拳击手套对冲击力的影响
+
+**学科：** 力学　**知识点：** 动能定理／缓冲距离
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+拳击手套使用衬垫来减小打击时的作用力。（a）若质量共为 $7.00\,\mathrm{kg}$ 的手臂和手套以 $10.0\,\mathrm{m/s}$ 撞击后停止，手套与对方脸部共压缩 $7.50\,\mathrm{cm}$，计算手套对脸部的平均作用力。（b）若不用手套，拳面与脸部仅压缩 $2.00\,\mathrm{cm}$ 就停止，计算同样撞击的平均作用力。（c）讨论佩戴手套时所得作用力的大小：尽管小于赤手撞击，它是否仍可能造成伤害？
+
+## 英文原题（存档摘录）
+
+# Kinetic Energy and the Work-Energy Theorem — CP-00335
+
+Boxing gloves are padded to lessen the force of a blow. (a) Calculate the force exerted by a boxing glove on an opponent’s face, if the glove and face compress 7.50 cm during a blow in which the 7.00-kg arm and glove are brought to rest from an initial speed of 10.0 m/s. (b) Calculate the force exerted by an identical blow in the gory old days when no gloves were used and the knuckles and face would compress only 2.00 cm. (c) Discuss the magnitude of the force with glove on. Does it seem high enough to cause damage even though it is lower than the force with no glove?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00335.md
+- 原件 Git blob SHA：92fc7bffcfb0683c5cf81084ac2dfc40c6d99517
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 审校提示：采用平均作用力与理想停止距离模型。
+
+---
+
+<a id="cp-00336"></a>
+
+## CP-00336｜短跑运动员加速时对跑道的平均作用力
+
+**学科：** 力学　**知识点：** 动能定理／跑步阻力
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+质量为 $60.0\,\mathrm{kg}$ 的短跑运动员在 $25.0\,\mathrm{m}$ 的距离内由 $2.00\,\mathrm{m/s}$ 加速至 $8.00\,\mathrm{m/s}$，同时受到平均为 $30.0\,\mathrm{N}$ 的逆风阻力。利用能量关系，求运动员向后作用在跑道上的平均力。
+
+## 英文原题（存档摘录）
+
+# Kinetic Energy and the Work-Energy Theorem — CP-00336
+
+Using energy considerations, calculate the average force a 60.0-kg sprinter exerts backward on the track to accelerate from 2.00 to 8.00 m/s in a distance of 25.0 m, if he encounters a headwind that exerts an average force of 30.0 N against him.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00336.md
+- 原件 Git blob SHA：f8d2e19cf7003c91c5b399db27b0ef476aeb5f67
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00337"></a>
+
+## CP-00337｜把书举到书架时做功取决于什么
+
+**学科：** 力学　**知识点：** 重力势能／路径无关性
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+将一本书举到书架上时，你对书所做的功是否取决于所走的路径？是否取决于所花时间？是否取决于书架高度？是否取决于书的质量？
+
+## 英文原题（存档摘录）
+
+# Gravitational Potential Energy — CP-00337
+
+Does the work you do on a book when you lift it onto a shelf depend on the path taken? On the time taken? On the height of the shelf? On the mass of the book?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00337.md
+- 原件 Git blob SHA：84cdd52248a1f40bb8c5acc66f0c0ba3850edd49
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 审校提示：通常指起终点静止、无耗散条件下举书者克服重力所做的功。
+
+---
+
+<a id="cp-00338"></a>
+
+## CP-00338｜胡夫大金字塔的重力势能
+
+**学科：** 力学　**知识点：** 重力势能／质心高度
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+（a）以金字塔所建地面为零势能参考面，已知胡夫大金字塔的质量约为 $7\times10^9\,\mathrm{kg}$，质心高于周围地面 $36.5\,\mathrm{m}$。求其重力势能。（b）将此能量与一个人每天从食物中摄取的能量比较。
+
+## 英文原题（存档摘录）
+
+# Gravitational Potential Energy — CP-00338
+
+(a) How much gravitational potential energy (relative to the ground on which it is built) is stored in the Great Pyramid of Cheops, given that its mass is about <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>7</mn><mi> × </mi><msup><mtext>10</mtext><mrow><mn>9</mn></mrow></msup><mtext> kg</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{7 times "10" rSup { size 8{9} } " kg"} {}</annotation></semantics></math>
+
+ and its center of mass is 36.5 m above the surrounding ground? (b) How does this energy compare with the daily food intake of a person?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00338.md
+- 原件 Git blob SHA：4d97b86fe7a70e5643f0b5f27262a697808ef7f9
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：需要估计参数
+- 审校提示：人每日食物能量未在独立题面给出，需要自行估算或引用资料。
+
+---
+
+<a id="cp-00339"></a>
+
+## CP-00339｜笑翠鸟衔蛇上树的做功
+
+**学科：** 力学　**知识点：** 重力势能／提升物体
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+假设一只质量为 $350\,\mathrm{g}$ 的笑翠鸟（大型翠鸟）衔起一条质量为 $75\,\mathrm{g}$ 的蛇，并将它从地面提升到高 $2.5\,\mathrm{m}$ 的树枝上。（a）鸟对蛇做了多少功？（b）鸟为了将自己的质心提升到树枝高度，需要做多少功？
+
+## 英文原题（存档摘录）
+
+# Gravitational Potential Energy — CP-00339
+
+Suppose a 350-g kookaburra (a large kingfisher bird) picks up a 75-g snake and raises it 2.5 m from the ground to a branch. (a) How much work did the bird do on the snake? (b) How much work did it do to raise its own center of mass to the branch?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00339.md
+- 原件 Git blob SHA：d2c97bc5542acb1371763ffc12e0e0104f740ace
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00340"></a>
+
+## CP-00340｜滑雪运动员助跑对终速与用时的影响
+
+**学科：** 力学　**知识点：** 机械能守恒／斜坡滑行
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+在高山滑雪竞赛中，助跑带来的优势可能很小，因为初始动能相较于斜坡上损失的重力势能较小。忽略摩擦，求滑雪者沿倾角 $30^\circ$ 的斜坡滑行 $70.0\,\mathrm{m}$ 后的末速率和所需时间：（a）从静止出发；（b）以 $2.50\,\mathrm{m/s}$ 的初速出发；（c）结果是否出乎意料？讨论为何在竞争激烈的比赛中助跑仍有意义。
+
+## 英文原题（存档摘录）
+
+# Gravitational Potential Energy — CP-00340
+
+In a downhill ski race, surprisingly, little advantage is gained by getting a running start. (This is because the initial kinetic energy is small compared with the gain in gravitational potential energy on even small hills.) To demonstrate this, find the final speed and the time taken for a skier who skies 70.0 m along a <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mtext>30º</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"30"°} {}</annotation></semantics></math>
+
+ slope neglecting friction: (a) Starting from rest. (b) Starting with an initial speed of 2.50 m/s. (c) Does the answer surprise you? Discuss why it is still advantageous to get a running start in very competitive events.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00340.md
+- 原件 Git blob SHA：23b9f75deb54a9272201a3daa67d70ba1d6312d1
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00341"></a>
+
+## CP-00341｜跳水板从受压到恢复的势能变化
+
+**学科：** 力学　**知识点：** 保守力／弹性势能
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+若内部摩擦可以忽略，跳水板施加的弹力可视为保守力。假设摩擦可忽略，描述跳水运动员从即将踏上跳水板，到双脚刚离开跳水板的整个过程中，跳水板的势能如何变化。
+
+## 英文原题（存档摘录）
+
+# Conservative Forces and Potential Energy — CP-00341
+
+The force exerted by a diving board is conservative, provided the internal friction is negligible. Assuming friction is negligible, describe changes in the potential energy of a diving board as a swimmer dives from it, starting just before the swimmer steps on the board until just after his feet leave it.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00341.md
+- 原件 Git blob SHA：943454c7c8c9b9151dcc7e307968e7620dcb14af
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00342"></a>
+
+## CP-00342｜机械能与非保守力的关系
+
+**学科：** 力学　**知识点：** 机械能与非保守力
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+给出机械能的定义。机械能与非保守力有什么关系？如果系统中只有保守力做功，机械能将如何变化？
+
+## 英文原题（存档摘录）
+
+# Conservative Forces and Potential Energy — CP-00342
+
+Define mechanical energy. What is the relationship of mechanical energy to nonconservative forces? What happens to mechanical energy if only conservative forces act?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00342.md
+- 原件 Git blob SHA：66a650b2524fef63271f20bf8f1f176345057709
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00343"></a>
+
+## CP-00343｜势能与保守力之间的联系
+
+**学科：** 力学　**知识点：** 保守力／势能
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+势能与保守力之间存在什么关系？
+
+## 英文原题（存档摘录）
+
+# Conservative Forces and Potential Energy — CP-00343
+
+What is the relationship of potential energy to conservative force?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00343.md
+- 原件 Git blob SHA：6cee0c0d70572d29e6443e50842f564fe2535342
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00344"></a>
+
+## CP-00344｜地铁列车弹簧缓冲器的劲度系数
+
+**学科：** 力学　**知识点：** 弹性势能／弹簧劲度系数
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+一列质量为 $5.00\times10^5\,\mathrm{kg}$ 的地铁列车，以 $0.500\,\mathrm{m/s}$ 的速度驶向轨道终端的大型弹簧缓冲器，并在弹簧压缩 $0.400\,\mathrm{m}$ 后停下。求弹簧的劲度系数 $k$。
+
+## 英文原题（存档摘录）
+
+# Conservative Forces and Potential Energy — CP-00344
+
+A <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>5</mn><mtext>.</mtext><mrow><mtext>00</mtext><mo stretchy="false">×</mo><msup><mtext>10</mtext><mrow><mn>5</mn></mrow></msup></mrow><mtext>-kg</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{5 "." "00" times "10" rSup { size 8{5} } "-kg"} {}</annotation></semantics></math>
+
+ subway train is brought to a stop from a speed of 0.500 m/s in 0.400 m by a large spring bumper at the end of its track. What is the force constant <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>k</mi></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{k} {}</annotation></semantics></math>
+
+ of the spring?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00344.md
+- 原件 Git blob SHA：62704443f33c55933ac321af13e12d01ca4516d7
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 审校提示：题目默认弹簧吸收全部列车动能，忽略其他阻力。
+
+---
+
+<a id="cp-00345"></a>
+
+## CP-00345｜弹簧高跷最大跳跃高度
+
+**学科：** 力学　**知识点：** 弹性势能／竖直跳跃
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+一根弹簧高跷的弹簧劲度系数为 $2.50\times10^4\,\mathrm{N/m}$，最大可压缩 $12.0\,\mathrm{cm}$。若小孩与高跷的总质量为 $40.0\,\mathrm{kg}$，仅利用弹簧储存的能量，能够跳到的最大高度是多少？请明确展示《能量问题求解策略》中的解题步骤。
+
+## 英文原题（存档摘录）
+
+# Conservative Forces and Potential Energy — CP-00345
+
+A pogo stick has a spring with a force constant of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>2</mn><mtext>.</mtext><mtext>50</mtext><mi>×</mi><msup><mtext>10</mtext><mrow><mn>4</mn></mrow></msup><mspace width="0.20em" /><mtext> N/m</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{2 "." "50" times "10" rSup { size 8{4} } " N/m"} {}</annotation></semantics></math>
+
+, which can be compressed 12.0 cm. To what maximum height can a child jump on the stick using only the energy in the spring, if the child and stick have a total mass of 40.0 kg? Explicitly show how you follow the steps in the [Problem-Solving Strategies for Energy](/m42151#fs-id2025907).
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00345.md
+- 原件 Git blob SHA：072a9623172da25c90659ee4a30ec4d769651b70
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：依赖教材章节
+- 审校提示：高度相对于哪一参考位置须与原文弹簧压缩状态相一致；引用教材解题策略。
+
+---
+
+<a id="cp-00346"></a>
+
+## CP-00346｜汽车空挡滑上山坡的机械能损失
+
+**学科：** 力学　**知识点：** 非保守力／摩擦耗能
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+（a）一辆汽车关闭发动机驱动、以 $110\,\mathrm{km/h}$ 的初速向上滑行，忽略摩擦做功，它最多能爬升多高？（b）若一辆质量为 $750\,\mathrm{kg}$、初速同为 $110\,\mathrm{km/h}$ 的汽车实际仅滑至高于起点 $22.0\,\mathrm{m}$ 的位置，求摩擦产生的热能。（c）若山坡与水平面夹角为 $2.5^\circ$，求平均摩擦力。
+
+## 英文原题（存档摘录）
+
+# Nonconservative Forces — CP-00346
+
+(a) How high a hill can a car coast up (engine disengaged) if work done by friction is negligible and its initial speed is 110 km/h? (b) If, in actuality, a 750-kg car with an initial speed of 110 km/h is observed to coast up a hill to a height 22.0 m above its starting point, how much thermal energy was generated by friction? (c) What is the average force of friction if the hill has a slope <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>2</mn><mtext>.</mtext><mn>5º</mn></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{2 "." 5°} {}</annotation></semantics></math>
+
+ above the horizontal?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00346.md
+- 原件 Git blob SHA：5b1e1fa8d2497369ef0d8ddc566ad0f5241d802d
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00347"></a>
+
+## CP-00347｜标枪从拾起到落地的能量转化
+
+**学科：** 力学　**知识点：** 能量守恒／投掷标枪
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+描述标枪在运动员将其拾起、掷出、飞行，直到落地并插入地面的过程中，发生了哪些能量传递与转化。
+
+## 英文原题（存档摘录）
+
+# Conservation of Energy — CP-00347
+
+Describe the energy transfers and transformations for a javelin, starting from the point at which an athlete picks up the javelin and ending when the javelin is stuck into the ground after being thrown.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00347.md
+- 原件 Git blob SHA：5a4e4cc4424db6d7529589b9644b98ae663d3246
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00348"></a>
+
+## CP-00348｜效率小于百分之百是否违反能量守恒
+
+**学科：** 力学　**知识点：** 能量守恒／效率
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+效率小于 $100\%$ 的装置是否违反能量守恒定律？请解释。
+
+## 英文原题（存档摘录）
+
+# Conservation of Energy — CP-00348
+
+Do devices with efficiencies of less than one violate the law of conservation of energy? Explain.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00348.md
+- 原件 Git blob SHA：2d0c31fea3da95e05124ed08837593f789534a5a
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00349"></a>
+
+## CP-00349｜列举四种能量形式及相互转化
+
+**学科：** 力学　**知识点：** 能量形式／转换
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+列举四种不同的能量形式或类型，并为每一种形式给出一个转化为另一种能量形式的例子。
+
+## 英文原题（存档摘录）
+
+# Conservation of Energy — CP-00349
+
+List four different forms or types of energy. Give one example of a conversion from each of these forms to another form.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00349.md
+- 原件 Git blob SHA：d7ea36958a95602bc1b8e36b008efef5ca201582
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00350"></a>
+
+## CP-00350｜骑自行车过程中的能量转化
+
+**学科：** 力学　**知识点：** 能量守恒／骑行
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+列出骑自行车过程中会发生的能量转化。
+
+## 英文原题（存档摘录）
+
+# Conservation of Energy — CP-00350
+
+List the energy conversions that occur when riding a bicycle.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00350.md
+- 原件 Git blob SHA：a2ddac67e2af260a719f1efff68d15f898ea561f
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00351"></a>
+
+## CP-00351｜从桥上抛石的入水速率与方向无关
+
+**学科：** 力学　**知识点：** 机械能守恒／抛体
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+忽略空气阻力，利用能量守恒证明：从高出水面 $20.0\,\mathrm{m}$ 的桥上以初速大小 $15.0\,\mathrm{m/s}$ 抛出一块石头，石头撞击水面时速率为 $24.8\,\mathrm{m/s}$，与初始抛出方向无关。
+
+## 英文原题（存档摘录）
+
+# Conservation of Energy — CP-00351
+
+Using energy considerations and assuming negligible air resistance, show that a rock thrown from a bridge 20.0 m above water with an initial speed of 15.0 m/s strikes the water with a speed of 24.8 m/s independent of the direction thrown.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00351.md
+- 原件 Git blob SHA：68c16eb399013d234f8379f1d19cd3c855bcab9c
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00359"></a>
+
+## CP-00359｜有用功率与搬砖所需时间
+
+**学科：** 力学　**知识点：** 功率／搬运重物
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+（a）一人在 $8.00\,\mathrm{h}$ 内完成 $6.00\times10^6\,\mathrm{J}$ 的有用功，求平均有用功率。（b）若以相同功率将总质量为 $2000\,\mathrm{kg}$ 的砖块抬升 $1.50\,\mathrm{m}$ 至平台，需要多长时间？计算时忽略搬运者自身上升所做的功，因为它不计入这里的有用输出。
+
+## 英文原题（存档摘录）
+
+# Power — CP-00359
+
+(a) What is the average useful power output of a person who does <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>6</mn><mtext>.</mtext><mtext>00</mtext><mi>×</mi><msup><mtext>10</mtext><mrow><mn>6</mn></mrow></msup><mspace width="0.20em" /><mtext>J</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{6 "." "00" times "10" rSup { size 8{6} } " J"} {}</annotation></semantics></math>
+
+ of useful work in 8.00 h? (b) Working at this rate, how long will it take this person to lift 2000 kg of bricks 1.50 m to a platform? (Work done to lift his body can be omitted because it is not considered useful output here.)
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00359.md
+- 原件 Git blob SHA：131d5595b8be1c13844f20d7c595108f81967cb6
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00360"></a>
+
+## CP-00360｜直线加速赛车的平均输出功率
+
+**学科：** 力学　**知识点：** 功率／加速与摩擦耗能
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+质量为 $500\,\mathrm{kg}$ 的直线加速赛车由静止出发，在约四分之一英里即 $400\,\mathrm{m}$ 的距离内达到 $110\,\mathrm{m/s}$，同时受到平均大小为 $1200\,\mathrm{N}$ 的摩擦阻力。若这一过程耗时 $7.30\,\mathrm{s}$，求赛车的平均输出功率，分别以瓦特和马力表示。
+
+## 英文原题（存档摘录）
+
+# Power — CP-00360
+
+A 500-kg dragster accelerates from rest to a final speed of 110 m/s in 400 m (about a quarter of a mile) and encounters an average frictional force of 1200 N. What is its average power output in watts and horsepower if this takes 7.30 s?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00360.md
+- 原件 Git blob SHA：55030369af9f4c65cbec0323933c4c9f9db005a8
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00361"></a>
+
+## CP-00361｜四十马力汽车加速所需时间
+
+**学科：** 力学　**知识点：** 功率／汽车加速和爬坡
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+（a）一辆质量为 $850\,\mathrm{kg}$、有用输出功率为 $40.0\,\mathrm{hp}$ 的汽车，忽略摩擦，由静止加速到 $15.0\,\mathrm{m/s}$ 需要多长时间？取 $1\,\mathrm{hp}=746\,\mathrm{W}$。（b）如果加速过程中汽车还爬升了 $3.00\,\mathrm{m}$ 的高度，所需时间又是多少？
+
+## 英文原题（存档摘录）
+
+# Power — CP-00361
+
+(a) How long will it take an 850-kg car with a useful power output of 40.0 hp (1 hp = 746 W) to reach a speed of 15.0 m/s, neglecting friction? (b) How long will this acceleration take if the car also climbs a 3.00-m-high hill in the process?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00361.md
+- 原件 Git blob SHA：56b3f95b5794fe42f8df14fbc79c92e7549260dc
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00362"></a>
+
+## CP-00362｜配重电梯提升负载所需功率与电费
+
+**学科：** 力学　**知识点：** 功率／电梯配重和加速
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+（a）一台电梯电动机在 $12.0\,\mathrm{s}$ 内将 $2500\,\mathrm{kg}$ 的有效负载提升 $35.0\,\mathrm{m}$，并使系统从静止加速到 $4.00\,\mathrm{m/s}$，求其有用输出功率。注意，配重后系统的总质量为 $10{,}000\,\mathrm{kg}$：只有 $2500\,\mathrm{kg}$ 需要提升高度，但全部 $10{,}000\,\mathrm{kg}$ 都要加速。（b）若电价为每千瓦时 $0.0900$ 美元，这次运行的电费是多少？
+
+## 英文原题（存档摘录）
+
+# Power — CP-00362
+
+(a) Find the useful power output of an elevator motor that lifts a 2500-kg load a height of 35.0 m in 12.0 s, if it also increases the speed from rest to 4.00 m/s. Note that the total mass of the counterbalanced system is 10,000 kg—so that only 2500 kg is raised in height, but the full 10,000 kg is accelerated. (b) What does it cost, if electricity is $0.0900 per <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mtext>kW</mtext><mo stretchy="false">⋅</mo><mn>h</mn></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"kW" cdot h} {}</annotation></semantics></math>
+
+?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00362.md
+- 原件 Git blob SHA：75942251b29490a3457269187eb48dbf2b21793e
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：物理模型依赖
+- 审校提示：仅给有用功率，未给电机效率；电费计算须注明忽略电机损耗。
+
+---
+
+<a id="cp-00364"></a>
+
+## CP-00364｜大型飞机起飞爬升的功率
+
+**学科：** 力学　**知识点：** 功率／飞机爬升和空气阻力
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+（a）一架质量为 $1.50\times10^5\,\mathrm{kg}$ 的飞机，其发动机功率为 $100\,\mathrm{MW}$。若忽略空气阻力，飞机要达到 $250\,\mathrm{m/s}$ 的速度并爬升到 $12.0\,\mathrm{km}$，需要多长时间？（b）若实际用时为 $900\,\mathrm{s}$，求所需功率。（c）在这一功率下，若飞机用 $1200\,\mathrm{s}$ 完成上述运动，求平均空气阻力。提示：假设匀加速，先求飞机在 $1200\,\mathrm{s}$ 内飞行的距离。
+
+## 英文原题（存档摘录）
+
+# Power — CP-00364
+
+(a) How long would it take a <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>1</mn><mtext>.</mtext><mtext>50</mtext><mi>×</mi><msup><mtext>10</mtext><mrow><mn>5</mn></mrow></msup></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{1 "." "50" times "10" rSup { size 8{5} } } {}</annotation></semantics></math>
+
+-kg airplane with engines that produce 100 MW of power to reach a speed of 250 m/s and an altitude of 12.0 km if air resistance were negligible? (b) If it actually takes 900 s, what is the power? (c) Given this power, what is the average force of air resistance if the airplane takes 1200 s? (Hint: You must find the distance the plane travels in 1200 s assuming constant acceleration.)
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00364.md
+- 原件 Git blob SHA：25f66526e2051dbc9e0437af98134e4c1c304928
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：物理模型依赖
+- 审校提示：（c）平均阻力的求解依赖匀加速和功率均值近似。
+
+---
+
+<a id="cp-00365"></a>
+
+## CP-00365｜轿车克服坡度与阻力所需功率
+
+**学科：** 力学　**知识点：** 功率／汽车爬坡
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+质量为 $950\,\mathrm{kg}$ 的汽车以恒定速率 $30.0\,\mathrm{m/s}$ 沿倾角为 $2.00^\circ$ 的斜坡上行，同时受到风阻与摩擦力合计 $600\,\mathrm{N}$。求所需输出功率，并明确展示《能量问题求解策略》中的各步骤。
+
+## 英文原题（存档摘录）
+
+# Power — CP-00365
+
+Calculate the power output needed for a 950-kg car to climb a <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2.00º</mn></math>
+
+ slope at a constant 30.0 m/s while encountering wind resistance and friction totaling 600 N. Explicitly show how you follow the steps in the [Problem-Solving Strategies for Energy](/m42151#fs-id2025907).
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00365.md
+- 原件 Git blob SHA：7f7c362f8764bb5e53eda930a37d49871cd7396d
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：依赖教材章节
+- 审校提示：源题另要求引用教材能量解题策略章节，独立版需保留该依赖。
+
+---
+
+<a id="cp-00367"></a>
+
+## CP-00367｜曲折登山路线与机械功的比较
+
+**学科：** 力学　**知识点：** 人体功率／攀登
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+为什么沿之字形路线登山通常比沿山坡直线上攀更容易？两种路线带来的重力势能增量是否相同？实际消耗的身体能量又是否相同？
+
+## 英文原题（存档摘录）
+
+# Work, Energy, and Power in Humans — CP-00367
+
+Explain why it is easier to climb a mountain on a zigzag path rather than one straight up the side. Is your increase in gravitational potential energy the same in both cases? Is your energy consumption the same in both?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00367.md
+- 原件 Git blob SHA：d2d6053ab3c885abfdfbc4c0d9c5e938e9a9bac4
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00368"></a>
+
+## CP-00368｜搓手取暖时是否对外界做功
+
+**学科：** 力学　**知识点：** 人体效率／摩擦生热
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+双手相互摩擦取暖时，你是否对外界做了功？这一活动的效率是多少？
+
+## 英文原题（存档摘录）
+
+# Work, Energy, and Power in Humans — CP-00368
+
+Do you do work on the outside world when you rub your hands together to warm them? What is the efficiency of this activity?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00368.md
+- 原件 Git blob SHA：c1997021c7fe49f1da8bd44c1860133a0b3ee922
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：物理模型依赖
+- 审校提示：效率的定义依赖把有用输出界定为机械功还是局部热量，须明确课程语境。
+
+---
+
+<a id="cp-00369"></a>
+
+## CP-00369｜身体寒冷发抖时的效率
+
+**学科：** 力学　**知识点：** 人体效率／寒冷颤抖
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+寒冷引发的身体颤抖是一种不自主反应。此时人体的效率是多少？这样的效率在保暖意义上是否值得期望？
+
+## 英文原题（存档摘录）
+
+# Work, Energy, and Power in Humans — CP-00369
+
+Shivering is an involuntary response to lowered body temperature. What is the efficiency of the body when shivering, and is this a desirable value?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00369.md
+- 原件 Git blob SHA：ebe97e43abb9e46e5ee21b84965698656e3d6df3
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：概念表述歧义
+- 审校提示：题中效率指转化为外界有用机械功的比例，与产生热量的生理目的不同。
+
+---
+
+<a id="cp-00371"></a>
+
+## CP-00371｜一小块黄油可以支持爬多少层楼
+
+**学科：** 力学　**知识点：** 人体能量／爬楼梯
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+（a）一小块质量为 $10.0\,\mathrm{g}$ 的黄油含有 $93.0\,\mathrm{kcal}$ 能量。按每分钟快速攀登 $116$ 级台阶的速度，可持续爬楼梯多久？（b）若每层楼有 $16$ 级台阶，共可攀登多少层？
+
+## 英文原题（存档摘录）
+
+# Work, Energy, and Power in Humans — CP-00371
+
+(a) How long can you rapidly climb stairs (116/min) on the 93.0 kcal of energy in a 10.0-g pat of butter? (b) How many flights is this if each flight has 16 stairs?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00371.md
+- 原件 Git blob SHA：ab42110a87cf86a630d0c682f0579db7fa4aeed2
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：题设条件不充分
+- 审校提示：原题没有给爬楼梯代谢功率或每级台阶高度；应注明依赖原教材活动能耗表，不能独立计算唯一数值。
+
+---
+
+<a id="cp-00372"></a>
+
+## CP-00372｜短跑运动员三秒加速的输出功率
+
+**学科：** 力学　**知识点：** 人体功率／短跑加速
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+（a）质量为 $70.0\,\mathrm{kg}$ 的短跑选手在 $3.00\,\mathrm{s}$ 内从静止加速至 $10.0\,\mathrm{m/s}$，求其输出功率，分别用瓦特和马力表示。（b）考虑所需功率的大小，你认为训练良好的运动员能否在较长时间内反复完成这种加速？
+
+## 英文原题（存档摘录）
+
+# Work, Energy, and Power in Humans — CP-00372
+
+(a) What is the power output in watts and horsepower of a 70.0-kg sprinter who accelerates from rest to 10.0 m/s in 3.00 s? (b) Considering the amount of power generated, do you think a well-trained athlete could do this repetitively for long periods of time?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00372.md
+- 原件 Git blob SHA：fcae515ee6c02c9e2a41b36dd669a7e37f733106
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 审校提示：（a）通常按动能增量除以时间求平均机械功率。
+
+---
+
+<a id="cp-00373"></a>
+
+## CP-00373｜教授与运动员的机械效率比较
+
+**学科：** 力学　**知识点：** 人体效率／食物能量
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+（a）某位体能较差的教授代谢了 $500\,\mathrm{kcal}$ 食物能量，完成 $2.10\times10^5\,\mathrm{J}$ 有用功，求其效率。（b）若一名训练良好的运动员效率为 $20\%$，要完成相同的功，需要代谢多少食物热量（千卡）？
+
+## 英文原题（存档摘录）
+
+# Work, Energy, and Power in Humans — CP-00373
+
+(a) What is the efficiency of an out-of-condition professor who does <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>2</mn><mtext>.</mtext><mtext>10</mtext><mi>×</mi><msup><mtext>10</mtext><mrow><mn>5</mn></mrow></msup><mtext> J</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{2 "." "10" times "10" rSup { size 8{5} } " J"} {}</annotation></semantics></math>
+
+ of useful work while metabolizing 500 kcal of food energy? (b) How many food calories would a well-conditioned athlete metabolize in doing the same work with an efficiency of 20%?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00373.md
+- 原件 Git blob SHA：7b953c1462d27293479fca9068819f7336efd9b8
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00374"></a>
+
+## CP-00374｜铲雪的有用功率与废热
+
+**学科：** 力学　**知识点：** 人体效率／铲雪劳动
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+铲雪非常费力，因为手臂在这类活动中的效率较低。假设一人在清理步道积雪时，以 $800\,\mathrm{W}$ 的速率代谢食物能量。（a）求其有用功率；（b）若需将总质量 $3000\,\mathrm{kg}$ 的雪提高 $1.20\,\mathrm{m}$（这可能相当于一段长 $20\,\mathrm{m}$ 的步道积雪），需要多久？（c）此过程中产生多少千焦耳废热？
+
+## 英文原题（存档摘录）
+
+# Work, Energy, and Power in Humans — CP-00374
+
+Shoveling snow can be extremely taxing because the arms have such a low efficiency in this activity. Suppose a person shoveling a footpath metabolizes food at the rate of 800 W. (a) What is her useful power output? (b) How long will it take her to lift 3000 kg of snow 1.20 m? (This could be the amount of heavy snow on 20 m of footpath.) (c) How much waste heat transfer in kilojoules will she generate in the process?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00374.md
+- 原件 Git blob SHA：7c4da98356d5b768f462bab3adb79b173ebb5383
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：题设条件不充分
+- 审校提示：缺少铲雪活动的具体机械效率，无法由800W直接求有用功率与后续数值。
+
+---
+
+<a id="cp-00375"></a>
+
+## CP-00375｜跳下台阶时关节受力与屈膝缓冲
+
+**学科：** 力学　**知识点：** 动能定理／落地缓冲
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+人从高处跳下着地时，关节可能承受很大的力。（a）一名质量为 $80.0\,\mathrm{kg}$ 的人从高 $0.600\,\mathrm{m}$ 的台阶跳下，僵直落地使关节组织仅压缩 $1.50\,\mathrm{cm}$。计算此时作用力大小，**须计入人的重量**。（b）实际落地时膝盖通常会不自主地弯曲，以延长停止距离。若停止距离增加至 $0.300\,\mathrm{m}$，重新求作用力。（c）将这两种作用力与人的重量比较。
+
+## 英文原题（存档摘录）
+
+# Work, Energy, and Power in Humans — CP-00375
+
+Very large forces are produced in joints when a person jumps from some height to the ground. (a) Calculate the magnitude of the force produced if an 80.0-kg person jumps from a 0.600–m-high ledge and lands stiffly, compressing joint material 1.50 cm as a result. (Be certain to include the weight of the person.) (b) In practice the knees bend almost involuntarily to help extend the distance over which you stop. Calculate the magnitude of the force produced if the stopping distance is 0.300 m. (c) Compare both forces with the weight of the person.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00375.md
+- 原件 Git blob SHA：f294a382f2f467b729a7393cff92e92d4fdb88d4
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：物理模型依赖
+- 审校提示：理想化平均制动力，实际关节峰值力可能不同。
+
+---
+
+<a id="cp-00376"></a>
+
+## CP-00376｜缓冲不足的跑鞋与腿部制动力
+
+**学科：** 力学　**知识点：** 动能定理／跑步落地
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+穿着缓冲不足的跑鞋在坚硬地面慢跑，可能使脚和腿承受很大的力。（a）假设跑步者一条腿的质量为 $13.0\,\mathrm{kg}$，向下运动的速率为 $6.00\,\mathrm{m/s}$，在仅 $1.50\,\mathrm{cm}$ 的距离内停止，求使其停下所需的作用力大小。**须计入这名总质量为 $75.0\,\mathrm{kg}$ 的跑步者身体的重量。**（b）将该力与跑步者体重比较。
+
+## 英文原题（存档摘录）
+
+# Work, Energy, and Power in Humans — CP-00376
+
+Jogging on hard surfaces with insufficiently padded shoes produces large forces in the feet and legs. (a) Calculate the magnitude of the force needed to stop the downward motion of a jogger’s leg, if his leg has a mass of 13.0 kg, a speed of 6.00 m/s, and stops in a distance of 1.50 cm. (Be certain to include the weight of the 75.0-kg jogger’s body.) (b) Compare this force with the weight of the jogger.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00376.md
+- 原件 Git blob SHA：5c46cfefbe2ece37511b237cfb9c97c6b60a4f13
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：物理模型依赖
+- 审校提示：原题采用腿部动能与全身重量混合的简化模型，应明确所求为平均地面支持力而非单个关节峰值。
+
+---
+
+<a id="cp-00377"></a>
+
+## CP-00377｜五十次深蹲的能量消耗与平均功率
+
+**学科：** 力学　**知识点：** 人体能耗／深蹲
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+（a）一名质量为 $55.0\,\mathrm{kg}$ 的女性完成 $50$ 次深蹲，每次身体质心先下降再上升 $0.400\,\mathrm{m}$。假设下降和上升两个阶段都要做功，人体效率为 $20\%$，求总能量消耗（$\mathrm{kJ}$）。（b）若共耗时 $3.00\,\mathrm{min}$，求平均消耗功率（瓦特）。
+
+## 英文原题（存档摘录）
+
+# Work, Energy, and Power in Humans — CP-00377
+
+(a) Calculate the energy in kJ used by a 55.0-kg woman who does 50 deep knee bends in which her center of mass is lowered and raised 0.400 m. (She does work in both directions.) You may assume her efficiency is 20%. (b) What is the average power consumption rate in watts if she does this in 3.00 min?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00377.md
+- 原件 Git blob SHA：1e41a96857086c8de32ef1077a1c17c644e252e4
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 审校提示：原题特别声明下蹲和站起均计做功，需与机械势能净变化为零区分。
+
+---
+
+<a id="cp-00378"></a>
+
+## CP-00378｜高海拔登山需氧量与能效
+
+**学科：** 力学　**知识点：** 人体功率／登山供氧
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+登山者在极高海拔攀登时常携带瓶装氧气。（a）假设因气温低和有风，登山者的耗氧速率为每分钟登上 $116$ 级台阶时的两倍，估算连续攀登 $10.0\,\mathrm{h}$ 所需的氧气体积（按海平面条件计）。注意：吸入氧气仅有 $40\%$ 被人体利用，其他随呼气排出。（b）若登山者和装备总质量为 $90.0\,\mathrm{kg}$，攀升高度为 $1000\,\mathrm{m}$，其有用功为多少？（c）求该 $10.0\,\mathrm{h}$ 攀登过程的效率。
+
+## 英文原题（存档摘录）
+
+# Work, Energy, and Power in Humans — CP-00378
+
+Mountain climbers carry bottled oxygen when at very high altitudes. (a) Assuming that a mountain climber uses oxygen at twice the rate for climbing 116 stairs per minute (because of low air temperature and winds), calculate how many liters of oxygen a climber would need for 10.0 h of climbing. (These are liters at sea level.) Note that only 40% of the inhaled oxygen is utilized; the rest is exhaled. (b) How much useful work does the climber do if he and his equipment have a mass of 90.0 kg and he gains 1000 m of altitude? (c) What is his efficiency for the 10.0-h climb?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00378.md
+- 原件 Git blob SHA：7580f324ea01bcf1792af8bce7025bf193e7d80f
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：需要外部资料
+- 审校提示：缺少每分钟116级台阶对应的耗氧率及每升氧气可释放能量等参考表数据。
+
+---
+
+<a id="cp-00382"></a>
+
+## CP-00382｜越野滑雪者上坡与平地加速
+
+**学科：** 力学　**知识点：** 功率／滑雪上坡
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+**综合题。**一名质量为 $75.0\,\mathrm{kg}$ 的越野滑雪者沿倾角 $3.0^\circ$ 的坡面，以恒定速率 $2.00\,\mathrm{m/s}$ 向上运动，受到 $25.0\,\mathrm{N}$ 的空气阻力。（a）求其克服重力与空气阻力所需的功率；（b）为了完成这一运动，求他对雪面向后施加的平均力。（c）若到达平地后他继续施加相同大小的力，所受空气阻力也保持不变，需要多久才能加速到 $10.0\,\mathrm{m/s}$？
+
+## 英文原题（存档摘录）
+
+# World Energy Use — CP-00382
+
+**Integrated Concepts**
+
+A 75.0-kg cross-country skier is climbing a <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>3</mn><mtext>.</mtext><mn>0º</mn></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{3 "." 0°} {}</annotation></semantics></math>
+
+ slope at a constant speed of 2.00 m/s and encounters air resistance of 25.0 N. Find his power output for work done against the gravitational force and air resistance. (b) What average force does he exert backward on the snow to accomplish this? (c) If he continues to exert this force and to experience the same air resistance when he reaches a level area, how long will it take him to reach a velocity of 10.0 m/s?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00382.md
+- 原件 Git blob SHA：2871ae58d6320e6d8bebfc5783505b1154de1ccd
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 审校提示：原题按空气阻力不变且忽略其他滑动摩擦力的模型计算。
+
+---
+
+<a id="cp-00383"></a>
+
+## CP-00383｜弹簧驱动钢球的高度与射程
+
+**学科：** 力学　**知识点：** 弹性势能／抛体
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+**综合题。**一把玩具发射器使用劲度系数为 $300\,\mathrm{N/m}$ 的弹簧，发射质量为 $10.0\,\mathrm{g}$ 的钢球。若弹簧压缩 $7.00\,\mathrm{cm}$，且摩擦可忽略：（a）压缩弹簧需要多大的力？（b）钢球竖直向上能达到的最大高度是多少？（c）若目标与发射点等高、水平距离 $3.00\,\mathrm{m}$，发射方向与水平线可以成哪些角度？（d）发射器在水平地面上能达到的最大射程是多少？
+
+## 英文原题（存档摘录）
+
+# World Energy Use — CP-00383
+
+**Integrated Concepts**
+
+A toy gun uses a spring with a force constant of 300 N/m to propel a 10.0-g steel ball. If the spring is compressed 7.00 cm and friction is negligible: (a) How much force is needed to compress the spring? (b) To what maximum height can the ball be shot? (c) At what angles above the horizontal may a child aim to hit a target 3.00 m away at the same height as the gun? (d) What is the gun’s maximum range on level ground?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00383.md
+- 原件 Git blob SHA：388cd7883907ac2cc64de1f21f1256f30aa1fd0c
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：物理模型依赖
+- 审校提示：将弹簧弹性势能全部转为钢球出射动能，忽略弹簧质量及发射高度影响。
+
+---
+
+<a id="cp-00384"></a>
+
+## CP-00384｜电梯钢缆拉力、做功和摩擦生热
+
+**学科：** 力学　**知识点：** 功和动能／电梯
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+**综合题。**（a）一部满载电梯的质量为 $1500\,\mathrm{kg}$，若它需要以 $0.800\,\mathrm{m/s^2}$ 向上加速，同时受到 $200\,\mathrm{N}$ 的摩擦阻力，求钢缆应提供的拉力。（b）电梯上升 $20.0\,\mathrm{m}$ 时，钢缆做了多少功？（c）若从静止出发，求上升后的末速率。（d）这一过程中有多少功转化为热能？
+
+## 英文原题（存档摘录）
+
+# World Energy Use — CP-00384
+
+**Integrated Concepts**
+
+(a) What force must be supplied by an elevator cable to produce an acceleration of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>0</mn><mtext>.</mtext><msup><mtext>800 m/s</mtext><mrow><mn>2</mn></mrow></msup></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{0 "." "800 m/s" rSup { size 8{2} } } {}</annotation></semantics></math>
+
+ against a 200-N frictional force, if the mass of the loaded elevator is 1500 kg? (b) How much work is done by the cable in lifting the elevator 20.0 m? (c) What is the final speed of the elevator if it starts from rest? (d) How much work went into thermal energy?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00384.md
+- 原件 Git blob SHA：658963d1d73c3e52dea6a3a053009d9aac038473
 - 上游署名与许可证见原件；尚未完成单题权利审查。
 
 ---

@@ -2,7 +2,7 @@
 
 > 仅供编辑复核：尚未通过独立双语、答案或版权审核；不可正式组卷。
 
-共 102 道。英文原文均以保留源指纹的上游快照为依据。
+共 115 道。英文原文均以保留源指纹的上游快照为依据。
 
 <a id="cp-00137"></a>
 
@@ -1598,6 +1598,374 @@ Newton’s laws of motion and gravity were among the first to convincingly demon
 
 - 原件：external_sources/college_physics/raw/CP-00306.md
 - 原件 Git blob SHA：625f249e507d792e387c09e0e371e97407e7dc55
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00352"></a>
+
+## CP-00352｜家用电器的瓦特额定值与使用时间
+
+**学科：** 物理基础　**知识点：** 功率／额定功率
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+多数家用电器的额定功率以瓦特表示。额定功率的数值是否取决于电器开机运行了多久？（关机时，它的实际功率为零。）请根据功率定义解释。
+
+## 英文原题（存档摘录）
+
+# Power — CP-00352
+
+Most electrical appliances are rated in watts. Does this rating depend on how long the appliance is on? (When off, it is a zero-watt device.) Explain in terms of the definition of power.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00352.md
+- 原件 Git blob SHA：d98d752db20e910a649814cabd3a4c2648e4e2ff
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00353"></a>
+
+## CP-00353｜千瓦时和焦耳为什么都是能量单位
+
+**学科：** 物理基础　**知识点：** 功率／电能单位
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+根据功率的定义解释：为什么用电量有时以**千瓦时**而不是焦耳表示？这两种能量单位之间有什么换算关系？
+
+## 英文原题（存档摘录）
+
+# Power — CP-00353
+
+Explain, in terms of the definition of power, why energy consumption is sometimes listed in kilowatt-hours rather than joules. What is the relationship between these two energy units?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00353.md
+- 原件 Git blob SHA：20f05e4dc4c40f81a2d101d483427fcda5c267ec
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00354"></a>
+
+## CP-00354｜几百瓦的静电火花为何通常无害
+
+**学科：** 物理基础　**知识点：** 功率／短时放电
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+在寒冷干燥的日子里，触碰门把手可能受到静电火花放电，其瞬时功率可能达到数百瓦。解释为什么这样的火花通常不会使人受伤。
+
+## 英文原题（存档摘录）
+
+# Power — CP-00354
+
+A spark of static electricity, such as that you might receive from a doorknob on a cold dry day, may carry a few hundred watts of power. Explain why you are not injured by such a spark.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00354.md
+- 原件 Git blob SHA：b1910500675dea8562f0ba73da911b98f098555c
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：物理模型依赖
+- 审校提示：本题讨论通常的微小静电放电，并不能据功率单一数值推断所有放电情景均安全。
+
+---
+
+<a id="cp-00355"></a>
+
+## CP-00355｜需要多少人才能提供电器与电站功率
+
+**学科：** 物理基础　**知识点：** 功率／人力与电器比较
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+身体状况良好的人可以连续数小时输出约 $100\,\mathrm{W}$ 的有用功率，例如通过踩踏装置带动发电机。忽略发电机效率、休息时间等实际问题：（a）要驱动额定功率为 $4.00\,\mathrm{kW}$ 的电动干衣机，需要多少人？（b）要替代输出功率为 $800\,\mathrm{MW}$ 的大型发电厂，需要多少人？
+
+## 英文原题（存档摘录）
+
+# Power — CP-00355
+
+A person in good physical condition can put out 100 W of useful power for several hours at a stretch, perhaps by pedaling a mechanism that drives an electric generator. Neglecting any problems of generator efficiency and practical considerations such as resting time: (a) How many people would it take to run a 4.00-kW electric clothes dryer? (b) How many people would it take to replace a large electric power plant that generates 800 MW?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00355.md
+- 原件 Git blob SHA：30a6b9e3baf3526adbeb46a7f2505822b9da61df
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00356"></a>
+
+## CP-00356｜三瓦电钟一年的运行电费
+
+**学科：** 物理基础　**知识点：** 电能计费／功率和时间
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+一台电钟功率为 $3.00\,\mathrm{W}$，如果电价为每千瓦时 $0.0900$ 美元，连续运行一年需要多少电费？
+
+## 英文原题（存档摘录）
+
+# Power — CP-00356
+
+What is the cost of operating a 3.00-W electric clock for a year if the cost of electricity is $0.0900 per <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mtext>kW</mtext><mo stretchy="false">⋅</mo><mn>h</mn></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"kW" cdot h} {}</annotation></semantics></math>
+
+?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00356.md
+- 原件 Git blob SHA：f8b7d2072f3756e1e059b3baec98d76843c1c177
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00357"></a>
+
+## CP-00357｜大型空调三十天的电费
+
+**学科：** 物理基础　**知识点：** 电能计费／空调
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+一台大型家用空调耗电功率为 $15.0\,\mathrm{kW}$。若每天运行 $3.00\,\mathrm{h}$，连续运行 $30.0\,\mathrm{d}$，电价为每千瓦时 $0.110$ 美元，需支付多少电费？
+
+## 英文原题（存档摘录）
+
+# Power — CP-00357
+
+A large household air conditioner may consume 15.0 kW of power. What is the cost of operating this air conditioner 3.00 h per day for 30.0 d if the cost of electricity is $0.110 per <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mtext>kW</mtext><mo stretchy="false">⋅</mo><mn>h</mn></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"kW" cdot h} {}</annotation></semantics></math>
+
+?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00357.md
+- 原件 Git blob SHA：467308de676326b9c2f16af43d11872c3e84c1bd
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00358"></a>
+
+## CP-00358｜每天消耗五千瓦时的家电
+
+**学科：** 物理基础　**知识点：** 电能与功率／年用电量
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+（a）某电器每天消耗 $5.00\,\mathrm{kW\cdot h}$ 电能，求其平均功率（单位瓦特）。（b）求该电器在一年内消耗多少焦耳电能。
+
+## 英文原题（存档摘录）
+
+# Power — CP-00358
+
+(a) What is the average power consumption in watts of an appliance that uses <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>5</mn><mtext>.</mtext><mrow><mtext>00 kW</mtext><mo stretchy="false">⋅</mo><mn>h</mn></mrow></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{5 "." "00 kW" cdot h} {}</annotation></semantics></math>
+
+ of energy per day? (b) How many joules of energy does this appliance consume in a year?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00358.md
+- 原件 Git blob SHA：48f3f37bbf511905d0329e5e07a1c160177d788e
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00363"></a>
+
+## CP-00363｜电钟和计算器的电池能量
+
+**学科：** 物理基础　**知识点：** 电池能量／功率与续航
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+（a）一节电池可使功率为 $2.00\,\mathrm{W}$ 的电钟运行 $18$ 个月，求电池所能提供的能量（焦耳）。（b）另一节电池可提供 $8.00\times10^4\,\mathrm{J}$ 的能量，能使耗电功率为 $1.00\times10^{-3}\,\mathrm{W}$ 的袖珍计算器运行多久？
+
+## 英文原题（存档摘录）
+
+# Power — CP-00363
+
+(a) What is the available energy content, in joules, of a battery that operates a 2.00-W electric clock for 18 months? (b) How long can a battery that can supply <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>8</mn><mtext>.</mtext><mtext>00</mtext><mi>×</mi><msup><mtext>10</mtext><mrow><mn>4</mn></mrow></msup><mspace width="0.20em" /><mtext>J</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{8 "." "00" times "10" rSup { size 8{4} } " J"} {}</annotation></semantics></math>
+
+ run a pocket calculator that consumes energy at the rate of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>1</mn><mtext>.</mtext><mtext>00</mtext><mi>×</mi><msup><mtext>10</mtext><mrow><mrow><mo stretchy="false">−</mo><mn>3</mn></mrow></mrow></msup><mspace width="0.20em" /><mtext> W</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{1 "." "00" times "10" rSup { size 8{-3} } " W"} {}</annotation></semantics></math>
+
+?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00363.md
+- 原件 Git blob SHA：25592cfaf2bce10ddebed71f246dab84d0167d91
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 审校提示：按一个月天数的常用近似计算（a），需在解答中说明取值。
+
+---
+
+<a id="cp-00366"></a>
+
+## CP-00366｜太阳能电站与各国年度电能需求
+
+**学科：** 物理基础　**知识点：** 太阳辐照度／能量需求
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+（a）求太阳辐射抵达地球大气层顶端时的单位面积功率，取太阳总辐射功率为 $4.00\times10^{26}\,\mathrm{W}$。（b）部分辐射被大气吸收或反射，地表最大接收功率仅约 $1.30\,\mathrm{kW/m^2}$。若太阳能收集器平均仅将这一最大功率的 $2.00\%$ 转为电能，为替代一座发电功率 $750\,\mathrm{MW}$ 的电站，需多大收集面积（以平方千米计）？按同一假设，若需满足美国 $1.05\times10^{20}\,\mathrm{J}$、澳大利亚 $5.4\times10^{18}\,\mathrm{J}$ 和中国 $6.3\times10^{19}\,\mathrm{J}$ 的年度能源需求，各需多大收集面积？这些能耗数字取自 **2006 年**。
+
+## 英文原题（存档摘录）
+
+# Power — CP-00366
+
+(a) Calculate the power per square meter reaching Earth’s upper atmosphere from the Sun. (Take the power output of the Sun to be <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>4</mn><mtext>.</mtext><mrow><mtext>00</mtext><mo stretchy="false">×</mo><msup><mtext>10</mtext><mrow><mtext>26</mtext></mrow></msup></mrow><mspace width="0.25em" /><mtext> W</mtext><mtext>.</mtext><mo stretchy="false">)</mo></mrow></mrow><mrow /></mrow></semantics></math>
+
+ (b) Part of this is absorbed and reflected by the atmosphere, so that a maximum of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>1</mn><mtext>.</mtext><msup><mtext>30 kW/m</mtext><mrow><mn>2</mn></mrow></msup></mrow></mrow><mrow /></mrow></semantics></math>
+
+ reaches Earth’s surface. Calculate the area in <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><msup><mtext>km</mtext><mrow><mn>2</mn></mrow></msup></mrow><mrow /></mrow></semantics></math>
+
+ of solar energy collectors needed to replace an electric power plant that generates 750 MW if the collectors convert an average of 2.00% of the maximum power into electricity. (This small conversion efficiency is due to the devices themselves, and the fact that the sun is directly overhead only briefly.) With the same assumptions, what area would be needed to meet the United States’ energy needs <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mtext>.</mtext><mrow><mtext>05</mtext><mo stretchy="false">×</mo><msup><mtext>10</mtext><mrow><mtext>20</mtext></mrow></msup></mrow><mspace width="0.25em" /><mtext> J</mtext><mo stretchy="false">)</mo><mn>?</mn></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{ \( 1 "." "05" times "10" rSup { size 8{"20"} } " J" \) ?} {}</annotation></semantics></math>
+
+ Australia’s energy needs <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mo stretchy="false">(</mo><mn>5</mn><mtext>.</mtext><mrow><mn>4</mn><mo stretchy="false">×</mo><msup><mtext>10</mtext><mrow><mtext>18</mtext></mrow></msup><mspace width="0.25em" /></mrow><mtext> J)?</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{ \( 5 "." 4 times "10" rSup { size 8{"18"} } " J" \) ?} {}</annotation></semantics></math>
+
+ China’s energy needs <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mo stretchy="false">(</mo><mn>6</mn><mtext>.</mtext><mrow><mn>3</mn><mo stretchy="false">×</mo><msup><mtext>10</mtext><mrow><mtext>19</mtext></mrow></msup><mspace width="0.25em" /></mrow><mtext> J)?</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{ \( 6 "." 3 times "10" rSup { size 8{"19"} } " J" \) ?} {}</annotation></semantics></math>
+
+ (These energy consumption values are from 2006.)
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00366.md
+- 原件 Git blob SHA：819a56857b3a2ee1952189bcce141f762941c493
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：需要外部资料；历史数据时效
+- 审校提示：（a）需要日地距离；（b）年度能耗与太阳能面积须统一为年度功率，且数字来自2006年，不是现时能源统计。
+
+---
+
+<a id="cp-00370"></a>
+
+## CP-00370｜运动与控制饮食的能量收支比较
+
+**学科：** 物理基础　**知识点：** 人体能量／运动与饮食
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+讨论通过控制饮食与运动来减轻体重时，两种方式的相对有效性。请注意，大多数体育活动消耗食物能量的功率约为 $400$ 至 $500\,\mathrm{W}$，而一杯酸奶可能含有 $1360\,\mathrm{kJ}$（约 $325\,\mathrm{kcal}$）的能量。特别讨论：只靠运动通常是否足以减轻体重？还可考虑规律运动可能提高代谢率，而长期节食可能降低代谢率。
+
+## 英文原题（存档摘录）
+
+# Work, Energy, and Power in Humans — CP-00370
+
+Discuss the relative effectiveness of dieting and exercise in losing weight, noting that most athletic activities consume food energy at a rate of 400 to 500 W, while a single cup of yogurt can contain 1360 kJ (325 kcal). Specifically, is it likely that exercise alone will be sufficient to lose weight? You may wish to consider that regular exercise may increase the metabolic rate, whereas protracted dieting may reduce it.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00370.md
+- 原件 Git blob SHA：bc1a82e3ff64386e2099902352232f611b7e8cbe
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 审校提示：仅为原教材的能量比较题；酸奶能量为题设案例数据，不应当作普遍营养数值。
+
+---
+
+<a id="cp-00379"></a>
+
+## CP-00379｜一根能量棒能支持多久网球运动
+
+**学科：** 物理基础　**知识点：** 人体能耗／运动
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+（a）一根糖果棒含有 $800\,\mathrm{kJ}$（约 $200\,\mathrm{kcal}$）能量，这些能量能够支持打网球多久？（b）这样的时间是否算长？讨论为什么运动虽有必要，但可能不足以使人减轻体重。
+
+## 英文原题（存档摘录）
+
+# Work, Energy, and Power in Humans — CP-00379
+
+(a) How long can you play tennis on the 800 kJ (about 200 kcal) of energy in a candy bar? (b) Does this seem like a long time? Discuss why exercise is necessary but may not be sufficient to cause a person to lose weight.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00379.md
+- 原件 Git blob SHA：f7a8badae3979e4e1b6ef7d61cc89d4579892c62
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：题设条件不充分
+- 审校提示：没有给打网球的代谢功率，需要教材活动能耗表或明示估计。
+
+---
+
+<a id="cp-00380"></a>
+
+## CP-00380｜节能与能量守恒定律有何不同
+
+**学科：** 物理基础　**知识点：** 能量守恒／节约能源
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+**节约能源**（energy conservation）与物理学中的**能量守恒定律**（law of conservation of energy）有何区别？分别举出实例。
+
+## 英文原题（存档摘录）
+
+# World Energy Use — CP-00380
+
+What is the difference between energy conservation and the law of conservation of energy? Give some examples of each.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00380.md
+- 原件 Git blob SHA：d74786cfb2d9e01de2cc6057bd6b63ded5167b09
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00381"></a>
+
+## CP-00381｜发电厂效率百分之三十五与能量守恒
+
+**学科：** 物理基础　**知识点：** 能量守恒／热效率
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+若一座燃煤发电厂的效率为 $35\%$，我们为什么仍然说能量是守恒量？这意味着什么？
+
+## 英文原题（存档摘录）
+
+# World Energy Use — CP-00381
+
+If the efficiency of a coal-fired electrical generating plant is 35%, then what do we mean when we say that energy is a conserved quantity?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00381.md
+- 原件 Git blob SHA：619d72e02d8f4005e05e331f2a8c0f017810ae8b
 - 上游署名与许可证见原件；尚未完成单题权利审查。
 
 ---
