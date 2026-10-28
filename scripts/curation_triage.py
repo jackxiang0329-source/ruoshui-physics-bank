@@ -16,12 +16,14 @@ PRIORITIES = (
     ("OpenStax College Physics (historical mirror)", 60, "convert_html_mathml;verify_answer;check_illustrations"),
     ("UBC OPBP", 45, "validate_attribution;verify_answer;check_illustrations"),
     ("Introductory Physics (PHYS 2425)", 15, "verify_excerpt_context;verify_answer;check_illustrations"),
+    ("Physics Refresher (CC BY 4.0)", 45, "verify_practice_context;verify_answer;check_rights_chain"),
 )
 DIGEST_INDEXES = (
     ("hf_physics_dpo", "question_sha256"),
     ("hf_seephys", "question_sha256"),
     ("intro_physics", "question_sha256"),
     ("college_physics", "question_sha256"),
+    ("physics_refresher", "question_sha256"),
 )
 FIELDNAMES = (
     "review_order", "id", "source", "module", "original_topic", "license",

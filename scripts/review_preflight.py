@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Static format/risk checks for 120 external OER human-review candidates.
+"""Static format/risk checks for external OER human-review candidates.
 
 Never checks physics correctness or grants exam eligibility. A 'simple' flag only
 means no *recognized markup obstacle*, not a license or academic approval.
@@ -21,7 +21,7 @@ MATH=re.compile(r"<(?:math|mfrac|msup|msub|msqrt|mrow)\b",re.I)
 IMAGE=re.compile(r"(?i)<img\b|!\[[^]]*\]\(|\\includegraphics|"
                  r"\b(?:figure|fig\.|diagram|image|graph)\s*(?:[1-9]\d*|below|above)\b|"
                  r"(?:shown|depicted|illustrated)\s+in\s+(?:the|a)\s+(?:figure|diagram|image)")
-REFERENCE=re.compile(r"(?i)\[\[link\]\]|\]\(#|(?:see|refer to)\s+(?:the\s+)?(?:section|previous example|chapter|above|below)\b")
+REFERENCE=re.compile(r"(?i)\[\[link\]\]|\]\(#|(?:see|refer to)\s+(?:the\s+)?(?:section|previous example|chapter|above|below)\b|\b(?:same\s+\w+\s+as\s+problem\s+\d+|(?:problem|example|lesson)\s+\d+(?:\.\d+)?)\b")
 PLACEHOLDER=re.compile(r"\{\{[^{}]{1,160}\}\}|\$\{[^{}]{1,160}\}")
 ANSWER=re.compile(r"(?im)^#{1,5}\s*Answer Section\b|<div\s+data-type=[\"']solution[\"']")
 TAG=re.compile(r"<[^>]*>")
@@ -89,11 +89,11 @@ def run(root=ROOT):
     with target.open(encoding="utf-8-sig",newline="") as f:
         source=list(csv.DictReader(f))
     types={}
-    for collection in ("college_physics","intro_physics"):
+    for collection in ("college_physics","intro_physics","physics_refresher"):
         ip=ext/collection/"index.json"
         if ip.is_file():
             for item in json.loads(ip.read_text(encoding="utf-8")).get("records",[]):
-                types[item["id"]]=item.get("question_type", "concept_or_example")
+                types[item["id"]]=item.get("question_type", item.get("section", "concept_or_example"))
     records=[];risks=Counter();modules=Counter();types_seen=Counter();complexity=Counter()
     for item in source:
         if item["exam_ready"].strip().lower() not in ("no","false","0",""):

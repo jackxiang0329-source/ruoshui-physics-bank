@@ -19,6 +19,9 @@ class PreflightTests(unittest.TestCase):
         x=p.inspect(q,"OpenStax College Physics (historical mirror)")
         self.assertIn("mathml_requires_conversion",x["risk_flags"])
         self.assertIn("media_or_figure_reference",x["risk_flags"])
+    def test_contextual_dependent_exercises_are_flagged(self):
+        q="The same cart as Problem 1 is now accelerated. Find its new speed given an additional net force."
+        self.assertIn("cross_reference",p.inspect(q,"Physics Refresher (CC BY 4.0)")["risk_flags"])
     def test_clean_still_requires_manual_review(self):
         q="Give an example distinguishing total distance travelled from displacement over a closed path and explain the difference."
         self.assertEqual(p.inspect(q,"OpenStax")["review_complexity"],"standard_manual_review")

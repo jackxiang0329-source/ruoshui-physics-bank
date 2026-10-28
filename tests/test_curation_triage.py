@@ -14,6 +14,10 @@ class TriageTests(unittest.TestCase):
         self.assertFalse(triage.permissible_signal("CC BY-NC-SA 4.0"))
         self.assertFalse(triage.permissible_signal("MIT"))
         self.assertFalse(triage.permissible_signal("CC BY 4.0; noncommercial"))
+    def test_new_cc_by_practice_is_reviewable_and_digest_indexed(self):
+        self.assertTrue(any(s[0]=="Physics Refresher (CC BY 4.0)" for s in triage.PRIORITIES))
+        self.assertIn(("physics_refresher","question_sha256"), triage.DIGEST_INDEXES)
+        self.assertTrue(triage.permissible_signal("CC BY 4.0 (repository-level; item rights review pending)"))
     def test_spread_subjects(self):
         items=[{"module":"力学","id":"A"},{"module":"力学","id":"B"},
                {"module":"光学","id":"C"},{"module":"光学","id":"D"}]
