@@ -1,7 +1,7 @@
 {
   "status": "draft-only",
-  "new_problem_count": 16,
-  "passed_count": 64,
+  "new_problem_count": 17,
+  "passed_count": 68,
   "tests": [
     {
       "id": "M059",
@@ -450,6 +450,34 @@
       "method": "limit",
       "name": "Poincare group velocity asymptotics and coastal trapping singular nonrotating limit",
       "passed": true
+    },
+    {
+      "id": "O059",
+      "part": 1,
+      "method": "symbolic",
+      "name": "spatial birefringent Jones operator is unitary and helicity conversion phase agrees with circular basis",
+      "passed": true
+    },
+    {
+      "id": "O059",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "azimuthal phase is orbital angular momentum eigenmode and director monodromy requires half integer q",
+      "passed": true
+    },
+    {
+      "id": "O059",
+      "part": 3,
+      "method": "conservation",
+      "name": "spin and orbital angular momentum balance yields exact plate torque and zero torque at q equals one",
+      "passed": true
+    },
+    {
+      "id": "O059",
+      "part": 4,
+      "method": "independent_derivation",
+      "name": "linear analyzer intensity and full azimuth integral reproduce finite retardance transmission",
+      "passed": true
     }
   ],
   "independent_expert_review": "pending",
@@ -548,6 +576,12 @@
       "id": "W058",
       "method": "independent_high_precision_quadrature",
       "name": "coastal Kelvin time averaged energy integral and flux checked by 50 digit numerical quadrature",
+      "passed": true
+    },
+    {
+      "id": "O059",
+      "method": "independent_high_precision_quadrature",
+      "name": "50 digit azimuthal polarizer throughput for q equals three halves matches analytic mean",
       "passed": true
     }
   ]

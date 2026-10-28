@@ -23,7 +23,7 @@ jobs:
         run: python scripts/quality_gate_bulk.py
       - name: Re-run 200 legacy round-11 subpart checks on growing bank
         run: python scripts/check_round11_physics.py
-      - name: Execute 64 independent draft subpart checks
+      - name: Execute 68 independent draft subpart checks
         run: python scripts/check_round12_draft.py
       - name: Confirm draft QA report is reproducible
         run: git diff --exit-code -- data/round12_draft_validation_report.json

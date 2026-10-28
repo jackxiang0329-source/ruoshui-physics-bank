@@ -495,10 +495,50 @@ assert abs(Eint058-gnum058*ampl058**2*LRnum058/4)<mp.mpf('1e-45')
 assert abs(cnum058*Eint058-mp.quad(lambda yy:cnum058*ebar058(yy),[0,mp.inf]))<mp.mpf('1e-45')
 supplemental.append(dict(id='W058',method='independent_high_precision_quadrature',
                           name='coastal Kelvin time averaged energy integral and flux checked by 50 digit numerical quadrature',passed=True))
-assert len(checks)==64 and len(set((v['id'],v['part']) for v in checks))==64
+
+# O059: spatially patterned q-plate spin-orbit geometric phase and optical torque.
+a059,d059,p059,l059,q059=s.symbols('a059 d059 p059 l059 q059',real=True)
+M059o=s.Matrix([[s.cos(2*a059),s.sin(2*a059)],
+                [s.sin(2*a059),-s.cos(2*a059)]])
+J059o=s.cos(d059/2)*s.eye(2)+s.I*s.sin(d059/2)*M059o
+ep059=s.Matrix([1,s.I])/s.sqrt(2)
+em059=s.Matrix([1,-s.I])/s.sqrt(2)
+record('O059',1,'symbolic',
+       'spatial birefringent Jones operator is unitary and helicity conversion phase agrees with circular basis',
+       all(eq(s.trigsimp(s.expand_complex(z))) for z in J059o.conjugate().T*J059o-s.eye(2))
+       and all(eq(s.trigsimp(s.expand_complex(z))) for z in M059o*ep059-s.exp(2*s.I*a059)*em059))
+record('O059',2,'independent_derivation',
+       'azimuthal phase is orbital angular momentum eigenmode and director monodromy requires half integer q',
+       eq(-s.I*s.diff(s.exp(s.I*(l059+2*q059)*p059),p059),
+          (l059+2*q059)*s.exp(s.I*(l059+2*q059)*p059))
+       and eq(s.exp(2*s.I*s.Rational(3,2)*2*s.pi),1)
+       and eq(s.exp(2*s.I*s.Rational(1,4)*2*s.pi),-1))
+record('O059',3,'conservation',
+       'spin and orbital angular momentum balance yields exact plate torque and zero torque at q equals one',
+       eq((l059+1)-((l059+1)*s.cos(d059/2)**2+
+          (l059+2*q059-1)*s.sin(d059/2)**2),
+          2*(1-q059)*s.sin(d059/2)**2)
+       and eq((2*(1-q059)*s.sin(d059/2)**2).subs(q059,1))
+       and eq((2*(1-q059)*s.sin(d059/2)**2).subs({q059:s.Rational(1,2),d059:s.pi}),1))
+hor059=J059o*s.Matrix([1,0])
+record('O059',4,'independent_derivation',
+       'linear analyzer intensity and full azimuth integral reproduce finite retardance transmission',
+       eq(s.expand_complex(hor059[0]*s.conjugate(hor059[0])),
+          s.cos(d059/2)**2+s.sin(d059/2)**2*s.cos(2*a059)**2)
+       and eq(s.integrate(s.cos(p059)**2,(p059,0,2*s.pi)),s.pi))
+mp.mp.dps=50
+dnum059=mp.mpf('0.91');anum059=mp.mpf('0.27');qnum059=mp.mpf('1.5')
+avg059=mp.quad(lambda z:mp.cos(dnum059/2)**2+
+               mp.sin(dnum059/2)**2*mp.cos(2*(qnum059*z+anum059))**2,
+               [0,2*mp.pi])/(2*mp.pi)
+assert abs(avg059-(1-mp.sin(dnum059/2)**2/2))<mp.mpf('1e-45')
+supplemental.append(dict(id='O059',method='independent_high_precision_quadrature',
+                         name='50 digit azimuthal polarizer throughput for q equals three halves matches analytic mean',passed=True))
+
+assert len(checks)==68 and len(set((v['id'],v['part']) for v in checks))==68
 assert len(set(v['method'] for v in checks if v['id']=='W058'))>=2
 
-result={'status':'draft-only','new_problem_count':16,'passed_count':len(checks),'tests':checks,'independent_expert_review':'pending','supplemental_numeric_checks':supplemental}
+result={'status':'draft-only','new_problem_count':17,'passed_count':len(checks),'tests':checks,'independent_expert_review':'pending','supplemental_numeric_checks':supplemental}
 path=Path(__file__).resolve().parents[1]/'data/round12_draft_validation_report.json'
 path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
 print(json.dumps({'status':result['status'],'checked_subparts':len(checks)},ensure_ascii=False))
