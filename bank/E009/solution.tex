@@ -1,0 +1,32 @@
+(1) 由 $\boldsymbol v\times\boldsymbol B=B(v_y,-v_x,0)$，有
+\[
+\dot v_x=f+\omega v_y-a v_x,\qquad \dot v_y=-\omega v_x-a v_y.
+\]
+令 $u=v_x+i v_y$ 与 $\lambda=a+i\omega$，则 $\dot u+\lambda u=f,\ u(0)=0$。积分因子法得到
+\[
+u(t)=\frac{f}{\lambda}(1-e^{-\lambda t}).
+\]
+该式同时给出速度两个实分量，且初速度、方程均符合。
+
+(2) 设 $z=x+i y$，积分且 $z(0)=0$：
+\[
+z(t)=\frac{f}{\lambda}\left[t-\frac{1-e^{-\lambda t}}{\lambda}\right].
+\]
+由于 $a>0$，指数瞬态消失，终端速度
+\[
+(v_{x,\infty},v_{y,\infty})=\left(\frac{fa}{a^2+\omega^2},-\frac{f\omega}{a^2+\omega^2}\right).
+\]
+故横向漂移沿 $-\hat{\boldsymbol y}$；阻力导致沿电场的正向漂移。其方向相对于 $+\hat{\boldsymbol x}$ 的偏角满足 $\tan|\varphi|=\omega/a$。
+
+(3) 对 $m\dot{\boldsymbol v}=q(\boldsymbol E+\boldsymbol v\times\boldsymbol B)-\gamma\boldsymbol v$ 点乘 $\boldsymbol v$，磁力功恒为零：
+\[
+\frac{d}{dt}\frac{m|\boldsymbol v|^2}{2}=qEv_x-\gamma|\boldsymbol v|^2.
+\]
+将终端值代入，$qEv_{x,\infty}=mf^2 a/(a^2+\omega^2)=\gamma f^2/(a^2+\omega^2)=\gamma|\boldsymbol v_\infty|^2$，稳态能量核算一致。
+
+(4) 固定 $t$ 先令 $a\to0^+$，得到
+\[
+v_x=\frac f\omega\sin\omega t,\quad v_y=\frac f\omega(\cos\omega t-1),\qquad
+x=\frac f{\omega^2}(1-\cos\omega t),\quad y=\frac f{\omega^2}(\sin\omega t-\omega t).
+\]
+这是以 $-y$ 为行进方向的旋轮线。无阻力情形不存在速度的时间极限，而对任何 $a>0$，终端速度存在；因此两个极限次序不交换。

@@ -1,0 +1,23 @@
+(1) 中心力矩为零，$L=mr^2\dot\phi$ 守恒。动能分解为 $m\dot r^2/2+L^2/(2mr^2)$，故
+\[
+\frac m2\dot r^2+U_{\mathrm{eff}}(r)=E,\qquad U_{\mathrm{eff}}(r)=\frac{A}{2r^2}-\frac{k}{r},\quad A:=\frac{L^2}{m}+\alpha>0.
+\]
+径向方程为 $m\ddot r=-U'_{\mathrm{eff}}(r)$。
+
+(2) $U'_{\mathrm{eff}}=-A/r^3+k/r^2$，唯一圆轨道 $r_0=A/k$。二阶导数 $U''_{\mathrm{eff}}=3A/r^4-2k/r^3$，在 $r_0$ 处为 $k/r_0^3>0$，因此对足够小的径向扰动严格稳定。圆轨道能量为 $E_{\min}=-k^2/(2A)$。
+
+(3) 令 $r=r_0+\xi$，一阶线性化给 $m\ddot\xi+(k/r_0^3)\xi=0$，故
+\[
+\omega_r=\sqrt{\frac{k}{mr_0^3}},\qquad \omega_\phi=\frac{L}{mr_0^2}.
+\]
+在近圆极限，一次径向周期的方位角增量为
+\[
+\Delta\phi=\frac{2\pi\omega_\phi}{\omega_r}=\frac{2\pi L}{\sqrt{L^2+m\alpha}}<2\pi .
+\]
+与开普勒闭合轨道比较，近日点每周期发生逆向进动 $\Delta\phi-2\pi<0$；该式是小径向振幅的一阶结果，不应误称为任意振幅的精确轨道角。
+
+(4) 令 $\dot r=0$，则 $2Er^2+2kr-A=0$。取 $D=k^2+2EA$，给定范围保证 $0<D<k^2$，两根均为正：
+\[
+r_{\min}=\frac{A}{k+\sqrt{D}},\qquad r_{\max}=\frac{A}{k-\sqrt{D}}.
+\]
+当 $\alpha\to0^+$，$A\to L^2/m$，得到标准开普勒转向点和 $\Delta\phi\to2\pi$。量纲检验：$[A]=[\!kr]$，$[k/r_0^3]=[\!m/t^2]$。

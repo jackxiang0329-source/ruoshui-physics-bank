@@ -45,6 +45,29 @@
     "revision": "composite-v1.0"
   },
   {
+    "id": "M009",
+    "topic": "力学",
+    "title": "反平方势修正下的近圆轨道与进动",
+    "level": 5,
+    "estimated_minutes": 55,
+    "tags": [
+      "中心力守恒量",
+      "有效势",
+      "径向稳定性",
+      "近圆轨道进动",
+      "转向点与极限"
+    ],
+    "question": "质量为 $m>0$ 的质点在平面内受到中心势 $U(r)=-k/r+\\alpha/(2r^2)$，其中 $k>0,\\alpha>0$，角动量大小为 $L>0$。记径向坐标 $r>0$，研究非碰撞轨道。\n(1) 从能量和角动量守恒建立径向一维运动方程及有效势；(2) 求圆轨道半径并严格判断径向稳定性；(3) 对圆轨道作小扰动，求径向与角向频率、一次完整径向振荡的方位角增量，并指出进动方向；(4) 对能量 $-k^2/(2A)<E<0$（其中 $A=L^2/m+\\alpha$）求两个转向半径，验证 $\\alpha\\to0^+$ 的开普勒极限。",
+    "solution": "(1) 中心力矩为零，$L=mr^2\\dot\\phi$ 守恒。动能分解为 $m\\dot r^2/2+L^2/(2mr^2)$，故\n\\[\n\\frac m2\\dot r^2+U_{\\mathrm{eff}}(r)=E,\\qquad U_{\\mathrm{eff}}(r)=\\frac{A}{2r^2}-\\frac{k}{r},\\quad A:=\\frac{L^2}{m}+\\alpha>0.\n\\]\n径向方程为 $m\\ddot r=-U'_{\\mathrm{eff}}(r)$。\n\n(2) $U'_{\\mathrm{eff}}=-A/r^3+k/r^2$，唯一圆轨道 $r_0=A/k$。二阶导数 $U''_{\\mathrm{eff}}=3A/r^4-2k/r^3$，在 $r_0$ 处为 $k/r_0^3>0$，因此对足够小的径向扰动严格稳定。圆轨道能量为 $E_{\\min}=-k^2/(2A)$。\n\n(3) 令 $r=r_0+\\xi$，一阶线性化给 $m\\ddot\\xi+(k/r_0^3)\\xi=0$，故\n\\[\n\\omega_r=\\sqrt{\\frac{k}{mr_0^3}},\\qquad \\omega_\\phi=\\frac{L}{mr_0^2}.\n\\]\n在近圆极限，一次径向周期的方位角增量为\n\\[\n\\Delta\\phi=\\frac{2\\pi\\omega_\\phi}{\\omega_r}=\\frac{2\\pi L}{\\sqrt{L^2+m\\alpha}}<2\\pi .\n\\]\n与开普勒闭合轨道比较，近日点每周期发生逆向进动 $\\Delta\\phi-2\\pi<0$；该式是小径向振幅的一阶结果，不应误称为任意振幅的精确轨道角。\n\n(4) 令 $\\dot r=0$，则 $2Er^2+2kr-A=0$。取 $D=k^2+2EA$，给定范围保证 $0<D<k^2$，两根均为正：\n\\[\nr_{\\min}=\\frac{A}{k+\\sqrt{D}},\\qquad r_{\\max}=\\frac{A}{k-\\sqrt{D}}.\n\\]\n当 $\\alpha\\to0^+$，$A\\to L^2/m$，得到标准开普勒转向点和 $\\Delta\\phi\\to2\\pi$。量纲检验：$[A]=[\\!kr]$，$[k/r_0^3]=[\\!m/t^2]$。",
+    "answer": "r_0=\\frac{L^2/m+\\alpha}{k},\\quad \\Delta\\phi=\\frac{2\\pi L}{\\sqrt{L^2+m\\alpha}}",
+    "kind": "综合推导题",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "assumptions_review": "建模、守恒和极限已初检；需第二人独立复核",
+    "checks": [],
+    "revision": "composite-v1.1"
+  },
+  {
     "id": "E007",
     "topic": "电磁学",
     "title": "滑动导体棒的自感反馈与能量耗散",
@@ -89,6 +112,29 @@
     "assumptions_review": "已作模型和极限检查；尚需第二人逐题独立审稿",
     "checks": [],
     "revision": "composite-v1.0"
+  },
+  {
+    "id": "E009",
+    "topic": "电磁学",
+    "title": "正交电磁场中带黏滞阻力粒子的漂移",
+    "level": 5,
+    "estimated_minutes": 55,
+    "tags": [
+      "洛伦兹力",
+      "复变量常微分方程",
+      "霍尔漂移",
+      "功率耗散",
+      "奇异极限"
+    ],
+    "question": "质量 $m>0$、电荷 $q>0$ 的粒子在均匀恒定场 $\\boldsymbol E=E\\hat{\\boldsymbol x}$、$\\boldsymbol B=B\\hat{\\boldsymbol z}$ 中运动，$E,B>0$，另受各向同性线性阻力 $\\boldsymbol F_d=-\\gamma\\boldsymbol v$，其中 $\\gamma>0$。粒子初态在原点且静止，忽略重力和辐射，运动被限制在 $xy$ 平面。记 $a=\\gamma/m,\\ \\omega=qB/m,\\ f=qE/m$。\n(1) 从牛顿方程出发，用 $u=v_x+i v_y$ 求速度随时间的精确解析式；(2) 求位置轨迹以及最终漂移速度，并讨论漂移方向；(3) 证明动能与电场功、阻力耗散满足的瞬时恒等式，并核对终端功率平衡；(4) 先令 $\\gamma\\to0^+$ 而固定时间，求无阻力的旋轮线极限，并解释为何不能先取 $t\\to\\infty$ 再令 $\\gamma\\to0^+$。",
+    "solution": "(1) 由 $\\boldsymbol v\\times\\boldsymbol B=B(v_y,-v_x,0)$，有\n\\[\n\\dot v_x=f+\\omega v_y-a v_x,\\qquad \\dot v_y=-\\omega v_x-a v_y.\n\\]\n令 $u=v_x+i v_y$ 与 $\\lambda=a+i\\omega$，则 $\\dot u+\\lambda u=f,\\ u(0)=0$。积分因子法得到\n\\[\nu(t)=\\frac{f}{\\lambda}(1-e^{-\\lambda t}).\n\\]\n该式同时给出速度两个实分量，且初速度、方程均符合。\n\n(2) 设 $z=x+i y$，积分且 $z(0)=0$：\n\\[\nz(t)=\\frac{f}{\\lambda}\\left[t-\\frac{1-e^{-\\lambda t}}{\\lambda}\\right].\n\\]\n由于 $a>0$，指数瞬态消失，终端速度\n\\[\n(v_{x,\\infty},v_{y,\\infty})=\\left(\\frac{fa}{a^2+\\omega^2},-\\frac{f\\omega}{a^2+\\omega^2}\\right).\n\\]\n故横向漂移沿 $-\\hat{\\boldsymbol y}$；阻力导致沿电场的正向漂移。其方向相对于 $+\\hat{\\boldsymbol x}$ 的偏角满足 $\\tan|\\varphi|=\\omega/a$。\n\n(3) 对 $m\\dot{\\boldsymbol v}=q(\\boldsymbol E+\\boldsymbol v\\times\\boldsymbol B)-\\gamma\\boldsymbol v$ 点乘 $\\boldsymbol v$，磁力功恒为零：\n\\[\n\\frac{d}{dt}\\frac{m|\\boldsymbol v|^2}{2}=qEv_x-\\gamma|\\boldsymbol v|^2.\n\\]\n将终端值代入，$qEv_{x,\\infty}=mf^2 a/(a^2+\\omega^2)=\\gamma f^2/(a^2+\\omega^2)=\\gamma|\\boldsymbol v_\\infty|^2$，稳态能量核算一致。\n\n(4) 固定 $t$ 先令 $a\\to0^+$，得到\n\\[\nv_x=\\frac f\\omega\\sin\\omega t,\\quad v_y=\\frac f\\omega(\\cos\\omega t-1),\\qquad\nx=\\frac f{\\omega^2}(1-\\cos\\omega t),\\quad y=\\frac f{\\omega^2}(\\sin\\omega t-\\omega t).\n\\]\n这是以 $-y$ 为行进方向的旋轮线。无阻力情形不存在速度的时间极限，而对任何 $a>0$，终端速度存在；因此两个极限次序不交换。",
+    "answer": "u(t)=\\frac{f(1-e^{-(a+i\\omega)t})}{a+i\\omega},\\quad \\boldsymbol v_\\infty=\\frac f{a^2+\\omega^2}(a,-\\omega)",
+    "kind": "综合推导题",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "assumptions_review": "建模、守恒和极限已初检；需第二人独立复核",
+    "checks": [],
+    "revision": "composite-v1.1"
   },
   {
     "id": "T007",
@@ -137,6 +183,29 @@
     "revision": "composite-v1.0"
   },
   {
+    "id": "T009",
+    "topic": "热学",
+    "title": "弹簧活塞的不可逆绝热平衡与熵极大",
+    "level": 5,
+    "estimated_minutes": 60,
+    "tags": [
+      "开放压强做功",
+      "气体状态方程",
+      "不可逆绝热过程",
+      "机械平衡",
+      "熵极大与唯一性"
+    ],
+    "question": "一隔热圆柱含 $n>0$ mol 理想气体，摩尔定容热容 $C_V>0$ 恒定，活塞面积 $A>0$，外界恒压为 $P_0>0$。无热容弹簧与活塞连接，劲度系数 $K>0$，在初始体积 $V_0$ 时自然长。气体初温 $T_i>P_0V_0/(nR)$，活塞起初被锁住，随后释放。系统存在弱耗散，最终静止，**耗散产生的热全部返回气体**；气体、弹簧和外压源之外无能量交换。忽略活塞初末动能与重力。设 $s=K/A^2$，研究最终体积 $V_f$。\n(1) 写出能量守恒和终态力平衡，并解释不能沿真实过程直接用 $PV^\\gamma=\\mathrm{const}$；(2) 令 $x=V_f-V_0$，构造求 $x$ 的二次方程并证明存在唯一正根；(3) 求气体熵变，沿能量约束证明终态满足熵极大条件且熵增为正；(4) 求 $K\\to0^+$ 的简化终体积与终温，验证单位及初压临界情形。",
+    "solution": "(1) 活塞移动 $x/A$，弹簧能为 $K(x/A)^2/2=sx^2/2$，对外界压强做功为 $P_0x$。最终静止且阻尼耗热全返回气体，故\n\\[\nnC_VT_i=nC_VT_f+P_0x+\\tfrac12sx^2,\\qquad\np_f=P_0+sx,\\quad p_f(V_0+x)=nRT_f.\n\\]\n真实释放伴随耗散，气体熵增加，不能把过程误当可逆绝热而使用泊松关系。\n\n(2) 记 $c=C_V/R>0$，消去 $T_f$ 得\n\\[\na_2x^2+a_1x+a_0=0,\\quad\na_2=s(c+\\tfrac12),\\quad a_1=P_0(c+1)+csV_0,\\quad a_0=cP_0V_0-nC_VT_i<0.\n\\]\n由于 $a_2,a_1>0>a_0$，二次函数在 $x\\ge0$ 上严格递增，从负值趋于正无穷，故恰有一个正根\n\\[\nx=\\frac{-2a_0}{a_1+\\sqrt{a_1^2-4a_2a_0}},\\qquad V_f=V_0+x,\\quad T_f=\\frac{(P_0+sx)(V_0+x)}{nR}.\n\\]\n这里将求根公式有理化以避免数值上的相消。\n\n(3) 理想气体的状态函数熵变为\n\\[\n\\Delta S=nC_V\\ln(T_f/T_i)+nR\\ln(V_f/V_0).\n\\]\n沿固定总能量约束的一族状态 $T(V)=[nC_VT_i-P_0(V-V_0)-s(V-V_0)^2/2]/(nC_V)$，有\n\\[\n\\frac{dS}{dV}=\\frac{p_g(V)-[P_0+s(V-V_0)]}{T(V)},\\quad p_g(V)=\\frac{nRT(V)}{V}.\n\\]\n在初态，此导数因 $nRT_i/V_0>P_0$ 为正；对 $V\\ge V_0$ 的允许范围，$T(V)$、$p_g(V)$ 严格下降，外压加弹簧反力严格上升，因此导数仅在上述正根处从正变负，终态为唯一熵最大位置，$\\Delta S>0$。特别注意这论证只针对允许的终态族，并未假设真实历程平衡。\n\n(4) 当 $s\\to0^+$，由一次方程得\n\\[\nV_f\\to\\frac{P_0V_0+nC_VT_i}{P_0(1+C_V/R)},\\qquad T_f\\to\\frac{P_0V_f}{nR}.\n\\]\n$[s]=\\mathrm{Pa/m^3}$、$[sx^2]=\\mathrm J$；若初压趋于 $P_0$，则 $a_0\\to0^-$、$x\\to0^+$，自洽。",
+    "answer": "V_f=V_0-\\frac{2a_0}{a_1+\\sqrt{a_1^2-4a_2a_0}},\\quad T_f=\\frac{(P_0+sx)V_f}{nR}",
+    "kind": "综合推导题",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "assumptions_review": "建模、守恒和极限已初检；需第二人独立复核",
+    "checks": [],
+    "revision": "composite-v1.1"
+  },
+  {
     "id": "W007",
     "topic": "振动与波动",
     "title": "双弦接点附加质量的波散射",
@@ -181,6 +250,29 @@
     "assumptions_review": "已作模型和极限检查；尚需第二人逐题独立审稿",
     "checks": [],
     "revision": "composite-v1.0"
+  },
+  {
+    "id": "W009",
+    "topic": "振动与波动",
+    "title": "三振子耦合本征模、能量分配与弱耦合拍动",
+    "level": 5,
+    "estimated_minutes": 50,
+    "tags": [
+      "对称矩阵本征值",
+      "耦合振子",
+      "初值模态展开",
+      "模态能量守恒",
+      "弱耦合近似"
+    ],
+    "question": "三个相同质点（质量均 $m>0$）沿一条水平无摩擦直线作小振动。每个质点各自用一根劲度系数为 $k>0$ 的弹簧固定到平衡位置，两相邻质点间另以劲度系数为 $\\kappa>0$ 的轻弹簧耦合。令三个位移为 $x_1,x_2,x_3$，所有弹簧在平衡态均无伸长。初态为 $\\boldsymbol x(0)=(A,0,0)^T$，$\\dot{\\boldsymbol x}(0)=0$，$A\\ne0$。\n(1) 写出运动方程并求三个归一化本征向量及对应本征频率；(2) 给出完整运动解，特别求 $x_3(t)$；(3) 求初始激发在三个正规模上的机械能，直接验证总能量守恒；(4) 在 $\\kappa\\ll k$ 的极限求三个频率的一阶近似和相邻频率差，并检验 $t=0$ 的所有初值。",
+    "solution": "(1) 位移列向量满足 $m\\ddot{\\boldsymbol x}+\\mathsf K\\boldsymbol x=0$，其中\n\\[\n\\mathsf K=\\begin{pmatrix}k+\\kappa&-\\kappa&0\\\\-\\kappa&k+2\\kappa&-\\kappa\\\\0&-\\kappa&k+\\kappa\\end{pmatrix}.\n\\]\n按对称、反对称分解得到正交归一模\n\\[\n\\boldsymbol e_0=(1,1,1)^T/\\sqrt3,\\quad\n\\boldsymbol e_1=(1,0,-1)^T/\\sqrt2,\\quad\n\\boldsymbol e_2=(1,-2,1)^T/\\sqrt6.\n\\]\n相应 $\\omega_0^2=k/m,\\ \\omega_1^2=(k+\\kappa)/m,\\ \\omega_2^2=(k+3\\kappa)/m$，均为正，故三模稳定。\n\n(2) 因所有初速度为零，模态振幅为 $A(\\boldsymbol e_j)_1$，所以\n\\[\n\\boldsymbol x(t)=A\\left[\\tfrac13(1,1,1)^T\\cos\\omega_0t+\n\\tfrac12(1,0,-1)^T\\cos\\omega_1t+\n\\tfrac16(1,-2,1)^T\\cos\\omega_2t\\right].\n\\]\n特别地\n\\[\nx_3(t)=A\\left(\\tfrac13\\cos\\omega_0t-\\tfrac12\\cos\\omega_1t+\\tfrac16\\cos\\omega_2t\\right).\n\\]\n尽管最右质点初始静止，后续可从耦合获得能量。\n\n(3) 模态坐标初值分别为 $Q_0=A/\\sqrt3,\\ Q_1=A/\\sqrt2,\\ Q_2=A/\\sqrt6$，故\n\\[\nE_0=\\frac{kA^2}{6},\\qquad E_1=\\frac{(k+\\kappa)A^2}{4},\\qquad E_2=\\frac{(k+3\\kappa)A^2}{12}.\n\\]\n相加恰好为 $(k+\\kappa)A^2/2$，与初始储能 $kA^2/2+\\kappa A^2/2$ 相同；各正交正规模能量分别守恒。\n\n(4) 令 $\\omega_b=\\sqrt{k/m}$，当 $\\epsilon=\\kappa/k\\ll1$，\n\\[\n\\omega_0=\\omega_b,\\quad\\omega_1=\\omega_b(1+\\epsilon/2)+O(\\epsilon^2),\\quad\n\\omega_2=\\omega_b(1+3\\epsilon/2)+O(\\epsilon^2).\n\\]\n故 $\\omega_1-\\omega_0\\simeq\\epsilon\\omega_b/2$，$\\omega_2-\\omega_1\\simeq\\epsilon\\omega_b$，出现缓慢能量交换的包络。将 $t=0$ 代入解，三个分量依次为 $A,0,0$；求导含正弦项，故三个初速度均为零。",
+    "answer": "\\omega_j^2=\\frac1m\\{k,k+\\kappa,k+3\\kappa\\},\\quad x_3=A\\left(\\frac{\\cos\\omega_0t}{3}-\\frac{\\cos\\omega_1t}{2}+\\frac{\\cos\\omega_2t}{6}\\right)",
+    "kind": "综合推导题",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "assumptions_review": "建模、守恒和极限已初检；需第二人独立复核",
+    "checks": [],
+    "revision": "composite-v1.1"
   },
   {
     "id": "O007",
@@ -229,6 +321,29 @@
     "revision": "composite-v1.0"
   },
   {
+    "id": "O009",
+    "topic": "光学",
+    "title": "法布里—珀罗腔的线型、自由光谱区与半高宽",
+    "level": 4,
+    "estimated_minutes": 50,
+    "tags": [
+      "多光束相干叠加",
+      "复振幅几何级数",
+      "腔内干涉",
+      "光谱分辨率",
+      "极限与半高宽"
+    ],
+    "question": "由两块相同、理想无吸收、平行反射镜构成一光学腔，间距 $d>0$，腔内均匀介质折射率 $n>0$，单色平面波在腔内的传播角为 $\\vartheta$（$0\\le\\vartheta<\\pi/2$）。每面镜的强度反射率 $0<R<1$，透射率 $1-R$，往返相移写为 $\\delta=4\\pi nd\\nu\\cos\\vartheta/c$，并约定镜面固定相移已包含在 $\\delta$ 中。忽略散射、色散和偏振差异。\n(1) 对全部多次透射振幅求和，推导归一化强度透过率的艾里公式；(2) 给出透射峰位置及频率自由光谱区 $\\Delta\\nu_{\\mathrm{FSR}}$；(3) 严格指出半高宽有定义的反射率条件并给出精确相位半高全宽，在高反射率极限推导精细度；(4) 检验 $R\\to0^+$、$R\\to1^-$ 时的透过率与峰宽极限。",
+    "solution": "(1) 令单镜的振幅透射率模为 $\\sqrt{1-R}$，一次完整腔内往返的复振幅比例为 $Re^{i\\delta}$。将不影响光强的整体相位记为 $e^{i\\delta/2}$，总透射幅为\n\\[\nt_{\\mathrm{cav}}=\\frac{(1-R)e^{i\\delta/2}}{1-Re^{i\\delta}},\\qquad\n\\mathcal T(\\delta)=|t_{\\mathrm{cav}}|^2=\\frac{(1-R)^2}{(1-R)^2+4R\\sin^2(\\delta/2)}\n=\\frac1{1+\\mathcal F\\sin^2(\\delta/2)},\n\\]\n其中 $\\mathcal F=4R/(1-R)^2$。这里腔光强透射率与单镜振幅透射率不是同一个量。\n\n(2) 透射共振满足 $\\delta=2\\pi j$（$j$ 为整数），此时 $\\mathcal T=1$。相邻共振的频率差使 $\\delta$ 增加 $2\\pi$，故\n\\[\n\\Delta\\nu_{\\mathrm{FSR}}=\\frac{c}{2nd\\cos\\vartheta}.\n\\]\n\n(3) 峰高为一，半高方程为 $\\mathcal T=1/2$，即 $\\sin^2(\\delta/2)=1/\\mathcal F$。它只在 $\\mathcal F\\ge1$ 时有解，即 $R\\ge3-2\\sqrt2$。取主峰两侧最近半高点，精确相位全宽为\n\\[\n\\Delta\\delta_{\\mathrm{FWHM}}=4\\arcsin\\frac{1-R}{2\\sqrt R}.\n\\]\n在 $R\\to1^-$ 时，$\\Delta\\delta_{\\mathrm{FWHM}}\\sim 2(1-R)/\\sqrt R$，于是光谱精细度（自由光谱区除以峰宽）\n\\[\n\\mathscr{F}=\\frac{2\\pi}{\\Delta\\delta_{\\mathrm{FWHM}}}\\sim\\frac{\\pi\\sqrt R}{1-R}.\n\\]\n若 $R<3-2\\sqrt2$，谷值仍大于 $1/2$，不得编造出腔峰的半高全宽。\n\n(4) $R\\to0^+$ 时 $\\mathcal T\\to1$ 对任何相位都成立，干涉条纹对比度消失、半高宽无定义。$R\\to1^-$ 时，在严格共振处 $\\mathcal T=1$，固定非共振相位处 $\\mathcal T\\to0$，共振峰无限变窄；先取共振相位和先取 $R\\to1$ 不能混淆。",
+    "answer": "\\mathcal T=\\left[1+\\frac{4R}{(1-R)^2}\\sin^2\\frac\\delta2\\right]^{-1},\\quad \\Delta\\nu_{\\mathrm{FSR}}=\\frac c{2nd\\cos\\vartheta}",
+    "kind": "综合推导题",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "assumptions_review": "建模、守恒和极限已初检；需第二人独立复核",
+    "checks": [],
+    "revision": "composite-v1.1"
+  },
+  {
     "id": "Q007",
     "topic": "近代物理",
     "title": "相对论两体衰变的能量区间与阈值",
@@ -273,5 +388,28 @@
     "assumptions_review": "已作模型和极限检查；尚需第二人逐题独立审稿",
     "checks": [],
     "revision": "composite-v1.0"
+  },
+  {
+    "id": "Q009",
+    "topic": "近代物理",
+    "title": "自旋测量、拉莫尔进动与非选择性退相干",
+    "level": 4,
+    "estimated_minutes": 45,
+    "tags": [
+      "泡利矩阵",
+      "量子条件概率",
+      "幺正时间演化",
+      "密度矩阵",
+      "非对易测量"
+    ],
+    "question": "一个自旋 $1/2$ 粒子初态为 $|+z\\rangle$。先测量沿单位方向 $\\boldsymbol n=(\\sin\\theta,0,\\cos\\theta)$（$0<\\theta<\\pi$）的自旋投影 $\\boldsymbol n\\cdot\\boldsymbol\\sigma$，其本征值为 $\\pm1$。此后粒子在均匀磁场中按哈密顿量 $H=-\\hbar\\omega\\sigma_z/2$ 演化时间 $t\\ge0$，$\\omega>0$，再测量 $\\sigma_x$。\n(1) 求首次测到 $+1$ 的概率及相应归一化后测态；(2) 在选择首次 $+1$ 结果的子样本中，求末次测到 $\\sigma_x=+1$ 的条件概率；(3) 若首次测量仍实施但不记录结果，利用密度矩阵求末次测量概率，并与未经首次测量的情况比较；(4) 对 $\\theta=\\pi/2$ 给出三个概率随时间的差异，说明为何丢弃测量记录不能等价于未作测量。",
+    "solution": "(1) 在 $z$ 基底中选择相位惯例，使 $|\\boldsymbol n,+\\rangle=\\cos(\\theta/2)|+z\\rangle+\\sin(\\theta/2)|-z\\rangle$。由投影规则\n\\[\nP(n+)=|\\langle\\boldsymbol n,+|+z\\rangle|^2=\\cos^2(\\theta/2).\n\\]\n测得正值后的归一化状态就是 $|\\boldsymbol n,+\\rangle$。\n\n(2) 演化算符为 $U(t)=e^{i\\omega t\\sigma_z/2}$。$|+x\\rangle=(|+z\\rangle+|-z\\rangle)/\\sqrt2$，于是\n\\[\nP(x+\\mid n+)=|\\langle+x|U(t)|\\boldsymbol n,+\\rangle|^2\n=\\tfrac12[1+\\sin\\theta\\cos(\\omega t)].\n\\]\n相对相位为 $e^{-i\\omega t}$，其符号不影响余弦，但会影响 $y$ 方向的自旋分量。\n\n(3) 忽略首次测量结果（非选择性测量）时，密度算符为\n\\[\n\\rho'=\\Pi_{n+}|+z\\rangle\\langle+z|\\Pi_{n+}\n+\\Pi_{n-}|+z\\rangle\\langle+z|\\Pi_{n-}\n=\\tfrac12\\bigl[I+\\cos\\theta\\,(\\boldsymbol n\\cdot\\boldsymbol\\sigma)\\bigr].\n\\]\n绕 $z$ 轴进动后其 Bloch 向量的 $x$ 分量为 $\\cos\\theta\\sin\\theta\\cos\\omega t$，因此\n\\[\nP_{\\mathrm{nonselect}}(x+)=\\tfrac12[1+\\cos\\theta\\sin\\theta\\cos(\\omega t)].\n\\]\n若从未执行首次测量，初态始终为 $|+z\\rangle$（仅得整体相位），故 $P_{\\mathrm{no\\ measure}}(x+)=1/2$。\n\n(4) 当 $\\theta=\\pi/2$，首次测得 $n+$ 的概率为 $1/2$；选中 $n+$ 后的末次 $x+$ 概率为 $(1+\\cos\\omega t)/2$，未选择结果则为 $1/2$，完全不做第一次测量也为 $1/2$。虽然此特殊角下两类无条件概率巧合相同，但条件概率不同；一般倾角下非选择性结果与未测量结果并不相同。因此丢弃经典记录不等于撤销量子测量。",
+    "answer": "P(n+)=\\cos^2\\frac\\theta2,\\quad P(x+|n+)=\\frac{1+\\sin\\theta\\cos\\omega t}{2}",
+    "kind": "综合推导题",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "assumptions_review": "建模、守恒和极限已初检；需第二人独立复核",
+    "checks": [],
+    "revision": "composite-v1.1"
   }
 ]

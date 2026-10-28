@@ -22,6 +22,8 @@ jobs:
         run: python scripts/check_difficulty_gate.py
       - name: Perform independent formula and numerical spotchecks
         run: python scripts/check_physics.py
+      - name: Independently verify second-batch composite derivations
+        run: python scripts/check_composite_expansion.py
       - name: Validate TeX fragments and derived documents
         run: python scripts/build.py --check
       - name: Upload independent spotcheck report
