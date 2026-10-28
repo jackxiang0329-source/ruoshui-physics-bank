@@ -3,12 +3,13 @@
   "unclassified_college_chapters": {
     "Some Questions We Know to Ask": 2
   },
-  "generated_utc": "2026-10-28T06:14:52.915357+00:00",
-  "raw_candidate_count": 15925,
+  "generated_utc": "2026-10-28T06:20:09.868751+00:00",
+  "raw_candidate_count": 16775,
   "exam_ready_external_count": 0,
   "by_source": {
-    "Hugging Face Physics-DPO (synthetic)": 13000,
+    "Hugging Face Physics-DPO (synthetic)": 13500,
     "OpenStax College Physics (historical mirror)": 2526,
+    "Physics Refresher (CC BY 4.0)": 350,
     "UBC OPBP": 265,
     "WeBWorK BrockPhysics": 59,
     "Introductory Physics (PHYS 2425)": 53,
@@ -16,23 +17,23 @@
     "Hugging Face SeePhys (text-only)": 1
   },
   "by_module": {
-    "力学": 5712,
-    "电磁学": 3382,
-    "近代物理": 2307,
-    "热学": 1613,
-    "光学": 1592,
-    "振动与波动": 1235,
-    "物理基础": 81,
+    "力学": 6067,
+    "电磁学": 3509,
+    "近代物理": 2370,
+    "热学": 1664,
+    "光学": 1649,
+    "振动与波动": 1282,
+    "物理基础": 231,
     "待分类": 3
   },
   "source_module_matrix": {
     "Hugging Face Physics-DPO (synthetic)": {
-      "力学": 4802,
-      "电磁学": 2648,
-      "近代物理": 1832,
-      "光学": 1337,
-      "热学": 1333,
-      "振动与波动": 1048
+      "力学": 4982,
+      "电磁学": 2750,
+      "近代物理": 1895,
+      "光学": 1394,
+      "热学": 1384,
+      "振动与波动": 1095
     },
     "Hugging Face SeePhys (text-only)": {
       "待分类": 1
@@ -51,6 +52,11 @@
       "物理基础": 78,
       "待分类": 2
     },
+    "Physics Refresher (CC BY 4.0)": {
+      "力学": 175,
+      "物理基础": 150,
+      "电磁学": 25
+    },
     "UBC OPBP": {
       "电磁学": 141,
       "力学": 96,
@@ -65,8 +71,9 @@
     }
   },
   "license_signals": {
-    "Apache-2.0 (source metadata; rights review pending)": 13000,
+    "Apache-2.0 (source metadata; rights review pending)": 13500,
     "CC BY 3.0 Unported": 2526,
+    "CC BY 4.0 (repository-level; item rights review pending)": 350,
     "CC-BY-NC-SA 4.0": 121,
     "CC BY 4.0": 108,
     "CC BY 4.0 (repository-level; rights review pending)": 53,
