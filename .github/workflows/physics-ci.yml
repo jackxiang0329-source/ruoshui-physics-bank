@@ -42,6 +42,14 @@ jobs:
         run: python scripts/check_round10_physics.py
       - name: Enforce full future 100-problem rounds and executed subpart QA
         run: python scripts/check_future_rounds.py
+      - name: Check in-progress round 11 draft mathematical spotchecks
+        run: python scripts/check_round11_draft.py
+      - name: Check round 11 draft for near-duplicate prompts
+        run: |
+          if test -f data/rounds/2026-10-28-11-draft.json; then
+            python -c "import json,pathlib; p=pathlib.Path('data/rounds/2026-10-28-11-draft.json'); pathlib.Path('/tmp/round11-draft-items.json').write_text(json.dumps(json.loads(p.read_text())['items'],ensure_ascii=False))"
+            python scripts/quality_gate_bulk.py --batch /tmp/round11-draft-items.json
+          fi
       - name: Validate TeX fragments and derived documents
         run: python scripts/build.py --check
       - name: Upload independent spotcheck report
