@@ -1,0 +1,28 @@
+(1) 内部熵流相等意味着
+\[
+\frac{T_h-X}{X}=\frac{Y-T_c}{Y}.
+\]
+由此 \(2XY=T_hY+XT_c\)，故 \(Y=XT_c/(2X-T_h)\)，并且 2X>Th。净功率
+\[
+P=Q_h-Q_c=K(T_h+T_c-X-Y).
+\]
+
+(2) 对 X 微分有 \(dY/dX=-T_hT_c/(2X-T_h)^2\)，因此
+\[
+\frac{dP}{dX}=-K\left[1-\frac{T_hT_c}{(2X-T_h)^2}\right].
+\]
+解可行域的驻值条件得
+\[
+X_*=\frac{T_h+\sqrt{T_hT_c}}{2},\qquad
+Y_*=\frac{T_c+\sqrt{T_hT_c}}{2}.
+\]
+二阶微分在该点为负，所以是最大功率点。
+
+(3) 把最优温度代回，
+\[
+P_{\max}=\frac K2(\sqrt{T_h}-\sqrt{T_c})^2,\quad
+\eta_{\max P}=1-\frac{Y_*}{X_*}=1-\sqrt{\frac{T_c}{T_h}}.
+\]
+温度比 \(Y_*/X_*=\sqrt{T_c/T_h}\) 是最优条件的结果，不是附加假设。
+
+(4) Carnot 效率 \(\eta_C=1-T_c/T_h\)，在 0<Tc/Th<1 时 \(\sqrt{T_c/T_h}>T_c/T_h\)，故最大功率效率严格低于 Carnot 效率。Th→Tc 时最大功率趋零，效率也趋零。平方根规律限于两侧相等导纳及内部可逆、线性传热的模型，不能断言对任意真实热机均为精确最优。

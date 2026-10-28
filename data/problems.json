@@ -587,6 +587,28 @@
     "complexity_tier": "L5-C"
   },
   {
+    "id": "M032",
+    "topic": "力学",
+    "title": "高速行星后方引力助推的弹性散射、能量来源与有限质量修正",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "tags": [
+      "双参考系",
+      "弹性散射",
+      "引力弹弓",
+      "动量能量守恒"
+    ],
+    "question": "沿一维实验室正 x 方向运动的探测器速度为 u≥0，质量为 m>0；质量 M>m 的行星沿同方向速度为 V>u。行星从后方追上探测器，发生理想一维完全弹性的折返散射，不发生碰撞破坏，初末相对距离都足够远以忽略引力势能。初步将 M 视为远大于 m。\n(1) 在行星惯性系求散射前后探测器相对速度和实验室末速度；(2) 求探测器的动能增加，说明为何增益符号与 u、V 的相对大小有关；(3) 对有限 M 和 m 从动量、能量守恒求末速度；(4) 核验有限质量解的相对速度反号以及 M→∞ 极限，解释行星的能量损失。",
+    "solution": "(1) 在行星静止参考系，探测器以相对速度 \\(u'=u-V<0\\) 迎向行星；理想一维弹性折返令 \\(u'_{\\rm out}=-(u-V)=V-u\\)。因此回到实验室系\n\\[\nu_{\\rm out}=V+(V-u)=2V-u.\n\\]\n在 V>u 条件下，探测器的末速度大于 V，得到向前的助推。\n\n(2) 动能差为\n\\[\n\\Delta K=\\frac m2[(2V-u)^2-u^2]=2mV(V-u)>0.\n\\]\n若选择相反的几何关系 V<u，上式改为负数，说明在一维模型中并非任何行星掠过都必然使探测器增能。\n\n(3) 当 M 有限，令末速度为 \\(u_f,V_f\\)。动量守恒 \\(mu+MV=mu_f+MV_f\\)，能量守恒 \\(mu^2+MV^2=mu_f^2+MV_f^2\\)，排除无散射平凡支后求得\n\\[\nu_f=\\frac{m-M}{m+M}u+\\frac{2M}{m+M}V,\\qquad\nV_f=\\frac{2m}{m+M}u+\\frac{M-m}{m+M}V.\n\\]\n将两式代回总动量和动能可独立验证守恒。\n\n(4) 直接相减得 \\(u_f-V_f=-(u-V)\\)，即弹性碰撞的相对速度反号。当 M≫m，\\(u_f\\to2V-u\\)，而行星的速度变化 \\(V_f-V=2m(u-V)/(m+M)<0\\)。行星的巨大总动能因很小的速度变化而减少，供给探测器增益；若 V=0，则探测器仅反转方向而不增加实验室动能。",
+    "answer": "\nu_{\\rm out}=V+(V-u)=2V-u.\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
     "id": "E007",
     "topic": "电磁学",
     "title": "滑动导体棒的自感反馈与能量耗散",
@@ -1176,6 +1198,28 @@
     "complexity_tier": "L5-B"
   },
   {
+    "id": "E032",
+    "topic": "电磁学",
+    "title": "滑动导体棒的磁感应制动、瞬态电流与总焦耳热",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "tags": [
+      "动生电动势",
+      "楞次定律",
+      "磁阻尼",
+      "电路能量平衡"
+    ],
+    "question": "两条平行水平理想导轨间距 ℓ，右端用电阻 R>0 连接，一根质量 m、长 ℓ 的导电棒在导轨上无摩擦滑动。装置位于垂直导轨平面向上的均匀磁场 B>0。电路电感、棒和导轨自身电阻均忽略，棒初始沿 +x 以速度 v₀>0 运动，之后没有外界机械推力。\n(1) 由动生电动势和回路电流方向求棒受磁力；(2) 解出棒的速度、位移、电流随时间的完整表达式；(3) 求总电阻热并与初始动能比较；(4) 研究最终位移以及电阻趋于无穷和磁场消失的奇异极限，解释为何电磁能流与机械耗散相容。",
+    "solution": "(1) 棒两端的动生电动势大小为 \\(\\mathcal E=B\\ell v\\)，电流大小 \\(I=B\\ell v/R\\)。根据楞次定律，电流产生的电磁力必须阻碍棒的前进，所以\n\\[\nF_x=-I\\ell B=-\\frac{B^2\\ell^2}{R}v,\\qquad\nm\\dot v=-\\frac{B^2\\ell^2}{R}v.\n\\]\n\n(2) 定义 \\(\\tau=mR/(B^2\\ell^2)\\)，满足一阶指数衰减方程，故\n\\[\nv(t)=v_0e^{-t/\\tau},\\quad\nx(t)-x_0=v_0\\tau(1-e^{-t/\\tau}),\\quad\nI(t)=\\frac{B\\ell v_0}{R}e^{-t/\\tau}.\n\\]\n该结果同时给定棒的机械轨迹和瞬时电流。\n\n(3) 电阻的瞬时热功率 \\(P_R=I^2R=B^2\\ell^2v_0^2e^{-2t/\\tau}/R\\)。因此\n\\[\nQ_R=\\int_0^\\infty P_Rdt\n=\\frac{B^2\\ell^2v_0^2}{R}\\frac{\\tau}{2}\n=\\frac12mv_0^2.\n\\]\n或者将动力学方程乘以 v 得 \\(\\frac d{dt}(mv^2/2)=-I^2R\\)，积分后有相同结果。全部初始动能最终变成电阻焦耳热。\n\n(4) 棒在理想无限长导轨上最终位移是 \\(x_\\infty-x_0=v_0\\tau\\)。当 R→∞ 或 B→0 时 τ→∞，对任何固定有限 t，\\(v\\to v_0\\)、\\(I\\to0\\)，位移趋于 v₀t，而不是已经停止。必须区分先令 t→∞ 与先令阻尼消失的极限；磁场通过洛伦兹力提供机械阻力，而电路电场对载流子做功并将能量转化为热，符合完整能量预算。",
+    "answer": "\nF_x=-I\\ell B=-\\frac{B^2\\ell^2}{R}v,\\qquad\nm\\dot v=-\\frac{B^2\\ell^2}{R}v.\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
     "id": "T007",
     "topic": "热学",
     "title": "导热可动活塞的不可逆终态与熵产生",
@@ -1714,6 +1758,50 @@
     "question": "两个独立、完全黑的同心薄球壳之间为真空，内球半径 r、外球内半径 R>r，内球保持均匀温度 T₁(t)>0、外球内壁保持 T₂(t)>0。内外球吸收率与发射率都为一，热容量分别为 C₁,C₂>0，外壁完美绝热，忽略球壳热传导延迟。Stefan–Boltzmann 常数为 σ>0。\n(1) 由黑体辐射与几何视角因子写出内球向外球的净传热功率；(2) 建立两球温度耦合微分方程及能量守恒；(3) 写出两球总熵随时间的变化率，证明非负；(4) 在共同温度 T₀ 附近线性化，求温差指数驰豫时间。",
     "solution": "(1) 内球全部向外发射的光最终被外球内壁吸收，因为外球包围内球；内球面积为 \\(A_1=4\\pi r^2\\)。黑体间的净辐射传热功率由两方向的辐射平衡得到\n\\[\nQ_{1\\to2}=\\sigma A_1(T_1^4-T_2^4).\n\\]\n这里外球表面积更大，但内球只截获相应几何份额的外球内壁辐射，因此净交换面积仍为内球面积。\n\n(2) 两球除辐射外无外界热量或功交换，故\n\\[\nC_1\\dot T_1=-Q_{1\\to2},\\qquad\nC_2\\dot T_2=Q_{1\\to2}.\n\\]\n直接相加得 \\(d(C_1T_1+C_2T_2)/dt=0\\)。若 C₁,C₂ 温度无关，最终共同温度由能量守恒决定为 \\(T_f=(C_1T_{1i}+C_2T_{2i})/(C_1+C_2)\\)。\n\n(3) 热容恒定时各球熵微分为 \\(dS_i=C_i\\,dT_i/T_i\\)，故\n\\[\n\\dot S_{\\rm total}=-\\frac Q{T_1}+\\frac Q{T_2}\n=\\sigma A_1(T_1^4-T_2^4)\\left(\\frac1{T_2}-\\frac1{T_1}\\right)\\ge0.\n\\]\n因 \\(T_1^4-T_2^4\\) 与 \\(T_1-T_2\\) 同号，而 \\(1/T_2-1/T_1=(T_1-T_2)/(T_1T_2)\\) 亦同号，所以总熵非负，等温时恰为零。\n\n(4) 令 \\(T_1=T_0+\\delta T_1,T_2=T_0+\\delta T_2\\)，一阶近似 \\(T_1^4-T_2^4\\simeq4T_0^3(\\delta T_1-\\delta T_2)\\)。定义温差 \\(\\Delta=T_1-T_2\\)，联立得到\n\\[\n\\dot\\Delta=-4\\sigma A_1T_0^3\\left(\\frac1{C_1}+\\frac1{C_2}\\right)\\Delta.\n\\]\n故 \\(\\Delta(t)=\\Delta(0)e^{-t/\\tau}\\)，时间尺度 \\(\\tau=[4\\sigma A_1T_0^3(C_1^{-1}+C_2^{-1})]^{-1}\\)，热容越大或辐射换热越弱，温差消失越慢。",
     "answer": "\nQ_{1\\to2}=\\sigma A_1(T_1^4-T_2^4).\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
+    "id": "T030",
+    "topic": "热学",
+    "title": "内可逆有限传热热机的最大功率与 Curzon–Ahlborn 效率",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "tags": [
+      "有限时间热力学",
+      "稳态热机",
+      "传热温差",
+      "功率最优化"
+    ],
+    "question": "一稳态内可逆热机运行于高温热源 Th 和低温热源 Tc 之间，Th>Tc>0。热机自身接触热源的工作温度为 X，向冷源放热的工作温度为 Y，Tc<Y<X<Th。两侧以相等的线性传热导纳 K>0 传热，吸热率 Qh=K(Th−X)、放热率 Qc=K(Y−Tc)。内部可逆要求 Qh/X=Qc/Y。\n(1) 消去一个工作温度，求净功率 P；(2) 优化功率并求 X、Y 的最优值；(3) 求最大功率及最大功率效率；(4) 与 Carnot 效率比较，并研究高低温差趋零的极限。",
+    "solution": "(1) 内部熵流相等意味着\n\\[\n\\frac{T_h-X}{X}=\\frac{Y-T_c}{Y}.\n\\]\n由此 \\(2XY=T_hY+XT_c\\)，故 \\(Y=XT_c/(2X-T_h)\\)，并且 2X>Th。净功率\n\\[\nP=Q_h-Q_c=K(T_h+T_c-X-Y).\n\\]\n\n(2) 对 X 微分有 \\(dY/dX=-T_hT_c/(2X-T_h)^2\\)，因此\n\\[\n\\frac{dP}{dX}=-K\\left[1-\\frac{T_hT_c}{(2X-T_h)^2}\\right].\n\\]\n解可行域的驻值条件得\n\\[\nX_*=\\frac{T_h+\\sqrt{T_hT_c}}{2},\\qquad\nY_*=\\frac{T_c+\\sqrt{T_hT_c}}{2}.\n\\]\n二阶微分在该点为负，所以是最大功率点。\n\n(3) 把最优温度代回，\n\\[\nP_{\\max}=\\frac K2(\\sqrt{T_h}-\\sqrt{T_c})^2,\\quad\n\\eta_{\\max P}=1-\\frac{Y_*}{X_*}=1-\\sqrt{\\frac{T_c}{T_h}}.\n\\]\n温度比 \\(Y_*/X_*=\\sqrt{T_c/T_h}\\) 是最优条件的结果，不是附加假设。\n\n(4) Carnot 效率 \\(\\eta_C=1-T_c/T_h\\)，在 0<Tc/Th<1 时 \\(\\sqrt{T_c/T_h}>T_c/T_h\\)，故最大功率效率严格低于 Carnot 效率。Th→Tc 时最大功率趋零，效率也趋零。平方根规律限于两侧相等导纳及内部可逆、线性传热的模型，不能断言对任意真实热机均为精确最优。",
+    "answer": "\n\\frac{T_h-X}{X}=\\frac{Y-T_c}{Y}.\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
+    "id": "T031",
+    "topic": "热学",
+    "title": "维里平衡自引力气体的负热容与 Kelvin–Helmholtz 收缩",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "tags": [
+      "引力维里定理",
+      "负热容",
+      "辐射冷却",
+      "引力收缩"
+    ],
+    "question": "由 N 个经典单原子粒子构成的自引力系统在无外部表面压力、自转和磁场的准静态维里平衡序列上运动，粒子总热运动动能 K=3NkBT/2，负引力势能 W<0，并满足 2K+W=0。总能 E=K+W。系统可向外以功率 L>0 辐射；若讨论半径 R，还可将重力势能近似为 W=−αGM²/R，结构系数 α>0 在缓慢同源收缩中不变。\n(1) 求 E、W 与 T 的关系；(2) 计算此平衡序列有效热容并判断符号；(3) 系统缓慢辐射时求温度变化方向；(4) 求同源收缩过程的温度与半径标度及辐射能量。",
+    "solution": "(1) 标量维里定理 \\(2K+W=0\\) 给 \\(W=-2K\\)。因此系统总能\n\\[\nE=K+W=-K=-\\frac32Nk_BT,\\qquad W=-3Nk_BT.\n\\]\n总能量为负，并随 T 上升而进一步降低。\n\n(2) 沿 N 固定且持续维里平衡的状态序列定义有效热容\n\\[\nC_{\\rm eff}=\\frac{dE}{dT}=-\\frac32Nk_B<0.\n\\]\n注意单粒子动能的正定热容仍是 \\(3Nk_B/2\\)，负号来自同时变化的引力势能。\n\n(3) 当辐射带走能量，\\(\\dot E=-L\\)，代入 \\(E=-3Nk_BT/2\\) 得\n\\[\n\\dot T=\\frac{2L}{3Nk_B}>0.\n\\]\n系统向外散热却升温，并不违反能量守恒：引力收缩释放的势能超过辐射损失，其中一部分转为粒子的随机热运动动能。\n\n(4) 若 \\(W=-\\alpha GM^2/R\\)，由维里定理\n\\[\nK=\\frac{\\alpha GM^2}{2R},\\quad\nT=\\frac{\\alpha GM^2}{3Nk_BR},\\quad\nE=-\\frac{\\alpha GM^2}{2R}.\n\\]\n半径减小时温度按 R 的倒数增长。由 Ri 收缩到 Rf<Ri 时，\n\\[\nE_{\\rm rad}=E_i-E_f=\n\\frac{\\alpha GM^2}{2}\\left(\\frac1{R_f}-\\frac1{R_i}\\right)>0.\n\\]\n这些结论依赖于近似维里平衡、可忽略外表面压力和结构系数恒定的前提。",
+    "answer": "\nE=K+W=-K=-\\frac32Nk_BT,\\qquad W=-3Nk_BT.\n",
     "quality_status": "待独立复核",
     "tier": "advanced_composite",
     "revision": "composite-v2.0",
@@ -2264,6 +2352,50 @@
     "complexity_tier": "L5-C"
   },
   {
+    "id": "W030",
+    "topic": "振动与波动",
+    "title": "Helmholtz 腔颈共振器的有效弹簧、共振频率及品质阻尼",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "tags": [
+      "Helmholtz共振",
+      "绝热压缩",
+      "线性阻尼",
+      "振子能量"
+    ],
+    "question": "一理想大空腔体积为 V，通过截面积 A、有效颈长度 Le 的小孔与外界连通；空气密度 ρ>0，绝热声速 c>0。颈部空气作为整体以位移 x(t) 向外运动，腔内声压近似均匀，小扰动且无外界热交换，Le 已包括几何端部修正。\n(1) 用绝热压缩性求腔体声压与体积位移的关系以及颈部回复力；(2) 求颈部空气质量与固有共振频率；(3) 加入线性阻力 −b xdot，求欠阻尼频率和临界阻尼条件；(4) 外声压作谐波驱动时求位移复幅与平均阻尼功率。",
+    "solution": "(1) 颈部空气向外移动 x，空腔体积增加 \\(Ax\\)，绝热微扰给 \\(\\delta p=-\\rho c^2Ax/V\\)。作用在截面积 A 上的净回复力\n\\[\nF=-\\frac{\\rho c^2A^2}{V}x=-kx,\\qquad k=\\frac{\\rho c^2A^2}{V}.\n\\]\n腔体气体的可压缩性充当弹簧。\n\n(2) 颈部有效质量 \\(m_{\\rm eff}=\\rho A L_e\\)，故\n\\[\n\\omega_H=\\sqrt{\\frac{k}{m_{\\rm eff}}}\n=c\\sqrt{\\frac{A}{VL_e}},\\qquad f_H=\\frac{\\omega_H}{2\\pi}.\n\\]\n这个频率来自颈部气柱惯性与空腔声压回复力，量纲为逆时间。\n\n(3) 加线性黏滞阻力后，动力学方程\n\\(m_{\\rm eff}\\ddot x+b\\dot x+kx=0\\)。\n记 \\(\\gamma=b/(2m_{\\rm eff})\\)，当 \\(\\gamma<\\omega_H\\) 时，欠阻尼角频率\n\\[\n\\omega_d=\\sqrt{\\omega_H^2-\\gamma^2}.\n\\]\n临界阻尼系数 \\(b_c=2\\sqrt{km_{\\rm eff}}\\)。机械能 \\(E=m_{\\rm eff}\\dot x^2/2+kx^2/2\\) 满足 \\(\\dot E=-b\\dot x^2\\le0\\)。\n\n(4) 外界声压谐波幅值 pext 对颈部产生的驱动力幅值 \\(F_0=A p_{\\rm ext}\\)。采用 \\(e^{-i\\omega t}\\) 约定，稳态位移复幅\n\\[\nX=\\frac{A p_{\\rm ext}}{k-m_{\\rm eff}\\omega^2-i b\\omega}.\n\\]\n平均阻尼耗散功率 \\(\\overline P=\\frac12b\\omega^2|X|^2\\ge0\\)。频率接近 \\(\\omega_H\\) 且阻尼较小时响应显著增强；假设只在波长远大于腔体尺度的集总声学范围成立。",
+    "answer": "\nF=-\\frac{\\rho c^2A^2}{V}x=-kx,\\qquad k=\\frac{\\rho c^2A^2}{V}.\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
+    "id": "W031",
+    "topic": "振动与波动",
+    "title": "矩形固定薄膜的二维本征谱、模态正交与简并",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "tags": [
+      "二维波动方程",
+      "空间本征值",
+      "正交模态",
+      "能量守恒"
+    ],
+    "question": "矩形薄膜长 a、宽 b，膜面张力 T>0、面质量密度 ρ>0，四条边完全固定，面外小位移 u(x,y,t) 满足 u_tt=c²(u_xx+u_yy)、c²=T/ρ。忽略阻尼、剪切和材料非线性。\n(1) 用二维分离变量求全部固定边本征函数与角频率；(2) 求各模的质量加权正交归一化系数；(3) 当 a=b 时解释交换两个模态指标的频率简并并举例；(4) 给出单个实驻波模的机械总能，说明频率正性和各边长等比例放大时的变化。",
+    "solution": "(1) 取 \\(u=X(x)Y(y)e^{-i\\omega t}\\)，四边 Dirichlet 条件要求\n\\[\nU_{mn}(x,y)=\\sin\\frac{m\\pi x}{a}\\sin\\frac{n\\pi y}{b},\n\\quad m,n=1,2,\\ldots.\n\\]\n由空间 Laplace 本征值相加得到\n\\[\n\\omega_{mn}=\\pi c\\sqrt{\\frac{m^2}{a^2}+\\frac{n^2}{b^2}}.\n\\]\n零指标不能代表真实非零模，因为对应的正弦函数恒为零。\n\n(2) 分别使用一维正弦正交积分，得到\n\\[\n\\int_0^a\\!\\int_0^b \\rho U_{mn}U_{pq}\\,dy\\,dx\n=\\frac{\\rho ab}{4}\\delta_{mp}\\delta_{nq}.\n\\]\n故质量归一化本征函数为 \\(\\Phi_{mn}=2U_{mn}/\\sqrt{\\rho ab}\\)。\n\n(3) 对正方形 a=b，频率只依赖 \\(m^2+n^2\\)。当 m≠n 时模态 (m,n) 与 (n,m) 同频、空间形状不同。例如 (1,2) 与 (2,1) 均有 \\(\\omega=\\pi c\\sqrt5/a\\)，这是正方形对称性带来的二重简并。\n\n(4) 对实驻波 \\(u=A_0U_{mn}\\cos(\\omega_{mn}t+\\phi)\\)，机械能\n\\[\nE=\\frac12\\int_{\\cal D}\\big[\\rho u_t^2+T|\\nabla u|^2\\big]dA.\n\\]\n用分部积分和固定边界得到 \\(\\int T|\\nabla U|^2=\\rho\\omega_{mn}^2\\int U^2\\)，于是\n\\[\nE=\\frac{\\rho ab}{8}A_0^2\\omega_{mn}^2>0\n\\]\n且不随时间改变。a、b 同时乘以系数 s 后，全部角频率按 \\(1/s\\) 缩放。",
+    "answer": "\nU_{mn}(x,y)=\\sin\\frac{m\\pi x}{a}\\sin\\frac{n\\pi y}{b},\n\\quad m,n=1,2,\\ldots.\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
     "id": "O007",
     "topic": "光学",
     "title": "分离薄透镜系统的矩阵成像与无焦条件",
@@ -2807,6 +2939,50 @@
     "complexity_tier": "L5-B"
   },
   {
+    "id": "O030",
+    "topic": "光学",
+    "title": "二次谐波产生的相位匹配、相干长度与转换强度 sinc 平方",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "tags": [
+      "二阶非线性光学",
+      "倍频过程",
+      "相位失配",
+      "相干积累"
+    ],
+    "question": "长度 L 的理想透明二阶非线性晶体由频率 ω 的单色泵浦驱动，泵浦光的复振幅 A₁ 由于转换率很低可近似恒定。令二次谐波复幅为 A₂(z)，满足慢变包络模型 dA₂/dz=iκA₁²exp(iΔkz)，κ>0 为耦合常数，Δk=2k₁−k₂ 为实相位失配，输入 A₂(0)=0，忽略吸收和群速差。\n(1) 精确积分求晶体出口的二次谐波幅度；(2) 求与完美相位匹配情况相比较的归一化强度效率；(3) 讨论相位匹配时随晶长的强度增长；(4) 给出相干长度的定义以及失配时为何可能出现晶体越长倍频越弱的情况。",
+    "solution": "(1) 在泵浦不耗尽假设下直接积分：\n\\[\nA_2(L)=i\\kappa A_1^2\\int_0^Le^{i\\Delta kz}dz\n=i\\kappa A_1^2Le^{i\\Delta kL/2}\n\\operatorname{sinc}(\\Delta kL/2),\n\\]\n其中 \\(\\operatorname{sinc}x=\\sin x/x\\) 且在 x=0 取连续极限1。\n\n(2) 输出倍频光强与 \\(|A_2|^2\\) 成正比，所以\n\\[\n|A_2(L)|^2=\\kappa^2|A_1|^4L^2\n\\operatorname{sinc}^2(\\Delta kL/2).\n\\]\n以相同长度下 Δk=0 的强度为基准，归一化转换效率为 \\(\\eta=\\operatorname{sinc}^2(\\Delta kL/2)\\le1\\)。\n\n(3) 当相位完全匹配 Δk=0，各微小晶体切片所产生的二次谐波相位一致，复振幅随 L 线性增长为 \\(A_2=i\\kappa A_1^2L\\)，强度则随 \\(L^2\\) 增长；不能把相干振幅误按强度进行简单求和。\n\n(4) 通常把相对相位累积 π 所对应距离定义为相干长度\n\\[\nL_{\\rm coh}=\\frac{\\pi}{|\\Delta k|}.\n\\]\n若晶长为 \\(2L_{\\rm coh}\\)，输出振幅中的 sinc 因子为零，表明后半部分产生的倍频场可与前半部分相消。该完美相消结论严格属于本题的无耗散恒泵浦、均匀晶体模型；当实际倍频强烈导致泵浦耗尽或材料色散、吸收显著时必须求解完整耦合波方程。",
+    "answer": "\nA_2(L)=i\\kappa A_1^2\\int_0^Le^{i\\Delta kz}dz\n=i\\kappa A_1^2Le^{i\\Delta kL/2}\n\\operatorname{sinc}(\\Delta kL/2),\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
+    "id": "O031",
+    "topic": "光学",
+    "title": "无损金属—介质界面 TM 表面等离激元的传播与束缚条件",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "tags": [
+      "TM电磁边界",
+      "表面等离激元",
+      "倏逝衰减",
+      "色散关系"
+    ],
+    "question": "两种无损非磁介质隔着 z=0 平面接触，介质侧 z>0 的相对介电常数为 εd>0，金属侧 z<0 的实相对介电常数为 εm<0。考虑角频率 ω、真空波数 k₀=ω/c 的平面 TM 表面波，场沿正 x 方向以波数 kx 传播，两侧离界面方向均指数衰减，不考虑材料的吸收、空间色散和非线性。\n(1) 分别写出两侧法向衰减常数与波数、介电常数的关系；(2) 使用 Maxwell 切向场连续条件推导表面波的色散公式；(3) 找到实传播波数和双侧正衰减的存在条件；(4) 检查金属介电常数趋负无穷和趋近表面共振值的极限。",
+    "solution": "(1) 令正传播相位为 \\(e^{i(k_xx-\\omega t)}\\)，上侧场依 z 取 \\(e^{-\\kappa_dz}\\)，下侧场取 \\(e^{\\kappa_mz}\\)，要求 \\(\\kappa_d,\\kappa_m>0\\)。Helmholtz 关系分别为\n\\[\n\\kappa_d^2=k_x^2-\\epsilon_dk_0^2,\\qquad\n\\kappa_m^2=k_x^2-\\epsilon_mk_0^2.\n\\]\n\n(2) TM 模的 H 沿 y，E 在 xz 平面。由 \\(\\nabla\\times H=-i\\omega\\epsilon_0\\epsilon E\\) 得两侧切向场幅之间的关系，令 \\(H_y,E_x\\) 在界面连续，获得\n\\[\n\\frac{\\kappa_d}{\\epsilon_d}+\\frac{\\kappa_m}{\\epsilon_m}=0.\n\\]\n将两侧 κ 关系代入并消元，得到色散\n\\[\nk_x=k_0\\sqrt{\\frac{\\epsilon_d\\epsilon_m}{\\epsilon_d+\\epsilon_m}}.\n\\]\n这是理想无损平界面 TM 表面等离激元的波数。\n\n(3) 需要 kx 实且大于 \\(k_0\\sqrt{\\epsilon_d}\\)，保证介质侧指数衰减。由上式得到必要且充分的条件\n\\[\n\\epsilon_m<-\\epsilon_d.\n\\]\n此时金属侧 \\(\\kappa_m>0\\) 亦自动满足。如果 \\(-\\epsilon_d<\\epsilon_m<0\\)，不能同时有实传播波数及两侧束缚衰减。\n\n(4) 当 \\(\\epsilon_m\\to-\\infty\\)，\\(k_x\\to k_0\\sqrt{\\epsilon_d}\\)，表面模接近介质光线且介质侧穿透深度增大。当 \\(\\epsilon_m\\to-\\epsilon_d^-\\)，分母趋零，波数在无损局域模型中形式发散。真实金属的吸收、非局域性与电子量子效应会限制这一无限增大趋势，故不可将无损公式用于无限小的空间尺度。",
+    "answer": "\n\\kappa_d^2=k_x^2-\\epsilon_dk_0^2,\\qquad\n\\kappa_m^2=k_x^2-\\epsilon_mk_0^2.\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
     "id": "Q007",
     "topic": "近代物理",
     "title": "相对论两体衰变的能量区间与阈值",
@@ -3343,6 +3519,50 @@
     "question": "一维质量 m、谐振频率 ω>0 的量子谐振子受到微弱四次势扰动，完整哈密顿量为 H=p²/(2m)+mω²x²/2+λx⁴，其中 λ>0 足够小，假定非简并定态微扰论适用，普朗克常数 ℏ>0。\n(1) 写出谐振子升降算符表示的位置算符与无扰动能级；(2) 利用算符对易关系求任意 n 态的四次位置期望值；(3) 求能量的一阶微扰修正及基态、第一激发态能隙变化；(4) 依据宇称和升降算符说明 x⁴ 扰动只耦合哪些量子数差的态，并解释一阶能级修正为正的原因。",
     "solution": "(1) 令 \\(\\alpha=\\sqrt{\\hbar/(2m\\omega)}\\)，位置算符是 \\(x=\\alpha(a+a^\\dagger)\\)，满足 \\([a,a^\\dagger]=1\\)、\\(a|n\\rangle=\\sqrt n|n-1\\rangle\\)。无扰动哈密顿量 \\(H_0=\\hbar\\omega(a^\\dagger a+1/2)\\)，能级 \\(E_n^{(0)}=\\hbar\\omega(n+1/2)\\)。\n\n(2) 由对易关系可得\n\\[\n(a+a^\\dagger)^2=a^2+a^{\\dagger2}+2N+1.\n\\]\n在 n 态计算四次期望值，可写成 \\(\\langle n|[(a+a^\\dagger)^2]^2|n\\rangle\\)。因 \\(a^2\\) 和 \\(a^{\\dagger2}\\) 改变量子数 ±2，只有总改变量零的项留下：常数对角贡献 \\((2n+1)^2\\)，以及 \\(a^2a^{\\dagger2}\\) 与 \\(a^{\\dagger2}a^2\\) 的期望分别为 \\((n+1)(n+2)\\) 与 \\(n(n-1)\\)。相加得\n\\[\n\\langle n|x^4|n\\rangle\n=\\alpha^4[6n^2+6n+3]\n=3\\alpha^4(2n^2+2n+1).\n\\]\n\n(3) 非简并微扰论一阶能级修正 \\(\\Delta E_n^{(1)}=\\lambda\\langle n|x^4|n\\rangle\\)，因此\n\\[\nE_n\\simeq\\hbar\\omega(n+1/2)\n+3\\lambda\\left(\\frac{\\hbar}{2m\\omega}\\right)^2(2n^2+2n+1).\n\\]\n基态修正为 \\(3\\lambda\\alpha^4\\)，第一激发态为 \\(15\\lambda\\alpha^4\\)，所以第一能隙\n\\[\nE_1-E_0\\simeq\\hbar\\omega+12\\lambda\\alpha^4.\n\\]\n正四次势使高激发态增加的能量更多，能隙相应上升。\n\n(4) 因 x⁴ 是偶宇称算符，它只能连接同宇称谐振子态；将 \\((a+a^\\dagger)^4\\) 展开并正规序化，非对角矩阵元只可能有 \\(\\Delta n=\\pm2,\\pm4\\)，还包含 \\(\\Delta n=0\\) 的对角元，而奇数变化严格为零。一阶能级修正全部为正，因为 λ>0 且 \\(x^4\\ge0\\) 为正算符；扰动理论的有效性要求修正远小于相邻无扰动能级间隔。",
     "answer": "\n(a+a^\\dagger)^2=a^2+a^{\\dagger2}+2N+1.\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
+    "id": "Q030",
+    "topic": "近代物理",
+    "title": "Bell–CHSH 自旋单重态关联、联合概率与 Tsirelson 上界",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "tags": [
+      "量子纠缠",
+      "Pauli测量",
+      "Bell不等式",
+      "非定域相关"
+    ],
+    "question": "两个自旋半粒子处于完全纠缠的单重态 |ψ−⟩=(|↑↓⟩−|↓↑⟩)/sqrt(2)，分别位于空间分离的两端。两端可以沿任意单位向量 a、b 测量归一化自旋算符 a·σ 与 b·σ，每次输出 +1 或 −1。假设理想量子投影测量和完全探测效率。\n(1) 推导任一方向的局部自旋期望与两侧相关函数；(2) 求测量结果 s,t 的联合概率；(3) 选择四个共面测量方向，计算 CHSH 量达到绝对值 2sqrt(2) 的一种布局；(4) 证明经典局域隐变量的 CHSH 上界，并解释量子违背为何不支持超光速传信。",
+    "solution": "(1) 单重态的约化密度矩阵是 \\(\\rho_1=\\rho_2=I/2\\)，所以任意局域 Pauli 方向的平均值都为零。利用 \\(\\langle\\psi^-|\\sigma_{1i}\\sigma_{2j}|\\psi^-\\rangle=-\\delta_{ij}\\)，得到\n\\[\nE(a,b)=\\langle(a\\cdot\\sigma_1)(b\\cdot\\sigma_2)\\rangle=-a\\cdot b.\n\\]\n若两方向相同，测量结果总是反相关。\n\n(2) 测量结果 s、t 的投影算符分别为 \\([I+s(a\\cdot\\sigma)]/2\\) 及 \\([I+t(b\\cdot\\sigma)]/2\\)，故\n\\[\nP(s,t|a,b)=\\frac14[1-st(a\\cdot b)].\n\\]\n四个结果的概率非负且和为一；对任一端结果求边缘概率始终为1/2。\n\n(3) 定义 \\(S=E(a,b)+E(a,b')+E(a',b)-E(a',b')\\)。选择\n\\(a=(1,0),a'=(0,1),b=(1,1)/\\sqrt2,b'=(1,-1)/\\sqrt2\\)，则三个加项均为 \\(-1/\\sqrt2\\)，减掉的第四项为 \\(+1/\\sqrt2\\)，因此\n\\[\nS=-2\\sqrt2,\\qquad |S|=2\\sqrt2.\n\\]\n该值超出经典局域界2，但未超过量子 Tsirelson 上限。\n\n(4) 对经典局域隐变量，每次试验中预先确定的四个输出 \\(A,A',B,B'\\) 均为 ±1，那么 \\(A(B+B')+A'(B-B')=\\pm2\\)；取平均得到 |S|≤2。量子单重态的某些角度组合不满足此界，但每一端单独观察的结果概率仍为1/2，不依赖远端选择了 b 还是 b'，因而没有可控的超光速信号。",
+    "answer": "\nE(a,b)=\\langle(a\\cdot\\sigma_1)(b\\cdot\\sigma_2)\\rangle=-a\\cdot b.\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
+    "id": "Q031",
+    "topic": "近代物理",
+    "title": "二维电子 Landau 量子化、磁通轨道简并及整数霍尔电导",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "tags": [
+      "带电粒子量子化",
+      "Landau能级",
+      "磁通简并",
+      "量子霍尔效应"
+    ],
+    "question": "二维电子气位于 xy 平面，电子有效质量 m>0、电荷 −e，e>0，处于均匀沿 +z 磁场 B>0 中。忽略自旋 Zeeman 能、边缘电势和电子相互作用。使用矢势规范 A=(0,Bx,0)，样品面积记为 S，采用大面积近似。\n(1) 从最小耦合 Hamiltonian 分离 y 方向平面波，证明 x 方向成为量子谐振子；(2) 求 Landau 能级与磁长；(3) 利用 y 方向周期边界量子化求每个 Landau 级的轨道简并数；(4) 在整数 ν 个自旋极化 Landau 级被全部填满时，求霍尔电导大小并解释洁净态计数和实际量子霍尔平台的差别。",
+    "solution": "(1) 电子 Hamiltonian 是\n\\[\nH=\\frac1{2m}[p_x^2+(p_y+eBx)^2].\n\\]\n因 y 平移不变，可以取 \\(\\psi(x,y)=\\phi(x)e^{ik_yy}\\)，于是 \\(p_y\\to\\hbar k_y\\)，x 方向有效势为 \\(e^2B^2(x-x_c)^2/(2m)\\)，其中 \\(x_c=-\\hbar k_y/(eB)\\)。这与质量 m、频率 \\(\\omega_c=eB/m\\) 的谐振子完全等价。\n\n(2) 所有 Landau 能级为\n\\[\nE_n=\\hbar\\omega_c(n+1/2),\\quad n=0,1,2,\\ldots,\n\\qquad \\ell_B=\\sqrt{\\hbar/(eB)}.\n\\]\n波函数的横向特征长度为磁长 ℓB；能量不含 ky，因此轨道中心可连续变化并产生宏观简并。\n\n(3) 在 y 长度 Ly 的周期边界中 \\(k_y=2\\pi j/L_y\\)。相邻导引中心间距为 \\(\\Delta x_c=2\\pi\\hbar/(eBL_y)=2\\pi\\ell_B^2/L_y\\)。在 x 的样品长度 Lx 内允许的导引中心数为\n\\[\nN_\\Phi\\simeq\\frac{L_x}{\\Delta x_c}\n=\\frac{eB L_xL_y}{h}=\\frac{eBS}{h}.\n\\]\n这等于穿过样品的磁通除以磁通量子 h/e；忽略边缘取整误差。\n\n(4) 若 ν 个自旋极化的 Landau 级均满，电子二维面密度为 \\(n_{2D}=\\nu N_\\Phi/S=\\nu eB/h\\)。经典电磁漂移在无耗散稳态中满足霍尔电导大小 \\(n_{2D}e/B\\)，所以\n\\[\n|\\sigma_{xy}|=\\nu\\frac{e^2}{h}.\n\\]\n此结果体现量子化的占据态数与磁通简并；电子的符号决定霍尔电压方向。真实样品中观测宽阔整数平台还需要能隙、杂质局域态及低温等机制，不能仅用无杂质体相态计数证明整个平台宽度。",
+    "answer": "\nH=\\frac1{2m}[p_x^2+(p_y+eBx)^2].\n",
     "quality_status": "待独立复核",
     "tier": "advanced_composite",
     "revision": "composite-v2.0",
