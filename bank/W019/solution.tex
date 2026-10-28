@@ -1,0 +1,41 @@
+(1) 取时间因子 $e^{-i\omega t}$。质点处弦左右两段的横向张力合力为 $T[y_x(L/2^+,t)-y_x(L/2^-,t)]$，因此
+\[
+T[y_x(L/2^+,t)-y_x(L/2^-,t)]
+=M\,y_{tt}(L/2,t),
+\]
+另有 $y(L/2^-,t)=y(L/2^+,t)$。该条件对横向力取实际代数方向，不能误把导数强行设为连续。
+
+(2) 令 $\ell=L/2$、$k=\omega/c$。反对称模在中心有节点 $Y(\ell)=0$，左半区 $Y=A\sin(kx)$，故 $\sin(k\ell)=0$，即
+\[
+k_{\rm odd,n}=\frac{n\pi}{\ell}=\frac{2n\pi}{L},\quad n=1,2,\ldots.
+\]
+对称模左半区 $Y=A\sin(kx)$，右半区为 $Y=A\sin[k(L-x)]$。中心左右导数分别为 $Ak\cos(k\ell)$ 和 $-Ak\cos(k\ell)$，代入跳跃条件：
+\[
+-2TkA\cos(k\ell)=-M\omega^2A\sin(k\ell).
+\]
+故对称模的非零频率满足
+\[
+2Tk\cos(k\ell)=M\omega^2\sin(k\ell),\quad
+\cot(k\ell)=\frac{Mk}{2\mu}.
+\]
+
+(3) 反对称模质点恰不动，所受合力也因左右斜率相等而为零，因此频率与没有中心质点的相应节点模式相同。对一般模态，质点附加动能为 $M|\dot y(\ell)|^2/2$，故能量中的有效质量范数为
+\[
+\mathscr N=\mu\int_0^L|Y(x)|^2dx+M|Y(\ell)|^2>0.
+\]
+将波动方程乘以 $Y^*$ 并在中心两侧分部积分，利用端点固定和质点跳跃条件，得到
+\[
+\omega^2\mathscr N=T\int_0^L|Y'(x)|^2dx>0.
+\]
+所有非零模均严格稳定。
+
+(4) 当 $M\to0^+$，对称模的条件右端趋零，故最低对称根 $k\ell\to\pi/2$，频率 $\omega_{\rm even,0}\to\pi c/L$，恢复无点质量弦的最低模。当 $M\to\infty$ 时最低根趋近零，利用 $\cot\xi\sim1/\xi$：
+\[
+\frac1{k\ell}\simeq\frac{Mk}{2\mu}
+\quad\Longrightarrow\quad k^2\simeq\frac{2\mu}{M\ell}=\frac{4\mu}{ML}.
+\]
+故
+\[
+\omega_{\rm even,0}\sim 2\sqrt{\frac{T}{ML}}\to0.
+\]
+这是重质点缓慢移动、两半弦提供近似线性回复力的软模；若误以为 $M\to\infty$ 时所有对称模都简单变成固定中点节点，会漏掉此低频分支。
