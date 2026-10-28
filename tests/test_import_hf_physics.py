@@ -2,6 +2,8 @@ import json,sys,tempfile,unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"scripts"))
 import import_hf_physics as hf
+from unittest.mock import patch
+from urllib.error import HTTPError
 import discover_hf_physics as discover
 class Tests(unittest.TestCase):
  def test_classes(self):
@@ -27,3 +29,20 @@ class Tests(unittest.TestCase):
   with tempfile.TemporaryDirectory() as d:
    report=discover.scan(lambda q:[{"id":"UGPhysics/ugphysics","tags":["license:cc-by-nc-sa-4.0"]}],Path(d)/"hf.json")
    self.assertEqual(report["records"][0]["status"],"NC_restricted_review")
+
+ def test_502_retry_then_resume_without_changing_row_cursor(self):
+  class Reply:
+   def __enter__(self):return self
+   def __exit__(self,*args):return False
+   def read(self,n):return b'{"success":true}'
+  with patch.object(hf,"urlopen",side_effect=[
+          HTTPError("mock",502,"bad gateway",None,None),Reply()]) as opener, patch.object(hf.time,"sleep") as sleeper:
+   self.assertEqual(hf.api("https://example.org/rows")["success"],True)
+   self.assertEqual(opener.call_count,2)
+   self.assertEqual(sleeper.call_count,1)
+ def test_404_is_not_retried(self):
+  with patch.object(hf,"urlopen",side_effect=HTTPError("mock",404,"missing",None,None)) as opener, patch.object(hf.time,"sleep") as sleeper:
+   with self.assertRaises(HTTPError):
+    hf.api("https://example.org/not-found")
+   self.assertEqual(opener.call_count,1)
+   self.assertEqual(sleeper.call_count,0)

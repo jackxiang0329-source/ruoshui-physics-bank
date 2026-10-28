@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Hugging Face physics-question importer: staging only; never exam-ready."""
-import argparse, hashlib, json, re, unicodedata
+import argparse, hashlib, json, re, time, unicodedata
+from urllib.error import HTTPError, URLError
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlencode
@@ -25,10 +26,19 @@ def category(s):
     return next((label for label,hints in MODULES.items() if any(x in s for x in hints)),"待分类")
 def api(url,timeout=20):
     req=Request(url,headers={"Accept":"application/json","User-Agent":"Ruoshui-Physics-OER/2.2"})
-    with urlopen(req,timeout=timeout) as resp:
-        raw=resp.read(6000001)
-    if len(raw)>6000000:raise ValueError("json_response_too_large")
-    return json.loads(raw.decode("utf-8"))
+    for attempt in range(3):
+        try:
+            with urlopen(req,timeout=timeout) as resp:
+                raw=resp.read(6000001)
+            if len(raw)>6000000:raise ValueError("json_response_too_large")
+            return json.loads(raw.decode("utf-8"))
+        except HTTPError as exc:
+            if attempt==2 or exc.code not in (429,500,502,503,504):
+                raise
+        except (URLError,TimeoutError):
+            if attempt==2:
+                raise
+        time.sleep(1.5*(attempt+1))
 def verified_revision(timeout):
     m=api("https://huggingface.co/api/datasets/"+DATASET,timeout)
     license_signal=(m.get("cardData") or {}).get("license")
