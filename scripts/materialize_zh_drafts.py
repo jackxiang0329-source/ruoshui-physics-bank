@@ -71,6 +71,32 @@ def create(root=ROOT):
           "- 不含任何未经审定的标准答案。\n")
         dest.write_text(body,encoding="utf-8")
         paths.append(str(dest.relative_to(root)))
+    # Consolidate all source-pinned Chinese drafts within the existing module tree.
+    from export_zh_review import validate as validate_additional
+    extra = validate_additional(root)
+    module_codes = {m["name"]: m["code"] for m in t["modules"]}
+    for item in extra:
+        pid = item["id"]
+        rel = ("localized/zh_CN/" + module_codes[item["module"]]
+               + "/supplementary/" + pid + ".md")
+        dest = root / rel
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        raw = (root / item["raw_path"]).read_text(encoding="utf-8")
+        english = raw.split("\n---\n", 1)[0].strip()
+        body = (
+            "# " + pid + "｜" + item["title_zh"] + "\n\n"
+            "**学科：** " + item["module"] + "　**知识点：** " + item["subtopic"] + "\n\n"
+            "**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。\n\n"
+            "## 中文译题\n\n" + item["question_zh"] + "\n\n"
+            "## 英文原题（存档摘录）\n\n" + english + "\n\n"
+            "## 来源\n\n- 原件：" + item["raw_path"] + "\n"
+            "- 原件 Git blob SHA：" + item["raw_blob_sha"] + "\n"
+            "- 上游署名与许可证见原件；尚未完成单题权利审查。\n"
+        )
+        if item.get("notes"):
+            body += "- 审校提示：" + item["notes"] + "\n"
+        dest.write_text(body, encoding="utf-8")
+        paths.append(rel)
     report={"translated_drafts":len(paths),"original_hash_checks_passed":len(paths),
             "independently_bilingual_approved":0,"exam_ready":0,"files":paths}
     output=root/"localized/zh_CN/中文译稿报告.json"

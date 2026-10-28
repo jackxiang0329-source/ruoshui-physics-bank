@@ -31,6 +31,8 @@ class OrganizationTests(unittest.TestCase):
     def test_drafts_and_full_index(self):
         a=localize.create(ROOT)
         self.assertGreaterEqual(a["translated_drafts"],88)
+        self.assertEqual(a["translated_drafts"],100)
+        self.assertTrue((ROOT/"localized/zh_CN/thermodynamics/supplementary/CP-00898.md").exists())
         b=catalog.generate(ROOT)
         self.assertGreaterEqual(b["candidate_total"],17000)
         self.assertEqual(a["translated_drafts"],b["translated_drafts"])
