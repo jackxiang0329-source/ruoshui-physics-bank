@@ -413,6 +413,52 @@
     "revision": "composite-v1.1"
   },
   {
+    "id": "W010",
+    "topic": "振动与波动",
+    "title": "受迫阻尼振子的幅值共振、功率共振与精确带宽",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 50,
+    "question": "质量 $m>0$、弹簧劲度系数 $k>0$、线性黏滞阻力系数 $b>0$ 的一维振子受谐波力 $F_0\\cos\\omega t$ 驱动，$F_0>0,\\omega>0$。经过足够长时间后，瞬态衰减，只研究稳定周期响应。\n(1) 由 $m\\ddot x+b\\dot x+kx=F_0\\cos\\omega t$ 求振幅 $X(\\omega)$ 和相位滞后 $\\delta(\\omega)$；(2) 求平均输入功率并证明其最大值对应的驱动频率为无阻尼固有频率 $\\omega_0=\\sqrt{k/m}$，给出峰值功率；(3) 在 $b^2<2km$ 下求位移振幅共振的频率，解释其为何不同于功率峰频率，并讨论 $b^2\\ge2km$ 的情况；(4) 严格求功率共振峰的两个半高频率与精确全宽，给出小阻尼极限。",
+    "solution": "(1) 令稳态解 $x(t)=\\Re[\\tilde X e^{i\\omega t}]$。代入方程得到复振幅\n\\[\n\\tilde X=\\frac{F_0}{k-m\\omega^2+i b\\omega}.\n\\]\n写成 $x=X\\cos(\\omega t-\\delta)$，则\n\\[\nX=\\frac{F_0}{\\sqrt{(k-m\\omega^2)^2+b^2\\omega^2}},\\qquad\n\\delta=\\operatorname{atan2}(b\\omega,k-m\\omega^2)\\in(0,\\pi).\n\\]\n这种相位取值能正确描述穿过共振时相位由零趋向 $\\pi$。\n\n(2) 平均输入功率由 $\\overline P=\\langle F_0\\cos\\omega t\\,\\dot x\\rangle$ 得\n\\[\n\\overline P(\\omega)=\\frac{F_0^2 b\\omega^2}{2[(k-m\\omega^2)^2+b^2\\omega^2]}.\n\\]\n也可用耗散功率 $b\\langle\\dot x^2\\rangle=b\\omega^2X^2/2$ 独立计算。由于分母不小于 $b^2\\omega^2$，$\\overline P\\le F_0^2/(2b)$；等号恰在 $k-m\\omega^2=0$，即 $\\omega=\\omega_0$ 取得。\n\n(3) 对振幅分母的平方 $D(\\omega)=(k-m\\omega^2)^2+b^2\\omega^2$ 求导，\n\\[\nD'(\\omega)=2\\omega[2m(m\\omega^2-k)+b^2].\n\\]\n当 $b^2<2km$，非零的振幅峰频率\n\\[\n\\omega_X=\\sqrt{\\frac{k}{m}-\\frac{b^2}{2m^2}}<\\omega_0.\n\\]\n若 $b^2\\ge2km$，$D$ 对 $\\omega>0$ 单调非降，振幅随频率下降（最大静态极限在 $\\omega\\to0^+$），但功率峰仍位于 $\\omega_0$。两者物理机制不同：一个比较位移，一个比较能量输运。\n\n(4) 半功率方程 $\\overline P(\\omega)=F_0^2/(4b)$ 等价于\n\\[\n(k-m\\omega^2)^2=b^2\\omega^2 .\n\\]\n两条正频率解恰为\n\\[\n\\omega_-=\\frac{\\sqrt{b^2+4km}-b}{2m},\\qquad\n\\omega_+=\\frac{\\sqrt{b^2+4km}+b}{2m}.\n\\]\n故精确半高全宽 $\\Delta\\omega=\\omega_+-\\omega_-=b/m$，而不是仅在弱阻尼时才成立。弱阻尼 $b\\ll2\\sqrt{km}$ 时 $\\omega_\\pm\\simeq\\omega_0\\pm b/(2m)$；对应品质因子 $Q_{\\mathrm{osc}}=\\omega_0/\\Delta\\omega=\\sqrt{km}/b$。",
+    "answer": "\\omega_X=\\sqrt{k/m-b^2/(2m^2)},\\quad \\omega_{\\pm}=\\frac{\\sqrt{b^2+4km}\\pm b}{2m},\\quad\\Delta\\omega=b/m",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "受迫振动复振幅",
+      "阻尼耗散",
+      "双重共振频率",
+      "半功率带宽",
+      "渐近极限"
+    ],
+    "assumptions_review": "已初步推导与参数极限核对，尚无第二人独立专家审核",
+    "checks": [],
+    "revision": "composite-v1.2"
+  },
+  {
+    "id": "W011",
+    "topic": "振动与波动",
+    "title": "双原子弹簧链的色散关系、声学支和带隙",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 60,
+    "question": "无限长一维链每个原胞含质量分别为 $m_1,m_2>0$ 的两粒子，相邻粒子均由劲度系数 $k>0$ 的相同线性弹簧连接。设原胞周期为 $a>0$，令 $u_n,v_n$ 分别为第 $n$ 个原胞两粒子的纵向小位移，忽略一切外力、阻尼和非线性。Bloch 波数取第一布里渊区 $-\\pi/a\\le q\\le\\pi/a$。\n(1) 建立离散运动方程并用 Bloch 形式推导两支 $\\omega_\\pm(q)$ 的色散关系；(2) 求区中心 $q=0$ 与区边缘 $q=\\pi/a$ 的本征频率，辨认声学支和光学支；(3) 在 $m_1\\ne m_2$ 时证明存在有限频率禁带，并说明何种参数下禁带闭合；(4) 求声学支长波相速度极限，检验 $m_1=m_2=m$ 时声速与单原子链的关系。",
+    "solution": "(1) 作用在 $u_n$ 的两根弹簧分别连向 $v_n,v_{n-1}$，而 $v_n$ 连向 $u_n,u_{n+1}$，故\n\\[\nm_1\\ddot u_n=k(v_n+v_{n-1}-2u_n),\\qquad\nm_2\\ddot v_n=k(u_n+u_{n+1}-2v_n).\n\\]\n代入 $u_n=Ue^{i(nqa-\\omega t)}$、$v_n=Ve^{i(nqa-\\omega t)}$，得到系数矩阵\n\\[\n\\begin{pmatrix}2k-m_1\\omega^2&-k(1+e^{-iqa})\\\\-k(1+e^{iqa})&2k-m_2\\omega^2\\end{pmatrix}\\binom UV=0.\n\\]\n行列式为零，即\n\\[\nm_1m_2\\omega^4-2k(m_1+m_2)\\omega^2+4k^2\\sin^2(qa/2)=0.\n\\]\n两根正平方频率为\n\\[\n\\omega_\\pm^2(q)=\\frac{k}{m_1m_2}\\left[m_1+m_2\\pm\\sqrt{(m_1+m_2)^2-4m_1m_2\\sin^2(qa/2)}\\right].\n\\]\n\n(2) $q=0$ 时 $\\omega_-(0)=0$，是同相平移极限的声学支；$\\omega_+^2(0)=2k(m_1+m_2)/(m_1m_2)$，为光学支。区边界 $\\sin^2(qa/2)=1$，故\n\\[\n\\omega_-^2(\\pi/a)=\\frac{2k}{\\max(m_1,m_2)},\\qquad\n\\omega_+^2(\\pi/a)=\\frac{2k}{\\min(m_1,m_2)}.\n\\]\n\n(3) 因两支均随 $\\sin^2(qa/2)$ 单调变化，声学支上界是 $\\sqrt{2k/\\max(m_1,m_2)}$，光学支下界是 $\\sqrt{2k/\\min(m_1,m_2)}$。若质量不同，两端严格分离，中间无传播本征频率，即出现禁带。$m_1=m_2$ 时两频率在折叠的区边界相遇，禁带闭合；这不是“无波动”，而是原胞可进一步缩小的结果。\n\n(4) 在 $q\\to0$ 时 $\\sin(qa/2)\\sim qa/2$。将二次根式对 $q$ 展开可得\n\\[\n\\omega_-^2(q)=\\frac{k a^2}{2(m_1+m_2)}q^2+O(q^4),\\qquad\nc_s=\\lim_{q\\to0^+}\\omega_-(q)/q=a\\sqrt{\\frac{k}{2(m_1+m_2)}}.\n\\]\n若两质量相等为 $m$，则 $c_s=(a/2)\\sqrt{k/m}$，与粒子间实际间隔 $a/2$ 的单原子弹簧链声速完全一致。",
+    "answer": "\\omega_\\pm^2=\\frac{k}{m_1m_2}\\left[m_1+m_2\\pm\\sqrt{(m_1+m_2)^2-4m_1m_2\\sin^2(qa/2)}\\right]",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "离散动力学",
+      "Bloch 定理",
+      "二阶本征值",
+      "声学与光学支",
+      "长波极限"
+    ],
+    "assumptions_review": "已初步推导与参数极限核对，尚无第二人独立专家审核",
+    "checks": [],
+    "revision": "composite-v1.2"
+  },
+  {
     "id": "O007",
     "topic": "光学",
     "title": "分离薄透镜系统的矩阵成像与无焦条件",
@@ -482,6 +528,52 @@
     "revision": "composite-v1.1"
   },
   {
+    "id": "O010",
+    "topic": "光学",
+    "title": "高斯光束通过薄透镜后的复束参数与束腰位置",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 55,
+    "question": "在均匀无耗散介质中传播的轴对称单模近轴高斯光束，其真空波长为 $\\lambda_0>0$、介质折射率为 $n>0$。原束腰半径 $w_0$ 位于 $z=0$，瑞利长度 $z_R=\\pi n w_0^2/\\lambda_0$。一理想薄凸透镜焦距 $f>0$ 位于 $z=d>0$，两侧介质相同，忽略像差、衍射外的损耗。\n(1) 写出透镜前复束参数 $q_{\\rm in}$、束宽 $w(z)$ 和波前曲率 $R(z)$；(2) 用自由传播与薄透镜 ABCD 变换求紧靠透镜后的 $q_{\\rm out}$，分离实部和虚部；(3) 求新束腰相对透镜的位置 $z_w$、新瑞利长度 $z_R'$ 与束腰半径 $w_0'$，判断何时新束腰位于透镜右侧；(4) 讨论 $z_R\\gg\\max(d,f)$ 的近似准直输入极限，并核对维度与焦距标度。",
+    "solution": "(1) 以原束腰为零点，复束参数为 $q(z)=z+iz_R$，于是透镜前\n\\[\nq_{\\rm in}=d+iz_R,\\quad w(z)=w_0\\sqrt{1+z^2/z_R^2},\\quad\nR(z)=z\\left(1+\\frac{z_R^2}{z^2}\\right).\n\\]\n在 $z=0$ 处曲率半径取极限为无穷大。参数遵循 $1/q=1/R-i\\lambda_0/(\\pi n w^2)$。\n\n(2) 薄透镜 ABCD 矩阵为 $\\begin{psmallmatrix}1&0\\\\-1/f&1\\end{psmallmatrix}$，故\n\\[\nq_{\\rm out}=\\frac{q_{\\rm in}}{1-q_{\\rm in}/f}\n=\\frac{f(d+iz_R)}{f-d-iz_R}.\n\\]\n乘以共轭分母并令 $D=(f-d)^2+z_R^2>0$ 得\n\\[\n\\Re q_{\\rm out}=\\frac{f[d(f-d)-z_R^2]}D,\\qquad\n\\Im q_{\\rm out}=\\frac{f^2z_R}D>0.\n\\]\n后一个正性保证新高斯束在相同介质中仍有物理上正的瑞利长度。\n\n(3) 距透镜向右传播 $s$ 后 $q(s)=q_{\\rm out}+s$。新束腰的定义是 $\\Re q(s)=0$，故\n\\[\nz_w=-\\Re q_{\\rm out}=\\frac{f[z_R^2-d(f-d)]}D,\\qquad\nz_R'=\\frac{f^2z_R}D.\n\\]\n由 $z_R'=\\pi n(w_0')^2/\\lambda_0$，\n\\[\nw_0'=w_0\\frac{f}{\\sqrt D}.\n\\]\n在 $z_R^2>d(f-d)$ 时 $z_w>0$，束腰位于镜后；等号时就在镜面；若不等式反向，束腰位于透镜左侧（回溯意义上的新束腰），并不能误当成镜后实际先汇聚再发散。\n\n(4) 若 $z_R\\gg\\max(d,f)$，则 $D\\sim z_R^2$，所以 $z_w\\to f$、$z_R'\\sim f^2/z_R$、$w_0'\\sim f\\lambda_0/(\\pi n w_0)$。最后一式显示入射束越宽，理想聚焦束腰越小；但当束腰接近波长时近轴模型不再适用。各式中 $z_w,z_R',w_0'$ 均具有长度量纲。",
+    "answer": "z_w=\\frac{f[z_R^2-d(f-d)]}{(f-d)^2+z_R^2},\\quad z_R'=\\frac{f^2z_R}{(f-d)^2+z_R^2},\\quad w_0'=\\frac{fw_0}{\\sqrt{(f-d)^2+z_R^2}}",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "高斯光束复参数",
+      "瑞利长度",
+      "薄透镜 ABCD",
+      "束腰变换",
+      "聚焦极限"
+    ],
+    "assumptions_review": "已初步推导与参数极限核对，尚无第二人独立专家审核",
+    "checks": [],
+    "revision": "composite-v1.2"
+  },
+  {
+    "id": "O011",
+    "topic": "光学",
+    "title": "有限谱宽迈克耳孙干涉的相干包络与条纹可见度",
+    "kind": "综合推导题",
+    "level": 4,
+    "estimated_minutes": 50,
+    "question": "一理想迈克耳孙干涉仪在空气中工作，光源为中心频率 $\\nu_0>0$ 的近似准单色非偏振光。假定各频率分量互不相干，光强谱在 $[\\nu_0-\\Delta\\nu/2,\\nu_0+\\Delta\\nu/2]$ 上均匀分布，区间外为零，且 $0<\\Delta\\nu\\ll\\nu_0$。两臂返回到同一探测点时，单独打开任一臂的积分光强相同为 $I_0$。定义两臂之间光程差 $\\ell$、时间差 $\\tau=\\ell/c$。\n(1) 对频率积分，严格求总探测光强 $I(\\tau)$；(2) 求条纹可见度、第一次完全失去可见度时的光程差，以及为何之后仍可能出现旁瓣；(3) 当移动一面反射镜距离 $x$ 时求 $\\ell$ 的变化，得到中心条纹周期与第一个可见度零点对应的镜面位移；(4) 以 $\\lambda_0=c/\\nu_0$ 和窄带谱宽 $\\Delta\\lambda$ 表示一阶相干长度，说明近似的条件。",
+    "solution": "(1) 对每个频率 $\\nu$，两臂独立光强相同，干涉项正比 $\\cos(2\\pi\\nu\\tau)$。将平顶归一化光谱平均，得到\n\\[\nI(\\tau)=2I_0\\left[1+\\frac1{\\Delta\\nu}\\int_{\\nu_0-\\Delta\\nu/2}^{\\nu_0+\\Delta\\nu/2}\\cos(2\\pi\\nu\\tau)\\,d\\nu\\right].\n\\]\n利用指数积分或积化和差，得\n\\[\nI(\\tau)=2I_0[1+\\operatorname{sinc}(\\pi\\Delta\\nu\\tau)\\cos(2\\pi\\nu_0\\tau)],\n\\quad \\operatorname{sinc}(x)=\\sin x/x,\\ \\operatorname{sinc}(0)=1.\n\\]\n注意两频率间不相干不代表两臂同一频率分量不能干涉。\n\n(2) 对固定 $\\tau$ 的局部条纹相位扫描，可见度定义为 $(I_{\\max}-I_{\\min})/(I_{\\max}+I_{\\min})$，于是\n\\[\n\\mathcal V(\\tau)=|\\operatorname{sinc}(\\pi\\Delta\\nu\\tau)|.\n\\]\n首次零点 $\\tau_1=1/\\Delta\\nu$，对应光程差 $\\ell_1=c/\\Delta\\nu$。由于理想平顶谱的傅里叶变换是带旁瓣的 sinc 函数，过零后可见度会重新上升并减弱，故“相干长度”不代表之后永远严格不相干。旁瓣的符号改变相当于载波干涉条纹反相。\n\n(3) 镜面前后传播导致光程差变化 $\\ell\\mapsto\\ell+2x$，因此相位变化 $\\Delta\\phi=4\\pi\\nu_0x/c$；中心条纹变化一个周期对应\n\\[\n\\Delta x_{\\rm fringe}=\\frac{c}{2\\nu_0}=\\frac{\\lambda_0}{2}.\n\\]\n从零光程差移动到第一个相干零点对应 $x_1=c/(2\\Delta\\nu)$，比载波条纹周期长约 $\\nu_0/\\Delta\\nu\\gg1$ 倍。\n\n(4) 频率与波长关系 $\\nu=c/\\lambda$，窄带一阶微分给 $\\Delta\\nu\\simeq c\\Delta\\lambda/\\lambda_0^2$。故\n\\[\n\\ell_c=\\frac c{\\Delta\\nu}\\simeq\\frac{\\lambda_0^2}{\\Delta\\lambda}.\n\\]\n这里 $\\Delta\\lambda$ 必须相对中心波长很小；若谱宽很大，不可把非线性换元后的波长谱仍视为严格平顶。该相干长度定义特指本模型的第一包络零点，不能不加说明地用于任意谱形。",
+    "answer": "I(\\tau)=2I_0[1+\\operatorname{sinc}(\\pi\\Delta\\nu\\tau)\\cos(2\\pi\\nu_0\\tau)],\\quad \\ell_c=\\frac c{\\Delta\\nu}\\simeq\\frac{\\lambda_0^2}{\\Delta\\lambda}",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "时间相干",
+      "傅里叶积分",
+      "迈克耳孙干涉",
+      "sinc 包络",
+      "谱宽与相干长度"
+    ],
+    "assumptions_review": "已初步推导与参数极限核对，尚无第二人独立专家审核",
+    "checks": [],
+    "revision": "composite-v1.2"
+  },
+  {
     "id": "Q007",
     "topic": "近代物理",
     "title": "相对论两体衰变的能量区间与阈值",
@@ -549,5 +641,51 @@
     "assumptions_review": "建模、守恒和极限已初检；需第二人独立复核",
     "checks": [],
     "revision": "composite-v1.1"
+  },
+  {
+    "id": "Q010",
+    "topic": "近代物理",
+    "title": "恒定固有加速度运动的世界线、快度与双时钟",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 60,
+    "question": "一维平直时空中质量恒定的飞船在实验室惯性系初始位置 $x(0)=0$，初始速度 $v(0)=0$，随后朝 $+x$ 方向运动。乘员的加速度计始终读出正的恒定**固有加速度** $\\alpha>0$；忽略引力。实验室系坐标时为 $t$，飞船钟记录固有时为 $\\tau$，光速为 $c$。\n(1) 用快度 $\\eta$ 建立固有加速度方程并求 $\\eta(\\tau),v(\\tau)$；(2) 积分得到精确的 $t(\\tau),x(\\tau)$，消去 $\\tau$ 写出 $x(t)$；(3) 若实验室要求飞船到达距离 $D>0$，求实验室经历的时间、乘员的固有时间及到达时速度；(4) 求 $\\alpha t/c\\ll1$ 的经典极限，并说明恒定固有加速度为何不能等同于实验室坐标加速度恒定。",
+    "solution": "(1) 在一维运动中定义快度 $\\eta=\\operatorname{artanh}(v/c)$，则\n\\[\nv=c\\tanh\\eta,\\qquad \\frac{dt}{d\\tau}=\\cosh\\eta,\\qquad\n\\frac{dx}{d\\tau}=c\\sinh\\eta.\n\\]\n固有加速度的大小为 $\\alpha=c\\,d\\eta/d\\tau$；初始静止条件 $\\eta(0)=0$，因此 $\\eta(\\tau)=\\alpha\\tau/c$，$v(\\tau)=c\\tanh(\\alpha\\tau/c)$，速度始终严格低于 $c$。\n\n(2) 将上式对固有时积分并施加初值：\n\\[\nt(\\tau)=\\frac c\\alpha\\sinh\\frac{\\alpha\\tau}{c},\\qquad\nx(\\tau)=\\frac{c^2}{\\alpha}\\left(\\cosh\\frac{\\alpha\\tau}{c}-1\\right).\n\\]\n由于 $\\cosh^2-\\sinh^2=1$，消去 $\\tau$：\n\\[\n\\left(1+\\frac{\\alpha x}{c^2}\\right)^2-\\left(\\frac{\\alpha t}{c}\\right)^2=1,\\quad\nx(t)=\\frac{c^2}{\\alpha}\\left[\\sqrt{1+\\left(\\frac{\\alpha t}{c}\\right)^2}-1\\right].\n\\]\n这是匀固有加速度运动的双曲线世界线；坐标时间与固有时不可混为一谈。\n\n(3) 设 $h=1+\\alpha D/c^2>1$，由 $\\cosh(\\alpha\\tau_D/c)=h$，得到\n\\[\n\\tau_D=\\frac c\\alpha\\operatorname{arcosh}h,\\quad\nt_D=\\frac c\\alpha\\sqrt{h^2-1},\\quad\nv_D=c\\sqrt{1-h^{-2}}.\n\\]\n实验室时间总比乘员钟的固有时长；该表达式也可用恒定固有加速度的动量增长独立检查。\n\n(4) 当 $\\alpha t/c\\ll1$，开方展成 $x(t)=\\alpha t^2/2+O(\\alpha^3t^4/c^2)$，速度 $v(t)=\\alpha t/\\sqrt{1+(\\alpha t/c)^2}\\simeq\\alpha t$。实际实验室坐标加速度\n\\[\n\\frac{dv}{dt}=\\frac{\\alpha}{[1+(\\alpha t/c)^2]^{3/2}}\n=\\alpha/\\gamma^3\n\\]\n随时间衰减，而乘员测得的固有加速度保持不变，这正是两种“恒加速度”概念的区别。",
+    "answer": "x(t)=\\frac{c^2}{\\alpha}[\\sqrt{1+(\\alpha t/c)^2}-1],\\quad \\tau_D=\\frac c\\alpha\\operatorname{arcosh}(1+\\alpha D/c^2)",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "狭义相对论",
+      "固有加速度",
+      "双曲函数与快度",
+      "固有时",
+      "非相对论极限"
+    ],
+    "assumptions_review": "已初步推导与参数极限核对，尚无第二人独立专家审核",
+    "checks": [],
+    "revision": "composite-v1.2"
+  },
+  {
+    "id": "Q011",
+    "topic": "近代物理",
+    "title": "有失谐双能级系统的拉比振荡与量子态保真度",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 55,
+    "question": "在旋转参考系与旋波近似成立的条件下，受相干经典场驱动的两能级系统可用恒定哈密顿量\n\\[\nH=\\frac{\\hbar}{2}\\begin{pmatrix}\\Delta&\\Omega\\\\\\Omega&-\\Delta\\end{pmatrix},\n\\]\n表示，其中 $\\Omega>0$ 为耦合频率、$\\Delta\\in\\mathbb R$ 为失谐；基底按 $|e\\rangle=(1,0)^T,|g\\rangle=(0,1)^T$ 排列。系统初态为 $|g\\rangle$，不存在衰减与外部退相干。\n(1) 求本征能量及归一化对角化方法，写出严格的幺正演化算符；(2) 求任意时刻激发态概率及其最大值；(3) 在 $\\Delta=0$ 时求最短完全反转（$\\pi$ 脉冲）时间，并解释失谐时为何一般无法完整反转；(4) 求长时间平均激发态概率，并讨论 $|\\Delta|\\gg\\Omega$ 的极限，检验归一化与能量守恒。",
+    "solution": "(1) 写 $H=\\hbar(\\Omega\\sigma_x+\\Delta\\sigma_z)/2$。因泡利矩阵反对易且 $\\sigma_x^2=\\sigma_z^2=I$，\n\\[\nH^2=\\frac{\\hbar^2}{4}(\\Omega^2+\\Delta^2)I.\n\\]\n设 $\\Omega_R=\\sqrt{\\Omega^2+\\Delta^2}$，本征能量是 $\\pm\\hbar\\Omega_R/2$；哈密顿量厄米，可选正交归一本征基。直接按偶、奇次幂展开矩阵指数给\n\\[\nU(t)=e^{-iHt/\\hbar}=\\cos\\frac{\\Omega_R t}{2}\\,I-\ni\\sin\\frac{\\Omega_R t}{2}\\frac{\\Omega\\sigma_x+\\Delta\\sigma_z}{\\Omega_R}.\n\\]\n由于 $\\frac{\\Omega\\sigma_x+\\Delta\\sigma_z}{\\Omega_R}$ 为厄米且平方等于单位阵，可立刻验证 $U^\\dagger U=I$。\n\n(2) 对初态 $|g\\rangle$ 作用，得到\n\\[\n|\\psi(t)\\rangle=-i\\frac{\\Omega}{\\Omega_R}\\sin\\frac{\\Omega_Rt}{2}|e\\rangle+\n\\left[\\cos\\frac{\\Omega_Rt}{2}+i\\frac{\\Delta}{\\Omega_R}\\sin\\frac{\\Omega_Rt}{2}\\right]|g\\rangle.\n\\]\n故\n\\[\nP_e(t)=\\frac{\\Omega^2}{\\Omega^2+\\Delta^2}\\sin^2\\frac{\\Omega_Rt}{2},\\qquad\nP_{e,\\max}=\\frac{\\Omega^2}{\\Omega^2+\\Delta^2}.\n\\]\n两个振幅平方和为一，严格满足量子态归一化。\n\n(3) 共振 $\\Delta=0$ 时 $\\Omega_R=\\Omega$，首次 $P_e=1$ 出现在 $t_\\pi=\\pi/\\Omega$，称为 $\\pi$ 脉冲。只要 $\\Delta\\ne0$，前面的幅度因子小于一，因此无论选何时长都无法在此恒定驱动模型中实现完全反转；不能通过延长作用时间消除失谐造成的最大保真度下降。\n\n(4) 任意固定 $\\Omega_R>0$ 下，$\\sin^2(\\Omega_R t/2)$ 的长时间平均为 $1/2$，故\n\\[\n\\overline{P_e}=\\frac{\\Omega^2}{2(\\Omega^2+\\Delta^2)}.\n\\]\n强失谐 $|\\Delta|\\gg\\Omega$ 时 $P_{e,\\max}\\sim\\Omega^2/\\Delta^2\\ll1$。由于哈密顿量不含时间且无耗散，$d\\langle H\\rangle/dt=0$；初态 $\\langle H\\rangle=-\\hbar\\Delta/2$，代入上述振幅亦给出相同常数。演化频率随失谐增大，但跃迁幅度减小，两者不可混淆。",
+    "answer": "\\Omega_R=\\sqrt{\\Omega^2+\\Delta^2},\\quad P_e(t)=\\frac{\\Omega^2}{\\Omega_R^2}\\sin^2\\frac{\\Omega_Rt}{2},\\quad t_{\\pi}=\\pi/\\Omega\\ (\\Delta=0)",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "两能级哈密顿量",
+      "泡利矩阵指数",
+      "量子跃迁概率",
+      "失谐与共振",
+      "时间平均"
+    ],
+    "assumptions_review": "已初步推导与参数极限核对，尚无第二人独立专家审核",
+    "checks": [],
+    "revision": "composite-v1.2"
   }
 ]
