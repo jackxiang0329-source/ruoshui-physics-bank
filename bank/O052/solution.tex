@@ -1,0 +1,7 @@
+(1) Fermat 光程泛函为 \(\mathcal S=\int n(x)\sqrt{1+x'^2}\,dz\)，变分给 \(d[nx'/\sqrt{1+x'^2}]/dz=(dn/dx)\sqrt{1+x'^2}\)。在 \(|x'|\ll1\)、\(\alpha x^2\ll1\) 下 \(n\approx n_0\) 且 \(dn/dx=-n_0\alpha x\)，故 \(n_0x''\approx-n_0\alpha x\)，得到 \(x''+\alpha x=0\)。折射率在轴上最大、向外减小，光线被向轴心折回；如果折射率梯度符号反过来，则会得到指数散焦。
+
+(2) 令 \(\kappa=\sqrt\alpha\)，线性方程的通解为 \(x(z)=x_0\cos(\kappa z)+(x'_0/\kappa)\sin(\kappa z)\)，\(x'(z)=-\kappa x_0\sin(\kappa z)+x'_0\cos(\kappa z)\)。因此 \(\binom{x(z)}{x'(z)}=\begin{pmatrix}\cos\kappa z&\sin\kappa z/\kappa\\-\kappa\sin\kappa z&\cos\kappa z\end{pmatrix}\binom{x_0}{x_0'}\)。该 ABCD 矩阵行列式为 \(\cos^2\kappa z+\sin^2\kappa z=1\)，保持近轴射线的辛面积，体现无损线性传播。
+
+(3) 射线轨迹的振荡周期（节距）为 \(P=2\pi/\kappa\)。对同方向的入射平行光束，\(x'_0=0\)，有 \(x(z)=x_0\cos(\kappa z)\)，所以所有入射横向位置在第一 \(z_f=\pi/(2\kappa)\) 处穿过轴线。这里的聚焦针对入射角相同而位置不同的平行光束；对轴上点源 \(x_0=0\) 而入射斜率各异，\(x(z)=x'_0\sin(\kappa z)/\kappa\)，第一非零回到轴线的位置是 \(z=\pi/\kappa\)，二者不可混淆。
+
+(4) 把射线方程乘以 \(2x'\)，得到 \(d(x'^2+\alpha x^2)/dz=2x'(x''+\alpha x)=0\)，故准光学不变量 \(J=x'^2+\alpha x^2\)，表示横向斜率与轴外位移之间的周期性能量交换。其两个加数均无量纲，检查了 \(\alpha\) 必须具有长度倒平方的量纲。当 \(x'\) 或 \(\alpha x^2\) 不小，原始 Fermat 方程的非线性分母和空间变化的折射率不再可忽略，周期与精确聚焦条件会偏离线性 GRIN 公式。

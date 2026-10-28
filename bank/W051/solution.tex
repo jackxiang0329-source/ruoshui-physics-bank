@@ -1,0 +1,7 @@
+(1) 轴对称小振幅膜方程为 \(\rho_su_{tt}=T[r^{-1}(ru_r)_r]+f(r,t)\)。令 \(c=\sqrt{T/\rho_s}\)，自由模态 \(u=R(r)e^{-i\omega t}\)，得到 \(R''+R'/r+k^2R=0\)，其中 \(k=\omega/c\)。圆心正则性排除发散的 \(Y_0(kr)\)，故 \(R=J_0(kr)\)；边缘固定 \(J_0(ka)=0\)，第 \(n\) 个正根记 \(j_{0,n}\)，因此 \(\omega_n=c\,j_{0,n}/a\)。此频率为轴对称模态序列，完整膜还存在角向非零阶模式。
+
+(2) Sturm--Liouville 径向算子以权函数 \(r\) 自伴，故 \(\int_0^arJ_0(j_{0,n}r/a)J_0(j_{0,m}r/a)dr=0\) 当 \(n\ne m\)。归一积分为 \(N_n=\int_0^arJ_0^2(j_{0,n}r/a)dr=a^2J_1^2(j_{0,n})/2\)。第一轴对称根 \(j_{0,1}\approx2.4048256\)，对应最低轴对称模态频率 \(\omega_1\approx2.4048256\sqrt{T/\rho_s}/a\)。在做模态投影时必须保留面积权重 \(2\pi r\)，否则激励幅值和质量均错误。
+
+(3) 以 \(u(r,t)=\sum_nq_n(t)J_0(j_{0,n}r/a)\) 展开，将动力学方程乘相应本征函数再以 \(2\pi r\,dr\) 积分，利用正交性，得 \(\ddot q_n+2\gamma_n\dot q_n+\omega_n^2q_n=F_n\cos\Omega t\)，其中 \(F_n=\int_0^a r f(r)J_0(j_{0,n}r/a)dr/(\rho_sN_n)\)。稳态复振幅 \(\tilde q_n=F_n/(\omega_n^2-\Omega^2+2i\gamma_n\Omega)\)。载荷分布在根节点附近时相应 \(F_n\) 可能趋近于零，即使频率共振也无法高效激发该模态。
+
+(4) 无阻尼自由振动的每模态能量为 \(E_n=\pi\rho_sN_n[\dot q_n^2+\omega_n^2q_n^2]\)；其时间导数在加入模态阻尼及载荷后给 \(\dot E_n=2\pi N_nq_n'\int_0^ar f(r)J_0 dr/N_n-4\pi\rho_sN_n\gamma_n\dot q_n^2\)，其中第一项可简化为 \(2\pi\dot q_n\int_0^ar fJ_0dr\)。稳态平均耗散率 \(\overline P_n=2\pi\rho_sN_n\gamma_n\Omega^2|\tilde q_n|^2\ge0\)。数学上的点载荷应作为径向 delta 分布或有限小圆斑极限处理，不能把 \(f(r)=\delta(r)\) 直接当作平面面积密度；低阻尼共振时还应检验小振幅条件。

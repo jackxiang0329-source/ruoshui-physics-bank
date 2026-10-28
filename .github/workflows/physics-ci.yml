@@ -40,7 +40,7 @@ jobs:
         run: python scripts/check_round08_physics.py
       - name: Independently check round 10 formula identities
         run: python scripts/check_round10_physics.py
-      - name: Enforce full future 100-problem rounds and executed subpart QA
+      - name: Enforce complete 50-problem future rounds and executed subpart QA
         run: python scripts/check_future_rounds.py
       - name: Validate TeX fragments and derived documents
         run: python scripts/build.py --check

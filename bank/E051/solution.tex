@@ -1,0 +1,7 @@
+(1) 将盘分割为半径 \(r\) 宽度 \(dr\) 的同心环，\(dQ=2\pi r\sigma(r)dr\)、\(dM=2\pi r\Sigma(r)dr\)。积分得 \(Q=2\pi\sigma_0(R^2/2-R^2/4)=\pi\sigma_0R^2/2\)，对应 \(M=\pi\Sigma_0R^2/2\)。关于轴的转动惯量 \(I_m=\int_0^Rr^2dM=2\pi\Sigma_0(R^4/4-R^4/6)=\pi\Sigma_0R^4/6=MR^2/3\)。非均匀盘的惯量不是均匀盘的 \(MR^2/2\)，因此必须先积分。
+
+(2) 每个环的电荷一周所需时间 \(2\pi/\omega\)，等效电流 \(dI=\omega\,dQ/(2\pi)\)。电流环磁矩 \(d\mu_z=\pi r^2dI=(\omega r^2/2)dQ\)，故 \(\mu_z=(\omega/2)\int r^2dQ=\pi\sigma_0\omega(R^4/4-R^4/6)=\pi\sigma_0\omega R^4/12\)。因 \(Q=\pi\sigma_0R^2/2\)，可写 \(\mu_z=Q\omega R^2/6\)。若 \(\omega\) 或电荷为负，磁矩方向随之反向；本题正参数规定其沿旋转轴正向。
+
+(3) 单个环在圆心的磁场大小 \(dB_z=\mu_0dI/(2r)=\mu_0\omega\sigma(r)dr/2\)。因此 \(B_z(0)=\mu_0\omega\sigma_0\int_0^R(1-r^2/R^2)dr/2=\mu_0\omega\sigma_0R/3\)。等效磁偶极矩由 \(r^2\) 权重积分，而圆心磁场由不同的核函数 \(1/r\) 权重积分；两者不能仅凭一个总电荷或一圈等效电流同时恢复，靠近盘心的环对圆心磁场仍有有限贡献。
+
+(4) 角动量 \(L_z=I_m\omega=MR^2\omega/3\)。利用第二问 \(\mu_z=Q\omega R^2/6\)，得到 \(\mu_z/L_z=Q/(2M)\)。更一般地，若每个小质元都满足相同的局域比荷 \(dq/dm=Q/M\)，则 \(d\mu=(\omega r^2/2)dq\) 与 \(dL=\omega r^2dm\) 成正比，因而整体仍为 \(Q/(2M)\)，不依赖具体的同形径向密度。若电荷与质量的空间分布不成比例，积分权重不再抵消，陀磁比一般不同。

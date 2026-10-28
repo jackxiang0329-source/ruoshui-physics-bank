@@ -1,0 +1,7 @@
+(1) 沿 \(\mathbf a\) 的测量投影算符为 \(P_s^{\mathbf a}=[I+s(\mathbf a\cdot\boldsymbol\sigma)]/2\)，另一端同理。联合概率 \(P(s,t)=\operatorname{Tr}[\rho_v(P_s^{\mathbf a}\otimes P_t^{\mathbf b})]\)。自旋单态满足 \(\langle\sigma_i\otimes\sigma_j\rangle=-\delta_{ij}\)，且每端单独平均自旋为零；白噪声 \(I_4/4\) 也只有均匀边缘分布。展开迹得 \(P(s,t|\mathbf a,\mathbf b)=\frac14[1-vst\,\mathbf a\cdot\mathbf b]\)，只要 \(0\le v\le1\) 便为合法非负联合分布。
+
+(2) 关联函数定义 \(E(\mathbf a,\mathbf b)=\sum_{s,t=\pm1}st\,P(s,t|\mathbf a,\mathbf b)\)。将联合概率代入，有常数项的 \(st\) 求和为零，\(s^2t^2\) 的四项和为四，因此 \(E=-v\,\mathbf a\cdot\mathbf b\)。纯单态 \(v=1\) 时若 \(\mathbf a=\mathbf b\)，关联为完全反相关 \(-1\)；当 \(v=0\) 时 \(E=0\)，表示独立白噪声。混合系数在测量关联中线性出现，而不意味着单个量子自旋的测量本征值被连续压缩。
+
+(3) 取 \(S=E(\mathbf a,\mathbf b)+E(\mathbf a,\mathbf b')+E(\mathbf a',\mathbf b)-E(\mathbf a',\mathbf b')\)。给定四个方向有前三项分别 \(-v/\sqrt2,-v/\sqrt2,-v/\sqrt2\)，最后一项 \(+v/\sqrt2\)。所以 \(S=-2\sqrt2\,v\)，其绝对值 \(2\sqrt2\,v\)。任何局域隐藏变量模型满足 \(|S|\le2\)，故这个测量设置当且仅当 \(v>1/\sqrt2\) 时违反 CHSH 界。较小 \(v\) 下不违反本设置的 CHSH，并不等价于严格证明态完全可分；需要独立的纠缠判据。
+
+(4) 令两端观测量 \(A,A',B,B'\) 为平方等于单位阵的厄米算符，CHSH 算符 \(\mathcal B=A\otimes(B+B')+A'\otimes(B-B')\)。计算平方得 \(\mathcal B^2=4I-[A,A']\otimes[B,B']\)，而 \(\|[A,A']\|\le2,\ \|[B,B']\|\le2\)，所以 \(\|\mathcal B\|^2\le8\)，即 Tsirelson 上界 \(|\langle\mathcal B\rangle|\le2\sqrt2\)。另一方面由第一问 \(\sum_tP(s,t)=1/2\) 与远方选取 \(\mathbf b\) 无关，故边缘统计不传递信号。Bell 非局域关联与不能超光速通信并不矛盾。

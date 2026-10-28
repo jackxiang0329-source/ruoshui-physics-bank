@@ -1,0 +1,7 @@
+(1) 矩阵 \(H=\begin{pmatrix}\Delta/2&J\\J&-\Delta/2\end{pmatrix}\) 的本征能为 \(E_\pm=\pm\Omega_E/2\)，其中 \(\Omega_E=\sqrt{\Delta^2+4J^2}\)。令旋转角 \(\vartheta\) 满足 \(\tan(2\vartheta)=2J/\Delta\)，即可用正交混合基底对角化；当 \(\Delta=0\)，对称和反对称组合为能量本征态，能隙为 \(2J\)。
+
+(2) 因为 \(H^2=(\Omega_E^2/4)I\)，可精确求出传播算符 \(U(t)=\cos(\Omega_Et/(2\hbar))I-(2iH/\Omega_E)\sin(\Omega_Et/(2\hbar))\)。作用在 \(|L\rangle\) 后，右态幅度为 \(\langle R|U(t)|L\rangle=-i(2J/\Omega_E)\sin(\Omega_Et/(2\hbar))\)。因此转移概率 \(P_R(t)=4J^2/(\Delta^2+4J^2)\sin^2[\sqrt{\Delta^2+4J^2}\,t/(2\hbar)]\)。
+
+(3) 最大转移概率为 \(P_{R,\max}=4J^2/(\Delta^2+4J^2)\)，第一次达到极大值的时间为 \(t_*=\pi\hbar/\Omega_E\)。共振 \(\Delta=0\) 时 \(P_{R,\max}=1\)，在时间 \(\pi\hbar/(2J)\) 完全转移；若 \(|\Delta|\gg J\)，则最大转移仅约 \(4J^2/\Delta^2\ll1\)。注意快速振荡与高转移概率是两件不同的事：大失谐虽然增加频率，却降低振幅。
+
+(4) 对于非零 \(\Omega_E\)，长期时间平均 \(\overline{\sin^2}=1/2\)，故 \(\overline P_R=2J^2/(\Delta^2+4J^2)\)。哈密顿量与时间无关，严格有 \(d\langle H\rangle/dt=(i/\hbar)\langle[H,H]\rangle=0\)，初态能量期望 \(\Delta/2\) 在整个演化中守恒。右态概率变化通过态间相干项抵消对角能量差，不需凭空吸收外能；若改成缓慢时间变动的 \(\Delta(t)\)，才应另用绝热定理或 Landau--Zener 动力学。
