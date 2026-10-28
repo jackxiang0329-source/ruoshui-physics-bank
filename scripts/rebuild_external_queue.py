@@ -119,6 +119,21 @@ def candidates(root=BASE):
                 "source_url":p["source_url"],
                 "raw_path":"external_sources/college_physics/raw/"+p["id"]+".md",
             })
+    # Pinned CC BY 4.0 practice exercises; never promote before human review.
+    refresher_path = root / "physics_refresher" / "index.json"
+    if refresher_path.exists():
+        index = json.loads(refresher_path.read_text(encoding="utf-8"))
+        for p in index["records"]:
+            rows.append({
+                "id": p["id"], "source": "Physics Refresher (CC BY 4.0)",
+                "module": p["module"], "original_topic": p["section"],
+                "author": "sharafdin", "license": p["license"],
+                "requires_media": "yes" if p["requires_media"] else "no",
+                "requires_engine": "no", "answer_verified": "no",
+                "semantic_dedup": "pending", "license_review": "pending",
+                "exam_ready": "no", "source_url": p["source_url"],
+                "raw_path": "external_sources/physics_refresher/raw/" + p["id"] + ".md",
+            })
     if len({r["id"] for r in rows}) != len(rows):
         raise ValueError("Duplicated external problem IDs")
     return rows

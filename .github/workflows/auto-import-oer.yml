@@ -13,6 +13,8 @@ on:
       - 'scripts/auto_import_oer.py'
       - 'tests/test_auto_import_oer.py'
       - 'scripts/import_intro_physics.py'
+      - 'scripts/import_refresher_physics.py'
+      - 'tests/test_import_refresher_physics.py'
       - 'tests/test_import_intro_physics.py'
       - 'scripts/discover_oer_sources.py'
       - 'scripts/import_hf_physics.py'
@@ -65,6 +67,8 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_import_hf_physics.py' -v
       - name: Unit-test SeePhys text-only importer and provenance rules
         run: python -m unittest discover -s tests -p 'test_import_seephys.py' -v
+      - name: Test CC BY Physics Refresher standalone practice extractor
+        run: python -m unittest discover -s tests -p 'test_import_refresher_physics.py' -v
       - name: Test CC BY College Physics source parser and figure exclusion
         run: python -m unittest discover -s tests -p 'test_import_college_physics.py' -v
       - name: Test source coverage and strict exam eligibility gate
@@ -83,6 +87,8 @@ jobs:
         run: python scripts/auto_import_oer.py --execute --limit 100 --scan-limit 500 --timeout 12
       - name: Fetch and extract CC BY physics examples from new upstream source
         run: python scripts/import_intro_physics.py --limit 100 --timeout 15
+      - name: Import pinned CC BY 4.0 Physics Refresher practice into review staging
+        run: python scripts/import_refresher_physics.py --limit 350 --timeout 18
       - name: Discover new public university-physics source repositories
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -140,6 +146,7 @@ jobs:
           path: |
             external_sources/logs/latest.json
             external_sources/logs/intro_physics_latest.json
+            external_sources/logs/refresher_physics_latest.json
             external_sources/logs/huggingface_import_latest.json
             external_sources/logs/seephys_import_latest.json
             external_sources/logs/college_physics_latest.json
