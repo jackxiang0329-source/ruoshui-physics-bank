@@ -31,8 +31,10 @@ class OrganizationTests(unittest.TestCase):
     def test_drafts_and_full_index(self):
         a=localize.create(ROOT)
         self.assertGreaterEqual(a["translated_drafts"],88)
-        self.assertEqual(a["translated_drafts"],100)
+        self.assertEqual(a["translated_drafts"],len(json.loads((ROOT/"localization/zh_CN/translations.json").read_text(encoding="utf-8"))["entries"])+len(json.loads((ROOT/"localization/zh_CN/translations.json").read_text(encoding="utf-8"))["additional_entries"]))
+        self.assertGreaterEqual(a["translated_drafts"],120)
         self.assertTrue((ROOT/"localized/zh_CN/thermodynamics/supplementary/CP-00898.md").exists())
+        self.assertTrue((ROOT/"localized/zh_CN/mechanics/supplementary/IP-0021.md").exists())
         b=catalog.generate(ROOT)
         self.assertGreaterEqual(b["candidate_total"],17000)
         self.assertEqual(a["translated_drafts"],b["translated_drafts"])

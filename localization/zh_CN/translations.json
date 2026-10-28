@@ -605,6 +605,287 @@
       "translation_status": "中文初译待双语复核",
       "physics_review": "未审核",
       "exam_ready": false
+    },
+    {
+      "id": "IP-0004",
+      "module": "力学",
+      "subtopic": "运动学／位移矢量",
+      "title_zh": "绕地球极轨运行卫星的位移",
+      "question_zh": "一颗卫星在距地表 $400\\,\\mathrm{km}$ 的高度沿圆形极轨道绕地球运行，即轨道经过北极和南极上空。卫星由正位于北极上空的位置运动到南纬 $45^\\circ$ 上空时，求其**位移矢量的大小和方向**。",
+      "raw_blob_sha": "3d51bab5a0e24dffcef8e8e677ca3f9fcf2c01f0",
+      "raw_path": "external_sources/intro_physics/raw/IP-0004.md",
+      "notes": "求数值时需明确地球半径取值。",
+      "risk_flags": [
+        "需要约定物理常量"
+      ],
+      "translation_status": "中文初译待双语复核",
+      "physics_review": "未审核",
+      "exam_ready": false
+    },
+    {
+      "id": "IP-0005",
+      "module": "力学",
+      "subtopic": "运动学／三维速度与平均速度",
+      "title_zh": "从位置矢量求瞬时速度和平均速度",
+      "question_zh": "粒子的位置随时间变化为\n$$\\vec r(t)=(2.0t^2)\\,\\hat i+(2.0+3.0t)\\,\\hat j+5.0t\\,\\hat k\\quad(\\mathrm{km}).$$\n（a）求 $t=2.0\\,\\mathrm{s}$ 时的**瞬时速度矢量**与**速率**；（b）求 $t=1.0\\,\\mathrm{s}$ 至 $t=3.0\\,\\mathrm{s}$ 间的**平均速度矢量**。",
+      "raw_blob_sha": "7c54817d55c93a8244092125f9a3260210371a54",
+      "raw_path": "external_sources/intro_physics/raw/IP-0005.md",
+      "notes": "原式中的时间变量以秒计，各系数应带有使位置量纲一致的隐含单位。",
+      "translation_status": "中文初译待双语复核",
+      "physics_review": "未审核",
+      "exam_ready": false
+    },
+    {
+      "id": "IP-0006",
+      "module": "力学",
+      "subtopic": "运动学／三维加速度",
+      "title_zh": "由速度函数求加速度矢量",
+      "question_zh": "粒子的速度为\n$$\\vec v(t)=5.0t\\,\\hat i+t^2\\,\\hat j-2.0t^3\\,\\hat k\\quad(\\mathrm{km/s}).$$\n（a）求加速度随时间变化的函数；（b）求 $t=2.0\\,\\mathrm{s}$ 时的加速度矢量，并求其**大小和方向**。",
+      "raw_blob_sha": "a24ee33a5c88bd4c318dab8f1fbe8cdaf48ed0dc",
+      "raw_path": "external_sources/intro_physics/raw/IP-0006.md",
+      "notes": "原式中多项式系数的单位随时间幂次而变，审稿时需保留这一上下文。",
+      "translation_status": "中文初译待双语复核",
+      "physics_review": "未审核",
+      "exam_ready": false
+    },
+    {
+      "id": "IP-0007",
+      "module": "力学",
+      "subtopic": "运动学／位置速度与加速度",
+      "title_zh": "三维粒子的速度、加速度及运动描述",
+      "question_zh": "粒子的位置函数为\n$$\\vec r(t)=(10t-t^2)\\,\\hat i+5t\\,\\hat j+5t\\,\\hat k\\quad(\\mathrm{m}).$$\n（a）求速度；（b）求加速度；（c）描述粒子从 $t=0\\,\\mathrm{s}$ 起的运动。",
+      "raw_blob_sha": "f3555b6dd7e273cd73a90576c06c1eee13d4cd47",
+      "raw_path": "external_sources/intro_physics/raw/IP-0007.md",
+      "notes": "",
+      "translation_status": "中文初译待双语复核",
+      "physics_review": "未审核",
+      "exam_ready": false
+    },
+    {
+      "id": "IP-0008",
+      "module": "力学",
+      "subtopic": "抛体运动／非同高落点",
+      "title_zh": "网球被看台观众接住时的速度",
+      "question_zh": "一名网球运动员在 Arthur Ashe 体育场获胜后，将球以 $30\\,\\mathrm{m/s}$ 的初速、相对水平方向向上 $45^\\circ$ 的仰角击向看台。网球在下落途中被一名观众接住，接球点高于击球点 $10\\,\\mathrm{m}$。（a）求网球到达观众处所需的时间；（b）求网球被接住瞬间速度的**大小和方向**。",
+      "raw_blob_sha": "350626d480e15aade226e649b5f9ea259867a064",
+      "raw_path": "external_sources/intro_physics/raw/IP-0008.md",
+      "notes": "需选择下落阶段的时间根，不可将上升途中同高解误认为接球时刻。",
+      "translation_status": "中文初译待双语复核",
+      "physics_review": "未审核",
+      "exam_ready": false
+    },
+    {
+      "id": "IP-0009",
+      "module": "力学",
+      "subtopic": "抛体运动／射程和轨迹",
+      "title_zh": "比较两种高尔夫球击球轨迹",
+      "question_zh": "一名高尔夫球手在不同球洞遇到两种情况：在第 2 洞，球距果岭 $120\\,\\mathrm{m}$，球手希望先将球击出 $90\\,\\mathrm{m}$，再让它滚上果岭，因此以相对水平面 $30^\\circ$ 的较低仰角击球；在第 4 洞，球距果岭 $90\\,\\mathrm{m}$，球手希望球落地后尽可能少滚动，因此以相对水平面 $70^\\circ$ 的仰角击球。两次击球点及球着地点均处于同一水平高度。（a）求第 2 洞击球的初速度大小；（b）求第 4 洞击球的初速度大小；（c）分别写出两条轨迹方程；（d）绘出两条轨迹。",
+      "raw_blob_sha": "d47c912cac4e645c43fe0283071c525f73d80388",
+      "raw_path": "external_sources/intro_physics/raw/IP-0009.md",
+      "notes": "第 4 洞所需射程须按原题“距果岭90 m”的语境审校；不可在译题中擅自增加落点假设。",
+      "risk_flags": [
+        "要求绘图"
+      ],
+      "translation_status": "中文初译待双语复核",
+      "physics_review": "未审核",
+      "exam_ready": false
+    },
+    {
+      "id": "IP-0010",
+      "module": "力学",
+      "subtopic": "圆周运动／向心加速度",
+      "title_zh": "飞机转弯产生一个重力加速度的向心加速度",
+      "question_zh": "一架喷气式飞机沿直线以 $134.1\\,\\mathrm{m/s}$ 飞行，随后在与地面平行的水平圆形轨道上转弯。若飞机及飞行员朝圆心的向心加速度为 $1g$，圆形轨道的半径应为多少？",
+      "raw_blob_sha": "3246ccde3364ea5ae30642a076eeccd1b6ea6751",
+      "raw_path": "external_sources/intro_physics/raw/IP-0010.md",
+      "notes": "计算时需声明采用的重力加速度 $g$ 数值。",
+      "risk_flags": [
+        "需要约定物理常量"
+      ],
+      "translation_status": "中文初译待双语复核",
+      "physics_review": "未审核",
+      "exam_ready": false
+    },
+    {
+      "id": "IP-0011",
+      "module": "力学",
+      "subtopic": "圆周运动／角位置",
+      "title_zh": "质子的二维圆周运动与位置矢量",
+      "question_zh": "一个质子以 $5.0\\times10^6\\,\\mathrm{m/s}$ 的速率，在 $xy$ 平面内沿半径 $r=0.175\\,\\mathrm{m}$ 的圆周运动。求 $t=2.0\\times10^{-7}\\,\\mathrm{s}=200\\,\\mathrm{ns}$ 时质子在 $xy$ 平面中的位置。已知 $t=0$ 时其位置为 $0.175\\,\\hat i\\,\\mathrm{m}$，且沿**逆时针**方向绕行。画出运动轨迹。",
+      "raw_blob_sha": "c36594396a419b8e58a47368e3e87a37a4a203e3",
+      "raw_path": "external_sources/intro_physics/raw/IP-0011.md",
+      "notes": "需要绘制二维轨迹，注意角度不能只在第一象限取值。",
+      "risk_flags": [
+        "要求绘图"
+      ],
+      "translation_status": "中文初译待双语复核",
+      "physics_review": "未审核",
+      "exam_ready": false
+    },
+    {
+      "id": "IP-0012",
+      "module": "力学",
+      "subtopic": "圆周运动／切向与法向加速度",
+      "title_zh": "变速圆周运动的总加速度",
+      "question_zh": "粒子沿半径 $r=2.0\\,\\mathrm{m}$ 的圆周运动。在 $t=1.5\\,\\mathrm{s}$ 至 $t=4.0\\,\\mathrm{s}$ 的时间范围内，其速率满足\n$$v(t)=c_1-\\frac{c_2}{t^2},\\qquad c_1=4.0\\,\\mathrm{m/s},\\quad c_2=6.0\\,\\mathrm{m\\cdot s}.$$\n求 $t=2.0\\,\\mathrm{s}$ 时粒子的**总加速度大小**。",
+      "raw_blob_sha": "c1ea2fc8b212d4d716d39b6f739daf441446679d",
+      "raw_path": "external_sources/intro_physics/raw/IP-0012.md",
+      "notes": "应分别求切向加速度与法向加速度再作矢量合成。",
+      "translation_status": "中文初译待双语复核",
+      "physics_review": "未审核",
+      "exam_ready": false
+    },
+    {
+      "id": "IP-0013",
+      "module": "力学",
+      "subtopic": "相对运动／二维相对速度",
+      "title_zh": "汽车相对卡车的速度",
+      "question_zh": "一辆卡车以 $70\\,\\mathrm{km/h}$ 的速率向南驶往十字路口；与此同时，一辆汽车以 $80\\,\\mathrm{km/h}$ 的速率向东驶向该路口。求**汽车相对于卡车的速度矢量**。",
+      "raw_blob_sha": "d219a88ae47a9a1985812638eca6f589638a9d52",
+      "raw_path": "external_sources/intro_physics/raw/IP-0013.md",
+      "notes": "需给出方向，不能只报告速率。",
+      "translation_status": "中文初译待双语复核",
+      "physics_review": "未审核",
+      "exam_ready": false
+    },
+    {
+      "id": "IP-0014",
+      "module": "力学",
+      "subtopic": "相对运动／风速与航向",
+      "title_zh": "侧风中的飞机航向与对地速率",
+      "question_zh": "飞行员必须让飞机**正北飞行**才能到达目的地。飞机在静止空气中的飞行速率为 $300\\,\\mathrm{km/h}$，此时有风以 $90\\,\\mathrm{km/h}$ 的速率**从东北方向吹来**。（a）飞行员应将机头指向哪个方向，才能使飞机对地航迹正北？（b）飞机相对地面的速率是多少？",
+      "raw_blob_sha": "651ef8ed5de94a885ccbbd111568a9c0943ec845",
+      "raw_path": "external_sources/intro_physics/raw/IP-0014.md",
+      "notes": "译文将原文“blowing out of the northeast”解释为来自东北的风；建议结合原教材示意图复核风向惯例。",
+      "translation_status": "中文初译待双语复核",
+      "physics_review": "未审核",
+      "exam_ready": false
+    },
+    {
+      "id": "IP-0015",
+      "module": "力学",
+      "subtopic": "牛顿运动定律／第一定律",
+      "title_zh": "用日常驾车情景检验牛顿第一定律",
+      "question_zh": "牛顿运动定律适用于涉及力和运动的各种物理过程，包括日常驾驶。（a）汽车停放在自家屋外时，牛顿第一定律是否适用？为什么？（b）汽车在道路上以恒定速度行驶时，牛顿第一定律是否适用？为什么？",
+      "raw_blob_sha": "16f5f1a3d965d40718ac20e2ddb45291287dcfe4",
+      "raw_path": "external_sources/intro_physics/raw/IP-0015.md",
+      "notes": "第一定律在两种情形都适用，但是否满足合外力为零应结合运动状态判断。",
+      "translation_status": "中文初译待双语复核",
+      "physics_review": "未审核",
+      "exam_ready": false
+    },
+    {
+      "id": "IP-0016",
+      "module": "力学",
+      "subtopic": "牛顿第二定律／合力矢量",
+      "title_zh": "足球所受合外力",
+      "question_zh": "质量为 $0.400\\,\\mathrm{kg}$ 的足球被球员踢出，在球场上运动时的加速度为\n$$\\vec a=(3.00\\,\\hat i+7.00\\,\\hat j)\\,\\mathrm{m/s^2}.$$\n求（a）足球所受**合外力矢量**；（b）该合外力的**大小和方向**。",
+      "raw_blob_sha": "0c8d24669dad819db478f869b8e7cc8b6fc77973",
+      "raw_path": "external_sources/intro_physics/raw/IP-0016.md",
+      "notes": "",
+      "translation_status": "中文初译待双语复核",
+      "physics_review": "未审核",
+      "exam_ready": false
+    },
+    {
+      "id": "IP-0017",
+      "module": "力学",
+      "subtopic": "牛顿第二定律／质量",
+      "title_zh": "由合外力和加速度求汽车质量",
+      "question_zh": "一辆汽车所受合外力为 $-600.0\\,\\hat j\\,\\mathrm{N}$，产生的加速度为 $-0.2\\,\\hat j\\,\\mathrm{m/s^2}$。求汽车的质量。",
+      "raw_blob_sha": "62911c7307bc08e9bd2b21d0e19eece3983de845",
+      "raw_path": "external_sources/intro_physics/raw/IP-0017.md",
+      "notes": "",
+      "translation_status": "中文初译待双语复核",
+      "physics_review": "未审核",
+      "exam_ready": false
+    },
+    {
+      "id": "IP-0018",
+      "module": "力学",
+      "subtopic": "牛顿第二定律／竖直提升",
+      "title_zh": "向上加速提起石块需要多大的力",
+      "question_zh": "一名农民为种植庄稼，正在清理田地中的石块。他提起一块重量为 $40.0\\,\\mathrm{lb}$（约合 $180\\,\\mathrm{N}$）的石头。如果石头以 $1.5\\,\\mathrm{m/s^2}$ 的加速度向上运动，求农民对石头施加的力。",
+      "raw_blob_sha": "46ffb86872361537e819ea4670776acd2ce7bf04",
+      "raw_path": "external_sources/intro_physics/raw/IP-0018.md",
+      "notes": "原文 lb 用于重量的日常英制表示，已保留原文换算值约 180 N。",
+      "translation_status": "中文初译待双语复核",
+      "physics_review": "未审核",
+      "exam_ready": false
+    },
+    {
+      "id": "IP-0019",
+      "module": "力学",
+      "subtopic": "牛顿第二定律／平均加速度",
+      "title_zh": "足球运动员起跑时地面的平均作用力",
+      "question_zh": "一名足球运动员由静止开始向前加速，在 $2.5\\,\\mathrm{s}$ 内速度达到 $8\\,\\mathrm{m/s}$。（a）求她的**平均加速度**；（b）若运动员的质量为 $70\\,\\mathrm{kg}$，且空气阻力可忽略，地面需对她施加多大的**向前的平均作用力**，才能实现这一加速过程？",
+      "raw_blob_sha": "8491ad78c2e14ddb94626b7a7a9fe771196017c6",
+      "raw_path": "external_sources/intro_physics/raw/IP-0019.md",
+      "notes": "这里只求地面作用力沿前进方向的分量，不应将整个地面接触力（含法向力）的大小混同。",
+      "translation_status": "中文初译待双语复核",
+      "physics_review": "未审核",
+      "exam_ready": false
+    },
+    {
+      "id": "IP-0020",
+      "module": "力学",
+      "subtopic": "牛顿第二定律／速度变化",
+      "title_zh": "模型直升机所受合外力的大小",
+      "question_zh": "一架质量为 $1.50\\,\\mathrm{kg}$ 的模型直升机，在 $t=0$ 时的速度为 $5.00\\,\\hat j\\,\\mathrm{m/s}$。此后它以恒定加速度运动 $2.00\\,\\mathrm{s}$，末速度为 $(6.00\\,\\hat i+12.00\\,\\hat j)\\,\\mathrm{m/s}$。求这段时间内直升机所受**合外力的大小**。",
+      "raw_blob_sha": "4f184187f019d142fa0b1ccb67f9f82c7ca4f60f",
+      "raw_path": "external_sources/intro_physics/raw/IP-0020.md",
+      "notes": "",
+      "translation_status": "中文初译待双语复核",
+      "physics_review": "未审核",
+      "exam_ready": false
+    },
+    {
+      "id": "IP-0021",
+      "module": "力学",
+      "subtopic": "摩擦力／动摩擦因数",
+      "title_zh": "滑雪者沿坡面运动时的动摩擦因数",
+      "question_zh": "一名质量为 $62\\,\\mathrm{kg}$ 的滑雪者沿积雪斜坡下滑，且加速度恒定。已知他所受**摩擦力**的大小为 $45.0\\,\\mathrm{N}$。求滑雪者与雪面之间的**动摩擦因数**。",
+      "raw_blob_sha": "a6b2b68068a42c3fb13ae6d7841cc196cc621456",
+      "raw_path": "external_sources/intro_physics/raw/IP-0021.md",
+      "notes": "原始独立题面未提供坡角、法向力或垂直斜面的其他条件；仅凭质量和摩擦力无法唯一确定动摩擦因数，严禁以 N=mg 擅自视为水平面。",
+      "risk_flags": [
+        "题设条件不充分"
+      ],
+      "translation_status": "中文初译待双语复核",
+      "physics_review": "未审核",
+      "exam_ready": false
+    },
+    {
+      "id": "IP-0022",
+      "module": "力学",
+      "subtopic": "圆周运动／倾斜弯道",
+      "title_zh": "无摩擦倾斜弯道的理想车速",
+      "question_zh": "某些试车场和赛车场（例如 Daytona 国际赛车场）的弯道具有很大的倾斜角。这种倾斜使车辆即使不依赖轮胎摩擦，也能以较高的速率过弯。若弯道半径为 $100\\,\\mathrm{m}$、路面倾角为 $31^\\circ$，且忽略路面摩擦，计算适宜的过弯速率。",
+      "raw_blob_sha": "b0812bd8d4e5d277644bb65e709ea8c3dae9792e",
+      "raw_path": "external_sources/intro_physics/raw/IP-0022.md",
+      "notes": "重力加速度取值需要说明；原文超链接属于背景例子，不作为必要数据。",
+      "risk_flags": [
+        "需要约定物理常量"
+      ],
+      "translation_status": "中文初译待双语复核",
+      "physics_review": "未审核",
+      "exam_ready": false
+    },
+    {
+      "id": "IP-0023",
+      "module": "力学",
+      "subtopic": "流体阻力／终端速度",
+      "title_zh": "跳伞者的终端速度",
+      "question_zh": "一名质量为 $85\\,\\mathrm{kg}$ 的跳伞者，以四肢伸展的姿势下落。假设该姿势下迎风截面积为 $0.70\\,\\mathrm{m^2}$，求跳伞者的**终端速度**。",
+      "raw_blob_sha": "ea40e31f28c7f167e6a2d3af2834025280e1b0ba",
+      "raw_path": "external_sources/intro_physics/raw/IP-0023.md",
+      "notes": "独立原题未给出空气密度及该姿势的阻力系数；计算具体数值必须引用上游教材所用模型和常量，不能自行编造。",
+      "risk_flags": [
+        "题设条件不充分"
+      ],
+      "translation_status": "中文初译待双语复核",
+      "physics_review": "未审核",
+      "exam_ready": false
     }
   ]
 }

@@ -93,6 +93,8 @@ def create(root=ROOT):
             "- 原件 Git blob SHA：" + item["raw_blob_sha"] + "\n"
             "- 上游署名与许可证见原件；尚未完成单题权利审查。\n"
         )
+        if item.get("risk_flags"):
+            body += "- 题设／编辑风险：" + "；".join(item["risk_flags"]) + "\n"
         if item.get("notes"):
             body += "- 审校提示：" + item["notes"] + "\n"
         dest.write_text(body, encoding="utf-8")

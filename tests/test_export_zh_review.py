@@ -56,6 +56,16 @@ class ChineseReviewTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "cannot enter formal exams"):
                 validate(root)
 
+    def test_invalid_risk_flag_shape_fails_closed(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            _, reg = self.fixture(root)
+            obj = json.loads(reg.read_text(encoding="utf-8"))
+            obj["additional_entries"][0]["risk_flags"] = "unreviewed condition"
+            reg.write_text(json.dumps(obj, ensure_ascii=False), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "Invalid editorial risk flags"):
+                validate(root)
+
     def test_unknown_topic_rejected(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
