@@ -43,8 +43,21 @@ def mathml_element(node,issues):
         if name=="mtext" and len(val)>1 and val.isalpha():
             return r"\mathrm{"+escape_tex(val)+"}"
         if name in ("mn","mtext") and len(val)>1 and val[-1] in ("°","º"):
-            return val[:-1]+r"^\circ"
-        return "".join(GREEK.get(x,OPERATORS.get(x,x)) for x in val)
+            return val[:-1]+r"^{\circ}"
+        # Guard command boundaries. The Unicode micro in 'μm' must not become
+        # the nonexistent TeX command '\\mum'; the same holds for '°C'.
+        result=[]
+        for char in val:
+            if char in ("°","º"):
+                result.append(r"^{\circ}")
+            elif char in GREEK:
+                result.append(GREEK[char]+"{}")
+            elif char in OPERATORS:
+                op=OPERATORS[char]
+                result.append(op+("{}" if op.startswith("\\") else ""))
+            else:
+                result.append(char)
+        return "".join(result)
     if name=="mfrac" and len(children)==2:
         return r"\frac{"+mathml_element(children[0],issues)+"}{"+mathml_element(children[1],issues)+"}"
     if name in ("msup","msub","msubsup") and len(children)>1:

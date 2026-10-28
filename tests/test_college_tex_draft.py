@@ -46,3 +46,16 @@ class CollegeDraftTests(unittest.TestCase):
    self.assertIn(r"\input{college_review_tex_draft.tex}",wrapper)
    self.assertIn(r"\href{https://github.com/philschatz/physics-book/blob/main/contents/m42033.md}{Original chapter}",snippets)
    self.assertEqual(z["exam_ready_added"],0)
+
+ def test_micro_unit_does_not_form_undefined_mum_command(self):
+  src='<math><mtext>50 μm/s</mtext></math>'
+  tex,flags=d.mathml_to_tex(src)
+  self.assertEqual(flags,[])
+  self.assertIn(r"\mu{}m",tex)
+  self.assertNotIn(r"\mum",tex)
+ def test_degree_celsius_commands_are_delimited(self):
+  src='<math><mrow><mn>20°</mn><mi>C</mi></mrow></math>'
+  tex,flags=d.mathml_to_tex(src)
+  self.assertEqual(flags,[])
+  self.assertIn(r"^{\circ}C",tex)
+  self.assertNotIn(r"\circC",tex)
