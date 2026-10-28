@@ -1,0 +1,23 @@
+(1) 环角坐标为 \(\phi\in[0,2\pi)\)，最小耦合切向动量是 \([-i\hbar R^{-1}\partial_\phi-qA_\phi]\)，故
+\[
+H=\frac1{2mR^2}\left(-i\hbar\partial_\phi-\frac{q\Phi}{2\pi}\right)^2.
+\]
+周期边界 \(\psi(\phi+2\pi)=\psi(\phi)\) 允许本征态 \(\psi_n=e^{in\phi}/\sqrt{2\pi}\)，n 为任意整数。
+
+(2) 代入得
+\[
+E_n(\Phi)=\frac{\hbar^2}{2mR^2}
+\left(n-\frac{\Phi}{\Phi_0}\right)^2,\qquad
+\Phi_0=\frac{h}{q}.
+\]
+这里 q 可为负，若只谈周期大小取 \(|\Phi_0|=h/|q|\)。当磁通增加一个有符号磁通量子 \(\Phi\mapsto\Phi+\Phi_0\)，有 \(E_n(\Phi+\Phi_0)=E_{n-1}(\Phi)\)，所以作为整体集合的能谱周期保持不变。
+
+(3) 能量对磁通的导数给单粒子的环流：
+\[
+I_n=-\frac{\partial E_n}{\partial\Phi}
+=\frac{q\hbar}{2\pi mR^2}
+\left(n-\frac{\Phi}{\Phi_0}\right).
+\]
+也可由粒子环向速度 \(v_\phi=(\hbar n/R-q\Phi/(2\pi R))/m\) 与每绕行一周的电荷通量 \(I=qv_\phi/(2\pi R)\) 独立得到。对同一磁通下不同 n，电流可正可负。
+
+(4) 两支能级 \(E_n,E_{n+1}\) 在 \(\Phi/\Phi_0=n+1/2\) 处交叉；整数磁通量子处能谱等价于零磁通，基态可取零环流。尽管粒子实际经过的环上 \(\boldsymbol B=0\)，闭合环量 \(\oint\boldsymbol A\cdot d\boldsymbol\ell=\Phi\) 不可由单值规范变换任意消除，量子波函数相位受到磁通控制。这是 AB 效应的整体拓扑体现。

@@ -543,6 +543,50 @@
     "complexity_tier": "L5-C"
   },
   {
+    "id": "M030",
+    "topic": "力学",
+    "title": "光子与可动镜面正面弹性反射的能动量守恒和频移",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "tags": [
+      "相对论四动量",
+      "光子反射",
+      "可动镜面",
+      "反冲频移"
+    ],
+    "question": "质量为 M>0 的理想镜子初始在实验室中静止，可沿光轴 x 无摩擦移动。一颗能量为 E>0 的光子从左向右沿 +x 射向镜面，被镜子完全弹性反射回左方，没有其他粒子或辐射。相对论光速为 c，镜子静质量始终 M，忽略镜面内部激发。\n(1) 列出碰撞前后总能量与动量守恒方程；(2) 精确求反射光子能量与反冲镜子速度；(3) 求镜子获得的动能并证明等于光子能量损失；(4) 在 E 远小于镜子静能时求首阶频移，讨论 M 趋于无穷时的固定镜面极限。",
+    "solution": "(1) 设反射光子能量为 \\(E_r>0\\)，镜子末态动量为 p、总能为 \\(\\mathcal E_m=\\sqrt{M^2c^4+p^2c^2}\\)。由于反射光子的动量为 \\(-E_r/c\\)，总能与动量守恒分别为\n\\[\nMc^2+E=\\mathcal E_m+E_r,\\qquad\nE/c=p-E_r/c.\n\\]\n所以 \\(pc=E+E_r\\) 且 \\(\\mathcal E_m=Mc^2+E-E_r\\)。\n\n(2) 将两式代入镜子的相对论质量壳关系：\n\\[\n(Mc^2+E-E_r)^2-(E+E_r)^2=M^2c^4.\n\\]\n化简得 \\(2Mc^2(E-E_r)=4EE_r\\)，因此\n\\[\nE_r=\\frac{E}{1+2E/(Mc^2)}.\n\\]\n镜子动量 \\(p=(E+E_r)/c\\)，末速度可由 \\(v=pc^2/\\mathcal E_m\\) 求出。令 \\(\\varepsilon=E/(Mc^2)\\)，\n\\[\n\\frac vc=\\frac{2\\varepsilon(1+\\varepsilon)}{1+2\\varepsilon+2\\varepsilon^2}<1.\n\\]\n该结果是严格相对论反冲，不把镜子动能预先当作经典表达式。\n\n(3) 镜子机械动能增加\n\\[\nK_m=\\mathcal E_m-Mc^2=E-E_r\n=\\frac{2E^2}{Mc^2+2E}\\ge0.\n\\]\n光子丢失的能量完全进入镜子动能，没有额外吸收或热激发；同时总动量也满足第一部分关系。\n\n(4) 当 \\(\\varepsilon\\ll1\\)，反射能量\n\\(E_r/E=(1+2\\varepsilon)^{-1}=1-2\\varepsilon+O(\\varepsilon^2)\\)，故 \\(\\Delta E/E=(E_r-E)/E\\simeq-2E/(Mc^2)\\)，表现为反冲红移。若 M→∞，\\(v\\to0,K_m\\to0,E_r\\to E\\)，恢复固定镜面对入射光子的理想等频反射。",
+    "answer": "\nMc^2+E=\\mathcal E_m+E_r,\\qquad\nE/c=p-E_r/c.\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
+    "id": "M031",
+    "topic": "力学",
+    "title": "竖直圆轨道上纯滚动刚球的能量、法向支持与临界初高度",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "tags": [
+      "滚动约束",
+      "竖直圆周运动",
+      "非惯性向心",
+      "最小释放高度"
+    ],
+    "question": "质量 m、半径 r 的均匀实心小球，在固定竖直环形内轨道上无滑动滚动，球心的圆形运动路径半径为 R>r。小球转动惯量为 I=λmr²，其中 λ=2/5，重力加速度 g。球从轨道底部外的一条光滑连接轨道上由相对底部高度 h 静止释放，连接段也满足无滑动且初始无自转。忽略摩擦耗散。\n(1) 从滚动能量推导小球到达圆环任意极角的速度；(2) 推导环形轨道对小球的法向支持力；(3) 求完整不断接触地通过最高点所需的最小释放高度 hmin；(4) 比较同样球心圆路径的滑动点质点极限 λ→0 与有转动惯量滚动的区别。",
+    "solution": "(1) 小球纯滚动约束为自转角速度 \\(\\omega=v/r\\)。由高度 h 处静止到圆环上极角 θ（自底部向上测量）时球心升高 \\(H=R(1-\\cos\\theta)\\)，机械能守恒：\n\\[\nmgh=\\frac12mv^2+\\frac12I(v/r)^2+mgR(1-\\cos\\theta)\n=\\frac12m(1+\\lambda)v^2+mgR(1-\\cos\\theta).\n\\]\n所以\n\\[\nv^2(\\theta)=\\frac{2g[h-R(1-\\cos\\theta)]}{1+\\lambda}.\n\\]\n\n(2) 对球心沿半径指向轨道圆心方向取正，重力沿内向的分量为 \\(-mg\\cos\\theta\\)（底部指向圆心为向上），故牛顿向心方程\n\\[\nN-mg\\cos\\theta=m v^2/R,\\quad\nN(\\theta)=m[v^2(\\theta)/R+g\\cos\\theta].\n\\]\n在顶部 θ=π，支持力 \\(N_{\\rm top}=m[v_{\\rm top}^2/R-g]\\)，因此不能只要求顶部速度非零。\n\n(3) 完整接触需要所有位置 N≥0，最低约束来自顶部；它要求 \\(v_{\\rm top}^2\\ge gR\\)。顶部高度为 2R，能量给\n\\[\nv_{\\rm top}^2=\\frac{2g(h-2R)}{1+\\lambda}.\n\\]\n联立得到\n\\[\nh\\ge h_{\\min}=2R+\\frac{1+\\lambda}{2}R=\\frac{5+\\lambda}{2}R.\n\\]\n为证明顶部条件确为全局最严格，代入速度公式：\n\\(N/(mg)=2(h/R-1+\\cos\\theta)/(1+\\lambda)+\\cos\\theta\\)，这是 cosθ 的严格递增线性函数，故在顶部 cosθ=−1 取最小值。\n\n(4) 当 λ=0，\\(h_{\\min}=5R/2\\)，恢复无自转点质点在竖直圆环的临界释放高度。均匀实心球 λ=2/5 时\n\\[\nh_{\\min}=\\frac{27}{10}R.\n\\]\n增加的 \\(R/5\\) 来自滚动旋转动能，因此小球实际滚动比无转动点质点需要更高释放高度。真实轨道还要求连接段几何上可实现给定无滑动初态。",
+    "answer": "\nmgh=\\frac12mv^2+\\frac12I(v/r)^2+mgR(1-\\cos\\theta)\n=\\frac12m(1+\\lambda)v^2+mgR(1-\\cos\\theta).\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
     "id": "E007",
     "topic": "电磁学",
     "title": "滑动导体棒的自感反馈与能量耗散",
@@ -1088,6 +1132,50 @@
     "complexity_tier": "L5-C"
   },
   {
+    "id": "E030",
+    "topic": "电磁学",
+    "title": "运动无限电荷平面在实验室中的电磁场和场不变量",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "tags": [
+      "洛伦兹电磁场变换",
+      "运动面电荷",
+      "表面电流",
+      "电磁不变量"
+    ],
+    "question": "在静止参考系 S′ 中，一个位于 y=0 的无限薄平面带有均匀正面电荷密度 σ₀>0，平面自身静止，S′ 中无磁场。另一惯性参考系 S 相对于 S′ 沿 +x 方向以速度 v=βc 运动，0<β<1，真空介电常数 ε₀、磁导率 μ₀。\n(1) 求 S′ 系中平面两侧的电场；(2) 使用电磁场洛伦兹变换求 S 系两侧的 E 与 B，并解释有效面电荷密度变化；(3) 用表面电流方向检验求得磁场的符号；(4) 计算 E·B 与 E²−c²B² 两个场不变量，核对静止系结果。",
+    "solution": "(1) 取平面法向为 \\(\\hat y\\)，由高斯柱面与对称性，静止系有\n\\[\n\\boldsymbol E'_\\pm=\\pm\\frac{\\sigma_0}{2\\epsilon_0}\\hat y,\\qquad \\boldsymbol B'=0,\n\\]\n正负号对应 y>0 与 y<0。平面的无限大假设使电场与距平面的远近无关。\n\n(2) 令 S 相对于 S′ 沿 +x 以速度 v 运动，因此在 S 中电荷平面沿 −x 方向移动。按从 S′ 到 S 的场变换，垂直速度的场为 \\(E_\\perp=\\gamma E'_\\perp\\)，且 \\(\\boldsymbol B_\\perp=-\\gamma\\,\\boldsymbol v\\times\\boldsymbol E'/c^2\\)（这里 \\(\\boldsymbol v=+v\\hat x\\) 指坐标系 S 相对 S′ 的速度）。所以\n\\[\n\\boldsymbol E_\\pm=\\pm\\frac{\\gamma\\sigma_0}{2\\epsilon_0}\\hat y,\\quad\n\\boldsymbol B_\\pm=\\mp\\frac{\\gamma v\\sigma_0}{2\\epsilon_0c^2}\\hat z.\n\\]\n由于电荷面内长度发生 Lorentz 收缩，S 中面密度为 \\(\\sigma=\\gamma\\sigma_0\\)，与法向电场跳跃一致。\n\n(3) S 中电荷流动方向为 −x，因此表面电流 \\(\\boldsymbol K=-\\sigma v\\hat x\\)。无限电流平面的边界磁场为 \\(\\boldsymbol B_+=\\mu_0(\\boldsymbol K\\times\\hat y)/2=-\\mu_0\\sigma v\\hat z/2\\)，因为 \\(\\hat x\\times\\hat y=\\hat z\\)。借助 \\(\\mu_0\\epsilon_0c^2=1\\)，正好与上一部分 B+ 的结果一致。\n\n(4) E 沿 y、B 沿 z，因此 \\(\\boldsymbol E\\cdot\\boldsymbol B=0\\)。此外\n\\[\nE^2-c^2B^2=\n\\frac{\\gamma^2\\sigma_0^2}{4\\epsilon_0^2}(1-v^2/c^2)\n=\\frac{\\sigma_0^2}{4\\epsilon_0^2}.\n\\]\n这与静止系 \\(E'^2-c^2B'^2=E'^2\\) 一致，展示两个洛伦兹标量不变量与实际表面电流场方程的一致性。",
+    "answer": "\n\\boldsymbol E'_\\pm=\\pm\\frac{\\sigma_0}{2\\epsilon_0}\\hat y,\\qquad \\boldsymbol B'=0,\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
+    "id": "E031",
+    "topic": "电磁学",
+    "title": "均匀理想环形螺线管的磁场、自感与耦合感应能量",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "tags": [
+      "安培环路",
+      "磁能自感",
+      "感应电动势",
+      "磁通链接"
+    ],
+    "question": "一理想细密绕制环形螺线管有 N 匝线圈，铁心忽略损耗、磁导率为 μ>0。环形区域截面为矩形，内半径 a>0、外半径 b>a、轴向高度 h>0；所有线圈均紧密绕过整个环形区域。电流 I(t) 缓慢改变，忽略外部漏磁、辐射和匝间寄生电容。\n(1) 利用安培环路定律求环形区域内磁感应强度随半径的精确变化；(2) 计算单匝穿过矩形截面的磁通和总磁链；(3) 求自感 L 与储存的磁场能量，分别通过磁链与能量积分检验；(4) 求电流变化产生的感应电动势及电压源克服反电动势所需的瞬时功率。",
+    "solution": "(1) 采用绕环轴的圆形安培回路，在 a<r<b 的磁路上有\n\\[\n2\\pi r H_\\phi=NI,\\quad\nB_\\phi(r)=\\mu H_\\phi(r)=\\frac{\\mu NI}{2\\pi r}.\n\\]\n磁场随半径按 1/r 下降。题设忽略漏磁，所以在环形铁心外可近似视为零。\n\n(2) 单匝线圈绕过环形截面所链接的磁通是截面磁通 \\(\\Phi=\\int_a^bB_\\phi(r)h\\,dr\\)，故\n\\[\n\\Phi=\\frac{\\mu NIh}{2\\pi}\\ln\\frac ba.\n\\]\n总磁链 \\(\\Lambda=N\\Phi=\\mu N^2Ih\\ln(b/a)/(2\\pi)\\)，注意总磁链乘了 N 而单匝磁通本身已经与 N 成正比。\n\n(3) 自感由 \\(\\Lambda=LI\\) 定义：\n\\[\nL=\\frac{\\mu N^2h}{2\\pi}\\ln\\frac ba>0.\n\\]\n用磁场能密度 \\(B^2/(2\\mu)\\) 独立积分：\n\\[\nU_B=\\int_a^b\\frac{B_\\phi^2}{2\\mu}(2\\pi r h)\\,dr\n=\\frac{\\mu N^2I^2h}{4\\pi}\\ln\\frac ba=\\frac12LI^2.\n\\]\n两个计算完全一致，这也核对了对数和几何因子的正确性。\n\n(4) 由 Faraday 定律，回路自感应电动势 \\(\\mathcal E=-d\\Lambda/dt=-L\\dot I\\)，总是反对电流变化。当外电源维持电流增加且忽略电阻，须提供端电压 \\(V=L\\dot I\\)，瞬时功率\n\\[\nP_{\\rm source}=VI=LI\\dot I=\\frac d{dt}\\left(\\frac12LI^2\\right).\n\\]\n所以外部机械或电源能量变成磁场能量，没有额外凭空生成的功。",
+    "answer": "\n2\\pi r H_\\phi=NI,\\quad\nB_\\phi(r)=\\mu H_\\phi(r)=\\frac{\\mu NI}{2\\pi r}.\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B"
+  },
+  {
     "id": "T007",
     "topic": "热学",
     "title": "导热可动活塞的不可逆终态与熵产生",
@@ -1611,6 +1699,28 @@
     "complexity_tier": "L5-B"
   },
   {
+    "id": "T029",
+    "topic": "热学",
+    "title": "两灰度黑体薄球壳的辐射平衡、热驰豫与熵产生",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "tags": [
+      "辐射传热",
+      "Stefan–Boltzmann定律",
+      "非线性热平衡",
+      "线性驰豫"
+    ],
+    "question": "两个独立、完全黑的同心薄球壳之间为真空，内球半径 r、外球内半径 R>r，内球保持均匀温度 T₁(t)>0、外球内壁保持 T₂(t)>0。内外球吸收率与发射率都为一，热容量分别为 C₁,C₂>0，外壁完美绝热，忽略球壳热传导延迟。Stefan–Boltzmann 常数为 σ>0。\n(1) 由黑体辐射与几何视角因子写出内球向外球的净传热功率；(2) 建立两球温度耦合微分方程及能量守恒；(3) 写出两球总熵随时间的变化率，证明非负；(4) 在共同温度 T₀ 附近线性化，求温差指数驰豫时间。",
+    "solution": "(1) 内球全部向外发射的光最终被外球内壁吸收，因为外球包围内球；内球面积为 \\(A_1=4\\pi r^2\\)。黑体间的净辐射传热功率由两方向的辐射平衡得到\n\\[\nQ_{1\\to2}=\\sigma A_1(T_1^4-T_2^4).\n\\]\n这里外球表面积更大，但内球只截获相应几何份额的外球内壁辐射，因此净交换面积仍为内球面积。\n\n(2) 两球除辐射外无外界热量或功交换，故\n\\[\nC_1\\dot T_1=-Q_{1\\to2},\\qquad\nC_2\\dot T_2=Q_{1\\to2}.\n\\]\n直接相加得 \\(d(C_1T_1+C_2T_2)/dt=0\\)。若 C₁,C₂ 温度无关，最终共同温度由能量守恒决定为 \\(T_f=(C_1T_{1i}+C_2T_{2i})/(C_1+C_2)\\)。\n\n(3) 热容恒定时各球熵微分为 \\(dS_i=C_i\\,dT_i/T_i\\)，故\n\\[\n\\dot S_{\\rm total}=-\\frac Q{T_1}+\\frac Q{T_2}\n=\\sigma A_1(T_1^4-T_2^4)\\left(\\frac1{T_2}-\\frac1{T_1}\\right)\\ge0.\n\\]\n因 \\(T_1^4-T_2^4\\) 与 \\(T_1-T_2\\) 同号，而 \\(1/T_2-1/T_1=(T_1-T_2)/(T_1T_2)\\) 亦同号，所以总熵非负，等温时恰为零。\n\n(4) 令 \\(T_1=T_0+\\delta T_1,T_2=T_0+\\delta T_2\\)，一阶近似 \\(T_1^4-T_2^4\\simeq4T_0^3(\\delta T_1-\\delta T_2)\\)。定义温差 \\(\\Delta=T_1-T_2\\)，联立得到\n\\[\n\\dot\\Delta=-4\\sigma A_1T_0^3\\left(\\frac1{C_1}+\\frac1{C_2}\\right)\\Delta.\n\\]\n故 \\(\\Delta(t)=\\Delta(0)e^{-t/\\tau}\\)，时间尺度 \\(\\tau=[4\\sigma A_1T_0^3(C_1^{-1}+C_2^{-1})]^{-1}\\)，热容越大或辐射换热越弱，温差消失越慢。",
+    "answer": "\nQ_{1\\to2}=\\sigma A_1(T_1^4-T_2^4).\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
     "id": "W007",
     "topic": "振动与波动",
     "title": "双弦接点附加质量的波散射",
@@ -2132,6 +2242,28 @@
     "complexity_tier": "L5-C"
   },
   {
+    "id": "W029",
+    "topic": "振动与波动",
+    "title": "非线性对流波的特征线交叉、首个冲击时间和守恒律",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "tags": [
+      "非线性双曲方程",
+      "特征线",
+      "梯度灾变",
+      "守恒通量"
+    ],
+    "question": "一维无耗散非线性弱扰动满足 u_t+(c₀+αu)u_x=0，其中 c₀>0、α>0。初始在无限域上给定光滑周期扰动 u(x,0)=A sin(kx)，A,k>0。只讨论首次特征线交叉之前的经典光滑解，交叉后不额外规定冲击波耗散模型。\n(1) 求通用初始标签 ξ 的特征线解与隐式场表达式；(2) 求映射 x(ξ,t) 的 Jacobian 并由此找到首次梯度发散的时间和位置；(3) 写出非线性守恒通量形式并求周期区域内平方能量的守恒律；(4) 解释 α→0 和 A→0 时无冲击的极限，以及首次交叉后为何不能继续使用单值光滑解。",
+    "solution": "(1) 特征线方法把 PDE 写成沿轨道的常微分方程 \\(du/dt=u_t+\\dot x u_x=0\\)，选 \\(\\dot x=c_0+\\alpha u\\)。因此 u 沿每条特征线保持初值 \\(A\\sin(k\\xi)\\)，且\n\\[\nx(\\xi,t)=\\xi+[c_0+\\alpha A\\sin(k\\xi)]t,\\qquad\nu(x(\\xi,t),t)=A\\sin(k\\xi).\n\\]\n这是隐式解，只有映射 ξ→x 单调时才定义唯一单值的光滑场。\n\n(2) 特征映射 Jacobian\n\\[\n\\frac{\\partial x}{\\partial\\xi}=1+\\alpha Ak t\\cos(k\\xi).\n\\]\n首次 Jacobian 为零的时间是\n\\[\nt_s=\\frac1{\\alpha Ak},\n\\]\n对应 \\(\\cos(k\\xi)=-1\\)，可取 \\(\\xi_s=\\pi/k\\)。该处 \\(\\sin(k\\xi_s)=0\\)，所以首次交叉位置为 \\(x_s=\\pi/k+c_0t_s\\)，再加任意整周期平移。隐函数求导 \\(u_x=Ak\\cos(k\\xi)/[1+\\alpha Akt\\cos(k\\xi)]\\) 在该点趋于负无穷，叫梯度灾变。\n\n(3) 方程也可写成守恒形式\n\\[\nu_t+\\partial_x\\left(c_0u+\\frac{\\alpha}{2}u^2\\right)=0.\n\\]\n对光滑解乘以 u，得到\n\\[\n\\partial_t\\frac{u^2}{2}+\n\\partial_x\\left(\\frac{c_0u^2}{2}+\\frac{\\alpha u^3}{3}\\right)=0.\n\\]\n在长度为整周期的周期边界区域积分，通量两端抵消，因此首次冲击前 \\(\\int u^2/2\\,dx\\) 不变；这与无黏性、无耗散的假设一致。\n\n(4) 当 α→0 或 A→0，非线性速度分裂消失，\\(t_s\\to\\infty\\)，波形只以速度 c₀ 平移。若 t>ts，标签映射会折叠，多条特征线到达同一 x，原有光滑解不再单值；必须引入弱解、Rankine–Hugoniot 条件及熵选择规则确定实际冲击波，不可继续套用交叉前的正则解。",
+    "answer": "\nx(\\xi,t)=\\xi+[c_0+\\alpha A\\sin(k\\xi)]t,\\qquad\nu(x(\\xi,t),t)=A\\sin(k\\xi).\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
     "id": "O007",
     "topic": "光学",
     "title": "分离薄透镜系统的矩阵成像与无焦条件",
@@ -2631,6 +2763,50 @@
     "complexity_tier": "L5-C"
   },
   {
+    "id": "O028",
+    "topic": "光学",
+    "title": "四分之一波分布布拉格反射镜的传输矩阵与指数反射增强",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "tags": [
+      "多层薄膜",
+      "传输矩阵",
+      "布拉格反射",
+      "光学导纳"
+    ],
+    "question": "正入射单色光波长为 λ₀，来自折射率 n₀ 的无损介质，射向由 N 对交替无损介质层 H、L 组成的介质镜，层折射率满足 nH>nL>0，最后连接折射率 ns>0 的无损基底。每层在 λ₀ 下的光学厚度均为 λ₀/4，入射侧层序为 H,L,H,L…；忽略吸收与各界面粗糙度。\n(1) 写出每个四分之一波层在设计波长下的特征矩阵；(2) 求一对 HL 的矩阵及 N 对后的有效入射光学导纳；(3) 求整个结构的电场反射系数和反射率，讨论 N 大时的极限；(4) 比较 N=0 时的单界面结果，并说明为什么偏离设计波长会使反射谱发生变化。",
+    "solution": "(1) 在正入射无磁介质中光学导纳与折射率 n 成正比；用规范化导纳 η=n 表示相干传输的电、磁场幅。光学相位 δ=2πnd/λ，单层的特征矩阵为\n\\[\nM(n,\\delta)=\\begin{pmatrix}\n\\cos\\delta&i\\sin\\delta/n\\\\ i n\\sin\\delta&\\cos\\delta\n\\end{pmatrix}.\n\\]\n设计波长处 nd=λ₀/4，故 δ=π/2，矩阵变成 \\(M(n)=\\begin{pmatrix}0&i/n\\\\in&0\\end{pmatrix}\\)。\n\n(2) 对入射侧先 H 后 L 的一对层，\n\\[\nM_{HL}=M(n_H)M(n_L)\n=\\begin{pmatrix}-n_L/n_H&0\\\\0&-n_H/n_L\\end{pmatrix}.\n\\]\nN 对后的矩阵为 \\(\\mathrm{diag}[(-n_L/n_H)^N,(-n_H/n_L)^N]\\)。在基底导纳 ns 终止的入射端有效导纳由 \\(Y_{\\rm in}=(C+Dns)/(A+Bns)\\) 给出，其中 A,B,C,D 为总特征矩阵元素。因此\n\\[\nY_{\\rm in}=n_s\\left(\\frac{n_H}{n_L}\\right)^{2N}.\n\\]\n\n(3) 入射介质导纳 n₀，电场反射幅度为\n\\[\nr_N=\\frac{n_0-Y_{\\rm in}}{n_0+Y_{\\rm in}},\\qquad\nR_N=|r_N|^2=\n\\left[\\frac{n_0-n_s(n_H/n_L)^{2N}}\n{n_0+n_s(n_H/n_L)^{2N}}\\right]^2.\n\\]\n当 nH>nL 且 N 越大，有效导纳增长，\\(r_N\\to-1,R_N\\to1\\)，理想多层结构形成高反射带；反射增强来自多界面相位相干，而不是材料吸收。\n\n(4) 若 N=0，没有任何薄膜，\\(Y_{\\rm in}=n_s\\)，恢复单界面反射率 \\([(n_0-n_s)/(n_0+n_s)]^2\\)。偏离设计波长时每层 δ 不再是 π/2，矩阵将出现非零对角余弦项和频率依赖复耦合，反射率随波长起伏形成有限宽度的 Bragg 停带，不能认为上述设计波长公式对所有颜色都严格成立。",
+    "answer": "\nM(n,\\delta)=\\begin{pmatrix}\n\\cos\\delta&i\\sin\\delta/n\\\\ i n\\sin\\delta&\\cos\\delta\n\\end{pmatrix}.\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
+    "id": "O029",
+    "topic": "光学",
+    "title": "阶跃折射率光纤的数值孔径、全内反射与单模判据",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "tags": [
+      "光纤导波",
+      "数值孔径",
+      "临界角",
+      "模式归一频率"
+    ],
+    "question": "一根理想圆柱阶跃折射率光纤的纤芯半径为 a>0、折射率 n₁>n₂>0，包层折射率 n₂；光从外部折射率 n₀>0 的均匀介质入射。讨论几何光学的子午光线近似及弱导波波动理论，假设纤芯—包层无吸收。\n(1) 由全内反射条件和入射端 Snell 定律求最大接受入射角与数值孔径；(2) 分析数值孔径对芯包折射率差的依赖与弱导波极限；(3) 定义归一化频率 V 与单模阈值，求仅允许基模传输的波长条件；(4) 解释几何光学光线接受锥与波动光学模态截止判据为何不能混为一谈。",
+    "solution": "(1) 在子午光线近似中，纤芯光线与轴的夹角记为 β，碰到芯包侧壁时入射角相对于法线为 \\(\\pi/2-\\beta\\)。全内反射要求 \\(\\sin(\\pi/2-\\beta)=\\cos\\beta\\ge n_2/n_1\\)，因此 \\(\\sin\\beta\\le\\sqrt{1-(n_2/n_1)^2}\\)。在输入端 Snell 定律给 \\(n_0\\sin\\theta_0=n_1\\sin\\beta\\)，故\n\\[\nn_0\\sin\\theta_{\\max}=\\sqrt{n_1^2-n_2^2}=:\\mathrm{NA}.\n\\]\n若 NA>n₀，物理接受角最多为 π/2；通常光纤满足 NA≤n₀。\n\n(2) 令相对折射率差 \\(\\Delta=(n_1-n_2)/n_1\\ll1\\)。因 \\(n_1^2-n_2^2=(n_1-n_2)(n_1+n_2)\\simeq2n_1^2\\Delta\\)，得\n\\[\n\\mathrm{NA}\\simeq n_1\\sqrt{2\\Delta}.\n\\]\n因此即便芯包折射率差相对很小，也可以通过高数值孔径改变入射光的接受角，但该近似仅在弱导波条件成立。\n\n(3) 波动光学定义归一化频率\n\\[\nV=\\frac{2\\pi a}{\\lambda}\\sqrt{n_1^2-n_2^2}\n=\\frac{2\\pi a\\,\\mathrm{NA}}{\\lambda}.\n\\]\n弱导波阶跃光纤中 LP11 模首次截止对应 \\(V\\simeq2.405\\)（来自第一类贝塞尔函数的首个正零点），所以仅支持基模 LP01 的通常单模判据为 \\(V<2.405\\)，即\n\\[\n\\lambda>\\frac{2\\pi a\\,\\mathrm{NA}}{2.405}.\n\\]\n基模本身无同样的正截止频率；实际双折射、弯曲与损耗会调整实用工作范围。\n\n(4) 几何光学接受锥来自全内反射的射线条件，适于多模式、波长远小于纤芯直径的情况；单模截止由横向 Maxwell 本征问题及圆柱边界条件决定，并依赖无量纲参数 V。射线角限制不能替代模式数判据，因为导波模式是整个横截面上的相干场结构。",
+    "answer": "\nn_0\\sin\\theta_{\\max}=\\sqrt{n_1^2-n_2^2}=:\\mathrm{NA}.\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B"
+  },
+  {
     "id": "Q007",
     "topic": "近代物理",
     "title": "相对论两体衰变的能量区间与阈值",
@@ -3123,6 +3299,50 @@
     "question": "一个具有正电荷 q、质量 m 的核外粒子从半径为 R 的核作用区外逃逸。核外有效势近似为 U(r)=κ/r，κ>0，粒子径向总能量为 E，满足 0<E<κ/R；忽略角动量离心势、核内细节以及相对论效应。其尝试逃逸频率记为 ν>0。\n(1) 找出外侧经典转向点和禁止区间；(2) 使用 WKB 积分推导禁阻穿透指数的解析式；(3) 对 R 远小于外侧转向半径的情形求 Gamow 指数主导近似；(4) 求半衰期的对数形式，说明穿透率为什么对衰变能量极其敏感以及前因子的模型局限。",
     "solution": "(1) 在核外经典允许区要求 \\(E\\ge U(r)=\\kappa/r\\)，因此外侧转向半径 \\(r_t=\\kappa/E>R\\)，而 \\(R<r<r_t\\) 是粒子经典禁阻区域。\n\n(2) WKB 穿透率首阶为 \\(P\\simeq e^{-G(E)}\\)，其中\n\\[\nG(E)=\\frac{2}{\\hbar}\\int_R^{r_t}\\sqrt{2m(\\kappa/r-E)}\\,dr.\n\\]\n令 \\(r=r_t\\sin^2\\theta\\)，下限 \\(\\theta_R=\\arcsin\\sqrt{R/r_t}\\)。则 \\(\\kappa/r-E=E\\cot^2\\theta\\)，积分化为 \\(2r_t\\sqrt{2mE}\\int_{\\theta_R}^{\\pi/2}\\cos^2\\theta\\,d\\theta\\)。所以\n\\[\nG(E)=\\frac{2\\sqrt{2m}\\kappa}{\\hbar\\sqrt E}\n\\left[\n\\arccos\\sqrt{\\frac{RE}{\\kappa}}-\n\\sqrt{\\frac{RE}{\\kappa}\\left(1-\\frac{RE}{\\kappa}\\right)}\n\\right].\n\\]\n其整体无量纲，是势垒作用量与 ℏ 的比值。\n\n(3) 当 \\(RE/\\kappa\\ll1\\)，利用 \\(\\arccos\\sqrt x=\\pi/2-\\sqrt x+O(x^{3/2})\\) 与 \\(\\sqrt{x(1-x)}=\\sqrt x+O(x^{3/2})\\)，得\n\\[\nG(E)=\\frac{\\pi\\sqrt{2m}\\kappa}{\\hbar\\sqrt E}\n-\\frac{4\\sqrt{2m\\kappa R}}{\\hbar}+O(\\sqrt E).\n\\]\n主项随 \\(E^{-1/2}\\) 增长，故较小放出能量使穿透率指数级减小。\n\n(4) 以 ν 表示核内粒子单位时间尝试穿透次数，衰变率近似 \\(\\Gamma=\\nu e^{-G}\\)，对应半衰期 \\(t_{1/2}=\\ln2/\\Gamma\\)。因此\n\\[\n\\ln t_{1/2}\\simeq G(E)+\\ln(\\ln2/\\nu).\n\\]\n在近似固定核电荷、质量和作用半径时，主要能量依赖是 \\(\\ln t_{1/2}\\propto1/\\sqrt E\\)，对应 Geiger–Nuttall 型关系。但真实 α 粒子预形成概率、角动量势与核力可改变前因子 ν，WKB 仅计算此简单 Coulomb 势垒的主要指数。",
     "answer": "\nG(E)=\\frac{2}{\\hbar}\\int_R^{r_t}\\sqrt{2m(\\kappa/r-E)}\\,dr.\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
+    "id": "Q028",
+    "topic": "近代物理",
+    "title": "磁通穿过量子环的 Aharonov–Bohm 能级与持久电流",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "tags": [
+      "矢势量子效应",
+      "Aharonov–Bohm相位",
+      "量子环",
+      "持久电流"
+    ],
+    "question": "质量 m、电荷 q≠0 的单个非相对论量子粒子被严格约束在半径 R 的无粗糙度细环上，环外磁场为零，然而环内有封闭磁通 Φ，可沿环取恒定矢势切向分量 Aφ=Φ/(2πR)。量子波函数满足周期边界条件，忽略自旋与环宽。\n(1) 写出具有最小耦合的圆环哈密顿量及本征态；(2) 求能级与磁通量的关系、磁通周期；(3) 对处于给定角量子数的本征态，求沿环的持久电流；(4) 讨论整数与半整数磁通量子处的能级交叉，解释外部 B 为零为何仍有可观测磁通效应。",
+    "solution": "(1) 环角坐标为 \\(\\phi\\in[0,2\\pi)\\)，最小耦合切向动量是 \\([-i\\hbar R^{-1}\\partial_\\phi-qA_\\phi]\\)，故\n\\[\nH=\\frac1{2mR^2}\\left(-i\\hbar\\partial_\\phi-\\frac{q\\Phi}{2\\pi}\\right)^2.\n\\]\n周期边界 \\(\\psi(\\phi+2\\pi)=\\psi(\\phi)\\) 允许本征态 \\(\\psi_n=e^{in\\phi}/\\sqrt{2\\pi}\\)，n 为任意整数。\n\n(2) 代入得\n\\[\nE_n(\\Phi)=\\frac{\\hbar^2}{2mR^2}\n\\left(n-\\frac{\\Phi}{\\Phi_0}\\right)^2,\\qquad\n\\Phi_0=\\frac{h}{q}.\n\\]\n这里 q 可为负，若只谈周期大小取 \\(|\\Phi_0|=h/|q|\\)。当磁通增加一个有符号磁通量子 \\(\\Phi\\mapsto\\Phi+\\Phi_0\\)，有 \\(E_n(\\Phi+\\Phi_0)=E_{n-1}(\\Phi)\\)，所以作为整体集合的能谱周期保持不变。\n\n(3) 能量对磁通的导数给单粒子的环流：\n\\[\nI_n=-\\frac{\\partial E_n}{\\partial\\Phi}\n=\\frac{q\\hbar}{2\\pi mR^2}\n\\left(n-\\frac{\\Phi}{\\Phi_0}\\right).\n\\]\n也可由粒子环向速度 \\(v_\\phi=(\\hbar n/R-q\\Phi/(2\\pi R))/m\\) 与每绕行一周的电荷通量 \\(I=qv_\\phi/(2\\pi R)\\) 独立得到。对同一磁通下不同 n，电流可正可负。\n\n(4) 两支能级 \\(E_n,E_{n+1}\\) 在 \\(\\Phi/\\Phi_0=n+1/2\\) 处交叉；整数磁通量子处能谱等价于零磁通，基态可取零环流。尽管粒子实际经过的环上 \\(\\boldsymbol B=0\\)，闭合环量 \\(\\oint\\boldsymbol A\\cdot d\\boldsymbol\\ell=\\Phi\\) 不可由单值规范变换任意消除，量子波函数相位受到磁通控制。这是 AB 效应的整体拓扑体现。",
+    "answer": "\nH=\\frac1{2mR^2}\\left(-i\\hbar\\partial_\\phi-\\frac{q\\Phi}{2\\pi}\\right)^2.\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
+    "id": "Q029",
+    "topic": "近代物理",
+    "title": "弱四次非谐势中量子振子的能级一阶修正和选择规则",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "tags": [
+      "定态微扰论",
+      "升降算符",
+      "四次非谐",
+      "宇称选择规则"
+    ],
+    "question": "一维质量 m、谐振频率 ω>0 的量子谐振子受到微弱四次势扰动，完整哈密顿量为 H=p²/(2m)+mω²x²/2+λx⁴，其中 λ>0 足够小，假定非简并定态微扰论适用，普朗克常数 ℏ>0。\n(1) 写出谐振子升降算符表示的位置算符与无扰动能级；(2) 利用算符对易关系求任意 n 态的四次位置期望值；(3) 求能量的一阶微扰修正及基态、第一激发态能隙变化；(4) 依据宇称和升降算符说明 x⁴ 扰动只耦合哪些量子数差的态，并解释一阶能级修正为正的原因。",
+    "solution": "(1) 令 \\(\\alpha=\\sqrt{\\hbar/(2m\\omega)}\\)，位置算符是 \\(x=\\alpha(a+a^\\dagger)\\)，满足 \\([a,a^\\dagger]=1\\)、\\(a|n\\rangle=\\sqrt n|n-1\\rangle\\)。无扰动哈密顿量 \\(H_0=\\hbar\\omega(a^\\dagger a+1/2)\\)，能级 \\(E_n^{(0)}=\\hbar\\omega(n+1/2)\\)。\n\n(2) 由对易关系可得\n\\[\n(a+a^\\dagger)^2=a^2+a^{\\dagger2}+2N+1.\n\\]\n在 n 态计算四次期望值，可写成 \\(\\langle n|[(a+a^\\dagger)^2]^2|n\\rangle\\)。因 \\(a^2\\) 和 \\(a^{\\dagger2}\\) 改变量子数 ±2，只有总改变量零的项留下：常数对角贡献 \\((2n+1)^2\\)，以及 \\(a^2a^{\\dagger2}\\) 与 \\(a^{\\dagger2}a^2\\) 的期望分别为 \\((n+1)(n+2)\\) 与 \\(n(n-1)\\)。相加得\n\\[\n\\langle n|x^4|n\\rangle\n=\\alpha^4[6n^2+6n+3]\n=3\\alpha^4(2n^2+2n+1).\n\\]\n\n(3) 非简并微扰论一阶能级修正 \\(\\Delta E_n^{(1)}=\\lambda\\langle n|x^4|n\\rangle\\)，因此\n\\[\nE_n\\simeq\\hbar\\omega(n+1/2)\n+3\\lambda\\left(\\frac{\\hbar}{2m\\omega}\\right)^2(2n^2+2n+1).\n\\]\n基态修正为 \\(3\\lambda\\alpha^4\\)，第一激发态为 \\(15\\lambda\\alpha^4\\)，所以第一能隙\n\\[\nE_1-E_0\\simeq\\hbar\\omega+12\\lambda\\alpha^4.\n\\]\n正四次势使高激发态增加的能量更多，能隙相应上升。\n\n(4) 因 x⁴ 是偶宇称算符，它只能连接同宇称谐振子态；将 \\((a+a^\\dagger)^4\\) 展开并正规序化，非对角矩阵元只可能有 \\(\\Delta n=\\pm2,\\pm4\\)，还包含 \\(\\Delta n=0\\) 的对角元，而奇数变化严格为零。一阶能级修正全部为正，因为 λ>0 且 \\(x^4\\ge0\\) 为正算符；扰动理论的有效性要求修正远小于相邻无扰动能级间隔。",
+    "answer": "\n(a+a^\\dagger)^2=a^2+a^{\\dagger2}+2N+1.\n",
     "quality_status": "待独立复核",
     "tier": "advanced_composite",
     "revision": "composite-v2.0",
