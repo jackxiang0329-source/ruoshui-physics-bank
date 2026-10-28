@@ -722,6 +722,75 @@
     "solution": "(1) 令 \\(\\gamma=b/m>0\\)。速度方程 \\(\\dot v_x=-\\gamma v_x,\\dot v_y=-g-\\gamma v_y\\)，解为\n\\[\nv_x=v_0\\cos\\theta\\,e^{-\\gamma t},\\quad\nv_y=(v_0\\sin\\theta+g/\\gamma)e^{-\\gamma t}-g/\\gamma.\n\\]\n积分得到 \\(x(t)=v_0\\cos\\theta(1-e^{-\\gamma t})/\\gamma\\)，\n\\[\ny(t)=\\frac{v_0\\sin\\theta+g/\\gamma}{\\gamma}(1-e^{-\\gamma t})-\\frac g\\gamma t.\n\\]\n\n(2) 落地正时刻 \\(t_f>0\\) 必须满足\n\\[\n(1+\\gamma v_0\\sin\\theta/g)(1-e^{-\\gamma t_f})=\\gamma t_f.\n\\]\n因初始 y'=v0 sinθ>0，而 y''=-\\gamma(v_y+g/\\gamma)<0，在本解中 y' 单调从正降为 \\(-g/\\gamma\\)，故 y 先升后降且恰有一个正根。不能把平凡根 t=0 当作落地时间。\n\n(3) 最高点满足 \\(v_y(t_h)=0\\)，故 \\(t_h=\\gamma^{-1}\\ln(1+\\gamma v_0\\sin\\theta/g)\\)，水平射程\n\\[\nR=x(t_f)=\\frac{v_0\\cos\\theta}{\\gamma}(1-e^{-\\gamma t_f}).\n\\]\n若要最大化 R 还需将 \\(t_f(\\theta)\\) 的隐函数依赖纳入求导，不能直接取真空最优的 45 度角。\n\n(4) 在固定 t 下 \\(1-e^{-\\gamma t}=\\gamma t-\\gamma^2t^2/2+O(\\gamma^3)\\)，代回得到 \\(x=v_0t\\cos\\theta+O(\\gamma)\\) 与 \\(y=v_0t\\sin\\theta-gt^2/2+O(\\gamma)\\)。因此 \\(t_f\\to2v_0\\sin\\theta/g,\\ R\\to v_0^2\\sin2\\theta/g\\)。\n"
   },
   {
+    "id": "M038",
+    "topic": "力学",
+    "title": "无限深引力井中自由落体的能量分解与 virial 关系",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "均匀重力",
+      "相空间",
+      "维里关系",
+      "反弹周期"
+    ],
+    "answer": "T=2\\sqrt{2h/g},\\quad\\langle K\\rangle=mgh/3,\\ \\langle U\\rangle=2mgh/3",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.1",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B",
+    "question": "质量 \\(m\\) 的质点在竖直方向受均匀重力势 \\(U(y)=mgy\\)，\\(y\\ge0\\)，底部 \\(y=0\\) 为理想完全弹性水平硬墙。粒子从高度 \\(h>0\\) 以零竖向速度释放，不考虑空气阻力。\n(1) 求一次下降与反弹的周期；(2) 求周期平均动能和势能；(3) 用一维维里关系解释两个平均值的比例；(4) 求任意时刻的动量分段形式并核对碰撞前后总能量。\n",
+    "solution": "(1) 自由下落满足 \\(y(t)=h-gt^2/2\\) 直到 \\(t_0=\\sqrt{2h/g}\\)，碰前速度 \\(-gt_0=-\\sqrt{2gh}\\)。理想墙使速度瞬时反号，回升到 h 再静止所需同样时间。因此完整往复周期 \\(T=2t_0=2\\sqrt{2h/g}\\)。\n\n(2) 周期平均值可只在下降半段积分并乘以2：\n\\[\n\\langle U\\rangle=\\frac1{t_0}\\int_0^{t_0}mg(h-gt^2/2)\\,dt\n=mg(h-gt_0^2/6)=\\frac23mgh.\n\\]\n总能量恒为 \\(mgh\\)，所以 \\(\\langle K\\rangle=mgh/3\\)。直接积分 \\(K=mg^2t^2/2\\) 也得到同一数值。\n\n(3) 对粒子在光滑运动区的 \\(G=yp\\)，有 \\(\\dot G=2K-yU'(y)=2K-mgy\\)。墙碰撞处 y=0，故冲量对 G 的积分跳跃为零；一周期 G 返回原值，所以 \\(2\\langle K\\rangle=\\langle yU'(y)\\rangle=\\langle U\\rangle\\)。与平均值 \\(2(mgh/3)=2mgh/3\\) 相符。\n\n(4) 对下降阶段 \\(p=-mgt\\)；从碰后开始令局部时间 \\(s=t-t_0\\)，则 \\(p=m\\sqrt{2gh}-mgs\\)，其中 \\(0<s<t_0\\)。碰撞瞬间 \\(p^+=-p^-\\)，动能 \\(p^2/(2m)\\) 不变，势能 \\(mgy=0\\)，总能量守恒。\n"
+  },
+  {
+    "id": "M039",
+    "topic": "力学",
+    "title": "双体圆轨道的拉格朗日角动量与最小逃逸速度",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "两体问题",
+      "约化质量",
+      "圆轨道",
+      "逃逸条件"
+    ],
+    "answer": "\\omega^2=GM/r^3,\\quad \\Delta v=(\\sqrt2-1)\\sqrt{GM/r}",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.1",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B",
+    "question": "两个点质量 \\(m_1,m_2>0\\) 在牛顿万有引力下绕共同质心作相对圆运动，相对距离恒为 \\(r>0\\)，无外力。总质量 \\(M=m_1+m_2\\)，约化质量 \\(\\mu=m_1m_2/M\\)。\n(1) 在质心系推导相对角速度；(2) 求两个物体各自轨道半径和速率；(3) 求总动能、势能及总角动量；(4) 若瞬间给相对速度一个纯切向正增量使总相对比机械能恰为零，求所需最小正增量。\n",
+    "solution": "(1) 双体相对运动等效于约化质量 \\(\\mu\\) 在中心势 \\(-Gm_1m_2/r=-G\\mu M/r\\) 中运动。圆运动条件为 \\(\\mu r\\omega^2=G\\mu M/r^2\\)，所以 \\(\\omega=\\sqrt{GM/r^3}\\)。\n\n(2) 质心位置 \\(m_1\\boldsymbol r_1+m_2\\boldsymbol r_2=0\\)，相对位矢长度为 r，故两圆轨道半径 \\(r_1=m_2r/M,\\ r_2=m_1r/M\\)，对应速率 \\(v_i=\\omega r_i\\)，相对速度 \\(v_{\\rm rel}=\\omega r=\\sqrt{GM/r}\\)。\n\n(3) 总动能 \\(K=\\mu v_{\\rm rel}^2/2=Gm_1m_2/(2r)\\)，总势能 \\(U=-Gm_1m_2/r\\)，所以 \\(E=-Gm_1m_2/(2r)\\)。总绕质心角动量\n\\[\nL=\\mu r^2\\omega=\\mu\\sqrt{GMr}.\n\\]\n这是两个质点角动量之和，不可只用单个物体的质量。\n\n(4) 逃逸边界的相对比能为0，需要 \\(v_{\\rm esc}=\\sqrt{2GM/r}\\)。初圆轨道相对速率 \\(\\sqrt{GM/r}\\)，故纯切向的正速度增量\n\\[\n\\Delta v_{\\rm min}=(\\sqrt2-1)\\sqrt{GM/r}.\n\\]\n本结论是质心系相对速度增量，而非任意一颗物体的实验室单独脉冲。\n"
+  },
+  {
+    "id": "M040",
+    "topic": "力学",
+    "title": "非弹性两体相对论碰撞的合成静质量与能量损耗",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "四动量守恒",
+      "静质量",
+      "非弹性碰撞",
+      "低速极限"
+    ],
+    "answer": "M=2\\gamma m,\\quad\\Delta E_{\\rm int}=2mc^2(\\gamma-1)",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.1",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C",
+    "question": "两个相同静质量 \\(m>0\\) 的粒子在实验室系中沿 x 轴以速度 \\(+v,-v\\) 相向而行，\\(0<v<c\\)。碰撞后粘合成一个复合物，所有产生的能量都留在复合物内部，不向外辐射。\n(1) 写出碰前总四动量；(2) 求碰后复合物速度和不变静质量 \\(M\\)；(3) 求增加的内部能量和碰前总动能；(4) 检查 \\(v\\ll c\\) 的牛顿极限和 \\(v\\to c^{-}\\) 的超相对论极限。\n",
+    "solution": "(1) 令 \\(\\gamma=1/\\sqrt{1-v^2/c^2}\\)。两粒子四动量分别为 \\(p_1^\\mu=(\\gamma mc,\\gamma mv)\\) 和 \\(p_2^\\mu=(\\gamma mc,-\\gamma mv)\\)，其和为 \\(P^\\mu=(2\\gamma mc,0)\\)；总能量 \\(E_{\\rm tot}=2\\gamma mc^2\\)，总动量为零。\n\n(2) 因碰撞中四动量守恒，末态物体必须静止于这个实验室系，即 V=0。不变质量由 \\(M^2c^4=E_{\\rm tot}^2-c^2P_x^2\\) 给出\n\\[\nM=2\\gamma m.\n\\]\n非弹性碰撞中的复合静质量大于两粒子静质量之和，这是储存内部能量的结果。\n\n(3) 与两颗分离的静质量之和比较，末态额外的内部能量为\n\\[\n\\Delta E_{\\rm int}=(M-2m)c^2=2mc^2(\\gamma-1).\n\\]\n碰前总动能正好为 \\(K_{\\rm ini}=2(\\gamma-1)mc^2\\)，所以全部相对运动动能转成了复合物内部能，既没有丢失能量也没有必须对外辐射的能量。\n\n(4) 对 \\(v/c\\ll1\\)，\\(\\gamma=1+v^2/(2c^2)+O(v^4/c^4)\\)，故 \\(\\Delta E_{\\rm int}=mv^2+O(v^4/c^2)\\)，恰为两颗牛顿粒子动能总和。\\(v\\to c^{-}\\) 时 \\(\\gamma\\to\\infty\\)、M 无界，显示无限增大动能会使复合系统不变质量无限增大。\n"
+  },
+  {
     "id": "E007",
     "topic": "电磁学",
     "title": "滑动导体棒的自感反馈与能量耗散",
@@ -1331,6 +1400,51 @@
     "revision": "composite-v2.0",
     "challenge_profile": "high-multistage",
     "complexity_tier": "L5-C"
+  },
+  {
+    "id": "E033",
+    "topic": "电磁学",
+    "title": "极板电容器的 Maxwell 压力、固定电荷力与能量",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "静电能量",
+      "Maxwell应力",
+      "边界力"
+    ],
+    "answer": "p=\\epsilon_0E^2/2,\\quad F=-Q^2/(2\\epsilon_0A)",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.1",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B",
+    "question": "面积 \\(A\\)、间距 \\(d\\ll\\sqrt A\\) 的两块大平行理想导体板分别带电 \\(\\pm Q\\)，真空介电常数 \\(\\epsilon_0\\)，忽略边缘效应，保持总电荷 Q 不变。\n(1) 求板间电场、电压与电容；(2) 由场能随 d 的变化求电极吸引力；(3) 用单块极板只受另一块极板的电场核验压力；(4) 对 d 从 \\(d_1\\) 变为 \\(d_2\\) 求准静态外力功并解释固定电压时不能套用同一能量导数。\n",
+    "solution": "(1) 面电荷密度 \\(\\sigma=Q/A\\)。无限大导体板各自产生 \\(\\sigma/(2\\epsilon_0)\\) 场，两板内部叠加得 \\(E=Q/(\\epsilon_0 A)\\)，外部抵消。\\(V=Ed=Qd/(\\epsilon_0A)\\)、\\(C=Q/V=\\epsilon_0 A/d\\)。\n\n(2) 固定 Q 的场能 \\(U=Q^2/(2C)=Q^2d/(2\\epsilon_0 A)\\)。以 d 增大为正坐标，场对极板的广义力 \\(F_d=-\\partial U/\\partial d=-Q^2/(2\\epsilon_0 A)\\)，所以吸引压力\n\\[\np=\\frac{|F_d|}{A}=\\frac{\\sigma^2}{2\\epsilon_0}=\\frac{\\epsilon_0E^2}{2}.\n\\]\n\n(3) 一块极板所受力来自另一块极板的电场，而不应把自身场算进去。另一块板产生的场大小 \\(|E_{\\rm other}|=\\sigma/(2\\epsilon_0)\\)，所以该极板的力大小 \\(Q|E_{\\rm other}|=Q^2/(2\\epsilon_0A)\\)，与能量法一致。\n\n(4) 外力准静态增大间距 \\(d_1\\to d_2\\) 时对体系做功 \\(W_{\\rm ext}=U(d_2)-U(d_1)=Q^2(d_2-d_1)/(2\\epsilon_0A)\\)。若固定 V，板间电荷会随 d 变化，必须把电源的功加入能量预算，不能仅对 \\(CV^2/2\\) 取负导数。\n"
+  },
+  {
+    "id": "E034",
+    "topic": "电磁学",
+    "title": "良导体中的交流磁场扩散、集肤深度与欧姆耗散",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "麦克斯韦方程",
+      "集肤效应",
+      "复波数",
+      "电磁耗散"
+    ],
+    "answer": "\\delta=\\sqrt{2/(\\mu\\sigma\\omega)},\\quad\\mathcal B=B_0e^{-(1-i)x/\\delta}",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.1",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C",
+    "question": "均匀无磁良导体占据 \\(x>0\\)，电导率 \\(\\sigma>0\\)、磁导率 \\(\\mu>0\\)，外界在表面施加沿 z 方向的时间谐波磁场 \\(B_z(0,t)=\\Re[B_0e^{-i\\omega t}]\\)，\\(\\omega>0\\)。忽略位移电流，导体内部无其他源。\n(1) 由准静态 Maxwell 方程推导 B 的扩散方程；(2) 求向深处衰减的复磁场及集肤深度；(3) 求感应电流密度的复幅值及局部平均焦耳热；(4) 验证 \\(\\omega\\to0\\) 的穿透深度趋势。\n",
+    "solution": "(1) 用 \\(\\nabla\\times\\boldsymbol B=\\mu\\boldsymbol J=\\mu\\sigma\\boldsymbol E\\) 与 \\(\\nabla\\times\\boldsymbol E=-\\partial_t\\boldsymbol B\\)，对前式取旋度，并使用 \\(\\nabla\\cdot\\boldsymbol B=0\\)：\n\\[\n-\\nabla^2\\boldsymbol B=-\\mu\\sigma\\partial_t\\boldsymbol B\n\\quad\\Rightarrow\\quad \\partial_t\\boldsymbol B=\\frac1{\\mu\\sigma}\\nabla^2\\boldsymbol B.\n\\]\n\n(2) 对一维磁场取 \\(B_z=\\Re[\\mathcal B(x)e^{-i\\omega t}]\\)，有 \\(\\mathcal B''=-i\\omega\\mu\\sigma\\mathcal B\\)。满足 \\(x\\to\\infty\\) 有界的解为\n\\[\n\\mathcal B(x)=B_0e^{-(1-i)x/\\delta},\\quad\n\\delta=\\sqrt{\\frac2{\\mu\\sigma\\omega}},\n\\]\n因为 \\((1-i)^2/\\delta^2=-i\\omega\\mu\\sigma\\)。δ 为振幅衰减到 1/e 的深度，不是强度的 1/e 深度。\n\n(3) 由 Ampere 定律 \\(J_y=-(1/\\mu)\\partial_x B_z\\)，复电流幅值\n\\[\n\\mathcal J_y=\\frac{1-i}{\\mu\\delta}B_0e^{-(1-i)x/\\delta}.\n\\]\n均匀电导体平均体积焦耳热为\n\\[\n\\overline p_J(x)=\\frac{|\\mathcal J_y|^2}{2\\sigma}\n=\\frac{|B_0|^2}{\\sigma\\mu^2\\delta^2}e^{-2x/\\delta}>0.\n\\]\n它沿深度指数衰减，能量由表面输入后耗散为热。\n\n(4) 在固定 \\(\\mu,\\sigma\\) 下 \\(\\delta\\propto\\omega^{-1/2}\\)，低频磁场更深地穿入导体；\\(\\omega\\to0\\) 给 δ→∞，而采用的半无限导体、无位移电流近似仍需在静态极限下单独看边界条件。\n"
   },
   {
     "id": "T007",
