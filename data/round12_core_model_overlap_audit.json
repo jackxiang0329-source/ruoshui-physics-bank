@@ -25,10 +25,17 @@
       "existing_id": "Q014",
       "shared_core": "谐振子频率突然淬火、平均激发数和偶宇称投影",
       "draft_new_aspects": "功涨落与Loschmidt回波",
-      "action": "改为不同量子动力学核心模型",
-      "resolution_status": "unresolved"
+      "action": "已替换旧谐振子频率淬火为零温振幅阻尼开放量子通道；核对Kraus、Lindblad、部分转置负性与Haar保真度四项独立物理计算",
+      "resolution_status": "resolved",
+      "replacement_title": "零温振幅阻尼量子通道的Kraus表示、Lindblad耗散与纠缠负性",
+      "evidence_paths": [
+        "bank/Q057/question.tex",
+        "bank/Q057/solution.tex",
+        "scripts/check_round12_draft.py",
+        "data/round12_draft_validation_report.json"
+      ]
     }
   ],
-  "disposition": "Round 12 final admission blocked by scripts/check_future_rounds.py until every recorded overlap is resolved and evidence recorded. Automated similarity pass alone is insufficient.",
+  "disposition": "Q057 oscillator-quench overlap resolved by replacing the core model with an amplitude-damping quantum channel; M060 and O057 remain blocked. All draft work remains unmerged and awaiting independent review.",
   "independent_expert_review": "待独立复核"
 }

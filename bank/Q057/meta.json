@@ -1,22 +1,22 @@
 {
   "id": "Q057",
   "topic": "近代物理",
-  "title": "谐振子频率突然淬火的挤压真空、功涨落与Loschmidt回波",
+  "title": "零温振幅阻尼量子通道的Kraus表示、Lindblad耗散与纠缠负性",
   "kind": "综合推导题",
   "level": 5,
   "estimated_minutes": 110,
   "tags": [
-    "量子突然淬火",
-    "Bogoliubov变换",
-    "挤压真空偶宇称分布",
-    "双次能量测量功统计",
-    "Loschmidt回波"
+    "开放量子系统与Kraus算符",
+    "零温自发辐射Lindblad方程",
+    "量子信道半群与能量耗散",
+    "Bell态部分转置和纠缠负性",
+    "Haar平均态保真度与纠缠保真度"
   ],
-  "answer": "N=\\sinh^2r=\\frac{(\\omega_1-\\omega_0)^2}{4\\omega_0\\omega_1},\\quad\n\\mathcal L(t)=\\big[1+\\sinh^2(2r)\\sin^2(\\omega_1t)\\big]^{-1/2}",
+  "answer": "\\mathcal N(t)=\\frac12e^{-\\Gamma t},\\quad F_{\\rm av}(t)=\\frac{3+2e^{-\\Gamma t/2}+e^{-\\Gamma t}}6,\\quad \\dot E=-\\Gamma E",
   "quality_status": "待独立复核",
   "tier": "advanced_composite",
   "format": "latex-fragment-v1",
-  "revision": "composite-v2.4-round12-draft",
+  "revision": "composite-v2.5-round12-overlap-replacement",
   "challenge_profile": "high-multistage",
   "complexity_tier": "L5-C"
 }

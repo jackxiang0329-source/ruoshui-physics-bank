@@ -84,22 +84,37 @@ record('O057',3,'symbolic','Artmann p-polarization shift matches derivative and 
 ss=s.symbols('ss',positive=True)
 ratio=qopt**2/((1+qopt**2)*ss-qopt**2)
 record('O057',4,'limit','polarization ratio approaches inverse index square at critical angle and index square at grazing',eq(ratio.subs(ss,qopt**2),1/qopt**2) and eq(ratio.subs(ss,1),qopt**2) and eq(ratio.subs(ss,2*qopt**2/(1+qopt**2)),1))
-rr=s.symbols('rr',positive=True)
-al=s.cosh(rr);be=s.sinh(rr);nbar=be**2
-record('Q057',1,'canonical_commutator','Bogoliubov coefficients preserve canonical oscillator commutator',eq(al**2-be**2,1))
-record('Q057',2,'normalization','squeezed even-parity number distribution sums to unity',
-       eq(1/(s.cosh(rr)*s.sqrt(1-s.tanh(rr)**2)),1))
-w0,w1,h=s.symbols('w0 w1 h',positive=True)
-nclosed=(w1-w0)**2/(4*w0*w1)
-meanw=h*(w1*(nclosed+s.Rational(1,2))-w0/s.Integer(2))
-varw=2*(h*w1)**2*nclosed*(nclosed+1)
-record('Q057',3,'energy','two-time-measurement mean and variance match closed frequency-quench expressions',
-       eq(meanw,h*(w1**2-w0**2)/(4*w0)) and eq(varw,h**2*(w1**2-w0**2)**2/(8*w0**2)))
-rnum=mp.log(mp.mpf('2.1')/mp.mpf('1.3'))/2
-tnum=mp.mpf('0.73');w1num=mp.mpf('2.1')
-amp=mp.exp(-1j*w1num*tnum/2)/(mp.cosh(rnum)*mp.sqrt(1-mp.tanh(rnum)**2*mp.exp(-2j*w1num*tnum)))
-echo=1/mp.sqrt(1+mp.sinh(2*rnum)**2*mp.sin(w1num*tnum)**2)
-record('Q057',4,'numerical','Loschmidt amplitude agrees with independent real closed echo at nontrivial time',abs(abs(amp)**2-echo)<mp.mpf('1e-26'))
+# Q057 replacement: amplitude damping is a different core model from Q014 oscillator quench.
+et=s.symbols('et',positive=True)
+K0=s.diag(1,s.sqrt(et))
+K1=s.Matrix([[0,s.sqrt(1-et)],[0,0]])
+record('Q057',1,'canonical_commutator','Stinespring one excitation rotation and Kraus completeness yield a trace preserving channel',
+       s.simplify(K0.T*K0+K1.T*K1)==s.eye(2)
+       and eq(s.Matrix([[s.sqrt(et),-s.sqrt(1-et)],[s.sqrt(1-et),s.sqrt(et)]]).det(),1))
+gam,ttq,pq,zq=s.symbols('gam ttq pq zq',positive=True)
+etq=s.exp(-gam*ttq)
+rhot=s.Matrix([[1-etq*pq,s.sqrt(etq)*zq],[s.sqrt(etq)*zq,etq*pq]])
+sm=s.Matrix([[0,1],[0,0]])
+np=sm.T*sm
+lind=gam*(sm*rhot*sm.T-(np*rhot+rhot*np)/2)
+record('Q057',2,'independent_derivation','exact amplitude damping matrix solves zero temperature Lindblad equation and energy balance',
+       all(eq(x) for x in (s.diff(rhot,ttq)-lind))
+       and eq(s.diff(etq*pq,ttq),-gam*etq*pq))
+rAB=s.Matrix([[s.Rational(1,2),0,0,s.sqrt(et)/2],
+              [0,0,0,0],[0,0,(1-et)/2,0],
+              [s.sqrt(et)/2,0,0,et/2]])
+pt=s.Matrix(4,4,lambda i,j:rAB[2*(i//2)+(j%2),2*(j//2)+(i%2)])
+lamq=s.symbols('lamq')
+record('Q057',3,'symbolic','Bell Choi state partial transpose has exact negative eigenvalue minus eta over two',
+       eq(pt.charpoly(lamq).as_expr(),(lamq-s.Rational(1,2))**2*(lamq**2-et**2/4)))
+ppq=s.symbols('ppq',real=True)
+fid=(1-ppq)*(1-et*ppq)+et*ppq**2+2*s.sqrt(et)*ppq*(1-ppq)
+fav=(3+2*s.sqrt(et)+et)/6
+fe=(1+s.sqrt(et))**2/4
+record('Q057',4,'independent_derivation','Haar averaged fidelity agrees with independent entanglement fidelity identity',
+       eq(s.integrate(fid,(ppq,0,1)),fav)
+       and eq((2*fe+1)/3,fav)
+       and eq(fav.subs(et,1),1) and eq(s.limit(fav,et,0,dir='+'),s.Rational(1,2)))
 
 
 # T057: distinct thermodynamic shock model; four analytical/physical checks.
@@ -272,13 +287,13 @@ an=mp.sqrt(mp.sin(thnum)**2-qnum**2)
 sphase=lambda th:-2*mp.atan(mp.sqrt(mp.sin(th)**2-qnum**2)/mp.cos(th))
 Dsn=2*mp.sin(thnum)/(knum*mp.cos(thnum)*an)
 assert abs(-mp.diff(sphase,thnum)/(knum*mp.cos(thnum))-Dsn)<mp.mpf('1e-26')
-prob=[mp.factorial(2*n)/(2**(2*n)*mp.factorial(n)**2)*mp.tanh(rnum)**(2*n)/mp.cosh(rnum) for n in range(40)]
-assert abs(sum(prob)-1)<mp.mpf('1e-26')
-assert abs(sum(2*n*prob[n] for n in range(40))-mp.sinh(rnum)**2)<mp.mpf('1e-26')
+etaN=mp.mpf('0.37')
+fN=lambda p:(1-p)*(1-etaN*p)+etaN*p*p+2*mp.sqrt(etaN)*p*(1-p)
+assert abs(mp.quad(fN,[0,1])-(3+2*mp.sqrt(etaN)+etaN)/6)<mp.mpf('1e-27')
 supplemental.extend([
  dict(id='W056',method='asymptotic_numerical',name='large end-inertia fundamental root agrees with effective stiffness asymptotic',passed=True),
  dict(id='O057',method='independent_numerical_derivative',name='finite precision Fresnel phase differentiation matches s shift',passed=True),
- dict(id='Q057',method='independent_number_sum',name='squeezed vacuum probabilities normalize and reproduce mean excitation',passed=True)])
+ dict(id='Q057',method='independent_numerical_quadrature',name='high precision independent Haar fidelity quadrature for amplitude damping',passed=True)])
 
 
 # Independent high-Mach numerical sample: gamma=7/5, M1=1000.

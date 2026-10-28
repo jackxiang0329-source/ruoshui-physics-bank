@@ -147,28 +147,28 @@
       "id": "Q057",
       "part": 1,
       "method": "canonical_commutator",
-      "name": "Bogoliubov coefficients preserve canonical oscillator commutator",
+      "name": "Stinespring one excitation rotation and Kraus completeness yield a trace preserving channel",
       "passed": true
     },
     {
       "id": "Q057",
       "part": 2,
-      "method": "normalization",
-      "name": "squeezed even-parity number distribution sums to unity",
+      "method": "independent_derivation",
+      "name": "exact amplitude damping matrix solves zero temperature Lindblad equation and energy balance",
       "passed": true
     },
     {
       "id": "Q057",
       "part": 3,
-      "method": "energy",
-      "name": "two-time-measurement mean and variance match closed frequency-quench expressions",
+      "method": "symbolic",
+      "name": "Bell Choi state partial transpose has exact negative eigenvalue minus eta over two",
       "passed": true
     },
     {
       "id": "Q057",
       "part": 4,
-      "method": "numerical",
-      "name": "Loschmidt amplitude agrees with independent real closed echo at nontrivial time",
+      "method": "independent_derivation",
+      "name": "Haar averaged fidelity agrees with independent entanglement fidelity identity",
       "passed": true
     },
     {
@@ -402,8 +402,8 @@
     },
     {
       "id": "Q057",
-      "method": "independent_number_sum",
-      "name": "squeezed vacuum probabilities normalize and reproduce mean excitation",
+      "method": "independent_numerical_quadrature",
+      "name": "high precision independent Haar fidelity quadrature for amplitude damping",
       "passed": true
     },
     {
