@@ -6298,6 +6298,155 @@
       "translation_status": "中文初译待双语复核",
       "physics_review": "未审核",
       "exam_ready": false
+    },
+    {
+      "id": "CP-00365",
+      "module": "力学",
+      "subtopic": "功率／汽车爬坡",
+      "title_zh": "轿车克服坡度与阻力所需功率",
+      "question_zh": "质量为 $950\\,\\mathrm{kg}$ 的汽车以恒定速率 $30.0\\,\\mathrm{m/s}$ 沿倾角为 $2.00^\\circ$ 的斜坡上行，同时受到风阻与摩擦力合计 $600\\,\\mathrm{N}$。求所需输出功率，并明确展示《能量问题求解策略》中的各步骤。",
+      "raw_blob_sha": "7f7c362f8764bb5e53eda930a37d49871cd7396d",
+      "raw_path": "external_sources/college_physics/raw/CP-00365.md",
+      "notes": "源题另要求引用教材能量解题策略章节，独立版需保留该依赖。",
+      "risk_flags": [
+        "依赖教材章节"
+      ],
+      "translation_status": "中文初译待双语复核",
+      "physics_review": "未审核",
+      "exam_ready": false
+    },
+    {
+      "id": "CP-00366",
+      "module": "物理基础",
+      "subtopic": "太阳辐照度／能量需求",
+      "title_zh": "太阳能电站与各国年度电能需求",
+      "question_zh": "（a）求太阳辐射抵达地球大气层顶端时的单位面积功率，取太阳总辐射功率为 $4.00\\times10^{26}\\,\\mathrm{W}$。（b）部分辐射被大气吸收或反射，地表最大接收功率仅约 $1.30\\,\\mathrm{kW/m^2}$。若太阳能收集器平均仅将这一最大功率的 $2.00\\%$ 转为电能，为替代一座发电功率 $750\\,\\mathrm{MW}$ 的电站，需多大收集面积（以平方千米计）？按同一假设，若需满足美国 $1.05\\times10^{20}\\,\\mathrm{J}$、澳大利亚 $5.4\\times10^{18}\\,\\mathrm{J}$ 和中国 $6.3\\times10^{19}\\,\\mathrm{J}$ 的年度能源需求，各需多大收集面积？这些能耗数字取自 **2006 年**。",
+      "raw_blob_sha": "819a56857b3a2ee1952189bcce141f762941c493",
+      "raw_path": "external_sources/college_physics/raw/CP-00366.md",
+      "notes": "（a）需要日地距离；（b）年度能耗与太阳能面积须统一为年度功率，且数字来自2006年，不是现时能源统计。",
+      "risk_flags": [
+        "需要外部资料",
+        "历史数据时效"
+      ],
+      "translation_status": "中文初译待双语复核",
+      "physics_review": "未审核",
+      "exam_ready": false
+    },
+    {
+      "id": "CP-00367",
+      "module": "力学",
+      "subtopic": "人体功率／攀登",
+      "title_zh": "曲折登山路线与机械功的比较",
+      "question_zh": "为什么沿之字形路线登山通常比沿山坡直线上攀更容易？两种路线带来的重力势能增量是否相同？实际消耗的身体能量又是否相同？",
+      "raw_blob_sha": "d2d6053ab3c885abfdfbc4c0d9c5e938e9a9bac4",
+      "raw_path": "external_sources/college_physics/raw/CP-00367.md",
+      "notes": "",
+      "translation_status": "中文初译待双语复核",
+      "physics_review": "未审核",
+      "exam_ready": false
+    },
+    {
+      "id": "CP-00368",
+      "module": "力学",
+      "subtopic": "人体效率／摩擦生热",
+      "title_zh": "搓手取暖时是否对外界做功",
+      "question_zh": "双手相互摩擦取暖时，你是否对外界做了功？这一活动的效率是多少？",
+      "raw_blob_sha": "c1997021c7fe49f1da8bd44c1860133a0b3ee922",
+      "raw_path": "external_sources/college_physics/raw/CP-00368.md",
+      "notes": "效率的定义依赖把有用输出界定为机械功还是局部热量，须明确课程语境。",
+      "risk_flags": [
+        "物理模型依赖"
+      ],
+      "translation_status": "中文初译待双语复核",
+      "physics_review": "未审核",
+      "exam_ready": false
+    },
+    {
+      "id": "CP-00369",
+      "module": "力学",
+      "subtopic": "人体效率／寒冷颤抖",
+      "title_zh": "身体寒冷发抖时的效率",
+      "question_zh": "寒冷引发的身体颤抖是一种不自主反应。此时人体的效率是多少？这样的效率在保暖意义上是否值得期望？",
+      "raw_blob_sha": "ebe97e43abb9e46e5ee21b84965698656e3d6df3",
+      "raw_path": "external_sources/college_physics/raw/CP-00369.md",
+      "notes": "题中效率指转化为外界有用机械功的比例，与产生热量的生理目的不同。",
+      "risk_flags": [
+        "概念表述歧义"
+      ],
+      "translation_status": "中文初译待双语复核",
+      "physics_review": "未审核",
+      "exam_ready": false
+    },
+    {
+      "id": "CP-00370",
+      "module": "物理基础",
+      "subtopic": "人体能量／运动与饮食",
+      "title_zh": "运动与控制饮食的能量收支比较",
+      "question_zh": "讨论通过控制饮食与运动来减轻体重时，两种方式的相对有效性。请注意，大多数体育活动消耗食物能量的功率约为 $400$ 至 $500\\,\\mathrm{W}$，而一杯酸奶可能含有 $1360\\,\\mathrm{kJ}$（约 $325\\,\\mathrm{kcal}$）的能量。特别讨论：只靠运动通常是否足以减轻体重？还可考虑规律运动可能提高代谢率，而长期节食可能降低代谢率。",
+      "raw_blob_sha": "bc1a82e3ff64386e2099902352232f611b7e8cbe",
+      "raw_path": "external_sources/college_physics/raw/CP-00370.md",
+      "notes": "仅为原教材的能量比较题；酸奶能量为题设案例数据，不应当作普遍营养数值。",
+      "translation_status": "中文初译待双语复核",
+      "physics_review": "未审核",
+      "exam_ready": false
+    },
+    {
+      "id": "CP-00371",
+      "module": "力学",
+      "subtopic": "人体能量／爬楼梯",
+      "title_zh": "一小块黄油可以支持爬多少层楼",
+      "question_zh": "（a）一小块质量为 $10.0\\,\\mathrm{g}$ 的黄油含有 $93.0\\,\\mathrm{kcal}$ 能量。按每分钟快速攀登 $116$ 级台阶的速度，可持续爬楼梯多久？（b）若每层楼有 $16$ 级台阶，共可攀登多少层？",
+      "raw_blob_sha": "ab42110a87cf86a630d0c682f0579db7fa4aeed2",
+      "raw_path": "external_sources/college_physics/raw/CP-00371.md",
+      "notes": "原题没有给爬楼梯代谢功率或每级台阶高度；应注明依赖原教材活动能耗表，不能独立计算唯一数值。",
+      "risk_flags": [
+        "题设条件不充分"
+      ],
+      "translation_status": "中文初译待双语复核",
+      "physics_review": "未审核",
+      "exam_ready": false
+    },
+    {
+      "id": "CP-00372",
+      "module": "力学",
+      "subtopic": "人体功率／短跑加速",
+      "title_zh": "短跑运动员三秒加速的输出功率",
+      "question_zh": "（a）质量为 $70.0\\,\\mathrm{kg}$ 的短跑选手在 $3.00\\,\\mathrm{s}$ 内从静止加速至 $10.0\\,\\mathrm{m/s}$，求其输出功率，分别用瓦特和马力表示。（b）考虑所需功率的大小，你认为训练良好的运动员能否在较长时间内反复完成这种加速？",
+      "raw_blob_sha": "fcae515ee6c02c9e2a41b36dd669a7e37f733106",
+      "raw_path": "external_sources/college_physics/raw/CP-00372.md",
+      "notes": "（a）通常按动能增量除以时间求平均机械功率。",
+      "translation_status": "中文初译待双语复核",
+      "physics_review": "未审核",
+      "exam_ready": false
+    },
+    {
+      "id": "CP-00373",
+      "module": "力学",
+      "subtopic": "人体效率／食物能量",
+      "title_zh": "教授与运动员的机械效率比较",
+      "question_zh": "（a）某位体能较差的教授代谢了 $500\\,\\mathrm{kcal}$ 食物能量，完成 $2.10\\times10^5\\,\\mathrm{J}$ 有用功，求其效率。（b）若一名训练良好的运动员效率为 $20\\%$，要完成相同的功，需要代谢多少食物热量（千卡）？",
+      "raw_blob_sha": "7b953c1462d27293479fca9068819f7336efd9b8",
+      "raw_path": "external_sources/college_physics/raw/CP-00373.md",
+      "notes": "",
+      "translation_status": "中文初译待双语复核",
+      "physics_review": "未审核",
+      "exam_ready": false
+    },
+    {
+      "id": "CP-00374",
+      "module": "力学",
+      "subtopic": "人体效率／铲雪劳动",
+      "title_zh": "铲雪的有用功率与废热",
+      "question_zh": "铲雪非常费力，因为手臂在这类活动中的效率较低。假设一人在清理步道积雪时，以 $800\\,\\mathrm{W}$ 的速率代谢食物能量。（a）求其有用功率；（b）若需将总质量 $3000\\,\\mathrm{kg}$ 的雪提高 $1.20\\,\\mathrm{m}$（这可能相当于一段长 $20\\,\\mathrm{m}$ 的步道积雪），需要多久？（c）此过程中产生多少千焦耳废热？",
+      "raw_blob_sha": "7c4da98356d5b768f462bab3adb79b173ebb5383",
+      "raw_path": "external_sources/college_physics/raw/CP-00374.md",
+      "notes": "缺少铲雪活动的具体机械效率，无法由800W直接求有用功率与后续数值。",
+      "risk_flags": [
+        "题设条件不充分"
+      ],
+      "translation_status": "中文初译待双语复核",
+      "physics_review": "未审核",
+      "exam_ready": false
     }
   ]
 }
