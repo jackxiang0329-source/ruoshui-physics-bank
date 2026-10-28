@@ -2,7 +2,7 @@
 
 > 仅供编辑复核：尚未通过独立双语、答案或版权审核；不可正式组卷。
 
-共 84 道。英文原文均以保留源指纹的上游快照为依据。
+共 97 道。英文原文均以保留源指纹的上游快照为依据。
 
 <a id="cp-00137"></a>
 
@@ -1115,6 +1115,360 @@ A generation is about one-third of a lifetime. Approximately how many generation
 - 原件 Git blob SHA：b7324c0f811f36735769def14f244b9b46fb5d84
 - 上游署名与许可证见原件；尚未完成单题权利审查。
 - 审校提示：寿命及当年时间基准需要合理估计。
+
+---
+
+<a id="cp-00249"></a>
+
+## CP-00249｜估算一个细菌中的原子总数
+
+**学科：** 物理基础　**知识点：** 数量级估算／原子数
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+估算一个细菌含有多少原子。假设细菌内部原子的平均质量是氢原子的十倍；氢原子质量数量级约 $10^{-27}\,\mathrm{kg}$，细菌质量数量级约 $10^{-15}\,\mathrm{kg}$。
+
+## 英文原题（存档摘录）
+
+# Approximation — CP-00249
+
+Calculate the approximate number of atoms in a bacterium. Assume that the average mass of an atom in the bacterium is ten times the mass of a hydrogen atom. (Hint: The mass of a hydrogen atom is on the order of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><msup><mtext>10</mtext><mrow><mrow><mo stretchy="false">−</mo><mtext>27</mtext></mrow></mrow></msup><mtext> kg</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"10" rSup { size 8{ - "27"} } " kg"} {}</annotation></semantics></math>
+
+ and the mass of a bacterium is on the order of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><msup><mtext>10</mtext><mrow><mrow><mo stretchy="false">−</mo><mtext>15</mtext></mrow></mrow></msup><mtext> kg.</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"10" rSup { size 8{ - "15"} } "kg"} {}</annotation></semantics></math>
+
+)
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00249.md
+- 原件 Git blob SHA：d2c805943dab1bb10a94b4781c426bc20557306a
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00250"></a>
+
+## CP-00250｜细胞膜厚度约为多少个原子
+
+**学科：** 物理基础　**知识点：** 数量级估算／细胞膜
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+假定细胞膜中的原子平均直径约为氢原子的两倍，那么细胞膜厚度约相当于多少个原子的直径？
+
+## 英文原题（存档摘录）
+
+# Approximation — CP-00250
+
+Approximately how many atoms thick is a cell membrane, assuming all atoms there average about twice the size of a hydrogen atom?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00250.md
+- 原件 Git blob SHA：e9d32958e94f48dea2992c51617bc539ff2fe220
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：题设条件不充分
+- 审校提示：原题未提供细胞膜厚度和原子直径，需要明确外部估计。
+
+---
+
+<a id="cp-00251"></a>
+
+## CP-00251｜海洋深度与山峰高度占地球直径的比例
+
+**学科：** 物理基础　**知识点：** 数量级估算／地球尺度
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+（a）地球最深海洋的深度占地球直径的几分之几？（b）地球最高山峰的高度占地球直径的几分之几？
+
+## 英文原题（存档摘录）
+
+# Approximation — CP-00251
+
+(a) What fraction of Earth’s diameter is the greatest ocean depth? (b) The greatest mountain height?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00251.md
+- 原件 Git blob SHA：c69a704d370e8027dc15e99d88c7affe3b87a5b0
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：需要外部资料
+- 审校提示：地球直径、最大海洋深度及山峰高度须采用注明出处的数据。
+
+---
+
+<a id="cp-00252"></a>
+
+## CP-00252｜估算蜂鸟和人体的细胞总数
+
+**学科：** 物理基础　**知识点：** 数量级估算／细胞数
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+（a）假设普通细胞质量为细菌质量的十倍，估算一只蜂鸟有多少细胞；（b）按同样假设估算人体有多少细胞。
+
+## 英文原题（存档摘录）
+
+# Approximation — CP-00252
+
+(a) Calculate the number of cells in a hummingbird assuming the mass of an average cell is ten times the mass of a bacterium. (b) Making the same assumption, how many cells are there in a human?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00252.md
+- 原件 Git blob SHA：c5520d3486da0c7d14ff54582509c32857858250
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：需要估计参数
+- 审校提示：需自行选择蜂鸟、人体与细菌质量的合理估计。
+
+---
+
+<a id="cp-00253"></a>
+
+## CP-00253｜神经纤维一秒最多发出多少冲动
+
+**学科：** 物理基础　**知识点：** 数量级估算／神经冲动
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+假设一次神经冲动必须结束后，下一次才能开始。一条神经纤维每秒最多能发出多少次冲动？
+
+## 英文原题（存档摘录）
+
+# Approximation — CP-00253
+
+Assuming one nerve impulse must end before another can begin, what is the maximum firing rate of a nerve in impulses per second?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00253.md
+- 原件 Git blob SHA：c4e3e82aeb0d818b575fd73229208691a32cddce
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：题设条件不充分
+- 审校提示：原题未给单次神经冲动的持续时间。
+
+---
+
+<a id="cp-00254"></a>
+
+## CP-00254｜负速率这一说法有何错误
+
+**学科：** 物理基础　**知识点：** 速度与速率／符号
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+学生写道：“一只向下俯冲捕食的鸟的**速率**为 $-10\,\mathrm{m/s}$。”这句话哪里不对？它实际描述了什么量？
+
+## 英文原题（存档摘录）
+
+# Vectors, Scalars, and Coordinate Systems — CP-00254
+
+A student writes, “*A bird that is diving for prey has a speed of* <math xmlns="http://www.w3.org/1998/Math/MathML"> <semantics> <mrow> <mrow> <mrow> <mrow> <mo stretchy="false">−</mo> </mrow> <mrow><mtext mathvariant="italic">10</mtext></mrow> <mspace width="0.25em" /> <mrow> <mi>m</mi> <mo stretchy="false">/</mo> <mi>s</mi> </mrow> </mrow> </mrow> <mrow /> </mrow> <annotation encoding="StarMath 5.0"> size 12{ - "10"m/s} {}</annotation> </semantics> </math>
+
+.” What is wrong with the student’s statement? What has the student actually described? Explain.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00254.md
+- 原件 Git blob SHA：593fb8a3cc82093a73671795b373700ff1e4c89f
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00255"></a>
+
+## CP-00255｜加速度是矢量还是标量
+
+**学科：** 物理基础　**知识点：** 矢量与标量／加速度
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+加速度是单位时间内速度的变化量。根据这一描述，加速度是矢量还是标量？为什么？
+
+## 英文原题（存档摘录）
+
+# Vectors, Scalars, and Coordinate Systems — CP-00255
+
+Acceleration is the change in velocity over time. Given this information, is acceleration a vector or a scalar quantity? Explain.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00255.md
+- 原件 Git blob SHA：8c8b2e1909e479d385935fcdc4f529a8a752f141
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00256"></a>
+
+## CP-00256｜负五摄氏度是否说明温度是矢量
+
+**学科：** 物理基础　**知识点：** 矢量与标量／温度
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+天气预报称明天气温为 $-5^\circ\mathrm{C}$。温度是矢量还是标量？请解释。
+
+## 英文原题（存档摘录）
+
+# Vectors, Scalars, and Coordinate Systems — CP-00256
+
+A weather forecast states that the temperature is predicted to be <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mrow><mo stretchy="false">−</mo><mn>5ºC</mn></mrow></mrow></mrow><mrow /></mrow></semantics></math>
+
+ the following day. Is this temperature a vector or a scalar quantity? Explain.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00256.md
+- 原件 Git blob SHA：2bc5d4b5ea481952741062bd992d001c74bc0aa9
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00257"></a>
+
+## CP-00257｜如何选择合适的运动学方程
+
+**学科：** 物理基础　**知识点：** 一维运动学／解题策略
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+为确定该使用哪一个或哪几个方程解题，首先需要掌握哪些信息？请解释。
+
+## 英文原题（存档摘录）
+
+# Problem-Solving Basics for One-Dimensional Kinematics — CP-00257
+
+What information do you need in order to choose which equation or equations to use to solve a problem? Explain.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00257.md
+- 原件 Git blob SHA：02aa6b592705cf631f52e022de230465c9bed453
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00258"></a>
+
+## CP-00258｜解物理题的最后一步是什么
+
+**学科：** 物理基础　**知识点：** 科学解题／结果检验
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+解出一道物理题后，最后应该做什么？请解释这样做的原因。
+
+## 英文原题（存档摘录）
+
+# Problem-Solving Basics for One-Dimensional Kinematics — CP-00258
+
+What is the last thing you should do when solving a problem? Explain.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00258.md
+- 原件 Git blob SHA：dd66fdb1a751f313773c9a508228e408d34bd533
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00259"></a>
+
+## CP-00259｜下列物理量哪些是矢量
+
+**学科：** 物理基础　**知识点：** 矢量与标量／辨析
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+从下列量中指出矢量：人的身高、珠穆朗玛峰海拔、地球年龄、水的沸点、这本书的价格、地球人口数量、重力加速度。
+
+## 英文原题（存档摘录）
+
+# Vector Addition and Subtraction: Graphical Methods — CP-00259
+
+Which of the following is a vector: a person’s height, the altitude on Mt. Everest, the age of the Earth, the boiling point of water, the cost of this book, the Earth’s population, the acceleration of gravity?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00259.md
+- 原件 Git blob SHA：0a10ebdb34aca7282a15d5c962f1aef45f5038b7
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00260"></a>
+
+## CP-00260｜列举具有大小方向和单位的矢量
+
+**学科：** 物理基础　**知识点：** 矢量与标量／实例
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+举出一个具体矢量，并分别说明它的大小、单位和方向。
+
+## 英文原题（存档摘录）
+
+# Vector Addition and Subtraction: Graphical Methods — CP-00260
+
+Give a specific example of a vector, stating its magnitude, units, and direction.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00260.md
+- 原件 Git blob SHA：adf03c5a80ddc4cda041b87cbbb6742f72301a5a
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00261"></a>
+
+## CP-00261｜矢量和标量的相同点及区别
+
+**学科：** 物理基础　**知识点：** 矢量与标量／比较
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+矢量与标量有哪些相同点？它们又有哪些不同之处？
+
+## 英文原题（存档摘录）
+
+# Vector Addition and Subtraction: Graphical Methods — CP-00261
+
+What do vectors and scalars have in common? How do they differ?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00261.md
+- 原件 Git blob SHA：df672491d4f69d465991b2173d9cd65624829939
+- 上游署名与许可证见原件；尚未完成单题权利审查。
 
 ---
 

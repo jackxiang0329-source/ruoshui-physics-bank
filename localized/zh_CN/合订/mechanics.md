@@ -2,7 +2,7 @@
 
 > 仅供编辑复核：尚未通过独立双语、答案或版权审核；不可正式组卷。
 
-共 287 道。英文原文均以保留源指纹的上游快照为依据。
+共 288 道。英文原文均以保留源指纹的上游快照为依据。
 
 <a id="cp-00001"></a>
 
@@ -5792,6 +5792,38 @@ A cylinder is given a push and then rolls up an inclined plane. If the origin is
 - 上游署名与许可证见原件；尚未完成单题权利审查。
 - 题设／编辑风险：要求绘图
 - 审校提示：需明确纯滚动及恒斜率斜面等简化，不能在缺少摩擦模型时将加速度一定当常数。
+
+---
+
+<a id="cp-00262"></a>
+
+## CP-00262｜两步位移后返回原点的条件
+
+**学科：** 力学　**知识点：** 位移矢量／合位移
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+假设先后走了两段均非零的位移 $\mathbf A$、$\mathbf B$。（a）什么情况下能回到出发点？（b）更一般地，两个非零矢量的和何时为零？（c）最终离起点的最大距离是否为两段位移长度之和？
+
+## 英文原题（存档摘录）
+
+# Vector Addition and Subtraction: Graphical Methods — CP-00262
+
+Suppose you take two steps <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="bold">A</mtext></mrow></mrow></semantics></math>
+
+ and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="bold">B</mtext></mrow></mrow></semantics></math>
+
+ (that is, two nonzero displacements). Under what circumstances can you end up at your starting point? More generally, under what circumstances can two nonzero vectors add to give zero? Is the maximum distance you can end up from the starting point <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="bold">A</mtext><mo>+</mo><mtext mathvariant="bold">B</mtext></mrow></mrow></semantics></math>
+
+ the sum of the lengths of the two steps?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00262.md
+- 原件 Git blob SHA：3467cf0f599877514724f77ba8e27e4aebcb6b37
+- 上游署名与许可证见原件；尚未完成单题权利审查。
 
 ---
 

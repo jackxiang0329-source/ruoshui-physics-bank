@@ -2,7 +2,7 @@
 
 > 仅供编辑复核：尚未通过独立双语、答案或版权审核；不可正式组卷。
 
-共 3 道。英文原文均以保留源指纹的上游快照为依据。
+共 4 道。英文原文均以保留源指纹的上游快照为依据。
 
 <a id="cp-00154"></a>
 
@@ -85,6 +85,35 @@ The planetary model of the atom pictures electrons orbiting the atomic nucleus m
 - 上游署名与许可证见原件；尚未完成单题权利审查。
 - 题设／编辑风险：物理模型依赖
 - 审校提示：行星式模型仅是教学近似，不是对真实量子态中电子运动轨迹的准确描述。
+
+---
+
+<a id="cp-00248"></a>
+
+## CP-00248｜人类寿命与极短寿命原子核的比较
+
+**学科：** 近代物理　**知识点：** 原子核寿命／数量级
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+人的一生大约是某种极不稳定原子核平均寿命的多少倍？提示：该类原子核寿命的数量级约为 $10^{-22}\,\mathrm{s}$。
+
+## 英文原题（存档摘录）
+
+# Approximation — CP-00248
+
+How many times longer than the mean life of an extremely unstable atomic nucleus is the lifetime of a human? (Hint: The lifetime of an unstable atomic nucleus is on the order of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><msup><mtext>10</mtext><mrow><mrow><mo stretchy="false">−</mo><mtext>22</mtext></mrow></mrow></msup><mtext> s</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"10" rSup { size 8{ - "22"} } " s"} {}</annotation></semantics></math>
+
+.)
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00248.md
+- 原件 Git blob SHA：71e9d357f7049dc1710e572c7f435e565157ba3b
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 审校提示：须合理估计人的寿命。
 
 ---
 
