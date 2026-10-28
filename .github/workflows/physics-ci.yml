@@ -34,13 +34,18 @@ jobs:
         run: python scripts/check_round05_physics.py
       - name: Independently check round 06 physical invariants
         run: python scripts/check_round06_physics.py
+      - name: Verify seventh batch physical formulas
+        run: python scripts/check_round07_physics.py
       - name: Validate TeX fragments and derived documents
         run: python scripts/build.py --check
       - name: Upload independent spotcheck report
         uses: actions/upload-artifact@v4
         with:
           name: advanced-physics-spotchecks
-          path: data/validation_report.json
+          path: |
+            data/validation_report.json
+            data/round06_validation_report.json
+            data/round07_validation_report.json
           if-no-files-found: error
       - name: Compile question and solution PDFs
         uses: xu-cheng/latex-action@v4
