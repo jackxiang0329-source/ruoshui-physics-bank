@@ -88,6 +88,8 @@ def group(title):
     name=title.casefold()
     # "Radiation" could refer to thermal, electromagnetic or nuclear processes.
     # Without the excerpt itself, keep it unclassified.
+    if name == "thermal radiation":
+        return "热学"
     if name == "radiation":
         return "待分类"
     # In OpenStax this chapter discusses stereo speakers and phase, not geometrical optics.
