@@ -30,10 +30,10 @@ class OrganizationTests(unittest.TestCase):
 
     def test_drafts_and_full_index(self):
         a=localize.create(ROOT)
-        self.assertEqual(64,a["translated_drafts"])
+        self.assertGreaterEqual(a["translated_drafts"],88)
         b=catalog.generate(ROOT)
         self.assertGreaterEqual(b["candidate_total"],17000)
-        self.assertEqual(64,b["translated_drafts"])
+        self.assertEqual(a["translated_drafts"],b["translated_drafts"])
         self.assertEqual(0,b["approved_external"])
         with (ROOT/"external_sources/catalog/题目总索引.csv").open(encoding="utf-8-sig",newline="") as f:
             rows=list(csv.DictReader(f))

@@ -12,6 +12,12 @@ TERMS=(
  ("free-body diagram","受力分析图"),("capacitance","电容"),
  ("displacement","位移"),("distance traveled","路程"),
  ("conventional current","约定电流"),
+ ("gravitational potential energy","重力势能"),
+ ("elastic potential energy","弹性势能"),
+ ("work-energy theorem","动能定理"),
+ ("conservative force","保守力"),
+ ("non-conservative force","非保守力"),
+ ("average power","平均功率"),("instantaneous power","瞬时功率"),
 )
 def digest(text):
     norm=re.sub(r"\s+"," ",unicodedata.normalize("NFKC",text).casefold()).strip()
