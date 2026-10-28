@@ -116,7 +116,7 @@ rAB=s.Matrix([[s.Rational(1,2),0,0,s.sqrt(et)/2],
 pt=s.Matrix(4,4,lambda i,j:rAB[2*(i//2)+(j%2),2*(j//2)+(i%2)])
 lamq=s.symbols('lamq')
 record('Q057',3,'symbolic','Bell Choi state partial transpose has exact negative eigenvalue minus eta over two',
-       eq(pt.charpoly(lamq).as_expr(),(lamq-s.Rational(1,2))**2*(lamq**2-et**2/4)))
+       eq((lamq*s.eye(4)-pt).det(),(lamq-s.Rational(1,2))**2*(lamq**2-et**2/4)))
 ppq=s.symbols('ppq',real=True)
 fid=(1-ppq)*(1-et*ppq)+et*ppq**2+2*s.sqrt(et)*ppq*(1-ppq)
 fav=(3+2*s.sqrt(et)+et)/6
