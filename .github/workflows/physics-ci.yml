@@ -72,6 +72,27 @@ jobs:
             solutions.tex
           working_directory: tex
           latexmk_use_xelatex: true
+      - name: Generate draft-only round 11 PDF preview sources
+        if: hashFiles('data/rounds/2026-10-28-11-draft.json') != ''
+        run: python scripts/build_round11_draft_preview.py
+      - name: Compile round 11 draft question and solution previews
+        if: hashFiles('data/rounds/2026-10-28-11-draft.json') != ''
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: |
+            round11-draft-questions.tex
+            round11-draft-solutions.tex
+          working_directory: tex
+          latexmk_use_xelatex: true
+      - name: Upload draft-only preview PDFs
+        if: hashFiles('data/rounds/2026-10-28-11-draft.json') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: round11-draft-preview-pdfs
+          path: |
+            tex/round11-draft-questions.pdf
+            tex/round11-draft-solutions.pdf
+          if-no-files-found: error
       - name: Upload PDF artifacts
         uses: actions/upload-artifact@v4
         with:
