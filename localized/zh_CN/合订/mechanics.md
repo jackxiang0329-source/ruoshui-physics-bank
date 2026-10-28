@@ -2,7 +2,7 @@
 
 > 仅供编辑复核：尚未通过独立双语、答案或版权审核；不可正式组卷。
 
-共 288 道。英文原文均以保留源指纹的上游快照为依据。
+共 305 道。英文原文均以保留源指纹的上游快照为依据。
 
 <a id="cp-00001"></a>
 
@@ -5823,6 +5823,564 @@ Suppose you take two steps <math xmlns="http://www.w3.org/1998/Math/MathML"><sem
 
 - 原件：external_sources/college_physics/raw/CP-00262.md
 - 原件 Git blob SHA：3467cf0f599877514724f77ba8e27e4aebcb6b37
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00264"></a>
+
+## CP-00264｜长度不同的两步能否返回原点
+
+**学科：** 力学　**知识点：** 矢量合成／回到起点
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+如果走出的两步长短不同，有可能返回起点吗？两个大小不等的矢量是否可能相加为零？若有三个或更多矢量，结果又如何？
+
+## 英文原题（存档摘录）
+
+# Vector Addition and Subtraction: Graphical Methods — CP-00264
+
+If you take two steps of different sizes, can you end up at your starting point? More generally, can two vectors with different magnitudes ever add to zero? Can three or more?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00264.md
+- 原件 Git blob SHA：66727a0243feb5fe15b7b4790a849c2cc1d90bd6
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00265"></a>
+
+## CP-00265｜交换两段行走位移的先后顺序
+
+**学科：** 力学　**知识点：** 位移矢量／交换律
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+沿用上道两段行走问题，把顺序颠倒：先走 $\mathbf B$，即 $20.0\,\mathrm{m}$、西偏南 $40.0^\circ$；再走 $\mathbf A$，即 $12.0\,\mathrm{m}$、北偏西 $20.0^\circ$。求最后位移并验证 $\mathbf A+\mathbf B=\mathbf B+\mathbf A$。
+
+## 英文原题（存档摘录）
+
+# Vector Addition and Subtraction: Graphical Methods — CP-00265
+
+Repeat the problem above, but reverse the order of the two legs of the walk; show that you get the same final result. That is, you first walk leg <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="bold">B</mi></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{B} {}</annotation></semantics></math>
+
+, which is 20.0 m in a direction exactly <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext>40º</mtext></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"20" { size 12{°} } } {}</annotation></semantics></math>
+
+ south of west, and then leg <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="bold">A</mi></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{A} {}</annotation></semantics></math>
+
+, which is 12.0 m in a direction exactly <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext>20º</mtext></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"20" { size 12{°} } } {}</annotation></semantics></math>
+
+ west of north. (This problem shows that <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mrow><mi mathvariant="bold">A</mi><mo stretchy="false">+</mo><mi mathvariant="bold">B</mi></mrow><mo stretchy="false">=</mo><mrow><mi mathvariant="bold">B</mi><mo stretchy="false">+</mo><mi mathvariant="bold">A</mi></mrow></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{A+B=B+A} {}</annotation></semantics></math>
+
+.)
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00265.md
+- 原件 Git blob SHA：ac24c6ce52fc2b6eb2b0c23fcc461bc3c1ec0f52
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：依赖前题
+- 审校提示：需联系上游原题对两矢量的定义。
+
+---
+
+<a id="cp-00266"></a>
+
+## CP-00266｜两种行走顺序中的矢量减法
+
+**学科：** 力学　**知识点：** 矢量减法／相反位移
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+（a）沿用前两道题的位移，令第二步为 $20.0\,\mathrm{m}$、东偏北 $40.0^\circ$，求 $\mathbf R'=\mathbf A-\mathbf B$。（b）先走 $20.0\,\mathrm{m}$、西偏南 $40.0^\circ$，再走 $12.0\,\mathrm{m}$、南偏东 $20.0^\circ$，求 $\mathbf R''=\mathbf B-\mathbf A$，并证明 $\mathbf R''=-\mathbf R'$。
+
+## 英文原题（存档摘录）
+
+# Vector Addition and Subtraction: Graphical Methods — CP-00266
+
+(a) Repeat the problem two problems prior, but for the second leg you walk 20.0 m in a direction <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext>40.0º</mtext></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"40.0" { size 12{°} } }</annotation></semantics></math>
+
+ north of east (which is equivalent to subtracting <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="bold">B</mtext></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{B} {}</annotation></semantics></math>
+
+ from <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="bold">A</mi></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{A} {}</annotation></semantics></math>
+
+ —that is, to finding <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mstyle><mrow><mtext mathvariant="bold">R</mtext><mo>′</mo></mrow></mstyle><mo stretchy="false">=</mo><mrow><mtext mathvariant="bold">A</mtext><mo stretchy="false">−</mo><mtext mathvariant="bold">B</mtext></mrow></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{ bold "R'"=A - B} {}</annotation></semantics></math>
+
+). (b) Repeat the problem two problems prior, but now you first walk 20.0 m in a direction <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext>40.0º</mtext></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"40.0" { size 12{°} } }</annotation></semantics></math>
+
+ south of west and then 12.0 m in a direction <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext>20.0º</mtext></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"20.0" { size 12{ ° } } } {}</annotation></semantics></math>
+
+ east of south (which is equivalent to subtracting <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="bold">A</mtext></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{A} {}</annotation></semantics></math>
+
+ from <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="bold">B</mtext></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{B} {}</annotation></semantics></math>
+
+ —that is, to finding <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="bold">R</mtext><mo>′′</mo><mo>=</mo> <mtext mathvariant="bold">B</mtext><mo>-</mo><mtext mathvariant="bold">A</mtext><mo>=</mo><mo>-</mo><mtext mathvariant="bold">R</mtext><mo>′</mo></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{R''= B – A = -R' } {}</annotation></semantics></math>
+
+). Show that this is the case.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00266.md
+- 原件 Git blob SHA：6ef395035ec36eaaa29a1a9f3541a8a3742f2951
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：依赖前题
+- 审校提示：依赖前题中 A、B 的定义。
+
+---
+
+<a id="cp-00267"></a>
+
+## CP-00267｜三个矢量求和与排列顺序
+
+**学科：** 力学　**知识点：** 矢量求和／交换律
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+任取长度、方向都不同的三个矢量 $\mathbf A$、$\mathbf B$、$\mathbf C$，先求 $\mathbf A+\mathbf B+\mathbf C$；再改变加法顺序计算，并证明结果相同。在另外五种顺序中任选一种即可。
+
+## 英文原题（存档摘录）
+
+# Vector Addition and Subtraction: Graphical Methods — CP-00267
+
+Show that the **order** of addition of three vectors does not affect their sum. Show this property by choosing any three vectors <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="bold">A</mi></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{A} {}</annotation></semantics></math>
+
+, <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="bold">B</mi></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{B} {}</annotation></semantics></math>
+
+, and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="bold">C</mi></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{C} {}</annotation></semantics></math>
+
+, all having different lengths and directions. Find the sum <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mstyle fontweight="bold"><mrow><mtext>A + B + C</mtext></mrow></mstyle></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{ bold "A + B + C"} {}</annotation></semantics></math>
+
+ then find their sum when added in a different order and show the result is the same. (There are five other orders in which <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="bold">A</mi></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{A} {}</annotation></semantics></math>
+
+, <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="bold">B</mi></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{B} {}</annotation></semantics></math>
+
+, and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="bold">C</mi></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{C} {}</annotation></semantics></math>
+
+ can be added; choose only one.)
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00267.md
+- 原件 Git blob SHA：1b1efae2a6ddc336edf47da196e687bbf6ab774a
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00268"></a>
+
+## CP-00268｜两个矢量的最大和最小合量
+
+**学科：** 力学　**知识点：** 矢量合成／极值
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+对于两个矢量 $\mathbf A$ 和 $\mathbf B$，它们沿什么相对方向排列时合矢量的大小最大？最大值是多少？沿什么相对方向排列时合矢量的大小最小？最小值是多少？
+
+## 英文原题（存档摘录）
+
+# Vector Addition and Subtraction: Analytical Methods — CP-00268
+
+Suppose you add two vectors <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="bold">A</mi></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{A} {}</annotation></semantics></math>
+
+ and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="bold">B</mi></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{B} {}</annotation></semantics></math>
+
+. What relative direction between them produces the resultant with the greatest magnitude? What is the maximum magnitude? What relative direction between them produces the resultant with the smallest magnitude? What is the minimum magnitude?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00268.md
+- 原件 Git blob SHA：343388497dcd6709e46e3f4b69539bc63b5dad06
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00271"></a>
+
+## CP-00271｜互相垂直的矢量在彼此方向上的投影
+
+**学科：** 力学　**知识点：** 矢量投影／正交
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+若 $\mathbf A$ 与 $\mathbf B$ 互相垂直，则 $\mathbf A$ 在 $\mathbf B$ 方向上的分量是多少？$\mathbf B$ 在 $\mathbf A$ 方向上的分量是多少？
+
+## 英文原题（存档摘录）
+
+# Vector Addition and Subtraction: Analytical Methods — CP-00271
+
+If the vectors <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="bold">A</mi></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{A} {}</annotation></semantics></math>
+
+ and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="bold">B</mi></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{B} {}</annotation></semantics></math>
+
+ are perpendicular, what is the component of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="bold">A</mi></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{A} {}</annotation></semantics></math>
+
+ along the direction of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="bold">B</mi></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{B} {}</annotation></semantics></math>
+
+? What is the component of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="bold">B</mi></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{B} {}</annotation></semantics></math>
+
+ along the direction of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="bold">A</mi></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{A} {}</annotation></semantics></math>
+
+?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00271.md
+- 原件 Git blob SHA：a79928961c835cefd9c10086c66ba9cf530e70db
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00272"></a>
+
+## CP-00272｜北偏东十五度行驶的分量
+
+**学科：** 力学　**知识点：** 位移分解／直角坐标
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+车辆沿北偏东 $15^\circ$ 的方向直行 $7.50\,\mathrm{km}$。（a）若先正东再正北行驶，分别要走多远才能到达相同地点？（b）说明调换这两段行程的顺序后仍能抵达同一终点。
+
+## 英文原题（存档摘录）
+
+# Vector Addition and Subtraction: Analytical Methods — CP-00272
+
+You drive <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>7</mn><mtext>.</mtext><mtext>50 km</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{7 "." "50 km"} {}</annotation></semantics></math>
+
+ in a straight line in a direction <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>15º</mn></mrow></mrow></mrow><annotation encoding="StarMath 5.0"> size 12{"15º"} {}</annotation></semantics></math>
+
+ east of north. (a) Find the distances you would have to drive straight east and then straight north to arrive at the same point. (This determination is equivalent to find the components of the displacement along the east and north directions.) (b) Show that you still arrive at the same point if the east and north legs are reversed in order.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00272.md
+- 原件 Git blob SHA：9a403d459344c3fcfe23312d51c076d2e505045a
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00273"></a>
+
+## CP-00273｜航行位移在两组坐标轴上的分解
+
+**学科：** 力学　**知识点：** 位移矢量／旋转坐标
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+飞机在静止空气中沿西偏南 $35.0^\circ$ 的方向直飞 $32.0\,\mathrm{km}$。（a）如果改为先正南、后正西飞行，求这两段各要飞行多远才能抵达相同终点。（b）若改为先沿西偏南 $45.0^\circ$、再沿北偏西 $45.0^\circ$ 飞行，各段需要多远？这相当于沿一组旋转 $45^\circ$ 后的坐标轴分解位移。
+
+## 英文原题（存档摘录）
+
+# Vector Addition and Subtraction: Analytical Methods — CP-00273
+
+You fly <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mtext>32</mtext><mtext>.</mtext><mtext>0 km</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"32" "." "0 km"} {}</annotation></semantics></math>
+
+ in a straight line in still air in the direction <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>35.0º</mn></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"35"°} {}</annotation></semantics></math>
+
+ south of west. (a) Find the distances you would have to fly straight south and then straight west to arrive at the same point. (This determination is equivalent to finding the components of the displacement along the south and west directions.) (b) Find the distances you would have to fly first in a direction <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>45.0º</mn></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"45.0º"} {}</annotation></semantics></math>
+
+ south of west and then in a direction <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>45.0º</mn></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"45.0º"} {}</annotation></semantics></math>
+
+ west of north. These are the components of the displacement along a different set of axes—one rotated <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>45º</mn></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"45"°} {}</annotation></semantics></math>
+
+.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00273.md
+- 原件 Git blob SHA：27cc1196cbe922477ab1d2ca60ac3191050d2113
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00274"></a>
+
+## CP-00274｜木筏随风漂流的七段合位移
+
+**学科：** 力学　**知识点：** 多段位移／矢量求和
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+Gilligan 为逃离小岛乘木筏出海，一天中风向多次改变，木筏依次作如下直线位移：（1）$2.50\,\mathrm{km}$，西偏北 $45.0^\circ$；（2）$4.70\,\mathrm{km}$，东偏南 $60.0^\circ$；（3）$1.30\,\mathrm{km}$，西偏南 $25.0^\circ$；（4）$5.10\,\mathrm{km}$，正东；（5）$1.70\,\mathrm{km}$，北偏东 $5.00^\circ$；（6）$7.20\,\mathrm{km}$，西偏南 $55.0^\circ$；（7）$2.80\,\mathrm{km}$，东偏北 $10.0^\circ$。求木筏最终相对小岛的位置矢量。
+
+## 英文原题（存档摘录）
+
+# Vector Addition and Subtraction: Analytical Methods — CP-00274
+
+In an attempt to escape his island, Gilligan builds a raft and sets to sea. The wind shifts a great deal during the day, and he is blown along the following straight lines: <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>2</mn><mtext>.</mtext><mtext>50 km</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{2 "." "50 km"} {}</annotation></semantics></math>
+
+ <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>45.0º</mn></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"45.0º"} {}</annotation></semantics></math>
+
+ north of west; then <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>4</mn><mtext>.</mtext><mtext>70 km</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{4 "." "70 km"} {}</annotation></semantics></math>
+
+ <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>60.0º</mn></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"60"°} {}</annotation></semantics></math>
+
+ south of east; then <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>1.30</mn><mspace width="0.25em" /><mtext> km</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"1.30" " km"} {}</annotation></semantics></math>
+
+ <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>25.0º</mn></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"25"°} {}</annotation></semantics></math>
+
+ south of west; then <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>5</mn><mtext>.</mtext><mtext>10 km</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{5 "." "10 km"} {}</annotation></semantics></math>
+
+ straight east; then <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>1.70</mn><mspace width="0.25em" /><mtext> km</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"1.70" " km"} {}</annotation></semantics></math>
+
+ <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mn>5.00º</mn></mrow></mrow><annotation encoding="StarMath 5.0"> size 12{5 rSup { size 8{ circ } } } {}</annotation></semantics></math>
+
+ east of north; then <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>7</mn><mtext>.</mtext><mtext>20 km</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{7 "." "20 km"} {}</annotation></semantics> </math>
+
+ <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>55.0º</mn></mrow></mrow></mrow><annotation encoding="StarMath 5.0"> size 12{"55"°} {}</annotation></semantics></math>
+
+ south of west; and finally <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>2</mn><mtext>.</mtext><mtext>80 km</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{2 "." "80 km"} {}</annotation></semantics></math>
+
+ <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>10.0º</mn></mrow></mrow></mrow><annotation encoding="StarMath 5.0"> size 12{"10"°} {}</annotation></semantics></math>
+
+ north of east. What is his final position relative to the island?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00274.md
+- 原件 Git blob SHA：f545073214701eb799c5ad6d5d3dce0482e2e5f2
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00275"></a>
+
+## CP-00275｜惯性与质量的联系
+
+**学科：** 力学　**知识点：** 牛顿第一定律／惯性
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+惯性与质量之间是什么关系？
+
+## 英文原题（存档摘录）
+
+# Newton’s First Law of Motion: Inertia — CP-00275
+
+How are inertia and mass related?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00275.md
+- 原件 Git blob SHA：441c40d5624c5ca6142964446b7157c6009718dd
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00276"></a>
+
+## CP-00276｜质量和重量之间的区别
+
+**学科：** 力学　**知识点：** 牛顿第一定律／质量与重量
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+重量与质量有何关系？二者当中，哪一个是物体自身固有且不随所处环境改变的性质？
+
+## 英文原题（存档摘录）
+
+# Newton’s First Law of Motion: Inertia — CP-00276
+
+What is the relationship between weight and mass? Which is an intrinsic, unchanging property of a body?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00276.md
+- 原件 Git blob SHA：c95972a7228f4ead0400dd821a350267030b79f3
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00277"></a>
+
+## CP-00277｜飞机自由落体模拟轨道失重
+
+**学科：** 力学　**知识点：** 牛顿定律／失重模拟
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+为模拟太空轨道上的表观失重，宇航员会在一种货运飞机机舱内训练；飞机以重力加速度 $g$ 向下加速。在这一加速参考系中，为什么宇航员站在体重秤上时读数会表现为失重？飞机内的表观失重与轨道上的表观失重有何差异？
+
+## 英文原题（存档摘录）
+
+# Further Applications of Newton’s Laws of Motion — CP-00277
+
+To simulate the apparent weightlessness of space orbit, astronauts are trained in the hold of a cargo aircraft that is accelerating downward at <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>g</mi></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{g} {}</annotation></semantics></math>
+
+. Why will they appear to be weightless, as measured by standing on a bathroom scale, in this accelerated frame of reference? Is there any difference between their apparent weightlessness in orbit and in the aircraft?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00277.md
+- 原件 Git blob SHA：86d94ff90d57f6053e6753f23f1bc76bebe2398d
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00278"></a>
+
+## CP-00278｜电梯上升时骤停会甩飞假发吗
+
+**学科：** 力学　**知识点：** 牛顿第一定律／电梯惯性
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+漫画里，一位乘客乘电梯上升，电梯突然快速停下，使乘客头上的假发飞离。如果乘客没有被固定在电梯地板上，假发飞离的情形是否可能发生？请解释。
+
+## 英文原题（存档摘录）
+
+# Further Applications of Newton’s Laws of Motion — CP-00278
+
+A cartoon shows the toupee coming off the head of an elevator passenger when the elevator rapidly stops during an upward ride. Can this really happen without the person being tied to the floor of the elevator? Explain your answer.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00278.md
+- 原件 Git blob SHA：b5f2415fbaca72bc19928771cf593ac318018602
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00279"></a>
+
+## CP-00279｜跳蚤跃起时的加速度方向和大小
+
+**学科：** 力学　**知识点：** 牛顿第二定律／矢量合力
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+跳蚤竖直向下对地面施加 $1.20\times10^{-5}\,\mathrm{N}$ 的力，同时一阵平行地面的微风对它施加 $0.500\times10^{-6}\,\mathrm{N}$ 的水平力。如果跳蚤质量为 $6.00\times10^{-7}\,\mathrm{kg}$，求其加速度的大小与方向。不得忽略重力。
+
+## 英文原题（存档摘录）
+
+# Further Applications of Newton’s Laws of Motion — CP-00279
+
+A flea jumps by exerting a force of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>1</mn><mtext>.</mtext><mrow><mtext>20</mtext><mo stretchy="false">×</mo><msup><mtext>10</mtext><mrow><mrow><mo stretchy="false">−</mo><mn>5</mn></mrow></mrow></msup></mrow><mspace width="0.25em" /><mtext> N</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{1 "." "20" times "10" rSup { size 8{ - 5} } " N"} {}</annotation></semantics></math>
+
+ straight down on the ground. A breeze blowing on the flea parallel to the ground exerts a force of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>0</mn><mtext>.</mtext><mrow><mtext>500</mtext><mo stretchy="false">×</mo><msup><mtext>10</mtext><mrow><mrow><mo stretchy="false">−</mo><mn>6</mn></mrow></mrow></msup></mrow><mspace width="0.25em" /><mtext> N</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{0 "." "500" times "10" rSup { size 8{ - 6} } " N"} {}</annotation></semantics></math>
+
+ on the flea. Find the direction and magnitude of the acceleration of the flea if its mass is <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>6</mn><mtext>.</mtext><mrow><mtext>00</mtext><mo stretchy="false">×</mo><msup><mtext>10</mtext><mrow><mrow><mo stretchy="false">−</mo><mn>7</mn></mrow></mrow></msup></mrow><mspace width="0.25em" /><mtext> kg</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{6 "." "00" times "10" rSup { size 8{ - 7} } " kg"} {}</annotation></semantics></math>
+
+. Do not neglect the gravitational force.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00279.md
+- 原件 Git blob SHA：201a7bff45286fd90d4622085b9f576ceba36465
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00280"></a>
+
+## CP-00280｜海豚水平游动的平均减速力
+
+**学科：** 力学　**知识点：** 牛顿第二定律／平均减速力
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+**综合题。**一只质量为 $35.0\,\mathrm{kg}$ 的海豚为了与同伴玩耍，在 $2.30\,\mathrm{s}$ 内沿水平方向由 $12.0\,\mathrm{m/s}$ 减速至 $7.50\,\mathrm{m/s}$。求使它减速的平均作用力。（水的浮力平衡其所受重力。）
+
+## 英文原题（存档摘录）
+
+# Further Applications of Newton’s Laws of Motion — CP-00280
+
+**Integrated Concepts** A 35.0-kg dolphin decelerates from 12.0 to 7.50 m/s in 2.30 s to join another dolphin in play. What average force was exerted to slow him if he was moving horizontally? (The gravitational force is balanced by the buoyant force of the water.)
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00280.md
+- 原件 Git blob SHA：4229c695660d1da529c6f0b0f6100b30e5a20e16
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00281"></a>
+
+## CP-00281｜短跑运动员起步速度及位移
+
+**学科：** 力学　**知识点：** 牛顿第二定律／短跑起步
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+**综合题。**质量 $70.0\,\mathrm{kg}$ 的短跑运动员在起跑的 $0.800\,\mathrm{s}$ 内，对地面向后施加平均大小为 $650\,\mathrm{N}$ 的力。（a）求他获得的末速率；（b）求这一时间内运动的距离。
+
+## 英文原题（存档摘录）
+
+# Further Applications of Newton’s Laws of Motion — CP-00281
+
+**Integrated Concepts** When starting a foot race, a 70.0-kg sprinter exerts an average force of 650 N backward on the ground for 0.800 s. (a) What is his final speed? (b) How far does he travel?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00281.md
+- 原件 Git blob SHA：b7e7f8db7e2bd9926eaaee4b26703c7e529d5e1d
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：物理模型依赖
+- 审校提示：通常按从静止起跑、忽略水平阻力且加速度恒定处理。
+
+---
+
+<a id="cp-00282"></a>
+
+## CP-00282｜大型火箭起飞加速度与质量变化
+
+**学科：** 力学　**知识点：** 牛顿第二定律／竖直起飞
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+**综合题。**一枚大型火箭起飞时质量为 $2.00\times10^6\,\mathrm{kg}$，发动机推力为 $3.50\times10^7\,\mathrm{N}$。（a）若竖直起飞，求其初加速度；（b）假设质量与推力保持恒定，向上达到 $120\,\mathrm{km/h}$ 的速率需多长时间？（c）实际上火箭随燃料消耗质量显著减小，定性解释这对加速度及所需时间有何影响。
+
+## 英文原题（存档摘录）
+
+# Further Applications of Newton’s Laws of Motion — CP-00282
+
+**Integrated Concepts** A large rocket has a mass of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>2</mn><mtext>.</mtext><mrow><mtext>00</mtext><mo stretchy="false">×</mo><msup><mtext>10</mtext><mrow><mn>6</mn></mrow></msup></mrow><mspace width="0.25em" /><mtext> kg</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{2 "." "00" times "10" rSup { size 8{6} } " kg"} {}</annotation></semantics></math>
+
+ at takeoff, and its engines produce a thrust of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>3</mn><mtext>.</mtext><mrow><mtext>50</mtext><mo stretchy="false">×</mo><msup><mtext>10</mtext><mrow><mn>7</mn></mrow></msup></mrow><mspace width="0.25em" /><mtext> N</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{3 "." "50" times "10" rSup { size 8{7} } " N"} {}</annotation></semantics></math>
+
+. (a) Find its initial acceleration if it takes off vertically. (b) How long does it take to reach a velocity of 120 km/h straight up, assuming constant mass and thrust? (c) In reality, the mass of a rocket decreases significantly as its fuel is consumed. Describe qualitatively how this affects the acceleration and time for this motion.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00282.md
+- 原件 Git blob SHA：9dbdea99f20806f3f5cb1a9e880120bfbbe19a1a
 - 上游署名与许可证见原件；尚未完成单题权利审查。
 
 ---

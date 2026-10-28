@@ -2,7 +2,7 @@
 
 > 仅供编辑复核：尚未通过独立双语、答案或版权审核；不可正式组卷。
 
-共 97 道。英文原文均以保留源指纹的上游快照为依据。
+共 100 道。英文原文均以保留源指纹的上游快照为依据。
 
 <a id="cp-00137"></a>
 
@@ -1468,6 +1468,84 @@ What do vectors and scalars have in common? How do they differ?
 
 - 原件：external_sources/college_physics/raw/CP-00261.md
 - 原件 Git blob SHA：df672491d4f69d465991b2173d9cd65624829939
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00263"></a>
+
+## CP-00263｜标量为什么不能直接加到矢量上
+
+**学科：** 物理基础　**知识点：** 矢量运算／量纲
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+解释为什么不能把一个标量直接与一个矢量相加。
+
+## 英文原题（存档摘录）
+
+# Vector Addition and Subtraction: Graphical Methods — CP-00263
+
+Explain why it is not possible to add a scalar to a vector.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00263.md
+- 原件 Git blob SHA：706e8e3bc6b153605d93a3e4eda814b2d58b5eb9
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00269"></a>
+
+## CP-00269｜非零矢量存在零分量的例子
+
+**学科：** 物理基础　**知识点：** 矢量分量／零投影
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+举出一个非零矢量，使它在某一坐标轴上的分量为零。
+
+## 英文原题（存档摘录）
+
+# Vector Addition and Subtraction: Analytical Methods — CP-00269
+
+Give an example of a nonzero vector that has a component of zero.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00269.md
+- 原件 Git blob SHA：a3c40b9031e4171e75fa095ff99464031b413025
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00270"></a>
+
+## CP-00270｜矢量的分量为什么不会超过其大小
+
+**学科：** 物理基础　**知识点：** 矢量分量／模
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+说明为什么矢量沿某一方向的分量的绝对值不可能大于该矢量自身的大小。
+
+## 英文原题（存档摘录）
+
+# Vector Addition and Subtraction: Analytical Methods — CP-00270
+
+Explain why a vector cannot have a component greater than its own magnitude.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00270.md
+- 原件 Git blob SHA：2f3890e165f7f2622f725116a1b0e4320c68964a
 - 上游署名与许可证见原件；尚未完成单题权利审查。
 
 ---
