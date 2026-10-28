@@ -1,18 +1,18 @@
 {
   "id": "E059",
   "topic": "电磁学",
-  "title": "良导体半空间的趋肤扩散、复表面阻抗与坡印廷能流",
+  "title": "圆柱力自由磁场的贝塞尔结构、轴向电流与边界磁压力",
   "kind": "综合推导题",
   "level": 5,
-  "estimated_minutes": 95,
+  "estimated_minutes": 100,
   "tags": [
-    "磁扩散方程",
-    "趋肤深度",
-    "复表面阻抗",
-    "焦耳耗散",
-    "坡印廷定理"
+    "力自由磁场",
+    "圆柱Bessel方程",
+    "磁通与电流约束",
+    "磁能积分恒等式",
+    "边界面电流与Maxwell应力"
   ],
-  "answer": "\\delta=\\sqrt{\\frac{2}{\\mu\\sigma\\omega}},\\quad Z_s=\\frac{1-i}{\\sigma\\delta},\\quad \\langle S_x\\rangle=\\frac{|H_0|^2}{2\\sigma\\delta}",
+  "answer": "B_z=B_0J_0(\\alpha r),\\quad B_\\varphi=B_0J_1(\\alpha r),\\quad I_z=\\alpha\\Phi_z/\\mu_0",
   "quality_status": "待独立复核",
   "tier": "advanced_composite",
   "format": "latex-fragment-v1",
