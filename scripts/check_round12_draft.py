@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Twenty-eight executable draft subpart checks, NOT the required 200-item final gate."""
+"""Forty-four executable draft subpart checks, NOT the required 200-item final gate."""
 import json
 import math
 import mpmath as mp
@@ -126,8 +126,75 @@ record('T057',4,'strong_shock_limit','strong shock finite compression, pressure 
        eq(s.limit((Ps/rs)/xs,xs,s.oo),2*gs*(gs-1)/(gs+1)**2) and
        eq(s.limit(ms2,xs,s.oo),(gs-1)/(2*gs)))
 
-assert len(checks)==28 and len(set((c['id'],c['part']) for c in checks))==28
-assert all(len(set(c['method'] for c in checks if c['id']==uid))>=2 for uid in ['M059','E059','T056','W056','O057','Q057','T057'])
+
+# Round-12 continuation: four new, distinct physical models, each with four executable checks.
+aR,cR,etaR=s.symbols('aR cR etaR',positive=True)
+tR=cR*s.sinh(etaR)/aR
+xR=cR**2*(s.cosh(etaR)-1)/aR
+record('M060',1,'symbolic','constant proper acceleration produces a normalized hyperbolic worldline',
+       eq((xR+cR**2/aR)**2-cR**2*tR**2,cR**4/aR**2))
+record('M060',2,'energy','coordinate acceleration and relativistic kinetic work agree at arbitrary rapidity',
+       eq(s.diff(cR*s.tanh(etaR),etaR)/s.diff(tR,etaR),aR/s.cosh(etaR)**3)
+       and eq((s.cosh(etaR)-1)*cR**2,aR*xR))
+record('M060',3,'independent_derivation','outgoing null ray interception gives exponential redshift and causal horizon',
+       eq(s.simplify((cR*tR-xR-cR**2*(1-s.exp(-etaR))/aR).rewrite(s.exp))))
+record('M060',4,'conservation','backward photon arrival time and Doppler ratio match adjacent-crest timing',
+       eq(s.simplify((cR*tR+xR-cR**2*(s.exp(etaR)-1)/aR).rewrite(s.exp)))
+       and eq(s.diff((cR/aR)*(s.exp(etaR)-1),etaR),cR*s.exp(etaR)/aR))
+omE,epE,muE,kE,beE=s.symbols('omE epE muE kE beE',positive=True)
+xE,ampE,widthE=s.symbols('xE ampE widthE',real=True)
+eY=ampE*s.sin(kE*xE)
+hX=-beE*eY/(omE*muE)
+hZ=-s.I*kE*ampE*s.cos(kE*xE)/(omE*muE)
+record('E060',1,'symbolic','TE10 electric and magnetic phasors satisfy both Faraday curl components',
+       eq(-s.I*beE*eY,s.I*omE*muE*hX)
+       and eq(s.diff(eY,xE),s.I*omE*muE*hZ))
+record('E060',2,'independent_derivation','Ampere curl and TE dispersion imply phase-group velocity product',
+       eq((s.I*beE*hX-s.diff(hZ,xE)+s.I*omE*epE*eY).subs(beE**2,omE**2*muE*epE-kE**2))
+       and eq((omE/beE)*(beE/(omE*epE*muE)),1/(epE*muE)))
+powerE=widthE*beE*ampE**2/(4*omE*muE)
+energyE=epE*widthE*ampE**2/4
+record('E060',3,'energy','Poynting power over electromagnetic energy density equals group velocity',
+       eq(powerE/energyE,beE/(omE*epE*muE)))
+bE=s.sqrt(omE**2*epE*muE-kE**2)
+record('E060',4,'symbolic','TE group velocity dispersion is negative and evanescent axial flux vanishes',
+       eq(s.diff(bE,omE,2),-kE**2*epE*muE/(omE**2*epE*muE-kE**2)**s.Rational(3,2))
+       and eq(s.re(s.I*s.Symbol('kappaE',real=True)*ampE**2)))
+vW,zW=s.symbols('vW zW',positive=True)
+uW=vW/(2*s.cosh(s.sqrt(vW)*zW/2)**2)
+record('W057',1,'symbolic','KdV solitary sech squared profile satisfies integrated nonlinear traveling wave equation',
+       eq(s.diff(uW,zW,2)-vW*uW+3*uW**2))
+record('W057',2,'conservation','KdV soliton mass and quadratic invariant equal independent exact sech integrals',
+       eq(s.integrate(uW,(zW,-s.oo,s.oo)),2*s.sqrt(vW))
+       and eq(s.integrate(uW**2,(zW,-s.oo,s.oo)),s.Rational(2,3)*vW**s.Rational(3,2)))
+record('W057',3,'energy','KdV soliton Hamiltonian includes correct negative gradient contribution',
+       eq(s.integrate(uW**3-s.diff(uW,zW)**2/2,(zW,-s.oo,s.oo)),vW**s.Rational(5,2)/5))
+kW=s.symbols('kW',real=True)
+record('W057',4,'limit','linearized KdV dispersion and positive soliton speed have opposite signs',
+       eq(-s.I*(-kW**3)+(s.I*kW)**3)
+       and eq(s.diff(-kW**3,kW),-3*kW**2))
+pQ,stQ,deQ=s.symbols('pQ stQ deQ',positive=True)
+OmQ=s.sqrt(pQ**2+stQ**2)
+HQ=s.Matrix([[0,pQ,0],[pQ,2*deQ,stQ],[0,stQ,0]])/2
+DQ=s.Matrix([stQ,0,-pQ])/OmQ
+record('Q058',1,'symbolic','Lambda dark eigenstate annihilated by Hamiltonian and two bright eigenvalues match trace',
+       HQ*DQ==s.zeros(3,1) and eq(HQ.det()) and eq(HQ.trace(),deQ))
+thQ=s.symbols('thQ',real=True)
+darkQ=s.Matrix([s.cos(thQ),0,-s.sin(thQ)])
+brightQ=s.Matrix([s.sin(thQ),0,s.cos(thQ)])
+record('Q058',2,'independent_derivation','instantaneous dark state derivative equals negative bright mixing vector',
+       s.diff(darkQ,thQ)==-brightQ and eq(darkQ.dot(brightQ)))
+record('Q058',3,'limit','counterintuitive pulse endpoints transfer population without middle state or Berry connection',
+       darkQ.subs(thQ,0)==s.Matrix([1,0,0])
+       and darkQ.subs(thQ,s.pi/2)==s.Matrix([0,0,-1])
+       and eq(darkQ.dot(s.diff(darkQ,thQ))))
+record('Q058',4,'symbolic','two photon detuning causes diagonal dark shift and off diagonal leakage',
+       eq((darkQ.T*s.diag(0,0,1)*darkQ)[0],s.sin(thQ)**2)
+       and eq((brightQ.T*s.diag(0,0,1)*darkQ)[0],-s.sin(thQ)*s.cos(thQ))
+       and eq(s.limit((s.sqrt(deQ**2+OmQ**2)-deQ)*deQ/2,deQ,s.oo),OmQ**2/4))
+
+assert len(checks)==44 and len(set((c['id'],c['part']) for c in checks))==44
+assert all(len(set(c['method'] for c in checks if c['id']==uid))>=2 for uid in ['M059','E059','T056','W056','O057','Q057','T057','M060','E060','W057','Q058'])
 # Independent numerical crosschecks beyond the twelve mandatory draft subparts.
 from math import sqrt,tanh,cosh
 A0=2.;B0=2.;C0=2/sqrt(3);lam0=2/sqrt(3);time=.73
@@ -177,7 +244,26 @@ assert abs(rshock-(gshock+1)/(gshock-1))<mp.mpf('0.0001')
 assert abs(pshock/xshock-2*gshock/(gshock+1))<mp.mpf('0.00001')
 supplemental.append(dict(id='T057',method='independent_numerical',name='high-Mach Rankine-Hugoniot strong shock ratios',passed=True))
 
-result={'status':'draft-only','new_problem_count':7,'passed_count':len(checks),'tests':checks,'independent_expert_review':'pending','supplemental_numeric_checks':supplemental}
+
+# Supplemental numeric checks are independent of the four per-question evidence records.
+etaN=mp.mpf('0.91');aN=mp.mpf('1.3');cN=mp.mpf('3.0')
+tN=cN/aN*mp.sinh(etaN);xN=cN*cN/aN*(mp.cosh(etaN)-1)
+assert abs(cN*tN-xN-cN*cN/aN*(1-mp.exp(-etaN)))<mp.mpf('1e-27')
+supplemental.append(dict(id='M060',method='numerical',name='null interception and exponential Doppler redshift at finite rapidity',passed=True))
+wN=mp.mpf('3');kcN=mp.pi/2;betaN=mp.sqrt(wN*wN-kcN*kcN)
+assert abs((betaN/(4*wN))/(mp.mpf('0.25'))-betaN/wN)<mp.mpf('1e-27')
+supplemental.append(dict(id='E060',method='numerical',name='independent TE10 Poynting to energy speed at nonzero cutoff',passed=True))
+vN=mp.mpf('4');kN=mp.sqrt(vN)/2
+massN=mp.quad(lambda z:vN/(2*mp.cosh(kN*z)**2),[-mp.inf,0,mp.inf])
+assert abs(massN-2*mp.sqrt(vN))<mp.mpf('1e-27')
+supplemental.append(dict(id='W057',method='numerical',name='high precision nonlinear solitary wave mass quadrature',passed=True))
+pN=mp.mpf('1.2');sN=mp.mpf('2.3');dN=mp.mpf('0.7');oN=mp.sqrt(pN*pN+sN*sN)
+hN=mp.matrix([[0,pN,0],[pN,2*dN,sN],[0,sN,0]])/2
+darkN=mp.matrix([sN/oN,0,-pN/oN])
+assert max(abs(x) for x in hN*darkN)<mp.mpf('1e-27')
+supplemental.append(dict(id='Q058',method='numerical',name='independent high precision Lambda dark state matrix product',passed=True))
+
+result={'status':'draft-only','new_problem_count':11,'passed_count':len(checks),'tests':checks,'independent_expert_review':'pending','supplemental_numeric_checks':supplemental}
 path=Path(__file__).resolve().parents[1]/'data/round12_draft_validation_report.json'
 path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
 print(json.dumps({'status':result['status'],'checked_subparts':len(checks)},ensure_ascii=False))

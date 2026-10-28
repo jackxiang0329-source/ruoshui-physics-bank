@@ -1,0 +1,43 @@
+(1) 设无量纲快速度为 \(\eta\)，四速度 \(U^\mu=(c\cosh\eta,c\sinh\eta)\)，取度规 \(+,-\)，立即有 \(U^\mu U_\mu=c^2\)。四加速度 \(A^\mu=dU^\mu/d\tau=c\dot\eta(\sinh\eta,\cosh\eta)\)，故 \(\sqrt{-A^\mu A_\mu}=c|\dot\eta|=a\)。由初始静止和正向加速知 \(\eta=a\tau/c\)。因此
+\[
+v=c\tanh\eta,\quad \gamma=\cosh\eta,\quad
+t=\frac ca\sinh\eta,\qquad
+x=\frac{c^2}{a}(\cosh\eta-1).
+\]
+求导得 \(dt/d\tau=\cosh\eta\)、\(dx/d\tau=c\sinh\eta\)，且 \(t(0)=x(0)=v(0)=0\)。这里 \(a\) 是加速度计读数，不是实验室坐标加速度。
+
+(2) 由 \(\cosh^2\eta-\sinh^2\eta=1\) 得
+\[
+\boxed{\left(x+\frac{c^2}{a}\right)^2-c^2t^2=\frac{c^4}{a^2}}.
+\]
+又 \(dv/dt=(dv/d\tau)/(dt/d\tau)=a/\gamma^3\)，随速度增加而趋零。到 \(x=D\) 时
+\[
+\gamma_D=1+\frac{aD}{c^2},\quad
+t_D=\frac ca\sqrt{\gamma_D^2-1},\quad
+\tau_D=\frac ca\operatorname{arcosh}\gamma_D.
+\]
+动量 \(p=mc\sinh\eta\)，于是实验室外力 \(F=dp/dt=ma\) 为常数，供能功 \(W=\int_0^D F\,dx=maD=(\gamma_D-1)mc^2\)，与相对论动能严格相符。\(aD/c^2\ll1\) 时 \(t_D\simeq\sqrt{2D/a}\)，恢复牛顿结果。
+
+(3) 原点发出的右行光线满足 \(x=c(t-t_e)\)，相遇条件是 \(ct-x=ct_e\)。将 (1) 代入，使用 \(\sinh\eta-\cosh\eta=-e^{-\eta}\)，得到
+\[
+ct_e=\frac{c^2}{a}(1-e^{-\eta}),\qquad
+\eta=-\ln\left(1-\frac{at_e}{c}\right),\qquad
+\tau_e=-\frac ca\ln\left(1-\frac{at_e}{c}\right).
+\]
+因此有限固有时相遇当且仅当 \(0\le t_e<c/a\)；临界 \(t_e=c/a\) 仅在 \(\tau\to\infty\) 形式上相接，更晚发出的光永远追不上火箭。对沿 \(+x\) 的光，瞬时共动系的频率为
+\[
+\boxed{\nu_{\rm rec}=\gamma(1-v/c)\nu_0=e^{-\eta}\nu_0
+=\left(1-\frac{at_e}{c}\right)\nu_0}.
+\]
+红移趋零频率对应信号源可达性的边界，而非光速发生变化。
+
+(4) 火箭向后发出的光在实验室系仍沿 \(-x\) 传播，其世界线在发射后为 \(x'=x(\tau)-c[t'-t(\tau)]\)。令 \(x'=0\)，原点收到光的时刻
+\[
+\boxed{t_r=t(\tau)+\frac{x(\tau)}c=\frac ca(e^\eta-1)}.
+\]
+瞬时共动系到实验室系的逆向多普勒变换给出
+\[
+\boxed{\nu_r=\gamma(1-v/c)\nu_*=\nu_*e^{-\eta}
+=\frac{\nu_*}{1+at_r/c}}.
+\]
+独立地对上式求导，\(dt_r/d\tau=e^\eta\)，因此火箭每隔 \(d\tau=1/\nu_*\) 发射的相邻波峰在原点的间隔为 \(dt_r=e^\eta d\tau\)，同样给出 \(\nu_r=e^{-\eta}\nu_*\)。当 \(\tau\to\infty\) 时 \(t_r\to\infty\)、\(\nu_r\to0\)；与 (3) 不同，任意有限时刻向后发出的光都能抵达原点。全部频率比无量纲，\(c/a\) 具有时间量纲。

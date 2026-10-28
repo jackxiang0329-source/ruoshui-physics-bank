@@ -1,7 +1,7 @@
 {
   "status": "draft-only",
-  "new_problem_count": 7,
-  "passed_count": 28,
+  "new_problem_count": 11,
+  "passed_count": 44,
   "tests": [
     {
       "id": "M059",
@@ -198,6 +198,118 @@
       "method": "strong_shock_limit",
       "name": "strong shock finite compression, pressure and temperature scaling, subsonic downstream",
       "passed": true
+    },
+    {
+      "id": "M060",
+      "part": 1,
+      "method": "symbolic",
+      "name": "constant proper acceleration produces a normalized hyperbolic worldline",
+      "passed": true
+    },
+    {
+      "id": "M060",
+      "part": 2,
+      "method": "energy",
+      "name": "coordinate acceleration and relativistic kinetic work agree at arbitrary rapidity",
+      "passed": true
+    },
+    {
+      "id": "M060",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "outgoing null ray interception gives exponential redshift and causal horizon",
+      "passed": true
+    },
+    {
+      "id": "M060",
+      "part": 4,
+      "method": "conservation",
+      "name": "backward photon arrival time and Doppler ratio match adjacent-crest timing",
+      "passed": true
+    },
+    {
+      "id": "E060",
+      "part": 1,
+      "method": "symbolic",
+      "name": "TE10 electric and magnetic phasors satisfy both Faraday curl components",
+      "passed": true
+    },
+    {
+      "id": "E060",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "Ampere curl and TE dispersion imply phase-group velocity product",
+      "passed": true
+    },
+    {
+      "id": "E060",
+      "part": 3,
+      "method": "energy",
+      "name": "Poynting power over electromagnetic energy density equals group velocity",
+      "passed": true
+    },
+    {
+      "id": "E060",
+      "part": 4,
+      "method": "symbolic",
+      "name": "TE group velocity dispersion is negative and evanescent axial flux vanishes",
+      "passed": true
+    },
+    {
+      "id": "W057",
+      "part": 1,
+      "method": "symbolic",
+      "name": "KdV solitary sech squared profile satisfies integrated nonlinear traveling wave equation",
+      "passed": true
+    },
+    {
+      "id": "W057",
+      "part": 2,
+      "method": "conservation",
+      "name": "KdV soliton mass and quadratic invariant equal independent exact sech integrals",
+      "passed": true
+    },
+    {
+      "id": "W057",
+      "part": 3,
+      "method": "energy",
+      "name": "KdV soliton Hamiltonian includes correct negative gradient contribution",
+      "passed": true
+    },
+    {
+      "id": "W057",
+      "part": 4,
+      "method": "limit",
+      "name": "linearized KdV dispersion and positive soliton speed have opposite signs",
+      "passed": true
+    },
+    {
+      "id": "Q058",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Lambda dark eigenstate annihilated by Hamiltonian and two bright eigenvalues match trace",
+      "passed": true
+    },
+    {
+      "id": "Q058",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "instantaneous dark state derivative equals negative bright mixing vector",
+      "passed": true
+    },
+    {
+      "id": "Q058",
+      "part": 3,
+      "method": "limit",
+      "name": "counterintuitive pulse endpoints transfer population without middle state or Berry connection",
+      "passed": true
+    },
+    {
+      "id": "Q058",
+      "part": 4,
+      "method": "symbolic",
+      "name": "two photon detuning causes diagonal dark shift and off diagonal leakage",
+      "passed": true
     }
   ],
   "independent_expert_review": "pending",
@@ -242,6 +354,30 @@
       "id": "T057",
       "method": "independent_numerical",
       "name": "high-Mach Rankine-Hugoniot strong shock ratios",
+      "passed": true
+    },
+    {
+      "id": "M060",
+      "method": "numerical",
+      "name": "null interception and exponential Doppler redshift at finite rapidity",
+      "passed": true
+    },
+    {
+      "id": "E060",
+      "method": "numerical",
+      "name": "independent TE10 Poynting to energy speed at nonzero cutoff",
+      "passed": true
+    },
+    {
+      "id": "W057",
+      "method": "numerical",
+      "name": "high precision nonlinear solitary wave mass quadrature",
+      "passed": true
+    },
+    {
+      "id": "Q058",
+      "method": "numerical",
+      "name": "independent high precision Lambda dark state matrix product",
       "passed": true
     }
   ]
