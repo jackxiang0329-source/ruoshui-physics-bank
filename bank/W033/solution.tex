@@ -1,0 +1,20 @@
+(1) 两摆球小角水平位移分别为 \(\ell\theta_1,\ell\theta_2\)。动能 \(K=m\ell^2(\dot\theta_1^2+\dot\theta_2^2)/2\)，重力势能 \(U_g=mg\ell(\theta_1^2+\theta_2^2)/2\)，弹簧势能 \(U_k=k\ell^2(\theta_1-\theta_2)^2/2\)。Euler–Lagrange 方程为
+\[
+m\ell^2\ddot\theta_1+mg\ell\theta_1+k\ell^2(\theta_1-\theta_2)=0
+\]
+及交换下标的第二式。
+
+(2) 令 \(\theta_\pm=(\theta_1\pm\theta_2)/2\)，相加得 \(\ddot\theta_++(g/\ell)\theta_+=0\)，相减得 \(\ddot\theta_-+[g/\ell+2k/m]\theta_-=0\)。所以
+\[
+\omega_+=\sqrt{g/\ell},\qquad\omega_-=\sqrt{g/\ell+2k/m}.
+\]
+
+(3) 初态 \(\theta_1(0)=\theta_0,\theta_2(0)=0\) 给 \(\theta_\pm(0)=\theta_0/2\)，初速度都零，因此
+\[
+\theta_1(t)=\frac{\theta_0}2[\cos(\omega_+t)+\cos(\omega_-t)],
+\quad
+\theta_2(t)=\frac{\theta_0}2[\cos(\omega_+t)-\cos(\omega_-t)].
+\]
+由三角恒等式可看出快振荡乘慢变包络。
+
+(4) 弱耦合 \(k\ell/(mg)\ll1\) 时 \(\omega_--\omega_+\simeq k/(m\omega_+)\)。能量从第一摆转移到第二摆、再回归第一摆的周期为 \(T_{\rm beat}=2\pi/(\omega_--\omega_+)\)，由初始条件中两个模态相位差每增长 \(2\pi\) 重复。k→0 时两个频率重合，不发生能量交换，拍动周期发散。

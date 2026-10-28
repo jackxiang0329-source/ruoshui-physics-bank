@@ -1,0 +1,27 @@
+(1) 焓 \(H=U+Pv\) 满足 \(dH=T\,dS+v\,dP\)。由 Maxwell 关系 \((\partial S/\partial P)_T=-(\partial v/\partial T)_P\)，有
+\[
+dH=C_p\,dT+[v-T(\partial v/\partial T)_P]\,dP.
+\]
+恒焓条件下
+\[
+\mu_{JT}=\left(\frac{\partial T}{\partial P}\right)_H
+=\frac{T(\partial v/\partial T)_P-v}{C_p}.
+\]
+
+(2) 在稀薄近似中反解范德瓦耳斯方程，先写 \(P\simeq RT/v+(RTb-a)/v^2\)。令 \(v=RT/P+\delta\)，代入保留常数阶得 \(\delta=b-a/(RT)\)。因此
+\[
+v\simeq\frac{RT}{P}+b-\frac{a}{RT},
+\quad
+(\partial v/\partial T)_P\simeq R/P+a/(RT^2).
+\]
+
+(3) 代回得
+\[
+T(\partial v/\partial T)_P-v\simeq
+\frac{2a}{RT}-b,
+\quad
+\mu_{JT}\simeq \frac{2a/(RT)-b}{C_p}.
+\]
+令其为零，得到低压反转温度 \(T_{\rm inv}\simeq2a/(Rb)\)。此结果只在气体足够稀薄、无相变时成立。
+
+(4) 当 \(a,b\to0\) 时 \(\mu_{JT}\to0\)，恢复理想气体恒焓节流不变温。若 \(T<T_{\rm inv}\)，则 \(\mu_{JT}>0\)，降压 \(dP<0\) 导致 \(dT<0\)；若 \(T>T_{\rm inv}\)，节流时升温。

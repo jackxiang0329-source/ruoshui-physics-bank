@@ -1,0 +1,25 @@
+(1) 理想气体状态方程 \(PV=nRT\)，联立多方关系得
+\[
+TV^{\nu-1}=\frac K{nR}=\mathrm{const},\quad
+\frac{T_f}{T_i}=(V_i/V_f)^{\nu-1}.
+\]
+对给定端点不可以独立指定所有 \(P,V,T\)。
+
+(2) 对外做功 \(W=\int_{V_i}^{V_f}P\,dV=K(V_f^{1-\nu}-V_i^{1-\nu})/(1-\nu)\)。利用 \(PV=nRT\) 可写
+\[
+W=\frac{nR(T_f-T_i)}{1-\nu},\qquad
+\Delta U=nC_V(T_f-T_i).
+\]
+
+(3) 第一定律 \(Q=\Delta U+W\) 得
+\[
+Q=n\left(C_V+\frac R{1-\nu}\right)(T_f-T_i).
+\]
+熵是状态函数，
+\[
+\Delta S=nC_V\ln(T_f/T_i)+nR\ln(V_f/V_i)
+=n[C_V(1-\nu)+R]\ln(V_f/V_i).
+\]
+不同 \(\nu\) 可使热量的符号不同，不能只看 \(\Delta T\)。
+
+(4) 若 \(\nu=\gamma=1+R/C_V\)，有 \(C_V(1-\nu)+R=0\)，故 \(\Delta S=0,Q=0\)，为可逆绝热。若 \(\nu=0\)，过程等压 \(P=K\)，因此 \(W=P(V_f-V_i)\) 与 \(Q=nC_P(T_f-T_i)\)，由公式完全恢复。
