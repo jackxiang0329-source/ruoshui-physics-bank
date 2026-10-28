@@ -37,7 +37,7 @@ def validate(root=ROOT):
         raw = (root / path).read_bytes()
         if git_blob_sha(raw) != item["raw_blob_sha"]:
             raise ValueError("Source file changed; review original before publication: " + ident)
-        if item["module"] not in MODULES or not item["subtopic"].strip():
+        if item["module"] not in MODULES or not item["subtopic"].strip() or item["subtopic"] in MODULES:
             raise ValueError("Missing controlled topic classification: " + ident)
         if item.get("translation_status") != REVIEW_STATE:
             raise ValueError("Editorial translation cannot claim approval: " + ident)
