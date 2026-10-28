@@ -36,6 +36,8 @@ jobs:
         run: python scripts/check_round06_physics.py
       - name: Verify seventh batch physical formulas
         run: python scripts/check_round07_physics.py
+      - name: Fifty new problems independently checked
+        run: python scripts/check_round08_physics.py
       - name: Validate TeX fragments and derived documents
         run: python scripts/build.py --check
       - name: Upload independent spotcheck report
@@ -46,6 +48,7 @@ jobs:
             data/validation_report.json
             data/round06_validation_report.json
             data/round07_validation_report.json
+            data/round08_validation_report.json
           if-no-files-found: error
       - name: Compile question and solution PDFs
         uses: xu-cheng/latex-action@v4
