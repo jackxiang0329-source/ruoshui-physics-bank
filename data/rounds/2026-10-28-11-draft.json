@@ -1063,6 +1063,98 @@
       "complexity_tier": "L5-B",
       "question": "光从折射率 \\(n_0>0\\) 的无吸收入射介质正入射到折射率 \\(n_s>n_0\\) 的半无限基底，中间镀厚度 \\(d>0\\)、折射率 \\(n_f>0\\) 的无吸收单层薄膜。全部介质非磁性，膜内单程相位为 \\(\\beta=2\\pi n_fd/\\lambda\\)，以电场振幅 Fresnel 界面系数 \\(r_{ij}=(n_i-n_j)/(n_i+n_j)\\)。\n(1) 利用多重往返干涉求总电场反射振幅与反射率。\n(2) 在设计波长 \\(\\lambda_0\\) 满足四分之一波长相位时推导反射消失的折射率条件。\n(3) 检查裸基底极限与等折射率薄膜极限，并验证无吸收能流守恒。\n(4) 解释增透层的工作带宽限制与膜厚、折射率误差导致的残余反射。\n",
       "solution": "(1) 在两个界面反射振幅分别 \\(r_{01}=(n_0-n_f)/(n_0+n_f)\\)、\\(r_{12}=(n_f-n_s)/(n_f+n_s)\\)。将薄膜内的多次反射场以往返相位 \\(e^{2i\\beta}\\) 求几何级数，可得总反射 \\(r=(r_{01}+r_{12}e^{2i\\beta})/(1+r_{01}r_{12}e^{2i\\beta})\\)，反射率 \\(R=|r|^2\\)。不可仅相加两次反射强度，因为不同光程的电场需要相干叠加。\n\n(2) 设计四分之一波长条件为 \\(n_fd=\\lambda_0/4\\)，即 \\(\\beta=\\pi/2\\)，往返因子为 \\(-1\\)，于是 \\(r=(r_{01}-r_{12})/(1-r_{01}r_{12})\\)。零反射要求 \\(r_{01}=r_{12}\\)，解两界面 Fresnel 比例得 \\(n_f^2=n_0n_s\\)，所以最优无耗散膜折射率是 \\(n_f=\\sqrt{n_0n_s}\\)。这是单层正入射严格消反射条件，依赖设计波长与材料色散。\n\n(3) 若 \\(n_f=n_0\\)，首界面反射为零，总反射幅度退化为 \\(r_{12}e^{2i\\beta}\\)，反射率为裸介质—基底值 \\([(n_0-n_s)/(n_0+n_s)]^2\\)，相位变化不影响强度。若 \\(n_f=n_s\\)，末界面无反射，仍得到相同裸界面反射率。三层体系无吸收且基底无限延展，合适的能流归一化下反射和透射功率之和为一，零反射时全部入射能量进入基底。\n\n(4) 光波长偏离 \\(\\lambda_0\\) 时 \\(\\beta=(\\pi/2)(\\lambda_0/\\lambda)\\) 不再是四分之一波长，两个主要反射场不能完全相消。若膜厚偏差 \\(\\delta d\\)，往返相位偏差约为 \\(\\delta(2\\beta)=4\\pi n_f\\delta d/\\lambda_0\\)，导致非零残余反射；折射率偏差破坏 \\(n_f^2=n_0n_s\\)，即使相位正确仍不能完全消除反射。宽带增透需多层或梯度折射率设计，不能外推单层的单频匹配结论。\n"
+    },
+    {
+      "id": "Q053",
+      "topic": "近代物理",
+      "title": "Klein–Gordon粒子正能波包的相群速度与非相对论极限",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 95,
+      "tags": [
+        "相对论量子波动",
+        "群速度",
+        "色散关系",
+        "经典极限"
+      ],
+      "answer": "E^2=p^2c^2+m^2c^4,\\quad v_pv_g=c^2",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-C",
+      "question": "质量 \\(m>0\\) 的无自旋自由粒子满足 Klein--Gordon 方程 \\((c^{-2}\\partial_t^2-\\nabla^2+m^2c^2/\\hbar^2)\\psi=0\\)。考虑一维沿 \\(+x\\) 传播的正能波包，中心波数 \\(k>0\\)，包宽使 \\(\\Delta k\\ll k\\)。忽略负能态混合及量子场粒子产生。\n(1) 由平面波求正能色散关系、静能及动量对应。\n(2) 求相速度和群速度，解释相速度可大于光速而不违反因果性。\n(3) 给出包络波长分散的二阶系数及波包展宽的趋势。\n(4) 在 \\(\\hbar k\\ll mc\\) 下展开能量，恢复非相对论动能和速度。\n",
+      "solution": "(1) 取平面波 \\(\\psi=e^{i(kx-\\omega t)}\\) 代入 Klein--Gordon 方程，得到 \\(\\omega^2=c^2k^2+m^2c^4/\\hbar^2\\)。正能支为 \\(E=\\hbar\\omega=\\sqrt{(\\hbar ck)^2+m^2c^4}\\)，动量 \\(p=\\hbar k\\)。当 \\(k=0\\) 时 \\(E=mc^2\\)，是粒子的静能，而不是非相对论零能基准。\n\n(2) 相速度 \\(v_p=\\omega/k=\\sqrt{c^2+m^2c^4/(\\hbar^2k^2)}>c\\)，群速度 \\(v_g=d\\omega/dk=c^2k/\\omega=pc^2/E<c\\)。两者满足 \\(v_pv_g=c^2\\)，所以超光速的相位峰并不传递信息；足够窄的正能波包以群速度输运其中心。不能把单频无穷平面波相位传播当作可调制信号前沿。\n\n(3) 二阶色散系数为 \\(\\omega''(k)=d(c^2k/\\omega)/dk=c^2(\\omega^2-c^2k^2)/\\omega^3=m^2c^6/(\\hbar^2\\omega^3)>0\\)。对中心波数附近作 Taylor 展开，\\(\\omega(k+\\delta k)=\\omega(k)+v_g\\delta k+\\omega''\\delta k^2/2+\\cdots\\)。不同波数群速不同，窄波包随时间发生展宽；在高能质量项相对小的极限，\\(\\omega''\\to0\\) 而近似无色散。\n\n(4) 设 \\(\\epsilon=\\hbar k/(mc)\\ll1\\)，则 \\(E=mc^2\\sqrt{1+\\epsilon^2}=mc^2+(\\hbar k)^2/(2m)-(\\hbar k)^4/(8m^3c^2)+\\cdots\\)。扣除静能 \\(mc^2\\) 后首项就是 Schrödinger 非相对论自由粒子动能 \\(p^2/(2m)\\)。群速度展开 \\(v_g=p/m+O(p^3/(m^3c^2))\\)，恢复 Newtonian 速度；静能相位虽快，但不改变扣除常数后的慢速包络动力学。\n"
+    },
+    {
+      "id": "Q054",
+      "topic": "近代物理",
+      "title": "二维带电粒子的Landau能级、磁长度与简并度",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 95,
+      "tags": [
+        "Landau量子化",
+        "规范不变性",
+        "回旋运动",
+        "量子霍尔填充"
+      ],
+      "answer": "E_n=\\hbar|q|B(n+1/2)/m,\\quad N_\\phi\\simeq |q|BA/h",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-C",
+      "question": "无自旋粒子质量 \\(m>0\\)，电荷 \\(q\\ne0\\)，限制在无限二维 \\(xy\\) 平面内，均匀磁场 \\(\\mathbf B=B\\hat z\\) 且 \\(B>0\\)，无电场与杂质。哈密顿量 \\(H=[\\mathbf p-q\\mathbf A]^2/(2m)\\)。考虑面积 \\(A\\) 很大的有限样本估计体态简并度，忽略边缘修正。\n(1) 建立机械动量的交换关系并构造谐振子阶梯算符。\n(2) 求 Landau 能级及回旋角频率，说明每个能级的能量间隔。\n(3) 定义磁长度、单位面积态简并度及与穿样本总磁通的关系。\n(4) 求填满 \\(\\nu\\) 个自旋非简并能级的理想粒子数，并分析 \\(B\\to0\\) 的连续谱极限。\n",
+      "solution": "(1) 机械动量 \\(\\boldsymbol\\pi=\\mathbf p-q\\mathbf A\\) 满足 \\([\\pi_x,\\pi_y]=i\\hbar qB\\)，不依赖规范选择。令 \\(s=\\operatorname{sgn}(qB)\\)，定义 \\(a=(\\pi_x+i s\\pi_y)/\\sqrt{2\\hbar|qB|}\\)，\\(a^\\dagger=(\\pi_x-i s\\pi_y)/\\sqrt{2\\hbar|qB|}\\)，可计算得 \\([a,a^\\dagger]=1\\)。将平方 \\(\\pi_x^2+\\pi_y^2\\) 重新表达为振子数算符，就避免了直接求解某一特定规范的波函数。\n\n(2) 因为 \\(\\pi_x^2+\\pi_y^2=2\\hbar|qB|(a^\\dagger a+1/2)\\)，所以 \\(H=\\hbar\\omega_c(a^\\dagger a+1/2)\\)，其中 \\(\\omega_c=|q|B/m\\)。能级为 \\(E_n=\\hbar\\omega_c(n+1/2)\\)，\\(n=0,1,\\ldots\\)，相邻能级能量差 \\(\\hbar\\omega_c\\)。该结果是轨道 Landau 量子化，不含电子自旋 Zeeman 分裂。\n\n(3) 磁长度定义为 \\(\\ell_B=\\sqrt{\\hbar/(|q|B)}\\)。在 Landau 规范中，每个允许的沿边界波数对应一个导引中心，中心间隔的相空间计数给每个 Landau 级态数 \\(N_\\phi\\simeq A/(2\\pi\\ell_B^2)=|q|BA/(2\\pi\\hbar)=|\\Phi_B|/\\Phi_0\\)，其中 \\(\\Phi_0=h/|q|\\)。边缘和有限体积修正不计入这个热力学极限中的体态简并数。\n\n(4) 如果填满前 \\(\\nu\\) 个自旋不简并 Landau 级，则 \\(N=\\nu N_\\phi\\simeq\\nu |q|BA/h\\)，面密度为 \\(n_{2D}=\\nu|q|B/h\\)。固定 \\(B\\) 时态间距与总磁通成正比；当 \\(B\\to0\\)，单个能级简并数趋零，同时能级间隔 \\(\\hbar|q|B/m\\to0\\)，大量能级密集起来重新形成无磁场的二维连续能谱，不能只固定一个 \\(n\\) 而求零磁场全部态。\n"
+    },
+    {
+      "id": "Q055",
+      "topic": "近代物理",
+      "title": "氢原子n=2简并能级的线性Stark劈裂与偶奇态混合",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 95,
+      "tags": [
+        "简并微扰",
+        "氢原子径向积分",
+        "选择定则",
+        "Stark效应"
+      ],
+      "answer": "\\Delta E_\\pm=\\pm 3ea_0\\mathcal E,\\quad \\Delta E_{m=\\pm1}=0",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-C",
+      "question": "忽略电子自旋、精细结构与 Lamb 位移的氢原子，其 \\(n=2\\) 能级由 \\(|2s\\rangle,|2p,m=0,\\pm1\\rangle\\) 构成四重轨道简并。施加均匀弱静电场 \\(\\mathcal E\\hat z\\)，电子电荷为 \\(-e\\)，故电子势能微扰为 \\(H'=e\\mathcal Ez\\)（取正的 \\(e>0\\)）。玻尔半径为 \\(a_0\\)，仅做该简并子空间的一阶微扰。\n(1) 用宇称和球谐角动量选择定则确定四维微扰矩阵可能的非零元。\n(2) 求 \\(\\langle2s|z|2p,0\\rangle\\) 的大小并写出相应二维微扰矩阵。\n(3) 对角化求一阶Stark能级劈裂与新本征态，说明其线性依赖电场。\n(4) 讨论 \\(m=\\pm1\\) 态一阶能量与精细结构解除简并后的不同响应。\n",
+      "solution": "(1) 位置算符 \\(z=r\\cos\\theta\\) 在空间反演下奇，因此同宇称态的对角矩阵元为零。角动量选择定则要求 \\(\\Delta l=\\pm1,\\Delta m=0\\)，故 \\(2s\\) 仅与 \\(2p,m=0\\) 通过 \\(z\\) 一阶耦合；\\(2p,m=\\pm1\\) 在这一四维空间中一阶矩阵元均零。此选择定则直接把四维问题简化成一个二维块和两个零块。\n\n(2) 使用氢原子标准归一径向波函数 \\(R_{20}=(2-r/a_0)e^{-r/(2a_0)}/(2\\sqrt2a_0^{3/2})\\)、\\(R_{21}=(r/a_0)e^{-r/(2a_0)}/(2\\sqrt6a_0^{3/2})\\)，并配合 \\(\\int Y_{00}^*\\cos\\theta Y_{10}d\\Omega=1/\\sqrt3\\)。积分 \\(\\int_0^\\infty r^3R_{20}R_{21}dr\\) 得 \\(-3\\sqrt3a_0\\)，故 \\(\\langle2s|z|2p,0\\rangle=-3a_0\\)（相位约定可改变符号）。因此该简并子空间二维扰动块可写 \\(e\\mathcal E\\begin{pmatrix}0&-3a_0\\\\-3a_0&0\\end{pmatrix}\\)。\n\n(3) 对角化微扰二维块得到一阶能量修正 \\(\\Delta E_\\pm=\\pm3ea_0\\mathcal E\\)，而两个 \\(m=\\pm1\\) 态仍为 \\(\\Delta E=0\\)。对应归一化混合态为 \\((|2s\\rangle\\mp|2p,0\\rangle)/\\sqrt2\\)，具体正负号与前述矩阵选定相位有关。由于原能级严格轨道简并，微扰能量在这一理想模型中对场强线性，这和普通非简并态常见的二阶极化能量不同。\n\n(4) 一阶不受影响的 \\(m=\\pm1\\) 并不意味着它们在任意场强下没有二阶 Stark 位移，而只是所截取的简并子空间中一阶选择定则使其矩阵元为零。实际氢原子存在精细结构和 Lamb 位移，若这些能级分裂大于电场耦合 \\(3ea_0\\mathcal E\\)，应先用真实非简并谱并作不同次序的微扰，能量对弱场可主要是二阶变化；不能无限外推理想简并线性公式。\n"
+    },
+    {
+      "id": "Q056",
+      "topic": "近代物理",
+      "title": "失谐双能级隧穿模型的Rabi振荡、最大转移概率及绝热限制",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 95,
+      "tags": [
+        "双态哈密顿量",
+        "Bloch球",
+        "Rabi振荡",
+        "失谐抑制"
+      ],
+      "answer": "P_R(t)=\\frac{4J^2}{\\Delta^2+4J^2}\\sin^2\\frac{\\sqrt{\\Delta^2+4J^2}\\,t}{2\\hbar}",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-C",
+      "question": "一个孤立两态量子系统在基底 \\(|L\\rangle,|R\\rangle\\) 中的时间不变哈密顿量为 \\(H=(\\Delta/2)\\sigma_z+J\\sigma_x\\)，其中 \\(\\Delta\\in\\mathbb R\\) 是能级失谐、\\(J>0\\) 是隧穿耦合。初态 \\(|\\psi(0)\\rangle=|L\\rangle\\) 为 \\(\\sigma_z=+1\\) 的态，系统完全相干、忽略退相干与驱动。\n(1) 求哈密顿量本征能和本征态混合角。\n(2) 用 Pauli 矩阵指数计算任意时刻右态占有概率。\n(3) 求最大转移概率与对应最短时间，讨论共振 \\(\\Delta=0\\) 及大失谐。\n(4) 推导时间平均转移概率和总能量守恒，解释失谐为何抑制隧穿。\n",
+      "solution": "(1) 矩阵 \\(H=\\begin{pmatrix}\\Delta/2&J\\\\J&-\\Delta/2\\end{pmatrix}\\) 的本征能为 \\(E_\\pm=\\pm\\Omega_E/2\\)，其中 \\(\\Omega_E=\\sqrt{\\Delta^2+4J^2}\\)。令旋转角 \\(\\vartheta\\) 满足 \\(\\tan(2\\vartheta)=2J/\\Delta\\)，即可用正交混合基底对角化；当 \\(\\Delta=0\\)，对称和反对称组合为能量本征态，能隙为 \\(2J\\)。\n\n(2) 因为 \\(H^2=(\\Omega_E^2/4)I\\)，可精确求出传播算符 \\(U(t)=\\cos(\\Omega_Et/(2\\hbar))I-(2iH/\\Omega_E)\\sin(\\Omega_Et/(2\\hbar))\\)。作用在 \\(|L\\rangle\\) 后，右态幅度为 \\(\\langle R|U(t)|L\\rangle=-i(2J/\\Omega_E)\\sin(\\Omega_Et/(2\\hbar))\\)。因此转移概率 \\(P_R(t)=4J^2/(\\Delta^2+4J^2)\\sin^2[\\sqrt{\\Delta^2+4J^2}\\,t/(2\\hbar)]\\)。\n\n(3) 最大转移概率为 \\(P_{R,\\max}=4J^2/(\\Delta^2+4J^2)\\)，第一次达到极大值的时间为 \\(t_*=\\pi\\hbar/\\Omega_E\\)。共振 \\(\\Delta=0\\) 时 \\(P_{R,\\max}=1\\)，在时间 \\(\\pi\\hbar/(2J)\\) 完全转移；若 \\(|\\Delta|\\gg J\\)，则最大转移仅约 \\(4J^2/\\Delta^2\\ll1\\)。注意快速振荡与高转移概率是两件不同的事：大失谐虽然增加频率，却降低振幅。\n\n(4) 对于非零 \\(\\Omega_E\\)，长期时间平均 \\(\\overline{\\sin^2}=1/2\\)，故 \\(\\overline P_R=2J^2/(\\Delta^2+4J^2)\\)。哈密顿量与时间无关，严格有 \\(d\\langle H\\rangle/dt=(i/\\hbar)\\langle[H,H]\\rangle=0\\)，初态能量期望 \\(\\Delta/2\\) 在整个演化中守恒。右态概率变化通过态间相干项抵消对角能量差，不需凭空吸收外能；若改成缓慢时间变动的 \\(\\Delta(t)\\)，才应另用绝热定理或 Landau--Zener 动力学。\n"
     }
   ]
 }
