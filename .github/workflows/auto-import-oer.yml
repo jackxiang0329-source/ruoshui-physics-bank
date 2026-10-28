@@ -144,5 +144,31 @@ jobs:
             external_sources/catalog/review_preflight.csv
             external_sources/catalog/college_review_tex_report.json
             external_sources/catalog/college_review_tex_draft.tex
+            external_sources/catalog/college_review_preview.tex
           if-no-files-found: warn
           retention-days: 30
+
+  editorial-pdf-preview:
+    needs: collect-verify-commit
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout committed editor-only preview sources
+        uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Compile OpenStax 60-question editorial preview with XeLaTeX
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: college_review_preview.tex
+          working_directory: external_sources/catalog
+          latexmk_use_xelatex: true
+      - name: Publish draft PDF as a CI artifact, never as an approved bank
+        uses: actions/upload-artifact@v4
+        with:
+          name: college-physics-editorial-preview-pdf
+          if-no-files-found: error
+          retention-days: 30
+          path: external_sources/catalog/college_review_preview.pdf

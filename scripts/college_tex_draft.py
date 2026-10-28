@@ -125,10 +125,34 @@ def build(root=ROOT):
                   "% Original: "+item["source_url"],
                   r"\noindent\textbf{"+escape_tex(item["id"])+" — "+escape_tex(item["original_topic"])+r"}",
                   r"\par "+latex,r"\par\smallskip",
-                  r"\textit{Draft only; answer, license-chain and physics correctness unchecked.}",""]
+                  r"\textit{Draft only; answer, license-chain and physics correctness unchecked.}",
+                  r"\par{\footnotesize OpenStax College Physics (2014), CC BY 3.0. "
+                  +r"\href{"+item["source_url"]+r"}{Original chapter}}\par\normalsize",""]
     (folder/"college_review_tex_draft.tex").write_text("\n".join(lines)+"\n",encoding="utf-8")
+    # Keep unverified TeX entirely separate from approved bank and exam assembly.
+    wrapper = r"""\documentclass[UTF8,11pt]{ctexart}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,hyperref,fancyhdr}
+\hypersetup{hidelinks,breaklinks=true}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Editorial OER review}
+\fancyhead[R]{\small NOT EXAM READY}
+\fancyfoot[C]{\thepage}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.45em}
+\begin{document}
+\begin{center}
+{\LARGE College Physics: source-editing draft}\par
+{\small Human review required: rights, solutions, figures, mathematics}\par
+\end{center}
+\hrule\vspace{1em}
+\input{college_review_tex_draft.tex}
+\end{document}
+"""
+    (folder/"college_review_preview.tex").write_text(wrapper,encoding="utf-8")
     summary={"generated_utc":datetime.now(timezone.utc).isoformat(),
-             "question_count":stats["questions"],"with_mathml":stats["with_mathml"],
+             "question_count":stats["questions"],"preview_source":"external_sources/catalog/college_review_preview.tex","with_mathml":stats["with_mathml"],
              "with_conversion_warnings":stats["with_conversion_warnings"],
              "manual_conversion_check_examples":manual[:30],
              "exam_ready_added":0,

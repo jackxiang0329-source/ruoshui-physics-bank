@@ -25,3 +25,24 @@ class CollegeDraftTests(unittest.TestCase):
   self.assertIn(r"\$20",tex)
   self.assertIn(r"x\_0",tex)
   self.assertEqual(issues,[])
+
+ def test_generates_standalone_editorial_xelatex_wrapper(self):
+  import csv, tempfile
+  with tempfile.TemporaryDirectory() as d:
+   root=Path(d)
+   cat=root/"external_sources"/"catalog";cat.mkdir(parents=True)
+   raw=root/"external_sources"/"college_physics"/"raw";raw.mkdir(parents=True)
+   (raw/"CP-00001.md").write_text("# The Sample\n\nWhat is the period of <math><mn>3</mn></math> Hz electrical power?\n\n---\nAttribution",encoding="utf-8")
+   with (cat/"review_priority.csv").open("w",newline="",encoding="utf-8") as f:
+    writer=csv.DictWriter(f,fieldnames=["id","source","module","original_topic","source_url","raw_path","exam_ready"])
+    writer.writeheader()
+    writer.writerow({"id":"CP-00001","source":"OpenStax College Physics (historical mirror)","module":"振动与波动","original_topic":"Oscillations","source_url":"https://github.com/philschatz/physics-book/blob/main/contents/m42033.md","raw_path":"external_sources/college_physics/raw/CP-00001.md","exam_ready":"no"})
+   z=d.build(root)
+   self.assertEqual(z["question_count"],1)
+   wrapper=(cat/"college_review_preview.tex").read_text()
+   snippets=(cat/"college_review_tex_draft.tex").read_text()
+   self.assertIn(r"\documentclass[UTF8,11pt]{ctexart}",wrapper)
+   self.assertIn("NOT EXAM READY",wrapper)
+   self.assertIn(r"\input{college_review_tex_draft.tex}",wrapper)
+   self.assertIn(r"\href{https://github.com/philschatz/physics-book/blob/main/contents/m42033.md}{Original chapter}",snippets)
+   self.assertEqual(z["exam_ready_added"],0)
