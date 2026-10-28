@@ -80,9 +80,17 @@ def generate(root=ROOT):
     for item in rows:by_module[item["学科"]].append(item)
     for name,meta in cfg[2].items():
         save(out/"按学科"/(meta["folder"]+".csv"),by_module.get(name,[]))
+    by_topic=defaultdict(list)
+    for item in rows:
+        if item["知识点"]!="未细分（待核验）":
+            by_topic[(item["学科"],item["知识点"])].append(item)
+    for lesson in cfg[0]["refresher_lessons"]:
+        module=next(m for m in cfg[0]["modules"] if m["code"]==lesson["module"])
+        path=out/"按知识点"/module["folder"]/(lesson["topic"]+".csv")
+        save(path,by_topic.get((module["name"],lesson["label"]),[]))
     translated=sum(bool(x["中文译稿"]) for x in rows)
     fine_pending=sum(x["知识点"]=="未细分（待核验）" for x in rows)
-    report={"candidate_total":len(rows),"translated_drafts":translated,
+    report={"candidate_total":len(rows),"translated_drafts":translated,"mapped_topic_count":len(by_topic),
             "fine_classification_pending":fine_pending,
             "unclassified_total":len(by_module.get("待分类",[])),
             "by_module":dict(Counter(x["学科"] for x in rows)),
@@ -94,6 +102,11 @@ def generate(root=ROOT):
            "| 学科 | 数量 | 分类目录 |","| --- | ---: | --- |"]
     for m in cfg[0]["modules"]:
         lines.append(f'| {m["name"]} | {len(by_module[m["name"]])} | [CSV](按学科/{m["folder"]}.csv) |')
+    lines.extend(["","## 按知识点检索（固定来源章节）",""])
+    for lesson in cfg[0]["refresher_lessons"]:
+        module=next(m for m in cfg[0]["modules"] if m["code"]==lesson["module"])
+        target=f'按知识点/{module["folder"]}/{lesson["topic"]}.csv'
+        lines.append(f'- {module["name"]} / {lesson["label"]}：[题目索引]({target})')
     lines+=["","[全量题目索引](题目总索引.csv) · [翻译与目录规范](../../docs/大学物理目录与翻译规范.md) · [中英术语表](../../localization/zh_CN/术语表.md)",
             "","注：知识点来源于固定章节才细分；其他候选只沿用现有学科、细分类保留待核验。译稿不代表答案已验证。",""]
     (out/"中文分类导航.md").write_text("\n".join(lines),encoding="utf-8")
