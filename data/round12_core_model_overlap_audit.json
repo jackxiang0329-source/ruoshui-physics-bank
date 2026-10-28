@@ -17,8 +17,15 @@
       "existing_id": "O019",
       "shared_core": "平面全反射TE Fresnel相位和Goos-Hanchen驻相位移",
       "draft_new_aspects": "TM偏振位移与偏振比",
-      "action": "替换核心模型或分拆真正独立的高阶模型",
-      "resolution_status": "unresolved"
+      "action": "完全替换原全反射驻相位移模型为双端口光学微腔相干完美吸收，验证散射本征通道、零点、线宽、能量与相位调控",
+      "resolution_status": "resolved",
+      "replacement_title": "对称双端口光学微腔的相干完美吸收、散射零点与临界耦合",
+      "evidence_paths": [
+        "bank/O057/question.tex",
+        "bank/O057/solution.tex",
+        "scripts/check_round12_draft.py",
+        "data/round12_draft_validation_report.json"
+      ]
     },
     {
       "draft_id": "Q057",
@@ -36,6 +43,6 @@
       ]
     }
   ],
-  "disposition": "Q057 oscillator-quench overlap resolved by replacing the core model with an amplitude-damping quantum channel; M060 and O057 remain blocked. All draft work remains unmerged and awaiting independent review.",
+  "disposition": "O057 and Q057 resolved by replacing the physical core models; M060 remains unresolved and blocks admission. Automated QA is not independent expert review.",
   "independent_expert_review": "待独立复核"
 }

@@ -1,50 +1,88 @@
-(1) 令 \(k_x=n_1k_0\sin\theta\)、\(k_{z1}=n_1k_0c_\theta\)。介质2的法向波数为
+(1) 设 \(\gamma=\gamma_i+\gamma_e>0\)。对 \(e^{-i\omega t}\) 稳态，耦合模方程给出
 \[
- k_{z2}=i\kappa,\qquad \kappa=n_1k_0a>0,
+ a=\frac{\sqrt{2\gamma_e}}{\gamma-i\Delta}\,s_+^{(s)}.
 \]
-故透射场沿 \(z>0\) 按 \(e^{-\kappa z}\) 衰减，不携带远离界面的平均法向能流。Fresnel边界条件给出（\(p\) 偏振采用常用电场振幅相位约定）
+因此对称通道的散射本征值为
 \[
- r_s=\frac{c_\theta-ia}{c_\theta+ia},\qquad
- r_p=\frac{q^2c_\theta-ia}{q^2c_\theta+ia}.
+ \lambda_s=-1+\frac{2\gamma_e}{\gamma-i\Delta}
+ =\frac{\gamma_e-\gamma_i+i\Delta}{\gamma-i\Delta},
+ \qquad \lambda_a=-1.
 \]
-分子与分母互为复共轭，因此 \(|r_s|^2=|r_p|^2=1\)。可连续选择反射相位
-\(\phi_s=-2\arctan(a/c_\theta)\)、
-\(\phi_p=-2\arctan[a/(q^2c_\theta)]\)，不影响相位导数的常数相位约定均可。
+回到物理端口基底，记
+\(P_s=\frac12\begin{pmatrix}1&1\\1&1\end{pmatrix}\)，则
+\[
+ \boxed{S(\omega)=-I+\frac{2\gamma_e}{\gamma-i\Delta}P_s
+ =\begin{pmatrix}
+ -1+\frac{\gamma_e}{\gamma-i\Delta}&\frac{\gamma_e}{\gamma-i\Delta}\\
+ \frac{\gamma_e}{\gamma-i\Delta}&-1+\frac{\gamma_e}{\gamma-i\Delta}
+ \end{pmatrix}}.
+\]
+对称向量 \((1,1)^T/\sqrt2\) 的本征值为 \(\lambda_s\)，
+反对称向量 \((1,-1)^T/\sqrt2\) 的本征值为 \(-1\)。
+无内部吸收时 \(\gamma_i=0\)，有 \(|\lambda_s|=|\lambda_a|=1\)，
+故 \(S^\dagger S=I\)。解析延拓的极点满足
+\(\gamma-i(\omega-\omega_0)=0\)，即
+\(\omega=\omega_0-i\gamma\)，位于下半平面，符合被动腔的因果稳定性。
 
-(2) 反射束在界面处可写为角谱积分
+(2) 完美吸收意味着存在非零输入向量 \(\mathbf s_+\) 使
+\(S\mathbf s_+=0\)。因 \(\lambda_a=-1\) 永不为零，必须
+\(s_+^{(a)}=0\)，即两个入射波同相且复振幅相等。
+再由 \(\lambda_s=0\) 得
 \[
- E_r(x,0)=\int A(k_x)e^{i[k_xx+\phi(k_x)]}\,dk_x.
+ \boxed{\Delta=0,\qquad\gamma_i=\gamma_e,\qquad
+ s_{1+}=s_{2+}\ne0}.
 \]
-对中心波数 \(k_{x0}\) 附近线性展开 \(\phi(k_x)\)，包络峰值沿 \(x\) 平移
-\(D=-\phi'(k_{x0})\)，而
-\(\partial k_x/\partial\theta=n_1k_0c_\theta\)。
-因为 \(a'= \sin\theta\,c_\theta/a\)，且
-\(a^2+c_\theta^2=1-q^2\)，直接求导得
-\[
- \frac{d\phi_s}{d\theta}=-\frac{2\sin\theta}{a},\qquad
- D_s=\frac{2\sin\theta}{n_1k_0c_\theta a}.
-\]
-这是沿界面而非沿反射光轴的位移，具有长度量纲。
+这就是相干完美吸收条件。任意非零反对称分量都会被完整反射，
+所以仅满足腔内损耗匹配而不控制两束光的相位仍不能保证全吸收。
+反对称通道完全不耦合腔模，是由两端口镜像对称性决定的暗通道。
 
-(3) 对 \(\phi_p\) 求导可得
+(3) 对称入射的吸收率为
 \[
- \frac{d\phi_p}{d\theta}
- =-\frac{2q^2(1-q^2)\sin\theta}
- {a(q^4c_\theta^2+a^2)}.
+ A_s(\Delta)=1-|\lambda_s|^2
+ =1-\frac{(\gamma_e-\gamma_i)^2+\Delta^2}
+ {(\gamma_e+\gamma_i)^2+\Delta^2}
+ =\boxed{\frac{4\gamma_i\gamma_e}{\gamma^2+\Delta^2}}.
 \]
-故
+峰值 \(A_s(0)=4\gamma_i\gamma_e/(\gamma_i+\gamma_e)^2\le1\)，
+等号恰在临界耦合 \(\gamma_i=\gamma_e\) 时成立。
+令 \(A_s(\Delta)=A_s(0)/2\) 得 \(|\Delta|=\gamma\)，
+故吸收线的角频率半高全宽
+\(\boxed{\mathrm{FWHM}=2\gamma}\)，加载品质因子
+\(\boxed{Q_L=\omega_0/(2\gamma)}\)。
+独立地，稳态储能为
 \[
- D_p=\frac{2q^2(1-q^2)\sin\theta}
- {n_1k_0c_\theta a(q^4c_\theta^2+a^2)},\qquad
- \frac{D_p}{D_s}
- =\frac{q^2}{(1+q^2)\sin^2\theta-q^2}.
+ U=|a|^2=\frac{2\gamma_e}{\gamma^2+\Delta^2}|s_+^{(s)}|^2,
 \]
-利用 \(0<q<1\) 解 \(D_p=D_s\)，得到唯一的
+内部耗散功率为
+\(P_{\rm abs}=2\gamma_iU
+ =4\gamma_i\gamma_e|s_+^{(s)}|^2/(\gamma^2+\Delta^2)\)，
+故 \(P_{\rm abs}/|s_+^{(s)}|^2=A_s\)。
+对任意瞬态还可直接从耦合模方程推得
 \[
- \sin^2\theta_*=\frac{2q^2}{1+q^2},
- \qquad \theta_c<\theta_*<\frac\pi2.
+ \frac{d|a|^2}{dt}
+ =|s_+^{(s)}|^2-|s_-^{(s)}|^2-2\gamma_i|a|^2,
 \]
-在 \(\theta_c<\theta<\theta_*\) 时 \(D_p>D_s\)，其余全反射角区间相反。
+这验证了储能变化、净输入光功率与热耗散之间的精确守恒。
+\(\gamma_i,\gamma_e,\Delta\) 具有角频率量纲，\(A_s\) 无量纲。
 
-(4) 令 \(\delta=\theta-\theta_c\downarrow0\)。由于
-\(a^2=\sin^2\theta-q^2\sim2q\sqrt{1-q^2}\,\delta\)，两种 \(D\) 均按 \(\delta^{-1/2}\) 发散，且 \(D_p/D_s\to q^{-2}\)。当 \(\theta\uparrow\pi/2\)，\(a\to\sqrt{1-q^2}\)，两种 \(D\) 按 \(1/\cos\theta\) 发散，而 \(D_p/D_s\to q^2\)。这些发散是无限宽、严格窄角谱驻相近似的非一致极限，不代表有限光束真的产生无限侧移。若角谱跨越临界角、相位在谱宽内明显非线性，或入射趋于掠射以致有限束斑和界面几何不可忽略，应直接积分完整角谱并重新定义实际强度重心。
+(4) 设 \(s_{1+}=s_0,\ s_{2+}=s_0e^{i\phi}\)，则
+\[
+ \frac{|s_+^{(s)}|^2}{|s_{1+}|^2+|s_{2+}|^2}
+ =\frac{|1+e^{i\phi}|^2}{4}=\cos^2(\phi/2).
+\]
+反对称通道不吸收，故
+\[
+ \boxed{A_{\rm tot}(\Delta,\phi)
+ =\frac{4\gamma_i\gamma_e}{\gamma^2+\Delta^2}\cos^2(\phi/2)}.
+\]
+同相 \(\phi=2\pi n\) 吸收最大；反相
+\(\phi=(2n+1)\pi\) 时完全不耦合腔模，吸收为零。
+若只有端口1入射，输入恰有一半功率处于对称通道，
+因此 \(A_{\rm one}=A_s/2\le1/2\)，
+\[
+ \boxed{\max_{\omega,\gamma_i/\gamma_e}A_{\rm one}=\tfrac12}.
+\]
+双端口同相入射则全部功率进入可吸收的对称通道，在
+\(\Delta=0,\gamma_i=\gamma_e\) 时达到100%吸收。
+这里的50%单端上限依赖本题假定的对称双端口、单共振模和
+无附加吸收背景；不应推广为所有光学吸收器的普遍上限。

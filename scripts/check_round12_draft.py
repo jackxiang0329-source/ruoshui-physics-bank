@@ -69,21 +69,31 @@ denom=mp.mpf('0.5')-mp.sin(2*z1)/(4*z1)+qw*mp.sin(z1)**2
 record('W056',3,'energy','Rayleigh quotient including boundary kinetic and spring energy equals eigenfrequency square',abs(numer/denom-z1*z1)<mp.mpf('1e-25'))
 record('W056',4,'limit','free tip frequencies and large tip inertia asymptotic satisfy the transcendental equation',
        eq(F.subs({pp:0,qq:0,zz:s.pi/2})) and eq(s.limit(F/zz,zz,0),1+pp))
-qopt,ang,kopt=s.symbols('qopt ang kopt',positive=True)
-aa=s.sqrt(s.sin(ang)**2-qopt**2);cc=s.cos(ang)
-rs=(cc-s.I*aa)/(cc+s.I*aa);rp=(qopt**2*cc-s.I*aa)/(qopt**2*cc+s.I*aa)
-qn=mp.mpf('0.72');an0=mp.mpf('0.95');cn=mp.cos(an0);anr=mp.sqrt(mp.sin(an0)**2-qn**2)
-rsnum=(cn-1j*anr)/(cn+1j*anr);rpnum=(qn**2*cn-1j*anr)/(qn**2*cn+1j*anr)
-record('O057',1,'numerical_conservation','both total internal reflection coefficients have unit modulus',
-       anr>0 and abs(abs(rsnum)**2-1)<mp.mpf('1e-26') and abs(abs(rpnum)**2-1)<mp.mpf('1e-26'))
-phis=-2*s.atan(aa/cc);phip=-2*s.atan(aa/(qopt**2*cc))
-Ds=2*s.sin(ang)/(kopt*cc*aa)
-Dp=Ds*qopt**2/((1+qopt**2)*s.sin(ang)**2-qopt**2)
-record('O057',2,'symbolic','Artmann s-polarization shift matches derivative of Fresnel phase',eq(s.trigsimp(-s.diff(phis,ang)/(kopt*cc)-Ds)))
-record('O057',3,'symbolic','Artmann p-polarization shift matches derivative and polarization ratio',eq(s.trigsimp(-s.diff(phip,ang)/(kopt*cc)-Dp)))
-ss=s.symbols('ss',positive=True)
-ratio=qopt**2/((1+qopt**2)*ss-qopt**2)
-record('O057',4,'limit','polarization ratio approaches inverse index square at critical angle and index square at grazing',eq(ratio.subs(ss,qopt**2),1/qopt**2) and eq(ratio.subs(ss,1),qopt**2) and eq(ratio.subs(ss,2*qopt**2/(1+qopt**2)),1))
+# O057 replacement: symmetric two-port coherent perfect absorption, not O019 Fresnel TIR.
+gi,ge,det=s.symbols('gi ge det',positive=True,real=True)
+gg=gi+ge
+proj=s.ones(2)/2
+Sm=-s.eye(2)+2*ge/(gg-s.I*det)*proj
+eigS=-1+2*ge/(gg-s.I*det)
+record('O057',1,'symbolic','two port optical scattering matrix has symmetric resonant and antisymmetric dark eigenchannels',
+       all(eq(v) for v in Sm*s.Matrix([1,1])-eigS*s.Matrix([1,1]))
+       and all(eq(v) for v in Sm*s.Matrix([1,-1])+s.Matrix([1,-1])))
+record('O057',2,'limit','coherent perfect absorption occurs only for zero detuning and equal intrinsic and external loss',
+       eq(eigS.subs({gi:ge,det:0}))
+       and eq(s.simplify((gg-s.I*det)*eigS),ge-gi+s.I*det))
+absor=4*gi*ge/(gg**2+det**2)
+stored=2*ge/(gg**2+det**2)
+record('O057',3,'conservation','coupled mode stored energy and internal dissipation match scattering absorptance and FWHM',
+       eq(1-eigS*s.conjugate(eigS),absor)
+       and eq(2*gi*stored,absor)
+       and eq(absor.subs(det,gg),absor.subs(det,0)/2))
+phi=s.symbols('phi',real=True)
+record('O057',4,'independent_derivation','two beam phase controlled absorption and single input fifty percent upper bound',
+       eq(s.expand_trig(s.cos(phi/2)**2),(1+s.cos(phi))/2)
+       and eq(absor.subs({gi:ge,det:0}),1)
+       and eq((absor/2).subs({gi:ge,det:0}),s.Rational(1,2)))
+
+
 # Q057 replacement: amplitude damping is a different core model from Q014 oscillator quench.
 et=s.symbols('et',positive=True)
 K0=s.diag(1,s.sqrt(et))
@@ -282,17 +292,16 @@ supplemental=[dict(id='M059',method='numerical',name='triaxial separatrix two in
 bigq=mp.mpf('100000')
 large_root=mp.findroot(lambda z:z*mp.cos(z)+(pw-bigq*z*z)*mp.sin(z),mp.sqrt((1+pw)/bigq))
 assert abs(bigq*large_root**2-(1+pw))<mp.mpf('0.0003')
-qnum=mp.mpf('0.72');thnum=mp.mpf('0.95');knum=mp.mpf('2.2')
-an=mp.sqrt(mp.sin(thnum)**2-qnum**2)
-sphase=lambda th:-2*mp.atan(mp.sqrt(mp.sin(th)**2-qnum**2)/mp.cos(th))
-Dsn=2*mp.sin(thnum)/(knum*mp.cos(thnum)*an)
-assert abs(-mp.diff(sphase,thnum)/(knum*mp.cos(thnum))-Dsn)<mp.mpf('1e-26')
+giN=mp.mpf('0.81');geN=mp.mpf('1.13');detN=mp.mpf('0.57')
+ssN=-1+2*geN/(giN+geN-1j*detN)
+AN=4*giN*geN/((giN+geN)**2+detN**2)
+assert abs((1-abs(ssN)**2)-AN)<mp.mpf('1e-27')
 etaN=mp.mpf('0.37')
 fN=lambda p:(1-p)*(1-etaN*p)+etaN*p*p+2*mp.sqrt(etaN)*p*(1-p)
 assert abs(mp.quad(fN,[0,1])-(3+2*mp.sqrt(etaN)+etaN)/6)<mp.mpf('1e-27')
 supplemental.extend([
  dict(id='W056',method='asymptotic_numerical',name='large end-inertia fundamental root agrees with effective stiffness asymptotic',passed=True),
- dict(id='O057',method='independent_numerical_derivative',name='finite precision Fresnel phase differentiation matches s shift',passed=True),
+ dict(id='O057',method='high_precision_scattering',name='independent complex scattering eigenvalue energy balance at finite detuning',passed=True),
  dict(id='Q057',method='independent_numerical_quadrature',name='high precision independent Haar fidelity quadrature for amplitude damping',passed=True)])
 
 

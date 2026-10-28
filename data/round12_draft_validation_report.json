@@ -118,29 +118,29 @@
     {
       "id": "O057",
       "part": 1,
-      "method": "numerical_conservation",
-      "name": "both total internal reflection coefficients have unit modulus",
+      "method": "symbolic",
+      "name": "two port optical scattering matrix has symmetric resonant and antisymmetric dark eigenchannels",
       "passed": true
     },
     {
       "id": "O057",
       "part": 2,
-      "method": "symbolic",
-      "name": "Artmann s-polarization shift matches derivative of Fresnel phase",
+      "method": "limit",
+      "name": "coherent perfect absorption occurs only for zero detuning and equal intrinsic and external loss",
       "passed": true
     },
     {
       "id": "O057",
       "part": 3,
-      "method": "symbolic",
-      "name": "Artmann p-polarization shift matches derivative and polarization ratio",
+      "method": "conservation",
+      "name": "coupled mode stored energy and internal dissipation match scattering absorptance and FWHM",
       "passed": true
     },
     {
       "id": "O057",
       "part": 4,
-      "method": "limit",
-      "name": "polarization ratio approaches inverse index square at critical angle and index square at grazing",
+      "method": "independent_derivation",
+      "name": "two beam phase controlled absorption and single input fifty percent upper bound",
       "passed": true
     },
     {
@@ -396,8 +396,8 @@
     },
     {
       "id": "O057",
-      "method": "independent_numerical_derivative",
-      "name": "finite precision Fresnel phase differentiation matches s shift",
+      "method": "high_precision_scattering",
+      "name": "independent complex scattering eigenvalue energy balance at finite detuning",
       "passed": true
     },
     {
