@@ -28,8 +28,8 @@ class CollegeDraftTests(unittest.TestCase):
 
  def test_generates_standalone_editorial_xelatex_wrapper(self):
   import csv, tempfile
-  with tempfile.TemporaryDirectory() as d:
-   root=Path(d)
+  with tempfile.TemporaryDirectory() as temp_dir:
+   root=Path(temp_dir)
    cat=root/"external_sources"/"catalog";cat.mkdir(parents=True)
    raw=root/"external_sources"/"college_physics"/"raw";raw.mkdir(parents=True)
    (raw/"CP-00001.md").write_text("# The Sample\n\nWhat is the period of <math><mn>3</mn></math> Hz electrical power?\n\n---\nAttribution",encoding="utf-8")
