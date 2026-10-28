@@ -14,3 +14,5 @@
 该脚本仅在 `external_sources/` 内生成紧凑的两份 CSV 和一份 JSON，不向 `bank/` 添加任何第三方题目，也不会影响已审定试卷的 PDF 构建。
 
 执行：`python scripts/audit_college_corpus.py`。校验运行：`python -m unittest discover -s tests -p 'test_audit_college_corpus.py' -v`。
+
+2026-10-28 全量扫描另检出 7 道带 MathML mover 上划线的粒子物理题、3 道 msup/msub 结构缺失的原题。对能核实含义的水平上划线和向量箭头新增 TeX 转换；对缺失上下标的源文件继续显示 `[CHECK MATH]` 且强制人工复核，不补猜字符。

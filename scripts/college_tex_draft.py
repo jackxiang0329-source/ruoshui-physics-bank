@@ -18,7 +18,7 @@ from review_preflight import question_part
 ROOT=Path(__file__).resolve().parent.parent
 FIND_MATH=re.compile(r"<math\b[^>]*>.*?</math\s*>",re.I|re.S)
 MARKUP=re.compile(r"</?[\w:-]+(?:\s[^<>]*?)?/?>",re.S)
-GREEK={"π":r"\pi","μ":r"\mu","α":r"\alpha","β":r"\beta","γ":r"\gamma",
+GREEK={"π":r"\pi","μ":r"\mu","ν":r"\nu","τ":r"\tau","ρ":r"\rho","φ":r"\phi","σ":r"\sigma","α":r"\alpha","β":r"\beta","γ":r"\gamma",
        "Δ":r"\Delta","θ":r"\theta","ω":r"\omega","λ":r"\lambda",
        "Σ":r"\Sigma","Ω":r"\Omega","∞":r"\infty"}
 OPERATORS={"×":r"\times","·":r"\cdot","−":"-","≤":r"\le","≥":r"\ge",
@@ -73,6 +73,14 @@ def mathml_element(node,issues):
     if name=="mfenced":
         op=node.get("open","(");cl=node.get("close",")")
         return op+"".join(mathml_element(x,issues) for x in children)+cl
+    if name=="mover" and len(children)==2:
+        accent="".join(children[1].itertext()).strip()
+        base=mathml_element(children[0],issues)
+        if accent in ("-","−","¯","‾"):
+            return r"\bar{"+base+"}"
+        if accent in ("→","⃗"):
+            return r"\vec{"+base+"}"
+    # Do not infer missing MathML superscripts, subscripts or unknown accents.
     issues.add("unsupported_mathml:"+name)
     return r"\text{[CHECK MATH]}"
 def mathml_to_tex(raw):

@@ -59,3 +59,18 @@ class CollegeDraftTests(unittest.TestCase):
   self.assertEqual(flags,[])
   self.assertIn(r"^{\circ}C",tex)
   self.assertNotIn(r"\circC",tex)
+
+ def test_neutrino_antiparticle_overbar_without_guessing_missing_scripts(self):
+  tex,issues=d.mathml_to_tex('<math><mover accent="true"><mi>ν</mi><mo>-</mo></mover></math>')
+  self.assertEqual(issues,[])
+  self.assertIn(r"\bar{\nu{}}",tex)
+ def test_vector_arrow_is_distinct_from_unknown_accents(self):
+  a,flags=d.mathml_to_tex('<math><mover><mi>v</mi><mo>→</mo></mover></math>')
+  self.assertEqual(flags,[])
+  self.assertEqual(a,r"\vec{v}")
+  b,flags=d.mathml_to_tex('<math><mover><mi>x</mi><mo>?</mo></mover></math>')
+  self.assertIn("unsupported_mathml:mover",flags)
+  self.assertIn("[CHECK MATH]",b)
+ def test_incomplete_superscript_remains_quarantined(self):
+  _,flags=d.mathml_to_tex('<math><msup><mi>H</mi></msup></math>')
+  self.assertIn("unsupported_mathml:msup",flags)
