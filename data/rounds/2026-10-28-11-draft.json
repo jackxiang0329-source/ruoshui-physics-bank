@@ -672,6 +672,121 @@
       "complexity_tier": "L5-B",
       "question": "一根长 \\(L>0\\) 的均匀细梁沿水平 \\(x\\) 轴，两端理想铰支，弯曲刚度 \\(EI>0\\)，在轴向承受恒定压缩死载 \\(P>0\\)。小横向挠度为 \\(w(x)\\)，端点约束 \\(w(0)=w(L)=0\\)，两端弯矩为零 \\(w''(0)=w''(L)=0\\)。忽略剪切变形、轴向伸缩二次修正及屈曲后的大变形，仅分析线性屈曲门槛。\n(1) 由二阶势能给出线性弯曲—压缩平衡方程，明确各端边界条件。\n(2) 通过正弦本征模求全套临界载荷并指出最先出现的屈曲形态。\n(3) 利用 Rayleigh 商与积分不等式证明第一临界载荷是全局最低失稳阈值。\n(4) 写出首模态振幅的二阶能量，讨论超过临界后线性理论为什么不能决定稳定有限幅值。\n",
       "solution": "(1) 梁弯曲应变能 \\(U_b=(EI/2)\\int_0^L(w'')^2dx\\)，轴向恒压缩死载因几何缩短而做功，对应势能贡献 \\(U_P=-(P/2)\\int_0^L(w')^2dx\\)。总二阶势能 \\(\\Pi_2=U_b+U_P\\)。变分并两次分部积分得到内部 Euler--Lagrange 方程 \\(EIw''''+Pw''=0\\)。铰支位移固定 \\(w(0)=w(L)=0\\)，自然弯矩条件 \\(EIw''(0)=EIw''(L)=0\\)，排除了固支边界的错误基频。\n\n(2) 取满足铰支条件的 \\(w_n=A_n\\sin(n\\pi x/L)\\)（整数 \\(n\\ge1\\)）。代入平衡方程，得到 \\([EI(n\\pi/L)^4-P(n\\pi/L)^2]A_n=0\\)，非零振幅要求 \\(P_n=EI(n\\pi/L)^2\\)。这些特征载荷按 \\(n^2\\) 单调增加，最先出现的第一失稳为 \\(P_{\\rm cr}=\\pi^2EI/L^2\\)，对应正弦单半波形状。高阶模态虽也是形式本征解，但不能在达到第一临界之前由零态自发失稳。\n\n(3) 稳定直梁需要二阶势能对所有非零允许扰动严格为正。由 Fourier 正弦级数或 Poincaré 不等式，对于满足端位移条件的 \\(w\\)，有 \\(\\int_0^L(w'')^2dx\\ge(\\pi/L)^2\\int_0^L(w')^2dx\\)。因此 \\(\\Pi_2\\ge[EI(\\pi/L)^2-P]\\int_0^L(w')^2dx/2\\)。若 \\(P<P_{\\rm cr}\\) 所有非零扰动均使势能增加；若 \\(P>P_{\\rm cr}\\)，选择第一正弦模可使 \\(\\Pi_2<0\\)。于是 Rayleigh 商 \\(EI\\int(w'')^2/\\int(w')^2\\) 的极小值恰为 \\(P_{\\rm cr}\\)。\n\n(4) 令 \\(w=A\\sin(\\pi x/L)\\)，直接积分给 \\(\\Pi_2(A)=A^2L[EI\\pi^4/L^4-P\\pi^2/L^2]/4=\\pi^2A^2[P_{\\rm cr}-P]/(4L)\\)。当 \\(P=P_{\\rm cr}\\)，二阶项恰为零并不能断言任意振幅皆为平衡；当 \\(P>P_{\\rm cr}\\)，二阶理论仅说明直梁失稳，不能预测屈曲后的幅值或后屈曲分支。稳定有限挠度依赖几何非线性、轴向伸缩与载荷控制方式，高阶能量必须重新建立。\n"
+    },
+    {
+      "id": "E054",
+      "topic": "电磁学",
+      "title": "径向非均匀轴向磁化圆柱的束缚电流与精确内部磁场",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 90,
+      "tags": [
+        "磁化电流",
+        "安培环路",
+        "本构边界",
+        "磁能"
+      ],
+      "answer": "\\mathbf B_{\\rm in}=\\mu_0 M_0(1-\\alpha r^2/R^2)\\hat z,\\quad \\mathbf B_{\\rm out}=0",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-B",
+      "question": "无限长半径 \\(R>0\\) 的绝缘磁性圆柱，其给定静态轴向磁化为 \\(\\mathbf M(r)=M_0(1-\\alpha r^2/R^2)\\hat{\\mathbf z}\\)，\\(M_0>0,0\\le\\alpha\\le1\\)。柱内、外无自由电流，圆柱之外是真空，并假设材料的磁化分布固定不随磁场反馈改变。讨论磁静态场及端部效应可忽略的无限长极限。\n(1) 计算体束缚电流密度及圆柱外表面的面束缚电流。\n(2) 利用轴向对称性和边界条件求内外磁感应强度 \\(\\mathbf B(r)\\) 与磁场强度 \\(\\mathbf H(r)\\)。\n(3) 计算束缚体电流和面电流的总有向周向电流，检验积分抵消关系。\n(4) 求以圆柱半径 \\(R\\) 为横截面的内部磁感应能量密度积分，并讨论均匀磁化 \\(\\alpha=0\\) 极限。\n",
+      "solution": "(1) 给定 \\(\\mathbf M=M_z(r)\\hat z\\)，体束缚电流为 \\(\\mathbf J_b=\\nabla\\times\\mathbf M=-dM_z/dr\\,\\hat\\boldsymbol\\phi=2M_0\\alpha r/R^2\\,\\hat\\boldsymbol\\phi\\)。外侧表面束缚电流为 \\(\\mathbf K_b=\\mathbf M\\times\\hat{\\mathbf r}=M_0(1-\\alpha)\\hat\\boldsymbol\\phi\\)，注意 \\(\\hat z\\times\\hat r=\\hat\\phi\\)。这些电流在周向流动而非沿柱轴流动；其符号由空间梯度和交叉乘积决定。\n\n(2) 由无自由电流的 Maxwell 方程 \\(\\nabla\\times\\mathbf H=0\\)、\\(\\nabla\\cdot\\mathbf B=0\\)，利用轴向平移和旋转对称性，可取 \\(\\mathbf H=0\\)，满足无穷远磁场衰减条件、无磁标势外源及跨界面切向 \\(H_z\\) 连续条件。于是柱内 \\(\\mathbf B(r)=\\mu_0\\mathbf M(r)=\\mu_0M_0(1-\\alpha r^2/R^2)\\hat z\\)，柱外 \\(\\mathbf B=0\\)。边界内外切向 \\(B_z\\) 的跳跃由面束缚电流给出，不能误以为必须连续。\n\n(3) 将各个半径上的体周向电流按半径积分，相当于穿过定方位的径向半平面，得到每单位轴长上的体周向片电流 \\(K_{\\rm vol}=\\int_0^R J_{b,\\phi}(r)\\,dr=M_0\\alpha\\)。表面贡献 \\(K_{\\rm surf}=M_0(1-\\alpha)\\)，两者相加为 \\(M_0\\)。若从总磁化最大值的圆心处向外积分，所得结果对应维持 \\(B_z(0)=\\mu_0M_0\\) 的总同向环流；在这里体与表面电流应相加而非相互抵消。反之若 \\(\\alpha=0\\)，仅表面束缚电流流动。\n\n(4) 在固定磁化分布且不追究建立磁化的物质内部能量时，可计算真空形式的磁感应场量 \\(\\mathcal U_B=\\int B^2/(2\\mu_0)\\,dA\\)（每单位轴长）。柱外为零，柱内积分得 \\(\\mathcal U_B=\\pi\\mu_0M_0^2R^2\\int_0^1u(1-\\alpha u^2)^2\\,du=\\pi\\mu_0M_0^2R^2[1/2-\\alpha/2+\\alpha^2/6]\\)。此量是场的 \\(B^2/(2\\mu_0)\\) 积分，不应不加说明地称为具有固定磁化永久磁体的全部热力学自由能。令 \\(\\alpha\\to0\\)，退化为 \\(B=\\mu_0M_0\\) 的均匀内部场与 \\(\\mathcal U_B=\\pi R^2\\mu_0M_0^2/2\\)。\n"
+    },
+    {
+      "id": "E055",
+      "topic": "电磁学",
+      "title": "互感耦合的两支无耗LC回路：正常频率、模态能量与共振劈裂",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 90,
+      "tags": [
+        "互感矩阵",
+        "耦合LC谐振",
+        "正常模态",
+        "能量正定"
+      ],
+      "answer": "\\omega_\\pm=\\frac{1}{\\sqrt{C(L\\pm M)}},\\qquad\\Delta\\omega\\simeq\\omega_0 M/L",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-B",
+      "question": "两个相同的理想 LC 闭合回路，每支自感 \\(L>0\\)、电容 \\(C>0\\)，相互磁耦合的互感为 \\(M\\)，规定回路电流方向使磁能互感交叉项为 \\(+Mi_1i_2\\)。要求 \\(|M|<L\\)，两回路没有电阻或外加电动势。以电容电荷 \\(q_1,q_2\\) 为广义坐标，\\(i_j=\\dot q_j\\)。\n(1) 写出磁能、电能及耦合电荷运动方程，说明互感矩阵正定的限制。\n(2) 引入对称与反对称模态，求其频率并指出模态电流的相位。\n(3) 求初值 \\(q_1(0)=Q_0,q_2(0)=0,\\dot q_1(0)=\\dot q_2(0)=0\\) 对应的电荷时变公式与能量交换。\n(4) 在 \\(|M|\\ll L\\) 下估计拍频和耦合导致的频率劈裂，检查 \\(M\\to0\\) 极限。\n",
+      "solution": "(1) 两支互感线圈的磁能为 \\(U_L=\\frac12L(i_1^2+i_2^2)+Mi_1i_2\\)，电容能 \\(U_C=(q_1^2+q_2^2)/(2C)\\)。由 Lagrangian \\(\\mathcal L=U_L-U_C\\) 得 \\(L\\ddot q_1+M\\ddot q_2+q_1/C=0\\)，\\(M\\ddot q_1+L\\ddot q_2+q_2/C=0\\)。磁能矩阵特征值 \\(L+M,L-M\\) 均为正需 \\(|M|<L\\)，若忽略此条件会出现负磁能和虚频率而非真实被动电感耦合。\n\n(2) 取模态 \\(q_\\pm=(q_1\\pm q_2)/\\sqrt2\\)，两运动方程相加或相减得到 \\((L+M)\\ddot q_++q_+/C=0\\)、\\((L-M)\\ddot q_-+q_-/C=0\\)。故 \\(\\omega_+=[C(L+M)]^{-1/2}\\)，\\(\\omega_-=[C(L-M)]^{-1/2}\\)。对 \\(M>0\\) 同向电流互感磁能更大，等效惯量为 \\(L+M\\)，频率较低；反向电流等效电感减小，频率较高。\n\n(3) 给定初态投影为 \\(q_\\pm(0)=Q_0/\\sqrt2\\)，两模初速均零，所以 \\(q_\\pm(t)=Q_0\\cos(\\omega_\\pm t)/\\sqrt2\\)。恢复原电荷 \\(q_1=(Q_0/2)[\\cos(\\omega_+t)+\\cos(\\omega_-t)]\\)，\\(q_2=(Q_0/2)[\\cos(\\omega_+t)-\\cos(\\omega_-t)]\\)。当频率相差很小时，第一回路振幅出现慢包络而第二回路出现互补包络；总能量 \\(E=Q_0^2/(2C)\\) 在两个模态和两电容—电感之间守恒，不能以 \\(q_1^2+q_2^2\\) 单项代替总能量。\n\n(4) 令 \\(\\omega_0=1/\\sqrt{LC}\\) 且 \\(|M|/L\\ll1\\)。二项展开给 \\(\\omega_+\\simeq\\omega_0[1-M/(2L)]\\)，\\(\\omega_-\\simeq\\omega_0[1+M/(2L)]\\)，故频率劈裂 \\(\\Delta\\omega=\\omega_--\\omega_+\\simeq\\omega_0M/L\\) 对 \\(M>0\\)；带符号 \\(M<0\\) 时按绝对值计拍频。在 \\(M\\to0\\) 极限两模退化、\\(q_1=Q_0\\cos(\\omega_0t)\\)、\\(q_2=0\\)，说明两个回路真正解耦。\n"
+    },
+    {
+      "id": "E056",
+      "topic": "电磁学",
+      "title": "点电荷位于接地导体球外的镜像电荷、吸引力与感应总电荷",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 90,
+      "tags": [
+        "球形镜像法",
+        "导体边界电势",
+        "镜像力",
+        "感应电荷"
+      ],
+      "answer": "q'=-qR/d,\\quad a=R^2/d,\\quad F_z=-q^2Rd/[4\\pi\\varepsilon_0(d^2-R^2)^2]",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-B",
+      "question": "半径 \\(R>0\\) 的理想导体球接地、位于真空，其球心到外部正点电荷 \\(q>0\\) 的距离为 \\(d>R\\)。以球心为原点、点电荷位于 \\(+z\\) 轴，静电近似、忽略非理想材料。用镜像法计算导体外区域的电势、作用力和表面感应总电荷；球的电势固定为零。\n(1) 求能使整个球面电势为零的唯一轴向单点镜像配置。\n(2) 写出导体外真实区域电势，证明球面条件并给出远处电势渐近。\n(3) 由镜像场计算真实点电荷受到的作用力大小及方向。\n(4) 求导体感应总电荷，检查 \\(d\\to R^+\\) 与 \\(d\\to\\infty\\) 的力和电荷极限。\n",
+      "solution": "(1) 在球内 \\(+z\\) 轴设置镜像电荷 \\(q'\\) 于 \\(a=R^2/d<R\\)。对球面任意极角，点到真实电荷距离 \\(s=\\sqrt{R^2+d^2-2Rd\\cos\\theta}\\)，到镜像位置距离 \\(s'=\\sqrt{R^2+a^2-2Ra\\cos\\theta}=(R/d)s\\)。球面要求 \\(q/s+q'/s'=0\\)，因此 \\(q'=-qR/d\\)。导体外的 Dirichlet 边界问题解唯一，所以该构造给出完整外部静电场，而非仅在轴上的近似。\n\n(2) 导体外任意位置 \\(\\mathbf r\\) 的电势为 \\(\\varphi(\\mathbf r)=\\frac{1}{4\\pi\\varepsilon_0}[q/|\\mathbf r-d\\hat z|-(qR/d)/|\\mathbf r-(R^2/d)\\hat z|]\\)。在球面利用 \\(s'=(R/d)s\\) 两项逐点抵消，\\(\\varphi=0\\)。当观测距离 \\(r\\gg d\\) 时，主导远场电势为 \\([q+q']/ (4\\pi\\varepsilon_0r)=q(1-R/d)/(4\\pi\\varepsilon_0r)\\)，由真实点电荷与球表面总感应电荷构成整体有效单极矩。\n\n(3) 镜像法在导体球外给出与真实感应电荷相同的电场，因此点电荷受力等效于镜像电荷作用，沿球心方向为负。轴向距离为 \\(d-a=(d^2-R^2)/d\\)，故 \\(F_z=\\frac1{4\\pi\\varepsilon_0}qq'/(d-a)^2=-q^2Rd/[4\\pi\\varepsilon_0(d^2-R^2)^2]\\)。由于镜像电荷只是边界问题的数学构造，计算真实系统能量时不能把两电荷的普通两体势能简单照搬而不考虑感应源随 \\(d\\) 的变化；力可直接由镜像场获得。\n\n(4) 对导体球面取紧邻外侧的高斯面，外部电场通量与球内镜像源等价，故真实球的感应总电荷 \\(Q_{\\rm ind}=q'=-qR/d<0\\)，符合接地导体从地面汲取负电荷的物理图景。若 \\(d\\to\\infty\\)，\\(Q_{\\rm ind}\\to0\\)、\\(F_z\\sim-q^2R/(4\\pi\\varepsilon_0d^3)\\)；若 \\(d\\to R^+\\)，感应总电荷趋于 \\(-q\\)，吸引力在点电荷离表面间距趋零时发散，说明点电荷与理想连续导体表面近距离模型需受微观尺度修正。\n"
+    },
+    {
+      "id": "E057",
+      "topic": "电磁学",
+      "title": "带电粒子在交叉均匀电磁场与线性阻尼下的稳态漂移",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 90,
+      "tags": [
+        "洛伦兹力",
+        "碰撞阻尼",
+        "霍尔漂移",
+        "功率平衡"
+      ],
+      "answer": "v_x=\\frac{qE\\nu}{m(\\nu^2+\\omega_c^2)},\\quad v_y=-\\frac{qE\\omega_c}{m(\\nu^2+\\omega_c^2)}",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-B",
+      "question": "带电粒子电荷 \\(q\\ne0\\)、质量 \\(m>0\\)，在均匀静电场 \\(\\mathbf E=E\\hat x\\) 和磁场 \\(\\mathbf B=B\\hat z\\) 下运动，其中 \\(E,B>0\\)。粒子受各向同性线性粘滞阻力 \\(-m\\nu\\mathbf v\\)，\\(\\nu>0\\)，在平面内无外部约束；定义有符号回旋频率 \\(\\omega_c=qB/m\\)，长期考虑恒定稳态速度。\n(1) 写出二维速度的线性微分方程与含符号回旋频率的矩阵形式。\n(2) 求稳态横向漂移速度 \\(v_x,v_y\\)，并讨论 \\(\\nu\\to0\\) 的 \\(E\\times B\\) 漂移。\n(3) 求瞬态衰减的两个复特征值、速率及转动方向，说明电荷正负影响。\n(4) 验证稳态电场功率精确等于阻尼耗散功率，并讨论强阻尼极限。\n",
+      "solution": "(1) 洛伦兹力为 \\(m\\dot{\\mathbf v}=q(\\mathbf E+\\mathbf v\\times\\mathbf B)-m\\nu\\mathbf v\\)。因 \\(\\mathbf v\\times B\\hat z=(Bv_y,-Bv_x,0)\\)，二维方程为 \\(\\dot v_x=(qE/m)+\\omega_cv_y-\\nu v_x\\)，\\(\\dot v_y=-\\omega_cv_x-\\nu v_y\\)。齐次矩阵 \\(\\begin{pmatrix}-\\nu&\\omega_c\\\\-\\omega_c&-\\nu\\end{pmatrix}\\)，由电荷符号决定旋转方向，但稳定性的实部由 \\(-\\nu\\) 决定。\n\n(2) 稳态解满足 \\(\\nu v_x-\\omega_cv_y=qE/m\\)、\\(\\omega_cv_x+\\nu v_y=0\\)，故 \\(v_x=(qE/m)\\nu/(\\nu^2+\\omega_c^2)\\)，\\(v_y=-(qE/m)\\omega_c/(\\nu^2+\\omega_c^2)\\)。在 \\(\\nu\\to0^+\\) 且 \\(B\\ne0\\) 下，\\(v_x\\to0\\)，\\(v_y\\to-E/B\\)，即 \\(\\mathbf E\\times\\mathbf B/B^2=-E\\hat y/B\\)，与电荷正负无关。若先取 \\(B\\to0\\) 则变为沿电场的漂移，两个极限不能无条件交换。\n\n(3) 对稳态速度定义偏差 \\(\\mathbf u=\\mathbf v-\\mathbf v_\\infty\\)，齐次矩阵的复特征值为 \\(-\\nu\\pm i\\omega_c\\)。因此速度偏差的模以 \\(e^{-\\nu t}\\) 衰减，同时以角速度大小 \\(|\\omega_c|\\) 旋转；对 \\(q>0\\) 与 \\(q<0\\) 自由回旋的方向相反。稳态不因磁场做功而增加粒子动能，磁场只改变漂移方向；只要 \\(\\nu>0\\)，任意初速度都会指数接近唯一稳态。\n\n(4) 速度点乘牛顿方程得到 \\(d(mv^2/2)/dt=q\\mathbf E\\cdot\\mathbf v-m\\nu v^2\\)，因为 \\(\\mathbf v\\cdot(\\mathbf v\\times\\mathbf B)=0\\)。稳态时 \\(qEv_x=m\\nu(v_x^2+v_y^2)\\)。将显式解代入，左右都为 \\(q^2E^2\\nu/[m(\\nu^2+\\omega_c^2)]\\)，验证完全一致。强阻尼 \\(\\nu\\gg|\\omega_c|\\) 时 \\(v_x\\simeq qE/(m\\nu)\\)、\\(v_y/v_x\\simeq-\\omega_c/\\nu\\)，即主要沿电场运动的小霍尔偏转。\n"
+    },
+    {
+      "id": "E058",
+      "topic": "电磁学",
+      "title": "可变极板间距电容器的固定电荷与固定电压力学及能量预算",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 90,
+      "tags": [
+        "电容机械耦合",
+        "热力学势变换",
+        "电源做功",
+        "静电吸引力"
+      ],
+      "answer": "F_{d,Q}=-Q^2/(2\\varepsilon A),\\qquad F_{d,V}=-\\varepsilon AV^2/(2d^2)",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-B",
+      "question": "平行板电容器有效重叠面积为 \\(A\\)，板距为 \\(d>0\\)，忽略边缘效应，填充均匀理想线性介质介电常数 \\(\\varepsilon>0\\)，电容 \\(C(d)=\\varepsilon A/d\\)。两板可在法向缓慢移动，静电场始终准静态。比较断开电源保持正电荷量 \\(Q\\) 不变以及接上理想恒压电源保持电压 \\(V\\) 不变这两种控制方式。\n(1) 在固定 \\(Q\\) 下求电场能及板间吸引力，明确力方向与对间距的导数。\n(2) 在恒压 \\(V\\) 下同时求场能变化、电源做功及机械做功，解释为何不能只微分场能求力。\n(3) 从电源—电容器整体势能构造适于固定电压的有效自由能，独立推导极板受力。\n(4) 检验两种条件下瞬时电压力可写成同一电场强度形式，并分析缓慢拉开极板时能量流向。\n",
+      "solution": "(1) 固定电荷时存储场能 \\(U_Q=Q^2/(2C)=Q^2d/(2\\varepsilon A)\\)。对板距 \\(d\\) 的广义力定义为 \\(F_d=-\\partial U_Q/\\partial d=-Q^2/(2\\varepsilon A)<0\\)，负号表示极板受力趋向缩小间距，即静电吸引。力的大小也等于电磁应力 \\(\\varepsilon E^2A/2\\)，此时 \\(E=Q/(\\varepsilon A)\\) 与 \\(d\\) 无关。此结果对断电孤立电容器成立，若固定电压而仍保持 \\(Q\\) 常数将违反控制条件。\n\n(2) 恒压时 \\(Q=C(d)V=\\varepsilon AV/d\\) 随 \\(d\\) 变动，场能 \\(U_f=\\frac12CV^2=\\varepsilon AV^2/(2d)\\)。令板距改变 \\(dd\\)，场能微分 \\(dU_f=\\frac12V^2dC\\)，理想电源向电容器输送电功 \\(dW_{\\rm src}=VdQ=V^2dC\\)。能量守恒 \\(dU_f=dW_{\\rm src}+dW_{\\rm mech,on}\\)，故外部机械手对电场所做功 \\(dW_{\\rm mech,on}=-\\frac12V^2dC\\)，相应电场在板距方向做功 \\(dW_{\\rm field}=\\frac12V^2dC=-\\varepsilon AV^2dd/(2d^2)\\)。因此电场力 \\(F_d=-\\varepsilon AV^2/(2d^2)\\) 仍为吸引力，而不是单纯取 \\(-dU_f/dd>0\\) 的错误结果。\n\n(3) 将恒压电源纳入广义势能，适于固定电压的 Legendre 变换为 \\(\\mathcal F_V=U_f-VQ=-\\frac12C(d)V^2=-\\varepsilon AV^2/(2d)\\)。其广义力为 \\(F_d=-\\partial\\mathcal F_V/\\partial d=+\\frac12V^2(dC/dd)=-\\varepsilon AV^2/(2d^2)\\)，与能量收支独立一致。固定电压时必须使用该电势而非孤立电容器能量，因为电源可向或从电极输送电荷并携带功。\n\n(4) 两种控制均有实际电场 \\(E=Q/(\\varepsilon A)=V/d\\)，电场压力大小 \\(p=\\varepsilon E^2/2\\)，总吸引力 \\(F_d=-pA\\)。若固定 \\(Q\\) 而缓慢拉开，所需外力正功进入逐渐增大的电场能。若固定 \\(V\\) 缓慢拉开，电容减少、流回电源的电荷为负 \\(dQ<0\\)，源收到能量 \\(-dW_{\\rm src}=-VdQ\\)；外部正机械功与减少的场能一同供给电源，二者正好由前述微分式分配。\n"
     }
   ]
 }
