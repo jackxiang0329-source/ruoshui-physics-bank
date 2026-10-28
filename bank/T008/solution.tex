@@ -1,21 +1,9 @@
-% T008: reference solution
-循环在 $P$-$V$ 平面顺时针，气体对外净做功等于矩形面积：
-\[
-W_{\rm net}=(2P_0-P_0)(2V_0-V_0)=P_0V_0.
-\]
-对单原子理想气体，$C_V=\tfrac32R$、$C_P=\tfrac52R$。由 $PV=nRT$，四点温度依次为
-\[
-T_A=\frac{P_0V_0}{nR},\quad
-T_B=2T_A,\quad T_C=4T_A,\quad T_D=2T_A.
-\]
-吸热只发生在 $A\to B$ 的定容升温与 $B\to C$ 的定压膨胀阶段：
-\[
-Q_{AB}=nC_V(T_B-T_A)=\frac32P_0V_0,
-\qquad
-Q_{BC}=nC_P(T_C-T_B)=5P_0V_0.
-\]
-因此 $Q_{\rm in}=13P_0V_0/2$，循环热效率
-\[
-\eta=\frac{W_{\rm net}}{Q_{\rm in}}=\frac{2}{13}.
-\]
-其余两段放热，净热量等于净功，符合循环内能变化为零的第一定律。
+可逆热机循环熵变为零，整个绝热系统的总熵不变，因此
+\[C_h\ln\frac{T_*}{T_h}+C_c\ln\frac{T_*}{T_c}=0,\qquad
+T_*=\left(T_h^{C_h}T_c^{C_c}\right)^{1/(C_h+C_c)}.\]
+能量守恒：热库减少的总内能等于输出功，故
+\[W_{\max}=C_hT_h+C_cT_c-(C_h+C_c)T_*.\]
+若直接热接触、没有机械做功，则 $T_{\rm mix}=(C_hT_h+C_cT_c)/(C_h+C_c)$，总熵产生
+\[\Delta S_{\rm direct}=C_h\ln\frac{T_{\rm mix}}{T_h}+C_c\ln\frac{T_{\rm mix}}{T_c}>0\quad(T_h\ne T_c).\]
+加权算术平均大于等于加权几何平均，所以 $T_*\le T_{\rm mix}$，从而 $W_{\max}=(C_h+C_c)(T_{\rm mix}-T_*)\ge0$；若 $C_h,C_c$ 均正，等号当且仅当 $T_h=T_c$。
+当两个热容相同时 $T_*=\sqrt{T_hT_c}$、$W_{\max}=C(\sqrt{T_h}-\sqrt{T_c})^2$；随着两初温趋于一致，最大功连续趋于零。这里不可错误地使用某个固定温度比所定义的单一卡诺效率，因为热库温度在整个过程中持续变化。

@@ -1,18 +1,13 @@
-% E007: reference solution
-插入部分和未插入部分承受相同电压，等效为两只并联电容器：
-\[
-C(x)=\frac{\kappa\varepsilon_0\ell x}{d}
-+\frac{\varepsilon_0\ell(w-x)}{d}
-=\frac{\varepsilon_0\ell}{d}[w+(\kappa-1)x].
-\]
-当电源恒压时，电容器储能为 $U_c=\tfrac12C(x)V^2$；但插入过程同时伴随电源做功 $\mathrm dW_{\rm src}=V\mathrm dQ=V^2\mathrm dC$。准静态能量守恒给出
-\[
-F\,\mathrm dx=\mathrm dW_{\rm src}-\mathrm dU_c
-=\frac12V^2\mathrm dC.
-\]
-因此
-\[
-F=\frac12V^2\frac{\mathrm dC}{\mathrm dx}
-=\frac{\varepsilon_0\ell(\kappa-1)V^2}{2d}>0.
-\]
-正号表示介质被吸入；若仅对 $U_c$ 取负梯度，会漏掉恒压电源参与的能量交换，从而得到错误方向。
+令 $K=B\ell$。由楞次定律，磁力阻碍速度正向运动，故
+\[m\dot v=-Ki,\qquad L\dot i+Ri=Kv.\]
+消去 $i=-m\dot v/K$，得
+\[\ddot v+\frac RL\dot v+\frac{K^2}{mL}v=0,\qquad v(0)=v_0,\quad\dot v(0)=0.\]
+特征根 $r_\pm=(-R/L\pm\sqrt{(R/L)^2-4K^2/(mL)})/2$。在 $r_+\ne r_-$ 时
+\[v(t)=v_0\frac{-r_-e^{r_+t}+r_+e^{r_-t}}{r_+-r_-}.\]
+判别式正、零、负分别对应非振荡双指数、临界、振荡衰减；临界时 $v=v_0(1+Rt/(2L))e^{-Rt/(2L)}$。无论哪类，由 $R>0,L>0$ 可得 $v,i\to0$。
+将动力学式乘 $v$、电路式乘 $i$ 后相加：
+\[\frac d{dt}\left(\tfrac12mv^2+\tfrac12Li^2\right)=-Ri^2.\]
+初始磁能为零，最终机械能和磁能均为零，因此 $\int_0^\infty Ri^2dt=mv_0^2/2$。
+对两条原方程从 $0$ 积分到 $\infty$，先得 $\int_0^\infty i\,dt=mv_0/K$，再得 $R\int i\,dt=K\int v\,dt$，故
+\[x(\infty)-x(0)=\int_0^\infty v\,dt=\frac{mRv_0}{B^2\ell^2}.\]
+若直接使用 $i=Kv/R$，即相当于删去 $L\dot i$，不满足 $i(0)=0$ 且丢失电感中的瞬态储能。

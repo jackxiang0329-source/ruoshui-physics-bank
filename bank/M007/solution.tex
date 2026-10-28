@@ -1,19 +1,10 @@
-% M007: reference solution
-碰撞阶段应采用动量守恒，而不能使用机械能守恒：
-\[
-mv_0=(m+M)V,\qquad V=\frac{mv_0}{m+M}.
-\]
-碰撞结束后，整体在无摩擦轨道上压缩弹簧。到达最大压缩处时整体瞬时静止，此阶段机械能守恒：
-\[
-\frac12(m+M)V^2=\frac12kx_{\max}^2.
-\]
-故
-\[
-x_{\max}=\frac{mv_0}{\sqrt{k(m+M)}}.
-\]
-碰撞本身耗散的机械能为
-\[
-\Delta E=\frac12mv_0^2-\frac12(m+M)V^2
-=\frac{mM}{2(m+M)}v_0^2.
-\]
-其中 $\Delta E$ 表示正的能量损失。弹簧压缩期间理想静摩擦和其他阻力均未引入耗散。
+(1) 令 $J=I+mr^2$。碰撞时间极短，绕固定轴的外角冲量可忽略，故 $mvr=J\omega_0$，即 $\omega_0=mvr/J$。碰后动能为 $J\omega_0^2/2$，损失 $\Delta E=mv^2/2-J\omega_0^2/2=(mv^2/2)I/J\ge0$。注意在完全非弹性碰撞中不能使用机械能守恒。
+
+(2) 碰后运动方程为 $J\ddot\theta+b\dot\theta+\kappa\theta=0$，初值 $\theta(0)=0$、$\dot\theta(0)=\omega_0$。设 $\beta=b/(2J)$、$\Omega=\sqrt{\kappa/J-\beta^2}>0$，解为
+\[\theta(t)=\frac{\omega_0}{\Omega}e^{-\beta t}\sin(\Omega t),\qquad
+\dot\theta(t)=\omega_0 e^{-\beta t}\!\left[\cos(\Omega t)-\frac{\beta}{\Omega}\sin(\Omega t)\right].\]
+
+(3) 首次 $\dot\theta=0$ 位于 $0<\Omega t_*<\pi/2$，故 $t_*=\Omega^{-1}\arctan(\Omega/\beta)$。代入位移，利用 $\sin(\arctan(\Omega/\beta))=\Omega/\sqrt{\Omega^2+\beta^2}$，得
+\[\theta_{\max}=\frac{\omega_0}{\sqrt{\Omega^2+\beta^2}}\exp\!\left[-\frac{\beta}{\Omega}\arctan\frac{\Omega}{\beta}\right].\]
+
+(4) 当 $\beta\to0$，$\Omega\to\sqrt{\kappa/J}=:\omega_n$，因此 $t_*\to\pi/(2\omega_n)$、$\theta_{\max}\to\omega_0/\omega_n$。能量恒等式 $\frac{d}{dt}(J\dot\theta^2/2+\kappa\theta^2/2)=-b\dot\theta^2\le0$ 也验证了阻尼幅度递减。

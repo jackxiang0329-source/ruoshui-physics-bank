@@ -1,16 +1,20 @@
 {
   "id": "Q008",
   "topic": "近代物理",
-  "kind": "积分计算题",
-  "level": 3,
-  "estimated_minutes": 15,
-  "title": "一维势阱基态粒子位于左四分之一区间的概率",
+  "title": "无限深势阱突然扩张后的量子投影",
+  "kind": "综合推导题",
+  "level": 5,
+  "estimated_minutes": 55,
   "tags": [
-    "量子力学",
-    "波函数归一化",
-    "概率密度"
+    "量子骤变",
+    "本征函数展开",
+    "积分重叠",
+    "能量期望",
+    "高能尾部"
   ],
-  "answer": "P\\!\\left(0<x<\\frac{L}{4}\\right)=\\frac14-\\frac1{2\\pi}\\approx0.09085",
+  "answer": "c_2=1/\\sqrt2,\\quad c_{n\\ne2}=\\frac{4\\sqrt2\\sin(n\\pi/2)}{\\pi(4-n^2)},\\quad \\langle H_{\\rm new}\\rangle=\\frac{\\pi^2\\hbar^2}{2mL^2}",
   "quality_status": "待独立复核",
-  "format": "latex-fragment-v1"
+  "tier": "advanced_composite",
+  "format": "latex-fragment-v1",
+  "revision": "high-only-v2"
 }

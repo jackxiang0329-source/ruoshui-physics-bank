@@ -1,16 +1,19 @@
 {
   "id": "M007",
   "topic": "力学",
-  "kind": "综合计算题",
-  "level": 3,
-  "estimated_minutes": 16,
-  "title": "非弹性碰撞与弹簧最大压缩",
+  "title": "切向碰撞、扭转振子与粘滞阻尼",
+  "kind": "综合推导题",
+  "level": 5,
+  "estimated_minutes": 50,
   "tags": [
-    "动量守恒",
-    "碰撞",
-    "机械能"
+    "冲量角动量守恒",
+    "非弹性碰撞能损",
+    "阻尼微分方程",
+    "极值与极限"
   ],
-  "answer": "x_{\\max}=\\frac{m v_0}{\\sqrt{k(m+M)}},\\quad \\Delta E=\\frac{mM v_0^2}{2(m+M)}",
+  "answer": "\\omega_0=\\frac{mvr}{I+mr^2},\\quad \\Delta E=\\frac{mv^2I}{2(I+mr^2)},\\quad t_*=\\frac1\\Omega\\arctan\\frac\\Omega\\beta",
   "quality_status": "待独立复核",
-  "format": "latex-fragment-v1"
+  "tier": "advanced_composite",
+  "format": "latex-fragment-v1",
+  "revision": "high-only-v2"
 }

@@ -53,9 +53,10 @@ def check(items,root=ROOT):
         folder=root/'bank'/uid
         if p.get('_dir')!=folder: errors.append(uid+': 目录不一致')
         if p.get('topic') not in TOPICS: errors.append(uid+': 模块无效')
-        if type(p.get('level')) is not int or not 1<=p['level']<=5: errors.append(uid+': 难度无效')
-        if type(p.get('estimated_minutes')) is not int or not 1<=p['estimated_minutes']<=120: errors.append(uid+': 用时无效')
-        if not isinstance(p.get('tags'),list) or not p['tags']: errors.append(uid+': 标签缺失')
+        if type(p.get('level')) is not int or p['level'] not in (4,5): errors.append(uid+': 仅允许4/5级综合题')
+        if type(p.get('estimated_minutes')) is not int or not 40<=p['estimated_minutes']<=120: errors.append(uid+': 仅允许40分钟以上综合题')
+        if not isinstance(p.get('tags'),list) or len(p['tags'])<3: errors.append(uid+': 至少3个知识标签')
+        if p.get('tier')!='advanced_composite': errors.append(uid+': 缺少综合题标识')
         if p.get('format')!='latex-fragment-v1': errors.append(uid+': 片段格式无效')
         for field in ('title','kind','quality_status','answer'):
             if not str(p.get(field,'')).strip(): errors.append(uid+': 缺失 '+field)

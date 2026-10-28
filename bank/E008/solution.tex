@@ -1,15 +1,9 @@
-% E008: reference solution
-将初速度分解为垂直磁场的 $v_\perp=v\sin\alpha$ 与沿磁场的 $v_\parallel=v\cos\alpha$。洛伦兹力始终垂直粒子速度，不做功；垂直分量满足匀速圆周运动的向心力关系
-\[
-qv_\perp B=\frac{mv_\perp^2}{r},
-\qquad r=\frac{mv\sin\alpha}{qB}.
-\]
-角频率 $\omega=qB/m$，周期
-\[
-T=\frac{2\pi m}{qB}.
-\]
-平行分量匀速不变，因此一周期的轴向位移（螺距）为
-\[
-p=v_\parallel T=\frac{2\pi mv\cos\alpha}{qB}.
-\]
-三量各自量纲分别为长度、时间和长度，且磁场增强会同时缩小轨道半径与螺距。
+安培环路积分 $2\pi rB_\phi=\mu_0 I_{\rm enc}$。均匀电流密度 $I/(\pi a^2)$，由此
+\[B_\phi(r)=\begin{cases}\mu_0Ir/(2\pi a^2),&0\le r<a,\\\mu_0 I/(2\pi r),&a<r<b,\\0,&r>b.\end{cases}\]
+对于长度为 $1$ 的圆筒层，磁能为 $\int B^2/(2\mu_0)\,2\pi r\,dr$。内导体的贡献
+\[u'_\mathrm{in}=\frac{\mu_0I^2}{4\pi a^4}\int_0^a r^3\,dr=\frac{\mu_0 I^2}{16\pi}.\]
+两导体之间 $u'_\mathrm{gap}=\frac{\mu_0I^2}{4\pi}\ln(b/a)$，故
+\[u'=\frac{\mu_0I^2}{16\pi}+\frac{\mu_0I^2}{4\pi}\ln\frac ba,\qquad
+L'\equiv\frac{2u'}{I^2}=\frac{\mu_0}{8\pi}+\frac{\mu_0}{2\pi}\ln\frac ba.\]
+若电流集中在 $r=a$ 的表面，$r<a$ 的包围电流为零，内区磁能消失，故 $L'_{\rm surface}=\frac{\mu_0}{2\pi}\ln(b/a)$。
+当 $b\downarrow a$，均匀体电流模型有 $L'\to\mu_0/(8\pi)$，而表面电流模型 $L'\to0$。两者差异源于所假定的内导体电流分布不同；不能在同一模型中混用这两个极限。

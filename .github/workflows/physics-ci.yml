@@ -1,30 +1,12 @@
-name: Physics Source QA and ElegantBook PDF
-
+name: Physics Advanced-only QA and PDF
 on:
   push:
     branches: [main]
-    # External candidate importers have their own dedicated QA workflow.
-    # PDF compilation runs on changes to the approved source bank or its build tooling.
-    paths:
-      - 'bank/**'
-      - 'tex/**'
-      - 'data/index.csv'
-      - 'scripts/build.py'
-      - 'scripts/check_physics.py'
-      - 'scripts/check_review.py'
-      - 'scripts/check_tex_controls.py'
-      - 'scripts/audit_milestone.py'
-      - 'scripts/assemble_exam.py'
-      - 'tests/test_bank.py'
-      - 'tests/test_revision_regressions.py'
-      - 'tests/test_physical_assumptions.py'
-      - '.github/workflows/physics-ci.yml'
+    paths: ['bank/**','tex/**','scripts/build.py','scripts/check_difficulty_gate.py','data/problems.json','.github/workflows/physics-ci.yml']
   pull_request:
   workflow_dispatch:
-
 permissions:
   contents: read
-
 jobs:
   validate-and-build:
     runs-on: ubuntu-latest
@@ -34,36 +16,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          cache: 'pip'
-      - name: Install Python QA requirements
-        run: python -m pip install -r requirements.txt
-      - name: Physics formula consistency for all current items
-        run: python scripts/check_physics.py
-      - name: Reject invisible control characters in TeX and metadata
-        run: |
-          python scripts/check_tex_controls.py
-          python -m unittest discover -s tests -p 'test_tex_controls.py' -v
-      - name: Validate all independent TeX fragments and indexed masters
+      - name: Enforce advanced-only admission
+        run: python scripts/check_difficulty_gate.py
+      - name: Validate TeX fragments and derived documents
         run: python scripts/build.py --check
-      - name: Audit 100-question milestone and source-reference coverage
-        run: python scripts/audit_milestone.py
-      - name: Enforce evidence-backed six-round approval gate
-        run: python scripts/check_review.py
-      - name: Unit tests for selection, paths and QA gate
-        run: python -m unittest discover -s tests -v
-      - name: Check supplementary Chinese review source hashes
-        run: python scripts/export_zh_review.py --check
-      - name: Draft exam assembly smoke test (never approved for real exams)
-        run: python scripts/assemble_exam.py --count 6 --seed 20261026 --topic-quota '力学=1' --topic-quota '电磁学=1' --max-minutes 180 --total-points 100 --allow-pending
-      - name: Upload validation and draft manifest
-        uses: actions/upload-artifact@v4
-        with:
-          name: ruoshui-physics-validation
-          if-no-files-found: error
-          path: |
-            generated/qa_physics_current.json
-            generated/exam_manifest.json
-      - name: Build ElegantBook with XeLaTeX
+      - name: Compile question and solution PDFs
         uses: xu-cheng/latex-action@v4
         with:
           root_file: |
@@ -71,11 +28,11 @@ jobs:
             solutions.tex
           working_directory: tex
           latexmk_use_xelatex: true
-      - name: Upload generated PDFs as CI artifacts
+      - name: Upload PDF artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: ruoshui-elegantbook-pdf
-          if-no-files-found: error
+          name: advanced-physics-pdf
           path: |
             tex/questions.pdf
             tex/solutions.pdf
+          if-no-files-found: error

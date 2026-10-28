@@ -1,16 +1,20 @@
 {
   "id": "O007",
   "topic": "光学",
-  "kind": "计算题",
-  "level": 2,
-  "estimated_minutes": 12,
-  "title": "三片偏振片使交叉偏振重新透光",
+  "title": "分离薄透镜系统的矩阵成像与无焦条件",
+  "kind": "综合推导题",
+  "level": 5,
+  "estimated_minutes": 50,
   "tags": [
-    "偏振",
-    "马吕斯定律",
-    "光强"
+    "近轴光线矩阵",
+    "透镜组合",
+    "像距奇点",
+    "焦距",
+    "无焦系统"
   ],
-  "answer": "I_{\\rm out}=\\frac{3}{32}I_0",
+  "answer": "M=\\begin{pmatrix}1-d/f_1&d\\\\-1/f_1-1/f_2+d/(f_1f_2)&1-d/f_2\\end{pmatrix},\\quad s'=-\\frac{As+B}{Cs+D}",
   "quality_status": "待独立复核",
-  "format": "latex-fragment-v1"
+  "tier": "advanced_composite",
+  "format": "latex-fragment-v1",
+  "revision": "high-only-v2"
 }
