@@ -364,6 +364,28 @@
     "complexity_tier": "L5-C"
   },
   {
+    "id": "M022",
+    "topic": "力学",
+    "title": "排斥库仑中心势的最近距离、偏转角与 Rutherford 微分截面",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "question": "质量为 $m>0$ 的经典粒子受到固定中心的排斥势 $U(r)=\\kappa/r$，$\\kappa>0$，由无穷远以速度 $v_\\infty>0$ 和冲量参数 $b>0$ 入射，无辐射和反冲。\n(1) 写出径向有效势、机械能和角动量，并求最近距离；(2) 用轨道方程推导散射偏转角 $\\Theta(b)$；(3) 将冲量参数面积元换算为散射立体角，求 Rutherford 微分散射截面；(4) 验证正碰、远距离入射和弱势极限，并说明为何无屏蔽长程势的总截面发散。",
+    "solution": "(1) 无穷远处能量和角动量分别为 $E=mv_\\infty^2/2$、$L=mv_\\infty b$。由于中心力守恒，\n\\[\n\\frac m2\\dot r^2+\\frac{L^2}{2mr^2}+\\frac\\kappa r=E.\n\\]\n在最近距离处 $\\dot r=0$，方程 $2Er^2-2\\kappa r-L^2/m=0$ 仅有一个正根：\n\\[\nr_{\\min}=\\frac{\\kappa+\\sqrt{\\kappa^2+m^2v_\\infty^4b^2}}{mv_\\infty^2}.\n\\]\n$L\\ne0$ 时有效势在 $r\\to0$ 趋于正无穷，因此粒子不会撞击中心。\n\n(2) 令 $u=1/r$，Binet 方程为 $u''+u=-m\\kappa/L^2$。选近心点为极角原点，解为\n\\[\nu(\\phi)=\\frac{m\\kappa}{L^2}[e\\cos\\phi-1],\\qquad\ne=\\sqrt{1+\\frac{2EL^2}{m\\kappa^2}}\n=\\sqrt{1+\\frac{m^2v_\\infty^4b^2}{\\kappa^2}}>1.\n\\]\n轨道两端 $r\\to\\infty$ 对应 $\\cos\\phi_\\infty=1/e$。入射与出射渐近线形成的散射偏转角大小为\n\\[\n\\Theta=\\pi-2\\phi_\\infty\n=2\\arcsin(1/e)\n=2\\arctan\\frac{\\kappa}{mv_\\infty^2b}.\n\\]\n该角度严格介于零与 $\\pi$ 之间，是双曲轨道的渐近散射角。\n\n(3) 冲量参数在 $[b,b+db]$ 对应入射面积 $d\\sigma=2\\pi b\\,|db|$，散射到极角 $[\\Theta,\\Theta+d\\Theta]$ 对应立体角 $d\\Omega=2\\pi\\sin\\Theta\\,|d\\Theta|$。反解\n\\[\nb=\\frac{\\kappa}{mv_\\infty^2}\\cot\\frac\\Theta2,\\qquad\n\\left|\\frac{db}{d\\Theta}\\right|=\n\\frac{\\kappa}{2mv_\\infty^2}\\csc^2\\frac\\Theta2.\n\\]\n因此\n\\[\n\\frac{d\\sigma}{d\\Omega}=\\frac{b}{\\sin\\Theta}\\left|\\frac{db}{d\\Theta}\\right|\n=\\frac{\\kappa^2}{4m^2v_\\infty^4}\\csc^4\\frac\\Theta2\n=\\frac{\\kappa^2}{16E^2}\\csc^4\\frac\\Theta2.\n\\]\n这一量的量纲为面积，可从 $\\kappa/E$ 是长度来检查。\n\n(4) $b\\to0^+$ 给 $\\Theta\\to\\pi$、$r_{\\min}\\to2\\kappa/(mv_\\infty^2)$；$b\\to\\infty$ 或固定 $b$ 令 $\\kappa\\to0^+$ 时 $\\Theta\\to0$。前向小角处 $\\sin(\\Theta/2)\\sim\\Theta/2$，于是 $d\\sigma/d\\Omega\\propto\\Theta^{-4}$，其对前向小角区域的积分发散。实际屏蔽长度与探测器角分辨率会引入额外截断；理想无屏蔽的库仑总散射截面不是有限常数。",
+    "answer": "\\Theta=2\\arctan[\\kappa/(mv_\\infty^2b)],\\quad d\\sigma/d\\Omega=\\kappa^2\\csc^4(\\Theta/2)/(16E^2)",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "中心力散射",
+      "双曲线轨道",
+      "冲量参数",
+      "微分散射截面"
+    ],
+    "revision": "composite-v1.8",
+    "complexity_tier": "L5-C",
+    "challenge_profile": "high-multistage"
+  },
+  {
     "id": "E007",
     "topic": "电磁学",
     "title": "滑动导体棒的自感反馈与能量耗散",
@@ -729,6 +751,29 @@
     "complexity_tier": "L5-C"
   },
   {
+    "id": "E022",
+    "topic": "电磁学",
+    "title": "Drude 霍尔条带的电导张量、开路霍尔电场与磁阻边界",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "question": "均匀金属条沿 $x$ 方向通直流，宽度 $w>0$，电子电荷 $-e$（$e>0$）、质量 $m>0$、数密度 $n>0$，平均动量弛豫时间为 $\\tau>0$。外磁场为 $B\\hat z$（$B>0$），电场为 $(E_x,E_y,0)$，电子漂移速度为 $(v_x,v_y,0)$。使用恒定稳态 Drude–Lorentz 方程。\n(1) 推导二维稳态电导率矩阵及各元素的方向符号；(2) 在实际条带侧边绝缘的 $J_y=0$ 约束下，求电流、电场和边缘霍尔电势差；(3) 求单位体积焦耳功率并解释单载流子模型在该边界下没有纵向磁阻；(4) 若另一设备强制 $E_y=0$，求纵向与横向电流并解释两种边界情形的电导为何不同。",
+    "solution": "(1) 电子稳态运动方程为\n\\[\n0=-e(\\boldsymbol E+\\boldsymbol v\\times\\boldsymbol B)-m\\boldsymbol v/\\tau.\n\\]\n令 $h=eB\\tau/m>0,\\ \\eta=e\\tau/m>0$，由于 $\\boldsymbol v\\times\\boldsymbol B=(Bv_y,-Bv_x,0)$，得到\n\\[\nv_x=-\\eta E_x-hv_y,\\qquad v_y=-\\eta E_y+hv_x.\n\\]\n联立解得\n\\[\nv_x=-\\frac{\\eta(E_x-hE_y)}{1+h^2},\\qquad\nv_y=-\\frac{\\eta(hE_x+E_y)}{1+h^2}.\n\\]\n电流密度 $\\boldsymbol J=-ne\\boldsymbol v$，因此\n\\[\n\\binom{J_x}{J_y}=\\frac{\\sigma_0}{1+h^2}\n\\begin{pmatrix}1&-h\\\\h&1\\end{pmatrix}\n\\binom{E_x}{E_y},\\quad \\sigma_0=ne^2\\tau/m.\n\\]\n非对角元素符号来自电子电荷和 $B$ 的固定方向，不能凭习惯调换。\n\n(2) 条带侧边绝缘意味着 $J_y=0$，于是 $hE_x+E_y=0$，即\n\\[\nE_y=-hE_x=-\\frac{J_xB}{ne},\\qquad J_x=\\sigma_0E_x.\n\\]\n若从 $y=0$ 到 $y=w$ 定义电压差 $\\Delta\\phi=\\phi(w)-\\phi(0)$，因为 $\\boldsymbol E=-\\nabla\\phi$，\n\\[\n\\Delta\\phi=-E_yw=\\frac{J_xBw}{ne}>0\n\\]\n当 $J_x>0$。这与电子向 $-x$ 漂移相容，电子霍尔系数为 $E_y/(J_xB)=-1/(ne)$。\n\n(3) 磁力始终垂直漂移速度不做功，因此电场供给的功率密度恰好被弛豫碰撞耗散：\n\\[\np_J=\\boldsymbol J\\cdot\\boldsymbol E=J_xE_x+J_yE_y\n=\\sigma_0E_x^2.\n\\]\n在侧边开路约束下纵向电阻率 $E_x/J_x=1/\\sigma_0$ 与磁场无关，即这个单载流子、各向同性、恒定 $\\tau$ 的理想 Drude 模型不存在纵向磁阻；这不是所有真实金属的普适定律。\n\n(4) 如果另一设备强制 $E_y=0$，则\n\\[\nJ_x=\\frac{\\sigma_0}{1+h^2}E_x,\\qquad\nJ_y=\\frac{h\\sigma_0}{1+h^2}E_x\\ne0.\n\\]\n此时侧向载流子可以流动，而纵向电导被因子 $1/(1+h^2)$ 抑制。两种边界条件不同，不能直接把固定 $E_y=0$ 情况的张量分量当作霍尔条带实际测得的纵向电阻率。",
+    "answer": "\\sigma=\\sigma_0(1+h^2)^{-1}\\begin{pmatrix}1&-h\\\\h&1\\end{pmatrix},\\quad E_y=-J_xB/(ne)\\quad(J_y=0)",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "Drude输运",
+      "霍尔效应",
+      "磁场电导张量",
+      "边界约束",
+      "焦耳耗散"
+    ],
+    "revision": "composite-v1.8",
+    "complexity_tier": "L5-B",
+    "challenge_profile": "high-multistage"
+  },
+  {
     "id": "T007",
     "topic": "热学",
     "title": "导热可动活塞的不可逆终态与熵产生",
@@ -1092,6 +1137,29 @@
     "revision": "composite-v1.7",
     "challenge_profile": "high-multistage",
     "complexity_tier": "L5-C"
+  },
+  {
+    "id": "T022",
+    "topic": "热学",
+    "title": "三维 Debye 声子态密度、零点能及热容立方律",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "question": "三维绝缘晶体有 $N\\gg1$ 个原子，在 Debye 声学模型中其 $3N$ 个谐振模具有态密度 $g(\\omega)=9N\\omega^2/\\omega_D^3$，其中 $0\\le\\omega\\le\\omega_D$。每个模式能量为零点能 $\\hbar\\omega/2$ 加上 Bose 热激发能 $\\hbar\\omega/[e^{\\hbar\\omega/(k_BT)}-1]$。设 $\\Theta_D=\\hbar\\omega_D/k_B$。\n(1) 核验模态总数和全部零点能；(2) 计算内能的无量纲 Bose 积分表示；(3) 严格推导低温 $T\\ll\\Theta_D$ 下热容的 $T^3$ 首项及系数；(4) 证明高温热容趋于 $3Nk_B$ 并说明该声学模型的物理局限。",
+    "solution": "(1) 声子态密度按三维谐振自由度归一：\n\\[\n\\int_0^{\\omega_D}g(\\omega)d\\omega\n=\\frac{9N}{\\omega_D^3}\\frac{\\omega_D^3}{3}=3N.\n\\]\n零点能即\n\\[\nU_0=\\int_0^{\\omega_D}\\frac{\\hbar\\omega}{2}\\,g(\\omega)d\\omega\n=\\frac{9N\\hbar}{2\\omega_D^3}\\frac{\\omega_D^4}{4}\n=\\frac98N\\hbar\\omega_D.\n\\]\n这部分与温度无关，对热容没有直接贡献。\n\n(2) 全部内能精确写成\n\\[\nU(T)=U_0+\\frac{9N\\hbar}{\\omega_D^3}\n\\int_0^{\\omega_D}\\frac{\\omega^3}{e^{\\hbar\\omega/(k_BT)}-1}\\,d\\omega.\n\\]\n用 $x=\\hbar\\omega/(k_BT)$ 换元得\n\\[\nU(T)-U_0=9Nk_BT\\left(\\frac{T}{\\Theta_D}\\right)^3\n\\int_0^{\\Theta_D/T}\\frac{x^3}{e^x-1}\\,dx.\n\\]\n零点部分不得重复加入热激发积分中。\n\n(3) 当 $T/\\Theta_D\\to0^+$，积分上限趋于无穷，而 $x^3/(e^x-1)$ 可积。利用\n\\[\n\\int_0^\\infty\\frac{x^3}{e^x-1}dx=\\Gamma(4)\\zeta(4)=\\frac{\\pi^4}{15}\n\\]\n得\n\\[\nU(T)-U_0\\sim\\frac{3\\pi^4}{5}Nk_B\\frac{T^4}{\\Theta_D^3},\n\\quad\nC_V=\\left(\\frac{\\partial U}{\\partial T}\\right)_V\n\\sim\\frac{12\\pi^4}{5}Nk_B\\left(\\frac{T}{\\Theta_D}\\right)^3.\n\\]\n低温声学模态的连续三维密度导致热容立方律，而非经验上的任意幂次。\n\n(4) 当 $T\\gg\\Theta_D$，对所有模式有 $\\hbar\\omega\\ll k_BT$，单模总能量的热依赖首项为 $k_BT$，所以 $\\partial U/\\partial T\\to3Nk_B$，即 Dulong–Petit 定律。该 Debye 截断模型并不覆盖复杂晶格中的全部光学声子，亦不能解释金属的电子低温热容；温区与模型假设必须明确。",
+    "answer": "U_0=9N\\hbar\\omega_D/8,\\quad C_V\\sim(12\\pi^4/5)Nk_B(T/\\Theta_D)^3",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "Debye模型",
+      "声子统计",
+      "Bose积分",
+      "低温热容",
+      "高温极限"
+    ],
+    "revision": "composite-v1.8",
+    "complexity_tier": "L5-B",
+    "challenge_profile": "high-multistage"
   },
   {
     "id": "W007",

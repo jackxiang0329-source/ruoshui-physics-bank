@@ -1,0 +1,39 @@
+(1) 声子态密度按三维谐振自由度归一：
+\[
+\int_0^{\omega_D}g(\omega)d\omega
+=\frac{9N}{\omega_D^3}\frac{\omega_D^3}{3}=3N.
+\]
+零点能即
+\[
+U_0=\int_0^{\omega_D}\frac{\hbar\omega}{2}\,g(\omega)d\omega
+=\frac{9N\hbar}{2\omega_D^3}\frac{\omega_D^4}{4}
+=\frac98N\hbar\omega_D.
+\]
+这部分与温度无关，对热容没有直接贡献。
+
+(2) 全部内能精确写成
+\[
+U(T)=U_0+\frac{9N\hbar}{\omega_D^3}
+\int_0^{\omega_D}\frac{\omega^3}{e^{\hbar\omega/(k_BT)}-1}\,d\omega.
+\]
+用 $x=\hbar\omega/(k_BT)$ 换元得
+\[
+U(T)-U_0=9Nk_BT\left(\frac{T}{\Theta_D}\right)^3
+\int_0^{\Theta_D/T}\frac{x^3}{e^x-1}\,dx.
+\]
+零点部分不得重复加入热激发积分中。
+
+(3) 当 $T/\Theta_D\to0^+$，积分上限趋于无穷，而 $x^3/(e^x-1)$ 可积。利用
+\[
+\int_0^\infty\frac{x^3}{e^x-1}dx=\Gamma(4)\zeta(4)=\frac{\pi^4}{15}
+\]
+得
+\[
+U(T)-U_0\sim\frac{3\pi^4}{5}Nk_B\frac{T^4}{\Theta_D^3},
+\quad
+C_V=\left(\frac{\partial U}{\partial T}\right)_V
+\sim\frac{12\pi^4}{5}Nk_B\left(\frac{T}{\Theta_D}\right)^3.
+\]
+低温声学模态的连续三维密度导致热容立方律，而非经验上的任意幂次。
+
+(4) 当 $T\gg\Theta_D$，对所有模式有 $\hbar\omega\ll k_BT$，单模总能量的热依赖首项为 $k_BT$，所以 $\partial U/\partial T\to3Nk_B$，即 Dulong–Petit 定律。该 Debye 截断模型并不覆盖复杂晶格中的全部光学声子，亦不能解释金属的电子低温热容；温区与模型假设必须明确。
