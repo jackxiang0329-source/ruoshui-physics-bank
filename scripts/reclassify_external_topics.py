@@ -12,6 +12,14 @@ import import_hf_physics
 import import_college_physics
 
 BASE = Path(__file__).resolve().parent.parent / "external_sources"
+
+# Source-specific exceptions confirmed by reading the pinned question excerpts.
+# A shared English chapter title is not enough to classify a question.
+CONTEXT_OVERRIDES = {
+    "CP-00898": ("Radiation", "热学"),
+    "CP-00080": ("Problem-Solving Strategies", "力学"),
+}
+
 SOURCES = (
     ("hf_physics_dpo", "domain", import_hf_physics.category),
     ("college_physics", "title", import_college_physics.group),
@@ -31,6 +39,11 @@ def backfill(root=BASE):
         for record in index["records"]:
             old=record.get("module","待分类")
             new=classifier(record.get(field,""))
+            if source == "college_physics" and record.get("id") in CONTEXT_OVERRIDES:
+                expected_title, reviewed_module = CONTEXT_OVERRIDES[record["id"]]
+                if record.get("title") != expected_title:
+                    raise ValueError("Pinned title mismatch: " + record["id"])
+                new = reviewed_module
             if new!="待分类" and old!=new:
                 # These are unverified external items; never silently approve.
                 if record.get("exam_ready") or record.get("exam_eligible"):
