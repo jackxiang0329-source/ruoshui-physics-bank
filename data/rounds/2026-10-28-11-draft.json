@@ -971,6 +971,98 @@
       "complexity_tier": "L5-B",
       "question": "无限长同质细弦的拉力为 \\(T>0\\)、线密度 \\(\\mu>0\\)，传播速率 \\(c=\\sqrt{T/\\mu}\\)、波数 \\(k=\\omega/c\\)。弦在 \\(x=0\\) 固接一可横向自由移动、质量为 \\(M>0\\) 的小珠，忽略其横向弹性回复及摩擦。左侧入射单位振幅的正向谐波，取时间因子 \\(e^{-i\\omega t}\\)。\n(1) 写出点质量处位移连续与横向动力学的力跳跃条件。\n(2) 推导振幅反射与透射系数 \\(r,t\\)，引入无量纲质量参数。\n(3) 验证任意频率下功率守恒并讨论低频及高频极限。\n(4) 分析质量增大时散射相位与位移响应，解释无质量缺陷的退化。\n",
       "solution": "(1) 左侧波形 \\(y_L=e^{ikx-i\\omega t}+re^{-ikx-i\\omega t}\\)，右侧为 \\(y_R=te^{ikx-i\\omega t}\\)。弦在质量处不断裂，故位移连续给 \\(1+r=t\\)。小珠受左右张力的净横向力为 \\(T[y_x(0^+)-y_x(0^-)]\\)，其牛顿方程是 \\(T[y_x(0^+)-y_x(0^-)]=-M\\omega^2y(0)\\)。跳跃方向由两端拉力指向反向决定，不应把点质量当成固定端。\n\n(2) 导数跳跃为 \\(ikT[t-(1-r)]=2ikTr\\)，所以 \\(2ikTr=-M\\omega^2t=-M\\omega^2(1+r)\\)。令 \\(\\zeta=M\\omega/(2T k/\\omega)=M\\omega/(2\\sqrt{T\\mu})\\)；更直接由 \\(2Tk=M\\omega^2/\\zeta\\)，故 \\(r=-i\\zeta/(1+i\\zeta)\\)，\\(t=1/(1+i\\zeta)\\) 在选取 \\(e^{-i\\omega t}\\) 时可通过原式代入核验：\\(2i r=-2\\zeta t\\) 推出 \\(r=i\\zeta/(1-i\\zeta)\\)，\\(t=1/(1-i\\zeta)\\)。后者是与所给跳跃符号严格一致的表达，前一组对应不同的力跳跃约定，不可混用。\n\n(3) 采用由跳跃方程确定的 \\(r=i\\zeta/(1-i\\zeta)\\)、\\(t=1/(1-i\\zeta)\\)，有 \\(|r|^2=\\zeta^2/(1+\\zeta^2)\\)、\\(|t|^2=1/(1+\\zeta^2)\\)，二者和为一。因左右弦张力及线密度相同，能流权重相同，这就是整个无耗散点质量散射的功率守恒。若 \\(\\omega\\to0\\)，\\(\\zeta\\to0\\) 则反射趋零；\\(\\omega\\to\\infty\\) 时 \\(|r|\\to1\\) 且透射趋零。\n\n(4) 由于 \\(\\zeta=M\\omega/(2\\sqrt{T\\mu})\\)，质量越大或频率越高，对弦的惯性障碍越强，点处透射振幅大小 \\(1/\\sqrt{1+\\zeta^2}\\) 越低，反射相位也由复杂阻抗决定。若 \\(M\\to0\\)，\\(r\\to0,t\\to1\\)，弦退化为完全均匀无缺陷传播。该点质量模型没有自身弹簧，因此不具有限频孤立局部共振；若观察到窄线共振必须增加局部回复力或其他物理结构。\n"
+    },
+    {
+      "id": "O053",
+      "topic": "光学",
+      "title": "Michelson干涉仪移动反射镜的相位、条纹灵敏度与泊松噪声",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 90,
+      "tags": [
+        "双光束干涉",
+        "光程差",
+        "光子计数",
+        "相位估计"
+      ],
+      "answer": "\\Delta\\varphi=4\\pi x/\\lambda,\\quad\\delta x_{\\rm diff}=\\lambda/(4\\pi\\sqrt{\\Phi\\tau})",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-B",
+      "question": "真空中的理想等强 Michelson 干涉仪由单色光照明，波长 \\(\\lambda\\)、光子入射速率 \\(\\Phi\\)。一个反射镜沿光轴位移 \\(x\\)，两臂返回后在单个输出口以相位差 \\(\\varphi\\) 干涉，设该端口的检测效率为一，积分时间 \\(\\tau>0\\)。忽略激光相位噪声和辐射压力，计数满足 Poisson 分布。\n(1) 推导反射镜位移与往返相位变化、输出端口干涉强度之间的关系。\n(2) 求输出端口平均计数及其 Poisson 方差，说明相位工作点的必要性。\n(3) 由误差传播求单端口位移测量的信噪比及相位灵敏度，讨论最佳位置。\n(4) 比较双端口差分计数与单端口方案，说明为何不能无限提升灵敏度。\n",
+      "solution": "(1) 光从分束器到移动反射镜往返两次，镜位移 \\(x\\) 使光程差改变 \\(2x\\)，相位变化 \\(\\Delta\\varphi=(2\\pi/\\lambda)2x=4\\pi x/\\lambda\\)。等强理想干涉下某一输出口的光子份额为 \\(p=(1+\\cos\\varphi)/2\\)，另一个端口为 \\(1-p\\)。因此单端口光子速率 \\(\\Phi p\\)，移动 \\(\\lambda/2\\) 对应相位增加 \\(2\\pi\\)。\n\n(2) 积分时间 \\(\\tau\\) 内探测数 \\(N\\) 的平均值 \\(\\bar N=\\Phi\\tau(1+\\cos\\varphi)/2\\)，Poisson 方差 \\(\\operatorname{Var}N=\\bar N\\)。当输出位于最大或最小干涉强度时 \\(\\partial\\bar N/\\partial\\varphi\\) 为零，普通线性计数无法分辨小相位正负变化；在条纹斜率非零处，输出对镜位移的线性灵敏度才有意义。\n\n(3) 由误差传播 \\(\\delta\\varphi_{\\rm one}=\\sqrt{\\bar N}/|\\partial\\bar N/\\partial\\varphi|=\\sqrt{2(1+\\cos\\varphi)/(\\Phi\\tau)}/|\\sin\\varphi|\\)。在 \\(\\varphi=\\pi/2\\) 处为 \\(\\sqrt{2/(\\Phi\\tau)}\\)，对应 \\(\\delta x=\\lambda\\delta\\varphi/(4\\pi)\\)。要注意在暗端极限必须重新考虑小计数分布与非线性估计器，不可单凭形式上 \\(0/0\\) 的误差传播公式宣称无限精度。\n\n(4) 两个互补端口同时记录时 \\(\\bar N_1+\\bar N_2=\\Phi\\tau\\)，差分 \\(D=N_1-N_2\\) 的平均为 \\(\\Phi\\tau\\cos\\varphi\\)。独立泊松端口给 \\(\\operatorname{Var}D=\\Phi\\tau\\)，因此在 \\(\\varphi=\\pi/2\\) 有 \\(\\delta\\varphi_{\\rm diff}=1/\\sqrt{\\Phi\\tau}\\)，比单一输出端口改善 \\(\\sqrt2\\)。但总探测光子数有限，量子散粒噪声仍使相位分辨率按 \\(1/\\sqrt{\\Phi\\tau}\\) 缩放，不能靠重复计算同一光子把噪声消除。\n"
+    },
+    {
+      "id": "O054",
+      "topic": "光学",
+      "title": "Fresnel界面反射的Brewster角、能流透过率与临界全反射",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 90,
+      "tags": [
+        "Fresnel方程",
+        "边界连续性",
+        "偏振",
+        "能流"
+      ],
+      "answer": "\\tan\\theta_B=n_2/n_1,\\quad\\theta_c=\\arcsin(n_2/n_1)\\ (n_1>n_2)",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-B",
+      "question": "两种均匀无吸收非磁介质的折射率分别为 \\(n_1,n_2>0\\)，平面波从介质1以入射角 \\(\\theta_i\\) 进入介质2，折射角 \\(\\theta_t\\) 满足 Snell 定律。关注电场平行入射面(p偏振)或垂直入射面(s偏振)，忽略界面粗糙与多次反射。\n(1) 从切向电磁边界条件写出 s、p 两种电场反射振幅系数。\n(2) 求 p 偏振的 Brewster 角并说明几何条件。\n(3) 由能流而不是电场振幅直接求反射率与透射率，证明无吸收能量守恒。\n(4) 当 \\(n_1>n_2\\) 时给出全反射临界角及倏逝场的衰减常数。\n",
+      "solution": "(1) 界面切向电场与磁场连续。对非磁介质平面波有波阻抗 \\(\\eta_j=\\eta_0/n_j\\)。解边界线性方程得 s 振幅反射系数 \\(r_s=(n_1\\cos\\theta_i-n_2\\cos\\theta_t)/(n_1\\cos\\theta_i+n_2\\cos\\theta_t)\\)，p 振幅系数按以各自 p 单位矢量为基准的约定为 \\(r_p=(n_2\\cos\\theta_i-n_1\\cos\\theta_t)/(n_2\\cos\\theta_i+n_1\\cos\\theta_t)\\)。若改变反射 p 单位矢量定义，\\(r_p\\) 整体变号但反射率不变。\n\n(2) Brewster 条件是 \\(r_p=0\\)，即 \\(n_2\\cos\\theta_i=n_1\\cos\\theta_t\\)。与 \\(n_1\\sin\\theta_i=n_2\\sin\\theta_t\\) 联立，得到 \\(\\theta_i+\\theta_t=\\pi/2\\)，进一步 \\(\\tan\\theta_B=n_2/n_1\\)。在此入射角 p 偏振反射电场消失，而 s 偏振一般仍有反射，因此有助于偏振分离。\n\n(3) 对任一无损介质透射传播波，时间平均法向 Poynting 通量与 \\(n\\cos\\theta\\,|E|^2\\) 成正比，故反射率 \\(R=|r|^2\\)，透射率 \\(\\mathcal T=(n_2\\cos\\theta_t)/(n_1\\cos\\theta_i)|t|^2\\)。将边界求出的振幅 \\(t\\) 代入可得 \\(R+\\mathcal T=1\\)。尤其介质折射率或角度不同不能仅凭 \\(|r|^2+|t|^2=1\\) 判断守恒。\n\n(4) 当 \\(n_1>n_2\\)，Snell 定律要求 \\(\\sin\\theta_t=(n_1/n_2)\\sin\\theta_i\\)。临界角 \\(\\theta_c=\\arcsin(n_2/n_1)\\)；超过它折射波法向波数成为纯虚数，倏逝场衰减常数为 \\(\\kappa=k_0\\sqrt{n_1^2\\sin^2\\theta_i-n_2^2}\\)，深度方向场幅 \\(\\propto e^{-\\kappa z}\\)。理想单界面无吸收时总反射率为一，但界面外仍有有限倏逝场，不能把电场直接设零。\n"
+    },
+    {
+      "id": "O055",
+      "topic": "光学",
+      "title": "基模高斯光束的复束参数、瑞利长度、Gouy相位及透镜聚焦",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 90,
+      "tags": [
+        "抛物近似",
+        "Gaussian q参数",
+        "Gouy相位",
+        "光束变换"
+      ],
+      "answer": "z_R=\\pi w_0^2/\\lambda,\\quad z_f=\\frac{z_R^2f}{f^2+z_R^2}",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-B",
+      "question": "真空中波长 \\(\\lambda>0\\) 的基模高斯激光束，束腰位于 \\(z=0\\)，1/e 场幅半径 \\(w_0>0\\)。定义波数 \\(k=2\\pi/\\lambda\\)、复束参数 \\(q(z)=z+iz_R\\)，其中 \\(z_R=\\pi w_0^2/\\lambda\\)。细透镜焦距 \\(f>0\\)，其传输矩阵 \\(\\begin{pmatrix}1&0\\\\-1/f&1\\end{pmatrix}\\)。\n(1) 由复束参数给出光斑半径、曲率半径及 Gouy 相位表达式。\n(2) 求远场发散半角，并验证束腰宽度与发散角乘积。\n(3) 给出位于束腰处薄透镜后紧接的复束参数，求出新束腰位置和瑞利长度。\n(4) 讨论强聚焦极限、远焦透镜极限及近轴模型的自洽条件。\n",
+      "solution": "(1) 复束参数满足 \\(1/q=1/R_c-i\\lambda/(\\pi w^2)\\)。将 \\(q=z+iz_R\\) 取倒数，比较实虚部得 \\(R_c(z)=z[1+(z_R/z)^2]\\)（束腰处取无穷曲率半径），\\(w(z)=w_0\\sqrt{1+(z/z_R)^2}\\)。基模的 Gouy 额外相位为 \\(\\psi(z)=\\arctan(z/z_R)\\)，从远前场至远后场变化约 \\(\\pi\\)。\n\n(2) 远离束腰 \\(|z|\\gg z_R\\) 时光斑半径 \\(w(z)\\simeq w_0|z|/z_R\\)，故远场发散半角 \\(\\theta\\simeq w_0/z_R=\\lambda/(\\pi w_0)\\)。于是 \\(w_0\\theta=\\lambda/\\pi\\)，是理想高斯基模的衍射限定束腰—发散乘积。真实高阶或非理想激光光束用 \\(M^2\\ge1\\) 修正，不能对任意非高斯模式直接套用理想基模极限。\n\n(3) 在旧束腰处入射透镜有 \\(q_{\\rm in}=iz_R\\)。ABCD 法则 \\(q_{\\rm out}=(Aq_{\\rm in}+B)/(Cq_{\\rm in}+D)=iz_R/(1-iz_R/f)\\)。有理化得到 \\(q_{\\rm out}=[-z_R^2/f+iz_R]/[1+(z_R/f)^2]\\)。出透镜后自由传播 \\(q(z)=q_{\\rm out}+z\\)，因此新束腰位置为 \\(z_f=z_R^2f/(f^2+z_R^2)>0\\)，新瑞利长度为 \\(z_R'=z_Rf^2/(f^2+z_R^2)\\)。\n\n(4) 当 \\(f\\gg z_R\\)，有 \\(z_f\\simeq z_R^2/f\\) 很小、\\(z_R'\\simeq z_R\\)，透镜仅轻微改变束腰；当 \\(f\\ll z_R\\)，有 \\(z_f\\simeq f\\)、\\(z_R'\\simeq f^2/z_R\\)，束腰压缩而发散增加。整个推导要求光束发散角及透镜引起的边缘光线倾角均远小于一弧度，且光学系统可近似为无像差薄透镜。\n"
+    },
+    {
+      "id": "O056",
+      "topic": "光学",
+      "title": "正入射四分之一波长增透膜的反射振幅、匹配折射率与带宽",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 90,
+      "tags": [
+        "薄膜干涉",
+        "矩阵光学",
+        "无反射匹配",
+        "色散"
+      ],
+      "answer": "r=(r_{01}+r_{12}e^{2i\\beta})/(1+r_{01}r_{12}e^{2i\\beta}),\\quad n_f=\\sqrt{n_0n_s}",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-B",
+      "question": "光从折射率 \\(n_0>0\\) 的无吸收入射介质正入射到折射率 \\(n_s>n_0\\) 的半无限基底，中间镀厚度 \\(d>0\\)、折射率 \\(n_f>0\\) 的无吸收单层薄膜。全部介质非磁性，膜内单程相位为 \\(\\beta=2\\pi n_fd/\\lambda\\)，以电场振幅 Fresnel 界面系数 \\(r_{ij}=(n_i-n_j)/(n_i+n_j)\\)。\n(1) 利用多重往返干涉求总电场反射振幅与反射率。\n(2) 在设计波长 \\(\\lambda_0\\) 满足四分之一波长相位时推导反射消失的折射率条件。\n(3) 检查裸基底极限与等折射率薄膜极限，并验证无吸收能流守恒。\n(4) 解释增透层的工作带宽限制与膜厚、折射率误差导致的残余反射。\n",
+      "solution": "(1) 在两个界面反射振幅分别 \\(r_{01}=(n_0-n_f)/(n_0+n_f)\\)、\\(r_{12}=(n_f-n_s)/(n_f+n_s)\\)。将薄膜内的多次反射场以往返相位 \\(e^{2i\\beta}\\) 求几何级数，可得总反射 \\(r=(r_{01}+r_{12}e^{2i\\beta})/(1+r_{01}r_{12}e^{2i\\beta})\\)，反射率 \\(R=|r|^2\\)。不可仅相加两次反射强度，因为不同光程的电场需要相干叠加。\n\n(2) 设计四分之一波长条件为 \\(n_fd=\\lambda_0/4\\)，即 \\(\\beta=\\pi/2\\)，往返因子为 \\(-1\\)，于是 \\(r=(r_{01}-r_{12})/(1-r_{01}r_{12})\\)。零反射要求 \\(r_{01}=r_{12}\\)，解两界面 Fresnel 比例得 \\(n_f^2=n_0n_s\\)，所以最优无耗散膜折射率是 \\(n_f=\\sqrt{n_0n_s}\\)。这是单层正入射严格消反射条件，依赖设计波长与材料色散。\n\n(3) 若 \\(n_f=n_0\\)，首界面反射为零，总反射幅度退化为 \\(r_{12}e^{2i\\beta}\\)，反射率为裸介质—基底值 \\([(n_0-n_s)/(n_0+n_s)]^2\\)，相位变化不影响强度。若 \\(n_f=n_s\\)，末界面无反射，仍得到相同裸界面反射率。三层体系无吸收且基底无限延展，合适的能流归一化下反射和透射功率之和为一，零反射时全部入射能量进入基底。\n\n(4) 光波长偏离 \\(\\lambda_0\\) 时 \\(\\beta=(\\pi/2)(\\lambda_0/\\lambda)\\) 不再是四分之一波长，两个主要反射场不能完全相消。若膜厚偏差 \\(\\delta d\\)，往返相位偏差约为 \\(\\delta(2\\beta)=4\\pi n_f\\delta d/\\lambda_0\\)，导致非零残余反射；折射率偏差破坏 \\(n_f^2=n_0n_s\\)，即使相位正确仍不能完全消除反射。宽带增透需多层或梯度折射率设计，不能外推单层的单频匹配结论。\n"
     }
   ]
 }
