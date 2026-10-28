@@ -16,7 +16,7 @@ from pathlib import Path
 from quality_gate_bulk import ROOT, parse_bank, validate
 
 FIELDS=("id","topic","title","kind","level","estimated_minutes","tags","answer",
-        "quality_status","tier","format","revision","challenge_profile")
+        "quality_status","tier","format","revision","challenge_profile","complexity_tier")
 def write_utf8(path,text):
     path.parent.mkdir(parents=True,exist_ok=True)
     path.write_text(text,encoding="utf-8")

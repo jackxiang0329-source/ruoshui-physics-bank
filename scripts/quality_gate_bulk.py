@@ -83,6 +83,10 @@ def validate(items, old=(), *, batch=False):
             score=near_score(signatures[a],signatures[b])
             if score>=REPEAT_CUTOFF:
                 errors.append(f"{a}/{b}: near duplicate 7-gram similarity={score:.3f}")
+    if batch:
+        for item in items:
+            if item.get("complexity_tier") not in ("L4-A","L4-B","L4-C","L5-A","L5-B","L5-C"):
+                errors.append(f'{item.get("id","?")}: missing advanced complexity band')
     if batch and len(items)>200:
         errors.append("batch exceeds 200 distinct problems; split into separate rounds")
     return errors
