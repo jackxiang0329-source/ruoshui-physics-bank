@@ -86,7 +86,7 @@ record("M052",1,"independent_derivation","rolling spool translation and rotation
 record("M052",2,"physical_case","effective spool inertia exceeds its translational mass",bool(me.subs({m:2,I:3,rr:2})>m.subs(m,2)))
 Z=k-me*Om**2+s.I*cc*Om
 record("M052",3,"symbolic","phasor spring and damping impedance balances applied force",eq(Z*(F0/Z),F0))
-record("M052",4,"conservation","dissipated power equals cycle average force input at sample",approx((cc*Om**2*F0**2/(2*s.Abs(Z)**2)).subs({m:2,I:1,rr:1,k:8,cc:1,Om:2,F0:3}),s.Rational(9,2)/((8-3*4)**2+4)/1 if False else (1*4*9/2)/(16+4)))
+record("M052",4,"conservation","dissipated power equals cycle average force input at sample",approx((cc*Om**2*F0**2/(2*s.Abs(Z)**2)).subs({m:2,I:1,rr:1,k:8,cc:1,Om:2,F0:3}),(1*4*9/2)/(16+4)))
 rrr,v,accel=s.symbols("rrr v accel",real=True)
 A=1+4*a*a*rrr**2
 Lag=m*A*v*v/2+m*Om**2*rrr**2/2-m*g*a*rrr**2
@@ -209,7 +209,7 @@ Rf,delta=s.symbols("Rf delta",positive=True)
 finesse=4*Rf/(1-Rf)**2
 Tairy=1/(1+finesse*s.sin(delta/2)**2)
 record("O050",1,"symbolic","Airy denominator follows directly from coherent etalon field sum",eq(Tairy,(1-Rf)**2/((1-Rf)**2+4*Rf*s.sin(delta/2)**2)))
-record("O050",2,"physical_case","adjacent etalon resonances have two-pi round-trip phase gap",eq(2*(s.pi*c/(n if False else (s.Symbol("nn",positive=True)*L)))*(s.Symbol("nn",positive=True)*L)/c,2*s.pi))
+record("O050",2,"physical_case","adjacent etalon resonances have two-pi round-trip phase gap",eq(2*(s.pi*c/(s.Symbol("nn",positive=True)*L))*(s.Symbol("nn",positive=True)*L)/c,2*s.pi))
 record("O050",3,"physical_case","lossless etalon has unit resonant intensity transmission",eq(Tairy.subs(delta,2*pi),1))
 record("O050",4,"limit","vanishing mirror reflectance eliminates frequency filtering",eq(s.limit(Tairy,Rf,0),1))
 dlt=s.symbols("dlt",real=True)
@@ -246,8 +246,8 @@ record("Q050",3,"independent_derivation","canonical derivative recovers zero-poi
 heat=sum((j*xx)**2*s.exp(j*xx)/(s.exp(j*xx)-1)**2 for j in (1,2,3))
 record("Q050",4,"limit","three oscillator heat capacity modes approach classical equipartition",eq(s.limit(heat,xx,0),3))
 alp,dist,kap=s.symbols("alp dist kap",positive=True)
-record("Q051",1,"symbolic","even double-delta jump condition reduces to expected exponential secular law",eq((kap*(1+s.tanh(kap*dist)))/2,alp) if False else eq(kap,alp*(1+s.exp(-2*kap*dist))) if False else eq(s.simplify(2*alp/(1+s.tanh(kap*dist))),alp*(1+s.exp(-2*kap*dist))))
-record("Q051",2,"independent_derivation","odd double-delta derivative-jump condition yields hyperbolic secular law",eq(2*alp/(1+s.coth(kap*dist)),alp*(1-s.exp(-2*kap*dist))))
+record("Q051",1,"symbolic","even double-delta jump condition reduces to expected exponential secular law",eq((2*alp/(1+s.tanh(kap*dist))-alp*(1+s.exp(-2*kap*dist))).rewrite(s.exp)))
+record("Q051",2,"independent_derivation","odd double-delta derivative-jump condition yields hyperbolic secular law",eq((2*alp/(1+s.coth(kap*dist))-alp*(1-s.exp(-2*kap*dist))).rewrite(s.exp)))
 record("Q051",3,"limit","odd bound state reaches threshold when twice coupling-distance equals unity",eq(s.limit(alp*(1-s.exp(-2*kap*dist))/kap,kap,0),2*alp*dist))
 ev=s.symbols("ev",positive=True)
 Eeven=-s.Rational(1,2)*(alp*(1+ev))**2;Eodd=-s.Rational(1,2)*(alp*(1-ev))**2
