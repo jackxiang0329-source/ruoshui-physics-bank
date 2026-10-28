@@ -617,7 +617,7 @@
         "恢复系数",
         "能量耗散"
       ],
-      "answer": "J=-(1+e)\\mu g_n,\\qquad \\Delta K=-\\mu(1-e^2)g_n^2/2",
+      "answer": "K_{\\rm before}-K_{\\rm after}=\\mu(1-e^2)g_n^2/2,\\quad J=-(1+e)\\mu g_n",
       "quality_status": "待独立复核",
       "tier": "advanced_composite",
       "format": "latex-fragment-v1",
@@ -648,7 +648,7 @@
       "challenge_profile": "high-multistage",
       "complexity_tier": "L5-B",
       "question": "理想球摆的摆球质量 \\(m\\)、无质量不可伸长细线长度 \\(\\ell\\)，固定悬点处于重力 \\(g>0\\) 中。取从竖直向下测量的极角 \\(\\theta\\in(0,\\pi)\\) 及方位角 \\(\\phi\\)，摆球所在曲面为半径 \\(\\ell\\) 的球面。绕竖直轴无外力矩，方位角广义动量为给定 \\(p_\\phi=L_z\\ne0\\)。忽略空气阻力。\n(1) 建立球坐标拉格朗日量并推出两个守恒量和 \\(\\theta\\) 的约化有效势。\n(2) 求匀速圆锥运动满足的精确条件，说明哪些平衡角对给定 \\(L_z\\) 可实现。\n(3) 在固定角动量下线性化极角运动，求圆锥摆极角微振动频率。\n(4) 检查缓慢圆周运动与近水平圆锥运动极限，给出线张力及物理约束。\n",
-      "solution": "(1) 速度平方为 \\(\\ell^2[\\dot\\theta^2+\\sin^2\\theta\\,\\dot\\phi^2]\\)，势能取 \\(U=mg\\ell(1-\\cos\\theta)\\)。拉格朗日量 \\(L=\\frac12m\\ell^2(\\dot\\theta^2+\\sin^2\\theta\\,\\dot\\phi^2)-U\\)。循环变量 \\(\\phi\\) 的守恒动量为 \\(L_z=m\\ell^2\\sin^2\\theta\\,\\dot\\phi\\)，从而 \\(\\dot\\phi=L_z/(m\\ell^2\\sin^2\\theta)\\)。把方位动能用固定角动量重写，得一维有效势 \\(U_{\\rm eff}=mg\\ell(1-\\cos\\theta)+L_z^2/[2m\\ell^2\\sin^2\\theta]\\)。\n\n(2) 有效势的驻点条件 \\(mg\\ell\\sin\\theta-L_z^2\\cos\\theta/[m\\ell^2\\sin^3\\theta]=0\\)，即 \\(L_z^2=m^2g\\ell^3\\sin^4\\theta/\\cos\\theta\\)。由于左侧正，必须 \\(\\cos\\theta>0\\)，故匀速圆锥态只有 \\(0<\\theta<\\pi/2\\)。定义角速度 \\(\\Omega=\\dot\\phi\\)，上述条件化为 \\(\\Omega^2=g/(\\ell\\cos\\theta)\\)，相当于水平方向向心加速度与竖向重力的同时平衡；对固定非零 \\(L_z\\)，右侧函数 \\(\\sin^4\\theta/\\cos\\theta\\) 从零单调增加至无穷，所以平衡角唯一。\n\n(3) 在固定 \\(L_z\\) 下计算有效势二阶导数 \\(U_{\\rm eff}''=mg\\ell\\cos\\theta+(L_z^2/(m\\ell^2))[1/\\sin^2\\theta+3\\cos^2\\theta/\\sin^4\\theta]\\)。在平衡点代入 \\(L_z^2/(m^2\\ell^3)=g\\sin^4\\theta_e/\\cos\\theta_e\\)，可化为 \\(U_{\\rm eff}''=mg\\ell[\\cos\\theta_e+g^0(\\sin^2\\theta_e+3\\cos^2\\theta_e)/\\cos\\theta_e]\\)，其中 \\(g^0=1\\) 仅表示无量纲系数，最终 \\(U_{\\rm eff}''=mg\\ell(1+3\\cos^2\\theta_e)/\\cos\\theta_e\\)。极角惯量为 \\(m\\ell^2\\)，故 \\(\\omega_\\theta^2=g(1+3\\cos^2\\theta_e)/(\\ell\\cos\\theta_e)>0\\)，证明圆锥运动对小极角扰动稳定。\n\n(4) 若 \\(\\theta_e\\to0\\)，圆周半径趋零，角速度 \\(\\Omega^2\\to g/\\ell\\)，而极角模式 \\(\\omega_\\theta\\to2\\sqrt{g/\\ell}\\)；当 \\(\\theta_e\\to\\pi/2^-\\)，\\(\\Omega\\) 与 \\(\\omega_\\theta\\) 同时发散，说明要维持近水平圆锥需要极大转速与张力。竖向平衡给细线张力 \\(T\\cos\\theta_e=mg\\)，所以 \\(T=mg/\\cos\\theta_e\\)。张力必须为正，若球摆允许到达绳松弛或支点碰撞状态，本约束模型需另行修正。\n"
+      "solution": "(1) 速度平方为 \\(\\ell^2[\\dot\\theta^2+\\sin^2\\theta\\,\\dot\\phi^2]\\)，势能取 \\(U=mg\\ell(1-\\cos\\theta)\\)。拉格朗日量 \\(L=\\frac12m\\ell^2(\\dot\\theta^2+\\sin^2\\theta\\,\\dot\\phi^2)-U\\)。循环变量 \\(\\phi\\) 的守恒动量为 \\(L_z=m\\ell^2\\sin^2\\theta\\,\\dot\\phi\\)，从而 \\(\\dot\\phi=L_z/(m\\ell^2\\sin^2\\theta)\\)。把方位动能用固定角动量重写，得一维有效势 \\(U_{\\rm eff}=mg\\ell(1-\\cos\\theta)+L_z^2/[2m\\ell^2\\sin^2\\theta]\\)。\n\n(2) 有效势的驻点条件 \\(mg\\ell\\sin\\theta-L_z^2\\cos\\theta/[m\\ell^2\\sin^3\\theta]=0\\)，即 \\(L_z^2=m^2g\\ell^3\\sin^4\\theta/\\cos\\theta\\)。由于左侧正，必须 \\(\\cos\\theta>0\\)，故匀速圆锥态只有 \\(0<\\theta<\\pi/2\\)。定义角速度 \\(\\Omega=\\dot\\phi\\)，上述条件化为 \\(\\Omega^2=g/(\\ell\\cos\\theta)\\)，相当于水平方向向心加速度与竖向重力的同时平衡；对固定非零 \\(L_z\\)，右侧函数 \\(\\sin^4\\theta/\\cos\\theta\\) 从零单调增加至无穷，所以平衡角唯一。\n\n(3) 在固定 \\(L_z\\) 下计算有效势二阶导数 \\(U_{\\rm eff}''=mg\\ell\\cos\\theta+(L_z^2/(m\\ell^2))[1/\\sin^2\\theta+3\\cos^2\\theta/\\sin^4\\theta]\\)。在平衡点代入 \\(L_z^2/(m^2\\ell^3)=g\\sin^4\\theta_e/\\cos\\theta_e\\)，可化为 \\(U_{\\rm eff}''=mg\\ell[\\cos\\theta_e+(\\sin^2\\theta_e+3\\cos^2\\theta_e)/\\cos\\theta_e]\\)，最终 \\(U_{\\rm eff}''=mg\\ell(1+3\\cos^2\\theta_e)/\\cos\\theta_e\\)。极角惯量为 \\(m\\ell^2\\)，故 \\(\\omega_\\theta^2=g(1+3\\cos^2\\theta_e)/(\\ell\\cos\\theta_e)>0\\)，证明圆锥运动对小极角扰动稳定。\n\n(4) 若 \\(\\theta_e\\to0\\)，圆周半径趋零，角速度 \\(\\Omega^2\\to g/\\ell\\)，而极角模式 \\(\\omega_\\theta\\to2\\sqrt{g/\\ell}\\)；当 \\(\\theta_e\\to\\pi/2^-\\)，\\(\\Omega\\) 与 \\(\\omega_\\theta\\) 同时发散，说明要维持近水平圆锥需要极大转速与张力。竖向平衡给细线张力 \\(T\\cos\\theta_e=mg\\)，所以 \\(T=mg/\\cos\\theta_e\\)。张力必须为正，若球摆允许到达绳松弛或支点碰撞状态，本约束模型需另行修正。\n"
     },
     {
       "id": "M058",
@@ -952,7 +952,7 @@
     {
       "id": "W055",
       "topic": "振动与波动",
-      "title": "无限长张紧弦的点质量散射、共振散射相位与高频反射",
+      "title": "无限长张紧弦的点质量散射、相位延迟与高频反射",
       "kind": "综合推导题",
       "level": 5,
       "estimated_minutes": 90,
@@ -970,7 +970,7 @@
       "challenge_profile": "high-multistage",
       "complexity_tier": "L5-B",
       "question": "无限长同质细弦的拉力为 \\(T>0\\)、线密度 \\(\\mu>0\\)，传播速率 \\(c=\\sqrt{T/\\mu}\\)、波数 \\(k=\\omega/c\\)。弦在 \\(x=0\\) 固接一可横向自由移动、质量为 \\(M>0\\) 的小珠，忽略其横向弹性回复及摩擦。左侧入射单位振幅的正向谐波，取时间因子 \\(e^{-i\\omega t}\\)。\n(1) 写出点质量处位移连续与横向动力学的力跳跃条件。\n(2) 推导振幅反射与透射系数 \\(r,t\\)，引入无量纲质量参数。\n(3) 验证任意频率下功率守恒并讨论低频及高频极限。\n(4) 分析质量增大时散射相位与位移响应，解释无质量缺陷的退化。\n",
-      "solution": "(1) 左侧波形 \\(y_L=e^{ikx-i\\omega t}+re^{-ikx-i\\omega t}\\)，右侧为 \\(y_R=te^{ikx-i\\omega t}\\)。弦在质量处不断裂，故位移连续给 \\(1+r=t\\)。小珠受左右张力的净横向力为 \\(T[y_x(0^+)-y_x(0^-)]\\)，其牛顿方程是 \\(T[y_x(0^+)-y_x(0^-)]=-M\\omega^2y(0)\\)。跳跃方向由两端拉力指向反向决定，不应把点质量当成固定端。\n\n(2) 导数跳跃为 \\(ikT[t-(1-r)]=2ikTr\\)，所以 \\(2ikTr=-M\\omega^2t=-M\\omega^2(1+r)\\)。令 \\(\\zeta=M\\omega/(2T k/\\omega)=M\\omega/(2\\sqrt{T\\mu})\\)；更直接由 \\(2Tk=M\\omega^2/\\zeta\\)，故 \\(r=-i\\zeta/(1+i\\zeta)\\)，\\(t=1/(1+i\\zeta)\\) 在选取 \\(e^{-i\\omega t}\\) 时可通过原式代入核验：\\(2i r=-2\\zeta t\\) 推出 \\(r=i\\zeta/(1-i\\zeta)\\)，\\(t=1/(1-i\\zeta)\\)。后者是与所给跳跃符号严格一致的表达，前一组对应不同的力跳跃约定，不可混用。\n\n(3) 采用由跳跃方程确定的 \\(r=i\\zeta/(1-i\\zeta)\\)、\\(t=1/(1-i\\zeta)\\)，有 \\(|r|^2=\\zeta^2/(1+\\zeta^2)\\)、\\(|t|^2=1/(1+\\zeta^2)\\)，二者和为一。因左右弦张力及线密度相同，能流权重相同，这就是整个无耗散点质量散射的功率守恒。若 \\(\\omega\\to0\\)，\\(\\zeta\\to0\\) 则反射趋零；\\(\\omega\\to\\infty\\) 时 \\(|r|\\to1\\) 且透射趋零。\n\n(4) 由于 \\(\\zeta=M\\omega/(2\\sqrt{T\\mu})\\)，质量越大或频率越高，对弦的惯性障碍越强，点处透射振幅大小 \\(1/\\sqrt{1+\\zeta^2}\\) 越低，反射相位也由复杂阻抗决定。若 \\(M\\to0\\)，\\(r\\to0,t\\to1\\)，弦退化为完全均匀无缺陷传播。该点质量模型没有自身弹簧，因此不具有限频孤立局部共振；若观察到窄线共振必须增加局部回复力或其他物理结构。\n"
+      "solution": "(1) 左侧波形 \\(y_L=e^{ikx-i\\omega t}+re^{-ikx-i\\omega t}\\)，右侧为 \\(y_R=te^{ikx-i\\omega t}\\)。弦在质量处不断裂，故位移连续给 \\(1+r=t\\)。小珠受左右张力的净横向力为 \\(T[y_x(0^+)-y_x(0^-)]\\)，其牛顿方程是 \\(T[y_x(0^+)-y_x(0^-)]=-M\\omega^2y(0)\\)。跳跃方向由两端拉力指向反向决定，不应把点质量当成固定端。\n\n(2) 导数跳跃为 \\(ikT[t-(1-r)]=2ikTr\\)，所以 \\(2ikTr=-M\\omega^2t=-M\\omega^2(1+r)\\)。令 \\(\\zeta=M\\omega/(2T k/\\omega)=M\\omega/(2\\sqrt{T\\mu})\\)；更直接由 \\(2Tk=M\\omega^2/\\zeta\\)，故 \\(r=-i\\zeta/(1+i\\zeta)\\)，\\(t=1/(1+i\\zeta)\\) 在选取 \\(e^{-i\\omega t}\\) 时可通过原式代入核验：\\(2i r=-2\\zeta t\\) 推出 \\(r=i\\zeta/(1-i\\zeta)\\)，\\(t=1/(1-i\\zeta)\\)。后者是与所给跳跃符号严格一致的表达，取定上述跳跃符号后，不能再随意改变散射相位的正负号。\n\n(3) 采用由跳跃方程确定的 \\(r=i\\zeta/(1-i\\zeta)\\)、\\(t=1/(1-i\\zeta)\\)，有 \\(|r|^2=\\zeta^2/(1+\\zeta^2)\\)、\\(|t|^2=1/(1+\\zeta^2)\\)，二者和为一。因左右弦张力及线密度相同，能流权重相同，这就是整个无耗散点质量散射的功率守恒。若 \\(\\omega\\to0\\)，\\(\\zeta\\to0\\) 则反射趋零；\\(\\omega\\to\\infty\\) 时 \\(|r|\\to1\\) 且透射趋零。\n\n(4) 由于 \\(\\zeta=M\\omega/(2\\sqrt{T\\mu})\\)，质量越大或频率越高，对弦的惯性障碍越强，点处透射振幅大小 \\(1/\\sqrt{1+\\zeta^2}\\) 越低，反射相位也由复杂阻抗决定。若 \\(M\\to0\\)，\\(r\\to0,t\\to1\\)，弦退化为完全均匀无缺陷传播。该点质量模型没有自身弹簧，因此不具有限频孤立局部共振；若观察到窄线共振必须增加局部回复力或其他物理结构。\n"
     },
     {
       "id": "O053",

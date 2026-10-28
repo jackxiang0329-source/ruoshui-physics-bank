@@ -58,7 +58,7 @@ def check():
             reject("future round numbers must be consecutive starting at 11")
         entry=load(path)
         ids=entry.get("ids")
-        if not isinstance(ids,list) or len(ids)!=50 or len(set(ids))!=100:
+        if not isinstance(ids,list) or len(ids)!=50 or len(set(ids))!=50:
             reject(f"round {round_no}: exactly 50 distinct IDs required")
         for k,v in (("base_count",252+50*index),("active_total",302+50*index),
                     ("target_new_items",50),("actual_new_items",50)):
