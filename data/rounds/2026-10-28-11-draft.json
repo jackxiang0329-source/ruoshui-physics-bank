@@ -2,9 +2,9 @@
   "date": "2026-10-28",
   "round": 11,
   "stage": "draft-not-admitted",
-  "target_new_items": 100,
+  "target_new_items": 50,
   "baseline_total": 252,
-  "description": "Working set only: no main-branch merge or published problem count until 100 items, executable checks, and PDF CI pass",
+  "description": "Work in progress: revised target 50; no main-branch admission before 50 complete, 200 runnable checks and dual PDFs",
   "items": [
     {
       "id": "M050",
@@ -557,6 +557,121 @@
       "complexity_tier": "L5-C",
       "question": "两自旋 \\(1/2\\) 粒子处于 Werner 型混合态 \\(\\rho_v=v|\\psi^-\\rangle\\langle\\psi^-|+(1-v)I_4/4\\)，其中 \\(|\\psi^-\\rangle=(|01\\rangle-|10\\rangle)/\\sqrt2\\)，可见度 \\(0\\le v\\le1\\)。两端分别沿单位矢量 \\(\\mathbf a,\\mathbf b\\) 作 Pauli 自旋测量，结果 \\(s,t\\in\\{\\pm1\\}\\)。研究局域边缘概率及 Bell--CHSH 联合关联量。\n(1) 计算联合结果概率 \\(P(s,t|\\mathbf a,\\mathbf b)\\) 和两端的边缘概率。\n(2) 推导相关函数 \\(E(\\mathbf a,\\mathbf b)\\)，解释白噪声混合造成的幅度下降。\n(3) 取 \\(\\mathbf a=\\hat z,\\mathbf a'=\\hat x,\\mathbf b=(\\hat z+\\hat x)/\\sqrt2,\\mathbf b'=(\\hat z-\\hat x)/\\sqrt2\\)，求 CHSH 组合与违反局域隐藏变量界的阈值。\n(4) 用算符范数给出量子上界 \\(2\\sqrt2\\)，说明无信号传递与 Bell 违背可以同时成立。\n",
       "solution": "(1) 沿 \\(\\mathbf a\\) 的测量投影算符为 \\(P_s^{\\mathbf a}=[I+s(\\mathbf a\\cdot\\boldsymbol\\sigma)]/2\\)，另一端同理。联合概率 \\(P(s,t)=\\operatorname{Tr}[\\rho_v(P_s^{\\mathbf a}\\otimes P_t^{\\mathbf b})]\\)。自旋单态满足 \\(\\langle\\sigma_i\\otimes\\sigma_j\\rangle=-\\delta_{ij}\\)，且每端单独平均自旋为零；白噪声 \\(I_4/4\\) 也只有均匀边缘分布。展开迹得 \\(P(s,t|\\mathbf a,\\mathbf b)=\\frac14[1-vst\\,\\mathbf a\\cdot\\mathbf b]\\)，只要 \\(0\\le v\\le1\\) 便为合法非负联合分布。\n\n(2) 关联函数定义 \\(E(\\mathbf a,\\mathbf b)=\\sum_{s,t=\\pm1}st\\,P(s,t|\\mathbf a,\\mathbf b)\\)。将联合概率代入，有常数项的 \\(st\\) 求和为零，\\(s^2t^2\\) 的四项和为四，因此 \\(E=-v\\,\\mathbf a\\cdot\\mathbf b\\)。纯单态 \\(v=1\\) 时若 \\(\\mathbf a=\\mathbf b\\)，关联为完全反相关 \\(-1\\)；当 \\(v=0\\) 时 \\(E=0\\)，表示独立白噪声。混合系数在测量关联中线性出现，而不意味着单个量子自旋的测量本征值被连续压缩。\n\n(3) 取 \\(S=E(\\mathbf a,\\mathbf b)+E(\\mathbf a,\\mathbf b')+E(\\mathbf a',\\mathbf b)-E(\\mathbf a',\\mathbf b')\\)。给定四个方向有前三项分别 \\(-v/\\sqrt2,-v/\\sqrt2,-v/\\sqrt2\\)，最后一项 \\(+v/\\sqrt2\\)。所以 \\(S=-2\\sqrt2\\,v\\)，其绝对值 \\(2\\sqrt2\\,v\\)。任何局域隐藏变量模型满足 \\(|S|\\le2\\)，故这个测量设置当且仅当 \\(v>1/\\sqrt2\\) 时违反 CHSH 界。较小 \\(v\\) 下不违反本设置的 CHSH，并不等价于严格证明态完全可分；需要独立的纠缠判据。\n\n(4) 令两端观测量 \\(A,A',B,B'\\) 为平方等于单位阵的厄米算符，CHSH 算符 \\(\\mathcal B=A\\otimes(B+B')+A'\\otimes(B-B')\\)。计算平方得 \\(\\mathcal B^2=4I-[A,A']\\otimes[B,B']\\)，而 \\(\\|[A,A']\\|\\le2,\\ \\|[B,B']\\|\\le2\\)，所以 \\(\\|\\mathcal B\\|^2\\le8\\)，即 Tsirelson 上界 \\(|\\langle\\mathcal B\\rangle|\\le2\\sqrt2\\)。另一方面由第一问 \\(\\sum_tP(s,t)=1/2\\) 与远方选取 \\(\\mathbf b\\) 无关，故边缘统计不传递信号。Bell 非局域关联与不能超光速通信并不矛盾。\n"
+    },
+    {
+      "id": "M054",
+      "topic": "力学",
+      "title": "径向伸缩刚性约束下质点的角动量守恒与外驱功",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 90,
+      "tags": [
+        "时变几何约束",
+        "角动量守恒",
+        "径向约束力",
+        "外驱功率"
+      ],
+      "answer": "\\dot\\phi=\\omega_0(1+\\eta t)^{-2},\\quad W=\\frac{mr_0^2\\omega_0^2}{2}[(1+\\eta t)^{-2}-1]",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-B",
+      "question": "质量 \\(m\\) 的小珠在水平无摩擦平面上沿由中心控制的细直槽滑动，珠到中心的距离由理想执行器强制为 \\(r(t)=r_0(1+\\eta t)>0\\)，其中 \\(r_0>0,\\eta>0\\)。槽能自由绕固定中心旋转，且槽自身的转动惯量可忽略。初始珠角速度为 \\(\\omega_0>0\\)，初态径向速度为 \\(r_0\\eta\\)。忽略空气阻力和轴摩擦。\n(1) 证明珠关于中心的角动量守恒，求 \\(\\dot\\phi(t)\\) 与转角函数。\n(2) 求切向约束力和执行器必须施加的径向力，分别指出它们的作功率。\n(3) 求从时刻零到时刻 \\(t\\) 珠的动能变化和执行器总作功，检查机械功收支。\n(4) 计算角速度趋零时的渐近规律，并解释执行器反向拉回时能量回收条件。\n",
+      "solution": "(1) 槽可旋转且无外部方位力矩，珠受到的槽法向约束力并不在外部系统中生成净力矩；把自由旋转槽与珠视为整体可得 \\(L_z=mr^2\\dot\\phi=mr_0^2\\omega_0\\)。因此 \\(\\dot\\phi=\\omega_0/(1+\\eta t)^2\\)，积分给 \\(\\phi(t)-\\phi(0)=\\omega_0 t/(1+\\eta t)\\)。若固定槽方位不允许自由转动，则会有外部轴力矩，本结论不成立；本题特意规定槽可自由转动。\n\n(2) 质点在极坐标的切向加速度是 \\(r\\ddot\\phi+2\\dot r\\dot\\phi=0\\)，所以无须外部切向力来改变角速度；径向加速度 \\(a_r=\\ddot r-r\\dot\\phi^2=-r\\dot\\phi^2\\)。执行器施加径向合力 \\(F_r=-mr\\dot\\phi^2=-mr_0\\omega_0^2/(1+\\eta t)^3\\)，为使半径持续增大必须做负功。假设槽无惯性，切向约束力恒零；若槽有惯性则要联合其角动量重新建模。\n\n(3) 动能 \\(K=m[\\dot r^2+r^2\\dot\\phi^2]/2=(m/2)[r_0^2\\eta^2+r_0^2\\omega_0^2/(1+\\eta t)^2]\\)。径向强制速度恒定，故 \\(\\Delta K=(mr_0^2\\omega_0^2/2)[(1+\\eta t)^{-2}-1]\\)。外驱功 \\(W=\\int_0^tF_r\\dot r\\,dt'=-mr_0^2\\eta\\omega_0^2\\int_0^t(1+\\eta t')^{-3}dt'\\)，恰等于上述动能变化。负号表示向外伸长时，角向转动动能由执行器回收。\n\n(4) 当 \\(t\\to\\infty\\) 时 \\(\\dot\\phi\\sim\\omega_0/(\\eta t)^2\\)，角向速度 \\(r\\dot\\phi\\sim r_0\\omega_0/(\\eta t)\\)，角动能趋零，但固定速率径向动能仍非零。若执行器反向以无损、准静态的方式收回，径向力方向与速度可能相同而对珠做正功，将已存储的机械能返还；有粘滞摩擦或控制器内部耗散时不能保证完整回收。角动量守恒不等于机械能守恒，因为时变径向约束显式作功。\n"
+    },
+    {
+      "id": "M055",
+      "topic": "力学",
+      "title": "可自由转动圆盘上径向弹簧滑珠的相对平衡与小振动",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 90,
+      "tags": [
+        "转动对称性",
+        "有效离心势",
+        "固定角动量",
+        "径向稳定性"
+      ],
+      "answer": "k(r_e-r_0)=\\frac{J^2mr_e}{(I+mr_e^2)^2},\\qquad\\omega_r^2=\\frac{kr_0}{mr_e}+\\frac{4J^2mr_e^2}{(I+mr_e^2)^3}",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-B",
+      "question": "水平光滑圆盘绕固定竖直轴自由旋转，转动惯量 \\(I>0\\)；质量 \\(m>0\\) 的小珠被无摩擦径向槽约束，距中心 \\(r>0\\)，通过劲度 \\(k>0\\)、自然长度 \\(r_0>0\\) 的弹簧连接轴心。无外界轴向力矩，圆盘与珠共享方位角 \\(\\phi(t)\\)，系统总竖轴角动量为给定 \\(J>0\\)。忽略槽和弹簧质量并限于 \\(r>0\\)。\n(1) 建立拉格朗日量与守恒总角动量，消去循环坐标 \\(\\phi\\)。\n(2) 给出径向有效势和相对平衡半径的隐式方程，证明正半径平衡唯一。\n(3) 求平衡点附近径向小振动频率以及角速度随半径的响应。\n(4) 求固定角动量下的系统总能量，验证稳定性并讨论 \\(I\\to\\infty\\) 的极限。\n",
+      "solution": "(1) 盘和珠共享角速度，故 \\(T=\\frac12m\\dot r^2+\\frac12(I+mr^2)\\dot\\phi^2\\)，弹簧势 \\(V=k(r-r_0)^2/2\\)。循环坐标 \\(\\phi\\) 的广义动量为 \\(p_\\phi=(I+mr^2)\\dot\\phi=J\\)，并由轴向无外力矩严格守恒。代入解得 \\(\\dot\\phi(r)=J/(I+mr^2)\\)。固定角动量约化可从 Routh 函数或总能量得到一维有效势，而不是把 \\(\\dot\\phi\\) 误当外部控制的常数。\n\n(2) 径向能量写 \\(E=m\\dot r^2/2+U_{\\rm eff}(r)\\)，\\(U_{\\rm eff}(r)=k(r-r_0)^2/2+J^2/[2(I+mr^2)]\\)。求导得 \\(U'_{\\rm eff}=k(r-r_0)-J^2mr/(I+mr^2)^2\\)。平衡必须满足 \\(k(r_e-r_0)=J^2mr_e/(I+mr_e^2)^2\\)，故 \\(r_e>r_0\\)。将等式改写成 \\(k[1-r_0/r_e]=J^2m/(I+mr_e^2)^2\\)：左边对 \\(r>r_0\\) 严格递增、右边严格递减，且在两端分别一小一大，故唯一交点存在。\n\n(3) 有效势二阶导数 \\(U''_{\\rm eff}=k-J^2m(I-3mr^2)/(I+mr^2)^3\\)。在平衡处还可由 \\(k-J^2m/(I+mr_e^2)^2=k r_0/r_e\\) 改写为 \\(U''_{\\rm eff}(r_e)=kr_0/r_e+4J^2m^2r_e^2/(I+mr_e^2)^3>0\\)。故径向小振动频率 \\(\\omega_r^2=U''_{\\rm eff}(r_e)/m\\)；角速度对小位移的线性响应 \\(\\delta\\dot\\phi=-2Jmr_e\\delta r/(I+mr_e^2)^2\\)，因此径向振动伴随旋转速率的反相微调。\n\n(4) 系统总能量 \\(E=\\frac12m\\dot r^2+\\frac12k(r-r_0)^2+\\frac{J^2}{2(I+mr^2)}\\)，由于 \\(U_{\\rm eff}\\) 在唯一平衡处有正曲率且当 \\(r\\to\\infty\\) 势能发散，该平衡是约束于固定 \\(J\\) 的稳定能量极小。若 \\(I\\to\\infty\\) 而 \\(J\\) 固定，盘角速度趋零，平衡 \\(r_e\\to r_0\\)、\\(\\omega_r\\to\\sqrt{k/m}\\)，退化为静止直槽中的普通弹簧滑块。若取极限时让 \\(J/I\\) 固定则得到另一个物理驱动条件，不能混同。\n"
+    },
+    {
+      "id": "M056",
+      "topic": "力学",
+      "title": "二维光滑硬球斜碰的法向冲量、质心散射角与能量损失",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 90,
+      "tags": [
+        "碰撞冲量",
+        "相对速度分解",
+        "恢复系数",
+        "能量耗散"
+      ],
+      "answer": "J=-(1+e)\\mu g_n,\\qquad \\Delta K=-\\mu(1-e^2)g_n^2/2",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-B",
+      "question": "质量分别 \\(m_1,m_2>0\\) 的两光滑硬球在水平无外力空间发生一次短时碰撞。碰撞瞬间从球2指向球1的单位法向量为 \\(\\mathbf n\\)，碰前速度为 \\(\\mathbf v_1,\\mathbf v_2\\)，相对法向速度 \\(g_n=(\\mathbf v_1-\\mathbf v_2)\\cdot\\mathbf n<0\\)；光滑无切向冲量，法向恢复系数 \\(e\\in[0,1]\\)。记约化质量 \\(\\mu=m_1m_2/(m_1+m_2)\\)。\n(1) 利用动量守恒与恢复系数定义求冲量及两球碰后速度矢量。\n(2) 证明碰后相对切向速度不变而法向速度反号乘 \\(e\\)，计算动能损失。\n(3) 写出质心速度与质心系碰撞前后相对动能的表达，讨论 \\(e=1\\) 与 \\(e=0\\)。\n(4) 对实验室中2球初始静止、1球以速率 \\(v\\) 入射的特例，求法向冲量、1球速度的两个分量，并检查一维正碰极限。\n",
+      "solution": "(1) 令作用在球1上的冲量为 \\(+J\\mathbf n\\)，作用在球2上的为 \\(-J\\mathbf n\\)。冲量动量定理给 \\(\\mathbf v_1'=\\mathbf v_1+(J/m_1)\\mathbf n\\)、\\(\\mathbf v_2'=\\mathbf v_2-(J/m_2)\\mathbf n\\)。恢复系数要求 \\((\\mathbf v_1'-\\mathbf v_2')\\cdot\\mathbf n=-e g_n\\)，代入后 \\(g_n+J(1/m_1+1/m_2)=-e g_n\\)，故 \\(J=-(1+e)\\mu g_n>0\\)。它是法向排斥冲量，与 \\(g_n<0\\) 的碰撞前接近约定相符。\n\n(2) 相对速度差为 \\(\\mathbf g'=\\mathbf g+(J/\\mu)\\mathbf n=\\mathbf g-(1+e)g_n\\mathbf n\\)。因此分解成 \\(\\mathbf g_\\parallel=g_n\\mathbf n\\) 和 \\(\\mathbf g_\\perp=\\mathbf g-g_n\\mathbf n\\) 后有 \\(\\mathbf g_\\perp'=\\mathbf g_\\perp\\)、\\(g_n'=-eg_n\\)。总动量守恒使质心动能不变，损失只来自相对法向动能，故 \\(K_{\\rm before}-K_{\\rm after}=\\frac12\\mu(g_n^2-e^2g_n^2)=\\mu(1-e^2)g_n^2/2\\ge0\\)。若有人写出切向动能损失，则与光滑接触无摩擦条件冲突。\n\n(3) 质心速度 \\(\\mathbf V=(m_1\\mathbf v_1+m_2\\mathbf v_2)/(m_1+m_2)\\) 在冲击前后相同。总动能可严格分解为 \\(\\frac12(m_1+m_2)V^2+\\frac12\\mu|\\mathbf g|^2\\)。弹性碰撞 \\(e=1\\) 时法向相对速度反号而模长不变，因此相对动能完全保持；完全非弹性法向 \\(e=0\\) 时两球法向分速度相同，但切向仍可不同，不能自动断言它们黏合或全部相对速度为零。\n\n(4) 令球2碰前静止，球1速度 \\(\\mathbf v_1=v(\\cos\\beta\\,\\mathbf n+\\sin\\beta\\,\\mathbf t)\\)，其实际接近要求 \\(\\cos\\beta<0\\)。则 \\(g_n=v\\cos\\beta\\)，冲量 \\(J=-(1+e)\\mu v\\cos\\beta\\)，球1碰后法向分量 \\(v'_{1n}=v\\cos\\beta[1-(1+e)m_2/(m_1+m_2)]\\)，切向分量 \\(v'_{1t}=v\\sin\\beta\\)。若取一维正碰 \\(\\beta=\\pi\\)，两个球的法向速度遵从标准一维恢复系数公式；\\(e=1,m_1=m_2\\) 时入射球法向分量消失并由静止球接收，和等质量弹性正碰一致。\n"
+    },
+    {
+      "id": "M057",
+      "topic": "力学",
+      "title": "球摆匀速圆锥运动的存在性、有效势与径向小振动",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 90,
+      "tags": [
+        "球坐标拉格朗日量",
+        "角动量约化",
+        "圆锥摆",
+        "小振动稳定"
+      ],
+      "answer": "\\Omega^2=g/(\\ell\\cos\\theta_e),\\quad\\omega_\\theta^2=g(1+3\\cos^2\\theta_e)/(\\ell\\cos\\theta_e)",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-B",
+      "question": "理想球摆的摆球质量 \\(m\\)、无质量不可伸长细线长度 \\(\\ell\\)，固定悬点处于重力 \\(g>0\\) 中。取从竖直向下测量的极角 \\(\\theta\\in(0,\\pi)\\) 及方位角 \\(\\phi\\)，摆球所在曲面为半径 \\(\\ell\\) 的球面。绕竖直轴无外力矩，方位角广义动量为给定 \\(p_\\phi=L_z\\ne0\\)。忽略空气阻力。\n(1) 建立球坐标拉格朗日量并推出两个守恒量和 \\(\\theta\\) 的约化有效势。\n(2) 求匀速圆锥运动满足的精确条件，说明哪些平衡角对给定 \\(L_z\\) 可实现。\n(3) 在固定角动量下线性化极角运动，求圆锥摆极角微振动频率。\n(4) 检查缓慢圆周运动与近水平圆锥运动极限，给出线张力及物理约束。\n",
+      "solution": "(1) 速度平方为 \\(\\ell^2[\\dot\\theta^2+\\sin^2\\theta\\,\\dot\\phi^2]\\)，势能取 \\(U=mg\\ell(1-\\cos\\theta)\\)。拉格朗日量 \\(L=\\frac12m\\ell^2(\\dot\\theta^2+\\sin^2\\theta\\,\\dot\\phi^2)-U\\)。循环变量 \\(\\phi\\) 的守恒动量为 \\(L_z=m\\ell^2\\sin^2\\theta\\,\\dot\\phi\\)，从而 \\(\\dot\\phi=L_z/(m\\ell^2\\sin^2\\theta)\\)。把方位动能用固定角动量重写，得一维有效势 \\(U_{\\rm eff}=mg\\ell(1-\\cos\\theta)+L_z^2/[2m\\ell^2\\sin^2\\theta]\\)。\n\n(2) 有效势的驻点条件 \\(mg\\ell\\sin\\theta-L_z^2\\cos\\theta/[m\\ell^2\\sin^3\\theta]=0\\)，即 \\(L_z^2=m^2g\\ell^3\\sin^4\\theta/\\cos\\theta\\)。由于左侧正，必须 \\(\\cos\\theta>0\\)，故匀速圆锥态只有 \\(0<\\theta<\\pi/2\\)。定义角速度 \\(\\Omega=\\dot\\phi\\)，上述条件化为 \\(\\Omega^2=g/(\\ell\\cos\\theta)\\)，相当于水平方向向心加速度与竖向重力的同时平衡；对固定非零 \\(L_z\\)，右侧函数 \\(\\sin^4\\theta/\\cos\\theta\\) 从零单调增加至无穷，所以平衡角唯一。\n\n(3) 在固定 \\(L_z\\) 下计算有效势二阶导数 \\(U_{\\rm eff}''=mg\\ell\\cos\\theta+(L_z^2/(m\\ell^2))[1/\\sin^2\\theta+3\\cos^2\\theta/\\sin^4\\theta]\\)。在平衡点代入 \\(L_z^2/(m^2\\ell^3)=g\\sin^4\\theta_e/\\cos\\theta_e\\)，可化为 \\(U_{\\rm eff}''=mg\\ell[\\cos\\theta_e+g^0(\\sin^2\\theta_e+3\\cos^2\\theta_e)/\\cos\\theta_e]\\)，其中 \\(g^0=1\\) 仅表示无量纲系数，最终 \\(U_{\\rm eff}''=mg\\ell(1+3\\cos^2\\theta_e)/\\cos\\theta_e\\)。极角惯量为 \\(m\\ell^2\\)，故 \\(\\omega_\\theta^2=g(1+3\\cos^2\\theta_e)/(\\ell\\cos\\theta_e)>0\\)，证明圆锥运动对小极角扰动稳定。\n\n(4) 若 \\(\\theta_e\\to0\\)，圆周半径趋零，角速度 \\(\\Omega^2\\to g/\\ell\\)，而极角模式 \\(\\omega_\\theta\\to2\\sqrt{g/\\ell}\\)；当 \\(\\theta_e\\to\\pi/2^-\\)，\\(\\Omega\\) 与 \\(\\omega_\\theta\\) 同时发散，说明要维持近水平圆锥需要极大转速与张力。竖向平衡给细线张力 \\(T\\cos\\theta_e=mg\\)，所以 \\(T=mg/\\cos\\theta_e\\)。张力必须为正，若球摆允许到达绳松弛或支点碰撞状态，本约束模型需另行修正。\n"
+    },
+    {
+      "id": "M058",
+      "topic": "力学",
+      "title": "铰支弹性梁的欧拉屈曲载荷、Rayleigh 商与第一模态选择",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 90,
+      "tags": [
+        "变分原理",
+        "Euler-Bernoulli梁",
+        "本征值稳定性",
+        "弹性势能"
+      ],
+      "answer": "P_{\\rm cr}=\\pi^2 EI/L^2,\\qquad P_n=n^2\\pi^2EI/L^2",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-B",
+      "question": "一根长 \\(L>0\\) 的均匀细梁沿水平 \\(x\\) 轴，两端理想铰支，弯曲刚度 \\(EI>0\\)，在轴向承受恒定压缩死载 \\(P>0\\)。小横向挠度为 \\(w(x)\\)，端点约束 \\(w(0)=w(L)=0\\)，两端弯矩为零 \\(w''(0)=w''(L)=0\\)。忽略剪切变形、轴向伸缩二次修正及屈曲后的大变形，仅分析线性屈曲门槛。\n(1) 由二阶势能给出线性弯曲—压缩平衡方程，明确各端边界条件。\n(2) 通过正弦本征模求全套临界载荷并指出最先出现的屈曲形态。\n(3) 利用 Rayleigh 商与积分不等式证明第一临界载荷是全局最低失稳阈值。\n(4) 写出首模态振幅的二阶能量，讨论超过临界后线性理论为什么不能决定稳定有限幅值。\n",
+      "solution": "(1) 梁弯曲应变能 \\(U_b=(EI/2)\\int_0^L(w'')^2dx\\)，轴向恒压缩死载因几何缩短而做功，对应势能贡献 \\(U_P=-(P/2)\\int_0^L(w')^2dx\\)。总二阶势能 \\(\\Pi_2=U_b+U_P\\)。变分并两次分部积分得到内部 Euler--Lagrange 方程 \\(EIw''''+Pw''=0\\)。铰支位移固定 \\(w(0)=w(L)=0\\)，自然弯矩条件 \\(EIw''(0)=EIw''(L)=0\\)，排除了固支边界的错误基频。\n\n(2) 取满足铰支条件的 \\(w_n=A_n\\sin(n\\pi x/L)\\)（整数 \\(n\\ge1\\)）。代入平衡方程，得到 \\([EI(n\\pi/L)^4-P(n\\pi/L)^2]A_n=0\\)，非零振幅要求 \\(P_n=EI(n\\pi/L)^2\\)。这些特征载荷按 \\(n^2\\) 单调增加，最先出现的第一失稳为 \\(P_{\\rm cr}=\\pi^2EI/L^2\\)，对应正弦单半波形状。高阶模态虽也是形式本征解，但不能在达到第一临界之前由零态自发失稳。\n\n(3) 稳定直梁需要二阶势能对所有非零允许扰动严格为正。由 Fourier 正弦级数或 Poincaré 不等式，对于满足端位移条件的 \\(w\\)，有 \\(\\int_0^L(w'')^2dx\\ge(\\pi/L)^2\\int_0^L(w')^2dx\\)。因此 \\(\\Pi_2\\ge[EI(\\pi/L)^2-P]\\int_0^L(w')^2dx/2\\)。若 \\(P<P_{\\rm cr}\\) 所有非零扰动均使势能增加；若 \\(P>P_{\\rm cr}\\)，选择第一正弦模可使 \\(\\Pi_2<0\\)。于是 Rayleigh 商 \\(EI\\int(w'')^2/\\int(w')^2\\) 的极小值恰为 \\(P_{\\rm cr}\\)。\n\n(4) 令 \\(w=A\\sin(\\pi x/L)\\)，直接积分给 \\(\\Pi_2(A)=A^2L[EI\\pi^4/L^4-P\\pi^2/L^2]/4=\\pi^2A^2[P_{\\rm cr}-P]/(4L)\\)。当 \\(P=P_{\\rm cr}\\)，二阶项恰为零并不能断言任意振幅皆为平衡；当 \\(P>P_{\\rm cr}\\)，二阶理论仅说明直梁失稳，不能预测屈曲后的幅值或后屈曲分支。稳定有限挠度依赖几何非线性、轴向伸缩与载荷控制方式，高阶能量必须重新建立。\n"
     }
   ]
 }
