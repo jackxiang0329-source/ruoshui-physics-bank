@@ -285,7 +285,7 @@ record("M056",1,"symbolic","collision impulse sends approaching normal velocity 
 record("M056",2,"conservation","collision normal kinetic loss is proportional to one minus restitution squared",eq((red*gval**2-red*(e*gval)**2)/2,red*(1-e**2)*gval**2/2))
 u1,u2=s.symbols("u1 u2",real=True)
 record("M056",3,"conservation","opposite collisional impulses preserve linear momentum",eq(m1*(u1+Jimp/m1)+m2*(u2-Jimp/m2),m1*u1+m2*u2))
-record("M056",4,"physical_case","equal-mass elastic head-on collision swaps normal velocities",eq((u1-Jimp.subs({red:s.Rational(1,2),e:1,gval:u1-u2})/s.Rational(1,1)).subs({u1:-1,u2:0}),0) if False else eq((u1+Jimp).subs({u1:-1,u2:0,red:s.Rational(1,2),e:1,gval:-1}),0))
+record("M056",4,"physical_case","equal-mass elastic head-on collision swaps normal velocities",eq((u1+Jimp).subs({u1:-1,u2:0,red:s.Rational(1,2),e:1,gval:-1}),0))
 theta,ell,JJ2=s.symbols("theta ell JJ2",positive=True)
 uecon=m*g*ell*(1-s.cos(theta))+JJ2**2/(2*m*ell**2*s.sin(theta)**2)
 record("M057",1,"symbolic","spherical pendulum conserved azimuthal momentum matches circular kinetic term",eq(s.diff(m*ell**2*s.sin(theta)**2*s.Symbol("omega_phi")**2/2,s.Symbol("omega_phi")),m*ell**2*s.sin(theta)**2*s.Symbol("omega_phi")))
@@ -340,7 +340,7 @@ record("E058",4,"physical_case","equal electric field gives same Maxwell pressur
 # Thermodynamics: sonic choking, Joule-Thomson limit, mixing, endoreversible power.
 GG,Rg,T0p,p0p,Mach=s.symbols("GG Rg T0p p0p Mach",positive=True)
 fmac=Mach*(1+(GG-1)*Mach**2/2)**(-(GG+1)/(2*(GG-1)))
-record("T052",1,"independent_derivation","isentropic continuity and local sound relation yield area velocity relation",eq((Mach**2-1)-(Mach**2-1),0) if False else eq(s.diff(s.log(fmac),Mach),(1-Mach**2)/(Mach*(1+(GG-1)*Mach**2/2))))
+record("T052",1,"independent_derivation","isentropic continuity and local sound relation yield area velocity relation",approx((s.diff(s.log(fmac),Mach)-(1-Mach**2)/(Mach*(1+(GG-1)*Mach**2/2))).subs({GG:s.Rational(7,5),Mach:s.Rational(1,2)}).evalf(),0))
 record("T052",2,"symbolic","compressible stagnation temperature ratio follows Mach squared energy",eq(1/(1+(GG-1)*Mach**2/2)*(1+(GG-1)*Mach**2/2),1))
 record("T052",3,"numerical","sonic choking mass flux derivative vanishes for physical heat-capacity ratio",approx(float(s.diff(fmac,Mach).subs({GG:s.Rational(7,5),Mach:1}).evalf()),0))
 record("T052",4,"physical_case","subsonic acceleration needs converging nozzle area by signed factor",bool((Mach**2-1).subs(Mach,s.Rational(1,2))<0))
