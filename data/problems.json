@@ -4595,5 +4595,120 @@
     "complexity_tier": "L5-B",
     "question": "一电子具有轨道角动量量子数 l=1、自旋 s=1/2，弱自旋轨道作用 \\(H_{\\rm so}=\\lambda\\,\\boldsymbol L\\cdot\\boldsymbol S/\\hbar^2\\)，其中 λ 为实常数，无外磁场。忽略其他相互作用，未扰动轨道能量 \\(E_0\\) 相同。\n(1) 给出允许的总角动量 j；(2) 利用 \\(\\boldsymbol J=\\boldsymbol L+\\boldsymbol S\\) 求各 j 的自旋轨道能移；(3) 求能级简并度和两能级间隔；(4) 验证按全部六个态平均的自旋轨道能移为零。\n",
     "solution": "(1) 角动量合成规则给 \\(j=|l-s|,\\ldots,l+s\\)，因此 \\(j=1/2\\) 或 \\(j=3/2\\)。总磁量子数分别有 \\(2j+1=2\\) 与4个取值，恰与轨道三态乘自旋两态的六维空间相符。\n\n(2) 利用\n\\[\n2\\boldsymbol L\\cdot\\boldsymbol S\n=\\boldsymbol J^2-\\boldsymbol L^2-\\boldsymbol S^2,\n\\]\n对给定 j 的能移\n\\[\n\\Delta E_j=\\frac\\lambda2[j(j+1)-l(l+1)-s(s+1)].\n\\]\n代入 l=1、s=1/2，得 \\(\\Delta E_{1/2}=-\\lambda\\)，\\(\\Delta E_{3/2}=\\lambda/2\\)。\n\n(3) 总能级为 \\(E_{1/2}=E_0-\\lambda\\)、\\(E_{3/2}=E_0+\\lambda/2\\)，相邻间隔大小 \\(3|\\lambda|/2\\)。若 λ>0，则 j=1/2 较低；若 λ<0，顺序反转。没有外场时每个 j 的 \\(m_j\\) 态仍简并。\n\n(4) 对全部六个未偏置态按态数加权的平均能移\n\\[\n\\frac{2(-\\lambda)+4(\\lambda/2)}{6}=0.\n\\]\n这也对应自旋轨道耦合在完整 l=1、s=1/2 张量积空间上的迹为零。\n"
+  },
+  {
+    "id": "Q036",
+    "topic": "近代物理",
+    "title": "量子刚性转子的能级配分函数与高温转动热容",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "量子刚性转子",
+      "角动量谱",
+      "配分函数",
+      "高温极限"
+    ],
+    "answer": "Z_{\\rm rot}\\sim T/\\Theta_r,\\quad C_{\\rm high}\\to k_B",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.1",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B",
+    "question": "一个具有转动惯量 \\(I>0\\) 的异核双原子刚性转子，其转动能级 \\(E_J=\\hbar^2J(J+1)/(2I)\\)，简并度 \\(2J+1\\)，J=0,1,…。假定只有转动自由度与温度 T 的热库平衡，忽略振动、平动、核自旋对称和转动离心畸变。\n(1) 写出转动配分函数；(2) 求 \\(T\\ll\\Theta_r\\) 时平均内能和热容领先项，其中 \\(\\Theta_r=\\hbar^2/(2Ik_B)\\)；(3) 求 \\(T\\gg\\Theta_r\\) 的配分函数与内能；(4) 求高温热容并解释为何量子低温发生冻结。\n",
+    "solution": "(1) 定义 \\(x=\\Theta_r/T\\)，配分函数为\n\\[\nZ_{\\rm rot}=\\sum_{J=0}^\\infty(2J+1)e^{-xJ(J+1)}.\n\\]\n因转动能级随 J² 增大，任何正 T 下级数收敛，J=0 基态能量取零。\n\n(2) 低温 \\(x\\gg1\\) 时仅 J=0 与 J=1 显著占据，后者能量为 \\(2k_B\\Theta_r\\)、简并3，故\n\\[\nZ\\simeq1+3e^{-2x},\\quad\nU\\simeq6k_B\\Theta_r e^{-2x},\n\\quad\nC\\simeq12k_Bx^2e^{-2x}.\n\\]\n严格领先热容由 \\(d e^{-2x}/dT=2x e^{-2x}/T\\) 得到，低温指数趋零。\n\n(3) 在 \\(x\\ll1\\) 时以积分代替求和，\n\\[\nZ\\simeq\\int_0^\\infty(2J+1)e^{-xJ(J+1)}dJ\n=\\int_0^\\infty e^{-xy}dy=1/x=T/\\Theta_r.\n\\]\n其中 y=J(J+1)。因此 \\(U=-\\partial_\\beta\\ln Z\\simeq k_BT\\)。\n\n(4) 高温 \\(C=dU/dT\\to k_B\\)（单个双原子转子），对应经典两转动自由度各贡献 \\(k_B/2\\) 平均能量。低温时 J=0 与 J=1 间存在有限能隙，热能不足以显著激发转动，热容趋零而非一直保持经典常数。\n"
+  },
+  {
+    "id": "Q037",
+    "topic": "近代物理",
+    "title": "自旋半粒子纯退相干 Lindblad 方程与 Bloch 横向衰减",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "密度矩阵",
+      "Lindblad",
+      "纯退相干",
+      "Bloch球"
+    ],
+    "answer": "\\rho_{\\uparrow\\downarrow}(t)=\\rho_{\\uparrow\\downarrow}(0)e^{-(\\Gamma+i\\omega)t}",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.1",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C",
+    "question": "单个自旋1/2 体系哈密顿量为 \\(H=\\hbar\\omega\\sigma_z/2\\)，以速率 \\(\\Gamma>0\\) 经纯退相干通道演化，其密度矩阵满足\n\\[\n\\dot\\rho=-\\frac i\\hbar[H,\\rho]+\\frac\\Gamma2(\\sigma_z\\rho\\sigma_z-\\rho).\n\\]\n初态 \\(\\rho(0)=\\frac12(I+r_x\\sigma_x+r_y\\sigma_y+r_z\\sigma_z)\\)，Bloch 向量长度不超过1。\n(1) 求对角布居随时间变化；(2) 求非对角密度元的时间演化；(3) 求 Bloch 向量分量与纯度；(4) 说明长时间极限的量子态及纯退相干与能量弛豫的区别。\n",
+    "solution": "(1) 取 σz 本征基，哈密顿量对角，退相干耗散项的对角元为 \\((\\sigma_z\\rho\\sigma_z-\\rho)_{jj}=0\\)，所以\n\\[\n\\rho_{\\uparrow\\uparrow}(t)=\\rho_{\\uparrow\\uparrow}(0),\\qquad\n\\rho_{\\downarrow\\downarrow}(t)=\\rho_{\\downarrow\\downarrow}(0).\n\\]\n人口布居始终不变，系统平均能量也保持常数。\n\n(2) 上下非对角元满足\n\\[\n\\dot\\rho_{\\uparrow\\downarrow}=(-i\\omega-\\Gamma)\\rho_{\\uparrow\\downarrow},\n\\]\n故 \\(\\rho_{\\uparrow\\downarrow}(t)=\\rho_{\\uparrow\\downarrow}(0)e^{-(\\Gamma+i\\omega)t}\\)，另一个非对角元为其复共轭。退相干因子 e^{-Γt} 抹去相位相干而不交换粒子数。\n\n(3) Bloch 参数与非对角元关系 \\(\\rho_{\\uparrow\\downarrow}=(r_x-ir_y)/2\\)。因此\n\\[\nr_x(t)=e^{-\\Gamma t}[r_x\\cos\\omega t-r_y\\sin\\omega t],\n\\quad\nr_y(t)=e^{-\\Gamma t}[r_x\\sin\\omega t+r_y\\cos\\omega t],\n\\quad r_z(t)=r_z.\n\\]\n纯度 \\(\\mathrm{Tr}\\rho^2=\\frac12[1+r_z^2+e^{-2\\Gamma t}(r_x^2+r_y^2)]\\)，单调不增。\n\n(4) 当 t→∞，横向分量消失，末态 \\(\\rho_\\infty=\\frac12(I+r_z\\sigma_z)\\) 在能量基中对角。纯退相干没有使 \\(r_z\\) 趋于热平衡值；与能量弛豫通道不同，它只消除相干性。\n"
+  },
+  {
+    "id": "Q038",
+    "topic": "近代物理",
+    "title": "三维简并费米气体的 Sommerfeld 低温热容与化学势偏移",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "Sommerfeld展开",
+      "费米统计",
+      "低温比热",
+      "化学势"
+    ],
+    "answer": "C_V\\simeq(\\pi^2/2)Nk_B(T/T_F)",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.1",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C",
+    "question": "三维无相互作用自旋1/2 非相对论费米气体，粒子数 N、体积 V 固定，零温费米能为 \\(E_F\\)、费米温度 \\(T_F=E_F/k_B\\)。考虑 \\(T\\ll T_F\\)，忽略相互作用与容积效应。\n(1) 写出三维单粒子态密度与 Fermi 分布；(2) 用 Sommerfeld 展开求固定 N 下化学势的 \\(T^2\\) 校正；(3) 求内能的领先热校正；(4) 推导低温热容与温度线性关系。\n",
+    "solution": "(1) 单粒子态密度 \\(g(\\epsilon)=C\\sqrt\\epsilon\\)，其中 \\(C=V(2m)^{3/2}/(2\\pi^2\\hbar^3)\\)，已包括自旋二重简并。Fermi 占据 \\(f(\\epsilon)=1/(e^{(\\epsilon-\\mu)/(k_BT)}+1)\\)，粒子数 \\(N=\\int_0^\\infty g(\\epsilon)f(\\epsilon)d\\epsilon\\)。\n\n(2) Sommerfeld 展开给\n\\[\nN=\\int_0^\\mu g(\\epsilon)d\\epsilon\n+\\frac{\\pi^2}{6}(k_BT)^2g'(\\mu)+O(T^4).\n\\]\n令 \\(\\mu=E_F+\\delta\\mu\\)，固定 N 并在 E_F 处线性化，\n\\(g(E_F)\\delta\\mu+(\\pi^2/6)(k_BT)^2g'(E_F)=0\\)。\n由于 \\(g'/g=1/(2E_F)\\)，得\n\\[\n\\mu(T)=E_F\\left[1-\\frac{\\pi^2}{12}(T/T_F)^2+O((T/T_F)^4)\\right].\n\\]\n\n(3) 内能 \\(U=\\int_0^\\infty \\epsilon g(\\epsilon)f(\\epsilon)d\\epsilon\\)。对 \\(\\epsilon g(\\epsilon)\\) 作 Sommerfeld 展开并代入 \\(\\delta\\mu\\)，化简得\n\\[\nU=\\frac35NE_F+\\frac{\\pi^2}{4}N\\frac{(k_BT)^2}{E_F}+O(T^4).\n\\]\n可由 \\(g(E_F)=3N/(2E_F)\\) 独立核验校正系数。\n\n(4) 固定 N,V 求导，得到\n\\[\nC_V=\\frac{\\pi^2}{2}Nk_B\\frac{T}{T_F}+O(T^3).\n\\]\n仅费米面附近宽度约 kBT 的粒子可被热激发，故低温热容对 T 线性，而非经典的温度无关常数。\n"
+  },
+  {
+    "id": "Q039",
+    "topic": "近代物理",
+    "title": "谐振子基态的局域 δ 势微扰、一阶能移与波函数概率",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "定态微扰",
+      "δ函数",
+      "谐振子基态",
+      "偶奇宇称"
+    ],
+    "answer": "\\Delta E_0^{(1)}=\\lambda/(\\sqrt\\pi a),\\quad\\Delta E_2^{(1)}=\\lambda/(2\\sqrt\\pi a)",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.1",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B",
+    "question": "质量 m、频率 ω 的一维量子谐振子 \\(H_0=p^2/(2m)+m\\omega^2x^2/2\\) 受到弱局域微扰 \\(V=\\lambda\\delta(x)\\)，其中 λ 为实常数且足够小。特征长度 \\(a=\\sqrt{\\hbar/(m\\omega)}\\)，未扰动能级 \\(E_n^{(0)}=(n+1/2)\\hbar\\omega\\)。\n(1) 求基态波函数在原点的概率密度；(2) 求基态的一阶能移；(3) 用宇称讨论所有奇数 n 态的一阶能移；(4) 求 n=2 态的原点概率密度与其一阶能移并比较基态。\n",
+    "solution": "(1) 谐振子基态波函数为 \\(\\psi_0(x)=(\\pi a^2)^{-1/4}e^{-x^2/(2a^2)}\\)，归一化由高斯积分保证。故原点密度\n\\[\n|\\psi_0(0)|^2=\\frac1{\\sqrt\\pi\\,a}.\n\\]\n\n(2) 定态非简并微扰论的一阶能量校正为 \\(\\Delta E_n^{(1)}=\\langle n|V|n\\rangle=\\lambda|\\psi_n(0)|^2\\)。因此\n\\[\n\\Delta E_0^{(1)}=\\frac{\\lambda}{\\sqrt\\pi\\,a}.\n\\]\nλ>0 的排斥 δ 势提高能量，λ<0 的吸引势降低能量。\n\n(3) 一维谐振子波函数宇称为 \\((-1)^n\\)，所有奇数 n 态 \\(\\psi_n(0)=0\\)，故\n\\[\n\\Delta E_{2j+1}^{(1)}=0.\n\\]\n此结论只说明一阶能移为零；更高阶微扰仍须具体核算，但原点处奇态本身因宇称始终有节点。\n\n(4) n=2 波函数 \\(\\psi_2(x)=\\psi_0(x)(2(x/a)^2-1)/\\sqrt2\\)（按 Hermite 多项式归一），故 \\(\\psi_2(0)=-\\psi_0(0)/\\sqrt2\\)。因此\n\\[\n|\\psi_2(0)|^2=\\frac1{2\\sqrt\\pi\\,a},\\quad\n\\Delta E_2^{(1)}=\\frac{\\lambda}{2\\sqrt\\pi\\,a}\n=\\frac12\\Delta E_0^{(1)}.\n\\]\n"
+  },
+  {
+    "id": "Q040",
+    "topic": "近代物理",
+    "title": "自由粒子高斯波包的量子扩散、概率流与最小不确定性",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "Schrodinger传播",
+      "高斯波包",
+      "量子扩散",
+      "不确定性"
+    ],
+    "answer": "\\sigma_x(t)=\\sigma_0\\sqrt{1+(\\hbar t/(2m\\sigma_0^2))^2}",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.1",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C",
+    "question": "质量 m 的一维自由量子粒子初态为\n\\[\n\\psi(x,0)=(2\\pi\\sigma_0^2)^{-1/4}\n\\exp[-x^2/(4\\sigma_0^2)+ip_0x/\\hbar],\n\\]\n其中 \\(\\sigma_0>0\\)、\\(p_0\\in\\mathbb R\\)。自由哈密顿量 \\(H=p^2/(2m)\\)。\n(1) 求初始位置与动量的均值和标准差；(2) 用动量表象时间演化或 Heisenberg 方程求 \\(\\langle x(t)\\rangle,\\langle p(t)\\rangle\\)；(3) 求位置方差 \\(\\sigma_x^2(t)\\) 的严格表达式；(4) 求何时波包宽度为初始宽度的二倍并解释概率密度宽度的增长。\n",
+    "solution": "(1) 初态概率密度为 \\(|\\psi(x,0)|^2=(2\\pi\\sigma_0^2)^{-1/2}e^{-x^2/(2\\sigma_0^2)}\\)，因此 \\(\\langle x\\rangle=0,\\ \\Delta x(0)=\\sigma_0\\)。动量算符 \\(-i\\hbar\\partial_x\\) 给 \\(\\langle p\\rangle=p_0\\)，而初态动量方差为 \\(\\Delta p^2=\\hbar^2/(4\\sigma_0^2)\\)，故初态 \\(\\Delta x\\Delta p=\\hbar/2\\)。\n\n(2) Heisenberg 方程 \\(\\dot x=p/m,\\dot p=0\\)，因此\n\\[\nx(t)=x(0)+p(0)t/m,\\qquad p(t)=p(0).\n\\]\n于是 \\(\\langle x(t)\\rangle=p_0t/m,\\ \\langle p(t)\\rangle=p_0\\)，波包中心沿经典自由粒子轨迹移动。\n\n(3) 对初始无啁啾的实高斯包络，位置与动量的对称协方差为0。将 \\(x(t)=x(0)+pt/m\\) 取方差，\n\\[\n\\sigma_x^2(t)=\\sigma_0^2+\\frac{t^2}{m^2}\\Delta p^2\n=\\sigma_0^2+\\frac{\\hbar^2t^2}{4m^2\\sigma_0^2}.\n\\]\n这是精确自由演化结果，而不是经典热扩散的随机碰撞模型。\n\n(4) 定义展宽时间 \\(\\tau=2m\\sigma_0^2/\\hbar\\)，则 \\(\\sigma_x(t)=\\sigma_0\\sqrt{1+(t/\\tau)^2}\\)。当标准差加倍，\\(\\sqrt{1+(t/\\tau)^2}=2\\)，故首次正时间\n\\[\nt_{\\rm double}=\\sqrt3\\,\\tau=\\frac{2\\sqrt3\\,m\\sigma_0^2}{\\hbar}.\n\\]\n波包展宽来源于初态不同动量分量以不同速度传播，动量概率分布本身在自由演化中不变。\n"
   }
 ]
