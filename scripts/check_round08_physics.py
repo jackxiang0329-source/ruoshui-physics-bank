@@ -166,7 +166,7 @@ check("O031",zero(kx2.subs({ed:1,em:-4})-s.Rational(4,3)),"bound metal dielectri
 det,drive,tq=s.symbols("det drive tq",positive=True)
 Omega=s.sqrt(det**2+drive**2)
 check("Q024",zero((drive**2/Omega**2*s.sin(Omega*tq/2)**2).subs(tq,0)),"Rabi transition short time zero")
-check("Q025",zero(s.beta(s.Rational(1,2),s.Rational(3,2))-s.pi/2),"WKB quadratic oscillator beta integral")
+check("Q025",zero(s.beta(s.Rational(1,2),s.Rational(3,2)).rewrite(s.gamma)-s.pi/2),"WKB quadratic oscillator beta integral")
 D2=m/(s.pi*s.Symbol("hbar",positive=True)**2)
 check("Q026",zero(s.diff(D2,energy)),"2D free-electron density of states constant")
 mm,kap,RRR,ee=s.symbols("mm kap RRR ee",positive=True)
