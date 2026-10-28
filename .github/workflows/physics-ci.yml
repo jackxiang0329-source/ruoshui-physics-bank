@@ -2,7 +2,7 @@ name: Physics Advanced-only QA and PDF
 on:
   push:
     branches: [main]
-    paths: ['bank/**','tex/**','scripts/build.py','scripts/check_difficulty_gate.py','scripts/check_physics.py','data/problems.json','.github/workflows/physics-ci.yml']
+    paths: ['bank/**','tex/**','scripts/**','data/**','.github/workflows/physics-ci.yml']
   pull_request:
   workflow_dispatch:
 permissions:
