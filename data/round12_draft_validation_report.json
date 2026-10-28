@@ -1,0 +1,92 @@
+{
+  "status": "draft-only",
+  "new_problem_count": 3,
+  "passed_count": 12,
+  "tests": [
+    {
+      "id": "M059",
+      "part": 1,
+      "method": "conservation",
+      "name": "turning-point radial energy equals asymptotic kinetic energy",
+      "passed": true
+    },
+    {
+      "id": "M059",
+      "part": 2,
+      "method": "symbolic",
+      "name": "inverse-square repulsive Binet orbit solves exact second-order equation",
+      "passed": true
+    },
+    {
+      "id": "M059",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "inverted impact parameter Jacobian yields differential cross section",
+      "passed": true
+    },
+    {
+      "id": "M059",
+      "part": 4,
+      "method": "limit",
+      "name": "weak-repulsion scattering deflection has inverse-square impact scaling",
+      "passed": true
+    },
+    {
+      "id": "E059",
+      "part": 1,
+      "method": "symbolic",
+      "name": "complex magnetic penetration wave number satisfies diffusion equation",
+      "passed": true
+    },
+    {
+      "id": "E059",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "Ampere Ohm and Faraday equations give identical conductor phasors",
+      "passed": true
+    },
+    {
+      "id": "E059",
+      "part": 3,
+      "method": "conservation",
+      "name": "Poynting influx equals integrated Ohmic heat per unit area",
+      "passed": true
+    },
+    {
+      "id": "E059",
+      "part": 4,
+      "method": "dimensions",
+      "name": "skin depth frequency scaling and reactive magnetic power agree",
+      "passed": true
+    },
+    {
+      "id": "T056",
+      "part": 1,
+      "method": "symbolic",
+      "name": "mean-field entropy differentiation reproduces atanh self-consistency",
+      "passed": true
+    },
+    {
+      "id": "T056",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "Curie temperature follows Hessian sign change of disordered state",
+      "passed": true
+    },
+    {
+      "id": "T056",
+      "part": 3,
+      "method": "limit",
+      "name": "zero-field susceptibility has Curie Weiss pole and correct high-temperature limit",
+      "passed": true
+    },
+    {
+      "id": "T056",
+      "part": 4,
+      "method": "symbolic",
+      "name": "Landau free energy gives three-halves kB heat capacity jump at critical point",
+      "passed": true
+    }
+  ],
+  "independent_expert_review": "pending"
+}

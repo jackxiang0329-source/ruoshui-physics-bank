@@ -1205,6 +1205,30 @@
     "solution": "(1) 梁弯曲应变能 \\(U_b=(EI/2)\\int_0^L(w'')^2dx\\)，轴向恒压缩死载因几何缩短而做功，对应势能贡献 \\(U_P=-(P/2)\\int_0^L(w')^2dx\\)。总二阶势能 \\(\\Pi_2=U_b+U_P\\)。变分并两次分部积分得到内部 Euler--Lagrange 方程 \\(EIw''''+Pw''=0\\)。铰支位移固定 \\(w(0)=w(L)=0\\)，自然弯矩条件 \\(EIw''(0)=EIw''(L)=0\\)，排除了固支边界的错误基频。\n\n(2) 取满足铰支条件的 \\(w_n=A_n\\sin(n\\pi x/L)\\)（整数 \\(n\\ge1\\)）。代入平衡方程，得到 \\([EI(n\\pi/L)^4-P(n\\pi/L)^2]A_n=0\\)，非零振幅要求 \\(P_n=EI(n\\pi/L)^2\\)。这些特征载荷按 \\(n^2\\) 单调增加，最先出现的第一失稳为 \\(P_{\\rm cr}=\\pi^2EI/L^2\\)，对应正弦单半波形状。高阶模态虽也是形式本征解，但不能在达到第一临界之前由零态自发失稳。\n\n(3) 稳定直梁需要二阶势能对所有非零允许扰动严格为正。由 Fourier 正弦级数或 Poincaré 不等式，对于满足端位移条件的 \\(w\\)，有 \\(\\int_0^L(w'')^2dx\\ge(\\pi/L)^2\\int_0^L(w')^2dx\\)。因此 \\(\\Pi_2\\ge[EI(\\pi/L)^2-P]\\int_0^L(w')^2dx/2\\)。若 \\(P<P_{\\rm cr}\\) 所有非零扰动均使势能增加；若 \\(P>P_{\\rm cr}\\)，选择第一正弦模可使 \\(\\Pi_2<0\\)。于是 Rayleigh 商 \\(EI\\int(w'')^2/\\int(w')^2\\) 的极小值恰为 \\(P_{\\rm cr}\\)。\n\n(4) 令 \\(w=A\\sin(\\pi x/L)\\)，直接积分给 \\(\\Pi_2(A)=A^2L[EI\\pi^4/L^4-P\\pi^2/L^2]/4=\\pi^2A^2[P_{\\rm cr}-P]/(4L)\\)。当 \\(P=P_{\\rm cr}\\)，二阶项恰为零并不能断言任意振幅皆为平衡；当 \\(P>P_{\\rm cr}\\)，二阶理论仅说明直梁失稳，不能预测屈曲后的幅值或后屈曲分支。稳定有限挠度依赖几何非线性、轴向伸缩与载荷控制方式，高阶能量必须重新建立。\n"
   },
   {
+    "id": "M059",
+    "topic": "力学",
+    "title": "排斥平方反比势的精确轨道、散射偏角与微分截面",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 95,
+    "tags": [
+      "中心力散射",
+      "Binet轨道方程",
+      "碰撞参数反演",
+      "微分散射截面",
+      "弱耦合渐近"
+    ],
+    "answer": "\\Theta=\\pi\\!\\left(1-\\frac{b}{\\sqrt{b^2+2g/(mv_\\infty^2)}}\\right),\\quad r_{\\min}=\\sqrt{b^2+\\frac{2g}{mv_\\infty^2}}",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.4-round12-draft",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B",
+    "question": "质量为 \\(m>0\\) 的经典点粒子从无穷远以速率 \\(v_\\infty>0\\)、碰撞参数 \\(b>0\\) 射向固定散射中心，受到各向同性排斥势 \\(U(r)=g/r^2\\)（\\(g>0\\)）。无耗散、无其他作用力，运动局限于一个平面，入射动能 \\(E=mv_\\infty^2/2\\)，角动量大小 \\(\\ell=mv_\\infty b\\)。散射角 \\(\\Theta\\in(0,\\pi)\\) 定义为入射、出射速度的夹角。\n(1) 写出径向有效势及能量积分，求最近接距离并说明径向转折点为何唯一。\n(2) 以最近接点为极角原点，从 Binet 方程求精确轨道 \\(r(\\varphi)\\)，给出入射与出射的渐近极角。\n(3) 推导散射角 \\(\\Theta(b)\\)，反解碰撞参数并求经典微分散射截面 \\(d\\sigma/d\\Omega\\)。\n(4) 验证弱耦合或大碰撞参数的散射角渐近式，并求小角度微分截面的幂律；检查结果的量纲及适用边界。\n",
+    "solution": "(1) 角动量守恒给出 \\(\\dot\\varphi=\\ell/(mr^2)\\)。把切向动能并入径向势，严格能量积分为 \\(E=\\tfrac12m\\dot r^2+U_{\\rm eff}(r)\\)，其中 \\(U_{\\rm eff}=(\\ell^2/(2m)+g)/r^2\\)。它随 \\(r\\) 严格递减，且从 \\(+\\infty\\) 降至零，所以对每个 \\(E>0\\) 恰有一个 \\(\\dot r=0\\) 的转折点。代入 \\(\\ell=mv_\\infty b\\) 得 \\(r_{\\min}^2=(\\ell^2/(2m)+g)/E=b^2+2g/(mv_\\infty^2)\\)，因此 \\(r_{\\min}>b\\)，排斥力确实阻止粒子更靠近中心。\n\n(2) 令 \\(u=1/r\\)，实际径向力 \\(F_r=-dU/dr=2g/r^3=2gu^3>0\\)。Binet 方程 \\(u''+u=-mF_r/(\\ell^2u^2)\\) 化为 \\(u''+\\kappa^2u=0\\)，其中 \\(\\kappa^2=1+2mg/\\ell^2>1\\)，撇号表示对 \\(\\varphi\\) 求导。选择最近接点 \\(\\varphi=0\\)，有 \\(u'(0)=0\\)、\\(u(0)=1/r_{\\min}\\)，从而 \\(r(\\varphi)=r_{\\min}/\\cos(\\kappa\\varphi)\\)。物理轨道限于 \\(|\\varphi|<\\pi/(2\\kappa)\\)，两端 \\(r\\to\\infty\\) 的渐近方向分别是 \\(\\varphi_\\pm=\\pm\\pi/(2\\kappa)\\)，不能把极角变化误认成速度散射角。\n\n(3) 入射与出射的轨道极角总变化为 \\(\\Delta\\varphi=\\pi/\\kappa\\)；自由直线应有 \\(\\Delta\\varphi=\\pi\\)，故偏折角 \\(\\Theta=\\pi-\\Delta\\varphi=\\pi(1-1/\\kappa)\\)。记 \\(a^2=2g/(mv_\\infty^2)\\)，于是 \\(\\Theta(b)=\\pi[1-b/\\sqrt{b^2+a^2}]\\)。设 \\(y=1-\\Theta/\\pi\\in(0,1)\\)，反解 \\(b=a y/\\sqrt{1-y^2}\\)。轴对称中心力散射的环形面积元满足 \\(d\\sigma=2\\pi b\\,|db|\\)、\\(d\\Omega=2\\pi\\sin\\Theta\\,d\\Theta\\)，所以 \\(\\displaystyle\\frac{d\\sigma}{d\\Omega}=\\frac{b}{\\sin\\Theta}\\left|\\frac{db}{d\\Theta}\\right|=\\frac{a^2y}{\\pi\\sin\\Theta(1-y^2)^2}\\)。该式对有限 \\(b>0\\) 的单值偏折成立，且没有人为引入量子散射振幅。\n\n(4) 取 \\(a^2/b^2\\ll1\\)，二项式展开 \\(1/\\sqrt{1+a^2/b^2}=1-a^2/(2b^2)+O(a^4/b^4)\\)，得到 \\(\\Theta\\simeq\\pi g/(mv_\\infty^2b^2)\\)。当 \\(\\Theta\\to0^+\\)，有 \\(1-y^2\\simeq2\\Theta/\\pi\\)、\\(\\sin\\Theta\\simeq\\Theta\\)，因而 \\(\\displaystyle d\\sigma/d\\Omega\\simeq\\pi g/(2mv_\\infty^2\\Theta^3)\\)。由于 \\(g/(mv_\\infty^2)\\) 的量纲是长度平方，截面量纲正确；前向发散反映长程尾部对无限大碰撞参数的贡献，不能误解为有限探测角的无限计数。\\(g\\to0\\) 时所有有限 \\(b\\) 的偏折趋零，\\(b\\to0^+\\) 时偏折趋 \\(\\pi\\)，恰与纯排斥中心势相符。\n"
+  },
+  {
     "id": "E007",
     "topic": "电磁学",
     "title": "滑动导体棒的自感反馈与能量耗散",
@@ -2409,6 +2433,30 @@
     "solution": "(1) 固定电荷时存储场能 \\(U_Q=Q^2/(2C)=Q^2d/(2\\varepsilon A)\\)。对板距 \\(d\\) 的广义力定义为 \\(F_d=-\\partial U_Q/\\partial d=-Q^2/(2\\varepsilon A)<0\\)，负号表示极板受力趋向缩小间距，即静电吸引。力的大小也等于电磁应力 \\(\\varepsilon E^2A/2\\)，此时 \\(E=Q/(\\varepsilon A)\\) 与 \\(d\\) 无关。此结果对断电孤立电容器成立，若固定电压而仍保持 \\(Q\\) 常数将违反控制条件。\n\n(2) 恒压时 \\(Q=C(d)V=\\varepsilon AV/d\\) 随 \\(d\\) 变动，场能 \\(U_f=\\frac12CV^2=\\varepsilon AV^2/(2d)\\)。令板距改变 \\(dd\\)，场能微分 \\(dU_f=\\frac12V^2dC\\)，理想电源向电容器输送电功 \\(dW_{\\rm src}=VdQ=V^2dC\\)。能量守恒 \\(dU_f=dW_{\\rm src}+dW_{\\rm mech,on}\\)，故外部机械手对电场所做功 \\(dW_{\\rm mech,on}=-\\frac12V^2dC\\)，相应电场在板距方向做功 \\(dW_{\\rm field}=\\frac12V^2dC=-\\varepsilon AV^2dd/(2d^2)\\)。因此电场力 \\(F_d=-\\varepsilon AV^2/(2d^2)\\) 仍为吸引力，而不是单纯取 \\(-dU_f/dd>0\\) 的错误结果。\n\n(3) 将恒压电源纳入广义势能，适于固定电压的 Legendre 变换为 \\(\\mathcal F_V=U_f-VQ=-\\frac12C(d)V^2=-\\varepsilon AV^2/(2d)\\)。其广义力为 \\(F_d=-\\partial\\mathcal F_V/\\partial d=+\\frac12V^2(dC/dd)=-\\varepsilon AV^2/(2d^2)\\)，与能量收支独立一致。固定电压时必须使用该电势而非孤立电容器能量，因为电源可向或从电极输送电荷并携带功。\n\n(4) 两种控制均有实际电场 \\(E=Q/(\\varepsilon A)=V/d\\)，电场压力大小 \\(p=\\varepsilon E^2/2\\)，总吸引力 \\(F_d=-pA\\)。若固定 \\(Q\\) 而缓慢拉开，所需外力正功进入逐渐增大的电场能。若固定 \\(V\\) 缓慢拉开，电容减少、流回电源的电荷为负 \\(dQ<0\\)，源收到能量 \\(-dW_{\\rm src}=-VdQ\\)；外部正机械功与减少的场能一同供给电源，二者正好由前述微分式分配。\n"
   },
   {
+    "id": "E059",
+    "topic": "电磁学",
+    "title": "良导体半空间的趋肤扩散、复表面阻抗与坡印廷能流",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 95,
+    "tags": [
+      "磁扩散方程",
+      "趋肤深度",
+      "复表面阻抗",
+      "焦耳耗散",
+      "坡印廷定理"
+    ],
+    "answer": "\\delta=\\sqrt{\\frac{2}{\\mu\\sigma\\omega}},\\quad Z_s=\\frac{1-i}{\\sigma\\delta},\\quad \\langle S_x\\rangle=\\frac{|H_0|^2}{2\\sigma\\delta}",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.4-round12-draft",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B",
+    "question": "均匀各向同性良导体占据半空间 \\(x>0\\)，电导率 \\(\\sigma>0\\)、磁导率 \\(\\mu>0\\)、介电常数 \\(\\varepsilon>0\\)。外部施加沿 \\(z\\) 方向的切向交变磁场，在表面 \\(x=0\\) 的磁场相量为实数 \\(H_0>0\\)，时间约定 \\(\\Re\\{\\widetilde H(x)e^{-i\\omega t}\\}\\)，频率 \\(\\omega>0\\)。假设 \\(\\sigma\\gg\\omega\\varepsilon\\)，忽略位移电流与边缘效应，所有场仅依赖 \\(x,t\\)，且深入导体后衰减。\n(1) 由 Maxwell 方程推导磁扩散方程，求磁场的复波数、趋肤深度和实际时空相位。\n(2) 求电流密度、电场和表面阻抗 \\(Z_s=\\widetilde E_y(0)/\\widetilde H_z(0)\\)，核对 Faraday 定律及相位符号。\n(3) 分别用入射坡印廷通量和体焦耳热积分求单位面积平均吸收功率，证明二者严格相等。\n(4) 求导体内单位表面积的周期平均磁能，建立其与表面电抗的关系，并讨论频率尺度及半空间模型的有效条件。\n",
+    "solution": "(1) 取 \\(\\mathbf H=H_z(x,t)\\hat{\\mathbf z}\\)、\\(\\mathbf E=E_y(x,t)\\hat{\\mathbf y}\\)。忽略位移电流后 Ampère 定律给 \\(J_y=-\\partial_xH_z=\\sigma E_y\\)；Faraday 定律给 \\(\\partial_xE_y=-\\mu\\partial_tH_z\\)。消去 \\(E_y\\) 得 \\(\\partial_x^2H_z=\\mu\\sigma\\partial_tH_z\\)，这是扩散而非无耗波动方程。取 \\(\\widetilde H_z=H_0e^{-kx}\\)，由 \\(k^2=-i\\mu\\sigma\\omega\\) 且要求 \\(\\Re k>0\\)，选 \\(k=(1-i)/\\delta\\)，\\(\\delta=\\sqrt{2/(\\mu\\sigma\\omega)}\\)。实际场为 \\(H_z=H_0e^{-x/\\delta}\\cos(\\omega t-x/\\delta)\\)，在深度 \\(\\delta\\) 振幅降为表面的 \\(e^{-1}\\)，同时相位滞后 \\(1\\) 弧度。\n\n(2) 由 \\(\\nabla\\times\\mathbf H=\\mathbf J\\) 得 \\(\\widetilde J_y=kH_0e^{-kx}\\)，由局域 Ohm 定律得 \\(\\widetilde E_y=(k/\\sigma)H_0e^{-kx}\\)。因此 \\(Z_s=k/\\sigma=(1-i)/(\\sigma\\delta)\\)，实部正而虚部在 \\(e^{-i\\omega t}\\) 约定下为负。表面实际电场为 \\(E_y(0,t)=\\sqrt2 H_0/(\\sigma\\delta)\\cos(\\omega t+\\pi/4)\\)，所以电场时间相位比表面磁场超前 \\(\\pi/4\\)。再独立代回 Faraday 方程：\\(\\partial_x\\widetilde E_y=-k^2\\widetilde H_z/\\sigma=i\\mu\\omega\\widetilde H_z=-\\partial_t\\widetilde B_z\\) 的相量形式，符号与取向完全一致。\n\n(3) 在表面 \\(\\mathbf E\\parallel\\hat{\\mathbf y}\\)、\\(\\mathbf H\\parallel\\hat{\\mathbf z}\\)，故 \\(\\mathbf E\\times\\mathbf H\\) 指向导体内部 \\(+\\hat{\\mathbf x}\\)。平均输入功率通量 \\(\\langle S_x(0)\\rangle=\\tfrac12\\Re[\\widetilde E_y(0)\\widetilde H_z(0)^*]=\\tfrac12|H_0|^2\\Re Z_s=|H_0|^2/(2\\sigma\\delta)\\)。另一方面 \\(\\langle p_J(x)\\rangle=|\\widetilde J_y(x)|^2/(2\\sigma)=|k|^2|H_0|^2e^{-2x/\\delta}/(2\\sigma)\\)。积分 \\(\\int_0^\\infty e^{-2x/\\delta}dx=\\delta/2\\)，利用 \\(|k|^2=2/\\delta^2\\) 得 \\(\\int_0^\\infty\\langle p_J\\rangle dx=|H_0|^2/(2\\sigma\\delta)\\)。两种完全不同的能量账本相等，表明没有漏掉表面功率或虚假的能量源。\n\n(4) 磁能密度的周期平均为 \\(\\mu|\\widetilde H_z|^2/4\\)，故每单位面积储存的平均磁能 \\(W_m/A=\\mu|H_0|^2\\int_0^\\infty e^{-2x/\\delta}dx/4=\\mu|H_0|^2\\delta/8\\)。因为 \\(\\mu\\sigma\\omega\\delta^2=2\\)，有 \\(2\\omega W_m/A=|H_0|^2/(2\\sigma\\delta)=|\\Im Z_s|\\,|H_0|^2/2\\)，对应表面感性无功功率的大小；这里虚部符号取决于相量时间约定。趋肤深度随 \\(\\omega^{-1/2}\\) 缩小，表面电阻随 \\(\\omega^{1/2}\\) 增大。必须同时满足 \\(\\sigma\\gg\\omega\\varepsilon\\)、样品厚度远大于 \\(\\delta\\) 且局域 Ohm 定律适用；对有限厚样品不能直接令 \\(\\omega\\to0\\) 后仍使用半空间公式。\n"
+  },
+  {
     "id": "T007",
     "topic": "热学",
     "title": "导热可动活塞的不可逆终态与熵产生",
@@ -3548,6 +3596,30 @@
     "complexity_tier": "L5-B",
     "question": "热源和冷源恒温 \\(T_h>T_c>0\\)，工作流体热接触内部温度分别为 \\(X,Y\\)，有 \\(T_h>X>Y>T_c\\)。热端和冷端传热导系数相同为 \\(K>0\\)，热流率 \\(\\dot Q_h=K(T_h-X)\\)、\\(\\dot Q_c=K(Y-T_c)\\)。热机内部可逆，故 \\(\\dot Q_h/X=\\dot Q_c/Y\\)。\n(1) 用内可逆熵平衡推导接触温度的代数关系。\n(2) 以比值 \\(r=Y/X\\) 消去内温度，写出功率与效率。\n(3) 最大化功率，求效率和输出功率的闭式公式。\n(4) 检验小温差极限与无限换热导的形式极限，讨论模型适用性。\n",
     "solution": "(1) 由于内部工质经过一循环不积累熵，吸收热量与放出热量的熵量相同，即 \\(K(T_h-X)/X=K(Y-T_c)/Y\\)。整理为 \\(T_h/X+T_c/Y=2\\)。输出功率为 \\(\\dot W=\\dot Q_h-\\dot Q_c=K(T_h+T_c-X-Y)\\)，必须同时满足 \\(T_h>X>Y>T_c\\) 才是热机。\n\n(2) 令 \\(r=Y/X\\)，则由约束 \\(X=(T_h+T_c/r)/2\\)、\\(Y=(rT_h+T_c)/2\\)。输出功率为 \\(\\dot W(r)=K[T_h(1-r)+T_c(1-1/r)]/2\\)，效率为 \\(\\eta=1-Y/X=1-r\\)。可行的热机工作区间为 \\(T_c/T_h<r<1\\)，其中两端功率为零。\n\n(3) 求导 \\(d\\dot W/dr=K[-T_h+T_c/r^2]/2\\)，二阶导数为 \\(-KT_c/r^3<0\\)，唯一极大点 \\(r_*=\\sqrt{T_c/T_h}\\)。故 \\(\\eta_*=1-\\sqrt{T_c/T_h}\\)，\\(\\dot W_{\\max}=K(\\sqrt{T_h}-\\sqrt{T_c})^2/2\\)。因为平方根大于原始 \\(T_c/T_h\\)，最大功率效率低于可逆两热库卡诺效率。\n\n(4) 设 \\(T_h=T+\\Delta/2\\)、\\(T_c=T-\\Delta/2\\)，\\(|\\Delta|\\ll T\\) 时 \\(\\sqrt{T_h}-\\sqrt{T_c}\\simeq\\Delta/(2\\sqrt T)\\)，所以 \\(\\dot W_{\\max}\\simeq K\\Delta^2/(8T)\\)。形式上 \\(K\\to\\infty\\) 使最大功率发散，只是无限换热能力、忽略有限面积和材料限制的理想化表现；真实内外热阻及动力学耗散使功率有上限。\n"
+  },
+  {
+    "id": "T056",
+    "topic": "热学",
+    "title": "全连接伊辛平均场的自洽磁化、临界指数与热容跃变",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 95,
+    "tags": [
+      "平均场统计力学",
+      "组合熵",
+      "自发对称性破缺",
+      "Curie-Weiss磁化率",
+      "Landau自由能"
+    ],
+    "answer": "T_c=J/k_B,\\quad\\chi_B=\\frac{N\\mu^2}{k_B(T-T_c)}\\ (T>T_c),\\quad\\Delta C=\\frac32Nk_B",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.4-round12-draft",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B",
+    "question": "考虑 \\(N\\gg1\\) 个自旋 \\(s_i=\\pm1\\)，磁矩大小为 \\(\\mu>0\\)，置于均匀外场 \\(B\\)。全连接铁磁模型哈密顿量为 \\(\\mathcal H_N=-\\frac{J}{2N}(\\sum_i s_i)^2-\\mu B\\sum_i s_i\\)，其中 \\(J>0\\)，温度 \\(T>0\\)，取热力学极限。定义无量纲平均磁化 \\(m=N^{-1}\\sum_i s_i\\)，总磁矩 \\(M=N\\mu m\\)，采用 Stirling 近似并忽略亚广延修正。\n(1) 由固定磁化的微观态数推导每自旋自由能 \\(f(m;T,B)\\)，并从驻值条件导出磁化自洽方程。\n(2) 在 \\(B=0\\) 研究无磁态的局域稳定性，求临界温度并解释临界点上下平衡解的性质。\n(3) 推导顺磁侧的零场等温响应 \\(\\chi_B=(\\partial M/\\partial B)_T\\)，并求临界温度下方自发磁化的主导幂律。\n(4) 在临界等温线上求弱场磁化幂律，利用四阶 Landau 展开求零场热容在 \\(T_c\\) 处的跃变，指出有限 \\(N\\) 的限制。\n",
+    "solution": "(1) 固定 \\(m\\) 时上自旋数为 \\(N_+=N(1+m)/2\\)，微观态数 \\(\\Omega=N!/(N_+!N_-!)\\)。Stirling 公式给每自旋熵 \\(s(m)=-k_B[p\\ln p+(1-p)\\ln(1-p)]\\)，其中 \\(p=(1+m)/2\\)，端点采用 \\(0\\ln0=0\\)。能量每自旋为 \\(e(m)=-Jm^2/2-\\mu Bm\\)，所以 \\(f=e-Ts=-Jm^2/2-\\mu Bm+k_BT[p\\ln p+(1-p)\\ln(1-p)]\\)。对 \\(|m|<1\\) 求导得到 \\(f'(m)=-Jm-\\mu B+k_BT\\operatorname{artanh}m\\)。平衡要求 \\(f'=0\\) 且选全局最小自由能，故 \\(m=\\tanh[(Jm+\\mu B)/(k_BT)]\\)，不是把外场直接代入无相互作用的 Brillouin 函数。\n\n(2) 零场下 \\(m=0\\) 总是自洽解，但其稳定性由自由能二阶导数而非仅由方程存在性决定。计算 \\(f''(m)=-J+k_BT/(1-m^2)\\)，因此 \\(f''(0)=k_BT-J\\)，临界温度为 \\(T_c=J/k_B\\)。若 \\(T>T_c\\)，零磁化是唯一稳定的全局极小；若 \\(T<T_c\\)，零磁化成为局域极大，两侧出现一对由 \\(m_0=\\tanh[(T_c/T)m_0]\\) 确定的稳定解 \\(\\pm m_0\\)。在 \\(T=T_c\\) 二次曲率消失，必须保留四次项判断稳定性，不能据此宣称自由能完全平坦。\n\n(3) 在 \\(T>T_c\\) 且 \\(B\\to0\\) 时，利用 \\(\\tanh z=z+O(z^3)\\) 得 \\(m=(Jm+\\mu B)/(k_BT)+O(B^3)\\)，于是 \\(m=\\mu B/(k_BT-J)+O(B^3)\\)，\\(\\chi_B=N\\mu^2/[k_B(T-T_c)]\\)。这是对磁场 \\(B\\) 的导数而非无量纲 SI 磁化率，量纲须保留。对 \\(B=0\\)、\\(T\\lesssim T_c\\)，把自洽式展开为 \\(m=(T_c/T)m-\\tfrac13(T_c/T)^3m^3+O(m^5)\\)，除去非零 \\(m\\) 后得到 \\(m_0^2=3[(T_c/T)-1]/(T_c/T)^3+O((T_c-T)^2)\\simeq3(T_c-T)/T_c\\)，故自发磁化的临界指数为 \\(1/2\\)。\n\n(4) 对小 \\(m\\) 展开熵项得到 \\(f=-k_BT\\ln2+\\tfrac12(k_BT-J)m^2+\\tfrac1{12}k_BT m^4-\\mu Bm+O(m^6)\\)。在 \\(T=T_c\\) 时驻值方程的首项是 \\(Jm^3/3=\\mu B\\)，所以 \\(m\\sim\\operatorname{sgn}(B)[3\\mu|B|/J]^{1/3}\\)，临界等温指数为 \\(3\\)。在零场、\\(T<T_c\\) 邻近临界点，极小化四阶多项式得 \\(m^2\\simeq3(J-k_BT)/(k_BT)\\)，代回得到有序相相对于顺磁解析延拓的自由能差 \\(\\Delta f=-3(J-k_BT)^2/(4k_BT)\\simeq-3k_B(T_c-T)^2/(4T_c)\\)。因此 \\(C=-NT\\partial_T^2 f_{\\rm eq}\\) 的临界下侧比上侧多 \\(3Nk_B/2\\)。这是一种平均场热力学极限的非解析跃变；有限 \\(N\\) 的配分函数解析，不存在真正的奇点。\n"
   },
   {
     "id": "W007",
