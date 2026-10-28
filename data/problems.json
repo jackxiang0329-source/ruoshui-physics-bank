@@ -1625,6 +1625,29 @@
     "challenge_profile": "high-multistage"
   },
   {
+    "id": "W023",
+    "topic": "振动与波动",
+    "title": "刚性球形声腔的径向驻波、Bessel 边界零点与能量正交",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "question": "半径为 $a>0$ 的刚性球形密闭空腔中，均匀理想流体静止，平衡质量密度为 $\\rho_0>0$、绝热声速为 $c>0$。在小振幅线性声学近似下，压强扰动 $p'(r,t)$ 满足 $\\partial_t^2 p'=c^2\\nabla^2p'$，只考虑对所有方向相同的球对称径向声振动。腔壁无法向速度穿透，且球心场有限。\n(1) 从球坐标 Laplace 算符与谐波变量分离导出径向波函数及中心正则性条件；(2) 用刚性壁法向速度为零的条件推导正频本征值方程，求首个非零球对称本征频率的数值系数；(3) 证明不同径向模在合适的体积权重下正交，写出声压和质点速度的能量积分守恒；(4) 讨论 $k=0$ 模与真正声振动的区别，以及腔半径扩大时本征频率的缩放规律。",
+    "solution": "(1) 对球对称压强 $p'(r,t)=P(r)e^{-i\\omega t}$，球坐标 Laplace 算符为 $\\nabla^2P=r^{-2}(r^2P')'$，故\n\\[\n\\frac1{r^2}(r^2P')'+k^2P=0,\\qquad k=\\omega/c.\n\\]\n通解为球贝塞尔函数的组合\n\\[\nP(r)=A j_0(kr)+B y_0(kr)\n=A\\frac{\\sin kr}{kr}-B\\frac{\\cos kr}{kr}.\n\\]\n由于 $y_0(kr)\\propto1/r$ 在球心发散，必须取 $B=0$；而 $j_0(0)=1$ 有限且导数在原点为零。\n\n(2) 流体线性动量方程 $\\rho_0\\partial_t v_r=-\\partial_r p'$。对 $\\omega>0$ 的谐波振动，刚性壁 $v_r(a,t)=0$ 等价于 $P'(a)=0$，即\n\\[\nj_0'(ka)=0\\quad\\Longleftrightarrow\\quad\nka\\cos(ka)-\\sin(ka)=0.\n\\]\n对正根令 $z=ka$，则满足 $\\tan z=z$，不包括 $z=0$ 的静态零模。第一个非零正根为 $z_1\\simeq4.493409458$，所以最低球对称声学振荡频率\n\\[\n\\omega_{1,\\rm radial}=\\frac{c z_1}{a}\\simeq4.493409458\\,\\frac ca.\n\\]\n这仅是球对称径向支的最低正频，不代表所有非球对称角模的最低正频。\n\n(3) 两个不同特征值 $k_m^2\\ne k_n^2$ 对应的径向方程交叉相乘相减并在 $r\\in(0,a)$ 积分，利用正则球心条件和 Neumann 壁条件，得到\n\\[\n(k_m^2-k_n^2)\\int_0^a r^2P_m(r)P_n(r)\\,dr=0,\n\\]\n故径向模在 $r^2dr$ 权重下正交。声压与速度的线性能量密度为\n\\[\nu=\\frac{p'^2}{2\\rho_0c^2}+\\frac{\\rho_0|\\boldsymbol v|^2}{2}.\n\\]\n结合连续方程 $\\partial_tp'=-\\rho_0c^2\\nabla\\cdot\\boldsymbol v$ 和动量方程，可得局部能量平衡\n\\[\n\\partial_tu+\\nabla\\cdot(p'\\boldsymbol v)=0.\n\\]\n刚性壁 $\\boldsymbol v\\cdot\\hat n=0$，故对空腔积分的总声能随时间守恒。\n\n(4) $k=0$ 时径向正则解为常数 $P(r)=P_0$，对应 $\\omega=0$ 的空间均匀静压微扰，而非周期性传播声波；因此频率谱中的零模不能算作第一声学振动。当半径 $a\\mapsto\\eta a$ 且介质声速不变时，本征无量纲根 $z_n$ 不变，全部球对称非零频率 $\\omega_n=c z_n/a$ 按 $1/\\eta$ 缩放，符合波动方程的尺度规律。",
+    "answer": "\\tan(ka)=ka,\\quad\\omega_{1,\\rm radial}\\simeq4.493409458\\,c/a",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "球坐标声波方程",
+      "球贝塞尔函数",
+      "Neumann本征值",
+      "正交性",
+      "声能守恒"
+    ],
+    "revision": "composite-v1.8",
+    "complexity_tier": "L5-C",
+    "challenge_profile": "high-multistage"
+  },
+  {
     "id": "O007",
     "topic": "光学",
     "title": "分离薄透镜系统的矩阵成像与无焦条件",
@@ -2013,6 +2036,29 @@
     "challenge_profile": "high-multistage"
   },
   {
+    "id": "O023",
+    "topic": "光学",
+    "title": "Fresnel 透射波带片的半波带半径、色散焦距与衍射级效率",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "question": "一张理想薄平面振幅型 Fresnel 波带片正入射波长为 $\\lambda>0$ 的相干标量平面波，预定在波带片后轴上距离 $f>0$ 处聚焦。波带片由同心圆区域组成，相邻半波带依次完全透明和完全不透明，首个中心带透明，忽略吸收带中的多次散射及边缘矢量效应。设第 $n$ 条环界半径为 $r_n$，且 $\\lambda\\ll f$。\n(1) 以波带片上半径 $r$ 点到焦点的光程差构造半波带分界，并求精确半径和近轴表达式；(2) 解释遮去交替半波带为何能增强焦点场，而不是简单减少焦点处的振幅；(3) 在波带片几何图案固定的条件下推导焦距对波长的依赖及理想奇数级次焦点位置；(4) 由二值振幅光栅的傅里叶系数给出一阶聚焦效率的理想上限，并与二值相位型波带片的效率进行比较。",
+    "solution": "(1) 波带片平面半径 $r$ 的点到轴上设计焦点的距离为 $\\sqrt{f^2+r^2}$，中心点距离为 $f$，故相对中心的光程差\n\\[\n\\Delta(r)=\\sqrt{f^2+r^2}-f.\n\\]\n相邻 Fresnel 半波带边界要求 $\\Delta(r_n)=n\\lambda/2$，$n=1,2,\\ldots$。解出\n\\[\nr_n^2=n\\lambda f+\\left(\\frac{n\\lambda}{2}\\right)^2.\n\\]\n在 $n\\lambda\\ll f$ 的傍轴范围，第二项相对很小，\n\\[\nr_n\\simeq\\sqrt{n\\lambda f}.\n\\]\n等式中 $r_n^2$ 与 $\\lambda f$ 都具有长度平方量纲。\n\n(2) 由 Huygens–Fresnel 原理，轴上观察点的复场是各环区域积分的相干和。连续相邻半波带的相位近似相差 $\\pi$，因此原本相邻环对焦点场有相互抵消的趋势。若把其中一套交替半波带遮挡，剩余透明半波带在设计焦点的主要相位接近同向，从而增强该焦点相对于无结构孔径的相干聚焦效果。透射总功率确实变少，但轴上焦点的局部强度可以增加；两种量不可混淆。\n\n(3) 当波带片刻制的半径 $r_n$ 不变，在近轴设计关系 $r_n^2\\simeq n\\lambda f$ 中，新的工作波长 $\\lambda'$ 对应主焦距\n\\[\nf_1(\\lambda')\\simeq\\frac{r_n^2}{n\\lambda'}\\propto\\frac1{\\lambda'}.\n\\]\n因此波长越长，主焦点越靠近波带片，表现出与普通正色散折射透镜相反的色差趋势。按半波带二值周期的傅里叶谐波，理想振幅型波带片除零级透射背景外可形成奇数级聚焦，约在\n\\[\nf_j=f_1/j,\\quad j=1,3,5,\\ldots\n\\]\n处，其中高阶焦点效率逐渐下降；高阶焦点也须在标量近轴条件下解释。\n\n(4) 把光阑透过率看作占空比 $1/2$、周期为两个半波带的二值振幅光栅，第一非零傅里叶谐波的复幅系数模为 $1/\\pi$，故相对于全部照明入射功率的理想一阶衍射聚焦效率为\n\\[\n\\eta_1^{\\rm amplitude}=\\frac1{\\pi^2}\\simeq10.1\\%.\n\\]\n若交替半波带不遮挡，而分别赋予相差 $\\pi$ 的二值相位延迟，则第一谐波幅度为 $2/\\pi$，相应理想一阶效率为\n\\[\n\\eta_1^{\\rm phase}=\\frac4{\\pi^2}\\simeq40.5\\%.\n\\]\n这些是理想二值结构在标量衍射模型中的效率，有限环数、材料吸收、制作误差及高数值孔径效应会降低实际焦点品质。",
+    "answer": "r_n^2=n\\lambda f+(n\\lambda/2)^2,\\quad f_1\\propto1/\\lambda,\\quad\\eta_1=1/\\pi^2",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "Fresnel半波带",
+      "二次相位聚焦",
+      "波带片设计",
+      "多级焦点",
+      "衍射效率"
+    ],
+    "revision": "composite-v1.8",
+    "complexity_tier": "L5-C",
+    "challenge_profile": "high-multistage"
+  },
+  {
     "id": "Q007",
     "topic": "近代物理",
     "title": "相对论两体衰变的能量区间与阈值",
@@ -2398,6 +2444,29 @@
     ],
     "revision": "composite-v1.8",
     "complexity_tier": "L5-C",
+    "challenge_profile": "high-multistage"
+  },
+  {
+    "id": "Q023",
+    "topic": "近代物理",
+    "title": "类氢离子基态的径向概率分布、期望值与 Coulomb 维里关系",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "question": "核电荷为 $+Ze$（$Z\\ge1$，$e>0$）的类氢离子只含一个电子，考虑有限核质量造成的约化质量 $\\mu>0$，真空介电常数 $\\epsilon_0$。电子—核库仑势为 $U(r)=-Ze^2/(4\\pi\\epsilon_0r)$。已知电子基态的空间波函数形式为 $\\psi_{1s}(r)=C e^{-r/a_Z}$，其中 $a_Z=4\\pi\\epsilon_0\\hbar^2/(\\mu Ze^2)$。\n(1) 求归一化常数 $C$ 与电子的径向概率密度，并计算最概然半径；(2) 从径向积分求 $\\langle r\\rangle,\\langle r^2\\rangle,\\langle1/r\\rangle$；(3) 求基态束缚能、库仑势能期望及动能期望，并验证 Coulomb 势的维里关系；(4) 求电子出现在半径 $R>0$ 球内的累计概率，讨论核电荷数 $Z$ 增大时轨道尺度和束缚能的标度。",
+    "solution": "(1) 取 $C$ 为正实数，利用三维球坐标体积元 $d^3r=4\\pi r^2dr$，归一化条件是\n\\[\n1=4\\pi |C|^2\\int_0^\\infty r^2e^{-2r/a_Z}dr\n=4\\pi|C|^2\\frac{2!}{(2/a_Z)^3}\n=\\pi a_Z^3|C|^2.\n\\]\n因此 $C=1/\\sqrt{\\pi a_Z^3}$。径向概率密度为\n\\[\nP_r(r)=4\\pi r^2|\\psi_{1s}(r)|^2\n=\\frac{4r^2}{a_Z^3}e^{-2r/a_Z},\\qquad r>0.\n\\]\n将其对 $r$ 求导，非零极值满足 $2/r-2/a_Z=0$，故最概然半径为 $r_{\\rm mode}=a_Z$。\n\n(2) 对任意 $n>-3$，利用 Gamma 积分\n\\[\n\\langle r^n\\rangle=\n\\frac4{a_Z^3}\\int_0^\\infty r^{n+2}e^{-2r/a_Z}dr\n=\\frac{(n+2)!}{2^{n+1}}a_Z^n\n\\]\n（对非整数 $n$ 把阶乘理解为 Gamma 函数）。于是\n\\[\n\\langle r\\rangle=\\frac{3a_Z}{2},\\quad\n\\langle r^2\\rangle=3a_Z^2,\\quad\n\\left\\langle\\frac1r\\right\\rangle=\\frac1{a_Z}.\n\\]\n注意最概然半径 $a_Z$ 不等于平均半径 $3a_Z/2$。\n\n(3) 基态束缚能为\n\\[\nE_{1s}=-\\frac{\\hbar^2}{2\\mu a_Z^2}\n=-\\frac{\\mu Z^2e^4}{2(4\\pi\\epsilon_0)^2\\hbar^2}.\n\\]\n库仑势能的期望值由上一步得到\n\\[\n\\langle U\\rangle=-\\frac{Ze^2}{4\\pi\\epsilon_0}\n\\left\\langle\\frac1r\\right\\rangle\n=-\\frac{\\hbar^2}{\\mu a_Z^2}=2E_{1s}.\n\\]\n再由 $E=\\langle K\\rangle+\\langle U\\rangle$ 得\n\\[\n\\langle K\\rangle=-E_{1s}=\\frac{\\hbar^2}{2\\mu a_Z^2}>0.\n\\]\n从而 $2\\langle K\\rangle+\\langle U\\rangle=0$，与 $U\\propto-1/r$ 的量子维里定理完全一致。\n\n(4) 球内累计概率为\n\\[\n\\Pr(r<R)=\\int_0^R\\frac{4r^2}{a_Z^3}e^{-2r/a_Z}dr\n=1-e^{-2R/a_Z}\\left(1+\\frac{2R}{a_Z}+\\frac{2R^2}{a_Z^2}\\right).\n\\]\n当 $R\\to0$ 该概率趋零、当 $R\\to\\infty$ 趋一。固定约化质量与基本常数时 $a_Z\\propto Z^{-1}$，平均半径和最概然半径都随 $Z$ 增大而缩小，而束缚能的绝对值 $|E_{1s}|\\propto Z^2$ 增长；若考虑超高核电荷的相对论效应，则非相对论模型需修正。",
+    "answer": "r_{\\rm mode}=a_Z,\\quad\\langle r\\rangle=3a_Z/2,\\quad E_{1s}=-\\hbar^2/(2\\mu a_Z^2)",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "氢原子径向态",
+      "归一化积分",
+      "期望值",
+      "维里定理",
+      "核电荷标度"
+    ],
+    "revision": "composite-v1.8",
+    "complexity_tier": "L5-B",
     "challenge_profile": "high-multistage"
   }
 ]

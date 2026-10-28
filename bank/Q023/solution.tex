@@ -1,0 +1,50 @@
+(1) 取 $C$ 为正实数，利用三维球坐标体积元 $d^3r=4\pi r^2dr$，归一化条件是
+\[
+1=4\pi |C|^2\int_0^\infty r^2e^{-2r/a_Z}dr
+=4\pi|C|^2\frac{2!}{(2/a_Z)^3}
+=\pi a_Z^3|C|^2.
+\]
+因此 $C=1/\sqrt{\pi a_Z^3}$。径向概率密度为
+\[
+P_r(r)=4\pi r^2|\psi_{1s}(r)|^2
+=\frac{4r^2}{a_Z^3}e^{-2r/a_Z},\qquad r>0.
+\]
+将其对 $r$ 求导，非零极值满足 $2/r-2/a_Z=0$，故最概然半径为 $r_{\rm mode}=a_Z$。
+
+(2) 对任意 $n>-3$，利用 Gamma 积分
+\[
+\langle r^n\rangle=
+\frac4{a_Z^3}\int_0^\infty r^{n+2}e^{-2r/a_Z}dr
+=\frac{(n+2)!}{2^{n+1}}a_Z^n
+\]
+（对非整数 $n$ 把阶乘理解为 Gamma 函数）。于是
+\[
+\langle r\rangle=\frac{3a_Z}{2},\quad
+\langle r^2\rangle=3a_Z^2,\quad
+\left\langle\frac1r\right\rangle=\frac1{a_Z}.
+\]
+注意最概然半径 $a_Z$ 不等于平均半径 $3a_Z/2$。
+
+(3) 基态束缚能为
+\[
+E_{1s}=-\frac{\hbar^2}{2\mu a_Z^2}
+=-\frac{\mu Z^2e^4}{2(4\pi\epsilon_0)^2\hbar^2}.
+\]
+库仑势能的期望值由上一步得到
+\[
+\langle U\rangle=-\frac{Ze^2}{4\pi\epsilon_0}
+\left\langle\frac1r\right\rangle
+=-\frac{\hbar^2}{\mu a_Z^2}=2E_{1s}.
+\]
+再由 $E=\langle K\rangle+\langle U\rangle$ 得
+\[
+\langle K\rangle=-E_{1s}=\frac{\hbar^2}{2\mu a_Z^2}>0.
+\]
+从而 $2\langle K\rangle+\langle U\rangle=0$，与 $U\propto-1/r$ 的量子维里定理完全一致。
+
+(4) 球内累计概率为
+\[
+\Pr(r<R)=\int_0^R\frac{4r^2}{a_Z^3}e^{-2r/a_Z}dr
+=1-e^{-2R/a_Z}\left(1+\frac{2R}{a_Z}+\frac{2R^2}{a_Z^2}\right).
+\]
+当 $R\to0$ 该概率趋零、当 $R\to\infty$ 趋一。固定约化质量与基本常数时 $a_Z\propto Z^{-1}$，平均半径和最概然半径都随 $Z$ 增大而缩小，而束缚能的绝对值 $|E_{1s}|\propto Z^2$ 增长；若考虑超高核电荷的相对论效应，则非相对论模型需修正。
