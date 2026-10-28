@@ -1,0 +1,230 @@
+{
+  "schema": "ruoshui-physics-taxonomy-v1",
+  "modules": [
+    {
+      "code": "fundamentals",
+      "name": "物理基础",
+      "folder": "01-物理基础"
+    },
+    {
+      "code": "mechanics",
+      "name": "力学",
+      "folder": "02-力学"
+    },
+    {
+      "code": "electromagnetism",
+      "name": "电磁学",
+      "folder": "03-电磁学"
+    },
+    {
+      "code": "thermodynamics",
+      "name": "热学",
+      "folder": "04-热学"
+    },
+    {
+      "code": "waves",
+      "name": "振动与波动",
+      "folder": "05-振动与波动"
+    },
+    {
+      "code": "optics",
+      "name": "光学",
+      "folder": "06-光学"
+    },
+    {
+      "code": "modern",
+      "name": "近代物理",
+      "folder": "07-近代物理"
+    },
+    {
+      "code": "unclassified",
+      "name": "待分类",
+      "folder": "99-待分类"
+    }
+  ],
+  "refresher_lessons": [
+    {
+      "source_path": "module-1-foundations/1.1-what-is-physics.md",
+      "module": "fundamentals",
+      "topic": "scientific-method",
+      "label": "物理建模与科学方法"
+    },
+    {
+      "source_path": "module-1-foundations/1.2-physical-quantities-and-si-units.md",
+      "module": "fundamentals",
+      "topic": "units-dimensions",
+      "label": "物理量、单位与量纲"
+    },
+    {
+      "source_path": "module-1-foundations/1.3-measurement-and-uncertainty.md",
+      "module": "fundamentals",
+      "topic": "measurement",
+      "label": "测量与不确定度"
+    },
+    {
+      "source_path": "module-1-foundations/1.4-scalars-and-vectors.md",
+      "module": "fundamentals",
+      "topic": "vectors",
+      "label": "标量与矢量"
+    },
+    {
+      "source_path": "module-1-foundations/1.5-mathematical-tools-for-physics.md",
+      "module": "fundamentals",
+      "topic": "mathematical-methods",
+      "label": "物理数学方法"
+    },
+    {
+      "source_path": "module-1-foundations/1.6-foundations-review.md",
+      "module": "fundamentals",
+      "topic": "review",
+      "label": "物理基础综合"
+    },
+    {
+      "source_path": "module-2-mechanics/2.1-force-and-motion.md",
+      "module": "mechanics",
+      "topic": "newton-motion",
+      "label": "运动学与牛顿定律"
+    },
+    {
+      "source_path": "module-2-mechanics/2.2-multiple-forces.md",
+      "module": "mechanics",
+      "topic": "force-analysis",
+      "label": "受力分析与力的合成"
+    },
+    {
+      "source_path": "module-2-mechanics/2.3-work.md",
+      "module": "mechanics",
+      "topic": "work",
+      "label": "功与动能定理"
+    },
+    {
+      "source_path": "module-2-mechanics/2.4-energy.md",
+      "module": "mechanics",
+      "topic": "energy",
+      "label": "机械能与能量守恒"
+    },
+    {
+      "source_path": "module-2-mechanics/2.5-circular-motion.md",
+      "module": "mechanics",
+      "topic": "circular-motion",
+      "label": "圆周运动"
+    },
+    {
+      "source_path": "module-2-mechanics/2.6-engineering-applications.md",
+      "module": "mechanics",
+      "topic": "engineering",
+      "label": "工程力学应用"
+    },
+    {
+      "source_path": "module-2-mechanics/2.7-module-review.md",
+      "module": "mechanics",
+      "topic": "review",
+      "label": "力学综合"
+    },
+    {
+      "source_path": "module-3-electricity-and-magnetism/3.1-electric-charge-force-and-field.md",
+      "module": "electromagnetism",
+      "topic": "electric-field",
+      "label": "电荷、库仑定律与电场"
+    },
+    {
+      "source_path": "module-3-electricity-and-magnetism/3.2-electric-potential-and-energy.md",
+      "module": "electromagnetism",
+      "topic": "potential",
+      "label": "电势与电势能"
+    },
+    {
+      "source_path": "module-3-electricity-and-magnetism/3.3-electric-circuits.md",
+      "module": "electromagnetism",
+      "topic": "circuits",
+      "label": "电路与基尔霍夫定律"
+    },
+    {
+      "source_path": "module-3-electricity-and-magnetism/3.4-magnetism.md",
+      "module": "electromagnetism",
+      "topic": "magnetism",
+      "label": "磁场与磁力"
+    },
+    {
+      "source_path": "module-3-electricity-and-magnetism/3.5-capacitors.md",
+      "module": "electromagnetism",
+      "topic": "capacitance",
+      "label": "电容与电容器"
+    },
+    {
+      "source_path": "module-3-electricity-and-magnetism/3.6-engineering-applications.md",
+      "module": "electromagnetism",
+      "topic": "engineering",
+      "label": "电磁学工程应用"
+    },
+    {
+      "source_path": "module-3-electricity-and-magnetism/3.7-module-review.md",
+      "module": "electromagnetism",
+      "topic": "review",
+      "label": "电磁学综合"
+    },
+    {
+      "source_path": "module-4-waves/4.1-introduction-to-waves.md",
+      "module": "waves",
+      "topic": "wave-basics",
+      "label": "波的基本性质"
+    },
+    {
+      "source_path": "module-4-waves/4.2-harmonic-motion.md",
+      "module": "waves",
+      "topic": "simple-harmonic-motion",
+      "label": "简谐运动"
+    },
+    {
+      "source_path": "module-4-waves/4.3-oscillations.md",
+      "module": "waves",
+      "topic": "oscillations",
+      "label": "阻尼振动与受迫振动"
+    },
+    {
+      "source_path": "module-4-waves/4.4-coupled-oscillations.md",
+      "module": "waves",
+      "topic": "coupled-oscillations",
+      "label": "耦合振动与简正模"
+    },
+    {
+      "source_path": "module-4-waves/4.5-traveling-waves.md",
+      "module": "waves",
+      "topic": "traveling-waves",
+      "label": "行波"
+    },
+    {
+      "source_path": "module-4-waves/4.6-standing-waves.md",
+      "module": "waves",
+      "topic": "standing-waves",
+      "label": "驻波"
+    },
+    {
+      "source_path": "module-4-waves/4.7-engineering-applications.md",
+      "module": "waves",
+      "topic": "engineering",
+      "label": "波动学工程应用"
+    },
+    {
+      "source_path": "module-4-waves/4.8-module-review.md",
+      "module": "waves",
+      "topic": "review",
+      "label": "振动与波动综合"
+    }
+  ],
+  "problem_types": {
+    "conceptual": "概念辨析题",
+    "calculation": "计算与估算题",
+    "challenge": "综合探究题"
+  },
+  "verified_type_overrides": {
+    "PREF-00011": {
+      "type": "conceptual",
+      "reason": "要求解释未标单位为何无法代入计算，并非数值求解"
+    },
+    "PREF-00019": {
+      "type": "conceptual",
+      "reason": "要求补充量纲单位并举例，并非求数值答案"
+    }
+  }
+}
