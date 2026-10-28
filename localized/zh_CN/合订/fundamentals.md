@@ -2,7 +2,7 @@
 
 > 仅供编辑复核：尚未通过独立双语、答案或版权审核；不可正式组卷。
 
-共 101 道。英文原文均以保留源指纹的上游快照为依据。
+共 102 道。英文原文均以保留源指纹的上游快照为依据。
 
 <a id="cp-00137"></a>
 
@@ -1572,6 +1572,32 @@ Action at a distance, such as is the case for gravity, was once thought to be il
 
 - 原件：external_sources/college_physics/raw/CP-00301.md
 - 原件 Git blob SHA：711013126f65bc3a92ce714064460becaddd1b7a
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00306"></a>
+
+## CP-00306｜自然界的简洁统一是否必然存在
+
+**学科：** 物理基础　**知识点：** 科学方法／物理定律的普适性
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+牛顿运动定律与万有引力定律较早令人信服地揭示了自然界深层的简洁性与统一性。后来还发现了许多类似例子，科学家也因此希望在复杂现象中找到潜在的有序规律。我们能否**证明**今后的任何探索都必定会发现这种秩序？
+
+## 英文原题（存档摘录）
+
+# Newton’s Universal Law of Gravitation — CP-00306
+
+Newton’s laws of motion and gravity were among the first to convincingly demonstrate the underlying simplicity and unity in nature. Many other examples have since been discovered, and we now expect to find such underlying order in complex situations. Is there proof that such order will always be found in new explorations?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00306.md
+- 原件 Git blob SHA：625f249e507d792e387c09e0e371e97407e7dc55
 - 上游署名与许可证见原件；尚未完成单题权利审查。
 
 ---

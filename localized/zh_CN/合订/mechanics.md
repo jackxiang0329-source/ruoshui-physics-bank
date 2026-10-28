@@ -2,7 +2,7 @@
 
 > 仅供编辑复核：尚未通过独立双语、答案或版权审核；不可正式组卷。
 
-共 318 道。英文原文均以保留源指纹的上游快照为依据。
+共 337 道。英文原文均以保留源指纹的上游快照为依据。
 
 <a id="cp-00001"></a>
 
@@ -6766,6 +6766,600 @@ A non-rotating frame of reference placed at the center of the Sun is very nearly
 
 - 原件：external_sources/college_physics/raw/CP-00303.md
 - 原件 Git blob SHA：ed7591fdc2d3cb60cd83a75dc540c42e428dc10f
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00305"></a>
+
+## CP-00305｜椭圆轨道卫星的受力及速率变化
+
+**学科：** 力学　**知识点：** 万有引力／椭圆轨道
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+画出椭圆轨道上卫星的**受力分析图**，并据此解释卫星接近其中心天体时速率为何增大、远离时速率为何减小。
+
+## 英文原题（存档摘录）
+
+# Newton’s Universal Law of Gravitation — CP-00305
+
+Draw a free body diagram for a satellite in an elliptical orbit showing why its speed increases as it approaches its parent body and decreases as it moves away.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00305.md
+- 原件 Git blob SHA：3fd18776a4955f0a9ace05f44cde4da2fa613b2a
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：要求绘图
+- 审校提示：需同时考虑引力做功及轨道能量关系，不应只由力的指向简单推出速度大小。
+
+---
+
+<a id="cp-00307"></a>
+
+## CP-00307｜由北极重力加速度反推地球质量
+
+**学科：** 力学　**知识点：** 万有引力／地球质量
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+（a）已知地球北极表面重力加速度为 $9.830\,\mathrm{m/s^2}$，从地心到北极的半径为 $6371\,\mathrm{km}$。据此计算地球质量。（b）将所得结果与原教材采用的参考值 $5.979\times10^{24}\,\mathrm{kg}$ 比较。
+
+## 英文原题（存档摘录）
+
+# Newton’s Universal Law of Gravitation — CP-00307
+
+(a) Calculate Earth’s mass given the acceleration due to gravity at the North Pole is <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>9.830 m</mn><msup><mtext>/s</mtext><mrow><mn>2</mn></mrow></msup></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{9 "." "830"`"m/s" rSup { size 8{2} } } {}</annotation></semantics></math>
+
+ and the radius of the Earth is 6371 km from center to pole.
+
+(b) Compare this with the accepted value of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>5</mn><mtext>.</mtext><mrow><mtext>979</mtext><mo stretchy="false">×</mo><msup><mtext>10</mtext><mrow><mtext>24</mtext></mrow></msup></mrow><mspace width="0.25em" /><mtext>kg</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{5 "." "979" times "10" rSup { size 8{"24"} } `"kg"} {}</annotation></semantics></math>
+
+.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00307.md
+- 原件 Git blob SHA：025a7fc3efbb06eb9eadcc8a5e97ec76f896eacb
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：需要约定物理常量
+- 审校提示：计算需使用万有引力常量G。
+
+---
+
+<a id="cp-00308"></a>
+
+## CP-00308｜月球和太阳对地表的引力加速度
+
+**学科：** 力学　**知识点：** 万有引力／潮汐力
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+（a）求**月球引力**在地球表面造成的加速度大小；（b）求**太阳引力**在地球位置造成的加速度大小；（c）计算两者的比值，并解释为什么即使这一比值如此，地球潮汐仍主要受月球影响。
+
+## 英文原题（存档摘录）
+
+# Newton’s Universal Law of Gravitation — CP-00308
+
+(a) Calculate the magnitude of the acceleration due to gravity on the surface of Earth due to the Moon.
+
+(b) Calculate the magnitude of the acceleration due to gravity at Earth due to the Sun.
+
+(c) Take the ratio of the Moon’s acceleration to the Sun’s and comment on why the tides are predominantly due to the Moon in spite of this number.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00308.md
+- 原件 Git blob SHA：5b404d662d4cfa2631bb7a6366de2d9a58a15827
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：需要外部资料
+- 审校提示：需提供日地、月地距离及质量；潮汐是不同位置引力差引起的，不能只比较绝对引力加速度。
+
+---
+
+<a id="cp-00309"></a>
+
+## CP-00309｜月球与火星的表面重力加速度
+
+**学科：** 力学　**知识点：** 万有引力／月球与火星表面
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+（a）求月球表面重力加速度；（b）求火星表面重力加速度。已知火星质量为 $6.418\times10^{23}\,\mathrm{kg}$，半径为 $3.38\times10^6\,\mathrm{m}$。
+
+## 英文原题（存档摘录）
+
+# Newton’s Universal Law of Gravitation — CP-00309
+
+(a) What is the acceleration due to gravity on the surface of the Moon?
+
+(b) On the surface of Mars? The mass of Mars is <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>6.418</mn><mrow><mo stretchy="false">×</mo><msup><mtext>10</mtext><mrow><mtext>23</mtext></mrow></msup></mrow><mspace width="0.25em" /><mtext>kg</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{6 "." "418" times "10" rSup { size 8{"23"} } `"kg"} {}</annotation></semantics></math>
+
+ and its radius is <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>3</mn><mtext>.</mtext><mrow><mtext>38</mtext><mo stretchy="false">×</mo><msup><mtext>10</mtext><mrow><mn>6</mn></mrow></msup></mrow><mspace width="0.25em" /><mtext>m</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{3 "." "38" times "10" rSup { size 8{6} } `m} {}</annotation></semantics></math>
+
+.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00309.md
+- 原件 Git blob SHA：a8cd7812ed5bd5690ce2257f88238c3cc3bfb44d
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：需要外部资料
+- 审校提示：月球质量和半径未在独立原题给出，需从教材常量表获取。
+
+---
+
+<a id="cp-00310"></a>
+
+## CP-00310｜太阳表面重力及体重倍数
+
+**学科：** 力学　**知识点：** 万有引力／太阳表面
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+（a）计算太阳表面重力加速度；（b）假设能够站在太阳表面，人的重量将变为地球上的多少倍？（忽略这一假设不可能实现的事实。）
+
+## 英文原题（存档摘录）
+
+# Newton’s Universal Law of Gravitation — CP-00310
+
+(a) Calculate the acceleration due to gravity on the surface of the Sun.
+
+(b) By what factor would your weight increase if you could stand on the Sun? (Never mind that you cannot.)
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00310.md
+- 原件 Git blob SHA：11b1a65574b1442e1e9ab0d5f421048b0c4aa758
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：需要外部资料
+- 审校提示：原题未给太阳质量及半径，须注明采用的常数值。
+
+---
+
+<a id="cp-00311"></a>
+
+## CP-00311｜地月共同质心附近的引力与加速度
+
+**学科：** 力学　**知识点：** 万有引力／地月质心
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+月球和地球绕共同质心运动，该质心距地心约 $4700\,\mathrm{km}$，即位于地表下约 $1690\,\mathrm{km}$ 处。（a）计算该位置处由月球引力造成的加速度大小；（b）地心绕该质心以约 $27.3\,\mathrm{d}$ 的周期旋转，求地心的向心加速度，并与（a）比较。讨论两个加速度是否相等，以及它们应该相等还是不相等的原因。
+
+## 英文原题（存档摘录）
+
+# Newton’s Universal Law of Gravitation — CP-00311
+
+The Moon and Earth rotate about their common center of mass, which is located about 4700 km from the center of Earth. (This is 1690 km below the surface.)
+
+(a) Calculate the magnitude of the acceleration due to the Moon’s gravity at that point.
+
+(b) Calculate the magnitude of the centripetal acceleration of the center of Earth as it rotates about that point once each lunar month (about 27.3 d) and compare it with the acceleration found in part (a). Comment on whether or not they are equal and why they should or should not be.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00311.md
+- 原件 Git blob SHA：4c53952ead7f78ba9c0eaa849055f9ba42bc6ee7
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：需要外部资料
+- 审校提示：质心位置处和地心处不是同一个点；需使用月地距离与月球质量等原教材常量。
+
+---
+
+<a id="cp-00312"></a>
+
+## CP-00312｜新生儿受到父亲及木星的引力
+
+**学科：** 力学　**知识点：** 万有引力／人体与木星引力比较
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+关于出生时行星位置的占星术常有缺少证据的主张。行星对地球上物体的已知作用力之一是引力。（a）一名质量为 $4.20\,\mathrm{kg}$ 的婴儿出生时，距其 $0.200\,\mathrm{m}$ 处有一名质量为 $100\,\mathrm{kg}$ 的父亲，求父亲对婴儿的万有引力大小。（b）若木星距地球最近时约为 $6.29\times10^{11}\,\mathrm{m}$，求木星对婴儿的引力，并与父亲的引力比较。房间及医院建筑中的其他物体也有引力作用。
+
+## 英文原题（存档摘录）
+
+# Newton’s Universal Law of Gravitation — CP-00312
+
+Astrology, that unlikely and vague pseudoscience, makes much of the position of the planets at the moment of one’s birth. The only known force a planet exerts on Earth is gravitational.
+
+(a) Calculate the magnitude of the gravitational force exerted on a 4.20 kg baby by a 100 kg father 0.200 m away at birth (he is assisting, so he is close to the child).
+
+(b) Calculate the magnitude of the force on the baby due to Jupiter if it is at its closest distance to Earth, some <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>6</mn><mtext>.</mtext><mrow><mtext>29</mtext><mo stretchy="false">×</mo><msup><mtext>10</mtext><mrow><mtext>11</mtext></mrow></msup></mrow><mspace width="0.25em" /><mtext>m</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{6 "." "29" times "10" rSup { size 8{"11"} } `m} {}</annotation></semantics></math>
+
+ away. How does the force of Jupiter on the baby compare to the force of the father on the baby? Other objects in the room and the hospital building also exert similar gravitational forces. (Of course, there could be an unknown force acting, but scientists first need to be convinced that there is even an effect, much less that an unknown force causes it.)
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00312.md
+- 原件 Git blob SHA：580851fcbfaaa297b4e2ab46e191c01b4314a151
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：需要外部资料
+- 审校提示：木星质量及万有引力常量未在独立原题给出，需调用资料。
+
+---
+
+<a id="cp-00313"></a>
+
+## CP-00313｜冥王星与天王星对海王星的引力比较
+
+**学科：** 力学　**知识点：** 万有引力／行星扰动
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+冥王星的存在曾据海王星轨道异常而提出，之后在接近预测位置处被发现；然而冥王星质量较小，这一发现可能有巧合成分。为说明冥王星对海王星轨道的影响较小：（a）若冥王星与海王星相距 $4.50\times10^{12}\,\mathrm{m}$，冥王星质量为 $1.4\times10^{22}\,\mathrm{kg}$，求冥王星对海王星造成的引力加速度；（b）若天王星与海王星相距 $2.50\times10^{12}\,\mathrm{m}$，天王星质量为 $8.62\times10^{25}\,\mathrm{kg}$，求其引力加速度，并与冥王星的结果比较。
+
+## 英文原题（存档摘录）
+
+# Newton’s Universal Law of Gravitation — CP-00313
+
+The existence of the dwarf planet Pluto was proposed based on irregularities in Neptune’s orbit. Pluto was subsequently discovered near its predicted position. But it now appears that the discovery was fortuitous, because Pluto is small and the irregularities in Neptune’s orbit were not well known. To illustrate that Pluto has a minor effect on the orbit of Neptune compared with the closest planet to Neptune:
+
+(a) Calculate the acceleration due to gravity at Neptune due to Pluto when they are <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>4</mn><mtext>.</mtext><mrow><mtext>50</mtext><mo stretchy="false">×</mo><msup><mtext>10</mtext><mrow><mtext>12</mtext></mrow></msup></mrow><mspace width="0.25em" /><mtext>m</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{4 "." "50" times "10" rSup { size 8{"12"} } `m} {}</annotation></semantics></math>
+
+ apart, as they are at present. The mass of Pluto is <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>1</mn><mtext>.</mtext><mrow><mn>4</mn><mo stretchy="false">×</mo><msup><mtext>10</mtext><mrow><mtext>22</mtext></mrow></msup></mrow><mspace width="0.25em" /><mtext>kg</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{1 "." 4 times "10" rSup { size 8{"22"} } `"kg"} {}</annotation></semantics></math>
+
+.
+
+(b) Calculate the acceleration due to gravity at Neptune due to Uranus, presently about <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>2</mn><mtext>.</mtext><mrow><mtext>50</mtext><mo stretchy="false">×</mo><msup><mtext>10</mtext><mrow><mtext>12</mtext></mrow></msup></mrow><mspace width="0.25em" /><mtext>m</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{2 "." "50" times "10" rSup { size 8{"12"} } `m} {}</annotation></semantics></math>
+
+ apart, and compare it with that due to Pluto. The mass of Uranus is <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>8</mn><mtext>.</mtext><mrow><mtext>62</mtext><mo stretchy="false">×</mo><msup><mtext> 10</mtext><mrow><mtext>25</mtext></mrow></msup></mrow><mspace width="0.25em" /><mtext> kg</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{8 "." "62" times " 10" rSup { size 8{"25"} } " kg"} {}</annotation></semantics></math>
+
+.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00313.md
+- 原件 Git blob SHA：29927e8cacfed583cb06301ea8ae4c2c5c522713
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：历史数据时效
+- 审校提示：原文‘目前相距’只是旧版教材的时间背景，数字按原题保留，不能当作今天的天文位置。
+
+---
+
+<a id="cp-00314"></a>
+
+## CP-00314｜太阳绕银河系运动时的加速度和速率
+
+**学科：** 力学　**知识点：** 圆周运动／太阳绕银河系
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+（a）太阳绕银河系公转一周约需 $2.60\times10^8\,\mathrm{年}$，近似圆形轨道的平均半径为 $3.00\times10^4\,\mathrm{光年}$（光年是光在一年内传播的距离）。求太阳沿银河系轨道运动的向心加速度，并讨论太阳附近的参考系是否可近似看作惯性系。（b）求太阳沿该轨道运动的平均速率，并讨论其大小是否符合你的直觉。
+
+## 英文原题（存档摘录）
+
+# Newton’s Universal Law of Gravitation — CP-00314
+
+(a) The Sun orbits the Milky Way galaxy once each <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>2</mn><mtext>.</mtext><msup><mtext>60 x 10</mtext><mrow><mn>8</mn></mrow></msup><mspace width="0.25em" /><mtext> y</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{2 "." "60 x 10" rSup { size 8{8} } " y"} {}</annotation></semantics></math>
+
+, with a roughly circular orbit averaging <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>3</mn><mtext>.</mtext><msup><mtext>00 x 10</mtext><mrow><mn>4</mn></mrow></msup></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{3 "." "00 x 10" rSup { size 8{4} } } {}</annotation></semantics></math>
+
+ light years in radius. (A light year is the distance traveled by light in 1 y.) Calculate the centripetal acceleration of the Sun in its galactic orbit. Does your result support the contention that a nearly inertial frame of reference can be located at the Sun?
+
+(b) Calculate the average speed of the Sun in its galactic orbit. Does the answer surprise you?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00314.md
+- 原件 Git blob SHA：d71d7bfeddc4da48b191995948d8ca33987131e4
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00315"></a>
+
+## CP-00315｜山峰引力达到体重百分之二是否合理
+
+**学科：** 力学　**知识点：** 万有引力／不合理结果
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+**不合理结果题。**假设一座距离某人 $10.0\,\mathrm{km}$ 的山对他的引力大小竟达到其重量的 $2.00\%$。（a）计算这座山所需具有的质量；（b）将山的质量与地球质量比较；（c）说明所得结果有何不合理之处；（d）指出哪些前提不合理或相互矛盾。（精密重力测量确实能够探测到附近山峰及地质差异的影响。）
+
+## 英文原题（存档摘录）
+
+# Newton’s Universal Law of Gravitation — CP-00315
+
+**Unreasonable Result**
+
+A mountain 10.0 km from a person exerts a gravitational force on him equal to 2.00% of his weight.
+
+(a) Calculate the mass of the mountain.
+
+(b) Compare the mountain’s mass with that of Earth.
+
+(c) What is unreasonable about these results?
+
+(d) Which premises are unreasonable or inconsistent? (Note that accurate gravitational measurements can easily detect the effect of nearby mountains and variations in local geology.)
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00315.md
+- 原件 Git blob SHA：ca21447d8a9096a55f2c267ec437a690edfaedbf
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：物理模型依赖
+- 审校提示：须将山的质量近似集中于距人10km处，并采用适当重力常量。
+
+---
+
+<a id="cp-00316"></a>
+
+## CP-00316｜开普勒定律适用于什么参考系
+
+**学科：** 力学　**知识点：** 开普勒定律／参考系
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+开普勒定律在什么参考系中适用？这些定律只是对天体运动现象的描述，还是也包含关于运动**原因**的信息？
+
+## 英文原题（存档摘录）
+
+# Satellites and Kepler’s Laws: An Argument for Simplicity — CP-00316
+
+In what frame(s) of reference are Kepler’s laws valid? Are Kepler’s laws purely descriptive, or do they contain causal information?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00316.md
+- 原件 Git blob SHA：14a4cc8383c2213c7189c943bf3264fa4ecd169f
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00317"></a>
+
+## CP-00317｜利用地球轨道数据求太阳质量
+
+**学科：** 力学　**知识点：** 开普勒定律／太阳质量
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+利用地球绕太阳公转的轨道数据，计算太阳质量，并与太阳质量的已知参考值比较。
+
+## 英文原题（存档摘录）
+
+# Satellites and Kepler’s Laws: An Argument for Simplicity — CP-00317
+
+Calculate the mass of the Sun based on data for Earth’s orbit and compare the value obtained with the Sun’s actual mass.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00317.md
+- 原件 Git blob SHA：882017ca88e5d1a1de8c1855401b139f8586666c
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：需要外部资料
+- 审校提示：原题未给地球轨道半径、公转周期或太阳质量参考值，需另取教材数据。
+
+---
+
+<a id="cp-00318"></a>
+
+## CP-00318｜利用木星卫星的轨道反推木星质量
+
+**学科：** 力学　**知识点：** 开普勒定律／木星质量
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+利用木星某颗卫星的轨道数据，求木星的质量，并将计算结果与公认参考值比较。
+
+## 英文原题（存档摘录）
+
+# Satellites and Kepler’s Laws: An Argument for Simplicity — CP-00318
+
+Find the mass of Jupiter based on data for the orbit of one of its moons, and compare your result with its actual mass.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00318.md
+- 原件 Git blob SHA：d910f317014033ad305ac7f0b392f65ec7221ab9
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：题设条件不充分
+- 审校提示：未指定采用哪颗木卫，也未给相应轨道半径与周期。
+
+---
+
+<a id="cp-00319"></a>
+
+## CP-00319｜银河系边缘恒星的公转周期与暗物质
+
+**学科：** 力学　**知识点：** 引力和开普勒定律／星系质量
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+天文观测显示，银河系质量约为太阳质量的 $8.0\times10^{11}$ 倍。一颗在银河系边缘运行的恒星距星系中心约 $6.0\times10^4\,\mathrm{光年}$。（a）求按这一质量估算的公转周期；（b）若实际公转周期为 $6.0\times10^7\,\mathrm{年}$，则由轨道运动反推星系质量应是多少？这类计算可用于讨论宇宙中的暗物质，以及星系中心存在大质量黑洞的证据。
+
+## 英文原题（存档摘录）
+
+# Satellites and Kepler’s Laws: An Argument for Simplicity — CP-00319
+
+Astronomical observations of our Milky Way galaxy indicate that it has a mass of about <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>8</mn><mtext>.</mtext><mrow><mn>0</mn><mo stretchy="false">×</mo><msup><mtext>10</mtext><mrow><mtext>11</mtext></mrow></msup></mrow></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{8 "." 0 times "10" rSup { size 8{"11"} } } {}</annotation></semantics></math>
+
+ solar masses. A star orbiting on the galaxy’s periphery is about <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>6</mn><mtext>.</mtext><mrow><mn>0</mn><mo stretchy="false">×</mo><msup><mtext>10</mtext><mrow><mn>4</mn></mrow></msup></mrow></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{6 "." 0 times "10" rSup { size 8{4} } } {}</annotation></semantics></math>
+
+ light years from its center. (a) What should the orbital period of that star be? (b) If its period is <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>6</mn><mtext>.</mtext><mrow><mn>0</mn><mo stretchy="false">×</mo><msup><mtext>10</mtext><mrow><mn>7</mn></mrow></msup></mrow></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{6 "." 0 times "10" rSup { size 8{7} } } {}</annotation></semantics></math>
+
+ years instead, what is the mass of the galaxy? Such calculations are used to imply the existence of “dark matter” in the universe and have indicated, for example, the existence of very massive black holes at the centers of some galaxies.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00319.md
+- 原件 Git blob SHA：7bdc4754ec1ae1909779c5f5b6979b9a3bca6f87
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：物理模型依赖
+- 审校提示：假定轨道近似圆形、中心集中质量分布；星系总质量和半径数据属于上游教学近似。
+
+---
+
+<a id="cp-00320"></a>
+
+## CP-00320｜轨道铆钉与卫星的相对速度及碰撞
+
+**学科：** 力学　**知识点：** 卫星轨道／相对速度和碰撞
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+**综合题。**废弃卫星及火箭残骸形成的太空碎片对在轨卫星构成威胁。（a）计算距地表 $900\,\mathrm{km}$ 的圆形轨道上卫星的速率；（b）若一颗松动的铆钉在半径相同、相对卫星轨道夹角为 $90^\circ$ 的另一轨道上运动，求两者接触前铆钉相对卫星的速度；（c）若铆钉尺寸为 $3.00\,\mathrm{mm}$，估算碰撞持续时间；（d）若铆钉质量为 $0.500\,\mathrm{g}$，求其对卫星的平均作用力；（e）估算碰撞中转化的能量。假设卫星质量远大于铆钉，速度基本不变。
+
+## 英文原题（存档摘录）
+
+# Satellites and Kepler’s Laws: An Argument for Simplicity — CP-00320
+
+**Integrated Concepts**
+
+Space debris left from old satellites and their launchers is becoming a hazard to other satellites. (a) Calculate the speed of a satellite in an orbit 900 km above Earth’s surface. (b) Suppose a loose rivet is in an orbit of the same radius that intersects the satellite’s orbit at an angle of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext>90º</mtext></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"90" rSup { size 8{ circ } } } {}</annotation></semantics></math>
+
+ relative to Earth. What is the velocity of the rivet relative to the satellite just before striking it? (c) Given the rivet is 3.00 mm in size, how long will its collision with the satellite last? (d) If its mass is 0.500 g, what is the average force it exerts on the satellite? (e) How much energy in joules is generated by the collision? (The satellite’s velocity does not change appreciably, because its mass is much greater than the rivet’s.)
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00320.md
+- 原件 Git blob SHA：fba6bc619e924f632b41cb6ec50783d26d339b09
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：物理模型依赖
+- 审校提示：由铆钉尺寸估算接触时间需假设穿透或减速距离模型，不能据题面声称严格唯一值。
+
+---
+
+<a id="cp-00321"></a>
+
+## CP-00321｜一小时绕地球一周的卫星是否可能
+
+**学科：** 力学　**知识点：** 开普勒定律／不合理近地轨道
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+**不合理结果题。**（a）依据开普勒定律与月球轨道的有关数据，计算一颗绕地球公转周期仅为 $1.00\,\mathrm{h}$ 的卫星所需的轨道半径；（b）计算结果有何不合理之处？（c）周期为一小时的轨道设定有什么不合理或自相矛盾的地方？
+
+## 英文原题（存档摘录）
+
+# Satellites and Kepler’s Laws: An Argument for Simplicity — CP-00321
+
+**Unreasonable Results**
+
+(a) Based on Kepler’s laws and information on the orbital characteristics of the Moon, calculate the orbital radius for an Earth satellite having a period of 1.00 h. (b) What is unreasonable about this result? (c) What is unreasonable or inconsistent about the premise of a 1.00 h orbit?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00321.md
+- 原件 Git blob SHA：548ead051fe9f4c7c665ce0a449e6bd8048e0153
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：需要外部资料
+- 审校提示：月球轨道数据来自上游教材，独立题面没有完整列出。
+
+---
+
+<a id="cp-00322"></a>
+
+## CP-00322｜自拟爱神星周围卫星轨道问题
+
+**学科：** 力学　**知识点：** 万有引力／小行星卫星建模
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+**自拟问题。**2000 年 2 月 14 日，NEAR 探测器成功进入爱神星（Eros）轨道，成为环绕小行星的人造卫星。自行设计一道求爱神星附近卫星轨道速率的题，需要查找小行星质量并考虑安全的轨道距离。虽然爱神星并非球形，仍请以距离其质心的平均距离估算表面某点的重力加速度。教师也可进一步要求求该点逃逸速度。
+
+## 英文原题（存档摘录）
+
+# Satellites and Kepler’s Laws: An Argument for Simplicity — CP-00322
+
+**Construct Your Own Problem**
+
+On February 14, 2000, the NEAR spacecraft was successfully inserted into orbit around Eros, becoming the first artificial satellite of an asteroid. Construct a problem in which you determine the orbital speed for a satellite near Eros. You will need to find the mass of the asteroid and consider such things as a safe distance for the orbit. Although Eros is not spherical, calculate the acceleration due to gravity on its surface at a point an average distance from its center of mass. Your instructor may also wish to have you calculate the escape velocity from this point on Eros.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00322.md
+- 原件 Git blob SHA：bd3b39525f0952dfcf8f2ef57d90dc7cb4b124cb
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：需要外部资料
+- 审校提示：开放建模题，需要外部小行星质量、几何信息及合理轨道模型。
+
+---
+
+<a id="cp-00323"></a>
+
+## CP-00323｜日常所称的劳动与物理做功的区别
+
+**学科：** 力学　**知识点：** 功／物理定义
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+举出一个日常生活中被认为是在‘做功’，但按物理学定义却**没有做功**的例子。在你的例子里，能量是否发生转移或形式变化？如果是，请解释这种变化如何在没有机械做功的情况下发生。
+
+## 英文原题（存档摘录）
+
+# Work: The Scientific Definition — CP-00323
+
+Give an example of something we think of as work in everyday circumstances that is not work in the scientific sense. Is energy transferred or changed in form in your example? If so, explain how this is accomplished without doing work.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00323.md
+- 原件 Git blob SHA：f02c0c784ad290f4a8b9075da5156ce4e3da2e1b
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00324"></a>
+
+## CP-00324｜有力也有位移但做功为零的实例
+
+**学科：** 力学　**知识点：** 功／力与位移的夹角
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+举出一个物体既受到力又发生位移，但这一力对物体做功却为零的情形，并说明原因。
+
+## 英文原题（存档摘录）
+
+# Work: The Scientific Definition — CP-00324
+
+Give an example of a situation in which there is a force and a displacement, but the force does no work. Explain why it does no work.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00324.md
+- 原件 Git blob SHA：fb6dc67ac538a0f9ae072db7a9bd5729e45b4d11
 - 上游署名与许可证见原件；尚未完成单题权利审查。
 
 ---
