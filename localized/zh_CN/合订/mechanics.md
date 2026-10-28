@@ -2,7 +2,7 @@
 
 > 仅供编辑复核：尚未通过独立双语、答案或版权审核；不可正式组卷。
 
-共 337 道。英文原文均以保留源指纹的上游快照为依据。
+共 347 道。英文原文均以保留源指纹的上游快照为依据。
 
 <a id="cp-00001"></a>
 
@@ -7360,6 +7360,272 @@ Give an example of a situation in which there is a force and a displacement, but
 
 - 原件：external_sources/college_physics/raw/CP-00324.md
 - 原件 Git blob SHA：fb6dc67ac538a0f9ae072db7a9bd5729e45b4d11
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00325"></a>
+
+## CP-00325｜持续施力却没有做功
+
+**学科：** 力学　**知识点：** 功／力与位移
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+描述一种持续较长时间施加力、但该力对物体不做功的情形，并解释原因。
+
+## 英文原题（存档摘录）
+
+# Work: The Scientific Definition — CP-00325
+
+Describe a situation in which a force is exerted for a long time but does no work. Explain.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00325.md
+- 原件 Git blob SHA：426b05b7b24ab5edbaa4594698313073e231c599
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00326"></a>
+
+## CP-00326｜收银员推动罐头时所做的功
+
+**学科：** 力学　**知识点：** 功／恒定力做功
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+超市收银员以 $5.00\,\mathrm{N}$ 的水平力将一罐汤沿水平方向推动 $0.600\,\mathrm{m}$。求他对罐头所做的功，分别以焦耳和千卡表示。
+
+## 英文原题（存档摘录）
+
+# Work: The Scientific Definition — CP-00326
+
+How much work does a supermarket checkout attendant do on a can of soup he pushes 0.600 m horizontally with a force of 5.00 N? Express your answer in joules and kilocalories.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00326.md
+- 原件 Git blob SHA：7eb80d84ce4c9e612206075c3cc34df629454763
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00327"></a>
+
+## CP-00327｜人爬楼梯提高重心时所做的功
+
+**学科：** 力学　**知识点：** 功／重力势能变化
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+一名质量为 $75.0\,\mathrm{kg}$ 的人上楼梯，竖直上升高度为 $2.50\,\mathrm{m}$。求完成这一上升过程所需的功。
+
+## 英文原题（存档摘录）
+
+# Work: The Scientific Definition — CP-00327
+
+A 75.0-kg person climbs stairs, gaining 2.50 meters in height. Find the work done to accomplish this task.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00327.md
+- 原件 Git blob SHA：745a19165be355b67aff302f19654c1308b7250b
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：物理模型依赖
+- 审校提示：通常将所求理解为克服重力的最小机械功，忽略其他能量消耗。
+
+---
+
+<a id="cp-00328"></a>
+
+## CP-00328｜电梯匀速升高时钢缆与重力的功
+
+**学科：** 力学　**知识点：** 功／电梯和重力
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+一部质量为 $1500\,\mathrm{kg}$ 的电梯以恒定速度上升 $40.0\,\mathrm{m}$，平均摩擦阻力大小为 $100\,\mathrm{N}$。（a）求钢缆对电梯所做的功；（b）求重力对电梯所做的功；（c）求作用在电梯上的各力所做的总功。
+
+## 英文原题（存档摘录）
+
+# Work: The Scientific Definition — CP-00328
+
+(a) Calculate the work done on a 1500-kg elevator car by its cable to lift it 40.0 m at constant speed, assuming friction averages 100 N. (b) What is the work done on the lift by the gravitational force in this process? (c) What is the total work done on the lift?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00328.md
+- 原件 Git blob SHA：bac9d4ec4b8da5cbd3d7b23ecc0ef23c183d6179
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00329"></a>
+
+## CP-00329｜购物者斜向下推动手推车的做功
+
+**学科：** 力学　**知识点：** 功／斜向力与水平位移
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+购物者在水平地面上以恒定速率推动手推车前进 $20.0\,\mathrm{m}$，克服大小为 $35.0\,\mathrm{N}$ 的摩擦力。推力方向相对水平向下倾斜 $25.0^\circ$。（a）求摩擦力对车所做的功；（b）求重力所做的功；（c）求购物者所做的功；（d）从能量角度求购物者施加的力的大小；（e）求推车所受各力做功之和。
+
+## 英文原题（存档摘录）
+
+# Work: The Scientific Definition — CP-00329
+
+A shopper pushes a grocery cart 20.0 m at constant speed on level ground, against a 35.0 N frictional force. He pushes in a direction <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mtext>25</mtext><mtext>.</mtext><mn>0</mn><mtext>º</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"25" "." 0°} {}</annotation></semantics></math>
+
+ below the horizontal. (a) What is the work done on the cart by friction? (b) What is the work done on the cart by the gravitational force? (c) What is the work done on the cart by the shopper? (d) Find the force the shopper exerts, using energy considerations. (e) What is the total work done on the cart?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00329.md
+- 原件 Git blob SHA：a856ab26b500723d188167bbcaccb8a60937ec8f
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00330"></a>
+
+## CP-00330｜系统接受功与系统对外做功
+
+**学科：** 力学　**知识点：** 动能定理／能量传递
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+对一个系统做功会向系统输入能量，而系统对外做功会使系统的能量减少。分别举出一个例子说明这两种情况。
+
+## 英文原题（存档摘录）
+
+# Kinetic Energy and the Work-Energy Theorem — CP-00330
+
+Work done on a system puts energy into it. Work done by a system removes energy from it. Give an example for each statement.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00330.md
+- 原件 Git blob SHA：0965083b754abf7d811872000afd9128248d55d6
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00331"></a>
+
+## CP-00331｜卡车与轨道宇航员的动能比较
+
+**学科：** 力学　**知识点：** 动能／不同质量与速率
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+比较一辆质量为 $20{,}000\,\mathrm{kg}$、速率为 $110\,\mathrm{km/h}$ 的卡车，与一名质量为 $80.0\,\mathrm{kg}$、在轨道上以 $27{,}500\,\mathrm{km/h}$ 运动的宇航员的动能。
+
+## 英文原题（存档摘录）
+
+# Kinetic Energy and the Work-Energy Theorem — CP-00331
+
+Compare the kinetic energy of a 20,000-kg truck moving at 110 km/h with that of an 80.0-kg astronaut in orbit moving at 27,500 km/h.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00331.md
+- 原件 Git blob SHA：d6f24da0cdc20f2df1883e9da95aaebf016ed838
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00332"></a>
+
+## CP-00332｜大象与短跑运动员的等动能速率
+
+**学科：** 力学　**知识点：** 动能／大质量物体
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+（a）一只质量为 $3000\,\mathrm{kg}$ 的大象，需要以多大的速率运动，才能具有与质量 $65.0\,\mathrm{kg}$、奔跑速率为 $10.0\,\mathrm{m/s}$ 的运动员相同的动能？（b）讨论大型动物运动所需的较大能量与其代谢率之间可能的联系。
+
+## 英文原题（存档摘录）
+
+# Kinetic Energy and the Work-Energy Theorem — CP-00332
+
+(a) How fast must a 3000-kg elephant move to have the same kinetic energy as a 65.0-kg sprinter running at 10.0 m/s? (b) Discuss how the larger energies needed for the movement of larger animals would relate to metabolic rates.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00332.md
+- 原件 Git blob SHA：c9c5b16acdc5854c8d4ca4d98dc55385310740d8
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00333"></a>
+
+## CP-00333｜汽车正常停车与撞击时的平均作用力
+
+**学科：** 力学　**知识点：** 动能定理／平均制动力
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+（a）一辆质量为 $950\,\mathrm{kg}$ 的汽车以 $90.0\,\mathrm{km/h}$ 的速率行驶，若在 $120\,\mathrm{m}$ 的距离内停下（典型的非紧急停车距离），求所需的平均阻止力。（b）若汽车改为以相同初速撞上坚固的混凝土桥台，在仅 $2.00\,\mathrm{m}$ 的距离内停下，求其所受的平均阻止力，并与（a）比较。
+
+## 英文原题（存档摘录）
+
+# Kinetic Energy and the Work-Energy Theorem — CP-00333
+
+(a) Calculate the force needed to bring a 950-kg car to rest from a speed of 90.0 km/h in a distance of 120 m (a fairly typical distance for a non-panic stop). (b) Suppose instead the car hits a concrete abutment at full speed and is brought to a stop in 2.00 m. Calculate the force exerted on the car and compare it with the force found in part (a).
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00333.md
+- 原件 Git blob SHA：826a33ec85a82511a8f8f56953fdfa0191ab0417
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：物理模型依赖
+- 审校提示：仅为能量与平均力关系的教学题，不代表实际碰撞时接触力为常量。
+
+---
+
+<a id="cp-00334"></a>
+
+## CP-00334｜汽车保险杠吸收碰撞能量的平均力
+
+**学科：** 力学　**知识点：** 动能定理／保险杠缓冲
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+汽车保险杠设计成能够在车辆以 $4.0\,\mathrm{km/h}$（约 $1.1\,\mathrm{m/s}$）的速度撞击固定物体时，避免车身受到损坏。保险杠通过在一定距离内变形以缓冲碰撞。若质量为 $900\,\mathrm{kg}$ 的汽车以 $1.1\,\mathrm{m/s}$ 撞击后停止，保险杠压缩距离为 $0.200\,\mathrm{m}$，求保险杠受到的平均作用力大小。
+
+## 英文原题（存档摘录）
+
+# Kinetic Energy and the Work-Energy Theorem — CP-00334
+
+A car’s bumper is designed to withstand a 4.0-km/h (1.1-m/s) collision with an immovable object without damage to the body of the car. The bumper cushions the shock by absorbing the force over a distance. Calculate the magnitude of the average force on a bumper that collapses 0.200 m while bringing a 900-kg car to rest from an initial speed of 1.1 m/s.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00334.md
+- 原件 Git blob SHA：f7286ab389c7f3c4dceee32e4b13b66547150b73
 - 上游署名与许可证见原件；尚未完成单题权利审查。
 
 ---
