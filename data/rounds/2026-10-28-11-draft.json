@@ -787,6 +787,98 @@
       "complexity_tier": "L5-B",
       "question": "平行板电容器有效重叠面积为 \\(A\\)，板距为 \\(d>0\\)，忽略边缘效应，填充均匀理想线性介质介电常数 \\(\\varepsilon>0\\)，电容 \\(C(d)=\\varepsilon A/d\\)。两板可在法向缓慢移动，静电场始终准静态。比较断开电源保持正电荷量 \\(Q\\) 不变以及接上理想恒压电源保持电压 \\(V\\) 不变这两种控制方式。\n(1) 在固定 \\(Q\\) 下求电场能及板间吸引力，明确力方向与对间距的导数。\n(2) 在恒压 \\(V\\) 下同时求场能变化、电源做功及机械做功，解释为何不能只微分场能求力。\n(3) 从电源—电容器整体势能构造适于固定电压的有效自由能，独立推导极板受力。\n(4) 检验两种条件下瞬时电压力可写成同一电场强度形式，并分析缓慢拉开极板时能量流向。\n",
       "solution": "(1) 固定电荷时存储场能 \\(U_Q=Q^2/(2C)=Q^2d/(2\\varepsilon A)\\)。对板距 \\(d\\) 的广义力定义为 \\(F_d=-\\partial U_Q/\\partial d=-Q^2/(2\\varepsilon A)<0\\)，负号表示极板受力趋向缩小间距，即静电吸引。力的大小也等于电磁应力 \\(\\varepsilon E^2A/2\\)，此时 \\(E=Q/(\\varepsilon A)\\) 与 \\(d\\) 无关。此结果对断电孤立电容器成立，若固定电压而仍保持 \\(Q\\) 常数将违反控制条件。\n\n(2) 恒压时 \\(Q=C(d)V=\\varepsilon AV/d\\) 随 \\(d\\) 变动，场能 \\(U_f=\\frac12CV^2=\\varepsilon AV^2/(2d)\\)。令板距改变 \\(dd\\)，场能微分 \\(dU_f=\\frac12V^2dC\\)，理想电源向电容器输送电功 \\(dW_{\\rm src}=VdQ=V^2dC\\)。能量守恒 \\(dU_f=dW_{\\rm src}+dW_{\\rm mech,on}\\)，故外部机械手对电场所做功 \\(dW_{\\rm mech,on}=-\\frac12V^2dC\\)，相应电场在板距方向做功 \\(dW_{\\rm field}=\\frac12V^2dC=-\\varepsilon AV^2dd/(2d^2)\\)。因此电场力 \\(F_d=-\\varepsilon AV^2/(2d^2)\\) 仍为吸引力，而不是单纯取 \\(-dU_f/dd>0\\) 的错误结果。\n\n(3) 将恒压电源纳入广义势能，适于固定电压的 Legendre 变换为 \\(\\mathcal F_V=U_f-VQ=-\\frac12C(d)V^2=-\\varepsilon AV^2/(2d)\\)。其广义力为 \\(F_d=-\\partial\\mathcal F_V/\\partial d=+\\frac12V^2(dC/dd)=-\\varepsilon AV^2/(2d^2)\\)，与能量收支独立一致。固定电压时必须使用该电势而非孤立电容器能量，因为电源可向或从电极输送电荷并携带功。\n\n(4) 两种控制均有实际电场 \\(E=Q/(\\varepsilon A)=V/d\\)，电场压力大小 \\(p=\\varepsilon E^2/2\\)，总吸引力 \\(F_d=-pA\\)。若固定 \\(Q\\) 而缓慢拉开，所需外力正功进入逐渐增大的电场能。若固定 \\(V\\) 缓慢拉开，电容减少、流回电源的电荷为负 \\(dQ<0\\)，源收到能量 \\(-dW_{\\rm src}=-VdQ\\)；外部正机械功与减少的场能一同供给电源，二者正好由前述微分式分配。\n"
+    },
+    {
+      "id": "T052",
+      "topic": "热学",
+      "title": "可逆绝热喷管的马赫数、面积变化和喉部壅塞",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 90,
+      "tags": [
+        "可压缩流动",
+        "焓守恒",
+        "音速壅塞",
+        "质量流率"
+      ],
+      "answer": "(\\dot m/A)_*=p_0\\sqrt{\\gamma/(RT_0)}[2/(\\gamma+1)]^{(\\gamma+1)/(2(\\gamma-1))}",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-B",
+      "question": "稳态理想气体通过无粘绝热一维喷管，定比热比 \\(\\gamma>1\\)，气体常数 \\(R\\)，入口总温 \\(T_0\\)、总压 \\(p_0\\)，局部面积 \\(A\\)、流速 \\(u\\)，局部音速 \\(c^2=\\gamma RT\\)，马赫数 \\(M=u/c\\)。过程可逆，不含激波。\n(1) 由连续方程、动量方程及等熵状态式导出面积—速度微分关系。\n(2) 由能量方程求静温及静压相对总温、总压与马赫数的关系。\n(3) 求壅塞质量流率及其喉部临界条件，证明是质量通量最大值。\n(4) 解释收缩及扩张段的不同加速模式和非等熵激波带来的限制。\n",
+      "solution": "(1) 连续性 \\(d\\rho/\\rho+du/u+dA/A=0\\)；定常 Euler 方程 \\(u\\,du+dp/\\rho=0\\)，等熵声速关系 \\(dp=c^2d\\rho\\)，于是 \\(d\\rho/\\rho=-M^2du/u\\)。消去密度变化得到 \\(dA/A=(M^2-1)du/u\\)。它显示亚声速加速需收缩，超声速加速需扩张，并要求喉部过音速时 \\(dA=0\\)。\n\n(2) 绝热焓守恒 \\(c_pT+u^2/2=c_pT_0\\)，其中 \\(c_p=\\gamma R/(\\gamma-1)\\)，从而 \\(T/T_0=[1+(\\gamma-1)M^2/2]^{-1}\\)。等熵 \\(p/\\rho^\\gamma=\\mathrm{const}\\) 联合理想气体式得到 \\(p/p_0=[1+(\\gamma-1)M^2/2]^{-\\gamma/(\\gamma-1)}\\)。静温静压与总状态不可混淆。\n\n(3) 用 \\(\\rho u=pM\\sqrt{\\gamma/(RT)}\\) 消去静态变量，得到 \\(\\dot m/A=p_0\\sqrt{\\gamma/(RT_0)}M[1+(\\gamma-1)M^2/2]^{-(\\gamma+1)/(2(\\gamma-1))}\\)。对 \\(M\\) 求导为零的唯一正根是 \\(M=1\\)，二阶变化为负。最大质量通量即 \\(p_0\\sqrt{\\gamma/(RT_0)}[2/(\\gamma+1)]^{(\\gamma+1)/(2(\\gamma-1))}\\)。\n\n(4) 在壅塞态喉部声速，收缩区使亚声速气流加速，扩张区才能使已超声速气流继续加速。降低背压并不无限增加固定喉面积的通量。若喷管内有激波，静态压强和温度会突跃、熵增加、总压下降；这违反题设全程可逆等熵，必须另解激波前后边界匹配。\n"
+    },
+    {
+      "id": "T053",
+      "topic": "热学",
+      "title": "稀薄范德瓦耳斯气体节流的焦耳—汤姆孙反转温度",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 90,
+      "tags": [
+        "维里展开",
+        "焓微分",
+        "非理想气体",
+        "节流冷却"
+      ],
+      "answer": "\\mu_{\\rm JT}\\simeq[2a/(RT)-b]/C_p,\\quad T_{\\rm inv}=2a/(Rb)",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-B",
+      "question": "一摩尔范德瓦耳斯气体 \\(p=RT/(v-b)-a/v^2\\)，其中 \\(a,b>0\\)。在高温低压的稀薄区，取定压热容 \\(C_p>0\\) 为常数。气体通过无轴功、进出口宏观动能变化可忽略的节流器，摩尔焓守恒；只求首个非理想修正。\n(1) 推导摩尔体积的首阶低压维里展开。\n(2) 用热力学 Maxwell 关系推导焦耳—汤姆孙系数通式。\n(3) 求稀薄气体的节流冷却和加热温度分界。\n(4) 分析理想极限、物理量纲及有限压强下的近似误差。\n",
+      "solution": "(1) 对 \\(b/v\\ll1\\) 展开 \\(1/(v-b)=v^{-1}+bv^{-2}+\\cdots\\)，得到 \\(p=RT/v+(RTb-a)/v^2+\\cdots\\)。迭代反演为 \\(v=RT/p+b-a/(RT)+O(p)\\)。括号内第二维里系数 \\(B_2(T)=b-a/(RT)\\)，分别对应短程排斥体积及平均吸引能。\n\n(2) 焓的 Maxwell 微分恒等式为 \\(dH=C_p\\,dT+[v-T(\\partial v/\\partial T)_p]dp\\)。对节流流体 \\(dH=0\\)，因而 \\(\\mu_{\\rm JT}=(\\partial T/\\partial p)_H=[T(\\partial v/\\partial T)_p-v]/C_p\\)。节流不是等熵可逆过程，求系数仅用入口出口焓相等，而不可另加错误的恒熵条件。\n\n(3) 首阶近似的导数是 \\((\\partial v/\\partial T)_p=R/p+a/(RT^2)+O(p)\\)，代回得 \\(\\mu_{\\rm JT}\\simeq[2a/(RT)-b]/C_p\\)。反转温度 \\(T_{\\rm inv}\\simeq2a/(Rb)\\)。低于此温度 \\(\\mu_{\\rm JT}>0\\)，节流时 \\(dp<0\\) 所以 \\(dT<0\\) 冷却；高于此温度则节流升温。\n\n(4) 在理想极限 \\(a=b=0\\)，有 \\(v=RT/p\\)，恒焓过程保持温度、\\(\\mu_{\\rm JT}=0\\)。分子 \\(a/(RT)\\) 与 \\(b\\) 都有摩尔体积量纲，除以 \\(C_p\\) 得温度每压强，符合定义。反转温度只是低压极限值；接近凝聚、临界或 \\(p\\) 不足够小的区域应回到完整状态方程。\n"
+    },
+    {
+      "id": "T054",
+      "topic": "热学",
+      "title": "可区分双组分理想气体混合熵、最小分离功与 Gibbs 悖论",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 90,
+      "tags": [
+        "理想混合熵",
+        "化学势",
+        "可逆分离",
+        "Gibbs自由能"
+      ],
+      "answer": "\\Delta S_{\\rm mix}=-R\\sum_i n_i\\ln x_i,\\quad W_{\\min}=T\\Delta S_{\\rm mix}",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-B",
+      "question": "在温度 \\(T>0\\)、压强 \\(p>0\\) 下，两种可区分理想气体 A、B，摩尔数 \\(n_A,n_B>0\\)，初始分别占据纯气体容器，移除隔板后恒温恒压混合；令 \\(n=n_A+n_B\\)、\\(x_i=n_i/n\\)。假设理想半透膜可选择性透过组分，无混合热。\n(1) 通过混合前后的分压及化学势求 Gibbs 自由能变化。\n(2) 求总混合熵并证明其非负性和混合焓为零。\n(3) 求理想可逆分离需要的最小外功并说明不可逆性如何增加耗功。\n(4) 讨论极稀组分、等量组分及同一种不可区分气体混合。\n",
+      "solution": "(1) 纯气体初始化学势为 \\(\\mu_i^\\circ(T,p)\\)，混合后组分分压 \\(p_i=x_ip\\)，因此 \\(\\mu_i=\\mu_i^\\circ+RT\\ln x_i\\)。两态 Gibbs 自由能差为 \\(\\Delta G_{\\rm mix}=n_ART\\ln x_A+n_BRT\\ln x_B\\)。每个 \\(x_i<1\\)，故自由能严格下降，符合等温恒压下混合的自发趋势。\n\n(2) 理想混合物分子能量无额外相互作用项，所以 \\(\\Delta H_{\\rm mix}=0\\)。由 \\(\\Delta G=\\Delta H-T\\Delta S\\) 得 \\(\\Delta S_{\\rm mix}=-R(n_A\\ln x_A+n_B\\ln x_B)>0\\)。把 \\(x_i\\ln x_i\\) 用 Gibbs 不等式或 \\(0<x_i<1\\) 的对数符号估计，亦能直接验证混合熵正定。\n\n(3) 理想半透膜使两组分在各自化学势差下可逆分离，最低外部功等于逆向 Gibbs 自由能差，即 \\(W_{\\min}=-\\Delta G_{\\rm mix}=T\\Delta S_{\\rm mix}\\)。可逆路径可逼近此下界，任何具有扩散、摩擦或不可逆混合的分离装置都需要不少于该值的实际外功。热力学势的使用依赖固定温度和压强，不可替换为随意的内能差。\n\n(4) 若 \\(n_B\\to0\\)，\\(n_B\\ln x_B\\to0\\)，并且 A 的摩尔分数趋一，混合熵趋零。若 \\(n_A=n_B=n/2\\)，有 \\(\\Delta S_{\\rm mix}=nR\\ln2\\)。当 A、B 实际不可区分，是相同理想气体时移走隔板不产生新的可观测组分，正确熵变为零；将人为贴标签后使用双组分公式会造成 Gibbs 悖论。\n"
+    },
+    {
+      "id": "T055",
+      "topic": "热学",
+      "title": "有限热流卡诺式内可逆热机的最大功率效率",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 90,
+      "tags": [
+        "有限时间热力学",
+        "Newton冷却",
+        "Curzon-Ahlborn效率",
+        "最佳工作条件"
+      ],
+      "answer": "\\eta_*=1-\\sqrt{T_c/T_h},\\quad\\dot W_{\\max}=K(\\sqrt{T_h}-\\sqrt{T_c})^2/2",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-B",
+      "question": "热源和冷源恒温 \\(T_h>T_c>0\\)，工作流体热接触内部温度分别为 \\(X,Y\\)，有 \\(T_h>X>Y>T_c\\)。热端和冷端传热导系数相同为 \\(K>0\\)，热流率 \\(\\dot Q_h=K(T_h-X)\\)、\\(\\dot Q_c=K(Y-T_c)\\)。热机内部可逆，故 \\(\\dot Q_h/X=\\dot Q_c/Y\\)。\n(1) 用内可逆熵平衡推导接触温度的代数关系。\n(2) 以比值 \\(r=Y/X\\) 消去内温度，写出功率与效率。\n(3) 最大化功率，求效率和输出功率的闭式公式。\n(4) 检验小温差极限与无限换热导的形式极限，讨论模型适用性。\n",
+      "solution": "(1) 由于内部工质经过一循环不积累熵，吸收热量与放出热量的熵量相同，即 \\(K(T_h-X)/X=K(Y-T_c)/Y\\)。整理为 \\(T_h/X+T_c/Y=2\\)。输出功率为 \\(\\dot W=\\dot Q_h-\\dot Q_c=K(T_h+T_c-X-Y)\\)，必须同时满足 \\(T_h>X>Y>T_c\\) 才是热机。\n\n(2) 令 \\(r=Y/X\\)，则由约束 \\(X=(T_h+T_c/r)/2\\)、\\(Y=(rT_h+T_c)/2\\)。输出功率为 \\(\\dot W(r)=K[T_h(1-r)+T_c(1-1/r)]/2\\)，效率为 \\(\\eta=1-Y/X=1-r\\)。可行的热机工作区间为 \\(T_c/T_h<r<1\\)，其中两端功率为零。\n\n(3) 求导 \\(d\\dot W/dr=K[-T_h+T_c/r^2]/2\\)，二阶导数为 \\(-KT_c/r^3<0\\)，唯一极大点 \\(r_*=\\sqrt{T_c/T_h}\\)。故 \\(\\eta_*=1-\\sqrt{T_c/T_h}\\)，\\(\\dot W_{\\max}=K(\\sqrt{T_h}-\\sqrt{T_c})^2/2\\)。因为平方根大于原始 \\(T_c/T_h\\)，最大功率效率低于可逆两热库卡诺效率。\n\n(4) 设 \\(T_h=T+\\Delta/2\\)、\\(T_c=T-\\Delta/2\\)，\\(|\\Delta|\\ll T\\) 时 \\(\\sqrt{T_h}-\\sqrt{T_c}\\simeq\\Delta/(2\\sqrt T)\\)，所以 \\(\\dot W_{\\max}\\simeq K\\Delta^2/(8T)\\)。形式上 \\(K\\to\\infty\\) 使最大功率发散，只是无限换热能力、忽略有限面积和材料限制的理想化表现；真实内外热阻及动力学耗散使功率有上限。\n"
     }
   ]
 }
