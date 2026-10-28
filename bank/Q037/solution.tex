@@ -1,0 +1,23 @@
+(1) 取 σz 本征基，哈密顿量对角，退相干耗散项的对角元为 \((\sigma_z\rho\sigma_z-\rho)_{jj}=0\)，所以
+\[
+\rho_{\uparrow\uparrow}(t)=\rho_{\uparrow\uparrow}(0),\qquad
+\rho_{\downarrow\downarrow}(t)=\rho_{\downarrow\downarrow}(0).
+\]
+人口布居始终不变，系统平均能量也保持常数。
+
+(2) 上下非对角元满足
+\[
+\dot\rho_{\uparrow\downarrow}=(-i\omega-\Gamma)\rho_{\uparrow\downarrow},
+\]
+故 \(\rho_{\uparrow\downarrow}(t)=\rho_{\uparrow\downarrow}(0)e^{-(\Gamma+i\omega)t}\)，另一个非对角元为其复共轭。退相干因子 e^{-Γt} 抹去相位相干而不交换粒子数。
+
+(3) Bloch 参数与非对角元关系 \(\rho_{\uparrow\downarrow}=(r_x-ir_y)/2\)。因此
+\[
+r_x(t)=e^{-\Gamma t}[r_x\cos\omega t-r_y\sin\omega t],
+\quad
+r_y(t)=e^{-\Gamma t}[r_x\sin\omega t+r_y\cos\omega t],
+\quad r_z(t)=r_z.
+\]
+纯度 \(\mathrm{Tr}\rho^2=\frac12[1+r_z^2+e^{-2\Gamma t}(r_x^2+r_y^2)]\)，单调不增。
+
+(4) 当 t→∞，横向分量消失，末态 \(\rho_\infty=\frac12(I+r_z\sigma_z)\) 在能量基中对角。纯退相干没有使 \(r_z\) 趋于热平衡值；与能量弛豫通道不同，它只消除相干性。

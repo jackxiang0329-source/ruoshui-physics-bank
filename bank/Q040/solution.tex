@@ -1,0 +1,20 @@
+(1) 初态概率密度为 \(|\psi(x,0)|^2=(2\pi\sigma_0^2)^{-1/2}e^{-x^2/(2\sigma_0^2)}\)，因此 \(\langle x\rangle=0,\ \Delta x(0)=\sigma_0\)。动量算符 \(-i\hbar\partial_x\) 给 \(\langle p\rangle=p_0\)，而初态动量方差为 \(\Delta p^2=\hbar^2/(4\sigma_0^2)\)，故初态 \(\Delta x\Delta p=\hbar/2\)。
+
+(2) Heisenberg 方程 \(\dot x=p/m,\dot p=0\)，因此
+\[
+x(t)=x(0)+p(0)t/m,\qquad p(t)=p(0).
+\]
+于是 \(\langle x(t)\rangle=p_0t/m,\ \langle p(t)\rangle=p_0\)，波包中心沿经典自由粒子轨迹移动。
+
+(3) 对初始无啁啾的实高斯包络，位置与动量的对称协方差为0。将 \(x(t)=x(0)+pt/m\) 取方差，
+\[
+\sigma_x^2(t)=\sigma_0^2+\frac{t^2}{m^2}\Delta p^2
+=\sigma_0^2+\frac{\hbar^2t^2}{4m^2\sigma_0^2}.
+\]
+这是精确自由演化结果，而不是经典热扩散的随机碰撞模型。
+
+(4) 定义展宽时间 \(\tau=2m\sigma_0^2/\hbar\)，则 \(\sigma_x(t)=\sigma_0\sqrt{1+(t/\tau)^2}\)。当标准差加倍，\(\sqrt{1+(t/\tau)^2}=2\)，故首次正时间
+\[
+t_{\rm double}=\sqrt3\,\tau=\frac{2\sqrt3\,m\sigma_0^2}{\hbar}.
+\]
+波包展宽来源于初态不同动量分量以不同速度传播，动量概率分布本身在自由演化中不变。

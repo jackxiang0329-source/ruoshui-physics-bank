@@ -1,0 +1,25 @@
+(1) 单粒子态密度 \(g(\epsilon)=C\sqrt\epsilon\)，其中 \(C=V(2m)^{3/2}/(2\pi^2\hbar^3)\)，已包括自旋二重简并。Fermi 占据 \(f(\epsilon)=1/(e^{(\epsilon-\mu)/(k_BT)}+1)\)，粒子数 \(N=\int_0^\infty g(\epsilon)f(\epsilon)d\epsilon\)。
+
+(2) Sommerfeld 展开给
+\[
+N=\int_0^\mu g(\epsilon)d\epsilon
++\frac{\pi^2}{6}(k_BT)^2g'(\mu)+O(T^4).
+\]
+令 \(\mu=E_F+\delta\mu\)，固定 N 并在 E_F 处线性化，
+\(g(E_F)\delta\mu+(\pi^2/6)(k_BT)^2g'(E_F)=0\)。
+由于 \(g'/g=1/(2E_F)\)，得
+\[
+\mu(T)=E_F\left[1-\frac{\pi^2}{12}(T/T_F)^2+O((T/T_F)^4)\right].
+\]
+
+(3) 内能 \(U=\int_0^\infty \epsilon g(\epsilon)f(\epsilon)d\epsilon\)。对 \(\epsilon g(\epsilon)\) 作 Sommerfeld 展开并代入 \(\delta\mu\)，化简得
+\[
+U=\frac35NE_F+\frac{\pi^2}{4}N\frac{(k_BT)^2}{E_F}+O(T^4).
+\]
+可由 \(g(E_F)=3N/(2E_F)\) 独立核验校正系数。
+
+(4) 固定 N,V 求导，得到
+\[
+C_V=\frac{\pi^2}{2}Nk_B\frac{T}{T_F}+O(T^3).
+\]
+仅费米面附近宽度约 kBT 的粒子可被热激发，故低温热容对 T 线性，而非经典的温度无关常数。
