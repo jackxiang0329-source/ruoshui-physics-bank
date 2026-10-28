@@ -29,6 +29,11 @@ on:
       - 'scripts/reclassify_external_topics.py'
       - 'tests/test_reclassify_external_topics.py'
       - 'scripts/build.py'
+      - 'scripts/materialize_zh_drafts.py'
+      - 'scripts/organize_physics_catalog.py'
+      - 'tests/test_physics_organization.py'
+      - 'taxonomy/physics_taxonomy.json'
+      - 'localization/zh_CN/translations.json'
       - 'scripts/curation_triage.py'
       - 'tests/test_curation_triage.py'
       - 'scripts/review_preflight.py'
@@ -108,10 +113,16 @@ jobs:
         run: python scripts/reclassify_external_topics.py
       - name: Rebuild exam-review candidate list (not the approved question bank)
         run: python scripts/rebuild_external_queue.py
+      - name: Materialize source-pinned bilingual Chinese exercise drafts
+        run: python scripts/materialize_zh_drafts.py
       - name: Audit imported raw files
         run: python scripts/external_inventory.py
       - name: Verify queue matches every imported raw problem and pinned manifests
         run: python -m unittest discover -s tests -p 'test_external_sources.py' -v
+      - name: Generate Chinese physics subject and topic index
+        run: python scripts/organize_physics_catalog.py
+      - name: Test Chinese taxonomy and translation consistency
+        run: python -m unittest discover -s tests -p 'test_physics_organization.py' -v
       - name: Summarize source, subject and exam-readiness coverage
         run: python scripts/report_external_coverage.py
       - name: Generate human-review shortlist and cross-source digest audit
@@ -128,7 +139,7 @@ jobs:
           python scripts/build.py --check
       - name: Commit imported sources, manifests and per-run logs
         run: |
-          git add external_sources/ tex/questions.tex tex/solutions.tex data/index.csv data/qa_report.json
+          git add external_sources/ localized/zh_CN/ tex/questions.tex tex/solutions.tex data/index.csv data/qa_report.json
           if git diff --cached --quiet; then
             echo 'No changes to commit'
             exit 0
@@ -153,6 +164,10 @@ jobs:
             external_sources/logs/topic_backfill_latest.json
             external_sources/catalog/review_triage_report.json
             external_sources/catalog/review_priority.csv
+            external_sources/catalog/中文分类导航.md
+            external_sources/catalog/中文分类报告.json
+            external_sources/catalog/题目总索引.csv
+            localized/zh_CN/中文译稿报告.json
             external_sources/catalog/review_preflight_report.json
             external_sources/catalog/review_preflight.csv
             external_sources/catalog/college_review_tex_report.json
