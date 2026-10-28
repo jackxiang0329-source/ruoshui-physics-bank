@@ -1,0 +1,36 @@
+(1) 无限深势阱内定态方程为 $-\hbar^2\psi''/(2m)=E\psi$，Dirichlet 边界使允许的波数 $k_n=n\pi/L$，$n=1,2,\ldots$。归一化本征函数和能量为
+\[
+\psi_n(x)=\sqrt{\frac2L}\sin\frac{n\pi x}{L},\qquad
+E_n(L)=\frac{\hbar^2\pi^2n^2}{2mL^2}.
+\]
+不能用 $n=0$ 作为最低态，因其波函数恒为零而不可归一化。
+
+(2) 对活塞坐标 $L$，体系的广义机械力定义为 $F_n=-\partial_LE_n$，因此
+\[
+F_n(L)=\frac{\hbar^2\pi^2n^2}{mL^3}=\frac{2E_n(L)}L>0.
+\]
+正号表示粒子的量子动能迫使右侧壁向增大 $L$ 的方向移动，这是由受限波函数的动量不确定性引起的量子压力，不是必须存在粒子间排斥。
+
+(3) 量子绝热定理保证非简并态在足够缓慢移动的边界下不发生能级跃迁，故同一个量子数 $n$ 保持不变。由广义力积分得粒子对活塞输出的功
+\[
+W=\int_{L_i}^{L_f}F_n(L)\,dL
+=\frac{\hbar^2\pi^2n^2}{2m}
+\left(\frac1{L_i^2}-\frac1{L_f^2}\right)
+=E_n(L_i)-E_n(L_f)>0.
+\]
+该过程与外界无热交换，量子体系内能降低恰好提供所输出的机械功，严格满足第一定律。
+
+(4) 在高温区能级间隔相对于热能很小，配分函数
+\[
+Z_1(L,T)=\sum_{n=1}^\infty
+\exp\left[-\frac{\hbar^2\pi^2n^2}{2mL^2k_BT}\right]
+\simeq\int_0^\infty e^{-a n^2}dn
+=\frac{\sqrt\pi}{2\sqrt a}=\frac L{\lambda_T},
+\quad \lambda_T=\sqrt{\frac{2\pi\hbar^2}{mk_BT}}.
+\]
+由自由能 $A_{\rm Helm}=-k_BT\ln Z_1$，平均作用力
+\[
+\overline F=k_BT\left(\frac{\partial\ln Z_1}{\partial L}\right)_T
+\simeq\frac{k_BT}{L},
+\]
+平均能量 $U=-\partial_\beta\ln Z_1\simeq k_BT/2$，与一维经典理想气体的 $FL=k_BT$ 及每个平动自由度 $k_BT/2$ 完全一致。

@@ -1,0 +1,42 @@
+(1) 低于势垒时，定义 $\kappa=\sqrt{2m(V_0-E)}/\hbar>0$，取
+\[
+\psi_I=e^{ikx}+r e^{-ikx},\quad
+\psi_{II}=A e^{\kappa x}+B e^{-\kappa x},\quad
+\psi_{III}=t e^{ikx}.
+\]
+波函数和导数在 $x=0$、$x=a$ 连续，给出四个条件
+\[
+1+r=A+B,\quad ik(1-r)=\kappa(A-B),
+\]
+\[
+Ae^{\kappa a}+Be^{-\kappa a}=te^{ika},\quad
+\kappa(Ae^{\kappa a}-Be^{-\kappa a})=ik\,te^{ika}.
+\]
+消去内部系数，得到透射振幅
+\[
+t=\frac{e^{-ika}}{\cosh(\kappa a)+i\frac{\kappa^2-k^2}{2k\kappa}\sinh(\kappa a)}.
+\]
+由于左右外部波数相同，透射流概率为 $|t|^2$：
+\[
+\mathcal T(E)
+=\left[1+\frac{V_0^2\sinh^2(\kappa a)}{4E(V_0-E)}\right]^{-1}.
+\]
+这是严格的静态一维矩形势垒结果。
+
+(2) 在 $\kappa a\gg1$ 时 $\sinh(\kappa a)\sim e^{\kappa a}/2$，故
+\[
+\mathcal T(E)\sim\frac{16E(V_0-E)}{V_0^2}e^{-2\kappa a}.
+\]
+当 $E\to V_0^-$ 时 $\kappa\to0$，但 $\sinh(\kappa a)/\kappa\to a$，得到有限阈值透射率
+\[
+\mathcal T(V_0)=\left[1+\frac{mV_0a^2}{2\hbar^2}\right]^{-1}.
+\]
+不能先令 $\kappa=0$ 后直接把原式中的 $0/0$ 当作零。
+
+(3) 当 $E>V_0$，内部传播波数 $q=\sqrt{2m(E-V_0)}/\hbar>0$。将低能结果中的 $\kappa$ 解析延拓为 $iq$，或者直接重新匹配边界，可得
+\[
+\mathcal T(E)=\left[1+\frac{V_0^2\sin^2(qa)}{4E(E-V_0)}\right]^{-1}.
+\]
+只要 $qa=n\pi$（正整数 $n$），内部两界面反射恰干涉相消，$\mathcal T=1$。这并不意味着外部单独一个势阶跃完全无反射，而是双界面相干传播的共振效果。
+
+(4) 概率流密度为 $j=(\hbar/m)\Im(\psi^*\psi')$。因为势能实且不随时间变化，稳态流量在三个区间相等，故 $j_{\rm in}-j_{\rm ref}=j_{\rm tr}$，即 $\mathcal R+\mathcal T=1$。在 $a\to0$ 或固定 $E>0$ 的 $V_0\to0$ 时均有 $\mathcal T\to1$。但只要 $0<E<V_0$ 且势垒宽度有限，$\mathcal T>0$，表示量子波的倏逝尾可以跨越势垒；经典粒子在同一能量下会完全反射，故不能把有限量子隧穿率解释为经典粒子“获得了额外能量”。

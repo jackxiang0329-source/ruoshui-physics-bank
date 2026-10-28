@@ -1409,6 +1409,56 @@
     "complexity_tier": "L5-C"
   },
   {
+    "id": "W020",
+    "topic": "振动与波动",
+    "title": "黏滞阻尼弦中的复波数、空间衰减与边界能流",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "question": "一根半无限长的均匀理想细弦占据 $x\\ge0$，张力为 $T>0$，线密度为 $\\mu>0$，每单位长度受到与横向速度成正比的外界黏滞阻力 $-\\beta y_t$，其中 $\\beta>0$。横向位移满足\n\\[\n\\mu y_{tt}+\\beta y_t=T y_{xx}.\n\\]\n驱动端在 $x=0$ 处被强迫执行 $y(0,t)=A\\cos\\omega t$，$A,\\omega>0$；只研究已经形成的远离驱动端向右传播、向无限远衰减的稳定周期解。\n(1) 使用 $y=\\Re[Ae^{i(kx-\\omega t)}]$ 建立复波数的代数方程并选择物理分支；(2) 显式求空间相位波数 $k_r$ 与空间衰减率 $k_i$，讨论振幅和波长；(3) 从波动方程推出机械能密度与能流的局部守恒—耗散方程，并计算输入端平均功率与全弦耗散功率；(4) 求 $\\beta\\ll\\mu\\omega$ 的弱阻尼近似和 $\\omega\\ll\\beta/\\mu$ 的低频渐近，解释两种频率极限。",
+    "solution": "(1) 设复波数 $k=k_r+ik_i$，取相位约定 $e^{i(kx-\\omega t)}$。代回波动方程得到\n\\[\n-Tk^2=-\\mu\\omega^2-i\\beta\\omega,\\quad\nk^2=\\frac{\\mu\\omega^2+i\\beta\\omega}{T}.\n\\]\n实际弦位移由实部构成，因此 $e^{ikx}=e^{ik_rx-k_ix}$。满足向右传播而不在 $x\\to+\\infty$ 发散的物理根必须有 $k_r>0,k_i>0$；另一平方根会产生空间增长而不满足半无限弦的辐射条件。\n\n(2) 令 $A_0=\\mu\\omega^2/T>0,\\ B_0=\\beta\\omega/T>0$，联立 $k_r^2-k_i^2=A_0$、$2k_rk_i=B_0$ 得\n\\[\nk_r=\\sqrt{\\frac{\\sqrt{A_0^2+B_0^2}+A_0}{2}},\\qquad\nk_i=\\sqrt{\\frac{\\sqrt{A_0^2+B_0^2}-A_0}{2}}.\n\\]\n故稳定波形为\n\\[\ny(x,t)=A e^{-k_ix}\\cos(k_rx-\\omega t).\n\\]\n$1/k_i$ 是振幅衰减的 $1/e$ 长度，空间相位波长为 $2\\pi/k_r$；两者都随 $\\omega,\\beta$ 改变。\n\n(3) 将 PDE 乘以 $y_t$ 并按乘积法则整理：\n\\[\n\\partial_t\\left[\\frac{\\mu y_t^2}{2}+\\frac{T y_x^2}{2}\\right]\n+\\partial_x(-T y_ty_x)=-\\beta y_t^2.\n\\]\n因此机械能密度 $u=\\mu y_t^2/2+Ty_x^2/2$、能流 $\\mathcal S=-Ty_ty_x$。按周期平均，利用复振幅公式\n\\[\n\\overline{\\mathcal S}(x)=\\frac{T\\omega k_r A^2}{2}e^{-2k_ix}>0,\n\\quad\n\\overline{\\mathcal P}_{\\rm diss}/dx\n=\\frac{\\beta\\omega^2A^2}{2}e^{-2k_ix}.\n\\]\n对 $x\\in[0,\\infty)$ 积分，$\\overline P_{\\rm diss}=\\beta\\omega^2A^2/(4k_i)$。由 $2k_rk_i=\\beta\\omega/T$ 得\n\\[\n\\overline{\\mathcal S}(0)=\\frac{T\\omega k_rA^2}{2}\n=\\frac{\\beta\\omega^2A^2}{4k_i}\n=\\overline P_{\\rm diss},\n\\]\n输入功率完全转成黏滞耗散功率，没有假设波的平均能量流恒定。\n\n(4) 若 $\\beta/(\\mu\\omega)\\ll1$，展开复平方根得\n\\[\nk_r\\simeq\\omega\\sqrt{\\mu/T},\\qquad\nk_i\\simeq\\frac{\\beta}{2\\sqrt{\\mu T}}.\n\\]\n弱阻尼下相速约为 $\\sqrt{T/\\mu}$，而衰减长度对频率在首阶近似中不敏感。相反当 $\\omega\\ll\\beta/\\mu$ 时 $k^2\\simeq i\\beta\\omega/T$，所以\n\\[\nk_r\\simeq k_i\\simeq\\sqrt{\\frac{\\beta\\omega}{2T}}.\n\\]\n这表现为低频黏滞扩散型响应，振幅穿透长度与相位尺度具有相同数量级。",
+    "answer": "k=\\sqrt{(\\mu\\omega^2+i\\beta\\omega)/T},\\quad \\overline{\\mathcal S}(0)=T\\omega k_rA^2/2=\\beta\\omega^2A^2/(4k_i)",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "阻尼波动方程",
+      "复波数分支",
+      "能流守恒",
+      "焦耳类耗散",
+      "高低频渐近"
+    ],
+    "assumptions_review": "主要推导与模型适用域初检；独立专家审核待完成",
+    "checks": [],
+    "revision": "composite-v1.7",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B"
+  },
+  {
+    "id": "W021",
+    "topic": "振动与波动",
+    "title": "受压 Euler–Bernoulli 梁的动态屈曲阈值、特征谱与软化",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "question": "一根均匀细直梁长度为 $L>0$、抗弯刚度为 $EI>0$、单位长度质量为 $\\rho A>0$，两端均为简支（铰支且无端弯矩）。梁受到大小为 $P\\ge0$ 的恒定轴向压力并保持直梁基态；忽略材料阻尼、非线性挠度及剪切变形。其小横向位移 $y(x,t)$ 满足\n\\[\n\\rho A\\,y_{tt}+EI\\,y_{xxxx}+P\\,y_{xx}=0,\n\\quad y(0,t)=y(L,t)=0,\\quad y_{xx}(0,t)=y_{xx}(L,t)=0.\n\\]\n(1) 用变量分离推导全部正交弯曲模态及相应 $\\omega_n^2(P)$；(2) 推出稳定直梁的严格负载区间与第一 Euler 临界压力；(3) 写出线性振动能量泛函并证明该临界条件与势能二次型失去正定性一致；(4) 对 $P\\uparrow P_{\\rm cr}$ 求最低模频率软化的标度，讨论 $P>P_{\\rm cr}$ 时线性解的增长和为何不能由线性模型预测最终屈曲形状。",
+    "solution": "(1) 简支两端的空间正弦模满足位移及弯矩为零的边界：\n\\[\nX_n(x)=\\sin(n\\pi x/L),\\quad k_n=n\\pi/L,\\quad n=1,2,\\dots.\n\\]\n因为 $X_n''=-k_n^2X_n$、$X_n''''=k_n^4X_n$，令 $y=X_n e^{i\\omega_nt}$ 代入得\n\\[\n\\omega_n^2(P)=\\frac{EI\\,k_n^4-Pk_n^2}{\\rho A}\n=\\frac{k_n^2(EI\\,k_n^2-P)}{\\rho A}.\n\\]\n在质量权重 $\\rho A$ 下，不同 $n$ 的正弦函数彼此正交。\n\n(2) 第 $n$ 模稳定需要 $\\omega_n^2>0$，即 $P<EI k_n^2$。全部模均稳定的最严格条件来自最低频的 $n=1$：\n\\[\n0\\le P<P_{\\rm cr},\\qquad P_{\\rm cr}=\\frac{\\pi^2EI}{L^2}.\n\\]\n在 $P=P_{\\rm cr}$ 时第一模 $\\omega_1=0$，为中性静态弯曲；当压力超过该值，第一模的 $\\omega_1^2<0$，出现指数增长，直梁小扰动在此线性化模型中不稳定。\n\n(3) 对 PDE 乘以 $y_t$ 并沿全梁积分，分部积分，简支边界使边界项消失，得到\n\\[\n\\frac{d}{dt}\\mathcal E=0,\\qquad\n\\mathcal E=\\frac12\\int_0^L\\left[\\rho A y_t^2+EI y_{xx}^2-P y_x^2\\right]dx.\n\\]\n弹性弯曲能提供 $+EI y_{xx}^2/2$，外部压缩死载荷使位移的二阶有效势能包含负的 $-P y_x^2/2$。代入正弦级数，每个系数对应势能因子 $EI k_n^4-Pk_n^2$；恰在 $P_{\\rm cr}$ 时最低模势能曲率为零。负势能二次型并不违反能量守恒，但可导致动态失稳。\n\n(4) 对最低模\n\\[\n\\omega_1=\\frac{\\pi}{L\\sqrt{\\rho A}}\\sqrt{P_{\\rm cr}-P}\n\\quad (0\\le P<P_{\\rm cr}),\n\\]\n所以临界附近 $\\omega_1\\propto(P_{\\rm cr}-P)^{1/2}$，振动周期发散。若 $P>P_{\\rm cr}$，令 $\\sigma=\\pi\\sqrt{P-P_{\\rm cr}}/(L\\sqrt{\\rho A})$，第一模时间因子为 $e^{\\pm\\sigma t}$，其中增长分支揭示直梁失稳。但随着挠度增大，几何非线性、边界大转角和材料效应必须纳入；仅靠线性 PDE 不能计算有限幅值的后屈曲平衡。",
+    "answer": "\\omega_n^2=\\frac{EI(n\\pi/L)^4-P(n\\pi/L)^2}{\\rho A},\\quad P_{\\rm cr}=\\pi^2EI/L^2",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "Euler–Bernoulli梁",
+      "轴向压力与屈曲",
+      "偏微分本征值",
+      "振动能量泛函",
+      "临界软模"
+    ],
+    "assumptions_review": "主要推导与模型适用域初检；独立专家审核待完成",
+    "checks": [],
+    "revision": "composite-v1.7",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
     "id": "O007",
     "topic": "光学",
     "title": "分离薄透镜系统的矩阵成像与无焦条件",
@@ -1724,6 +1774,56 @@
     "complexity_tier": "L5-C"
   },
   {
+    "id": "O020",
+    "topic": "光学",
+    "title": "二次相位调制高斯孔径的傅里叶衍射、角宽与不确定性",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "question": "在一维标量近轴光学模型中，横向孔径处的复振幅是\n\\[\nE(x)=E_0\\exp[-x^2/(2w^2)]\\exp(i b x^2/2),\n\\]\n其中 $w>0$、$b\\in\\mathbb R$，$b$ 的量纲为逆长度平方，$E_0$ 为常量。孔径无限延伸且光束能量有限，忽略偏振、损耗和高阶相位。远场以横向空间频率 $q=k\\sin\\theta$ 表示，夫琅禾费幅度定义为 $\\widetilde E(q)=\\int_{-\\infty}^\\infty E(x)e^{-iqx}dx$。\n(1) 完成复高斯积分得到严格远场复振幅，明确平方根的连续分支；(2) 求归一化远场强度分布、$1/e$ 角谱半宽及 $b=0$ 极限；(3) 把入射、远场强度视为归一化概率权重，求横向均方根宽度 $\\Delta x$ 和角谱均方根宽度 $\\Delta q$，证明其乘积满足傅里叶不确定性下界；(4) 说明薄透镜二次相位如何对应 $b$，讨论 $|b|w^2\\gg1$ 的谱宽极限与近轴假设。",
+    "solution": "(1) 合并指数得到\n\\[\nE(x)=E_0\\exp[-\\tfrac12(w^{-2}-ib)x^2].\n\\]\n因 $\\Re(w^{-2}-ib)=w^{-2}>0$，复高斯积分收敛，完成平方给\n\\[\n\\widetilde E(q)\n=E_0\\sqrt{\\frac{2\\pi}{w^{-2}-ib}}\n\\exp\\left[-\\frac{q^2}{2(w^{-2}-ib)}\\right].\n\\]\n平方根选择从 $b=0$ 连续延伸的分支，使 $\\widetilde E(0)=E_0\\sqrt{2\\pi}\\,w$ 当 $b=0$；其他支仅给整体符号但需和物理相位约定一致。\n\n(2) 令 $s=bw^2$，由\n\\[\n\\Re\\frac1{w^{-2}-ib}=\\frac{w^2}{1+s^2}\n\\]\n可得归一化远场强度\n\\[\n\\frac{I(q)}{I(0)}\n=\\exp\\left[-\\frac{w^2q^2}{1+b^2w^4}\\right].\n\\]\n因此远场强度降至峰值 $1/e$ 时的正空间频率半宽为\n\\[\nq_{1/e}=\\frac{\\sqrt{1+b^2w^4}}{w}.\n\\]\n在窄角近轴区 $q\\simeq k\\theta$，$\\theta_{1/e}\\simeq q_{1/e}/k$。若 $b=0$，标准高斯光束角谱宽度为 $1/w$，光束越宽，远场衍射越窄。\n\n(3) 输入强度与 $e^{-x^2/w^2}$ 成正比，故其均方根宽度为 $\\Delta x=w/\\sqrt2$。输出强度与 $e^{-w^2q^2/(1+s^2)}$ 成正比，因此\n\\[\n\\Delta q=\\frac{\\sqrt{1+s^2}}{\\sqrt2\\,w},\\qquad\n\\Delta x\\,\\Delta q=\\frac12\\sqrt{1+b^2w^4}\\ge\\frac12.\n\\]\n当且仅当 $b=0$ 时取最小值 $1/2$。二次相位不会改变输入强度宽度，却增加相空间的线性位置—频率关联，使远场角谱变宽；这不与傅里叶不确定性关系矛盾。\n\n(4) 在近轴薄透镜模型中，焦距为 $f$ 的理想透镜赋予透射场的相位为 $\\exp[-ikx^2/(2f)]$，因此它相当于 $b=-k/f$（若只考虑透镜造成的二次相位）。当 $|b|w^2\\gg1$，远场角谱半宽趋于 $q_{1/e}\\sim|b|w$，由相位斜率 $|\\partial_x(bx^2/2)|\\sim |b|w$ 可以独立理解。但若 $q_{1/e}$ 不再远小于 $k$，或透镜像差和有限孔径重要，则 $q\\simeq k\\theta$ 及一维近轴模型失效。",
+    "answer": "\\widetilde E(q)=E_0\\sqrt{2\\pi/(w^{-2}-ib)}e^{-q^2/[2(w^{-2}-ib)]},\\quad\\Delta x\\Delta q=\\tfrac12\\sqrt{1+b^2w^4}",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "标量夫琅禾费衍射",
+      "复高斯积分",
+      "二次相位啁啾",
+      "角谱展宽",
+      "傅里叶不确定性"
+    ],
+    "assumptions_review": "主要推导与模型适用域初检；独立专家审核待完成",
+    "checks": [],
+    "revision": "composite-v1.7",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
+    "id": "O021",
+    "topic": "光学",
+    "title": "色散双凸薄透镜的纵向色差、像距灵敏度与焦点退化",
+    "kind": "综合推导题",
+    "level": 4,
+    "estimated_minutes": 60,
+    "question": "空气中一片理想薄对称双凸透镜的两面曲率半径分别为 $R_1=R>0$、$R_2=-R$。折射率随真空波长按正常色散规律 $n(\\lambda)=n_\\infty+C/\\lambda^2$ 变化，其中 $n_\\infty>1,C>0$。忽略厚度、像差、反射、吸收及高阶色散。点物体位于透镜左侧距离 $s>0$，并在参考波长 $\\lambda_0>0$ 满足 $s>f(\\lambda_0)$；像距 $s'(\\lambda)$ 以右侧为正。\n(1) 从透镜制造公式求焦距 $f(\\lambda)$ 及其随波长变化的方向；(2) 用高斯成像方程求参考波长的像距与横向放大率，证明 $s'(\\lambda)$ 对波长的精确一阶灵敏度；(3) 对小谱宽 $\\Delta\\lambda$ 求纵向色差 $\\Delta s'$ 的一阶近似，并指出红光与蓝光焦点哪个离镜面更远；(4) 求物体处于焦距附近时的像距发散和在薄透镜接触的薄色散极限 $C\\to0^+$ 下的结果。",
+    "solution": "(1) 薄透镜制造公式\n\\[\n\\frac1{f(\\lambda)}=(n(\\lambda)-1)\\left(\\frac1{R_1}-\\frac1{R_2}\\right)\n=\\frac{2[n(\\lambda)-1]}R\n\\]\n给\n\\[\nf(\\lambda)=\\frac{R}{2[n_\\infty-1+C/\\lambda^2]}.\n\\]\n因 $n'(\\lambda)=-2C/\\lambda^3<0$，所以\n\\[\nf'(\\lambda)=-\\frac R2\\frac{n'(\\lambda)}{[n(\\lambda)-1]^2}\n=\\frac{RC}{\\lambda^3[n(\\lambda)-1]^2}>0.\n\\]\n因此波长越长（红光），折射率越低，焦距越长。\n\n(2) 高斯成像公式为 $1/s+1/s'=1/f$。当 $s>f$ 时成实像，像距与横向放大率为\n\\[\ns'(\\lambda)=\\frac{s f(\\lambda)}{s-f(\\lambda)},\\qquad\nM(\\lambda)=-\\frac{s'}s=-\\frac{f(\\lambda)}{s-f(\\lambda)}.\n\\]\n将 $s$ 固定，对波长求导，\n\\[\n\\frac{ds'}{d\\lambda}=\\frac{s^2}{[s-f(\\lambda)]^2}f'(\\lambda)\n=\\frac{s^2RC}{\\lambda^3[n(\\lambda)-1]^2[s-f(\\lambda)]^2}>0.\n\\]\n小色散的像距变化受物距与焦距之差的平方放大。\n\n(3) 对 $\\lambda_0$ 附近小谱宽，泰勒展开得到\n\\[\n\\Delta s'\\simeq\n\\frac{s^2RC}{\\lambda_0^3[n(\\lambda_0)-1]^2[s-f(\\lambda_0)]^2}\\,\\Delta\\lambda.\n\\]\n若 $\\Delta\\lambda>0$，红光波长更长，焦距与像距也更长，故它的实像焦点离透镜更远。横向放大率 $M<0$ 表示倒像，且红光放大率绝对值更大。该展开仅在全部所涉及波长仍满足 $s>f(\\lambda)$、$\\Delta\\lambda$ 足够小的范围有效。\n\n(4) 当 $s\\downarrow f(\\lambda_0)^+$，像距 $s'=sf/(s-f)\\to+\\infty$，其对波长的灵敏度也以 $(s-f)^{-2}$ 发散。物体位于精确前焦平面时出射为平行束，不能赋予有限的实像距离；跨过 $s=f$ 后是虚像分支。若 $C\\to0^+$，则 $f(\\lambda)\\to R/[2(n_\\infty-1)]$ 不再随波长变化，纵向色差 $\\Delta s'\\to0$，回到无色散薄透镜。",
+    "answer": "f(\\lambda)=R/[2(n_\\infty-1+C/\\lambda^2)],\\quad ds'/d\\lambda=s^2RC/[\\lambda^3(n-1)^2(s-f)^2]",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "色散介质",
+      "薄透镜成像",
+      "微分敏感性",
+      "纵向色差",
+      "无穷远像极限"
+    ],
+    "assumptions_review": "主要推导与模型适用域初检；独立专家审核待完成",
+    "checks": [],
+    "revision": "composite-v1.7",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L4-C"
+  },
+  {
     "id": "Q007",
     "topic": "近代物理",
     "title": "相对论两体衰变的能量区间与阈值",
@@ -2037,5 +2137,55 @@
     "revision": "composite-v1.6",
     "challenge_profile": "high-multistage",
     "complexity_tier": "L5-C"
+  },
+  {
+    "id": "Q020",
+    "topic": "近代物理",
+    "title": "一维量子活塞的能级压力、绝热功与高温经典极限",
+    "kind": "综合推导题",
+    "level": 4,
+    "estimated_minutes": 60,
+    "question": "一个质量为 $m>0$ 的非相对论粒子被限制在一维无限深方势阱 $0<x<L$ 内，$L>0$；左右端边界条件 $\\psi(0)=\\psi(L)=0$。右端是一块可非常缓慢移动的理想量子活塞，忽略其有限运动速度引起的非绝热跃迁。取 $\\hbar,k_B>0$，势阱内没有其他势。\n(1) 从定态薛定谔方程求所有归一化能级波函数与能量；(2) 定义第 $n$ 定态对右侧活塞的广义压力（即一维力） $F_n=-\\partial E_n/\\partial L$，求其表达式并解释正负号；(3) 粒子起初处于第 $n$ 定态，右侧活塞绝热缓慢由 $L_i$ 移到 $L_f>L_i$，求输出功，验证量子数保持不变与能量守恒；(4) 若粒子在固定温度 $T$ 下与热库平衡且 $k_BT\\gg\\hbar^2/(mL^2)$，利用正则配分函数的连续近似求平均活塞力与平均能量，恢复一维经典理想气体的极限。",
+    "solution": "(1) 无限深势阱内定态方程为 $-\\hbar^2\\psi''/(2m)=E\\psi$，Dirichlet 边界使允许的波数 $k_n=n\\pi/L$，$n=1,2,\\ldots$。归一化本征函数和能量为\n\\[\n\\psi_n(x)=\\sqrt{\\frac2L}\\sin\\frac{n\\pi x}{L},\\qquad\nE_n(L)=\\frac{\\hbar^2\\pi^2n^2}{2mL^2}.\n\\]\n不能用 $n=0$ 作为最低态，因其波函数恒为零而不可归一化。\n\n(2) 对活塞坐标 $L$，体系的广义机械力定义为 $F_n=-\\partial_LE_n$，因此\n\\[\nF_n(L)=\\frac{\\hbar^2\\pi^2n^2}{mL^3}=\\frac{2E_n(L)}L>0.\n\\]\n正号表示粒子的量子动能迫使右侧壁向增大 $L$ 的方向移动，这是由受限波函数的动量不确定性引起的量子压力，不是必须存在粒子间排斥。\n\n(3) 量子绝热定理保证非简并态在足够缓慢移动的边界下不发生能级跃迁，故同一个量子数 $n$ 保持不变。由广义力积分得粒子对活塞输出的功\n\\[\nW=\\int_{L_i}^{L_f}F_n(L)\\,dL\n=\\frac{\\hbar^2\\pi^2n^2}{2m}\n\\left(\\frac1{L_i^2}-\\frac1{L_f^2}\\right)\n=E_n(L_i)-E_n(L_f)>0.\n\\]\n该过程与外界无热交换，量子体系内能降低恰好提供所输出的机械功，严格满足第一定律。\n\n(4) 在高温区能级间隔相对于热能很小，配分函数\n\\[\nZ_1(L,T)=\\sum_{n=1}^\\infty\n\\exp\\left[-\\frac{\\hbar^2\\pi^2n^2}{2mL^2k_BT}\\right]\n\\simeq\\int_0^\\infty e^{-a n^2}dn\n=\\frac{\\sqrt\\pi}{2\\sqrt a}=\\frac L{\\lambda_T},\n\\quad \\lambda_T=\\sqrt{\\frac{2\\pi\\hbar^2}{mk_BT}}.\n\\]\n由自由能 $A_{\\rm Helm}=-k_BT\\ln Z_1$，平均作用力\n\\[\n\\overline F=k_BT\\left(\\frac{\\partial\\ln Z_1}{\\partial L}\\right)_T\n\\simeq\\frac{k_BT}{L},\n\\]\n平均能量 $U=-\\partial_\\beta\\ln Z_1\\simeq k_BT/2$，与一维经典理想气体的 $FL=k_BT$ 及每个平动自由度 $k_BT/2$ 完全一致。",
+    "answer": "E_n=\\hbar^2\\pi^2n^2/(2mL^2),\\quad F_n=2E_n/L,\\quad W=E_n(L_i)-E_n(L_f)",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "量子无限深方阱",
+      "广义力",
+      "绝热定理",
+      "能量守恒",
+      "正则高温极限"
+    ],
+    "assumptions_review": "主要推导与模型适用域初检；独立专家审核待完成",
+    "checks": [],
+    "revision": "composite-v1.7",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L4-C"
+  },
+  {
+    "id": "Q021",
+    "topic": "近代物理",
+    "title": "矩形量子势垒的隧穿率、共振透射与厚势垒指数渐近",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "question": "一维非相对论粒子质量为 $m>0$、入射能量为 $E>0$，从左向右射向有限宽矩形势垒\n\\[\nV(x)=\\begin{cases}V_0,&0<x<a,\\\\0,&x\\le0\\text{ 或 }x\\ge a,\\end{cases}\n\\qquad V_0>0,\\ a>0.\n\\]\n设定态波函数时间因子为 $e^{-iEt/\\hbar}$，外部左右区域的自由波数同为 $k=\\sqrt{2mE}/\\hbar$。\n(1) 当 $0<E<V_0$ 时，列出三区域波函数形式和全部四个界面连续条件，推导透射概率 $\\mathcal T(E)$；(2) 求厚势垒 $\\kappa a\\gg1$ 的隧穿率首阶渐近与 $E\\to V_0^-$ 的有限阈值极限；(3) 当 $E>V_0$ 时求势垒内部传播波数及透射率，指出何时出现完美透射共振；(4) 验证入射、反射与透射概率流守恒，讨论 $V_0\\to0$、$a\\to0$ 两个极限以及隧穿率为什么不能直接由经典越垒条件推断。",
+    "solution": "(1) 低于势垒时，定义 $\\kappa=\\sqrt{2m(V_0-E)}/\\hbar>0$，取\n\\[\n\\psi_I=e^{ikx}+r e^{-ikx},\\quad\n\\psi_{II}=A e^{\\kappa x}+B e^{-\\kappa x},\\quad\n\\psi_{III}=t e^{ikx}.\n\\]\n波函数和导数在 $x=0$、$x=a$ 连续，给出四个条件\n\\[\n1+r=A+B,\\quad ik(1-r)=\\kappa(A-B),\n\\]\n\\[\nAe^{\\kappa a}+Be^{-\\kappa a}=te^{ika},\\quad\n\\kappa(Ae^{\\kappa a}-Be^{-\\kappa a})=ik\\,te^{ika}.\n\\]\n消去内部系数，得到透射振幅\n\\[\nt=\\frac{e^{-ika}}{\\cosh(\\kappa a)+i\\frac{\\kappa^2-k^2}{2k\\kappa}\\sinh(\\kappa a)}.\n\\]\n由于左右外部波数相同，透射流概率为 $|t|^2$：\n\\[\n\\mathcal T(E)\n=\\left[1+\\frac{V_0^2\\sinh^2(\\kappa a)}{4E(V_0-E)}\\right]^{-1}.\n\\]\n这是严格的静态一维矩形势垒结果。\n\n(2) 在 $\\kappa a\\gg1$ 时 $\\sinh(\\kappa a)\\sim e^{\\kappa a}/2$，故\n\\[\n\\mathcal T(E)\\sim\\frac{16E(V_0-E)}{V_0^2}e^{-2\\kappa a}.\n\\]\n当 $E\\to V_0^-$ 时 $\\kappa\\to0$，但 $\\sinh(\\kappa a)/\\kappa\\to a$，得到有限阈值透射率\n\\[\n\\mathcal T(V_0)=\\left[1+\\frac{mV_0a^2}{2\\hbar^2}\\right]^{-1}.\n\\]\n不能先令 $\\kappa=0$ 后直接把原式中的 $0/0$ 当作零。\n\n(3) 当 $E>V_0$，内部传播波数 $q=\\sqrt{2m(E-V_0)}/\\hbar>0$。将低能结果中的 $\\kappa$ 解析延拓为 $iq$，或者直接重新匹配边界，可得\n\\[\n\\mathcal T(E)=\\left[1+\\frac{V_0^2\\sin^2(qa)}{4E(E-V_0)}\\right]^{-1}.\n\\]\n只要 $qa=n\\pi$（正整数 $n$），内部两界面反射恰干涉相消，$\\mathcal T=1$。这并不意味着外部单独一个势阶跃完全无反射，而是双界面相干传播的共振效果。\n\n(4) 概率流密度为 $j=(\\hbar/m)\\Im(\\psi^*\\psi')$。因为势能实且不随时间变化，稳态流量在三个区间相等，故 $j_{\\rm in}-j_{\\rm ref}=j_{\\rm tr}$，即 $\\mathcal R+\\mathcal T=1$。在 $a\\to0$ 或固定 $E>0$ 的 $V_0\\to0$ 时均有 $\\mathcal T\\to1$。但只要 $0<E<V_0$ 且势垒宽度有限，$\\mathcal T>0$，表示量子波的倏逝尾可以跨越势垒；经典粒子在同一能量下会完全反射，故不能把有限量子隧穿率解释为经典粒子“获得了额外能量”。",
+    "answer": "\\mathcal T(E<V_0)=[1+V_0^2\\sinh^2(\\kappa a)/(4E(V_0-E))]^{-1},\\quad\\mathcal T(E>V_0)=[1+V_0^2\\sin^2(qa)/(4E(E-V_0))]^{-1}",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "定态散射",
+      "传输矩阵",
+      "量子隧穿",
+      "谐振透射",
+      "指数衰减与阈值"
+    ],
+    "assumptions_review": "主要推导与模型适用域初检；独立专家审核待完成",
+    "checks": [],
+    "revision": "composite-v1.7",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B"
   }
 ]
