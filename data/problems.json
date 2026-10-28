@@ -68,6 +68,52 @@
     "revision": "composite-v1.1"
   },
   {
+    "id": "M010",
+    "topic": "力学",
+    "title": "双圆轨道间的霍曼转移、冲量与能量预算",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 55,
+    "question": "质量可忽略的航天器绕引力参数为 $\\mu=GM>0$ 的中心天体运动，初始处于半径为 $r_1$ 的圆轨道，要转移到同一平面内半径 $r_2>r_1$ 的圆轨道。忽略脉冲期间的质量损失与第三体作用，只允许在转移椭圆的近拱点和远拱点施加顺行瞬时切向速度增量。\n(1) 从比机械能与角动量守恒求转移轨道半长轴以及两拱点速度；(2) 求两次脉冲 $\\Delta v_1,\\Delta v_2$ 和总 $\\Delta v$；(3) 求转移时间、两次脉冲导致的比轨道能增量，并检验总能量预算；(4) 令 $r_2=r_1(1+\\varepsilon)$ 且 $\\varepsilon\\to0^+$，求总 $\\Delta v$ 的首阶渐近式，并说明与圆轨道速度变化的关系。",
+    "solution": "(1) 记 $a=(r_1+r_2)/2$。近远拱点分别为 $r_1,r_2$，椭圆比机械能为 $\\mathcal E_t=-\\mu/(2a)$。利用活力公式 $v^2=\\mu(2/r-1/a)$ 得\n\\[\nv_p=\\sqrt{\\mu\\left(\\frac2{r_1}-\\frac1a\\right)},\\qquad\nv_a=\\sqrt{\\mu\\left(\\frac2{r_2}-\\frac1a\\right)}.\n\\]\n用开普勒角动量 $h=r_pv_p=r_av_a$ 核验两式的比值 $v_p/v_a=r_2/r_1$，与近远拱点角动量守恒一致。\n\n(2) 两个圆轨道速度 $v_{c1}=\\sqrt{\\mu/r_1},\\ v_{c2}=\\sqrt{\\mu/r_2}$。因 $r_2>r_1$，$v_p>v_{c1}$、$v_{c2}>v_a$，两次均应顺行加速：\n\\[\n\\Delta v_1=v_p-v_{c1},\\qquad \\Delta v_2=v_{c2}-v_a,\\qquad\n\\Delta v=\\Delta v_1+\\Delta v_2.\n\\]\n不能把两次脉冲之和误当速度矢量的直接差，因为脉冲发生在不同位置。\n\n(3) 开普勒第三定律给椭圆周期 $2\\pi\\sqrt{a^3/\\mu}$，仅飞半个周期，故\n\\[\nt_H=\\pi\\sqrt{a^3/\\mu}.\n\\]\n第一次脉冲的比能量增加为 $\\delta\\mathcal E_1=\\mu/(2r_1)-\\mu/(2a)$，第二次为 $\\delta\\mathcal E_2=\\mu/(2a)-\\mu/(2r_2)$，其和 $\\mu/(2r_1)-\\mu/(2r_2)$ 正好等于初末圆轨道比能量之差。亦可逐次以 $v\\Delta v+(\\Delta v)^2/2$ 验证，不能只用线性近似。\n\n(4) 写 $v_1=\\sqrt{\\mu/r_1}$，则\n\\[\nv_p=v_1\\sqrt{\\frac{2(1+\\varepsilon)}{2+\\varepsilon}}\n=v_1(1+\\varepsilon/4+O(\\varepsilon^2)),\n\\]\n\\[\nv_a=v_1\\sqrt{\\frac{2}{(1+\\varepsilon)(2+\\varepsilon)}}\n=v_1(1-3\\varepsilon/4+O(\\varepsilon^2)),\n\\quad v_{c2}=v_1(1-\\varepsilon/2+O(\\varepsilon^2)).\n\\]\n由此 $\\Delta v_1=\\Delta v_2=v_1\\varepsilon/4+O(\\varepsilon^2)$，\n\\[\n\\Delta v=v_1\\varepsilon/2+O(\\varepsilon^2).\n\\]\n其首阶恰为初末圆轨道速度之差的绝对值，反映微小半径改变时两处脉冲各承担一半。",
+    "answer": "\\Delta v_1=\\sqrt{\\mu(2/r_1-1/a)}-\\sqrt{\\mu/r_1},\\quad \\Delta v_2=\\sqrt{\\mu/r_2}-\\sqrt{\\mu(2/r_2-1/a)},\\quad t_H=\\pi\\sqrt{a^3/\\mu}",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "二体开普勒轨道",
+      "椭圆轨道能量",
+      "切向脉冲",
+      "飞行时间",
+      "微扰渐近"
+    ],
+    "assumptions_review": "建立物理模型、解析推导和量纲检查；独立专家复核待完成",
+    "checks": [],
+    "revision": "composite-v1.2"
+  },
+  {
+    "id": "M011",
+    "topic": "力学",
+    "title": "有限振幅单摆的椭圆积分、周期修正与分界轨道",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 60,
+    "question": "质量为 $m$ 的质点固定在长度 $\\ell$ 的无质量刚性杆末端，杆可绕固定水平转轴在竖直平面内自由转动。质点从与最低点夹角 $0<\\theta_0<\\pi$ 处静止释放，重力加速度为 $g>0$，忽略阻力。刚性杆可承受拉力和压力。\n(1) 建立能量积分，给出最低点角速度；(2) 将振动周期写为第一类完全椭圆积分 $K(k)$ 的形式，并明确参数 $k$；(3) 求 $\\theta_0\\to0$ 时周期的首个非平凡修正，解释为何小振幅近似低估周期；(4) 求 $\\theta_0\\to\\pi^-$ 时周期的主导对数发散式，并求经过最低点瞬间杆对质点的径向作用力，说明刚性杆假设的用途。",
+    "solution": "(1) 取最低点势能为零，$U=mg\\ell(1-\\cos\\theta)$。初始静止时总能量 $mg\\ell(1-\\cos\\theta_0)$，故\n\\[\n\\frac{m\\ell^2}2\\dot\\theta^2=mg\\ell(\\cos\\theta-\\cos\\theta_0).\n\\]\n用 $k=\\sin(\\theta_0/2)\\in(0,1)$，可写成 $\\dot\\theta^2=4(g/\\ell)[k^2-\\sin^2(\\theta/2)]$，于是最低点角速度 $|\\dot\\theta|_{\\max}=2k\\sqrt{g/\\ell}$。\n\n(2) 从最低点到转向点的四分之一周期积分为\n\\[\nT/4=\\int_0^{\\theta_0}\\frac{d\\theta}{2\\sqrt{g/\\ell}\\sqrt{k^2-\\sin^2(\\theta/2)}}.\n\\]\n代换 $\\sin(\\theta/2)=k\\sin\\varphi$，得到\n\\[\nT=4\\sqrt{\\frac{\\ell}{g}}K(k),\\qquad\nK(k)=\\int_0^{\\pi/2}\\frac{d\\varphi}{\\sqrt{1-k^2\\sin^2\\varphi}}.\n\\]\n这是精确的周期表达式；只有 $\\theta_0\\ll1$ 时才可改用简谐近似。\n\n(3) 将 $(1-k^2\\sin^2\\varphi)^{-1/2}$ 按 $k$ 展开并积分：\n\\[\nK(k)=\\frac{\\pi}{2}\\left(1+\\frac{k^2}{4}+\\frac{9k^4}{64}+O(k^6)\\right).\n\\]\n又 $k^2=\\theta_0^2/4+O(\\theta_0^4)$，因此\n\\[\nT=2\\pi\\sqrt{\\frac{\\ell}{g}}\\left(1+\\frac{\\theta_0^2}{16}+O(\\theta_0^4)\\right).\n\\]\n正修正表明有限振幅单摆周期更长，因大角度处回复力 $mg\\sin\\theta$ 小于线性外推 $mg\\theta$。\n\n(4) 当 $k\\to1^-$，$K(k)\\sim\\ln[4/\\sqrt{1-k^2}]$；且 $\\sqrt{1-k^2}=\\cos(\\theta_0/2)\\sim(\\pi-\\theta_0)/2$，故\n\\[\nT\\sim4\\sqrt{\\frac{\\ell}{g}}\\ln\\frac{8}{\\pi-\\theta_0}.\n\\]\n对数发散反映接近顶端不稳定平衡时的缓慢通过。最低点向心方向朝轴心，$F_r-mg=m\\ell\\dot\\theta_{\\max}^2$，所以杆的径向拉力为 $F_r=mg(1+4k^2)$。在一般角度若杆承受压力，仍能保持约束；细绳则可能松弛，不能直接套用相同的完整轨道条件。",
+    "answer": "T=4\\sqrt{\\ell/g}\\,K(\\sin(\\theta_0/2)),\\quad \\dot\\theta_{\\max}=2\\sqrt{g/\\ell}\\sin(\\theta_0/2),\\quad F_r=mg[1+4\\sin^2(\\theta_0/2)]",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "非线性动力学",
+      "能量守恒",
+      "椭圆积分",
+      "小振幅渐近",
+      "分界轨道奇异性"
+    ],
+    "assumptions_review": "建立物理模型、解析推导和量纲检查；独立专家复核待完成",
+    "checks": [],
+    "revision": "composite-v1.2"
+  },
+  {
     "id": "E007",
     "topic": "电磁学",
     "title": "滑动导体棒的自感反馈与能量耗散",
@@ -137,6 +183,52 @@
     "revision": "composite-v1.1"
   },
   {
+    "id": "E010",
+    "topic": "电磁学",
+    "title": "互感耦合 LC 回路的正规模、能量与拍动",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 55,
+    "question": "两只完全相同且无电阻的闭合 LC 回路，每只电感为 $L>0$、电容为 $C>0$，两电感间存在正互感 $0<M<L$。取两回路电荷坐标 $q_1,q_2$ 的正方向，使电流 $i_j=\\dot q_j$ 且磁场互能为 $M i_1i_2$。每回路电容储能为 $q_j^2/(2C)$，忽略辐射。初始时 $q_1(0)=Q\\ne0,\\ q_2(0)=0,\\ \\dot q_1(0)=\\dot q_2(0)=0$。\n(1) 从拉格朗日方程求耦合振动方程；(2) 求两个正规模频率和 $q_1(t),q_2(t)$ 的解析式；(3) 分解初始能量到正规模并验证任意时刻总能量守恒；(4) 在 $M/L\\ll1$ 时求频率分裂及回路间拍动的慢时间尺度，讨论 $M\\to0^+$ 极限。",
+    "solution": "(1) 用电荷为广义坐标，系统拉格朗日函数为\n\\[\n\\mathscr L=\\frac L2(\\dot q_1^2+\\dot q_2^2)+M\\dot q_1\\dot q_2-\\frac{q_1^2+q_2^2}{2C}.\n\\]\n因 $0<M<L$，磁能矩阵 $\\begin{psmallmatrix}L&M\\\\M&L\\end{psmallmatrix}$ 正定。欧拉—拉格朗日方程给\n\\[\nL\\ddot q_1+M\\ddot q_2+\\frac{q_1}{C}=0,\\qquad\nM\\ddot q_1+L\\ddot q_2+\\frac{q_2}{C}=0.\n\\]\n\n(2) 令 $q_\\pm=(q_1\\pm q_2)/\\sqrt2$，则\n\\[\n(L\\pm M)\\ddot q_\\pm+\\frac{q_\\pm}{C}=0,\\quad\n\\omega_\\pm=\\frac1{\\sqrt{C(L\\pm M)}}.\n\\]\n初态 $q_\\pm(0)=Q/\\sqrt2,\\ \\dot q_\\pm(0)=0$，所以\n\\[\nq_1(t)=\\frac Q2(\\cos\\omega_+t+\\cos\\omega_-t),\\qquad\nq_2(t)=\\frac Q2(\\cos\\omega_+t-\\cos\\omega_-t).\n\\]\n两式满足全部初值，且每个回路的初始电流均为零。\n\n(3) 总机械类比能量是\n\\[\n\\mathscr E=\\frac L2(i_1^2+i_2^2)+Mi_1i_2+\\frac{q_1^2+q_2^2}{2C}\n=\\sum_{\\sigma=\\pm}\\left[\\frac{L+\\sigma M}{2}\\dot q_\\sigma^2+\\frac{q_\\sigma^2}{2C}\\right].\n\\]\n每个正规模的能量等于 $Q^2/(4C)$，故 $\\mathscr E=Q^2/(2C)$ 对所有时间守恒。互感能可为正或负，但总磁能仍因 $|M|<L$ 非负。\n\n(4) 令 $\\varepsilon=M/L\\ll1$、$\\omega_b=(LC)^{-1/2}$，则 $\\omega_+=\\omega_b(1-\\varepsilon/2+O(\\varepsilon^2))$ 与 $\\omega_-=\\omega_b(1+\\varepsilon/2+O(\\varepsilon^2))$，频率裂分\n\\[\n\\omega_--\\omega_+=\\omega_b\\varepsilon+O(\\varepsilon^3).\n\\]\n用余弦和差化积，$q_2=-Q\\sin[(\\omega_++\\omega_-)t/2]\\sin[(\\omega_+-\\omega_-)t/2]$。后一因子是慢拍动包络，显著能量交换需要 $t$ 达到 $O(1/|\\omega_+-\\omega_-|)$。当 $M\\to0$ 时两频率并合，$q_2(t)\\equiv0$，两回路解耦。",
+    "answer": "\\omega_\\pm=[C(L\\pm M)]^{-1/2},\\quad q_2(t)=\\frac Q2(\\cos\\omega_+t-\\cos\\omega_-t)",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "互感电路",
+      "正定磁能",
+      "正规模分解",
+      "初值问题",
+      "能量拍动"
+    ],
+    "assumptions_review": "建立物理模型、解析推导和量纲检查；独立专家复核待完成",
+    "checks": [],
+    "revision": "composite-v1.2"
+  },
+  {
+    "id": "E011",
+    "topic": "电磁学",
+    "title": "径向非均匀自由电荷介质球的电势、束缚电荷与场能",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 55,
+    "question": "半径 $a>0$ 的实心球内填充各向同性均匀线性电介质，介电常数 $\\epsilon>\\epsilon_0>0$，球外为真空。球内存在规定的径向自由电荷密度 $\\rho_f(r)=\\rho_0r/a$（$0\\le r\\le a$，$\\rho_0>0$）；界面无自由面电荷。系统处于静电平衡且球心无奇异点，取无穷远电势为零。\n(1) 由 $\\nabla\\cdot\\boldsymbol D=\\rho_f$ 求球内外 $\\boldsymbol D,\\boldsymbol E$ 与总自由电荷；(2) 求完整电势 $\\phi(r)$，检验电势和法向 $D$ 的界面连续性；(3) 求介质内部束缚体电荷密度与界面束缚面电荷，并验证净束缚电荷为零；(4) 从 $u=\\boldsymbol E\\cdot\\boldsymbol D/2$ 积分求总静电场能，并考察 $\\epsilon\\to\\epsilon_0$ 的极限。",
+    "solution": "(1) 球对称下高斯面包围的自由电荷为\n\\[\nQ_f(r)=4\\pi\\int_0^r\\frac{\\rho_0s}{a}s^2\\,ds=\\frac{\\pi\\rho_0 r^4}{a}\\quad(r\\le a),\n\\qquad Q_f=\\pi\\rho_0a^3.\n\\]\n因此\n\\[\nD_r(r)=\n\\begin{cases}\\rho_0r^2/(4a),&r\\le a,\\\\\\rho_0a^3/(4r^2),&r\\ge a,\\end{cases}\\quad\nE_r(r)=\n\\begin{cases}\\rho_0r^2/(4a\\epsilon),&r\\le a,\\\\\\rho_0a^3/(4\\epsilon_0r^2),&r\\ge a.\\end{cases}\n\\]\n在 $r=a$ 处法向 $D$ 连续，法向 $E$ 不必连续。\n\n(2) 球外 $\\phi(r)=\\int_r^\\infty E_r(s)\\,ds=\\rho_0a^3/(4\\epsilon_0r)$。球内利用 $\\phi(r)=\\phi(a)+\\int_r^a E_{\\mathrm{in}}(s)ds$，得到\n\\[\n\\phi(r)=\\frac{\\rho_0a^2}{4\\epsilon_0}+\\frac{\\rho_0(a^3-r^3)}{12a\\epsilon}\\quad(0\\le r\\le a).\n\\]\n在 $a$ 处两式一致，且 $-\\partial_r\\phi=E_r$。\n\n(3) 介质内极化强度为 $\\boldsymbol P=(\\epsilon-\\epsilon_0)\\boldsymbol E$。由 $\\rho_b=-\\nabla\\cdot\\boldsymbol P$ 与 $\\nabla\\cdot\\boldsymbol E=\\rho_f/\\epsilon$，\n\\[\n\\rho_b(r)=-\\frac{\\epsilon-\\epsilon_0}{\\epsilon}\\frac{\\rho_0r}{a},\\quad\n\\sigma_b(a)=\\boldsymbol P(a^-)\\cdot\\hat{\\boldsymbol r}\n=\\frac{\\epsilon-\\epsilon_0}{\\epsilon}\\frac{\\rho_0a}{4}.\n\\]\n体束缚电荷之和为 $-(\\epsilon-\\epsilon_0)Q_f/\\epsilon$，表面束缚电荷为 $(\\epsilon-\\epsilon_0)Q_f/\\epsilon$，二者抵消，净束缚电荷零。\n\n(4) 总场能为\n\\[\nU=\\frac12\\int_{\\mathbb R^3}\\boldsymbol E\\cdot\\boldsymbol D\\,d^3r\n=2\\pi\\left[\\int_0^a\\frac{D_r^2r^2}{\\epsilon}\\,dr+\n\\int_a^\\infty\\frac{D_r^2r^2}{\\epsilon_0}\\,dr\\right].\n\\]\n代入分段式，分别积分 $\\int_0^ar^6dr=a^7/7$、$\\int_a^\\infty r^{-2}dr=1/a$，得到\n\\[\nU_{\\rm in}=\\frac{\\pi\\rho_0^2a^5}{56\\epsilon},\\quad\nU_{\\rm out}=\\frac{\\pi\\rho_0^2a^5}{8\\epsilon_0},\\quad U=U_{\\rm in}+U_{\\rm out}.\n\\]\n当 $\\epsilon\\to\\epsilon_0$，束缚电荷趋零，内部能量连续退化为真空带电球模型。",
+    "answer": "Q_f=\\pi\\rho_0a^3,\\quad U=\\pi\\rho_0^2a^5\\left(\\frac1{56\\epsilon}+\\frac1{8\\epsilon_0}\\right)",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "电位移高斯定律",
+      "界面边界条件",
+      "分段电势积分",
+      "极化束缚电荷",
+      "静电场能量"
+    ],
+    "assumptions_review": "建立物理模型、解析推导和量纲检查；独立专家复核待完成",
+    "checks": [],
+    "revision": "composite-v1.2"
+  },
+  {
     "id": "T007",
     "topic": "热学",
     "title": "导热可动活塞的不可逆终态与熵产生",
@@ -204,6 +296,52 @@
     "assumptions_review": "建模、守恒和极限已初检；需第二人独立复核",
     "checks": [],
     "revision": "composite-v1.1"
+  },
+  {
+    "id": "T010",
+    "topic": "热学",
+    "title": "任意多方指数理想气体的热量符号与可逆绝热边界",
+    "kind": "综合推导题",
+    "level": 4,
+    "estimated_minutes": 45,
+    "question": "有 $N>0$ mol 理想气体，其摩尔定容热容 $C_V>0$ 恒定，且 $P V^{\\beta}=\\mathrm{const}$（$\\beta$ 为固定实数）描述某一可逆准静态过程。气体初态为 $(T_1,V_1)$，末态 $V_2=\\lambda V_1$，其中 $\\lambda>1$。只有体积功，取气体对外做功 $W>0$、吸热 $Q>0$。\n(1) 求末态温度及压力比；(2) 对 $\\beta\\ne1$ 求 $W,\\Delta U,Q$，推导熵变 $\\Delta S$；(3) 引入 $\\gamma=1+R/C_V$，判断膨胀过程在 $\\beta<\\gamma$、$\\beta=\\gamma$、$\\beta>\\gamma$ 时的吸放热方向，并解释热容“沿路径”可为负的含义；(4) 单独处理 $\\beta=1$，并从一般表达式的极限恢复可逆等温过程，再验证 $\\beta=\\gamma$ 的泊松关系。",
+    "solution": "(1) 理想气体状态方程给 $PV=NRT$。由于 $P_2/P_1=\\lambda^{-\\beta}$，直接有\n\\[\nT_2=T_1\\lambda^{1-\\beta},\\qquad P_2=P_1\\lambda^{-\\beta}.\n\\]\n\n(2) 对 $\\beta\\ne1$，$P(V)=P_1(V_1/V)^\\beta$，积分\n\\[\nW=\\int_{V_1}^{V_2}P\\,dV\n=\\frac{P_2V_2-P_1V_1}{1-\\beta}\n=\\frac{NR(T_2-T_1)}{1-\\beta}.\n\\]\n内能只依赖温度，$\\Delta U=NC_V(T_2-T_1)$；第一定律 $\\Delta U=Q-W$ 给\n\\[\nQ=N\\left(C_V+\\frac R{1-\\beta}\\right)(T_2-T_1).\n\\]\n熵为状态函数，因该理想气体 $dS=NC_V\\,dT/T+NR\\,dV/V$，所以\n\\[\n\\Delta S=N[C_V(1-\\beta)+R]\\ln\\lambda.\n\\]\n尽管过程可逆，若与不同温度热源逐渐交换热量，气体的 $\\Delta S$ 不必为零；只有整个可逆系统的总熵产为零。\n\n(3) 令 $s=1-\\beta$。函数 $(\\lambda^s-1)/s$ 对任意 $s\\ne0$ 为正，故 $Q=NT_1[C_V(1-\\beta)+R](\\lambda^{1-\\beta}-1)/(1-\\beta)$ 的符号只取决于 $C_V(\\gamma-\\beta)$：$\\beta<\\gamma$ 时吸热，$\\beta=\\gamma$ 时绝热，$\\beta>\\gamma$ 时放热。定义路径热容 $C_{\\rm path}=Q/[N(T_2-T_1)]=C_V+R/(1-\\beta)$，它可为负：沿所选路径吸热与温度变化符号相反，并非违反 $C_V>0$ 的热力学稳定性。\n\n(4) 当 $\\beta=1$，温度恒定为 $T_1$，内能变化零，\n\\[\nW=Q=NRT_1\\ln\\lambda,\\qquad \\Delta S=NR\\ln\\lambda.\n\\]\n利用 $\\lim_{s\\to0}(\\lambda^s-1)/s=\\ln\\lambda$ 可从一般式连续得到上述结果。$\\beta=\\gamma$ 时 $Q=0$、$\\Delta S=0$，对应可逆绝热关系 $PV^\\gamma=\\mathrm{const}$；其他多方路径不能简单地套用这一关系。",
+    "answer": "T_2=T_1\\lambda^{1-\\beta},\\quad W=\\frac{NR(T_2-T_1)}{1-\\beta},\\quad \\Delta S=N[C_V(1-\\beta)+R]\\ln\\lambda\\quad(\\beta\\ne1)",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "理想气体多方过程",
+      "能量守恒",
+      "可逆热量积分",
+      "熵变",
+      "特殊参数极限"
+    ],
+    "assumptions_review": "建立物理模型、解析推导和量纲检查；独立专家复核待完成",
+    "checks": [],
+    "revision": "composite-v1.2"
+  },
+  {
+    "id": "T011",
+    "topic": "热学",
+    "title": "范德瓦耳斯流体的临界点、旋节线与临界奇性",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 55,
+    "question": "一摩尔范德瓦耳斯流体满足 $P=RT/(v-b)-a/v^2$，其中 $a,b,R>0$、摩尔体积 $v>b$。只研究均匀平衡分支及其局域机械稳定性，暂不进行相共存的 Maxwell 等面积构造。\n(1) 从临界等温线一、二阶导数同时为零求 $v_c,T_c,P_c$；(2) 引入约化量 $p_r=P/P_c,\\ t_r=T/T_c,\\ v_r=v/v_c$，导出约化状态方程并验证临界点位置；(3) 推导等温压缩率 $\\kappa_T=-(1/v)(\\partial v/\\partial P)_T$ 的符号判据，解释旋节线与共存曲线的区别；(4) 固定 $T=T_c$，令 $\\delta=v_r-1$，求 $p_r-1$ 的首个非零幂次和系数，说明临界压缩率的发散。",
+    "solution": "(1) 对摩尔体积求导：\n\\[\n\\frac{\\partial P}{\\partial v}=-\\frac{RT}{(v-b)^2}+\\frac{2a}{v^3},\\qquad\n\\frac{\\partial^2P}{\\partial v^2}=\\frac{2RT}{(v-b)^3}-\\frac{6a}{v^4}.\n\\]\n临界点满足两者均为零。联立消去 $T$ 得 $v_c=3b$，再代入得\n\\[\nT_c=\\frac{8a}{27Rb},\\qquad P_c=\\frac{a}{27b^2}.\n\\]\n均满足 $v_c>b$ 且所有物理参数为正。\n\n(2) 代入上述临界标度，约化方程是\n\\[\np_r=\\frac{8t_r}{3v_r-1}-\\frac{3}{v_r^2},\n\\]\n或 $(p_r+3/v_r^2)(3v_r-1)=8t_r$。在 $(t_r,v_r)=(1,1)$ 时 $p_r=1$，一、二阶导数归零。\n\n(3) 等温压缩率为\n\\[\n\\kappa_T=-\\frac{1}{v(\\partial P/\\partial v)_T}.\n\\]\n在单相均匀流体的局域稳定分支，必须有 $(\\partial P/\\partial v)_T<0$，对应 $\\kappa_T>0$。当 $\\partial P/\\partial v=0$，均匀分支到达局域稳定极限（旋节线）；正斜率分支为局域不稳定。低于临界温度时真实的气液共存由化学势相等和 Maxwell 等面积规则决定，**不能**把两个旋节端点当作真正的气液共存体积。\n\n(4) 固定 $t_r=1$，按 $\\delta=v_r-1$ 展开，\n\\[\np_r=\\frac8{2+3\\delta}-\\frac3{(1+\\delta)^2}\n=1-\\frac32\\delta^3+O(\\delta^4).\n\\]\n零次以外的一、二次项完全抵消，首个非零项为三次，这给出经典平均场临界等温指数 $\\delta_{\\rm crit}=3$（此处下标用于区别体积偏差 $\\delta$）。由于 $dp_r/dv_r\\sim-9\\delta^2/2$，沿临界等温线接近临界点时 $\\kappa_T$ 的大小发散，但有限大小样品、涨落及真实物质的适用限制不由这条平均场方程控制。",
+    "answer": "v_c=3b,\\quad T_c=\\frac{8a}{27Rb},\\quad P_c=\\frac{a}{27b^2},\\quad p_r(t_r=1)=1-\\frac32(v_r-1)^3+O((v_r-1)^4)",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "非理想流体状态方程",
+      "高阶求导",
+      "临界点",
+      "等温机械稳定性",
+      "相变与临界展开"
+    ],
+    "assumptions_review": "建立物理模型、解析推导和量纲检查；独立专家复核待完成",
+    "checks": [],
+    "revision": "composite-v1.2"
   },
   {
     "id": "W007",
