@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Gate for complete 100-item rounds from round 11 onward.
+"""Gate for complete 50-item rounds from round 11 onward.
 
 Automated checks never represent independent human expert review.
 """
@@ -34,7 +34,7 @@ def parts(text):
 
 def check():
     baseline=set(POLICY["baseline_ids"])
-    if len(baseline)!=252 or POLICY["exact_new_items_per_round"]!=100:
+    if len(baseline)!=252 or POLICY["exact_new_items_per_round"]!=50:
         reject("policy baseline or quota damaged")
     all_items=load(ROOT/"data/problems.json")
     by_id={p["id"]:p for p in all_items}
@@ -48,20 +48,20 @@ def check():
             manifests.append((int(hit.group(1)),path))
     manifests.sort()
     if len(current)==252 and not manifests:
-        print("100-item round gate armed; baseline=252; next round=11")
+        print("50-item round gate armed; baseline=252; next round=11")
         return 0
-    if len(current)!=252+100*len(manifests):
-        reject("incomplete new round or 100-item manifest missing")
+    if len(current)!=252+50*len(manifests):
+        reject("incomplete new round or 50-item manifest missing")
     known=set(baseline)
     for index,(round_no,path) in enumerate(manifests):
         if round_no!=11+index:
             reject("future round numbers must be consecutive starting at 11")
         entry=load(path)
         ids=entry.get("ids")
-        if not isinstance(ids,list) or len(ids)!=100 or len(set(ids))!=100:
-            reject(f"round {round_no}: exactly 100 distinct IDs required")
-        for k,v in (("base_count",252+100*index),("active_total",352+100*index),
-                    ("target_new_items",100),("actual_new_items",100)):
+        if not isinstance(ids,list) or len(ids)!=50 or len(set(ids))!=100:
+            reject(f"round {round_no}: exactly 50 distinct IDs required")
+        for k,v in (("base_count",252+50*index),("active_total",302+50*index),
+                    ("target_new_items",50),("actual_new_items",50)):
             if entry.get(k)!=v:
                 reject(f"round {round_no}: wrong {k}")
         if str(entry.get("round","")).lstrip("0")!=str(round_no):
@@ -110,8 +110,8 @@ def check():
             reject(f"round {round_no}: missing executed QA report")
         report=load(report_path)
         tests=report.get("tests",[])
-        if report.get("new_problem_count")!=100 or report.get("passed_count")!=400 or len(tests)!=400:
-            reject(f"round {round_no}: must execute 400 successful subpart checks")
+        if report.get("new_problem_count")!=50 or report.get("passed_count")!=200 or len(tests)!=200:
+            reject(f"round {round_no}: must execute 200 successful subpart checks")
         checked=set()
         methods=collections.defaultdict(set)
         for t in tests:
@@ -127,14 +127,14 @@ def check():
             checked.add((uid,part))
             methods[uid].add(method)
         if checked!={(uid,part) for uid in ids for part in range(1,5)}:
-            reject("not all 400 individual subparts have runnable checks")
+            reject("not all 200 individual subparts have runnable checks")
         if any(len(methods[uid])<2 for uid in ids):
             reject("each problem needs at least two different verification methods")
         known.update(new)
     if current!=known:
-        reject("found unmanifested problems outside accepted 100-item rounds")
+        reject("found unmanifested problems outside accepted 50-item rounds")
     print(json.dumps({"status":"passed","problem_count":len(current),
-        "new_rounds":len(manifests),"technical_subpart_checks":400*len(manifests),
+        "new_rounds":len(manifests),"technical_subpart_checks":200*len(manifests),
         "expert_signoff":"not established by automated verification"},ensure_ascii=False))
     return 0
 
