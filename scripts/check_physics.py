@@ -7,7 +7,8 @@ ROOT=Path(__file__).resolve().parents[1]
 p=json.loads((ROOT/'data/problems.json').read_text())
 assert len(p)>=12, 'advanced problem bank unexpectedly shrank'
 ids=[x['id'] for x in p];assert len(set(ids))==len(ids)
-assert set(x['topic'] for x in p)=={'力学','电磁学','热学','振动与波动','光学','近代物理'}\nassert all(v>=2 for v in collections.Counter(x['topic'] for x in p).values())
+assert set(x['topic'] for x in p)=={'力学','电磁学','热学','振动与波动','光学','近代物理'}
+assert all(v>=2 for v in collections.Counter(x['topic'] for x in p).values())
 for x in p:
  assert x['tier']=='advanced_composite' and x['level']>=4 and x['estimated_minutes']>=40 and len(x['tags'])>=3
  assert '待独立复核'==x['quality_status']
