@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-10-28T06:20:11.428491+00:00",
+  "generated_utc": "2026-10-28T06:22:51.028733+00:00",
   "upstream_repository": "philschatz/physics-book",
   "upstream_revision": "a7efaa7e221fab1694022d8bb98b83a73ee31d3d",
   "total_corpus_candidates": 2526,
@@ -20,16 +20,17 @@
     "conceptual": 778
   },
   "format_tiers": {
-    "manual_physics_and_solution_review": 1439,
+    "manual_physics_and_solution_review": 1438,
     "math_format_review": 1082,
     "source_integrity_or_conversion_review": 3,
-    "context_or_media_review": 2
+    "context_or_media_review": 3
   },
   "risk_flag_counts": {
     "mathml_requires_conversion": 1085,
     "short_extracted_text": 30,
     "mathml_unsupported_mathml_msup": 2,
     "media_or_figure_reference": 2,
+    "cross_reference": 1,
     "mathml_unsupported_mathml_msub": 1
   },
   "risk_flag_examples": {
@@ -60,6 +61,9 @@
     "mathml_unsupported_mathml_msup": [
       "CP-00445",
       "CP-02129"
+    ],
+    "cross_reference": [
+      "CP-00528"
     ],
     "media_or_figure_reference": [
       "CP-00955",
