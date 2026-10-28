@@ -1,7 +1,7 @@
 {
   "status": "draft-only",
-  "new_problem_count": 11,
-  "passed_count": 44,
+  "new_problem_count": 13,
+  "passed_count": 52,
   "tests": [
     {
       "id": "M059",
@@ -310,6 +310,62 @@
       "method": "symbolic",
       "name": "two photon detuning causes diagonal dark shift and off diagonal leakage",
       "passed": true
+    },
+    {
+      "id": "M061",
+      "part": 1,
+      "method": "independent_derivation",
+      "name": "transverse Newton equation and torque equation independently yield same constraint reaction",
+      "passed": true
+    },
+    {
+      "id": "M061",
+      "part": 2,
+      "method": "symbolic_and_conservation",
+      "name": "exact heteroclinic orbit solves both nonholonomic equations and preserves energy",
+      "passed": true
+    },
+    {
+      "id": "M061",
+      "part": 3,
+      "method": "limit",
+      "name": "heading derivative and total turning agree with exact integration and stable decay rate",
+      "passed": true
+    },
+    {
+      "id": "M061",
+      "part": 4,
+      "method": "local_series",
+      "name": "cusp acceleration and zero second u derivative follow equations; reaction vanishes at reversal",
+      "passed": true
+    },
+    {
+      "id": "O058",
+      "part": 1,
+      "method": "symbolic_and_boundary",
+      "name": "complex Fresnel kernel derivative and edge amplitude agree with normalized erfc",
+      "passed": true
+    },
+    {
+      "id": "O058",
+      "part": 2,
+      "method": "local_derivative",
+      "name": "edge intensity equals one quarter and its slope has correct Fresnel length",
+      "passed": true
+    },
+    {
+      "id": "O058",
+      "part": 3,
+      "method": "independent_numerical_asymptotics",
+      "name": "bright oscillations and shadow inverse-square tail agree with complex erfc numerical evaluation",
+      "passed": true
+    },
+    {
+      "id": "O058",
+      "part": 4,
+      "method": "conservation",
+      "name": "paraxial wave equation and negative edge transverse flux hold identically",
+      "passed": true
     }
   ],
   "independent_expert_review": "pending",
@@ -378,6 +434,18 @@
       "id": "Q058",
       "method": "numerical",
       "name": "independent high precision Lambda dark state matrix product",
+      "passed": true
+    },
+    {
+      "id": "M061",
+      "method": "high_precision_numerical",
+      "name": "Chaplygin heteroclinic energy at nontrivial time",
+      "passed": true
+    },
+    {
+      "id": "O058",
+      "method": "independent_numerical_derivative",
+      "name": "Fresnel edge transverse flux from high precision erfc derivative",
       "passed": true
     }
   ]

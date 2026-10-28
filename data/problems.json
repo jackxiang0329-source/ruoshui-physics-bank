@@ -1253,6 +1253,30 @@
     "solution": "(1) 设无量纲快速度为 \\(\\eta\\)，四速度 \\(U^\\mu=(c\\cosh\\eta,c\\sinh\\eta)\\)，取度规 \\(+,-\\)，立即有 \\(U^\\mu U_\\mu=c^2\\)。四加速度 \\(A^\\mu=dU^\\mu/d\\tau=c\\dot\\eta(\\sinh\\eta,\\cosh\\eta)\\)，故 \\(\\sqrt{-A^\\mu A_\\mu}=c|\\dot\\eta|=a\\)。由初始静止和正向加速知 \\(\\eta=a\\tau/c\\)。因此\n\\[\nv=c\\tanh\\eta,\\quad \\gamma=\\cosh\\eta,\\quad\nt=\\frac ca\\sinh\\eta,\\qquad\nx=\\frac{c^2}{a}(\\cosh\\eta-1).\n\\]\n求导得 \\(dt/d\\tau=\\cosh\\eta\\)、\\(dx/d\\tau=c\\sinh\\eta\\)，且 \\(t(0)=x(0)=v(0)=0\\)。这里 \\(a\\) 是加速度计读数，不是实验室坐标加速度。\n\n(2) 由 \\(\\cosh^2\\eta-\\sinh^2\\eta=1\\) 得\n\\[\n\\boxed{\\left(x+\\frac{c^2}{a}\\right)^2-c^2t^2=\\frac{c^4}{a^2}}.\n\\]\n又 \\(dv/dt=(dv/d\\tau)/(dt/d\\tau)=a/\\gamma^3\\)，随速度增加而趋零。到 \\(x=D\\) 时\n\\[\n\\gamma_D=1+\\frac{aD}{c^2},\\quad\nt_D=\\frac ca\\sqrt{\\gamma_D^2-1},\\quad\n\\tau_D=\\frac ca\\operatorname{arcosh}\\gamma_D.\n\\]\n动量 \\(p=mc\\sinh\\eta\\)，于是实验室外力 \\(F=dp/dt=ma\\) 为常数，供能功 \\(W=\\int_0^D F\\,dx=maD=(\\gamma_D-1)mc^2\\)，与相对论动能严格相符。\\(aD/c^2\\ll1\\) 时 \\(t_D\\simeq\\sqrt{2D/a}\\)，恢复牛顿结果。\n\n(3) 原点发出的右行光线满足 \\(x=c(t-t_e)\\)，相遇条件是 \\(ct-x=ct_e\\)。将 (1) 代入，使用 \\(\\sinh\\eta-\\cosh\\eta=-e^{-\\eta}\\)，得到\n\\[\nct_e=\\frac{c^2}{a}(1-e^{-\\eta}),\\qquad\n\\eta=-\\ln\\left(1-\\frac{at_e}{c}\\right),\\qquad\n\\tau_e=-\\frac ca\\ln\\left(1-\\frac{at_e}{c}\\right).\n\\]\n因此有限固有时相遇当且仅当 \\(0\\le t_e<c/a\\)；临界 \\(t_e=c/a\\) 仅在 \\(\\tau\\to\\infty\\) 形式上相接，更晚发出的光永远追不上火箭。对沿 \\(+x\\) 的光，瞬时共动系的频率为\n\\[\n\\boxed{\\nu_{\\rm rec}=\\gamma(1-v/c)\\nu_0=e^{-\\eta}\\nu_0\n=\\left(1-\\frac{at_e}{c}\\right)\\nu_0}.\n\\]\n红移趋零频率对应信号源可达性的边界，而非光速发生变化。\n\n(4) 火箭向后发出的光在实验室系仍沿 \\(-x\\) 传播，其世界线在发射后为 \\(x'=x(\\tau)-c[t'-t(\\tau)]\\)。令 \\(x'=0\\)，原点收到光的时刻\n\\[\n\\boxed{t_r=t(\\tau)+\\frac{x(\\tau)}c=\\frac ca(e^\\eta-1)}.\n\\]\n瞬时共动系到实验室系的逆向多普勒变换给出\n\\[\n\\boxed{\\nu_r=\\gamma(1-v/c)\\nu_*=\\nu_*e^{-\\eta}\n=\\frac{\\nu_*}{1+at_r/c}}.\n\\]\n独立地对上式求导，\\(dt_r/d\\tau=e^\\eta\\)，因此火箭每隔 \\(d\\tau=1/\\nu_*\\) 发射的相邻波峰在原点的间隔为 \\(dt_r=e^\\eta d\\tau\\)，同样给出 \\(\\nu_r=e^{-\\eta}\\nu_*\\)。当 \\(\\tau\\to\\infty\\) 时 \\(t_r\\to\\infty\\)、\\(\\nu_r\\to0\\)；与 (3) 不同，任意有限时刻向后发出的光都能抵达原点。全部频率比无量纲，\\(c/a\\) 具有时间量纲。\n"
   },
   {
+    "id": "M061",
+    "topic": "力学",
+    "title": "非完整约束Chaplygin雪橇的精确动力学、渐近稳定性与尖点轨迹",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 110,
+    "tags": [
+      "非完整速度约束与Lagrange-d'Alembert原理",
+      "平面刚体角动量及理想约束反力",
+      "可积非线性动力系统与双曲函数",
+      "异宿轨道与线性稳定性",
+      "尖点轨迹的局部渐近"
+    ],
+    "answer": "J=I+ma^2,\\quad u=v\\tanh[\\kappa(t-t_0)],\\quad \\omega=\\pm v\\sqrt{m/J}\\operatorname{sech}[\\kappa(t-t_0)],\\quad\\kappa=mav/J",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.4-round12-draft",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C",
+    "question": "理想 Chaplygin 雪橇在水平平面运动：刚体质量 \\(m>0\\)、质心 \\(C\\)、质心转动惯量 \\(I>0\\)。刀刃接触点为 \\(A=C-a\\mathbf e_1\\)，\\(a>0\\)，其中 \\(\\mathbf e_1=(\\cos\\theta,\\sin\\theta)\\)、\\(\\mathbf e_2=\\hat{\\mathbf z}\\times\\mathbf e_1\\)。刀刃禁止横向滑动，故 \\(\\mathbf v_A=u\\mathbf e_1\\)，但允许沿轴自由运动；刀刃反力仅沿 \\(\\mathbf e_2\\)，无其他水平外力。令 \\(\\omega=\\dot\\theta\\)、\\(J=I+ma^2\\)，总动能 \\(E>0\\)。\n(1) 从质心速度与牛顿平动、角动量方程推导非完整动力学 \\(\\dot u,\\dot\\omega\\) 及刀刃约束反力，求出动能的二次型，并说明不能把刀刃条件误当可积位置约束。\n(2) 证明能量守恒；对非直线的 \\(\\omega\\ne0\\) 轨道，以 \\(v=\\sqrt{2E/m}\\) 为参数求双曲函数精确解，逐项代回动力学方程并识别特殊的直线运动解。\n(3) 求精确朝向 \\(\\theta(t)\\) 及整条异宿轨道的总转角，线性化判定 \\(u=\\pm v,\\omega=0\\) 的稳定性，并解释 \\(a\\to0\\) 时为什么不能直接交换长时间极限。\n(4) 由 \\(\\dot{\\mathbf r}_A=u\\mathbf e_1\\) 在 \\(u(t_0)=0\\) 的时刻展开轨迹至三阶，证明半三次尖点结构；同时计算该时刻的约束反力、约束功率与量纲。\n",
+    "solution": "(1) 因 \\(C=A+a\\mathbf e_1\\)，且 \\(\\dot{\\mathbf e}_1=\\omega\\mathbf e_2\\)，\n\\[\n\\mathbf v_C=u\\mathbf e_1+a\\omega\\mathbf e_2,\\qquad\n\\mathbf a_C=(\\dot u-a\\omega^2)\\mathbf e_1+(u\\omega+a\\dot\\omega)\\mathbf e_2.\n\\]\n于是 \\(T=\\tfrac12m u^2+\\tfrac12(I+ma^2)\\omega^2\\)。设反力 \\(\\mathbf F=\\Lambda\\mathbf e_2\\)，纵向牛顿方程给 \\(\\dot u=a\\omega^2\\)；横向给 \\(\\Lambda=m(u\\omega+a\\dot\\omega)\\)。反力对质心的力矩是 \\(-a\\Lambda\\)，故 \\(I\\dot\\omega=-a\\Lambda\\)。联立可得\n\\[\n\\boxed{\\dot u=a\\omega^2,\\qquad J\\dot\\omega=-ma\\,u\\omega,\\qquad\n\\Lambda=\\frac{mI}{J}u\\omega},\\quad J=I+ma^2.\n\\]\n该条件约束瞬时速度方向，不能通过对一个固定位置方程求导来代替。\n\n(2) 能量导数\n\\[\n\\dot E=mu\\dot u+J\\omega\\dot\\omega\n=ma\\,u\\omega^2-ma\\,u\\omega^2=0.\n\\]\n定义 \\(v=\\sqrt{2E/m}\\)、\\(\\Omega=v\\sqrt{m/J}\\)、\\(\\kappa=mav/J\\)。能量椭圆为 \\(u^2/v^2+\\omega^2/\\Omega^2=1\\)。沿非平凡轨道 \\(\\omega\\) 符号 \\(\\sigma=\\pm1\\) 不变；分离变量积分 \\(\\dot u=(ma/J)(v^2-u^2)\\) 给\n\\[\n\\boxed{u=v\\tanh[\\kappa(t-t_0)],\\quad\n\\omega=\\sigma\\Omega\\,\\operatorname{sech}[\\kappa(t-t_0)]}.\n\\]\n直接求导：\\(\\dot u=v\\kappa\\operatorname{sech}^2=a\\omega^2\\)，\\(\\dot\\omega=-\\kappa\\tanh[\\kappa(t-t_0)]\\omega=-(ma/J)u\\omega\\)。若 \\(\\omega(0)=0\\)，则 \\(\\omega\\equiv0,\\ u\\equiv\\pm v\\) 是特殊直线解，不能用有限 \\(t_0\\) 表示。\n\n(3) 因 \\(\\int\\operatorname{sech}y\\,dy=2\\arctan(e^y)\\)，积分得到\n\\[\n\\boxed{\\theta(t)=\\theta_-+2\\sigma\\frac{\\sqrt{J/m}}a\n\\arctan(e^{\\kappa(t-t_0)})},\\qquad\n\\boxed{\\theta_+-\\theta_-=\\sigma\\pi\\frac{\\sqrt{J/m}}a}.\n\\]\n在 \\(u=v\\) 附近，\\(\\delta\\dot\\omega=-\\kappa\\delta\\omega\\)，故角扰动衰减；在 \\(u=-v\\) 附近，\\(\\delta\\dot\\omega=+\\kappa\\delta\\omega\\)，故不稳定。非直线轨道由过去的 \\(-v\\) 连接到未来的 \\(+v\\)。当 \\(a\\to0\\)，\\(\\kappa\\to0\\) 而总转角 \\(\\propto1/a\\)，两个极限不交换；恰好 \\(a=0\\) 时 \\(u,\\omega\\) 均为常数。\n\n(4) 设 \\(s=t-t_0\\)、\\(\\omega_0=\\sigma\\Omega\\)、\\(\\mathbf e_{j0}=\\mathbf e_j(t_0)\\)。由方程有 \\(u(t_0)=0\\)、\\(\\dot u(t_0)=a\\omega_0^2\\)、\\(\\ddot u(t_0)=0\\)、\\(\\dot\\omega(t_0)=0\\)。展开 \\(\\dot{\\mathbf r}_A=u\\mathbf e_1(\\theta)\\) 并积分：\n\\[\n\\boxed{\\mathbf r_A(t_0+s)-\\mathbf r_A(t_0)\n=\\frac{a\\omega_0^2}{2}s^2\\mathbf e_{10}\n+\\frac{a\\omega_0^3}{3}s^3\\mathbf e_{20}+O(s^4)}.\n\\]\n故局部横坐标 \\(\\propto s^2\\)、纵坐标 \\(\\propto s^3\\)，形成半三次尖点；此时刀刃瞬时静止但质心仍可旋转。反力 \\(\\Lambda=(mI/J)u\\omega\\) 在尖点为零，且理想约束功率 \\(\\mathbf F\\cdot\\mathbf v_A=\\Lambda\\mathbf e_2\\cdot u\\mathbf e_1=0\\) 恒成立。检查 \\([\\kappa]=T^{-1}\\)、\\([\\Lambda]=MLT^{-2}\\) 和无量纲转角均正确。\n"
+  },
+  {
     "id": "E007",
     "topic": "电磁学",
     "title": "滑动导体棒的自感反馈与能量耗散",
@@ -6065,6 +6089,30 @@
     "complexity_tier": "L5-C",
     "question": "两种各向同性、无吸收、无磁性的介质在 \\(z=0\\) 平面接触，\\(z<0\\) 为折射率 \\(n_1\\)，\\(z>0\\) 为 \\(n_2\\)，其中 \\(n_1>n_2>0\\)。真空波数为 \\(k_0=\\omega/c\\)。一束角谱足够窄的单色光从介质1以 \\(\\theta>\\theta_c=\\arcsin(n_2/n_1)\\) 入射，入射面为 \\(xz\\)，忽略横向自旋耦合及材料色散。定义 \\(q=n_2/n_1\\)、\\(a=\\sqrt{\\sin^2\\theta-q^2}\\)、\\(c_\\theta=\\cos\\theta\\)。\n(1) 由切向波矢守恒及电磁边界条件写出 \\(s,p\\) 偏振的全反射振幅系数，说明介质2中的场为何倏逝，并验证反射功率为一。\n(2) 从窄角谱的驻相近似推导 Artmann 侧向位移 \\(D=-\\partial\\arg r/\\partial k_x\\)，求 \\(s\\) 偏振的闭式位移。\n(3) 推导 \\(p\\) 偏振的闭式位移及 \\(D_p/D_s\\)，找出两种偏振位移相等的入射角。\n(4) 讨论 \\(\\theta\\downarrow\\theta_c\\) 和 \\(\\theta\\uparrow\\pi/2\\) 时的数学渐近、偏振位移比的极限，以及有限角宽光束何时不能使用平面波驻相公式。\n",
     "solution": "(1) 令 \\(k_x=n_1k_0\\sin\\theta\\)、\\(k_{z1}=n_1k_0c_\\theta\\)。介质2的法向波数为\n\\[\n k_{z2}=i\\kappa,\\qquad \\kappa=n_1k_0a>0,\n\\]\n故透射场沿 \\(z>0\\) 按 \\(e^{-\\kappa z}\\) 衰减，不携带远离界面的平均法向能流。Fresnel边界条件给出（\\(p\\) 偏振采用常用电场振幅相位约定）\n\\[\n r_s=\\frac{c_\\theta-ia}{c_\\theta+ia},\\qquad\n r_p=\\frac{q^2c_\\theta-ia}{q^2c_\\theta+ia}.\n\\]\n分子与分母互为复共轭，因此 \\(|r_s|^2=|r_p|^2=1\\)。可连续选择反射相位\n\\(\\phi_s=-2\\arctan(a/c_\\theta)\\)、\n\\(\\phi_p=-2\\arctan[a/(q^2c_\\theta)]\\)，不影响相位导数的常数相位约定均可。\n\n(2) 反射束在界面处可写为角谱积分\n\\[\n E_r(x,0)=\\int A(k_x)e^{i[k_xx+\\phi(k_x)]}\\,dk_x.\n\\]\n对中心波数 \\(k_{x0}\\) 附近线性展开 \\(\\phi(k_x)\\)，包络峰值沿 \\(x\\) 平移\n\\(D=-\\phi'(k_{x0})\\)，而\n\\(\\partial k_x/\\partial\\theta=n_1k_0c_\\theta\\)。\n因为 \\(a'= \\sin\\theta\\,c_\\theta/a\\)，且\n\\(a^2+c_\\theta^2=1-q^2\\)，直接求导得\n\\[\n \\frac{d\\phi_s}{d\\theta}=-\\frac{2\\sin\\theta}{a},\\qquad\n D_s=\\frac{2\\sin\\theta}{n_1k_0c_\\theta a}.\n\\]\n这是沿界面而非沿反射光轴的位移，具有长度量纲。\n\n(3) 对 \\(\\phi_p\\) 求导可得\n\\[\n \\frac{d\\phi_p}{d\\theta}\n =-\\frac{2q^2(1-q^2)\\sin\\theta}\n {a(q^4c_\\theta^2+a^2)}.\n\\]\n故\n\\[\n D_p=\\frac{2q^2(1-q^2)\\sin\\theta}\n {n_1k_0c_\\theta a(q^4c_\\theta^2+a^2)},\\qquad\n \\frac{D_p}{D_s}\n =\\frac{q^2}{(1+q^2)\\sin^2\\theta-q^2}.\n\\]\n利用 \\(0<q<1\\) 解 \\(D_p=D_s\\)，得到唯一的\n\\[\n \\sin^2\\theta_*=\\frac{2q^2}{1+q^2},\n \\qquad \\theta_c<\\theta_*<\\frac\\pi2.\n\\]\n在 \\(\\theta_c<\\theta<\\theta_*\\) 时 \\(D_p>D_s\\)，其余全反射角区间相反。\n\n(4) 令 \\(\\delta=\\theta-\\theta_c\\downarrow0\\)。由于\n\\(a^2=\\sin^2\\theta-q^2\\sim2q\\sqrt{1-q^2}\\,\\delta\\)，两种 \\(D\\) 均按 \\(\\delta^{-1/2}\\) 发散，且 \\(D_p/D_s\\to q^{-2}\\)。当 \\(\\theta\\uparrow\\pi/2\\)，\\(a\\to\\sqrt{1-q^2}\\)，两种 \\(D\\) 按 \\(1/\\cos\\theta\\) 发散，而 \\(D_p/D_s\\to q^2\\)。这些发散是无限宽、严格窄角谱驻相近似的非一致极限，不代表有限光束真的产生无限侧移。若角谱跨越临界角、相位在谱宽内明显非线性，或入射趋于掠射以致有限束斑和界面几何不可忽略，应直接积分完整角谱并重新定义实际强度重心。\n"
+  },
+  {
+    "id": "O058",
+    "topic": "光学",
+    "title": "不透明半平面的Fresnel边缘衍射、复误差函数与横向能流",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 100,
+    "tags": [
+      "标量傍轴波动方程与Fresnel传播核",
+      "复误差函数和渐近展开",
+      "刀口衍射与四分之一边缘强度",
+      "光强的局域连续性方程",
+      "横向能流与衍射尺度"
+    ],
+    "answer": "f=\\frac12\\operatorname{erfc}(-e^{-i\\pi/4}x\\sqrt{k/(2z)}),\\quad |f(0,z)|^2=\\frac14,\\quad j_x(0,z)=-\\frac{1}{4\\sqrt{\\pi kz}}",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.4-round12-draft",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B",
+    "question": "真空波长为 \\(\\lambda>0\\) 的均匀标量单色平面波沿 \\(+z\\) 入射到 \\(z=0\\) 的理想不透明半平面：\\(x<0\\) 完全遮挡，\\(x>0\\) 透光。忽略偏振、反射与边缘材料效应，采用一维横向坐标 \\(x\\)、\\(k=2\\pi/\\lambda\\) 的傍轴 Fresnel 模型。写 \\(U(x,z)=U_0e^{ikz}f(x,z)\\)，\\(z>0\\)，透射边界 \\(f(x,0^+)=H(x)\\)，归一化传播核为\n\\[\nf(x,z)=\\sqrt{\\frac{k}{2\\pi iz}}\\int_0^\\infty\n\\exp\\!\\left[\\frac{ik(x-x')^2}{2z}\\right]dx'.\n\\]\n复误差函数 \\(\\operatorname{erfc}w\\) 按解析延拓定义，Fresnel 积分用正则化极限理解。\n(1) 将 Fresnel 积分化为复误差函数的闭式，核验透光区、阴影区及 \\(z\\to0^+\\) 的正确归一化极限。\n(2) 精确求几何阴影边缘 \\(x=0\\) 的归一化光强和光强的一阶横向导数，分析自然衍射长度并解释边缘强度为何不是 \\(1/2\\)。\n(3) 令 \\(s=x\\sqrt{k/(2z)}\\)，推导亮区 \\(s\\to+\\infty\\) 与暗区 \\(s\\to-\\infty\\) 的复振幅及光强首个非平凡渐近项，解释亮区振荡与暗区代数衰减。\n(4) 从傍轴方程严格推导 \\(\\partial_z|f|^2+\\partial_xj_x=0\\)、\\(j_x=k^{-1}\\operatorname{Im}(f^*\\partial_xf)\\)，计算刀口处的横向流并解释其符号，指出无限平面波下全空间能量积分的限制。\n",
+    "solution": "(1) 令 \\(s=x\\sqrt{k/(2z)}\\)，\\(y=(x'-x)\\sqrt{k/(2z)}\\)，则\n\\[\nf=\\frac{e^{-i\\pi/4}}{\\sqrt\\pi}\\int_{-s}^\\infty e^{iy^2}dy.\n\\]\n用 \\(t=e^{-i\\pi/4}y\\) 作 Fresnel 路径旋转（亦可先加入 \\(e^{-\\epsilon y^2}\\) 再取极限），得到\n\\[\n\\boxed{f(x,z)=\\tfrac12\\operatorname{erfc}(-e^{-i\\pi/4}s)}.\n\\]\n\\(s\\to+\\infty\\) 时 \\(f\\to1\\)，\\(s\\to-\\infty\\) 时 \\(f\\to0\\)，固定 \\(x\\ne0\\) 且 \\(z\\downarrow0\\) 也恢复 \\(H(x)\\)。归一化保证透光区的振幅为 \\(U_0e^{ikz}\\)，无多余相位。\n\n(2) 由 \\(\\operatorname{erfc}(0)=1\\) 可得\n\\[\n\\boxed{f(0,z)=\\tfrac12,\\qquad I(0,z)/I_0=|f(0,z)|^2=\\tfrac14}.\n\\]\n边缘复振幅为一半，但强度取模平方，故不是 \\(1/2\\)。求导给\n\\[\n\\partial_xf=e^{-i\\pi/4}\\sqrt{\\frac{k}{2\\pi z}}\n\\exp\\!\\left(\\frac{ikx^2}{2z}\\right),\\quad\n\\boxed{\\left.\\partial_x(I/I_0)\\right|_{0}=\\sqrt{\\frac{k}{4\\pi z}}}.\n\\]\n因此横向衍射长度 \\(\\ell_F=\\sqrt{z/k}=\\sqrt{\\lambda z/(2\\pi)}\\)，斜率量纲为 \\(L^{-1}\\)。\n\n(3) 对 \\(w=e^{-i\\pi/4}|s|\\)，使用\n\\(\\operatorname{erfc}w=e^{-w^2}(\\sqrt\\pi w)^{-1}[1+O(w^{-2})]\\)。\n在亮区\n\\[\nf=1-\\frac{e^{i(s^2+\\pi/4)}}{2\\sqrt\\pi s}+O(s^{-3}),\\qquad\n\\boxed{I/I_0=1-\\frac{\\cos(s^2+\\pi/4)}{\\sqrt\\pi s}+O(s^{-2})}.\n\\]\n在暗区\n\\[\nf=\\frac{e^{i(s^2+\\pi/4)}}{2\\sqrt\\pi|s|}+O(|s|^{-3}),\\qquad\n\\boxed{I/I_0=\\frac{1}{4\\pi s^2}+O(|s|^{-4})}.\n\\]\n亮区振荡来自主场与边缘绕射场的干涉；暗区虽无几何光线，却存在按 \\(|x|^{-2}\\) 衰减的绕射强度。近边缘须使用精确复误差函数，而不能使用大 \\(|s|\\) 渐近式。\n\n(4) 去除载波后的傍轴方程为 \\(2ikf_z+f_{xx}=0\\)。乘以 \\(f^*\\) 并减去共轭式可得\n\\[\n\\boxed{\\partial_z|f|^2+\\partial_x\\!\\left[\\frac1k\\operatorname{Im}(f^*f_x)\\right]=0}.\n\\]\n由 (2) 的边缘振幅和导数，\n\\[\n\\boxed{j_x(0,z)=\\frac1k\\operatorname{Im}\\!\\left[\\tfrac12e^{-i\\pi/4}\\sqrt{\\frac{k}{2\\pi z}}\\right]\n=-\\frac{1}{4\\sqrt{\\pi kz}}<0}.\n\\]\n负号表明横向能流从透光侧进入 \\(x<0\\) 的阴影侧，和非零暗区强度一致。该 \\(j_x\\) 为相对轴向传播的归一化傍轴流；恢复物理能流须乘入射能流系数。理想入射波横向无限延伸，总能量积分发散，不能直接套用有限能量波包的全空间守恒证明，但局域连续性方程成立。\n"
   },
   {
     "id": "Q007",

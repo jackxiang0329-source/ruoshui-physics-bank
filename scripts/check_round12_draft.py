@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Forty-four executable draft subpart checks, NOT the required 200-item final gate."""
+"""Fifty-two executable draft subpart checks, NOT the required 200-item final gate."""
 import json
 import math
 import mpmath as mp
@@ -193,8 +193,54 @@ record('Q058',4,'symbolic','two photon detuning causes diagonal dark shift and o
        and eq((brightQ.T*s.diag(0,0,1)*darkQ)[0],-s.sin(thQ)*s.cos(thQ))
        and eq(s.limit((s.sqrt(deQ**2+OmQ**2)-deQ)*deQ/2,deQ,s.oo),OmQ**2/4))
 
-assert len(checks)==44 and len(set((c['id'],c['part']) for c in checks))==44
-assert all(len(set(c['method'] for c in checks if c['id']==uid))>=2 for uid in ['M059','E059','T056','W056','O057','Q057','T057','M060','E060','W057','Q058'])
+
+# M061: nonholonomic Chaplygin sleigh, four substantive independent checks.
+mc,Ic,ac,vc,tc=s.symbols('mc Ic ac vc tc',positive=True)
+Jc=Ic+mc*ac**2
+kc=mc*ac*vc/Jc
+uc=vc*s.tanh(kc*tc)
+wc=vc*s.sqrt(mc/Jc)/s.cosh(kc*tc)
+uvar,omvar=s.symbols('uvar omvar',real=True)
+reaction=mc*Ic/Jc*uvar*omvar
+accel=-mc*ac*uvar*omvar/Jc
+record('M061',1,'independent_derivation','transverse Newton equation and torque equation independently yield same constraint reaction',
+       eq(mc*(uvar*omvar+ac*accel),reaction) and eq(Ic*accel,-ac*reaction))
+record('M061',2,'symbolic_and_conservation','exact heteroclinic orbit solves both nonholonomic equations and preserves energy',
+       eq(s.diff(uc,tc)-ac*wc**2) and eq(s.diff(wc,tc)+mc*ac*uc*wc/Jc) and
+       eq((mc*uc**2+Jc*wc**2)/2,mc*vc**2/2))
+thetac=2*s.sqrt(Jc/mc)/ac*s.atan(s.exp(kc*tc))
+record('M061',3,'limit','heading derivative and total turning agree with exact integration and stable decay rate',
+       eq(s.simplify((s.diff(thetac,tc)-wc).rewrite(s.exp))) and
+       eq(s.limit(thetac,tc,s.oo)-s.limit(thetac,tc,-s.oo),s.pi*s.sqrt(Jc/mc)/ac) and
+       eq(s.diff(-mc*ac*uvar*omvar/Jc,omvar).subs(uvar,vc),-kc))
+wc0=vc*s.sqrt(mc/Jc)
+record('M061',4,'local_series','cusp acceleration and zero second u derivative follow equations; reaction vanishes at reversal',
+       eq(s.diff(uc,tc).subs(tc,0),ac*wc0**2) and
+       eq(s.diff(uc,tc,2).subs(tc,0)) and eq((mc*Ic/Jc*uc*wc).subs(tc,0)))
+
+# O058: Fresnel half-plane erfc diffraction, local flux and asymptotics.
+ko,zo,xo=s.symbols('ko zo xo',positive=True,real=True)
+Ao=s.exp(-s.I*s.pi/4)*s.sqrt(ko/(2*zo))
+fo=s.erfc(-Ao*xo)/2
+record('O058',1,'symbolic_and_boundary','complex Fresnel kernel derivative and edge amplitude agree with normalized erfc',
+       eq(s.diff(fo,xo),Ao*s.exp(s.I*ko*xo**2/(2*zo))/s.sqrt(s.pi)) and
+       eq(fo.subs(xo,0),s.Rational(1,2)))
+record('O058',2,'local_derivative','edge intensity equals one quarter and its slope has correct Fresnel length',
+       eq(s.Abs(fo.subs(xo,0))**2,s.Rational(1,4)) and
+       eq(s.re(s.diff(fo,xo).subs(xo,0)),s.sqrt(ko/(4*s.pi*zo))))
+so=mp.mpf('12');phaseo=mp.exp(-1j*mp.pi/4)
+fbright=mp.erfc(-phaseo*so)/2;fshadow=mp.erfc(phaseo*so)/2
+brightasy=1-mp.cos(so**2+mp.pi/4)/(mp.sqrt(mp.pi)*so)
+shadowasy=1/(4*mp.pi*so**2)
+record('O058',3,'independent_numerical_asymptotics','bright oscillations and shadow inverse-square tail agree with complex erfc numerical evaluation',
+       abs(abs(fbright)**2-brightasy)<mp.mpf('0.001') and abs(abs(fshadow)**2-shadowasy)<mp.mpf('0.000001'))
+record('O058',4,'conservation','paraxial wave equation and negative edge transverse flux hold identically',
+       eq(s.diff(fo,xo,2)+2*s.I*ko*s.diff(fo,zo)) and
+       eq(s.im(s.conjugate(fo.subs(xo,0))*s.diff(fo,xo).subs(xo,0))/ko,-1/(4*s.sqrt(s.pi*ko*zo))))
+
+
+assert len(checks)==52 and len(set((c['id'],c['part']) for c in checks))==52
+assert all(len(set(c['method'] for c in checks if c['id']==uid))>=2 for uid in ['M059','E059','T056','W056','O057','Q057','T057','M060','E060','W057','Q058','M061','O058'])
 # Independent numerical crosschecks beyond the twelve mandatory draft subparts.
 from math import sqrt,tanh,cosh
 A0=2.;B0=2.;C0=2/sqrt(3);lam0=2/sqrt(3);time=.73
@@ -263,7 +309,21 @@ darkN=mp.matrix([sN/oN,0,-pN/oN])
 assert max(abs(x) for x in hN*darkN)<mp.mpf('1e-27')
 supplemental.append(dict(id='Q058',method='numerical',name='independent high precision Lambda dark state matrix product',passed=True))
 
-result={'status':'draft-only','new_problem_count':11,'passed_count':len(checks),'tests':checks,'independent_expert_review':'pending','supplemental_numeric_checks':supplemental}
+
+# Supplemental independent high precision numerical verification of new models.
+mn=mp.mpf('2');In=mp.mpf('3');an=mp.mpf('1');vn=mp.mpf('4')
+Jn=In+mn*an**2;kn=mn*an*vn/Jn;tn=mp.mpf('0.67')
+un=vn*mp.tanh(kn*tn);wn=vn*mp.sqrt(mn/Jn)/mp.cosh(kn*tn)
+assert abs((mn*un**2+Jn*wn**2)/2-mn*vn**2/2)<mp.mpf('1e-27')
+supplemental.append(dict(id='M061',method='high_precision_numerical',name='Chaplygin heteroclinic energy at nontrivial time',passed=True))
+zn=mp.mpf('1.7');knu=mp.mpf('3.4')
+An=mp.exp(-1j*mp.pi/4)*mp.sqrt(knu/(2*zn))
+fn=lambda x:mp.erfc(-An*x)/2
+jedge=mp.im(mp.conj(fn(0))*mp.diff(fn,mp.mpf('0')))/knu
+assert abs(jedge+1/(4*mp.sqrt(mp.pi*knu*zn)))<mp.mpf('1e-27')
+supplemental.append(dict(id='O058',method='independent_numerical_derivative',name='Fresnel edge transverse flux from high precision erfc derivative',passed=True))
+
+result={'status':'draft-only','new_problem_count':13,'passed_count':len(checks),'tests':checks,'independent_expert_review':'pending','supplemental_numeric_checks':supplemental}
 path=Path(__file__).resolve().parents[1]/'data/round12_draft_validation_report.json'
 path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
 print(json.dumps({'status':result['status'],'checked_subparts':len(checks)},ensure_ascii=False))

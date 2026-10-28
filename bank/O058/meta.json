@@ -1,0 +1,22 @@
+{
+  "id": "O058",
+  "topic": "光学",
+  "title": "不透明半平面的Fresnel边缘衍射、复误差函数与横向能流",
+  "kind": "综合推导题",
+  "level": 5,
+  "estimated_minutes": 100,
+  "tags": [
+    "标量傍轴波动方程与Fresnel传播核",
+    "复误差函数和渐近展开",
+    "刀口衍射与四分之一边缘强度",
+    "光强的局域连续性方程",
+    "横向能流与衍射尺度"
+  ],
+  "answer": "f=\\frac12\\operatorname{erfc}(-e^{-i\\pi/4}x\\sqrt{k/(2z)}),\\quad |f(0,z)|^2=\\frac14,\\quad j_x(0,z)=-\\frac{1}{4\\sqrt{\\pi kz}}",
+  "quality_status": "待独立复核",
+  "tier": "advanced_composite",
+  "format": "latex-fragment-v1",
+  "revision": "composite-v2.4-round12-draft",
+  "challenge_profile": "high-multistage",
+  "complexity_tier": "L5-B"
+}
