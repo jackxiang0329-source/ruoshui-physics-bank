@@ -1,0 +1,29 @@
+(1) Fermat 光程泛函为 \(\int n(x)\sqrt{1+x'^2}\,dz\)。在旁轴近似中可展开为 \(\int[n_0(1-g^2x^2/2)+n_0x'^2/2]dz\)，忽略与变分无关的常数。Euler–Lagrange 方程 \(d(n_0x')/dz=-n_0g^2x\)，因此
+\[
+x''+g^2x=0.
+\]
+折射率从光轴向外降低，使光线受到指向光轴的有效回复弯曲。
+
+(2) 用入射条件 \(x(0)=x_0,\alpha(0)=x'(0)=\alpha_0\)，得
+\[
+x(z)=x_0\cos gz+\frac{\alpha_0}{g}\sin gz,\quad
+\alpha(z)=-gx_0\sin gz+\alpha_0\cos gz.
+\]
+因此
+\[
+\begin{pmatrix}x(L)\\\alpha(L)\end{pmatrix}
+=\begin{pmatrix}\cos gL&\sin gL/g\\-g\sin gL&\cos gL\end{pmatrix}
+\begin{pmatrix}x_0\\\alpha_0\end{pmatrix}.
+\]
+
+(3) 对平行入射光线 \(\alpha_0=0\)，高度为 \(x(z)=x_0\cos gz\)。各光线同时通过光轴的第一次正距离是
+\[
+L_f=\frac{\pi}{2g}.
+\]
+随后在 \(3\pi/(2g),5\pi/(2g)\) 等位置再次聚焦；几何周期为 \(2\pi/g\)。如果入射角不全相同，具体焦点受第二项影响，不能直接使用准直束聚焦公式。
+
+(4) 传输矩阵行列式为 \(\cos^2gL+\sin^2gL=1\)，体现无损线性傍轴光学的辛性。取 g→0 时 \(\sin(gL)/g\to L\)、\(-g\sin(gL)\to0\)、\(\cos(gL)\to1\)，所以矩阵趋于
+\[
+\begin{pmatrix}1&L\\0&1\end{pmatrix},
+\]
+恢复在均匀介质中 \(x(L)=x_0+\alpha_0L\) 的直线传播。

@@ -1,0 +1,26 @@
+(1) 令 \(x=\hbar\omega_E/(k_BT)\)。单个量子谐振子配分函数是
+\[
+z=\sum_{j=0}^\infty e^{-x(j+1/2)}
+=\frac{e^{-x/2}}{1-e^{-x}}
+=\frac1{2\sinh(x/2)}.
+\]
+因为 3N 个模式彼此独立，总配分函数 \(Z=z^{3N}\)，不是将各模的配分函数直接相加。
+
+(2) 从 \(U=-\partial_\beta\ln Z\) 得到
+\[
+U=3N\hbar\omega_E\left(\frac12+\frac1{e^x-1}\right).
+\]
+第一项 \(U_0=3N\hbar\omega_E/2\) 是零点振动能，与温度无关；第二项是 Bose 热激发能。
+
+(3) 因 \(x=\Theta_E/T\)、\(dx/dT=-x/T\)，所以
+\[
+C_V=\left(\frac{\partial U}{\partial T}\right)_V
+=3Nk_Bx^2\frac{e^x}{(e^x-1)^2}>0.
+\]
+此式没有假定经典能量均分，且自动包含量子激发的冻结效应。
+
+(4) 在低温 \(x\gg1\) 下，\(\exp(x)/[\exp(x)-1]^2\sim e^{-x}\)，故
+\[
+C_V\sim3Nk_B(\Theta_E/T)^2e^{-\Theta_E/T}\to0.
+\]
+高温 \(x\ll1\) 时该因子近似 \(1/x^2\)，得到 \(C_V\to3Nk_B\)，即 Dulong–Petit 规律。Einstein 模型的全部模式有相同非零振动频率；Debye 声子模式从零频连续展开且三维低频态密度正比频率平方，因此 Debye 低温比热是 \(T^3\) 而非指数型，两个模型在低温预测不同。

@@ -499,6 +499,50 @@
     "complexity_tier": "L5-A"
   },
   {
+    "id": "M028",
+    "topic": "力学",
+    "title": "零角动量开普勒坠落的时间积分、半角参数与速度奇异性",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "tags": [
+      "万有引力径向运动",
+      "能量积分",
+      "半角代换",
+      "奇异极限"
+    ],
+    "question": "一个质量 m 的试验粒子在半径远小于 R 的固定天体外受到点质量 M 的牛顿引力，从距中心 R 的地方静止释放；引力常数 G，忽略天体半径、摩擦与反冲。设 r(t) 为粒子的径向距离，取向外为正。\n(1) 写出机械能守恒方程及运动速度，明确根号的正负号；(2) 使用半角参数代换精确求从 R 到任意 r 的坠落用时；(3) 计算理想点质量模型中到达中心的有限坠落时间；(4) 在释放初期检验常加速度极限，并解释 r 趋近零时速度发散但时间仍有限的数学原因。",
+    "solution": "(1) 中心力为 \\(-GMm/r^2\\)，角动量初始为零且守恒，因此轨道完全径向。总能量为释放时的势能 \\(E=-GMm/R\\)，有\n\\[\n\\frac m2\\dot r^2-\\frac{GMm}{r}=-\\frac{GMm}{R},\\quad\n\\dot r=-\\sqrt{2GM\\left(\\frac1r-\\frac1R\\right)}.\n\\]\n坠落取负根，因为半径随时间减小。\n\n(2) 分离变量\n\\[\ndt=-\\frac{dr}{\\sqrt{2GM(1/r-1/R)}}.\n\\]\n令 \\(r=R\\cos^2\\eta\\)，其中从释放点起 \\(\\eta\\) 从零增加。则 \\(dr=-2R\\sin\\eta\\cos\\eta\\,d\\eta\\)，根号中的因子为 \\(\\tan\\eta/\\sqrt R\\)。于是\n\\[\nt(r)=\\sqrt{\\frac{R^3}{2GM}}\n\\left[\\eta+\\sin\\eta\\cos\\eta\\right],\n\\qquad \\eta=\\arccos\\sqrt{r/R}.\n\\]\n恢复为 r 的显式形式：\n\\[\nt(r)=\\sqrt{\\frac{R^3}{2GM}}\\left[\n\\arccos\\sqrt{\\frac rR}+\\sqrt{\\frac rR(1-\\frac rR)}\\right].\n\\]\n直接对时间表达式求 r 导数可恢复上述分离变量方程。\n\n(3) 当 r→0⁺ 时 \\(\\eta\\to\\pi/2\\)，所以理想点质量模型的到达中心时间\n\\[\nt_{\\rm center}=\\frac\\pi2\\sqrt{\\frac{R^3}{2GM}}.\n\\]\n真实天体有限半径使粒子先碰撞表面，因此此式在有限半径天体中仅是数学外推而非真实撞击时间。\n\n(4) 释放初期 \\(r=R-\\delta\\)，\\(\\delta\\ll R\\)，能量关系给 \\(\\dot r^2\\simeq 2GM\\delta/R^2\\)，积分得 \\(\\delta\\simeq GMt^2/(2R^2)\\)，正是初始加速度 \\(GM/R^2\\) 的常加速度位移。随着 r→0，\\(|\\dot r|\\sim\\sqrt{2GM/r}\\) 发散，但剩余时间积分 \\(\\int_0^r\\sqrt{s/(2GM)}\\,ds\\) 仍有限，且按 \\(r^{3/2}\\) 趋零。",
+    "answer": "\n\\frac m2\\dot r^2-\\frac{GMm}{r}=-\\frac{GMm}{R},\\quad\n\\dot r=-\\sqrt{2GM\\left(\\frac1r-\\frac1R\\right)}.\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
+    "id": "M029",
+    "topic": "力学",
+    "title": "恒定固有加速度的相对论火箭：快度、双曲线世界线与四加速度",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "tags": [
+      "狭义相对论",
+      "恒固有加速度",
+      "快度",
+      "闵氏范数"
+    ],
+    "question": "沿惯性实验室的正 x 方向，一枚火箭从时空原点、初速度为零开始运动，火箭携带的加速度计始终读到恒定固有加速度 a>0，光速 c。忽略发动机燃料与火箭质量变化，只研究由给定固有加速度规定的世界线。用火箭上的固有时间 τ 为参数。\n(1) 定义快度并求实验室速度和洛伦兹因子随 τ 的表达式；(2) 积分求 t(τ) 与 x(τ)；(3) 消去参数得到世界线的双曲线关系以及速度 v(t)；(4) 验证四速度和四加速度的闵氏范数，解释为何实验室坐标加速度不是恒定 a。",
+    "solution": "(1) 一维速度用快度 \\(\\psi\\) 定义为 \\(v/c=\\tanh\\psi\\)、\\(\\gamma=\\cosh\\psi\\)。火箭固有加速度是 \\(a=c\\,d\\psi/d\\tau\\)，所以静止初值给 \\(\\psi=a\\tau/c\\)，从而\n\\[\nv(\\tau)=c\\tanh(a\\tau/c),\\qquad \\gamma(\\tau)=\\cosh(a\\tau/c).\n\\]\n因双曲正切绝对值严格小于一，所有有限 τ 都满足 v<c。\n\n(2) 固有时间定义给 \\(dt/d\\tau=\\gamma=\\cosh(a\\tau/c)\\)；速度与时间参数关系给 \\(dx/d\\tau=\\gamma v=c\\sinh(a\\tau/c)\\)。积分并用 \\(t(0)=x(0)=0\\)，得到\n\\[\nt(\\tau)=\\frac ca\\sinh(a\\tau/c),\\qquad\nx(\\tau)=\\frac{c^2}{a}[\\cosh(a\\tau/c)-1].\n\\]\n在小 τ 时展开 \\(t\\simeq\\tau\\)、\\(x\\simeq a\\tau^2/2\\)，恢复经典短时运动学。\n\n(3) 使用恒等式 \\(\\cosh^2\\psi-\\sinh^2\\psi=1\\)，消去参数：\n\\[\n\\left(x+\\frac{c^2}{a}\\right)^2-c^2t^2=\\frac{c^4}{a^2}.\n\\]\n解正支可得 \\(x(t)=c^2[\\sqrt{1+(at/c)^2}-1]/a\\)，因此\n\\[\nv(t)=\\frac{at}{\\sqrt{1+(at/c)^2}},\\quad\n\\frac{dv}{dt}=\\frac a{[1+(at/c)^2]^{3/2}}.\n\\]\n实验室坐标加速度随时间减小而固有加速度保持常数。\n\n(4) 采用闵氏度规 (+,−)，四速度 \\(U^\\mu=(c\\cosh\\psi,c\\sinh\\psi)\\) 满足 \\(U^\\mu U_\\mu=c^2\\)。四加速度 \\(A^\\mu=(a\\sinh\\psi,a\\cosh\\psi)\\) 满足 \\(A^\\mu A_\\mu=-a^2\\)，故其固有模恒为 a。τ→∞ 时 \\(v\\to c^-\\)，但不会达到或超过 c，体现四速度归一化和质量粒子因果约束。",
+    "answer": "\nv(\\tau)=c\\tanh(a\\tau/c),\\qquad \\gamma(\\tau)=\\cosh(a\\tau/c).\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
     "id": "E007",
     "topic": "电磁学",
     "title": "滑动导体棒的自感反馈与能量耗散",
@@ -1000,6 +1044,50 @@
     "complexity_tier": "L5-B"
   },
   {
+    "id": "E028",
+    "topic": "电磁学",
+    "title": "平行板充电过程中的位移电流、安培环路与坡印廷能流",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "tags": [
+      "位移电流",
+      "磁场环量",
+      "坡印廷通量",
+      "充电电容"
+    ],
+    "question": "半径 a 的两片理想导体圆板构成真空平行板电容器，板距 d 远小于 a，忽略边缘场与辐射。板上正电荷 Q(t) 以恒定电流 I=dQ/dt>0 充入，板间电场沿正 z 方向且在面积内均匀。\n(1) 由高斯定律计算电场和位移电流密度；(2) 对板间任意半径 r<a 的同轴安培回路求磁感应强度；(3) 对 r>a 的回路求磁场，并解释选择穿过导线或电容间隙曲面所得结果为何相同；(4) 沿板间柱面计算电磁坡印廷能流，证明等于电容器储能的增长率。",
+    "solution": "(1) 忽略边缘效应，高斯定律给 \\(E=Q/(\\epsilon_0\\pi a^2)\\)。位移电流密度为\n\\[\nJ_d=\\epsilon_0\\frac{\\partial E}{\\partial t}\n=\\frac I{\\pi a^2}.\n\\]\n在整个板面积积分得到位移电流 \\(I_d=I\\)，数值恰为导线中的传导电流。\n\n(2) 由安培–Maxwell 方程\n\\[\n\\oint\\boldsymbol B\\cdot d\\boldsymbol\\ell\n=\\mu_0\\left(I_{\\rm conduction}+\\epsilon_0\\frac{d\\Phi_E}{dt}\\right)\n\\]\n对板间半径 r<a 的同轴圆回路计算，穿过圆盘的位移电流为 \\(I r^2/a^2\\)，所以\n\\[\n2\\pi rB_\\phi=\\mu_0I r^2/a^2,\\quad\nB_\\phi(r)=\\frac{\\mu_0Ir}{2\\pi a^2}.\n\\]\n磁场为绕 z 轴的方位向分量。\n\n(3) 若 r>a，位移电流所包围的面积已经覆盖全部电场区域，所以 \\(2\\pi rB_\\phi=\\mu_0I\\)，即 \\(B_\\phi(r)=\\mu_0I/(2\\pi r)\\)。对同一闭合曲线选经过外导线的曲面则有传导电流 I，选穿过板间真空的曲面则有位移电流 I；两种曲面得到同一个磁场环量。若遗漏位移电流，安培定律会出现曲面依赖矛盾。\n\n(4) 电容能量\n\\[\nU=\\frac{\\epsilon_0}{2}E^2\\pi a^2d,\\qquad\n\\dot U=\\epsilon_0E\\dot E\\pi a^2d=EId=VI.\n\\]\n在侧面 r=a 处 \\(B_\\phi=\\mu_0 I/(2\\pi a)\\)，坡印廷矢量 \\(\\boldsymbol S=\\boldsymbol E\\times\\boldsymbol B/\\mu_0\\) 由 \\(\\hat z\\times\\hat\\phi=-\\hat r\\) 指向电容内部。侧面总流入功率为 \\(S\\,2\\pi ad=EI d=VI\\)，与储能微分严格一致。这表明电磁能从板间侧方通过空间电磁场进入，而不是由真空中的真实传导电流带入。",
+    "answer": "\nJ_d=\\epsilon_0\\frac{\\partial E}{\\partial t}\n=\\frac I{\\pi a^2}.\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B"
+  },
+  {
+    "id": "E029",
+    "topic": "电磁学",
+    "title": "TM 偏振 Fresnel 反射、Brewster 角和斜入射能量守恒",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "tags": [
+      "电磁边界条件",
+      "Fresnel系数",
+      "Brewster角",
+      "坡印廷功率"
+    ],
+    "question": "一束单色 p（TM）偏振平面波从折射率为 n₁ 的无损非磁介质入射到折射率 n₂>n₁ 的另一无损非磁介质，界面为理想平面，两介质均不吸收。入射角为 θᵢ，透射角 θₜ 按法线测量，忽略多界面反射。\n(1) 依据 Snell 定律及电磁切向边界条件导出复电场反射和透射系数；(2) 求 p 偏振的零反射 Brewster 角；(3) 由法向坡印廷功率求反射率、透射率并证明二者相加等于一；(4) 检查正入射、掠入射极限，并比较 TE 与 TM 的物理差别。",
+    "solution": "(1) Snell 定律是 \\(n_1\\sin\\theta_i=n_2\\sin\\theta_t\\)。选取一致的 TM 反射电场基矢符号，由切向电场和磁场连续可得\n\\[\n(1+r_p)\\cos\\theta_i=t_p\\cos\\theta_t,\\qquad\nn_1(1-r_p)=n_2t_p .\n\\]\n联立得到\n\\[\nr_p=\\frac{n_2\\cos\\theta_i-n_1\\cos\\theta_t}\n{n_2\\cos\\theta_i+n_1\\cos\\theta_t},\\qquad\nt_p=\\frac{2n_1\\cos\\theta_i}\n{n_2\\cos\\theta_i+n_1\\cos\\theta_t}.\n\\]\n不同 TM 反射基矢约定可能令 rp 整体改变符号，但不会改变可测反射率。\n\n(2) 令反射振幅 rp=0，得到 \\(n_2\\cos\\theta_B=n_1\\cos\\theta_t\\)。联立 Snell 定律并选物理主值，得到 \\(\\theta_B+\\theta_t=\\pi/2\\)，所以\n\\[\n\\tan\\theta_B=\\frac{n_2}{n_1},\\qquad \\theta_B=\\arctan(n_2/n_1).\n\\]\n在这一角度 p 偏振完全无反射，s 偏振一般不具备同样条件。\n\n(3) 对平面波，法向坡印廷功率与 \\(n|E|^2\\cos\\theta\\) 成正比，因此\n\\[\n\\mathcal R=|r_p|^2,\\qquad\n\\mathcal T=\\frac{n_2\\cos\\theta_t}{n_1\\cos\\theta_i}|t_p|^2.\n\\]\n记 \\(A=n_2\\cos\\theta_i,B=n_1\\cos\\theta_t\\)。代入上式得到 \\(\\mathcal R=(A-B)^2/(A+B)^2\\) 以及 \\(\\mathcal T=4AB/(A+B)^2\\)。相加显然是 \\(\\mathcal R+\\mathcal T=[(A-B)^2+4AB]/(A+B)^2=1\\)，符合无吸收能量守恒。\n\n(4) 当 θᵢ=0，透射角也为零，反射率成为 \\([(n_2-n_1)/(n_2+n_1)]^2\\)。当 θᵢ→π/2，rp→−1，反射率趋一。TE 电场始终平行界面，而 TM 电场的切向投影带有 cosθ 因子，边界条件的几何投影不同，因而两个偏振的 Fresnel 反射规律不同。",
+    "answer": "\n(1+r_p)\\cos\\theta_i=t_p\\cos\\theta_t,\\qquad\nn_1(1-r_p)=n_2t_p .\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
     "id": "T007",
     "topic": "热学",
     "title": "导热可动活塞的不可逆终态与熵产生",
@@ -1479,6 +1567,50 @@
     "complexity_tier": "L5-C"
   },
   {
+    "id": "T027",
+    "topic": "热学",
+    "title": "有限热库可逆热机的最大输出功、熵守恒与混合损失",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "tags": [
+      "熵守恒",
+      "有限热库",
+      "热机最大功",
+      "可用能"
+    ],
+    "question": "两个绝热隔离的有限热库初温分别 Th>Tc>0，每个物体具有温度无关的总热容 C>0。两者之间可安装完全可逆的微型热机，热机不储存能量、可以将全部产生的机械功输出到外界。初态两个物体互不接触，终态要求它们达到相同温度。\n(1) 从总熵守恒确定可逆热机过程的共同终温；(2) 求最大可输出功及其非负性；(3) 若改为直接导热接触，求终温、总熵产生及损失的可用功；(4) 当两个初温很接近时作温差展开，给出最大功首次非零项的阶数。",
+    "solution": "(1) 完全可逆的热机没有熵产生，两有限热库内的熵差为 \\(C\\ln(T_f/T_h)\\)、\\(C\\ln(T_f/T_c)\\)。总熵守恒要求\n\\[\n\\ln\\frac{T_f}{T_h}+\\ln\\frac{T_f}{T_c}=0\n\\quad\\Longrightarrow\\quad T_f=\\sqrt{T_hT_c}.\n\\]\n此几何平均终温严格低于直接导热的算术平均。\n\n(2) 热机本身循环工作，内部能变化为零，故输出功等于两物体总内能减少：\n\\[\nW_{\\max}=C(T_h+T_c-2T_f)\n=C(\\sqrt{T_h}-\\sqrt{T_c})^2\\ge0.\n\\]\n正性直接由平方保证。若熵产生不为零，终态温度会更高，因此可逆过程对应最大可用功。\n\n(3) 若直接导热，完全没有对外功，能量守恒给 \\(T_{\\rm dir}=(T_h+T_c)/2\\)。两热库总熵变化\n\\[\n\\Delta S_{\\rm dir}=C\\ln\\frac{T_{\\rm dir}}{T_h}\n+C\\ln\\frac{T_{\\rm dir}}{T_c}\n=C\\ln\\frac{(T_h+T_c)^2}{4T_hT_c}>0.\n\\]\n与可逆路径相比，直接接触牺牲的全部可提取机械功正是 \\(W_{\\max}\\)，这是有限热库可用能与不可逆性的具体体现。\n\n(4) 令 \\(T_h=T_0+\\delta,T_c=T_0-\\delta\\) 且 \\(0<\\delta\\ll T_0\\)。由二项式展开 \\(\\sqrt{T_0^2-\\delta^2}=T_0-\\delta^2/(2T_0)+O(\\delta^4/T_0^3)\\)，得\n\\[\nW_{\\max}=2C[T_0-\\sqrt{T_0^2-\\delta^2}]\n=\\frac{C\\delta^2}{T_0}+O(\\delta^4/T_0^3).\n\\]\n对总温差 \\(\\Delta T=2\\delta\\)，首阶为 \\(C(\\Delta T)^2/(4T_0)\\)。平衡附近可用功对温差的一次项消失，反映自由能在平衡态附近驻值。",
+    "answer": "\n\\ln\\frac{T_f}{T_h}+\\ln\\frac{T_f}{T_c}=0\n\\quad\\Longrightarrow\\quad T_f=\\sqrt{T_hT_c}.\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
+    "id": "T028",
+    "topic": "热学",
+    "title": "Einstein 量子固体的配分函数、热容和 Debye 模型差异",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "tags": [
+      "量子配分函数",
+      "Einstein固体",
+      "热容渐近",
+      "晶格振动"
+    ],
+    "question": "晶体包含 N 个原子，Einstein 模型把全部 3N 个声学和晶格振动自由度近似为频率相同的独立量子谐振子，每模能级为 εj=ℏωE(j+1/2)，j=0,1,2,…，且 ωE>0。系统处于正则热平衡温度 T>0，定义 ΘE=ℏωE/kB。\n(1) 由几何级数求单模和全体模式的配分函数；(2) 计算晶体内能与零点振动能；(3) 对内能求导计算定容热容的精确表达式；(4) 分析高低温渐近并解释为什么这一模型不能正确预测三维晶体的低温 Debye 立方律。",
+    "solution": "(1) 令 \\(x=\\hbar\\omega_E/(k_BT)\\)。单个量子谐振子配分函数是\n\\[\nz=\\sum_{j=0}^\\infty e^{-x(j+1/2)}\n=\\frac{e^{-x/2}}{1-e^{-x}}\n=\\frac1{2\\sinh(x/2)}.\n\\]\n因为 3N 个模式彼此独立，总配分函数 \\(Z=z^{3N}\\)，不是将各模的配分函数直接相加。\n\n(2) 从 \\(U=-\\partial_\\beta\\ln Z\\) 得到\n\\[\nU=3N\\hbar\\omega_E\\left(\\frac12+\\frac1{e^x-1}\\right).\n\\]\n第一项 \\(U_0=3N\\hbar\\omega_E/2\\) 是零点振动能，与温度无关；第二项是 Bose 热激发能。\n\n(3) 因 \\(x=\\Theta_E/T\\)、\\(dx/dT=-x/T\\)，所以\n\\[\nC_V=\\left(\\frac{\\partial U}{\\partial T}\\right)_V\n=3Nk_Bx^2\\frac{e^x}{(e^x-1)^2}>0.\n\\]\n此式没有假定经典能量均分，且自动包含量子激发的冻结效应。\n\n(4) 在低温 \\(x\\gg1\\) 下，\\(\\exp(x)/[\\exp(x)-1]^2\\sim e^{-x}\\)，故\n\\[\nC_V\\sim3Nk_B(\\Theta_E/T)^2e^{-\\Theta_E/T}\\to0.\n\\]\n高温 \\(x\\ll1\\) 时该因子近似 \\(1/x^2\\)，得到 \\(C_V\\to3Nk_B\\)，即 Dulong–Petit 规律。Einstein 模型的全部模式有相同非零振动频率；Debye 声子模式从零频连续展开且三维低频态密度正比频率平方，因此 Debye 低温比热是 \\(T^3\\) 而非指数型，两个模型在低温预测不同。",
+    "answer": "\nz=\\sum_{j=0}^\\infty e^{-x(j+1/2)}\n=\\frac{e^{-x/2}}{1-e^{-x}}\n=\\frac1{2\\sinh(x/2)}.\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B"
+  },
+  {
     "id": "W007",
     "topic": "振动与波动",
     "title": "双弦接点附加质量的波散射",
@@ -1956,6 +2088,50 @@
     "complexity_tier": "L5-B"
   },
   {
+    "id": "W027",
+    "topic": "振动与波动",
+    "title": "具有基底弹簧的离散晶格频隙、倏逝模及连续极限",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "tags": [
+      "离散周期结构",
+      "Bloch色散",
+      "带隙与倏逝波",
+      "连续近似"
+    ],
+    "question": "一条无限长周期质量弹簧链，粒子间距 a，每个粒子质量 m>0，相邻粒子用劲度 K>0 的弹簧连接，每个粒子另有劲度 k₀>0 的弹簧将其固定到静止基底。仅研究沿链的一维小振动，忽略阻尼与非线性。\n(1) 建立离散位移方程并求 Bloch 色散关系；(2) 求最低及最高本征角频率和一般波数处的群速度；(3) 对低于最低传播频率的简谐驱动求复波数及空间指数衰减长度；(4) 用长波泰勒展开推导连续 Klein–Gordon 型波方程，并检查基底劲度趋零时的无隙极限。",
+    "solution": "(1) 每个质点的净回复力为两侧弹簧及基底弹簧合力，因此\n\\[\nm\\ddot u_n=K(u_{n+1}-2u_n+u_{n-1})-k_0u_n.\n\\]\n代入 Bloch 波 \\(u_n=Ae^{i(qna-\\omega t)}\\)，得\n\\[\nm\\omega^2=k_0+2K(1-\\cos qa)\n=k_0+4K\\sin^2(qa/2).\n\\]\n第一 Brillouin 区间可取 \\(-\\pi/a\\le q\\le\\pi/a\\)。\n\n(2) 在 q=0 时带底频率 \\(\\omega_{\\min}=\\sqrt{k_0/m}\\)，在 \\(|q|=\\pi/a\\) 时带顶频率 \\(\\omega_{\\max}=\\sqrt{(k_0+4K)/m}\\)。色散求导给\n\\[\nv_g=\\frac{d\\omega}{dq}=\\frac{Ka\\sin qa}{m\\omega}.\n\\]\n带底和带顶均有 \\(v_g=0\\)，说明这两个极值附近波包传播缓慢。\n\n(3) 对 \\(0<\\omega<\\omega_{\\min}\\)，实数波数不可能满足色散。令复波数 \\(q=i\\lambda/a\\)，\\(\\lambda>0\\)，则 \\(\\sin^2(i\\lambda/2)=-\\sinh^2(\\lambda/2)\\)，故\n\\[\nk_0-m\\omega^2=4K\\sinh^2(\\lambda/2),\\quad\n\\lambda=2\\operatorname{arsinh}\\sqrt{\\frac{k_0-m\\omega^2}{4K}}.\n\\]\n半无限链选择随 n 增加的衰减态 \\(u_n\\propto e^{-\\lambda n}\\)，其振幅 1/e 衰减长度为 \\(a/\\lambda\\)。\n\n(4) 长波令 \\(x=na\\)，有 \\(u_{n+1}-2u_n+u_{n-1}=a^2u_{xx}+O(a^4)\\)，于是\n\\[\nu_{tt}=c_{\\rm eff}^2u_{xx}-\\omega_g^2u,\n\\quad c_{\\rm eff}=a\\sqrt{K/m},\\quad\\omega_g^2=k_0/m.\n\\]\n这是有频隙的 Klein–Gordon 型方程。若 k₀→0，频隙 \\(\\omega_g\\to0\\)，小 q 下 \\(\\omega\\simeq c_{\\rm eff}|q|\\)，恢复长波声学支；基底使低频传播被禁止。",
+    "answer": "\nm\\ddot u_n=K(u_{n+1}-2u_n+u_{n-1})-k_0u_n.\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
+    "id": "W028",
+    "topic": "振动与波动",
+    "title": "大振幅单摆的椭圆积分周期与临界分离轨道",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "tags": [
+      "非线性振动",
+      "椭圆积分",
+      "有限振幅效应",
+      "分离轨道"
+    ],
+    "question": "长度为 ℓ、摆球质量 m 的平面理想单摆处于均匀重力 g 下，无摩擦、无空气阻力。初态在偏离竖直向下角 θ₀ 的位置静止释放，其中 0<θ₀<π，允许振幅很大。摆杆不可伸长且质量可忽略。\n(1) 直接由总机械能守恒得到角速度与角度的关系；(2) 作半角代换，利用第一类完全椭圆积分 K 得到周期；(3) 对小振幅求周期的第一个非线性修正；(4) 对初始角趋近竖直向上位置，推导周期的对数发散主项并从不稳定平衡解释这一结果。",
+    "solution": "(1) 机械能是 \\(E=m\\ell^2\\dot\\theta^2/2+mg\\ell(1-\\cos\\theta)\\)。初始静止于 θ₀，故\n\\[\n\\dot\\theta^2=\\frac{2g}{\\ell}(\\cos\\theta-\\cos\\theta_0)\n=\\frac{4g}{\\ell}\\left[\\sin^2(\\theta_0/2)-\\sin^2(\\theta/2)\\right].\n\\]\n令 \\(k=\\sin(\\theta_0/2)\\in(0,1)\\)。\n\n(2) 一个周期中有四段关于平衡点对称的相同时间。对一个四分之一周期积分并作 \\(\\sin(\\theta/2)=k\\sin\\varphi\\) 的代换，则角度微分与角速度中的 \\(k\\cos\\varphi\\) 因子相消，得到\n\\[\nT=4\\sqrt{\\frac\\ell g}K(k),\\qquad\nK(k)=\\int_0^{\\pi/2}\\frac{d\\varphi}{\\sqrt{1-k^2\\sin^2\\varphi}}.\n\\]\n它是第一类完全椭圆积分，不应与普通椭圆周长混淆。\n\n(3) 小 k 时积分核展开为 \\(1+\\frac12k^2\\sin^2\\varphi+O(k^4)\\)。积分 \\(\\int_0^{\\pi/2}\\sin^2\\varphi\\,d\\varphi=\\pi/4\\)，故 \\(K(k)=\\frac\\pi2(1+k^2/4+O(k^4))\\)。因为 \\(k^2=\\theta_0^2/4+O(\\theta_0^4)\\)，\n\\[\nT=2\\pi\\sqrt{\\ell/g}\\left[1+\\frac{\\theta_0^2}{16}+O(\\theta_0^4)\\right].\n\\]\n实际有限幅度周期较小角周期长，修正项正值。\n\n(4) 当 θ₀→π⁻ 时 \\(k\\to1^-\\)，完全椭圆积分满足 \\(K(k)\\sim\\ln[4/\\sqrt{1-k^2}]\\)。又 \\(\\sqrt{1-k^2}=\\cos(\\theta_0/2)\\sim(\\pi-\\theta_0)/2\\)，所以\n\\[\nT\\sim4\\sqrt{\\ell/g}\\ln\\frac8{\\pi-\\theta_0}\\to\\infty.\n\\]\n靠近倒立不稳定平衡时，重力力矩几乎为零，质点需要极长时间离开其邻域，导致分离轨道周期发散。",
+    "answer": "\n\\dot\\theta^2=\\frac{2g}{\\ell}(\\cos\\theta-\\cos\\theta_0)\n=\\frac{4g}{\\ell}\\left[\\sin^2(\\theta_0/2)-\\sin^2(\\theta/2)\\right].\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
     "id": "O007",
     "topic": "光学",
     "title": "分离薄透镜系统的矩阵成像与无焦条件",
@@ -2426,6 +2602,28 @@
     "question": "一维无限周期透射结构周期为 d>0，紧接透射结构之后的标量复场可写为 u(x,0)=Σm cm exp(i2πmx/d)，其中 m∈Z、系数平方可和。波长 λ>0 的单色相干光正入射，取近轴 Fresnel 传播且 z>0。\n(1) 由平面波角谱计算任一傅里叶谐波传播 z 后积累的相对相位；(2) 求保证完整图样严格重复的 Talbot 长度 zT；(3) 在 z=zT/2 证明场与初场发生半周期横向平移；(4) 在 z=zT/4 分析偶、奇 m 的相位规律，说明不同衍射级之间可形成分数级自成像而非简单的光强传播不变。",
     "solution": "(1) 横向第 m 阶空间频率 \\(k_{x,m}=2\\pi m/d\\)，总波数 \\(k=2\\pi/\\lambda\\)。近轴展开纵向波数\n\\[\nk_{z,m}=\\sqrt{k^2-k_{x,m}^2}\\simeq k-\\frac{k_{x,m}^2}{2k}\n=k-\\frac{\\pi\\lambda m^2}{d^2}.\n\\]\n去掉全部谐波共有的 \\(e^{ikz}\\) 后，场包络为\n\\[\nu(x,z)e^{-ikz}=\\sum_{m\\in\\mathbb Z}c_m e^{i2\\pi mx/d}\ne^{-i\\pi\\lambda z m^2/d^2}.\n\\]\n二次 m 相位是自成像的关键，不能只考虑一级衍射。\n\n(2) 令 \\(z_T=2d^2/\\lambda\\)，相对相位为 \\(e^{-i2\\pi m^2}=1\\)，故\n\\[\nu(x,z_T)=e^{ikz_T}u(x,0).\n\\]\n所有空间傅里叶阶严格重相合，强度图样复现。此结论要求保留的衍射阶满足 \\(k_{x,m}\\ll k\\)，否则精确波数的高阶校正会破坏理想 Talbot 复相。\n\n(3) 在 z=zT/2=d²/λ，传播相位为 \\(e^{-i\\pi m^2}=(-1)^m=e^{i\\pi m}\\)（因为整数 \\(m^2\\) 与 m 奇偶性相同）。所以\n\\[\nu(x,z_T/2)=e^{ikz_T/2}\\sum_m c_m e^{i2\\pi m(x+d/2)/d}\n=e^{ikz_T/2}u(x+d/2,0).\n\\]\n这表示整幅复场横向平移 d/2；强度若不是半周期对称，其图样相对于原光栅也发生同样平移。\n\n(4) 在 z=zT/4 时相位为 \\(e^{-i\\pi m^2/2}\\)：偶 m 取1、奇 m 取 \\(-i\\)。将初场拆为偶阶 \\(u_e\\) 和奇阶 \\(u_o\\)，有 \\(u(z_T/4)e^{-ikz_T/4}=u_e-i u_o\\)。又 \\(u(x+d/2,0)=u_e-u_o\\)，故\n\\[\nu_e-i u_o=\\frac{1-i}{2}u(x,0)+\\frac{1+i}{2}u(x+d/2,0).\n\\]\n此时是原场与半周期移位场的相干叠加，通常并不等于它们的强度直接相加，是分数 Talbot 自成像的基本机制。",
     "answer": "\nk_{z,m}=\\sqrt{k^2-k_{x,m}^2}\\simeq k-\\frac{k_{x,m}^2}{2k}\n=k-\\frac{\\pi\\lambda m^2}{d^2}.\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
+    "id": "O027",
+    "topic": "光学",
+    "title": "梯度折射率 GRIN 介质的旁轴轨线、正弦传输矩阵与聚焦",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "tags": [
+      "GRIN光线方程",
+      "Fermat变分",
+      "光线传输矩阵",
+      "周期聚焦"
+    ],
+    "question": "一段长度 L>0 的轴对称梯度折射率透明介质具有近轴折射率 n(x)=n₀[1−g²x²/2]，n₀,g>0，光线沿正 z 方向传播且满足 |gx|≪1、横向斜率 |dx/dz|≪1。介质无吸收、边界反射忽略。\n(1) 从 Fermat 原理的光程泛函推导光线的线性横向运动方程；(2) 求出射高度与斜率相对于入射高度、角度的 ABCD 矩阵；(3) 求平行入射光束首次焦点距离及周期性再次聚焦的位置；(4) 验证矩阵行列式与 g→0 的均匀传播极限。",
+    "solution": "(1) Fermat 光程泛函为 \\(\\int n(x)\\sqrt{1+x'^2}\\,dz\\)。在旁轴近似中可展开为 \\(\\int[n_0(1-g^2x^2/2)+n_0x'^2/2]dz\\)，忽略与变分无关的常数。Euler–Lagrange 方程 \\(d(n_0x')/dz=-n_0g^2x\\)，因此\n\\[\nx''+g^2x=0.\n\\]\n折射率从光轴向外降低，使光线受到指向光轴的有效回复弯曲。\n\n(2) 用入射条件 \\(x(0)=x_0,\\alpha(0)=x'(0)=\\alpha_0\\)，得\n\\[\nx(z)=x_0\\cos gz+\\frac{\\alpha_0}{g}\\sin gz,\\quad\n\\alpha(z)=-gx_0\\sin gz+\\alpha_0\\cos gz.\n\\]\n因此\n\\[\n\\begin{pmatrix}x(L)\\\\\\alpha(L)\\end{pmatrix}\n=\\begin{pmatrix}\\cos gL&\\sin gL/g\\\\-g\\sin gL&\\cos gL\\end{pmatrix}\n\\begin{pmatrix}x_0\\\\\\alpha_0\\end{pmatrix}.\n\\]\n\n(3) 对平行入射光线 \\(\\alpha_0=0\\)，高度为 \\(x(z)=x_0\\cos gz\\)。各光线同时通过光轴的第一次正距离是\n\\[\nL_f=\\frac{\\pi}{2g}.\n\\]\n随后在 \\(3\\pi/(2g),5\\pi/(2g)\\) 等位置再次聚焦；几何周期为 \\(2\\pi/g\\)。如果入射角不全相同，具体焦点受第二项影响，不能直接使用准直束聚焦公式。\n\n(4) 传输矩阵行列式为 \\(\\cos^2gL+\\sin^2gL=1\\)，体现无损线性傍轴光学的辛性。取 g→0 时 \\(\\sin(gL)/g\\to L\\)、\\(-g\\sin(gL)\\to0\\)、\\(\\cos(gL)\\to1\\)，所以矩阵趋于\n\\[\n\\begin{pmatrix}1&L\\\\0&1\\end{pmatrix},\n\\]\n恢复在均匀介质中 \\(x(L)=x_0+\\alpha_0L\\) 的直线传播。",
+    "answer": "\nx''+g^2x=0.\n",
     "quality_status": "待独立复核",
     "tier": "advanced_composite",
     "revision": "composite-v2.0",
@@ -2908,5 +3106,27 @@
     "revision": "composite-v2.0",
     "challenge_profile": "high-multistage",
     "complexity_tier": "L5-B"
+  },
+  {
+    "id": "Q027",
+    "topic": "近代物理",
+    "title": "α 衰变 Coulomb 势垒的 Gamow WKB 穿透指数",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "tags": [
+      "核衰变",
+      "库仑势垒",
+      "WKB作用量",
+      "Geiger–Nuttall规律"
+    ],
+    "question": "一个具有正电荷 q、质量 m 的核外粒子从半径为 R 的核作用区外逃逸。核外有效势近似为 U(r)=κ/r，κ>0，粒子径向总能量为 E，满足 0<E<κ/R；忽略角动量离心势、核内细节以及相对论效应。其尝试逃逸频率记为 ν>0。\n(1) 找出外侧经典转向点和禁止区间；(2) 使用 WKB 积分推导禁阻穿透指数的解析式；(3) 对 R 远小于外侧转向半径的情形求 Gamow 指数主导近似；(4) 求半衰期的对数形式，说明穿透率为什么对衰变能量极其敏感以及前因子的模型局限。",
+    "solution": "(1) 在核外经典允许区要求 \\(E\\ge U(r)=\\kappa/r\\)，因此外侧转向半径 \\(r_t=\\kappa/E>R\\)，而 \\(R<r<r_t\\) 是粒子经典禁阻区域。\n\n(2) WKB 穿透率首阶为 \\(P\\simeq e^{-G(E)}\\)，其中\n\\[\nG(E)=\\frac{2}{\\hbar}\\int_R^{r_t}\\sqrt{2m(\\kappa/r-E)}\\,dr.\n\\]\n令 \\(r=r_t\\sin^2\\theta\\)，下限 \\(\\theta_R=\\arcsin\\sqrt{R/r_t}\\)。则 \\(\\kappa/r-E=E\\cot^2\\theta\\)，积分化为 \\(2r_t\\sqrt{2mE}\\int_{\\theta_R}^{\\pi/2}\\cos^2\\theta\\,d\\theta\\)。所以\n\\[\nG(E)=\\frac{2\\sqrt{2m}\\kappa}{\\hbar\\sqrt E}\n\\left[\n\\arccos\\sqrt{\\frac{RE}{\\kappa}}-\n\\sqrt{\\frac{RE}{\\kappa}\\left(1-\\frac{RE}{\\kappa}\\right)}\n\\right].\n\\]\n其整体无量纲，是势垒作用量与 ℏ 的比值。\n\n(3) 当 \\(RE/\\kappa\\ll1\\)，利用 \\(\\arccos\\sqrt x=\\pi/2-\\sqrt x+O(x^{3/2})\\) 与 \\(\\sqrt{x(1-x)}=\\sqrt x+O(x^{3/2})\\)，得\n\\[\nG(E)=\\frac{\\pi\\sqrt{2m}\\kappa}{\\hbar\\sqrt E}\n-\\frac{4\\sqrt{2m\\kappa R}}{\\hbar}+O(\\sqrt E).\n\\]\n主项随 \\(E^{-1/2}\\) 增长，故较小放出能量使穿透率指数级减小。\n\n(4) 以 ν 表示核内粒子单位时间尝试穿透次数，衰变率近似 \\(\\Gamma=\\nu e^{-G}\\)，对应半衰期 \\(t_{1/2}=\\ln2/\\Gamma\\)。因此\n\\[\n\\ln t_{1/2}\\simeq G(E)+\\ln(\\ln2/\\nu).\n\\]\n在近似固定核电荷、质量和作用半径时，主要能量依赖是 \\(\\ln t_{1/2}\\propto1/\\sqrt E\\)，对应 Geiger–Nuttall 型关系。但真实 α 粒子预形成概率、角动量势与核力可改变前因子 ν，WKB 仅计算此简单 Coulomb 势垒的主要指数。",
+    "answer": "\nG(E)=\\frac{2}{\\hbar}\\int_R^{r_t}\\sqrt{2m(\\kappa/r-E)}\\,dr.\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
   }
 ]

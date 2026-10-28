@@ -1,0 +1,28 @@
+(1) Snell 定律是 \(n_1\sin\theta_i=n_2\sin\theta_t\)。选取一致的 TM 反射电场基矢符号，由切向电场和磁场连续可得
+\[
+(1+r_p)\cos\theta_i=t_p\cos\theta_t,\qquad
+n_1(1-r_p)=n_2t_p .
+\]
+联立得到
+\[
+r_p=\frac{n_2\cos\theta_i-n_1\cos\theta_t}
+{n_2\cos\theta_i+n_1\cos\theta_t},\qquad
+t_p=\frac{2n_1\cos\theta_i}
+{n_2\cos\theta_i+n_1\cos\theta_t}.
+\]
+不同 TM 反射基矢约定可能令 rp 整体改变符号，但不会改变可测反射率。
+
+(2) 令反射振幅 rp=0，得到 \(n_2\cos\theta_B=n_1\cos\theta_t\)。联立 Snell 定律并选物理主值，得到 \(\theta_B+\theta_t=\pi/2\)，所以
+\[
+\tan\theta_B=\frac{n_2}{n_1},\qquad \theta_B=\arctan(n_2/n_1).
+\]
+在这一角度 p 偏振完全无反射，s 偏振一般不具备同样条件。
+
+(3) 对平面波，法向坡印廷功率与 \(n|E|^2\cos\theta\) 成正比，因此
+\[
+\mathcal R=|r_p|^2,\qquad
+\mathcal T=\frac{n_2\cos\theta_t}{n_1\cos\theta_i}|t_p|^2.
+\]
+记 \(A=n_2\cos\theta_i,B=n_1\cos\theta_t\)。代入上式得到 \(\mathcal R=(A-B)^2/(A+B)^2\) 以及 \(\mathcal T=4AB/(A+B)^2\)。相加显然是 \(\mathcal R+\mathcal T=[(A-B)^2+4AB]/(A+B)^2=1\)，符合无吸收能量守恒。
+
+(4) 当 θᵢ=0，透射角也为零，反射率成为 \([(n_2-n_1)/(n_2+n_1)]^2\)。当 θᵢ→π/2，rp→−1，反射率趋一。TE 电场始终平行界面，而 TM 电场的切向投影带有 cosθ 因子，边界条件的几何投影不同，因而两个偏振的 Fresnel 反射规律不同。

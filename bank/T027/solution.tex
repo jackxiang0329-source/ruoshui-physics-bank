@@ -1,0 +1,28 @@
+(1) 完全可逆的热机没有熵产生，两有限热库内的熵差为 \(C\ln(T_f/T_h)\)、\(C\ln(T_f/T_c)\)。总熵守恒要求
+\[
+\ln\frac{T_f}{T_h}+\ln\frac{T_f}{T_c}=0
+\quad\Longrightarrow\quad T_f=\sqrt{T_hT_c}.
+\]
+此几何平均终温严格低于直接导热的算术平均。
+
+(2) 热机本身循环工作，内部能变化为零，故输出功等于两物体总内能减少：
+\[
+W_{\max}=C(T_h+T_c-2T_f)
+=C(\sqrt{T_h}-\sqrt{T_c})^2\ge0.
+\]
+正性直接由平方保证。若熵产生不为零，终态温度会更高，因此可逆过程对应最大可用功。
+
+(3) 若直接导热，完全没有对外功，能量守恒给 \(T_{\rm dir}=(T_h+T_c)/2\)。两热库总熵变化
+\[
+\Delta S_{\rm dir}=C\ln\frac{T_{\rm dir}}{T_h}
++C\ln\frac{T_{\rm dir}}{T_c}
+=C\ln\frac{(T_h+T_c)^2}{4T_hT_c}>0.
+\]
+与可逆路径相比，直接接触牺牲的全部可提取机械功正是 \(W_{\max}\)，这是有限热库可用能与不可逆性的具体体现。
+
+(4) 令 \(T_h=T_0+\delta,T_c=T_0-\delta\) 且 \(0<\delta\ll T_0\)。由二项式展开 \(\sqrt{T_0^2-\delta^2}=T_0-\delta^2/(2T_0)+O(\delta^4/T_0^3)\)，得
+\[
+W_{\max}=2C[T_0-\sqrt{T_0^2-\delta^2}]
+=\frac{C\delta^2}{T_0}+O(\delta^4/T_0^3).
+\]
+对总温差 \(\Delta T=2\delta\)，首阶为 \(C(\Delta T)^2/(4T_0)\)。平衡附近可用功对温差的一次项消失，反映自由能在平衡态附近驻值。
