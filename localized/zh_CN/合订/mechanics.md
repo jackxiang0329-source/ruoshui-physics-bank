@@ -2,7 +2,7 @@
 
 > 仅供编辑复核：尚未通过独立双语、答案或版权审核；不可正式组卷。
 
-共 310 道。英文原文均以保留源指纹的上游快照为依据。
+共 318 道。英文原文均以保留源指纹的上游快照为依据。
 
 <a id="cp-00001"></a>
 
@@ -6528,6 +6528,166 @@ A flea jumps by exerting a force of <math xmlns="http://www.w3.org/1998/Math/Mat
 
 ---
 
+<a id="cp-00294"></a>
+
+## CP-00294｜法向力的定义及其与摩擦力的关系
+
+**学科：** 力学　**知识点：** 摩擦力／法向支持力
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+定义**法向力**。在摩擦力遵循简单模型时，它与摩擦力之间有什么关系？
+
+## 英文原题（存档摘录）
+
+# Friction — CP-00294
+
+Define normal force. What is its relationship to friction when friction behaves simply?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00294.md
+- 原件 Git blob SHA：a180e2e64dc3591ffd2254bf9349a0567e4c0a4d
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00295"></a>
+
+## CP-00295｜胶带的黏附力是否属于简单摩擦力
+
+**学科：** 力学　**知识点：** 摩擦与黏附／胶带
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+胶带上的黏合剂能够产生作用力。此类力能否归为简单摩擦力？考虑胶带能够贴在竖直墙面，甚至能够贴在天花板上的现象加以解释。
+
+## 英文原题（存档摘录）
+
+# Friction — CP-00295
+
+The glue on a piece of tape can exert forces. Can these forces be a type of simple friction? Explain, considering especially that tape can stick to vertical walls and even to ceilings.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00295.md
+- 原件 Git blob SHA：476fb87a6e2e326e117cb9024cf4b684b5805c0f
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00296"></a>
+
+## CP-00296｜汽车临停前为何需要稍松刹车
+
+**学科：** 力学　**知识点：** 摩擦力／静摩擦与动摩擦
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+学习驾驶时会发现，汽车快要停住时通常需要稍微松开制动踏板，否则停车时可能产生猛然一顿的感觉。试从静摩擦力与动摩擦力之间的关系解释这一现象。
+
+## 英文原题（存档摘录）
+
+# Friction — CP-00296
+
+When you learn to drive, you discover that you need to let up slightly on the brake pedal as you come to a stop or the car will stop with a jerk. Explain this in terms of the relationship between static and kinetic friction.
+{: xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" fo:font-weight="normal"}
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00296.md
+- 原件 Git blob SHA：9d7539aa09293fcebef1af13fe1038362cafa6d0
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00297"></a>
+
+## CP-00297｜粉笔划过黑板时为何发出尖锐声音
+
+**学科：** 力学　**知识点：** 摩擦力／黏滑振动
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+粉笔在黑板表面移动时，有时会因快速交替发生**滑动与黏住**而发出尖锐声音。详细描述这一过程，尤其解释它与动摩擦力通常小于最大静摩擦力之间的联系。（轮胎在路面尖叫时也可能发生类似的黏滑过程。）
+
+## 英文原题（存档摘录）
+
+# Friction — CP-00297
+
+When you push a piece of chalk across a chalkboard, it sometimes screeches because it rapidly alternates between slipping and sticking to the board. Describe this process in more detail, in particular explaining how it is related to the fact that kinetic friction is less than static friction. (The same slip-grab process occurs when tires screech on pavement.)
+{: xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" fo:font-weight="normal"}
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00297.md
+- 原件 Git blob SHA：bae3d08429b3573ffb56204c64919083d0365b97
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00298"></a>
+
+## CP-00298｜下水口附近的旋转水流与地球自转
+
+**学科：** 力学　**知识点：** 非惯性参考系／科里奥利效应
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+马桶冲水或水槽排水时，水和其中其他物质会在接近排水口时开始旋转。假定最初没有旋转，且水流起初径直流向排水口，解释使水产生旋转的原因，并说明在**北半球**理想情形下的旋转方向。（原题指出该效应非常微弱，多数马桶中的旋转实际来自有方向的喷水口。）若强迫水流从排水口**向上**运动，旋转方向是否会反转？
+
+## 英文原题（存档摘录）
+
+# Fictitious Forces and Non-inertial Frames: The Coriolis Force — CP-00298
+
+When a toilet is flushed or a sink is drained, the water (and other material) begins to rotate about the drain on the way down. Assuming no initial rotation and a flow initially directly straight toward the drain, explain what causes the rotation and which direction it has in the northern hemisphere. (Note that this is a small effect and in most toilets the rotation is caused by directional water jets.) Would the direction of rotation reverse if water were forced up the drain?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00298.md
+- 原件 Git blob SHA：cff6cb2503e0b0e559660335fb2cf015341447cf
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：物理模型依赖
+- 审校提示：理想科里奥利流动需指定观察方向、边界条件与流动形态；实际排水常由其他效应主导。
+
+---
+
+<a id="cp-00299"></a>
+
+## CP-00299｜洗衣机脱水过程有向外的真实力吗
+
+**学科：** 力学　**知识点：** 非惯性参考系／离心表象
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+洗衣机高速旋转脱水时，是否有某种**真实的向外作用力**将水从衣物中甩出？请解释水与衣物是怎样分离的。
+
+## 英文原题（存档摘录）
+
+# Fictitious Forces and Non-inertial Frames: The Coriolis Force — CP-00299
+
+Is there a real force that throws water from clothes during the spin cycle of a washing machine? Explain how the water is removed.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00299.md
+- 原件 Git blob SHA：e4103e0d4aa15b205b878ae68350640e2413928e
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
 <a id="cp-00300"></a>
 
 ## CP-00300｜旋转圆筒中的乘客
@@ -6550,6 +6710,62 @@ In one amusement park ride, riders enter a large vertical barrel and stand again
 
 - 原件：external_sources/college_physics/raw/CP-00300.md
 - 原件 Git blob SHA：a3cb4800301f2bc6ef3a33d921a1492d5d885d7e
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00302"></a>
+
+## CP-00302｜轨道卫星为什么仍处于自由落体
+
+**学科：** 力学　**知识点：** 轨道运动／自由落体
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+Anna 认为轨道卫星不断朝地球方向下落，因此卫星处于自由落体。Tom 认为卫星处的重力加速度不等于 $9.80\,\mathrm{m/s^2}$，所以不能说它处于自由落体。你同意谁的观点？为什么？
+
+## 英文原题（存档摘录）
+
+# Fictitious Forces and Non-inertial Frames: The Coriolis Force — CP-00302
+
+Two friends are having a conversation. Anna says a satellite in orbit is in freefall because the satellite keeps falling toward Earth. Tom says a satellite in orbit is not in freefall because the acceleration due to gravity is not 9.80 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><msup><mtext>m/s</mtext><mrow><mn>2</mn></mrow></msup></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"m/s" rSup { size 8{2} } } {}</annotation></semantics></math>
+
+. Who do you agree with and why?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00302.md
+- 原件 Git blob SHA：63812a6366796200b7f1b32ba699fe58d0856c8d
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：同源近重复
+- 审校提示：CP-00304 的英文题面与本题高度重复，合并时应只保留一个并在重复检查报告中注明。
+
+---
+
+<a id="cp-00303"></a>
+
+## CP-00303｜以太阳中心为原点的参考系为何非严格惯性系
+
+**学科：** 力学　**知识点：** 参考系／太阳系近惯性
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+一个位于太阳中心、但自身不旋转的参考系非常接近惯性参考系。为什么它仍然不是严格意义上的惯性参考系？
+
+## 英文原题（存档摘录）
+
+# Fictitious Forces and Non-inertial Frames: The Coriolis Force — CP-00303
+
+A non-rotating frame of reference placed at the center of the Sun is very nearly an inertial one. Why is it not exactly an inertial frame?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00303.md
+- 原件 Git blob SHA：ed7591fdc2d3cb60cd83a75dc540c42e428dc10f
 - 上游署名与许可证见原件；尚未完成单题权利审查。
 
 ---

@@ -2,7 +2,7 @@
 
 > 仅供编辑复核：尚未通过独立双语、答案或版权审核；不可正式组卷。
 
-共 9 道。英文原文均以保留源指纹的上游快照为依据。
+共 10 道。英文原文均以保留源指纹的上游快照为依据。
 
 <a id="cp-00154"></a>
 
@@ -250,6 +250,34 @@ Give a detailed example of how the exchange of a particle can result in an **att
 - 上游署名与许可证见原件；尚未完成单题权利审查。
 - 题设／编辑风险：需要外部资料
 - 审校提示：强度比较需指定参考粒子、距离与课程约定表格，原独立题面未给这些量。
+
+---
+
+<a id="cp-00293"></a>
+
+## CP-00293｜强核力与电磁力的强度比和原子核稳定性
+
+**学科：** 近代物理　**知识点：** 四种相互作用／强核力
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+强核力与电磁力的强度之比是多少？根据该比值，我们可以预期在较小原子核中强核力占主导地位。但较大的原子核尺寸可能超过强核力的有效作用范围，电磁力于是开始影响核稳定性。这些事实如何为后续的核聚变与核裂变提供基础？
+
+## 英文原题（存档摘录）
+
+# Extended Topic: The Four Basic Forces—An Introduction — CP-00293
+
+What is the ratio of the strength of the strong nuclear force to that of the electromagnetic force? Based on this ratio, you might expect that the strong force dominates the nucleus, which is true for small nuclei. Large nuclei, however, have sizes greater than the range of the strong nuclear force. At these sizes, the electromagnetic force begins to affect nuclear stability. These facts will be used to explain nuclear fusion and fission later in this text.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00293.md
+- 原件 Git blob SHA：67db853807e273679942cd9ea7183adaf0d5fb1a
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：需要外部资料
+- 审校提示：具体强度比值需参考教材给定的比较尺度和表格。
 
 ---
 

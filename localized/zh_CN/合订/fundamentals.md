@@ -2,7 +2,7 @@
 
 > 仅供编辑复核：尚未通过独立双语、答案或版权审核；不可正式组卷。
 
-共 100 道。英文原文均以保留源指纹的上游快照为依据。
+共 101 道。英文原文均以保留源指纹的上游快照为依据。
 
 <a id="cp-00137"></a>
 
@@ -1546,6 +1546,32 @@ Explain why a vector cannot have a component greater than its own magnitude.
 
 - 原件：external_sources/college_physics/raw/CP-00270.md
 - 原件 Git blob SHA：2f3890e165f7f2622f725116a1b0e4320c68964a
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00301"></a>
+
+## CP-00301｜引力超距作用为何最终被科学界接受
+
+**学科：** 物理基础　**知识点：** 科学方法／超距作用和证据
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+引力这类超距作用曾被认为不合逻辑，因此不可信。物理学判断一个主张真伪的最终依据是什么？为什么科学界后来接受了引力超距作用的观念？
+
+## 英文原题（存档摘录）
+
+# Fictitious Forces and Non-inertial Frames: The Coriolis Force — CP-00301
+
+Action at a distance, such as is the case for gravity, was once thought to be illogical and therefore untrue. What is the ultimate determinant of the truth in physics, and why was this action ultimately accepted?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00301.md
+- 原件 Git blob SHA：711013126f65bc3a92ce714064460becaddd1b7a
 - 上游署名与许可证见原件；尚未完成单题权利审查。
 
 ---
