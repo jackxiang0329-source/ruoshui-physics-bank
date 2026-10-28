@@ -1,0 +1,43 @@
+(1) 在小角近似中，上球的水平位置是 $x_1\simeq\ell\theta_1$，下球水平位置是 $x_2\simeq\ell(\theta_1+\theta_2)$。竖向速度是角度和速度的高阶乘积，故
+\[
+T=\frac12m\ell^2(2\dot\theta_1^2+2\dot\theta_1\dot\theta_2+\dot\theta_2^2),
+\quad U=\frac12mg\ell(2\theta_1^2+\theta_2^2).
+\]
+将 $\boldsymbol\theta=(\theta_1,\theta_2)^T$，Euler–Lagrange 方程写为
+\[
+\mathsf M\ddot{\boldsymbol\theta}+\mathsf K\boldsymbol\theta=0,
+\quad\mathsf M=m\ell^2\begin{pmatrix}2&1\\1&1\end{pmatrix},
+\quad\mathsf K=mg\ell\begin{pmatrix}2&0\\0&1\end{pmatrix}.
+\]
+两矩阵均正定，直垂平衡稳定。
+
+(2) 令 $\lambda=\omega^2\ell/g$，广义本征值由
+\[
+\det(\mathsf K-\omega^2\mathsf M)
+\propto\det\begin{pmatrix}2-2\lambda&-\lambda\\-\lambda&1-\lambda\end{pmatrix}
+=\lambda^2-4\lambda+2=0.
+\]
+得到
+\[
+\omega_\mp^2=\frac g\ell(2\mp\sqrt2).
+\]
+相应的模态向量取 $\boldsymbol u_-=(1,\sqrt2)^T$ 与 $\boldsymbol u_+=(1,-\sqrt2)^T$。直接代入可验证 $\boldsymbol u_-^T\mathsf M\boldsymbol u_+=0$；在普通 Euclidean 内积下这两个向量并非正交，不能忽略动能交叉项。
+
+(3) 初值展开为
+\[
+(\theta_0,0)^T=\frac{\theta_0}{2}(\boldsymbol u_-+\boldsymbol u_+).
+\]
+初速度为零，故
+\[
+\theta_1(t)=\frac{\theta_0}{2}(\cos\omega_-t+\cos\omega_+t),
+\quad
+\theta_2(t)=\frac{\theta_0}{\sqrt2}(\cos\omega_-t-\cos\omega_+t).
+\]
+代入 $t=0$ 验证初态；对时间求导得到的正弦项在零时均为零。不同频率成分干涉引起能量在两个摆间交替分配。
+
+(4) 按广义模态振幅计算能量，两个向量分别满足 $\boldsymbol u_\pm^T\mathsf K\boldsymbol u_\pm=4mg\ell$。因初始各模幅度均为 $\theta_0/2$，每模储能
+\[
+E_\pm=\frac12(\theta_0/2)^2\boldsymbol u_\pm^T\mathsf K\boldsymbol u_\pm
+=\frac12mg\ell\theta_0^2.
+\]
+所以 $E_-+E_+=mg\ell\theta_0^2$，恰为初始势能，且线性无耗散系统中两个正规模的能量分别守恒。若外加约束令下杆角度恒零，则动能成为 $m\ell^2\dot\theta_1^2$、势能 $mg\ell\theta_1^2$，频率为 $\sqrt{g/\ell}$；这是改变约束后的新系统，不能把完整双摆的一个频率简单设为该值。

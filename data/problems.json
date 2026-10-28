@@ -386,6 +386,31 @@
     "challenge_profile": "high-multistage"
   },
   {
+    "id": "M023",
+    "topic": "力学",
+    "title": "等质量双摆的小振动特征值、正交模态与能量拍动",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "question": "在竖直平面内，由两根长度相同为 $\\ell>0$ 的无质量刚性杆和两个质量相同为 $m>0$ 的小球组成双摆，上方杆的铰点固定，重力加速度为 $g>0$。以竖直向下为零角度，取两杆相对竖直方向的绝对小角 $\\theta_1,\\theta_2$，并假设 $|\\theta_i|\\ll1$、忽略阻尼。\n(1) 从拉格朗日函数的动能和势能二次展开求线性方程的质量、刚度矩阵；(2) 求全部正规模角频率和两摆角之比，证明不同模在质量矩阵加权内积下正交；(3) 初态为 $\\theta_1(0)=\\theta_0,\\theta_2(0)=0$、两角速度为零时，求完整的线性化角度演化；(4) 求各模的独立机械能，验证其和与初态能量相同，并比较强制令下摆固定时的极限。",
+    "solution": "(1) 在小角近似中，上球的水平位置是 $x_1\\simeq\\ell\\theta_1$，下球水平位置是 $x_2\\simeq\\ell(\\theta_1+\\theta_2)$。竖向速度是角度和速度的高阶乘积，故\n\\[\nT=\\frac12m\\ell^2(2\\dot\\theta_1^2+2\\dot\\theta_1\\dot\\theta_2+\\dot\\theta_2^2),\n\\quad U=\\frac12mg\\ell(2\\theta_1^2+\\theta_2^2).\n\\]\n将 $\\boldsymbol\\theta=(\\theta_1,\\theta_2)^T$，Euler–Lagrange 方程写为\n\\[\n\\mathsf M\\ddot{\\boldsymbol\\theta}+\\mathsf K\\boldsymbol\\theta=0,\n\\quad\\mathsf M=m\\ell^2\\begin{pmatrix}2&1\\\\1&1\\end{pmatrix},\n\\quad\\mathsf K=mg\\ell\\begin{pmatrix}2&0\\\\0&1\\end{pmatrix}.\n\\]\n两矩阵均正定，直垂平衡稳定。\n\n(2) 令 $\\lambda=\\omega^2\\ell/g$，广义本征值由\n\\[\n\\det(\\mathsf K-\\omega^2\\mathsf M)\n\\propto\\det\\begin{pmatrix}2-2\\lambda&-\\lambda\\\\-\\lambda&1-\\lambda\\end{pmatrix}\n=\\lambda^2-4\\lambda+2=0.\n\\]\n得到\n\\[\n\\omega_\\mp^2=\\frac g\\ell(2\\mp\\sqrt2).\n\\]\n相应的模态向量取 $\\boldsymbol u_-=(1,\\sqrt2)^T$ 与 $\\boldsymbol u_+=(1,-\\sqrt2)^T$。直接代入可验证 $\\boldsymbol u_-^T\\mathsf M\\boldsymbol u_+=0$；在普通 Euclidean 内积下这两个向量并非正交，不能忽略动能交叉项。\n\n(3) 初值展开为\n\\[\n(\\theta_0,0)^T=\\frac{\\theta_0}{2}(\\boldsymbol u_-+\\boldsymbol u_+).\n\\]\n初速度为零，故\n\\[\n\\theta_1(t)=\\frac{\\theta_0}{2}(\\cos\\omega_-t+\\cos\\omega_+t),\n\\quad\n\\theta_2(t)=\\frac{\\theta_0}{\\sqrt2}(\\cos\\omega_-t-\\cos\\omega_+t).\n\\]\n代入 $t=0$ 验证初态；对时间求导得到的正弦项在零时均为零。不同频率成分干涉引起能量在两个摆间交替分配。\n\n(4) 按广义模态振幅计算能量，两个向量分别满足 $\\boldsymbol u_\\pm^T\\mathsf K\\boldsymbol u_\\pm=4mg\\ell$。因初始各模幅度均为 $\\theta_0/2$，每模储能\n\\[\nE_\\pm=\\frac12(\\theta_0/2)^2\\boldsymbol u_\\pm^T\\mathsf K\\boldsymbol u_\\pm\n=\\frac12mg\\ell\\theta_0^2.\n\\]\n所以 $E_-+E_+=mg\\ell\\theta_0^2$，恰为初始势能，且线性无耗散系统中两个正规模的能量分别守恒。若外加约束令下杆角度恒零，则动能成为 $m\\ell^2\\dot\\theta_1^2$、势能 $mg\\ell\\theta_1^2$，频率为 $\\sqrt{g/\\ell}$；这是改变约束后的新系统，不能把完整双摆的一个频率简单设为该值。",
+    "answer": "\\omega_\\pm^2=(g/\\ell)(2\\pm\\sqrt2),\\quad\\theta_1(t)=\\theta_0[\\cos\\omega_-t+\\cos\\omega_+t]/2",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "双摆线性化",
+      "广义质量矩阵",
+      "模态正交",
+      "初值展开",
+      "能量分解"
+    ],
+    "assumptions_review": "完成公式自检，尚待独立专家审定",
+    "checks": [],
+    "revision": "composite-v1.8",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
     "id": "E007",
     "topic": "电磁学",
     "title": "滑动导体棒的自感反馈与能量耗散",
@@ -774,6 +799,31 @@
     "challenge_profile": "high-multistage"
   },
   {
+    "id": "E023",
+    "topic": "电磁学",
+    "title": "介电板部分插入平行板电容的固定电荷与固定电压机械功比较",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "question": "一理想平行板电容器极板长为 $L>0$、宽为 $w>0$，间距为 $d>0$，忽略所有边缘场和摩擦。相对介电常数为 $\\kappa>1$、厚度恰为 $d$ 的线性介质板沿极板长度方向部分插入，插入深度为 $x\\in(0,L)$；未覆盖部分为空气，介电常数为 $\\epsilon_0$。考察 A：断开电源保持总自由电荷 $Q>0$，B：接理想电源保持电压 $V>0$。\n(1) 从两部分平行板电容的等效连接关系求 $C(x)$ 和 $dC/dx$；(2) 固定电荷条件下由场能求介质吸入力及其方向；(3) 固定电压时同时计算电池电功、电场储能变化与机械输出功，求相应吸入力；(4) 对介质从 $x_1$ 移到 $x_2>x_1$ 求两种条件下的输出功，验证 $\\kappa\\to1$ 的零力极限，说明误用固定电压的场能会产生什么符号错误。",
+    "solution": "(1) 无边缘效应时介质覆盖面积为 $wx$，其余空气覆盖面积为 $w(L-x)$。这两个区域极板电势差相同，等效为并联电容，\n\\[\nC(x)=\\frac{\\epsilon_0w(L-x)}d+\\frac{\\kappa\\epsilon_0wx}d\n=\\frac{\\epsilon_0w}d[L+(\\kappa-1)x].\n\\]\n所以 $C'(x)=\\epsilon_0w(\\kappa-1)/d>0$，介质插入必使总电容增加。\n\n(2) 固定 $Q$ 时与电源没有电量交换，全部电场静电储能为\n\\[\nU_Q=\\frac{Q^2}{2C(x)}.\n\\]\n沿 $x$ 方向由虚功关系求场对介质的力：\n\\[\nF_Q=-\\left(\\frac{\\partial U_Q}{\\partial x}\\right)_Q\n=\\frac{Q^2}{2C(x)^2}C'(x)>0.\n\\]\n正方向是将介质继续吸入极板的方向，机械功由固定电荷体系的电场能减少提供。\n\n(3) 在固定电压情况下，电荷 $Q(x)=C(x)V$，随介质插入而增加。电池在准静态插入 $dx$ 时供给电功\n\\[\ndW_{\\rm bat}=V\\,dQ=V^2\\,dC,\n\\]\n电容器的电场能增加 $dU_{\\rm field}=d(CV^2/2)=V^2dC/2$。由能量守恒，另外的一半成为介质板的机械输出功：\n\\[\ndW_{\\rm mech}=dW_{\\rm bat}-dU_{\\rm field}\n=\\frac12V^2dC,\n\\quad\nF_V=\\frac12V^2C'(x)>0.\n\\]\n亦可用包含电池的等效电势能 $U_{\\rm eff}=U_{\\rm field}-VQ=-CV^2/2$ 计算。不能对固定 $V$ 的 $+CV^2/2$ 单独取负导数，因为那会错误地得到指向极板外的力。\n\n(4) 从 $x_1$ 到 $x_2$，固定 $Q$ 时\n\\[\nW_Q=\\frac{Q^2}{2}\\left[\\frac1{C(x_1)}-\\frac1{C(x_2)}\\right]>0;\n\\]\n固定 $V$ 时\n\\[\nW_V=\\frac{V^2}{2}[C(x_2)-C(x_1)]\n=\\frac{\\epsilon_0wV^2(\\kappa-1)}{2d}(x_2-x_1)>0.\n\\]\n当 $\\kappa\\to1^+$ 时 $C'(x)\\to0$，两种力与输出功都趋零，介质与空气不可区分。若要在有限实际极板中计算瞬态与端部力分布，需要补上本题忽略的边缘场。",
+    "answer": "C=\\epsilon_0w[L+(\\kappa-1)x]/d,\\quad F_Q=Q^2C'/(2C^2),\\quad F_V=V^2C'/2",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "非均匀电容",
+      "电源和电场能量",
+      "电介质吸入力",
+      "虚功原理",
+      "极限检查"
+    ],
+    "assumptions_review": "完成公式自检，尚待独立专家审定",
+    "checks": [],
+    "revision": "composite-v1.8",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-A"
+  },
+  {
     "id": "T007",
     "topic": "热学",
     "title": "导热可动活塞的不可逆终态与熵产生",
@@ -1160,6 +1210,31 @@
     "revision": "composite-v1.8",
     "complexity_tier": "L5-B",
     "challenge_profile": "high-multistage"
+  },
+  {
+    "id": "T023",
+    "topic": "热学",
+    "title": "范德瓦耳斯气体自由膨胀中的温降、熵增加及压强稳定性",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "question": "有 $n>0$ mol 稳定单相范德瓦耳斯气体，其压强与内能在所考察温区内由\n\\[\nP=\\frac{nRT}{V-nb}-\\frac{an^2}{V^2},\\qquad\nU=nC_VT-\\frac{an^2}{V},\n\\]\n表示，其中 $a,b,R,C_V>0$、$V>nb$，摩尔定容热容 $C_V$ 为常数。气体从初态 $(T_i,V_i)$ 向隔热真空室自由膨胀到 $V_f>V_i$，无外界边界功；初末及连接两态的等内能平衡态族均假设 $T>0$、$P>0$，并维持单相。\n(1) 从第一定律求 $T_f$，判断是否冷却；(2) 用基本热力学关系推导熵状态函数差并给出 $\\Delta S$；(3) 沿等内能平衡态路径证明 $dS/dV=P/T>0$，从而解释不可逆自由膨胀的严格熵增加；(4) 求 $V_f\\downarrow V_i$ 时的冷却斜率以及 $a\\to0,b\\to0$ 时的理想气体极限。",
+    "solution": "(1) 整个系统隔热，气体自由膨胀到真空室时没有推动外界活塞的边界功，因此 $Q=W=0$，$\\Delta U=0$。代入所给内能函数得\n\\[\nnC_VT_f-\\frac{an^2}{V_f}\n=nC_VT_i-\\frac{an^2}{V_i}.\n\\]\n于是\n\\[\nT_f=T_i+\\frac{an}{C_V}\\left(\\frac1{V_f}-\\frac1{V_i}\\right)<T_i.\n\\]\n随体积增大，吸引势能 $-an^2/V$ 上升，部分热运动内能转化为分子间势能，故温度下降。\n\n(2) 对内能微分，\n\\[\ndU=nC_VdT+\\frac{an^2}{V^2}dV.\n\\]\n对虚拟可逆状态变更使用 $T\\,dS=dU+P\\,dV$，并代入状态方程：\n\\[\ndS=\\frac{nC_V}{T}dT+\n\\left[\\frac{an^2}{TV^2}\n+\\frac{nR}{V-nb}-\\frac{an^2}{TV^2}\\right]dV\n=\\frac{nC_V}{T}dT+\\frac{nR}{V-nb}dV.\n\\]\n故熵是状态函数且\n\\[\n\\Delta S=nC_V\\ln\\frac{T_f}{T_i}\n+nR\\ln\\frac{V_f-nb}{V_i-nb}.\n\\]\n此计算没有假定真实自由膨胀是可逆过程。\n\n(3) 沿给定等内能的平衡状态族，$dU=0$，因此由基本关系直接得 $(\\partial S/\\partial V)_U=P/T$。也可由 $dT/dV|_U=-an/(C_VV^2)$ 代入上式独立验证：\n\\[\n\\frac{dS}{dV}\\bigg|_U=\n-\\frac{an^2}{TV^2}+\\frac{nR}{V-nb}\n=\\frac PT.\n\\]\n题目明确规定在所走状态区间 $T>0,P>0$，故 $dS/dV|_U>0$，对 $V_i<V_f$ 积分即得 $\\Delta S>0$，与第二定律一致。这一论证只通过虚拟平衡态连接两端点，并不宣称真实膨胀过程保持空间均匀。\n\n(4) 当 $V_f\\downarrow V_i$，温度对最终体积的一阶斜率为\n\\[\n\\left.\\frac{\\partial T_f}{\\partial V_f}\\right|_{U,V_f=V_i}\n=-\\frac{an}{C_VV_i^2}<0.\n\\]\n若先令 $a\\to0$，体积相关吸引能消失，$T_f\\to T_i$；进一步令 $b\\to0$，熵变恢复 $\\Delta S=nR\\ln(V_f/V_i)$，正是理想气体向真空自由膨胀的结果。非理想气体内能含体积项，故不能不作检验地套用“绝热自由膨胀温度不变”。",
+    "answer": "T_f=T_i+(an/C_V)(1/V_f-1/V_i),\\quad\\Delta S=nC_V\\ln(T_f/T_i)+nR\\ln[(V_f-nb)/(V_i-nb)]",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "范德瓦耳斯内能",
+      "热力学熵函数",
+      "绝热自由膨胀",
+      "稳定性约束",
+      "理想极限"
+    ],
+    "assumptions_review": "完成公式自检，尚待独立专家审定",
+    "checks": [],
+    "revision": "composite-v1.8",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B"
   },
   {
     "id": "W007",
