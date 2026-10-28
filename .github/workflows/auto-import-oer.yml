@@ -33,6 +33,8 @@ on:
       - 'tests/test_review_preflight.py'
       - 'scripts/college_tex_draft.py'
       - 'tests/test_college_tex_draft.py'
+      - 'scripts/audit_college_corpus.py'
+      - 'tests/test_audit_college_corpus.py'
 
 permissions:
   contents: write
@@ -75,6 +77,8 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_review_preflight.py' -v
       - name: Test partial MathML-to-TeX preview and conversion warnings
         run: python -m unittest discover -s tests -p 'test_college_tex_draft.py' -v
+      - name: Test corpus-wide question fingerprints and provenance integrity
+        run: python -m unittest discover -s tests -p 'test_audit_college_corpus.py' -v
       - name: Fetch, verify, deduplicate and classify candidates
         run: python scripts/auto_import_oer.py --execute --limit 100 --scan-limit 500 --timeout 12
       - name: Fetch and extract CC BY physics examples from new upstream source
@@ -110,6 +114,8 @@ jobs:
         run: python scripts/review_preflight.py
       - name: Produce an editor-only OpenStax TeX draft with explicit unsupported-formula markers
         run: python scripts/college_tex_draft.py
+      - name: Audit all 2526 pinned College Physics questions and generate diversified next review list
+        run: python scripts/audit_college_corpus.py
       - name: Regenerate independent bank masters and verify consistent index
         run: |
           python scripts/build.py
@@ -145,6 +151,9 @@ jobs:
             external_sources/catalog/college_review_tex_report.json
             external_sources/catalog/college_review_tex_draft.tex
             external_sources/catalog/college_review_preview.tex
+            external_sources/catalog/college_corpus_audit.csv
+            external_sources/catalog/college_corpus_audit_report.json
+            external_sources/catalog/college_next_review.csv
           if-no-files-found: warn
           retention-days: 30
 
