@@ -465,6 +465,98 @@
       "complexity_tier": "L5-B",
       "question": "轴对称梯度折射率介质的近轴折射率为 \\(n(r)=n_0[1-\\alpha r^2/2]\\)，其中 \\(n_0>0,\\alpha>0\\)，传播沿 \\(z\\) 方向，射线满足 \\(|dr/dz|\\ll1\\) 与 \\(\\alpha r^2\\ll1\\)。考虑一条横向方向 \\(x(z)\\) 上的子午面射线，忽略色散、界面反射以及高阶梯度效应。\n(1) 从 Fermat 光学路径的变分方程导出近轴射线微分方程。\n(2) 对任意入口位置与斜率求解传播矩阵，验证其行列式为一。\n(3) 求射线振荡节距与平行入射光束的第一轴上聚焦距离，并区分光束与点源成像。\n(4) 构造近轴不变量并描述大横向位移下这一模型失效的来源。\n",
       "solution": "(1) Fermat 光程泛函为 \\(\\mathcal S=\\int n(x)\\sqrt{1+x'^2}\\,dz\\)，变分给 \\(d[nx'/\\sqrt{1+x'^2}]/dz=(dn/dx)\\sqrt{1+x'^2}\\)。在 \\(|x'|\\ll1\\)、\\(\\alpha x^2\\ll1\\) 下 \\(n\\approx n_0\\) 且 \\(dn/dx=-n_0\\alpha x\\)，故 \\(n_0x''\\approx-n_0\\alpha x\\)，得到 \\(x''+\\alpha x=0\\)。折射率在轴上最大、向外减小，光线被向轴心折回；如果折射率梯度符号反过来，则会得到指数散焦。\n\n(2) 令 \\(\\kappa=\\sqrt\\alpha\\)，线性方程的通解为 \\(x(z)=x_0\\cos(\\kappa z)+(x'_0/\\kappa)\\sin(\\kappa z)\\)，\\(x'(z)=-\\kappa x_0\\sin(\\kappa z)+x'_0\\cos(\\kappa z)\\)。因此 \\(\\binom{x(z)}{x'(z)}=\\begin{pmatrix}\\cos\\kappa z&\\sin\\kappa z/\\kappa\\\\-\\kappa\\sin\\kappa z&\\cos\\kappa z\\end{pmatrix}\\binom{x_0}{x_0'}\\)。该 ABCD 矩阵行列式为 \\(\\cos^2\\kappa z+\\sin^2\\kappa z=1\\)，保持近轴射线的辛面积，体现无损线性传播。\n\n(3) 射线轨迹的振荡周期（节距）为 \\(P=2\\pi/\\kappa\\)。对同方向的入射平行光束，\\(x'_0=0\\)，有 \\(x(z)=x_0\\cos(\\kappa z)\\)，所以所有入射横向位置在第一 \\(z_f=\\pi/(2\\kappa)\\) 处穿过轴线。这里的聚焦针对入射角相同而位置不同的平行光束；对轴上点源 \\(x_0=0\\) 而入射斜率各异，\\(x(z)=x'_0\\sin(\\kappa z)/\\kappa\\)，第一非零回到轴线的位置是 \\(z=\\pi/\\kappa\\)，二者不可混淆。\n\n(4) 把射线方程乘以 \\(2x'\\)，得到 \\(d(x'^2+\\alpha x^2)/dz=2x'(x''+\\alpha x)=0\\)，故准光学不变量 \\(J=x'^2+\\alpha x^2\\)，表示横向斜率与轴外位移之间的周期性能量交换。其两个加数均无量纲，检查了 \\(\\alpha\\) 必须具有长度倒平方的量纲。当 \\(x'\\) 或 \\(\\alpha x^2\\) 不小，原始 Fermat 方程的非线性分母和空间变化的折射率不再可忽略，周期与精确聚焦条件会偏离线性 GRIN 公式。\n"
+    },
+    {
+      "id": "Q049",
+      "topic": "近代物理",
+      "title": "旋转磁场中自旋二能级系统的精确旋转框架动力学与几何相位",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 95,
+      "tags": [
+        "Pauli矩阵",
+        "旋转参考框架",
+        "非绝热跃迁",
+        "Berry相位"
+      ],
+      "answer": "P_{\\rm flip}(T)=\\frac{\\Omega^2\\sin^2\\theta}{\\omega_{\\rm eff}^2}\\sin^2\\left(\\frac{\\pi\\omega_{\\rm eff}}{\\Omega}\\right)",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-C",
+      "question": "自旋 \\(1/2\\) 粒子的哈密顿量为 \\(H(t)=-(\\hbar\\omega_0/2)\\boldsymbol\\sigma\\cdot\\mathbf n(t)\\)，其中 \\(\\omega_0>0\\)，\\(\\mathbf n(t)=(\\sin\\theta\\cos\\Omega t,\\sin\\theta\\sin\\Omega t,\\cos\\theta)\\)，\\(0<\\theta<\\pi\\)、\\(\\Omega>0\\)。初态为 \\(t=0\\) 时沿 \\(\\mathbf n(0)\\) 的正自旋本征态；忽略外界退相干。给出一个完整绕转周期 \\(T=2\\pi/\\Omega\\) 的演化。\n(1) 构造绕 \\(z\\) 轴共转的幺正变换，求时间无关的有效哈密顿量。\n(2) 求旋转框架的能级间隔与初态相对于有效场轴线的夹角。\n(3) 求一周期后自旋相对于瞬时原方向翻转的精确概率，并给出绝热极限判据。\n(4) 在绝热极限写出两本征态积累的几何相位，区别动力相位及实验可观测量。\n",
+      "solution": "(1) 令 \\(U(t)=e^{-i\\Omega t\\sigma_z/2}\\) 并写 \\(|\\psi(t)\\rangle=U(t)|\\chi(t)\\rangle\\)。把旋转项移到框架内，\\(H_{\\rm rot}=U^\\dagger HU-i\\hbar U^\\dagger\\dot U\\)。利用 \\(U\\sigma_xU^\\dagger=\\cos\\Omega t\\,\\sigma_x+\\sin\\Omega t\\,\\sigma_y\\)，及 \\(-i\\hbar U^\\dagger\\dot U=-\\hbar\\Omega\\sigma_z/2\\)，得到 \\(H_{\\rm rot}=-(\\hbar/2)[\\omega_0\\sin\\theta\\,\\sigma_x+(\\omega_0\\cos\\theta+\\Omega)\\sigma_z]\\)。与原哈密顿量相比新增项的符号由旋转变换和时间惯例决定，不得随意丢失。\n\n(2) 定义有效频率 \\(\\omega_{\\rm eff}=\\sqrt{\\omega_0^2+\\Omega^2+2\\omega_0\\Omega\\cos\\theta}\\)，旋转框架的两本征能为 \\(\\mp\\hbar\\omega_{\\rm eff}/2\\)，间隔为 \\(\\hbar\\omega_{\\rm eff}\\)。初态 Bloch 方向 \\(\\mathbf n(0)=(\\sin\\theta,0,\\cos\\theta)\\)，有效场方向 \\(\\mathbf h=(\\omega_0\\sin\\theta,0,\\omega_0\\cos\\theta+\\Omega)/\\omega_{\\rm eff}\\)。二者叉积模长 \\(|\\mathbf n\\times\\mathbf h|=\\Omega\\sin\\theta/\\omega_{\\rm eff}\\)，故夹角 \\(\\beta\\) 满足 \\(\\sin\\beta=\\Omega\\sin\\theta/\\omega_{\\rm eff}\\)，这就是非绝热混合的几何幅度。\n\n(3) 时间无关旋转框架演化算符为 \\(\\exp[-iH_{\\rm rot}t/\\hbar]=\\cos(\\omega_{\\rm eff}t/2)I+i(\\mathbf h\\cdot\\boldsymbol\\sigma)\\sin(\\omega_{\\rm eff}t/2)\\)。相对于初态正交自旋方向的跃迁概率为 \\(P_{\\rm flip}(t)=\\sin^2\\beta\\,\\sin^2(\\omega_{\\rm eff}t/2)\\)，所以一周期后的精确结果 \\(P_{\\rm flip}(T)=[\\Omega^2\\sin^2\\theta/\\omega_{\\rm eff}^2]\\sin^2(\\pi\\omega_{\\rm eff}/\\Omega)\\)。由于旋转算符 \\(U(T)=-I\\) 只引入共同的自旋号因子，不改变这一概率。若 \\(\\Omega/\\omega_0\\to0\\)，非绝热跃迁包络至多是 \\(O[(\\Omega\\sin\\theta/\\omega_0)^2]\\)，因此绝热条件可取 \\(\\Omega\\sin\\theta\\ll\\omega_0\\)。\n\n(4) 缓慢绕转时磁场单位矢量扫出的立体角为 \\(\\mathcal A=2\\pi(1-\\cos\\theta)\\)。沿瞬时 \\(\\boldsymbol\\sigma\\cdot\\mathbf n\\) 正向的自旋本征态积累 Berry 相位 \\(\\gamma_+=-\\mathcal A/2=-\\pi(1-\\cos\\theta)\\)，反向态为 \\(\\gamma_-=\\mathcal A/2\\)，均按模 \\(2\\pi\\) 理解。它与动力相位 \\(-\\hbar^{-1}\\int E_\\pm dt\\) 源自不同几何机制；单一态的整体相位不可单独观测，但两路径或两自旋支之间的相位差可通过干涉测量。有限转速下还应使用前述精确结果而非仅套用 Berry 相位。\n"
+    },
+    {
+      "id": "Q050",
+      "topic": "近代物理",
+      "title": "三维简谐量子阱频率比1:2:3的能级计数、配分函数及低温热容",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 95,
+      "tags": [
+        "三维量子谐振子",
+        "组合态计数",
+        "正则配分函数",
+        "低温渐近"
+      ],
+      "answer": "g_6=7,\\qquad Z=\\frac{e^{-3\\beta\\hbar\\omega}}{(1-e^{-x})(1-e^{-2x})(1-e^{-3x})}",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-C",
+      "question": "无自旋质量 \\(m\\) 的粒子在三维各向异性简谐势 \\(V=\\frac12m\\omega^2(x^2+4y^2+9z^2)\\) 中运动，\\(\\omega>0\\)。无粒子间相互作用；先考虑单粒子能谱与简并，后将其与一个稀疏非简并单粒子平衡热库耦合进行正则系综计算。\n(1) 由变量分离求所有本征能与基态能量，说明各量子数的整数约束。\n(2) 建立激发量子数 \\(N\\) 的简并度母函数，具体求 \\(N=6\\) 的简并度。\n(3) 求精确单粒子正则配分函数与平均内能，区分零点能和热激发能。\n(4) 导出热容表达式并讨论高温经典极限与低温激活行为。\n",
+      "solution": "(1) 哈密顿量可分解为三个独立的一维振子，角频率分别为 \\(\\omega_x=\\omega,\\omega_y=2\\omega,\\omega_z=3\\omega\\)。令 \\(n_x,n_y,n_z\\in\\{0,1,2,\\ldots\\}\\)，能谱为 \\(E_{n_xn_yn_z}=\\hbar\\omega[(n_x+1/2)+2(n_y+1/2)+3(n_z+1/2)]=\\hbar\\omega(n_x+2n_y+3n_z+3)\\)，所以基态能量 \\(E_0=3\\hbar\\omega\\)，基态仅一重。频率可公度导致一些不同量子数三元组拥有相同激发能，这不同于各向同性振子的旋转简并。\n\n(2) 激发量子数 \\(N=n_x+2n_y+3n_z\\) 的简并度就是该丢番图方程的非负整数解数目。母函数为 \\(\\sum_{N\\ge0}g_Nq^N=[(1-q)(1-q^2)(1-q^3)]^{-1}\\)，分别来自三方向的几何级数。对 \\(N=6\\)，当 \\(n_z=0\\) 时 \\(n_x+2n_y=6\\) 有4组；当 \\(n_z=1\\) 时余下3有2组；当 \\(n_z=2\\) 时余下0有1组，共 \\(g_6=7\\)。穷举的计数不依赖于改变能量单位或额外的自旋简并度。\n\n(3) 设 \\(x=\\beta\\hbar\\omega\\) 且 \\(\\beta=(k_BT)^{-1}\\)。各方向能量独立，故单粒子配分函数为 \\(Z=e^{-3x}/[(1-e^{-x})(1-e^{-2x})(1-e^{-3x})]\\)。由 \\(U=-\\partial_\\beta\\ln Z\\)，得 \\(U=3\\hbar\\omega+\\sum_{j=1}^3 j\\hbar\\omega/(e^{jx}-1)\\)。第一项是与温度无关的基态零点能，后一项才来自各方向的热激发；将零点能误算入热容，会给出非物理的额外常数贡献。\n\n(4) 对每个方向热能 \\(U_j=j\\hbar\\omega/(e^{jx}-1)\\) 求温度导数，得到 \\(C_V=k_B\\sum_{j=1}^3(jx)^2 e^{jx}/(e^{jx}-1)^2\\)。当 \\(x\\ll1\\)，每一振动方向的贡献趋近 \\(k_B\\)，故 \\(C_V\\to3k_B\\)，符合三维经典谐振子每个方向动能与势能共两个二次型项的能均分。低温 \\(x\\gg1\\) 时最低激发来自 \\(x\\) 方向，主导 \\(C_V\\sim k_Bx^2e^{-x}\\)，其他 \\(e^{-2x},e^{-3x}\\) 项更小；第三定律要求热容趋零也得到满足。\n"
+    },
+    {
+      "id": "Q051",
+      "topic": "近代物理",
+      "title": "对称双吸引δ势的偶奇束缚态、临界耦合与隧穿劈裂",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 95,
+      "tags": [
+        "一维定态薛定谔方程",
+        "δ势跳跃条件",
+        "束缚态奇偶性",
+        "隧穿分裂"
+      ],
+      "answer": "\\kappa_{\\rm even,odd}=\\alpha(1\\pm e^{-2\\kappa a}),\\quad 2\\alpha a>1\\text{ for odd bound state}",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-C",
+      "question": "一维质量 \\(m\\) 的量子粒子在双吸引点势 \\(V(x)=-g[\\delta(x-a)+\\delta(x+a)]\\) 中运动，\\(g>0,a>0\\)，令 \\(\\alpha=mg/\\hbar^2\\)。考察能量 \\(E=-\\hbar^2\\kappa^2/(2m)<0\\) 的束缚态，波函数在两点连续，但导数满足分布势导致的跳跃条件；忽略自旋。\n(1) 推导两个δ点处的波函数导数跳跃条件与奇偶宇称分解。\n(2) 分别建立偶宇称和奇宇称束缚态的超越方程，并证明偶态始终存在。\n(3) 求奇束缚态出现的临界条件，检查两点重合 \\(a\\to0\\) 的极限。\n(4) 在 \\(\\alpha a\\gg1\\) 的远隔势阱极限给出两束缚态的指数小能量劈裂。\n",
+      "solution": "(1) 定态方程为 \\(-(\\hbar^2/2m)\\psi''-g[\\delta(x-a)+\\delta(x+a)]\\psi=E\\psi\\)。跨越 \\(x=a\\) 的无穷小区间积分，利用波函数连续，可得 \\(\\psi'(a^+)-\\psi'(a^-)=-2mg\\psi(a)/\\hbar^2=-2\\alpha\\psi(a)\\)，在 \\(x=-a\\) 亦同。势关于原点对称，故本征态可以选为偶函数或奇函数；在无势区负能态是指数双曲函数，外侧必须选指数衰减分支以保证归一化。\n\n(2) 偶态在 \\(|x|<a\\) 可取 \\(\\psi=A\\cosh(\\kappa x)\\)，外侧 \\(x>a\\) 为 \\(B e^{-\\kappa(x-a)}\\)。连续条件 \\(B=A\\cosh(\\kappa a)\\)，跳跃条件给 \\(-\\kappa B-\\kappa A\\sinh(\\kappa a)=-2\\alpha B\\)，化简为 \\(\\kappa=\\alpha[1+e^{-2\\kappa a}]\\)。奇态内侧取 \\(A\\sinh(\\kappa x)\\)，同理得 \\(\\kappa=\\alpha[1-e^{-2\\kappa a}]\\)。偶态方程右边随 \\(\\kappa\\) 单调下降、左边单调上升，在 \\(\\kappa=0\\) 时右边为 \\(2\\alpha>0\\)，故总存在唯一正根。\n\n(3) 奇态方程在 \\(\\kappa=0\\) 两边同时为零，但 \\(\\kappa=0\\) 对应不归一化的阈值态，只有 \\(\\kappa>0\\) 才代表真实束缚态。对小正 \\(\\kappa\\) 展开右侧为 \\(2\\alpha a\\kappa+O(\\kappa^2)\\)，故存在非零正根的充要条件是 \\(2\\alpha a>1\\)；在等号恰为阈值而非已形成束缚态。当 \\(a\\to0\\)，双δ势合并为强度 \\(2g\\) 的单个吸引势，偶态 \\(\\kappa\\to2\\alpha\\)；奇态不存在，符合单个一维δ势只支撑一个束缚态的结论。\n\n(4) 在 \\(A=\\alpha a\\gg1\\) 下，令 \\(\\epsilon=e^{-2\\alpha a}\\ll1\\)，偶奇方程迭代给 \\(\\kappa_{\\rm even}=\\alpha(1+\\epsilon+O(A\\epsilon^2))\\)、\\(\\kappa_{\\rm odd}=\\alpha(1-\\epsilon+O(A\\epsilon^2))\\)。能量 \\(E=-\\hbar^2\\kappa^2/(2m)\\)，所以偶态能量更负、为基态，两个态能隙为 \\(E_{\\rm odd}-E_{\\rm even}=2\\hbar^2\\alpha^2\\epsilon/m+O(A\\epsilon^2)\\)。劈裂指数小于井间距，反映两局域态通过指数衰减尾部的隧穿重叠形成成键与反键组合，不能用通常的线性扰动距离律代替。\n"
+    },
+    {
+      "id": "Q052",
+      "topic": "近代物理",
+      "title": "自旋单态、Werner白噪声与CHSH不等式的阈值计算",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 95,
+      "tags": [
+        "量子纠缠",
+        "自旋测量相关性",
+        "Bell不等式",
+        "量子噪声"
+      ],
+      "answer": "P(s,t)=\\tfrac14(1-vst\\,\\mathbf a\\cdot\\mathbf b),\\qquad |S|=2\\sqrt2 v",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-C",
+      "question": "两自旋 \\(1/2\\) 粒子处于 Werner 型混合态 \\(\\rho_v=v|\\psi^-\\rangle\\langle\\psi^-|+(1-v)I_4/4\\)，其中 \\(|\\psi^-\\rangle=(|01\\rangle-|10\\rangle)/\\sqrt2\\)，可见度 \\(0\\le v\\le1\\)。两端分别沿单位矢量 \\(\\mathbf a,\\mathbf b\\) 作 Pauli 自旋测量，结果 \\(s,t\\in\\{\\pm1\\}\\)。研究局域边缘概率及 Bell--CHSH 联合关联量。\n(1) 计算联合结果概率 \\(P(s,t|\\mathbf a,\\mathbf b)\\) 和两端的边缘概率。\n(2) 推导相关函数 \\(E(\\mathbf a,\\mathbf b)\\)，解释白噪声混合造成的幅度下降。\n(3) 取 \\(\\mathbf a=\\hat z,\\mathbf a'=\\hat x,\\mathbf b=(\\hat z+\\hat x)/\\sqrt2,\\mathbf b'=(\\hat z-\\hat x)/\\sqrt2\\)，求 CHSH 组合与违反局域隐藏变量界的阈值。\n(4) 用算符范数给出量子上界 \\(2\\sqrt2\\)，说明无信号传递与 Bell 违背可以同时成立。\n",
+      "solution": "(1) 沿 \\(\\mathbf a\\) 的测量投影算符为 \\(P_s^{\\mathbf a}=[I+s(\\mathbf a\\cdot\\boldsymbol\\sigma)]/2\\)，另一端同理。联合概率 \\(P(s,t)=\\operatorname{Tr}[\\rho_v(P_s^{\\mathbf a}\\otimes P_t^{\\mathbf b})]\\)。自旋单态满足 \\(\\langle\\sigma_i\\otimes\\sigma_j\\rangle=-\\delta_{ij}\\)，且每端单独平均自旋为零；白噪声 \\(I_4/4\\) 也只有均匀边缘分布。展开迹得 \\(P(s,t|\\mathbf a,\\mathbf b)=\\frac14[1-vst\\,\\mathbf a\\cdot\\mathbf b]\\)，只要 \\(0\\le v\\le1\\) 便为合法非负联合分布。\n\n(2) 关联函数定义 \\(E(\\mathbf a,\\mathbf b)=\\sum_{s,t=\\pm1}st\\,P(s,t|\\mathbf a,\\mathbf b)\\)。将联合概率代入，有常数项的 \\(st\\) 求和为零，\\(s^2t^2\\) 的四项和为四，因此 \\(E=-v\\,\\mathbf a\\cdot\\mathbf b\\)。纯单态 \\(v=1\\) 时若 \\(\\mathbf a=\\mathbf b\\)，关联为完全反相关 \\(-1\\)；当 \\(v=0\\) 时 \\(E=0\\)，表示独立白噪声。混合系数在测量关联中线性出现，而不意味着单个量子自旋的测量本征值被连续压缩。\n\n(3) 取 \\(S=E(\\mathbf a,\\mathbf b)+E(\\mathbf a,\\mathbf b')+E(\\mathbf a',\\mathbf b)-E(\\mathbf a',\\mathbf b')\\)。给定四个方向有前三项分别 \\(-v/\\sqrt2,-v/\\sqrt2,-v/\\sqrt2\\)，最后一项 \\(+v/\\sqrt2\\)。所以 \\(S=-2\\sqrt2\\,v\\)，其绝对值 \\(2\\sqrt2\\,v\\)。任何局域隐藏变量模型满足 \\(|S|\\le2\\)，故这个测量设置当且仅当 \\(v>1/\\sqrt2\\) 时违反 CHSH 界。较小 \\(v\\) 下不违反本设置的 CHSH，并不等价于严格证明态完全可分；需要独立的纠缠判据。\n\n(4) 令两端观测量 \\(A,A',B,B'\\) 为平方等于单位阵的厄米算符，CHSH 算符 \\(\\mathcal B=A\\otimes(B+B')+A'\\otimes(B-B')\\)。计算平方得 \\(\\mathcal B^2=4I-[A,A']\\otimes[B,B']\\)，而 \\(\\|[A,A']\\|\\le2,\\ \\|[B,B']\\|\\le2\\)，所以 \\(\\|\\mathcal B\\|^2\\le8\\)，即 Tsirelson 上界 \\(|\\langle\\mathcal B\\rangle|\\le2\\sqrt2\\)。另一方面由第一问 \\(\\sum_tP(s,t)=1/2\\) 与远方选取 \\(\\mathbf b\\) 无关，故边缘统计不传递信号。Bell 非局域关联与不能超光速通信并不矛盾。\n"
     }
   ]
 }
