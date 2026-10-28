@@ -1558,6 +1558,29 @@
     "solution": "(1) 平面波的平均总电磁能量密度为 \\(u=I/c\\)，动量密度为 \\(\\boldsymbol g=\\boldsymbol S/c^2=(I/c^2)\\hat z\\)。在真空中能量以 c 传播，故单位面积每秒携带的能量是 I、动量是 I/c。\n\n(2) 全吸收板每单位时间吸收动量大小 \\(IA/c\\)，板受到的平均法向力 \\(F_{\\rm abs}=IA/c\\)，辐射压\n\\[\np_{\\rm abs}=F_{\\rm abs}/A=I/c.\n\\]\n能量沉积为板的热能或其他内部能，这不影响入射动量吸收率。\n\n(3) 理想反射镜把每份入射光子沿 z 的动量从 \\(+p\\) 改为 \\(-p\\)，光的动量改变为 \\(-2p\\)，镜获得 \\(+2p\\)。故\n\\[\nF_{\\rm ref}=2IA/c,\\qquad p_{\\rm ref}=2I/c.\n\\]\n系数2并不要求光在反射时损失额外能量：静止理想镜使光子能量保持不变，但方向反转。\n\n(4) 取每个光子能量 \\(\\hbar\\omega\\)，动量 \\(\\hbar\\omega/c\\)，光子流率 \\(\\dot N=IA/(\\hbar\\omega)\\)。全吸收传递动量 \\(\\dot N\\hbar\\omega/c=IA/c\\)；全反射传递两倍。与经典 Maxwell 应力动量流结果一致。\n"
   },
   {
+    "id": "E040",
+    "topic": "电磁学",
+    "title": "真空电磁辐射的线性与圆偏振 Stokes 参数及能流",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "Jones偏振",
+      "Stokes参数",
+      "能流",
+      "偏振度"
+    ],
+    "answer": "S_0^2=S_1^2+S_2^2+S_3^2,\\quad I_t\\propto|A\\cos\\theta+B e^{i\\delta}\\sin\\theta|^2",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.1",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B",
+    "question": "均匀真空中沿 +z 传播的单频平面波，其复横向电场为 \\(\\boldsymbol E_0=(A,B e^{i\\delta})\\)，A,B≥0 且 δ 为实相位差，真实电场为 \\(\\Re[\\boldsymbol E_0e^{i(kz-\\omega t)}]\\)。\n(1) 求时间平均能流；(2) 按 \\(S_0=A^2+B^2,S_1=A^2-B^2,S_2=2AB\\cos\\delta,S_3=2AB\\sin\\delta\\) 定义 Stokes 量，证明全偏振恒等式；(3) 给出线偏振与圆偏振条件；(4) 若经过一块理想线偏振器，透射轴与 x 成角 θ，求透射平均强度并验证 Malus 定律极限。\n",
+    "solution": "(1) 对真空平面波，磁场复幅值 \\(\\boldsymbol B_0=\\hat z\\times\\boldsymbol E_0/c\\)。平均坡印廷功率密度是\n\\[\n\\overline I=\\frac{\\epsilon_0c}{2}|\\boldsymbol E_0|^2\n=\\frac{\\epsilon_0c}{2}(A^2+B^2),\n\\]\n不依赖两个正交分量之间的相位差 δ。\n\n(2) 用题设的 Stokes 定义直接展开：\n\\[\nS_1^2+S_2^2+S_3^2\n=(A^2-B^2)^2+4A^2B^2(\\cos^2\\delta+\\sin^2\\delta)\n=(A^2+B^2)^2=S_0^2.\n\\]\n因此完全相干、确定性 Jones 矢量的偏振度 \\(\\sqrt{S_1^2+S_2^2+S_3^2}/S_0=1\\)（非零场）。\n\n(3) 线偏振要求两个非零分量相位差为 0 或 π（或其中一个分量为零），于是 \\(S_3=0\\)；圆偏振则要求 A=B>0 且 \\(\\delta=\\pm\\pi/2\\)，此时 \\(S_1=S_2=0\\)、\\(|S_3|=S_0\\)。圆偏振的左右旋名称取决于观察方向和时间相位惯例。\n\n(4) 偏振器透射单位矢量为 \\(\\boldsymbol e_\\theta=(\\cos\\theta,\\sin\\theta)\\)。输出复幅值 \\(E_t=A\\cos\\theta+B e^{i\\delta}\\sin\\theta\\)，所以\n\\[\nI_t=\\frac{\\epsilon_0c}{2}\\left[\nA^2\\cos^2\\theta+B^2\\sin^2\\theta+2AB\\cos\\delta\\sin\\theta\\cos\\theta\\right].\n\\]\n若输入是沿 x 的线偏振，即 B=0，便有 \\(I_t=I_{\\rm in}\\cos^2\\theta\\)，恢复 Malus 定律。\n"
+  },
+  {
     "id": "T007",
     "topic": "热学",
     "title": "导热可动活塞的不可逆终态与熵产生",
@@ -2145,6 +2168,98 @@
     "revision": "composite-v2.0",
     "challenge_profile": "high-multistage",
     "complexity_tier": "L5-C"
+  },
+  {
+    "id": "T032",
+    "topic": "热学",
+    "title": "范德瓦耳斯气体低压 Joule–Thomson 系数及反转温度",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "焦耳汤姆孙",
+      "焓微分",
+      "状态方程",
+      "反转温度"
+    ],
+    "answer": "\\mu_{JT}\\simeq[2a/(RT)-b]/C_p,\\quad T_{\\rm inv}=2a/(Rb)",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.1",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C",
+    "question": "一摩尔范德瓦耳斯气体满足 \\(P=RT/(v-b)-a/v^2\\)，其中 \\(a,b>0\\)，在低压稀薄区做恒焓节流，假设定压热容 \\(C_p>0\\) 近似为常数且 \\(v\\gg b\\)。\n(1) 从热力学基本关系推导 \\(\\mu_{JT}=(\\partial T/\\partial P)_H\\) 的一般公式；(2) 将状态方程按低压展开得到 \\(v(P,T)\\) 的首阶修正；(3) 求 \\(\\mu_{JT}\\) 的低压首项与反转温度；(4) 讨论理想气体极限及降压后是降温还是升温。\n",
+    "solution": "(1) 焓 \\(H=U+Pv\\) 满足 \\(dH=T\\,dS+v\\,dP\\)。由 Maxwell 关系 \\((\\partial S/\\partial P)_T=-(\\partial v/\\partial T)_P\\)，有\n\\[\ndH=C_p\\,dT+[v-T(\\partial v/\\partial T)_P]\\,dP.\n\\]\n恒焓条件下\n\\[\n\\mu_{JT}=\\left(\\frac{\\partial T}{\\partial P}\\right)_H\n=\\frac{T(\\partial v/\\partial T)_P-v}{C_p}.\n\\]\n\n(2) 在稀薄近似中反解范德瓦耳斯方程，先写 \\(P\\simeq RT/v+(RTb-a)/v^2\\)。令 \\(v=RT/P+\\delta\\)，代入保留常数阶得 \\(\\delta=b-a/(RT)\\)。因此\n\\[\nv\\simeq\\frac{RT}{P}+b-\\frac{a}{RT},\n\\quad\n(\\partial v/\\partial T)_P\\simeq R/P+a/(RT^2).\n\\]\n\n(3) 代回得\n\\[\nT(\\partial v/\\partial T)_P-v\\simeq\n\\frac{2a}{RT}-b,\n\\quad\n\\mu_{JT}\\simeq \\frac{2a/(RT)-b}{C_p}.\n\\]\n令其为零，得到低压反转温度 \\(T_{\\rm inv}\\simeq2a/(Rb)\\)。此结果只在气体足够稀薄、无相变时成立。\n\n(4) 当 \\(a,b\\to0\\) 时 \\(\\mu_{JT}\\to0\\)，恢复理想气体恒焓节流不变温。若 \\(T<T_{\\rm inv}\\)，则 \\(\\mu_{JT}>0\\)，降压 \\(dP<0\\) 导致 \\(dT<0\\)；若 \\(T>T_{\\rm inv}\\)，节流时升温。\n"
+  },
+  {
+    "id": "T033",
+    "topic": "热学",
+    "title": "理想气体多方过程的热功熵及绝热指数界限",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "多方过程",
+      "熵变",
+      "热容",
+      "机械功"
+    ],
+    "answer": "Q=n[C_V+R/(1-\\nu)](T_f-T_i),\\quad\\Delta S=n[C_V(1-\\nu)+R]\\ln(V_f/V_i)",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.1",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B",
+    "question": "有 \\(n\\) mol 理想气体、恒定摩尔热容 \\(C_V>0\\)，满足 \\(PV^\\nu=K\\)，其中 \\(\\nu\\ne1\\)，准静态由 \\((P_i,V_i,T_i)\\) 到 \\((P_f,V_f,T_f)\\)。记 \\(C_P=C_V+R\\)。\n(1) 求过程温度—体积关系；(2) 求气体做功与内能变化；(3) 求吸收热量和熵变；(4) 讨论 \\(\\nu=\\gamma=C_P/C_V\\) 与 \\(\\nu=0\\) 两种极限。\n",
+    "solution": "(1) 理想气体状态方程 \\(PV=nRT\\)，联立多方关系得\n\\[\nTV^{\\nu-1}=\\frac K{nR}=\\mathrm{const},\\quad\n\\frac{T_f}{T_i}=(V_i/V_f)^{\\nu-1}.\n\\]\n对给定端点不可以独立指定所有 \\(P,V,T\\)。\n\n(2) 对外做功 \\(W=\\int_{V_i}^{V_f}P\\,dV=K(V_f^{1-\\nu}-V_i^{1-\\nu})/(1-\\nu)\\)。利用 \\(PV=nRT\\) 可写\n\\[\nW=\\frac{nR(T_f-T_i)}{1-\\nu},\\qquad\n\\Delta U=nC_V(T_f-T_i).\n\\]\n\n(3) 第一定律 \\(Q=\\Delta U+W\\) 得\n\\[\nQ=n\\left(C_V+\\frac R{1-\\nu}\\right)(T_f-T_i).\n\\]\n熵是状态函数，\n\\[\n\\Delta S=nC_V\\ln(T_f/T_i)+nR\\ln(V_f/V_i)\n=n[C_V(1-\\nu)+R]\\ln(V_f/V_i).\n\\]\n不同 \\(\\nu\\) 可使热量的符号不同，不能只看 \\(\\Delta T\\)。\n\n(4) 若 \\(\\nu=\\gamma=1+R/C_V\\)，有 \\(C_V(1-\\nu)+R=0\\)，故 \\(\\Delta S=0,Q=0\\)，为可逆绝热。若 \\(\\nu=0\\)，过程等压 \\(P=K\\)，因此 \\(W=P(V_f-V_i)\\) 与 \\(Q=nC_P(T_f-T_i)\\)，由公式完全恢复。\n"
+  },
+  {
+    "id": "T034",
+    "topic": "热学",
+    "title": "孤立辐射球在零背景温度下的非线性冷却律与熵产生",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "辐射热传递",
+      "Stefan–Boltzmann",
+      "非线性微分方程",
+      "熵"
+    ],
+    "answer": "T(t)=T_0[1+3\\varepsilon\\sigma AT_0^3t/C]^{-1/3}",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.1",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B",
+    "question": "热容为常量 \\(C>0\\)、表面积为 \\(A>0\\)、表面发射率 \\(\\varepsilon\\in(0,1]\\) 的均温球体初温 \\(T_0>0\\)，置于可视为绝对零温、仅通过热辐射交换能量的巨大真空背景中。Stefan–Boltzmann 常数为 \\(\\sigma\\)，忽略温度变化引起的几何和热容改变。\n(1) 建立温度方程；(2) 求完整冷却曲线；(3) 求降到 \\(T_0/2\\) 所需时间；(4) 计算物体本身的熵变化并讨论长时间极限。\n",
+    "solution": "(1) 球的辐射功率 \\(P_{\\rm rad}=\\varepsilon\\sigma A T^4\\)，没有吸收的背景辐射，所以由第一定律 \\(C\\,dT/dt=-\\varepsilon\\sigma A T^4\\)。设 \\(\\kappa=\\varepsilon\\sigma A/C>0\\)，得 \\(\\dot T=-\\kappa T^4\\)。\n\n(2) 分离变量 \\(T^{-4}dT=-\\kappa dt\\)，从初态积分：\n\\[\n-\\frac1{3T(t)^3}+\\frac1{3T_0^3}=-\\kappa t,\n\\quad\nT(t)=T_0[1+3\\kappa T_0^3t]^{-1/3}.\n\\]\n只要 t 有限、T0>0，温度仍严格为正。\n\n(3) 令 \\(T(t_{1/2})=T_0/2\\)，得到 \\([1+3\\kappa T_0^3t_{1/2}]^{1/3}=2\\)，因此\n\\[\nt_{1/2}=\\frac7{3\\kappa T_0^3}\n=\\frac{7C}{3\\varepsilon\\sigma A T_0^3}.\n\\]\n温度下降导致功率迅速减小，不能假定恒定冷却速率。\n\n(4) 球的状态函数满足 \\(dS=C\\,dT/T\\)，故\n\\[\n\\Delta S_{\\rm ball}(t)=C\\ln[T(t)/T_0]\n=-\\frac C3\\ln[1+3\\kappa T_0^3t]<0.\n\\]\n物体熵降低不违背第二定律，因为它向外输出高熵的辐射；长时间 \\(T\\sim t^{-1/3}\\) 趋近零但不在有限时间达到零。\n"
+  },
+  {
+    "id": "T035",
+    "topic": "热学",
+    "title": "二维理想玻色气体的粒子数积分与无有限温度凝聚",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "二维Bose统计",
+      "态密度",
+      "巨正则系综",
+      "红外发散"
+    ],
+    "answer": "\\mu=k_BT\\ln(1-e^{-n\\lambda_T^2}),\\quad T_c=0",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.1",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C",
+    "question": "二维面积 \\(A\\) 上有 \\(N\\gg1\\) 个无自旋、无相互作用、质量 \\(m\\) 的自由玻色粒子，单粒子能量 \\(\\epsilon_{\\boldsymbol k}=\\hbar^2k^2/(2m)\\)。温度 \\(T>0\\)，化学势 \\(\\mu<0\\)，热德布罗意波长 \\(\\lambda_T=\\sqrt{2\\pi\\hbar^2/(mk_BT)}\\)，粒子面密度 \\(n=N/A\\) 固定。\n(1) 计算二维单位面积的单粒子能量态密度；(2) 求激发态数密度与逸度 \\(z=e^{\\mu/(k_BT)}\\) 的关系；(3) 证明在任意有限温度下无三维那样的热力学 Bose 凝聚临界点；(4) 求固定 n 下的化学势函数与低温渐近。\n",
+    "solution": "(1) 二维 k 空间单位面积每个态占据 \\((2\\pi)^2/A\\)，累计态数 \\(N_1(E)=A(2\\pi)^{-2}\\pi k^2=AmE/(2\\pi\\hbar^2)\\)。故单位面积能量态密度是常数\n\\[\nD(E)=\\frac m{2\\pi\\hbar^2},\\qquad E>0.\n\\]\n\n(2) Bose 粒子数密度为\n\\[\nn=\\int_0^\\infty\\frac{D(E)}{z^{-1}e^{E/(k_BT)}-1}\\,dE\n=-\\frac1{\\lambda_T^2}\\ln(1-z).\n\\]\n该积分可用展开 \\(\\sum_{\\ell\\ge1}z^\\ell e^{-\\ell\\beta E}\\) 后逐项积分得到，要求 0<z<1。\n\n(3) 固定 T>0，当 z→1⁻，\\(-\\ln(1-z)\\to\\infty\\)，激发态面密度没有有限上界。因此任何有限 n 都可选某个 z<1 使激发态容纳全部粒子，不出现三维理想气体那样因激发态饱和而产生的有限 Tc 凝聚。\n\n(4) 反解上式得 \\(z=1-e^{-n\\lambda_T^2}\\)，故\n\\[\n\\mu(T)=k_BT\\ln[1-e^{-n\\lambda_T^2}]<0.\n\\]\n当 T→0⁺，\\(n\\lambda_T^2\\propto1/T\\to\\infty\\)，所以 \\(\\mu\\sim-k_BT e^{-n\\lambda_T^2}\\to0^-\\)，但任何正温度的 \\(\\mu\\) 仍严格为负。\n"
   },
   {
     "id": "W007",
