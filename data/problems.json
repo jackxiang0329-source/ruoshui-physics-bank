@@ -1447,6 +1447,117 @@
     "solution": "(1) 用 \\(\\nabla\\times\\boldsymbol B=\\mu\\boldsymbol J=\\mu\\sigma\\boldsymbol E\\) 与 \\(\\nabla\\times\\boldsymbol E=-\\partial_t\\boldsymbol B\\)，对前式取旋度，并使用 \\(\\nabla\\cdot\\boldsymbol B=0\\)：\n\\[\n-\\nabla^2\\boldsymbol B=-\\mu\\sigma\\partial_t\\boldsymbol B\n\\quad\\Rightarrow\\quad \\partial_t\\boldsymbol B=\\frac1{\\mu\\sigma}\\nabla^2\\boldsymbol B.\n\\]\n\n(2) 对一维磁场取 \\(B_z=\\Re[\\mathcal B(x)e^{-i\\omega t}]\\)，有 \\(\\mathcal B''=-i\\omega\\mu\\sigma\\mathcal B\\)。满足 \\(x\\to\\infty\\) 有界的解为\n\\[\n\\mathcal B(x)=B_0e^{-(1-i)x/\\delta},\\quad\n\\delta=\\sqrt{\\frac2{\\mu\\sigma\\omega}},\n\\]\n因为 \\((1-i)^2/\\delta^2=-i\\omega\\mu\\sigma\\)。δ 为振幅衰减到 1/e 的深度，不是强度的 1/e 深度。\n\n(3) 由 Ampere 定律 \\(J_y=-(1/\\mu)\\partial_x B_z\\)，复电流幅值\n\\[\n\\mathcal J_y=\\frac{1-i}{\\mu\\delta}B_0e^{-(1-i)x/\\delta}.\n\\]\n均匀电导体平均体积焦耳热为\n\\[\n\\overline p_J(x)=\\frac{|\\mathcal J_y|^2}{2\\sigma}\n=\\frac{|B_0|^2}{\\sigma\\mu^2\\delta^2}e^{-2x/\\delta}>0.\n\\]\n它沿深度指数衰减，能量由表面输入后耗散为热。\n\n(4) 在固定 \\(\\mu,\\sigma\\) 下 \\(\\delta\\propto\\omega^{-1/2}\\)，低频磁场更深地穿入导体；\\(\\omega\\to0\\) 给 δ→∞，而采用的半无限导体、无位移电流近似仍需在静态极限下单独看边界条件。\n"
   },
   {
+    "id": "E035",
+    "topic": "电磁学",
+    "title": "均匀极化球体的束缚电荷、去极化电场及偶极势",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "极化束缚电荷",
+      "边界条件",
+      "偶极矩"
+    ],
+    "answer": "\\boldsymbol E_{\\rm in}=-\\boldsymbol P/(3\\epsilon_0),\\quad \\boldsymbol p=4\\pi a^3\\boldsymbol P/3",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.1",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B",
+    "question": "真空中半径为 a 的球体具有外部维持的均匀固定极化强度 \\(\\boldsymbol P=P_0\\hat z\\)，\\(P_0>0\\)，球体无自由电荷，球外真空且忽略极化随场变化。\n(1) 求体束缚电荷密度与面束缚电荷；(2) 求总电偶极矩；(3) 通过球内外 Laplace 电势与边界条件求内部去极化场；(4) 写出球外远场电势，检验全空间总束缚电荷为零。\n",
+    "solution": "(1) 均匀极化给 \\(\\rho_b=-\\nabla\\cdot\\boldsymbol P=0\\)。球面外法向为 \\(\\hat r\\)，故 \\(\\sigma_b(\\theta)=\\boldsymbol P\\cdot\\hat r=P_0\\cos\\theta\\)。正负面电荷分布于相反半球。\n\n(2) 极化分布产生的总偶极矩是 \\(\\boldsymbol p=\\int_{\\rm sphere}\\boldsymbol P\\,dV=(4\\pi a^3/3)P_0\\hat z\\)。亦可直接积分表面面电荷的 \\(\\int\\boldsymbol r\\sigma_b\\,dA\\)，两法结果一致。\n\n(3) 设内部电势为 \\(\\phi_{\\rm in}=Ar\\cos\\theta\\)，外部为 \\(\\phi_{\\rm out}=B\\cos\\theta/r^2\\)。球面电势连续给 \\(B=Aa^3\\)。法向电位移连续条件用 \\(D_{\\rm in}=\\epsilon_0E_{\\rm in}+P\\)，\\(D_{\\rm out}=\\epsilon_0E_{\\rm out}\\)：\n\\[\n\\epsilon_0(-A)+P_0=\\epsilon_0(2B/a^3)=2\\epsilon_0A.\n\\]\n所以 \\(A=P_0/(3\\epsilon_0)\\)，内部场\n\\[\n\\boldsymbol E_{\\rm in}=-\\nabla\\phi_{\\rm in}\n=-\\frac{\\boldsymbol P}{3\\epsilon_0},\n\\]\n是均匀的去极化场。\n\n(4) 外部势为 \\(\\phi_{\\rm out}=P_0a^3\\cos\\theta/(3\\epsilon_0r^2)=p\\cos\\theta/(4\\pi\\epsilon_0r^2)\\)，恰是点偶极子势。总束缚电荷 \\(Q_b=\\int\\sigma_b\\,dA=P_0a^2\\int\\cos\\theta\\,d\\Omega=0\\)。\n"
+  },
+  {
+    "id": "E036",
+    "topic": "电磁学",
+    "title": "互感耦合双电感回路的对称模、能量正定与非振荡衰减",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "互感矩阵",
+      "电阻耦合",
+      "本征模",
+      "能量正性"
+    ],
+    "answer": "\\tau_\\pm=(L\\pm M)/R,\\quad \\dot U=-R(I_1^2+I_2^2)",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.1",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C",
+    "question": "两只完全相同的电感回路各具有自感 L>0、电阻 R>0，互感为 M，满足 |M|<L。选择两个回路电流的正方向使互感项为 +M，初始电流 I₁(0),I₂(0)，之后没有外加电源和电容。\n(1) 建立耦合一阶电路方程；(2) 求同相、反相电流模态的衰减时间；(3) 求磁场能量和电阻耗散速率，证明能量正定且下降；(4) 讨论 M→0 与 M→L⁻ 的奇异极限。\n",
+    "solution": "(1) 磁通链接分别为 \\(\\Phi_1=LI_1+MI_2\\)、\\(\\Phi_2=MI_1+LI_2\\)。Kirchhoff 方程为\n\\[\nL\\dot I_1+M\\dot I_2+RI_1=0,\\qquad\nM\\dot I_1+L\\dot I_2+RI_2=0.\n\\]\n\n(2) 定义 \\(I_+=I_1+I_2,\\ I_-=I_1-I_2\\)，相加减得\n\\[\n(L+M)\\dot I_++RI_+=0,\\quad\n(L-M)\\dot I_-+RI_-=0.\n\\]\n因此 \\(I_\\pm(t)=I_\\pm(0)e^{-t/\\tau_\\pm}\\)，其中 \\(\\tau_\\pm=(L\\pm M)/R>0\\)，回路电流由 \\(I_{1,2}=(I_+\\pm I_-)/2\\) 恢复。\n\n(3) 磁能 \\(U=\\frac12L(I_1^2+I_2^2)+MI_1I_2=\\frac14[(L+M)I_+^2+(L-M)I_-^2]\\)。因 |M|<L 两个系数严格正，故非零电流必有正能量。由电路方程乘以对应电流并相加得\n\\[\n\\dot U=-R(I_1^2+I_2^2)\\le0.\n\\]\n这就是电阻焦耳热守恒关系。\n\n(4) M→0 时两个时间常数均趋 L/R，回路独立指数衰减。M→L⁻ 时反相模 \\(\\tau_-\\to0\\)，磁矩阵趋向奇异；严格 M=L 时失去反相磁能的正定性，因此不能不加限制地把 M=L 代入普通微分方程。\n"
+  },
+  {
+    "id": "E037",
+    "topic": "电磁学",
+    "title": "时变均匀磁场中的圆形金属环感应热与机械反作用",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "法拉第感应",
+      "焦耳热",
+      "楞次定律"
+    ],
+    "answer": "I=-\\pi a^2b/R,\\quad P_J=\\pi^2a^4b^2/R",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.1",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B",
+    "question": "一个半径 a、总电阻 R>0 的细圆形导线环位于 xy 平面，外界沿 +z 方向施加空间均匀、缓慢变化的磁场 B(t)=B₀+bt，其中 b>0。忽略导线自感、辐射、磁场非均匀性和温升导致的电阻变化。\n(1) 求环上的感应电动势和电流方向；(2) 求环中每秒焦耳热；(3) 求维持外磁场的源装置所必须补偿的平均能量流；(4) 若把 b 的符号反向，讨论电流和发热的变化。\n",
+    "solution": "(1) 圆环磁通 \\(\\Phi_B=\\pi a^2(B_0+bt)\\)。沿 +z 观察取逆时针为环路正向，法拉第定律给\n\\[\n\\mathcal E=-\\frac{d\\Phi_B}{dt}=-\\pi a^2b .\n\\]\n故电流 \\(I=\\mathcal E/R=-\\pi a^2b/R\\)，沿 +z 观察为顺时针，其自生磁场反对正在增长的 +z 外场。\n\n(2) 电阻热功率为\n\\[\nP_J=I^2R=\\frac{\\pi^2a^4b^2}{R}>0.\n\\]\n在 b 恒定且自感可忽略时电流恒定。若考虑有限自感，启停瞬态会出现额外储磁能项，本题已排除这一过程。\n\n(3) 源装置维持外磁场变化时必须承担因感应电流而出现的附加功率；对电流环，电源对电荷的非保守电场做功率 \\(\\mathcal E I=\\mathcal E^2/R=P_J\\)，在静态环没有机械位移时全部耗散为热。故能量不由“磁力对电荷做功”直接产生，磁场变化依赖外部源的供能。\n\n(4) 若 b<0，\\(\\mathcal E\\) 和 I 同时反向，环产生的磁场阻碍外磁通减小；热功率 \\(P_J\\propto b^2\\) 不变。这也验证楞次定律改变的是感应电流方向而非焦耳热正性。\n"
+  },
+  {
+    "id": "E038",
+    "topic": "电磁学",
+    "title": "线性带电圆环的轴向电势、稳定性与多极展开",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "库仑势积分",
+      "电场稳定",
+      "多极展开"
+    ],
+    "answer": "\\phi=Q/[4\\pi\\epsilon_0\\sqrt{a^2+z^2}],\\quad\\omega^2=|q|Q/(4\\pi\\epsilon_0ma^3)",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.1",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B",
+    "question": "半径 a>0 的绝缘细圆环均匀带电总量 Q>0，位于 xy 平面且圆心在原点。真空介电常数 \\(\\epsilon_0\\)。质量 m、电荷 q 的测试微粒只允许沿 z 轴移动。\n(1) 求轴上任意 z 的电势；(2) 求电场与平衡点及稳定性；(3) 求 z≪a 附近的小振动频率条件；(4) 求 z≫a 的电势前两项，解释单极与四极修正。\n",
+    "solution": "(1) 环上每个电荷元到轴上 z 点的距离均为 \\(\\sqrt{a^2+z^2}\\)，电势线性叠加立即给\n\\[\n\\phi(z)=\\frac{Q}{4\\pi\\epsilon_0\\sqrt{a^2+z^2}}.\n\\]\n这里无须作角积分，因为距离对环上角度不变。\n\n(2) 轴向电场由导数得\n\\[\nE_z=-\\phi'(z)=\\frac{Qz}{4\\pi\\epsilon_0(a^2+z^2)^{3/2}}.\n\\]\n测试粒子受力 \\(F_z=qE_z\\)，平衡位置 z=0；附近线性力 \\(F_z\\simeq qQz/(4\\pi\\epsilon_0a^3)\\)，当 qQ<0 时回复稳定，qQ>0 时排斥不稳定。\n\n(3) 对稳定异号电荷 q<0，牛顿方程近似为 \\(m\\ddot z=-|q|Qz/(4\\pi\\epsilon_0a^3)\\)，所以小振动角频率\n\\[\n\\omega=\\sqrt{|q|Q/(4\\pi\\epsilon_0ma^3)}.\n\\]\n若 q>0，频率平方为负而出现指数不稳定，不能把其绝对值称为振动频率。\n\n(4) 对 z≫a 且 z>0，使用二项展开\n\\[\n\\phi(z)=\\frac{Q}{4\\pi\\epsilon_0z}(1+a^2/z^2)^{-1/2}\n=\\frac{Q}{4\\pi\\epsilon_0z}\\left[1-\\frac{a^2}{2z^2}+O(a^4/z^4)\\right].\n\\]\n首项是总净电荷的单极场；因对称性偶极矩为零，下一项为四极阶修正。\n"
+  },
+  {
+    "id": "E039",
+    "topic": "电磁学",
+    "title": "平面电磁波的 Maxwell 应力、辐射压与反射动量",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "电磁动量",
+      "坡印廷通量",
+      "辐射压"
+    ],
+    "answer": "p_{\\rm abs}=I/c,\\quad p_{\\rm ref}=2I/c",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.1",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B",
+    "question": "真空中一束截面积 A 的平面单色电磁波沿 +z 传播，时间平均坡印廷通量大小为 \\(I>0\\)，光速 c。正入射到足够大、静止的理想吸收板或理想镜面反射板，忽略透射、边缘效应。\n(1) 求入射波单位体积平均能量密度与动量密度；(2) 求理想全吸收板辐射压与受力；(3) 求理想全反射镜的辐射压与受力；(4) 用每单位时间的光子动量账目核验两者的倍数关系。\n",
+    "solution": "(1) 平面波的平均总电磁能量密度为 \\(u=I/c\\)，动量密度为 \\(\\boldsymbol g=\\boldsymbol S/c^2=(I/c^2)\\hat z\\)。在真空中能量以 c 传播，故单位面积每秒携带的能量是 I、动量是 I/c。\n\n(2) 全吸收板每单位时间吸收动量大小 \\(IA/c\\)，板受到的平均法向力 \\(F_{\\rm abs}=IA/c\\)，辐射压\n\\[\np_{\\rm abs}=F_{\\rm abs}/A=I/c.\n\\]\n能量沉积为板的热能或其他内部能，这不影响入射动量吸收率。\n\n(3) 理想反射镜把每份入射光子沿 z 的动量从 \\(+p\\) 改为 \\(-p\\)，光的动量改变为 \\(-2p\\)，镜获得 \\(+2p\\)。故\n\\[\nF_{\\rm ref}=2IA/c,\\qquad p_{\\rm ref}=2I/c.\n\\]\n系数2并不要求光在反射时损失额外能量：静止理想镜使光子能量保持不变，但方向反转。\n\n(4) 取每个光子能量 \\(\\hbar\\omega\\)，动量 \\(\\hbar\\omega/c\\)，光子流率 \\(\\dot N=IA/(\\hbar\\omega)\\)。全吸收传递动量 \\(\\dot N\\hbar\\omega/c=IA/c\\)；全反射传递两倍。与经典 Maxwell 应力动量流结果一致。\n"
+  },
+  {
     "id": "T007",
     "topic": "热学",
     "title": "导热可动活塞的不可逆终态与熵产生",
