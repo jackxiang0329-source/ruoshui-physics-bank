@@ -1602,6 +1602,29 @@
     "complexity_tier": "L5-C"
   },
   {
+    "id": "W022",
+    "topic": "振动与波动",
+    "title": "平行金属板波导的 TE 模截止、相群速度和功率流",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "question": "两片无限理想导体平板位于 $x=0$ 与 $x=a$，$a>0$，板间填充介电常数 $\\epsilon>0$、磁导率 $\\mu>0$ 的无损均匀介质。波导沿 $+z$ 无限延伸，研究 $y$ 偏振的最低阶 TE 型模式，其电场按复表示为\n\\[\nE_y(x,z,t)=E_0\\sin(\\pi x/a)e^{i(k_z z-\\omega t)}\n\\]\n且其他电场分量为零，$\\omega>0$。取 $e^{-i\\omega t}$ 时间相位约定。\n(1) 从介质中的 Helmholtz 方程和理想导体切向电场边界条件推导 $k_z(\\omega)$ 及截止频率；(2) 求高于截止时的相速度、群速度与 TE 波阻抗，解释相速度大于介质光速为何不违反因果律；(3) 从 Maxwell–Faraday 公式求磁场的 $H_x,H_z$ 分量，并计算横截面平均坡印廷功率流；(4) 对低于截止的频率求沿波导方向的倏逝长度，讨论此时为何没有向无限远输运的平均功率。",
+    "solution": "(1) 无源均匀介质中的电场满足 $\\nabla^2\\boldsymbol E+\\omega^2\\mu\\epsilon\\boldsymbol E=0$。理想金属壁上切向电场必须为零，故 $\\sin(\\pi x/a)$ 在两壁满足条件。将给定模态代入电场 Helmholtz 方程：\n\\[\n-\\left[(\\pi/a)^2+k_z^2\\right]E_y+\\omega^2\\mu\\epsilon E_y=0,\n\\]\n因此\n\\[\nk_z^2=\\mu\\epsilon\\omega^2-(\\pi/a)^2\n=\\mu\\epsilon(\\omega^2-\\omega_c^2),\\quad\n\\omega_c=\\frac{\\pi}{a\\sqrt{\\mu\\epsilon}}.\n\\]\n$\\omega>\\omega_c$ 时选择 $k_z>0$ 描述向右传播模式，$\\omega<\\omega_c$ 时 $k_z$ 为纯虚数而非传播波数。\n\n(2) 记介质均匀波速 $c_m=1/\\sqrt{\\mu\\epsilon}$，高于截止时有\n\\[\nk_z=\\frac1{c_m}\\sqrt{\\omega^2-\\omega_c^2},\n\\quad\nv_{\\rm ph}=\\frac{\\omega}{k_z}\n=\\frac{c_m}{\\sqrt{1-\\omega_c^2/\\omega^2}},\n\\]\n\\[\nv_g=\\frac{d\\omega}{dk_z}\n=c_m\\sqrt{1-\\omega_c^2/\\omega^2},\\qquad\nv_{\\rm ph}v_g=c_m^2.\n\\]\n从磁场横向分量可定义 TE 波阻抗 $Z_{\\rm TE}=|E_y/H_x|=\\omega\\mu/k_z$。靠近截止时 $v_{\\rm ph}\\to\\infty$，但能量与窄带波包传播速度 $v_g\\to0$，所以相速度超过 $c_m$ 并不表示信息超光速。\n\n(3) 在给定时间约定下，Faraday 定律为 $\\nabla\\times\\boldsymbol E=i\\omega\\mu\\boldsymbol H$。由于 $\\boldsymbol E=E_y\\hat y$，有 $(\\nabla\\times\\boldsymbol E)_x=-\\partial_zE_y$、$(\\nabla\\times\\boldsymbol E)_z=\\partial_xE_y$，因此\n\\[\nH_x=-\\frac{k_z}{\\omega\\mu}E_y,\\qquad\nH_z=-i\\frac{\\pi}{\\omega\\mu a}E_0\\cos(\\pi x/a)e^{i(k_z z-\\omega t)}.\n\\]\n平均坡印廷流的纵向分量是 $\\overline S_z=-\\frac12\\Re(E_yH_x^*)$，故在 $k_z>0$ 的传播模式中\n\\[\n\\overline S_z(x)=\\frac{k_z|E_0|^2}{2\\omega\\mu}\\sin^2(\\pi x/a).\n\\]\n对每单位 $y$ 向宽度积分得到\n\\[\n\\overline P_{\\rm per\\,width}\n=\\int_0^a\\overline S_z\\,dx\n=\\frac{ak_z|E_0|^2}{4\\omega\\mu}>0.\n\\]\n\n(4) 当 $0<\\omega<\\omega_c$，定义 $\\kappa=\\sqrt{(\\pi/a)^2-\\mu\\epsilon\\omega^2}>0$，选择沿 $+z$ 不发散的支为 $k_z=i\\kappa$，电场幅值 $\\propto e^{-\\kappa z}$，所以 $1/e$ 振幅衰减长度为 $\\ell_{\\rm ev}=1/\\kappa$。此时 $H_x=-i\\kappa E_y/(\\omega\\mu)$，它相对于 $E_y$ 相差 $\\pi/2$，因而 $\\Re(E_yH_x^*)=0$，沿波导的周期平均功率流为零。这表示纯倏逝模式不向无限远传输功率，而非局部电磁场严格为零。",
+    "answer": "\\omega_c=\\pi/(a\\sqrt{\\mu\\epsilon}),\\quad v_{\\rm ph}v_g=1/(\\mu\\epsilon),\\quad\\overline P/a_y=ak_z|E_0|^2/(4\\omega\\mu)",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "麦克斯韦波导",
+      "截止频率",
+      "TE阻抗",
+      "相速度群速度",
+      "坡印廷能流"
+    ],
+    "revision": "composite-v1.8",
+    "complexity_tier": "L5-C",
+    "challenge_profile": "high-multistage"
+  },
+  {
     "id": "O007",
     "topic": "光学",
     "title": "分离薄透镜系统的矩阵成像与无焦条件",
@@ -1967,6 +1990,29 @@
     "complexity_tier": "L4-C"
   },
   {
+    "id": "O022",
+    "topic": "光学",
+    "title": "高斯角谱非相干扩展光源的双缝相干度与条纹可见度",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "question": "两条等强度、理想极窄的平行狭缝间隔为 $d>0$，由远处空间扩展、各方向相互不相干但具有相同中心波长 $\\lambda>0$ 的光源照明。入射光的角度 $\\alpha$ 围绕零方向服从归一化高斯强度分布\n\\[\np(\\alpha)=\\frac1{\\sqrt{2\\pi}\\sigma}\\exp[-\\alpha^2/(2\\sigma^2)],\n\\]\n其中 $\\sigma>0$ 足够小，观察屏的衍射角 $\\theta$ 也处于近轴范围。每个入射方向自身照射两缝是完全相干的，但不同 $\\alpha$ 的光强而非振幅相加。\n(1) 对固定入射角 $\\alpha$，写出两狭缝在观察方向 $\\theta$ 的远场干涉强度；(2) 对角分布积分求总光强与条纹可见度；(3) 定义条纹可见度衰减到 $1/e$ 时的狭缝间距为横向相干长度，求其表达式；(4) 讨论点源极限 $\\sigma\\to0^+$、大缝距极限以及为何不应将不同入射角的复振幅直接相加。",
+    "solution": "(1) 在近轴条件下，由不同入射方向的波前倾斜产生两缝入射相位差 $-kd\\alpha$，而向观察方向 $\\theta$ 传播产生的相位差为 $kd\\theta$，其中 $k=2\\pi/\\lambda$。因此对给定入射角，两缝同强度的远场干涉强度可写为\n\\[\nI_\\alpha(\\theta)=2I_0p(\\alpha)[1+\\cos(kd(\\theta-\\alpha))],\n\\]\n这里 $I_0$ 定义为全部角分布积分后任一单缝的单独光强，且两缝理想窄、忽略单缝衍射包络变化。\n\n(2) 由于不同入射角属于相互不相干的光源分量，实验探测的总强度是 $\\int I_\\alpha\\,d\\alpha$，而不是各角复振幅相加。利用高斯分布的特征函数\n\\[\n\\int_{-\\infty}^\\infty p(\\alpha)e^{-ikd\\alpha}\\,d\\alpha\n=\\exp[-(kd\\sigma)^2/2]\n\\]\n且角分布关于零对称，可得\n\\[\nI(\\theta)=2I_0\\left[1+\ne^{-(kd\\sigma)^2/2}\\cos(kd\\theta)\\right].\n\\]\n条纹的最大、最小强度为 $2I_0(1\\pm V)$，故可见度\n\\[\nV=\\frac{I_{\\max}-I_{\\min}}{I_{\\max}+I_{\\min}}\n=e^{-(kd\\sigma)^2/2}\n=\\exp[-2\\pi^2d^2\\sigma^2/\\lambda^2].\n\\]\n\n(3) 定义 $V(d_{\\rm coh})=1/e$，则 $(kd_{\\rm coh}\\sigma)^2/2=1$，所以\n\\[\nd_{\\rm coh}=\\frac{\\sqrt2}{k\\sigma}\n=\\frac{\\lambda}{\\sqrt2\\pi\\sigma}.\n\\]\n光源角宽越大，横向相干长度越短；波长越长，在给定角尺度下的相干长度越长。此长度定义依赖于指定的高斯模型和 $1/e$ 阈值。\n\n(4) 当 $\\sigma\\to0^+$ 时光源趋于单一方向，$V\\to1$，恢复完全相干双缝干涉。固定 $\\sigma>0$ 而 $d\\to\\infty$，$V\\to0$，条纹被各入射方向相位平均抹掉，但单缝总强度仍存在。若错误地把不同 $\\alpha$ 的复振幅先相加再取模平方，就会引入源分量之间实际上不存在的干涉项，得到错误的相干程度。这一处理体现了光源角谱与横向相干度的傅里叶关系。",
+    "answer": "V=\\exp[-2\\pi^2d^2\\sigma^2/\\lambda^2],\\quad d_{\\rm coh}=\\lambda/(\\sqrt2\\pi\\sigma)",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "部分相干光学",
+      "互强度傅里叶关系",
+      "高斯角谱",
+      "双缝干涉",
+      "相干长度"
+    ],
+    "revision": "composite-v1.8",
+    "complexity_tier": "L5-B",
+    "challenge_profile": "high-multistage"
+  },
+  {
     "id": "Q007",
     "topic": "近代物理",
     "title": "相对论两体衰变的能量区间与阈值",
@@ -2330,5 +2376,28 @@
     "revision": "composite-v1.7",
     "challenge_profile": "high-multistage",
     "complexity_tier": "L5-B"
+  },
+  {
+    "id": "Q022",
+    "topic": "近代物理",
+    "title": "双同种自旋半粒子在谐振子阱中的 Pauli 对称性与交换关联",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "question": "两个相同且互不相互作用的自旋 $1/2$ 费米粒子各有质量 $m>0$，都被约束在同一个一维谐振子势 $U(x)=m\\omega^2x^2/2$ 中，$\\omega>0$。单粒子空间轨道记为 $\\phi_n(x)$，能量 $\\varepsilon_n=(n+1/2)\\hbar\\omega$，$n=0,1,\\ldots$。不考虑自旋相关外场、粒子间排斥或交换相互作用项。\n(1) 从相同费米子的总波函数反对称性求两粒子基态的自旋和空间波函数、总能量；(2) 求第一次激发能量层中使用 $n=0,1$ 两轨道的所有允许空间与自旋组合，给出态数与能量；(3) 对该能量层的自旋三重态证明两粒子在同一位置同时出现的空间概率密度严格为零，并对自旋单重态说明差别；(4) 若去除自旋自由度，只剩全同自旋极化费米子，求基态占据和能量，并解释交换关联不是来自额外经典排斥力。",
+    "solution": "(1) 相同费米子的总波函数在交换粒子1、2时必须变号。两粒子在最低轨道 $\\phi_0$ 的空间波函数是对称的 $\\Phi_{00}(x_1,x_2)=\\phi_0(x_1)\\phi_0(x_2)$，故自旋只能取反对称单重态\n\\[\n|s\\rangle=\\frac1{\\sqrt2}(|\\uparrow\\downarrow\\rangle-|\\downarrow\\uparrow\\rangle).\n\\]\n基态总能量为 $E_{\\rm ground}=2\\varepsilon_0=\\hbar\\omega$。它是唯一的基态（忽略外部规范简并），不能让两颗相同自旋的费米子都占据同一空间自旋轨道。\n\n(2) 第一激发层由一个粒子占据 $n=0$、另一个占据 $n=1$ 组成，总能量 $E_{01}=\\varepsilon_0+\\varepsilon_1=2\\hbar\\omega$。两个归一化空间组合是\n\\[\n\\Phi_S=\\frac{\\phi_0(x_1)\\phi_1(x_2)+\\phi_1(x_1)\\phi_0(x_2)}{\\sqrt2},\n\\quad\n\\Phi_A=\\frac{\\phi_0(x_1)\\phi_1(x_2)-\\phi_1(x_1)\\phi_0(x_2)}{\\sqrt2}.\n\\]\n$\\Phi_S$ 对称，须配反对称自旋单重态；$\\Phi_A$ 反对称，须配三个对称自旋三重态\n\\[\n|\\uparrow\\uparrow\\rangle,\\quad\n(|\\uparrow\\downarrow\\rangle+|\\downarrow\\uparrow\\rangle)/\\sqrt2,\\quad\n|\\downarrow\\downarrow\\rangle.\n\\]\n故该能量层有 $1+3=4$ 个独立总态，均满足总交换反对称性。\n\n(3) 对三重态，其空间因子为 $\\Phi_A$，在 $x_1=x_2=x$ 时\n\\[\n\\Phi_A(x,x)=\\frac{\\phi_0(x)\\phi_1(x)-\\phi_1(x)\\phi_0(x)}{\\sqrt2}=0.\n\\]\n因此同位联合概率密度严格为零，表现为交换反相关。单重态配的是 $\\Phi_S$，其同位振幅为 $\\Phi_S(x,x)=\\sqrt2\\,\\phi_0(x)\\phi_1(x)$，除轨道节点外可非零。二者的区别来自空间宇称交换对称性，而非不同的直接作用势能。\n\n(4) 如果两个粒子的自旋均固定在同一极化方向，总自旋因子对称，空间波函数必须反对称。最低允许占据是一个 $n=0$、另一个 $n=1$，故最低总能量为\n\\[\nE_{\\rm polarised}=\\varepsilon_0+\\varepsilon_1=2\\hbar\\omega.\n\\]\n相比允许自旋单重态的两粒子基态，其能量更高，但哈密顿量中从未加入经典粒子间排斥项；这正是 Pauli 对称性约束导致的纯交换效应。",
+    "answer": "E_{\\rm ground}=\\hbar\\omega,\\quad E_{01}=2\\hbar\\omega,\\quad E_{\\rm polarised}=2\\hbar\\omega",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "相同粒子交换对称性",
+      "谐振子本征态",
+      "单三重态",
+      "Pauli不相容原理",
+      "空间关联"
+    ],
+    "revision": "composite-v1.8",
+    "complexity_tier": "L5-C",
+    "challenge_profile": "high-multistage"
   }
 ]
