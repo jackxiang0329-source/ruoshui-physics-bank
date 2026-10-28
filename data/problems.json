@@ -3896,6 +3896,29 @@
     "solution": "(1) 一条中心位于 x0 的宽 a 狭缝远场振幅正比\n\\[\nA_1(\\theta)=E_0\\int_{-a/2}^{a/2}e^{ikx\\sin\\theta}\\,dx\n=E_0a\\frac{\\sin\\beta}{\\beta},\n\\quad \\beta=\\frac{\\pi a\\sin\\theta}{\\lambda}.\n\\]\n其强度包络为 \\(\\mathrm{sinc}^2\\beta\\)。\n\n(2) 两缝中心相距 d，复振幅之和多出 \\(2\\cos\\delta\\) 因子，其中 \\(\\delta=\\pi d\\sin\\theta/\\lambda\\)。归一化总强度\n\\[\nI(\\theta)=4I_1(0)\\left(\\frac{\\sin\\beta}{\\beta}\\right)^2\\cos^2\\delta.\n\\]\n中心 θ=0 处强度是一个狭缝峰值的4倍，因两缝场同相叠加。\n\n(3) 双缝相长位置 \\(d\\sin\\theta=m\\lambda,\\ m\\in\\mathbb Z\\)。单缝衍射零点位置 \\(a\\sin\\theta=j\\lambda\\)，其中 j 为非零整数。两个条件分别来自干涉因子和单缝振幅，不能互相代替。\n\n(4) 若某干涉主极大恰满足单缝零点，则该级消失。联立给 \\(m a/d=j\\)，即 \\(m=j d/a\\) 必须是整数。特别当 d/a 为整数 p，所有非零的第 p、2p、3p……级干涉峰缺失。此结论假设两缝相同且完全相干，真实有限孔径与对准误差会使零点不完全消光。\n"
   },
   {
+    "id": "O040",
+    "topic": "光学",
+    "title": "线性色散传播中高斯脉冲的时宽展宽与啁啾",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "脉冲色散",
+      "复高斯积分",
+      "群速度色散",
+      "时间带宽"
+    ],
+    "answer": "T(z)=T_0\\sqrt{1+(\\beta_2z/T_0^2)^2}",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.1",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C",
+    "question": "一维光学慢变包络 \\(A(z,t)\\) 在随群速度移动的时间坐标 \\(t\\) 中满足 \\(\\partial_z A=-(i\\beta_2/2)\\partial_t^2 A\\)，其中群速度色散系数 \\(\\beta_2\\in\\mathbb R\\) 为常数。初始变换极限高斯脉冲为 \\(A(0,t)=A_0e^{-t^2/(2T_0^2)}\\)，\\(T_0>0\\)。忽略损耗和非线性。\n(1) 通过时间傅里叶变换解包络传播方程；(2) 求输出复包络的闭式；(3) 求强度 \\(1/e\\) 时间半宽及能量守恒；(4) 讨论 \\(\\beta_2=0\\) 和长距离极限。\n",
+    "solution": "(1) 取 Fourier 表示 \\(A(z,t)=\\int\\widetilde A(z,\\Omega)e^{-i\\Omega t}d\\Omega/(2\\pi)\\)。因 \\(\\partial_t^2\\mapsto-\\Omega^2\\)，方程化为\n\\[\n\\partial_z\\widetilde A=i\\beta_2\\Omega^2\\widetilde A/2,\\quad\n\\widetilde A(z,\\Omega)=\\widetilde A(0,\\Omega)e^{i\\beta_2z\\Omega^2/2}.\n\\]\n谱幅度模长不变，仅积累二次色散相位。\n\n(2) 初始 Fourier 高斯 \\(\\widetilde A(0,\\Omega)=A_0T_0\\sqrt{2\\pi}e^{-T_0^2\\Omega^2/2}\\)。令 \\(s=\\beta_2z/T_0^2\\)，完成 Gaussian 积分得到\n\\[\nA(z,t)=\\frac{A_0}{\\sqrt{1-is}}\n\\exp\\left[-\\frac{t^2}{2T_0^2(1-is)}\\right].\n\\]\n平方根分支从 z=0 的正值连续选取。\n\n(3) 输出强度\n\\[\n|A(z,t)|^2=\\frac{|A_0|^2}{\\sqrt{1+s^2}}\n\\exp[-t^2/(T_0^2(1+s^2))].\n\\]\n所以强度 \\(1/e\\) 半宽 \\(T(z)=T_0\\sqrt{1+s^2}\\)。积分全时间，峰值前因子 \\(1/\\sqrt{1+s^2}\\) 与宽度 \\(\\sqrt{1+s^2}\\) 抵消，故 \\(\\int|A|^2dt=|A_0|^2T_0\\sqrt\\pi\\) 守恒。\n\n(4) \\(\\beta_2=0\\) 时 s=0，脉冲不展宽；若 \\(|\\beta_2z|\\gg T_0^2\\)，则 \\(T(z)\\sim|\\beta_2|z/T_0\\)。色散展宽是频率分量群时延不同的结果，不需要吸收；本结论仅适用于二阶色散和线性传播模型。\n"
+  },
+  {
     "id": "Q007",
     "topic": "近代物理",
     "title": "相对论两体衰变的能量区间与阈值",
@@ -4481,5 +4504,96 @@
     "revision": "composite-v2.0",
     "challenge_profile": "high-multistage",
     "complexity_tier": "L5-C"
+  },
+  {
+    "id": "Q032",
+    "topic": "近代物理",
+    "title": "顺序 Stern–Gerlach 测量的投影概率与测量次序",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "自旋测量",
+      "投影算符",
+      "条件概率",
+      "不可交换性"
+    ],
+    "answer": "P_{\\rm joint}=(1+\\sin\\theta)(1+\\cos\\theta)/8",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.1",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B",
+    "question": "自旋1/2 粒子起初处于 \\(|+z\\rangle\\) 态。理想 Stern–Gerlach 装置先选择通过 \\(+x\\) 通道，再选择通过与 z 轴成角 θ（在 xz 平面、方向 \\(\\boldsymbol n=(\\sin\\theta,0,\\cos\\theta)\\)）的 \\(+\\boldsymbol n\\) 通道，最后测量 z 分量。只研究被选中的束流。\n(1) 求第一次 \\(+x\\) 选择的概率；(2) 求第二次 \\(+\\boldsymbol n\\) 选择的条件概率；(3) 求整个三次测量得到 \\(+z\\) 的联合概率；(4) 与不经过中间测量直接测量 z 的概率比较，解释不同测量顺序为何不同。\n",
+    "solution": "(1) 对自旋1/2，\\(|+x\\rangle=(|+z\\rangle+|-z\\rangle)/\\sqrt2\\)。因此初态经 \\(+x\\) 选择的概率\n\\[\nP(+x|+z)=|\\langle+x|+z\\rangle|^2=\\frac12.\n\\]\n选中后态坍缩为 \\(|+x\\rangle\\)。\n\n(2) 两个方向间夹角为 \\(\\alpha=\\arccos(\\hat x\\cdot\\boldsymbol n)=\\arccos(\\sin\\theta)\\)。自旋方向投影概率为 \\((1+\\cos\\alpha)/2\\)，故\n\\[\nP(+n|+x)=\\frac{1+\\sin\\theta}{2}.\n\\]\n\n(3) 第二次选中后的态为 \\(|+n\\rangle\\)，在 z 方向再次测得正自旋的概率 \\(P(+z|+n)=(1+\\cos\\theta)/2\\)。因此三次均通过指定通道的联合概率为\n\\[\nP_{\\rm joint}=\\frac12\\frac{1+\\sin\\theta}{2}\\frac{1+\\cos\\theta}{2}\n=\\frac{(1+\\sin\\theta)(1+\\cos\\theta)}8.\n\\]\n其中每一步是上一步选择后的条件概率，不能把角度直接加在同一个投影公式里。\n\n(4) 若没有中间的 x、n 测量，初始 \\(|+z\\rangle\\) 直接测得 \\(+z\\) 的概率为1；加入两次选择会降低全程通过的比例并改变量子态。非对易投影测量通常不可交换，测量过程不只是读取某个预先存在的经典三维自旋矢量。\n"
+  },
+  {
+    "id": "Q033",
+    "topic": "近代物理",
+    "title": "量子谐振子受恒定微弱电场扰动的一阶跃迁振幅",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "时间依赖微扰",
+      "谐振子矩阵元",
+      "选择定则",
+      "瞬时开关"
+    ],
+    "answer": "P_{0\\to1}(t)\\simeq[2F^2/(m\\hbar\\omega^3)]\\sin^2(\\omega t/2)",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.1",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C",
+    "question": "质量 m、角频率 ω 的一维量子谐振子起初处于基态 \\(|0\\rangle\\)，在 t=0 时突然打开并持续到 t>0 的微弱恒定外力 F，使扰动哈密顿量 \\(V(t)=-Fx\\)，其中 \\(x=\\sqrt{\\hbar/(2m\\omega)}(a+a^\\dagger)\\)。只计算外力的一阶时间依赖微扰贡献。\n(1) 写出谐振子坐标在 Fock 态的选择定则；(2) 求首次激发态的跃迁振幅；(3) 求相应最低非零跃迁概率；(4) 讨论 \\(t\\to0\\)、\\(t=2\\pi/\\omega\\) 时一阶结果及其适用范围。\n",
+    "solution": "(1) 位置算符 \\(x=\\sqrt{\\hbar/(2m\\omega)}(a+a^\\dagger)\\) 仅连接量子数相差1的 Fock 态。初态 n=0，非零的激发矩阵元只有\n\\[\nx_{10}=\\langle1|x|0\\rangle=\\sqrt{\\hbar/(2m\\omega)}.\n\\]\n对 n≥2，\\(\\langle n|x|0\\rangle=0\\)。\n\n(2) 交互绘景的一阶跃迁振幅\n\\[\nc_1^{(1)}(t)=-\\frac i\\hbar\\int_0^t V_{10}e^{i\\omega t'}dt'\n=\\frac{iFx_{10}}{\\hbar}\\frac{e^{i\\omega t}-1}{i\\omega}\n=\\frac{Fx_{10}}{\\hbar\\omega}(e^{i\\omega t}-1).\n\\]\n这是对任意有限 t 的一阶小 F 结果。\n\n(3) 取模平方得到\n\\[\nP_{0\\to1}(t)\\simeq |c_1^{(1)}|^2\n=\\frac{4F^2x_{10}^2}{\\hbar^2\\omega^2}\\sin^2\\frac{\\omega t}2\n=\\frac{2F^2}{m\\hbar\\omega^3}\\sin^2\\frac{\\omega t}2.\n\\]\n概率是二阶于 F，因为一阶振幅取模平方；若此估计不再远小于1，则微扰展开失效。\n\n(4) \\(t\\to0\\) 时 \\(\\sin(\\omega t/2)\\sim\\omega t/2\\)，故 \\(P\\simeq F^2t^2/(2m\\hbar\\omega)\\)。当 \\(t=2\\pi/\\omega\\) 时一阶跃迁振幅相消，概率到该阶为零；真实系统更高阶项仍可能贡献，不能把微扰零点称为严格无跃迁。\n"
+  },
+  {
+    "id": "Q034",
+    "topic": "近代物理",
+    "title": "量子重力反弹球的 Airy 本征态、零点和尺度律",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "Airy方程",
+      "量子重力",
+      "无限墙",
+      "能量尺度"
+    ],
+    "answer": "E_n=mg\\ell_g\\epsilon_n,\\quad \\ell_g=(\\hbar^2/(2m^2g))^{1/3}",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.1",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C",
+    "question": "质量为 m 的量子粒子只允许在 \\(z\\ge0\\) 运动，受重力势 \\(V(z)=mgz\\)，z=0 为无限高硬墙；边界条件 \\(\\psi(0)=0\\)、\\(\\psi(z)\\to0\\) 当 z→∞。\n(1) 将定态薛定谔方程化为 Airy 方程；(2) 写出归一化束缚态波函数及能级量子化条件；(3) 给出基态能量的尺度及首个 Airy 零点；(4) 由维里定理求动能与重力势能期望，并说明其与无限硬墙的兼容性。\n",
+    "solution": "(1) 定态方程\n\\[\n-\\frac{\\hbar^2}{2m}\\psi''+mgz\\psi=E\\psi.\n\\]\n定义长度 \\(\\ell_g=(\\hbar^2/(2m^2g))^{1/3}\\)、无量纲 \\(\\xi=z/\\ell_g-E/(mg\\ell_g)\\)，方程成为 \\(\\psi_{\\xi\\xi}=\\xi\\psi\\)，即 Airy 方程。\n\n(2) 一般解由 \\(\\mathrm{Ai}(\\xi),\\mathrm{Bi}(\\xi)\\) 组成，但 \\(\\mathrm{Bi}(\\xi)\\) 在 \\(\\xi\\to+\\infty\\) 发散，须剔除。墙面条件要求 \\(\\mathrm{Ai}(-\\epsilon_n)=0\\)，其中 \\(\\epsilon_n>0\\) 是 Ai 的负零点绝对值。故\n\\[\nE_n=mg\\ell_g\\epsilon_n,\\quad\n\\psi_n(z)=N_n\\mathrm{Ai}(z/\\ell_g-\\epsilon_n).\n\\]\n由 Airy 正交积分 \\(\\int_0^\\infty\\mathrm{Ai}(x-\\epsilon_n)^2dx=\\mathrm{Ai}'(-\\epsilon_n)^2\\)，可取 \\(N_n=[\\ell_g^{1/2}|\\mathrm{Ai}'(-\\epsilon_n)|]^{-1}\\)。\n\n(3) 第一根 \\(\\epsilon_1\\simeq2.3381074105\\)，所以 \\(E_1\\simeq2.3381074105\\,mg\\ell_g\\)，体现量子重力能量尺度 \\((\\hbar^2mg^2)^{1/3}\\) 的幂律。\n\n(4) 对线性势 \\(V=mgz\\)，量子维里关系 \\(2\\langle K\\rangle=\\langle z V'(z)\\rangle=\\langle V\\rangle\\)；硬墙虽提供约束，但因 \\(\\psi(0)=0\\)、墙位于 z=0，维里边界项对该形式为零。因此 \\(E=\\langle K\\rangle+\\langle V\\rangle=3\\langle K\\rangle\\)，故\n\\[\n\\langle K\\rangle=E_n/3,\\qquad\\langle V\\rangle=2E_n/3.\n\\]\n"
+  },
+  {
+    "id": "Q035",
+    "topic": "近代物理",
+    "title": "原子 L=1 与自旋半的自旋轨道能级分裂及简并",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "角动量耦合",
+      "自旋轨道作用",
+      "简并度"
+    ],
+    "answer": "\\Delta E_{1/2}=-\\lambda,\\quad\\Delta E_{3/2}=\\lambda/2",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.1",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B",
+    "question": "一电子具有轨道角动量量子数 l=1、自旋 s=1/2，弱自旋轨道作用 \\(H_{\\rm so}=\\lambda\\,\\boldsymbol L\\cdot\\boldsymbol S/\\hbar^2\\)，其中 λ 为实常数，无外磁场。忽略其他相互作用，未扰动轨道能量 \\(E_0\\) 相同。\n(1) 给出允许的总角动量 j；(2) 利用 \\(\\boldsymbol J=\\boldsymbol L+\\boldsymbol S\\) 求各 j 的自旋轨道能移；(3) 求能级简并度和两能级间隔；(4) 验证按全部六个态平均的自旋轨道能移为零。\n",
+    "solution": "(1) 角动量合成规则给 \\(j=|l-s|,\\ldots,l+s\\)，因此 \\(j=1/2\\) 或 \\(j=3/2\\)。总磁量子数分别有 \\(2j+1=2\\) 与4个取值，恰与轨道三态乘自旋两态的六维空间相符。\n\n(2) 利用\n\\[\n2\\boldsymbol L\\cdot\\boldsymbol S\n=\\boldsymbol J^2-\\boldsymbol L^2-\\boldsymbol S^2,\n\\]\n对给定 j 的能移\n\\[\n\\Delta E_j=\\frac\\lambda2[j(j+1)-l(l+1)-s(s+1)].\n\\]\n代入 l=1、s=1/2，得 \\(\\Delta E_{1/2}=-\\lambda\\)，\\(\\Delta E_{3/2}=\\lambda/2\\)。\n\n(3) 总能级为 \\(E_{1/2}=E_0-\\lambda\\)、\\(E_{3/2}=E_0+\\lambda/2\\)，相邻间隔大小 \\(3|\\lambda|/2\\)。若 λ>0，则 j=1/2 较低；若 λ<0，顺序反转。没有外场时每个 j 的 \\(m_j\\) 态仍简并。\n\n(4) 对全部六个未偏置态按态数加权的平均能移\n\\[\n\\frac{2(-\\lambda)+4(\\lambda/2)}{6}=0.\n\\]\n这也对应自旋轨道耦合在完整 l=1、s=1/2 张量积空间上的迹为零。\n"
   }
 ]
