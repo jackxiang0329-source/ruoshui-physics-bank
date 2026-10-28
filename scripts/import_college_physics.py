@@ -86,6 +86,10 @@ def norm(s):
     return re.sub(r"\s+"," ",re.sub(r"<[^>]+>"," ",s).casefold()).strip()
 def group(title):
     name=title.casefold()
+    # "Radiation" could refer to thermal, electromagnetic or nuclear processes.
+    # Without the excerpt itself, keep it unclassified.
+    if name == "radiation":
+        return "待分类"
     # In OpenStax this chapter discusses stereo speakers and phase, not geometrical optics.
     if name == "superposition and interference":
         return "振动与波动"

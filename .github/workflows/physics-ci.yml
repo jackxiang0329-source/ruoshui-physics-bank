@@ -51,6 +51,8 @@ jobs:
         run: python scripts/check_review.py
       - name: Unit tests for selection, paths and QA gate
         run: python -m unittest discover -s tests -v
+      - name: Check supplementary Chinese review source hashes
+        run: python scripts/export_zh_review.py --check
       - name: Draft exam assembly smoke test (never approved for real exams)
         run: python scripts/assemble_exam.py --count 6 --seed 20261026 --topic-quota '力学=1' --topic-quota '电磁学=1' --max-minutes 180 --total-points 100 --allow-pending
       - name: Upload validation and draft manifest

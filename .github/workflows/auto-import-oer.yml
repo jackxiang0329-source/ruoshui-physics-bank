@@ -80,6 +80,11 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_report_external_coverage.py' -v
       - name: Test cross-source topic reclassification
         run: python -m unittest discover -s tests -p 'test_reclassify_external_topics.py' -v
+      - name: Validate OpenStax and PHYS 2425 Chinese drafts
+        run: |
+          python -m unittest discover -s tests -p 'test_export_zh_review.py' -v
+          python -m unittest discover -s tests -p 'test_translation_classification.py' -v
+          python scripts/export_zh_review.py --check
       - name: Test editorial review priority and duplicate-digest reporting
         run: python -m unittest discover -s tests -p 'test_curation_triage.py' -v
       - name: Unit-test static source risk and near-text duplicate checks
