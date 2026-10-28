@@ -1,0 +1,7 @@
+(1) 动能 \(T=(m_1\dot x_1^2+m_2\dot x_2^2)/2\)，势能 \(V=[k_1x_1^2+k_2x_2^2+k_c(x_1-x_2)^2]/2\)。因此 \(\mathbf M=\operatorname{diag}(m_1,m_2)\)，\(\mathbf K=\begin{pmatrix}k_1+k_c&-k_c\\-k_c&k_2+k_c\end{pmatrix}\)，运动方程 \(\mathbf M\ddot{\mathbf x}+\mathbf K\mathbf x=(F_0,0)^T\cos\omega t\)。因 \(V=(k_1x_1^2+k_2x_2^2+k_c(x_1-x_2)^2)/2>0\) 对非零位移成立，刚度矩阵正定，两自由度本征频率均为实正。
+
+(2) 定义 \(a=(k_1+k_c)/m_1,\ d=(k_2+k_c)/m_2,\ b=k_c/\sqrt{m_1m_2}\)。质量加权矩阵 \(\mathbf M^{-1/2}\mathbf K\mathbf M^{-1/2}\) 的特征值为 \(\omega_\pm^2=\frac12[a+d\pm\sqrt{(a-d)^2+4b^2}]\)。设 \(\mathbf K\mathbf u_\pm=\omega_\pm^2\mathbf M\mathbf u_\pm\)，则由矩阵对称性可得 \((\omega_+^2-\omega_-^2)\mathbf u_+^T\mathbf M\mathbf u_-=0\)，故不同模态满足 \(\mathbf u_+^T\mathbf M\mathbf u_-=0\)。令 \(\mathbf u_\pm^T\mathbf M\mathbf u_\pm=1\) 即得标准正交归一。
+
+(3) 取 \(x_j(t)=\Re[X_je^{i\omega t}]\)，有 \((\mathbf K-\omega^2\mathbf M)\mathbf X=(F_0,0)^T\)。以 \(D=[k_1+k_c-m_1\omega^2][k_2+k_c-m_2\omega^2]-k_c^2\) 表示行列式，则 \(X_1=F_0(k_2+k_c-m_2\omega^2)/D\)，\(X_2=F_0k_c/D\)。若 \(k_c\to0\) 且 \(\omega^2\ne k_j/m_j\)，第一质点独立响应 \(F_0/(k_1-m_1\omega^2)\)、第二质点响应趋于零；这检验了耦合符号及分母。
+
+(4) 在质量归一的特征矢量基底令 \(\mathbf x=\mathbf u_+q_++\mathbf u_-q_-\)，利用质量及刚度正交性得总机械能 \(E=\frac12\sum_{\nu=\pm}[\dot q_\nu^2+\omega_\nu^2q_\nu^2]\)，外力给 \(\ddot q_\nu+\omega_\nu^2q_\nu=F_0u_{\nu,1}\cos\omega t\)。当驱动频率逼近能被第一质点激发的本征频率时 \(D\to0\)，无阻尼稳态特解系数发散；实际系统会由阻尼、非线性及有限驱动时间限制振幅，不能把发散称为无限物理能量。
