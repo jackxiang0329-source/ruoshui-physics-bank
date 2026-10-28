@@ -55,8 +55,8 @@ def classify(row,configs,root=ROOT):
             entry=translations[pid]
             if entry["source_sha256"]!=rec["question_sha256"]:
                 raise ValueError("stale translated source: "+pid)
-            zh_path=f'localized/zh_CN/{lesson["module"]}/{lesson["topic"]}/{pid}.md'
-            if not (root/zh_path).is_file():
+            zh_path=f'localized/zh_CN/合订/{lesson["module"]}.md#{pid.lower()}'
+            if not (root/zh_path.split("#",1)[0]).is_file():
                 raise ValueError("translation manifest has no bilingual file: "+pid)
             status="中英对照初校；待独立复核"
     if pid in supplemental:
@@ -69,8 +69,8 @@ def classify(row,configs,root=ROOT):
         ptype="未核验"
         type_basis="题型尚未独立确认"
         code=modules[module]["code"]
-        zh_path=f"localized/zh_CN/{code}/supplementary/{pid}.md"
-        if not (root/zh_path).is_file():
+        zh_path=f"localized/zh_CN/合订/{code}.md#{pid.lower()}"
+        if not (root/zh_path.split("#",1)[0]).is_file():
             raise ValueError("missing supplementary bilingual file: "+pid)
         status="中英对照初校；待独立复核"
     if module=="待分类":
