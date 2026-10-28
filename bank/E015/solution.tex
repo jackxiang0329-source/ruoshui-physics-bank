@@ -1,0 +1,37 @@
+(1) 对并联节点应用 KCL：
+\[
+C\dot v+\frac vR+i_L=0,\qquad L\dot i_L=v.
+\]
+对第一式求导并消去电感电流，得到
+\[
+\ddot v+\frac1{RC}\dot v+\frac1{LC}v=0,\qquad
+\dot v(0)=-\frac{V_0/R+I_0}{C}.
+\]
+不能将并联电路直接误写为串联 RLC 的阻尼系数 $R/L$。
+
+(2) 特征根
+\[
+r_\pm=-\frac1{2RC}\pm\sqrt{\frac1{4R^2C^2}-\frac1{LC}}.
+\]
+若 $r_+\ne r_-$，则 $v(t)=A_+e^{r_+t}+A_-e^{r_-t}$，其中
+\[
+A_+=\frac{\dot v(0)-r_-V_0}{r_+-r_-},\qquad
+A_-=\frac{r_+V_0-\dot v(0)}{r_+-r_-}.
+\]
+判别式小于零是欠阻尼，大于零是过阻尼；等于零时根 $r=-1/(2RC)$ 且 $v(t)=[V_0+(\dot v(0)-rV_0)t]e^{rt}$。所有情形实部为负，故 $v,i_L\to0$。
+
+(3) 将 KCL 乘以 $v$，结合 $L i_L\dot i_L=i_Lv$，得
+\[
+\frac d{dt}\left(\frac12Cv^2+\frac12Li_L^2\right)=-\frac{v^2}{R}\le0.
+\]
+因终态两种储能均为零，积分获得
+\[
+\int_0^\infty\frac{v(t)^2}{R}\,dt=\frac12C V_0^2+\frac12L I_0^2.
+\]
+这是总能量守恒与电阻耗散的精确结果，而非只在弱阻尼下成立。
+
+(4) 对电感方程积分：$L[i_L(\infty)-I_0]=\int_0^\infty v(t)\,dt$，因此
+\[
+\int_0^\infty v(t)\,dt=-L I_0.
+\]
+如果 $I_0=0$，积分为零，即便 $V_0\ne0$，因为衰减过程中的电压会跨过零并使正负面积抵消。该积分有符号，不等于正定的总耗散功。

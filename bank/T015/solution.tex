@@ -1,0 +1,26 @@
+(1) 由摩尔焓微分 $dH=T\,dS+v\,dP$，Maxwell 关系 $(\partial S/\partial P)_T=-(\partial v/\partial T)_P$ 及 $dS=C_P\,dT/T-(\partial v/\partial T)_P\,dP$，可得
+\[
+dH=C_P\,dT+[v-T(\partial v/\partial T)_P]\,dP.
+\]
+等焓 $dH=0$，所以
+\[
+\mu_{JT}=\left(\frac{\partial T}{\partial P}\right)_H
+=\frac{T(\partial v/\partial T)_P-v}{C_P}.
+\]
+
+(2) 在低压 $v\gg b$，将状态方程展开为 $P=RT/v+(RTb-a)/v^2+O(v^{-3})$。设 $v=RT/P+\eta+O(P)$，代入得 $\eta=b-a/(RT)$，因此
+\[
+v=\frac{RT}{P}+b-\frac{a}{RT}+O(P).
+\]
+固定 $P$ 求导 $T(\partial v/\partial T)_P=RT/P+a/(RT)+O(P)$，故
+\[
+\mu_{JT}=\frac{1}{C_P}\left(\frac{2a}{RT}-b\right)+O(P).
+\]
+
+(3) 令主导系数零得低压反转温度
+\[
+T_{\rm inv}^{(0)}=\frac{2a}{Rb}.
+\]
+当 $T<T_{\rm inv}^{(0)}$ 时 $\mu_{JT}>0$，因节流降压 $dP<0$，所以 $dT=\mu_{JT}dP<0$（冷却）；高于反转温度则 $\mu_{JT}<0$，节流可能升温。此结论限于足够稀薄气体和给定温区。
+
+(4) 若 $a\to0$（仅排除体积效应），$\mu_{JT}\to-b/C_P<0$，低压节流升温；若 $b\to0$ 且 $a>0$，$\mu_{JT}\to2a/(RTC_P)>0$，低压节流冷却。任意极限都不应与高压状态方程展开混淆，因为 $O(P)$ 项及相变可能改变趋势。

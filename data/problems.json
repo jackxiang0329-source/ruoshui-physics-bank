@@ -162,6 +162,54 @@
     "challenge_profile": "high-multistage"
   },
   {
+    "id": "M014",
+    "topic": "力学",
+    "title": "水平匀加速支点下摆的有效重力、稳定平衡与张力",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 60,
+    "question": "长度为 $\\ell$ 的轻刚性杆悬挂质量为 $m$ 的小球，支点在竖直平面内以恒定水平加速度 $a>0$ 向 $+x$ 方向运动，重力为 $g>0$ 向下。摆角 $\\theta$ 从竖直向下方向朝 $+x$ 测量。研究支点匀加速后的非惯性系运动。\n(1) 建立摆的运动方程及守恒的有效机械能；(2) 求全部平衡角、稳定性以及稳定角附近小振动频率；(3) 支点原本静止、摆在 $\\theta=0$ 处静止，突然开始加速度 $a$，求后续摆角振幅和两个转向角；(4) 求杆的瞬时径向作用力，特别核对初始时刻与稳定平衡时的值，并讨论 $a\\to0$ 极限。",
+    "solution": "(1) 支点匀加速系附加惯性力为 $-ma\\hat x$。令 $x=\\ell\\sin\\theta$、$y=-\\ell\\cos\\theta$，有效势差可写为\n\\[\nU_{\\rm eff}(\\theta)=m\\ell[g(1-\\cos\\theta)+a\\sin\\theta].\n\\]\n动力学方程 $m\\ell^2\\ddot\\theta=-\\partial_\\theta U_{\\rm eff}$，即\n\\[\n\\ddot\\theta+\\frac g\\ell\\sin\\theta+\\frac a\\ell\\cos\\theta=0.\n\\]\n在匀加速系内 $E_{\\rm eff}=m\\ell^2\\dot\\theta^2/2+U_{\\rm eff}$ 守恒，虽然实验室中的机械能不必守恒。\n\n(2) 令 $g_*=\\sqrt{g^2+a^2}$，$\\varphi=\\arctan(a/g)\\in(0,\\pi/2)$，则 $g\\sin\\theta+a\\cos\\theta=g_*\\sin(\\theta+\\varphi)$。平衡角为 $\\theta_s=-\\varphi\\pmod{2\\pi}$ 与 $\\theta_u=\\pi-\\varphi\\pmod{2\\pi}$。有效势曲率分别为 $+m\\ell g_*$ 与 $-m\\ell g_*$，故前者稳定、后者不稳定。近稳定点频率 $\\omega_s=\\sqrt{g_*/\\ell}$。\n\n(3) 突然开始加速度后，角度和角速度不能瞬时跳变，初值为 $\\theta(0)=0,\\dot\\theta(0)=0$。有效势等价于 $mg_*\\ell[1-\\cos(\\theta+\\varphi)]$ 加常数。其初始相对稳定位置的偏角为 $\\varphi$，故摆动的精确角振幅为 $\\varphi$（但有限振幅运动不是简谐）。相邻转向点在 $\\theta=0$ 与 $\\theta=-2\\varphi$，无阻力时往返等高。\n\n(4) 对质点在非惯性系的向心径向方程投影，杆对球的指向支点力记 $N$（拉力为正），得\n\\[\nN=m\\ell\\dot\\theta^2+mg\\cos\\theta-ma\\sin\\theta.\n\\]\n初始时 $\\theta=0,\\dot\\theta=0$，$N(0)=mg$；稳定平衡时 $\\theta=-\\varphi$、静止，$N_s=mg_*$。当 $a\\to0$，$\\varphi\\to0,\\omega_s\\to\\sqrt{g/\\ell},N_s\\to mg$，回到普通单摆。",
+    "answer": "\\theta_s=-\\arctan(a/g),\\quad\\omega_s=\\sqrt{\\sqrt{a^2+g^2}/\\ell},\\quad\\theta_{\\rm turn}\\in\\{0,-2\\arctan(a/g)\\}",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "非惯性参考系",
+      "有效重力",
+      "平衡稳定性",
+      "突变驱动初值",
+      "约束张力"
+    ],
+    "assumptions_review": "经过解析模型、守恒与极限初检；独立专家审核待完成",
+    "checks": [],
+    "revision": "composite-v1.4",
+    "challenge_profile": "high-multistage"
+  },
+  {
+    "id": "M015",
+    "topic": "力学",
+    "title": "最速降线的变分方程、摆线参数与精确行程时间",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "question": "理想质点从点 $A=(0,0)$ 静止出发，在均匀重力场中沿无摩擦光滑轨道滑到点 $B=(X,Y)$，其中 $X,Y>0$。取水平坐标 $x$ 向右、竖直坐标 $y$ 向下。轨道可在端点处有竖直切线，且只研究向右、向下的单弧下降曲线。\n(1) 利用能量守恒写出从 $A$ 到 $B$ 的行程时间泛函；(2) 运用变分法及第一个积分导出最速降线的微分关系；(3) 用参数角 $\\phi$ 给出摆线坐标表达式，写出确定摆线尺度和终点参数的方程；(4) 求最短时间的参数表达式，检验起点处的可积奇性，并说明何以直线轨道一般不是最速降线。",
+    "solution": "(1) 在下降高度 $y>0$ 处，由质点从静止出发的机械能守恒有 $v=\\sqrt{2gy}$。若轨道用 $x(y)$ 描述，弧长元 $ds=\\sqrt{1+x'(y)^2}dy$，故\n\\[\n\\mathcal T[x]=\\frac1{\\sqrt{2g}}\\int_0^Y\\frac{\\sqrt{1+x'^2}}{\\sqrt y}\\,dy .\n\\]\n在起点 $y=0$ 积分核有 $y^{-1/2}$ 型奇性，但可能可积。\n\n(2) 泛函被积函数不显含 $x$，故对应守恒动量\n\\[\n\\frac{\\partial\\mathcal L}{\\partial x'}=\\frac{x'}{\\sqrt y\\sqrt{1+x'^2}}=\\frac1{\\sqrt{2a}},\\quad a>0 .\n\\]\n由此 $x'^2=y/(2a-y)$。取正分支 $dx/dy=\\sqrt{y/(2a-y)}$，对于下降的单弧有 $0<y<2a$。这是最速降线的第一积分，不能由路径长度极小的直线判据替代。\n\n(3) 令 $y=a(1-\\cos\\phi)$，其中 $0\\le\\phi\\le\\phi_B<2\\pi$，则 $dy/d\\phi=a\\sin\\phi$。代入一阶方程得到 $dx/d\\phi=a(1-\\cos\\phi)$，所以\n\\[\nx=a(\\phi-\\sin\\phi),\\qquad y=a(1-\\cos\\phi).\n\\]\n参数 $a$ 与终点角 $\\phi_B$ 由\n\\[\nX=a(\\phi_B-\\sin\\phi_B),\\qquad Y=a(1-\\cos\\phi_B)\n\\]\n决定。在单弧最速降线中选取满足端点及下降分支的参数，不可随意引入多个回环。\n\n(4) 从 $ds/d\\phi=2a\\sin(\\phi/2)$ 及 $v=2\\sqrt{ga}\\sin(\\phi/2)$ 得\n\\[\ndt/d\\phi=\\sqrt{a/g},\\qquad\n\\mathcal T_{\\min}=\\phi_B\\sqrt{a/g}.\n\\]\n在起点 $\\phi\\to0^+$，两者都以 $\\phi$ 成正比，时间比值有限；虽然轨道在起点竖直切线，积分时间仍有限。直线具有更短弧长，却不能在起始阶段更快获得速度，故一般不是最速降线。此驻值曲线的全局最优性限定在所述单调下降、无障碍轨道类。",
+    "answer": "x=a(\\phi-\\sin\\phi),\\quad y=a(1-\\cos\\phi),\\quad \\mathcal T_{\\min}=\\phi_B\\sqrt{a/g}",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "变分法",
+      "Beltrami第一积分",
+      "能量守恒",
+      "摆线参数化",
+      "时间最优化"
+    ],
+    "assumptions_review": "经过解析模型、守恒与极限初检；独立专家审核待完成",
+    "checks": [],
+    "revision": "composite-v1.4",
+    "challenge_profile": "high-multistage"
+  },
+  {
     "id": "E007",
     "topic": "电磁学",
     "title": "滑动导体棒的自感反馈与能量耗散",
@@ -322,6 +370,54 @@
     "assumptions_review": "已进行模型、守恒与极限核对；尚待独立专家审核",
     "checks": [],
     "revision": "composite-v1.3",
+    "challenge_profile": "high-multistage"
+  },
+  {
+    "id": "E014",
+    "topic": "电磁学",
+    "title": "同轴传输线的 TEM 模、特征阻抗和负载反射",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 65,
+    "question": "理想无损同轴线内外导体半径为 $a,b$（$0<a<b$），中间均匀介质介电常数为 $\\epsilon>0$、磁导率为 $\\mu>0$。忽略导体电阻及介质损耗，讨论 TEM 模沿 $+z$ 传播。定义总电压 $V$ 为内外导体电势差，电流 $I$ 为内导体沿 $+z$ 电流。\n(1) 从横向静电和环向磁场求单位长度电容 $C'$、电感 $L'$；(2) 从电报方程得到传播速度和特征阻抗 $Z_0$；(3) 当末端接纯电阻负载 $R_L>0$ 时求电压波反射系数及在开路、短路极限的相位；(4) 通过横截面积分坡印廷矢量证明瞬时电磁功率是 $VI$，并说明能量在介质中流动而不必“沿导体内部传播”。",
+    "solution": "(1) 对内导体每单位长度自由电荷 $\\lambda$，高斯定律得 $E_r(r)=\\lambda/(2\\pi\\epsilon r)$，故\n\\[\nV=\\int_a^b E_rdr=\\frac{\\lambda}{2\\pi\\epsilon}\\ln\\frac ba,\\quad\nC'=\\frac\\lambda V=\\frac{2\\pi\\epsilon}{\\ln(b/a)}.\n\\]\n对于同轴等大反向导体电流，安培环路定律在 $a<r<b$ 给 $B_\\phi(r)=\\mu I/(2\\pi r)$。每单位长度磁能 $\\int_a^bB^2/(2\\mu)\\,2\\pi r\\,dr=\\mu I^2\\ln(b/a)/(4\\pi)$，因此\n\\[\nL'=\\frac\\mu{2\\pi}\\ln\\frac ba.\n\\]\n内部导体电感在理想表面电流模型被忽略，结论限于该假设。\n\n(2) 无损电报方程 $\\partial_zV=-L'\\partial_tI,\\ \\partial_zI=-C'\\partial_tV$，消元得波速\n\\[\nc_{\\rm TEM}=\\frac1{\\sqrt{L'C'}}=\\frac1{\\sqrt{\\mu\\epsilon}},\n\\]\n以及特征阻抗\n\\[\nZ_0=\\sqrt{L'/C'}=\\frac{\\ln(b/a)}{2\\pi}\\sqrt{\\frac\\mu\\epsilon}.\n\\]\n这不是任意频率任何模的传播速度，而是准理想 TEM 模结果。\n\n(3) 末端电压 $V_L=V_++V_-$，电流 $I_L=(V_+-V_-)/Z_0$。由 $V_L=R_LI_L$ 联立得\n\\[\n\\Gamma=\\frac{V_-}{V_+}=\\frac{R_L-Z_0}{R_L+Z_0}.\n\\]\n匹配 $R_L=Z_0$ 无反射；开路 $R_L\\to\\infty$ 时 $\\Gamma\\to+1$，电压同相反射；短路 $R_L\\to0$ 时 $\\Gamma\\to-1$，电压反相反射。反射功率比为 $|\\Gamma|^2\\le1$。\n\n(4) TEM 场可取 $E_r=V/[r\\ln(b/a)]$ 与 $H_\\phi=I/(2\\pi r)$。坡印廷矢量 $\\boldsymbol S=\\boldsymbol E\\times\\boldsymbol H$ 沿 $+\\hat z$，故\n\\[\n\\int_A S_z\\,dA=\\int_a^b\\frac{VI}{2\\pi r^2\\ln(b/a)}\\,2\\pi r\\,dr=VI.\n\\]\n因此理想线的能量流通过导体之间的电磁场而非仅靠导体内电荷搬运。",
+    "answer": "C'=2\\pi\\epsilon/\\ln(b/a),\\quad L'=\\mu\\ln(b/a)/(2\\pi),\\quad Z_0=\\ln(b/a)\\sqrt{\\mu/\\epsilon}/(2\\pi)",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "传输线分布参数",
+      "麦克斯韦场",
+      "行波阻抗",
+      "Poynting定理",
+      "边界反射"
+    ],
+    "assumptions_review": "经过解析模型、守恒与极限初检；独立专家审核待完成",
+    "checks": [],
+    "revision": "composite-v1.4",
+    "challenge_profile": "high-multistage"
+  },
+  {
+    "id": "E015",
+    "topic": "电磁学",
+    "title": "并联 RLC 自由衰减的复特征根、储能与总耗散",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 65,
+    "question": "一理想电容 $C>0$、理想电感 $L>0$ 与电阻 $R>0$ 并联形成无独立电源的闭合节点电路。定义各支路电压为 $v(t)$（相同正端），电感电流 $i_L(t)$ 从正端流向负端且 $L\\dot i_L=v$，电容电流为 $C\\dot v$。初始时 $v(0)=V_0$、$i_L(0)=I_0$，允许 $V_0,I_0$ 为任意实数。\n(1) 从 KCL 建立一阶状态方程并消元得到电压二阶微分方程；(2) 在非临界阻尼条件下用特征根给出一般解及由初值得到的系数，讨论欠阻尼、过阻尼和临界条件；(3) 证明电磁总能量的严格耗散律并求全部时间中的总焦耳热；(4) 求电阻两端电压的时间积分 $\\int_0^\\infty v(t)\\,dt$，检验 $I_0=0$ 的特殊情形并解释积分可以有负号。",
+    "solution": "(1) 对并联节点应用 KCL：\n\\[\nC\\dot v+\\frac vR+i_L=0,\\qquad L\\dot i_L=v.\n\\]\n对第一式求导并消去电感电流，得到\n\\[\n\\ddot v+\\frac1{RC}\\dot v+\\frac1{LC}v=0,\\qquad\n\\dot v(0)=-\\frac{V_0/R+I_0}{C}.\n\\]\n不能将并联电路直接误写为串联 RLC 的阻尼系数 $R/L$。\n\n(2) 特征根\n\\[\nr_\\pm=-\\frac1{2RC}\\pm\\sqrt{\\frac1{4R^2C^2}-\\frac1{LC}}.\n\\]\n若 $r_+\\ne r_-$，则 $v(t)=A_+e^{r_+t}+A_-e^{r_-t}$，其中\n\\[\nA_+=\\frac{\\dot v(0)-r_-V_0}{r_+-r_-},\\qquad\nA_-=\\frac{r_+V_0-\\dot v(0)}{r_+-r_-}.\n\\]\n判别式小于零是欠阻尼，大于零是过阻尼；等于零时根 $r=-1/(2RC)$ 且 $v(t)=[V_0+(\\dot v(0)-rV_0)t]e^{rt}$。所有情形实部为负，故 $v,i_L\\to0$。\n\n(3) 将 KCL 乘以 $v$，结合 $L i_L\\dot i_L=i_Lv$，得\n\\[\n\\frac d{dt}\\left(\\frac12Cv^2+\\frac12Li_L^2\\right)=-\\frac{v^2}{R}\\le0.\n\\]\n因终态两种储能均为零，积分获得\n\\[\n\\int_0^\\infty\\frac{v(t)^2}{R}\\,dt=\\frac12C V_0^2+\\frac12L I_0^2.\n\\]\n这是总能量守恒与电阻耗散的精确结果，而非只在弱阻尼下成立。\n\n(4) 对电感方程积分：$L[i_L(\\infty)-I_0]=\\int_0^\\infty v(t)\\,dt$，因此\n\\[\n\\int_0^\\infty v(t)\\,dt=-L I_0.\n\\]\n如果 $I_0=0$，积分为零，即便 $V_0\\ne0$，因为衰减过程中的电压会跨过零并使正负面积抵消。该积分有符号，不等于正定的总耗散功。",
+    "answer": "\\ddot v+\\dot v/(RC)+v/(LC)=0,\\quad Q_R=CV_0^2/2+LI_0^2/2,\\quad \\int_0^\\infty v\\,dt=-LI_0",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "并联谐振电路",
+      "阻尼特征值",
+      "初值解",
+      "Lyapunov能量函数",
+      "全程耗散"
+    ],
+    "assumptions_review": "经过解析模型、守恒与极限初检；独立专家审核待完成",
+    "checks": [],
+    "revision": "composite-v1.4",
     "challenge_profile": "high-multistage"
   },
   {
@@ -488,6 +584,54 @@
     "challenge_profile": "high-multistage"
   },
   {
+    "id": "T014",
+    "topic": "热学",
+    "title": "理想蒸汽近似下的克劳修斯—克拉佩龙曲线和熵跃变",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 65,
+    "question": "一种纯物质的液—汽两相平衡曲线满足摩尔潜热 $L_v>0$ 近似恒定。研究温度 $T>0$ 的区间，在此区间内蒸汽可近似为理想气体、液体摩尔体积相对蒸汽可忽略。气体常数为 $R>0$，已知参考温度 $T_0$ 的饱和蒸汽压为 $P_0>0$。\n(1) 从两相化学势相等推导 Clapeyron 微分方程并写出上述近似；(2) 求饱和压力 $P_{\\rm sat}(T)$ 与 $\\ln P$ 对 $1/T$ 的斜率；(3) 求相变摩尔熵跃变，讨论在固定压力下升温越过相界时的熵变化；(4) 将蒸汽视为理想气体计算汽化的摩尔体积功，给出摩尔内能跃变，并说明恒定潜热与无限温区的推断为何不合理。",
+    "solution": "(1) 两相共存要求 $\\mu_g(T,P)=\\mu_l(T,P)$。沿共存曲线微分，由 $d\\mu=-s\\,dT+v\\,dP$ 得\n\\[\n(v_g-v_l)\\,dP=(s_g-s_l)\\,dT.\n\\]\n定义摩尔汽化潜热 $L_v=T(s_g-s_l)$，所以\n\\[\n\\frac{dP_{\\rm sat}}{dT}=\\frac{L_v}{T(v_g-v_l)}.\n\\]\n理想蒸汽 $v_g=RT/P$，液体体积可忽略，故 $dP/dT\\simeq L_vP/(RT^2)$。\n\n(2) 分离变量积分 $\\int_{P_0}^{P}dP/P=(L_v/R)\\int_{T_0}^{T}dT/T^2$：\n\\[\nP_{\\rm sat}(T)=P_0\\exp\\left[\\frac{L_v}{R}\\left(\\frac1{T_0}-\\frac1T\\right)\\right].\n\\]\n因此 $\\ln P=\\ln P_0+(L_v/R)(1/T_0-1/T)$；以 $1/T$ 为横轴的斜率为 $-L_v/R$，可从实验数据估计汽化潜热。\n\n(3) 两相摩尔熵跃变为 $\\Delta s_{\\rm vap}=L_v/T>0$，表示吸热汽化时体系熵增加。沿可逆平衡汽化过程需热源供给潜热；若实际存在有限温差导致不可逆过程，总熵产生不能由物质的 $\\Delta s_{\\rm vap}$ 单独判定。\n\n(4) 相变压强为 $P_{\\rm sat}$，汽化的摩尔体积功近似 $w=P_{\\rm sat}(v_g-v_l)\\simeq RT$。由焓跃变 $L_v=\\Delta h=\\Delta u+P\\Delta v$，\n\\[\n\\Delta u_{\\rm vap}\\simeq L_v-RT.\n\\]\n若将恒定 $L_v$ 和理想蒸汽条件无限延伸至任意高温，会错误预测液—汽临界点以后的相分离；上述关系只在给定温区、远离临界点的近似下成立。",
+    "answer": "P_{\\rm sat}=P_0\\exp[(L_v/R)(1/T_0-1/T)],\\quad\\Delta s_{\\rm vap}=L_v/T,\\quad\\Delta u\\simeq L_v-RT",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "相平衡",
+      "化学势",
+      "Clapeyron方程",
+      "理想蒸汽近似",
+      "潜热与熵跃变"
+    ],
+    "assumptions_review": "经过解析模型、守恒与极限初检；独立专家审核待完成",
+    "checks": [],
+    "revision": "composite-v1.4",
+    "challenge_profile": "high-multistage"
+  },
+  {
+    "id": "T015",
+    "topic": "热学",
+    "title": "范德瓦耳斯气体的低压焦耳—汤姆孙系数与反转温度",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 65,
+    "question": "一摩尔范德瓦耳斯气体满足 $P=RT/(v-b)-a/v^2$，其中 $a,b,R>0$。只研究 $P\\to0^+$ 的稀薄气体极限，且摩尔定压热容 $C_P$ 在研究的小范围内可近似为固定正值。等焓节流过程中定义焦耳—汤姆孙系数 $\\mu_{JT}=(\\partial T/\\partial P)_H$。\n(1) 从基本热力学关系推导 $\\mu_{JT}=[T(\\partial v/\\partial T)_P-v]/C_P$；(2) 求 $v(P,T)$ 的低压零阶和一阶修正并从中导出 $\\mu_{JT}$ 的低压极限；(3) 求低压近似下的反转温度并判断高低温对应的制冷或加热趋势；(4) 讨论 $a\\to0$、$b\\to0$ 两种极限及为何该近似不能直接用于高压。",
+    "solution": "(1) 由摩尔焓微分 $dH=T\\,dS+v\\,dP$，Maxwell 关系 $(\\partial S/\\partial P)_T=-(\\partial v/\\partial T)_P$ 及 $dS=C_P\\,dT/T-(\\partial v/\\partial T)_P\\,dP$，可得\n\\[\ndH=C_P\\,dT+[v-T(\\partial v/\\partial T)_P]\\,dP.\n\\]\n等焓 $dH=0$，所以\n\\[\n\\mu_{JT}=\\left(\\frac{\\partial T}{\\partial P}\\right)_H\n=\\frac{T(\\partial v/\\partial T)_P-v}{C_P}.\n\\]\n\n(2) 在低压 $v\\gg b$，将状态方程展开为 $P=RT/v+(RTb-a)/v^2+O(v^{-3})$。设 $v=RT/P+\\eta+O(P)$，代入得 $\\eta=b-a/(RT)$，因此\n\\[\nv=\\frac{RT}{P}+b-\\frac{a}{RT}+O(P).\n\\]\n固定 $P$ 求导 $T(\\partial v/\\partial T)_P=RT/P+a/(RT)+O(P)$，故\n\\[\n\\mu_{JT}=\\frac{1}{C_P}\\left(\\frac{2a}{RT}-b\\right)+O(P).\n\\]\n\n(3) 令主导系数零得低压反转温度\n\\[\nT_{\\rm inv}^{(0)}=\\frac{2a}{Rb}.\n\\]\n当 $T<T_{\\rm inv}^{(0)}$ 时 $\\mu_{JT}>0$，因节流降压 $dP<0$，所以 $dT=\\mu_{JT}dP<0$（冷却）；高于反转温度则 $\\mu_{JT}<0$，节流可能升温。此结论限于足够稀薄气体和给定温区。\n\n(4) 若 $a\\to0$（仅排除体积效应），$\\mu_{JT}\\to-b/C_P<0$，低压节流升温；若 $b\\to0$ 且 $a>0$，$\\mu_{JT}\\to2a/(RTC_P)>0$，低压节流冷却。任意极限都不应与高压状态方程展开混淆，因为 $O(P)$ 项及相变可能改变趋势。",
+    "answer": "\\mu_{JT}=\\frac{2a/(RT)-b}{C_P}+O(P),\\quad T_{\\rm inv}^{(0)}=2a/(Rb)",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "非理想气体",
+      "等焓过程",
+      "Joule–Thomson效应",
+      "低密度渐近",
+      "反转温度"
+    ],
+    "assumptions_review": "经过解析模型、守恒与极限初检；独立专家审核待完成",
+    "checks": [],
+    "revision": "composite-v1.4",
+    "challenge_profile": "high-multistage"
+  },
+  {
     "id": "W007",
     "topic": "振动与波动",
     "title": "双弦接点附加质量的波散射",
@@ -648,6 +792,54 @@
     "assumptions_review": "已进行模型、守恒与极限核对；尚待独立专家审核",
     "checks": [],
     "revision": "composite-v1.3",
+    "challenge_profile": "high-multistage"
+  },
+  {
+    "id": "W014",
+    "topic": "振动与波动",
+    "title": "单原子弹簧链轻质量缺陷诱导的局域振动模",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "question": "无限长单原子链中除 $n=0$ 处的质量为 $M$ 外，所有格点质量均为 $m>0$；每对相邻粒子由劲度系数为 $k>0$ 的相同轻弹簧连接，平衡间距为 $a>0$，忽略耗散。取缺陷比主体质量轻，即 $0<M<m$。\n(1) 求无缺陷时的行波色散关系和声学频带上边缘；(2) 设缺陷诱导的局域振动形式为 $u_n(t)=A(-1)^n e^{-\\lambda|n|}e^{-i\\omega t}$，其中 $\\lambda>0$，由非缺陷格点方程求 $\\omega(\\lambda)$；(3) 使用缺陷点方程解出 $\\lambda$ 和 $\\omega$ 的精确表达式，证明频率位于正常频带之外；(4) 研究 $M\\to m^-$ 和 $M\\to0^+$ 的局域长度与频率极限，解释重质量缺陷是否能以同样形式产生高频局域模。",
+    "solution": "(1) 普通格点满足 $m\\ddot u_n=k(u_{n+1}-2u_n+u_{n-1})$。代入 $e^{i(qna-\\omega t)}$ 得\n\\[\n\\omega^2(q)=\\frac{4k}{m}\\sin^2(qa/2),\\qquad 0\\le\\omega\\le 2\\sqrt{k/m}.\n\\]\n区边界振动呈相邻格点反相。\n\n(2) 令 $u_n=A(-1)^n e^{-\\lambda|n|}e^{-i\\omega t}$。对 $|n|\\ge1$，有 $u_{n+1}+u_{n-1}=-2\\cosh\\lambda\\,u_n$，故\n\\[\nm\\omega^2=2k(1+\\cosh\\lambda)=4k\\cosh^2(\\lambda/2).\n\\]\n因 $\\lambda>0$，该频率严格高于主体最高传播频率，这正是无辐射束缚模得以指数衰减的条件。\n\n(3) 在 $n=0$ 处，左右两邻点均为 $-Ae^{-\\lambda}$，所以\n\\[\nM\\omega^2=2k(1+e^{-\\lambda}).\n\\]\n两式联立并令 $t=e^{-\\lambda}$，得到 $M/m=2t/(1+t)$，从而\n\\[\ne^{-\\lambda}=\\frac M{2m-M}\\in(0,1),\\quad\n\\lambda=\\ln\\frac{2m-M}{M},\\quad\n\\omega^2=\\frac{4km}{M(2m-M)}.\n\\]\n由于 $M(2m-M)<m^2$ 对 $0<M<m$ 严格成立，$\\omega>2\\sqrt{k/m}$，证实这是频带外的局域模。\n\n(4) $M\\to m^-$ 时 $\\lambda\\to0^+$，局域长度 $\\ell_{\\rm loc}\\sim a/\\lambda\\to\\infty$，频率趋于带边 $2\\sqrt{k/m}$；$M\\to0^+$ 时 $\\lambda\\to\\infty$，振动集中在缺陷点，$\\omega^2\\sim2k/M$。若 $M\\ge m$，同一公式不再给出 $0<t<1$，故这种交替符号、高于频带的局域解不存在；这并不排除其他复杂缺陷在不同结构中产生不同类型的局域态。",
+    "answer": "\\lambda=\\ln[(2m-M)/M],\\quad\\omega^2=4km/[M(2m-M)],\\quad\\omega>2\\sqrt{k/m}",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "离散色散关系",
+      "点缺陷",
+      "局域态",
+      "频带外本征值",
+      "指数衰减"
+    ],
+    "assumptions_review": "经过解析模型、守恒与极限初检；独立专家审核待完成",
+    "checks": [],
+    "revision": "composite-v1.4",
+    "challenge_profile": "high-multistage"
+  },
+  {
+    "id": "W015",
+    "topic": "振动与波动",
+    "title": "张力随位置平方增长的非均匀弦精确本征谱",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "question": "一根长度 $L>0$ 的细弦两端固定，横向微振动满足 $\\mu y_{tt}=\\partial_x[T(x)y_x]$，其中线密度 $\\mu>0$ 常数、张力随位置为 $T(x)=T_0(1+\\alpha x)^2$，$T_0>0,\\alpha>0$。忽略耗散，固定端位于 $x=0,L$。\n(1) 使用变量分离推导空间模态满足的变系数常微分方程；(2) 令 $z=1+\\alpha x$，求全部非零本征角频率和对应未归一化波形；(3) 从积分能量恒等式证明频率严格为实数且平方正，并说明不同频率模的正交性；(4) 在 $\\alpha L\\to0^+$ 的极限展开最低阶频率，验证均匀弦的正弦驻波结果。",
+    "solution": "(1) 取 $y(x,t)=X(x)e^{-i\\omega t}$，则\n\\[\n-\\mu\\omega^2X=\\frac d{dx}\\left[T_0(1+\\alpha x)^2X'\\right],\\qquad X(0)=X(L)=0.\n\\]\n因为张力位置依赖，不能直接把波速当常数而写 $X''+k^2X=0$。\n\n(2) 用 $z=1+\\alpha x$，空间方程变为\n\\[\nz^2X_{zz}+2zX_z+\\frac{\\mu\\omega^2}{T_0\\alpha^2}X=0.\n\\]\n这是 Euler–Cauchy 方程；试 $X=z^\\nu$ 得 $\\nu(\\nu+1)+\\mu\\omega^2/(T_0\\alpha^2)=0$。对可满足两个固定端的振动模，写 $\\nu=-1/2\\pm iq$，因此\n\\[\nX(z)=z^{-1/2}[A\\cos(q\\ln z)+B\\sin(q\\ln z)].\n\\]\n左端 $z=1$ 使 $A=0$，右端 $z_L=1+\\alpha L$ 使 $q\\ln z_L=n\\pi,\\ n=1,2,\\ldots$。于是\n\\[\n\\omega_n=\\alpha\\sqrt{\\frac{T_0}{\\mu}}\n\\sqrt{\\frac14+\\left(\\frac{n\\pi}{\\ln(1+\\alpha L)}\\right)^2},\n\\quad X_n(x)\\propto(1+\\alpha x)^{-1/2}\n\\sin\\frac{n\\pi\\ln(1+\\alpha x)}{\\ln(1+\\alpha L)}.\n\\]\n\n(3) 用 $X$ 乘本征方程，分部积分并使用 $X(0)=X(L)=0$，得\n\\[\n\\mu\\omega^2\\int_0^L|X|^2dx=\\int_0^L T(x)|X'|^2dx>0.\n\\]\n因此无非零零频或虚频本征模；对两个不同本征值的解交叉相乘并相减，边界项为零，得到 $\\int_0^L\\mu X_mX_n\\,dx=0$，即质量加权正交，本题 $\\mu$ 为常量。\n\n(4) 当 $\\alpha L\\ll1$，$\\ln(1+\\alpha L)=\\alpha L+O(\\alpha^2L^2)$，故\n\\[\n\\omega_n=\\frac{n\\pi}{L}\\sqrt{T_0/\\mu}[1+O(\\alpha L)]\n\\]\n并且 $X_n(x)\\to\\sin(n\\pi x/L)$。由于变张力在 $\\alpha\\to0$ 时逐点趋向 $T_0$，此极限验证了所得谱的正常化。",
+    "answer": "\\omega_n=\\alpha\\sqrt{T_0/\\mu}\\sqrt{\\frac14+\\frac{n^2\\pi^2}{\\ln^2(1+\\alpha L)}}",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "变系数波动方程",
+      "Euler–Cauchy方程",
+      "边界本征值",
+      "正交性",
+      "均匀极限"
+    ],
+    "assumptions_review": "经过解析模型、守恒与极限初检；独立专家审核待完成",
+    "checks": [],
+    "revision": "composite-v1.4",
     "challenge_profile": "high-multistage"
   },
   {
@@ -814,6 +1006,54 @@
     "challenge_profile": "high-multistage"
   },
   {
+    "id": "O014",
+    "topic": "光学",
+    "title": "有限数目等宽狭缝光栅的衍射包络、缺级与分辨本领",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 65,
+    "question": "理想平面透射光栅由 $N\\ge2$ 个完全相同的矩形狭缝组成，每缝宽 $a>0$、相邻缝中心距 $d>a$，且均匀相干单色平面波波长为 $\\lambda>0$ 沿法线入射。只研究标量夫琅禾费衍射，在远场方向 $\\theta$ 观察。\n(1) 从单缝振幅积分和 $N$ 个等距相干波的几何级数求归一化光强函数；(2) 给出光栅主极大级次条件和单缝包络零点，严格推导缺级条件；(3) 在 $N\\gg1$、第 $m\\ne0$ 级不缺级且 $\\cos\\theta_m\\ne0$ 时估算主峰第一个零点与主峰角宽度；(4) 使用瑞利判据推导光栅分辨本领 $\\lambda/\\Delta\\lambda\\simeq |m|N$，说明此式的适用条件与狭缝宽度影响。",
+    "solution": "(1) 单缝相对光轴的光程差产生相位，令 $\\beta=\\pi a\\sin\\theta/\\lambda$ 与 $\\delta=\\pi d\\sin\\theta/\\lambda$。单缝积分给振幅因子 $\\operatorname{sinc}\\beta=\\sin\\beta/\\beta$；有限阵列各缝中心相位差 $2\\delta$，几何级数的模为 $|\\sin(N\\delta)/\\sin\\delta|$。以全部狭缝同相时强度 $I_{\\max,0}$ 归一化：\n\\[\n\\frac{I(\\theta)}{I_{\\max,0}}=\n\\left(\\frac{\\sin\\beta}{\\beta}\\right)^2\n\\left(\\frac{\\sin(N\\delta)}{N\\sin\\delta}\\right)^2.\n\\]\n当分母与分子同为零时取连续极限，阵列因子等于1。\n\n(2) 主极大近似满足 $d\\sin\\theta_m=m\\lambda$，$m\\in\\mathbb Z$ 且 $|\\sin\\theta_m|\\le1$。单缝非中央零点满足 $a\\sin\\theta=p\\lambda$，$p\\in\\mathbb Z\\setminus\\{0\\}$。两条件兼容恰当且仅当 $ma/d=p$ 为非零整数，该主级次被单缝衍射包络抹掉；不能误称阵列几何级数没有对应相位峰。\n\n(3) 在第 $m$ 个主极大附近写 $\\delta=m\\pi+\\Delta\\delta$，阵列因子的最近零点满足 $N|\\Delta\\delta|=\\pi$，故\n\\[\n|\\Delta\\theta|_{\\rm first}\\simeq\\frac{\\lambda}{Nd|\\cos\\theta_m|}.\n\\]\n两个相邻零点之间全宽约 $2\\lambda/(Nd|\\cos\\theta_m|)$。这一近似要求 $N$ 足够大、包络在此角宽内近似不变且峰不缺级。\n\n(4) 同一衍射级相邻波长的主峰角差由光栅方程微分，$|d\\theta/d\\lambda|=|m|/(d|\\cos\\theta_m|)$。按瑞利准则，两个谱线的主峰相差约一个主峰到第一个零点的角距即可分辨，故\n\\[\n|m|\\Delta\\lambda/(d|\\cos\\theta_m|)\\simeq\\lambda/(Nd|\\cos\\theta_m|),\n\\quad \\lambda/\\Delta\\lambda\\simeq|m|N.\n\\]\n若该级因包络缺级或探测器孔径、仪器色散及谱宽限制，不能单独使用这条理想公式声称真实分辨率。",
+    "answer": "I/I_{\\max,0}=\\operatorname{sinc}^2\\beta\\,[\\sin(N\\delta)/(N\\sin\\delta)]^2,\\quad \\lambda/\\Delta\\lambda\\simeq |m|N",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "夫琅禾费积分",
+      "有限阵列干涉",
+      "缺级机制",
+      "瑞利判据",
+      "光谱分辨率"
+    ],
+    "assumptions_review": "经过解析模型、守恒与极限初检；独立专家审核待完成",
+    "checks": [],
+    "revision": "composite-v1.4",
+    "challenge_profile": "high-multistage"
+  },
+  {
+    "id": "O015",
+    "topic": "光学",
+    "title": "四分之一波片对椭圆偏振的转换及分析器旋转测量",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 60,
+    "question": "一束完全偏振的单色平面光以单位归一化 Jones 振幅 $\\boldsymbol E_{\\rm in}=(\\cos\\theta,\\sin\\theta)^T$ 入射一理想四分之一波片，$x$ 轴是快轴、$y$ 轴是慢轴。以复时间因子 $e^{-i\\omega t}$ 为约定，波片的 Jones 矩阵取 $J=\\operatorname{diag}(1,i)$。输出光随后通过透射轴与 $x$ 方向夹角为 $\\alpha$ 的理想线偏振分析器。忽略全部非理想损耗。\n(1) 求波片输出 Jones 向量及两分量的相位差；(2) 推导任意 $\\theta$ 下偏振椭圆的轴向投影幅度，给出输出为圆偏振和线偏振的精确条件；(3) 计算分析器透射光强占波片前入射强度的比例，给出其对 $\\alpha$ 的规律；(4) 当 $\\theta=\\pi/4$ 时证明分析器无论怎样旋转都只透射一半强度，并解释为何这并不表示输出光是不偏振光。",
+    "solution": "(1) Jones 作用直接给\n\\[\n\\boldsymbol E_{\\rm out}=J\\boldsymbol E_{\\rm in}\n=(\\cos\\theta,i\\sin\\theta)^T.\n\\]\n相对相位为 $+\\pi/2$（在给定相位惯例下）。光波片未吸收能量，$|\\cos\\theta|^2+|i\\sin\\theta|^2=1$。\n\n(2) 输出实电场分量为 $E_x(t)=\\cos\\theta\\cos\\omega t$、$E_y(t)=\\sin\\theta\\sin\\omega t$，因为 $\\Re[i e^{-i\\omega t}]=\\sin\\omega t$。故轨迹满足\n\\[\n\\frac{E_x^2}{\\cos^2\\theta}+\\frac{E_y^2}{\\sin^2\\theta}=1\n\\]\n（两轴非零时），为与 $x,y$ 对齐的椭圆，半轴绝对值分别为 $|\\cos\\theta|,|\\sin\\theta|$。当 $|\\cos\\theta|=|\\sin\\theta|=1/\\sqrt2$ 时为圆偏振；当 $\\sin\\theta=0$ 或 $\\cos\\theta=0$ 时退化为沿单一轴的线偏振，无法形成一般方向的线偏振，因为两个非零分量相差 $\\pi/2$。\n\n(3) 分析器透射方向单位 Jones 向量为 $\\boldsymbol a=(\\cos\\alpha,\\sin\\alpha)^T$。投影复振幅为 $\\boldsymbol a^\\dagger\\boldsymbol E_{\\rm out}=\\cos\\alpha\\cos\\theta+i\\sin\\alpha\\sin\\theta$，故\n\\[\nI_{\\rm tr}/I_{\\rm in}\n=|\\boldsymbol a^\\dagger\\boldsymbol E_{\\rm out}|^2\n=\\cos^2\\alpha\\cos^2\\theta+\\sin^2\\alpha\\sin^2\\theta.\n\\]\n交叉项因 $\\pi/2$ 相位差为纯虚而消失，不应误写成普通线偏振的 $\\cos^2(\\alpha-\\theta)$。\n\n(4) 当 $\\theta=\\pi/4$，上式化为 $(\\cos^2\\alpha+\\sin^2\\alpha)/2=1/2$。圆偏振和完全不偏振光在单个线偏振分析器的旋转强度实验中都不随 $\\alpha$ 改变，但前者 Jones 态仍纯且各方向的相位相关性确定，可用相位延迟器组合进一步区分。",
+    "answer": "\\boldsymbol E_{\\rm out}=(\\cos\\theta,i\\sin\\theta)^T,\\quad I_{\\rm tr}/I_{\\rm in}=\\cos^2\\alpha\\cos^2\\theta+\\sin^2\\alpha\\sin^2\\theta",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "Jones矩阵",
+      "相位延迟",
+      "椭圆偏振",
+      "圆偏振条件",
+      "Malus分析器"
+    ],
+    "assumptions_review": "经过解析模型、守恒与极限初检；独立专家审核待完成",
+    "checks": [],
+    "revision": "composite-v1.4",
+    "challenge_profile": "high-multistage"
+  },
+  {
     "id": "Q007",
     "topic": "近代物理",
     "title": "相对论两体衰变的能量区间与阈值",
@@ -974,6 +1214,54 @@
     "assumptions_review": "已进行模型、守恒与极限核对；尚待独立专家审核",
     "checks": [],
     "revision": "composite-v1.3",
+    "challenge_profile": "high-multistage"
+  },
+  {
+    "id": "Q014",
+    "topic": "近代物理",
+    "title": "谐振子频率骤变后的激发数、基态重叠与压缩振荡",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "question": "一维质量为 $m>0$ 的量子谐振子初始频率为 $\\omega_i>0$，处于其基态 $|0_i\\rangle$，初始时刻 $t=0$ 势阱弹簧劲度在极短时间内被改变，使后续频率为 $\\omega_f>0$ 且质心与势阱中心不变。忽略非瞬时驱动过程与环境退相干。\n(1) 明确骤变前后波函数及动力学哈密顿量，计算骤变后能量期望；(2) 求新谐振子的平均激发量子数，检查频率未改变时的极限；(3) 计算新旧基态的重叠概率，证明奇数激发态投影为零；(4) 求骤变后任意时间的位置方差，解释出现 $2\\omega_f$ 的压缩呼吸振荡，并检查 $t=0$ 与 $\\omega_i=\\omega_f$ 极限。",
+    "solution": "(1) 初态高斯波函数为\n\\[\n\\psi_i(x)=\\left(\\frac{m\\omega_i}{\\pi\\hbar}\\right)^{1/4}\ne^{-m\\omega_i x^2/(2\\hbar)}.\n\\]\n突然改频时波函数连续不变，但之后哈密顿量为 $H_f=p^2/(2m)+m\\omega_f^2x^2/2$。由于初基态 $\\langle x^2\\rangle_i=\\hbar/(2m\\omega_i)$、$\\langle p^2\\rangle_i=m\\hbar\\omega_i/2$，\n\\[\n\\langle H_f\\rangle=\\frac{\\hbar\\omega_i}{4}+\\frac{\\hbar\\omega_f^2}{4\\omega_i}\n=\\frac\\hbar4\\left(\\omega_i+\\frac{\\omega_f^2}{\\omega_i}\\right).\n\\]\n\n(2) $H_f=\\hbar\\omega_f(N_f+1/2)$，因此\n\\[\n\\langle N_f\\rangle=\\frac{\\langle H_f\\rangle}{\\hbar\\omega_f}-\\frac12\n=\\frac{(\\omega_f-\\omega_i)^2}{4\\omega_i\\omega_f}\\ge0.\n\\]\n若两频率相同，平均激发数为零，瞬时操作不产生额外能量；若相差很大，平均激发数显著增加，能量由改变势阱的外部装置提供或吸收。\n\n(3) 新旧基态均为偶宇称的归一化高斯函数。重叠积分 $\\int_{-\\infty}^\\infty\\psi_f^*(x)\\psi_i(x)dx$ 给\n\\[\nP_{0_f}=|\\langle0_f|0_i\\rangle|^2\n=\\frac{2\\sqrt{\\omega_i\\omega_f}}{\\omega_i+\\omega_f}.\n\\]\n初始波函数关于 $x$ 偶对称，而新谐振子的奇数本征态关于 $x$ 奇对称，故所有奇数激发态的投影积分为零。$P_{0_f}\\le1$ 可由算术—几何平均不等式直接验证。\n\n(4) 海森堡方程给 $x(t)=x(0)\\cos\\omega_ft+p(0)\\sin\\omega_ft/(m\\omega_f)$。初始基态中对称化协方差 $\\langle xp+px\\rangle_i=0$，故\n\\[\n\\langle x^2(t)\\rangle=\\frac{\\hbar}{2m\\omega_i}\\cos^2\\omega_ft+\n\\frac{\\hbar\\omega_i}{2m\\omega_f^2}\\sin^2\\omega_ft .\n\\]\n这是 $2\\omega_f$ 频率的压缩呼吸振荡。$t=0$ 时恢复旧基态方差；$\\omega_i=\\omega_f$ 时两系数相同，方差时间不变。",
+    "answer": "\\langle N_f\\rangle=\\frac{(\\omega_f-\\omega_i)^2}{4\\omega_i\\omega_f},\\quad P_{0_f}=\\frac{2\\sqrt{\\omega_i\\omega_f}}{\\omega_i+\\omega_f}",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "量子骤变",
+      "简谐振子高斯态",
+      "基态重叠积分",
+      "平均激发数",
+      "压缩态时间演化"
+    ],
+    "assumptions_review": "经过解析模型、守恒与极限初检；独立专家审核待完成",
+    "checks": [],
+    "revision": "composite-v1.4",
+    "challenge_profile": "high-multistage"
+  },
+  {
+    "id": "Q015",
+    "topic": "近代物理",
+    "title": "相对论完全非弹性碰撞的复合静质量与内部能",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 65,
+    "question": "实验室惯性系中，两粒子静质量均为 $m>0$。粒子 A 沿 $+x$ 方向以速率 $v=\\beta c$ 运动，其中 $0<\\beta<1$，粒子 B 初始静止。二者发生完全非弹性碰撞，最终结合成单一复合物，且没有辐射或其他能量动量流出系统；复合物的内部能可以转化为增加的静质量。令 $\\gamma=(1-\\beta^2)^{-1/2}$。\n(1) 由四动量守恒求复合物的实验室速度与洛伦兹因子；(2) 利用总四动量不变量求复合物静质量 $M$，证明 $M>2m$；(3) 求内部能增量 $(M-2m)c^2$，并验证初末总能量和动量精确守恒；(4) 在 $\\beta\\to0^+$ 极限计算复合物速度与内部能首个非零阶项，对照经典等质量粘连碰撞。",
+    "solution": "(1) 初态总能量 $E_i=(\\gamma+1)mc^2$，动量 $p_i=\\gamma m v$，因此末态复合物速度由 $V=c^2p_i/E_i$ 给出\n\\[\nV=\\frac{\\gamma}{\\gamma+1}v,\\qquad\n\\frac Vc=\\frac{\\gamma\\beta}{\\gamma+1}\n=\\sqrt{\\frac{\\gamma-1}{\\gamma+1}}.\n\\]\n由 $1-V^2/c^2=2/(\\gamma+1)$ 得 $\\Gamma=\\sqrt{(\\gamma+1)/2}$，其中 $\\Gamma$ 是复合物的实验室洛伦兹因子。\n\n(2) 末态静质量由不变量\n\\[\nM^2c^4=E_i^2-c^2p_i^2\n=m^2c^4[(\\gamma+1)^2-\\gamma^2\\beta^2]\n=2m^2c^4(\\gamma+1).\n\\]\n所以\n\\[\nM=m\\sqrt{2(\\gamma+1)}>2m\n\\]\n因为 $\\gamma>1$。复合物内部能使静质量增加，不能仍把其惯性质量强行视作 $2m$。\n\n(3) 以两粒子各自的静能之和为基准，复合物内部能增量\n\\[\n\\Delta U=(M-2m)c^2=mc^2[\\sqrt{2(\\gamma+1)}-2]>0.\n\\]\n末态总能量为 $\\Gamma Mc^2=\\sqrt{(\\gamma+1)/2}\\cdot m\\sqrt{2(\\gamma+1)}c^2=(\\gamma+1)mc^2$，总动量为 $\\Gamma M V=E_iV/c^2=\\gamma mv$，分别与初态一致。实验室宏观动能的减少等于复合物静能增加，但不可把非弹性碰撞中机械动能守恒作为前提。\n\n(4) 当 $\\beta\\ll1$，$\\gamma=1+\\beta^2/2+O(\\beta^4)$，故\n\\[\nV=\\frac v2+O(v^3/c^2),\\qquad\nM=2m\\left(1+\\frac{\\beta^2}{8}+O(\\beta^4)\\right),\n\\quad\n\\Delta U=\\frac{mv^2}{4}+O(mv^4/c^2).\n\\]\n经典两等质量粘连碰撞末态速度 $v/2$、动能损失 $mv^2/4$，与极限完全吻合。",
+    "answer": "V=\\gamma v/(\\gamma+1),\\quad M=m\\sqrt{2(\\gamma+1)},\\quad\\Delta U=(M-2m)c^2",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "相对论四动量",
+      "不变量质量",
+      "非弹性碰撞",
+      "内部能量",
+      "低速极限"
+    ],
+    "assumptions_review": "经过解析模型、守恒与极限初检；独立专家审核待完成",
+    "checks": [],
+    "revision": "composite-v1.4",
     "challenge_profile": "high-multistage"
   }
 ]

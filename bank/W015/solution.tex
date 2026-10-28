@@ -1,0 +1,33 @@
+(1) 取 $y(x,t)=X(x)e^{-i\omega t}$，则
+\[
+-\mu\omega^2X=\frac d{dx}\left[T_0(1+\alpha x)^2X'\right],\qquad X(0)=X(L)=0.
+\]
+因为张力位置依赖，不能直接把波速当常数而写 $X''+k^2X=0$。
+
+(2) 用 $z=1+\alpha x$，空间方程变为
+\[
+z^2X_{zz}+2zX_z+\frac{\mu\omega^2}{T_0\alpha^2}X=0.
+\]
+这是 Euler–Cauchy 方程；试 $X=z^\nu$ 得 $\nu(\nu+1)+\mu\omega^2/(T_0\alpha^2)=0$。对可满足两个固定端的振动模，写 $\nu=-1/2\pm iq$，因此
+\[
+X(z)=z^{-1/2}[A\cos(q\ln z)+B\sin(q\ln z)].
+\]
+左端 $z=1$ 使 $A=0$，右端 $z_L=1+\alpha L$ 使 $q\ln z_L=n\pi,\ n=1,2,\ldots$。于是
+\[
+\omega_n=\alpha\sqrt{\frac{T_0}{\mu}}
+\sqrt{\frac14+\left(\frac{n\pi}{\ln(1+\alpha L)}\right)^2},
+\quad X_n(x)\propto(1+\alpha x)^{-1/2}
+\sin\frac{n\pi\ln(1+\alpha x)}{\ln(1+\alpha L)}.
+\]
+
+(3) 用 $X$ 乘本征方程，分部积分并使用 $X(0)=X(L)=0$，得
+\[
+\mu\omega^2\int_0^L|X|^2dx=\int_0^L T(x)|X'|^2dx>0.
+\]
+因此无非零零频或虚频本征模；对两个不同本征值的解交叉相乘并相减，边界项为零，得到 $\int_0^L\mu X_mX_n\,dx=0$，即质量加权正交，本题 $\mu$ 为常量。
+
+(4) 当 $\alpha L\ll1$，$\ln(1+\alpha L)=\alpha L+O(\alpha^2L^2)$，故
+\[
+\omega_n=\frac{n\pi}{L}\sqrt{T_0/\mu}[1+O(\alpha L)]
+\]
+并且 $X_n(x)\to\sin(n\pi x/L)$。由于变张力在 $\alpha\to0$ 时逐点趋向 $T_0$，此极限验证了所得谱的正常化。
