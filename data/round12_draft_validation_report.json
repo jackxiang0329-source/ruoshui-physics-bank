@@ -1,7 +1,7 @@
 {
   "status": "draft-only",
-  "new_problem_count": 6,
-  "passed_count": 24,
+  "new_problem_count": 7,
+  "passed_count": 28,
   "tests": [
     {
       "id": "M059",
@@ -170,6 +170,34 @@
       "method": "numerical",
       "name": "Loschmidt amplitude agrees with independent real closed echo at nontrivial time",
       "passed": true
+    },
+    {
+      "id": "T057",
+      "part": 1,
+      "method": "conservation",
+      "name": "mass-momentum and energy Hugoniot jumps both vanish on the exact shock branch",
+      "passed": true
+    },
+    {
+      "id": "T057",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "downstream Mach number from velocity and sound speed agrees with jump elimination",
+      "passed": true
+    },
+    {
+      "id": "T057",
+      "part": 3,
+      "method": "symbolic_and_limit",
+      "name": "entropy production derivative is nonnegative and weak shock entropy begins cubically",
+      "passed": true
+    },
+    {
+      "id": "T057",
+      "part": 4,
+      "method": "strong_shock_limit",
+      "name": "strong shock finite compression, pressure and temperature scaling, subsonic downstream",
+      "passed": true
     }
   ],
   "independent_expert_review": "pending",
@@ -208,6 +236,12 @@
       "id": "Q057",
       "method": "independent_number_sum",
       "name": "squeezed vacuum probabilities normalize and reproduce mean excitation",
+      "passed": true
+    },
+    {
+      "id": "T057",
+      "method": "independent_numerical",
+      "name": "high-Mach Rankine-Hugoniot strong shock ratios",
       "passed": true
     }
   ]

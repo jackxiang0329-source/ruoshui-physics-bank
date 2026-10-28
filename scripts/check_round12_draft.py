@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Twelve executable independent draft checks, NOT the required 200-item final gate."""
+"""Twenty-eight executable draft subpart checks, NOT the required 200-item final gate."""
 import json
 import math
 import mpmath as mp
@@ -101,8 +101,33 @@ amp=mp.exp(-1j*w1num*tnum/2)/(mp.cosh(rnum)*mp.sqrt(1-mp.tanh(rnum)**2*mp.exp(-2
 echo=1/mp.sqrt(1+mp.sinh(2*rnum)**2*mp.sin(w1num*tnum)**2)
 record('Q057',4,'numerical','Loschmidt amplitude agrees with independent real closed echo at nontrivial time',abs(abs(amp)**2-echo)<mp.mpf('1e-26'))
 
-assert len(checks)==24 and len(set((c['id'],c['part']) for c in checks))==24
-assert all(len(set(c['method'] for c in checks if c['id']==uid))>=2 for uid in ['M059','E059','T056','W056','O057','Q057'])
+
+# T057: distinct thermodynamic shock model; four analytical/physical checks.
+gs,xs=s.symbols('gs xs',positive=True)
+rs=(gs+1)*xs/((gs-1)*xs+2)
+Ps=(2*gs*xs-(gs-1))/(gs+1)
+record('T057',1,'conservation','mass-momentum and energy Hugoniot jumps both vanish on the exact shock branch',
+       eq(Ps-1-gs*xs*(1-1/rs)) and
+       eq(gs/(gs-1)*(Ps/rs-1)-gs*xs*s.Rational(1,2)*(1-1/rs**2)))
+ms2=((gs-1)*xs+2)/(2*gs*xs-(gs-1))
+record('T057',2,'independent_derivation','downstream Mach number from velocity and sound speed agrees with jump elimination',
+       eq(xs/(Ps*rs),ms2) and
+       eq((2*gs*xs-(gs-1))-((gs-1)*xs+2),(gs+1)*(xs-1)))
+Fs=s.log(Ps)-gs*s.log(rs)
+Fprime=2*gs*(gs-1)*(xs-1)**2/(xs*((gs-1)*xs+2)*(2*gs*xs-(gs-1)))
+eps=s.symbols('eps',real=True)
+record('T057',3,'symbolic_and_limit','entropy production derivative is nonnegative and weak shock entropy begins cubically',
+       eq(s.diff(Fs,xs),Fprime) and
+       eq(s.diff(Fs.subs(xs,1+eps),eps,3).subs(eps,0)/s.factorial(3),
+          2*gs*(gs-1)/(3*(gs+1)**2)) and eq(Fs.subs(xs,1)))
+record('T057',4,'strong_shock_limit','strong shock finite compression, pressure and temperature scaling, subsonic downstream',
+       eq(s.limit(rs,xs,s.oo),(gs+1)/(gs-1)) and
+       eq(s.limit(Ps/xs,xs,s.oo),2*gs/(gs+1)) and
+       eq(s.limit((Ps/rs)/xs,xs,s.oo),2*gs*(gs-1)/(gs+1)**2) and
+       eq(s.limit(ms2,xs,s.oo),(gs-1)/(2*gs)))
+
+assert len(checks)==28 and len(set((c['id'],c['part']) for c in checks))==28
+assert all(len(set(c['method'] for c in checks if c['id']==uid))>=2 for uid in ['M059','E059','T056','W056','O057','Q057','T057'])
 # Independent numerical crosschecks beyond the twelve mandatory draft subparts.
 from math import sqrt,tanh,cosh
 A0=2.;B0=2.;C0=2/sqrt(3);lam0=2/sqrt(3);time=.73
@@ -142,7 +167,17 @@ supplemental.extend([
  dict(id='O057',method='independent_numerical_derivative',name='finite precision Fresnel phase differentiation matches s shift',passed=True),
  dict(id='Q057',method='independent_number_sum',name='squeezed vacuum probabilities normalize and reproduce mean excitation',passed=True)])
 
-result={'status':'draft-only','new_problem_count':6,'passed_count':len(checks),'tests':checks,'independent_expert_review':'pending','supplemental_numeric_checks':supplemental}
+
+# Independent high-Mach numerical sample: gamma=7/5, M1=1000.
+gshock=mp.mpf(7)/5
+xshock=mp.mpf('1000000')
+rshock=(gshock+1)*xshock/((gshock-1)*xshock+2)
+pshock=(2*gshock*xshock-(gshock-1))/(gshock+1)
+assert abs(rshock-(gshock+1)/(gshock-1))<mp.mpf('0.0001')
+assert abs(pshock/xshock-2*gshock/(gshock+1))<mp.mpf('0.00001')
+supplemental.append(dict(id='T057',method='independent_numerical',name='high-Mach Rankine-Hugoniot strong shock ratios',passed=True))
+
+result={'status':'draft-only','new_problem_count':7,'passed_count':len(checks),'tests':checks,'independent_expert_review':'pending','supplemental_numeric_checks':supplemental}
 path=Path(__file__).resolve().parents[1]/'data/round12_draft_validation_report.json'
 path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
 print(json.dumps({'status':result['status'],'checked_subparts':len(checks)},ensure_ascii=False))
