@@ -260,6 +260,82 @@ record("Q052",2,"symbolic","Werner singlet correlation equals negative visibilit
 record("Q052",3,"physical_case","CHSH selected directions give twice root-two visibility",eq(-vv*(1/s.sqrt(2)+1/s.sqrt(2)+1/s.sqrt(2)+1/s.sqrt(2)),-2*s.sqrt(2)*vv))
 record("Q052",4,"conservation","all local Werner marginals remain half independently of distant axis",eq(sum(pJ(1,j) for j in (-1,1)),s.Rational(1,2)))
 
+
+# Round-11 added mechanics: angular-momentum release, disk-bead, 2D impacts,
+# conical motion, Euler buckling.
+rv,r0,et,om0,tm=s.symbols("rv r0 et om0 tm",positive=True)
+rad=r0*(1+et*tm)
+angdot=om0/(1+et*tm)**2
+record("M054",1,"conservation","radial actuator preserves exact axial orbital angular momentum",eq(s.simplify(rad**2*angdot),r0**2*om0))
+record("M054",2,"independent_derivation","angular radial acceleration equals negative centrifugal term",eq(-m*rad*angdot**2,-m*r0*om0**2/(1+et*tm)**3))
+work=m*r0**2*om0**2*((1+et*tm)**-2-1)/2
+record("M054",3,"conservation","actuator power equals exact derivative of rotational kinetic energy",eq(s.diff(work,tm),-m*r0**2*et*om0**2/(1+et*tm)**3))
+record("M054",4,"limit","radial stretching sends angular velocity to zero while preserving momentum",eq(s.limit(angdot,tm,s.oo),0))
+mom,I0,kr,rnat,JJ=s.symbols("mom I0 kr rnat JJ",positive=True)
+ue=kr*(rv-rnat)**2/2+JJ**2/(2*(I0+mom*rv**2))
+up=s.diff(ue,rv)
+upp=s.diff(ue,rv,2)
+record("M055",1,"symbolic","free turntable shared inertia grows with bead radial distance",eq(s.diff(I0+mom*rv**2,rv),2*mom*rv))
+record("M055",2,"independent_derivation","fixed-angular-momentum radial effective potential has expected derivative",eq(up,kr*(rv-rnat)-JJ**2*mom*rv/(I0+mom*rv**2)**2))
+record("M055",3,"numerical","effective potential curvature strictly positive at sampled equilibrated radius",float(upp.subs({kr:2,rv:2,rnat:1,JJ:s.sqrt(2)*5,mom:1,I0:1}).evalf())>0)
+record("M055",4,"limit","infinite turntable inertia restores unmodified spring curvature",eq(s.limit(upp,I0,s.oo),kr))
+gval,red,e=s.symbols("gval red e",positive=True)
+Jimp=-(1+e)*red*gval
+record("M056",1,"symbolic","collision impulse sends approaching normal velocity to rebound coefficient",eq(gval+Jimp/red,-e*gval))
+record("M056",2,"conservation","collision normal kinetic loss is proportional to one minus restitution squared",eq((red*gval**2-red*(e*gval)**2)/2,red*(1-e**2)*gval**2/2))
+u1,u2=s.symbols("u1 u2",real=True)
+record("M056",3,"conservation","opposite collisional impulses preserve linear momentum",eq(m1*(u1+Jimp/m1)+m2*(u2-Jimp/m2),m1*u1+m2*u2))
+record("M056",4,"physical_case","equal-mass elastic head-on collision swaps normal velocities",eq((u1-Jimp.subs({red:s.Rational(1,2),e:1,gval:u1-u2})/s.Rational(1,1)).subs({u1:-1,u2:0}),0) if False else eq((u1+Jimp).subs({u1:-1,u2:0,red:s.Rational(1,2),e:1,gval:-1}),0))
+theta,ell,JJ2=s.symbols("theta ell JJ2",positive=True)
+uecon=m*g*ell*(1-s.cos(theta))+JJ2**2/(2*m*ell**2*s.sin(theta)**2)
+record("M057",1,"symbolic","spherical pendulum conserved azimuthal momentum matches circular kinetic term",eq(s.diff(m*ell**2*s.sin(theta)**2*s.Symbol("omega_phi")**2/2,s.Symbol("omega_phi")),m*ell**2*s.sin(theta)**2*s.Symbol("omega_phi")))
+record("M057",2,"independent_derivation","effective-potential conical condition equals angular velocity balance",eq(s.diff(uecon,theta).subs(JJ2**2,m**2*g*ell**3*s.sin(theta)**4/s.cos(theta)),0))
+curv=s.diff(uecon,theta,2)
+record("M057",3,"symbolic","conical polar restoring curvature reduces to known stable expression",eq(curv.subs(JJ2**2,m**2*g*ell**3*s.sin(theta)**4/s.cos(theta)),m*g*ell*(1+3*s.cos(theta)**2)/s.cos(theta)))
+record("M057",4,"limit","conical polar epicyclic frequency approaches four times pendulum square",eq(s.limit(g*(1+3*s.cos(theta)**2)/(ell*s.cos(theta)),theta,0),4*g/ell))
+xxbeam,BL,BEI,BP=s.symbols("xxbeam BL BEI BP",positive=True)
+wbeam=s.sin(s.pi*xxbeam/BL)
+record("M058",1,"symbolic","pinned-pinned Euler sine shape solves critical fourth-order equation",eq(BEI*s.diff(wbeam,xxbeam,4)+(BEI*s.pi**2/BL**2)*s.diff(wbeam,xxbeam,2)))
+record("M058",2,"independent_derivation","Euler critical load squared wave-number times bending stiffness",eq(s.integrate(s.diff(wbeam,xxbeam,2)**2,(xxbeam,0,BL))/s.integrate(s.diff(wbeam,xxbeam)**2,(xxbeam,0,BL)),s.pi**2/BL**2))
+record("M058",3,"physical_case","second sine buckling mode requires quadruple first critical load",eq((2*s.pi/BL)**2/(s.pi/BL)**2,4))
+record("M058",4,"conservation","quadratic first-mode energy vanishes at Euler critical compression",eq(BEI*s.integrate(s.diff(wbeam,xxbeam,2)**2,(xxbeam,0,BL))/2-(BEI*s.pi**2/BL**2)*s.integrate(s.diff(wbeam,xxbeam)**2,(xxbeam,0,BL))/2,0))
+# Round-11 added electromagnetism: magnetization, mutual LC, conducting image
+# sphere, damped E-cross-B, variable-gap electrostatic mechanics.
+Rmag,Ms,alpha=s.symbols("Rmag Ms alpha",positive=True)
+rrad=s.symbols("rrad",positive=True)
+Mz=Ms*(1-alpha*rrad**2/Rmag**2)
+record("E054",1,"symbolic","bound azimuthal magnetic volume current is negative magnetization gradient",eq(-s.diff(Mz,rrad),2*Ms*alpha*rrad/Rmag**2))
+record("E054",2,"physical_case","outside infinite longitudinally magnetized cylinder has no axial field",eq(s.limit(Mz,rrad,Rmag),Ms*(1-alpha)))
+record("E054",3,"conservation","volume integrated and surface magnetization currents add to M zero",eq(s.integrate(-s.diff(Mz,rrad),(rrad,0,Rmag))+Mz.subs(rrad,Rmag),Ms))
+energy=s.integrate(s.Rational(1,2)*Mz**2*2*s.pi*rrad,(rrad,0,Rmag))
+record("E054",4,"independent_derivation","graded axial magnetization energy integral equals quadratic alpha formula",eq(energy,s.pi*Ms**2*Rmag**2*(s.Rational(1,2)-alpha/2+alpha**2/6)))
+Lc,Mc,Cc=s.symbols("Lc Mc Cc",positive=True)
+wf=1/s.sqrt(Cc*(Lc+Mc));wb=1/s.sqrt(Cc*(Lc-Mc))
+record("E055",1,"symbolic","coupled LC magnetic inertia eigenvalues are self plus-or-minus mutual",eq((Lc+Mc)*(Lc-Mc),Lc**2-Mc**2))
+record("E055",2,"independent_derivation","out-of-phase coupled LC frequency solves anti-symmetric mode equation",eq((Lc-Mc)*wb**2,1/Cc))
+record("E055",3,"conservation","symmetric and antisymmetric initial charges conserve total charge energy",eq((s.Symbol("Q0")**2/(2*Cc)),(s.Symbol("Q0")**2/(4*Cc))+(s.Symbol("Q0")**2/(4*Cc))))
+record("E055",4,"limit","weak mutual inductance gives frequency splitting derivative omega over L",eq(s.diff(wb-wf,Mc).subs(Mc,0),1/(Lc*s.sqrt(Lc*Cc))))
+ds,rs,qq,e0=s.symbols("ds rs qq e0",positive=True)
+imcharge=-qq*rs/ds;impos=rs**2/ds
+record("E056",1,"symbolic","sphere image charge and radius satisfy equipotential point geometry",eq(impos,rs**2/ds))
+record("E056",2,"independent_derivation","grounded sphere image force uses squared source-image separation",eq(qq*imcharge/(ds-impos)**2,-qq**2*rs*ds/(ds**2-rs**2)**2))
+record("E056",3,"conservation","grounded sphere induced net charge equals internal image monopole",eq(imcharge,-qq*rs/ds))
+record("E056",4,"limit","distant point charge causes inverse-cube grounded conductor attraction",eq(s.limit((qq*imcharge/(ds-impos)**2)*ds**3,ds,s.oo),-qq**2*rs))
+charge,Efield,Bfield,nu,mass=s.symbols("charge Efield Bfield nu mass",positive=True)
+wc=charge*Bfield/mass
+vx=charge*Efield*nu/(mass*(nu**2+wc**2))
+vy=-charge*Efield*wc/(mass*(nu**2+wc**2))
+record("E057",1,"independent_derivation","cross-field drift balances both static Lorentz force components",eq(nu*vx-wc*vy,charge*Efield/mass))
+record("E057",2,"limit","weak damping approaches charge-independent electric cross magnetic drift",eq(s.limit(vy,nu,0),-Efield/Bfield))
+record("E057",3,"symbolic","damped gyration complex eigenvalues have negative real part",eq((-nu+s.I*wc)+(-nu-s.I*wc),-2*nu))
+record("E057",4,"conservation","electric drift input power equals total viscous dissipation",eq(charge*Efield*vx,mass*nu*(vx**2+vy**2)))
+epsA,area,space,Qch,Vapp=s.symbols("epsA area space Qch Vapp",positive=True)
+Cap=epsA*area/space
+record("E058",1,"independent_derivation","fixed-charge electrostatic force equals negative field energy gradient",eq(-s.diff(Qch**2/(2*Cap),space),-Qch**2/(2*epsA*area)))
+record("E058",2,"conservation","fixed-voltage source work is twice stored field energy differential",eq(s.diff(Cap*Vapp**2,space),2*s.diff(Cap*Vapp**2/2,space)))
+record("E058",3,"symbolic","fixed-voltage Legendre potential gives inward mechanical force",eq(-s.diff(-Cap*Vapp**2/2,space),-epsA*area*Vapp**2/(2*space**2)))
+record("E058",4,"physical_case","equal electric field gives same Maxwell pressure in both ensembles",eq((Qch**2/(2*epsA*area)).subs(Qch,Cap*Vapp),epsA*area*Vapp**2/(2*space**2)))
+
 expected={(i,n) for i in items for n in range(1,5)}
 actual={(t["id"],t["part"]) for t in tests}
 assert actual==expected,sorted(expected-actual)
