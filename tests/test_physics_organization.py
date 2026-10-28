@@ -33,8 +33,11 @@ class OrganizationTests(unittest.TestCase):
         self.assertGreaterEqual(a["translated_drafts"],88)
         self.assertEqual(a["translated_drafts"],len(json.loads((ROOT/"localization/zh_CN/translations.json").read_text(encoding="utf-8"))["entries"])+len(json.loads((ROOT/"localization/zh_CN/translations.json").read_text(encoding="utf-8"))["additional_entries"]))
         self.assertGreaterEqual(a["translated_drafts"],120)
-        self.assertTrue((ROOT/"localized/zh_CN/thermodynamics/supplementary/CP-00898.md").exists())
-        self.assertTrue((ROOT/"localized/zh_CN/mechanics/supplementary/IP-0021.md").exists())
+        self.assertEqual(a["per_question_files"],0)
+        self.assertEqual(a["consolidated_books"],len(a["files"]))
+        self.assertIn("CP-00898",(ROOT/"localized/zh_CN/合订/thermodynamics.md").read_text(encoding="utf-8"))
+        self.assertIn("IP-0021",(ROOT/"localized/zh_CN/合订/mechanics.md").read_text(encoding="utf-8"))
+        self.assertFalse((ROOT/"localized/zh_CN/mechanics/supplementary/IP-0021.md").exists())
         b=catalog.generate(ROOT)
         self.assertGreaterEqual(b["candidate_total"],17000)
         self.assertEqual(a["translated_drafts"],b["translated_drafts"])
@@ -42,6 +45,10 @@ class OrganizationTests(unittest.TestCase):
         with (ROOT/"external_sources/catalog/题目总索引.csv").open(encoding="utf-8-sig",newline="") as f:
             rows=list(csv.DictReader(f))
         self.assertEqual(len(rows),b["candidate_total"])
+        translated=[x for x in rows if x["中文译稿"]]
+        self.assertEqual(len(translated),a["translated_drafts"])
+        self.assertTrue(all("#" in x["中文译稿"] and (ROOT/x["中文译稿"].split("#",1)[0]).exists() for x in translated))
+        self.assertTrue(all(x["中文译稿"].split("#",1)[1] == x["id"].lower() for x in translated))
         self.assertTrue(all(r["组卷资格"]=="否" for r in rows))
 
 if __name__=="__main__":

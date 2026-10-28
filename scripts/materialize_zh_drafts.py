@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Create bilingual drafts from carefully edited Chinese text and pinned English."""
 import hashlib,json,re,unicodedata
+from collections import defaultdict
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parent.parent
@@ -99,8 +100,57 @@ def create(root=ROOT):
             body += "- 审校提示：" + item["notes"] + "\n"
         dest.write_text(body, encoding="utf-8")
         paths.append(rel)
+    # Generated publication views are 7 subject books, not one Markdown file per problem.
+    # Read the already-validated drafts, consolidate, then remove the old generated
+    # per-question views. Never touch the pinned English raw/ source tree.
+    grouped=defaultdict(list)
+    for rel in paths:
+        grouped[Path(rel).parts[2]].append(rel)
+    books=[]
+    book_index={}
+    collection=root/"localized/zh_CN/合订"
+    collection.mkdir(parents=True,exist_ok=True)
+    for module in t["modules"]:
+        code=module["code"]
+        if not grouped.get(code):
+            continue
+        rel_book=f"localized/zh_CN/合订/{code}.md"
+        sections=[f"# 大学物理中英对照初译｜{module['name']}","",
+                  "> 仅供编辑复核：尚未通过独立双语、答案或版权审核；不可正式组卷。","",
+                  f"共 {len(grouped[code])} 道。英文原文均以保留源指纹的上游快照为依据。",""]
+        for rel in sorted(grouped[code],key=lambda x:Path(x).stem):
+            pid=Path(rel).stem
+            original_body=(root/rel).read_text(encoding="utf-8")
+            if not original_body.startswith("# "+pid):
+                raise ValueError("generated draft ID mismatch: "+pid)
+            sections.append(f'<a id="{pid.lower()}"></a>')
+            sections.append("")
+            sections.append(original_body.replace("# "+pid,"## "+pid,1).rstrip())
+            sections.append("")
+            sections.append("---")
+            sections.append("")
+            book_index[pid]=rel_book+"#"+pid.lower()
+        (root/rel_book).write_text("\\n".join(sections)+"\\n",encoding="utf-8")
+        books.append(rel_book)
+    if len(book_index)!=len(paths) or len(books)!=len(grouped):
+        raise ValueError("collection lost source-bound translations")
+    # Include stale generated IDs from earlier runs, not just the current manifest.
+    # Source files and the canonical translations.json are strictly out of scope.
+    for old in (root/"localized/zh_CN").rglob("*.md"):
+        if re.fullmatch(r"(?:PREF-\\d{5}|CP-\\d{5}|IP-\\d{4})\\.md",old.name):
+            old.unlink()
+    links=["# 大学物理中英对照｜按学科合订","",
+           "仅供审校；所有外部题尚未获正式组卷资格。","",
+           "译文的唯一可编辑主档：`../../localization/zh_CN/translations.json`；原始英文文件不移动。",""]
+    for module in t["modules"]:
+        book=f"localized/zh_CN/合订/{module['code']}.md"
+        if book in books:
+            links.append(f"- [{module['name']}]({module['code']}.md)（{len(grouped[module['code']])} 道）")
+    (collection/"README.md").write_text("\\n".join(links)+"\\n",encoding="utf-8")
     report={"translated_drafts":len(paths),"original_hash_checks_passed":len(paths),
-            "independently_bilingual_approved":0,"exam_ready":0,"files":paths}
+            "independently_bilingual_approved":0,"exam_ready":0,
+            "consolidated_books":len(books),"per_question_files":0,
+            "files":books,"book_index":book_index}
     output=root/"localized/zh_CN/中文译稿报告.json"
     output.parent.mkdir(parents=True,exist_ok=True)
     output.write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
