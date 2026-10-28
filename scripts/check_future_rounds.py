@@ -52,6 +52,17 @@ def check():
         return 0
     if len(current)!=252+50*len(manifests):
         reject("incomplete new round or 50-item manifest missing")
+    # Round 12 originality findings are a release blocker until explicitly resolved.
+    # A successful syntax or similarity heuristic alone is not evidence of independent models.
+    if any(round_no >= 12 for round_no, _ in manifests):
+        overlap_path = ROOT / "data" / "round12_core_model_overlap_audit.json"
+        if not overlap_path.exists():
+            reject("round 12: cross-round core-model overlap audit missing")
+        findings = load(overlap_path).get("potential_core_model_overlaps", [])
+        unresolved = [f.get("draft_id", "?") for f in findings
+                      if f.get("resolution_status") != "resolved"]
+        if unresolved:
+            reject("round 12: unresolved core-model overlaps: " + ", ".join(unresolved))
     known=set(baseline)
     for index,(round_no,path) in enumerate(manifests):
         if round_no!=11+index:
