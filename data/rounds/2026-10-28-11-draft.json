@@ -373,6 +373,98 @@
       "complexity_tier": "L5-B",
       "question": "一张半径 \\(a\\)、均匀面密度 \\(\\rho_s>0\\)、各向同性面张力 \\(T>0\\) 的薄圆膜四周固定，位移轴对称 \\(u(r,t)\\)，满足 \\(0\\le r\\le a\\)。忽略弯曲刚度与自重，考虑小振幅线性振动；可加入单位面积的轴对称正弦载荷 \\(f(r)\\cos\\Omega t\\) 及各模态小阻尼 \\(2\\gamma_n\\)。\n(1) 写出圆膜振动偏微分方程，求满足圆心正则与边缘固定的轴对称本征频率。\n(2) 给出不同径向本征函数的正交关系与归一积分，确定第一零点控制的最低频率。\n(3) 推导一般外载 \\(f(r)\\cos\\Omega t\\) 的第 \\(n\\) 个模态振幅方程与复响应。\n(4) 验证模态总能量及平均耗散功率表达，并讨论点状激励和低阻尼共振的适用限制。\n",
       "solution": "(1) 轴对称小振幅膜方程为 \\(\\rho_su_{tt}=T[r^{-1}(ru_r)_r]+f(r,t)\\)。令 \\(c=\\sqrt{T/\\rho_s}\\)，自由模态 \\(u=R(r)e^{-i\\omega t}\\)，得到 \\(R''+R'/r+k^2R=0\\)，其中 \\(k=\\omega/c\\)。圆心正则性排除发散的 \\(Y_0(kr)\\)，故 \\(R=J_0(kr)\\)；边缘固定 \\(J_0(ka)=0\\)，第 \\(n\\) 个正根记 \\(j_{0,n}\\)，因此 \\(\\omega_n=c\\,j_{0,n}/a\\)。此频率为轴对称模态序列，完整膜还存在角向非零阶模式。\n\n(2) Sturm--Liouville 径向算子以权函数 \\(r\\) 自伴，故 \\(\\int_0^arJ_0(j_{0,n}r/a)J_0(j_{0,m}r/a)dr=0\\) 当 \\(n\\ne m\\)。归一积分为 \\(N_n=\\int_0^arJ_0^2(j_{0,n}r/a)dr=a^2J_1^2(j_{0,n})/2\\)。第一轴对称根 \\(j_{0,1}\\approx2.4048256\\)，对应最低轴对称模态频率 \\(\\omega_1\\approx2.4048256\\sqrt{T/\\rho_s}/a\\)。在做模态投影时必须保留面积权重 \\(2\\pi r\\)，否则激励幅值和质量均错误。\n\n(3) 以 \\(u(r,t)=\\sum_nq_n(t)J_0(j_{0,n}r/a)\\) 展开，将动力学方程乘相应本征函数再以 \\(2\\pi r\\,dr\\) 积分，利用正交性，得 \\(\\ddot q_n+2\\gamma_n\\dot q_n+\\omega_n^2q_n=F_n\\cos\\Omega t\\)，其中 \\(F_n=\\int_0^a r f(r)J_0(j_{0,n}r/a)dr/(\\rho_sN_n)\\)。稳态复振幅 \\(\\tilde q_n=F_n/(\\omega_n^2-\\Omega^2+2i\\gamma_n\\Omega)\\)。载荷分布在根节点附近时相应 \\(F_n\\) 可能趋近于零，即使频率共振也无法高效激发该模态。\n\n(4) 无阻尼自由振动的每模态能量为 \\(E_n=\\pi\\rho_sN_n[\\dot q_n^2+\\omega_n^2q_n^2]\\)；其时间导数在加入模态阻尼及载荷后给 \\(\\dot E_n=2\\pi N_nq_n'\\int_0^ar f(r)J_0 dr/N_n-4\\pi\\rho_sN_n\\gamma_n\\dot q_n^2\\)，其中第一项可简化为 \\(2\\pi\\dot q_n\\int_0^ar fJ_0dr\\)。稳态平均耗散率 \\(\\overline P_n=2\\pi\\rho_sN_n\\gamma_n\\Omega^2|\\tilde q_n|^2\\ge0\\)。数学上的点载荷应作为径向 delta 分布或有限小圆斑极限处理，不能把 \\(f(r)=\\delta(r)\\) 直接当作平面面积密度；低阻尼共振时还应检验小振幅条件。\n"
+    },
+    {
+      "id": "O049",
+      "topic": "光学",
+      "title": "高斯频谱双束干涉的复相干度、条纹可见度与相干时间",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 90,
+      "tags": [
+        "傅里叶光学",
+        "时间相干性",
+        "随机谱分布",
+        "可见度"
+      ],
+      "answer": "|\\gamma(\\tau)|=e^{-\\sigma_\\omega^2\\tau^2/2},\\qquad\\tau_c=\\sqrt2/\\sigma_\\omega",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-B",
+      "question": "准单色平稳标量光场分为相互相干的两臂，最终在同一探测点等强度叠加，其角频率功率谱为 \\(S(\\omega)=S_0\\exp[-(\\omega-\\omega_0)^2/(2\\sigma_\\omega^2)]\\)，\\(\\omega_0\\gg\\sigma_\\omega>0\\)。一臂比另一臂延迟 \\(\\tau\\)，探测器作长时间平均。近似将积分频率延拓至整个实轴；两臂的偏振、横向模式与光程损耗完全匹配。\n(1) 写出双束强度与归一化复时间相干函数的关系，指出时间延迟引入的谱相位。\n(2) 精确完成高斯频谱的傅里叶积分，得到复相干度及可见度包络。\n(3) 给出强度条纹表达式与可见度降到 \\(e^{-1}\\) 的相干时间，并比较载波周期尺度。\n(4) 讨论两束不等强时可见度的修正及有限谱宽对精密测长的约束。\n",
+      "solution": "(1) 令两臂探测到的场分别为 \\(E(t)\\)、\\(E(t-\\tau)\\)，其平均强度均为 \\(I_0=\\langle|E|^2\\rangle\\)。总场强度 \\(I(\\tau)=2I_0+2\\Re\\langle E^*(t)E(t-\\tau)\\rangle=2I_0[1+\\Re\\gamma(\\tau)]\\)，其中 \\(\\gamma(\\tau)=\\int S(\\omega)e^{-i\\omega\\tau}d\\omega/\\int S(\\omega)d\\omega\\)。频谱中的每个频率因延时贡献相位 \\(-\\omega\\tau\\)，所以不是简单把中心频率代入相位而忽略谱平均。\n\n(2) 变量替换 \\(u=\\omega-\\omega_0\\) 后，傅里叶积分分为载波因子 \\(e^{-i\\omega_0\\tau}\\) 与高斯积分 \\(\\int e^{-u^2/(2\\sigma_\\omega^2)}e^{-iu\\tau}du\\)。配方或高斯积分公式给其值 \\(\\sqrt{2\\pi}\\sigma_\\omega e^{-\\sigma_\\omega^2\\tau^2/2}\\)，因此 \\(\\gamma(\\tau)=e^{-i\\omega_0\\tau}e^{-\\sigma_\\omega^2\\tau^2/2}\\)。复相干度模长为 \\(e^{-\\sigma_\\omega^2\\tau^2/2}\\)，是探测器记录条纹包络的可见度，谱归一化常数 \\(S_0\\) 被完全约去。\n\n(3) 双束等强时 \\(I(\\tau)=2I_0[1+e^{-\\sigma_\\omega^2\\tau^2/2}\\cos(\\omega_0\\tau)]\\)。条纹载波周期约为 \\(2\\pi/\\omega_0\\)，可见度下降至 \\(e^{-1}\\) 时满足 \\(\\sigma_\\omega^2\\tau_c^2/2=1\\)，故 \\(\\tau_c=\\sqrt2/\\sigma_\\omega\\)，对应真空相干长度 \\(c\\tau_c\\)。由于 \\(\\omega_0\\gg\\sigma_\\omega\\)，一个相干包络内可容纳许多个载波条纹；若谱宽不小，所谓单一中心波长的干涉条纹概念需重新限定。\n\n(4) 若两个探测强度为 \\(I_1,I_2\\)，则 \\(I=I_1+I_2+2\\sqrt{I_1I_2}\\Re\\gamma(\\tau)\\)，因此干涉可见度变为 \\(V(\\tau)=[2\\sqrt{I_1I_2}/(I_1+I_2)]e^{-\\sigma_\\omega^2\\tau^2/2}\\le1\\)。即使完全时间相干，分束比失配也会降低可见度；若光程差超过约 \\(c\\tau_c\\)，高斯谱各频率相位趋于相消，条纹对比变弱，精密测长必须同时控制光谱宽度、偏振及两臂强度。\n"
+    },
+    {
+      "id": "O050",
+      "topic": "光学",
+      "title": "无吸收法布里—珀罗标准具的 Airy 透射、精细度与分辨率",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 90,
+      "tags": [
+        "多光束干涉",
+        "Airy函数",
+        "谐振线宽",
+        "光谱分辨本领"
+      ],
+      "answer": "T=[1+\\frac{4R}{(1-R)^2}\\sin^2(\\delta/2)]^{-1},\\quad \\mathcal F\\simeq\\frac{\\pi\\sqrt R}{1-R}",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-B",
+      "question": "两块平行、无吸收、相同的部分反射镜相隔 \\(L\\)，间充折射率 \\(n\\) 的无色散介质，光正入射。每个镜面的强度反射率 \\(0<R<1\\)，强度透过率为 \\(1-R\\)，忽略偏振及镜面附加相位的频率变化。往返相位 \\(\\delta=2\\omega nL/c\\)，探讨透射强度的频谱结构。\n(1) 对多次往返透射场作几何级数求和，推导归一化 Airy 透射函数。\n(2) 求共振条件及相邻共振角频率间隔和普通频率自由光谱区。\n(3) 在 \\(R\\to1\\) 的高精细度极限求半高全宽与精细度，说明精确公式与近似的区别。\n(4) 检验峰值、谷值与 \\(R\\to0\\) 极限，并分析镜间距误差对共振频率的敏感度。\n",
+      "solution": "(1) 光在首镜透射后每增加一圈都会额外乘上两镜的振幅反射乘积及往返相位；取无损同镜强度反射率 \\(R\\)，振幅几何级数可写 \\(E_t/E_i=(1-R)e^{i\\delta/2}\\sum_{j\\ge0}(Re^{i\\delta})^j=(1-R)e^{i\\delta/2}/(1-Re^{i\\delta})\\)。于是 \\(T(\\delta)=|E_t/E_i|^2=(1-R)^2/[(1-R)^2+4R\\sin^2(\\delta/2)]\\)，即 \\(T=1/[1+F\\sin^2(\\delta/2)]\\)，其中 \\(F=4R/(1-R)^2\\)。必须求场幅的相干和再平方，而不能直接将各次透射强度相加。\n\n(2) 当 \\(\\delta=2\\pi q\\)（\\(q\\) 为整数）时多束相位一致，透射达峰值一。因 \\(\\delta=2\\omega nL/c\\)，相邻角频率间隔为 \\(\\Delta\\omega_{\\rm FSR}=\\pi c/(nL)\\)，以赫兹表示 \\(\\Delta\\nu_{\\rm FSR}=c/(2nL)\\)。这等价于腔内往返光程 \\(2nL\\) 必须容纳整数个真空波长。若 \\(n\\) 随频率明显色散，自由光谱区将由群折射率而非简单常数 \\(n\\) 决定。\n\n(3) 共振附近设 \\(\\delta=2\\pi q+\\epsilon\\)，高反射率时 \\(\\sin^2(\\epsilon/2)\\simeq\\epsilon^2/4\\)。半高条件 \\(T=1/2\\) 给 \\(|\\epsilon|_{\\rm HWHM}\\simeq2/\\sqrt F\\)，故往返相位的全半高宽 \\(\\Delta\\delta_{\\rm FWHM}\\simeq4/\\sqrt F=2(1-R)/\\sqrt R\\)。精细度是自由谱区与半高全宽之比 \\(\\mathcal F\\simeq2\\pi/\\Delta\\delta_{\\rm FWHM}=\\pi\\sqrt R/(1-R)\\)。精确半高条件可写 \\(\\sin^2(\\epsilon/2)=1/F\\)，仅当 \\(F\\ge1\\) 才有孤立意义的局部半高宽；上述高精细度结果不能用于 \\(R\\) 很小的宽峰。\n\n(4) 在共振处 \\(\\sin^2(\\delta/2)=0\\) 所以 \\(T_{\\max}=1\\)，反共振 \\(\\delta=(2q+1)\\pi\\) 处 \\(T_{\\min}=(1-R)^2/(1+R)^2\\)。令 \\(R\\to0\\)，\\(F\\to0\\)，透射恒近于一，谐振选择性消失；令 \\(R\\to1\\)，峰宽趋于零而峰值保持一，理想无吸收腔表现高频率选择性。从 \\(\\omega_q=q\\pi c/(nL)\\) 微分，若 \\(n\\) 不随 \\(L\\) 变化，则 \\(\\delta\\omega_q/\\omega_q=-\\delta L/L\\)，显示高精细度测量必须控制镜间距漂移。\n"
+    },
+    {
+      "id": "O051",
+      "topic": "光学",
+      "title": "旋转四分之一波片的 Jones 矩阵、圆偏振产生及延迟误差",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 90,
+      "tags": [
+        "Jones矩阵",
+        "偏振Stokes参量",
+        "双折射",
+        "椭圆率容差"
+      ],
+      "answer": "(S_0,S_1,S_2,S_3)=(1,\\cos\\delta,0,-\\sin\\delta)",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-B",
+      "question": "一块理想无吸收线性延迟片的两本征轴相对入射实验室 \\(x\\) 轴旋转角 \\(\\theta\\)，本征轴之间相对相位延迟为 \\(\\delta\\)。输入单色光为沿 \\(x\\) 方向的单位幅值线偏振 \\(\\mathbf E_{\\rm in}=(1,0)^T\\)，采用时间因子 \\(e^{-i\\omega t}\\)，忽略共同相位。特别关注 \\(\\theta=\\pi/4\\) 和 \\(\\delta\\) 接近 \\(\\pi/2\\) 的情况。\n(1) 给出实验室坐标 Jones 算符的旋转夹心表达式，验证无吸收条件。\n(2) 求 \\(\\theta=\\pi/4\\) 的出射 Jones 矢量及 Stokes 分量，说明延迟符号与旋向的关联。\n(3) 求产生圆偏振的条件以及半波片极限，并检查总强度不变。\n(4) 若 \\(\\delta=\\pi/2+\\varepsilon\\) 且 \\(|\\varepsilon|\\ll1\\)，定量求剩余线偏振和圆偏振度的首阶变化。\n",
+      "solution": "(1) 定义二维旋转矩阵 \\(R(\\theta)=\\begin{pmatrix}\\cos\\theta&-\\sin\\theta\\\\\\sin\\theta&\\cos\\theta\\end{pmatrix}\\)，在本征轴坐标中延迟算符为 \\(D=\\operatorname{diag}(1,e^{i\\delta})\\)。实验室坐标的 Jones 矩阵 \\(J=R(\\theta)D R(-\\theta)\\)，因 \\(R\\) 为正交矩阵而 \\(D^\\dagger D=I\\)，可得 \\(J^\\dagger J=I\\)，故任意输入 Jones 规范的平方总和保持不变。旋转符号若采用反向角定义会改变交叉分量的整体符号，但不改变圆偏振度绝对值。\n\n(2) 令 \\(\\theta=\\pi/4\\)，直接矩阵相乘得 \\(E_x=(1+e^{i\\delta})/2=e^{i\\delta/2}\\cos(\\delta/2)\\)，\\(E_y=(1-e^{i\\delta})/2=-ie^{i\\delta/2}\\sin(\\delta/2)\\)。去掉共同相位后的矢量为 \\((\\cos(\\delta/2),-i\\sin(\\delta/2))\\)。取 \\(S_0=|E_x|^2+|E_y|^2\\)、\\(S_1=|E_x|^2-|E_y|^2\\)、\\(S_2=2\\Re(E_x^*E_y)\\)、\\(S_3=2\\Im(E_x^*E_y)\\)，得到 \\(S_0=1,\\ S_1=\\cos\\delta,\\ S_2=0,\\ S_3=-\\sin\\delta\\)。右旋/左旋术语随观测方向与时间约定而变，但 \\(S_3\\) 的代数符号已明确。\n\n(3) 若 \\(\\delta=\\pi/2\\) 模 \\(\\pi\\)，两个正交分量幅值相等且相差 \\(\\pm\\pi/2\\)，于是 \\(|S_3|=1\\)、\\(S_1=S_2=0\\)，产生纯圆偏振。若 \\(\\delta=\\pi\\)，Jones 矢量在 \\(\\theta=\\pi/4\\) 时成为 \\((0,-i)\\)，即线偏振方向旋转九十度，这是半波片的结果。总强度 \\(S_0=\\cos^2(\\delta/2)+\\sin^2(\\delta/2)=1\\)，体现理想延迟片只改变偏振态、不产生净功率衰减。\n\n(4) 令 \\(\\delta=\\pi/2+\\varepsilon\\)。利用 \\(S_1=\\cos\\delta=-\\sin\\varepsilon=-\\varepsilon+O(\\varepsilon^3)\\)，\\(S_3=-\\sin\\delta=-\\cos\\varepsilon=-1+\\varepsilon^2/2+O(\\varepsilon^4)\\)，得到圆偏振度的绝对值 \\(|S_3|=1-\\varepsilon^2/2+O(\\varepsilon^4)\\)，线偏振残余分量 \\(S_1\\) 在一阶出现。因规范化 Stokes 长度 \\(S_1^2+S_2^2+S_3^2=1\\)，这种残余表示纯椭圆偏振而非混合态或吸收；延迟片的相位误差不能靠简单调整输出强度补偿。\n"
+    },
+    {
+      "id": "O052",
+      "topic": "光学",
+      "title": "抛物型梯度折射率介质中的准光学射线振荡、ABCD矩阵与聚焦",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 90,
+      "tags": [
+        "Fermat原理",
+        "梯度折射率光学",
+        "射线矩阵",
+        "周期聚焦"
+      ],
+      "answer": "x''+\\alpha x=0,\\quad P=2\\pi/\\sqrt\\alpha,\\quad z_f=\\pi/(2\\sqrt\\alpha)",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-B",
+      "question": "轴对称梯度折射率介质的近轴折射率为 \\(n(r)=n_0[1-\\alpha r^2/2]\\)，其中 \\(n_0>0,\\alpha>0\\)，传播沿 \\(z\\) 方向，射线满足 \\(|dr/dz|\\ll1\\) 与 \\(\\alpha r^2\\ll1\\)。考虑一条横向方向 \\(x(z)\\) 上的子午面射线，忽略色散、界面反射以及高阶梯度效应。\n(1) 从 Fermat 光学路径的变分方程导出近轴射线微分方程。\n(2) 对任意入口位置与斜率求解传播矩阵，验证其行列式为一。\n(3) 求射线振荡节距与平行入射光束的第一轴上聚焦距离，并区分光束与点源成像。\n(4) 构造近轴不变量并描述大横向位移下这一模型失效的来源。\n",
+      "solution": "(1) Fermat 光程泛函为 \\(\\mathcal S=\\int n(x)\\sqrt{1+x'^2}\\,dz\\)，变分给 \\(d[nx'/\\sqrt{1+x'^2}]/dz=(dn/dx)\\sqrt{1+x'^2}\\)。在 \\(|x'|\\ll1\\)、\\(\\alpha x^2\\ll1\\) 下 \\(n\\approx n_0\\) 且 \\(dn/dx=-n_0\\alpha x\\)，故 \\(n_0x''\\approx-n_0\\alpha x\\)，得到 \\(x''+\\alpha x=0\\)。折射率在轴上最大、向外减小，光线被向轴心折回；如果折射率梯度符号反过来，则会得到指数散焦。\n\n(2) 令 \\(\\kappa=\\sqrt\\alpha\\)，线性方程的通解为 \\(x(z)=x_0\\cos(\\kappa z)+(x'_0/\\kappa)\\sin(\\kappa z)\\)，\\(x'(z)=-\\kappa x_0\\sin(\\kappa z)+x'_0\\cos(\\kappa z)\\)。因此 \\(\\binom{x(z)}{x'(z)}=\\begin{pmatrix}\\cos\\kappa z&\\sin\\kappa z/\\kappa\\\\-\\kappa\\sin\\kappa z&\\cos\\kappa z\\end{pmatrix}\\binom{x_0}{x_0'}\\)。该 ABCD 矩阵行列式为 \\(\\cos^2\\kappa z+\\sin^2\\kappa z=1\\)，保持近轴射线的辛面积，体现无损线性传播。\n\n(3) 射线轨迹的振荡周期（节距）为 \\(P=2\\pi/\\kappa\\)。对同方向的入射平行光束，\\(x'_0=0\\)，有 \\(x(z)=x_0\\cos(\\kappa z)\\)，所以所有入射横向位置在第一 \\(z_f=\\pi/(2\\kappa)\\) 处穿过轴线。这里的聚焦针对入射角相同而位置不同的平行光束；对轴上点源 \\(x_0=0\\) 而入射斜率各异，\\(x(z)=x'_0\\sin(\\kappa z)/\\kappa\\)，第一非零回到轴线的位置是 \\(z=\\pi/\\kappa\\)，二者不可混淆。\n\n(4) 把射线方程乘以 \\(2x'\\)，得到 \\(d(x'^2+\\alpha x^2)/dz=2x'(x''+\\alpha x)=0\\)，故准光学不变量 \\(J=x'^2+\\alpha x^2\\)，表示横向斜率与轴外位移之间的周期性能量交换。其两个加数均无量纲，检查了 \\(\\alpha\\) 必须具有长度倒平方的量纲。当 \\(x'\\) 或 \\(\\alpha x^2\\) 不小，原始 Fermat 方程的非线性分母和空间变化的折射率不再可忽略，周期与精确聚焦条件会偏离线性 GRIN 公式。\n"
     }
   ]
 }
