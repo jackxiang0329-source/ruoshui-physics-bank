@@ -70,7 +70,7 @@ coh=lam/(s.sqrt(2)*s.pi*sig)
 check("O022 Gaussian angular coherence 1/e length",zero(Vcoh.subs(dist,coh)-s.E**(-1)))
 j,ff=s.symbols("j ff",positive=True)
 rn2=j*lam*ff+(j*lam/2)**2
-check("O023 exact Fresnel zone radius",zero(s.sqrt(ff**2+rn2)-ff-j*lam/2))
+check("O023 exact Fresnel zone radius",zero(s.expand(ff**2+rn2-(ff+j*lam/2)**2)))
 check("O023 binary phase efficiency quadruple",zero(4/s.pi**2-4*(1/s.pi**2)))
 a0,a1=s.symbols("a0 a1",real=True)
 check("Q022 exchange-symmetric orbit at coincident coordinates",zero((a0*a1-a1*a0)/s.sqrt(2)))
