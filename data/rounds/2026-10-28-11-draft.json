@@ -1,0 +1,102 @@
+{
+  "date": "2026-10-28",
+  "round": 11,
+  "stage": "draft-not-admitted",
+  "target_new_items": 100,
+  "baseline_total": 252,
+  "description": "Working set only: no main-branch merge or published problem count until 100 items, executable checks, and PDF CI pass",
+  "items": [
+    {
+      "id": "M050",
+      "topic": "力学",
+      "title": "线密度梯度柔链越过光滑滑轮的非线性分岔与滑落时间",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 90,
+      "tags": [
+        "变质量坐标",
+        "非均匀线密度",
+        "能量积分",
+        "不稳定平衡"
+      ],
+      "answer": "M\\ddot y=g\\left[2\\lambda_0y+\\frac{\\alpha\\lambda_0y^2}{L}-M\\right],\\qquad \\gamma^2=\\frac{2g\\lambda(y_*)}{M}",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-B",
+      "question": "总长 \\(L\\) 的不可伸长柔链越过半径可忽略的无摩擦光滑定滑轮，两段竖直下垂，均未触底。用沿链的材料坐标 \\(s\\in[0,L]\\) 标记左端起算的质元，线密度 \\(\\lambda(s)=\\lambda_0(1+\\alpha s/L)\\)，其中 \\(\\alpha>-1\\)。设左段长度 \\(y\\)，链运动时材料坐标 \\(s=y\\) 恰在滑轮顶点，右段长度 \\(L-y\\)。两段速度大小同为 \\(|\\dot y|\\)，取左段增长为正，忽略弯曲和滑轮质量。\n(1) 求总质量、左右两侧的瞬时重量之差，并正确写出 \\(y\\) 的运动方程。\n(2) 以从静止的 \\(y_0\\) 出发为初值，给出 \\(v^2(y)\\) 的精确多项式表达，并指出允许的运动区间。\n(3) 将抵达任意 \\(y_1\\) 的时间写成可数值计算的定积分；说明为何不能把不均匀链简单当作两团质量不变的质点。\n(4) 确定唯一静止平衡位置及其线性稳定性，求微小偏移的指数增长率，并检验均匀链极限。\n",
+      "solution": "(1) 总质量为 \\(M=\\int_0^L\\lambda(s)\\,ds=\\lambda_0L(1+\\alpha/2)>0\\)。左侧质量 \\(M_{\\rm l}(y)=\\lambda_0[y+\\alpha y^2/(2L)]\\)，右侧为 \\(M-M_{\\rm l}\\)，故净重为 \\(F_g=g(2M_{\\rm l}-M)\\)。整个链所有质元速率相等，故动能严格为 \\(K=M\\dot y^2/2\\)，并非 \\(M_{\\rm l}\\dot y^2/2\\)。虚功 \\(\\delta W=F_g\\,\\delta y\\)，于是 \\(M\\ddot y=g[2\\lambda_0y+\\lambda_0\\alpha y^2/L-M]\\)。\n\n(2) 从保守力积分 \\(M\\dot y\\,d\\dot y/dy=F_g(y)\\) 得 \\(\\dot y^2=(2g/M)\\{\\lambda_0(y^2-y_0^2)+\\lambda_0\\alpha(y^3-y_0^3)/(3L)-M(y-y_0)\\}\\)。将右端记为 \\(\\Phi(y)\\)，仅 \\(\\Phi(y)\\ge0\\) 的位置对给定初值可达。若初始静止但正处于平衡点，则需另外指定微小扰动才会产生非零速度。两端 \\(y=0,L\\) 是链完全脱离一侧的模型边界。\n\n(3) 沿选定运动方向 \\(dy/dt=\\pm\\sqrt{\\Phi(y)}\\)，所以从 \\(y_0\\) 到 \\(y_1\\) 的时间是 \\(t=\\left|\\int_{y_0}^{y_1}dy/\\sqrt{\\Phi(y)}\\right|\\)，适用于其间无不可达点、按运动分支取号的情况。积分可能在平衡分界位置对数发散；对端点的平方根奇性则常为可积。左右段的质量持续交换，任何分别固定左右质量的牛顿质点模型都会漏掉穿过滑轮的动量通量；能量法自动保留了全链运动的惯性。\n\n(4) 平衡条件为 \\(M_{\\rm l}(y_*)=M/2\\)，即 \\(y_*+\\alpha y_*^2/(2L)=L(1+\\alpha/2)/2\\)。因 \\(\\lambda(s)>0\\)，累积质量严格递增，故平衡唯一并位于内部。线性化 \\(M\\ddot{\\eta}=2g\\lambda(y_*)\\eta\\)，得 \\(\\eta\\propto e^{\\pm\\gamma t}\\)、\\(\\gamma=\\sqrt{2g\\lambda(y_*)/M}\\)：这是势能极大值而非稳定振动。令 \\(\\alpha\\to0\\)，\\(y_*=L/2\\)、\\(\\gamma=\\sqrt{2g/L}\\)，与均匀柔链的经典不稳定模式一致。\n"
+    },
+    {
+      "id": "M051",
+      "topic": "力学",
+      "title": "双质量非对称耦合弹簧的模态谱、受迫共振和能量正交性",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 90,
+      "tags": [
+        "广义特征值",
+        "耦合振动",
+        "模态正交",
+        "频率响应"
+      ],
+      "answer": "\\omega_\\pm^2=\\frac{a+d\\pm\\sqrt{(a-d)^2+4b^2}}2,\\quad X_2=\\frac{F_0k_c}{D}",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-B",
+      "question": "光滑水平轨道上两质点质量 \\(m_1,m_2>0\\)，分别以刚度 \\(k_1,k_2>0\\) 的弹簧连接固定壁，并以刚度 \\(k_c>0\\) 的弹簧互相连接。以各弹簧自然配置为零位移，质点位移为 \\(x_1,x_2\\)。对第一质点另施加 \\(F_0\\cos\\omega t\\)，先不计阻尼；在讨论共振时 \\(\\omega\\) 不取本征频率。\n(1) 写出动能、势能、质量与刚度矩阵，证明平衡为严格稳定点。\n(2) 求两种本征频率的闭式公式、特征矢量的质量加权正交关系。\n(3) 求单频外驱下的稳态复振幅 \\(X_1(\\omega),X_2(\\omega)\\)，并讨论耦合趋于零的极限。\n(4) 给出正常模态坐标的能量分解以及不带阻尼的共振奇点物理意义。\n",
+      "solution": "(1) 动能 \\(T=(m_1\\dot x_1^2+m_2\\dot x_2^2)/2\\)，势能 \\(V=[k_1x_1^2+k_2x_2^2+k_c(x_1-x_2)^2]/2\\)。因此 \\(\\mathbf M=\\operatorname{diag}(m_1,m_2)\\)，\\(\\mathbf K=\\begin{pmatrix}k_1+k_c&-k_c\\\\-k_c&k_2+k_c\\end{pmatrix}\\)，运动方程 \\(\\mathbf M\\ddot{\\mathbf x}+\\mathbf K\\mathbf x=(F_0,0)^T\\cos\\omega t\\)。因 \\(V=(k_1x_1^2+k_2x_2^2+k_c(x_1-x_2)^2)/2>0\\) 对非零位移成立，刚度矩阵正定，两自由度本征频率均为实正。\n\n(2) 定义 \\(a=(k_1+k_c)/m_1,\\ d=(k_2+k_c)/m_2,\\ b=k_c/\\sqrt{m_1m_2}\\)。质量加权矩阵 \\(\\mathbf M^{-1/2}\\mathbf K\\mathbf M^{-1/2}\\) 的特征值为 \\(\\omega_\\pm^2=\\frac12[a+d\\pm\\sqrt{(a-d)^2+4b^2}]\\)。设 \\(\\mathbf K\\mathbf u_\\pm=\\omega_\\pm^2\\mathbf M\\mathbf u_\\pm\\)，则由矩阵对称性可得 \\((\\omega_+^2-\\omega_-^2)\\mathbf u_+^T\\mathbf M\\mathbf u_-=0\\)，故不同模态满足 \\(\\mathbf u_+^T\\mathbf M\\mathbf u_-=0\\)。令 \\(\\mathbf u_\\pm^T\\mathbf M\\mathbf u_\\pm=1\\) 即得标准正交归一。\n\n(3) 取 \\(x_j(t)=\\Re[X_je^{i\\omega t}]\\)，有 \\((\\mathbf K-\\omega^2\\mathbf M)\\mathbf X=(F_0,0)^T\\)。以 \\(D=[k_1+k_c-m_1\\omega^2][k_2+k_c-m_2\\omega^2]-k_c^2\\) 表示行列式，则 \\(X_1=F_0(k_2+k_c-m_2\\omega^2)/D\\)，\\(X_2=F_0k_c/D\\)。若 \\(k_c\\to0\\) 且 \\(\\omega^2\\ne k_j/m_j\\)，第一质点独立响应 \\(F_0/(k_1-m_1\\omega^2)\\)、第二质点响应趋于零；这检验了耦合符号及分母。\n\n(4) 在质量归一的特征矢量基底令 \\(\\mathbf x=\\mathbf u_+q_++\\mathbf u_-q_-\\)，利用质量及刚度正交性得总机械能 \\(E=\\frac12\\sum_{\\nu=\\pm}[\\dot q_\\nu^2+\\omega_\\nu^2q_\\nu^2]\\)，外力给 \\(\\ddot q_\\nu+\\omega_\\nu^2q_\\nu=F_0u_{\\nu,1}\\cos\\omega t\\)。当驱动频率逼近能被第一质点激发的本征频率时 \\(D\\to0\\)，无阻尼稳态特解系数发散；实际系统会由阻尼、非线性及有限驱动时间限制振幅，不能把发散称为无限物理能量。\n"
+    },
+    {
+      "id": "M052",
+      "topic": "力学",
+      "title": "弹簧与粘滞阻尼约束下卷轴落体的等效惯量及受迫响应",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 90,
+      "tags": [
+        "非完整约束化简",
+        "刚体转动",
+        "阻尼振动",
+        "功率平衡"
+      ],
+      "answer": "m_e=m+I/r^2,\\qquad \\tilde z=\\frac{F_0}{k-m_e\\Omega^2+ic\\Omega}",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-B",
+      "question": "一卷轴质量 \\(m>0\\)，绕轴转动惯量 \\(I>0\\)，绕半径 \\(r>0\\) 的无质量细绳悬挂；细绳上端固定，绳无滑动。卷轴质心向下位移 \\(y\\) 为正。另用竖直线性弹簧（劲度 \\(k>0\\)）和粘性阻尼器（系数 \\(c\\ge0\\)）对质心施力 \\(-ky-c\\dot y\\)，并施加向下外力 \\(F_0\\cos\\Omega t\\)。卷轴重力为 \\(mg\\)；绳始终绷紧、运动范围保证绕线约束成立。\n(1) 利用平动及转动方程消去绳张力，并求平衡位置与有效质量。\n(2) 给出自由运动阻尼分类和欠阻尼时的精确通解，讨论静态初位移释放。\n(3) 写出单频稳态复振幅、相位滞后及平均阻尼耗散功率。\n(4) 从机械能定理推导系统的功率方程，求忽略阻尼与弹簧时绳张力并验证加速度小于重力加速度。\n",
+      "solution": "(1) 无滑动约束令角加速度 \\(\\ddot\\theta=\\ddot y/r\\)（按放绳方向为正）。平动牛顿方程 \\(m\\ddot y=mg-ky-c\\dot y+F(t)-T\\)，转动方程 \\(I\\ddot\\theta=Tr\\)。代入 \\(T=I\\ddot y/r^2\\)，得 \\((m+I/r^2)\\ddot y+c\\dot y+ky=mg+F(t)\\)。故有效惯量 \\(m_e=m+I/r^2\\)，静平衡 \\(y_e=mg/k\\)。注意绳力转化为转动惯量，不能将绳张力直接当作额外恒定重量。\n\n(2) 写 \\(z=y-y_e\\)，无驱动时满足 \\(m_e\\ddot z+c\\dot z+kz=0\\)。定义 \\(\\gamma=c/(2m_e)\\)、\\(\\omega_0^2=k/m_e\\)。当 \\(\\gamma<\\omega_0\\) 时，\\(z=e^{-\\gamma t}[A\\cos(\\omega_dt)+B\\sin(\\omega_dt)]\\)，\\(\\omega_d=\\sqrt{\\omega_0^2-\\gamma^2}\\)；当 \\(\\gamma=\\omega_0\\) 为 \\((A+Bt)e^{-\\gamma t}\\)，大于时为两种负实指数之和。若 \\(z(0)=z_0,\\dot z(0)=0\\)，欠阻尼给 \\(A=z_0,\\ B=\\gamma z_0/\\omega_d\\)。\n\n(3) 对稳态 \\(z=\\Re[\\tilde z e^{i\\Omega t}]\\)，复振幅为 \\(\\tilde z=F_0/[k-m_e\\Omega^2+ic\\Omega]\\)，故幅值 \\(A=F_0/\\sqrt{(k-m_e\\Omega^2)^2+c^2\\Omega^2}\\)，位移相对驱动力的滞后角 \\(\\delta=\\arg(k-m_e\\Omega^2+ic\\Omega)\\)。平均耗散功率是 \\(\\overline P_d=c\\langle\\dot z^2\\rangle=c\\Omega^2A^2/2\\)。受迫稳态平均输入功率等于此耗散，不会有无界机械能积累。\n\n(4) 动能 \\(K=\\frac12m\\dot y^2+\\frac12I(\\dot y/r)^2=\\frac12m_e\\dot y^2\\)，保守势能 \\(V=\\frac12ky^2-mgy\\)。运动方程乘 \\(\\dot y\\) 后得 \\(d(K+V)/dt=F(t)\\dot y-c\\dot y^2\\)，给出了含重力的严格功率收支。令 \\(k=c=F_0=0\\)，落体加速度 \\(\\ddot y=mg/(m+I/r^2)<g\\)，绳张力 \\(T=I\\,mg/[r^2(m+I/r^2)]>0\\)，也等于 \\(mg-m\\ddot y\\)，与转动及平动两方程相符。\n"
+    },
+    {
+      "id": "M053",
+      "topic": "力学",
+      "title": "均匀重力场中转动抛物面滑珠的临界角速度与软模",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 90,
+      "tags": [
+        "曲面约束",
+        "旋转参考系",
+        "有效势",
+        "对称破缺分岔"
+      ],
+      "answer": "\\Omega_c=\\sqrt{2ga},\\qquad \\omega_r^2=2ga-\\Omega^2",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-B",
+      "question": "质量为 \\(m\\) 的小珠无摩擦地约束在绕竖直轴以角速度 \\(\\Omega\\) 匀速旋转的抛物面 \\(z=ar^2\\) 上，其中 \\(a>0\\)，\\(r\\ge0\\) 为柱坐标半径，珠与曲面共同旋转而允许相对曲面的径向滑动；取 \\(\\phi(t)=\\Omega t\\)，重力势能为 \\(mgz\\)。忽略珠的自旋、阻力及曲面的弹性形变，径向有效质量随 \\(r\\) 改变。\n(1) 由几何约束写出精确 Lagrangian，导出含非线性速度项的径向方程。\n(2) 求径向有效势与临界角速度，讨论无穷小扰动的稳定性和等临界点退化。\n(3) 计算轴心及非零径向平衡的小振动频率，并判断是否存在有限半径平衡。\n(4) 解释旋转驱动装置所作功与珠子能量为何可能变化，确定 \\(r\\to\\infty\\) 的模型病态。\n",
+      "solution": "(1) 约束 \\(z=ar^2\\) 导致 \\(\\dot z=2ar\\dot r\\)，且 \\(\\dot\\phi=\\Omega\\)，故 \\(L=\\frac m2[(1+4a^2r^2)\\dot r^2+\\Omega^2r^2]-mg ar^2\\)。令 \\(A(r)=1+4a^2r^2\\)，Euler--Lagrange 方程为 \\(mA\\ddot r+4ma^2r\\dot r^2+m(2ga-\\Omega^2)r=0\\)。其中速度平方项来自径向动能的坐标依赖；忽略它仅在线性化附近成立。\n\n(2) 以径向约化坐标写 \\(L=\\frac12mA(r)\\dot r^2-U_{\\rm eff}(r)\\)，其中 \\(U_{\\rm eff}=m(ga-\\Omega^2/2)r^2\\)。定义 \\(\\Omega_c=\\sqrt{2ga}\\)，若 \\(\\Omega<\\Omega_c\\)，轴心有效势严格正曲率，径向受约束稳定；若 \\(\\Omega>\\Omega_c\\)，轴心线性不稳定；恰在临界时平面型有效势全零，任一常半径均满足径向方程，不能称其为通常意义的非线性回复稳定。\n\n(3) 在轴心 \\(A(0)=1\\)，线性方程是 \\(\\ddot r+(2ga-\\Omega^2)r=0\\)，故 \\(\\omega_r=\\sqrt{2ga-\\Omega^2}\\)（仅亚临界为实）。非零半径静平衡要求 \\((2ga-\\Omega^2)r_e=0\\)。因此除恰临界整条平坦平衡族外，不存在通常可稳定的有限 \\(r_e>0\\) 分岔支。若有人根据不同的旋转圆环模型写出非零有限半径稳定解，就违反了本抛物面 \\(z=ar^2\\) 的具体几何约束。\n\n(4) 惯性系中珠子的机械能为 \\(E_{\\rm in}=\\frac m2[A(r)\\dot r^2+\\Omega^2r^2]+mg ar^2\\)；外部旋转机构为维持 \\(\\dot\\phi=\\Omega\\) 持续施加方位约束力矩，其功率为 \\(\\Omega\\,d(m\\Omega r^2)/dt=2m\\Omega^2r\\dot r\\)，恰与径向移动引起的惯性系能量变化相容。Jacobi 型常量 \\(E_{\\rm in}-\\Omega L_z=\\frac12mA\\dot r^2+U_{\\rm eff}\\) 守恒。当 \\(\\Omega>\\Omega_c\\) 时 \\(U_{\\rm eff}\\to-\\infty\\)，珠可向无限半径滚落；此时理想无限大刚性曲面与固定转速驱动假设的物理代价不能忽略。\n"
+    }
+  ]
+}
