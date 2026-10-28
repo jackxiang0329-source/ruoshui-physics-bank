@@ -53,8 +53,10 @@ record('T056',4,'symbolic','Landau free energy gives three-halves kB heat capaci
 # Three distinct models; each subpart independently checked (beyond schema-only gates).
 zz,pp,qq=s.symbols('zz pp qq',positive=True)
 F=zz*s.cos(zz)+(pp-qq*zz**2)*s.sin(zz)
+Cx,mux,Lx,Kx,Ix,kx=s.symbols('Cx mux Lx Kx Ix kx',positive=True)
 record('W056',1,'symbolic','torsional rod dynamic tip condition has correct nondimensional form',
-       eq((zz*s.cos(zz)+(pp-qq*zz**2)*s.sin(zz)),F) and
+       eq((Cx*kx*s.cos(kx*Lx)+(Kx-Ix*(Cx/mux)*kx**2)*s.sin(kx*Lx))*Lx/Cx,
+          F.subs({zz:kx*Lx,pp:Kx*Lx/Cx,qq:Ix/(mux*Lx)})) and
        eq(s.limit(F/zz,zz,0),1+pp))
 mp.mp.dps=30
 pw=mp.mpf('2');qw=mp.mpf('0.4')
@@ -70,7 +72,10 @@ record('W056',4,'limit','free tip frequencies and large tip inertia asymptotic s
 qopt,ang,kopt=s.symbols('qopt ang kopt',positive=True)
 aa=s.sqrt(s.sin(ang)**2-qopt**2);cc=s.cos(ang)
 rs=(cc-s.I*aa)/(cc+s.I*aa);rp=(qopt**2*cc-s.I*aa)/(qopt**2*cc+s.I*aa)
-record('O057',1,'conservation','both total internal reflection coefficients have unit modulus',eq(rs*s.conjugate(rs),1) and eq(rp*s.conjugate(rp),1))
+qn=mp.mpf('0.72');an0=mp.mpf('0.95');cn=mp.cos(an0);anr=mp.sqrt(mp.sin(an0)**2-qn**2)
+rsnum=(cn-1j*anr)/(cn+1j*anr);rpnum=(qn**2*cn-1j*anr)/(qn**2*cn+1j*anr)
+record('O057',1,'numerical_conservation','both total internal reflection coefficients have unit modulus',
+       anr>0 and abs(abs(rsnum)**2-1)<mp.mpf('1e-26') and abs(abs(rpnum)**2-1)<mp.mpf('1e-26'))
 phis=-2*s.atan(aa/cc);phip=-2*s.atan(aa/(qopt**2*cc))
 Ds=2*s.sin(ang)/(kopt*cc*aa)
 Dp=Ds*qopt**2/((1+qopt**2)*s.sin(ang)**2-qopt**2)
