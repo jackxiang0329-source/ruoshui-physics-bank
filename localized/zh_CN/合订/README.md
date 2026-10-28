@@ -4,7 +4,7 @@
 
 译文的唯一可编辑主档：`../../../localization/zh_CN/translations.json`；原始英文文件不移动。
 
-- [物理基础](fundamentals.md)（69 道）
+- [物理基础](fundamentals.md)（84 道）
 - [力学](mechanics.md)（287 道）
 - [电磁学](electromagnetism.md)（8 道）
 - [热学](thermodynamics.md)（2 道）

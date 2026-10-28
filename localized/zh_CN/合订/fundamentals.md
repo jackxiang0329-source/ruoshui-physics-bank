@@ -2,7 +2,7 @@
 
 > 仅供编辑复核：尚未通过独立双语、答案或版权审核；不可正式组卷。
 
-共 69 道。英文原文均以保留源指纹的上游快照为依据。
+共 84 道。英文原文均以保留源指纹的上游快照为依据。
 
 <a id="cp-00137"></a>
 
@@ -671,6 +671,450 @@ An infant’s pulse rate is measured to be <math xmlns="http://www.w3.org/1998/M
 - 原件 Git blob SHA：45320819c0543639f4ac9c6006098a8831e74758
 - 上游署名与许可证见原件；尚未完成单题权利审查。
 - 审校提示：重点在有效数字的处理；‘2.0年、2.00年、2.000年’的精度不同；上游(a)写2.0年。
+
+---
+
+<a id="cp-00233"></a>
+
+## CP-00233｜汽水倒出后的剩余体积
+
+**学科：** 物理基础　**知识点：** 有效数字／体积差
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+一罐汽水原有 375 mL，倒出 308 mL 后还剩多少毫升？
+
+## 英文原题（存档摘录）
+
+# Accuracy, Precision, and Significant Figures — CP-00233
+
+A can contains 375 mL of soda. How much is left after 308 mL is removed?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00233.md
+- 原件 Git blob SHA：e66f16e18877a3835fd6737553d9018bc4796f2a
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00234"></a>
+
+## CP-00234｜计算结果应有几位有效数字
+
+**学科：** 物理基础　**知识点：** 有效数字／混合运算
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+判断下列运算结果应保留几位有效数字：（a）$(106.7)(98.2)/(46.210)(1.01)$；（b）$(18.7)^2$；（c）$(1.60\times10^{-19})(3712)$。
+
+## 英文原题（存档摘录）
+
+# Accuracy, Precision, and Significant Figures — CP-00234
+
+State how many significant figures are proper in the results of the following calculations: (a) <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mfenced open="(" close=")"><mrow><mtext>106</mtext><mtext>.</mtext><mn>7</mn></mrow></mfenced><mrow><mfenced open="(" close=")"><mrow><mtext>98</mtext><mtext>.</mtext><mn>2</mn></mrow></mfenced><mo stretchy="false">/</mo><mfenced open="(" close=")"><mrow><mtext>46</mtext><mtext>.</mtext><mtext>210</mtext></mrow></mfenced></mrow><mfenced open="(" close=")"><mrow><mn>1</mn><mtext>.</mtext><mtext>01</mtext></mrow></mfenced></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{ left ("106" "." 7 right ) left ("98" "." 2 right )/ left ("46" "." "210" right ) left (1 "." "01" right )} {}</annotation></semantics></math>
+
+ (b) <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><msup><mfenced open="(" close=")"><mrow><mtext>18</mtext><mtext>.</mtext><mn>7</mn></mrow></mfenced><mrow><mn>2</mn></mrow></msup></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{ left ("18" "." 7 right ) rSup { size 8{2} } } {}</annotation></semantics></math>
+
+ (c) <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mfenced open="(" close=")"><mrow><mn>1</mn><mtext>.</mtext><mrow><mtext>60</mtext><mo stretchy="false">×</mo><msup><mtext>10</mtext><mrow><mrow><mo stretchy="false">−</mo><mtext>19</mtext></mrow></mrow></msup></mrow></mrow></mfenced><mfenced open="(" close=")"><mtext>3712</mtext></mfenced></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{ left (1 "." "60" times "10" rSup { size 8{ - "19"} } right ) left ("3712" right )} {}</annotation></semantics></math>
+
+.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00234.md
+- 原件 Git blob SHA：06bdd2cf42fc43ebd150094fc0bc3a0344a6cff3
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 审校提示：（a）原文乘除顺序需要核对原教材公式。
+
+---
+
+<a id="cp-00235"></a>
+
+## CP-00235｜99和100的有效数字与百分比误差
+
+**学科：** 物理基础　**知识点：** 有效数字／不确定度
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+（a）99 和 100 各有多少位有效数字？（b）如果各自的不确定度都是 1，两者的百分比不确定度是多少？（c）此时用有效数字位数还是百分比不确定度描述准确度更有意义？
+
+## 英文原题（存档摘录）
+
+# Accuracy, Precision, and Significant Figures — CP-00235
+
+(a) How many significant figures are in the numbers 99 and 100? (b) If the uncertainty in each number is 1, what is the percent uncertainty in each? (c) Which is a more meaningful way to express the accuracy of these two numbers, significant figures or percent uncertainties?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00235.md
+- 原件 Git blob SHA：e6e0ff932b9fe0d49dd037f1965606322a60960c
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00236"></a>
+
+## CP-00236｜不同时速下的速度表不确定度
+
+**学科：** 物理基础　**知识点：** 测量不确定度／速度表
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+（a）速度表读数为 $90\,\mathrm{km/h}$，绝对不确定度为 $2.0\,\mathrm{km/h}$，求百分比不确定度。（b）读数为 $60\,\mathrm{km/h}$ 时若有相同的百分比不确定度，实际速率可能落在什么范围？
+
+## 英文原题（存档摘录）
+
+# Accuracy, Precision, and Significant Figures — CP-00236
+
+(a) If your speedometer has an uncertainty of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>2</mn><mtext>.</mtext><mn>0</mn><mspace width="0.25em" /><mtext>km/h</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{2 "." 0" km/h"} {}</annotation></semantics></math>
+
+ at a speed of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mtext>90</mtext><mspace width="0.25em" /><mtext>km/h</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"90"" km/h"} {}</annotation></semantics></math>
+
+, what is the percent uncertainty? (b) If it has the same percent uncertainty when it reads <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mtext>60</mtext><mspace width="0.25em" /><mtext> km/h</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"60"" km/h"} {}</annotation></semantics></math>
+
+, what is the range of speeds you could be going?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00236.md
+- 原件 Git blob SHA：830b9f7de56829f93937d69ff2a897ab511a3bdc
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00237"></a>
+
+## CP-00237｜血压读数与不确定度
+
+**学科：** 物理基础　**知识点：** 测量不确定度／血压
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+（a）血压测得为 $(120\pm2)\,\mathrm{mmHg}$，求百分比不确定度。（b）若百分比不确定度保持不变，血压测量值为 $80\,\mathrm{mmHg}$ 时的绝对不确定度是多少？
+
+## 英文原题（存档摘录）
+
+# Accuracy, Precision, and Significant Figures — CP-00237
+
+(a) A person’s blood pressure is measured to be <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mrow><mtext>120</mtext><mo stretchy="false">±</mo><mn>2</mn></mrow><mspace width="0.25em" /><mtext>mm Hg</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"120" +- 2" mm Hg"} {}</annotation></semantics></math>
+
+. What is its percent uncertainty? (b) Assuming the same percent uncertainty, what is the uncertainty in a blood pressure measurement of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mtext>80</mtext><mspace width="0.25em" /><mtext>mm Hg</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"80"" mm Hg"} {}</annotation></semantics></math>
+
+?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00237.md
+- 原件 Git blob SHA：0fa0e8983e3dd01120ada6b72a8dde03a0a77c6b
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00238"></a>
+
+## CP-00238｜由短时心跳计数测心率
+
+**学科：** 物理基础　**知识点：** 测量不确定度／心率
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+若在 $(30.0\pm0.5)\,\mathrm{s}$ 内数得 $(40\pm1)$ 次心跳，求以次每分钟表示的心率及其不确定度。
+
+## 英文原题（存档摘录）
+
+# Accuracy, Precision, and Significant Figures — CP-00238
+
+A person measures his or her heart rate by counting the number of beats in <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mtext>30</mtext><mspace width="0.25em" /><mtext>s</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"30"" s"} {}</annotation></semantics></math>
+
+. If <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mtext>40</mtext><mo stretchy="false">±</mo><mn>1</mn></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"40" +- 1} {}</annotation></semantics></math>
+
+ beats are counted in <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mtext>30</mtext><mtext>.</mtext><mrow><mn>0</mn><mo stretchy="false">±</mo><mn>0</mn></mrow><mtext>.</mtext><mn>5</mn><mspace width="0.25em" /><mtext>s</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"30" "." 0 +- 0 "." 5" s"} {}</annotation></semantics></math>
+
+, what is the heart rate and its uncertainty in beats per minute?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00238.md
+- 原件 Git blob SHA：28371991be8444749ea1d83105dfc312a7024994
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00239"></a>
+
+## CP-00239｜由直径测量值求圆面积
+
+**学科：** 物理基础　**知识点：** 有效数字／圆面积
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+一个圆的直径为 $3.102\,\mathrm{cm}$，它的面积是多少？
+
+## 英文原题（存档摘录）
+
+# Accuracy, Precision, and Significant Figures — CP-00239
+
+What is the area of a circle <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>3</mn><mtext>.</mtext><mtext>102</mtext><mspace width="0.25em" /><mtext>cm</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{3 "." "102"" cm"} {}</annotation></semantics></math>
+
+ in diameter?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00239.md
+- 原件 Git blob SHA：0fb765666d515fbfac071514178faae2139dab50
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00240"></a>
+
+## CP-00240｜马拉松跑完全程的时间
+
+**学科：** 物理基础　**知识点：** 速率和时间／单位换算
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+若马拉松运动员的平均速率为 $9.5\,\mathrm{mi/h}$，跑完 $26.22\,\mathrm{mi}$ 需要多长时间？
+
+## 英文原题（存档摘录）
+
+# Accuracy, Precision, and Significant Figures — CP-00240
+
+If a marathon runner averages 9.5 mi/h, how long does it take him or her to run a 26.22-mi marathon?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00240.md
+- 原件 Git blob SHA：930d25859d1c108fb0eb0328ea2b5d26b9b32a8f
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00241"></a>
+
+## CP-00241｜马拉松平均速率与不确定度
+
+**学科：** 物理基础　**知识点：** 测量不确定度／误差传播
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+马拉松选手用 $2$ 小时 $30$ 分 $12$ 秒完成 $42.188\,\mathrm{km}$，路程不确定度为 $25\,\mathrm{m}$、计时不确定度为 $1\,\mathrm{s}$。（a）求路程百分比不确定度；（b）求经过时间的不确定度；（c）求平均速率（$\mathrm{m/s}$）；（d）求平均速率的不确定度。
+
+## 英文原题（存档摘录）
+
+# Accuracy, Precision, and Significant Figures — CP-00241
+
+A marathon runner completes a <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mtext>42</mtext><mtext>.</mtext><mtext>188</mtext><mtext>-km</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"42" "." "188""-km"} {}</annotation></semantics></math>
+
+ course in <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>2</mn><mspace width="0.25em" /><mtext>h</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{2" h"} {}</annotation></semantics></math>
+
+, 30 min, and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mtext>12</mtext><mspace width="0.25em" /><mtext>s</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"12"" s"} {}</annotation></semantics></math>
+
+. There is an uncertainty of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mtext>25</mtext><mspace width="0.25em" /><mtext>m</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"25"" m"} {}</annotation></semantics></math>
+
+ in the distance traveled and an uncertainty of 1 s in the elapsed time. (a) Calculate the percent uncertainty in the distance. (b) Calculate the uncertainty in the elapsed time. (c) What is the average speed in meters per second? (d) What is the uncertainty in the average speed?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00241.md
+- 原件 Git blob SHA：de5a893166801ebf4a07df19dd44f2d74d11109b
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 审校提示：（b）原题已经给出1秒绝对不确定度，或需以百分比形式解释。
+
+---
+
+<a id="cp-00242"></a>
+
+## CP-00242｜长方体盒子体积和不确定度
+
+**学科：** 物理基础　**知识点：** 测量不确定度／立体体积
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+长方体盒子的边长分别为 $(1.80\pm0.01)\,\mathrm{cm}$、$(2.05\pm0.02)\,\mathrm{cm}$ 和 $(3.1\pm0.1)\,\mathrm{cm}$。求体积及其不确定度（$\mathrm{cm^3}$）。
+
+## 英文原题（存档摘录）
+
+# Accuracy, Precision, and Significant Figures — CP-00242
+
+The sides of a small rectangular box are measured to be <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>1</mn><mtext>.</mtext><mrow><mtext>80</mtext><mo stretchy="false">±</mo><mn>0</mn></mrow><mtext>.</mtext><mtext>01</mtext><mspace width="0.25em" /><mtext>cm</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{1 "." "80" +- 0 "." "01"" cm"} {}</annotation></semantics></math>
+
+, <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow /><annotation encoding="StarMath 5.0">{}</annotation></semantics></math>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>2</mn><mtext>.</mtext><mrow><mtext>05</mtext><mo stretchy="false">±</mo><mn>0</mn></mrow><mtext>.</mtext><mtext>02</mtext><mspace width="0.25em" /><mtext>cm, and 3</mtext><mtext>.</mtext><mrow><mn>1</mn><mo stretchy="false">±</mo><mn>0</mn></mrow><mtext>.</mtext><mtext>1 cm</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{2 "." "05" +- 0 "." "02"" cm, and 3" "." 1 +- 0 "." "1 cm"} {}</annotation></semantics></math>
+
+ long. Calculate its volume and uncertainty in cubic centimeters.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00242.md
+- 原件 Git blob SHA：0cf0c650aea527e2f264b5fc036c9135cd96f3d8
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00243"></a>
+
+## CP-00243｜英制磅质量换算的不确定度
+
+**学科：** 物理基础　**知识点：** 测量不确定度／磅质量
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+已知磅质量单位 $1\,\mathrm{lbm}=0.4539\,\mathrm{kg}$。（a）若换算值有 $0.0001\,\mathrm{kg}$ 的不确定度，百分比不确定度是多少？（b）按此百分比不确定度，多少 lbm 换算成千克时会产生 $1\,\mathrm{kg}$ 的不确定度？
+
+## 英文原题（存档摘录）
+
+# Accuracy, Precision, and Significant Figures — CP-00243
+
+When non-metric units were used in the United Kingdom, a unit of mass called the **pound-mass** (lbm) was employed, where <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>1</mn><mrow><mspace width="0.25em" /><mtext>lbm</mtext><mo stretchy="false">=</mo><mn>0</mn></mrow><mtext>.</mtext><mtext>4539</mtext><mspace width="0.25em" /><mtext>kg</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{1" lbm"=0 "." "4539"`"kg"} {}</annotation></semantics></math>
+
+. (a) If there is an uncertainty of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>0</mn><mtext>.</mtext><mtext>0001</mtext><mspace width="0.25em" /><mtext>kg</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{0 "." "0001"`"kg"} {}</annotation></semantics></math>
+
+ in the pound-mass unit, what is its percent uncertainty? (b) Based on that percent uncertainty, what mass in pound-mass has an uncertainty of 1 kg when converted to kilograms?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00243.md
+- 原件 Git blob SHA：46791ff37c1809ed7f50a6c49490ee4797edbff0
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00244"></a>
+
+## CP-00244｜房间面积的测量不确定度
+
+**学科：** 物理基础　**知识点：** 测量不确定度／面积
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+长方形房间长、宽分别为 $(3.955\pm0.005)\,\mathrm{m}$ 和 $(3.050\pm0.005)\,\mathrm{m}$，求其面积及不确定度（$\mathrm{m^2}$）。
+
+## 英文原题（存档摘录）
+
+# Accuracy, Precision, and Significant Figures — CP-00244
+
+The length and width of a rectangular room are measured to be <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>3</mn><mtext>.</mtext><mrow><mtext>955</mtext><mo stretchy="false">±</mo><mn>0</mn></mrow><mtext>.</mtext><mtext>005</mtext><mspace width="0.25em" /><mtext>m</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{3 "." "955" +- 0 "." "005"" m"} {}</annotation></semantics></math>
+
+ and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>3</mn><mtext>.</mtext><mrow><mtext>050</mtext><mo stretchy="false">±</mo><mn>0</mn></mrow><mtext>.</mtext><mtext>005</mtext><mspace width="0.25em" /><mtext> m</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{3 "." "050" +- 0 "." "005"" m"} {}</annotation></semantics></math>
+
+. Calculate the area of the room and its uncertainty in square meters.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00244.md
+- 原件 Git blob SHA：0f9ef8b749b82e7b9919964dc7109544fdbf526a
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00245"></a>
+
+## CP-00245｜活塞排量及其不确定度
+
+**学科：** 物理基础　**知识点：** 测量不确定度／圆柱体
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+汽车发动机的圆形活塞直径为 $(7.500\pm0.002)\,\mathrm{cm}$，推动活塞压缩气体的距离为 $(3.250\pm0.001)\,\mathrm{cm}$。（a）气体体积减少多少立方厘米？（b）这一体积变化的不确定度是多少？
+
+## 英文原题（存档摘录）
+
+# Accuracy, Precision, and Significant Figures — CP-00245
+
+A car engine moves a piston with a circular cross section of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>7</mn><mtext>.</mtext><mrow><mtext>500</mtext><mo stretchy="false">±</mo><mn>0</mn></mrow><mtext>.</mtext><mtext>002</mtext><mspace width="0.25em" /><mtext>cm</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{7 "." "500" +- 0 "." "002"`"cm"} {}</annotation></semantics></math>
+
+ diameter a distance of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>3</mn><mtext>.</mtext><mrow><mtext>250</mtext><mo stretchy="false">±</mo><mn>0</mn></mrow><mtext>.</mtext><mtext>001</mtext><mspace width="0.25em" /><mtext>cm</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{3 "." "250" +- 0 "." "001"`"cm"} {}</annotation></semantics></math>
+
+ to compress the gas in the cylinder. (a) By what amount is the gas decreased in volume in cubic centimeters? (b) Find the uncertainty in this volume.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00245.md
+- 原件 Git blob SHA：e57c80fc4a4cc49d587e5d1972d5d78a8e1b4191
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00246"></a>
+
+## CP-00246｜一个人一生大约有多少次心跳
+
+**学科：** 物理基础　**知识点：** 数量级估算／心跳
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+估算一个人在整个寿命中，心脏总共跳动多少次。
+
+## 英文原题（存档摘录）
+
+# Approximation — CP-00246
+
+How many heartbeats are there in a lifetime?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00246.md
+- 原件 Git blob SHA：ad5cd34f52d2324fde1ddfc10297315bd4a807a6
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 审校提示：平均心率与寿命需要合理估计。
+
+---
+
+<a id="cp-00247"></a>
+
+## CP-00247｜公元起始至今经过多少代人
+
+**学科：** 物理基础　**知识点：** 数量级估算／代际
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+若一代人的时间约是人类平均寿命的三分之一，那么从公元纪年开始至今大约经历了多少代人？
+
+## 英文原题（存档摘录）
+
+# Approximation — CP-00247
+
+A generation is about one-third of a lifetime. Approximately how many generations have passed since the year 0 AD?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00247.md
+- 原件 Git blob SHA：b7324c0f811f36735769def14f244b9b46fb5d84
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 审校提示：寿命及当年时间基准需要合理估计。
 
 ---
 
