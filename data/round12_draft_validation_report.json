@@ -7,56 +7,56 @@
       "id": "M059",
       "part": 1,
       "method": "conservation",
-      "name": "turning-point radial energy equals asymptotic kinetic energy",
+      "name": "Euler rigid-body dynamics conserves both energy and angular momentum",
       "passed": true
     },
     {
       "id": "M059",
       "part": 2,
-      "method": "symbolic",
-      "name": "inverse-square repulsive Binet orbit solves exact second-order equation",
+      "method": "independent_derivation",
+      "name": "linear middle-axis perturbation has positive exponential growth square",
       "passed": true
     },
     {
       "id": "M059",
       "part": 3,
-      "method": "independent_derivation",
-      "name": "inverted impact parameter Jacobian yields differential cross section",
+      "method": "symbolic",
+      "name": "separatrix principal-axis amplitudes satisfy both invariant ellipsoids",
       "passed": true
     },
     {
       "id": "M059",
       "part": 4,
-      "method": "limit",
-      "name": "weak-repulsion scattering deflection has inverse-square impact scaling",
+      "method": "numerical",
+      "name": "explicit heteroclinic solution satisfies all three Euler equations at nontrivial sample",
       "passed": true
     },
     {
       "id": "E059",
       "part": 1,
       "method": "symbolic",
-      "name": "complex magnetic penetration wave number satisfies diffusion equation",
+      "name": "force-free cylinder Bessel components satisfy both curl equations",
       "passed": true
     },
     {
       "id": "E059",
       "part": 2,
       "method": "independent_derivation",
-      "name": "Ampere Ohm and Faraday equations give identical conductor phasors",
+      "name": "axial magnetic flux integral and Ampere boundary current agree",
       "passed": true
     },
     {
       "id": "E059",
       "part": 3,
-      "method": "conservation",
-      "name": "Poynting influx equals integrated Ohmic heat per unit area",
+      "method": "symbolic",
+      "name": "Bessel magnetic energy integral matches exact three-order boundary identity",
       "passed": true
     },
     {
       "id": "E059",
       "part": 4,
-      "method": "dimensions",
-      "name": "skin depth frequency scaling and reactive magnetic power agree",
+      "method": "conservation",
+      "name": "surface current crossed with mean field gives outward Maxwell pressure",
       "passed": true
     },
     {
@@ -88,5 +88,25 @@
       "passed": true
     }
   ],
-  "independent_expert_review": "pending"
+  "independent_expert_review": "pending",
+  "supplemental_numeric_checks": [
+    {
+      "id": "M059",
+      "method": "numerical",
+      "name": "triaxial separatrix two invariants at t=0.73",
+      "passed": true
+    },
+    {
+      "id": "E059",
+      "method": "numerical",
+      "name": "high precision Bessel quadrature versus boundary formula",
+      "passed": true
+    },
+    {
+      "id": "T056",
+      "method": "numerical",
+      "name": "spontaneous magnetization root near Curie temperature",
+      "passed": true
+    }
+  ]
 }

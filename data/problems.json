@@ -1207,26 +1207,26 @@
   {
     "id": "M059",
     "topic": "力学",
-    "title": "排斥平方反比势的精确轨道、散射偏角与微分截面",
+    "title": "三轴刚体中间轴失稳、能量椭球与精确分界轨道",
     "kind": "综合推导题",
     "level": 5,
-    "estimated_minutes": 95,
+    "estimated_minutes": 100,
     "tags": [
-      "中心力散射",
-      "Binet轨道方程",
-      "碰撞参数反演",
-      "微分散射截面",
-      "弱耦合渐近"
+      "Euler刚体方程",
+      "中间轴不稳定性",
+      "角动量与能量双守恒",
+      "相空间分界轨道",
+      "双曲函数精确解"
     ],
-    "answer": "\\Theta=\\pi\\!\\left(1-\\frac{b}{\\sqrt{b^2+2g/(mv_\\infty^2)}}\\right),\\quad r_{\\min}=\\sqrt{b^2+\\frac{2g}{mv_\\infty^2}}",
+    "answer": "\\lambda=\\Omega_2\\sqrt{\\frac{(I_3-I_2)(I_2-I_1)}{I_1I_3}},\\quad \\omega_2=\\frac{L}{I_2}\\tanh(\\lambda t)",
     "quality_status": "待独立复核",
     "tier": "advanced_composite",
     "format": "latex-fragment-v1",
     "revision": "composite-v2.4-round12-draft",
     "challenge_profile": "high-multistage",
     "complexity_tier": "L5-B",
-    "question": "质量为 \\(m>0\\) 的经典点粒子从无穷远以速率 \\(v_\\infty>0\\)、碰撞参数 \\(b>0\\) 射向固定散射中心，受到各向同性排斥势 \\(U(r)=g/r^2\\)（\\(g>0\\)）。无耗散、无其他作用力，运动局限于一个平面，入射动能 \\(E=mv_\\infty^2/2\\)，角动量大小 \\(\\ell=mv_\\infty b\\)。散射角 \\(\\Theta\\in(0,\\pi)\\) 定义为入射、出射速度的夹角。\n(1) 写出径向有效势及能量积分，求最近接距离并说明径向转折点为何唯一。\n(2) 以最近接点为极角原点，从 Binet 方程求精确轨道 \\(r(\\varphi)\\)，给出入射与出射的渐近极角。\n(3) 推导散射角 \\(\\Theta(b)\\)，反解碰撞参数并求经典微分散射截面 \\(d\\sigma/d\\Omega\\)。\n(4) 验证弱耦合或大碰撞参数的散射角渐近式，并求小角度微分截面的幂律；检查结果的量纲及适用边界。\n",
-    "solution": "(1) 角动量守恒给出 \\(\\dot\\varphi=\\ell/(mr^2)\\)。把切向动能并入径向势，严格能量积分为 \\(E=\\tfrac12m\\dot r^2+U_{\\rm eff}(r)\\)，其中 \\(U_{\\rm eff}=(\\ell^2/(2m)+g)/r^2\\)。它随 \\(r\\) 严格递减，且从 \\(+\\infty\\) 降至零，所以对每个 \\(E>0\\) 恰有一个 \\(\\dot r=0\\) 的转折点。代入 \\(\\ell=mv_\\infty b\\) 得 \\(r_{\\min}^2=(\\ell^2/(2m)+g)/E=b^2+2g/(mv_\\infty^2)\\)，因此 \\(r_{\\min}>b\\)，排斥力确实阻止粒子更靠近中心。\n\n(2) 令 \\(u=1/r\\)，实际径向力 \\(F_r=-dU/dr=2g/r^3=2gu^3>0\\)。Binet 方程 \\(u''+u=-mF_r/(\\ell^2u^2)\\) 化为 \\(u''+\\kappa^2u=0\\)，其中 \\(\\kappa^2=1+2mg/\\ell^2>1\\)，撇号表示对 \\(\\varphi\\) 求导。选择最近接点 \\(\\varphi=0\\)，有 \\(u'(0)=0\\)、\\(u(0)=1/r_{\\min}\\)，从而 \\(r(\\varphi)=r_{\\min}/\\cos(\\kappa\\varphi)\\)。物理轨道限于 \\(|\\varphi|<\\pi/(2\\kappa)\\)，两端 \\(r\\to\\infty\\) 的渐近方向分别是 \\(\\varphi_\\pm=\\pm\\pi/(2\\kappa)\\)，不能把极角变化误认成速度散射角。\n\n(3) 入射与出射的轨道极角总变化为 \\(\\Delta\\varphi=\\pi/\\kappa\\)；自由直线应有 \\(\\Delta\\varphi=\\pi\\)，故偏折角 \\(\\Theta=\\pi-\\Delta\\varphi=\\pi(1-1/\\kappa)\\)。记 \\(a^2=2g/(mv_\\infty^2)\\)，于是 \\(\\Theta(b)=\\pi[1-b/\\sqrt{b^2+a^2}]\\)。设 \\(y=1-\\Theta/\\pi\\in(0,1)\\)，反解 \\(b=a y/\\sqrt{1-y^2}\\)。轴对称中心力散射的环形面积元满足 \\(d\\sigma=2\\pi b\\,|db|\\)、\\(d\\Omega=2\\pi\\sin\\Theta\\,d\\Theta\\)，所以 \\(\\displaystyle\\frac{d\\sigma}{d\\Omega}=\\frac{b}{\\sin\\Theta}\\left|\\frac{db}{d\\Theta}\\right|=\\frac{a^2y}{\\pi\\sin\\Theta(1-y^2)^2}\\)。该式对有限 \\(b>0\\) 的单值偏折成立，且没有人为引入量子散射振幅。\n\n(4) 取 \\(a^2/b^2\\ll1\\)，二项式展开 \\(1/\\sqrt{1+a^2/b^2}=1-a^2/(2b^2)+O(a^4/b^4)\\)，得到 \\(\\Theta\\simeq\\pi g/(mv_\\infty^2b^2)\\)。当 \\(\\Theta\\to0^+\\)，有 \\(1-y^2\\simeq2\\Theta/\\pi\\)、\\(\\sin\\Theta\\simeq\\Theta\\)，因而 \\(\\displaystyle d\\sigma/d\\Omega\\simeq\\pi g/(2mv_\\infty^2\\Theta^3)\\)。由于 \\(g/(mv_\\infty^2)\\) 的量纲是长度平方，截面量纲正确；前向发散反映长程尾部对无限大碰撞参数的贡献，不能误解为有限探测角的无限计数。\\(g\\to0\\) 时所有有限 \\(b\\) 的偏折趋零，\\(b\\to0^+\\) 时偏折趋 \\(\\pi\\)，恰与纯排斥中心势相符。\n"
+    "question": "一个无外力矩、质心固定的三轴不对称刚体，其主惯量满足 \\(0<I_1<I_2<I_3\\)，体坐标系角速度分量为 \\(\\omega_1,\\omega_2,\\omega_3\\)。总角动量大小记为 \\(L>0\\)，动能为 \\(E\\)。不考虑耗散与弹性形变，初始条件可任选满足两守恒量的状态。\n(1) 从角动量方程推导三个 Euler 方程，证明动能和角动量模长均守恒。\n(2) 分别线性化绕三条主轴的定常自转，判别稳定性，并求绕中间轴以速率 \\(\\Omega_2>0\\) 自转时的扰动增长率。\n(3) 在体角速度空间描述两个守恒二次曲面的交线，求通过中间轴定常解的分界轨道能量，解释其几何意义。\n(4) 在分界能量 \\(E=L^2/(2I_2)\\) 上构造连接两种相反中间轴自转的精确双曲函数解，求全部振幅与时间尺度并逐式核验。\n",
+    "solution": "(1) 体坐标系中惯量张量为 \\(\\operatorname{diag}(I_1,I_2,I_3)\\)，角动量 \\(\\mathbf L=(I_1\\omega_1,I_2\\omega_2,I_3\\omega_3)\\)。无外力矩条件为 \\((d\\mathbf L/dt)_{\\rm body}+\\boldsymbol\\omega\\times\\mathbf L=0\\)，故 \\(I_1\\dot\\omega_1=(I_2-I_3)\\omega_2\\omega_3\\)、\\(I_2\\dot\\omega_2=(I_3-I_1)\\omega_3\\omega_1\\)、\\(I_3\\dot\\omega_3=(I_1-I_2)\\omega_1\\omega_2\\)。把各式分别乘以 \\(\\omega_i\\) 并求和，三重乘积的系数和为零，得到 \\(\\dot E=0\\)，其中 \\(E=\\sum I_i\\omega_i^2/2\\)。再分别乘以 \\(I_i\\omega_i\\) 并求和，同样得到 \\(dL^2/dt=0\\)，\\(L^2=\\sum I_i^2\\omega_i^2\\)。\n\n(2) 绕第一主轴的背景为 \\((\\Omega_1,0,0)\\)，横向扰动满足 \\(\\dot{\\delta\\omega}_2=(I_3-I_1)\\Omega_1\\delta\\omega_3/I_2\\)、\\(\\dot{\\delta\\omega}_3=(I_1-I_2)\\Omega_1\\delta\\omega_2/I_3\\)，二阶系数为负，故产生有界振荡。绕第三轴也有负的二阶系数，因而线性稳定。绕中间轴 \\((0,\\Omega_2,0)\\) 时，\\(\\dot{\\delta\\omega}_1=(I_2-I_3)\\Omega_2\\delta\\omega_3/I_1\\)、\\(\\dot{\\delta\\omega}_3=(I_1-I_2)\\Omega_2\\delta\\omega_1/I_3\\)，相乘得到 \\(\\ddot{\\delta\\omega}_1=\\lambda^2\\delta\\omega_1\\)，\\(\\lambda=\\Omega_2\\sqrt{(I_3-I_2)(I_2-I_1)/(I_1I_3)}>0\\)。因此存在指数增长模，这就是网球拍的中间轴不稳定性，不能以能量守恒误判为稳定。\n\n(3) 固定动能给出椭球 \\(\\sum I_i\\omega_i^2=2E\\)，固定角动量给出另一椭球 \\(\\sum I_i^2\\omega_i^2=L^2\\)；真实轨迹只能沿两曲面的交线运动。对于纯第 \\(i\\) 轴自转，\\(E_i=L^2/(2I_i)\\)。由于 \\(I_1<I_2<I_3\\)，有 \\(E_1>E_2>E_3\\)，中间轴对应的临界能量 \\(E_{\\rm sep}=L^2/(2I_2)\\)。在该能量下交线经过 \\((0,\\pm L/I_2,0)\\) 两个鞍型定常点，成为将不同旋转区域分开的分界轨道；在体坐标中的轨道接近鞍点需要无限长时间，符合线性不稳定增长率的倒数时间尺度。\n\n(4) 令 \\(A=L\\sqrt{(I_3-I_2)/[I_1I_2(I_3-I_1)]}\\)、\\(C=L\\sqrt{(I_2-I_1)/[I_2I_3(I_3-I_1)]}\\)、\\(B=L/I_2\\)，以及 \\(\\lambda=B\\sqrt{(I_3-I_2)(I_2-I_1)/(I_1I_3)}\\)。一条分界解是 \\(\\omega_1(t)=A\\operatorname{sech}(\\lambda t)\\)、\\(\\omega_2(t)=B\\tanh(\\lambda t)\\)、\\(\\omega_3(t)=C\\operatorname{sech}(\\lambda t)\\)。直接代入守恒式得 \\(I_1^2A^2+I_3^2C^2=L^2\\) 与 \\(I_1A^2+I_3C^2=L^2/I_2\\)，并利用 \\(\\tanh^2x+\\operatorname{sech}^2x=1\\) 得任意时刻的 \\(L^2\\) 与 \\(E=L^2/(2I_2)\\) 恒定。再求导并代入三条 Euler 方程，分别化为 \\(I_1A\\lambda=(I_3-I_2)BC\\)、\\(I_2B\\lambda=(I_3-I_1)AC\\)、\\(I_3C\\lambda=(I_2-I_1)AB\\)，均由定义成立。\\(t\\to\\pm\\infty\\) 时横向分量趋零、\\(\\omega_2\\to\\pm B\\)，因此该解确实连接两个中间轴鞍点，时间尺度为 \\(1/\\lambda\\)。\n"
   },
   {
     "id": "E007",
@@ -2435,26 +2435,26 @@
   {
     "id": "E059",
     "topic": "电磁学",
-    "title": "良导体半空间的趋肤扩散、复表面阻抗与坡印廷能流",
+    "title": "圆柱力自由磁场的贝塞尔结构、轴向电流与边界磁压力",
     "kind": "综合推导题",
     "level": 5,
-    "estimated_minutes": 95,
+    "estimated_minutes": 100,
     "tags": [
-      "磁扩散方程",
-      "趋肤深度",
-      "复表面阻抗",
-      "焦耳耗散",
-      "坡印廷定理"
+      "力自由磁场",
+      "圆柱Bessel方程",
+      "磁通与电流约束",
+      "磁能积分恒等式",
+      "边界面电流与Maxwell应力"
     ],
-    "answer": "\\delta=\\sqrt{\\frac{2}{\\mu\\sigma\\omega}},\\quad Z_s=\\frac{1-i}{\\sigma\\delta},\\quad \\langle S_x\\rangle=\\frac{|H_0|^2}{2\\sigma\\delta}",
+    "answer": "B_z=B_0J_0(\\alpha r),\\quad B_\\varphi=B_0J_1(\\alpha r),\\quad I_z=\\alpha\\Phi_z/\\mu_0",
     "quality_status": "待独立复核",
     "tier": "advanced_composite",
     "format": "latex-fragment-v1",
     "revision": "composite-v2.4-round12-draft",
     "challenge_profile": "high-multistage",
     "complexity_tier": "L5-B",
-    "question": "均匀各向同性良导体占据半空间 \\(x>0\\)，电导率 \\(\\sigma>0\\)、磁导率 \\(\\mu>0\\)、介电常数 \\(\\varepsilon>0\\)。外部施加沿 \\(z\\) 方向的切向交变磁场，在表面 \\(x=0\\) 的磁场相量为实数 \\(H_0>0\\)，时间约定 \\(\\Re\\{\\widetilde H(x)e^{-i\\omega t}\\}\\)，频率 \\(\\omega>0\\)。假设 \\(\\sigma\\gg\\omega\\varepsilon\\)，忽略位移电流与边缘效应，所有场仅依赖 \\(x,t\\)，且深入导体后衰减。\n(1) 由 Maxwell 方程推导磁扩散方程，求磁场的复波数、趋肤深度和实际时空相位。\n(2) 求电流密度、电场和表面阻抗 \\(Z_s=\\widetilde E_y(0)/\\widetilde H_z(0)\\)，核对 Faraday 定律及相位符号。\n(3) 分别用入射坡印廷通量和体焦耳热积分求单位面积平均吸收功率，证明二者严格相等。\n(4) 求导体内单位表面积的周期平均磁能，建立其与表面电抗的关系，并讨论频率尺度及半空间模型的有效条件。\n",
-    "solution": "(1) 取 \\(\\mathbf H=H_z(x,t)\\hat{\\mathbf z}\\)、\\(\\mathbf E=E_y(x,t)\\hat{\\mathbf y}\\)。忽略位移电流后 Ampère 定律给 \\(J_y=-\\partial_xH_z=\\sigma E_y\\)；Faraday 定律给 \\(\\partial_xE_y=-\\mu\\partial_tH_z\\)。消去 \\(E_y\\) 得 \\(\\partial_x^2H_z=\\mu\\sigma\\partial_tH_z\\)，这是扩散而非无耗波动方程。取 \\(\\widetilde H_z=H_0e^{-kx}\\)，由 \\(k^2=-i\\mu\\sigma\\omega\\) 且要求 \\(\\Re k>0\\)，选 \\(k=(1-i)/\\delta\\)，\\(\\delta=\\sqrt{2/(\\mu\\sigma\\omega)}\\)。实际场为 \\(H_z=H_0e^{-x/\\delta}\\cos(\\omega t-x/\\delta)\\)，在深度 \\(\\delta\\) 振幅降为表面的 \\(e^{-1}\\)，同时相位滞后 \\(1\\) 弧度。\n\n(2) 由 \\(\\nabla\\times\\mathbf H=\\mathbf J\\) 得 \\(\\widetilde J_y=kH_0e^{-kx}\\)，由局域 Ohm 定律得 \\(\\widetilde E_y=(k/\\sigma)H_0e^{-kx}\\)。因此 \\(Z_s=k/\\sigma=(1-i)/(\\sigma\\delta)\\)，实部正而虚部在 \\(e^{-i\\omega t}\\) 约定下为负。表面实际电场为 \\(E_y(0,t)=\\sqrt2 H_0/(\\sigma\\delta)\\cos(\\omega t+\\pi/4)\\)，所以电场时间相位比表面磁场超前 \\(\\pi/4\\)。再独立代回 Faraday 方程：\\(\\partial_x\\widetilde E_y=-k^2\\widetilde H_z/\\sigma=i\\mu\\omega\\widetilde H_z=-\\partial_t\\widetilde B_z\\) 的相量形式，符号与取向完全一致。\n\n(3) 在表面 \\(\\mathbf E\\parallel\\hat{\\mathbf y}\\)、\\(\\mathbf H\\parallel\\hat{\\mathbf z}\\)，故 \\(\\mathbf E\\times\\mathbf H\\) 指向导体内部 \\(+\\hat{\\mathbf x}\\)。平均输入功率通量 \\(\\langle S_x(0)\\rangle=\\tfrac12\\Re[\\widetilde E_y(0)\\widetilde H_z(0)^*]=\\tfrac12|H_0|^2\\Re Z_s=|H_0|^2/(2\\sigma\\delta)\\)。另一方面 \\(\\langle p_J(x)\\rangle=|\\widetilde J_y(x)|^2/(2\\sigma)=|k|^2|H_0|^2e^{-2x/\\delta}/(2\\sigma)\\)。积分 \\(\\int_0^\\infty e^{-2x/\\delta}dx=\\delta/2\\)，利用 \\(|k|^2=2/\\delta^2\\) 得 \\(\\int_0^\\infty\\langle p_J\\rangle dx=|H_0|^2/(2\\sigma\\delta)\\)。两种完全不同的能量账本相等，表明没有漏掉表面功率或虚假的能量源。\n\n(4) 磁能密度的周期平均为 \\(\\mu|\\widetilde H_z|^2/4\\)，故每单位面积储存的平均磁能 \\(W_m/A=\\mu|H_0|^2\\int_0^\\infty e^{-2x/\\delta}dx/4=\\mu|H_0|^2\\delta/8\\)。因为 \\(\\mu\\sigma\\omega\\delta^2=2\\)，有 \\(2\\omega W_m/A=|H_0|^2/(2\\sigma\\delta)=|\\Im Z_s|\\,|H_0|^2/2\\)，对应表面感性无功功率的大小；这里虚部符号取决于相量时间约定。趋肤深度随 \\(\\omega^{-1/2}\\) 缩小，表面电阻随 \\(\\omega^{1/2}\\) 增大。必须同时满足 \\(\\sigma\\gg\\omega\\varepsilon\\)、样品厚度远大于 \\(\\delta\\) 且局域 Ohm 定律适用；对有限厚样品不能直接令 \\(\\omega\\to0\\) 后仍使用半空间公式。\n"
+    "question": "一根无限长、半径为 \\(R>0\\) 的圆柱等离子体内部存在轴对称、沿 \\(z\\) 不变的静磁场 \\(\\mathbf B=B_\\varphi(r)\\hat{\\boldsymbol\\varphi}+B_z(r)\\hat{\\mathbf z}\\)，且 \\(B_r=0\\)。在 \\(0\\le r<R\\) 假设无体积 Lorentz 力，电流满足 \\(\\nabla\\times\\mathbf B=\\alpha\\mathbf B\\)，其中常数 \\(\\alpha>0\\)，并有 \\(B_z(0)=B_0>0\\)、轴上场有界。介质磁导率取真空值 \\(\\mu_0\\)，忽略电场与端面效应。圆柱外 \\(r>R\\) 设为理想零磁场，允许边界承载面电流与机械约束。\n(1) 从柱坐标旋度方程求内部 \\(B_z(r)\\)、\\(B_\\varphi(r)\\)，验证无散条件及轴心正则性。\n(2) 计算穿过横截面的轴向磁通 \\(\\Phi_z\\) 和体电流总量 \\(I_z\\)，给出两者与 \\(\\alpha\\) 的精确关系。\n(3) 求每单位长度的磁场能量，化为只含 \\(J_0,J_1,J_2\\) 的边界闭式，并检查 \\(\\alpha R\\ll1\\) 的均匀场极限。\n(4) 由磁场跳跃条件求圆柱面电流 \\(\\mathbf K\\)，计算它所受的平均磁场 Lorentz 面力，并解释为何内部力自由不意味着边界无压力。\n",
+    "solution": "(1) 轴对称且不依赖 \\(z\\) 时，旋度的两个非零分量为 \\((\\nabla\\times\\mathbf B)_\\varphi=-dB_z/dr\\)、\\((\\nabla\\times\\mathbf B)_z=r^{-1}d(rB_\\varphi)/dr\\)。力自由条件分别给 \\(-B_z'=\\alpha B_\\varphi\\) 和 \\((rB_\\varphi)'/r=\\alpha B_z\\)。消去 \\(B_\\varphi\\) 得 \\(B_z''+B_z'/r+\\alpha^2B_z=0\\)，这是零阶 Bessel 方程。轴上有界排除发散的 \\(Y_0\\)，故 \\(B_z=B_0J_0(\\alpha r)\\)。利用 \\(dJ_0(x)/dx=-J_1(x)\\) 得 \\(B_\\varphi=B_0J_1(\\alpha r)\\)，它在轴上按 \\(r\\) 线性趋零。由于 \\(B_r=0\\) 且场无 \\(\\varphi,z\\) 依赖，\\(\\nabla\\cdot\\mathbf B=0\\) 自动成立，不能额外施加一个不相容的径向通量条件。\n\n(2) 轴向磁通由横截面积分给出 \\(\\Phi_z=2\\pi\\int_0^R B_z(r)r\\,dr=2\\pi B_0RJ_1(\\alpha R)/\\alpha\\)，其中使用 \\(d[xJ_1(x)]/dx=xJ_0(x)\\)。体电流密度 \\(\\mathbf j=(\\nabla\\times\\mathbf B)/\\mu_0=\\alpha\\mathbf B/\\mu_0\\)，故 \\(I_z=\\int j_z\\,dA=(\\alpha/\\mu_0)\\Phi_z=2\\pi B_0RJ_1(\\alpha R)/\\mu_0\\)。还可独立用 Ampère 环路积分 \\(2\\pi R B_\\varphi(R)=\\mu_0I_z\\) 验证同一结果。这里的 \\(I_z\\) 专指内部体电流；若把外部零场与表面电流一并计入，整体净轴向电流应为零，不能混淆两种积分区域。\n\n(3) 每单位轴向长度的磁能为 \\(U_B/L=(2\\mu_0)^{-1}\\int_0^R(B_z^2+B_\\varphi^2)2\\pi r\\,dr\\)。利用 Bessel 恒等式 \\(\\int_0^R rJ_\\nu(\\alpha r)^2dr=\\tfrac{R^2}{2}[J_\\nu(\\alpha R)^2-J_{\\nu-1}(\\alpha R)J_{\\nu+1}(\\alpha R)]\\)，且 \\(J_{-1}=-J_1\\)，可化成 \\(\\displaystyle U_B/L=\\frac{\\pi B_0^2R^2}{2\\mu_0}[J_0(x)^2+2J_1(x)^2-J_0(x)J_2(x)]\\)，\\(x=\\alpha R\\)。对于 \\(x\\ll1\\)，用 \\(J_0=1-x^2/4+O(x^4)\\)、\\(J_1=x/2+O(x^3)\\)、\\(J_2=x^2/8+O(x^4)\\) 得 \\(U_B/L=\\pi B_0^2R^2[1-x^2/8+O(x^4)]/(2\\mu_0)\\)。零阶项恰为均匀轴向磁场的能量，下一项反映螺旋场和轴向场衰减的竞争。\n\n(4) 在 \\(r=R\\) 取由内指外的法向 \\(\\hat{\\mathbf r}\\)，面电流跳跃条件为 \\(\\mathbf K=\\hat{\\mathbf r}\\times(\\mathbf H_{\\rm out}-\\mathbf H_{\\rm in})\\)。外侧磁场为零，故 \\(\\mathbf K=[B_z(R)\\hat{\\boldsymbol\\varphi}-B_\\varphi(R)\\hat{\\mathbf z}]/\\mu_0\\)。对理想薄电流层必须用两侧磁场的平均值 \\(\\mathbf B_{\\rm av}=(\\mathbf B_{\\rm in}+\\mathbf B_{\\rm out})/2=\\mathbf B_{\\rm in}/2\\)，而不能只用内侧场，否则力会多一倍。计算 \\(\\mathbf f_s=\\mathbf K\\times\\mathbf B_{\\rm av}=[B_z(R)^2+B_\\varphi(R)^2]\\hat{\\mathbf r}/(2\\mu_0)\\)，这是向外的面磁压力；要维持给定的零外场边界，需要圆柱壁或外部机械约束提供相反的向内力。体内 \\(\\mathbf j\\times\\mathbf B=0\\) 只表示体积力消失，不排除表面应力。\n"
   },
   {
     "id": "T007",
