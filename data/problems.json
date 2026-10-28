@@ -455,6 +455,50 @@
     "complexity_tier": "L5-C"
   },
   {
+    "id": "M026",
+    "topic": "力学",
+    "title": "恒速收短绳长的摆动、变参数力学与外部做功",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "变长度约束",
+      "非自治拉格朗日",
+      "角动量",
+      "外力做功"
+    ],
+    "question": "质量为 m 的质点悬挂在支点固定的轻绳下，绳长 ℓ(t)=ℓ₀−ut，ℓ₀,u>0，在 0≤t<ℓ₀/u 被装置以恒定速度 u 向上收紧，质点在固定竖直平面内摆动，重力加速度 g>0。用 θ 表示偏离竖直向下的角，忽略阻力。\n(1) 由拉格朗日函数推导准确的非自治 θ 方程；(2) 在小角极限改用 x=ℓθ，推导 x 的受迫变系数方程与初值映射；(3) 推导质点真实机械能的时间变化率，解释它与收绳拉力做功的关系；(4) 在 g=0 的可解极限用角动量守恒求 θdot(t) 与角动量，核对 θ 方程。",
+    "solution": "(1) 质点位置为 \\(x=\\ell\\sin\\theta,y=-\\ell\\cos\\theta\\)。利用已指定的 ℓ(t)，动能为\n\\[\nK=\\frac m2(\\dot\\ell^2+\\ell^2\\dot\\theta^2),\\qquad U=-mg\\ell\\cos\\theta .\n\\]\n拉格朗日函数 \\(L=K-U\\)，对 θ 的 Euler–Lagrange 方程为\n\\[\n\\frac d{dt}(m\\ell^2\\dot\\theta)+mg\\ell\\sin\\theta=0,\n\\quad\\Longrightarrow\\quad\n\\ddot\\theta+2\\frac{\\dot\\ell}{\\ell}\\dot\\theta+\\frac g\\ell\\sin\\theta=0.\n\\]\n这里 \\(\\dot\\ell=-u\\)，故角速度前的系数为负，不能当作物理阻尼。\n\n(2) 在 |\\(\\theta|\\ll1\\) 下令 \\(x=\\ell\\theta\\)。从 \\(\\theta=x/\\ell\\) 求导可得 \\(\\ddot x=\\ell\\ddot\\theta+2\\dot\\ell\\dot\\theta+\\ddot\\ell\\theta\\)，因此\n\\[\n\\ddot x+\\left(\\frac g\\ell-\\frac{\\ddot\\ell}{\\ell}\\right)x=0.\n\\]\n恒速收绳意味着 \\(\\ddot\\ell=0\\)，故 \\(\\ddot x+[g/(\\ell_0-ut)]x=0\\)。初值满足 \\(x_0=\\ell_0\\theta_0,\\dot x_0=\\ell_0\\dot\\theta_0-u\\theta_0\\)。这个变频方程未必有简单三角函数解，不能假定频率恒定。\n\n(3) 全部质点机械能为\n\\[\nE=\\frac m2(\\dot\\ell^2+\\ell^2\\dot\\theta^2)-mg\\ell\\cos\\theta .\n\\]\n对时间求导并用角度方程，得到\n\\[\n\\dot E=m\\dot\\ell\\ddot\\ell-m\\ell\\dot\\ell\\dot\\theta^2-mg\\dot\\ell\\cos\\theta\n=[m(\\ddot\\ell-\\ell\\dot\\theta^2)-mg\\cos\\theta]\\dot\\ell .\n\\]\n括号是质点受到的沿远离支点方向的绳拉力代数分量 \\(F_r\\)，故 \\(\\dot E=F_r\\dot\\ell\\)；收绳装置通常对质点做非零功，不能声称实验室机械能守恒。\n\n(4) 令 g=0，角度方程积分为 \\(\\ell^2\\dot\\theta=\\ell_0^2\\dot\\theta_0\\)，所以\n\\[\n\\dot\\theta(t)=\\dot\\theta_0[\\ell_0/(\\ell_0-ut)]^2,\\quad\nL_z=m\\ell^2\\dot\\theta=m\\ell_0^2\\dot\\theta_0.\n\\]\n由于绳张力纯径向，无外力矩，角动量恒定；直接代回 θ 方程两项抵消。这验证收绳系数必须是 \\(2\\dot\\ell/\\ell\\) 而不是 \\(\\dot\\ell/\\ell\\)。",
+    "answer": "\nK=\\frac m2(\\dot\\ell^2+\\ell^2\\dot\\theta^2),\\qquad U=-mg\\ell\\cos\\theta .\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
+    "id": "M027",
+    "topic": "力学",
+    "title": "均匀密度天体斜弦真空隧道的简谐运动与普适穿越时间",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 65,
+    "tags": [
+      "球对称引力",
+      "壳层定理",
+      "弦隧道几何",
+      "周期与势能"
+    ],
+    "question": "一半径为 R、质量为 M 的均匀密度球形天体静止，万有引力常数 G。沿距离球心为 d∈[0,R) 的直线挖出质量可忽略的狭窄真空隧道，隧道两端在球面。质量 m 的微小滑块从隧道一端静止释放，在无摩擦轨道内沿隧道运动，天体不自转、忽略滑块反作用。\n(1) 由壳层定理求球内引力场和势能；(2) 设 s 为从弦中点起的带符号坐标，求精确运动方程与到达另一端所需时间；(3) 求最大速度及沿轨道各点的速度函数；(4) 检验 d=0 与 d→R⁻ 极限并说明为何所有不同斜弦的穿越时间相同。",
+    "solution": "(1) 均匀球体内半径为 r 的包围质量 \\(M(r)=Mr^3/R^3\\)。球对称壳层定理给\n\\[\n\\boldsymbol g(r)=-\\frac{GM(r)}{r^2}\\hat{\\boldsymbol r}\n=-\\frac{GM}{R^3}\\boldsymbol r,\\quad 0\\le r\\le R.\n\\]\n以无穷远引力势能为零、在球面连续，积分得\n\\[\nU(r)=-\\frac{GMm}{2R}\\left(3-\\frac{r^2}{R^2}\\right).\n\\]\n球内力正比位移，是三维各向同性谐振力场。\n\n(2) 斜弦到球心的距离 d 固定，沿隧道中心的坐标 s 对应 \\(r^2=d^2+s^2\\)。将引力投影到隧道方向，得\n\\[\nm\\ddot s=-\\frac{GMm}{R^3}s,\\quad\n\\omega=\\sqrt{GM/R^3}.\n\\]\n弦端坐标为 \\(s=\\pm a\\)，其中 \\(a=\\sqrt{R^2-d^2}\\)。从一端静止释放可选 \\(s(0)=a,\\dot s(0)=0\\)，故 \\(s(t)=a\\cos\\omega t\\)。到达另一端 s=−a 的首次时刻为\n\\[\nt_{\\rm traverse}=\\pi/\\omega=\\pi\\sqrt{R^3/(GM)}.\n\\]\n\n(3) 机械能守恒，沿 s 的有效势差为 \\(\\Delta U=m\\omega^2(s^2-a^2)/2\\)，得到\n\\[\n\\dot s^2=\\omega^2(a^2-s^2),\\quad\n|\\dot s(s)|=\\omega\\sqrt{R^2-d^2-s^2}.\n\\]\n最大速度出现在隧道中点 s=0，为 \\(v_{\\max}=\\sqrt{GM/R^3}\\sqrt{R^2-d^2}\\)。随着 d 接近 R，隧道缩短，最大速度趋零。\n\n(4) 对 d=0 的直径隧道，\\(a=R\\)、\\(v_{\\max}=\\sqrt{GM/R}\\)，穿越时间仍为 π/ω。对 \\(d\\to R^-\\)，长度 2a 与最大速度都趋零，但每个非退化隧道的首次另一端时间仍恰为 π/ω；严格 d=R 时隧道退化为一个点，谈穿越时间没有意义。时间的普适性来自均匀天体内引力恰是线性回复力，振幅变化不改变理想谐振周期。",
+    "answer": "\n\\boldsymbol g(r)=-\\frac{GM(r)}{r^2}\\hat{\\boldsymbol r}\n=-\\frac{GM}{R^3}\\boldsymbol r,\\quad 0\\le r\\le R.\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-A"
+  },
+  {
     "id": "E007",
     "topic": "电磁学",
     "title": "滑动导体棒的自感反馈与能量耗散",
@@ -910,6 +954,50 @@
     "revision": "composite-v2.0",
     "challenge_profile": "high-multistage",
     "complexity_tier": "L5-C"
+  },
+  {
+    "id": "E026",
+    "topic": "电磁学",
+    "title": "有限电阻与漏电导传输线的复传播常数、匹配与衰减",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "tags": [
+      "损耗电报方程",
+      "复传播常数",
+      "传输线阻抗",
+      "功率耗散"
+    ],
+    "question": "一均匀两导体传输线每单位长度电阻为 R′>0、电感为 L′>0、电导漏损为 G′>0、电容为 C′>0。取沿 +z 传输的单频信号 e^(−iωt)，ω>0，定义电压 V(z) 和正向电流 I(z)，物理量为复振幅的实部。\n(1) 推导有损电报方程及复波数 k 的色散关系；(2) 求特征阻抗 Zc 和向 +z 衰减的传播支；(3) 建立沿线平均实功率的损耗微分方程，并证明其等于欧姆热与介质漏损之和；(4) 在 R′,G′ 很小的低损极限求衰减常数首项并检验无损极限。",
+    "solution": "(1) 线元 dz 上电压降低来自串联电阻和电感，电流降低来自电容位移电流与横向漏电导。在时域：\n\\[\n\\partial_zV=-R'I-L'\\partial_tI,\\qquad\n\\partial_zI=-G'V-C'\\partial_tV.\n\\]\n以 \\(e^{-i\\omega t}\\) 取复振幅，有\n\\[\nV'=-(R'-i\\omega L')I=-ZI,\\quad\nI'=-(G'-i\\omega C')V=-YV.\n\\]\n再次求导得 \\(V''=ZYV\\)。设 \\(V\\propto e^{ikz}\\)，则 \\(-k^2=ZY\\)，即 \\(k^2=-(R'-i\\omega L')(G'-i\\omega C')\\)。\n\n(2) 对向右衰减波，写 \\(V(z)=V_0e^{-\\gamma z}\\)，传播常数\n\\[\n\\gamma=\\sqrt{(R'-i\\omega L')(G'-i\\omega C')},\\quad\\Re\\gamma>0,\n\\]\n相应 \\(k=i\\gamma\\)。由 \\(V'=-ZI\\) 得 \\(I=\\gamma V/Z\\)，所以\n\\[\nZ_c=\\frac VI=\\sqrt{\\frac{R'-i\\omega L'}{G'-i\\omega C'}}.\n\\]\n取平方根分支以确保在 R′,G′→0 时 \\(Z_c\\to\\sqrt{L'/C'}>0\\) 且功率向 +z 传播。\n\n(3) 平均有功功率定义 \\(P(z)=\\Re[VI^*]/2\\)。利用方程求导：\n\\[\nP'=\\frac12\\Re[V'I^*+V(I')^*]\n=-\\frac12\\big[R'|I|^2+G'|V|^2\\big]\\le0.\n\\]\n这里纯虚感抗和容纳项的实部相消；右端恰是单位长度串联电阻的平均焦耳热与并联漏电导的平均耗散功率，不存在凭空的能量损失。\n\n(4) 低损条件 \\(R'\\ll\\omega L'\\)、\\(G'\\ll\\omega C'\\) 下，展开\n\\[\n\\gamma\\simeq i(-\\omega\\sqrt{L'C'})\n+\\frac{R'}2\\sqrt{\\frac{C'}{L'}}\n+\\frac{G'}2\\sqrt{\\frac{L'}{C'}} .\n\\]\n因此振幅衰减系数\n\\[\n\\alpha=\\Re\\gamma\\simeq\\frac{R'}{2Z_0}+\\frac{G'Z_0}{2},\\quad Z_0=\\sqrt{L'/C'}.\n\\]\n当 R′,G′→0，\\(\\alpha\\to0\\)、\\(k\\to\\omega\\sqrt{L'C'}\\)、\\(Z_c\\to Z_0\\)，恢复无损 TEM 传输线的传播与功率守恒。",
+    "answer": "\n\\partial_zV=-R'I-L'\\partial_tI,\\qquad\n\\partial_zI=-G'V-C'\\partial_tV.\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
+    "id": "E027",
+    "topic": "电磁学",
+    "title": "同轴电流线圈与磁偶极子的互感、感应电动势及力矩",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "磁偶极近似",
+      "磁通积分",
+      "互感",
+      "法拉第感应"
+    ],
+    "question": "一半径为 a 的小电流圆环位于 xy 平面、圆心在原点，电流 I₁ 沿 +z 观察为逆时针。另一半径为 b 的更小圆环与前环同轴，其中心位于 z>0，且 b≪sqrt(a²+z²)，环面仍垂直于 z，电流 I₂。真空磁导率 μ₀。\n(1) 由 Biot–Savart 定律求第一个圆环轴上的 Bz(z)；(2) 用小接收环近似求磁通和互感 M(z)，说明近似条件；(3) 若接收环以速度 ż 轴向移动或发射环电流 I₁(t) 缓变，分别求接收环感应电动势；(4) 求固定 I₁,I₂ 时接收环的轴向磁力及其远场标度，验证力与磁偶极势能一致。",
+    "solution": "(1) 发射圆环上每个微小电流元对轴线上的径向磁场分量互相抵消，轴向分量相加。Biot–Savart 积分给\n\\[\nB_z(z)=\\frac{\\mu_0I_1a^2}{2(a^2+z^2)^{3/2}} .\n\\]\n对 I₁>0 沿轴正方向为正；在 z=0 恰为 \\(\\mu_0I_1/(2a)\\)。\n\n(2) 若接收环半径 \\(b\\ll\\sqrt{a^2+z^2}\\)，其截面上的 Bz 可近似用中心值，磁通\n\\[\n\\Phi_{2\\leftarrow1}\\simeq\\pi b^2 B_z\n=\\frac{\\mu_0\\pi a^2b^2}{2(a^2+z^2)^{3/2}}I_1.\n\\]\n定义互感 \\(\\mathcal M=\\Phi/I_1\\)，故\n\\[\n\\mathcal M(z)\\simeq\\frac{\\mu_0\\pi a^2b^2}{2(a^2+z^2)^{3/2}}.\n\\]\n遗漏的横向场非均匀修正通常是 \\(b^2/(a^2+z^2)\\) 的高阶量。\n\n(3) 接收环闭合路径的感应电动势由总链接磁通的时间导数给出\n\\[\n\\mathcal E_2=-\\frac{d}{dt}[\\mathcal M(z(t))I_1(t)]\n=-\\mathcal M\\dot I_1-I_1\\mathcal M'(z)\\dot z.\n\\]\n其中\n\\(\\mathcal M'(z)=-3\\mu_0\\pi a^2b^2z/[2(a^2+z^2)^{5/2}]\\)。\n第一项由磁源电流变化造成，第二项是运动穿过不均匀磁场造成的动生电动势；即使电流恒定，移动环仍可感应电动势。\n\n(4) 接收圆环磁矩为 \\(\\boldsymbol\\mu_2=I_2\\pi b^2\\hat z\\)。在轴向变化的外磁场中固定两环电流时，偶极受力\n\\[\nF_z=\\mu_2\\frac{dB_z}{dz}\n=-\\frac{3\\mu_0I_1I_2\\pi a^2b^2z}{2(a^2+z^2)^{5/2}}\n=I_1I_2\\mathcal M'(z).\n\\]\n从势能 \\(U=-\\boldsymbol\\mu_2\\cdot\\boldsymbol B_1=-I_1I_2\\mathcal M\\) 求 \\(-U_z\\) 得相同结果。远场 z≫a 时 \\(F_z\\sim-3\\mu_0I_1I_2\\pi a^2b^2/(2z^4)\\)，同向电流环相互吸引。",
+    "answer": "\nB_z(z)=\\frac{\\mu_0I_1a^2}{2(a^2+z^2)^{3/2}} .\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B"
   },
   {
     "id": "T007",
@@ -1369,6 +1457,28 @@
     "complexity_tier": "L5-B"
   },
   {
+    "id": "T026",
+    "topic": "热学",
+    "title": "干绝热大气直减率、位温与 Brunt–Väisälä 稳定频率",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "tags": [
+      "静力大气",
+      "绝热直减率",
+      "熵守恒",
+      "浮力振荡"
+    ],
+    "question": "理想干空气具有恒定摩尔气体常数 R、定压摩尔热容 Cp>R、摩尔质量 M>0，处于恒定重力 g>0 下的静力平衡大气，压强 p(z)、温度 T(z)>0；忽略水汽、混合、阻力。取小空气团在周围环境中缓慢作绝热垂直位移，其压强瞬时与环境压强平衡。\n(1) 从静力平衡和理想气体方程求 dp/dz；(2) 用摩尔熵不变推导干绝热直减率 Γd=−dT/dz，并定义以 p₀ 为参考的位温；(3) 若背景实际直减率 Γ=−dT_env/dz，推导小气团垂直位移方程和浮力频率 N²；(4) 区分 Γ<Γd、Γ>Γd 与相等情形，并解释何时线性位移稳定。",
+    "solution": "(1) 理想气体质量密度为 \\(\\rho=Mp/(RT)\\)，静力平衡是 \\(dp/dz=-\\rho g\\)，因此\n\\[\n\\frac{dp}{dz}=-\\frac{Mgp}{RT}.\n\\]\n该式对局部温度随高度变化完全一般，不要求大气等温或绝热。\n\n(2) 理想气体每摩尔熵微分为 \\(ds=C_p\\,dT/T-R\\,dp/p\\)。随小气团可逆绝热升降令 ds=0，于是\n\\[\n\\frac{dT}{dz}=\\frac{R}{C_p}\\frac Tp\\frac{dp}{dz}\n=-\\frac{Mg}{C_p},\n\\quad \\Gamma_d=\\frac{Mg}{C_p}.\n\\]\n定义位温 \\(\\vartheta=T(p_0/p)^{R/C_p}\\)，同一空气团绝热位移时 \\(\\vartheta\\) 保持不变；位温升高意味着在同一参考压强下的温度升高，也对应熵升高。\n\n(3) 令背景温度直减率为 Γ，空气团相对初始平衡位置向上位移 ξ>0。空气团绝热冷却 \\(\\delta T_{\\rm parcel}=-\\Gamma_d\\xi\\)，同一高度环境变化 \\(\\delta T_{\\rm env}=-\\Gamma\\xi\\)。两者压强相同，因此密度差在一阶近似下\n\\(\\delta\\rho/\\rho\\simeq-(T_{\\rm parcel}-T_{\\rm env})/T\n=(\\Gamma_d-\\Gamma)\\xi/T\\)。\n向上浮力加速度为 \\(-g\\delta\\rho/\\rho\\)，故\n\\[\n\\ddot\\xi+N^2\\xi=0,\\qquad N^2=\\frac gT(\\Gamma_d-\\Gamma).\n\\]\n\n(4) 若 Γ<Γd，N²>0，小气团在原位附近作 Brunt–Väisälä 稳定浮力振荡，周期为 \\(2\\pi/N\\)。若 Γ>Γd，N²<0，扰动出现指数增长，对流不稳定；Γ=Γd 时线性回复力为零，处于中性绝热层结。以上结果依赖于压强快速平衡、干绝热和局部小位移的假设，水汽凝结会改变有效直减率。",
+    "answer": "\n\\frac{dp}{dz}=-\\frac{Mgp}{RT}.\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
     "id": "W007",
     "topic": "振动与波动",
     "title": "双弦接点附加质量的波散射",
@@ -1824,6 +1934,28 @@
     "complexity_tier": "L5-B"
   },
   {
+    "id": "W026",
+    "topic": "振动与波动",
+    "title": "无限长均匀弦中心点质量的频率散射、反射相位与透射能流",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "点质量界面",
+      "波散射",
+      "复反射系数",
+      "能流守恒"
+    ],
+    "question": "一无限长均匀细弦张力 T>0、线密度 μ>0，在 x=0 处安装质量为 M>0 的零尺寸点珠，点珠随弦横向运动。角频率 ω>0 的单色横波从左侧向右传播，忽略阻尼；两侧弦的波速 c=sqrt(T/μ)、波数 k=ω/c 相同。\n(1) 由点珠的牛顿方程建立 x=0 的位移连续与斜率跃变关系；(2) 设左侧入射幅为1、反射幅为r、右侧透射幅为t，求精确 r,t；(3) 求反射、透射能流比并证明和为1；(4) 讨论 M→0、M→∞、ω→0 极限，解释点质量如何成为频率选择性的散射缺陷。",
+    "solution": "(1) 弦点珠两侧的横向张力合力为 \\(T[y_x(0^+,t)-y_x(0^-,t)]\\)。点珠满足\n\\[\nM y_{tt}(0,t)=T[y_x(0^+,t)-y_x(0^-,t)],\n\\]\n同时位移连续 \\(y(0^-,t)=y(0^+,t)\\)。此跃变条件必须保留点质量，否则误以为斜率也连续会错误预测没有散射。\n\n(2) 采用 \\(e^{-i\\omega t}\\) 时间惯例，\n\\[\ny_L=e^{ikx}+re^{-ikx},\\qquad y_R=te^{ikx}\n\\]\n表示各侧复振幅。位移连续得 \\(t=1+r\\)。导数跃变为 \\(ik t-ik(1-r)=2ikr\\)，代入点珠方程\n\\[\n-M\\omega^2t=2iTk r.\n\\]\n令 \\(Z=Tk/\\omega=\\sqrt{T\\mu}\\)，解得\n\\[\nr=-\\frac{M\\omega}{M\\omega+2iZ},\\qquad\nt=\\frac{2iZ}{M\\omega+2iZ}.\n\\]\n它们还满足 \\(t=1+r\\)，可作代数核验。\n\n(3) 两侧弦张力与波速相同，所以单色行波能流与振幅模平方成正比。故\n\\[\n\\mathcal R=|r|^2=\\frac{M^2\\omega^2}{M^2\\omega^2+4Z^2},\\quad\n\\mathcal T=|t|^2=\\frac{4Z^2}{M^2\\omega^2+4Z^2}.\n\\]\n相加严格等于1，证明点珠无耗散，只将入射能量重新分成左行与右行波。虽然点珠暂时储存机械动能，周期平均后的能量通量仍平衡。\n\n(4) 当 M→0，反射 \\(\\mathcal R\\to0\\)，恢复均匀弦；M→∞ 或固定 M 而 ω→∞，\\(\\mathcal R\\to1\\)，点珠几乎成为固定端。若 ω→0 且 M 有限，\\(\\mathcal T\\to1\\)，足够慢的波能让点珠跟随而少有散射。关键无量纲参数为 \\(M\\omega/(2Z)\\)，因此这不是通过更换粒子质量数字产生的简单重复题。",
+    "answer": "\nM y_{tt}(0,t)=T[y_x(0^+,t)-y_x(0^-,t)],\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B"
+  },
+  {
     "id": "O007",
     "topic": "光学",
     "title": "分离薄透镜系统的矩阵成像与无焦条件",
@@ -2250,6 +2382,50 @@
     "question": "理想 Michelson 干涉仪的两个臂产生可调光程差 Δ（已经包含双程因素），由中心角频率 ω₀>0 的准单色平稳光源照明。光源功率谱关于 ω₀ 呈窄带高斯分布 S(ω)∝exp[−(ω−ω₀)²/(2σ²)]，σ>0 且 σ≪ω₀；忽略负频尾、色散和偏振失配，两臂返回光强相等。\n(1) 对单一角频率写出相位差与输出干涉强度；(2) 对高斯光谱积分求总强度和条纹可见度；(3) 定义可见度下降为 1/e 时的光程差为相干长度，求它与 σ 的关系；(4) 讨论改变 Δ 如何从干涉数据恢复光源谱宽以及 σ→0 极限。",
     "solution": "(1) 光程差 Δ 引起时间延迟 \\(\\tau=\\Delta/c\\)，对于单频光的两束等光强 I₀，输出总强度可写为 \\(I_\\omega(\\Delta)=2I_0[1+\\cos(\\omega\\tau)]\\)。实际高斯谱的不同频率分量在探测器的慢响应下互不相干，须对频率功率而不是不同频率振幅直接求和。\n\n(2) 取归一化谱\n\\[\ns(\\omega)=\\frac1{\\sqrt{2\\pi}\\sigma}\ne^{-(\\omega-\\omega_0)^2/(2\\sigma^2)}\n\\]\n并在 \\(\\sigma\\ll\\omega_0\\) 时将下限近似延伸至负无穷。高斯特征函数满足\n\\[\n\\int_{-\\infty}^\\infty s(\\omega)e^{i\\omega\\tau}d\\omega\n=e^{i\\omega_0\\tau-\\sigma^2\\tau^2/2}.\n\\]\n因此\n\\[\nI(\\Delta)=2I_0\\left[1+\ne^{-\\sigma^2\\Delta^2/(2c^2)}\n\\cos(\\omega_0\\Delta/c)\\right].\n\\]\n局部干涉可见度包络为\n\\[\n\\mathcal V(\\Delta)=e^{-\\sigma^2\\Delta^2/(2c^2)}.\n\\]\n\n(3) 按 \\(\\mathcal V(\\ell_{\\rm coh})=e^{-1}\\)，求得\n\\[\n\\ell_{\\rm coh}=\\frac{\\sqrt2\\,c}{\\sigma}.\n\\]\n对应相干时间为 \\(\\tau_{\\rm coh}=\\sqrt2/\\sigma\\)。相干长度大表示光源频谱窄；该数值系数依赖采用角频率标准差及 1/e 包络的约定。\n\n(4) 实验上缓慢扫描 Δ 可获得快速载波振荡的周期 \\(2\\pi c/\\omega_0\\) 和慢变高斯包络的宽度，通过 \\(\\ln\\mathcal V=-\\sigma^2\\Delta^2/(2c^2)\\) 对 Δ² 作直线拟合即可估计 σ。若 σ→0⁺，包络趋1，任意有限光程差仍有完全对比度，退化为单色光；有限σ导致可见度下降，并不意味着两臂本身存在吸收。",
     "answer": "\ns(\\omega)=\\frac1{\\sqrt{2\\pi}\\sigma}\ne^{-(\\omega-\\omega_0)^2/(2\\sigma^2)}\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
+    "id": "O025",
+    "topic": "光学",
+    "title": "高斯光束复参数的自由传播、Rayleigh 长度与腰斑位置",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "旁轴波动方程",
+      "复高斯参数",
+      "束腰",
+      "Rayleigh长度"
+    ],
+    "question": "一真空中波长为 λ 的理想标量基模高斯光束，其束腰半径为 w₀>0，束腰位置取 z=0，波数 k=2π/λ，忽略截断与像差。定义 zR=πw₀²/λ。\n(1) 从复光束参数 q(z)=z+i zR 求光束半径 w(z) 和波前曲率半径 Rc(z)；(2) 求远场发散半角及其与束腰半径的乘积；(3) 求在 z=zR 时的光斑尺寸和波前曲率，并说明为何这叫 Rayleigh 长度；(4) 证明 w(z) 最小值在 z=0，讨论 w₀→∞ 的准平面波极限。",
+    "solution": "(1) 对基模高斯解定义复曲率量\n\\[\n\\frac1{q(z)}=\\frac1{R_c(z)}-i\\frac{\\lambda}{\\pi w(z)^2}.\n\\]\n由 \\(q=z+iz_R\\) 得 \\(1/q=(z-iz_R)/(z^2+z_R^2)\\)，比较实虚部得到\n\\[\nR_c(z)=z\\left(1+\\frac{z_R^2}{z^2}\\right),\\qquad\nw(z)^2=\\frac{\\lambda}{\\pi}\\frac{z^2+z_R^2}{z_R}\n=w_0^2\\left(1+\\frac{z^2}{z_R^2}\\right).\n\\]\n在 z=0，波前曲率半径理解为无穷大，局部波前平面。\n\n(2) 对 z≫zR，\\(w(z)\\sim w_0z/z_R\\)，故强度 1/e² 半径定义下的远场发散半角\n\\[\n\\theta_{\\rm div}=\\frac{w_0}{z_R}=\\frac{\\lambda}{\\pi w_0},\n\\quad w_0\\theta_{\\rm div}=\\lambda/\\pi.\n\\]\n这个乘积是理想 TEM00 光束的衍射受限关系，不应与任意截断或多模激光的束质因子等同。\n\n(3) 令 z=zR，有\n\\[\nw(z_R)=\\sqrt2\\,w_0,\\qquad R_c(z_R)=2z_R.\n\\]\n因此 Rayleigh 长度是一侧从束腰增长到面积加倍、半径放大 sqrt2 的距离；在 z=−zR 同样成立。束腰前后虽然强度轮廓相同，但曲率 R 的符号相反。\n\n(4) 因 \\(w^2=w_0^2(1+z^2/z_R^2)\\)，其唯一最小值为 w₀，发生在 z=0。若 w₀→∞ 且 λ 固定，则 zR∝w₀²→∞、θdiv→0，对于任意有限 z，\\(w(z)/w_0\\to1\\)，波前曲率趋无穷大，局部近似平面波。",
+    "answer": "\n\\frac1{q(z)}=\\frac1{R_c(z)}-i\\frac{\\lambda}{\\pi w(z)^2}.\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B"
+  },
+  {
+    "id": "O026",
+    "topic": "光学",
+    "title": "周期相位光栅的 Talbot 自成像长度与分数级平移",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "Fresnel传播",
+      "Talbot效应",
+      "空间傅里叶级数",
+      "二次相位"
+    ],
+    "question": "一维无限周期透射结构周期为 d>0，紧接透射结构之后的标量复场可写为 u(x,0)=Σm cm exp(i2πmx/d)，其中 m∈Z、系数平方可和。波长 λ>0 的单色相干光正入射，取近轴 Fresnel 传播且 z>0。\n(1) 由平面波角谱计算任一傅里叶谐波传播 z 后积累的相对相位；(2) 求保证完整图样严格重复的 Talbot 长度 zT；(3) 在 z=zT/2 证明场与初场发生半周期横向平移；(4) 在 z=zT/4 分析偶、奇 m 的相位规律，说明不同衍射级之间可形成分数级自成像而非简单的光强传播不变。",
+    "solution": "(1) 横向第 m 阶空间频率 \\(k_{x,m}=2\\pi m/d\\)，总波数 \\(k=2\\pi/\\lambda\\)。近轴展开纵向波数\n\\[\nk_{z,m}=\\sqrt{k^2-k_{x,m}^2}\\simeq k-\\frac{k_{x,m}^2}{2k}\n=k-\\frac{\\pi\\lambda m^2}{d^2}.\n\\]\n去掉全部谐波共有的 \\(e^{ikz}\\) 后，场包络为\n\\[\nu(x,z)e^{-ikz}=\\sum_{m\\in\\mathbb Z}c_m e^{i2\\pi mx/d}\ne^{-i\\pi\\lambda z m^2/d^2}.\n\\]\n二次 m 相位是自成像的关键，不能只考虑一级衍射。\n\n(2) 令 \\(z_T=2d^2/\\lambda\\)，相对相位为 \\(e^{-i2\\pi m^2}=1\\)，故\n\\[\nu(x,z_T)=e^{ikz_T}u(x,0).\n\\]\n所有空间傅里叶阶严格重相合，强度图样复现。此结论要求保留的衍射阶满足 \\(k_{x,m}\\ll k\\)，否则精确波数的高阶校正会破坏理想 Talbot 复相。\n\n(3) 在 z=zT/2=d²/λ，传播相位为 \\(e^{-i\\pi m^2}=(-1)^m=e^{i\\pi m}\\)（因为整数 \\(m^2\\) 与 m 奇偶性相同）。所以\n\\[\nu(x,z_T/2)=e^{ikz_T/2}\\sum_m c_m e^{i2\\pi m(x+d/2)/d}\n=e^{ikz_T/2}u(x+d/2,0).\n\\]\n这表示整幅复场横向平移 d/2；强度若不是半周期对称，其图样相对于原光栅也发生同样平移。\n\n(4) 在 z=zT/4 时相位为 \\(e^{-i\\pi m^2/2}\\)：偶 m 取1、奇 m 取 \\(-i\\)。将初场拆为偶阶 \\(u_e\\) 和奇阶 \\(u_o\\)，有 \\(u(z_T/4)e^{-ikz_T/4}=u_e-i u_o\\)。又 \\(u(x+d/2,0)=u_e-u_o\\)，故\n\\[\nu_e-i u_o=\\frac{1-i}{2}u(x,0)+\\frac{1+i}{2}u(x+d/2,0).\n\\]\n此时是原场与半周期移位场的相干叠加，通常并不等于它们的强度直接相加，是分数 Talbot 自成像的基本机制。",
+    "answer": "\nk_{z,m}=\\sqrt{k^2-k_{x,m}^2}\\simeq k-\\frac{k_{x,m}^2}{2k}\n=k-\\frac{\\pi\\lambda m^2}{d^2}.\n",
     "quality_status": "待独立复核",
     "tier": "advanced_composite",
     "revision": "composite-v2.0",
@@ -2688,5 +2864,49 @@
     "revision": "composite-v2.0",
     "challenge_profile": "high-multistage",
     "complexity_tier": "L5-C"
+  },
+  {
+    "id": "Q025",
+    "topic": "近代物理",
+    "title": "幂律势阱的 WKB 量子化、Beta 积分及能级幂律",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "tags": [
+      "WKB量子化",
+      "幂律势",
+      "Beta特殊函数",
+      "半经典谱"
+    ],
+    "question": "质量 m>0 的一维粒子处于对称束缚势 V(x)=a|x|^p，a>0、p>0；能量 E>0。只研究高量子数 WKB 近似，两个转向点均为光滑经典转向点且不包含特殊奇异边界。\n(1) 求转向点和经典允许区间的作用量积分 J(E)=∮pclass dx；(2) 用 Beta 函数 B 求 J(E) 的封闭表达式；(3) 利用 Bohr–Sommerfeld WKB 量子化条件求大 n 能级标度 E_n∝n^{2p/(p+2)} 及系数；(4) 检查 p=2 时与量子谐振子的能级相容，讨论 p→∞ 势阱极限为何需要小心处理边界相位。",
+    "solution": "(1) 经典运动满足 \\(p_{\\rm cl}(x)=\\sqrt{2m[E-a|x|^p]}\\)，转向点为 \\(x_\\pm=\\pm x_t\\)，\\(x_t=(E/a)^{1/p}\\)。闭合相空间作用量\n\\[\nJ(E)=\\oint p_{\\rm cl}\\,dx\n=4\\int_0^{x_t}\\sqrt{2m(E-ax^p)}\\,dx.\n\\]\n作用量量纲为动量乘长度，与 ℏ 相同。\n\n(2) 令 \\(x=x_ty\\) 后\n\\[\nJ(E)=4\\sqrt{2m}\\,E^{1/2+1/p}a^{-1/p}\n\\int_0^1\\sqrt{1-y^p}\\,dy.\n\\]\n再用 \\(t=y^p\\)，积分为\n\\[\n\\frac1p\\int_0^1t^{1/p-1}(1-t)^{1/2}dt\n=\\frac1p B(1/p,3/2).\n\\]\n因此\n\\[\nJ(E)=\\frac{4\\sqrt{2m}}p a^{-1/p}B(1/p,3/2)\nE^{(p+2)/(2p)}.\n\\]\n\n(3) 两端平滑转向点的 WKB 条件是 \\(J(E_n)=2\\pi\\hbar(n+1/2)\\)，\\(n=0,1,\\dots\\)。解得\n\\[\nE_n^{\\rm WKB}=\n\\left[\\frac{\\pi\\hbar p\\,a^{1/p}(n+1/2)}\n{2\\sqrt{2m}B(1/p,3/2)}\\right]^{2p/(p+2)}.\n\\]\n这明确给出 \\(E_n\\propto(n+1/2)^{2p/(p+2)}\\)，不是仅凭量纲猜测的常数因子；高 n 时 WKB 近似改善。\n\n(4) 对 p=2，令 \\(a=m\\omega^2/2\\)，Beta 函数 \\(B(1/2,3/2)=\\pi/2\\)，代入得到 \\(E_n=\\hbar\\omega(n+1/2)\\)，恰与谐振子精确谱吻合。对 p→∞，势的转向点迅速接近硬壁，若简单地把光滑转向点的 Maslov 指数仍固定为 1/2，可能无法恢复无限深方阱的低阶 \\(n^2\\) 精确量子数偏移；应先选择硬壁边界条件再量子化。这不影响高 n 的平方能级标度。",
+    "answer": "\nJ(E)=\\oint p_{\\rm cl}\\,dx\n=4\\int_0^{x_t}\\sqrt{2m(E-ax^p)}\\,dx.\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
+    "id": "Q026",
+    "topic": "近代物理",
+    "title": "二维零温自由费米气体的态密度、费米压与量子电容",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "二维费米统计",
+      "常态密度",
+      "简并压",
+      "量子电容"
+    ],
+    "question": "面积 A 的大二维电子气中有 N≫1 个非相对论、无相互作用、自旋为 1/2 的电子，面数密度 n=N/A、有效质量 m*>0。单粒子能量 ε(k)=ℏ²k²/(2m*)，周期性边界条件，零温所有 |k|≤kF 态被占据。电子电荷大小为 e>0。\n(1) 从二维 k 空间数态求 kF、EF 与单位面积每能量态密度 D(E)；(2) 求总基态能量并从面积变化导出二维简并压强；(3) 求压缩模量和零温化学势；(4) 定义单位面积量子电容 Cq/A=e²(∂n/∂μ)，求其值并解释为什么理想二维自由气体的态密度不随能量变化。",
+    "solution": "(1) 二维 k 空间每单位面积态数密度为 \\(A/(2\\pi)^2\\)，自旋简并为2。故填满半径 kF 的圆盘时\n\\[\nN=2\\frac A{(2\\pi)^2}\\pi k_F^2=\\frac{Ak_F^2}{2\\pi},\\quad\nk_F=\\sqrt{2\\pi n}.\n\\]\n费米能 \\(E_F=\\hbar^2k_F^2/(2m^*)=\\pi\\hbar^2 n/m^*\\)。单位实际面积、单位能量的态密度为\n\\[\nD(E)=\\frac1A\\frac{dN(E)}{dE}\n=\\frac{m^*}{\\pi\\hbar^2},\\quad E>0.\n\\]\n常数性质来自二维累计态数 \\(N(E)\\propto k^2\\propto E\\)。\n\n(2) 零温总内能可由能量态密度积分\n\\[\nU=A\\int_0^{E_F}E D(E)\\,dE\n=\\frac{Am^*E_F^2}{2\\pi\\hbar^2}\n=\\frac12NE_F=\\frac{\\pi\\hbar^2N^2}{2m^*A}.\n\\]\n固定粒子数变化面积所得二维压强（单位为能量/面积）\n\\[\nP_{\\!2D}=-\\left(\\frac{\\partial U}{\\partial A}\\right)_N\n=\\frac{\\pi\\hbar^2N^2}{2m^*A^2}=\\frac12nE_F.\n\\]\n\n(3) 化学势为 \\(\\mu=(\\partial U/\\partial N)_A=E_F\\)，而二维体积模量对应的面积压缩模量为\n\\[\nB_{\\!2D}=-A(\\partial P_{\\!2D}/\\partial A)_N\n=2P_{\\!2D}=nE_F.\n\\]\n它是正值，体现占据动量态造成的 Pauli 压强而非显式电子间排斥势。\n\n(4) 电子数密度和化学势关系 \\(n=m^*\\mu/(\\pi\\hbar^2)\\)。因此\n\\[\n\\frac{C_q}{A}=e^2\\frac{\\partial n}{\\partial\\mu}\n=\\frac{e^2m^*}{\\pi\\hbar^2}.\n\\]\n在理想二维抛物色散模型中这是常数，和 n 无关；若存在多子带、非抛物带、电子相互作用或有限温度，则实际量子电容可能随密度变化。",
+    "answer": "\nN=2\\frac A{(2\\pi)^2}\\pi k_F^2=\\frac{Ak_F^2}{2\\pi},\\quad\nk_F=\\sqrt{2\\pi n}.\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B"
   }
 ]
