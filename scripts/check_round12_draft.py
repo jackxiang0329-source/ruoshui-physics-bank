@@ -448,7 +448,57 @@ assert abs(rate058(vNum058)-rate058(-vNum058)+vNum058*mp.log(aNum058/bNum058))<m
 supplemental.append(dict(id='T058',method='independent_high_precision_probability_and_LDP',
                          name='Skellam finite-time fluctuation ratio and rate-function symmetry checked independently',passed=True))
 
-result={'status':'draft-only','new_problem_count':15,'passed_count':len(checks),'tests':checks,'independent_expert_review':'pending','supplemental_numeric_checks':supplemental}
+
+# W058: f-plane rotating shallow water, Poincare and coastal Kelvin waves.
+w058,k058,f058,c058,H058=s.symbols('w058 k058 f058 c058 H058',positive=True,real=True)
+x058,y058,t058=s.symbols('x058 y058 t058',real=True)
+g058=c058**2/H058
+A058=s.Matrix([[-s.I*w058,-f058,s.I*g058*k058],
+               [f058,-s.I*w058,0],
+               [s.I*H058*k058,0,-s.I*w058]])
+geos058=s.Matrix([0,s.I*g058*k058/f058,1])
+record('W058',1,'symbolic',
+       'rotating shallow water determinant yields geostrophic zero mode and exact Poincare dispersion',
+       eq(A058.det(),s.I*w058*(w058**2-f058**2-c058**2*k058**2))
+       and A058.subs(w058,0)*geos058==s.zeros(3,1))
+eta058=s.exp(-f058*y058/c058)*s.exp(s.I*k058*(x058-c058*t058))
+u058=c058*eta058/H058
+record('W058',2,'independent_derivation',
+       'coastal Kelvin exponential profile solves all three rotating shallow water equations',
+       eq(s.diff(u058,t058)+g058*s.diff(eta058,x058))
+       and eq(f058*u058+g058*s.diff(eta058,y058))
+       and eq(s.diff(eta058,t058)+H058*s.diff(u058,x058)))
+realeta058=s.exp(-f058*y058/c058)*s.cos(k058*(x058-c058*t058))
+realu058=c058*realeta058/H058
+energy058=H058*realu058**2/2+g058*realeta058**2/2
+flux058=g058*H058*realeta058*realu058
+record('W058',3,'conservation',
+       'Kelvin mode has zero linear potential vorticity and exact local energy continuity',
+       eq(-s.diff(realu058,y058)-f058*realeta058/H058)
+       and eq(s.diff(energy058,t058)+s.diff(flux058,x058))
+       and eq(flux058,c058*energy058))
+disp058=s.sqrt(f058**2+c058**2*k058**2)
+vg058=s.diff(disp058,k058)
+record('W058',4,'limit',
+       'Poincare group velocity asymptotics and coastal trapping singular nonrotating limit',
+       eq(vg058,c058**2*k058/disp058)
+       and eq(s.limit(vg058,k058,0,dir='+'))
+       and eq(s.limit(vg058,k058,s.oo),c058)
+       and s.limit(c058/f058,f058,0,dir='+')==s.oo)
+mp.mp.dps=50
+fnum058=mp.mpf('0.8');cnum058=mp.mpf('2.3')
+Hnum058=mp.mpf('1.4');gnum058=cnum058**2/Hnum058
+ampl058=mp.mpf('1.7');LRnum058=cnum058/fnum058
+ebar058=lambda yy:gnum058*ampl058**2*mp.exp(-2*yy/LRnum058)/2
+Eint058=mp.quad(ebar058,[0,mp.inf])
+assert abs(Eint058-gnum058*ampl058**2*LRnum058/4)<mp.mpf('1e-45')
+assert abs(cnum058*Eint058-mp.quad(lambda yy:cnum058*ebar058(yy),[0,mp.inf]))<mp.mpf('1e-45')
+supplemental.append(dict(id='W058',method='independent_high_precision_quadrature',
+                          name='coastal Kelvin time averaged energy integral and flux checked by 50 digit numerical quadrature',passed=True))
+assert len(checks)==64 and len(set((v['id'],v['part']) for v in checks))==64
+assert len(set(v['method'] for v in checks if v['id']=='W058'))>=2
+
+result={'status':'draft-only','new_problem_count':16,'passed_count':len(checks),'tests':checks,'independent_expert_review':'pending','supplemental_numeric_checks':supplemental}
 path=Path(__file__).resolve().parents[1]/'data/round12_draft_validation_report.json'
 path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
 print(json.dumps({'status':result['status'],'checked_subparts':len(checks)},ensure_ascii=False))

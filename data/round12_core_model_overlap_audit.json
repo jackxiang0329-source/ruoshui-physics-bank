@@ -50,6 +50,20 @@
       ]
     }
   ],
-  "disposition": "All three flagged overlap IDs have been replaced with genuinely different core physical models. This is editorial remediation only, not expert signoff. Round 12 remains 13/50 and cannot be merged.",
-  "independent_expert_review": "待独立复核"
+  "disposition": "Previously flagged M060/O057/Q057 overlaps resolved by replacement. W058 screened against prior wave models as distinct rotating f-plane/coastal Kelvin model. Draft 16/50; automated screening is not expert signoff.",
+  "independent_expert_review": "待独立复核",
+  "new_draft_model_screening": [
+    {
+      "draft_id": "W058",
+      "compared_existing_ids": [
+        "W039",
+        "W043",
+        "W048",
+        "W054"
+      ],
+      "core_model": "f-plane rotating shallow water with Coriolis-induced Poincare dispersion, geostrophic zero mode and coastal Kelvin localization",
+      "difference": "W039 is parametric oscillator; W043 is background-current shallow water; W048 is gravity-capillary dispersion; W054 is bathymetry-step transmission. None has rotating geostrophic PV and coastal trapped Kelvin eigenmode.",
+      "resolution_status": "screened_distinct_pending_independent_review"
+    }
+  ]
 }
