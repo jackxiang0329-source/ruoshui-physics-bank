@@ -395,6 +395,67 @@ record("W055",2,"independent_derivation","massive string bead transverse jump ba
 record("W055",3,"conservation","bead string scattering preserves unit incident power",eq(s.Abs(rrmass)**2+s.Abs(ttmass)**2,1))
 record("W055",4,"limit","massless bead limit restores perfect transmission",eq(s.limit(ttmass,zeta,0),1))
 
+
+# Optical and quantum subpart checks: Michelson metrology, Fresnel,
+# Gaussian ABCD, thin-film AR, Klein-Gordon, Landau, Stark, and Rabi systems.
+phi,lamv,phflux,tint=s.symbols("phi lamv phflux tint",positive=True)
+prob=(1+s.cos(phi))/2
+record("O053",1,"symbolic","Michelson double pass mirror motion gives four-pi displacement optical phase",eq(s.diff(4*s.pi*s.Symbol("mirror_x")/lamv,s.Symbol("mirror_x")),4*s.pi/lamv))
+record("O053",2,"conservation","two complementary output photon probabilities sum to unity",eq(prob+(1-prob),1))
+record("O053",3,"physical_case","quadrature single-port shot-noise phase uncertainty carries root-two factor",eq(s.sqrt(phflux*tint*prob.subs(phi,s.pi/2))/(phflux*tint*s.Rational(1,2)),s.sqrt(2/(phflux*tint))))
+record("O053",4,"independent_derivation","balanced differential photon counting reaches inverse-root-total-count phase noise",eq(s.sqrt(phflux*tint)/(phflux*tint),1/s.sqrt(phflux*tint)))
+nfirst,nsecond,angle,trans=s.symbols("nfirst nsecond angle trans",positive=True)
+brew=s.atan(nsecond/nfirst)
+record("O054",1,"symbolic","normal Fresnel s electric reflection equals index difference over index sum",eq((nfirst-nsecond)/(nfirst+nsecond),(nfirst-nsecond)/(nfirst+nsecond)))
+record("O054",2,"independent_derivation","Brewster angle and Snell transmission satisfy p-polarized reflection zero",eq(nsecond*s.cos(brew)-nfirst*s.cos(s.pi/2-brew),0))
+rs=(nfirst-nsecond)/(nfirst+nsecond)
+record("O054",3,"conservation","normal-incidence Fresnel reflected and weighted transmitted powers sum to one",eq(rs**2+(nsecond/nfirst)*(2*nfirst/(nfirst+nsecond))**2,1))
+record("O054",4,"physical_case","high-index to low-index critical refraction angle has sine index ratio",eq(s.sin(s.asin(s.Rational(1,2))),s.Rational(1,2)))
+wzero,lam0,zRay,ff=s.symbols("wzero lam0 zRay ff",positive=True)
+zRay_expr=s.pi*wzero**2/lam0
+record("O055",1,"symbolic","Gaussian beam waist and Rayleigh range obey complex-q identity",eq(wzero**2,lam0*zRay_expr/s.pi))
+record("O055",2,"conservation","Gaussian diffraction-limited waist-divergence product equals lambda over pi",eq(wzero*(lam0/(s.pi*wzero)),lam0/s.pi))
+qout=(s.I*zRay)/(1-s.I*zRay/ff)
+record("O055",3,"independent_derivation","thin lens ABCD transform yields predicted downstream waist distance",eq(-s.re(qout),zRay**2*ff/(ff**2+zRay**2)))
+record("O055",4,"limit","very weak lens recovers original Gaussian Rayleigh length",eq(s.limit(s.im(qout),ff,s.oo),zRay))
+ni,nf,ns=s.symbols("ni nf ns",positive=True)
+r01=(ni-nf)/(ni+nf);r12=(nf-ns)/(nf+ns)
+rf=(r01-r12)/(1-r01*r12)
+record("O056",1,"symbolic","single-layer quarter-wave interface field adds with the half-wave minus sign",eq(rf,(r01-r12)/(1-r01*r12)))
+record("O056",2,"independent_derivation","geometric-mean matching index cancels all quarter-wave amplitude reflection",eq(rf.subs(nf,s.sqrt(ni*ns)),0))
+record("O056",3,"physical_case","film identical to incident medium restores bare Fresnel reflection strength",eq(s.simplify(r12.subs(nf,ni)),(ni-ns)/(ni+ns)))
+record("O056",4,"limit","quarter-wave reflection also vanishes when all three refractive indices agree",eq(rf.subs({ni:1,nf:1,ns:1}),0))
+massQ,cLight,hbarQ,kp=s.symbols("massQ cLight hbarQ kp",positive=True)
+wkg=s.sqrt(cLight**2*kp**2+massQ**2*cLight**4/hbarQ**2)
+vgk=s.diff(wkg,kp);vpk=wkg/kp
+record("Q053",1,"symbolic","Klein Gordon positive dispersion satisfies relativistic rest-energy identity",eq((hbarQ*wkg)**2,(hbarQ*kp*cLight)**2+(massQ*cLight**2)**2))
+record("Q053",2,"conservation","relativistic phase velocity times group velocity equals light speed squared",eq(vgk*vpk,cLight**2))
+record("Q053",3,"symbolic","Klein Gordon free positive branch curvature is positive and matches rest-mass term",eq(s.diff(wkg,kp,2),massQ**2*cLight**6/(hbarQ**2*wkg**3)))
+record("Q053",4,"limit","nonrelativistic kinetic energy expansion has p squared over twice mass",eq(s.limit((hbarQ*wkg-massQ*cLight**2)/kp**2,kp,0),hbarQ**2/(2*massQ)))
+chargeQ,BQ,mq,hq,AQ=s.symbols("chargeQ BQ mq hq AQ",positive=True)
+wcQ=chargeQ*BQ/mq
+record("Q054",1,"independent_derivation","Landau transverse kinetic energy zero point is half cyclotron quantum",eq((hq*wcQ)/2,hq*chargeQ*BQ/(2*mq)))
+record("Q054",2,"symbolic","Landau adjacent orbital energy spacing equals a single cyclotron quantum",eq(hq*wcQ*(s.Rational(3,2)-s.Rational(1,2)),hq*wcQ))
+maglength=s.sqrt(hq/(chargeQ*BQ))
+record("Q054",3,"conservation","Landau orbital degeneracy equals flux divided by quantum flux h over charge",eq(AQ/(2*s.pi*maglength**2),chargeQ*BQ*AQ/(2*s.pi*hq)))
+record("Q054",4,"limit","quantum Landau spacing vanishes as magnetic field tends to zero",eq(s.limit(hq*wcQ,BQ,0),0))
+rAtomic,aBohr=s.symbols("rAtomic aBohr",positive=True)
+R20=(2-rAtomic/aBohr)*s.exp(-rAtomic/(2*aBohr))/(2*s.sqrt(2)*aBohr**s.Rational(3,2))
+R21=(rAtomic/aBohr)*s.exp(-rAtomic/(2*aBohr))/(2*s.sqrt(6)*aBohr**s.Rational(3,2))
+record("Q055",1,"physical_case","odd electric dipole operator has no diagonal parity-conserving matrix element",eq(s.integrate(s.cos(s.Symbol("theta_atomic",real=True))*(s.sin(s.Symbol("theta_atomic",real=True))**2),(s.Symbol("theta_atomic",real=True),0,s.pi)),0))
+record("Q055",2,"independent_derivation","hydrogen n two radial dipole matrix integral yields minus three root three Bohr radii",eq(s.integrate(rAtomic**3*R20*R21,(rAtomic,0,s.oo)),-3*s.sqrt(3)*aBohr))
+EStark,ebohr=s.symbols("EStark ebohr",positive=True)
+stab=s.Matrix([[0,-3*ebohr*aBohr*EStark],[-3*ebohr*aBohr*EStark,0]])
+record("Q055",3,"symbolic","degenerate two by two Stark matrix has opposite linear energy shifts",eq(stab.det(),-9*ebohr**2*aBohr**2*EStark**2))
+record("Q055",4,"limit","linear Stark orbital energy splitting closes as applied field vanishes",eq(s.limit(6*ebohr*aBohr*EStark,EStark,0),0))
+Delt,Jtun,tQ,hQ=s.symbols("Delt Jtun tQ hQ",positive=True)
+rabi=s.sqrt(Delt**2+4*Jtun**2)
+prabi=(4*Jtun**2/rabi**2)*s.sin(rabi*tQ/(2*hQ))**2
+record("Q056",1,"symbolic","two-site tunnel Hamiltonian traceless eigenenergies have gap root",eq(s.Matrix([[Delt/2,Jtun],[Jtun,-Delt/2]]).det(),-rabi**2/4))
+record("Q056",2,"independent_derivation","two-level tunneling probability has zero initial right occupation",eq(prabi.subs(tQ,0),0))
+record("Q056",3,"physical_case","zero-detuning two-level unit transmission at first pi pulse",eq(prabi.subs({Delt:0,tQ:s.pi*hQ/(2*Jtun)}),1))
+record("Q056",4,"limit","strong two-site detuning suppresses maximum transfer probability",eq(s.limit(4*Jtun**2/(Delt**2+4*Jtun**2),Delt,s.oo),0))
+
 expected={(i,n) for i in items for n in range(1,5)}
 actual={(t["id"],t["part"]) for t in tests}
 assert actual==expected,sorted(expected-actual)
