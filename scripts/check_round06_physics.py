@@ -53,7 +53,7 @@ check("T021 Knudsen rate ODE",zero(s.diff(x,t)+x*s.sqrt(tt/T0)/tau))
 check("T021 effusion energy conservation",zero(s.Rational(3,2)*s.diff(N0*x*tt,t)-2*tt*s.diff(N0*x,t)))
 mu,beta,omega,Ten=s.symbols("mu beta omega Ten",positive=True)
 kr,ki=s.symbols("kr ki",positive=True)
-check("W020 wave energy flux cancellation",zero((Ten*omega*kr/2)-(beta*omega**2/(4*ki))).subs({beta:2*Ten*kr*ki/omega}))
+check("W020 wave energy flux cancellation",zero(((Ten*omega*kr/2)-(beta*omega**2/(4*ki))).subs({beta:2*Ten*kr*ki/omega})))
 L,EI,den,P,n=s.symbols("L EI den P n",positive=True)
 kn=n*s.pi/L
 freq2=(EI*kn**4-P*kn**2)/den
