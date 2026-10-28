@@ -130,23 +130,23 @@ def create(root=ROOT):
             sections.append("---")
             sections.append("")
             book_index[pid]=rel_book+"#"+pid.lower()
-        (root/rel_book).write_text("\\n".join(sections)+"\\n",encoding="utf-8")
+        (root/rel_book).write_text("\n".join(sections)+"\n",encoding="utf-8")
         books.append(rel_book)
     if len(book_index)!=len(paths) or len(books)!=len(grouped):
         raise ValueError("collection lost source-bound translations")
     # Include stale generated IDs from earlier runs, not just the current manifest.
     # Source files and the canonical translations.json are strictly out of scope.
     for old in (root/"localized/zh_CN").rglob("*.md"):
-        if re.fullmatch(r"(?:PREF-\\d{5}|CP-\\d{5}|IP-\\d{4})\\.md",old.name):
+        if re.fullmatch(r"(?:PREF-\d{5}|CP-\d{5}|IP-\d{4})\.md",old.name):
             old.unlink()
     links=["# 大学物理中英对照｜按学科合订","",
            "仅供审校；所有外部题尚未获正式组卷资格。","",
-           "译文的唯一可编辑主档：`../../localization/zh_CN/translations.json`；原始英文文件不移动。",""]
+           "译文的唯一可编辑主档：`../../../localization/zh_CN/translations.json`；原始英文文件不移动。",""]
     for module in t["modules"]:
         book=f"localized/zh_CN/合订/{module['code']}.md"
         if book in books:
             links.append(f"- [{module['name']}]({module['code']}.md)（{len(grouped[module['code']])} 道）")
-    (collection/"README.md").write_text("\\n".join(links)+"\\n",encoding="utf-8")
+    (collection/"README.md").write_text("\n".join(links)+"\n",encoding="utf-8")
     report={"translated_drafts":len(paths),"original_hash_checks_passed":len(paths),
             "independently_bilingual_approved":0,"exam_ready":0,
             "consolidated_books":len(books),"per_question_files":0,
