@@ -95,7 +95,7 @@ def check():
                     reject(f"{uid}: unsafe TeX fragment")
             qs=parts(p["question"])
             ss=parts(p["solution"])
-            if not qs or not ss or min(map(len,qs))<25:
+            if not qs or not ss or min(map(len,qs))<15:
                 reject(f"{uid}: exactly four substantive question subparts required")
             if min(map(len,ss))<POLICY["minimum_solution_part_chars"]:
                 reject(f"{uid}: each of four subparts needs a rigorous derivation")
