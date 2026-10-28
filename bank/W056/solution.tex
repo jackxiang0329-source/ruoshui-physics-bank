@@ -1,0 +1,51 @@
+(1) 对杆内小段作轴向角动量平衡，截面扭矩 \(M=C\theta_x\)，故
+\[
+ \mu\theta_{tt}=C\theta_{xx},\qquad \theta(0,t)=0.
+\]
+杆对端部转子的回复力矩为 \(-C\theta_x(L,t)\)，外接弹簧给出 \(-K\theta(L,t)\)，于是
+\[
+ I\theta_{tt}(L,t)+C\theta_x(L,t)+K\theta(L,t)=0.
+\]
+把偏微分方程乘以 \(\theta_t\) 积分，并用 \(\theta_t(0,t)=0\) 与上述端点条件，得到
+\[
+ \frac{d}{dt}\left\{\frac12\int_0^L[\mu\theta_t^2+C\theta_x^2]\,dx
+ +\frac I2\theta_t(L,t)^2+\frac K2\theta(L,t)^2\right\}=0.
+\]
+两个端点能量项不可随意丢弃，否则能流在边界处不能闭合。
+
+(2) 设 \(c=\sqrt{C/\mu}\)、\(k=\omega/c\)。空间函数满足 \(u''+k^2u=0\) 与 \(u(0)=0\)，因此 \(u(x)=A\sin(kx)\)。端部条件变为
+\[
+ Ck\cos(kL)+(K-I\omega^2)\sin(kL)=0.
+\]
+代入 \(z=kL\)、\(p=KL/C\)、\(q=I/(\mu L)\)，得到
+\[
+ F(z)=z\cos z+(p-qz^2)\sin z=0,\qquad
+ \omega=\frac{c}{L}z.
+\]
+本征算子与端点质量共同组成正定能量问题；由第(3)问的 Rayleigh 商，\(\omega^2>0\)，故 \(z=0\) 的形式根对应零空间函数而非固支杆的真实零模。有限 \(I,K\geq0\) 时正根离散且可趋于无穷大。
+
+(3) 对不同本征模态 \(u_n,u_m\) 分别写 \(Cu_n''=-\mu\omega_n^2u_n\) 与 \(Cu_m''=-\mu\omega_m^2u_m\)。交叉相乘、相减并积分分部，利用 \(u(0)=0\) 和
+\(Cu_n'(L)=(I\omega_n^2-K)u_n(L)\)，可得
+\[
+ (\omega_n^2-\omega_m^2)
+ \left[\int_0^L\mu u_nu_m\,dx+Iu_n(L)u_m(L)\right]=0.
+\]
+因此 \(n\ne m\) 时括号为零。另以 \(u_n\) 乘方程积分分部，得
+\[
+ \omega_n^2=
+ \frac{C\int_0^L(u_n')^2\,dx+K u_n(L)^2}
+ {\mu\int_0^L u_n^2\,dx+Iu_n(L)^2}.
+\]
+分母是杆及转子的广义惯量，分子是杆及边界弹簧的刚度。若仅使用普通 \(L^2\) 内积或省略 \(Iu_n(L)^2\)，一般既不正交也不满足正确的频率变分关系。
+
+(4) 当 \(I=K=0\)，自由端 \(u'(L)=0\)，所以
+\[
+ z_n=(n+\tfrac12)\pi,\qquad
+ \omega_n=\frac{(n+1/2)\pi}{L}\sqrt{\frac C\mu},\quad n=0,1,\ldots.
+\]
+当 \(q\gg1\)，最低正根 \(z\ll1\)。展开 \(F(z)/z=(1+p)-(q+\tfrac12+\tfrac p6)z^2+O(qz^4+z^4)\)，因而
+\[
+ z_0^2=\frac{1+p}{q}[1+O(q^{-1})],\qquad
+ \omega_0^2=\frac{K+C/L}{I}[1+O(\mu L/I)].
+\]
+此时重转子主导惯量，杆近似静态线性扭转，等效扭转刚度 \(C/L\) 与外弹簧 \(K\) 并联。\(C/L\) 与 \(K\) 均为力矩/弧度，除以 \(I\) 后量纲为时间的负二次方；若取 \(I=0\) 直接套用重转子近似则不合法。

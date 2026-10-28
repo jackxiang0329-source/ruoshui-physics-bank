@@ -1,0 +1,51 @@
+(1) 由
+\(a_j=\sqrt{m\omega_j/(2\hbar)}\,x+ip/\sqrt{2m\hbar\omega_j}\)
+及其共轭式消去 \(x,p\)，得到
+\[
+ a_1=\alpha a_0+\beta a_0^\dagger,\quad
+ \alpha=\tfrac12\left(\sqrt{\frac{\omega_1}{\omega_0}}+\sqrt{\frac{\omega_0}{\omega_1}}\right)=\cosh r,\quad
+ \beta=\tfrac12\left(\sqrt{\frac{\omega_1}{\omega_0}}-\sqrt{\frac{\omega_0}{\omega_1}}\right)=\sinh r.
+\]
+因 \(\alpha^2-\beta^2=1\)，有 \([a_1,a_1^\dagger]=1\)，是合法正则变换。对初始真空，
+\[
+ N=\langle0_0|a_1^\dagger a_1|0_0\rangle=\beta^2
+ =\sinh^2r=\frac{(\omega_1-\omega_0)^2}{4\omega_0\omega_1}.
+\]
+突然改变哈密顿量并不使原态瞬间成为新基态。
+
+(2) 反变换 \(a_0=\alpha a_1-\beta a_1^\dagger\)，故初态满足
+\((a_1-\tanh r\,a_1^\dagger)|0_0\rangle=0\)。写
+\(|0_0\rangle=\sum_{n\ge0}c_n|n_1\rangle\)，递推关系为
+\(\sqrt{n+1}c_{n+1}=\tanh r\sqrt n\,c_{n-1}\)，且 \(c_1=0\)。因此
+\[
+ c_{2n}=\frac{\sqrt{(2n)!}}{2^n n!}\frac{\tanh^nr}{\sqrt{\cosh r}},\qquad
+ P_{2n}=\frac{(2n)!}{2^{2n}(n!)^2}\frac{\tanh^{2n}r}{\cosh r},\qquad P_{2n+1}=0.
+\]
+利用生成函数
+\(\sum_{n=0}^\infty\binom{2n}{n}x^n/4^n=(1-x)^{-1/2}\)
+及 \(1-\tanh^2r=\operatorname{sech}^2r\)，验证 \(\sum P_{2n}=1\)。只出现偶数激发源于频率淬火保持空间宇称。
+
+(3) 初次测量必得 \(E_0^{(0)}=\hbar\omega_0/2\)，末次测量得 \(E_n^{(1)}=\hbar\omega_1(n+1/2)\)。平均功定义为 \(W=E_n^{(1)}-E_0^{(0)}\)，故
+\[
+ \langle W\rangle=\hbar\omega_1(N+\tfrac12)-\frac{\hbar\omega_0}{2}
+ =\frac{\hbar(\omega_1^2-\omega_0^2)}{4\omega_0}.
+\]
+由偶数态概率生成函数可得
+\(\operatorname{Var}(n)=2N(N+1)=\frac12\sinh^2(2r)\)，于是
+\[
+ \operatorname{Var}(W)=2(\hbar\omega_1)^2N(N+1)
+ =\frac{\hbar^2(\omega_1^2-\omega_0^2)^2}{8\omega_0^2}.
+\]
+当 \(\omega_1\to\omega_0\)，两者均趋零。淬火后能量的增加由瞬间改变势阱刚度的外部控制器提供，不应误称封闭系统原哈密顿量能量守恒。
+
+(4) 用第(2)问的概率展开振幅：
+\[
+ A(t)=\sum_{n=0}^\infty P_{2n}e^{-i\omega_1(2n+1/2)t}
+ =\frac{e^{-i\omega_1t/2}}{\cosh r\sqrt{1-\tanh^2r\,e^{-2i\omega_1t}}}.
+\]
+平方取模并化简得到
+\[
+ \mathcal L(t)=\frac1{\sqrt{1+\sinh^2(2r)\sin^2(\omega_1t)}}.
+\]
+因此 \(t=\ell\pi/\omega_1\)（整数 \(\ell\)）时 \(\mathcal L=1\)，尽管态矢可能积累整体相位；在 \(t=(\ell+\tfrac12)\pi/\omega_1\) 时回波最小，
+\(\mathcal L_{\min}=1/\cosh(2r)\)。无淬火极限 \(r\to0\) 时任意时刻 \(\mathcal L\to1\)，与初态为新基态相符。

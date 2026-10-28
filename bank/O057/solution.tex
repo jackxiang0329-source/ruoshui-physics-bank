@@ -1,0 +1,50 @@
+(1) 令 \(k_x=n_1k_0\sin\theta\)、\(k_{z1}=n_1k_0c_\theta\)。介质2的法向波数为
+\[
+ k_{z2}=i\kappa,\qquad \kappa=n_1k_0a>0,
+\]
+故透射场沿 \(z>0\) 按 \(e^{-\kappa z}\) 衰减，不携带远离界面的平均法向能流。Fresnel边界条件给出（\(p\) 偏振采用常用电场振幅相位约定）
+\[
+ r_s=\frac{c_\theta-ia}{c_\theta+ia},\qquad
+ r_p=\frac{q^2c_\theta-ia}{q^2c_\theta+ia}.
+\]
+分子与分母互为复共轭，因此 \(|r_s|^2=|r_p|^2=1\)。可连续选择反射相位
+\(\phi_s=-2\arctan(a/c_\theta)\)、
+\(\phi_p=-2\arctan[a/(q^2c_\theta)]\)，不影响相位导数的常数相位约定均可。
+
+(2) 反射束在界面处可写为角谱积分
+\[
+ E_r(x,0)=\int A(k_x)e^{i[k_xx+\phi(k_x)]}\,dk_x.
+\]
+对中心波数 \(k_{x0}\) 附近线性展开 \(\phi(k_x)\)，包络峰值沿 \(x\) 平移
+\(D=-\phi'(k_{x0})\)，而
+\(\partial k_x/\partial\theta=n_1k_0c_\theta\)。
+因为 \(a'= \sin\theta\,c_\theta/a\)，且
+\(a^2+c_\theta^2=1-q^2\)，直接求导得
+\[
+ \frac{d\phi_s}{d\theta}=-\frac{2\sin\theta}{a},\qquad
+ D_s=\frac{2\sin\theta}{n_1k_0c_\theta a}.
+\]
+这是沿界面而非沿反射光轴的位移，具有长度量纲。
+
+(3) 对 \(\phi_p\) 求导可得
+\[
+ \frac{d\phi_p}{d\theta}
+ =-\frac{2q^2(1-q^2)\sin\theta}
+ {a(q^4c_\theta^2+a^2)}.
+\]
+故
+\[
+ D_p=\frac{2q^2(1-q^2)\sin\theta}
+ {n_1k_0c_\theta a(q^4c_\theta^2+a^2)},\qquad
+ \frac{D_p}{D_s}
+ =\frac{q^2}{(1+q^2)\sin^2\theta-q^2}.
+\]
+利用 \(0<q<1\) 解 \(D_p=D_s\)，得到唯一的
+\[
+ \sin^2\theta_*=\frac{2q^2}{1+q^2},
+ \qquad \theta_c<\theta_*<\frac\pi2.
+\]
+在 \(\theta_c<\theta<\theta_*\) 时 \(D_p>D_s\)，其余全反射角区间相反。
+
+(4) 令 \(\delta=\theta-\theta_c\downarrow0\)。由于
+\(a^2=\sin^2\theta-q^2\sim2q\sqrt{1-q^2}\,\delta\)，两种 \(D\) 均按 \(\delta^{-1/2}\) 发散，且 \(D_p/D_s\to q^{-2}\)。当 \(\theta\uparrow\pi/2\)，\(a\to\sqrt{1-q^2}\)，两种 \(D\) 按 \(1/\cos\theta\) 发散，而 \(D_p/D_s\to q^2\)。这些发散是无限宽、严格窄角谱驻相近似的非一致极限，不代表有限光束真的产生无限侧移。若角谱跨越临界角、相位在谱宽内明显非线性，或入射趋于掠射以致有限束斑和界面几何不可忽略，应直接积分完整角谱并重新定义实际强度重心。

@@ -4761,6 +4761,30 @@
     "solution": "(1) 左侧波形 \\(y_L=e^{ikx-i\\omega t}+re^{-ikx-i\\omega t}\\)，右侧为 \\(y_R=te^{ikx-i\\omega t}\\)。弦在质量处不断裂，故位移连续给 \\(1+r=t\\)。小珠受左右张力的净横向力为 \\(T[y_x(0^+)-y_x(0^-)]\\)，其牛顿方程是 \\(T[y_x(0^+)-y_x(0^-)]=-M\\omega^2y(0)\\)。跳跃方向由两端拉力指向反向决定，不应把点质量当成固定端。\n\n(2) 导数跳跃为 \\(ikT[t-(1-r)]=2ikTr\\)，所以 \\(2ikTr=-M\\omega^2t=-M\\omega^2(1+r)\\)。令 \\(\\zeta=M\\omega/(2T k/\\omega)=M\\omega/(2\\sqrt{T\\mu})\\)；更直接由 \\(2Tk=M\\omega^2/\\zeta\\)，故 \\(r=-i\\zeta/(1+i\\zeta)\\)，\\(t=1/(1+i\\zeta)\\) 在选取 \\(e^{-i\\omega t}\\) 时可通过原式代入核验：\\(2i r=-2\\zeta t\\) 推出 \\(r=i\\zeta/(1-i\\zeta)\\)，\\(t=1/(1-i\\zeta)\\)。后者是与所给跳跃符号严格一致的表达，取定上述跳跃符号后，不能再随意改变散射相位的正负号。\n\n(3) 采用由跳跃方程确定的 \\(r=i\\zeta/(1-i\\zeta)\\)、\\(t=1/(1-i\\zeta)\\)，有 \\(|r|^2=\\zeta^2/(1+\\zeta^2)\\)、\\(|t|^2=1/(1+\\zeta^2)\\)，二者和为一。因左右弦张力及线密度相同，能流权重相同，这就是整个无耗散点质量散射的功率守恒。若 \\(\\omega\\to0\\)，\\(\\zeta\\to0\\) 则反射趋零；\\(\\omega\\to\\infty\\) 时 \\(|r|\\to1\\) 且透射趋零。\n\n(4) 由于 \\(\\zeta=M\\omega/(2\\sqrt{T\\mu})\\)，质量越大或频率越高，对弦的惯性障碍越强，点处透射振幅大小 \\(1/\\sqrt{1+\\zeta^2}\\) 越低，反射相位也由复杂阻抗决定。若 \\(M\\to0\\)，\\(r\\to0,t\\to1\\)，弦退化为完全均匀无缺陷传播。该点质量模型没有自身弹簧，因此不具有限频孤立局部共振；若观察到窄线共振必须增加局部回复力或其他物理结构。\n"
   },
   {
+    "id": "W056",
+    "topic": "振动与波动",
+    "title": "端部转动惯量与扭转弹簧耦合杆的非标准本征谱和广义正交",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 105,
+    "tags": [
+      "扭转波方程",
+      "动力学边界条件",
+      "含端点质量的Sturm-Liouville问题",
+      "广义模态正交",
+      "Rayleigh商与奇异极限"
+    ],
+    "answer": "z\\cos z+(p-qz^2)\\sin z=0,\\quad \\omega=\\frac{\\sqrt{C/\\mu}}{L}z,\\quad p=\\frac{KL}{C},\\ q=\\frac{I}{\\mu L}",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.4-round12-draft",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C",
+    "question": "一根长度为 \\(L>0\\) 的均匀细杆沿轴线发生小幅扭转，扭转刚度 \\(C=GJ_p>0\\)，单位长度转动惯量 \\(\\mu=\\rho J_p>0\\)。\\(x=0\\) 端固支，\\(x=L\\) 端刚接转动惯量 \\(I\\geq0\\) 的转子，并通过刚度 \\(K\\geq0\\) 的扭转弹簧接地。忽略耗散、剪切变形及轴向运动，令扭角为 \\(\\theta(x,t)\\)，且至少 \\(I,K\\) 之一可非零。\n(1) 从杆的角动量平衡和端部转子的力矩平衡推导波动方程及两端边界条件，写出严格的总能量守恒式。\n(2) 用 \\(u(x)e^{-i\\omega t}\\) 分离变量，推导非标准超越本征方程，定义 \\(z=kL\\)、\\(p=KL/C\\)、\\(q=I/(\\mu L)\\)，并讨论正本征频率的离散性。\n(3) 证明不同本征频率的模态在含端点转动惯量的加权内积下正交；推导含弹簧边界能的 Rayleigh 商，说明忽略端点惯量会造成什么错误。\n(4) 求 \\(I=K=0\\) 时的全部本征频率；再令 \\(I/(\\mu L)\\to\\infty\\) 而 \\(K,C,L,\\mu\\) 固定，求最低频率的首项及其等效弹簧物理解释，并检验量纲。\n",
+    "solution": "(1) 对杆内小段作轴向角动量平衡，截面扭矩 \\(M=C\\theta_x\\)，故\n\\[\n \\mu\\theta_{tt}=C\\theta_{xx},\\qquad \\theta(0,t)=0.\n\\]\n杆对端部转子的回复力矩为 \\(-C\\theta_x(L,t)\\)，外接弹簧给出 \\(-K\\theta(L,t)\\)，于是\n\\[\n I\\theta_{tt}(L,t)+C\\theta_x(L,t)+K\\theta(L,t)=0.\n\\]\n把偏微分方程乘以 \\(\\theta_t\\) 积分，并用 \\(\\theta_t(0,t)=0\\) 与上述端点条件，得到\n\\[\n \\frac{d}{dt}\\left\\{\\frac12\\int_0^L[\\mu\\theta_t^2+C\\theta_x^2]\\,dx\n +\\frac I2\\theta_t(L,t)^2+\\frac K2\\theta(L,t)^2\\right\\}=0.\n\\]\n两个端点能量项不可随意丢弃，否则能流在边界处不能闭合。\n\n(2) 设 \\(c=\\sqrt{C/\\mu}\\)、\\(k=\\omega/c\\)。空间函数满足 \\(u''+k^2u=0\\) 与 \\(u(0)=0\\)，因此 \\(u(x)=A\\sin(kx)\\)。端部条件变为\n\\[\n Ck\\cos(kL)+(K-I\\omega^2)\\sin(kL)=0.\n\\]\n代入 \\(z=kL\\)、\\(p=KL/C\\)、\\(q=I/(\\mu L)\\)，得到\n\\[\n F(z)=z\\cos z+(p-qz^2)\\sin z=0,\\qquad\n \\omega=\\frac{c}{L}z.\n\\]\n本征算子与端点质量共同组成正定能量问题；由第(3)问的 Rayleigh 商，\\(\\omega^2>0\\)，故 \\(z=0\\) 的形式根对应零空间函数而非固支杆的真实零模。有限 \\(I,K\\geq0\\) 时正根离散且可趋于无穷大。\n\n(3) 对不同本征模态 \\(u_n,u_m\\) 分别写 \\(Cu_n''=-\\mu\\omega_n^2u_n\\) 与 \\(Cu_m''=-\\mu\\omega_m^2u_m\\)。交叉相乘、相减并积分分部，利用 \\(u(0)=0\\) 和\n\\(Cu_n'(L)=(I\\omega_n^2-K)u_n(L)\\)，可得\n\\[\n (\\omega_n^2-\\omega_m^2)\n \\left[\\int_0^L\\mu u_nu_m\\,dx+Iu_n(L)u_m(L)\\right]=0.\n\\]\n因此 \\(n\\ne m\\) 时括号为零。另以 \\(u_n\\) 乘方程积分分部，得\n\\[\n \\omega_n^2=\n \\frac{C\\int_0^L(u_n')^2\\,dx+K u_n(L)^2}\n {\\mu\\int_0^L u_n^2\\,dx+Iu_n(L)^2}.\n\\]\n分母是杆及转子的广义惯量，分子是杆及边界弹簧的刚度。若仅使用普通 \\(L^2\\) 内积或省略 \\(Iu_n(L)^2\\)，一般既不正交也不满足正确的频率变分关系。\n\n(4) 当 \\(I=K=0\\)，自由端 \\(u'(L)=0\\)，所以\n\\[\n z_n=(n+\\tfrac12)\\pi,\\qquad\n \\omega_n=\\frac{(n+1/2)\\pi}{L}\\sqrt{\\frac C\\mu},\\quad n=0,1,\\ldots.\n\\]\n当 \\(q\\gg1\\)，最低正根 \\(z\\ll1\\)。展开 \\(F(z)/z=(1+p)-(q+\\tfrac12+\\tfrac p6)z^2+O(qz^4+z^4)\\)，因而\n\\[\n z_0^2=\\frac{1+p}{q}[1+O(q^{-1})],\\qquad\n \\omega_0^2=\\frac{K+C/L}{I}[1+O(\\mu L/I)].\n\\]\n此时重转子主导惯量，杆近似静态线性扭转，等效扭转刚度 \\(C/L\\) 与外弹簧 \\(K\\) 并联。\\(C/L\\) 与 \\(K\\) 均为力矩/弧度，除以 \\(I\\) 后量纲为时间的负二次方；若取 \\(I=0\\) 直接套用重转子近似则不合法。\n"
+  },
+  {
     "id": "O007",
     "topic": "光学",
     "title": "分离薄透镜系统的矩阵成像与无焦条件",
@@ -5923,6 +5947,30 @@
     "solution": "(1) 在两个界面反射振幅分别 \\(r_{01}=(n_0-n_f)/(n_0+n_f)\\)、\\(r_{12}=(n_f-n_s)/(n_f+n_s)\\)。将薄膜内的多次反射场以往返相位 \\(e^{2i\\beta}\\) 求几何级数，可得总反射 \\(r=(r_{01}+r_{12}e^{2i\\beta})/(1+r_{01}r_{12}e^{2i\\beta})\\)，反射率 \\(R=|r|^2\\)。不可仅相加两次反射强度，因为不同光程的电场需要相干叠加。\n\n(2) 设计四分之一波长条件为 \\(n_fd=\\lambda_0/4\\)，即 \\(\\beta=\\pi/2\\)，往返因子为 \\(-1\\)，于是 \\(r=(r_{01}-r_{12})/(1-r_{01}r_{12})\\)。零反射要求 \\(r_{01}=r_{12}\\)，解两界面 Fresnel 比例得 \\(n_f^2=n_0n_s\\)，所以最优无耗散膜折射率是 \\(n_f=\\sqrt{n_0n_s}\\)。这是单层正入射严格消反射条件，依赖设计波长与材料色散。\n\n(3) 若 \\(n_f=n_0\\)，首界面反射为零，总反射幅度退化为 \\(r_{12}e^{2i\\beta}\\)，反射率为裸介质—基底值 \\([(n_0-n_s)/(n_0+n_s)]^2\\)，相位变化不影响强度。若 \\(n_f=n_s\\)，末界面无反射，仍得到相同裸界面反射率。三层体系无吸收且基底无限延展，合适的能流归一化下反射和透射功率之和为一，零反射时全部入射能量进入基底。\n\n(4) 光波长偏离 \\(\\lambda_0\\) 时 \\(\\beta=(\\pi/2)(\\lambda_0/\\lambda)\\) 不再是四分之一波长，两个主要反射场不能完全相消。若膜厚偏差 \\(\\delta d\\)，往返相位偏差约为 \\(\\delta(2\\beta)=4\\pi n_f\\delta d/\\lambda_0\\)，导致非零残余反射；折射率偏差破坏 \\(n_f^2=n_0n_s\\)，即使相位正确仍不能完全消除反射。宽带增透需多层或梯度折射率设计，不能外推单层的单频匹配结论。\n"
   },
   {
+    "id": "O057",
+    "topic": "光学",
+    "title": "全反射光束的Goos–Hänchen侧向位移及偏振差异",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 100,
+    "tags": [
+      "全反射Fresnel相位",
+      "倏逝场",
+      "Artmann驻相公式",
+      "Goos-Hänchen位移",
+      "偏振与临界角渐近"
+    ],
+    "answer": "D_s=\\frac{2\\sin\\theta}{n_1k_0\\cos\\theta\\sqrt{\\sin^2\\theta-q^2}},\\quad\n\\frac{D_p}{D_s}=\\frac{q^2}{(1+q^2)\\sin^2\\theta-q^2},\\quad q=\\frac{n_2}{n_1}",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.4-round12-draft",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C",
+    "question": "两种各向同性、无吸收、无磁性的介质在 \\(z=0\\) 平面接触，\\(z<0\\) 为折射率 \\(n_1\\)，\\(z>0\\) 为 \\(n_2\\)，其中 \\(n_1>n_2>0\\)。真空波数为 \\(k_0=\\omega/c\\)。一束角谱足够窄的单色光从介质1以 \\(\\theta>\\theta_c=\\arcsin(n_2/n_1)\\) 入射，入射面为 \\(xz\\)，忽略横向自旋耦合及材料色散。定义 \\(q=n_2/n_1\\)、\\(a=\\sqrt{\\sin^2\\theta-q^2}\\)、\\(c_\\theta=\\cos\\theta\\)。\n(1) 由切向波矢守恒及电磁边界条件写出 \\(s,p\\) 偏振的全反射振幅系数，说明介质2中的场为何倏逝，并验证反射功率为一。\n(2) 从窄角谱的驻相近似推导 Artmann 侧向位移 \\(D=-\\partial\\arg r/\\partial k_x\\)，求 \\(s\\) 偏振的闭式位移。\n(3) 推导 \\(p\\) 偏振的闭式位移及 \\(D_p/D_s\\)，找出两种偏振位移相等的入射角。\n(4) 讨论 \\(\\theta\\downarrow\\theta_c\\) 和 \\(\\theta\\uparrow\\pi/2\\) 时的数学渐近、偏振位移比的极限，以及有限角宽光束何时不能使用平面波驻相公式。\n",
+    "solution": "(1) 令 \\(k_x=n_1k_0\\sin\\theta\\)、\\(k_{z1}=n_1k_0c_\\theta\\)。介质2的法向波数为\n\\[\n k_{z2}=i\\kappa,\\qquad \\kappa=n_1k_0a>0,\n\\]\n故透射场沿 \\(z>0\\) 按 \\(e^{-\\kappa z}\\) 衰减，不携带远离界面的平均法向能流。Fresnel边界条件给出（\\(p\\) 偏振采用常用电场振幅相位约定）\n\\[\n r_s=\\frac{c_\\theta-ia}{c_\\theta+ia},\\qquad\n r_p=\\frac{q^2c_\\theta-ia}{q^2c_\\theta+ia}.\n\\]\n分子与分母互为复共轭，因此 \\(|r_s|^2=|r_p|^2=1\\)。可连续选择反射相位\n\\(\\phi_s=-2\\arctan(a/c_\\theta)\\)、\n\\(\\phi_p=-2\\arctan[a/(q^2c_\\theta)]\\)，不影响相位导数的常数相位约定均可。\n\n(2) 反射束在界面处可写为角谱积分\n\\[\n E_r(x,0)=\\int A(k_x)e^{i[k_xx+\\phi(k_x)]}\\,dk_x.\n\\]\n对中心波数 \\(k_{x0}\\) 附近线性展开 \\(\\phi(k_x)\\)，包络峰值沿 \\(x\\) 平移\n\\(D=-\\phi'(k_{x0})\\)，而\n\\(\\partial k_x/\\partial\\theta=n_1k_0c_\\theta\\)。\n因为 \\(a'= \\sin\\theta\\,c_\\theta/a\\)，且\n\\(a^2+c_\\theta^2=1-q^2\\)，直接求导得\n\\[\n \\frac{d\\phi_s}{d\\theta}=-\\frac{2\\sin\\theta}{a},\\qquad\n D_s=\\frac{2\\sin\\theta}{n_1k_0c_\\theta a}.\n\\]\n这是沿界面而非沿反射光轴的位移，具有长度量纲。\n\n(3) 对 \\(\\phi_p\\) 求导可得\n\\[\n \\frac{d\\phi_p}{d\\theta}\n =-\\frac{2q^2(1-q^2)\\sin\\theta}\n {a(q^4c_\\theta^2+a^2)}.\n\\]\n故\n\\[\n D_p=\\frac{2q^2(1-q^2)\\sin\\theta}\n {n_1k_0c_\\theta a(q^4c_\\theta^2+a^2)},\\qquad\n \\frac{D_p}{D_s}\n =\\frac{q^2}{(1+q^2)\\sin^2\\theta-q^2}.\n\\]\n利用 \\(0<q<1\\) 解 \\(D_p=D_s\\)，得到唯一的\n\\[\n \\sin^2\\theta_*=\\frac{2q^2}{1+q^2},\n \\qquad \\theta_c<\\theta_*<\\frac\\pi2.\n\\]\n在 \\(\\theta_c<\\theta<\\theta_*\\) 时 \\(D_p>D_s\\)，其余全反射角区间相反。\n\n(4) 令 \\(\\delta=\\theta-\\theta_c\\downarrow0\\)。由于\n\\(a^2=\\sin^2\\theta-q^2\\sim2q\\sqrt{1-q^2}\\,\\delta\\)，两种 \\(D\\) 均按 \\(\\delta^{-1/2}\\) 发散，且 \\(D_p/D_s\\to q^{-2}\\)。当 \\(\\theta\\uparrow\\pi/2\\)，\\(a\\to\\sqrt{1-q^2}\\)，两种 \\(D\\) 按 \\(1/\\cos\\theta\\) 发散，而 \\(D_p/D_s\\to q^2\\)。这些发散是无限宽、严格窄角谱驻相近似的非一致极限，不代表有限光束真的产生无限侧移。若角谱跨越临界角、相位在谱宽内明显非线性，或入射趋于掠射以致有限束斑和界面几何不可忽略，应直接积分完整角谱并重新定义实际强度重心。\n"
+  },
+  {
     "id": "Q007",
     "topic": "近代物理",
     "title": "相对论两体衰变的能量区间与阈值",
@@ -7082,5 +7130,29 @@
     "complexity_tier": "L5-C",
     "question": "一个孤立两态量子系统在基底 \\(|L\\rangle,|R\\rangle\\) 中的时间不变哈密顿量为 \\(H=(\\Delta/2)\\sigma_z+J\\sigma_x\\)，其中 \\(\\Delta\\in\\mathbb R\\) 是能级失谐、\\(J>0\\) 是隧穿耦合。初态 \\(|\\psi(0)\\rangle=|L\\rangle\\) 为 \\(\\sigma_z=+1\\) 的态，系统完全相干、忽略退相干与驱动。\n(1) 求哈密顿量本征能和本征态混合角。\n(2) 用 Pauli 矩阵指数计算任意时刻右态占有概率。\n(3) 求最大转移概率与对应最短时间，讨论共振 \\(\\Delta=0\\) 及大失谐。\n(4) 推导时间平均转移概率和总能量守恒，解释失谐为何抑制隧穿。\n",
     "solution": "(1) 矩阵 \\(H=\\begin{pmatrix}\\Delta/2&J\\\\J&-\\Delta/2\\end{pmatrix}\\) 的本征能为 \\(E_\\pm=\\pm\\Omega_E/2\\)，其中 \\(\\Omega_E=\\sqrt{\\Delta^2+4J^2}\\)。令旋转角 \\(\\vartheta\\) 满足 \\(\\tan(2\\vartheta)=2J/\\Delta\\)，即可用正交混合基底对角化；当 \\(\\Delta=0\\)，对称和反对称组合为能量本征态，能隙为 \\(2J\\)。\n\n(2) 因为 \\(H^2=(\\Omega_E^2/4)I\\)，可精确求出传播算符 \\(U(t)=\\cos(\\Omega_Et/(2\\hbar))I-(2iH/\\Omega_E)\\sin(\\Omega_Et/(2\\hbar))\\)。作用在 \\(|L\\rangle\\) 后，右态幅度为 \\(\\langle R|U(t)|L\\rangle=-i(2J/\\Omega_E)\\sin(\\Omega_Et/(2\\hbar))\\)。因此转移概率 \\(P_R(t)=4J^2/(\\Delta^2+4J^2)\\sin^2[\\sqrt{\\Delta^2+4J^2}\\,t/(2\\hbar)]\\)。\n\n(3) 最大转移概率为 \\(P_{R,\\max}=4J^2/(\\Delta^2+4J^2)\\)，第一次达到极大值的时间为 \\(t_*=\\pi\\hbar/\\Omega_E\\)。共振 \\(\\Delta=0\\) 时 \\(P_{R,\\max}=1\\)，在时间 \\(\\pi\\hbar/(2J)\\) 完全转移；若 \\(|\\Delta|\\gg J\\)，则最大转移仅约 \\(4J^2/\\Delta^2\\ll1\\)。注意快速振荡与高转移概率是两件不同的事：大失谐虽然增加频率，却降低振幅。\n\n(4) 对于非零 \\(\\Omega_E\\)，长期时间平均 \\(\\overline{\\sin^2}=1/2\\)，故 \\(\\overline P_R=2J^2/(\\Delta^2+4J^2)\\)。哈密顿量与时间无关，严格有 \\(d\\langle H\\rangle/dt=(i/\\hbar)\\langle[H,H]\\rangle=0\\)，初态能量期望 \\(\\Delta/2\\) 在整个演化中守恒。右态概率变化通过态间相干项抵消对角能量差，不需凭空吸收外能；若改成缓慢时间变动的 \\(\\Delta(t)\\)，才应另用绝热定理或 Landau--Zener 动力学。\n"
+  },
+  {
+    "id": "Q057",
+    "topic": "近代物理",
+    "title": "谐振子频率突然淬火的挤压真空、功涨落与Loschmidt回波",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 110,
+    "tags": [
+      "量子突然淬火",
+      "Bogoliubov变换",
+      "挤压真空偶宇称分布",
+      "双次能量测量功统计",
+      "Loschmidt回波"
+    ],
+    "answer": "N=\\sinh^2r=\\frac{(\\omega_1-\\omega_0)^2}{4\\omega_0\\omega_1},\\quad\n\\mathcal L(t)=\\big[1+\\sinh^2(2r)\\sin^2(\\omega_1t)\\big]^{-1/2}",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.4-round12-draft",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C",
+    "question": "质量 \\(m>0\\) 的一维量子谐振子在 \\(t<0\\) 具有频率 \\(\\omega_0>0\\)，处于基态 \\(|0_0\\rangle\\)。在 \\(t=0\\) 将弹簧刚度瞬间改变，使频率变为 \\(\\omega_1>\\omega_0\\)，之后保持常数；淬火期间波函数连续，忽略耗散。令 \\(H_j=p^2/(2m)+m\\omega_j^2x^2/2\\)，\\(a_j\\) 为各自的湮灭算符，并定义 \\(r=\\frac12\\ln(\\omega_1/\\omega_0)>0\\)。\n(1) 用 \\(a_0,a_0^\\dagger\\) 表示 \\(a_1\\)，推导Bogoliubov系数及变换的正则条件，求淬火后激发数的平均值。\n(2) 将初始真空展开在 \\(H_1\\) 的能量本征基，推导奇数能级概率为零、偶数能级概率及归一性。\n(3) 对淬火前后各测一次能量，求平均功、功的方差和 \\(\\omega_1\\to\\omega_0\\) 极限，指出能量来自何处。\n(4) 推导返回初始态的Loschmidt回波 \\(\\mathcal L(t)=|\\langle0_0|e^{-iH_1t/\\hbar}|0_0\\rangle|^2\\)，求完全复现时刻及半周期时的最小回波。\n",
+    "solution": "(1) 由\n\\(a_j=\\sqrt{m\\omega_j/(2\\hbar)}\\,x+ip/\\sqrt{2m\\hbar\\omega_j}\\)\n及其共轭式消去 \\(x,p\\)，得到\n\\[\n a_1=\\alpha a_0+\\beta a_0^\\dagger,\\quad\n \\alpha=\\tfrac12\\left(\\sqrt{\\frac{\\omega_1}{\\omega_0}}+\\sqrt{\\frac{\\omega_0}{\\omega_1}}\\right)=\\cosh r,\\quad\n \\beta=\\tfrac12\\left(\\sqrt{\\frac{\\omega_1}{\\omega_0}}-\\sqrt{\\frac{\\omega_0}{\\omega_1}}\\right)=\\sinh r.\n\\]\n因 \\(\\alpha^2-\\beta^2=1\\)，有 \\([a_1,a_1^\\dagger]=1\\)，是合法正则变换。对初始真空，\n\\[\n N=\\langle0_0|a_1^\\dagger a_1|0_0\\rangle=\\beta^2\n =\\sinh^2r=\\frac{(\\omega_1-\\omega_0)^2}{4\\omega_0\\omega_1}.\n\\]\n突然改变哈密顿量并不使原态瞬间成为新基态。\n\n(2) 反变换 \\(a_0=\\alpha a_1-\\beta a_1^\\dagger\\)，故初态满足\n\\((a_1-\\tanh r\\,a_1^\\dagger)|0_0\\rangle=0\\)。写\n\\(|0_0\\rangle=\\sum_{n\\ge0}c_n|n_1\\rangle\\)，递推关系为\n\\(\\sqrt{n+1}c_{n+1}=\\tanh r\\sqrt n\\,c_{n-1}\\)，且 \\(c_1=0\\)。因此\n\\[\n c_{2n}=\\frac{\\sqrt{(2n)!}}{2^n n!}\\frac{\\tanh^nr}{\\sqrt{\\cosh r}},\\qquad\n P_{2n}=\\frac{(2n)!}{2^{2n}(n!)^2}\\frac{\\tanh^{2n}r}{\\cosh r},\\qquad P_{2n+1}=0.\n\\]\n利用生成函数\n\\(\\sum_{n=0}^\\infty\\binom{2n}{n}x^n/4^n=(1-x)^{-1/2}\\)\n及 \\(1-\\tanh^2r=\\operatorname{sech}^2r\\)，验证 \\(\\sum P_{2n}=1\\)。只出现偶数激发源于频率淬火保持空间宇称。\n\n(3) 初次测量必得 \\(E_0^{(0)}=\\hbar\\omega_0/2\\)，末次测量得 \\(E_n^{(1)}=\\hbar\\omega_1(n+1/2)\\)。平均功定义为 \\(W=E_n^{(1)}-E_0^{(0)}\\)，故\n\\[\n \\langle W\\rangle=\\hbar\\omega_1(N+\\tfrac12)-\\frac{\\hbar\\omega_0}{2}\n =\\frac{\\hbar(\\omega_1^2-\\omega_0^2)}{4\\omega_0}.\n\\]\n由偶数态概率生成函数可得\n\\(\\operatorname{Var}(n)=2N(N+1)=\\frac12\\sinh^2(2r)\\)，于是\n\\[\n \\operatorname{Var}(W)=2(\\hbar\\omega_1)^2N(N+1)\n =\\frac{\\hbar^2(\\omega_1^2-\\omega_0^2)^2}{8\\omega_0^2}.\n\\]\n当 \\(\\omega_1\\to\\omega_0\\)，两者均趋零。淬火后能量的增加由瞬间改变势阱刚度的外部控制器提供，不应误称封闭系统原哈密顿量能量守恒。\n\n(4) 用第(2)问的概率展开振幅：\n\\[\n A(t)=\\sum_{n=0}^\\infty P_{2n}e^{-i\\omega_1(2n+1/2)t}\n =\\frac{e^{-i\\omega_1t/2}}{\\cosh r\\sqrt{1-\\tanh^2r\\,e^{-2i\\omega_1t}}}.\n\\]\n平方取模并化简得到\n\\[\n \\mathcal L(t)=\\frac1{\\sqrt{1+\\sinh^2(2r)\\sin^2(\\omega_1t)}}.\n\\]\n因此 \\(t=\\ell\\pi/\\omega_1\\)（整数 \\(\\ell\\)）时 \\(\\mathcal L=1\\)，尽管态矢可能积累整体相位；在 \\(t=(\\ell+\\tfrac12)\\pi/\\omega_1\\) 时回波最小，\n\\(\\mathcal L_{\\min}=1/\\cosh(2r)\\)。无淬火极限 \\(r\\to0\\) 时任意时刻 \\(\\mathcal L\\to1\\)，与初态为新基态相符。\n"
   }
 ]

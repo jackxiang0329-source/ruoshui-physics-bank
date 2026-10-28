@@ -1,7 +1,7 @@
 {
   "status": "draft-only",
-  "new_problem_count": 3,
-  "passed_count": 12,
+  "new_problem_count": 6,
+  "passed_count": 24,
   "tests": [
     {
       "id": "M059",
@@ -86,6 +86,90 @@
       "method": "symbolic",
       "name": "Landau free energy gives three-halves kB heat capacity jump at critical point",
       "passed": true
+    },
+    {
+      "id": "W056",
+      "part": 1,
+      "method": "symbolic",
+      "name": "torsional rod dynamic tip condition has correct nondimensional form",
+      "passed": true
+    },
+    {
+      "id": "W056",
+      "part": 2,
+      "method": "numerical",
+      "name": "two distinct torsional eigenmodes are orthogonal only in endpoint-inertia weighted product",
+      "passed": true
+    },
+    {
+      "id": "W056",
+      "part": 3,
+      "method": "energy",
+      "name": "Rayleigh quotient including boundary kinetic and spring energy equals eigenfrequency square",
+      "passed": true
+    },
+    {
+      "id": "W056",
+      "part": 4,
+      "method": "limit",
+      "name": "free tip frequencies and large tip inertia asymptotic satisfy the transcendental equation",
+      "passed": true
+    },
+    {
+      "id": "O057",
+      "part": 1,
+      "method": "conservation",
+      "name": "both total internal reflection coefficients have unit modulus",
+      "passed": true
+    },
+    {
+      "id": "O057",
+      "part": 2,
+      "method": "symbolic",
+      "name": "Artmann s-polarization shift matches derivative of Fresnel phase",
+      "passed": true
+    },
+    {
+      "id": "O057",
+      "part": 3,
+      "method": "symbolic",
+      "name": "Artmann p-polarization shift matches derivative and polarization ratio",
+      "passed": true
+    },
+    {
+      "id": "O057",
+      "part": 4,
+      "method": "limit",
+      "name": "polarization ratio approaches inverse index square at critical angle and index square at grazing",
+      "passed": true
+    },
+    {
+      "id": "Q057",
+      "part": 1,
+      "method": "canonical_commutator",
+      "name": "Bogoliubov coefficients preserve canonical oscillator commutator",
+      "passed": true
+    },
+    {
+      "id": "Q057",
+      "part": 2,
+      "method": "normalization",
+      "name": "squeezed even-parity number distribution sums to unity",
+      "passed": true
+    },
+    {
+      "id": "Q057",
+      "part": 3,
+      "method": "energy",
+      "name": "two-time-measurement mean and variance match closed frequency-quench expressions",
+      "passed": true
+    },
+    {
+      "id": "Q057",
+      "part": 4,
+      "method": "numerical",
+      "name": "Loschmidt amplitude agrees with independent real closed echo at nontrivial time",
+      "passed": true
     }
   ],
   "independent_expert_review": "pending",
@@ -106,6 +190,24 @@
       "id": "T056",
       "method": "numerical",
       "name": "spontaneous magnetization root near Curie temperature",
+      "passed": true
+    },
+    {
+      "id": "W056",
+      "method": "asymptotic_numerical",
+      "name": "large end-inertia fundamental root agrees with effective stiffness asymptotic",
+      "passed": true
+    },
+    {
+      "id": "O057",
+      "method": "independent_numerical_derivative",
+      "name": "finite precision Fresnel phase differentiation matches s shift",
+      "passed": true
+    },
+    {
+      "id": "Q057",
+      "method": "independent_number_sum",
+      "name": "squeezed vacuum probabilities normalize and reproduce mean excitation",
       "passed": true
     }
   ]
