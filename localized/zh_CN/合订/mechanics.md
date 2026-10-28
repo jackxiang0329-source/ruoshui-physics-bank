@@ -2,7 +2,7 @@
 
 > 仅供编辑复核：尚未通过独立双语、答案或版权审核；不可正式组卷。
 
-共 384 道。英文原文均以保留源指纹的上游快照为依据。
+共 432 道。英文原文均以保留源指纹的上游快照为依据。
 
 <a id="cp-00001"></a>
 
@@ -8656,6 +8656,390 @@ A toy gun uses a spring with a force constant of 300 N/m to propel a 10.0-g stee
 
 ---
 
+<a id="cp-00385"></a>
+
+## CP-00385｜汽车广告所称汽油能效是否可能
+
+**学科：** 力学　**知识点：** 能源效率／不合理结果
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+**不合理结果题。**某汽车广告宣称：一辆质量 $900\,\mathrm{kg}$ 的汽车只用了 $1.0\,\mathrm{gal}$ 汽油，便从静止加速到 $30.0\,\mathrm{m/s}$，总共行驶 $100\,\mathrm{km}$，且海拔上升了 $3.00\,\mathrm{km}$；包括空气阻力在内的平均摩擦阻力为 $700\,\mathrm{N}$。假设各数据都准确到三位有效数字。（a）计算汽车的效率；（b）结果有何不合理之处；（c）哪些前提不合理或相互矛盾？
+
+## 英文原题（存档摘录）
+
+# World Energy Use — CP-00385
+
+**Unreasonable Results**
+
+A car advertisement claims that its 900-kg car accelerated from rest to 30.0 m/s and drove 100 km, gaining 3.00 km in altitude, on 1.0 gal of gasoline. The average force of friction including air resistance was 700 N. Assume all values are known to three significant figures. (a) Calculate the car’s efficiency. (b) What is unreasonable about the result? (c) Which premise is unreasonable, or which premises are inconsistent?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00385.md
+- 原件 Git blob SHA：60c5b07bfeaf3db1554b15ae52ef488b112cadd3
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：需要外部资料
+- 审校提示：未给1加仑汽油的化学能，须引用原教材燃料能量密度表，明确采用美制加仑。
+
+---
+
+<a id="cp-00387"></a>
+
+## CP-00387｜自行设计长期爬楼梯的功率问题
+
+**学科：** 力学　**知识点：** 人体做功／爬楼梯建模
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+**自拟问题。**考虑一人上下楼梯的情形：根据人体质量、腿部可持续提供的功率和单级台阶的高度，建立模型求出长期能够维持的上楼梯速率。再讨论为什么同一个人往往可以用更高的速率下楼，且持续时间几乎不受同样限制，尽管上下楼过程所受作用力相近。这提示上下楼涉及本质不同的能量转化过程。
+
+## 英文原题（存档摘录）
+
+# World Energy Use — CP-00387
+
+**Construct Your Own Problem**
+
+Consider a person climbing and descending stairs. Construct a problem in which you calculate the long-term rate at which stairs can be climbed considering the mass of the person, his ability to generate power with his legs, and the height of a single stair step. Also consider why the same person can descend stairs at a faster rate for a nearly unlimited time in spite of the fact that very similar forces are exerted going down as going up. (This points to a fundamentally different process for descending versus climbing stairs.)
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00387.md
+- 原件 Git blob SHA：2ec5341ed6fada9dfd5b2fe81d94d9bacc332a64
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：需要估计参数
+- 审校提示：开放建模题，人体质量、功率及台阶高度需自行设定。
+
+---
+
+<a id="cp-00389"></a>
+
+## CP-00389｜篮球运动员蹲下后跳起的速度和功率
+
+**学科：** 力学　**知识点：** 机械能／篮球起跳
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+**综合题。**一名质量 $105\,\mathrm{kg}$ 的篮球运动员在准备起跳时下蹲 $0.400\,\mathrm{m}$，随后双腿伸直，在这 $0.400\,\mathrm{m}$ 内向地面施力而加速；双脚离地后，他的质心最终上升至正常直立站姿质心高度以上 $0.950\,\mathrm{m}$。（a）根据能量关系求离地速度；（b）求他对地面施加的平均作用力，**须同时计入支撑自身重量和使其加速所需的力**；（c）求加速阶段的输出功率。
+
+## 英文原题（存档摘录）
+
+# World Energy Use — CP-00389
+
+**Integrated Concepts**
+
+A 105-kg basketball player crouches down 0.400 m while waiting to jump. After exerting a force on the floor through this 0.400 m, his feet leave the floor and his center of gravity rises 0.950 m above its normal standing erect position. (a) Using energy considerations, calculate his velocity when he leaves the floor. (b) What average force did he exert on the floor? (Do not neglect the force to support his weight as well as that to accelerate him.) (c) What was his power output during the acceleration phase?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00389.md
+- 原件 Git blob SHA：59f8a5c186fd1d415eede63a00a4254bb778c20a
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：物理模型依赖
+- 审校提示：离地到最高点的质心高度参考取决于运动员伸腿阶段几何变化，须仔细复核起跳模型。
+
+---
+
+<a id="cp-00390"></a>
+
+## CP-00390｜相同动量下哪种物体动能更大
+
+**学科：** 力学　**知识点：** 动量与动能／质量比较
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+质量较小的物体与质量较大的物体具有相同大小的动量。哪一个物体的动能更大？
+
+## 英文原题（存档摘录）
+
+# Linear Momentum and Force — CP-00390
+
+An object that has a small mass and an object that has a large mass have the same momentum. Which object has the largest kinetic energy?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00390.md
+- 原件 Git blob SHA：ff2b693b61ca27fb7a672ae5cf9d6e03b0efeb46
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00391"></a>
+
+## CP-00391｜相同动能下哪种物体动量更大
+
+**学科：** 力学　**知识点：** 动量与动能／质量比较
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+质量较小和质量较大的两个物体具有相同的动能。哪一个物体的动量大小更大？
+
+## 英文原题（存档摘录）
+
+# Linear Momentum and Force — CP-00391
+
+An object that has a small mass and an object that has a large mass have the same kinetic energy. Which mass has the largest momentum?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00391.md
+- 原件 Git blob SHA：49327dcfb5e849a0d500831475fd56249f46568e
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00392"></a>
+
+## CP-00392｜橄榄球员为何应双脚着地进行阻挡
+
+**学科：** 力学　**知识点：** 动量／体育碰撞
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+**专业应用题。**橄榄球教练建议球员阻挡或冲撞对手时尽量保持双脚着地，而不是腾空扑向对手。利用动量、功和能量的概念，解释为什么双脚着地可能更有效。
+
+## 英文原题（存档摘录）
+
+# Linear Momentum and Force — CP-00392
+
+**Professional Application**
+
+Football coaches advise players to block, hit, and tackle with their feet on the ground rather than by leaping through the air. Using the concepts of momentum, work, and energy, explain how a football player can be more effective with his feet on the ground.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00392.md
+- 原件 Git blob SHA：fd6d174b0a193f5cf93ed927e0624132324b00f7
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00393"></a>
+
+## CP-00393｜小力如何产生与大力相同的动量变化
+
+**学科：** 力学　**知识点：** 冲量／力与作用时间
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+较小的力如何能够使物体获得与较大作用力相同的动量变化？
+
+## 英文原题（存档摘录）
+
+# Linear Momentum and Force — CP-00393
+
+How can a small force impart the same momentum to an object as a large force?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00393.md
+- 原件 Git blob SHA：ba49a10df8b4eaf35e7e1f8f652165ecabbebc8a
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00394"></a>
+
+## CP-00394｜大象、麻醉镖与奔跑者的动量比较
+
+**学科：** 力学　**知识点：** 线动量／质量和速度
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+（a）一头质量 $2000\,\mathrm{kg}$ 的大象以 $7.50\,\mathrm{m/s}$ 的速度冲向猎人，求其动量。（b）一支质量 $0.0400\,\mathrm{kg}$ 的麻醉镖以 $600\,\mathrm{m/s}$ 的速度发射，比较其动量与大象动量。（c）猎人未能命中大象后，以 $7.40\,\mathrm{m/s}$ 奔跑，若其质量为 $90.0\,\mathrm{kg}$，求猎人的动量。
+
+## 英文原题（存档摘录）
+
+# Linear Momentum and Force — CP-00394
+
+(a) Calculate the momentum of a 2000-kg elephant charging a hunter at a speed of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>7</mn><mtext>.</mtext><mtext>50 m/s</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{7 "." "50"``"m/s"} {}</annotation></semantics></math>
+
+. (b) Compare the elephant’s momentum with the momentum of a 0.0400-kg tranquilizer dart fired at a speed of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mtext>600 m/s</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"600"``"m/s"} {}</annotation></semantics></math>
+
+. (c) What is the momentum of the 90.0-kg hunter running at <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>7</mn><mtext>.</mtext><mtext>40 m/s</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{7 "." "40"``"m/s"} {}</annotation></semantics></math>
+
+ after missing the elephant?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00394.md
+- 原件 Git blob SHA：714511efb94839eeb644d21428d17c35ee161e4e
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00395"></a>
+
+## CP-00395｜船舶与炮弹的动量比较
+
+**学科：** 力学　**知识点：** 线动量／船舶质量
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+（a）一艘大型船舶以 $48.0\,\mathrm{km/h}$ 行驶时的动量大小为 $1.60\times10^9\,\mathrm{kg\cdot m/s}$，求其质量。（b）一枚质量为 $1100\,\mathrm{kg}$ 的炮弹以 $1200\,\mathrm{m/s}$ 运动，将其动量与船舶动量比较。
+
+## 英文原题（存档摘录）
+
+# Linear Momentum and Force — CP-00395
+
+(a) What is the mass of a large ship that has a momentum of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>1</mn><mtext>.</mtext><mrow><mtext>60</mtext><mo stretchy="false">×</mo><msup><mtext>10</mtext><mrow><mn>9</mn></mrow></msup></mrow><mrow><mspace width="0.25em" /><mtext>kg</mtext><mo stretchy="false">·</mo><mtext>m/s</mtext></mrow></mrow></mrow><mrow /></mrow></semantics></math>
+
+, when the ship is moving at a speed of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mtext>48.0 km/h?</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"48" "." 0``"km/h?"} {}</annotation></semantics></math>
+
+ (b) Compare the ship’s momentum to the momentum of a 1100-kg artillery shell fired at a speed of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mtext>1200 m/s</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"1200"``"m/s"} {}</annotation></semantics></math>
+
+.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00395.md
+- 原件 Git blob SHA：c34666f82c1ab870fc3cb8fa6c98904eeb5dd1ec
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00396"></a>
+
+## CP-00396｜飞机动量与航母弹射反冲
+
+**学科：** 力学　**知识点：** 线动量／航母弹射
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+（a）质量为 $2.00\times10^4\,\mathrm{kg}$ 的飞机，需要多大速率才具有 $1.60\times10^9\,\mathrm{kg\cdot m/s}$ 的动量（与上题船舶相同）？（b）若起飞速率为 $60.0\,\mathrm{m/s}$，飞机动量是多少？（c）若船舶为通过弹射器发射此类飞机的航空母舰，讨论（b）的结果对弹射器作用于舰体的反冲效应意味着什么。
+
+## 英文原题（存档摘录）
+
+# Linear Momentum and Force — CP-00396
+
+(a) At what speed would a <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>2</mn><mtext>.</mtext><mrow><mtext>00</mtext><mo stretchy="false">×</mo><msup><mtext>10</mtext><mrow><mn>4</mn></mrow></msup></mrow><mtext>-kg</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{2 "." "00" times "10" rSup { size 8{4} } "-kg"} {}</annotation></semantics></math>
+
+ airplane have to fly to have a momentum of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>1</mn><mtext>.</mtext><mrow><mtext>60</mtext><mo stretchy="false">×</mo><msup><mtext>10</mtext><mrow><mn>9</mn></mrow></msup></mrow><mrow><mspace width="0.25em" /><mtext>kg</mtext><mo stretchy="false">·</mo><mtext>m/s</mtext></mrow></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{1 "." "60" times "10" rSup { size 8{9} } "kg" cdot "m/s"} {}</annotation></semantics></math>
+
+ (the same as the ship’s momentum in the problem above)? (b) What is the plane’s momentum when it is taking off at a speed of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mtext>60.0 m/s</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"60" "." 0``"m/s"} {}</annotation></semantics></math>
+
+? (c) If the ship is an aircraft carrier that launches these airplanes with a catapult, discuss the implications of your answer to (b) as it relates to recoil effects of the catapult on the ship.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00396.md
+- 原件 Git blob SHA：3f51f4e00a7bd385d6b1485add6a2f240a440806
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：依赖前题
+- 审校提示：与前题船舶情景关联，所用动量数字已经在题干列明。
+
+---
+
+<a id="cp-00397"></a>
+
+## CP-00397｜垃圾车与垃圾桶的等动量速度
+
+**学科：** 力学　**知识点：** 线动量／汽车和小物体
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+（a）一辆质量为 $1.20\times10^4\,\mathrm{kg}$ 的垃圾车以 $10.0\,\mathrm{m/s}$ 行驶，求动量大小。（b）一只质量为 $8.00\,\mathrm{kg}$ 的垃圾桶需要多大的速率才能具有与垃圾车相同大小的动量？
+
+## 英文原题（存档摘录）
+
+# Linear Momentum and Force — CP-00397
+
+(a) What is the momentum of a garbage truck that is <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>1</mn><mtext>.</mtext><mrow><mtext>20</mtext><mo stretchy="false">×</mo><msup><mtext>10</mtext><mrow><mn>4</mn></mrow></msup></mrow><mspace width="0.25em" /><mtext> kg</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{1 "." "20" times "10" rSup { size 8{4} } " kg"} {}</annotation></semantics></math>
+
+ and is moving at <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>10</mn><mtext>.</mtext><mtext>0 m/s</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{10 "." "0 m/s"} {}</annotation></semantics></math>
+
+? (b) At what speed would an 8.00-kg trash can have the same momentum as the truck?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00397.md
+- 原件 Git blob SHA：9829d9e70673980cbbd49091efe3b408d63af842
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00398"></a>
+
+## CP-00398｜使失控铁路货车停下的作用时间
+
+**学科：** 力学　**知识点：** 动量定理／停止时间
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+一节质量为 $15{,}000\,\mathrm{kg}$ 的失控铁路货车沿轨道以 $5.4\,\mathrm{m/s}$ 行驶。若施加大小为 $1500\,\mathrm{N}$、方向与行驶方向相反的力，使其停下需要多长时间？
+
+## 英文原题（存档摘录）
+
+# Linear Momentum and Force — CP-00398
+
+A runaway train car that has a mass of 15,000 kg travels at a speed of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>5</mn><mtext>.4 m/s</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{5 "." 4`"m/s"} {}</annotation></semantics></math>
+
+ down a track. Compute the time required for a force of 1500 N to bring the car to rest.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00398.md
+- 原件 Git blob SHA：e95371431cc7c5ec6302b555427a745bd4ea8e2d
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00399"></a>
+
+## CP-00399｜地球公转运动的线动量
+
+**学科：** 力学　**知识点：** 线动量／地球公转
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+已知地球质量为 $5.972\times10^{24}\,\mathrm{kg}$，其公转轨道平均半径为 $1.496\times10^{11}\,\mathrm{m}$。计算地球绕太阳运动的线动量大小。
+
+## 英文原题（存档摘录）
+
+# Linear Momentum and Force — CP-00399
+
+The mass of Earth is <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>5</mn><mtext>.</mtext><mrow><mtext>972</mtext><mo stretchy="false">×</mo><msup><mn>10</mn><mrow><mtext>24</mtext></mrow></msup></mrow><mspace width="0.25em" /><mtext> kg</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{5 "." "972" times 10 rSup { size 8{"24"} } " kg"} {}</annotation></semantics></math>
+
+ and its orbital radius is an average of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>1</mn><mtext>.</mtext><mrow><mtext>496</mtext><mo stretchy="false">×</mo><msup><mn>10</mn><mrow><mtext>11</mtext></mrow></msup></mrow><mspace width="0.25em" /><mtext> m</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{1 "." "496" times 10 rSup { size 8{"11"} } " m"} {}</annotation></semantics></math>
+
+. Calculate its linear momentum.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00399.md
+- 原件 Git blob SHA：dec8636ee318c7bf653b7dec1bbf73a2bfef4cca
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：需要约定物理常量
+- 审校提示：需取地球公转周期或速率作外部常量，独立原题未列明。
+
+---
+
 <a id="cp-00400"></a>
 
 ## CP-00400｜缓冲材料如何减小碰撞力
@@ -8680,6 +9064,987 @@ A toy gun uses a spring with a force constant of 300 N/m to propel a 10.0-g stee
 
 - 原件：external_sources/college_physics/raw/CP-00400.md
 - 原件 Git blob SHA：35ed71b8c880117c665512ea0fb3019b04ce81da
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00401"></a>
+
+## CP-00401｜蹦床上双脚或背部着地哪个反弹更高
+
+**学科：** 力学　**知识点：** 冲量／蹦床弹跳
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+在蹦床上跳跃时，背部着地与双脚着地两种情况中，哪种可以反弹到更高的高度？为什么？
+
+## 英文原题（存档摘录）
+
+# Impulse — CP-00401
+
+While jumping on a trampoline, sometimes you land on your back and other times on your feet. In which case can you reach a greater height and why?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00401.md
+- 原件 Git blob SHA：76010aad08f7e8499567451e0c737104944a6405
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：物理模型依赖
+- 审校提示：结果取决于身体主动发力、碰撞姿态与蹦床储能情况。
+
+---
+
+<a id="cp-00402"></a>
+
+## CP-00402｜网球拍击中甜区为什么不易震手
+
+**学科：** 力学　**知识点：** 冲量／球拍振动
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+**专业应用题。**网球拍有一个所谓的‘甜区’。当球击中甜区时，相较于击中其他位置，球员手臂受到的震动较小。请解释原因。
+
+## 英文原题（存档摘录）
+
+# Impulse — CP-00402
+
+<strong> Professional Application </strong>
+
+Tennis racquets have “sweet spots.” If the ball hits a sweet spot then the player's arm is not jarred as much as it would be otherwise. Explain why this is the case.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00402.md
+- 原件 Git blob SHA：079b50a8077cbc00262164fbf2dee640627e4592
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00403"></a>
+
+## CP-00403｜弹体短时间加速时的平均作用力
+
+**学科：** 力学　**知识点：** 冲量／短时间加速
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+火药燃烧产生的高温气体在枪管内推动一枚质量为 $0.0300\,\mathrm{kg}$ 的弹体，使它在 $2.00\,\mathrm{ms}$（毫秒）内由静止加速至 $600\,\mathrm{m/s}$。求气体施加的平均作用力。
+
+## 英文原题（存档摘录）
+
+# Impulse — CP-00403
+
+A bullet is accelerated down the barrel of a gun by hot gases produced in the combustion of gun powder. What is the average force exerted on a 0.0300-kg bullet to accelerate it to a speed of 600 m/s in a time of 2.00 ms (milliseconds)?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00403.md
+- 原件 Git blob SHA：69cd06644a9f762b5fa7f279696fba696d4cd341
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00404"></a>
+
+## CP-00404｜安全带在撞击时对乘客的平均作用力
+
+**学科：** 力学　**知识点：** 冲量／乘员保护
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+一辆以 $10\,\mathrm{m/s}$ 行驶的汽车撞上一棵树，并在 $0.26\,\mathrm{s}$ 内停下。车内一位乘客的质量为 $70\,\mathrm{kg}$。求安全带为使乘客停下而施加的平均作用力。
+
+## 英文原题（存档摘录）
+
+# Impulse — CP-00404
+
+<strong> Professional Application </strong>
+
+A car moving at 10 m/s crashes into a tree and stops in 0.26 s. Calculate the force the seat belt exerts on a passenger in the car to bring him to a halt. The mass of the passenger is 70 kg.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00404.md
+- 原件 Git blob SHA：7cd78cd911fa4e76afa137f3fbe562f326b59fe2
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00405"></a>
+
+## CP-00405｜用手拍腿与双手拍合的平均作用力
+
+**学科：** 力学　**知识点：** 冲量／短时作用力
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+某人用手拍自己的大腿，手从初速 $4.00\,\mathrm{m/s}$ 在 $2.50\,\mathrm{ms}$ 内停下。（a）若手和前臂的有效质量为 $1.50\,\mathrm{kg}$，求手对大腿施加的平均作用力。（b）若她以同样速率拍合双手，并使两只手在相同时间内停下，作用力是否会改变？解释原因。
+
+## 英文原题（存档摘录）
+
+# Impulse — CP-00405
+
+A person slaps her leg with her hand, bringing her hand to rest in 2.50 milliseconds from an initial speed of 4.00 m/s. (a) What is the average force exerted on the leg, taking the effective mass of the hand and forearm to be 1.50 kg? (b) Would the force be any different if the woman clapped her hands together at the same speed and brought them to rest in the same time? Explain why or why not.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00405.md
+- 原件 Git blob SHA：311ad55c777b64f611c1500163b0b97c44384a75
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 审校提示：双手拍合的相对速度与各只手动量变化需区分。
+
+---
+
+<a id="cp-00406"></a>
+
+## CP-00406｜拳击碰撞对人体及头部速度的影响
+
+**学科：** 力学　**知识点：** 冲量／拳击碰撞
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+**专业应用题。**一名职业拳击手施加大小为 $1000\,\mathrm{N}$、持续 $0.150\,\mathrm{s}$ 的水平打击力。（a）求该打击传递的冲量。（b）若对手质量为 $105\,\mathrm{kg}$，受击前在空中静止，且作用位置接近质心，求其末速度。（c）若把对手质量为 $10.0\,\mathrm{kg}$ 的头部单独近似处理，并假设头部最初没有把显著动量传递给身体，求头部的反冲速度。（d）讨论（b）和（c）结果的意义。
+
+## 英文原题（存档摘录）
+
+# Impulse — CP-00406
+
+<strong> Professional Application </strong>
+
+A professional boxer hits his opponent with a 1000-N horizontal blow that lasts for 0.150 s. (a) Calculate the impulse imparted by this blow. (b) What is the opponent’s final velocity, if his mass is 105 kg and he is motionless in midair when struck near his center of mass? (c) Calculate the recoil velocity of the opponent’s 10.0-kg head if hit in this manner, assuming the head does not initially transfer significant momentum to the boxer’s body. (d) Discuss the implications of your answers for parts (b) and (c).
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00406.md
+- 原件 Git blob SHA：410aaadf71c2db0139033507418191facd70c616
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：物理模型依赖
+- 审校提示：单独头部模型忽略颈部约束与接触期间的复杂作用；结果仅供冲量理论比较。
+
+---
+
+<a id="cp-00407"></a>
+
+## CP-00407｜碰碰车撞击护栏后的速度
+
+**学科：** 力学　**知识点：** 冲量／碰碰车
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+**专业应用题。**一个孩子驾驶碰碰车正面撞上侧护栏，护栏对车施加大小为 $4000\,\mathrm{N}$、持续 $0.200\,\mathrm{s}$ 的力。（a）求该力所传递的冲量。（b）若车和驾驶者总质量为 $200\,\mathrm{kg}$，撞击前速度为 $2.80\,\mathrm{m/s}$，忽略车轮与地板摩擦，求撞击后的速度（包括方向）。
+
+## 英文原题（存档摘录）
+
+# Impulse — CP-00407
+
+<strong> Professional Application </strong>
+
+Suppose a child drives a bumper car head on into the side rail, which exerts a force of 4000 N on the car for 0.200 s. (a) What impulse is imparted by this force? (b) Find the final velocity of the bumper car if its initial velocity was 2.80 m/s and the car plus driver have a mass of 200 kg. You may neglect friction between the car and floor.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00407.md
+- 原件 Git blob SHA：4a26e1667df6bd062e095ab8f715a322cf9fe208
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00408"></a>
+
+## CP-00408｜高速涂料碎屑撞击航天器舷窗的平均力
+
+**学科：** 力学　**知识点：** 冲量／太空碎片
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+**专业应用题。**太空任务留下的大量细小碎片（例如油漆碎片）会威胁航天器。一个质量为 $0.100\,\mathrm{mg}$ 的涂料碎片以相对速率 $4.00\times10^3\,\mathrm{m/s}$ 撞击航天器舷窗。若碰撞持续 $6.00\times10^{-8}\,\mathrm{s}$，求碎片对舷窗施加的平均作用力。
+
+## 英文原题（存档摘录）
+
+# Impulse — CP-00408
+
+**Professional Application**
+
+One hazard of space travel is debris left by previous missions. There are several thousand objects orbiting Earth that are large enough to be detected by radar, but there are far greater numbers of very small objects, such as flakes of paint. Calculate the force exerted by a 0.100-mg chip of paint that strikes a spacecraft window at a relative speed of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>4</mn><mtext>.</mtext><mrow><mtext>00</mtext><mo stretchy="false">×</mo><msup><mtext>10</mtext><mrow><mn>3</mn></mrow></msup><mspace width="0.25em" /></mrow><mtext>m/s</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{4 "." "00" times "10" rSup { size 8{3} } "m/s"} {}</annotation></semantics></math>
+
+, given the collision lasts <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>6</mn><mtext>.</mtext><mrow><mtext>00</mtext><mo stretchy="false">×</mo><msup><mtext>10</mtext><mrow><mrow><mo stretchy="false">–</mo><mn>8</mn></mrow></mrow></msup><mspace width="0.25em" /></mrow><mn>s</mn></mrow></mrow><mrow /></mrow></semantics></math>
+
+.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00408.md
+- 原件 Git blob SHA：829ce588a4065f4356100fcd5b36e4759ed7173f
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：物理模型依赖
+- 审校提示：求唯一数值通常假定碎片接触后停止而不反弹，原题未明说碰后速度。
+
+---
+
+<a id="cp-00409"></a>
+
+## CP-00409｜仪表板和气囊的缓冲距离比较
+
+**学科：** 力学　**知识点：** 冲量／安全气囊
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+**专业应用题。**一名质量为 $75.0\,\mathrm{kg}$ 的乘客乘坐速度为 $20.0\,\mathrm{m/s}$ 的汽车，汽车撞上桥墩。（a）若乘客被带软垫的仪表板阻止，缓冲压缩距离平均为 $1.00\,\mathrm{cm}$，求乘客受到的平均作用力。（b）若改用缓冲距离为 $15.0\,\mathrm{cm}$ 的安全气囊，重新计算平均作用力。
+
+## 英文原题（存档摘录）
+
+# Impulse — CP-00409
+
+**Professional Application**
+
+A 75.0-kg person is riding in a car moving at 20.0 m/s when the car runs into a bridge abutment. (a) Calculate the average force on the person if he is stopped by a padded dashboard that compresses an average of 1.00 cm. (b) Calculate the average force on the person if he is stopped by an air bag that compresses an average of 15.0 cm.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00409.md
+- 原件 Git blob SHA：04f2893e694708938a24c8e8b1971aa50947d75a
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00410"></a>
+
+## CP-00410｜内部缓冲机构与反冲力比较
+
+**学科：** 力学　**知识点：** 冲量／反冲缓冲
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+**专业应用题。**一种发射装置利用内部阻尼机构降低其反冲对操作者的作用力：内部零件在较长距离内后退并停止，因而减小平均制动力。（a）一块质量为 $1.00\,\mathrm{kg}$ 的活动零件与质量 $0.0200\,\mathrm{kg}$、发射速度 $600\,\mathrm{m/s}$ 的弹体发生动量相互作用，求活动零件的反冲速度。（b）若活动零件在 $20.0\,\mathrm{cm}$ 的距离内停止，求阻尼机构对其施加的平均力。（c）若弹体在 $10.0\,\mathrm{ms}$ 内加速到上述速度，比较装置受到的平均反作用力与（b）的结果。
+
+## 英文原题（存档摘录）
+
+# Impulse — CP-00410
+
+**Professional Application**
+
+Military rifles have a mechanism for reducing the recoil forces of the gun on the person firing it. An internal part recoils over a relatively large distance and is stopped by damping mechanisms in the gun. The larger distance reduces the average force needed to stop the internal part. (a) Calculate the recoil velocity of a 1.00-kg plunger that directly interacts with a 0.0200-kg bullet fired at 600 m/s from the gun. (b) If this part is stopped over a distance of 20.0 cm, what average force is exerted upon it by the gun? (c) Compare this to the force exerted on the gun if the bullet is accelerated to its velocity in 10.0 ms (milliseconds).
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00410.md
+- 原件 Git blob SHA：d7f27c40ab4773399f157cded9036aaf22513f91
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：物理模型依赖
+- 审校提示：将内部相互作用简化为一维动量变化，忽略其他内部构件与气体动量。
+
+---
+
+<a id="cp-00411"></a>
+
+## CP-00411｜游轮撞上码头时的平均作用力
+
+**学科：** 力学　**知识点：** 冲量／大型船舶
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+一艘质量为 $1.00\times10^7\,\mathrm{kg}$ 的游轮以 $0.750\,\mathrm{m/s}$ 撞上码头，并在前进 $6.00\,\mathrm{m}$ 后停下，导致船舶和码头受损。利用**冲量**求游轮对码头施加的平均作用力。提示：先求游轮从撞击到停止所经历的时间。
+
+## 英文原题（存档摘录）
+
+# Impulse — CP-00411
+
+A cruise ship with a mass of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>1</mn><mtext>.</mtext><mrow><mtext>00</mtext><mo stretchy="false">×</mo><msup><mtext>10</mtext><mrow><mn>7</mn></mrow></msup></mrow><mspace width="0.25em" /><mtext> kg</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{1 "." "00" times "10" rSup { size 8{7} } " kg"} {}</annotation></semantics></math>
+
+ strikes a pier at a speed of 0.750 m/s. It comes to rest 6.00 m later, damaging the ship, the pier, and the tugboat captain’s finances. Calculate the average force exerted on the pier using the concept of impulse. (Hint: First calculate the time it took to bring the ship to rest.)
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00411.md
+- 原件 Git blob SHA：06f7cab4c899902dfbb3fcc93f69b49ca79a9485
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00412"></a>
+
+## CP-00412｜橄榄球员撞柱后的末速率
+
+**学科：** 力学　**知识点：** 冲量／橄榄球碰撞
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+一名质量为 $110\,\mathrm{kg}$ 的橄榄球运动员原本以 $8.00\,\mathrm{m/s}$ 跑动，之后迎面撞上带缓冲垫的球门柱，受到向后的力 $1.76\times10^4\,\mathrm{N}$，作用持续时间为 $5.50\times10^{-2}\,\mathrm{s}$。求碰撞后的**末速率**。
+
+## 英文原题（存档摘录）
+
+# Impulse — CP-00412
+
+Calculate the final speed of a 110-kg rugby player who is initially running at 8.00 m/s but collides head-on with a padded goalpost and experiences a backward force of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>1</mn><mtext>.</mtext><mrow><mtext>76</mtext><mo stretchy="false">×</mo><msup><mtext>10</mtext><mrow><mn>4</mn></mrow></msup></mrow><mspace width="0.25em" /><mtext> N</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{1 "." "76" times "10" rSup { size 8{4} } " N"} {}</annotation></semantics></math>
+
+ for <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>5</mn><mtext>.</mtext><mrow><mtext>50</mtext><mo stretchy="false">×</mo><msup><mtext>10</mtext><mrow><mtext>–2</mtext></mrow></msup></mrow><mspace width="0.25em" /><mtext> s</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{5 "." "50" times "10" rSup { size 8{"-2"} } " s"} {}</annotation></semantics></math>
+
+.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00412.md
+- 原件 Git blob SHA：2cdae133698a3e29f7f800122838659d97be2bf1
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00413"></a>
+
+## CP-00413｜消防水流撞墙施加的平均力
+
+**学科：** 力学　**知识点：** 冲量／动量流率
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+消防水带喷出的水以 $50.0\,\mathrm{kg/s}$ 的质量流率、$42.0\,\mathrm{m/s}$ 的速率沿水平方向撞击墙壁。假设水的**水平动量**在撞击后减为零，求水对墙壁的作用力大小。
+
+## 英文原题（存档摘录）
+
+# Impulse — CP-00413
+
+Water from a fire hose is directed horizontally against a wall at a rate of 50.0 kg/s and a speed of 42.0 m/s. Calculate the magnitude of the force exerted on the wall, assuming the water’s horizontal momentum is reduced to zero.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00413.md
+- 原件 Git blob SHA：2c4beafb660134ca9c9bd9676999e57d228c0fc9
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00414"></a>
+
+## CP-00414｜锤子撞击钉子的持续时间与作用力
+
+**学科：** 力学　**知识点：** 冲量／锤击钉子
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+质量 $0.450\,\mathrm{kg}$ 的锤子以 $7.00\,\mathrm{m/s}$ 沿水平方向击中钉子，在把钉子打入木板 $1.00\,\mathrm{cm}$ 后停止。（a）求撞击持续时间；（b）求锤子对钉子施加的平均作用力。
+
+## 英文原题（存档摘录）
+
+# Impulse — CP-00414
+
+A 0.450-kg hammer is moving horizontally at 7.00 m/s when it strikes a nail and comes to rest after driving the nail 1.00 cm into a board. (a) Calculate the duration of the impact. (b) What was the average force exerted on the nail?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00414.md
+- 原件 Git blob SHA：89ac8b3bdbf83ac6a19ab2a948a022279c463e99
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 审校提示：按平均恒定减速度处理，实际碰撞力可能随时间变化。
+
+---
+
+<a id="cp-00415"></a>
+
+## CP-00415｜用动量表示粒子的动能
+
+**学科：** 力学　**知识点：** 动量与动能／公式推导
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+从**线动量**与**动能**的定义出发，推导以粒子动量为自变量表示其动能的公式。
+
+## 英文原题（存档摘录）
+
+# Impulse — CP-00415
+
+Starting with the definitions of momentum and kinetic energy, derive an equation for the kinetic energy of a particle expressed as a function of its momentum.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00415.md
+- 原件 Git blob SHA：6ee27734640b10ad3d9ed004215e54b9de76e512
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00416"></a>
+
+## CP-00416｜小球斜撞竖直墙壁后的冲量
+
+**学科：** 力学　**知识点：** 冲量／二维矢量
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+小球的初速度大小为 $10\,\mathrm{m/s}$，方向与正 $x$ 轴成向上 $60^\circ$。小球撞击一面竖直墙壁后，以相同速率反弹，方向变成与负 $x$ 轴成向上 $60^\circ$。求墙壁作用在小球上的冲量矢量。
+
+## 英文原题（存档摘录）
+
+# Impulse — CP-00416
+
+A ball with an initial velocity of 10 m/s moves at an angle <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mtext>60º</mtext></mrow></mrow><mrow /></mrow></semantics></math>
+
+ above the *<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mo stretchy="false">+</mo><mi>x</mi></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{+x} {}</annotation></semantics></math>
+
+*-direction. The ball hits a vertical wall and bounces off so that it is moving <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mtext>60º</mtext></mrow></mrow><mrow /></mrow></semantics></math>
+
+ above the <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mo stretchy="false">−</mo><mi>x</mi></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{ - x} {}</annotation></semantics></math>
+
+-direction with the same speed. What is the impulse delivered by the wall?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00416.md
+- 原件 Git blob SHA：1ac601fafc02453fbec580f97503e6f699e58e65
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：题设条件不充分
+- 审校提示：未给小球质量，无法得到以N·s为单位的唯一数值；可用m作符号表达。
+
+---
+
+<a id="cp-00417"></a>
+
+## CP-00417｜由球拍冲量反求网球质量
+
+**学科：** 力学　**知识点：** 冲量／网球发球
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+网球运动员发球时，在将球竖直抛起达到最高点、速度暂时为零的瞬间击球。球拍对球施加 $540\,\mathrm{N}$ 的作用力，持续 $5.00\,\mathrm{ms}$，使球获得 $45.0\,\mathrm{m/s}$ 的末速度。根据这些数据求网球的质量。
+
+## 英文原题（存档摘录）
+
+# Impulse — CP-00417
+
+When serving a tennis ball, a player hits the ball when its velocity is zero (at the highest point of a vertical toss). The racquet exerts a force of 540 N on the ball for 5.00 ms, giving it a final velocity of 45.0 m/s. Using these data, find the mass of the ball.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00417.md
+- 原件 Git blob SHA：470aefb09bc194b0545fc1eb2809bf76323eabef
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00418"></a>
+
+## CP-00418｜橄榄球受踢前后的冲量
+
+**学科：** 力学　**知识点：** 冲量／斜抛与踢球
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+一名橄榄球踢球手把球从静止状态竖直下落 $1\,\mathrm{m}$ 至脚部。球离开脚时的速率为 $18\,\mathrm{m/s}$，方向与水平线成向上 $55^\circ$。求脚对球施加的冲量大小和方向。
+
+## 英文原题（存档摘录）
+
+# Impulse — CP-00418
+
+A punter drops a ball from rest vertically 1 meter down onto his foot. The ball leaves the foot with a speed of 18 m/s at an angle <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mtext>55º</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{"55"°} {}</annotation></semantics></math>
+
+ above the horizontal. What is the impulse delivered by the foot (magnitude and direction)?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00418.md
+- 原件 Git blob SHA：8b6ecac31207565a6a72c5c274bf43219cc05ccc
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：题设条件不充分
+- 审校提示：原独立题面没有给球质量，无法得到冲量的具体数值；可用质量符号表达。
+
+---
+
+<a id="cp-00419"></a>
+
+## CP-00419｜跳水与腹部拍击水面的入水深度
+
+**学科：** 力学　**知识点：** 冲量和能量／入水
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+**专业应用题。**以头部或双脚先入水的方式跳水，通常会比腹部平拍水面下潜得更深。先利用能量守恒概念解释入水深度的差异，再利用本章所学的动量与冲量知识解释这一差异。
+
+## 英文原题（存档摘录）
+
+# Conservation of Momentum — CP-00419
+
+**Professional Application**
+
+If you dive into water, you reach greater depths than if you do a belly flop. Explain this difference in depth using the concept of conservation of energy. Explain this difference in depth using what you have learned in this chapter.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00419.md
+- 原件 Git blob SHA：45abf913ef7a29effa4eed001480b30925a0b1ae
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00420"></a>
+
+## CP-00420｜在什么条件下系统动量守恒
+
+**学科：** 力学　**知识点：** 动量守恒／条件
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+什么情况下一个系统的总动量守恒？
+
+## 英文原题（存档摘录）
+
+# Conservation of Momentum — CP-00420
+
+Under what circumstances is momentum conserved?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00420.md
+- 原件 Git blob SHA：066288642280dff4bc283dfc9abf5f418dddc5be
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00421"></a>
+
+## CP-00421｜有外力的系统还能保持总动量守恒吗
+
+**学科：** 力学　**知识点：** 动量守恒／外力
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+如果有外力作用在系统上，其总动量是否仍有可能守恒？如果可以，需要满足什么条件？如果不能，为什么？
+
+## 英文原题（存档摘录）
+
+# Conservation of Momentum — CP-00421
+
+Can momentum be conserved for a system if there are external forces acting on the system? If so, under what conditions? If not, why not?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00421.md
+- 原件 Git blob SHA：d8a1a5d3645ad71032450f2b3a00715ac2cae801
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00422"></a>
+
+## CP-00422｜为何某一方向动量守恒而另一方向不守恒
+
+**学科：** 力学　**知识点：** 动量分量／各方向守恒
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+一个系统沿某一方向的动量可以守恒，而沿另一方向的动量却不守恒。这两个方向之间的夹角是多少？举例说明。
+
+## 英文原题（存档摘录）
+
+# Conservation of Momentum — CP-00422
+
+Momentum for a system can be conserved in one direction while not being conserved in another. What is the angle between the directions? Give an example.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00422.md
+- 原件 Git blob SHA：bca85ae8bee35e9a51499f170a7302389616ed07
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：概念表述歧义
+- 审校提示：通常讨论相互正交的分量方向，严格而言方向选择并不必然只能为唯一一对。
+
+---
+
+<a id="cp-00423"></a>
+
+## CP-00423｜汽车推动空气为何会产生阻力
+
+**学科：** 力学　**知识点：** 动量通量／空气阻力
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+**专业应用题。**利用动量概念和牛顿运动定律说明：汽车行驶时将空气推向其运动方向，为什么这一过程会对汽车产生一部分空气阻力？
+
+## 英文原题（存档摘录）
+
+# Conservation of Momentum — CP-00423
+
+**Professional Application**
+
+Explain in terms of momentum and Newton’s laws how a car’s air resistance is due in part to the fact that it pushes air in its direction of motion.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00423.md
+- 原件 Git blob SHA：355739a7d199692925b4b5e519ae2a9d313c3373
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00424"></a>
+
+## CP-00424｜系统总动量为零时各物体能否仍在运动
+
+**学科：** 力学　**知识点：** 动量守恒／零总动量
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+一个系统的总动量为零时，系统内的个别物体是否仍可能具有非零动量？请解释。
+
+## 英文原题（存档摘录）
+
+# Conservation of Momentum — CP-00424
+
+Can objects in a system have momentum while the momentum of the system is zero? Explain your answer.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00424.md
+- 原件 Git blob SHA：29538416896ad9c7967f5fc8d93968c139a8f71c
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00425"></a>
+
+## CP-00425｜动量守恒是否必然意味着系统总能量守恒
+
+**学科：** 力学　**知识点：** 动量守恒／能量守恒
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+只要一个系统的总动量守恒，该系统的**总能量**是否也一定守恒？请解释原因。
+
+## 英文原题（存档摘录）
+
+# Conservation of Momentum — CP-00425
+
+Must the total energy of a system be conserved whenever its momentum is conserved? Explain why or why not.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00425.md
+- 原件 Git blob SHA：716ca5ab7c03fc7c405dc0626d55a14efa49dffa
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：概念表述歧义
+- 审校提示：需区分系统内所有能量形式与机械能、动能守恒，并明确系统边界。
+
+---
+
+<a id="cp-00426"></a>
+
+## CP-00426｜两节铁路货车对撞并挂接后的速度
+
+**学科：** 力学　**知识点：** 完全非弹性碰撞／车厢
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+**专业应用题。**两节满载的铁路货车迎面低速相撞后挂接在一起。第一节质量为 $150{,}000\,\mathrm{kg}$，速度为 $+0.300\,\mathrm{m/s}$；第二节质量为 $110{,}000\,\mathrm{kg}$，速度为 $-0.120\,\mathrm{m/s}$，负号表示反方向运动。求两车挂接后的共同速度。
+
+## 英文原题（存档摘录）
+
+# Conservation of Momentum — CP-00426
+
+**Professional Application**
+
+Train cars are coupled together by being bumped into one another. Suppose two loaded train cars are moving toward one another, the first having a mass of 150,000 kg and a velocity of 0.300 m/s, and the second having a mass of 110,000 kg and a velocity of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mrow><mo stretchy="false">−</mo><mn>0</mn></mrow><mtext>.</mtext><mtext>120 m/s</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{ - 0 "." "120"`"m/s"} {}</annotation></semantics></math>
+
+. (The minus indicates direction of motion.) What is their final velocity?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00426.md
+- 原件 Git blob SHA：3566bd7ac9b04aafdd8e049b5f325a135cf3ceb1
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00427"></a>
+
+## CP-00427｜冰面上两团黏土碰撞后一起运动
+
+**学科：** 力学　**知识点：** 完全非弹性碰撞／黏土模型
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+一个质量为 $0.200\,\mathrm{kg}$ 的考拉造型黏土模型在冰面上以 $0.750\,\mathrm{m/s}$ 的速率滑动，随后撞上另一个质量为 $0.350\,\mathrm{kg}$、最初静止的黏土模型。两个模型均由软黏土制成，碰撞后黏在一起。求它们的共同末速度。
+
+## 英文原题（存档摘录）
+
+# Conservation of Momentum — CP-00427
+
+Suppose a clay model of a koala bear has a mass of 0.200 kg and slides on ice at a speed of 0.750 m/s. It runs into another clay model, which is initially motionless and has a mass of 0.350 kg. Both being soft clay, they naturally stick together. What is their final velocity?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00427.md
+- 原件 Git blob SHA：59a55594acba231b3a777181e75ca17cbde73a37
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00428"></a>
+
+## CP-00428｜汽车与树或迎面等质量汽车碰撞的乘员受力
+
+**学科：** 力学　**知识点：** 动量守恒／汽车碰撞
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+**专业应用题。**考虑以下问题：一辆汽车以 $10\,\mathrm{m/s}$ 撞上一棵树，并在 $0.26\,\mathrm{s}$ 内停止。车内有质量 $70\,\mathrm{kg}$ 的乘客，求安全带使乘客停止所施加的平均力。若这辆车改为与另一辆**质量相同、速率相同但行驶方向相反**的汽车发生迎面碰撞，且仍载有这名 $70\,\mathrm{kg}$ 乘客，上述问题的答案是否会改变？请解释。
+
+## 英文原题（存档摘录）
+
+# Conservation of Momentum — CP-00428
+
+**Professional Application**
+
+Consider the following question: *A car moving at 10 m/s crashes into a tree and stops in 0.26 s. Calculate the force the seatbelt exerts on a passenger in the car to bring him to a halt. The mass of the passenger is 70 kg.* Would the answer to this question be different if the car with the 70-kg passenger had collided with a car that has a mass equal to and is traveling in the opposite direction and at the same speed? Explain your answer.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00428.md
+- 原件 Git blob SHA：966dff22bc302d67f85c80d83ecbf8049fb05f84
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：物理模型依赖
+- 审校提示：第二情景没有独立给碰撞停止时间与乘员相对运动条件；是否相同须作条件分析。
+
+---
+
+<a id="cp-00429"></a>
+
+## CP-00429｜汽车撞上同向奔跑的鹿后速度
+
+**学科：** 力学　**知识点：** 完全非弹性碰撞／汽车与动物
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+一辆质量为 $900\,\mathrm{kg}$ 的汽车原来以 $30.0\,\mathrm{m/s}$ 行驶，撞上一只质量为 $150\,\mathrm{kg}$、沿同一方向以 $12.0\,\mathrm{m/s}$ 奔跑的鹿。假设鹿在碰撞后留在车上，求汽车刚碰撞后的速度。
+
+## 英文原题（存档摘录）
+
+# Conservation of Momentum — CP-00429
+
+What is the velocity of a 900-kg car initially moving at 30.0 m/s, just after it hits a 150-kg deer initially running at 12.0 m/s in the same direction? Assume the deer remains on the car.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00429.md
+- 原件 Git blob SHA：bfba5980adb3810abbb8dc6252fac516c840c12a
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00430"></a>
+
+## CP-00430｜猎鹰追上鸽子后的共同速度
+
+**学科：** 力学　**知识点：** 完全非弹性碰撞／鸟类捕食
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+一只质量为 $1.80\,\mathrm{kg}$ 的猎鹰在空中从后方抓住一只质量 $0.650\,\mathrm{kg}$ 的鸽子。抓住前猎鹰速度为 $28.0\,\mathrm{m/s}$，鸽子沿同一方向以 $7.00\,\mathrm{m/s}$ 飞行。求它们接触并一起运动后的速度。
+
+## 英文原题（存档摘录）
+
+# Conservation of Momentum — CP-00430
+
+A 1.80-kg falcon catches a 0.650-kg dove from behind in midair. What is their velocity after impact if the falcon’s velocity is initially 28.0 m/s and the dove’s velocity is 7.00 m/s in the same direction?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00430.md
+- 原件 Git blob SHA：8d690a9253557034dc529be824be4cf3628299de
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00431"></a>
+
+## CP-00431｜什么是弹性碰撞
+
+**学科：** 力学　**知识点：** 弹性碰撞／定义
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+什么是**弹性碰撞**？
+
+## 英文原题（存档摘录）
+
+# Elastic Collisions in One Dimension — CP-00431
+
+****What is an elastic collision?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00431.md
+- 原件 Git blob SHA：3d3af46dc0f27b2ae17b1cd51ef7100e172dfde4
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00432"></a>
+
+## CP-00432｜一维同质量弹性碰撞的两个守恒定律
+
+**学科：** 力学　**知识点：** 弹性碰撞／同质量球
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+两个完全相同的物体（如台球）发生一维碰撞，其中一个物体初始静止。碰撞后，原来运动的物体停下，而原来静止的物体获得与前者初速相同大小的速度。证明这种碰撞中**总动量和总动能**均守恒。
+
+## 英文原题（存档摘录）
+
+# Elastic Collisions in One Dimension — CP-00432
+
+Two identical objects (such as billiard balls) have a one-dimensional collision in which one is initially motionless. After the collision, the moving object is stationary and the other moves with the same speed as the other originally had. Show that both momentum and kinetic energy are conserved.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00432.md
+- 原件 Git blob SHA：e073fe319615dc687e4be7219fbb2d5c4a8cc60f
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00433"></a>
+
+## CP-00433｜两艘载人卫星弹性碰撞后的相对速度
+
+**学科：** 力学　**知识点：** 一维弹性碰撞／卫星对接
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+**专业应用题。**两艘载人卫星原打算对接，以相对速率 $0.250\,\mathrm{m/s}$ 彼此接近。第一艘质量为 $4.00\times10^3\,\mathrm{kg}$，第二艘为 $7.50\times10^3\,\mathrm{kg}$。若它们发生一维**弹性碰撞**而非完成对接，碰撞后的相对速度是多少？
+
+## 英文原题（存档摘录）
+
+# Elastic Collisions in One Dimension — CP-00433
+
+**Professional Application**
+
+Two manned satellites approach one another at a relative speed of 0.250 m/s, intending to dock. The first has a mass of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>4</mn><mtext>.</mtext><mrow><mtext>00</mtext><mo stretchy="false">×</mo><msup><mtext>10</mtext><mrow><mn>3</mn></mrow></msup></mrow><mspace width="0.25em" /><mtext> kg</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{4 "." "00" times "10" rSup { size 8{3} } " kg"} {}</annotation></semantics></math>
+
+, and the second a mass of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>7</mn><mtext>.</mtext><mrow><mtext>50</mtext><mo stretchy="false">×</mo><msup><mtext>10</mtext><mrow><mn>3</mn></mrow></msup></mrow><mspace width="0.25em" /><mtext> kg</mtext></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{7 "." "50" times "10" rSup { size 8{3} } " kg"} {}</annotation></semantics></math>
+
+. If the two satellites collide elastically rather than dock, what is their final relative velocity?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00433.md
+- 原件 Git blob SHA：001258f56eda7bb565cf717da0bf00487775008b
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00434"></a>
+
+## CP-00434｜守门员与冰球发生弹性碰撞的末速度
+
+**学科：** 力学　**知识点：** 一维弹性碰撞／冰球
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+质量为 $70.0\,\mathrm{kg}$ 的冰球守门员起初静止，接住一只以 $35.0\,\mathrm{m/s}$ 飞来的、质量为 $0.150\,\mathrm{kg}$ 的冰球。现在假设守门员与冰球之间发生的是**弹性碰撞**，冰球朝来时方向反弹。求两者在这种情况下的末速度。
+
+## 英文原题（存档摘录）
+
+# Elastic Collisions in One Dimension — CP-00434
+
+A 70.0-kg ice hockey goalie, originally at rest, catches a 0.150-kg hockey puck slapped at him at a velocity of 35.0 m/s. Suppose the goalie and the ice puck have an elastic collision and the puck is reflected back in the direction from which it came. What would their final velocities be in this case?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00434.md
+- 原件 Git blob SHA：f2bac9a55914d45c7b3fcef850cc604731331721
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 审校提示：原文先以接住为现实背景，再要求改设为弹性反弹，应按假设计算。
+
+---
+
+<a id="cp-00435"></a>
+
+## CP-00435｜非弹性碰撞和完全非弹性碰撞
+
+**学科：** 力学　**知识点：** 非弹性碰撞／定义
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+什么是**非弹性碰撞**？什么是**完全非弹性碰撞**？
+
+## 英文原题（存档摘录）
+
+# Inelastic Collisions in One Dimension — CP-00435
+
+****What is an inelastic collision? What is a perfectly inelastic collision?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00435.md
+- 原件 Git blob SHA：14082d267b229198895fd43c63e24c047656f1c8
 - 上游署名与许可证见原件；尚未完成单题权利审查。
 
 ---

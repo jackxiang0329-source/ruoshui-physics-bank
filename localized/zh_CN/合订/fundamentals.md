@@ -2,7 +2,7 @@
 
 > 仅供编辑复核：尚未通过独立双语、答案或版权审核；不可正式组卷。
 
-共 115 道。英文原文均以保留源指纹的上游快照为依据。
+共 117 道。英文原文均以保留源指纹的上游快照为依据。
 
 <a id="cp-00137"></a>
 
@@ -1967,6 +1967,65 @@ If the efficiency of a coal-fired electrical generating plant is 35%, then what 
 - 原件：external_sources/college_physics/raw/CP-00381.md
 - 原件 Git blob SHA：619d72e02d8f4005e05e331f2a8c0f017810ae8b
 - 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00386"></a>
+
+## CP-00386｜每天运动两小时可减去半千克脂肪吗
+
+**学科：** 物理基础　**知识点：** 人体代谢／不合理结果
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+**不合理结果题。**当膳食提供的能量不足以满足代谢需要时，身体会代谢脂肪，每克脂肪可提供 $9.30\,\mathrm{kcal}$。某健身车制造商声称，每天在其器械上剧烈运动 $2.00\,\mathrm{h}$ 就能减少 $0.500\,\mathrm{kg}$ 脂肪。（a）代谢 $0.500\,\mathrm{kg}$ 脂肪可以提供多少千卡？（b）若在两小时内以此速率代谢脂肪，每分钟需利用多少千卡？（c）结果有什么不合理之处？（d）哪项前提不合理或互相矛盾？
+
+## 英文原题（存档摘录）
+
+# World Energy Use — CP-00386
+
+**Unreasonable Results**
+
+Body fat is metabolized, supplying 9.30 kcal/g, when dietary intake is less than needed to fuel metabolism. The manufacturers of an exercise bicycle claim that you can lose 0.500 kg of fat per day by vigorously exercising for 2.00 h per day on their machine. (a) How many kcal are supplied by the metabolization of 0.500 kg of fat? (b) Calculate the kcal/min that you would have to utilize to metabolize fat at the rate of 0.500 kg in 2.00 h. (c) What is unreasonable about the results? (d) Which premise is unreasonable, or which premises are inconsistent?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00386.md
+- 原件 Git blob SHA：e23a643d540c2fb7c51c1e86f742b1d7f5f0b173
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 审校提示：原题意在质疑广告假设，脂肪质量变化不应直接等同实际短期体重变化。
+
+---
+
+<a id="cp-00388"></a>
+
+## CP-00388｜踩动发电装置替代大型电站需多少人
+
+**学科：** 物理基础　**知识点：** 电能供给／人力发电建模
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+**自拟问题。**设想人们通过踩踏类似健身自行车的设备发电。自行设定合理参数，估算要替代一座大型发电厂需要多少人。应考虑腿部可输出的功率、人员休息时间以及每天二十四小时不间断供电的需求，并讨论估算结果在实践中的意义。
+
+## 英文原题（存档摘录）
+
+# World Energy Use — CP-00388
+
+**Construct Your Own Problem**
+
+Consider humans generating electricity by pedaling a device similar to a stationary bicycle. Construct a problem in which you determine the number of people it would take to replace a large electrical generation facility. Among the things to consider are the power output that is reasonable using the legs, rest time, and the need for electricity 24 hours per day. Discuss the practical implications of your results.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00388.md
+- 原件 Git blob SHA：63528e78cd37af73eca9c429a7780164dfe1247b
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：需要估计参数
+- 审校提示：开放建模题，电站功率及人员轮换安排需自定。
 
 ---
 
