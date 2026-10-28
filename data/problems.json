@@ -1009,6 +1009,56 @@
     "complexity_tier": "L5-C"
   },
   {
+    "id": "W016",
+    "topic": "振动与波动",
+    "title": "有限异质弦段的双界面散射、透射共振与能流守恒",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "question": "一根无限长、始终保持相同静张力 $T>0$ 的无损细弦，其线密度在 $x<0$ 与 $x>d$ 两个半无限区段均为 $\\mu_1>0$，而在 $0<x<d$ 为 $\\mu_2>0$，$d>0$。角频率 $\\omega>0$ 的单色横波从 $x=-\\infty$ 以时间因子 $e^{-i\\omega t}$ 入射，假定界面位移和由弦张力产生的横向力连续。\n(1) 写出三段的波数、特征机械阻抗和单一界面的反射透射振幅；(2) 对有限中间区段的所有多次内反射求总反射幅度 $r$ 与总透射幅度 $t$；(3) 证明无损结构的 $|r|^2+|t|^2=1$，求透射率与中间层相位的关系；(4) 找出完全透射的厚度/频率条件和最小透射率，并讨论 $d\\to0$、$\\mu_1=\\mu_2$ 极限。",
+    "solution": "(1) 三段波速 $c_j=\\sqrt{T/\\mu_j}$、波数 $k_j=\\omega/c_j$，横向行波的特征机械阻抗为 $Z_j=Tk_j/\\omega=\\sqrt{T\\mu_j}>0$。对从介质1向介质2的单一界面，写位移振幅 $1+r_{12}$ 与 $t_{12}$ 连续，且 $Tk_1(1-r_{12})=Tk_2t_{12}$，故\n\\[\nr_{12}=\\frac{Z_1-Z_2}{Z_1+Z_2}=:\\rho,\\qquad\nt_{12}=\\frac{2Z_1}{Z_1+Z_2}.\n\\]\n从2到1的界面有 $r_{21}=-\\rho,\\ t_{21}=2Z_2/(Z_1+Z_2)$。\n\n(2) 令中层单程相位 $\\varphi=k_2d$。每次在中层完整往返获得因子 $\\rho^2e^{2i\\varphi}$，几何级数绝对收敛，因为 $|\\rho|<1$。总透射幅度为\n\\[\nt=\\frac{t_{12}t_{21}e^{i\\varphi}}{1-\\rho^2e^{2i\\varphi}}\n=\\frac{(1-\\rho^2)e^{i\\varphi}}{1-\\rho^2e^{2i\\varphi}}.\n\\]\n反射由前界面反射加上中层往返项累加，得到\n\\[\nr=\\frac{\\rho(1-e^{2i\\varphi})}{1-\\rho^2e^{2i\\varphi}}.\n\\]\n这里透射幅度定义在右界面 $x=d$，相位中的 $e^{i\\varphi}$ 是从左界面到右界面的传播相位；若用右侧统一全局坐标，其相位还会乘一个模为1的参考因子，不影响物理透射率。\n\n(3) 左右外部弦材料相同，入射与透射能流比例即为 $|t|^2$，反射能流比是 $|r|^2$。利用\n\\[\n|1-\\rho^2e^{2i\\varphi}|^2=(1-\\rho^2)^2+4\\rho^2\\sin^2\\varphi\n\\]\n可得\n\\[\n\\mathcal T=|t|^2=\\frac1{1+F\\sin^2\\varphi},\\qquad\nF=\\frac{4\\rho^2}{(1-\\rho^2)^2}\n=\\frac{(Z_1^2-Z_2^2)^2}{4Z_1^2Z_2^2},\n\\]\n并由反射幅度的模平方直接算得 $|r|^2=1-\\mathcal T$，所以总能流守恒。\n\n(4) 当 $\\varphi=n\\pi$，$n$ 为整数时 $r=0,\\mathcal T=1$，有限异质区段在这些共振条件下完全透射。当 $\\varphi=(n+1/2)\\pi$ 时\n\\[\n\\mathcal T_{\\min}=\\frac1{1+F}=\\frac{4Z_1^2Z_2^2}{(Z_1^2+Z_2^2)^2}.\n\\]\n当 $d\\to0$，$\\varphi\\to0$，故 $\\mathcal T\\to1$。当 $\\mu_1=\\mu_2$ 时 $\\rho=0$，所有频率均完全透射。",
+    "answer": "\\mathcal T=[1+4\\rho^2\\sin^2(k_2d)/(1-\\rho^2)^2]^{-1},\\quad \\rho=(Z_1-Z_2)/(Z_1+Z_2)",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "多界面散射",
+      "特征机械阻抗",
+      "复反射幅度",
+      "Fabry–Pérot共振",
+      "能流守恒"
+    ],
+    "assumptions_review": "模型及主要极限初核；待独立复核",
+    "checks": [],
+    "revision": "composite-v1.5",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
+    "id": "W017",
+    "topic": "振动与波动",
+    "title": "固定边缘圆形膜的贝塞尔本征模、简并与能量正性",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "question": "一张均匀各向同性圆形薄膜半径为 $a>0$，面张力为 $T>0$（单位为力每长度）、面密度为 $\\rho>0$，边缘固定在 $r=a$，只研究小振幅横向位移 $u(r,\\phi,t)$。薄膜满足 $u_{tt}=c^2\\nabla^2u$，其中 $c=\\sqrt{T/\\rho}$，在中心位移必须有限。\n(1) 用极坐标变量分离求一般角向模与径向本征方程，说明为何应排除第二类贝塞尔函数；(2) 给出所有正本征频率 $\\omega_{m,n}$ 及模态波形，解释角向简并；(3) 推导能量积分中的频率正性和不同模态的正交条件，并给出同一角量子数下径向模的归一化积分；(4) 求基本模频率的数值系数，讨论将半径扩大为 $\\eta a$ 时频谱如何变化。",
+    "solution": "(1) 极坐标 Laplace 算符为\n\\[\n\\nabla^2=\\partial_r^2+\\frac1r\\partial_r+\\frac1{r^2}\\partial_\\phi^2.\n\\]\n设 $u=R(r)\\Phi(\\phi)e^{-i\\omega t}$，角向单值性 $\\Phi(\\phi+2\\pi)=\\Phi(\\phi)$ 使角向方程 $\\Phi''+m^2\\Phi=0$ 的指标 $m=0,1,2,\\ldots$。径向方程为\n\\[\nr^2R''+rR'+(k^2r^2-m^2)R=0,\\quad k=\\omega/c.\n\\]\n两个基本解为 $J_m(kr)$ 与 $Y_m(kr)$，后者在 $r\\to0$ 时发散或对 $m=0$ 为对数发散，不满足中心有限条件，必须舍去。\n\n(2) 边缘固定 $R(a)=0$，故 $J_m(ka)=0$。令 $j_{m,n}$ 为 $J_m$ 的第 $n=1,2,\\ldots$ 个严格正零点，则\n\\[\n\\omega_{m,n}=\\frac ca j_{m,n},\\quad\nu_{m,n}\\propto J_m(j_{m,n}r/a)\n\\begin{cases}\n\\cos(m\\phi)\\\\ \\sin(m\\phi)\n\\end{cases}e^{-i\\omega_{m,n}t}.\n\\]\n$m=0$ 时只有常数角模，不发生角简并；$m\\ge1$ 时 $\\cos m\\phi,\\sin m\\phi$ 给出两个线性独立但同频的实角模。\n\n(3) 将 $-\\rho\\omega^2U=T\\nabla^2U$ 乘以 $U^*$ 后在圆盘 $\\mathcal D$ 积分，边界 $U=0$ 使分部积分边界项消失，得到\n\\[\n\\rho\\omega^2\\int_{\\mathcal D}|U|^2\\,dA\n=T\\int_{\\mathcal D}|\\nabla U|^2\\,dA>0\n\\]\n（非零模态），故 $\\omega^2>0$。对不同特征值做同样的交叉积分，推得 $\\int_{\\mathcal D}U_i^*U_j\\,dA=0$。同一 $m$ 的径向正交归一积分为\n\\[\n\\int_0^a rJ_m(j_{m,n}r/a)J_m(j_{m,p}r/a)\\,dr\n=\\frac{a^2}{2}J_{m+1}(j_{m,n})^2\\delta_{np}.\n\\]\n角向正交另由正弦、余弦积分给出。\n\n(4) 最低正频模为 $m=0,n=1$，首个零点 $j_{0,1}\\simeq2.4048255577$，故\n\\[\n\\omega_{\\mathrm{fund}}\\simeq2.4048255577\\,c/a.\n\\]\n若 $T,\\rho$ 不变而半径变为 $\\eta a$，所有波数按 $1/\\eta$ 缩放，故各频率 $\\omega_{m,n}\\mapsto\\omega_{m,n}/\\eta$。这由波动方程的尺度对称性独立验证。",
+    "answer": "\\omega_{m,n}=cj_{m,n}/a,\\quad\\omega_{\\rm fund}\\simeq2.4048255577\\,c/a",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "二维波动方程",
+      "极坐标分离变量",
+      "贝塞尔函数",
+      "频率简并",
+      "正交归一"
+    ],
+    "assumptions_review": "模型及主要极限初核；待独立复核",
+    "checks": [],
+    "revision": "composite-v1.5",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
     "id": "O007",
     "topic": "光学",
     "title": "分离薄透镜系统的矩阵成像与无焦条件",
@@ -1224,6 +1274,56 @@
     "complexity_tier": "L5-A"
   },
   {
+    "id": "O016",
+    "topic": "光学",
+    "title": "单层增透膜的多界面复反射、四分之一波厚度与带宽",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 65,
+    "question": "波长为 $\\lambda_0>0$ 的单色光从折射率为 $n_0>0$ 的无吸收介质正入射到覆有单层无吸收增透膜的基底。膜折射率为 $n_1>0$、厚度为 $d>0$，基底折射率为 $n_s>n_0$，各介质均非磁性，平面界面无限延伸。正入射 Fresnel 电场反射振幅 $r_{ij}=(n_i-n_j)/(n_i+n_j)$，忽略材料色散。\n(1) 将膜内多次反射求和，推导整体电场反射系数 $r$ 的复幅度表达式；(2) 使膜在设计波长 $\\lambda_0$ 处反射严格为零，求 $n_1$ 与最小正膜厚；(3) 对满足上述最优条件的膜，证明其在 $\\lambda=\\lambda_0+\\Delta\\lambda$、$|\\Delta\\lambda|\\ll\\lambda_0$ 时反射率的首个非零修正是二阶，并写出系数；(4) 给出能流透射率、无吸收能量守恒与 $\\Delta\\lambda=0$ 的极限，说明为何本结果仅在指定波长和理想膜条件下是完全增透。",
+    "solution": "(1) 记两个单界面 Fresnel 反射幅度\n\\[\nr_{01}=\\frac{n_0-n_1}{n_0+n_1},\\qquad r_{12}=\\frac{n_1-n_s}{n_1+n_s},\n\\]\n膜单程相位 $\\delta=2\\pi n_1d/\\lambda$。利用多次往返传播 $e^{2i\\delta}$ 与界面振幅关系，整体复反射幅度为\n\\[\nr(\\lambda)=\\frac{r_{01}+r_{12}e^{2i\\delta}}{1+r_{01}r_{12}e^{2i\\delta}},\n\\qquad \\mathcal R=|r|^2.\n\\]\n这是电场幅度的相干和，不可以先将各反射强度相加。\n\n(2) 四分之一波条件 $\\delta(\\lambda_0)=\\pi/2$ 使 $e^{2i\\delta}=-1$。此时 $r=(r_{01}-r_{12})/(1-r_{01}r_{12})$，所以零反射要求 $r_{01}=r_{12}$。化简得\n\\[\nn_1^2=n_0n_s,\\qquad n_1=\\sqrt{n_0n_s}.\n\\]\n使 $\\delta_0=\\pi/2$ 的最小正厚度为\n\\[\nd_{\\min}=\\frac{\\lambda_0}{4\\sqrt{n_0n_s}}.\n\\]\n因为 $n_s>n_0$，此时 $n_0<n_1<n_s$，界面反射幅度均为负数，恰以半波往返相位抵消。\n\n(3) 在零反射设计下令 $\\rho=r_{01}=r_{12}$，$|\\rho|<1$，以及 $\\varepsilon=\\delta-\\pi/2$。有 $e^{2i\\delta}=-e^{2i\\varepsilon}$，因此\n\\[\nr=\\frac{\\rho(1-e^{2i\\varepsilon})}{1-\\rho^2e^{2i\\varepsilon}}\n=-\\frac{2i\\rho}{1-\\rho^2}\\varepsilon+O(\\varepsilon^2).\n\\]\n由 $\\delta=(\\pi/2)(\\lambda_0/\\lambda)$，$\\varepsilon=-(\\pi/2)(\\Delta\\lambda/\\lambda_0)+O((\\Delta\\lambda/\\lambda_0)^2)$，所以\n\\[\n\\mathcal R(\\lambda)\n=\\frac{\\pi^2\\rho^2}{(1-\\rho^2)^2}\n\\left(\\frac{\\Delta\\lambda}{\\lambda_0}\\right)^2\n+O\\!\\left(\\left|\\frac{\\Delta\\lambda}{\\lambda_0}\\right|^3\\right).\n\\]\n一阶反射率项消失，说明设计中心处是严格的反射率极小值。\n\n(4) 正入射时能流与介质折射率成正比，若整体透射电场幅度为 $t$，则 $\\mathcal T=(n_s/n_0)|t|^2$，不可直接用 $|t|^2$ 代替能流透射率。无吸收多层膜满足 $\\mathcal R+\\mathcal T=1$，所以设计波长 $\\mathcal R=0,\\mathcal T=1$。偏离设计波长、入射角非零、膜吸收或有色散时不再保证完全增透。",
+    "answer": "n_1=\\sqrt{n_0n_s},\\quad d_{\\min}=\\lambda_0/(4\\sqrt{n_0n_s}),\\quad\\mathcal R\\simeq\\frac{\\pi^2\\rho^2}{(1-\\rho^2)^2}(\\Delta\\lambda/\\lambda_0)^2",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "Fresnel振幅系数",
+      "薄膜相干干涉",
+      "四分之一波光学厚度",
+      "反射率消零",
+      "色散与带宽"
+    ],
+    "assumptions_review": "模型及主要极限初核；待独立复核",
+    "checks": [],
+    "revision": "composite-v1.5",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B"
+  },
+  {
+    "id": "O017",
+    "topic": "光学",
+    "title": "色散棱镜的最小偏向角、对称驻值与光谱角色散",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "question": "一块顶角为 $A$（$0<A<\\pi$）的理想均匀三棱镜处于空气中，折射率为 $n(\\lambda)>1$，忽略反射损耗和吸收，仅研究从一个侧面入射并从另一侧面出射、无全反射的几何光线。入射角 $i$、出射角 $e$ 均由对应表面法线量起；棱镜内两个折射角为 $r_1,r_2$，满足 $r_1+r_2=A$。\n(1) 建立偏向角 $D=i+e-A$ 与 Snell 关系；(2) 严格证明在满足 $n\\sin(A/2)<1$ 的对称传播分支上，偏向角在 $r_1=r_2=A/2$ 取得局部极小，求 $D_{\\min}(\\lambda)$；(3) 求最小偏向角随波长的导数，并对 $n(\\lambda)=n_\\infty+C/\\lambda^2$（$C>0$）判断角色散方向；(4) 求 $A\\to0^+$ 时的薄棱镜近似以及对称点附近偏向角的二阶展开，说明结果的几何适用条件。",
+    "solution": "(1) 棱镜内几何关系 $r_1+r_2=A$；两面 Snell 关系为\n\\[\n\\sin i=n\\sin r_1,\\qquad \\sin e=n\\sin r_2,\n\\]\n从折线转角相加得到 $D=i+e-A$。在无全反射且角度取主值的分支，定义 $f(r)=\\arcsin(n\\sin r)$，则\n\\[\nD(r_1)=f(r_1)+f(A-r_1)-A.\n\\]\n该公式已经把进出光线方向的几何关系与折射关系分离。\n\n(2) 一阶导数 $D'(r_1)=f'(r_1)-f'(A-r_1)$，所以 $r_1=A/2$ 是驻值。又\n\\[\nf'(r)=\\frac{n\\cos r}{\\sqrt{1-n^2\\sin^2r}},\\qquad\nf''(r)=\\frac{n(n^2-1)\\sin r}{(1-n^2\\sin^2r)^{3/2}}.\n\\]\n在所述内角为正且折射光线可出射的区间内 $f''>0$，故 $D''=f''(r_1)+f''(A-r_1)>0$，该驻值是严格局部极小（在同一可行凸分支中也是唯一极小）。因此\n\\[\nD_{\\min}(\\lambda)=2\\arcsin\\!\\left[n(\\lambda)\\sin\\frac A2\\right]-A.\n\\]\n\n(3) 对波长求导：\n\\[\n\\frac{dD_{\\min}}{d\\lambda}\n=\\frac{2\\sin(A/2)}{\\sqrt{1-n(\\lambda)^2\\sin^2(A/2)}}\\frac{dn}{d\\lambda}.\n\\]\n若 $n(\\lambda)=n_\\infty+C/\\lambda^2$，则 $dn/d\\lambda=-2C/\\lambda^3<0$，所以最小偏向角随波长增大而减小，短波比长波偏折更显著。接近全反射临界域时分母趋零，不能忽略分支有效性的限制。\n\n(4) 对固定 $n$ 令 $A\\to0^+$，由反正弦的泰勒展开有 $D_{\\min}=(n-1)A+O(A^3)$。在对称点附近设 $r_1=A/2+\\eta,\\ r_2=A/2-\\eta$，则奇次项相消，\n\\[\nD=D_{\\min}\n+\\frac{n(n^2-1)\\sin(A/2)}\n{[1-n^2\\sin^2(A/2)]^{3/2}}\\eta^2\n+O(\\eta^4).\n\\]\n系数严格为正，独立验证极小性质。以上仅适用于光线实际能在两面通过且分支无全反射的情况。",
+    "answer": "D_{\\min}=2\\arcsin[n(\\lambda)\\sin(A/2)]-A,\\quad dD_{\\min}/d\\lambda=\\frac{2\\sin(A/2)n'(\\lambda)}{\\sqrt{1-n^2\\sin^2(A/2)}}",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "Snell折射定律",
+      "对称最小偏向",
+      "角度二阶导数",
+      "材料色散",
+      "几何光学有效域"
+    ],
+    "assumptions_review": "模型及主要极限初核；待独立复核",
+    "checks": [],
+    "revision": "composite-v1.5",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B"
+  },
+  {
     "id": "Q007",
     "topic": "近代物理",
     "title": "相对论两体衰变的能量区间与阈值",
@@ -1437,5 +1537,55 @@
     "revision": "composite-v1.4",
     "challenge_profile": "high-multistage",
     "complexity_tier": "L5-B"
+  },
+  {
+    "id": "Q016",
+    "topic": "近代物理",
+    "title": "量子谐振子相干态的泊松统计、经典轨迹与最小不确定性",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "question": "一维质量 $m>0$、角频率 $\\omega>0$ 的量子谐振子哈密顿量为 $H=\\hbar\\omega(a^\\dagger a+1/2)$，其中 $[a,a^\\dagger]=1$。在 $t=0$ 时系统处于归一化相干态 $|\\alpha\\rangle$，满足 $a|\\alpha\\rangle=\\alpha|\\alpha\\rangle$，$\\alpha\\in\\mathbb C$。位置和动量分别为 $x=\\sqrt{\\hbar/(2m\\omega)}(a+a^\\dagger)$、$p=-i\\sqrt{m\\hbar\\omega/2}(a-a^\\dagger)$。\n(1) 从 $a$ 的本征值条件推导 Fock 态展开、粒子数概率分布与平均、方差；(2) 求 $|\\alpha\\rangle$ 的平均能量并分离零点能与经典激发能；(3) 求 $|\\psi(t)\\rangle$、$\\langle x(t)\\rangle$ 和 $\\langle p(t)\\rangle$，证明其中心遵守经典谐振子轨迹；(4) 求任意时刻的 $\\Delta x,\\Delta p$，验证海森堡不确定性下界饱和，并解释为什么这种态与频率骤变产生的压缩态不同。",
+    "solution": "(1) 展开 $|\\alpha\\rangle=\\sum_{n=0}^\\infty c_n|n\\rangle$，使用 $a|n\\rangle=\\sqrt n|n-1\\rangle$，本征值方程给 $c_{n+1}=\\alpha c_n/\\sqrt{n+1}$。归一化取整体相位为零，得到\n\\[\n|\\alpha\\rangle=e^{-|\\alpha|^2/2}\\sum_{n=0}^\\infty\\frac{\\alpha^n}{\\sqrt{n!}}|n\\rangle.\n\\]\n因而\n\\[\nP_n=e^{-|\\alpha|^2}\\frac{|\\alpha|^{2n}}{n!}.\n\\]\n这是参数 $\\bar n=|\\alpha|^2$ 的泊松分布，$\\langle n\\rangle=|\\alpha|^2,\\ \\operatorname{Var}(n)=|\\alpha|^2$；当 $\\alpha=0$ 时回到基态。\n\n(2) 由 $H=\\hbar\\omega(n+1/2)$，平均能量为\n\\[\n\\langle H\\rangle=\\hbar\\omega(|\\alpha|^2+1/2).\n\\]\n其中 $\\hbar\\omega|\\alpha|^2$ 是可与经典谐振运动对应的激发能，$\\hbar\\omega/2$ 是不因经典振幅消失而消失的零点能。\n\n(3) 各 Fock 分量演化因子为 $e^{-i(n+1/2)\\omega t}$，因此\n\\[\n|\\psi(t)\\rangle=e^{-i\\omega t/2}|\\alpha e^{-i\\omega t}\\rangle.\n\\]\n令 $\\alpha_t=\\alpha e^{-i\\omega t}$，则\n\\[\n\\langle x(t)\\rangle=\\sqrt{\\frac{2\\hbar}{m\\omega}}\\Re\\alpha_t,\\qquad\n\\langle p(t)\\rangle=\\sqrt{2m\\hbar\\omega}\\Im\\alpha_t.\n\\]\n直接微分得 $d\\langle x\\rangle/dt=\\langle p\\rangle/m$ 与 $d\\langle p\\rangle/dt=-m\\omega^2\\langle x\\rangle$，完全满足经典中心轨迹方程。\n\n(4) 使用 $a|\\alpha\\rangle=\\alpha|\\alpha\\rangle$ 及 $aa^\\dagger=a^\\dagger a+1$ 计算\n\\[\n(\\Delta x)^2=\\frac{\\hbar}{2m\\omega},\\qquad\n(\\Delta p)^2=\\frac{m\\hbar\\omega}{2},\n\\]\n且协方差为零，因此 $\\Delta x\\,\\Delta p=\\hbar/2$，各方差在时间演化中保持不变。相干态是最小不确定性、形状不变的位移基态；频率骤变后的高斯压缩态则通常使两个方差周期性交换，不能将二者混为一谈。",
+    "answer": "P_n=e^{-|\\alpha|^2}|\\alpha|^{2n}/n!,\\quad \\langle H\\rangle=\\hbar\\omega(|\\alpha|^2+1/2),\\quad\\Delta x\\Delta p=\\hbar/2",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "量子相干态",
+      "Fock态展开",
+      "泊松分布",
+      "海森堡演化",
+      "不确定性关系"
+    ],
+    "assumptions_review": "模型及主要极限初核；待独立复核",
+    "checks": [],
+    "revision": "composite-v1.5",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B"
+  },
+  {
+    "id": "Q017",
+    "topic": "近代物理",
+    "title": "一维有限方势阱的偶奇束缚态、阈值数目与弱束缚渐近",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 80,
+    "question": "质量为 $m>0$ 的非相对论粒子处在对称有限方势阱\n\\[\nV(x)=\\begin{cases}-V_0,&|x|<a,\\\\0,&|x|\\ge a,\\end{cases}\\qquad V_0>0,\\ a>0 .\n\\]\n只研究平方可积束缚态 $-V_0<E<0$，忽略自旋与其他作用。\n(1) 利用中心对称宇称和 $x=\\pm a$ 处波函数及导数连续性，建立偶态、奇态的能级超越方程；(2) 用无量纲阱强度 $\\lambda=a\\sqrt{2mV_0}/\\hbar$ 求束缚态数目，并说明阈值处为何不把 $E=0$ 计为束缚态；(3) 给出偶、奇态波函数的归一化常数表达式，证明能级均简单而没有奇偶简并；(4) 在 $V_0\\to\\infty$ 的固定低能级序号极限及 $V_0\\to0^+$ 的浅阱极限求能量的主导近似。",
+    "solution": "(1) 在阱内设\n\\[\nk=\\sqrt{2m(E+V_0)}/\\hbar>0,\\qquad\n\\kappa=\\sqrt{-2mE}/\\hbar>0,\n\\]\n满足 $k^2+\\kappa^2=2mV_0/\\hbar^2$。偶宇称解为阱内 $A\\cos kx$，阱外 $A\\cos(ka)e^{-\\kappa(|x|-a)}$；在 $x=a$ 处导数连续给\n\\[\nk\\tan(ka)=\\kappa\\qquad\\text{（偶态）}.\n\\]\n奇宇称解为阱内 $A\\sin kx$，阱外 $A\\,\\operatorname{sgn}(x)\\sin(ka)e^{-\\kappa(|x|-a)}$；导数连续给\n\\[\n-k\\cot(ka)=\\kappa\\qquad\\text{（奇态）}.\n\\]\n\n(2) 令 $z=ka\\in(0,\\lambda)$，则 $\\kappa a=\\sqrt{\\lambda^2-z^2}$。偶态分支依次位于 $z\\in(0,\\pi/2),(\\pi,3\\pi/2),\\ldots$；奇态分支依次位于 $(\\pi/2,\\pi),(3\\pi/2,2\\pi),\\ldots$。每跨过 $\\lambda=j\\pi/2$（$j=1,2,\\ldots$）就允许出现一个新束缚分支，严格在阈值的态 $E=0$ 不平方可积。因此总束缚态数为\n\\[\nN_{\\rm bound}=\\left\\lceil\\frac{2\\lambda}{\\pi}\\right\\rceil\n\\]\n（$\\lambda>0$），包括始终存在的偶宇称基态。\n\n(3) 对偶态，在 $-\\infty$ 到 $\\infty$ 积分 $|\\psi|^2$，得到\n\\[\nA_{\\rm even}^{-2}=a+\\frac{\\sin(2ka)}{2k}+\\frac{\\cos^2(ka)}{\\kappa}.\n\\]\n对奇态则有\n\\[\nA_{\\rm odd}^{-2}=a-\\frac{\\sin(2ka)}{2k}+\\frac{\\sin^2(ka)}{\\kappa}.\n\\]\n两式皆严格正。对于一维连续有限势的平方可积本征态，同一能量的两个独立解的 Wronskian 必为常数，且在无穷远衰减使其为零，因此两解线性相关，说明束缚能级不简并。\n\n(4) 在 $V_0\\to\\infty$ 且固定级次 $n=1,2,\\ldots$ 时 $\\kappa a\\gg1$，边界趋近 Dirichlet 条件 $x=\\pm a$，故\n\\[\nE_n=-V_0+\\frac{\\hbar^2\\pi^2n^2}{8ma^2}+o(1)\n\\]\n（对应一条宽 $2a$ 的无限深方阱的低级能量）。在浅阱 $V_0\\to0^+$ 时仅一个偶态；由 $ka\\ll1$ 与 $k\\tan(ka)\\simeq k^2a$，以及 $k^2\\simeq2mV_0/\\hbar^2$，得到 $\\kappa\\simeq2mV_0a/\\hbar^2$，因此\n\\[\nE_{\\rm ground}\\simeq-\\frac{2mV_0^2a^2}{\\hbar^2}.\n\\]\n这一束缚态能量在浅阱极限接近连续谱边缘，但只要 $V_0>0$ 就仍为负。",
+    "answer": "k\\tan(ka)=\\kappa\\ ({\\rm even}),\\quad -k\\cot(ka)=\\kappa\\ ({\\rm odd}),\\quad N_{\\rm bound}=\\lceil2a\\sqrt{2mV_0}/(\\pi\\hbar)\\rceil",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "定态薛定谔方程",
+      "有限深势阱",
+      "偶奇宇称",
+      "超越本征值",
+      "阈值与渐近"
+    ],
+    "assumptions_review": "模型及主要极限初核；待独立复核",
+    "checks": [],
+    "revision": "composite-v1.5",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
   }
 ]
