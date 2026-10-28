@@ -1,7 +1,7 @@
 {
   "status": "draft-only",
-  "new_problem_count": 17,
-  "passed_count": 68,
+  "new_problem_count": 18,
+  "passed_count": 72,
   "tests": [
     {
       "id": "M059",
@@ -478,6 +478,34 @@
       "method": "independent_derivation",
       "name": "linear analyzer intensity and full azimuth integral reproduce finite retardance transmission",
       "passed": true
+    },
+    {
+      "id": "Q059",
+      "part": 1,
+      "method": "symbolic",
+      "name": "truncated Jaynes Cummings excitation operator commutes and dressed secular polynomial holds",
+      "passed": true
+    },
+    {
+      "id": "Q059",
+      "part": 2,
+      "method": "conservation",
+      "name": "unitary exact dressed propagator and atom photon interaction energy accounting",
+      "passed": true
+    },
+    {
+      "id": "Q059",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "Poisson coherent photon moments give collapse Gaussian variance and adjacent dressed phase revival slope",
+      "passed": true
+    },
+    {
+      "id": "Q059",
+      "part": 4,
+      "method": "limit",
+      "name": "dispersive dressed energy shift and coherent cavity dephasing envelope revival",
+      "passed": true
     }
   ],
   "independent_expert_review": "pending",
@@ -582,6 +610,12 @@
       "id": "O059",
       "method": "independent_high_precision_quadrature",
       "name": "50 digit azimuthal polarizer throughput for q equals three halves matches analytic mean",
+      "passed": true
+    },
+    {
+      "id": "Q059",
+      "method": "independent_high_precision_poisson_sum",
+      "name": "50 digit coherent state collapse estimate, neighboring phase revival and dispersive characteristic function",
       "passed": true
     }
   ]

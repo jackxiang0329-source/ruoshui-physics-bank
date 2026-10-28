@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Sixty executable draft subpart checks, NOT the required 200-item final gate."""
+"""Executable draft subpart checks, NOT the required 200-item final gate."""
 import json
 import math
 import mpmath as mp
@@ -535,10 +535,71 @@ assert abs(avg059-(1-mp.sin(dnum059/2)**2/2))<mp.mpf('1e-45')
 supplemental.append(dict(id='O059',method='independent_high_precision_quadrature',
                          name='50 digit azimuthal polarizer throughput for q equals three halves matches analytic mean',passed=True))
 
-assert len(checks)==68 and len(set((v['id'],v['part']) for v in checks))==68
-assert len(set(v['method'] for v in checks if v['id']=='W058'))>=2
 
-result={'status':'draft-only','new_problem_count':17,'passed_count':len(checks),'tests':checks,'independent_expert_review':'pending','supplemental_numeric_checks':supplemental}
+# Q059: quantized Jaynes--Cummings cavity, dressed doublets, collapse/revival, dispersive entanglement.
+wa059,wc059,g059=s.symbols('wa059 wc059 g059',positive=True,real=True)
+a059=s.Matrix([[0,1,0],[0,0,s.sqrt(2)],[0,0,0]])
+num059=s.diag(0,1,2)
+sigz059=s.diag(1,-1)
+sigp059=s.Matrix([[0,1],[0,0]])
+pe059=s.diag(1,0)
+H059=s.kronecker_product(s.eye(2),wc059*num059)+wa059*s.kronecker_product(sigz059,s.eye(3))/2+g059*(s.kronecker_product(sigp059,a059)+s.kronecker_product(sigp059.T,a059.T))
+N059=s.kronecker_product(s.eye(2),num059)+s.kronecker_product(pe059,s.eye(3))
+delta059,x059=s.symbols('delta059 x059',real=True)
+G059=s.symbols('G059',positive=True)
+block059=s.Matrix([[delta059/2,G059],[G059,-delta059/2]])
+Omega059=s.sqrt(delta059**2+4*G059**2)
+record('Q059',1,'symbolic',
+       'truncated Jaynes Cummings excitation operator commutes and dressed secular polynomial holds',
+       H059*N059-N059*H059==s.zeros(6,6)
+       and eq((x059*s.eye(2)-block059).det(),x059**2-Omega059**2/4))
+t059=s.symbols('t059',real=True)
+U059=s.cos(Omega059*t059/2)*s.eye(2)-2*s.I*s.sin(Omega059*t059/2)*block059/Omega059
+P059=4*G059**2/Omega059**2*s.sin(Omega059*t059/2)**2
+ce059,cg059=U059[0,0],U059[1,0]
+record('Q059',2,'conservation',
+       'unitary exact dressed propagator and atom photon interaction energy accounting',
+       all(eq(s.trigsimp(z)) for z in U059.conjugate().T*U059-s.eye(2))
+       and eq(s.trigsimp(s.conjugate(cg059)*cg059),P059)
+       and eq(s.trigsimp(2*G059*s.re(s.conjugate(ce059)*cg059)),delta059*P059))
+nb059,z059=s.symbols('nb059 z059',positive=True)
+pg059=s.exp(nb059*(z059-1))
+phase059=2*g059*s.sqrt(z059+1)*t059
+record('Q059',3,'independent_derivation',
+       'Poisson coherent photon moments give collapse Gaussian variance and adjacent dressed phase revival slope',
+       eq(pg059.subs(z059,1),1)
+       and eq(s.diff(pg059,z059).subs(z059,1),nb059)
+       and eq(s.diff(pg059,z059,2).subs(z059,1),nb059**2)
+       and eq(s.diff(phase059,z059),g059*t059/s.sqrt(z059+1)))
+chi059=s.symbols('chi059',positive=True)
+F059=s.exp(nb059*(s.exp(-2*s.I*chi059*t059)-1))
+mod059=s.simplify(F059*s.conjugate(F059))
+record('Q059',4,'limit',
+       'dispersive dressed energy shift and coherent cavity dephasing envelope revival',
+       eq(s.limit((s.sqrt(delta059**2+4*G059**2)-delta059)*delta059/(2*G059**2),delta059,s.oo),1)
+       and eq(s.trigsimp(mod059),s.exp(-4*nb059*s.sin(chi059*t059)**2))
+       and eq(F059.subs(t059,s.pi/chi059),1)
+       and eq(s.limit(mod059,nb059,0,dir='+'),1))
+mp.mp.dps=50
+nbar059=mp.mpf('100');tm059=mp.mpf('.25');gn059=mp.mpf('1')
+exact059=sum(mp.exp(-nbar059)*nbar059**n/mp.factorial(n)*mp.cos(2*gn059*mp.sqrt(n+1)*tm059) for n in range(300))
+approx059=mp.cos(2*gn059*mp.sqrt(nbar059+1)*tm059)*mp.exp(-gn059**2*tm059**2*nbar059/(2*(nbar059+1)))
+assert abs(exact059-approx059)<mp.mpf('.01')
+rev059=2*mp.pi*mp.sqrt(nbar059+1)/gn059
+assert abs(2*gn059*(mp.sqrt(102)-mp.sqrt(101))*rev059-2*mp.pi)<mp.mpf('.02')
+nbn059=mp.mpf('2.7');phn059=mp.mpf('.37')
+series059=sum(mp.exp(-nbn059)*nbn059**n/mp.factorial(n)*mp.exp(-2j*phn059*n) for n in range(80))
+closed059=mp.exp(nbn059*(mp.exp(-2j*phn059)-1))
+assert abs(series059-closed059)<mp.mpf('1e-45')
+supplemental.append(dict(id='Q059',method='independent_high_precision_poisson_sum',
+                         name='50 digit coherent state collapse estimate, neighboring phase revival and dispersive characteristic function',passed=True))
+
+assert len(checks)==72 and len(set((v['id'],v['part']) for v in checks))==72
+assert len(set(v['method'] for v in checks if v['id']=='W058'))>=2
+assert len(set(v['method'] for v in checks if v['id']=='Q059'))>=2
+assert len(supplemental)==18
+
+result={'status':'draft-only','new_problem_count':18,'passed_count':len(checks),'tests':checks,'independent_expert_review':'pending','supplemental_numeric_checks':supplemental}
 path=Path(__file__).resolve().parents[1]/'data/round12_draft_validation_report.json'
 path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
 print(json.dumps({'status':result['status'],'checked_subparts':len(checks)},ensure_ascii=False))

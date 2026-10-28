@@ -50,7 +50,7 @@
       ]
     }
   ],
-  "disposition": "M060/O057/Q057 overlap replacements remain resolved. O059 geometric spin-orbit q-plate screened against prior uniform waveplates and scalar phase gratings; all draft 17/50 remains pending independent expert review.",
+  "disposition": "Three historical core-model overlaps remain resolved; new Q059 quantum cavity model screened against Q011/Q016/Q024/Q056/Q014, pending independent expert review. Draft 18/50.",
   "independent_expert_review": "待独立复核",
   "new_draft_model_screening": [
     {
@@ -75,6 +75,19 @@
       ],
       "core_model": "spatially varying optical director q-plate with spin-to-orbital Pancharatnam-Berry phase, angular momentum and mechanical torque",
       "difference": "O036/O051 concern uniform retarder Jones matrices; O044 is scalar sinusoidal phase grating; O020 is scalar Fourier diffraction. None addresses spatial half-integer director winding, helicity-flip OAM, q-dependent optical torque and analyzer petal topology.",
+      "resolution_status": "screened_distinct_pending_independent_review"
+    },
+    {
+      "draft_id": "Q059",
+      "compared_existing_ids": [
+        "Q011",
+        "Q016",
+        "Q024",
+        "Q056",
+        "Q014"
+      ],
+      "core_model": "quantized Jaynes--Cummings cavity with excitation-number-resolved dressed doublets, Poissonian collapse/revival and dispersive atom-cavity conditional phase",
+      "difference": "Q011/Q024/Q056 are semiclassically driven two-level Rabi models with a fixed coupling; Q016 treats a free oscillator coherent state; Q014 studies a frequency quench. None contains the quantized cavity square-root photon-number splitting, Poisson-weighted revival or dispersive cavity-state overlap.",
       "resolution_status": "screened_distinct_pending_independent_review"
     }
   ]
