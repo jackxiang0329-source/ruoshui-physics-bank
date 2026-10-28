@@ -114,6 +114,54 @@
     "revision": "composite-v1.2"
   },
   {
+    "id": "M012",
+    "topic": "力学",
+    "title": "二次空气阻力中的竖直抛体、逆运动与极值",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 65,
+    "question": "质量 $m>0$ 的小球从地面以竖直初速 $v_0>0$ 向上抛出，重力加速度为 $g>0$；空气阻力大小为 $c v^2$，方向永远与速度相反，$c>0$。取向上为正，空气静止，无风。记极限速率 $v_T=\\sqrt{mg/c}$ 和 $\\tau=v_T/g$。\n(1) 分别建立上升与下降阶段的运动方程，精确求上升速度、达到最高点的时间；(2) 求上升最大高度 $H$，证明对于任何 $c>0$ 它严格小于无阻力高度；(3) 从最高点释放后的下降阶段求向下速率与下降位移，进而求回到地面的时间与落地速率；(4) 验证 $c\\to0^+$ 时回收无阻力抛体的总飞行时间和落地速率，同时解释上、下行不能误用同一符号的阻力项。",
+    "solution": "(1) 取向上速度 $v=\\dot y$。上升 $v>0$ 时 $m\\dot v=-mg-cv^2$，即 $\\dot v=-g(1+v^2/v_T^2)$。积分得到\n\\[\n\\arctan(v/v_T)=\\arctan(v_0/v_T)-t/\\tau .\n\\]\n设 $\\varphi_0=\\arctan(v_0/v_T)$，则 $v(t)=v_T\\tan(\\varphi_0-t/\\tau)$，适用 $0\\le t\\le t_\\uparrow=\\tau\\varphi_0$。\n\n(2) 用 $v\\,dv/dy=-g(1+v^2/v_T^2)$ 积分，从 $v_0$ 到零得\n\\[\nH=\\frac{v_T^2}{2g}\\ln\\left(1+\\frac{v_0^2}{v_T^2}\\right).\n\\]\n令 $z=v_0^2/v_T^2>0$，由于 $\\ln(1+z)<z$，故 $H<v_0^2/(2g)$ 严格成立。这是能量损耗的定量表述。\n\n(3) 从最高点向下定义正的速率 $u=-v$，有 $m\\dot u=mg-cu^2$、$u(0)=0$，因此\n\\[\nu(s)=v_T\\tanh(s/\\tau),\\quad h_\\downarrow(s)=v_T\\tau\\ln\\cosh(s/\\tau),\n\\]\n其中 $s$ 为自顶点起计的时间。令 $h_\\downarrow(t_\\downarrow)=H$，得到\n\\[\nt_\\downarrow=\\tau\\,\\operatorname{arcosh}\\!\\big(e^{gH/v_T^2}\\big)\n=\\tau\\,\\operatorname{arcosh}\\!\\sqrt{1+v_0^2/v_T^2}.\n\\]\n落地速率 $u_f=v_T\\tanh(t_\\downarrow/\\tau)\n=v_0/\\sqrt{1+v_0^2/v_T^2}$。总飞行时间为 $t_\\uparrow+t_\\downarrow$。\n\n(4) 设 $z=v_0/v_T\\to0^+$。$\\arctan z\\sim z$，$\\operatorname{arcosh}\\sqrt{1+z^2}=\\operatorname{arsinh}z\\sim z$，故 $t_{\\rm total}\\to2v_0/g$，$u_f\\to v_0$。上行阻力向下、下行阻力向上；若都写 $-cv^2$，会错误地在下降时人为加速粒子。",
+    "answer": "H=\\frac{v_T^2}{2g}\\ln(1+v_0^2/v_T^2),\\quad u_f=\\frac{v_0}{\\sqrt{1+v_0^2/v_T^2}}",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "二次阻力",
+      "非线性微分方程",
+      "上升下降非对称",
+      "积分运动学",
+      "极限检验"
+    ],
+    "assumptions_review": "已进行模型、守恒与极限核对；尚待独立专家审核",
+    "checks": [],
+    "revision": "composite-v1.3",
+    "challenge_profile": "high-multistage"
+  },
+  {
+    "id": "M013",
+    "topic": "力学",
+    "title": "幂律中心势的圆轨道、稳定性及近心点进动",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 65,
+    "question": "在平面内运动的质量 $m>0$ 的质点受到吸引中心力 $F_r=-k\\,r^{p-1}$，其中 $k>0$、实指数 $p\\in\\mathbb R$，角动量 $L\\ne0$。当 $p\\ne0$ 时势能取 $U(r)=kr^p/p$；当 $p=0$ 时定义 $U(r)=k\\ln(r/r_*)$，其中 $r_*>0$ 是任意参考长度。\n(1) 写出径向有效势并由此求半径 $r_0$ 的圆轨道所需角动量；(2) 严格判断圆轨道对小径向扰动稳定的 $p$ 取值范围；(3) 在稳定范围内求径向振动与角向频率之比、相邻近心点间的方位角，判断对 $p=-1$ 与 $p=2$ 的闭合轨道结果；(4) 计算圆轨道的比动能及向心力平衡，说明为何 $p\\to0$ 的对数势极限是连续的。",
+    "solution": "(1) 因 $L=mr^2\\dot\\phi$，有效势是 $U_{\\rm eff}=L^2/(2mr^2)+U(r)$，径向能量积分 $m\\dot r^2/2+U_{\\rm eff}=E$。对两种势定义都满足 $U'(r)=kr^{p-1}$，所以圆轨道条件\n\\[\n-\\frac{L^2}{mr_0^3}+kr_0^{p-1}=0,\\qquad L^2=mk r_0^{p+2}.\n\\]\n当 $p\\ne-2$，$r_0=(L^2/(mk))^{1/(p+2)}$；当 $p=-2$，只有 $L^2=mk$ 才可能任何半径均为边缘平衡，不能滥用幂式求根。\n\n(2) 二阶导数 $U_{\\rm eff}''=3L^2/(mr^4)+k(p-1)r^{p-2}$。在圆轨道代入角动量条件可得\n\\[\nU_{\\rm eff}''(r_0)=k(p+2)r_0^{p-2}.\n\\]\n故 $p>-2$ 时稳定，$p<-2$ 不稳定，$p=-2$ 为中性退化、线性频率零（非稳定振动）。此判据对 $p=0$ 的对数势同样有效。\n\n(3) 圆轨道角频率 $\\omega_\\phi=L/(mr_0^2)=\\sqrt{(k/m)r_0^{p-2}}$；小径向振动频率\n\\[\n\\omega_r=\\sqrt{U_{\\rm eff}''(r_0)/m}=\\sqrt{p+2}\\,\\omega_\\phi.\n\\]\n近圆极限中相邻近心点的方位角增量为 $\\Delta\\phi=2\\pi/\\sqrt{p+2}$。$p=-1$（牛顿 $1/r$ 势）得到 $2\\pi$；$p=2$（各向同性谐振势）得到 $\\pi$，与经典闭合椭圆轨道相符。一般 $p$ 的近圆轨道不必闭合，$\\Delta\\phi$ 是小振幅意义而非任意能量轨道的全局结论。\n\n(4) 圆周向心力条件 $mv_\\phi^2/r_0=kr_0^{p-1}$ 给 $v_\\phi^2=kr_0^p/m$，圆轨道动能 $K=mv_\\phi^2/2=kr_0^p/2$。由于 $r^p=1+p\\ln r+O(p^2)$，势 $k(r^p-r_*^p)/p\\to k\\ln(r/r_*)$，导数与频率结果在 $p\\to0$ 连续。",
+    "answer": "L^2=mk r_0^{p+2},\\quad \\omega_r/\\omega_\\phi=\\sqrt{p+2},\\quad\\Delta\\phi=2\\pi/\\sqrt{p+2}\\quad(p>-2)",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "任意幂中心势",
+      "有效势",
+      "线性稳定性",
+      "频率比",
+      "对数势极限"
+    ],
+    "assumptions_review": "已进行模型、守恒与极限核对；尚待独立专家审核",
+    "checks": [],
+    "revision": "composite-v1.3",
+    "challenge_profile": "high-multistage"
+  },
+  {
     "id": "E007",
     "topic": "电磁学",
     "title": "滑动导体棒的自感反馈与能量耗散",
@@ -227,6 +275,54 @@
     "assumptions_review": "建立物理模型、解析推导和量纲检查；独立专家复核待完成",
     "checks": [],
     "revision": "composite-v1.2"
+  },
+  {
+    "id": "E012",
+    "topic": "电磁学",
+    "title": "幂律非均匀介电同轴电容器的场、电势与径向受力",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 65,
+    "question": "一段长度 $\\ell$ 的同轴圆柱电容器内外半径为 $0<a<b$，忽略端部效应。内导体总自由电荷 $+Q$，外导体总自由电荷 $-Q$，中间填充各向同性线性介质，径向介电常数按 $\\epsilon(r)=\\epsilon_a(r/a)^s$ 变化，其中 $\\epsilon_a>0,\\ s\\in\\mathbb R$。令内外导体电势差 $V=\\phi(a)-\\phi(b)$。\n(1) 求介质内 $\\boldsymbol D(r),\\boldsymbol E(r)$ 及 $V$；(2) 求电容 $C(s)$，分别处理 $s=0$ 和 $s\\ne0$；(3) 从 $u=\\boldsymbol E\\cdot\\boldsymbol D/2$ 积分求场能并与 $Q^2/(2C)$ 核对；(4) 若端部不变、介质分布整体随 $s$ 被准静态调节而固定 $Q$，求 $U$ 对 $s$ 的变化率积分表达式，并讨论 $b/a\\to1^+$ 的平板近似。",
+    "solution": "(1) 取高斯柱面半径 $r$、长度 $\\ell$，由法向 $\\boldsymbol D$ 通量得\n\\[\nD_r(r)=\\frac Q{2\\pi \\ell r},\\qquad\nE_r(r)=\\frac{Qa^s}{2\\pi\\ell\\epsilon_a}\\,r^{-s-1}.\n\\]\n由 $V=\\int_a^b E_r dr$，设正函数\n\\[\nJ_s(a,b)=\\int_a^b(r/a)^{-s}\\frac{dr}{r}\n=\\begin{cases}\\dfrac{1-(a/b)^s}{s},&s\\ne0,\\\\[3pt]\\ln(b/a),&s=0.\\end{cases}\n\\]\n于是 $V=QJ_s/(2\\pi\\ell\\epsilon_a)$，任意实 $s$ 和 $a<b$ 下都有 $J_s>0$。\n\n(2) 利用 $C=Q/V$，精确得到\n\\[\nC(s)=\\frac{2\\pi\\ell\\epsilon_a}{J_s(a,b)}.\n\\]\n该式在 $s=0$ 处连续，退化为均匀同轴电容器公式。不能以一个算术平均介电常数替代径向变化的介质，因为各同轴薄层是串联电势降。\n\n(3) 能量密度是 $u=D_r^2/[2\\epsilon(r)]$，体元为 $2\\pi\\ell r\\,dr$，故\n\\[\nU=\\frac12\\int_a^b\\frac{D_r^2}{\\epsilon(r)}2\\pi\\ell r\\,dr\n=\\frac{Q^2}{4\\pi\\ell\\epsilon_a}J_s\n=\\frac{Q^2}{2C(s)}.\n\\]\n也等于 $QV/2$，验证了电势积分与能量积分一致。\n\n(4) 在固定 $Q,\\ell,a,b,\\epsilon_a$ 下\n\\[\n\\frac{\\partial U}{\\partial s}=-\\frac{Q^2}{4\\pi\\ell\\epsilon_a}\\int_a^b\n\\ln(r/a)(r/a)^{-s}\\frac{dr}{r}<0.\n\\]\n可将其理解为介电常数沿外径升高时，固定电荷场能下降；这不是在没有指定调节机制时凭空得出的机械力。设 $d=b-a\\ll a$，积分 $J_s=d/a+O((d/a)^2)$，所以 $C\\sim2\\pi a\\ell\\epsilon_a/d$，相当于面积 $2\\pi a\\ell$ 的局部平行板电容器。",
+    "answer": "C=\\frac{2\\pi\\ell\\epsilon_a}{J_s},\\quad J_s=\\int_a^b(r/a)^{-s}\\frac{dr}{r},\\quad U=\\frac{Q^2J_s}{4\\pi\\ell\\epsilon_a}",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "非均匀电介质",
+      "电位移高斯定律",
+      "电势积分",
+      "场能与电容",
+      "介电应力"
+    ],
+    "assumptions_review": "已进行模型、守恒与极限核对；尚待独立专家审核",
+    "checks": [],
+    "revision": "composite-v1.3",
+    "challenge_profile": "high-multistage"
+  },
+  {
+    "id": "E013",
+    "topic": "电磁学",
+    "title": "有限厚度电阻导体中的磁扩散、趋肤深度与功耗",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "question": "均匀各向同性良导体占半空间 $x>0$，电导率 $\\sigma>0$、磁导率 $\\mu>0$，忽略位移电流且材料线性。外加平行表面、沿 $z$ 方向的简谐磁场，边界值为 $B_z(0,t)=\\Re[B_0e^{i\\omega t}]$，其中 $B_0>0,\\omega>0$；场随 $x\\to\\infty$ 衰减。只存在 $B_z(x,t)$、$E_y(x,t)$ 和 $J_y(x,t)$。\n(1) 从麦克斯韦—法拉第定律和无位移电流安培定律推导磁扩散方程；(2) 求复振幅 $B_z,E_y,J_y$，给出趋肤深度 $\\delta$；(3) 由周期平均焦耳热积分求每单位面积进入导体的平均功率；(4) 从坡印廷矢量的表面法向分量独立核对功率，并讨论 $\\omega$ 增大时趋肤层及耗散的变化。",
+    "solution": "(1) 旋度形式的安培定律为 $\\nabla\\times\\boldsymbol B=\\mu\\boldsymbol J=\\mu\\sigma\\boldsymbol E$，结合 $\\nabla\\times\\boldsymbol E=-\\partial_t\\boldsymbol B$ 与 $\\nabla\\cdot\\boldsymbol B=0$：\n\\[\n-\\nabla^2\\boldsymbol B=-\\mu\\sigma\\partial_t\\boldsymbol B,\\quad\n\\partial_t\\boldsymbol B=\\frac1{\\mu\\sigma}\\nabla^2\\boldsymbol B.\n\\]\n本题即 $\\partial_t B_z=(\\mu\\sigma)^{-1}\\partial_x^2B_z$。\n\n(2) 以 $e^{i\\omega t}$ 为时间相位，令 $\\tilde B=B_0e^{-qx}$，则 $q^2=i\\omega\\mu\\sigma$，取实部为正的根\n\\[\nq=\\frac{1+i}{\\delta},\\qquad \\delta=\\sqrt{\\frac2{\\omega\\mu\\sigma}}.\n\\]\n由 $\\boldsymbol J=(\\nabla\\times\\boldsymbol B)/\\mu$，$J_y=-\\partial_xB_z/\\mu$，故\n\\[\n\\tilde B_z=B_0e^{-(1+i)x/\\delta},\\quad\n\\tilde J_y=\\frac q\\mu B_0e^{-qx},\\quad\n\\tilde E_y=\\frac q{\\mu\\sigma}B_0e^{-qx}.\n\\]\n法拉第定律给 $-\\partial_xE_y=-\\partial_tB_z$，与 $q^2=i\\omega\\mu\\sigma$ 一致。\n\n(3) 单位面积平均耗散 $\\overline P/A=\\int_0^\\infty\\sigma\\langle E_y^2\\rangle dx$，谐波平均平方为模平方一半，\n\\[\n\\frac{\\overline P}{A}=\\frac{\\sigma}{2}\\int_0^\\infty\n\\frac{|q|^2B_0^2}{\\mu^2\\sigma^2}e^{-2x/\\delta}dx\n=\\frac{B_0^2}{2\\mu^2\\sigma\\delta}.\n\\]\n因为 $|q|^2=2/\\delta^2$ 与 $\\int_0^\\infty e^{-2x/\\delta}dx=\\delta/2$，中间系数可独立核验。\n\n(4) 坡印廷矢量 $\\boldsymbol S=\\boldsymbol E\\times\\boldsymbol H$，$E_y\\hat y\\times B_z\\hat z/\\mu$ 沿 $+x$。界面平均功率流为\n\\[\n\\langle S_x(0)\\rangle=\\frac1{2\\mu}\\Re(\\tilde E_y(0)\\tilde B_z(0)^*)\n=\\frac{B_0^2}{2\\mu^2\\sigma\\delta},\n\\]\n与焦耳热完全一致。固定边界磁场幅值 $B_0$ 时 $\\delta\\propto\\omega^{-1/2}$、平均功率密度 $\\propto\\sqrt\\omega$，即高频皮肤效应更显著；位移电流不能忽略时需恢复完整麦克斯韦方程。",
+    "answer": "\\delta=\\sqrt{2/(\\omega\\mu\\sigma)},\\quad \\tilde B=B_0e^{-(1+i)x/\\delta},\\quad \\overline P/A=B_0^2/(2\\mu^2\\sigma\\delta)",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "麦克斯韦方程",
+      "磁扩散方程",
+      "趋肤效应",
+      "复数波数",
+      "焦耳功率"
+    ],
+    "assumptions_review": "已进行模型、守恒与极限核对；尚待独立专家审核",
+    "checks": [],
+    "revision": "composite-v1.3",
+    "challenge_profile": "high-multistage"
   },
   {
     "id": "T007",
@@ -344,6 +440,54 @@
     "revision": "composite-v1.2"
   },
   {
+    "id": "T012",
+    "topic": "热学",
+    "title": "变热容有限热库驱动的可逆热机与最大功",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "question": "两个绝热于外界的有限热库只通过理想可逆热机交换热量并输出功。高温库与低温库初温分别为 $T_h>T_c>0$，热容分别满足 $C_h(T)=a_hT$ 与 $C_c(T)=a_cT$，其中 $a_h,a_c>0$，单位为 $\\mathrm{J\\,K^{-2}}$。不计热机储能，最终两库温度趋于共同值 $T_* >0$。\n(1) 从熵守恒精确求 $T_*$；(2) 求最大可输出机械功 $W_{\\max}$ 与最终各库能量；(3) 若移去热机使两库直接不可逆接触，求平衡温度 $T_{\\rm mix}$ 和熵产生，证明 $W_{\\max}\\ge0$；(4) 在 $a_h=a_c$ 情形求简化表达式并对 $T_h-T_c$ 很小时作二阶近似，指出为何不能直接使用恒热容的几何平均温度。",
+    "solution": "(1) 每库热容 $C=aT$，故状态函数熵差 $dS=C(T)dT/T=a\\,dT$。两库与外界绝热且热机理想可逆，整体熵变零：\n\\[\na_h(T_*-T_h)+a_c(T_*-T_c)=0,\\quad\nT_*=\\frac{a_hT_h+a_cT_c}{a_h+a_c}.\n\\]\n这是带权算术平均而不是恒热容库的加权几何平均，因为两种热容的温度依赖关系不同。\n\n(2) 单库内能差满足 $dU=C(T)dT=aT\\,dT$，故 $U(T)-U(0)=aT^2/2$。输出最大功等于两库初末总内能差：\n\\[\nW_{\\max}=\\frac12\\big[a_hT_h^2+a_cT_c^2-(a_h+a_c)T_*^2\\big]\n=\\frac{a_ha_c}{2(a_h+a_c)}(T_h-T_c)^2.\n\\]\n等式右边表明 $W_{\\max}>0$ 当且仅当初温不同。\n\n(3) 若直接接触，则无外部做功，能量守恒给\n\\[\nT_{\\rm mix}=\\sqrt{\\frac{a_hT_h^2+a_cT_c^2}{a_h+a_c}}.\n\\]\n两库总熵产生\n\\[\n\\Delta S_{\\rm irr}=a_h(T_{\\rm mix}-T_h)+a_c(T_{\\rm mix}-T_c)\n=(a_h+a_c)(T_{\\rm mix}-T_*)\\ge0.\n\\]\n均方根不小于算术均值，故熵产生非负，$T_{\\rm mix}\\ge T_*$，与抽取机械功使最终总内能下降的方向一致。\n\n(4) 当 $a_h=a_c=a$，$T_*=(T_h+T_c)/2$，\n\\[\nW_{\\max}=\\frac a4(T_h-T_c)^2,\\quad\nT_{\\rm mix}=\\sqrt{(T_h^2+T_c^2)/2}.\n\\]\n令 $T_h=T_0+\\Delta/2,\\ T_c=T_0-\\Delta/2$，则 $T_*=T_0$，$W_{\\max}=a\\Delta^2/4$ 精确成立，$T_{\\rm mix}=T_0+\\Delta^2/(8T_0)+O(\\Delta^4)$；因热容随温度增长，高温库的能量贡献更大，不能套用热容恒定时的公式。",
+    "answer": "T_*=\\frac{a_hT_h+a_cT_c}{a_h+a_c},\\quad W_{\\max}=\\frac{a_ha_c}{2(a_h+a_c)}(T_h-T_c)^2",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "温度依赖热容",
+      "可逆熵平衡",
+      "变温热源",
+      "最大可用功",
+      "平均值不等式"
+    ],
+    "assumptions_review": "已进行模型、守恒与极限核对；尚待独立专家审核",
+    "checks": [],
+    "revision": "composite-v1.3",
+    "challenge_profile": "high-multistage"
+  },
+  {
+    "id": "T013",
+    "topic": "热学",
+    "title": "热容随温度线性增长的可逆绝热过程与熵函数",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 60,
+    "question": "有 $n>0$ mol 理想气体，摩尔定容热容为 $C_V(T)=a+bT$，其中 $a,b>0$、温度 $T>0$，气体常数为 $R>0$。气体从初态 $(T_1,V_1)$ 经可逆绝热过程膨胀到 $V_2=\\lambda V_1$，$\\lambda>1$，只有体积功。\n(1) 推导该气体的熵差状态函数和可逆绝热隐式温度方程；(2) 证明终温 $T_2$ 存在唯一且满足 $0<T_2<T_1$，并用 Lambert $W$ 函数写出显式解；(3) 由第一定律求对外做功与温度依赖的有效绝热指数，解释为何不能直接套用 $TV^{\\gamma-1}=\\mathrm{const}$；(4) 检验 $b\\to0^+$ 的恒定热容极限，并给出 $\\lambda\\to1^+$ 时的初始微分温度斜率。",
+    "solution": "(1) 理想气体熵微分满足\n\\[\ndS=n\\frac{a+bT}{T}\\,dT+nR\\,\\frac{dV}{V}.\n\\]\n积分得 $\\Delta S=n[a\\ln(T_2/T_1)+b(T_2-T_1)+R\\ln\\lambda]$。可逆绝热条件为 $\\Delta S=0$，即\n\\[\na\\ln(T_2/T_1)+b(T_2-T_1)=-R\\ln\\lambda<0.\n\\]\n\n(2) 定义 $F(T)=a\\ln(T/T_1)+b(T-T_1)+R\\ln\\lambda$。$F'(T)=a/T+b>0$，且 $F(0^+)=-\\infty$、$F(T_1)=R\\ln\\lambda>0$，故唯一根 $T_2\\in(0,T_1)$。移项并指数化得到\n\\[\nT_2e^{(b/a)T_2}=T_1e^{(b/a)T_1}\\lambda^{-R/a}.\n\\]\n于是取 Lambert 函数实主支 $W_0$：\n\\[\nT_2=\\frac ab\\,W_0\\!\\left(\\frac{bT_1}{a}e^{bT_1/a}\\lambda^{-R/a}\\right).\n\\]\n括号内为正，故唯一正实分支给出物理解。\n\n(3) 由于过程绝热，$Q=0$；第一定律 $\\Delta U=-W$，且 $dU=n(a+bT)dT$，故\n\\[\nW=n\\left[a(T_1-T_2)+\\frac b2(T_1^2-T_2^2)\\right]>0.\n\\]\n由 $dS=0$ 得 $d\\ln T/d\\ln V=-R/[a+bT]$。定义局域 $\\gamma(T)=1+R/(a+bT)$，它随温度变化，故标准的固定指数泊松关系不适用。\n\n(4) 当 $b\\to0^+$，隐式方程退化为 $a\\ln(T_2/T_1)=-R\\ln\\lambda$，从而 $T_2\\to T_1\\lambda^{-R/a}$；$W\\to na(T_1-T_2)$。在 $\\lambda\\to1^+$ 处，由微分关系得到 $dT/d\\ln\\lambda|_{\\lambda=1}=-RT_1/(a+bT_1)$。所有式子的 $bT$ 项具有与 $a$ 相同的热容量纲。",
+    "answer": "T_2=(a/b)W_0[(bT_1/a)e^{bT_1/a}\\lambda^{-R/a}],\\quad W=n[a(T_1-T_2)+\\frac b2(T_1^2-T_2^2)]",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "变热容理想气体",
+      "可逆绝热积分",
+      "超越方程",
+      "朗伯W函数",
+      "恒热容极限"
+    ],
+    "assumptions_review": "已进行模型、守恒与极限核对；尚待独立专家审核",
+    "checks": [],
+    "revision": "composite-v1.3",
+    "challenge_profile": "high-multistage"
+  },
+  {
     "id": "W007",
     "topic": "振动与波动",
     "title": "双弦接点附加质量的波散射",
@@ -457,6 +601,54 @@
     "assumptions_review": "已初步推导与参数极限核对，尚无第二人独立专家审核",
     "checks": [],
     "revision": "composite-v1.2"
+  },
+  {
+    "id": "W012",
+    "topic": "振动与波动",
+    "title": "带质量与弹簧耦合的弦端复反射系数",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "question": "半无限理想均匀弦占据 $x<0$，张力 $T>0$、线密度 $\\mu>0$、波速 $c=\\sqrt{T/\\mu}$。其端点 $x=0$ 连接一质量 $M>0$ 的小块，小块还通过劲度系数 $K>0$ 的无质量弹簧连接固定墙；块只能横向振动，弹簧平衡长度已校正。频率为 $\\omega>0$ 的横波从左侧射向端点，采用时间因子 $e^{-i\\omega t}$，弦上位移 $y=A_i(e^{ikx}+r e^{-ikx})e^{-i\\omega t}$，$k=\\omega/c$。\n(1) 用弦端位移连续与小块牛顿第二定律求复反射系数 $r(\\omega)$；(2) 证明无阻尼时 $|r|=1$，解释反射能流与相位响应；(3) 求 $K-M\\omega^2=0$ 时与 $\\omega\\to0^+$ 时的反射极限，并给出对应物理边界类型；(4) 引入微小黏滞阻尼力 $-b\\dot y(0,t)$，$b>0$，修改反射系数并求能流吸收率，证明其非负。",
+    "solution": "(1) 在 $x=0$ 处振幅 $Y=A_i(1+r)$；入射弦横向牵引小块的力是 $-T\\partial_x y(0^-)$，取定 $+y$ 的方向可从弦受边界牵引的反作用确定。为使被动端的阻尼吸收率非负，采用小块方程\n\\[\nM\\ddot Y+KY=-T\\,y_x(0^-,t)\n\\]\n时，以 $e^{-i\\omega t}$ 表示，$ (K-M\\omega^2)(1+r)=-iT k(1-r)$。记 $Z=Tk/\\omega=\\sqrt{T\\mu}$、$D=K-M\\omega^2$，联立\n\\[\nr=\\frac{i\\omega Z+D}{i\\omega Z-D}.\n\\]\n由于分子和分母模相等，故 $|r|=1$。注意不同的应力正方向会将反射相位做等价的符号换元，但反射功率必须保持不变。\n\n(2) 无耗散时，入射、反射波平均能流的比值是 $|r|^2=1$。反射相位随 $D/(\\omega Z)$ 连续变化，代表端点的弹性储能与惯性储能交替占优。\n\n(3) 当 $D=0$，即 $\\omega=\\sqrt{K/M}$，$r=1$，端点位移为反节点（近似自由端相位）；当 $\\omega\\to0^+$ 且 $K>0$ 固定，$r\\to-1$，端点近似固定。质量、刚度极限须与频率极限区分。\n\n(4) 若加入 $-b\\dot Y$，小块方程改为 $M\\ddot Y+b\\dot Y+KY=-T y_x$，于是 $D$ 被替换为 $D-i b\\omega$，\n\\[\nr_b=\\frac{D+i\\omega(Z-b)}{i\\omega(Z+b)-D}.\n\\]\n因此\n\\[\n\\mathcal A=1-|r_b|^2=\\frac{4bZ\\omega^2}{D^2+\\omega^2(Z+b)^2}\\ge0.\n\\]\n当 $b\\to0^+$ 时 $\\mathcal A\\to0$；当 $D=0$ 且 $b=Z$ 时阻抗匹配、无反射。阻尼项消耗的平均功率与散射能流差吻合。",
+    "answer": "r_b=\\frac{D+i\\omega(Z-b)}{i\\omega(Z+b)-D},\\quad \\mathcal A=\\frac{4bZ\\omega^2}{D^2+\\omega^2(Z+b)^2}",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "波动边界条件",
+      "动态阻抗",
+      "散射矩阵",
+      "相位响应",
+      "共振与能流"
+    ],
+    "assumptions_review": "已进行模型、守恒与极限核对；尚待独立专家审核",
+    "checks": [],
+    "revision": "composite-v1.3",
+    "challenge_profile": "high-multistage"
+  },
+  {
+    "id": "W013",
+    "topic": "振动与波动",
+    "title": "端点有弹簧约束的弦本征频率与渐近边界条件",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 65,
+    "question": "一根均匀理想细弦长 $L>0$、张力 $T>0$、线密度 $\\mu>0$；左端 $x=0$ 固定，右端 $x=L$ 连一无质量线性弹簧到固定支架，弹簧劲度系数 $K>0$，只允许垂直弦轴的小位移。弦满足 $y_{tt}=c^2y_{xx}$，$c=\\sqrt{T/\\mu}$，且右端受力平衡给 $T y_x(L,t)+K y(L,t)=0$。\n(1) 通过变量分离求波形和非零本征波数满足的超越方程；(2) 用能量法证明所有非平凡本征频率均为实数且严格正，并证明不同模在 $L^2(0,L)$ 正交；(3) 求 $K\\to0^+$ 与 $K\\to\\infty$ 的端点边界及波数极限，说明它们对应的物理端点；(4) 设 $\\beta=KL/T\\ll1$，求第 $n$ 个波数的一阶修正（$n=0,1,2,\\ldots$），并给出各模的角频率。",
+    "solution": "(1) 令 $y(x,t)=X(x)\\cos(\\omega t+\\phi)$。空间方程 $X''+k^2X=0$、$k=\\omega/c$。左端固定使 $X=A\\sin(kx)$，右端 Robin 条件得\n\\[\nTk\\cos(kL)+K\\sin(kL)=0.\n\\]\n设 $\\xi=kL,\\ \\beta=KL/T$，则正根满足 $\\xi\\cos\\xi+\\beta\\sin\\xi=0$，在 $\\sin\\xi\\ne0$ 的根上等价于 $\\tan\\xi=-\\xi/\\beta$。\n\n(2) 乘空间方程 $-TX''=\\mu\\omega^2X$ 以 $X$ 并在 $0$ 到 $L$ 积分，分部积分且 $X(0)=0,\\ TX'(L)=-KX(L)$，得\n\\[\n\\mu\\omega^2\\int_0^L X^2dx=T\\int_0^L(X')^2dx+KX(L)^2>0\n\\]\n对任意非零 $X$ 成立，故 $\\omega^2>0$。对两个不同本征值的方程交叉相乘并相减，边界项在 Robin 条件下抵消，于是 $(\\omega_j^2-\\omega_i^2)\\int_0^L X_iX_j\\,dx=0$，证明不同频率模正交。\n\n(3) $K\\to0$ 时右端自由，$X'(L)=0$，故 $k_nL\\to(n+\\tfrac12)\\pi$。$K\\to\\infty$ 时有限能量要求 $X(L)=0$，右端固定，故 $k_nL\\to(n+1)\\pi$。两者不能简单按同一式直接令 $\\beta=0$ 后忽略孤立零根；原始边界和正频率必须一起检查。\n\n(4) 在 $\\beta=0$ 正根附近设 $\\xi=\\xi_n^{(0)}+\\delta$，$\\xi_n^{(0)}=(n+\\tfrac12)\\pi$。线性化 $\\xi\\cos\\xi+\\beta\\sin\\xi=0$，利用 $\\sin\\xi_n^{(0)}=(-1)^n$ 得 $\\delta=\\beta/\\xi_n^{(0)}+O(\\beta^2)$，因此\n\\[\nk_n=\\frac1L\\left[(n+\\tfrac12)\\pi+\\frac{\\beta}{(n+\\tfrac12)\\pi}+O(\\beta^2)\\right],\\quad \\omega_n=ck_n.\n\\]\n弹簧增强约束使所有频率较自由端情形上移，与能量法一致。",
+    "answer": "\\xi\\cos\\xi+\\beta\\sin\\xi=0,\\quad \\omega_n=c\\xi_n/L,\\quad \\xi_n=(n+1/2)\\pi+\\beta/[(n+1/2)\\pi]+O(\\beta^2)",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "Sturm–Liouville谱",
+      "Robin边界",
+      "超越本征方程",
+      "稳定性",
+      "特征根渐近"
+    ],
+    "assumptions_review": "已进行模型、守恒与极限核对；尚待独立专家审核",
+    "checks": [],
+    "revision": "composite-v1.3",
+    "challenge_profile": "high-multistage"
   },
   {
     "id": "O007",
@@ -574,6 +766,54 @@
     "revision": "composite-v1.2"
   },
   {
+    "id": "O012",
+    "topic": "光学",
+    "title": "有间距双透镜系统的主平面、后焦点与望远镜条件",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 65,
+    "question": "两个理想薄透镜放置在同一均匀介质中，第一片焦距为 $f_1>0$，第二片焦距为 $f_2>0$，镜间距离为 $d\\ge0$。采用近轴光线列向量 $(y,\\theta)^T$、自由传播矩阵 $P(d)$ 与薄透镜矩阵 $L(f)$，正方向从第一透镜向第二透镜。\n(1) 求从第一透镜前到第二透镜后的完整 ABCD 矩阵，并验证行列式为 1；(2) 对 $d\\ne f_1+f_2$ 求组合系统有效焦距和距第二透镜的后焦距；(3) 求使平行入射光变为平行出射光的无焦条件，推导横向放大率和角放大率；(4) 求 $d\\to0$ 接触透镜极限，并讨论 $d=f_1+f_2$ 时为何不能用有限有效焦距解释系统。",
+    "solution": "(1) 自由传播与透镜矩阵分别为\n\\[\nP(d)=\\begin{pmatrix}1&d\\\\0&1\\end{pmatrix},\\quad\nL(f)=\\begin{pmatrix}1&0\\\\-1/f&1\\end{pmatrix}.\n\\]\n按传播顺序矩阵从右向左相乘，$M=L(f_2)P(d)L(f_1)$，得到\n\\[\nM=\\begin{pmatrix}1-d/f_1&d\\\\-(1/f_1+1/f_2-d/(f_1f_2))&1-d/f_2\\end{pmatrix}.\n\\]\n各因子行列式均为1，故 $\\det M=1$；展开亦可直接验证。\n\n(2) 设 $C_M=-(f_1+f_2-d)/(f_1f_2)$。对非无焦系统，等效焦距是\n\\[\nf_{\\rm eff}=-1/C_M=\\frac{f_1f_2}{f_1+f_2-d}.\n\\]\n平行入射时初始角度零，第二镜后光线 $(Ay,C_My)$，还需自由传播距离 $z$ 使 $A+zC_M=0$，故\n\\[\n\\mathrm{BFL}=z=-A/C_M=f_2\\frac{f_1-d}{f_1+f_2-d}.\n\\]\n此后焦距是相对第二片镜面的有向距离，不等同于从等效主平面起量的 $f_{\\rm eff}$。\n\n(3) 无焦条件是 $C_M=0$，即 $d=f_1+f_2$，此时\n\\[\nA=1-(f_1+f_2)/f_1=-f_2/f_1,\\quad D=1-(f_1+f_2)/f_2=-f_1/f_2.\n\\]\n平行光束的横向尺寸变化率为 $A=-f_2/f_1$，输入角度的小变化导致出射角放大率为 $D=-f_1/f_2$，且 $AD=1$。两个量符号都为负表示倒像及反向角度。\n\n(4) 当 $d\\to0$，$1/f_{\\rm eff}\\to1/f_1+1/f_2$，即接触薄透镜公式；后焦距也趋向 $f_{\\rm eff}$。当 $d=f_1+f_2$ 时 $C_M=0$，平行入射仍平行出射，因此焦点在无穷远，有效焦距发散不是光线模型失效。",
+    "answer": "f_{\\rm eff}=\\frac{f_1f_2}{f_1+f_2-d},\\quad \\mathrm{BFL}=\\frac{f_2(f_1-d)}{f_1+f_2-d}",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "矩阵光学",
+      "有间距透镜",
+      "系统有效焦距",
+      "后焦距",
+      "无焦边界"
+    ],
+    "assumptions_review": "已进行模型、守恒与极限核对；尚待独立专家审核",
+    "checks": [],
+    "revision": "composite-v1.3",
+    "challenge_profile": "high-multistage"
+  },
+  {
+    "id": "O013",
+    "topic": "光学",
+    "title": "二阶群速度色散下高斯脉冲的展宽与线性啁啾",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "question": "一条无损线性色散波导中，窄带光场的传播常数在中心角频率 $\\omega_0$ 附近近似为 $\\beta(\\omega_0+\\Omega)=\\beta_0+\\beta_1\\Omega+\\tfrac12\\beta_2\\Omega^2$，其中 $\\beta_2\\in\\mathbb R$。在 $z=0$ 处包络为 $A(0,t)=A_0\\exp[-t^2/(2T_0^2)]$，$T_0>0$。使用傅里叶约定 $A(z,t)=\\int\\tilde A(0,\\Omega)e^{i(\\beta_1\\Omega+\\beta_2\\Omega^2/2)z-i\\Omega t}\\,d\\Omega/(2\\pi)$，忽略损耗、高阶色散与非线性。\n(1) 引入随动时坐标 $\\tau=t-\\beta_1z$，严格计算高斯积分求 $A(z,t)$；(2) 给出强度半宽参数 $T(z)$、峰值强度比例，解释为何脉冲能量积分守恒；(3) 求包络相位的二次项以及瞬时频率偏移随时间的关系，说明啁啾符号；(4) 求给定传播距离 $z$ 下最小脉宽及 $\\beta_2\\to0$ 极限，比较大色散距离标度。",
+    "solution": "(1) 初始包络的频谱为 $\\tilde A(0,\\Omega)=A_0T_0\\sqrt{2\\pi}\\exp(-T_0^2\\Omega^2/2)$。代入传播积分并完成平方，记 $s=\\beta_2z/T_0^2$，得到\n\\[\nA(z,t)=\\frac{A_0}{\\sqrt{1-is}}\\exp\\left[-\\frac{\\tau^2}{2T_0^2(1-is)}\\right],\\quad \\tau=t-\\beta_1z.\n\\]\n分支取在 $z=0$ 连续并归一化为1的主平方根，故 $A(0,t)$ 被正确恢复。\n\n(2) 取模平方：\n\\[\n|A|^2=\\frac{|A_0|^2}{\\sqrt{1+s^2}}\\exp\\left[-\\frac{\\tau^2}{T_0^2(1+s^2)}\\right].\n\\]\n强度的 $1/e$ 半宽参数为 $T(z)=T_0\\sqrt{1+s^2}$，峰值强度比为 $(1+s^2)^{-1/2}$，宽度与峰值的乘积不变。沿 $\\tau$ 积分，$\\int|A|^2dt=|A_0|^2T_0\\sqrt\\pi$，与输入相同，符合无损频谱传播相位因子模为1的 Parseval 守恒。\n\n(3) 由 $1/(1-is)=(1+is)/(1+s^2)$，包络相位为\n\\[\n\\Phi(\\tau,z)=\\frac12\\arctan s-\\frac{s\\tau^2}{2T_0^2(1+s^2)}\n\\]\n（$A_0$ 的常相位另计）。在本题 $e^{-i\\omega t}$ 约定下，瞬时角频率偏移定义为 $-\\partial_t\\Phi$：\n\\[\n\\delta\\omega(\\tau,z)=\\frac{s\\tau}{T_0^2(1+s^2)}.\n\\]\n故 $\\beta_2z>0$ 时晚到达部分相对蓝移，$\\beta_2z<0$ 时符号反转；若改用相反的傅里叶时间符号，则相位和啁啾符号也须统一改变。\n\n(4) 本题初始脉冲无啁啾，故 $T(z)\\ge T_0$，只有 $\\beta_2z=0$ 达到最小宽度。无色散 $\\beta_2\\to0$ 时 $s\\to0$，包络只以群延迟 $\\beta_1z$ 平移，不展宽。定义色散长度 $L_D=T_0^2/|\\beta_2|$，当 $|z|\\gg L_D$ 时 $T(z)\\sim |\\beta_2 z|/T_0$；该渐近仍须受窄带二阶展开适用范围限制。",
+    "answer": "A(z,t)=A_0(1-is)^{-1/2}\\exp[-(t-\\beta_1z)^2/(2T_0^2(1-is))],\\quad T(z)=T_0\\sqrt{1+s^2}",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "傅里叶变换",
+      "色散关系展开",
+      "复高斯积分",
+      "脉冲展宽",
+      "啁啾与时带宽"
+    ],
+    "assumptions_review": "已进行模型、守恒与极限核对；尚待独立专家审核",
+    "checks": [],
+    "revision": "composite-v1.3",
+    "challenge_profile": "high-multistage"
+  },
+  {
     "id": "Q007",
     "topic": "近代物理",
     "title": "相对论两体衰变的能量区间与阈值",
@@ -687,5 +927,53 @@
     "assumptions_review": "已初步推导与参数极限核对，尚无第二人独立专家审核",
     "checks": [],
     "revision": "composite-v1.2"
+  },
+  {
+    "id": "Q012",
+    "topic": "近代物理",
+    "title": "量子势阶跃的传播反射、穿透衰减与概率流",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "question": "一维非相对论粒子质量 $m>0$，定态能量 $E>0$，从 $x<0$ 方向入射到势阶跃 $V(x)=0$（$x<0$）、$V(x)=V_0>0$（$x\\ge0$）。粒子态取时间因子 $e^{-iEt/\\hbar}$，无其他作用。\n(1) 当 $E>V_0$ 时从连续的波函数和一阶导数推导反射与透射振幅，以及概率流的 $R,T$；(2) 严格验证 $R+T=1$，解释为什么透射概率不等于透射振幅的模平方；(3) 当 $0<E<V_0$ 时求区域II倏逝波的衰减长度、反射相位和概率流，解释为什么波函数在禁阻区不为零但无净透射流；(4) 求 $E\\to V_0$ 两侧极限及 $V_0\\to0^+$ 极限，核对物理连续性。",
+    "solution": "(1) $E>V_0$ 时定义 $k_1=\\sqrt{2mE}/\\hbar$、$k_2=\\sqrt{2m(E-V_0)}/\\hbar$，写\n\\[\n\\psi_I=e^{ik_1x}+r e^{-ik_1x},\\qquad \\psi_{II}=t e^{ik_2x}.\n\\]\n两区质量相同且势有限，在 $x=0$ 满足 $1+r=t$、$k_1(1-r)=k_2t$，故\n\\[\nr=\\frac{k_1-k_2}{k_1+k_2},\\qquad t=\\frac{2k_1}{k_1+k_2}.\n\\]\n概率流 $j=(\\hbar/m)\\Im(\\psi^*\\psi')$，对应\n\\[\nR=|r|^2,\\qquad T=\\frac{k_2}{k_1}|t|^2\n=\\frac{4k_1k_2}{(k_1+k_2)^2}.\n\\]\n\n(2) $R+T=[(k_1-k_2)^2+4k_1k_2]/(k_1+k_2)^2=1$。传输流量除了振幅还与群速度 $v=\\hbar k/m$ 成正比，故不能直接将 $|t|^2$ 称为透射概率。边界波函数连续不意味着流速相同，但流量守恒。\n\n(3) 当 $0<E<V_0$，定义 $\\kappa=\\sqrt{2m(V_0-E)}/\\hbar$，区域II中物理解为 $\\psi_{II}=t e^{-\\kappa x}$，渗透深度为 $1/\\kappa$。在连续条件中置 $k_2=i\\kappa$，得到\n\\[\nr=\\frac{k_1-i\\kappa}{k_1+i\\kappa}\n=\\exp[-2i\\arctan(\\kappa/k_1)],\\quad t=\\frac{2k_1}{k_1+i\\kappa}.\n\\]\n因此 $|r|=1$，$j_{II}=0$，因为 $\\psi_{II}^*\\psi_{II}'$ 为实数。倏逝振幅非零不表示有穿过无限厚禁阻半空间的平均粒子通量。\n\n(4) $E\\to V_0^+$ 时 $k_2\\to0$，所以 $R\\to1,\\ T\\to0$；$E\\to V_0^-$ 时 $\\kappa\\to0$，$r\\to1$，边界处同样反射完全。严格等能量时线性解的有界分支是常数，流为零。$V_0\\to0^+$ 且固定 $E$ 时 $k_2\\to k_1$，$r\\to0,\\ t\\to1,\\ R\\to0,\\ T\\to1$，与自由传播吻合。",
+    "answer": "r=\\frac{k_1-k_2}{k_1+k_2},\\ T=\\frac{4k_1k_2}{(k_1+k_2)^2}\\ (E>V_0);\\quad r=\\frac{k_1-i\\kappa}{k_1+i\\kappa}\\ (E<V_0)",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "定态薛定谔方程",
+      "散射边界条件",
+      "概率流守恒",
+      "倏逝波",
+      "量子阈值极限"
+    ],
+    "assumptions_review": "已进行模型、守恒与极限核对；尚待独立专家审核",
+    "checks": [],
+    "revision": "composite-v1.3",
+    "challenge_profile": "high-multistage"
+  },
+  {
+    "id": "Q013",
+    "topic": "近代物理",
+    "title": "量子自旋回波、相位反演与非均匀失谐退相干",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "question": "理想自旋 $1/2$ 粒子群起初均处于 $|+x\\rangle$ 态。每个粒子在相同旋转坐标系中受到纯静态失谐哈密顿量 $H_\\delta=\\hbar\\delta\\sigma_z/2$，其中每个粒子的 $\\delta$ 固定不变，但整个粒子群的失谐服从均值零、标准差 $\\sigma>0$ 的高斯分布。忽略自旋间相互作用以及随机时间涨落。\n(1) 对给定 $\\delta$ 求自由演化时间 $t$ 后 $\\langle\\sigma_x\\rangle_\\delta$；(2) 对高斯分布求群平均横向相干信号，得出非均匀退相干时间标度；(3) 在自由演化 $\\tau$ 后施加理想瞬时 $\\pi$ 脉冲 $U_\\pi=-i\\sigma_x$，再自由演化 $\\tau$，求单粒子的总算符并证明 $2\\tau$ 时完全回波；(4) 解释为何自由感应衰减可由回波恢复，并讨论如果每个粒子的失谐在两个时间段随机且彼此独立时，理想回波是否仍必然完全恢复。",
+    "solution": "(1) 自由演化算符为 $U_\\delta(t)=e^{-i\\delta t\\sigma_z/2}$。由 $U^\\dagger_\\delta(t)\\sigma_xU_\\delta(t)$ 的泡利旋转恒等式，初态 $|+x\\rangle$ 的期望值为\n\\[\n\\langle\\sigma_x(t)\\rangle_\\delta=\\cos(\\delta t),\n\\qquad \\langle\\sigma_y(t)\\rangle_\\delta=\\sin(\\delta t)\n\\]\n（本题哈密顿量的符号对应 Bloch 向量绕 $z$ 轴正向转动）。每个粒子保持纯态，单粒子相干模长不减小。\n\n(2) 对群分布 $p(\\delta)=(2\\pi\\sigma^2)^{-1/2}e^{-\\delta^2/(2\\sigma^2)}$ 积分，\n\\[\n\\overline{\\langle\\sigma_x(t)\\rangle}=\\int_{-\\infty}^\\infty p(\\delta)\\cos(\\delta t)d\\delta\n=e^{-\\sigma^2t^2/2}.\n\\]\n这是高斯分布的特征函数。定义信号衰减至 $1/e$ 的时间为 $T_2^*=\\sqrt2/\\sigma$。它描述群失相而不是单粒子相位随机跃迁造成的不可逆相干损失。\n\n(3) 施加 $\\pi$ 脉冲后总演化是 $U_{\\rm echo}=U_\\delta(\\tau)U_\\pi U_\\delta(\\tau)$。由于 $\\sigma_x\\sigma_z=-\\sigma_z\\sigma_x$，有 $U_\\delta(\\tau)\\sigma_x=\\sigma_x U_\\delta(-\\tau)$，因此\n\\[\nU_{\\rm echo}=-iU_\\delta(\\tau)\\sigma_xU_\\delta(\\tau)=-i\\sigma_x\n\\]\n与 $\\delta$ 完全无关。它将初态 $|+x\\rangle$ 仅乘上整体相位，故每个粒子在 $t=2\\tau$ 的 $\\langle\\sigma_x\\rangle$ 回到 $1$，群平均也严格等于1。\n\n(4) 回波取消的是两段中相同的静态失谐产生的相反相位，而不需知道各粒子的 $\\delta$。如果第一段与第二段失谐分别为 $\\delta_1,\\delta_2$，则剩余相位是 $(\\delta_2-\\delta_1)\\tau$，总体信号为其分布特征函数；若两段独立且均服从标准差 $\\sigma$ 的高斯分布，回波信号为 $e^{-\\sigma^2\\tau^2}<1$。因此理想回波不能消除任意时间依赖噪声，实验室还需考虑脉冲误差和真正的不可逆退相干。",
+    "answer": "S_{\\rm FID}(t)=e^{-\\sigma^2t^2/2},\\quad U_{\\rm echo}=-i\\sigma_x,\\quad S_{\\rm echo}(2\\tau)=1\\text{ (static detuning)}",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "tags": [
+      "自旋密度矩阵",
+      "量子旋转算符",
+      "Hahn回波",
+      "非均匀频率分布",
+      "高斯退相干"
+    ],
+    "assumptions_review": "已进行模型、守恒与极限核对；尚待独立专家审核",
+    "checks": [],
+    "revision": "composite-v1.3",
+    "challenge_profile": "high-multistage"
   }
 ]

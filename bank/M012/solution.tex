@@ -1,0 +1,25 @@
+(1) 取向上速度 $v=\dot y$。上升 $v>0$ 时 $m\dot v=-mg-cv^2$，即 $\dot v=-g(1+v^2/v_T^2)$。积分得到
+\[
+\arctan(v/v_T)=\arctan(v_0/v_T)-t/\tau .
+\]
+设 $\varphi_0=\arctan(v_0/v_T)$，则 $v(t)=v_T\tan(\varphi_0-t/\tau)$，适用 $0\le t\le t_\uparrow=\tau\varphi_0$。
+
+(2) 用 $v\,dv/dy=-g(1+v^2/v_T^2)$ 积分，从 $v_0$ 到零得
+\[
+H=\frac{v_T^2}{2g}\ln\left(1+\frac{v_0^2}{v_T^2}\right).
+\]
+令 $z=v_0^2/v_T^2>0$，由于 $\ln(1+z)<z$，故 $H<v_0^2/(2g)$ 严格成立。这是能量损耗的定量表述。
+
+(3) 从最高点向下定义正的速率 $u=-v$，有 $m\dot u=mg-cu^2$、$u(0)=0$，因此
+\[
+u(s)=v_T\tanh(s/\tau),\quad h_\downarrow(s)=v_T\tau\ln\cosh(s/\tau),
+\]
+其中 $s$ 为自顶点起计的时间。令 $h_\downarrow(t_\downarrow)=H$，得到
+\[
+t_\downarrow=\tau\,\operatorname{arcosh}\!\big(e^{gH/v_T^2}\big)
+=\tau\,\operatorname{arcosh}\!\sqrt{1+v_0^2/v_T^2}.
+\]
+落地速率 $u_f=v_T\tanh(t_\downarrow/\tau)
+=v_0/\sqrt{1+v_0^2/v_T^2}$。总飞行时间为 $t_\uparrow+t_\downarrow$。
+
+(4) 设 $z=v_0/v_T\to0^+$。$\arctan z\sim z$，$\operatorname{arcosh}\sqrt{1+z^2}=\operatorname{arsinh}z\sim z$，故 $t_{\rm total}\to2v_0/g$，$u_f\to v_0$。上行阻力向下、下行阻力向上；若都写 $-cv^2$，会错误地在下降时人为加速粒子。
