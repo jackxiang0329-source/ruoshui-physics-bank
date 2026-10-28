@@ -51,6 +51,9 @@ def validate(root=ROOT):
                 raise ValueError("Unconverted markup or broken math delimiters: " + ident)
             if not re.search(r"[\u3400-\u9fff]", s):
                 raise ValueError("No Chinese in translated field: " + ident)
+        flags = item.get("risk_flags", [])
+        if not isinstance(flags, list) or len(set(flags)) != len(flags) or any(not isinstance(flag, str) or not flag.strip() for flag in flags):
+            raise ValueError("Invalid editorial risk flags: " + ident)
         if ident.startswith("CP-") and ident not in raw.decode("utf-8"):
             raise ValueError("Original excerpt ID mismatch: " + ident)
     return records
@@ -60,12 +63,12 @@ def build(root=ROOT, dest=None):
     dest = dest or root / "generated" / "zh_review"
     dest.mkdir(parents=True, exist_ok=True)
     cols = ("id", "module", "subtopic", "title_zh", "raw_path",
-            "translation_status", "physics_review", "exam_ready")
+            "translation_status", "physics_review", "exam_ready", "risk_flags")
     with (dest / "INDEX.csv").open("w", newline="", encoding="utf-8-sig") as fh:
         writer = csv.DictWriter(fh, fieldnames=cols)
         writer.writeheader()
         for item in records:
-            writer.writerow({key: item[key] for key in cols})
+            writer.writerow({key: ("；".join(item.get("risk_flags", [])) if key == "risk_flags" else item[key]) for key in cols})
     lines = [
         "# 大学物理外部题源：中文编辑审校稿", "",
         "> 中文初译，仅供人工校对；尚未通过独立物理、答案和授权审核，不能作为正式组卷题源。", ""
@@ -80,11 +83,14 @@ def build(root=ROOT, dest=None):
                       "**原件：** " + p["raw_path"], "",
                       "**原件 Git blob SHA：** " + p["raw_blob_sha"], "",
                       "**状态：** " + REVIEW_STATE, ""]
+            if p.get("risk_flags"):
+                lines += ["**题设／编辑风险：** " + "；".join(p["risk_flags"]), ""]
             if p.get("notes"):
                 lines += ["**审校提示：** " + p["notes"], ""]
     (dest / "QUESTIONS_ZH.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     result = {"translations": len(records), "by_module": dict(Counter(
         p["module"] for p in records)), "source_sha_checked": len(records),
+        "risk_flagged": sum(bool(p.get("risk_flags")) for p in records),
         "exam_ready_added": 0, "status": REVIEW_STATE}
     (dest / "report.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return result
