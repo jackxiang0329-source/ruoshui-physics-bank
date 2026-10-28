@@ -97,6 +97,98 @@
       "complexity_tier": "L5-B",
       "question": "质量为 \\(m\\) 的小珠无摩擦地约束在绕竖直轴以角速度 \\(\\Omega\\) 匀速旋转的抛物面 \\(z=ar^2\\) 上，其中 \\(a>0\\)，\\(r\\ge0\\) 为柱坐标半径，珠与曲面共同旋转而允许相对曲面的径向滑动；取 \\(\\phi(t)=\\Omega t\\)，重力势能为 \\(mgz\\)。忽略珠的自旋、阻力及曲面的弹性形变，径向有效质量随 \\(r\\) 改变。\n(1) 由几何约束写出精确 Lagrangian，导出含非线性速度项的径向方程。\n(2) 求径向有效势与临界角速度，讨论无穷小扰动的稳定性和等临界点退化。\n(3) 计算轴心及非零径向平衡的小振动频率，并判断是否存在有限半径平衡。\n(4) 解释旋转驱动装置所作功与珠子能量为何可能变化，确定 \\(r\\to\\infty\\) 的模型病态。\n",
       "solution": "(1) 约束 \\(z=ar^2\\) 导致 \\(\\dot z=2ar\\dot r\\)，且 \\(\\dot\\phi=\\Omega\\)，故 \\(L=\\frac m2[(1+4a^2r^2)\\dot r^2+\\Omega^2r^2]-mg ar^2\\)。令 \\(A(r)=1+4a^2r^2\\)，Euler--Lagrange 方程为 \\(mA\\ddot r+4ma^2r\\dot r^2+m(2ga-\\Omega^2)r=0\\)。其中速度平方项来自径向动能的坐标依赖；忽略它仅在线性化附近成立。\n\n(2) 以径向约化坐标写 \\(L=\\frac12mA(r)\\dot r^2-U_{\\rm eff}(r)\\)，其中 \\(U_{\\rm eff}=m(ga-\\Omega^2/2)r^2\\)。定义 \\(\\Omega_c=\\sqrt{2ga}\\)，若 \\(\\Omega<\\Omega_c\\)，轴心有效势严格正曲率，径向受约束稳定；若 \\(\\Omega>\\Omega_c\\)，轴心线性不稳定；恰在临界时平面型有效势全零，任一常半径均满足径向方程，不能称其为通常意义的非线性回复稳定。\n\n(3) 在轴心 \\(A(0)=1\\)，线性方程是 \\(\\ddot r+(2ga-\\Omega^2)r=0\\)，故 \\(\\omega_r=\\sqrt{2ga-\\Omega^2}\\)（仅亚临界为实）。非零半径静平衡要求 \\((2ga-\\Omega^2)r_e=0\\)。因此除恰临界整条平坦平衡族外，不存在通常可稳定的有限 \\(r_e>0\\) 分岔支。若有人根据不同的旋转圆环模型写出非零有限半径稳定解，就违反了本抛物面 \\(z=ar^2\\) 的具体几何约束。\n\n(4) 惯性系中珠子的机械能为 \\(E_{\\rm in}=\\frac m2[A(r)\\dot r^2+\\Omega^2r^2]+mg ar^2\\)；外部旋转机构为维持 \\(\\dot\\phi=\\Omega\\) 持续施加方位约束力矩，其功率为 \\(\\Omega\\,d(m\\Omega r^2)/dt=2m\\Omega^2r\\dot r\\)，恰与径向移动引起的惯性系能量变化相容。Jacobi 型常量 \\(E_{\\rm in}-\\Omega L_z=\\frac12mA\\dot r^2+U_{\\rm eff}\\) 守恒。当 \\(\\Omega>\\Omega_c\\) 时 \\(U_{\\rm eff}\\to-\\infty\\)，珠可向无限半径滚落；此时理想无限大刚性曲面与固定转速驱动假设的物理代价不能忽略。\n"
+    },
+    {
+      "id": "E050",
+      "topic": "电磁学",
+      "title": "径向非均匀介质同轴电容器的极化束缚电荷与场能",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 85,
+      "tags": [
+        "非均匀介质",
+        "高斯定律",
+        "束缚电荷",
+        "电场能量"
+      ],
+      "answer": "C'=\\frac{2\\pi\\varepsilon_0}{\\ln[b(1+\\alpha)/(a+\\alpha b)]}",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-B",
+      "question": "长直同轴导体的内外半径分别为 \\(a,b\\)（\\(0<a<b\\)），忽略端部效应；两导体间填充线性各向同性非均匀介质 \\(\\varepsilon(r)=\\varepsilon_0(1+\\alpha r/a)\\)，其中 \\(\\alpha>0\\)，内圆柱单位长度自由电荷为 \\(+\\lambda\\)，外导体为 \\(-\\lambda\\)。假定介质静电、无自由体电荷、真空磁导率。\n(1) 求位移场、电场及两导体电势差，积分结果应明确依赖半径。\n(2) 给出单位长度电容和场能，验证 \\(U=\\lambda^2/(2C')\\)。\n(3) 求介质内部束缚体电荷密度和两边界的束缚面电荷，并核验总束缚电荷守恒。\n(4) 讨论 \\(\\alpha\\to0\\) 的均匀介质极限、介质极化的符号以及外导体电压变化方向。\n",
+      "solution": "(1) 取半径 \\(r\\) 的同轴高斯面，轴向每单位长度自由电荷为 \\(\\lambda\\)，故 \\(D_r=\\lambda/(2\\pi r)\\)。由线性本构关系 \\(E_r=D_r/\\varepsilon(r)=\\lambda/[2\\pi\\varepsilon_0r(1+\\alpha r/a)]\\)。内外电势差 \\(V=\\varphi(a)-\\varphi(b)=\\int_a^bE_rdr\\)，利用 \\(1/[r(1+\\alpha r/a)]=1/r-(\\alpha/a)/(1+\\alpha r/a)\\)，得到 \\(V=\\lambda\\ln[b(1+\\alpha)/(a+\\alpha b)]/(2\\pi\\varepsilon_0)\\)。对于 \\(b>a,\\alpha>0\\)，对数括号大于一，因此电容为正。\n\n(2) 单位长度电容 \\(C'=\\lambda/V=2\\pi\\varepsilon_0/\\ln[b(1+\\alpha)/(a+\\alpha b)]\\)，量纲为法拉每米。线性静电场能密度为 \\(\\mathbf E\\cdot\\mathbf D/2\\)，故每单位长度总场能 \\(U'=\\int_a^b(1/2)E_rD_r\\,2\\pi r\\,dr=\\lambda^2\\ln[b(1+\\alpha)/(a+\\alpha b)]/(4\\pi\\varepsilon_0)\\)。因 \\(V=\\lambda/C'\\)，这恰好是 \\(\\lambda V/2=\\lambda^2/(2C')\\)，避免了直接积分 \\(\\varepsilon E^2\\) 时漏去圆柱雅可比 \\(2\\pi r\\) 的错误。\n\n(3) 极化强度 \\(P_r=(\\varepsilon-\\varepsilon_0)E_r=\\lambda\\alpha/[2\\pi(a+\\alpha r)]\\)。柱坐标散度给 \\(\\rho_b=-r^{-1}d(rP_r)/dr=-\\lambda\\alpha a/[2\\pi r(a+\\alpha r)^2]\\)。介质内侧外法向是 \\(-\\hat{\\mathbf r}\\)，因此 \\(\\sigma_b(a)=-\\lambda\\alpha/[2\\pi a(1+\\alpha)]\\)；外侧是 \\(+\\hat{\\mathbf r}\\)，\\(\\sigma_b(b)=+\\lambda\\alpha/[2\\pi(a+\\alpha b)]\\)。积分体电荷 \\(\\int_a^b\\rho_b2\\pi r\\,dr\\) 并加两端 \\(\\sigma_b 2\\pi r\\) 后为零：介质整体极化只重新分布束缚电荷，不产生净电荷。\n\n(4) 令 \\(\\alpha\\to0\\)，对数变为 \\(\\ln(b/a)\\)，于是 \\(C'\\to2\\pi\\varepsilon_0/\\ln(b/a)\\)、\\(E_r\\to\\lambda/(2\\pi\\varepsilon_0r)\\)，束缚电荷消失。若 \\(\\lambda>0\\)，极化 \\(P_r>0\\) 沿径向指向外，内侧表面负、外侧正，内部体束缚密度为负；这些符号与 \\(-\\nabla\\cdot\\mathbf P\\) 相符。在自由 \\(\\lambda\\) 固定时介电常数增加降低场强及电压，故与真空同轴电容器相比总电容增大、储能降低。\n"
+    },
+    {
+      "id": "E051",
+      "topic": "电磁学",
+      "title": "径向梯度带电旋转薄盘的磁矩、轴心磁场与陀磁比",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 85,
+      "tags": [
+        "环电流积分",
+        "磁偶极矩",
+        "毕奥萨伐尔",
+        "角动量"
+      ],
+      "answer": "\\mu_z=Q\\omega R^2/6,\\quad B_z(0)=\\mu_0\\omega\\sigma_0R/3,\\quad \\mu_z/L_z=Q/(2M)",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-B",
+      "question": "一半径 \\(R\\) 的绝缘薄圆盘绕中心垂直轴匀速转动，角速率为 \\(\\omega\\)，面电荷密度 \\(\\sigma(r)=\\sigma_0(1-r^2/R^2)\\)，面质量密度 \\(\\Sigma(r)=\\Sigma_0(1-r^2/R^2)\\)，各参数取正。所有电荷固定在盘面上，忽略辐射、外加场和边缘厚度。\n(1) 求总电荷 \\(Q\\)、总质量 \\(M\\) 与绕轴转动惯量。\n(2) 用环电流积分磁偶极矩 \\(\\mu_z\\) 并化为以 \\(Q\\) 表示的形式。\n(3) 求盘心轴向磁场 \\(B_z(0)\\)，说明不能把非均匀带电盘等效为一个边缘电流圈。\n(4) 给出机械角动量及陀磁比 \\(\\mu_z/L_z\\)，解释其与电荷及质量的同分布假设之间的关系。\n",
+      "solution": "(1) 将盘分割为半径 \\(r\\) 宽度 \\(dr\\) 的同心环，\\(dQ=2\\pi r\\sigma(r)dr\\)、\\(dM=2\\pi r\\Sigma(r)dr\\)。积分得 \\(Q=2\\pi\\sigma_0(R^2/2-R^2/4)=\\pi\\sigma_0R^2/2\\)，对应 \\(M=\\pi\\Sigma_0R^2/2\\)。关于轴的转动惯量 \\(I_m=\\int_0^Rr^2dM=2\\pi\\Sigma_0(R^4/4-R^4/6)=\\pi\\Sigma_0R^4/6=MR^2/3\\)。非均匀盘的惯量不是均匀盘的 \\(MR^2/2\\)，因此必须先积分。\n\n(2) 每个环的电荷一周所需时间 \\(2\\pi/\\omega\\)，等效电流 \\(dI=\\omega\\,dQ/(2\\pi)\\)。电流环磁矩 \\(d\\mu_z=\\pi r^2dI=(\\omega r^2/2)dQ\\)，故 \\(\\mu_z=(\\omega/2)\\int r^2dQ=\\pi\\sigma_0\\omega(R^4/4-R^4/6)=\\pi\\sigma_0\\omega R^4/12\\)。因 \\(Q=\\pi\\sigma_0R^2/2\\)，可写 \\(\\mu_z=Q\\omega R^2/6\\)。若 \\(\\omega\\) 或电荷为负，磁矩方向随之反向；本题正参数规定其沿旋转轴正向。\n\n(3) 单个环在圆心的磁场大小 \\(dB_z=\\mu_0dI/(2r)=\\mu_0\\omega\\sigma(r)dr/2\\)。因此 \\(B_z(0)=\\mu_0\\omega\\sigma_0\\int_0^R(1-r^2/R^2)dr/2=\\mu_0\\omega\\sigma_0R/3\\)。等效磁偶极矩由 \\(r^2\\) 权重积分，而圆心磁场由不同的核函数 \\(1/r\\) 权重积分；两者不能仅凭一个总电荷或一圈等效电流同时恢复，靠近盘心的环对圆心磁场仍有有限贡献。\n\n(4) 角动量 \\(L_z=I_m\\omega=MR^2\\omega/3\\)。利用第二问 \\(\\mu_z=Q\\omega R^2/6\\)，得到 \\(\\mu_z/L_z=Q/(2M)\\)。更一般地，若每个小质元都满足相同的局域比荷 \\(dq/dm=Q/M\\)，则 \\(d\\mu=(\\omega r^2/2)dq\\) 与 \\(dL=\\omega r^2dm\\) 成正比，因而整体仍为 \\(Q/(2M)\\)，不依赖具体的同形径向密度。若电荷与质量的空间分布不成比例，积分权重不再抵消，陀磁比一般不同。\n"
+    },
+    {
+      "id": "E052",
+      "topic": "电磁学",
+      "title": "穿越外磁通的串联RLC闭环：感应电流、谐振相位及耗散守恒",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 85,
+      "tags": [
+        "法拉第电磁感应",
+        "RLC复阻抗",
+        "谐振耗散",
+        "瞬态稳定性"
+      ],
+      "answer": "\\widetilde I=-i\\Omega\\Phi_0/[R+i(\\Omega L-1/(\\Omega C))]",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-B",
+      "question": "单匝闭合导线环由电阻 \\(R>0\\)、自感 \\(L>0\\) 及理想电容 \\(C>0\\) 串联构成，流过电容的回路电流记为 \\(I=dq/dt\\)。均匀外加磁通按 \\(\\Phi_{\\rm ext}(t)=\\Phi_0\\cos\\Omega t\\) 变化。自感和外加磁通均按同一固定回路正向计号，磁通变化不受环电流反馈；考虑长期周期稳态及自由瞬态。\n(1) 从法拉第定律与基尔霍夫定律建立带驱动的电荷方程，给出外电动势符号。\n(2) 求稳态电流复振幅及谐振频率，指出微弱阻尼时的相位特征。\n(3) 计算电阻上的周期平均耗散功率，证明其等于外磁通驱动对环的平均输入功率。\n(4) 求自由瞬态的特征指数及临界阻尼条件，讨论 \\(R\\to0\\) 与理想共振极限。\n",
+      "solution": "(1) 法拉第定律给感应回路总电动势 \\(\\mathcal E=-d(\\Phi_{\\rm ext}+LI)/dt\\)。对串联电阻、电容分别有压降 \\(RI\\)、\\(q/C\\)，因此 \\(L\\ddot q+R\\dot q+q/C=-\\dot\\Phi_{\\rm ext}\\)。代入外磁通得右端 \\(+\\Omega\\Phi_0\\sin\\Omega t\\)。负号来自楞次定律，确保在外通量增加时感应环电流的磁通反向，而不是由任意的交流相位约定决定。\n\n(2) 取相位惯例 \\(q=\\Re[\\tilde q e^{i\\Omega t}],\\,\\Phi_{\\rm ext}=\\Re[\\Phi_0e^{i\\Omega t}]\\)，则 \\(\\tilde I=i\\Omega\\tilde q\\)，串联阻抗 \\(Z(\\Omega)=R+i(\\Omega L-1/\\Omega C)\\)，所以 \\(Z\\tilde I=-i\\Omega\\Phi_0\\)，即 \\(\\tilde I=-i\\Omega\\Phi_0/Z\\)。电抗为零的串联谐振频率是 \\(\\Omega_0=1/\\sqrt{LC}\\)，此时 \\(|\\tilde I|=\\Omega_0\\Phi_0/R\\)，电流相对所定义的磁通相位滞后四分之一个周期，若相对电动势比较则与其同相。\n\n(3) 电阻平均焦耳热 \\(\\overline P_R=R\\langle I^2\\rangle=R|\\tilde I|^2/2=R\\Omega^2\\Phi_0^2/[2(R^2+(\\Omega L-1/\\Omega C)^2)]\\)。将电荷方程乘 \\(I=\\dot q\\)，得到 \\(d[LI^2/2+q^2/(2C)]/dt+RI^2=-I\\dot\\Phi_{\\rm ext}\\)。对稳定周期积分左侧储能总变化为零，故 \\(\\overline P_R=\\langle-I\\dot\\Phi_{\\rm ext}\\rangle\\)，能量来自改变磁通的外部设备，而不是由感应电场无代价地产生。\n\n(4) 自由瞬态满足 \\(L\\ddot q+R\\dot q+q/C=0\\)，特征指数 \\(s_\\pm=[-R\\pm\\sqrt{R^2-4L/C}]/(2L)\\)。当 \\(R^2<4L/C\\) 为振荡衰减，等号为临界阻尼，大于则为过阻尼；\\(R>0\\) 时特征值实部均负。在 \\(R\\to0\\) 且 \\(\\Omega\\ne\\Omega_0\\) 时无损稳态可由公式求得，外驱周期平均能量交换为零；若同时在无阻尼精确共振，幅值公式发散反映线性解随时间增长，不能把 \\(R=0\\) 和长时间稳态两个极限任意交换。\n"
+    },
+    {
+      "id": "E053",
+      "topic": "电磁学",
+      "title": "有损传输线电报方程、负载反射与弱损耗衰减公式",
+      "kind": "综合推导题",
+      "level": 5,
+      "estimated_minutes": 85,
+      "tags": [
+        "电报方程",
+        "复传播常数",
+        "端接反射",
+        "能流与耗散"
+      ],
+      "answer": "\\gamma=\\sqrt{(R'+i\\omega L')(G'+i\\omega C')},\\quad\\Gamma_L=(Z_L-Z_0)/(Z_L+Z_0)",
+      "quality_status": "待独立复核",
+      "tier": "advanced_composite",
+      "format": "latex-fragment-v1",
+      "revision": "composite-v2.3-round11",
+      "challenge_profile": "high-multistage",
+      "complexity_tier": "L5-B",
+      "question": "无限均匀双导线单位长度的电阻、电感、电导、电容分别为 \\(R',L',G',C'\\)（\\(L',C'>0\\)，\\(R',G'\\ge0\\)）。令沿 \\(+z\\) 的电压、电流相量时间因子为 \\(e^{i\\omega t}\\)，右端 \\(z=0\\) 接负载阻抗 \\(Z_L\\)，线沿 \\(z\\le0\\) 延伸。考虑传播常数实部 \\(\\ge0\\) 的分支，先对一般有损线求解，再取无损/弱损极限。\n(1) 推导传输线相量形式微分方程、复传播常数 \\(\\gamma\\) 与特性阻抗 \\(Z_0\\)。\n(2) 求入射、反射振幅之比 \\(\\Gamma_L\\) 及完全匹配条件，并说明有损情形与实阻抗的差异。\n(3) 在无损情况下证明反射能流与透射负载功率满足守恒，列出开路、短路及匹配边界。\n(4) 在 \\(R'\\ll\\omega L'\\)、\\(G'\\ll\\omega C'\\) 时一阶展开衰减常数及相位常数，并说明近似适用范围。\n",
+      "solution": "(1) 在长度 \\(dz\\) 上用电压降与流向地电流分别得到 \\(\\partial_z V=-(R'+i\\omega L')I\\) 和 \\(\\partial_z I=-(G'+i\\omega C')V\\)。消去任一相量有 \\(\\partial_z^2V=\\gamma^2V,\\ \\partial_z^2I=\\gamma^2I\\)，其中 \\(\\gamma=\\sqrt{(R'+i\\omega L')(G'+i\\omega C')}\\)，特性阻抗 \\(Z_0=\\sqrt{(R'+i\\omega L')/(G'+i\\omega C')}\\)。选取被动线的物理平方根使 \\(\\Re\\gamma\\ge0\\)，并与 \\(\\Re Z_0>0\\) 的能流分支相匹配；右行波为 \\(e^{-\\gamma z}\\)，虽然在 \\(z\\le0\\) 上从左向右传播。\n\n(2) 写 \\(V(z)=V_+e^{-\\gamma z}+V_-e^{\\gamma z}\\)，对应 \\(I(z)=[V_+e^{-\\gamma z}-V_-e^{\\gamma z}]/Z_0\\)。在负载 \\(z=0\\) 有 \\(V(0)=Z_LI(0)\\)，求得 \\(\\Gamma_L=V_-/V_+=(Z_L-Z_0)/(Z_L+Z_0)\\)。反射为零当且仅当 \\(Z_L=Z_0\\)；一般有损线的 \\(Z_0\\) 是复数，仅让负载电阻等于 \\(|Z_0|\\) 并不保证无反射。有限传播距离上的反射振幅还需计入往返衰减因子。\n\n(3) 无损线 \\(R'=G'=0\\) 时 \\(\\gamma=i\\beta,\\ \\beta=\\omega\\sqrt{L'C'}\\)，\\(Z_0=\\sqrt{L'/C'}\\) 为正实数。两行波的时间平均净功率 \\(P=(|V_+|^2-|V_-|^2)/(2Z_0)=P_{\\rm in}(1-|\\Gamma_L|^2)\\)，而负载 \\(P_L=\\frac12\\Re[V(0)I(0)^*]\\) 等于它。开路 \\(Z_L\\to\\infty\\) 有 \\(\\Gamma=+1\\)（电流相消）；短路 \\(Z_L=0\\) 有 \\(\\Gamma=-1\\)（电压相消）；\\(Z_L=Z_0\\) 时 \\(\\Gamma=0\\) 且全部入射功率交付负载。\n\n(4) 令 \\(Z=R'+i\\omega L'\\)，\\(Y=G'+i\\omega C'\\)，乘积写成 \\(-\\omega^2L'C'[1-i(R'/\\omega L'+G'/\\omega C')+O(\\epsilon^2)]\\)。取平方根，得 \\(\\gamma\\simeq\\alpha+i\\beta\\)，其中 \\(\\beta\\simeq\\omega\\sqrt{L'C'}\\)，\\(\\alpha\\simeq\\frac{R'}2\\sqrt{C'/L'}+\\frac{G'}2\\sqrt{L'/C'}\\)。由于 \\(\\alpha\\ge0\\)，右行波振幅随传播距离衰减；若线路接近截止、\\(\\omega\\) 太小或 \\(R'/(\\omega L')\\)、\\(G'/(\\omega C')\\) 不小，一阶弱损近似失效。\n"
     }
   ]
 }
