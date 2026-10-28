@@ -2262,6 +2262,98 @@
     "solution": "(1) 二维 k 空间单位面积每个态占据 \\((2\\pi)^2/A\\)，累计态数 \\(N_1(E)=A(2\\pi)^{-2}\\pi k^2=AmE/(2\\pi\\hbar^2)\\)。故单位面积能量态密度是常数\n\\[\nD(E)=\\frac m{2\\pi\\hbar^2},\\qquad E>0.\n\\]\n\n(2) Bose 粒子数密度为\n\\[\nn=\\int_0^\\infty\\frac{D(E)}{z^{-1}e^{E/(k_BT)}-1}\\,dE\n=-\\frac1{\\lambda_T^2}\\ln(1-z).\n\\]\n该积分可用展开 \\(\\sum_{\\ell\\ge1}z^\\ell e^{-\\ell\\beta E}\\) 后逐项积分得到，要求 0<z<1。\n\n(3) 固定 T>0，当 z→1⁻，\\(-\\ln(1-z)\\to\\infty\\)，激发态面密度没有有限上界。因此任何有限 n 都可选某个 z<1 使激发态容纳全部粒子，不出现三维理想气体那样因激发态饱和而产生的有限 Tc 凝聚。\n\n(4) 反解上式得 \\(z=1-e^{-n\\lambda_T^2}\\)，故\n\\[\n\\mu(T)=k_BT\\ln[1-e^{-n\\lambda_T^2}]<0.\n\\]\n当 T→0⁺，\\(n\\lambda_T^2\\propto1/T\\to\\infty\\)，所以 \\(\\mu\\sim-k_BT e^{-n\\lambda_T^2}\\to0^-\\)，但任何正温度的 \\(\\mu\\) 仍严格为负。\n"
   },
   {
+    "id": "T036",
+    "topic": "热学",
+    "title": "理想热机 Carnot 循环四段能量与熵的逐段核算",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "Carnot循环",
+      "理想气体",
+      "热效率",
+      "熵守恒"
+    ],
+    "answer": "\\eta=1-T_c/T_h,\\quad W=nR(T_h-T_c)\\ln r",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.1",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B",
+    "question": "一台准静态可逆 Carnot 热机使用 \\(n\\) mol、摩尔定容热容 \\(C_V\\) 常量的理想气体，热源温度 \\(T_h>T_c>0\\)。高温等温膨胀体积比为 \\(r=V_2/V_1>1\\)，随后绝热到 Tc，低温等温压缩，再绝热回 Th。设 \\(\\gamma=1+R/C_V\\)。\n(1) 计算高温等温段的热量与功；(2) 求两绝热段的体积比关系；(3) 求低温等温放热及总循环功；(4) 证明效率与工作物质、体积比无关。\n",
+    "solution": "(1) 高温等温理想气体 \\(\\Delta U=0\\)，对外功\n\\[\nW_{12}=\\int_{V_1}^{V_2}\\frac{nRT_h}{V}\\,dV=nRT_h\\ln r.\n\\]\n因此吸热 \\(Q_h=W_{12}=nRT_h\\ln r>0\\)。\n\n(2) 可逆绝热满足 \\(TV^{\\gamma-1}=\\mathrm{const}\\)，所以 \\(V_3/V_2=(T_h/T_c)^{1/(\\gamma-1)}\\)；回程 \\(V_4/V_1=(T_h/T_c)^{1/(\\gamma-1)}\\)。相除可见低温等温压缩的体积比 \\(V_3/V_4=V_2/V_1=r\\)。\n\n(3) 低温等温段对外功 \\(W_{34}=nRT_c\\ln(V_4/V_3)=-nRT_c\\ln r\\)，故排向冷源的热量大小 \\(Q_c=nRT_c\\ln r\\)。两绝热段 Q=0、但其功与内能变化互相抵消；完整周期 \\(\\Delta U_{\\rm cycle}=0\\)，所以\n\\[\nW_{\\rm net}=Q_h-Q_c=nR(T_h-T_c)\\ln r.\n\\]\n\n(4) 热机效率\n\\[\n\\eta=\\frac{W_{\\rm net}}{Q_h}=1-\\frac{T_c}{T_h}.\n\\]\n由于可逆循环的熵收支 \\(Q_h/T_h-Q_c/T_c=0\\)，效率与 n、\\(C_V\\) 和 r 无关；若任一段不可逆，则熵产生正，实际效率低于该上限。\n"
+  },
+  {
+    "id": "T037",
+    "topic": "热学",
+    "title": "气相二聚分子的解离平衡、压强依赖与平衡常数",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "化学平衡",
+      "质量作用定律",
+      "理想混合物",
+      "勒夏特列原理"
+    ],
+    "answer": "\\alpha=\\sqrt{K_pp^\\circ/(K_pp^\\circ+4P)}",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.1",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C",
+    "question": "理想气体反应 \\(\\mathrm{A}_2\\rightleftharpoons2\\mathrm A\\) 在定温 T、总压强 P 下达到平衡，初始有 \\(n_0\\) mol 的 A₂，无 A。设解离度为 \\(\\alpha\\in(0,1)\\)，标准压强 \\(p^\\circ>0\\)，无量纲平衡常数定义为 \\(K_p=(p_A/p^\\circ)^2/(p_{A_2}/p^\\circ)\\)。\n(1) 求平衡时各组分物质的量和总物质的量；(2) 求各分压与解离度的关系；(3) 解出 \\(\\alpha(P,K_p)\\)；(4) 求低压和高压极限并解释压强对反应方向的影响。\n",
+    "solution": "(1) 初始 \\(n_0\\) mol 的 A₂ 中有比例 α 解离，每解离一摩尔 A₂ 产生2摩尔 A。因此平衡时 \\(n_{A_2}=n_0(1-\\alpha)\\)、\\(n_A=2n_0\\alpha\\)、总摩尔数 \\(n_{\\rm tot}=n_0(1+\\alpha)\\)。\n\n(2) Dalton 定律给摩尔分数 \\(y_A=2\\alpha/(1+\\alpha)\\)、\\(y_{A_2}=(1-\\alpha)/(1+\\alpha)\\)，所以 \\(p_A=2\\alpha P/(1+\\alpha)\\)、\\(p_{A_2}=(1-\\alpha)P/(1+\\alpha)\\)。\n\n(3) 代入平衡常数定义：\n\\[\nK_p=\\frac{p_A^2}{p_{A_2}p^\\circ}\n=\\frac{4\\alpha^2P}{(1-\\alpha^2)p^\\circ}.\n\\]\n整理 \\(K_pp^\\circ(1-\\alpha^2)=4P\\alpha^2\\)，得\n\\[\n\\alpha^2=\\frac{K_pp^\\circ}{K_pp^\\circ+4P},\\qquad\n\\alpha=\\sqrt{\\frac{K_pp^\\circ}{K_pp^\\circ+4P}}.\n\\]\n因 Kp,P 正，自动满足 0<α<1。\n\n(4) 固定 T 下 Kp 不变。若 \\(P\\to0^+\\)，α→1，低压有利于粒子数更多的解离方向；若 \\(P\\to\\infty\\)，\\(\\alpha\\sim\\sqrt{K_pp^\\circ/(4P)}\\to0\\)，高压有利于 A₂。此结论假定仍是理想气相，不考虑凝结或其他化学途径。\n"
+  },
+  {
+    "id": "T038",
+    "topic": "热学",
+    "title": "正则系综能量涨落、热容与大系统相对涨落缩放",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "配分函数",
+      "热容",
+      "热涨落",
+      "热力学极限"
+    ],
+    "answer": "\\mathrm{Var}(E)=k_BT^2C_V,\\quad \\Delta E/U=O(N^{-1/2})",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.1",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B",
+    "question": "一个温度 \\(T>0\\) 的大系统与理想热浴弱耦合，正则配分函数为 \\(Z(\\beta)=\\sum_j e^{-\\beta E_j}\\)，\\(\\beta=1/(k_BT)\\)。能级不显含温度，系统总热容 \\(C_V=(\\partial U/\\partial T)_V\\) 有限。\n(1) 求平均能量与 \\(\\ln Z\\) 的关系；(2) 推导能量方差与热容的精确关系；(3) 若系统由 N 个近独立单元构成且 U、Cv 均正比 N，求相对标准差的标度；(4) 讨论 T→0 时方差消失与热容正性。\n",
+    "solution": "(1) 正则概率 \\(p_j=e^{-\\beta E_j}/Z\\)，而 \\(\\partial_\\beta Z=-\\sum_j E_je^{-\\beta E_j}\\)，故平均能量\n\\[\nU=\\langle E\\rangle=-\\partial_\\beta\\ln Z.\n\\]\n这一恒等式仅需能级与 β 无显式依赖，且配分函数收敛。\n\n(2) 再对 β 求导，\n\\[\n\\partial_\\beta^2\\ln Z\n=\\langle E^2\\rangle-\\langle E\\rangle^2\n=\\mathrm{Var}(E).\n\\]\n由于 \\(\\partial_\\beta=-k_BT^2\\partial_T\\)，有\n\\[\n\\mathrm{Var}(E)=k_BT^2\\left(\\frac{\\partial U}{\\partial T}\\right)_V\n=k_BT^2C_V\\ge0.\n\\]\n若假定正则平衡且能级独立于 T，则热容不能为负。\n\n(3) 对 N 个弱相关单元，\\(U=O(N)\\)、\\(C_V=O(N)\\)，所以标准差 \\(\\Delta E=\\sqrt{k_BT^2C_V}=O(\\sqrt N)\\)，相对涨落 \\(\\Delta E/U=O(N^{-1/2})\\)。这解释宏观体系虽然能量在正则系综中不严格固定，实际相对变化却极小。\n\n(4) 当 T→0 并具有非简并基态且有限激发能隙时，能量分布集中在基态，方差趋零；公式中的 \\(T^2C_V\\to0\\)。对于相变或长程相互作用等不满足普通热力学极限的体系，\\(C_V\\) 可能超线性增长，必须重新检查相对涨落的标度。\n"
+  },
+  {
+    "id": "T039",
+    "topic": "热学",
+    "title": "Planck 黑体光谱的频率峰值、总辐射能及波长峰位置",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "Planck分布",
+      "Wien位移",
+      "Stefan积分",
+      "变量变换"
+    ],
+    "answer": "\\omega_{\\rm peak}=2.821439\\,k_BT/\\hbar,\\quad u=\\pi^2k_B^4T^4/(15c^3\\hbar^3)",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.1",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C",
+    "question": "理想黑体在温度 T>0 下的单位体积、单位角频率能量谱为 \\(u_\\omega=\\hbar\\omega^3/[\\pi^2c^3(e^{\\hbar\\omega/(k_BT)}-1)]\\)。忽略材料边界和频率色散。\n(1) 引入无量纲 \\(x=\\hbar\\omega/(k_BT)\\)，求频率谱最大值对应的隐式方程；(2) 给出正的非零峰值根的近似值并求 \\(\\omega_{\\rm peak}\\) 的温度标度；(3) 对全频积分求黑体能量密度；(4) 解释按波长绘制的谱峰为什么不等于将 \\(\\omega_{\\rm peak}\\) 直接换算成波长。\n",
+    "solution": "(1) 在固定 T 下最大化 \\(f(x)=x^3/(e^x-1)\\)。求导并整理得\n\\[\nf'(x)=\\frac{x^2[3(e^x-1)-xe^x]}{(e^x-1)^2}.\n\\]\n非零驻值满足 \\(3(1-e^{-x})=x\\)。x=0 只是形式上该方程的端点，谱在 x=0 为零，不是峰值。\n\n(2) 此方程在正实轴有唯一非零解 \\(x_*\\simeq2.821439\\)，可用单调性或数值迭代确定。因此\n\\[\n\\omega_{\\rm peak}=x_*k_BT/\\hbar,\n\\]\n频率峰线性随 T 增加，是 Wien 位移定律的角频率形式。\n\n(3) 对全部角频率积分：\n\\[\nu(T)=\\int_0^\\infty u_\\omega\\,d\\omega\n=\\frac{(k_BT)^4}{\\pi^2c^3\\hbar^3}\n\\int_0^\\infty\\frac{x^3}{e^x-1}\\,dx.\n\\]\n利用积分 \\(=\\Gamma(4)\\zeta(4)=\\pi^4/15\\)，得\n\\[\nu(T)=\\frac{\\pi^2k_B^4}{15c^3\\hbar^3}T^4.\n\\]\n总能量密度依赖温度四次方。\n\n(4) 将角频率改变量为真空波长 \\(\\lambda=2\\pi c/\\omega\\)，谱满足 \\(u_\\lambda=u_\\omega|d\\omega/d\\lambda|\\)。Jacobian \\(2\\pi c/\\lambda^2\\) 会改变极大点，故波长谱峰满足 \\(5(1-e^{-y})=y\\)，其正根 \\(y\\simeq4.965114\\)。因此频率峰的直接换算波长与波长谱峰不同，并无物理矛盾。\n"
+  },
+  {
     "id": "W007",
     "topic": "振动与波动",
     "title": "双弦接点附加质量的波散射",
@@ -2847,6 +2939,29 @@
     "revision": "composite-v2.0",
     "challenge_profile": "high-multistage",
     "complexity_tier": "L5-C"
+  },
+  {
+    "id": "W032",
+    "topic": "振动与波动",
+    "title": "有限阻尼端点的半无限弦反射系数与吸收功率",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "阻抗匹配",
+      "波边界",
+      "能流",
+      "最优吸收"
+    ],
+    "answer": "r=(Z-b)/(Z+b),\\quad\\mathcal A=4Zb/(Z+b)^2",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v2.1",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C",
+    "question": "张力 T、线密度 \\(\\mu\\) 的无损均匀弦占据 x<0，波速 \\(c=\\sqrt{T/\\mu}\\)，右端 x=0 连接只对横向速度施加阻尼力的黏滞减振器，阻尼系数 b>0，另一端固定于地面。单色波角频率 ω 从 x=−∞ 向右入射，时间因子 \\(e^{-i\\omega t}\\)。\n(1) 从端点力平衡求反射复幅度 r；(2) 求反射能流比与阻尼吸收率；(3) 求完全匹配吸收的 b 值；(4) 检查自由端、固定端及能量守恒极限。\n",
+    "solution": "(1) 弦的正向入射与反射位移分别 \\(y=e^{i(kx-\\omega t)}+re^{i(-kx-\\omega t)}\\)，其中 \\(k=\\omega/c\\)。右端弦对端点的张力沿 x 方向的横向合力是 \\(-T y_x(0,t)\\)，减振器力为 \\(-b y_t(0,t)\\)。端点无质量，故 \\(Ty_x+b y_t=0\\)。以复幅值代入得到 \\(iTk(1-r)-i b\\omega(1+r)=0\\)。\n\n(2) 令 \\(Z=Tk/\\omega=\\sqrt{T\\mu}\\)，解得\n\\[\nr=\\frac{Z-b}{Z+b}.\n\\]\n反射率 \\(\\mathcal R=|r|^2=(Z-b)^2/(Z+b)^2\\)，吸收率为\n\\[\n\\mathcal A=1-\\mathcal R=\\frac{4Zb}{(Z+b)^2}.\n\\]\n以波的入射平均功率与端点 \\(b\\overline{y_t^2}\\) 比较，也可直接得到同一吸收率。\n\n(3) 当 b=Z，边界与行波特征机械阻抗完全匹配，r=0、\\(\\mathcal A=1\\)，无反射。对 b>0，恒有 \\((Z-b)^2\\ge0\\)，所以 \\(\\mathcal A\\le1\\) 且 b=Z 时取等号。\n\n(4) b→0 为自由端 r→+1，位移无相位反转；b→∞ 为固定端 r→−1，位移反相。两极限均 \\(\\mathcal A\\to0\\)，与端点无法消耗平均机械功一致。\n"
   },
   {
     "id": "O007",
