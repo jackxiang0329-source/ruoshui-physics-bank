@@ -1,0 +1,7 @@
+(1) 两块质量的平动方程分别是 \(m_2g-T_2=m_2\ddot x\) 与 \(T_1-m_1g=m_1\ddot x\)。转动方程 \((T_2-T_1)R-b\dot x/R=I\ddot x/R\)；消去张力，令 \(A=m_1+m_2+I/R^2,\ D=(m_2-m_1)g,\ \beta=b/R^2\)，得到 \(A\ddot x+\beta\dot x=D\)。这里必须将轮的惯量等效为 \(I/R^2\)，不能预设两侧张力相等。
+
+(2) 设 \(\tau=A/\beta\)。一阶方程 \(A\dot v+\beta v=D\) 在 \(v(0)=0\) 时积分得 \(v(t)=(D/\beta)(1-e^{-t/\tau})\)，再积分 \(x(t)=(D/\beta)[t-\tau(1-e^{-t/\tau})]\)。初时 \(v\simeq Dt/A\)、\(x\simeq Dt^2/(2A)\)；长时间加速度指数衰减而位移近似匀速增长。
+
+(3) 两侧张力并不相等，严格为 \(T_2=m_2(g-\ddot x),\ T_1=m_1(g+\ddot x)\)，其中 \(\ddot x=(D/A)e^{-t/\tau}\)。终端速度 \(v_\infty=D/\beta=(m_2-m_1)gR^2/b\)。因为 \(D/A<g\)，两块均不失去绳约束；本式默认滑轮轴可持续散热且绳不滑。
+
+(4) 整体动能 \(K=Av^2/2\)，重力做功 \(Dx\)，阻力消耗 \(\int_0^t\beta v(s)^2\,ds\)。乘方程 \(Av'+\beta v=D\) 以 \(v\) 并积分，得 \(Dx=Av^2/2+\int_0^t\beta v^2ds\)。无阻尼极限需先在固定 \(t\) 下令 \(\beta\to0\)，由 \(1-e^{-\beta t/A}\sim\beta t/A\) 得 \(v=Dt/A,\ x=Dt^2/(2A)\)；不能直接将终端速度代入 \(b=0\)。

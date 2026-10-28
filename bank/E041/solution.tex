@@ -1,0 +1,7 @@
+(1) 静态电场切向分量沿轴均匀，故 \(J_z(r)=\sigma(r)E_0\)。在圆截面上积分 \(I=2\pi\int_0^a J_z(r)rdr=\pi a^2\sigma_0E_0(1+\alpha/2)\)。对长为 \(\ell\) 的导体电压 \(V=E_0\ell\)，于是 \(R_\ell=V/I=\ell/[\pi a^2\sigma_0(1+\alpha/2)]\)。条件 \(\alpha>-1\) 确保任意半径的局域耗散为非负。
+
+(2) 所包电流 \(I(r)=2\pi\sigma_0E_0(r^2/2+\alpha r^4/(4a^2))\)。安培定律 \(2\pi r B_\phi(r)=\mu_0I(r)\) 给 \(B_\phi(r)=\mu_0\sigma_0E_0[r/2+\alpha r^3/(4a^2)]\)，它在 \(r=0\) 正则，并在 \(r=a\) 给 \(\mu_0I/(2\pi a)\)。外部电流归路不能影响局域导体内部的环向磁场积分。
+
+(3) 体积焦耳耗散密度 \(p=\boldsymbol J\cdot\boldsymbol E=\sigma_0E_0^2(1+\alpha r^2/a^2)\)。单位长度总功率 \({\cal P}'=2\pi\int_0^a pr\,dr=\pi a^2\sigma_0E_0^2(1+\alpha/2)=I E_0\)。乘以长度 \(\ell\) 可得 \(I^2 R_\ell\)，显示非均匀场中需积分真实的 \(J(r)\) 而非套入截面平均局域电阻率。
+
+(4) 磁能每单位长度 \({\cal U}'=\int_0^a B_\phi^2/(2\mu_0)\,2\pi r\,dr\)。平方积分得到 \({\cal U}'=\pi\mu_0\sigma_0^2E_0^2a^4[1/16+\alpha/24+\alpha^2/128]\)。定义内部电感每单位长度 \(L'_{\rm int}=2{\cal U}'/I^2\)，所以 \(L'_{\rm int}={2\mu_0\over\pi(1+\alpha/2)^2}[1/16+\alpha/24+\alpha^2/128]\)。\(\alpha=0\) 时恢复 \(L'_{\rm int}=\mu_0/(8\pi)\)，并且该结果不含外部回路磁能。

@@ -1,0 +1,7 @@
+(1) 动力方程为 \(m\ddot q_j=K(q_{j+1}-2q_j+q_{j-1})\)，边界 \(q_{j+N}=q_j\)。取 Fourier 模态 \(q_j\propto e^{i(2\pi \ell j/N-\omega_\ell t)}\)，\(\ell=0,\dots,N-1\)，得 \(\omega_\ell^2=(2K/m)[1-\cos(2\pi\ell/N)]=(4K/m)\sin^2(\pi\ell/N)\)。这是离散 Laplacian 的实非负谱，而非连续弦的无界二次谱。
+
+(2) 当 \(\ell=0\)，频率为零，模态全体同位移，表示整体刚体平移且不储存弹簧势能。对任意非零 \(\ell\)，\(\omega_{N-\ell}=\omega_\ell\)，对应复共轭行波可组为实余弦、正弦驻波，因此通常二重简并；若 \(N\) 为偶数的 \(\ell=N/2\) 模态自共轭，则不发生此二重简并。忽略零模会违背外部总冲量引起的质心漂移。
+
+(3) 离散 Fourier 展开用 \(q_j(t)=N^{-1}\sum_{\ell=0}^{N-1}Q_\ell(t)e^{2\pi i\ell j/N}\)，初始 \(Q_\ell(0)=0\)，且 \(\dot Q_\ell(0)=J/m\) 对所有 \(\ell\) 相同。于是 \(Q_\ell(t)=\frac{J}{m\omega_\ell}\sin(\omega_\ell t)\) 对非零模成立，零模取连续极限 \(Q_0(t)=Jt/m\)。因此 \(q_j(t)=J/(mN)[t+\sum_{\ell=1}^{N-1}\sin(\omega_\ell t)e^{2\pi i\ell j/N}/\omega_\ell]\)，共轭项确保结果为实数。
+
+(4) 初始动能只有一个质点贡献 \(E_0=J^2/(2m)\)。用离散 Parseval 恒等式 \(\sum_j|\dot q_j|^2=N^{-1}\sum_\ell|\dot Q_\ell|^2\) 在 \(t=0\) 得同一能量。各正常模独立守恒 \(E_\ell=m|\dot Q_\ell|^2/(2N)+K\sum_j|q_{j+1}-q_j|^2/(2N)\)，全环总能量不随时间变化。把节点间距记为 \(a\)，无限环长波极限 \(\omega\simeq a\sqrt{K/m}|k|\)，群速 \(c=a\sqrt{K/m}\)，而有限环的谱仍离散。

@@ -1,0 +1,7 @@
+(1) 利用 \(\cos^3u=(3\cos u+\cos3u)/4\)，在基频近似中将 \(\alpha x^3\) 替换为 \(3\alpha A^3\cos(\omega t-\delta)/4\)。比较与驱动力同相和正交的系数，得 \(F\cos\delta=A[\omega_0^2-\omega^2+3\alpha A^2/4]\)，\(F\sin\delta=2\beta\omega A\)。平方相加消去相位，得到 \(F^2=A^2[(\omega_0^2-\omega^2+3\alpha A^2/4)^2+4\beta^2\omega^2]\)。
+
+(2) 在忽略阻尼的自由振动中，幅频骨架近似满足 \(\omega^2=\omega_0^2+3\alpha A^2/4\)。若 \(\alpha A^2\ll\omega_0^2\)，开平方得 \(\omega\simeq\omega_0+3\alpha A^2/(8\omega_0)\)。因为 \(\alpha>0\)，振幅越大频率越高，为硬化非线性；软化弹簧对应 \(\alpha<0\)，但本题限定正系数。
+
+(3) 令 \(y=A^2>0,\ d=\omega_0^2-\omega^2,\ a=3\alpha/4,\ b=2\beta\omega\)，幅频方程是 \(F^2=y[(d+ay)^2+b^2]\)。折叠要求固定 \(\omega\) 时导数 \(dF^2/dy=d^2+b^2+4day+3a^2y^2=0\)。解得 \(y_\pm=[-2d\pm\sqrt{d^2-3b^2}]/(3a)\)。存在两个正折叠根必须 \(d<-\sqrt3 b\)，即频率位于足够高的一侧且阻尼足够弱。这是谐波平衡多值解出现的必要条件，不能由此判定每支都动力学稳定。
+
+(4) 阻尼每单位质量耗功平均 \(2\beta\langle\dot x^2\rangle=\beta\omega^2A^2\)。驱动平均功率 \(F\langle\cos\omega t\,\dot x\rangle=F\omega A\sin\delta/2\)，代入 \(F\sin\delta=2\beta\omega A\) 得两者相等。若高次谐波不小、存在跳跃瞬态、混沌或倍周期运动，仅用单一基频幅值预测响应便不充分；上述曲线是受控近似而不是完整非线性方程的精确闭式解。
