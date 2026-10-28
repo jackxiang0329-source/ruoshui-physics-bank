@@ -1,0 +1,24 @@
+(1) 令 \(\Omega_R=\sqrt{\Omega^2+\Delta^2}\)，定义 \(A=(\Delta\sigma_z+\Omega\sigma_x)/\Omega_R\)。由 \(\sigma_i^2=I\) 及 \(\{\sigma_x,\sigma_z\}=0\)，有 \(A^2=I\)。因此矩阵指数级数按偶奇幂分组：
+\[
+U(t)=e^{-iHt/\hbar}
+=I\cos\frac{\Omega_Rt}{2}
+-i\frac{\Delta\sigma_z+\Omega\sigma_x}{\Omega_R}
+\sin\frac{\Omega_Rt}{2}.
+\]
+这是给定旋转参考系中的精确常哈密顿量解，不需再次展开微扰近似。
+
+(2) 因 \(\langle e|I|g\rangle=\langle e|\sigma_z|g\rangle=0\)，而 \(\langle e|\sigma_x|g\rangle=1\)，上态跃迁振幅为
+\[
+\langle e|U(t)|g\rangle
+=-i\frac{\Omega}{\Omega_R}\sin\frac{\Omega_Rt}{2}.
+\]
+故跃迁概率
+\[
+P_e(t)=\frac{\Omega^2}{\Omega^2+\Delta^2}
+\sin^2\frac{\sqrt{\Omega^2+\Delta^2}\,t}{2}.
+\]
+此式天然满足 0≤Pe≤1。
+
+(3) 共振 Δ=0 时 \(\Omega_R=\Omega\)，故 \(P_e=\sin^2(\Omega t/2)\)，首次完全翻转在 \(t_\pi=\pi/\Omega\)。任意非零失谐时最大概率仅为 \(P_{\max}=\Omega^2/(\Omega^2+\Delta^2)<1\)，即使将脉冲延长也无法达到确定的上态。若需要精确人口翻转，就必须控制失谐而非只调整时长。
+
+(4) 哈密顿量对应 Bloch 球绕单位向量 \(\boldsymbol n=(\Omega,0,\Delta)/\Omega_R\) 以角速度 ΩR 旋转。短时间 \(t\to0\) 时 \(\sin(\Omega_Rt/2)\sim\Omega_Rt/2\)，所以 \(P_e\sim \Omega^2t^2/4\)，首项不依赖失谐。若 Ω→0⁺ 且 Δ 固定，\(P_e\to0\)，因为哈密顿量只沿 σz 方向使上下态积累相位而不混合。

@@ -411,6 +411,50 @@
     "complexity_tier": "L5-C"
   },
   {
+    "id": "M024",
+    "topic": "力学",
+    "title": "竖直旋转圆环上滑珠的分岔、有效势与驱动功",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "转动约束",
+      "势能分岔",
+      "小振动",
+      "驱动做功"
+    ],
+    "question": "半径为 R 的刚性圆环位于竖直平面内，以恒角速度 Ω 绕竖直直径转动，质量 m 的小珠在环上无摩擦滑动，重力加速度 g。用从环底点测量的角 θ 表示珠的位置。\n(1) 在随环转动坐标系写出精确 θ 动力学和有效势；(2) 找出全部平衡角，分类稳定性并求非零平衡角出现的临界角速度；(3) 推导稳定平衡附近的线性振动频率，讨论临界点软化；(4) 计算实验室绕竖直轴的角动量和环驱动器的功率，证明惯性能量减 Ω 倍角动量守恒。",
+    "solution": "(1) 珠到转轴距离为 R sinθ，竖向高度相对于底点为 R(1-cosθ)。因此实验室动能为 mR²(θdot²+Ω²sin²θ)/2，重力势能为 mgR(1-cosθ)。以 θ 为广义坐标，\n\\[\nmR^2\\ddot\\theta=-mgR\\sin\\theta+mR^2\\Omega^2\\sin\\theta\\cos\\theta .\n\\]\n有效势为 \\(U_{\\mathrm{eff}}=mgR(1-\\cos\\theta)-mR^2\\Omega^2\\sin^2\\theta/2\\)，其导数正好是上述广义力的负值。\n\n(2) 平衡条件为 \\(\\sin\\theta(g-R\\Omega^2\\cos\\theta)=0\\)。底点 θ=0 与顶点 θ=π 始终是平衡；当 \\(\\Omega^2R\\ge g\\) 还出现 \\(\\theta_\\pm=\\pm\\arccos[g/(R\\Omega^2)]\\)。势能曲率为 \\(U''=mgR\\cos\\theta-mR^2\\Omega^2(\\cos^2\\theta-\\sin^2\\theta)\\)。底点在 Ω²R<g 时稳定，在 Ω²R>g 时不稳定；顶点曲率恒为 \\(-mgR-mR^2\\Omega^2<0\\)，始终不稳定。非零分支在超临界时曲率为 \\(mR^2\\Omega^2\\sin^2\\theta_\\pm>0\\)，故稳定。临界角速度 \\(\\Omega_c=\\sqrt{g/R}\\)。\n\n(3) 底点稳定时 \\(\\omega_{\\rm small}^2=g/R-\\Omega^2\\)；超临界两侧稳定点有\n\\[\n\\omega_{\\rm small}^2=\\Omega^2\\sin^2\\theta_\\pm\n=\\Omega^2-\\frac{g^2}{R^2\\Omega^2}.\n\\]\n临界点二阶曲率为零，线性频率软化为零，须使用四阶势能描述临界运动，不可将其称为普通谐振。\n\n(4) 绕竖直轴的实验室角动量为 \\(L_z=m\\Omega R^2\\sin^2\\theta\\)，为维持环恒角速需要的转矩是\n\\(\\tau_z=dL_z/dt=2m\\Omega R^2\\sin\\theta\\cos\\theta\\,\\dot\\theta\\)。驱动功率 \\(P=\\Omega\\tau_z\\)。实验室机械能 \\(E=mR^2(\\dot\\theta^2+\\Omega^2\\sin^2\\theta)/2+mgR(1-\\cos\\theta)\\) 满足 \\(\\dot E=P=\\Omega\\dot L_z\\)，所以 \\(E-\\Omega L_z=mR^2\\dot\\theta^2/2+U_{\\rm eff}\\) 守恒。",
+    "answer": "\nmR^2\\ddot\\theta=-mgR\\sin\\theta+mR^2\\Omega^2\\sin\\theta\\cos\\theta .\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
+    "id": "M025",
+    "topic": "力学",
+    "title": "傅科摆的地球自转科里奥利频率分裂与进动",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "地球自转系",
+      "科里奥利耦合",
+      "圆极化正规模",
+      "旋转进动"
+    ],
+    "question": "在纬度 φ 的理想地点安装长度 ℓ 的小角度傅科摆。取局部水平坐标 x 向东、y 向北，忽略地球自转导致的离心势修正和竖直运动修正，仅保留转动角速度的竖直分量 Ωsinφ，记 ω₀²=g/ℓ。\n(1) 推导小振动时的二维科里奥利耦合微分方程；(2) 用复坐标 z=x+iy 求两种圆极化精确频率；(3) 求初态 x(0)=A、y(0)=0、水平速度零的解，确定线性摆动平面的缓慢进动角速度；(4) 求进动周期，讨论赤道与两极极限，解释为什么科里奥利力不直接耗散机械能。",
+    "solution": "(1) 局部旋转系中的科里奥利加速度为 \\(-2\\boldsymbol\\Omega\\times\\dot{\\boldsymbol r}\\)。只保留竖直分量 \\(\\Omega_z=\\Omega\\sin\\varphi\\)，并令 \\(f=2\\Omega_z\\)，则水平分量为 \\(x''=f y'-\\omega_0^2x,\\ y''=-f x'-\\omega_0^2y\\)。所以\n\\[\nx''-fy'+\\omega_0^2x=0,\\qquad\ny''+fx'+\\omega_0^2y=0.\n\\]\n\n(2) 对 \\(z=x+iy\\)，两式合并为 \\(z''+ifz'+\\omega_0^2z=0\\)。设 \\(z\\propto e^{i\\nu t}\\)，则 \\(\\nu^2+f\\nu-\\omega_0^2=0\\)，令 \\(\\omega_*=\\sqrt{\\omega_0^2+f^2/4}\\)，两有符号根为 \\(\\nu_\\pm=-f/2\\pm\\omega_*\\)。因一正一负，这代表相反旋向的两个圆极化正常模，频率分裂为 f。\n\n(3) 初值 \\(z(0)=A,\\dot z(0)=0\\)，可先取 \\(z=e^{-ift/2}w\\)，得到 \\(w''+\\omega_*^2w=0\\)，且 \\(w(0)=A,\\dot w(0)=ifA/2\\)。故\n\\[\nz(t)=Ae^{-ift/2}\\left[\\cos(\\omega_*t)+i\\frac{f}{2\\omega_*}\\sin(\\omega_*t)\\right].\n\\]\n当 \\(f/\\omega_0\\ll1\\) 时，括号内为主导的实余弦，摆动线近似以 \\(-f/2=-\\Omega\\sin\\varphi\\) 的角速度旋转（从东向北为逆时针正向）；振动频率仍约为 ω₀。\n\n(4) 一整圈进动周期 \\(T_F=2\\pi/|\\Omega\\sin\\varphi|\\)，在赤道 \\(\\varphi=0\\) 无进动，周期趋无穷；在极点 \\(|\\sin\\varphi|=1\\)，周期为地球相对于惯性空间的自转周期。对方程分别乘 x'、y' 再相加，混合项 \\(-f x'y'+f y'x'\\) 严格抵消，因此\n\\[\n\\frac d{dt}\\frac m2(x'^2+y'^2+\\omega_0^2x^2+\\omega_0^2y^2)=0.\n\\]\n科里奥利力永远垂直速度，只改变振动方向而不做功。",
+    "answer": "\nx''-fy'+\\omega_0^2x=0,\\qquad\ny''+fx'+\\omega_0^2y=0.\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
     "id": "E007",
     "topic": "电磁学",
     "title": "滑动导体棒的自感反馈与能量耗散",
@@ -822,6 +866,50 @@
     "revision": "composite-v1.8",
     "challenge_profile": "high-multistage",
     "complexity_tier": "L5-A"
+  },
+  {
+    "id": "E024",
+    "topic": "电磁学",
+    "title": "穿过理想长螺线管的磁通变化、外部感应电场与电荷能量",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 65,
+    "tags": [
+      "法拉第定律",
+      "旋涡电场",
+      "电磁能量",
+      "电磁场拓扑"
+    ],
+    "question": "半径为 a 的无限长理想螺线管内磁场均匀沿 +z，大小 B(t)，外部磁场近似为零。令磁场在一段时间缓慢改变，取同轴圆周为积分回路，忽略辐射与位移电流修正。\n(1) 求 r<a 与 r>a 的环向感应电场；(2) 求两个不同半径圆周上的环量并检查其与法拉第磁通定律一致；(3) 一电荷 q 在固定半径 r>a 的圆环导轨上被外力缓慢匀速带动一周，求感应电场对电荷的功；(4) 解释管外 B≈0 但 E 非零的意义，并讨论 dB/dt=0 的静态极限。",
+    "solution": "(1) 圆柱对称性使电场仅有环向分量 \\(E_\\phi(r,t)\\)。由 Maxwell–Faraday 积分定律\n\\[\n2\\pi rE_\\phi=-\\frac{d\\Phi_B(r)}{dt}.\n\\]\n当 r<a，所围磁通为 \\(\\pi r^2B(t)\\)，所以 \\(E_\\phi=-r\\dot B/2\\)；当 r>a，磁通为 \\(\\pi a^2B(t)\\)，所以\n\\[\nE_\\phi(r,t)=-\\frac{a^2}{2r}\\dot B(t).\n\\]\n两个公式在 r=a 连续，不要求管外磁感应强度非零。\n\n(2) 对 r<a，环量 \\(2\\pi rE_\\phi=-\\pi r^2\\dot B\\)；对 r>a，环量 \\(2\\pi rE_\\phi=-\\pi a^2\\dot B\\)。正好等于各圆盘面的穿透磁通变化率的负值。管外 E 对 r 的依赖为 1/r，故不同的外部圆周都环绕同一磁通，其电场环量彼此相同。\n\n(3) 电荷沿圆周受切向电力 qEφ。当在足够短于 B 显著变化的时间里绕行一周，可将 \\(\\dot B\\) 当作常数，电场做功\n\\[\nW_E=q\\oint\\boldsymbol E\\cdot d\\boldsymbol\\ell\n=-q\\pi a^2\\dot B.\n\\]\n若时间不可忽略则必须沿真实时空轨道积分 \\(q\\int E_\\phi[r,t(\\phi)]r\\,d\\phi\\)，不能把不同时间的场抽成某一固定瞬间的环量。外力保持匀速时其功补偿电场功（导轨无摩擦），加速的能量来源于外部改变磁通的装置。\n\n(4) 外部区域局域旋度 \\(\\nabla\\times\\boldsymbol E=0\\)（磁场变化局限在管内），但绕管的一条闭曲线不能在不穿过磁场区域的情况下缩成一点；其非零环量体现整体拓扑。静态 \\(\\dot B=0\\) 时所有感应电场均为零，不能将外部静磁通本身当成永久感应电动势。",
+    "answer": "\n2\\pi rE_\\phi=-\\frac{d\\Phi_B(r)}{dt}.\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B"
+  },
+  {
+    "id": "E025",
+    "topic": "电磁学",
+    "title": "有阻尼等离子体的交流电导、复介电常数与功率吸收",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "tags": [
+      "Drude交流输运",
+      "复电导",
+      "等离子体频率",
+      "能量吸收"
+    ],
+    "question": "均匀各向同性电子等离子体中，电子数密度 n，电荷 −e、质量 m，具有现象学碰撞频率 γ>0。固定正离子背景不动；施加时间谐波电场 E(t)=Re[E₀e^(−iωt)]，ω>0，忽略空间色散和磁力。\n(1) 解电子平均速度方程并得到复电导率 σ(ω)；(2) 写出包含导电响应的复相对介电常数 εᵣ(ω)，定义等离子体频率；(3) 求一个周期内的平均场功率密度并证明非负；(4) 讨论 ω≪γ、ω≫γ 以及 γ→0⁺ 的极限和碰撞less 等离子体中负介电常数的条件。",
+    "solution": "(1) 模型方程为 \\(m\\dot{\\boldsymbol v}+m\\gamma\\boldsymbol v=-e\\boldsymbol E(t)\\)。取复振幅 \\(v(t)=\\Re[v_0e^{-i\\omega t}]\\)，有 \\(m(\\gamma-i\\omega)v_0=-eE_0\\)，所以\n\\[\nv_0=-\\frac{eE_0}{m(\\gamma-i\\omega)},\\qquad\n\\boldsymbol J_0=-ne\\boldsymbol v_0\n=\\sigma(\\omega)\\boldsymbol E_0,\\quad\n\\sigma(\\omega)=\\frac{ne^2}{m(\\gamma-i\\omega)}.\n\\]\n\n(2) 将导电电流纳入总位移电流：\\(\\nabla\\times\\boldsymbol H=\\sigma E-i\\omega\\epsilon_0E=-i\\omega\\epsilon_0\\epsilon_r E\\)。故 \\(\\epsilon_r=1+i\\sigma/(\\epsilon_0\\omega)\\)，定义 \\(\\omega_p^2=ne^2/(m\\epsilon_0)\\)，化简得\n\\[\n\\epsilon_r(\\omega)=1-\\frac{\\omega_p^2}{\\omega(\\omega+i\\gamma)}.\n\\]\n这里采用 \\(e^{-i\\omega t}\\) 时间惯例，因此被动介质应有 \\(\\Im\\epsilon_r>0\\)。\n\n(3) 复幅值的平均功率密度为 \\(\\overline p=\\frac12\\Re(\\boldsymbol J_0\\cdot\\boldsymbol E_0^*)=\\frac12\\Re\\sigma\\,|E_0|^2\\)。而\n\\[\n\\Re\\sigma=\\frac{ne^2\\gamma}{m(\\gamma^2+\\omega^2)}>0,\\qquad\n\\overline p=\\frac{ne^2\\gamma|E_0|^2}{2m(\\gamma^2+\\omega^2)}.\n\\]\n对运动方程乘速度再作周期平均也得 \\(\\overline{ne\\boldsymbol E\\cdot(-\\boldsymbol v)}=nm\\gamma\\overline{v^2}\\)，从微观阻尼角度核验正耗散。\n\n(4) 在 \\(\\omega\\ll\\gamma\\) 时 \\(\\sigma\\simeq ne^2/(m\\gamma)\\)，恢复欧姆电导；在 \\(\\omega\\gg\\gamma\\) 时 \\(\\sigma\\simeq i ne^2/(m\\omega)\\)，主要为无耗散的感性响应。固定 ω 后令 γ→0⁺，\\(\\epsilon_r\\to1-\\omega_p^2/\\omega^2\\)，当 \\(0<\\omega<\\omega_p\\) 时介电常数实部为负，均匀无碰撞等离子体中的电磁平面波不能以实波数传播。该结论限于忽略热速度、边界与碰撞的简单 Drude 模型。",
+    "answer": "\nv_0=-\\frac{eE_0}{m(\\gamma-i\\omega)},\\qquad\n\\boldsymbol J_0=-ne\\boldsymbol v_0\n=\\sigma(\\omega)\\boldsymbol E_0,\\quad\n\\sigma(\\omega)=\\frac{ne^2}{m(\\gamma-i\\omega)}.\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
   },
   {
     "id": "T007",
@@ -1237,6 +1325,50 @@
     "complexity_tier": "L5-B"
   },
   {
+    "id": "T024",
+    "topic": "热学",
+    "title": "范德瓦耳斯临界点的三重条件、压缩因子与等温稳定性",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "临界点",
+      "状态方程求导",
+      "等温压缩系数",
+      "临界指数"
+    ],
+    "question": "一摩尔流体满足范德瓦耳斯方程 P=RT/(v−b)−a/v²，a,b,R>0，v>b。假设临界点是同一等温曲线上同时满足 ∂P/∂v=0、∂²P/∂v²=0 的点。\n(1) 联立临界条件求临界摩尔体积、温度和压强；(2) 求临界压缩因子 Zc=Pcvc/(RTc)，与理想气体比较；(3) 从等温压缩系数 κT=−(1/v)(∂v/∂P)T 讨论机械稳定区间；(4) 沿 Tc 等温线作 v−vc 小偏差展开至首次非零阶，说明临界处为何压力变化是三次而非一次。",
+    "solution": "(1) 对状态方程在固定 T 下求导：\n\\[\nP_v=-\\frac{RT}{(v-b)^2}+\\frac{2a}{v^3},\\quad\nP_{vv}=\\frac{2RT}{(v-b)^3}-\\frac{6a}{v^4}.\n\\]\n在临界点，第一式给 \\(RT_c=2a(v_c-b)^2/v_c^3\\)，第二式给 \\(RT_c=3a(v_c-b)^3/v_c^4\\)。相除得 \\(2v_c=3(v_c-b)\\)，故 \\(v_c=3b\\)。回代得\n\\[\nT_c=\\frac{8a}{27Rb},\\qquad P_c=\\frac{a}{27b^2}.\n\\]\n\n(2) 临界压缩因子\n\\[\nZ_c=\\frac{P_cv_c}{RT_c}\n=\\frac{(a/(27b^2))3b}{8a/(27b)}=\\frac38.\n\\]\n理想气体总满足 Z=1，说明排除体积与吸引共同使实际临界压缩系数偏离理想值。此数值是模型预测，不是任意实际流体的严格普适常数。\n\n(3) 在单相稳定等温平衡区必须有 \\((\\partial P/\\partial v)_T<0\\)，等价于 \\(\\kappa_T=-1/(vP_v)>0\\)。当 \\(P_v>0\\) 时形式上的 \\(\\kappa_T<0\\) 表示均匀状态受机械扰动不稳定；当 \\(P_v=0\\) 压缩系数发散，需要考虑亚稳态、相分离与非线性效应，不能将整个 S 形等温线都当作稳定平衡。\n\n(4) 在 T=Tc 且 v=3b+δv 附近，常数项为 Pc，线性及二次项因临界条件为零。三阶导数\n\\[\nP_{vvv}=-\\frac{6RT}{(v-b)^4}+\\frac{24a}{v^5},\n\\quad\nP_{vvv}(T_c,3b)=-\\frac{a}{81b^5}.\n\\]\n故\n\\[\nP(T_c,v)=P_c-\\frac{a}{486b^5}(\\delta v)^3+O((\\delta v)^4).\n\\]\n这意味着临界等温线上 \\(P-P_c\\propto-(v-v_c)^3\\)，体现此平均场模型的临界幂指数 δ=3，并与体积扰动的三次响应一致。",
+    "answer": "\nP_v=-\\frac{RT}{(v-b)^2}+\\frac{2a}{v^3},\\quad\nP_{vv}=\\frac{2RT}{(v-b)^3}-\\frac{6a}{v^4}.\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
+    "id": "T025",
+    "topic": "热学",
+    "title": "二能级体系的布居反转、负绝对温度与熵最大点",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "微正则统计",
+      "布居反转",
+      "负温度",
+      "组合熵"
+    ],
+    "question": "N≫1 个彼此无相互作用、可区分的二能级单位，单粒子能级分别为 0 与 ε>0。固定激发粒子数 n、总内能 U=nε。考虑宏观热力学极限并用 Boltzmann 组合熵 S=kB ln[binom(N,n)]。\n(1) 用 Stirling 近似求激发比例 x=n/N 下的熵；(2) 由 1/T=(∂S/∂U)N 得到温度与 x 的关系，识别负温度区域；(3) 求正则体系的激发概率和热容，验证正、负温度延拓的一致性；(4) 说明 x→1/2、x→1⁻ 极限及为什么这种负温度不是“比零更冷”。",
+    "solution": "(1) 在 N≫1 且 x=n/N 远离精确端点时，\n\\[\n\\Omega(N,n)=\\frac{N!}{n!(N-n)!},\\quad\nS\\simeq-Nk_B[x\\ln x+(1-x)\\ln(1-x)].\n\\]\n熵对 x 关于 1/2 对称，并在 x=1/2 取最大值 \\(S_{\\max}\\simeq Nk_B\\ln2\\)。\n\n(2) 由 U=Nεx，\n\\[\n\\frac1T=\\left(\\frac{\\partial S}{\\partial U}\\right)_N\n=\\frac{k_B}{\\epsilon}\\ln\\frac{1-x}{x}.\n\\]\n因此 \\(x=1/[1+\\exp(\\epsilon/(k_BT))]\\)。当 0<x<1/2，温度为正；当 1/2<x<1，熵随内能增加而减少，故 T<0。这只有能谱上界有限、能实现布居反转且各内部自由度近似热平衡时才可能存在。\n\n(3) 单粒子正则配分函数为 \\(z=1+e^{-\\beta\\epsilon}\\)，平均激发比例 \\(x=1/(1+e^{\\beta\\epsilon})\\)，与微正则关系一致，包括 β<0 的形式延拓。平均内能 \\(U=N\\epsilon x\\)，故\n\\[\nC=\\left(\\frac{\\partial U}{\\partial T}\\right)_N\n=Nk_B\\left(\\frac{\\epsilon}{k_BT}\\right)^2\n\\frac{e^{\\epsilon/(k_BT)}}{[1+e^{\\epsilon/(k_BT)}]^2}>0.\n\\]\n无论 T 正负，热容非负，因为 \\(\\mathrm{Var}(U)=k_BT^2C\\ge0\\)。\n\n(4) 在 x→1/2± 时，\\(\\ln[(1-x)/x]\\to0^\\pm\\)，故温度分别趋 +∞ 与 −∞；负温度从“负无穷大”随布居反转增强趋近于 \\(0^-\\)（x→1⁻）。逆温 β 为热接触时能量流方向的根本变量，所有 β<0 的状态在热接触下可向任何 β>0 的体系放热，因此负绝对温度热力学上比任何正温度更“热”，并不是绝对零度以下。",
+    "answer": "\n\\Omega(N,n)=\\frac{N!}{n!(N-n)!},\\quad\nS\\simeq-Nk_B[x\\ln x+(1-x)\\ln(1-x)].\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B"
+  },
+  {
     "id": "W007",
     "topic": "振动与波动",
     "title": "双弦接点附加质量的波散射",
@@ -1646,6 +1778,50 @@
     "revision": "composite-v1.8",
     "complexity_tier": "L5-C",
     "challenge_profile": "high-multistage"
+  },
+  {
+    "id": "W024",
+    "topic": "振动与波动",
+    "title": "含黏滞阻尼的双振子非厄米模态与临界衰减",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "非厄米矩阵",
+      "阻尼耦合",
+      "复本征值",
+      "能量耗散"
+    ],
+    "question": "质量相同为 m 的两个质点沿水平线运动，各通过劲度 k>0 的弹簧与固定壁连接，两质点之间有一轻黏滞阻尼器，作用力与相对速度差成正比，系数 b>0。位移分别为 x₁,x₂，不存在其他阻尼。\n(1) 推导二自由度方程与机械能耗散律；(2) 使用和差坐标求两个解耦模态及其时间演化；(3) 给出差模欠阻尼、临界阻尼、过阻尼参数条件；(4) 对任意初值讨论长时间共同平移振动与能量损失，解释为什么系统虽然有阻尼仍可存在不衰减模。",
+    "solution": "(1) 根据弹簧力及速度差，\n\\[\nm\\ddot x_1+kx_1+b(\\dot x_1-\\dot x_2)=0,\\quad\nm\\ddot x_2+kx_2+b(\\dot x_2-\\dot x_1)=0.\n\\]\n乘以相应速度相加得\n\\[\n\\frac{d}{dt}\\left[\\frac m2(\\dot x_1^2+\\dot x_2^2)+\\frac k2(x_1^2+x_2^2)\\right]\n=-b(\\dot x_1-\\dot x_2)^2\\le0.\n\\]\n阻尼仅耗散相对运动，不能简单地把每个模态都认为必然衰减。\n\n(2) 定义和模 \\(u=(x_1+x_2)/2\\)、差模 \\(v=(x_1-x_2)/2\\)。相加和相减得到\n\\[\n\\ddot u+\\omega_0^2u=0,\\quad\n\\ddot v+\\frac{2b}{m}\\dot v+\\omega_0^2v=0,\\quad\n\\omega_0=\\sqrt{k/m}.\n\\]\n所以 \\(u(t)=u_0\\cos\\omega_0t+\\dot u_0\\sin\\omega_0t/\\omega_0\\)。对差模令 \\(\\gamma=b/m\\)，欠阻尼解为\n\\[\nv(t)=e^{-\\gamma t}\\left[v_0\\cos(\\omega_dt)+\\frac{\\dot v_0+\\gamma v_0}{\\omega_d}\\sin(\\omega_dt)\\right],\n\\quad\\omega_d=\\sqrt{\\omega_0^2-\\gamma^2}.\n\\]\n最后 \\(x_1=u+v,x_2=u-v\\)。\n\n(3) 当 \\(b<\\sqrt{mk}\\) 时差模特征根为 \\(-\\gamma\\pm i\\omega_d\\)，振荡衰减；当 \\(b=\\sqrt{mk}\\)，重根 \\(-\\omega_0\\) 导致\n\\(v=e^{-\\omega_0t}[v_0+(\\dot v_0+\\omega_0v_0)t]\\)；当 \\(b>\\sqrt{mk}\\)，两根 \\(-\\gamma\\pm\\sqrt{\\gamma^2-\\omega_0^2}\\) 均负而不振荡，故为过阻尼。临界参数来自差模中的 2b，不能套单个阻尼器的 b/(2m) 公式。\n\n(4) 差模中的速度差 \\(2\\dot v\\) 逐渐为零，而 u 不衰减，故长时间 \\(x_1(t)-x_2(t)\\to0\\)，两质点共同作同相简谐振动。能量损失仅是初始差模能量\n\\[\nE_{v,0}=m\\dot v_0^2+kv_0^2\n\\]\n（由两质点质量和弹簧能相加得到）；其余同相能量 \\(E_u=m\\dot u_0^2+ku_0^2\\) 保持不变。这是非厄米阻尼耦合系统仍存在无阻尼暗模态的严格例子。",
+    "answer": "\nm\\ddot x_1+kx_1+b(\\dot x_1-\\dot x_2)=0,\\quad\nm\\ddot x_2+kx_2+b(\\dot x_2-\\dot x_1)=0.\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
+    "id": "W025",
+    "topic": "振动与波动",
+    "title": "均匀运动介质中的对流波方程、双向多普勒色散与负频分支",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 65,
+    "tags": [
+      "对流导数",
+      "伽利略变换",
+      "色散关系",
+      "波前速度"
+    ],
+    "question": "一无损一维连续介质以恒定速度 U 沿 +x 流动，波相对于介质的本征速度为 c>0。小扰动标量 y 满足 (∂t+U∂x)²y=c²∂x²y，定义实验室波数 k∈R 和有符号角频率 ω∈R。\n(1) 展开波动方程并给出单色波色散关系；(2) 求两支相速度和群速度；(3) 若实验室观测某固定正频率 ω，求两支对应的波数，分析 |U|<c 与 U>c 的方向性质；(4) 给出在随流介质系中的变换，并解释超声速流中上游信息不能逆流传播的原因。",
+    "solution": "(1) 展开对流算符得\n\\[\n\\partial_t^2y+2U\\partial_t\\partial_xy+(U^2-c^2)\\partial_x^2y=0.\n\\]\n设 \\(y\\propto e^{i(kx-\\omega t)}\\)，代入得到\n\\[\n(\\omega-Uk)^2=c^2k^2.\n\\]\n所以两条有符号频率分支为 \\(\\omega_\\pm(k)=(U\\pm c)k\\)，在固定 k 的情况下可为负，不影响实场解通过正负共轭成分组成。\n\n(2) 相速度 \\(\\omega_\\pm/k=U\\pm c\\)，群速度 \\(\\partial\\omega_\\pm/\\partial k=U\\pm c\\)，两者各自相等，表示此线性色散模型的两个波包在实验室中沿固定特征速度传播。没有其他分散尺度，所以同一分支内部不同 k 不展宽。\n\n(3) 固定实验室正频率 ω>0，可写\n\\[\nk_+=\\frac{\\omega}{U+c},\\qquad k_-=\\frac{\\omega}{U-c}\n\\]\n（分母不为零时）。若 |U|<c，两个群速度 \\(U+c>0,U-c<0\\)，右行与左行特征分别向下游和上游传播；在 U=c 时向上游分支实验室群速度为零，不能用非零有限 k 承载给定正 ω。若 U>c，则两支群速度都为正，即使第二支在流体静止系相对介质逆向传播，实验室仍向下游移动。\n\n(4) 引入随流坐标 \\(x'=x-Ut,t'=t\\)，链式法则给 \\((\\partial_t+U\\partial_x)=\\partial_{t'}\\)，方程化为\n\\[\n\\partial_{t'}^2y=c^2\\partial_{x'}^2y.\n\\]\n相位变换 \\(\\omega'=\\omega-Uk\\)，在介质系为 \\(\\omega'^2=c^2k^2\\)，恢复通常双向波。U>c 时实验室的最慢传播特征速度仍为 U−c>0，因此上游无法收到有限传播速度的线性小信号。",
+    "answer": "\n\\partial_t^2y+2U\\partial_t\\partial_xy+(U^2-c^2)\\partial_x^2y=0.\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-B"
   },
   {
     "id": "O007",
@@ -2059,6 +2235,28 @@
     "challenge_profile": "high-multistage"
   },
   {
+    "id": "O024",
+    "topic": "光学",
+    "title": "Michelson 干涉仪高斯光谱的时间相干包络、可见度与分辨率",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 70,
+    "tags": [
+      "Michelson干涉",
+      "谱相干函数",
+      "高斯积分",
+      "相干长度"
+    ],
+    "question": "理想 Michelson 干涉仪的两个臂产生可调光程差 Δ（已经包含双程因素），由中心角频率 ω₀>0 的准单色平稳光源照明。光源功率谱关于 ω₀ 呈窄带高斯分布 S(ω)∝exp[−(ω−ω₀)²/(2σ²)]，σ>0 且 σ≪ω₀；忽略负频尾、色散和偏振失配，两臂返回光强相等。\n(1) 对单一角频率写出相位差与输出干涉强度；(2) 对高斯光谱积分求总强度和条纹可见度；(3) 定义可见度下降为 1/e 时的光程差为相干长度，求它与 σ 的关系；(4) 讨论改变 Δ 如何从干涉数据恢复光源谱宽以及 σ→0 极限。",
+    "solution": "(1) 光程差 Δ 引起时间延迟 \\(\\tau=\\Delta/c\\)，对于单频光的两束等光强 I₀，输出总强度可写为 \\(I_\\omega(\\Delta)=2I_0[1+\\cos(\\omega\\tau)]\\)。实际高斯谱的不同频率分量在探测器的慢响应下互不相干，须对频率功率而不是不同频率振幅直接求和。\n\n(2) 取归一化谱\n\\[\ns(\\omega)=\\frac1{\\sqrt{2\\pi}\\sigma}\ne^{-(\\omega-\\omega_0)^2/(2\\sigma^2)}\n\\]\n并在 \\(\\sigma\\ll\\omega_0\\) 时将下限近似延伸至负无穷。高斯特征函数满足\n\\[\n\\int_{-\\infty}^\\infty s(\\omega)e^{i\\omega\\tau}d\\omega\n=e^{i\\omega_0\\tau-\\sigma^2\\tau^2/2}.\n\\]\n因此\n\\[\nI(\\Delta)=2I_0\\left[1+\ne^{-\\sigma^2\\Delta^2/(2c^2)}\n\\cos(\\omega_0\\Delta/c)\\right].\n\\]\n局部干涉可见度包络为\n\\[\n\\mathcal V(\\Delta)=e^{-\\sigma^2\\Delta^2/(2c^2)}.\n\\]\n\n(3) 按 \\(\\mathcal V(\\ell_{\\rm coh})=e^{-1}\\)，求得\n\\[\n\\ell_{\\rm coh}=\\frac{\\sqrt2\\,c}{\\sigma}.\n\\]\n对应相干时间为 \\(\\tau_{\\rm coh}=\\sqrt2/\\sigma\\)。相干长度大表示光源频谱窄；该数值系数依赖采用角频率标准差及 1/e 包络的约定。\n\n(4) 实验上缓慢扫描 Δ 可获得快速载波振荡的周期 \\(2\\pi c/\\omega_0\\) 和慢变高斯包络的宽度，通过 \\(\\ln\\mathcal V=-\\sigma^2\\Delta^2/(2c^2)\\) 对 Δ² 作直线拟合即可估计 σ。若 σ→0⁺，包络趋1，任意有限光程差仍有完全对比度，退化为单色光；有限σ导致可见度下降，并不意味着两臂本身存在吸收。",
+    "answer": "\ns(\\omega)=\\frac1{\\sqrt{2\\pi}\\sigma}\ne^{-(\\omega-\\omega_0)^2/(2\\sigma^2)}\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
+  },
+  {
     "id": "Q007",
     "topic": "近代物理",
     "title": "相对论两体衰变的能量区间与阈值",
@@ -2468,5 +2666,27 @@
     "revision": "composite-v1.8",
     "complexity_tier": "L5-B",
     "challenge_profile": "high-multistage"
+  },
+  {
+    "id": "Q024",
+    "topic": "近代物理",
+    "title": "受驱双能级系统的 Rabi 振荡、失谐与 π 脉冲",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 75,
+    "tags": [
+      "双能级量子系统",
+      "旋转波近似",
+      "Rabi频率",
+      "失谐效应"
+    ],
+    "question": "在旋转参考系和旋转波近似下，一个受相干驱动的两能级量子系统由哈密顿量 H=ℏ(Δσz+Ωσx)/2 描述，其中 Ω>0 为实驱动强度、Δ∈R 为失谐量，σx、σz 为 Pauli 矩阵。初态是 σz 本征值 −1 的下态 |g⟩。\n(1) 利用 Pauli 矩阵恒等式计算严格时间演化算符；(2) 求任意时刻上态布居概率；(3) 求共振 Δ=0 时的 π 脉冲时间与任意失谐时的最大跃迁概率；(4) 求 Bloch 球有效旋转轴，验证短时间极限及 Ω→0 时无跃迁的极限。",
+    "solution": "(1) 令 \\(\\Omega_R=\\sqrt{\\Omega^2+\\Delta^2}\\)，定义 \\(A=(\\Delta\\sigma_z+\\Omega\\sigma_x)/\\Omega_R\\)。由 \\(\\sigma_i^2=I\\) 及 \\(\\{\\sigma_x,\\sigma_z\\}=0\\)，有 \\(A^2=I\\)。因此矩阵指数级数按偶奇幂分组：\n\\[\nU(t)=e^{-iHt/\\hbar}\n=I\\cos\\frac{\\Omega_Rt}{2}\n-i\\frac{\\Delta\\sigma_z+\\Omega\\sigma_x}{\\Omega_R}\n\\sin\\frac{\\Omega_Rt}{2}.\n\\]\n这是给定旋转参考系中的精确常哈密顿量解，不需再次展开微扰近似。\n\n(2) 因 \\(\\langle e|I|g\\rangle=\\langle e|\\sigma_z|g\\rangle=0\\)，而 \\(\\langle e|\\sigma_x|g\\rangle=1\\)，上态跃迁振幅为\n\\[\n\\langle e|U(t)|g\\rangle\n=-i\\frac{\\Omega}{\\Omega_R}\\sin\\frac{\\Omega_Rt}{2}.\n\\]\n故跃迁概率\n\\[\nP_e(t)=\\frac{\\Omega^2}{\\Omega^2+\\Delta^2}\n\\sin^2\\frac{\\sqrt{\\Omega^2+\\Delta^2}\\,t}{2}.\n\\]\n此式天然满足 0≤Pe≤1。\n\n(3) 共振 Δ=0 时 \\(\\Omega_R=\\Omega\\)，故 \\(P_e=\\sin^2(\\Omega t/2)\\)，首次完全翻转在 \\(t_\\pi=\\pi/\\Omega\\)。任意非零失谐时最大概率仅为 \\(P_{\\max}=\\Omega^2/(\\Omega^2+\\Delta^2)<1\\)，即使将脉冲延长也无法达到确定的上态。若需要精确人口翻转，就必须控制失谐而非只调整时长。\n\n(4) 哈密顿量对应 Bloch 球绕单位向量 \\(\\boldsymbol n=(\\Omega,0,\\Delta)/\\Omega_R\\) 以角速度 ΩR 旋转。短时间 \\(t\\to0\\) 时 \\(\\sin(\\Omega_Rt/2)\\sim\\Omega_Rt/2\\)，所以 \\(P_e\\sim \\Omega^2t^2/4\\)，首项不依赖失谐。若 Ω→0⁺ 且 Δ 固定，\\(P_e\\to0\\)，因为哈密顿量只沿 σz 方向使上下态积累相位而不混合。",
+    "answer": "\nU(t)=e^{-iHt/\\hbar}\n=I\\cos\\frac{\\Omega_Rt}{2}\n-i\\frac{\\Delta\\sigma_z+\\Omega\\sigma_x}{\\Omega_R}\n\\sin\\frac{\\Omega_Rt}{2}.\n",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "revision": "composite-v2.0",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C"
   }
 ]
