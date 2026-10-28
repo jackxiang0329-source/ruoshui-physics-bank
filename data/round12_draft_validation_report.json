@@ -203,28 +203,28 @@
       "id": "M060",
       "part": 1,
       "method": "symbolic",
-      "name": "constant proper acceleration produces a normalized hyperbolic worldline",
+      "name": "optimal control costate switching function satisfies dissipative Pontryagin adjoint ODE",
       "passed": true
     },
     {
       "id": "M060",
       "part": 2,
-      "method": "energy",
-      "name": "coordinate acceleration and relativistic kinetic work agree at arbitrary rapidity",
+      "method": "independent_derivation",
+      "name": "undamped triangular velocity envelope yields exact global time and peak speed",
       "passed": true
     },
     {
       "id": "M060",
       "part": 3,
-      "method": "independent_derivation",
-      "name": "outgoing null ray interception gives exponential redshift and causal horizon",
+      "method": "symbolic_and_limit",
+      "name": "dragged bang bang terminal velocity and exact displacement inversion hold",
       "passed": true
     },
     {
       "id": "M060",
       "part": 4,
-      "method": "conservation",
-      "name": "backward photon arrival time and Doppler ratio match adjacent-crest timing",
+      "method": "energy",
+      "name": "minimum time weak and strong drag asymptotics agree with exact arcosh solution",
       "passed": true
     },
     {
@@ -414,8 +414,8 @@
     },
     {
       "id": "M060",
-      "method": "numerical",
-      "name": "null interception and exponential Doppler redshift at finite rapidity",
+      "method": "independent_numerical_quadrature",
+      "name": "bang bang exact terminal condition and viscous work dissipation quadrature",
       "passed": true
     },
     {

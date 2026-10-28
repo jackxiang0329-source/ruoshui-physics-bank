@@ -1,22 +1,22 @@
 {
   "id": "M060",
   "topic": "力学",
-  "title": "恒定固有加速度火箭的双曲世界线、追及光信号与Rindler视界",
+  "title": "有界推力与线性阻力下的最短时间控制、单切换定理与精确耗散",
   "kind": "综合推导题",
   "level": 5,
   "estimated_minutes": 110,
   "tags": [
-    "狭义相对论固有加速度",
-    "双曲世界线与快速度",
-    "能量功及坐标加速度",
-    "光信号多普勒效应",
-    "因果视界与零测地线"
+    "Pontryagin极小值原理与协态",
+    "有界加速度Bang-Bang控制",
+    "固定终端速度的全局可达性",
+    "线性阻力下最短时间闭式解",
+    "驱动功与粘性耗散守恒"
   ],
-  "answer": "\\gamma=1+\\frac{ax}{c^2},\\quad ct-x=\\frac{c^2}{a}(1-e^{-a\\tau/c}),\\quad \\nu_{\\rm rec}=\\nu_0e^{-a\\tau/c}",
+  "answer": "T_{\\min}=\\frac2\\gamma\\operatorname{arcosh}\\left(e^{\\gamma^2L/(2a)}\\right),\\quad L_{\\max}(T)=\\frac{2a}{\\gamma^2}\\ln\\cosh\\frac{\\gamma T}{2}",
   "quality_status": "待独立复核",
   "tier": "advanced_composite",
   "format": "latex-fragment-v1",
-  "revision": "composite-v2.4-round12-draft",
+  "revision": "composite-v2.5-round12-overlap-replacement",
   "challenge_profile": "high-multistage",
   "complexity_tier": "L5-C"
 }

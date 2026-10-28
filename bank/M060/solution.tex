@@ -1,43 +1,126 @@
-(1) 设无量纲快速度为 \(\eta\)，四速度 \(U^\mu=(c\cosh\eta,c\sinh\eta)\)，取度规 \(+,-\)，立即有 \(U^\mu U_\mu=c^2\)。四加速度 \(A^\mu=dU^\mu/d\tau=c\dot\eta(\sinh\eta,\cosh\eta)\)，故 \(\sqrt{-A^\mu A_\mu}=c|\dot\eta|=a\)。由初始静止和正向加速知 \(\eta=a\tau/c\)。因此
+(1) 对最短时间问题取正常型 Hamiltonian
 \[
-v=c\tanh\eta,\quad \gamma=\cosh\eta,\quad
-t=\frac ca\sinh\eta,\qquad
-x=\frac{c^2}{a}(\cosh\eta-1).
+ \mathcal H=1+\lambda_x v+\lambda_v(u-\gamma v).
 \]
-求导得 \(dt/d\tau=\cosh\eta\)、\(dx/d\tau=c\sinh\eta\)，且 \(t(0)=x(0)=v(0)=0\)。这里 \(a\) 是加速度计读数，不是实验室坐标加速度。
+协态方程为
+\(\dot\lambda_x=0,\ \dot\lambda_v=-\lambda_x+\gamma\lambda_v\)。
+故 \(\lambda_x=A\) 为常数，而
+\[
+ \lambda_v(t)=C e^{\gamma t}+\frac{A}{\gamma}.
+\]
+极小化 \(\mathcal H\) 给出 \(u_*=-a\,\operatorname{sgn}\lambda_v\)（切换点除外）。
+若 \(\lambda_v\) 在非零长度区间恒为零，则协态方程迫使
+\(\lambda_x=0\)，违反正常极值协态非平凡性及自由终时条件；
+所以没有奇异弧。除退化的无位移情形外，
+\(C e^{\gamma t}+A/\gamma\) 最多有一个零点。
+由于目标位移 \(L>0\)，最优次序为先 \(u=+a\)，再 \(u=-a\)。
+还可不依赖必要条件证明全局最优性：固定 \(T\) 时
+\[
+ v(T)=e^{-\gamma T}\int_0^T e^{\gamma t}u(t)\,dt=0,\quad
+ x(T)=\frac1\gamma\int_0^T[1-e^{-\gamma(T-t)}]u(t)\,dt.
+\]
+在 \(|u|\le a\) 及末速度线性约束下，极大化位移是线性控制问题。
+对约束加入乘子后，最优 \(u\) 由权重
+\([1-e^{-\gamma(T-t)}]/(\gamma e^{\gamma t})
+ =(e^{-\gamma t}-e^{-\gamma T})/\gamma\)
+与常数阈值比较决定。该权重严格递减，因此全局最大位移控制
+必为先 \(+a\) 后 \(-a\) 的单次切换；并非仅凭PMP宣称充分性。
 
-(2) 由 \(\cosh^2\eta-\sinh^2\eta=1\) 得
+(2) 无阻力时设切换时间 \(t_s\)，末速度
+\(v(T)=a t_s-a(T-t_s)=0\) 给出 \(t_s=T/2\)。
+速度为先线性增加再线性减小的三角形，
 \[
-\boxed{\left(x+\frac{c^2}{a}\right)^2-c^2t^2=\frac{c^4}{a^2}}.
+ L=\frac{aT^2}{4},\qquad
+ \boxed{T_0=2\sqrt{L/a}},\quad
+ \boxed{t_s=\sqrt{L/a}},\quad
+ \boxed{v_{\max}=\sqrt{aL}},\quad
+ \boxed{x(t_s)=L/2}.
 \]
-又 \(dv/dt=(dv/d\tau)/(dt/d\tau)=a/\gamma^3\)，随速度增加而趋零。到 \(x=D\) 时
+独立地，任意可行控制满足
+\(v(t)\le at\)（从初态积分），也满足
+\(v(t)\le a(T-t)\)（由末速度反向积分），
+故
 \[
-\gamma_D=1+\frac{aD}{c^2},\quad
-t_D=\frac ca\sqrt{\gamma_D^2-1},\quad
-\tau_D=\frac ca\operatorname{arcosh}\gamma_D.
+ L=\int_0^T v(t)\,dt
+ \le a\int_0^T\min(t,T-t)\,dt
+ =\frac{aT^2}{4}.
 \]
-动量 \(p=mc\sinh\eta\)，于是实验室外力 \(F=dp/dt=ma\) 为常数，供能功 \(W=\int_0^D F\,dx=maD=(\gamma_D-1)mc^2\)，与相对论动能严格相符。\(aD/c^2\ll1\) 时 \(t_D\simeq\sqrt{2D/a}\)，恢复牛顿结果。
+只有上述三角形速度轨迹能处处达到上界，
+从而证明 \(T_0\) 是全局最优，而非局部候选。
 
-(3) 原点发出的右行光线满足 \(x=c(t-t_e)\)，相遇条件是 \(ct-x=ct_e\)。将 (1) 代入，使用 \(\sinh\eta-\cosh\eta=-e^{-\eta}\)，得到
+(3) 有阻力时记 \(s=t_s\)。
+加速段和制动段的速度分别为
 \[
-ct_e=\frac{c^2}{a}(1-e^{-\eta}),\qquad
-\eta=-\ln\left(1-\frac{at_e}{c}\right),\qquad
-\tau_e=-\frac ca\ln\left(1-\frac{at_e}{c}\right).
+ v(t)=\frac a\gamma(1-e^{-\gamma t}),\quad0\le t\le s,
 \]
-因此有限固有时相遇当且仅当 \(0\le t_e<c/a\)；临界 \(t_e=c/a\) 仅在 \(\tau\to\infty\) 形式上相接，更晚发出的光永远追不上火箭。对沿 \(+x\) 的光，瞬时共动系的频率为
 \[
-\boxed{\nu_{\rm rec}=\gamma(1-v/c)\nu_0=e^{-\eta}\nu_0
-=\left(1-\frac{at_e}{c}\right)\nu_0}.
+ v(t)=\left[v_s+\frac a\gamma\right]e^{-\gamma(t-s)}
+       -\frac a\gamma,\quad s\le t\le T,\qquad
+ v_s=\frac a\gamma(1-e^{-\gamma s}).
 \]
-红移趋零频率对应信号源可达性的边界，而非光速发生变化。
+末速度 \(v(T)=0\) 等价于
+\(e^{\gamma(T-s)}=2-e^{-\gamma s}\)，因此
+\[
+ \boxed{s(T)=\frac1\gamma
+ \ln\frac{1+e^{\gamma T}}2}.
+\]
+将 \(\dot v+\gamma v=u\) 从0到 \(T\) 积分并用两端零速度，
+得到 \(\gamma L=a(2s-T)\)。
+代入上式，利用
+\((1+e^z)/2=e^{z/2}\cosh(z/2)\)，
+\[
+ \boxed{L_{\max}(T)=\frac{2a}{\gamma^2}
+ \ln\cosh\frac{\gamma T}{2}}.
+\]
+它随 \(T>0\) 严格递增，故全局最短时间由
+\(L_{\max}(T_{\min})=L\) 唯一决定：
+\[
+ \boxed{T_{\min}=\frac2\gamma
+ \operatorname{arcosh}\!\left(e^{\gamma^2L/(2a)}\right)}.
+\]
+当 \(\gamma\to0^+\)，用
+\(\ln\cosh z=z^2/2+O(z^4)\)
+可得 \(L_{\max}(T)\to aT^2/4\)，
+\(T_{\min}\to2\sqrt{L/a}\)，与(2)一致。
+全部指数的自变量 \(\gamma T\)、\(\gamma^2L/a\) 均无量纲。
 
-(4) 火箭向后发出的光在实验室系仍沿 \(-x\) 传播，其世界线在发射后为 \(x'=x(\tau)-c[t'-t(\tau)]\)。令 \(x'=0\)，原点收到光的时刻
+(4) 令 \(\varepsilon=\gamma^2L/a\)。
+由 \(\ln\cosh z=z^2/2-z^4/12+O(z^6)\)，
+小阻力时反解得
 \[
-\boxed{t_r=t(\tau)+\frac{x(\tau)}c=\frac ca(e^\eta-1)}.
+ \boxed{T_{\min}=2\sqrt{\frac La}
+ \left[1+\frac{\gamma^2L}{12a}
+ +O\!\left(\frac{\gamma^4L^2}{a^2}\right)\right]}.
 \]
-瞬时共动系到实验室系的逆向多普勒变换给出
+当 \(\varepsilon\gg1\)，利用
+\(\operatorname{arcosh}(e^{\varepsilon/2})
+ =\varepsilon/2+\ln2+O(e^{-\varepsilon})\)，
 \[
-\boxed{\nu_r=\gamma(1-v/c)\nu_*=\nu_*e^{-\eta}
-=\frac{\nu_*}{1+at_r/c}}.
+ \boxed{T_{\min}=\frac{\gamma L}{a}
+ +\frac{2\ln2}{\gamma}
+ +O\!\left(\frac{e^{-\gamma^2L/a}}{\gamma}\right)}.
 \]
-独立地对上式求导，\(dt_r/d\tau=e^\eta\)，因此火箭每隔 \(d\tau=1/\nu_*\) 发射的相邻波峰在原点的间隔为 \(dt_r=e^\eta d\tau\)，同样给出 \(\nu_r=e^{-\eta}\nu_*\)。当 \(\tau\to\infty\) 时 \(t_r\to\infty\)、\(\nu_r\to0\)；与 (3) 不同，任意有限时刻向后发出的光都能抵达原点。全部频率比无量纲，\(c/a\) 具有时间量纲。
+驱动器作用力为 \(F_u=mu\)，因先正后负，
+\[
+ W=\int_0^T mu(t)v(t)\,dt
+ =ma\left(\int_0^s v\,dt-\int_s^T v\,dt\right)
+ =ma[2x(s)-L].
+\]
+由加速段积分
+\(x(s)=\frac a\gamma[s-(1-e^{-\gamma s})/\gamma]\)，
+及 \(L=a(2s-T)/\gamma\)，得到
+\[
+ \boxed{W=\frac{ma^2}{\gamma^2}
+ \left[\gamma T-2(1-e^{-\gamma s})\right]>0}
+ \qquad(\gamma>0,\ L>0).
+\]
+将 \(m\dot v=mu-m\gamma v\) 乘 \(v\) 并积分，
+由于两端动能都为零，
+\[
+ \boxed{W=m\gamma\int_0^T v(t)^2\,dt>0}.
+\]
+这是不依赖轨迹积分形式的独立耗散核验。
+在无阻力极限 \(W\to0\)，加速段的正功被制动段的负功抵消；
+实际不能回收制动能的执行器仍有正的总供能。
+最短时间控制将加速度幅度始终取到上界，未优化能耗，
+因此不能把最短时间等同于最小耗散功。

@@ -153,19 +153,27 @@ record('T057',4,'strong_shock_limit','strong shock finite compression, pressure 
 
 
 # Round-12 continuation: four new, distinct physical models, each with four executable checks.
-aR,cR,etaR=s.symbols('aR cR etaR',positive=True)
-tR=cR*s.sinh(etaR)/aR
-xR=cR**2*(s.cosh(etaR)-1)/aR
-record('M060',1,'symbolic','constant proper acceleration produces a normalized hyperbolic worldline',
-       eq((xR+cR**2/aR)**2-cR**2*tR**2,cR**4/aR**2))
-record('M060',2,'energy','coordinate acceleration and relativistic kinetic work agree at arbitrary rapidity',
-       eq(s.diff(cR*s.tanh(etaR),etaR)/s.diff(tR,etaR),aR/s.cosh(etaR)**3)
-       and eq((s.cosh(etaR)-1)*cR**2,aR*xR))
-record('M060',3,'independent_derivation','outgoing null ray interception gives exponential redshift and causal horizon',
-       eq(s.simplify((cR*tR-xR-cR**2*(1-s.exp(-etaR))/aR).rewrite(s.exp))))
-record('M060',4,'conservation','backward photon arrival time and Doppler ratio match adjacent-crest timing',
-       eq(s.simplify((cR*tR+xR-cR**2*(s.exp(etaR)-1)/aR).rewrite(s.exp)))
-       and eq(s.diff((cR/aR)*(s.exp(etaR)-1),etaR),cR*s.exp(etaR)/aR))
+# M060 replacement: minimum time bang-bang control with linear drag, not M029 rocket.
+accM,dragM,distM,tmM=s.symbols('accM dragM distM tmM',positive=True)
+lambdaM,cmM=s.symbols('lambdaM cmM',real=True)
+swM=cmM*s.exp(dragM*tmM)+lambdaM/dragM
+record('M060',1,'symbolic','optimal control costate switching function satisfies dissipative Pontryagin adjoint ODE',
+       eq(s.diff(swM,tmM)-dragM*swM+lambdaM))
+record('M060',2,'independent_derivation','undamped triangular velocity envelope yields exact global time and peak speed',
+       eq(accM*(s.integrate(tmM,(tmM,0,s.Symbol('Topt',positive=True)/2))
+          +s.integrate(s.Symbol('Topt',positive=True)-tmM,(tmM,s.Symbol('Topt',positive=True)/2,s.Symbol('Topt',positive=True)))),
+          accM*s.Symbol('Topt',positive=True)**2/4)
+       and eq(accM*s.sqrt(distM/accM),s.sqrt(accM*distM)))
+Topt=2/dragM*s.acosh(s.exp(dragM**2*distM/(2*accM)))
+tsM=s.log((1+s.exp(dragM*Topt))/2)/dragM
+record('M060',3,'symbolic_and_limit','dragged bang bang terminal velocity and exact displacement inversion hold',
+       eq(s.exp(dragM*(Topt-tsM)),2-s.exp(-dragM*tsM))
+       and eq(s.cosh(dragM*Topt/2),s.exp(dragM**2*distM/(2*accM))))
+record('M060',4,'energy','minimum time weak and strong drag asymptotics agree with exact arcosh solution',
+       eq(s.limit(Topt,dragM,0,dir='+'),2*s.sqrt(distM/accM))
+       and eq(s.limit(dragM*(Topt-dragM*distM/accM),dragM,s.oo),2*s.log(2)))
+
+
 omE,epE,muE,kE,beE=s.symbols('omE epE muE kE beE',positive=True)
 xE,ampE,widthE=s.symbols('xE ampE widthE',real=True)
 eY=ampE*s.sin(kE*xE)
@@ -316,10 +324,19 @@ supplemental.append(dict(id='T057',method='independent_numerical',name='high-Mac
 
 
 # Supplemental numeric checks are independent of the four per-question evidence records.
-etaN=mp.mpf('0.91');aN=mp.mpf('1.3');cN=mp.mpf('3.0')
-tN=cN/aN*mp.sinh(etaN);xN=cN*cN/aN*(mp.cosh(etaN)-1)
-assert abs(cN*tN-xN-cN*cN/aN*(1-mp.exp(-etaN)))<mp.mpf('1e-27')
-supplemental.append(dict(id='M060',method='numerical',name='null interception and exponential Doppler redshift at finite rapidity',passed=True))
+aN=mp.mpf('3');gN=mp.mpf('0.5');LN=mp.mpf('2')
+TN=2/gN*mp.acosh(mp.exp(gN*gN*LN/(2*aN)))
+sN=mp.log((1+mp.exp(gN*TN))/2)/gN
+vSN=aN/gN*(1-mp.exp(-gN*sN))
+vT=(vSN+aN/gN)*mp.exp(-gN*(TN-sN))-aN/gN
+xSN=aN/gN*(sN-(1-mp.exp(-gN*sN))/gN)
+WN=aN*(2*xSN-LN)
+vfun=lambda t:aN/gN*(1-mp.exp(-gN*t)) if t<=sN else (vSN+aN/gN)*mp.exp(-gN*(t-sN))-aN/gN
+dissN=gN*(mp.quad(lambda t:vfun(t)**2,[0,sN])+mp.quad(lambda t:vfun(t)**2,[sN,TN]))
+assert abs(vT)<mp.mpf('1e-27')
+assert abs(aN*(2*sN-TN)/gN-LN)<mp.mpf('1e-27')
+assert abs(WN-dissN)<mp.mpf('1e-27')
+supplemental.append(dict(id='M060',method='independent_numerical_quadrature',name='bang bang exact terminal condition and viscous work dissipation quadrature',passed=True))
 wN=mp.mpf('3');kcN=mp.pi/2;betaN=mp.sqrt(wN*wN-kcN*kcN)
 assert abs((betaN/(4*wN))/(mp.mpf('0.25'))-betaN/wN)<mp.mpf('1e-27')
 supplemental.append(dict(id='E060',method='numerical',name='independent TE10 Poynting to energy speed at nonzero cutoff',passed=True))

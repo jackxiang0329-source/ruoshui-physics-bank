@@ -1,5 +1,5 @@
 {
-  "status": "blocking_editorial_review_not_expert_verdict",
+  "status": "core_model_overlap_replacements_completed_pending_technical_and_independent_review",
   "reviewed_at": "2026-10-28",
   "draft_branch": "physics-round12-50-work",
   "scope": "screen existing draft questions against main before final admission",
@@ -9,8 +9,15 @@
       "existing_id": "M029",
       "shared_core": "恒定固有加速度火箭的快速度、双曲世界线和坐标加速度",
       "draft_new_aspects": "追及光信号视界与双向多普勒频移",
-      "action": "重构核心模型或提供可审计的实质差异论证",
-      "resolution_status": "unresolved"
+      "action": "完整替换原恒定固有加速度火箭模型为有界控制与线性阻力最短时间问题；独立验证Pontryagin切换、全局位移上界、精确arcosh时间及耗散功",
+      "resolution_status": "resolved",
+      "replacement_title": "有界推力与线性阻力下的最短时间控制、单切换定理与精确耗散",
+      "evidence_paths": [
+        "bank/M060/question.tex",
+        "bank/M060/solution.tex",
+        "scripts/check_round12_draft.py",
+        "data/round12_draft_validation_report.json"
+      ]
     },
     {
       "draft_id": "O057",
@@ -43,6 +50,6 @@
       ]
     }
   ],
-  "disposition": "O057 and Q057 resolved by replacing the physical core models; M060 remains unresolved and blocks admission. Automated QA is not independent expert review.",
+  "disposition": "All three flagged overlap IDs have been replaced with genuinely different core physical models. This is editorial remediation only, not expert signoff. Round 12 remains 13/50 and cannot be merged.",
   "independent_expert_review": "待独立复核"
 }
