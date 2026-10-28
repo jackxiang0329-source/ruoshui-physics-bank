@@ -171,7 +171,7 @@ D2=m/(s.pi*s.Symbol("hbar",positive=True)**2)
 check("Q026",zero(s.diff(D2,energy)),"2D free-electron density of states constant")
 mm,kap,RRR,ee=s.symbols("mm kap RRR ee",positive=True)
 rt=kap/ee
-I=mp.quad(lambda r:mp.sqrt(2*(2/r-0.5)),[0.3,4.0])
+I=mp.quad(lambda r:mp.sqrt(2*(2/r-mp.mpf("0.5"))),[mp.mpf("0.3"),mp.mpf("4.0")])
 Gexact=2*mp.sqrt(2)*2/mp.sqrt(mp.mpf("0.5"))*(mp.acos(mp.sqrt(mp.mpf("0.3")/4))-mp.sqrt(mp.mpf("0.3")/4*(1-mp.mpf("0.3")/4)))
 check("Q027",abs(2*I-Gexact)<mp.mpf("1e-20"),"Gamow barrier WKB integral independently quadrature")
 hbar=s.symbols("hbar",positive=True)
