@@ -2,7 +2,7 @@
 
 > 仅供编辑复核：尚未通过独立双语、答案或版权审核；不可正式组卷。
 
-共 305 道。英文原文均以保留源指纹的上游快照为依据。
+共 310 道。英文原文均以保留源指纹的上游快照为依据。
 
 <a id="cp-00001"></a>
 
@@ -6382,6 +6382,149 @@ A flea jumps by exerting a force of <math xmlns="http://www.w3.org/1998/Math/Mat
 - 原件：external_sources/college_physics/raw/CP-00282.md
 - 原件 Git blob SHA：9dbdea99f20806f3f5cb1a9e880120bfbbe19a1a
 - 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00283"></a>
+
+## CP-00283｜篮球运动员起跳时对地面的作用力
+
+**学科：** 力学　**知识点：** 动力学／起跳受力
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+**综合题。**一名篮球运动员为跳起接球，先下蹲使身体降低 $0.300\,\mathrm{m}$，再伸直双腿，在这段距离内由静止向上加速。他离地时的竖直速度足以使其上升至地面以上 $0.900\,\mathrm{m}$ 的高度。（a）求离地瞬间速度；（b）假定从静止开始在 $0.300\,\mathrm{m}$ 内加速到该速度，求伸腿阶段加速度；（c）若运动员质量为 $110\,\mathrm{kg}$，求他对地面施加的力。
+
+## 英文原题（存档摘录）
+
+# Further Applications of Newton’s Laws of Motion — CP-00283
+
+**Integrated Concepts** A basketball player jumps straight up for a ball. To do this, he lowers his body 0.300 m and then accelerates through this distance by forcefully straightening his legs. This player leaves the floor with a vertical velocity sufficient to carry him 0.900 m above the floor. (a) Calculate his velocity when he leaves the floor. (b) Calculate his acceleration while he is straightening his legs. He goes from zero to the velocity found in part (a) in a distance of 0.300 m. (c) Calculate the force he exerts on the floor to do this, given that his mass is 110 kg.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00283.md
+- 原件 Git blob SHA：2f3c49324e1dec13c08306101d7eddad4e465c66
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：物理模型依赖
+- 审校提示：原题“上升至地面以上0.900m”与离地后质心上升0.900m存在解释差异，需说明质心高度模型。
+
+---
+
+<a id="cp-00284"></a>
+
+## CP-00284｜竖直上抛弹体的受力与加速度
+
+**学科：** 力学　**知识点：** 牛顿定律／短程加速
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+**综合题。**质量为 $2.50\,\mathrm{kg}$ 的烟火弹体竖直向上发射，最高达到 $110\,\mathrm{m}$。（a）即使忽略空气阻力是较差的近似，仍按这一假设求弹体离开发射管时的速度。（b）发射管长 $0.450\,\mathrm{m}$，假定弹体在管内由静止加速至（a）中的速度，求平均加速度。（c）求管内弹体受到的平均作用力，分别用牛顿及该作用力与弹体重量之比表示。
+
+## 英文原题（存档摘录）
+
+# Further Applications of Newton’s Laws of Motion — CP-00284
+
+**Integrated Concepts** A 2.50-kg fireworks shell is fired straight up from a mortar and reaches a height of 110 m. (a) Neglecting air resistance (a poor assumption, but we will make it for this example), calculate the shell’s velocity when it leaves the mortar. (b) The mortar itself is a tube 0.450 m long. Calculate the average acceleration of the shell in the tube as it goes from zero to the velocity found in (a). (c) What is the average force on the shell in the mortar? Express your answer in newtons and as a ratio to the weight of the shell.
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00284.md
+- 原件 Git blob SHA：3686fd83d4dcee6615b2eb71b65a933f1239cec3
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：物理模型依赖
+- 审校提示：原题教学情景仅用于理想一维运动分析；管内作用力需区分合外力与管壁推力。
+
+---
+
+<a id="cp-00285"></a>
+
+## CP-00285｜载客电梯三个运动阶段的拉力
+
+**学科：** 力学　**知识点：** 牛顿定律／电梯多阶段运动
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+一部载满乘客的电梯总质量为 $1700\,\mathrm{kg}$。（a）电梯从静止开始向上加速，加速度为 $1.20\,\mathrm{m/s^2}$，历时 $1.50\,\mathrm{s}$。求支承钢缆的张力。（b）此后电梯以恒定速度继续上升 $8.50\,\mathrm{s}$，此时钢缆张力是多少？（c）电梯以 $0.600\,\mathrm{m/s^2}$ 的减速度运动 $3.00\,\mathrm{s}$，求这一阶段的张力。（d）求电梯相对初始位置上升的总高度和最终速度。
+
+## 英文原题（存档摘录）
+
+# Further Applications of Newton’s Laws of Motion — CP-00285
+
+**Integrated Concepts** An elevator filled with passengers has a mass of 1700 kg. (a) The elevator accelerates upward from rest at a rate of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>1</mn><mtext>.</mtext><msup><mtext>20 m/s</mtext><mrow><mn>2</mn></mrow></msup></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{1 "." "20 m/s" rSup { size 8{2} } } {}</annotation></semantics></math>
+
+ for 1.50 s. Calculate the tension in the cable supporting the elevator. (b) The elevator continues upward at constant velocity for 8.50 s. What is the tension in the cable during this time? (c) The elevator decelerates at a rate of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>0</mn><mtext>.</mtext><msup><mtext>600 m/s</mtext><mrow><mn>2</mn></mrow></msup></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{0 "." "600 m/s" rSup { size 8{2} } } {}</annotation></semantics></math>
+
+ for 3.00 s. What is the tension in the cable during deceleration? (d) How high has the elevator moved above its original starting point, and what is its final velocity?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00285.md
+- 原件 Git blob SHA：ef2c7861769a19914982e1d0abfb4a08118abd78
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+
+---
+
+<a id="cp-00286"></a>
+
+## CP-00286｜汽车长时间减速后的数学结果
+
+**学科：** 力学　**知识点：** 运动学／不合理结果
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+**不合理结果题。**（a）一辆最初以 $50.0\,\mathrm{km/h}$ 行驶的汽车，以 $0.400\,\mathrm{m/s^2}$ 的减速度持续 $50.0\,\mathrm{s}$，根据运动方程求其末速度。（b）结果有什么不合理之处？（c）哪些前提不合理或相互矛盾？
+
+## 英文原题（存档摘录）
+
+# Further Applications of Newton’s Laws of Motion — CP-00286
+
+**Unreasonable Results** (a) What is the final velocity of a car originally traveling at 50.0 km/h that decelerates at a rate of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mrow><mn>0</mn><mtext>.</mtext><msup><mtext>400 m/s</mtext><mrow><mn>2</mn></mrow></msup></mrow></mrow><mrow /></mrow><annotation encoding="StarMath 5.0"> size 12{0 "." "400 m/s" rSup { size 8{2} } } {}</annotation></semantics></math>
+
+ for 50.0 s? (b) What is unreasonable about the result? (c) Which premise is unreasonable, or which premises are inconsistent?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00286.md
+- 原件 Git blob SHA：d63cc13692b009220f957388ba32b835ec4fce0f
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 审校提示：恒定负加速度延伸到停车以后将预测反向运动；题目要求指出该假设不现实。
+
+---
+
+<a id="cp-00287"></a>
+
+## CP-00287｜电梯中人的体重秤读数是否合理
+
+**学科：** 力学　**知识点：** 牛顿定律／表观重量
+
+**审核状态：** 中文初译；待独立双语、物理、答案及版权复核；不可正式组卷。
+
+## 中文译题
+
+**不合理结果题。**质量为 $75.0\,\mathrm{kg}$ 的人站在电梯里的体重秤上，电梯在 $2.00\,\mathrm{s}$ 内由静止加速至 $30.0\,\mathrm{m/s}$。（a）计算体重秤读数，单位为牛顿，并与人的重量比较。体重秤对人的向上支持力等于其读数。（b）所得结果有何不合理之处？（c）哪些前提不合理或矛盾？
+
+## 英文原题（存档摘录）
+
+# Further Applications of Newton’s Laws of Motion — CP-00287
+
+**Unreasonable Results** A 75.0-kg man stands on a bathroom scale in an elevator that accelerates from rest to 30.0 m/s in 2.00 s. (a) Calculate the scale reading in newtons and compare it with his weight. (The scale exerts an upward force on him equal to its reading.) (b) What is unreasonable about the result? (c) Which premise is unreasonable, or which premises are inconsistent?
+
+## 来源
+
+- 原件：external_sources/college_physics/raw/CP-00287.md
+- 原件 Git blob SHA：cc463f034d96556e4f1f1d3788469e5fdfc2c646
+- 上游署名与许可证见原件；尚未完成单题权利审查。
+- 题设／编辑风险：题设条件不充分
+- 审校提示：原题未直接指明电梯加速方向，求唯一读数须明确是向上加速；可能为不合理结果题的隐含情景。
 
 ---
 
