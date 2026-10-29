@@ -1,0 +1,7 @@
+(1) 由态内积 \(\langle f|i\rangle=c^2-s^2=\cos\theta\)，而 \(\langle f|\sigma_z|i\rangle=c^2+s^2=1\)，所以 \(\boxed{A_w=1/\cos\theta=\sec\theta}\)。零耦合后选择成功率 \(P_0=|\langle f|i\rangle|^2=\cos^2\theta\)。当两态接近正交时弱值可大于本征值范围，但这只是带条件概率的复振幅比，不是一次测量出现超出本征谱的本征值。
+
+(2) 因 \(\sigma_z|0\rangle=|0\rangle,\sigma_z|1\rangle=-|1\rangle\)，耦合使指针分别平移 \(+g\) 与 \(-g\)。后选择后 \(\tilde\psi_f(q)=c^2\psi_0(q-g)-s^2\psi_0(q+g)\)。当 \(g/\sigma\ll|\cos\theta|\)，Taylor展开 \(\psi_0(q\mp g)=\psi_0(q)\mp g\psi_0'(q)+O(g^2)\)，得 \(\tilde\psi_f\simeq\cos\theta[\psi_0-g\sec\theta\,\psi_0']\)，故归一化指针均值 \(\boxed{\langle q\rangle_f\simeq g\,\operatorname{Re}A_w=g\sec\theta}\)。必须同时满足小耦合与非过小后选择重叠，不能先令 \(\cos\theta\to0\) 再使用该近似。
+
+(3) 两个位移Gaussian的重叠为 \(\int\psi_0(q-g)\psi_0(q+g)dq=e^{-g^2/(2\sigma^2)}\)。因此 \(\boxed{P_{\rm succ}=c^4+s^4-2c^2s^2e^{-g^2/(2\sigma^2)}}\)。平均位置分子中交叉项是奇函数积分为零，剩余 \(g(c^4-s^4)=g(c^2-s^2)=g\cos\theta\)，所以 \(\boxed{\langle q\rangle_f=g\cos\theta/P_{\rm succ}}\)。固定非零 \(g\) 且 \(\theta\to\pi/2\) 时分子趋零而分母趋 \([1-e^{-g^2/(2\sigma^2)}]/2>0\)，条件均值趋零，严格消除了弱值的表面发散。
+
+(4) 弱极限 \(P_{\rm succ}\simeq\cos^2\theta\)，\(A_w^2=\sec^2\theta\)，所以 \(\boxed{P_{\rm succ}A_w^2\simeq1}\)。虽然成功样本的指针位移被放大，但保留样本数同比减少；若初始指针Gaussian位置方差为 \(\sigma^2\)，成功样本单次位置测量的位移Fisher信息近似 \(A_w^2/\sigma^2\)，乘成功率后不超过原有 \(1/\sigma^2\) 量级。完整联合纯态对参数 \(g\) 的量子Fisher信息为 \(4\operatorname{Var}(\sigma_zp)/\hbar^2=1/\sigma^2\)，后选择是数据处理，不能突破总信息上界；技术噪声条件下仍可能有实际仪器优势。

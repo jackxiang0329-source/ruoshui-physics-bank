@@ -3,7 +3,7 @@
   "round": "13",
   "status": "draft_in_progress_not_admitted",
   "target_new_items": 50,
-  "draft_items": 42,
+  "draft_items": 50,
   "main_admitted_new_items": 0,
   "base_count": 352,
   "base_main_sha": "5504f1a24a1404b54c6485d8bb8419792fe2de4f",
@@ -49,27 +49,35 @@
     "T070",
     "W070",
     "O072",
-    "Q072"
+    "Q072",
+    "M075",
+    "M076",
+    "E075",
+    "E076",
+    "T071",
+    "W071",
+    "O073",
+    "Q073"
   ],
   "topic_counts": {
-    "力学": 7,
-    "电磁学": 7,
-    "热学": 7,
-    "振动与波动": 7,
-    "光学": 7,
-    "近代物理": 7
+    "力学": 9,
+    "电磁学": 9,
+    "热学": 8,
+    "振动与波动": 8,
+    "光学": 8,
+    "近代物理": 8
   },
   "remaining_topic_counts": {
-    "力学": 2,
-    "电磁学": 2,
-    "热学": 1,
-    "振动与波动": 1,
-    "光学": 1,
-    "近代物理": 1
+    "力学": 0,
+    "电磁学": 0,
+    "热学": 0,
+    "振动与波动": 0,
+    "光学": 0,
+    "近代物理": 0
   },
-  "remaining_to_draft": 8,
+  "remaining_to_draft": 0,
   "required_final_checks": 200,
   "executed_subpart_checks": 168,
   "expert_review": "待独立复核",
-  "note": "42/50 draft; 168 executable subpart checks; 8 remaining; all pending independent review, not admitted."
+  "note": "50 complete draft problem sources, 168 existing subpart QA plus final 32 pending. Not admitted until 200 verified and double PDF CI passes. All pending independent review."
 }

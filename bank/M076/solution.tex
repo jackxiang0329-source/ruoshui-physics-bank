@@ -1,0 +1,7 @@
+(1) 局地旋转角速度的竖直分量为 \(\Omega_F=\Omega_\oplus\sin\lambda\)。旋转系科里奥利加速度 \(-2\boldsymbol\Omega\times\boldsymbol v\) 在水平面的分量为 \((2\Omega_F\dot y,-2\Omega_F\dot x)\)。因此 \(\ddot x+\omega_0^2x=2\Omega_F\dot y,\ \ddot y+\omega_0^2y=-2\Omega_F\dot x\)。令 \(z=x+iy\)，合并得 \(\boxed{\ddot z+2i\Omega_F\dot z+\omega_0^2z=0}\)。忽略离心修正是因为 \(g\) 已取局地有效值；科里奥利符号由右手坐标决定，不能任意调换。
+
+(2) 代入 \(z\propto e^{-i\omega t}\)，特征方程 \(-\omega^2+2\Omega_F\omega+\omega_0^2=0\)，根为 \(\omega=\Omega_F\pm\sqrt{\omega_0^2+\Omega_F^2}\)。相反旋向的正频率分别为 \(\omega_\pm=\sqrt{\omega_0^2+\Omega_F^2}\pm\Omega_F\)，频率差精确为 \(2\Omega_F\)。在 \(\Omega_F\ll\omega_0\) 时，两者约为 \(\omega_0\pm\Omega_F\)，这是一对反向圆偏振模，而不是两条互不耦合的直线振子。
+
+(3) 通解可因式分解为 \(\boxed{z(t)=e^{-i\Omega_Ft}[Ae^{i\sqrt{\omega_0^2+\Omega_F^2}t}+Be^{-i\sqrt{\omega_0^2+\Omega_F^2}t}]}\)。方括号内可选近似线性振动，其整体乘子使振动方向相对地面按 \(-\Omega_F\) 转动，即北半球从上方看顺时针。完整 \(2\pi\) 进动周期 \(T_F=2\pi/|\Omega_\oplus\sin\lambda|\)。赤道 \(\lambda=0\) 时不进动；北极 \(\lambda=\pi/2\) 时一恒星日进动一周。这里指方向矢量完整旋转，若只辨认无向摆平面可有 \(\pi\) 周期的表观等价。
+
+(4) 定义水平能量 \(E=m(\dot x^2+\dot y^2+\omega_0^2x^2+\omega_0^2y^2)/2\)。求导并代入运动方程，得 \(\dot E=m[\dot x(2\Omega_F\dot y)+\dot y(-2\Omega_F\dot x)]=0\)。科里奥利力与瞬时速度垂直，只转动速度矢量而不改变能量。模型要求小角度、摆长远小于地球半径、\(\Omega_\oplus/\omega_0\ll1\) 且忽略空气阻尼；长期精密进动还受椭圆摆动、支点扭矩与地球非均匀重力扰动影响。

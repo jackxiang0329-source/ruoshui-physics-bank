@@ -1,0 +1,7 @@
+(1) 将方程写成守恒形式 \(u_t+(u^2/2)_x=\nu u_{xx}\)。设 \(u=U(\xi),\xi=x-st\)，则 \(-sU'+UU'=\nu U''\)，一次积分为 \(-sU+U^2/2=\nu U'+C\)。在两端 \(U'\to0\)，消去积分常数得到 \(-su_-+u_-^2/2=-su_++u_+^2/2\)，故 \(\boxed{s=(u_-+u_+)/2}\)。代回可化为 \(\nu U'=(U-u_-)(U-u_+)/2\)，当 \(u_->u_+\) 时中间区右端为负，允许单调下降的行波。
+
+(2) 令 \(\Delta=u_--u_+>0\)，写 \(U=s+v\)，则 \(\nu v'=(v^2-\Delta^2/4)/2\)。分离变量并选择中心 \(\xi=0\) 处 \(v=0\)，得到 \(\boxed{U(\xi)=s-\frac{\Delta}{2}\tanh[\Delta\xi/(4\nu)]}\)。直接求导 \(U'=-\Delta^2\operatorname{sech}^2(\Delta\xi/(4\nu))/(8\nu)\)，代回首次积分两边一致。特征宽度 \(\ell=4\nu/\Delta\)，故强跳跃冲击更薄、黏性更大冲击更宽；绝对中心位置由平移不变性任意选取。
+
+(3) 方程乘 \(u\) 后得到 \(\partial_t(u^2/2)+\partial_x(u^3/3)=\nu\partial_x(uu_x)-\nu u_x^2\)。因此二次熵的不可逆耗散密度为 \(\nu u_x^2\ge0\)。将上一问 \(U'\) 代入，\(\mathcal D=\nu\Delta^4/(64\nu^2)\int_{-\infty}^\infty\operatorname{sech}^4(\Delta\xi/(4\nu))d\xi\)。用 \(\int_{-\infty}^\infty\operatorname{sech}^4y\,dy=4/3\)，得 \(\boxed{\mathcal D=\Delta^3/12>0}\)。该结果与 \(\nu\) 无关，因为层宽随 \(\nu\) 缩小同时梯度增大。
+
+(4) 在 \(\nu\to0^+\) 时 \(U(\xi)\) 收敛为以速度 \(s\) 传播的跃变 \(u_-\mathbf1_{\xi<0}+u_+\mathbf1_{\xi>0}\)，满足Rankine–Hugoniot守恒条件。因 \(u_->s>u_+\)，两侧特征线向冲击汇聚，满足Lax压缩性与熵不等式。若反过来 \(u_-<u_+\)，同一连接的 \(U'\) 符号与所需远场方向冲突，不存在该稳定下降黏性行波；无黏熵解为展开的稀疏扇，而不是允许熵减的膨胀冲击。
