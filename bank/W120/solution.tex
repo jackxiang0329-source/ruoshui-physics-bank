@@ -1,0 +1,4 @@
+(1) 通常理想弦的单位长度横向回复力为 $Ty_{xx}$；若材料中存在与局部应变率成正比的 Kelvin–Voigt 内耗，则再增加 $\eta\partial_t y_{xx}$。方程仍是线性偏微分方程，但存在耗散而不能用保守系统的完备实频率直接代替。质量线密度 $\mu$、张力 $T$ 分别控制惯性与弹性，$\tau=\eta/T$ 具有时间量纲。
+(2) 取位移 $y=y_0e^{i(kx-\omega t)}$，有 $y_{tt}=-\omega^2y$、$y_{xx}=-k^2y$、$y_{xxt}=i\omega k^2y$。代入可得 $\mu\omega^2=k^2(T-i\eta\omega)$，因此 $k(\omega)=\omega\sqrt{\mu/(T-i\eta\omega)}$。选取实部为正、虚部为正的平方根分支，则 $e^{ikx}$ 在 $x$ 正方向衰减，符合被动介质传播条件。
+(3) 定义 $c_0=\sqrt{T/\mu}$，展开 $(1-i\omega\tau)^{-1/2}=1+i\omega\tau/2+O((\omega\tau)^2)$，得到 $k\simeq(\omega/c_0)[1+i\omega\tau/2]$。故振幅衰减长度的倒数 $\alpha=\operatorname{Im}k\simeq\omega^2\tau/(2c_0)$，而 $\operatorname{Re}k=\omega/c_0+O(\tau^2)$，即相速度没有一阶修正，能量衰减率约为振幅的两倍。
+(4) 将原方程乘 $y_t$ 并在 $[0,L]$ 上积分，两次分部积分且固定端 $y_t(0,t)=y_t(L,t)=0$，得到 $dE/dt=-\eta\int_0^L y_{xt}^2\,dx\le0$，其中 $E=\frac12\int_0^L[\mu y_t^2+Ty_x^2]\,dx$。耗散项是速度梯度平方，严格非负；这在任意波形而不仅在单色波近似下成立。
