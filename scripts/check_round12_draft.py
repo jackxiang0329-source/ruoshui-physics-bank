@@ -953,8 +953,8 @@ proj0=s.simplify(s.integrate(uss63*s.cos(ks0*yy63),(yy63,-hh63,hh63))/hh63)
 record('M063',2,'independent_derivation',
        'orthogonal cosine projection and exact zeta sums reproduce zero initial flow and longest relaxation time',
        eq(proj0,coef0)
-       and eq(s.zeta(4,s.Rational(1,2)),s.pi**4/6)
-       and eq(s.zeta(2,s.Rational(1,2)),s.pi**2/2)
+       and eq((2**4-1)*s.zeta(4),s.pi**4/6)
+       and eq((2**2-1)*s.zeta(2),s.pi**2/2)
        and eq(1/(nu63*ks0**2),4*hh63**2/(s.pi**2*nu63)))
 steadyQ63=2*F63*hh63**3/(3*nu63)
 record('M063',3,'conservation',
