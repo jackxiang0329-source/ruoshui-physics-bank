@@ -1,0 +1,20 @@
+{
+  "id": "M096",
+  "topic": "力学",
+  "title": "光滑墙地夹持均匀梯子的失去接触角、拉格朗日运动和冲量界限",
+  "tags": [
+    "带约束刚体动力学",
+    "接触法向反力",
+    "脱离判据"
+  ],
+  "answer": "质心水平位置 $x_G=L\\cos\\theta/2$，$\\ddot x_G=-(L/2)(\\cos\\theta\\dot\\theta^2+\\sin\\theta\\ddot\\theta)$。唯一水平力为墙推力 $N_w=m\\ddot x_G=\\frac{3mg}{4}\\cos\\theta(3\\sin\\theta-2\\sin\\theta_0)$。",
+  "kind": "综合推导题",
+  "level": 5,
+  "estimated_minutes": 90,
+  "quality_status": "待独立复核",
+  "tier": "advanced_composite",
+  "format": "latex-fragment-v1",
+  "revision": "composite-v1-round16-40-draft",
+  "challenge_profile": "new-core-fourpart-physics",
+  "complexity_tier": "L5-B"
+}

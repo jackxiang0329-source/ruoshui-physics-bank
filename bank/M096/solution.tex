@@ -1,0 +1,7 @@
+(1) 两端坐标取下端 $(L\cos\theta,0)$、上端 $(0,L\sin\theta)$，质心 $(L\cos\theta/2,L\sin\theta/2)$。质心平动动能 $mL^2\dot\theta^2/8$；转动惯量 $I_G=mL^2/12$，转动动能 $mL^2\dot\theta^2/24$。故 $T=mL^2\dot\theta^2/6$，$V=mgL\sin\theta/2$。
+
+(2) 能量守恒给 $mL^2\dot\theta^2/6+mgL\sin\theta/2=mgL\sin\theta_0/2$，所以 $\dot\theta^2=3g(\sin\theta_0-\sin\theta)/L$。Lagrange方程得 $\ddot\theta=-3g\cos\theta/(2L)<0$，角度持续下降。
+
+(3) 质心水平位置 $x_G=L\cos\theta/2$，$\ddot x_G=-(L/2)(\cos\theta\dot\theta^2+\sin\theta\ddot\theta)$。唯一水平力为墙推力 $N_w=m\ddot x_G=\frac{3mg}{4}\cos\theta(3\sin\theta-2\sin\theta_0)$。$N_w$ 必须非负，故首先在 $\sin\theta_*=(2/3)\sin\theta_0$ 时失去墙接触，之后墙无法提供拉力。
+
+(4) $\dot\theta_*=-\sqrt{g\sin\theta_0/L}$；质心速度 $\mathbf v_G=(-L\sin\theta_*\dot\theta_*/2,\,L\cos\theta_*\dot\theta_*/2)$。离墙后上端不再满足 $x_{\rm top}=0$ 的几何约束，只有地面接触；必须改用杆平动和转动两个自由度与新的接触判据，而不可将双端公式外推。
