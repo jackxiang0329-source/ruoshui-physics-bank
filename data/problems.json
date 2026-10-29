@@ -9616,5 +9616,143 @@
     "complexity_tier": "L5-C",
     "question": "(1) 一维谐振子 \\(H=p^2/(2m)+m\\omega^2x^2/2\\) 与热浴在 \\(T>0\\) 平衡。由正则配分函数求 \\(\\rho\\) 的Fock态分解、平均占据数 \\(\\bar n\\) 和平均能量。\n(2) 求热态的 \\(\\langle x\\rangle,\\langle p\\rangle,\\langle x^2\\rangle,\\langle p^2\\rangle\\)，验证Heisenberg不确定性，并给出零温和高温极限。\n(3) 求归一化Wigner相空间函数 \\(W(x,p)\\)，证明其两个边缘分布的方差与第二问一致，并说明为什么此特定量子态的Wigner函数处处非负。\n(4) 由密度矩阵本征值计算纯度 \\(\\operatorname{Tr}\\rho^2\\) 和von Neumann熵 \\(S=-k_B\\operatorname{Tr}\\rho\\ln\\rho\\)，交叉核验高温经典极限及 \\(T\\to0\\) 的纯态极限。\n",
     "solution": "(1) 令 \\(b=\\beta\\hbar\\omega\\)、\\(r=e^{-b}\\)。能级 \\(E_n=\\hbar\\omega(n+\\tfrac12)\\)，配分函数 \\(Z=e^{-b/2}/(1-r)\\)。因此\n\\[\n\\rho=(1-r)\\sum_{n=0}^\\infty r^n|n\\rangle\\langle n|,\\quad\n\\bar n=\\frac r{1-r}=\\frac1{e^b-1},\\quad \\langle H\\rangle=\\hbar\\omega(\\bar n+\\tfrac12).\n\\]\n(2) 用 \\(x=\\sqrt{\\hbar/(2m\\omega)}(a+a^\\dagger)\\)、\\(p=-i\\sqrt{m\\hbar\\omega/2}(a-a^\\dagger)\\)，热态对角性使奇矩为零：\n\\[\n\\langle x^2\\rangle=\\frac{\\hbar}{2m\\omega}\\coth\\frac b2,\\quad\n\\langle p^2\\rangle=\\frac{m\\hbar\\omega}{2}\\coth\\frac b2.\n\\]\n故 \\(\\Delta x\\Delta p=\\frac\\hbar2\\coth(b/2)\\ge\\hbar/2\\)，零温取等，高温给经典均分 \\(\\langle x^2\\rangle\\simeq k_BT/(m\\omega^2)\\)、\\(\\langle p^2\\rangle\\simeq mk_BT\\)。\n(3) 热态是零均值Gaussian态，令 \\(t=\\tanh(b/2)\\)，其Wigner函数为\n\\[\nW(x,p)=\\frac{t}{\\pi\\hbar}\\exp\\left[-\\frac{2t}{\\hbar\\omega}\\left(\\frac{p^2}{2m}+\\frac{m\\omega^2x^2}{2}\\right)\\right].\n\\]\n两个高斯积分分别给 \\(\\int W\\,dx\\,dp=1\\) 与 \\(\\int x^2W\\,dx\\,dp=\\hbar/(2m\\omega t)\\)、\\(\\int p^2W\\,dx\\,dp=m\\hbar\\omega/(2t)\\)，与第二问相同。其非负性源于热Gaussian态，不代表任意量子态Wigner函数非负。\n(4) 几何本征值 \\(p_n=(1-r)r^n\\) 给\n\\[\n\\operatorname{Tr}\\rho^2=(1-r)^2/(1-r^2)=\\frac{1-r}{1+r}=\\tanh(b/2),\n\\]\n\\[\nS=k_B[(\\bar n+1)\\ln(\\bar n+1)-\\bar n\\ln\\bar n].\n\\]\n\\(T\\to0\\) 时 \\(\\bar n\\to0\\)、纯度趋1、熵趋0；\\(k_BT\\gg\\hbar\\omega\\) 时 \\(\\bar n\\simeq k_BT/(\\hbar\\omega)\\)、纯度 \\(\\simeq\\hbar\\omega/(2k_BT)\\)、熵 \\(S\\simeq k_B[1+\\ln(k_BT/\\hbar\\omega)]\\)，与经典相空间热熵一致。\n"
+  },
+  {
+    "id": "M079",
+    "topic": "力学",
+    "title": "毛细管Lucas–Washburn浸润的黏性前沿、重力停滞与功率守恒",
+    "tags": [
+      "毛细Laplace压差",
+      "移动液柱Poiseuille阻力",
+      "非线性前沿积分",
+      "重力与黏性功率平衡"
+    ],
+    "answer": "L^2=\\frac{r\\gamma\\cos\\theta}{2\\mu}t\\ (g=0),\\qquad L_\\infty=\\frac{2\\gamma\\cos\\theta}{\\rho gr}",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 115,
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v5-round14-draft",
+    "challenge_profile": "high-multistage-original-core",
+    "complexity_tier": "L5-C",
+    "question": "(1) 半径 \\(r\\) 的竖直细管自液面向上吸入润湿液体，表面张力 \\(\\gamma\\)、接触角 \\(0\\le\\theta<\\pi/2\\)、动力黏度 \\(\\mu\\)、密度 \\(\\rho\\)。忽略入口阻力、惯性和气相黏性，取浸润高度 \\(L(t)\\)。由Laplace压差、重力静压及Poiseuille流阻推导移动前沿的非线性微分方程。\n(2) 先令 \\(g=0\\)、\\(L(0)=0\\)，精确求 \\(L(t)\\) 的平方根律及前沿速度，解释 \\(t=0\\) 速度发散的近似来源并核验量纲。\n(3) 对 \\(g>0\\) 求静态极限高度 \\(L_\\infty\\)，将时间积分为高度的隐式闭式；证明 \\(0<L<L_\\infty\\) 时单调上升并求接近平衡的指数时间常数。\n(4) 令体积流率 \\(Q=\\pi r^2\\dot L\\)。从流体压力功与黏性损失独立验证毛细功率等于重力势能增长率加黏性耗散率，说明在何种尺度必须恢复液柱惯性或动态接触角。\n",
+    "solution": "(1) 弯月面Laplace压差 \\(\\Delta p_c=2\\gamma\\cos\\theta/r\\)，液柱静压差 \\(\\rho gL\\)，充分发展层流压降 \\(\\Delta p_v=8\\mu LQ/(\\pi r^4)=8\\mu L\\dot L/r^2\\)。平衡给\n\\[\nL\\dot L=A-BL,\\qquad A=\\frac{r\\gamma\\cos\\theta}{4\\mu},\\quad B=\\frac{\\rho gr^2}{8\\mu}.\n\\]\n其中 \\([A]=L^2/t\\)、\\([B]=L/t\\)。\n(2) 无重力 \\(L\\dot L=A\\)，积分 \\(L^2=2At=r\\gamma\\cos\\theta\\,t/(2\\mu)\\)，\n\\[\nL(t)=\\sqrt{\\frac{r\\gamma\\cos\\theta}{2\\mu}t},\\quad\n\\dot L=\\sqrt{\\frac{r\\gamma\\cos\\theta}{8\\mu t}}.\n\\]\n初时发散来自假设任意短液柱立即建立Poiseuille剖面且忽略液柱惯性、入口附加阻力；真实初始阶段不服从此式。\n(3) 令 \\(L_\\infty=A/B=2\\gamma\\cos\\theta/(\\rho gr)\\)。因为 \\(\\dot L=B(L_\\infty-L)/L>0\\) 对 \\(0<L<L_\\infty\\)，积分得\n\\[\nBt=-L-L_\\infty\\ln(1-L/L_\\infty).\n\\]\n当 \\(L=L_\\infty-\\epsilon\\) 且 \\(\\epsilon\\ll L_\\infty\\)，有 \\(\\dot\\epsilon\\simeq-(B/L_\\infty)\\epsilon\\)，时间常数 \\(\\tau=L_\\infty/B\\)。\\(g\\to0\\) 时隐式式展开恢复平方根律。\n(4) 毛细压强功率 \\(\\Delta p_cQ\\)；重力势能 \\(U_g=\\rho g\\pi r^2 L^2/2\\)，所以 \\(\\dot U_g=\\rho gLQ\\)；黏性耗散 \\(P_v=\\Delta p_v Q=8\\mu LQ^2/(\\pi r^4)\\ge0\\)。将第一问压差平衡乘 \\(Q\\) 即得\n\\[\n\\Delta p_cQ=\\dot U_g+P_v.\n\\]\n接触线惯性、动态润湿角、非牛顿效应或液柱雷诺数较大时需改模型；理想瞬时零高度不应外推至分子尺度。\n"
+  },
+  {
+    "id": "E079",
+    "topic": "电磁学",
+    "title": "倾斜旋转磁偶极的远场辐射、制动指数与自转周期演化",
+    "tags": [
+      "时变磁偶极辐射",
+      "角动量与辐射能量守恒",
+      "磁偶极制动指数",
+      "旋转周期导数与慢变近似"
+    ],
+    "answer": "P_{\\rm rad}=\\frac{\\mu_0 m^2\\Omega^4\\sin^2\\alpha}{6\\pi c^3},\\quad \\Omega(t)=\\Omega_0(1+2K\\Omega_0^2t/I)^{-1/2}",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 115,
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v5-round14-draft",
+    "challenge_profile": "high-multistage-original-core",
+    "complexity_tier": "L5-C",
+    "question": "(1) 刚体绕固定 \\(z\\) 轴以角速度 \\(\\Omega\\) 旋转，磁偶极矩大小 \\(m\\)，与自转轴夹角 \\(\\alpha\\) 固定。写出 \\(\\boldsymbol m(t)\\) 并由远区磁偶极辐射公式 \\(P=\\mu_0|\\ddot{\\boldsymbol m}|^2/(6\\pi c^3)\\) 推导周期平均辐射功率，检查 \\(\\alpha=0\\) 极限。\n(2) 刚体绕轴转动惯量 \\(I\\) 恒定，假设全部辐射能量由自转动能供给，忽略磁矩和倾角演化。推导制动方程并精确求 \\(\\Omega(t)\\)，给出初始慢变条件。\n(3) 定义制动指数 \\(n=\\Omega\\ddot\\Omega/\\dot\\Omega^2\\) 与自转周期 \\(P_{\\rm rot}=2\\pi/\\Omega\\)。求 \\(n\\) 及 \\(P_{\\rm rot}\\dot P_{\\rm rot}\\) 的常数表达式，讨论与观测偏离的可能物理来源。\n(4) 求从 \\(\\Omega_0\\) 降到 \\(\\Omega_1\\) 的辐射总能量和时间，核对角动量损失的量纲与能量守恒，说明理想真空偶极制动对真实磁层的局限。\n",
+    "solution": "(1) 取 \\(\\boldsymbol m=m(\\sin\\alpha\\cos\\Omega t,\\sin\\alpha\\sin\\Omega t,\\cos\\alpha)\\)。其二阶导数仅横向，\\(|\\ddot{\\boldsymbol m}|^2=m^2\\Omega^4\\sin^2\\alpha\\)，故\n\\[\nP_{\\rm rad}=K\\Omega^4,\\qquad K=\\frac{\\mu_0m^2\\sin^2\\alpha}{6\\pi c^3}.\n\\]\n轴向磁矩 \\(\\alpha=0\\) 不随时间改变，理想偶极辐射为零。\n(2) \\(E_{\\rm rot}=I\\Omega^2/2\\)，能量平衡 \\(I\\Omega\\dot\\Omega=-K\\Omega^4\\)，即 \\(\\dot\\Omega=-(K/I)\\Omega^3\\)。分离变量得\n\\[\n\\Omega(t)=\\frac{\\Omega_0}{\\sqrt{1+2K\\Omega_0^2t/I}}.\n\\]\n慢变近似要求每个自转周期的相对变化 \\(|\\dot\\Omega|2\\pi/\\Omega^2=2\\pi K\\Omega/I\\ll1\\)。\n(3) 再微分 \\(\\ddot\\Omega=3(K/I)^2\\Omega^5\\)，故 \\(n=3\\)。由 \\(P_{\\rm rot}=2\\pi/\\Omega\\) 得\n\\[\n\\dot P_{\\rm rot}=\\frac{2\\pi K}{I}\\Omega,\\qquad P_{\\rm rot}\\dot P_{\\rm rot}=\\frac{4\\pi^2K}{I}.\n\\]\n若 \\(I,m,\\alpha\\) 随时间变、存在粒子风或磁层电流，实测制动指数可不等于3。\n(4) \\(t_{0\\to1}=\\frac I{2K}(\\Omega_1^{-2}-\\Omega_0^{-2})\\)，辐射能量 \\(\\int P_{\\rm rad}dt=I(\\Omega_0^2-\\Omega_1^2)/2\\)，等于转动能减少。辐射角动量流对应制动力矩 \\(N=P_{\\rm rad}/\\Omega=K\\Omega^3\\)，量纲为 \\(J\\)。本模型采用真空远区磁偶极近似，不能代替等离子体填充磁层的完整自洽制动理论。\n"
+  },
+  {
+    "id": "T074",
+    "topic": "热学",
+    "title": "Schwarzschild黑洞的负热容、Stefan近似蒸发与三次寿命标度",
+    "tags": [
+      "Hawking温度与黑洞熵",
+      "引力系统负热容",
+      "辐射能量守恒",
+      "黑洞蒸发时间与量子引力边界"
+    ],
+    "answer": "C=-\\frac{8\\pi k_BG M^2}{\\hbar c},\\qquad t_{\\rm evap}\\simeq\\frac{5120\\pi G^2M_0^3}{\\epsilon\\hbar c^4}",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 115,
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v5-round14-draft",
+    "challenge_profile": "high-multistage-original-core",
+    "complexity_tier": "L5-C",
+    "question": "(1) 非旋转无电荷黑洞的Hawking温度 \\(T_H=\\hbar c^3/(8\\pi GMk_B)\\)。用热力学第一定律 \\(d(Mc^2)=T_HdS\\) 推导熵 \\(S(M)\\)，选择 \\(S(0)=0\\)，并与视界面积 \\(A_H=16\\pi G^2M^2/c^4\\) 联系。\n(2) 求定体参数热容 \\(C=d(Mc^2)/dT_H\\) 的符号与质量标度，解释黑洞向冷环境辐射时温度为何反而上升，以及不能直接套用普通正热容物体稳定性的原因。\n(3) 将黑洞近似为灰度因子常数 \\(\\epsilon>0\\) 的Stefan辐射体 \\(P=\\epsilon\\sigma A_HT_H^4\\)，其中 \\(\\sigma=\\pi^2k_B^4/(60\\hbar^3c^2)\\)。推导 \\(P(M)\\) 与质量损失方程，严格求从 \\(M_0\\) 到 \\(M\\) 的时间。\n(4) 在此近似下求蒸发总时间及 \\(T_H(t)\\) 的临终标度，检验量纲，并说明灰体谱、物种阈值与Planck尺度为何使末期公式不能视作精确预测。\n",
+    "solution": "(1) \\(dS=d(Mc^2)/T_H=(8\\pi Gk_B/(\\hbar c))M\\,dM\\)，积分得\n\\[\nS(M)=\\frac{4\\pi k_BG M^2}{\\hbar c}\n=\\frac{k_Bc^3A_H}{4G\\hbar}.\n\\]\n熵与视界面积成正比而非体积；积分常数由给定参考条件固定。\n(2) \\(dT_H/dM=-\\hbar c^3/(8\\pi Gk_BM^2)\\)，因此\n\\[\nC=\\frac{d(Mc^2)}{dT_H}=-\\frac{8\\pi Gk_BM^2}{\\hbar c}<0.\n\\]\n黑洞失去质量时 \\(T_H\\propto M^{-1}\\) 上升。孤立自引力体系的能量与熵约束不同于普通短程相互作用正则热浴；负热容说明与无限恒温浴接触不稳定，不等于违反第一定律。\n(3) 代入面积、温度和给定Stefan常数：\n\\[\nP=\\epsilon\\frac{\\hbar c^6}{15360\\pi G^2M^2},\\qquad\n\\frac{dM}{dt}=-\\frac{P}{c^2}=-\\frac{\\epsilon\\hbar c^4}{15360\\pi G^2M^2}=-\\frac{D}{M^2}.\n\\]\n积分 \\(M(t)^3=M_0^3-3Dt\\)，故 \\(t(M)=\\frac{M_0^3-M^3}{3D}\\)。\n(4) 形式蒸发寿命\n\\[\nt_{\\rm evap}=\\frac{M_0^3}{3D}=\\frac{5120\\pi G^2M_0^3}{\\epsilon\\hbar c^4},\n\\quad T_H(t)=\\frac{\\hbar c^3}{8\\pi Gk_B(M_0^3-3Dt)^{1/3}}.\n\\]\n临近形式终点 \\(T_H\\propto(t_{\\rm evap}-t)^{-1/3}\\)，\\([G^2M^3/(\\hbar c^4)]=t\\)。实际辐射存在频率依赖灰体因子与粒子物种变化，且 \\(M\\) 逼近Planck质量时半经典近似失效，不能断言温度真实发散。\n"
+  },
+  {
+    "id": "W074",
+    "topic": "振动与波动",
+    "title": "Rayleigh旋转惯性梁的双尺度弯曲色散、群速度与正定能量",
+    "tags": [
+      "Rayleigh梁转动惯量",
+      "弯曲波色散",
+      "高频传播速度饱和",
+      "自伴本征谱与机械能正定"
+    ],
+    "answer": "\\omega^2=\\frac{EI k^4}{\\rho A+\\rho I k^2},\\qquad c_{g,\\infty}=\\sqrt{E/\\rho}",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 115,
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v5-round14-draft",
+    "challenge_profile": "high-multistage-original-core",
+    "complexity_tier": "L5-C",
+    "question": "(1) 均匀细梁长度 \\(L\\)、截面积 \\(A\\)、截面二次矩 \\(I\\)、密度 \\(\\rho\\)、杨氏模量 \\(E\\)。Rayleigh梁保留截面转动惯量但忽略剪切变形。由动能 \\(T=\\frac12\\int_0^L(\\rho A u_t^2+\\rho I u_{xt}^2)dx\\) 与弯曲势能 \\(V=\\frac12\\int_0^LEIu_{xx}^2dx\\) 推导横向位移 \\(u(x,t)\\) 的场方程。\n(2) 在无限梁上代入 \\(u\\propto e^{i(kx-\\omega t)}\\) 求色散 \\(\\omega(k)\\)，分别给出长波弯曲波和短波的相、群速度渐近。\n(3) 对简支端条件 \\(u=u_{xx}=0\\) 于 \\(x=0,L\\)，求全部本征频率并比较忽略转动惯量的Euler–Bernoulli预测，证明Rayleigh频率逐模不高于后者。\n(4) 推导无外力无阻尼时机械能守恒的边界通量表达式，说明为什么所有非平移本征模的 \\(\\omega_n^2>0\\)，并指出极短波时剪切变形忽略不再可靠。\n",
+    "solution": "(1) 作用量 \\(\\int(T-V)dt\\) 的变分中，\\(u_t\\) 项给 \\(-\\rho A u_{tt}\\)，\\(u_{xt}\\) 项分部积分给 \\(+\\rho I u_{xxtt}\\)，弯曲项给 \\(-EIu_{xxxx}\\)。Euler–Lagrange方程为\n\\[\n\\rho A u_{tt}-\\rho I u_{xxtt}+EIu_{xxxx}=0.\n\\]\n转动惯量项的负号保证其在频域增加有效惯性。\n(2) 平面波代入得\n\\[\n\\omega(k)=\\sqrt{\\frac{EI}{\\rho A}}\\frac{k^2}{\\sqrt{1+(I/A)k^2}},\\quad\nc_p=\\omega/k,\\quad\nc_g=\\sqrt{\\frac{EI}{\\rho A}}\\frac{k[2+(I/A)k^2]}{[1+(I/A)k^2]^{3/2}}.\n\\]\n\\(k\\sqrt{I/A}\\ll1\\) 时 \\(\\omega\\sim\\sqrt{EI/(\\rho A)}k^2\\)、\\(c_g\\sim2c_p\\)；\\(k\\sqrt{I/A}\\gg1\\) 时 \\(c_p,c_g\\to\\sqrt{E/\\rho}\\)。\n(3) 简支模态 \\(u_n=\\sin(k_nx)e^{-i\\omega_nt}\\)，\\(k_n=n\\pi/L\\)，满足 \\(u=u_{xx}=0\\)。故\n\\[\n\\omega_n^2=\\frac{EI k_n^4}{\\rho A+\\rho I k_n^2}\n=\\frac{\\omega_{n,\\rm EB}^2}{1+(I/A)k_n^2}<\\omega_{n,\\rm EB}^2,\\quad n\\ge1.\n\\]\n旋转惯性降低每个有限波数模态的频率。\n(4) 乘场方程以 \\(u_t\\) 并积分，分部积分得\n\\[\n\\frac{d}{dt}\\frac12\\int_0^L[\\rho A u_t^2+\\rho Iu_{xt}^2+EIu_{xx}^2]dx\n=-[EIu_{xxx}u_t-EIu_{xx}u_{xt}-\\rho Iu_{xtt}u_t]_{0}^{L}.\n\\]\n简支边界 \\(u_t=u_{xx}=0\\) 使右端为零，能量正定。对 \\(n\\ge1\\)，\\(EI k_n^4>0\\) 且分母正，故频率实正。极短波下截面剪切变形显著，应改用Timoshenko梁而非无限外推Rayleigh模型。\n"
+  },
+  {
+    "id": "O076",
+    "topic": "光学",
+    "title": "双束红失谐Doppler冷却的速度摩擦、反冲扩散与最低温度",
+    "tags": [
+      "两能级原子辐射压",
+      "速度依赖失谐与光学摩擦",
+      "随机反冲动量扩散",
+      "Doppler极限温度与饱和边界"
+    ],
+    "answer": "T_D=\\frac{\\hbar\\Gamma}{2k_B}\\quad(s\\ll1,\\ \\delta=-\\Gamma/2)",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 115,
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v5-round14-draft",
+    "challenge_profile": "high-multistage-original-core",
+    "complexity_tier": "L5-C",
+    "question": "(1) 一维两束等强反向激光照射质量 \\(m\\) 的两能级原子，波数 \\(k\\)、自然线宽 \\(\\Gamma\\)、红失谐 \\(\\delta<0\\)，每束低速散射率 \\(R(\\Delta)=(\\Gamma/2)s/[1+s+4\\Delta^2/\\Gamma^2]\\)，其中 \\(s\\) 是每束有效饱和参数。考虑Doppler移频 \\(\\Delta_\\pm=\\delta\\mp kv\\)，求平均辐射压力 \\(F(v)\\)。\n(2) 将 \\(F(v)\\) 展开到 \\(v\\) 一阶，求摩擦系数 \\(\\alpha\\) 使 \\(F\\simeq-\\alpha v\\)，给出 \\(\\alpha>0\\) 的失谐条件和小速度线性化条件。\n(3) 采用简化的一维随机反冲模型：每次散射循环的动量方差为 \\(2(\\hbar k)^2\\)，两束总循环率为 \\(2R(\\delta)\\)。求Fokker–Planck约定 \\(d\\langle(\\Delta p)^2\\rangle/dt=2D_p\\) 下的扩散系数与稳态 \\(k_BT=D_p/\\alpha\\)。\n(4) 在 \\(s\\ll1\\) 下优化失谐得到Doppler最低温度，检查 \\(|\\delta|\\to0,\\infty\\) 的升温极限，并说明实际三维自发辐射角分布、亚Doppler机制与反冲温度对本模型的修正。\n",
+    "solution": "(1) 向右传播光每次吸收给予 \\(+\\hbar k\\) 动量，反向光给予 \\(-\\hbar k\\)，故\n\\[\nF(v)=\\hbar k[R(\\delta-kv)-R(\\delta+kv)].\n\\]\n在 \\(v=0\\) 两束完全平衡，\\(F(0)=0\\)。\n(2) 令 \\(D_0=1+s+4\\delta^2/\\Gamma^2\\)。求导 \\(R'(\\delta)=-4s\\delta/(\\Gamma D_0^2)\\)，于是\n\\[\nF(v)=-2\\hbar k^2R'(\\delta)v=-\\alpha v,\\qquad\n\\alpha=-\\frac{8\\hbar k^2s\\delta}{\\Gamma D_0^2}>0\n\\]\n当且仅当 \\(\\delta<0\\)。要求 \\(|kv|\\) 小于谱线变化尺度，且近似的两束独立饱和模型成立。\n(3) 两束总事件率 \\(2R\\)，每次动量方差 \\(2(\\hbar k)^2\\)，所以 \\(d\\langle(\\Delta p)^2\\rangle/dt=4R(\\hbar k)^2\\)，\n\\[\nD_p=2R(\\delta)(\\hbar k)^2=\\frac{\\Gamma s(\\hbar k)^2}{D_0}.\n\\]\nOrnstein--Uhlenbeck动量方程给稳态 \\(\\langle p^2\\rangle=D_pm/\\alpha\\)，即 \\(k_BT=D_p/\\alpha\\)，因此\n\\[\nT=\\frac{\\hbar\\Gamma^2D_0}{8k_B|\\delta|}.\n\\]\n此系数严格依赖题设的一维反冲方差约定。\n(4) \\(s\\ll1\\) 时 \\(T=\\frac{\\hbar}{8k_B}(\\Gamma^2/|\\delta|+4|\\delta|)\\)。对 \\(x=|\\delta|>0\\) 求导 \\(-\\Gamma^2/x^2+4=0\\)，最优 \\(x=\\Gamma/2\\)，得\n\\[\nT_D=\\frac{\\hbar\\Gamma}{2k_B}.\n\\]\n当 \\(|\\delta|\\to0\\) 摩擦趋零、当 \\(|\\delta|\\to\\infty\\) 散射摩擦比扩散衰减更快，温度均上升。真实自发辐射角分布改变一维扩散系数；多能级偏振梯度冷却可低于此Doppler值，接近单光子反冲尺度时经典Fokker–Planck近似失效。\n"
+  },
+  {
+    "id": "Q076",
+    "topic": "近代物理",
+    "title": "Dirac–Coulomb精细结构的四阶展开、角动量劈裂与临界核电荷",
+    "tags": [
+      "相对论Dirac氢样谱",
+      "精细结构微扰展开",
+      "总角动量简并",
+      "高核电荷点核适用边界"
+    ],
+    "answer": "E_{nj}=mc^2-\\frac{mc^2(Z\\alpha)^2}{2n^2}-\\frac{mc^2(Z\\alpha)^4}{2n^4}\\left(\\frac{n}{j+1/2}-\\frac34\\right)+O((Z\\alpha)^6)",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 115,
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v5-round14-draft",
+    "challenge_profile": "high-multistage-original-core",
+    "complexity_tier": "L5-C",
+    "question": "(1) 氢样离子的点核Dirac束缚能谱给为\n\\[\nE_{nj}=mc^2\\left[1+\\frac{(Z\\alpha)^2}{\\bigl(n-j-\\tfrac12+\\sqrt{(j+\\tfrac12)^2-(Z\\alpha)^2}\\bigr)^2}\\right]^{-1/2},\n\\]\n其中 \\(n\\ge1,\\ j=1/2,3/2,\\ldots,n-1/2\\)，\\(Z\\alpha\\ll1\\)。系统地展开至 \\((Z\\alpha)^4\\)，分别识别非相对论主项与精细结构项。\n(2) 对 \\(n=2\\) 的 \\(j=1/2\\) 和 \\(j=3/2\\) 两组态求精细结构能量差的最低非零阶，证明哪组能量更高，说明其与 \\(m_j\\) 简并的关系。\n(3) 计算相对论精细结构与非相对论束缚能的量级比，讨论 \\(Z\\to0\\) 的形式极限及 \\(n\\) 固定时核电荷增强的标度；解释为何同 \\(n,j\\) 不同轨道角动量的态在理想Dirac点核模型中仍可能简并。\n(4) 从谱中平方根的实数条件给出最低 \\(j=1/2\\) 通道的点核临界条件，说明高 \\(Z\\) 下有限核尺寸、真空极化与Lamb位移为何使此公式不能无限外推。\n",
+    "solution": "(1) 设 \\(a=Z\\alpha\\)、\\(\\kappa=j+\\tfrac12\\)，\n\\[\n\\sqrt{\\kappa^2-a^2}=\\kappa-\\frac{a^2}{2\\kappa}-\\frac{a^4}{8\\kappa^3}+O(a^6).\n\\]\n分母 \\(d=n-a^2/(2\\kappa)+O(a^4)\\)，故 \\(a^2/d^2=a^2/n^2+a^4/(\\kappa n^3)+O(a^6)\\)。再用 \\((1+x)^{-1/2}=1-x/2+3x^2/8+\\cdots\\)，得\n\\[\nE_{nj}=mc^2-\\frac{mc^2a^2}{2n^2}-\\frac{mc^2a^4}{2n^4}\\left(\\frac n\\kappa-\\frac34\\right)+O(a^6).\n\\]\n第二项为Bohr能级，四阶项为相对论精细结构。\n(2) \\(n=2\\) 时 \\(j=1/2\\) 的四阶项为 \\(-5mc^2a^4/128\\)，\\(j=3/2\\) 的四阶项为 \\(-mc^2a^4/128\\)。因此\n\\[\nE_{2,3/2}-E_{2,1/2}=\\frac{mc^2a^4}{32}+O(a^6)>0.\n\\]\n能量只依赖 \\(n,j\\)，每组的 \\(m_j=-j,\\ldots,j\\) 在无外场下仍简并。\n(3) 主束缚能量级 \\(|E-mc^2|\\sim mc^2a^2/(2n^2)\\)，精细结构相对比约为 \\(a^2/n^2\\) 乘角动量因子。\\(Z\\to0\\) 时束缚与劈裂均消失；固定 \\(n\\) 时精细结构 \\(\\propto Z^4\\)（在 \\(Z\\alpha\\ll1\\) 区间）。纯Coulomb Dirac哈密顿量具有额外对称性，能谱只依赖 \\(n,j\\) 而不独立依赖 \\(l\\)，故例如 \\(2s_{1/2}\\) 与 \\(2p_{1/2}\\) 在此理想模型中简并。\n(4) 根号 \\(\\sqrt{(j+1/2)^2-a^2}\\) 要求 \\(a<j+1/2\\)，最严的是 \\(j=1/2\\)，即 \\(Z\\alpha<1\\)；等号是点核模型的临界边界。实际核有有限尺寸，且辐射修正如真空极化、自能Lamb位移会破除理想简并；高 \\(Z\\) 还需更完整强场QED处理，不能把上述小 \\(a\\) 四阶展开当作高核电荷精确答案。\n"
   }
 ]
