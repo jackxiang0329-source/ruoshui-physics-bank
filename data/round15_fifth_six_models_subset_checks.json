@@ -1,0 +1,209 @@
+{
+  "round": 15,
+  "replacements": [
+    "M090",
+    "E092",
+    "T086",
+    "W085",
+    "O086",
+    "Q087"
+  ],
+  "checked_subparts": 24,
+  "full_round_pass": false,
+  "independent_expert_review": "待独立复核",
+  "tests": [
+    {
+      "id": "M090",
+      "part": 1,
+      "method": "Stokes divergence and spherical no-slip boundary",
+      "passed": true,
+      "error": 0,
+      "tolerance": 2e-13
+    },
+    {
+      "id": "M090",
+      "part": 2,
+      "method": "Independent spherical pressure/shear traction integrals",
+      "passed": true,
+      "error": 1.2789769243681803e-12,
+      "tolerance": 1e-11
+    },
+    {
+      "id": "M090",
+      "part": 3,
+      "method": "Integrated 3D viscous dissipation equals drag input power",
+      "passed": true,
+      "error": 2.2026824808563106e-13,
+      "tolerance": 1e-10
+    },
+    {
+      "id": "M090",
+      "part": 4,
+      "method": "Terminal sphere Stokes drag balances buoyant weight",
+      "passed": true,
+      "error": 2.842170943040401e-14,
+      "tolerance": 1e-12
+    },
+    {
+      "id": "E092",
+      "part": 1,
+      "method": "2D Laplace residual and both patterned Dirichlet boundaries",
+      "passed": true,
+      "error": 4.440892098500626e-8,
+      "tolerance": 4e-7
+    },
+    {
+      "id": "E092",
+      "part": 2,
+      "method": "Positive electrode capacitance eigenvalues and determinant",
+      "passed": true,
+      "error": 0,
+      "tolerance": 1e-12
+    },
+    {
+      "id": "E092",
+      "part": 3,
+      "method": "Direct Fourier-averaged field-energy quadrature against capacitance matrix",
+      "passed": true,
+      "error": 4.440892098500626e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "id": "E092",
+      "part": 4,
+      "method": "Normal Maxwell stress from boundary fields equals minus energy gap derivative",
+      "passed": true,
+      "error": 4.139164566652198e-10,
+      "tolerance": 1e-9
+    },
+    {
+      "id": "T086",
+      "part": 1,
+      "method": "Juttner rapidity momentum integral vs modified Bessel K1",
+      "passed": true,
+      "error": 1.6653345369377348e-15,
+      "tolerance": 1e-10
+    },
+    {
+      "id": "T086",
+      "part": 2,
+      "method": "Analytic Juttner heat capacity vs independent numerical derivative of internal energy",
+      "passed": true,
+      "error": 4.1285663776591264e-10,
+      "tolerance": 0.000003
+    },
+    {
+      "id": "T086",
+      "part": 3,
+      "method": "Relativistic entropy derivatives yield pressure and heat-capacity identity",
+      "passed": true,
+      "error": 2.5663959846156104e-10,
+      "tolerance": 0.000005
+    },
+    {
+      "id": "T086",
+      "part": 4,
+      "method": "Juttner mean absolute group velocity from independent finite-momentum quadrature",
+      "passed": true,
+      "error": 7.648770505852553e-12,
+      "tolerance": 1e-8
+    },
+    {
+      "id": "W085",
+      "part": 1,
+      "method": "Webster wave PDE finite-difference residual",
+      "passed": true,
+      "error": 2.5073604970060615e-8,
+      "tolerance": 4e-7
+    },
+    {
+      "id": "W085",
+      "part": 2,
+      "method": "Acoustic exponential horn cutoff dispersion and numerical group speed",
+      "passed": true,
+      "error": 3.037126106164578e-11,
+      "tolerance": 1e-10
+    },
+    {
+      "id": "W085",
+      "part": 3,
+      "method": "Acoustic energy-transport speed and conserved cross-sectional power",
+      "passed": true,
+      "error": 4.440892098500626e-16,
+      "tolerance": 1e-13
+    },
+    {
+      "id": "W085",
+      "part": 4,
+      "method": "Rigid-end Robin modes satisfy two wall conditions and weighted orthogonality",
+      "passed": true,
+      "error": 9.436895709313829e-11,
+      "tolerance": 1e-9
+    },
+    {
+      "id": "O086",
+      "part": 1,
+      "method": "Laser nonzero-photon stationary rate balance and gain clamping",
+      "passed": true,
+      "error": 0,
+      "tolerance": 1e-12
+    },
+    {
+      "id": "O086",
+      "part": 2,
+      "method": "Linearized laser complex relaxation eigenvalue matches characteristic polynomial",
+      "passed": true,
+      "error": 0,
+      "tolerance": 1e-12
+    },
+    {
+      "id": "O086",
+      "part": 3,
+      "method": "Laser threshold soft eigenmode has correct critical slowing-down scaling",
+      "passed": true,
+      "error": 0.0003216514684267757,
+      "tolerance": 0.002
+    },
+    {
+      "id": "O086",
+      "part": 4,
+      "method": "Laser stimulated-emission cancellation in pump-to-output photon energy ledger",
+      "passed": true,
+      "error": 0,
+      "tolerance": 1e-12
+    },
+    {
+      "id": "Q087",
+      "part": 1,
+      "method": "RWA red-blue sideband optical detunings remove opposite phonon phases",
+      "passed": true,
+      "error": 0,
+      "tolerance": 1e-15
+    },
+    {
+      "id": "Q087",
+      "part": 2,
+      "method": "Independent unitary RK4 two-level sideband evolution matches exact n-dependent Rabi transfer",
+      "passed": true,
+      "error": 2.2551405187698492e-17,
+      "tolerance": 1e-13
+    },
+    {
+      "id": "Q087",
+      "part": 3,
+      "method": "Thermal phonon-occupation ensemble reproduces weak-pulse red/blue sideband asymmetry",
+      "passed": true,
+      "error": 1.1102230246251565e-16,
+      "tolerance": 1e-7
+    },
+    {
+      "id": "Q087",
+      "part": 4,
+      "method": "Direct oscillator wavefunction integral yields carrier Debye-Waller Laguerre matrix element",
+      "passed": true,
+      "error": 3.1086244689504383e-15,
+      "tolerance": 2e-12
+    }
+  ],
+  "scope_limits": "Six cores only, 9 historic overlapping cores and 72 other subpart tests remain; full history rescreen/PDFs pending."
+}

@@ -8,15 +8,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Initial two models (8)
+      - name: Initial two cores (8 checks)
         run: node scripts/check_round15_replacements.js > /tmp/round15_1.json
-      - name: First six models (24)
+      - name: First six cores (24 checks)
         run: node scripts/check_round15_six_models.js > /tmp/round15_2.json
-      - name: Second six models (24)
+      - name: Second six cores (24 checks)
         run: node scripts/check_round15_next_six_models.js > /tmp/round15_3.json
-      - name: Third six models (24)
+      - name: Third six cores (24 checks)
         run: node scripts/check_round15_third_six_models.js > /tmp/round15_4.json
-      - name: Fourth six models (24)
+      - name: Fourth six cores (24 checks)
         run: node scripts/check_round15_fourth_six_models.js > /tmp/round15_5.json
-      - name: Explicitly retain global merge block
-        run: echo 'Subset only 104/200 checks; 15 historical model collisions, full data mirrors and both PDFs outstanding.'
+      - name: Fifth six cores (24 checks)
+        run: node scripts/check_round15_fifth_six_models.js > /tmp/round15_6.json
+      - name: Preserve global release block
+        run: echo '128 of 200 subpart tests only, 9 historical physical core duplicates remain, mirrors/PDFs and expert review missing. Do not merge.'
