@@ -1,0 +1,1408 @@
+{
+  "status": "technical-qa-passed-expert-review-pending",
+  "new_problem_count": 50,
+  "passed_count": 200,
+  "tests": [
+    {
+      "id": "M068",
+      "part": 1,
+      "method": "symbolic",
+      "name": "analytic polytrope density solves the radial Lane Emden differential equation with regular center",
+      "passed": true
+    },
+    {
+      "id": "M068",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "independently differentiate mass profile to recover exact shell density and surface enclosed mass",
+      "passed": true
+    },
+    {
+      "id": "M068",
+      "part": 3,
+      "method": "conservation",
+      "name": "virial gravitational energy equals independent mass radius polytropic binding energy at K equals two pi G a squared",
+      "passed": true
+    },
+    {
+      "id": "M068",
+      "part": 4,
+      "method": "physical_case",
+      "name": "stellar total binding energy is minus twice integrated polytropic pressure and scales as center-density squared",
+      "passed": true
+    },
+    {
+      "id": "E068",
+      "part": 1,
+      "method": "independent_derivation",
+      "name": "angular surface-current magnetic dipole integral yields exact factor one third of charged spherical shell",
+      "passed": true
+    },
+    {
+      "id": "E068",
+      "part": 2,
+      "method": "symbolic",
+      "name": "sphere magnetic radial continuity and tangential H jump reproduce prescribed surface current",
+      "passed": true
+    },
+    {
+      "id": "E068",
+      "part": 3,
+      "method": "conservation",
+      "name": "direct interior uniform B energy and exterior dipole field energy sum to surface-current work",
+      "passed": true
+    },
+    {
+      "id": "E068",
+      "part": 4,
+      "method": "dimensions",
+      "name": "fixed charge and angular rate give magnetic energy linear in sphere radius and field singular at fixed dipole moment",
+      "passed": true
+    },
+    {
+      "id": "T064",
+      "part": 1,
+      "method": "symbolic",
+      "name": "two Cattaneo thermal roots solve exact telegraph dispersion polynomial",
+      "passed": true
+    },
+    {
+      "id": "T064",
+      "part": 2,
+      "method": "limit",
+      "name": "low wave number branch reduces to Fourier diffusion while high wave number speed approaches finite square root D over tau",
+      "passed": true
+    },
+    {
+      "id": "T064",
+      "part": 3,
+      "method": "conservation",
+      "name": "exact quadratic perturbation energy plus thermal flux divergence yields negative entropy production proxy",
+      "passed": true
+    },
+    {
+      "id": "T064",
+      "part": 4,
+      "method": "independent_derivation",
+      "name": "zero relaxation limit has slow diffusion and one fast decaying nonhydrodynamic thermal mode",
+      "passed": true
+    },
+    {
+      "id": "W064",
+      "part": 1,
+      "method": "symbolic",
+      "name": "geostrophic potential vorticity Fourier eigenvalue yields westward Rossby phase velocity",
+      "passed": true
+    },
+    {
+      "id": "W064",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "differentiate wave frequency independently to recover both group speed components",
+      "passed": true
+    },
+    {
+      "id": "W064",
+      "part": 3,
+      "method": "conservation",
+      "name": "periodic domain beta energy transport is a pure total spatial derivative and no net work",
+      "passed": true
+    },
+    {
+      "id": "W064",
+      "part": 4,
+      "method": "limit",
+      "name": "infinite deformation radius and vanishing beta limits give 2D Rossby and zero-frequency invariants",
+      "passed": true
+    },
+    {
+      "id": "O066",
+      "part": 1,
+      "method": "independent_derivation",
+      "name": "normalized exponential speckle density has mean I0 and variance I0 squared by independent integration",
+      "passed": true
+    },
+    {
+      "id": "O066",
+      "part": 2,
+      "method": "symbolic",
+      "name": "complex Gaussian fourth moment Siegert relation obeys perfect-coherence and zero-coherence limits",
+      "passed": true
+    },
+    {
+      "id": "O066",
+      "part": 3,
+      "method": "numerical",
+      "name": "three independent exponential speckles yield Gamma-shape-three distribution with exactly one-third relative variance",
+      "passed": true
+    },
+    {
+      "id": "O066",
+      "part": 4,
+      "method": "limit",
+      "name": "independent equal-polarization speckle contrast equals inverse square root two while one vanishing polarization restores unit contrast",
+      "passed": true
+    },
+    {
+      "id": "Q066",
+      "part": 1,
+      "method": "symbolic",
+      "name": "conditional oscillator coherent amplitude solves forced Heisenberg motion and initial vacuum condition",
+      "passed": true
+    },
+    {
+      "id": "Q066",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "Gaussian coherent-state overlap reproduces exact periodic nonMarkov dephasing with full revival",
+      "passed": true
+    },
+    {
+      "id": "Q066",
+      "part": 3,
+      "method": "symbolic",
+      "name": "reduced spin eigenvalues and purity agree with exact overlap-dependent entanglement entropy spectrum",
+      "passed": true
+    },
+    {
+      "id": "Q066",
+      "part": 4,
+      "method": "conservation",
+      "name": "time-dependent oscillator occupation exactly cancels negative interaction energy and closed system energy remains zero",
+      "passed": true
+    },
+    {
+      "id": "M069",
+      "part": 1,
+      "method": "symbolic",
+      "name": "exterior spherical Laplace and radial no penetration conditions and tangential velocity",
+      "passed": true
+    },
+    {
+      "id": "M069",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "direct 3D exterior flow kinetic energy volume integral gives one-half fluid displaced mass",
+      "passed": true
+    },
+    {
+      "id": "M069",
+      "part": 3,
+      "method": "conservation",
+      "name": "nonstationary Bernoulli pressure integral equals added-mass acceleration reaction",
+      "passed": true
+    },
+    {
+      "id": "M069",
+      "part": 4,
+      "method": "physical_case",
+      "name": "work-energy identity for bare sphere plus added fluid mass, and correct vacuum-density limit",
+      "passed": true
+    },
+    {
+      "id": "E069",
+      "part": 1,
+      "method": "symbolic",
+      "name": "electronic energy plus continuity reproduces nonlinear Poisson equation with exact Child Langmuir coefficient",
+      "passed": true
+    },
+    {
+      "id": "E069",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "Child Langmuir voltage law meets both plates, vanishing cathode field and exact current scaling",
+      "passed": true
+    },
+    {
+      "id": "E069",
+      "part": 3,
+      "method": "conservation",
+      "name": "space charge finite despite near-cathode singularity and field energy differs from uniform parallel plate capacitor",
+      "passed": true
+    },
+    {
+      "id": "E069",
+      "part": 4,
+      "method": "dimensions",
+      "name": "kinetic energy flux equals electron electric energy transfer and soft-voltage current goes to zero",
+      "passed": true
+    },
+    {
+      "id": "T065",
+      "part": 1,
+      "method": "numerical",
+      "name": "independent high precision Bose occupancy spectral integral equals pi squared over six",
+      "passed": true
+    },
+    {
+      "id": "T065",
+      "part": 2,
+      "method": "symbolic",
+      "name": "differential ballistic conductance of quadratic chiral heat flux equals universal thermal conductance quantum",
+      "passed": true
+    },
+    {
+      "id": "T065",
+      "part": 3,
+      "method": "numerical",
+      "name": "high precision cutoff Bose spectrum integral equals dilogarithm expression for two finite cutoffs and correct small cutoff slope",
+      "passed": true
+    },
+    {
+      "id": "T065",
+      "part": 4,
+      "method": "conservation",
+      "name": "Landauer two bath entropy production is positive quadratic temperature-difference factor",
+      "passed": true
+    },
+    {
+      "id": "W065",
+      "part": 1,
+      "method": "symbolic",
+      "name": "internal wave frequency solves horizontal-buoyancy dispersion and is bounded by N",
+      "passed": true
+    },
+    {
+      "id": "W065",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "wave group velocity derivative is orthogonal to wavevector as implied by homogeneous degree zero dispersion",
+      "passed": true
+    },
+    {
+      "id": "W065",
+      "part": 3,
+      "method": "conservation",
+      "name": "local Boussinesq perturbation kinetic plus potential energy balances pressure work under incompressible constraint",
+      "passed": true
+    },
+    {
+      "id": "W065",
+      "part": 4,
+      "method": "limit",
+      "name": "hydrostatic high vertical wave number suppresses frequency while unstratified fluid has zero gravity-wave frequency",
+      "passed": true
+    },
+    {
+      "id": "O067",
+      "part": 1,
+      "method": "symbolic",
+      "name": "each focused Debye wave polarization vector is orthogonal to its own wavevector and normalized",
+      "passed": true
+    },
+    {
+      "id": "O067",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "axial vector focusing integral equals analytic alpha over two minus sine double alpha over four",
+      "passed": true
+    },
+    {
+      "id": "O067",
+      "part": 3,
+      "method": "symbolic",
+      "name": "Bessel angular Fourier identities recover J0 and J1 radial transverse integrals with exact on-axis cancellation",
+      "passed": true
+    },
+    {
+      "id": "O067",
+      "part": 4,
+      "method": "limit",
+      "name": "paraxial longitudinal focal field scales as aperture cubed with correct one-third coefficient",
+      "passed": true
+    },
+    {
+      "id": "Q067",
+      "part": 1,
+      "method": "symbolic",
+      "name": "BdG Hamiltonian has exact opposite energy eigenvalues and closes superconducting gap at chemical potential plus or minus 2t",
+      "passed": true
+    },
+    {
+      "id": "Q067",
+      "part": 2,
+      "method": "numerical",
+      "name": "independent 8 by 8 fermionic Fock matrix equality verifies Kitaev sweet point and exact two edge commutators",
+      "passed": true
+    },
+    {
+      "id": "Q067",
+      "part": 3,
+      "method": "physical_case",
+      "name": "topological winding circle criterion equivalent to chemical potential between the two gap closing points",
+      "passed": true
+    },
+    {
+      "id": "Q067",
+      "part": 4,
+      "method": "conservation",
+      "name": "superconducting pairing changes particle number but commutes with exact many-body fermion parity",
+      "passed": true
+    },
+    {
+      "id": "M070",
+      "part": 1,
+      "method": "symbolic",
+      "name": "quadrupolar satellite gravity gradient favors radial long axis by exactly three halves n squared inertia difference",
+      "passed": true
+    },
+    {
+      "id": "M070",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "Euler Lagrange satellite potential produces restoring torque and stable small angle libration frequency",
+      "passed": true
+    },
+    {
+      "id": "M070",
+      "part": 3,
+      "method": "conservation",
+      "name": "energy barrier equals initial angular kinetic energy at gravity gradient separatrix",
+      "passed": true
+    },
+    {
+      "id": "M070",
+      "part": 4,
+      "method": "limit",
+      "name": "spherical inertia and zero orbit rate suppress quadrupole torque and libration frequency",
+      "passed": true
+    },
+    {
+      "id": "E070",
+      "part": 1,
+      "method": "symbolic",
+      "name": "radial complex Penning eigenfrequency solves Lorentz plus radial anti-trap quadratic characteristic",
+      "passed": true
+    },
+    {
+      "id": "E070",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "modified cyclotron and magnetron frequencies sum to cyclotron frequency and multiply to half axial squared",
+      "passed": true
+    },
+    {
+      "id": "E070",
+      "part": 3,
+      "method": "physical_case",
+      "name": "strong field Penning spectrum has positive fast mode energy and negative slow magnetron energy despite both real frequencies",
+      "passed": true
+    },
+    {
+      "id": "E070",
+      "part": 4,
+      "method": "limit",
+      "name": "high cyclotron field gives magnetron frequency omega_z squared over two omega_c and near-degenerate critical roots coalesce",
+      "passed": true
+    },
+    {
+      "id": "T066",
+      "part": 1,
+      "method": "symbolic",
+      "name": "forward nonlinear thermal interface obeys quadratic first slab and linear second slab Fourier balances",
+      "passed": true
+    },
+    {
+      "id": "T066",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "reversed temperature direction solves distinct boundary interface with positive current",
+      "passed": true
+    },
+    {
+      "id": "T066",
+      "part": 3,
+      "method": "numerical",
+      "name": "exact rectified heat currents forward and backward have ratio greater than one by independent 30-digit comparison",
+      "passed": true
+    },
+    {
+      "id": "T066",
+      "part": 4,
+      "method": "conservation",
+      "name": "two layer entropy generation equals two terminal reservoir entropy change and vanishes at equal temperatures",
+      "passed": true
+    },
+    {
+      "id": "W066",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Neumann cylinder partial wave boundary directly cancels radial derivatives of incident Bessel and outgoing Hankel components",
+      "passed": true
+    },
+    {
+      "id": "W066",
+      "part": 2,
+      "method": "numerical",
+      "name": "low frequency Hankel asymptotics give both monopole and symmetric dipole O(ka squared) scattering amplitudes",
+      "passed": true
+    },
+    {
+      "id": "W066",
+      "part": 3,
+      "method": "numerical",
+      "name": "sum of real partial wave cross sections matches three pi squared k cubed a fourth low frequency asymptotic",
+      "passed": true
+    },
+    {
+      "id": "W066",
+      "part": 4,
+      "method": "conservation",
+      "name": "unabsorbing rigid scatterer has unitary S matrix in independent angular orders",
+      "passed": true
+    },
+    {
+      "id": "O068",
+      "part": 1,
+      "method": "symbolic",
+      "name": "counter-propagating rotating circular ring exact time difference has correct small omega limit four area omega over c squared",
+      "passed": true
+    },
+    {
+      "id": "O068",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "closed circulation of rigid rotation velocity is two angular speed times enclosed area",
+      "passed": true
+    },
+    {
+      "id": "O068",
+      "part": 3,
+      "method": "dimensions",
+      "name": "vacuum optical carrier phase equals frequency times Sagnac delay and scales with enclosed area",
+      "passed": true
+    },
+    {
+      "id": "O068",
+      "part": 4,
+      "method": "limit",
+      "name": "shot-noise Sagnac rotation sensitivity scales as inverse square root of independent detected photons",
+      "passed": true
+    },
+    {
+      "id": "Q068",
+      "part": 1,
+      "method": "numerical",
+      "name": "independent 50-digit geometric Schmidt mode summation recovers normalized thermal probabilities and exact mean occupancy",
+      "passed": true
+    },
+    {
+      "id": "Q068",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "two-mode Bogoliubov squeezes both commuting EPR quadrature variances while preserving canonical uncertainty product",
+      "passed": true
+    },
+    {
+      "id": "Q068",
+      "part": 3,
+      "method": "symbolic",
+      "name": "Schmidt partial transpose trace norm equals exponential of twice squeezing parameter after exponential identity",
+      "passed": true
+    },
+    {
+      "id": "Q068",
+      "part": 4,
+      "method": "physical_case",
+      "name": "vacuum attenuation convexly mixes ideal EPR variance with vacuum and strictly preserves subshot-noise at nonzero transmissivity",
+      "passed": true
+    },
+    {
+      "id": "M071",
+      "part": 1,
+      "method": "symbolic",
+      "name": "continuity-derived Bondi velocity gradient numerator vanishes precisely at the transonic regular sonic point",
+      "passed": true
+    },
+    {
+      "id": "M071",
+      "part": 2,
+      "method": "dimensions",
+      "name": "regular sonic radius and density determine classical isothermal Bondi accretion rate with exact pi exp three halves coefficient",
+      "passed": true
+    },
+    {
+      "id": "M071",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "dimensionless Bernoulli implicit Bondi transonic curve has stationary regular point at w equals x equals one",
+      "passed": true
+    },
+    {
+      "id": "M071",
+      "part": 4,
+      "method": "limit",
+      "name": "free fall inner Bondi density has minus three halves radial exponent and outer rate tends inverse square distance",
+      "passed": true
+    },
+    {
+      "id": "E071",
+      "part": 1,
+      "method": "symbolic",
+      "name": "ferroelectric double well has two nonzero stable roots with positive curvature and an unstable zero root",
+      "passed": true
+    },
+    {
+      "id": "E071",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "polarization differential susceptibility follows curvature inverse and critical amplitude ratio is two",
+      "passed": true
+    },
+    {
+      "id": "E071",
+      "part": 3,
+      "method": "symbolic",
+      "name": "Landau spinodal simultaneously zero first and second derivatives yields exact coercive spinodal field magnitude",
+      "passed": true
+    },
+    {
+      "id": "E071",
+      "part": 4,
+      "method": "conservation",
+      "name": "zero field double well free energy barrier is positive A squared over four b",
+      "passed": true
+    },
+    {
+      "id": "T067",
+      "part": 1,
+      "method": "symbolic",
+      "name": "centrifugal ideal gas equilibrium exponential density follows exact radial isothermal Euler balance",
+      "passed": true
+    },
+    {
+      "id": "T067",
+      "part": 2,
+      "method": "limit",
+      "name": "radial normalization yields uniform volume density as rotation vanishes",
+      "passed": true
+    },
+    {
+      "id": "T067",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "moment of inertia radius equals derivative of logarithmic partition factor and has correct small rotation limit",
+      "passed": true
+    },
+    {
+      "id": "T067",
+      "part": 4,
+      "method": "conservation",
+      "name": "rotating frame Legendre conjugate derivative equals mass times angular velocity times canonical mean radius squared",
+      "passed": true
+    },
+    {
+      "id": "W067",
+      "part": 1,
+      "method": "symbolic",
+      "name": "spherical harmonic interior radial velocity potential satisfies kinematic boundary exactly",
+      "passed": true
+    },
+    {
+      "id": "W067",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "dynamic Laplace curvature pressure and Bernoulli condition yield Rayleigh ell mode squared frequency",
+      "passed": true
+    },
+    {
+      "id": "W067",
+      "part": 3,
+      "method": "conservation",
+      "name": "Green kinetic integral and second-order surface energy reproduce oscillator mass and positive stiffness",
+      "passed": true
+    },
+    {
+      "id": "W067",
+      "part": 4,
+      "method": "physical_case",
+      "name": "ell one is pure translation zero frequency while high surface tension raises frequencies",
+      "passed": true
+    },
+    {
+      "id": "O069",
+      "part": 1,
+      "method": "symbolic",
+      "name": "paraxial continuity gives positive focused intensity derivative for positive sinusoidal phase curvature",
+      "passed": true
+    },
+    {
+      "id": "O069",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "Fourier inverse Poisson coefficient times measured defocus derivative recovers original nonzero phase",
+      "passed": true
+    },
+    {
+      "id": "O069",
+      "part": 3,
+      "method": "limit",
+      "name": "low spatial frequency inverse Poisson transfer grows with inverse square wave number",
+      "passed": true
+    },
+    {
+      "id": "O069",
+      "part": 4,
+      "method": "conservation",
+      "name": "periodic transverse intensity flux integrates to zero under no boundary leakage",
+      "passed": true
+    },
+    {
+      "id": "Q069",
+      "part": 1,
+      "method": "numerical",
+      "name": "independent Bessel recurrence matches the tilted tight binding Wannier Stark eigenvalue equation over eight integer lattice indices",
+      "passed": true
+    },
+    {
+      "id": "Q069",
+      "part": 2,
+      "method": "numerical",
+      "name": "numerical Wannier Stark Bessel modes are orthonormal for two distinct translated ladder centers",
+      "passed": true
+    },
+    {
+      "id": "Q069",
+      "part": 3,
+      "method": "limit",
+      "name": "every Wannier Stark ladder eigenphase exactly revives after a complete Bloch period and wavepacket broadening vanishes",
+      "passed": true
+    },
+    {
+      "id": "Q069",
+      "part": 4,
+      "method": "independent_derivation",
+      "name": "semiclassical crystal velocity integral recovers exact time derivative of oscillatory position trajectory",
+      "passed": true
+    },
+    {
+      "id": "M072",
+      "part": 1,
+      "method": "symbolic",
+      "name": "spherical incompressibility gives exact inverse square radial velocity and correct negative initial acceleration",
+      "passed": true
+    },
+    {
+      "id": "M072",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "Rayleigh first integral differentiates to exact acceleration and recovers zero initial kinetic energy",
+      "passed": true
+    },
+    {
+      "id": "M072",
+      "part": 3,
+      "method": "numerical",
+      "name": "independent high precision collapse quadrature matches beta five sixths one half expression",
+      "passed": true
+    },
+    {
+      "id": "M072",
+      "part": 4,
+      "method": "conservation",
+      "name": "all fluid kinetic energy equals exactly pressure volume work released during Rayleigh collapse",
+      "passed": true
+    },
+    {
+      "id": "E072",
+      "part": 1,
+      "method": "symbolic",
+      "name": "correct RSJ washboard gradient mobility includes critical current and yields phase velocity units",
+      "passed": true
+    },
+    {
+      "id": "E072",
+      "part": 2,
+      "method": "numerical",
+      "name": "exact Josephson phase slip integral equals two pi over square root of bias current discriminant",
+      "passed": true
+    },
+    {
+      "id": "E072",
+      "part": 3,
+      "method": "limit",
+      "name": "Josephson metastable barrier is two EJ at zero bias and vanishes at critical tilt",
+      "passed": true
+    },
+    {
+      "id": "E072",
+      "part": 4,
+      "method": "conservation",
+      "name": "resistive Josephson energy balance uses mean squared voltage not square of mean voltage",
+      "passed": true
+    },
+    {
+      "id": "T068",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Flory Huggins second derivative gives exact spinodal curvature and concentration dependence",
+      "passed": true
+    },
+    {
+      "id": "T068",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "critical composition one half and chi two over N solve second and third derivative zeros with positive quartic",
+      "passed": true
+    },
+    {
+      "id": "T068",
+      "part": 3,
+      "method": "symbolic",
+      "name": "binodal small order parameter expansion has linear and cubic coefficients yielding correct mean field square root",
+      "passed": true
+    },
+    {
+      "id": "T068",
+      "part": 4,
+      "method": "limit",
+      "name": "spinodal minimum equals critical chi and zero interaction is locally stable at all interior compositions",
+      "passed": true
+    },
+    {
+      "id": "W068",
+      "part": 1,
+      "method": "conservation",
+      "name": "horizontal slowness is conserved and turning occurs exactly at sound speed inverse slowness",
+      "passed": true
+    },
+    {
+      "id": "W068",
+      "part": 2,
+      "method": "symbolic",
+      "name": "integrated gradient sound speed ray lies on exact Euclidean circle of curvature gamma times slowness",
+      "passed": true
+    },
+    {
+      "id": "W068",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "ray travel time logarithm differentiates to reciprocal sound speed times vertical group speed",
+      "passed": true
+    },
+    {
+      "id": "W068",
+      "part": 4,
+      "method": "limit",
+      "name": "sound ray curvature vanishes with gradient and vertical group velocity vanishes at turning point",
+      "passed": true
+    },
+    {
+      "id": "O070",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Gaussian phase increment characteristic function halves Kolmogorov structure function coefficient",
+      "passed": true
+    },
+    {
+      "id": "O070",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "long exposure atmospheric transfer factor equals phase correlation evaluated at wavelength times angular frequency",
+      "passed": true
+    },
+    {
+      "id": "O070",
+      "part": 3,
+      "method": "dimensions",
+      "name": "Fried length scales with wavelength six fifths and seeing angle decreases as wavelength minus one fifth",
+      "passed": true
+    },
+    {
+      "id": "O070",
+      "part": 4,
+      "method": "limit",
+      "name": "Kolmogorov phase coherence tends unity at zero baseline and zero at very long baseline",
+      "passed": true
+    },
+    {
+      "id": "Q070",
+      "part": 1,
+      "method": "symbolic",
+      "name": "two atom symmetric Dicke Hamiltonian has equal square root two enhanced nearest couplings",
+      "passed": true
+    },
+    {
+      "id": "Q070",
+      "part": 2,
+      "method": "limit",
+      "name": "collective Rabi frequency square root two gives full W state population at first pi pulse",
+      "passed": true
+    },
+    {
+      "id": "Q070",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "virtual doubly excited Rydberg level yields negative second order bright state energy shift",
+      "passed": true
+    },
+    {
+      "id": "Q070",
+      "part": 4,
+      "method": "conservation",
+      "name": "Rydberg W Bell state has maximally mixed one atom reduction and one bit entropy",
+      "passed": true
+    },
+    {
+      "id": "M073",
+      "part": 1,
+      "method": "symbolic",
+      "name": "nonlinear pendulum first integral differentiates exactly into Euler elastica equilibrium",
+      "passed": true
+    },
+    {
+      "id": "M073",
+      "part": 2,
+      "method": "limit",
+      "name": "elliptic complete integral yields exact Euler buckling threshold and positive postbuckling load correction",
+      "passed": true
+    },
+    {
+      "id": "M073",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "end shortening from elliptic first and second kind integrals has exact small amplitude coefficient",
+      "passed": true
+    },
+    {
+      "id": "M073",
+      "part": 4,
+      "method": "conservation",
+      "name": "bending energy from first integral has correct positive leading order and energy to shortening ratio",
+      "passed": true
+    },
+    {
+      "id": "E073",
+      "part": 1,
+      "method": "symbolic",
+      "name": "London slab hyperbolic cosine satisfies second order penetration equation and both boundary fields",
+      "passed": true
+    },
+    {
+      "id": "E073",
+      "part": 2,
+      "method": "conservation",
+      "name": "right half slab sheet current equals exact magnetic induction jump divided by permeability",
+      "passed": true
+    },
+    {
+      "id": "E073",
+      "part": 3,
+      "method": "limit",
+      "name": "effective Meissner susceptibility has thin slab quadratic law and thick slab ideal screening limit",
+      "passed": true
+    },
+    {
+      "id": "E073",
+      "part": 4,
+      "method": "independent_derivation",
+      "name": "magnetic plus kinetic London energy integrates to lambda tanh thickness and correct uniform limit",
+      "passed": true
+    },
+    {
+      "id": "T069",
+      "part": 1,
+      "method": "independent_derivation",
+      "name": "gamma function density of states gives three halves and five halves Bose energy moments",
+      "passed": true
+    },
+    {
+      "id": "T069",
+      "part": 2,
+      "method": "limit",
+      "name": "condensate fraction vanishes at critical temperature and approaches unity at zero temperature",
+      "passed": true
+    },
+    {
+      "id": "T069",
+      "part": 3,
+      "method": "symbolic",
+      "name": "normal and condensed heat capacities agree at critical fugacity with divergent Bose g half moment",
+      "passed": true
+    },
+    {
+      "id": "T069",
+      "part": 4,
+      "method": "dimensions",
+      "name": "ideal quadratic dispersion gas pressure equals two thirds of internal energy density and vanishes at zero T",
+      "passed": true
+    },
+    {
+      "id": "W069",
+      "part": 1,
+      "method": "symbolic",
+      "name": "upper and lower exponential potential fields solve Laplace equation and yield opposite kinematic signs",
+      "passed": true
+    },
+    {
+      "id": "W069",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "density weighted completed square reproduces shear induced negative dispersion contribution",
+      "passed": true
+    },
+    {
+      "id": "W069",
+      "part": 3,
+      "method": "symbolic",
+      "name": "capillary gravity threshold minimizes exactly at geometric mean wave number",
+      "passed": true
+    },
+    {
+      "id": "W069",
+      "part": 4,
+      "method": "limit",
+      "name": "unregularized vortex sheet has growth linear in k and stable zero shear gravity capillary branch",
+      "passed": true
+    },
+    {
+      "id": "O071",
+      "part": 1,
+      "method": "independent_derivation",
+      "name": "Gaussian Fourier characteristic function yields axial amplitude envelope exp minus twice sigma squared depth squared",
+      "passed": true
+    },
+    {
+      "id": "O071",
+      "part": 2,
+      "method": "symbolic",
+      "name": "amplitude and intensity Gaussian half widths differ by exact square root of two",
+      "passed": true
+    },
+    {
+      "id": "O071",
+      "part": 3,
+      "method": "numerical",
+      "name": "chirped Gaussian magnitude agrees with independently integrated oscillatory spectral integral",
+      "passed": true
+    },
+    {
+      "id": "O071",
+      "part": 4,
+      "method": "limit",
+      "name": "uniform spectral sampling phase is exactly invariant after one depth alias period and bandwidth zero loses localization",
+      "passed": true
+    },
+    {
+      "id": "Q071",
+      "part": 1,
+      "method": "symbolic",
+      "name": "minimal coupling angular eigenvalue exactly matches flux shifted integer parabola",
+      "passed": true
+    },
+    {
+      "id": "Q071",
+      "part": 2,
+      "method": "conservation",
+      "name": "flux quantum relabeling preserves the entire spectrum and persistent current is energy derivative",
+      "passed": true
+    },
+    {
+      "id": "Q071",
+      "part": 3,
+      "method": "numerical",
+      "name": "finite temperature ring partition is even in flux and persistent current vanishes at zero flux",
+      "passed": true
+    },
+    {
+      "id": "Q071",
+      "part": 4,
+      "method": "limit",
+      "name": "Poisson high temperature first harmonic current decays exponentially and is odd in applied flux",
+      "passed": true
+    },
+    {
+      "id": "M074",
+      "part": 1,
+      "method": "symbolic",
+      "name": "exact azimuthal Navier Stokes operator vanishes and both no slip cylinder boundary conditions hold",
+      "passed": true
+    },
+    {
+      "id": "M074",
+      "part": 2,
+      "method": "conservation",
+      "name": "viscous stress transfers radius independent torque and zero torque under rigid corotation",
+      "passed": true
+    },
+    {
+      "id": "M074",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "radial pressure primitive differentiates to exact centrifugal acceleration and rigid rotation pressure",
+      "passed": true
+    },
+    {
+      "id": "M074",
+      "part": 4,
+      "method": "conservation",
+      "name": "integrated viscous dissipation exactly equals difference in externally supplied wall torques times angular speeds",
+      "passed": true
+    },
+    {
+      "id": "E074",
+      "part": 1,
+      "method": "symbolic",
+      "name": "complex skin field solves Maxwell diffusion equation with decaying physical root",
+      "passed": true
+    },
+    {
+      "id": "E074",
+      "part": 2,
+      "method": "dimensions",
+      "name": "surface impedance equals complex skin wave number over conductivity with positive dissipative real part",
+      "passed": true
+    },
+    {
+      "id": "E074",
+      "part": 3,
+      "method": "conservation",
+      "name": "Poynting incoming flux exactly equals independently integrated Joule loss in conductor halfspace",
+      "passed": true
+    },
+    {
+      "id": "E074",
+      "part": 4,
+      "method": "limit",
+      "name": "skin depth decays as inverse square root frequency while dissipative surface resistance grows as square root",
+      "passed": true
+    },
+    {
+      "id": "T070",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Eddington moment integration yields exact boundary intensity and constant radiative flux",
+      "passed": true
+    },
+    {
+      "id": "T070",
+      "part": 2,
+      "method": "limit",
+      "name": "grey atmosphere temperature at optical depth two thirds equals effective temperature and surface fourth power half",
+      "passed": true
+    },
+    {
+      "id": "T070",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "radiative logarithmic gradient is bounded by quarter and below monatomic adiabatic two fifths",
+      "passed": true
+    },
+    {
+      "id": "T070",
+      "part": 4,
+      "method": "conservation",
+      "name": "diffusion flux from fourth power temperature law exactly recovers constant Stefan Boltzmann flux",
+      "passed": true
+    },
+    {
+      "id": "W070",
+      "part": 1,
+      "method": "symbolic",
+      "name": "variational orthotropic fourth order plate operator yields correct doubled mixed derivative stiffness",
+      "passed": true
+    },
+    {
+      "id": "W070",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "differentiating orthotropic plate dispersion recovers both group velocity components",
+      "passed": true
+    },
+    {
+      "id": "W070",
+      "part": 3,
+      "method": "conservation",
+      "name": "simply supported double sine mode potential energy equals oscillator effective mass times squared frequency",
+      "passed": true
+    },
+    {
+      "id": "W070",
+      "part": 4,
+      "method": "limit",
+      "name": "isotropic Kirchhoff Love plate has quadratic frequency and group speed exactly twice phase speed",
+      "passed": true
+    },
+    {
+      "id": "O072",
+      "part": 1,
+      "method": "symbolic",
+      "name": "evanescent TM normal wave numbers obey Helmholtz dispersion in both half spaces",
+      "passed": true
+    },
+    {
+      "id": "O072",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "TM tangential continuity gives squared decay ratio equal squared dielectric contrast",
+      "passed": true
+    },
+    {
+      "id": "O072",
+      "part": 3,
+      "method": "limit",
+      "name": "lossless Drude surface plasmon diverges at omega plasma over root two and approaches vacuum light line at low frequency",
+      "passed": true
+    },
+    {
+      "id": "O072",
+      "part": 4,
+      "method": "physical_case",
+      "name": "Brillouin metal electric energy derivative remains positive despite negative real permittivity",
+      "passed": true
+    },
+    {
+      "id": "Q072",
+      "part": 1,
+      "method": "symbolic",
+      "name": "two dimensional Grover effective projector has unit trace and determinant proportional to marked overlap",
+      "passed": true
+    },
+    {
+      "id": "Q072",
+      "part": 2,
+      "method": "limit",
+      "name": "Grover avoided crossing reaches exact inverse root N minimum gap at half interpolation",
+      "passed": true
+    },
+    {
+      "id": "Q072",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "local adiabatic inverse squared gap integral has exact arctangent form and square root asymptotic",
+      "passed": true
+    },
+    {
+      "id": "Q072",
+      "part": 4,
+      "method": "physical_case",
+      "name": "nonadiabatic matrix element peaks below unity and local schedule bounds transition ratio by epsilon",
+      "passed": true
+    },
+    {
+      "id": "M075",
+      "part": 1,
+      "method": "symbolic",
+      "name": "vis viva transfer orbit periapsis and apoapsis share the same exact Kepler angular momentum",
+      "passed": true
+    },
+    {
+      "id": "M075",
+      "part": 2,
+      "method": "conservation",
+      "name": "two Hohmann velocity impulses are prograde and their kinetic changes match the circular orbit energy budget",
+      "passed": true
+    },
+    {
+      "id": "M075",
+      "part": 3,
+      "method": "limit",
+      "name": "half ellipse transfer duration tends half circular period and diverges for an unbounded destination orbit",
+      "passed": true
+    },
+    {
+      "id": "M075",
+      "part": 4,
+      "method": "dimensions",
+      "name": "Tsiolkovsky mass ratio is exponential in total delta v and tends unity when both circular radii coincide",
+      "passed": true
+    },
+    {
+      "id": "M076",
+      "part": 1,
+      "method": "symbolic",
+      "name": "complex Foucault displacement solves coupled Coriolis equations with correct northern hemisphere rotation sign",
+      "passed": true
+    },
+    {
+      "id": "M076",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "two circular polarization positive frequencies split by exactly twice vertical Earth rotation rate",
+      "passed": true
+    },
+    {
+      "id": "M076",
+      "part": 3,
+      "method": "limit",
+      "name": "Foucault precession vanishes at equator and equals sidereal rotation at north pole",
+      "passed": true
+    },
+    {
+      "id": "M076",
+      "part": 4,
+      "method": "conservation",
+      "name": "Coriolis acceleration is perpendicular to velocity and horizontal pendulum energy derivative vanishes",
+      "passed": true
+    },
+    {
+      "id": "E075",
+      "part": 1,
+      "method": "symbolic",
+      "name": "ellipsoid internal field self consistency reproduces exact anisotropic polarizability tensor eigenvalue",
+      "passed": true
+    },
+    {
+      "id": "E075",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "spherical depolarization integral gives one third and conducting sphere recovers four pi epsilon zero radius cubed",
+      "passed": true
+    },
+    {
+      "id": "E075",
+      "part": 3,
+      "method": "conservation",
+      "name": "induced dipole torque equals negative angular derivative of fixed field polarization energy",
+      "passed": true
+    },
+    {
+      "id": "E075",
+      "part": 4,
+      "method": "limit",
+      "name": "prolate spheroid depolarization tends one third for sphere and zero for extreme long axis",
+      "passed": true
+    },
+    {
+      "id": "E076",
+      "part": 1,
+      "method": "symbolic",
+      "name": "causal step response solves first order Debye relaxation with zero initial polarization",
+      "passed": true
+    },
+    {
+      "id": "E076",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "complex Debye susceptibility has exact positive loss imaginary part and correct zero high frequency limits",
+      "passed": true
+    },
+    {
+      "id": "E076",
+      "part": 3,
+      "method": "conservation",
+      "name": "Debye dielectric loss peaks at unit omega tau and dissipates nonnegative energy per field cycle",
+      "passed": true
+    },
+    {
+      "id": "E076",
+      "part": 4,
+      "method": "independent_derivation",
+      "name": "causal Kramers Kronig dielectric sum rule recovers full static to high frequency contrast",
+      "passed": true
+    },
+    {
+      "id": "T071",
+      "part": 1,
+      "method": "symbolic",
+      "name": "three dimensional spin two Fermi sphere state count and pressure two fifths n Fermi energy agree",
+      "passed": true
+    },
+    {
+      "id": "T071",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "Sommerfeld number conservation yields negative pi squared over twelve chemical potential shift",
+      "passed": true
+    },
+    {
+      "id": "T071",
+      "part": 3,
+      "method": "symbolic",
+      "name": "Sommerfeld energy temperature derivative reproduces linear specific heat pi squared over two",
+      "passed": true
+    },
+    {
+      "id": "T071",
+      "part": 4,
+      "method": "conservation",
+      "name": "zero temperature Fermi compressibility and sound speed follow density five thirds pressure scaling",
+      "passed": true
+    },
+    {
+      "id": "W071",
+      "part": 1,
+      "method": "conservation",
+      "name": "Rankine Hugoniot shock speed exactly equals mean of left and right Burgers states",
+      "passed": true
+    },
+    {
+      "id": "W071",
+      "part": 2,
+      "method": "symbolic",
+      "name": "Burgers hyperbolic tangent shock satisfies once integrated viscous traveling wave equation exactly",
+      "passed": true
+    },
+    {
+      "id": "W071",
+      "part": 3,
+      "method": "numerical",
+      "name": "independent numerical integration of Burgers shock entropy production equals delta cubed over twelve",
+      "passed": true
+    },
+    {
+      "id": "W071",
+      "part": 4,
+      "method": "physical_case",
+      "name": "compressive Burgers shock speed lies strictly between both characteristic speeds and width shrinks with viscosity",
+      "passed": true
+    },
+    {
+      "id": "O073",
+      "part": 1,
+      "method": "symbolic",
+      "name": "electrostatic Rayleigh sphere polarizability gives correct conducting and vacuum dielectric limits",
+      "passed": true
+    },
+    {
+      "id": "O073",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "Gaussian dipole gradient force has positive lateral spring constant and equipartition variance inverse stiffness",
+      "passed": true
+    },
+    {
+      "id": "O073",
+      "part": 3,
+      "method": "conservation",
+      "name": "radiation corrected Rayleigh polarizability satisfies lossless dipole optical theorem exactly",
+      "passed": true
+    },
+    {
+      "id": "O073",
+      "part": 4,
+      "method": "limit",
+      "name": "Rayleigh optical gradient scales with radius cubed whereas radiation scattering scales with radius sixth",
+      "passed": true
+    },
+    {
+      "id": "Q073",
+      "part": 1,
+      "method": "symbolic",
+      "name": "qubit pre post overlap gives secant weak value and exact cosine squared zero coupling success probability",
+      "passed": true
+    },
+    {
+      "id": "Q073",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "first order weak pointer translation equals coupling times real weak value under nonzero postselection overlap",
+      "passed": true
+    },
+    {
+      "id": "Q073",
+      "part": 3,
+      "method": "limit",
+      "name": "exact Gaussian postselection regularizes anomalous weak value as states become orthogonal at fixed nonzero coupling",
+      "passed": true
+    },
+    {
+      "id": "Q073",
+      "part": 4,
+      "method": "conservation",
+      "name": "postselection success probability times squared weak amplification equals unity in strict weak limit",
+      "passed": true
+    }
+  ],
+  "independent_expert_review": "pending"
+}

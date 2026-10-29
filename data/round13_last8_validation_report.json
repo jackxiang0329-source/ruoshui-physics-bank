@@ -1,0 +1,232 @@
+{
+  "status": "draft-only-not-admitted",
+  "new_problem_count": 8,
+  "passed_count": 32,
+  "tests": [
+    {
+      "id": "M075",
+      "part": 1,
+      "method": "symbolic",
+      "name": "vis viva transfer orbit periapsis and apoapsis share the same exact Kepler angular momentum",
+      "passed": true
+    },
+    {
+      "id": "M075",
+      "part": 2,
+      "method": "conservation",
+      "name": "two Hohmann velocity impulses are prograde and their kinetic changes match the circular orbit energy budget",
+      "passed": true
+    },
+    {
+      "id": "M075",
+      "part": 3,
+      "method": "limit",
+      "name": "half ellipse transfer duration tends half circular period and diverges for an unbounded destination orbit",
+      "passed": true
+    },
+    {
+      "id": "M075",
+      "part": 4,
+      "method": "dimensions",
+      "name": "Tsiolkovsky mass ratio is exponential in total delta v and tends unity when both circular radii coincide",
+      "passed": true
+    },
+    {
+      "id": "M076",
+      "part": 1,
+      "method": "symbolic",
+      "name": "complex Foucault displacement solves coupled Coriolis equations with correct northern hemisphere rotation sign",
+      "passed": true
+    },
+    {
+      "id": "M076",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "two circular polarization positive frequencies split by exactly twice vertical Earth rotation rate",
+      "passed": true
+    },
+    {
+      "id": "M076",
+      "part": 3,
+      "method": "limit",
+      "name": "Foucault precession vanishes at equator and equals sidereal rotation at north pole",
+      "passed": true
+    },
+    {
+      "id": "M076",
+      "part": 4,
+      "method": "conservation",
+      "name": "Coriolis acceleration is perpendicular to velocity and horizontal pendulum energy derivative vanishes",
+      "passed": true
+    },
+    {
+      "id": "E075",
+      "part": 1,
+      "method": "symbolic",
+      "name": "ellipsoid internal field self consistency reproduces exact anisotropic polarizability tensor eigenvalue",
+      "passed": true
+    },
+    {
+      "id": "E075",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "spherical depolarization integral gives one third and conducting sphere recovers four pi epsilon zero radius cubed",
+      "passed": true
+    },
+    {
+      "id": "E075",
+      "part": 3,
+      "method": "conservation",
+      "name": "induced dipole torque equals negative angular derivative of fixed field polarization energy",
+      "passed": true
+    },
+    {
+      "id": "E075",
+      "part": 4,
+      "method": "limit",
+      "name": "prolate spheroid depolarization tends one third for sphere and zero for extreme long axis",
+      "passed": true
+    },
+    {
+      "id": "E076",
+      "part": 1,
+      "method": "symbolic",
+      "name": "causal step response solves first order Debye relaxation with zero initial polarization",
+      "passed": true
+    },
+    {
+      "id": "E076",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "complex Debye susceptibility has exact positive loss imaginary part and correct zero high frequency limits",
+      "passed": true
+    },
+    {
+      "id": "E076",
+      "part": 3,
+      "method": "conservation",
+      "name": "Debye dielectric loss peaks at unit omega tau and dissipates nonnegative energy per field cycle",
+      "passed": true
+    },
+    {
+      "id": "E076",
+      "part": 4,
+      "method": "independent_derivation",
+      "name": "causal Kramers Kronig dielectric sum rule recovers full static to high frequency contrast",
+      "passed": true
+    },
+    {
+      "id": "T071",
+      "part": 1,
+      "method": "symbolic",
+      "name": "three dimensional spin two Fermi sphere state count and pressure two fifths n Fermi energy agree",
+      "passed": true
+    },
+    {
+      "id": "T071",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "Sommerfeld number conservation yields negative pi squared over twelve chemical potential shift",
+      "passed": true
+    },
+    {
+      "id": "T071",
+      "part": 3,
+      "method": "symbolic",
+      "name": "Sommerfeld energy temperature derivative reproduces linear specific heat pi squared over two",
+      "passed": true
+    },
+    {
+      "id": "T071",
+      "part": 4,
+      "method": "conservation",
+      "name": "zero temperature Fermi compressibility and sound speed follow density five thirds pressure scaling",
+      "passed": true
+    },
+    {
+      "id": "W071",
+      "part": 1,
+      "method": "conservation",
+      "name": "Rankine Hugoniot shock speed exactly equals mean of left and right Burgers states",
+      "passed": true
+    },
+    {
+      "id": "W071",
+      "part": 2,
+      "method": "symbolic",
+      "name": "Burgers hyperbolic tangent shock satisfies once integrated viscous traveling wave equation exactly",
+      "passed": true
+    },
+    {
+      "id": "W071",
+      "part": 3,
+      "method": "numerical",
+      "name": "independent numerical integration of Burgers shock entropy production equals delta cubed over twelve",
+      "passed": true
+    },
+    {
+      "id": "W071",
+      "part": 4,
+      "method": "physical_case",
+      "name": "compressive Burgers shock speed lies strictly between both characteristic speeds and width shrinks with viscosity",
+      "passed": true
+    },
+    {
+      "id": "O073",
+      "part": 1,
+      "method": "symbolic",
+      "name": "electrostatic Rayleigh sphere polarizability gives correct conducting and vacuum dielectric limits",
+      "passed": true
+    },
+    {
+      "id": "O073",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "Gaussian dipole gradient force has positive lateral spring constant and equipartition variance inverse stiffness",
+      "passed": true
+    },
+    {
+      "id": "O073",
+      "part": 3,
+      "method": "conservation",
+      "name": "radiation corrected Rayleigh polarizability satisfies lossless dipole optical theorem exactly",
+      "passed": true
+    },
+    {
+      "id": "O073",
+      "part": 4,
+      "method": "limit",
+      "name": "Rayleigh optical gradient scales with radius cubed whereas radiation scattering scales with radius sixth",
+      "passed": true
+    },
+    {
+      "id": "Q073",
+      "part": 1,
+      "method": "symbolic",
+      "name": "qubit pre post overlap gives secant weak value and exact cosine squared zero coupling success probability",
+      "passed": true
+    },
+    {
+      "id": "Q073",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "first order weak pointer translation equals coupling times real weak value under nonzero postselection overlap",
+      "passed": true
+    },
+    {
+      "id": "Q073",
+      "part": 3,
+      "method": "limit",
+      "name": "exact Gaussian postselection regularizes anomalous weak value as states become orthogonal at fixed nonzero coupling",
+      "passed": true
+    },
+    {
+      "id": "Q073",
+      "part": 4,
+      "method": "conservation",
+      "name": "postselection success probability times squared weak amplification equals unity in strict weak limit",
+      "passed": true
+    }
+  ],
+  "independent_expert_review": "pending"
+}
