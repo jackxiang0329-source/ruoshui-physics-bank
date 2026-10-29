@@ -66,9 +66,9 @@
     "近代物理": 8
   },
   "review_status": "待独立复核",
-  "technical_status": "pending successful CI full bank & 200 executable subpart checks",
+  "technical_status": "passed: PR #35 GitHub Actions run 40823851509, 200 subpart checks and two XeLaTeX PDFs; merged SHA ae15c99dcc3bd9f5ce0fca7aa81c48720d0ec815",
   "source": "bank/ID/{meta.json,question.tex,solution.tex}",
   "check_script": "scripts/check_round12_physics.py",
   "verification_report": "data/round12_validation_report.json",
-  "notes": "50 distinct advanced four-part problems, 200 independently executable subpart tests, no human expert signoff."
+  "notes": "Round 12 admitted 50 distinct four-part advanced physics problems; five historical-core overlaps replaced with new physical models and corresponding 20 executable checks. Independent expert review remains pending."
 }
