@@ -4,21 +4,14 @@
   "reference_base": "main",
   "reference_count": 452,
   "method": "human-semantic model screening from all 452 index.csv titles and domain tags, requires independent expert confirmation",
-  "status": "BLOCKED_27_REUSED_MODEL_CORES_5_NEED_REVIEW",
-  "confirmed_overlap_risk": 27,
+  "status": "BLOCKED_21_REUSED_MODEL_CORES_5_NEED_REVIEW",
+  "confirmed_overlap_risk": 21,
   "needs_semantic_review": 5,
   "provisional_no_title_collision": [
     "T104",
     "Q107"
   ],
   "strong_overlaps": [
-    {
-      "id": "M109",
-      "prior_ids": [
-        "M041"
-      ],
-      "reason": "same fundamental physical setup and key observable/derivation as catalog entry; replace complete core, not rename"
-    },
     {
       "id": "M111",
       "prior_ids": [
@@ -39,13 +32,6 @@
       "prior_ids": [
         "E009",
         "E057"
-      ],
-      "reason": "same fundamental physical setup and key observable/derivation as catalog entry; replace complete core, not rename"
-    },
-    {
-      "id": "E109",
-      "prior_ids": [
-        "E018"
       ],
       "reason": "same fundamental physical setup and key observable/derivation as catalog entry; replace complete core, not rename"
     },
@@ -87,13 +73,6 @@
       "reason": "same fundamental physical setup and key observable/derivation as catalog entry; replace complete core, not rename"
     },
     {
-      "id": "T103",
-      "prior_ids": [
-        "T026"
-      ],
-      "reason": "same fundamental physical setup and key observable/derivation as catalog entry; replace complete core, not rename"
-    },
-    {
       "id": "T105",
       "prior_ids": [
         "T017"
@@ -122,13 +101,6 @@
       "reason": "same fundamental physical setup and key observable/derivation as catalog entry; replace complete core, not rename"
     },
     {
-      "id": "W102",
-      "prior_ids": [
-        "W041"
-      ],
-      "reason": "same fundamental physical setup and key observable/derivation as catalog entry; replace complete core, not rename"
-    },
-    {
       "id": "W106",
       "prior_ids": [
         "W030"
@@ -146,13 +118,6 @@
       "id": "W108",
       "prior_ids": [
         "W060"
-      ],
-      "reason": "same fundamental physical setup and key observable/derivation as catalog entry; replace complete core, not rename"
-    },
-    {
-      "id": "O104",
-      "prior_ids": [
-        "O045"
       ],
       "reason": "same fundamental physical setup and key observable/derivation as catalog entry; replace complete core, not rename"
     },
@@ -175,13 +140,6 @@
       "id": "O107",
       "prior_ids": [
         "O029"
-      ],
-      "reason": "same fundamental physical setup and key observable/derivation as catalog entry; replace complete core, not rename"
-    },
-    {
-      "id": "Q102",
-      "prior_ids": [
-        "Q008"
       ],
       "reason": "same fundamental physical setup and key observable/derivation as catalog entry; replace complete core, not rename"
     },
@@ -289,12 +247,55 @@
         "Q047"
       ],
       "technical_status": "full physical core rewritten, four detailed subparts retained; one representative numeric test passed; global semantic rescreen still pending"
+    },
+    {
+      "id": "M109",
+      "replaced_historical_ids": [
+        "M041"
+      ],
+      "technical_status": "full core replaced, four questions and four worked derivations, representative physics QA passed; complete-history rescreen pending"
+    },
+    {
+      "id": "E109",
+      "replaced_historical_ids": [
+        "E018"
+      ],
+      "technical_status": "full core replaced, four questions and four worked derivations, representative physics QA passed; complete-history rescreen pending"
+    },
+    {
+      "id": "T103",
+      "replaced_historical_ids": [
+        "T026"
+      ],
+      "technical_status": "full core replaced, four questions and four worked derivations, representative physics QA passed; complete-history rescreen pending"
+    },
+    {
+      "id": "W102",
+      "replaced_historical_ids": [
+        "W041"
+      ],
+      "technical_status": "full core replaced, four questions and four worked derivations, representative physics QA passed; complete-history rescreen pending"
+    },
+    {
+      "id": "O104",
+      "replaced_historical_ids": [
+        "O045"
+      ],
+      "technical_status": "full core replaced, four questions and four worked derivations, representative physics QA passed; complete-history rescreen pending"
+    },
+    {
+      "id": "Q102",
+      "replaced_historical_ids": [
+        "Q008"
+      ],
+      "technical_status": "full core replaced, four questions and four worked derivations, representative physics QA passed; complete-history rescreen pending"
     }
   ],
   "verified_replacement_qa": {
-    "ci_run_id": 40883463525,
-    "verified_source_sha": "5c46f6a8b605bd218fb7ea3e07f0e4183d74d19c",
+    "ci_run_id": 40885506281,
+    "verified_source_sha": "9e7b9915af60a12f5ff3c62ad251c91d47e9e265",
     "conclusion": "success",
-    "representative_model_checks": 40
+    "representative_model_checks": 40,
+    "qualified_released_items": 0
   }
 }

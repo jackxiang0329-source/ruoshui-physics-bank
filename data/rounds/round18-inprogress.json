@@ -63,7 +63,7 @@
     "items": 40,
     "question_parts": 160,
     "solution_parts": 160,
-    "run_id": 40882310594
+    "run_id": 40885506281
   },
   "executed_model_checks": 40,
   "independent_subpart_checks": 0,
@@ -75,40 +75,34 @@
   "qualified_released_items": 0,
   "merge_allowed": false,
   "note": "40 new user-requested drafts separate from formal 50/200 admission policy; never auto-merge.",
-  "technical_status": "40 authoritative new source triples and 160 solved parts exist. CI #40883463525 succeeded after six full physical-model replacements with 40 representative model-level checks. Historical main-catalog audit leaves 27 strong model overlap risks and 5 separate model-family reviews. 160 independent subpart checks, source mirrors, two XeLaTeX PDFs, expert review, and 50/200 formal admission policy remain unmet. NO MERGE.",
+  "technical_status": "40 Round18 newly-authored items each retain four TeX question and answer parts. Six more full physical core replacements M109,E109,T103,W102,O104,Q102 passed source structure and 40 representative physics checks in Actions #40885506281. Historical catalog has 21 remaining strong core collisions, 5 model-family reviews. All 160 independent per-subpart QA, historical rescreen, final mirrors, two compiled XeLaTeX PDFs, and independent expert review remain pending. Do not merge.",
   "model_qa": {
     "status": "passed",
     "model_level_tests": 40,
-    "source_sha": "5c46f6a8b605bd218fb7ea3e07f0e4183d74d19c",
-    "run_id": 40883463525,
+    "source_sha": "9e7b9915af60a12f5ff3c62ad251c91d47e9e265",
+    "run_id": 40885506281,
     "conclusion": "success",
-    "scope": "one representative numerical identity per model only"
+    "scope": "representative physics-model checks; not independent 160 subpart verification"
   },
   "strong_model_duplicate_blockers": [
-    "M109",
     "M111",
     "M112",
     "M114",
-    "E109",
     "E110",
     "E111",
     "E113",
     "E114",
     "E115",
-    "T103",
     "T105",
     "T106",
     "T107",
     "T108",
-    "W102",
     "W106",
     "W107",
     "W108",
-    "O104",
     "O105",
     "O106",
     "O107",
-    "Q102",
     "Q103",
     "Q105",
     "Q106"
@@ -124,13 +118,19 @@
     "T104",
     "Q107"
   ],
-  "status": "REJECTED_DRAFT_PENDING_27_CORE_REWRITES_5_SIMILARITY_REVIEWS_160_SUBPART_TESTS",
+  "status": "REJECTED_DRAFT_PENDING_21_CORE_REWRITES_5_SIMILARITY_REVIEWS_160_SUBPART_TESTS",
   "replaced_pending_historical_rescreen": [
     "M113",
     "E112",
     "T102",
     "W104",
     "O103",
-    "Q104"
+    "Q104",
+    "M109",
+    "E109",
+    "T103",
+    "W102",
+    "O104",
+    "Q102"
   ]
 }
