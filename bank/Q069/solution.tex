@@ -1,0 +1,23 @@
+(1) 本征方程为
+\[
+-J(\psi_{n-1}+\psi_{n+1})+Fa\,n\psi_n=E\psi_n.
+\]
+设 \(E=mFa\)、\(z=2J/(Fa)\)，取 \(\psi_n=J_{n-m}(z)\)。由于Bessel递推
+\(J_{\nu-1}(z)+J_{\nu+1}(z)=2\nu J_\nu(z)/z\)，跃迁项正好等于 \(-Fa(n-m)\psi_n\)，与势能项相消得 \(\boxed{E_m=mFa}\)。强场 \(z\ll1\) 时 \(J_0(z)\simeq1\)、\(J_{\pm1}(z)\simeq\pm z/2\)，状态主要集中在中心 \(m\) 附近。
+
+(2) Bessel乘法生成函数或离散傅里叶正交性给
+\(\sum_{n\in\mathbb Z}J_{n-m}(z)J_{n-m'}(z)=\delta_{mm'}\)，完备关系亦然。因此这些是完备正交的纯点谱局域态，波函数可由离散能级叠加，理想单带且无耗散时不会无限加速。其局域性不是随机无序的Anderson机制，而是静态倾斜势引起的确定性能阶梯。
+
+(3) 所有能级差为整数倍 \(Fa\)，传播相位 \(e^{-imFa t/\hbar}\)，当
+\(\boxed{T_B=2\pi\hbar/(Fa)}\) 全部相位同时复现为1。对初始 \(|0\rangle\)，显式传播概率为
+\[
+P_n(t)=J_n^2\left(\frac{4J}{Fa}\sin\frac{Fa t}{2\hbar}\right).
+\]
+用 \(J_{-n}^2=J_n^2\) 得 \(\langle n\rangle=0\)，以及 \(\sum_n n^2J_n(z)^2=z^2/2\)，得
+\[
+\boxed{\langle n^2(t)\rangle=\frac12\left(\frac{4J}{Fa}\sin\frac{Fa t}{2\hbar}\right)^2}.
+\]
+故局域初态虽扩展，却每个Bloch周期严格回缩，无永久扩散。
+
+(4) 纯净单带色散 \(\varepsilon(k)=-2J\cos(ka)\)，群速度 \(v(k)=(2Ja/\hbar)\sin(ka)\)，外力为 \(-F\)，故 \(\hbar\dot k=-F\)。积分得到
+\(x(t)-x(0)=(2J/F)[\cos(k_0a-Fat/\hbar)-\cos(k_0a)]\)，最大峰峰幅度 \(4J/F\)，周期与上问相符。\(F\to0\) 时 \(T_B\to\infty\)，应在有限时间先展开余弦才恢复自由晶格传播；有限边界反射、跨带Landau–Zener跃迁以及相互作用均可能破坏严格周期复现。
