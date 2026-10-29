@@ -1,0 +1,7 @@
+(1) 取向下为正，Newton方程为 $m\dot v=mg_*-\beta v^2$。终端速度要求总力为零，故 $v_t=\sqrt{mg_*/\beta}$；该稳定平衡来自阻力强度随速度增加，前提是物体下落时速度非负。
+
+(2) 设 $\tau=v_t/g_*=\sqrt{m/(\beta g_*)}$，分离变量 $dv/(1-v^2/v_t^2)=g_*dt$。初速零给 $v(t)=v_t\tanh(t/\tau)$，再积分得 $y(t)=v_t\tau\ln\cosh(t/\tau)$；速度随时间单调趋于终端值。
+
+(3) 乘 $v$ 得 $d(mv^2/2)/dt=mg_*v-\beta v^3$，故热耗散率为 $\beta v^3\ge0$。下落到任意时刻时，浮力修正的重力势能释放为 $mg_*y$；累计散热 $Q=mg_*y-mv^2/2\ge0$，没有把热耗散错记为有用动能。
+
+(4) 消去时间并利用 $\tanh^2=1-\operatorname{sech}^2$，得 $v(H)^2=v_t^2[1-\exp(-2\beta H/m)]$。$H$ 很小时 $v^2\sim2g_*H$，大高度时趋 $v_t^2$。此模型只在可用二次阻力近似的流动Reynolds数范围有效，极低Re需改用线性Stokes阻力。
