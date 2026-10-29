@@ -1,0 +1,23 @@
+(1) 生成元 \(\mathcal L=D\partial_x^2\)。首达时间Dynkin公式给 \(Dm_1''=-1\)，吸收边界 \(m_1(0)=m_1(L)=0\)。积分得
+\[
+m_1(x)=\frac{x(L-x)}{2D},\qquad \max m_1=\frac{L^2}{8D}\quad(x=L/2).
+\]
+(2) Feynman--Kac后向边值问题为 \(DF_s''=sF_s,\ F_s(0)=F_s(L)=1\)。以中心对称性去掉奇双曲项：
+\[
+F_s(x)=\frac{\cosh(\sqrt{s/D}(x-L/2))}{\cosh(\sqrt{s/D}L/2)}.
+\]
+展开 \(\cosh z=1+z^2/2+O(z^4)\)，得 \(F_s=1-sx(L-x)/(2D)+O(s^2)\)，因此 \(-F_s'(0)=m_1\) 与第一问一致。
+(3) Dirichlet热核
+\[
+p(y,t|x)=\frac2L\sum_{n\ge1}\sin\frac{n\pi x}{L}\sin\frac{n\pi y}{L}e^{-Dn^2\pi^2t/L^2}.
+\]
+对 \(y\) 积分，仅奇数 \(n\) 留下：
+\[
+S(t|x)=\frac4\pi\sum_{\substack{n\ge1\\n\ {\rm odd}}}\frac{\sin(n\pi x/L)}n e^{-Dn^2\pi^2t/L^2}.
+\]
+非负随机变量尾积分恒等式给 \(E\tau=\int_0^\infty P(\tau>t)dt\)，与后向方程唯一解一致。长时尺度为 \(L^2/(\pi^2D)\)。
+(4) Dynkin递推 \(Dm_2''=-2m_1= -x(L-x)/D\)，边界仍为零。两次积分：
+\[
+m_2(x)=\frac{x^4-2Lx^3+L^3x}{12D^2}.
+\]
+中点 \(m_2=5L^4/(192D^2)\)，而 \(m_1^2=L^4/(64D^2)\)，故 \(\operatorname{Var}\tau=L^4/(96D^2)>0\)。\(D=k_BT/\zeta\) 的量纲为 \(L^2/t\)，平均首达时间随 \(T^{-1}\)、方差随 \(T^{-2}\) 缩放；要求摩擦为常数、温度均匀且惯性弛豫时间远短于首达时间。
