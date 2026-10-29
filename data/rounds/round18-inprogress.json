@@ -75,45 +75,41 @@
   "qualified_released_items": 0,
   "merge_allowed": false,
   "note": "40 new user-requested drafts separate from formal 50/200 admission policy; never auto-merge.",
-  "technical_status": "40 source entries and 40 representative physical checks pass CI #40882310594 at 49e520f. Independent full-main title/model audit flagged 33 strongly duplicated model cores, 5 further model-family overlaps. All collisions require complete model replacement or verified independent review. No formal admission.",
+  "technical_status": "40 authoritative new source triples and 160 solved parts exist. CI #40883463525 succeeded after six full physical-model replacements with 40 representative model-level checks. Historical main-catalog audit leaves 27 strong model overlap risks and 5 separate model-family reviews. 160 independent subpart checks, source mirrors, two XeLaTeX PDFs, expert review, and 50/200 formal admission policy remain unmet. NO MERGE.",
   "model_qa": {
     "status": "passed",
     "model_level_tests": 40,
-    "run_id": 40882310594,
-    "source_sha": "49e520f9f7e36d9af4a9a2dfdcc1ff2f12b6f11a"
+    "source_sha": "5c46f6a8b605bd218fb7ea3e07f0e4183d74d19c",
+    "run_id": 40883463525,
+    "conclusion": "success",
+    "scope": "one representative numerical identity per model only"
   },
   "strong_model_duplicate_blockers": [
     "M109",
     "M111",
     "M112",
-    "M113",
     "M114",
     "E109",
     "E110",
     "E111",
-    "E112",
     "E113",
     "E114",
     "E115",
-    "T102",
     "T103",
     "T105",
     "T106",
     "T107",
     "T108",
     "W102",
-    "W104",
     "W106",
     "W107",
     "W108",
-    "O103",
     "O104",
     "O105",
     "O106",
     "O107",
     "Q102",
     "Q103",
-    "Q104",
     "Q105",
     "Q106"
   ],
@@ -128,5 +124,13 @@
     "T104",
     "Q107"
   ],
-  "status": "REJECTED_DRAFT_PENDING_33_CORE_REWRITES_5_SIMILARITY_REVIEWS_160_SUBPART_TESTS"
+  "status": "REJECTED_DRAFT_PENDING_27_CORE_REWRITES_5_SIMILARITY_REVIEWS_160_SUBPART_TESTS",
+  "replaced_pending_historical_rescreen": [
+    "M113",
+    "E112",
+    "T102",
+    "W104",
+    "O103",
+    "Q104"
+  ]
 }
