@@ -1,11 +1,46 @@
-(1) 设 \(x=\mu B/(k_BT)\)，单自旋 \(z=2\cosh x\)，\(Z=z^N\)，
+(1) 球对称定常方程为 \(D(r^2 c')'=kr^2c\)。令 \(\lambda=\sqrt{k/D}\) 与 \(y=rc\)，得 \(y''-\lambda^2y=0\)。球心有限要求 \(y(0)=0\)，故 \(y=A\sinh(\lambda r)\)。由 \(c(R)=c_s\) 得
 \[
-F=-Nk_BT\ln(2\cosh x),\quad U=-N\mu B\tanh x,\quad M=-\left({\partial F\over\partial B}\right)_T=N\mu\tanh x .
+c_*(r)=c_s\,\frac{R}{r}\frac{\sinh(\lambda r)}{\sinh\phi},
+\qquad \phi=\lambda R,\qquad
+c_*(0)=c_s\frac{\phi}{\sinh\phi}.
 \]
-(2) 固定 \(B\) 有
+此解在 \(r=0\) 可解析延拓，且 \(0<c_*(r)\le c_s\)，体现内部反应与外表补给的竞争；当 \(k\to0\) 时恢复空间均匀浓度。
+
+(2) 表面外法向径向导数为 \(c_*'(R)=c_s R^{-1}(\phi\coth\phi-1)>0\)，外部朝球内的扩散补给率大小为
 \[
-C_B=\left({\partial U\over\partial T}\right)_B=Nk_Bx^2\operatorname{sech}^2x.
+J=4\pi R^2D c_*'(R)=4\pi RDc_s(\phi\coth\phi-1).
 \]
-\(x\to0\) 时 \(C_B\sim Nk_Bx^2\to0\)，\(x\to\infty\) 时指数趋零。微分 \(x^2\operatorname{sech}^2x\) 得峰值条件 \(x\tanh x=1\)，正根唯一，因为左侧随 \(x>0\) 严格递增。
-(3) \(S=-(\partial F/\partial T)_B=Nk_B[\ln(2\cosh x)-x\tanh x]\)。其对 \(x>0\) 的导数为 \(-Nk_Bx\operatorname{sech}^2x<0\)，所以固定熵必须固定 \(x\)，即 \(B/T\) 恒定，故 \(T_f=T_iB_f/B_i\)。
-(4) \(B=0\) 时有 \(2^N\) 个等能态，模型熵 \(S=Nk_B\ln2\)；不意味着真实宏观固体在任意低温仍保持这种独立、自旋完全简并假设。自旋相互作用、晶格耦合及内部场使理想绝热退磁不可能无限降温。\(x\ll1\) 时 \(M\simeq N\mu^2B/(k_BT)\)，\(\chi_T=\partial M/\partial B\simeq N\mu^2/(k_BT)\) 是Curie律。
+另一方面把定常方程在球内积分，由 Gauss 定理得 \(J=k\int c_*\,dV\)，这与直接对 \(4\pi k\int_0^R r^2c_*(r)dr\) 积分一致。于是
+\[
+\eta=\frac{3}{\phi^2}(\phi\coth\phi-1),\qquad 0<\eta<1.
+\]
+由 \(\coth\phi=\phi^{-1}+\phi/3-\phi^3/45+2\phi^5/945+\cdots\)，有
+\(\eta=1-\phi^2/15+2\phi^4/315+O(\phi^6)\)；大 \(\phi\) 时
+\(\eta=3/\phi-3/\phi^2+O(e^{-2\phi})\)。前者为反应限制，后者为表面薄层扩散限制。
+
+(3) 写 \(c=c_*+\delta c\)。由于边界浓度不变，\(\delta c(R,t)=0\)，球心正则。令 \(u=r\delta c\)，径向扩散项精确化为
+\[
+\partial_tu=D\partial_r^2u-ku,\qquad u(0,t)=u(R,t)=0.
+\]
+正弦本征函数 \(u_n(r)=\sin(n\pi r/R)\) 的衰减率为
+\(\Lambda_n=k+D n^2\pi^2/R^2\)。故
+\[
+\delta c(r,t)=\frac1r\sum_{n=1}^\infty A_n
+\sin\!\frac{n\pi r}{R}\,e^{-\Lambda_n t},\quad
+A_n=\frac2R\int_0^R r\,\delta c(r,0)\sin\!\frac{n\pi r}{R}dr.
+\]
+若首模投影非零，最慢时间 \(\tau=(k+D\pi^2/R^2)^{-1}\)：扩散主导时为 \(R^2/(\pi^2D)\)，反应主导时约为 \(1/k\)；后者并不表示稳态剖面均匀。
+
+(4) 以 \(\delta c\) 的方程乘 \(\delta c\) 并在球内积分，边界扰动为零，由分部积分得到严格等式
+\[
+\frac{d\mathcal L}{dt}
+=-D\int_{r<R}|\nabla\delta c|^2dV
+-k\int_{r<R}(\delta c)^2dV\le0.
+\]
+在球心正则、球面 Dirichlet 的径向函数空间，最小 Laplacian 本征值是 \(\pi^2/R^2\)，因此
+\(\mathcal L(t)\le\mathcal L(0)e^{-2(k+D\pi^2/R^2)t}\)；初始扰动恰为首模时取等号。原始非稳态的完整物质守恒式为
+\[
+\frac{d}{dt}\int_{r<R}c\,dV
+=4\pi R^2D\,\partial_rc(R,t)-k\int_{r<R}c\,dV.
+\]
+仅在稳态（或积分库存瞬时不变）时，表面补给 \(J(t)\) 才等于体积反应消耗；这同时独立核查了第二问的符号和系数。

@@ -1,26 +1,55 @@
-(1) 取 \(H=H_x(z,t)\boldsymbol e_x\)，则 Ampere 定律 \(\nabla\times H=J=\sigma E\) 给 \(J_y=\partial_zH_x\)，\(E_y=\partial_zH_x/\sigma\)。Faraday 定律 \((\nabla\times E)_x=-\partial_zE_y=-\mu\partial_tH_x\)，所以
+(1) 对每支 \(\sigma=\pm1\) 定义平衡速度 \(u_\sigma=\sigma v_0\)、平衡密度 \(n_b=n_0/2\)；电子电荷 \(-e\)，其中 \(e>0\)。线性连续性与动量方程为
 \[
-\partial_tH_x={1\over\mu\sigma}\partial_z^2H_x.
+(\partial_t+u_\sigma\partial_x)\delta n_\sigma+n_b\partial_x\delta v_\sigma=0,\qquad
+(\partial_t+u_\sigma\partial_x)\delta v_\sigma=-\frac{e}{m}E .
 \]
-(2) 令 \(H_x(z,t)=\Re[\mathcal H(z)e^{i\omega t}]\)，则 \(\mathcal H''=i\mu\sigma\omega\mathcal H\)；衰减根 \(\gamma=(1+i)/\delta,\quad\delta=\sqrt{2/(\mu\sigma\omega)}\)，因此
+代入约定的时间空间谐波，得到
 \[
-\mathcal H=H_0e^{-(1+i)z/\delta},\quad
-\mathcal J_y=-\gamma H_0e^{-\gamma z}.
+\widehat{\delta v_\sigma}=-\frac{ie\widehat E}{m(\omega-ku_\sigma)},\qquad
+\widehat{\delta n_\sigma}=-\frac{ike n_b\widehat E}{m(\omega-ku_\sigma)^2}.
 \]
-量纲 \(\mu\sigma\omega\) 为 \(1/\mathrm{length}^2\)，频率升高皮肤层变薄。
-(3) 平均单位体积耗散 \(j^2/(2\sigma)\)，积分
+Poisson 方程 \(ik\widehat E=-e(\widehat{\delta n_+}+\widehat{\delta n_-})/\epsilon_0\) 在 \(\widehat E\ne0\) 下给出
 \[
-\langle P\rangle/A=\int_0^\infty {|\mathcal J_y|^2\over2\sigma}dz
-={|H_0|^2|\gamma|^2\over2\sigma}{\delta\over2}
-={|H_0|^2\over2\sigma\delta}.
+1-\frac{\omega_p^2}{2}\left[\frac1{(\omega-a)^2}+\frac1{(\omega+a)^2}\right]=0.
 \]
-表面 \(\mathcal E_y=-\gamma H_0/\sigma\)。由于场由z=0流向正z，\((E_y\boldsymbol e_y)\times(H_x\boldsymbol e_x)=-E_yH_x\boldsymbol e_z\)，输入通量
+该式要求 \(\omega\ne\pm a\)，对应无压冷流的共振奇点；不可把乘分母后的多项式所有零点一律认作本征模。
+
+(2) 合并分式得 \((\omega^2-a^2)^2-\omega_p^2(\omega^2+a^2)=0\)。即
 \[
-\langle S_z\rangle=-\tfrac12\Re(\mathcal E_yH_0^*)={|H_0|^2\over2\sigma\delta},
+X^2-(2a^2+\omega_p^2)X+a^2(a^2-\omega_p^2)=0,\quad
+X_\pm=a^2+\frac{\omega_p^2}{2}\pm
+\frac{\omega_p}{2}\sqrt{\omega_p^2+8a^2}.
 \]
-完全相同。
-(4) 为使表面阻抗正实部，定义沿输入功率方向的切向驱动电场 \(E_t=-E_y\)，于是
+显然 \(X_+>0\)，且当且仅当 \(0<a<\omega_p\) 时 \(X_-<0\)，此时 \(\omega=\pm i\gamma\)，一支增长、一支衰减；当 \(a>\omega_p\) 两支均给稳定实频率。在 \(a=\omega_p\) 处 \(X_-=0\) 为稳定边界。特别 \(a=0\) 原式为 \(1-\omega_p^2/\omega^2=0\)，只有 \(\omega=\pm\omega_p\)；多项式额外引入的 \(X=0\) 是赝根，并不是物理静电波。
+
+(3) 在不稳定区间，增长率为
 \[
-Z_s={E_t\over H_x}={1+i\over\sigma\delta},\quad \Re Z_s={1\over\sigma\delta}>0.
+\gamma^2(a)=\frac{\omega_p}{2}\sqrt{\omega_p^2+8a^2}
+-a^2-\frac{\omega_p^2}{2}.
 \]
-若直接按题中原坐标定义 \(E_y/H_x\)，则为负值 \(-Z_s\)，它只是法线和切向基矢取向问题。假设良导体 \(\sigma\gg\omega\epsilon\)，且介质在皮肤深度上均匀，半空间厚度远大于 \(\delta\)；极低频时有限样品几何重要，不能把半空间模型无条件外推至直流。
+令 \(z=a^2\)，则 \(d\gamma^2/dz=2\omega_p/\sqrt{\omega_p^2+8z}-1\)，二阶导数
+\(-8\omega_p/(\omega_p^2+8z)^{3/2}<0\)。因此唯一内部最大值在
+\(z=3\omega_p^2/8\)，对应
+\[
+k_{\max}=\sqrt{\frac38}\frac{\omega_p}{v_0},\qquad
+\gamma_{\max}=\frac{\omega_p}{2\sqrt2}.
+\]
+两端点增长率均为零，与极大值位置及稳定区间相符；只求使 \(\gamma\) 增大的群速而不验证根号分支将错误地漏掉这一不稳定性。
+
+(4) 若 \(0<a\ll\omega_p\)，利用
+\(\sqrt{1+8a^2/\omega_p^2}=1+4a^2/\omega_p^2-8a^4/\omega_p^4+\cdots\)，得到
+\(\gamma=a[1-2a^2/\omega_p^2+O(a^4/\omega_p^4)]\)。
+若 \(a\gg\omega_p\)，有
+\[
+\omega_{\pm,\mathrm{positive}}=
+a\pm\frac{\omega_p}{\sqrt2}+O(\omega_p^2/a),
+\]
+对应随束流漂移的两支稳定波（两种正负频率另由时间反演给出）。令
+\(W=\epsilon_0E^2/2+\sum_\sigma mn_b(\delta v_\sigma)^2/2\)，将线性动量方程分别乘以 \(mn_b\delta v_\sigma\)，并与纵向 Maxwell–Ampere 式
+\(\epsilon_0\partial_tE=e\sum_\sigma(n_b\delta v_\sigma+u_\sigma\delta n_\sigma)\)
+相加，精确获得
+\[
+\partial_tW+\partial_x\sum_\sigma\frac{mn_bu_\sigma}{2}(\delta v_\sigma)^2
+=eE\sum_\sigma u_\sigma\delta n_\sigma.
+\]
+右侧是扰动与背景有向流交换能量的项；仅靠上式的正定平方项并非完整的非线性能量。若背景束流允许反作用，其二阶平均流能变化补偿该交换，全系统能量仍守恒。热速度、碰撞、有限束宽和动力学 Landau 共振均不包含在此冷且无界的理想化模型中。
