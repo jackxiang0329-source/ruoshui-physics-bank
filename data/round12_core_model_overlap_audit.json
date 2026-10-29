@@ -50,7 +50,7 @@
       ]
     }
   ],
-  "disposition": "Historical overlap replacements remain resolved. E062 screened against Drude Hall transport E022, classical polarization E040, magnetoplasma Faraday E061 and integer quantum Hall Q031; 21/50, independent review pending.",
+  "disposition": "Historical overlaps remain resolved. T059 screened against T030/T047/T055/T058/E022: reciprocal thermoelectric two-current transport is distinct from finite-time heat-engine and stochastic ring models. 22/50; independent review pending.",
   "independent_expert_review": "待独立复核",
   "new_draft_model_screening": [
     {
@@ -124,6 +124,19 @@
       ],
       "core_model": "2D dissipative and Hall surface-conductivity Maxwell boundary scattering, reflection-transmission Jones matrices, exact passivity optimum and asymmetric dielectric substrate Faraday rotation",
       "difference": "E022 is bulk Drude Hall bar with open-circuit transport, E040 treats free-space Stokes parameters, E061 propagating bulk magnetoplasma eigenmodes, and Q031 Landau-level quantized DC Hall conductance. None derives radiative boundary jumps, sheet absorption optimum or substrate scattering.",
+      "resolution_status": "screened_distinct_pending_independent_review"
+    },
+    {
+      "draft_id": "T059",
+      "compared_existing_ids": [
+        "T030",
+        "T047",
+        "T055",
+        "T058",
+        "E022"
+      ],
+      "core_model": "Onsager-symmetric two-current thermoelectric generator with coupled charge/heat flux, determinant positivity, load-optimized power versus efficiency, Seebeck-Peltier Kelvin reciprocity and thermal leakage figure of merit ZT",
+      "difference": "T030/T055 optimize finite-rate heat-exchanger temperature drops, T047 is a Jarzynski Brownian work protocol, T058 is a three-state stochastic ring current fluctuation model, E022 is a bulk Drude Hall bar. None uses reciprocal thermoelectric cross coefficients, the Onsager determinant or electrical load impedance to derive the ZT efficiency frontier.",
       "resolution_status": "screened_distinct_pending_independent_review"
     }
   ]

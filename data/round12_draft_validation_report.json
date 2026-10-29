@@ -1,7 +1,7 @@
 {
   "status": "draft-only",
-  "new_problem_count": 21,
-  "passed_count": 84,
+  "new_problem_count": 22,
+  "passed_count": 88,
   "tests": [
     {
       "id": "M059",
@@ -590,6 +590,34 @@
       "method": "substrate_fresnel_and_quantized_hall",
       "name": "asymmetric dielectric Hall sheet obeys exact boundary and flux conservation, vacuum limit matches free sheet",
       "passed": true
+    },
+    {
+      "id": "T059",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Onsager positive definite entropy production equals completed-square dissipation plus strictly positive thermal leak",
+      "passed": true
+    },
+    {
+      "id": "T059",
+      "part": 2,
+      "method": "conservation",
+      "name": "Generator load yields nonnegative entropy and exact linear-response Carnot exergy balance",
+      "passed": true
+    },
+    {
+      "id": "T059",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "Independent differentiation gives unique maximum efficiency load and distinct matched maximum power",
+      "passed": true
+    },
+    {
+      "id": "T059",
+      "part": 4,
+      "method": "dimensions",
+      "name": "Physical Seebeck Peltier heat and charge laws reconstruct symmetric Onsager matrix with correct determinant and ZT",
+      "passed": true
     }
   ],
   "independent_expert_review": "pending",
@@ -718,6 +746,12 @@
       "id": "E062",
       "method": "independent_high_precision_boundary_flux",
       "name": "50 digit Hall sheet boundary residuals, Joule flux balance and asymmetric substrate Poynting conservation",
+      "passed": true
+    },
+    {
+      "id": "T059",
+      "method": "independent_high_precision_thermoelectric_leg",
+      "name": "50 digit independent physical-leg power heat and entropy balances plus numerical optimum efficiency",
       "passed": true
     }
   ]

@@ -738,12 +738,72 @@ assert abs(n2v062/n1v062*(ex2062**2+ey2062**2)+
 supplemental.append(dict(id='E062',method='independent_high_precision_boundary_flux',
                          name='50 digit Hall sheet boundary residuals, Joule flux balance and asymmetric substrate Poynting conservation',passed=True))
 
-assert len(checks)==84 and len(set((v['id'],v['part']) for v in checks))==84
+
+# T059: thermoelectric Onsager engine, distinct from finite-time heat-engine models.
+L11059,L12059,L22059,X1059,X2059=s.symbols('L11059 L12059 L22059 X1059 X2059',real=True)
+x059,z059=s.symbols('x059 z059',real=True)
+sig059=L11059*X1059**2+2*L12059*X1059*X2059+L22059*X2059**2
+square059=L11059*(X1059+L12059*X2059/L11059)**2+(L22059-L12059**2/L11059)*X2059**2
+record('T059',1,'symbolic',
+       'Onsager positive definite entropy production equals completed-square dissipation plus strictly positive thermal leak',
+       eq(sig059,square059) and eq(L11059*L22059-L12059**2,L11059*(L22059-L12059**2/L11059)))
+load059=-x059*L12059/L11059*X2059
+I059=L11059*load059+L12059*X2059
+Q059=L12059*load059+L22059*X2059
+P059=-s.Symbol('Temp059',positive=True)*load059*I059
+sigma059=load059*I059+X2059*Q059
+record('T059',2,'conservation',
+       'Generator load yields nonnegative entropy and exact linear-response Carnot exergy balance',
+       eq(I059,L12059*X2059*(1-x059))
+       and eq(Q059,L22059*X2059*(1-(L12059**2/(L11059*L22059))*x059))
+       and eq(sigma059,X2059**2*(L22059-L12059**2/L11059+(L12059**2/L11059)*(1-x059)**2))
+       and eq(s.Symbol('Temp059',positive=True)*X2059*Q059-P059,s.Symbol('Temp059',positive=True)*sigma059))
+eta059=z059*x059*(1-x059)/(1-z059*x059)
+star059=1/(1+s.sqrt(1-z059))
+record('T059',3,'independent_derivation',
+       'Independent differentiation gives unique maximum efficiency load and distinct matched maximum power',
+       eq(s.diff(eta059,x059),z059*(1-2*x059+z059*x059**2)/(1-z059*x059)**2)
+       and eq(s.diff(eta059,x059).subs(x059,star059))
+       and eq(eta059.subs(x059,star059),(1-s.sqrt(1-z059))/(1+s.sqrt(1-z059)))
+       and eq(eta059.subs(x059,s.Rational(1,2)),z059/(4-2*z059)))
+G059,S059,K059,T059,DT059,V059=s.symbols('G059 S059 K059 T059 DT059 V059',positive=True)
+L11p059=G059*T059
+L12p059=G059*S059*T059**2
+L22p059=G059*S059**2*T059**3+K059*T059**2
+ip059=G059*(S059*DT059-V059)
+qp059=S059*T059*ip059+K059*DT059
+record('T059',4,'dimensions',
+       'Physical Seebeck Peltier heat and charge laws reconstruct symmetric Onsager matrix with correct determinant and ZT',
+       eq(L11p059*L22p059-L12p059**2,G059*K059*T059**3)
+       and eq(L12p059**2/(L11p059*L22p059),G059*S059**2*T059/(G059*S059**2*T059+K059))
+       and eq(-ip059*V059/T059+qp059*DT059/T059**2,
+              G059*(S059*DT059-V059)**2/T059+K059*DT059**2/T059**2))
+mp.mp.dps=50
+gn059=mp.mpf('10');sn059=mp.mpf('0.0005');kn059=mp.mpf('0.001')
+tn059=mp.mpf('300');dn059=mp.mpf('4');xn059=mp.mpf('0.37')
+zn059=gn059*sn059**2*tn059/(gn059*sn059**2*tn059+kn059)
+vn059=xn059*sn059*dn059
+in059=gn059*(sn059*dn059-vn059)
+qn059=sn059*tn059*in059+kn059*dn059
+pn059=vn059*in059
+entropy059=-in059*vn059/tn059+qn059*dn059/tn059**2
+assert abs(entropy059-(gn059*(sn059*dn059-vn059)**2/tn059+
+                       kn059*dn059**2/tn059**2))<mp.mpf('1e-45')
+assert abs(pn059/(qn059*dn059/tn059)-
+           zn059*xn059*(1-xn059)/(1-zn059*xn059))<mp.mpf('1e-45')
+opt059=1/(1+mp.sqrt(1-zn059))
+fun059=lambda xx:zn059*xx*(1-xx)/(1-zn059*xx)
+assert abs(mp.diff(fun059,opt059))<mp.mpf('1e-45')
+assert abs(fun059(opt059)-(1-mp.sqrt(1-zn059))/(1+mp.sqrt(1-zn059)))<mp.mpf('1e-45')
+supplemental.append(dict(id='T059',method='independent_high_precision_thermoelectric_leg',
+                         name='50 digit independent physical-leg power heat and entropy balances plus numerical optimum efficiency',passed=True))
+
+assert len(checks)==88 and len(set((v['id'],v['part']) for v in checks))==88
 assert len(set(v['method'] for v in checks if v['id']=='W058'))>=2
 assert len(set(v['method'] for v in checks if v['id']=='Q059'))>=2
-assert len(supplemental)==21
+assert len(supplemental)==22
 
-result={'status':'draft-only','new_problem_count':21,'passed_count':len(checks),'tests':checks,'independent_expert_review':'pending','supplemental_numeric_checks':supplemental}
+result={'status':'draft-only','new_problem_count':22,'passed_count':len(checks),'tests':checks,'independent_expert_review':'pending','supplemental_numeric_checks':supplemental}
 path=Path(__file__).resolve().parents[1]/'data/round12_draft_validation_report.json'
 path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
 print(json.dumps({'status':result['status'],'checked_subparts':len(checks)},ensure_ascii=False))
