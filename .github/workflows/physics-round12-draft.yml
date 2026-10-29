@@ -27,6 +27,10 @@ jobs:
         run: python scripts/check_round12_draft.py
       - name: Confirm draft QA report is reproducible
         run: git diff --exit-code -- data/round12_draft_validation_report.json
+      - name: Verify next four advanced models and their 16 independent mathematical subparts
+        run: python scripts/check_round12_continuation.py
+      - name: Confirm reproducible 16-item continuation report
+        run: git diff --exit-code -- data/round12_continuation_validation_report.json
       - name: Verify synchronized canonical TeX and CSV
         run: python scripts/build.py --check
       - name: Compile draft question and solution PDF previews
