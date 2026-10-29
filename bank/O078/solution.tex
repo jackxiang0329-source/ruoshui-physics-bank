@@ -1,0 +1,30 @@
+(1) 非相对论电子受迫加速度 \(\boldsymbol a(t)=-e\boldsymbol E(t)/m\)，远场辐射沿 \(\boldsymbol n\) 的振幅正比 \(\boldsymbol n\times(\boldsymbol n\times\boldsymbol a)\)。其平方投影因子为 \(|\boldsymbol e|^2-|\boldsymbol n\cdot\boldsymbol e|^2\)。以入射能流密度 \(I_0=\frac12\varepsilon_0cE_0^2\) 归一化Larmor角功率，得到
+\[
+\frac{d\sigma(\boldsymbol e)}{d\Omega}
+=r_e^2[1-(\boldsymbol n\cdot\boldsymbol e)^2].
+\]
+(2) \(\boldsymbol e_x=(1,0,0)\) 在散射平面内，\(\boldsymbol e_y=(0,1,0)\) 垂直散射平面。故
+\[
+\frac{d\sigma_x}{d\Omega}=r_e^2\cos^2\theta,\qquad
+\frac{d\sigma_y}{d\Omega}=r_e^2.
+\]
+不偏振为两者等概率混合：
+\[
+\frac{d\sigma}{d\Omega}=\tfrac12r_e^2(1+\cos^2\theta).
+\]
+实积分
+\[
+\sigma_T=2\pi\frac{r_e^2}{2}\int_0^\pi(1+\cos^2\theta)\sin\theta\,d\theta
+=\pi r_e^2\int_{-1}^{1}(1+u^2)\,du=\frac{8\pi}{3}r_e^2.
+\]
+(3) 两正交散射偏振强度分别正比 \(I_\perp=r_e^2\)、\(I_\parallel=r_e^2\cos^2\theta\)，故
+\[
+\Pi(\theta)=\frac{I_\perp-I_\parallel}{I_\perp+I_\parallel}
+=\frac{\sin^2\theta}{1+\cos^2\theta}.
+\]
+前向及后向 \(\Pi=0\)，侧向 \(\theta=\pi/2\) 有 \(I_\parallel=0\)、\(\Pi=1\)，即由横向辐射投影对散射平面内分量的抑制产生完全偏振。
+(4) 散射总功率 \(P_{\rm sc}=I_0\sigma_T\)。每单位时间传播方向 \(z\) 的入射动量流为 \(P_{\rm sc}/c\)，散射光回送到任意角度的纵向动量需扣除 \((I_0/c)\int \cos\theta\,d\sigma\)。由于 \(\cos\theta(1+\cos^2\theta)\) 在 \([-1,1]\) 上为奇函数，该积分为零，故
+\[
+F_z=\frac{I_0\sigma_T}{c}.
+\]
+\([I_0\sigma_T/c]=({\rm W})/({\rm m\,s^{-1}})={\rm N}\)。模型要求 \(\hbar\omega\ll mc^2\)、电子振速远低于光速、束强不过高，并忽略辐射反作用对瞬时轨道的高阶修正；高光子能量时需用能量依赖的Klein--Nishina截面及电子反冲。

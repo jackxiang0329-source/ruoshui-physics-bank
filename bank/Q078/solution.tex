@@ -1,0 +1,30 @@
+(1) 用玻色产生湮灭算符 \(\langle20|a_1^\dagger a_2|11\rangle=\sqrt2\) 等矩阵元，得
+\[
+H=\begin{pmatrix}U&-\sqrt2J&0\\-\sqrt2J&0&-\sqrt2J\\0&-\sqrt2J&U\end{pmatrix}.
+\]
+反对称态 \(|A\rangle=(|20\rangle-|02\rangle)/\sqrt2\) 为本征态，能量 \(E_A=U\)。对称双占据 \(|S\rangle=(|20\rangle+|02\rangle)/\sqrt2\) 与 \(|11\rangle\) 的子块为
+\[
+H_{\rm even}=\begin{pmatrix}U&-2J\\-2J&0\end{pmatrix},
+\quad E_\pm=\frac{U\pm\Delta}{2},\quad \Delta=\sqrt{U^2+16J^2}.
+\]
+(2) 初态没有反对称态分量。对称子块可写成 \(H_{\rm even}=UI/2+(U/2)\sigma_z-2J\sigma_x\)。标准两态传播给
+\[
+P_{\rm double}(t)=|\langle S|e^{-iHt/\hbar}|11\rangle|^2
+=\frac{16J^2}{\Delta^2}\sin^2\frac{\Delta t}{2\hbar}.
+\]
+交换对称保证 \(\langle n_1\rangle=\langle n_2\rangle=1\) 在任何时刻均成立，虽然双占据几率变化。\(U=0\) 时 \(P_{\rm double}=\sin^2(2Jt/\hbar)\)，\(U\gg J\) 时最大双占据率 \(\simeq16J^2/U^2\)，频率 \(\Delta/\hbar\)。
+(3) \(U>0\) 下最低本征值
+\[
+E_-=\frac{U-\sqrt{U^2+16J^2}}2=-\frac{4J^2}{U}+O(J^4/U^3).
+\]
+从 \(|11\rangle\) 经两条虚跃迁到 \(|20\rangle\)、\(|02\rangle\)，各矩阵元为 \(-\sqrt2J\)，能量分母都是 \(-U\)。非简并二阶微扰给 \(\delta E^{(2)}=2(2J^2)/(-U)=-4J^2/U\)，独立符合精确展开。排斥相互作用使真实双占据稀少却不阻止虚跃迁降低能量。
+(4) 对 \(U\ge0\)，归一化基态可写为 \(a|11\rangle+b|S\rangle\)，其中
+\[
+a^2=\frac12(1+U/\Delta),\quad b^2=\frac12(1-U/\Delta),\quad a^2+b^2=1.
+\]
+在站点粒子数基 \(|0\rangle,|1\rangle,|2\rangle\) 下迹去站点2，由于三个站点2态粒子数不同，得到
+\[
+\rho_1=\mathrm{diag}(b^2/2,a^2,b^2/2),\quad
+S_1=-k_B\left[a^2\ln a^2+b^2\ln(b^2/2)\right].
+\]
+当 \(U=0\)，\(a^2=b^2=1/2\)，所以 \(S_1=(3/2)k_B\ln2\)；当 \(U/J\to\infty\)，\(a^2\to1\)，\(S_1\to0\)。这是两个站点模式间的纠缠熵，不应把不可区别玻色子错误标号后直接当作两独立粒子纠缠。
