@@ -1,0 +1,24 @@
+(1) 电化学平衡给 \(n_\pm=n_\infty e^{\mp e\phi/(k_BT)}\)，体电荷密度 \(\rho_e=e(n_+-n_-)=-2en_\infty\sinh(e\phi/k_BT)\)，所以
+\[
+\phi''={2en_\infty\over\epsilon}\sinh(e\phi/k_BT),\quad
+\kappa^2={2e^2n_\infty\over\epsilon k_BT}.
+\]
+弱势满足 \(\phi''=\kappa^2\phi\)，Debye长度为 \(\lambda_D=1/\kappa\)。
+(2) 乘 \(\phi'\) 并使用 \(\phi,\phi'\to0\)（\(x\to\infty\)）积分，得
+\[
+(\phi')^2={4n_\infty k_BT\over\epsilon}
+[\cosh(e\phi/k_BT)-1]
+={8n_\infty k_BT\over\epsilon}\sinh^2(e\phi/(2k_BT)).
+\]
+选择衰减支 \(\phi'=-(2\kappa k_BT/e)\sinh(e\phi/(2k_BT))\)，积分得
+\[
+\tanh[e\phi(x)/(4k_BT)]=\tanh[e\phi_0/(4k_BT)]e^{-\kappa x},
+\quad E=-\phi'.
+\]
+(3) 电极表面自由电荷由边界法向通量 \(\sigma_s=\epsilon E(0^+)\) 给
+\[
+\sigma_s={2\epsilon\kappa k_BT\over e}\sinh(e\phi_0/(2k_BT)),\quad
+C_\mathrm{diff}={d\sigma_s\over d\phi_0}=\epsilon\kappa\cosh(e\phi_0/(2k_BT)).
+\]
+弱势 \(\sigma_s\sim\epsilon\kappa\phi_0\)、\(C_\mathrm{diff}\to\epsilon\kappa\)。
+(4) 超额局部理想渗透压 \(k_BT(n_++n_--2n_\infty)=2n_\infty k_BT[\cosh(e\phi/k_BT)-1]\)，由第一积分恰为 \(\epsilon E^2/2\)。正反离子积聚压力与电场应力相平衡。高浓度排斥体积、强电荷关联、电介质饱和与有限电极尺寸均违反点离子平均场假定。

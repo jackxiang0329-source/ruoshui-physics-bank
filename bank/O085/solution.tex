@@ -1,0 +1,18 @@
+(1) 设 \(m=n_2/n_1<1\)，\(\theta>\theta_c=\arcsin m\)。切向波数 \(k_x=k_1\sin\theta\) 守恒，透射侧法向波矢为 \(k_{z2}=i\alpha\)，其中
+\[
+\alpha=k_1\sqrt{\sin^2\theta-m^2}>0,\quad k_{z1}=k_1\cos\theta.
+\]
+TE边界条件给 \(r_s=(k_{z1}-i\alpha)/(k_{z1}+i\alpha)\)。
+(2) 分子分母互为复共轭，故 \(|r_s|=1\)，
+\[
+\phi_s=-2\arctan\left({\sqrt{\sin^2\theta-m^2}\over\cos\theta}\right).
+\]
+微分得到 \(d\phi_s/d\theta=-2\sin\theta/\sqrt{\sin^2\theta-m^2}\)，因为反正切微分中的 \(1-m^2\) 约去。
+(3) \(dk_x/d\theta=k_1\cos\theta\)，故
+\[
+D=-{d\phi_s\over dk_x}
+={2\tan\theta\over k_1\sqrt{\sin^2\theta-m^2}}
+={2\tan\theta\over\alpha}.
+\]
+临界角附近 \(\alpha\to0\) 的形式发散被有限角谱与非驻相近似修正；掠入射时 \(dk_x/d\theta\to0\)，窄角谱和有限束宽边界同样重要。
+(4) 第二侧场在z>0为 \(E_2(z)\propto e^{-\alpha z}\)，振幅穿透长度 \(1/\alpha\)、能量密度衰减长度 \(1/(2\alpha)\)，一般有横向能流但无净法向平均传输。吸收层会使 \(|r_s|<1\)，有限光束会使相位斜率之外的振幅滤波也影响中心偏移。

@@ -1,0 +1,13 @@
+(1) 取体坐标 \(\boldsymbol e_1\) 沿刀刃，\(\boldsymbol e_2\) 横向，质心位置 \(\boldsymbol r_G=\boldsymbol r_C+a\boldsymbol e_1\)，速度 \(\boldsymbol v_G=u\boldsymbol e_1+a\omega\boldsymbol e_2\)。刀刃横向速度为零。对质心平动和转动方程消去接触点横向约束力，得到著名的非完整约化方程
+\[
+\dot u=a\omega^2,\qquad \dot\omega=-{ma\over I+ma^2}u\omega.
+\]
+(2) 设 \(J=I+ma^2\)，则 \(E=(mu^2+J\omega^2)/2\) 的导数为
+\(mua\omega^2+J\omega[-(ma/J)u\omega]=0\)。令 \(U=\sqrt{u_0^2+(J/m)\omega_0^2}\)，并设 \(\lambda=maU/J>0\)。解
+\[
+u(t)=U\tanh(\lambda t+C),\quad
+\omega(t)=\operatorname{sgn}(\omega_0)U\sqrt{m/J}\operatorname{sech}(\lambda t+C),
+\]
+其中 \(C=\operatorname{artanh}(u_0/U)\)。在 \(\omega_0\ne0\) 情形 \(|u_0|<U\) 保证C有限。
+(3) \(t\to+\infty\) 时 \(u\to U\)，\(\omega\sim2\operatorname{sgn}(\omega_0)U\sqrt{m/J}e^{-\lambda t-C}\)；向后时间 \(u\to-U\)。向前直行是吸引的速度状态而没有耗散：约束把角运动转入平动。若恰 \(\omega=0\)，则任何常数u均为直行解，负速度分支对微小转动扰动不稳定。
+(4) 约束接触点法向力垂直其许可速度，所以瞬时功为零，证实E守恒。\(a\to0\) 时 \(\dot u=\dot\omega=0\)；\(I\to\infty\) 在固定有限初始角速下转动响应变慢。模型假定刀刃严格禁止侧滑、平面刚性且无滚阻，一旦允许侧滑会出现附加自由度与耗散。

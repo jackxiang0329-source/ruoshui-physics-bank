@@ -1,0 +1,28 @@
+(1) Heisenberg方程给 \(\dot x=p/m,\ \dot p=-m\omega_0^2x+F(t)\)。初态 \(\langle x\rangle=\langle p\rangle=0\)，所以
+\[
+x_c(t)={1\over m\omega_0}\int_0^tF(s)\sin[\omega_0(t-s)]ds,\quad p_c=m\dot x_c.
+\]
+(2) 线性力只使基态相干位移，方差保持基态值。相对未受力 \(H_0\) 的平均激发数
+\[
+\bar n={1\over\hbar\omega_0}\left({p_c^2\over2m}+{m\omega_0^2x_c^2\over2}\right)
+={1\over2m\hbar\omega_0}\left|\int_0^tF(s)e^{i\omega_0s}ds\right|^2 .
+\]
+这是量子相干态的Poisson平均数，量纲无量纲。
+(3) \(\Omega\ne\omega_0\) 时经典响应
+\[
+x_c(t)={F_0\over m(\omega_0^2-\Omega^2)}
+[\cos\Omega t-\cos\omega_0t].
+\]
+\(\Omega\to\omega_0\) 时应用L'Hôpital法则得
+\[
+x_c(t)={F_0t\over2m\omega_0}\sin\omega_0t.
+\]
+共振积分 \(\int_0^tF_0\cos(\omega_0s)e^{i\omega_0s}ds
+=\frac{F_0t}{2}+\frac{F_0(e^{2i\omega_0t}-1)}{4i\omega_0}\)，长时首项给
+\(\bar n(t)\sim F_0^2t^2/(8m\hbar\omega_0)\) 加相对低阶振荡修正。
+(4) \(H(t)=H_0-F(t)x\) 显含时间，故
+\[
+{d\langle H\rangle\over dt}=\left\langle{\partial H\over\partial t}\right\rangle
+=-\dot F(t)x_c(t),
+\]
+因 \(\langle[H,H]\rangle=0\)。驱动由外源改变势能，故此式是控制参数做功而非单纯 \(F\dot x\) 的瞬时定义；两者相差总导数 \(d(Fx_c)/dt\)。\(F_0\to0\) 时 \(\bar n\to0\)，驱动关断后 \(H_0\) 定常，能量保持。

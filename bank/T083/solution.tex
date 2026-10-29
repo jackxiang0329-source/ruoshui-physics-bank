@@ -1,0 +1,22 @@
+(1) 每面积每自旋态密度为 \(m/(2\pi\hbar^2)\)，所以总态密度常数 \(D=g_sAm/(2\pi\hbar^2)\)（量纲为能量倒数）。用Fermi函数积分得
+\[
+N=Dk_BT\ln(1+e^{\mu/(k_BT)}),\quad
+\mu=k_BT\ln[\exp(N/(Dk_BT))-1].
+\]
+设 \(\epsilon_F=N/D,\ T_F=\epsilon_F/k_B\)。
+(2) 零温占据0至 \(\epsilon_F\)，于是 \(N=D\epsilon_F\)、\(U_0=D\epsilon_F^2/2=N\epsilon_F/2\)。对二维自由非相对论气体的动力学压力 \(P=\frac1{2A}\sum_i\boldsymbol p_i\cdot\boldsymbol v_i\)，其中 \(\boldsymbol p\cdot\boldsymbol v=2\epsilon\)，得到 \(P=U/A\)。零温 \(P_0=N^2/(2DA)\)。
+(3) 能量
+\[
+U=D(k_BT)^2[-\operatorname{Li}_2(-e^{\mu/(k_BT)})].
+\]
+因常态密度，固定N时 \(\mu=\epsilon_F+k_BT\ln(1-e^{-\epsilon_F/(k_BT)})\)，偏离 \(\epsilon_F\) 指数小。Sommerfeld展开得
+\[
+U={N^2\over2D}+{\pi^2\over6}D(k_BT)^2+O(e^{-T_F/T}\times\mathrm{poly}(T)),
+\quad
+C_N={\pi^2\over3}Dk_B^2T+\text{指数小项}.
+\]
+(4) 当 \(N/(Dk_BT)\ll1\)，\(e^{\mu/(k_BT)}\simeq N/(Dk_BT)\)，故
+\[
+\mu\simeq k_BT\ln[N/(Dk_BT)],\quad U\simeq Nk_BT,\quad P\simeq Nk_BT/A.
+\]
+低温 \(C_N\to0\)。以上忽略相互作用、离散能级及真正二维材料的能带非抛物线效应。
