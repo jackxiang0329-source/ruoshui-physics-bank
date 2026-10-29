@@ -50,7 +50,7 @@
       ]
     }
   ],
-  "disposition": "Historical duplicate core models M060/O057/Q057 replaced; W059 and O060 and new M063/T060/Q061 screened for different governing equations and invariants. 27/50 Draft; all pending independent human review.",
+  "disposition": "Draft 30/50 screened for previous duplicate core models; all remain pending independent human review.",
   "independent_expert_review": "待独立复核",
   "new_draft_model_screening": [
     {
@@ -200,6 +200,42 @@
       ],
       "core_model": "Gain-loss PT-symmetric non-Hermitian two-mode exceptional point with nonunitary Jordan propagation, pseudo-Hermitian positive metric, and square-root eigenvalue sensitivity",
       "difference": "Q011/Q056 have Hermitian driven Rabi transfer; Q037 uses trace-preserving dephasing, Q057 CPTP amplitude damping, Q049 rotating Hermitian spins. None involves defective Jordan eigenvalue, PT spectral breaking, or positive pseudo-Hermitian metric.",
+      "resolution_status": "screened_distinct_pending_independent_review"
+    },
+    {
+      "draft_id": "E063",
+      "compared_existing_ids": [
+        "E046",
+        "E057",
+        "Q056",
+        "W039"
+      ],
+      "core_model": "Paul RF quadrupole trap two-axis Mathieu parameters, micromotion-driven ponderomotive well and DC saddle stability",
+      "difference": "E046 magnetic mirror, E057 charged drift, Q056 Hermitian Rabi, W039 scalar parametric oscillator; none establishes electrostatic Laplace two-axis RF pseudopotential and drive energy balance.",
+      "resolution_status": "screened_distinct_pending_independent_review"
+    },
+    {
+      "draft_id": "W060",
+      "compared_existing_ids": [
+        "W023",
+        "W030",
+        "W035",
+        "E049"
+      ],
+      "core_model": "Finite-radius spherical breathing-source outgoing acoustic radiation, complex radiation impedance and reactive near field",
+      "difference": "W023 spherical cavity eigenmodes, W030 Helmholtz resonator, W035 plane acoustic interface, E049 electromagnetic dipole; not outgoing source-normal spherical acoustic power.",
+      "resolution_status": "screened_distinct_pending_independent_review"
+    },
+    {
+      "draft_id": "O061",
+      "compared_existing_ids": [
+        "O038",
+        "O043",
+        "O053",
+        "Q046"
+      ],
+      "core_model": "Stimulated fluorescence depletion nonlinear two-state photophysics, exact Lambert W PSF radius and E1 photon budget",
+      "difference": "O038 small-particle scattering, O043 diffraction, O053 Michelson shot noise, Q046 HOM quantum interference; none uses a nonlinear depletion fluorescence denominator and photon-rate tradeoff.",
       "resolution_status": "screened_distinct_pending_independent_review"
     }
   ]

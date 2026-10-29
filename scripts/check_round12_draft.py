@@ -1059,12 +1059,89 @@ assert abs(etaExplicit61-1)<mp.mpf('1e-44')
 assert abs((1+jv61*tv61)**2+(jv61*tv61)**2-(1+2*jv61*tv61+2*jv61**2*tv61**2))<mp.mpf('1e-44')
 supplemental.append(dict(id='Q061',method='50_digit_PT_metric_and_Jordan_propagation',name='50 digit exact unbroken PT mode norm in conserved metric and exceptional polynomial norm',passed=True))
 
-assert len(checks)==108 and len(set((v['id'],v['part']) for v in checks))==108
+
+
+# E063 -- Paul trap RF averaged dynamics and energy.
+ch63,mm63,r063,Om63,u063,v063,x063,y063=s.symbols('ch63 mm63 r063 Om63 u063 v063 x063 y063',positive=True)
+epsE63=ch63*v063/(mm63*r063**2)
+pse63=mm63*epsE63**2*(x063*x063+y063*y063)/(4*Om63**2)
+record('E063',1,'symbolic','quadrupole Laplace potential has opposite x/y curvature and Mathieu coefficients',
+       eq(s.diff((x063**2-y063**2),x063,2)+s.diff((x063**2-y063**2),y063,2))
+       and eq(4*ch63*u063/(mm63*r063**2*Om63**2),-(-4*ch63*u063/(mm63*r063**2*Om63**2))))
+record('E063',2,'independent_derivation','RF pseudopotential curvature equals high frequency secular restoring force in both directions',
+       eq(s.diff(pse63,x063,2),mm63*epsE63**2/(2*Om63**2))
+       and eq(s.diff(pse63,y063,2),mm63*epsE63**2/(2*Om63**2)))
+record('E063',3,'conservation','micro kinetic and cycle averaged RF potential obey effective Lagrangian energy budget',
+       eq(mm63*epsE63**2*(x063**2+y063**2)/(2*Om63**2)-pse63,pse63))
+record('E063',4,'physical_case','two axis secular frequency squared sum is positive and DC saddle signs oppose',
+       eq((epsE63**2/(2*Om63**2)+ch63*u063/(mm63*r063**2))+
+          (epsE63**2/(2*Om63**2)-ch63*u063/(mm63*r063**2)),
+          epsE63**2/Om63**2))
+mp.mp.dps=50
+chv63=mp.mpf(1);mv63=mp.mpf(2);rv63=mp.mpf(3);ov63=mp.mpf(40);vv63=mp.mpf(11);uv63=mp.mpf('.001')
+eav63=chv63*vv63/(mv63*rv63**2);aav63=eav63**2/(2*ov63**2);bbv63=chv63*uv63/(mv63*rv63**2)
+assert aav63>abs(bbv63)
+assert abs(mv63*aav63/2-chv63**2*vv63**2/(4*mv63*ov63**2*rv63**4))<mp.mpf('1e-45')
+supplemental.append(dict(id='E063',method='independent_50_digit_Paul_trap_curvature',name='50 digit RF micromotion pseudopotential, DC curvature and two-axis stability',passed=True))
+
+# W060 -- acoustics monopole radiation, pressure boundary and power.
+rrW60,kkW60,aaW60,rhoW60,ccW60,velW60=s.symbols('rrW60 kkW60 aaW60 rhoW60 ccW60 velW60',positive=True)
+radW60=s.exp(s.I*kkW60*rrW60)/rrW60
+record('W060',1,'symbolic','outgoing spherical velocity potential solves three-dimensional radial Helmholtz ODE',
+       eq(s.diff(radW60,rrW60,2)+2*s.diff(radW60,rrW60)/rrW60+kkW60**2*radW60))
+xW60=kkW60*aaW60
+ZW60=rhoW60*ccW60*(xW60*xW60-s.I*xW60)/(1+xW60*xW60)
+record('W060',2,'limit','source impedance resistance nonnegative and approaches plane wave sound impedance',
+       eq(s.re(ZW60),rhoW60*ccW60*xW60*xW60/(1+xW60*xW60))
+       and eq(s.limit(ZW60,kkW60,s.oo),rhoW60*ccW60))
+PW60=2*s.pi*rhoW60*ccW60*aaW60**2*velW60**2*xW60**2/(1+xW60*xW60)
+record('W060',3,'conservation','outgoing acoustic monopole power equals source-area resistance times surface velocity power',
+       eq(PW60,2*s.pi*aaW60**2*s.re(ZW60)*velW60**2))
+QW60=s.symbols('QW60',positive=True)
+record('W060',4,'dimensions','point-source low ka power at fixed volume velocity approaches rho omega squared Q squared over eight pi c',
+       eq(s.limit(PW60.subs(velW60,QW60/(4*s.pi*aaW60**2)),aaW60,0),
+          rhoW60*ccW60*kkW60**2*QW60**2/(8*s.pi)))
+mp.mp.dps=50
+kwv60=mp.mpf('.6');avv60=mp.mpf('1.7');rov60=mp.mpf('3.8');rhov60=mp.mpf('1.3');cvv60=mp.mpf('2.1');uvv60=mp.mpf('.35')
+Aaw60=uvv60*avv60**2*mp.exp(-1j*kwv60*avv60)/(1j*kwv60*avv60-1)
+pav60=1j*rhov60*cvv60*kwv60*Aaw60*mp.exp(1j*kwv60*rov60)/rov60
+uav60=Aaw60*mp.exp(1j*kwv60*rov60)*(1j*kwv60*rov60-1)/rov60**2
+pfv60=4*mp.pi*rov60**2*mp.re(pav60*uav60.conjugate())/2
+pev60=2*mp.pi*rhov60*cvv60*avv60**2*uvv60**2*(kwv60*avv60)**2/(1+(kwv60*avv60)**2)
+assert abs(pfv60-pev60)<mp.mpf('1e-45')
+supplemental.append(dict(id='W060',method='independent_50_digit_spherical_acoustic_power',name='50 digit outward pressure-velocity cross-spectrum reproduces exact source radiation power at remote sphere',passed=True))
+
+# O061 -- stimulated emission depletion and detection photon budget.
+alphO61,cO61,rO61=s.symbols('alphO61 cO61 rO61',positive=True)
+flO61=s.exp(-alphO61*rO61**2)/(1+cO61*rO61**2)
+record('O061',1,'symbolic','weak-pump steady fluorescence has zero center depletion and exact local Gaussian curvature',
+       eq(flO61.subs(rO61,0),1) and eq(s.diff(s.log(flO61),rO61,2).subs(rO61,0),-2*(alphO61+cO61)))
+widthO61=1/s.sqrt(2*(alphO61+cO61))
+record('O061',2,'independent_derivation','center width improves monotonically while half maximum reverts to Gaussian for zero depletion',
+       eq(s.diff(widthO61,cO61),-s.sqrt(2)/(4*(alphO61+cO61)**s.Rational(3,2)))
+       and eq(s.limit(widthO61,cO61,0),1/s.sqrt(2*alphO61)))
+record('O061',3,'symbolic','total photon integral derivative is strictly negative and Lambert root obeys real positive equation',
+       eq(s.diff(1/(1+cO61*rO61**2),cO61),-rO61**2/(1+cO61*rO61**2)**2)
+       and eq(s.limit(flO61,rO61,s.oo),0))
+record('O061',4,'limit','normalised E1 photon budget approaches unity without depletion and zero at strong depletion',
+       eq(s.limit((alphO61/cO61)*s.exp(alphO61/cO61)*s.expint(1,alphO61/cO61),cO61,0),1)
+       and eq(s.limit((alphO61/cO61)*s.exp(alphO61/cO61)*s.expint(1,alphO61/cO61),cO61,s.oo),0))
+mp.mp.dps=50
+aaO61=mp.mpf('.7');coO61=mp.mpf('2.3')
+uhO61=mp.lambertw(2*aaO61/coO61*mp.exp(aaO61/coO61))/aaO61-1/coO61
+resO61=mp.exp(-aaO61*uhO61)/(1+coO61*uhO61)
+intO61=mp.quad(lambda u:mp.exp(-aaO61*u)/(1+coO61*u),[0,mp.inf])
+expO61=mp.exp(aaO61/coO61)*mp.e1(aaO61/coO61)/coO61
+assert abs(resO61-mp.mpf('.5'))<mp.mpf('1e-45')
+assert abs(intO61-expO61)<mp.mpf('1e-45')
+supplemental.append(dict(id='O061',method='independent_50_digit_Lambert_E1_integral',name='50 digit Lambert exact FWHM and independent radial E1 total photon quadrature',passed=True))
+
+assert len(checks)==120 and len(set((v['id'],v['part']) for v in checks))==120
 assert len(set(v['method'] for v in checks if v['id']=='W058'))>=2
 assert len(set(v['method'] for v in checks if v['id']=='Q059'))>=2
-assert len(supplemental)==27
+assert len(supplemental)==30
 
-result={'status':'draft-only','new_problem_count':27,'passed_count':len(checks),'tests':checks,'independent_expert_review':'pending','supplemental_numeric_checks':supplemental}
+result={'status':'draft-only','new_problem_count':30,'passed_count':len(checks),'tests':checks,'independent_expert_review':'pending','supplemental_numeric_checks':supplemental}
 path=Path(__file__).resolve().parents[1]/'data/round12_draft_validation_report.json'
 path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
 print(json.dumps({'status':result['status'],'checked_subparts':len(checks)},ensure_ascii=False))

@@ -1,7 +1,7 @@
 {
   "status": "draft-only",
-  "new_problem_count": 27,
-  "passed_count": 108,
+  "new_problem_count": 30,
+  "passed_count": 120,
   "tests": [
     {
       "id": "M059",
@@ -758,6 +758,90 @@
       "method": "limit",
       "name": "exceptional point has square root energy splitting and divergent susceptibility from unbroken side",
       "passed": true
+    },
+    {
+      "id": "E063",
+      "part": 1,
+      "method": "symbolic",
+      "name": "quadrupole Laplace potential has opposite x/y curvature and Mathieu coefficients",
+      "passed": true
+    },
+    {
+      "id": "E063",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "RF pseudopotential curvature equals high frequency secular restoring force in both directions",
+      "passed": true
+    },
+    {
+      "id": "E063",
+      "part": 3,
+      "method": "conservation",
+      "name": "micro kinetic and cycle averaged RF potential obey effective Lagrangian energy budget",
+      "passed": true
+    },
+    {
+      "id": "E063",
+      "part": 4,
+      "method": "physical_case",
+      "name": "two axis secular frequency squared sum is positive and DC saddle signs oppose",
+      "passed": true
+    },
+    {
+      "id": "W060",
+      "part": 1,
+      "method": "symbolic",
+      "name": "outgoing spherical velocity potential solves three-dimensional radial Helmholtz ODE",
+      "passed": true
+    },
+    {
+      "id": "W060",
+      "part": 2,
+      "method": "limit",
+      "name": "source impedance resistance nonnegative and approaches plane wave sound impedance",
+      "passed": true
+    },
+    {
+      "id": "W060",
+      "part": 3,
+      "method": "conservation",
+      "name": "outgoing acoustic monopole power equals source-area resistance times surface velocity power",
+      "passed": true
+    },
+    {
+      "id": "W060",
+      "part": 4,
+      "method": "dimensions",
+      "name": "point-source low ka power at fixed volume velocity approaches rho omega squared Q squared over eight pi c",
+      "passed": true
+    },
+    {
+      "id": "O061",
+      "part": 1,
+      "method": "symbolic",
+      "name": "weak-pump steady fluorescence has zero center depletion and exact local Gaussian curvature",
+      "passed": true
+    },
+    {
+      "id": "O061",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "center width improves monotonically while half maximum reverts to Gaussian for zero depletion",
+      "passed": true
+    },
+    {
+      "id": "O061",
+      "part": 3,
+      "method": "symbolic",
+      "name": "total photon integral derivative is strictly negative and Lambert root obeys real positive equation",
+      "passed": true
+    },
+    {
+      "id": "O061",
+      "part": 4,
+      "method": "limit",
+      "name": "normalised E1 photon budget approaches unity without depletion and zero at strong depletion",
+      "passed": true
     }
   ],
   "independent_expert_review": "pending",
@@ -922,6 +1006,24 @@
       "id": "Q061",
       "method": "50_digit_PT_metric_and_Jordan_propagation",
       "name": "50 digit exact unbroken PT mode norm in conserved metric and exceptional polynomial norm",
+      "passed": true
+    },
+    {
+      "id": "E063",
+      "method": "independent_50_digit_Paul_trap_curvature",
+      "name": "50 digit RF micromotion pseudopotential, DC curvature and two-axis stability",
+      "passed": true
+    },
+    {
+      "id": "W060",
+      "method": "independent_50_digit_spherical_acoustic_power",
+      "name": "50 digit outward pressure-velocity cross-spectrum reproduces exact source radiation power at remote sphere",
+      "passed": true
+    },
+    {
+      "id": "O061",
+      "method": "independent_50_digit_Lambert_E1_integral",
+      "name": "50 digit Lambert exact FWHM and independent radial E1 total photon quadrature",
       "passed": true
     }
   ]
