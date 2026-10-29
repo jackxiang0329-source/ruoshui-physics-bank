@@ -1,0 +1,4 @@
+(1) 记 $x=\mu B/(k_BT)$，一个自旋的正则配分函数为 $z=e^x+e^{-x}=2\cosh x$。独立自旋的总配分函数为 $Z=z^N$，Helmholtz 自由能 $F=-Nk_BT\ln(2\cosh x)$。这是把晶格热容与自旋相互作用都忽略的模型，后续的热容专指磁子系统。
+(2) 用 $M=-(\partial F/\partial B)_T$ 得 $M=N\mu\tanh x$；平均能量 $U=-NB\mu\tanh x=-MB$。定场热容 $C_B=(\partial U/\partial T)_B=Nk_Bx^2\operatorname{sech}^2x$。它在 $x\to0$ 和 $x\to\infty$ 时均趋零，中间有非零最大值，即二能级体系的舒特基型热容峰。
+(3) 当 $|x|\ll1$ 时 $\tanh x=x+O(x^3)$，所以 $\chi_T=(\partial M/\partial B)_{B=0}=N\mu^2/(k_BT)$，呈居里 $1/T$ 规律。熵由 $S=(U-F)/T=Nk_B[\ln(2\cosh x)-x\tanh x]$ 给出；高温 $S\to Nk_B\ln2$，而在固定非零 $B$ 的零温极限只有基态占据，$S\to0$。
+(4) 对 $B,T>0$，上述熵只依赖比值 $x=B\mu/(k_BT)$；可逆绝热过程要求 $dS=0$，在相同熵支上 $B/T$ 不变，故理想退磁满足 $T_f/T_i=B_f/B_i$。但这仅是自旋系统与外界热隔离且内部可热平衡的结果；晶格热容、残余交换作用、漏热与到达极低温时的磁有序会使真实降温不能无限持续。

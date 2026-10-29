@@ -1,0 +1,4 @@
+(1) 对绝热、无轴功、稳态流动控制体，单位质量稳流第一定律为 $h_1+u_1^2/2+gz_1=h_2+u_2^2/2+gz_2$。忽略流速与高度变化后化为 $h_1=h_2$，并非 $u_1=u_2$；压强降低时流动功已包含在焓 $h=u+pv$ 中。实际节流通常有熵产生，故不能另外假定等熵。
+(2) 由 Maxwell 关系 $(\partial s/\partial p)_T=-(\partial v/\partial T)_p$，有 $dh=C_p\,dT+[v-T(\partial v/\partial T)_p]\,dp$。令 $dh=0$，立刻得到 $\mu_{JT}=(\partial T/\partial p)_h=[T(\partial v/\partial T)_p-v]/C_p$。系数大于零意味着压强降低 $dp<0$ 时温度降低，注意符号不能倒置。
+(3) 理想气体 $v=RT/p$，所以 $T(\partial v/\partial T)_p-v=0$，节流不改变温度。在范德瓦耳斯模型低压区，以摩尔体积展开 $v\simeq RT/p+b-a/(RT)$，从而 $(\partial v/\partial T)_p\simeq R/p+a/(RT^2)$。代入得 $\mu_{JT}\simeq[2a/(RT)-b]/C_p$，省略的是较高阶的压强修正。
+(4) 低压近似下温度变化的符号在 $2a/(RT)-b=0$ 时翻转，即 $T_{\rm inv}\simeq2a/(Rb)$。低于此温度节流降温，高于此温度节流升温；这是 $dp<0$ 情形。真实高压下 $v$ 对压强的非线性不可忽略，可能存在完整逆转曲线及相变，因此不能把这一单一数值当作所有压强处的精确液化阈值。
