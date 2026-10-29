@@ -8,9 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Verify previous two replacements with 8 checks
-        run: node scripts/check_round15_replacements.js > /tmp/round15_prior.json
-      - name: Verify six new replacements with 24 checks
-        run: node scripts/check_round15_six_models.js > /tmp/round15_six.json
-      - name: Preserve blocked full-round gate
-        run: echo 'Subset 32/200 only. 33 historical core-model blockers remain, mirrors and PDFs unverified.'
+      - name: First two replacement models, 8 checks
+        run: node scripts/check_round15_replacements.js > /tmp/round15_a.json
+      - name: Next six replacement models, 24 checks
+        run: node scripts/check_round15_six_models.js > /tmp/round15_b.json
+      - name: Six further replacement models, 24 checks
+        run: node scripts/check_round15_next_six_models.js > /tmp/round15_c.json
+      - name: Release gate remains blocked
+        run: echo '56 of 200 subset checks only, 27 historical core conflicts still need replacement. Mirrors and two PDFs NOT verified.'

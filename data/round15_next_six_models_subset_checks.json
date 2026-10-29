@@ -1,0 +1,237 @@
+{
+  "round": 15,
+  "model_replacements": [
+    "M087",
+    "E089",
+    "T082",
+    "W080",
+    "O083",
+    "Q083"
+  ],
+  "checked_subparts": 24,
+  "full_round_pass": false,
+  "remaining_full_round_checks_before_this_batch": 168,
+  "expert_review": "待独立复核",
+  "status": "SIX_MODEL_SUBSET_CHECKS_ONLY_DO_NOT_MERGE",
+  "tests": [
+    {
+      "id": "M087",
+      "part": 1,
+      "method": "conservation",
+      "name": "Finite differences of Lewis invariant under exact harmonic trajectory",
+      "passed": true,
+      "numerical_error": 1.942890293094024e-11,
+      "tolerance": 4e-10
+    },
+    {
+      "id": "M087",
+      "part": 2,
+      "method": "independent_numerical",
+      "name": "Transformed oscillator fundamental Wronskian equals unity",
+      "passed": true,
+      "numerical_error": 2.6965318866700727e-11,
+      "tolerance": 2e-9
+    },
+    {
+      "id": "M087",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "Pinney auxiliary equation and transformed initial-value reconstruction",
+      "passed": true,
+      "numerical_error": 1.0035375530570434e-8,
+      "tolerance": 1e-7
+    },
+    {
+      "id": "M087",
+      "part": 4,
+      "method": "energy_boundary",
+      "name": "Symplectic area Jacobian and constant-frequency action normalization",
+      "passed": true,
+      "numerical_error": 1.1102230246251565e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "id": "E089",
+      "part": 1,
+      "method": "independent_numerical",
+      "name": "Nonlinear displacement inversion and spherical Gaussian flux",
+      "passed": true,
+      "numerical_error": 8.881784197001252e-16,
+      "tolerance": 2e-11
+    },
+    {
+      "id": "E089",
+      "part": 2,
+      "method": "independent_integral",
+      "name": "Potential gradient from mapped nonsingular Beta integral equals nonlinear field",
+      "passed": true,
+      "numerical_error": 5.92123239329112e-10,
+      "tolerance": 6e-10
+    },
+    {
+      "id": "E089",
+      "part": 3,
+      "method": "independent_integral",
+      "name": "Nonlinear self-energy integral equals two-thirds independent potential integral",
+      "passed": true,
+      "numerical_error": 3.3306690738754696e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "id": "E089",
+      "part": 4,
+      "method": "conservation",
+      "name": "Numerical point-charge incremental energy equals center potential",
+      "passed": true,
+      "numerical_error": 1.5112133766592706e-11,
+      "tolerance": 1e-10
+    },
+    {
+      "id": "T082",
+      "part": 1,
+      "method": "independent_numerical",
+      "name": "Nonlinear slab reaction-diffusion stationary ODE residual and boundary temperatures",
+      "passed": true,
+      "numerical_error": 1.856262832333755e-8,
+      "tolerance": 5e-7
+    },
+    {
+      "id": "T082",
+      "part": 2,
+      "method": "optimization",
+      "name": "Unique thermal explosion fold a tanh(a)=1 with zero derivative of reaction parameter",
+      "passed": true,
+      "numerical_error": 4.4408920985006255e-11,
+      "tolerance": 2e-9
+    },
+    {
+      "id": "T082",
+      "part": 3,
+      "method": "spectral",
+      "name": "Derivative-of-steadystate Sturm identity verifies signs on both thermal branches",
+      "passed": true,
+      "numerical_error": 5.34754788006353e-7,
+      "tolerance": 7e-7
+    },
+    {
+      "id": "T082",
+      "part": 4,
+      "method": "conservation",
+      "name": "Independent reaction-volume quadrature equals exact boundary conduction outflux",
+      "passed": true,
+      "numerical_error": 2.1760371282653068e-14,
+      "tolerance": 3e-12
+    },
+    {
+      "id": "W080",
+      "part": 1,
+      "method": "independent_derivation",
+      "name": "Exact helical mode obeys both transverse linearized binormal equations",
+      "passed": true,
+      "numerical_error": 0,
+      "tolerance": 2e-14
+    },
+    {
+      "id": "W080",
+      "part": 2,
+      "method": "independent_numerical",
+      "name": "Numerical derivative of Kelvin dispersion equals analytic group velocity",
+      "passed": true,
+      "numerical_error": 1.7503554161635293e-11,
+      "tolerance": 1e-10
+    },
+    {
+      "id": "W080",
+      "part": 3,
+      "method": "conservation",
+      "name": "Two-frequency Kelvin superposition obeys both local norm and gradient energy continuity laws",
+      "passed": true,
+      "numerical_error": 2.6645352591003757e-10,
+      "tolerance": 1e-8
+    },
+    {
+      "id": "W080",
+      "part": 4,
+      "method": "independent_integral",
+      "name": "Kelvin Gaussian time evolution conserves norm and exhibits analytically predicted packet variance",
+      "passed": true,
+      "numerical_error": 3.552713678800501e-15,
+      "tolerance": 2e-11
+    },
+    {
+      "id": "O083",
+      "part": 1,
+      "method": "independent_derivation",
+      "name": "Traveling Fourier grating sideband phase has additive temporal and spatial frequencies",
+      "passed": true,
+      "numerical_error": 3.885780586188048e-16,
+      "tolerance": 1e-12
+    },
+    {
+      "id": "O083",
+      "part": 2,
+      "method": "independent_numerical",
+      "name": "Independent Runge-Kutta coupled-mode integration matches exact Bragg transfer probability",
+      "passed": true,
+      "numerical_error": 5.551115123125783e-16,
+      "tolerance": 5e-12
+    },
+    {
+      "id": "O083",
+      "part": 3,
+      "method": "asymptotic",
+      "name": "Weak Bragg sinc line and small-detuning quadratic loss match exact two-mode transfer",
+      "passed": true,
+      "numerical_error": 6.510224753702564e-7,
+      "tolerance": 8e-7
+    },
+    {
+      "id": "O083",
+      "part": 4,
+      "method": "energy_flux",
+      "name": "Numerical two-mode photon conservation and acoustic pump energy equal sideband power increase",
+      "passed": true,
+      "numerical_error": 3.469446951953614e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "id": "Q083",
+      "part": 1,
+      "method": "independent_derivation",
+      "name": "Independent two-mass wave amplitude agrees with vacuum flavor oscillation probability",
+      "passed": true,
+      "numerical_error": 5.551115123125783e-17,
+      "tolerance": 2e-13
+    },
+    {
+      "id": "Q083",
+      "part": 2,
+      "method": "spectral",
+      "name": "Matter eigenvalue splitting and mixing-angle normalization reproduce avoided-crossing determinant",
+      "passed": true,
+      "numerical_error": 0,
+      "tolerance": 2e-13
+    },
+    {
+      "id": "Q083",
+      "part": 3,
+      "method": "probability",
+      "name": "Constant matter matrix exponential agrees with conversion formula and high density suppresses mixing",
+      "passed": true,
+      "numerical_error": 0,
+      "tolerance": 2e-13
+    },
+    {
+      "id": "Q083",
+      "part": 4,
+      "method": "independent_numerical",
+      "name": "Finite-difference MSW mixing-angle gradient and high-density adiabatic survival limit",
+      "passed": true,
+      "numerical_error": 2.1096871621884006e-7,
+      "tolerance": 0.002
+    }
+  ],
+  "source_branch": "physics-round15-50-work",
+  "source_status": "executed-in-V8-and-reproducible-node",
+  "scope_limits": "Only six rewritten cores; 27 more core conflicts and 144 additional full-round subpart checks remain"
+}
