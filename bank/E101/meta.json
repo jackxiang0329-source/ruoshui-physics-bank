@@ -1,0 +1,20 @@
+{
+  "id": "E101",
+  "topic": "电磁学",
+  "title": "无限梯形电阻网络的输入阻抗自相似、功率与收敛",
+  "tags": [
+    "无限梯形电路等效阻抗",
+    "自相似固定点",
+    "网络耗散功率"
+  ],
+  "answer": "把最后一级后续断开取 $Z_1=R_s+R_p$，迭代 $Z_{n+1}=R_s+R_pZ_n/(R_p+Z_n)$。映射 $f'(z)=R_p^2/(R_p+z)^2\\in(0,1)$，故它是严格收缩的正值映射，$Z_n$ 由高于固定点的初值单调下降至 $Z$。也可将边界改为其它非负负载，极限唯一。",
+  "kind": "综合推导题",
+  "level": 5,
+  "estimated_minutes": 90,
+  "quality_status": "待独立复核",
+  "tier": "advanced_composite",
+  "format": "latex-fragment-v1",
+  "revision": "composite-v1-round16-40-draft",
+  "challenge_profile": "new-core-fourpart-physics",
+  "complexity_tier": "L5-B"
+}

@@ -1,0 +1,7 @@
+(1) 稳态电荷连续性 $\nabla\cdot\mathbf j=0$ 且 $\mathbf j=-\nabla V/\rho_e$，圆对称解满足 $rV'=\mathrm{const}$。边界值给 $V(r)=V_0\ln(b/r)/\ln(b/a)$。场 $E_r=V_0/[r\ln(b/a)]$，电流密度 $j_r=V_0/[\rho_e r\ln(b/a)]$。
+
+(2) 穿过半径 $r$ 的圆柱壳面积 $2\pi rt$，电流 $I=2\pi rt j_r=2\pi tV_0/[\rho_e\ln(b/a)]$。所以片电阻 $R=V_0/I=\rho_e\ln(b/a)/(2\pi t)$；相同几何下厚度加倍，电阻减半。
+
+(3) $P_{\rm Joule}=\int_a^b\rho_ej_r^2(2\pi rt)dr=2\pi tV_0^2[\rho_e\ln^2(b/a)]^{-1}\int_a^b dr/r=2\pi tV_0^2/[\rho_e\ln(b/a)]=IV_0$。功率正定，反映边界电源供能全部转为热。
+
+(4) 当 $a\to0$，$R\sim(\rho_e/(2\pi t))\ln(b/a)\to\infty$，二维径向电流无法经无限小接触维持有限电导。真实器件存在接触电阻、有限电子平均自由程和几何厚度边缘效应，所以不能把连续欧姆模型外推到任意小 $a$。

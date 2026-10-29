@@ -1,0 +1,20 @@
+{
+  "id": "E100",
+  "topic": "电磁学",
+  "title": "薄电阻片径向电流的二维对数电势、功率与接触阻抗",
+  "tags": [
+    "二维圆环片电阻",
+    "守恒电流与对数电位",
+    "焦耳功率闭合"
+  ],
+  "answer": "$P_{\\rm Joule}=\\int_a^b\\rho_ej_r^2(2\\pi rt)dr=2\\pi tV_0^2[\\rho_e\\ln^2(b/a)]^{-1}\\int_a^b dr/r=2\\pi tV_0^2/[\\rho_e\\ln(b/a)]=IV_0$。功率正定，反映边界电源供能全部转为热。",
+  "kind": "综合推导题",
+  "level": 5,
+  "estimated_minutes": 90,
+  "quality_status": "待独立复核",
+  "tier": "advanced_composite",
+  "format": "latex-fragment-v1",
+  "revision": "composite-v1-round16-40-draft",
+  "challenge_profile": "new-core-fourpart-physics",
+  "complexity_tier": "L5-B"
+}
