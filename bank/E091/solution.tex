@@ -1,18 +1,58 @@
-(1) 电子到达电势 \(\phi\) 的动能为 \(\frac12mv^2=e\phi\)，故 \(v=\sqrt{2e\phi/m}\)。电流绝对值 \(j=en v\)，体电荷 \(\rho=-en=-j/v\)，因此
+(1) 取 \(k>0\)，面外电势为 \(\Phi=\phi_0 e^{ikx-i\omega t}e^{-k|z|}\)，在片上的Gauss定律为
 \[
-\phi''=-\rho/\epsilon_0={j\over\epsilon_0\sqrt{2e/m}}\phi^{-1/2}.
+\rho_s=\varepsilon(E_z^+-E_z^-)=2\varepsilon k\phi_0.
 \]
-记 \(A=\epsilon_0\sqrt{2e/m}\)，则 \(\phi''=(j/A)\phi^{-1/2}\)，边界 \(\phi(0)=\phi'(0)=0\)。
-(2) 乘 \(\phi'\) 积分，\((\phi')^2=4(j/A)\sqrt\phi\)，取正根 \(\phi'=2\sqrt{j/A}\phi^{1/4}\)。再积分有 \(\phi^{3/4}=(3/2)\sqrt{j/A}x\)。阳极 \(\phi(d)=V\) 给
+切向 \(E_x=-ik\phi_0\)。由 \(-i\omega j_x=-iDk\phi_0\) 得
+\(j_x=Dk\phi_0/\omega\)，由连续性
+\(\rho_s=kj_x/\omega=Dk^2\phi_0/\omega^2\)。
+于是
 \[
-\phi(x)=V(x/d)^{4/3},\quad
-j={4\over9}\epsilon_0\sqrt{2e/m}\,{V^{3/2}\over d^2},
-\quad v(x)=\sqrt{2eV/m}(x/d)^{2/3},
-\quad n(x)=j/[ev(x)].
+\omega_0^2=\frac{Dk}{2\varepsilon},\quad
+v_{\rm ph}=\frac{\omega_0}k,\quad
+v_g=\frac{\omega_0}{2k}.
 \]
-(3) 令 \(v_a=\sqrt{2eV/m}\)，则
+无门二维电荷长程库仑核使 \(\omega\) 随 \(\sqrt{k}\) 而非 \(k\) 变化。
+
+(2) 接地边界 \(\Phi(-d)=0\)。在片上方及下方的两个区域，
 \[
-t_{\rm tr}=\int_0^d{dx\over v_a(x/d)^{2/3}}={3d\over v_a}.
+\Phi_+(z)=\phi_0e^{-kz},\qquad
+\Phi_-(z)=\phi_0\frac{\sinh[k(z+d)]}{\sinh(kd)}.
 \]
-电荷量绝对值/面积 \(\int_0^d en(x)dx=j\int_0^d dx/v(x)=jt_{\rm tr}\)，说明稳态储电荷与连续通量一致。
-(4) \(j\propto V^{3/2}d^{-2}\)，不是普通欧姆律。近阴极 \(n\sim x^{-2/3}\) 可积但发散，是零注入速度、冷单向流和连续介质极限的理想化；非零电子初速、等离子体碰撞、有限孔径与阴极发射能力不足会改变结果。
+对 \(z=0\) 两侧的法向电场取差，得
+\[
+C_k=\varepsilon k[1+\coth(kd)]
+=\frac{2\varepsilon k}{1-e^{-2kd}}.
+\]
+代入Drude和二维连续方程的关系
+\(\rho_s=Dk^2\phi_0/\omega^2\) 得
+\[
+\boxed{\omega(k,d)^2=\frac{Dk}{2\varepsilon}(1-e^{-2kd})}.
+\]
+\(C_k\) 是 \(k\) 依赖的每面积电容核，并非对所有波长都等于 \(\varepsilon/d\)。
+
+(3) \(kd\ll1\) 时
+\(1-e^{-2kd}=2kd[1-kd+O((kd)^2)]\)，所以
+\[
+\omega=k\sqrt{\frac{Dd}{\varepsilon}}
+[1-kd/2+O((kd)^2)],\quad
+v_{\rm ph},v_g\longrightarrow\sqrt{\frac{Dd}{\varepsilon}}.
+\]
+\(kd\gg1\) 时 \(\omega\sim\sqrt{Dk/(2\varepsilon)}\)，
+\(v_{\rm ph}\sim\sqrt{D/(2\varepsilon k)}\)、
+\(v_g\sim v_{\rm ph}/2\)，它同时是 \(d\to\infty\) 极限。物理原因是金属门将长波电场限制在有限厚度的间隙中，此时 \(C_k\to\varepsilon/d\)，使惯性载流子与面电容耦合成线性声学等离激元。
+
+(4) 对空间区域按Green恒等式积分并利用门上 \(\Phi=0\)，有
+\[
+\int \varepsilon|\mathbf E_\omega|^2 dz
+=\rho_{s,\omega}\phi_0^*=C_k|\phi_0|^2.
+\]
+谐波时间平均的静电能为
+\(\bar U_E/A=C_k|\phi_0|^2/4\)。Drude电流幅度
+\(|j_\omega|=Dk|\phi_0|/\omega\)，其惯性能为
+\[
+\bar U_K/A=\frac{|j_\omega|^2}{4D}
+=\frac{Dk^2|\phi_0|^2}{4\omega^2}
+=\frac{C_k|\phi_0|^2}{4}.
+\]
+因此每一个无损线性本征波满足 \(\bar U_E=\bar U_K\)；总波能正定。
+此结论以均匀无耗散电介质、理想金属门、可忽略迟滞和片电导碰撞为前提；有限电阻门会带来焦耳损耗，复杂频率色散还需额外储能项。

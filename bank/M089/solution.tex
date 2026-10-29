@@ -1,13 +1,54 @@
-(1) 取体坐标 \(\boldsymbol e_1\) 沿刀刃，\(\boldsymbol e_2\) 横向，质心位置 \(\boldsymbol r_G=\boldsymbol r_C+a\boldsymbol e_1\)，速度 \(\boldsymbol v_G=u\boldsymbol e_1+a\omega\boldsymbol e_2\)。刀刃横向速度为零。对质心平动和转动方程消去接触点横向约束力，得到著名的非完整约化方程
+(1) 规定 \(u_x=\partial_y\psi,u_y=-\partial_x\psi\)，记
+\(r_\pm^2=(x-X)^2+(y\mp h)^2\)。真实点涡与下半平面的反号镜像给
 \[
-\dot u=a\omega^2,\qquad \dot\omega=-{ma\over I+ma^2}u\omega.
+\psi=Uy-\frac{\Gamma}{2\pi}\ln\frac{r_+}{r_-}.
 \]
-(2) 设 \(J=I+ma^2\)，则 \(E=(mu^2+J\omega^2)/2\) 的导数为
-\(mua\omega^2+J\omega[-(ma/J)u\omega]=0\)。令 \(U=\sqrt{u_0^2+(J/m)\omega_0^2}\)，并设 \(\lambda=maU/J>0\)。解
+在 \(y=0\)，\(r_+=r_-\)，故壁面 \(\psi=0\) 且 \(u_y=0\)。
+求偏导得
 \[
-u(t)=U\tanh(\lambda t+C),\quad
-\omega(t)=\operatorname{sgn}(\omega_0)U\sqrt{m/J}\operatorname{sech}(\lambda t+C),
+u_x=U-\frac{\Gamma}{2\pi}\left[
+\frac{y-h}{r_+^2}-\frac{y+h}{r_-^2}\right],\quad
+u_y=\frac{\Gamma(x-X)}{2\pi}\left(\frac1{r_+^2}-\frac1{r_-^2}\right).
 \]
-其中 \(C=\operatorname{artanh}(u_0/U)\)。在 \(\omega_0\ne0\) 情形 \(|u_0|<U\) 保证C有限。
-(3) \(t\to+\infty\) 时 \(u\to U\)，\(\omega\sim2\operatorname{sgn}(\omega_0)U\sqrt{m/J}e^{-\lambda t-C}\)；向后时间 \(u\to-U\)。向前直行是吸引的速度状态而没有耗散：约束把角运动转入平动。若恰 \(\omega=0\)，则任何常数u均为直行解，负速度分支对微小转动扰动不稳定。
-(4) 约束接触点法向力垂直其许可速度，所以瞬时功为零，证实E守恒。\(a\to0\) 时 \(\dot u=\dot\omega=0\)；\(I\to\infty\) 在固定有限初始角速下转动响应变慢。模型假定刀刃严格禁止侧滑、平面刚性且无滚阻，一旦允许侧滑会出现附加自由度与耗散。
+特别在壁面
+\(u_w(x)=U+\Gamma h/[\pi((x-X)^2+h^2)]\)。
+流函数只在真实涡处有上半平面奇点，镜像涡不能作为真实的流体点涡计入。
+
+(2) 点涡随去掉其自身 \(1/r\) 奇异速度后的规则部分流速运动。反号镜像位于正下方距离 \(2h\)，给真实涡的附加速度
+\(\Gamma/(4\pi h)\mathbf e_x\)，不产生法向速度。因此
+\[
+\dot X=c=U+\frac{\Gamma}{4\pi h},\quad
+\dot h=0,\quad X(t)=X_0+ct.
+\]
+涡始终平行于墙运动；改变 \(\Gamma\) 符号时相对背景流的漂移方向反转，而
+\(h\to\infty\) 时 \(c\to U\)。这里局部点涡近似不解析有限涡核的黏性扩散和近壁黏附。
+
+(3) 令 \(\xi=x-ct\)，在随涡移动的参考系中
+\[
+\psi'=(U-c)y-\frac{\Gamma}{2\pi}\ln(r_+/r_-),
+\qquad
+a=\frac{\Gamma}{4\pi h},\quad
+w(\xi)=\frac{\Gamma h}{\pi(\xi^2+h^2)}.
+\]
+壁面相对速度为 \(-a+w(\xi)\)，远场相对速度为 \(-a\)。场在此坐标系定常，无旋流域的Bernoulli常数可取远场值，所以
+\[
+p_w(\xi)-p_\infty
+=\frac{\rho}{2}[a^2-(-a+w)^2]
+=\rho[aw-w^2/2].
+\]
+因为实验室系的速度场依赖 \(x-X(t)\)，它并非定常，不能将实验室的瞬时速度直接代入上述“定常”公式而省略非定常势导数。
+
+(4) 用标准有理函数积分
+\[
+\int_{\mathbb R}w\,d\xi=\Gamma,\qquad
+\int_{\mathbb R}w^2\,d\xi=\frac{\Gamma^2}{2\pi h}.
+\]
+代入第三问得
+\[
+\int_{\mathbb R}(p_w-p_\infty)d\xi
+=\rho\left[\frac{\Gamma^2}{4\pi h}
+-\frac{\Gamma^2}{4\pi h}\right]=0.
+\]
+因此静止壁在全长度上的压力差净法向合力为零；同时流过壁面附近的切向扰动
+\(u_w-U=w\) 的面积积分严格为 \(\Gamma\)。
+环量和压力合力是不同的积分量，后者由速度的平方组成，正压和负压贡献可以相互抵消。

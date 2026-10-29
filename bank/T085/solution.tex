@@ -1,23 +1,66 @@
-(1) 设 \(n_A=a_0-\xi,n_B=b_0-\xi,n_C=c_0+\xi\)，均正，\(p_i=n_iRT/V\)。理想混合物化学势
-\(\mu_i=\mu_i^\circ(T)+RT\ln(p_i/p^\circ)\)，反应自由能导数
+(1) 记 \(\Theta=k_BT_1/m>0\)。随机微分方程对应
 \[
-{dF\over d\xi}=\mu_C-\mu_A-\mu_B
-=RT\ln(Q_p/K_p),\quad
-Q_p={(p_C/p^\circ)\over(p_A/p^\circ)(p_B/p^\circ)}.
+\partial_t f=-v\partial_xf+
+\partial_v[(\omega_0^2x+\gamma v)f]
++\gamma\Theta\partial_v^2f.
 \]
-平衡满足 \(Q_p=K_p\)。
-(2) 进一步
+任意 \(T>0\) 的归一化平衡解为
 \[
-{d^2F\over d\xi^2}=RT\left({1\over n_C}+{1\over n_A}+{1\over n_B}\right)>0,
+f_{\rm eq}(x,v;T)
+=\frac{m\omega_0}{2\pi k_BT}
+\exp[-m(v^2+\omega_0^2x^2)/(2k_BT)].
 \]
-故在正物质的量区间严格凸。若 \(a_0=b_0=n,c_0=0\)，则
+其零均值协方差 \(C_{\rm eq}(T)=(k_BT/m)\operatorname{diag}(\omega_0^{-2},1)\)。初始密度亦为Gaussian，线性漂移及加性Gaussian噪声保证整个时间演化都保持二维Gaussian。
+
+(2) Itô公式导出
 \[
-Q_p={\xi(Vp^\circ/RT)\over(n-\xi)^2}=K_p,\quad 0<\xi<n .
+\dot C_{xx}=2C_{xv},\quad
+\dot C_{xv}=C_{vv}-\omega_0^2C_{xx}-\gamma C_{xv},\quad
+\dot C_{vv}=-2\omega_0^2C_{xv}-2\gamma C_{vv}+2\gamma\Theta.
 \]
-左侧随 \(\xi\) 增大由0趋无穷，解唯一。
-(3) Gibbs–Helmholtz关系 \(d(\Delta G^\circ/T)/dT=-\Delta H^\circ/T^2\)，结合 \(\Delta G^\circ=-RT\ln K_p\)，得
+记 \(A=\begin{pmatrix}0&1\\-\omega_0^2&-\gamma\end{pmatrix}\)，
+则 \(\dot C=AC+CA^\mathsf T+\operatorname{diag}(0,2\gamma\Theta)\)，故准确解为
 \[
-{d\ln K_p\over dT}={\Delta H^\circ\over RT^2}.
+C(t)=C_{\rm eq}(T_1)+e^{At}[C_{\rm eq}(T_0)-C_{\rm eq}(T_1)]e^{A^\mathsf Tt}.
 \]
-放热 \(\Delta H^\circ<0\) 则升温降低K，平衡偏反应物。
-(4) 定温定容自发方向须使 \(dF/d\xi\,d\xi\le0\)。若 \(Q_p<K_p\)，则 \(dF/d\xi<0\) 且正向反应使F下降；反之逆向。体积增大使 \(Q_p\propto V\) 增大，平衡向气体总摩尔数较多的左侧移动；引入活度系数后不可再用理想分压比取代热力学活度。
+设 \(\omega_d=\sqrt{\omega_0^2-\gamma^2/4}\)，其基本矩阵
+\[
+e^{At}=e^{-\gamma t/2}\!
+\begin{pmatrix}
+\cos\omega_dt+\frac{\gamma}{2\omega_d}\sin\omega_dt & \frac1{\omega_d}\sin\omega_dt\\
+-\frac{\omega_0^2}{\omega_d}\sin\omega_dt &\cos\omega_dt-\frac{\gamma}{2\omega_d}\sin\omega_dt
+\end{pmatrix}.
+\]
+此式直接满足初值 \(e^{A0}=I\) 和微分方程；由于 \(T_0,T_1>0\)，协方差始终正定。
+
+(3) 平均机械能
+\(\bar H=m(C_{vv}+\omega_0^2C_{xx})/2\)，根据矩方程，
+\[
+\dot{\bar H}=-m\gamma[C_{vv}(t)-\Theta].
+\]
+势函数不变，外力未施加参数功，因此总入热
+\(Q(t)=\int_0^t[-m\gamma(C_{vv}(s)-\Theta)]ds
+=\bar H(t)-\bar H(0)\)。
+初始 \(\bar H(0)=k_BT_0\)，长时 \(C\to C_{\rm eq}(T_1)\) 从而
+\(\bar H(\infty)=k_BT_1\)。位置、速度方差通过 \(C_{xv}\) 相互交换能量并可显示阻尼振荡，但总能量账本仍被上述恒等式严格约束。
+
+(4) 二维零均值Gaussian微分熵满足
+\[
+S_{\rm sys}=\frac{k_B}{2}\ln[(2\pi e)^2\det C]+\text{固定参考量纲常数},
+\quad
+\dot S_{\rm sys}=k_B\gamma[\Theta(C^{-1})_{vv}-1].
+\]
+环境接收负的系统入热量，故
+\(\dot S_{\rm env}=k_B\gamma[C_{vv}/\Theta-1]\)，于是
+\[
+\dot S_{\rm tot}
+=k_B\gamma[\Theta(C^{-1})_{vv}+C_{vv}/\Theta-2]\ge0.
+\]
+因为正定 \(C\) 有 \(C_{vv}(C^{-1})_{vv}\ge1\)，应用AM–GM即可证明不等式。若新平衡协方差为 \(C_1=C_{\rm eq}(T_1)\)，则相对熵为
+\[
+D(f_t\|f_{\rm eq,1})=
+\tfrac12[\mathrm{tr}(C_1^{-1}C)-\ln\det(C_1^{-1}C)-2],
+\]
+非平衡自由能超额 \(F_{\rm neq}-F_{\rm eq}=k_BT_1D\) 严格单调：
+\(\dot F_{\rm neq}=-T_1\dot S_{\rm tot}\le0\)。
+当 \(T_0=T_1\) 时整个过程 \(C=C_1\)，各项熵产生均为零。
