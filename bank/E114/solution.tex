@@ -1,6 +1,6 @@
-(1) 稳态Drude方程为 $0=-e(\mathbf E+\mathbf v\times\mathbf B)-m\mathbf v/\tau$，$\mathbf j=-ne\mathbf v$。代入得 $\mathbf E=\rho_0\mathbf j-(\mathbf j\times\mathbf B)/(ne)$，其中 $\rho_0=m/(ne^2\tau)$。故二维电阻率矩阵为 $\rho=\begin{pmatrix}\rho_0&-B/(ne)\\B/(ne)&\rho_0\end{pmatrix}$，符号取决于坐标和电子电荷约定。
+(1) 稳态Drude方程为 $0=-e(\mathbf E+\mathbf v\times\mathbf B)-m\mathbf v/\tau$，$\mathbf j=-ne\mathbf v$。代入得 $\mathbf E=\rho_0\mathbf j-(\mathbf j\times\mathbf B)/(ne)$，其中 $\rho_0=m/(ne^2\tau)$。故二维电阻率矩阵为 $\rho=\begin{pmatrix}\rho_0&B/(ne)\\-B/(ne)&\rho_0\end{pmatrix}$；由 $\mathbf j\times\mathbf B=(Bj_y,-Bj_x,0)$ 可直接核验两个非对角元素的符号。
 
-(2) 横向开路时 $j_y=0$，从电阻率关系有 $E_x=\rho_0j_x$、$E_y=Bj_x/(ne)$。若Hall系数按 $R_H=E_y/(j_xB)$ 定义，则在这里写成 $+1/(ne)$；若采用实验惯例 $R_H=E_y/(j_xB)$ 且固定 $\mathbf B=+B\mathbf e_z$，必须重新核验叉乘方向。由完整向量式 $\mathbf E=\rho_0\mathbf j+(\mathbf j\times\mathbf B)/(ne)$ 才产生电子Hall负号，因此需统一符号再定最终 $R_H$。
+(2) 横向开路 $j_y=0$ 时，由 $\mathbf E=\rho_0\mathbf j+(\mathbf j\times\mathbf B)/(ne)$ 立即得到 $\boxed{E_x=\rho_0j_x,\quad E_y=-Bj_x/(ne)}$。按 $R_H=E_y/(j_xB)$ 定义有 $\boxed{R_H=-1/(ne)}$，正是电子载流子的负Hall系数；纵向电阻率是 $\rho_{xx}=m/(ne^2\tau)$。
 
 (3) 电阻率拆成对称 $\rho_0I$ 与反对称Hall部分。任何电流都有 $p=\mathbf E\cdot\mathbf j=\rho_0(j_x^2+j_y^2)$，因为 $\mathbf j\cdot(\mathbf j\times\mathbf B)=0$，所以磁场本身不做功，Hall横向场不增加焦耳损耗。
 
