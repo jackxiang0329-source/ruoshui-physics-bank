@@ -120,7 +120,7 @@ H=s.Matrix([[0,s.Symbol("hbar",positive=True)*Om],[s.Symbol("hbar",positive=True
 record("Q065",3,"independent_derivation","initial energy variance gives Zeno time inverse Rabi frequency",eq(H[0,0]) and eq((H*H)[0,0],(s.Symbol("hbar",positive=True)*Om)**2))
 pn=s.symbols("pn",positive=True)
 geom=(1-pn**N)/(1-pn)
-record("Q065",4,"limit","expected number of sequential measurements equals truncated geometric sum with deterministic limit N",eq(s.summation(pn**s.Symbol("j",integer=True),(s.Symbol("j",integer=True),0,N-1)),geom) and eq(s.limit(geom,pn,1),N))
+record("Q065",4,"limit","expected number of sequential measurements equals truncated geometric sum with deterministic limit N",eq(s.summation(s.Rational(1,2)**s.Symbol("j",integer=True),(s.Symbol("j",integer=True),0,N-1)),geom.subs(pn,s.Rational(1,2))) and eq(s.limit(geom,pn,1),N))
 
 assert len(tests)==32 and len(set((x["id"],x["part"]) for x in tests))==32
 for uid in ["M067","E067","O064","Q064","T063","W063","O065","Q065"]:
