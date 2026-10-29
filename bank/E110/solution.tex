@@ -1,0 +1,7 @@
+(1) 在导体内忽略位移电流，有 $\nabla\times\mathbf H=\sigma\mathbf E$、$\nabla\times\mathbf E=-\partial_t\mathbf B$。取旋度并用无体电荷 $\nabla\cdot\mathbf E=0$，得 $\partial_z^2E_x=\mu\sigma\partial_tE_x$，说明场的空间衰减是电磁扩散而非真空无损传播。
+
+(2) 代入 $e^{-i\omega t-\gamma z}$ 得 $\gamma^2=-i\omega\mu\sigma$。取正实部的根 $\boxed{\gamma=(1-i)/\delta}$，$\delta=\sqrt{2/(\omega\mu\sigma)}$。Faraday定律给 $\partial_zE_x=i\omega B_y$，故 $B_y=\gamma E_x/(-i\omega)$；等价 $H_y=\gamma E_x/(-i\omega\mu)$，相位滞后由复数根决定。
+
+(3) 平均焦耳功率每面积 $P/A=\frac12\sigma\int_0^\infty|E_0|^2e^{-2z/\delta}dz=\sigma\delta|E_0|^2/4$。表面阻抗 $Z_s=E_x/H_y=(-i\omega\mu)/\gamma=(1-i)\sqrt{\omega\mu/(2\sigma)}$，在本时间约定下实部 $R_s=\sqrt{\omega\mu/(2\sigma)}=1/(\sigma\delta)$。表面功率也为 $\frac12R_s|H_y(0)|^2=\sigma\delta|E_0|^2/4$。
+
+(4) $\delta\propto(\omega\sigma)^{-1/2}$，$R_s\propto\sqrt{\omega/\sigma}$。频率加倍时皮肤深度缩至 $1/\sqrt2$、表面电阻增为 $\sqrt2$；电导率加倍时两者均缩至 $1/\sqrt2$。若 $\omega\varepsilon$ 与 $\sigma$ 同量级，应在Ampère定律保留位移电流，从完整复波数求解。

@@ -1,0 +1,7 @@
+(1) 稳态Drude方程为 $0=-e(\mathbf E+\mathbf v\times\mathbf B)-m\mathbf v/\tau$，$\mathbf j=-ne\mathbf v$。代入得 $\mathbf E=\rho_0\mathbf j-(\mathbf j\times\mathbf B)/(ne)$，其中 $\rho_0=m/(ne^2\tau)$。故二维电阻率矩阵为 $\rho=\begin{pmatrix}\rho_0&-B/(ne)\\B/(ne)&\rho_0\end{pmatrix}$，符号取决于坐标和电子电荷约定。
+
+(2) 横向开路时 $j_y=0$，从电阻率关系有 $E_x=\rho_0j_x$、$E_y=Bj_x/(ne)$。若Hall系数按 $R_H=E_y/(j_xB)$ 定义，则在这里写成 $+1/(ne)$；若采用实验惯例 $R_H=E_y/(j_xB)$ 且固定 $\mathbf B=+B\mathbf e_z$，必须重新核验叉乘方向。由完整向量式 $\mathbf E=\rho_0\mathbf j+(\mathbf j\times\mathbf B)/(ne)$ 才产生电子Hall负号，因此需统一符号再定最终 $R_H$。
+
+(3) 电阻率拆成对称 $\rho_0I$ 与反对称Hall部分。任何电流都有 $p=\mathbf E\cdot\mathbf j=\rho_0(j_x^2+j_y^2)$，因为 $\mathbf j\cdot(\mathbf j\times\mathbf B)=0$，所以磁场本身不做功，Hall横向场不增加焦耳损耗。
+
+(4) 反转磁场使Hall电压变号而纵向 $\rho_0$ 不变；若载流子改为正空穴，Hall电压符号也反转。在电子空穴同时输运时总电导张量应先相加再反矩阵，不能简单用单个 $1/(ne)$ 表示净Hall系数。
