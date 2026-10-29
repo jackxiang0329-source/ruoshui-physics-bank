@@ -1,0 +1,25 @@
+(1) 一维速度用快度 \(\psi\) 定义为 \(v/c=\tanh\psi\)、\(\gamma=\cosh\psi\)。火箭固有加速度是 \(a=c\,d\psi/d\tau\)，所以静止初值给 \(\psi=a\tau/c\)，从而
+\[
+v(\tau)=c\tanh(a\tau/c),\qquad \gamma(\tau)=\cosh(a\tau/c).
+\]
+因双曲正切绝对值严格小于一，所有有限 τ 都满足 v<c。
+
+(2) 固有时间定义给 \(dt/d\tau=\gamma=\cosh(a\tau/c)\)；速度与时间参数关系给 \(dx/d\tau=\gamma v=c\sinh(a\tau/c)\)。积分并用 \(t(0)=x(0)=0\)，得到
+\[
+t(\tau)=\frac ca\sinh(a\tau/c),\qquad
+x(\tau)=\frac{c^2}{a}[\cosh(a\tau/c)-1].
+\]
+在小 τ 时展开 \(t\simeq\tau\)、\(x\simeq a\tau^2/2\)，恢复经典短时运动学。
+
+(3) 使用恒等式 \(\cosh^2\psi-\sinh^2\psi=1\)，消去参数：
+\[
+\left(x+\frac{c^2}{a}\right)^2-c^2t^2=\frac{c^4}{a^2}.
+\]
+解正支可得 \(x(t)=c^2[\sqrt{1+(at/c)^2}-1]/a\)，因此
+\[
+v(t)=\frac{at}{\sqrt{1+(at/c)^2}},\quad
+\frac{dv}{dt}=\frac a{[1+(at/c)^2]^{3/2}}.
+\]
+实验室坐标加速度随时间减小而固有加速度保持常数。
+
+(4) 采用闵氏度规 (+,−)，四速度 \(U^\mu=(c\cosh\psi,c\sinh\psi)\) 满足 \(U^\mu U_\mu=c^2\)。四加速度 \(A^\mu=(a\sinh\psi,a\cosh\psi)\) 满足 \(A^\mu A_\mu=-a^2\)，故其固有模恒为 a。τ→∞ 时 \(v\to c^-\)，但不会达到或超过 c，体现四速度归一化和质量粒子因果约束。

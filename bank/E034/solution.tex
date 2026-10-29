@@ -1,0 +1,25 @@
+(1) 用 \(\nabla\times\boldsymbol B=\mu\boldsymbol J=\mu\sigma\boldsymbol E\) 与 \(\nabla\times\boldsymbol E=-\partial_t\boldsymbol B\)，对前式取旋度，并使用 \(\nabla\cdot\boldsymbol B=0\)：
+\[
+-\nabla^2\boldsymbol B=-\mu\sigma\partial_t\boldsymbol B
+\quad\Rightarrow\quad \partial_t\boldsymbol B=\frac1{\mu\sigma}\nabla^2\boldsymbol B.
+\]
+
+(2) 对一维磁场取 \(B_z=\Re[\mathcal B(x)e^{-i\omega t}]\)，有 \(\mathcal B''=-i\omega\mu\sigma\mathcal B\)。满足 \(x\to\infty\) 有界的解为
+\[
+\mathcal B(x)=B_0e^{-(1-i)x/\delta},\quad
+\delta=\sqrt{\frac2{\mu\sigma\omega}},
+\]
+因为 \((1-i)^2/\delta^2=-i\omega\mu\sigma\)。δ 为振幅衰减到 1/e 的深度，不是强度的 1/e 深度。
+
+(3) 由 Ampere 定律 \(J_y=-(1/\mu)\partial_x B_z\)，复电流幅值
+\[
+\mathcal J_y=\frac{1-i}{\mu\delta}B_0e^{-(1-i)x/\delta}.
+\]
+均匀电导体平均体积焦耳热为
+\[
+\overline p_J(x)=\frac{|\mathcal J_y|^2}{2\sigma}
+=\frac{|B_0|^2}{\sigma\mu^2\delta^2}e^{-2x/\delta}>0.
+\]
+它沿深度指数衰减，能量由表面输入后耗散为热。
+
+(4) 在固定 \(\mu,\sigma\) 下 \(\delta\propto\omega^{-1/2}\)，低频磁场更深地穿入导体；\(\omega\to0\) 给 δ→∞，而采用的半无限导体、无位移电流近似仍需在静态极限下单独看边界条件。

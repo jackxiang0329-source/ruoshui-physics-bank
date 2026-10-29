@@ -1,0 +1,27 @@
+(1) 稳态位移 \(x_\omega=-(e/m)E_0/(\omega_0^2-\omega^2-i\gamma\omega)\)，电子偶极矩为 \(-ex_\omega\)，故
+\[
+\boxed{\chi(\omega)=\frac{\omega_p^2}{\omega_0^2-\omega^2-i\gamma\omega}}.
+\]
+设 \(D=(\omega_0^2-\omega^2)^2+\gamma^2\omega^2\)，则 \(\chi'=\omega_p^2(\omega_0^2-\omega^2)/D\)，\(\chi''=\omega_p^2\gamma\omega/D>0\) 对正频率成立。被动介质的平均吸收功率密度 \(\omega\varepsilon_0\chi''|E_0|^2/2\ge0\)。
+
+(2) \(\gamma\ll\omega_0\)、\(\omega=\omega_0+\delta\) 时，\(\omega_0^2-\omega^2\simeq-2\omega_0\delta\)，于是
+\[
+\chi''\simeq\frac{\omega_p^2\gamma/\omega_0}{4\delta^2+\gamma^2}.
+\]
+峰在 \(\omega\simeq\omega_0\)，峰高约 \(\omega_p^2/(\gamma\omega_0)\)，半高全宽约 \(\gamma\)。静态 \(\chi(0)=\omega_p^2/\omega_0^2>0\)；高频 \(\chi\sim-\omega_p^2/\omega^2\)，反映电子惯性而非静态极化。
+
+(3) 极点为
+\[
+\omega_\pm=-i\gamma/2\pm\sqrt{\omega_0^2-\gamma^2/4}.
+\]
+弱阻尼时两极点虚部均为负；过阻尼时根号纯虚，但两极点仍严格在下半平面。因此 \(\chi(\omega)\) 在上半复频率平面解析并随大频率衰减，符合因果响应的Kramers–Kronig色散关系。若把所选 \(e^{-i\omega t}\) 约定下阻尼项符号反写，极点会移入上半平面并破坏因果稳定性。
+
+(4) 利用 \(\chi(-\omega)=\chi(\omega)^*\) 和Kramers–Kronig关系，在大正频率展开
+\[
+\chi'(\omega)\sim-\frac2{\pi\omega^2}\int_0^\infty\omega'\chi''(\omega')d\omega'.
+\]
+与直接展开 \(\chi\sim-\omega_p^2/\omega^2\) 比较得
+\[
+\boxed{\int_0^\infty\omega\operatorname{Im}\chi(\omega)d\omega=\pi\omega_p^2/2}.
+\]
+和则与阻尼无关。\(\gamma\to0^+\) 时吸收谱在非共振频率逐点趋零，却以分布意义收敛至 \(\pi\omega_p^2\delta(\omega-\omega_0)/(2\omega_0)\)，积分保持有限；不能先逐点置零再积分。

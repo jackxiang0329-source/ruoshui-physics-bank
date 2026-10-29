@@ -1,0 +1,27 @@
+(1) 轴对称 \(l=1\) 的外域调和势只能取 \(\phi=C(t)\cos\theta/r^2\)，去掉会在无穷远增长的 \(r\cos\theta\) 分支。球面径向无穿透要求 \(\partial_r\phi|_{a}=U\cos\theta\)，故 \(C=-Ua^3/2\)。因此
+\[
+v_r=Ua^3\cos\theta/r^3,\qquad v_\theta=Ua^3\sin\theta/(2r^3).
+\]
+在 \(r=a\) 前者等于球面法向速度，后者为 \(U\sin\theta/2\)；流体势场随 \(r^{-2}\) 衰减，速度随 \(r^{-3}\) 衰减。无黏模型只有无穿透条件，不存在黏性无滑移要求。
+
+(2) 外域 \(\nabla^2\phi=0\)，积分分部给
+\(\int_{r>a}|\nabla\phi|^2dV=\oint_{r=a}\phi\,\partial_n\phi\,dS\)；特别注意外域的内边界法向是 \(-\hat{\boldsymbol r}\)。球面有 \(\phi=-Ua\cos\theta/2\)、\(\partial_n\phi=-U\cos\theta\)，从而
+\[
+T_f=\frac\rho2\frac{U^2a}{2}\oint\cos^2\theta\,dS
+=\frac{\pi\rho a^3U^2}{3}=\frac12m_aU^2.
+\]
+\(\oint\cos^2\theta dS=4\pi a^2/3\)，故 \(\boxed{m_a=2\pi\rho a^3/3}\)，等于排开流体质量的一半。
+
+(3) 球面非定常Bernoulli压力中含 \(p_{\dot U}=-\rho\,\partial_t\phi|_{r=a}=\rho a\dot U\cos\theta/2\)。流体施加在球面的 \(z\) 向压力合力
+\[
+F_{f,z}=-\oint p_{\dot U}\cos\theta\,dS
+=-\frac{\rho a\dot U}{2}\frac{4\pi a^2}{3}
+=\boxed{-m_a\dot U}.
+\]
+位移坐标的其余时间导数以及 \(|\boldsymbol v|^2/2\) 为 \(U^2\) 级，前后对称积分净阻力为零；在均匀匀速无黏势流中这是达朗贝尔悖论，不可将纯加速度附加质量解释为恒速摩擦。
+
+(4) 牛顿方程 \(m_s\dot U=F_{\rm ext}-m_a\dot U\)，故 \((m_s+m_a)\dot U=F_{\rm ext}\)。再乘 \(U\) 有
+\[
+\frac{d}{dt}\!\left[\frac{m_s+m_a}{2}U^2\right]=F_{\rm ext}U ,
+\]
+右边外力功率全部进入球体与流体动能。对 \(\rho\to0\) 或 \(a\to0\)，附加质量趋零；若加速时间 \(\tau\) 接近声传播 \(a/c_s\)，无穷远静止的不可压瞬时响应不再合理，辐射与黏性需另行计算。

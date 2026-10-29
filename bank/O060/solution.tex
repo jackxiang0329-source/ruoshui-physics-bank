@@ -1,0 +1,69 @@
+(1) 标量 Helmholtz 方程 \((\partial_x^2+\partial_z^2+k_0^2)E=0\) 在 \(E=\psi e^{ik_0z}\) 下化为 \(\psi_{xx}+2ik_0\psi_z+\psi_{zz}=0\)。傍轴假设 \(|\psi_{zz}|\ll|2k_0\psi_z|\) 后得到 \(i\psi_z+(2k_0)^{-1}\psi_{xx}=0\)。按 \(s=x/x_0\)、\(\xi=z/(k_0x_0^2)\) 缩放，恰得 \(i\psi_\xi+\psi_{ss}/2=0\)。将方程乘 \(\psi^*\) 与其共轭式相减，有
+\[
+\boxed{\partial_\xi I+\partial_sj=0},\qquad
+I=|\psi|^2,\qquad j=\operatorname{Im}(\psi^*\partial_s\psi).
+\]
+因此 \(\mathcal P=\int_{\mathbb R}I\,ds\) 的导数是 \(-j(+\infty)+j(-\infty)\)。在有限 \(a>0\) 的衰减解中光流在两端趋零，\(\mathcal P\) 严格守恒。此连续性源于场演化的自伴性，不意味着亮纹峰值的横向位置必须守恒。
+
+(2) 令 \(u(s)=\operatorname{Ai}(s)e^{as}\)。由 Airy 傅里叶积分表示与解析延拓（\(a>0\) 保证可积），
+\[
+\widehat u(k)=\exp\!\left[\frac{a^3}{3}-ak^2+
+i\left(\frac{k^3}{3}-a^2k\right)\right].
+\]
+自由傍轴传播在频域只乘单位模相因子 \(e^{-ik^2\xi/2}\)。对逆傅里叶积分作三次相位的平移和立方配方，得到精确结果
+\[
+\boxed{\psi(s,\xi)=\operatorname{Ai}\!\left(s-\frac{\xi^2}{4}+ia\xi\right)
+\exp\!\left[as-\frac{a\xi^2}{2}
++i\left(\frac{s\xi}{2}-\frac{\xi^3}{12}+\frac{a^2\xi}{2}\right)\right]}.
+\]
+它在 \(\xi=0\) 回到所给初值。为不依赖积分变换再验证，设 \(Z=s-\xi^2/4+ia\xi\)、\(F=as-a\xi^2/2+i(s\xi/2-\xi^3/12+a^2\xi/2)\)。由 Airy 微分方程 \(\operatorname{Ai}''(Z)=Z\operatorname{Ai}(Z)\)，代入 \(i\psi_\xi+\psi_{ss}/2\) 后 \(\operatorname{Ai}'\) 的系数为 \(iZ_\xi+F_s=0\)，\(\operatorname{Ai}\) 的系数为 \(iF_\xi+(Z+F_s^2)/2=0\)。若形式上取 \(a=0\)，得到
+\[
+\psi_0=\operatorname{Ai}(s-\xi^2/4)
+e^{i(s\xi/2-\xi^3/12)},
+\]
+其强度形状不变，只沿 \(s=\xi^2/4+\text{常数}\) 平移；但在 \(s\to-\infty\) 的 Airy 振荡尾部，\(|\operatorname{Ai}(s)|^2\) 仅按 \(|s|^{-1/2}\) 衰减，因此 \(\int|\psi_0|^2ds=\infty\)，不可把它当作有限功率束。
+
+(3) 光谱强度为 \(\boxed{|\widehat u(k)|^2=e^{2a^3/3-2ak^2}}\)，故由 Parseval 定理
+\[
+\boxed{\mathcal P=\frac{e^{2a^3/3}}{2\sqrt{2\pi a}}}.
+\]
+正态化谱密度为 \(\sqrt{2a/\pi}\,e^{-2ak^2}\)，从而
+\(\langle k\rangle=0\)、\(\langle k^2\rangle=(4a)^{-1}\)、\(\langle k^4\rangle=3(16a^2)^{-1}\)。传播光谱相位
+\[
+\Theta(k,\xi)=k^3/3-a^2k-\xi k^2/2.
+\]
+在傅里叶空间，位置算符为 \(s\leftrightarrow i\partial_k\)，故
+\[
+\langle s\rangle=-\langle\partial_k\Theta\rangle
+=-\langle k^2-a^2-\xi k\rangle
+=\boxed{a^2-\frac1{4a}},
+\]
+与 \(\xi\) 无关。再用 \(\langle s^2\rangle=\mathcal P^{-1}(2\pi)^{-1}\int|\partial_k\widehat\psi|^2dk\)，得到
+\[
+\operatorname{Var}(s)(\xi)=
+4a^2\langle k^2\rangle+\langle k^4\rangle-\langle k^2\rangle^2+
+\xi^2\langle k^2\rangle
+=\boxed{a+\frac1{8a^2}+\frac{\xi^2}{4a}}.
+\]
+所以有限功率束的质心不加速，宽度却随传播增长。Ehrenfest 关系 \(d\langle s\rangle/d\xi=\langle k\rangle\) 提供独立验证：只要横向总动量为零，自由传播不可能产生质心加速度。
+
+(4) 由第 (2) 问的精确解直接对 \(s\) 求导，令 \(Z=s-\xi^2/4+ia\xi\)，得到
+\[
+\boxed{j(s,\xi)=|\psi|^2\left[
+\frac{\xi}{2}+\operatorname{Im}\left(\frac{\operatorname{Ai}'(Z)}{\operatorname{Ai}(Z)}\right)\right]},
+\]
+在 \(\operatorname{Ai}(Z)=0\) 的点用未除法的等价形式
+\(j=\frac{\xi}{2}|\psi|^2+e^{2as-a\xi^2}\operatorname{Im}[\operatorname{Ai}(Z)^*\operatorname{Ai}'(Z)]\) 定义，故不存在虚假奇点。将 \(j\) 积分后由 Parseval 与 \(\widehat\psi^*k\widehat\psi\) 得
+\[
+\boxed{\int_{\mathbb R}j\,ds
+=\frac1{2\pi}\int_{\mathbb R}k|\widehat\psi|^2dk
+=\mathcal P\langle k\rangle=0}.
+\]
+然而 \(a=0\) 时 \(\operatorname{Ai}\) 在实轴上为实数，形式上非节点处 \(j/I=\xi/2\)，主亮瓣最大值位置 \(s_{\rm max}(\xi)=s_{\rm max}(0)+\xi^2/4\)，因此
+\[
+\boxed{x_{\rm max}(z)=x_0s_{\rm max}(0)+\frac{z^2}{4k_0^2x_0^3}},
+\quad \frac{d^2x_{\rm max}}{dz^2}=\frac1{2k_0^2x_0^3}.
+\]
+该量描述的只是不可归一化理想波的亮瓣轨迹。对于 \(a>0\)，频谱逆变换的总相位为
+\(\Phi(k)=k^3/3-a^2k-\xi k^2/2+ks\)；两驻点合并由
+\(\Phi_k=k^2-a^2-\xi k+s=0\) 与 \(\Phi_{kk}=2k-\xi=0\) 给出几何折叠线 \(s=a^2+\xi^2/4\)。由于有限截断同时带有 \(e^{-ak^2}\) 的非均匀谱权，该折叠线并不严格等于实际强度峰轨迹，特别是长距离下会变形。局部相位流与各横向区域干涉可产生弯曲亮纹，但第 (3) 问的精确质心和积分光流已经排除真实外力造成的整束加速。

@@ -1,0 +1,7 @@
+(1) 定态方程为 \(-(\hbar^2/2m)\psi''-g[\delta(x-a)+\delta(x+a)]\psi=E\psi\)。跨越 \(x=a\) 的无穷小区间积分，利用波函数连续，可得 \(\psi'(a^+)-\psi'(a^-)=-2mg\psi(a)/\hbar^2=-2\alpha\psi(a)\)，在 \(x=-a\) 亦同。势关于原点对称，故本征态可以选为偶函数或奇函数；在无势区负能态是指数双曲函数，外侧必须选指数衰减分支以保证归一化。
+
+(2) 偶态在 \(|x|<a\) 可取 \(\psi=A\cosh(\kappa x)\)，外侧 \(x>a\) 为 \(B e^{-\kappa(x-a)}\)。连续条件 \(B=A\cosh(\kappa a)\)，跳跃条件给 \(-\kappa B-\kappa A\sinh(\kappa a)=-2\alpha B\)，化简为 \(\kappa=\alpha[1+e^{-2\kappa a}]\)。奇态内侧取 \(A\sinh(\kappa x)\)，同理得 \(\kappa=\alpha[1-e^{-2\kappa a}]\)。偶态方程右边随 \(\kappa\) 单调下降、左边单调上升，在 \(\kappa=0\) 时右边为 \(2\alpha>0\)，故总存在唯一正根。
+
+(3) 奇态方程在 \(\kappa=0\) 两边同时为零，但 \(\kappa=0\) 对应不归一化的阈值态，只有 \(\kappa>0\) 才代表真实束缚态。对小正 \(\kappa\) 展开右侧为 \(2\alpha a\kappa+O(\kappa^2)\)，故存在非零正根的充要条件是 \(2\alpha a>1\)；在等号恰为阈值而非已形成束缚态。当 \(a\to0\)，双δ势合并为强度 \(2g\) 的单个吸引势，偶态 \(\kappa\to2\alpha\)；奇态不存在，符合单个一维δ势只支撑一个束缚态的结论。
+
+(4) 在 \(A=\alpha a\gg1\) 下，令 \(\epsilon=e^{-2\alpha a}\ll1\)，偶奇方程迭代给 \(\kappa_{\rm even}=\alpha(1+\epsilon+O(A\epsilon^2))\)、\(\kappa_{\rm odd}=\alpha(1-\epsilon+O(A\epsilon^2))\)。能量 \(E=-\hbar^2\kappa^2/(2m)\)，所以偶态能量更负、为基态，两个态能隙为 \(E_{\rm odd}-E_{\rm even}=2\hbar^2\alpha^2\epsilon/m+O(A\epsilon^2)\)。劈裂指数小于井间距，反映两局域态通过指数衰减尾部的隧穿重叠形成成键与反键组合，不能用通常的线性扰动距离律代替。

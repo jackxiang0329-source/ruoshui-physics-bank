@@ -1,0 +1,7 @@
+(1) 令两臂探测到的场分别为 \(E(t)\)、\(E(t-\tau)\)，其平均强度均为 \(I_0=\langle|E|^2\rangle\)。总场强度 \(I(\tau)=2I_0+2\Re\langle E^*(t)E(t-\tau)\rangle=2I_0[1+\Re\gamma(\tau)]\)，其中 \(\gamma(\tau)=\int S(\omega)e^{-i\omega\tau}d\omega/\int S(\omega)d\omega\)。频谱中的每个频率因延时贡献相位 \(-\omega\tau\)，所以不是简单把中心频率代入相位而忽略谱平均。
+
+(2) 变量替换 \(u=\omega-\omega_0\) 后，傅里叶积分分为载波因子 \(e^{-i\omega_0\tau}\) 与高斯积分 \(\int e^{-u^2/(2\sigma_\omega^2)}e^{-iu\tau}du\)。配方或高斯积分公式给其值 \(\sqrt{2\pi}\sigma_\omega e^{-\sigma_\omega^2\tau^2/2}\)，因此 \(\gamma(\tau)=e^{-i\omega_0\tau}e^{-\sigma_\omega^2\tau^2/2}\)。复相干度模长为 \(e^{-\sigma_\omega^2\tau^2/2}\)，是探测器记录条纹包络的可见度，谱归一化常数 \(S_0\) 被完全约去。
+
+(3) 双束等强时 \(I(\tau)=2I_0[1+e^{-\sigma_\omega^2\tau^2/2}\cos(\omega_0\tau)]\)。条纹载波周期约为 \(2\pi/\omega_0\)，可见度下降至 \(e^{-1}\) 时满足 \(\sigma_\omega^2\tau_c^2/2=1\)，故 \(\tau_c=\sqrt2/\sigma_\omega\)，对应真空相干长度 \(c\tau_c\)。由于 \(\omega_0\gg\sigma_\omega\)，一个相干包络内可容纳许多个载波条纹；若谱宽不小，所谓单一中心波长的干涉条纹概念需重新限定。
+
+(4) 若两个探测强度为 \(I_1,I_2\)，则 \(I=I_1+I_2+2\sqrt{I_1I_2}\Re\gamma(\tau)\)，因此干涉可见度变为 \(V(\tau)=[2\sqrt{I_1I_2}/(I_1+I_2)]e^{-\sigma_\omega^2\tau^2/2}\le1\)。即使完全时间相干，分束比失配也会降低可见度；若光程差超过约 \(c\tau_c\)，高斯谱各频率相位趋于相消，条纹对比变弱，精密测长必须同时控制光谱宽度、偏振及两臂强度。

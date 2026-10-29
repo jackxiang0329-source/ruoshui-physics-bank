@@ -1,0 +1,24 @@
+(1) 令 \(\dot a=0\)，得到 \(a_{\rm s}=\sqrt{\kappa_{\rm ex}}s_{\rm in}/[\kappa/2-i(\Delta-gn)]\)，因而 \(n[(\kappa/2)^2+(\Delta-gn)^2]=\kappa_{\rm ex}P_{\rm in}\)。定义 \(y=gn/(\kappa/2)\)、\(\delta=\Delta/(\kappa/2)\) 与 \(p=g\kappa_{\rm ex}P_{\rm in}/(\kappa/2)^3\)，得
+\[
+\boxed{p=y[1+(\delta-y)^2]}.
+\]
+本题 \(g>0\) 表示有效失谐随腔内光子数增加而下降，不能在保持该符号的同时把双稳态条件误写成负失谐。
+
+(2) 曲线导数 \(dp/dy=3y^2-4\delta y+(1+\delta^2)\)，折叠的两根
+\(y_\pm=(2\delta\pm\sqrt{\delta^2-3})/3\) 必须均为正。于是 \(\delta>\sqrt3\) 才可能有两个正折叠点；临界尖点 \(y_c=2/\sqrt3,\delta_c=\sqrt3,p_c=8\sqrt3/9\)。在两折叠功率之间三条代数稳态分支共存；但其中负斜率分支是否稳定必须通过动力学Jacobian检验，不可由三次方程直接假定三稳定态。
+
+(3) 取 \(\delta a,\delta a^*\) 为线性扰动，Jacobian是
+\[
+J=\begin{pmatrix}-\kappa/2+i(\Delta-2gn)&-ig a_{\rm s}^2\\ig(a_{\rm s}^*)^2&-\kappa/2-i(\Delta-2gn)\end{pmatrix}.
+\]
+它的迹为 \(-\kappa<0\)，行列式为
+\[
+D=(\kappa/2)^2+(\Delta-2gn)^2-g^2n^2
+=(\kappa/2)^2+(\Delta-gn)(\Delta-3gn)
+=\frac{d(\kappa_{\rm ex}P_{\rm in})}{dn}.
+\]
+故 \(D>0\) 时两本征值实部均负，而中间负斜率分支 \(D<0\) 有一正实本征值；折叠点出现零软模。此判据特指瞬时单模Kerr模型，不能擅自推广到有热记忆的实验腔。
+
+(4) 对 \(n=|a|^2\) 求导，有
+\(\dot n=-\kappa n+2\sqrt{\kappa_{\rm ex}}\operatorname{Re}(s_{\rm in}^*a)\)。再展开 \(P_{\rm out}=|s_{\rm out}|^2=P_{\rm in}+\kappa_{\rm ex}n-2\sqrt{\kappa_{\rm ex}}\operatorname{Re}(s_{\rm in}^*a)\)，遂得到
+\(\boxed{\dot n=P_{\rm in}-P_{\rm out}-\kappa_0n}\)。强驱动时 \(g^2n^3\simeq\kappa_{\rm ex}P_{\rm in}\)，故 \(n\sim(\kappa_{\rm ex}P_{\rm in}/g^2)^{1/3}\)；固定 \(P_{\rm in}\) 令 \(g\to0\) 则恢复线性响应 \(n=\kappa_{\rm ex}P_{\rm in}/[(\kappa/2)^2+\Delta^2]\)。噪声跃迁可使实际滞回宽度随扫描速率与环境波动改变，稳态图不代表完整随机动力学。

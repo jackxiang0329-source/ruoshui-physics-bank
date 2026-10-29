@@ -1,0 +1,7 @@
+(1) 洛伦兹力为 \(m\dot{\mathbf v}=q(\mathbf E+\mathbf v\times\mathbf B)-m\nu\mathbf v\)。因 \(\mathbf v\times B\hat z=(Bv_y,-Bv_x,0)\)，二维方程为 \(\dot v_x=(qE/m)+\omega_cv_y-\nu v_x\)，\(\dot v_y=-\omega_cv_x-\nu v_y\)。齐次矩阵 \(\begin{pmatrix}-\nu&\omega_c\\-\omega_c&-\nu\end{pmatrix}\)，由电荷符号决定旋转方向，但稳定性的实部由 \(-\nu\) 决定。
+
+(2) 稳态解满足 \(\nu v_x-\omega_cv_y=qE/m\)、\(\omega_cv_x+\nu v_y=0\)，故 \(v_x=(qE/m)\nu/(\nu^2+\omega_c^2)\)，\(v_y=-(qE/m)\omega_c/(\nu^2+\omega_c^2)\)。在 \(\nu\to0^+\) 且 \(B\ne0\) 下，\(v_x\to0\)，\(v_y\to-E/B\)，即 \(\mathbf E\times\mathbf B/B^2=-E\hat y/B\)，与电荷正负无关。若先取 \(B\to0\) 则变为沿电场的漂移，两个极限不能无条件交换。
+
+(3) 对稳态速度定义偏差 \(\mathbf u=\mathbf v-\mathbf v_\infty\)，齐次矩阵的复特征值为 \(-\nu\pm i\omega_c\)。因此速度偏差的模以 \(e^{-\nu t}\) 衰减，同时以角速度大小 \(|\omega_c|\) 旋转；对 \(q>0\) 与 \(q<0\) 自由回旋的方向相反。稳态不因磁场做功而增加粒子动能，磁场只改变漂移方向；只要 \(\nu>0\)，任意初速度都会指数接近唯一稳态。
+
+(4) 速度点乘牛顿方程得到 \(d(mv^2/2)/dt=q\mathbf E\cdot\mathbf v-m\nu v^2\)，因为 \(\mathbf v\cdot(\mathbf v\times\mathbf B)=0\)。稳态时 \(qEv_x=m\nu(v_x^2+v_y^2)\)。将显式解代入，左右都为 \(q^2E^2\nu/[m(\nu^2+\omega_c^2)]\)，验证完全一致。强阻尼 \(\nu\gg|\omega_c|\) 时 \(v_x\simeq qE/(m\nu)\)、\(v_y/v_x\simeq-\omega_c/\nu\)，即主要沿电场运动的小霍尔偏转。

@@ -1,0 +1,7 @@
+(1) 对 Langevin 方程取平均，\(\dot m=-(m-vt)/\tau\)，其中 \(m(t)=\langle x(t)\rangle,\ m(0)=0\)。一阶线性方程解为 \(m(t)=v[t-\tau(1-e^{-t/\tau})]\)，因此平均滞后量 \(m(t)-vt=-v\tau(1-e^{-t/\tau})\)。短时间 \(m(t)\sim vt^2/(2\tau)\)，长时间滞后趋 \(-v\tau\)。这说明势阱移动时系统一般不处于瞬时平衡。
+
+(2) 外控参数是 \(\lambda(t)=vt\)，其做功定义为 \(W=\int_0^t\partial_\lambda U\,\dot\lambda\,ds=-kv\int_0^t[x(s)-vs]ds\)。取平均得到 \(\langle W\rangle=kv^2\tau\int_0^t(1-e^{-s/\tau})ds=\gamma v^2[t-\tau(1-e^{-t/\tau})]\ge0\)。由于仅是谐势中心平移，配分函数不变，真实平衡自由能变化 \(\Delta F=0\)，平均功全部属于非平衡耗散。
+
+(3) 令涨落 \(\delta x=x-m(t)\)，它满足定常 OU 过程 \(\gamma\,d(\delta x)/dt=-k\delta x+\xi\)，初态已平衡，故 \(C(s,s')=\langle\delta x(s)\delta x(s')\rangle=(k_BT/k)e^{-|s-s'|/\tau}\)。随机功是高斯过程线性泛函，因此服从正态分布，其方差 \({\rm Var}(W)=k^2v^2\int_0^t\int_0^t C(s,s')dsds'=2k_BT\gamma v^2[t-\tau(1-e^{-t/\tau})]=2k_BT\langle W\rangle\)。
+
+(4) 正态变量的指数矩为 \(\langle e^{-\beta W}\rangle=\exp[-\beta\langle W\rangle+\beta^2{\rm Var}(W)/2]\)。代入 \({\rm Var}(W)=2\langle W\rangle/\beta\) 得 \(\langle e^{-\beta W}\rangle=1=e^{-\beta\Delta F}\)，严格符合 Jarzynski 恒等式。个别轨道允许负功，尽管平均功非负；若初始不是平衡分布，或热噪声幅度违反涨落耗散关系，上述指数等式通常不能直接照用。

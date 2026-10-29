@@ -1,0 +1,23 @@
+(1) 对真空平面波，磁场复幅值 \(\boldsymbol B_0=\hat z\times\boldsymbol E_0/c\)。平均坡印廷功率密度是
+\[
+\overline I=\frac{\epsilon_0c}{2}|\boldsymbol E_0|^2
+=\frac{\epsilon_0c}{2}(A^2+B^2),
+\]
+不依赖两个正交分量之间的相位差 δ。
+
+(2) 用题设的 Stokes 定义直接展开：
+\[
+S_1^2+S_2^2+S_3^2
+=(A^2-B^2)^2+4A^2B^2(\cos^2\delta+\sin^2\delta)
+=(A^2+B^2)^2=S_0^2.
+\]
+因此完全相干、确定性 Jones 矢量的偏振度 \(\sqrt{S_1^2+S_2^2+S_3^2}/S_0=1\)（非零场）。
+
+(3) 线偏振要求两个非零分量相位差为 0 或 π（或其中一个分量为零），于是 \(S_3=0\)；圆偏振则要求 A=B>0 且 \(\delta=\pm\pi/2\)，此时 \(S_1=S_2=0\)、\(|S_3|=S_0\)。圆偏振的左右旋名称取决于观察方向和时间相位惯例。
+
+(4) 偏振器透射单位矢量为 \(\boldsymbol e_\theta=(\cos\theta,\sin\theta)\)。输出复幅值 \(E_t=A\cos\theta+B e^{i\delta}\sin\theta\)，所以
+\[
+I_t=\frac{\epsilon_0c}{2}\left[
+A^2\cos^2\theta+B^2\sin^2\theta+2AB\cos\delta\sin\theta\cos\theta\right].
+\]
+若输入是沿 x 的线偏振，即 B=0，便有 \(I_t=I_{\rm in}\cos^2\theta\)，恢复 Malus 定律。

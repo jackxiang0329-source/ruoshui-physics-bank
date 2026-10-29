@@ -1,0 +1,19 @@
+(1) 冷离子能量守恒 \(\frac12m_iv_i^2+e\phi=\frac12m_iu_0^2\)，连续性 \(n_iv_i=n_0u_0\)。所以
+\[
+v_i(\phi)=\sqrt{u_0^2-\frac{2e\phi}{m_i}},\quad
+n_i(\phi)=\frac{n_0u_0}{v_i(\phi)},\quad
+n_e(\phi)=n_0\exp\frac{e\phi}{k_BT_e}.
+\]
+\(\phi<0\) 时离子加速、密度下降，电子指数排斥。
+(2) Poisson方程 \(\phi''=e(n_e-n_i)/\epsilon_0\)。在 \(\phi=0\) 展开
+\[
+n_e-n_i=n_0e\phi\left(\frac1{k_BT_e}-\frac1{m_iu_0^2}\right)+O(\phi^2).
+\]
+鞘边附近需要指数衰减的负势扰动，即线性化系数 \(\phi''/\phi\ge0\)，从而 \(u_0^2\ge k_BT_e/m_i\)。严格大于时有实逆屏蔽长度；等号为退化临界，线性化不足以定形。
+(3) 乘 \(\phi'\) 积分，鞘边常数为零：
+\[
+\frac{\epsilon_0}{2}(\phi')^2=e\int_0^\phi(n_e-n_i)\,d\psi
+=n_0\!\left[k_BT_e\left(e^{e\phi/(k_BT_e)}-1\right)+m_iu_0\left(v_i(\phi)-u_0\right)\right].
+\]
+因此壁面 \(|E_w|=\sqrt{\frac{2n_0}{\epsilon_0}[k_BT_e(e^{e\phi_w/(k_BT_e)}-1)+m_iu_0(v_i(\phi_w)-u_0)]}\)。根号内由Bohm条件保证在物理鞘层支上非负。
+(4) 粒子通量 \(\mathcal J_i=n_iv_i=n_0u_0\) 不随位置改变，离子电流密度 \(j_i=en_0u_0\)。第一积分两侧单位均为能量密度 \(J/m^3\)，且 \(\phi\to0\) 时右侧常数和一次项均消失，二次项系数与第二问判据一致。总壁电流还需计入电子吸收；有限离子温度、碰撞、非Boltzmann电子会修正Bohm条件，不能将本式直接推广。

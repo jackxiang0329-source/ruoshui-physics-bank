@@ -1,0 +1,41 @@
+(1) 利用恒等式
+\[
+\boldsymbol S_1\cdot\boldsymbol S_2
+=\tfrac12(\boldsymbol S^2-\boldsymbol S_1^2-\boldsymbol S_2^2)
+\]
+与两个自旋角动量合成 $s=0,1$，得到能量
+\[
+E_s=\frac J2[0(0+1)-3/2]=-\frac{3J}{4},\quad
+E_t=\frac J2[1(1+1)-3/2]=\frac J4 .
+\]
+单重态为 $|s\rangle=(|\uparrow\downarrow\rangle-|\downarrow\uparrow\rangle)/\sqrt2$，非简并；三重态依次为 $|t_+\rangle=|\uparrow\uparrow\rangle$、$|t_0\rangle=(|\uparrow\downarrow\rangle+|\downarrow\uparrow\rangle)/\sqrt2$、$|t_-\rangle=|\downarrow\downarrow\rangle$，有三重简并。单、三重态能隙为 $J$。
+
+(2) 记 $\beta=1/(k_BT)$。配分函数
+\[
+Z=e^{-\beta E_s}+3e^{-\beta E_t}
+=e^{3\beta J/4}(1+3e^{-\beta J}).
+\]
+令 $p_t=3e^{-\beta J}/(1+3e^{-\beta J})$ 为三重态总体概率，则平均能量
+\[
+U=E_s+Jp_t=-\frac{3J}{4}+\frac{3Je^{-\beta J}}{1+3e^{-\beta J}}.
+\]
+因为 $U=(J/\hbar^2)\langle\boldsymbol S_1\cdot\boldsymbol S_2\rangle$，故
+\[
+\langle\boldsymbol S_1\cdot\boldsymbol S_2\rangle=\frac{\hbar^2}{J}U.
+\]
+零温为 $-3\hbar^2/4$，体现反铁磁关联。
+
+(3) 令 $x=J/(k_BT)$，由 $C=dU/dT$ 得
+\[
+C=k_Bx^2\frac{3e^{-x}}{(1+3e^{-x})^2}.
+\]
+低温 $x\to\infty$ 时 $C\sim3k_Bx^2e^{-x}\to0$；高温 $x\to0$ 时 $C\sim(3/16)k_Bx^2\to0$。能隙使低温难以激发三重态，高温的能量分配差异也逐渐饱和，因此中间出现 Schottky 型热容峰。高温时 $p_t\to3/4$，$U\to-3J/4+3J/4=0$，与四个态平均能量零相符。
+
+(4) 因 $J>0$，基态是唯一单重态。总密度算符 $\rho=|s\rangle\langle s|$ 是秩为1的纯态。对第二个自旋取偏迹：
+\[
+\rho_1=\operatorname{Tr}_2\rho
+=\frac12\left(|\uparrow\rangle\langle\uparrow|+
+|\downarrow\rangle\langle\downarrow|\right)
+=\frac12I_2.
+\]
+其冯诺依曼纠缠熵为 $S_{\rm ent}=-k_B\operatorname{Tr}(\rho_1\ln\rho_1)=k_B\ln2$。整体纯态中的量子相关导致子系统约化态混合；这不是整体体系具有热熵或与外界退相干的证据。

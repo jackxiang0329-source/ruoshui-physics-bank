@@ -1,0 +1,7 @@
+(1) 总态密度矩阵 \(|\Psi\rangle\langle\Psi|\) 对环境求偏迹，非对角元来自 \(\operatorname{Tr}_E(|e_0\rangle\langle e_1|)=\langle e_1|e_0\rangle=\gamma\)。因此 \(\rho_{\rm path}=\frac12\begin{pmatrix}1&e^{-i\phi}\gamma\\e^{i\phi}\gamma^*&1\end{pmatrix}\)。它的迹为1，行列式 \((1-|\gamma|^2)/4\ge0\)，符合正半定密度算符条件。环境内积不能被当作实数或自动设为1。
+
+(2) 把相位吸收进干涉项，平衡合束器后其中一个输出端投影到 \(|+\rangle=(|0\rangle+|1\rangle)/\sqrt2\)，概率 \(P_+=\langle+|\rho|+\rangle=[1+\operatorname{Re}(e^{-i\phi}\gamma)]/2\)，另一路 \(P_-=1-P_+\)。扫描 \(\phi\) 得最大、最小概率 \((1\pm|\gamma|)/2\)，故常规定义的条纹可见度 \(\mathcal V=(P_{\max}-P_{\min})/(P_{\max}+P_{\min})=|\gamma|\)。环境完全正交时干涉消失，但两路径先验仍等概率。
+
+(3) 路径密度矩阵的本征值 \(\lambda_\pm=(1\pm|\gamma|)/2\)。纯度 \(\operatorname{tr}\rho^2=(1+|\gamma|^2)/2\)，只有 \(|\gamma|=1\) 才为纯态；\(|\gamma|=0\) 时为最大混态 \(I/2\)。若整体态确为题设纯态，粒子与环境的纠缠熵等于 \(-k_B[\lambda_+\ln\lambda_++\lambda_-\ln\lambda_-]\)。因此可见度下降与环境携带哪些路径信息直接关联，不必诉诸宏观测量设备的实际读出。
+
+(4) 等先验二纯环境态的 Helstrom 最优区分成功率 \(P_{\rm guess}=[1+\sqrt{1-|\langle e_1|e_0\rangle|^2}]/2\)。定义路径可辨识度 \(\mathcal D=2P_{\rm guess}-1=\sqrt{1-|\gamma|^2}\)，所以 \(\mathcal V^2+\mathcal D^2=1\)。环境若含额外混态噪声，等式常变为不等式。选择性地测环境并按结果筛选或校正可恢复条件干涉，但不会让未筛选总概率违反该互补关系。

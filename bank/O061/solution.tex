@@ -1,0 +1,55 @@
+(1) 令 \(n_e\) 为有效激发态布居，速率方程
+\[
+\dot n_e=W_{\rm ex}(1-n_e)-(\Gamma+W_{\rm dep})n_e.
+\]
+稳态准确布居是 \(n_e=W_{\rm ex}/(\Gamma+W_{\rm dep}+W_{\rm ex})\)。在 \(W_0\ll\Gamma\) 下忽略分母的弱激发小项，探测自发辐射率约为
+\[
+\Gamma n_e(r)=W_0\frac{e^{-\alpha r^2}}{1+cr^2}.
+\]
+将中心亮度定义为 \(F_0=W_0\)，于是
+\[
+\boxed{\frac{F(r)}{F_0}=\frac{e^{-\alpha r^2}}{1+cr^2}}.
+\]
+耗尽光在中心为零，但外围受激跃迁增加，从而降低非中心荧光，不是增强了激发光的衍射分辨本领。模型要求弱激发、未发生不可逆光漂白及耗尽速率模型合理；真实光束在远离中心后不可能无限按 \(r^2\) 增长，本题是刻意定义的理想化数学模型。
+
+(2) 展开归一化对数亮度：
+\[
+\log(F/F_0)=-\alpha r^2-\log(1+cr^2)
+=-(\alpha+c)r^2+\tfrac12c^2r^4+O(r^6).
+\]
+匹配局部高斯 \(e^{-r^2/(2\sigma_{\rm eff}^2)}\)，得到
+\[
+\boxed{\sigma_{\rm eff}=\frac1{\sqrt{2(\alpha+c)}}=
+\frac{\sigma}{\sqrt{1+2c\sigma^2}}}.
+\]
+精确半高方程 \((1+cu)e^{\alpha u}=2\)，\(u=r_{1/2}^2\)。令 \(v=1+cu\)，则 \((\alpha v/c)e^{\alpha v/c}=(2\alpha/c)e^{\alpha/c}\)，于是
+\[
+\boxed{r_{1/2}^2=\frac1\alpha W_0\left(\frac{2\alpha}{c}e^{\alpha/c}\right)-\frac1c}.
+\]
+因为亮度函数对 \(r>0\) 严格单调递减，且从1趋于0，半高根唯一并取实主支。直接让 \(c\to0^+\) 回到 \(e^{-\alpha u}=1/2\)，给 \(r_{1/2}^2=\ln2/\alpha=2\sigma^2\ln2\)；避免在数值处理中把Lambert表达式里两个发散项分别舍入。
+
+(3) 令 \(u=r^2\)，得到
+\[
+N(c)=\pi F_0\int_0^\infty\frac{e^{-\alpha u}}{1+cu}du
+=\boxed{\frac{\pi F_0}{c}e^{\alpha/c}E_1(\alpha/c)},
+\]
+其中 \(E_1(t)=\int_t^\infty e^{-v}dv/v\)。无耗尽时 \(N(0)=\pi F_0/\alpha\)，故
+\[
+\boxed{\frac{N(c)}{N(0)}=\frac{\alpha}{c}e^{\alpha/c}E_1(\alpha/c)}.
+\]
+积分号内求导得到
+\(N'(c)=-\pi F_0\int_0^\infty u e^{-\alpha u}/(1+cu)^2du<0\)，因此耗尽越强，总检测信号越少。强耗尽时 \(t=\alpha/c\to0\)，
+\(E_1(t)=-\gamma_E-\ln t+O(t)\)，于是
+\[
+\frac{N(c)}{N(0)}=
+\frac{\alpha}{c}\left[\ln(c/\alpha)-\gamma_E+o(1)\right].
+\]
+这是光子收集比例的对数修正 \(O((\log c)/c)\)，并非完全守恒的空间重新分配。
+
+(4) 对固定采集时间、中心激发率，近轴宽度 \(\sigma_{\rm eff}\sim (2c)^{-1/2}\)；同时光子数比例仅为 \(\sim(\alpha/c)\log(c/\alpha)\)。若Poisson计数平均为 \(N\)，其标准差为 \(\sqrt N\)，相对噪声 \(1/\sqrt N\) 随耗尽而变大。具体地
+\[
+\frac{\sigma_{\rm eff}}{\sigma}\sim\sqrt{\frac{\alpha}{c}},\qquad
+\frac{\sqrt{N(c)}}{\sqrt{N(0)}}\sim
+\sqrt{\frac{\alpha}{c}\log(c/\alpha)}.
+\]
+作为启发式的理想定位尺度 \(\delta x\sim\sigma_{\rm eff}/\sqrt N\)，可能只剩极缓慢的 \(1/\sqrt{\log(c/\alpha)}\) 改善，但不能将这种尺度估计冒充严格Fisher信息或真实实验Cramér--Rao界。分子闪烁、背景、漂白、有限光功率、扫描配置和像素响应可能从根本上改变最优耗尽强度；因此PSF中心越窄并不意味着在相同预算下可无界提高可用定位精度。

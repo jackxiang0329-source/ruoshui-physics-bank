@@ -1,0 +1,40 @@
+(1) 线元 dz 上电压降低来自串联电阻和电感，电流降低来自电容位移电流与横向漏电导。在时域：
+\[
+\partial_zV=-R'I-L'\partial_tI,\qquad
+\partial_zI=-G'V-C'\partial_tV.
+\]
+以 \(e^{-i\omega t}\) 取复振幅，有
+\[
+V'=-(R'-i\omega L')I=-ZI,\quad
+I'=-(G'-i\omega C')V=-YV.
+\]
+再次求导得 \(V''=ZYV\)。设 \(V\propto e^{ikz}\)，则 \(-k^2=ZY\)，即 \(k^2=-(R'-i\omega L')(G'-i\omega C')\)。
+
+(2) 对向右衰减波，写 \(V(z)=V_0e^{-\gamma z}\)，传播常数
+\[
+\gamma=\sqrt{(R'-i\omega L')(G'-i\omega C')},\quad\Re\gamma>0,
+\]
+相应 \(k=i\gamma\)。由 \(V'=-ZI\) 得 \(I=\gamma V/Z\)，所以
+\[
+Z_c=\frac VI=\sqrt{\frac{R'-i\omega L'}{G'-i\omega C'}}.
+\]
+取平方根分支以确保在 R′,G′→0 时 \(Z_c\to\sqrt{L'/C'}>0\) 且功率向 +z 传播。
+
+(3) 平均有功功率定义 \(P(z)=\Re[VI^*]/2\)。利用方程求导：
+\[
+P'=\frac12\Re[V'I^*+V(I')^*]
+=-\frac12\big[R'|I|^2+G'|V|^2\big]\le0.
+\]
+这里纯虚感抗和容纳项的实部相消；右端恰是单位长度串联电阻的平均焦耳热与并联漏电导的平均耗散功率，不存在凭空的能量损失。
+
+(4) 低损条件 \(R'\ll\omega L'\)、\(G'\ll\omega C'\) 下，展开
+\[
+\gamma\simeq i(-\omega\sqrt{L'C'})
++\frac{R'}2\sqrt{\frac{C'}{L'}}
++\frac{G'}2\sqrt{\frac{L'}{C'}} .
+\]
+因此振幅衰减系数
+\[
+\alpha=\Re\gamma\simeq\frac{R'}{2Z_0}+\frac{G'Z_0}{2},\quad Z_0=\sqrt{L'/C'}.
+\]
+当 R′,G′→0，\(\alpha\to0\)、\(k\to\omega\sqrt{L'C'}\)、\(Z_c\to Z_0\)，恢复无损 TEM 传输线的传播与功率守恒。

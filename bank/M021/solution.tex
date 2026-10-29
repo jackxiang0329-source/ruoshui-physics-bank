@@ -1,0 +1,44 @@
+(1) 滑块速度为 $(\dot X+\dot s\cos\theta,-\dot s\sin\theta)$，所以
+\[
+\mathcal L=\frac{M+m}{2}\dot X^2+m\cos\theta\,\dot X\dot s+\frac m2\dot s^2
+-\frac k2s^2+mg s\sin\theta .
+\]
+$X$ 未显含于 $\mathcal L$，故水平动量
+\[
+P_X=(M+m)\dot X+m\cos\theta\,\dot s
+\]
+恒定；依初态有 $P_X=0$，因此 $\dot X=-m\cos\theta\,\dot s/(M+m)$。
+
+(2) 消去 $\dot X$ 后动能为 $T=\frac12m_{\rm eff}\dot s^2$，其中
+\[
+m_{\rm eff}=m\left(1-\frac{m\cos^2\theta}{M+m}\right)
+=\frac{m(M+m\sin^2\theta)}{M+m}>0.
+\]
+约化运动方程 $m_{\rm eff}\ddot s+ks=mg\sin\theta$，平衡位置 $s_{\rm eq}=mg\sin\theta/k$，角频率 $\omega=\sqrt{k/m_{\rm eff}}$。初始条件给
+\[
+s(t)=s_{\rm eq}+(s_0-s_{\rm eq})\cos\omega t,\quad
+X(t)=X_0-\frac{m\cos\theta}{M+m}[s(t)-s_0].
+\]
+楔块向左运动以平衡滑块向右的水平动量。
+
+(3) 因重力势能为 $-mg s\sin\theta$，总机械能化简为
+\[
+E=\frac12m_{\rm eff}\dot s^2+\frac k2(s-s_{\rm eq})^2-\frac k2s_{\rm eq}^2.
+\]
+对 $t$ 求导恰为 $\dot s(m_{\rm eff}\ddot s+k[s-s_{\rm eq}])=0$。当 $M\to\infty$，$m_{\rm eff}\to m,\ X(t)\to X_0$，恢复固定斜面上的单自由度弹簧振子；但当 $M$ 有限，直接把滑块惯性质量写成 $m$ 会遗漏楔块后坐。
+
+(4) 单位法向量取指向斜面外的 $\boldsymbol n=(\sin\theta,\cos\theta)$。滑块加速度是 $(\ddot X+\ddot s\cos\theta,-\ddot s\sin\theta)$，其法向投影为 $\ddot X\sin\theta$。因此
+\[
+N-mg\cos\theta=m\ddot X\sin\theta,\quad
+N=m[g\cos\theta+\ddot X\sin\theta].
+\]
+又 $\ddot X=-m\cos\theta\,\ddot s/(M+m)$、$\ddot s=-\omega^2(s_0-s_{\rm eq})\cos\omega t$，故
+\[
+N(t)=mg\cos\theta+
+\frac{m^2\sin\theta\cos\theta}{M+m}\omega^2(s_0-s_{\rm eq})\cos\omega t.
+\]
+对整个周期都保持接触的必要且充分（理想单侧法向模型）条件是
+\[
+g\cos\theta\ge\frac{m\sin\theta\cos\theta}{M+m}\omega^2|s_0-s_{\rm eq}|.
+\]
+若此条件不满足，部分时段出现负的形式法向反力，实际滑块会脱离斜面，约束运动解不再适用。

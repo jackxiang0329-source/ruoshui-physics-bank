@@ -1,0 +1,41 @@
+(1) 记 \(\Omega=\sqrt{\Omega_p^2+\Omega_s^2}\)。构造正交态
+\[
+|D\rangle=\frac{\Omega_s|1\rangle-\Omega_p|3\rangle}{\Omega},\qquad
+|B\rangle=\frac{\Omega_p|1\rangle+\Omega_s|3\rangle}{\Omega}.
+\]
+由两条耦合到 \(|2\rangle\) 的路径恰好相消，\(H|D\rangle=0\)。在 \((|B\rangle,|2\rangle)\) 子空间，哈密顿量为 \(\frac{\hbar}{2}\begin{psmallmatrix}0&\Omega\\\Omega&2\Delta\end{psmallmatrix}\)，故
+\[
+\boxed{E_D=0,\qquad E_\pm=\frac{\hbar}{2}\left(\Delta\pm\sqrt{\Delta^2+\Omega^2}\right)}.
+\]
+由于 \(\langle2|D\rangle=0\)，暗态的中间能级占据概率严格为零；这个结论在任意单光子失谐 \(\Delta\) 下成立，但依赖双光子共振和相干耦合。
+
+(2) 定义 \(\cos\theta=\Omega_s/\Omega,\ \sin\theta=\Omega_p/\Omega\)，则
+\[
+|D\rangle=\cos\theta|1\rangle-\sin\theta|3\rangle,\quad
+|B\rangle=\sin\theta|1\rangle+\cos\theta|3\rangle,\quad
+\frac{d}{dt}|D\rangle=-\dot\theta|B\rangle.
+\]
+因而非绝热耦合幅度为 \(|\langle B|\dot D\rangle|=|\dot\theta|\)。最近亮态相对零能暗态的角频率间隙为
+\[
+\boxed{g=\frac{\sqrt{\Delta^2+\Omega^2}-|\Delta|}{2}>0}.
+\]
+一个常用的保守绝热量级条件是整个脉冲交叠期间 \(|\dot\theta|\ll g\)，同时参数变化须足够平滑、无 \(\Omega=0\) 的简并穿越；更精确的跃迁幅度还取决于亮态在 \(|B\rangle\) 上的投影及边界平滑性。共振 \(\Delta=0\) 时 \(g=\Omega/2\)。
+
+(3) 在起始时刻令 \(\Omega_p/\Omega_s\to0\) 且 \(\Omega_s>0\)，于是 \(\theta\to0\)，\(|D\rangle\to|1\rangle\)。随后先衰减 Stokes 耦合并增强 pump 耦合，使末端 \(\Omega_s/\Omega_p\to0\)、\(\Omega_p>0\)，即 \(\theta\to\pi/2\)，于是 \(|D\rangle\to-|3\rangle\)。满足 (2) 的绝热条件时，态矢沿零能暗态演化；其动力学相位为零，理想情况下整个过程不占据 \(|2\rangle\)，可抑制该中间能级的自发辐射损失。由于耦合均取实数且规范连续，
+\[
+\mathcal A_\theta=i\langle D|\partial_\theta D\rangle=0.
+\]
+故此开路径在该实规范下无额外几何相位；末态的负号来自所选暗态连续规范，不是可单独测量的全局相位。
+
+(4) 在 \((|D\rangle,|B\rangle,|2\rangle)\) 基中，一阶对角矩阵元与暗亮混合为
+\[
+\boxed{\langle D|V|D\rangle=\hbar\delta\sin^2\theta},\qquad
+\boxed{\langle B|V|D\rangle=-\hbar\delta\sin\theta\cos\theta},\qquad
+\langle2|V|D\rangle=0.
+\]
+因此当两束脉冲同时非零且 \(\delta\ne0\) 时，原来的 \(|D\rangle\) 不再是精确本征态；一阶相位修正为 \(-\int\delta\sin^2\theta\,dt\)，并存在由非对角元诱导的亮态泄漏。若 \(|\Delta|\gg\Omega\)，将平方根展开得
+\[
+\boxed{g=\frac{\sqrt{\Delta^2+\Omega^2}-|\Delta|}{2}
+=\frac{\Omega^2}{4|\Delta|}+O\!\left(\frac{\Omega^4}{|\Delta|^3}\right)}.
+\]
+远离单光子共振虽可减小中间态瞬时激发，却会缩小绝热间隙，要求更慢的脉冲变化并使有限双光子失谐更具破坏性；仅凭 \(\Omega\) 大于 \(|\delta|\) 而不比较最小间隙并不足以保证高保真转移。

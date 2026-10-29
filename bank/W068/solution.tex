@@ -1,0 +1,26 @@
+(1) 局地Hamilton色散 \(\omega=c(z)\sqrt{k_x^2+k_z^2}\) 不显含水平 \(x\)，所以 \(k_x\) 沿射线守恒，\(\omega\) 在静止介质中也守恒。故水平慢度
+\[
+\boxed{p=k_x/\omega=\cos\theta/c(z)}
+\]
+不变。上行时 \(c(z)\) 随高度增大，\(\cos\theta=pc(z)\) 增大，\(\theta\) 减小，直到 \(\theta=0\) 在 \(c(z_t)=1/p\) 处转向；若该高度超出物理介质范围则没有实际转向。
+
+(2) 对上行支有 \(\tan\theta=dz/dx=\sqrt{1-p^2c^2}/(pc)\)，故
+\(dx/dz=pc(z)/\sqrt{1-p^2c(z)^2}\)。利用 \(dc/dz=\gamma\) 积分：
+\[
+x-x_0=\frac1{\gamma p}\left[\sqrt{1-p^2c(z_0)^2}-\sqrt{1-p^2c(z)^2}\right].
+\]
+取圆心横坐标 \(x_c=x_0+\sqrt{1-p^2c(z_0)^2}/(\gamma p)\)，整理得
+\[
+\boxed{\bigl[\gamma p(x-x_c)\bigr]^2+[p(c_0+\gamma z)]^2=1}.
+\]
+因为 \(z\) 仅作线性平移与尺度变换，真实 \(x,z\) 轨迹也是圆弧，半径 \(1/(\gamma p)\)，不是简单二次曲线。
+
+(3) 由传播速度沿光线大小为 \(c(z)\)，有 \(dt=dz/[c(z)\sin\theta]=dz/[c(z)\sqrt{1-p^2c(z)^2}]\)。令 \(u=pc(z)\)，得到
+\[
+t(z)-t(z_0)=\frac1\gamma\int_{u_0}^{u}\frac{du'}{u'\sqrt{1-u'^2}}
+=\frac1\gamma\ln\frac{u/(1+\sqrt{1-u^2})}{u_0/(1+\sqrt{1-u_0^2})}.
+\]
+上行至转向点 \(u=1\) 时，
+\(\boxed{t_t-t_0=\gamma^{-1}\ln[(1+\sqrt{1-u_0^2})/u_0]}\)，有限且为正。若错误把速度水平分量当成总声速，就得不到该正确积分。
+
+(4) 当 \(\gamma\to0\) 并保持起点局地发射角时，曲率半径 \(1/(\gamma p)\to\infty\)，有限路径段趋近直线，转向点可能远离区域。转向点有 \(\theta\to0\)，垂直群速 \(c\sin\theta\to0\) 且上行/下行支连续连接；这不意味着声能在该点永久停止。几何声学要求 \(\lambda\ll c/|\gamma|\) 并在转向点附近采用更精确的Airy型波动匹配，避免直接使用奇异的 \(dx/dz\) 或光线密度。

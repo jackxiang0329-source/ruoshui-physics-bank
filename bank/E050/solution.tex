@@ -1,0 +1,7 @@
+(1) 取半径 \(r\) 的同轴高斯面，轴向每单位长度自由电荷为 \(\lambda\)，故 \(D_r=\lambda/(2\pi r)\)。由线性本构关系 \(E_r=D_r/\varepsilon(r)=\lambda/[2\pi\varepsilon_0r(1+\alpha r/a)]\)。内外电势差 \(V=\varphi(a)-\varphi(b)=\int_a^bE_rdr\)，利用 \(1/[r(1+\alpha r/a)]=1/r-(\alpha/a)/(1+\alpha r/a)\)，得到 \(V=\lambda\ln[b(1+\alpha)/(a+\alpha b)]/(2\pi\varepsilon_0)\)。对于 \(b>a,\alpha>0\)，对数括号大于一，因此电容为正。
+
+(2) 单位长度电容 \(C'=\lambda/V=2\pi\varepsilon_0/\ln[b(1+\alpha)/(a+\alpha b)]\)，量纲为法拉每米。线性静电场能密度为 \(\mathbf E\cdot\mathbf D/2\)，故每单位长度总场能 \(U'=\int_a^b(1/2)E_rD_r\,2\pi r\,dr=\lambda^2\ln[b(1+\alpha)/(a+\alpha b)]/(4\pi\varepsilon_0)\)。因 \(V=\lambda/C'\)，这恰好是 \(\lambda V/2=\lambda^2/(2C')\)，避免了直接积分 \(\varepsilon E^2\) 时漏去圆柱雅可比 \(2\pi r\) 的错误。
+
+(3) 极化强度 \(P_r=(\varepsilon-\varepsilon_0)E_r=\lambda\alpha/[2\pi(a+\alpha r)]\)。柱坐标散度给 \(\rho_b=-r^{-1}d(rP_r)/dr=-\lambda\alpha a/[2\pi r(a+\alpha r)^2]\)。介质内侧外法向是 \(-\hat{\mathbf r}\)，因此 \(\sigma_b(a)=-\lambda\alpha/[2\pi a(1+\alpha)]\)；外侧是 \(+\hat{\mathbf r}\)，\(\sigma_b(b)=+\lambda\alpha/[2\pi(a+\alpha b)]\)。积分体电荷 \(\int_a^b\rho_b2\pi r\,dr\) 并加两端 \(\sigma_b 2\pi r\) 后为零：介质整体极化只重新分布束缚电荷，不产生净电荷。
+
+(4) 令 \(\alpha\to0\)，对数变为 \(\ln(b/a)\)，于是 \(C'\to2\pi\varepsilon_0/\ln(b/a)\)、\(E_r\to\lambda/(2\pi\varepsilon_0r)\)，束缚电荷消失。若 \(\lambda>0\)，极化 \(P_r>0\) 沿径向指向外，内侧表面负、外侧正，内部体束缚密度为负；这些符号与 \(-\nabla\cdot\mathbf P\) 相符。在自由 \(\lambda\) 固定时介电常数增加降低场强及电压，故与真空同轴电容器相比总电容增大、储能降低。

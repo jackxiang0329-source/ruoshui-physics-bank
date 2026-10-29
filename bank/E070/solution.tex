@@ -1,0 +1,23 @@
+(1) 由 \(\boldsymbol F=q(-\nabla\Phi+\boldsymbol v\times B\hat z)\)，有
+\[
+\ddot x=\tfrac12\omega_z^2x+\omega_c\dot y,\quad
+\ddot y=\tfrac12\omega_z^2y-\omega_c\dot x,\quad
+\ddot z=-\omega_z^2z.
+\]
+所以 \(z\) 为频率 \(\omega_z\) 的轴向谐振子；令 \(u=x+iy\)，得到
+\(\ddot u+i\omega_c\dot u-\omega_z^2u/2=0\)，与有时变四极射频场的Paul阱是不同的静态电磁囚禁机制。
+
+(2) 代入 \(u=Ae^{-i\omega t}\)，得到特征方程
+\(\omega^2-\omega_c\omega+\omega_z^2/2=0\)。因此
+\[
+\boxed{\omega_\pm=\frac{\omega_c\pm\sqrt{\omega_c^2-2\omega_z^2}}2}.
+\]
+在 \(\omega_c^2>2\omega_z^2\) 时两频率实且不同，所有径向初值的线性组合有界；和为 \(\omega_++\omega_-=\omega_c\)，积为 \(\omega_+\omega_-=\omega_z^2/2\)。若判别式为负，则出现指数增益的径向失稳。
+
+(3) 对 \(|u|=A\) 的纯模，速度大小为 \(\omega A\)，径向电势能为 \(-m\omega_z^2A^2/4\)，所以
+\[
+E_r=\frac m2\left(\omega^2-\frac{\omega_z^2}{2}\right)A^2.
+\]
+利用 \(\omega_z^2/2=\omega(\omega_c-\omega)\)，可写 \(E_r=\frac m2\omega(2\omega-\omega_c)A^2\)。高频 \(\omega_+>\omega_c/2\) 为正能，低频 \(\omega_-<\omega_c/2\) 为负能。这不违背磁场不做功，因 \(q\boldsymbol v\cdot(\boldsymbol v\times\boldsymbol B)=0\)；静电四极势对径向本就非正定，动态稳定不要求该能量正定。
+
+(4) 当 \(\omega_c\gg\omega_z\)，展开根式得 \(\omega_+\simeq\omega_c-\omega_z^2/(2\omega_c)\)、\(\omega_-\simeq\omega_z^2/(2\omega_c)\)，分别是修正回旋与慢磁控漂移。临界 \(\omega_c^2=2\omega_z^2\) 时两个根重合，特征微分方程通常出现 \(t e^{-i\omega_ct/2}\) 的Jordan伴随解，故有些非零初值线性增大而非严格有界，真正普遍有界需要严格不等式。

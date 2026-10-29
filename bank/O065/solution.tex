@@ -1,0 +1,22 @@
+(1) 令 \(E=F(r)e^{im\varphi+ik_zz}\)，代入Helmholtz方程得
+\(r^2F''+rF'+(k_\perp^2r^2-m^2)F=0\)。轴上正则解为 \(F=E_0J_m(k_\perp r)\)，舍去奇异 \(Y_m\)。故
+\[
+\boxed{E_m=E_0J_m(k_\perp r)e^{im\varphi+ik_zz}}.
+\]
+Jacobi–Anger展开给出锥形角谱
+\(E_m=E_0i^{-m}(2\pi)^{-1}\int_0^{2\pi}e^{ik_\perp r\cos(\theta-\varphi)+ik_zz+im\theta}d\theta\)，每个平面波的传播锥角满足 \(\tan\theta_0=k_\perp/k_z\)。
+
+(2) 轴向相位速度 \(v_{\rm ph,z}=\omega/k_z\) 可以大于介质相速度 \(\omega/k\)，但并非信息速度。平均标量流方向与 \(\operatorname{Im}(E^*\nabla E)\) 同向，径向平均分量为零，轴向分量 \(\propto k_z|E|^2\)，角向分量 \(\propto m|E|^2/r\)。\(m=0\) 时 \(J_0(0)=1\) 有亮轴心；\(|m|\ge1\) 时 \(J_m(0)=0\)，绕轴一圈相位增加 \(2\pi m\)，是光学涡旋暗核。
+
+(3) 固定 \(m\) 且 \(k_\perp r\gg1\)，
+\[
+J_m(k_\perp r)\sim\sqrt{\frac2{\pi k_\perp r}}
+\cos(k_\perp r-m\pi/2-\pi/4).
+\]
+横向功率积分 \(\int_0^\infty|E|^2r\,dr\) 的被积函数远区平均趋非零常数，故积分线性发散。理想无衍射Bessel模不是平方可积的有限能量场；真实有限能量实现只能截断角谱或孔径，在有限传播距离近似维持场形。
+
+(4) 锥角射线从孔径边缘到轴的距离
+\[
+\boxed{z_{\max}\simeq R/\tan\theta_0=Rk_z/k_\perp}.
+\]
+此为 \(Rk_\perp\gg1\) 下的几何光学估计，边缘衍射和旁瓣会缩短实际可用区。\(k_\perp\to0\) 时理想 \(m=0\) 场趋平面波，但有限孔径仍有远场衍射，不能以 \(z_{\max}\to\infty\) 宣称永久无衍射；\(k_z\to0\) 时几乎横向传播，轴向无衍射区趋零。

@@ -1,0 +1,25 @@
+(1) 普通格点满足 $m\ddot u_n=k(u_{n+1}-2u_n+u_{n-1})$。代入 $e^{i(qna-\omega t)}$ 得
+\[
+\omega^2(q)=\frac{4k}{m}\sin^2(qa/2),\qquad 0\le\omega\le 2\sqrt{k/m}.
+\]
+区边界振动呈相邻格点反相。
+
+(2) 令 $u_n=A(-1)^n e^{-\lambda|n|}e^{-i\omega t}$。对 $|n|\ge1$，有 $u_{n+1}+u_{n-1}=-2\cosh\lambda\,u_n$，故
+\[
+m\omega^2=2k(1+\cosh\lambda)=4k\cosh^2(\lambda/2).
+\]
+因 $\lambda>0$，该频率严格高于主体最高传播频率，这正是无辐射束缚模得以指数衰减的条件。
+
+(3) 在 $n=0$ 处，左右两邻点均为 $-Ae^{-\lambda}$，所以
+\[
+M\omega^2=2k(1+e^{-\lambda}).
+\]
+两式联立并令 $t=e^{-\lambda}$，得到 $M/m=2t/(1+t)$，从而
+\[
+e^{-\lambda}=\frac M{2m-M}\in(0,1),\quad
+\lambda=\ln\frac{2m-M}{M},\quad
+\omega^2=\frac{4km}{M(2m-M)}.
+\]
+由于 $M(2m-M)<m^2$ 对 $0<M<m$ 严格成立，$\omega>2\sqrt{k/m}$，证实这是频带外的局域模。
+
+(4) $M\to m^-$ 时 $\lambda\to0^+$，局域长度 $\ell_{\rm loc}\sim a/\lambda\to\infty$，频率趋于带边 $2\sqrt{k/m}$；$M\to0^+$ 时 $\lambda\to\infty$，振动集中在缺陷点，$\omega^2\sim2k/M$。若 $M\ge m$，同一公式不再给出 $0<t<1$，故这种交替符号、高于频带的局域解不存在；这并不排除其他复杂缺陷在不同结构中产生不同类型的局域态。

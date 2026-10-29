@@ -1,0 +1,28 @@
+(1) 任意 $a<r<b$ 的同心球高斯面包围自由电荷为 $Q$，故
+\[
+D_r(r)=\frac{Q}{4\pi r^2},\qquad E_i(r)=\frac{Q}{4\pi\epsilon_i r^2}\quad (i=1,2).
+\]
+两导体电势差为
+\[
+V=\int_a^bE_r\,dr
+=\frac{Q}{4\pi}\left[\frac1{\epsilon_1}\left(\frac1a-\frac1c\right)+\frac1{\epsilon_2}\left(\frac1c-\frac1b\right)\right].
+\]
+设括号内为 $H>0$，则 $V=QH/(4\pi)$。
+
+(2) 电容 $C=Q/V=4\pi/H$。从能量密度积分：
+\[
+U=\frac12\int_{a<r<b}\boldsymbol E\cdot\boldsymbol D\,d^3r
+=\frac{Q^2}{8\pi}\left[\frac1{\epsilon_1}\left(\frac1a-\frac1c\right)+\frac1{\epsilon_2}\left(\frac1c-\frac1b\right)\right]
+=\frac{Q^2}{2C}.
+\]
+球面绝缘层之间的径向电势降是串联叠加，不应把电容简单相加。
+
+(3) 每层线性介质的极化强度为 $\boldsymbol P_i=(\epsilon_i-\epsilon_0)\boldsymbol E_i=\chi_i Q\hat{\boldsymbol r}/(4\pi r^2)$，其中 $\chi_i=1-\epsilon_0/\epsilon_i$。体束缚电荷 $-\nabla\cdot\boldsymbol P_i=0$。介质法向在内边界指向 $-\hat r$、外边界指向 $+\hat r$，因此
+\[
+\sigma_b(a)=-\frac{\chi_1Q}{4\pi a^2},\quad
+\sigma_b(c)=\frac{(\chi_1-\chi_2)Q}{4\pi c^2},\quad
+\sigma_b(b)=\frac{\chi_2Q}{4\pi b^2}.
+\]
+对三个界面分别乘以 $4\pi r^2$，束缚电荷总和 $-\chi_1Q+(\chi_1-\chi_2)Q+\chi_2Q=0$，证明一致性。
+
+(4) $\epsilon_1=\epsilon_2=\epsilon$ 时 $H=(1/\epsilon)(1/a-1/b)$，故 $C=4\pi\epsilon ab/(b-a)$。若 $c\to a^+$，第一介质层消失，$H\to(1/\epsilon_2)(1/a-1/b)$。在 $r=c$ 处因没有自由面电荷而 $D_r$ 连续，但 $E_r=D_r/\epsilon_i$ 可发生有限跳跃，这是材料边界条件而非高斯定律失效。

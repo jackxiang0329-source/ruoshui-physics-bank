@@ -1,0 +1,24 @@
+(1) $E>V_0$ 时定义 $k_1=\sqrt{2mE}/\hbar$、$k_2=\sqrt{2m(E-V_0)}/\hbar$，写
+\[
+\psi_I=e^{ik_1x}+r e^{-ik_1x},\qquad \psi_{II}=t e^{ik_2x}.
+\]
+两区质量相同且势有限，在 $x=0$ 满足 $1+r=t$、$k_1(1-r)=k_2t$，故
+\[
+r=\frac{k_1-k_2}{k_1+k_2},\qquad t=\frac{2k_1}{k_1+k_2}.
+\]
+概率流 $j=(\hbar/m)\Im(\psi^*\psi')$，对应
+\[
+R=|r|^2,\qquad T=\frac{k_2}{k_1}|t|^2
+=\frac{4k_1k_2}{(k_1+k_2)^2}.
+\]
+
+(2) $R+T=[(k_1-k_2)^2+4k_1k_2]/(k_1+k_2)^2=1$。传输流量除了振幅还与群速度 $v=\hbar k/m$ 成正比，故不能直接将 $|t|^2$ 称为透射概率。边界波函数连续不意味着流速相同，但流量守恒。
+
+(3) 当 $0<E<V_0$，定义 $\kappa=\sqrt{2m(V_0-E)}/\hbar$，区域II中物理解为 $\psi_{II}=t e^{-\kappa x}$，渗透深度为 $1/\kappa$。在连续条件中置 $k_2=i\kappa$，得到
+\[
+r=\frac{k_1-i\kappa}{k_1+i\kappa}
+=\exp[-2i\arctan(\kappa/k_1)],\quad t=\frac{2k_1}{k_1+i\kappa}.
+\]
+因此 $|r|=1$，$j_{II}=0$，因为 $\psi_{II}^*\psi_{II}'$ 为实数。倏逝振幅非零不表示有穿过无限厚禁阻半空间的平均粒子通量。
+
+(4) $E\to V_0^+$ 时 $k_2\to0$，所以 $R\to1,\ T\to0$；$E\to V_0^-$ 时 $\kappa\to0$，$r\to1$，边界处同样反射完全。严格等能量时线性解的有界分支是常数，流为零。$V_0\to0^+$ 且固定 $E$ 时 $k_2\to k_1$，$r\to0,\ t\to1,\ R\to0,\ T\to1$，与自由传播吻合。

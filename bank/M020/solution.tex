@@ -1,0 +1,41 @@
+(1) 设转动矢量 $\boldsymbol\Omega=\Omega\hat{\boldsymbol z}$，惯性系位置与旋转系分量的几何关系为 $\boldsymbol r=R(\Omega t)\boldsymbol r'$。两次对时间求导得
+\[
+\boldsymbol a_{\rm in}=R(\Omega t)[\ddot{\boldsymbol r}'+2\boldsymbol\Omega\times\dot{\boldsymbol r}'+\boldsymbol\Omega\times(\boldsymbol\Omega\times\boldsymbol r')].
+\]
+由于弹簧力是中心力，旋转系满足
+\[
+\ddot{\boldsymbol r}'+2\boldsymbol\Omega\times\dot{\boldsymbol r}'+(\omega_0^2-\Omega^2)\boldsymbol r'=0.
+\]
+因此科里奥利力为 $-2m\boldsymbol\Omega\times\dot{\boldsymbol r}'$、离心力为 $+m\Omega^2\boldsymbol r'$。
+
+(2) 令 $z'=x'+iy'$，平面叉乘 $\hat z\times\boldsymbol r'$ 对应乘以 $i$，故
+\[
+\ddot z'+2i\Omega\dot z'+(\omega_0^2-\Omega^2)z'=0.
+\]
+取解 $e^{i\nu t}$，特征方程 $-\nu^2-2\Omega\nu+\omega_0^2-\Omega^2=0$，于是 $\nu=-\Omega\pm\omega_0$。因此
+\[
+z'(t)=A e^{i(\omega_0-\Omega)t}+B e^{-i(\omega_0+\Omega)t}.
+\]
+常数 $A,B$ 为任意复数，代表相反圆极化及不同复振幅；两个有符号频率不能仅取绝对值后丢掉传播方向。
+
+(3) 在 $t=0$ 旋转系初位置 $z'(0)=a$；旋转坐标速度与惯性速度之差为 $-\boldsymbol\Omega\times\boldsymbol r$，故 $\dot z'(0)=i(v-\Omega a)$。联立得
+\[
+A=\frac12\left(a+\frac{v}{\omega_0}\right),\qquad
+B=\frac12\left(a-\frac{v}{\omega_0}\right).
+\]
+乘回 $e^{i\Omega t}$ 恢复惯性系
+\[
+z(t)=a\cos(\omega_0t)+i\frac v{\omega_0}\sin(\omega_0t).
+\]
+所以真实轨道是以原点为中心的椭圆（退化参数允许直线或圆），不因观察者旋转改变。
+
+(4) 取旋转系速度平方 $|\dot{\boldsymbol r}'|^2$，对运动方程点乘 $\dot{\boldsymbol r}'$，科里奥利项始终不做功，故
+\[
+E_J=\frac m2|\dot{\boldsymbol r}'|^2+\frac m2(\omega_0^2-\Omega^2)|\boldsymbol r'|^2
+\]
+守恒。利用 $\boldsymbol v_{\rm in}=R(\dot{\boldsymbol r}'+\boldsymbol\Omega\times\boldsymbol r')$ 展开，可得
+\[
+E_J=E_{\rm in}-\Omega L_z,\qquad
+E_{\rm in}=\tfrac m2|\boldsymbol v_{\rm in}|^2+\tfrac k2r^2.
+\]
+二者因中心力分别守恒。在 $\Omega=\omega_0$ 时一个旋转模态频率为零，仅说明该圆运动在共转坐标中静止；惯性系弹簧势仍正定且全部运动有界，不存在动力学不稳定。

@@ -1,0 +1,25 @@
+(1) 机械能是 \(E=m\ell^2\dot\theta^2/2+mg\ell(1-\cos\theta)\)。初始静止于 θ₀，故
+\[
+\dot\theta^2=\frac{2g}{\ell}(\cos\theta-\cos\theta_0)
+=\frac{4g}{\ell}\left[\sin^2(\theta_0/2)-\sin^2(\theta/2)\right].
+\]
+令 \(k=\sin(\theta_0/2)\in(0,1)\)。
+
+(2) 一个周期中有四段关于平衡点对称的相同时间。对一个四分之一周期积分并作 \(\sin(\theta/2)=k\sin\varphi\) 的代换，则角度微分与角速度中的 \(k\cos\varphi\) 因子相消，得到
+\[
+T=4\sqrt{\frac\ell g}K(k),\qquad
+K(k)=\int_0^{\pi/2}\frac{d\varphi}{\sqrt{1-k^2\sin^2\varphi}}.
+\]
+它是第一类完全椭圆积分，不应与普通椭圆周长混淆。
+
+(3) 小 k 时积分核展开为 \(1+\frac12k^2\sin^2\varphi+O(k^4)\)。积分 \(\int_0^{\pi/2}\sin^2\varphi\,d\varphi=\pi/4\)，故 \(K(k)=\frac\pi2(1+k^2/4+O(k^4))\)。因为 \(k^2=\theta_0^2/4+O(\theta_0^4)\)，
+\[
+T=2\pi\sqrt{\ell/g}\left[1+\frac{\theta_0^2}{16}+O(\theta_0^4)\right].
+\]
+实际有限幅度周期较小角周期长，修正项正值。
+
+(4) 当 θ₀→π⁻ 时 \(k\to1^-\)，完全椭圆积分满足 \(K(k)\sim\ln[4/\sqrt{1-k^2}]\)。又 \(\sqrt{1-k^2}=\cos(\theta_0/2)\sim(\pi-\theta_0)/2\)，所以
+\[
+T\sim4\sqrt{\ell/g}\ln\frac8{\pi-\theta_0}\to\infty.
+\]
+靠近倒立不稳定平衡时，重力力矩几乎为零，质点需要极长时间离开其邻域，导致分离轨道周期发散。

@@ -1,0 +1,23 @@
+(1) 定义 \(x=\Theta_r/T\)，配分函数为
+\[
+Z_{\rm rot}=\sum_{J=0}^\infty(2J+1)e^{-xJ(J+1)}.
+\]
+因转动能级随 J² 增大，任何正 T 下级数收敛，J=0 基态能量取零。
+
+(2) 低温 \(x\gg1\) 时仅 J=0 与 J=1 显著占据，后者能量为 \(2k_B\Theta_r\)、简并3，故
+\[
+Z\simeq1+3e^{-2x},\quad
+U\simeq6k_B\Theta_r e^{-2x},
+\quad
+C\simeq12k_Bx^2e^{-2x}.
+\]
+严格领先热容由 \(d e^{-2x}/dT=2x e^{-2x}/T\) 得到，低温指数趋零。
+
+(3) 在 \(x\ll1\) 时以积分代替求和，
+\[
+Z\simeq\int_0^\infty(2J+1)e^{-xJ(J+1)}dJ
+=\int_0^\infty e^{-xy}dy=1/x=T/\Theta_r.
+\]
+其中 y=J(J+1)。因此 \(U=-\partial_\beta\ln Z\simeq k_BT\)。
+
+(4) 高温 \(C=dU/dT\to k_B\)（单个双原子转子），对应经典两转动自由度各贡献 \(k_B/2\) 平均能量。低温时 J=0 与 J=1 间存在有限能隙，热能不足以显著激发转动，热容趋零而非一直保持经典常数。

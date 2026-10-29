@@ -1,0 +1,33 @@
+(1) 旋度形式的安培定律为 $\nabla\times\boldsymbol B=\mu\boldsymbol J=\mu\sigma\boldsymbol E$，结合 $\nabla\times\boldsymbol E=-\partial_t\boldsymbol B$ 与 $\nabla\cdot\boldsymbol B=0$：
+\[
+-\nabla^2\boldsymbol B=-\mu\sigma\partial_t\boldsymbol B,\quad
+\partial_t\boldsymbol B=\frac1{\mu\sigma}\nabla^2\boldsymbol B.
+\]
+本题即 $\partial_t B_z=(\mu\sigma)^{-1}\partial_x^2B_z$。
+
+(2) 以 $e^{i\omega t}$ 为时间相位，令 $\tilde B=B_0e^{-qx}$，则 $q^2=i\omega\mu\sigma$，取实部为正的根
+\[
+q=\frac{1+i}{\delta},\qquad \delta=\sqrt{\frac2{\omega\mu\sigma}}.
+\]
+由 $\boldsymbol J=(\nabla\times\boldsymbol B)/\mu$，$J_y=-\partial_xB_z/\mu$，故
+\[
+\tilde B_z=B_0e^{-(1+i)x/\delta},\quad
+\tilde J_y=\frac q\mu B_0e^{-qx},\quad
+\tilde E_y=\frac q{\mu\sigma}B_0e^{-qx}.
+\]
+法拉第定律给 $\partial_xE_y=-\partial_tB_z$，与 $q^2=i\omega\mu\sigma$ 一致。
+
+(3) 单位面积平均耗散 $\overline P/A=\int_0^\infty\sigma\langle E_y^2\rangle dx$，谐波平均平方为模平方一半，
+\[
+\frac{\overline P}{A}=\frac{\sigma}{2}\int_0^\infty
+\frac{|q|^2B_0^2}{\mu^2\sigma^2}e^{-2x/\delta}dx
+=\frac{B_0^2}{2\mu^2\sigma\delta}.
+\]
+因为 $|q|^2=2/\delta^2$ 与 $\int_0^\infty e^{-2x/\delta}dx=\delta/2$，中间系数可独立核验。
+
+(4) 坡印廷矢量 $\boldsymbol S=\boldsymbol E\times\boldsymbol H$，$E_y\hat y\times B_z\hat z/\mu$ 沿 $+x$。界面平均功率流为
+\[
+\langle S_x(0)\rangle=\frac1{2\mu}\Re(\tilde E_y(0)\tilde B_z(0)^*)
+=\frac{B_0^2}{2\mu^2\sigma\delta},
+\]
+与焦耳热完全一致。固定边界磁场幅值 $B_0$ 时 $\delta\propto\omega^{-1/2}$、平均功率密度 $\propto\sqrt\omega$，即高频皮肤效应更显著；位移电流不能忽略时需恢复完整麦克斯韦方程。

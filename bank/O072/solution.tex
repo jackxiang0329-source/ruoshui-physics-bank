@@ -1,0 +1,21 @@
+(1) 记 \(\Psi=(A,B)^T\)，则 \(\Psi'=M\Psi\)，
+\[
+M=\begin{pmatrix}i\delta&i\kappa\\-i\kappa&-i\delta\end{pmatrix},
+\qquad M^2=(\kappa^2-\delta^2)I=s^2I.
+\]
+本征指数为 \(\pm s\)。当 \(|\delta|<\kappa\) 时 \(s>0\) 为实数，内部有指数增长与衰减的耦合模（有限光栅为高反射禁带）；当 \(|\delta|>\kappa\) 时 \(s=iq,\ q=\sqrt{\delta^2-\kappa^2}\)，两模振荡传播。
+(2) 矩阵指数 \(e^{ML}=CI+SM\)，其中 \(C=\cosh(sL)\)、\(S=\sinh(sL)/s\)（\(s=0\) 取 \(S=L\)）。由 \(B(L)=-i\kappa S+(C-i\delta S)r=0\) 得
+\[
+r=\frac{i\kappa S}{C-i\delta S}.
+\]
+再由 \(\det e^{ML}=e^{L\operatorname{tr}M}=1\)，消去 \(r\) 得 \(t=(C-i\delta S)^{-1}\)。对实 \(\delta,\kappa,L\)，\(C,S\) 均为实，且 \(C^2-s^2S^2=1\)，故 \(C^2+\delta^2S^2=1+\kappa^2S^2\)。于是
+\[
+R=\frac{\kappa^2S^2}{1+\kappa^2S^2},\qquad T=\frac1{1+\kappa^2S^2},\qquad R+T=1.
+\]
+(3) 在 \(\delta=0\) 时 \(C=\cosh(\kappa L)\)、\(S=\sinh(\kappa L)/\kappa\)，所以 \(R=\tanh^2(\kappa L)\)、\(T={\rm sech}^2(\kappa L)\)。在边缘 \(s\to0\) 时 \(C\to1,S\to L\)，得到 \(R=\kappa^2L^2/(1+\kappa^2L^2)\)。禁带外 \(S=\sin(qL)/q\)，故 \(qL=n\pi\)（正整数 \(n\)）时 \(r=0,|t|=1\)，为有限光栅Fabry型完全透射。
+(4) 因 \(t=1/(C-i\delta S)\)，在中心点 \(\varphi_t=\arctan(\delta S/C)\)，且 \(C,S\) 对 \(\delta\) 为偶函数，故
+\[
+\left.\frac{d\varphi_t}{d\delta}\right|_0=\frac{\tanh(\kappa L)}{\kappa},\qquad
+\tau_g=\frac{d\delta}{d\omega}\frac{\tanh(\kappa L)}{\kappa}.
+\]
+若 \(d\delta/d\omega=n_g/c>0\)，短光栅 \(\kappa L\ll1\) 时 \(\tau_g\simeq n_gL/c\)，长光栅时趋于 \(n_g/(c\kappa)\)。这只是选定包络相位参考下的透射群延迟，强反射造成的脉冲重整形不能突破前沿因果传播速度。

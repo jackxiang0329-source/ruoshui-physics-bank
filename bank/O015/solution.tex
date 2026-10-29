@@ -1,0 +1,22 @@
+(1) Jones 作用直接给
+\[
+\boldsymbol E_{\rm out}=J\boldsymbol E_{\rm in}
+=(\cos\theta,i\sin\theta)^T.
+\]
+相对相位为 $+\pi/2$（在给定相位惯例下）。光波片未吸收能量，$|\cos\theta|^2+|i\sin\theta|^2=1$。
+
+(2) 输出实电场分量为 $E_x(t)=\cos\theta\cos\omega t$、$E_y(t)=\sin\theta\sin\omega t$，因为 $\Re[i e^{-i\omega t}]=\sin\omega t$。故轨迹满足
+\[
+\frac{E_x^2}{\cos^2\theta}+\frac{E_y^2}{\sin^2\theta}=1
+\]
+（两轴非零时），为与 $x,y$ 对齐的椭圆，半轴绝对值分别为 $|\cos\theta|,|\sin\theta|$。当 $|\cos\theta|=|\sin\theta|=1/\sqrt2$ 时为圆偏振；当 $\sin\theta=0$ 或 $\cos\theta=0$ 时退化为沿单一轴的线偏振，无法形成一般方向的线偏振，因为两个非零分量相差 $\pi/2$。
+
+(3) 分析器透射方向单位 Jones 向量为 $\boldsymbol a=(\cos\alpha,\sin\alpha)^T$。投影复振幅为 $\boldsymbol a^\dagger\boldsymbol E_{\rm out}=\cos\alpha\cos\theta+i\sin\alpha\sin\theta$，故
+\[
+I_{\rm tr}/I_{\rm in}
+=|\boldsymbol a^\dagger\boldsymbol E_{\rm out}|^2
+=\cos^2\alpha\cos^2\theta+\sin^2\alpha\sin^2\theta.
+\]
+交叉项因 $\pi/2$ 相位差为纯虚而消失，不应误写成普通线偏振的 $\cos^2(\alpha-\theta)$。
+
+(4) 当 $\theta=\pi/4$，上式化为 $(\cos^2\alpha+\sin^2\alpha)/2=1/2$。圆偏振和完全不偏振光在单个线偏振分析器的旋转强度实验中都不随 $\alpha$ 改变，但前者 Jones 态仍纯且各方向的相位相关性确定，可用相位延迟器组合进一步区分。

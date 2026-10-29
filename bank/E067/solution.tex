@@ -1,0 +1,37 @@
+(1) 净离子电荷密度 \(\rho_e=e(n_+-n_-)=-2en_\infty\sinh\psi\)，Poisson方程 \(\varepsilon\phi''=-\rho_e\) 化为
+\[
+\boxed{\psi''=\kappa^2\sinh\psi}.
+\]
+两边乘 \(\psi'\) 并利用远场 \(\psi,\psi'\to0\)，得到
+\((\psi')^2=2\kappa^2(\cosh\psi-1)=4\kappa^2\sinh^2(\psi/2)\)。
+因 \(\psi_0>0\) 且趋向零，必须选择 \(\psi'=-2\kappa\sinh(\psi/2)<0\)。
+
+(2) 分离变量积分 \(\int d\psi/[2\sinh(\psi/2)]=-\kappa x+\mathrm{const}\)，由边界值得
+\[
+\boxed{\tanh\frac{\psi(x)}4=\tanh\frac{\psi_0}4e^{-\kappa x}}.
+\]
+远区 \(\psi(x)\sim4\tanh(\psi_0/4)e^{-\kappa x}\)。弱电势 \(|\psi_0|\ll1\) 时 \(\tanh(\psi_0/4)\simeq\psi_0/4\)，恢复线性Debye–Hückel剖面 \(\psi(x)\simeq\psi_0e^{-\kappa x}\)，但强电势下近壁衰减并非单纯指数。
+
+(3) 表面自由电荷密度为 \(\sigma=-\varepsilon\phi'(0)\)，令热电压 \(V_T=k_BT/e\)，由第一积分
+\[
+\boxed{\sigma=2\varepsilon\kappa V_T\sinh(\psi_0/2)}.
+\]
+微分电容每单位面积
+\[
+\boxed{C_d=d\sigma/d\phi_0=\varepsilon\kappa\cosh(\psi_0/2)}.
+\]
+弱场 \(C_d\to\varepsilon\kappa\)，高电势则指数增加，这是理想点离子Poisson–Boltzmann模型的预测；实际高浓度需考虑有限离子尺寸和相关效应。
+
+(4) 相对于远场的理想离子渗透压超额为
+\(\Delta\Pi=k_BT(n_++n_--2n_\infty)=2n_\infty k_BT(\cosh\psi-1)\)。
+Maxwell法向应力幅值
+\[
+\varepsilon E^2/2=\varepsilon V_T^2(\psi')^2/2
+=\varepsilon\kappa^2V_T^2(\cosh\psi-1)=\Delta\Pi,
+\]
+恰与渗透压梯度平衡。准静态从零电势充电的单位面积储能（固定电荷做功）为
+\[
+\boxed{W/A=\int_0^{\phi_0}\sigma(\phi)\,d\phi
+=4\varepsilon\kappa V_T^2[\cosh(\psi_0/2)-1]}.
+\]
+固定电势电源下需减去电源功作Legendre变换，不能把同一正值误作电源控制下的自由能。

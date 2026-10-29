@@ -1,0 +1,19 @@
+(1) 设 \(y=\Re[Y(x)e^{-i\omega t}]\)，代入得 Sturm–Liouville 形式
+\[
+[T(x)Y'(x)]'+\mu\omega^2Y(x)=0.
+\]
+若 T 常量，则 \(Y''+k^2Y=0,k=\omega\sqrt{\mu/T}\)。
+
+(2) WKB 假设张力相对变化缓慢，取 \(Y=A(x)e^{i\int^x k(s)ds}\)。忽略 \(A''\) 及张力的二阶慢变量，领先阶给 \(k^2=\mu\omega^2/T\)，下一阶由通量条件确定 A。
+
+(3) 行波平均机械能流 \(P=-T\overline{y_t y_x}\simeq T\omega k|A|^2/2\)，无阻尼且没有反射时 P 常数。因为 \(Tk=\omega\sqrt{\mu T}\)，故
+\[
+|A(x)|^2\sqrt{T(x)}=\mathrm{const},\qquad
+A(x)\propto T(x)^{-1/4}.
+\]
+因此前进波可近似写为
+\[
+Y(x)\simeq C T(x)^{-1/4}\exp\!\left(i\int^x\omega\sqrt{\mu/T(s)}\,ds\right).
+\]
+
+(4) 局域波长 \(2\pi/k\)，要求 \(|k'|\ll k^2\) 及 \(|T'/T|\ll k\) 等，使每波长材料变化很小。若 T 恒定，则 \(A\) 恒定、相位线性 \(kx\)，恢复普通无损弦行波。

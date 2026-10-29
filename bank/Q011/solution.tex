@@ -1,0 +1,30 @@
+(1) 写 $H=\hbar(\Omega\sigma_x+\Delta\sigma_z)/2$。因泡利矩阵反对易且 $\sigma_x^2=\sigma_z^2=I$，
+\[
+H^2=\frac{\hbar^2}{4}(\Omega^2+\Delta^2)I.
+\]
+设 $\Omega_R=\sqrt{\Omega^2+\Delta^2}$，本征能量是 $\pm\hbar\Omega_R/2$；哈密顿量厄米，可选正交归一本征基。直接按偶、奇次幂展开矩阵指数给
+\[
+U(t)=e^{-iHt/\hbar}=\cos\frac{\Omega_R t}{2}\,I-
+i\sin\frac{\Omega_R t}{2}\frac{\Omega\sigma_x+\Delta\sigma_z}{\Omega_R}.
+\]
+由于 $\frac{\Omega\sigma_x+\Delta\sigma_z}{\Omega_R}$ 为厄米且平方等于单位阵，可立刻验证 $U^\dagger U=I$。
+
+(2) 对初态 $|g\rangle$ 作用，得到
+\[
+|\psi(t)\rangle=-i\frac{\Omega}{\Omega_R}\sin\frac{\Omega_Rt}{2}|e\rangle+
+\left[\cos\frac{\Omega_Rt}{2}+i\frac{\Delta}{\Omega_R}\sin\frac{\Omega_Rt}{2}\right]|g\rangle.
+\]
+故
+\[
+P_e(t)=\frac{\Omega^2}{\Omega^2+\Delta^2}\sin^2\frac{\Omega_Rt}{2},\qquad
+P_{e,\max}=\frac{\Omega^2}{\Omega^2+\Delta^2}.
+\]
+两个振幅平方和为一，严格满足量子态归一化。
+
+(3) 共振 $\Delta=0$ 时 $\Omega_R=\Omega$，首次 $P_e=1$ 出现在 $t_\pi=\pi/\Omega$，称为 $\pi$ 脉冲。只要 $\Delta\ne0$，前面的幅度因子小于一，因此无论选何时长都无法在此恒定驱动模型中实现完全反转；不能通过延长作用时间消除失谐造成的最大保真度下降。
+
+(4) 任意固定 $\Omega_R>0$ 下，$\sin^2(\Omega_R t/2)$ 的长时间平均为 $1/2$，故
+\[
+\overline{P_e}=\frac{\Omega^2}{2(\Omega^2+\Delta^2)}.
+\]
+强失谐 $|\Delta|\gg\Omega$ 时 $P_{e,\max}\sim\Omega^2/\Delta^2\ll1$。由于哈密顿量不含时间且无耗散，$d\langle H\rangle/dt=0$；初态 $\langle H\rangle=-\hbar\Delta/2$，代入上述振幅亦给出相同常数。演化频率随失谐增大，但跃迁幅度减小，两者不可混淆。

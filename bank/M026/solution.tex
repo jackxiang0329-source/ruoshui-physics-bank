@@ -1,0 +1,35 @@
+(1) 质点位置为 \(x=\ell\sin\theta,y=-\ell\cos\theta\)。利用已指定的 ℓ(t)，动能为
+\[
+K=\frac m2(\dot\ell^2+\ell^2\dot\theta^2),\qquad U=-mg\ell\cos\theta .
+\]
+拉格朗日函数 \(L=K-U\)，对 θ 的 Euler–Lagrange 方程为
+\[
+\frac d{dt}(m\ell^2\dot\theta)+mg\ell\sin\theta=0,
+\quad\Longrightarrow\quad
+\ddot\theta+2\frac{\dot\ell}{\ell}\dot\theta+\frac g\ell\sin\theta=0.
+\]
+这里 \(\dot\ell=-u\)，故角速度前的系数为负，不能当作物理阻尼。
+
+(2) 在 |\(\theta|\ll1\) 下令 \(x=\ell\theta\)。从 \(\theta=x/\ell\) 求导可得 \(\ddot x=\ell\ddot\theta+2\dot\ell\dot\theta+\ddot\ell\theta\)，因此
+\[
+\ddot x+\left(\frac g\ell-\frac{\ddot\ell}{\ell}\right)x=0.
+\]
+恒速收绳意味着 \(\ddot\ell=0\)，故 \(\ddot x+[g/(\ell_0-ut)]x=0\)。初值满足 \(x_0=\ell_0\theta_0,\dot x_0=\ell_0\dot\theta_0-u\theta_0\)。这个变频方程未必有简单三角函数解，不能假定频率恒定。
+
+(3) 全部质点机械能为
+\[
+E=\frac m2(\dot\ell^2+\ell^2\dot\theta^2)-mg\ell\cos\theta .
+\]
+对时间求导并用角度方程，得到
+\[
+\dot E=m\dot\ell\ddot\ell-m\ell\dot\ell\dot\theta^2-mg\dot\ell\cos\theta
+=[m(\ddot\ell-\ell\dot\theta^2)-mg\cos\theta]\dot\ell .
+\]
+括号是质点受到的沿远离支点方向的绳拉力代数分量 \(F_r\)，故 \(\dot E=F_r\dot\ell\)；收绳装置通常对质点做非零功，不能声称实验室机械能守恒。
+
+(4) 令 g=0，角度方程积分为 \(\ell^2\dot\theta=\ell_0^2\dot\theta_0\)，所以
+\[
+\dot\theta(t)=\dot\theta_0[\ell_0/(\ell_0-ut)]^2,\quad
+L_z=m\ell^2\dot\theta=m\ell_0^2\dot\theta_0.
+\]
+由于绳张力纯径向，无外力矩，角动量恒定；直接代回 θ 方程两项抵消。这验证收绳系数必须是 \(2\dot\ell/\ell\) 而不是 \(\dot\ell/\ell\)。

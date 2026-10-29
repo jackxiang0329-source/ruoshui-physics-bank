@@ -1,0 +1,21 @@
+{
+  "id": "O069",
+  "topic": "光学",
+  "title": "强度输运TIE的离焦波前重建、Poisson反演与零频规范自由度",
+  "kind": "综合推导题",
+  "level": 5,
+  "estimated_minutes": 115,
+  "tags": [
+    "傍轴光学强度输运方程",
+    "离焦光强梯度与波前相位",
+    "二维Poisson Fourier逆解",
+    "零频规范与低强度奇性"
+  ],
+  "answer": "\\partial_z I=-\\frac1k\\nabla_\\perp\\cdot(I\\nabla_\\perp\\phi),\\quad \\widehat\\phi(\\boldsymbol q)=\\frac{k\\,\\widehat{\\partial_z I}(\\boldsymbol q)}{I_0|\\boldsymbol q|^2}\\ (\\boldsymbol q\\ne0)",
+  "quality_status": "待独立复核",
+  "tier": "advanced_composite",
+  "format": "latex-fragment-v1",
+  "revision": "composite-v3.9-round13-draft",
+  "challenge_profile": "high-multistage",
+  "complexity_tier": "L5-C"
+}

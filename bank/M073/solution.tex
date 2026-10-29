@@ -1,0 +1,7 @@
+(1) 对平面杆，曲率 \(\kappa=\theta'\)，端点水平距离 \(X=\int\cos\theta\,ds\)。在规定端力 \(P\) 下，势能泛函为 \(\Pi=\int_0^L [B\theta'^2/2+P\cos\theta]ds\)，省去与形状无关的常数。Euler--Lagrange 方程给 \(B\theta''+P\sin\theta=0\)。乘以 \(\theta'\) 积分，并在铰支端使用 \(\theta=\theta_0,\theta'=0\)，得 \(\frac{B}{2}\theta'^2=P(\cos\theta-\cos\theta_0)\)。右端取反对称延拓。此处两端零弯矩意味着 \(\theta'=0\)，并非把铰支端的转角误设为零。
+
+(2) 用 \(\cos\theta-\cos\theta_0=2[k^2-\sin^2(\theta/2)]\) 得 \(|\theta'|=2\sqrt{P/B}\sqrt{k^2-\sin^2(\theta/2)}\)。令 \(\sin(\theta/2)=k\sin u\)，从端点到中点的弧长积分为 \(L/2=\sqrt{B/P}\int_0^{\pi/2}du/\sqrt{1-k^2\sin^2u}=\sqrt{B/P}K(k)\)。故 \(P=4BK(k)^2/L^2\)。因 \(K(0)=\pi/2\)，小幅临界 \(P_{\rm cr}=\pi^2B/L^2\)；这是第一模态，其他振荡模态具有更高临界载荷。
+
+(3) 端缩 \(\Delta=\int_0^L(1-\cos\theta)ds=2\int_0^L\sin^2(\theta/2)ds\)。左右半杆相等，用上述换元得 \(\Delta=4\sqrt{B/P}\,k^2\int_0^{\pi/2}\sin^2u\,du/\sqrt{1-k^2\sin^2u}=4\sqrt{B/P}[K(k)-E(k)]\)。除以 \(L=2\sqrt{B/P}K\)，得到 \(\boxed{\Delta/L=2(1-E/K)}\)。极限 \(k\to0\) 时端缩为零；此处不能用载荷 \(P\) 与水平投影 \(X\) 混同弧长。
+
+(4) 第一积分给 \(U_B=P\int_0^L(\cos\theta-\cos\theta_0)ds=P[X-L\cos\theta_0]\)。代入 \(X=L-\Delta\) 及 \(\cos\theta_0=1-2k^2\)，得 \(\boxed{U_B=P(2k^2L-\Delta)}\)。用 \(K=(\pi/2)(1+k^2/4+9k^4/64+\cdots)\)、\(E=(\pi/2)(1-k^2/4-3k^4/64+\cdots)\)，得 \(\Delta/L=k^2+k^4/8+O(k^6)\)、\(P/P_{\rm cr}=1+k^2/2+O(k^4)\)、\(U_B=P_{\rm cr}Lk^2+O(k^4)\)。线性方程只确定临界模态而不提供幅度—端缩关系，必须保留几何非线性。

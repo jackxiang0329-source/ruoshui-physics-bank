@@ -1,0 +1,19 @@
+(1) 局部旋转系中的科里奥利加速度为 \(-2\boldsymbol\Omega\times\dot{\boldsymbol r}\)。只保留竖直分量 \(\Omega_z=\Omega\sin\varphi\)，并令 \(f=2\Omega_z\)，则水平分量为 \(x''=f y'-\omega_0^2x,\ y''=-f x'-\omega_0^2y\)。所以
+\[
+x''-fy'+\omega_0^2x=0,\qquad
+y''+fx'+\omega_0^2y=0.
+\]
+
+(2) 对 \(z=x+iy\)，两式合并为 \(z''+ifz'+\omega_0^2z=0\)。设 \(z\propto e^{i\nu t}\)，则 \(\nu^2+f\nu-\omega_0^2=0\)，令 \(\omega_*=\sqrt{\omega_0^2+f^2/4}\)，两有符号根为 \(\nu_\pm=-f/2\pm\omega_*\)。因一正一负，这代表相反旋向的两个圆极化正常模，频率分裂为 f。
+
+(3) 初值 \(z(0)=A,\dot z(0)=0\)，可先取 \(z=e^{-ift/2}w\)，得到 \(w''+\omega_*^2w=0\)，且 \(w(0)=A,\dot w(0)=ifA/2\)。故
+\[
+z(t)=Ae^{-ift/2}\left[\cos(\omega_*t)+i\frac{f}{2\omega_*}\sin(\omega_*t)\right].
+\]
+当 \(f/\omega_0\ll1\) 时，括号内为主导的实余弦，摆动线近似以 \(-f/2=-\Omega\sin\varphi\) 的角速度旋转（从东向北为逆时针正向）；振动频率仍约为 ω₀。
+
+(4) 一整圈进动周期 \(T_F=2\pi/|\Omega\sin\varphi|\)，在赤道 \(\varphi=0\) 无进动，周期趋无穷；在极点 \(|\sin\varphi|=1\)，周期为地球相对于惯性空间的自转周期。对方程分别乘 x'、y' 再相加，混合项 \(-f x'y'+f y'x'\) 严格抵消，因此
+\[
+\frac d{dt}\frac m2(x'^2+y'^2+\omega_0^2x^2+\omega_0^2y^2)=0.
+\]
+科里奥利力永远垂直速度，只改变振动方向而不做功。

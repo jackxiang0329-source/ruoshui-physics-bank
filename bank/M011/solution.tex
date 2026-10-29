@@ -1,0 +1,32 @@
+(1) 取最低点势能为零，$U=mg\ell(1-\cos\theta)$。初始静止时总能量 $mg\ell(1-\cos\theta_0)$，故
+\[
+\frac{m\ell^2}2\dot\theta^2=mg\ell(\cos\theta-\cos\theta_0).
+\]
+用 $k=\sin(\theta_0/2)\in(0,1)$，可写成 $\dot\theta^2=4(g/\ell)[k^2-\sin^2(\theta/2)]$，于是最低点角速度 $|\dot\theta|_{\max}=2k\sqrt{g/\ell}$。
+
+(2) 从最低点到转向点的四分之一周期积分为
+\[
+T/4=\int_0^{\theta_0}\frac{d\theta}{2\sqrt{g/\ell}\sqrt{k^2-\sin^2(\theta/2)}}.
+\]
+代换 $\sin(\theta/2)=k\sin\varphi$，得到
+\[
+T=4\sqrt{\frac{\ell}{g}}K(k),\qquad
+K(k)=\int_0^{\pi/2}\frac{d\varphi}{\sqrt{1-k^2\sin^2\varphi}}.
+\]
+这是精确的周期表达式；只有 $\theta_0\ll1$ 时才可改用简谐近似。
+
+(3) 将 $(1-k^2\sin^2\varphi)^{-1/2}$ 按 $k$ 展开并积分：
+\[
+K(k)=\frac{\pi}{2}\left(1+\frac{k^2}{4}+\frac{9k^4}{64}+O(k^6)\right).
+\]
+又 $k^2=\theta_0^2/4+O(\theta_0^4)$，因此
+\[
+T=2\pi\sqrt{\frac{\ell}{g}}\left(1+\frac{\theta_0^2}{16}+O(\theta_0^4)\right).
+\]
+正修正表明有限振幅单摆周期更长，因大角度处回复力 $mg\sin\theta$ 小于线性外推 $mg\theta$。
+
+(4) 当 $k\to1^-$，$K(k)\sim\ln[4/\sqrt{1-k^2}]$；且 $\sqrt{1-k^2}=\cos(\theta_0/2)\sim(\pi-\theta_0)/2$，故
+\[
+T\sim4\sqrt{\frac{\ell}{g}}\ln\frac{8}{\pi-\theta_0}.
+\]
+对数发散反映接近顶端不稳定平衡时的缓慢通过。最低点向心方向朝轴心，$F_r-mg=m\ell\dot\theta_{\max}^2$，所以杆的径向拉力为 $F_r=mg(1+4k^2)$。在一般角度若杆承受压力，仍能保持约束；细绳则可能松弛，不能直接套用相同的完整轨道条件。

@@ -1,0 +1,29 @@
+(1) 采用绕环轴的圆形安培回路，在 a<r<b 的磁路上有
+\[
+2\pi r H_\phi=NI,\quad
+B_\phi(r)=\mu H_\phi(r)=\frac{\mu NI}{2\pi r}.
+\]
+磁场随半径按 1/r 下降。题设忽略漏磁，所以在环形铁心外可近似视为零。
+
+(2) 单匝线圈绕过环形截面所链接的磁通是截面磁通 \(\Phi=\int_a^bB_\phi(r)h\,dr\)，故
+\[
+\Phi=\frac{\mu NIh}{2\pi}\ln\frac ba.
+\]
+总磁链 \(\Lambda=N\Phi=\mu N^2Ih\ln(b/a)/(2\pi)\)，注意总磁链乘了 N 而单匝磁通本身已经与 N 成正比。
+
+(3) 自感由 \(\Lambda=LI\) 定义：
+\[
+L=\frac{\mu N^2h}{2\pi}\ln\frac ba>0.
+\]
+用磁场能密度 \(B^2/(2\mu)\) 独立积分：
+\[
+U_B=\int_a^b\frac{B_\phi^2}{2\mu}(2\pi r h)\,dr
+=\frac{\mu N^2I^2h}{4\pi}\ln\frac ba=\frac12LI^2.
+\]
+两个计算完全一致，这也核对了对数和几何因子的正确性。
+
+(4) 由 Faraday 定律，回路自感应电动势 \(\mathcal E=-d\Lambda/dt=-L\dot I\)，总是反对电流变化。当外电源维持电流增加且忽略电阻，须提供端电压 \(V=L\dot I\)，瞬时功率
+\[
+P_{\rm source}=VI=LI\dot I=\frac d{dt}\left(\frac12LI^2\right).
+\]
+所以外部机械或电源能量变成磁场能量，没有额外凭空生成的功。

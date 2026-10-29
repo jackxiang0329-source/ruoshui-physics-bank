@@ -1,0 +1,22 @@
+{
+  "id": "O060",
+  "topic": "光学",
+  "title": "有限能量Airy光束的精确傍轴传播、弯曲亮瓣与质心守恒",
+  "kind": "综合推导题",
+  "level": 5,
+  "estimated_minutes": 115,
+  "tags": [
+    "Airy函数与傍轴Schrodinger类传播方程",
+    "指数截断Airy光束的复坐标精确解",
+    "三次谱相位及高斯有限功率傅里叶强度",
+    "Ehrenfest质心守恒与束宽增长",
+    "局域横向光流和表观自加速亮瓣"
+  ],
+  "answer": "\\psi(s,\\xi)=\\operatorname{Ai}(s-\\xi^2/4+ia\\xi)e^{as-a\\xi^2/2+i(s\\xi/2-\\xi^3/12+a^2\\xi/2)},\\quad \\langle s\\rangle=a^2-\\frac1{4a},\\quad \\operatorname{Var}(s)=a+\\frac1{8a^2}+\\frac{\\xi^2}{4a}",
+  "quality_status": "待独立复核",
+  "tier": "advanced_composite",
+  "format": "latex-fragment-v1",
+  "revision": "composite-v3.4-round12-draft",
+  "challenge_profile": "high-multistage",
+  "complexity_tier": "L5-C"
+}

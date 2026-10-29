@@ -1,0 +1,7 @@
+(1) 由本构 \(Q=A(\varepsilon E+\chi E^3)\)，\(V=Ed\)，故静态比值 \(C_{\rm sec}=Q/V=(A/d)(\varepsilon+\chi E^2)\)，微分电容 \(C_{\rm diff}=dQ/dV=(A/d)(\varepsilon+3\chi E^2)\)。二者除线性极限外不相等。因为 \(dD/dE=\varepsilon+3\chi E^2>0\)，在给定 \(Q\) 下 \(E\) 唯一，避免出现多值介质状态。
+
+(2) 可逆地从零电荷充电，外部注入功为 \(U=\int_0^Q V(q,d)dq=Ad\int_0^{D}E(D')dD'\)。更换积分变量至 \(E\)，得 \(u=U/(Ad)=\int_0^E E'(\varepsilon+3\chi E'^2)dE'=\varepsilon E^2/2+3\chi E^4/4\)。线性介质恢复 \(U=\varepsilon AdE^2/2=Q^2d/(2\varepsilon A)\)。非线性情形不可把 \(U\) 错写为 \(QD/2\)。
+
+(3) 在固定 \(Q\) 下，\(D=Q/A\) 与 \(E\) 不随 \(d\) 变化，因此 \(F_d=-\partial U/\partial d|_Q=-A(\varepsilon E^2/2+3\chi E^4/4)\)。负号意味着两板吸引。相应压力 \(p=|F_d|/A=\varepsilon E^2/2+3\chi E^4/4\)，在 \(\chi=0\) 时与熟知 Maxwell 压力 \(\varepsilon E^2/2\) 一致。这里假设介质体积随板距改变时材料储能本构不变，忽略电致伸缩所涉机械本构。
+
+(4) 固定电压需考虑电源做功，使用 Legendre 变换 \(\mathcal G=U-VQ=Ad[u(E)-ED(E)]=-Ad(\varepsilon E^2/2+\chi E^4/4)\)。因 \(E=V/d\)，\(\mathcal G=-A[\varepsilon V^2/(2d)+\chi V^4/(4d^3)]\)，从而 \(F_d=-\partial\mathcal G/\partial d|_V=-A[\varepsilon V^2/(2d^2)+3\chi V^4/(4d^4)]\)。同一瞬时电场下结果与固定 \(Q\) 一致；若错在固定 \(V\) 对 \(U\) 求导，会漏掉电源功并可能得反号。

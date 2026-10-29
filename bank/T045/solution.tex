@@ -1,0 +1,7 @@
+(1) 周期边界下每单位长度、每单位 \(k\) 区间的态数为 \(g_s/(2\pi)\)，从 \(-k_F\) 到 \(k_F\) 共 \(N=g_s Lk_F/\pi\)。故 \(k_F=\pi n/2\)，\(\epsilon_F=\hbar^2k_F^2/(2m)=\pi^2\hbar^2 n^2/(8m)\)，\(v_F=\hbar k_F/m\)。计数必须包括正负波矢与两种自旋，漏掉任何一项都会产生因子2错误。
+
+(2) 总基态能量 \(U=g_sL/(2\pi)\int_{-k_F}^{k_F}(\hbar^2k^2/(2m))dk=g_sL\hbar^2k_F^3/(6\pi m)=N\epsilon_F/3\)。定义一维机械压力 \(P_1=-(\partial U/\partial L)_N\)，它的量纲是力而不是三维的力除面积。由于 \(U\propto N^3/L^2\)，得到 \(P_1=2U/L=(2/3)n\epsilon_F\)。这是 Pauli 统计产生的零温压强，即使粒子间无相互作用也不为零。
+
+(3) 在零温无热激发情形压缩是等熵的，令线压缩刚度 \(K_1=n(\partial P_1/\partial n)\)。由 \(\epsilon_F\propto n^2\) 可知 \(P_1\propto n^3\)，于是 \(K_1=3P_1=2n\epsilon_F\)。与三维费米气体的 \(P=2U/(3V)\) 不同，一维的尺度变换给 \(P_1=2U/L\)；不可照搬三维压力系数。
+
+(4) 线性连续方程 \(\partial_t\delta n+n\partial_xu=0\)，Euler 方程 \(mn\partial_tu=-\partial_x\delta P_1\)，其中 \(\delta P_1=(\partial P_1/\partial n)\delta n\)。合并可得波动方程 \(\partial_t^2\delta n=c_s^2\partial_x^2\delta n\)，\(c_s^2=K_1/(mn)=2\epsilon_F/m\)，所以 \(c_s=v_F\)。在无碰撞的一维理想费米系统中，该形式也对应集体密度扰动的特征传播速度，不能直接宣称存在具有通常粘滞平衡假设的碰撞声学。

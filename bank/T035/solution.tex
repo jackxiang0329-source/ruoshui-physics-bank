@@ -1,0 +1,19 @@
+(1) 二维 k 空间单位面积每个态占据 \((2\pi)^2/A\)，累计态数 \(N_1(E)=A(2\pi)^{-2}\pi k^2=AmE/(2\pi\hbar^2)\)。故单位面积能量态密度是常数
+\[
+D(E)=\frac m{2\pi\hbar^2},\qquad E>0.
+\]
+
+(2) Bose 粒子数密度为
+\[
+n=\int_0^\infty\frac{D(E)}{z^{-1}e^{E/(k_BT)}-1}\,dE
+=-\frac1{\lambda_T^2}\ln(1-z).
+\]
+该积分可用展开 \(\sum_{\ell\ge1}z^\ell e^{-\ell\beta E}\) 后逐项积分得到，要求 0<z<1。
+
+(3) 固定 T>0，当 z→1⁻，\(-\ln(1-z)\to\infty\)，激发态面密度没有有限上界。因此任何有限 n 都可选某个 z<1 使激发态容纳全部粒子，不出现三维理想气体那样因激发态饱和而产生的有限 Tc 凝聚。
+
+(4) 反解上式得 \(z=1-e^{-n\lambda_T^2}\)，故
+\[
+\mu(T)=k_BT\ln[1-e^{-n\lambda_T^2}]<0.
+\]
+当 T→0⁺，\(n\lambda_T^2\propto1/T\to\infty\)，所以 \(\mu\sim-k_BT e^{-n\lambda_T^2}\to0^-\)，但任何正温度的 \(\mu\) 仍严格为负。

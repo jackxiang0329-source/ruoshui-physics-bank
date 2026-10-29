@@ -1,0 +1,17 @@
+(1) 珠到转轴距离为 R sinθ，竖向高度相对于底点为 R(1-cosθ)。因此实验室动能为 mR²(θdot²+Ω²sin²θ)/2，重力势能为 mgR(1-cosθ)。以 θ 为广义坐标，
+\[
+mR^2\ddot\theta=-mgR\sin\theta+mR^2\Omega^2\sin\theta\cos\theta .
+\]
+有效势为 \(U_{\mathrm{eff}}=mgR(1-\cos\theta)-mR^2\Omega^2\sin^2\theta/2\)，其导数正好是上述广义力的负值。
+
+(2) 平衡条件为 \(\sin\theta(g-R\Omega^2\cos\theta)=0\)。底点 θ=0 与顶点 θ=π 始终是平衡；当 \(\Omega^2R\ge g\) 还出现 \(\theta_\pm=\pm\arccos[g/(R\Omega^2)]\)。势能曲率为 \(U''=mgR\cos\theta-mR^2\Omega^2(\cos^2\theta-\sin^2\theta)\)。底点在 Ω²R<g 时稳定，在 Ω²R>g 时不稳定；顶点曲率恒为 \(-mgR-mR^2\Omega^2<0\)，始终不稳定。非零分支在超临界时曲率为 \(mR^2\Omega^2\sin^2\theta_\pm>0\)，故稳定。临界角速度 \(\Omega_c=\sqrt{g/R}\)。
+
+(3) 底点稳定时 \(\omega_{\rm small}^2=g/R-\Omega^2\)；超临界两侧稳定点有
+\[
+\omega_{\rm small}^2=\Omega^2\sin^2\theta_\pm
+=\Omega^2-\frac{g^2}{R^2\Omega^2}.
+\]
+临界点二阶曲率为零，线性频率软化为零，须使用四阶势能描述临界运动，不可将其称为普通谐振。
+
+(4) 绕竖直轴的实验室角动量为 \(L_z=m\Omega R^2\sin^2\theta\)，为维持环恒角速需要的转矩是
+\(\tau_z=dL_z/dt=2m\Omega R^2\sin\theta\cos\theta\,\dot\theta\)。驱动功率 \(P=\Omega\tau_z\)。实验室机械能 \(E=mR^2(\dot\theta^2+\Omega^2\sin^2\theta)/2+mgR(1-\cos\theta)\) 满足 \(\dot E=P=\Omega\dot L_z\)，所以 \(E-\Omega L_z=mR^2\dot\theta^2/2+U_{\rm eff}\) 守恒。

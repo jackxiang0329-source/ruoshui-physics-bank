@@ -1,0 +1,23 @@
+(1) 令 \(\gamma=b/m>0\)。速度方程 \(\dot v_x=-\gamma v_x,\dot v_y=-g-\gamma v_y\)，解为
+\[
+v_x=v_0\cos\theta\,e^{-\gamma t},\quad
+v_y=(v_0\sin\theta+g/\gamma)e^{-\gamma t}-g/\gamma.
+\]
+积分得到 \(x(t)=v_0\cos\theta(1-e^{-\gamma t})/\gamma\)，
+\[
+y(t)=\frac{v_0\sin\theta+g/\gamma}{\gamma}(1-e^{-\gamma t})-\frac g\gamma t.
+\]
+
+(2) 落地正时刻 \(t_f>0\) 必须满足
+\[
+(1+\gamma v_0\sin\theta/g)(1-e^{-\gamma t_f})=\gamma t_f.
+\]
+因初始 \(y'=v_0\sin\theta>0\)，而 \(y''=-\gamma(v_y+g/\gamma)<0\)，在本解中 \(y'\) 单调从正降为 \(-g/\gamma\)，故 \(y\) 先升后降且恰有一个正根。不能把平凡根 \(t=0\) 当作落地时间。
+
+(3) 最高点满足 \(v_y(t_h)=0\)，故 \(t_h=\gamma^{-1}\ln(1+\gamma v_0\sin\theta/g)\)，水平射程
+\[
+R=x(t_f)=\frac{v_0\cos\theta}{\gamma}(1-e^{-\gamma t_f}).
+\]
+若要最大化 R 还需将 \(t_f(\theta)\) 的隐函数依赖纳入求导，不能直接取真空最优的 45 度角。
+
+(4) 在固定 t 下 \(1-e^{-\gamma t}=\gamma t-\gamma^2t^2/2+O(\gamma^3)\)，代回得到 \(x=v_0t\cos\theta+O(\gamma)\) 与 \(y=v_0t\sin\theta-gt^2/2+O(\gamma)\)。因此 \(t_f\to2v_0\sin\theta/g,\ R\to v_0^2\sin2\theta/g\)。

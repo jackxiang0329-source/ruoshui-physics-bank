@@ -1,0 +1,7 @@
+(1) 一个热容常数为 \(C\) 的热库从 \(T_i\) 变为 \(T_f\) 时熵变为 \(\Delta S=C\int_{T_i}^{T_f}dT/T=C\ln(T_f/T_i)\)。全部过程可逆且系统绝热，两个热库的总熵不变：\(C_h\ln(T_f/T_h)+C_c\ln(T_f/T_c)=0\)。因此 \((C_h+C_c)\ln T_f=C_h\ln T_h+C_c\ln T_c\)，得到 \(T_f=T_h^{C_h/(C_h+C_c)}T_c^{C_c/(C_h+C_c)}\)。加权几何平均保证 \(T_c<T_f<T_h\)，避免了把有限热库错误视作恒温热源。
+
+(2) 总能量守恒给外部输出功 \(W=C_h(T_h-T_f)+C_c(T_c-T_f)=C_hT_h+C_cT_c-(C_h+C_c)T_f\)。对于任何不可逆过程，孤立复合系统熵增 \(\Delta S_{\rm tot}\ge0\)，在给定总能量情况下，熵约束使可实现的最终等温温度不低于等熵的几何平均 \(T_f\)。最终热库能量随共同温度单调上升，因此等熵可逆路径使剩余能量最小、提取功最大；这比直接引用一台固定效率的卡诺热机更一般。
+
+(3) 若两个热容相同，\(T_f=\sqrt{T_hT_c}\)，最大功 \(W_{\max}=C(T_h+T_c-2\sqrt{T_hT_c})=C(\sqrt{T_h}-\sqrt{T_c})^2\ge0\)。如果直接让两个热库接触而不输出功，能量守恒得共同终温 \(T_{\rm mix}=(T_h+T_c)/2\)。由算术几何平均不等式 \(T_{\rm mix}\ge T_f\)，可见直接接触留在热库中的能量更多，而其差额 \(2C(T_{\rm mix}-T_f)\) 正是本可提取的机械功。
+
+(4) 直接接触的总熵增 \(\Delta S_{\rm mix}=C\ln(T_{\rm mix}/T_h)+C\ln(T_{\rm mix}/T_c)=C\ln[T_{\rm mix}^2/(T_hT_c)]\ge0\)，严格大于零当 \(T_h\ne T_c\)。其未提取功即 \(W_{\max}=2C(T_{\rm mix}-T_f)\)。设 \(T_h=T+\Delta/2,\ T_c=T-\Delta/2\) 且 \(|\Delta|\ll T\)，则 \(\sqrt{T_hT_c}=T-\Delta^2/(8T)+O(\Delta^4)\)，所以 \(W_{\max}=C\Delta^2/(4T)+O(\Delta^4)\)，而熵增 \(\Delta S_{\rm mix}=C\Delta^2/(4T^2)+O(\Delta^4)\)，主阶满足 \(W_{\max}\sim T\Delta S_{\rm mix}\)。

@@ -1,0 +1,27 @@
+(1) \(\sigma_x^2=I\)，所以
+\(U(t)=e^{-iHt/\hbar}=\cos(\Omega t)I-i\sin(\Omega t)\sigma_x\)。
+从 \(|0\rangle\) 出发得
+\(|\psi(t)\rangle=\cos(\Omega t)|0\rangle-i\sin(\Omega t)|1\rangle\)，
+\(P_0(t)=\cos^2(\Omega t)\)；首次正交时间 \(t_\perp=\pi/(2\Omega)\)，不是完整概率周期 \(\pi/\Omega\)。
+
+(2) 每次成功后投影态恢复为 \(|0\rangle\)，单次条件成功率 \(p=\cos^2(\Omega t/N)\)，故
+\[
+\boxed{P_N(t)=p^N=\cos^{2N}(\Omega t/N)}.
+\]
+由 \(\ln\cos x=-x^2/2-x^4/12+O(x^6)\)，得
+\(\ln P_N=-\Omega^2t^2/N-\Omega^4t^4/(6N^3)+O(N^{-5})\)，所以 \(P_N=1-\Omega^2t^2/N+O(N^{-2})\to1\)。这要求瞬时理想测量且固定总演化时间。
+
+(3) 对时间无关自伴 \(H\) 且 \(\langle H^2\rangle<\infty\) 的态，
+\(\langle\psi|e^{-iHt/\hbar}|\psi\rangle=1-it\langle H\rangle/\hbar-t^2\langle H^2\rangle/(2\hbar^2)+o(t^2)\)。
+取模平方后一次项抵消：
+\[
+P(t)=1-(\Delta H)^2t^2/\hbar^2+o(t^2),\quad
+\boxed{\tau_Z=\hbar/\Delta H}.
+\]
+本题 \(\langle H\rangle=0,\langle H^2\rangle=\hbar^2\Omega^2\)，故 \(\tau_Z=1/\Omega\)。若能量方差发散，短时二次展开未必成立，不能照搬同一公式。
+
+(4) 若首次失败就停止，单次条件成功率 \(p\)，实际执行测量次数期望
+\[
+\boxed{\mathbb E[M]=\sum_{j=0}^{N-1}p^j=(1-p^N)/(1-p)}
+\]
+（\(p=1\) 时极限为 \(N\)）。后选择的成功率为 \(p^N\)，非选择性测量则保留所有分支并得到混合态，不能把两者混为同一实验。真实测量需时间、可引入额外退相干并改变系统哈密顿量，故理想 \(N\to\infty\) 数学极限不保证物理上零成本冻结。

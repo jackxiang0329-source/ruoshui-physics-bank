@@ -1,0 +1,33 @@
+(1) 轴对称纯环向速度的涡量为 \(\omega_z=r^{-1}d(rv_\theta)/dr\)，故
+\[
+\boxed{\omega_z=2\Omega\ (r<a),\qquad\omega_z=0\ (a<r<R)}.
+\]
+环量 \(\Gamma(r)=2\pi r v_\theta(r)\)，即核内 \(2\pi\Omega r^2\)，核外常数 \(2\pi\Omega a^2\)。核外虽局部无涡，环绕核心的闭合回路仍包围非零涡量通量，不能由局部无涡推出环量为零。
+
+(2) 稳态Euler径向方程 \(\partial_r p=\rho v_\theta^2/r\)，核内积分给
+\(p(r)-p(0)=\rho\Omega^2r^2/2\)。核外以 \(p(a)-p(0)=\rho\Omega^2a^2/2\) 为边界，得到
+\[
+\boxed{p(r)-p(0)=\rho\Omega^2a^2
+-\frac{\rho\Omega^2a^4}{2r^2}\quad(a<r<R)}.
+\]
+代入 \(r=a\) 与核内结果一致；压力向外增加，符合环向速度所需向心压力梯度的符号。
+
+(3) 单位高度动能为 \(E'=\int_0^R\tfrac12\rho v_\theta^2\,2\pi r\,dr\)，两段积分得到
+\[
+\boxed{E'=\pi\rho\Omega^2a^4[1/4+\ln(R/a)]}.
+\]
+单位高度轴向角动量 \(L'=\int_0^R\rho r v_\theta\,2\pi r\,dr\)，得
+\(\boxed{L'=\pi\rho\Omega a^2(R^2-a^2/2)}\)。
+固定 \(\Omega\) 令 \(a\to0\) 时环量、能量均趋零；若固定 \(\Gamma=2\pi\Omega a^2\)，则 \(E'\sim\rho\Gamma^2\ln(R/a)/(4\pi)\) 对数发散，说明理想点涡必须引入核心截断。
+
+(4) 自由液面处 \(p=p_{\rm atm}\) 恒定，静水竖向平衡 \(\partial_zp=-\rho g\) 与径向平衡合成
+\(g\,dz/dr=v_\theta^2/r\)。因此
+\[
+z(r)-z(R)=-\frac1g\int_r^R\frac{v_\theta(s)^2}{s}\,ds .
+\]
+核外为 \(-\Omega^2a^4(1/r^2-1/R^2)/(2g)\)；核内为
+\[
+z(r)-z(R)=-\frac{\Omega^2}{2g}
+[a^2-r^2+a^2(1-a^2/R^2)] .
+\]
+轴心最深，\(z(0)-z(R)=-\Omega^2a^2[1-a^2/(2R^2)]/g\)，与第二问的压强差 \([p(R)-p(0)]/(\rho g)\) 精确一致。

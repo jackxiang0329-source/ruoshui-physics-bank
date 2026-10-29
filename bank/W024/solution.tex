@@ -1,0 +1,33 @@
+(1) 根据弹簧力及速度差，
+\[
+m\ddot x_1+kx_1+b(\dot x_1-\dot x_2)=0,\quad
+m\ddot x_2+kx_2+b(\dot x_2-\dot x_1)=0.
+\]
+乘以相应速度相加得
+\[
+\frac{d}{dt}\left[\frac m2(\dot x_1^2+\dot x_2^2)+\frac k2(x_1^2+x_2^2)\right]
+=-b(\dot x_1-\dot x_2)^2\le0.
+\]
+阻尼仅耗散相对运动，不能简单地把每个模态都认为必然衰减。
+
+(2) 定义和模 \(u=(x_1+x_2)/2\)、差模 \(v=(x_1-x_2)/2\)。相加和相减得到
+\[
+\ddot u+\omega_0^2u=0,\quad
+\ddot v+\frac{2b}{m}\dot v+\omega_0^2v=0,\quad
+\omega_0=\sqrt{k/m}.
+\]
+所以 \(u(t)=u_0\cos\omega_0t+\dot u_0\sin\omega_0t/\omega_0\)。对差模令 \(\gamma=b/m\)，欠阻尼解为
+\[
+v(t)=e^{-\gamma t}\left[v_0\cos(\omega_dt)+\frac{\dot v_0+\gamma v_0}{\omega_d}\sin(\omega_dt)\right],
+\quad\omega_d=\sqrt{\omega_0^2-\gamma^2}.
+\]
+最后 \(x_1=u+v,x_2=u-v\)。
+
+(3) 当 \(b<\sqrt{mk}\) 时差模特征根为 \(-\gamma\pm i\omega_d\)，振荡衰减；当 \(b=\sqrt{mk}\)，重根 \(-\omega_0\) 导致
+\(v=e^{-\omega_0t}[v_0+(\dot v_0+\omega_0v_0)t]\)；当 \(b>\sqrt{mk}\)，两根 \(-\gamma\pm\sqrt{\gamma^2-\omega_0^2}\) 均负而不振荡，故为过阻尼。临界参数来自差模中的 2b，不能套单个阻尼器的 b/(2m) 公式。
+
+(4) 差模中的速度差 \(2\dot v\) 逐渐为零，而 u 不衰减，故长时间 \(x_1(t)-x_2(t)\to0\)，两质点共同作同相简谐振动。能量损失仅是初始差模能量
+\[
+E_{v,0}=m\dot v_0^2+kv_0^2
+\]
+（由两质点质量和弹簧能相加得到）；其余同相能量 \(E_u=m\dot u_0^2+ku_0^2\) 保持不变。这是非厄米阻尼耦合系统仍存在无阻尼暗模态的严格例子。

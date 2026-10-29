@@ -1,0 +1,15 @@
+(1) 周期Bloch代入得
+\[
+\lambda(k)=-\gamma+J_Re^{-ik}+J_Le^{ik}=-\gamma+(J_R+J_L)\cos k+i(J_L-J_R)\sin k.
+\]
+复谱为中心 \(-\gamma\)、实半轴 \(J_R+J_L\)、虚半轴 \(|J_L-J_R|\) 的椭圆。最大实部为 \(-\gamma+J_R+J_L\)，周期系统严格渐近稳定当且仅当 \(\gamma>J_R+J_L\)。
+(2) 令 \(r=\sqrt{J_R/J_L}\)，取 \(a_n=r^n b_n\)，则
+\[
+\dot b_n=-\gamma b_n+\sqrt{J_RJ_L}(b_{n-1}+b_{n+1}).
+\]
+开放链的正弦本征函数 \(b_n^{(j)}=\sin(jn\pi/(N+1))\) 给
+\[
+\lambda_j=-\gamma+2\sqrt{J_RJ_L}\cos\frac{j\pi}{N+1},\quad j=1,\ldots,N.
+\]
+(3) 右本征矢 \(a_n^{(j)}=r^n\sin(jn\pi/(N+1))\)，其包络 \(r^n=e^{n\ln r}\)。以格点为单位的局域长度 \(\ell_{\rm skin}=1/|\ln r|=2/|\ln(J_R/J_L)|\)；\(J_R>J_L\) 向右端聚集，反之向左。相似变换的条件数随 \(N\) 指数增大，故热力学极限中周期谱椭圆与开放谱实线段可以不同。
+(4) 开放链最大本征值为 \(-\gamma+2\sqrt{J_RJ_L}\cos[\pi/(N+1)]\)，严格稳定阈值为 \(\gamma>2\sqrt{J_RJ_L}\cos[\pi/(N+1)]\)。AM--GM不等式使其小于周期阈值 \(J_R+J_L\)（非互易时严格）。本模型描述有增益与损耗的主动一阶包络动力学，不是互易保守弹簧链；非厄米演化不守恒通常机械能，不能用能流守恒证明谱性质。
