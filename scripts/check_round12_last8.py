@@ -109,7 +109,7 @@ power=Rr**2*(s.besselj(0,Rr)**2+s.besselj(1,Rr)**2)/2
 record("O065",3,"numerical","finite-radius Bessel beam power grows linearly with aperture radius instead of converging",abs(float(power.subs(Rr,2000))/2000-1/math.pi)<.001 and float(power.subs(Rr,2000))>float(power.subs(Rr,1000)))
 R0,kz=s.symbols("R0 kz",positive=True)
 zmax=R0*kz/kp
-record("O065",4,"limit","finite-aperture conical ray propagation distance diverges for small cone angle and vanishes for transverse propagation",eq(s.limit(zmax,kp,0,dir='+'),s.oo) and eq(s.limit(zmax,kz,0,dir='+'),0))
+record("O065",4,"limit","finite-aperture conical ray propagation distance diverges for small cone angle and vanishes for transverse propagation",s.limit(zmax,kp,0,dir='+')==s.oo and eq(s.limit(zmax,kz,0,dir='+'),0))
 
 # Q065: repeated Zeno projections.
 Om,tm=s.symbols("Om tm",positive=True)
