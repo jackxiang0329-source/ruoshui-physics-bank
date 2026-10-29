@@ -1,0 +1,176 @@
+{
+  "status": "draft-only-not-admitted",
+  "new_problem_count": 6,
+  "passed_count": 24,
+  "tests": [
+    {
+      "id": "M074",
+      "part": 1,
+      "method": "symbolic",
+      "name": "exact azimuthal Navier Stokes operator vanishes and both no slip cylinder boundary conditions hold",
+      "passed": true
+    },
+    {
+      "id": "M074",
+      "part": 2,
+      "method": "conservation",
+      "name": "viscous stress transfers radius independent torque and zero torque under rigid corotation",
+      "passed": true
+    },
+    {
+      "id": "M074",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "radial pressure primitive differentiates to exact centrifugal acceleration and rigid rotation pressure",
+      "passed": true
+    },
+    {
+      "id": "M074",
+      "part": 4,
+      "method": "conservation",
+      "name": "integrated viscous dissipation exactly equals difference in externally supplied wall torques times angular speeds",
+      "passed": true
+    },
+    {
+      "id": "E074",
+      "part": 1,
+      "method": "symbolic",
+      "name": "complex skin field solves Maxwell diffusion equation with decaying physical root",
+      "passed": true
+    },
+    {
+      "id": "E074",
+      "part": 2,
+      "method": "dimensions",
+      "name": "surface impedance equals complex skin wave number over conductivity with positive dissipative real part",
+      "passed": true
+    },
+    {
+      "id": "E074",
+      "part": 3,
+      "method": "conservation",
+      "name": "Poynting incoming flux exactly equals independently integrated Joule loss in conductor halfspace",
+      "passed": true
+    },
+    {
+      "id": "E074",
+      "part": 4,
+      "method": "limit",
+      "name": "skin depth decays as inverse square root frequency while dissipative surface resistance grows as square root",
+      "passed": true
+    },
+    {
+      "id": "T070",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Eddington moment integration yields exact boundary intensity and constant radiative flux",
+      "passed": true
+    },
+    {
+      "id": "T070",
+      "part": 2,
+      "method": "limit",
+      "name": "grey atmosphere temperature at optical depth two thirds equals effective temperature and surface fourth power half",
+      "passed": true
+    },
+    {
+      "id": "T070",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "radiative logarithmic gradient is bounded by quarter and below monatomic adiabatic two fifths",
+      "passed": true
+    },
+    {
+      "id": "T070",
+      "part": 4,
+      "method": "conservation",
+      "name": "diffusion flux from fourth power temperature law exactly recovers constant Stefan Boltzmann flux",
+      "passed": true
+    },
+    {
+      "id": "W070",
+      "part": 1,
+      "method": "symbolic",
+      "name": "variational orthotropic fourth order plate operator yields correct doubled mixed derivative stiffness",
+      "passed": true
+    },
+    {
+      "id": "W070",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "differentiating orthotropic plate dispersion recovers both group velocity components",
+      "passed": true
+    },
+    {
+      "id": "W070",
+      "part": 3,
+      "method": "conservation",
+      "name": "simply supported double sine mode potential energy equals oscillator effective mass times squared frequency",
+      "passed": true
+    },
+    {
+      "id": "W070",
+      "part": 4,
+      "method": "limit",
+      "name": "isotropic Kirchhoff Love plate has quadratic frequency and group speed exactly twice phase speed",
+      "passed": true
+    },
+    {
+      "id": "O072",
+      "part": 1,
+      "method": "symbolic",
+      "name": "evanescent TM normal wave numbers obey Helmholtz dispersion in both half spaces",
+      "passed": true
+    },
+    {
+      "id": "O072",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "TM tangential continuity gives squared decay ratio equal squared dielectric contrast",
+      "passed": true
+    },
+    {
+      "id": "O072",
+      "part": 3,
+      "method": "limit",
+      "name": "lossless Drude surface plasmon diverges at omega plasma over root two and approaches vacuum light line at low frequency",
+      "passed": true
+    },
+    {
+      "id": "O072",
+      "part": 4,
+      "method": "physical_case",
+      "name": "Brillouin metal electric energy derivative remains positive despite negative real permittivity",
+      "passed": true
+    },
+    {
+      "id": "Q072",
+      "part": 1,
+      "method": "symbolic",
+      "name": "two dimensional Grover effective projector has unit trace and determinant proportional to marked overlap",
+      "passed": true
+    },
+    {
+      "id": "Q072",
+      "part": 2,
+      "method": "limit",
+      "name": "Grover avoided crossing reaches exact inverse root N minimum gap at half interpolation",
+      "passed": true
+    },
+    {
+      "id": "Q072",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "local adiabatic inverse squared gap integral has exact arctangent form and square root asymptotic",
+      "passed": true
+    },
+    {
+      "id": "Q072",
+      "part": 4,
+      "method": "physical_case",
+      "name": "nonadiabatic matrix element peaks below unity and local schedule bounds transition ratio by epsilon",
+      "passed": true
+    }
+  ],
+  "independent_expert_review": "pending"
+}
