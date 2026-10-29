@@ -1,16 +1,64 @@
-(1) 横向第 \(n\) 级空间频率 \(k_{x,n}=2\pi n/d\)，近轴纵波数
-\(k_{z,n}\simeq k-k_{x,n}^2/(2k)\)，\(k=2\pi/\lambda\)。除去共同相位 \(e^{ikz}\) 后，
+(1) 在相互作用绘景，\(\rho\) 满足
 \[
-u(x,z)=\sum_{n\in\mathbb Z}c_n e^{i2\pi nx/d}e^{-i\pi\lambda z n^2/d^2}.
+\dot\rho=-\frac{i\Omega_R}{2}[\sigma_x,\rho]
++\gamma\left(\sigma_-\rho\sigma_+
+-\frac12\{\sigma_+\sigma_-,\rho\}\right).
 \]
-(2) 令 \(z_T=2d^2/\lambda\)，则传播二次相位为 \(e^{-i2\pi n^2}=1\)，故 \(u(x,z_T)=t(x)\)。半长度 \(z_T/2\) 时相位 \(e^{-i\pi n^2}=(-1)^n\)，所以 \(u(x,z_T/2)=t(x+d/2)\)，适用于任何收敛的周期傅里叶表示。
-(3) 在 \(z_T/4\) 相位为 \(e^{-i\pi n^2/2}\)，对偶数n等于1、奇数n等于 \(-i\)。写
+由定义 \(v=2\Im\rho_{eg},\,w=\rho_{ee}-\rho_{gg}\) 计算
 \[
-u(x,z_T/4)={1-i\over2}t(x)+{1+i\over2}t(x+d/2)
+\dot v=-\frac\gamma2v+\Omega_Rw,\qquad
+\dot w=-\gamma(w+1)-\Omega_Rv.
 \]
-因为偶数系数和为1，奇数系数差为 \(-i\)。每个n的传播因子模为1，由Parseval恒等式
+稳态有 \(v_{\rm ss}=2\Omega_Rw_{\rm ss}/\gamma\)、
+\(w_{\rm ss}=-\gamma^2/(\gamma^2+2\Omega_R^2)\)，所以
 \[
-{1\over d}\int_0^d|u(x,z)|^2dx=\sum_n|c_n|^2={1\over d}\int_0^d|t(x)|^2dx.
+p_e^{\rm ss}=\frac{1+w_{\rm ss}}2
+=\frac{\Omega_R^2}{\gamma^2+2\Omega_R^2},
+\qquad\bar J=\gamma p_e^{\rm ss}.
 \]
-这是相干场的平均功率守恒，并非局部强度不变。
-(4) \(\partial z_T/\partial\lambda=-2d^2/\lambda^2\)，有限谱宽使各波长复像位置错开；有限相干长度破坏跨周期相干叠加；有限口径引入衍射边界；当 \(\lambda/d\) 不再足够小时，精确 \(k_z=\sqrt{k^2-k_x^2}\) 不再是二次n相位，理想分数成像失效。
+此模型仅含自发发射通道，未另计探测效率、纯退相干和非共振失谐。
+
+(2) 单原子发出光子后由 \(\sigma_-\rho\sigma_+\) 条件复位为
+\(|g\rangle\langle g|\)。于是标准正则光子归一化相关可写成
+\[
+g^{(2)}(\tau)=\frac{p_e(\tau\mid g)}{p_e^{\rm ss}},\qquad\tau\ge0.
+\]
+求解上一问的两个Bloch微分方程，初始 \(v(0)=0,w(0)=-1\)。线性化矩阵的两本征值为
+\(-3\gamma/4\pm i\mu\)，其中
+\(\mu=\sqrt{\Omega_R^2-\gamma^2/16}\)。
+故
+\[
+\boxed{g^{(2)}(\tau)=1-e^{-3\gamma\tau/4}
+\left[\cos(\mu\tau)+\frac{3\gamma}{4\mu}\sin(\mu\tau)\right]}.
+\]
+\(\Omega_R=\gamma/4\) 时用 \(\sin(\mu\tau)/\mu\to\tau\)；
+更弱驱动时 \(\mu=i\nu\)，相应变成
+\(1-e^{-3\gamma\tau/4}[\cosh(\nu\tau)+3\gamma\sinh(\nu\tau)/(4\nu)]\)，为实数且连续。
+
+(3) 由于探测瞬间激发态占据严格为零，\(g^{(2)}(0)=0\)。
+全部相关的指数模均衰减（\(\gamma>0,\Omega_R>0\)），因此
+\(\lim_{\tau\to\infty}g^{(2)}(\tau)=1\)。
+直接级数展开得到
+\[
+g^{(2)}(\tau)=\frac{\gamma^2+2\Omega_R^2}{4}\tau^2+O(\tau^3).
+\]
+短时间二次增长反映原子必须先重新受激再能发第二个光子。
+强驱动 \(\Omega_R\gg\gamma\) 时，
+\(\mu\simeq\Omega_R\)，\(g^{(2)}\) 可以阻尼振荡并在某些延迟超过1；零延迟严格为0是非经典反聚束，不满足把经典复高斯光场代入后得到的 \(g^{(2)}(0)\ge1\) 结构。
+
+(4) 令 \(a=3\gamma/4\)，则
+\(\int_0^\infty e^{-a\tau}\cos\mu\tau\,d\tau=a/(a^2+\mu^2)\)、
+\(\int_0^\infty e^{-a\tau}\sin\mu\tau\,d\tau=\mu/(a^2+\mu^2)\)，因此
+\[
+\int_0^\infty[g^{(2)}(\tau)-1]d\tau
+=-\frac{2a}{a^2+\mu^2}
+=-\frac{3\gamma}{\gamma^2+2\Omega_R^2}.
+\]
+代入光子通量 \(\bar J=\gamma\Omega_R^2/(\gamma^2+2\Omega_R^2)\) 可得
+\[
+\boxed{F=1-\frac{6\gamma^2\Omega_R^2}
+{(\gamma^2+2\Omega_R^2)^2}}.
+\]
+令 \(y=2\Omega_R^2/\gamma^2\)，校正项为 \(3y/(1+y)^2\)，在 \(y=1\) 最大，故
+\(F_{\min}=1/4\) 发生于 \(\Omega_R=\gamma/\sqrt2\)。
+各衰减指数实部为负，积分严格收敛；亚泊松抑噪来自每次辐射跳跃复位、下一光子之前的重新激发时间，不应与独立Poisson泊松过程的 \(F=1\) 混淆。

@@ -1,16 +1,46 @@
-(1) 采用横向小斜率近似，
+(1) 取 \(z=x+iy\)，复速度定义为 \(dW/dz=u_x-i u_y\)，选择
 \[
-\Pi_2[w]=\tfrac12 EI\int_0^L(w'')^2dx-\tfrac12P\int_0^L(w')^2dx.
+W(z)=U\left(z+\frac{R^2}{z}\right)-\frac{i\Gamma}{2\pi}\log\frac zR,\qquad |z|\ge R.
 \]
-变分得 \(EIw''''+Pw''=0\)，铰端条件 \(w(0)=w(L)=w''(0)=w''(L)=0\)。模态 \(\sin(n\pi x/L)\) 的临界载荷 \(P_n=EI(n\pi/L)^2\)，首阶 \(P_c=\pi^2 EI/L^2\)。
-(2) 令 \(w=A\sin(\pi x/L)\)，则 \(\int(w')^2dx=\pi^2A^2/(2L)\)，\(\int(w'')^2dx=\pi^4 A^2/(2L^3)\)。设杆的轴向拉伸刚度为 \(EA\!_\mathrm{ax}>0\)（此处 \(A\!_\mathrm{ax}\) 为横截面积，不是挠度振幅），则
+令 \(z=re^{i\vartheta}\)，对应流函数
+\(\psi=U(r-R^2/r)\sin\vartheta-\Gamma(2\pi)^{-1}\ln(r/R)\)，因此在 \(r=R\) 上流函数恒定，\(u_r(R,\vartheta)=0\)。沿圆柱表面的速度为
 \[
-\Pi(A)={\pi^2(P_c-P)\over4L}A^2+
-{EA\!_\mathrm{ax}\pi^4\over32L^3}A^4 .
+u_\vartheta(R,\vartheta)=-2U\sin\vartheta+\frac{\Gamma}{2\pi R}.
 \]
-(3) 记 \(\alpha=\pi^2(P_c-P)/(4L)\)、\(\beta=EA\!_\mathrm{ax}\pi^4/(32L^3)>0\)。驻点为 \(A=0\) 或
+远场 \(u_x\to U,\ u_y\to0\)，而
+\(\oint\mathbf u\cdot d\boldsymbol\ell=\Gamma\) 是圆柱外任一环路的有向环量；对数复势只允许在流体域中有多值势，其速度和流函数可为单值。
+
+(2) 因表面径向速度严格为零，停滞点满足
 \[
-A^2=-{\alpha\over2\beta}={4L^2(P-P_c)\over EA\!_\mathrm{ax}\pi^2}.
+\sin\vartheta_s=\frac{\Gamma}{4\pi UR}.
 \]
-当 \(P>P_c\)，两非零分支满足 \(\Pi''(A)=-4\alpha>0\) 为稳定极小，而直杆 \(A=0\) 变不稳定。相对直杆势能差 \(\Delta\Pi=-\alpha^2/(4\beta)=-L(P-P_c)^2/[2EA\!_\mathrm{ax}]\)。
-(4) \(P\downarrow P_c\) 时振幅按 \((P-P_c)^{1/2}\) 消失；要求 \(|A|\pi/L\ll1\) 且近临界只激励第一模。四次系数来自指定的位移兼容/拉伸简化模型，不应与无约束Euler死载荷的一切几何非线性等同；初始弯曲、材料塑性和端点转动刚度改变实际屈曲曲线。
+当 \(|\Gamma|<4\pi UR\) 有两个不同的表面停滞点；当等号成立，两点在 \(\vartheta=\pi/2\) 或 \(3\pi/2\) 合并；当超过临界值时表面切向速度不再变号，停滞点移至圆柱外其他位置，不表示原有理想势流不存在。由同一流线的Bernoulli积分，
+\[
+p(R,\vartheta)=p_\infty+\frac{\rho}{2}
+\left[U^2-\left(-2U\sin\vartheta+\frac{\Gamma}{2\pi R}\right)^2\right].
+\]
+记 \(c=\Gamma/(2\pi R)\)。表面最大压力在允许的 \(\sin\vartheta\in[-1,1]\) 上使 \(|c-2U\sin\vartheta|\) 最小，故
+\(p_{\max}=p_\infty+\rho[U^2-(\max\{|c|-2U,0\})^2]/2\)。
+最大速度绝对值为 \(|c|+2U\)，故
+\(p_{\min}=p_\infty+\rho[U^2-(|c|+2U)^2]/2\)。
+
+(3) 流体对圆柱单位长度的压力力为
+\(d\mathbf F=-pR(\cos\vartheta,\sin\vartheta)d\vartheta\)。
+将第二问平方展开，只有与 \(\sin\vartheta\) 成正比的交叉项能对 \(F_y\) 给非零贡献：
+\(p=p_\infty+\rho U^2/2-2\rho U^2\sin^2\vartheta+2\rho Uc\sin\vartheta-\rho c^2/2\)。
+因此
+\[
+F_x=-R\int_0^{2\pi}p\cos\vartheta\,d\vartheta=0,\qquad
+F_y=-R\int_0^{2\pi}p\sin\vartheta\,d\vartheta=-2\pi\rho URc=-\rho U\Gamma.
+\]
+在所约定的逆时针正环量下，升力朝 \(-y\) 方向；更换环量符号会反转该方向。径向压力力处处经过轴心，所以总压力力矩严格为零。无黏势流仍能产生升力，是外部流场的横向动量预算结果；同时 \(F_x=0\) 是理想流的D'Alembert悖论。
+
+(4) 完整速度场为
+\[
+u_r=U(1-R^2/r^2)\cos\vartheta,\qquad
+u_\vartheta=-U(1+R^2/r^2)\sin\vartheta+\Gamma/(2\pi r).
+\]
+对同心任意 \(r>R\)，
+\(\int_0^{2\pi}u_r r\,d\vartheta=0\) 和
+\(\int_0^{2\pi}u_\vartheta r\,d\vartheta=\Gamma\)，分别核验无源质量连续性与环量守恒。圆柱表面不穿透，所以流体在固定壁面上的压力功率
+\(-\int_{\partial S}p\,u_r\,d\ell=0\)；升力的存在与壁面不做功不矛盾。由于升力来自全局横向动量流，不能以没有尾流阻力来推出其为零；\(\Gamma\to0\) 时压力上下对称，升阻力都趋零。

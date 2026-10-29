@@ -1,22 +1,52 @@
-(1) 每面积每自旋态密度为 \(m/(2\pi\hbar^2)\)，所以总态密度常数 \(D=g_sAm/(2\pi\hbar^2)\)（量纲为能量倒数）。用Fermi函数积分得
+(1) 对总动量作正交坐标变换：
+\(\mathbf P_{\rm cm}=\frac1{\sqrt N}\sum_i\mathbf p_i\)，另有 \(N-1\) 个三维正交相对动量。
+则 \(\delta^{(3)}(\sum_i\mathbf p_i)=N^{-3/2}\delta^{(3)}(\mathbf P_{\rm cm})\)，且动能正交可加。记 \(d=3(N-1)\)，动量可用区域为 \(d\) 维半径 \(\sqrt{2mE}\) 的球。
 \[
-N=Dk_BT\ln(1+e^{\mu/(k_BT)}),\quad
-\mu=k_BT\ln[\exp(N/(Dk_BT))-1].
+\boxed{\Omega_G=\frac{V^N}{N!h^{3N}}N^{-3/2}
+\frac{\pi^{d/2}(2mE)^{d/2}}{\Gamma(d/2+1)} }.
 \]
-设 \(\epsilon_F=N/D,\ T_F=\epsilon_F/k_B\)。
-(2) 零温占据0至 \(\epsilon_F\)，于是 \(N=D\epsilon_F\)、\(U_0=D\epsilon_F^2/2=N\epsilon_F/2\)。对二维自由非相对论气体的动力学压力 \(P=\frac1{2A}\sum_i\boldsymbol p_i\cdot\boldsymbol v_i\)，其中 \(\boldsymbol p\cdot\boldsymbol v=2\epsilon\)，得到 \(P=U/A\)。零温 \(P_0=N^2/(2DA)\)。
-(3) 能量
+由固定总动量的Dirac \(\delta\) 造成态数具有“每动量体积”的量纲，若要求熵本身的对数无量纲，可乘一个与 \(E,V\) 无关的固定参考动量体积；它只给熵加常数，不影响下述温度与压强。用 \(h^{3N}\) 和 \(N!\) 表示经典半经典态数规范。
+
+(2) 真实等能量微正则平均采用球壳，而非累积球的体积均匀平均。在 \(d\) 维球壳上，对任一单位向量投影 \(X\)，
+\(\langle X^2\rangle=(2mE)/d\)。
+固定单粒子单坐标 \(p_{i\alpha}\) 对相对动量子空间的投影范数平方为 \(1-1/N\)。因此
 \[
-U=D(k_BT)^2[-\operatorname{Li}_2(-e^{\mu/(k_BT)})].
+\langle p_{i\alpha}\rangle=0,\qquad
+\langle p_{i\alpha}^2\rangle=\frac{2mE}{d}\left(1-\frac1N\right)=\frac{2mE}{3N}.
 \]
-因常态密度，固定N时 \(\mu=\epsilon_F+k_BT\ln(1-e^{-\epsilon_F/(k_BT)})\)，偏离 \(\epsilon_F\) 指数小。Sommerfeld展开得
+又因 \(\langle|\sum_i\mathbf p_i|^2\rangle=0\) 和粒子交换对称，
 \[
-U={N^2\over2D}+{\pi^2\over6}D(k_BT)^2+O(e^{-T_F/T}\times\mathrm{poly}(T)),
-\quad
-C_N={\pi^2\over3}Dk_B^2T+\text{指数小项}.
+\langle\mathbf p_i^2\rangle=\frac{2mE}{N},\quad
+\langle\mathbf p_i\cdot\mathbf p_j\rangle=-\frac{2mE}{N(N-1)}\quad(i\ne j),
+\quad \langle p_i^2/(2m)\rangle=E/N.
 \]
-(4) 当 \(N/(Dk_BT)\ll1\)，\(e^{\mu/(k_BT)}\simeq N/(Dk_BT)\)，故
+这种负交叉关联并不意味着粒子之间存在相互作用力，而是由整体守恒条件诱发。
+
+(3) 由于 \(\Omega_G\propto V^N E^{d/2}\)，微正则Gibbs体积熵给
 \[
-\mu\simeq k_BT\ln[N/(Dk_BT)],\quad U\simeq Nk_BT,\quad P\simeq Nk_BT/A.
+\frac1{T_G}=\frac{\partial S_G}{\partial E}=\frac{d k_B}{2E},
+\quad E=\frac d2 k_BT_G,\quad C_{V,G}=\frac d2 k_B.
 \]
-低温 \(C_N\to0\)。以上忽略相互作用、离散能级及真正二维材料的能带非抛物线效应。
+同时
+\[
+\frac p{T_G}=\left(\frac{\partial S_G}{\partial V}\right)_E
+=\frac{Nk_B}{V},\qquad pV=Nk_BT_G.
+\]
+由 \(dS_G=0\) 且 \(N\) 固定，\(V^N E^{d/2}=\)常数，故
+\(EV^{2N/d}=\)常数，以及
+\(TV^{2N/d}=\)常数（由于 \(d=3(N-1)\)）。有限体系中去除质心动量的三个自由度导致温度定义中的 \(3N-3\) 与状态方程压力自由度 \(N\) 同时出现，二者不矛盾。
+
+(4) 令 \(\alpha=d/2=3(N-1)/2\)，则
+\(\omega(E)=\alpha\Omega_G/E\propto E^{\alpha-1}\)，
+\[
+T_B=\frac{E}{(\alpha-1)k_B},\quad
+C_{V,B}=(\alpha-1)k_B.
+\]
+\(T_B\ne T_G\) 属有限体系常见的体积熵与表面熵定义差异；在 \(N\to\infty\) 且 \(E/N\) 固定时相对差异 \(O(1/N)\) 消失。球面上单位投影的四阶矩为 \(3(2mE)^2/[d(d+2)]\)，故
+\[
+\langle p_{i\alpha}^4\rangle=
+\frac{3(2mE)^2(1-1/N)^2}{d(d+2)},\qquad
+\frac{\langle p_{i\alpha}^4\rangle}{\langle p_{i\alpha}^2\rangle^2}
+=\frac{3d}{d+2}\longrightarrow3.
+\]
+有限维球壳分布有界而非严格高斯，但随着自由度增长，单个分量趋于正态；这与第二问的总动量负关联在大 \(N\) 下相对减弱一致。

@@ -1,13 +1,79 @@
-(1) 定义平移算符 \(T|n\rangle=|n+1\rangle\)，则 \(HT|n\rangle=T H|n\rangle+Fa\,T|n\rangle\)，即 \(HT=TH+FaT\)。若 \(H|\phi\rangle=E|\phi\rangle\)，则 \(T^m|\phi\rangle\) 的能量为 \(E+mFa\)。无限链紧束缚势阱的完整点谱是等距梯 \(E_m=mFa\)，零点可选定；波函数为以Bessel函数系数局域化的叠加。
-(2) 无外场色散 \(E(k)=-2J\cos(ka)\)，由 \(\hbar\dot k=-F\) 得 \(k(t)=k_0-Ft/\hbar\)，
+(1) 记
 \[
-v(t)={2Ja\over\hbar}\sin(k_0a-Fat/\hbar),\qquad
-x(t)-x_0={2J\over F}[\cos(k_0a-Fat/\hbar)-\cos(k_0a)].
+t_c=\tanh\frac{\hbar\omega_c}{2k_BT_c},\qquad
+t_h=\tanh\frac{\hbar\omega_h}{2k_BT_h},\qquad
+a=1-2\xi.
 \]
-因此 \(\omega_B=Fa/\hbar\)、\(T_B=2\pi\hbar/(Fa)\)，轨迹峰谷差 \(4J/F\)。当 \(F\to0\) 且固定t，余弦展开得 \(x-x_0\to(2Ja/\hbar)\sin(k_0a)t\)，为无外场群速运动。
-(3) 对 \(|0\rangle\) 初态，在动量表象用特征线法求解或应用Bessel母函数，格点概率为
+在能量本征基上 \(z=\langle\sigma_z\rangle=-t\)，对角能量平均为 \(\hbar\omega z/2\)。有限时间孤立冲程的两能级跃迁矩阵为
+\(\begin{pmatrix}1-\xi&\xi\\\xi&1-\xi\end{pmatrix}\)，故对角极化变为 \(z\mapsto az\)，因此
 \[
-P_n(t)=J_n^2\left({4J\over Fa}\sin{\omega_Bt\over2}\right).
+U_A=-\frac{\hbar\omega_c}{2}t_c,\quad
+U_B=-\frac{\hbar\omega_h}{2}a t_c,\quad
+U_C=-\frac{\hbar\omega_h}{2}t_h,\quad
+U_D=-\frac{\hbar\omega_c}{2}a t_h.
 \]
-恒等式 \(\sum_{n=-\infty}^{\infty}J_n^2(z)=1\) 保证归一；\(t=T_B\) 时参数为0，\(J_0(0)=1,J_{n\ne0}(0)=0\)，精确回到 \(|0\rangle\)（差一个无关总体相位）。局域化长度尺度 \(\sim J/(Fa)\)。
-(4) \(H\) 不显含时间故 \(\langle H\rangle\) 守恒；在一带紧束缚近似内恒力使准动量扫过布里渊区，群速度周期改号，外场对粒子的净周期功为 \(F\Delta x=0\)。有限链边缘反射、跨带Landau–Zener跃迁和环境退相干均会破坏理想无限单带的严格周期复活。
+热等容冲程没有频隙变化造成的机械功，故
+\[
+Q_h=U_C-U_B=\frac{\hbar\omega_h}{2}(a t_c-t_h),\quad
+Q_c=U_A-U_D=\frac{\hbar\omega_c}{2}(a t_h-t_c).
+\]
+\(Q_h>0\) 是作为热机工作的必要条件。
+
+(2) 一个完整周期 \(\Delta U=0\)，所以
+\[
+W_{\rm out}=Q_h+Q_c
+=\frac\hbar2\big[\omega_h(a t_c-t_h)+
+\omega_c(a t_h-t_c)\big].
+\]
+正功热机需 \(Q_h>0\) 且 \(W_{\rm out}>0\)，其中第二式可直接代数检验；在本设定 \(0\le a\le1\) 与 \(T_h>T_c,\omega_h>\omega_c\) 下，正功条件实际自动意味着 \(Q_h>0\)。
+效率为
+\[
+\eta=\frac{W_{\rm out}}{Q_h}
+=1-\frac{\omega_c(t_c-a t_h)}{\omega_h(a t_c-t_h)}.
+\]
+无跃迁时 \(a=1\)，只要 \(t_c>t_h\)，就有
+\(\eta_0=1-\omega_c/\omega_h\)。
+比较相同两热浴及频隙但 \(\xi>0\)，得到严格损功
+\[
+W_{\rm out}(0)-W_{\rm out}(\xi)
+=\hbar\xi(\omega_h t_c+\omega_c t_h)>0.
+\]
+它来自孤立冲程内部的非绝热布居跃迁，而非等容冲程对外机械做功。
+
+(3) 熵产生的量纲是能量/温度，循环工作物质熵返回初始值，故
+\[
+\Sigma=-\frac{Q_h}{T_h}-\frac{Q_c}{T_c}.
+\]
+设 \(\rho_B,\rho_D\) 为压缩、膨胀后的态，\(\rho_C,\rho_A\) 为对应热态。每个孤立冲程是幺正演化，因此 \(S_{\rm vN}(\rho_B)=S_{\rm vN}(\rho_A)\)，
+\(S_{\rm vN}(\rho_D)=S_{\rm vN}(\rho_C)\)。两热化过程相对熵恒满足
+\[
+k_B D(\rho_B\Vert\rho_C)
++k_B D(\rho_D\Vert\rho_A)
+=-\frac{Q_h}{T_h}-\frac{Q_c}{T_c}=\Sigma\ge0.
+\]
+从 \(\Sigma\ge0\) 且 \(Q_h>0\) 得
+\(Q_c\le-(T_c/T_h)Q_h\)，故
+\(\eta\le1-T_c/T_h\)。
+对 \(\xi=0\)，\(Q_h>0\iff t_c>t_h\iff
+\omega_c/T_c>\omega_h/T_h\iff
+\omega_c/\omega_h>T_c/T_h\)，所以正功Otto效率确实严格小于Carnot界。
+
+(4) 从第二问可见
+\(dW_{\rm out}/d\xi=-\hbar(\omega_h t_c+\omega_c t_h)<0\)。
+当无跃迁理想净功 \(W_0=\hbar(\omega_h-\omega_c)(t_c-t_h)/2>0\) 时，临界跃迁概率为
+\[
+\xi_*=\frac{(\omega_h-\omega_c)(t_c-t_h)}
+{2(\omega_h t_c+\omega_c t_h)}.
+\]
+\(0\le\xi<\xi_*\) 为正功区，\(\xi=\xi_*\) 净功为零，之后进入需外部供功状态。令
+\(A=t_c-t_h>0\)，小 \(\xi\) 时
+\[
+\eta=\left(1-\frac{\omega_c}{\omega_h}\right)
+-\frac{2\omega_c}{\omega_h}
+\frac{\xi(t_c+t_h)}{A}+O(\xi^2),
+\]
+并非简单仍等于无摩擦Otto效率。作为能量核验，可取无量纲
+\(\hbar=k_B=1\)、\((\omega_c,T_c)=(1,1)\)、\((\omega_h,T_h)=(2,3)\)、
+\(\xi=0.01\)，从第一问逐项计算后必得
+\(W_{\rm out}=Q_h+Q_c\) 且相对 \(\xi=0\) 输出功下降
+\(0.01[2\tanh(1/2)+\tanh(1/3)]>0\)。

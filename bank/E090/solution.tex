@@ -1,23 +1,55 @@
-(1) 电报方程
+(1) 设 \(\Phi_0=h/(2e)=2\pi\hbar/(2e)\)，总并联超电流为
 \[
-\partial_xV=-LI_t-RI,\qquad \partial_xI=-CV_t-GV.
+I=I_1\sin(\delta+\phi/2)+I_2\sin(\delta-\phi/2)
+=(I_1+I_2)\cos(\phi/2)\sin\delta
++(I_1-I_2)\sin(\phi/2)\cos\delta.
 \]
-(2) 代入复幅 \(\tilde V,\tilde I\propto e^{-\gamma x}\) 给
+记复振幅
+\(Z(\phi)=I_1e^{i\phi/2}+I_2e^{-i\phi/2}=I_c(\phi)e^{i\alpha(\phi)}\)，则
+\(I=I_c(\phi)\sin[\delta+\alpha(\phi)]\)。
+Josephson势能为
 \[
-\gamma^2=(R+i\omega L)(G+i\omega C),\qquad
-Z_0={\tilde V\over\tilde I}=\sqrt{{R+i\omega L\over G+i\omega C}}.
+U_J=-E_1\cos(\delta+\phi/2)-E_2\cos(\delta-\phi/2)
+=-E_{\rm eff}(\phi)\cos[\delta+\alpha(\phi)],
+\quad E_{\rm eff}=\frac{\hbar I_c}{2e}.
 \]
-选 \(\Re\gamma\ge0\) 与沿正x输入正功率的根。无损时 \(\gamma=i\omega\sqrt{LC}\)、\(Z_0=\sqrt{L/C}>0\)，相速度 \(1/\sqrt{LC}\)。
-(3) 低损展开
+此处的有效单结是两弱结在共同相位 \(\delta\) 上干涉后的等效势，不是单弱结电流的代数求和。
+
+(2) 对共同相位取绝对最大值得
 \[
-\gamma\simeq i\omega\sqrt{LC}
-+\tfrac R2\sqrt{C/L}+\tfrac G2\sqrt{L/C},\quad
-\alpha\simeq\tfrac R2\sqrt{C/L}+\tfrac G2\sqrt{L/C}.
+I_c(\phi)=|Z|=\sqrt{I_1^2+I_2^2+2I_1I_2\cos\phi}
+=\sqrt{(I_1+I_2)^2\cos^2\frac\phi2+
+(I_1-I_2)^2\sin^2\frac\phi2}.
 \]
-故一阶相速度仍 \(1/\sqrt{LC}\)。电阻和漏导导致幅度按 \(e^{-\alpha x}\) 衰减、功率约按 \(e^{-2\alpha x}\) 衰减。
-(4) 第一式乘I、第二式乘V相加并应用乘积法则：
+在整数磁通处 \(I_c=I_1+I_2\)，在半整数磁通处
+\(I_c=|I_1-I_2|\)；等结 \(I_1=I_2=I_0\) 时
+\(I_c=2I_0|\cos(\pi\Phi_{\rm ext}/\Phi_0)|\) 有精确节点，而不等结保留非零极小值。平方根内只含 \(\cos\phi\)，故所有可观测临界电流以 \(\Phi_0\) 为周期；\(\alpha\) 变化时可同时平移共同相位，避免误判 \(2\Phi_0\) 周期。
+
+(3) 偏置源作功的有效势为
 \[
-\partial_t\left({LI^2+CV^2\over2}\right)
-+\partial_x(VI)=-RI^2-GV^2.
+U(\delta)=-E_{\rm eff}\cos(\delta+\alpha)
+-\frac{\hbar I_b}{2e}\,\delta.
 \]
-右端非正，时间平均对行波得 \(-d\langle VI\rangle/dx=(R|\tilde I|^2+G|\tilde V|^2)/2\)。这是电路版Poynting定理，若外部有源端口，边界能流不消失。
+设 \(i=|I_b|/I_c\in[0,1)\)，作平移 \(\varphi=\delta+\alpha\)（若负偏置相应反向选鞍点），极值满足
+\(\sin\varphi=I_b/I_c\)。
+对于正偏置，一极小值在 \(\varphi_m=\arcsin i+2\pi n\)，沿逃逸方向的相邻鞍点在 \(\varphi_s=\pi-\arcsin i+2\pi n\)，故
+\[
+\Delta U=2E_{\rm eff}\left[\sqrt{1-i^2}-i\arccos i\right].
+\]
+若 \(i\to1^-\)，令 \(\epsilon=1-i\)，利用
+\(\sqrt{1-i^2}-i\arccos i=(2\sqrt2/3)\epsilon^{3/2}+O(\epsilon^{5/2})\)，从而
+\[
+\Delta U=\frac{4\sqrt2}{3}E_{\rm eff}(1-i)^{3/2}
++O((1-i)^{5/2}).
+\]
+若 \(I_c=0\)（等结恰半磁通），无稳态束缚势和上述除以 \(I_c\) 的公式；若忽略电容，只是省略惯性和逃逸速率的动力学影响，静态势垒形状仍成立。
+
+(4) 零偏置下对 \(\delta\) 极小化有 \(F(\Phi_{\rm ext})=-E_{\rm eff}(\Phi_{\rm ext})\)，故
+\[
+I_{\rm circ}=-\frac{\partial F}{\partial\Phi_{\rm ext}}
+=\frac{\partial E_{\rm eff}}{\partial\Phi_{\rm ext}}
+=-\frac{I_1I_2\sin\phi}{I_c(\phi)}
+\quad (I_c>0).
+\]
+在等结 \(I_1=I_2=I_0\) 且未跨节点的区域，公式等于
+\(-I_0\sin(\phi/2)\operatorname{sgn}[\cos(\phi/2)]\)；半磁通的基态出现简并尖点，导数从两侧不同，不能说该点有唯一平衡环流。若 \(I_2\to0\)，\(I_c\to I_1\) 而环流趋零，符合一个弱结构不成双路径干涉。有限自感 \(L\) 时穿环总磁通为 \(\Phi_{\rm ext}+LI_{\rm circ}\)（符号依环流方向约定），需自洽求解相位，以上简单 \(\Phi_0\) 周期临界曲线和尖点会受屏蔽修正。

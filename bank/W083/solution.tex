@@ -1,23 +1,56 @@
-(1) 动量方程 \(\rho u_{tt}=\partial_x\sigma\) 与本构关系给
+(1) 扰动满足
 \[
-\rho u_{tt}=Eu_{xx}+\eta u_{xxt}.
+\partial_t\mathbf u+2\boldsymbol\Omega\times\mathbf u=-\frac1\rho\nabla\pi,
+\qquad\nabla\cdot\mathbf u=0.
 \]
-(2) 对 \(u\propto e^{ikx-i\omega t}\)，有
+对 \(\mathbf u=\widehat{\mathbf u}e^{i(\mathbf k\cdot\mathbf r-\omega t)}\) 投影到垂直 \(\mathbf k\) 的平面，压力项消失。对 \(\boldsymbol\Omega=\Omega\mathbf e_z\)，旋转投影在该二维平面产生以 \(2\Omega\cos\theta\) 为系数的反对称矩阵，因此
 \[
-\rho\omega^2+i\eta k^2\omega-Ek^2=0,
-\quad
-\omega_\pm=-i{\eta k^2\over2\rho}\pm\sqrt{{E k^2\over\rho}-{\eta^2k^4\over4\rho^2}}.
+\boxed{\omega_\pm=\pm2\Omega\cos\theta}.
 \]
-若 \(0<|k|<k_c=2\sqrt{E\rho}/\eta\) 则平方根为实数，衰减率 \(\eta k^2/(2\rho)\)；更高k为非振荡过阻尼。时间因子 \(e^{-i\omega t}\) 使 \(\Im\omega<0\) 表示衰减。
-(3) 设 \(c=\sqrt{E/\rho},\,b=\eta/(2\rho)\)，对正实频支
-\(\omega_R=|k|\sqrt{c^2-b^2k^2}\)，取 \(k>0\) 时
+这是带符号波动本征值；固定正频率可通过选择相应正负螺旋分支和 \(\mathbf k\) 方向获得。其绝对值至多 \(2\Omega\)，不同于随波数线性增长的可压缩声波。
+
+(2) 在给定正交基中，\(P_\perp(\mathbf e_z\times\mathbf e_1)=\cos\theta\,\mathbf e_2\)，
+\(P_\perp(\mathbf e_z\times\mathbf e_2)=-\cos\theta\,\mathbf e_1\)。
+若 \(\cos\theta>0\)，正频率 \(\omega=2\Omega\cos\theta\) 的复振幅可取
 \[
-{d\omega_R\over dk}={c^2-2b^2k^2\over\sqrt{c^2-b^2k^2}}.
+\widehat{\mathbf u}=A(\mathbf e_1-i\mathbf e_2).
 \]
-在 \(k\uparrow k_c=c/b\) 时实频趋零而该导数趋负无穷；此处模强衰减、非Hermitian频谱分支合并，不能由实频导数推断波前速度。长波 \(\omega_R\simeq ck[1-b^2k^2/(2c^2)]\)。
-(4) 方程乘 \(u_t\) 并分部积分，得局部能量律
+其横向两分量正交且相差四分之一周期，故轨迹为横向圆偏振。将波动方程沿 \(\mathbf k\) 取内积，得到
 \[
-\partial_t\left({\rho u_t^2+E u_x^2\over2}\right)
-+\partial_x[-(Eu_x+\eta u_{xt})u_t]=-\eta u_{xt}^2\le0 .
+\widehat\pi=\frac{2i\rho\Omega}{k^2}\,
+\mathbf k\cdot(\mathbf e_z\times\widehat{\mathbf u})
+=-\frac{2\rho\Omega A\sin\theta}{k}.
 \]
-空间积分端点通量为零即 \(\dot{\mathcal E}_{\rm tot}=-\int\eta u_{xt}^2dx\)。\(\eta\to0\) 回复无损弹性波 \(\omega=\pm ck\)，能量严格守恒。
+可选择实 \(A\) 作相位规范。 \(\theta=0\) 时波矢沿转轴，频率为 \(2\Omega\)、压强扰动为0；\(\theta=\pi/2\) 时两分支合并为零频的地转退化模，应区分静态模式和非零频传播波。
+
+(3) 取正向传播分支 \(\omega=2\Omega k_z/|\mathbf k|\)，则
+\[
+\mathbf c_{\rm ph}=\frac{\omega}{k}\widehat{\mathbf k},
+\qquad
+\mathbf c_g=\nabla_{\mathbf k}\omega
+=\frac{2\Omega}{k}\left[\mathbf e_z-\cos\theta\,\widehat{\mathbf k}\right].
+\]
+直接相乘有
+\(\mathbf k\cdot\mathbf c_g=2\Omega[\mathbf k\cdot\mathbf e_z-\cos\theta\,k]/k=0\)。
+群速大小 \(|\mathbf c_g|=2\Omega|\sin\theta|/k\)；相速大小为 \(2\Omega|\cos\theta|/k\)。相速和群速虽都按 \(k^{-1}\) 缩放，方向却严格正交；这一结论源自频率仅依赖波矢方向。在有限容器、高波数黏性耗散、层化或非均匀转速环境中，频散需修正。
+
+(4) 将Euler线性方程与 \(\rho\mathbf u\) 点乘，科里奥利力因
+\(\mathbf u\cdot(\boldsymbol\Omega\times\mathbf u)=0\) 不做功，利用不可压性得到
+\[
+\partial_t\left(\frac{\rho|\mathbf u|^2}{2}\right)
++\nabla\cdot(\pi\mathbf u)=0.
+\]
+第二问的复模幅度为 \(A(\mathbf e_1-i\mathbf e_2)\)，因此
+\[
+\overline{\mathcal E}=\frac{\rho}{4}|\widehat{\mathbf u}|^2
+=\frac{\rho|A|^2}{2}.
+\]
+又 \(\widehat\pi=-2\rho\Omega A\sin\theta/k\)，所以
+\[
+\overline{\mathbf S}=\frac12\Re(\widehat\pi\,\widehat{\mathbf u}^*)
+=-\frac{\rho\Omega|A|^2\sin\theta}{k}\,\mathbf e_1.
+\]
+从第三问
+\(\mathbf c_g=(2\Omega/k)(-\sin\theta)\mathbf e_1\)，恰有
+\(\overline{\mathbf S}=\overline{\mathcal E}\mathbf c_g\)。
+这也验证压力虽无净压缩功，却通过压力速度相关承担扰动能量输运。
