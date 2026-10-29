@@ -54,7 +54,7 @@ ck('O071',1,'independent_derivation','Gaussian Fourier characteristic function y
 ck('O071',2,'symbolic','amplitude and intensity Gaussian half widths differ by exact square root of two',eq((s.sqrt(2*s.log(2))/sk)/(s.sqrt(s.log(2))/sk),s.sqrt(2)))
 ck('O071',3,'numerical','chirped Gaussian magnitude agrees with independently integrated oscillatory spectral integral',abs(complex(amp.subs({sk:1,dz:s.Rational(1,3),ph:s.Rational(2,5)}))-complex(mp.quad(lambda t:mp.exp(-t*t/2+0.2j*t*t+2j*t/3),[-mp.inf,mp.inf])/mp.sqrt(2*mp.pi)))<1e-9)
 dk=s.symbols('dk',positive=True)
-ck('O071',4,'limit','uniform spectral sampling phase is exactly invariant after one depth alias period and bandwidth zero loses localization',eq(s.exp(2*s.I*dk*s.pi/dk),1) and eq(s.limit(s.sqrt(2*s.log(2))/sk,sk,0),s.oo))
+ck('O071',4,'limit','uniform spectral sampling phase is exactly invariant after one depth alias period and bandwidth zero loses localization',eq(s.exp(2*s.I*dk*s.pi/dk),1) and s.limit(s.sqrt(2*s.log(2))/sk,sk,0)==s.oo)
 # Q070 Aharonov Bohm quantum ring
 eps,f,phi0,beta=s.symbols('eps f phi0 beta',positive=True)
 ell=s.symbols('ell',integer=True)
