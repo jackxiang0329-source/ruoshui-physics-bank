@@ -48,7 +48,7 @@ check("E066",1,"symbolic","ideal MHD momentum and induction equations imply exac
 u0,b0,uz,bz=s.symbols("u0 b0 uz bz",real=True)
 ut=B0*bz/(mu*rho);bt=B0*uz
 check("E066",2,"independent_derivation","Elsasser variables exactly decouple into opposite-direction transport equations",equal(ut+bt/s.sqrt(mu*rho)-vA*(uz+bz/s.sqrt(mu*rho))) and equal(ut-bt/s.sqrt(mu*rho)+vA*(uz-bz/s.sqrt(mu*rho))))
-check("E066",3,"conservation","kinetic and magnetic Alfven energies satisfy exact local flux conservation",equal(rho*u0*ut+b0*bt-B0/mu*(uz*b0+u0*bz)) and equal(B0*s.sqrt(mu*rho)*u0*u0/mu,rho*vA*u0*u0))
+check("E066",3,"conservation","kinetic and magnetic Alfven energies satisfy exact local flux conservation",equal(rho*u0*ut+b0*bt/mu-B0/mu*(uz*b0+u0*bz)) and equal(B0*s.sqrt(mu*rho)*u0*u0/mu,rho*vA*u0*u0))
 Z1,Z2=s.symbols("Z1 Z2",positive=True)
 rr=(Z1-Z2)/(Z1+Z2);tt=2*Z1/(Z1+Z2)
 check("E066",4,"symbolic","interface Alfven velocity continuity and impedance-weighted energy reflection plus transmission equal unity",equal(1+rr,tt) and equal(Z1*(1-rr),Z2*tt) and equal(rr**2+(Z2/Z1)*tt**2,1))
