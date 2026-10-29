@@ -1,0 +1,4 @@
+(1) 弹簧伸长增量 $y-a\theta$、$y+a\theta$，$T=(m\dot y^2+I\dot\theta^2)/2$，$V=[k_1(y-a\theta)^2+k_2(y+a\theta)^2]/2$。质量矩阵 $\mathsf M=\operatorname{diag}(m,I)$，刚度矩阵 $\mathsf K=\begin{pmatrix}K&aD\\aD&a^2K\end{pmatrix}$，$K=k_1+k_2,D=k_2-k_1$。
+(2) $\det(\mathsf K-\omega^2\mathsf M)=0$ 给出 $mI\omega^4-K(I+ma^2)\omega^2+4a^2k_1k_2=0$，故 $\omega_\pm^2=\frac12[K/m+a^2K/I\pm\sqrt{(K/m-a^2K/I)^2+4a^2D^2/(mI)}]$。
+(3) 因 $K>0$、$\det\mathsf K=4a^2k_1k_2>0$，刚度正定，故两频率均实且正。$k_1=k_2=k$ 时 $D=0$，纯平移频率 $\omega_y^2=2k/m$，纯转动频率 $\omega_\theta^2=2ka^2/I$，模态质量正交。
+(4) 非对称耦合强度为 $aD/\sqrt{mI}$；原频率平方相遇时仍有劈裂 $2|aD|/\sqrt{mI}$，因此避免交叉。对 $\mathsf M\ddot{\mathbf q}+\mathsf K\mathbf q=0$ 左乘 $\dot{\mathbf q}^{\mathsf T}$，严格得到 $d(T+V)/dt=0$。

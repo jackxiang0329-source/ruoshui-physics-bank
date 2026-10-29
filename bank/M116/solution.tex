@@ -1,0 +1,4 @@
+(1) 几何中心 $x_C=R\theta$，质心 $x_G=R\theta-d\sin\theta,\ y_G=R-d\cos\theta$。因此 $v_G^2=(R^2+d^2-2Rd\cos\theta)\dot\theta^2$。定义 $A(\theta)=I+m(R^2+d^2-2Rd\cos\theta)$，则 $L=A(\theta)\dot\theta^2/2-mgd(1-\cos\theta)$。
+(2) Euler--Lagrange方程为 $A\ddot\theta+A'\dot\theta^2/2+mgd\sin\theta=0$，其中 $A'=2mRd\sin\theta$。额外惯性项 $mRd\sin\theta\,\dot\theta^2$ 来自偏心质心的非圆轨迹，不能在有限幅度下省略。
+(3) $\theta=0$ 线性化得 $\omega_0^2=mgd/[I+m(R-d)^2]$，故稳定；$\theta=\pi$ 是势能极大点。法向力 $N=m[g+d(\cos\theta\dot\theta^2+\sin\theta\ddot\theta)]$ 必须非负，且摩擦需满足静摩擦界。$d\to0$ 时回复频率趋零。
+(4) $\mathcal E=A(\theta)\dot\theta^2/2+mgd(1-\cos\theta)=mgd(1-\cos\theta_0)$，周期 $T=4\int_0^{\theta_0}\sqrt{A(\theta)/[2mgd(\cos\theta-\cos\theta_0)]}\,d\theta$。运动方程乘 $\dot\theta$ 正好得到 $d\mathcal E/dt=0$，接触点静止不做功。
