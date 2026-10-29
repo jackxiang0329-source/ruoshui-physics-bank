@@ -1,0 +1,21 @@
+(1) 瞬时改参数不移动x，故
+\[
+W(x)=U_f(x)-U_i(x)=\tfrac12k[(x-a)^2-x^2]=\tfrac12ka^2-kax.
+\]
+初态 \(p(x)=\sqrt{\beta k/(2\pi)}e^{-\beta kx^2/2}\)，\(\langle x\rangle=0\)、\(\operatorname{Var}x=k_BT/k\)。所以
+\[
+\langle W\rangle=ka^2/2,\quad \operatorname{Var}W=k a^2k_BT.
+\]
+(2) 高斯矩母函数给
+\[
+\langle e^{-\beta W}\rangle
+=e^{-\beta ka^2/2}\langle e^{\beta k a x}\rangle
+=e^{-\beta ka^2/2+\beta^2 k^2a^2(k_BT/k)/2}=1.
+\]
+配分函数 \(Z(\lambda)=\int dx\,dp\,e^{-\beta[p^2/(2m)+k(x-\lambda)^2/2]}\) 与 \(\lambda\) 无关，故 \(\Delta F=0\)，吻合Jarzynski。
+(3) \(W<0\iff x>a/2\)（a>0），故
+\[
+\Pr(W<0)={1\over2}\operatorname{erfc}\left[{a\over2}\sqrt{\beta k\over2}\right]>0.
+\]
+平均耗散功 \(\beta(\langle W\rangle-\Delta F)=\beta ka^2/2\ge0\)。少数初始涨落中粒子位于新阱一侧，外部瞬时取走能量；第二定律约束的是平均而非每次轨迹功。
+(4) \(a\to0\) 时功均值与方差趋0；\(T\to0\) 经典位置涨落消失，功趋确定值 \(ka^2/2\)（严格量子零点需另论）；可逆极慢平移时平均功趋 \(\Delta F=0\)，与突然协议不同。Jarzynski要求正则初态和正确的包涵势阱参数变化的功定义，若初态不平衡不能直接套此式。

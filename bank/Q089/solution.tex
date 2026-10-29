@@ -1,0 +1,18 @@
+(1) \(\sigma_y\) 与 \(\sigma_x,\sigma_z\) 均反对易，因此 \(\{H,\sigma_y\}=0\)。非零能态由 \(\sigma_y\) 映射为能量符号相反的态；零能态可取定手征。
+(2) \(H\psi=0\)，左乘 \(\sigma_x\) 并用 \(\sigma_x\sigma_z=-i\sigma_y\) 得
+\[
+\hbar v\,\psi'(x)+\Delta(x)\sigma_y\psi(x)=0.
+\]
+对 \(\sigma_y\chi_\pm=\pm\chi_\pm\)，
+\(\psi_\pm(x)=C_\pm\chi_\pm\exp[\mp(\hbar v)^{-1}\int_0^x\Delta(s)ds]\)。畴壁积分
+\(\int_0^x\Delta_0\tanh(s/\ell)ds=\Delta_0\ell\ln\cosh(x/\ell)\)，故只有
+\[
+\psi_0(x)=\mathcal N[\cosh(x/\ell)]^{-\Delta_0\ell/(\hbar v)}\chi_+
+\]
+在两侧可归一。远端包络 \(\sim e^{-|x|\Delta_0/(\hbar v)}\)，局域长度 \(\xi=\hbar v/\Delta_0\)。
+(3) 利用Pauli对易关系可得
+\[
+H^2=-\hbar^2v^2\partial_x^2+\Delta(x)^2-\hbar v\,\Delta'(x)\sigma_y.
+\]
+在 \(\sigma_y=+1\) 通道局部势为 \(\Delta^2-\hbar v\Delta'\)，可低于远端连续谱阈值 \(\Delta_0^2\)，容纳零能；但 \(H^2=H^\dagger H\ge0\)，所以不可能有负本征值。
+(4) 若反转为 \(-\Delta_0\tanh(x/\ell)\)，可归一零模转入 \(\sigma_y=-1\) 通道。若质量在两端同号且无额外特殊约束，一般没有受拓扑保护的孤立零模。加入 \(V(x)I\) 破坏 \(\{H,\sigma_y\}=0\)，零能不再受锁定；有限边界另一畴壁可能与零模混合并产生指数小劈裂。

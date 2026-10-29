@@ -1,0 +1,25 @@
+(1) 静态安培定律 \(\nabla\times\boldsymbol B=\mu_0\boldsymbol J\)，两边取旋度并利用 \(\nabla\cdot B=0\) 与 London 方程得
+\[
+-\nabla^2\boldsymbol B=\mu_0\nabla\times\boldsymbol J=-\boldsymbol B/\lambda_L^2,
+\qquad B_x''=B_x/\lambda_L^2.
+\]
+(2) 边界 \(B_x(\pm d/2)=B_a\)，对称解
+\[
+B_x(z)=B_a{\cosh(z/\lambda_L)\over\cosh[d/(2\lambda_L)]},\quad
+J_y(z)={1\over\mu_0}{dB_x\over dz}
+={B_a\over\mu_0\lambda_L}{\sinh(z/\lambda_L)\over\cosh[d/(2\lambda_L)]}.
+\]
+根据 \((\nabla\times B)_y=\partial_z B_x\) 的坐标公式，实际上 \((\nabla\times B)_y=\partial_zB_x\)，上述符号一致。厚板 \(d\gg\lambda_L\)，中心场指数小，两个面各有衰减层；薄板 \(d\ll\lambda_L\)，\(B_x\simeq B_a\)，几乎穿透。
+(3) 板内磁场能/单位面积为
+\[
+U_B/A={1\over2\mu_0}\int_{-d/2}^{d/2}B_x(z)^2dz
+={B_a^2\over2\mu_0\cosh^2a}
+\left[{d\over2}+{\lambda_L\over2}\sinh(2a)\right],
+\quad a={d\over2\lambda_L}.
+\]
+\(B_x\) 偶、\(J_y\) 奇，左右屏蔽电流方向相反。\(d\ll\lambda_L\) 时 \(U_B/A\simeq B_a^2d/(2\mu_0)\)。
+(4) London动能密度 \(\mu_0\lambda_L^2J^2/2\)，故
+\[
+u_\mathrm{tot}={B^2\over2\mu_0}+{\mu_0\lambda_L^2J^2\over2}\ge0.
+\]
+厚板单面 \(B\simeq B_a e^{-s/\lambda_L},\,|J|\simeq B_a e^{-s/\lambda_L}/(\mu_0\lambda_L)\)，两项相等，单位面积每面总储能 \(\int_0^\infty [B_a^2e^{-2s/\lambda_L}/\mu_0]ds=B_a^2\lambda_L/(2\mu_0)\)。忽略穿透涡旋、非局域效应、涡态以及临界场附近的正常态转变。

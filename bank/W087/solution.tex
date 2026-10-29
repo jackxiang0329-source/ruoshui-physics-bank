@@ -1,0 +1,23 @@
+(1) 令 \(\xi=x-st\)，行波满足
+\[
+-sU'+UU'=\nu U''.
+\]
+积分一次得 \(\nu U'=\tfrac12(U-u_L)(U-u_R)\)，其中已用两端 \(U'\to0\)；这同时要求 \(s=(u_L+u_R)/2\)。
+(2) 设 \(\Delta=u_L-u_R>0\)、\(s=(u_L+u_R)/2\)，解为
+\[
+U(\xi)=s-{\Delta\over2}\tanh\left({\Delta\xi\over4\nu}\right).
+\]
+求导 \(U'=-(\Delta^2/(8\nu))\operatorname{sech}^2(\Delta\xi/(4\nu))\)；过渡宽度尺度 \(4\nu/\Delta\)。\(\nu\to0^+\) 时逼近从 \(u_L\) 跃降至 \(u_R\) 的压缩激波。
+(3) 无粘通量 \(f(u)=u^2/2\)，Rankine–Hugoniot跳跃条件给
+\(s=[f]/[u]=(u_L+u_R)/2\)，与黏性行波完全一致。若 \(u_L<u_R\)，特征线向两侧分离，熵解为稀疏扇而非减小的tanh激波。
+(4) 乘u并整理
+\[
+\partial_t(u^2/2)+\partial_x(u^3/3-\nu uu_x)=-\nu u_x^2.
+\]
+若边界无净通量，则 \(\frac d{dt}\int u^2/2\,dx=-\nu\int u_x^2dx\le0\)。行波精确损耗
+\[
+\int_{-\infty}^{\infty}\nu(U')^2d\xi
+={\Delta^4\over64\nu}\,{4\nu\over\Delta}\int_{-\infty}^\infty\operatorname{sech}^4y\,dy
+={\Delta^3\over12},
+\]
+因 \(\int\operatorname{sech}^4y\,dy\) 全空间为 \(4/3\)。无限激波背景并不满足u平方可积，此积分仅作为局部激波耗散，不能误套无边界通量的整体平方能量衰减公式。
