@@ -139,7 +139,7 @@ function sim(f,a,b,n=6000){if(n%2)n++;let h=(b-a)/n,s=f(a)+f(b);for(let j=1;j<n;
  check('W112','Maxwell_shear_wave_complex_dispersion_imag_part',2*kr*ki,im);
 }
 {
- const sigma=1.3,mu=2.1,f=x=>Math.exp(-(x-mu)**2/(2*sigma*sigma))/(Math.sqrt(2*P)*sigma);
+ const sigma=1.3,mu=2.1,f=x=>Math.exp(-((x-mu)**2)/(2*sigma*sigma))/(Math.sqrt(2*P)*sigma);
  const variance=sim(x=>(x-mu)**2*f(x),mu-11*sigma,mu+11*sigma);
  check('W113','Doppler_Gaussian_variance_quadrature',variance,sigma*sigma);
 }
