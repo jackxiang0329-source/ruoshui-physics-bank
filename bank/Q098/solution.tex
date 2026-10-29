@@ -1,0 +1,7 @@
+(1) 初始基态满足 $\langle x^2\rangle_i=\hbar/(2m\omega_i)$、$\langle p^2\rangle_i=\hbar m\omega_i/2$。由于瞬时变频不改变 $x,p$ 的量子态，最终平均能量 $\langle H_f\rangle=\hbar[\omega_i+\omega_f^2/\omega_i]/4$。绝热频率变化将基态带到最终基态，能量仅 $\hbar\omega_f/2$。
+
+(2) 定义 $r=\tfrac12\ln(\omega_f/\omega_i)$，Bogoliubov关系可写 $a_f=\cosh r\,a_i+\sinh r\,a_i^\dagger$（符号与压缩相位约定有关）。所以初始真空相对于新算符是压缩真空，$\boxed{\langle n_f\rangle=\sinh^2r=(\omega_f/\omega_i+\omega_i/\omega_f-2)/4}$，严格非负。
+
+(3) 波函数关于 $x$ 为偶函数，而最终本征函数宇称为 $(-1)^n$，故所有奇数 $n$ 的重叠均为零。偶数态概率为 $\boxed{P_{2j}=\frac{(2j)!}{2^{2j}(j!)^2}\frac{\tanh^{2j}r}{\cosh r}}$，可用二项级数核验归一；基态重叠概率 $P_0=1/\cosh r=2\sqrt{\omega_i\omega_f}/(\omega_i+\omega_f)$。
+
+(4) 额外非绝热功为 $W_{\rm exc}=\langle H_f\rangle-\hbar\omega_f/2=\hbar\omega_f\sinh^2r\ge0$。压缩真空满足 $\operatorname{Var}(n_f)=2\sinh^2r(1+\sinh^2r)$，比相同平均数的泊松分布更宽。慢速绝热变频保持瞬时基态占据 $n=0$，没有这项激发能。
