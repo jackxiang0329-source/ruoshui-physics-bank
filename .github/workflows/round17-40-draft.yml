@@ -1,0 +1,14 @@
+name: Round 17 forty-problem draft QA
+on:
+  push:
+    branches: [physics-round17-40-draft]
+  workflow_dispatch:
+jobs:
+  source-structure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate forty authoritative TeX triples and 160 complete parts
+        run: node scripts/check_round17_40_draft.js > /tmp/round17-structure.json
+      - name: Preserve admission blockers
+        run: echo 'Round 17 is draft only. Full historical semantic rescreen, 160 independent subpart checks, generated mirrors and two XeLaTeX PDFs remain outstanding.'
