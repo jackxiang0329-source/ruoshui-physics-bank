@@ -1,7 +1,7 @@
 {
   "status": "draft-only",
-  "new_problem_count": 23,
-  "passed_count": 92,
+  "new_problem_count": 24,
+  "passed_count": 96,
   "tests": [
     {
       "id": "M059",
@@ -646,6 +646,34 @@
       "method": "limit",
       "name": "bulk wave speeds bound the unique compressible to incompressible elastic surface phase speeds",
       "passed": true
+    },
+    {
+      "id": "O060",
+      "part": 1,
+      "method": "conservation",
+      "name": "Helmholtz paraxial scaling and Hermitian propagation admit the exact local mass-current continuity",
+      "passed": true
+    },
+    {
+      "id": "O060",
+      "part": 2,
+      "method": "symbolic",
+      "name": "independent Airy ordinary differential equation substitution cancels both propagation residual coefficients",
+      "passed": true
+    },
+    {
+      "id": "O060",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "Fourier Gaussian spectral moments yield exactly constant centroid and dispersive variance",
+      "passed": true
+    },
+    {
+      "id": "O060",
+      "part": 4,
+      "method": "physical_case",
+      "name": "cubic-spectrum stationary-phase fold follows a parabola although total transverse momentum remains zero",
+      "passed": true
     }
   ],
   "independent_expert_review": "pending",
@@ -786,6 +814,12 @@
       "id": "W059",
       "method": "high_precision_elastic_energy_flux",
       "name": "50-digit independent Rayleigh dispersion root and depth integrated energy-flux quadrature",
+      "passed": true
+    },
+    {
+      "id": "O060",
+      "method": "high_precision_Airy_PDE_and_Fourier_quadrature",
+      "name": "50-digit complex Airy PDE derivative residual and independent Gaussian spectral power and moment quadratures",
       "passed": true
     }
   ]

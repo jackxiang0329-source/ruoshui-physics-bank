@@ -50,7 +50,7 @@
       ]
     }
   ],
-  "disposition": "Historical overlaps remain resolved. T059 screened against T030/T047/T055/T058/E022: reciprocal thermoelectric two-current transport is distinct from finite-time heat-engine and stochastic ring models. 22/50; independent review pending.",
+  "disposition": "Historical core-model overlaps have been replaced; W059 elastic Rayleigh and O060 finite-energy Airy beam screened distinct from prior waves/optics models. Current draft 24/50, independent human expert review pending.",
   "independent_expert_review": "待独立复核",
   "new_draft_model_screening": [
     {
@@ -137,6 +137,32 @@
       ],
       "core_model": "Onsager-symmetric two-current thermoelectric generator with coupled charge/heat flux, determinant positivity, load-optimized power versus efficiency, Seebeck-Peltier Kelvin reciprocity and thermal leakage figure of merit ZT",
       "difference": "T030/T055 optimize finite-rate heat-exchanger temperature drops, T047 is a Jarzynski Brownian work protocol, T058 is a three-state stochastic ring current fluctuation model, E022 is a bulk Drude Hall bar. None uses reciprocal thermoelectric cross coefficients, the Onsager determinant or electrical load impedance to derive the ZT efficiency frontier.",
+      "resolution_status": "screened_distinct_pending_independent_review"
+    },
+    {
+      "draft_id": "W059",
+      "compared_existing_ids": [
+        "W021",
+        "W042",
+        "W047",
+        "W058"
+      ],
+      "core_model": "Rayleigh elastic half-space surface eigenspectrum with coupled longitudinal and shear displacement potentials, uniqueness of traction-free wave speed and depth-integrated elastic energy velocity",
+      "difference": "W021/W042 use Euler-Bernoulli beam fourth-order dynamics, W047 fluid gravity-capillary interface instability, W058 Coriolis shallow-water Kelvin trapped mode; none has elastodynamic P/SV coupling and Rayleigh traction determinant.",
+      "resolution_status": "screened_distinct_pending_independent_review"
+    },
+    {
+      "draft_id": "O060",
+      "compared_existing_ids": [
+        "O010",
+        "O020",
+        "O025",
+        "O040",
+        "O055",
+        "O058"
+      ],
+      "core_model": "Exact finite-energy Airy paraxial beam solution from cubic Fourier phase with Gaussian spectral amplitude, accelerating caustic but stationary Ehrenfest centroid and transverse Poynting-like flux",
+      "difference": "Prior Gaussian-lens / chirped-Gaussian models have quadratic spectral phases, while O058 is knife-edge Fresnel diffraction; none derives cubic-phase Airy propagation, norm and centroid against curved main-lobe trajectory.",
       "resolution_status": "screened_distinct_pending_independent_review"
     }
   ]

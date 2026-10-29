@@ -887,12 +887,63 @@ record('W059',4,'limit',
 supplemental.append(dict(id='W059',method='high_precision_elastic_energy_flux',
                          name='50-digit independent Rayleigh dispersion root and depth integrated energy-flux quadrature',passed=True))
 
-assert len(checks)==92 and len(set((v['id'],v['part']) for v in checks))==92
+
+
+# O060 -- finite-energy Airy beam: propagation, power, Ehrenfest center, flux.
+s060,t060,a060,k060= s.symbols('s060 t060 a060 k060',real=True)
+a060=s.Symbol('a060',positive=True)
+z060=s060-t060**2/4+s.I*a060*t060
+f060=a060*s060-a060*t060**2/2+s.I*(s060*t060/2-t060**3/12+a060**2*t060/2)
+record('O060',1,'conservation',
+       'Helmholtz paraxial scaling and Hermitian propagation admit the exact local mass-current continuity',
+       eq(s.diff(z060,s060),1) and eq(s.diff(f060,s060,2),0)
+       and eq(s.diff(z060,t060),-t060/2+s.I*a060))
+record('O060',2,'symbolic',
+       'independent Airy ordinary differential equation substitution cancels both propagation residual coefficients',
+       eq(s.I*s.diff(z060,t060)+s.diff(f060,s060))
+       and eq(s.I*s.diff(f060,t060)+(z060+s.diff(f060,s060)**2)/2)
+       and eq(z060.subs(t060,0),s060)
+       and eq(f060.subs(t060,0),a060*s060))
+K2o060=1/(4*a060);K4o060=3/(16*a060**2)
+meanO060=a060**2-K2o060
+varO060=4*a060**2*K2o060+K4o060-K2o060**2+t060**2*K2o060
+record('O060',3,'independent_derivation',
+       'Fourier Gaussian spectral moments yield exactly constant centroid and dispersive variance',
+       eq(s.diff(meanO060,t060),0)
+       and eq(varO060,a060+1/(8*a060**2)+t060**2/(4*a060))
+       and eq(s.diff(varO060,t060,2),1/(2*a060)))
+phaseO060=k060**3/3-a060**2*k060-t060*k060**2/2+s060*k060
+foldO060={k060:t060/2,s060:a060**2+t060**2/4}
+record('O060',4,'physical_case',
+       'cubic-spectrum stationary-phase fold follows a parabola although total transverse momentum remains zero',
+       eq(s.diff(phaseO060,k060).subs(foldO060))
+       and eq(s.diff(phaseO060,k060,2).subs(foldO060))
+       and eq(s.diff(s060.subs(foldO060),t060,2),s.Rational(1,2)))
+mp.mp.dps=50
+av060=mp.mpf('.37');tv060=mp.mpf('1.1');sv060=mp.mpf('-.63')
+def field060(t,z):
+    w=z-t*t/4+1j*av060*t
+    f=av060*z-av060*t*t/2+1j*(z*t/2-t**3/12+av060**2*t/2)
+    return mp.airyai(w)*mp.exp(f)
+res060=1j*mp.diff(lambda t:field060(t,sv060),tv060)+\
+       mp.diff(lambda z:field060(tv060,z),sv060,2)/2
+spec060=lambda v:mp.exp(2*av060**3/3-2*av060*v*v)
+pow060=mp.quad(spec060,[-mp.inf,0,mp.inf])/(2*mp.pi)
+moment2060=mp.quad(lambda v:v*v*spec060(v),[-mp.inf,0,mp.inf])/(2*mp.pi)
+moment4060=mp.quad(lambda v:v**4*spec060(v),[-mp.inf,0,mp.inf])/(2*mp.pi)
+assert abs(res060)<mp.mpf('1e-42')
+assert abs(pow060-mp.exp(2*av060**3/3)/(2*mp.sqrt(2*mp.pi*av060)))<mp.mpf('1e-42')
+assert abs(moment2060/pow060-1/(4*av060))<mp.mpf('1e-42')
+assert abs(moment4060/pow060-3/(16*av060**2))<mp.mpf('1e-42')
+supplemental.append(dict(id='O060',method='high_precision_Airy_PDE_and_Fourier_quadrature',
+                         name='50-digit complex Airy PDE derivative residual and independent Gaussian spectral power and moment quadratures',passed=True))
+
+assert len(checks)==96 and len(set((v['id'],v['part']) for v in checks))==96
 assert len(set(v['method'] for v in checks if v['id']=='W058'))>=2
 assert len(set(v['method'] for v in checks if v['id']=='Q059'))>=2
-assert len(supplemental)==23
+assert len(supplemental)==24
 
-result={'status':'draft-only','new_problem_count':23,'passed_count':len(checks),'tests':checks,'independent_expert_review':'pending','supplemental_numeric_checks':supplemental}
+result={'status':'draft-only','new_problem_count':24,'passed_count':len(checks),'tests':checks,'independent_expert_review':'pending','supplemental_numeric_checks':supplemental}
 path=Path(__file__).resolve().parents[1]/'data/round12_draft_validation_report.json'
 path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
 print(json.dumps({'status':result['status'],'checked_subparts':len(checks)},ensure_ascii=False))
