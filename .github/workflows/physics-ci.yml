@@ -44,6 +44,8 @@ jobs:
         run: python scripts/check_round13_originality_gate.py
       - name: Enforce complete 50-problem future rounds and executed subpart QA
         run: python scripts/check_future_rounds.py
+      - name: Screen round 14 against historical core-title and text overlap
+        run: python scripts/check_round14_originality.py
       - name: Validate TeX fragments and derived documents
         run: python scripts/build.py --check
       - name: Upload independent spotcheck report
