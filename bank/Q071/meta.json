@@ -1,21 +1,21 @@
 {
   "id": "Q071",
   "topic": "近代物理",
-  "title": "Aharonov–Bohm量子环的通量周期谱、持续电流与高温Poisson衰减",
+  "title": "侧耦合量子点Fano反共振的精确晶格散射、束缚态与概率流守恒",
   "kind": "综合推导题",
   "level": 5,
   "estimated_minutes": 115,
   "tags": [
-    "Aharonov–Bohm规范相位",
-    "量子环能谱",
-    "持续电流锯齿响应",
-    "Poisson求和高温极限"
+    "一维紧束缚晶格散射",
+    "侧耦合量子点Fano反共振",
+    "带外束缚态自能",
+    "概率流与解析延拓"
   ],
-  "answer": "E_\\ell=\\frac{\\hbar^2}{2mR^2}(\\ell-\\Phi/\\Phi_0)^2,\\quad I_\\ell=\\frac{\\hbar^2}{mR^2\\Phi_0}(\\ell-\\Phi/\\Phi_0)",
+  "answer": "t(E)=\\frac{2iJ\\sin k}{2iJ\\sin k-V^2/(E-\\varepsilon_d)},\\quad E=-2J\\cos k,\\quad T(\\varepsilon_d)=0",
   "quality_status": "待独立复核",
   "tier": "advanced_composite",
   "format": "latex-fragment-v1",
-  "revision": "composite-v4.0-round13-draft",
-  "challenge_profile": "high-multistage",
+  "revision": "composite-v4.3-round13-core-replacement",
+  "challenge_profile": "high-multistage-original-core",
   "complexity_tier": "L5-C"
 }

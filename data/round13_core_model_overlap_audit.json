@@ -1,7 +1,7 @@
 {
   "round": "13",
   "scope": "pre-screen against main 352 problems",
-  "status": "two_historical_core_model_overlaps_still_blocked",
+  "status": "seven_historical_core_model_overlaps_replaced_pending_new_qa",
   "independent_expert_review": "待独立复核",
   "items": [
     {
@@ -294,8 +294,8 @@
       "prior": [
         "Q028"
       ],
-      "difference": "NOT ORIGINAL: 同一Aharonov-Bohm量子环能谱、通量周期及持久电流",
-      "status": "unresolved_requires_substantive_replacement"
+      "difference": "REPLACED core: 侧耦合量子点Fano反共振的精确晶格散射、束缚态与概率流守恒",
+      "status": "replaced_pending_qa"
     },
     {
       "id": "M074",
@@ -335,8 +335,8 @@
       "prior": [
         "O031"
       ],
-      "difference": "NOT ORIGINAL: 同一TM金属介质表面等离激元色散和束缚条件",
-      "status": "unresolved_requires_substantive_replacement"
+      "difference": "REPLACED core: 均匀光纤Bragg光栅的耦合模禁带、精确反射与透射群时延",
+      "status": "replaced_pending_qa"
     },
     {
       "id": "Q072",
@@ -552,8 +552,9 @@
         "O031"
       ],
       "reason": "同一TM金属介质表面等离激元色散和束缚条件",
-      "resolution_status": "unresolved_requires_substantive_replacement",
-      "evidence": "Compared actual question.tex in merged main and draft, not just titles."
+      "resolution_status": "resolved",
+      "evidence": "Different governing equations and new four-part derivation; executable checks pending update.",
+      "replacement_title": "均匀光纤Bragg光栅的耦合模禁带、精确反射与透射群时延"
     },
     {
       "draft_id": "Q071",
@@ -561,8 +562,9 @@
         "Q028"
       ],
       "reason": "同一Aharonov-Bohm量子环能谱、通量周期及持久电流",
-      "resolution_status": "unresolved_requires_substantive_replacement",
-      "evidence": "Compared actual question.tex in merged main and draft, not just titles."
+      "resolution_status": "resolved",
+      "evidence": "Different governing equations and new four-part derivation; executable checks pending update.",
+      "replacement_title": "侧耦合量子点Fano反共振的精确晶格散射、束缚态与概率流守恒"
     },
     {
       "draft_id": "W069",

@@ -1,7 +1,32 @@
-(1) 最小耦合在环上的哈密顿量为 \(H=[-i\hbar R^{-1}\partial_\theta-qA_\theta]^2/(2m)=\varepsilon(-i\partial_\theta-f)^2\)，其中 \(f=\Phi/\Phi_0\)，\(\varepsilon=\hbar^2/(2mR^2)\)。周期边界要求角动量整数 \(\ell\in\mathbb Z\)，归一化本征态 \(\psi_\ell(\theta)=e^{i\ell\theta}/\sqrt{2\pi}\)，故 \(E_\ell=\varepsilon(\ell-f)^2\)。能量依赖的是规范不变的环路相位 \(q\oint A\cdot dl/\hbar=2\pi f\)，而非环上局域磁场。
-
-(2) 磁通增加一个量子时 \(E_\ell(f+1)=E_{\ell-1}(f)\)，所以整套能谱周期为 \(\Phi_0\)，但固定标签的单个抛物线并非周期函数。电流 \(I_\ell=-\partial_\Phi E_\ell=2\varepsilon(\ell-f)/\Phi_0\)。零温基态取距离 \(f\) 最近的整数 \(\ell_0\)，\(E_{\rm gs}=\varepsilon(\ell_0-f)^2\) 为分段抛物线，电流为锯齿；在 \(f=n+1/2\) 两态简并，严格零温无微扰时需说明占据方式，不能指定唯一电流。
-
-(3) 正则配分函数 \(Z(f)=\sum_{\ell\in\mathbb Z}\exp[-\beta\varepsilon(\ell-f)^2]\)，\(F=-k_BT\ln Z\)，故 \(I=-\partial_\Phi F=(k_BT/\Phi_0)\partial_f\ln Z\)。逐项求导得 \(I=(2\varepsilon/\Phi_0)\frac{\sum_\ell(\ell-f)e^{-\beta\varepsilon(\ell-f)^2}}{\sum_\ell e^{-\beta\varepsilon(\ell-f)^2}}\)。在 \(f=0\) 时正负 \(\ell\) 项严格抵消，电流为零；有限温度下也满足 \(I(-f)=-I(f)\)，无须诉诸不严格的经典轨道图像。
-
-(4) Poisson求和得 \(Z(f)=\sqrt{\pi/(\beta\varepsilon)}\sum_{n\in\mathbb Z}e^{-\pi^2n^2/(\beta\varepsilon)}e^{2\pi i n f}\)。令 \(a=e^{-\pi^2/(\beta\varepsilon)}\ll1\)，则 \(Z=\sqrt{\pi/(\beta\varepsilon)}[1+2a\cos(2\pi f)+O(a^4)]\)，从而 \(\boxed{I\simeq-4\pi k_BT\,a\sin(2\pi f)/\Phi_0}\)；高温时指数压倒前面的 \(T\) 因子，电流趋零。反向磁通使正弦变号。Aharonov–Bohm效应由非单连通空间的闭合路径规范相位决定，即使粒子可达环上 \(B=0\)，也不能通过单值规范变换消去非整数通量。
+(1) 链方程为 \(E\psi_n=-J(\psi_{n+1}+\psi_{n-1})+Vd\,\delta_{n0}\)，量子点方程 \((E-\varepsilon_d)d=V\psi_0\)。对 \(E\ne\varepsilon_d\)，消去 \(d\) 得
+\[
+E\psi_n=-J(\psi_{n+1}+\psi_{n-1})+U(E)\psi_0\delta_{n0},
+\quad U(E)=\frac{V^2}{E-\varepsilon_d}.
+\]
+这是具有能量极点的Feshbach有效散射势，不是能量无关的普通 \(\delta\) 杂质；极点处应取连续散射极限。
+(2) 由 \(n=\pm1\) 的离散方程知 \(\psi_0=t=1+r\)。代入 \(n=0\) 方程并用 \(E=-2J\cos k\) 化简得 \(-2iJr\sin k+U(1+r)=0\)，所以
+\[
+r=\frac{U}{2iJ\sin k-U},\qquad
+t=\frac{2iJ\sin k}{2iJ\sin k-U}.
+\]
+入射和透射处群速度相同 \(v_g=2J\sin k/\hbar>0\)，故
+\[
+T=|t|^2=\frac{4J^2\sin^2k}{4J^2\sin^2k+U^2},\quad
+R=\frac{U^2}{4J^2\sin^2k+U^2},\quad R+T=1.
+\]
+(3) 消去 \(U\) 后
+\[
+T(E)=\frac{(E-\varepsilon_d)^2}{(E-\varepsilon_d)^2+
+\Gamma(E)^2},\quad
+\Gamma(E)=\frac{V^2}{2J\sin k(E)}.
+\]
+若点能在带内且 \(V>0\)，在 \(E=\varepsilon_d\) 有 \(T=0,R=1\)，反射由侧点的破坏性干涉造成。窄共振时可用 \(\Gamma(\varepsilon_d)\) 作局部半宽参数。先取 \(V\to0\) 且 \(E\ne\varepsilon_d\) 得 \(T\to1\)，先令 \(E=\varepsilon_d\) 再取 \(V\to0^+\) 得 \(T=0\)；在严格 \(V=0\) 时量子点脱耦，恢复 \(T=1\)。
+(4) 对 \(|E|>2J\)，无限链局域Green函数为 \(g_{00}(E)=\operatorname{sgn}(E)/\sqrt{E^2-4J^2}\)，点态自洽条件
+\[
+E-\varepsilon_d=V^2\frac{\operatorname{sgn}(E)}{\sqrt{E^2-4J^2}}.
+\]
+在 \(E>2J\) 左侧随 \(E\) 严格递增，右侧由正无穷降至零，恰有一个正根；在 \(E<-2J\) 相反亦恰有一个负根。对 \(\varepsilon_d=0\)，平方并保留带外条件得
+\[
+E_\pm=\pm\sqrt{2J^2+\sqrt{4J^4+V^4}}.
+\]
+当 \(V\to0^+\)，两支分别趋近 \(\pm2J\) 的带边；对应态的链上波函数指数衰减，满足正规化而非散射边界。

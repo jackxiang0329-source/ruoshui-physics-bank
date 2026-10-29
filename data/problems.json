@@ -7764,25 +7764,25 @@
   {
     "id": "O072",
     "topic": "光学",
-    "title": "金属–介质表面等离激元TM束缚波的色散、穿透长度与Drude渐近",
+    "title": "均匀光纤Bragg光栅的耦合模禁带、精确反射与透射群时延",
     "kind": "综合推导题",
     "level": 5,
     "estimated_minutes": 115,
     "tags": [
-      "表面等离激元TM模式",
-      "Maxwell切向边界条件",
-      "金属Drude介电函数",
-      "束缚长度与群速极限"
+      "光纤Bragg光栅",
+      "前后向耦合模矩阵",
+      "禁带反射与无损守恒",
+      "透射相位群时延"
     ],
-    "answer": "\\beta=k_0\\sqrt{\\varepsilon_d\\varepsilon_m/(\\varepsilon_d+\\varepsilon_m)},\\quad\\varepsilon_m<-\\varepsilon_d",
+    "answer": "r=\\frac{i\\kappa\\sinh(sL)/s}{\\cosh(sL)-i\\delta\\sinh(sL)/s},\\quad t=\\frac1{\\cosh(sL)-i\\delta\\sinh(sL)/s},\\quad s^2=\\kappa^2-\\delta^2",
     "quality_status": "待独立复核",
     "tier": "advanced_composite",
     "format": "latex-fragment-v1",
-    "revision": "composite-v4.1-round13-draft",
-    "challenge_profile": "high-multistage",
+    "revision": "composite-v4.3-round13-core-replacement",
+    "challenge_profile": "high-multistage-original-core",
     "complexity_tier": "L5-C",
-    "question": "(1) 两无磁、各向同性、无损介质在 \\(z=0\\) 交界：上方 \\(z>0\\) 为实正介电常数 \\(\\varepsilon_d\\)，下方 \\(z<0\\) 为实负 \\(\\varepsilon_m\\)，均表示相对介电常数。取时空因子 \\(e^{i\\beta x-i\\omega t}\\)，考虑沿界面传播、离界面指数衰减的TM模式，令 \\(k_0=\\omega/c\\)。写出两侧场及衰减常数 \\(\\kappa_j\\) 的定义。\n(2) 利用 \\(E_x,H_y\\) 的切向连续性推导表面模式本征方程，求 \\(\\beta(\\omega)\\)，明确实束缚模式存在的参数条件。\n(3) 求两侧场的穿透长度 \\(1/\\kappa_d,1/\\kappa_m\\)。若 \\(\\varepsilon_d=1\\) 且金属满足无损Drude \\(\\varepsilon_m(\\omega)=1-\\omega_p^2/\\omega^2\\)，求大 \\(\\beta\\) 极限的表面等离激元频率和低频光线渐近。\n(4) 说明高 \\(\\beta\\) 极限群速度趋势及金属微弱吸收时传播常数的变化，讨论色散介质电磁能密度为何不能直接用常数 \\(\\varepsilon_m|E|^2/4\\) 计算。\n",
-    "solution": "(1) 设TM模式磁场为 \\(H_y^{(d)}=H_0e^{-\\kappa_d z}e^{i\\beta x-i\\omega t}\\)（\\(z>0\\)），\\(H_y^{(m)}=H_0e^{+\\kappa_m z}e^{i\\beta x-i\\omega t}\\)（\\(z<0\\)）。各侧满足 \\(\\kappa_j^2=\\beta^2-\\varepsilon_jk_0^2\\)，并选 \\(\\operatorname{Re}\\kappa_j>0\\) 使能量局域。由 \\(\\nabla\\times\\mathbf H=-i\\omega\\varepsilon_0\\varepsilon_j\\mathbf E\\) 得 \\(E_x^{(d)}=+i\\kappa_dH_y^{(d)}/(\\omega\\varepsilon_0\\varepsilon_d)\\)、\\(E_x^{(m)}=-i\\kappa_mH_y^{(m)}/(\\omega\\varepsilon_0\\varepsilon_m)\\)；磁场和电场均有横纵分量，不是TE表面波。\n\n(2) 无自由面电流时 \\(H_y\\) 连续，切向 \\(E_x\\) 连续给 \\(\\kappa_d/\\varepsilon_d+\\kappa_m/\\varepsilon_m=0\\)。结合 \\(\\kappa_j^2=\\beta^2-\\varepsilon_jk_0^2\\)，平方并排除不满足衰减号的根，得 \\(\\boxed{\\beta=k_0\\sqrt{\\varepsilon_d\\varepsilon_m/(\\varepsilon_d+\\varepsilon_m)}}\\)。对 \\(\\varepsilon_d>0\\) 的无损金属界面，实且高于介质光线 \\(\\beta>k_0\\sqrt{\\varepsilon_d}\\) 的束缚TM模要求 \\(\\varepsilon_m<-\\varepsilon_d\\)。TE波的边界式不能在两侧普通 \\(\\mu>0\\) 时产生相同束缚解。\n\n(3) 直接代入 \\(\\beta\\) 可得 \\(\\kappa_d=k_0\\varepsilon_d/\\sqrt{-(\\varepsilon_m+\\varepsilon_d)}\\)、\\(\\kappa_m=k_0(-\\varepsilon_m)/\\sqrt{-(\\varepsilon_m+\\varepsilon_d)}\\)（取正实根），穿透长度即各自倒数。对 \\(\\varepsilon_d=1,\\varepsilon_m=1-\\omega_p^2/\\omega^2\\)，当 \\(\\beta\\to\\infty\\) 必有 \\(\\varepsilon_m+\\varepsilon_d\\to0^-\\)，故 \\(\\boxed{\\omega_{\\rm sp}=\\omega_p/\\sqrt2}\\)。在 \\(\\omega\\ll\\omega_p\\) 时 \\(\\varepsilon_m\\simeq-\\omega_p^2/\\omega^2\\)，展开 \\(\\beta\\simeq(\\omega/c)[1+\\omega^2/(2\\omega_p^2)+O(\\omega^4/\\omega_p^4)]\\)，渐近真空光线。\n\n(4) 在无损Drude模型中 \\(\\beta\\) 随 \\(\\omega\\to\\omega_{\\rm sp}^-\\) 发散，因此 \\(v_g=(d\\beta/d\\omega)^{-1}\\to0\\)，表面模强烈局域。实际金属有 \\(\\operatorname{Im}\\varepsilon_m>0\\)，于是 \\(\\beta\\) 变为复数，沿传播方向出现有限衰减，严格的无穷大 \\(\\beta\\) 不可实现。无损色散介质的电能密度应采用Brillouin形式 \\(\\frac14\\varepsilon_0\\partial_\\omega[\\omega\\varepsilon(\\omega)]|E|^2\\)，Drude中 \\(\\partial_\\omega(\\omega\\varepsilon_m)=1+\\omega_p^2/\\omega^2>0\\)，避免把负介电常数误判为负的物理储能。\n"
+    "question": "(1) 无损均匀光纤Bragg光栅长 \\(L>0\\)，在弱调制、单模及慢变包络近似下，前后向复振幅满足 \\(A'=i\\delta A+i\\kappa B,\\ B'=-i\\kappa A-i\\delta B\\)，其中实失谐 \\(\\delta\\)、实耦合 \\(\\kappa>0\\)。求耦合矩阵的本征值，明确禁带与振荡传输区。\n(2) 左端单位入射 \\(A(0)=1\\)，右端无反向入射 \\(B(L)=0\\)。用矩阵指数精确求反射振幅 \\(r=B(0)\\) 与透射振幅 \\(t=A(L)\\)，严格证明无损通量关系 \\(|r|^2+|t|^2=1\\)。\n(3) 求中心Bragg失谐 \\(\\delta=0\\) 的 \\(R,T\\)，以及禁带边缘 \\(|\\delta|=\\kappa\\) 的连续极限；在 \\(|\\delta|>\\kappa\\) 区求完全透射的离散条件。\n(4) 以透射相位 \\(\\varphi_t=\\arg t\\) 定义相对群时延 \\(\\tau_g=(d\\delta/d\\omega)(d\\varphi_t/d\\delta)\\)，求中心Bragg点的精确结果，并检查短光栅与长光栅极限，说明为何该延迟不能解释为超光速信息传播。\n",
+    "solution": "(1) 记 \\(\\Psi=(A,B)^T\\)，则 \\(\\Psi'=M\\Psi\\)，\n\\[\nM=\\begin{pmatrix}i\\delta&i\\kappa\\\\-i\\kappa&-i\\delta\\end{pmatrix},\n\\qquad M^2=(\\kappa^2-\\delta^2)I=s^2I.\n\\]\n本征指数为 \\(\\pm s\\)。当 \\(|\\delta|<\\kappa\\) 时 \\(s>0\\) 为实数，内部有指数增长与衰减的耦合模（有限光栅为高反射禁带）；当 \\(|\\delta|>\\kappa\\) 时 \\(s=iq,\\ q=\\sqrt{\\delta^2-\\kappa^2}\\)，两模振荡传播。\n(2) 矩阵指数 \\(e^{ML}=CI+SM\\)，其中 \\(C=\\cosh(sL)\\)、\\(S=\\sinh(sL)/s\\)（\\(s=0\\) 取 \\(S=L\\)）。由 \\(B(L)=-i\\kappa S+(C-i\\delta S)r=0\\) 得\n\\[\nr=\\frac{i\\kappa S}{C-i\\delta S}.\n\\]\n再由 \\(\\det e^{ML}=e^{L\\operatorname{tr}M}=1\\)，消去 \\(r\\) 得 \\(t=(C-i\\delta S)^{-1}\\)。对实 \\(\\delta,\\kappa,L\\)，\\(C,S\\) 均为实，且 \\(C^2-s^2S^2=1\\)，故 \\(C^2+\\delta^2S^2=1+\\kappa^2S^2\\)。于是\n\\[\nR=\\frac{\\kappa^2S^2}{1+\\kappa^2S^2},\\qquad T=\\frac1{1+\\kappa^2S^2},\\qquad R+T=1.\n\\]\n(3) 在 \\(\\delta=0\\) 时 \\(C=\\cosh(\\kappa L)\\)、\\(S=\\sinh(\\kappa L)/\\kappa\\)，所以 \\(R=\\tanh^2(\\kappa L)\\)、\\(T={\\rm sech}^2(\\kappa L)\\)。在边缘 \\(s\\to0\\) 时 \\(C\\to1,S\\to L\\)，得到 \\(R=\\kappa^2L^2/(1+\\kappa^2L^2)\\)。禁带外 \\(S=\\sin(qL)/q\\)，故 \\(qL=n\\pi\\)（正整数 \\(n\\)）时 \\(r=0,|t|=1\\)，为有限光栅Fabry型完全透射。\n(4) 因 \\(t=1/(C-i\\delta S)\\)，在中心点 \\(\\varphi_t=\\arctan(\\delta S/C)\\)，且 \\(C,S\\) 对 \\(\\delta\\) 为偶函数，故\n\\[\n\\left.\\frac{d\\varphi_t}{d\\delta}\\right|_0=\\frac{\\tanh(\\kappa L)}{\\kappa},\\qquad\n\\tau_g=\\frac{d\\delta}{d\\omega}\\frac{\\tanh(\\kappa L)}{\\kappa}.\n\\]\n若 \\(d\\delta/d\\omega=n_g/c>0\\)，短光栅 \\(\\kappa L\\ll1\\) 时 \\(\\tau_g\\simeq n_gL/c\\)，长光栅时趋于 \\(n_g/(c\\kappa)\\)。这只是选定包络相位参考下的透射群延迟，强反射造成的脉冲重整形不能突破前沿因果传播速度。\n"
   },
   {
     "id": "O073",
@@ -9275,25 +9275,25 @@
   {
     "id": "Q071",
     "topic": "近代物理",
-    "title": "Aharonov–Bohm量子环的通量周期谱、持续电流与高温Poisson衰减",
+    "title": "侧耦合量子点Fano反共振的精确晶格散射、束缚态与概率流守恒",
     "kind": "综合推导题",
     "level": 5,
     "estimated_minutes": 115,
     "tags": [
-      "Aharonov–Bohm规范相位",
-      "量子环能谱",
-      "持续电流锯齿响应",
-      "Poisson求和高温极限"
+      "一维紧束缚晶格散射",
+      "侧耦合量子点Fano反共振",
+      "带外束缚态自能",
+      "概率流与解析延拓"
     ],
-    "answer": "E_\\ell=\\frac{\\hbar^2}{2mR^2}(\\ell-\\Phi/\\Phi_0)^2,\\quad I_\\ell=\\frac{\\hbar^2}{mR^2\\Phi_0}(\\ell-\\Phi/\\Phi_0)",
+    "answer": "t(E)=\\frac{2iJ\\sin k}{2iJ\\sin k-V^2/(E-\\varepsilon_d)},\\quad E=-2J\\cos k,\\quad T(\\varepsilon_d)=0",
     "quality_status": "待独立复核",
     "tier": "advanced_composite",
     "format": "latex-fragment-v1",
-    "revision": "composite-v4.0-round13-draft",
-    "challenge_profile": "high-multistage",
+    "revision": "composite-v4.3-round13-core-replacement",
+    "challenge_profile": "high-multistage-original-core",
     "complexity_tier": "L5-C",
-    "question": "(1) 无自旋、带电量 \\(q>0\\) 的单粒子被严格限制在半径 \\(R\\) 的理想一维圆环，环内无磁场，但有穿环磁通 \\(\\Phi\\)。取 \\(A_\\theta=\\Phi/(2\\pi R)\\)，周期边界 \\(\\psi(\\theta+2\\pi)=\\psi(\\theta)\\)，忽略辐射和自旋。求规范协变哈密顿量、归一化本征态与能谱。\n(2) 定义 \\(\\Phi_0=h/q\\)。证明全谱关于 \\(\\Phi_0\\) 周期不变，求固定本征态的持续电流 \\(I_\\ell=-\\partial E_\\ell/\\partial\\Phi\\)，说明零温基态能量的分段抛物线和半整数通量简并。\n(3) 对一个处于温度 \\(T>0\\) 的粒子建立正则配分函数 \\(Z(\\Phi,T)\\)，由自由能导出平衡持续电流，并证明 \\(\\Phi=0\\) 时电流严格为零。\n(4) 使用Poisson求和写出高温 \\(\\beta\\varepsilon\\ll1\\)（\\(\\varepsilon=\\hbar^2/(2mR^2)\\)）下持续电流的首个非零谐波，检查 \\(T\\to\\infty\\) 与磁通反向的极限，并解释为什么环内局部 \\(B=0\\) 仍能测到通量。\n",
-    "solution": "(1) 最小耦合在环上的哈密顿量为 \\(H=[-i\\hbar R^{-1}\\partial_\\theta-qA_\\theta]^2/(2m)=\\varepsilon(-i\\partial_\\theta-f)^2\\)，其中 \\(f=\\Phi/\\Phi_0\\)，\\(\\varepsilon=\\hbar^2/(2mR^2)\\)。周期边界要求角动量整数 \\(\\ell\\in\\mathbb Z\\)，归一化本征态 \\(\\psi_\\ell(\\theta)=e^{i\\ell\\theta}/\\sqrt{2\\pi}\\)，故 \\(E_\\ell=\\varepsilon(\\ell-f)^2\\)。能量依赖的是规范不变的环路相位 \\(q\\oint A\\cdot dl/\\hbar=2\\pi f\\)，而非环上局域磁场。\n\n(2) 磁通增加一个量子时 \\(E_\\ell(f+1)=E_{\\ell-1}(f)\\)，所以整套能谱周期为 \\(\\Phi_0\\)，但固定标签的单个抛物线并非周期函数。电流 \\(I_\\ell=-\\partial_\\Phi E_\\ell=2\\varepsilon(\\ell-f)/\\Phi_0\\)。零温基态取距离 \\(f\\) 最近的整数 \\(\\ell_0\\)，\\(E_{\\rm gs}=\\varepsilon(\\ell_0-f)^2\\) 为分段抛物线，电流为锯齿；在 \\(f=n+1/2\\) 两态简并，严格零温无微扰时需说明占据方式，不能指定唯一电流。\n\n(3) 正则配分函数 \\(Z(f)=\\sum_{\\ell\\in\\mathbb Z}\\exp[-\\beta\\varepsilon(\\ell-f)^2]\\)，\\(F=-k_BT\\ln Z\\)，故 \\(I=-\\partial_\\Phi F=(k_BT/\\Phi_0)\\partial_f\\ln Z\\)。逐项求导得 \\(I=(2\\varepsilon/\\Phi_0)\\frac{\\sum_\\ell(\\ell-f)e^{-\\beta\\varepsilon(\\ell-f)^2}}{\\sum_\\ell e^{-\\beta\\varepsilon(\\ell-f)^2}}\\)。在 \\(f=0\\) 时正负 \\(\\ell\\) 项严格抵消，电流为零；有限温度下也满足 \\(I(-f)=-I(f)\\)，无须诉诸不严格的经典轨道图像。\n\n(4) Poisson求和得 \\(Z(f)=\\sqrt{\\pi/(\\beta\\varepsilon)}\\sum_{n\\in\\mathbb Z}e^{-\\pi^2n^2/(\\beta\\varepsilon)}e^{2\\pi i n f}\\)。令 \\(a=e^{-\\pi^2/(\\beta\\varepsilon)}\\ll1\\)，则 \\(Z=\\sqrt{\\pi/(\\beta\\varepsilon)}[1+2a\\cos(2\\pi f)+O(a^4)]\\)，从而 \\(\\boxed{I\\simeq-4\\pi k_BT\\,a\\sin(2\\pi f)/\\Phi_0}\\)；高温时指数压倒前面的 \\(T\\) 因子，电流趋零。反向磁通使正弦变号。Aharonov–Bohm效应由非单连通空间的闭合路径规范相位决定，即使粒子可达环上 \\(B=0\\)，也不能通过单值规范变换消去非整数通量。\n"
+    "question": "(1) 无限一维紧束缚链 \\(|n\\rangle\\) 具有最近邻跃迁 \\(-J\\)（\\(J>0\\)），在 \\(n=0\\) 处侧耦合一个能量为 \\(\\varepsilon_d\\) 的量子点 \\(|d\\rangle\\)，耦合矩阵元 \\(V>0\\)。对链内散射能 \\(E=-2J\\cos k,\\ 0<k<\\pi\\)，从离散Schrödinger方程消去量子点，求能量依赖的等效局域势。\n(2) 设左侧入射 \\(\\psi_n=e^{ikn}+re^{-ikn}\\ (n<0)\\)，右侧透射 \\(\\psi_n=te^{ikn}\\ (n>0)\\)。严格匹配求 \\(r,t\\)，计算透射率并证明 \\(R+T=1\\)。\n(3) 当 \\(|\\varepsilon_d|<2J\\) 时求Fano完全反射的能量和线型半宽参数；讨论 \\(V\\to0^+\\) 与反共振点先后取极限为何不交换。\n(4) 求带外 \\(|E|>2J\\) 束缚态的自洽能量方程，证明任意 \\(V>0\\) 都存在一正一负两支带外态；在 \\(\\varepsilon_d=0\\) 时求它们的精确能量并检查弱耦合极限。\n",
+    "solution": "(1) 链方程为 \\(E\\psi_n=-J(\\psi_{n+1}+\\psi_{n-1})+Vd\\,\\delta_{n0}\\)，量子点方程 \\((E-\\varepsilon_d)d=V\\psi_0\\)。对 \\(E\\ne\\varepsilon_d\\)，消去 \\(d\\) 得\n\\[\nE\\psi_n=-J(\\psi_{n+1}+\\psi_{n-1})+U(E)\\psi_0\\delta_{n0},\n\\quad U(E)=\\frac{V^2}{E-\\varepsilon_d}.\n\\]\n这是具有能量极点的Feshbach有效散射势，不是能量无关的普通 \\(\\delta\\) 杂质；极点处应取连续散射极限。\n(2) 由 \\(n=\\pm1\\) 的离散方程知 \\(\\psi_0=t=1+r\\)。代入 \\(n=0\\) 方程并用 \\(E=-2J\\cos k\\) 化简得 \\(-2iJr\\sin k+U(1+r)=0\\)，所以\n\\[\nr=\\frac{U}{2iJ\\sin k-U},\\qquad\nt=\\frac{2iJ\\sin k}{2iJ\\sin k-U}.\n\\]\n入射和透射处群速度相同 \\(v_g=2J\\sin k/\\hbar>0\\)，故\n\\[\nT=|t|^2=\\frac{4J^2\\sin^2k}{4J^2\\sin^2k+U^2},\\quad\nR=\\frac{U^2}{4J^2\\sin^2k+U^2},\\quad R+T=1.\n\\]\n(3) 消去 \\(U\\) 后\n\\[\nT(E)=\\frac{(E-\\varepsilon_d)^2}{(E-\\varepsilon_d)^2+\n\\Gamma(E)^2},\\quad\n\\Gamma(E)=\\frac{V^2}{2J\\sin k(E)}.\n\\]\n若点能在带内且 \\(V>0\\)，在 \\(E=\\varepsilon_d\\) 有 \\(T=0,R=1\\)，反射由侧点的破坏性干涉造成。窄共振时可用 \\(\\Gamma(\\varepsilon_d)\\) 作局部半宽参数。先取 \\(V\\to0\\) 且 \\(E\\ne\\varepsilon_d\\) 得 \\(T\\to1\\)，先令 \\(E=\\varepsilon_d\\) 再取 \\(V\\to0^+\\) 得 \\(T=0\\)；在严格 \\(V=0\\) 时量子点脱耦，恢复 \\(T=1\\)。\n(4) 对 \\(|E|>2J\\)，无限链局域Green函数为 \\(g_{00}(E)=\\operatorname{sgn}(E)/\\sqrt{E^2-4J^2}\\)，点态自洽条件\n\\[\nE-\\varepsilon_d=V^2\\frac{\\operatorname{sgn}(E)}{\\sqrt{E^2-4J^2}}.\n\\]\n在 \\(E>2J\\) 左侧随 \\(E\\) 严格递增，右侧由正无穷降至零，恰有一个正根；在 \\(E<-2J\\) 相反亦恰有一个负根。对 \\(\\varepsilon_d=0\\)，平方并保留带外条件得\n\\[\nE_\\pm=\\pm\\sqrt{2J^2+\\sqrt{4J^4+V^4}}.\n\\]\n当 \\(V\\to0^+\\)，两支分别趋近 \\(\\pm2J\\) 的带边；对应态的链上波函数指数衰减，满足正规化而非散射边界。\n"
   },
   {
     "id": "Q072",
