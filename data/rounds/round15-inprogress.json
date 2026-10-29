@@ -78,8 +78,8 @@
   "next_ids": [],
   "quality_status": "待独立复核",
   "independent_expert_review": "待独立复核",
-  "technical_status": "39 original core-model reuse blockers remain; T080/E087 physically rewritten, pending full 452-title model rescreen and independent subpart tests; mirror/PDF CI NOT verified; do not merge",
-  "executed_subpart_checks": 0,
+  "technical_status": "39 core-model duplicate candidates still unreplaced; T080/E087 rewritten and eight real subpart checks passed at source SHA b8f91f95, historical re-screen pending; 192 subpart checks and two PDF builds not yet verified; DO NOT MERGE",
+  "executed_subpart_checks": 8,
   "required_final_checks": 200,
   "pdf_status": "not run for round15",
   "generated_mirrors_synced_sha": null,
@@ -132,5 +132,18 @@
     "T080",
     "E087"
   ],
-  "unresolved_core_replacements": 39
+  "unresolved_core_replacements": 39,
+  "remaining_required_subpart_checks": 192,
+  "subset_qa": {
+    "completed_qa_count": 8,
+    "affected_ids": [
+      "T080",
+      "E087"
+    ],
+    "status": "subset technical QA passed; global round still blocked",
+    "verified_source_sha": "b8f91f95251b3d9a8a38f4ec7ecca57c45032f13",
+    "run_id": 40856397830,
+    "run_url": "https://github.com/jackxiang0329-source/ruoshui-physics-bank/actions/runs/40856397830",
+    "conclusion": "success"
+  }
 }
