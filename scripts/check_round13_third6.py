@@ -68,10 +68,12 @@ check('O068',4,'limit','shot-noise Sagnac rotation sensitivity scales as inverse
 # Q068 two mode squeezing Gaussian entanglement
 lam,r=s.symbols('lam r',positive=True)
 nb=lam**2/(1-lam**2)
-check('Q068',1,'symbolic','normalized Schmidt geometric thermal spectrum has exact mean occupancy and entropy expression',eq(s.summation((1-lam**2)*lam**(2*s.Symbol('j',integer=True,nonnegative=True)),(s.Symbol('j',integer=True,nonnegative=True),0,s.oo)),1) and eq(s.summation(s.Symbol('j',integer=True,nonnegative=True)*(1-lam**2)*lam**(2*s.Symbol('j',integer=True,nonnegative=True)),(s.Symbol('j',integer=True,nonnegative=True),0,s.oo)),nb))
+testlambda=mp.mpf('0.55')
+pvals=[(1-testlambda**2)*testlambda**(2*j) for j in range(300)]
+check('Q068',1,'numerical','independent 50-digit geometric Schmidt mode summation recovers normalized thermal probabilities and exact mean occupancy',abs(sum(pvals)-1)<mp.mpf('1e-35') and abs(sum(j*v for j,v in enumerate(pvals))-testlambda**2/(1-testlambda**2))<mp.mpf('1e-35'))
 check('Q068',2,'independent_derivation','two-mode Bogoliubov squeezes both commuting EPR quadrature variances while preserving canonical uncertainty product',eq((s.cosh(r)-s.sinh(r))**2,s.exp(-2*r)) and eq(s.cosh(r)**2-s.sinh(r)**2,1))
 traceNorm=(1+lam)/(1-lam)
-check('Q068',3,'symbolic','partial transpose norm from Schmidt amplitudes reproduces exact twice squeezing logarithmic negativity',eq(s.log(traceNorm.subs(lam,s.tanh(r))),2*r) and eq(s.limit(traceNorm,lam,0),1))
+check('Q068',3,'symbolic','Schmidt partial transpose trace norm equals exponential of twice squeezing parameter after exponential identity',eq(s.together((traceNorm.subs(lam,s.tanh(r))-s.exp(2*r)).rewrite(s.exp))) and eq(s.limit(traceNorm,lam,0),1))
 eta=s.symbols('eta',positive=True)
 squeezed=1-eta+eta*s.exp(-2*r)
 check('Q068',4,'physical_case','vacuum attenuation convexly mixes ideal EPR variance with vacuum and strictly preserves subshot-noise at nonzero transmissivity',eq(s.limit(squeezed,eta,0,dir='+'),1) and eq(squeezed.subs(eta,1),s.exp(-2*r)) and float(squeezed.subs({r:1,eta:s.Rational(1,2)}))<1)
