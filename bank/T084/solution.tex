@@ -1,0 +1,20 @@
+(1) 单粒子经典配分函数
+\[
+z_1={A\over h^3}(2\pi mk_BT)^{3/2}\int_0^H e^{-mgz/(k_BT)}dz
+={A\over h^3}(2\pi mk_BT)^{3/2}{1-e^{-x}\over\beta mg},
+\quad x={mgH\over k_BT}.
+\]
+\(Z_N=z_1^N/N!\)。高度概率 \(p(z)=\beta mg\,e^{-\beta mgz}/(1-e^{-x})\)，密度 \(n(z)=Np(z)/A\)。局域 \(P(z)=n(z)k_BT\)，故 \(dP/dz=-mgn(z)\)。
+(2) 对竖向积分求导，
+\[
+\langle z\rangle={k_BT\over mg}-{H\over e^x-1},\quad
+U_g=Nmg\langle z\rangle=Nk_BT-N{mgH\over e^x-1}.
+\]
+小x：\(\langle z\rangle=H/2-mgH^2/(12k_BT)+O(x^2H)\)；大x：\(\langle z\rangle\simeq k_BT/(mg)\)。
+(3) 三维动能 \(3Nk_BT/2\)，所以
+\[
+U=Nk_BT\left({5\over2}-{x\over e^x-1}\right),
+\quad C_V=Nk_B\left[{5\over2}-{x^2e^x\over(e^x-1)^2}\right].
+\]
+小x时 \(x^2e^x/(e^x-1)^2\to1\)，给 \(C_V\to(3/2)Nk_B\)；大x时趋0，给 \(C_V\to(5/2)Nk_B\)，因强分层时竖向重力势平均再多储存 \(k_BT\) 每粒子。
+(4) 顶底压强 \(P(0)=Nk_BT\,\beta mg/[A(1-e^{-x})]\)、\(P(H)=P(0)e^{-x}\)，故 \(A[P(0)-P(H)]=Nmg\)，独立核验机械平衡。固定H、经典稀薄、气体与热浴平衡且外场恒定；改变势能零点只平移U，不改变热容和力差。

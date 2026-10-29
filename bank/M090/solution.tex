@@ -1,0 +1,20 @@
+(1) 无矩 Euler 方程
+\[
+I_1\dot\omega_1=(I_2-I_3)\omega_2\omega_3,\ 
+I_2\dot\omega_2=(I_3-I_1)\omega_3\omega_1,\ 
+I_3\dot\omega_3=(I_1-I_2)\omega_1\omega_2 .
+\]
+直接乘 \(\omega_i\) 相加得 \(\dot E=0\)，其中 \(E=\frac12\sum I_i\omega_i^2\)。再乘 \(I_i\omega_i\) 相加得 \(\frac d{dt}\sum I_i^2\omega_i^2=0\)，即空间角动量模 \(L^2\) 不变。
+(2) 绕第二轴取 \(\omega_2=\Omega,\omega_{1,3}\) 微小，则
+\[
+\dot\omega_1={(I_2-I_3)\Omega\over I_1}\omega_3,\quad
+\dot\omega_3={(I_1-I_2)\Omega\over I_3}\omega_1.
+\]
+两系数同为负，故
+\[
+\ddot\omega_1=\lambda^2\omega_1,\quad
+\lambda=|\Omega|\sqrt{(I_3-I_2)(I_2-I_1)/(I_1I_3)}.
+\]
+扰动指数增长。绕第一轴或第三轴线性化后两系数异号，得到振荡型而非指数失稳。
+(3) 在固定 \(L^2=\sum L_i^2\) 球面，动能 \(E=\sum L_i^2/(2I_i)\) 的主轴驻点中，轴1对应最大、轴3对应最小、轴2对应鞍点。能量与角动量同时守恒限制轨道沿两二次曲面交线运动，鞍点附近分离轨道使中间轴翻转；这是哈密顿不稳定而非耗散。
+(4) 若 \(I_1\to I_2\) 或 \(I_2\to I_3\)，\(\lambda\to0\)，须分析退化对称陀螺而不能直接以指数判定。线性解仅在 \(|\delta\boldsymbol\omega|\ll|\Omega|\) 时成立，失稳增长到有限幅度后必须用非线性Euler方程。全过程 \(E,L^2\) 守恒。

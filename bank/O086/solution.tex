@@ -1,0 +1,20 @@
+(1) 正入射、非磁无损层以特征矩阵
+\[
+M_j=\begin{pmatrix}\cos\delta_j&i\sin\delta_j/n_j\\ i n_j\sin\delta_j&\cos\delta_j\end{pmatrix},\quad
+\delta_j={2\pi n_jd_j\over\lambda}.
+\]
+在 \(\lambda_0\) 时 \(\delta_j=\pi/2\)，故 \(M_j=\begin{psmallmatrix}0&i/n_j\\in_j&0\end{psmallmatrix}\)。以从入射侧先H后L的顺序，
+\[
+M_{HL}=M_HM_L=\begin{pmatrix}-n_L/n_H&0\\0&-n_H/n_L\end{pmatrix}.
+\]
+(2) \(M=M_{HL}^N=\mathrm{diag}[(-n_L/n_H)^N,(-n_H/n_L)^N]\)。对基底导纳 \(n_s\)，输入导纳
+\[
+Y_{\rm in}={M_{21}+M_{22}n_s\over M_{11}+M_{12}n_s}
+=n_s(n_H/n_L)^{2N}.
+\]
+振幅反射系数 \(r=(n_0-Y_{\rm in})/(n_0+Y_{\rm in})\)，故
+\[
+R_N=\left[{n_0-n_s(n_H/n_L)^{2N}\over n_0+n_s(n_H/n_L)^{2N}}\right]^2 .
+\]
+(3) 当固定 \(n_H>n_L\)，\(Y_{\rm in}\to\infty\)，有 \(1-R_N=4n_0Y_{\rm in}/(n_0+Y_{\rm in})^2\sim4(n_0/n_s)(n_L/n_H)^{2N}\)。若 \(n_H=n_L\)，多层只相当于整波厚度的均匀层，\(R_N=[(n_0-n_s)/(n_0+n_s)]^2\)。\(N=0\) 同样恢复裸基底界面反射率。
+(4) 每周期无损矩阵满足 \(\det M=1\)，特征值 \(\lambda_\pm\) 满足 \(\lambda+\lambda^{-1}=\mathrm{Tr}M\)。当 \(|\mathrm{Tr}M/2|>1\)（若采用使矩阵迹实数的无损规范）时本征Bloch相位有非零虚部，形成无限周期结构的禁带；有限镜仍可有限透射，实际吸收/色散使矩阵不再对应简单无损实迹判据。

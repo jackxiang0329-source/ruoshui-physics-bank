@@ -1,0 +1,23 @@
+(1) 电报方程
+\[
+\partial_xV=-LI_t-RI,\qquad \partial_xI=-CV_t-GV.
+\]
+(2) 代入复幅 \(\tilde V,\tilde I\propto e^{-\gamma x}\) 给
+\[
+\gamma^2=(R+i\omega L)(G+i\omega C),\qquad
+Z_0={\tilde V\over\tilde I}=\sqrt{{R+i\omega L\over G+i\omega C}}.
+\]
+选 \(\Re\gamma\ge0\) 与沿正x输入正功率的根。无损时 \(\gamma=i\omega\sqrt{LC}\)、\(Z_0=\sqrt{L/C}>0\)，相速度 \(1/\sqrt{LC}\)。
+(3) 低损展开
+\[
+\gamma\simeq i\omega\sqrt{LC}
++\tfrac R2\sqrt{C/L}+\tfrac G2\sqrt{L/C},\quad
+\alpha\simeq\tfrac R2\sqrt{C/L}+\tfrac G2\sqrt{L/C}.
+\]
+故一阶相速度仍 \(1/\sqrt{LC}\)。电阻和漏导导致幅度按 \(e^{-\alpha x}\) 衰减、功率约按 \(e^{-2\alpha x}\) 衰减。
+(4) 第一式乘I、第二式乘V相加并应用乘积法则：
+\[
+\partial_t\left({LI^2+CV^2\over2}\right)
++\partial_x(VI)=-RI^2-GV^2.
+\]
+右端非正，时间平均对行波得 \(-d\langle VI\rangle/dx=(R|\tilde I|^2+G|\tilde V|^2)/2\)。这是电路版Poynting定理，若外部有源端口，边界能流不消失。
