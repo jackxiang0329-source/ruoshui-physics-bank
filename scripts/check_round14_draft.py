@@ -23,7 +23,7 @@ u=G*(h*h-y*y)/(2*eta)-G*a*(h-y)/eta
 ck("M077",2,"symbolic","分段流速同时满足壁面无滑移与塞状核剪切率为零",zero(u.subs(y,h)) and zero(s.diff(u,y).subs(y,a)) and zero(u.subs(y,a)-G*(h-a)**2/(2*eta)))
 Q=2*s.integrate(y*(G*y-G*a)/eta,(y,a,h))
 Qclosed=G*h**3/(3*eta)*(2-3*a/h+(a/h)**3)
-ck("M077",3,"independent_derivation","交换积分次序得到的流量与三次多项式闭式一致",zero(Q-Qclosed) and close(Qclosed.subs({G:2,h:1,eta:3,a:.4}),.144))
+ck("M077",3,"independent_derivation","交换积分次序得到的流量与三次多项式闭式一致",zero(Q-Qclosed) and close(Qclosed.subs({G:2,h:1,eta:3,a:.4}),.192))
 D=2*s.integrate(G*y*(G*y-G*a)/eta,(y,a,h))
 ck("M077",4,"conservation","全域压力功与黏塑性耗散积分严格相等且临界呈二次律",zero(D-G*Q) and zero(s.limit(Qclosed/(G*h**3*(1-a/h)**2/eta),a,h,dir="-")-1))
 # M078 Burgers vortex
