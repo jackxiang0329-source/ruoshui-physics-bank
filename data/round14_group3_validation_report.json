@@ -1,0 +1,184 @@
+{
+  "round": 14,
+  "status": "draft_technical_24_tests_passed_not_expert_review",
+  "passed_count": 24,
+  "ids": [
+    "M081",
+    "E081",
+    "T076",
+    "W076",
+    "O078",
+    "Q078"
+  ],
+  "tests": [
+    {
+      "id": "M081",
+      "part": 1,
+      "method": "momentum",
+      "name": "intercepted light momentum and moving mirror reflectivity",
+      "passed": true
+    },
+    {
+      "id": "M081",
+      "part": 2,
+      "method": "symbolic",
+      "name": "exact rapidity time and position derivatives obey sail force ODE",
+      "passed": true
+    },
+    {
+      "id": "M081",
+      "part": 3,
+      "method": "causality_limit",
+      "name": "light-cone gap and one-third ultrarelativistic rapidity scaling",
+      "passed": true
+    },
+    {
+      "id": "M081",
+      "part": 4,
+      "method": "conservation",
+      "name": "net photon-energy loss equals sail mechanical work",
+      "passed": true
+    },
+    {
+      "id": "E081",
+      "part": 1,
+      "method": "mass_ohm",
+      "name": "steady Ohm layer width and incompressible inflow",
+      "passed": true
+    },
+    {
+      "id": "E081",
+      "part": 2,
+      "method": "symbolic",
+      "name": "layer width and inflow ratio are inverse square root Lundquist",
+      "passed": true
+    },
+    {
+      "id": "E081",
+      "part": 3,
+      "method": "physical_limit",
+      "name": "ram pressure scales as 1/S and resistivity-free reconnection vanishes",
+      "passed": true
+    },
+    {
+      "id": "E081",
+      "part": 4,
+      "method": "independent_power",
+      "name": "Alfven outflow kinetic energy and input Poynting have finite ratio",
+      "passed": true
+    },
+    {
+      "id": "T076",
+      "part": 1,
+      "method": "transport",
+      "name": "both directional intensities satisfy transport and vacuum boundaries",
+      "passed": true
+    },
+    {
+      "id": "T076",
+      "part": 2,
+      "method": "independent_numerical",
+      "name": "angular quadrature matches exponential-integral emergent flux",
+      "passed": true
+    },
+    {
+      "id": "T076",
+      "part": 3,
+      "method": "independent_numerical",
+      "name": "interior mean radiance symmetric and below source",
+      "passed": true
+    },
+    {
+      "id": "T076",
+      "part": 4,
+      "method": "conservation",
+      "name": "integrated volumetric radiative cooling equals two face fluxes",
+      "passed": true
+    },
+    {
+      "id": "W076",
+      "part": 1,
+      "method": "symbolic",
+      "name": "both Kelvin-Voigt complex roots solve dispersion determinant",
+      "passed": true
+    },
+    {
+      "id": "W076",
+      "part": 2,
+      "method": "threshold",
+      "name": "critical damping wavenumber and long-wave phase speed",
+      "passed": true
+    },
+    {
+      "id": "W076",
+      "part": 3,
+      "method": "conservation_identity",
+      "name": "local PDE energy flux plus strain-rate loss equals velocity times PDE residual",
+      "passed": true
+    },
+    {
+      "id": "W076",
+      "part": 4,
+      "method": "high_k_limit",
+      "name": "slow relaxation tends to T/eta and fast relaxation grows k squared",
+      "passed": true
+    },
+    {
+      "id": "O078",
+      "part": 1,
+      "method": "polarization",
+      "name": "transverse projector yields parallel and perpendicular strengths",
+      "passed": true
+    },
+    {
+      "id": "O078",
+      "part": 2,
+      "method": "angular_integral",
+      "name": "full sphere cross-section integrates to 8 pi re squared over 3",
+      "passed": true
+    },
+    {
+      "id": "O078",
+      "part": 3,
+      "method": "physical_boundary",
+      "name": "side scattering fully polarized; forward and backward zero",
+      "passed": true
+    },
+    {
+      "id": "O078",
+      "part": 4,
+      "method": "momentum",
+      "name": "scattered z momentum integral cancels by front-back symmetry",
+      "passed": true
+    },
+    {
+      "id": "Q078",
+      "part": 1,
+      "method": "spectral",
+      "name": "antisymmetric eigenstate and full exact Bose-Hubbard characteristic cubic",
+      "passed": true
+    },
+    {
+      "id": "Q078",
+      "part": 2,
+      "method": "independent_numerical",
+      "name": "3 by 3 matrix exponential agrees with nonlinear double occupancy probability",
+      "passed": true
+    },
+    {
+      "id": "Q078",
+      "part": 3,
+      "method": "perturbation",
+      "name": "exact low eigenvalue matches two separate virtual intermediate paths",
+      "passed": true
+    },
+    {
+      "id": "Q078",
+      "part": 4,
+      "method": "entanglement",
+      "name": "site reduced entropy gives 3/2 log 2 and Mott zero limit",
+      "passed": true
+    }
+  ],
+  "independent_expert_review": "待独立复核"
+}
