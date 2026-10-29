@@ -7,56 +7,56 @@
       "id": "M075",
       "part": 1,
       "method": "symbolic",
-      "name": "vis viva transfer orbit periapsis and apoapsis share the same exact Kepler angular momentum",
+      "name": "Complex Ekman ageostrophic velocity satisfies the full rotating viscous momentum equation",
       "passed": true
     },
     {
       "id": "M075",
       "part": 2,
-      "method": "conservation",
-      "name": "two Hohmann velocity impulses are prograde and their kinetic changes match the circular orbit energy budget",
+      "method": "physical_case",
+      "name": "Ekman spiral satisfies no slip at bottom and geostrophic far field in both velocity components",
       "passed": true
     },
     {
       "id": "M075",
       "part": 3,
-      "method": "limit",
-      "name": "half ellipse transfer duration tends half circular period and diverges for an unbounded destination orbit",
+      "method": "independent_derivation",
+      "name": "Wall shear components and integrated complex ageostrophic transport give the correct 45 degree turn",
       "passed": true
     },
     {
       "id": "M075",
       "part": 4,
-      "method": "dimensions",
-      "name": "Tsiolkovsky mass ratio is exponential in total delta v and tends unity when both circular radii coincide",
+      "method": "conservation",
+      "name": "Integrated Ekman viscous dissipation equals geostrophic pressure work represented by wall stress",
       "passed": true
     },
     {
       "id": "M076",
       "part": 1,
       "method": "symbolic",
-      "name": "complex Foucault displacement solves coupled Coriolis equations with correct northern hemisphere rotation sign",
+      "name": "Radial Taylor dispersion cell corrector solves exact cylindrical Poisson equation",
       "passed": true
     },
     {
       "id": "M076",
       "part": 2,
-      "method": "independent_derivation",
-      "name": "two circular polarization positive frequencies split by exactly twice vertical Earth rotation rate",
+      "method": "conservation",
+      "name": "Taylor corrector has zero cross sectional mean and zero wall and axis normal derivative",
       "passed": true
     },
     {
       "id": "M076",
       "part": 3,
-      "method": "limit",
-      "name": "Foucault precession vanishes at equator and equals sidereal rotation at north pole",
+      "method": "independent_derivation",
+      "name": "Independent flux and gradient energy routes both yield the exact one over forty eight dispersion coefficient",
       "passed": true
     },
     {
       "id": "M076",
       "part": 4,
-      "method": "conservation",
-      "name": "Coriolis acceleration is perpendicular to velocity and horizontal pendulum energy derivative vanishes",
+      "method": "limit",
+      "name": "Taylor Aris enhancement vanishes at zero flow or vanishing radius while weak diffusion limit is nonuniform",
       "passed": true
     },
     {
@@ -119,28 +119,28 @@
       "id": "T071",
       "part": 1,
       "method": "symbolic",
-      "name": "three dimensional spin two Fermi sphere state count and pressure two fifths n Fermi energy agree",
+      "name": "Cahn Hilliard chemical potential is correct variational derivative and conserved flow has divergence form",
       "passed": true
     },
     {
       "id": "T071",
       "part": 2,
       "method": "independent_derivation",
-      "name": "Sommerfeld number conservation yields negative pi squared over twelve chemical potential shift",
+      "name": "Conserved spinodal dispersion maximum occurs at half the critical squared wave number",
       "passed": true
     },
     {
       "id": "T071",
       "part": 3,
       "method": "symbolic",
-      "name": "Sommerfeld energy temperature derivative reproduces linear specific heat pi squared over two",
+      "name": "Exact hyperbolic tangent Cahn Hilliard interface solves the nonlinear stationary Euler Lagrange equation",
       "passed": true
     },
     {
       "id": "T071",
       "part": 4,
       "method": "conservation",
-      "name": "zero temperature Fermi compressibility and sound speed follow density five thirds pressure scaling",
+      "name": "Independent interface gradient energy gives exact two root two over three tension and Lyapunov decay sign",
       "passed": true
     },
     {

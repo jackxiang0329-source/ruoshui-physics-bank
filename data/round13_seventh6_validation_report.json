@@ -35,28 +35,28 @@
       "id": "E074",
       "part": 1,
       "method": "symbolic",
-      "name": "complex skin field solves Maxwell diffusion equation with decaying physical root",
+      "name": "Stoner Wohlfarth first and second derivatives simultaneously vanish on the parametric switching boundary",
       "passed": true
     },
     {
       "id": "E074",
       "part": 2,
-      "method": "dimensions",
-      "name": "surface impedance equals complex skin wave number over conductivity with positive dissipative real part",
+      "method": "independent_derivation",
+      "name": "Switching astroid parametric field satisfies exact two thirds power identity in first quadrant",
       "passed": true
     },
     {
       "id": "E074",
       "part": 3,
-      "method": "conservation",
-      "name": "Poynting incoming flux exactly equals independently integrated Joule loss in conductor halfspace",
+      "method": "physical_case",
+      "name": "Easy axis metastable curvature changes at unit anisotropy field and hard axis magnetization grows linearly",
       "passed": true
     },
     {
       "id": "E074",
       "part": 4,
-      "method": "limit",
-      "name": "skin depth decays as inverse square root frequency while dissipative surface resistance grows as square root",
+      "method": "conservation",
+      "name": "Exact easy axis activation barrier is quadratic and vanishes at coherent switching threshold",
       "passed": true
     },
     {
@@ -119,28 +119,28 @@
       "id": "O072",
       "part": 1,
       "method": "symbolic",
-      "name": "evanescent TM normal wave numbers obey Helmholtz dispersion in both half spaces",
+      "name": "Bragg forward backward coupling matrix squares to stop band eigenvalue identity",
       "passed": true
     },
     {
       "id": "O072",
       "part": 2,
-      "method": "independent_derivation",
-      "name": "TM tangential continuity gives squared decay ratio equal squared dielectric contrast",
+      "method": "conservation",
+      "name": "Lossless Bragg scattering amplitudes satisfy transfer determinant and exact reflection transmission flux identity",
       "passed": true
     },
     {
       "id": "O072",
       "part": 3,
       "method": "limit",
-      "name": "lossless Drude surface plasmon diverges at omega plasma over root two and approaches vacuum light line at low frequency",
+      "name": "On resonance Bragg reflectance is tanh squared and band edge has finite continuous reflection",
       "passed": true
     },
     {
       "id": "O072",
       "part": 4,
-      "method": "physical_case",
-      "name": "Brillouin metal electric energy derivative remains positive despite negative real permittivity",
+      "method": "independent_derivation",
+      "name": "Bragg center phase derivative yields tanh coupling length divided by coupling constant and short grating delay",
       "passed": true
     },
     {

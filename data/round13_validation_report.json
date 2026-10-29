@@ -902,29 +902,29 @@
     {
       "id": "T069",
       "part": 1,
-      "method": "independent_derivation",
-      "name": "gamma function density of states gives three halves and five halves Bose energy moments",
+      "method": "symbolic",
+      "name": "Two state master equation has exact exponential relaxation and stationary detailed balance",
       "passed": true
     },
     {
       "id": "T069",
       "part": 2,
-      "method": "limit",
-      "name": "condensate fraction vanishes at critical temperature and approaches unity at zero temperature",
+      "method": "independent_derivation",
+      "name": "Relative entropy difference exactly equals system entropy change minus bath heat over temperature",
       "passed": true
     },
     {
       "id": "T069",
       "part": 3,
-      "method": "symbolic",
-      "name": "normal and condensed heat capacities agree at critical fugacity with divergent Bose g half moment",
+      "method": "conservation",
+      "name": "Local detailed balance entropy production is nonnegative for independent off equilibrium populations",
       "passed": true
     },
     {
       "id": "T069",
       "part": 4,
-      "method": "dimensions",
-      "name": "ideal quadratic dispersion gas pressure equals two thirds of internal energy density and vanishes at zero T",
+      "method": "independent_derivation",
+      "name": "Equilibrium energy covariance relaxes at master equation rate and Schottky heat is positive",
       "passed": true
     },
     {
@@ -987,28 +987,28 @@
       "id": "Q071",
       "part": 1,
       "method": "symbolic",
-      "name": "minimal coupling angular eigenvalue exactly matches flux shifted integer parabola",
+      "name": "Side dot elimination produces energy dependent Feshbach impurity and exact discrete scattering match",
       "passed": true
     },
     {
       "id": "Q071",
       "part": 2,
       "method": "conservation",
-      "name": "flux quantum relabeling preserves the entire spectrum and persistent current is energy derivative",
+      "name": "Fano chain reflection and transmission amplitudes conserve discrete lattice probability current exactly",
       "passed": true
     },
     {
       "id": "Q071",
       "part": 3,
-      "method": "numerical",
-      "name": "finite temperature ring partition is even in flux and persistent current vanishes at zero flux",
+      "method": "limit",
+      "name": "Fano antiresonance has exact transmission zero and coupling limit does not commute with on resonance limit",
       "passed": true
     },
     {
       "id": "Q071",
       "part": 4,
-      "method": "limit",
-      "name": "Poisson high temperature first harmonic current decays exponentially and is odd in applied flux",
+      "method": "independent_derivation",
+      "name": "Both outside band Fano bound energies solve quartic self energy equation and approach opposite band edges",
       "passed": true
     },
     {
@@ -1043,28 +1043,28 @@
       "id": "E074",
       "part": 1,
       "method": "symbolic",
-      "name": "complex skin field solves Maxwell diffusion equation with decaying physical root",
+      "name": "Stoner Wohlfarth first and second derivatives simultaneously vanish on the parametric switching boundary",
       "passed": true
     },
     {
       "id": "E074",
       "part": 2,
-      "method": "dimensions",
-      "name": "surface impedance equals complex skin wave number over conductivity with positive dissipative real part",
+      "method": "independent_derivation",
+      "name": "Switching astroid parametric field satisfies exact two thirds power identity in first quadrant",
       "passed": true
     },
     {
       "id": "E074",
       "part": 3,
-      "method": "conservation",
-      "name": "Poynting incoming flux exactly equals independently integrated Joule loss in conductor halfspace",
+      "method": "physical_case",
+      "name": "Easy axis metastable curvature changes at unit anisotropy field and hard axis magnetization grows linearly",
       "passed": true
     },
     {
       "id": "E074",
       "part": 4,
-      "method": "limit",
-      "name": "skin depth decays as inverse square root frequency while dissipative surface resistance grows as square root",
+      "method": "conservation",
+      "name": "Exact easy axis activation barrier is quadratic and vanishes at coherent switching threshold",
       "passed": true
     },
     {
@@ -1127,28 +1127,28 @@
       "id": "O072",
       "part": 1,
       "method": "symbolic",
-      "name": "evanescent TM normal wave numbers obey Helmholtz dispersion in both half spaces",
+      "name": "Bragg forward backward coupling matrix squares to stop band eigenvalue identity",
       "passed": true
     },
     {
       "id": "O072",
       "part": 2,
-      "method": "independent_derivation",
-      "name": "TM tangential continuity gives squared decay ratio equal squared dielectric contrast",
+      "method": "conservation",
+      "name": "Lossless Bragg scattering amplitudes satisfy transfer determinant and exact reflection transmission flux identity",
       "passed": true
     },
     {
       "id": "O072",
       "part": 3,
       "method": "limit",
-      "name": "lossless Drude surface plasmon diverges at omega plasma over root two and approaches vacuum light line at low frequency",
+      "name": "On resonance Bragg reflectance is tanh squared and band edge has finite continuous reflection",
       "passed": true
     },
     {
       "id": "O072",
       "part": 4,
-      "method": "physical_case",
-      "name": "Brillouin metal electric energy derivative remains positive despite negative real permittivity",
+      "method": "independent_derivation",
+      "name": "Bragg center phase derivative yields tanh coupling length divided by coupling constant and short grating delay",
       "passed": true
     },
     {
@@ -1183,56 +1183,56 @@
       "id": "M075",
       "part": 1,
       "method": "symbolic",
-      "name": "vis viva transfer orbit periapsis and apoapsis share the same exact Kepler angular momentum",
+      "name": "Complex Ekman ageostrophic velocity satisfies the full rotating viscous momentum equation",
       "passed": true
     },
     {
       "id": "M075",
       "part": 2,
-      "method": "conservation",
-      "name": "two Hohmann velocity impulses are prograde and their kinetic changes match the circular orbit energy budget",
+      "method": "physical_case",
+      "name": "Ekman spiral satisfies no slip at bottom and geostrophic far field in both velocity components",
       "passed": true
     },
     {
       "id": "M075",
       "part": 3,
-      "method": "limit",
-      "name": "half ellipse transfer duration tends half circular period and diverges for an unbounded destination orbit",
+      "method": "independent_derivation",
+      "name": "Wall shear components and integrated complex ageostrophic transport give the correct 45 degree turn",
       "passed": true
     },
     {
       "id": "M075",
       "part": 4,
-      "method": "dimensions",
-      "name": "Tsiolkovsky mass ratio is exponential in total delta v and tends unity when both circular radii coincide",
+      "method": "conservation",
+      "name": "Integrated Ekman viscous dissipation equals geostrophic pressure work represented by wall stress",
       "passed": true
     },
     {
       "id": "M076",
       "part": 1,
       "method": "symbolic",
-      "name": "complex Foucault displacement solves coupled Coriolis equations with correct northern hemisphere rotation sign",
+      "name": "Radial Taylor dispersion cell corrector solves exact cylindrical Poisson equation",
       "passed": true
     },
     {
       "id": "M076",
       "part": 2,
-      "method": "independent_derivation",
-      "name": "two circular polarization positive frequencies split by exactly twice vertical Earth rotation rate",
+      "method": "conservation",
+      "name": "Taylor corrector has zero cross sectional mean and zero wall and axis normal derivative",
       "passed": true
     },
     {
       "id": "M076",
       "part": 3,
-      "method": "limit",
-      "name": "Foucault precession vanishes at equator and equals sidereal rotation at north pole",
+      "method": "independent_derivation",
+      "name": "Independent flux and gradient energy routes both yield the exact one over forty eight dispersion coefficient",
       "passed": true
     },
     {
       "id": "M076",
       "part": 4,
-      "method": "conservation",
-      "name": "Coriolis acceleration is perpendicular to velocity and horizontal pendulum energy derivative vanishes",
+      "method": "limit",
+      "name": "Taylor Aris enhancement vanishes at zero flow or vanishing radius while weak diffusion limit is nonuniform",
       "passed": true
     },
     {
@@ -1295,28 +1295,28 @@
       "id": "T071",
       "part": 1,
       "method": "symbolic",
-      "name": "three dimensional spin two Fermi sphere state count and pressure two fifths n Fermi energy agree",
+      "name": "Cahn Hilliard chemical potential is correct variational derivative and conserved flow has divergence form",
       "passed": true
     },
     {
       "id": "T071",
       "part": 2,
       "method": "independent_derivation",
-      "name": "Sommerfeld number conservation yields negative pi squared over twelve chemical potential shift",
+      "name": "Conserved spinodal dispersion maximum occurs at half the critical squared wave number",
       "passed": true
     },
     {
       "id": "T071",
       "part": 3,
       "method": "symbolic",
-      "name": "Sommerfeld energy temperature derivative reproduces linear specific heat pi squared over two",
+      "name": "Exact hyperbolic tangent Cahn Hilliard interface solves the nonlinear stationary Euler Lagrange equation",
       "passed": true
     },
     {
       "id": "T071",
       "part": 4,
       "method": "conservation",
-      "name": "zero temperature Fermi compressibility and sound speed follow density five thirds pressure scaling",
+      "name": "Independent interface gradient energy gives exact two root two over three tension and Lyapunov decay sign",
       "passed": true
     },
     {

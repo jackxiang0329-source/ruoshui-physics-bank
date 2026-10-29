@@ -62,29 +62,29 @@
     {
       "id": "T069",
       "part": 1,
-      "method": "independent_derivation",
-      "name": "gamma function density of states gives three halves and five halves Bose energy moments",
+      "method": "symbolic",
+      "name": "Two state master equation has exact exponential relaxation and stationary detailed balance",
       "passed": true
     },
     {
       "id": "T069",
       "part": 2,
-      "method": "limit",
-      "name": "condensate fraction vanishes at critical temperature and approaches unity at zero temperature",
+      "method": "independent_derivation",
+      "name": "Relative entropy difference exactly equals system entropy change minus bath heat over temperature",
       "passed": true
     },
     {
       "id": "T069",
       "part": 3,
-      "method": "symbolic",
-      "name": "normal and condensed heat capacities agree at critical fugacity with divergent Bose g half moment",
+      "method": "conservation",
+      "name": "Local detailed balance entropy production is nonnegative for independent off equilibrium populations",
       "passed": true
     },
     {
       "id": "T069",
       "part": 4,
-      "method": "dimensions",
-      "name": "ideal quadratic dispersion gas pressure equals two thirds of internal energy density and vanishes at zero T",
+      "method": "independent_derivation",
+      "name": "Equilibrium energy covariance relaxes at master equation rate and Schottky heat is positive",
       "passed": true
     },
     {
@@ -147,28 +147,28 @@
       "id": "Q071",
       "part": 1,
       "method": "symbolic",
-      "name": "minimal coupling angular eigenvalue exactly matches flux shifted integer parabola",
+      "name": "Side dot elimination produces energy dependent Feshbach impurity and exact discrete scattering match",
       "passed": true
     },
     {
       "id": "Q071",
       "part": 2,
       "method": "conservation",
-      "name": "flux quantum relabeling preserves the entire spectrum and persistent current is energy derivative",
+      "name": "Fano chain reflection and transmission amplitudes conserve discrete lattice probability current exactly",
       "passed": true
     },
     {
       "id": "Q071",
       "part": 3,
-      "method": "numerical",
-      "name": "finite temperature ring partition is even in flux and persistent current vanishes at zero flux",
+      "method": "limit",
+      "name": "Fano antiresonance has exact transmission zero and coupling limit does not commute with on resonance limit",
       "passed": true
     },
     {
       "id": "Q071",
       "part": 4,
-      "method": "limit",
-      "name": "Poisson high temperature first harmonic current decays exponentially and is odd in applied flux",
+      "method": "independent_derivation",
+      "name": "Both outside band Fano bound energies solve quartic self energy equation and approach opposite band edges",
       "passed": true
     }
   ],
