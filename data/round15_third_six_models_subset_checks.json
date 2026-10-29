@@ -1,0 +1,234 @@
+{
+  "round": 15,
+  "model_replacements": [
+    "M088",
+    "E090",
+    "T083",
+    "W083",
+    "O084",
+    "Q084"
+  ],
+  "checked_subparts": 24,
+  "required_full_round_checks": 200,
+  "full_round_pass": false,
+  "independent_expert_review": "待独立复核",
+  "tests": [
+    {
+      "id": "M088",
+      "part": 1,
+      "method": "independent_finite_difference",
+      "description": "Potential derivatives yield radial/tangential velocities and no penetration",
+      "passed": true,
+      "error": 1.364180990393038e-11,
+      "tolerance": 1e-9
+    },
+    {
+      "id": "M088",
+      "part": 2,
+      "method": "critical_boundary",
+      "description": "Stagnation roots and merging at critical circulation",
+      "passed": true,
+      "error": 0,
+      "tolerance": 2e-14
+    },
+    {
+      "id": "M088",
+      "part": 3,
+      "method": "independent_integral",
+      "description": "Numerically integrated pressure has zero drag and Kutta-Joukowski lift",
+      "passed": true,
+      "error": 3.552713678800501e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "id": "M088",
+      "part": 4,
+      "method": "conservation",
+      "description": "Outer mass flux vanishes, circulation and surface mechanical power conserved",
+      "passed": true,
+      "error": 3.552713678800501e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "id": "E090",
+      "part": 1,
+      "method": "independent_finite_difference",
+      "description": "Dual Josephson energy differentiates to exact supercurrent",
+      "passed": true,
+      "error": 3.217870414573554e-11,
+      "tolerance": 6e-10
+    },
+    {
+      "id": "E090",
+      "part": 2,
+      "method": "optimization",
+      "description": "Dense global phase scan confirms flux-periodic asymmetric critical current",
+      "passed": true,
+      "error": 4.374439033227873e-9,
+      "tolerance": 2e-8
+    },
+    {
+      "id": "E090",
+      "part": 3,
+      "method": "energy_asymptotic",
+      "description": "Direct washboard barrier and critical three-halves power-law match",
+      "passed": true,
+      "error": 0.0000049981970069445936,
+      "tolerance": 0.00005
+    },
+    {
+      "id": "E090",
+      "part": 4,
+      "method": "thermodynamic_derivative",
+      "description": "SQUID equilibrium circulating current obtained by flux derivative",
+      "passed": true,
+      "error": 8.543388219095505e-12,
+      "tolerance": 5e-10
+    },
+    {
+      "id": "T083",
+      "part": 1,
+      "method": "independent_integral",
+      "description": "Numerical constrained 12D momentum-ball radial volume",
+      "passed": true,
+      "error": 2.5712765250318625e-13,
+      "tolerance": 0.000002
+    },
+    {
+      "id": "T083",
+      "part": 2,
+      "method": "seeded_shell_monte_carlo",
+      "description": "Total-momentum constraint produces negative two-particle covariance and finite variance",
+      "passed": true,
+      "error": 0.006540505419677878,
+      "tolerance": 0.055
+    },
+    {
+      "id": "T083",
+      "part": 3,
+      "method": "thermodynamic_derivative",
+      "description": "Gibbs finite-system temperature and ideal pressure from entropy differentiation",
+      "passed": true,
+      "error": 5.669673619479454e-10,
+      "tolerance": 2e-9
+    },
+    {
+      "id": "T083",
+      "part": 4,
+      "method": "seeded_shell_monte_carlo",
+      "description": "Projected microcanonical fourth moment has finite-size non-Gaussian kurtosis",
+      "passed": true,
+      "error": 0.007537609551661939,
+      "tolerance": 0.055
+    },
+    {
+      "id": "W083",
+      "part": 1,
+      "method": "independent_vector_residual",
+      "description": "Three-dimensional Euler helical plane wave satisfies real/imaginary components",
+      "passed": true,
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "id": "W083",
+      "part": 2,
+      "method": "polarization",
+      "description": "Incompressible circular transverse polarization and orthogonal polarization vectors",
+      "passed": true,
+      "error": 0,
+      "tolerance": 2e-12
+    },
+    {
+      "id": "W083",
+      "part": 3,
+      "method": "spectral_group_velocity",
+      "description": "Independent three-axis numerical dispersion derivative is perpendicular to wavevector",
+      "passed": true,
+      "error": 2.0972334979774132e-11,
+      "tolerance": 1e-9
+    },
+    {
+      "id": "W083",
+      "part": 4,
+      "method": "energy_flux",
+      "description": "Cycle-averaged pressure/velocity flux equals energy times group speed",
+      "passed": true,
+      "error": 1.1102230246251565e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "id": "O084",
+      "part": 1,
+      "method": "Lindblad_stationarity",
+      "description": "Resonant optical Bloch stationary excitation and dipole satisfy both equations",
+      "passed": true,
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-13
+    },
+    {
+      "id": "O084",
+      "part": 2,
+      "method": "independent_ode_integration",
+      "description": "Photon-jump reset to ground propagated with independent RK4 matches analytic g2",
+      "passed": true,
+      "error": 1.6542323066914832e-14,
+      "tolerance": 2e-11
+    },
+    {
+      "id": "O084",
+      "part": 3,
+      "method": "short_time_asymptotic",
+      "description": "Antibunching g2(0) zero and finite short-time quadratic coefficient",
+      "passed": true,
+      "error": 0.00006498186306624909,
+      "tolerance": 0.0002
+    },
+    {
+      "id": "O084",
+      "part": 4,
+      "method": "independent_integral",
+      "description": "Numerically integrated photon antibunching correlation gives sub-Poisson Fano",
+      "passed": true,
+      "error": 1.9095836023552692e-13,
+      "tolerance": 3e-11
+    },
+    {
+      "id": "Q084",
+      "part": 1,
+      "method": "first_law",
+      "description": "Quantum engine four corner internal energies close cycle energy balance",
+      "passed": true,
+      "error": 0,
+      "tolerance": 3e-13
+    },
+    {
+      "id": "Q084",
+      "part": 2,
+      "method": "energy_boundary",
+      "description": "Heat engine finite-time friction lowers net work by predicted exact amount",
+      "passed": true,
+      "error": 5.551115123125783e-17,
+      "tolerance": 3e-13
+    },
+    {
+      "id": "Q084",
+      "part": 3,
+      "method": "quantum_relative_entropy",
+      "description": "Full quantum relative entropies with unitary-preserved coherences equal Clausius entropy production",
+      "passed": true,
+      "error": 5.551115123125783e-17,
+      "tolerance": 4e-13
+    },
+    {
+      "id": "Q084",
+      "part": 4,
+      "method": "optimization_asymptotic",
+      "description": "Nonadiabatic work slope, exact work cutoff and weak-loss efficiency",
+      "passed": true,
+      "error": 0.00392124616294981,
+      "tolerance": 0.004
+    }
+  ],
+  "scope_limits": "Only 6 rewritten physical core models. 21 other historical core conflicts, 120 subpart checks and both PDFs unverified."
+}

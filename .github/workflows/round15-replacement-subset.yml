@@ -8,11 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: First two replacement models, 8 checks
-        run: node scripts/check_round15_replacements.js > /tmp/round15_a.json
-      - name: Next six replacement models, 24 checks
-        run: node scripts/check_round15_six_models.js > /tmp/round15_b.json
-      - name: Six further replacement models, 24 checks
-        run: node scripts/check_round15_next_six_models.js > /tmp/round15_c.json
-      - name: Release gate remains blocked
-        run: echo '56 of 200 subset checks only, 27 historical core conflicts still need replacement. Mirrors and two PDFs NOT verified.'
+      - name: Initial pair replacements (8)
+        run: node scripts/check_round15_replacements.js > /tmp/round15_1.json
+      - name: First six replacements (24)
+        run: node scripts/check_round15_six_models.js > /tmp/round15_2.json
+      - name: Second six replacements (24)
+        run: node scripts/check_round15_next_six_models.js > /tmp/round15_3.json
+      - name: Third six replacements (24)
+        run: node scripts/check_round15_third_six_models.js > /tmp/round15_4.json
+      - name: Preserve incomplete full-round release gate
+        run: echo '80/200 subpart checks; 21 remaining historical core collisions, unsynced mirrors and both PDFs. No merge.'
