@@ -1,0 +1,32 @@
+(1) 令 \(z_j=e^{i\phi_j}\)，则 \(\langle z_j\rangle=0,\langle z_jz_k^*\rangle=\delta_{jk}\)。因此
+\[
+\langle I_N\rangle=\frac{A^2}N\sum_{j,k}\langle z_jz_k^*\rangle=A^2=:I_0.
+\]
+四阶相位平均仅在 \(j=k,l=m\) 或 \(j=m,k=l\) 的配对下非零，这两类在全部四个指标相同处重复一次。故
+\[
+\langle I_N^2\rangle=\frac{A^4}{N^2}(2N^2-N)=I_0^2(2-1/N),
+\]
+\(\mathrm{Var}(I_N)=I_0^2(1-1/N)\)，对比度
+\(C_N=\sqrt{\mathrm{Var}I_N}/\langle I_N\rangle=\sqrt{1-1/N}\)。
+(2) \(N\) 很大时实部和虚部分别趋于方差 \(I_0/2\) 的独立正态，复电场密度 \(p(E)=(\pi I_0)^{-1}e^{-|E|^2/I_0}\)。将复平面极坐标面积元变换为强度，得
+\[
+p(I)=\frac1{I_0}e^{-I/I_0},\quad I\ge0,\quad
+\Pr(I\le x)=1-e^{-x/I_0}.
+\]
+因此 \(\langle I^2\rangle=2I_0^2\)、\(\mathrm{Var}(I)=I_0^2\)，且 \(C_N\to1\)。
+(3) Wick--Isserlis定理对圆复高斯变量给
+\[
+\langle E_1^*E_1E_2^*E_2\rangle
+=\langle E_1^*E_1\rangle\langle E_2^*E_2\rangle
++\langle E_1^*E_2\rangle\langle E_1E_2^*\rangle.
+\]
+除以 \(\langle I_1\rangle\langle I_2\rangle\) 即
+\[
+g^{(2)}_{12}=1+|g^{(1)}_{12}|^2.
+\]
+对同像素 \(|g^{(1)}|=1\) 有 \(g^{(2)}=2\)；互不相关高斯像素 \(|g^{(1)}|=0\) 给 \(g^{(2)}=1\)。有限 \(N\) 圆高斯假设不足时，公式有非高斯修正。
+(4) \(M\) 个独立指数变量之和服从Gamma形状 \(M\)，平均 \(\bar I=M^{-1}\sum_{\alpha=1}^M I_\alpha\) 的密度
+\[
+p_M(\bar I)=\frac{(M/I_0)^M}{\Gamma(M)}\bar I^{M-1}e^{-M\bar I/I_0},\quad\bar I\ge0.
+\]
+\(\langle\bar I\rangle=I_0\)，\(\mathrm{Var}(\bar I)=I_0^2/M\)，故 \(C_M=M^{-1/2}\)。若曝光中相位相关时间长于独立采样间隔，实际有效 \(M\) 更小；存在稳定相干分量会形成Rician而非纯指数散斑。以上为经典光场强度随机性；有限探测光子还叠加条件泊松计数噪声，不能混为一谈。

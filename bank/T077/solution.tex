@@ -1,0 +1,37 @@
+(1) 二维每单位面积动量态数为 \(g\,d^2k/(2\pi)^2\)。色散 \(E=\hbar v k\) 给
+\[
+D(E)=\frac{gE}{2\pi(\hbar v)^2},\qquad E>0.
+\]
+化学势零点的占据 \(f(E)=[e^{E/k_BT}+1]^{-1}\)，价带空穴的占据同为 \(f(E)\)，故
+\[
+n_e=n_h=\int_0^\infty D(E)f(E)\,dE
+=\frac{g(k_BT)^2}{2\pi(\hbar v)^2}\frac{\pi^2}{12}
+=\frac{g\pi(k_BT)^2}{24(\hbar v)^2}.
+\]
+(2) 导带电子与价带空穴的正激发能量相同，两者合计
+\[
+u=2\int_0^\infty ED(E)f(E)\,dE
+=\frac{g(k_BT)^3}{\pi(\hbar v)^2}\int_0^\infty\frac{x^2}{e^x+1}\,dx.
+\]
+用展开 \((e^x+1)^{-1}=\sum_{n\ge1}(-1)^{n-1}e^{-nx}\)，积分每项 \(2/n^3\)，得到 \(2(1-2^{-2})\zeta(3)=3\zeta(3)/2\)。因此
+\[
+u=\frac{3g\zeta(3)}{2\pi(\hbar v)^2}(k_BT)^3,\qquad c_A=\frac{3u}{T}.
+\]
+\([u]=\mathrm{J/m^2}\)，低温 \(c_A\propto T^2\)。
+(3) 对任一占据模，线性色散产生的微观压力张量迹等于 \(u\)；二维旋转对称使 \(P_x=P_y=P\)，故 \(2P=u\)。也可由 \(F=-k_BT\ln\mathcal Z\) 对面积作尺度微分得到
+\[
+P=u/2,\qquad s=(u+P-\mu_{\rm ch} n_{\rm net})/T\big|_{\mu_{\rm ch}=0}
+=\frac{3u}{2T}.
+\]
+二维一次齐次色散与三维二次色散的维里恒等式不同。\(T\to0\) 时相对于填满价带的 \(n_e,n_h,u,P,s\to0\)。
+(4) 一般
+\[
+n_{\rm net}=\int_0^\infty D(E)\bigl[f(E-\mu_{\rm ch})-f(E+\mu_{\rm ch})\bigr]\,dE.
+\]
+在 \(\mu_{\rm ch}=0\) 微分并分部，
+\[
+\chi=2\int_0^\infty D(E)[-f'(E)]\,dE
+=\frac{g}{\pi(\hbar v)^2}\int_0^\infty f(E)\,dE
+=\frac{g k_BT\ln2}{\pi(\hbar v)^2}.
+\]
+于是 \(C_Q=e^2\chi\)（单位 \(\mathrm{F/m^2}\)）。有限温度热激发填充中性Dirac点附近的态；零温极限 \(\chi\to0\)，但真实材料的无序、库仑交换、速度重整化会改变响应。

@@ -1,0 +1,37 @@
+(1) 令 \(z\in[0,h]\)。薄膜低Reynolds数的径向动量方程为 \(\mu u_{r,zz}=p_r\)，两盘径向无滑移条件给
+\[
+u_r(r,z)=\frac{p_r}{2\mu}z(z-h),\qquad
+q_r=\int_0^h u_r\,dz=-\frac{h^3}{12\mu}p_r.
+\]
+由于不可压且盘距随时间变化，厚度积分连续方程为
+\[
+\dot h+\frac1r\partial_r(rq_r)=0,\qquad
+\frac1r\partial_r(rh^3p_r)=12\mu\dot h.
+\]
+(2) \(h\) 与 \(r\) 无关，轴心压强梯度正则，故 \(p_r=6\mu\dot h\,r/h^3\)。以 \(p(a)=p_a\) 积分得到
+\[
+p(r)-p_a=\frac{3\mu\dot h}{h^3}(r^2-a^2)
+=\frac{3\mu(-\dot h)}{h^3}(a^2-r^2).
+\]
+中心超压为 \(3\mu(-\dot h)a^2/h^3\)，总法向液压力
+\[
+F=\int_0^a2\pi r(p-p_a)\,dr
+=-\frac{3\pi\mu a^4}{2h^3}\dot h>0.
+\]
+(3) 忽略上盘惯性，\(F=F_0\)，于是
+\[
+\dot h=-\frac{2F_0}{3\pi\mu a^4}h^3,\quad
+\frac1{h(t)^2}=\frac1{h_0^2}+\frac{4F_0t}{3\pi\mu a^4},
+\]
+故 \(h(t)=h_0[1+4F_0h_0^2t/(3\pi\mu a^4)]^{-1/2}\)；达到 \(h_1\) 的时间为
+\[
+t_1=\frac{3\pi\mu a^4}{4F_0}(h_1^{-2}-h_0^{-2})>0.
+\]
+形式上只有在 \(t\to\infty\) 才接近零厚度。
+(4) 剪切率 \(u_{r,z}=p_r(2z-h)/(2\mu)\)。体耗散
+\[
+\mathcal D=\int_0^a 2\pi r\,dr\int_0^h\mu u_{r,z}^2\,dz
+=\int_0^a2\pi r\,dr\frac{h^3p_r^2}{12\mu}
+=\frac{3\pi\mu a^4\dot h^2}{2h^3}=F(-\dot h).
+\]
+单位 \([\mu a^4\dot h/h^3]=\mathrm N\)；排液无限耗时不是微观接触不可发生的真实断言，薄膜润滑、无滑移和连续介质在分子厚度失效。

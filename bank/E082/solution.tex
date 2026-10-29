@@ -1,0 +1,31 @@
+(1) 定常动量方程沿 \(x\) 为
+\[
+0=-p_x+\mu u_{yy}+(\boldsymbol j\times\boldsymbol B)_x.
+\]
+取 \(u\hat x\times B\hat y=uB\hat z\) 与 \(E_z=0\)，有 \(j_z=\sigma Bu\)，而 \(j_z\hat z\times B\hat y=-j_zB\hat x\)。故
+\[
+\mu u''-\sigma B^2u+G=0,\qquad u(\pm h)=0.
+\]
+(2) 设 \(\lambda=B\sqrt{\sigma/\mu}=Ha/h\)。偶对称解是
+\[
+u(y)=\frac G{\sigma B^2}\left[1-\frac{\cosh(\lambda y)}{\cosh(\lambda h)}\right].
+\]
+积分得
+\[
+Q=\int_{-h}^h u(y)\,dy
+=\frac{2hG}{\sigma B^2}\left(1-\frac{\tanh Ha}{Ha}\right),\quad
+\bar u=\frac G{\sigma B^2}\left(1-\frac{\tanh Ha}{Ha}\right).
+\]
+利用 \(1-\cosh(\lambda y)/\cosh(\lambda h)=\lambda^2(h^2-y^2)/2+O(\lambda^4h^4)\)，有 \(u\to G(h^2-y^2)/(2\mu)\)，\(Q\to2Gh^3/(3\mu)\)。
+(3) 大 \(Ha\) 下芯部 \(|y|\ll h\) 处 \(u\simeq G/(\sigma B^2)\)，边界层 \(\delta\simeq1/\lambda=h/Ha\)。流量
+\[
+Q=\frac{2hG}{\sigma B^2}\left(1-\frac1{Ha}+O(e^{-2Ha}/Ha)\right).
+\]
+磁场增强时芯部Lorentz阻力 \(-\sigma B^2u\) 更强，近壁层仍需黏性提供无滑移梯度。取 \(B,u>0\) 时 \(j_z>0\)，\(\boldsymbol j\times\boldsymbol B\) 沿 \(-x\)，总是制动。
+(4) 用边界 \(u(\pm h)=0\)，将 \(Gu+\mu uu''-\sigma B^2u^2=0\) 沿 \(y\) 积分，分部得
+\[
+GQ=\mu\int_{-h}^h(u')^2dy+
+\sigma B^2\int_{-h}^h u^2dy
+=\mathcal D_\mu+\mathcal D_J.
+\]
+焦耳项 \(\int j_z^2/\sigma\,dy=\sigma B^2\int u^2dy\)，每项单位为 \(\mathrm{W/m^2}\)（沿流向每单位长度及横向单位宽度）。外电场短路是本模型的关键边界；电流断路时整体 \(\int j_zdy=0\) 会诱导 \(E_z=-B\bar u\)，实际磁体力与速度截面非局部耦合，不能沿用此解析式。
