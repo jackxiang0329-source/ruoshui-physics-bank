@@ -91,7 +91,7 @@ check('O067',4,'limit','paraxial longitudinal focal field scales as aperture cub
 t,Del,mu,k=s.symbols('t Del mu k',positive=True,real=True)
 h=s.Matrix([[-mu-2*t*s.cos(k),-2*s.I*Del*s.sin(k)],[2*s.I*Del*s.sin(k),mu+2*t*s.cos(k)]])
 band=(mu+2*t*s.cos(k))**2+4*Del*Del*s.sin(k)**2
-check('Q067',1,'symbolic','BdG Hamiltonian has exact opposite energy eigenvalues and closes superconducting gap at chemical potential plus or minus 2t',eq(h*h,band*s.eye(2)) and eq(band.subs({mu:2*t,k:s.pi}),0))
+check('Q067',1,'symbolic','BdG Hamiltonian has exact opposite energy eigenvalues and closes superconducting gap at chemical potential plus or minus 2t',all(eq(z) for z in (h*h-band*s.eye(2))) and eq(band.subs({mu:2*t,k:s.pi}),0))
 low=s.Matrix([[0,1],[0,0]]);zz=s.diag(1,-1);ident=s.eye(2)
 def kron(xs):
   out=xs[0]
