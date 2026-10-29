@@ -56,12 +56,15 @@
         "M033"
       ],
       "shared_core": "same power-law central-force near-circular radial stability and apsidal advance",
-      "action": "Replaced duplicate core with distinct physical model: 受周期脉冲驱动转子的标准映射、辛结构与非线性共振岛; runnable replacement QA pending.",
-      "resolution_status": "replacement_pending_validation",
+      "action": "Substantive original core replacement completed: 受周期脉冲驱动转子的标准映射、辛结构与非线性共振岛. Four-part independent mathematical checks committed; successful GitHub Actions and human review remain separate admission requirements.",
+      "resolution_status": "resolved",
       "replacement_title": "受周期脉冲驱动转子的标准映射、辛结构与非线性共振岛",
       "evidence_paths": [
+        "bank/M065/meta.json",
         "bank/M065/question.tex",
-        "bank/M065/solution.tex"
+        "bank/M065/solution.tex",
+        "scripts/check_round12_mechanics_electromagnetism.py",
+        "data/round12_mechanics_electromagnetism_validation_report.json"
       ]
     },
     {
@@ -70,12 +73,15 @@
         "M022"
       ],
       "shared_core": "same repulsive Coulomb Rutherford scattering and differential cross section",
-      "action": "Replaced duplicate core with distinct physical model: Rankine复合涡的涡量分布、径向压力、能量与自由液面; runnable replacement QA pending.",
-      "resolution_status": "replacement_pending_validation",
+      "action": "Substantive original core replacement completed: Rankine复合涡的涡量分布、径向压力、能量与自由液面. Four-part independent mathematical checks committed; successful GitHub Actions and human review remain separate admission requirements.",
+      "resolution_status": "resolved",
       "replacement_title": "Rankine复合涡的涡量分布、径向压力、能量与自由液面",
       "evidence_paths": [
+        "bank/M067/meta.json",
         "bank/M067/question.tex",
-        "bank/M067/solution.tex"
+        "bank/M067/solution.tex",
+        "scripts/check_round12_last8.py",
+        "data/round12_last8_validation_report.json"
       ]
     },
     {
@@ -84,12 +90,15 @@
         "E020"
       ],
       "shared_core": "same Faraday disk emf, magnetic braking and electrical power",
-      "action": "Replaced duplicate core with distinct physical model: 非线性Poisson–Boltzmann平板双电层的精确势、Grahame关系与微分电容; runnable replacement QA pending.",
-      "resolution_status": "replacement_pending_validation",
+      "action": "Substantive original core replacement completed: 非线性Poisson–Boltzmann平板双电层的精确势、Grahame关系与微分电容. Four-part independent mathematical checks committed; successful GitHub Actions and human review remain separate admission requirements.",
+      "resolution_status": "resolved",
       "replacement_title": "非线性Poisson–Boltzmann平板双电层的精确势、Grahame关系与微分电容",
       "evidence_paths": [
+        "bank/E067/meta.json",
         "bank/E067/question.tex",
-        "bank/E067/solution.tex"
+        "bank/E067/solution.tex",
+        "scripts/check_round12_last8.py",
+        "data/round12_last8_validation_report.json"
       ]
     },
     {
@@ -99,12 +108,15 @@
         "E034"
       ],
       "shared_core": "same conductor skin diffusion, depth and Joule loss, surface impedance only additional",
-      "action": "Replaced duplicate core with distinct physical model: 理想MHD剪切Alfvén波的Elsasser变量、能流与界面散射; runnable replacement QA pending.",
-      "resolution_status": "replacement_pending_validation",
+      "action": "Substantive original core replacement completed: 理想MHD剪切Alfvén波的Elsasser变量、能流与界面散射. Four-part independent mathematical checks committed; successful GitHub Actions and human review remain separate admission requirements.",
+      "resolution_status": "resolved",
       "replacement_title": "理想MHD剪切Alfvén波的Elsasser变量、能流与界面散射",
       "evidence_paths": [
+        "bank/E066/meta.json",
         "bank/E066/question.tex",
-        "bank/E066/solution.tex"
+        "bank/E066/solution.tex",
+        "scripts/check_round12_mechanics_electromagnetism.py",
+        "data/round12_mechanics_electromagnetism_validation_report.json"
       ]
     },
     {
@@ -113,16 +125,19 @@
         "M015"
       ],
       "shared_core": "same cycloid core; brachistochrone versus tautochrone needs substantive duplication review",
-      "action": "Replaced duplicate core with distinct physical model: 均匀悬链线的非线性平衡、唯一张力参数与重力势能; runnable replacement QA pending.",
-      "resolution_status": "replacement_pending_validation",
+      "action": "Substantive original core replacement completed: 均匀悬链线的非线性平衡、唯一张力参数与重力势能. Four-part independent mathematical checks committed; successful GitHub Actions and human review remain separate admission requirements.",
+      "resolution_status": "resolved",
       "replacement_title": "均匀悬链线的非线性平衡、唯一张力参数与重力势能",
       "evidence_paths": [
+        "bank/M066/meta.json",
         "bank/M066/question.tex",
-        "bank/M066/solution.tex"
+        "bank/M066/solution.tex",
+        "scripts/check_round12_mechanics_electromagnetism.py",
+        "data/round12_mechanics_electromagnetism_validation_report.json"
       ]
     }
   ],
-  "disposition": "Five overlapping models substantively replaced, all five pending independent executable QA and new CI; do not merge before validation.",
+  "disposition": "All five previously flagged core overlaps replaced with physically distinct models and new executable checks; no human expert signoff. Merge still prohibited unless both formal CI and two XeLaTeX builds pass.",
   "independent_expert_review": "待独立复核",
   "new_draft_model_screening": [
     {
@@ -521,7 +536,7 @@
       ],
       "core_model": "受周期脉冲驱动转子的标准映射、辛结构与非线性共振岛",
       "difference": "Replaced previously overlapping core model with physically distinct system, equations, invariants and four-part derivation.",
-      "resolution_status": "replacement_pending_validation"
+      "resolution_status": "resolved_by_substantive_model_replacement"
     },
     {
       "draft_id": "M066",
@@ -530,7 +545,7 @@
       ],
       "core_model": "均匀悬链线的非线性平衡、唯一张力参数与重力势能",
       "difference": "Replaced previously overlapping core model with physically distinct system, equations, invariants and four-part derivation.",
-      "resolution_status": "replacement_pending_validation"
+      "resolution_status": "resolved_by_substantive_model_replacement"
     },
     {
       "draft_id": "M067",
@@ -539,7 +554,7 @@
       ],
       "core_model": "Rankine复合涡的涡量分布、径向压力、能量与自由液面",
       "difference": "Replaced previously overlapping core model with physically distinct system, equations, invariants and four-part derivation.",
-      "resolution_status": "replacement_pending_validation"
+      "resolution_status": "resolved_by_substantive_model_replacement"
     },
     {
       "draft_id": "E066",
@@ -549,7 +564,7 @@
       ],
       "core_model": "理想MHD剪切Alfvén波的Elsasser变量、能流与界面散射",
       "difference": "Replaced previously overlapping core model with physically distinct system, equations, invariants and four-part derivation.",
-      "resolution_status": "replacement_pending_validation"
+      "resolution_status": "resolved_by_substantive_model_replacement"
     },
     {
       "draft_id": "E067",
@@ -558,7 +573,7 @@
       ],
       "core_model": "非线性Poisson–Boltzmann平板双电层的精确势、Grahame关系与微分电容",
       "difference": "Replaced previously overlapping core model with physically distinct system, equations, invariants and four-part derivation.",
-      "resolution_status": "replacement_pending_validation"
+      "resolution_status": "resolved_by_substantive_model_replacement"
     }
   ]
 }
