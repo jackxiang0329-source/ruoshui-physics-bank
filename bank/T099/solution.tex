@@ -1,0 +1,7 @@
+(1) 内部工质在每循环熵变化为零且内部可逆，故热端输入熵流等于冷端输出熵流，$Q_h/\vartheta_h=Q_c/\vartheta_c=s>0$。外部热源向内部端口传热必须有有限温差 $T_h>\vartheta_h>\vartheta_c>T_c$，产生外部熵。
+
+(2) 由 $s\vartheta_h=K_h(T_h-\vartheta_h)$ 得 $\vartheta_h=K_hT_h/(K_h+s)$；冷侧 $s\vartheta_c=K_c(\vartheta_c-T_c)$ 得 $\vartheta_c=K_cT_c/(K_c-s)$，要求 $0<s<K_c$ 并且 $\vartheta_h>\vartheta_c$。功率为 $P(s)=s[\vartheta_h(s)-\vartheta_c(s)]$。
+
+(3) 求导 $P'(s)=K_h^2T_h/(K_h+s)^2-K_c^2T_c/(K_c-s)^2$。唯一最大点满足 $\boxed{s_*=K_hK_c(\sqrt{T_h}-\sqrt{T_c})/(K_h\sqrt{T_h}+K_c\sqrt{T_c})}$。由驻点条件得 $\vartheta_c/\vartheta_h=\sqrt{T_c/T_h}$，故 $\boxed{\eta_*=1-\sqrt{T_c/T_h}<1-T_c/T_h}$。
+
+(4) 热浴总熵产 $\dot S_{\rm tot}=Q_c/T_c-Q_h/T_h=s(\vartheta_c/T_c-\vartheta_h/T_h)>0$，因为 $\vartheta_c>T_c$ 且 $\vartheta_h<T_h$。若 $K_h,K_c\to\infty$，同一固定小熵流下端温趋热浴温，熵产趋零；最大功率优化与这一极限的先后顺序不能混淆。
