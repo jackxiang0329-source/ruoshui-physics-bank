@@ -1,0 +1,7 @@
+(1) 分离变量 $(1+I/I_s)dI/I=-\alpha_0dz$，积分得 $\boxed{\ln(I_L/I_0)+(I_L-I_0)/I_s=-\alpha_0L}$。左端随 $I_L>0$ 严格增加，因此给定正输入只有一个正输出。
+
+(2) 令 $x=I/I_s$，则 $\ln x+x=\ln(I_0/I_s)+I_0/I_s-\alpha_0z$。指数化得 $xe^x=(I_0/I_s)e^{I_0/I_s-\alpha_0z}$，故 $\boxed{I(z)=I_sW_0[(I_0/I_s)e^{I_0/I_s-\alpha_0z}]}$。主支 $W_0$ 对正实自变量为正、严格递增，输出强度随厚度递减。
+
+(3) 低强度 $I\ll I_s$ 时 $dI/dz\simeq-\alpha_0I$，所以 $I_L\simeq I_0e^{-\alpha_0L}$。高强度整个传输区 $I\gg I_s$ 时 $dI/dz\simeq-\alpha_0I_s$，即 $I_L\simeq I_0-\alpha_0I_sL$，要求右端仍远大于 $I_s$。强光使饱和吸收系数 $\alpha_0/(1+I/I_s)$ 降低，但并不变成负数。
+
+(4) 每单位截面吸收功率为 $P_{\rm abs}/A=I_0-I_L=\int_0^L\alpha_0I(z)/[1+I(z)/I_s]dz\ge0$，由微分输运式直接积分。无外部泵浦或增益机制时 $I_L\le I_0$，强场透射趋向接近1并不意味着光功率被放大。

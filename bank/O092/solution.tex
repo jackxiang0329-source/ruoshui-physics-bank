@@ -1,0 +1,7 @@
+(1) 分离方程得 $\partial_z(1/I)=\beta$，所以 $\boxed{I_L=I_0/(1+\beta LI_0)}$。这是双光子吸收与普通指数Beer定律的根本区别，其吸收率随强度本身增加。
+
+(2) 强度透射率 $\mathcal T=1/(1+\beta LI_0)$，单位面积损失 $I_0-I_L=\beta LI_0^2/(1+\beta LI_0)\ge0$。低强度 $\mathcal T\simeq1-\beta LI_0$；$I_0\to\infty$ 时 $I_L\to1/(\beta L)$，输出被非线性吸收限制，而损失功率继续随输入增大。
+
+(3) 每个时刻的强度满足独立的沿 $z$ 输运方程，故 $\boxed{I(L,t)=I_pe^{-t^2/\tau^2}/[1+\beta LI_pe^{-t^2/\tau^2}]}$。脉冲中心的入射强度较大，故相对透射较小；尾部保持近乎线性透射，因而峰部被钝化但时间宽度和整体形状不再严格为高斯。
+
+(4) 置 $\epsilon=\beta LI_p\ll1$，展开 $I(L,t)=I_pe^{-t^2/\tau^2}-\epsilon I_pe^{-2t^2/\tau^2}+O(\epsilon^2)$。输入fluence为 $\mathcal F_{\rm in}=I_p\tau\sqrt\pi$；输出 $\mathcal F_{\rm out}=I_p\tau\sqrt\pi-\beta LI_p^2\tau\sqrt{\pi/2}+O(\epsilon^2\mathcal F_{\rm in})$。所以 $\mathcal F_{\rm out}/\mathcal F_{\rm in}=1-\beta LI_p/\sqrt2+O(\epsilon^2)$。

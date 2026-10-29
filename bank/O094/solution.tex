@@ -1,0 +1,7 @@
+(1) 输出场 $E(t)=E_0e^{-i\omega_0t}e^{im\sin\Omega t}$。Jacobi–Anger恒等式 $e^{im\sin\theta}=\sum_{n=-\infty}^\infty J_n(m)e^{in\theta}$，故边带角频率是 $\omega_n=\omega_0-n\Omega$，复幅度为 $E_0J_n(m)$。
+
+(2) 独立边带经足够长时间平均后，功率比例为 $P_n/P_{\rm in}=J_n(m)^2$。因为 $|e^{im\sin\theta}|^2=1$，对相位周期积分并用Parseval等式有 $\boxed{\sum_nJ_n(m)^2=1}$；因此纯相位调制不改变总时均强度。
+
+(3) $J_0(m)=1-m^2/4+O(m^4)$，$J_{\pm1}(m)=\pm m/2+O(m^3)$。故载波功率为 $P_0/P_{\rm in}=1-m^2/2+O(m^4)$，每个一阶边带的功率 $P_{\pm1}/P_{\rm in}=m^2/4+O(m^4)$；合计至二阶满足能量守恒。
+
+(4) 由 $\partial_\theta e^{im\sin\theta}=im\cos\theta\,e^{im\sin\theta}$，利用Parseval于导数得到 $\sum_n n^2J_n(m)^2=(2\pi)^{-1}\int_0^{2\pi}m^2\cos^2\theta\,d\theta=m^2/2$。所以 $\boxed{\langle(\omega-\omega_0)^2\rangle=m^2\Omega^2/2}$。时间相位的导数产生瞬时频移，即使光强恒定，频谱仍展宽。
