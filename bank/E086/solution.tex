@@ -1,0 +1,21 @@
+(1) 单位长度欧姆定律 \(\partial_x V=-r I\)，电荷守恒 \(\partial_x I=-c\partial_t V\)，消去 \(I\) 得
+\[
+\partial_t V=D\partial_x^2V,\qquad D=(rc)^{-1}.
+\]
+量纲 \([rc]=\mathrm{s/m^2}\)，故 \(D\) 是 \(\mathrm{m^2/s}\)。
+(2) 令 \(k=\pi/L\)，则 \(V=V_0\sin(kx)e^{-Dk^2t}\)，
+\[
+I=-{1\over r}\partial_xV=-{kV_0\over r}\cos(kx)e^{-Dk^2t},\quad \tau_1={1\over Dk^2}={rcL^2\over\pi^2}.
+\]
+线端电流可流向接地点，因两端电压为零而不输出电功率。
+(3) 对初值 \(f(x)\) 令 \(A_n={2\over L}\int_0^Lf(x)\sin(n\pi x/L)\,dx\)，则
+\[
+V(x,t)=\sum_{n=1}^\infty A_n\sin(n\pi x/L)e^{-D(n\pi/L)^2t}.
+\]
+衰减率 \(\lambda_n=D(n\pi/L)^2>0\)；常数模不满足接地的Dirichlet条件。
+(4) \(U={c\over2}\int_0^L V^2dx\)。求导并分部积分：
+\[
+\dot U=cD[V\partial_xV]_0^L-cD\int_0^L(\partial_xV)^2dx
+=[-VI]_0^L-\int_0^LrI^2dx .
+\]
+接地时边界项为零，故 \(\dot U=-\int rI^2dx\le0\)。若端点由电源施加电位，则端口输入功率 \(V(0)I(0)-V(L)I(L)\) 保留；外源补偿损耗，储能不必单调衰减。

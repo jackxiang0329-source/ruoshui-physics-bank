@@ -1,0 +1,23 @@
+(1) 坐标 \(x=l\sin\theta,\ y=a\cos\Omega t-l\cos\theta\)。略去仅含时间的项，拉格朗日量
+\[
+L={ml^2\over2}\dot\theta^2+ml\dot y_p\sin\theta\,\dot\theta+mgl\cos\theta .
+\]
+Euler--Lagrange方程为
+\[
+\ddot\theta+{g+\ddot y_p\over l}\sin\theta=0,\quad
+\ddot y_p=-a\Omega^2\cos\Omega t.
+\]
+(2) 写 \(\theta=\Theta+\xi\)，慢变量一周期内近似常数。快方程 \(\ddot\xi=(a\Omega^2/l)\cos\Omega t\sin\Theta\)，故
+\(\xi=-(a/l)\cos\Omega t\sin\Theta\)（取零均值）。对完整方程保留二阶平均，
+\[
+\ddot\Theta+{g\over l}\sin\Theta+{a^2\Omega^2\over2l^2}\sin\Theta\cos\Theta=0.
+\]
+此处 \(\langle\cos^2\Omega t\rangle=1/2\)。(3) 令 \(\Theta=\pi+\eta\)，得
+\(\ddot\eta+[a^2\Omega^2/(2l^2)-g/l]\eta=0\)。所以倒立稳定阈值
+\(a^2\Omega^2>2gl\)，\(\omega_\mathrm{up}^2=a^2\Omega^2/(2l^2)-g/l\)；
+下垂点 \(\omega_\mathrm{down}^2=g/l+a^2\Omega^2/(2l^2)\)。\(a\to0\) 恢复普通单摆下垂频率与倒立不稳定性。
+(4) 每单位质量的有效势
+\[
+U_\mathrm{eff}/m=-gl\cos\Theta+{a^2\Omega^2\over4}\sin^2\Theta.
+\]
+原系统有显式时变约束，能量变化率为支点反作用力对支点速度做功；仅平均慢动力学近似保守。要求 \(a/l\ll1\)，且 \(\Omega\gg\sqrt{g/l},a\Omega/l\) 以分离尺度；特别需检查逆摆附近慢模频率远低于驱动频率。

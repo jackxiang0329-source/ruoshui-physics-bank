@@ -1,0 +1,22 @@
+(1) 初态满足 \(\langle x^2\rangle=\hbar/(2m\omega_i)=A\)、\(\langle p^2\rangle=\hbar m\omega_i/2=B\)、对称协方差零。新哈密顿量 \(H_f=p^2/(2m)+m\omega_f^2x^2/2\)，故
+\[
+\langle H_f\rangle={\hbar\over4}(\omega_i+\omega_f^2/\omega_i),\quad
+\bar n={\langle H_f\rangle\over\hbar\omega_f}-{1\over2}
+={(\omega_f-\omega_i)^2\over4\omega_f\omega_i}.
+\]
+频率淬火后的态是新振子的压缩真空，其能量方差 \(\operatorname{Var}H_f=2(\hbar\omega_f)^2\bar n(\bar n+1)\)（由偶数激发态的压缩真空数分布或四阶高斯矩求得）。
+(2) Heisenberg演化 \(x(t)=x_0\cos\omega_ft+p_0\sin\omega_ft/(m\omega_f)\)，\(p(t)=p_0\cos\omega_ft-m\omega_fx_0\sin\omega_ft\)。写 \(c=\cos\omega_ft,s=\sin\omega_ft\)，则
+\[
+\Delta x^2(t)=Ac^2+{B\over m^2\omega_f^2}s^2,\quad
+\Delta p^2(t)=Bc^2+m^2\omega_f^2As^2.
+\]
+(3) 因初态交叉对称期望为零，
+\[
+C_{xp}(t)=sc\left({B\over m\omega_f}-m\omega_f A\right).
+\]
+直接展开并使用 \(AB=\hbar^2/4\) 得
+\[
+\Delta x^2\Delta p^2-C_{xp}^2=AB(c^2+s^2)^2={\hbar^2\over4}.
+\]
+所以乘积 \(\Delta x\Delta p\ge\hbar/2\)，且包含相关项的量子相空间面积不变。
+(4) 瞬态外控功平均为 \(\langle W\rangle=\langle H_f-H_i\rangle=\hbar(\omega_f^2-\omega_i^2)/(4\omega_i)\)，它可为负；淬火之后哈密顿量定常，\(\langle H_f\rangle\) 不随时变，虽位置和动量方差互相交换。若 \(\omega_f=\omega_i\)，\(\bar n=\operatorname{Var}H_f=W=0\)。当 \(\omega_f/\omega_i\gg1\)，\(\bar n\sim\omega_f/(4\omega_i)\) 增大，符合急剧压缩注入高能激发。
