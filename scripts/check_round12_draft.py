@@ -772,12 +772,25 @@ L12p059=G059*S059*T059**2
 L22p059=G059*S059**2*T059**3+K059*T059**2
 ip059=G059*(S059*DT059-V059)
 qp059=S059*T059*ip059+K059*DT059
+# Independent SI dimension vectors in (kg,m,s,A,K) base units.
+unitG059=(-1,-2,3,2,0)     # electrical conductance A/V
+unitS059=(1,2,-3,-1,-1)    # Seebeck V/K
+unitK059=(1,2,-3,0,-1)     # thermal conductance W/K
+unitT059=(0,0,0,0,1)
+unitV059=(1,2,-3,-1,0)
+unitEntropy059=(1,2,-3,0,-1) # W/K
+unitZT059=tuple(g+2*ss+tt-kk for g,ss,tt,kk in zip(unitG059,unitS059,unitT059,unitK059))
+unitJoule059=tuple(g+2*vv-tt for g,vv,tt in zip(unitG059,unitV059,unitT059))
+
 record('T059',4,'dimensions',
        'Physical Seebeck Peltier heat and charge laws reconstruct symmetric Onsager matrix with correct determinant and ZT',
        eq(L11p059*L22p059-L12p059**2,G059*K059*T059**3)
        and eq(L12p059**2/(L11p059*L22p059),G059*S059**2*T059/(G059*S059**2*T059+K059))
        and eq(-ip059*V059/T059+qp059*DT059/T059**2,
-              G059*(S059*DT059-V059)**2/T059+K059*DT059**2/T059**2))
+              G059*(S059*DT059-V059)**2/T059+K059*DT059**2/T059**2)
+       and unitZT059==(0,0,0,0,0)
+       and unitJoule059==unitEntropy059
+       and unitK059==unitEntropy059)
 mp.mp.dps=50
 gn059=mp.mpf('10');sn059=mp.mpf('0.0005');kn059=mp.mpf('0.001')
 tn059=mp.mpf('300');dn059=mp.mpf('4');xn059=mp.mpf('0.37')
