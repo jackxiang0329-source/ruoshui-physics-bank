@@ -1,0 +1,184 @@
+{
+  "round": 14,
+  "passed_count": 24,
+  "status": "draft_numerical_symbolic_checks_not_expert_review",
+  "ids": [
+    "M083",
+    "E083",
+    "T078",
+    "W078",
+    "O080",
+    "Q080"
+  ],
+  "tests": [
+    {
+      "id": "M083",
+      "part": 1,
+      "method": "cell_problem",
+      "name": "mean Couette/Poiseuille speed and Taylor cell Neumann solution",
+      "passed": true
+    },
+    {
+      "id": "M083",
+      "part": 2,
+      "method": "independent_integral",
+      "name": "polynomial shear corrector produces exact 2/105 coefficient",
+      "passed": true
+    },
+    {
+      "id": "M083",
+      "part": 3,
+      "method": "moment_conservation",
+      "name": "Fick second spatial moment rate equals twice Taylor effective diffusion",
+      "passed": true
+    },
+    {
+      "id": "M083",
+      "part": 4,
+      "method": "dimensions_limit",
+      "name": "Peclet squared enhancement and purely molecular zero-flow limit",
+      "passed": true
+    },
+    {
+      "id": "E083",
+      "part": 1,
+      "method": "curl_derivation",
+      "name": "Hall transverse operator square is negative identity",
+      "passed": true
+    },
+    {
+      "id": "E083",
+      "part": 2,
+      "method": "helical_spectrum",
+      "name": "right circular polarization eigenfrequency equals DH times k squared",
+      "passed": true
+    },
+    {
+      "id": "E083",
+      "part": 3,
+      "method": "energy_flux",
+      "name": "helical wave local flux equals group speed times magnetic energy",
+      "passed": true
+    },
+    {
+      "id": "E083",
+      "part": 4,
+      "method": "inertial_limit",
+      "name": "electron inertial length cyclotron relation equals Hall magnetic diffusivity",
+      "passed": true
+    },
+    {
+      "id": "T078",
+      "part": 1,
+      "method": "partition",
+      "name": "binary occupation and thermodynamic derivative match mean memory energy",
+      "passed": true
+    },
+    {
+      "id": "T078",
+      "part": 2,
+      "method": "work_integral",
+      "name": "integrated reversible work equals change in free energy and Landauer limit",
+      "passed": true
+    },
+    {
+      "id": "T078",
+      "part": 3,
+      "method": "first_law",
+      "name": "reversible work plus heat equals memory internal energy change",
+      "passed": true
+    },
+    {
+      "id": "T078",
+      "part": 4,
+      "method": "error_constraint",
+      "name": "minimal bias exactly saturates target bit erasure error probability",
+      "passed": true
+    },
+    {
+      "id": "W078",
+      "part": 1,
+      "method": "runaway_root",
+      "name": "cubic has negative value at zero and positive value at 2/tau",
+      "passed": true
+    },
+    {
+      "id": "W078",
+      "part": 2,
+      "method": "weak_radiation",
+      "name": "reduced-order complex root satisfies oscillator dispersion to first order",
+      "passed": true
+    },
+    {
+      "id": "W078",
+      "part": 3,
+      "method": "Schott_conservation",
+      "name": "Schott near field derivative and Larmor radiated power reconstruct third-order mechanical work",
+      "passed": true
+    },
+    {
+      "id": "W078",
+      "part": 4,
+      "method": "cycle_average",
+      "name": "Larmor cycle-averaged loss equals reduced mechanical energy decay",
+      "passed": true
+    },
+    {
+      "id": "O080",
+      "part": 1,
+      "method": "circular_Jones",
+      "name": "equal-phase circular superposition yields signed optical rotation",
+      "passed": true
+    },
+    {
+      "id": "O080",
+      "part": 2,
+      "method": "Stokes",
+      "name": "lossless optical rotation preserves S3 zero and fully polarized Stokes length",
+      "passed": true
+    },
+    {
+      "id": "O080",
+      "part": 3,
+      "method": "independent_Gaussian_integral",
+      "name": "circular pulse group delay reduces time-integrated polarization overlap",
+      "passed": true
+    },
+    {
+      "id": "O080",
+      "part": 4,
+      "method": "reciprocity",
+      "name": "forward inverse reverse Jones rotation cancels; chiral zero limit is identity",
+      "passed": true
+    },
+    {
+      "id": "Q080",
+      "part": 1,
+      "method": "two_band_gap",
+      "name": "Dirac squared gap is sum of nonnegative transverse and mass terms",
+      "passed": true
+    },
+    {
+      "id": "Q080",
+      "part": 2,
+      "method": "berry_curvature",
+      "name": "occupied-band Berry numerator triple product equals A squared (M+B k squared)",
+      "passed": true
+    },
+    {
+      "id": "Q080",
+      "part": 3,
+      "method": "independent_numerical_topology",
+      "name": "radial Berry curvature integrates to Chern +1 for A=M=B=1",
+      "passed": true
+    },
+    {
+      "id": "Q080",
+      "part": 4,
+      "method": "edge_domain_wall",
+      "name": "tanh mass wall exponent solves spin minus eigenstate localization equation",
+      "passed": true
+    }
+  ],
+  "independent_expert_review": "待独立复核"
+}
