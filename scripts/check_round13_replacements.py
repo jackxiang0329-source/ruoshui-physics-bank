@@ -79,7 +79,7 @@ def verify_all():
     kink=phb*s.tanh(xx/ell)
     ck('T071',3,'symbolic','Exact hyperbolic tangent Cahn Hilliard interface solves the nonlinear stationary Euler Lagrange equation',eq(kappa*s.diff(kink,xx,2),-A*kink+B*kink**3) and eq(s.limit(kink,xx,s.oo),phb))
     sigma=s.simplify(kappa*s.integrate(s.diff(kink,xx)**2,(xx,-s.oo,s.oo)))
-    ck('T071',4,'conservation','Independent interface gradient energy gives exact two root two over three tension and Lyapunov decay sign',eq(sigma,2*s.sqrt(2)*s.sqrt(kappa)*A**s.Rational(3,2)/(3*B)) and abs(float(mp.quad(lambda xx: (0.3*mp.sin(xx)+0.027*mp.sin(xx)**3)*(-0.3*mp.sin(xx)+0.027*(6*mp.sin(xx)*mp.cos(xx)**2-3*mp.sin(xx)**3)),[0,2*mp.pi]))+float(mp.quad(lambda xx:(0.3*mp.cos(xx)+0.081*mp.sin(xx)**2*mp.cos(xx))**2,[0,2*mp.pi])))<1e-9)
+    ck('T071',4,'conservation','Independent interface gradient energy gives exact two root two over three tension and Lyapunov decay sign',eq(sigma,2*s.sqrt(2)*s.sqrt(kappa)*A**s.Rational(3,2)/(3*B)) and abs(float(mp.quad(lambda xx: (-0.3*mp.sin(xx)+0.027*mp.sin(xx)**3)*(0.3*mp.sin(xx)+0.027*(6*mp.sin(xx)*mp.cos(xx)**2-3*mp.sin(xx)**3)),[0,2*mp.pi]))+float(mp.quad(lambda xx:(-0.3*mp.cos(xx)+0.081*mp.sin(xx)**2*mp.cos(xx))**2,[0,2*mp.pi])))<1e-9)
     # O072 Bragg grating coupled modes
     delta,kappa,L=s.symbols('delta kappa L',real=True,positive=True)
     mat=s.Matrix([[s.I*delta,s.I*kappa],[-s.I*kappa,-s.I*delta]])
