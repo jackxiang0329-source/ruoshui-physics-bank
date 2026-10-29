@@ -1,0 +1,25 @@
+(1) 联合分布 \(P(n_+,n_-)=e^{-\mu_+}\mu_+^{n_+}/n_+!\,e^{-\mu_-}\mu_-^{n_-}/n_-!\)。独立泊松方差各等于对应均值，故
+\[
+\langle D\rangle=\mu_+-\mu_-=N\cos\phi,\qquad
+\mathrm{Var}D=\mu_++\mu_-=N.
+\]
+差分可消除均值中共同强度基线，但两路光量子散粒方差相加而非相消。
+(2) 对每个泊松计数，Fisher信息为 \((\partial_\phi\mu)^2/\mu\)。因 \(\partial_\phi\mu_\pm=\mp(N/2)\sin\phi\)，在 \(0<|\sin\phi|\) 有
+\[
+\mathcal I_\phi=\frac{N^2\sin^2\phi}{4}\!\left(\frac1{\mu_+}+\frac1{\mu_-}\right)=N.
+\]
+所以任何局部无偏估计器满足 \(\mathrm{Var}(\hat\phi)\ge1/N\)。误差传播 \(\sqrt{\mathrm{Var}D}/|\partial_\phi\langle D\rangle|=\sqrt N/(N|\sin\phi|)\) 仅在工作点附近近似最优，例如 \(\phi=\pi/2\)。在 \(\phi=0,\pi\) 的严格点，正则Fisher公式须按极限解释，\(\cos\phi\) 对符号不敏感，常规局部反演退化，不可误认为测量具有全局单值性。
+(3) 置 \(V\) 后有
+\[
+\mathcal I_\phi=
+\frac{NV^2\sin^2\phi}{1-V^2\cos^2\phi}.
+\]
+对 \(V<1\) 令 \(z=\cos^2\phi\in[0,1]\)，得 \(NV^2(1-z)/(1-V^2z)\)，导数为 \(NV^2(V^2-1)/(1-V^2z)^2<0\)，故 \(z=0\) 最优：
+\[
+\delta\phi_{\rm CR}=\frac1{V\sqrt N},\quad
+N=\eta N_{\rm in},\quad
+\delta\phi_{\rm CR}=\frac1{V\sqrt{\eta N_{\rm in}}}.
+\]
+检测效率损失减小实际信息总量。
+(4) 在已知相位支 \(0<\phi<\pi\) 且计数足够大时，极大似然近似 \(\hat\phi=\arccos[D/(N V)]\)（定义域外计数需截断并产生有限样本偏差）。工作在 \(\phi_0=\pi/2\)、小信号 \(\delta\phi\) 时
+\(\langle D\rangle\simeq-NV\,\delta\phi\)，故 \(\hat{\delta\phi}=-D/(NV)\)，标准差 \(1/(V\sqrt N)\)，\(1\) rad 相位是无量纲角。离开线性动态范围时高阶项 \(O(\delta\phi^3)\) 和相位周期模糊不可忽略。上述界限只对相干光泊松资源成立，不排除非经典态与最佳测量方式的量子增强。

@@ -1,0 +1,25 @@
+(1) 两质点的距心距离平方分别为 \(R^2+l^2\pm2Rl\cos\theta\)。用 \((1+x)^{-1/2}\) 展开并相加，奇次相消：
+\[
+U=-GMm\!\left(\frac1{|\boldsymbol R+l\boldsymbol e|}+
+\frac1{|\boldsymbol R-l\boldsymbol e|}\right)
+=-\frac{2GMm}{R}-\frac{GMml^2}{R^3}(3\cos^2\theta-1)+O(l^4/R^5).
+\]
+令 \(I=2ml^2\)。重力梯度力矩
+\[
+\tau_z=-\partial_\theta U=-3In^2\sin\theta\cos\theta
+=-\tfrac32In^2\sin2\theta.
+\]
+惯性系角速度为 \(\dot\theta+n\)，所以 \(I\ddot\theta=\tau_z\)，即 \(\ddot\theta+\tfrac32n^2\sin2\theta=0\)。
+(2) 共转系拉格朗日量 \(L=\frac I2(\dot\theta+n)^2-U(\theta)\) 无显含时间。消去常数及对总能量不起作用的 \(In\dot\theta\) 后得到
+\[
+J=\tfrac I2\dot\theta^2-\tfrac32In^2\cos^2\theta=\mathrm{const}.
+\]
+\(\theta=0,\pi\) 是势极小值，\(\theta=\pi/2,3\pi/2\) 是极大值。径向微扰满足 \(\ddot\theta+3n^2\theta=0\)，频率 \(\sqrt3 n\)；按上式势零点，分界值 \(J_{\rm sep}=0\)，径向极小值为 \(-3In^2/2\)。
+(3) 在转折点 \(\theta_m\) 有 \(J=-\tfrac32In^2\cos^2\theta_m\)，故
+\[
+\dot\theta^2=3n^2(\sin^2\theta_m-\sin^2\theta),\qquad
+T=4\int_0^{\theta_m}\frac{d\theta}{\sqrt3n\sqrt{\sin^2\theta_m-\sin^2\theta}}
+=\frac4{\sqrt3n}K(k),\quad k=\sin\theta_m.
+\]
+因此 \(T=\frac{2\pi}{\sqrt3n}[1+\theta_m^2/4+O(\theta_m^4)]\)。当 \(k\to1^-\)，\(K(k)\sim\ln(4/\sqrt{1-k^2})\)，于是 \(T\sim\frac4{\sqrt3n}\ln(4/\cos\theta_m)\)，周期对数发散。
+(4) 实验室角动量为 \(L_{\rm spin}=I(n+\dot\theta)\)，所以 \(\dot L_{\rm spin}=I\ddot\theta=\tau_z\)，量纲为能量。惯性系转动能 \(E_{\rm spin}=\frac I2(n+\dot\theta)^2+U\) 的导数为 \(n\tau_z\)；这是保持预设轨道匀速的外源（轨道反作用）交换功率。故 \(E_{\rm spin}-nL_{\rm spin}=J\)（差一个不影响运动的常数）守恒。若放开轨道约束，轨道角动量将接受相反力矩；近距或杆长不可忽略时须用未展开的双质点势。

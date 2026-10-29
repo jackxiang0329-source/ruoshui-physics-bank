@@ -1,0 +1,27 @@
+(1) 材料横位移 \(y(X,t)=u(X+Ut,t)\)，每一材料点的速度为 \(y_t=(\partial_t+U\partial_x)u=:Du\)，加速度为 \(D^2u\)。在小斜率 \(|u_x|\ll1\) 下横向张力合力为 \(Tu_{xx}dx\)，因此
+\[
+\mu(\partial_t+U\partial_x)^2u=Tu_{xx},\qquad c=\sqrt{T/\mu}.
+\]
+展开为 \(u_{tt}+2Uu_{xt}+(U^2-c^2)u_{xx}=0\)。
+(2) 色散满足 \((\omega-Uk)^2=c^2k^2\)，亦即 \(\omega_\pm=(U\pm c)k\)，\(v_{g,\pm}=U\pm c\)，相速度相同。通解
+\[
+u=F(x-(U+c)t)+G(x-(U-c)t).
+\]
+由 \(u(x,0)=f(x)\)、\(Du(x,0)=g(x)\) 得
+\[
+F'(x)=\tfrac12[f'(x)-g(x)/c],\quad
+G'(x)=\tfrac12[f'(x)+g(x)/c],
+\]
+积分常数只要求 \(F+G=f\)。
+(3) 用 \(Du\) 乘 \(\mu D^2u=Tu_{xx}\)，并利用 \(D(u_x)=(Du)_x\)：
+\[
+D\!\left[\frac\mu2(Du)^2+\frac T2u_x^2\right]
+=T\partial_x[(Du)u_x].
+\]
+因此
+\[
+e=\tfrac\mu2(Du)^2+\tfrac T2u_x^2\ge0,\quad
+J=Ue-T(Du)u_x,\quad \partial_te+\partial_xJ=0 .
+\]
+在右行材料波 \(Du=-cu_x\) 时 \(J=(U+c)e\)，反行波 \(Du=+cu_x\) 时 \(J=(U-c)e\)。对振幅 \(A\) 的实正弦波，\(\langle e\rangle=Tk^2A^2/2\)，故 \(\langle J_\pm\rangle=(U\pm c)Tk^2A^2/2\)；能流方向含介质的平流贡献。
+(4) 给定实验室正频率，取 \(k_+=\omega/(U+c)>0\)、\(k_-=\omega/(U-c)<0\)（\(0<U<c\)）。后一分支群速 \(U-c<0\)，仍可向上游传能；但 \(U\to c^-\) 时 \(|k_-|\to\infty\)，不再满足忽略微观色散和弯曲刚度的长波模型。\(U=0\) 给标准 \(k_\pm=\pm\omega/c\) 和相反能流。\(U>c\) 时两实验室群速度均为正，上游不能传播信息；这不是能量不守恒，而是参考系与边界输运造成的特征线单向性。

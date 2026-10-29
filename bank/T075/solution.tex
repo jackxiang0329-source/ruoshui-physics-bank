@@ -1,0 +1,39 @@
+(1) 排序粒子左端 \(0\le x_1,\ x_{j+1}\ge x_j+a,\ x_N\le L-a\)。定义 \(y_j=x_j-(j-1)a\)，则 \(0\le y_1\le\cdots\le y_N\le L-Na\)，有序单纯形体积 \((L-Na)^N/N!\)。对于不可分辨粒子，只在一个排序区积分已包含 Gibbs 因子；动量积分给 \(\lambda_T^{-N}\)，于是
+\[
+Z_N=\frac{(L-Na)^N}{N!\lambda_T^N}.
+\]
+(2) 由 \(P=k_BT\,\partial_L\ln Z_N=Nk_BT/(L-Na)\)，即
+\[
+\frac{P}{nk_BT}=\frac1{1-na}=1+na+(na)^2+\cdots,\quad B_2=a,\ B_3=a^2.
+\]
+Stirling近似给
+\[
+F=Nk_BT\!\left[\ln\frac{n\lambda_T}{1-na}-1\right]+o(N).
+\]
+在固定 \(L,T\) 下微分 \(N\)，
+\[
+\mu=k_BT\!\left[\ln\frac{n\lambda_T}{1-na}+
+\frac{na}{1-na}\right].
+\]
+\(a\to0\) 时恢复一维理想气体表达式。
+(3) 因相互作用仅是零或无限的硬核约束，\(U=-\partial_\beta\ln Z_N=Nk_BT/2\)，\(C_V=Nk_B/2\)，
+\[
+S=Nk_B\left[\ln\frac{1-na}{n\lambda_T}+\frac32\right]+o(N).
+\]
+\((\partial P/\partial n)_T=k_BT/(1-na)^2\)，故
+\[
+\kappa_T=\frac{1}{n(\partial P/\partial n)_T}
+=\frac{(1-na)^2}{nk_BT}.
+\]
+涨落响应关系 \(\mathrm{Var}N=k_BT(\partial\langle N\rangle/\partial\mu)_{T,L}\) 结合 Gibbs--Duhem \(dP=n\,d\mu\) 得
+\(\mathrm{Var}N/\langle N\rangle=nk_BT\kappa_T=(1-na)^2\)。近密堆积时压强发散而涨落受硬核抑制。
+(4) 每粒子熵 \(s/k_B=\ln[(1/n-a)/\lambda_T]+3/2\)，因 \(\lambda_T\propto T^{-1/2}\)，绝热有
+\[
+T(1/n-a)^2=\mathrm{const}.
+\]
+沿绝热线 \(P=k_BT/(1/n-a)\propto(1/n-a)^{-3}\)，所以
+\[
+\left(\frac{\partial P}{\partial n}\right)_s=\frac{3k_BT}{(1-na)^2},
+\qquad c_s^2=\frac{3k_BT}{m(1-na)^2}.
+\]
+稀薄极限得到一维单自由度气体 \(\gamma=C_P/C_V=3\) 的 \(c_s^2=3k_BT/m\)。该结果是局部热平衡下的热力学声速；孤立严格一维可积硬杆体系未必能以通常流体方式局部弛豫，靠近密堆积还会触及微观碰撞和连续介质限制。
