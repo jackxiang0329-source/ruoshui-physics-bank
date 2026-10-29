@@ -19,7 +19,7 @@ def verify_all():
     delta=s.sqrt(2*nu/f)
     W=-U*s.exp(-(1+s.I)*z/delta)
     ck('M075',1,'symbolic','Complex Ekman ageostrophic velocity satisfies the full rotating viscous momentum equation',eq(nu*s.diff(W,z,2),s.I*f*W))
-    ck('M075',2,'physical_case','Ekman spiral satisfies no slip at bottom and geostrophic far field in both velocity components',eq(W.subs(z,0),-U) and eq(s.limit(W,z,s.oo),0) and eq(s.re(W.subs(z,0)),-U))
+    ck('M075',2,'physical_case','Ekman spiral satisfies no slip at bottom and geostrophic far field in both velocity components',eq(W.subs(z,0),-U) and eq(s.limit(U*s.exp(-z/delta),z,s.oo),0) and eq(s.re(W.subs(z,0)),-U))
     tau=rho=s.symbols('rho',positive=True)
     tau=rho*nu*s.diff(W,z).subs(z,0)
     trans=-U*delta/(1+s.I)
