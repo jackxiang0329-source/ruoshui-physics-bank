@@ -7,7 +7,7 @@
     "高斯脉冲整形",
     "非线性吸收预算"
   ],
-  "answer": "每个时刻的强度满足独立的沿 $z$ 输运方程，故 $\\boxed{I(L,t)=I_pe^{-t^2/\\tau^2}/[1+\\beta LI_pe^{-t^2/\\tau^2}]}$。脉冲中心的入射强度较大，故相对透射较小；尾部保持近乎线性透射，因而峰部被钝化但时间宽度和整体形状不再严格为高斯。",
+  "answer": "I_L=I_0/(1+\\beta LI_0),\\quad \\mathcal F_{\\rm out}/\\mathcal F_{\\rm in}=1-\\beta LI_p/\\sqrt2+O((\\beta LI_p)^2)",
   "kind": "综合推导题",
   "level": 5,
   "estimated_minutes": 90,
