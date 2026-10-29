@@ -1,0 +1,7 @@
+(1) 取质点坐标 $x=X+s\cos\alpha,\ y=-s\sin\alpha$。因此 $T=\frac12M\dot X^2+\frac12m[(\dot X+\dot s\cos\alpha)^2+\dot s^2\sin^2\alpha]$，$V=-mg s\sin\alpha$。它包含速度交叉项 $m\dot X\dot s\cos\alpha$，不能把两者动能简单相加为 $m\dot s^2/2$。
+
+(2) 坐标 $X$ 循环，$P_x=\partial L/\partial\dot X=(M+m)\dot X+m\dot s\cos\alpha$ 恒定。若初态全静止，$P_x=0$，故 $\boxed{\dot X=-m\cos\alpha\,\dot s/(M+m)}$，楔块向质点相对移动方向的反方向运动。
+
+(3) 对 $s$ 的Euler–Lagrange方程是 $m(\ddot s+\ddot X\cos\alpha)=mg\sin\alpha$。代入 $\ddot X=-m\cos\alpha\ddot s/(M+m)$ 得 $\boxed{\ddot s=g\sin\alpha(M+m)/(M+m\sin^2\alpha)}$，$\ddot X=-mg\sin\alpha\cos\alpha/(M+m\sin^2\alpha)$。$M\to\infty$ 时 $\ddot s\to g\sin\alpha$。
+
+(4) 消去 $\dot X$ 后 $T=\frac12m(M+m\sin^2\alpha)\dot s^2/(M+m)$。从静止下降高度 $h$，能量守恒给 $\dot s^2=2gh(M+m)/[M+m\sin^2\alpha]$。楔的动能占总释放势能份额为 $T_M/(mgh)=Mm\cos^2\alpha/[(M+m)(M+m\sin^2\alpha)]$。光滑约束只在两体间传力，总系统没有约束耗散。

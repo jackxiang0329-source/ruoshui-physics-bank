@@ -1,0 +1,7 @@
+(1) 定义 $M=m_1+m_2$、质心 $X=(m_1x_1+m_2x_2)/M$、约化质量 $\mu=m_1m_2/M$。系统Lagrange函数为 $L=M\dot X^2/2+\mu\dot\xi^2/2-k\xi^2/2$，其中 $x_2-x_1=\ell+\xi$，无外力故质心自由运动。
+
+(2) 正常坐标满足 $\ddot X=0$、$\mu\ddot\xi+k\xi=0$，$\omega=\sqrt{k/\mu}$。初态 $\dot X(0)=m_1v_0/M$、$\xi(0)=0$、$\dot\xi(0)=-v_0$，因此 $X(t)=X(0)+(m_1v_0/M)t$，$\boxed{\xi(t)=-(v_0/\omega)\sin\omega t}$。
+
+(3) 由 $v_1=\dot X-(m_2/M)\dot\xi$、$v_2=\dot X+(m_1/M)\dot\xi$，代入 $\dot\xi=-v_0\cos\omega t$ 得 $v_1=m_1v_0/M+(m_2/M)v_0\cos\omega t$、$v_2=(m_1/M)v_0(1-\cos\omega t)$。弹簧能 $U=k v_0^2\sin^2(\omega t)/(2\omega^2)$，和相对动能之和恒为 $\mu v_0^2/2$。
+
+(4) 首次非零时刻恢复原长为 $t=\pi/\omega$，此时 $\cos\omega t=-1$，故 $\boxed{v_1'=(m_1-m_2)v_0/(m_1+m_2),\quad v_2'=2m_1v_0/(m_1+m_2)}$。弹簧能此时为零，总动量和能量均守恒，正是完全弹性一维碰撞的末态；当 $m_1=m_2$ 时两球交换速度。
