@@ -1580,48 +1580,48 @@
   {
     "id": "M075",
     "topic": "力学",
-    "title": "双脉冲Hohmann转移的轨道能量、半椭圆飞行时间与火箭推进剂预算",
+    "title": "旋转流体Ekman底边界层的复速度螺旋、输运偏转与耗散恒等式",
     "kind": "综合推导题",
     "level": 5,
     "estimated_minutes": 115,
     "tags": [
-      "Kepler轨道转移",
-      "vis viva速度与轨道角动量",
-      "Hohmann双脉冲和飞行时间",
-      "Tsiolkovsky质量比"
+      "旋转流体Ekman螺旋",
+      "复数边界层方程",
+      "横向Ekman输运",
+      "黏性耗散与边界功"
     ],
-    "answer": "a_t=(r_1+r_2)/2,\\quad\\Delta v_1=\\sqrt{\\mu(2/r_1-1/a_t)}-\\sqrt{\\mu/r_1},\\quad t_t=\\pi\\sqrt{a_t^3/\\mu}",
+    "answer": "\\delta=\\sqrt{2\\nu/f},\\quad u+iv=U_g[1-e^{-(1+i)z/\\delta}],\\quad {\\cal D}=\\rho\\nu U_g^2/\\delta",
     "quality_status": "待独立复核",
     "tier": "advanced_composite",
     "format": "latex-fragment-v1",
-    "revision": "composite-v4.2-round13-draft",
-    "challenge_profile": "high-multistage",
+    "revision": "composite-v4.3-round13-core-replacement",
+    "challenge_profile": "high-multistage-original-core",
     "complexity_tier": "L5-C",
-    "question": "(1) 引力参数 \\(\\mu=GM>0\\) 的点质量周围，一飞行器由半径 \\(r_1\\) 的顺行圆轨道转移至同平面半径 \\(r_2>r_1\\) 的顺行圆轨道。假设两次理想瞬时切向脉冲、两脉冲之间仅受牛顿万有引力，无扰动。求唯一在两圆轨道分别相切的椭圆转移轨道半长轴与两端速度。\n(2) 求第一次加速脉冲 \\(\\Delta v_1\\)、第二次加速脉冲 \\(\\Delta v_2\\)，用角动量守恒独立核验近远地点速度，并说明轨道机械能在两次脉冲中的变化。\n(3) 求半椭圆转移时间 \\(t_t\\)，与起始圆轨道周期比较，并检查 \\(r_2\\to r_1\\) 和 \\(r_2/r_1\\to\\infty\\) 的物理极限。\n(4) 若推进器有效喷气速度 \\(v_e>0\\) 恒定，两次脉冲之间无抛弃结构质量，求两次推进前后飞行器总质量比，并解释为什么总质量比不能由轨道机械能差直接代替速度增量求出。\n",
-    "solution": "(1) 两圆轨道相切的转移椭圆必须以 \\(r_1\\) 为近地点、\\(r_2\\) 为远地点，故 \\(a_t=(r_1+r_2)/2\\)。轨道单位质量能量 \\(\\mathcal E=-\\mu/(2a_t)\\)，vis-viva公式 \\(v^2=\\mu(2/r-1/a_t)\\) 给 \\(\\boxed{v_p=\\sqrt{\\mu(2/r_1-1/a_t)},\\ v_a=\\sqrt{\\mu(2/r_2-1/a_t)}}\\)。初末圆轨道速度分别 \\(v_{c1}=\\sqrt{\\mu/r_1}\\)、\\(v_{c2}=\\sqrt{\\mu/r_2}\\)。这里的椭圆两端是同一条无推力轨道的速度，不能分别按圆轨道公式计算。\n\n(2) 因 \\(a_t>r_1\\)，第一次须加速 \\(\\Delta v_1=v_p-v_{c1}>0\\)。因 \\(a_t<r_2\\)，椭圆远地点速度小于目标圆轨道速度，故第二次 \\(\\Delta v_2=v_{c2}-v_a>0\\)。椭圆比角动量 \\(h=\\sqrt{\\mu a_t(1-e^2)}=\\sqrt{2\\mu r_1r_2/(r_1+r_2)}\\)，直接检验 \\(r_1v_p=r_2v_a=h\\)。每次脉冲引起单位质量机械能变化 \\(\\Delta\\mathcal E=v_-\\Delta v+(\\Delta v)^2/2\\)，两次相加恰等于 \\(-\\mu/(2r_2)+\\mu/(2r_1)\\)，但 \\(\\Delta v_1+\\Delta v_2\\) 不是该能量差的平方根。\n\n(3) Kepler第三定律给椭圆周期 \\(T_t=2\\pi\\sqrt{a_t^3/\\mu}\\)，从近地点到远地点历时半周期，故 \\(\\boxed{t_t=\\pi\\sqrt{a_t^3/\\mu}}\\)。初始圆周期 \\(T_1=2\\pi\\sqrt{r_1^3/\\mu}\\)，所以 \\(t_t/T_1=\\frac12[(r_1+r_2)/(2r_1)]^{3/2}\\)。若 \\(r_2\\to r_1\\)，两脉冲趋零且转移时间趋半个圆周周期；若 \\(r_2/r_1\\to\\infty\\)，第一次速度增量趋 \\((\\sqrt2-1)v_{c1}\\)，第二次趋零，但飞行时间按 \\(r_2^{3/2}\\) 发散。\n\n(4) 理想火箭方程对每次脉冲给 \\(m_{\\rm before}/m_{\\rm after}=\\exp(\\Delta v/v_e)\\)。两次连续质量比相乘，得到 \\(\\boxed{m_0/m_f=\\exp[(\\Delta v_1+\\Delta v_2)/v_e]}\\)，推进剂质量 \\(m_0-m_f\\)。喷气反冲依赖速度增量而非单独的轨道势能差，且飞行器质量在喷气时改变，故不能把推进剂预算等同于轨道机械能增加量。若存在有限燃烧时间、重力损失、不同喷气速度或额外级间抛弃，必须重算。\n"
+    "question": "(1) 北半球旋转流体占半空间 \\(z>0\\)，密度 \\(\\rho>0\\)、运动黏度 \\(\\nu>0\\)、科里奥利参数 \\(f>0\\)。远处地转流 \\(\\boldsymbol U_g=U_g\\hat x\\) 满足 \\(-\\nabla_h p/\\rho=f\\hat z\\times\\boldsymbol U_g\\)，底壁 \\(z=0\\) 无滑移。忽略非线性惯性与水平变化，由定常动量方程推导年龄转速度 \\(\\boldsymbol w=\\boldsymbol u-\\boldsymbol U_g\\) 的边值问题。\n(2) 用复速度 \\(W=w_x+iw_y\\) 求唯一衰减Ekman螺旋，写出 \\(u_x(z),u_y(z)\\) 与厚度 \\(\\delta\\)，检验两端边界条件。\n(3) 令底壁施于流体的应力 \\(\\boldsymbol\\tau_b=\\rho\\nu\\boldsymbol u'(0)\\)，年龄转体积输运 \\(\\boldsymbol{\\mathcal M}=\\int_0^\\infty\\boldsymbol w\\,dz\\)。分别求其两个分量及相对地转流的偏转方向。\n(4) 精确积分单位面积黏性耗散 \\({\\cal D}=\\rho\\nu\\int_0^\\infty|\\boldsymbol u'|^2dz\\)，验证其等于 \\(\\boldsymbol\\tau_b\\cdot\\boldsymbol U_g\\)，讨论 \\(\\nu\\to0^+\\)、\\(f\\to0^+\\) 的物理意义与近似失效条件。\n",
+    "solution": "(1) 旋转系水平动量方程为 \\(0=-\\nabla_hp/\\rho-f\\hat z\\times\\boldsymbol u+\\nu\\boldsymbol u''\\)。减去地转平衡后得到 \\(\\nu\\boldsymbol w''=f\\hat z\\times\\boldsymbol w\\)，边界条件 \\(\\boldsymbol w(0)=-U_g\\hat x,\\ \\boldsymbol w(\\infty)=0\\)。由于 \\(\\hat z\\times(w_x,w_y)=(-w_y,w_x)\\)，复表示恰为 \\(W''=ifW/\\nu\\)；这也确定了北半球的旋向。\n(2) 衰减特征根 \\(\\sqrt{if/\\nu}=(1+i)/\\delta,\\ \\delta=\\sqrt{2\\nu/f}\\)。去掉指数增长解，由壁面值得\n\\[\nW=-U_g e^{-(1+i)z/\\delta},\\quad\nu_x=U_g[1-e^{-z/\\delta}\\cos(z/\\delta)],\\quad\nu_y=U_g e^{-z/\\delta}\\sin(z/\\delta).\n\\]\n在 \\(z=0\\) 两速度均为零，无穷远趋于 \\((U_g,0)\\)；并且 \\(W''=(1+i)^2W/\\delta^2=ifW/\\nu\\)，满足完整边值问题。\n(3) 求导得 \\(W'(0)=U_g(1+i)/\\delta\\)，因此 \\(\\tau_{bx}=\\tau_{by}=\\rho\\nu U_g/\\delta\\)，壁面对流体的应力相对地转流左偏 \\(45^\\circ\\)。年龄转输运的复数形式为\n\\[\n{\\cal M}_x+i{\\cal M}_y=-U_g\\int_0^\\infty e^{-(1+i)z/\\delta}dz\n=-\\frac{U_g\\delta}{1+i}\n=-\\frac{U_g\\delta}{2}+i\\frac{U_g\\delta}{2}.\n\\]\n注意不能把无限深度的均匀地转流一起积分，否则会得到无意义的无穷大。\n(4) 由 \\(|W'|^2=2U_g^2\\delta^{-2}e^{-2z/\\delta}\\) 得\n\\[\n{\\cal D}=\\rho\\nu\\frac{2U_g^2}{\\delta^2}\\frac{\\delta}{2}\n=\\frac{\\rho\\nu U_g^2}{\\delta}=\\tau_{bx}U_g.\n\\]\n恒等式表明地转压强梯度供给的能量与边界层耗散平衡，并非无外功耗散。固定 \\(f\\) 取 \\(\\nu\\to0^+\\) 时 \\(\\delta\\to0\\)，应力按 \\(\\sqrt\\nu\\) 消失；固定 \\(\\nu\\) 取 \\(f\\to0^+\\) 时 \\(\\delta\\to\\infty\\)，有限深流体和地转假设先失效，不能直接把螺旋解当作无旋转极限。\n"
   },
   {
     "id": "M076",
     "topic": "力学",
-    "title": "Foucault摆的科里奥利双圆偏振模、平面进动与能量守恒",
+    "title": "圆管Taylor–Aris弥散的径向胞元问题、有效扩散与示踪剂守恒",
     "kind": "综合推导题",
     "level": 5,
     "estimated_minutes": 115,
     "tags": [
-      "地球旋转参考系科里奥利力",
-      "Foucault摆模态劈裂",
-      "纬度依赖的几何进动",
-      "陀螺力零功和能量"
+      "Taylor–Aris弥散",
+      "圆管Poiseuille对流扩散",
+      "径向胞元方程",
+      "高Peclet极限"
     ],
-    "answer": "\\Omega_F=\\Omega_\\oplus\\sin\\lambda,\\quad z(t)=e^{-i\\Omega_Ft}[Ae^{i\\sqrt{\\omega_0^2+\\Omega_F^2}t}+Be^{-i\\sqrt{\\omega_0^2+\\Omega_F^2}t}]",
+    "answer": "D_{\\rm eff}=D+\\frac{U^2a^2}{48D},\\quad\\chi(r)=\\frac UD\\left(\\frac{r^2}{4}-\\frac{r^4}{8a^2}-\\frac{a^2}{12}\\right)",
     "quality_status": "待独立复核",
     "tier": "advanced_composite",
     "format": "latex-fragment-v1",
-    "revision": "composite-v4.2-round13-draft",
-    "challenge_profile": "high-multistage",
+    "revision": "composite-v4.3-round13-core-replacement",
+    "challenge_profile": "high-multistage-original-core",
     "complexity_tier": "L5-C",
-    "question": "(1) 北半球纬度 \\(\\lambda\\) 的地面实验室有长度 \\(L\\) 的小振幅Foucault摆，局地有效重力加速度 \\(g\\)，地球自转角速度 \\(\\Omega_\\oplus\\)。以东向 \\(x\\)、北向 \\(y\\)、竖直向上 \\(z\\) 为右手坐标，令 \\(\\omega_0=\\sqrt{g/L}\\)。在 \\(\\Omega_\\oplus\\ll\\omega_0\\) 下忽略水平地转分量造成的高阶竖直耦合及空气阻尼。写出水平线性运动方程与复坐标方程。\n(2) 求两圆偏振本征频率，说明其劈裂与地球自转垂直分量的关系。\n(3) 对初始近似平面振动，求振动平面相对地面的慢进动角速度与完整进动周期，分别检查赤道和北极极限。\n(4) 由运动方程直接证明实验室内摆的小振幅机械能守恒，解释科里奥利力虽改变振动方向却不做功，并讨论近似的适用时间尺度。\n",
-    "solution": "(1) 局地旋转角速度的竖直分量为 \\(\\Omega_F=\\Omega_\\oplus\\sin\\lambda\\)。旋转系科里奥利加速度 \\(-2\\boldsymbol\\Omega\\times\\boldsymbol v\\) 在水平面的分量为 \\((2\\Omega_F\\dot y,-2\\Omega_F\\dot x)\\)。因此 \\(\\ddot x+\\omega_0^2x=2\\Omega_F\\dot y,\\ \\ddot y+\\omega_0^2y=-2\\Omega_F\\dot x\\)。令 \\(z=x+iy\\)，合并得 \\(\\boxed{\\ddot z+2i\\Omega_F\\dot z+\\omega_0^2z=0}\\)。忽略离心修正是因为 \\(g\\) 已取局地有效值；科里奥利符号由右手坐标决定，不能任意调换。\n\n(2) 代入 \\(z\\propto e^{-i\\omega t}\\)，特征方程 \\(-\\omega^2+2\\Omega_F\\omega+\\omega_0^2=0\\)，根为 \\(\\omega=\\Omega_F\\pm\\sqrt{\\omega_0^2+\\Omega_F^2}\\)。相反旋向的正频率分别为 \\(\\omega_\\pm=\\sqrt{\\omega_0^2+\\Omega_F^2}\\pm\\Omega_F\\)，频率差精确为 \\(2\\Omega_F\\)。在 \\(\\Omega_F\\ll\\omega_0\\) 时，两者约为 \\(\\omega_0\\pm\\Omega_F\\)，这是一对反向圆偏振模，而不是两条互不耦合的直线振子。\n\n(3) 通解可因式分解为 \\(\\boxed{z(t)=e^{-i\\Omega_Ft}[Ae^{i\\sqrt{\\omega_0^2+\\Omega_F^2}t}+Be^{-i\\sqrt{\\omega_0^2+\\Omega_F^2}t}]}\\)。方括号内可选近似线性振动，其整体乘子使振动方向相对地面按 \\(-\\Omega_F\\) 转动，即北半球从上方看顺时针。完整 \\(2\\pi\\) 进动周期 \\(T_F=2\\pi/|\\Omega_\\oplus\\sin\\lambda|\\)。赤道 \\(\\lambda=0\\) 时不进动；北极 \\(\\lambda=\\pi/2\\) 时一恒星日进动一周。这里指方向矢量完整旋转，若只辨认无向摆平面可有 \\(\\pi\\) 周期的表观等价。\n\n(4) 定义水平能量 \\(E=m(\\dot x^2+\\dot y^2+\\omega_0^2x^2+\\omega_0^2y^2)/2\\)。求导并代入运动方程，得 \\(\\dot E=m[\\dot x(2\\Omega_F\\dot y)+\\dot y(-2\\Omega_F\\dot x)]=0\\)。科里奥利力与瞬时速度垂直，只转动速度矢量而不改变能量。模型要求小角度、摆长远小于地球半径、\\(\\Omega_\\oplus/\\omega_0\\ll1\\) 且忽略空气阻尼；长期精密进动还受椭圆摆动、支点扭矩与地球非均匀重力扰动影响。\n"
+    "question": "(1) 长圆管半径 \\(a>0\\)，稳态轴向速度 \\(u(r)=2U(1-r^2/a^2)\\)，被动示踪剂分子扩散系数 \\(D>0\\)，壁面无通量。写出轴对称对流扩散方程并推导截面平均浓度的守恒方程。\n(2) 长时 \\(t\\gg a^2/D\\) 且轴向变化尺度远大于 \\(a\\) 时设 \\(c=C(z,t)+\\chi(r)\\partial_zC+\\cdots\\)，规定 \\(\\langle\\chi\\rangle=0\\)。求径向胞元方程、边界条件及唯一零均值解。\n(3) 从截面平均的示踪剂通量推导 \\(D_{\\rm eff}\\)，再利用胞元方程分部积分证明弥散增强项非负，并独立计算系数 \\(1/48\\)。\n(4) 给出初始窄轴向脉冲在长时的质心与方差；核验 \\(U\\to0\\)、\\(a\\to0\\)、\\(D\\to0^+\\) 极限，说明最后一个极限为何不能脱离径向混合时间直接取用。\n",
+    "solution": "(1) 方程与无通量边界为\n\\[\nc_t+u(r)c_z=D\\{c_{zz}+r^{-1}(rc_r)_r\\},\\quad c_r(a,z,t)=0,\\quad c_r(0,z,t)=0.\n\\]\n定义 \\(\\langle q\\rangle=2a^{-2}\\int_0^a q(r)r\\,dr,\\ C=\\langle c\\rangle\\)。径向扩散项的截面平均由壁面通量给出零，因此 \\(C_t+\\partial_z\\langle uc\\rangle=D C_{zz}\\)；在轴向无流出边界时总示踪剂质量严格守恒。\n(2) 首阶宏观方程 \\(C_t=-U C_z+O(C_{zz})\\)，代入渐近式比较 \\(C_z\\) 得\n\\[\nD\\,r^{-1}(r\\chi')'=u-U=U(1-2r^2/a^2),\\quad \\chi'(0)=\\chi'(a)=0.\n\\]\n积分得到 \\(\\chi'=Ur(1-r^2/a^2)/(2D)\\)，再积分得 \\(\\chi=(U/D)(r^2/4-r^4/(8a^2)+C_0)\\)。用 \\(\\langle r^2\\rangle=a^2/2,\\ \\langle r^4\\rangle=a^4/3\\) 与 \\(\\langle\\chi\\rangle=0\\)，确定 \\(C_0=-a^2/12\\)；任意常数自由度由此唯一固定。\n(3) 轴向总通量为 \\(J=\\langle uc\\rangle-D C_z=UC+[\\langle(u-U)\\chi\\rangle-D]C_z+\\cdots\\)，故 \\(D_{\\rm eff}=D-\\langle(u-U)\\chi\\rangle\\)。将胞元方程乘 \\(\\chi\\) 并分部积分，边界项消失，得到\n\\[\n-\\langle(u-U)\\chi\\rangle=D\\langle(\\chi')^2\\rangle\n=\\frac{U^2}{4D}\\left\\langle r^2(1-r^2/a^2)^2\\right\\rangle\n=\\frac{U^2a^2}{48D}.\n\\]\n其中径向矩 \\(\\langle r^{2j}\\rangle=a^{2j}/(j+1)\\)，故增强项确为非负，且系数可独立复算。\n(4) 宏观长时方程 \\(C_t+UC_z=D_{\\rm eff}C_{zz}\\) 的质量为 \\(M_0\\) 的脉冲解为\n\\[\nC(z,t)\\simeq\\frac{M_0}{\\sqrt{4\\pi D_{\\rm eff}t}}\\exp[-(z-Ut)^2/(4D_{\\rm eff}t)].\n\\]\n质心 \\(\\bar z=Ut\\)，方差 \\({\\rm Var}(z)=2D_{\\rm eff}t\\)。当 \\(U\\to0\\) 或 \\(a\\to0\\) 时退回分子扩散；形式上 \\(D\\to0^+\\) 使 \\(D_{\\rm eff}\\to\\infty\\)，但混合时间 \\(a^2/D\\to\\infty\\)，先决条件 \\(t\\gg a^2/D\\) 失效，短时仍是剪切弹道展宽。\n"
   },
   {
     "id": "E007",

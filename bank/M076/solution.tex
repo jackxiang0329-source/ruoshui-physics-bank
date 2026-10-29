@@ -1,7 +1,22 @@
-(1) 局地旋转角速度的竖直分量为 \(\Omega_F=\Omega_\oplus\sin\lambda\)。旋转系科里奥利加速度 \(-2\boldsymbol\Omega\times\boldsymbol v\) 在水平面的分量为 \((2\Omega_F\dot y,-2\Omega_F\dot x)\)。因此 \(\ddot x+\omega_0^2x=2\Omega_F\dot y,\ \ddot y+\omega_0^2y=-2\Omega_F\dot x\)。令 \(z=x+iy\)，合并得 \(\boxed{\ddot z+2i\Omega_F\dot z+\omega_0^2z=0}\)。忽略离心修正是因为 \(g\) 已取局地有效值；科里奥利符号由右手坐标决定，不能任意调换。
-
-(2) 代入 \(z\propto e^{-i\omega t}\)，特征方程 \(-\omega^2+2\Omega_F\omega+\omega_0^2=0\)，根为 \(\omega=\Omega_F\pm\sqrt{\omega_0^2+\Omega_F^2}\)。相反旋向的正频率分别为 \(\omega_\pm=\sqrt{\omega_0^2+\Omega_F^2}\pm\Omega_F\)，频率差精确为 \(2\Omega_F\)。在 \(\Omega_F\ll\omega_0\) 时，两者约为 \(\omega_0\pm\Omega_F\)，这是一对反向圆偏振模，而不是两条互不耦合的直线振子。
-
-(3) 通解可因式分解为 \(\boxed{z(t)=e^{-i\Omega_Ft}[Ae^{i\sqrt{\omega_0^2+\Omega_F^2}t}+Be^{-i\sqrt{\omega_0^2+\Omega_F^2}t}]}\)。方括号内可选近似线性振动，其整体乘子使振动方向相对地面按 \(-\Omega_F\) 转动，即北半球从上方看顺时针。完整 \(2\pi\) 进动周期 \(T_F=2\pi/|\Omega_\oplus\sin\lambda|\)。赤道 \(\lambda=0\) 时不进动；北极 \(\lambda=\pi/2\) 时一恒星日进动一周。这里指方向矢量完整旋转，若只辨认无向摆平面可有 \(\pi\) 周期的表观等价。
-
-(4) 定义水平能量 \(E=m(\dot x^2+\dot y^2+\omega_0^2x^2+\omega_0^2y^2)/2\)。求导并代入运动方程，得 \(\dot E=m[\dot x(2\Omega_F\dot y)+\dot y(-2\Omega_F\dot x)]=0\)。科里奥利力与瞬时速度垂直，只转动速度矢量而不改变能量。模型要求小角度、摆长远小于地球半径、\(\Omega_\oplus/\omega_0\ll1\) 且忽略空气阻尼；长期精密进动还受椭圆摆动、支点扭矩与地球非均匀重力扰动影响。
+(1) 方程与无通量边界为
+\[
+c_t+u(r)c_z=D\{c_{zz}+r^{-1}(rc_r)_r\},\quad c_r(a,z,t)=0,\quad c_r(0,z,t)=0.
+\]
+定义 \(\langle q\rangle=2a^{-2}\int_0^a q(r)r\,dr,\ C=\langle c\rangle\)。径向扩散项的截面平均由壁面通量给出零，因此 \(C_t+\partial_z\langle uc\rangle=D C_{zz}\)；在轴向无流出边界时总示踪剂质量严格守恒。
+(2) 首阶宏观方程 \(C_t=-U C_z+O(C_{zz})\)，代入渐近式比较 \(C_z\) 得
+\[
+D\,r^{-1}(r\chi')'=u-U=U(1-2r^2/a^2),\quad \chi'(0)=\chi'(a)=0.
+\]
+积分得到 \(\chi'=Ur(1-r^2/a^2)/(2D)\)，再积分得 \(\chi=(U/D)(r^2/4-r^4/(8a^2)+C_0)\)。用 \(\langle r^2\rangle=a^2/2,\ \langle r^4\rangle=a^4/3\) 与 \(\langle\chi\rangle=0\)，确定 \(C_0=-a^2/12\)；任意常数自由度由此唯一固定。
+(3) 轴向总通量为 \(J=\langle uc\rangle-D C_z=UC+[\langle(u-U)\chi\rangle-D]C_z+\cdots\)，故 \(D_{\rm eff}=D-\langle(u-U)\chi\rangle\)。将胞元方程乘 \(\chi\) 并分部积分，边界项消失，得到
+\[
+-\langle(u-U)\chi\rangle=D\langle(\chi')^2\rangle
+=\frac{U^2}{4D}\left\langle r^2(1-r^2/a^2)^2\right\rangle
+=\frac{U^2a^2}{48D}.
+\]
+其中径向矩 \(\langle r^{2j}\rangle=a^{2j}/(j+1)\)，故增强项确为非负，且系数可独立复算。
+(4) 宏观长时方程 \(C_t+UC_z=D_{\rm eff}C_{zz}\) 的质量为 \(M_0\) 的脉冲解为
+\[
+C(z,t)\simeq\frac{M_0}{\sqrt{4\pi D_{\rm eff}t}}\exp[-(z-Ut)^2/(4D_{\rm eff}t)].
+\]
+质心 \(\bar z=Ut\)，方差 \({\rm Var}(z)=2D_{\rm eff}t\)。当 \(U\to0\) 或 \(a\to0\) 时退回分子扩散；形式上 \(D\to0^+\) 使 \(D_{\rm eff}\to\infty\)，但混合时间 \(a^2/D\to\infty\)，先决条件 \(t\gg a^2/D\) 失效，短时仍是剪切弹道展宽。

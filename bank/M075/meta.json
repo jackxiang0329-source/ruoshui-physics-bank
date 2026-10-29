@@ -1,21 +1,21 @@
 {
   "id": "M075",
   "topic": "力学",
-  "title": "双脉冲Hohmann转移的轨道能量、半椭圆飞行时间与火箭推进剂预算",
+  "title": "旋转流体Ekman底边界层的复速度螺旋、输运偏转与耗散恒等式",
   "kind": "综合推导题",
   "level": 5,
   "estimated_minutes": 115,
   "tags": [
-    "Kepler轨道转移",
-    "vis viva速度与轨道角动量",
-    "Hohmann双脉冲和飞行时间",
-    "Tsiolkovsky质量比"
+    "旋转流体Ekman螺旋",
+    "复数边界层方程",
+    "横向Ekman输运",
+    "黏性耗散与边界功"
   ],
-  "answer": "a_t=(r_1+r_2)/2,\\quad\\Delta v_1=\\sqrt{\\mu(2/r_1-1/a_t)}-\\sqrt{\\mu/r_1},\\quad t_t=\\pi\\sqrt{a_t^3/\\mu}",
+  "answer": "\\delta=\\sqrt{2\\nu/f},\\quad u+iv=U_g[1-e^{-(1+i)z/\\delta}],\\quad {\\cal D}=\\rho\\nu U_g^2/\\delta",
   "quality_status": "待独立复核",
   "tier": "advanced_composite",
   "format": "latex-fragment-v1",
-  "revision": "composite-v4.2-round13-draft",
-  "challenge_profile": "high-multistage",
+  "revision": "composite-v4.3-round13-core-replacement",
+  "challenge_profile": "high-multistage-original-core",
   "complexity_tier": "L5-C"
 }

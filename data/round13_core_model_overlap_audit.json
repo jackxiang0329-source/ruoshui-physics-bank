@@ -1,7 +1,7 @@
 {
   "round": "13",
   "scope": "pre-screen against main 352 problems",
-  "status": "historical_core_model_overlaps_found_release_blocked",
+  "status": "five_historical_core_model_overlaps_still_blocked",
   "independent_expert_review": "待独立复核",
   "items": [
     {
@@ -352,16 +352,16 @@
         "M010",
         "M035"
       ],
-      "difference": "NOT ORIGINAL: Hohmann双脉冲变轨的椭圆、速度增量和飞行时间与既有题核心相同",
-      "status": "unresolved_requires_substantive_replacement"
+      "difference": "REPLACED core: 旋转流体Ekman底边界层的复速度螺旋、输运偏转与耗散恒等式",
+      "status": "replaced_pending_qa"
     },
     {
       "id": "M076",
       "prior": [
         "M025"
       ],
-      "difference": "NOT ORIGINAL: Foucault摆的科里奥利分裂与纬度进动已存在",
-      "status": "unresolved_requires_substantive_replacement"
+      "difference": "REPLACED core: 圆管Taylor–Aris弥散的径向胞元问题、有效扩散与示踪剂守恒",
+      "status": "replaced_pending_qa"
     },
     {
       "id": "E075",
@@ -500,8 +500,9 @@
         "M035"
       ],
       "reason": "Hohmann双脉冲变轨的椭圆、速度增量和飞行时间与既有题核心相同",
-      "resolution_status": "unresolved_requires_substantive_replacement",
-      "evidence": "Compared actual question.tex in merged main and draft, not just titles."
+      "resolution_status": "resolved",
+      "evidence": "Different governing physical equations and complete new canonical four-part solution; QA script pending regeneration.",
+      "replacement_title": "旋转流体Ekman底边界层的复速度螺旋、输运偏转与耗散恒等式"
     },
     {
       "draft_id": "M076",
@@ -509,8 +510,9 @@
         "M025"
       ],
       "reason": "Foucault摆的科里奥利分裂与纬度进动已存在",
-      "resolution_status": "unresolved_requires_substantive_replacement",
-      "evidence": "Compared actual question.tex in merged main and draft, not just titles."
+      "resolution_status": "resolved",
+      "evidence": "Different governing physical equations and complete new canonical four-part solution; QA script pending regeneration.",
+      "replacement_title": "圆管Taylor–Aris弥散的径向胞元问题、有效扩散与示踪剂守恒"
     },
     {
       "draft_id": "E074",

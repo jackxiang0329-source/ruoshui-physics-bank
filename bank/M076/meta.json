@@ -1,21 +1,21 @@
 {
   "id": "M076",
   "topic": "力学",
-  "title": "Foucault摆的科里奥利双圆偏振模、平面进动与能量守恒",
+  "title": "圆管Taylor–Aris弥散的径向胞元问题、有效扩散与示踪剂守恒",
   "kind": "综合推导题",
   "level": 5,
   "estimated_minutes": 115,
   "tags": [
-    "地球旋转参考系科里奥利力",
-    "Foucault摆模态劈裂",
-    "纬度依赖的几何进动",
-    "陀螺力零功和能量"
+    "Taylor–Aris弥散",
+    "圆管Poiseuille对流扩散",
+    "径向胞元方程",
+    "高Peclet极限"
   ],
-  "answer": "\\Omega_F=\\Omega_\\oplus\\sin\\lambda,\\quad z(t)=e^{-i\\Omega_Ft}[Ae^{i\\sqrt{\\omega_0^2+\\Omega_F^2}t}+Be^{-i\\sqrt{\\omega_0^2+\\Omega_F^2}t}]",
+  "answer": "D_{\\rm eff}=D+\\frac{U^2a^2}{48D},\\quad\\chi(r)=\\frac UD\\left(\\frac{r^2}{4}-\\frac{r^4}{8a^2}-\\frac{a^2}{12}\\right)",
   "quality_status": "待独立复核",
   "tier": "advanced_composite",
   "format": "latex-fragment-v1",
-  "revision": "composite-v4.2-round13-draft",
-  "challenge_profile": "high-multistage",
+  "revision": "composite-v4.3-round13-core-replacement",
+  "challenge_profile": "high-multistage-original-core",
   "complexity_tier": "L5-C"
 }
