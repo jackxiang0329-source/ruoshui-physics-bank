@@ -45,7 +45,7 @@ U_inside=mu0*m*m/(6*s.pi*aa**3)
 U_outside=mu0*m*m/(12*s.pi*aa**3)
 record('E068',3,'conservation','direct interior uniform B energy and exterior dipole field energy sum to surface-current work',eq(U_inside+U_outside,mu0*m*m/(4*s.pi*aa**3)) and eq((mu0*m*m/(4*s.pi*aa**3)).subs(m,4*s.pi*sig*om*aa**4/3),4*s.pi*mu0*sig**2*om**2*aa**5/9))
 Rfield=mu0*Q*Q*om*om*aa/(36*s.pi)
-record('E068',4,'dimensions','fixed charge and angular rate give magnetic energy linear in sphere radius and field singular at fixed dipole moment',eq(s.diff(Rfield,aa)*aa,Rfield) and eq(s.limit(mu0*m*m/(4*s.pi*aa**3),aa,0),s.oo))
+record('E068',4,'dimensions','fixed charge and angular rate give magnetic energy linear in sphere radius and field singular at fixed dipole moment',eq(s.diff(Rfield,aa)*aa,Rfield) and s.limit(mu0*m*m/(4*s.pi*aa**3),aa,0,dir='+') == s.oo)
 
 # T064: Cattaneo hyperbolic thermal wave.
 tau,D,kw,cv,kap,Tx,qx,Tt,qt,qs=s.symbols('tau D kw cv kap Tx qx Tt qt qs',positive=True,real=True)
