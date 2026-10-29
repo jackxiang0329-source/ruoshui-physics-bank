@@ -5,8 +5,6 @@ import json,math
 from pathlib import Path
 import sympy as s
 import mpmath as mp
-from scipy.linalg import expm
-import numpy as np
 ROOT=Path(__file__).resolve().parents[1]; TESTS=[]
 def zero(x):
     y=s.simplify(x)
@@ -75,9 +73,9 @@ J,U=s.symbols("J U",positive=True);Z=s.sqrt(2)
 H=s.Matrix([[U,-Z*J,0],[-Z*J,0,-Z*J],[0,-Z*J,U]])
 lam=s.symbols("lam");Delta=s.sqrt(U**2+16*J**2)
 ck("Q078",1,"spectral","antisymmetric eigenstate and full exact Bose-Hubbard characteristic cubic",zero(H*s.Matrix([1,0,-1])-U*s.Matrix([1,0,-1])) and zero(H.charpoly(lam).as_expr()-(lam-U)*(lam**2-U*lam-4*J**2)))
-Y=np.array(H.subs({J:1,U:3}),dtype=complex);wave=expm(-1j*.7*Y).dot(np.array([0,1,0]))
+Y=mp.matrix([[3,-mp.sqrt(2),0],[-mp.sqrt(2),0,-mp.sqrt(2)],[0,-mp.sqrt(2),3]]);wave=mp.expm(-1j*mp.mpf('0.7')*Y)*mp.matrix([0,1,0])
 observed=abs(wave[0])**2+abs(wave[2])**2
-ck("Q078",2,"independent_numerical","3 by 3 matrix exponential agrees with nonlinear double occupancy probability",abs(observed-16/25*math.sin(5*.7/2)**2)<1e-12 and abs(sum(abs(wave)**2)-1)<1e-12)
+ck("Q078",2,"independent_numerical","3 by 3 matrix exponential agrees with nonlinear double occupancy probability",abs(observed-16/25*math.sin(5*.7/2)**2)<1e-12 and abs(sum(abs(wave[i])**2 for i in range(3))-1)<1e-12)
 Eminus=(U-Delta)/2
 ck("Q078",3,"perturbation","exact low eigenvalue matches two separate virtual intermediate paths",zero(s.series(Eminus,J,0,4).removeO()+4*J**2/U))
 a2=(1+U/Delta)/2;b2=(1-U/Delta)/2
