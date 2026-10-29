@@ -1,0 +1,16 @@
+name: Round 18 forty-problem source and model checks
+on:
+  push:
+    branches: [physics-round18-40-draft]
+  workflow_dispatch:
+jobs:
+  source-and-physics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate forty four-part source triples and meta
+        run: node scripts/check_round18_40_draft.js > /tmp/round18-structure.json
+      - name: Execute all forty physically distinct model crosschecks
+        run: node scripts/check_round18_40_models.js > /tmp/round18-model-results.json
+      - name: Keep release gate blocked
+        run: echo '40 models only with scoped tests; all 160 independent per-part checks, full historic core-model screening, generated mirrors, both XeLaTeX PDFs, 50-item policy, expert review are still missing.'
