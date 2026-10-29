@@ -1,7 +1,0 @@
-(1) 法拉第定律给感应回路总电动势 \(\mathcal E=-d(\Phi_{\rm ext}+LI)/dt\)。对串联电阻、电容分别有压降 \(RI\)、\(q/C\)，因此 \(L\ddot q+R\dot q+q/C=-\dot\Phi_{\rm ext}\)。代入外磁通得右端 \(+\Omega\Phi_0\sin\Omega t\)。负号来自楞次定律，确保在外通量增加时感应环电流的磁通反向，而不是由任意的交流相位约定决定。
-
-(2) 取相位惯例 \(q=\Re[\tilde q e^{i\Omega t}],\,\Phi_{\rm ext}=\Re[\Phi_0e^{i\Omega t}]\)，则 \(\tilde I=i\Omega\tilde q\)，串联阻抗 \(Z(\Omega)=R+i(\Omega L-1/\Omega C)\)，所以 \(Z\tilde I=-i\Omega\Phi_0\)，即 \(\tilde I=-i\Omega\Phi_0/Z\)。电抗为零的串联谐振频率是 \(\Omega_0=1/\sqrt{LC}\)，此时 \(|\tilde I|=\Omega_0\Phi_0/R\)，电流相对所定义的磁通相位滞后四分之一个周期，若相对电动势比较则与其同相。
-
-(3) 电阻平均焦耳热 \(\overline P_R=R\langle I^2\rangle=R|\tilde I|^2/2=R\Omega^2\Phi_0^2/[2(R^2+(\Omega L-1/\Omega C)^2)]\)。将电荷方程乘 \(I=\dot q\)，得到 \(d[LI^2/2+q^2/(2C)]/dt+RI^2=-I\dot\Phi_{\rm ext}\)。对稳定周期积分左侧储能总变化为零，故 \(\overline P_R=\langle-I\dot\Phi_{\rm ext}\rangle\)，能量来自改变磁通的外部设备，而不是由感应电场无代价地产生。
-
-(4) 自由瞬态满足 \(L\ddot q+R\dot q+q/C=0\)，特征指数 \(s_\pm=[-R\pm\sqrt{R^2-4L/C}]/(2L)\)。当 \(R^2<4L/C\) 为振荡衰减，等号为临界阻尼，大于则为过阻尼；\(R>0\) 时特征值实部均负。在 \(R\to0\) 且 \(\Omega\ne\Omega_0\) 时无损稳态可由公式求得，外驱周期平均能量交换为零；若同时在无阻尼精确共振，幅值公式发散反映线性解随时间增长，不能把 \(R=0\) 和长时间稳态两个极限任意交换。

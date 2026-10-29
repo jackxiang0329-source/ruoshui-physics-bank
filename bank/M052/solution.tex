@@ -1,7 +1,0 @@
-(1) 无滑动约束令角加速度 \(\ddot\theta=\ddot y/r\)（按放绳方向为正）。平动牛顿方程 \(m\ddot y=mg-ky-c\dot y+F(t)-T\)，转动方程 \(I\ddot\theta=Tr\)。代入 \(T=I\ddot y/r^2\)，得 \((m+I/r^2)\ddot y+c\dot y+ky=mg+F(t)\)。故有效惯量 \(m_e=m+I/r^2\)，静平衡 \(y_e=mg/k\)。注意绳力转化为转动惯量，不能将绳张力直接当作额外恒定重量。
-
-(2) 写 \(z=y-y_e\)，无驱动时满足 \(m_e\ddot z+c\dot z+kz=0\)。定义 \(\gamma=c/(2m_e)\)、\(\omega_0^2=k/m_e\)。当 \(\gamma<\omega_0\) 时，\(z=e^{-\gamma t}[A\cos(\omega_dt)+B\sin(\omega_dt)]\)，\(\omega_d=\sqrt{\omega_0^2-\gamma^2}\)；当 \(\gamma=\omega_0\) 为 \((A+Bt)e^{-\gamma t}\)，大于时为两种负实指数之和。若 \(z(0)=z_0,\dot z(0)=0\)，欠阻尼给 \(A=z_0,\ B=\gamma z_0/\omega_d\)。
-
-(3) 对稳态 \(z=\Re[\tilde z e^{i\Omega t}]\)，复振幅为 \(\tilde z=F_0/[k-m_e\Omega^2+ic\Omega]\)，故幅值 \(A=F_0/\sqrt{(k-m_e\Omega^2)^2+c^2\Omega^2}\)，位移相对驱动力的滞后角 \(\delta=\arg(k-m_e\Omega^2+ic\Omega)\)。平均耗散功率是 \(\overline P_d=c\langle\dot z^2\rangle=c\Omega^2A^2/2\)。受迫稳态平均输入功率等于此耗散，不会有无界机械能积累。
-
-(4) 动能 \(K=\frac12m\dot y^2+\frac12I(\dot y/r)^2=\frac12m_e\dot y^2\)，保守势能 \(V=\frac12ky^2-mgy\)。运动方程乘 \(\dot y\) 后得 \(d(K+V)/dt=F(t)\dot y-c\dot y^2\)，给出了含重力的严格功率收支。令 \(k=c=F_0=0\)，落体加速度 \(\ddot y=mg/(m+I/r^2)<g\)，绳张力 \(T=I\,mg/[r^2(m+I/r^2)]>0\)，也等于 \(mg-m\ddot y\)，与转动及平动两方程相符。

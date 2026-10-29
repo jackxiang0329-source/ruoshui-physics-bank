@@ -1,0 +1,25 @@
+(1) 向右传播光每次吸收给予 \(+\hbar k\) 动量，反向光给予 \(-\hbar k\)，故
+\[
+F(v)=\hbar k[R(\delta-kv)-R(\delta+kv)].
+\]
+在 \(v=0\) 两束完全平衡，\(F(0)=0\)。
+(2) 令 \(D_0=1+s+4\delta^2/\Gamma^2\)。求导 \(R'(\delta)=-4s\delta/(\Gamma D_0^2)\)，于是
+\[
+F(v)=-2\hbar k^2R'(\delta)v=-\alpha v,\qquad
+\alpha=-\frac{8\hbar k^2s\delta}{\Gamma D_0^2}>0
+\]
+当且仅当 \(\delta<0\)。要求 \(|kv|\) 小于谱线变化尺度，且近似的两束独立饱和模型成立。
+(3) 两束总事件率 \(2R\)，每次动量方差 \(2(\hbar k)^2\)，所以 \(d\langle(\Delta p)^2\rangle/dt=4R(\hbar k)^2\)，
+\[
+D_p=2R(\delta)(\hbar k)^2=\frac{\Gamma s(\hbar k)^2}{D_0}.
+\]
+Ornstein--Uhlenbeck动量方程给稳态 \(\langle p^2\rangle=D_pm/\alpha\)，即 \(k_BT=D_p/\alpha\)，因此
+\[
+T=\frac{\hbar\Gamma^2D_0}{8k_B|\delta|}.
+\]
+此系数严格依赖题设的一维反冲方差约定。
+(4) \(s\ll1\) 时 \(T=\frac{\hbar}{8k_B}(\Gamma^2/|\delta|+4|\delta|)\)。对 \(x=|\delta|>0\) 求导 \(-\Gamma^2/x^2+4=0\)，最优 \(x=\Gamma/2\)，得
+\[
+T_D=\frac{\hbar\Gamma}{2k_B}.
+\]
+当 \(|\delta|\to0\) 摩擦趋零、当 \(|\delta|\to\infty\) 散射摩擦比扩散衰减更快，温度均上升。真实自发辐射角分布改变一维扩散系数；多能级偏振梯度冷却可低于此Doppler值，接近单光子反冲尺度时经典Fokker–Planck近似失效。

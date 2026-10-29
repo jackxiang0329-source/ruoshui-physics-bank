@@ -1,7 +1,0 @@
-(1) 由于 \(|u\rangle=N^{-1/2}|m\rangle+\sqrt{(N-1)/N}|r\rangle\)，所有与这两态正交的向量被 \(H\) 作用为本征值1。二维子空间的矩阵为 \(\boxed{H_2=I_2-\begin{pmatrix}s+(1-s)/N&(1-s)\sqrt{N-1}/N\\(1-s)\sqrt{N-1}/N&(1-s)(N-1)/N\end{pmatrix}}\)。写成 \(I-B\) 可直接利用 \(B\) 的迹为1，避免误把 \(|u\rangle\) 与 \(|m\rangle\) 当作正交基。
-
-(2) 二维 \(B\) 的行列式为 \(s(1-s)(N-1)/N\)，特征值 \(\lambda_\pm=[1\pm\sqrt{1-4s(1-s)(N-1)/N}]/2\)。因此 \(H_2\) 的两本征值为 \(E_\pm=[1\pm g(s)]/2\)，\(\boxed{g(s)=\sqrt{1-4(1-1/N)s(1-s)}}\)。最小点 \(s=1/2\) 处 \(g_{\min}=1/\sqrt N\)，两端 \(g=1\)。在 \(s=0\) 时 \(H=I-|u\rangle\langle u|\) 的唯一零能基态为 \(|u\rangle\)；在 \(s=1\) 时为 \(|m\rangle\)，绝热跟随能把初态转换成目标态。
-
-(3) 给定 \(ds/dt=\epsilon g(s)^2\)，运行时间 \(T=\epsilon^{-1}\int_0^1 ds/g(s)^2\)。用 \(g(s)^2=N^{-1}[1+4(N-1)(s-1/2)^2]\) 并换元 \(y=2\sqrt{N-1}(s-1/2)\)，得到 \(\boxed{T=\frac{N}{\epsilon\sqrt{N-1}}\arctan\sqrt{N-1}}\)。当 \(N\gg1\)，\(\arctan\sqrt{N-1}\to\pi/2\)，故 \(T\simeq\pi\sqrt N/(2\epsilon)\)，是平方根量级而不是线性扫描的 \(N\) 量级。该估计只说明理想绝热哈密顿量插值的运行时间，不包括制备、测量及物理控制开销。
-
-(4) 二维实对称矩阵的本征矢旋转角满足 \(|\langle1|\partial_sH|0\rangle|=|\boldsymbol h\times\partial_s\boldsymbol h|/g\)，直接代入矩阵元素得 \(\boxed{|\langle1|\partial_sH|0\rangle|=\sqrt{N-1}/[N\,g(s)]\le1}\)。局部调度的绝热比率 \(|\dot s\langle1|\partial_sH|0\rangle|/g^2\le\epsilon\)，故满足保守的逐点条件。若采用均匀 \(\dot s=1/T\)，在最小间隙处该比率约为 \(N/T\)，需 \(T\gg N\) 才能按同一充分判据控制误差。将公式连续延拓至 \(N\to1\)，有 \(T\to1/\epsilon\)，但 \(N=1\) 实际无需搜索，不能把形式积分当作最优计算复杂度。

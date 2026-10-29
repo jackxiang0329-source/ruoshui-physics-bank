@@ -1,7 +1,0 @@
-(1) 设 \(w(x,t)=X(x)e^{i\omega t}\)，得 \(EI X''''=\mu\omega^2 X\)。定义 \(k^4=\mu\omega^2/(EI)\)，通解为 \(X=A\cosh kx+B\sinh kx+C\cos kx+D\sin kx\)。固支要求 \(A+C=0,\ B+D=0\)，故可写 \(X=A(\cosh kx-\cos kx)+B(\sinh kx-\sin kx)\)。直接从二阶弦方程套用正弦本征模会漏掉梁的弯曲边界条件。
-
-(2) 自由端弯矩 \(EI X''(L)=0\)、剪力 \(EI X'''(L)=0\)。将固支后的通解代入，得到两行齐次系统：\(A(\cosh z+\cos z)+B(\sinh z+\sin z)=0\) 与 \(A(\sinh z-\sin z)+B(\cosh z+\cos z)=0\)，其中 \(z=kL\)。行列式化简为 \(2[1+\cosh z\cos z]\)，非零模要求 \(\cosh z\cos z=-1\)。该式为悬臂梁的精确频率条件。
-
-(3) 记正根为 \(z_n\)，则 \(k_n=z_n/L\)、\(\omega_n=k_n^2\sqrt{EI/\mu}=z_n^2\sqrt{EI/\mu}/L^2\)。最小正根约 \(z_1=1.875104\)，所以首频 \(f_1=(z_1^2/2\pi)\sqrt{EI/\mu}/L^2\)。该 \(L^{-2}\) 缩放和张紧弦的 \(L^{-1}\) 完全不同；改变长度时梁厚度、材料和线密度按模型保持不变。
-
-(4) 对两个本征函数 \(X_m,X_n\) 分别满足 \(EI X_j''''=\mu\omega_j^2 X_j\)，将 \(X_m\) 乘 \(n\) 方程、\(X_n\) 乘 \(m\) 方程相减并积分；分部积分两次后的边界项在固端及自由端均消失，得 \((\omega_n^2-\omega_m^2)\int_0^L\mu X_mX_n dx=0\)。不同本征值故质量正交。运动能量 \(E=\int_0^L[\mu w_t^2/2+EI w_{xx}^2/2]dx\ge0\)，其时间导数为边界功率零。

@@ -1,7 +1,0 @@
-(1) 圆对称 Fraunhofer 远场振幅正比于 \(\int_{\epsilon a}^{a}\int_0^{2\pi}e^{-ik_\perp r\cos\phi}r\,d\phi\,dr\)。角积分给 \(2\pi J_0(k_\perp r)\)，并用 \(\int rJ_0(kr)dr=rJ_1(kr)/k\)，得到原始振幅正比 \(2\pi a^2[J_1(q)-\epsilon J_1(\epsilon q)]/q\)。以轴上振幅 \(\pi a^2(1-\epsilon^2)\) 归一，得 \(\mathcal A(q)=2[J_1(q)-\epsilon J_1(\epsilon q)]/[q(1-\epsilon^2)]\)。
-
-(2) 归一化远场强度 \(I(\theta)/I(0)=|\mathcal A(q)|^2\)。因为 \(J_1(z)\sim z/2\) 当 \(z\to0\)，有 \(\mathcal A(0)=1\)。入射振幅固定时，透光面积相对于完整圆孔为 \(1-\epsilon^2\)，总透射光功率比例也是 \(1-\epsilon^2\)，但轴上远场强度因振幅按面积相干叠加，比例为 \((1-\epsilon^2)^2\)。这两项不能混为同一个透过率。
-
-(3) 当 \(\epsilon\to0^+\)，被遮挡孔半径趋零，\(\epsilon J_1(\epsilon q)\to0\)、\(1-\epsilon^2\to1\)，因此 \(\mathcal A(q)\to 2J_1(q)/q\)，即经典无中心遮挡圆孔的 Airy 衍射振幅。其第一暗环由 \(J_1(q)=0\) 给出，首个正根约 \(q=3.8317\)，对应通常的圆孔角分辨尺度。
-
-(4) 令 \(\epsilon=1-\delta,\delta\downarrow0\)，利用 \(J_1(q)-\epsilon J_1(\epsilon q)=\delta[J_1(q)+qJ_1'(q)]+O(\delta^2)=\delta qJ_0(q)+O(\delta^2)\)，又 \(1-\epsilon^2=2\delta+O(\delta^2)\)，故 \(\mathcal A(q)\to J_0(q)\)。极薄环的第一暗环由 \(J_0(q)=0\)（首根约2.4048）决定，和完整孔不同；但薄环透射总功率趋零，所以归一化分辨行为并不代表相同光子通量下更高信噪比。

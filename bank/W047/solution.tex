@@ -1,7 +1,0 @@
-(1) 因势流不可压，\(\nabla^2\phi_{t,b}=0\)。为了远离界面速度扰动衰减，取 \(\phi_t=A_t e^{-kz}e^{i(kx-\omega t)}\)（\(z>0\)）、\(\phi_b=A_b e^{kz}e^{i(kx-\omega t)}\)（\(z<0\)）。运动学边界 \(\partial_t\eta=\partial_z\phi_j|_0\) 给 \(-i\omega\eta_0=-kA_t=kA_b\)，故 \(A_t=i\omega\eta_0/k\)、\(A_b=-i\omega\eta_0/k\)。
-
-(2) 线性 Bernoulli 得 \(p_j'=-\rho_j(\partial_t\phi_j+g\eta)\)。界面小曲率 Laplace 压力跃变对所选向上法向可写 \(p_b'-p_t'=-\sigma\eta_{xx}\)。代入两边速度势，得 \(\omega^2[(\rho_t+\rho_b)/k]=(\rho_b-\rho_t)g+\sigma k^2\)，即 \(\omega^2=[(\rho_b-\rho_t)gk+\sigma k^3]/(\rho_b+\rho_t)\)。密度差和表面张力的维度在分子中分别为 \({\rm kg\,m^{-3}\,m\,s^{-2}}\) 经乘 \(k\) 与 \({\rm N\,m^{-1}}k^3\) 形成同一量纲。
-
-(3) 对稳定层结 \(\Delta\rho=\rho_b-\rho_t>0\)，\(\omega=\sqrt{(\Delta\rho gk+\sigma k^3)/(\rho_b+\rho_t)}\)。相速度 \(c_p=\omega/k\)，群速度 \(c_g=d\omega/dk=(\Delta\rho g+3\sigma k^2)/[2(\rho_b+\rho_t)\omega]\)。长波重力主导时 \(\omega\propto k^{1/2}\)，故 \(c_g=c_p/2\)；短波毛细主导时 \(\omega\propto k^{3/2}\)，故 \(c_g=3c_p/2\)。无限深假设需 \(kh_j\gg1\)，若有限深度必须使用双曲正切修正。
-
-(4) 当 \(\rho_t>\rho_b\)，记 \(\Delta=\rho_t-\rho_b>0\)，有 \(\omega^2=[-\Delta g k+\sigma k^3]/(\rho_t+\rho_b)\)。对 \(0<k<k_c=\sqrt{\Delta g/\sigma}\) 得 \(\omega=i\Gamma\)，\(\Gamma^2=(\Delta gk-\sigma k^3)/(\rho_t+\rho_b)\)。求导令 \(d\Gamma^2/dk=0\) 得 \(k_*=\sqrt{\Delta g/(3\sigma)}=k_c/\sqrt3\)，且 \(\Gamma_{\max}^2=2\Delta gk_*/[3(\rho_t+\rho_b)]\)。因此表面张力稳定足够短波，却无法在无限大系统中完全抑制长波 Rayleigh--Taylor 不稳定性。

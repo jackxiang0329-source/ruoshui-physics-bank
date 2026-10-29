@@ -1,0 +1,24 @@
+(1) 作用量 \(\int(T-V)dt\) 的变分中，\(u_t\) 项给 \(-\rho A u_{tt}\)，\(u_{xt}\) 项分部积分给 \(+\rho I u_{xxtt}\)，弯曲项给 \(-EIu_{xxxx}\)。Euler–Lagrange方程为
+\[
+\rho A u_{tt}-\rho I u_{xxtt}+EIu_{xxxx}=0.
+\]
+转动惯量项的负号保证其在频域增加有效惯性。
+(2) 平面波代入得
+\[
+\omega(k)=\sqrt{\frac{EI}{\rho A}}\frac{k^2}{\sqrt{1+(I/A)k^2}},\quad
+c_p=\omega/k,\quad
+c_g=\sqrt{\frac{EI}{\rho A}}\frac{k[2+(I/A)k^2]}{[1+(I/A)k^2]^{3/2}}.
+\]
+\(k\sqrt{I/A}\ll1\) 时 \(\omega\sim\sqrt{EI/(\rho A)}k^2\)、\(c_g\sim2c_p\)；\(k\sqrt{I/A}\gg1\) 时 \(c_p,c_g\to\sqrt{E/\rho}\)。
+(3) 简支模态 \(u_n=\sin(k_nx)e^{-i\omega_nt}\)，\(k_n=n\pi/L\)，满足 \(u=u_{xx}=0\)。故
+\[
+\omega_n^2=\frac{EI k_n^4}{\rho A+\rho I k_n^2}
+=\frac{\omega_{n,\rm EB}^2}{1+(I/A)k_n^2}<\omega_{n,\rm EB}^2,\quad n\ge1.
+\]
+旋转惯性降低每个有限波数模态的频率。
+(4) 乘场方程以 \(u_t\) 并积分，分部积分得
+\[
+\frac{d}{dt}\frac12\int_0^L[\rho A u_t^2+\rho Iu_{xt}^2+EIu_{xx}^2]dx
+=-[EIu_{xxx}u_t-EIu_{xx}u_{xt}-\rho Iu_{xtt}u_t]_{0}^{L}.
+\]
+简支边界 \(u_t=u_{xx}=0\) 使右端为零，能量正定。对 \(n\ge1\)，\(EI k_n^4>0\) 且分母正，故频率实正。极短波下截面剪切变形显著，应改用Timoshenko梁而非无限外推Rayleigh模型。

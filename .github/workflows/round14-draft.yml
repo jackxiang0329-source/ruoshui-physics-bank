@@ -20,8 +20,10 @@ jobs:
           python-version: '3.11'
       - name: Install symbolic dependencies
         run: python -m pip install -r requirements.txt
-      - name: Execute 48 nontrivial draft subpart checks
-        run: python scripts/check_round14_draft.py
+      - name: Execute 72 nontrivial draft subpart checks
+        run: |
+          python scripts/check_round14_draft.py
+          python scripts/check_round14_extra6.py
       - name: Synchronize mirror and both TeX masters from bank canonical sources
         run: |
           python - <<'PY'
@@ -33,7 +35,7 @@ jobs:
           assert isinstance(data,list)
           by_id={p['id']:p for p in data}
           assert len(by_id)==len(data)
-          ids=['M077','M078','E077','E078','T072','T073','W072','W073','O074','O075','Q074','Q075']
+          ids=['M077','M078','M079','E077','E078','E079','T072','T073','T074','W072','W073','W074','O074','O075','O076','Q074','Q075','Q076']
           for uid in ids:
               folder=root/'bank'/uid
               meta=json.loads((folder/'meta.json').read_text(encoding='utf8'))
@@ -43,7 +45,7 @@ jobs:
                   assert by_id[uid]==meta, f'draft mirror conflict: {uid}'
               else:
                   data.append(meta)
-          assert len(data)==414
+          assert len(data)==420
           path.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
           PY
           python scripts/build.py
@@ -69,8 +71,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/problems.json data/index.csv tex/questions.tex tex/solutions.tex data/round14_draft_validation_report.json
+          git add data/problems.json data/index.csv tex/questions.tex tex/solutions.tex data/round14_draft_validation_report.json data/round14_extra6_validation_report.json
           if ! git diff --cached --quiet; then
-            git commit -m "draft(round14): sync canonical mirror and two TeX books; record 48 executed checks"
+            git commit -m "draft(round14): sync canonical mirror and two TeX books; record 72 executed checks"
             git push origin HEAD:physics-round14-50-work
           fi

@@ -1,7 +1,0 @@
-(1) 无阻尼空间本征问题 \(X''+k_n^2X=0\) 配固定端条件给 \(X_n=\sin(n\pi x/L)\)、\(\omega_n=(n\pi/L)\sqrt{T/\rho}\)。驱动力的空间形状正比 \(X_1\)，正交性 \(\int_0^L X_1X_n dx=(L/2)\delta_{1n}\) 保证其他模态稳态驱动系数为零。可写 \(y(x,t)=q(t)\sin(\pi x/L)\)，无需额外混入其余模态。
-
-(2) 代入偏微分方程，基模广义坐标满足 \(\ddot q+2\beta\dot q+\omega_1^2q=(F/\rho)\cos\omega t\)。取 \(q(t)=A\cos(\omega t-\delta)\)，则 \(A=(F/\rho)/\sqrt{(\omega_1^2-\omega^2)^2+4\beta^2\omega^2}\)，\(\delta=\operatorname{atan2}(2\beta\omega,\omega_1^2-\omega^2)\)。相位必须用双参数反正切确定象限，不能仅用简单 \(\arctan\) 丢失过共振后相位翻转。
-
-(3) 单位长度阻尼力为 \(-2\rho\beta y_t\)，其平均耗散功率 \(\bar P_{\rm loss}=\int_0^L2\rho\beta\langle y_t^2\rangle dx=\rho\beta L\omega^2A^2/2\)。外力瞬时输入功率 \(P_{\rm in}=\int_0^L F\sin(\pi x/L)\cos\omega t\,y_t\,dx\)，时间平均得 \(\bar P_{\rm in}=FL\omega A\sin\delta/4\)。由于 \(\sin\delta=2\beta\omega/\sqrt{(\omega_1^2-\omega^2)^2+4\beta^2\omega^2}\)，两者严格相等。
-
-(4) 位移幅值平方分母 \(D=(\omega_1^2-\omega^2)^2+4\beta^2\omega^2\) 对 \(\omega\) 极小时，可得峰频 \(\omega_{\rm disp}=\sqrt{\omega_1^2-2\beta^2}\)，仅在 \(\beta<\omega_1/\sqrt2\) 才有非零频率峰。平均吸收功率正比 \(\omega^2/D\)，其导数在 \(\omega=\omega_1\) 为零并且为正频率全局最大。因此位移峰与功率峰不完全一致，弱阻尼时才近似合并。
