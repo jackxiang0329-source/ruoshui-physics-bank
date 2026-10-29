@@ -1,0 +1,74 @@
+(1) 由于速度只沿 \(x\) 且不依赖 \(x\)，不可压连续性恒成立，\((\boldsymbol u\cdot\nabla)\boldsymbol u=0\)；\(y\) 方向压力平衡后，沿 \(x\) 方向的Navier--Stokes方程精确约化为
+\[
+u_t=\nu u_{yy}+F,\qquad u(\pm h,t)=0,\qquad u(y,0)=0.
+\]
+在零时间导数下积分两次并利用无滑移条件，得到
+\(u_\infty(y)=F(h^2-y^2)/(2\nu)\)。对于偶函数的Dirichlet本征族
+\(\phi_n(y)=\cos(k_ny)\)、\(k_n=(n+\tfrac12)\pi/h\)，有
+\(\phi_n''=-k_n^2\phi_n\)，且
+\(\int_{-h}^{h}\phi_n\phi_m\,dy=h\delta_{mn}\)。令 \(w=u_\infty-u\)，则 \(w_t=\nu w_{yy}\)、\(w(\pm h,t)=0\)、\(w(y,0)=u_\infty(y)\)。逐模投影：
+\[
+A_n=\frac1h\int_{-h}^{h}\frac{F(h^2-y^2)}{2\nu}\cos(k_ny)\,dy
+=\frac{2F(-1)^n}{\nu h k_n^3}.
+\]
+因此精确启动解为
+\[
+\boxed{u(y,t)=\frac{F(h^2-y^2)}{2\nu}
+-\frac{2F}{\nu h}\sum_{n=0}^\infty
+\frac{(-1)^n}{k_n^3}\cos(k_ny)e^{-\nu k_n^2t}}.
+\]
+所有 \(t>0\) 的空间与时间导数在内域可逐项计算；\(t\downarrow0\) 按初值的 \(L^2\) 及内点意义收敛，两个壁端也与零边值兼容。奇模系数为零，反映关于 \(y=0\) 的对称性，而不是遗漏物理速度分支。
+
+(2) 对每一余弦模积分
+\(\int_{-h}^h\cos(k_ny)\,dy=2(-1)^n/k_n\)，得到
+\[
+\boxed{Q(t)=\frac{2Fh^3}{3\nu}
+-\frac{4F}{\nu h}\sum_{n=0}^\infty
+\frac{e^{-\nu k_n^2t}}{k_n^4}}.
+\]
+利用 Hurwitz zeta 恒等式
+\(\sum_{n\ge0}k_n^{-4}=h^4\pi^{-4}\zeta(4,\tfrac12)=h^4/6\)，故 \(Q(0)=0\)。每一余项均正且随时间严格衰减，因而 \(Q'(t)>0\)、\(0<Q(t)<Q_\infty=2Fh^3/(3\nu)\)。主模控制长期误差：
+\[
+Q_\infty-Q(t)=\frac{4F}{\nu h k_0^4}
+e^{-\nu k_0^2t}\left[1+O(e^{-\nu(k_1^2-k_0^2)t})\right],
+\quad k_0=\frac{\pi}{2h}.
+\]
+于是最慢衰减时间
+\(\boxed{\tau_0=4h^2/(\pi^2\nu)}\)。模态法给出比简单代入稳态更精确的启动滞后与流量响应，不应把压力施加的瞬时刻错误地视为已达到稳态。
+
+(3) 对第 (1) 问级数求 \(y\) 导数，在上壁有
+\[
+u_y(h,t)=-\frac{Fh}{\nu}
++\frac{2F}{\nu h}\sum_{n=0}^\infty
+\frac{e^{-\nu k_n^2t}}{k_n^2},
+\qquad u_y(-h,t)=-u_y(h,t).
+\]
+利用 \(\sum k_n^{-2}=h^2/2\)，得到 \(u_y(\pm h,0^+)=0\)。上壁受流体的切向牵引大小为 \(-\mu u_y(h,t)\)，下壁符号反转；长期极限为 \(\rho Fh\)。将方程乘 \(\rho u\) 并在通道积分，分部积分时 \(u(\pm h,t)=0\)，故精确得到
+\[
+\boxed{\frac{d}{dt}\frac{\rho}{2}\int_{-h}^{h}u^2dy
+=\rho FQ(t)-\mu\int_{-h}^{h}u_y^2dy}.
+\]
+这是输入体力功率、动能积累和真正黏性热耗散的逐时守恒式，不能把黏性压力损失误算成动能源。稳态直接积分 \(u_\infty'=-Fy/\nu\) 得
+\[
+\mu\int_{-h}^h(u_\infty')^2dy
+=\rho\nu\frac{F^2}{\nu^2}\frac{2h^3}{3}
+=\rho FQ_\infty;
+\]
+与稳态动能不再变化相符。初时无剪应力亦说明平板附近的黏性边界层需要一定扩散时间建立。
+
+(4) 写 \(u=u_\infty+\operatorname{Re}[\widehat u(y)e^{i\Omega t}]\)，令 \(q=\sqrt{i\Omega/\nu}\) 取实部为正的分支，即 \(q=(1+i)\sqrt{\Omega/(2\nu)}\)。复振幅满足
+\(\nu\widehat u''-i\Omega\widehat u=-F_1\)、\(\widehat u(\pm h)=0\)，因而
+\[
+\boxed{\widehat u(y)=\frac{F_1}{i\Omega}
+\left[1-\frac{\cosh(qy)}{\cosh(qh)}\right]},\quad
+\boxed{\widehat Q=\frac{2F_1}{i\Omega}
+\left[h-\frac{\tanh(qh)}q\right]}.
+\]
+低频时 \(\cosh(qy)/\cosh(qh)=1+q^2(y^2-h^2)/2+O(q^4)\)，由此
+\(\widehat u\to F_1(h^2-y^2)/(2\nu)\) 与
+\(\widehat Q\to 2F_1h^3/(3\nu)\)，恢复准静态Poiseuille关系。高频 \(|qh|\gg1\) 时，内域 \(\widehat u\sim F_1/(i\Omega)\)，流量 \(\widehat Q\sim 2hF_1/(i\Omega)\)，但在每壁附近必须以复指数衰减恢复无滑移，边界层厚度为 \(\delta=\sqrt{2\nu/\Omega}\)。乘振幅方程以 \(\widehat u^*\) 并取积分的实部，得
+\[
+\boxed{\frac{\rho}{2}\operatorname{Re}(F_1\widehat Q^*)
+=\frac{\mu}{2}\int_{-h}^{h}|\widehat u_y|^2dy};
+\]
+虚部只反映储能与惯性相位，不能记为不可逆耗散。该恒等式独立核验频域导纳的物理符号与极限。

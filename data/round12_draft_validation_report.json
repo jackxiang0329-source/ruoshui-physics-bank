@@ -1,7 +1,7 @@
 {
   "status": "draft-only",
-  "new_problem_count": 24,
-  "passed_count": 96,
+  "new_problem_count": 27,
+  "passed_count": 108,
   "tests": [
     {
       "id": "M059",
@@ -674,6 +674,90 @@
       "method": "physical_case",
       "name": "cubic-spectrum stationary-phase fold follows a parabola although total transverse momentum remains zero",
       "passed": true
+    },
+    {
+      "id": "M063",
+      "part": 1,
+      "method": "symbolic",
+      "name": "viscous channel profile solves full reduced Navier Stokes and exactly matches no slip boundaries",
+      "passed": true
+    },
+    {
+      "id": "M063",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "orthogonal cosine projection and exact zeta sums reproduce zero initial flow and longest relaxation time",
+      "passed": true
+    },
+    {
+      "id": "M063",
+      "part": 3,
+      "method": "conservation",
+      "name": "steady viscous dissipation exactly equals work done by constant body forcing",
+      "passed": true
+    },
+    {
+      "id": "M063",
+      "part": 4,
+      "method": "limit",
+      "name": "complex oscillatory Poiseuille profile solves driven Stokes equation and has correct quasi static flux",
+      "passed": true
+    },
+    {
+      "id": "T060",
+      "part": 1,
+      "method": "independent_derivation",
+      "name": "Kelvin saturation equation follows equality of vapor chemical potential and Laplace-shifted incompressible liquid",
+      "passed": true
+    },
+    {
+      "id": "T060",
+      "part": 2,
+      "method": "symbolic",
+      "name": "nucleation critical radius has negative free energy curvature and exact capillarity barrier",
+      "passed": true
+    },
+    {
+      "id": "T060",
+      "part": 3,
+      "method": "limit",
+      "name": "droplet barrier is half critical particle chemical work and decays quadratically with supersaturation log",
+      "passed": true
+    },
+    {
+      "id": "T060",
+      "part": 4,
+      "method": "symbolic",
+      "name": "Tolman corrected capillary saddle shifts by minus curvature length and barrier drops by eight pi gamma radius delta",
+      "passed": true
+    },
+    {
+      "id": "Q061",
+      "part": 1,
+      "method": "symbolic",
+      "name": "PT symmetry, quadratic spectral identity, and Jordan nilpotence at the exceptional point",
+      "passed": true
+    },
+    {
+      "id": "Q061",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "exact nonunitary matrix propagator obeys Schrodinger initial condition and exceptional Jordan polynomial",
+      "passed": true
+    },
+    {
+      "id": "Q061",
+      "part": 3,
+      "method": "conservation",
+      "name": "explicit positive metric in unbroken PT region satisfies exact pseudo-Hermitian probability conservation",
+      "passed": true
+    },
+    {
+      "id": "Q061",
+      "part": 4,
+      "method": "limit",
+      "name": "exceptional point has square root energy splitting and divergent susceptibility from unbroken side",
+      "passed": true
     }
   ],
   "independent_expert_review": "pending",
@@ -820,6 +904,24 @@
       "id": "O060",
       "method": "high_precision_Airy_PDE_and_Fourier_quadrature",
       "name": "50-digit complex Airy PDE derivative residual and independent Gaussian spectral power and moment quadratures",
+      "passed": true
+    },
+    {
+      "id": "M063",
+      "method": "50_digit_frequency_response_energy_integrals",
+      "name": "independent complex Stokes profile quadrature for flow admittance and exact viscous-cycle power budget",
+      "passed": true
+    },
+    {
+      "id": "T060",
+      "method": "50_digit_Tolman_nucleation_saddle_and_barrier",
+      "name": "50 digit direct exact corrected critical saddle compared with first-order radius and barrier expansion",
+      "passed": true
+    },
+    {
+      "id": "Q061",
+      "method": "50_digit_PT_metric_and_Jordan_propagation",
+      "name": "50 digit exact unbroken PT mode norm in conserved metric and exceptional polynomial norm",
       "passed": true
     }
   ]

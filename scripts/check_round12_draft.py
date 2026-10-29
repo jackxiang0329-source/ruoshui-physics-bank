@@ -938,12 +938,133 @@ assert abs(moment4060/pow060-3/(16*av060**2))<mp.mpf('1e-42')
 supplemental.append(dict(id='O060',method='high_precision_Airy_PDE_and_Fourier_quadrature',
                          name='50-digit complex Airy PDE derivative residual and independent Gaussian spectral power and moment quadratures',passed=True))
 
-assert len(checks)==96 and len(set((v['id'],v['part']) for v in checks))==96
+
+
+# M063 -- startup channel Poiseuille flow and frequency-dependent conductance.
+yy63,hh63,nu63,F63,om63=s.symbols('yy63 hh63 nu63 F63 om63',positive=True)
+uss63=F63*(hh63**2-yy63**2)/(2*nu63)
+record('M063',1,'symbolic',
+       'viscous channel profile solves full reduced Navier Stokes and exactly matches no slip boundaries',
+       eq(nu63*s.diff(uss63,yy63,2)+F63) and eq(uss63.subs(yy63,hh63)) and eq(uss63.subs(yy63,-hh63))
+       and eq(s.integrate(uss63,(yy63,-hh63,hh63)),2*F63*hh63**3/(3*nu63)))
+ks0=s.pi/(2*hh63)
+coef0=2*F63/(nu63*hh63*ks0**3)
+proj0=s.simplify(s.integrate(uss63*s.cos(ks0*yy63),(yy63,-hh63,hh63))/hh63)
+record('M063',2,'independent_derivation',
+       'orthogonal cosine projection and exact zeta sums reproduce zero initial flow and longest relaxation time',
+       eq(proj0,coef0)
+       and eq(s.zeta(4,s.Rational(1,2)),s.pi**4/6)
+       and eq(s.zeta(2,s.Rational(1,2)),s.pi**2/2)
+       and eq(1/(nu63*ks0**2),4*hh63**2/(s.pi**2*nu63)))
+steadyQ63=2*F63*hh63**3/(3*nu63)
+record('M063',3,'conservation',
+       'steady viscous dissipation exactly equals work done by constant body forcing',
+       eq(nu63*s.integrate(s.diff(uss63,yy63)**2,(yy63,-hh63,hh63)),F63*steadyQ63)
+       and eq(s.diff(uss63,yy63).subs(yy63,hh63),-F63*hh63/nu63))
+q63=s.symbols('q63',nonzero=True)
+amp63=F63/(s.I*om63)*(1-s.cosh(q63*yy63)/s.cosh(q63*hh63))
+res63=s.simplify(nu63*s.diff(amp63,yy63,2)-s.I*om63*amp63+F63)
+res63=s.simplify(res63.subs(q63**2,s.I*om63/nu63))
+record('M063',4,'limit',
+       'complex oscillatory Poiseuille profile solves driven Stokes equation and has correct quasi static flux',
+       eq(res63)
+       and eq(amp63.subs(yy63,hh63))
+       and eq(s.limit(s.tanh(q63*hh63)/q63,q63,0),hh63))
+mp.mp.dps=50
+nv63=mp.mpf('.8');hv63=mp.mpf('1.2');fv63=mp.mpf('2.1');wv63=mp.mpf('1.7')
+qv63=mp.sqrt(1j*wv63/nv63)
+u63=lambda y:fv63/(1j*wv63)*(1-mp.cosh(qv63*y)/mp.cosh(qv63*hv63))
+qu63=mp.quad(u63,[-hv63,hv63])
+qcl63=2*fv63/(1j*wv63)*(hv63-mp.tanh(qv63*hv63)/qv63)
+dud63=lambda y:-fv63/(1j*wv63)*qv63*mp.sinh(qv63*y)/mp.cosh(qv63*hv63)
+diss63=nv63*mp.quad(lambda y:abs(dud63(y))**2,[-hv63,hv63])
+assert abs(qu63-qcl63)<mp.mpf('1e-44')
+assert abs(diss63-fv63*mp.re(qu63))<mp.mpf('1e-44')
+supplemental.append(dict(id='M063',method='50_digit_frequency_response_energy_integrals',name='independent complex Stokes profile quadrature for flow admittance and exact viscous-cycle power budget',passed=True))
+
+# T060 -- classical droplet nucleation and Tolman curvature corrections.
+rr60,gg60,aa60,dd60=s.symbols('rr60 gg60 aa60 dd60',positive=True)
+dg60=4*s.pi*gg60*rr60**2-4*s.pi*aa60*rr60**3/3
+rstar60=2*gg60/aa60
+bar60=16*s.pi*gg60**3/(3*aa60**2)
+record('T060',1,'independent_derivation',
+       'Kelvin saturation equation follows equality of vapor chemical potential and Laplace-shifted incompressible liquid',
+       eq(aa60*rstar60,2*gg60) and eq(s.limit(2*gg60/rr60,rr60,s.oo),0))
+record('T060',2,'symbolic',
+       'nucleation critical radius has negative free energy curvature and exact capillarity barrier',
+       eq(s.diff(dg60,rr60).subs(rr60,rstar60))
+       and eq(s.diff(dg60,rr60,2).subs(rr60,rstar60),-8*s.pi*gg60)
+       and eq(dg60.subs(rr60,rstar60),bar60))
+vol60=s.symbols('vol60',positive=True)
+nstar60=4*s.pi*rstar60**3/(3*vol60)
+drive60=aa60*vol60
+record('T060',3,'limit',
+       'droplet barrier is half critical particle chemical work and decays quadratically with supersaturation log',
+       eq(bar60,nstar60*drive60/2)
+       and eq(s.diff(s.log(bar60),aa60),-2/aa60))
+curv60=4*s.pi*gg60*(rr60**2-2*dd60*rr60)-4*s.pi*aa60*rr60**3/3
+approx60=rstar60-dd60
+record('T060',4,'symbolic',
+       'Tolman corrected capillary saddle shifts by minus curvature length and barrier drops by eight pi gamma radius delta',
+       eq(s.diff(curv60,rr60).subs(rr60,approx60).subs(dd60,0))
+       and eq(s.diff(s.diff(curv60,rr60).subs(rr60,approx60),dd60).subs(dd60,0))
+       and eq(s.diff(curv60.subs(rr60,approx60),dd60).subs(dd60,0),-8*s.pi*gg60*rstar60))
+mp.mp.dps=50
+gnum60=mp.mpf('.31'); anum60=mp.mpf('.045');dnum60=mp.mpf('.001')
+rnum60=2*gnum60/anum60
+exact60=(rnum60+mp.sqrt(rnum60*rnum60-4*rnum60*dnum60))/2
+free60=lambda x:4*mp.pi*gnum60*(x*x-2*dnum60*x)-4*mp.pi*anum60*x**3/3
+first60=16*mp.pi*gnum60**3/(3*anum60**2)-8*mp.pi*gnum60*rnum60*dnum60
+assert abs(exact60-(rnum60-dnum60))<mp.mpf('1e-7')
+assert abs(free60(exact60)-first60)<mp.mpf('1e-5')
+supplemental.append(dict(id='T060',method='50_digit_Tolman_nucleation_saddle_and_barrier',name='50 digit direct exact corrected critical saddle compared with first-order radius and barrier expansion',passed=True))
+
+# Q061 -- PT non-Hermitian quantum dimer and exceptional point.
+J61,g61,t61=s.symbols('J61 g61 t61',real=True,positive=True)
+H61=s.Matrix([[s.I*g61,J61],[J61,-s.I*g61]])
+Y61=s.Matrix([[0,-s.I],[s.I,0]])
+eta61=s.eye(2)+g61/J61*Y61
+P61=s.Matrix([[0,1],[1,0]])
+record('Q061',1,'symbolic',
+       'PT symmetry, quadratic spectral identity, and Jordan nilpotence at the exceptional point',
+       P61*H61.conjugate()*P61==H61
+       and H61**2==(J61**2-g61**2)*s.eye(2)
+       and H61.subs(g61,J61)**2==s.zeros(2))
+Om61=s.symbols('Om61',positive=True,real=True)
+U61=s.cos(Om61*t61)*s.eye(2)-s.I*s.sin(Om61*t61)/Om61*H61
+record('Q061',2,'independent_derivation',
+       'exact nonunitary matrix propagator obeys Schrodinger initial condition and exceptional Jordan polynomial',
+       all(eq(z) for z in U61.subs(t61,0)-s.eye(2))
+       and all(eq(z) for z in (s.I*s.diff(U61,t61)-H61*U61).applyfunc(
+         lambda z:s.expand(z).subs(Om61**2,J61**2-g61**2)))
+       and all(eq(z) for z in H61.subs(g61,J61)**2))
+record('Q061',3,'conservation',
+       'explicit positive metric in unbroken PT region satisfies exact pseudo-Hermitian probability conservation',
+       all(eq(z) for z in H61.conjugate().transpose()*eta61-eta61*H61)
+       and eq(eta61.det(),1-g61**2/J61**2))
+eps61=s.symbols('eps61',positive=True)
+spl61=2*s.sqrt(J61**2-(J61-eps61)**2)
+record('Q061',4,'limit',
+       'exceptional point has square root energy splitting and divergent susceptibility from unbroken side',
+       eq(s.limit(spl61/s.sqrt(eps61),eps61,0),2*s.sqrt(2*J61))
+       and eq(s.limit(s.sqrt(eps61)*(-2*(J61-eps61)/s.sqrt(J61**2-(J61-eps61)**2)),eps61,0),-s.sqrt(2*J61)))
+mp.mp.dps=50
+jv61=mp.mpf('1.3');gv61=mp.mpf('.44');tv61=mp.mpf('0.7');omv61=mp.sqrt(jv61**2-gv61**2)
+a61=mp.cos(omv61*tv61)+gv61/mp.sqrt(jv61**2-gv61**2)*mp.sin(omv61*tv61)
+b61=-1j*jv61/mp.sqrt(jv61**2-gv61**2)*mp.sin(omv61*tv61)
+weighted61=abs(a61)**2+abs(b61)**2-2*gv61/jv61*mp.im(a61.conjugate()*b61)*(-1)
+# Explicit eta off diagonal: -i gamma/J, i gamma/J, giving 2(gamma/J) Im(a* b).
+etaExplicit61=abs(a61)**2+abs(b61)**2+2*gv61/jv61*mp.im(a61.conjugate()*b61)
+assert abs(etaExplicit61-1)<mp.mpf('1e-44')
+assert abs((1+jv61*tv61)**2+(jv61*tv61)**2-(1+2*jv61*tv61+2*jv61**2*tv61**2))<mp.mpf('1e-44')
+supplemental.append(dict(id='Q061',method='50_digit_PT_metric_and_Jordan_propagation',name='50 digit exact unbroken PT mode norm in conserved metric and exceptional polynomial norm',passed=True))
+
+assert len(checks)==108 and len(set((v['id'],v['part']) for v in checks))==108
 assert len(set(v['method'] for v in checks if v['id']=='W058'))>=2
 assert len(set(v['method'] for v in checks if v['id']=='Q059'))>=2
-assert len(supplemental)==24
+assert len(supplemental)==27
 
-result={'status':'draft-only','new_problem_count':24,'passed_count':len(checks),'tests':checks,'independent_expert_review':'pending','supplemental_numeric_checks':supplemental}
+result={'status':'draft-only','new_problem_count':27,'passed_count':len(checks),'tests':checks,'independent_expert_review':'pending','supplemental_numeric_checks':supplemental}
 path=Path(__file__).resolve().parents[1]/'data/round12_draft_validation_report.json'
 path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
 print(json.dumps({'status':result['status'],'checked_subparts':len(checks)},ensure_ascii=False))

@@ -1,0 +1,22 @@
+{
+  "id": "T060",
+  "topic": "热学",
+  "title": "过饱和蒸气液滴均匀成核的Kelvin曲率、势垒与Tolman一阶修正",
+  "kind": "综合推导题",
+  "level": 5,
+  "estimated_minutes": 115,
+  "tags": [
+    "过饱和理想蒸气的化学势驱动力",
+    "Laplace压差和Kelvin曲率平衡",
+    "经典成核自由能非凸临界核",
+    "成核势垒与Boltzmann速率指数",
+    "Tolman曲率表面张力的一阶尺度修正"
+  ],
+  "answer": "r_*=\\frac{2\\gamma v_\\ell}{k_BT\\ln S},\\quad \\Delta G_*=\\frac{16\\pi\\gamma^3v_\\ell^2}{3(k_BT\\ln S)^2},\\quad r_*^{\\mathrm T}=r_*-\\delta+O(\\delta^2/r_*),\\quad \\Delta G_*^{\\mathrm T}=\\Delta G_*-8\\pi\\gamma r_*\\delta+O(\\delta^2)",
+  "quality_status": "待独立复核",
+  "tier": "advanced_composite",
+  "format": "latex-fragment-v1",
+  "revision": "composite-v3.5-round12-draft",
+  "challenge_profile": "high-multistage",
+  "complexity_tier": "L5-C"
+}

@@ -50,7 +50,7 @@
       ]
     }
   ],
-  "disposition": "Historical core-model overlaps have been replaced; W059 elastic Rayleigh and O060 finite-energy Airy beam screened distinct from prior waves/optics models. Current draft 24/50, independent human expert review pending.",
+  "disposition": "Historical duplicate core models M060/O057/Q057 replaced; W059 and O060 and new M063/T060/Q061 screened for different governing equations and invariants. 27/50 Draft; all pending independent human review.",
   "independent_expert_review": "待独立复核",
   "new_draft_model_screening": [
     {
@@ -163,6 +163,43 @@
       ],
       "core_model": "Exact finite-energy Airy paraxial beam solution from cubic Fourier phase with Gaussian spectral amplitude, accelerating caustic but stationary Ehrenfest centroid and transverse Poynting-like flux",
       "difference": "Prior Gaussian-lens / chirped-Gaussian models have quadratic spectral phases, while O058 is knife-edge Fresnel diffraction; none derives cubic-phase Airy propagation, norm and centroid against curved main-lobe trajectory.",
+      "resolution_status": "screened_distinct_pending_independent_review"
+    },
+    {
+      "draft_id": "M063",
+      "compared_existing_ids": [
+        "M037",
+        "M041",
+        "M060",
+        "W041"
+      ],
+      "core_model": "Viscous incompressible 2D channel pressure-force startup with exact infinite Stokes eigenfunction series, shear work-dissipation balance and frequency-resolved oscillatory pressure-flow admittance",
+      "difference": "M037 is point-particle drag trajectory, M041 is mechanical Atwood pulley drag, M060 optimal-control particle with linear drag, W041 is damped string; no old model treats Navier-Stokes channel velocity PDE with no-slip walls and hydrodynamic impedance.",
+      "resolution_status": "screened_distinct_pending_independent_review"
+    },
+    {
+      "draft_id": "T060",
+      "compared_existing_ids": [
+        "T014",
+        "T023",
+        "T048",
+        "T059"
+      ],
+      "core_model": "Classical liquid droplet nucleation from supersaturated vapor: Kelvin curvature pressure, cubic capillarity free energy metastable saddle, Boltzmann barrier exponent, Tolman-length perturbation",
+      "difference": "T014 derives flat-interface Clapeyron coexistence; T023 and T048 study van der Waals bulk expansion/critical instability; T059 is thermoelectric engine; none models finite-radius nucleation saddle or Tolman capillarity.",
+      "resolution_status": "screened_distinct_pending_independent_review"
+    },
+    {
+      "draft_id": "Q061",
+      "compared_existing_ids": [
+        "Q011",
+        "Q037",
+        "Q049",
+        "Q056",
+        "Q057"
+      ],
+      "core_model": "Gain-loss PT-symmetric non-Hermitian two-mode exceptional point with nonunitary Jordan propagation, pseudo-Hermitian positive metric, and square-root eigenvalue sensitivity",
+      "difference": "Q011/Q056 have Hermitian driven Rabi transfer; Q037 uses trace-preserving dephasing, Q057 CPTP amplitude damping, Q049 rotating Hermitian spins. None involves defective Jordan eigenvalue, PT spectral breaking, or positive pseudo-Hermitian metric.",
       "resolution_status": "screened_distinct_pending_independent_review"
     }
   ]
