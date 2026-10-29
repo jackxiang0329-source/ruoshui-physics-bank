@@ -6620,14 +6620,14 @@
   {
     "id": "W075",
     "topic": "振动与波动",
-    "title": "轴向匀速运动张紧弦的对流波、波作用能流与临界反向传播",
+    "title": "缓变移动端点弦的绝热模态不变量、边界功率与多普勒交叉核验",
     "tags": [
-      "物质导数与移动介质波方程",
-      "对流色散和特征线",
-      "正定机械能连续性",
-      "临界流速与波动阻塞"
+      "移动边界波动能量通量",
+      "单模绝热作用量",
+      "边界夹持力与平均做功",
+      "反射多普勒和频率漂移"
     ],
-    "answer": "(\\omega-Uk)^2=c^2k^2,\\quad c=\\sqrt{T/\\mu},\\quad J_\\pm=(U\\pm c)e_\\pm",
+    "answer": "J_n=\\frac{E_n}{\\omega_n}=\\mathrm{const},\\quad E_n\\propto L^{-1},\\quad \\langle F_{\\rm end}\\rangle=E_n/L",
     "kind": "综合推导题",
     "level": 5,
     "estimated_minutes": 115,
@@ -6637,8 +6637,8 @@
     "revision": "composite-v5-round14-draft",
     "challenge_profile": "high-multistage-original-core",
     "complexity_tier": "L5-C",
-    "question": "(1) 一根无限长柔弦持续以恒定轴向材料流速 \\(U\\) 穿过实验室坐标 \\(x\\)，单位当前长度质量为 \\(\\mu>0\\)，张力 \\(T>0\\) 为常数。小横位移为 \\(u(x,t)\\)，忽略质量交换端点及弯曲刚度。从材料坐标 \\(X=x-Ut\\) 的牛顿方程推导实验室系精确线性波动方程，并明确适用的小斜率条件。\n(2) 对 \\(e^{i(kx-\\omega t)}\\) 求双支色散、相速度和群速度；写出初始位移 \\(f(x)\\)、初始物质速度 \\(g(x)=(\\partial_t+U\\partial_x)u|_{0}\\) 对应的一般行波表达式。\n(3) 独立用功率与弹性能导出局部正定能量密度 \\(e\\)、实验室能量通量 \\(J\\) 和连续性方程。对两支简谐波求时间平均能流，说明不能仅用静止弦的 \\(c e\\) 代替。\n(4) 当 \\(0<U<c\\) 时，分析定频 \\(\\omega>0\\) 的两个波数及传播方向；论证 \\(U\\to c^-\\) 的反向传播阻塞与所需短波尺度，检查 \\(U=0\\) 极限并讨论超临界 \\(U>c\\) 的实验室传播方向。\n",
-    "solution": "(1) 材料横位移 \\(y(X,t)=u(X+Ut,t)\\)，每一材料点的速度为 \\(y_t=(\\partial_t+U\\partial_x)u=:Du\\)，加速度为 \\(D^2u\\)。在小斜率 \\(|u_x|\\ll1\\) 下横向张力合力为 \\(Tu_{xx}dx\\)，因此\n\\[\n\\mu(\\partial_t+U\\partial_x)^2u=Tu_{xx},\\qquad c=\\sqrt{T/\\mu}.\n\\]\n展开为 \\(u_{tt}+2Uu_{xt}+(U^2-c^2)u_{xx}=0\\)。\n(2) 色散满足 \\((\\omega-Uk)^2=c^2k^2\\)，亦即 \\(\\omega_\\pm=(U\\pm c)k\\)，\\(v_{g,\\pm}=U\\pm c\\)，相速度相同。通解\n\\[\nu=F(x-(U+c)t)+G(x-(U-c)t).\n\\]\n由 \\(u(x,0)=f(x)\\)、\\(Du(x,0)=g(x)\\) 得\n\\[\nF'(x)=\\tfrac12[f'(x)-g(x)/c],\\quad\nG'(x)=\\tfrac12[f'(x)+g(x)/c],\n\\]\n积分常数只要求 \\(F+G=f\\)。\n(3) 用 \\(Du\\) 乘 \\(\\mu D^2u=Tu_{xx}\\)，并利用 \\(D(u_x)=(Du)_x\\)：\n\\[\nD\\!\\left[\\frac\\mu2(Du)^2+\\frac T2u_x^2\\right]\n=T\\partial_x[(Du)u_x].\n\\]\n因此\n\\[\ne=\\tfrac\\mu2(Du)^2+\\tfrac T2u_x^2\\ge0,\\quad\nJ=Ue-T(Du)u_x,\\quad \\partial_te+\\partial_xJ=0 .\n\\]\n在右行材料波 \\(Du=-cu_x\\) 时 \\(J=(U+c)e\\)，反行波 \\(Du=+cu_x\\) 时 \\(J=(U-c)e\\)。对振幅 \\(A\\) 的实正弦波，\\(\\langle e\\rangle=Tk^2A^2/2\\)，故 \\(\\langle J_\\pm\\rangle=(U\\pm c)Tk^2A^2/2\\)；能流方向含介质的平流贡献。\n(4) 给定实验室正频率，取 \\(k_+=\\omega/(U+c)>0\\)、\\(k_-=\\omega/(U-c)<0\\)（\\(0<U<c\\)）。后一分支群速 \\(U-c<0\\)，仍可向上游传能；但 \\(U\\to c^-\\) 时 \\(|k_-|\\to\\infty\\)，不再满足忽略微观色散和弯曲刚度的长波模型。\\(U=0\\) 给标准 \\(k_\\pm=\\pm\\omega/c\\) 和相反能流。\\(U>c\\) 时两实验室群速度均为正，上游不能传播信息；这不是能量不守恒，而是参考系与边界输运造成的特征线单向性。\n"
+    "question": "(1) 质量线密度 \\(\\mu>0\\)、恒张力 \\(T>0\\) 的柔弦，左端固定在 \\(x=0\\)，右端夹持于一个光滑移动的刚性边界 \\(x=L(t)\\)。小横位移 \\(u(x,t)\\) 满足波动方程 \\(\\mu u_{tt}=Tu_{xx}\\) 及 \\(u(0,t)=u(L(t),t)=0\\)。不预设慢变，严格求时变区间的弦能量\n\\(E(t)=\\frac12\\int_0^{L(t)}[\\mu u_t^2+Tu_x^2]\\,dx\\) 的时间导数，化成移动端点局部斜率与 \\(\\dot L\\) 的表达式。\n(2) 现令 \\(|\\dot L|/c\\ll1\\)，其中 \\(c=\\sqrt{T/\\mu}\\)，并且模态变化率小于相邻频率差，忽略模间跃迁。求第 \\(n\\) 瞬时驻波频率，证明单模绝热作用量 \\(J_n=E_n/\\omega_n\\) 不变，推导单模能量随 \\(L\\) 的标度及腹部横向位移振幅的标度。\n(3) 对弦位移近似 \\(u=A\\sin(n\\pi x/L)\\cos\\omega_nt\\)，独立用第一问的能量边界式求慢变平均夹持广义力 \\(\\langle F_{\\rm end}\\rangle\\) 与 \\(\\dot E\\)。与第二问预测 \\(-dE/dL\\) 比较，解释正向伸长为何使单模能量下降。\n(4) 换一种独立机制：考虑速度 \\(v_w=\\dot L\\) 缓慢远离入射波的反射端点，推导实验室中单次一维波反射的频率比 \\(\\omega_r/\\omega_i=(c-v_w)/(c+v_w)\\)。结合两端往返撞击率 \\(c/(2L)\\) 恢复 \\(\\dot E/E\\simeq-\\dot L/L\\)，说明非绝热快速移动时此估计为什么失效。\n",
+    "solution": "(1) 在瞬时区间有\n\\[\n\\partial_t\\!\\left(\\frac{\\mu u_t^2+Tu_x^2}{2}\\right)\n=T\\partial_x(u_tu_x)\n\\]\n（利用 \\(\\mu u_{tt}=Tu_{xx}\\)）。对变化上限用Leibniz公式：\n\\[\n\\dot E=[Tu_tu_x]_0^{L}+\n\\dot L\\left[\\frac{\\mu u_t^2+Tu_x^2}{2}\\right]_{x=L}.\n\\]\n左端 \\(u_t(0,t)=0\\)；运动边界总导数 \\(\\frac d{dt}u(L(t),t)=0\\) 给 \\(u_t(L,t)=-\\dot L\\,u_x(L,t)\\)。故\n\\[\n\\boxed{\\dot E=-\\frac T2\\left(1-\\frac{\\dot L^2}{c^2}\\right)\\dot L\\,u_x(L,t)^2}.\n\\]\n其成立不要求慢变，只需小横位移近似及边界运动亚声速以正常解释能流方向。\n(2) 瞬时Dirichlet模态为 \\(\\sin(n\\pi x/L)\\)，频率\n\\[\n\\omega_n(t)=\\frac{n\\pi c}{L(t)}.\n\\]\n在 \\(|\\dot\\omega_n|/\\omega_n^2\\ll1\\) 以及模态耦合可忽略时，单模动作量 \\(J_n=E_n/\\omega_n\\) 为绝热不变量。因此\n\\[\n\\frac{E_n(t)}{E_n(0)}=\\frac{L(0)}{L(t)}.\n\\]\n在转折时刻 \\(E_n=\\frac T2\\int_0^L u_x^2 dx=Tn^2\\pi^2A^2/(4L)\\)，上式表明腹部物理位移振幅 \\(A\\) 在领先绝热阶保持常数；归一化正弦模态的广义坐标振幅则随 \\(\\sqrt L\\) 变化，两者不能混淆。\n(3) 将驻波斜率 \\(u_x(L,t)=(-1)^n(n\\pi/L)A\\cos\\omega_nt\\) 代入 (1)，以 \\(\\langle\\cos^2\\rangle=1/2\\)、舍弃 \\(O((\\dot L/c)^2)\\)，有\n\\[\n\\langle \\dot E\\rangle=-\\frac{Tn^2\\pi^2A^2}{4L^2}\\dot L\n=-\\frac{E_n}{L}\\dot L.\n\\]\n移动夹持点所承受的附加有效横向波动广义力大小为\n\\[\n\\langle F_{\\rm end}\\rangle\n=\\frac{Tn^2\\pi^2A^2}{4L^2}=\\frac{E_n}{L}\n=-\\left(\\frac{\\partial E_n}{\\partial L}\\right)_{J_n}.\n\\]\n伸长时边界从横向振动汲取能量；压缩时外界做正功，量纲 \\(E/L\\) 是力。\n(4) 在移动壁参考系（低速近似的Galilei波动运动学）入射频率为 \\(\\omega_i-k_i v_w=\\omega_i(1-v_w/c)\\)；反射回实验室时再乘 \\(c/(c+v_w)\\) 得\n\\[\n\\omega_r=\\omega_i\\frac{c-v_w}{c+v_w},\n\\quad\\frac{\\omega_r-\\omega_i}{\\omega_i}\n=-\\frac{2v_w}{c}+O(v_w^2/c^2).\n\\]\n一束波在固定左端与移动右端之间约每 \\(2L/c\\) 遇到一次右端，故\n\\[\n\\frac{\\dot\\omega}{\\omega}\\simeq\n\\frac{c}{2L}\\left(-\\frac{2\\dot L}{c}\\right)\n=-\\frac{\\dot L}{L},\n\\]\n与 \\(\\omega_n\\propto L^{-1}\\)、\\(E_n/\\omega_n\\) 不变一致。快速运动引起模态混合、边界相位非绝热变化，不能把瞬时频率或单模绝热不变量当作精确守恒。\n"
   },
   {
     "id": "O007",

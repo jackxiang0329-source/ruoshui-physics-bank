@@ -1,27 +1,49 @@
-(1) 材料横位移 \(y(X,t)=u(X+Ut,t)\)，每一材料点的速度为 \(y_t=(\partial_t+U\partial_x)u=:Du\)，加速度为 \(D^2u\)。在小斜率 \(|u_x|\ll1\) 下横向张力合力为 \(Tu_{xx}dx\)，因此
+(1) 在瞬时区间有
 \[
-\mu(\partial_t+U\partial_x)^2u=Tu_{xx},\qquad c=\sqrt{T/\mu}.
+\partial_t\!\left(\frac{\mu u_t^2+Tu_x^2}{2}\right)
+=T\partial_x(u_tu_x)
 \]
-展开为 \(u_{tt}+2Uu_{xt}+(U^2-c^2)u_{xx}=0\)。
-(2) 色散满足 \((\omega-Uk)^2=c^2k^2\)，亦即 \(\omega_\pm=(U\pm c)k\)，\(v_{g,\pm}=U\pm c\)，相速度相同。通解
+（利用 \(\mu u_{tt}=Tu_{xx}\)）。对变化上限用Leibniz公式：
 \[
-u=F(x-(U+c)t)+G(x-(U-c)t).
+\dot E=[Tu_tu_x]_0^{L}+
+\dot L\left[\frac{\mu u_t^2+Tu_x^2}{2}\right]_{x=L}.
 \]
-由 \(u(x,0)=f(x)\)、\(Du(x,0)=g(x)\) 得
+左端 \(u_t(0,t)=0\)；运动边界总导数 \(\frac d{dt}u(L(t),t)=0\) 给 \(u_t(L,t)=-\dot L\,u_x(L,t)\)。故
 \[
-F'(x)=\tfrac12[f'(x)-g(x)/c],\quad
-G'(x)=\tfrac12[f'(x)+g(x)/c],
+\boxed{\dot E=-\frac T2\left(1-\frac{\dot L^2}{c^2}\right)\dot L\,u_x(L,t)^2}.
 \]
-积分常数只要求 \(F+G=f\)。
-(3) 用 \(Du\) 乘 \(\mu D^2u=Tu_{xx}\)，并利用 \(D(u_x)=(Du)_x\)：
+其成立不要求慢变，只需小横位移近似及边界运动亚声速以正常解释能流方向。
+(2) 瞬时Dirichlet模态为 \(\sin(n\pi x/L)\)，频率
 \[
-D\!\left[\frac\mu2(Du)^2+\frac T2u_x^2\right]
-=T\partial_x[(Du)u_x].
+\omega_n(t)=\frac{n\pi c}{L(t)}.
 \]
-因此
+在 \(|\dot\omega_n|/\omega_n^2\ll1\) 以及模态耦合可忽略时，单模动作量 \(J_n=E_n/\omega_n\) 为绝热不变量。因此
 \[
-e=\tfrac\mu2(Du)^2+\tfrac T2u_x^2\ge0,\quad
-J=Ue-T(Du)u_x,\quad \partial_te+\partial_xJ=0 .
+\frac{E_n(t)}{E_n(0)}=\frac{L(0)}{L(t)}.
 \]
-在右行材料波 \(Du=-cu_x\) 时 \(J=(U+c)e\)，反行波 \(Du=+cu_x\) 时 \(J=(U-c)e\)。对振幅 \(A\) 的实正弦波，\(\langle e\rangle=Tk^2A^2/2\)，故 \(\langle J_\pm\rangle=(U\pm c)Tk^2A^2/2\)；能流方向含介质的平流贡献。
-(4) 给定实验室正频率，取 \(k_+=\omega/(U+c)>0\)、\(k_-=\omega/(U-c)<0\)（\(0<U<c\)）。后一分支群速 \(U-c<0\)，仍可向上游传能；但 \(U\to c^-\) 时 \(|k_-|\to\infty\)，不再满足忽略微观色散和弯曲刚度的长波模型。\(U=0\) 给标准 \(k_\pm=\pm\omega/c\) 和相反能流。\(U>c\) 时两实验室群速度均为正，上游不能传播信息；这不是能量不守恒，而是参考系与边界输运造成的特征线单向性。
+在转折时刻 \(E_n=\frac T2\int_0^L u_x^2 dx=Tn^2\pi^2A^2/(4L)\)，上式表明腹部物理位移振幅 \(A\) 在领先绝热阶保持常数；归一化正弦模态的广义坐标振幅则随 \(\sqrt L\) 变化，两者不能混淆。
+(3) 将驻波斜率 \(u_x(L,t)=(-1)^n(n\pi/L)A\cos\omega_nt\) 代入 (1)，以 \(\langle\cos^2\rangle=1/2\)、舍弃 \(O((\dot L/c)^2)\)，有
+\[
+\langle \dot E\rangle=-\frac{Tn^2\pi^2A^2}{4L^2}\dot L
+=-\frac{E_n}{L}\dot L.
+\]
+移动夹持点所承受的附加有效横向波动广义力大小为
+\[
+\langle F_{\rm end}\rangle
+=\frac{Tn^2\pi^2A^2}{4L^2}=\frac{E_n}{L}
+=-\left(\frac{\partial E_n}{\partial L}\right)_{J_n}.
+\]
+伸长时边界从横向振动汲取能量；压缩时外界做正功，量纲 \(E/L\) 是力。
+(4) 在移动壁参考系（低速近似的Galilei波动运动学）入射频率为 \(\omega_i-k_i v_w=\omega_i(1-v_w/c)\)；反射回实验室时再乘 \(c/(c+v_w)\) 得
+\[
+\omega_r=\omega_i\frac{c-v_w}{c+v_w},
+\quad\frac{\omega_r-\omega_i}{\omega_i}
+=-\frac{2v_w}{c}+O(v_w^2/c^2).
+\]
+一束波在固定左端与移动右端之间约每 \(2L/c\) 遇到一次右端，故
+\[
+\frac{\dot\omega}{\omega}\simeq
+\frac{c}{2L}\left(-\frac{2\dot L}{c}\right)
+=-\frac{\dot L}{L},
+\]
+与 \(\omega_n\propto L^{-1}\)、\(E_n/\omega_n\) 不变一致。快速运动引起模态混合、边界相位非绝热变化，不能把瞬时频率或单模绝热不变量当作精确守恒。

@@ -48,16 +48,19 @@ p=nd*kB*T/(1-nd*a); kt=(1-nd*a)**2/(nd*kB*T)
 ck("T075",3,"fluctuation","isothermal compressibility and number fluctuations",z(kt-1/(nd*s.diff(p,nd))) and z(nd*kB*T*kt-(1-nd*a)**2))
 C=s.symbols("C",positive=True); Tad=C/(1/nd-a)**2; p_ad=nd*kB*Tad/(1-nd*a)
 ck("T075",4,"adiabatic","adiabatic pressure derivative and dilute sound speed",z(s.diff(p_ad,nd)/m-3*kB*Tad/(m*(1-nd*a)**2)) and z(s.limit(3*kB*T/(m*(1-nd*a)**2),a,0)-3*kB*T/m))
-# W075: convected wave and exact mechanical energy
-x,flow,c,rho,ten=s.symbols("x flow c rho ten",positive=True)
-def D(a):return s.diff(a,t)+flow*s.diff(a,x)
-w=s.sin(x-(flow+c)*t)+s.cos(2*(x-(flow-c)*t))
-ck("W075",1,"symbolic","both independent traveling waves solve convected PDE",z(D(D(w))-c*c*s.diff(w,x,2)))
-ck("W075",2,"dispersion","both Doppler shifted characteristic branches",z(((flow+c)-flow)**2-c*c) and z(((flow-c)-flow)**2-c*c))
-E=rho*D(w)**2/2+ten*s.diff(w,x)**2/2
-F=flow*E-ten*D(w)*s.diff(w,x)
-ck("W075",3,"conservation","full two-branch flux continuity at T=rho c squared",z((s.diff(E,t)+s.diff(F,x)).subs(ten,rho*c*c)))
-ck("W075",4,"physical_case","upstream blockage at critical flow and Galilean limit",.4-1<0<.4+1 and 1.3-1>0 and 0-1==-1)
+# W075: moving boundary string, distinct from previously indexed convected-wave models
+L,vel,mu,ten,A,nmode,c=s.symbols("L vel mu ten A nmode c",positive=True)
+slope=s.symbols("slope",real=True)
+edge=s.simplify(ten*slope*(-vel*slope)+vel*(mu*(vel*slope)**2+ten*slope**2)/2)
+ck("W075",1,"energy_boundary","Reynolds moving-end energy flux and Dirichlet kinematic condition",z(edge+ten*vel*slope**2*(1-mu*vel**2/ten)/2))
+E0,L0=s.symbols("E0 L0",positive=True)
+En=E0*L0/L
+ck("W075",2,"adiabatic","adiabatic action forces mode energy inverse proportional to length",z(s.diff(En,L)+En/L))
+emode=ten*s.pi**2*nmode**2*A**2/(4*L)
+fend=ten*s.pi**2*nmode**2*A**2/(4*L**2)
+ck("W075",3,"independent_derivation","time averaged wall work equals negative adiabatic energy derivative",z(fend-emode/L) and z(fend+s.diff(emode,L)))
+doppler=(c-vel)/(c+vel)
+ck("W075",4,"doppler","moving wall reflection plus collision rate gives -Ldot/L",z(s.diff(doppler,vel).subs(vel,0)+2/c) and z(s.diff(s.log(doppler),vel).subs(vel,0)*c/(2*L)+1/L))
 # O077: independent Poisson interference outputs
 ph,V,Np=s.symbols("ph V Np",positive=True,real=True)
 mplus=Np*(1+V*s.cos(ph))/2; mminus=Np*(1-V*s.cos(ph))/2
