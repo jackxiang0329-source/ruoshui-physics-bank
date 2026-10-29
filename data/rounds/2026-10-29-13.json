@@ -1,7 +1,7 @@
 {
   "date": "2026-10-29",
   "round": "13",
-  "status": "candidate_pending_full_ci_and_independent_review",
+  "status": "technical_gate_passed_awaiting_main_merge",
   "target_new_items": 50,
   "actual_new_items": 50,
   "base_count": 352,
@@ -71,5 +71,7 @@
   "executed_subpart_checks": 200,
   "quality_status": "待独立复核",
   "independent_expert_review": "待独立复核",
-  "note": "Exactly 50 unique candidate models (9/9/8/8/8/8), seven historical duplicate cores replaced, 200 real runnable subpart checks regenerated and passed at 1169772ecb94502560f074630ebe663a4dd2e1a5; both XeLaTeX PDFs must still pass on this final head before merge; no human expert signoff."
+  "note": "Seven historically duplicated core models replaced by distinct equations, full four-part Chinese solutions and 28 fresh physical checks; all 50 models and 200 subpart QA passed; only technical review attested.",
+  "review_status": "待独立复核",
+  "technical_status": "passed: PR #36 HEAD 1573a8238c9fbaae9408ad8858805391e527fe8d; GitHub Actions runs 40832497875 and 40832492694 both success, 200 distinct executable subpart checks and two XeLaTeX PDFs compiled; pending independent expert review"
 }
