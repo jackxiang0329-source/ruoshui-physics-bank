@@ -1,36 +1,38 @@
-(1) 对静止、均匀深度基本态线性化：
+(1) 有 \(\mathbf R_s=(x_s,y_s,1)\)，\(\mathbf R_{ss}=(x_{ss},y_{ss},0)\)。小斜率 \(|x_s|,|y_s|\ll1\) 时，
+\(|\mathbf R_s|^{-3}=1+O(|\psi_s|^2)\)，叉积横向分量主阶是 \((-y_{ss},x_{ss})\)，于是
 \[
-u_t-fv=-g\eta_x,\quad v_t+fu=-g\eta_y,\quad
-\eta_t+H(u_x+v_y)=0.
+x_t=-\beta y_{ss},\quad y_t=\beta x_{ss},\quad
+\boxed{\psi_t=i\beta\psi_{ss}}.
 \]
-对 \(e^{i(k_xx+k_yy-\omega t)}\) 的振幅，取
+这与自由Schrödinger方程数学同构，但 \(\psi\) 是涡丝位移，并非概率振幅。
+
+(2) 代入螺旋波，得到 \(\omega=\beta k^2\)。
+相速度 \(v_{\mathrm{ph}}=\omega/k=\beta k\)（\(k\ne0\)），群速度
+\(v_g=d\omega/dk=2\beta k\)。正负波数沿相反轴向传播，螺旋手性也翻转，尽管频率非负。不同 \(k\) 的群速度不同，故有限谱宽的包必然展宽；当波长接近涡核半径时，固定 \(\beta\) 的局域诱导模型不再可靠，不能把 \(k\to\infty\) 当成真实涡丝的准确预言。
+
+(3) 原方程及共轭方程相减得
 \[
-\begin{pmatrix}-i\omega&-f&igk_x\\f&-i\omega&igk_y\\iHk_x&iHk_y&-i\omega\end{pmatrix}
-\begin{pmatrix}\hat u\\\hat v\\\hat\eta\end{pmatrix}=0.
+\partial_t|\psi|^2+\partial_s J_0=0,\quad
+J_0=2\beta\operatorname{Im}(\psi^*\psi_s).
 \]
-(2) 行列式为 \(i\omega[\omega^2-f^2-gH(k_x^2+k_y^2)]\) 乘以非零实常数（按行列式整体符号约定不影响零点）。写 \(c=\sqrt{gH}\)，有
+将相同计算应用于 \(\psi_s\) 得
 \[
-\omega_0=0,\qquad \omega_\pm=\pm\sqrt{f^2+c^2k^2}.
+\partial_t|\psi_s|^2+\partial_s J_1=0,\quad
+J_1=2\beta\operatorname{Im}(\psi_s^*\psi_{ss}).
 \]
-地转支满足 \(fu=-g\eta_y,\ fv=g\eta_x\)，即
+边界总流量为零时 \(N=\int|\psi|^2ds\) 及
+\(G=\int|\psi_s|^2ds\) 守恒。涡线弧长小振幅增量
+\(\Delta\ell=\frac12G+O(|\psi_s|^4)\)，但流体真实能量还可能包含非局域项，故 \(G\) 并非无条件的三维总动能。
+
+(4) 以Fourier变换求解自由二次色散，令 \(d=1+2i\beta t/\sigma^2\)，得到
 \[
-u=-{g\over f}\eta_y,\quad v={g\over f}\eta_x,
+\psi(s,t)=\frac{A}{\sqrt d}
+e^{ik_0s-i\beta k_0^2t}
+\exp\left[-\frac{(s-2\beta k_0t)^2}{2\sigma^2d}\right].
 \]
-且散度为零。正频群速度 \(\boldsymbol v_g=c^2\boldsymbol k/\sqrt{f^2+c^2k^2}\)；长波 \(\omega_+\simeq|f|+c^2k^2/(2|f|)\)，短波 \(\omega_+\simeq ck+f^2/(2ck)\)，故群速在长波趋零，在短波趋 \(c\)。
-(3) 乘前两式以 \(\rho H u,\rho H v\)，第三式乘 \(\rho g\eta\)，相加得到局部守恒律
+强度中心为 \(s_c=2\beta k_0t\)，方差
 \[
-\partial_t {\rho\over2}[H(u^2+v^2)+g\eta^2]
-+\nabla\cdot(\rho gH\eta\boldsymbol u)=0.
+\operatorname{Var}(s)=\frac{\sigma^2}{2}
+\left(1+\frac{4\beta^2t^2}{\sigma^4}\right).
 \]
-科氏两项为 \(\rho H(-fuv+fvu)=0\)。边界净能流为零则总能量恒定。取波矢沿x轴，传播支方程有 \(v=-if u/\omega\)（相位按 \(e^{-i\omega t}\)），连续性给 \(\eta=Hku/\omega\)；因此动能与势能振幅比
-\[
-{H(|u|^2+|v|^2)\over g|\eta|^2}
-={\omega^2+f^2\over c^2k^2}
-={c^2k^2+2f^2\over c^2k^2},
-\]
-一般不相等，仅在 \(f\to0\) 或 \(ck\gg |f|\) 时近似均分；科氏惯性运动使动能偏多。
-(4) 对前两方程取涡度，\(\zeta_t+f\nabla\cdot\boldsymbol u=0\)，又 \(\eta_t=-H\nabla\cdot\boldsymbol u\)，所以
-\[
-q_t=\partial_t(\zeta-f\eta/H)=0.
-\]
-对非零频谐波 \(q=0\)；地转零频态可有任意空间分布的守恒位涡，描述不传播的平衡分量。令 \(f\to0\) 时两传播支变为 \(\omega=\pm ck\)，零支为静态无辐散涡旋；零模的显式地转公式含 \(1/f\) 因而不能在 \(f=0\) 直接套用。
+直接高斯积分给 \(\int|\psi|^2ds=|A|^2\sqrt\pi\,\sigma\)，与第三问独立符合。短时 \(|\beta t|\ll\sigma^2\) 恢复原宽度与主阶群速平移；长时宽度线性增长是色散，不是耗散。

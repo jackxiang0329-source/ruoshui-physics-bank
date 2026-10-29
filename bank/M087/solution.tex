@@ -1,15 +1,35 @@
-(1) 地面惯性系中 \(\boldsymbol v=\dot r\boldsymbol e_r+\Omega r\boldsymbol e_\varphi\)，径向加速度 \(\ddot r-\Omega^2r\)，故
+(1) 定义 \(q=x/\rho,\ p=\rho\dot x-\dot\rho x\)，则
 \[
-m\ddot r=m\Omega^2r-k(r-r_0),\qquad
-U_{\mathrm{eff}}(r)=\tfrac12(k-m\Omega^2)r^2-kr_0r
+\dot q=\frac p{\rho^2},\qquad
+\dot p=\rho\ddot x-\ddot\rho x
+=-\rho\omega^2x-(\rho^{-3}-\rho\omega^2)x=-\frac q{\rho^2}.
 \]
-（省略常数 \(kr_0^2/2\)）。(2) 若 \(k>m\Omega^2\)，平衡 \(r_*={kr_0/(k-m\Omega^2)}>0\)，小振动频率 \(\omega_r=\sqrt{k/m-\Omega^2}\)。若 \(k<m\Omega^2\)，驻点在 \(r<0\) 而不属于物理半轴，径向向外失稳；当 \(k=m\Omega^2\) 且 \(r_0>0\)，有效势为 \(-kr_0r\)，无静止平衡。若 \(r_0=0\) 则临界点出现整条中性平衡，需另论。
-(3) 对 \(k>m\Omega^2\)，
+因此 \(\dot I=q\dot q+p\dot p=0\)。这没有使用绝热假设；只要辅助方程和原始方程成立，二次量便精确守恒。若外力调制频率，一般的机械能并不守恒，因而两者不可混为一谈。
+
+(2) 由 \(\tau(t)=\int_0^t\rho(s)^{-2}ds\)，有 \(dq/d\tau=p,\ dp/d\tau=-q\)，故
+\(q=A\cos\tau+B\sin\tau\)、\(x=\rho(A\cos\tau+B\sin\tau)\)。对应基本解
+\(u=\rho\cos\tau,\ v=\rho\sin\tau\) 自动满足原运动方程，且
 \[
-r(t)=r_*+(r_i-r_*)\cos(\omega_r t),\quad
-\dot r=-(r_i-r_*)\omega_r\sin(\omega_r t).
+W=u\dot v-\dot uv=\rho^2\dot\tau=1.
 \]
-只在轨道不穿越 \(r=0\) 的时间段适用；若碰到中心，必须指定碰撞/槽端模型。切向加速度 \(2\Omega\dot r\)，槽约束力 \(F_\varphi=2m\Omega\dot r\)。
-(4) 地面系能量
-\(E=\tfrac12m(\dot r^2+\Omega^2r^2)+\tfrac12k(r-r_0)^2\)。
-用径向方程求导得 \(\dot E=2m\Omega^2r\dot r=F_\varphi(\Omega r)\)。轴向角动量 \(L_z=m\Omega r^2\)，故 \(\dot L_z=2m\Omega r\dot r=rF_\varphi\)；精确恒等式 \(\dot E=\Omega\dot L_z\) 说明外驱动需做功。量纲均为功率，且 \(\Omega\to0\) 回到通常弹簧振子。
+它们线性独立，张成全部解空间，\(I=(A^2+B^2)/2\)。此时间重参数化把任意正频率允许的Pinney配对转化成单位频率振子。
+
+(3) 写 \(f=\rho^2=a^2\cos^2\omega_0t+b^2\sin^2\omega_0t\)。直接求导得
+\(\ddot\rho+\omega_0^2\rho=(ab\omega_0)^2/\rho^3=1/\rho^3\)。
+在正切函数的每一个连续分支上，
+\[
+\tau(t)=\operatorname{unwrap}\arctan[(b/a)\tan(\omega_0t)]
+\]
+且以 \(\tau(0)=0\) 并跨极点连续延拓；因为 \(ab\omega_0=1\)，其导数等于 \(1/\rho^2\)。初值给 \(A=x_0/a,\ B=av_0\)，因而
+\[
+x(t)=\rho(t)[(x_0/a)\cos\tau(t)+av_0\sin\tau(t)].
+\]
+同一初值问题唯一性说明它与通常的 \(x_0\cos\omega_0t+(v_0/\omega_0)\sin\omega_0t\) 恒等。
+
+(4) 对 \(H\) 微分并代入运动方程，
+\[
+\dot H=\dot x(\ddot x+\omega^2x)+\omega\dot\omega x^2
+=\omega\dot\omega x^2.
+\]
+映射矩阵为
+\(\begin{pmatrix}1/\rho&0\\-\dot\rho&\rho\end{pmatrix}\)，行列式恰为1，保持 \(dq\wedge dp=dx\wedge d\dot x\)。即使在恒频情况下，非平凡辅助解 \(a\ne b\) 的 \(I=(x_0/a)^2/2+(av_0)^2/2\) 也一般不等于机械能。若 \(a=b=1/\sqrt{\omega_0}\)，则 \(\rho\) 常数、\(I=H/\omega_0\)，成为自然的作用量归一化。

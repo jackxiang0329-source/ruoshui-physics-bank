@@ -1,18 +1,37 @@
-(1) 取焦面半径 \(r\)，小角 \(\theta\simeq r/f\)，\(x=ka\theta=2\pi a\theta/\lambda\)。Fraunhofer场为孔径积分
+(1) 行进光栅的两傅里叶谐波为 \(e^{\pm i(Kz-\Omega_at)}\)，故一阶衍射的选择规则是
 \[
-U(\theta)\propto\int_0^a \rho\,d\rho\int_0^{2\pi}e^{-ik\rho\theta\cos\phi}\,d\phi
-=2\pi\int_0^a \rho J_0(k\rho\theta)d\rho
-=\pi a^2{2J_1(x)\over x}.
+(\omega_1,k_{1z})=(\omega_0\pm\Omega_a,k_{0z}\pm K).
 \]
-故 \(I/I(0)=[2J_1(x)/x]^2\)，\(x\to0\) 用 \(J_1(x)\sim x/2\) 得1。
-(2) 第一暗环位于 \(J_1(x_1)=0\) 的最小正根 \(x_1\simeq3.83170597\)，因此
+选上转换 \(\omega_1=\omega_0+\Omega_a\)，准确Bragg匹配对应 \(\Delta=k_{1z}-k_{0z}-K=0\)；若光在晶体中的色散关系使 \(\Delta\ne0\)，沿传播长度的相对相位会失配。静态相位光栅不具有这样的必然频率偏移。
+
+(2) 引入 \(a=Ae^{-i\Delta z/2},\ b=Be^{i\Delta z/2}\)，得
 \[
-\theta_1={x_1\lambda\over2\pi a}\simeq1.21967{\lambda\over D},\quad D=2a.
+\frac d{dz}\binom A B
+=i\begin{pmatrix}\Delta/2&\kappa\\\kappa&-\Delta/2\end{pmatrix}\binom A B.
 \]
-用Rayleigh判据以一圆斑中心落在另一首暗环定义角分辨率，并非绝对信息论下界。
-(3) 轴对称焦平面能量权重为 \(x\,dx\)，归一化包围能量
+矩阵平方是 \(\nu^2 I\)，其中 \(\nu=\sqrt{\kappa^2+\Delta^2/4}\)，所以
+\(B(L)=i(\kappa/\nu)\sin(\nu L)\)。复相因子不改强度，因而
 \[
-\mathcal F(x)=1-J_0(x)^2-J_1(x)^2.
+\boxed{P(L,\Delta)=\frac{\kappa^2}{\kappa^2+\Delta^2/4}
+\sin^2[L\sqrt{\kappa^2+\Delta^2/4}]}.
 \]
-可由 \(d[J_0^2+J_1^2]/dx=-2J_1^2/x\) 积分证明（总权重为 \(\int_0^\infty 4J_1^2(x)dx/x=2\)）。第一暗环时 \(J_1(x_1)=0\)，所以 \(\mathcal F(x_1)=1-J_0(x_1)^2\simeq0.838\)。无穷远Bessel函数衰减到零，故 \(\mathcal F(\infty)=1\)。
-(4) 中心场正比孔径面积 \(A=\pi a^2\)，固定入射面强度时中心焦面强度正比 \(A^2/(\lambda f)^2\)，同时收集总功率正比 \(A\)；固定输入总功率时孔径面场强标度 \(A^{-1/2}\)，中心强度只正比 \(A/(\lambda f)^2\)。加权照明把 \(2J_1(x)/x\) 改成带权Hankel积分，可抑制旁瓣而扩大主瓣或改变透过功率。
+此解是无衰减双模耦合方程的精确矩阵指数结果，不是弱衍射的Born近似。
+
+(3) \(\Delta=0\) 时 \(P=\sin^2(\kappa L)\)，首次全转换长度
+\(L_c=\pi/(2\kappa)\)。若 \(\Delta\ne0\)，
+\(P\le\kappa^2/(\kappa^2+\Delta^2/4)<1\)。
+固定长度且 \(\kappa L\ll1\)，得
+\[
+P=(\kappa L)^2\operatorname{sinc}^2(\Delta L/2)+O((\kappa L)^4),
+\]
+主阶首零点 \(|\Delta|=2\pi/L\)；精确有限耦合的零点可以略有偏移。
+若 \(L=L_c\)，小失配展开为
+\(P=1-\Delta^2/(4\kappa^2)+O(\Delta^4/\kappa^4)\)，即首个效率损失为二次阶。
+
+(4) 将耦合方程与共轭方程相乘相加，可得
+\(\frac d{dz}(|a|^2+|b|^2)=0\)，故其值始终为1。
+若每秒入射光子数 \(\dot N\)，上转换级和未衍射级光功率分别是
+\(\hbar(\omega_0+\Omega_a)\dot N P\) 与
+\(\hbar\omega_0\dot N(1-P)\)；其和比入射光功率多
+\(\hbar\Omega_a\dot N P\)，恰从声波泵浦提取。
+光子通量守恒不等于光功率守恒；此双模模型要求声泵足够强、其他衍射级失谐以及光学损耗可忽略。

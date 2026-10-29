@@ -1,23 +1,37 @@
-(1) 机器内部可逆意味着 \(\dot Q_h/T_1=\dot Q_c/T_2\)。代入热导律得到
+(1) 定常方程 \(\theta''+\delta e^\theta=0\)。对偶解有 \(\theta'(0)=0\)，由自治常微分方程初值唯一性，正解写成
 \[
-{T_h\over T_1}+{T_c\over T_2}=2,\quad
-P=\dot Q_h-\dot Q_c=\dot Q_h(1-T_2/T_1).
+\theta_a(x)=2\ln\frac{\cosh a}{\cosh(ax)},\quad a>0.
 \]
-(2) 定义 \(r=T_2/T_1\in(T_c/T_h,1)\)。约束给
-\(T_1=(T_h+T_c/r)/2,\ T_2=(rT_h+T_c)/2\)。于是
+直接求导得 \(\theta_a''=-2a^2\operatorname{sech}^2(ax)\)，且
+\(e^{\theta_a}=\cosh^2 a\,\operatorname{sech}^2(ax)\)，因此
 \[
-P(r)={K\over2}[T_h+T_c-T_hr-T_c/r].
+\delta(a)=2a^2\operatorname{sech}^2a.
 \]
-\(P'(r)=K(-T_h+T_c/r^2)/2\)，\(P''(r)=-KT_c/r^3<0\)，唯一最优 \(r_*=\sqrt{T_c/T_h}\)。写 \(s=\sqrt{T_hT_c}\)，则
+该解在 \(x=\pm1\) 均为0，内部严格为正。任意给定正中心值的解由初值唯一性落在此族之内。
+
+(2) 对函数求导：
 \[
-T_{1*}=(T_h+s)/2,\quad T_{2*}=(T_c+s)/2,
-\quad P_{\max}={K\over2}(\sqrt{T_h}-\sqrt{T_c})^2,
-\quad\eta_*=1-\sqrt{T_c/T_h}.
+\delta'(a)=4a\operatorname{sech}^2a(1-a\tanh a).
 \]
-(3) 两接触界面分别产生 \(\dot S_{h}=\dot Q_h(1/T_1-1/T_h)>0\)、
-\(\dot S_c=\dot Q_c(1/T_c-1/T_2)>0\)。内机熵流相抵，整体
+由于 \(a\tanh a\) 严格递增，唯一临界 \(a_c\tanh a_c=1\)；热爆炸阈值
+\(\delta_c=2a_c^2\operatorname{sech}^2a_c\)。
+\(0<\delta<\delta_c\) 有低温/高温两支，等号只有一支，超过则无正稳态。小 \(a\) 时 \(\delta=2a^2-2a^4+O(a^6)\)，大 \(a\) 时 \(\delta\sim8a^2e^{-2a}\)。过强的指数放热不能在固定边界温度下取得定常平衡。
+
+(3) 线性扰动 \(v(x)e^{\lambda t}\) 满足
 \[
-\dot S_\mathrm{gen}=\dot Q_c/T_c-\dot Q_h/T_h>0
+\lambda v=v''+\delta(a)e^{\theta_a}v,\qquad v(\pm1)=0.
 \]
-由两项之和保证非负。传热存在有限温差，是外部不可逆的来源。
-(4) \(K\to0\) 时 \(P_{\max}\to0\)；\(T_h\to T_c\) 时 \(P_{\max}\sim K(T_h-T_c)^2/(8T_h)\to0\)。若 \(T_1=T_2\)，内部可逆热机效率0且不能输出正功。Carnot效率 \(1-T_c/T_h\) 大于 \(1-\sqrt{T_c/T_h}\)，因为最大功率选择了有限接触温差，不是准静态可逆的零功率极限。
+设 \(L=-\partial_{xx}-\delta e^{\theta_a}\)；取
+\(w=\partial_a\theta_a=2[\tanh a-x\tanh(ax)]\)，它在内部严格正且两端为0。对定常式微分可得
+\(Lw=\delta'(a)e^{\theta_a}\)。
+在临界 \(a_c\) 有严格正的零本征函数，故首特征值为0；低温分支 \(\delta'(a)>0\)，由正超解的Sturm比较原理首特征值严格为正，故增长率均负。高温分支 \(\delta'<0\)，以 \(w\) 为Rayleigh试验函数给 \(\langle w,Lw\rangle<0\)，故至少有一个 \(\lambda>0\) 的失稳模。
+
+(4) 将方程在 \([-1,1]\) 上积分，
+\[
+\frac d{dt}\int_{-1}^1\theta dx
+=\theta_x(1)-\theta_x(-1)+\delta\int_{-1}^1e^\theta dx.
+\]
+定常时壁面净导出热量 \(4a\tanh a\)；源项积分为
+\(\delta\cosh^2a\int_{-1}^1\operatorname{sech}^2(ax)dx
+=2a^2(2\tanh a/a)=4a\tanh a\)，严格匹配。小 \(a\) 时
+\(\theta_a(x)=a^2(1-x^2)+O(a^4)\)，于是中心温升 \(\delta/2+O(\delta^2)\)，单侧壁面温度梯度模为 \(\delta+O(\delta^2)\)，吻合线性热传导近似。

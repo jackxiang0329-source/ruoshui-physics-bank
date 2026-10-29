@@ -1,24 +1,43 @@
-(1) 电化学平衡给 \(n_\pm=n_\infty e^{\mp e\phi/(k_BT)}\)，体电荷密度 \(\rho_e=e(n_+-n_-)=-2en_\infty\sinh(e\phi/k_BT)\)，所以
+(1) 本构由直接微分得
 \[
-\phi''={2en_\infty\over\epsilon}\sinh(e\phi/k_BT),\quad
-\kappa^2={2e^2n_\infty\over\epsilon k_BT}.
+\mathbf D=\frac{\varepsilon_0\mathbf E}{\sqrt{1-E^2/E_*^2}},
+\quad \mathbf E=\frac{\mathbf D/\varepsilon_0}{\sqrt{1+D^2/(\varepsilon_0 E_*)^2}}.
 \]
-弱势满足 \(\phi''=\kappa^2\phi\)，Debye长度为 \(\lambda_D=1/\kappa\)。
-(2) 乘 \(\phi'\) 并使用 \(\phi,\phi'\to0\)（\(x\to\infty\)）积分，得
+点电荷的自由通量满足 \(D_r=q/(4\pi r^2)\)。定义
+\(r_c^2=q/(4\pi\varepsilon_0E_*)\)，则
 \[
-(\phi')^2={4n_\infty k_BT\over\epsilon}
-[\cosh(e\phi/k_BT)-1]
-={8n_\infty k_BT\over\epsilon}\sinh^2(e\phi/(2k_BT)).
+E_r=\frac{E_*}{\sqrt{1+(r/r_c)^4}}.
 \]
-选择衰减支 \(\phi'=-(2\kappa k_BT/e)\sinh(e\phi/(2k_BT))\)，积分得
+\(r=0\) 处 \(E_r\to E_*\)，但 \(D_r\to\infty\)，这没有违反Gauss定律，因为它作用于电位移而不是线性Maxwell式中的电场。
+
+(2) 因 \(E_r=-d\Phi/dr\)，
 \[
-\tanh[e\phi(x)/(4k_BT)]=\tanh[e\phi_0/(4k_BT)]e^{-\kappa x},
-\quad E=-\phi'.
+\Phi(r)=E_*r_c\int_{r/r_c}^\infty\frac{du}{\sqrt{1+u^4}}.
 \]
-(3) 电极表面自由电荷由边界法向通量 \(\sigma_s=\epsilon E(0^+)\) 给
+Beta代换 \(u^4=t/(1-t)\) 给
 \[
-\sigma_s={2\epsilon\kappa k_BT\over e}\sinh(e\phi_0/(2k_BT)),\quad
-C_\mathrm{diff}={d\sigma_s\over d\phi_0}=\epsilon\kappa\cosh(e\phi_0/(2k_BT)).
+J=\int_0^\infty(1+u^4)^{-1/2}du
+=\frac14B(1/4,1/4)=\frac{\Gamma(1/4)^2}{4\sqrt\pi},
+\quad \Phi(0)=E_*r_cJ<\infty.
 \]
-弱势 \(\sigma_s\sim\epsilon\kappa\phi_0\)、\(C_\mathrm{diff}\to\epsilon\kappa\)。
-(4) 超额局部理想渗透压 \(k_BT(n_++n_--2n_\infty)=2n_\infty k_BT[\cosh(e\phi/k_BT)-1]\)，由第一积分恰为 \(\epsilon E^2/2\)。正反离子积聚压力与电场应力相平衡。高浓度排斥体积、强电荷关联、电介质饱和与有限电极尺寸均违反点离子平均场假定。
+远区 \(E_r=E_*(r_c/r)^2[1-\tfrac12(r_c/r)^4+O((r_c/r)^8)]\)，由于 \(E_*r_c^2=q/(4\pi\varepsilon_0)\)，首项恰为Coulomb电场。
+
+(3) Legendre能量密度为
+\[
+\mathcal H=\varepsilon_0 E_*^2[\sqrt{1+(r_c/r)^4}-1].
+\]
+因此
+\[
+U=4\pi\varepsilon_0E_*^2r_c^3 K,\quad
+K=\int_0^\infty[\sqrt{u^4+1}-u^2]du.
+\]
+令 \(F(\alpha)=\int_0^\infty[\sqrt{u^4+\alpha}-u^2]du\)；有
+\(F(0)=0,\ F'(\alpha)=J\alpha^{-1/4}/2\)，故
+\(K=F(1)=2J/3=\Gamma(1/4)^2/(6\sqrt\pi)\)。
+在中心 \(\mathcal H\sim\varepsilon_0E_*^2r_c^2/r^2\)，乘体积元 \(4\pi r^2dr\) 后局部可积；Maxwell点电荷 \(E^2\sim r^{-4}\) 则不可积。
+
+(4) 因 \(r_c\propto q^{1/2}\)，自能 \(U\propto q^{3/2}\)，于是
+\[
+\frac{dU}{dq}=\frac{3U}{2q}=E_*r_cJ=\Phi(0).
+\]
+亦可从准静态充电功 \(\int_0^q\Phi(0;q')dq'\) 核验。若 \(r\gg r_c\)，恢复普通Coulomb场；若固定 \(q\) 而 \(E_*\to\infty\)，尽管 \(r_c\to0\)，\(U\propto E_*^{1/2}\to\infty\)，Maxwell点源奇性因而重新出现。
