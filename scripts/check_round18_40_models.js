@@ -13,8 +13,8 @@ const d2=(f,x,h=1e-4)=>(f(x+h)-2*f(x)+f(x-h))/(h*h);
 const sim=(f,a,b,n=4000)=>{let h=(b-a)/n,s=f(a)+f(b);for(let i=1;i<n;i++)s+=(i%2?4:2)*f(a+h*i);return s*h/3};
 // Mechanics 109-115
 {
- const a=2,b=3.5,J=.8,R=.2,g=9.8,acc=(b-a)*g/(a+b+J/R**2),T1=a*(g+acc),T2=b*(g-acc);
- check('M109','Atwood_pulley_angular_momentum_equation',(T2-T1)*R,J*acc/R);
+ const m=1.8,L=2.3,g=9.8,t0=.87,t=Math.asin(2*Math.sin(t0)/3);const w2=3*g*(Math.sin(t0)-Math.sin(t))/L;const dd=-3*g*Math.cos(t)/(2*L);const reaction=-m*L*(Math.cos(t)*w2+Math.sin(t)*dd)/2;
+ check('M109','sliding_rod_wall_contact_detachment_threshold',reaction,0,2e-12);
 }
 {
  const M=2.7,m=1.3,alpha=.6,g=9.8,acc=g*Math.sin(alpha)*(M+m)/(M+m*Math.sin(alpha)**2),Xacc=-m*Math.cos(alpha)*acc/(M+m);
@@ -44,8 +44,8 @@ const sim=(f,a,b,n=4000)=>{let h=(b-a)/n,s=f(a)+f(b);for(let i=1;i<n;i++)s+=(i%2
 }
 // EM 109-115
 {
- const e1=3.4,e2=1.5,E0=1.2,a=1.8,Ein=3*e2*E0/(e1+2*e2),B=a**3*E0*(e1-e2)/(e1+2*e2);
- check('E109','dielectric_sphere_normal_displacement_boundary',e1*Ein,e2*(E0+2*B/a**3));
+ const mu=2.1,N=34,h=.75,a=1.3,b=2.9,s=.8,I=1.9;const G=((b/a)**s-1)/s;const ind=mu*N*N*h*G/(2*P);const energy=sim(r=>.5*(mu*(r/a)**s)*(N*I/(2*P*r))**2*(2*P*r*h),a,b,4000);
+ check('E109','graded_toroid_magnetic_energy_matches_self_inductance',energy,.5*ind*I*I,1e-10);
 }
 {
  const w=3.2,mu=2.1,sigma=5.2,delta=Math.sqrt(2/(w*mu*sigma)),Rs=Math.sqrt(w*mu/(2*sigma));
@@ -80,8 +80,8 @@ const sim=(f,a,b,n=4000)=>{let h=(b-a)/n,s=f(a)+f(b);for(let i=1;i<n;i++)s+=(i%2
  check('T102','quartic_canonical_partition_virial_energy',V,T/4,2e-9);
 }
 {
- const g=9.8,M=.03,Cp=29,dTdz=-M*g/Cp;
- check('T103','dry_adiabatic_lapse_and_entropy',Cp*dTdz,-M*g);
+ const E=2.5,A=1.3,L=1.8,alpha=.02,dT=3.4,k=4.2,K=E*A/L,delta=alpha*L*dT,u=K*delta/(K+k),pot=x=>K*(x-delta)**2/2+k*x*x/2;
+ check('T103','thermoelastic_rod_spring_stationary_total_energy',d(pot,u),0,1e-10);
 }
 {
  const nw=1000,ns=1,R=8.3,T=300,v=.018,Pi=-R*T/v*Math.log(nw/(nw+ns));
@@ -106,9 +106,8 @@ const sim=(f,a,b,n=4000)=>{let h=(b-a)/n,s=f(a)+f(b);for(let i=1;i<n;i++)s+=(i%2
 }
 // Waves 102-108
 {
- const mass=1.3,b=.7,w=2.1,A=.8,L=2.4;
- const damp=b*L*w*w*A*A/4;const forcing=b*w*A,source=forcing*L*w*A/4;
- check('W102','driven_damped_string_average_power',damp,source);
+ const m=3,Om=.8,om0=2.9;const plus=om0+m*Om,minus=om0-m*Om;
+ check('W102','rotating_membrane_angular_Doppler_splitting',plus-minus,2*m*Om);
 }
 {
  const c=3.1,U=.7,w=2.3,wr=w*(c-U)/(c+U);
@@ -145,9 +144,8 @@ const sim=(f,a,b,n=4000)=>{let h=(b-a)/n,s=f(a)+f(b);for(let i=1;i<n;i++)s+=(i%2
  check('O103','Purcell_weak_cavity_decay_vs_exact_coupled_eigenvalue',exact,bad_cavity,1e-7);
 }
 {
- const kz=1.5,kappa=.8,d=.6,C=(kz*kz+kappa*kappa)**2/(4*kz*kz*kappa*kappa);
- const trans=1/(1+C*Math.sinh(kappa*d)**2);
- check('O104','frustrated_TIR_transmission_passivity',Math.max(0,trans-1),0);
+ const L=1.9,c=3.2,nu=(q,m,n)=>c*(q+(m+n+1)/2)/(2*L);
+ check('O104','confocal_Gouy_transverse_longitudinal_degeneracy',nu(8,0,0),nu(7,2,0));
 }
 {
  const tau=1.3,beta2=.8,L=2.1,expected=tau*Math.sqrt(1+(beta2*L/tau**2)**2);
@@ -163,9 +161,8 @@ const sim=(f,a,b,n=4000)=>{let h=(b-a)/n,s=f(a)+f(b);for(let i=1;i<n;i++)s+=(i%2
 }
 // Quantum 102-107
 {
- const c2=1/Math.sqrt(2);let p=c2*c2;
- for(let n=1;n<=1501;n+=2){const c=4*Math.SQRT2*Math.sin(n*P/2)/(P*(4-n*n));p+=c*c}
- check('Q102','sudden_box_expansion_eigenbasis_normalization',p,1,1e-8);
+ const N=9,L=3.2,m=1.7,hbar=1;let sum=0;for(let j=-(N-1)/2;j<=(N-1)/2;j++)sum+=hbar*hbar*(2*P*j/L)**2/(2*m);
+ check('Q102','Tonks_Girardeau_Fermi_mapping_ground_state_energy',sum,P*P*hbar*hbar*N*(N*N-1)/(6*m*L*L));
 }
 {
  const nbar=.7;let ps=0,factor=Math.exp(-nbar);
