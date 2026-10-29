@@ -1,0 +1,14 @@
+name: Round 15 replacement subset QA
+on:
+  push:
+    branches: [physics-round15-50-work]
+  workflow_dispatch:
+jobs:
+  subset-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify eight replacement model assertions
+        run: node scripts/check_round15_replacements.js
+      - name: Declare incomplete release gate
+        run: echo "8/200 model checks only; 39 other overlapping cores remain. This workflow does not release the round."

@@ -1,0 +1,98 @@
+{
+  "round": 15,
+  "model_replacements": [
+    "T080",
+    "E087"
+  ],
+  "checked_subparts": 8,
+  "required_full_round_checks": 200,
+  "full_round_pass": false,
+  "independent_expert_review": "待独立复核",
+  "status": "SUBSET_MODEL_TESTS_ONLY_DO_NOT_RELEASE",
+  "tests": [
+    {
+      "id": "T080",
+      "part": 1,
+      "method": "independent_numerical",
+      "name": "Finite-difference spherical diffusion-reaction residual",
+      "passed": true,
+      "numerical_error": 2.2054197135190634e-8,
+      "tolerance": 0.000002,
+      "details": "Three interior radial points; regular center handled analytically"
+    },
+    {
+      "id": "T080",
+      "part": 2,
+      "method": "conservation",
+      "name": "Surface diffusive flux versus independent volume reaction integral and Thiele factor",
+      "passed": true,
+      "numerical_error": 3.552713678800501e-15,
+      "tolerance": 3e-10,
+      "details": "Independent Simpson volume quadrature"
+    },
+    {
+      "id": "T080",
+      "part": 3,
+      "method": "spectral",
+      "name": "Dirichlet first radial mode satisfies time-dependent transformed PDE",
+      "passed": true,
+      "numerical_error": 6.695269366696621e-9,
+      "tolerance": 0.000002,
+      "details": "Central differences in time and radial coordinate"
+    },
+    {
+      "id": "T080",
+      "part": 4,
+      "method": "energy_boundary",
+      "name": "Lyapunov derivative agrees with independently integrated diffusion and reaction losses",
+      "passed": true,
+      "numerical_error": 8.312570770607763e-9,
+      "tolerance": 2e-7,
+      "details": "Independent radial gradients and quadratures, not a restated exponential identity"
+    },
+    {
+      "id": "E087",
+      "part": 1,
+      "method": "independent_derivation",
+      "name": "Longitudinal dielectric relation evaluated on the polynomial mode",
+      "passed": true,
+      "numerical_error": 1.1102230246251565e-16,
+      "tolerance": 5e-13,
+      "details": "Two-stream rational susceptibility computed independently of polynomial"
+    },
+    {
+      "id": "E087",
+      "part": 2,
+      "method": "symbolic_limit",
+      "name": "Both exact roots satisfy quartic and instability changes sign at a=wp",
+      "passed": true,
+      "numerical_error": 2.031275576516952e-15,
+      "tolerance": 4e-13,
+      "details": "Roots checked at two unstable and one stable wavenumber"
+    },
+    {
+      "id": "E087",
+      "part": 3,
+      "method": "optimization",
+      "name": "Numerical golden-section growth maximum versus derivative-derived extremum",
+      "passed": true,
+      "numerical_error": 6.261165763632448e-8,
+      "tolerance": 1e-7,
+      "details": "Direct 1D optimization over 0 < k^2 v0^2 < wp^2"
+    },
+    {
+      "id": "E087",
+      "part": 4,
+      "method": "energy_flux",
+      "name": "Local quadratic field-plus-fluid energy exchange evaluated by independent finite differences",
+      "passed": true,
+      "numerical_error": 2.0683610379990114e-10,
+      "tolerance": 2e-8,
+      "details": "Three space-time points; asymmetric beam currents included"
+    }
+  ],
+  "execution_evidence": "Executed in JS V8 during authoring and saved as a reproducible Node.js script",
+  "scope_limits": "Verifies eight analytical mathematical claims; does not verify 48 other candidates, source-to-mirror synchronization, historical semantic originality or XeLaTeX PDFs",
+  "source_branch": "physics-round15-50-work",
+  "editorial_does_not_override_global_overlap_audit": true
+}
