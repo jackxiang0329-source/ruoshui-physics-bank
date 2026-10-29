@@ -1,0 +1,27 @@
+(1) 置 \(A=V-\Delta\cos2\theta,\ B=\Delta\sin2\theta\)，则 \(H=(A\sigma_z+B\sigma_x)/2\)。由 \(H^2=(A^2+B^2)I/4\)，
+\[
+\lambda_\pm=\pm\Omega_m/2,\quad
+\Omega_m=\sqrt{A^2+B^2},\quad
+\sin2\theta_m=\frac B{\Omega_m},\quad
+\cos2\theta_m=\frac{\Delta\cos2\theta-V}{\Omega_m}.
+\]
+混合角按标准真空极限定义，\(\Omega_m\) 在 \(V=\Delta\cos2\theta\) 取最小 \(\Delta\sin2\theta>0\)。
+(2) 对恒定 \(V\)，利用 \(U(L)=\cos(\Omega_m L/2)I-2iH\sin(\Omega_m L/2)/\Omega_m\)，得到
+\[
+P_{e\to x}=\frac{B^2}{A^2+B^2}\sin^2(\Omega_m L/2),\quad P_{ee}=1-P_{e\to x}.
+\]
+在 \(V_{\rm res}=\Delta\cos2\theta\) 时振幅为1；按振幅降至半峰定义共振宽度 \(\Delta V_{\rm FWHM}=2B=2\Delta\sin2\theta\)。真空 \(V=0\) 时 \(\Omega_m=\Delta\)、\(P_{e\to x}=\sin^22\theta\sin^2(\Delta L/2)\)。
+(3) 令 \(2\theta_m=\operatorname{atan2}(B,\Delta\cos2\theta-V)\)，微分得
+\[
+\theta'_m=\frac{B V'}{2[(\Delta\cos2\theta-V)^2+B^2]}.
+\]
+在瞬时本征基的非绝热耦合为 \(|\theta'_m|\)，相对于能隙 \(\Omega_m\) 的绝热条件为 \(|\theta'_m|\ll\Omega_m\)。线性穿越 \(A\simeq v(x-x_{\rm res})\)，标准二能级精确渐近Landau–Zener跳跃率为
+\[
+P_{\rm LZ}=\exp\!\left(-\frac{\pi B^2}{2|v|}\right)
+\]
+（要求线性势近似延伸至足够远且 \(B\) 近似常量）。高正势处 \(\nu_e\) 为上能支；若绝热到真空，则上支的 \(\nu_e\) 权重为 \(\sin^2\theta\)，跳至下支时为 \(\cos^2\theta\)。故
+\[
+P_{ee}^{\rm exit}\simeq(1-P_{\rm LZ})\sin^2\theta+P_{\rm LZ}\cos^2\theta
+\]
+（末端若保持相干，可能有额外相位交叉项，故题设略去）。
+(4) \(H^\dagger=H\) 导致 \(\partial_x(\Psi^\dagger\Psi)=i\Psi^\dagger(H-H^\dagger)\Psi=0\)，因而 \(P_{ee}+P_{e\to x}=1\)。反中微子在同一物质中 \(V\to -V\)，对固定 \(\Delta>0,\cos2\theta>0,V\ge0\) 不出现同一正势共振；若质量有序或有效势改变则需重估符号。令 \(\theta\to0\)，\(B\to0\) 最小能隙闭合，穿越点不能保证绝热，不能仅凭慢变势推出完全味转化。

@@ -1,0 +1,26 @@
+(1) 一定容平均温度模型能量守恒为
+\[
+C\dot T=Q_0e^{-E/(RT)}-H(T-T_a).
+\]
+令 \(A=E/(RT_a^2)\)，取 \(1/T=1/T_a-(T-T_a)/T_a^2+O((T-T_a)^2)\)，则 \(e^{-E/(RT)}\simeq e^{-E/(RT_a)}e^{A(T-T_a)}\)。
+\[
+{d\theta\over d\tau}=\delta e^\theta-\theta,\qquad
+\delta={AQ_0\over H}e^{-E/(RT_a)}.
+\]
+\(\delta\) 无量纲，时间单位 \(C/H\)。
+(2) 平衡条件 \(\theta e^{-\theta}=\delta\)。函数左端在 \(\theta=1\) 最大 \(1/e\)。当 \(0<\delta<1/e\)，有两根
+\[
+\theta_-=-W_0(-\delta)\in(0,1),\qquad
+\theta_+=-W_{-1}(-\delta)>1.
+\]
+在 \(\delta_c=1/e\) 合并为 \(\theta_c=1\)，是鞍结点。令 \(\theta=1+s\)，则 \(\theta e^{-\theta}=e^{-1}[1-s^2/2+O(s^3)]\)，所以 \(s_\pm\simeq\pm\sqrt{2(1-e\delta)}\)，分裂指数 \(1/2\)。
+(3) \(f'(\theta_e)=\delta e^{\theta_e}-1=\theta_e-1\)；低支渐近稳定，时间常数 \(t_{\rm relax}=C/[H(1-\theta_-)]\)，高支不稳定，扰动指数增长率 \(H(\theta_+-1)/C\)。从 \(\theta(0)>\theta_+\) 出发 \(f>0\)，温度持续上升；从低支邻域则回到低支。在 \(\delta>1/e\) 时 \(f(\theta)>0\) 对任意 \(\theta\ge0\)。取足够大的 \(\theta_*\) 使 \(\theta\le(\delta/2)e^\theta\)，则 \(f(\theta)\ge(\delta/2)e^\theta\) 在 \(\theta\ge\theta_*\)，因此剩余时间
+\[
+\Delta\tau\le\int_{\theta_*}^\infty{2e^{-\theta}\over\delta}d\theta={2e^{-\theta_*}\over\delta}<\infty.
+\]
+这只是指数近似模型的数学爆发。
+(4) 定义 \(U(\theta)=\theta^2/2-\delta e^\theta\)，则 \(\theta'=-U'(\theta)\)，
+\[
+{dU\over d\tau}=-(\theta')^2\le0.
+\]
+低支 \(U''=1-\theta_->0\) 为局部极小，高支为极大。该 \(U\) 是动力系统势函数，不是热力学内能。原始放热率满足 \(Q_0 e^{-E/(RT)}<Q_0\) 对 \(T>0\)，所以一旦 \(T>T_a+Q_0/H\)，有 \(\dot T<0\)，温度不可能向 \(+\infty\) 爆发；线性化的 \(\theta\) 太大时失效。

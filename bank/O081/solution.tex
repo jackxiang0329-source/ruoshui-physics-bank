@@ -1,0 +1,29 @@
+(1) 将 \(\psi=\sqrt I e^{i\phi}\) 代入傍轴方程并将方程乘以 \(\psi^*\)，再减去其复共轭，得到
+\[
+\partial_z I=-\frac1k\nabla_\perp\cdot(I\nabla_\perp\phi),\qquad
+\boldsymbol J_\perp=\frac I k\nabla_\perp\phi.
+\]
+对横向平面积分，边界流为零则 \(d\int I\,d^2r/dz=0\)。
+(2) \(\nabla_\perp\phi=a\boldsymbol r_\perp\)，而 \(\nabla_\perp\cdot(Ia\boldsymbol r_\perp)=a(2-2r^2/w^2)I\)。因此
+\[
+\partial_z I=-\frac{2a}{k}\left(1-\frac{r^2}{w^2}\right)I,\quad
+a=-\frac{k}{2I_0}(\partial_zI)_{r=0}.
+\]
+TIE只含梯度，\(\phi_0\) 无法由强度传播确定。
+(3) Fresnel传播对Gaussian保持复Gaussian形状，定义 \(z_R=kw_0^2\)，则
+\[
+w(z)=w_0\sqrt{1+(z/z_R)^2},\quad
+a(z)=\frac{kz}{z^2+z_R^2}=\frac{k w'}{w}.
+\]
+传播场可写为 \(\psi=A_0(w_0/w)\exp[-r^2/(2w^2)+ia(z)r^2/2-i\arctan(z/z_R)]\)（Gouy相位可按整体符号约定）；直接核验可用
+\[
+\partial_z\ln I=-2\frac{w'}w+2\frac{w'}w\frac{r^2}{w^2}
+=-\frac{2a}{k}\left(1-\frac{r^2}{w^2}\right).
+\]
+横向总功率 \(\int I\,d^2r=\pi|A_0|^2w_0^2\) 恒定；远场半径 \(w\sim |z|/(kw_0)\)，角宽 \(1/(kw_0)\)。
+(4) 若 \(\phi_1,\phi_2\) 给出同一 \(\partial_zI\) 及同一 \(I\partial_n\phi\)，令 \(f=\phi_1-\phi_2\)，则 \(\nabla\cdot(I\nabla f)=0\)、\(I\partial_nf=0\)。乘以 \(f\) 后积分分部，
+\[
+0=\int_\Omega f\nabla\cdot(I\nabla f)\,d^2r
+=-\int_\Omega I|\nabla f|^2d^2r,
+\]
+所以 \(f\) 为常数（要求区域连通且 \(I>0\)）。强度节点使相位无法在节点定义，可能存在整数绕数；以 \([I(z+\Delta z)-I(z-\Delta z)]/(2\Delta z)\) 近似纵向导数的截断误差为 \(O(\Delta z^2)\)，噪声反演还需正则化。
