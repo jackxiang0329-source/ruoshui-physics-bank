@@ -1,0 +1,45 @@
+name: Round 19 forty-problem draft source, model and PDF QA
+on:
+  push:
+    branches: [physics-round19-40-draft]
+  workflow_dispatch:
+jobs:
+  source-and-model:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check 40 new source triples and historical title similarity
+        run: node scripts/check_round19_40_draft.js > round19-source-report.json
+      - name: Execute numerical and analytical model checks for all 40
+        run: node scripts/check_round19_40_models.js > round19-model-report.json
+      - name: Validate round manifest and audit
+        run: |
+          python3 -m json.tool data/rounds/round19-inprogress.json >/dev/null
+          python3 -m json.tool data/rounds/round19-core-model-audit.json >/dev/null
+      - uses: actions/upload-artifact@v4
+        with:
+          name: round19-draft-source-model-qa
+          path: |
+            round19-source-report.json
+            round19-model-report.json
+  draft-pdf:
+    needs: source-and-model
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install XeLaTeX and Chinese typesetting
+        run: |
+          sudo apt-get update -qq
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends texlive-xetex texlive-lang-chinese fonts-noto-cjk
+      - name: Generate two draft-only books
+        run: node scripts/build_round19_draft.js
+      - name: Compile questions and worked solutions
+        run: |
+          xelatex -interaction=nonstopmode -halt-on-error -output-directory=build/round19 build/round19/round19-questions.tex
+          xelatex -interaction=nonstopmode -halt-on-error -output-directory=build/round19 build/round19/round19-solutions.tex
+      - uses: actions/upload-artifact@v4
+        with:
+          name: round19-draft-two-pdfs
+          path: |
+            build/round19/round19-questions.pdf
+            build/round19/round19-solutions.pdf

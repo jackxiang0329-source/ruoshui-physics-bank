@@ -1,0 +1,250 @@
+{
+  "round": 19,
+  "date": "2026-10-29",
+  "source_branch": "physics-round19-40-draft",
+  "reference_branches": [
+    "main",
+    "physics-round16-40-draft",
+    "physics-round17-40-draft",
+    "physics-round18-40-draft"
+  ],
+  "method": "manual model-family triage against 452 main catalog titles and draft models; automated exact-title and bigram screening runs in CI; NOT complete independent semantic audit",
+  "round18_existing_blockers": {
+    "confirmed_strong_core_risks": 21,
+    "related_model_reviews": 5,
+    "source": "data/rounds/round18-core-model-audit.json",
+    "unresolved": true
+  },
+  "new_ids": [
+    "M116",
+    "M117",
+    "M118",
+    "M119",
+    "M120",
+    "M121",
+    "M122",
+    "E116",
+    "E117",
+    "E118",
+    "E119",
+    "E120",
+    "E121",
+    "E122",
+    "T109",
+    "T110",
+    "T111",
+    "T112",
+    "T113",
+    "T114",
+    "T115",
+    "W109",
+    "W110",
+    "W111",
+    "W112",
+    "W113",
+    "W114",
+    "W115",
+    "O108",
+    "O109",
+    "O110",
+    "O111",
+    "O112",
+    "O113",
+    "Q108",
+    "Q109",
+    "Q110",
+    "Q111",
+    "Q112",
+    "Q113"
+  ],
+  "provisional_related_model_families": [
+    {
+      "id": "M119",
+      "prior": [
+        "M070"
+      ],
+      "why": "both involve gravitational multipoles; nodal precession vs attitude torque"
+    },
+    {
+      "id": "M120",
+      "prior": [
+        "M047"
+      ],
+      "why": "rolling mechanics family; sliding-spin transition vs incline traction"
+    },
+    {
+      "id": "M121",
+      "prior": [
+        "M051"
+      ],
+      "why": "coupled modes family; rigid rod translation/rotation vs point masses"
+    },
+    {
+      "id": "M122",
+      "prior": [
+        "M070"
+      ],
+      "why": "tidal gravity family; self-gravity disruption vs attitude locking"
+    },
+    {
+      "id": "E117",
+      "prior": [
+        "E011"
+      ],
+      "why": "radially graded volume charge; cylindrical grounded geometry vs dielectric sphere"
+    },
+    {
+      "id": "E118",
+      "prior": [
+        "E046"
+      ],
+      "why": "magnetic trapping family; nonzero-bias neutral atom vs charged magnetic mirror"
+    },
+    {
+      "id": "T109",
+      "prior": [
+        "T103"
+      ],
+      "why": "thermal stress family; free bimetal bending vs rod-spring constraint"
+    },
+    {
+      "id": "T111",
+      "prior": [
+        "M074"
+      ],
+      "why": "Couette shear family; viscous heating/entropy vs cylindrical flow torque"
+    },
+    {
+      "id": "T112",
+      "prior": [
+        "T014"
+      ],
+      "why": "Clapeyron coexistence family; constant delta-V heat-capacity correction vs ideal vapor"
+    },
+    {
+      "id": "T113",
+      "prior": [
+        "W098"
+      ],
+      "why": "harmonic chain family; equilibrium covariance vs normal-mode propagation"
+    },
+    {
+      "id": "T115",
+      "prior": [
+        "T041"
+      ],
+      "why": "thermodynamic cycle family; Brayton recuperation vs Otto cycle"
+    },
+    {
+      "id": "W109",
+      "prior": [
+        "W039"
+      ],
+      "why": "time-dependent wave family; abrupt time interface vs parametric resonance"
+    },
+    {
+      "id": "W111",
+      "prior": [
+        "M072"
+      ],
+      "why": "bubble dynamics family; linear gas-bubble resonance vs collapse"
+    },
+    {
+      "id": "W112",
+      "prior": [
+        "W076"
+      ],
+      "why": "viscoelastic wave family; Maxwell fluid vs Kelvin-Voigt solid"
+    },
+    {
+      "id": "W113",
+      "prior": [
+        "W103"
+      ],
+      "why": "Doppler family; thermal ensemble broadening vs moving wall reflection"
+    },
+    {
+      "id": "W114",
+      "prior": [
+        "W031"
+      ],
+      "why": "membrane family; anisotropic tension splitting vs isotropic rectangular spectrum"
+    },
+    {
+      "id": "O108",
+      "prior": [
+        "O059",
+        "O065"
+      ],
+      "why": "orbital angular momentum family; fork interference vs q-plate/Bessel beam"
+    },
+    {
+      "id": "O110",
+      "prior": [
+        "O050"
+      ],
+      "why": "optical cavity family; time-domain absorption ringdown vs steady Airy transmission"
+    },
+    {
+      "id": "O111",
+      "prior": [
+        "O035"
+      ],
+      "why": "optical Doppler family; particle fringe crossing vs moving interferometer mirror"
+    },
+    {
+      "id": "O112",
+      "prior": [
+        "O043"
+      ],
+      "why": "circular diffraction family; Fresnel disk on-axis Poisson spot vs far-field obscured pupil"
+    },
+    {
+      "id": "O113",
+      "prior": [
+        "O103"
+      ],
+      "why": "single emitter family; incoherent antibunching vs Purcell cavity enhancement"
+    },
+    {
+      "id": "Q108",
+      "prior": [
+        "Q071"
+      ],
+      "why": "coherent electron transport family; QPC conductance step vs Fano dot resonance"
+    },
+    {
+      "id": "Q110",
+      "prior": [
+        "Q034"
+      ],
+      "why": "neutron gravity quantum family; path phase vs Airy bound states"
+    },
+    {
+      "id": "Q111",
+      "prior": [
+        "Q027"
+      ],
+      "why": "WKB barrier family; triangular field emission vs alpha decay Coulomb barrier"
+    },
+    {
+      "id": "Q112",
+      "prior": [
+        "O078"
+      ],
+      "why": "photon-electron scattering family; relativistic Compton vs classical Thomson"
+    },
+    {
+      "id": "Q113",
+      "prior": [
+        "Q035"
+      ],
+      "why": "atomic angular momentum spectroscopy family; hyperfine spin pair vs spin-orbit splitting"
+    }
+  ],
+  "provisional_related_count": 26,
+  "remaining_unreviewed_or_not_expert_cleared": 40,
+  "confirmed_new_core_duplicates": "not established; must not be interpreted as zero",
+  "global_history_full_semantic_review": "pending",
+  "release_allowed": false
+}
