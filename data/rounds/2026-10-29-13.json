@@ -1,7 +1,7 @@
 {
   "date": "2026-10-29",
   "round": "13",
-  "status": "candidate_pending_ci_and_independent_review",
+  "status": "draft_blocked_historical_core_model_duplicates",
   "target_new_items": 50,
   "actual_new_items": 50,
   "base_count": 352,
@@ -69,7 +69,7 @@
   },
   "required_final_checks": 200,
   "executed_subpart_checks": 200,
-  "quality_status": "待独立复核",
+  "quality_status": "待独立复核（跨轮核心模型重复阻断）",
   "independent_expert_review": "待独立复核",
-  "note": "Full 50-item technical candidate; never merge before 200 runnable checks and two XeLaTeX PDFs pass in GitHub Actions; no human expert review attested."
+  "note": "50 canonical draft entries and 200 formula checks exist, but seven reused core models are blocked; both PDFs previously built for superseded draft and cannot authorize merging. Replace models and rerun all 200 subpart checks and both XeLaTeX PDFs."
 }

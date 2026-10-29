@@ -1,7 +1,7 @@
 {
   "round": "13",
   "scope": "pre-screen against main 352 problems",
-  "status": "BLOCKED_unresolved_historical_core_model_duplicates",
+  "status": "historical_core_model_overlaps_found_release_blocked",
   "independent_expert_review": "待独立复核",
   "items": [
     {
@@ -267,18 +267,18 @@
     {
       "id": "T069",
       "prior": [
-        "T046",
-        "T068"
+        "T020"
       ],
-      "difference": "three dimensional ideal Bose condensation and heat capacity criticality rather than 2D gas or polymer demixing"
+      "difference": "NOT ORIGINAL: 同一三维理想Bose气体BEC温度、凝聚分数与热容",
+      "status": "unresolved_requires_substantive_replacement"
     },
     {
       "id": "W069",
       "prior": [
-        "W047",
-        "W068"
+        "W047"
       ],
-      "difference": "velocity shear driven Kelvin Helmholtz interface with capillary stability threshold rather than no shear Rayleigh Taylor"
+      "difference": "W047 is zero-background-flow Rayleigh-Taylor/gravity-capillary; W069 adds nonzero differential tangential shear and Kelvin-Helmholtz capillary threshold, so the instability mechanism and threshold differ.",
+      "status": "resolved"
     },
     {
       "id": "O071",
@@ -292,10 +292,10 @@
     {
       "id": "Q071",
       "prior": [
-        "Q054",
-        "Q070"
+        "Q028"
       ],
-      "difference": "Aharonov Bohm flux ring persistent current and Poisson thermal harmonic rather than Landau levels or Rydberg blockade"
+      "difference": "NOT ORIGINAL: 同一Aharonov-Bohm量子环能谱、通量周期及持久电流",
+      "status": "unresolved_requires_substantive_replacement"
     },
     {
       "id": "M074",
@@ -308,10 +308,11 @@
     {
       "id": "E074",
       "prior": [
-        "E060",
-        "E066"
+        "E013",
+        "E034"
       ],
-      "difference": "diffusive skin impedance in lossy conducting halfspace rather than ideal guide or MHD"
+      "difference": "NOT ORIGINAL: 同一良导体半空间磁扩散、趋肤深度与Joule-Poynting核验",
+      "status": "unresolved_requires_substantive_replacement"
     },
     {
       "id": "T070",
@@ -332,10 +333,10 @@
     {
       "id": "O072",
       "prior": [
-        "O045",
-        "O064"
+        "O031"
       ],
-      "difference": "TM metal dielectric surface plasmon bound mode and Drude resonance rather than frustrated total internal reflection or bulk Lorentz dispersion"
+      "difference": "NOT ORIGINAL: 同一TM金属介质表面等离激元色散和束缚条件",
+      "status": "unresolved_requires_substantive_replacement"
     },
     {
       "id": "Q072",
@@ -348,18 +349,19 @@
     {
       "id": "M075",
       "prior": [
-        "M064",
-        "M062"
+        "M010",
+        "M035"
       ],
-      "difference": "Kepler two impulse Hohmann orbit transfer and rocket mass budget rather than Hill relative motion or relativistic ISCO"
+      "difference": "NOT ORIGINAL: Hohmann双脉冲变轨的椭圆、速度增量和飞行时间与既有题核心相同",
+      "status": "unresolved_requires_substantive_replacement"
     },
     {
       "id": "M076",
       "prior": [
-        "M057",
-        "M048"
+        "M025"
       ],
-      "difference": "Earth rotating Foucault plane precession and Coriolis double circular polarization rather than conical pendulum or driven anisotropic oscillator"
+      "difference": "NOT ORIGINAL: Foucault摆的科里奥利分裂与纬度进动已存在",
+      "status": "unresolved_requires_substantive_replacement"
     },
     {
       "id": "E075",
@@ -380,10 +382,11 @@
     {
       "id": "T071",
       "prior": [
-        "T045",
-        "T046"
+        "Q038",
+        "T019"
       ],
-      "difference": "three dimensional spin half Fermi gas Sommerfeld low temperature thermodynamics and Fermi sound rather than 1D gas"
+      "difference": "NOT ORIGINAL: 同一三维理想Fermi气体Sommerfeld低温化学势热容；零温声速亦已存在",
+      "status": "unresolved_requires_substantive_replacement"
     },
     {
       "id": "W071",
@@ -487,6 +490,83 @@
       ],
       "note": "two-fluid gravity capillary interface; shear flow is added core, require documented physical differentiation and independent originality decision",
       "resolution_status": "manual_review_required"
+    }
+  ],
+  "potential_core_model_overlaps": [
+    {
+      "draft_id": "M075",
+      "prior_ids": [
+        "M010",
+        "M035"
+      ],
+      "reason": "Hohmann双脉冲变轨的椭圆、速度增量和飞行时间与既有题核心相同",
+      "resolution_status": "unresolved_requires_substantive_replacement",
+      "evidence": "Compared actual question.tex in merged main and draft, not just titles."
+    },
+    {
+      "draft_id": "M076",
+      "prior_ids": [
+        "M025"
+      ],
+      "reason": "Foucault摆的科里奥利分裂与纬度进动已存在",
+      "resolution_status": "unresolved_requires_substantive_replacement",
+      "evidence": "Compared actual question.tex in merged main and draft, not just titles."
+    },
+    {
+      "draft_id": "E074",
+      "prior_ids": [
+        "E013",
+        "E034"
+      ],
+      "reason": "同一良导体半空间磁扩散、趋肤深度与Joule-Poynting核验",
+      "resolution_status": "unresolved_requires_substantive_replacement",
+      "evidence": "Compared actual question.tex in merged main and draft, not just titles."
+    },
+    {
+      "draft_id": "T069",
+      "prior_ids": [
+        "T020"
+      ],
+      "reason": "同一三维理想Bose气体BEC温度、凝聚分数与热容",
+      "resolution_status": "unresolved_requires_substantive_replacement",
+      "evidence": "Compared actual question.tex in merged main and draft, not just titles."
+    },
+    {
+      "draft_id": "T071",
+      "prior_ids": [
+        "Q038",
+        "T019"
+      ],
+      "reason": "同一三维理想Fermi气体Sommerfeld低温化学势热容；零温声速亦已存在",
+      "resolution_status": "unresolved_requires_substantive_replacement",
+      "evidence": "Compared actual question.tex in merged main and draft, not just titles."
+    },
+    {
+      "draft_id": "O072",
+      "prior_ids": [
+        "O031"
+      ],
+      "reason": "同一TM金属介质表面等离激元色散和束缚条件",
+      "resolution_status": "unresolved_requires_substantive_replacement",
+      "evidence": "Compared actual question.tex in merged main and draft, not just titles."
+    },
+    {
+      "draft_id": "Q071",
+      "prior_ids": [
+        "Q028"
+      ],
+      "reason": "同一Aharonov-Bohm量子环能谱、通量周期及持久电流",
+      "resolution_status": "unresolved_requires_substantive_replacement",
+      "evidence": "Compared actual question.tex in merged main and draft, not just titles."
+    },
+    {
+      "draft_id": "W069",
+      "prior_ids": [
+        "W047"
+      ],
+      "reason": "W047 is zero-background-flow Rayleigh-Taylor/gravity-capillary; W069 adds nonzero differential tangential shear and Kelvin-Helmholtz capillary threshold, so the instability mechanism and threshold differ.",
+      "resolution_status": "resolved",
+      "evidence": "W047/question.tex and W069/question.tex explicitly contrast zero mean flow with U1 != U2."
     }
   ]
 }
