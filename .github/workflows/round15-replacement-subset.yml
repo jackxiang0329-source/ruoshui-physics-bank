@@ -8,13 +8,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Initial pair replacements (8)
+      - name: Initial two models (8)
         run: node scripts/check_round15_replacements.js > /tmp/round15_1.json
-      - name: First six replacements (24)
+      - name: First six models (24)
         run: node scripts/check_round15_six_models.js > /tmp/round15_2.json
-      - name: Second six replacements (24)
+      - name: Second six models (24)
         run: node scripts/check_round15_next_six_models.js > /tmp/round15_3.json
-      - name: Third six replacements (24)
+      - name: Third six models (24)
         run: node scripts/check_round15_third_six_models.js > /tmp/round15_4.json
-      - name: Preserve incomplete full-round release gate
-        run: echo '80/200 subpart checks; 21 remaining historical core collisions, unsynced mirrors and both PDFs. No merge.'
+      - name: Fourth six models (24)
+        run: node scripts/check_round15_fourth_six_models.js > /tmp/round15_5.json
+      - name: Explicitly retain global merge block
+        run: echo 'Subset only 104/200 checks; 15 historical model collisions, full data mirrors and both PDFs outstanding.'

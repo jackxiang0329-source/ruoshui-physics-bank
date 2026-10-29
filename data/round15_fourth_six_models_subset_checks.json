@@ -1,0 +1,235 @@
+{
+  "round": 15,
+  "model_replacements": [
+    "M089",
+    "E091",
+    "T085",
+    "W084",
+    "O085",
+    "Q086"
+  ],
+  "checked_subparts": 24,
+  "required_full_round_checks": 200,
+  "full_round_pass": false,
+  "independent_expert_review": "待独立复核",
+  "tests": [
+    {
+      "id": "M089",
+      "part": 1,
+      "name": "Wall streamfunction and tangential velocity from image flow",
+      "method": "finite_difference",
+      "passed": true,
+      "residual": 1.1350698159162675e-11,
+      "tolerance": 1e-10
+    },
+    {
+      "id": "M089",
+      "part": 2,
+      "name": "Point-vortex drift from independent Biot-Savart image velocity",
+      "method": "independent_derivation",
+      "passed": true,
+      "residual": 2.7755575615628914e-17,
+      "tolerance": 1e-13
+    },
+    {
+      "id": "M089",
+      "part": 3,
+      "name": "Moving frame Bernoulli pressure from relative velocity",
+      "method": "energy_balance",
+      "passed": true,
+      "residual": 4.163336342344337e-17,
+      "tolerance": 1e-13
+    },
+    {
+      "id": "M089",
+      "part": 4,
+      "name": "Full wall pressure integral and signed disturbance circulation",
+      "method": "independent_integral",
+      "passed": true,
+      "residual": 0.0005768353960953865,
+      "tolerance": 0.0007
+    },
+    {
+      "id": "E091",
+      "part": 1,
+      "name": "Unscreeened surface Gauss law reproduces root-k 2D Drude plasmon",
+      "method": "Maxwell_continuity",
+      "passed": true,
+      "residual": 1.1102230246251565e-16,
+      "tolerance": 1e-14
+    },
+    {
+      "id": "E091",
+      "part": 2,
+      "name": "Gated dielectric Laplace matching and grounded metal boundary",
+      "method": "boundary_derivative",
+      "passed": true,
+      "residual": 2.7460700380288472e-11,
+      "tolerance": 1e-8
+    },
+    {
+      "id": "E091",
+      "part": 3,
+      "name": "Acoustic-gated and unscreened plasmon asymptotics plus group velocity",
+      "method": "independent_asymptotic",
+      "passed": true,
+      "residual": 0.0000031834483888992793,
+      "tolerance": 0.00006
+    },
+    {
+      "id": "E091",
+      "part": 4,
+      "name": "Direct field energy quadrature equals 2D inertial carrier energy",
+      "method": "energy_equipartition",
+      "passed": true,
+      "residual": 6.522555828780696e-10,
+      "tolerance": 1e-8
+    },
+    {
+      "id": "T085",
+      "part": 1,
+      "name": "Kramers damped oscillatory evolution matrix solves linear Langevin drift",
+      "method": "independent_finite_difference",
+      "passed": true,
+      "residual": 1.5158074795351695e-10,
+      "tolerance": 2e-9
+    },
+    {
+      "id": "T085",
+      "part": 2,
+      "name": "Exact covariance solves stochastic Lyapunov equation",
+      "method": "independent_finite_difference",
+      "passed": true,
+      "residual": 2.556075351378695e-10,
+      "tolerance": 3e-9
+    },
+    {
+      "id": "T085",
+      "part": 3,
+      "name": "Kramers energy heat flow and initial canonical internal energy",
+      "method": "first_law",
+      "passed": true,
+      "residual": 5.360645261021091e-11,
+      "tolerance": 4e-10
+    },
+    {
+      "id": "T085",
+      "part": 4,
+      "name": "Gaussian relative-entropy dissipation matches positive heat-bath entropy production",
+      "method": "entropy_dissipation",
+      "passed": true,
+      "residual": 8.244338545182472e-11,
+      "tolerance": 3e-9
+    },
+    {
+      "id": "W084",
+      "part": 1,
+      "name": "Black dark-soliton stationary differential equation and exact finite energy",
+      "method": "PDE_and_integral",
+      "passed": true,
+      "residual": 3.3306690738754696e-15,
+      "tolerance": 1e-10
+    },
+    {
+      "id": "W084",
+      "part": 2,
+      "name": "Bogoliubov sound dispersion and independent group derivative",
+      "method": "spectral",
+      "passed": true,
+      "residual": 4.687583654572336e-12,
+      "tolerance": 1e-10
+    },
+    {
+      "id": "W084",
+      "part": 3,
+      "name": "Traveling gray soliton satisfies real and imaginary nonlinear GP equations",
+      "method": "nonlinear_PDE",
+      "passed": true,
+      "residual": 2.7755575615628914e-17,
+      "tolerance": 1e-13
+    },
+    {
+      "id": "W084",
+      "part": 4,
+      "name": "Gray-soliton density deficit and exact velocity-dependent Hamiltonian",
+      "method": "independent_integral",
+      "passed": true,
+      "residual": 5.551115123125783e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "id": "O085",
+      "part": 1,
+      "name": "Time boundary conserves spatial k while frequency refracts",
+      "method": "Maxwell_translation",
+      "passed": true,
+      "residual": 0,
+      "tolerance": 1e-15
+    },
+    {
+      "id": "O085",
+      "part": 2,
+      "name": "Both temporal Maxwell displacement and magnetic induction matching equations",
+      "method": "boundary_conditions",
+      "passed": true,
+      "residual": 1.1102230246251565e-16,
+      "tolerance": 1e-15
+    },
+    {
+      "id": "O085",
+      "part": 3,
+      "name": "Signed wave-action conservation and modulation energy increment",
+      "method": "energy_action",
+      "passed": true,
+      "residual": 2.220446049250313e-16,
+      "tolerance": 1e-14
+    },
+    {
+      "id": "O085",
+      "part": 4,
+      "name": "Two temporal interfaces' complex transfer matrices and output action conservation",
+      "method": "transfer_matrix",
+      "passed": true,
+      "residual": 2.220446049250313e-16,
+      "tolerance": 1e-14
+    },
+    {
+      "id": "Q086",
+      "part": 1,
+      "name": "Full hyperfine spin Hamiltonian trace and m-zero 2x2 determinant",
+      "method": "spectral_determinant",
+      "passed": true,
+      "residual": 2.220446049250313e-16,
+      "tolerance": 2e-14
+    },
+    {
+      "id": "Q086",
+      "part": 2,
+      "name": "Avoided crossing gap and normalized mixed-level spectral projectors",
+      "method": "projector",
+      "passed": true,
+      "residual": 0,
+      "tolerance": 1e-14
+    },
+    {
+      "id": "Q086",
+      "part": 3,
+      "name": "Transverse electron spin-flip transition sum rule and positive oscillator strength",
+      "method": "transition_sum_rule",
+      "passed": true,
+      "residual": 0,
+      "tolerance": 1e-14
+    },
+    {
+      "id": "Q086",
+      "part": 4,
+      "name": "Four-level canonical partition gives positive and numerically verified zero-field susceptibility",
+      "method": "thermodynamic_derivative",
+      "passed": true,
+      "residual": 2.911523133697358e-9,
+      "tolerance": 1e-7
+    }
+  ],
+  "source_branch": "physics-round15-50-work",
+  "scope_limits": "Only 6 candidate core-model replacements checked, pending entire corpus rereview and 96 other subpart checks."
+}
