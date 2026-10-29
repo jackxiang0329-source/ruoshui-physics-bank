@@ -1,0 +1,232 @@
+{
+  "status": "draft-only-not-admitted",
+  "new_problem_count": 8,
+  "passed_count": 32,
+  "tests": [
+    {
+      "id": "M075",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Complex Ekman ageostrophic velocity satisfies the full rotating viscous momentum equation",
+      "passed": true
+    },
+    {
+      "id": "M075",
+      "part": 2,
+      "method": "physical_case",
+      "name": "Ekman spiral satisfies no slip at bottom and geostrophic far field in both velocity components",
+      "passed": true
+    },
+    {
+      "id": "M075",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "Wall shear components and integrated complex ageostrophic transport give the correct 45 degree turn",
+      "passed": true
+    },
+    {
+      "id": "M075",
+      "part": 4,
+      "method": "conservation",
+      "name": "Integrated Ekman viscous dissipation equals geostrophic pressure work represented by wall stress",
+      "passed": true
+    },
+    {
+      "id": "M076",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Radial Taylor dispersion cell corrector solves exact cylindrical Poisson equation",
+      "passed": true
+    },
+    {
+      "id": "M076",
+      "part": 2,
+      "method": "conservation",
+      "name": "Taylor corrector has zero cross sectional mean and zero wall and axis normal derivative",
+      "passed": true
+    },
+    {
+      "id": "M076",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "Independent flux and gradient energy routes both yield the exact one over forty eight dispersion coefficient",
+      "passed": true
+    },
+    {
+      "id": "M076",
+      "part": 4,
+      "method": "limit",
+      "name": "Taylor Aris enhancement vanishes at zero flow or vanishing radius while weak diffusion limit is nonuniform",
+      "passed": true
+    },
+    {
+      "id": "E075",
+      "part": 1,
+      "method": "symbolic",
+      "name": "ellipsoid internal field self consistency reproduces exact anisotropic polarizability tensor eigenvalue",
+      "passed": true
+    },
+    {
+      "id": "E075",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "spherical depolarization integral gives one third and conducting sphere recovers four pi epsilon zero radius cubed",
+      "passed": true
+    },
+    {
+      "id": "E075",
+      "part": 3,
+      "method": "conservation",
+      "name": "induced dipole torque equals negative angular derivative of fixed field polarization energy",
+      "passed": true
+    },
+    {
+      "id": "E075",
+      "part": 4,
+      "method": "limit",
+      "name": "prolate spheroid depolarization tends one third for sphere and zero for extreme long axis",
+      "passed": true
+    },
+    {
+      "id": "E076",
+      "part": 1,
+      "method": "symbolic",
+      "name": "causal step response solves first order Debye relaxation with zero initial polarization",
+      "passed": true
+    },
+    {
+      "id": "E076",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "complex Debye susceptibility has exact positive loss imaginary part and correct zero high frequency limits",
+      "passed": true
+    },
+    {
+      "id": "E076",
+      "part": 3,
+      "method": "conservation",
+      "name": "Debye dielectric loss peaks at unit omega tau and dissipates nonnegative energy per field cycle",
+      "passed": true
+    },
+    {
+      "id": "E076",
+      "part": 4,
+      "method": "independent_derivation",
+      "name": "causal Kramers Kronig dielectric sum rule recovers full static to high frequency contrast",
+      "passed": true
+    },
+    {
+      "id": "T071",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Cahn Hilliard chemical potential is correct variational derivative and conserved flow has divergence form",
+      "passed": true
+    },
+    {
+      "id": "T071",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "Conserved spinodal dispersion maximum occurs at half the critical squared wave number",
+      "passed": true
+    },
+    {
+      "id": "T071",
+      "part": 3,
+      "method": "symbolic",
+      "name": "Exact hyperbolic tangent Cahn Hilliard interface solves the nonlinear stationary Euler Lagrange equation",
+      "passed": true
+    },
+    {
+      "id": "T071",
+      "part": 4,
+      "method": "conservation",
+      "name": "Independent interface gradient energy gives exact two root two over three tension and Lyapunov decay sign",
+      "passed": true
+    },
+    {
+      "id": "W071",
+      "part": 1,
+      "method": "conservation",
+      "name": "Rankine Hugoniot shock speed exactly equals mean of left and right Burgers states",
+      "passed": true
+    },
+    {
+      "id": "W071",
+      "part": 2,
+      "method": "symbolic",
+      "name": "Burgers hyperbolic tangent shock satisfies once integrated viscous traveling wave equation exactly",
+      "passed": true
+    },
+    {
+      "id": "W071",
+      "part": 3,
+      "method": "numerical",
+      "name": "independent numerical integration of Burgers shock entropy production equals delta cubed over twelve",
+      "passed": true
+    },
+    {
+      "id": "W071",
+      "part": 4,
+      "method": "physical_case",
+      "name": "compressive Burgers shock speed lies strictly between both characteristic speeds and width shrinks with viscosity",
+      "passed": true
+    },
+    {
+      "id": "O073",
+      "part": 1,
+      "method": "symbolic",
+      "name": "electrostatic Rayleigh sphere polarizability gives correct conducting and vacuum dielectric limits",
+      "passed": true
+    },
+    {
+      "id": "O073",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "Gaussian dipole gradient force has positive lateral spring constant and equipartition variance inverse stiffness",
+      "passed": true
+    },
+    {
+      "id": "O073",
+      "part": 3,
+      "method": "conservation",
+      "name": "radiation corrected Rayleigh polarizability satisfies lossless dipole optical theorem exactly",
+      "passed": true
+    },
+    {
+      "id": "O073",
+      "part": 4,
+      "method": "limit",
+      "name": "Rayleigh optical gradient scales with radius cubed whereas radiation scattering scales with radius sixth",
+      "passed": true
+    },
+    {
+      "id": "Q073",
+      "part": 1,
+      "method": "symbolic",
+      "name": "qubit pre post overlap gives secant weak value and exact cosine squared zero coupling success probability",
+      "passed": true
+    },
+    {
+      "id": "Q073",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "first order weak pointer translation equals coupling times real weak value under nonzero postselection overlap",
+      "passed": true
+    },
+    {
+      "id": "Q073",
+      "part": 3,
+      "method": "limit",
+      "name": "exact Gaussian postselection regularizes anomalous weak value as states become orthogonal at fixed nonzero coupling",
+      "passed": true
+    },
+    {
+      "id": "Q073",
+      "part": 4,
+      "method": "conservation",
+      "name": "postselection success probability times squared weak amplification equals unity in strict weak limit",
+      "passed": true
+    }
+  ],
+  "independent_expert_review": "pending"
+}

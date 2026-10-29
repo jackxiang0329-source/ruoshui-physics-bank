@@ -1,0 +1,176 @@
+{
+  "status": "draft-only-not-admitted",
+  "new_problem_count": 6,
+  "passed_count": 24,
+  "tests": [
+    {
+      "id": "M068",
+      "part": 1,
+      "method": "symbolic",
+      "name": "analytic polytrope density solves the radial Lane Emden differential equation with regular center",
+      "passed": true
+    },
+    {
+      "id": "M068",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "independently differentiate mass profile to recover exact shell density and surface enclosed mass",
+      "passed": true
+    },
+    {
+      "id": "M068",
+      "part": 3,
+      "method": "conservation",
+      "name": "virial gravitational energy equals independent mass radius polytropic binding energy at K equals two pi G a squared",
+      "passed": true
+    },
+    {
+      "id": "M068",
+      "part": 4,
+      "method": "physical_case",
+      "name": "stellar total binding energy is minus twice integrated polytropic pressure and scales as center-density squared",
+      "passed": true
+    },
+    {
+      "id": "E068",
+      "part": 1,
+      "method": "independent_derivation",
+      "name": "angular surface-current magnetic dipole integral yields exact factor one third of charged spherical shell",
+      "passed": true
+    },
+    {
+      "id": "E068",
+      "part": 2,
+      "method": "symbolic",
+      "name": "sphere magnetic radial continuity and tangential H jump reproduce prescribed surface current",
+      "passed": true
+    },
+    {
+      "id": "E068",
+      "part": 3,
+      "method": "conservation",
+      "name": "direct interior uniform B energy and exterior dipole field energy sum to surface-current work",
+      "passed": true
+    },
+    {
+      "id": "E068",
+      "part": 4,
+      "method": "dimensions",
+      "name": "fixed charge and angular rate give magnetic energy linear in sphere radius and field singular at fixed dipole moment",
+      "passed": true
+    },
+    {
+      "id": "T064",
+      "part": 1,
+      "method": "symbolic",
+      "name": "two Cattaneo thermal roots solve exact telegraph dispersion polynomial",
+      "passed": true
+    },
+    {
+      "id": "T064",
+      "part": 2,
+      "method": "limit",
+      "name": "low wave number branch reduces to Fourier diffusion while high wave number speed approaches finite square root D over tau",
+      "passed": true
+    },
+    {
+      "id": "T064",
+      "part": 3,
+      "method": "conservation",
+      "name": "exact quadratic perturbation energy plus thermal flux divergence yields negative entropy production proxy",
+      "passed": true
+    },
+    {
+      "id": "T064",
+      "part": 4,
+      "method": "independent_derivation",
+      "name": "zero relaxation limit has slow diffusion and one fast decaying nonhydrodynamic thermal mode",
+      "passed": true
+    },
+    {
+      "id": "W064",
+      "part": 1,
+      "method": "symbolic",
+      "name": "geostrophic potential vorticity Fourier eigenvalue yields westward Rossby phase velocity",
+      "passed": true
+    },
+    {
+      "id": "W064",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "differentiate wave frequency independently to recover both group speed components",
+      "passed": true
+    },
+    {
+      "id": "W064",
+      "part": 3,
+      "method": "conservation",
+      "name": "periodic domain beta energy transport is a pure total spatial derivative and no net work",
+      "passed": true
+    },
+    {
+      "id": "W064",
+      "part": 4,
+      "method": "limit",
+      "name": "infinite deformation radius and vanishing beta limits give 2D Rossby and zero-frequency invariants",
+      "passed": true
+    },
+    {
+      "id": "O066",
+      "part": 1,
+      "method": "independent_derivation",
+      "name": "normalized exponential speckle density has mean I0 and variance I0 squared by independent integration",
+      "passed": true
+    },
+    {
+      "id": "O066",
+      "part": 2,
+      "method": "symbolic",
+      "name": "complex Gaussian fourth moment Siegert relation obeys perfect-coherence and zero-coherence limits",
+      "passed": true
+    },
+    {
+      "id": "O066",
+      "part": 3,
+      "method": "numerical",
+      "name": "three independent exponential speckles yield Gamma-shape-three distribution with exactly one-third relative variance",
+      "passed": true
+    },
+    {
+      "id": "O066",
+      "part": 4,
+      "method": "limit",
+      "name": "independent equal-polarization speckle contrast equals inverse square root two while one vanishing polarization restores unit contrast",
+      "passed": true
+    },
+    {
+      "id": "Q066",
+      "part": 1,
+      "method": "symbolic",
+      "name": "conditional oscillator coherent amplitude solves forced Heisenberg motion and initial vacuum condition",
+      "passed": true
+    },
+    {
+      "id": "Q066",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "Gaussian coherent-state overlap reproduces exact periodic nonMarkov dephasing with full revival",
+      "passed": true
+    },
+    {
+      "id": "Q066",
+      "part": 3,
+      "method": "symbolic",
+      "name": "reduced spin eigenvalues and purity agree with exact overlap-dependent entanglement entropy spectrum",
+      "passed": true
+    },
+    {
+      "id": "Q066",
+      "part": 4,
+      "method": "conservation",
+      "name": "time-dependent oscillator occupation exactly cancels negative interaction energy and closed system energy remains zero",
+      "passed": true
+    }
+  ],
+  "independent_expert_review": "pending"
+}

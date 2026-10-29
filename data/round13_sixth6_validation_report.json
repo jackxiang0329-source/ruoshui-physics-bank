@@ -1,0 +1,176 @@
+{
+  "status": "draft-only-not-admitted",
+  "new_problem_count": 6,
+  "passed_count": 24,
+  "tests": [
+    {
+      "id": "M072",
+      "part": 1,
+      "method": "symbolic",
+      "name": "spherical incompressibility gives exact inverse square radial velocity and correct negative initial acceleration",
+      "passed": true
+    },
+    {
+      "id": "M072",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "Rayleigh first integral differentiates to exact acceleration and recovers zero initial kinetic energy",
+      "passed": true
+    },
+    {
+      "id": "M072",
+      "part": 3,
+      "method": "numerical",
+      "name": "independent high precision collapse quadrature matches beta five sixths one half expression",
+      "passed": true
+    },
+    {
+      "id": "M072",
+      "part": 4,
+      "method": "conservation",
+      "name": "all fluid kinetic energy equals exactly pressure volume work released during Rayleigh collapse",
+      "passed": true
+    },
+    {
+      "id": "E072",
+      "part": 1,
+      "method": "symbolic",
+      "name": "correct RSJ washboard gradient mobility includes critical current and yields phase velocity units",
+      "passed": true
+    },
+    {
+      "id": "E072",
+      "part": 2,
+      "method": "numerical",
+      "name": "exact Josephson phase slip integral equals two pi over square root of bias current discriminant",
+      "passed": true
+    },
+    {
+      "id": "E072",
+      "part": 3,
+      "method": "limit",
+      "name": "Josephson metastable barrier is two EJ at zero bias and vanishes at critical tilt",
+      "passed": true
+    },
+    {
+      "id": "E072",
+      "part": 4,
+      "method": "conservation",
+      "name": "resistive Josephson energy balance uses mean squared voltage not square of mean voltage",
+      "passed": true
+    },
+    {
+      "id": "T068",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Flory Huggins second derivative gives exact spinodal curvature and concentration dependence",
+      "passed": true
+    },
+    {
+      "id": "T068",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "critical composition one half and chi two over N solve second and third derivative zeros with positive quartic",
+      "passed": true
+    },
+    {
+      "id": "T068",
+      "part": 3,
+      "method": "symbolic",
+      "name": "binodal small order parameter expansion has linear and cubic coefficients yielding correct mean field square root",
+      "passed": true
+    },
+    {
+      "id": "T068",
+      "part": 4,
+      "method": "limit",
+      "name": "spinodal minimum equals critical chi and zero interaction is locally stable at all interior compositions",
+      "passed": true
+    },
+    {
+      "id": "W068",
+      "part": 1,
+      "method": "conservation",
+      "name": "horizontal slowness is conserved and turning occurs exactly at sound speed inverse slowness",
+      "passed": true
+    },
+    {
+      "id": "W068",
+      "part": 2,
+      "method": "symbolic",
+      "name": "integrated gradient sound speed ray lies on exact Euclidean circle of curvature gamma times slowness",
+      "passed": true
+    },
+    {
+      "id": "W068",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "ray travel time logarithm differentiates to reciprocal sound speed times vertical group speed",
+      "passed": true
+    },
+    {
+      "id": "W068",
+      "part": 4,
+      "method": "limit",
+      "name": "sound ray curvature vanishes with gradient and vertical group velocity vanishes at turning point",
+      "passed": true
+    },
+    {
+      "id": "O070",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Gaussian phase increment characteristic function halves Kolmogorov structure function coefficient",
+      "passed": true
+    },
+    {
+      "id": "O070",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "long exposure atmospheric transfer factor equals phase correlation evaluated at wavelength times angular frequency",
+      "passed": true
+    },
+    {
+      "id": "O070",
+      "part": 3,
+      "method": "dimensions",
+      "name": "Fried length scales with wavelength six fifths and seeing angle decreases as wavelength minus one fifth",
+      "passed": true
+    },
+    {
+      "id": "O070",
+      "part": 4,
+      "method": "limit",
+      "name": "Kolmogorov phase coherence tends unity at zero baseline and zero at very long baseline",
+      "passed": true
+    },
+    {
+      "id": "Q070",
+      "part": 1,
+      "method": "symbolic",
+      "name": "two atom symmetric Dicke Hamiltonian has equal square root two enhanced nearest couplings",
+      "passed": true
+    },
+    {
+      "id": "Q070",
+      "part": 2,
+      "method": "limit",
+      "name": "collective Rabi frequency square root two gives full W state population at first pi pulse",
+      "passed": true
+    },
+    {
+      "id": "Q070",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "virtual doubly excited Rydberg level yields negative second order bright state energy shift",
+      "passed": true
+    },
+    {
+      "id": "Q070",
+      "part": 4,
+      "method": "conservation",
+      "name": "Rydberg W Bell state has maximally mixed one atom reduction and one bit entropy",
+      "passed": true
+    }
+  ],
+  "independent_expert_review": "pending"
+}

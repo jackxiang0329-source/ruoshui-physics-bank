@@ -1,0 +1,176 @@
+{
+  "status": "draft-qa-only",
+  "new_problem_count": 6,
+  "passed_count": 24,
+  "tests": [
+    {
+      "id": "M070",
+      "part": 1,
+      "method": "symbolic",
+      "name": "quadrupolar satellite gravity gradient favors radial long axis by exactly three halves n squared inertia difference",
+      "passed": true
+    },
+    {
+      "id": "M070",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "Euler Lagrange satellite potential produces restoring torque and stable small angle libration frequency",
+      "passed": true
+    },
+    {
+      "id": "M070",
+      "part": 3,
+      "method": "conservation",
+      "name": "energy barrier equals initial angular kinetic energy at gravity gradient separatrix",
+      "passed": true
+    },
+    {
+      "id": "M070",
+      "part": 4,
+      "method": "limit",
+      "name": "spherical inertia and zero orbit rate suppress quadrupole torque and libration frequency",
+      "passed": true
+    },
+    {
+      "id": "E070",
+      "part": 1,
+      "method": "symbolic",
+      "name": "radial complex Penning eigenfrequency solves Lorentz plus radial anti-trap quadratic characteristic",
+      "passed": true
+    },
+    {
+      "id": "E070",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "modified cyclotron and magnetron frequencies sum to cyclotron frequency and multiply to half axial squared",
+      "passed": true
+    },
+    {
+      "id": "E070",
+      "part": 3,
+      "method": "physical_case",
+      "name": "strong field Penning spectrum has positive fast mode energy and negative slow magnetron energy despite both real frequencies",
+      "passed": true
+    },
+    {
+      "id": "E070",
+      "part": 4,
+      "method": "limit",
+      "name": "high cyclotron field gives magnetron frequency omega_z squared over two omega_c and near-degenerate critical roots coalesce",
+      "passed": true
+    },
+    {
+      "id": "T066",
+      "part": 1,
+      "method": "symbolic",
+      "name": "forward nonlinear thermal interface obeys quadratic first slab and linear second slab Fourier balances",
+      "passed": true
+    },
+    {
+      "id": "T066",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "reversed temperature direction solves distinct boundary interface with positive current",
+      "passed": true
+    },
+    {
+      "id": "T066",
+      "part": 3,
+      "method": "numerical",
+      "name": "exact rectified heat currents forward and backward have ratio greater than one by independent 30-digit comparison",
+      "passed": true
+    },
+    {
+      "id": "T066",
+      "part": 4,
+      "method": "conservation",
+      "name": "two layer entropy generation equals two terminal reservoir entropy change and vanishes at equal temperatures",
+      "passed": true
+    },
+    {
+      "id": "W066",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Neumann cylinder partial wave boundary directly cancels radial derivatives of incident Bessel and outgoing Hankel components",
+      "passed": true
+    },
+    {
+      "id": "W066",
+      "part": 2,
+      "method": "numerical",
+      "name": "low frequency Hankel asymptotics give both monopole and symmetric dipole O(ka squared) scattering amplitudes",
+      "passed": true
+    },
+    {
+      "id": "W066",
+      "part": 3,
+      "method": "numerical",
+      "name": "sum of real partial wave cross sections matches three pi squared k cubed a fourth low frequency asymptotic",
+      "passed": true
+    },
+    {
+      "id": "W066",
+      "part": 4,
+      "method": "conservation",
+      "name": "unabsorbing rigid scatterer has unitary S matrix in independent angular orders",
+      "passed": true
+    },
+    {
+      "id": "O068",
+      "part": 1,
+      "method": "symbolic",
+      "name": "counter-propagating rotating circular ring exact time difference has correct small omega limit four area omega over c squared",
+      "passed": true
+    },
+    {
+      "id": "O068",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "closed circulation of rigid rotation velocity is two angular speed times enclosed area",
+      "passed": true
+    },
+    {
+      "id": "O068",
+      "part": 3,
+      "method": "dimensions",
+      "name": "vacuum optical carrier phase equals frequency times Sagnac delay and scales with enclosed area",
+      "passed": true
+    },
+    {
+      "id": "O068",
+      "part": 4,
+      "method": "limit",
+      "name": "shot-noise Sagnac rotation sensitivity scales as inverse square root of independent detected photons",
+      "passed": true
+    },
+    {
+      "id": "Q068",
+      "part": 1,
+      "method": "numerical",
+      "name": "independent 50-digit geometric Schmidt mode summation recovers normalized thermal probabilities and exact mean occupancy",
+      "passed": true
+    },
+    {
+      "id": "Q068",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "two-mode Bogoliubov squeezes both commuting EPR quadrature variances while preserving canonical uncertainty product",
+      "passed": true
+    },
+    {
+      "id": "Q068",
+      "part": 3,
+      "method": "symbolic",
+      "name": "Schmidt partial transpose trace norm equals exponential of twice squeezing parameter after exponential identity",
+      "passed": true
+    },
+    {
+      "id": "Q068",
+      "part": 4,
+      "method": "physical_case",
+      "name": "vacuum attenuation convexly mixes ideal EPR variance with vacuum and strictly preserves subshot-noise at nonzero transmissivity",
+      "passed": true
+    }
+  ],
+  "independent_expert_review": "pending"
+}

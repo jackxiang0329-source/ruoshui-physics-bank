@@ -63,6 +63,19 @@ def check():
                       if f.get("resolution_status") != "resolved"]
         if unresolved:
             reject("round 12: unresolved core-model overlaps: " + ", ".join(unresolved))
+    # Round 13 must not pass solely on formula QA if a previously accepted core model is reused.
+    if any(round_no >= 13 for round_no, _ in manifests):
+        path13 = ROOT / "data" / "round13_core_model_overlap_audit.json"
+        if not path13.exists():
+            reject("round 13: historical core-model originality audit missing")
+        audit13 = load(path13)
+        findings13 = audit13.get("potential_core_model_overlaps", [])
+        if not findings13:
+            reject("round 13: explicit historical overlap dispositions missing")
+        unresolved13 = [f.get("draft_id", "?") for f in findings13
+                        if f.get("resolution_status") != "resolved"]
+        if unresolved13:
+            reject("round 13: reused core physical models remain: " + ", ".join(unresolved13))
     known=set(baseline)
     for index,(round_no,path) in enumerate(manifests):
         if round_no!=11+index:

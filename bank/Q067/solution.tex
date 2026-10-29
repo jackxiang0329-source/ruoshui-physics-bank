@@ -1,0 +1,18 @@
+(1) 取 Nambu基 \(\Psi_k=(c_k,c_{-k}^\dagger)^T\)，经过不影响谱的规约可写
+\[
+h(k)=(-\mu-2t\cos k)\tau_z+2\Delta\sin k\,\tau_y.
+\]
+由于 Pauli矩阵反对易，平方 \(h^2=[(\mu+2t\cos k)^2+4\Delta^2\sin^2k]I\)，故
+\(\boxed{E_\pm(k)=\pm\sqrt{(\mu+2t\cos k)^2+4\Delta^2\sin^2k}}\)。
+对 \(\Delta>0\) 能隙只可能在 \(\sin k=0\) 处闭合，令 \(k=0,\pi\)，得到 \(\mu=-2t\) 或 \(\mu=2t\)，而不是任意 \(|\mu|<2t\) 都有体零能。
+
+(2) Majorana满足 \(\gamma^\dagger=\gamma\)、\(\{\gamma_{\alpha i},\gamma_{\beta j}\}=2\delta_{\alpha\beta}\delta_{ij}\)。代入配对及跃迁项可得
+\[
+H=\frac i2\sum_{j=1}^L(-\mu\gamma_{Aj}\gamma_{Bj})
++\frac i2\sum_{j=1}^{L-1}[(t+\Delta)\gamma_{Bj}\gamma_{A,j+1}+(\Delta-t)\gamma_{Aj}\gamma_{B,j+1}].
+\]
+当 \(\mu=0,\Delta=t\)，\(\boxed{H=it\sum_{j=1}^{L-1}\gamma_{Bj}\gamma_{A,j+1}}\)。\(\gamma_{A1}\) 与 \(\gamma_{BL}\) 完全不出现，所以都与 \(H\) 对易。组合 \(f=(\gamma_{A1}+i\gamma_{BL})/2\) 满足 \(\{f,f^\dagger\}=1\) 且 \([H,f]=0\)；两种占据的奇偶不同，局域观测不能直接消除该理想点的非局域零模简并。
+
+(3) 随 \(k\) 绕布里渊区，\(q(k)\) 描出以 \(-\mu\) 为中心、水平半轴 \(2t\)、竖直半轴 \(2\Delta\) 的椭圆。原点处于椭圆内部当且仅当 \(\boxed{|\mu|<2t}\)，此时绕数绝对值为1；\(|\mu|>2t\) 时为0。绕数改变必须穿过 \(q(k)=0\)，等价于第一问的体能隙关闭。理想开边界相中零能算符局域于两端，并受体内能隙保护；绕数本身不是对有限长、任意非零耦合都严格零的承诺。
+
+(4) 超导配对 \(c_jc_{j+1}\) 改变粒子数2，所以一般 \([H,\sum_jc_j^\dagger c_j]\ne0\)；但总奇偶 \(\mathcal P=(-1)^{\sum_jc_j^\dagger c_j}\) 与每一偶费米算符项对易，故 \([H,\mathcal P]=0\)。在长度有限、偏离特殊点时左右Majorana尾部可重叠，形成有效耦合 \(H_{\rm edge}=i\epsilon\,\gamma_L\gamma_R/2\)，能级劈裂 \(|\epsilon|\) 在体间隙内典型按 \(e^{-L/\xi}\) 衰减；它可能随参数振荡并有特殊零点，但一般非零。当 \(|\mu|=2t\) 体能隙关闭，定位长度发散，拓扑保护消失；对任意开链都声明精确二重简并是错误的。

@@ -40,6 +40,8 @@ jobs:
         run: python scripts/check_round08_physics.py
       - name: Independently check round 10 formula identities
         run: python scripts/check_round10_physics.py
+      - name: Block historically repeated core physics models before release
+        run: python scripts/check_round13_originality_gate.py
       - name: Enforce complete 50-problem future rounds and executed subpart QA
         run: python scripts/check_future_rounds.py
       - name: Validate TeX fragments and derived documents

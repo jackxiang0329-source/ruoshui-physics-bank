@@ -1,0 +1,176 @@
+{
+  "status": "draft-only-not-admitted",
+  "new_problem_count": 6,
+  "passed_count": 24,
+  "tests": [
+    {
+      "id": "M074",
+      "part": 1,
+      "method": "symbolic",
+      "name": "exact azimuthal Navier Stokes operator vanishes and both no slip cylinder boundary conditions hold",
+      "passed": true
+    },
+    {
+      "id": "M074",
+      "part": 2,
+      "method": "conservation",
+      "name": "viscous stress transfers radius independent torque and zero torque under rigid corotation",
+      "passed": true
+    },
+    {
+      "id": "M074",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "radial pressure primitive differentiates to exact centrifugal acceleration and rigid rotation pressure",
+      "passed": true
+    },
+    {
+      "id": "M074",
+      "part": 4,
+      "method": "conservation",
+      "name": "integrated viscous dissipation exactly equals difference in externally supplied wall torques times angular speeds",
+      "passed": true
+    },
+    {
+      "id": "E074",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Stoner Wohlfarth first and second derivatives simultaneously vanish on the parametric switching boundary",
+      "passed": true
+    },
+    {
+      "id": "E074",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "Switching astroid parametric field satisfies exact two thirds power identity in first quadrant",
+      "passed": true
+    },
+    {
+      "id": "E074",
+      "part": 3,
+      "method": "physical_case",
+      "name": "Easy axis metastable curvature changes at unit anisotropy field and hard axis magnetization grows linearly",
+      "passed": true
+    },
+    {
+      "id": "E074",
+      "part": 4,
+      "method": "conservation",
+      "name": "Exact easy axis activation barrier is quadratic and vanishes at coherent switching threshold",
+      "passed": true
+    },
+    {
+      "id": "T070",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Eddington moment integration yields exact boundary intensity and constant radiative flux",
+      "passed": true
+    },
+    {
+      "id": "T070",
+      "part": 2,
+      "method": "limit",
+      "name": "grey atmosphere temperature at optical depth two thirds equals effective temperature and surface fourth power half",
+      "passed": true
+    },
+    {
+      "id": "T070",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "radiative logarithmic gradient is bounded by quarter and below monatomic adiabatic two fifths",
+      "passed": true
+    },
+    {
+      "id": "T070",
+      "part": 4,
+      "method": "conservation",
+      "name": "diffusion flux from fourth power temperature law exactly recovers constant Stefan Boltzmann flux",
+      "passed": true
+    },
+    {
+      "id": "W070",
+      "part": 1,
+      "method": "symbolic",
+      "name": "variational orthotropic fourth order plate operator yields correct doubled mixed derivative stiffness",
+      "passed": true
+    },
+    {
+      "id": "W070",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "differentiating orthotropic plate dispersion recovers both group velocity components",
+      "passed": true
+    },
+    {
+      "id": "W070",
+      "part": 3,
+      "method": "conservation",
+      "name": "simply supported double sine mode potential energy equals oscillator effective mass times squared frequency",
+      "passed": true
+    },
+    {
+      "id": "W070",
+      "part": 4,
+      "method": "limit",
+      "name": "isotropic Kirchhoff Love plate has quadratic frequency and group speed exactly twice phase speed",
+      "passed": true
+    },
+    {
+      "id": "O072",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Bragg forward backward coupling matrix squares to stop band eigenvalue identity",
+      "passed": true
+    },
+    {
+      "id": "O072",
+      "part": 2,
+      "method": "conservation",
+      "name": "Lossless Bragg scattering amplitudes satisfy transfer determinant and exact reflection transmission flux identity",
+      "passed": true
+    },
+    {
+      "id": "O072",
+      "part": 3,
+      "method": "limit",
+      "name": "On resonance Bragg reflectance is tanh squared and band edge has finite continuous reflection",
+      "passed": true
+    },
+    {
+      "id": "O072",
+      "part": 4,
+      "method": "independent_derivation",
+      "name": "Bragg center phase derivative yields tanh coupling length divided by coupling constant and short grating delay",
+      "passed": true
+    },
+    {
+      "id": "Q072",
+      "part": 1,
+      "method": "symbolic",
+      "name": "two dimensional Grover effective projector has unit trace and determinant proportional to marked overlap",
+      "passed": true
+    },
+    {
+      "id": "Q072",
+      "part": 2,
+      "method": "limit",
+      "name": "Grover avoided crossing reaches exact inverse root N minimum gap at half interpolation",
+      "passed": true
+    },
+    {
+      "id": "Q072",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "local adiabatic inverse squared gap integral has exact arctangent form and square root asymptotic",
+      "passed": true
+    },
+    {
+      "id": "Q072",
+      "part": 4,
+      "method": "physical_case",
+      "name": "nonadiabatic matrix element peaks below unity and local schedule bounds transition ratio by epsilon",
+      "passed": true
+    }
+  ],
+  "independent_expert_review": "pending"
+}

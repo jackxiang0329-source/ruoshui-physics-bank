@@ -1,0 +1,21 @@
+(1) 定常质量守恒 \(\dot M=4\pi r^2\rho u\) 与向心速率的Euler方程 \(u\,du/dr=-c_s^2\rho'/\rho-GM/r^2\) 共同成立。对连续方程对数微分得到 \(\rho'/\rho=-u'/u-2/r\)，代入可消去密度，得到
+\[
+\boxed{(u-c_s^2/u)\frac{du}{dr}=\frac{2c_s^2}{r}-\frac{GM}{r^2}}.
+\]
+左侧在 \(u=c_s\) 为零，若右侧非零就会产生不光滑的无穷导数；不能随意选择跨音速点的位置。
+
+(2) 正则声速点同时满足 \(u_s=c_s\) 和 \(2c_s^2/r_s-GM/r_s^2=0\)，故 \(r_s=GM/(2c_s^2)\)。等温Bernoulli积分为
+\(u^2/2+c_s^2\ln(\rho/\rho_\infty)-GM/r=0\)，在音速点代入 \(GM/r_s=2c_s^2\) 得
+\(\ln(\rho_s/\rho_\infty)=3/2\)，即 \(\rho_s=e^{3/2}\rho_\infty\)。所以
+\[
+\boxed{\dot M=4\pi r_s^2\rho_sc_s=\pi e^{3/2}(GM)^2\rho_\infty/c_s^3}.
+\]
+临界解在无穷远选亚音速、中心附近选超音速，任意非临界流率并不能在全域光滑满足这些边界。
+
+(3) 将 \(\rho/\rho_\infty=(\dot M/(4\pi\rho_\infty r^2u))\) 代入Bernoulli并用音速量消去流率，定义 \(w=u/c_s,x=r/r_s\)，可整理为
+\[
+\boxed{\frac{w^2}{2}-\ln w=2\ln x+\frac2x-\frac32}.
+\]
+直接在 \(x=w=1\) 检查两侧都为 \(1/2\)，且一阶导数均在临界点抵消；该超越方程存在多分支，需要通过在无穷远的边界与连续跨音速条件选出物理分支，不能仅由平方根选符号。
+
+(4) 无穷远 \(u\ll c_s,\rho\to\rho_\infty\)，故 \(u\simeq\dot M/(4\pi\rho_\infty r^2)\)。强引力内区在惯性项主导时 \(u\simeq\sqrt{2GM/r}\)，所以 \(\rho=\dot M/(4\pi r^2u)\propto r^{-3/2}\)。等温声速假设要求足够有效的气体冷却或加热维持温度；若 \(u\) 逼近光速、流体平均自由程过大或中心半径接近黑洞尺度，理想牛顿连续流近似不再有效。

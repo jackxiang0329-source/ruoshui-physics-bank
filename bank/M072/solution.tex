@@ -1,0 +1,27 @@
+(1) 不可压球对称连续性给 \(\partial_r(r^2v_r)=0\)，泡面随液体运动要求 \(v_r(R)=\dot R\)，所以 \(v_r(r,t)=R^2\dot R/r^2\)。其势函数可取 \(\phi=-R^2\dot R/r\)，满足远处速度消失。在泡壁应用无黏非定常Bernoulli \(p/\rho+\phi_t+v^2/2=\mathrm{const}\)，比较无穷远静压与泡内真空压强得到
+\[
+\boxed{R\ddot R+\tfrac32\dot R^2=-\Delta p/\rho}.
+\]
+符号表示初始 \(\dot R=0\) 时加速度 \(\ddot R=-\Delta p/(\rho R_0)<0\)，压强推动空泡收缩，不能错写成膨胀。
+
+(2) 令 \(v(R)=\dot R\)，把方程乘以 \(2R^2\dot R\) 可化为
+\(\frac{d}{dt}(R^3\dot R^2)=-2(\Delta p/\rho)R^2\dot R\)，积分且用静止初态得
+\[
+\boxed{\dot R^2=\frac{2\Delta p}{3\rho}\left[(R_0/R)^3-1\right]}.
+\]
+选塌缩分支 \(\dot R<0\)。对它对时间求导可还原原运动方程，且 \(R=R_0\) 时 \(\dot R=0\)，说明能量和符号一致。
+
+(3) 时间积分 \(t_c=\int_0^{R_0}dR/\sqrt{(2\Delta p/(3\rho))[(R_0/R)^3-1]}\)。令 \(x=R/R_0\)，整理为
+\[
+t_c=R_0\sqrt{\frac{3\rho}{2\Delta p}}\int_0^1\frac{x^{3/2}}{\sqrt{1-x^3}}dx
+=\boxed{\frac{R_0}{3}\sqrt{\frac{3\rho}{2\Delta p}}B(\tfrac56,\tfrac12)}.
+\]
+该无量纲系数约0.91468。当 \(R\ll R_0\)，\(|\dot R|\sim\sqrt{2\Delta p/(3\rho)}(R_0/R)^{3/2}\) 发散，预示不可压模型出现有限时刻速度奇点。
+
+(4) 外域瞬时动能为
+\[
+T_f=\frac\rho2\int_R^\infty v_r^2 4\pi r^2dr
+=2\pi\rho R^3\dot R^2 .
+\]
+由第二问化简
+\(T_f=\frac{4\pi\Delta p}{3}(R_0^3-R^3)\)，正好等于环境压强超过泡内压强所做的体积功 \(\Delta p[V(R_0)-V(R)]\)。真实空泡末期流速接近音速、液体可压缩且产生激波、黏性和表面张力重要，所以不能把 \(R=0\) 时的无限速度当作真实物理结论。

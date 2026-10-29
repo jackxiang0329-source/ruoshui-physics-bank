@@ -1,0 +1,31 @@
+(1) 由Josephson电压关系代入并联电流式，得
+\[
+\dot\phi=\frac{2eR}{\hbar}(I-I_c\sin\phi).
+\]
+定义 \(E_J=\hbar I_c/(2e)\)，倾斜洗衣板势 \(U(\phi)=-E_J[\cos\phi+i\phi]\)，则 \(U'(\phi)=E_J(\sin\phi-i)\)，动力学为 \(\dot\phi=-(4e^2R/\hbar^2)U'\)。若 \(0\le i<1\)，平衡点 \(\sin\phi_0=i\)，正曲率 \(\cos\phi_0>0\) 的 \(\phi_0=\arcsin i+2\pi n\) 为稳定支，平均电压0；另一支为势垒鞍顶。
+
+(2) 对 \(I>I_c\)，\(\dot\phi>0\) 全相位区间，单滑移周期为
+\[
+T_\phi=\frac{\hbar}{2eR}\int_0^{2\pi}\frac{d\phi}{I-I_c\sin\phi}
+=\frac{\hbar}{2eR}\frac{2\pi}{\sqrt{I^2-I_c^2}} .
+\]
+使用恒等积分时需满足 \(I>I_c\) 避免积分极点。平均电压
+\[
+\boxed{\langle V\rangle=\frac{\hbar}{2e}\frac{2\pi}{T_\phi}
+=R\sqrt{I^2-I_c^2}}.
+\]
+当 \(I\gg I_c\)，恢复欧姆近似 \(RI\)；接近临界从上方时 \(\langle V\rangle\propto\sqrt{I-I_c}\) 而非线性起振。
+
+(3) 井底 \(\phi_m=\arcsin i\)，邻近鞍顶 \(\phi_s=\pi-\arcsin i\)。势差
+\(\Delta U=U(\phi_s)-U(\phi_m)\)，由 \(\cos\phi_s=-\sqrt{1-i^2}\)，\(\cos\phi_m=\sqrt{1-i^2}\)，得到
+\[
+\boxed{\Delta U=2E_J[\sqrt{1-i^2}-i\arccos i]}.
+\]
+\(i=0\) 时势垒 \(2E_J\)，\(i\to1^-\) 时趋零。它描述无噪声相位粒子局部稳定区间；加入热逃逸或量子隧穿可在小于临界偏流时提前发生相位滑移。
+
+(4) 乘上瞬时电压，电流功率 \(IV=I_cV\sin\phi+V^2/R\)。一整次 \(2\pi\) 相位滑移积分
+\(\int I_cV\sin\phi\,dt=(\hbar I_c/(2e))\oint\sin\phi\,d\phi=0\)，故周期平均
+\[
+\boxed{I\langle V\rangle=\langle V^2\rangle/R}.
+\]
+超电流的Josephson势能一个周期净变化为零，驱动平均供能全部由电阻耗散。一般 \(\langle V^2\rangle>\langle V\rangle^2\)（电压有周期波动），把平均电压平方代入焦耳热必然少计损耗。

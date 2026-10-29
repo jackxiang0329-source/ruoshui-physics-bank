@@ -1,0 +1,20 @@
+(1) 由傍轴方程
+\(\Psi_z=i\nabla_\perp^2\Psi/(2k)\)，强度导数
+\(\partial_zI=\Psi^*\Psi_z+\Psi\Psi_z^*
+=(i/2k)(\Psi^*\nabla_\perp^2\Psi-\Psi\nabla_\perp^2\Psi^*)\)。
+利用乘积散度恒等式及 \(\operatorname{Im}(\Psi^*\nabla_\perp\Psi)=I\nabla_\perp\phi\) 得
+\[
+\boxed{\partial_zI=-\frac1k\nabla_\perp\cdot(I\nabla_\perp\phi)}.
+\]
+等效横向流密度为 \(\boldsymbol J_\perp=I\nabla_\perp\phi/k\)，相位增大方向对应局部傍轴传播方向；符号来自采用 \(e^{+ikz}\) 的约定。
+
+(2) 在参考面 \(I=I_0\) 时，\(I_z=-(I_0/k)\nabla_\perp^2\phi\)。对周期横向区域写 \(\widehat{\nabla^2\phi}(\boldsymbol q)=-|\boldsymbol q|^2\widehat\phi(\boldsymbol q)\)，于是
+\[
+\boxed{\widehat\phi(\boldsymbol q)=\frac{k\,\widehat{I_z}(\boldsymbol q)}{I_0|\boldsymbol q|^2}},\quad\boldsymbol q\ne0.
+\]
+常数相位 \(\widehat\phi(\boldsymbol0)\) 不影响强度、无从由TIE确定，需要外加相位规范，例如取横向平均相位为0；这不是仪器计算错误。
+
+(3) 对 \(\phi=\epsilon\cos(qx)\)，\(\partial_x^2\phi=-\epsilon q^2\cos(qx)\)，故
+\(I_z=(I_0/k)\epsilon q^2\cos(qx)\)。代入傅里叶反演乘 \(k/(I_0q^2)\) 后恰得 \(\epsilon\cos(qx)\)，核对了符号和 \(q^2\) 系数。若输入强度导数带小幅随机误差 \(\delta\widehat{I_z}\)，相位误差却按 \(1/q^2\) 放大，因此低波数对噪声尤其敏感，需正规化与先验，而非简单声称所有频率都同样稳定。
+
+(4) 在周期边界或横向通量衰减到零时积分连续方程，得到 \(d\int I\,dxdy/dz=-(1/k)\oint I\nabla\phi\cdot\boldsymbol n\,ds=0\)。这保证总光能在无损傍轴传播下守恒。若 \(I=0\)，相位可有光学涡旋且 \(I\nabla\phi\) 的反演椭圆算符退化；若边界通量未知或两焦面距离过大，有限差分导数不再近似局部 \(I_z\)，不可把均匀强度傅里叶Poisson解当作任意真实照明的严格重建。

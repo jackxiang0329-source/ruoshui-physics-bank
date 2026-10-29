@@ -1,0 +1,22 @@
+(1) 因为 \([H,\sigma_z]=0\)，在固定 \(s=\pm1\) 的子空间有 \(H_s=\hbar\omega a^\dagger a+s\hbar g(a+a^\dagger)\)。Heisenberg方程 \(\dot a=-i\omega a-isg\) 解为
+\[
+a(t)=e^{-i\omega t}a(0)-s\frac g\omega(1-e^{-i\omega t}),
+\quad\boxed{\alpha_s(t)=-s\frac g\omega(1-e^{-i\omega t})}.
+\]
+零初态映为相干态 \(|\alpha_s(t)\rangle\) 乘以一个分支公共的动力学相位；两自旋分支的位移相反，且在 \(t=2\pi n/\omega\) 同时回到真空。
+
+(2) 初始自旋叠加对应振子条件态 \(|\alpha_+(t)\rangle,|\alpha_-(t)\rangle\)。约化自旋非对角元乘以两个相干态重叠 \(\mathcal L(t)=\langle\alpha_-(t)|\alpha_+(t)\rangle\)（公共相位相消）。利用 \(\langle\beta|\alpha\rangle=\exp[-(|\alpha|^2+|\beta|^2)/2+\beta^*\alpha]\) 与 \(\alpha_-=-\alpha_+\)，得
+\[
+\boxed{\mathcal L(t)=\exp[-2|\alpha_+(t)|^2]
+=\exp[-8(g/\omega)^2\sin^2(\omega t/2)]}.
+\]
+它在半周期最低、整周期严格回复1，故不是不可逆、单调指数衰减的Lindblad失相干率。
+
+(3) 自旋约化密度矩阵为 \(\rho_s=\frac12\begin{pmatrix}1&\mathcal L\\\mathcal L^*&1\end{pmatrix}\)，本征值 \(\lambda_\pm=(1\pm|\mathcal L|)/2\)。因此
+\[
+\operatorname{Tr}\rho_s^2=\frac{1+|\mathcal L|^2}{2},\quad
+S=-\sum_\pm\lambda_\pm\ln\lambda_\pm.
+\]
+闭合总态保持纯态，所以此Von Neumann熵也正好是自旋与振子的纠缠熵；当 \(g=0\) 或 \(\omega t=2\pi n\) 时 \(\mathcal L=1\)，有纯度1、熵0，而非残留永久混合态。
+
+(4) 条件振子数 \(\langle a^\dagger a\rangle_s=|\alpha_s|^2=4(g/\omega)^2\sin^2(\omega t/2)\)。振子裸能 \(\hbar\omega|\alpha_s|^2=2\hbar g^2(1-\cos\omega t)/\omega\)，相互作用能 \(2s\hbar g\operatorname{Re}\alpha_s=-2\hbar g^2(1-\cos\omega t)/\omega\)。两者逐时相消，故 \(\langle H_s\rangle=0\)，恰与初始振子真空及 \(\langle a+a^\dagger\rangle=0\) 一致。观察到振子瞬时产生激发并不等于能量流向外浴，本题没有任何不可逆环境，完整能量预算必须包含耦合项。
