@@ -1,0 +1,26 @@
+(1) 半径 \(\rho\) 处载流子速度 \(\boldsymbol v=\omega\rho\boldsymbol e_\varphi\)，故 \(\boldsymbol v\times\boldsymbol B=\omega\rho B\boldsymbol e_\rho\)。电动势
+\[
+\boxed{\mathcal E=\int_0^R\omega B\rho\,d\rho=B\omega R^2/2},
+\quad I=\mathcal E/(r+R_L),\quad V_L=IR_L.
+\]
+磁力对单个载流子不直接做功，但旋转导体提供机械约束与能量，不能据此断言发电机没有机械输入。
+
+(2) 径向电流元受力 \(d\boldsymbol F=I\,d\rho\,\boldsymbol e_\rho\times B\boldsymbol e_z=-IB\,d\rho\,\boldsymbol e_\varphi\)。因此
+\[
+\boxed{\tau_{\rm em}=-\int_0^RIB\rho\,d\rho=-IBR^2/2}.
+\]
+机械功率 \(-\tau_{\rm em}\omega=IB\omega R^2/2=I\mathcal E=I^2(r+R_L)\)，分别在盘内与负载耗散 \(I^2r,I^2R_L\)，能量收支逐项闭合。
+
+(3) 无外力矩时 \(J\dot\omega=\tau_{\rm em}=-B^2R^4\omega/[4(r+R_L)]\)。令 \(\lambda=B^2R^4/[4J(r+R_L)]\)，则
+\[
+\boxed{\omega(t)=\omega_0e^{-\lambda t}},\quad
+\Delta\varphi_\infty=\omega_0/\lambda .
+\]
+负载总热量 \(\int_0^\infty I^2R_Ldt=[R_L/(r+R_L)]J\omega_0^2/2\)，盘内损耗占剩余份额；两者之和等于初始转动动能，提供独立积分检验。
+
+(4) 固定转速下 \(P_L=\mathcal E^2R_L/(r+R_L)^2\)。求导得极大点 \(R_L=r\)，
+\[
+\boxed{P_{L,\max}=\mathcal E^2/(4r)},\qquad
+\eta=P_L/(-\tau_{\rm em}\omega)=R_L/(r+R_L).
+\]
+最大功率点效率为 \(1/2\)，而 \(R_L/r\to\infty\) 效率趋1、功率却趋零；两种优化目标不可混淆。

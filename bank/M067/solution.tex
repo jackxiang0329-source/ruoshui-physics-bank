@@ -1,0 +1,28 @@
+(1) \(E=mv_\infty^2/2>0\)，\(L=mv_\infty b\)。令 \(u=1/r\)，Binet方程 \(u''+u=-m\kappa/L^2\) 的双曲轨道解为
+\[
+u=\frac{m\kappa}{L^2}(e\cos\phi-1),\quad
+e=\sqrt{1+2EL^2/(m\kappa^2)}
+=\sqrt{1+(mv_\infty^2b/\kappa)^2}>1.
+\]
+在 \(\phi=0\) 处 \(r_{\min}=L^2/[m\kappa(e-1)]=[\kappa+\sqrt{\kappa^2+m^2v_\infty^4b^2}]/(mv_\infty^2)\)。可由径向能量转折点方程 \(E=L^2/(2mr_{\min}^2)+\kappa/r_{\min}\) 再核对。
+
+(2) 渐近方向满足 \(\cos\phi_\infty=1/e\)，故偏转角
+\(\chi=\pi-2\phi_\infty=2\arcsin(1/e)\)，等价于
+\[
+\boxed{\tan(\chi/2)=\kappa/(mv_\infty^2b)}.
+\]
+当 \(b\gg\kappa/(mv_\infty^2)\)，\(\chi\simeq2\kappa/(mv_\infty^2b)\)。独立按直线近似计算横向冲量 \(\Delta p_\perp=\int\kappa b\,dt/(b^2+v_\infty^2t^2)^{3/2}=2\kappa/(bv_\infty)\)，除以 \(mv_\infty\) 得相同角度。
+
+(3) 轴对称入射面积 \(d\sigma=2\pi b|db|\)，散射立体角 \(d\Omega=2\pi\sin\chi\,d\chi\)。由 \(b=\kappa\cot(\chi/2)/(mv_\infty^2)\)，得
+\[
+\boxed{\frac{d\sigma}{d\Omega}=b\frac{|db/d\chi|}{\sin\chi}
+=\left(\frac{\kappa}{2mv_\infty^2}\right)^2\csc^4(\chi/2)}.
+\]
+小角 \(\chi\to0\) 时截面密度按 \(\chi^{-4}\) 发散，来自无屏蔽长程势的大 \(b\) 贡献，并非真实有限束流的无限计数。
+
+(4) \(\chi>\chi_0\) 当且仅当 \(0\le b<b_0=\kappa\cot(\chi_0/2)/(mv_\infty^2)\)，所以
+\[
+\boxed{\sigma(\chi>\chi_0)=\pi b_0^2
+=\pi\left[\frac{\kappa}{mv_\infty^2}\cot\frac{\chi_0}{2}\right]^2}.
+\]
+\(b\to0\) 时 \(\chi\to\pi\) 且 \(r_{\min}\to2\kappa/(mv_\infty^2)\)，轨道不会穿越排斥中心；实际角分辨率、屏蔽、靶核反冲和量子效应会修改理想小角或高能极限。
