@@ -1,0 +1,26 @@
+(1) 脉冲势对动量的瞬时改变为 \(\Delta p=-\partial_\theta(K\cos\theta)=K\sin\theta_n\)，随后自由转动一个单位时间，因此
+\[
+\boxed{p_{n+1}=p_n+K\sin\theta_n,\quad
+\theta_{n+1}=\theta_n+p_{n+1}\pmod{2\pi}}.
+\]
+按 \((\theta,p)\) 排列，Jacobian为
+\[
+D\mathcal M=\begin{pmatrix}1+K\cos\theta&1\\K\cos\theta&1\end{pmatrix},\quad\det D\mathcal M=1.
+\]
+二维中行列式为1等价于保持标准辛形式 \(d\theta\wedge dp\)，所以离散演化严格保面积而非耗散。
+
+(2) 固定点要求 \(K\sin\theta_*=0\) 且 \(p_*=0\pmod{2\pi}\)，故 \(\theta_*=0,\pi\)。线性特征值满足
+\[
+\lambda^2-(2+K\cos\theta_*)\lambda+1=0.
+\]
+在 \(\theta_*=0\) 时迹 \(2+K>2\)，一对互逆实本征值，双曲失稳；在 \(\theta_*=\pi\) 时迹 \(2-K\)，当 \(0<K<4\) 时 \(|\operatorname{tr}|<2\)，本征值为共轭单位模，线性椭圆稳定。\(K=4\) 时迹为 \(-2\) 属抛物边界，线性理论本身不能决定非线性长期行为。
+
+(3) 对 \(K\ll1\) 的缓慢演化，将二阶差分 \(p_{n+1}-p_n=K\sin\theta_n\) 连续化为 \(\ddot\theta=K\sin\theta\)，等价于摆Hamilton量 \(H_{\rm eff}=p^2/2+K\cos\theta\)，稳定中心在 \(\theta=\pi\)。分离轨道能量为 \(H_{\rm sep}=K\)，在 \(\theta=\pi\) 时
+\(p_{\max}^2/2-K=K\)，故 \(p_{\max}=2\sqrt K\)。
+\[
+\boxed{\Delta p_{\rm sep}\simeq4\sqrt K,\qquad
+\mathcal A_{\rm sep}\simeq16\sqrt K}.
+\]
+面积由 \(\int_0^{2\pi}2|p_{\rm sep}(\theta)|d\theta\) 得到，属于小 \(K\) 渐近式而非任意脉冲强度下的精确公式。
+
+(4) \(K\to0\) 时 \(p\) 常量、\(\theta\) 匀速转动，标准映射成为可积扭转映射；\(K=4\) 是固定点 \(\pi\) 的线性倍周期阈值而非所有轨道的统一混沌阈值。较大 \(K\) 可产生混沌海、共振岛和加速轨道，保面积只约束相空间局部面积，并不限制非紧致动量轴上的单轨道动量幅度。连续摆近似只适用于小 \(K\) 的主共振附近。

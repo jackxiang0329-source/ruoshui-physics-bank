@@ -1,0 +1,22 @@
+{
+  "id": "O061",
+  "topic": "光学",
+  "title": "受激损耗荧光显微的非线性点扩散函数、Lambert半高宽与光子预算",
+  "kind": "综合推导题",
+  "level": 5,
+  "estimated_minutes": 115,
+  "tags": [
+    "稳态两能级荧光速率方程",
+    "受激耗尽光学零心场和有效PSF",
+    "Lambert W半高位置解析反演",
+    "二维指数积分E1总光子预算",
+    "Poisson散粒噪声与成像精度权衡"
+  ],
+  "answer": "F(r)/F_0=\\frac{e^{-\\alpha r^2}}{1+cr^2},\\quad r_{1/2}^2=\\frac1\\alpha W_0\\left(\\frac{2\\alpha}{c}e^{\\alpha/c}\\right)-\\frac1c,\\quad\\frac{N(c)}{N(0)}=\\frac\\alpha c e^{\\alpha/c}E_1(\\alpha/c)",
+  "quality_status": "待独立复核",
+  "tier": "advanced_composite",
+  "format": "latex-fragment-v1",
+  "revision": "composite-v3.6-round12-draft",
+  "challenge_profile": "high-multistage",
+  "complexity_tier": "L5-C"
+}

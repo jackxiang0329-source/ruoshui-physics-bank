@@ -1,0 +1,120 @@
+{
+  "status": "draft-continuation-only",
+  "new_problem_count": 4,
+  "passed_count": 16,
+  "tests": [
+    {
+      "id": "M064",
+      "part": 1,
+      "method": "symbolic",
+      "name": "tidal Hill radial and tangential equations separately vanish for exact linear solutions",
+      "passed": true
+    },
+    {
+      "id": "M064",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "integral of tangential motion equals constant C and periodic vertical oscillator solves initial conditions",
+      "passed": true
+    },
+    {
+      "id": "M064",
+      "part": 3,
+      "method": "conservation",
+      "name": "Jacobi pseudoenergy derivative cancels exactly between Coriolis and tidal forces",
+      "passed": true
+    },
+    {
+      "id": "M064",
+      "part": 4,
+      "method": "physical_case",
+      "name": "one orbital period returns radial and vertical coordinates while tangential offset gains only secular minus three C T",
+      "passed": true
+    },
+    {
+      "id": "E064",
+      "part": 1,
+      "method": "dimensions",
+      "name": "relativistic magnetic centripetal force and gyro frequency give consistent radius and acceleration",
+      "passed": true
+    },
+    {
+      "id": "E064",
+      "part": 2,
+      "method": "symbolic",
+      "name": "Lienard transverse acceleration reduces to exact gamma-square synchrotron power formula",
+      "passed": true
+    },
+    {
+      "id": "E064",
+      "part": 3,
+      "method": "conservation",
+      "name": "exact coth cooling trajectory satisfies radiation energy balance and strictly decreasing orbital radius",
+      "passed": true
+    },
+    {
+      "id": "E064",
+      "part": 4,
+      "method": "limit",
+      "name": "ultrarelativistic critical frequency approaches three-halves gamma-squared gyro scale and correct adiabatic loss",
+      "passed": true
+    },
+    {
+      "id": "T061",
+      "part": 1,
+      "method": "symbolic",
+      "name": "exact Ising transfer eigenvalues reproduce matrix trace and determinant",
+      "passed": true
+    },
+    {
+      "id": "T061",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "field derivative of leading eigenvalue gives exact magnetization and zero-field susceptibility",
+      "passed": true
+    },
+    {
+      "id": "T061",
+      "part": 3,
+      "method": "limit",
+      "name": "eigenvalue spectral ratio yields exponential correlations and low-temperature divergence",
+      "passed": true
+    },
+    {
+      "id": "T061",
+      "part": 4,
+      "method": "numerical",
+      "name": "exact enumeration of 64 spin configurations matches trace transfer sixth power and positive heat capacity",
+      "passed": true
+    },
+    {
+      "id": "W061",
+      "part": 1,
+      "method": "symbolic",
+      "name": "sine-Gordon kink solves static nonlinear PDE and saturates exact topological energy density",
+      "passed": true
+    },
+    {
+      "id": "W061",
+      "part": 2,
+      "method": "conservation",
+      "name": "Lorentz-boosted kink energy and momentum give invariant rest mass eight",
+      "passed": true
+    },
+    {
+      "id": "W061",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "Pöschl-Teller kink fluctuation operator annihilates normalized translational zero mode",
+      "passed": true
+    },
+    {
+      "id": "W061",
+      "part": 4,
+      "method": "symbolic",
+      "name": "exact Jost scattering wave has no backward component and unit-modulus transmitted wave",
+      "passed": true
+    }
+  ],
+  "independent_expert_review": "pending"
+}

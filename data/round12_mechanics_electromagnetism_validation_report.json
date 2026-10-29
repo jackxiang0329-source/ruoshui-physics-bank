@@ -1,0 +1,120 @@
+{
+  "status": "draft-continuation-only",
+  "new_problem_count": 4,
+  "passed_count": 16,
+  "tests": [
+    {
+      "id": "M065",
+      "part": 1,
+      "method": "symbolic",
+      "name": "kicked-rotor standard map Jacobian has determinant one and preserves symplectic area",
+      "passed": true
+    },
+    {
+      "id": "M065",
+      "part": 2,
+      "method": "physical_case",
+      "name": "standard map theta-zero point is hyperbolic and theta-pi is elliptic for zero K less than four",
+      "passed": true
+    },
+    {
+      "id": "M065",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "small-K pendulum separatrix area integrates to sixteen root K and full width four root K",
+      "passed": true
+    },
+    {
+      "id": "M065",
+      "part": 4,
+      "method": "limit",
+      "name": "unforced standard map becomes free symplectic twist and K four gives period doubling linear threshold",
+      "passed": true
+    },
+    {
+      "id": "M066",
+      "part": 1,
+      "method": "symbolic",
+      "name": "catenary vertical force balance holds exactly for nonlinear arc-length weight",
+      "passed": true
+    },
+    {
+      "id": "M066",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "integrated catenary length is two a sinh u and sinh u over u increases from one",
+      "passed": true
+    },
+    {
+      "id": "M066",
+      "part": 3,
+      "method": "conservation",
+      "name": "support vertical forces exactly balance full chain weight with minimum tension at center",
+      "passed": true
+    },
+    {
+      "id": "M066",
+      "part": 4,
+      "method": "symbolic",
+      "name": "catenary gravitational energy integral and shallow-sag arc-length expansion are exact",
+      "passed": true
+    },
+    {
+      "id": "E065",
+      "part": 1,
+      "method": "symbolic",
+      "name": "both dielectric boundary conditions hold at outer and inner interfaces",
+      "passed": true
+    },
+    {
+      "id": "E065",
+      "part": 2,
+      "method": "limit",
+      "name": "effective permittivity reduces to shell-only and equal-material sphere limits",
+      "passed": true
+    },
+    {
+      "id": "E065",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "neutral inclusion condition algebraically equivalent to zero exterior dipole",
+      "passed": true
+    },
+    {
+      "id": "E065",
+      "part": 4,
+      "method": "numerical",
+      "name": "sample positive dielectric stack has finite field and satisfies all four interface equations",
+      "passed": true
+    },
+    {
+      "id": "E066",
+      "part": 1,
+      "method": "symbolic",
+      "name": "ideal MHD momentum and induction equations imply exact shear Alfven phase speed",
+      "passed": true
+    },
+    {
+      "id": "E066",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "Elsasser variables exactly decouple into opposite-direction transport equations",
+      "passed": true
+    },
+    {
+      "id": "E066",
+      "part": 3,
+      "method": "conservation",
+      "name": "kinetic and magnetic Alfven energies satisfy exact local flux conservation",
+      "passed": true
+    },
+    {
+      "id": "E066",
+      "part": 4,
+      "method": "symbolic",
+      "name": "interface Alfven velocity continuity and impedance-weighted energy reflection plus transmission equal unity",
+      "passed": true
+    }
+  ],
+  "independent_expert_review": "pending"
+}

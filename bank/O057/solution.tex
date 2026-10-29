@@ -1,0 +1,88 @@
+(1) 设 \(\gamma=\gamma_i+\gamma_e>0\)。对 \(e^{-i\omega t}\) 稳态，耦合模方程给出
+\[
+ a=\frac{\sqrt{2\gamma_e}}{\gamma-i\Delta}\,s_+^{(s)}.
+\]
+因此对称通道的散射本征值为
+\[
+ \lambda_s=-1+\frac{2\gamma_e}{\gamma-i\Delta}
+ =\frac{\gamma_e-\gamma_i+i\Delta}{\gamma-i\Delta},
+ \qquad \lambda_a=-1.
+\]
+回到物理端口基底，记
+\(P_s=\frac12\begin{pmatrix}1&1\\1&1\end{pmatrix}\)，则
+\[
+ \boxed{S(\omega)=-I+\frac{2\gamma_e}{\gamma-i\Delta}P_s
+ =\begin{pmatrix}
+ -1+\frac{\gamma_e}{\gamma-i\Delta}&\frac{\gamma_e}{\gamma-i\Delta}\\
+ \frac{\gamma_e}{\gamma-i\Delta}&-1+\frac{\gamma_e}{\gamma-i\Delta}
+ \end{pmatrix}}.
+\]
+对称向量 \((1,1)^T/\sqrt2\) 的本征值为 \(\lambda_s\)，
+反对称向量 \((1,-1)^T/\sqrt2\) 的本征值为 \(-1\)。
+无内部吸收时 \(\gamma_i=0\)，有 \(|\lambda_s|=|\lambda_a|=1\)，
+故 \(S^\dagger S=I\)。解析延拓的极点满足
+\(\gamma-i(\omega-\omega_0)=0\)，即
+\(\omega=\omega_0-i\gamma\)，位于下半平面，符合被动腔的因果稳定性。
+
+(2) 完美吸收意味着存在非零输入向量 \(\mathbf s_+\) 使
+\(S\mathbf s_+=0\)。因 \(\lambda_a=-1\) 永不为零，必须
+\(s_+^{(a)}=0\)，即两个入射波同相且复振幅相等。
+再由 \(\lambda_s=0\) 得
+\[
+ \boxed{\Delta=0,\qquad\gamma_i=\gamma_e,\qquad
+ s_{1+}=s_{2+}\ne0}.
+\]
+这就是相干完美吸收条件。任意非零反对称分量都会被完整反射，
+所以仅满足腔内损耗匹配而不控制两束光的相位仍不能保证全吸收。
+反对称通道完全不耦合腔模，是由两端口镜像对称性决定的暗通道。
+
+(3) 对称入射的吸收率为
+\[
+ A_s(\Delta)=1-|\lambda_s|^2
+ =1-\frac{(\gamma_e-\gamma_i)^2+\Delta^2}
+ {(\gamma_e+\gamma_i)^2+\Delta^2}
+ =\boxed{\frac{4\gamma_i\gamma_e}{\gamma^2+\Delta^2}}.
+\]
+峰值 \(A_s(0)=4\gamma_i\gamma_e/(\gamma_i+\gamma_e)^2\le1\)，
+等号恰在临界耦合 \(\gamma_i=\gamma_e\) 时成立。
+令 \(A_s(\Delta)=A_s(0)/2\) 得 \(|\Delta|=\gamma\)，
+故吸收线的角频率半高全宽
+\(\boxed{\mathrm{FWHM}=2\gamma}\)，加载品质因子
+\(\boxed{Q_L=\omega_0/(2\gamma)}\)。
+独立地，稳态储能为
+\[
+ U=|a|^2=\frac{2\gamma_e}{\gamma^2+\Delta^2}|s_+^{(s)}|^2,
+\]
+内部耗散功率为
+\(P_{\rm abs}=2\gamma_iU
+ =4\gamma_i\gamma_e|s_+^{(s)}|^2/(\gamma^2+\Delta^2)\)，
+故 \(P_{\rm abs}/|s_+^{(s)}|^2=A_s\)。
+对任意瞬态还可直接从耦合模方程推得
+\[
+ \frac{d|a|^2}{dt}
+ =|s_+^{(s)}|^2-|s_-^{(s)}|^2-2\gamma_i|a|^2,
+\]
+这验证了储能变化、净输入光功率与热耗散之间的精确守恒。
+\(\gamma_i,\gamma_e,\Delta\) 具有角频率量纲，\(A_s\) 无量纲。
+
+(4) 设 \(s_{1+}=s_0,\ s_{2+}=s_0e^{i\phi}\)，则
+\[
+ \frac{|s_+^{(s)}|^2}{|s_{1+}|^2+|s_{2+}|^2}
+ =\frac{|1+e^{i\phi}|^2}{4}=\cos^2(\phi/2).
+\]
+反对称通道不吸收，故
+\[
+ \boxed{A_{\rm tot}(\Delta,\phi)
+ =\frac{4\gamma_i\gamma_e}{\gamma^2+\Delta^2}\cos^2(\phi/2)}.
+\]
+同相 \(\phi=2\pi n\) 吸收最大；反相
+\(\phi=(2n+1)\pi\) 时完全不耦合腔模，吸收为零。
+若只有端口1入射，输入恰有一半功率处于对称通道，
+因此 \(A_{\rm one}=A_s/2\le1/2\)，
+\[
+ \boxed{\max_{\omega,\gamma_i/\gamma_e}A_{\rm one}=\tfrac12}.
+\]
+双端口同相入射则全部功率进入可吸收的对称通道，在
+\(\Delta=0,\gamma_i=\gamma_e\) 时达到100%吸收。
+这里的50%单端上限依赖本题假定的对称双端口、单共振模和
+无附加吸收背景；不应推广为所有光学吸收器的普遍上限。

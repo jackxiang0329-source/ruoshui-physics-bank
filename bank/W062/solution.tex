@@ -1,0 +1,21 @@
+(1) 取 \(\psi(x,t)=f(x)e^{i\omega t}\)，正实 \(f\) 满足 \(\frac12f''-\omega f+f^3=0\)。将方程乘 \(f'\) 积分，并使用 \(f,f'\to0\) 的边界条件，得
+\((f')^2=2\omega f^2-f^4\)。设峰值 \(f(0)=\eta>0\)，有 \(2\omega=\eta^2\)，于是
+\[
+\boxed{\psi_\eta(x,t)=\eta\operatorname{sech}(\eta x)e^{i\eta^2t/2}}.
+\]
+直接微分 \(\operatorname{sech}\) 可验其满足原方程；背景严格为零，不是平面波解的小振幅极限。
+
+(2) 利用 \(\int_{-\infty}^\infty\operatorname{sech}^2u\,du=2\)、\(\int\operatorname{sech}^4u\,du=4/3\) 和 \(\int\operatorname{sech}^2u\tanh^2u\,du=2/3\)，得到
+\[
+\boxed{N=2\eta,\quad P=0,\quad H=\tfrac12(2\eta^3/3)-\tfrac12(4\eta^3/3)=-\eta^3/3}.
+\]
+若采用Galilean变换 \(\psi_v(x,t)=e^{i(vx-v^2t/2)}\psi_\eta(x-vt,t)\)，则 \(N\) 不变、\(P_v=vN=2\eta v\)、\(H_v=H+v^2N/2=-\eta^3/3+\eta v^2\)，从而精确核对运动能量预算。
+
+(3) 对 \(\psi=e^{iA^2t}[A+u(x,t)+iw(x,t)]\)，在实扰动 \(u,w\) 的一次阶得到
+\(u_t=-w_{xx}/2\)、\(w_t=u_{xx}/2+2A^2u\)。代入 \(u,w\propto e^{i(kx-\Omega t)}\)，消元：
+\[
+\boxed{\Omega^2=\frac{k^4}{4}-A^2k^2}.
+\]
+当 \(0<|k|<2A\) 时 \(\Omega\) 纯虚而产生指数增长；增长率 \(\sigma(k)=|k|\sqrt{A^2-k^2/4}\)，其最大值 \(A^2\) 在 \(|k|=\sqrt2A\) 处取得。边界 \(k=0\) 是相位相关的零模，而非一个新的不稳定波段。
+
+(4) 对衰减到零的孤子，\(N,H,P\) 由边界无通量条件守恒，色散项 \(|\psi_x|^2\) 与非线性吸引项 \(-|\psi|^4\) 在尺度 \(1/\eta\) 上彼此平衡。令 \(\eta\to0\) 时 \(N\to0\)、\(H\to0\)，孤子振幅及非线性同时消失。匀幅背景则有无限的全空间 \(N\)，应在周期盒或每单位长度中研究其傅里叶扰动；背景的Benjamin--Feir不稳定不等同于局域孤子的线性谱不稳定，不能混用两种边界条件。

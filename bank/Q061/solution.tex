@@ -1,0 +1,78 @@
+(1) 对 \(P=\sigma_x\) 和 \(T=K\)（复共轭），有 \(PH^*P=H\)，所以 \([PT,H]=0\) 在反线性意义下成立。矩阵的特征多项式为
+\(\det(EI-H)=E^2-(J^2-\gamma^2)\)，因而
+\[
+\boxed{E_\pm=\pm\Omega},\qquad \Omega=\sqrt{J^2-\gamma^2}.
+\]
+当 \(0\le\gamma<J\)，\(\Omega\) 为正实数；\(\gamma>J\) 时 \(E_\pm=\pm i\kappa\)、\(\kappa=\sqrt{\gamma^2-J^2}>0\)，对称性已自发破缺为复谱。可取右本征向量 \(v_E=(J,E-i\gamma)^T\)。在例外点 \(\gamma=J\)，
+\[
+H_{\rm EP}=J\begin{pmatrix}i&1\\1&-i\end{pmatrix},\quad
+H_{\rm EP}^2=0,\quad H_{\rm EP}\ne0.
+\]
+于是唯一普通本征方向可取 \(v=(1,-i)^T\)（满足 \(H_{\rm EP}v=0\)），而 \(w=(0,1/J)^T\) 满足 \(H_{\rm EP}w=v\)。因此系统在 \((v,w)\) 基中有单一二阶Jordan块；它不是两种本征态恰好能量相同的普通简并。
+
+(2) 关键矩阵恒等式 \(H^2=\Omega^2I\) 使指数矩阵可精确求和。在未破缺区，
+\[
+\boxed{U(t)=e^{-iHt}=\cos(\Omega t)I-i\frac{\sin(\Omega t)}{\Omega}H}.
+\]
+对初态作用后有
+\[
+\psi_1=\cos(\Omega t)+\frac{\gamma}{\Omega}\sin(\Omega t),
+\quad\psi_2=-i\frac{J}{\Omega}\sin(\Omega t),
+\]
+\[
+\boxed{N(t)=
+\left(\cos\Omega t+\frac{\gamma}{\Omega}\sin\Omega t\right)^2+
+\frac{J^2}{\Omega^2}\sin^2\Omega t}.
+\]
+这在 \(\gamma>0\) 时一般不等于1；事实上 \(\dot N=i\psi^\dagger(H^\dagger-H)\psi=2\gamma(|\psi_1|^2-|\psi_2|^2)\)，表明对角项含一个增益通道和一个损耗通道。在例外点，因 \(H_{\rm EP}^2=0\)，矩阵指数严格截断：
+\[
+\boxed{U_{\rm EP}(t)=I-iH_{\rm EP}t},\quad
+\psi_{\rm EP}=(1+Jt,-iJt)^T,\quad
+\boxed{N_{\rm EP}=1+2Jt+2J^2t^2}.
+\]
+若 \(\gamma>J\)，令 \(\kappa=\sqrt{\gamma^2-J^2}\)，则
+\[
+U(t)=\cosh(\kappa t)I-i\frac{\sinh(\kappa t)}{\kappa}H,\quad
+\psi_1=\cosh\kappa t+\frac\gamma\kappa\sinh\kappa t,\quad
+\psi_2=-i\frac J\kappa\sinh\kappa t.
+\]
+因此 \(N(t)=\bigl(\cosh\kappa t+\gamma\sinh\kappa t/\kappa\bigr)^2+
+J^2\sinh^2\kappa t/\kappa^2\)，在长时间含指数增长；例外点的多项式正是两本征方向合并的Jordan结构特征。
+
+(3) 取
+\[
+\boxed{\eta=I+\frac\gamma J\sigma_y
+=\begin{pmatrix}1&-i\gamma/J\\i\gamma/J&1\end{pmatrix}}.
+\]
+用Pauli关系 \([\sigma_x,\sigma_y]=2i\sigma_z\)、\(\{\sigma_z,\sigma_y\}=0\) 计算
+\[
+H^\dagger\eta-\eta H
+=J[\sigma_x,\eta]-i\gamma\{\sigma_z,\eta\}
+=2i\gamma\sigma_z-2i\gamma\sigma_z=0.
+\]
+所以
+\[
+\frac d{dt}(\psi^\dagger\eta\psi)
+=i\psi^\dagger(H^\dagger\eta-\eta H)\psi=0.
+\]
+度量本征值分别是 \(1\pm\gamma/J\)，在 \(0\le\gamma<J\) 都严格正；例外点处较小本征值变为零，\(\eta\) 失去可逆性，不能再定义等价于普通 Hilbert 空间的正定概率内积。初态的加权范数为1，故其任意时刻都等于1。直接代入第 (2) 问的显式分量亦可验证此不变量；这不表示实际增益损耗实现中普通光强或常规测量概率就一定守恒。
+
+(4) 从实谱侧取 \(\gamma=J-\varepsilon\)，有
+\[
+\Omega=\sqrt{J^2-(J-\varepsilon)^2}
+=\sqrt{2J\varepsilon-\varepsilon^2}
+=\sqrt{2J\varepsilon}\left[1-\frac{\varepsilon}{4J}+O((\varepsilon/J)^2)\right].
+\]
+故两能级间隔
+\[
+\boxed{\Delta E=2\Omega\sim2\sqrt{2J\varepsilon}},\qquad
+\frac{\partial(E_+-E_-)}{\partial\gamma}
+=-\frac{2\gamma}{\sqrt{J^2-\gamma^2}}
+\sim-\sqrt{\frac{2J}{\varepsilon}},
+\]
+体现例外点平方根而非普通解析简并的响应。破缺区 \(N(t)\) 的领先项由
+\(e^{\kappa t}\) 模态主导，初态与增长模态重叠不为零，因此
+\[
+\boxed{\lim_{t\to\infty}\frac1t\log N(t)=2\kappa=2\sqrt{\gamma^2-J^2}}.
+\]
+非厄米有效哈密顿量可描述光学有源模或开放量子系统的未归一化条件振幅；若用于条件量子态，必须另外以 \(N(t)^{-1/2}\) 归一化，并正确计入未被选择的量子跳跃记录。仅凭非厄米矩阵演化不能自动得到一个保迹、完全正的开放量子信道，也不能将所构造的正定度量与实验中未经标定的常规概率混淆。

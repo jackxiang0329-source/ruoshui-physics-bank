@@ -1,0 +1,29 @@
+(1) 将磁场能在相邻两键间各分一半，令
+\[
+\mathsf T_{ss'}=\exp[Kss'+h(s+s')/2],\quad
+\mathsf T=\begin{pmatrix}e^{K+h}&e^{-K}\\e^{-K}&e^{K-h}\end{pmatrix}.
+\]
+矩阵迹是 \(2e^K\cosh h\)，行列式是 \(e^{2K}-e^{-2K}\)，所以
+\(\lambda_\pm=e^K[\cosh h\pm\sqrt{\sinh^2h+e^{-4K}}]\)；
+\(Z_N=\lambda_+^N+\lambda_-^N\)，\(f=-k_BT\ln\lambda_+\) 为无限链自由能每格点。对任意正温，\(\lambda_+>\lambda_-\) 且解析，排除了隐藏的有限温度特征值交叉。
+
+(2) 对 \(h\) 微分得无量纲磁化
+\[
+m=\partial_h\ln\lambda_+
+=\frac{\sinh h}{\sqrt{\sinh^2h+e^{-4K}}},
+\quad \chi_B=\left.\partial_B(\mu m)\right|_{B=0}
+=\frac{\mu^2e^{2K}}{k_BT}.
+\]
+任意有限 \(T>0\) 下 \(h\to0\) 给出 \(m\to0\)，因此没有正温自发磁化，虽有低温急剧增大的磁化率。它与具有真实临界温度的高维模型或平均场理论不同，不能把 \(\chi_B\) 的低温增长误称为有限温度奇点。
+
+(3) 在零场时两个本征值为 \(2\cosh K\)、\(2\sinh K\)。自旋插入算符把最大本征态映到奇本征态，故热力学极限 \(\langle s_0s_r\rangle_c=(\lambda_-/\lambda_+)^r=(\tanh K)^r\)。因此
+\[
+\boxed{\xi=-1/\ln(\tanh K)}.
+\]
+低温 \(K\gg1\) 有 \(\tanh K=1-2e^{-2K}+\cdots\)，所以 \(\xi\simeq e^{2K}/2\)；高温 \(K\to0\) 时 \(\xi\simeq1/|\ln K|\to0\)。正温时关联严格指数衰减，不存在有限正温长程序。
+
+(4) 零场 \(\ln\lambda_+=\ln(2\cosh K)\)，所以内能与热容分别是
+\[
+u=-J\tanh K,\qquad c=k_BK^2\operatorname{sech}^2K>0.
+\]
+独立的正则涨落关系 \(C_N=k_B\beta^2(\langle H^2\rangle-\langle H\rangle^2)\ge0\) 给出相同符号。高温 \(c/k_B=K^2+O(K^4)\)，低温 \(c/k_B\sim4K^2e^{-2K}\)。有限链零场严格零温有两重有序基态，先取 \(B\to0\) 与先取 \(T\to0\) 的选态可能不同，但不产生任何 \(T>0\) 的相变。

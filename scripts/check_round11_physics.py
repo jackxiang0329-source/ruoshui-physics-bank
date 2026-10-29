@@ -21,8 +21,8 @@ REPORT=ROOT/"data/round11_validation_report.json"
 batch=json.loads(MANIFEST.read_text(encoding="utf8"))
 ids=batch["ids"]
 master={p["id"]:p for p in json.loads((ROOT/"data/problems.json").read_text(encoding="utf8"))}
-if len(master)!=302 or len(ids)!=50 or len(set(ids))!=50:
-    raise AssertionError("Round-11 canonical inventory is not exactly 50 new entries")
+if len(master)<302 or len(ids)!=50 or len(set(ids))!=50:
+    raise AssertionError("Round-11 canonical 50-item inventory missing or truncated")
 items={uid:master[uid] for uid in ids}
 prefix={"力学":"M","电磁学":"E","热学":"T","振动与波动":"W","光学":"O","近代物理":"Q"}
 for uid,p in items.items():

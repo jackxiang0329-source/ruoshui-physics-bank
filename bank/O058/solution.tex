@@ -1,0 +1,46 @@
+(1) 令 \(s=x\sqrt{k/(2z)}\)，\(y=(x'-x)\sqrt{k/(2z)}\)，则
+\[
+f=\frac{e^{-i\pi/4}}{\sqrt\pi}\int_{-s}^\infty e^{iy^2}dy.
+\]
+用 \(t=e^{-i\pi/4}y\) 作 Fresnel 路径旋转（亦可先加入 \(e^{-\epsilon y^2}\) 再取极限），得到
+\[
+\boxed{f(x,z)=\tfrac12\operatorname{erfc}(-e^{-i\pi/4}s)}.
+\]
+\(s\to+\infty\) 时 \(f\to1\)，\(s\to-\infty\) 时 \(f\to0\)，固定 \(x\ne0\) 且 \(z\downarrow0\) 也恢复 \(H(x)\)。归一化保证透光区的振幅为 \(U_0e^{ikz}\)，无多余相位。
+
+(2) 由 \(\operatorname{erfc}(0)=1\) 可得
+\[
+\boxed{f(0,z)=\tfrac12,\qquad I(0,z)/I_0=|f(0,z)|^2=\tfrac14}.
+\]
+边缘复振幅为一半，但强度取模平方，故不是 \(1/2\)。求导给
+\[
+\partial_xf=e^{-i\pi/4}\sqrt{\frac{k}{2\pi z}}
+\exp\!\left(\frac{ikx^2}{2z}\right),\quad
+\boxed{\left.\partial_x(I/I_0)\right|_{0}=\sqrt{\frac{k}{4\pi z}}}.
+\]
+因此横向衍射长度 \(\ell_F=\sqrt{z/k}=\sqrt{\lambda z/(2\pi)}\)，斜率量纲为 \(L^{-1}\)。
+
+(3) 对 \(w=e^{-i\pi/4}|s|\)，使用
+\(\operatorname{erfc}w=e^{-w^2}(\sqrt\pi w)^{-1}[1+O(w^{-2})]\)。
+在亮区
+\[
+f=1-\frac{e^{i(s^2+\pi/4)}}{2\sqrt\pi s}+O(s^{-3}),\qquad
+\boxed{I/I_0=1-\frac{\cos(s^2+\pi/4)}{\sqrt\pi s}+O(s^{-2})}.
+\]
+在暗区
+\[
+f=\frac{e^{i(s^2+\pi/4)}}{2\sqrt\pi|s|}+O(|s|^{-3}),\qquad
+\boxed{I/I_0=\frac{1}{4\pi s^2}+O(|s|^{-4})}.
+\]
+亮区振荡来自主场与边缘绕射场的干涉；暗区虽无几何光线，却存在按 \(|x|^{-2}\) 衰减的绕射强度。近边缘须使用精确复误差函数，而不能使用大 \(|s|\) 渐近式。
+
+(4) 去除载波后的傍轴方程为 \(2ikf_z+f_{xx}=0\)。乘以 \(f^*\) 并减去共轭式可得
+\[
+\boxed{\partial_z|f|^2+\partial_x\!\left[\frac1k\operatorname{Im}(f^*f_x)\right]=0}.
+\]
+由 (2) 的边缘振幅和导数，
+\[
+\boxed{j_x(0,z)=\frac1k\operatorname{Im}\!\left[\tfrac12e^{-i\pi/4}\sqrt{\frac{k}{2\pi z}}\right]
+=-\frac{1}{4\sqrt{\pi kz}}<0}.
+\]
+负号表明横向能流从透光侧进入 \(x<0\) 的阴影侧，和非零暗区强度一致。该 \(j_x\) 为相对轴向传播的归一化傍轴流；恢复物理能流须乘入射能流系数。理想入射波横向无限延伸，总能量积分发散，不能直接套用有限能量波包的全空间守恒证明，但局域连续性方程成立。
