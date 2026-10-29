@@ -168,7 +168,7 @@ const sim=(f,a,b,n=4000)=>{let h=(b-a)/n,s=f(a)+f(b);for(let i=1;i<n;i++)s+=(i%2
  check('Q102','sudden_box_expansion_eigenbasis_normalization',p,1,1e-8);
 }
 {
- const nbar=.7,ps=0,factor=Math.exp(-nbar);
+ const nbar=.7;let ps=0,factor=Math.exp(-nbar);
  for(let n=0;n<=20;n++){ps+=factor;factor*=nbar/(n+1)}
  check('Q103','displaced_oscillator_coherent_Poisson_probability_sum',ps,1,1e-13);
 }
