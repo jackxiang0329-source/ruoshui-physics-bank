@@ -1,0 +1,235 @@
+{
+  "round": 15,
+  "checked_subparts": 24,
+  "newly_replaced_ids": [
+    "M086",
+    "E088",
+    "T081",
+    "W081",
+    "O082",
+    "Q082"
+  ],
+  "full_round_pass": false,
+  "required_checks": 200,
+  "independent_expert_review": "待独立复核",
+  "tests": [
+    {
+      "id": "M086",
+      "part": 1,
+      "method": "independent_numerical",
+      "name": "Routh triangle rotating equilibrium finite-difference force",
+      "passed": true,
+      "residual": 4.7102773760513257e-11,
+      "tolerance": 1e-8
+    },
+    {
+      "id": "M086",
+      "part": 2,
+      "method": "independent_numerical",
+      "name": "Routh triangle Hessian xx yy xy numerical reconstruction",
+      "passed": true,
+      "residual": 2.5621337584880166e-7,
+      "tolerance": 0.000002
+    },
+    {
+      "id": "M086",
+      "part": 3,
+      "method": "spectral",
+      "name": "Coriolis quartic coefficients from independently reconstructed Hessian",
+      "passed": true,
+      "residual": 9.439926794696518e-7,
+      "tolerance": 0.000002
+    },
+    {
+      "id": "M086",
+      "part": 4,
+      "method": "asymptotic",
+      "name": "Small mass linear slow-mode asymptotic compared with exact root",
+      "passed": true,
+      "residual": 0.0000057500776262653375,
+      "tolerance": 0.00002
+    },
+    {
+      "id": "E088",
+      "part": 1,
+      "method": "independent_numerical",
+      "name": "Three-axis finite-difference anisotropic Poisson operator away from source",
+      "passed": true,
+      "residual": 1.942890293094024e-10,
+      "tolerance": 3e-7
+    },
+    {
+      "id": "E088",
+      "part": 2,
+      "method": "conservation",
+      "name": "Ellipsoid transformed-area surface displacement flux integrates to point charge",
+      "passed": true,
+      "residual": 8.659739592076221e-15,
+      "tolerance": 1e-10
+    },
+    {
+      "id": "E088",
+      "part": 3,
+      "method": "boundary",
+      "name": "Two confocal Dirichlet electrodes and numerical normal-field derivative",
+      "passed": true,
+      "residual": 2.5469515385623254e-11,
+      "tolerance": 1e-9
+    },
+    {
+      "id": "E088",
+      "part": 4,
+      "method": "independent_integral",
+      "name": "Anisotropic radial field-energy quadrature agrees with half CV squared",
+      "passed": true,
+      "residual": 7.02016222930979e-12,
+      "tolerance": 1e-8
+    },
+    {
+      "id": "T081",
+      "part": 1,
+      "method": "independent_integral",
+      "name": "Independent sphere-orientation partition integral and extension derivative",
+      "passed": true,
+      "residual": 1.0983991494128986e-12,
+      "tolerance": 1e-8
+    },
+    {
+      "id": "T081",
+      "part": 2,
+      "method": "symbolic_limit",
+      "name": "Nonlinear inverse Langevin cubic coefficient and positive susceptibility",
+      "passed": true,
+      "residual": 2.4370558788181374e-8,
+      "tolerance": 0.000003
+    },
+    {
+      "id": "T081",
+      "part": 3,
+      "method": "independent_numerical",
+      "name": "Legendre derivative and convex stiffness from inverse force function",
+      "passed": true,
+      "residual": 3.100851531101512e-8,
+      "tolerance": 0.00001
+    },
+    {
+      "id": "T081",
+      "part": 4,
+      "method": "thermodynamic_scaling",
+      "name": "At constant stretch Helmholtz and entropy cancel internal elastic energy",
+      "passed": true,
+      "residual": 9.673613021732308e-10,
+      "tolerance": 1e-8
+    },
+    {
+      "id": "W081",
+      "part": 1,
+      "method": "independent_derivation",
+      "name": "Fourier eigenvector satisfies independent coupled shear and rotation equations",
+      "passed": true,
+      "residual": 8.881784197001252e-16,
+      "tolerance": 2e-11
+    },
+    {
+      "id": "W081",
+      "part": 2,
+      "method": "spectral",
+      "name": "Both positive-frequency Timoshenko branches solve quartic",
+      "passed": true,
+      "residual": 3.907985046680551e-14,
+      "tolerance": 2e-10
+    },
+    {
+      "id": "W081",
+      "part": 3,
+      "method": "asymptotic",
+      "name": "Bending acoustic k-square law and two distinct high-k sound velocities",
+      "passed": true,
+      "residual": 0.0000031815954915082045,
+      "tolerance": 0.0004
+    },
+    {
+      "id": "W081",
+      "part": 4,
+      "method": "conservation",
+      "name": "Real Timoshenko eigenwave satisfies local energy conservation by space-time finite differences",
+      "passed": true,
+      "residual": 1.6653345369377348e-11,
+      "tolerance": 1e-7
+    },
+    {
+      "id": "O082",
+      "part": 1,
+      "method": "independent_derivation",
+      "name": "Extraordinary anisotropic Maxwell wavevector eigen-equations",
+      "passed": true,
+      "residual": 2.220446049250313e-16,
+      "tolerance": 1e-12
+    },
+    {
+      "id": "O082",
+      "part": 2,
+      "method": "polarization",
+      "name": "Poynting cross-product ray angle equals group velocity anisotropy",
+      "passed": true,
+      "residual": 0,
+      "tolerance": 1e-12
+    },
+    {
+      "id": "O082",
+      "part": 3,
+      "method": "optimization",
+      "name": "Maximum walkoff from stationary angle equals geometric closed form",
+      "passed": true,
+      "residual": 5.868916463924734e-10,
+      "tolerance": 1e-8
+    },
+    {
+      "id": "O082",
+      "part": 4,
+      "method": "physical_limit",
+      "name": "Slab-ray offset computed from Poynting and wave-normal trajectories",
+      "passed": true,
+      "residual": 1.1102230246251565e-16,
+      "tolerance": 1e-12
+    },
+    {
+      "id": "Q082",
+      "part": 1,
+      "method": "independent_integral",
+      "name": "Bessel Dirichlet disk eigenstates satisfy exact numerical unit normalization",
+      "passed": true,
+      "residual": 2.2093438190040615e-14,
+      "tolerance": 2e-9
+    },
+    {
+      "id": "Q082",
+      "part": 2,
+      "method": "conservation",
+      "name": "Integrated circular probability current carries quantized angular momentum",
+      "passed": true,
+      "residual": 2.5757174171303632e-14,
+      "tolerance": 2e-9
+    },
+    {
+      "id": "Q082",
+      "part": 3,
+      "method": "independent_numerical",
+      "name": "Charge-signed linear splitting recovered from magnetic Hamiltonian expectations",
+      "passed": true,
+      "residual": 1.474514954580286e-16,
+      "tolerance": 2e-11
+    },
+    {
+      "id": "Q082",
+      "part": 4,
+      "method": "independent_integral",
+      "name": "Bessel radial second moments and positive quadratic diamagnetism",
+      "passed": true,
+      "residual": 1.312283615106935e-13,
+      "tolerance": 2e-9
+    }
+  ],
+  "source_branch": "physics-round15-50-work",
+  "scope_limits": "Subset only; 33 unresolved original model conflicts and full 200-check/PDF gate not complete"
+}
