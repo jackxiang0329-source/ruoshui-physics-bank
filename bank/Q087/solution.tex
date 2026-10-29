@@ -1,17 +1,66 @@
-(1) 总自旋 \(\boldsymbol S=(\hbar/2)(\boldsymbol\sigma_1+\boldsymbol\sigma_2)\)，
-\(\boldsymbol\sigma_1\cdot\boldsymbol\sigma_2=2S^2/\hbar^2-3I\)。triplet \(S=1\) 有本征值+1、能量 \(E_t=J/4\) 且3重简并；singlet \(S=0\) 有本征值-3、能量 \(E_s=-3J/4\) 且1重。
-(2) \(|\uparrow\downarrow\rangle=(|t_0\rangle+|s\rangle)/\sqrt2\)，演化
+(1) 交互作用中的位移因子在 \(\eta\sqrt{2n+1}\ll1\) 时展开为
 \[
-|\psi(t)\rangle={e^{-iJt/(4\hbar)}|t_0\rangle+e^{i3Jt/(4\hbar)}|s\rangle\over\sqrt2}.
+e^{i\eta(ae^{-i\nu t}+a^\dagger e^{i\nu t})}
+=1+i\eta(ae^{-i\nu t}+a^\dagger e^{i\nu t})+O(\eta^2).
 \]
-去掉整体相位，写 \(\theta=Jt/\hbar\)，得
+假设解决边带所需的 \(\Omega\ll\nu\)，舍去快振荡项后，
 \[
-|\psi(t)\rangle=e^{i\theta/4}\left[\cos(\theta/2)|\uparrow\downarrow\rangle-i\sin(\theta/2)|\downarrow\uparrow\rangle\right].
+H_{\rm carrier}=\frac{\hbar\Omega}{2}(\sigma_++\sigma_-),
 \]
-交换概率 \(\sin^2(\theta/2)\)；当 \(\theta=\pi\)，实现SWAP（对全Hilbert空间相差整体相位）。
-(3) 对纯态 \(a|\uparrow\downarrow\rangle+b|\downarrow\uparrow\rangle\)，concurrence \(C=2|ab|\)，因此
 \[
-C(t)=|\sin\theta|.
+H_{\rm red}=\frac{i\hbar\eta\Omega}{2}(\sigma_+a-\sigma_-a^\dagger),\qquad
+H_{\rm blue}=\frac{i\hbar\eta\Omega}{2}(\sigma_+a^\dagger-\sigma_-a).
 \]
-当 \(\theta=\pi/2\) 时 \(C=1\)，对该输入产生Bell最大纠缠；该时间所对应全空间算符的平方在相差局部或整体相位规范下等价SWAP，因此称sqrt(SWAP)交换门。
-(4) 因H自伴，\(U^\dagger U=I\)，\(|a|^2+|b|^2=1\)；初态平均能量 \((E_s+E_t)/2=-J/4\)，全过程不变。若两自旋存在不同Zeeman频率，\(|t_0\rangle\) 与\(|s\rangle\) 不再简单本征，需重新对角化；交换各向异性同样改变门角和纠缠演化。
+后两式是各自共振旋转系下的有效时间无关哈密顿量；耦合符号可用离子电子态相位选择等效改变，不影响可观测跃迁概率。
+
+(2) 红边带耦合 \(|g,n\rangle\leftrightarrow|e,n-1\rangle\)，矩阵元大小为
+\(\hbar\eta\Omega\sqrt n/2\)；蓝边带耦合
+\(|g,n\rangle\leftrightarrow|e,n+1\rangle\)，其大小为
+\(\hbar\eta\Omega\sqrt{n+1}/2\)。
+因此
+\[
+P_e^{\rm red}(n,t)=\sin^2(\eta\Omega\sqrt n\,t/2),\qquad
+P_e^{\rm blue}(n,t)=\sin^2(\eta\Omega\sqrt{n+1}\,t/2).
+\]
+\(n=0\) 的第一红边带严格无耦合，称暗态；\(n=1\) 红边带首次完全转移在
+\(t_\pi=\pi/(\eta\Omega)\)。
+红边带从运动能拿走 \(\hbar\nu\)，故激光光子频率应是
+\(\omega_L=\omega_0-\nu\)；蓝边带创建一份运动能 \(\hbar\nu\)，故
+\(\omega_L=\omega_0+\nu\)。两式都与总能量选择规则相符，边带近似仍须满足 \(\eta\Omega\sqrt{n+1}\ll\nu\)。
+
+(3) 热振动密度矩阵的占据概率为
+\[
+p_n=\frac1{1+\bar n}\left(\frac{\bar n}{1+\bar n}\right)^n,\qquad
+\bar n=\frac1{e^{\hbar\nu/(k_BT)}-1}.
+\]
+若小脉冲满足每个热占据显著的 \(n\) 都有
+\(\eta\Omega\sqrt{n+1}\,t\ll1\)，则
+\[
+P_e^{\rm red}\simeq\frac{\eta^2\Omega^2t^2}{4}\bar n,\qquad
+P_e^{\rm blue}\simeq\frac{\eta^2\Omega^2t^2}{4}(\bar n+1).
+\]
+所以实验信号之比
+\[
+r=\frac{P_{\rm red}}{P_{\rm blue}}
+=\frac{\bar n}{\bar n+1}=e^{-\hbar\nu/(k_BT)},\quad
+\boxed{\bar n=\frac r{1-r},\quad
+T=\frac{\hbar\nu}{k_B\ln(1/r)}}.
+\]
+当 \(\bar n\to0\)，红边带信号趋零而蓝边带仍有限，构成基态制冷诊断；实际谱线强度还需校正检测效率和有限脉冲饱和效应。
+
+(4) 利用Baker–Campbell–Hausdorff恒等式
+\(e^{i\eta(a+a^\dagger)}
+=e^{-\eta^2/2}e^{i\eta a^\dagger}e^{i\eta a}\)，
+对固定Fock态求对角矩阵元得到
+\[
+\boxed{\langle n|e^{i\eta(a+a^\dagger)}|n\rangle
+=e^{-\eta^2/2}L_n(\eta^2)}.
+\]
+所以载波共振Rabi频率大小为
+\(\Omega_{n}^{\rm carrier}=\Omega|e^{-\eta^2/2}L_n(\eta^2)|\)。
+小 \(\eta\) 时
+\(e^{-\eta^2/2}L_n(\eta^2)
+=1-\eta^2(n+\tfrac12)+O(\eta^4)\)。
+特别是 \(n=0\) 时为 \(e^{-\eta^2/2}\)，
+\(n=1\) 时为 \((1-\eta^2)e^{-\eta^2/2}\)。
+高温大 \(n\) 或较大的 \(\eta\) 可能使载波甚至发生Laguerre零点，此时一阶Lamb–Dicke近似不能外推。

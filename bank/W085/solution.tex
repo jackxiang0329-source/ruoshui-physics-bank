@@ -1,20 +1,71 @@
-(1) 令自由面 \(z=0\)、流体 \(z<0\)，速度势满足 \(\nabla^2\phi=0\)，深处衰减。线性边界条件
+(1) 小振幅一维线性声学方程为
 \[
-\eta_t=\phi_z|_{z=0},\qquad
-\phi_t+g\eta-{\gamma\over\rho}\eta_{xx}=0\quad(z=0).
+\partial_t p=-\frac{\rho c^2}{A(x)}\partial_x[A(x)v],
+\qquad
+\rho\partial_t v=-\partial_xp.
 \]
-代 \(\phi=\Phi e^{kz}e^{i(kx-\omega t)}\)、\(\eta=\eta_0e^{i(kx-\omega t)}\)，消去幅值得
+对首式再对时间求导，代入第二式，得到
 \[
-\omega^2=gk+{\gamma\over\rho}k^3.
+\boxed{p_{tt}=c^2 A^{-1}\partial_x(Ap_x)
+=c^2(p_{xx}+2\alpha p_x)}.
 \]
-(2) \(c_p^2=\omega^2/k^2=g/k+\gamma k/\rho\)，微分为 \(-g/k^2+\gamma/\rho\)，故唯一最小点 \(k_*=\sqrt{\rho g/\gamma}\)，
+取 \(p=e^{-\alpha x}u\)，有
+\(p_{xx}+2\alpha p_x=e^{-\alpha x}(u_{xx}-\alpha^2u)\)，所以
 \[
-c_{p,\min}=\big(4g\gamma/\rho\big)^{1/4}.
+u_{tt}=c^2(u_{xx}-\alpha^2u).
 \]
-群速
+因此指数号角的截面积变化在变换变量后表现为正的截止项，并不表示真正的静质量粒子。
+
+(2) 用 \(u=u_0e^{i(kx-\omega t)}\) 得色散
 \[
-c_g={d\omega\over dk}={g+3\gamma k^2/\rho\over2\sqrt{gk+\gamma k^3/\rho}}.
+\boxed{\omega^2=c^2(k^2+\alpha^2)},\qquad\omega_c=c\alpha.
 \]
-(3) 当 \(k\ll k_*\)，\(\omega\simeq\sqrt{gk},\,c_g\simeq c_p/2\)；当 \(k\gg k_*\)，\(\omega\simeq\sqrt{\gamma/\rho}\,k^{3/2},\,c_g\simeq3c_p/2\)。相位传播与窄带波包包络并不相同。
-(4) 对单位水平面积的表面波 \(\eta=a\cos(kx-\omega t)\)，时间平均重力位能 \(\langle U_g\rangle=\rho ga^2/4\)、界面能 \(\langle U_\gamma\rangle=\gamma k^2 a^2/4\)。由速度势和深度积分得平均动能
-\(\langle K\rangle=\rho\omega^2a^2/(4k)=(\rho g+\gamma k^2)a^2/4\)，故 \(\langle K\rangle=\langle U_g+U_\gamma\rangle\)，能量正定。有限水深会引入 \(\tanh(kh)\)，粘性产生衰减，大振幅破碎波超出线性近似。
+当 \(\omega>\omega_c\)，\(k=\sqrt{\omega^2/c^2-\alpha^2}\) 为实数；
+正向传播支 \(v_{\rm ph}=\omega/k\)，
+\(v_g=d\omega/dk=c^2k/\omega<c\)。
+当 \(0<\omega<\omega_c\)，
+\(k=i\sqrt{\alpha^2-\omega^2/c^2}\)，使 \(u\) 为衰减或增长的倏逝解，不能将其看作具有实群速的远场行波。压力包络 \(p=e^{-\alpha x}u_0e^{i(kx-\omega t)}\) 在展开号角中按 \(A^{-1/2}\) 缩放，与增大的声学截面积相平衡。
+
+(3) 两个一阶声学方程分别乘 \(Ap/(\rho c^2)\)、\(\rho Av\) 并相加，得
+\[
+\partial_t\left[A\left(\frac{p^2}{2\rho c^2}
++\frac{\rho v^2}{2}\right)\right]+\partial_x(Apv)=0.
+\]
+对于向右传播的复压力幅值 \(P e^{-\alpha x}e^{ikx}\) ，由动量方程
+\[
+v_\omega=\frac{p_{\omega,x}}{i\omega\rho}
+=\frac{k+i\alpha}{\omega\rho}\,p_\omega .
+\]
+于是时间平均声能密度与强度是
+\[
+\overline{\mathcal E}
+=\frac{|p_\omega|^2}{4\rho c^2}
++\frac{\rho|v_\omega|^2}{4}
+=\frac{|p_\omega|^2}{2\rho c^2},
+\quad
+\overline{I}=\frac12\operatorname{Re}(p_\omega v_\omega^*)
+=\frac{k|p_\omega|^2}{2\omega\rho}.
+\]
+利用色散关系 \((k^2+\alpha^2)c^2=\omega^2\) 可得
+\(\overline I/\overline{\mathcal E}=c^2k/\omega=v_g\)，且
+\(A\overline I=A_0 k|P|^2/(2\omega\rho)\) 与 \(x\) 无关。只取倏逝衰减指数时压力和速度相差四分之一相位，不形成同样的向外传播有功声流。
+
+(4) 刚壁速度为零，非静态模由 \(\rho v_t=-p_x\) 得 \(p_x(0)=p_x(L)=0\)。取
+\(p=e^{-\alpha x}u\) 后条件变为 \(u'-\alpha u=0\)。
+当 \(k>0\)，设
+\[
+u(x)=C[\cos kx+(\alpha/k)\sin kx].
+\]
+第二端的Robin条件等价于
+\(-C(k+\alpha^2/k)\sin kL=0\)，故
+\[
+\boxed{k_n=n\pi/L,\quad
+\omega_n=c\sqrt{\alpha^2+(n\pi/L)^2},\quad n=1,2,\dots}
+\]
+\[
+p_n(x)=C_ne^{-\alpha x}
+[\cos(n\pi x/L)+\alpha L/(n\pi)\sin(n\pi x/L)].
+\]
+此外 \(\omega=0\) 时原Webster方程允许空间均匀静态压力 \(p_0(x)=\mathrm{const}\)，它不由上述 \(n\ge1\) 的传播模公式给出。
+空间算子 \(-A^{-1}(Ap_x)_x\) 对权重 \(A(x)\) 是自伴的，因此不同本征频率的本征函数满足
+\(\int_0^L A(x)p_m(x)p_n(x)\,dx=0\)（\(m\ne n\)），零模也应纳入此正交性。

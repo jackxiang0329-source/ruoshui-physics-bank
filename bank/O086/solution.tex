@@ -1,20 +1,66 @@
-(1) 正入射、非磁无损层以特征矩阵
+(1) 由 \(\dot S=S(gN-\kappa)=0\)，一支为
 \[
-M_j=\begin{pmatrix}\cos\delta_j&i\sin\delta_j/n_j\\ i n_j\sin\delta_j&\cos\delta_j\end{pmatrix},\quad
-\delta_j={2\pi n_jd_j\over\lambda}.
+(N_0,S_0)=(R/\gamma,0).
 \]
-在 \(\lambda_0\) 时 \(\delta_j=\pi/2\)，故 \(M_j=\begin{psmallmatrix}0&i/n_j\\in_j&0\end{psmallmatrix}\)。以从入射侧先H后L的顺序，
+另一支要求 \(N_*=\kappa/g\)，再由反转方程
 \[
-M_{HL}=M_HM_L=\begin{pmatrix}-n_L/n_H&0\\0&-n_H/n_L\end{pmatrix}.
+S_*=\frac{R-\gamma\kappa/g}{\kappa}
+=\frac{R-R_{\rm th}}{\kappa},\quad
+\boxed{R_{\rm th}=\gamma\kappa/g}.
 \]
-(2) \(M=M_{HL}^N=\mathrm{diag}[(-n_L/n_H)^N,(-n_H/n_L)^N]\)。对基底导纳 \(n_s\)，输入导纳
+有正光子数的激光支只在 \(R>R_{\rm th}\) 存在；
+其上反转被钳制在 \(\kappa/g\)，多余抽运转为腔光子。
+此确定性模型没有腔内自发辐射种子，\(S=0\) 是不变子空间；即使高于阈值，数学上精确的 \(S(0)=0\) 仍停在无激光分支。真实激光由自发辐射和噪声提供非零种子。
+
+(2) 雅可比矩阵是
 \[
-Y_{\rm in}={M_{21}+M_{22}n_s\over M_{11}+M_{12}n_s}
-=n_s(n_H/n_L)^{2N}.
+J(N,S)=
+\begin{pmatrix}-\gamma-gS&-gN\\gS&gN-\kappa\end{pmatrix}.
 \]
-振幅反射系数 \(r=(n_0-Y_{\rm in})/(n_0+Y_{\rm in})\)，故
+无激光支上有本征值
+\(\lambda_1=-\gamma,\lambda_2=gR/\gamma-\kappa\)。
+因此在 \(R<R_{\rm th}\) 它是稳定节点，高于阈值光子扰动指数增长。
+激光支上
 \[
-R_N=\left[{n_0-n_s(n_H/n_L)^{2N}\over n_0+n_s(n_H/n_L)^{2N}}\right]^2 .
+\lambda^2+(\gamma+gS_*)\lambda+\kappa gS_*=0,\quad
+\lambda_\pm=-\frac{\gamma+gS_*}{2}
+\pm\frac12\sqrt{(\gamma+gS_*)^2-4\kappa gS_*}.
 \]
-(3) 当固定 \(n_H>n_L\)，\(Y_{\rm in}\to\infty\)，有 \(1-R_N=4n_0Y_{\rm in}/(n_0+Y_{\rm in})^2\sim4(n_0/n_s)(n_L/n_H)^{2N}\)。若 \(n_H=n_L\)，多层只相当于整波厚度的均匀层，\(R_N=[(n_0-n_s)/(n_0+n_s)]^2\)。\(N=0\) 同样恢复裸基底界面反射率。
-(4) 每周期无损矩阵满足 \(\det M=1\)，特征值 \(\lambda_\pm\) 满足 \(\lambda+\lambda^{-1}=\mathrm{Tr}M\)。当 \(|\mathrm{Tr}M/2|>1\)（若采用使矩阵迹实数的无损规范）时本征Bloch相位有非零虚部，形成无限周期结构的禁带；有限镜仍可有限透射，实际吸收/色散使矩阵不再对应简单无损实迹判据。
+因为迹负、行列式正，所有 \(S_*>0\) 下均局部渐近稳定。
+如果 \(4\kappa gS_*>(\gamma+gS_*)^2\)，特征根为共轭复数，出现以频率
+\(\omega_{\rm relax}=\frac12\sqrt{4\kappa gS_*-(\gamma+gS_*)^2}\)
+衰减的松弛振荡；否则为非振荡趋稳。
+
+(3) 对 \(R=R_{\rm th}(1+\epsilon)\)，
+\[
+N_*=\kappa/g,\quad
+S_*=\gamma\epsilon/g,\quad
+\kappa S_*=R_{\rm th}\epsilon.
+\]
+临界附近特征多项式为
+\(\lambda^2+\gamma(1+\epsilon)\lambda+\kappa\gamma\epsilon=0\)。
+在 \(\epsilon\to0^+\) 的渐近
+\[
+\lambda_{\rm fast}=-\gamma+O(\epsilon),\quad
+\lambda_{\rm slow}=-\kappa\epsilon+O(\epsilon^2).
+\]
+故最慢的激光建立/弛豫时间为
+\(\sim1/(\kappa\epsilon)\)，虽然腔的无受激衰减时间是 \(1/\kappa\)；
+靠近起振阈值时出现临界慢化。强泵情况下是否振荡需要第二问判别式，不能将所有泵浦区都当成欠阻尼。
+
+(4) 若反转激发与腔光子的每个量子均具有能量 \(\hbar\omega_L\)，则
+\(U=\hbar\omega_L(N+S)\)。将两个速率方程相加，受激辐射相消，
+\[
+\boxed{\dot U=\hbar\omega_L[R-\gamma N-\kappa S]}.
+\]
+右端分别是有效泵浦供能、上能级非腔弛豫损耗及腔外输出；
+这条恒等式对任意 \(N(t),S(t)\) 精确成立。高于阈值稳态满足
+\(R=\gamma\kappa/g+\kappa S_*\)，输出光功率
+\[
+P_{\rm out}=\hbar\omega_L\kappa S_*
+=\hbar\omega_L(R-R_{\rm th}),
+\]
+其余 \(\hbar\omega_LR_{\rm th}\) 流入非腔衰减。
+如果真实泵浦的每光子能量为 \(\hbar\omega_p>\hbar\omega_L\)，还存在至少
+\(\hbar(\omega_p-\omega_L)R\) 的量子缺陷热或其他非辐射耗散；
+理想速率模型忽略了这种泵浦能级细节，不能声称全部输入泵浦功率均变为激光。
