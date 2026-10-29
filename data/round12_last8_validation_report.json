@@ -1,0 +1,232 @@
+{
+  "status": "draft-continuation-only",
+  "new_problem_count": 8,
+  "passed_count": 32,
+  "tests": [
+    {
+      "id": "M067",
+      "part": 1,
+      "method": "conservation",
+      "name": "Rutherford turning-point radius independently satisfies radial energy and angular momentum conservation",
+      "passed": true
+    },
+    {
+      "id": "M067",
+      "part": 2,
+      "method": "limit",
+      "name": "exact scattering angle has the independently integrated weak-deflection transverse impulse limit",
+      "passed": true
+    },
+    {
+      "id": "M067",
+      "part": 3,
+      "method": "symbolic",
+      "name": "impact-parameter Jacobian exactly reproduces inverse fourth power Rutherford differential cross section",
+      "passed": true
+    },
+    {
+      "id": "M067",
+      "part": 4,
+      "method": "numerical",
+      "name": "integrated angular Rutherford cross section matches geometric impact disk",
+      "passed": true
+    },
+    {
+      "id": "E067",
+      "part": 1,
+      "method": "independent_derivation",
+      "name": "radial Lorentz electromotive force integral equals disk voltage and Ohmic current",
+      "passed": true
+    },
+    {
+      "id": "E067",
+      "part": 2,
+      "method": "conservation",
+      "name": "Lorentz braking torque transfers mechanical work into internal and load Joule heat",
+      "passed": true
+    },
+    {
+      "id": "E067",
+      "part": 3,
+      "method": "conservation",
+      "name": "exponential spin-down solves torque ODE and total load heat equals allocated initial kinetic energy",
+      "passed": true
+    },
+    {
+      "id": "E067",
+      "part": 4,
+      "method": "symbolic",
+      "name": "matched load gives stationary maximum output and efficiency one half",
+      "passed": true
+    },
+    {
+      "id": "O064",
+      "part": 1,
+      "method": "symbolic",
+      "name": "real and imaginary Lorentz susceptibility reproduce positive absorbed optical power",
+      "passed": true
+    },
+    {
+      "id": "O064",
+      "part": 2,
+      "method": "numerical",
+      "name": "weak damping half-height points at plus or minus gamma over two bracket Lorentz absorption peak",
+      "passed": true
+    },
+    {
+      "id": "O064",
+      "part": 3,
+      "method": "physical_case",
+      "name": "underdamped and overdamped causal poles remain in lower complex frequency half plane",
+      "passed": true
+    },
+    {
+      "id": "O064",
+      "part": 4,
+      "method": "numerical",
+      "name": "independent positive-frequency spectral quadrature verifies oscillator-strength sum rule",
+      "passed": true
+    },
+    {
+      "id": "Q064",
+      "part": 1,
+      "method": "symbolic",
+      "name": "full eight-component Bell teleportation expansion exactly equals original three-qubit state",
+      "passed": true
+    },
+    {
+      "id": "Q064",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "four Pauli feed-forward corrections recover arbitrary input up to global phase",
+      "passed": true
+    },
+    {
+      "id": "Q064",
+      "part": 3,
+      "method": "symbolic",
+      "name": "Werner-assisted teleportation gives isotropic depolarizing channel and input-independent fidelity",
+      "passed": true
+    },
+    {
+      "id": "Q064",
+      "part": 4,
+      "method": "physical_case",
+      "name": "quantum advantage and Werner partial-transpose entanglement share strict p greater than one-third threshold",
+      "passed": true
+    },
+    {
+      "id": "T063",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Ornstein-Uhlenbeck variance solves exact Ito covariance evolution with final bath diffusion",
+      "passed": true
+    },
+    {
+      "id": "T063",
+      "part": 2,
+      "method": "conservation",
+      "name": "mean harmonic energy change exactly equals heat with zero parameter work",
+      "passed": true
+    },
+    {
+      "id": "T063",
+      "part": 3,
+      "method": "symbolic",
+      "name": "total system-plus-bath entropy production derivative is nonnegative perfect square",
+      "passed": true
+    },
+    {
+      "id": "T063",
+      "part": 4,
+      "method": "independent_derivation",
+      "name": "Gaussian KL relative entropy decreases with rate exactly matching thermal entropy production",
+      "passed": true
+    },
+    {
+      "id": "W063",
+      "part": 1,
+      "method": "dimensions",
+      "name": "Love-wave guided velocity window yields oscillatory upper layer and evanescent substrate",
+      "passed": true
+    },
+    {
+      "id": "W063",
+      "part": 2,
+      "method": "numerical",
+      "name": "SH displacement and shear stress match across both interfaces for exact dispersion root",
+      "passed": true
+    },
+    {
+      "id": "W063",
+      "part": 3,
+      "method": "limit",
+      "name": "Love higher-mode cutoff frequencies scale with positive integer mode order while fundamental cutoff is zero",
+      "passed": true
+    },
+    {
+      "id": "W063",
+      "part": 4,
+      "method": "conservation",
+      "name": "substrate mode energy integral has inverse decay length and diverges at loss of confinement",
+      "passed": true
+    },
+    {
+      "id": "O065",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Bessel azimuthal-order-two radial Helmholtz operator annihilates exact mode",
+      "passed": true
+    },
+    {
+      "id": "O065",
+      "part": 2,
+      "method": "physical_case",
+      "name": "zeroth-order Bessel beam has bright axis while nonzero topological order has a dark vortex axis",
+      "passed": true
+    },
+    {
+      "id": "O065",
+      "part": 3,
+      "method": "numerical",
+      "name": "finite-radius Bessel beam power grows linearly with aperture radius instead of converging",
+      "passed": true
+    },
+    {
+      "id": "O065",
+      "part": 4,
+      "method": "limit",
+      "name": "finite-aperture conical ray propagation distance diverges for small cone angle and vanishes for transverse propagation",
+      "passed": true
+    },
+    {
+      "id": "Q065",
+      "part": 1,
+      "method": "symbolic",
+      "name": "two-level unitary evolution preserves norm and first orthogonal time gives zero survival",
+      "passed": true
+    },
+    {
+      "id": "Q065",
+      "part": 2,
+      "method": "numerical",
+      "name": "Zeno survival approaches one at rate inverse measurement count for fixed total time",
+      "passed": true
+    },
+    {
+      "id": "Q065",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "initial energy variance gives Zeno time inverse Rabi frequency",
+      "passed": true
+    },
+    {
+      "id": "Q065",
+      "part": 4,
+      "method": "limit",
+      "name": "expected number of sequential measurements equals truncated geometric sum with deterministic limit N",
+      "passed": true
+    }
+  ],
+  "independent_expert_review": "pending"
+}
