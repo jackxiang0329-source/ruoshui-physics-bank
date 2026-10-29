@@ -1,0 +1,4 @@
+(1) 一维Maxwell分布 $f(v_x)=\sqrt{m/(2\pi k_BT)}e^{-mv_x^2/(2k_BT)}$。变量替换 $\omega=\omega_0+kv_x$ 给出 $g(\omega)=[\sqrt{2\pi}\sigma_\omega]^{-1}\exp[-(\omega-\omega_0)^2/(2\sigma_\omega^2)]$，其中 $\sigma_\omega=|k|\sqrt{k_BT/m}$。
+(2) 对称性给出 $\langle\omega\rangle=\omega_0$，方差 $\langle(\omega-\omega_0)^2\rangle=k^2k_BT/m$。解 $g(\omega_0\pm\Delta/2)=g(\omega_0)/2$，得到半高全宽 $\Delta\omega_{\rm FWHM}=2\sqrt{2\ln2}\,\sigma_\omega$。
+(3) 本征Lorentz谱 $L_\Gamma(\omega)=\Gamma/[\pi(\omega^2+\Gamma^2)]$，观测谱为Voigt卷积 $V(\omega)=\int_{-\infty}^\infty g(\omega')L_\Gamma(\omega-\omega')\,d\omega'$。由于两个核均归一，$\int V(\omega)d\omega=1$，谱线展宽不改变总归一强度。
+(4) $T\to0$ 时 $g$ 趋向 $\delta(\omega-\omega_0)$，$V$ 退化为Lorentz线；$\Gamma\to0$ 时 $V\to g$。近似要求 $v_{\rm th}/c\ll1$ 且 $|\delta\omega|\ll\omega_0$；高速气体必须使用相对论多普勒关系。
