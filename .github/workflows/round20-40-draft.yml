@@ -1,0 +1,43 @@
+name: Round 20 forty-problem draft source model PDF QA
+on:
+  push:
+    branches: [physics-round20-40-work-20261029]
+  workflow_dispatch:
+jobs:
+  source-and-model:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check 40 source triples and 160 solved subparts
+        run: node scripts/check_round20_40_draft.js > round20-source-report.json
+      - name: Execute independent per-model numeric checks
+        run: node scripts/check_round20_40_models.js > round20-model-report.json
+      - name: Check round manifest
+        run: python3 -m json.tool data/rounds/round20-inprogress.json >/dev/null
+      - uses: actions/upload-artifact@v4
+        with:
+          name: round20-draft-source-model-qa
+          path: |
+            round20-source-report.json
+            round20-model-report.json
+  draft-pdf:
+    needs: source-and-model
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install XeLaTeX and CJK fonts
+        run: |
+          sudo apt-get update -qq
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends texlive-xetex texlive-lang-chinese texlive-fonts-recommended fonts-noto-cjk
+      - name: Generate draft books
+        run: node scripts/build_round20_draft.js
+      - name: Compile questions and solutions
+        run: |
+          xelatex -interaction=nonstopmode -halt-on-error -output-directory=build/round20 build/round20/round20-questions.tex
+          xelatex -interaction=nonstopmode -halt-on-error -output-directory=build/round20 build/round20/round20-solutions.tex
+      - uses: actions/upload-artifact@v4
+        with:
+          name: round20-draft-two-pdfs
+          path: |
+            build/round20/round20-questions.pdf
+            build/round20/round20-solutions.pdf
