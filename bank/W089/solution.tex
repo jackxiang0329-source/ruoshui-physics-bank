@@ -1,0 +1,7 @@
+(1) 薄膜局部受力为张力乘横向Laplacian，故 $\sigma w_{tt}=T[w_{rr}+r^{-1}w_r+r^{-2}w_{\theta\theta}]$，波速 $c=\sqrt{T/\sigma}$。设 $w=R(r)e^{im\theta}e^{-i\omega t}$，有 $R''+R'/r+(k^2-m^2/r^2)R=0$，$k=\omega/c$。
+
+(2) 对非零 $k$，$R=A J_m(kr)+B Y_m(kr)$。施加 $R(a)=R(b)=0$ 的线性齐次方程存在非零解当且仅当 $\boxed{J_m(ka)Y_m(kb)-Y_m(ka)J_m(kb)=0}$。相应本征频率 $\omega_{m,n}=c k_{m,n}$，$k_{m,n}>0$ 为该行列式依次正零点。
+
+(3) $m=0$ 模式角向与 $\theta$ 无关，角简并为1；$m\ge1$ 的 $\cos m\theta,\sin m\theta$ 独立且等频，简并为2。两个圆边均施加Dirichlet零位移，均匀平移不满足边界；由能量积分 $\int|\nabla w|^2dA>0$ 对非零膜位移成立，故没有零频非平凡模。
+
+(4) 自伴径向算子为 $-r^{-1}(rR')'+m^2R/r^2$。对不同径向本征值 $k_n^2\ne k_p^2$，将两本征方程交叉相乘后积分并分部，边界项因 $R(a)=R(b)=0$ 消失，故 $\int_a^b rR_nR_pdr=0$。全二维内积还含 $\int_0^{2\pi}d\theta$。薄环固定 $m$ 且 $\ell=b-a\ll a$ 时 $k_{m,n}\sim n\pi/\ell$，弯曲边界与角向项给次阶修正。

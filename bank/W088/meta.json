@@ -1,0 +1,20 @@
+{
+  "id": "W088",
+  "topic": "振动与波动",
+  "title": "无限张紧弦高斯初形的d’Alembert精确分裂、能流与无色散传播",
+  "tags": [
+    "d'Alembert行波初值",
+    "能流与守恒",
+    "高斯脉冲分裂"
+  ],
+  "answer": "乘波动方程以 $y_t$ 得 $\\partial_t[\\mu y_t^2/2+Ty_x^2/2]+\\partial_x[-Ty_xy_t]=0$。初始动能零，$E_0=\\frac T2\\int y_0'^2dx=\\frac{TA^2}{2a^4}\\int x^2e^{-x^2/a^2}dx=TA^2\\sqrt\\pi/(4a)$。",
+  "kind": "综合推导题",
+  "level": 5,
+  "estimated_minutes": 90,
+  "quality_status": "待独立复核",
+  "tier": "advanced_composite",
+  "format": "latex-fragment-v1",
+  "revision": "composite-v1-round16-40-draft",
+  "challenge_profile": "new-core-fourpart-physics",
+  "complexity_tier": "L5-B"
+}
