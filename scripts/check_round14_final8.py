@@ -187,10 +187,10 @@ ss3=s.Matrix(s.symbols("sx sy sz",real=True))
 I3=s.eye(3)
 outer=sum((v*v.T for v in rr),s.zeros(3))
 ck("Q081",1,"symbolic","Tetrahedral vectors sum to zero and form positive rank-one POVM with tight-frame moment",
-    zero(sum(rr,s.zeros(3))) and zero(outer-s.Rational(4,3)*I3) and
+    zero(sum(rr,s.zeros(3,1))) and zero(outer-s.Rational(4,3)*I3) and
     all(zero(rr[j].dot(rr[k])+s.Rational(1,3)) for j in range(4) for k in range(j)))
 pp=[(1+v.dot(ss3))/4 for v in rr]
-recons=3*sum((pp[j]*rr[j] for j in range(4)),s.zeros(3))
+recons=3*sum((pp[j]*rr[j] for j in range(4)),s.zeros(3,1))
 ck("Q081",2,"independent_derivation","Born probabilities invert exactly to all three Bloch components for arbitrary mixed state",
     zero(recons-ss3) and zero(sum(pp)-1))
 N=s.symbols("N",positive=True)
