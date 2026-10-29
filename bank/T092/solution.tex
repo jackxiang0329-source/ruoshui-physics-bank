@@ -1,0 +1,7 @@
+(1) 能量守恒给 $C\dot T=-A[h(T-T_a)+\epsilon\sigma(T^4-T_a^4)]$。两项同向导热和辐射，温差为正时失热；温差为负时吸热，不能把辐射项误写成单纯 $T^4$ 而忘掉环境回辐射。
+
+(2) 定义 $f(T)=h(T-T_a)+\epsilon\sigma(T^4-T_a^4)$。在 $T>0$ 中有 $f'(T)=h+4\epsilon\sigma T^3>0$，且 $f(T_a)=0$。因此平衡点唯一，$T>T_a$ 时 $\dot T<0$，$T<T_a$ 时 $\dot T>0$，从两侧单调趋于 $T_a$，正温度区域保持不变。
+
+(3) 线性化 $T=T_a+\delta T$：$C\dot{\delta T}=-A[h+4\epsilon\sigma T_a^3]\delta T+O(\delta T^2)$，时间尺度 $\tau=C/[A(h+4\epsilon\sigma T_a^3)]$。精确隐式关系 $t=-(C/A)\int_{T_0}^{T(t)}d\theta/[h(\theta-T_a)+\epsilon\sigma(\theta^4-T_a^4)]$，跨越平衡点需采用单侧积分而非有限时间穿过。
+
+(4) 球的熵差 $\Delta S_b=C\ln(T/T_0)$；环境吸收球放出的总热量 $C(T_0-T)$，熵差 $\Delta S_a=C(T_0-T)/T_a$。所以 $\dot S_{\rm tot}=C\dot T(1/T-1/T_a)=\frac{A}{TT_a}(T-T_a)[h(T-T_a)+\epsilon\sigma(T^4-T_a^4)]\ge0$。令 $h=0$ 即得纯灰体辐射驰豫。

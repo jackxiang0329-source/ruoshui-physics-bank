@@ -1,0 +1,20 @@
+{
+  "id": "T094",
+  "topic": "热学",
+  "title": "Gaussian高分子链的熵弹性、恒温回热与绝热升温",
+  "tags": [
+    "Gaussian链统计弹性",
+    "热力学Maxwell关系",
+    "热弹性温度变化"
+  ],
+  "answer": "由 $f=3Nk_BTx/(nb^2)$ 得 $(\\partial f/\\partial T)_x=3Nk_Bx/(nb^2)$，而 $\\partial_x(-\\Delta S)=3Nk_Bx/(nb^2)$，两边严格一致。恒温拉伸使系统构型熵下降，环境必须接收热量 $Q_{\\rm chain}=T\\Delta S<0$（以入链热为正），外加机械功转为释放的",
+  "kind": "综合推导题",
+  "level": 5,
+  "estimated_minutes": 90,
+  "quality_status": "待独立复核",
+  "tier": "advanced_composite",
+  "format": "latex-fragment-v1",
+  "revision": "composite-v1-round16-40-draft",
+  "challenge_profile": "new-core-fourpart-physics",
+  "complexity_tier": "L5-B"
+}

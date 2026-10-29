@@ -1,0 +1,20 @@
+{
+  "id": "T093",
+  "topic": "热学",
+  "title": "绝热放热一级反应的温升、峰值放热功率与动力学反演",
+  "tags": [
+    "绝热批式反应动力学",
+    "热量守恒",
+    "最大热释放率"
+  ],
+  "answer": "热释放功率 $P(t)=QkN_0e^{-kt}$，在 $t=0$ 最大值为 $QkN_0$，之后严格下降。累计化学释热 $Q_{\\rm rel}(t)=QN_0(1-e^{-kt})=C[T(t)-T_0]$；半温升时 $1-e^{-kt}=1/2$，所以 $t_{1/2}=\\ln2/k$。",
+  "kind": "综合推导题",
+  "level": 5,
+  "estimated_minutes": 90,
+  "quality_status": "待独立复核",
+  "tier": "advanced_composite",
+  "format": "latex-fragment-v1",
+  "revision": "composite-v1-round16-40-draft",
+  "challenge_profile": "new-core-fourpart-physics",
+  "complexity_tier": "L5-B"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "T090",
+  "topic": "热学",
+  "title": "自由Langevin粒子的速度自关联、弹道扩散跨越与Gaussian自由能",
+  "tags": [
+    "惯性Langevin-OU过程",
+    "速度自关联与扩散",
+    "高斯相对熵"
+  ],
+  "answer": "$x(t)-x(0)=\\int_0^tv(s)ds$。利用平稳自相关得到 $\\langle\\Delta x^2\\rangle=2\\int_0^t(t-s)C_v(s)ds=2D[t-\\tau(1-e^{-t/\\tau})]$。当 $t\\ll\\tau$ 时为 $(k_BT/m)t^2+O(t^3)$；当 $t\\gg\\tau$ 时为 $2Dt-2D\\tau+o(",
+  "kind": "综合推导题",
+  "level": 5,
+  "estimated_minutes": 90,
+  "quality_status": "待独立复核",
+  "tier": "advanced_composite",
+  "format": "latex-fragment-v1",
+  "revision": "composite-v1-round16-40-draft",
+  "challenge_profile": "new-core-fourpart-physics",
+  "complexity_tier": "L5-B"
+}

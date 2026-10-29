@@ -1,0 +1,7 @@
+(1) 令 $\tau=m/\gamma$、$\sigma_\infty^2=k_BT/m$。Itô积分解为 $v(t)=v_0e^{-t/\tau}+(\sqrt{2\gamma k_BT}/m)\int_0^te^{-(t-s)/\tau}dW_s$，故 $\langle v(t)\rangle=v_0e^{-t/\tau}$，$\operatorname{Var}v=\sigma_\infty^2(1-e^{-2t/\tau})$。
+
+(2) 平衡过程均值零，且独立的后续噪声与 $v(0)$ 不相关，因此 $C_v(t)=\langle v(t)v(0)\rangle=\sigma_\infty^2e^{-|t|/\tau}$。Green–Kubo积分给 $D=\int_0^\infty C_v(s)ds=(k_BT/m)\tau=k_BT/\gamma$，与爱因斯坦关系一致。
+
+(3) $x(t)-x(0)=\int_0^tv(s)ds$。利用平稳自相关得到 $\langle\Delta x^2\rangle=2\int_0^t(t-s)C_v(s)ds=2D[t-\tau(1-e^{-t/\tau})]$。当 $t\ll\tau$ 时为 $(k_BT/m)t^2+O(t^3)$；当 $t\gg\tau$ 时为 $2Dt-2D\tau+o(1)$。
+
+(4) 对 $t>0$，$v(t)$ 是均值 $\mu_t=v_0e^{-t/\tau}$、方差 $s_t^2=\sigma_\infty^2(1-e^{-2t/\tau})$ 的Gaussian。相对平衡Gaussian的散度为 $D_{KL}=\tfrac12[(\mu_t^2+s_t^2)/\sigma_\infty^2-1-\ln(s_t^2/\sigma_\infty^2)]\ge0$。OU半群满足详细平衡和信息耗散，故随时间递减为零。$t=0$ 时方差为0，Dirac初态不绝对连续于平衡Gaussian，故散度趋正无穷。
