@@ -7,56 +7,56 @@
       "id": "M065",
       "part": 1,
       "method": "symbolic",
-      "name": "effective-potential derivative vanishes exactly at prescribed circular orbit",
+      "name": "kicked-rotor standard map Jacobian has determinant one and preserves symplectic area",
       "passed": true
     },
     {
       "id": "M065",
       "part": 2,
-      "method": "independent_derivation",
-      "name": "radial force derivative equals negative effective-potential curvature",
+      "method": "physical_case",
+      "name": "standard map theta-zero point is hyperbolic and theta-pi is elliptic for zero K less than four",
       "passed": true
     },
     {
       "id": "M065",
       "part": 3,
-      "method": "physical_case",
-      "name": "Kepler apsidal angle 2pi and isotropic oscillator angle pi",
+      "method": "independent_derivation",
+      "name": "small-K pendulum separatrix area integrates to sixteen root K and full width four root K",
       "passed": true
     },
     {
       "id": "M065",
       "part": 4,
-      "method": "symbolic",
-      "name": "circular-orbit dE/dL equals positive orbital angular frequency",
+      "method": "limit",
+      "name": "unforced standard map becomes free symplectic twist and K four gives period doubling linear threshold",
       "passed": true
     },
     {
       "id": "M066",
       "part": 1,
       "method": "symbolic",
-      "name": "arc-length derivative and gravitational potential are exactly harmonic",
+      "name": "catenary vertical force balance holds exactly for nonlinear arc-length weight",
       "passed": true
     },
     {
       "id": "M066",
       "part": 2,
-      "method": "physical_case",
-      "name": "quarter-period fall time independent of initial displacement and exact energy oscillator",
+      "method": "independent_derivation",
+      "name": "integrated catenary length is two a sinh u and sinh u over u increases from one",
       "passed": true
     },
     {
       "id": "M066",
       "part": 3,
-      "method": "numerical",
-      "name": "curvature radius and inward normal gravity projection checked at nontrivial angle",
+      "method": "conservation",
+      "name": "support vertical forces exactly balance full chain weight with minimum tension at center",
       "passed": true
     },
     {
       "id": "M066",
       "part": 4,
       "method": "symbolic",
-      "name": "theta-coordinate energy exactly equals arc-length energy after Jacobian transformation",
+      "name": "catenary gravitational energy integral and shallow-sag arc-length expansion are exact",
       "passed": true
     },
     {
@@ -91,28 +91,28 @@
       "id": "E066",
       "part": 1,
       "method": "symbolic",
-      "name": "Maxwell conductor propagation constant satisfies diffusion dispersion",
+      "name": "ideal MHD momentum and induction equations imply exact shear Alfven phase speed",
       "passed": true
     },
     {
       "id": "E066",
       "part": 2,
-      "method": "symbolic",
-      "name": "Faraday law and positive-real surface impedance exactly agree",
+      "method": "independent_derivation",
+      "name": "Elsasser variables exactly decouple into opposite-direction transport equations",
       "passed": true
     },
     {
       "id": "E066",
       "part": 3,
       "method": "conservation",
-      "name": "Poynting input equals depth-integrated Joule dissipation",
+      "name": "kinetic and magnetic Alfven energies satisfy exact local flux conservation",
       "passed": true
     },
     {
       "id": "E066",
       "part": 4,
-      "method": "limit",
-      "name": "depth-integrated dissipated power fraction approaches unity and skin depth obeys inverse square root of frequency",
+      "method": "symbolic",
+      "name": "interface Alfven velocity continuity and impedance-weighted energy reflection plus transmission equal unity",
       "passed": true
     }
   ],
