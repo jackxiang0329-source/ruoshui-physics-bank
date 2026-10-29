@@ -26,6 +26,7 @@ e=s.symbols('e',positive=True)
 Lpro=(1-e**2)/(2*e**3)*(s.log((1+e)/(1-e))-2*e)
 ck('E075',4,'limit','prolate spheroid depolarization tends one third for sphere and zero for extreme long axis',eq(s.limit(Lpro,e,0),s.Rational(1,3)) and eq(s.limit(Lpro,e,1,dir='-'),0))
 # E076: Debye dielectric relaxation and Kramers Kronig
+t=s.symbols('t',positive=True)
 tau,de,omega=s.symbols('tau de omega',positive=True)
 P=eps0*de*E0*(1-s.exp(-t/tau))
 ck('E076',1,'symbolic','causal step response solves first order Debye relaxation with zero initial polarization',eq(tau*s.diff(P,t)+P,eps0*de*E0) and eq(P.subs(t,0)))
@@ -49,6 +50,7 @@ num=mp.quad(lambda y:nuv*(deltav**2/(8*nuv)/mp.cosh(deltav*y/(4*nuv))**2)**2,[-m
 ck('W071',3,'numerical','independent numerical integration of Burgers shock entropy production equals delta cubed over twelve',abs(num-deltav**3/12)<mp.mpf('1e-25'))
 ck('W071',4,'physical_case','compressive Burgers shock speed lies strictly between both characteristic speeds and width shrinks with viscosity',bool(5>3>1) and eq(s.diff(4*nu/Delta,nu),4/Delta))
 # O073: Rayleigh optical tweezers
+kb,tm=s.symbols('kb tm',positive=True)
 a,er,eps0,II,c,w,k=s.symbols('a er eps0 II c w k',positive=True)
 alpha0=4*s.pi*eps0*a**3*(er-1)/(er+2)
 ck('O073',1,'symbolic','electrostatic Rayleigh sphere polarizability gives correct conducting and vacuum dielectric limits',eq(s.limit(alpha0,er,s.oo),4*s.pi*eps0*a**3) and eq(alpha0.subs(er,1)))
