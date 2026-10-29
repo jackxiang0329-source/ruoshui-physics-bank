@@ -1,0 +1,176 @@
+{
+  "status": "draft-qa-only",
+  "new_problem_count": 6,
+  "passed_count": 24,
+  "tests": [
+    {
+      "id": "M069",
+      "part": 1,
+      "method": "symbolic",
+      "name": "exterior spherical Laplace and radial no penetration conditions and tangential velocity",
+      "passed": true
+    },
+    {
+      "id": "M069",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "direct 3D exterior flow kinetic energy volume integral gives one-half fluid displaced mass",
+      "passed": true
+    },
+    {
+      "id": "M069",
+      "part": 3,
+      "method": "conservation",
+      "name": "nonstationary Bernoulli pressure integral equals added-mass acceleration reaction",
+      "passed": true
+    },
+    {
+      "id": "M069",
+      "part": 4,
+      "method": "physical_case",
+      "name": "work-energy identity for bare sphere plus added fluid mass, and correct vacuum-density limit",
+      "passed": true
+    },
+    {
+      "id": "E069",
+      "part": 1,
+      "method": "symbolic",
+      "name": "electronic energy plus continuity reproduces nonlinear Poisson equation with exact Child Langmuir coefficient",
+      "passed": true
+    },
+    {
+      "id": "E069",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "Child Langmuir voltage law meets both plates, vanishing cathode field and exact current scaling",
+      "passed": true
+    },
+    {
+      "id": "E069",
+      "part": 3,
+      "method": "conservation",
+      "name": "space charge finite despite near-cathode singularity and field energy differs from uniform parallel plate capacitor",
+      "passed": true
+    },
+    {
+      "id": "E069",
+      "part": 4,
+      "method": "dimensions",
+      "name": "kinetic energy flux equals electron electric energy transfer and soft-voltage current goes to zero",
+      "passed": true
+    },
+    {
+      "id": "T065",
+      "part": 1,
+      "method": "numerical",
+      "name": "independent high precision Bose occupancy spectral integral equals pi squared over six",
+      "passed": true
+    },
+    {
+      "id": "T065",
+      "part": 2,
+      "method": "symbolic",
+      "name": "differential ballistic conductance of quadratic chiral heat flux equals universal thermal conductance quantum",
+      "passed": true
+    },
+    {
+      "id": "T065",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "finite cutoff Bose integral derivative reproduces spectral kernel and correct both cutoff limits",
+      "passed": true
+    },
+    {
+      "id": "T065",
+      "part": 4,
+      "method": "conservation",
+      "name": "Landauer two bath entropy production is positive quadratic temperature-difference factor",
+      "passed": true
+    },
+    {
+      "id": "W065",
+      "part": 1,
+      "method": "symbolic",
+      "name": "internal wave frequency solves horizontal-buoyancy dispersion and is bounded by N",
+      "passed": true
+    },
+    {
+      "id": "W065",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "wave group velocity derivative is orthogonal to wavevector as implied by homogeneous degree zero dispersion",
+      "passed": true
+    },
+    {
+      "id": "W065",
+      "part": 3,
+      "method": "conservation",
+      "name": "local Boussinesq perturbation kinetic plus potential energy balances pressure work under incompressible constraint",
+      "passed": true
+    },
+    {
+      "id": "W065",
+      "part": 4,
+      "method": "limit",
+      "name": "hydrostatic high vertical wave number suppresses frequency while unstratified fluid has zero gravity-wave frequency",
+      "passed": true
+    },
+    {
+      "id": "O067",
+      "part": 1,
+      "method": "symbolic",
+      "name": "each focused Debye wave polarization vector is orthogonal to its own wavevector and normalized",
+      "passed": true
+    },
+    {
+      "id": "O067",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "axial vector focusing integral equals analytic alpha over two minus sine double alpha over four",
+      "passed": true
+    },
+    {
+      "id": "O067",
+      "part": 3,
+      "method": "symbolic",
+      "name": "Bessel angular Fourier identities recover J0 and J1 radial transverse integrals with exact on-axis cancellation",
+      "passed": true
+    },
+    {
+      "id": "O067",
+      "part": 4,
+      "method": "limit",
+      "name": "paraxial longitudinal focal field scales as aperture cubed with correct one-third coefficient",
+      "passed": true
+    },
+    {
+      "id": "Q067",
+      "part": 1,
+      "method": "symbolic",
+      "name": "BdG Hamiltonian has exact opposite energy eigenvalues and closes superconducting gap at chemical potential plus or minus 2t",
+      "passed": true
+    },
+    {
+      "id": "Q067",
+      "part": 2,
+      "method": "numerical",
+      "name": "independent 8 by 8 fermionic Fock matrix equality verifies Kitaev sweet point and exact two edge commutators",
+      "passed": true
+    },
+    {
+      "id": "Q067",
+      "part": 3,
+      "method": "physical_case",
+      "name": "topological winding circle criterion equivalent to chemical potential between the two gap closing points",
+      "passed": true
+    },
+    {
+      "id": "Q067",
+      "part": 4,
+      "method": "conservation",
+      "name": "superconducting pairing changes particle number but commutes with exact many-body fermion parity",
+      "passed": true
+    }
+  ],
+  "independent_expert_review": "pending"
+}
