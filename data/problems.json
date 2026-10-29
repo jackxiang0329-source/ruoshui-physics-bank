@@ -4140,6 +4140,29 @@
     "solution": "(1) 固层满足 \\(T_t=\\alpha T_{xx}\\)、\\(T(0,t)=T_0\\)、\\(T(s(t),t)=T_m\\)。令 \\(\\eta=x/(2\\sqrt{\\alpha t})\\)、\\(s=2\\lambda\\sqrt{\\alpha t}\\)，自相似常微分方程是 \\(f''+2\\eta f'=0\\)。两次积分并施加边界值得\n\\[\n\\boxed{T(x,t)=T_0+(T_m-T_0)\\frac{\\operatorname{erf}(\\eta)}{\\operatorname{erf}(\\lambda)}}.\n\\]\n对每一固定 \\(t>0\\)，此场严格满足导热微分方程；\\(\\lambda\\) 必须由相界能量条件决定，不能随意作为额外自由参数。\n\n(2) Stefan条件是 \\(\\rho L\\dot s=kT_x(s^-,t)\\)。使用 \\(\\dot s=\\lambda\\sqrt{\\alpha/t}\\) 和\n\\(T_x(s^-)=\\Delta T\\,e^{-\\lambda^2}/(\\sqrt{\\pi\\alpha t}\\operatorname{erf}\\lambda)\\)，得到\n\\[\n\\boxed{\\lambda e^{\\lambda^2}\\operatorname{erf}\\lambda=\\frac{c_p\\Delta T}{L\\sqrt\\pi}=\\frac{\\mathrm{Ste}}{\\sqrt\\pi}}.\n\\]\n函数 \\(F(\\lambda)=\\lambda e^{\\lambda^2}\\operatorname{erf}\\lambda\\) 在 \\(\\lambda>0\\) 上导数严格正，且由0增长至无穷，所以每个正Stefan数有且仅有一个正根。故 \\(s\\propto\\sqrt t\\)，而不是界面匀速前进。\n\n(3) 壁面向外热流大小为 \\(q_0(t)=kT_x(0,t)=k\\Delta T/(\\sqrt{\\pi\\alpha t}\\operatorname{erf}\\lambda)\\)，累计移热\n\\(Q_0(t)=2k\\Delta T\\sqrt t/(\\sqrt{\\pi\\alpha}\\operatorname{erf}\\lambda)\\)（按单位面积）。固层相对于原来 \\(T_m\\) 液体的能量亏损是\n\\[\nQ_{\\rm stored}=\\rho Ls+\\rho c_p\\int_0^s(T_m-T)\\,dx.\n\\]\n误差函数积分 \\(\\int_0^\\lambda\\operatorname{erf}\\eta\\,d\\eta=\\lambda\\operatorname{erf}\\lambda+(e^{-\\lambda^2}-1)/\\sqrt\\pi\\)，故显热项为\n\\(2\\rho c_p\\Delta T\\sqrt{\\alpha t}(1-e^{-\\lambda^2})/(\\sqrt\\pi\\operatorname{erf}\\lambda)\\)。再用上问Stefan条件可逐项化简至 \\(Q_{\\rm stored}=Q_0\\)，这同时检查了壁面热流和界面潜热的正号。\n\n(4) 小 \\(\\lambda\\) 时 \\(\\operatorname{erf}\\lambda=(2/\\sqrt\\pi)(\\lambda-\\lambda^3/3+\\cdots)\\)，所以 \\(2\\lambda^2+O(\\lambda^4)=\\mathrm{Ste}\\)，得到 \\(\\lambda\\sim\\sqrt{\\mathrm{Ste}/2}\\) 与 \\(s\\sim\\sqrt{2\\alpha\\mathrm{Ste}\\,t}\\)。大Stefan数 \\(\\lambda\\gg1\\)，\\(\\operatorname{erf}\\lambda\\to1\\)，故 \\(\\lambda^2+\\log\\lambda\\sim\\log(\\mathrm{Ste}/\\sqrt\\pi)\\)，首阶 \\(\\lambda\\sim\\sqrt{\\log\\mathrm{Ste}}\\)。\\(q_0\\sim t^{-1/2}\\) 虽在初瞬发散，但其时间积分有限；恒定温度边界、无液侧显热和忽略成核等理想化不能外推到微观 \\(t=0\\)。\n"
   },
   {
+    "id": "T063",
+    "topic": "热学",
+    "title": "布朗谐阱温度骤变的Ornstein–Uhlenbeck弛豫、热量与熵产生",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 120,
+    "tags": [
+      "OU协方差精确演化",
+      "温度淬火",
+      "随机热力学熵产生",
+      "相对熵与自由能"
+    ],
+    "answer": "\\sigma_t^2=\\frac{k_BT_f}{k}+\\frac{k_B(T_i-T_f)}{k}e^{-2kt/\\zeta},\\quad\\Delta S_{\\rm tot}(\\infty)=\\frac{k_B}{2}(T_i/T_f-1-\\ln(T_i/T_f))",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v3.7-round12-draft",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C",
+    "question": "过阻尼粒子在固定谐阱 \\(V(x)=kx^2/2\\) 内运动，\\(k,\\zeta>0\\)。初态与温度 \\(T_i>0\\) 热浴平衡，\\(t=0\\) 时浴温骤变为 \\(T_f>0\\)，此后满足 \\(dx=-(k/\\zeta)x\\,dt+\\sqrt{2k_BT_f/\\zeta}\\,dW_t\\)。温度骤变不改变势能参数。\n(1) 用Itô公式求位置均值、方差及任意时刻的高斯分布。\n(2) 求平均能量、进入系统的热量与外功，检查第一定律。\n(3) 求系统Shannon熵、浴熵和总熵产生，严格证明瞬时熵产生率非负。\n(4) 以相对于最终平衡态的KL散度独立推导自由能耗散，讨论无淬火与严格零温极限。\n",
+    "solution": "(1) Itô公式 \\(d(x^2)=2x\\,dx+(dx)^2\\) 给出\n\\[\n\\dot{\\langle x\\rangle}=-(k/\\zeta)\\langle x\\rangle,\\quad\n\\dot{\\langle x^2\\rangle}=-(2k/\\zeta)\\langle x^2\\rangle+2k_BT_f/\\zeta.\n\\]\n初态均值0、方差 \\(\\sigma_i^2=k_BT_i/k\\)。过程线性且保持高斯性，故\n\\[\np(x,t)=\\frac{e^{-x^2/(2\\sigma_t^2)}}{\\sqrt{2\\pi\\sigma_t^2}},\\quad\n\\boxed{\\sigma_t^2=\\sigma_f^2+(\\sigma_i^2-\\sigma_f^2)e^{-2kt/\\zeta}},\n\\quad\\sigma_f^2=k_BT_f/k.\n\\]\n方差弛豫时间 \\(\\zeta/(2k)\\)，不是均值弛豫时间 \\(\\zeta/k\\)。\n\n(2) 平均能量 \\(U=k\\langle x^2\\rangle/2\\)，故\n\\(U(t)=k_B[T_f+(T_i-T_f)e^{-2kt/\\zeta}]/2\\)。\n谐阱参数不随时间改变，外功 \\(W=0\\)；第一定律给进入系统的热量\n\\[\n\\boxed{Q(t)=\\Delta U=\\tfrac12k_B(T_f-T_i)(1-e^{-2kt/\\zeta})}.\n\\]\n当冷却 \\(T_f<T_i\\) 时 \\(Q<0\\) 表示系统放热，最终 \\(U=k_BT_f/2\\)，满足单个位置自由度的能量均分。\n\n(3) 系统熵 \\(S_{\\rm sys}(t)=\\tfrac{k_B}{2}\\ln(2\\pi e\\sigma_t^2)\\)，热浴熵 \\(\\Delta S_{\\rm bath}=-Q/T_f\\)。令 \\(r_i=T_i/T_f\\)，\\(r_t=\\sigma_t^2/\\sigma_f^2=1+(r_i-1)e^{-2kt/\\zeta}\\)，则\n\\[\n\\boxed{\\Delta S_{\\rm tot}(t)=\\frac{k_B}{2}[\\ln(r_t/r_i)+r_i-r_t]}.\n\\]\n求导得 \\(\\dot S_{\\rm tot}=(k_Bk/\\zeta)(r_t-1)^2/r_t\\ge0\\)。由于初始为0，总熵产生任意时刻非负；终态为 \\(\\tfrac{k_B}{2}(r_i-1-\\ln r_i)\\ge0\\)，后式不可误当任意时刻公式。\n\n(4) 相对最终平衡高斯态的KL散度\n\\(D(p_t\\Vert p_f)=\\tfrac12(r_t-1-\\ln r_t)\\)，其导数\n\\[\n\\dot D=-\\frac{k}{\\zeta}\\frac{(r_t-1)^2}{r_t}\\le0.\n\\]\n非平衡自由能差 \\(F[p_t]-F[p_f]=k_BT_fD\\) 单调下降，且 \\(-\\dot F=T_f\\dot S_{\\rm tot}\\)，独立核对了熵产生率。若 \\(T_i=T_f\\) 所有变化均为零；严格 \\(T_f=0\\) 时浴熵公式含 \\(1/T_f\\) 且高斯平衡分布退化，必须先在正温范围内推导。\n"
+  },
+  {
     "id": "W007",
     "topic": "振动与波动",
     "title": "双弦接点附加质量的波散射",
@@ -5443,6 +5466,29 @@
     "complexity_tier": "L5-C",
     "question": "无量纲聚焦立方非线性Schrödinger方程\n\\(i\\psi_t+\\frac12\\psi_{xx}+|\\psi|^2\\psi=0\\) 定义在全实轴，孤子解在无穷远消失。定义粒子数 \\(N=\\int|\\psi|^2dx\\)、动量 \\(P=\\int\\operatorname{Im}(\\psi^*\\psi_x)dx\\) 和Hamilton量 \\(H=\\int(\\frac12|\\psi_x|^2-\\frac12|\\psi|^4)dx\\)。\n(1) 使用驻波假设求精确亮孤子场，校验边界条件及一个积分形式的一阶运动方程。\n(2) 独立计算孤子的 \\(N,P,H\\) 和能量标度；施以Galilean变换并核对移动孤子中附加动能。\n(3) 对匀幅背景 \\(\\psi=Ae^{iA^2t}\\) 做复扰动线性化，推导色散关系及模不稳定的临界波数和最快增长率。\n(4) 对比孤子局域解和不稳定均匀波背景的守恒条件，讨论一维中的尺度平衡、\\(\\eta\\to0\\) 极限及为何不能把模不稳定阈值理解成孤子的自身失稳。\n",
     "solution": "(1) 取 \\(\\psi(x,t)=f(x)e^{i\\omega t}\\)，正实 \\(f\\) 满足 \\(\\frac12f''-\\omega f+f^3=0\\)。将方程乘 \\(f'\\) 积分，并使用 \\(f,f'\\to0\\) 的边界条件，得\n\\((f')^2=2\\omega f^2-f^4\\)。设峰值 \\(f(0)=\\eta>0\\)，有 \\(2\\omega=\\eta^2\\)，于是\n\\[\n\\boxed{\\psi_\\eta(x,t)=\\eta\\operatorname{sech}(\\eta x)e^{i\\eta^2t/2}}.\n\\]\n直接微分 \\(\\operatorname{sech}\\) 可验其满足原方程；背景严格为零，不是平面波解的小振幅极限。\n\n(2) 利用 \\(\\int_{-\\infty}^\\infty\\operatorname{sech}^2u\\,du=2\\)、\\(\\int\\operatorname{sech}^4u\\,du=4/3\\) 和 \\(\\int\\operatorname{sech}^2u\\tanh^2u\\,du=2/3\\)，得到\n\\[\n\\boxed{N=2\\eta,\\quad P=0,\\quad H=\\tfrac12(2\\eta^3/3)-\\tfrac12(4\\eta^3/3)=-\\eta^3/3}.\n\\]\n若采用Galilean变换 \\(\\psi_v(x,t)=e^{i(vx-v^2t/2)}\\psi_\\eta(x-vt,t)\\)，则 \\(N\\) 不变、\\(P_v=vN=2\\eta v\\)、\\(H_v=H+v^2N/2=-\\eta^3/3+\\eta v^2\\)，从而精确核对运动能量预算。\n\n(3) 对 \\(\\psi=e^{iA^2t}[A+u(x,t)+iw(x,t)]\\)，在实扰动 \\(u,w\\) 的一次阶得到\n\\(u_t=-w_{xx}/2\\)、\\(w_t=u_{xx}/2+2A^2u\\)。代入 \\(u,w\\propto e^{i(kx-\\Omega t)}\\)，消元：\n\\[\n\\boxed{\\Omega^2=\\frac{k^4}{4}-A^2k^2}.\n\\]\n当 \\(0<|k|<2A\\) 时 \\(\\Omega\\) 纯虚而产生指数增长；增长率 \\(\\sigma(k)=|k|\\sqrt{A^2-k^2/4}\\)，其最大值 \\(A^2\\) 在 \\(|k|=\\sqrt2A\\) 处取得。边界 \\(k=0\\) 是相位相关的零模，而非一个新的不稳定波段。\n\n(4) 对衰减到零的孤子，\\(N,H,P\\) 由边界无通量条件守恒，色散项 \\(|\\psi_x|^2\\) 与非线性吸引项 \\(-|\\psi|^4\\) 在尺度 \\(1/\\eta\\) 上彼此平衡。令 \\(\\eta\\to0\\) 时 \\(N\\to0\\)、\\(H\\to0\\)，孤子振幅及非线性同时消失。匀幅背景则有无限的全空间 \\(N\\)，应在周期盒或每单位长度中研究其傅里叶扰动；背景的Benjamin--Feir不稳定不等同于局域孤子的线性谱不稳定，不能混用两种边界条件。\n"
+  },
+  {
+    "id": "W063",
+    "topic": "振动与波动",
+    "title": "弹性覆层Love波的SH导波色散、截止频率与能量局域化",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 120,
+    "tags": [
+      "分层弹性介质Love波",
+      "SH剪切波界面匹配",
+      "导波截止频率",
+      "基底倏逝能量"
+    ],
+    "answer": "\\tan(qh)=\\frac{\\mu_2\\alpha}{\\mu_1q},\\quad q^2=\\omega^2/c_1^2-\\beta^2,\\quad\\alpha^2=\\beta^2-\\omega^2/c_2^2",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v3.7-round12-draft",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C",
+    "question": "各向同性弹性覆层 \\(0<z<h\\) 的剪切模量、密度为 \\(\\mu_1,\\rho_1\\)，基底 \\(z>h\\) 为半无限介质 \\(\\mu_2,\\rho_2\\)，剪切波速 \\(c_j=\\sqrt{\\mu_j/\\rho_j}\\)，且 \\(c_1<c_2\\)。自由表面 \\(z=0\\) 剪应力为零，界面 \\(z=h\\) 位移及剪应力连续。考虑SH位移 \\(u_y(z)e^{i(\\beta x-\\omega t)}\\)。\n(1) 推导两层垂向波数及束缚导波的速度窗口与空间模态。\n(2) 由界面条件求Love波色散方程，核对剪切模量比及量纲。\n(3) 求高阶模截止频率、基模截止性质及低频、高频基模相速度极限。\n(4) 写出周期平均模态能量积分与基底衰减长度，讨论截止及 \\(c_1\\to c_2\\) 极限。\n",
+    "solution": "(1) SH位移满足 \\(\\rho_j u_{tt}=\\mu_j(u_{xx}+u_{zz})\\)，代入行波形式得\n\\(U_j''+(\\omega^2/c_j^2-\\beta^2)U_j=0\\)。\n要在覆层振荡、在基底衰减，须\n\\[\nq^2=\\omega^2/c_1^2-\\beta^2>0,\\quad\n\\alpha^2=\\beta^2-\\omega^2/c_2^2>0,\\quad\nc_1<\\omega/\\beta<c_2.\n\\]\n自由表面 \\(U_1'(0)=0\\) 选 \\(U_1=A\\cos(qz)\\)，基底束缚解 \\(U_2=D e^{-\\alpha(z-h)}\\)，舍弃无穷远增长分支。\n\n(2) \\(z=h\\) 位移连续给 \\(D=A\\cos(qh)\\)，剪应力连续给\n\\(-\\mu_1Aq\\sin(qh)=-\\mu_2\\alpha D\\)，因此\n\\[\n\\boxed{\\tan(qh)=\\frac{\\mu_2\\alpha}{\\mu_1q}}.\n\\]\n两边无量纲，模态同时依赖剪切波速与剪切模量比。若错误地用纵波法向应力替代SH剪应力，所得色散式将失去正确的横向极化边界条件。\n\n(3) 第 \\(n\\ge1\\) 阶模截止时 \\(\\alpha\\to0^+\\)，相速度趋 \\(c_2\\)，此时 \\(\\tan(qh)\\to0\\)、\\(qh=n\\pi\\)。故\n\\[\n\\boxed{\\omega_{n,\\rm cut}=\\frac{n\\pi}{h\\sqrt{c_1^{-2}-c_2^{-2}}}},\\quad n\\ge1.\n\\]\n基模 \\(n=0\\) 无非零截止频率。低频时 \\(q h\\to0\\)、\\(\\alpha\\to0\\)，相速度趋 \\(c_2^-\\)；高频基模 \\(q h\\to\\pi/2^-\\)，\\(\\beta\\simeq\\omega/c_1\\)，相速度趋 \\(c_1^+\\)。\n\n(4) 单位水平面积的周期平均能量可写\n\\[\n\\mathcal E=\\frac14\\int_0^\\infty[\\rho(z)\\omega^2|U|^2+\n\\mu(z)(\\beta^2|U|^2+|U'|^2)]\\,dz.\n\\]\n基底位移平方积分为 \\(|D|^2/(2\\alpha)\\)，故衰减长度 \\(1/\\alpha\\)。截止附近 \\(\\alpha\\to0\\) 时基底能量延伸至远处，局域性减弱；\\(c_1\\to c_2\\) 使允许的相速度窗口闭合且高模截止频率发散，均匀半空间不能支持同类Love束缚波。\n"
   },
   {
     "id": "O007",
@@ -6773,6 +6819,29 @@
     "solution": "(1) 稳态位移 \\(x_\\omega=-(e/m)E_0/(\\omega_0^2-\\omega^2-i\\gamma\\omega)\\)，电子偶极矩为 \\(-ex_\\omega\\)，故\n\\[\n\\boxed{\\chi(\\omega)=\\frac{\\omega_p^2}{\\omega_0^2-\\omega^2-i\\gamma\\omega}}.\n\\]\n设 \\(D=(\\omega_0^2-\\omega^2)^2+\\gamma^2\\omega^2\\)，则 \\(\\chi'=\\omega_p^2(\\omega_0^2-\\omega^2)/D\\)，\\(\\chi''=\\omega_p^2\\gamma\\omega/D>0\\) 对正频率成立。被动介质的平均吸收功率密度 \\(\\omega\\varepsilon_0\\chi''|E_0|^2/2\\ge0\\)。\n\n(2) \\(\\gamma\\ll\\omega_0\\)、\\(\\omega=\\omega_0+\\delta\\) 时，\\(\\omega_0^2-\\omega^2\\simeq-2\\omega_0\\delta\\)，于是\n\\[\n\\chi''\\simeq\\frac{\\omega_p^2\\gamma/\\omega_0}{4\\delta^2+\\gamma^2}.\n\\]\n峰在 \\(\\omega\\simeq\\omega_0\\)，峰高约 \\(\\omega_p^2/(\\gamma\\omega_0)\\)，半高全宽约 \\(\\gamma\\)。静态 \\(\\chi(0)=\\omega_p^2/\\omega_0^2>0\\)；高频 \\(\\chi\\sim-\\omega_p^2/\\omega^2\\)，反映电子惯性而非静态极化。\n\n(3) 极点为\n\\[\n\\omega_\\pm=-i\\gamma/2\\pm\\sqrt{\\omega_0^2-\\gamma^2/4}.\n\\]\n弱阻尼时两极点虚部均为负；过阻尼时根号纯虚，但两极点仍严格在下半平面。因此 \\(\\chi(\\omega)\\) 在上半复频率平面解析并随大频率衰减，符合因果响应的Kramers–Kronig色散关系。若把所选 \\(e^{-i\\omega t}\\) 约定下阻尼项符号反写，极点会移入上半平面并破坏因果稳定性。\n\n(4) 利用 \\(\\chi(-\\omega)=\\chi(\\omega)^*\\) 和Kramers–Kronig关系，在大正频率展开\n\\[\n\\chi'(\\omega)\\sim-\\frac2{\\pi\\omega^2}\\int_0^\\infty\\omega'\\chi''(\\omega')d\\omega'.\n\\]\n与直接展开 \\(\\chi\\sim-\\omega_p^2/\\omega^2\\) 比较得\n\\[\n\\boxed{\\int_0^\\infty\\omega\\operatorname{Im}\\chi(\\omega)d\\omega=\\pi\\omega_p^2/2}.\n\\]\n和则与阻尼无关。\\(\\gamma\\to0^+\\) 时吸收谱在非共振频率逐点趋零，却以分布意义收敛至 \\(\\pi\\omega_p^2\\delta(\\omega-\\omega_0)/(2\\omega_0)\\)，积分保持有限；不能先逐点置零再积分。\n"
   },
   {
+    "id": "O065",
+    "topic": "光学",
+    "title": "精确Bessel光束的锥形角谱、轨道角动量与有限孔径传播界",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 120,
+    "tags": [
+      "Helmholtz方程Bessel模",
+      "锥形平面波角谱",
+      "光学涡旋绕数",
+      "有限孔径无衍射区"
+    ],
+    "answer": "E_m=E_0J_m(k_\\perp r)e^{im\\varphi+ik_zz},\\quad z_{\\max}\\simeq Rk_z/k_\\perp",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v3.7-round12-draft",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C",
+    "question": "均匀无损介质的单色标量场满足 \\((\\nabla^2+k^2)E=0\\)。设 \\(k_\\perp,k_z>0\\)、\\(k_\\perp^2+k_z^2=k^2\\)，研究整数 \\(m\\) 阶圆柱Bessel模。另以半径 \\(R\\) 的圆孔产生有限孔径近似。\n(1) 分离变量推导精确Bessel场及锥形平面波角谱表示，给出轴心正则性条件。\n(2) 求轴向相速度、相位绕数和平均标量能流方向，区分 \\(m=0\\) 与 \\(m\\ne0\\) 的轴心强度。\n(3) 用大半径渐近式证明理想Bessel模横向总功率发散，解释无衍射与有限能量的冲突。\n(4) 由锥形射线几何估计有限孔径近似无衍射长度，并讨论小锥角和近横向传播的极限。\n",
+    "solution": "(1) 令 \\(E=F(r)e^{im\\varphi+ik_zz}\\)，代入Helmholtz方程得\n\\(r^2F''+rF'+(k_\\perp^2r^2-m^2)F=0\\)。轴上正则解为 \\(F=E_0J_m(k_\\perp r)\\)，舍去奇异 \\(Y_m\\)。故\n\\[\n\\boxed{E_m=E_0J_m(k_\\perp r)e^{im\\varphi+ik_zz}}.\n\\]\nJacobi–Anger展开给出锥形角谱\n\\(E_m=E_0i^{-m}(2\\pi)^{-1}\\int_0^{2\\pi}e^{ik_\\perp r\\cos(\\theta-\\varphi)+ik_zz+im\\theta}d\\theta\\)，每个平面波的传播锥角满足 \\(\\tan\\theta_0=k_\\perp/k_z\\)。\n\n(2) 轴向相位速度 \\(v_{\\rm ph,z}=\\omega/k_z\\) 可以大于介质相速度 \\(\\omega/k\\)，但并非信息速度。平均标量流方向与 \\(\\operatorname{Im}(E^*\\nabla E)\\) 同向，径向平均分量为零，轴向分量 \\(\\propto k_z|E|^2\\)，角向分量 \\(\\propto m|E|^2/r\\)。\\(m=0\\) 时 \\(J_0(0)=1\\) 有亮轴心；\\(|m|\\ge1\\) 时 \\(J_m(0)=0\\)，绕轴一圈相位增加 \\(2\\pi m\\)，是光学涡旋暗核。\n\n(3) 固定 \\(m\\) 且 \\(k_\\perp r\\gg1\\)，\n\\[\nJ_m(k_\\perp r)\\sim\\sqrt{\\frac2{\\pi k_\\perp r}}\n\\cos(k_\\perp r-m\\pi/2-\\pi/4).\n\\]\n横向功率积分 \\(\\int_0^\\infty|E|^2r\\,dr\\) 的被积函数远区平均趋非零常数，故积分线性发散。理想无衍射Bessel模不是平方可积的有限能量场；真实有限能量实现只能截断角谱或孔径，在有限传播距离近似维持场形。\n\n(4) 锥角射线从孔径边缘到轴的距离\n\\[\n\\boxed{z_{\\max}\\simeq R/\\tan\\theta_0=Rk_z/k_\\perp}.\n\\]\n此为 \\(Rk_\\perp\\gg1\\) 下的几何光学估计，边缘衍射和旁瓣会缩短实际可用区。\\(k_\\perp\\to0\\) 时理想 \\(m=0\\) 场趋平面波，但有限孔径仍有远场衍射，不能以 \\(z_{\\max}\\to\\infty\\) 宣称永久无衍射；\\(k_z\\to0\\) 时几乎横向传播，轴向无衍射区趋零。\n"
+  },
+  {
     "id": "Q007",
     "topic": "近代物理",
     "title": "相对论两体衰变的能量区间与阈值",
@@ -8098,5 +8167,28 @@
     "complexity_tier": "L5-C",
     "question": "Alice拥有未知量子比特 \\(|\\psi\\rangle=\\alpha|0\\rangle+\\beta|1\\rangle\\)，\\(|\\alpha|^2+|\\beta|^2=1\\)，与Bob预共享 \\(|\\Phi^+\\rangle=(|00\\rangle+|11\\rangle)/\\sqrt2\\)。Alice可进行Bell基测量并发送两比特经典消息。进一步考虑Werner资源 \\(\\rho_W=p|\\Phi^+\\rangle\\langle\\Phi^+|+(1-p)I_4/4\\)，\\(0\\le p\\le1\\)。\n(1) 将三比特态在Alice的Bell基展开并计算四个测量结果概率。\n(2) 写出四种测量结果对应的Bob纠正操作，证明传态正确且不超光速。\n(3) 资源改为Werner态，求等效量子信道及任意纯输入的平均保真度。\n(4) 与最优纯经典平均保真度界 \\(2/3\\) 比较，求量子优势阈值，讨论经典消息与后选择资源成本。\n",
     "solution": "(1) 令未知输入为比特1、共享对为2和3。定义 \\(|\\Phi^\\pm\\rangle=(|00\\rangle\\pm|11\\rangle)/\\sqrt2\\)、\\(|\\Psi^\\pm\\rangle=(|01\\rangle\\pm|10\\rangle)/\\sqrt2\\)。逐项展开：\n\\[\n|\\psi\\rangle_1|\\Phi^+\\rangle_{23}=\\tfrac12[\n|\\Phi^+\\rangle_{12}|\\psi\\rangle_3+\n|\\Phi^-\\rangle_{12}Z|\\psi\\rangle_3+\n|\\Psi^+\\rangle_{12}X|\\psi\\rangle_3+\n|\\Psi^-\\rangle_{12}XZ|\\psi\\rangle_3].\n\\]\n四个Bob条件态范数均为1，因此四种Bell结果概率各 \\(1/4\\)，与未知 \\(\\alpha,\\beta\\) 无关。\n\n(2) Alice通过经典信道发送结果标签，Bob依次施加 \\(I,Z,X,ZX\\)，每种情形均把对应Pauli误差逆转（至多差一个全局相位）。未收到经典消息时，Bob的四分支平均约化态为 \\(I_2/2\\)，不含未知输入态的可读取信息，因此纠缠本身不允许超光速传信。\n\n(3) 传态映射对资源态线性。理想Bell资源给恒等信道，完全混合资源 \\(I_4/4\\) 给完全退极化输出 \\(I_2/2\\)，因此\n\\[\n\\boxed{\\mathcal T_p(\\rho)=p\\rho+(1-p)I_2/2}.\n\\]\n任意纯输入 \\(\\rho=|\\psi\\rangle\\langle\\psi|\\) 的保真度为\n\\(F=\\langle\\psi|\\mathcal T_p(\\rho)|\\psi\\rangle=p+(1-p)/2=(1+p)/2\\)，与Bloch球方向无关，故均匀平均仍为同值。\n\n(4) 对未知纯单比特，最优纯经典测量—重制备协议的平均保真度上界为 \\(2/3\\)，所以\n\\[\n\\boxed{F_{\\rm avg}>2/3\\iff p>1/3}.\n\\]\n\\(p=1/3\\) 仅与经典界持平，不能宣称严格优势；此处亦为Werner资源的纠缠阈值。Bob需要Alice的两比特经典信息，且只后选择某一Bell结果会把成功率降低至 \\(1/4\\)，不能从资源账本中删去失败试验。\n"
+  },
+  {
+    "id": "Q065",
+    "topic": "近代物理",
+    "title": "量子Zeno效应的重复投影、生存概率与能量方差时间尺度",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 120,
+    "tags": [
+      "短时生存概率",
+      "投影测量Zeno极限",
+      "能量方差",
+      "后选择测量资源"
+    ],
+    "answer": "P_N(t)=\\cos^{2N}(\\Omega t/N)\\to1,\\quad\\tau_Z=\\hbar/\\Delta H",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v3.7-round12-draft",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C",
+    "question": "两能级系统哈密顿量 \\(H=\\hbar\\Omega\\sigma_x\\)，\\(\\Omega>0\\)，初态 \\(|0\\rangle\\) 为 \\(\\sigma_z\\) 正本征态。每隔 \\(\\tau=t/N\\) 进行一次理想选择性投影测量 \\(P=|0\\rangle\\langle0|\\)，仅保留全部测量成功的轨迹。\n(1) 求自由演化、生存概率和首次正交时间。\n(2) 计算 \\(N\\) 次测量全部成功概率，严格求 \\(N\\to\\infty\\) 的固定时间极限与首阶误差。\n(3) 对一般归一初态推导短时生存概率与能量方差关系，定义Zeno时间并讨论谱矩条件。\n(4) 计算首次失败即停止时的期望测量次数，比较选择性与非选择性测量及非理想实验限制。\n",
+    "solution": "(1) \\(\\sigma_x^2=I\\)，所以\n\\(U(t)=e^{-iHt/\\hbar}=\\cos(\\Omega t)I-i\\sin(\\Omega t)\\sigma_x\\)。\n从 \\(|0\\rangle\\) 出发得\n\\(|\\psi(t)\\rangle=\\cos(\\Omega t)|0\\rangle-i\\sin(\\Omega t)|1\\rangle\\)，\n\\(P_0(t)=\\cos^2(\\Omega t)\\)；首次正交时间 \\(t_\\perp=\\pi/(2\\Omega)\\)，不是完整概率周期 \\(\\pi/\\Omega\\)。\n\n(2) 每次成功后投影态恢复为 \\(|0\\rangle\\)，单次条件成功率 \\(p=\\cos^2(\\Omega t/N)\\)，故\n\\[\n\\boxed{P_N(t)=p^N=\\cos^{2N}(\\Omega t/N)}.\n\\]\n由 \\(\\ln\\cos x=-x^2/2-x^4/12+O(x^6)\\)，得\n\\(\\ln P_N=-\\Omega^2t^2/N-\\Omega^4t^4/(6N^3)+O(N^{-5})\\)，所以 \\(P_N=1-\\Omega^2t^2/N+O(N^{-2})\\to1\\)。这要求瞬时理想测量且固定总演化时间。\n\n(3) 对时间无关自伴 \\(H\\) 且 \\(\\langle H^2\\rangle<\\infty\\) 的态，\n\\(\\langle\\psi|e^{-iHt/\\hbar}|\\psi\\rangle=1-it\\langle H\\rangle/\\hbar-t^2\\langle H^2\\rangle/(2\\hbar^2)+o(t^2)\\)。\n取模平方后一次项抵消：\n\\[\nP(t)=1-(\\Delta H)^2t^2/\\hbar^2+o(t^2),\\quad\n\\boxed{\\tau_Z=\\hbar/\\Delta H}.\n\\]\n本题 \\(\\langle H\\rangle=0,\\langle H^2\\rangle=\\hbar^2\\Omega^2\\)，故 \\(\\tau_Z=1/\\Omega\\)。若能量方差发散，短时二次展开未必成立，不能照搬同一公式。\n\n(4) 若首次失败就停止，单次条件成功率 \\(p\\)，实际执行测量次数期望\n\\[\n\\boxed{\\mathbb E[M]=\\sum_{j=0}^{N-1}p^j=(1-p^N)/(1-p)}\n\\]\n（\\(p=1\\) 时极限为 \\(N\\)）。后选择的成功率为 \\(p^N\\)，非选择性测量则保留所有分支并得到混合态，不能把两者混为同一实验。真实测量需时间、可引入额外退相干并改变系统哈密顿量，故理想 \\(N\\to\\infty\\) 数学极限不保证物理上零成本冻结。\n"
   }
 ]
