@@ -1,0 +1,347 @@
+{
+  "status": "draft_technical_checks_passed_expert_review_pending",
+  "round": 14,
+  "draft_new_problem_count": 12,
+  "target_new_problem_count": 50,
+  "passed_count": 48,
+  "tests": [
+    {
+      "id": "M077",
+      "part": 1,
+      "method": "physical_case",
+      "name": "Bingham中心应力为零且屈服界面恰达到材料阈值",
+      "passed": true
+    },
+    {
+      "id": "M077",
+      "part": 2,
+      "method": "symbolic",
+      "name": "分段流速同时满足壁面无滑移与塞状核剪切率为零",
+      "passed": true
+    },
+    {
+      "id": "M077",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "交换积分次序得到的流量与三次多项式闭式一致",
+      "passed": true
+    },
+    {
+      "id": "M077",
+      "part": 4,
+      "method": "conservation",
+      "name": "全域压力功与黏塑性耗散积分严格相等且临界呈二次律",
+      "passed": true
+    },
+    {
+      "id": "M078",
+      "part": 1,
+      "method": "symbolic",
+      "name": "高斯涡量逐项满足涡伸长与径向扩散平衡微分方程",
+      "passed": true
+    },
+    {
+      "id": "M078",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "高斯核全平面积分精确归一为规定环量",
+      "passed": true
+    },
+    {
+      "id": "M078",
+      "part": 3,
+      "method": "limit",
+      "name": "轴心速度有限且远场环量恢复自由涡极限",
+      "passed": true
+    },
+    {
+      "id": "M078",
+      "part": 4,
+      "method": "dimensions",
+      "name": "涡量平方积分闭式与黏性系数奇异缩放一致",
+      "passed": true
+    },
+    {
+      "id": "E077",
+      "part": 1,
+      "method": "symbolic",
+      "name": "剪切感应方程给出横向磁场不变与纵向分量线性增长",
+      "passed": true
+    },
+    {
+      "id": "E077",
+      "part": 2,
+      "method": "conservation",
+      "name": "Cauchy形变梯度行列式为一并保持磁通冻结映射",
+      "passed": true
+    },
+    {
+      "id": "E077",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "磁能导数与Maxwell剪切应力外源功率一致",
+      "passed": true
+    },
+    {
+      "id": "E077",
+      "part": 4,
+      "method": "physical_case",
+      "name": "磁能抛物线极小值和有限时间反转条件同时成立",
+      "passed": true
+    },
+    {
+      "id": "E078",
+      "part": 1,
+      "method": "conservation",
+      "name": "冷离子流守恒与电势能动能守恒对任意负势成立",
+      "passed": true
+    },
+    {
+      "id": "E078",
+      "part": 2,
+      "method": "symbolic",
+      "name": "Poisson线性化的Bohm系数和声速阈值代数一致",
+      "passed": true
+    },
+    {
+      "id": "E078",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "Sagdeev第一积分求导精确恢复非线性Poisson电荷密度",
+      "passed": true
+    },
+    {
+      "id": "E078",
+      "part": 4,
+      "method": "physical_case",
+      "name": "超Bohm入射时负壁势的第一积分为正且离子通量恒定",
+      "passed": true
+    },
+    {
+      "id": "T072",
+      "part": 1,
+      "method": "symbolic",
+      "name": "吸收布朗首达均值满足后向Poisson方程及双端边界",
+      "passed": true
+    },
+    {
+      "id": "T072",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "首达Laplace变换满足边界且首阶系数恢复平均首达时间",
+      "passed": true
+    },
+    {
+      "id": "T072",
+      "part": 3,
+      "method": "numerical",
+      "name": "Dirichlet热核生存概率随时间衰减且首本征模控制长时尾",
+      "passed": true
+    },
+    {
+      "id": "T072",
+      "part": 4,
+      "method": "symbolic",
+      "name": "二阶首达矩满足递推且中点方差精确为正",
+      "passed": true
+    },
+    {
+      "id": "T073",
+      "part": 1,
+      "method": "symbolic",
+      "name": "量子逸度二阶反演保持粒子数到所需阶数",
+      "passed": true
+    },
+    {
+      "id": "T073",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "玻色与费米第二维里系数由独立压力级数消元得到",
+      "passed": true
+    },
+    {
+      "id": "T073",
+      "part": 3,
+      "method": "symbolic",
+      "name": "Helmholtz自由能的密度导数与第二维里压强完全一致",
+      "passed": true
+    },
+    {
+      "id": "T073",
+      "part": 4,
+      "method": "conservation",
+      "name": "内能与化学势熵恒等式导出正确量子熵修正",
+      "passed": true
+    },
+    {
+      "id": "W072",
+      "part": 1,
+      "method": "symbolic",
+      "name": "双质量Bloch行列式与动态有效质量色散严格等价",
+      "passed": true
+    },
+    {
+      "id": "W072",
+      "part": 2,
+      "method": "physical_case",
+      "name": "共振频率与有效质量零点之间质量为负且禁止实波传播",
+      "passed": true
+    },
+    {
+      "id": "W072",
+      "part": 3,
+      "method": "limit",
+      "name": "长波声速含全部胞内质量且光学支起点为零点频率",
+      "passed": true
+    },
+    {
+      "id": "W072",
+      "part": 4,
+      "method": "conservation",
+      "name": "完整机械能各项非负且平移模弹性势能严格为零",
+      "passed": true
+    },
+    {
+      "id": "W073",
+      "part": 1,
+      "method": "symbolic",
+      "name": "周期Bloch复谱的实虚部分离与非互易椭圆轨迹一致",
+      "passed": true
+    },
+    {
+      "id": "W073",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "非对称左右耦合经对角相似变换都变为几何平均",
+      "passed": true
+    },
+    {
+      "id": "W073",
+      "part": 3,
+      "method": "numerical",
+      "name": "七胞开放链趋肤本征矢逐点满足原非对称动力学",
+      "passed": true
+    },
+    {
+      "id": "W073",
+      "part": 4,
+      "method": "physical_case",
+      "name": "开放与周期稳定阈值满足严格不等式并随非互易性分离",
+      "passed": true
+    },
+    {
+      "id": "O074",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Jones态Berry联络曲率严格等于半单位球面面积形式",
+      "passed": true
+    },
+    {
+      "id": "O074",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "纬线相位积分与所围立体角的一半严格一致",
+      "passed": true
+    },
+    {
+      "id": "O074",
+      "part": 3,
+      "method": "numerical",
+      "name": "双臂干涉的几何相位反转改变可观测条纹而强度非负",
+      "passed": true
+    },
+    {
+      "id": "O074",
+      "part": 4,
+      "method": "symbolic",
+      "name": "规范变换联络差为全微分且曲率在变换后不变",
+      "passed": true
+    },
+    {
+      "id": "O075",
+      "part": 1,
+      "method": "symbolic",
+      "name": "参量放大双曲传递矩阵的行列式严格为一",
+      "passed": true
+    },
+    {
+      "id": "O075",
+      "part": 2,
+      "method": "conservation",
+      "name": "信号闲频光子通量差在耦合流中导数精确为零",
+      "passed": true
+    },
+    {
+      "id": "O075",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "单种子光子通量差与同反相种子增益均满足双曲恒等式",
+      "passed": true
+    },
+    {
+      "id": "O075",
+      "part": 4,
+      "method": "limit",
+      "name": "小增益闲频强度二次开启且大增益信号系数趋四分之一",
+      "passed": true
+    },
+    {
+      "id": "Q074",
+      "part": 1,
+      "method": "physical_case",
+      "name": "四种无错或单X错误综合征两两不同",
+      "passed": true
+    },
+    {
+      "id": "Q074",
+      "part": 2,
+      "method": "symbolic",
+      "name": "独立物理位翻转的二次逻辑错误概率与二项计数一致",
+      "passed": true
+    },
+    {
+      "id": "Q074",
+      "part": 3,
+      "method": "physical_case",
+      "name": "纠缠保真度优势区间由概率差因式分解且端点正确",
+      "passed": true
+    },
+    {
+      "id": "Q074",
+      "part": 4,
+      "method": "symbolic",
+      "name": "未检出相位错误的奇偶概率正确并在低噪声线性恶化",
+      "passed": true
+    },
+    {
+      "id": "Q075",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Gibbs几何本征值归一且占据数与玻色分布一致",
+      "passed": true
+    },
+    {
+      "id": "Q075",
+      "part": 2,
+      "method": "limit",
+      "name": "热谐振子协方差乘积满足Heisenberg界且零温饱和",
+      "passed": true
+    },
+    {
+      "id": "Q075",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "热Wigner二维高斯积分归一且位置边缘二阶矩一致",
+      "passed": true
+    },
+    {
+      "id": "Q075",
+      "part": 4,
+      "method": "limit",
+      "name": "热态纯度的几何求和等于双曲正切并趋零温纯态",
+      "passed": true
+    }
+  ],
+  "independent_expert_review": "待独立复核",
+  "note": "Only 12 draft problems verified; 38 missing. Not a release or merge gate."
+}
