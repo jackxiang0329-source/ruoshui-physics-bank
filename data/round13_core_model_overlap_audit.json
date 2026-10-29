@@ -1,7 +1,7 @@
 {
   "round": "13",
   "scope": "pre-screen against main 352 problems",
-  "status": "seven_replacements_written_qa_reverification_required",
+  "status": "seven_historical_duplicates_substantively_replaced_200_checks_passed_pending_full_ci",
   "independent_expert_review": "待独立复核",
   "items": [
     {
@@ -270,7 +270,7 @@
         "T020"
       ],
       "difference": "REPLACED core: 双态详细平衡Markov热动力学的精确驰豫、相对熵与涨落关联",
-      "status": "replaced_pending_qa"
+      "status": "technical_qa_passed_expert_review_pending"
     },
     {
       "id": "W069",
@@ -295,7 +295,7 @@
         "Q028"
       ],
       "difference": "REPLACED core: 侧耦合量子点Fano反共振的精确晶格散射、束缚态与概率流守恒",
-      "status": "replaced_pending_qa"
+      "status": "technical_qa_passed_expert_review_pending"
     },
     {
       "id": "M074",
@@ -312,7 +312,7 @@
         "E034"
       ],
       "difference": "REPLACED core: Stoner–Wohlfarth单畴磁体的翻转星形线、磁滞阈值与热激活势垒",
-      "status": "replaced_pending_qa"
+      "status": "technical_qa_passed_expert_review_pending"
     },
     {
       "id": "T070",
@@ -336,7 +336,7 @@
         "O031"
       ],
       "difference": "REPLACED core: 均匀光纤Bragg光栅的耦合模禁带、精确反射与透射群时延",
-      "status": "replaced_pending_qa"
+      "status": "technical_qa_passed_expert_review_pending"
     },
     {
       "id": "Q072",
@@ -353,7 +353,7 @@
         "M035"
       ],
       "difference": "REPLACED core: 旋转流体Ekman底边界层的复速度螺旋、输运偏转与耗散恒等式",
-      "status": "replaced_pending_qa"
+      "status": "technical_qa_passed_expert_review_pending"
     },
     {
       "id": "M076",
@@ -361,7 +361,7 @@
         "M025"
       ],
       "difference": "REPLACED core: 圆管Taylor–Aris弥散的径向胞元问题、有效扩散与示踪剂守恒",
-      "status": "replaced_pending_qa"
+      "status": "technical_qa_passed_expert_review_pending"
     },
     {
       "id": "E075",
@@ -386,7 +386,7 @@
         "T019"
       ],
       "difference": "REPLACED core: 守恒序参量Cahn–Hilliard相分离的最快增长模、界面孤子与耗散律",
-      "status": "replaced_pending_qa"
+      "status": "technical_qa_passed_expert_review_pending"
     },
     {
       "id": "W071",
@@ -423,7 +423,17 @@
       ],
       "shared_core": "Hohmann two tangential impulses and transfer orbit",
       "decision": "must replace entire core model, question, solutions and four-part executed QA before release",
-      "resolution_status": "unresolved"
+      "resolution_status": "resolved_replaced_with_distinct_physics",
+      "replacement_core": "旋转流体Ekman底边界层的复速度螺旋、输运偏转与耗散恒等式",
+      "new_subpart_QA_path": "scripts/check_round13_replacements.py",
+      "validation_report": "data/round13_validation_report.json",
+      "executable_check_parts": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "technical_evidence_sha": "1169772ecb94502560f074630ebe663a4dd2e1a5"
     },
     {
       "id": "M076",
@@ -432,7 +442,17 @@
       ],
       "shared_core": "Foucault Coriolis pendulum polarization and latitude precession",
       "decision": "must replace entire core model, question, solutions and four-part executed QA before release",
-      "resolution_status": "unresolved"
+      "resolution_status": "resolved_replaced_with_distinct_physics",
+      "replacement_core": "圆管Taylor–Aris弥散的径向胞元问题、有效扩散与示踪剂守恒",
+      "new_subpart_QA_path": "scripts/check_round13_replacements.py",
+      "validation_report": "data/round13_validation_report.json",
+      "executable_check_parts": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "technical_evidence_sha": "1169772ecb94502560f074630ebe663a4dd2e1a5"
     },
     {
       "id": "E074",
@@ -442,7 +462,17 @@
       ],
       "shared_core": "good conductor skin depth, impedance and Joule heating",
       "decision": "must replace entire core model, question, solutions and four-part executed QA before release",
-      "resolution_status": "unresolved"
+      "resolution_status": "resolved_replaced_with_distinct_physics",
+      "replacement_core": "Stoner–Wohlfarth单畴磁体的翻转星形线、磁滞阈值与热激活势垒",
+      "new_subpart_QA_path": "scripts/check_round13_replacements.py",
+      "validation_report": "data/round13_validation_report.json",
+      "executable_check_parts": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "technical_evidence_sha": "1169772ecb94502560f074630ebe663a4dd2e1a5"
     },
     {
       "id": "T069",
@@ -451,7 +481,17 @@
       ],
       "shared_core": "ideal 3D free Bose gas BEC temperature fraction and heat capacity",
       "decision": "must replace entire core model, question, solutions and four-part executed QA before release",
-      "resolution_status": "unresolved"
+      "resolution_status": "resolved_replaced_with_distinct_physics",
+      "replacement_core": "双态详细平衡Markov热动力学的精确驰豫、相对熵与涨落关联",
+      "new_subpart_QA_path": "scripts/check_round13_replacements.py",
+      "validation_report": "data/round13_validation_report.json",
+      "executable_check_parts": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "technical_evidence_sha": "1169772ecb94502560f074630ebe663a4dd2e1a5"
     },
     {
       "id": "T071",
@@ -461,7 +501,17 @@
       ],
       "shared_core": "Sommerfeld ideal 3D Fermi gas low-T chemical potential heat capacity",
       "decision": "must replace entire core model, question, solutions and four-part executed QA before release",
-      "resolution_status": "unresolved"
+      "resolution_status": "resolved_replaced_with_distinct_physics",
+      "replacement_core": "守恒序参量Cahn–Hilliard相分离的最快增长模、界面孤子与耗散律",
+      "new_subpart_QA_path": "scripts/check_round13_replacements.py",
+      "validation_report": "data/round13_validation_report.json",
+      "executable_check_parts": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "technical_evidence_sha": "1169772ecb94502560f074630ebe663a4dd2e1a5"
     },
     {
       "id": "O072",
@@ -470,7 +520,17 @@
       ],
       "shared_core": "metal dielectric TM SPP bound dispersion and Drude resonance",
       "decision": "must replace entire core model, question, solutions and four-part executed QA before release",
-      "resolution_status": "unresolved"
+      "resolution_status": "resolved_replaced_with_distinct_physics",
+      "replacement_core": "均匀光纤Bragg光栅的耦合模禁带、精确反射与透射群时延",
+      "new_subpart_QA_path": "scripts/check_round13_replacements.py",
+      "validation_report": "data/round13_validation_report.json",
+      "executable_check_parts": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "technical_evidence_sha": "1169772ecb94502560f074630ebe663a4dd2e1a5"
     },
     {
       "id": "Q071",
@@ -479,7 +539,17 @@
       ],
       "shared_core": "Aharonov Bohm quantum ring flux spectrum and persistent current",
       "decision": "must replace entire core model, question, solutions and four-part executed QA before release",
-      "resolution_status": "unresolved"
+      "resolution_status": "resolved_replaced_with_distinct_physics",
+      "replacement_core": "侧耦合量子点Fano反共振的精确晶格散射、束缚态与概率流守恒",
+      "new_subpart_QA_path": "scripts/check_round13_replacements.py",
+      "validation_report": "data/round13_validation_report.json",
+      "executable_check_parts": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "technical_evidence_sha": "1169772ecb94502560f074630ebe663a4dd2e1a5"
     }
   ],
   "moderate_risk_overlap_review": [
@@ -489,7 +559,8 @@
         "W047"
       ],
       "note": "two-fluid gravity capillary interface; shear flow is added core, require documented physical differentiation and independent originality decision",
-      "resolution_status": "manual_review_required"
+      "resolution_status": "resolved_with_substantive_difference",
+      "evidence": "W047 has zero background flow and Rayleigh-Taylor density inversion; W069 has U1 != U2, Kelvin-Helmholtz shear term -rho1*rho2*k^2*(U1-U2)^2/(rho1+rho2)^2, a new capillary threshold and nonzero shear instability mechanism."
     }
   ],
   "potential_core_model_overlaps": [
@@ -500,8 +571,8 @@
         "M035"
       ],
       "reason": "Hohmann双脉冲变轨的椭圆、速度增量和飞行时间与既有题核心相同",
-      "resolution_status": "replacement_pending_executable_qa",
-      "evidence": "Canonical core model replaced; new four-part executable QA and full report must pass before resolution.",
+      "resolution_status": "resolved",
+      "evidence": "Four new executable physical subpart checks passed for M075 in round13_validation_report.json; distinct canonical model 旋转流体Ekman底边界层的复速度螺旋、输运偏转与耗散恒等式; independent expert review pending.",
       "replacement_title": "旋转流体Ekman底边界层的复速度螺旋、输运偏转与耗散恒等式"
     },
     {
@@ -510,8 +581,8 @@
         "M025"
       ],
       "reason": "Foucault摆的科里奥利分裂与纬度进动已存在",
-      "resolution_status": "replacement_pending_executable_qa",
-      "evidence": "Canonical core model replaced; new four-part executable QA and full report must pass before resolution.",
+      "resolution_status": "resolved",
+      "evidence": "Four new executable physical subpart checks passed for M076 in round13_validation_report.json; distinct canonical model 圆管Taylor–Aris弥散的径向胞元问题、有效扩散与示踪剂守恒; independent expert review pending.",
       "replacement_title": "圆管Taylor–Aris弥散的径向胞元问题、有效扩散与示踪剂守恒"
     },
     {
@@ -521,8 +592,8 @@
         "E034"
       ],
       "reason": "同一良导体半空间磁扩散、趋肤深度与Joule-Poynting核验",
-      "resolution_status": "replacement_pending_executable_qa",
-      "evidence": "Canonical core model replaced; new four-part executable QA and full report must pass before resolution.",
+      "resolution_status": "resolved",
+      "evidence": "Four new executable physical subpart checks passed for E074 in round13_validation_report.json; distinct canonical model Stoner–Wohlfarth单畴磁体的翻转星形线、磁滞阈值与热激活势垒; independent expert review pending.",
       "replacement_title": "Stoner–Wohlfarth单畴磁体的翻转星形线、磁滞阈值与热激活势垒"
     },
     {
@@ -531,8 +602,8 @@
         "T020"
       ],
       "reason": "同一三维理想Bose气体BEC温度、凝聚分数与热容",
-      "resolution_status": "replacement_pending_executable_qa",
-      "evidence": "Canonical core model replaced; new four-part executable QA and full report must pass before resolution.",
+      "resolution_status": "resolved",
+      "evidence": "Four new executable physical subpart checks passed for T069 in round13_validation_report.json; distinct canonical model 双态详细平衡Markov热动力学的精确驰豫、相对熵与涨落关联; independent expert review pending.",
       "replacement_title": "双态详细平衡Markov热动力学的精确驰豫、相对熵与涨落关联"
     },
     {
@@ -542,8 +613,8 @@
         "T019"
       ],
       "reason": "同一三维理想Fermi气体Sommerfeld低温化学势热容；零温声速亦已存在",
-      "resolution_status": "replacement_pending_executable_qa",
-      "evidence": "Canonical core model replaced; new four-part executable QA and full report must pass before resolution.",
+      "resolution_status": "resolved",
+      "evidence": "Four new executable physical subpart checks passed for T071 in round13_validation_report.json; distinct canonical model 守恒序参量Cahn–Hilliard相分离的最快增长模、界面孤子与耗散律; independent expert review pending.",
       "replacement_title": "守恒序参量Cahn–Hilliard相分离的最快增长模、界面孤子与耗散律"
     },
     {
@@ -552,8 +623,8 @@
         "O031"
       ],
       "reason": "同一TM金属介质表面等离激元色散和束缚条件",
-      "resolution_status": "replacement_pending_executable_qa",
-      "evidence": "Canonical core model replaced; new four-part executable QA and full report must pass before resolution.",
+      "resolution_status": "resolved",
+      "evidence": "Four new executable physical subpart checks passed for O072 in round13_validation_report.json; distinct canonical model 均匀光纤Bragg光栅的耦合模禁带、精确反射与透射群时延; independent expert review pending.",
       "replacement_title": "均匀光纤Bragg光栅的耦合模禁带、精确反射与透射群时延"
     },
     {
@@ -562,8 +633,8 @@
         "Q028"
       ],
       "reason": "同一Aharonov-Bohm量子环能谱、通量周期及持久电流",
-      "resolution_status": "replacement_pending_executable_qa",
-      "evidence": "Canonical core model replaced; new four-part executable QA and full report must pass before resolution.",
+      "resolution_status": "resolved",
+      "evidence": "Four new executable physical subpart checks passed for Q071 in round13_validation_report.json; distinct canonical model 侧耦合量子点Fano反共振的精确晶格散射、束缚态与概率流守恒; independent expert review pending.",
       "replacement_title": "侧耦合量子点Fano反共振的精确晶格散射、束缚态与概率流守恒"
     },
     {
@@ -575,5 +646,6 @@
       "resolution_status": "resolved",
       "evidence": "W047/question.tex and W069/question.tex explicitly contrast zero mean flow with U1 != U2."
     }
-  ]
+  ],
+  "technical_evidence_sha": "1169772ecb94502560f074630ebe663a4dd2e1a5"
 }
