@@ -50,7 +50,7 @@
       ]
     }
   ],
-  "disposition": "Three historical core-model overlaps remain resolved; new Q059 quantum cavity model screened against Q011/Q016/Q024/Q056/Q014, pending independent expert review. Draft 18/50.",
+  "disposition": "Three historical core-model overlaps remain resolved; Q060 continuum Dirac kink screened against Q047 SSH lattice boundary mode and Q053 Klein-Gordon waves. Draft 19/50, pending independent review.",
   "independent_expert_review": "待独立复核",
   "new_draft_model_screening": [
     {
@@ -88,6 +88,18 @@
       ],
       "core_model": "quantized Jaynes--Cummings cavity with excitation-number-resolved dressed doublets, Poissonian collapse/revival and dispersive atom-cavity conditional phase",
       "difference": "Q011/Q024/Q056 are semiclassically driven two-level Rabi models with a fixed coupling; Q016 treats a free oscillator coherent state; Q014 studies a frequency quench. None contains the quantized cavity square-root photon-number splitting, Poisson-weighted revival or dispersive cavity-state overlap.",
+      "resolution_status": "screened_distinct_pending_independent_review"
+    },
+    {
+      "draft_id": "Q060",
+      "compared_existing_ids": [
+        "Q047",
+        "Q053",
+        "Q044",
+        "Q048"
+      ],
+      "core_model": "continuum 1D Dirac mass kink with exact chiral zero mode, supersymmetric Pöschl--Teller partner factorization, reflectionless Dirac scattering and exact uniform chiral-breaking mass shift",
+      "difference": "Q047 is a discrete SSH hopping chain with edge winding and no continuum Dirac scattering or SUSY partner spectrum; Q053 concerns scalar Klein--Gordon wave packets; Q044 a periodic delta potential; Q048 hard-sphere s-wave scattering. Q060 derives an exact kink continuum scattering S-matrix and gap shift not present in those models.",
       "resolution_status": "screened_distinct_pending_independent_review"
     }
   ]

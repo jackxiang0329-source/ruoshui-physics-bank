@@ -1,7 +1,7 @@
 {
   "status": "draft-only",
-  "new_problem_count": 18,
-  "passed_count": 72,
+  "new_problem_count": 19,
+  "passed_count": 76,
   "tests": [
     {
       "id": "M059",
@@ -506,6 +506,34 @@
       "method": "limit",
       "name": "dispersive dressed energy shift and coherent cavity dephasing envelope revival",
       "passed": true
+    },
+    {
+      "id": "Q060",
+      "part": 1,
+      "method": "symbolic_and_normalization",
+      "name": "Dirac mass kink zero mode solves first order equation, has positive chirality and exact normalization",
+      "passed": true
+    },
+    {
+      "id": "Q060",
+      "part": 2,
+      "method": "independent_factorization",
+      "name": "SUSY partner A-dagger A has the Pöschl Teller well and A A-dagger is free above the gap",
+      "passed": true
+    },
+    {
+      "id": "Q060",
+      "part": 3,
+      "method": "scattering_flux_and_limit",
+      "name": "Darboux-generated scattering wave solves partner equation with unit-modulus reflectionless transmission",
+      "passed": true
+    },
+    {
+      "id": "Q060",
+      "part": 4,
+      "method": "chiral_symmetry_and_gap",
+      "name": "uniform chiral-breaking mass shifts the bound eigenvalue exactly and preserves a positive continuum gap",
+      "passed": true
     }
   ],
   "independent_expert_review": "pending",
@@ -616,6 +644,12 @@
       "id": "Q059",
       "method": "independent_high_precision_poisson_sum",
       "name": "50 digit coherent state collapse estimate, neighboring phase revival and dispersive characteristic function",
+      "passed": true
+    },
+    {
+      "id": "Q060",
+      "method": "independent_high_precision_scattering_quadrature",
+      "name": "50 digit kink zero-mode norm, three independent scattering ODE residuals and flux unitarity",
       "passed": true
     }
   ]

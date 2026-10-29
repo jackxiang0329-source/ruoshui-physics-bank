@@ -594,12 +594,56 @@ assert abs(series059-closed059)<mp.mpf('1e-45')
 supplemental.append(dict(id='Q059',method='independent_high_precision_poisson_sum',
                          name='50 digit coherent state collapse estimate, neighboring phase revival and dispersive characteristic function',passed=True))
 
-assert len(checks)==72 and len(set((v['id'],v['part']) for v in checks))==72
+
+# Q060: continuum Dirac mass kink, SUSY partner, exact scattering and chiral-breaking shift.
+y060,k060,d060=s.symbols('y060 k060 d060',real=True)
+sx060=s.Matrix([[0,1],[1,0]]); sy060=s.Matrix([[0,-s.I],[s.I,0]]); sz060=s.diag(1,-1)
+ch060=s.Matrix([1,s.I])/s.sqrt(2)
+ps060=ch060/s.cosh(y060)
+H060=lambda vec:-s.I*sx060*s.diff(vec,y060)+s.tanh(y060)*sz060*vec
+record('Q060',1,'symbolic_and_normalization',
+       'Dirac mass kink zero mode solves first order equation, has positive chirality and exact normalization',
+       all(eq(z) for z in H060(ps060)) and sy060*ch060==ch060
+       and eq(s.integrate(1/s.cosh(y060)**2,(y060,-s.oo,s.oo)),2))
+ff060=s.exp(s.I*k060*y060)
+A060=lambda v:s.diff(v,y060)+s.tanh(y060)*v
+Ad060=lambda v:-s.diff(v,y060)+s.tanh(y060)*v
+record('Q060',2,'independent_factorization',
+       'SUSY partner A-dagger A has the Pöschl Teller well and A A-dagger is free above the gap',
+       eq(Ad060(A060(ff060)),-s.diff(ff060,y060,2)+(1-2/s.cosh(y060)**2)*ff060)
+       and eq(A060(Ad060(ff060)),-s.diff(ff060,y060,2)+ff060)
+       and eq(A060(1/s.cosh(y060))))
+fk060=Ad060(ff060)
+trans060=(s.I*k060-1)/(s.I*k060+1)
+record('Q060',3,'scattering_flux_and_limit',
+       'Darboux-generated scattering wave solves partner equation with unit-modulus reflectionless transmission',
+       eq(-s.diff(fk060,y060,2)+(1-2/s.cosh(y060)**2)*fk060,(1+k060*k060)*fk060)
+       and eq(trans060*s.conjugate(trans060),1)
+       and eq(s.limit(trans060,k060,0),-1)
+       and eq(s.limit(trans060,k060,s.oo),1))
+record('Q060',4,'chiral_symmetry_and_gap',
+       'uniform chiral-breaking mass shifts the bound eigenvalue exactly and preserves a positive continuum gap',
+       sy060*sx060+sx060*sy060==s.zeros(2)
+       and sy060*sz060+sz060*sy060==s.zeros(2)
+       and all(eq(z) for z in H060(ps060)+d060*sy060*ps060-d060*ps060)
+       and eq((s.sqrt(1+d060**2))**2-d060**2,1))
+mp.mp.dps=50
+knum060=mp.mpf('1.73')
+fnum060=lambda z:(mp.tanh(z)-1j*knum060)*mp.exp(1j*knum060*z)
+for zz060 in [mp.mpf('-2.4'),mp.mpf('0.17'),mp.mpf('3.1')]:
+    res060=-mp.diff(fnum060,zz060,2)+(1-2/mp.cosh(zz060)**2)*fnum060(zz060)-(1+knum060**2)*fnum060(zz060)
+    assert abs(res060)<mp.mpf('1e-45')
+assert abs(mp.quad(lambda z:mp.sech(z)**2/2,[-mp.inf,0,mp.inf])-1)<mp.mpf('1e-45')
+assert abs(abs((1j*knum060-1)/(1j*knum060+1))**2-1)<mp.mpf('1e-45')
+supplemental.append(dict(id='Q060',method='independent_high_precision_scattering_quadrature',
+                         name='50 digit kink zero-mode norm, three independent scattering ODE residuals and flux unitarity',passed=True))
+
+assert len(checks)==76 and len(set((v['id'],v['part']) for v in checks))==76
 assert len(set(v['method'] for v in checks if v['id']=='W058'))>=2
 assert len(set(v['method'] for v in checks if v['id']=='Q059'))>=2
-assert len(supplemental)==18
+assert len(supplemental)==19
 
-result={'status':'draft-only','new_problem_count':18,'passed_count':len(checks),'tests':checks,'independent_expert_review':'pending','supplemental_numeric_checks':supplemental}
+result={'status':'draft-only','new_problem_count':19,'passed_count':len(checks),'tests':checks,'independent_expert_review':'pending','supplemental_numeric_checks':supplemental}
 path=Path(__file__).resolve().parents[1]/'data/round12_draft_validation_report.json'
 path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
 print(json.dumps({'status':result['status'],'checked_subparts':len(checks)},ensure_ascii=False))
