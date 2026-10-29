@@ -51,7 +51,7 @@ kxmn=m*s.pi/la;kymn=n*s.pi/lb
 Smn=S.subs({kx:kxmn,ky:kymn})
 ck('W070',3,'conservation','simply supported double sine mode potential energy equals oscillator effective mass times squared frequency',eq(la*lb*amp**2*Smn/8,(ms*la*lb/4)*(Smn/ms)*amp**2/2))
 D=s.symbols('D',positive=True)
-ck('W070',4,'limit','isotropic Kirchhoff Love plate has quadratic frequency and group speed exactly twice phase speed',eq(omega.subs({Dx:D,Dy:D,Dxy:D}),s.sqrt(D/ms)*(kx*kx+ky*ky)) and eq(s.diff(s.sqrt(D/ms)*kx*kx,kx),2*s.sqrt(D/ms)*kx))
+ck('W070',4,'limit','isotropic Kirchhoff Love plate has quadratic frequency and group speed exactly twice phase speed',eq(omega.subs({Dx:D,Dy:D,Dxy:D})**2,(D/ms)*(kx*kx+ky*ky)**2) and eq(s.diff(s.sqrt(D/ms)*kx*kx,kx),2*s.sqrt(D/ms)*kx))
 # O072 TM surface plasmon
 ed,em,k0=s.symbols('ed em k0',positive=True)
 mneg=s.symbols('mneg',positive=True)
