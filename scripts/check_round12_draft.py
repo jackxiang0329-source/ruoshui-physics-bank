@@ -1123,9 +1123,10 @@ record('O061',2,'independent_derivation','center width improves monotonically wh
 record('O061',3,'symbolic','total photon integral derivative is strictly negative and Lambert root obeys real positive equation',
        eq(s.diff(1/(1+cO61*rO61**2),cO61),-rO61**2/(1+cO61*rO61**2)**2)
        and eq(s.limit(flO61,rO61,s.oo),0))
-record('O061',4,'limit','normalised E1 photon budget approaches unity without depletion and zero at strong depletion',
-       eq(s.limit((alphO61/cO61)*s.exp(alphO61/cO61)*s.expint(1,alphO61/cO61),cO61,0),1)
-       and eq(s.limit((alphO61/cO61)*s.exp(alphO61/cO61)*s.expint(1,alphO61/cO61),cO61,s.oo),0))
+record('O061',4,'limit','off-axis fluorescence tends to original Gaussian with zero depletion and is suppressed at strong depletion',
+       eq(s.limit(flO61,cO61,0),s.exp(-alphO61*rO61**2))
+       and eq(s.limit(flO61,cO61,s.oo),0)
+       and eq((1+cO61*rO61**2)*flO61,s.exp(-alphO61*rO61**2)))
 mp.mp.dps=50
 aaO61=mp.mpf('.7');coO61=mp.mpf('2.3')
 uhO61=mp.lambertw(2*aaO61/coO61*mp.exp(aaO61/coO61))/aaO61-1/coO61
