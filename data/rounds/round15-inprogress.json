@@ -1,7 +1,7 @@
 {
   "date": "2026-10-29",
   "round": "15",
-  "status": "REJECTED_PENDING_21_CORE_REPLACEMENTS_NEW_SIX_QA_AND_PDF",
+  "status": "REJECTED_PENDING_21_CORE_REPLACEMENTS_120_SUBPART_CHECKS_AND_FULL_PDFS",
   "base_main_sha": "68f662554f7e4cf29b00d8b369a3e18445205ad8",
   "base_count": 452,
   "target_new_items": 50,
@@ -78,8 +78,8 @@
   "next_ids": [],
   "quality_status": "待独立复核",
   "independent_expert_review": "待独立复核",
-  "technical_status": "20 of 41 originally colliding core models substantially rewritten, including six this commit pending four tests each. 21 still unmodified overlapping cores. Previous 56/200 subpart checks verified. Full corpus rereview, mirrors, two PDFs and independent expert review pending; DO NOT MERGE.",
-  "executed_subpart_checks": 56,
+  "technical_status": "20/41 original core-collision models substantively rewritten and 80/200 executable subpart checks passed on GitHub Actions 40864236934 at SHA 8a6bb574. 21 blocked duplicated models still unreplaced; full 452-title historical rescreen of replacements, source mirrors, two XeLaTeX PDFs, independent expert review unverified. DO NOT MERGE.",
+  "executed_subpart_checks": 80,
   "required_final_checks": 200,
   "pdf_status": "not run for round15",
   "generated_mirrors_synced_sha": null,
@@ -133,9 +133,9 @@
     "Q084"
   ],
   "unresolved_core_replacements": 21,
-  "remaining_required_subpart_checks": 144,
+  "remaining_required_subpart_checks": 120,
   "subset_qa": {
-    "completed_qa_count": 56,
+    "completed_qa_count": 80,
     "affected_ids": [
       "T080",
       "E087",
@@ -150,18 +150,25 @@
       "T082",
       "W080",
       "O083",
-      "Q083"
+      "Q083",
+      "M088",
+      "E090",
+      "T083",
+      "W083",
+      "O084",
+      "Q084"
     ],
-    "status": "14 rewritten models passed four executed checks each; does not certify global originality or expert review",
-    "verified_source_sha": "9bfbdb0546d232aa5ab3bef8a19328dffd741cf0",
-    "run_id": 40861346517,
-    "run_url": "https://github.com/jackxiang0329-source/ruoshui-physics-bank/actions/runs/40861346517",
+    "status": "20 rewritten candidate models have 4 passed executable subpart checks each; not independently expert-reviewed",
+    "verified_source_sha": "8a6bb57464d8fcbc6de954e44e568ed7ae7d08ee",
+    "run_id": 40864236934,
+    "run_url": "https://github.com/jackxiang0329-source/ruoshui-physics-bank/actions/runs/40864236934",
     "conclusion": "success",
     "validation_programs": [
       "scripts/check_round15_replacements.js",
       "scripts/check_round15_six_models.js",
-      "scripts/check_round15_next_six_models.js"
+      "scripts/check_round15_next_six_models.js",
+      "scripts/check_round15_third_six_models.js"
     ],
-    "provenance_note": "56 of the required 200 checks passed on 14 rewritten candidates; remaining 36 candidates not validated to final standard."
+    "provenance_note": "Only scoped 80/200 technical tests passed. Remaining 30 candidate models not validated to the batch standard. Full-history 452 model semantic rescreen pending."
   }
 }
