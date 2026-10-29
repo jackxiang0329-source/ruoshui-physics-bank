@@ -62,7 +62,7 @@
   "quality_status": "待独立复核",
   "expert_review": "待独立复核",
   "executed_model_checks_local": 43,
-  "model_check_scope": "one or more independent numerical/analytic checks for each of 40 models; CI result pending",
+  "model_check_scope": "43 executed numerical/analytic checks across all 40 newly authored physical models, verified by GitHub Actions #40891848401",
   "independent_subpart_checks": 0,
   "required_subpart_checks": 160,
   "round18_unresolved_strong_duplicate_risks": 21,
@@ -70,10 +70,35 @@
   "round19_provisional_family_flags": 26,
   "global_semantic_history_review": "pending",
   "generated_mirrors_synced_sha": null,
-  "question_pdf": "pending CI XeLaTeX",
-  "solution_pdf": "pending CI XeLaTeX",
+  "question_pdf": "compiled in GitHub Actions #40891848401 (draft only)",
+  "solution_pdf": "compiled in GitHub Actions #40891848401 (draft only)",
   "qualified_released_items": 0,
   "merge_allowed": false,
-  "status": "DRAFT_40_PENDING_CI_SEMANTIC_REVIEW_160_SUBPART_CHECKS",
-  "note": "User-requested 40-draft iteration does not alter formal 50/200 admission gate; no merge to main."
+  "status": "DRAFT_40_STRUCTURAL_MODEL_PDF_PASS_RELEASE_BLOCKED_160_SUBPARTS_AND_SEMANTIC_REVIEW",
+  "note": "40 source triples and 43 representative model checks plus two draft XeLaTeX PDFs passed technical CI; still 0/160 independently verified subparts, 26 model-family flags, and 21+5 unresolved prior-round audit issues. Main 50/200 release gate unchanged; no merge.",
+  "structural_qa": {
+    "status": "passed",
+    "source_triples": 40,
+    "question_parts": 160,
+    "solution_parts": 160,
+    "run_id": 40891848401,
+    "verified_sha": "2dc03402ab7508e8606ff47ed3417815fa8873d9"
+  },
+  "model_qa": {
+    "status": "passed",
+    "covered_models": 40,
+    "executed_numerical_checks": 43,
+    "run_id": 40891848401,
+    "conclusion": "success",
+    "verified_sha": "2dc03402ab7508e8606ff47ed3417815fa8873d9",
+    "scope": "representative model-level independent numerical/analytic crosschecks; NOT 160 subpart validations"
+  },
+  "draft_pdf_qa": {
+    "status": "passed",
+    "run_id": 40891848401,
+    "artifact_id": 12904664672,
+    "artifact_name": "round19-draft-two-pdfs",
+    "compiled_books": 2,
+    "verified_sha": "2dc03402ab7508e8606ff47ed3417815fa8873d9"
+  }
 }
