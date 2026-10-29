@@ -20,7 +20,7 @@ rddot=s.diff(vdot2,R)/2
 ck('M072',2,'independent_derivation','Rayleigh first integral differentiates to exact acceleration and recovers zero initial kinetic energy',eq(R*rddot+s.Rational(3,2)*vdot2,-dp/rho) and eq(vdot2.subs(R,R0)))
 bnum=mp.quad(lambda x:x**mp.mpf('1.5')/mp.sqrt(1-x**3),[0,mp.mpf('0.5'),1])
 bref=mp.beta(mp.mpf(5)/6,mp.mpf(1)/2)/3
-ck('M072',3,'numerical','independent high precision collapse quadrature matches beta five sixths one half expression',abs(bnum-bref)<mp.mpf('1e-20') and abs(bref-mp.mpf('0.914681356501'))<mp.mpf('1e-8'))
+ck('M072',3,'numerical','independent high precision collapse quadrature matches beta five sixths one half expression',abs(bnum-bref)<mp.mpf('1e-20') and abs(mp.sqrt(mp.mpf(3)/2)*bref-mp.mpf('0.914681356501'))<mp.mpf('1e-8'))
 energy=2*s.pi*rho*R**3*vdot2
 ck('M072',4,'conservation','all fluid kinetic energy equals exactly pressure volume work released during Rayleigh collapse',eq(energy,4*s.pi*dp*(R0**3-R**3)/3))
 # E072: overdamped resistively shunted Josephson junction.
