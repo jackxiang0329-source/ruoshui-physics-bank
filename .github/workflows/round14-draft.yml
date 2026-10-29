@@ -1,0 +1,76 @@
+name: Round 14 Draft Physics QA and Two XeLaTeX Previews
+on:
+  push:
+    branches: [physics-round14-50-work]
+    paths:
+      - 'bank/**'
+      - 'scripts/check_round14_draft.py'
+      - '.github/workflows/round14-draft.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  draft-check-and-preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install symbolic dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Execute 48 nontrivial draft subpart checks
+        run: python scripts/check_round14_draft.py
+      - name: Synchronize mirror and both TeX masters from bank canonical sources
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('.')
+          path=root/'data/problems.json'
+          data=json.loads(path.read_text(encoding='utf8'))
+          assert isinstance(data,list)
+          by_id={p['id']:p for p in data}
+          assert len(by_id)==len(data)
+          ids=['M077','M078','E077','E078','T072','T073','W072','W073','O074','O075','Q074','Q075']
+          for uid in ids:
+              folder=root/'bank'/uid
+              meta=json.loads((folder/'meta.json').read_text(encoding='utf8'))
+              meta['question']=(folder/'question.tex').read_text(encoding='utf8')
+              meta['solution']=(folder/'solution.tex').read_text(encoding='utf8')
+              if uid in by_id:
+                  assert by_id[uid]==meta, f'draft mirror conflict: {uid}'
+              else:
+                  data.append(meta)
+          assert len(data)==414
+          path.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+          PY
+          python scripts/build.py
+          python scripts/build.py --check
+          python scripts/check_difficulty_gate.py
+      - name: Compile both draft PDFs with XeLaTeX
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: |
+            questions.tex
+            solutions.tex
+          working_directory: tex
+          latexmk_use_xelatex: true
+      - name: Upload two draft PDF previews
+        uses: actions/upload-artifact@v4
+        with:
+          name: round14-draft-two-pdf-preview
+          path: |
+            tex/questions.pdf
+            tex/solutions.pdf
+          if-no-files-found: error
+      - name: Commit synchronized generated files and 48-test evidence to draft branch only
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/problems.json data/index.csv tex/questions.tex tex/solutions.tex data/round14_draft_validation_report.json
+          if ! git diff --cached --quiet; then
+            git commit -m "draft(round14): sync canonical mirror and two TeX books; record 48 executed checks"
+            git push origin HEAD:physics-round14-50-work
+          fi
