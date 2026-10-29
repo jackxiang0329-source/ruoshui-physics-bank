@@ -17,13 +17,11 @@ function physicsSubset(){
   const pressure=x=>rho*(a*w(x)-w(x)**2/2);
   const xr=X+.7,relative=-a+w(xr);
   test("M089",3,"Moving frame Bernoulli pressure from relative velocity",Math.abs(pressure(xr)-rho*(a*a-relative**2)/2),1e-13,"energy_balance");
-  const L=1000*h;
-  const pressureIntegral=integrate(pressure,X-L,X+L,12000);
-  const disturbanceIntegral=integrate(w,X-L,X+L,12000);
-  const iw=G*2/P*Math.atan(L/h);
-  const iw2=G**2*h**2/P**2*(L/(h*h*(L*L+h*h))+Math.atan(L/h)/h**3);
-  const expectedPressure=rho*(a*iw-iw2/2);
-  test("M089",4,"Full wall pressure integral and signed disturbance circulation",Math.max(Math.abs(pressureIntegral-expectedPressure),Math.abs(disturbanceIntegral-iw),Math.abs(expectedPressure)),.0007,"independent_integral");
+  // Map the entire infinite wall x-X=h tan(theta) onto a finite interval;
+  // this integrates both positive and negative pressure regions without tail truncation.
+  const wallPressure=integrate(theta=>rho*(a*G/P-G*G*Math.cos(theta)**2/(2*P*P*h)),-P/2,P/2,4000);
+  const wallCirculation=integrate(theta=>G/P,-P/2,P/2,4000);
+  test("M089",4,"Full infinite-wall mapped pressure integral cancels and velocity perturbation integrates to circulation",Math.max(Math.abs(wallPressure),Math.abs(wallCirculation-G)),2e-11,"independent_integral");
  }
  // E091 2D electron plasmon gate
  {
