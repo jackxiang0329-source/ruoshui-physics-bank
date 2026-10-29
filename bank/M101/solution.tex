@@ -1,7 +1,7 @@
-(1) 实验室动量方程 $dp/dt=F$，初始 $p(0)=0$，故 $p=Ft$。由 $E^2=m^2c^4+p^2c^2$，$v=pc^2/E$ 得 $v(t)=Ft/[m\sqrt{1+(Ft/mc)^2}]$，$\gamma(t)=\sqrt{1+(Ft/mc)^2}$。
+(1) 总能量满足 $dE/dt=P$，因此 $E(t)=E_0+Pt$，其中 $E_0=mc^2/\sqrt{1-v_0^2/c^2}>mc^2$。静质量关系 $E^2=p^2c^2+m^2c^4$ 给 $p(t)=\sqrt{E(t)^2-m^2c^4}/c$。由群速度 $v=pc^2/E$，得 $\boxed{v(t)=c\sqrt{1-m^2c^4/(E_0+Pt)^2}}$，始终低于 $c$。
 
-(2) 对速度积分：$x(t)=(mc^2/F)[\sqrt{1+(Ft/mc)^2}-1]$。若 $Ft\ll mc$，$x=Ft^2/(2m)+O(t^4)$；若 $t\to\infty$，$v/c\to1$，且 $x=ct-mc^2/F+o(1)$，始终不超光速。
+(2) 令 $M=mc^2$，由 $dt=dE/P$ 得 $dx=(c/P)\sqrt{1-M^2/E^2}\,dE$。积分原函数是 $\sqrt{E^2-M^2}-M\arccos(M/E)$，所以 $\boxed{x(t)-x(0)=\frac cP[\sqrt{E^2-M^2}-M\arccos(M/E)]_{E_0}^{E_0+Pt}}$。随 $t\to\infty$，$E\to\infty$ 且 $v\to c^-$；位移为 $ct$ 加有限的初态相关常数及渐近小修正。
 
-(3) 总能 $E=mc^2\sqrt{1+(Ft/mc)^2}$，动能 $K=E-mc^2$。对时间求导：$\dot E=(F^2tc^2)/E=Fv$，同时 $Fx=mc^2[\sqrt{1+(Ft/mc)^2}-1]=K$。四动量满足 $(E/c)^2-p^2=m^2c^2$，与时间无关；这保证不变静质量。
+(3) 实验室力定义为 $F=dp/dt=(dE/dt)/v=P/v>0$。一维固有加速度 $\alpha=\gamma^3dv/dt=F/m=P/(mv)$，两者均随 $v$ 增大而下降，在 $t\to\infty$ 时分别趋 $P/c$、$P/(mc)$。若 $v_0\to0^+$，要求恒定非零功率在静止瞬间启动，$F(0)=P/v_0\to\infty$，故模型需非零初速或启动功率渐升过程；与恒力/恒定固有加速度模型完全不同。
 
-(4) $d\tau=dt/\gamma$，积分得 $\tau=(mc/F)\operatorname{arsinh}(Ft/mc)$。沿力方向的固有加速度 $\alpha=\gamma^3 dv/dt=\gamma F/m$，随时间增加，不是常量；与经典恒定固有加速度的双曲线世界线不同。$F\to0$ 时 $\tau\to t$，$v\to0$，$x\to0$。
+(4) 动能 $K=E-mc^2$，故 $dK/dt=P=Fv$，累计机械功严格为 $Pt$。四动量始终满足 $(E/c)^2-p^2=m^2c^2$，静质量不变。在低速 $E\simeq mc^2+mv^2/2$，于是 $v^2\simeq v_0^2+2Pt/m$；再用 $dt=mv\,dv/P$ 积分得到 $\boxed{x(t)-x(0)\simeq\frac m{3P}[v(t)^3-v_0^3]}$，与非相对论恒功率驱动精确一致。
