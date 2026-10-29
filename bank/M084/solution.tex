@@ -1,0 +1,33 @@
+(1) 不可压缩性与Darcy定律给 \(\nabla^2p'_j=0\)。对 \(k\ne0\) 且扰动在两侧远离界面时衰减，有
+\[
+p'_1=A_1e^{|k|x+iky+st},\qquad p'_2=A_2e^{-|k|x+iky+st}.
+\]
+实验室系基态压强斜率分别为 \(\partial_xp_j^{(0)}=-U/\kappa_j\)；界面移动参考系仅去掉速度的常量部分，并不能删去这些压强梯度。
+(2) 线性运动学条件为 \(\partial_t\eta=u'_{1x}(0)=u'_{2x}(0)\)，从而
+\[
+A_1=-{s\eta_0\over\kappa_1|k|},\quad A_2={s\eta_0\over\kappa_2|k|}.
+\]
+在实际移动到 \(x=\eta\) 的界面应用压力跳跃，保留 \(p_j^{(0)}(\eta)\) 的一阶项：
+\[
+A_1-A_2+\left(-{U\over\kappa_1}+{U\over\kappa_2}\right)\eta_0
+=\gamma k^2\eta_0 .
+\]
+联立消去 \(A_j\)，得到
+\[
+\boxed{s(k)=|k|\frac{U(\kappa_1-\kappa_2)-\gamma\kappa_1\kappa_2k^2}{\kappa_1+\kappa_2}}.
+\]
+增长率实数；这是界面形变的失稳，而不是声波频散。
+(3) 当 \(\kappa_1>\kappa_2\) 即 \(\mu_1<\mu_2\)（低黏度液驱赶高黏度液）时，\(0<|k|<k_c\) 不稳定，其中
+\[
+k_c^2={U(\kappa_1-\kappa_2)\over\gamma\kappa_1\kappa_2}.
+\]
+写 \(s=A k-Bk^3\) 对 \(k>0\)，\(A=U(\kappa_1-\kappa_2)/(\kappa_1+\kappa_2)\)、\(B=\gamma\kappa_1\kappa_2/(\kappa_1+\kappa_2)\)，极值在 \(k_{\rm max}=k_c/\sqrt3\)，
+\[
+s_{\rm max}={2A k_c\over3\sqrt3}.
+\]
+若 \(U=0\) 则 \(s=-Bk^3<0\)；若 \(\mu_1=\mu_2\) 同样仅毛细衰减；若 \(\gamma=0\) 且 \(A>0\)，短波增长无限快，说明必须保留正则化机制。
+(4) \([\kappa_j]=\mathrm{m^2/(Pa\,s)}\)；\(U|k|\) 与 \(\gamma\kappa k^3\) 都是 \(\mathrm{s^{-1}}\)。界面面积的二阶超额能量（每条界面沿板厚 \(b\)）为
+\[
+\Delta E_\gamma={\gamma b\over2}\int(\partial_y\eta)^2dy+O(\eta_y^4)\ge0.
+\]
+在 \(U=0\) 时界面张力释放多余面积；有外驱时，维持不同黏度流体共同平移的压力源持续做功，足以克服部分毛细能代价。要求 \(b|k|\ll1\)、\(|k\eta_0|\ll1\)，有限横向尺寸使 \(k\) 离散；高频惯性、跨隙曲率及混溶扩散会改变该理想谱。

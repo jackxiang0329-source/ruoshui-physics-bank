@@ -1,0 +1,37 @@
+(1) 对 \(\mu>0\) 光线从 \(z=0\) 进入板内，边界 \(I(0,\mu)=0\)，输运方程积分给
+\[
+I(z,\mu)=B(1-e^{-\kappa z/\mu}),\qquad\mu>0.
+\]
+对 \(\mu<0\)，令 \(u=-\mu>0\) 并以 \(z=L\) 为真空入射边界，有
+\[
+I(z,-u)=B(1-e^{-\kappa(L-z)/u}),\quad u>0.
+\]
+它们满足两边真空无入射条件；不能将外侧的出射场误设为零。
+(2) 上表面半球出射辐射通量
+\[
+F_{\rm face}=2\pi\int_0^1\mu I(L,\mu)\,d\mu
+=2\pi B\!\left[\frac12-\int_0^1\mu e^{-\tau_0/\mu}\,d\mu\right].
+\]
+代换 \(t=1/\mu\)，第二积分正是 \(E_3(\tau_0)\)，故
+\[
+F_{\rm face}=\pi B[1-2E_3(\tau_0)].
+\]
+\(E_3(0)=1/2,\ E_3'(0)=-E_2(0)=-1\)，所以薄板 \(F_{\rm face}=2\pi B\tau_0+o(\tau_0)\)；厚板 \(E_3(\tau_0)\to0\)，故 \(F_{\rm face}\to\pi B=\sigma_{\rm SB}T^4\)。小光学厚度对应低吸收率与低发射率。
+(3) 角平均为
+\[
+J(z)=\frac B2\int_0^1\left[2-e^{-\kappa z/u}-e^{-\kappa(L-z)/u}\right]du
+=B\left[1-\frac{E_2(\kappa z)+E_2(\kappa(L-z))}{2}\right].
+\]
+角积分输运方程给 \(\partial_zF=4\pi\kappa(B-J)\)，因此
+\[
+q(z)=2\pi\kappa B[E_2(\kappa z)+E_2(\kappa(L-z))]\ge0.
+\]
+由于 \(E_2(x)\ge0\) 且两项互换，冷却率关于 \(L/2\) 对称；靠近表面逃逸概率较高，净冷却较强。
+(4) 由于 \(dE_3(x)/dx=-E_2(x)\)，
+\[
+\int_0^Lq(z)\,dz
+=4\pi B\int_0^{\tau_0}E_2(u)\,du
+=4\pi B[E_3(0)-E_3(\tau_0)]
+=2\pi B[1-2E_3(\tau_0)]=2F_{\rm face}.
+\]
+薄板体散热 \(\sim4\pi B\kappa L\)，厚板总散热趋 \(2\pi B\)（单位面积）；大多数深层体辐射相互抵消，最终由表面逃逸层贡献通量。灰色、无散射、均温LTE及稳态均为前提；真实不透明材料有频率依赖吸收，温度随深度改变时须联立能量方程，不能把本式当成普遍热平衡解。

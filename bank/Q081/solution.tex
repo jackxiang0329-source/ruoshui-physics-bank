@@ -1,0 +1,30 @@
+(1) 取四矢量 \((1,1,1),(1,-1,-1),(-1,1,-1),(-1,-1,1)\) 除以 \(\sqrt3\)。可直接算出
+\[
+\sum_j\boldsymbol r_j=\mathbf0,\qquad
+\sum_j\boldsymbol r_j\boldsymbol r_j^{T}=\frac43 I_3,\qquad
+\boldsymbol r_i\cdot\boldsymbol r_j=-\frac13\;(i\ne j).
+\]
+因 \(\boldsymbol r_j\cdot\boldsymbol\sigma\) 的本征值为 \(\pm1\)，\(E_j\) 本征值 \(0,1/2\)，故正半定；\(\sum_jE_j=I\)。测量概率的四个独立线性函数张成 \(I,\sigma_x,\sigma_y,\sigma_z\)，因此信息完备。
+(2) Pauli迹关系 \(\operatorname{tr}\sigma_i\sigma_j=2\delta_{ij}\) 给
+\[
+p_j=\operatorname{tr}(\rho E_j)=\frac{1+\boldsymbol r_j\cdot\boldsymbol s}{4}.
+\]
+利用上述二阶和式得 \(\sum_jp_j\boldsymbol r_j=\boldsymbol s/3\)，即
+\[
+\boxed{\boldsymbol s=3\sum_jp_j\boldsymbol r_j}.
+\]
+将样本频率 \(f_j=n_j/N\) 直接代入所得 \(\hat{\boldsymbol s}\) 未必有 \(|\hat{\boldsymbol s}|\le1\)；虽然 \(f_j\ge0\)、\(\sum_jf_j=1\)，这不保证重建的密度矩阵正半定，有限样本尤其明显。
+(3) 多项分布协方差为 \(\operatorname{Cov}(f_i,f_j)=[p_i\delta_{ij}-p_ip_j]/N\)。传播线性变换得
+\[
+\boxed{\operatorname{Cov}(\hat{\boldsymbol s})=\frac9N\left[\sum_jp_j\boldsymbol r_j\boldsymbol r_j^T-\frac{\boldsymbol s\boldsymbol s^T}{9}\right]}.
+\]
+由于每个 \(|\boldsymbol r_j|=1\) 且 \(\sum_jp_j=1\)，
+\[
+\operatorname{tr}\operatorname{Cov}(\hat{\boldsymbol s})=\frac{9-|\boldsymbol s|^2}{N}.
+\]
+最大混态 \(|s|=0\) 时迹为 \(9/N\)，纯态 \(|s|=1\) 为 \(8/N\)。这是无偏线性估计的总体均方误差，并非每个数据样本保证物理。
+(4) \(\partial p_j/\partial s_\alpha=r_{j\alpha}/4\)。单次Fisher矩阵 \(F_{\alpha\beta}^{(1)}=\sum_j(r_{j\alpha}r_{j\beta})/(16p_j)\)，故在 \(\boldsymbol s=0\)，\(p_j=1/4\)：
+\[
+\boxed{F_N=N F^{(1)}=\frac N3 I_3}.
+\]
+此时线性估计协方差 \(=9/N\cdot(1/4)\sum_jr_jr_j^T=3I_3/N=F_N^{-1}\)，逐分量达到局部经典Cramér–Rao界。纯态参数位于球边界，局部无约束正态假设不总适用；应以物理密度矩阵的半正定性构造约束极大似然，而不能把非物理的线性估计标记为有效量子态。

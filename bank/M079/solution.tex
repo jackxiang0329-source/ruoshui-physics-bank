@@ -1,0 +1,21 @@
+(1) 弯月面Laplace压差 \(\Delta p_c=2\gamma\cos\theta/r\)，液柱静压差 \(\rho gL\)，充分发展层流压降 \(\Delta p_v=8\mu LQ/(\pi r^4)=8\mu L\dot L/r^2\)。平衡给
+\[
+L\dot L=A-BL,\qquad A=\frac{r\gamma\cos\theta}{4\mu},\quad B=\frac{\rho gr^2}{8\mu}.
+\]
+其中 \([A]=L^2/t\)、\([B]=L/t\)。
+(2) 无重力 \(L\dot L=A\)，积分 \(L^2=2At=r\gamma\cos\theta\,t/(2\mu)\)，
+\[
+L(t)=\sqrt{\frac{r\gamma\cos\theta}{2\mu}t},\quad
+\dot L=\sqrt{\frac{r\gamma\cos\theta}{8\mu t}}.
+\]
+初时发散来自假设任意短液柱立即建立Poiseuille剖面且忽略液柱惯性、入口附加阻力；真实初始阶段不服从此式。
+(3) 令 \(L_\infty=A/B=2\gamma\cos\theta/(\rho gr)\)。因为 \(\dot L=B(L_\infty-L)/L>0\) 对 \(0<L<L_\infty\)，积分得
+\[
+Bt=-L-L_\infty\ln(1-L/L_\infty).
+\]
+当 \(L=L_\infty-\epsilon\) 且 \(\epsilon\ll L_\infty\)，有 \(\dot\epsilon\simeq-(B/L_\infty)\epsilon\)，时间常数 \(\tau=L_\infty/B\)。\(g\to0\) 时隐式式展开恢复平方根律。
+(4) 毛细压强功率 \(\Delta p_cQ\)；重力势能 \(U_g=\rho g\pi r^2 L^2/2\)，所以 \(\dot U_g=\rho gLQ\)；黏性耗散 \(P_v=\Delta p_v Q=8\mu LQ^2/(\pi r^4)\ge0\)。将第一问压差平衡乘 \(Q\) 即得
+\[
+\Delta p_cQ=\dot U_g+P_v.
+\]
+接触线惯性、动态润湿角、非牛顿效应或液柱雷诺数较大时需改模型；理想瞬时零高度不应外推至分子尺度。

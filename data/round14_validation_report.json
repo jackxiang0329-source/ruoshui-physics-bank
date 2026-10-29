@@ -1,0 +1,1409 @@
+{
+  "round": 14,
+  "new_problem_count": 50,
+  "passed_count": 200,
+  "independent_expert_review": "待独立复核",
+  "status": "all_200_machine_checks_executed; NOT independent expert review",
+  "tests": [
+    {
+      "id": "M077",
+      "part": 1,
+      "method": "physical_case",
+      "name": "Bingham中心应力为零且屈服界面恰达到材料阈值",
+      "passed": true
+    },
+    {
+      "id": "M077",
+      "part": 2,
+      "method": "symbolic",
+      "name": "分段流速同时满足壁面无滑移与塞状核剪切率为零",
+      "passed": true
+    },
+    {
+      "id": "M077",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "交换积分次序得到的流量与三次多项式闭式一致",
+      "passed": true
+    },
+    {
+      "id": "M077",
+      "part": 4,
+      "method": "conservation",
+      "name": "全域压力功与黏塑性耗散积分严格相等且临界呈二次律",
+      "passed": true
+    },
+    {
+      "id": "M078",
+      "part": 1,
+      "method": "symbolic",
+      "name": "高斯涡量逐项满足涡伸长与径向扩散平衡微分方程",
+      "passed": true
+    },
+    {
+      "id": "M078",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "高斯核全平面积分精确归一为规定环量",
+      "passed": true
+    },
+    {
+      "id": "M078",
+      "part": 3,
+      "method": "limit",
+      "name": "轴心速度有限且远场环量恢复自由涡极限",
+      "passed": true
+    },
+    {
+      "id": "M078",
+      "part": 4,
+      "method": "dimensions",
+      "name": "涡量平方积分闭式与黏性系数奇异缩放一致",
+      "passed": true
+    },
+    {
+      "id": "E077",
+      "part": 1,
+      "method": "symbolic",
+      "name": "剪切感应方程给出横向磁场不变与纵向分量线性增长",
+      "passed": true
+    },
+    {
+      "id": "E077",
+      "part": 2,
+      "method": "conservation",
+      "name": "Cauchy形变梯度行列式为一并保持磁通冻结映射",
+      "passed": true
+    },
+    {
+      "id": "E077",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "磁能导数与Maxwell剪切应力外源功率一致",
+      "passed": true
+    },
+    {
+      "id": "E077",
+      "part": 4,
+      "method": "physical_case",
+      "name": "磁能抛物线极小值和有限时间反转条件同时成立",
+      "passed": true
+    },
+    {
+      "id": "E078",
+      "part": 1,
+      "method": "conservation",
+      "name": "冷离子流守恒与电势能动能守恒对任意负势成立",
+      "passed": true
+    },
+    {
+      "id": "E078",
+      "part": 2,
+      "method": "symbolic",
+      "name": "Poisson线性化的Bohm系数和声速阈值代数一致",
+      "passed": true
+    },
+    {
+      "id": "E078",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "Sagdeev第一积分求导精确恢复非线性Poisson电荷密度",
+      "passed": true
+    },
+    {
+      "id": "E078",
+      "part": 4,
+      "method": "physical_case",
+      "name": "超Bohm入射时负壁势的第一积分为正且离子通量恒定",
+      "passed": true
+    },
+    {
+      "id": "T072",
+      "part": 1,
+      "method": "symbolic",
+      "name": "吸收布朗首达均值满足后向Poisson方程及双端边界",
+      "passed": true
+    },
+    {
+      "id": "T072",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "首达Laplace变换满足边界且首阶系数恢复平均首达时间",
+      "passed": true
+    },
+    {
+      "id": "T072",
+      "part": 3,
+      "method": "numerical",
+      "name": "Dirichlet热核生存概率随时间衰减且首本征模控制长时尾",
+      "passed": true
+    },
+    {
+      "id": "T072",
+      "part": 4,
+      "method": "symbolic",
+      "name": "二阶首达矩满足递推且中点方差精确为正",
+      "passed": true
+    },
+    {
+      "id": "T073",
+      "part": 1,
+      "method": "symbolic",
+      "name": "量子逸度二阶反演保持粒子数到所需阶数",
+      "passed": true
+    },
+    {
+      "id": "T073",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "玻色与费米第二维里系数由独立压力级数消元得到",
+      "passed": true
+    },
+    {
+      "id": "T073",
+      "part": 3,
+      "method": "symbolic",
+      "name": "Helmholtz自由能的密度导数与第二维里压强完全一致",
+      "passed": true
+    },
+    {
+      "id": "T073",
+      "part": 4,
+      "method": "conservation",
+      "name": "内能与化学势熵恒等式导出正确量子熵修正",
+      "passed": true
+    },
+    {
+      "id": "W072",
+      "part": 1,
+      "method": "symbolic",
+      "name": "双质量Bloch行列式与动态有效质量色散严格等价",
+      "passed": true
+    },
+    {
+      "id": "W072",
+      "part": 2,
+      "method": "physical_case",
+      "name": "共振频率与有效质量零点之间质量为负且禁止实波传播",
+      "passed": true
+    },
+    {
+      "id": "W072",
+      "part": 3,
+      "method": "limit",
+      "name": "长波声速含全部胞内质量且光学支起点为零点频率",
+      "passed": true
+    },
+    {
+      "id": "W072",
+      "part": 4,
+      "method": "conservation",
+      "name": "完整机械能各项非负且平移模弹性势能严格为零",
+      "passed": true
+    },
+    {
+      "id": "W073",
+      "part": 1,
+      "method": "symbolic",
+      "name": "周期Bloch复谱的实虚部分离与非互易椭圆轨迹一致",
+      "passed": true
+    },
+    {
+      "id": "W073",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "非对称左右耦合经对角相似变换都变为几何平均",
+      "passed": true
+    },
+    {
+      "id": "W073",
+      "part": 3,
+      "method": "numerical",
+      "name": "七胞开放链趋肤本征矢逐点满足原非对称动力学",
+      "passed": true
+    },
+    {
+      "id": "W073",
+      "part": 4,
+      "method": "physical_case",
+      "name": "开放与周期稳定阈值满足严格不等式并随非互易性分离",
+      "passed": true
+    },
+    {
+      "id": "O074",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Jones态Berry联络曲率严格等于半单位球面面积形式",
+      "passed": true
+    },
+    {
+      "id": "O074",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "纬线相位积分与所围立体角的一半严格一致",
+      "passed": true
+    },
+    {
+      "id": "O074",
+      "part": 3,
+      "method": "numerical",
+      "name": "双臂干涉的几何相位反转改变可观测条纹而强度非负",
+      "passed": true
+    },
+    {
+      "id": "O074",
+      "part": 4,
+      "method": "symbolic",
+      "name": "规范变换联络差为全微分且曲率在变换后不变",
+      "passed": true
+    },
+    {
+      "id": "O075",
+      "part": 1,
+      "method": "symbolic",
+      "name": "参量放大双曲传递矩阵的行列式严格为一",
+      "passed": true
+    },
+    {
+      "id": "O075",
+      "part": 2,
+      "method": "conservation",
+      "name": "信号闲频光子通量差在耦合流中导数精确为零",
+      "passed": true
+    },
+    {
+      "id": "O075",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "单种子光子通量差与同反相种子增益均满足双曲恒等式",
+      "passed": true
+    },
+    {
+      "id": "O075",
+      "part": 4,
+      "method": "limit",
+      "name": "小增益闲频强度二次开启且大增益信号系数趋四分之一",
+      "passed": true
+    },
+    {
+      "id": "Q074",
+      "part": 1,
+      "method": "physical_case",
+      "name": "四种无错或单X错误综合征两两不同",
+      "passed": true
+    },
+    {
+      "id": "Q074",
+      "part": 2,
+      "method": "symbolic",
+      "name": "独立物理位翻转的二次逻辑错误概率与二项计数一致",
+      "passed": true
+    },
+    {
+      "id": "Q074",
+      "part": 3,
+      "method": "physical_case",
+      "name": "纠缠保真度优势区间由概率差因式分解且端点正确",
+      "passed": true
+    },
+    {
+      "id": "Q074",
+      "part": 4,
+      "method": "symbolic",
+      "name": "未检出相位错误的奇偶概率正确并在低噪声线性恶化",
+      "passed": true
+    },
+    {
+      "id": "Q075",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Gibbs几何本征值归一且占据数与玻色分布一致",
+      "passed": true
+    },
+    {
+      "id": "Q075",
+      "part": 2,
+      "method": "limit",
+      "name": "热谐振子协方差乘积满足Heisenberg界且零温饱和",
+      "passed": true
+    },
+    {
+      "id": "Q075",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "热Wigner二维高斯积分归一且位置边缘二阶矩一致",
+      "passed": true
+    },
+    {
+      "id": "Q075",
+      "part": 4,
+      "method": "limit",
+      "name": "热态纯度的几何求和等于双曲正切并趋零温纯态",
+      "passed": true
+    },
+    {
+      "id": "M079",
+      "part": 1,
+      "method": "independent_derivation",
+      "name": "毛细压强减静压与Poiseuille黏性压降完全一致",
+      "passed": true
+    },
+    {
+      "id": "M079",
+      "part": 2,
+      "method": "symbolic",
+      "name": "无重力平方根浸润律严格满足移动前沿微分方程",
+      "passed": true
+    },
+    {
+      "id": "M079",
+      "part": 3,
+      "method": "symbolic",
+      "name": "有重力隐式时间对高度求导精确恢复非线性前沿速度",
+      "passed": true
+    },
+    {
+      "id": "M079",
+      "part": 4,
+      "method": "conservation",
+      "name": "毛细压力输入严格等于重力势能增长加非负黏性耗散",
+      "passed": true
+    },
+    {
+      "id": "E079",
+      "part": 1,
+      "method": "symbolic",
+      "name": "旋转磁矩二阶导数模平方等于横向磁矩平方乘角速度四次方",
+      "passed": true
+    },
+    {
+      "id": "E079",
+      "part": 2,
+      "method": "conservation",
+      "name": "偶极辐射能损与精确自转角速度演化微分方程一致",
+      "passed": true
+    },
+    {
+      "id": "E079",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "磁偶极制动指数恰为三且周期乘周期导数为常数",
+      "passed": true
+    },
+    {
+      "id": "E079",
+      "part": 4,
+      "method": "dimensions",
+      "name": "自转辐射能量积分与动能损失一致且旋转减速时间为正",
+      "passed": true
+    },
+    {
+      "id": "T074",
+      "part": 1,
+      "method": "symbolic",
+      "name": "黑洞面积熵微分严格满足Hawking第一定律",
+      "passed": true
+    },
+    {
+      "id": "T074",
+      "part": 2,
+      "method": "physical_case",
+      "name": "Schwarzschild热容为负且随质量平方增长",
+      "passed": true
+    },
+    {
+      "id": "T074",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "Stefan面积温度四次方化简为质量反平方辐射功率",
+      "passed": true
+    },
+    {
+      "id": "T074",
+      "part": 4,
+      "method": "conservation",
+      "name": "质量三次律导出蒸发寿命并与能量损失方程一致",
+      "passed": true
+    },
+    {
+      "id": "W074",
+      "part": 1,
+      "method": "symbolic",
+      "name": "旋转惯量梁平面波代入动力学方程得到精确色散",
+      "passed": true
+    },
+    {
+      "id": "W074",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "色散求导的群速度与长短波两种渐近极限相符",
+      "passed": true
+    },
+    {
+      "id": "W074",
+      "part": 3,
+      "method": "physical_case",
+      "name": "简支Rayleigh模态频率严格低于Euler–Bernoulli梁频率",
+      "passed": true
+    },
+    {
+      "id": "W074",
+      "part": 4,
+      "method": "conservation",
+      "name": "正定转动惯性及弯曲能量保证任意非零模态实频率",
+      "passed": true
+    },
+    {
+      "id": "O076",
+      "part": 1,
+      "method": "symbolic",
+      "name": "两束相向光的辐射压力在静止时精确抵消且速度反转为奇函数",
+      "passed": true
+    },
+    {
+      "id": "O076",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "红失谐摩擦系数来自两束散射率独立求导并严格为正",
+      "passed": true
+    },
+    {
+      "id": "O076",
+      "part": 3,
+      "method": "conservation",
+      "name": "给定一维反冲方差的动量扩散与稳态温度表达式一致",
+      "passed": true
+    },
+    {
+      "id": "O076",
+      "part": 4,
+      "method": "limit",
+      "name": "低饱和温度在半线宽红失谐取得严格极小Doppler值",
+      "passed": true
+    },
+    {
+      "id": "Q076",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Dirac点核能谱按精细结构常数展开到四阶的系数一致",
+      "passed": true
+    },
+    {
+      "id": "Q076",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "n等于二的两个总角动量支能量差为正的四阶劈裂",
+      "passed": true
+    },
+    {
+      "id": "Q076",
+      "part": 3,
+      "method": "limit",
+      "name": "相对论精细结构对非相对论束缚能的比值具有Z平方标度",
+      "passed": true
+    },
+    {
+      "id": "Q076",
+      "part": 4,
+      "method": "physical_case",
+      "name": "最小总角动量通道要求Zalpha小于一且高Z临界根号变虚",
+      "passed": true
+    },
+    {
+      "id": "M080",
+      "part": 1,
+      "method": "symbolic",
+      "name": "quadrupole gravitational restoring torque",
+      "passed": true
+    },
+    {
+      "id": "M080",
+      "part": 2,
+      "method": "stability",
+      "name": "radial minimum and tangential maximum curvatures",
+      "passed": true
+    },
+    {
+      "id": "M080",
+      "part": 3,
+      "method": "independent_numerical",
+      "name": "elliptic period agrees with quadrature",
+      "passed": true
+    },
+    {
+      "id": "M080",
+      "part": 4,
+      "method": "conservation",
+      "name": "Jacobi first integral differentiates to zero",
+      "passed": true
+    },
+    {
+      "id": "E080",
+      "part": 1,
+      "method": "boundary",
+      "name": "normal total-current boundary continuity",
+      "passed": true
+    },
+    {
+      "id": "E080",
+      "part": 2,
+      "method": "symbolic",
+      "name": "transient ODE and both time limits",
+      "passed": true
+    },
+    {
+      "id": "E080",
+      "part": 3,
+      "method": "conservation",
+      "name": "surface charge accumulation equals current jump",
+      "passed": true
+    },
+    {
+      "id": "E080",
+      "part": 4,
+      "method": "numerical",
+      "name": "opposite contrasts give unique positive dipole reversal",
+      "passed": true
+    },
+    {
+      "id": "T075",
+      "part": 1,
+      "method": "symbolic",
+      "name": "canonical integral differentiates to exact equation of state",
+      "passed": true
+    },
+    {
+      "id": "T075",
+      "part": 2,
+      "method": "symbolic",
+      "name": "free energy density derivative yields chemical potential",
+      "passed": true
+    },
+    {
+      "id": "T075",
+      "part": 3,
+      "method": "fluctuation",
+      "name": "isothermal compressibility and number fluctuations",
+      "passed": true
+    },
+    {
+      "id": "T075",
+      "part": 4,
+      "method": "adiabatic",
+      "name": "adiabatic pressure derivative and dilute sound speed",
+      "passed": true
+    },
+    {
+      "id": "W075",
+      "part": 1,
+      "method": "energy_boundary",
+      "name": "Reynolds moving-end energy flux and Dirichlet kinematic condition",
+      "passed": true
+    },
+    {
+      "id": "W075",
+      "part": 2,
+      "method": "adiabatic",
+      "name": "adiabatic action forces mode energy inverse proportional to length",
+      "passed": true
+    },
+    {
+      "id": "W075",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "time averaged wall work equals negative adiabatic energy derivative",
+      "passed": true
+    },
+    {
+      "id": "W075",
+      "part": 4,
+      "method": "doppler",
+      "name": "moving wall reflection plus collision rate gives -Ldot/L",
+      "passed": true
+    },
+    {
+      "id": "O077",
+      "part": 1,
+      "method": "statistics",
+      "name": "Poisson difference mean and additive noise",
+      "passed": true
+    },
+    {
+      "id": "O077",
+      "part": 2,
+      "method": "symbolic",
+      "name": "joint likelihood Fisher information and ideal visibility limit",
+      "passed": true
+    },
+    {
+      "id": "O077",
+      "part": 3,
+      "method": "optimization",
+      "name": "visibility loss makes quadrature point uniquely optimal",
+      "passed": true
+    },
+    {
+      "id": "O077",
+      "part": 4,
+      "method": "noise",
+      "name": "quadrature estimator saturates classical inverse Fisher bound",
+      "passed": true
+    },
+    {
+      "id": "Q077",
+      "part": 1,
+      "method": "bloch",
+      "name": "counterdiabatic cross product follows moving spin direction",
+      "passed": true
+    },
+    {
+      "id": "Q077",
+      "part": 2,
+      "method": "matrix",
+      "name": "exact moving-frame propagator solves Schrodinger equation",
+      "passed": true
+    },
+    {
+      "id": "Q077",
+      "part": 3,
+      "method": "variance",
+      "name": "control mean zero but variance is nonzero at finite angular speed",
+      "passed": true
+    },
+    {
+      "id": "Q077",
+      "part": 4,
+      "method": "geometry",
+      "name": "spin one-half geometric phase equals minus half solid angle",
+      "passed": true
+    },
+    {
+      "id": "M081",
+      "part": 1,
+      "method": "momentum",
+      "name": "intercepted light momentum and moving mirror reflectivity",
+      "passed": true
+    },
+    {
+      "id": "M081",
+      "part": 2,
+      "method": "symbolic",
+      "name": "exact rapidity time and position derivatives obey sail force ODE",
+      "passed": true
+    },
+    {
+      "id": "M081",
+      "part": 3,
+      "method": "causality_limit",
+      "name": "light-cone gap and one-third ultrarelativistic rapidity scaling",
+      "passed": true
+    },
+    {
+      "id": "M081",
+      "part": 4,
+      "method": "conservation",
+      "name": "net photon-energy loss equals sail mechanical work",
+      "passed": true
+    },
+    {
+      "id": "E081",
+      "part": 1,
+      "method": "mass_ohm",
+      "name": "steady Ohm layer width and incompressible inflow",
+      "passed": true
+    },
+    {
+      "id": "E081",
+      "part": 2,
+      "method": "symbolic",
+      "name": "layer width and inflow ratio are inverse square root Lundquist",
+      "passed": true
+    },
+    {
+      "id": "E081",
+      "part": 3,
+      "method": "physical_limit",
+      "name": "ram pressure scales as 1/S and resistivity-free reconnection vanishes",
+      "passed": true
+    },
+    {
+      "id": "E081",
+      "part": 4,
+      "method": "independent_power",
+      "name": "Alfven outflow kinetic energy and input Poynting have finite ratio",
+      "passed": true
+    },
+    {
+      "id": "T076",
+      "part": 1,
+      "method": "transport",
+      "name": "both directional intensities satisfy transport and vacuum boundaries",
+      "passed": true
+    },
+    {
+      "id": "T076",
+      "part": 2,
+      "method": "independent_numerical",
+      "name": "angular quadrature matches exponential-integral emergent flux",
+      "passed": true
+    },
+    {
+      "id": "T076",
+      "part": 3,
+      "method": "independent_numerical",
+      "name": "interior mean radiance symmetric and below source",
+      "passed": true
+    },
+    {
+      "id": "T076",
+      "part": 4,
+      "method": "conservation",
+      "name": "integrated volumetric radiative cooling equals two face fluxes",
+      "passed": true
+    },
+    {
+      "id": "W076",
+      "part": 1,
+      "method": "symbolic",
+      "name": "both Kelvin-Voigt complex roots solve dispersion determinant",
+      "passed": true
+    },
+    {
+      "id": "W076",
+      "part": 2,
+      "method": "threshold",
+      "name": "critical damping wavenumber and long-wave phase speed",
+      "passed": true
+    },
+    {
+      "id": "W076",
+      "part": 3,
+      "method": "conservation_identity",
+      "name": "local PDE energy flux plus strain-rate loss equals velocity times PDE residual",
+      "passed": true
+    },
+    {
+      "id": "W076",
+      "part": 4,
+      "method": "high_k_limit",
+      "name": "slow relaxation tends to T/eta and fast relaxation grows k squared",
+      "passed": true
+    },
+    {
+      "id": "O078",
+      "part": 1,
+      "method": "polarization",
+      "name": "transverse projector yields parallel and perpendicular strengths",
+      "passed": true
+    },
+    {
+      "id": "O078",
+      "part": 2,
+      "method": "angular_integral",
+      "name": "full sphere cross-section integrates to 8 pi re squared over 3",
+      "passed": true
+    },
+    {
+      "id": "O078",
+      "part": 3,
+      "method": "physical_boundary",
+      "name": "side scattering fully polarized; forward and backward zero",
+      "passed": true
+    },
+    {
+      "id": "O078",
+      "part": 4,
+      "method": "momentum",
+      "name": "scattered z momentum integral cancels by front-back symmetry",
+      "passed": true
+    },
+    {
+      "id": "Q078",
+      "part": 1,
+      "method": "spectral",
+      "name": "antisymmetric eigenstate and full exact Bose-Hubbard characteristic cubic",
+      "passed": true
+    },
+    {
+      "id": "Q078",
+      "part": 2,
+      "method": "independent_numerical",
+      "name": "3 by 3 matrix exponential agrees with nonlinear double occupancy probability",
+      "passed": true
+    },
+    {
+      "id": "Q078",
+      "part": 3,
+      "method": "perturbation",
+      "name": "exact low eigenvalue matches two separate virtual intermediate paths",
+      "passed": true
+    },
+    {
+      "id": "Q078",
+      "part": 4,
+      "method": "entanglement",
+      "name": "site reduced entropy gives 3/2 log 2 and Mott zero limit",
+      "passed": true
+    },
+    {
+      "id": "M082",
+      "part": 1,
+      "method": "independent_derivation",
+      "name": "Stokes velocity integrates to Reynolds radial flux and incompressible radial flow",
+      "passed": true
+    },
+    {
+      "id": "M082",
+      "part": 2,
+      "method": "integral",
+      "name": "axisymmetric pressure and force integrated without heuristic coefficients",
+      "passed": true
+    },
+    {
+      "id": "M082",
+      "part": 3,
+      "method": "nonlinear_ode",
+      "name": "finite-force squeeze-film closed form solves h cubed descent law",
+      "passed": true
+    },
+    {
+      "id": "M082",
+      "part": 4,
+      "method": "conservation",
+      "name": "velocity-shear dissipation equals exact pressure load times compression speed",
+      "passed": true
+    },
+    {
+      "id": "E082",
+      "part": 1,
+      "method": "magnetic_ohm",
+      "name": "Lorentz resistive braking and Stokes force balance pointwise",
+      "passed": true
+    },
+    {
+      "id": "E082",
+      "part": 2,
+      "method": "symbolic_limit",
+      "name": "integrated Hartmann flux and zero-magnetic-field Poiseuille limit",
+      "passed": true
+    },
+    {
+      "id": "E082",
+      "part": 3,
+      "method": "asymptotic",
+      "name": "large Hartmann number yields plug speed and magnetic boundary layer",
+      "passed": true
+    },
+    {
+      "id": "E082",
+      "part": 4,
+      "method": "power_conservation",
+      "name": "pressure-work integral equals shear and electric Joule dissipation",
+      "passed": true
+    },
+    {
+      "id": "T077",
+      "part": 1,
+      "method": "fermi_integral",
+      "name": "electron and hole number integrals equal pi squared over twelve",
+      "passed": true
+    },
+    {
+      "id": "T077",
+      "part": 2,
+      "method": "independent_numerical",
+      "name": "third-order Dirac excitation Fermi integral equals 3 zeta(3) over 2",
+      "passed": true
+    },
+    {
+      "id": "T077",
+      "part": 3,
+      "method": "thermodynamic_scaling",
+      "name": "area heat capacity and conformal entropic Euler relation",
+      "passed": true
+    },
+    {
+      "id": "T077",
+      "part": 4,
+      "method": "susceptibility",
+      "name": "compressibility response integral equals log two and vanishes at zero T",
+      "passed": true
+    },
+    {
+      "id": "W077",
+      "part": 1,
+      "method": "biharmonic_pde",
+      "name": "separable simply supported plate mode solves full bi-Laplacian",
+      "passed": true
+    },
+    {
+      "id": "W077",
+      "part": 2,
+      "method": "boundary",
+      "name": "sine mode and both bending moments vanish at straight simply supported edges",
+      "passed": true
+    },
+    {
+      "id": "W077",
+      "part": 3,
+      "method": "group_speed",
+      "name": "free plate group velocity exactly twice phase velocity with k h limit",
+      "passed": true
+    },
+    {
+      "id": "W077",
+      "part": 4,
+      "method": "positive_energy",
+      "name": "bending form Hessian eigenvalues 1 plus and minus Poisson ratio",
+      "passed": true
+    },
+    {
+      "id": "O079",
+      "part": 1,
+      "method": "combinatorics",
+      "name": "finite-N phase index pair count has 2N squared minus N terms",
+      "passed": true
+    },
+    {
+      "id": "O079",
+      "part": 2,
+      "method": "probability",
+      "name": "negative exponential intensity law normalized with correct first two moments",
+      "passed": true
+    },
+    {
+      "id": "O079",
+      "part": 3,
+      "method": "gaussian_wick",
+      "name": "Siegert relation boundaries g2(0)=1 g2(1)=2 and Cauchy bound",
+      "passed": true
+    },
+    {
+      "id": "O079",
+      "part": 4,
+      "method": "gamma_independent_integral",
+      "name": "four independent speckles gamma distribution normalization and 1 over sqrt M contrast",
+      "passed": true
+    },
+    {
+      "id": "Q079",
+      "part": 1,
+      "method": "spectral",
+      "name": "PT symmetry and coalesced characteristic roots at exceptional point",
+      "passed": true
+    },
+    {
+      "id": "Q079",
+      "part": 2,
+      "method": "propagator",
+      "name": "closed form nonunitary propagator satisfies exact Schr differential equation",
+      "passed": true
+    },
+    {
+      "id": "Q079",
+      "part": 3,
+      "method": "norm_balance",
+      "name": "nonunitary ordinary-norm flux equals twice gain minus loss amplitudes",
+      "passed": true
+    },
+    {
+      "id": "Q079",
+      "part": 4,
+      "method": "pseudohermitian_metric",
+      "name": "positive inner product metric intertwines PT Hamiltonian",
+      "passed": true
+    },
+    {
+      "id": "M083",
+      "part": 1,
+      "method": "cell_problem",
+      "name": "mean Couette/Poiseuille speed and Taylor cell Neumann solution",
+      "passed": true
+    },
+    {
+      "id": "M083",
+      "part": 2,
+      "method": "independent_integral",
+      "name": "polynomial shear corrector produces exact 2/105 coefficient",
+      "passed": true
+    },
+    {
+      "id": "M083",
+      "part": 3,
+      "method": "moment_conservation",
+      "name": "Fick second spatial moment rate equals twice Taylor effective diffusion",
+      "passed": true
+    },
+    {
+      "id": "M083",
+      "part": 4,
+      "method": "dimensions_limit",
+      "name": "Peclet squared enhancement and purely molecular zero-flow limit",
+      "passed": true
+    },
+    {
+      "id": "E083",
+      "part": 1,
+      "method": "curl_derivation",
+      "name": "Hall transverse operator square is negative identity",
+      "passed": true
+    },
+    {
+      "id": "E083",
+      "part": 2,
+      "method": "helical_spectrum",
+      "name": "right circular polarization eigenfrequency equals DH times k squared",
+      "passed": true
+    },
+    {
+      "id": "E083",
+      "part": 3,
+      "method": "energy_flux",
+      "name": "helical wave local flux equals group speed times magnetic energy",
+      "passed": true
+    },
+    {
+      "id": "E083",
+      "part": 4,
+      "method": "inertial_limit",
+      "name": "electron inertial length cyclotron relation equals Hall magnetic diffusivity",
+      "passed": true
+    },
+    {
+      "id": "T078",
+      "part": 1,
+      "method": "partition",
+      "name": "binary occupation and thermodynamic derivative match mean memory energy",
+      "passed": true
+    },
+    {
+      "id": "T078",
+      "part": 2,
+      "method": "work_integral",
+      "name": "integrated reversible work equals change in free energy and Landauer limit",
+      "passed": true
+    },
+    {
+      "id": "T078",
+      "part": 3,
+      "method": "first_law",
+      "name": "reversible work plus heat equals memory internal energy change",
+      "passed": true
+    },
+    {
+      "id": "T078",
+      "part": 4,
+      "method": "error_constraint",
+      "name": "minimal bias exactly saturates target bit erasure error probability",
+      "passed": true
+    },
+    {
+      "id": "W078",
+      "part": 1,
+      "method": "runaway_root",
+      "name": "cubic has negative value at zero and positive value at 2/tau",
+      "passed": true
+    },
+    {
+      "id": "W078",
+      "part": 2,
+      "method": "weak_radiation",
+      "name": "reduced-order complex root satisfies oscillator dispersion to first order",
+      "passed": true
+    },
+    {
+      "id": "W078",
+      "part": 3,
+      "method": "Schott_conservation",
+      "name": "Schott near field derivative and Larmor radiated power reconstruct third-order mechanical work",
+      "passed": true
+    },
+    {
+      "id": "W078",
+      "part": 4,
+      "method": "cycle_average",
+      "name": "Larmor cycle-averaged loss equals reduced mechanical energy decay",
+      "passed": true
+    },
+    {
+      "id": "O080",
+      "part": 1,
+      "method": "circular_Jones",
+      "name": "equal-phase circular superposition yields signed optical rotation",
+      "passed": true
+    },
+    {
+      "id": "O080",
+      "part": 2,
+      "method": "Stokes",
+      "name": "lossless optical rotation preserves S3 zero and fully polarized Stokes length",
+      "passed": true
+    },
+    {
+      "id": "O080",
+      "part": 3,
+      "method": "independent_Gaussian_integral",
+      "name": "circular pulse group delay reduces time-integrated polarization overlap",
+      "passed": true
+    },
+    {
+      "id": "O080",
+      "part": 4,
+      "method": "reciprocity",
+      "name": "forward inverse reverse Jones rotation cancels; chiral zero limit is identity",
+      "passed": true
+    },
+    {
+      "id": "Q080",
+      "part": 1,
+      "method": "two_band_gap",
+      "name": "Dirac squared gap is sum of nonnegative transverse and mass terms",
+      "passed": true
+    },
+    {
+      "id": "Q080",
+      "part": 2,
+      "method": "berry_curvature",
+      "name": "occupied-band Berry numerator triple product equals A squared (M+B k squared)",
+      "passed": true
+    },
+    {
+      "id": "Q080",
+      "part": 3,
+      "method": "independent_numerical_topology",
+      "name": "radial Berry curvature integrates to Chern +1 for A=M=B=1",
+      "passed": true
+    },
+    {
+      "id": "Q080",
+      "part": 4,
+      "method": "edge_domain_wall",
+      "name": "tanh mass wall exponent solves spin minus eigenstate localization equation",
+      "passed": true
+    },
+    {
+      "id": "M084",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Darcy pressure perturbations solve the Laplace equation in both semi-infinite fluids",
+      "passed": true
+    },
+    {
+      "id": "M084",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "Moving interface pressure jump including background gradients reproduces viscosity contrast dispersion",
+      "passed": true
+    },
+    {
+      "id": "M084",
+      "part": 3,
+      "method": "symbolic",
+      "name": "Maximal viscous fingering growth is stationary at the capillary-selected wave number",
+      "passed": true
+    },
+    {
+      "id": "M084",
+      "part": 4,
+      "method": "limit",
+      "name": "Capillary stabilization is negative and three-dimensional dimensional analysis preserves inverse time",
+      "passed": true
+    },
+    {
+      "id": "M085",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Potential gradient and Hessian yield the exact equilibrium condition and convexity threshold",
+      "passed": true
+    },
+    {
+      "id": "M085",
+      "part": 2,
+      "method": "numerical",
+      "name": "Forward depinning fold simultaneously satisfies zero force and zero curvature",
+      "passed": true
+    },
+    {
+      "id": "M085",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "Fold normal form gives saddle barrier four-thirds coefficient and square-root soft curvature",
+      "passed": true
+    },
+    {
+      "id": "M085",
+      "part": 4,
+      "method": "conservation",
+      "name": "Overdamped nonautonomous potential loses exactly zeta velocity squared after input spring work",
+      "passed": true
+    },
+    {
+      "id": "E084",
+      "part": 1,
+      "method": "independent_derivation",
+      "name": "Electron and hole Drude Hall contributions have opposite odd-in-B signs and positive diagonal conductance",
+      "passed": true
+    },
+    {
+      "id": "E084",
+      "part": 2,
+      "method": "symbolic",
+      "name": "Exact 2x2 conductivity inversion equals explicit rational magnetoresistance and Hall coefficients",
+      "passed": true
+    },
+    {
+      "id": "E084",
+      "part": 3,
+      "method": "limit",
+      "name": "Compensated magnetoresistance is quadratic and uncompensated strong-field Hall saturates to density difference",
+      "passed": true
+    },
+    {
+      "id": "E084",
+      "part": 4,
+      "method": "conservation",
+      "name": "Antisymmetric Hall term cancels in Joule power and Onsager field reversal is exact",
+      "passed": true
+    },
+    {
+      "id": "E085",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Rotating shearing-sheet linear operator contains Coriolis epicycle and induction shear coefficients",
+      "passed": true
+    },
+    {
+      "id": "E085",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "Independent four-by-four determinant reproduces the MRI quartic dispersion exactly",
+      "passed": true
+    },
+    {
+      "id": "E085",
+      "part": 3,
+      "method": "numerical",
+      "name": "Kepler maximum growth satisfies quartic and stationary conditions at k vA squared fifteen-sixteenths",
+      "passed": true
+    },
+    {
+      "id": "E085",
+      "part": 4,
+      "method": "conservation",
+      "name": "Reynolds minus Maxwell shear stress equals exact complex-mode energy derivative; rigid rotation conserves energy",
+      "passed": true
+    },
+    {
+      "id": "T079",
+      "part": 1,
+      "method": "independent_derivation",
+      "name": "Harmonic oscillator lattice point count yields linear DOS and Bose polylog Li2 number",
+      "passed": true
+    },
+    {
+      "id": "T079",
+      "part": 2,
+      "method": "symbolic",
+      "name": "Critical Bose saturation and cubic internal energy reproduce condensate quadratic depletion",
+      "passed": true
+    },
+    {
+      "id": "T079",
+      "part": 3,
+      "method": "limit",
+      "name": "Fixed-N heat capacity is continuous at Bose threshold and classical high-T value is 2NkB",
+      "passed": true
+    },
+    {
+      "id": "T079",
+      "part": 4,
+      "method": "conservation",
+      "name": "Grand potential thermodynamic identity reproduces entropy and same critical limiting value",
+      "passed": true
+    },
+    {
+      "id": "W079",
+      "part": 1,
+      "method": "conservation",
+      "name": "Periodic quartic nearest-neighbor force telescopes to exact zero total momentum change",
+      "passed": true
+    },
+    {
+      "id": "W079",
+      "part": 2,
+      "method": "symbolic",
+      "name": "Bloch difference eigenvalue and differentiated acoustic group velocity match exactly",
+      "passed": true
+    },
+    {
+      "id": "W079",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "Fourier projection of cubic FPUT bond force gives the three-quarters fundamental coefficient",
+      "passed": true
+    },
+    {
+      "id": "W079",
+      "part": 4,
+      "method": "conservation",
+      "name": "Independent discrete kinetic and quartic potential power sums cancel for nonsymmetric periodic state",
+      "passed": true
+    },
+    {
+      "id": "O081",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Snell differentiation agrees with stated rainbow total deviation angle",
+      "passed": true
+    },
+    {
+      "id": "O081",
+      "part": 2,
+      "method": "numerical",
+      "name": "Water-drop primary rainbow stationary angle and positive fold curvature give approximately 42 degrees",
+      "passed": true
+    },
+    {
+      "id": "O081",
+      "part": 3,
+      "method": "dimensions",
+      "name": "Two-ray fold Jacobian reproduces predicted inverse-square-root divergence coefficient with area scale",
+      "passed": true
+    },
+    {
+      "id": "O081",
+      "part": 4,
+      "method": "numerical",
+      "name": "Airy uniform fold amplitude is finite at caustic and obeys k to minus one-third scaling",
+      "passed": true
+    },
+    {
+      "id": "Q081",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Tetrahedral vectors sum to zero and form positive rank-one POVM with tight-frame moment",
+      "passed": true
+    },
+    {
+      "id": "Q081",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "Born probabilities invert exactly to all three Bloch components for arbitrary mixed state",
+      "passed": true
+    },
+    {
+      "id": "Q081",
+      "part": 3,
+      "method": "conservation",
+      "name": "Multinomial covariance propagation gives total mean-squared Bloch error 9 minus purity over N",
+      "passed": true
+    },
+    {
+      "id": "Q081",
+      "part": 4,
+      "method": "independent_derivation",
+      "name": "At maximally mixed qubit SIC Fisher inverse exactly equals linear tomography covariance",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "round": 14,
+  "passed_count": 24,
+  "status": "draft_executable_checks_passed_not_expert_review",
+  "ids": [
+    "M082",
+    "E082",
+    "T077",
+    "W077",
+    "O079",
+    "Q079"
+  ],
+  "tests": [
+    {
+      "id": "M082",
+      "part": 1,
+      "method": "independent_derivation",
+      "name": "Stokes velocity integrates to Reynolds radial flux and incompressible radial flow",
+      "passed": true
+    },
+    {
+      "id": "M082",
+      "part": 2,
+      "method": "integral",
+      "name": "axisymmetric pressure and force integrated without heuristic coefficients",
+      "passed": true
+    },
+    {
+      "id": "M082",
+      "part": 3,
+      "method": "nonlinear_ode",
+      "name": "finite-force squeeze-film closed form solves h cubed descent law",
+      "passed": true
+    },
+    {
+      "id": "M082",
+      "part": 4,
+      "method": "conservation",
+      "name": "velocity-shear dissipation equals exact pressure load times compression speed",
+      "passed": true
+    },
+    {
+      "id": "E082",
+      "part": 1,
+      "method": "magnetic_ohm",
+      "name": "Lorentz resistive braking and Stokes force balance pointwise",
+      "passed": true
+    },
+    {
+      "id": "E082",
+      "part": 2,
+      "method": "symbolic_limit",
+      "name": "integrated Hartmann flux and zero-magnetic-field Poiseuille limit",
+      "passed": true
+    },
+    {
+      "id": "E082",
+      "part": 3,
+      "method": "asymptotic",
+      "name": "large Hartmann number yields plug speed and magnetic boundary layer",
+      "passed": true
+    },
+    {
+      "id": "E082",
+      "part": 4,
+      "method": "power_conservation",
+      "name": "pressure-work integral equals shear and electric Joule dissipation",
+      "passed": true
+    },
+    {
+      "id": "T077",
+      "part": 1,
+      "method": "fermi_integral",
+      "name": "electron and hole number integrals equal pi squared over twelve",
+      "passed": true
+    },
+    {
+      "id": "T077",
+      "part": 2,
+      "method": "independent_numerical",
+      "name": "third-order Dirac excitation Fermi integral equals 3 zeta(3) over 2",
+      "passed": true
+    },
+    {
+      "id": "T077",
+      "part": 3,
+      "method": "thermodynamic_scaling",
+      "name": "area heat capacity and conformal entropic Euler relation",
+      "passed": true
+    },
+    {
+      "id": "T077",
+      "part": 4,
+      "method": "susceptibility",
+      "name": "compressibility response integral equals log two and vanishes at zero T",
+      "passed": true
+    },
+    {
+      "id": "W077",
+      "part": 1,
+      "method": "biharmonic_pde",
+      "name": "separable simply supported plate mode solves full bi-Laplacian",
+      "passed": true
+    },
+    {
+      "id": "W077",
+      "part": 2,
+      "method": "boundary",
+      "name": "sine mode and both bending moments vanish at straight simply supported edges",
+      "passed": true
+    },
+    {
+      "id": "W077",
+      "part": 3,
+      "method": "group_speed",
+      "name": "free plate group velocity exactly twice phase velocity with k h limit",
+      "passed": true
+    },
+    {
+      "id": "W077",
+      "part": 4,
+      "method": "positive_energy",
+      "name": "bending form Hessian eigenvalues 1 plus and minus Poisson ratio",
+      "passed": true
+    },
+    {
+      "id": "O079",
+      "part": 1,
+      "method": "combinatorics",
+      "name": "finite-N phase index pair count has 2N squared minus N terms",
+      "passed": true
+    },
+    {
+      "id": "O079",
+      "part": 2,
+      "method": "probability",
+      "name": "negative exponential intensity law normalized with correct first two moments",
+      "passed": true
+    },
+    {
+      "id": "O079",
+      "part": 3,
+      "method": "gaussian_wick",
+      "name": "Siegert relation boundaries g2(0)=1 g2(1)=2 and Cauchy bound",
+      "passed": true
+    },
+    {
+      "id": "O079",
+      "part": 4,
+      "method": "gamma_independent_integral",
+      "name": "four independent speckles gamma distribution normalization and 1 over sqrt M contrast",
+      "passed": true
+    },
+    {
+      "id": "Q079",
+      "part": 1,
+      "method": "spectral",
+      "name": "PT symmetry and coalesced characteristic roots at exceptional point",
+      "passed": true
+    },
+    {
+      "id": "Q079",
+      "part": 2,
+      "method": "propagator",
+      "name": "closed form nonunitary propagator satisfies exact Schr differential equation",
+      "passed": true
+    },
+    {
+      "id": "Q079",
+      "part": 3,
+      "method": "norm_balance",
+      "name": "nonunitary ordinary-norm flux equals twice gain minus loss amplitudes",
+      "passed": true
+    },
+    {
+      "id": "Q079",
+      "part": 4,
+      "method": "pseudohermitian_metric",
+      "name": "positive inner product metric intertwines PT Hamiltonian",
+      "passed": true
+    }
+  ],
+  "independent_expert_review": "待独立复核"
+}

@@ -1,0 +1,184 @@
+{
+  "status": "24_executed_subpart_checks_passed_expert_review_pending",
+  "round": 14,
+  "ids": [
+    "M080",
+    "E080",
+    "T075",
+    "W075",
+    "O077",
+    "Q077"
+  ],
+  "passed_count": 24,
+  "tests": [
+    {
+      "id": "M080",
+      "part": 1,
+      "method": "symbolic",
+      "name": "quadrupole gravitational restoring torque",
+      "passed": true
+    },
+    {
+      "id": "M080",
+      "part": 2,
+      "method": "stability",
+      "name": "radial minimum and tangential maximum curvatures",
+      "passed": true
+    },
+    {
+      "id": "M080",
+      "part": 3,
+      "method": "independent_numerical",
+      "name": "elliptic period agrees with quadrature",
+      "passed": true
+    },
+    {
+      "id": "M080",
+      "part": 4,
+      "method": "conservation",
+      "name": "Jacobi first integral differentiates to zero",
+      "passed": true
+    },
+    {
+      "id": "E080",
+      "part": 1,
+      "method": "boundary",
+      "name": "normal total-current boundary continuity",
+      "passed": true
+    },
+    {
+      "id": "E080",
+      "part": 2,
+      "method": "symbolic",
+      "name": "transient ODE and both time limits",
+      "passed": true
+    },
+    {
+      "id": "E080",
+      "part": 3,
+      "method": "conservation",
+      "name": "surface charge accumulation equals current jump",
+      "passed": true
+    },
+    {
+      "id": "E080",
+      "part": 4,
+      "method": "numerical",
+      "name": "opposite contrasts give unique positive dipole reversal",
+      "passed": true
+    },
+    {
+      "id": "T075",
+      "part": 1,
+      "method": "symbolic",
+      "name": "canonical integral differentiates to exact equation of state",
+      "passed": true
+    },
+    {
+      "id": "T075",
+      "part": 2,
+      "method": "symbolic",
+      "name": "free energy density derivative yields chemical potential",
+      "passed": true
+    },
+    {
+      "id": "T075",
+      "part": 3,
+      "method": "fluctuation",
+      "name": "isothermal compressibility and number fluctuations",
+      "passed": true
+    },
+    {
+      "id": "T075",
+      "part": 4,
+      "method": "adiabatic",
+      "name": "adiabatic pressure derivative and dilute sound speed",
+      "passed": true
+    },
+    {
+      "id": "W075",
+      "part": 1,
+      "method": "energy_boundary",
+      "name": "Reynolds moving-end energy flux and Dirichlet kinematic condition",
+      "passed": true
+    },
+    {
+      "id": "W075",
+      "part": 2,
+      "method": "adiabatic",
+      "name": "adiabatic action forces mode energy inverse proportional to length",
+      "passed": true
+    },
+    {
+      "id": "W075",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "time averaged wall work equals negative adiabatic energy derivative",
+      "passed": true
+    },
+    {
+      "id": "W075",
+      "part": 4,
+      "method": "doppler",
+      "name": "moving wall reflection plus collision rate gives -Ldot/L",
+      "passed": true
+    },
+    {
+      "id": "O077",
+      "part": 1,
+      "method": "statistics",
+      "name": "Poisson difference mean and additive noise",
+      "passed": true
+    },
+    {
+      "id": "O077",
+      "part": 2,
+      "method": "symbolic",
+      "name": "joint likelihood Fisher information and ideal visibility limit",
+      "passed": true
+    },
+    {
+      "id": "O077",
+      "part": 3,
+      "method": "optimization",
+      "name": "visibility loss makes quadrature point uniquely optimal",
+      "passed": true
+    },
+    {
+      "id": "O077",
+      "part": 4,
+      "method": "noise",
+      "name": "quadrature estimator saturates classical inverse Fisher bound",
+      "passed": true
+    },
+    {
+      "id": "Q077",
+      "part": 1,
+      "method": "bloch",
+      "name": "counterdiabatic cross product follows moving spin direction",
+      "passed": true
+    },
+    {
+      "id": "Q077",
+      "part": 2,
+      "method": "matrix",
+      "name": "exact moving-frame propagator solves Schrodinger equation",
+      "passed": true
+    },
+    {
+      "id": "Q077",
+      "part": 3,
+      "method": "variance",
+      "name": "control mean zero but variance is nonzero at finite angular speed",
+      "passed": true
+    },
+    {
+      "id": "Q077",
+      "part": 4,
+      "method": "geometry",
+      "name": "spin one-half geometric phase equals minus half solid angle",
+      "passed": true
+    }
+  ],
+  "independent_expert_review": "待独立复核"
+}

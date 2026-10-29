@@ -1,0 +1,23 @@
+(1) 约定沿 \(+z\) 的圆基 \(\boldsymbol e_\pm=(\hat x\pm i\hat y)/\sqrt2\)，故输入 \(\hat x=(\boldsymbol e_++\boldsymbol e_-)/\sqrt2\)。令平均相位 \(\bar\phi=(k_++k_-)L/2\)、半差 \(\delta=(k_+-k_-)L/2=k_0\kappa L\)（\(k_0=\omega/c\)），则
+\[
+\boldsymbol E_{\rm out}\propto\frac{e^{i\bar\phi}}{\sqrt2}(e^{i\delta}\boldsymbol e_++e^{-i\delta}\boldsymbol e_-)
+=e^{i\bar\phi}(\hat x\cos\delta-\hat y\sin\delta).
+\]
+因此按本题圆基与观察坐标的符号约定，实验室旋角 \(\theta_{\rm rot}=-\delta=-k_0\kappa L\)；若圆偏振正负命名与传播观察约定互换，旋角也整体换号。其绝对值为 \(k_0|\kappa|L\)。
+(2) 对归一化Jones矢量 \((\cos\delta,-\sin\delta)\)，定义 \(S_0=|E_x|^2+|E_y|^2\)、\(S_1=|E_x|^2-|E_y|^2\)、\(S_2=2\Re(E_xE_y^*)\)、\(S_3=2\Im(E_xE_y^*)\)，则
+\[
+S_1/S_0=\cos2\delta,\quad S_2/S_0=-\sin2\delta,\quad S_3=0.
+\]
+\(S_1^2+S_2^2+S_3^2=S_0^2\)，故依旧为完全线偏振。手性参数反号令 \(\delta\) 反号，旋角随之反向。
+(3) 每一圆偏振分量群折射率 \(n_{g,\pm}=n_\pm+\omega\,dn_\pm/d\omega\)，其群延迟 \(t_\pm=(L/c)n_{g,\pm}\)，差为
+\[
+\Delta\tau=\frac Lc(n_{g,+}-n_{g,-})
+=\frac{2L}{c}[\kappa+\omega\kappa'(\omega)].
+\]
+探测时间积分中两包络归一化重叠
+\[
+\mathcal V=\frac{\int f(t-t_+)f(t-t_-)\,dt}{\int f(t)^2dt}
+=\exp[-(\Delta\tau)^2/(8\sigma_t^2)].
+\]
+若 \(|\Delta\tau|\gtrsim\sigma_t\)，两个圆偏振分量的时间重叠不足，积分后的 \(|S_1+iS_2|/S_0=|\mathcal V|<1\)，即使每个频率的传播均无吸收，也会出现探测平均意义上的退偏。
+(4) 天然旋光是互易双向传播效应：反向光相对于反向传播方向的圆基与前向正负基互换，等效Jones算符在同一实验室横向坐标中为前向传播的逆，故理想往返的净旋转为零（镜面共同相位不影响线偏振轴）。磁致Faraday旋转在同一外磁场下不随传播方向互易反转，一般往返累积两倍旋角。若 \(\kappa=0\) 则单程无旋角；若两群速度相等，\(\Delta\tau=0\)、\(|\mathcal V|=1\)，仍为完全线偏振。

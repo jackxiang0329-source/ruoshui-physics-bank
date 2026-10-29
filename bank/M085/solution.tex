@@ -1,0 +1,27 @@
+(1) 力为 \(f=K(X-x)-V_0k\sin(kx)\)。静态条件 \(f=0\)，线性稳定性要求
+\[
+V_{xx}=K+V_0k^2\cos(kx)>0.
+\]
+若 \(K>K_c=V_0k^2\)，则 \(V_{xx}>0\) 对所有 \(x\) 成立，静态位置随 \(X\) 单值连续；\(K=K_c\) 可出现边缘零曲率点，而 \(K<K_c\) 允许两个稳定位置和中间不稳定点共存。
+(2) 折叠时 \(f=0\) 且 \(f_x=0\)，因此
+\[
+\cos(kx_s)=-K/K_c,\quad
+X_s=x_s+\frac{V_0k}{K}\sin(kx_s).
+\]
+取 \(\pi/2<kx_s<\pi\) 的分支使 \(\sin(kx_s)>0\)，是前向滑移失稳。周期平移 \(x_s\mapsto x_s+2\pi n/k\)、\(X_s\mapsto X_s+2\pi n/k\) 给其它晶格阱。
+(3) 置 \(y=x-x_s\)，有
+\[
+f=-K\delta X+a_2 y^2+O(\delta X|y|,|y|^3),\qquad
+a_2=\frac12V_0k^3\sin(kx_s)>0.
+\]
+两根 \(y_\pm=\pm\sqrt{K\delta X/a_2}+O(\delta X)\)；\(f_x\simeq2a_2y\) 所以 \(y_-<0\) 稳定、\(y_+>0\) 不稳定，距离 \(2\sqrt{K\delta X/a_2}\)。稳定点曲率 \(V_{xx}\simeq2\sqrt{a_2K\delta X}\)。因 \(\partial_yV=-f\simeq K\delta X-a_2y^2\)，局部势为 \(V(y)=V(0)+K\delta X\,y-a_2y^3/3\)，故
+\[
+\Delta V=V(y_+)-V(y_-)=\frac{4}{3}\frac{(K\delta X)^{3/2}}{\sqrt{a_2}}+O(\delta X^2).
+\]
+两项量纲分别为位移、\(\mathrm{N/m}\)、能量；三二次律是折叠灾变通性。
+(4) 对 \(V[x(t),X(t)]\) 求导，
+\[
+\frac{dV}{dt}=V_x\dot x+V_X\dot X
+=-\zeta\dot x^2+K(X-x)v.
+\]
+所以 \(P_{\rm drive}=K(X-x)v=\dot V+\zeta\dot x^2\) 且耗散非负。慢驱动时在稳定极小点跟随，临界曲率趋零后消失并向下一个阱跳跃，释放储存的部分弹性能。有限温度可在 \(\Delta V\) 尚大于零时激活越垒；若质量 \(m\ddot x\) 不可忽略，则储能需再加 \(m\dot x^2/2\)。

@@ -1,0 +1,30 @@
+(1) 取周期 \(u_{j+N}=u_j\)，Hamilton函数为
+\[
+H=\sum_{j=1}^N\left[\frac{p_j^2}{2m}+\frac K2d_j^2+\frac\beta4d_j^4\right],\quad p_j=m\dot u_j.
+\]
+由 \(\dot p_j=-\partial H/\partial u_j\) 得
+\[
+m\ddot u_j=K(d_j-d_{j-1})+\beta(d_j^3-d_{j-1}^3).
+\]
+每条键对相邻质点作用大小相等、方向相反，故 \(\sum_j p_j\) 恒定。
+(2) 线性化并代入 \(e^{i(kja-\omega t)}\) 得
+\[
+\omega_0^2=\frac{4K}{m}\sin^2\frac{ka}{2},\quad
+c_g=\frac{d\omega_0}{dk}=a\sqrt{\frac Km}\cos\frac{ka}{2}
+\quad(0<k<\pi/a).
+\]
+长波 \(\omega_0\simeq a\sqrt{K/m}|k|\)，群速趋 \(a\sqrt{K/m}\)；区边 \(ka=\pi\) 群速度为零。
+(3) 令 \(\theta=kja-\omega t\)、\(s=\sin(ka/2)\)。键伸长
+\[
+d_j=-2A s\sin(\theta+ka/2).
+\]
+用 \(\sin^3\varphi=(3\sin\varphi-\sin3\varphi)/4\)，在基频上 \(d_j^3\simeq(3/4)(2As)^2d_j\)，于是键等效劲度 \(K_{\rm eff}=K+3\beta A^2s^2\)，再用线性差分的本征值 \(4s^2\)，得
+\[
+\boxed{\omega^2\simeq\frac{4K}{m}s^2+\frac{12\beta A^2}{m}s^4}.
+\]
+\(\beta>0\) 使频率随振幅增大，\(k=0\) 则频率仍为零。遗漏三次力的 \(3k,3\omega\) 成分，故泛泛的单色波不是精确非线性解；非共振弱非线性时它对基频进一步影响起始于 \(A^4\) 阶。
+(4) 对全链求导，
+\[
+\dot H=\sum_j\dot u_j\left[m\ddot u_j-K(d_j-d_{j-1})-\beta(d_j^3-d_{j-1}^3)\right]=0.
+\]
+更独立地，将各键的功率写为 \(W'(d_j)(\dot u_{j+1}-\dot u_j)\)，逐项与两个邻居的内力功相消，因此机械能对任意初态严格守恒且 \(\beta>0\) 确保势能非负。全链刚性平移 \(u_j\mapsto u_j+C\) 不改变任何 \(d_j\)，给 \(k=0\) 零模及动量守恒。有限幅度若使被忽略的高谐波显著，需数值积分完整离散方程，不能外推单色近似。

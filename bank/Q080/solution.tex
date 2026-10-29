@@ -1,0 +1,30 @@
+(1) 写 \(d=(Ak_x,Ak_y,m_k)\)，\(m_k=M-Bk^2\)，则
+\[
+E_\pm(\boldsymbol k)=\pm\sqrt{A^2k^2+(M-Bk^2)^2}.
+\]
+对于 \(A>0\)，闭隙须 \(k=0,M=0\)（保持 \(B\ne0\)），此时拓扑相变可发生。无 \(Bk^2\) 的单个连续Dirac锥在无穷远 \(\hat d\) 仍依赖方位角，不能把平面无穷远合并成一个点，产生半整数而非物理完整正则整数Chern数；\(B\ne0\) 则 \(\hat d(k\to\infty)\to-\operatorname{sgn}B\,\hat z\)。
+(2) 两能带的投影算符 \(P_-=(I-\hat d\cdot\sigma)/2\)。按题定Berry曲率约定，有
+\[
+\Omega_{xy}=+\tfrac12\hat d\cdot(\partial_{k_x}\hat d\times\partial_{k_y}\hat d)
+=-\frac{d\cdot(\partial_xd\times\partial_yd)}{2|d|^3}.
+\]
+这里 \(\partial_x d=(A,0,-2Bk_x)\)、\(\partial_y d=(0,A,-2Bk_y)\)，叉乘后点乘 \(d\) 得 \(A^2(M+Bk^2)\)。因此
+\[
+\Omega_{xy}(k)=+\frac{A^2(M+Bk^2)}{2[A^2k^2+(M-Bk^2)^2]^{3/2}}.
+\]
+(3) 令 \(\cos\vartheta(k)=(M-Bk^2)/\sqrt{A^2k^2+(M-Bk^2)^2}\)，方位角为 \(\arg(k_x+ik_y)\)。直接按径向角积分，
+\[
+C=+\frac12\int_0^\infty\sin\vartheta\,\vartheta'(k)\,dk
+=\frac12[\cos\vartheta(0)-\cos\vartheta(\infty)]
+=+\frac12[\operatorname{sgn}B+\operatorname{sgn}M].
+\]
+若 \(M/B>0\)，两符号相同，\(C=+\operatorname{sgn}B\in\{\pm1\}\)；若 \(M/B<0\)，\(C=0\)。\(A>0\) 改变Berry曲率分布但不改变端点方向或能隙是否闭合。
+(4) 近畴壁且局部可忽略 \(Bk^2\)，用 \(H_{\rm edge}=-iA\sigma_y\partial_y+A k_x\sigma_x+M(y)\sigma_z\)。在 \(k_x=0\) 的零能方程经左乘 \(i\sigma_y/A\) 化为
+\[
+\partial_y\psi=\frac{M(y)}A\sigma_x\psi.
+\]
+当 \(M(-\infty)<0<M(+\infty)\)，\(\int_0^y M(y')dy'\to+\infty\) 两端成立，唯一可归一解是
+\[
+\psi(y)=\mathcal N\exp[-A^{-1}\!\int_0^yM(s)\,ds]\,|\sigma_x=-1\rangle.
+\]
+\(A k_x\sigma_x\) 使此态具有 \(E_{\rm edge}(k_x)=-Ak_x\)，群速度 \(-A/\hbar\)。其单向传播是局部Dirac质量符号翻转的域壁模，与正则化两侧Chern数差为一的体边对应吻合；真实有限 \(B\) 修改短距离波函数而不轻易抹除净手性通道。

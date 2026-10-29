@@ -1,0 +1,31 @@
+(1) 在共转局域系中，线性化动量含 Coriolis 力和剪切平衡，磁冻结含背景流对扰动磁场的拉伸。令 \(v_A=B_0/\sqrt{\mu_0\rho}\)，得到
+\[
+\begin{aligned}
+s u_x-2\Omega u_y&=ikv_A b_x,&
+s u_y+(2-q)\Omega u_x&=ikv_A b_y,\\
+s b_x&=ikv_A u_x,&
+s b_y+q\Omega b_x&=ikv_A u_y.
+\end{aligned}
+\]
+背景压力与引力共同维持基本剪切流；只需考虑轴对称、无压缩的横向扰动。
+(2) 由第三式 \(b_x=ikv_Au_x/s\)，第四式 \(b_y=ikv_Au_y/s-q\Omega ikv_Au_x/s^2\)，代入前两式并清除分母，或计算 \(4\times4\) 行列式，得
+\[
+\boxed{s^4+s^2(\kappa^2+2\omega_A^2)+\omega_A^2(\omega_A^2-2q\Omega^2)=0},\quad
+\kappa^2=2(2-q)\Omega^2.
+\]
+当 \(\omega_A=0\)，方程为 \(s^2(s^2+\kappa^2)=0\)：回转振荡稳定，另外两个零根代表无磁张力的中性分支。
+(3) 把 \(y=s^2\) 视为二次方程。因 \(y\) 的一次系数正，若常数项 \(\omega_A^2(\omega_A^2-2q\Omega^2)<0\)，恰有一个正根，即
+\[
+0<\omega_A^2<2q\Omega^2.
+\]
+令 \(x=\omega_A^2\)，关系 \(F(y,x)=y^2+y(\kappa^2+2x)+x(x-2q\Omega^2)=0\)。增长极值满足 \(F_x=2y+2x-2q\Omega^2=0\)，故 \(x=q\Omega^2-y\)。代回并选正根，得到
+\[
+s_{\max}=\frac{q\Omega}{2},\qquad
+k_{\max}^2v_A^2=\frac{q(4-q)}4\Omega^2.
+\]
+Kepler \(q=3/2\)：\(s_{\max}=3\Omega/4\)，\(k_{\max}v_A=\sqrt{15}\Omega/4\)。当 \(\omega_A^2\ge2q\Omega^2\) 时磁张力超过剪切释放的自由能，模式无增长。
+(4) 把第一、二式分别乘以 \(u_x^*,u_y^*\)，第三、四式乘以 \(b_x^*,b_y^*\)，取实部相加；含 \(ikv_A\) 的速度—磁场互换项逐对抵消，Coriolis 系数与磁剪切项剩下
+\[
+\boxed{\frac{d\mathcal E}{dt}=\rho q\Omega\operatorname{Re}(u_x^*u_y-b_x^*b_y)}.
+\]
+这是从基本态差速运动提取的 Reynolds–Maxwell 总应力功；\(q=0\) 严格为零。若考虑实际物理实场的周期平均能量，各项统一乘 \(1/2\)，等式不变。结论需局域波长远小于盘半径、\(\rho\) 常数、\(k\) 沿竖直场、忽略电阻和黏性；加入非理想项会改变阈值。

@@ -1,0 +1,243 @@
+{
+  "round": 14,
+  "status": "32_executed_checks_not_expert_signoff",
+  "new_problem_count": 8,
+  "passed_count": 32,
+  "ids": [
+    "M084",
+    "M085",
+    "E084",
+    "E085",
+    "T079",
+    "W079",
+    "O081",
+    "Q081"
+  ],
+  "tests": [
+    {
+      "id": "M084",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Darcy pressure perturbations solve the Laplace equation in both semi-infinite fluids",
+      "passed": true
+    },
+    {
+      "id": "M084",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "Moving interface pressure jump including background gradients reproduces viscosity contrast dispersion",
+      "passed": true
+    },
+    {
+      "id": "M084",
+      "part": 3,
+      "method": "symbolic",
+      "name": "Maximal viscous fingering growth is stationary at the capillary-selected wave number",
+      "passed": true
+    },
+    {
+      "id": "M084",
+      "part": 4,
+      "method": "limit",
+      "name": "Capillary stabilization is negative and three-dimensional dimensional analysis preserves inverse time",
+      "passed": true
+    },
+    {
+      "id": "M085",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Potential gradient and Hessian yield the exact equilibrium condition and convexity threshold",
+      "passed": true
+    },
+    {
+      "id": "M085",
+      "part": 2,
+      "method": "numerical",
+      "name": "Forward depinning fold simultaneously satisfies zero force and zero curvature",
+      "passed": true
+    },
+    {
+      "id": "M085",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "Fold normal form gives saddle barrier four-thirds coefficient and square-root soft curvature",
+      "passed": true
+    },
+    {
+      "id": "M085",
+      "part": 4,
+      "method": "conservation",
+      "name": "Overdamped nonautonomous potential loses exactly zeta velocity squared after input spring work",
+      "passed": true
+    },
+    {
+      "id": "E084",
+      "part": 1,
+      "method": "independent_derivation",
+      "name": "Electron and hole Drude Hall contributions have opposite odd-in-B signs and positive diagonal conductance",
+      "passed": true
+    },
+    {
+      "id": "E084",
+      "part": 2,
+      "method": "symbolic",
+      "name": "Exact 2x2 conductivity inversion equals explicit rational magnetoresistance and Hall coefficients",
+      "passed": true
+    },
+    {
+      "id": "E084",
+      "part": 3,
+      "method": "limit",
+      "name": "Compensated magnetoresistance is quadratic and uncompensated strong-field Hall saturates to density difference",
+      "passed": true
+    },
+    {
+      "id": "E084",
+      "part": 4,
+      "method": "conservation",
+      "name": "Antisymmetric Hall term cancels in Joule power and Onsager field reversal is exact",
+      "passed": true
+    },
+    {
+      "id": "E085",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Rotating shearing-sheet linear operator contains Coriolis epicycle and induction shear coefficients",
+      "passed": true
+    },
+    {
+      "id": "E085",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "Independent four-by-four determinant reproduces the MRI quartic dispersion exactly",
+      "passed": true
+    },
+    {
+      "id": "E085",
+      "part": 3,
+      "method": "numerical",
+      "name": "Kepler maximum growth satisfies quartic and stationary conditions at k vA squared fifteen-sixteenths",
+      "passed": true
+    },
+    {
+      "id": "E085",
+      "part": 4,
+      "method": "conservation",
+      "name": "Reynolds minus Maxwell shear stress equals exact complex-mode energy derivative; rigid rotation conserves energy",
+      "passed": true
+    },
+    {
+      "id": "T079",
+      "part": 1,
+      "method": "independent_derivation",
+      "name": "Harmonic oscillator lattice point count yields linear DOS and Bose polylog Li2 number",
+      "passed": true
+    },
+    {
+      "id": "T079",
+      "part": 2,
+      "method": "symbolic",
+      "name": "Critical Bose saturation and cubic internal energy reproduce condensate quadratic depletion",
+      "passed": true
+    },
+    {
+      "id": "T079",
+      "part": 3,
+      "method": "limit",
+      "name": "Fixed-N heat capacity is continuous at Bose threshold and classical high-T value is 2NkB",
+      "passed": true
+    },
+    {
+      "id": "T079",
+      "part": 4,
+      "method": "conservation",
+      "name": "Grand potential thermodynamic identity reproduces entropy and same critical limiting value",
+      "passed": true
+    },
+    {
+      "id": "W079",
+      "part": 1,
+      "method": "conservation",
+      "name": "Periodic quartic nearest-neighbor force telescopes to exact zero total momentum change",
+      "passed": true
+    },
+    {
+      "id": "W079",
+      "part": 2,
+      "method": "symbolic",
+      "name": "Bloch difference eigenvalue and differentiated acoustic group velocity match exactly",
+      "passed": true
+    },
+    {
+      "id": "W079",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "Fourier projection of cubic FPUT bond force gives the three-quarters fundamental coefficient",
+      "passed": true
+    },
+    {
+      "id": "W079",
+      "part": 4,
+      "method": "conservation",
+      "name": "Independent discrete kinetic and quartic potential power sums cancel for nonsymmetric periodic state",
+      "passed": true
+    },
+    {
+      "id": "O081",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Snell differentiation agrees with stated rainbow total deviation angle",
+      "passed": true
+    },
+    {
+      "id": "O081",
+      "part": 2,
+      "method": "numerical",
+      "name": "Water-drop primary rainbow stationary angle and positive fold curvature give approximately 42 degrees",
+      "passed": true
+    },
+    {
+      "id": "O081",
+      "part": 3,
+      "method": "dimensions",
+      "name": "Two-ray fold Jacobian reproduces predicted inverse-square-root divergence coefficient with area scale",
+      "passed": true
+    },
+    {
+      "id": "O081",
+      "part": 4,
+      "method": "numerical",
+      "name": "Airy uniform fold amplitude is finite at caustic and obeys k to minus one-third scaling",
+      "passed": true
+    },
+    {
+      "id": "Q081",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Tetrahedral vectors sum to zero and form positive rank-one POVM with tight-frame moment",
+      "passed": true
+    },
+    {
+      "id": "Q081",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "Born probabilities invert exactly to all three Bloch components for arbitrary mixed state",
+      "passed": true
+    },
+    {
+      "id": "Q081",
+      "part": 3,
+      "method": "conservation",
+      "name": "Multinomial covariance propagation gives total mean-squared Bloch error 9 minus purity over N",
+      "passed": true
+    },
+    {
+      "id": "Q081",
+      "part": 4,
+      "method": "independent_derivation",
+      "name": "At maximally mixed qubit SIC Fisher inverse exactly equals linear tomography covariance",
+      "passed": true
+    }
+  ],
+  "independent_expert_review": "待独立复核"
+}

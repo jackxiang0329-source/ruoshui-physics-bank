@@ -1,0 +1,35 @@
+(1) 动能 \(T_{\rm kin}=\frac{\rho h}{2}\int_\Omega w_t^2\,dA\)。对 \(V\) 作两次分部，并在内域取任意 \(\delta w\)，得到
+\[
+\rho h\,w_{tt}+D\nabla^4w=0,\qquad
+\nabla^4=(\partial_{xx}+\partial_{yy})^2.
+\]
+直线简支边 \(x=\mathrm{const}\) 的条件 \(w=0,\ M_{xx}=-D(w_{xx}+\nu w_{yy})=0\)，边 \(y=\mathrm{const}\) 为 \(w=0,\ M_{yy}=-D(w_{yy}+\nu w_{xx})=0\)。切向导数项在直边角端按弱形式处理。
+(2) 令
+\[
+w_{mn}(x,y,t)=q_{mn}(t)\sin\frac{m\pi x}a\sin\frac{n\pi y}b,\qquad m,n\ge1.
+\]
+各边 \(w=0\)，且 \(w_{xx},w_{yy}\propto w\) 在边界消失，故弯矩边界满足；正交性使各模态解耦：
+\[
+\ddot q_{mn}+\omega_{mn}^2q_{mn}=0,\quad
+\omega_{mn}=\sqrt{\frac D{\rho h}}\left[\left(\frac{m\pi}a\right)^2+\left(\frac{n\pi}b\right)^2\right]>0.
+\]
+四边固定挠度使均匀位移和刚体转角不能满足边界。方板有 \(m\ne n\) 时 \(\omega_{mn}=\omega_{nm}\)，这种简并来自交换对称，而不是连续平面旋转群。
+(3) 无限平板 \(w\propto e^{i(\boldsymbol k\cdot\boldsymbol r-\omega t)}\) 产生
+\[
+\omega=\sqrt{\frac D{\rho h}}|\boldsymbol k|^2,\quad
+v_p=\sqrt{\frac D{\rho h}}|\boldsymbol k|,\quad
+\boldsymbol v_g=2\sqrt{\frac D{\rho h}}\boldsymbol k.
+\]
+长波 \(k\to0\) 两速度都趋零而 \(v_g=2v_p\)。短波满足 \(kh\ll1\) 才可忽略厚度方向剪切和截面转动惯量；不能外推无限群速。
+(4) 对场方程乘 \(w_t\) 积分，两次分部，用简支边的零位移/零弯矩条件消去边功，得到
+\[
+\frac d{dt}\left[
+\frac{\rho h}2\int_\Omega w_t^2\,dA+V
+\right]=0.
+\]
+弯曲能密度可写成 \(D[(w_{xx}+w_{yy})^2-2(1-\nu)(w_{xx}w_{yy}-w_{xy}^2)]/2\)。对 \((w_{xx},w_{yy})\)，二次型矩阵 \(\begin{pmatrix}1&\nu\\\nu&1\end{pmatrix}\) 的特征值 \(1\pm\nu>0\)，同时 \(2(1-\nu)>0\)，故正定。若 \(q=A\cos(\omega t+\phi)\)，归一化弦模面积积分为 \(ab/4\)，
+\[
+T_{\rm kin}=\frac{\rho h\,ab}{8}A^2\omega^2\sin^2(\omega t+\phi),\quad
+V=\frac{\rho h\,ab}{8}A^2\omega^2\cos^2(\omega t+\phi).
+\]
+其和为定值，与独立模式频率解一致。

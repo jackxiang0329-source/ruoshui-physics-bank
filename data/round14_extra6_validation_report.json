@@ -1,0 +1,178 @@
+{
+  "status": "draft_technical_checks_passed_expert_review_pending",
+  "round": 14,
+  "draft_group": "second_six",
+  "new_problem_count": 6,
+  "passed_count": 24,
+  "tests": [
+    {
+      "id": "M079",
+      "part": 1,
+      "method": "independent_derivation",
+      "name": "毛细压强减静压与Poiseuille黏性压降完全一致",
+      "passed": true
+    },
+    {
+      "id": "M079",
+      "part": 2,
+      "method": "symbolic",
+      "name": "无重力平方根浸润律严格满足移动前沿微分方程",
+      "passed": true
+    },
+    {
+      "id": "M079",
+      "part": 3,
+      "method": "symbolic",
+      "name": "有重力隐式时间对高度求导精确恢复非线性前沿速度",
+      "passed": true
+    },
+    {
+      "id": "M079",
+      "part": 4,
+      "method": "conservation",
+      "name": "毛细压力输入严格等于重力势能增长加非负黏性耗散",
+      "passed": true
+    },
+    {
+      "id": "E079",
+      "part": 1,
+      "method": "symbolic",
+      "name": "旋转磁矩二阶导数模平方等于横向磁矩平方乘角速度四次方",
+      "passed": true
+    },
+    {
+      "id": "E079",
+      "part": 2,
+      "method": "conservation",
+      "name": "偶极辐射能损与精确自转角速度演化微分方程一致",
+      "passed": true
+    },
+    {
+      "id": "E079",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "磁偶极制动指数恰为三且周期乘周期导数为常数",
+      "passed": true
+    },
+    {
+      "id": "E079",
+      "part": 4,
+      "method": "dimensions",
+      "name": "自转辐射能量积分与动能损失一致且旋转减速时间为正",
+      "passed": true
+    },
+    {
+      "id": "T074",
+      "part": 1,
+      "method": "symbolic",
+      "name": "黑洞面积熵微分严格满足Hawking第一定律",
+      "passed": true
+    },
+    {
+      "id": "T074",
+      "part": 2,
+      "method": "physical_case",
+      "name": "Schwarzschild热容为负且随质量平方增长",
+      "passed": true
+    },
+    {
+      "id": "T074",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "Stefan面积温度四次方化简为质量反平方辐射功率",
+      "passed": true
+    },
+    {
+      "id": "T074",
+      "part": 4,
+      "method": "conservation",
+      "name": "质量三次律导出蒸发寿命并与能量损失方程一致",
+      "passed": true
+    },
+    {
+      "id": "W074",
+      "part": 1,
+      "method": "symbolic",
+      "name": "旋转惯量梁平面波代入动力学方程得到精确色散",
+      "passed": true
+    },
+    {
+      "id": "W074",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "色散求导的群速度与长短波两种渐近极限相符",
+      "passed": true
+    },
+    {
+      "id": "W074",
+      "part": 3,
+      "method": "physical_case",
+      "name": "简支Rayleigh模态频率严格低于Euler–Bernoulli梁频率",
+      "passed": true
+    },
+    {
+      "id": "W074",
+      "part": 4,
+      "method": "conservation",
+      "name": "正定转动惯性及弯曲能量保证任意非零模态实频率",
+      "passed": true
+    },
+    {
+      "id": "O076",
+      "part": 1,
+      "method": "symbolic",
+      "name": "两束相向光的辐射压力在静止时精确抵消且速度反转为奇函数",
+      "passed": true
+    },
+    {
+      "id": "O076",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "红失谐摩擦系数来自两束散射率独立求导并严格为正",
+      "passed": true
+    },
+    {
+      "id": "O076",
+      "part": 3,
+      "method": "conservation",
+      "name": "给定一维反冲方差的动量扩散与稳态温度表达式一致",
+      "passed": true
+    },
+    {
+      "id": "O076",
+      "part": 4,
+      "method": "limit",
+      "name": "低饱和温度在半线宽红失谐取得严格极小Doppler值",
+      "passed": true
+    },
+    {
+      "id": "Q076",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Dirac点核能谱按精细结构常数展开到四阶的系数一致",
+      "passed": true
+    },
+    {
+      "id": "Q076",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "n等于二的两个总角动量支能量差为正的四阶劈裂",
+      "passed": true
+    },
+    {
+      "id": "Q076",
+      "part": 3,
+      "method": "limit",
+      "name": "相对论精细结构对非相对论束缚能的比值具有Z平方标度",
+      "passed": true
+    },
+    {
+      "id": "Q076",
+      "part": 4,
+      "method": "physical_case",
+      "name": "最小总角动量通道要求Zalpha小于一且高Z临界根号变虚",
+      "passed": true
+    }
+  ],
+  "independent_expert_review": "待独立复核"
+}

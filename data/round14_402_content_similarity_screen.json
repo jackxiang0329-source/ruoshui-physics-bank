@@ -1,0 +1,3015 @@
+{
+  "round": 14,
+  "main_baseline_sha": "a3dd044e57c200e63e5ba0222aeb226efcd14242",
+  "historical_count": 402,
+  "draft_count": 50,
+  "cross_round_pairs": 20100,
+  "same_round_pairs": 1225,
+  "method": "4-character shingles over title/tags/first 2200 question and first 1300 solution chars; title/question exact-match gate",
+  "interpretation": "algorithmic near-duplicate screening; not full independent physics-model expert verification",
+  "exact_collision_findings": [],
+  "rows": [
+    {
+      "id": "M077",
+      "historical_top5": [
+        {
+          "id": "M063",
+          "title": "平板通道非定常Poiseuille流的精确模态、能量耗散与振荡压差响应",
+          "normalized_shingle_similarity": 0.017377
+        },
+        {
+          "id": "M076",
+          "title": "圆管Taylor–Aris弥散的径向胞元问题、有效扩散与示踪剂守恒",
+          "normalized_shingle_similarity": 0.010979
+        },
+        {
+          "id": "M075",
+          "title": "旋转流体Ekman底边界层的复速度螺旋、输运偏转与耗散恒等式",
+          "normalized_shingle_similarity": 0.00652
+        },
+        {
+          "id": "E041",
+          "title": "径向非均匀电导率圆柱的磁场、焦耳热与内部电感",
+          "normalized_shingle_similarity": 0.005305
+        },
+        {
+          "id": "M060",
+          "title": "有界推力与线性阻力下的最短时间控制、单切换定理与精确耗散",
+          "normalized_shingle_similarity": 0.005166
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "E082",
+          "title": "横向均匀磁场Hartmann管道流的磁阻、边界层与焦耳功率账本",
+          "normalized_shingle_similarity": 0.031915
+        },
+        {
+          "id": "M079",
+          "title": "毛细管Lucas–Washburn浸润的黏性前沿、重力停滞与功率守恒",
+          "normalized_shingle_similarity": 0.024591
+        },
+        {
+          "id": "M083",
+          "title": "平板Poiseuille剪切流的Taylor–Aris有效弥散及横向尺度分离",
+          "normalized_shingle_similarity": 0.014724
+        },
+        {
+          "id": "W076",
+          "title": "Kelvin–Voigt应变率耗散弦的复色散、过阻尼分支与严格耗散泛函",
+          "normalized_shingle_similarity": 0.004556
+        },
+        {
+          "id": "T072",
+          "title": "有限区间布朗首达时间的后向方程、全分布谱与二阶矩",
+          "normalized_shingle_similarity": 0.003249
+        }
+      ],
+      "candidate_core": "Bingham屈服塞状流",
+      "documented_distinction": "不同本构：塑性屈服核和二次开启流量",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "M078",
+      "historical_top5": [
+        {
+          "id": "M074",
+          "title": "双旋转圆筒Taylor–Couette黏性流的精确剪应力、转矩与耗散守恒",
+          "normalized_shingle_similarity": 0.014942
+        },
+        {
+          "id": "M067",
+          "title": "Rankine复合涡的涡量分布、径向压力、能量与自由液面",
+          "normalized_shingle_similarity": 0.012082
+        },
+        {
+          "id": "W071",
+          "title": "黏性Burgers冲击波的精确双曲正切结构、熵产生与无黏Lax极限",
+          "normalized_shingle_similarity": 0.012015
+        },
+        {
+          "id": "E059",
+          "title": "圆柱力自由磁场的贝塞尔结构、轴向电流与边界磁压力",
+          "normalized_shingle_similarity": 0.011023
+        },
+        {
+          "id": "W062",
+          "title": "聚焦非线性Schrödinger方程的亮孤子与调制不稳定阈值",
+          "normalized_shingle_similarity": 0.007822
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "M079",
+          "title": "毛细管Lucas–Washburn浸润的黏性前沿、重力停滞与功率守恒",
+          "normalized_shingle_similarity": 0.005288
+        },
+        {
+          "id": "Q075",
+          "title": "热谐振子Wigner相空间分布、量子涨落、纯度与熵的严格一致性",
+          "normalized_shingle_similarity": 0.00377
+        },
+        {
+          "id": "W076",
+          "title": "Kelvin–Voigt应变率耗散弦的复色散、过阻尼分支与严格耗散泛函",
+          "normalized_shingle_similarity": 0.003266
+        },
+        {
+          "id": "M082",
+          "title": "轴对称挤压油膜的Reynolds压力、有限载荷排液律与黏性功率核验",
+          "normalized_shingle_similarity": 0.003223
+        },
+        {
+          "id": "T073",
+          "title": "稀薄理想量子气体的第二维里系数、量子统计压强与熵修正",
+          "normalized_shingle_similarity": 0.001827
+        }
+      ],
+      "candidate_core": "Burgers拉伸涡",
+      "documented_distinction": "三维涡伸长-扩散平衡，高斯涡核",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "M079",
+      "historical_top5": [
+        {
+          "id": "W067",
+          "title": "自由液滴Rayleigh形变振荡的球谐模态、表面张力与零频平移模",
+          "normalized_shingle_similarity": 0.017226
+        },
+        {
+          "id": "M063",
+          "title": "平板通道非定常Poiseuille流的精确模态、能量耗散与振荡压差响应",
+          "normalized_shingle_similarity": 0.013477
+        },
+        {
+          "id": "W047",
+          "title": "双流体界面重力—毛细波色散与 Rayleigh–Taylor 最快增长",
+          "normalized_shingle_similarity": 0.012179
+        },
+        {
+          "id": "M076",
+          "title": "圆管Taylor–Aris弥散的径向胞元问题、有效扩散与示踪剂守恒",
+          "normalized_shingle_similarity": 0.011069
+        },
+        {
+          "id": "W069",
+          "title": "双流体切向剪切Kelvin–Helmholtz不稳定的毛细阈值与增长谱",
+          "normalized_shingle_similarity": 0.010696
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "M077",
+          "title": "Bingham屈服流体平板压驱流的塞状核、非线性流量与耗散恒等式",
+          "normalized_shingle_similarity": 0.024591
+        },
+        {
+          "id": "E082",
+          "title": "横向均匀磁场Hartmann管道流的磁阻、边界层与焦耳功率账本",
+          "normalized_shingle_similarity": 0.01379
+        },
+        {
+          "id": "M084",
+          "title": "Hele–Shaw双黏性流体的Saffman–Taylor指进谱、毛细截止与增长极值",
+          "normalized_shingle_similarity": 0.010392
+        },
+        {
+          "id": "M083",
+          "title": "平板Poiseuille剪切流的Taylor–Aris有效弥散及横向尺度分离",
+          "normalized_shingle_similarity": 0.010392
+        },
+        {
+          "id": "E080",
+          "title": "Maxwell–Wagner界面极化的瞬态偶极、自由面电荷与介电反转",
+          "normalized_shingle_similarity": 0.008362
+        }
+      ],
+      "candidate_core": "毛细浸润前沿与重力停滞",
+      "documented_distinction": "移动润湿接触线、Laplace压差和非线性Washburn前沿",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "M080",
+      "historical_top5": [
+        {
+          "id": "M070",
+          "title": "重力梯度卫星姿态的四极势、俯仰摆动与分界能量",
+          "normalized_shingle_similarity": 0.03114
+        },
+        {
+          "id": "M011",
+          "title": "有限振幅单摆的椭圆积分、周期修正与分界轨道",
+          "normalized_shingle_similarity": 0.021978
+        },
+        {
+          "id": "W028",
+          "title": "大振幅单摆的椭圆积分周期与临界分离轨道",
+          "normalized_shingle_similarity": 0.020221
+        },
+        {
+          "id": "M010",
+          "title": "双圆轨道间的霍曼转移、冲量与能量预算",
+          "normalized_shingle_similarity": 0.013194
+        },
+        {
+          "id": "M027",
+          "title": "均匀密度天体斜弦真空隧道的简谐运动与普适穿越时间",
+          "normalized_shingle_similarity": 0.01295
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "T075",
+          "title": "一维Tonks硬杆气体的严格配分函数、可压缩性与绝热声速",
+          "normalized_shingle_similarity": 0.006119
+        },
+        {
+          "id": "Q076",
+          "title": "Dirac–Coulomb精细结构的四阶展开、角动量劈裂与临界核电荷",
+          "normalized_shingle_similarity": 0.006083
+        },
+        {
+          "id": "W072",
+          "title": "内禀谐振质量链的频率依赖有效惯量、局域共振禁带与能量正性",
+          "normalized_shingle_similarity": 0.004824
+        },
+        {
+          "id": "E077",
+          "title": "理想磁流体受控线性剪切中的磁通冻结、磁能放大与Maxwell应力功",
+          "normalized_shingle_similarity": 0.004754
+        },
+        {
+          "id": "W079",
+          "title": "FPUT–β非线性晶格的谐波平衡硬化色散、群速与严格能量守恒",
+          "normalized_shingle_similarity": 0.004452
+        }
+      ],
+      "candidate_core": "绕轨道切向转动的哑铃四极重力梯度姿态锁定；区别于既有三轴中间轴失稳、Hill相对运动",
+      "documented_distinction": "绕轨道切向转动的哑铃四极重力梯度姿态锁定；区别于既有三轴中间轴失稳、Hill相对运动",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "M081",
+      "historical_top5": [
+        {
+          "id": "Q010",
+          "title": "恒定固有加速度运动的世界线、快度与双时钟",
+          "normalized_shingle_similarity": 0.021623
+        },
+        {
+          "id": "M030",
+          "title": "光子与可动镜面正面弹性反射的能动量守恒和频移",
+          "normalized_shingle_similarity": 0.019803
+        },
+        {
+          "id": "M040",
+          "title": "非弹性两体相对论碰撞的合成静质量与能量损耗",
+          "normalized_shingle_similarity": 0.00998
+        },
+        {
+          "id": "Q015",
+          "title": "相对论完全非弹性碰撞的复合静质量与内部能",
+          "normalized_shingle_similarity": 0.009713
+        },
+        {
+          "id": "O035",
+          "title": "Michelson 干涉仪移动反射镜的条纹计数与多普勒频移",
+          "normalized_shingle_similarity": 0.009352
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "T074",
+          "title": "Schwarzschild黑洞的负热容、Stefan近似蒸发与三次寿命标度",
+          "normalized_shingle_similarity": 0.007448
+        },
+        {
+          "id": "M082",
+          "title": "轴对称挤压油膜的Reynolds压力、有限载荷排液律与黏性功率核验",
+          "normalized_shingle_similarity": 0.00554
+        },
+        {
+          "id": "O078",
+          "title": "自由电子Thomson散射的偏振张量、总截面与纵向辐射动量",
+          "normalized_shingle_similarity": 0.004437
+        },
+        {
+          "id": "Q074",
+          "title": "三量子比特重复码的稳定子综合征、逻辑误差阈值与相位噪声盲区",
+          "normalized_shingle_similarity": 0.004332
+        },
+        {
+          "id": "W078",
+          "title": "Abraham–Lorentz自辐射振子的跑逸根、降阶阻尼与Schott能量守恒",
+          "normalized_shingle_similarity": 0.004253
+        }
+      ],
+      "candidate_core": "连续运动反射边界截获的相对论辐射通量及完整非线性轨迹，不是单光子反冲的固定时刻散射",
+      "documented_distinction": "连续运动反射边界截获的相对论辐射通量及完整非线性轨迹，不是单光子反冲的固定时刻散射",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "M082",
+      "historical_top5": [
+        {
+          "id": "M074",
+          "title": "双旋转圆筒Taylor–Couette黏性流的精确剪应力、转矩与耗散守恒",
+          "normalized_shingle_similarity": 0.032732
+        },
+        {
+          "id": "M063",
+          "title": "平板通道非定常Poiseuille流的精确模态、能量耗散与振荡压差响应",
+          "normalized_shingle_similarity": 0.01232
+        },
+        {
+          "id": "M067",
+          "title": "Rankine复合涡的涡量分布、径向压力、能量与自由液面",
+          "normalized_shingle_similarity": 0.011836
+        },
+        {
+          "id": "E052",
+          "title": "穿越外磁通的串联RLC闭环：感应电流、谐振相位及耗散守恒",
+          "normalized_shingle_similarity": 0.008471
+        },
+        {
+          "id": "M075",
+          "title": "旋转流体Ekman底边界层的复速度螺旋、输运偏转与耗散恒等式",
+          "normalized_shingle_similarity": 0.007511
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "E082",
+          "title": "横向均匀磁场Hartmann管道流的磁阻、边界层与焦耳功率账本",
+          "normalized_shingle_similarity": 0.015408
+        },
+        {
+          "id": "E085",
+          "title": "磁旋不稳定MRI的四阶本征色散、Kepler最快增长率及剪切能抽取",
+          "normalized_shingle_similarity": 0.007671
+        },
+        {
+          "id": "M079",
+          "title": "毛细管Lucas–Washburn浸润的黏性前沿、重力停滞与功率守恒",
+          "normalized_shingle_similarity": 0.007555
+        },
+        {
+          "id": "T074",
+          "title": "Schwarzschild黑洞的负热容、Stefan近似蒸发与三次寿命标度",
+          "normalized_shingle_similarity": 0.005942
+        },
+        {
+          "id": "W076",
+          "title": "Kelvin–Voigt应变率耗散弦的复色散、过阻尼分支与严格耗散泛函",
+          "normalized_shingle_similarity": 0.005599
+        }
+      ],
+      "candidate_core": "两平行圆盘挤压Stokes润滑层的压力及有限载荷动力学",
+      "documented_distinction": "两平行圆盘挤压Stokes润滑层的压力及有限载荷动力学",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "M083",
+      "historical_top5": [
+        {
+          "id": "M076",
+          "title": "圆管Taylor–Aris弥散的径向胞元问题、有效扩散与示踪剂守恒",
+          "normalized_shingle_similarity": 0.05255
+        },
+        {
+          "id": "M063",
+          "title": "平板通道非定常Poiseuille流的精确模态、能量耗散与振荡压差响应",
+          "normalized_shingle_similarity": 0.010894
+        },
+        {
+          "id": "Q073",
+          "title": "量子弱值放大的近正交后选择、Gaussian指针精确正则化与信息代价",
+          "normalized_shingle_similarity": 0.009396
+        },
+        {
+          "id": "W039",
+          "title": "参数激励谐振子的平均法阈值与 Floquet 增长率",
+          "normalized_shingle_similarity": 0.008754
+        },
+        {
+          "id": "W066",
+          "title": "二维刚性声散射圆柱的Bessel相移、低频截面与幺正通量",
+          "normalized_shingle_similarity": 0.006636
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "E082",
+          "title": "横向均匀磁场Hartmann管道流的磁阻、边界层与焦耳功率账本",
+          "normalized_shingle_similarity": 0.026148
+        },
+        {
+          "id": "M077",
+          "title": "Bingham屈服流体平板压驱流的塞状核、非线性流量与耗散恒等式",
+          "normalized_shingle_similarity": 0.014724
+        },
+        {
+          "id": "M079",
+          "title": "毛细管Lucas–Washburn浸润的黏性前沿、重力停滞与功率守恒",
+          "normalized_shingle_similarity": 0.010392
+        },
+        {
+          "id": "Q078",
+          "title": "双玻色子Bose–Hubbard二聚体的精确缀饰谱、双占据振荡与站点纠缠",
+          "normalized_shingle_similarity": 0.006712
+        },
+        {
+          "id": "Q075",
+          "title": "热谐振子Wigner相空间分布、量子涨落、纯度与熵的严格一致性",
+          "normalized_shingle_similarity": 0.00635
+        }
+      ],
+      "candidate_core": "定常剪切流中被动溶质横向扩散诱导Taylor-Aris增强纵向弥散",
+      "documented_distinction": "定常剪切流中被动溶质横向扩散诱导Taylor-Aris增强纵向弥散",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "M084",
+      "historical_top5": [
+        {
+          "id": "W069",
+          "title": "双流体切向剪切Kelvin–Helmholtz不稳定的毛细阈值与增长谱",
+          "normalized_shingle_similarity": 0.041169
+        },
+        {
+          "id": "W047",
+          "title": "双流体界面重力—毛细波色散与 Rayleigh–Taylor 最快增长",
+          "normalized_shingle_similarity": 0.032817
+        },
+        {
+          "id": "W067",
+          "title": "自由液滴Rayleigh形变振荡的球谐模态、表面张力与零频平移模",
+          "normalized_shingle_similarity": 0.012658
+        },
+        {
+          "id": "E065",
+          "title": "核壳介电球的精确极化率、界面电场与中性包覆",
+          "normalized_shingle_similarity": 0.009897
+        },
+        {
+          "id": "M069",
+          "title": "势流中加速球体的附加质量、Green恒等式与动能交换",
+          "normalized_shingle_similarity": 0.009447
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "M079",
+          "title": "毛细管Lucas–Washburn浸润的黏性前沿、重力停滞与功率守恒",
+          "normalized_shingle_similarity": 0.010392
+        },
+        {
+          "id": "E085",
+          "title": "磁旋不稳定MRI的四阶本征色散、Kepler最快增长率及剪切能抽取",
+          "normalized_shingle_similarity": 0.007537
+        },
+        {
+          "id": "W076",
+          "title": "Kelvin–Voigt应变率耗散弦的复色散、过阻尼分支与严格耗散泛函",
+          "normalized_shingle_similarity": 0.006876
+        },
+        {
+          "id": "E080",
+          "title": "Maxwell–Wagner界面极化的瞬态偶极、自由面电荷与介电反转",
+          "normalized_shingle_similarity": 0.006008
+        },
+        {
+          "id": "T072",
+          "title": "有限区间布朗首达时间的后向方程、全分布谱与二阶矩",
+          "normalized_shingle_similarity": 0.005885
+        }
+      ],
+      "candidate_core": "Saffman–Taylor黏性指进的Darcy界面扰动谱",
+      "documented_distinction": "两相黏度跳跃和达西压差导致的移动界面黏性驱替失稳，与剪切惯性KH不稳定不同",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "M085",
+      "historical_top5": [
+        {
+          "id": "W024",
+          "title": "含黏滞阻尼的双振子非厄米模态与临界衰减",
+          "normalized_shingle_similarity": 0.00917
+        },
+        {
+          "id": "W008",
+          "title": "耦合双振子的本征模与能量拍动",
+          "normalized_shingle_similarity": 0.007453
+        },
+        {
+          "id": "W027",
+          "title": "具有基底弹簧的离散晶格频隙、倏逝模及连续极限",
+          "normalized_shingle_similarity": 0.006358
+        },
+        {
+          "id": "W009",
+          "title": "三振子耦合本征模、能量分配与弱耦合拍动",
+          "normalized_shingle_similarity": 0.006227
+        },
+        {
+          "id": "E074",
+          "title": "Stoner–Wohlfarth单畴磁体的翻转星形线、磁滞阈值与热激活势垒",
+          "normalized_shingle_similarity": 0.005461
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "T073",
+          "title": "稀薄理想量子气体的第二维里系数、量子统计压强与熵修正",
+          "normalized_shingle_similarity": 0.003113
+        },
+        {
+          "id": "W073",
+          "title": "非互易一阶谐振链的非厄米趋肤模、边界谱与稳定阈值分裂",
+          "normalized_shingle_similarity": 0.003057
+        },
+        {
+          "id": "M080",
+          "title": "轨道重力梯度哑铃的姿态锁定、椭圆周期与角动量交换",
+          "normalized_shingle_similarity": 0.002932
+        },
+        {
+          "id": "W076",
+          "title": "Kelvin–Voigt应变率耗散弦的复色散、过阻尼分支与严格耗散泛函",
+          "normalized_shingle_similarity": 0.002782
+        },
+        {
+          "id": "M084",
+          "title": "Hele–Shaw双黏性流体的Saffman–Taylor指进谱、毛细截止与增长极值",
+          "normalized_shingle_similarity": 0.002697
+        }
+      ],
+      "candidate_core": "Prandtl–Tomlinson周期势黏滑折叠灾变",
+      "documented_distinction": "弹簧拖曳—周期基底的静态鞍结势垒三二次律，与受迫摆或辛映射不同",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "E077",
+      "historical_top5": [
+        {
+          "id": "E059",
+          "title": "圆柱力自由磁场的贝塞尔结构、轴向电流与边界磁压力",
+          "normalized_shingle_similarity": 0.021758
+        },
+        {
+          "id": "M065",
+          "title": "受周期脉冲驱动转子的标准映射、辛结构与非线性共振岛",
+          "normalized_shingle_similarity": 0.016628
+        },
+        {
+          "id": "E022",
+          "title": "Drude 霍尔条带的电导张量、开路霍尔电场与磁阻边界",
+          "normalized_shingle_similarity": 0.015498
+        },
+        {
+          "id": "O007",
+          "title": "分离薄透镜系统的矩阵成像与无焦条件",
+          "normalized_shingle_similarity": 0.014768
+        },
+        {
+          "id": "O062",
+          "title": "Kerr驱动光腔的非线性双稳态、折叠阈值与输入输出守恒",
+          "normalized_shingle_similarity": 0.013723
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "E085",
+          "title": "磁旋不稳定MRI的四阶本征色散、Kepler最快增长率及剪切能抽取",
+          "normalized_shingle_similarity": 0.016486
+        },
+        {
+          "id": "Q079",
+          "title": "PT对称增益损耗量子二聚体的例外点、广义度量与非幺正规范",
+          "normalized_shingle_similarity": 0.011173
+        },
+        {
+          "id": "E082",
+          "title": "横向均匀磁场Hartmann管道流的磁阻、边界层与焦耳功率账本",
+          "normalized_shingle_similarity": 0.010536
+        },
+        {
+          "id": "E083",
+          "title": "无电阻电子磁流体Hall哨声波的螺旋本征模、群速与磁能守恒",
+          "normalized_shingle_similarity": 0.009915
+        },
+        {
+          "id": "E080",
+          "title": "Maxwell–Wagner界面极化的瞬态偶极、自由面电荷与介电反转",
+          "normalized_shingle_similarity": 0.009857
+        }
+      ],
+      "candidate_core": "理想MHD均匀剪切磁场放大",
+      "documented_distinction": "外驱有限形变磁通冻结，无传播本征模",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "E078",
+      "historical_top5": [
+        {
+          "id": "E067",
+          "title": "非线性Poisson–Boltzmann平板双电层的精确势、Grahame关系与微分电容",
+          "normalized_shingle_similarity": 0.032575
+        },
+        {
+          "id": "T069",
+          "title": "双态详细平衡Markov热动力学的精确驰豫、相对熵与涨落关联",
+          "normalized_shingle_similarity": 0.014378
+        },
+        {
+          "id": "O073",
+          "title": "Rayleigh光镊的极化梯度陷阱、辐射反作用散射力与热涨落尺度",
+          "normalized_shingle_similarity": 0.014288
+        },
+        {
+          "id": "T025",
+          "title": "二能级体系的布居反转、负绝对温度与熵最大点",
+          "normalized_shingle_similarity": 0.014089
+        },
+        {
+          "id": "T034",
+          "title": "孤立辐射球在零背景温度下的非线性冷却律与熵产生",
+          "normalized_shingle_similarity": 0.014074
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "W078",
+          "title": "Abraham–Lorentz自辐射振子的跑逸根、降阶阻尼与Schott能量守恒",
+          "normalized_shingle_similarity": 0.009167
+        },
+        {
+          "id": "Q075",
+          "title": "热谐振子Wigner相空间分布、量子涨落、纯度与熵的严格一致性",
+          "normalized_shingle_similarity": 0.008731
+        },
+        {
+          "id": "W077",
+          "title": "Kirchhoff–Love矩形薄板的双指标模态、频率简并与弯曲能量守恒",
+          "normalized_shingle_similarity": 0.007382
+        },
+        {
+          "id": "T077",
+          "title": "二维电中性Dirac费米气的热激发、量子电容与共形状态方程",
+          "normalized_shingle_similarity": 0.007279
+        },
+        {
+          "id": "E085",
+          "title": "磁旋不稳定MRI的四阶本征色散、Kepler最快增长率及剪切能抽取",
+          "normalized_shingle_similarity": 0.005526
+        }
+      ],
+      "candidate_core": "无碰撞冷离子鞘层",
+      "documented_distinction": "非平衡离子惯性、Bohm入口判据",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "E079",
+      "historical_top5": [
+        {
+          "id": "O038",
+          "title": "Rayleigh 小介电球的感应偶极散射截面与波长四次反比",
+          "normalized_shingle_similarity": 0.018538
+        },
+        {
+          "id": "E049",
+          "title": "赫兹短偶极子的远区辐射、角分布和辐射电阻",
+          "normalized_shingle_similarity": 0.013607
+        },
+        {
+          "id": "W031",
+          "title": "矩形固定薄膜的二维本征谱、模态正交与简并",
+          "normalized_shingle_similarity": 0.010042
+        },
+        {
+          "id": "M041",
+          "title": "有阻尼转动惯量滑轮的阿特伍德系统与终端速度",
+          "normalized_shingle_similarity": 0.009804
+        },
+        {
+          "id": "E051",
+          "title": "径向梯度带电旋转薄盘的磁矩、轴心磁场与陀磁比",
+          "normalized_shingle_similarity": 0.008866
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "W078",
+          "title": "Abraham–Lorentz自辐射振子的跑逸根、降阶阻尼与Schott能量守恒",
+          "normalized_shingle_similarity": 0.011815
+        },
+        {
+          "id": "O078",
+          "title": "自由电子Thomson散射的偏振张量、总截面与纵向辐射动量",
+          "normalized_shingle_similarity": 0.008803
+        },
+        {
+          "id": "W077",
+          "title": "Kirchhoff–Love矩形薄板的双指标模态、频率简并与弯曲能量守恒",
+          "normalized_shingle_similarity": 0.006524
+        },
+        {
+          "id": "T074",
+          "title": "Schwarzschild黑洞的负热容、Stefan近似蒸发与三次寿命标度",
+          "normalized_shingle_similarity": 0.00532
+        },
+        {
+          "id": "E078",
+          "title": "无碰撞等离子体鞘层的Bohm声速判据、Sagdeev第一积分与壁面场",
+          "normalized_shingle_similarity": 0.003564
+        }
+      ],
+      "candidate_core": "旋转磁偶极真空辐射制动",
+      "documented_distinction": "旋转磁矩角动量制动指数和自转周期演化",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "E080",
+      "historical_top5": [
+        {
+          "id": "E018",
+          "title": "均匀外电场中介质球的极化场、偶极矩与静电边界核验",
+          "normalized_shingle_similarity": 0.031316
+        },
+        {
+          "id": "E065",
+          "title": "核壳介电球的精确极化率、界面电场与中性包覆",
+          "normalized_shingle_similarity": 0.018583
+        },
+        {
+          "id": "E035",
+          "title": "均匀极化球体的束缚电荷、去极化电场及偶极势",
+          "normalized_shingle_similarity": 0.017874
+        },
+        {
+          "id": "E011",
+          "title": "径向非均匀自由电荷介质球的电势、束缚电荷与场能",
+          "normalized_shingle_similarity": 0.016969
+        },
+        {
+          "id": "E034",
+          "title": "良导体中的交流磁场扩散、集肤深度与欧姆耗散",
+          "normalized_shingle_similarity": 0.016859
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "E077",
+          "title": "理想磁流体受控线性剪切中的磁通冻结、磁能放大与Maxwell应力功",
+          "normalized_shingle_similarity": 0.009857
+        },
+        {
+          "id": "M079",
+          "title": "毛细管Lucas–Washburn浸润的黏性前沿、重力停滞与功率守恒",
+          "normalized_shingle_similarity": 0.008362
+        },
+        {
+          "id": "T072",
+          "title": "有限区间布朗首达时间的后向方程、全分布谱与二阶矩",
+          "normalized_shingle_similarity": 0.008287
+        },
+        {
+          "id": "E085",
+          "title": "磁旋不稳定MRI的四阶本征色散、Kepler最快增长率及剪切能抽取",
+          "normalized_shingle_similarity": 0.007075
+        },
+        {
+          "id": "E083",
+          "title": "无电阻电子磁流体Hall哨声波的螺旋本征模、群速与磁能守恒",
+          "normalized_shingle_similarity": 0.006809
+        }
+      ],
+      "candidate_core": "有限电导率两相界面电荷积累的Maxwell–Wagner弛豫；与静态介质球极化有动力学本构上的根本差异",
+      "documented_distinction": "有限电导率两相界面电荷积累的Maxwell–Wagner弛豫；与静态介质球极化有动力学本构上的根本差异",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "E081",
+      "historical_top5": [
+        {
+          "id": "E060",
+          "title": "理想矩形金属波导TE10模的色散、功率能量速度与脉冲展宽",
+          "normalized_shingle_similarity": 0.015503
+        },
+        {
+          "id": "E066",
+          "title": "理想MHD剪切Alfvén波的Elsasser变量、能流与界面散射",
+          "normalized_shingle_similarity": 0.011659
+        },
+        {
+          "id": "O054",
+          "title": "Fresnel界面反射的Brewster角、能流透过率与临界全反射",
+          "normalized_shingle_similarity": 0.011195
+        },
+        {
+          "id": "E049",
+          "title": "赫兹短偶极子的远区辐射、角分布和辐射电阻",
+          "normalized_shingle_similarity": 0.010309
+        },
+        {
+          "id": "E031",
+          "title": "均匀理想环形螺线管的磁场、自感与耦合感应能量",
+          "normalized_shingle_similarity": 0.008736
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "E083",
+          "title": "无电阻电子磁流体Hall哨声波的螺旋本征模、群速与磁能守恒",
+          "normalized_shingle_similarity": 0.008346
+        },
+        {
+          "id": "E077",
+          "title": "理想磁流体受控线性剪切中的磁通冻结、磁能放大与Maxwell应力功",
+          "normalized_shingle_similarity": 0.006712
+        },
+        {
+          "id": "E078",
+          "title": "无碰撞等离子体鞘层的Bohm声速判据、Sagdeev第一积分与壁面场",
+          "normalized_shingle_similarity": 0.0054
+        },
+        {
+          "id": "O080",
+          "title": "互易手性介质的天然旋光、群延迟退偏与往返消旋核验",
+          "normalized_shingle_similarity": 0.004784
+        },
+        {
+          "id": "Q077",
+          "title": "自旋半反绝热驱动的精确跟踪哈密顿量、控制能耗与几何相位",
+          "normalized_shingle_similarity": 0.003062
+        }
+      ],
+      "candidate_core": "Sweet–Parker稳态耗散电流片的匹配缩放、拓扑磁通重联率；与理想磁剪切及Alfven线性波不同",
+      "documented_distinction": "Sweet–Parker稳态耗散电流片的匹配缩放、拓扑磁通重联率；与理想磁剪切及Alfven线性波不同",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "E082",
+      "historical_top5": [
+        {
+          "id": "M063",
+          "title": "平板通道非定常Poiseuille流的精确模态、能量耗散与振荡压差响应",
+          "normalized_shingle_similarity": 0.026237
+        },
+        {
+          "id": "M075",
+          "title": "旋转流体Ekman底边界层的复速度螺旋、输运偏转与耗散恒等式",
+          "normalized_shingle_similarity": 0.013711
+        },
+        {
+          "id": "M074",
+          "title": "双旋转圆筒Taylor–Couette黏性流的精确剪应力、转矩与耗散守恒",
+          "normalized_shingle_similarity": 0.012989
+        },
+        {
+          "id": "E022",
+          "title": "Drude 霍尔条带的电导张量、开路霍尔电场与磁阻边界",
+          "normalized_shingle_similarity": 0.011701
+        },
+        {
+          "id": "E070",
+          "title": "Penning静态离子阱的修正回旋模、磁控漂移与负能径向支",
+          "normalized_shingle_similarity": 0.010486
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "M077",
+          "title": "Bingham屈服流体平板压驱流的塞状核、非线性流量与耗散恒等式",
+          "normalized_shingle_similarity": 0.031915
+        },
+        {
+          "id": "M083",
+          "title": "平板Poiseuille剪切流的Taylor–Aris有效弥散及横向尺度分离",
+          "normalized_shingle_similarity": 0.026148
+        },
+        {
+          "id": "M082",
+          "title": "轴对称挤压油膜的Reynolds压力、有限载荷排液律与黏性功率核验",
+          "normalized_shingle_similarity": 0.015408
+        },
+        {
+          "id": "M079",
+          "title": "毛细管Lucas–Washburn浸润的黏性前沿、重力停滞与功率守恒",
+          "normalized_shingle_similarity": 0.01379
+        },
+        {
+          "id": "E077",
+          "title": "理想磁流体受控线性剪切中的磁通冻结、磁能放大与Maxwell应力功",
+          "normalized_shingle_similarity": 0.010536
+        }
+      ],
+      "candidate_core": "低Rm导电液体在定常横磁场中的Hartmann边界层与电磁阻流",
+      "documented_distinction": "低Rm导电液体在定常横磁场中的Hartmann边界层与电磁阻流",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "E083",
+      "historical_top5": [
+        {
+          "id": "E066",
+          "title": "理想MHD剪切Alfvén波的Elsasser变量、能流与界面散射",
+          "normalized_shingle_similarity": 0.023323
+        },
+        {
+          "id": "E061",
+          "title": "冷磁化等离子体的圆偏振本征模、Faraday旋转与差分群时延",
+          "normalized_shingle_similarity": 0.023084
+        },
+        {
+          "id": "E062",
+          "title": "二维霍尔电导薄层的电磁边界散射、偏振旋转、耗散极值与基底效应",
+          "normalized_shingle_similarity": 0.009602
+        },
+        {
+          "id": "E031",
+          "title": "均匀理想环形螺线管的磁场、自感与耦合感应能量",
+          "normalized_shingle_similarity": 0.008962
+        },
+        {
+          "id": "E032",
+          "title": "滑动导体棒的磁感应制动、瞬态电流与总焦耳热",
+          "normalized_shingle_similarity": 0.008928
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "W077",
+          "title": "Kirchhoff–Love矩形薄板的双指标模态、频率简并与弯曲能量守恒",
+          "normalized_shingle_similarity": 0.012169
+        },
+        {
+          "id": "O080",
+          "title": "互易手性介质的天然旋光、群延迟退偏与往返消旋核验",
+          "normalized_shingle_similarity": 0.011778
+        },
+        {
+          "id": "E085",
+          "title": "磁旋不稳定MRI的四阶本征色散、Kepler最快增长率及剪切能抽取",
+          "normalized_shingle_similarity": 0.009965
+        },
+        {
+          "id": "E077",
+          "title": "理想磁流体受控线性剪切中的磁通冻结、磁能放大与Maxwell应力功",
+          "normalized_shingle_similarity": 0.009915
+        },
+        {
+          "id": "E081",
+          "title": "Sweet–Parker电阻磁重联层的质量通量、Alfvén出流与Lundquist缩放",
+          "normalized_shingle_similarity": 0.008346
+        }
+      ],
+      "candidate_core": "无电阻Hall电子MHD中二次色散螺旋波，与理想MHD Alfvén声学支不同",
+      "documented_distinction": "无电阻Hall电子MHD中二次色散螺旋波，与理想MHD Alfvén声学支不同",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "E084",
+      "historical_top5": [
+        {
+          "id": "E022",
+          "title": "Drude 霍尔条带的电导张量、开路霍尔电场与磁阻边界",
+          "normalized_shingle_similarity": 0.030228
+        },
+        {
+          "id": "O042",
+          "title": "平凹光学谐振腔的 ABCD 稳定区、瑞利长度与束腰大小",
+          "normalized_shingle_similarity": 0.018053
+        },
+        {
+          "id": "O010",
+          "title": "高斯光束通过薄透镜后的复束参数与束腰位置",
+          "normalized_shingle_similarity": 0.01489
+        },
+        {
+          "id": "Q060",
+          "title": "狄拉克质量畴壁的手征零模、超对称伙伴谱与无反射散射",
+          "normalized_shingle_similarity": 0.01444
+        },
+        {
+          "id": "E010",
+          "title": "互感耦合 LC 回路的正规模、能量与拍动",
+          "normalized_shingle_similarity": 0.014287
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "E077",
+          "title": "理想磁流体受控线性剪切中的磁通冻结、磁能放大与Maxwell应力功",
+          "normalized_shingle_similarity": 0.008186
+        },
+        {
+          "id": "Q079",
+          "title": "PT对称增益损耗量子二聚体的例外点、广义度量与非幺正规范",
+          "normalized_shingle_similarity": 0.006554
+        },
+        {
+          "id": "W077",
+          "title": "Kirchhoff–Love矩形薄板的双指标模态、频率简并与弯曲能量守恒",
+          "normalized_shingle_similarity": 0.006028
+        },
+        {
+          "id": "Q078",
+          "title": "双玻色子Bose–Hubbard二聚体的精确缀饰谱、双占据振荡与站点纠缠",
+          "normalized_shingle_similarity": 0.006028
+        },
+        {
+          "id": "E083",
+          "title": "无电阻电子磁流体Hall哨声波的螺旋本征模、群速与磁能守恒",
+          "normalized_shingle_similarity": 0.005089
+        }
+      ],
+      "candidate_core": "电子空穴双载流子经典磁输运与完全补偿磁阻",
+      "documented_distinction": "双组分相反电荷Hall项相消导致B平方不饱和磁阻和系数变号",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "E085",
+      "historical_top5": [
+        {
+          "id": "W064",
+          "title": "β平面Rossby波的位涡谱、群速反向与拟地转能量守恒",
+          "normalized_shingle_similarity": 0.014663
+        },
+        {
+          "id": "M048",
+          "title": "各向异性旋转二维振子的科里奥利模态避免交叉",
+          "normalized_shingle_similarity": 0.013737
+        },
+        {
+          "id": "W022",
+          "title": "平行金属板波导的 TE 模截止、相群速度和功率流",
+          "normalized_shingle_similarity": 0.012485
+        },
+        {
+          "id": "E033",
+          "title": "极板电容器的 Maxwell 压力、固定电荷力与能量",
+          "normalized_shingle_similarity": 0.011981
+        },
+        {
+          "id": "E039",
+          "title": "平面电磁波的 Maxwell 应力、辐射压与反射动量",
+          "normalized_shingle_similarity": 0.010879
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "E077",
+          "title": "理想磁流体受控线性剪切中的磁通冻结、磁能放大与Maxwell应力功",
+          "normalized_shingle_similarity": 0.016486
+        },
+        {
+          "id": "E083",
+          "title": "无电阻电子磁流体Hall哨声波的螺旋本征模、群速与磁能守恒",
+          "normalized_shingle_similarity": 0.009965
+        },
+        {
+          "id": "W078",
+          "title": "Abraham–Lorentz自辐射振子的跑逸根、降阶阻尼与Schott能量守恒",
+          "normalized_shingle_similarity": 0.009161
+        },
+        {
+          "id": "E082",
+          "title": "横向均匀磁场Hartmann管道流的磁阻、边界层与焦耳功率账本",
+          "normalized_shingle_similarity": 0.009076
+        },
+        {
+          "id": "Q076",
+          "title": "Dirac–Coulomb精细结构的四阶展开、角动量劈裂与临界核电荷",
+          "normalized_shingle_similarity": 0.00791
+        }
+      ],
+      "candidate_core": "理想旋转剪切MHD磁旋不稳定MRI",
+      "documented_distinction": "MRI需要差速旋转和Coriolis回转耦合，产生新的四阶模态不稳定阈值",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "T072",
+      "historical_top5": [
+        {
+          "id": "W031",
+          "title": "矩形固定薄膜的二维本征谱、模态正交与简并",
+          "normalized_shingle_similarity": 0.018239
+        },
+        {
+          "id": "E021",
+          "title": "接地与孤立中性导体球的 Kelvin 镜像、电荷重排及吸引力",
+          "normalized_shingle_similarity": 0.016506
+        },
+        {
+          "id": "T047",
+          "title": "平移谐势中的过阻尼布朗粒子、随机功与 Jarzynski 恒等式",
+          "normalized_shingle_similarity": 0.013384
+        },
+        {
+          "id": "Q020",
+          "title": "一维量子活塞的能级压力、绝热功与高温经典极限",
+          "normalized_shingle_similarity": 0.012088
+        },
+        {
+          "id": "Q017",
+          "title": "一维有限方势阱的偶奇束缚态、阈值数目与弱束缚渐近",
+          "normalized_shingle_similarity": 0.011166
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "W075",
+          "title": "缓变移动端点弦的绝热模态不变量、边界功率与多普勒交叉核验",
+          "normalized_shingle_similarity": 0.009778
+        },
+        {
+          "id": "E080",
+          "title": "Maxwell–Wagner界面极化的瞬态偶极、自由面电荷与介电反转",
+          "normalized_shingle_similarity": 0.008287
+        },
+        {
+          "id": "M079",
+          "title": "毛细管Lucas–Washburn浸润的黏性前沿、重力停滞与功率守恒",
+          "normalized_shingle_similarity": 0.006552
+        },
+        {
+          "id": "M084",
+          "title": "Hele–Shaw双黏性流体的Saffman–Taylor指进谱、毛细截止与增长极值",
+          "normalized_shingle_similarity": 0.005885
+        },
+        {
+          "id": "O076",
+          "title": "双束红失谐Doppler冷却的速度摩擦、反冲扩散与最低温度",
+          "normalized_shingle_similarity": 0.004894
+        }
+      ],
+      "candidate_core": "布朗有限区间吸收首达",
+      "documented_distinction": "吸收边界首达时间全分布，非谐阱协方差",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "T073",
+      "historical_top5": [
+        {
+          "id": "T020",
+          "title": "三维理想玻色气体的凝聚临界温度、热容和基态占据",
+          "normalized_shingle_similarity": 0.024758
+        },
+        {
+          "id": "T067",
+          "title": "理想气体恒温离心平衡的指数密度、总角动量与旋转自由能",
+          "normalized_shingle_similarity": 0.017337
+        },
+        {
+          "id": "T035",
+          "title": "二维理想玻色气体的粒子数积分与无有限温度凝聚",
+          "normalized_shingle_similarity": 0.016611
+        },
+        {
+          "id": "T050",
+          "title": "理想原子气体二聚反应的配分函数、解离平衡及压强",
+          "normalized_shingle_similarity": 0.015198
+        },
+        {
+          "id": "Q038",
+          "title": "三维简并费米气体的 Sommerfeld 低温热容与化学势偏移",
+          "normalized_shingle_similarity": 0.014996
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "T075",
+          "title": "一维Tonks硬杆气体的严格配分函数、可压缩性与绝热声速",
+          "normalized_shingle_similarity": 0.040614
+        },
+        {
+          "id": "T078",
+          "title": "有限错误率二态存储器的可逆Landauer擦除、热交换与自由能界",
+          "normalized_shingle_similarity": 0.017817
+        },
+        {
+          "id": "Q075",
+          "title": "热谐振子Wigner相空间分布、量子涨落、纯度与熵的严格一致性",
+          "normalized_shingle_similarity": 0.016492
+        },
+        {
+          "id": "T079",
+          "title": "二维各向异性谐阱理想玻色凝聚的多对数饱和、热容连续性与熵账本",
+          "normalized_shingle_similarity": 0.013369
+        },
+        {
+          "id": "T077",
+          "title": "二维电中性Dirac费米气的热激发、量子电容与共形状态方程",
+          "normalized_shingle_similarity": 0.012222
+        }
+      ],
+      "candidate_core": "稀薄量子气体维里展开",
+      "documented_distinction": "高温交换统计第二维里系数",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "T074",
+      "historical_top5": [
+        {
+          "id": "T017",
+          "title": "黑体光子气体的辐射压力、绝热膨胀与熵约束",
+          "normalized_shingle_similarity": 0.021464
+        },
+        {
+          "id": "T070",
+          "title": "灰色平行大气Eddington温度律、光学深度与辐射对流稳定判据",
+          "normalized_shingle_similarity": 0.019823
+        },
+        {
+          "id": "M062",
+          "title": "Schwarzschild时空圆轨道的ISCO、径向频率、光子球与双向频移",
+          "normalized_shingle_similarity": 0.016658
+        },
+        {
+          "id": "T039",
+          "title": "Planck 黑体光谱的频率峰值、总辐射能及波长峰位置",
+          "normalized_shingle_similarity": 0.013045
+        },
+        {
+          "id": "T031",
+          "title": "维里平衡自引力气体的负热容与 Kelvin–Helmholtz 收缩",
+          "normalized_shingle_similarity": 0.01065
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "M081",
+          "title": "连续激光光帆的相对论辐射制动因子、快度积分与能量流账本",
+          "normalized_shingle_similarity": 0.007448
+        },
+        {
+          "id": "O076",
+          "title": "双束红失谐Doppler冷却的速度摩擦、反冲扩散与最低温度",
+          "normalized_shingle_similarity": 0.006473
+        },
+        {
+          "id": "T078",
+          "title": "有限错误率二态存储器的可逆Landauer擦除、热交换与自由能界",
+          "normalized_shingle_similarity": 0.006144
+        },
+        {
+          "id": "M082",
+          "title": "轴对称挤压油膜的Reynolds压力、有限载荷排液律与黏性功率核验",
+          "normalized_shingle_similarity": 0.005942
+        },
+        {
+          "id": "E079",
+          "title": "倾斜旋转磁偶极的远场辐射、制动指数与自转周期演化",
+          "normalized_shingle_similarity": 0.00532
+        }
+      ],
+      "candidate_core": "Hawking黑洞负热容与蒸发",
+      "documented_distinction": "量子视界辐射、面积熵与M三次蒸发寿命",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "T075",
+      "historical_top5": [
+        {
+          "id": "T025",
+          "title": "二能级体系的布居反转、负绝对温度与熵最大点",
+          "normalized_shingle_similarity": 0.037189
+        },
+        {
+          "id": "T020",
+          "title": "三维理想玻色气体的凝聚临界温度、热容和基态占据",
+          "normalized_shingle_similarity": 0.025664
+        },
+        {
+          "id": "T042",
+          "title": "晶格气吸附位的巨正则配分函数、覆盖率涨落与等温响应",
+          "normalized_shingle_similarity": 0.024946
+        },
+        {
+          "id": "T038",
+          "title": "正则系综能量涨落、热容与大系统相对涨落缩放",
+          "normalized_shingle_similarity": 0.024839
+        },
+        {
+          "id": "T035",
+          "title": "二维理想玻色气体的粒子数积分与无有限温度凝聚",
+          "normalized_shingle_similarity": 0.024688
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "T073",
+          "title": "稀薄理想量子气体的第二维里系数、量子统计压强与熵修正",
+          "normalized_shingle_similarity": 0.040614
+        },
+        {
+          "id": "Q075",
+          "title": "热谐振子Wigner相空间分布、量子涨落、纯度与熵的严格一致性",
+          "normalized_shingle_similarity": 0.023463
+        },
+        {
+          "id": "T078",
+          "title": "有限错误率二态存储器的可逆Landauer擦除、热交换与自由能界",
+          "normalized_shingle_similarity": 0.020741
+        },
+        {
+          "id": "T077",
+          "title": "二维电中性Dirac费米气的热激发、量子电容与共形状态方程",
+          "normalized_shingle_similarity": 0.011179
+        },
+        {
+          "id": "T079",
+          "title": "二维各向异性谐阱理想玻色凝聚的多对数饱和、热容连续性与熵账本",
+          "normalized_shingle_similarity": 0.009171
+        }
+      ],
+      "candidate_core": "一维硬核不可穿透粒子在有序坐标变换下的精确统计力学；与先前van der Waals近似不同",
+      "documented_distinction": "一维硬核不可穿透粒子在有序坐标变换下的精确统计力学；与先前van der Waals近似不同",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "T076",
+      "historical_top5": [
+        {
+          "id": "T070",
+          "title": "灰色平行大气Eddington温度律、光学深度与辐射对流稳定判据",
+          "normalized_shingle_similarity": 0.013867
+        },
+        {
+          "id": "T028",
+          "title": "Einstein 量子固体的配分函数、热容和 Debye 模型差异",
+          "normalized_shingle_similarity": 0.008119
+        },
+        {
+          "id": "T065",
+          "title": "一维弹道声子热导量子、Landauer积分与双热库熵产生",
+          "normalized_shingle_similarity": 0.008027
+        },
+        {
+          "id": "M017",
+          "title": "匀速排气火箭在重力场中的精确速度、高度与燃尽极限",
+          "normalized_shingle_similarity": 0.005543
+        },
+        {
+          "id": "E052",
+          "title": "穿越外磁通的串联RLC闭环：感应电流、谐振相位及耗散守恒",
+          "normalized_shingle_similarity": 0.005523
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "T072",
+          "title": "有限区间布朗首达时间的后向方程、全分布谱与二阶矩",
+          "normalized_shingle_similarity": 0.004393
+        },
+        {
+          "id": "M082",
+          "title": "轴对称挤压油膜的Reynolds压力、有限载荷排液律与黏性功率核验",
+          "normalized_shingle_similarity": 0.004052
+        },
+        {
+          "id": "Q080",
+          "title": "正则化二维Dirac两能带的Berry曲率、整数Chern数与质量畴壁边缘模",
+          "normalized_shingle_similarity": 0.004027
+        },
+        {
+          "id": "O075",
+          "title": "相位匹配参量放大器的双模双曲增益、Manley–Rowe不变量与相敏压缩",
+          "normalized_shingle_similarity": 0.002968
+        },
+        {
+          "id": "E078",
+          "title": "无碰撞等离子体鞘层的Bohm声速判据、Sagdeev第一积分与壁面场",
+          "normalized_shingle_similarity": 0.002919
+        }
+      ],
+      "candidate_core": "空间分辨、角分辨的均温吸收发射辐射输运，区别于简单Stefan黑体表面辐射律",
+      "documented_distinction": "空间分辨、角分辨的均温吸收发射辐射输运，区别于简单Stefan黑体表面辐射律",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "T077",
+      "historical_top5": [
+        {
+          "id": "T046",
+          "title": "二维无质量玻色模的能量积分、辐射压与绝热面积律",
+          "normalized_shingle_similarity": 0.038639
+        },
+        {
+          "id": "T035",
+          "title": "二维理想玻色气体的粒子数积分与无有限温度凝聚",
+          "normalized_shingle_similarity": 0.03036
+        },
+        {
+          "id": "Q026",
+          "title": "二维零温自由费米气体的态密度、费米压与量子电容",
+          "normalized_shingle_similarity": 0.026421
+        },
+        {
+          "id": "T020",
+          "title": "三维理想玻色气体的凝聚临界温度、热容和基态占据",
+          "normalized_shingle_similarity": 0.022715
+        },
+        {
+          "id": "T042",
+          "title": "晶格气吸附位的巨正则配分函数、覆盖率涨落与等温响应",
+          "normalized_shingle_similarity": 0.018432
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "T073",
+          "title": "稀薄理想量子气体的第二维里系数、量子统计压强与熵修正",
+          "normalized_shingle_similarity": 0.012222
+        },
+        {
+          "id": "T075",
+          "title": "一维Tonks硬杆气体的严格配分函数、可压缩性与绝热声速",
+          "normalized_shingle_similarity": 0.011179
+        },
+        {
+          "id": "T079",
+          "title": "二维各向异性谐阱理想玻色凝聚的多对数饱和、热容连续性与熵账本",
+          "normalized_shingle_similarity": 0.010062
+        },
+        {
+          "id": "E078",
+          "title": "无碰撞等离子体鞘层的Bohm声速判据、Sagdeev第一积分与壁面场",
+          "normalized_shingle_similarity": 0.007279
+        },
+        {
+          "id": "T078",
+          "title": "有限错误率二态存储器的可逆Landauer擦除、热交换与自由能界",
+          "normalized_shingle_similarity": 0.006966
+        }
+      ],
+      "candidate_core": "二维无质量Dirac费米气在电中性点的热激发与可压缩性，区别于二次色散自由费米气",
+      "documented_distinction": "二维无质量Dirac费米气在电中性点的热激发与可压缩性，区别于二次色散自由费米气",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "T078",
+      "historical_top5": [
+        {
+          "id": "T069",
+          "title": "双态详细平衡Markov热动力学的精确驰豫、相对熵与涨落关联",
+          "normalized_shingle_similarity": 0.019874
+        },
+        {
+          "id": "T056",
+          "title": "全连接伊辛平均场的自洽磁化、临界指数与热容跃变",
+          "normalized_shingle_similarity": 0.015838
+        },
+        {
+          "id": "T025",
+          "title": "二能级体系的布居反转、负绝对温度与熵最大点",
+          "normalized_shingle_similarity": 0.015169
+        },
+        {
+          "id": "T040",
+          "title": "非等距三能级体系的配分函数、Schottky 热容与高温涨落",
+          "normalized_shingle_similarity": 0.014656
+        },
+        {
+          "id": "T063",
+          "title": "布朗谐阱温度骤变的Ornstein–Uhlenbeck弛豫、热量与熵产生",
+          "normalized_shingle_similarity": 0.013903
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "T075",
+          "title": "一维Tonks硬杆气体的严格配分函数、可压缩性与绝热声速",
+          "normalized_shingle_similarity": 0.020741
+        },
+        {
+          "id": "T073",
+          "title": "稀薄理想量子气体的第二维里系数、量子统计压强与熵修正",
+          "normalized_shingle_similarity": 0.017817
+        },
+        {
+          "id": "T077",
+          "title": "二维电中性Dirac费米气的热激发、量子电容与共形状态方程",
+          "normalized_shingle_similarity": 0.006966
+        },
+        {
+          "id": "Q075",
+          "title": "热谐振子Wigner相空间分布、量子涨落、纯度与熵的严格一致性",
+          "normalized_shingle_similarity": 0.006684
+        },
+        {
+          "id": "T074",
+          "title": "Schwarzschild黑洞的负热容、Stefan近似蒸发与三次寿命标度",
+          "normalized_shingle_similarity": 0.006144
+        }
+      ],
+      "candidate_core": "单比特可逆擦除的偏置操纵与信息熵转移，非Landauer声子弹道热导",
+      "documented_distinction": "单比特可逆擦除的偏置操纵与信息熵转移，非Landauer声子弹道热导",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "T079",
+      "historical_top5": [
+        {
+          "id": "T020",
+          "title": "三维理想玻色气体的凝聚临界温度、热容和基态占据",
+          "normalized_shingle_similarity": 0.031058
+        },
+        {
+          "id": "T035",
+          "title": "二维理想玻色气体的粒子数积分与无有限温度凝聚",
+          "normalized_shingle_similarity": 0.025396
+        },
+        {
+          "id": "T065",
+          "title": "一维弹道声子热导量子、Landauer积分与双热库熵产生",
+          "normalized_shingle_similarity": 0.014596
+        },
+        {
+          "id": "T025",
+          "title": "二能级体系的布居反转、负绝对温度与熵最大点",
+          "normalized_shingle_similarity": 0.012172
+        },
+        {
+          "id": "Q038",
+          "title": "三维简并费米气体的 Sommerfeld 低温热容与化学势偏移",
+          "normalized_shingle_similarity": 0.012094
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "T073",
+          "title": "稀薄理想量子气体的第二维里系数、量子统计压强与熵修正",
+          "normalized_shingle_similarity": 0.013369
+        },
+        {
+          "id": "Q075",
+          "title": "热谐振子Wigner相空间分布、量子涨落、纯度与熵的严格一致性",
+          "normalized_shingle_similarity": 0.012068
+        },
+        {
+          "id": "T077",
+          "title": "二维电中性Dirac费米气的热激发、量子电容与共形状态方程",
+          "normalized_shingle_similarity": 0.010062
+        },
+        {
+          "id": "T075",
+          "title": "一维Tonks硬杆气体的严格配分函数、可压缩性与绝热声速",
+          "normalized_shingle_similarity": 0.009171
+        },
+        {
+          "id": "T078",
+          "title": "有限错误率二态存储器的可逆Landauer擦除、热交换与自由能界",
+          "normalized_shingle_similarity": 0.004572
+        }
+      ],
+      "candidate_core": "二维各向异性谐阱理想玻色激发饱和及热容连续性",
+      "documented_distinction": "谐阱线性态密度产生有限Tc与Li2饱和，并求Li3热容连续性",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "W072",
+      "historical_top5": [
+        {
+          "id": "W040",
+          "title": "交替弹簧常数单质量链的双支色散和布里渊带隙",
+          "normalized_shingle_similarity": 0.039671
+        },
+        {
+          "id": "W011",
+          "title": "双原子弹簧链的色散关系、声学支和带隙",
+          "normalized_shingle_similarity": 0.036125
+        },
+        {
+          "id": "W049",
+          "title": "质量交替一维原子链的声学、光学色散分支与禁带",
+          "normalized_shingle_similarity": 0.034364
+        },
+        {
+          "id": "W037",
+          "title": "双原子一维链的声学支、光学支和禁带宽度",
+          "normalized_shingle_similarity": 0.034082
+        },
+        {
+          "id": "W027",
+          "title": "具有基底弹簧的离散晶格频隙、倏逝模及连续极限",
+          "normalized_shingle_similarity": 0.031388
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "W079",
+          "title": "FPUT–β非线性晶格的谐波平衡硬化色散、群速与严格能量守恒",
+          "normalized_shingle_similarity": 0.007577
+        },
+        {
+          "id": "W073",
+          "title": "非互易一阶谐振链的非厄米趋肤模、边界谱与稳定阈值分裂",
+          "normalized_shingle_similarity": 0.006707
+        },
+        {
+          "id": "Q077",
+          "title": "自旋半反绝热驱动的精确跟踪哈密顿量、控制能耗与几何相位",
+          "normalized_shingle_similarity": 0.005537
+        },
+        {
+          "id": "M080",
+          "title": "轨道重力梯度哑铃的姿态锁定、椭圆周期与角动量交换",
+          "normalized_shingle_similarity": 0.004824
+        },
+        {
+          "id": "T074",
+          "title": "Schwarzschild黑洞的负热容、Stefan近似蒸发与三次寿命标度",
+          "normalized_shingle_similarity": 0.003239
+        }
+      ],
+      "candidate_core": "局域共振质量-质量晶格",
+      "documented_distinction": "频率依赖负有效质量禁带，内部振子",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "W073",
+      "historical_top5": [
+        {
+          "id": "T061",
+          "title": "一维伊辛环的转移矩阵严格解、关联长度与零场比热",
+          "normalized_shingle_similarity": 0.014552
+        },
+        {
+          "id": "Q047",
+          "title": "SSH 二聚化量子链的拓扑能隙、绕数与半无限边界零模",
+          "normalized_shingle_similarity": 0.014377
+        },
+        {
+          "id": "Q071",
+          "title": "侧耦合量子点Fano反共振的精确晶格散射、束缚态与概率流守恒",
+          "normalized_shingle_similarity": 0.009578
+        },
+        {
+          "id": "E074",
+          "title": "Stoner–Wohlfarth单畴磁体的翻转星形线、磁滞阈值与热激活势垒",
+          "normalized_shingle_similarity": 0.007647
+        },
+        {
+          "id": "M049",
+          "title": "Kapitza 高频振动支点对倒立摆的动态稳定化",
+          "normalized_shingle_similarity": 0.00738
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "Q081",
+          "title": "四面体SIC量子测量的Bloch态层析、协方差与Fisher信息效率",
+          "normalized_shingle_similarity": 0.009884
+        },
+        {
+          "id": "W079",
+          "title": "FPUT–β非线性晶格的谐波平衡硬化色散、群速与严格能量守恒",
+          "normalized_shingle_similarity": 0.007738
+        },
+        {
+          "id": "W072",
+          "title": "内禀谐振质量链的频率依赖有效惯量、局域共振禁带与能量正性",
+          "normalized_shingle_similarity": 0.006707
+        },
+        {
+          "id": "W076",
+          "title": "Kelvin–Voigt应变率耗散弦的复色散、过阻尼分支与严格耗散泛函",
+          "normalized_shingle_similarity": 0.004675
+        },
+        {
+          "id": "Q077",
+          "title": "自旋半反绝热驱动的精确跟踪哈密顿量、控制能耗与几何相位",
+          "normalized_shingle_similarity": 0.00377
+        }
+      ],
+      "candidate_core": "主动非互易谐振链趋肤效应",
+      "documented_distinction": "非互易非布洛赫开放边界指数趋肤",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "W074",
+      "historical_top5": [
+        {
+          "id": "M058",
+          "title": "铰支弹性梁的欧拉屈曲载荷、Rayleigh 商与第一模态选择",
+          "normalized_shingle_similarity": 0.047303
+        },
+        {
+          "id": "W021",
+          "title": "受压 Euler–Bernoulli 梁的动态屈曲阈值、特征谱与软化",
+          "normalized_shingle_similarity": 0.045673
+        },
+        {
+          "id": "W042",
+          "title": "悬臂 Euler–Bernoulli 梁的双曲三角特征式与能量正交",
+          "normalized_shingle_similarity": 0.038537
+        },
+        {
+          "id": "M026",
+          "title": "恒速收短绳长的摆动、变参数力学与外部做功",
+          "normalized_shingle_similarity": 0.029959
+        },
+        {
+          "id": "W056",
+          "title": "端部转动惯量与扭转弹簧耦合杆的非标准本征谱和广义正交",
+          "normalized_shingle_similarity": 0.02829
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "W076",
+          "title": "Kelvin–Voigt应变率耗散弦的复色散、过阻尼分支与严格耗散泛函",
+          "normalized_shingle_similarity": 0.039615
+        },
+        {
+          "id": "W077",
+          "title": "Kirchhoff–Love矩形薄板的双指标模态、频率简并与弯曲能量守恒",
+          "normalized_shingle_similarity": 0.017846
+        },
+        {
+          "id": "W075",
+          "title": "缓变移动端点弦的绝热模态不变量、边界功率与多普勒交叉核验",
+          "normalized_shingle_similarity": 0.012623
+        },
+        {
+          "id": "Q075",
+          "title": "热谐振子Wigner相空间分布、量子涨落、纯度与熵的严格一致性",
+          "normalized_shingle_similarity": 0.005277
+        },
+        {
+          "id": "E078",
+          "title": "无碰撞等离子体鞘层的Bohm声速判据、Sagdeev第一积分与壁面场",
+          "normalized_shingle_similarity": 0.004874
+        }
+      ],
+      "candidate_core": "Rayleigh梁转动惯性弯曲波",
+      "documented_distinction": "截面旋转惯性造成高波数线性色散",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "W075",
+      "historical_top5": [
+        {
+          "id": "W031",
+          "title": "矩形固定薄膜的二维本征谱、模态正交与简并",
+          "normalized_shingle_similarity": 0.017263
+        },
+        {
+          "id": "Q020",
+          "title": "一维量子活塞的能级压力、绝热功与高温经典极限",
+          "normalized_shingle_similarity": 0.014302
+        },
+        {
+          "id": "W041",
+          "title": "分布粘滞阻尼固定弦的模态驱动与平均功率共振",
+          "normalized_shingle_similarity": 0.010663
+        },
+        {
+          "id": "W052",
+          "title": "匀速运动介质中一维声波的多普勒色散及双向群速",
+          "normalized_shingle_similarity": 0.010453
+        },
+        {
+          "id": "W057",
+          "title": "KdV孤立波的精确sech平方解、三个守恒积分与线性色散",
+          "normalized_shingle_similarity": 0.010161
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "W076",
+          "title": "Kelvin–Voigt应变率耗散弦的复色散、过阻尼分支与严格耗散泛函",
+          "normalized_shingle_similarity": 0.028725
+        },
+        {
+          "id": "W074",
+          "title": "Rayleigh旋转惯性梁的双尺度弯曲色散、群速度与正定能量",
+          "normalized_shingle_similarity": 0.012623
+        },
+        {
+          "id": "T072",
+          "title": "有限区间布朗首达时间的后向方程、全分布谱与二阶矩",
+          "normalized_shingle_similarity": 0.009778
+        },
+        {
+          "id": "Q075",
+          "title": "热谐振子Wigner相空间分布、量子涨落、纯度与熵的严格一致性",
+          "normalized_shingle_similarity": 0.003015
+        },
+        {
+          "id": "Q078",
+          "title": "双玻色子Bose–Hubbard二聚体的精确缀饰谱、双占据振荡与站点纠缠",
+          "normalized_shingle_similarity": 0.002549
+        }
+      ],
+      "candidate_core": "缓慢移动Dirichlet端点弦的绝热作用量与边界做功",
+      "documented_distinction": "新题是时变长度边界、模态绝热作用量、运动端点做功与反射多普勒交叉核验；不是均匀运动介质对流色散",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "W076",
+      "historical_top5": [
+        {
+          "id": "W057",
+          "title": "KdV孤立波的精确sech平方解、三个守恒积分与线性色散",
+          "normalized_shingle_similarity": 0.020698
+        },
+        {
+          "id": "T064",
+          "title": "Cattaneo有限速热输运的双分支色散、局部熵产生与波动极限",
+          "normalized_shingle_similarity": 0.020642
+        },
+        {
+          "id": "W025",
+          "title": "均匀运动介质中的对流波方程、双向多普勒色散与负频分支",
+          "normalized_shingle_similarity": 0.02058
+        },
+        {
+          "id": "W046",
+          "title": "两根弹性耦合弦的声学与光学混合支及反交叉谱",
+          "normalized_shingle_similarity": 0.020544
+        },
+        {
+          "id": "W020",
+          "title": "黏滞阻尼弦中的复波数、空间衰减与边界能流",
+          "normalized_shingle_similarity": 0.019384
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "W074",
+          "title": "Rayleigh旋转惯性梁的双尺度弯曲色散、群速度与正定能量",
+          "normalized_shingle_similarity": 0.039615
+        },
+        {
+          "id": "W075",
+          "title": "缓变移动端点弦的绝热模态不变量、边界功率与多普勒交叉核验",
+          "normalized_shingle_similarity": 0.028725
+        },
+        {
+          "id": "E082",
+          "title": "横向均匀磁场Hartmann管道流的磁阻、边界层与焦耳功率账本",
+          "normalized_shingle_similarity": 0.009936
+        },
+        {
+          "id": "M084",
+          "title": "Hele–Shaw双黏性流体的Saffman–Taylor指进谱、毛细截止与增长极值",
+          "normalized_shingle_similarity": 0.006876
+        },
+        {
+          "id": "M082",
+          "title": "轴对称挤压油膜的Reynolds压力、有限载荷排液律与黏性功率核验",
+          "normalized_shingle_similarity": 0.005599
+        }
+      ],
+      "candidate_core": "Kelvin–Voigt空间应变率粘弹性导致k平方衰减和高波数双弛豫支，区别于已有局域速度黏滞阻尼弦",
+      "documented_distinction": "Kelvin–Voigt空间应变率粘弹性导致k平方衰减和高波数双弛豫支，区别于已有局域速度黏滞阻尼弦",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "W077",
+      "historical_top5": [
+        {
+          "id": "W070",
+          "title": "正交各向异性薄板弯曲波的方向色散、群速偏折与双指标本征谱",
+          "normalized_shingle_similarity": 0.066367
+        },
+        {
+          "id": "W031",
+          "title": "矩形固定薄膜的二维本征谱、模态正交与简并",
+          "normalized_shingle_similarity": 0.023297
+        },
+        {
+          "id": "E043",
+          "title": "互电容双节点的对称反对称衰减模与最终热耗",
+          "normalized_shingle_similarity": 0.016278
+        },
+        {
+          "id": "M048",
+          "title": "各向异性旋转二维振子的科里奥利模态避免交叉",
+          "normalized_shingle_similarity": 0.013048
+        },
+        {
+          "id": "Q057",
+          "title": "零温振幅阻尼量子通道的Kraus表示、Lindblad耗散与纠缠负性",
+          "normalized_shingle_similarity": 0.012469
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "W074",
+          "title": "Rayleigh旋转惯性梁的双尺度弯曲色散、群速度与正定能量",
+          "normalized_shingle_similarity": 0.017846
+        },
+        {
+          "id": "E083",
+          "title": "无电阻电子磁流体Hall哨声波的螺旋本征模、群速与磁能守恒",
+          "normalized_shingle_similarity": 0.012169
+        },
+        {
+          "id": "O075",
+          "title": "相位匹配参量放大器的双模双曲增益、Manley–Rowe不变量与相敏压缩",
+          "normalized_shingle_similarity": 0.007504
+        },
+        {
+          "id": "E078",
+          "title": "无碰撞等离子体鞘层的Bohm声速判据、Sagdeev第一积分与壁面场",
+          "normalized_shingle_similarity": 0.007382
+        },
+        {
+          "id": "Q079",
+          "title": "PT对称增益损耗量子二聚体的例外点、广义度量与非幺正规范",
+          "normalized_shingle_similarity": 0.007346
+        }
+      ],
+      "candidate_core": "二维Kirchhoff-Love弯曲板的四阶空间本征问题，不是张紧薄膜或一维Rayleigh梁",
+      "documented_distinction": "二维Kirchhoff-Love弯曲板的四阶空间本征问题，不是张紧薄膜或一维Rayleigh梁",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "W078",
+      "historical_top5": [
+        {
+          "id": "O064",
+          "title": "因果Lorentz光学色散的复极化率、吸收峰与振子强度和则",
+          "normalized_shingle_similarity": 0.015436
+        },
+        {
+          "id": "M025",
+          "title": "傅科摆的地球自转科里奥利频率分裂与进动",
+          "normalized_shingle_similarity": 0.0149
+        },
+        {
+          "id": "E064",
+          "title": "相对论同步辐射功率、缓慢冷却与回旋半径收缩",
+          "normalized_shingle_similarity": 0.013908
+        },
+        {
+          "id": "O038",
+          "title": "Rayleigh 小介电球的感应偶极散射截面与波长四次反比",
+          "normalized_shingle_similarity": 0.012362
+        },
+        {
+          "id": "W038",
+          "title": "阻尼受迫谐振子的振幅共振和功率共振分离",
+          "normalized_shingle_similarity": 0.012013
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "E079",
+          "title": "倾斜旋转磁偶极的远场辐射、制动指数与自转周期演化",
+          "normalized_shingle_similarity": 0.011815
+        },
+        {
+          "id": "E078",
+          "title": "无碰撞等离子体鞘层的Bohm声速判据、Sagdeev第一积分与壁面场",
+          "normalized_shingle_similarity": 0.009167
+        },
+        {
+          "id": "E085",
+          "title": "磁旋不稳定MRI的四阶本征色散、Kepler最快增长率及剪切能抽取",
+          "normalized_shingle_similarity": 0.009161
+        },
+        {
+          "id": "E077",
+          "title": "理想磁流体受控线性剪切中的磁通冻结、磁能放大与Maxwell应力功",
+          "normalized_shingle_similarity": 0.009115
+        },
+        {
+          "id": "O078",
+          "title": "自由电子Thomson散射的偏振张量、总截面与纵向辐射动量",
+          "normalized_shingle_similarity": 0.006039
+        }
+      ],
+      "candidate_core": "单电荷振子的辐射反作用三阶方程及Schott修正账本，与线性黏性阻尼模型不同",
+      "documented_distinction": "单电荷振子的辐射反作用三阶方程及Schott修正账本，与线性黏性阻尼模型不同",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "W079",
+      "historical_top5": [
+        {
+          "id": "W040",
+          "title": "交替弹簧常数单质量链的双支色散和布里渊带隙",
+          "normalized_shingle_similarity": 0.014978
+        },
+        {
+          "id": "W049",
+          "title": "质量交替一维原子链的声学、光学色散分支与禁带",
+          "normalized_shingle_similarity": 0.012974
+        },
+        {
+          "id": "W044",
+          "title": "周期弹簧质点环的离散傅里叶模态、简并与局域冲量",
+          "normalized_shingle_similarity": 0.012074
+        },
+        {
+          "id": "Q031",
+          "title": "二维电子 Landau 量子化、磁通轨道简并及整数霍尔电导",
+          "normalized_shingle_similarity": 0.012035
+        },
+        {
+          "id": "M061",
+          "title": "非完整约束Chaplygin雪橇的精确动力学、渐近稳定性与尖点轨迹",
+          "normalized_shingle_similarity": 0.011516
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "W073",
+          "title": "非互易一阶谐振链的非厄米趋肤模、边界谱与稳定阈值分裂",
+          "normalized_shingle_similarity": 0.007738
+        },
+        {
+          "id": "W072",
+          "title": "内禀谐振质量链的频率依赖有效惯量、局域共振禁带与能量正性",
+          "normalized_shingle_similarity": 0.007577
+        },
+        {
+          "id": "W077",
+          "title": "Kirchhoff–Love矩形薄板的双指标模态、频率简并与弯曲能量守恒",
+          "normalized_shingle_similarity": 0.005499
+        },
+        {
+          "id": "Q081",
+          "title": "四面体SIC量子测量的Bloch态层析、协方差与Fisher信息效率",
+          "normalized_shingle_similarity": 0.004466
+        },
+        {
+          "id": "M080",
+          "title": "轨道重力梯度哑铃的姿态锁定、椭圆周期与角动量交换",
+          "normalized_shingle_similarity": 0.004452
+        }
+      ],
+      "candidate_core": "FPUT-beta晶格的幅度频移与第三谐波",
+      "documented_distinction": "离散四次键势谐波平衡及严格离散Hamilton，与已收录连续孤子不同",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "O074",
+      "historical_top5": [
+        {
+          "id": "O059",
+          "title": "空间变轴q板的几何相位、偏振轨道角动量转换与光学力矩",
+          "normalized_shingle_similarity": 0.029456
+        },
+        {
+          "id": "Q043",
+          "title": "缓变旋转磁场中的自旋半 Berry 相位与干涉相位",
+          "normalized_shingle_similarity": 0.029397
+        },
+        {
+          "id": "E040",
+          "title": "真空电磁辐射的线性与圆偏振 Stokes 参数及能流",
+          "normalized_shingle_similarity": 0.019103
+        },
+        {
+          "id": "O015",
+          "title": "四分之一波片对椭圆偏振的转换及分析器旋转测量",
+          "normalized_shingle_similarity": 0.016568
+        },
+        {
+          "id": "O051",
+          "title": "旋转四分之一波片的 Jones 矩阵、圆偏振产生及延迟误差",
+          "normalized_shingle_similarity": 0.013598
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "Q077",
+          "title": "自旋半反绝热驱动的精确跟踪哈密顿量、控制能耗与几何相位",
+          "normalized_shingle_similarity": 0.013902
+        },
+        {
+          "id": "O080",
+          "title": "互易手性介质的天然旋光、群延迟退偏与往返消旋核验",
+          "normalized_shingle_similarity": 0.007756
+        },
+        {
+          "id": "Q080",
+          "title": "正则化二维Dirac两能带的Berry曲率、整数Chern数与质量畴壁边缘模",
+          "normalized_shingle_similarity": 0.006442
+        },
+        {
+          "id": "O078",
+          "title": "自由电子Thomson散射的偏振张量、总截面与纵向辐射动量",
+          "normalized_shingle_similarity": 0.005191
+        },
+        {
+          "id": "O081",
+          "title": "一次内反射球滴彩虹的驻相焦散、截面平方根发散与Airy均匀化",
+          "normalized_shingle_similarity": 0.004937
+        }
+      ],
+      "candidate_core": "Poincare球几何相位",
+      "documented_distinction": "闭路偏振态曲率与规范拓扑",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "O075",
+      "historical_top5": [
+        {
+          "id": "O027",
+          "title": "梯度折射率 GRIN 介质的旁轴轨线、正弦传输矩阵与聚焦",
+          "normalized_shingle_similarity": 0.029783
+        },
+        {
+          "id": "O062",
+          "title": "Kerr驱动光腔的非线性双稳态、折叠阈值与输入输出守恒",
+          "normalized_shingle_similarity": 0.024939
+        },
+        {
+          "id": "Q068",
+          "title": "双模压缩真空的EPR方差、纠缠熵与部分转置对数负性",
+          "normalized_shingle_similarity": 0.014722
+        },
+        {
+          "id": "M048",
+          "title": "各向异性旋转二维振子的科里奥利模态避免交叉",
+          "normalized_shingle_similarity": 0.01449
+        },
+        {
+          "id": "O030",
+          "title": "二次谐波产生的相位匹配、相干长度与转换强度 sinc 平方",
+          "normalized_shingle_similarity": 0.014107
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "W077",
+          "title": "Kirchhoff–Love矩形薄板的双指标模态、频率简并与弯曲能量守恒",
+          "normalized_shingle_similarity": 0.007504
+        },
+        {
+          "id": "Q079",
+          "title": "PT对称增益损耗量子二聚体的例外点、广义度量与非幺正规范",
+          "normalized_shingle_similarity": 0.006527
+        },
+        {
+          "id": "E077",
+          "title": "理想磁流体受控线性剪切中的磁通冻结、磁能放大与Maxwell应力功",
+          "normalized_shingle_similarity": 0.006522
+        },
+        {
+          "id": "Q078",
+          "title": "双玻色子Bose–Hubbard二聚体的精确缀饰谱、双占据振荡与站点纠缠",
+          "normalized_shingle_similarity": 0.006003
+        },
+        {
+          "id": "E084",
+          "title": "双载流子Drude磁输运的非饱和磁阻、Hall符号反转及熵产生",
+          "normalized_shingle_similarity": 0.005021
+        }
+      ],
+      "candidate_core": "参量放大双曲增益",
+      "documented_distinction": "非简并信号闲频双模耦合与光子数差",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "O076",
+      "historical_top5": [
+        {
+          "id": "T047",
+          "title": "平移谐势中的过阻尼布朗粒子、随机功与 Jarzynski 恒等式",
+          "normalized_shingle_similarity": 0.023537
+        },
+        {
+          "id": "T063",
+          "title": "布朗谐阱温度骤变的Ornstein–Uhlenbeck弛豫、热量与熵产生",
+          "normalized_shingle_similarity": 0.022783
+        },
+        {
+          "id": "Q040",
+          "title": "自由粒子高斯波包的量子扩散、概率流与最小不确定性",
+          "normalized_shingle_similarity": 0.009695
+        },
+        {
+          "id": "W038",
+          "title": "阻尼受迫谐振子的振幅共振和功率共振分离",
+          "normalized_shingle_similarity": 0.006393
+        },
+        {
+          "id": "T039",
+          "title": "Planck 黑体光谱的频率峰值、总辐射能及波长峰位置",
+          "normalized_shingle_similarity": 0.005663
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "T074",
+          "title": "Schwarzschild黑洞的负热容、Stefan近似蒸发与三次寿命标度",
+          "normalized_shingle_similarity": 0.006473
+        },
+        {
+          "id": "T072",
+          "title": "有限区间布朗首达时间的后向方程、全分布谱与二阶矩",
+          "normalized_shingle_similarity": 0.004894
+        },
+        {
+          "id": "M083",
+          "title": "平板Poiseuille剪切流的Taylor–Aris有效弥散及横向尺度分离",
+          "normalized_shingle_similarity": 0.004435
+        },
+        {
+          "id": "O078",
+          "title": "自由电子Thomson散射的偏振张量、总截面与纵向辐射动量",
+          "normalized_shingle_similarity": 0.003213
+        },
+        {
+          "id": "M080",
+          "title": "轨道重力梯度哑铃的姿态锁定、椭圆周期与角动量交换",
+          "normalized_shingle_similarity": 0.003213
+        }
+      ],
+      "candidate_core": "原子Doppler冷却与反冲扩散",
+      "documented_distinction": "速度依赖原子散射摩擦与扩散温度下界",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "O077",
+      "historical_top5": [
+        {
+          "id": "Q062",
+          "title": "单光子相位量子Fisher信息、擦除损失与NOON资源界",
+          "normalized_shingle_similarity": 0.042671
+        },
+        {
+          "id": "O053",
+          "title": "Michelson干涉仪移动反射镜的相位、条纹灵敏度与泊松噪声",
+          "normalized_shingle_similarity": 0.022559
+        },
+        {
+          "id": "Q059",
+          "title": "单模腔Jaynes--Cummings缀饰谱、量子塌缩复苏与色散纠缠",
+          "normalized_shingle_similarity": 0.012026
+        },
+        {
+          "id": "O024",
+          "title": "Michelson 干涉仪高斯光谱的时间相干包络、可见度与分辨率",
+          "normalized_shingle_similarity": 0.011171
+        },
+        {
+          "id": "Q073",
+          "title": "量子弱值放大的近正交后选择、Gaussian指针精确正则化与信息代价",
+          "normalized_shingle_similarity": 0.009328
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "Q081",
+          "title": "四面体SIC量子测量的Bloch态层析、协方差与Fisher信息效率",
+          "normalized_shingle_similarity": 0.021646
+        },
+        {
+          "id": "O081",
+          "title": "一次内反射球滴彩虹的驻相焦散、截面平方根发散与Airy均匀化",
+          "normalized_shingle_similarity": 0.002736
+        },
+        {
+          "id": "T077",
+          "title": "二维电中性Dirac费米气的热激发、量子电容与共形状态方程",
+          "normalized_shingle_similarity": 0.002628
+        },
+        {
+          "id": "O074",
+          "title": "偏振Poincaré球上的Pancharatnam–Berry曲率、闭路相位与干涉可观测量",
+          "normalized_shingle_similarity": 0.001581
+        },
+        {
+          "id": "O078",
+          "title": "自由电子Thomson散射的偏振张量、总截面与纵向辐射动量",
+          "normalized_shingle_similarity": 0.001439
+        }
+      ],
+      "candidate_core": "相干态双端口计数似然与最优相位估计；不同于Sagnac几何面积律、单光子量子Fisher计量",
+      "documented_distinction": "相干态双端口计数似然与最优相位估计；不同于Sagnac几何面积律、单光子量子Fisher计量",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "O078",
+      "historical_top5": [
+        {
+          "id": "E039",
+          "title": "平面电磁波的 Maxwell 应力、辐射压与反射动量",
+          "normalized_shingle_similarity": 0.014342
+        },
+        {
+          "id": "O038",
+          "title": "Rayleigh 小介电球的感应偶极散射截面与波长四次反比",
+          "normalized_shingle_similarity": 0.012896
+        },
+        {
+          "id": "T015",
+          "title": "范德瓦耳斯气体的低压焦耳—汤姆孙系数与反转温度",
+          "normalized_shingle_similarity": 0.008778
+        },
+        {
+          "id": "O015",
+          "title": "四分之一波片对椭圆偏振的转换及分析器旋转测量",
+          "normalized_shingle_similarity": 0.008377
+        },
+        {
+          "id": "T032",
+          "title": "范德瓦耳斯气体低压 Joule–Thomson 系数及反转温度",
+          "normalized_shingle_similarity": 0.008143
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "E079",
+          "title": "倾斜旋转磁偶极的远场辐射、制动指数与自转周期演化",
+          "normalized_shingle_similarity": 0.008803
+        },
+        {
+          "id": "O081",
+          "title": "一次内反射球滴彩虹的驻相焦散、截面平方根发散与Airy均匀化",
+          "normalized_shingle_similarity": 0.007489
+        },
+        {
+          "id": "W078",
+          "title": "Abraham–Lorentz自辐射振子的跑逸根、降阶阻尼与Schott能量守恒",
+          "normalized_shingle_similarity": 0.006039
+        },
+        {
+          "id": "O080",
+          "title": "互易手性介质的天然旋光、群延迟退偏与往返消旋核验",
+          "normalized_shingle_similarity": 0.005648
+        },
+        {
+          "id": "O074",
+          "title": "偏振Poincaré球上的Pancharatnam–Berry曲率、闭路相位与干涉可观测量",
+          "normalized_shingle_similarity": 0.005191
+        }
+      ],
+      "candidate_core": "自由电子经典Thomson散射的矢量偏振截面及受力，不是介质小颗粒Rayleigh频散偶极",
+      "documented_distinction": "自由电子经典Thomson散射的矢量偏振截面及受力，不是介质小颗粒Rayleigh频散偶极",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "O079",
+      "historical_top5": [
+        {
+          "id": "O066",
+          "title": "相干激光散斑的复高斯场、Siegert关系与多视角对比度",
+          "normalized_shingle_similarity": 0.109242
+        },
+        {
+          "id": "O049",
+          "title": "高斯频谱双束干涉的复相干度、条纹可见度与相干时间",
+          "normalized_shingle_similarity": 0.008796
+        },
+        {
+          "id": "E036",
+          "title": "互感耦合双电感回路的对称模、能量正定与非振荡衰减",
+          "normalized_shingle_similarity": 0.008516
+        },
+        {
+          "id": "M059",
+          "title": "三轴刚体中间轴失稳、能量椭球与精确分界轨道",
+          "normalized_shingle_similarity": 0.008312
+        },
+        {
+          "id": "E075",
+          "title": "各向异性形状介电椭球的退极化张量、导体极限与电场取向力矩",
+          "normalized_shingle_similarity": 0.007041
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "Q078",
+          "title": "双玻色子Bose–Hubbard二聚体的精确缀饰谱、双占据振荡与站点纠缠",
+          "normalized_shingle_similarity": 0.005424
+        },
+        {
+          "id": "Q076",
+          "title": "Dirac–Coulomb精细结构的四阶展开、角动量劈裂与临界核电荷",
+          "normalized_shingle_similarity": 0.00424
+        },
+        {
+          "id": "M077",
+          "title": "Bingham屈服流体平板压驱流的塞状核、非线性流量与耗散恒等式",
+          "normalized_shingle_similarity": 0.002975
+        },
+        {
+          "id": "E078",
+          "title": "无碰撞等离子体鞘层的Bohm声速判据、Sagdeev第一积分与壁面场",
+          "normalized_shingle_similarity": 0.002963
+        },
+        {
+          "id": "Q081",
+          "title": "四面体SIC量子测量的Bloch态层析、协方差与Fisher信息效率",
+          "normalized_shingle_similarity": 0.002937
+        }
+      ],
+      "candidate_core": "随机独立波元相位导致的强度统计与空间相关，非确定性干涉或光子散粒噪声",
+      "documented_distinction": "随机独立波元相位导致的强度统计与空间相关，非确定性干涉或光子散粒噪声",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "O080",
+      "historical_top5": [
+        {
+          "id": "O051",
+          "title": "旋转四分之一波片的 Jones 矩阵、圆偏振产生及延迟误差",
+          "normalized_shingle_similarity": 0.056867
+        },
+        {
+          "id": "E040",
+          "title": "真空电磁辐射的线性与圆偏振 Stokes 参数及能流",
+          "normalized_shingle_similarity": 0.032907
+        },
+        {
+          "id": "E061",
+          "title": "冷磁化等离子体的圆偏振本征模、Faraday旋转与差分群时延",
+          "normalized_shingle_similarity": 0.022494
+        },
+        {
+          "id": "E062",
+          "title": "二维霍尔电导薄层的电磁边界散射、偏振旋转、耗散极值与基底效应",
+          "normalized_shingle_similarity": 0.02005
+        },
+        {
+          "id": "O036",
+          "title": "双折射波片的 Jones 演化、四分之一波圆偏振和检偏强度",
+          "normalized_shingle_similarity": 0.01883
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "E083",
+          "title": "无电阻电子磁流体Hall哨声波的螺旋本征模、群速与磁能守恒",
+          "normalized_shingle_similarity": 0.011778
+        },
+        {
+          "id": "O074",
+          "title": "偏振Poincaré球上的Pancharatnam–Berry曲率、闭路相位与干涉可观测量",
+          "normalized_shingle_similarity": 0.007756
+        },
+        {
+          "id": "O078",
+          "title": "自由电子Thomson散射的偏振张量、总截面与纵向辐射动量",
+          "normalized_shingle_similarity": 0.005648
+        },
+        {
+          "id": "E081",
+          "title": "Sweet–Parker电阻磁重联层的质量通量、Alfvén出流与Lundquist缩放",
+          "normalized_shingle_similarity": 0.004784
+        },
+        {
+          "id": "E082",
+          "title": "横向均匀磁场Hartmann管道流的磁阻、边界层与焦耳功率账本",
+          "normalized_shingle_similarity": 0.004023
+        }
+      ],
+      "candidate_core": "互易光学活性手性介质的往返消旋和群延迟部分偏振，相别于磁致Faraday旋转",
+      "documented_distinction": "互易光学活性手性介质的往返消旋和群延迟部分偏振，相别于磁致Faraday旋转",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "O081",
+      "historical_top5": [
+        {
+          "id": "O017",
+          "title": "色散棱镜的最小偏向角、对称驻值与光谱角色散",
+          "normalized_shingle_similarity": 0.025789
+        },
+        {
+          "id": "O029",
+          "title": "阶跃折射率光纤的数值孔径、全内反射与单模判据",
+          "normalized_shingle_similarity": 0.013914
+        },
+        {
+          "id": "M022",
+          "title": "排斥库仑中心势的最近距离、偏转角与 Rutherford 微分截面",
+          "normalized_shingle_similarity": 0.013544
+        },
+        {
+          "id": "O034",
+          "title": "阶跃折射率光纤的全反射接收角、数值孔径与模数估算",
+          "normalized_shingle_similarity": 0.012609
+        },
+        {
+          "id": "O054",
+          "title": "Fresnel界面反射的Brewster角、能流透过率与临界全反射",
+          "normalized_shingle_similarity": 0.010999
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "O078",
+          "title": "自由电子Thomson散射的偏振张量、总截面与纵向辐射动量",
+          "normalized_shingle_similarity": 0.007489
+        },
+        {
+          "id": "O074",
+          "title": "偏振Poincaré球上的Pancharatnam–Berry曲率、闭路相位与干涉可观测量",
+          "normalized_shingle_similarity": 0.004937
+        },
+        {
+          "id": "E080",
+          "title": "Maxwell–Wagner界面极化的瞬态偶极、自由面电荷与介电反转",
+          "normalized_shingle_similarity": 0.003105
+        },
+        {
+          "id": "M080",
+          "title": "轨道重力梯度哑铃的姿态锁定、椭圆周期与角动量交换",
+          "normalized_shingle_similarity": 0.002996
+        },
+        {
+          "id": "Q076",
+          "title": "Dirac–Coulomb精细结构的四阶展开、角动量劈裂与临界核电荷",
+          "normalized_shingle_similarity": 0.002893
+        }
+      ],
+      "candidate_core": "一次内反射球滴彩虹折叠焦散与Airy均匀衍射",
+      "documented_distinction": "球滴Snell驻点微分截面平方根发散，不是任意传播Airy波包",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "Q074",
+      "historical_top5": [
+        {
+          "id": "Q057",
+          "title": "零温振幅阻尼量子通道的Kraus表示、Lindblad耗散与纠缠负性",
+          "normalized_shingle_similarity": 0.014604
+        },
+        {
+          "id": "Q064",
+          "title": "量子隐形传态Bell测量、Pauli纠正与Werner资源保真度",
+          "normalized_shingle_similarity": 0.014132
+        },
+        {
+          "id": "Q026",
+          "title": "二维零温自由费米气体的态密度、费米压与量子电容",
+          "normalized_shingle_similarity": 0.008307
+        },
+        {
+          "id": "Q052",
+          "title": "自旋单态、Werner白噪声与CHSH不等式的阈值计算",
+          "normalized_shingle_similarity": 0.007547
+        },
+        {
+          "id": "W007",
+          "title": "双弦接点附加质量的波散射",
+          "normalized_shingle_similarity": 0.007266
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "T078",
+          "title": "有限错误率二态存储器的可逆Landauer擦除、热交换与自由能界",
+          "normalized_shingle_similarity": 0.004468
+        },
+        {
+          "id": "M081",
+          "title": "连续激光光帆的相对论辐射制动因子、快度积分与能量流账本",
+          "normalized_shingle_similarity": 0.004332
+        },
+        {
+          "id": "Q077",
+          "title": "自旋半反绝热驱动的精确跟踪哈密顿量、控制能耗与几何相位",
+          "normalized_shingle_similarity": 0.00353
+        },
+        {
+          "id": "O076",
+          "title": "双束红失谐Doppler冷却的速度摩擦、反冲扩散与最低温度",
+          "normalized_shingle_similarity": 0.003138
+        },
+        {
+          "id": "Q081",
+          "title": "四面体SIC量子测量的Bloch态层析、协方差与Fisher信息效率",
+          "normalized_shingle_similarity": 0.003085
+        }
+      ],
+      "candidate_core": "稳定子重复量子纠错码",
+      "documented_distinction": "多量子比特综合征和逻辑错误率",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "Q075",
+      "historical_top5": [
+        {
+          "id": "Q016",
+          "title": "量子谐振子相干态的泊松统计、经典轨迹与最小不确定性",
+          "normalized_shingle_similarity": 0.030684
+        },
+        {
+          "id": "Q066",
+          "title": "自旋—单模振子精确非Markov退相干、回波与纠缠熵",
+          "normalized_shingle_similarity": 0.027498
+        },
+        {
+          "id": "Q039",
+          "title": "谐振子基态的局域 δ 势微扰、一阶能移与波函数概率",
+          "normalized_shingle_similarity": 0.025528
+        },
+        {
+          "id": "Q020",
+          "title": "一维量子活塞的能级压力、绝热功与高温经典极限",
+          "normalized_shingle_similarity": 0.024458
+        },
+        {
+          "id": "Q041",
+          "title": "反铁磁三自旋环的几何阻挫、总角动量谱与残余熵",
+          "normalized_shingle_similarity": 0.024189
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "Q078",
+          "title": "双玻色子Bose–Hubbard二聚体的精确缀饰谱、双占据振荡与站点纠缠",
+          "normalized_shingle_similarity": 0.025573
+        },
+        {
+          "id": "T075",
+          "title": "一维Tonks硬杆气体的严格配分函数、可压缩性与绝热声速",
+          "normalized_shingle_similarity": 0.023463
+        },
+        {
+          "id": "T073",
+          "title": "稀薄理想量子气体的第二维里系数、量子统计压强与熵修正",
+          "normalized_shingle_similarity": 0.016492
+        },
+        {
+          "id": "T079",
+          "title": "二维各向异性谐阱理想玻色凝聚的多对数饱和、热容连续性与熵账本",
+          "normalized_shingle_similarity": 0.012068
+        },
+        {
+          "id": "E078",
+          "title": "无碰撞等离子体鞘层的Bohm声速判据、Sagdeev第一积分与壁面场",
+          "normalized_shingle_similarity": 0.008731
+        }
+      ],
+      "candidate_core": "谐振子热态Wigner与纯度",
+      "documented_distinction": "平衡混合态相空间、熵与纯度",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "Q076",
+      "historical_top5": [
+        {
+          "id": "Q055",
+          "title": "氢原子n=2简并能级的线性Stark劈裂与偶奇态混合",
+          "normalized_shingle_similarity": 0.019118
+        },
+        {
+          "id": "Q015",
+          "title": "相对论完全非弹性碰撞的复合静质量与内部能",
+          "normalized_shingle_similarity": 0.013316
+        },
+        {
+          "id": "Q029",
+          "title": "弱四次非谐势中量子振子的能级一阶修正和选择规则",
+          "normalized_shingle_similarity": 0.013205
+        },
+        {
+          "id": "Q053",
+          "title": "Klein–Gordon粒子正能波包的相群速度与非相对论极限",
+          "normalized_shingle_similarity": 0.011417
+        },
+        {
+          "id": "M067",
+          "title": "Rankine复合涡的涡量分布、径向压力、能量与自由液面",
+          "normalized_shingle_similarity": 0.009153
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "E085",
+          "title": "磁旋不稳定MRI的四阶本征色散、Kepler最快增长率及剪切能抽取",
+          "normalized_shingle_similarity": 0.00791
+        },
+        {
+          "id": "Q080",
+          "title": "正则化二维Dirac两能带的Berry曲率、整数Chern数与质量畴壁边缘模",
+          "normalized_shingle_similarity": 0.007077
+        },
+        {
+          "id": "M080",
+          "title": "轨道重力梯度哑铃的姿态锁定、椭圆周期与角动量交换",
+          "normalized_shingle_similarity": 0.006083
+        },
+        {
+          "id": "W078",
+          "title": "Abraham–Lorentz自辐射振子的跑逸根、降阶阻尼与Schott能量守恒",
+          "normalized_shingle_similarity": 0.005831
+        },
+        {
+          "id": "Q078",
+          "title": "双玻色子Bose–Hubbard二聚体的精确缀饰谱、双占据振荡与站点纠缠",
+          "normalized_shingle_similarity": 0.005635
+        }
+      ],
+      "candidate_core": "Dirac–Coulomb相对论精细结构",
+      "documented_distinction": "Dirac精确点核谱展开、j简并与Zalpha临界",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "Q077",
+      "historical_top5": [
+        {
+          "id": "Q049",
+          "title": "旋转磁场中自旋二能级系统的精确旋转框架动力学与几何相位",
+          "normalized_shingle_similarity": 0.033891
+        },
+        {
+          "id": "Q043",
+          "title": "缓变旋转磁场中的自旋半 Berry 相位与干涉相位",
+          "normalized_shingle_similarity": 0.026614
+        },
+        {
+          "id": "Q024",
+          "title": "受驱双能级系统的 Rabi 振荡、失谐与 π 脉冲",
+          "normalized_shingle_similarity": 0.022893
+        },
+        {
+          "id": "Q056",
+          "title": "失谐双能级隧穿模型的Rabi振荡、最大转移概率及绝热限制",
+          "normalized_shingle_similarity": 0.013721
+        },
+        {
+          "id": "Q067",
+          "title": "Kitaev超导链的Majorana边界零模、体拓扑绕数与奇偶守恒",
+          "normalized_shingle_similarity": 0.009907
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "O074",
+          "title": "偏振Poincaré球上的Pancharatnam–Berry曲率、闭路相位与干涉可观测量",
+          "normalized_shingle_similarity": 0.013902
+        },
+        {
+          "id": "Q081",
+          "title": "四面体SIC量子测量的Bloch态层析、协方差与Fisher信息效率",
+          "normalized_shingle_similarity": 0.01088
+        },
+        {
+          "id": "Q080",
+          "title": "正则化二维Dirac两能带的Berry曲率、整数Chern数与质量畴壁边缘模",
+          "normalized_shingle_similarity": 0.010094
+        },
+        {
+          "id": "W072",
+          "title": "内禀谐振质量链的频率依赖有效惯量、局域共振禁带与能量正性",
+          "normalized_shingle_similarity": 0.005537
+        },
+        {
+          "id": "Q079",
+          "title": "PT对称增益损耗量子二聚体的例外点、广义度量与非幺正规范",
+          "normalized_shingle_similarity": 0.005461
+        }
+      ],
+      "candidate_core": "精确反绝热辅助控制使自旋瞬时本征态跟踪，区别于已有旋转磁场绝热Berry分析和Rabi响应",
+      "documented_distinction": "精确反绝热辅助控制使自旋瞬时本征态跟踪，区别于已有旋转磁场绝热Berry分析和Rabi响应",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "Q078",
+      "historical_top5": [
+        {
+          "id": "Q066",
+          "title": "自旋—单模振子精确非Markov退相干、回波与纠缠熵",
+          "normalized_shingle_similarity": 0.026156
+        },
+        {
+          "id": "Q070",
+          "title": "双原子Rydberg阻塞的集体增强Rabi振荡、暗态与有限阻塞误差",
+          "normalized_shingle_similarity": 0.023587
+        },
+        {
+          "id": "Q056",
+          "title": "失谐双能级隧穿模型的Rabi振荡、最大转移概率及绝热限制",
+          "normalized_shingle_similarity": 0.020565
+        },
+        {
+          "id": "Q072",
+          "title": "绝热Grover量子搜索的二维有效谱、最小能隙与局部绝热平方根加速",
+          "normalized_shingle_similarity": 0.015507
+        },
+        {
+          "id": "W009",
+          "title": "三振子耦合本征模、能量分配与弱耦合拍动",
+          "normalized_shingle_similarity": 0.015493
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "Q075",
+          "title": "热谐振子Wigner相空间分布、量子涨落、纯度与熵的严格一致性",
+          "normalized_shingle_similarity": 0.025573
+        },
+        {
+          "id": "Q079",
+          "title": "PT对称增益损耗量子二聚体的例外点、广义度量与非幺正规范",
+          "normalized_shingle_similarity": 0.0191
+        },
+        {
+          "id": "W077",
+          "title": "Kirchhoff–Love矩形薄板的双指标模态、频率简并与弯曲能量守恒",
+          "normalized_shingle_similarity": 0.006757
+        },
+        {
+          "id": "M083",
+          "title": "平板Poiseuille剪切流的Taylor–Aris有效弥散及横向尺度分离",
+          "normalized_shingle_similarity": 0.006712
+        },
+        {
+          "id": "E084",
+          "title": "双载流子Drude磁输运的非饱和磁阻、Hall符号反转及熵产生",
+          "normalized_shingle_similarity": 0.006028
+        }
+      ],
+      "candidate_core": "恰好两个不可分辨玻色子在两站点的相互作用+隧穿谱与纠缠，区别于单粒子双态Rabi和JC模式",
+      "documented_distinction": "恰好两个不可分辨玻色子在两站点的相互作用+隧穿谱与纠缠，区别于单粒子双态Rabi和JC模式",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "Q079",
+      "historical_top5": [
+        {
+          "id": "Q061",
+          "title": "非厄米PT对称双态的例外点、度量守恒与平方根能谱响应",
+          "normalized_shingle_similarity": 0.072446
+        },
+        {
+          "id": "Q056",
+          "title": "失谐双能级隧穿模型的Rabi振荡、最大转移概率及绝热限制",
+          "normalized_shingle_similarity": 0.024079
+        },
+        {
+          "id": "Q011",
+          "title": "有失谐双能级系统的拉比振荡与量子态保真度",
+          "normalized_shingle_similarity": 0.021859
+        },
+        {
+          "id": "W040",
+          "title": "交替弹簧常数单质量链的双支色散和布里渊带隙",
+          "normalized_shingle_similarity": 0.017786
+        },
+        {
+          "id": "M023",
+          "title": "等质量双摆的小振动特征值、正交模态与能量拍动",
+          "normalized_shingle_similarity": 0.01322
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "Q078",
+          "title": "双玻色子Bose–Hubbard二聚体的精确缀饰谱、双占据振荡与站点纠缠",
+          "normalized_shingle_similarity": 0.0191
+        },
+        {
+          "id": "E077",
+          "title": "理想磁流体受控线性剪切中的磁通冻结、磁能放大与Maxwell应力功",
+          "normalized_shingle_similarity": 0.011173
+        },
+        {
+          "id": "W077",
+          "title": "Kirchhoff–Love矩形薄板的双指标模态、频率简并与弯曲能量守恒",
+          "normalized_shingle_similarity": 0.007346
+        },
+        {
+          "id": "E084",
+          "title": "双载流子Drude磁输运的非饱和磁阻、Hall符号反转及熵产生",
+          "normalized_shingle_similarity": 0.006554
+        },
+        {
+          "id": "O075",
+          "title": "相位匹配参量放大器的双模双曲增益、Manley–Rowe不变量与相敏压缩",
+          "normalized_shingle_similarity": 0.006527
+        }
+      ],
+      "candidate_core": "PT对称非厄米二能级开放有效动力学与正度量，区别于已有Rabi两态及空间趋肤",
+      "documented_distinction": "PT对称非厄米二能级开放有效动力学与正度量，区别于已有Rabi两态及空间趋肤",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "Q080",
+      "historical_top5": [
+        {
+          "id": "W049",
+          "title": "质量交替一维原子链的声学、光学色散分支与禁带",
+          "normalized_shingle_similarity": 0.007119
+        },
+        {
+          "id": "Q043",
+          "title": "缓变旋转磁场中的自旋半 Berry 相位与干涉相位",
+          "normalized_shingle_similarity": 0.006641
+        },
+        {
+          "id": "Q049",
+          "title": "旋转磁场中自旋二能级系统的精确旋转框架动力学与几何相位",
+          "normalized_shingle_similarity": 0.006467
+        },
+        {
+          "id": "W011",
+          "title": "双原子弹簧链的色散关系、声学支和带隙",
+          "normalized_shingle_similarity": 0.005987
+        },
+        {
+          "id": "Q044",
+          "title": "Dirac δ 周期势的 Kronig–Penney 能带与负能区排除",
+          "normalized_shingle_similarity": 0.005977
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "Q077",
+          "title": "自旋半反绝热驱动的精确跟踪哈密顿量、控制能耗与几何相位",
+          "normalized_shingle_similarity": 0.010094
+        },
+        {
+          "id": "Q076",
+          "title": "Dirac–Coulomb精细结构的四阶展开、角动量劈裂与临界核电荷",
+          "normalized_shingle_similarity": 0.007077
+        },
+        {
+          "id": "O074",
+          "title": "偏振Poincaré球上的Pancharatnam–Berry曲率、闭路相位与干涉可观测量",
+          "normalized_shingle_similarity": 0.006442
+        },
+        {
+          "id": "W076",
+          "title": "Kelvin–Voigt应变率耗散弦的复色散、过阻尼分支与严格耗散泛函",
+          "normalized_shingle_similarity": 0.005564
+        },
+        {
+          "id": "M084",
+          "title": "Hele–Shaw双黏性流体的Saffman–Taylor指进谱、毛细截止与增长极值",
+          "normalized_shingle_similarity": 0.005395
+        }
+      ],
+      "candidate_core": "二维连续正则化Dirac模型的整数Chern拓扑及手征边缘态（非1D SSH/Kitaev）",
+      "documented_distinction": "二维连续正则化Dirac模型的整数Chern拓扑及手征边缘态（非1D SSH/Kitaev）",
+      "expert_review": "待独立复核"
+    },
+    {
+      "id": "Q081",
+      "historical_top5": [
+        {
+          "id": "Q062",
+          "title": "单光子相位量子Fisher信息、擦除损失与NOON资源界",
+          "normalized_shingle_similarity": 0.021966
+        },
+        {
+          "id": "Q009",
+          "title": "自旋测量、拉莫尔进动与非选择性退相干",
+          "normalized_shingle_similarity": 0.017292
+        },
+        {
+          "id": "Q073",
+          "title": "量子弱值放大的近正交后选择、Gaussian指针精确正则化与信息代价",
+          "normalized_shingle_similarity": 0.013171
+        },
+        {
+          "id": "Q037",
+          "title": "自旋半粒子纯退相干 Lindblad 方程与 Bloch 横向衰减",
+          "normalized_shingle_similarity": 0.012334
+        },
+        {
+          "id": "Q057",
+          "title": "零温振幅阻尼量子通道的Kraus表示、Lindblad耗散与纠缠负性",
+          "normalized_shingle_similarity": 0.010503
+        }
+      ],
+      "same_round_top5": [
+        {
+          "id": "O077",
+          "title": "平衡双端口相干干涉的泊松光子统计、Fisher信息与最优工作点",
+          "normalized_shingle_similarity": 0.021646
+        },
+        {
+          "id": "Q077",
+          "title": "自旋半反绝热驱动的精确跟踪哈密顿量、控制能耗与几何相位",
+          "normalized_shingle_similarity": 0.01088
+        },
+        {
+          "id": "W073",
+          "title": "非互易一阶谐振链的非厄米趋肤模、边界谱与稳定阈值分裂",
+          "normalized_shingle_similarity": 0.009884
+        },
+        {
+          "id": "Q079",
+          "title": "PT对称增益损耗量子二聚体的例外点、广义度量与非幺正规范",
+          "normalized_shingle_similarity": 0.004773
+        },
+        {
+          "id": "W079",
+          "title": "FPUT–β非线性晶格的谐波平衡硬化色散、群速与严格能量守恒",
+          "normalized_shingle_similarity": 0.004466
+        }
+      ],
+      "candidate_core": "四面体SIC POVM量子态层析及Fisher效率",
+      "documented_distinction": "多结果信息完备测量的无偏Bloch重建与多项计数Cramer–Rao矩阵界",
+      "expert_review": "待独立复核"
+    }
+  ],
+  "quality_status": "待独立复核",
+  "independent_expert_review": "待独立复核"
+}

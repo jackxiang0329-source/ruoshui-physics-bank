@@ -1,0 +1,36 @@
+(1) 特征行列式 \(\det(H-EI)=E^2-\hbar^2(J^2-\gamma^2)\)，故
+\[
+E_\pm=\pm\hbar\Omega,\quad \Omega=\sqrt{J^2-\gamma^2}.
+\]
+\(\gamma<J\) 时谱为实且两态独立，\(\gamma>J\) 时能量成纯虚对；在 \(\gamma=J\) 有 \(H^2=0\) 而 \(H\ne0\)，特征空间仅一维，两个本征向量并合。以 \(P=\sigma_x\)、\(T\) 为复共轭，\(P H^*P=H\)，这就是PT对称，但不保证实谱。
+(2) 由 \(H^2=\hbar^2\Omega^2I\)，函数级数求和给
+\[
+U(t)=\cos(\Omega t)I-i\frac{\sin(\Omega t)}{\hbar\Omega}H
+\]
+（复 \(\Omega\) 仍按解析延拓）。例外点 \(\Omega=0\) 取极限为 \(U(t)=I-iHt/\hbar\)。对 \(|L\rangle\) 有
+\[
+a_L(t)=\cos\Omega t+\frac{\gamma}{\Omega}\sin\Omega t,\qquad
+a_R(t)=-i\frac J{\Omega}\sin\Omega t.
+\]
+因此未破缺区
+\[
+N(t)=\left(\cos\Omega t+\frac{\gamma}{\Omega}\sin\Omega t\right)^2+
+\frac{J^2}{\Omega^2}\sin^2\Omega t.
+\]
+\(\gamma>0\) 时一般 \(N(t)\ne1\)。
+(3) 令 \(|\psi\rangle=(a_L,a_R)^T\)。薛定谔式 \(i\hbar\dot\psi=H\psi\)，于是
+\[
+\dot N=\frac i\hbar\langle\psi|(H^\dagger-H)|\psi\rangle
+=2\gamma(|a_L|^2-|a_R|^2).
+\]
+等式符号也可直接对上式振幅微分验证。普通范数的变化反映所消去的增益/损耗环境，不是孤立Hermitian量子态的可归一概率律。
+(4) 写 \(H/\hbar=J\sigma_x+i\gamma\sigma_z\)，取
+\[
+\eta=I+\frac{\gamma}{J}\sigma_y
+=\begin{pmatrix}1&-i\gamma/J\\i\gamma/J&1\end{pmatrix}.
+\]
+用 \([\sigma_x,\sigma_y]=2i\sigma_z,\ \{\sigma_z,\sigma_y\}=0\) 逐项算出 \(H^\dagger\eta-\eta H=0\)。其特征值为 \(1\pm\gamma/J\)，当 \(\gamma<J\) 时两者均正。于是
+\[
+\frac d{dt}(\psi^\dagger\eta\psi)=\frac i\hbar\psi^\dagger(H^\dagger\eta-\eta H)\psi=0.
+\]
+例外点 \(\gamma=J\) 最小特征值趋零，度量不可逆；\(\gamma\to0\) 时 \(\eta\to I\)、\(H\to\hbar J\sigma_x\)，恢复通常幺正动力学。

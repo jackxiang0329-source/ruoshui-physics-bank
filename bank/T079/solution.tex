@@ -1,0 +1,37 @@
+(1) 在 \(n_x,n_y\ge0\) 平面数能量小于 \(\varepsilon\) 的格点面积，\(\mathcal N(\varepsilon)\simeq\varepsilon^2/(2\hbar^2\omega_x\omega_y)\)，故
+\[
+g(\varepsilon)=A\varepsilon,\quad A=(\hbar^2\omega_x\omega_y)^{-1}.
+\]
+令 \(z=e^{\mu/(k_BT)}\le1\)，用 \(\int_0^\infty t^{s-1}/(z^{-1}e^t-1)\,dt=\Gamma(s)\operatorname{Li}_s(z)\)，得到
+\[
+N_{\rm ex}=A(k_BT)^2\operatorname{Li}_2(z).
+\]
+这个DOS对应谐阱，不是均匀二维自由气的常数态密度。
+(2) 激发云在 \(z\to1\) 饱和，\(N=A(k_BT_c)^2\zeta(2)\)，因此
+\[
+\boxed{k_BT_c=\hbar\sqrt{\omega_x\omega_y}\sqrt{\frac N{\zeta(2)}}},\qquad
+\frac{N_0}{N}=1-\left(\frac{T}{T_c}\right)^2\quad(T<T_c).
+\]
+基态能选零，热能全来自激发态：
+\[
+U=A\int_0^\infty\frac{\varepsilon^2\,d\varepsilon}{z^{-1}e^{\varepsilon/(k_BT)}-1}
+=2A(k_BT)^3\operatorname{Li}_3(z).
+\]
+凝聚区取 \(z=1\)。有限 \(N\) 时是平滑交叉，精确二次凝聚律只在所述大粒子数陷阱极限；均匀二维理想气体无此有限温度凝聚。
+(3) 凝聚区 \(C_N=6Ak_B(k_BT)^2\zeta(3)\)。非凝聚区固定 \(N\) 微分得
+\[
+\frac1z\frac{dz}{dT}=-\frac{2\operatorname{Li}_2(z)}{T\operatorname{Li}_1(z)},\qquad
+\boxed{\frac{C_N}{Nk_B}=6\frac{\operatorname{Li}_3(z)}{\operatorname{Li}_2(z)}
+-4\frac{\operatorname{Li}_2(z)}{\operatorname{Li}_1(z)}}.
+\]
+因 \(\operatorname{Li}_1(z)=-\ln(1-z)\to\infty\)，在 \(T_c^+\) 的极限为 \(6\zeta(3)/\zeta(2)\)，恰与 \(T_c^-\) 一致；热容连续，但靠近临界点有非解析温度依赖。高温 \(z\ll1\)，所有 \(\operatorname{Li}_s(z)\simeq z\)，恢复 \(C_N\to2Nk_B\)，即二维谐势系统的经典四个二次自由度。
+(4) 激发态巨势
+\[
+\Omega_G=k_BT\int_0^\infty g(\varepsilon)\ln(1-ze^{-\varepsilon/k_BT})d\varepsilon
+=-Ak_BT(k_BT)^2\operatorname{Li}_3(z).
+\]
+由 \(\Omega_G=U-TS-\mu N\) 得
+\[
+S=k_BA(k_BT)^2[3\operatorname{Li}_3(z)-(\ln z)\operatorname{Li}_2(z)].
+\]
+在 \(z\to1\) 时 \(\ln z\to0\)，两侧均趋 \(3k_BA(k_BT_c)^2\zeta(3)\)；宏观占据的单一非简并基态不增加宏观微观态计数。需 \(N\gg1\)、\(k_BT_c\gg\hbar\omega_{x,y}\)、弱相互作用可忽略，有限阱基态取零与真实有限尺寸修正分开。

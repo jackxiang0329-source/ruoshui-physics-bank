@@ -1,0 +1,45 @@
+(1) Laplace方程及轴向对称性给
+\[
+\phi_i=-E_0(1-K)r\cos\vartheta,\quad
+\phi_o=-E_0r\cos\vartheta+E_0a^3K r^{-2}\cos\vartheta.
+\]
+切向场连续固定内部系数 \(1-K\)；在 \(r=a\) 两侧法向场分别为 \(E_{i,n}=E_0(1-K)\cos\vartheta\) 和 \(E_{o,n}=E_0(1+2K)\cos\vartheta\)。边界处自由电荷累积使法向总电流连续：
+\[
+\sigma_i(1-K)+\varepsilon_i(-\dot K)
+=\sigma_o(1+2K)+\varepsilon_o(2\dot K).
+\]
+(2) 整理为
+\[
+(\varepsilon_i+2\varepsilon_o)\dot K+
+(\sigma_i+2\sigma_o)K=\sigma_i-\sigma_o.
+\]
+设
+\[
+K_\varepsilon=\frac{\varepsilon_i-\varepsilon_o}{\varepsilon_i+2\varepsilon_o},\
+K_\sigma=\frac{\sigma_i-\sigma_o}{\sigma_i+2\sigma_o},\
+\tau=\frac{\varepsilon_i+2\varepsilon_o}{\sigma_i+2\sigma_o}>0 .
+\]
+阶跃瞬间没有预置自由面电荷，介电位移连续，故 \(K(0^+)=K_\varepsilon\)。精确解
+\(K(t)=K_\sigma+(K_\varepsilon-K_\sigma)e^{-t/\tau}\)。
+远场偶极势与 \(p\cos\vartheta/(4\pi\varepsilon_or^2)\) 比较，得
+\[
+p(t)=4\pi\varepsilon_oa^3E_0K(t).
+\]
+(3) 自由面电荷是 \(\boldsymbol D_o\cdot\hat n-\boldsymbol D_i\cdot\hat n\)：
+\[
+q_s=E_0\cos\vartheta[(\varepsilon_o-\varepsilon_i)+
+(\varepsilon_i+2\varepsilon_o)K(t)].
+\]
+因 \(K(0^+)=K_\varepsilon\)，初始为零。由 (2) 的微分方程有
+\[
+\partial_t q_s=E_0\cos\vartheta[
+\sigma_i(1-K)-\sigma_o(1+2K)]
+=j_{i,n}-j_{o,n},
+\]
+逐点满足连续性。相同介质时 \(K_\varepsilon=K_\sigma=0\)，\(p=q_s=0\)。
+(4) 若两端系数异号，唯一零点满足
+\[
+e^{-t_*/\tau}=-\frac{K_\sigma}{K_\varepsilon-K_\sigma},\qquad
+t_*=\tau\ln\frac{K_\varepsilon-K_\sigma}{-K_\sigma}>0.
+\]
+这里对数自变量严格大于一；其余情况下无有限正时刻变号。导体球极限 \(\sigma_i/\sigma_o\to\infty\) 给 \(K_\sigma\to1\) 和 \(\tau\sim(\varepsilon_i+2\varepsilon_o)/\sigma_i\)；阶跃瞬间仍由 \(K_\varepsilon\) 控制。需波长远大于 \(a\)，并且表面电荷可作为零厚度层描述；极短时间电磁传播、频散及双电层动力学不可忽略。

@@ -1,0 +1,34 @@
+(1) 动量方程
+\[
+\mu u_{tt}=\partial_x(Tu_x+\eta u_{xt})=Tu_{xx}+\eta u_{xxt}.
+\]
+代入 \(u=e^{i(kx-\omega t)}\)，得
+\(-\mu\omega^2=-Tk^2+i\eta\omega k^2\)，即
+\[
+\mu\omega^2+i\eta k^2\omega-Tk^2=0.
+\]
+(2) 二次方程解
+\[
+\omega_\pm=-i\frac{\eta k^2}{2\mu}
+\pm\sqrt{\frac{T}{\mu}k^2-\left(\frac{\eta k^2}{2\mu}\right)^2}.
+\]
+定义 \(c=\sqrt{T/\mu}\) 与 \(k_c=2\mu c/\eta=2\sqrt{\mu T}/\eta\)。\(|k|<k_c\) 时有振荡实部，两个共轭意义下的行波均以 \(\eta k^2/(2\mu)\) 衰减；等号处两根合并；\(|k|>k_c\) 时根号纯虚，两个模态都只发生指数衰减。长波
+\[
+\omega_\pm=\pm c|k|\left[1-\frac{\eta^2 k^2}{8\mu T}+O(k^4)\right]
+-i\frac{\eta k^2}{2\mu}.
+\]
+对于无实传播频率的高 \(k\) 弛豫分支，不能把 \(d\,\mathrm{Re}\omega/dk\) 当作有意义的能量传播速度。
+(3) 两侧积分并分部：
+\[
+\dot E=\int(\mu u_tu_{tt}+Tu_xu_{xt})\,dx
+=\int[u_t(Tu_{xx}+\eta u_{xxt})+Tu_xu_{xt}]\,dx
+=-\eta\int u_{xt}^2\,dx\le0,
+\]
+边界通量 \([Tu_tu_x+\eta u_tu_{xt}]_{\rm ends}=0\)。只有空间速度梯度产生粘弹耗散；均匀平移 \(u_x=0\) 不会被这种内摩擦阻尼。
+(4) 当 \(|k|\gg k_c\)，写 \(a=\eta k^2/(2\mu)\)，\(\sqrt{a^2-c^2k^2}=a-c^2k^2/(2a)+o(1)\)，从而
+\[
+\omega_{\rm slow}\sim-i\frac{T}{\eta},\qquad
+\omega_{\rm fast}\sim-i\frac{\eta k^2}{\mu}
++i\frac T\eta.
+\]
+两支时间尺度分别约为 \(\eta/T\)、\(\mu/(\eta k^2)\)。\(\eta\to0^+\) 时 \(k_c\to\infty\)，固定 \(k\) 恢复 \(\omega=\pm c|k|\) 和守恒弦能。\([\eta]=[T]\times{\rm time}\) 保证 \(k_c\) 为逆长度。极短波接近纤维微结构、弯曲刚度或非局域响应尺度时，简单应变率型本构不再可靠。

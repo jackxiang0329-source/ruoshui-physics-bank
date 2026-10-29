@@ -1,0 +1,24 @@
+(1) 对 \(H=(\hbar/2)\boldsymbol b\cdot\boldsymbol\sigma\)，Bloch矢量 \(\boldsymbol s=\langle\boldsymbol\sigma\rangle\) 满足 \(\dot{\boldsymbol s}=\boldsymbol b\times\boldsymbol s\)。\(H_0\) 对应 \(\boldsymbol b_0=-\Omega\boldsymbol n\)，其基态的 \(\boldsymbol s=\boldsymbol n\)。若取
+\[
+H_{\rm cd}=\frac{\hbar}{2}(\boldsymbol n\times\dot{\boldsymbol n})\cdot\boldsymbol\sigma,
+\]
+则 \((-\Omega\boldsymbol n+\boldsymbol n\times\dot{\boldsymbol n})\times\boldsymbol n=\dot{\boldsymbol n}\)（因 \(\boldsymbol n\cdot\dot{\boldsymbol n}=0\)），所以瞬时基态沿整个路径精确跟随；对激发态 \(-\boldsymbol n\) 同理成立。
+(2) \(\varphi=0\) 时 \(\boldsymbol n\times\dot{\boldsymbol n}=\dot\theta\,\hat y\)，
+\(H_{\rm cd}=(\hbar\dot\theta/2)\sigma_y\)。写 \(R_y(\theta)=\exp(-i\theta\sigma_y/2)\)，有 \(H_0=R_y(-\hbar\Omega\sigma_z/2)R_y^\dagger\) 和
+\[
+U(t,0)=R_y(\theta(t))\exp(i\Omega t\,\sigma_z/2)R_y(\theta(0))^\dagger.
+\]
+直接求 \(i\hbar\dot U U^\dagger=
+(\hbar\dot\theta/2)\sigma_y+
+R_y(-\hbar\Omega\sigma_z/2)R_y^\dagger\)，等于 \(H_0+H_{\rm cd}\)。中间传播在 \(\sigma_z\) 本征基对角，故两态均无非绝热布居跃迁。
+(3) \(|\boldsymbol n\times\dot{\boldsymbol n}|^2=|\dot{\boldsymbol n}|^2=\dot\theta^2+\sin^2\theta\,\dot\varphi^2\)，Pauli矩阵特征值给
+\[
+\|H_{\rm cd}\|_{\rm op}=\frac{\hbar}{2}
+\sqrt{\dot\theta^2+\sin^2\theta\,\dot\varphi^2}.
+\]
+基态 \(\langle\boldsymbol\sigma\rangle=\boldsymbol n\)，从而 \(\langle H_{\rm cd}\rangle=0\)，但 \(\langle H_{\rm cd}^2\rangle=\hbar^2|\dot{\boldsymbol n}|^2/4\)，方差非零；\(\dot{\boldsymbol n}=0\) 时范数和方差同为零。均值为零不代表实施控制不需要设备资源。
+(4) 沿固定纬线的Bloch方向闭合，围成有向立体角 \(\mathcal A=2\pi(1-\cos\theta_0)\)。基态本征能为 \(-\hbar\Omega/2\)，动力学相位 \(+\Omega T/2\)；几何相位为
+\[
+\gamma_B=-\frac{\mathcal A}{2}=-\pi(1-\cos\theta_0)\pmod{2\pi}.
+\]
+反绝热控制的期望值为零，精确抵消跃迁振幅并保留与路径有关的Berry相位；该几何部分不依赖 \(\omega\) 大小，而控制范数正比 \(|\omega|\sin\theta_0\)。
