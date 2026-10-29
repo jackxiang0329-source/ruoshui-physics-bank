@@ -1,0 +1,7 @@
+(1) 代入行波坐标得 $-Vf'+c_0f'+\alpha ff'+\beta f'''=0$。积分一次、利用远处边界条件把积分常数设零，得到 $\boxed{\beta f''=(V-c_0)f-\alpha f^2/2}$。再乘 $f'$ 积分可得 $(\beta/2)f'^2=(V-c_0)f^2/2-\alpha f^3/6$。
+
+(2) 使用 $f=A\operatorname{sech}^2s$、$s=\xi/\ell$，有 $f''=(4/\ell^2)f-(6/(A\ell^2))f^2$。将它与二阶方程比较：$4\beta/\ell^2=V-c_0$、$6\beta/(A\ell^2)=\alpha/2$，故 $\boxed{A=3(V-c_0)/\alpha,\quad\ell=\sqrt{4\beta/(V-c_0)}}$。$V>c_0$ 才产生本题所设的正孤波。
+
+(3) 由 $\int_{-\infty}^{\infty}\operatorname{sech}^2u\,du=2$，质量积分 $M_1=2A\ell$；由 $\int\operatorname{sech}^4u\,du=4/3$，二次积分 $M_2=(4/3)A^2\ell$。$A\propto V-c_0$、$\ell\propto(V-c_0)^{-1/2}$，故更高更快的孤波也更窄。
+
+(4) 将方程写成守恒形式 $\eta_t+\partial_x(c_0\eta+\alpha\eta^2/2+\beta\eta_{xx})=0$，远场消失时积分给 $d\int\eta dx/dt=0$。再乘 $2\eta$、通过分部积分可证 $d\int\eta^2dx/dt=0$，因为 $\int\eta^2\eta_xdx$ 与 $\int\eta\eta_{xxx}dx$ 均为边界项。
