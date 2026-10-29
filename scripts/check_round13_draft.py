@@ -54,7 +54,7 @@ poly=tau*w*w+s.I*w-D*kw*kw
 wplus=(-s.I+s.sqrt(4*tau*D*kw*kw-1))/(2*tau)
 wminus=(-s.I-s.sqrt(4*tau*D*kw*kw-1))/(2*tau)
 record('T064',1,'symbolic','two Cattaneo thermal roots solve exact telegraph dispersion polynomial',eq(poly.subs(w,wplus)) and eq(poly.subs(w,wminus)))
-record('T064',2,'limit','low wave number branch reduces to Fourier diffusion while high wave number speed approaches finite square root D over tau',eq(s.limit(wplus/(-s.I*D*kw**2),kw,0,dir='+'),1) and eq(s.limit(s.re(wplus)/kw,kw,s.oo),s.sqrt(D/tau)))
+record('T064',2,'limit','low wave number branch reduces to Fourier diffusion while high wave number speed approaches finite square root D over tau',eq(s.limit(wplus/(-s.I*D*kw**2),kw,0,dir='+'),1) and eq(s.limit(s.sqrt(4*tau*D*kw**2-1)/(2*tau*kw),kw,s.oo),s.sqrt(D/tau)))
 # Energy equations multiplied by T, q/kappa, then integrated by parts.
 temp,flux,tempx,fluxx=s.symbols('temp flux tempx fluxx',real=True)
 temporalT=-fluxx/cv
