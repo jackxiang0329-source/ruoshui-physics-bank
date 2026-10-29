@@ -1,0 +1,7 @@
+(1) 阶跃场 $E(t)=E_0\Theta(t)$，若初始极化 $P(0)=0$，微分方程解为 $P(t)=\varepsilon_0\chi_sE_0[1-e^{-t/\tau}]$。系统在时间尺度 $\tau$ 上逐渐极化，最终 $P=\varepsilon_0\chi_sE_0$，而不是瞬间跳到静态值。
+
+(2) 代入 $e^{-i\omega t}$ 得 $P_\omega=\varepsilon_0\chi_sE_\omega/(1-i\omega\tau)$，故 $\boxed{\varepsilon_r(\omega)=\varepsilon_\infty+\chi_s/(1-i\omega\tau)}$。以题设时间约定，其虚部 $\varepsilon''=\chi_s\omega\tau/[1+(\omega\tau)^2]>0$。
+
+(3) 极化对场做功的周期平均率 $\langle E\dot P\rangle=\frac12\Re[E_\omega(-i\omega P_\omega)^*]=\omega\varepsilon_0\varepsilon''|E_\omega|^2/2$，严格正。该功率来自外部驱动而在弛豫过程中转化为热，不是源材料产生净能量。
+
+(4) 函数 $\varepsilon''(x)=\chi_s x/(1+x^2)$，$x=\omega\tau$，导数 $\chi_s(1-x^2)/(1+x^2)^2$，所以损耗峰在 $\omega=\tau^{-1}$、高度为 $\chi_s/2$。$\omega\tau\ll1$ 时极化几乎跟随场，$\varepsilon'\to\varepsilon_\infty+\chi_s$；$\omega\tau\gg1$ 时慢极化冻结，$\varepsilon'\to\varepsilon_\infty$。
