@@ -28,7 +28,7 @@ ck('E074',1,'symbolic','complex skin field solves Maxwell diffusion equation wit
 j=-s.diff(field,x);ef=j/sig
 ck('E074',2,'dimensions','surface impedance equals complex skin wave number over conductivity with positive dissipative real part',eq((ef/field),q/sig) and eq(s.re(q/sig),1/(sig*delta)))
 pin=H**2/(2*sig*delta)
-jheat=s.integrate(sig*ef*s.conjugate(ef)/2,(x,0,s.oo))
+jheat=s.integrate(sig*s.expand_complex(ef*s.conjugate(ef))/2,(x,0,s.oo))
 ck('E074',3,'conservation','Poynting incoming flux exactly equals independently integrated Joule loss in conductor halfspace',eq(s.simplify(jheat),pin))
 ck('E074',4,'limit','skin depth decays as inverse square root frequency while dissipative surface resistance grows as square root',eq(s.diff(s.log(delta),om)*om,-s.Rational(1,2)) and eq(s.diff(s.log(1/(sig*delta)),om)*om,s.Rational(1,2)))
 # T070 grey atmosphere
