@@ -25,7 +25,7 @@ def verify_all():
     trans=-U*delta/(1+s.I)
     ck('M075',3,'independent_derivation','Wall shear components and integrated complex ageostrophic transport give the correct 45 degree turn',eq(s.re(tau),rho*nu*U/delta) and eq(s.im(tau),rho*nu*U/delta) and eq(s.re(trans),-U*delta/2) and eq(s.im(trans),U*delta/2))
     dissip=rho*nu*s.integrate(2*U**2/delta**2*s.exp(-2*z/delta),(z,0,s.oo))
-    ck('M075',4,'conservation','Integrated Ekman viscous dissipation equals geostrophic pressure work represented by wall stress',eq(diss,rho*nu*U**2/delta) and eq(diss,U*s.re(tau)))
+    ck('M075',4,'conservation','Integrated Ekman viscous dissipation equals geostrophic pressure work represented by wall stress',eq(dissip,rho*nu*U**2/delta) and eq(dissip,U*s.re(tau)))
     # M076 Taylor Aris dispersion
     a,D,r=s.symbols('a D r',positive=True,real=True)
     chi=U/D*(r**2/4-r**4/(8*a**2)-a**2/12)
