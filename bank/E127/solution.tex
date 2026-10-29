@@ -1,0 +1,4 @@
+(1) 体自由电荷满足 $\partial_t\rho_f+\nabla\cdot\boldsymbol J=0$。用欧姆定律 $\boldsymbol J=\sigma\boldsymbol E$ 及 $\nabla\cdot\boldsymbol D=\rho_f$、$\boldsymbol D=\varepsilon\boldsymbol E$，得到 $\partial_t\rho_f+(\sigma/\varepsilon)\rho_f=0$。该方程不要求电场在空间均匀，仅要求所讨论介质区域内参数 $\sigma,\varepsilon$ 为常数。
+(2) 每个介质内部点均按同样的一阶常微分方程衰减，故 $\rho_f(\boldsymbol r,t)=\rho_0(\boldsymbol r)e^{-t/\tau_M}$，$\tau_M=\varepsilon/\sigma$。弛豫时间具有秒的量纲，良导体取极短时间而高绝缘体取较长时间。若同时存在外加驱动电荷注入，方程右端会有源项，不能继续直接采用纯指数无源解。
+(3) 对有限体积积分连续性方程得 $dQ_{\rm bulk}/dt=-\oint_{\partial V}\boldsymbol J\cdot d\boldsymbol S$，体电荷的减少意味着电荷流向界面或外电极，而不是电荷凭空湮灭。若边界不允许自由电荷穿出系统，初始净自由电荷会转移到表面，满足界面法向电位移跃变 $\hat n\cdot(\boldsymbol D_{\rm out}-\boldsymbol D_{\rm in})=\sigma_f^{\rm surf}$。
+(4) 含位移电流的安培方程是 $\nabla\times\boldsymbol H=\boldsymbol J+\partial_t\boldsymbol D$；两侧取散度得到 $0=\nabla\cdot\boldsymbol J+\partial_t\rho_f$，正是连续性方程。若 $\sigma$ 依赖温度/场强、$\varepsilon$ 随时间或频率变化，或者存在扩散电流 $\boldsymbol J=-D\nabla\rho_f+\sigma\boldsymbol E$，局部动力学不再是上述简单常系数指数律。
