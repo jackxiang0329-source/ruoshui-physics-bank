@@ -1,0 +1,7 @@
+(1) 内部粒子满足 $m\ddot u_j=K(u_{j+1}-2u_j+u_{j-1})$，$j=1,\dots,N$，边界为 $u_0=u_{N+1}=0$。动力学矩阵是对称三对角离散Laplacian，因此有实数正本征频率和正交模态。
+
+(2) 设 $u_j=A\sin(jq)e^{-i\omega t}$，固定端给 $q_n=n\pi/(N+1)$，$n=1,\dots,N$。由离散差分 $2\cos q-2=-4\sin^2(q/2)$，得 $\boxed{\omega_n=2\sqrt{K/m}\sin[n\pi/(2(N+1))]}$。不同模式满足 $\sum_{j=1}^N\sin(jq_n)\sin(jq_p)=(N+1)\delta_{np}/2$。
+
+(3) 无限链以物理波数 $k=q/a$ 描述，第一Brillouin区 $|k|\le\pi/a$ 的色散是 $\omega(k)=2\sqrt{K/m}|\sin(ka/2)|$。对于 $0<k<\pi/a$，群速 $v_g=a\sqrt{K/m}\cos(ka/2)$，故 $v_g$ 从 $a\sqrt{K/m}$ 下降到零；最大频率为 $2\sqrt{K/m}$。
+
+(4) 当 $ka\ll1$ 时 $\sin(ka/2)\simeq ka/2$，于是 $\omega\simeq c|k|$、$c=a\sqrt{K/m}$，恢复连续波动方程。短波接近布里渊区边界时群速趋零而非随频率无限提高。系统机械能为 $\sum_j m\dot u_j^2/2+(K/2)\sum_{j=0}^N(u_{j+1}-u_j)^2$，始终非负且守恒。

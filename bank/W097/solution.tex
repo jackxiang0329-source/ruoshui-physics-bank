@@ -1,0 +1,7 @@
+(1) 每层不可压、无旋意味着 $\nabla^2\phi_j=0$。设上层在 $0<z<h_1$、下层在 $-h_2<z<0$，无穿透条件是 $\phi_{1z}(h_1)=0$、$\phi_{2z}(-h_2)=0$。对单个横波数取解 $\phi_1=A\cosh[k(h_1-z)]e^{i(kx-\omega t)}$、$\phi_2=B\cosh[k(z+h_2)]e^{i(kx-\omega t)}$。
+
+(2) 界面运动条件 $-i\omega\eta=\phi_{1z}(0)=\phi_{2z}(0)$，所以 $A=i\omega\eta_0/[k\sinh(kh_1)]$、$B=-i\omega\eta_0/[k\sinh(kh_2)]$。线性Bernoulli压力连续 $\rho_1(\phi_{1t}+g\eta)=\rho_2(\phi_{2t}+g\eta)$，代入给 $\boxed{\omega^2=gk(\rho_2-\rho_1)/[\rho_1\coth(kh_1)+\rho_2\coth(kh_2)]}$。
+
+(3) 长波 $\coth(kh)\sim1/(kh)$，于是 $\omega^2\sim c_{\rm int}^2k^2$，$\boxed{c_{\rm int}^2=g(\rho_2-\rho_1)/(\rho_1/h_1+\rho_2/h_2)}$。两层均深时 $\coth(kh_j)\to1$，故 $\omega^2\sim gk(\rho_2-\rho_1)/(\rho_1+\rho_2)$。当密度差趋零时浮力回复消失，频率趋零。
+
+(4) 若上层反而更重，$\rho_2-\rho_1<0$，得到 $\omega^2<0$，界面位移指数增长，是Rayleigh–Taylor不稳定性。上、下刚盖阻止外自由面运动，所以只有内部界面模；自由表面条件必须另设压力边界与可动表面，不能由本模型直接得到。
