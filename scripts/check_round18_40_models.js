@@ -31,9 +31,8 @@ const sim=(f,a,b,n=4000)=>{let h=(b-a)/n,s=f(a)+f(b);for(let i=1;i<n;i++)s+=(i%2
  check('M112','gravitational_infall_parametric_time_derivative',dt_dr,pred);
 }
 {
- const m0=5,rate=.6,u=3,g=1.2,v0=.8,t=.7,m=m0-rate*t;
- const y=t=>v0*t-.5*g*t*t+u*t-u*(m0-rate*t)*Math.log(m0/(m0-rate*t))/rate;
- check('M113','variable_mass_rocket_height_derivative',d(y,t),v0+u*Math.log(m0/m)-g*t);
+ const mu=1.8,v=2.1,K=3.2,delta=(5*mu*v*v/(4*K))**(2/5);
+ check('M113','Hertz_contact_maximum_compression_energy',2*K*delta**(5/2)/5,mu*v*v/2,2e-11);
 }
 {
  const m=1.2,q=.8,E=1.5,B=2,t=.63,w=q*B/m,vD=E/B,vx=vD*Math.sin(w*t),vy=vD*(Math.cos(w*t)-1),x=vD*(1-Math.cos(w*t))/w;
@@ -58,8 +57,10 @@ const sim=(f,a,b,n=4000)=>{let h=(b-a)/n,s=f(a)+f(b);for(let i=1;i<n;i++)s+=(i%2
  check('E111','distortionless_telegrapher_constant_attenuation',gammaR*gammaR-gammaI*gammaI,R*G-w*w*L*C);
 }
 {
- const e1=1.9,e2=4.2,q=2.6,qprime=q*(e1-e2)/(e1+e2),qtrans=2*e2*q/(e1+e2);
- check('E112','dielectric_image_normal_displacement',q-qprime,qtrans);
+ const fact=n=>{let x=1;for(let j=2;j<=n;j++)x*=j;return x};
+ const I=(n,x)=>{let term=(x/2)**n/fact(n),sum=term;for(let j=1;j<24;j++){term*=x*x/(4*j*(n+j));sum+=term}return sum};
+ const x=1.8;
+ check('E112','London_cylinder_Bessel_magnetic_moment_identity',I(0,x)-I(2,x),2*I(1,x)/x,1e-12);
 }
 {
  const eps=1.3,w=1.9,d=.6,k=2,V=1.8,dx=.2,Cprime=eps*w*(k-1)/d;
@@ -75,8 +76,8 @@ const sim=(f,a,b,n=4000)=>{let h=(b-a)/n,s=f(a)+f(b);for(let i=1;i<n;i++)s+=(i%2
 }
 // Thermal 102-108
 {
- const theta=.7,T=5,x=theta/T,approx=1/x,integral=sim(y=>(2*y+1)*Math.exp(-x*y*(y+1)),0,80,6000);
- check('T102','high_temperature_rotor_partition_continuum_integral',integral,approx,3e-5);
+ const alpha=.9,T=2.7,beta=1/T,Z=sim(x=>Math.exp(-beta*alpha*x**4),0,6,6000),V=alpha*sim(x=>x**4*Math.exp(-beta*alpha*x**4),0,6,6000)/Z;
+ check('T102','quartic_canonical_partition_virial_energy',V,T/4,2e-9);
 }
 {
  const g=9.8,M=.03,Cp=29,dTdz=-M*g/Cp;
@@ -114,9 +115,9 @@ const sim=(f,a,b,n=4000)=>{let h=(b-a)/n,s=f(a)+f(b);for(let i=1;i<n;i++)s+=(i%2
  check('W103','moving_acoustic_wall_phase_matching',w*(1-U/c),wr*(1+U/c));
 }
 {
- const c0=1.1,alpha=2.3,beta=.7,V=2.4,A=3*(V-c0)/alpha,L=Math.sqrt(4*beta/(V-c0));
- const wave=x=>A/Math.cosh(x/L)**2,x=.5,f=wave(x);
- check('W104','KdV_soliton_travel_wave_second_order_ODE',beta*d2(wave,x),(V-c0)*f-alpha*f*f/2,5e-7);
+ const c0=3.2,g=9.8,t=.75,left=-c0*t,right=2*c0*t;
+ const mass=sim(x=>((2*c0-x/t)/3)**2/g,left,right,4200);
+ check('W104','shallow_water_dam_break_rarefaction_mass_conservation',mass,c0**3*t/g,2e-10);
 }
 {
  const G=2.7,rho=1.9,k=.8,w=Math.sqrt(G/rho)*k,eff=(G*k*w)/(rho*w*w);
@@ -140,9 +141,8 @@ const sim=(f,a,b,n=4000)=>{let h=(b-a)/n,s=f(a)+f(b);for(let i=1;i<n;i++)s+=(i%2
  check('O102','polarizer_chain_quantum_Zeno_asymptotic',Math.log(T)*N,-theta*theta,.00007);
 }
 {
- const n1=1,n2=1.5,angle=Math.atan(n2/n1),th=Math.asin(n1/n2*Math.sin(angle));
- const rp=(n2*Math.cos(angle)-n1*Math.cos(th))/(n2*Math.cos(angle)+n1*Math.cos(th));
- check('O103','p_polarization_Brewster_zero_reflection',rp,0);
+ const kappa=2.6,g=.015,exact=kappa/2-2*Math.sqrt(kappa*kappa/16-g*g),bad_cavity=4*g*g/kappa;
+ check('O103','Purcell_weak_cavity_decay_vs_exact_coupled_eigenvalue',exact,bad_cavity,1e-7);
 }
 {
  const kz=1.5,kappa=.8,d=.6,C=(kz*kz+kappa*kappa)**2/(4*kz*kz*kappa*kappa);
@@ -173,8 +173,8 @@ const sim=(f,a,b,n=4000)=>{let h=(b-a)/n,s=f(a)+f(b);for(let i=1;i<n;i++)s+=(i%2
  check('Q103','displaced_oscillator_coherent_Poisson_probability_sum',ps,1,1e-13);
 }
 {
- const v=.7,w=1.4,ratio=-v/w,A=1;
- check('Q104','SSH_topological_edge_state_zero_energy_B_equation',v*A+w*ratio*A,0);
+ const theta=.64,vec=[Math.cos(theta),Math.sin(theta),0,0],swap=[vec[0],vec[2],vec[1],vec[3]],overlap=vec.reduce((a,x,i)=>a+x*swap[i],0);
+ check('Q104','SWAP_test_tensor_permutation_overlap',overlap,Math.cos(theta)**2,1e-12);
 }
 {
  const Tc=2.3,T=1.4,N0=1-(T/Tc)**1.5,ex=(T/Tc)**1.5;
