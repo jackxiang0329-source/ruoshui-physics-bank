@@ -1,17 +1,17 @@
 {
   "id": "M065",
   "topic": "力学",
-  "title": "幂律中心势的圆轨道稳定性、径向频率与近心点进动",
+  "title": "受周期脉冲驱动转子的标准映射、辛结构与非线性共振岛",
   "kind": "综合推导题",
   "level": 5,
   "estimated_minutes": 115,
   "tags": [
-    "幂律有效势",
-    "近圆轨道进动",
-    "径向稳定性",
-    "能量角动量变分"
+    "Hamiltonian脉冲转子",
+    "标准映射辛Jacobian",
+    "椭圆与双曲固定点",
+    "小K共振岛与分离轨道"
   ],
-  "answer": "\\omega_r^2=(\\alpha+2)\\omega_\\phi^2,\\quad\\Delta\\phi=2\\pi/\\sqrt{\\alpha+2}",
+  "answer": "p_{n+1}=p_n+K\\sin\\theta_n,\\quad\\theta_{n+1}=\\theta_n+p_{n+1}\\pmod{2\\pi},\\quad\\Delta p_{\\rm sep}\\simeq4\\sqrt K",
   "quality_status": "待独立复核",
   "tier": "advanced_composite",
   "format": "latex-fragment-v1",

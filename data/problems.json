@@ -1350,71 +1350,71 @@
   {
     "id": "M065",
     "topic": "力学",
-    "title": "幂律中心势的圆轨道稳定性、径向频率与近心点进动",
+    "title": "受周期脉冲驱动转子的标准映射、辛结构与非线性共振岛",
     "kind": "综合推导题",
     "level": 5,
     "estimated_minutes": 115,
     "tags": [
-      "幂律有效势",
-      "近圆轨道进动",
-      "径向稳定性",
-      "能量角动量变分"
+      "Hamiltonian脉冲转子",
+      "标准映射辛Jacobian",
+      "椭圆与双曲固定点",
+      "小K共振岛与分离轨道"
     ],
-    "answer": "\\omega_r^2=(\\alpha+2)\\omega_\\phi^2,\\quad\\Delta\\phi=2\\pi/\\sqrt{\\alpha+2}",
+    "answer": "p_{n+1}=p_n+K\\sin\\theta_n,\\quad\\theta_{n+1}=\\theta_n+p_{n+1}\\pmod{2\\pi},\\quad\\Delta p_{\\rm sep}\\simeq4\\sqrt K",
     "quality_status": "待独立复核",
     "tier": "advanced_composite",
     "format": "latex-fragment-v1",
     "revision": "composite-v3.7-round12-draft",
     "challenge_profile": "high-multistage",
     "complexity_tier": "L5-C",
-    "question": "质量 \\(m>0\\) 的质点在中心势 \\(U(r)=kr^\\alpha/\\alpha\\) 内运动，\\(k>0,\\alpha\\ne0\\)，非零角动量 \\(L>0\\) 守恒。对 \\(\\alpha\\to0\\) 采用减去势能常数 \\(k/\\alpha\\) 后的对数势极限。\n(1) 构造径向有效势，求给定 \\(L\\) 时的圆轨道半径、角频率及能量，讨论 \\(\\alpha=-2\\) 的例外。\n(2) 求径向小振动频率、稳定性充要条件，并以两种不同方法核对。\n(3) 求近圆轨道每个径向周期的方位角增量，讨论Kepler与谐振子特例及有限偏心率限制。\n(4) 证明沿圆轨道族 \\(dE_c/dL=\\omega_\\phi\\)，讨论对数势和临界 \\(\\alpha\\to-2^+\\) 极限。\n",
-    "solution": "(1) 径向能量积分 \\(E=m\\dot r^2/2+U_{\\rm eff}\\)，其中 \\(U_{\\rm eff}=L^2/(2mr^2)+kr^\\alpha/\\alpha\\)。圆轨道满足 \\(U_{\\rm eff}'=-L^2/(mr^3)+kr^{\\alpha-1}=0\\)，故\n\\[\nL^2=mk r_0^{\\alpha+2},\\quad\n\\omega_\\phi=L/(mr_0^2),\\quad\n\\omega_\\phi^2=kr_0^{\\alpha-2}/m,\\quad\nE_c=kr_0^\\alpha(1/2+1/\\alpha).\n\\]\n\\(\\alpha=-2\\) 时只有调谐 \\(L^2=mk\\) 才允许任意半径的中性圆轨道，没有孤立 \\(r_0\\)。\n\n(2) \\(U_{\\rm eff}''=3L^2/(mr^4)+k(\\alpha-1)r^{\\alpha-2}\\)，在圆轨道为 \\((\\alpha+2)kr_0^{\\alpha-2}\\)。令 \\(r=r_0+\\rho\\)，有\n\\[\n\\ddot\\rho+\\omega_r^2\\rho=0,\\qquad\n\\boxed{\\omega_r^2=(\\alpha+2)\\omega_\\phi^2}.\n\\]\n\\(\\alpha>-2\\) 时孤立圆轨道稳定，\\(\\alpha=-2\\) 中性，\\(\\alpha<-2\\) 指数失稳。直接线性化 \\(m\\ddot r=L^2/(mr^3)-kr^{\\alpha-1}\\) 也得到同一结果。\n\n(3) \\(T_r=2\\pi/\\omega_r\\)，而 \\(\\dot\\phi=L/(mr^2)=\\omega_\\phi(1-2\\rho/r_0+O(\\rho^2))\\)，一阶周期平均扰动为零，因此\n\\[\n\\boxed{\\Delta\\phi=2\\pi/\\sqrt{\\alpha+2}},\\quad\\delta\\phi=\\Delta\\phi-2\\pi.\n\\]\nKepler势 \\(\\alpha=-1\\) 给 \\(2\\pi\\) 无进动，谐振子势 \\(\\alpha=2\\) 给 \\(\\pi\\)，两径向周期后闭合。频率比有理仅保证线性近圆轨道局部闭合，非线性有限振幅一般不能照搬。\n\n(4) \\(L=\\sqrt{mk}\\,r_0^{(\\alpha+2)/2}\\)，故 \\(dL/dr_0=(\\alpha+2)L/(2r_0)\\)，\\(dE_c/dr_0=(\\alpha+2)kr_0^{\\alpha-1}/2\\)，两者相除为 \\(dE_c/dL=L/(mr_0^2)=\\omega_\\phi\\)。\\(\\alpha\\to0\\) 应先减 \\(k/\\alpha\\) 常数，得到 \\(U=k\\ln r\\) 与 \\(\\omega_r=\\sqrt2\\omega_\\phi\\)；\\(\\alpha\\to-2^+\\) 径向软模趋零，近心点角发散，必须重新检查 \\(|\\rho|/r_0\\ll1\\) 的适用性。\n"
+    "question": "考虑无量纲经典转子在单位周期的瞬时脉冲势 \\(V(\\theta,t)=K\\cos\\theta\\sum_{n\\in\\mathbb Z}\\delta(t-n)\\) 下运动，脉冲间哈密顿量为 \\(p^2/2\\)，\\(K>0\\)。以每次脉冲到来前的 \\((\\theta_n,p_n)\\) 作为Poincaré状态，角变量模 \\(2\\pi\\)。\n(1) 从Hamilton方程推导精确离散标准映射及其Jacobian，证明保面积辛性质。\n(2) 求 \\(p=0\\pmod{2\\pi}\\) 的两类固定点，计算线性稳定性特征值及椭圆—双曲阈值。\n(3) 在 \\(0<K\\ll1\\) 时推导稳定共振岛的连续摆近似，求分离轨道动量全宽与相空间面积的首阶尺度。\n(4) 讨论 \\(K\\to0\\)、\\(K=4\\) 及较大 \\(K\\) 时线性稳定判据的适用边界，解释为什么保面积不等于轨道一定有界。\n",
+    "solution": "(1) 脉冲势对动量的瞬时改变为 \\(\\Delta p=-\\partial_\\theta(K\\cos\\theta)=K\\sin\\theta_n\\)，随后自由转动一个单位时间，因此\n\\[\n\\boxed{p_{n+1}=p_n+K\\sin\\theta_n,\\quad\n\\theta_{n+1}=\\theta_n+p_{n+1}\\pmod{2\\pi}}.\n\\]\n按 \\((\\theta,p)\\) 排列，Jacobian为\n\\[\nD\\mathcal M=\\begin{pmatrix}1+K\\cos\\theta&1\\\\K\\cos\\theta&1\\end{pmatrix},\\quad\\det D\\mathcal M=1.\n\\]\n二维中行列式为1等价于保持标准辛形式 \\(d\\theta\\wedge dp\\)，所以离散演化严格保面积而非耗散。\n\n(2) 固定点要求 \\(K\\sin\\theta_*=0\\) 且 \\(p_*=0\\pmod{2\\pi}\\)，故 \\(\\theta_*=0,\\pi\\)。线性特征值满足\n\\[\n\\lambda^2-(2+K\\cos\\theta_*)\\lambda+1=0.\n\\]\n在 \\(\\theta_*=0\\) 时迹 \\(2+K>2\\)，一对互逆实本征值，双曲失稳；在 \\(\\theta_*=\\pi\\) 时迹 \\(2-K\\)，当 \\(0<K<4\\) 时 \\(|\\operatorname{tr}|<2\\)，本征值为共轭单位模，线性椭圆稳定。\\(K=4\\) 时迹为 \\(-2\\) 属抛物边界，线性理论本身不能决定非线性长期行为。\n\n(3) 对 \\(K\\ll1\\) 的缓慢演化，将二阶差分 \\(p_{n+1}-p_n=K\\sin\\theta_n\\) 连续化为 \\(\\ddot\\theta=K\\sin\\theta\\)，等价于摆Hamilton量 \\(H_{\\rm eff}=p^2/2+K\\cos\\theta\\)，稳定中心在 \\(\\theta=\\pi\\)。分离轨道能量为 \\(H_{\\rm sep}=K\\)，在 \\(\\theta=\\pi\\) 时\n\\(p_{\\max}^2/2-K=K\\)，故 \\(p_{\\max}=2\\sqrt K\\)。\n\\[\n\\boxed{\\Delta p_{\\rm sep}\\simeq4\\sqrt K,\\qquad\n\\mathcal A_{\\rm sep}\\simeq16\\sqrt K}.\n\\]\n面积由 \\(\\int_0^{2\\pi}2|p_{\\rm sep}(\\theta)|d\\theta\\) 得到，属于小 \\(K\\) 渐近式而非任意脉冲强度下的精确公式。\n\n(4) \\(K\\to0\\) 时 \\(p\\) 常量、\\(\\theta\\) 匀速转动，标准映射成为可积扭转映射；\\(K=4\\) 是固定点 \\(\\pi\\) 的线性倍周期阈值而非所有轨道的统一混沌阈值。较大 \\(K\\) 可产生混沌海、共振岛和加速轨道，保面积只约束相空间局部面积，并不限制非紧致动量轴上的单轨道动量幅度。连续摆近似只适用于小 \\(K\\) 的主共振附近。\n"
   },
   {
     "id": "M066",
     "topic": "力学",
-    "title": "摆线最速降线的等时性、精确简谐化与约束反力",
+    "title": "均匀悬链线的非线性平衡、唯一张力参数与重力势能",
     "kind": "综合推导题",
     "level": 5,
     "estimated_minutes": 115,
     "tags": [
-      "摆线弧长坐标",
-      "等时曲线",
-      "非线性坐标简谐化",
-      "重力约束反力"
+      "静态柔链悬链线",
+      "弧长约束与唯一性",
+      "支点反力和张力分布",
+      "重力势能与浅垂度极限"
     ],
-    "answer": "V(s)=mg s^2/(8a),\\quad\\ddot s+\\frac{g}{4a}s=0,\\quad T=4\\pi\\sqrt{a/g}",
+    "answer": "y=a[\\cosh(x/a)-\\cosh(\\ell/(2a))],\\quad S=2a\\sinh(\\ell/(2a)),\\quad H=\\lambda ga",
     "quality_status": "待独立复核",
     "tier": "advanced_composite",
     "format": "latex-fragment-v1",
     "revision": "composite-v3.7-round12-draft",
     "challenge_profile": "high-multistage",
     "complexity_tier": "L5-C",
-    "question": "质点质量 \\(m>0\\) 在竖直平面内沿光滑固定倒置摆线滑动。取最低点为原点，令参数 \\(-\\pi<\\theta<\\pi\\)，轨道参数方程为 \\(x=a(\\theta+\\sin\\theta)\\)、\\(y=a(1-\\cos\\theta)\\)，其中 \\(y\\) 向上，\\(a>0\\)。重力加速度 \\(g>0\\)，无摩擦。\n(1) 由轨道参数化求弧长坐标 \\(s(\\theta)\\) 和重力势 \\(V(s)\\)，验证精确而非近似的简谐化。\n(2) 对任意不越过摆线尖点的释放位置 \\(s_0\\) 求到最低点的时间及完整振动周期，证明等时性。\n(3) 从曲率公式求轨道曲率半径，并求运动中的法向约束反力的表达式，判断尖点附近的适用边界。\n(4) 给出能量守恒的两种写法并分析 \\(a\\to\\infty\\)、小振幅极限与轨道法向失去接触时模型的局限。\n",
-    "solution": "(1) 求导 \\(x'=a(1+\\cos\\theta)\\)、\\(y'=a\\sin\\theta\\)，故\n\\(ds/d\\theta=\\sqrt{x'^2+y'^2}=2a\\cos(\\theta/2)>0\\)。\n取最低点 \\(s(0)=0\\)，积分得 \\(s=4a\\sin(\\theta/2)\\)。又 \\(y=a(1-\\cos\\theta)=2a\\sin^2(\\theta/2)=s^2/(8a)\\)，因此\n\\[\n\\boxed{V(s)=mgy=mg s^2/(8a)},\\qquad\nL_{\\rm mech}=\\tfrac12m\\dot s^2-\\tfrac{mg}{8a}s^2.\n\\]\n欧拉—拉格朗日方程精确成为 \\(\\ddot s+gs/(4a)=0\\)，不依赖小角度展开。\n\n(2) 从 \\(s(0)=s_0\\)、\\(\\dot s(0)=0\\) 释放，解为\n\\(s(t)=s_0\\cos(\\sqrt{g/(4a)}\\,t)\\)。\n首次抵达最低点时相位为 \\(\\pi/2\\)，故\n\\[\n\\boxed{t_{\\rm bottom}=\\pi\\sqrt{a/g}},\\qquad\n\\boxed{T=4\\pi\\sqrt{a/g}}.\n\\]\n两者与 \\(|s_0|<4a\\) 无关。此等时性来自弧长坐标下严格二次势，不等于任意轨道上所有振幅均等时。\n\n(3) 平面曲率 \\(\\kappa_c=|x'y''-y'x''|/(x'^2+y'^2)^{3/2}\\)。代入 \\(x''=-a\\sin\\theta\\)、\\(y''=a\\cos\\theta\\)，得\n\\(\\kappa_c=1/[4a\\cos(\\theta/2)]\\)，曲率半径 \\(R_c=4a\\cos(\\theta/2)\\)。以朝向曲率中心的单位法向为正，重力法向投影为 \\(mg\\cos(\\theta/2)\\)，法向约束力有符号分量满足\n\\[\n\\boxed{N_{\\rm signed}=m\\dot s^2/R_c+mg\\cos(\\theta/2)}.\n\\]\n这里 \\(N_{\\rm signed}\\) 可正可负；若轨道只允许单侧接触而不能双侧约束，负值意味着可能脱离，不能简单把它取绝对值仍当作同侧支持力。\n\n(4) 能量写为 \\(E=\\tfrac12m\\dot s^2+mg s^2/(8a)\\)，亦为 \\(E=\\tfrac12m(2a\\cos(\\theta/2)\\dot\\theta)^2+mga(1-\\cos\\theta)\\)，二者恒等。小振幅时 \\(\\theta\\simeq s/(2a)\\)，频率仍为 \\(\\sqrt{g/(4a)}\\)，并非只在此极限有效。固定 \\(g\\) 而 \\(a\\to\\infty\\) 时曲率趋零、周期趋无穷，局部近水平轨道上重力切向恢复力消失。靠近 \\(|\\theta|=\\pi\\) 的尖点，弧长雅可比趋零、曲率半径趋零，有限速度的法向加速度发散，真实有限强度导轨模型不再适用。\n"
+    "question": "均匀不可伸长柔链线密度为 \\(\\lambda>0\\)，总长度 \\(S>\\ell>0\\)，悬挂在同高支点 \\(x=\\pm\\ell/2\\)、\\(y=0\\) 之间。竖直坐标 \\(y\\) 向上，重力加速度 \\(g>0\\)。链在竖直平面内静止，无弯曲刚度和摩擦。\n(1) 从水平、竖直张力平衡推导悬链线形状，求水平张力 \\(H\\) 与形状参数 \\(a\\) 的关系。\n(2) 用弧长约束求确定 \\(a\\) 的超越方程，并严格证明对任意 \\(S>\\ell\\) 存在唯一正解。\n(3) 求最低点垂度、任意位置张力、两个支点的竖直反力及其整体受力核验。\n(4) 求相对于支点高度的链重力势能，并推导浅垂度时的长度余量、垂度与张力的渐近关系。\n",
+    "solution": "(1) 设链的水平张力分量为常数 \\(H>0\\)。弧长元 \\(ds=\\sqrt{1+y'^2}\\,dx\\)，竖直平衡为 \\(d(Hy')/dx=\\lambda g\\sqrt{1+y'^2}\\)。令 \\(a=H/(\\lambda g)\\)，积分得到 \\(\\operatorname{arsinh}y'=x/a\\)，其中对称最低点取在 \\(x=0\\)。因此 \\(y'=\\sinh(x/a)\\)，再由两端 \\(y(\\pm\\ell/2)=0\\) 得\n\\[\n\\boxed{y(x)=a[\\cosh(x/a)-\\cosh(\\ell/(2a))]},\\qquad H=\\lambda ga.\n\\]\n该曲线严格来自张力平衡而非先假设抛物线近似。\n\n(2) 由 \\(ds=\\cosh(x/a)dx\\)，全链长\n\\[\n\\boxed{S=\\int_{-\\ell/2}^{\\ell/2}\\cosh(x/a)dx=2a\\sinh(\\ell/(2a))}.\n\\]\n令 \\(u=\\ell/(2a)>0\\)，则 \\(S/\\ell=\\sinh u/u\\)。函数导数 \\((u\\cosh u-\\sinh u)/u^2>0\\)，因为分子在0为零、导数为 \\(u\\sinh u>0\\)。且 \\(u\\to0\\) 时函数趋1，\\(u\\to\\infty\\) 时趋无穷，故每个 \\(S>\\ell\\) 唯一确定 \\(u\\)、\\(a\\) 与 \\(H\\)。\n\n(3) 最低点垂度\n\\[\nd=-y(0)=a[\\cosh(\\ell/(2a))-1].\n\\]\n张力模长 \\(T(x)=H\\sqrt{1+y'^2}=H\\cosh(x/a)\\)，最低点最小张力为 \\(H\\)。支点竖直张力分量的大小为 \\(H\\sinh(\\ell/(2a))=\\lambda g a\\sinh(\\ell/(2a))=\\lambda gS/2\\)，两个支点合计承担 \\(\\lambda gS\\)，与全链重量严格相等；支点水平分量互相抵消。\n\n(4) 以支点高度为零势，链势能\n\\[\nU=\\lambda g\\int_{-\\ell/2}^{\\ell/2}y(x)\\sqrt{1+y'^2}\\,dx\n=\\boxed{\\lambda ga^2[u-\\sinh u\\cosh u]},\\quad u=\\ell/(2a).\n\\]\n该值为负，因链位于支点下方。浅垂度 \\(u\\ll1\\) 时\n\\(S/\\ell=\\sinh u/u=1+u^2/6+O(u^4)\\)，\n\\(d=a(\\cosh u-1)=\\ell u/4+O(\\ell u^3)\\)，\n\\(H=\\lambda g\\ell/(2u)\\)。因此\n\\[\nd\\simeq\\frac{\\ell}{4}\\sqrt{6(S/\\ell-1)},\\qquad\nH\\simeq\\frac{\\lambda g\\ell}{2\\sqrt{6(S/\\ell-1)}}.\n\\]\n当 \\(S\\downarrow\\ell\\) 时张力发散，显示不可伸长柔链的理想化极限。\n"
   },
   {
     "id": "M067",
     "topic": "力学",
-    "title": "排斥Coulomb中心势的双曲轨道、最近距离与Rutherford散射截面",
+    "title": "Rankine复合涡的涡量分布、径向压力、能量与自由液面",
     "kind": "综合推导题",
     "level": 5,
     "estimated_minutes": 120,
     "tags": [
-      "中心力双曲散射",
-      "Binet轨道方程",
-      "微分散射截面",
-      "弱散射冲量"
+      "Rankine分段涡流",
+      "涡量与环量",
+      "离心径向压强平衡",
+      "动能角动量与自由液面"
     ],
-    "answer": "\\chi=2\\arctan\\frac{\\kappa}{mv_\\infty^2b},\\quad\\frac{d\\sigma}{d\\Omega}=\\left(\\frac{\\kappa}{2mv_\\infty^2}\\right)^2\\csc^4(\\chi/2)",
+    "answer": "v_\\theta(r)=\\begin{cases}\\Omega r&r<a\\\\\\Omega a^2/r&a<r<R\\end{cases},\\quad E'=\\pi\\rho\\Omega^2a^4(1/4+\\ln(R/a))",
     "quality_status": "待独立复核",
     "tier": "advanced_composite",
     "format": "latex-fragment-v1",
     "revision": "composite-v3.7-round12-draft",
     "challenge_profile": "high-multistage",
     "complexity_tier": "L5-C",
-    "question": "经典质点质量 \\(m>0\\) 从无穷远以速度 \\(v_\\infty>0\\)、冲量参数 \\(b>0\\) 入射固定排斥势 \\(U(r)=\\kappa/r\\)，\\(\\kappa>0\\)，忽略辐射与反冲。\n(1) 用守恒量及Binet方程求轨道偏心率与最近距离，证明轨道为双曲线。\n(2) 求散射角与冲量参数的关系，并独立核对弱散射冲量近似。\n(3) 由轴对称入射面积元推导微分散射截面及小角渐近行为。\n(4) 求散射角超过给定阈值 \\(\\chi_0\\in(0,\\pi)\\) 的总截面，并讨论小冲量参数和长程势的极限。\n",
-    "solution": "(1) \\(E=mv_\\infty^2/2>0\\)，\\(L=mv_\\infty b\\)。令 \\(u=1/r\\)，Binet方程 \\(u''+u=-m\\kappa/L^2\\) 的双曲轨道解为\n\\[\nu=\\frac{m\\kappa}{L^2}(e\\cos\\phi-1),\\quad\ne=\\sqrt{1+2EL^2/(m\\kappa^2)}\n=\\sqrt{1+(mv_\\infty^2b/\\kappa)^2}>1.\n\\]\n在 \\(\\phi=0\\) 处 \\(r_{\\min}=L^2/[m\\kappa(e-1)]=[\\kappa+\\sqrt{\\kappa^2+m^2v_\\infty^4b^2}]/(mv_\\infty^2)\\)。可由径向能量转折点方程 \\(E=L^2/(2mr_{\\min}^2)+\\kappa/r_{\\min}\\) 再核对。\n\n(2) 渐近方向满足 \\(\\cos\\phi_\\infty=1/e\\)，故偏转角\n\\(\\chi=\\pi-2\\phi_\\infty=2\\arcsin(1/e)\\)，等价于\n\\[\n\\boxed{\\tan(\\chi/2)=\\kappa/(mv_\\infty^2b)}.\n\\]\n当 \\(b\\gg\\kappa/(mv_\\infty^2)\\)，\\(\\chi\\simeq2\\kappa/(mv_\\infty^2b)\\)。独立按直线近似计算横向冲量 \\(\\Delta p_\\perp=\\int\\kappa b\\,dt/(b^2+v_\\infty^2t^2)^{3/2}=2\\kappa/(bv_\\infty)\\)，除以 \\(mv_\\infty\\) 得相同角度。\n\n(3) 轴对称入射面积 \\(d\\sigma=2\\pi b|db|\\)，散射立体角 \\(d\\Omega=2\\pi\\sin\\chi\\,d\\chi\\)。由 \\(b=\\kappa\\cot(\\chi/2)/(mv_\\infty^2)\\)，得\n\\[\n\\boxed{\\frac{d\\sigma}{d\\Omega}=b\\frac{|db/d\\chi|}{\\sin\\chi}\n=\\left(\\frac{\\kappa}{2mv_\\infty^2}\\right)^2\\csc^4(\\chi/2)}.\n\\]\n小角 \\(\\chi\\to0\\) 时截面密度按 \\(\\chi^{-4}\\) 发散，来自无屏蔽长程势的大 \\(b\\) 贡献，并非真实有限束流的无限计数。\n\n(4) \\(\\chi>\\chi_0\\) 当且仅当 \\(0\\le b<b_0=\\kappa\\cot(\\chi_0/2)/(mv_\\infty^2)\\)，所以\n\\[\n\\boxed{\\sigma(\\chi>\\chi_0)=\\pi b_0^2\n=\\pi\\left[\\frac{\\kappa}{mv_\\infty^2}\\cot\\frac{\\chi_0}{2}\\right]^2}.\n\\]\n\\(b\\to0\\) 时 \\(\\chi\\to\\pi\\) 且 \\(r_{\\min}\\to2\\kappa/(mv_\\infty^2)\\)，轨道不会穿越排斥中心；实际角分辨率、屏蔽、靶核反冲和量子效应会修改理想小角或高能极限。\n"
+    "question": "不可压缩、无黏流体密度 \\(\\rho>0\\) 在半径 \\(R>a>0\\) 的竖直圆柱区域中作稳态轴对称纯环向运动。给定Rankine涡速度剖面 \\(v_\\theta(r)=\\Omega r\\)（\\(0\\le r\\le a\\)），\\(v_\\theta(r)=\\Omega a^2/r\\)（\\(a<r<R\\)），\\(\\Omega>0\\)，忽略底部和侧壁黏性。\n(1) 求轴向涡量和半径 \\(r\\) 的环量，证明核心外流动无涡但非零环量。\n(2) 从Euler径向平衡求 \\(p(r)-p(0)\\) 的分段表达式，并验证核边界压力连续。\n(3) 求单位轴向高度的总动能与总角动量，讨论 \\(a\\to0\\) 时保持 \\(\\Omega\\) 或保持总环量的不同极限。\n(4) 若有重力 \\(g>0\\) 且自由液面为大气压，求自由液面相对外缘 \\(z(r)-z(R)\\) 的剖面，核对轴心凹陷与能量尺度。\n",
+    "solution": "(1) 轴对称纯环向速度的涡量为 \\(\\omega_z=r^{-1}d(rv_\\theta)/dr\\)，故\n\\[\n\\boxed{\\omega_z=2\\Omega\\ (r<a),\\qquad\\omega_z=0\\ (a<r<R)}.\n\\]\n环量 \\(\\Gamma(r)=2\\pi r v_\\theta(r)\\)，即核内 \\(2\\pi\\Omega r^2\\)，核外常数 \\(2\\pi\\Omega a^2\\)。核外虽局部无涡，环绕核心的闭合回路仍包围非零涡量通量，不能由局部无涡推出环量为零。\n\n(2) 稳态Euler径向方程 \\(\\partial_r p=\\rho v_\\theta^2/r\\)，核内积分给\n\\(p(r)-p(0)=\\rho\\Omega^2r^2/2\\)。核外以 \\(p(a)-p(0)=\\rho\\Omega^2a^2/2\\) 为边界，得到\n\\[\n\\boxed{p(r)-p(0)=\\rho\\Omega^2a^2\n-\\frac{\\rho\\Omega^2a^4}{2r^2}\\quad(a<r<R)}.\n\\]\n代入 \\(r=a\\) 与核内结果一致；压力向外增加，符合环向速度所需向心压力梯度的符号。\n\n(3) 单位高度动能为 \\(E'=\\int_0^R\\tfrac12\\rho v_\\theta^2\\,2\\pi r\\,dr\\)，两段积分得到\n\\[\n\\boxed{E'=\\pi\\rho\\Omega^2a^4[1/4+\\ln(R/a)]}.\n\\]\n单位高度轴向角动量 \\(L'=\\int_0^R\\rho r v_\\theta\\,2\\pi r\\,dr\\)，得\n\\(\\boxed{L'=\\pi\\rho\\Omega a^2(R^2-a^2/2)}\\)。\n固定 \\(\\Omega\\) 令 \\(a\\to0\\) 时环量、能量均趋零；若固定 \\(\\Gamma=2\\pi\\Omega a^2\\)，则 \\(E'\\sim\\rho\\Gamma^2\\ln(R/a)/(4\\pi)\\) 对数发散，说明理想点涡必须引入核心截断。\n\n(4) 自由液面处 \\(p=p_{\\rm atm}\\) 恒定，静水竖向平衡 \\(\\partial_zp=-\\rho g\\) 与径向平衡合成\n\\(g\\,dz/dr=v_\\theta^2/r\\)。因此\n\\[\nz(r)-z(R)=-\\frac1g\\int_r^R\\frac{v_\\theta(s)^2}{s}\\,ds .\n\\]\n核外为 \\(-\\Omega^2a^4(1/r^2-1/R^2)/(2g)\\)；核内为\n\\[\nz(r)-z(R)=-\\frac{\\Omega^2}{2g}\n[a^2-r^2+a^2(1-a^2/R^2)] .\n\\]\n轴心最深，\\(z(0)-z(R)=-\\Omega^2a^2[1-a^2/(2R^2)]/g\\)，与第二问的压强差 \\([p(R)-p(0)]/(\\rho g)\\) 精确一致。\n"
   },
   {
     "id": "E007",
@@ -2789,48 +2789,48 @@
   {
     "id": "E066",
     "topic": "电磁学",
-    "title": "导电半空间高频趋肤效应、复表面阻抗与焦耳能流守恒",
+    "title": "理想MHD剪切Alfvén波的Elsasser变量、能流与界面散射",
     "kind": "综合推导题",
     "level": 5,
     "estimated_minutes": 115,
     "tags": [
-      "导体内复波数",
-      "趋肤深度与相位滞后",
-      "表面阻抗",
-      "Poynting焦耳能量平衡"
+      "理想不可压缩MHD线性化",
+      "Alfvén色散与Elsasser变量",
+      "磁动能守恒",
+      "介质界面阻抗散射"
     ],
-    "answer": "\\delta=\\sqrt{2/(\\mu\\sigma\\omega)},\\quad Z_s=(1-i)/(\\sigma\\delta),\\quad \\langle S_z\\rangle=\\sigma\\delta|E_0|^2/4",
+    "answer": "v_A=B_0/\\sqrt{\\mu\\rho},\\quad\\omega^2=k^2v_A^2,\\quad r=\\frac{Z_1-Z_2}{Z_1+Z_2},\\quad Z_j=\\rho_jv_{Aj}",
     "quality_status": "待独立复核",
     "tier": "advanced_composite",
     "format": "latex-fragment-v1",
     "revision": "composite-v3.7-round12-draft",
     "challenge_profile": "high-multistage",
     "complexity_tier": "L5-C",
-    "question": "均匀各向同性良导体占据 \\(z>0\\)，磁导率 \\(\\mu>0\\)、电导率 \\(\\sigma>0\\)、介电常数 \\(\\varepsilon>0\\)。在 \\(z=0\\) 施加沿 \\(x\\) 的谐波切向电场 \\(E_x(0,t)=\\operatorname{Re}[E_0e^{-i\\omega t}]\\)，\\(\\omega>0\\)，且 \\(\\sigma\\gg\\omega\\varepsilon\\)。所有场仅依赖 \\(z\\)。\n(1) 由Maxwell方程推导导体内复波数和趋肤深度，选择满足 \\(z\\to\\infty\\) 衰减的分支。\n(2) 求伴随磁场和复表面阻抗 \\(Z_s=E_x(0)/H_y(0)\\)，检查相位及低频极限适用条件。\n(3) 独立计算表面平均Poynting通量与体内焦耳热积分，验证能量守恒。\n(4) 计算深度 \\(z\\) 以内的耗散占比，讨论频率翻倍、有限厚度及位移电流不可忽略时的修正边界。\n",
-    "solution": "(1) 采用 \\(e^{-i\\omega t}\\) 约定，Faraday方程给 \\(\\partial_zE_x=i\\omega\\mu H_y\\)，Ampère方程给 \\(-\\partial_zH_y=(\\sigma-i\\omega\\varepsilon)E_x\\)。因此\n\\[\nE_x''=( -i\\omega\\mu\\sigma-\\omega^2\\mu\\varepsilon)E_x.\n\\]\n良导体近似忽略位移电流，令 \\(\\delta=\\sqrt{2/(\\mu\\sigma\\omega)}\\)，衰减分支为\n\\[\n\\boxed{E_x(z)=E_0e^{-(1-i)z/\\delta}}.\n\\]\n复指数实部衰减，虚部体现向内部的相位推进，选另一根会在半无限导体内发散。\n\n(2) 由Faraday关系\n\\[\nH_y(z)=\\frac{1+i}{\\omega\\mu\\delta}E_x(z)\n=\\frac{\\sigma\\delta}{2}(1+i)E_x(z).\n\\]\n所以\n\\[\n\\boxed{Z_s=\\frac{E_x(0)}{H_y(0)}=\\frac{1-i}{\\sigma\\delta}}.\n\\]\n实部为正代表耗散，虚部符号取决于 \\(e^{-i\\omega t}\\) 约定。趋肤近似要求 \\(\\sigma\\gg\\omega\\varepsilon\\) 且导体厚度远大于 \\(\\delta\\)；\\(\\omega\\to0\\) 时 \\(\\delta\\to\\infty\\)，半无限趋肤解不能不加限制地替代静态电流边值问题。\n\n(3) 时间平均能流沿 \\(+z\\)，\n\\[\n\\langle S_z(0)\\rangle=\\tfrac12\\operatorname{Re}(E_0H_0^*)\n=\\frac{\\sigma\\delta|E_0|^2}{4}.\n\\]\n体内焦耳热每单位面积为\n\\[\nP_J/A=\\int_0^\\infty\\frac{\\sigma|E_0|^2}{2}e^{-2z/\\delta}dz\n=\\frac{\\sigma\\delta|E_0|^2}{4},\n\\]\n与输入能流完全一致。由于半无限远处场为零，稳态平均无净电磁能积累；这也独立检验了复表面阻抗实部的符号。\n\n(4) 深度 \\(z\\) 内耗散占比\n\\[\n\\frac{\\int_0^z\\sigma|E(z')|^2dz'}{\\int_0^\\infty\\sigma|E(z')|^2dz'}\n=1-e^{-2z/\\delta}.\n\\]\n频率加倍使 \\(\\delta\\) 变为原来的 \\(1/\\sqrt2\\)，在固定表面 \\(E_0\\) 条件下总耗散 \\(\\propto\\delta\\)，而在固定表面磁场条件下总耗散 \\(\\propto1/\\delta\\)；必须声明边界驱动。有限厚度接近 \\(\\delta\\) 时背面反射影响指数剖面，位移电流与传导电流可比时应使用完整复根而非良导体公式。\n"
+    "question": "理想不可压缩导电流体密度 \\(\\rho>0\\)、磁导率 \\(\\mu>0\\)，平衡磁场 \\(\\boldsymbol B_0=B_0\\boldsymbol e_z\\)，\\(B_0>0\\)。考虑沿 \\(z\\) 传播、横向偏振且只依赖 \\(z,t\\) 的小速度扰动 \\(\\boldsymbol u\\) 与磁扰动 \\(\\boldsymbol b\\)，忽略黏性、电阻与压缩。\n(1) 从理想MHD动量方程和感应方程线性化，推导剪切Alfvén波的色散关系及磁扰动与速度的相位关系。\n(2) 构造Elsasser变量，解耦双向传播模，说明波向与符号的对应。\n(3) 推导动能与磁能的局部守恒律、能流，独立核对向正 \\(z\\) 传播的波能流符号。\n(4) 若两半空间具有相同 \\(B_0,\\mu\\) 但不同密度 \\(\\rho_1,\\rho_2\\)，推导正入射Alfvén波速度振幅反射透射系数和能流守恒。\n",
+    "solution": "(1) 对横向小扰动，理想MHD线性化为\n\\[\n\\rho\\partial_t\\boldsymbol u=(B_0/\\mu)\\partial_z\\boldsymbol b,\\qquad\n\\partial_t\\boldsymbol b=B_0\\partial_z\\boldsymbol u.\n\\]\n消去 \\(\\boldsymbol b\\) 得 \\(\\partial_t^2\\boldsymbol u=v_A^2\\partial_z^2\\boldsymbol u\\)，\n\\[\n\\boxed{v_A=B_0/\\sqrt{\\mu\\rho},\\qquad\\omega^2=k^2v_A^2}.\n\\]\n对于 \\(e^{i(kz-\\omega t)}\\) 且 \\(\\omega=+kv_A\\)，感应方程给 \\(\\boldsymbol b=-\\sqrt{\\mu\\rho}\\boldsymbol u\\)，符号取决于传播方向。\n\n(2) 定义 \\(\\boldsymbol z^\\pm=\\boldsymbol u\\pm\\boldsymbol b/\\sqrt{\\mu\\rho}\\)，则\n\\[\n\\partial_t\\boldsymbol z^\\pm=\\pm v_A\\partial_z\\boldsymbol z^\\pm.\n\\]\n因此 \\(\\boldsymbol z^-\\) 满足 \\(\\partial_t\\boldsymbol z^-+v_A\\partial_z\\boldsymbol z^-=0\\)，沿 \\(+z\\) 传播；\\(\\boldsymbol z^+\\) 沿 \\(-z\\) 传播。该符号对应来自题设 \\(B_0>0\\) 与 \\(e^{i(kz-\\omega t)}\\) 约定，不能只按变量上标猜测方向。\n\n(3) 两方程分别点乘 \\(\\boldsymbol u,\\boldsymbol b/\\mu\\) 相加，得\n\\[\n\\boxed{\\partial_t\\left(\\frac{\\rho u^2}{2}+\\frac{b^2}{2\\mu}\\right)\n+\\partial_z\\left(-\\frac{B_0}{\\mu}\\boldsymbol u\\cdot\\boldsymbol b\\right)=0}.\n\\]\n正向波 \\(\\boldsymbol b=-\\sqrt{\\mu\\rho}\\boldsymbol u\\) 的能流为\n\\(-B_0\\boldsymbol u\\cdot\\boldsymbol b/\\mu=\\rho v_Au^2>0\\)，同时磁能与动能相等。若误将感应方程符号反写，能流方向会与传播方向冲突。\n\n(4) 定义波阻抗 \\(Z_j=\\rho_jv_{Aj}=B_0\\sqrt{\\rho_j/\\mu}\\)。在界面处横向速度连续 \\(u_i+u_r=u_t\\)，横向磁场连续给 \\(Z_1(u_i-u_r)=Z_2u_t\\)。因此\n\\[\n\\boxed{r_u=\\frac{u_r}{u_i}=\\frac{Z_1-Z_2}{Z_1+Z_2},\\quad\nt_u=\\frac{u_t}{u_i}=\\frac{2Z_1}{Z_1+Z_2}}.\n\\]\n能流反射率 \\(R=r_u^2\\)，透射率 \\(T=(Z_2/Z_1)t_u^2\\)，直接化简 \\(R+T=1\\)。该结论限定于正入射、理想无耗散、界面 \\(B_0,\\mu\\) 连续且仅有剪切Alfvén分支。\n"
   },
   {
     "id": "E067",
     "topic": "电磁学",
-    "title": "法拉第圆盘的动生电动势、电磁反转矩与负载匹配",
+    "title": "非线性Poisson–Boltzmann平板双电层的精确势、Grahame关系与微分电容",
     "kind": "综合推导题",
     "level": 5,
     "estimated_minutes": 120,
     "tags": [
-      "单极发电机",
-      "磁场电动势",
-      "机械电路能量守恒",
-      "电磁制动与最优负载"
+      "非线性Poisson-Boltzmann方程",
+      "平板双电层精确积分",
+      "Grahame表面电荷关系",
+      "微分电容与渗透压"
     ],
-    "answer": "\\mathcal E=B\\omega R^2/2,\\quad\\tau_{\\rm em}=-IBR^2/2,\\quad\\omega(t)=\\omega_0e^{-B^2R^4t/[4J(r+R_L)]}",
+    "answer": "\\tanh(\\psi(x)/4)=\\tanh(\\psi_0/4)e^{-\\kappa x},\\quad\\sigma=2\\varepsilon\\kappa(k_BT/e)\\sinh(\\psi_0/2),\\quad C_d=\\varepsilon\\kappa\\cosh(\\psi_0/2)",
     "quality_status": "待独立复核",
     "tier": "advanced_composite",
     "format": "latex-fragment-v1",
     "revision": "composite-v3.7-round12-draft",
     "challenge_profile": "high-multistage",
     "complexity_tier": "L5-C",
-    "question": "导电圆盘半径 \\(R>0\\)、转动惯量 \\(J>0\\)，在均匀垂直磁场 \\(B>0\\) 中以 \\(\\omega>0\\) 转动。圆心和边缘经滑动电刷接负载 \\(R_L>0\\)，圆盘内阻 \\(r>0\\)。忽略电感、机械摩擦和磁场反作用。\n(1) 由洛伦兹力积分推导圆心到边缘的动生电动势、电流与负载电压。\n(2) 由径向电流元受磁力求反转矩，并验证机械功率等于总焦耳功率。\n(3) 撤去外部驱动后，求 \\(\\omega(t)\\)、最终总转角和负载获得的总能量。\n(4) 在固定转速下优化负载输出功率，求最大功率效率并解释最高效率与最大功率的区别。\n",
-    "solution": "(1) 半径 \\(\\rho\\) 处载流子速度 \\(\\boldsymbol v=\\omega\\rho\\boldsymbol e_\\varphi\\)，故 \\(\\boldsymbol v\\times\\boldsymbol B=\\omega\\rho B\\boldsymbol e_\\rho\\)。电动势\n\\[\n\\boxed{\\mathcal E=\\int_0^R\\omega B\\rho\\,d\\rho=B\\omega R^2/2},\n\\quad I=\\mathcal E/(r+R_L),\\quad V_L=IR_L.\n\\]\n磁力对单个载流子不直接做功，但旋转导体提供机械约束与能量，不能据此断言发电机没有机械输入。\n\n(2) 径向电流元受力 \\(d\\boldsymbol F=I\\,d\\rho\\,\\boldsymbol e_\\rho\\times B\\boldsymbol e_z=-IB\\,d\\rho\\,\\boldsymbol e_\\varphi\\)。因此\n\\[\n\\boxed{\\tau_{\\rm em}=-\\int_0^RIB\\rho\\,d\\rho=-IBR^2/2}.\n\\]\n机械功率 \\(-\\tau_{\\rm em}\\omega=IB\\omega R^2/2=I\\mathcal E=I^2(r+R_L)\\)，分别在盘内与负载耗散 \\(I^2r,I^2R_L\\)，能量收支逐项闭合。\n\n(3) 无外力矩时 \\(J\\dot\\omega=\\tau_{\\rm em}=-B^2R^4\\omega/[4(r+R_L)]\\)。令 \\(\\lambda=B^2R^4/[4J(r+R_L)]\\)，则\n\\[\n\\boxed{\\omega(t)=\\omega_0e^{-\\lambda t}},\\quad\n\\Delta\\varphi_\\infty=\\omega_0/\\lambda .\n\\]\n负载总热量 \\(\\int_0^\\infty I^2R_Ldt=[R_L/(r+R_L)]J\\omega_0^2/2\\)，盘内损耗占剩余份额；两者之和等于初始转动动能，提供独立积分检验。\n\n(4) 固定转速下 \\(P_L=\\mathcal E^2R_L/(r+R_L)^2\\)。求导得极大点 \\(R_L=r\\)，\n\\[\n\\boxed{P_{L,\\max}=\\mathcal E^2/(4r)},\\qquad\n\\eta=P_L/(-\\tau_{\\rm em}\\omega)=R_L/(r+R_L).\n\\]\n最大功率点效率为 \\(1/2\\)，而 \\(R_L/r\\to\\infty\\) 效率趋1、功率却趋零；两种优化目标不可混淆。\n"
+    "question": "无限平板电极位于 \\(x=0\\)，其外 \\(x>0\\) 是介电常数 \\(\\varepsilon>0\\)、温度 \\(T>0\\) 的对称一价电解质，远场两种离子浓度均为 \\(n_\\infty>0\\)。忽略离子体积和相关，采用Boltzmann分布 \\(n_\\pm(x)=n_\\infty e^{\\mp e\\phi(x)/(k_BT)}\\)。电势 \\(\\phi(0)=\\phi_0>0\\)、\\(\\phi(\\infty)=0\\)。定义 \\(\\psi=e\\phi/(k_BT)\\)、\\(\\kappa^2=2e^2n_\\infty/(\\varepsilon k_BT)\\)。\n(1) 从Poisson方程推导非线性Poisson–Boltzmann方程与第一积分，说明单调衰减解的符号。\n(2) 求精确电势剖面和远区Debye衰减，检查弱电势线性化极限。\n(3) 推导Grahame表面电荷—电势关系与微分电容，讨论高电势下非线性增强。\n(4) 由第一积分验证局部离子渗透压超额与Maxwell法向电应力相抵，计算准静态充电的单位面积自由能。\n",
+    "solution": "(1) 净离子电荷密度 \\(\\rho_e=e(n_+-n_-)=-2en_\\infty\\sinh\\psi\\)，Poisson方程 \\(\\varepsilon\\phi''=-\\rho_e\\) 化为\n\\[\n\\boxed{\\psi''=\\kappa^2\\sinh\\psi}.\n\\]\n两边乘 \\(\\psi'\\) 并利用远场 \\(\\psi,\\psi'\\to0\\)，得到\n\\((\\psi')^2=2\\kappa^2(\\cosh\\psi-1)=4\\kappa^2\\sinh^2(\\psi/2)\\)。\n因 \\(\\psi_0>0\\) 且趋向零，必须选择 \\(\\psi'=-2\\kappa\\sinh(\\psi/2)<0\\)。\n\n(2) 分离变量积分 \\(\\int d\\psi/[2\\sinh(\\psi/2)]=-\\kappa x+\\mathrm{const}\\)，由边界值得\n\\[\n\\boxed{\\tanh\\frac{\\psi(x)}4=\\tanh\\frac{\\psi_0}4e^{-\\kappa x}}.\n\\]\n远区 \\(\\psi(x)\\sim4\\tanh(\\psi_0/4)e^{-\\kappa x}\\)。弱电势 \\(|\\psi_0|\\ll1\\) 时 \\(\\tanh(\\psi_0/4)\\simeq\\psi_0/4\\)，恢复线性Debye–Hückel剖面 \\(\\psi(x)\\simeq\\psi_0e^{-\\kappa x}\\)，但强电势下近壁衰减并非单纯指数。\n\n(3) 表面自由电荷密度为 \\(\\sigma=-\\varepsilon\\phi'(0)\\)，令热电压 \\(V_T=k_BT/e\\)，由第一积分\n\\[\n\\boxed{\\sigma=2\\varepsilon\\kappa V_T\\sinh(\\psi_0/2)}.\n\\]\n微分电容每单位面积\n\\[\n\\boxed{C_d=d\\sigma/d\\phi_0=\\varepsilon\\kappa\\cosh(\\psi_0/2)}.\n\\]\n弱场 \\(C_d\\to\\varepsilon\\kappa\\)，高电势则指数增加，这是理想点离子Poisson–Boltzmann模型的预测；实际高浓度需考虑有限离子尺寸和相关效应。\n\n(4) 相对于远场的理想离子渗透压超额为\n\\(\\Delta\\Pi=k_BT(n_++n_--2n_\\infty)=2n_\\infty k_BT(\\cosh\\psi-1)\\)。\nMaxwell法向应力幅值\n\\[\n\\varepsilon E^2/2=\\varepsilon V_T^2(\\psi')^2/2\n=\\varepsilon\\kappa^2V_T^2(\\cosh\\psi-1)=\\Delta\\Pi,\n\\]\n恰与渗透压梯度平衡。准静态从零电势充电的单位面积储能（固定电荷做功）为\n\\[\n\\boxed{W/A=\\int_0^{\\phi_0}\\sigma(\\phi)\\,d\\phi\n=4\\varepsilon\\kappa V_T^2[\\cosh(\\psi_0/2)-1]}.\n\\]\n固定电势电源下需减去电源功作Legendre变换，不能把同一正值误作电源控制下的自由能。\n"
   },
   {
     "id": "T007",

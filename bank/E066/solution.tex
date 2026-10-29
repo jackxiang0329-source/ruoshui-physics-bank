@@ -1,39 +1,31 @@
-(1) 采用 \(e^{-i\omega t}\) 约定，Faraday方程给 \(\partial_zE_x=i\omega\mu H_y\)，Ampère方程给 \(-\partial_zH_y=(\sigma-i\omega\varepsilon)E_x\)。因此
+(1) 对横向小扰动，理想MHD线性化为
 \[
-E_x''=( -i\omega\mu\sigma-\omega^2\mu\varepsilon)E_x.
+\rho\partial_t\boldsymbol u=(B_0/\mu)\partial_z\boldsymbol b,\qquad
+\partial_t\boldsymbol b=B_0\partial_z\boldsymbol u.
 \]
-良导体近似忽略位移电流，令 \(\delta=\sqrt{2/(\mu\sigma\omega)}\)，衰减分支为
+消去 \(\boldsymbol b\) 得 \(\partial_t^2\boldsymbol u=v_A^2\partial_z^2\boldsymbol u\)，
 \[
-\boxed{E_x(z)=E_0e^{-(1-i)z/\delta}}.
+\boxed{v_A=B_0/\sqrt{\mu\rho},\qquad\omega^2=k^2v_A^2}.
 \]
-复指数实部衰减，虚部体现向内部的相位推进，选另一根会在半无限导体内发散。
+对于 \(e^{i(kz-\omega t)}\) 且 \(\omega=+kv_A\)，感应方程给 \(\boldsymbol b=-\sqrt{\mu\rho}\boldsymbol u\)，符号取决于传播方向。
 
-(2) 由Faraday关系
+(2) 定义 \(\boldsymbol z^\pm=\boldsymbol u\pm\boldsymbol b/\sqrt{\mu\rho}\)，则
 \[
-H_y(z)=\frac{1+i}{\omega\mu\delta}E_x(z)
-=\frac{\sigma\delta}{2}(1+i)E_x(z).
+\partial_t\boldsymbol z^\pm=\pm v_A\partial_z\boldsymbol z^\pm.
 \]
-所以
-\[
-\boxed{Z_s=\frac{E_x(0)}{H_y(0)}=\frac{1-i}{\sigma\delta}}.
-\]
-实部为正代表耗散，虚部符号取决于 \(e^{-i\omega t}\) 约定。趋肤近似要求 \(\sigma\gg\omega\varepsilon\) 且导体厚度远大于 \(\delta\)；\(\omega\to0\) 时 \(\delta\to\infty\)，半无限趋肤解不能不加限制地替代静态电流边值问题。
+因此 \(\boldsymbol z^-\) 满足 \(\partial_t\boldsymbol z^-+v_A\partial_z\boldsymbol z^-=0\)，沿 \(+z\) 传播；\(\boldsymbol z^+\) 沿 \(-z\) 传播。该符号对应来自题设 \(B_0>0\) 与 \(e^{i(kz-\omega t)}\) 约定，不能只按变量上标猜测方向。
 
-(3) 时间平均能流沿 \(+z\)，
+(3) 两方程分别点乘 \(\boldsymbol u,\boldsymbol b/\mu\) 相加，得
 \[
-\langle S_z(0)\rangle=\tfrac12\operatorname{Re}(E_0H_0^*)
-=\frac{\sigma\delta|E_0|^2}{4}.
+\boxed{\partial_t\left(\frac{\rho u^2}{2}+\frac{b^2}{2\mu}\right)
++\partial_z\left(-\frac{B_0}{\mu}\boldsymbol u\cdot\boldsymbol b\right)=0}.
 \]
-体内焦耳热每单位面积为
-\[
-P_J/A=\int_0^\infty\frac{\sigma|E_0|^2}{2}e^{-2z/\delta}dz
-=\frac{\sigma\delta|E_0|^2}{4},
-\]
-与输入能流完全一致。由于半无限远处场为零，稳态平均无净电磁能积累；这也独立检验了复表面阻抗实部的符号。
+正向波 \(\boldsymbol b=-\sqrt{\mu\rho}\boldsymbol u\) 的能流为
+\(-B_0\boldsymbol u\cdot\boldsymbol b/\mu=\rho v_Au^2>0\)，同时磁能与动能相等。若误将感应方程符号反写，能流方向会与传播方向冲突。
 
-(4) 深度 \(z\) 内耗散占比
+(4) 定义波阻抗 \(Z_j=\rho_jv_{Aj}=B_0\sqrt{\rho_j/\mu}\)。在界面处横向速度连续 \(u_i+u_r=u_t\)，横向磁场连续给 \(Z_1(u_i-u_r)=Z_2u_t\)。因此
 \[
-\frac{\int_0^z\sigma|E(z')|^2dz'}{\int_0^\infty\sigma|E(z')|^2dz'}
-=1-e^{-2z/\delta}.
+\boxed{r_u=\frac{u_r}{u_i}=\frac{Z_1-Z_2}{Z_1+Z_2},\quad
+t_u=\frac{u_t}{u_i}=\frac{2Z_1}{Z_1+Z_2}}.
 \]
-频率加倍使 \(\delta\) 变为原来的 \(1/\sqrt2\)，在固定表面 \(E_0\) 条件下总耗散 \(\propto\delta\)，而在固定表面磁场条件下总耗散 \(\propto1/\delta\)；必须声明边界驱动。有限厚度接近 \(\delta\) 时背面反射影响指数剖面，位移电流与传导电流可比时应使用完整复根而非良导体公式。
+能流反射率 \(R=r_u^2\)，透射率 \(T=(Z_2/Z_1)t_u^2\)，直接化简 \(R+T=1\)。该结论限定于正入射、理想无耗散、界面 \(B_0,\mu\) 连续且仅有剪切Alfvén分支。

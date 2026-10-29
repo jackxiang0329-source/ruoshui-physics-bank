@@ -1,23 +1,26 @@
-(1) 径向能量积分 \(E=m\dot r^2/2+U_{\rm eff}\)，其中 \(U_{\rm eff}=L^2/(2mr^2)+kr^\alpha/\alpha\)。圆轨道满足 \(U_{\rm eff}'=-L^2/(mr^3)+kr^{\alpha-1}=0\)，故
+(1) 脉冲势对动量的瞬时改变为 \(\Delta p=-\partial_\theta(K\cos\theta)=K\sin\theta_n\)，随后自由转动一个单位时间，因此
 \[
-L^2=mk r_0^{\alpha+2},\quad
-\omega_\phi=L/(mr_0^2),\quad
-\omega_\phi^2=kr_0^{\alpha-2}/m,\quad
-E_c=kr_0^\alpha(1/2+1/\alpha).
+\boxed{p_{n+1}=p_n+K\sin\theta_n,\quad
+\theta_{n+1}=\theta_n+p_{n+1}\pmod{2\pi}}.
 \]
-\(\alpha=-2\) 时只有调谐 \(L^2=mk\) 才允许任意半径的中性圆轨道，没有孤立 \(r_0\)。
-
-(2) \(U_{\rm eff}''=3L^2/(mr^4)+k(\alpha-1)r^{\alpha-2}\)，在圆轨道为 \((\alpha+2)kr_0^{\alpha-2}\)。令 \(r=r_0+\rho\)，有
+按 \((\theta,p)\) 排列，Jacobian为
 \[
-\ddot\rho+\omega_r^2\rho=0,\qquad
-\boxed{\omega_r^2=(\alpha+2)\omega_\phi^2}.
+D\mathcal M=\begin{pmatrix}1+K\cos\theta&1\\K\cos\theta&1\end{pmatrix},\quad\det D\mathcal M=1.
 \]
-\(\alpha>-2\) 时孤立圆轨道稳定，\(\alpha=-2\) 中性，\(\alpha<-2\) 指数失稳。直接线性化 \(m\ddot r=L^2/(mr^3)-kr^{\alpha-1}\) 也得到同一结果。
+二维中行列式为1等价于保持标准辛形式 \(d\theta\wedge dp\)，所以离散演化严格保面积而非耗散。
 
-(3) \(T_r=2\pi/\omega_r\)，而 \(\dot\phi=L/(mr^2)=\omega_\phi(1-2\rho/r_0+O(\rho^2))\)，一阶周期平均扰动为零，因此
+(2) 固定点要求 \(K\sin\theta_*=0\) 且 \(p_*=0\pmod{2\pi}\)，故 \(\theta_*=0,\pi\)。线性特征值满足
 \[
-\boxed{\Delta\phi=2\pi/\sqrt{\alpha+2}},\quad\delta\phi=\Delta\phi-2\pi.
+\lambda^2-(2+K\cos\theta_*)\lambda+1=0.
 \]
-Kepler势 \(\alpha=-1\) 给 \(2\pi\) 无进动，谐振子势 \(\alpha=2\) 给 \(\pi\)，两径向周期后闭合。频率比有理仅保证线性近圆轨道局部闭合，非线性有限振幅一般不能照搬。
+在 \(\theta_*=0\) 时迹 \(2+K>2\)，一对互逆实本征值，双曲失稳；在 \(\theta_*=\pi\) 时迹 \(2-K\)，当 \(0<K<4\) 时 \(|\operatorname{tr}|<2\)，本征值为共轭单位模，线性椭圆稳定。\(K=4\) 时迹为 \(-2\) 属抛物边界，线性理论本身不能决定非线性长期行为。
 
-(4) \(L=\sqrt{mk}\,r_0^{(\alpha+2)/2}\)，故 \(dL/dr_0=(\alpha+2)L/(2r_0)\)，\(dE_c/dr_0=(\alpha+2)kr_0^{\alpha-1}/2\)，两者相除为 \(dE_c/dL=L/(mr_0^2)=\omega_\phi\)。\(\alpha\to0\) 应先减 \(k/\alpha\) 常数，得到 \(U=k\ln r\) 与 \(\omega_r=\sqrt2\omega_\phi\)；\(\alpha\to-2^+\) 径向软模趋零，近心点角发散，必须重新检查 \(|\rho|/r_0\ll1\) 的适用性。
+(3) 对 \(K\ll1\) 的缓慢演化，将二阶差分 \(p_{n+1}-p_n=K\sin\theta_n\) 连续化为 \(\ddot\theta=K\sin\theta\)，等价于摆Hamilton量 \(H_{\rm eff}=p^2/2+K\cos\theta\)，稳定中心在 \(\theta=\pi\)。分离轨道能量为 \(H_{\rm sep}=K\)，在 \(\theta=\pi\) 时
+\(p_{\max}^2/2-K=K\)，故 \(p_{\max}=2\sqrt K\)。
+\[
+\boxed{\Delta p_{\rm sep}\simeq4\sqrt K,\qquad
+\mathcal A_{\rm sep}\simeq16\sqrt K}.
+\]
+面积由 \(\int_0^{2\pi}2|p_{\rm sep}(\theta)|d\theta\) 得到，属于小 \(K\) 渐近式而非任意脉冲强度下的精确公式。
+
+(4) \(K\to0\) 时 \(p\) 常量、\(\theta\) 匀速转动，标准映射成为可积扭转映射；\(K=4\) 是固定点 \(\pi\) 的线性倍周期阈值而非所有轨道的统一混沌阈值。较大 \(K\) 可产生混沌海、共振岛和加速轨道，保面积只约束相空间局部面积，并不限制非紧致动量轴上的单轨道动量幅度。连续摆近似只适用于小 \(K\) 的主共振附近。

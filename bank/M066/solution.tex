@@ -1,26 +1,32 @@
-(1) 求导 \(x'=a(1+\cos\theta)\)、\(y'=a\sin\theta\)，故
-\(ds/d\theta=\sqrt{x'^2+y'^2}=2a\cos(\theta/2)>0\)。
-取最低点 \(s(0)=0\)，积分得 \(s=4a\sin(\theta/2)\)。又 \(y=a(1-\cos\theta)=2a\sin^2(\theta/2)=s^2/(8a)\)，因此
+(1) 设链的水平张力分量为常数 \(H>0\)。弧长元 \(ds=\sqrt{1+y'^2}\,dx\)，竖直平衡为 \(d(Hy')/dx=\lambda g\sqrt{1+y'^2}\)。令 \(a=H/(\lambda g)\)，积分得到 \(\operatorname{arsinh}y'=x/a\)，其中对称最低点取在 \(x=0\)。因此 \(y'=\sinh(x/a)\)，再由两端 \(y(\pm\ell/2)=0\) 得
 \[
-\boxed{V(s)=mgy=mg s^2/(8a)},\qquad
-L_{\rm mech}=\tfrac12m\dot s^2-\tfrac{mg}{8a}s^2.
+\boxed{y(x)=a[\cosh(x/a)-\cosh(\ell/(2a))]},\qquad H=\lambda ga.
 \]
-欧拉—拉格朗日方程精确成为 \(\ddot s+gs/(4a)=0\)，不依赖小角度展开。
+该曲线严格来自张力平衡而非先假设抛物线近似。
 
-(2) 从 \(s(0)=s_0\)、\(\dot s(0)=0\) 释放，解为
-\(s(t)=s_0\cos(\sqrt{g/(4a)}\,t)\)。
-首次抵达最低点时相位为 \(\pi/2\)，故
+(2) 由 \(ds=\cosh(x/a)dx\)，全链长
 \[
-\boxed{t_{\rm bottom}=\pi\sqrt{a/g}},\qquad
-\boxed{T=4\pi\sqrt{a/g}}.
+\boxed{S=\int_{-\ell/2}^{\ell/2}\cosh(x/a)dx=2a\sinh(\ell/(2a))}.
 \]
-两者与 \(|s_0|<4a\) 无关。此等时性来自弧长坐标下严格二次势，不等于任意轨道上所有振幅均等时。
+令 \(u=\ell/(2a)>0\)，则 \(S/\ell=\sinh u/u\)。函数导数 \((u\cosh u-\sinh u)/u^2>0\)，因为分子在0为零、导数为 \(u\sinh u>0\)。且 \(u\to0\) 时函数趋1，\(u\to\infty\) 时趋无穷，故每个 \(S>\ell\) 唯一确定 \(u\)、\(a\) 与 \(H\)。
 
-(3) 平面曲率 \(\kappa_c=|x'y''-y'x''|/(x'^2+y'^2)^{3/2}\)。代入 \(x''=-a\sin\theta\)、\(y''=a\cos\theta\)，得
-\(\kappa_c=1/[4a\cos(\theta/2)]\)，曲率半径 \(R_c=4a\cos(\theta/2)\)。以朝向曲率中心的单位法向为正，重力法向投影为 \(mg\cos(\theta/2)\)，法向约束力有符号分量满足
+(3) 最低点垂度
 \[
-\boxed{N_{\rm signed}=m\dot s^2/R_c+mg\cos(\theta/2)}.
+d=-y(0)=a[\cosh(\ell/(2a))-1].
 \]
-这里 \(N_{\rm signed}\) 可正可负；若轨道只允许单侧接触而不能双侧约束，负值意味着可能脱离，不能简单把它取绝对值仍当作同侧支持力。
+张力模长 \(T(x)=H\sqrt{1+y'^2}=H\cosh(x/a)\)，最低点最小张力为 \(H\)。支点竖直张力分量的大小为 \(H\sinh(\ell/(2a))=\lambda g a\sinh(\ell/(2a))=\lambda gS/2\)，两个支点合计承担 \(\lambda gS\)，与全链重量严格相等；支点水平分量互相抵消。
 
-(4) 能量写为 \(E=\tfrac12m\dot s^2+mg s^2/(8a)\)，亦为 \(E=\tfrac12m(2a\cos(\theta/2)\dot\theta)^2+mga(1-\cos\theta)\)，二者恒等。小振幅时 \(\theta\simeq s/(2a)\)，频率仍为 \(\sqrt{g/(4a)}\)，并非只在此极限有效。固定 \(g\) 而 \(a\to\infty\) 时曲率趋零、周期趋无穷，局部近水平轨道上重力切向恢复力消失。靠近 \(|\theta|=\pi\) 的尖点，弧长雅可比趋零、曲率半径趋零，有限速度的法向加速度发散，真实有限强度导轨模型不再适用。
+(4) 以支点高度为零势，链势能
+\[
+U=\lambda g\int_{-\ell/2}^{\ell/2}y(x)\sqrt{1+y'^2}\,dx
+=\boxed{\lambda ga^2[u-\sinh u\cosh u]},\quad u=\ell/(2a).
+\]
+该值为负，因链位于支点下方。浅垂度 \(u\ll1\) 时
+\(S/\ell=\sinh u/u=1+u^2/6+O(u^4)\)，
+\(d=a(\cosh u-1)=\ell u/4+O(\ell u^3)\)，
+\(H=\lambda g\ell/(2u)\)。因此
+\[
+d\simeq\frac{\ell}{4}\sqrt{6(S/\ell-1)},\qquad
+H\simeq\frac{\lambda g\ell}{2\sqrt{6(S/\ell-1)}}.
+\]
+当 \(S\downarrow\ell\) 时张力发散，显示不可伸长柔链的理想化极限。

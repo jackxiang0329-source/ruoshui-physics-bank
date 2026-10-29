@@ -56,8 +56,13 @@
         "M033"
       ],
       "shared_core": "same power-law central-force near-circular radial stability and apsidal advance",
-      "action": "BLOCK round12 admission until substantively distinct model is substituted or independently documented originality decision is justified with new four-part QA",
-      "resolution_status": "unresolved"
+      "action": "Replaced duplicate core with distinct physical model: 受周期脉冲驱动转子的标准映射、辛结构与非线性共振岛; runnable replacement QA pending.",
+      "resolution_status": "replacement_pending_validation",
+      "replacement_title": "受周期脉冲驱动转子的标准映射、辛结构与非线性共振岛",
+      "evidence_paths": [
+        "bank/M065/question.tex",
+        "bank/M065/solution.tex"
+      ]
     },
     {
       "draft_id": "M067",
@@ -65,8 +70,13 @@
         "M022"
       ],
       "shared_core": "same repulsive Coulomb Rutherford scattering and differential cross section",
-      "action": "BLOCK round12 admission until substantively distinct model is substituted or independently documented originality decision is justified with new four-part QA",
-      "resolution_status": "unresolved"
+      "action": "Replaced duplicate core with distinct physical model: Rankine复合涡的涡量分布、径向压力、能量与自由液面; runnable replacement QA pending.",
+      "resolution_status": "replacement_pending_validation",
+      "replacement_title": "Rankine复合涡的涡量分布、径向压力、能量与自由液面",
+      "evidence_paths": [
+        "bank/M067/question.tex",
+        "bank/M067/solution.tex"
+      ]
     },
     {
       "draft_id": "E067",
@@ -74,8 +84,13 @@
         "E020"
       ],
       "shared_core": "same Faraday disk emf, magnetic braking and electrical power",
-      "action": "BLOCK round12 admission until substantively distinct model is substituted or independently documented originality decision is justified with new four-part QA",
-      "resolution_status": "unresolved"
+      "action": "Replaced duplicate core with distinct physical model: 非线性Poisson–Boltzmann平板双电层的精确势、Grahame关系与微分电容; runnable replacement QA pending.",
+      "resolution_status": "replacement_pending_validation",
+      "replacement_title": "非线性Poisson–Boltzmann平板双电层的精确势、Grahame关系与微分电容",
+      "evidence_paths": [
+        "bank/E067/question.tex",
+        "bank/E067/solution.tex"
+      ]
     },
     {
       "draft_id": "E066",
@@ -84,8 +99,13 @@
         "E034"
       ],
       "shared_core": "same conductor skin diffusion, depth and Joule loss, surface impedance only additional",
-      "action": "BLOCK round12 admission until substantively distinct model is substituted or independently documented originality decision is justified with new four-part QA",
-      "resolution_status": "unresolved"
+      "action": "Replaced duplicate core with distinct physical model: 理想MHD剪切Alfvén波的Elsasser变量、能流与界面散射; runnable replacement QA pending.",
+      "resolution_status": "replacement_pending_validation",
+      "replacement_title": "理想MHD剪切Alfvén波的Elsasser变量、能流与界面散射",
+      "evidence_paths": [
+        "bank/E066/question.tex",
+        "bank/E066/solution.tex"
+      ]
     },
     {
       "draft_id": "M066",
@@ -93,11 +113,16 @@
         "M015"
       ],
       "shared_core": "same cycloid core; brachistochrone versus tautochrone needs substantive duplication review",
-      "action": "BLOCK round12 admission until substantively distinct model is substituted or independently documented originality decision is justified with new four-part QA",
-      "resolution_status": "unresolved"
+      "action": "Replaced duplicate core with distinct physical model: 均匀悬链线的非线性平衡、唯一张力参数与重力势能; runnable replacement QA pending.",
+      "resolution_status": "replacement_pending_validation",
+      "replacement_title": "均匀悬链线的非线性平衡、唯一张力参数与重力势能",
+      "evidence_paths": [
+        "bank/M066/question.tex",
+        "bank/M066/solution.tex"
+      ]
     }
   ],
-  "disposition": "Technical tests do not establish originality; PR #35 must remain draft while explicit core overlaps remain unresolved. See PR comment 6488745307.",
+  "disposition": "Five overlapping models substantively replaced, all five pending independent executable QA and new CI; do not merge before validation.",
   "independent_expert_review": "待独立复核",
   "new_draft_model_screening": [
     {
@@ -487,6 +512,53 @@
       "core_model": "量子Zeno效应的重复投影、生存概率与能量方差时间尺度",
       "difference": "Repeated projective Zeno survival and short-time energy variance, not generic spin measurement.",
       "resolution_status": "screened_distinct_pending_independent_review"
+    },
+    {
+      "draft_id": "M065",
+      "compared_existing_ids": [
+        "M013",
+        "M033"
+      ],
+      "core_model": "受周期脉冲驱动转子的标准映射、辛结构与非线性共振岛",
+      "difference": "Replaced previously overlapping core model with physically distinct system, equations, invariants and four-part derivation.",
+      "resolution_status": "replacement_pending_validation"
+    },
+    {
+      "draft_id": "M066",
+      "compared_existing_ids": [
+        "M015"
+      ],
+      "core_model": "均匀悬链线的非线性平衡、唯一张力参数与重力势能",
+      "difference": "Replaced previously overlapping core model with physically distinct system, equations, invariants and four-part derivation.",
+      "resolution_status": "replacement_pending_validation"
+    },
+    {
+      "draft_id": "M067",
+      "compared_existing_ids": [
+        "M022"
+      ],
+      "core_model": "Rankine复合涡的涡量分布、径向压力、能量与自由液面",
+      "difference": "Replaced previously overlapping core model with physically distinct system, equations, invariants and four-part derivation.",
+      "resolution_status": "replacement_pending_validation"
+    },
+    {
+      "draft_id": "E066",
+      "compared_existing_ids": [
+        "E013",
+        "E034"
+      ],
+      "core_model": "理想MHD剪切Alfvén波的Elsasser变量、能流与界面散射",
+      "difference": "Replaced previously overlapping core model with physically distinct system, equations, invariants and four-part derivation.",
+      "resolution_status": "replacement_pending_validation"
+    },
+    {
+      "draft_id": "E067",
+      "compared_existing_ids": [
+        "E020"
+      ],
+      "core_model": "非线性Poisson–Boltzmann平板双电层的精确势、Grahame关系与微分电容",
+      "difference": "Replaced previously overlapping core model with physically distinct system, equations, invariants and four-part derivation.",
+      "resolution_status": "replacement_pending_validation"
     }
   ]
 }

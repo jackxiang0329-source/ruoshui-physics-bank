@@ -1,17 +1,17 @@
 {
   "id": "M066",
   "topic": "力学",
-  "title": "摆线最速降线的等时性、精确简谐化与约束反力",
+  "title": "均匀悬链线的非线性平衡、唯一张力参数与重力势能",
   "kind": "综合推导题",
   "level": 5,
   "estimated_minutes": 115,
   "tags": [
-    "摆线弧长坐标",
-    "等时曲线",
-    "非线性坐标简谐化",
-    "重力约束反力"
+    "静态柔链悬链线",
+    "弧长约束与唯一性",
+    "支点反力和张力分布",
+    "重力势能与浅垂度极限"
   ],
-  "answer": "V(s)=mg s^2/(8a),\\quad\\ddot s+\\frac{g}{4a}s=0,\\quad T=4\\pi\\sqrt{a/g}",
+  "answer": "y=a[\\cosh(x/a)-\\cosh(\\ell/(2a))],\\quad S=2a\\sinh(\\ell/(2a)),\\quad H=\\lambda ga",
   "quality_status": "待独立复核",
   "tier": "advanced_composite",
   "format": "latex-fragment-v1",
