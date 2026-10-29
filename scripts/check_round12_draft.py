@@ -638,12 +638,56 @@ assert abs(abs((1j*knum060-1)/(1j*knum060+1))**2-1)<mp.mpf('1e-45')
 supplemental.append(dict(id='Q060',method='independent_high_precision_scattering_quadrature',
                          name='50 digit kink zero-mode norm, three independent scattering ODE residuals and flux unitarity',passed=True))
 
-assert len(checks)==76 and len(set((v['id'],v['part']) for v in checks))==76
+
+# M062: Schwarzschild circular timelike geodesics, epicyclic stability, photon capture and Doppler-gravitational shift.
+m062,r062,l062=s.symbols('m062 r062 l062',positive=True)
+f062=1-2*m062/r062
+V062=f062*(1+l062*l062/r062**2)
+L2062=m062*r062**2/(r062-3*m062)
+E2062=(r062-2*m062)**2/(r062*(r062-3*m062))
+record('M062',1,'independent_derivation',
+       'Killing constants and radial geodesic circularity independently reproduce angular momentum and energy',
+       eq(s.diff(V062,r062).subs(l062*l062,L2062))
+       and eq(V062.subs(l062*l062,L2062),E2062)
+       and eq((f062**2*L2062/(r062**4*E2062)),m062/r062**3))
+ktau2062=s.diff(V062,r062,2).subs(l062*l062,L2062)/2
+x062=s.symbols('x062',positive=True)
+record('M062',2,'symbolic_and_limit',
+       'radial proper and coordinate epicyclic frequencies give ISCO and six pi M over r periapsis advance',
+       eq(ktau2062,m062*(r062-6*m062)/(r062**3*(r062-3*m062)))
+       and eq(ktau2062*(r062-3*m062)/r062,m062*(r062-6*m062)/r062**4)
+       and eq(s.limit(((1-6*x062)**(-s.Rational(1,2))-1)/x062,x062,0,dir='+'),3))
+W062=f062*l062*l062/r062**2
+record('M062',3,'independent_derivation',
+       'null effective potential has unstable photon orbit at three M and critical capture area twenty seven pi M squared',
+       eq(s.diff(W062,r062).subs(r062,3*m062))
+       and eq(s.diff(W062,r062,2).subs(r062,3*m062),-2*l062*l062/(81*m062**4))
+       and eq((r062*r062/f062).subs(r062,3*m062),27*m062*m062))
+v2062=m062/(r062-2*m062)
+boost062=s.sqrt(f062)/s.sqrt(1-v2062)
+record('M062',4,'redshift_energy_and_limit',
+       'independent local Lorentz boost and gravitational redshift yield ISCO forward and backward photon shifts',
+       eq(1/(1-v2062),(r062-2*m062)/(r062-3*m062))
+       and eq(boost062.subs(r062,6*m062),2*s.sqrt(2)/3)
+       and eq((boost062*(1+s.sqrt(v2062))).subs(r062,6*m062),s.sqrt(2))
+       and eq((boost062*(1-s.sqrt(v2062))).subs(r062,6*m062),s.sqrt(2)/3)
+       and eq(E2062.subs(r062,6*m062),s.Rational(8,9)))
+mp.mp.dps=50
+mm062=mp.mpf(1); rr062=mp.mpf(10)
+ll062=mp.sqrt(mm062*rr062**2/(rr062-3*mm062))
+potential062=lambda z:(1-2*mm062/z)*(1+ll062**2/z**2)
+assert abs(mp.diff(potential062,rr062))<mp.mpf('1e-45')
+assert abs(mp.diff(potential062,rr062,2)/2-
+           mm062*(rr062-6*mm062)/(rr062**3*(rr062-3*mm062)))<mp.mpf('1e-45')
+supplemental.append(dict(id='M062',method='independent_high_precision_finite_difference',
+                         name='50 digit direct radial potential derivatives at ten gravitational radii verify circularity and epicyclic curvature',passed=True))
+
+assert len(checks)==80 and len(set((v['id'],v['part']) for v in checks))==80
 assert len(set(v['method'] for v in checks if v['id']=='W058'))>=2
 assert len(set(v['method'] for v in checks if v['id']=='Q059'))>=2
-assert len(supplemental)==19
+assert len(supplemental)==20
 
-result={'status':'draft-only','new_problem_count':19,'passed_count':len(checks),'tests':checks,'independent_expert_review':'pending','supplemental_numeric_checks':supplemental}
+result={'status':'draft-only','new_problem_count':20,'passed_count':len(checks),'tests':checks,'independent_expert_review':'pending','supplemental_numeric_checks':supplemental}
 path=Path(__file__).resolve().parents[1]/'data/round12_draft_validation_report.json'
 path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
 print(json.dumps({'status':result['status'],'checked_subparts':len(checks)},ensure_ascii=False))

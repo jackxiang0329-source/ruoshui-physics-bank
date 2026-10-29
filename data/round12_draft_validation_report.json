@@ -1,7 +1,7 @@
 {
   "status": "draft-only",
-  "new_problem_count": 19,
-  "passed_count": 76,
+  "new_problem_count": 20,
+  "passed_count": 80,
   "tests": [
     {
       "id": "M059",
@@ -534,6 +534,34 @@
       "method": "chiral_symmetry_and_gap",
       "name": "uniform chiral-breaking mass shifts the bound eigenvalue exactly and preserves a positive continuum gap",
       "passed": true
+    },
+    {
+      "id": "M062",
+      "part": 1,
+      "method": "independent_derivation",
+      "name": "Killing constants and radial geodesic circularity independently reproduce angular momentum and energy",
+      "passed": true
+    },
+    {
+      "id": "M062",
+      "part": 2,
+      "method": "symbolic_and_limit",
+      "name": "radial proper and coordinate epicyclic frequencies give ISCO and six pi M over r periapsis advance",
+      "passed": true
+    },
+    {
+      "id": "M062",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "null effective potential has unstable photon orbit at three M and critical capture area twenty seven pi M squared",
+      "passed": true
+    },
+    {
+      "id": "M062",
+      "part": 4,
+      "method": "redshift_energy_and_limit",
+      "name": "independent local Lorentz boost and gravitational redshift yield ISCO forward and backward photon shifts",
+      "passed": true
     }
   ],
   "independent_expert_review": "pending",
@@ -650,6 +678,12 @@
       "id": "Q060",
       "method": "independent_high_precision_scattering_quadrature",
       "name": "50 digit kink zero-mode norm, three independent scattering ODE residuals and flux unitarity",
+      "passed": true
+    },
+    {
+      "id": "M062",
+      "method": "independent_high_precision_finite_difference",
+      "name": "50 digit direct radial potential derivatives at ten gravitational radii verify circularity and epicyclic curvature",
       "passed": true
     }
   ]
