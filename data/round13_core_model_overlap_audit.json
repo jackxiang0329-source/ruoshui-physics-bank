@@ -1,7 +1,7 @@
 {
   "round": "13",
   "scope": "pre-screen against main 352 problems",
-  "status": "draft_originality_preliminary_screen_only",
+  "status": "BLOCKED_unresolved_historical_core_model_duplicates",
   "independent_expert_review": "待独立复核",
   "items": [
     {
@@ -408,6 +408,85 @@
         "Q062"
       ],
       "difference": "weak measurement postselection exact Gaussian pointer and success probability resource tradeoff rather than which path complementarity or photon Fisher"
+    }
+  ],
+  "merge_blocked": true,
+  "unresolved_core_model_duplicates": [
+    {
+      "id": "M075",
+      "prior": [
+        "M010",
+        "M035"
+      ],
+      "shared_core": "Hohmann two tangential impulses and transfer orbit",
+      "decision": "must replace entire core model, question, solutions and four-part executed QA before release",
+      "resolution_status": "unresolved"
+    },
+    {
+      "id": "M076",
+      "prior": [
+        "M025"
+      ],
+      "shared_core": "Foucault Coriolis pendulum polarization and latitude precession",
+      "decision": "must replace entire core model, question, solutions and four-part executed QA before release",
+      "resolution_status": "unresolved"
+    },
+    {
+      "id": "E074",
+      "prior": [
+        "E013",
+        "E034"
+      ],
+      "shared_core": "good conductor skin depth, impedance and Joule heating",
+      "decision": "must replace entire core model, question, solutions and four-part executed QA before release",
+      "resolution_status": "unresolved"
+    },
+    {
+      "id": "T069",
+      "prior": [
+        "T020"
+      ],
+      "shared_core": "ideal 3D free Bose gas BEC temperature fraction and heat capacity",
+      "decision": "must replace entire core model, question, solutions and four-part executed QA before release",
+      "resolution_status": "unresolved"
+    },
+    {
+      "id": "T071",
+      "prior": [
+        "Q038",
+        "T019"
+      ],
+      "shared_core": "Sommerfeld ideal 3D Fermi gas low-T chemical potential heat capacity",
+      "decision": "must replace entire core model, question, solutions and four-part executed QA before release",
+      "resolution_status": "unresolved"
+    },
+    {
+      "id": "O072",
+      "prior": [
+        "O031"
+      ],
+      "shared_core": "metal dielectric TM SPP bound dispersion and Drude resonance",
+      "decision": "must replace entire core model, question, solutions and four-part executed QA before release",
+      "resolution_status": "unresolved"
+    },
+    {
+      "id": "Q071",
+      "prior": [
+        "Q028"
+      ],
+      "shared_core": "Aharonov Bohm quantum ring flux spectrum and persistent current",
+      "decision": "must replace entire core model, question, solutions and four-part executed QA before release",
+      "resolution_status": "unresolved"
+    }
+  ],
+  "moderate_risk_overlap_review": [
+    {
+      "id": "W069",
+      "prior": [
+        "W047"
+      ],
+      "note": "two-fluid gravity capillary interface; shear flow is added core, require documented physical differentiation and independent originality decision",
+      "resolution_status": "manual_review_required"
     }
   ]
 }

@@ -53,6 +53,8 @@ jobs:
         run: python scripts/check_round13_last8.py
       - name: Verify final eight report determinism
         run: git diff --exit-code -- data/round13_last8_validation_report.json
+      - name: Block historically repeated core physics models before release
+        run: python scripts/check_round13_originality_gate.py
       - name: Enforce full round 13 fifty problem two hundred check gate
         run: python scripts/check_future_rounds.py
       - name: Verify final 200 item report determinism
