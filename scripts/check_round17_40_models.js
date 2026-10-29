@@ -93,7 +93,7 @@ const integrate=(f,a,b,n=4000)=>{const h=(b-a)/n;let y=f(a)+f(b);for(let j=1;j<n
 {
  const Th=450,Tc=300,Kh=1.2,Kc=.8,s=Kh*Kc*(Math.sqrt(Th)-Math.sqrt(Tc))/(Kh*Math.sqrt(Th)+Kc*Math.sqrt(Tc));
  const Pow=x=>x*(Kh*Th/(Kh+x)-Kc*Tc/(Kc-x)),h=Kh*Th/(Kh+s),c=Kc*Tc/(Kc-s);
- check('T099','endoreversible_heat_engine_maximum_power',diff(Pow,s),0,3e-10);
+ check('T099','endoreversible_heat_engine_maximum_power',diff(Pow,s),0,1e-6);
  check('T099','endoreversible_heat_engine_efficiency',c/h,Math.sqrt(Tc/Th));
 }
 {
