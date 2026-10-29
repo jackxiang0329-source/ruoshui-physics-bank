@@ -1,0 +1,18 @@
+(1) 每长度有 \(n\) 个谐振子，取 \(n\) 单位为 \(1/\mathrm m\)。线性方程
+\[
+\mu u_{tt}=T u_{xx}+nk(v-u),\qquad
+m v_{tt}=-k(v-u).
+\]
+(2) 第二式给 \(v=k u/(k-m\omega^2)=\omega_0^2u/(\omega_0^2-\omega^2)\)，\(\omega_0^2=k/m\)。代入第一式得到
+\[
+Tq^2=\omega^2\mu_{\mathrm{eff}}(\omega),\quad
+\mu_{\mathrm{eff}}=\mu+{nm\omega_0^2\over\omega_0^2-\omega^2}.
+\]
+在 \(\omega_0<\omega<\omega_1\equiv\omega_0\sqrt{1+nm/\mu}\) 时 \(\mu_{\mathrm{eff}}<0\)，\(q\) 纯虚而无无损传播体波，形成局域共振带隙。频带端点须从极限理解，\(\omega=\omega_0\) 是极点。
+(3) \(\omega\ll\omega_0\) 时 \(\mu_{\mathrm{eff}}\simeq\mu+nm\)，声速 \(c_0=\sqrt{T/(\mu+nm)}\)。在 \(q=0\)，色散另一解为 \(\omega_1\)，为光学式相对运动；\(\omega\gg\omega_1\) 时 \(\mu_{\mathrm{eff}}\to\mu\)，弦传播速度趋 \(\sqrt{T/\mu}\)。负动态惯性只是消去内部自由度后的响应函数，不能被当作负的基础质量。
+(4) 保留原两自由度时能量密度
+\[
+\mathcal E={\mu\over2}u_t^2+{T\over2}u_x^2+{nm\over2}v_t^2+{nk\over2}(v-u)^2\ge0.
+\]
+分别乘第一式以 \(u_t\)、第二式以 \(nv_t\)，整理得
+\(\partial_t\mathcal E+\partial_x\mathcal J=0\)，其中 \(\mathcal J=-Tu_xu_t\)。所以不存在无源负能量生成。只在单元间距远小于波长时可用连续 \(n\) 模型，实际损耗使禁带内的 \(q\) 变为一般复数。

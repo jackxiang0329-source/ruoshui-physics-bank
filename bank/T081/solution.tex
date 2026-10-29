@@ -1,0 +1,18 @@
+(1) 一维开路电压 \(V_{\rm oc}=S\Delta T\)（选使正功率输出的端子符号），电阻 \(R=L/(\sigma A)\)，热导 \(K=\kappa A/L\)。故 \(RK=\kappa/\sigma\)，\(Z=S^2\sigma/\kappa\)，量纲 \(Z\) 为 \(1/\mathrm K\)。
+(2) 电流 \(I=V_{\rm oc}/(R+R_L)\)，负载功率
+\[
+P={S^2\Delta T^2R_L\over(R+R_L)^2}.
+\]
+对 \(R_L>0\) 微分得导数正负随 \(R-R_L\) 改变，故 \(R_L=R\) 唯一最大，
+\[
+I_*={S\Delta T\over2R},\qquad P_*={S^2\Delta T^2\over4R}.
+\]
+(3) 给定热端输入
+\(Q_h=ST_hI+K\Delta T-\frac12I^2R\)，冷端排热 \(Q_c=ST_cI+K\Delta T+\frac12I^2R\)，故 \(Q_h-Q_c=SI\Delta T-I^2R=P\)，满足能量守恒。在电流匹配时
+\[
+\eta_*={P_*\over Q_h(I_*)}
+={S^2\Delta T^2/(4R)\over S^2T_h\Delta T/(2R)+K\Delta T-S^2\Delta T^2/(8R)}
+={\Delta T\,ZT_h/4\over T_h(ZT_h/2+1)-\Delta T ZT_h/8},
+\]
+其中 \(ZT_h=ZT\) 在 \(T=T_h\)。均分Joule热来自常物性、两端对称的一维稳态温度曲率，并不是任意热机的通则。
+(4) 把分母除以 \(ZT_h\) 写成 \(\eta_*={\Delta T/4\over T_h/2+T_h/(ZT_h)-\Delta T/8}\)，说明正的 \(ZT_h\) 增大使匹配负载效率增加。在小温差 \(\Delta T\ll T_h\) 时 \(\eta_*\simeq(\Delta T/T_h)[ZT_h/(2ZT_h+4)]\)，极大ZT的匹配效率趋 \(\eta_C/2\)（匹配负载并非最大效率负载）。当 \(S\to0\) 或 \(\kappa\to\infty\) 时 \(ZT\to0\)、\(\eta_*\to0\)；\(\Delta T\to0\) 时输出功率二次趋零、效率线性趋零。

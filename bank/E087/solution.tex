@@ -1,0 +1,26 @@
+(1) 取 \(H=H_x(z,t)\boldsymbol e_x\)，则 Ampere 定律 \(\nabla\times H=J=\sigma E\) 给 \(J_y=\partial_zH_x\)，\(E_y=\partial_zH_x/\sigma\)。Faraday 定律 \((\nabla\times E)_x=-\partial_zE_y=-\mu\partial_tH_x\)，所以
+\[
+\partial_tH_x={1\over\mu\sigma}\partial_z^2H_x.
+\]
+(2) 令 \(H_x(z,t)=\Re[\mathcal H(z)e^{i\omega t}]\)，则 \(\mathcal H''=i\mu\sigma\omega\mathcal H\)；衰减根 \(\gamma=(1+i)/\delta,\quad\delta=\sqrt{2/(\mu\sigma\omega)}\)，因此
+\[
+\mathcal H=H_0e^{-(1+i)z/\delta},\quad
+\mathcal J_y=-\gamma H_0e^{-\gamma z}.
+\]
+量纲 \(\mu\sigma\omega\) 为 \(1/\mathrm{length}^2\)，频率升高皮肤层变薄。
+(3) 平均单位体积耗散 \(j^2/(2\sigma)\)，积分
+\[
+\langle P\rangle/A=\int_0^\infty {|\mathcal J_y|^2\over2\sigma}dz
+={|H_0|^2|\gamma|^2\over2\sigma}{\delta\over2}
+={|H_0|^2\over2\sigma\delta}.
+\]
+表面 \(\mathcal E_y=-\gamma H_0/\sigma\)。由于场由z=0流向正z，\((E_y\boldsymbol e_y)\times(H_x\boldsymbol e_x)=-E_yH_x\boldsymbol e_z\)，输入通量
+\[
+\langle S_z\rangle=-\tfrac12\Re(\mathcal E_yH_0^*)={|H_0|^2\over2\sigma\delta},
+\]
+完全相同。
+(4) 为使表面阻抗正实部，定义沿输入功率方向的切向驱动电场 \(E_t=-E_y\)，于是
+\[
+Z_s={E_t\over H_x}={1+i\over\sigma\delta},\quad \Re Z_s={1\over\sigma\delta}>0.
+\]
+若直接按题中原坐标定义 \(E_y/H_x\)，则为负值 \(-Z_s\)，它只是法线和切向基矢取向问题。假设良导体 \(\sigma\gg\omega\epsilon\)，且介质在皮肤深度上均匀，半空间厚度远大于 \(\delta\)；极低频时有限样品几何重要，不能把半空间模型无条件外推至直流。

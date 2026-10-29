@@ -1,0 +1,18 @@
+(1) 取焦面半径 \(r\)，小角 \(\theta\simeq r/f\)，\(x=ka\theta=2\pi a\theta/\lambda\)。Fraunhofer场为孔径积分
+\[
+U(\theta)\propto\int_0^a \rho\,d\rho\int_0^{2\pi}e^{-ik\rho\theta\cos\phi}\,d\phi
+=2\pi\int_0^a \rho J_0(k\rho\theta)d\rho
+=\pi a^2{2J_1(x)\over x}.
+\]
+故 \(I/I(0)=[2J_1(x)/x]^2\)，\(x\to0\) 用 \(J_1(x)\sim x/2\) 得1。
+(2) 第一暗环位于 \(J_1(x_1)=0\) 的最小正根 \(x_1\simeq3.83170597\)，因此
+\[
+\theta_1={x_1\lambda\over2\pi a}\simeq1.21967{\lambda\over D},\quad D=2a.
+\]
+用Rayleigh判据以一圆斑中心落在另一首暗环定义角分辨率，并非绝对信息论下界。
+(3) 轴对称焦平面能量权重为 \(x\,dx\)，归一化包围能量
+\[
+\mathcal F(x)=1-J_0(x)^2-J_1(x)^2.
+\]
+可由 \(d[J_0^2+J_1^2]/dx=-2J_1^2/x\) 积分证明（总权重为 \(\int_0^\infty 4J_1^2(x)dx/x=2\)）。第一暗环时 \(J_1(x_1)=0\)，所以 \(\mathcal F(x_1)=1-J_0(x_1)^2\simeq0.838\)。无穷远Bessel函数衰减到零，故 \(\mathcal F(\infty)=1\)。
+(4) 中心场正比孔径面积 \(A=\pi a^2\)，固定入射面强度时中心焦面强度正比 \(A^2/(\lambda f)^2\)，同时收集总功率正比 \(A\)；固定输入总功率时孔径面场强标度 \(A^{-1/2}\)，中心强度只正比 \(A/(\lambda f)^2\)。加权照明把 \(2J_1(x)/x\) 改成带权Hankel积分，可抑制旁瓣而扩大主瓣或改变透过功率。
