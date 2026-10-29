@@ -41,6 +41,10 @@ jobs:
         run: python scripts/check_round13_sixth6.py
       - name: Verify sixth six QA report reproducibility
         run: git diff --exit-code -- data/round13_sixth6_validation_report.json
+      - name: Verify six additional round 13 models and 24 subpart checks
+        run: python scripts/check_round13_fifth6.py
+      - name: Verify fifth six report determinism
+        run: git diff --exit-code -- data/round13_fifth6_validation_report.json
       - name: Verify machine report is reproducible
         run: git diff --exit-code -- data/round13_draft_validation_report.json
       - name: Verify synchronized canonical TeX and CSV

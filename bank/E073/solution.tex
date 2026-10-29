@@ -1,0 +1,7 @@
+(1) 板面平行场只有 \(B_z(x)\)，由线性常系数方程 \(B_z''=B_z/\lambda^2\) 得 \(B_z=A\cosh(x/\lambda)+C\sinh(x/\lambda)\)。相同双面边界值迫使 \(C=0\)，再由 \(B_z(d)=\mu_0H_a\) 得 \(\boxed{B_z(x)=\mu_0H_a\cosh(x/\lambda)/\cosh(d/\lambda)}\)。场为偶函数，中心场为 \(\mu_0H_a\operatorname{sech}(d/\lambda)\)；厚板内部场指数小，而有限薄板不能直接设为零。
+
+(2) 旋度的 \(y\) 分量为 \((\nabla\times\mathbf B)_y=-dB_z/dx\)，故 \(j_y(x)=-H_a\sinh(x/\lambda)/[\lambda\cosh(d/\lambda)]\)。它是奇函数，两侧电流反向。右半板积分 \(K_y^{(+)}=\int_0^d j_y dx=-H_a[1-\operatorname{sech}(d/\lambda)]\)，左半板则为正值。若 \(d\gg\lambda\)，右表面局域电流趋于 \(-H_a\)，其电流方向与内部屏蔽磁场梯度一致；总电流积分为零。
+
+(3) 直接积分得 \(\bar B=\mu_0H_a(\lambda/d)\tanh(d/\lambda)\)，所以 \(\boxed{\chi=(\lambda/d)\tanh(d/\lambda)-1}\)。设 \(a=d/\lambda\)，\(a\ll1\) 时 \(\tanh a=a-a^3/3+\cdots\)，得 \(\chi=-a^2/3+O(a^4)\)，说明极薄板屏蔽弱。\(a\gg1\) 时 \(\chi=-1+1/a+O(e^{-2a}/a)\)，恢复近乎完全的Meissner屏蔽。该 \(\chi\) 是特定板几何的有效响应，不是无限大体材料的局域磁化率。
+
+(4) 用 \(j_y=-B_z'/\mu_0\) 化为 \(F_A=(2\mu_0)^{-1}\int(B_z^2+\lambda^2B_z'^2)dx\)。括号恰等于 \(\mu_0^2H_a^2\cosh(2x/\lambda)/\cosh^2a\)。因此 \(F_A=\mu_0H_a^2\lambda\,\tanh a\)。\(a\ll1\) 时 \(F_A\to\mu_0H_a^2d\)，恰为未屏蔽均匀场在厚度 \(2d\) 内的磁能；\(a\gg1\) 时 \(F_A\to\mu_0H_a^2\lambda\)，能量集中在两个穿透层。若只积分磁能而丢掉 \(\mu_0\lambda^2j^2/2\)，便无法得到上述London能量恒等式；固定外场时的完整Gibbs势还须减去外源功，不能把此正定部分直接当作总平衡势。

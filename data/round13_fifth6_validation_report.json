@@ -1,0 +1,176 @@
+{
+  "status": "draft-only-not-admitted",
+  "new_problem_count": 6,
+  "passed_count": 24,
+  "tests": [
+    {
+      "id": "M073",
+      "part": 1,
+      "method": "symbolic",
+      "name": "nonlinear pendulum first integral differentiates exactly into Euler elastica equilibrium",
+      "passed": true
+    },
+    {
+      "id": "M073",
+      "part": 2,
+      "method": "limit",
+      "name": "elliptic complete integral yields exact Euler buckling threshold and positive postbuckling load correction",
+      "passed": true
+    },
+    {
+      "id": "M073",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "end shortening from elliptic first and second kind integrals has exact small amplitude coefficient",
+      "passed": true
+    },
+    {
+      "id": "M073",
+      "part": 4,
+      "method": "conservation",
+      "name": "bending energy from first integral has correct positive leading order and energy to shortening ratio",
+      "passed": true
+    },
+    {
+      "id": "E073",
+      "part": 1,
+      "method": "symbolic",
+      "name": "London slab hyperbolic cosine satisfies second order penetration equation and both boundary fields",
+      "passed": true
+    },
+    {
+      "id": "E073",
+      "part": 2,
+      "method": "conservation",
+      "name": "right half slab sheet current equals exact magnetic induction jump divided by permeability",
+      "passed": true
+    },
+    {
+      "id": "E073",
+      "part": 3,
+      "method": "limit",
+      "name": "effective Meissner susceptibility has thin slab quadratic law and thick slab ideal screening limit",
+      "passed": true
+    },
+    {
+      "id": "E073",
+      "part": 4,
+      "method": "independent_derivation",
+      "name": "magnetic plus kinetic London energy integrates to lambda tanh thickness and correct uniform limit",
+      "passed": true
+    },
+    {
+      "id": "T069",
+      "part": 1,
+      "method": "independent_derivation",
+      "name": "gamma function density of states gives three halves and five halves Bose energy moments",
+      "passed": true
+    },
+    {
+      "id": "T069",
+      "part": 2,
+      "method": "limit",
+      "name": "condensate fraction vanishes at critical temperature and approaches unity at zero temperature",
+      "passed": true
+    },
+    {
+      "id": "T069",
+      "part": 3,
+      "method": "symbolic",
+      "name": "normal and condensed heat capacities agree at critical fugacity with divergent Bose g half moment",
+      "passed": true
+    },
+    {
+      "id": "T069",
+      "part": 4,
+      "method": "dimensions",
+      "name": "ideal quadratic dispersion gas pressure equals two thirds of internal energy density and vanishes at zero T",
+      "passed": true
+    },
+    {
+      "id": "W069",
+      "part": 1,
+      "method": "symbolic",
+      "name": "upper and lower exponential potential fields solve Laplace equation and yield opposite kinematic signs",
+      "passed": true
+    },
+    {
+      "id": "W069",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "density weighted completed square reproduces shear induced negative dispersion contribution",
+      "passed": true
+    },
+    {
+      "id": "W069",
+      "part": 3,
+      "method": "symbolic",
+      "name": "capillary gravity threshold minimizes exactly at geometric mean wave number",
+      "passed": true
+    },
+    {
+      "id": "W069",
+      "part": 4,
+      "method": "limit",
+      "name": "unregularized vortex sheet has growth linear in k and stable zero shear gravity capillary branch",
+      "passed": true
+    },
+    {
+      "id": "O071",
+      "part": 1,
+      "method": "independent_derivation",
+      "name": "Gaussian Fourier characteristic function yields axial amplitude envelope exp minus twice sigma squared depth squared",
+      "passed": true
+    },
+    {
+      "id": "O071",
+      "part": 2,
+      "method": "symbolic",
+      "name": "amplitude and intensity Gaussian half widths differ by exact square root of two",
+      "passed": true
+    },
+    {
+      "id": "O071",
+      "part": 3,
+      "method": "numerical",
+      "name": "chirped Gaussian magnitude agrees with independently integrated oscillatory spectral integral",
+      "passed": true
+    },
+    {
+      "id": "O071",
+      "part": 4,
+      "method": "limit",
+      "name": "uniform spectral sampling phase is exactly invariant after one depth alias period and bandwidth zero loses localization",
+      "passed": true
+    },
+    {
+      "id": "Q071",
+      "part": 1,
+      "method": "symbolic",
+      "name": "minimal coupling angular eigenvalue exactly matches flux shifted integer parabola",
+      "passed": true
+    },
+    {
+      "id": "Q071",
+      "part": 2,
+      "method": "conservation",
+      "name": "flux quantum relabeling preserves the entire spectrum and persistent current is energy derivative",
+      "passed": true
+    },
+    {
+      "id": "Q071",
+      "part": 3,
+      "method": "numerical",
+      "name": "finite temperature ring partition is even in flux and persistent current vanishes at zero flux",
+      "passed": true
+    },
+    {
+      "id": "Q071",
+      "part": 4,
+      "method": "limit",
+      "name": "Poisson high temperature first harmonic current decays exponentially and is odd in applied flux",
+      "passed": true
+    }
+  ],
+  "independent_expert_review": "pending"
+}

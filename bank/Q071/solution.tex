@@ -1,0 +1,7 @@
+(1) 最小耦合在环上的哈密顿量为 \(H=[-i\hbar R^{-1}\partial_\theta-qA_\theta]^2/(2m)=\varepsilon(-i\partial_\theta-f)^2\)，其中 \(f=\Phi/\Phi_0\)，\(\varepsilon=\hbar^2/(2mR^2)\)。周期边界要求角动量整数 \(\ell\in\mathbb Z\)，归一化本征态 \(\psi_\ell(\theta)=e^{i\ell\theta}/\sqrt{2\pi}\)，故 \(E_\ell=\varepsilon(\ell-f)^2\)。能量依赖的是规范不变的环路相位 \(q\oint A\cdot dl/\hbar=2\pi f\)，而非环上局域磁场。
+
+(2) 磁通增加一个量子时 \(E_\ell(f+1)=E_{\ell-1}(f)\)，所以整套能谱周期为 \(\Phi_0\)，但固定标签的单个抛物线并非周期函数。电流 \(I_\ell=-\partial_\Phi E_\ell=2\varepsilon(\ell-f)/\Phi_0\)。零温基态取距离 \(f\) 最近的整数 \(\ell_0\)，\(E_{\rm gs}=\varepsilon(\ell_0-f)^2\) 为分段抛物线，电流为锯齿；在 \(f=n+1/2\) 两态简并，严格零温无微扰时需说明占据方式，不能指定唯一电流。
+
+(3) 正则配分函数 \(Z(f)=\sum_{\ell\in\mathbb Z}\exp[-\beta\varepsilon(\ell-f)^2]\)，\(F=-k_BT\ln Z\)，故 \(I=-\partial_\Phi F=(k_BT/\Phi_0)\partial_f\ln Z\)。逐项求导得 \(I=(2\varepsilon/\Phi_0)\frac{\sum_\ell(\ell-f)e^{-\beta\varepsilon(\ell-f)^2}}{\sum_\ell e^{-\beta\varepsilon(\ell-f)^2}}\)。在 \(f=0\) 时正负 \(\ell\) 项严格抵消，电流为零；有限温度下也满足 \(I(-f)=-I(f)\)，无须诉诸不严格的经典轨道图像。
+
+(4) Poisson求和得 \(Z(f)=\sqrt{\pi/(\beta\varepsilon)}\sum_{n\in\mathbb Z}e^{-\pi^2n^2/(\beta\varepsilon)}e^{2\pi i n f}\)。令 \(a=e^{-\pi^2/(\beta\varepsilon)}\ll1\)，则 \(Z=\sqrt{\pi/(\beta\varepsilon)}[1+2a\cos(2\pi f)+O(a^4)]\)，从而 \(\boxed{I\simeq-4\pi k_BT\,a\sin(2\pi f)/\Phi_0}\)；高温时指数压倒前面的 \(T\) 因子，电流趋零。反向磁通使正弦变号。Aharonov–Bohm效应由非单连通空间的闭合路径规范相位决定，即使粒子可达环上 \(B=0\)，也不能通过单值规范变换消去非整数通量。
