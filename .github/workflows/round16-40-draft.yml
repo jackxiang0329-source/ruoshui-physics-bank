@@ -1,14 +1,16 @@
-name: Round 16 forty draft structure
+name: Round 16 forty draft structure and model QA
 on:
   push:
     branches: [physics-round16-40-draft]
   workflow_dispatch:
 jobs:
-  forty-structural:
+  forty-draft:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Validate forty unique four-part source triples
+      - name: Check forty three-file original TeX source entries and 160 solved sections
         run: node scripts/check_round16_40_draft.js > /tmp/round16-40-structure.json
-      - name: Preserve scientific and PDF admission gates
-        run: echo 'Structural draft check only; scientific subpart QA, semantic originality, mirrors, two XeLaTeX PDFs and independent expert review remain pending. Do not merge.'
+      - name: Run forty independent numeric physical-model consistency checks
+        run: node scripts/check_round16_40_models.js > /tmp/round16-40-models.json
+      - name: Keep formal admission blocked
+        run: echo '40 source drafts and 40 scoped model checks only; 160 independent subpart checks, historical originality review, full mirror synchronization and both PDFs still pending. Do not merge.'
