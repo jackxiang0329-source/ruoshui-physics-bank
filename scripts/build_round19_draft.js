@@ -4,7 +4,7 @@ const fs=require('fs'),path=require('path');
 const ranges={M:[116,122],E:[116,122],T:[109,115],W:[109,115],O:[108,113],Q:[108,113]};
 const ids=Object.entries(ranges).flatMap(([p,[a,b]])=>Array.from({length:b-a+1},(_,i)=>p+String(a+i).padStart(3,'0')));
 const out='build/round19';fs.mkdirSync(out,{recursive:true});
-const pre=String.raw\`\documentclass[11pt,a4paper]{ctexart}
+const pre=String.raw`\documentclass[11pt,a4paper]{ctexart}
 \usepackage{amsmath,amssymb,geometry,hyperref}
 \geometry{margin=23mm}
 \hypersetup{hidelinks}
@@ -15,9 +15,9 @@ const pre=String.raw\`\documentclass[11pt,a4paper]{ctexart}
 \par\bigskip
 \tableofcontents
 \clearpage
-\`;
-const post=String.raw\`\end{document}
-\`;
+`;
+const post=String.raw`\end{document}
+`;
 for(const kind of ['question','solution']){
  let body=pre;
  for(const id of ids){
