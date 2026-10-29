@@ -20,17 +20,9 @@ pressure=rho*(A*A*(r*r-a*a)/2+2*A*B*s.log(r/a)-B*B*(r**(-2)-a**(-2))/2)
 ck('M074',3,'independent_derivation','radial pressure primitive differentiates to exact centrifugal acceleration and rigid rotation pressure',eq(s.diff(pressure,r),rho*v*v/r) and eq(pressure.subs(ob,oa),rho*oa**2*(r*r-a*a)/2))
 diss=4*s.pi*mu*B*B*(1/a**2-1/b**2)
 ck('M074',4,'conservation','integrated viscous dissipation exactly equals difference in externally supplied wall torques times angular speeds',eq(diss,4*s.pi*mu*B*(oa-ob)) and eq(s.limit(B*(b-a),b,a,dir='+'),a**3*(oa-ob)/2))
-# E074 conductor skin effect
-om,perm,sig,eps,x,H=s.symbols('om perm sig eps x H',positive=True)
-delta=s.sqrt(2/(perm*sig*om));q=(1-s.I)/delta
-field=H*s.exp(-q*x)
-ck('E074',1,'symbolic','complex skin field solves Maxwell diffusion equation with decaying physical root',eq(s.diff(field,x,2)+s.I*perm*sig*om*field) and eq(field.subs(x,0),H))
-j=-s.diff(field,x);ef=j/sig
-ck('E074',2,'dimensions','surface impedance equals complex skin wave number over conductivity with positive dissipative real part',eq((ef/field),q/sig) and eq(s.re(q/sig),1/(sig*delta)))
-pin=H**2/(2*sig*delta)
-jheat=s.integrate(sig*s.expand_complex(ef*s.conjugate(ef))/2,(x,0,s.oo))
-ck('E074',3,'conservation','Poynting incoming flux exactly equals independently integrated Joule loss in conductor halfspace',eq(s.simplify(jheat),pin))
-ck('E074',4,'limit','skin depth decays as inverse square root frequency while dissipative surface resistance grows as square root',eq(s.diff(s.log(delta),om)*om,-s.Rational(1,2)) and eq(s.diff(s.log(1/(sig*delta)),om)*om,s.Rational(1,2)))
+# E074: Stoner Wohlfarth magnetic astroid checks
+from check_round13_replacements import run as run_replacement_checks
+checks.extend(run_replacement_checks(['E074']))
 # T070 grey atmosphere
 tau,Te,g,kappa=s.symbols('tau Te g kappa',positive=True)
 T4=s.Rational(3,4)*Te**4*(tau+s.Rational(2,3))
@@ -52,19 +44,8 @@ Smn=S.subs({kx:kxmn,ky:kymn})
 ck('W070',3,'conservation','simply supported double sine mode potential energy equals oscillator effective mass times squared frequency',eq(la*lb*amp**2*Smn/8,(ms*la*lb/4)*(Smn/ms)*amp**2/2))
 D=s.symbols('D',positive=True)
 ck('W070',4,'limit','isotropic Kirchhoff Love plate has quadratic frequency and group speed exactly twice phase speed',eq(omega.subs({Dx:D,Dy:D,Dxy:D})**2,(D/ms)*(kx*kx+ky*ky)**2) and eq(s.diff(s.sqrt(D/ms)*kx*kx,kx),2*s.sqrt(D/ms)*kx))
-# O072 TM surface plasmon
-ed,em,k0=s.symbols('ed em k0',positive=True)
-mneg=s.symbols('mneg',positive=True)
-betasq=k0*k0*ed*(-mneg)/(ed-mneg)
-kd2=s.simplify(betasq-ed*k0*k0)
-km2=s.simplify(betasq+mneg*k0*k0)
-ck('O072',1,'symbolic','evanescent TM normal wave numbers obey Helmholtz dispersion in both half spaces',eq(kd2,betasq-ed*k0*k0) and eq(km2,betasq-(-mneg)*k0*k0))
-ck('O072',2,'independent_derivation','TM tangential continuity gives squared decay ratio equal squared dielectric contrast',eq(kd2/ed**2,km2/mneg**2))
-wp,w=s.symbols('wp w',positive=True)
-epsm=1-wp**2/w**2
-beta2=s.simplify((w**2)*epsm/(1+epsm))
-ck('O072',3,'limit','lossless Drude surface plasmon diverges at omega plasma over root two and approaches vacuum light line at low frequency',eq(s.limit(beta2/w**2,w,0),1) and eq((1+epsm).subs(w,wp/s.sqrt(2)),0))
-ck('O072',4,'physical_case','Brillouin metal electric energy derivative remains positive despite negative real permittivity',eq(s.diff(w*epsm,w),1+wp**2/w**2) and eq(s.limit(s.diff(w*epsm,w),w,wp/s.sqrt(2)),3))
+# O072: coupled-mode Bragg grating checks
+checks.extend(run_replacement_checks(['O072']))
 # Q072 adiabatic Grover
 N,ss,epsilon=s.symbols('N ss epsilon',positive=True)
 gap2=1-4*(1-1/N)*ss*(1-ss)

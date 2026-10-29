@@ -29,14 +29,9 @@ chi=s.tanh(a)/a-1
 ck('E073',3,'limit','effective Meissner susceptibility has thin slab quadratic law and thick slab ideal screening limit',eq(s.limit(chi/a**2,a,0),-s.Rational(1,3)) and eq(s.limit(chi,a,s.oo),-1))
 energy=s.integrate((Bz**2+lam**2*s.diff(Bz,x)**2)/(2*mu),(x,-a*lam,a*lam))
 ck('E073',4,'independent_derivation','magnetic plus kinetic London energy integrates to lambda tanh thickness and correct uniform limit',eq(energy,mu*Ha**2*lam*s.tanh(a)) and eq(s.limit(energy/(mu*Ha**2*a*lam),a,0),1))
-# T068 three dimensional Bose gas
-z=s.symbols('z',positive=True)
-zeta32=s.zeta(s.Rational(3,2)); zeta52=s.zeta(s.Rational(5,2))
-ck('T069',1,'independent_derivation','gamma function density of states gives three halves and five halves Bose energy moments',eq(s.gamma(s.Rational(5,2))/s.gamma(s.Rational(3,2)),s.Rational(3,2)))
-ck('T069',2,'limit','condensate fraction vanishes at critical temperature and approaches unity at zero temperature',eq(1-1**s.Rational(3,2),0) and eq(s.limit(1-z**s.Rational(3,2),z,0),1))
-cvlow=s.Rational(15,4)*zeta52/zeta32
-ck('T069',3,'symbolic','normal and condensed heat capacities agree at critical fugacity with divergent Bose g half moment',float(mp.polylog(0.5,mp.mpf('0.999999999999')))>1e5 and abs(float(3.75*mp.polylog(2.5,mp.mpf('0.99999999'))/mp.polylog(1.5,mp.mpf('0.99999999'))-2.25*mp.polylog(1.5,mp.mpf('0.99999999'))/mp.polylog(0.5,mp.mpf('0.99999999')))-float(cvlow.evalf()))<1e-3)
-ck('T069',4,'dimensions','ideal quadratic dispersion gas pressure equals two thirds of internal energy density and vanishes at zero T',eq(s.Rational(2,3)*s.Rational(3,2),1) and eq(s.limit(z**s.Rational(5,2),z,0),0))
+# T069: new two-state Markov detailed-balance checks
+from check_round13_replacements import run as run_replacement_checks
+checks.extend(run_replacement_checks(['T069']))
 # W068 Kelvin Helmholtz
 r1,r2,g,sig,kk,du=s.symbols('r1 r2 g sig kk du',positive=True)
 D=(r2-r1)*g*kk/(r1+r2)+sig*kk**3/(r1+r2)-r1*r2*du**2*kk**2/(r1+r2)**2
@@ -55,14 +50,8 @@ ck('O071',2,'symbolic','amplitude and intensity Gaussian half widths differ by e
 ck('O071',3,'numerical','chirped Gaussian magnitude agrees with independently integrated oscillatory spectral integral',abs(complex(amp.subs({sk:1,dz:s.Rational(1,3),ph:s.Rational(2,5)}))-complex(mp.quad(lambda t:mp.exp(-t*t/2+0.2j*t*t+2j*t/3),[-mp.inf,mp.inf])/mp.sqrt(2*mp.pi)))<1e-9)
 dk=s.symbols('dk',positive=True)
 ck('O071',4,'limit','uniform spectral sampling phase is exactly invariant after one depth alias period and bandwidth zero loses localization',eq(s.exp(2*s.I*dk*s.pi/dk),1) and s.limit(s.sqrt(2*s.log(2))/sk,sk,0)==s.oo)
-# Q070 Aharonov Bohm quantum ring
-eps,f,phi0,beta=s.symbols('eps f phi0 beta',positive=True)
-ell=s.symbols('ell',integer=True)
-En=eps*(ell-f)**2
-ck('Q071',1,'symbolic','minimal coupling angular eigenvalue exactly matches flux shifted integer parabola',eq((ell-f)**2,En/eps))
-ck('Q071',2,'conservation','flux quantum relabeling preserves the entire spectrum and persistent current is energy derivative',eq(En.subs({f:f+1,ell:ell+1}),En) and eq(-s.diff(En,f)/phi0,2*eps*(ell-f)/phi0))
-ck('Q071',3,'numerical','finite temperature ring partition is even in flux and persistent current vanishes at zero flux',abs(sum(j*math.exp(-0.7*j*j) for j in range(-60,61)))<1e-14 and abs(sum(math.exp(-0.7*(j-0.3)**2) for j in range(-60,61))-sum(math.exp(-0.7*(j+0.3)**2) for j in range(-60,61)))<1e-12)
-ck('Q071',4,'limit','Poisson high temperature first harmonic current decays exponentially and is odd in applied flux',eq(s.limit(beta**(-1)*s.exp(-s.pi**2/(beta*eps)),beta,0,dir='+'),0) and eq(s.sin(-2*s.pi*f),-s.sin(2*s.pi*f)))
+# Q071: new side-coupled Fano antiresonance checks
+checks.extend(run_replacement_checks(['Q071']))
 assert len(checks)==24 and len({(x['id'],x['part']) for x in checks})==24
 ids=('M073','E073','T069','W069','O071','Q071')
 assert all(len({x['method'] for x in checks if x['id']==uid})>=2 for uid in ids)

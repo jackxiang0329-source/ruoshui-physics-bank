@@ -9,30 +9,9 @@ def ck(uid,part,method,name,ok):
     assert bool(ok),(uid,part,name)
     checks.append(dict(id=uid,part=part,method=method,name=name,passed=True))
 def eq(a,b=0):return s.simplify(s.trigsimp(a-b))==0
-# M075: two impulse Hohmann transfer and rocket budget
-mu,r1,r2,ve=s.symbols('mu r1 r2 ve',positive=True)
-at=(r1+r2)/2
-vp=s.sqrt(mu*(2/r1-1/at));va=s.sqrt(mu*(2/r2-1/at))
-vc1=s.sqrt(mu/r1);vc2=s.sqrt(mu/r2)
-ck('M075',1,'symbolic','vis viva transfer orbit periapsis and apoapsis share the same exact Kepler angular momentum',eq(r1**2*vp**2,r2**2*va**2) and eq(r1**2*vp**2,2*mu*r1*r2/(r1+r2)))
-dv1=vp-vc1;dv2=vc2-va
-ck('M075',2,'conservation','two Hohmann velocity impulses are prograde and their kinetic changes match the circular orbit energy budget',eq((vp**2-vc1**2+vc2**2-va**2)/2,mu*(1/r1-1/r2)/2) and float(dv1.subs({mu:1,r1:1,r2:4}))>0 and float(dv2.subs({mu:1,r1:1,r2:4}))>0)
-T=s.pi*s.sqrt(at**3/mu)
-ck('M075',3,'limit','half ellipse transfer duration tends half circular period and diverges for an unbounded destination orbit',eq(s.limit(T/(2*s.pi*s.sqrt(r1**3/mu)),r2,r1),s.Rational(1,2)) and s.limit(T,r2,s.oo)==s.oo)
-ck('M075',4,'dimensions','Tsiolkovsky mass ratio is exponential in total delta v and tends unity when both circular radii coincide',eq(s.limit(s.exp((dv1+dv2)/ve),r2,r1),1) and eq(s.log(s.exp((dv1+dv2)/ve)),(dv1+dv2)/ve))
-# M076: Foucault Coriolis oscillator
-Om,w,t=s.symbols('Om w t',positive=True)
-z=s.exp(-s.I*Om*t)*s.exp(s.I*s.sqrt(w*w+Om*Om)*t)
-ck('M076',1,'symbolic','complex Foucault displacement solves coupled Coriolis equations with correct northern hemisphere rotation sign',eq(s.diff(z,t,2)+2*s.I*Om*s.diff(z,t)+w*w*z))
-freqp=s.sqrt(w*w+Om*Om)+Om
-freqm=s.sqrt(w*w+Om*Om)-Om
-ck('M076',2,'independent_derivation','two circular polarization positive frequencies split by exactly twice vertical Earth rotation rate',eq(freqp-freqm,2*Om) and eq(freqp*freqm,w*w))
-lat,earth=s.symbols('lat earth',positive=True)
-pre=earth*s.sin(lat)
-ck('M076',3,'limit','Foucault precession vanishes at equator and equals sidereal rotation at north pole',eq(pre.subs(lat,0)) and eq(pre.subs(lat,s.pi/2),earth))
-xd,yd,x,y=s.symbols('xd yd x y',real=True)
-xdd=2*Om*yd-w*w*x;ydd=-2*Om*xd-w*w*y
-ck('M076',4,'conservation','Coriolis acceleration is perpendicular to velocity and horizontal pendulum energy derivative vanishes',eq(xd*xdd+yd*ydd+w*w*(x*xd+y*yd)))
+# M075 and M076: rotating Ekman layer and Taylor-Aris dispersion
+from check_round13_replacements import run as run_replacement_checks
+checks.extend(run_replacement_checks(['M075','M076']))
 # E075: ellipsoid depolarization
 er,Li,vol,eps0,E0=s.symbols('er Li vol eps0 E0',positive=True)
 alpha=eps0*vol*(er-1)/(1+Li*(er-1))
@@ -55,20 +34,8 @@ real=de/(1+(omega*tau)**2);imag=de*omega*tau/(1+(omega*tau)**2)
 ck('E076',2,'independent_derivation','complex Debye susceptibility has exact positive loss imaginary part and correct zero high frequency limits',eq(s.re(chi),real) and eq(s.im(chi),imag) and eq(s.limit(real,omega,s.oo),0))
 ck('E076',3,'conservation','Debye dielectric loss peaks at unit omega tau and dissipates nonnegative energy per field cycle',eq(s.diff(imag,omega).subs(omega,1/tau)) and eq(imag.subs(omega,1/tau),de/2) and eq(s.pi*eps0*E0**2*imag/(s.pi*eps0*E0**2),imag))
 ck('E076',4,'independent_derivation','causal Kramers Kronig dielectric sum rule recovers full static to high frequency contrast',eq(2/s.pi*s.integrate(imag/omega,(omega,0,s.oo)),de))
-# T071: three dimensional ideal Fermi gas
-n,m,hbar,kb,Tf=s.symbols('n m hbar kb Tf',positive=True)
-kf=(3*s.pi**2*n)**s.Rational(1,3)
-ef=hbar**2*kf**2/(2*m)
-ck('T071',1,'symbolic','three dimensional spin two Fermi sphere state count and pressure two fifths n Fermi energy agree',eq(kf**3/(3*s.pi**2),n) and eq(s.Rational(2,3)*s.Rational(3,5),s.Rational(2,5)))
-C,tm=s.symbols('C tm',positive=True)
-dmu=-s.pi**2*(kb*tm)**2/(12*ef)
-num=C*ef**s.Rational(1,2)*dmu+s.pi**2*C*(kb*tm)**2/(12*ef**s.Rational(1,2))
-ck('T071',2,'independent_derivation','Sommerfeld number conservation yields negative pi squared over twelve chemical potential shift',eq(num))
-Uper=s.Rational(3,5)*ef*(1+s.Rational(5,12)*s.pi**2*(tm/Tf)**2)
-cv=s.diff(Uper,tm)
-ck('T071',3,'symbolic','Sommerfeld energy temperature derivative reproduces linear specific heat pi squared over two',eq(cv,s.pi**2*ef*tm/(2*Tf**2)) and eq(cv.subs(ef,kb*Tf),s.pi**2*kb*tm/(2*Tf)))
-P0=s.Rational(2,5)*n*ef
-ck('T071',4,'conservation','zero temperature Fermi compressibility and sound speed follow density five thirds pressure scaling',eq(s.diff(P0,n),s.Rational(2,3)*ef) and eq(s.diff(P0,n)/m,2*ef/(3*m)))
+# T071: conserved Cahn-Hilliard spinodal kinetics
+checks.extend(run_replacement_checks(['T071']))
 # W071: viscous Burgers shock
 nu,umin,umax,xi=s.symbols('nu umin umax xi',positive=True)
 Delta=umax-umin
