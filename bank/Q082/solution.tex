@@ -1,22 +1,56 @@
-(1) 初态满足 \(\langle x^2\rangle=\hbar/(2m\omega_i)=A\)、\(\langle p^2\rangle=\hbar m\omega_i/2=B\)、对称协方差零。新哈密顿量 \(H_f=p^2/(2m)+m\omega_f^2x^2/2\)，故
+(1) 无磁场哈密顿量为
+\(H_0=-\hbar^2\nabla^2/(2m)\)，可分离变量
+\(\psi(r,\varphi)=\mathcal R(r)e^{i\ell\varphi}\)，其中 \(\ell\in\mathbb Z\)；
+径向方程为
 \[
-\langle H_f\rangle={\hbar\over4}(\omega_i+\omega_f^2/\omega_i),\quad
-\bar n={\langle H_f\rangle\over\hbar\omega_f}-{1\over2}
-={(\omega_f-\omega_i)^2\over4\omega_f\omega_i}.
+\mathcal R''+\frac1r\mathcal R'+\left(k^2-\frac{\ell^2}{r^2}\right)\mathcal R=0.
 \]
-频率淬火后的态是新振子的压缩真空，其能量方差 \(\operatorname{Var}H_f=2(\hbar\omega_f)^2\bar n(\bar n+1)\)（由偶数激发态的压缩真空数分布或四阶高斯矩求得）。
-(2) Heisenberg演化 \(x(t)=x_0\cos\omega_ft+p_0\sin\omega_ft/(m\omega_f)\)，\(p(t)=p_0\cos\omega_ft-m\omega_fx_0\sin\omega_ft\)。写 \(c=\cos\omega_ft,s=\sin\omega_ft\)，则
+球心正则性排除 \(Y_{|\ell|}\)，而边界 \(\mathcal R(R)=0\) 给 \(k=j_{|\ell|,n}/R\)。
+利用 Lommel 积分恒等式
+\(\int_0^R rJ_{|\ell|}^2(j_{|\ell|,n}r/R)dr=\frac{R^2}{2}J_{|\ell|+1}^2(j_{|\ell|,n})\)，得到
 \[
-\Delta x^2(t)=Ac^2+{B\over m^2\omega_f^2}s^2,\quad
-\Delta p^2(t)=Bc^2+m^2\omega_f^2As^2.
+\psi_{\ell,n}=
+\frac{J_{|\ell|}(j_{|\ell|,n}r/R)e^{i\ell\varphi}}
+{\sqrt\pi R|J_{|\ell|+1}(j_{|\ell|,n})|},\qquad
+E_{\ell,n}=\frac{\hbar^2j_{|\ell|,n}^2}{2mR^2}.
 \]
-(3) 因初态交叉对称期望为零，
+\(\ell\ne0\) 的 \(\pm\ell\) 能级相同，\(\ell=0\) 在这个角向对称性下无成对简并。
+
+(2) 无场概率流为
+\(\mathbf j=(\hbar/m)\operatorname{Im}(\psi^*\nabla\psi)\)，由于径向 Bessel 因子可取实数，严格有
 \[
-C_{xp}(t)=sc\left({B\over m\omega_f}-m\omega_f A\right).
+j_r=0,\qquad j_\varphi=\frac{\hbar\ell}{mr}|\psi_{\ell,n}|^2.
 \]
-直接展开并使用 \(AB=\hbar^2/4\) 得
+并且 \(L_z=-i\hbar\partial_\varphi\) 导致
+\(\langle L_z\rangle=\hbar\ell\)。复共轭操作将 \(\ell\mapsto-\ell\)，保持
+\(H_0\) 和能量不变，同时反转环向概率流；\(\ell=0\) 模式纯实，故
+\(\mathbf j=0\)。这并不要求粒子的径向概率密度处处均匀。
+
+(3) 采取最小耦合 \(H=(\mathbf p-q\mathbf A)^2/(2m)\)，由于
+\(\nabla\cdot\mathbf A=0\) 且 \(\mathbf A\cdot\mathbf p=(B/2)L_z\)，精确得到
 \[
-\Delta x^2\Delta p^2-C_{xp}^2=AB(c^2+s^2)^2={\hbar^2\over4}.
+H=H_0-\frac{qB}{2m}L_z+\frac{q^2B^2}{8m}r^2.
 \]
-所以乘积 \(\Delta x\Delta p\ge\hbar/2\)，且包含相关项的量子相空间面积不变。
-(4) 瞬态外控功平均为 \(\langle W\rangle=\langle H_f-H_i\rangle=\hbar(\omega_f^2-\omega_i^2)/(4\omega_i)\)，它可为负；淬火之后哈密顿量定常，\(\langle H_f\rangle\) 不随时变，虽位置和动量方差互相交换。若 \(\omega_f=\omega_i\)，\(\bar n=\operatorname{Var}H_f=W=0\)。当 \(\omega_f/\omega_i\gg1\)，\(\bar n\sim\omega_f/(4\omega_i)\) 增大，符合急剧压缩注入高能激发。
+所以无场成对态的首阶能移为
+\(\Delta E_{\ell,n}^{(1)}=-qB\hbar\ell/(2m)\)；两态之间的能差
+\(E_{\ell,n}-E_{-\ell,n}=-qB\hbar\ell/m+O(B^3)\)，实际上 \(B^2\) 对两态的贡献完全相同。
+对于电子 \(q=-e<0\)，正 \(\ell\) 态首阶移能 \(+eB\hbar\ell/(2m)\)；此时遗漏电荷符号会错误反转谱的分裂方向。
+
+(4) 定义 \(\alpha=j_{|\ell|,n}\)。在上问的 Bessel 正交归一上，再积分
+\(r^3J_{|\ell|}^2(\alpha r/R)\)，可从 Bessel 微分方程和分部积分得
+\[
+\langle r^2\rangle_{\ell,n}
+=\frac{R^2}{3}\left[1+\frac{2(\ell^2-1)}{\alpha^2}\right].
+\]
+因为 \(L_z\) 与 \(H_0\) 对易，线性磁耦合在无场本征基上对角；对应固定的
+\((\ell,n)\)，前两项微扰为
+\[
+E_{\ell,n}(B)=E_{\ell,n}(0)
+-\frac{qB\hbar\ell}{2m}
++\frac{q^2B^2R^2}{24m}
+\left[1+\frac{2(\ell^2-1)}{j_{|\ell|,n}^2}\right]
++O(B^4).
+\]
+不计自旋时基态 \(\ell=0\) 无线性移能，
+\(\Delta E_{0,1}^{(2)}=\frac{q^2B^2R^2}{24m}
+(1-2/j_{0,1}^2)>0\)，因 \(j_{0,1}> \sqrt2\)。粒子自旋、介质磁性以及强磁场中不同径向态混合均不在本模型之内；恢复 \(B=0\) 时回到第(1)问的圆盘谱。

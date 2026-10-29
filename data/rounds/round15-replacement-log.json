@@ -22,10 +22,65 @@
       "old_model": "conductor skin-depth magnetic diffusion",
       "new_model": "symmetric cold electron two-stream electrostatic instability and linear energy transfer",
       "editorial_status": "substantively_replaced_pending_global_rescreen"
+    },
+    {
+      "id": "M086",
+      "old_historical_collision": [
+        "M049"
+      ],
+      "old_model": "historically collided core as documented in round15-core-model-audit.json",
+      "new_model": "圆形限制性三体问题L4/L5点的雅可比积分、Routh阈值与线性谱",
+      "editorial_status": "substantively_replaced_pending_global_rescreen"
+    },
+    {
+      "id": "E088",
+      "old_historical_collision": [
+        "E061"
+      ],
+      "old_model": "historically collided core as documented in round15-core-model-audit.json",
+      "new_model": "三轴各向异性介质中的静电Green函数、椭球电容与场能",
+      "editorial_status": "substantively_replaced_pending_global_rescreen"
+    },
+    {
+      "id": "T081",
+      "old_historical_collision": [
+        "T059"
+      ],
+      "old_model": "historically collided core as documented in round15-core-model-audit.json",
+      "new_model": "自由关节高分子链的Langevin弹性、Legendre变换与强拉伸熵",
+      "editorial_status": "substantively_replaced_pending_global_rescreen"
+    },
+    {
+      "id": "W081",
+      "old_historical_collision": [
+        "W072"
+      ],
+      "old_model": "historically collided core as documented in round15-core-model-audit.json",
+      "new_model": "Timoshenko梁的剪切—转动惯性耦合、双分支色散与能流",
+      "editorial_status": "substantively_replaced_pending_global_rescreen"
+    },
+    {
+      "id": "O082",
+      "old_historical_collision": [
+        "O010",
+        "O037"
+      ],
+      "old_model": "historically collided core as documented in round15-core-model-audit.json",
+      "new_model": "单轴晶体异常光的波法线、坡印廷偏折与最大走离角",
+      "editorial_status": "substantively_replaced_pending_global_rescreen"
+    },
+    {
+      "id": "Q082",
+      "old_historical_collision": [
+        "Q014"
+      ],
+      "old_model": "historically collided core as documented in round15-core-model-audit.json",
+      "new_model": "二维圆盘量子阱的Bessel谱、角动量流与微弱磁场劈裂",
+      "editorial_status": "substantively_replaced_pending_global_rescreen"
     }
   ],
-  "outstanding_unreplaced_overlap_count": 39,
+  "outstanding_unreplaced_overlap_count": 33,
   "remaining_unqualified_new_candidates": 50,
-  "admission_status": "BLOCKED until 50 models screened, 200 executable subpart checks verified, all mirrors generated, and both XeLaTeX PDFs compiled",
+  "admission_status": "BLOCKED: 33 known core collisions unresolved, full 200 independent checks and PDF gates unverified",
   "expert_review": "待独立复核"
 }

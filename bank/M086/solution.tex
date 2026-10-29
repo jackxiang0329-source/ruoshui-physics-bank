@@ -1,23 +1,58 @@
-(1) 坐标 \(x=l\sin\theta,\ y=a\cos\Omega t-l\cos\theta\)。略去仅含时间的项，拉格朗日量
+(1) 定义 \(r_1=\sqrt{(x+\mu)^2+y^2}\)、\(r_2=\sqrt{(x-1+\mu)^2+y^2}\)，共转有效势为
 \[
-L={ml^2\over2}\dot\theta^2+ml\dot y_p\sin\theta\,\dot\theta+mgl\cos\theta .
+U(x,y)=\frac{x^2+y^2}{2}+\frac{1-\mu}{r_1}+\frac{\mu}{r_2}.
 \]
-Euler--Lagrange方程为
+绕垂直平面单位角速度转动的动力学方程为
 \[
-\ddot\theta+{g+\ddot y_p\over l}\sin\theta=0,\quad
-\ddot y_p=-a\Omega^2\cos\Omega t.
+\ddot x-2\dot y=U_x,\qquad \ddot y+2\dot x=U_y.
 \]
-(2) 写 \(\theta=\Theta+\xi\)，慢变量一周期内近似常数。快方程 \(\ddot\xi=(a\Omega^2/l)\cos\Omega t\sin\Theta\)，故
-\(\xi=-(a/l)\cos\Omega t\sin\Theta\)（取零均值）。对完整方程保留二阶平均，
+代入 \(x_*=\frac12-\mu,\ y_*=\pm\frac{\sqrt3}{2}\)，有 \(r_1=r_2=1\)，并且
+\(U_x=x_*-(1-\mu)(x_*+\mu)-\mu(x_*-1+\mu)=0\)，
+\(U_y=y_*-(1-\mu)y_*-\mu y_*=0\)，故两点均为严格共转平衡点。对 \(0<\mu\le1/2\)，它们构成两个以主星基线为边的单位正三角形。
+
+(2) 两方程分别乘 \(\dot x,\dot y\) 相加，科里奥利功相互抵消，得
+\(\frac{d}{dt}[\frac12(\dot x^2+\dot y^2)-U]=0\)；因而
 \[
-\ddot\Theta+{g\over l}\sin\Theta+{a^2\Omega^2\over2l^2}\sin\Theta\cos\Theta=0.
+C=2U-(\dot x^2+\dot y^2)
 \]
-此处 \(\langle\cos^2\Omega t\rangle=1/2\)。(3) 令 \(\Theta=\pi+\eta\)，得
-\(\ddot\eta+[a^2\Omega^2/(2l^2)-g/l]\eta=0\)。所以倒立稳定阈值
-\(a^2\Omega^2>2gl\)，\(\omega_\mathrm{up}^2=a^2\Omega^2/(2l^2)-g/l\)；
-下垂点 \(\omega_\mathrm{down}^2=g/l+a^2\Omega^2/(2l^2)\)。\(a\to0\) 恢复普通单摆下垂频率与倒立不稳定性。
-(4) 每单位质量的有效势
+严格守恒。设在 \(\mathrm L_4\) 点 \((x,y)=(x_*,y_*)+(\xi,\eta)\)，由
+\(\partial_i\partial_j r^{-1}=3r_i r_j/r^5-\delta_{ij}/r^3\)
+以及两主星各距平衡点1，得到
 \[
-U_\mathrm{eff}/m=-gl\cos\Theta+{a^2\Omega^2\over4}\sin^2\Theta.
+U_{xx}=\frac34,\quad U_{yy}=\frac94,\quad
+U_{xy}=\frac{3\sqrt3}{4}(1-2\mu).
 \]
-原系统有显式时变约束，能量变化率为支点反作用力对支点速度做功；仅平均慢动力学近似保守。要求 \(a/l\ll1\)，且 \(\Omega\gg\sqrt{g/l},a\Omega/l\) 以分离尺度；特别需检查逆摆附近慢模频率远低于驱动频率。
+故线性方程为
+\[
+\ddot\xi-2\dot\eta=\frac34\xi+U_{xy}\eta,\quad
+\ddot\eta+2\dot\xi=U_{xy}\xi+\frac94\eta.
+\]
+科里奥利反对称耦合影响谱，必须使用完整的四维一阶线性算子；仅检验 Hessian 正负符号不能判定是否有增长解。
+
+(3) 代入 \((\xi,\eta)\propto e^{\lambda t}\)，特征行列式为
+\[
+\det\begin{pmatrix}\lambda^2-U_{xx}&-2\lambda-U_{xy}\\
+2\lambda-U_{xy}&\lambda^2-U_{yy}\end{pmatrix}=0,
+\]
+化为
+\[
+\lambda^4+\lambda^2+\frac{27}{4}\mu(1-\mu)=0.
+\]
+写 \(\lambda=\pm i\omega\)，两支频率平方为
+\[
+\omega_\pm^2=\frac{1\pm\sqrt{1-27\mu(1-\mu)}}{2}.
+\]
+严格不同的纯虚线性特征根要求 \(27\mu(1-\mu)<1\)，即
+\[
+0<\mu<\mu_{\mathrm R}=\frac{1-\sqrt{23/27}}{2}\approx0.0385209.
+\]
+等号处有重频 \(\omega^2=1/2\)，这是临界边界，不可凭纯虚特征值就宣布具有鲁棒线性稳定性；应另检验特征算子可能出现的非平凡 Jordan 链。
+
+(4) 记 \(\delta=27\mu(1-\mu)\)，\(\sqrt{1-\delta}=1-\delta/2+O(\delta^2)\)，故当 \(\mu\to0^+\)，
+\[
+\omega_-=\sqrt{27\mu/4}\,[1+O(\mu)],\qquad
+\omega_+=1-\frac{27}{8}\mu+O(\mu^2).
+\]
+当 \(\mu>\mu_{\mathrm R}\) 时频率平方为一对非实复根，因此对应 \(\lambda\) 不可能全在虚轴，且实系数与时间反演对称性使增长、衰减根成对出现。独立核验：
+\(\dot C=2(U_x\dot x+U_y\dot y)-2(\dot x\ddot x+\dot y\ddot y)=0\)，
+因为 \(\ddot x=U_x+2\dot y,\ \ddot y=U_y-2\dot x\)。这说明谱失稳可从共转有效势释放能量，并不与 Jacobi 积分守恒矛盾。

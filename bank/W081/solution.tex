@@ -1,18 +1,45 @@
-(1) 每长度有 \(n\) 个谐振子，取 \(n\) 单位为 \(1/\mathrm m\)。线性方程
+(1) 对拉格朗日密度
 \[
-\mu u_{tt}=T u_{xx}+nk(v-u),\qquad
-m v_{tt}=-k(v-u).
+\mathscr L=\tfrac12 Mw_t^2+\tfrac12J\vartheta_t^2
+-\tfrac12 S(w_x-\vartheta)^2-\tfrac12 B\vartheta_x^2
 \]
-(2) 第二式给 \(v=k u/(k-m\omega^2)=\omega_0^2u/(\omega_0^2-\omega^2)\)，\(\omega_0^2=k/m\)。代入第一式得到
+作 Euler--Lagrange 变分。因剪切力为 \(S(w_x-\vartheta)\)，弯矩为 \(B\vartheta_x\)，得到
 \[
-Tq^2=\omega^2\mu_{\mathrm{eff}}(\omega),\quad
-\mu_{\mathrm{eff}}=\mu+{nm\omega_0^2\over\omega_0^2-\omega^2}.
+M w_{tt}=S(w_{xx}-\vartheta_x),\qquad
+J\vartheta_{tt}=B\vartheta_{xx}+S(w_x-\vartheta).
 \]
-在 \(\omega_0<\omega<\omega_1\equiv\omega_0\sqrt{1+nm/\mu}\) 时 \(\mu_{\mathrm{eff}}<0\)，\(q\) 纯虚而无无损传播体波，形成局域共振带隙。频带端点须从极限理解，\(\omega=\omega_0\) 是极点。
-(3) \(\omega\ll\omega_0\) 时 \(\mu_{\mathrm{eff}}\simeq\mu+nm\)，声速 \(c_0=\sqrt{T/(\mu+nm)}\)。在 \(q=0\)，色散另一解为 \(\omega_1\)，为光学式相对运动；\(\omega\gg\omega_1\) 时 \(\mu_{\mathrm{eff}}\to\mu\)，弦传播速度趋 \(\sqrt{T/\mu}\)。负动态惯性只是消去内部自由度后的响应函数，不能被当作负的基础质量。
-(4) 保留原两自由度时能量密度
+两方程保持横向平移与截面转动的不同惯量，不能通过直接令 \(\vartheta=w_x\) 而在有限频率下无条件消去独立旋转自由度。
+
+(2) 用约定的平面波代入，代数矩阵为
 \[
-\mathcal E={\mu\over2}u_t^2+{T\over2}u_x^2+{nm\over2}v_t^2+{nk\over2}(v-u)^2\ge0.
+\begin{pmatrix}Sk^2-MX&iSk\\-iSk&Bk^2+S-JX\end{pmatrix}
+\begin{pmatrix}\widehat w\\ \widehat\vartheta\end{pmatrix}=0.
 \]
-分别乘第一式以 \(u_t\)、第二式以 \(nv_t\)，整理得
-\(\partial_t\mathcal E+\partial_x\mathcal J=0\)，其中 \(\mathcal J=-Tu_xu_t\)。所以不存在无源负能量生成。只在单元间距远小于波长时可用连续 \(n\) 模型，实际损耗使禁带内的 \(q\) 变为一般复数。
+要求行列式为零，得到
+\[
+MJX^2-\big[(SJ+MB)k^2+MS\big]X+SBk^4=0.
+\]
+这是二自由度正定动能矩阵和正定（\(k\ne0\)）势能矩阵构成的广义本征值问题，所以两根均实且严格正；也可由根积 \(SBk^4/(MJ)>0\)、根和为正及厄米化矩阵的实谱验证。当 \(k=0\)，得到一支整体横移零频模式及一支纯旋转光学截止模 \(\omega_0=\sqrt{S/J}\)。
+
+(3) 低波数时较小根满足
+\(X_-=({B}/{M})k^4+O(k^6)\)，故
+\(\omega_-(k)=\sqrt{B/M}\,k^2+O(|k|^4)\)；另一支
+\(\omega_+(0)=\sqrt{S/J}\)。
+当 \(|k|\to\infty\) 时，两支相速度趋向
+\(\sqrt{S/M}\) 和 \(\sqrt{B/J}\)，分别对应剪切以及弯曲—旋转惯性传播的主导尺度（假设 \(S/M\ne B/J\)）。
+若粗略忽略 \(J\) 或施加无剪切 \(\vartheta=w_x\) 的强约束，分支结构会退化；仅低频长波且剪切长度和旋转惯量尺度足够小时，才可近似为经典单分支梁动力学。
+
+(4) 将第一方程乘 \(w_t\)，第二方程乘 \(\vartheta_t\)，并对势能项逐项积分分部，得到严格局部连续性方程
+\[
+\partial_t e+\partial_x P=0,
+\]
+\[
+e=\frac12[Mw_t^2+J\vartheta_t^2+S(w_x-\vartheta)^2+B\vartheta_x^2],
+\quad
+P=-S(w_x-\vartheta)w_t-B\vartheta_x\vartheta_t .
+\]
+全部系数严格正，故 \(e\ge0\)；对无穷远无通量的足够快衰减场，
+\(\frac{d}{dt}\int_{\mathbb R}e\,dx=0\)，并排除正能有限范数解的指数无源增长。若 \(S\to\infty\)，低频无剪切约束 \(\vartheta\approx w_x\) 给出
+\(Mw_{tt}-Jw_{xxtt}+Bw_{xxxx}\approx0\)（Rayleigh 梁）；再要求
+\(Jk^2\ll M\)，才能得到 Euler--Bernoulli 的
+\(Mw_{tt}+Bw_{xxxx}=0\)。所以把 \(S\to\infty\) 单独等同于 Euler--Bernoulli 是错误的。

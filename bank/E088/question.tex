@@ -1,4 +1,4 @@
-(1) 均匀电子等离子体密度n、电子质量m、电荷-e，固定离子背景，施加B0沿z。忽略碰撞、热压和离子响应，线性电磁波沿z传播且时间因子exp(-i omega t)。以E_+=E_x+iE_y、E_-=E_x-iE_y求电子速度响应。
-(2) 推导两种圆偏振介电函数eps_±(omega)、折射率n_±²，并求正频传播截止方程；讨论回旋共振。
-(3) 在远离共振的透明频带求群速度的显式导数表达式，分析B0趋零时如何恢复普通冷等离子体。
-(4) 使用无损色散介质的平均电能公式，验证d(omega eps_±)/d omega为正，解释有效eps可以为负而总能量仍非负的原因。
+(1) 无限均匀线性介质的介电张量为 \(\boldsymbol\varepsilon=\mathrm{diag}(\varepsilon_x,\varepsilon_y,\varepsilon_z)\)，其三个本征值均严格为正。原点放自由点电荷 \(q\)。利用线性坐标伸缩，从 \(\nabla\cdot(\boldsymbol\varepsilon\nabla\Phi)=-q\delta^{(3)}(\mathbf r)\) 导出唯一在无穷远趋零的点电荷势函数和电场。
+(2) 令 \(s^2=\mathbf r^\mathsf T\boldsymbol\varepsilon^{-1}\mathbf r\)，计算 \(\mathbf D=\boldsymbol\varepsilon\mathbf E\)。对任意 \(s=a\) 的闭合椭球面独立验证总通量为 \(q\)，并解释 \(\mathbf D\) 不必与 \(\mathbf E\) 平行的物理含义。
+(3) 在同一种介质中放置共中心、共主轴的理想导体椭球电极 \(s=a\) 与 \(s=b>a\)，分别固定电势 \(V\) 与零。求间隙内准确电势、电场、内电极自由电荷及电容 \(C(a,b)\)；验证 \(b\to\infty\) 极限。
+(4) 直接积分电场能密度 \(\tfrac12\mathbf E\cdot\mathbf D\)，证明 \(U=CV^2/2\)。再取各向同性极限 \(\varepsilon_x=\varepsilon_y=\varepsilon_z=\varepsilon\)，将 \(a,b\) 转换成真实球半径，核验熟知的同心球形电容器公式并注明假设。

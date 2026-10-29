@@ -1,18 +1,59 @@
-(1) 一维开路电压 \(V_{\rm oc}=S\Delta T\)（选使正功率输出的端子符号），电阻 \(R=L/(\sigma A)\)，热导 \(K=\kappa A/L\)。故 \(RK=\kappa/\sigma\)，\(Z=S^2\sigma/\kappa\)，量纲 \(Z\) 为 \(1/\mathrm K\)。
-(2) 电流 \(I=V_{\rm oc}/(R+R_L)\)，负载功率
+(1) 取单段球面规范化测度 \(d\Omega/(4\pi)\)，记 \(x=\beta fb=fb/(k_BT)\)。单段配分函数
 \[
-P={S^2\Delta T^2R_L\over(R+R_L)^2}.
+z_1(x)=\frac12\int_{-1}^{1}e^{xu}du=\frac{\sinh x}{x},\quad
+Z=z_1(x)^N,\quad
+\Psi(f,T)=-Nk_BT\ln\frac{\sinh x}{x}.
 \]
-对 \(R_L>0\) 微分得导数正负随 \(R-R_L\) 改变，故 \(R_L=R\) 唯一最大，
+对广义力求导得
 \[
-I_*={S\Delta T\over2R},\qquad P_*={S^2\Delta T^2\over4R}.
+z=-\left(\frac{\partial\Psi}{\partial f}\right)_T
+=Nb\,\mathcal L(x),\quad \mathcal L(x)=\coth x-\frac1x.
 \]
-(3) 给定热端输入
-\(Q_h=ST_hI+K\Delta T-\frac12I^2R\)，冷端排热 \(Q_c=ST_cI+K\Delta T+\frac12I^2R\)，故 \(Q_h-Q_c=SI\Delta T-I^2R=P\)，满足能量守恒。在电流匹配时
+这里 \(\mathcal L\) 是 Langevin 函数，取 \(x=0\) 的连续极限为零。转动自由度以外的平动及链段振动配分函数不纳入构型模型。
+
+(2) 直接微分有
 \[
-\eta_*={P_*\over Q_h(I_*)}
-={S^2\Delta T^2/(4R)\over S^2T_h\Delta T/(2R)+K\Delta T-S^2\Delta T^2/(8R)}
-={\Delta T\,ZT_h/4\over T_h(ZT_h/2+1)-\Delta T ZT_h/8},
+\left(\frac{\partial z}{\partial f}\right)_T
+=\frac{Nb^2}{k_BT}\left(\frac1{x^2}-\frac1{\sinh^2x}\right)>0
+\quad(x\ne0).
 \]
-其中 \(ZT_h=ZT\) 在 \(T=T_h\)。均分Joule热来自常物性、两端对称的一维稳态温度曲率，并不是任意热机的通则。
-(4) 把分母除以 \(ZT_h\) 写成 \(\eta_*={\Delta T/4\over T_h/2+T_h/(ZT_h)-\Delta T/8}\)，说明正的 \(ZT_h\) 增大使匹配负载效率增加。在小温差 \(\Delta T\ll T_h\) 时 \(\eta_*\simeq(\Delta T/T_h)[ZT_h/(2ZT_h+4)]\)，极大ZT的匹配效率趋 \(\eta_C/2\)（匹配负载并非最大效率负载）。当 \(S\to0\) 或 \(\kappa\to\infty\) 时 \(ZT\to0\)、\(\eta_*\to0\)；\(\Delta T\to0\) 时输出功率二次趋零、效率线性趋零。
+严格正性来自 \(|\sinh x|>|x|\)，原点连续极限为 \(Nb^2/(3k_BT)\)。由
+\(\mathcal L(x)=x/3-x^3/45+2x^5/945+\cdots\)，
+可反演为 \(x=3y+\frac95y^3+O(y^5)\)。故
+\[
+f=\frac{k_BT}{b}\left(3y+\frac95y^3+O(y^5)\right).
+\]
+在定伸长系综，\(dA=f\,dz=Nk_BT\,x\,dy\)，从自然态 \(y=0\) 积分得
+\[
+A(y,T)-A(0,T)
+=Nk_BT\left(\frac32y^2+\frac9{20}y^4+O(y^6)\right).
+\]
+这独立核验了高斯链弹簧常数 \(3k_BT/(Nb^2)\)。
+
+(3) 在大 \(N\) 的热力学极限，定伸长势是 Legendre 变换
+\[
+A(z,T)=\Psi(f,T)+fz=Nk_BT
+\left[x\mathcal L(x)-\ln\frac{\sinh x}{x}\right],
+\quad y=\mathcal L(x).
+\]
+对 \(z\) 的导数为
+\(\partial A/\partial z=f\)，且
+\[
+\frac{\partial^2A}{\partial z^2}
+=\frac{k_BT}{Nb^2\,\mathcal L'(x)}>0.
+\]
+当 \(y\to1^-\) 时，\(\mathcal L(x)=1-1/x+O(e^{-2x})\)，
+故 \(x\sim(1-y)^{-1}\)，\(f\sim k_BT/[b(1-y)]\)，并且
+\[
+\frac{A}{Nk_BT}
+=\ln\frac2{1-y}-1+o(1).
+\]
+自由能的对数发散表达链段取向被压缩到零测度集合的熵损失，而非额外的谐弹性键能。
+
+(4) 因为在固定 \(y\) 时 \(x=\mathcal L^{-1}(y)\) 不依赖温度，
+\[
+\Delta S(z,T)=-\left(\frac{\partial\Delta A}{\partial T}\right)_z
+=-Nk_B\left[x y-\ln\frac{\sinh x}{x}\right],\qquad
+\Delta U=\Delta A+T\Delta S=0,\quad C_z=0.
+\]
+因此温度上升时要保持同一伸长，拉力按 \(T\) 成正比增长，这是熵弹性；不能把力控哈密顿量中的外势 \(-fz\) 错认作链内部的弹性储能。\(f\to0\) 或 \(T\to\infty\) 的固定 \(f\) 极限均给 \(z\sim Nb^2 f/(3k_BT)\to0\)。严格界限 \(|z|<Nb\)；有限 \(N\) 的精确定伸长分布需做 \(N\) 段取向卷积，本题 Legendre 形式描述其主阶大偏差自由能，非声称有限 \(N\) 的逐态精确等式。

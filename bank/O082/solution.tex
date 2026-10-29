@@ -1,12 +1,58 @@
-(1) 入射腰处 \(q_-=iz_R\)。薄透镜ABC D矩阵 \(A=D=1,B=0,C=-1/f\)，故
+(1) 对 \(\mathbf E\propto e^{i(\mathbf k\cdot\mathbf r-\omega t)}\)，
+\(k_0=\omega/c\)，由 \(\mathbf k\times\mathbf E=\omega\mu_0\mathbf H\) 和
+\(\mathbf k\times\mathbf H=-\omega\varepsilon_0\boldsymbol\varepsilon_r\mathbf E\)，得到
 \[
-q_+={q_-\over1-q_-/f}={-fz_R^2+if^2z_R\over f^2+z_R^2}.
+\mathbf k\times(\mathbf k\times\mathbf E)+k_0^2\boldsymbol\varepsilon_r\mathbf E=0.
 \]
-(2) 自由传播 \(q(z)=q_++z\)，腰处实部为零，故
+当 \(\mathbf E\parallel y\) 时，普通光分支 \(n_o^2=\varepsilon_\perp\)；对 \(xz\) 平面偏振的异常光，令
+\(\mathbf k=k(\sin\theta,0,\cos\theta)\)，对上式的 \(2\times2\) 行列式消元得
 \[
-z_w={fz_R^2\over f^2+z_R^2},\qquad
-z_R'={f^2z_R\over f^2+z_R^2}.
+\frac{k_x^2}{\varepsilon_\parallel}+\frac{k_z^2}{\varepsilon_\perp}=k_0^2,\qquad
+\frac1{n_{\mathrm{ex}}^2(\theta)}
+=\frac{\cos^2\theta}{\varepsilon_\perp}
++\frac{\sin^2\theta}{\varepsilon_\parallel}.
 \]
-若 \(z_R\gg f\)，腰靠近焦距 \(f\)、\(z_R'\simeq f^2/z_R\)；若 \(z_R\ll f\)，\(z_w\simeq z_R^2/f\ll f\)，透镜仅微调近场腰。
-(3) \(z_R'=\pi w_0'^2/\lambda\)，故 \(w_0'=w_0 f/\sqrt{f^2+z_R^2}\)。发散半角 \(\theta'=\lambda/(\pi w_0')\)，乘积 \(w_0'\theta'=\lambda/\pi\)，是基模Gaussian近轴极限。\(f\to\infty\) 时 \(z_w\to0,z_R'\to z_R,w_0'\to w_0\)。
-(4) 透镜后的波前曲率和衍射共同确定束腰；几何焦点不携带有限入射Rayleigh长度的信息。要求 \(w_0/f\ll1\)、发散小角、镜口径远大于入射光斑；截断与球差会改变结果。
+特别在 \(\theta=0\) 两支退化为 \(n_o=\sqrt{\varepsilon_\perp}\)，不应误把轴向异常折射率写成 \(\sqrt{\varepsilon_\parallel}\)。
+
+(2) 高斯单位方向记 \(\widehat{\mathbf k}=(\sin\theta,0,\cos\theta)\)。从
+\(\nabla\cdot\mathbf D=0\) 得
+\(\widehat{\mathbf D}\propto(\cos\theta,0,-\sin\theta)\)，因此
+\[
+\mathbf E\propto
+\left(\frac{\cos\theta}{\varepsilon_\perp},0,
+-\frac{\sin\theta}{\varepsilon_\parallel}\right),\quad
+\mathbf k\cdot\mathbf E\propto
+\sin\theta\cos\theta\left(\frac1{\varepsilon_\perp}-\frac1{\varepsilon_\parallel}\right).
+\]
+除特殊角度及各向同性情形，\(\mathbf E\) 并不严格横向。
+由 \(\mathbf H=(\mathbf k\times\mathbf E)/(\omega\mu_0)\parallel y\) 可知
+\(\langle\mathbf S\rangle\propto\Re(\mathbf E\times\mathbf H^*)\) 的
+\(x/z\) 分量比为
+\[
+\tan\theta_S=\frac{S_x}{S_z}
+=\frac{\varepsilon_\perp}{\varepsilon_\parallel}\tan\theta .
+\]
+又由色散椭圆法线
+\(\nabla_{\mathbf k}\omega\parallel(k_x/\varepsilon_\parallel,k_z/\varepsilon_\perp)\)，其方向与上述 Poynting 方向相同，完成独立核验。
+
+(3) 走离角定义为 \(\rho=\theta_S-\theta\)。利用正切差公式得
+\[
+\tan\rho=\frac{(\varepsilon_\perp-\varepsilon_\parallel)\tan\theta}
+{\varepsilon_\parallel+\varepsilon_\perp\tan^2\theta}.
+\]
+令 \(t=\tan\theta>0\)，分母正，\(|\tan\rho|\) 的唯一内部极值满足
+\(t^2=\varepsilon_\parallel/\varepsilon_\perp\)。于是
+\[
+\theta_{\max}=\arctan\sqrt{\frac{\varepsilon_\parallel}{\varepsilon_\perp}},\qquad
+|\rho|_{\max}=\arctan\frac{|\varepsilon_\parallel-\varepsilon_\perp|}
+{2\sqrt{\varepsilon_\parallel\varepsilon_\perp}}.
+\]
+若 \(\varepsilon_\parallel>\varepsilon_\perp\)，则 \(\rho<0\)，能流比波法线更靠近光轴；两者相反则 \(\rho>0\)。
+
+(4) 对 \(z=0\) 处同一个发射点，波法线几何线走向
+\(x_k(L)=L\tan\theta\)，而能量光线走向 \(x_S(L)=L\tan\theta_S\)。因此
+\[
+\Delta x=x_S(L)-x_k(L)=
+L\left(\frac{\varepsilon_\perp}{\varepsilon_\parallel}-1\right)\tan\theta.
+\]
+此式是固定光轴向厚度下的横向差，不等于未经几何转换的 \(L\tan\rho\)；若距离沿波法线量取，需相应修改投影。在各向同性极限两折射率相等、\(\rho=0,\Delta x=0\)。推导依赖平面波、无损正定张量、无磁及频率附近弱色散；有限光束的实际位移还受晶体边界折射和波包走离影响。

@@ -1,30 +1,48 @@
-(1) 定义 \(\omega_c=eB_0/m>0,\omega_p^2=ne^2/(m\epsilon_0)\)。从
-\(-i\omega m\boldsymbol v=-e(\boldsymbol E+\boldsymbol v\times B_0\boldsymbol e_z)\)
-得到 \(\boldsymbol v\times B_0\boldsymbol e_z=(B_0v_y,-B_0v_x,0)\)，故
+(1) 设 \(\mathbf u=\boldsymbol\varepsilon^{-1/2}\mathbf r\)，\(s=|\mathbf u|\)。则
+\(\nabla_{\mathbf r}\cdot(\boldsymbol\varepsilon\nabla_{\mathbf r}\Phi)=\Delta_{\mathbf u}\Phi\)，
+且 \(\delta^{(3)}(\mathbf r)=\delta^{(3)}(\mathbf u)/\sqrt{\det\boldsymbol\varepsilon}\)。
+使用 \(\Delta_{\mathbf u}(1/|\mathbf u|)=-4\pi\delta^{(3)}(\mathbf u)\)，故
 \[
-v_+=-{ie\over m(\omega+\omega_c)}E_+,\qquad
-v_-=-{ie\over m(\omega-\omega_c)}E_-.
+\Phi(\mathbf r)=\frac{q}{4\pi\sqrt{\det\boldsymbol\varepsilon}}\frac1s,\qquad
+\mathbf E=-\nabla\Phi=
+\frac{q}{4\pi\sqrt{\det\boldsymbol\varepsilon}}\,
+\frac{\boldsymbol\varepsilon^{-1}\mathbf r}{s^3}.
 \]
-(2) \(J_\pm=-ne v_\pm\)，用 \(J=-i\omega\epsilon_0(\epsilon_r-1)E\) 得
+正定介电张量确保伸缩可逆、椭球等势面闭合。上述势满足正确点源和无穷远边界；差函数由正定椭圆算子的唯一性原理为零。
+
+(2) 电位移为
 \[
-\epsilon_\pm=1-{\omega_p^2\over\omega(\omega\pm\omega_c)},\qquad
-c^2k_\pm^2=\omega^2\epsilon_\pm.
+\mathbf D=\boldsymbol\varepsilon\mathbf E=
+\frac{q}{4\pi\sqrt{\det\boldsymbol\varepsilon}}\frac{\mathbf r}{s^3}.
 \]
-截止 \(k=0\) 的正频根分别为
+采用 \(\mathbf r=\boldsymbol\varepsilon^{1/2}\mathbf u\)，把椭球面体积积分转化为球坐标。对任意 \(a>0\)，包围点电荷的积分通量
+\(\oint_{s=a}\mathbf D\cdot d\mathbf A=q\)，可由第(1)问变换后的
+\(\int\Delta_{\mathbf u}(1/s)d^3u=-4\pi\) 独立得到。注意 \(\mathbf D\) 方向为径向 \(\mathbf r\)，但电场方向沿
+\(\boldsymbol\varepsilon^{-1}\mathbf r\)；各向异性中两者通常不平行，然而体积分的自由电荷仍只由 Gauss 定律决定。
+
+(3) 间隙没有自由体电荷，因此 \(\Phi=A+B/s\)。边界 \(\Phi(a)=V,\Phi(b)=0\) 给
 \[
-\omega_{\mathrm{cut},+}={\sqrt{\omega_c^2+4\omega_p^2}-\omega_c\over2},\qquad
-\omega_{\mathrm{cut},-}={\sqrt{\omega_c^2+4\omega_p^2}+\omega_c\over2}.
+B=\frac{V}{a^{-1}-b^{-1}},\qquad
+\Phi(s)=V\,\frac{s^{-1}-b^{-1}}{a^{-1}-b^{-1}},\qquad
+\mathbf E=\frac{B}{s^3}\boldsymbol\varepsilon^{-1}\mathbf r .
 \]
-负号支在 \(\omega=\omega_c\) 处有无碰撞回旋极点，应分开考察其两侧传播区；不能跨过极点连续使用无损响应。
-(3) 由 \(c^2k^2=\omega^2-\omega\omega_p^2/(\omega\pm\omega_c)\) 对 \(\omega\) 求导得
+利用第(2)问关于 \(1/s\) 势的通量归一化，内电极自由电荷
+\(Q=4\pi\sqrt{\det\boldsymbol\varepsilon} B\)。所以
 \[
-v_{g,\pm}={d\omega\over dk}=
-{2c^2k\over 2\omega\mp\omega_p^2\omega_c/(\omega\pm\omega_c)^2}.
+C(a,b)=\frac{Q}{V}
+=\frac{4\pi\sqrt{\det\boldsymbol\varepsilon}}{a^{-1}-b^{-1}},
+\quad
+C(a,\infty)=4\pi\sqrt{\det\boldsymbol\varepsilon}\,a.
 \]
-该式仅对实传播 \(k\) 和非奇点有效。\(B_0\to0\) 两支合并 \(\epsilon=1-\omega_p^2/\omega^2,\ \omega^2=\omega_p^2+c^2k^2\)。
-(4) 色散介质平均储能的电响应部分为 \(\epsilon_0[d(\omega\epsilon_\pm)/d\omega]|E_\pm|^2/4\)，且
+导体面正好沿 \(s=\text{常数}\)，故不必假设球对称；若电极与介质的介电主轴不对齐，此简单解法通常失效。
+
+(4) 变换到 \(\mathbf u\) 空间，体积元 \(d^3r=\sqrt{\det\boldsymbol\varepsilon}\,d^3u\)。对上述 \(\mathbf E\) 有
+\(\mathbf E\cdot\mathbf D=B^2/s^4\)，于是
 \[
-{d(\omega\epsilon_\pm)\over d\omega}
-=1+{\omega_p^2\over(\omega\pm\omega_c)^2}>0 .
+U=\frac12\sqrt{\det\boldsymbol\varepsilon}\,4\pi B^2
+\int_a^b\frac{ds}{s^2}
+=2\pi\sqrt{\det\boldsymbol\varepsilon}\,B^2(a^{-1}-b^{-1})
+=\frac12 QV=\frac12 CV^2.
 \]
-再加正的磁场能，故总波能正定。局部 \(\epsilon_\pm<0\) 表示给定 \(\omega\) 无体传播波，不是物理负能量；模型失效于碰撞、离子共振及强非线性情况。
+若 \(\boldsymbol\varepsilon=\varepsilon I\)，真实半径 \(r_a=\sqrt\varepsilon\,a,\ r_b=\sqrt\varepsilon\,b\)，故
+\(C=4\pi\varepsilon/(r_a^{-1}-r_b^{-1})\)，与标准同心球电容器吻合。全程假设线性、无损、静态、均匀且正定的介电响应，不可直接用于频散复张量或空间变介质。
