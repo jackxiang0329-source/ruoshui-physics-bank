@@ -1,0 +1,31 @@
+(1) 去除各核自身诱导速度，记 \(\boldsymbol d=\boldsymbol r_1-\boldsymbol r_2\)，有
+\[
+\dot{\boldsymbol r}_1=\frac{\Gamma_2}{2\pi d^2}J\boldsymbol d,\qquad
+\dot{\boldsymbol r}_2=-\frac{\Gamma_1}{2\pi d^2}J\boldsymbol d.
+\]
+(2) 相减给 \(\dot{\boldsymbol d}=\Omega J\boldsymbol d\)，\(\Omega=(\Gamma_1+\Gamma_2)/(2\pi d^2)\)。因此 \(\frac d{dt}d^2=2\boldsymbol d\cdot\Omega J\boldsymbol d=0\)，
+\[
+\boldsymbol d(t)=\bigl(\cos\Omega t\,I+\sin\Omega t\,J\bigr)\boldsymbol d(0).
+\]
+令 \(S=\Gamma_1+\Gamma_2\neq0\) 及 \(\boldsymbol R=(\Gamma_1\boldsymbol r_1+\Gamma_2\boldsymbol r_2)/S\)，则 \(\dot{\boldsymbol R}=0\)，
+\[
+\boldsymbol r_1=\boldsymbol R+\frac{\Gamma_2}{S}\boldsymbol d,\qquad
+\boldsymbol r_2=\boldsymbol R-\frac{\Gamma_1}{S}\boldsymbol d.
+\]
+\(S\) 的符号决定旋向；不等反号涡可沿不同侧半径转动。
+(3) 若 \(\Gamma_2=-\Gamma_1=-\Gamma\)，相对距离及向量固定，两核同速
+\[
+\boldsymbol V=-\frac{\Gamma}{2\pi d^2}J\boldsymbol d,\qquad
+\boldsymbol r_j(t)=\boldsymbol r_j(0)+\boldsymbol Vt,\quad |\boldsymbol V|=\frac{|\Gamma|}{2\pi d}.
+\]
+当 \(d\to0\) 而 \(\Gamma\) 不变时速度发散，意味着涡核尺度和黏性不可忽略，点涡仅在涡核半径远小于间距时适用。
+(4) 定义去掉常数密度因子的线冲量 \(\boldsymbol I=\Gamma_1\boldsymbol r_1+\Gamma_2\boldsymbol r_2\) 与角冲量 \(A=\Gamma_1|\boldsymbol r_1|^2+\Gamma_2|\boldsymbol r_2|^2\)，直接代导数：
+\[
+\dot{\boldsymbol I}=0,\quad
+\dot A=\frac{2\Gamma_1\Gamma_2}{2\pi d^2}(\boldsymbol r_1-\boldsymbol r_2)\cdot J\boldsymbol d=0.
+\]
+点涡哈密顿量（省去自身无穷能和参考常数）
+\[
+H=-\frac{\rho\Gamma_1\Gamma_2}{2\pi}\ln(d/\ell_{\rm ref})
+\]
+因 \(d\) 恒定而守恒。对于 \(S\neq0\)，展开得 \(A=S|\boldsymbol R|^2+(\Gamma_1\Gamma_2/S)d^2\)，独立核验守恒；\(S=0\) 时涡心分母为零但 \(\boldsymbol I,A,H\) 仍有意义。

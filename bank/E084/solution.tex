@@ -1,0 +1,21 @@
+(1) 片电流 \(\boldsymbol K=-\Sigma\nabla\phi\)，绝缘边界 \(\partial_y\phi=0\)（电极除外）。二维对数Green函数及同号Neumann镜源给
+\[
+\phi(x,y)=\frac{I}{\pi\Sigma}\ln\frac{\sqrt{(x-b)^2+y^2}}{\sqrt{(x-a)^2+y^2}}+C.
+\]
+源附近 \(\phi\sim-(I/\pi\Sigma)\ln r_a\)，故 \(K_r\sim I/(\pi r_a)\)。在半圆积分 \(\int_0^\pi K_r r_a d\theta=I\)；汇点反号。远场总注入为零，场衰减如 \(r^{-2}\)。
+(2) 沿 \(y=0\)，
+\[
+V_{cd}=\frac I{\pi\Sigma}\ln\left|\frac{(c-b)(d-a)}{(c-a)(d-b)}\right|.
+\]
+在给定等比位置，\(V_{cd}/I=\ln9/(\pi\Sigma)>0\)，\(\Sigma\) 为片电导（S），故 \(R\) 单位欧姆。
+(3) 两点差满足
+\[
+f(x)-f(y)=\frac{(\alpha\delta-\beta\gamma)(x-y)}{(\gamma x+\delta)(\gamma y+\delta)}.
+\]
+代入交比，每点对应的分母因子恰好上下抵消，电阻不变。保角变换是二维导电问题的尺度不变性来源，不能推广至各向异性且未同步变换导电率的情形。
+(4) 将源、汇各切去半径 \(\varepsilon\) 的半圆，源近场 \(\phi_a\simeq(I/\pi\Sigma)\ln(L/\varepsilon)\)，汇近场 \(\phi_b\simeq-(I/\pi\Sigma)\ln(L/\varepsilon)\)。Green恒等式与 \(\nabla\cdot\boldsymbol K=0\) 给
+\[
+P_J=\Sigma\int_\Omega|\nabla\phi|^2 dA=I(\phi_a-\phi_b)
+=\frac{2I^2}{\pi\Sigma}\ln\frac L\varepsilon+O(I^2/\Sigma).
+\]
+亦可对两电极的环形近场分别积分 \(P_{\rm one}=\Sigma\int_\varepsilon^{O(L)}[I/(\pi\Sigma r)]^2\pi r dr=I^2\ln(L/\varepsilon)/(\pi\Sigma)\)，合并恰得同一主项。四探针不穿流且远离奇点，因而电压有限；真实有限接触面积只改变非普适常数项。
