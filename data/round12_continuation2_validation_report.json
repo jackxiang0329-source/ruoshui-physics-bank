@@ -1,0 +1,120 @@
+{
+  "status": "draft-additional-only",
+  "new_problem_count": 4,
+  "passed_count": 16,
+  "tests": [
+    {
+      "id": "T062",
+      "part": 1,
+      "method": "symbolic",
+      "name": "erf similarity temperature profile solves transformed transient heat diffusion equation and satisfies wall interface conditions",
+      "passed": true
+    },
+    {
+      "id": "T062",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "latent Stefan boundary condition reduces to unique positive similarity parameter relation",
+      "passed": true
+    },
+    {
+      "id": "T062",
+      "part": 3,
+      "method": "conservation",
+      "name": "integrated latent plus sensible heat equals time-integrated wall cooling flux on exact Stefan root",
+      "passed": true
+    },
+    {
+      "id": "T062",
+      "part": 4,
+      "method": "limit",
+      "name": "small-Stefan asymptotic front square agrees with exact transcendental equation near zero",
+      "passed": true
+    },
+    {
+      "id": "W062",
+      "part": 1,
+      "method": "symbolic",
+      "name": "localized bright NLS soliton solves stationary focusing cubic envelope ODE with vanishing tail",
+      "passed": true
+    },
+    {
+      "id": "W062",
+      "part": 2,
+      "method": "numerical",
+      "name": "35-digit independent spatial quadrature reproduces both NLS soliton norm and negative Hamiltonian",
+      "passed": true
+    },
+    {
+      "id": "W062",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "linearized focusing NLS sideband dispersion has negative frequency square precisely below critical wave number",
+      "passed": true
+    },
+    {
+      "id": "W062",
+      "part": 4,
+      "method": "limit",
+      "name": "modulation growth squared is maximized at square-root-two times amplitude with growth rate A squared",
+      "passed": true
+    },
+    {
+      "id": "O062",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Kerr resonator input power reduces to cubic with exact coefficients and nonlinear detuning shift",
+      "passed": true
+    },
+    {
+      "id": "O062",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "two folds solve power derivative and merge at detuning square-root three critical cusp",
+      "passed": true
+    },
+    {
+      "id": "O062",
+      "part": 3,
+      "method": "symbolic",
+      "name": "Bogoliubov cavity Jacobian determinant matches nonlinear photon number input-output slope",
+      "passed": true
+    },
+    {
+      "id": "O062",
+      "part": 4,
+      "method": "conservation",
+      "name": "cavity photon input output loss equals accumulation and strong field power has cubic dominance",
+      "passed": true
+    },
+    {
+      "id": "Q062",
+      "part": 1,
+      "method": "symbolic",
+      "name": "single photon tangent vector Fubini Study metric gives unit quantum phase Fisher information",
+      "passed": true
+    },
+    {
+      "id": "Q062",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "balanced biased interferometer outcome probabilities have unit classical Fisher information",
+      "passed": true
+    },
+    {
+      "id": "Q062",
+      "part": 3,
+      "method": "symbolic",
+      "name": "erasure flagged density operator satisfies SLD equation and quantum Fisher information equals survival fraction",
+      "passed": true
+    },
+    {
+      "id": "Q062",
+      "part": 4,
+      "method": "limit",
+      "name": "NOON Fisher information per injected photon has unique continuous optimum at minus reciprocal log survival",
+      "passed": true
+    }
+  ],
+  "independent_expert_review": "pending"
+}
