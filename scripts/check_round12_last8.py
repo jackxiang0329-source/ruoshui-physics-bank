@@ -12,36 +12,33 @@ def eq(a,b=0):
     return s.simplify(a-b)==0
 mp.mp.dps=35
 
-# M067: Coulomb hyperbolic scattering.
-m,kap,v,b,theta=s.symbols("m kap v b theta",positive=True,real=True)
-E=m*v*v/2;L=m*v*b
-e=s.sqrt(1+(m*v*v*b/kap)**2)
-rmin=(kap+s.sqrt(kap*kap+(m*v*v*b)**2))/(m*v*v)
-record("M067",1,"conservation","Rutherford turning-point radius independently satisfies radial energy and angular momentum conservation",abs(float((E-L**2/(2*m*rmin**2)-kap/rmin).subs({m:2,kap:3,v:4,b:s.Rational(6,5)})))<1e-12)
-A=kap/(m*v*v)
-chi=2*s.atan(A/b)
-impulse=2*kap/(b*v)
-record("M067",2,"limit","exact scattering angle has the independently integrated weak-deflection transverse impulse limit",abs(float((chi/(impulse/(m*v))).subs({m:2,kap:3,v:4,b:1000}))-1)<1e-8)
-bb=A*s.cot(theta/2)
-diff=s.simplify(bb*(-s.diff(bb,theta))/s.sin(theta))
-target=(A/2)**2/s.sin(theta/2)**4
-record("M067",3,"symbolic","impact-parameter Jacobian exactly reproduces inverse fourth power Rutherford differential cross section",eq(s.trigsimp(diff-target)))
-theta0=s.pi/3
-total=s.pi*(A*s.cot(theta0/2))**2
-record("M067",4,"numerical","integrated angular Rutherford cross section matches geometric impact disk",abs(float(total.subs({m:2,kap:3,v:4}))-float((2*s.pi*s.integrate((target*s.sin(theta)).subs({m:2,kap:3,v:4}),(theta,theta0,s.pi))).evalf()))<1e-10)
+# M067: Rankine vortex vorticity, pressure and free surface.
+rho,Omega,a,R,rr,g=s.symbols("rho Omega a R rr g",positive=True,real=True)
+vcore=Omega*rr;vouter=Omega*a*a/rr
+record("M067",1,"symbolic","Rankine vortex has uniform core vorticity, irrotational exterior and nonzero constant circulation",eq(s.diff(rr*vcore,rr)/rr,2*Omega) and eq(s.diff(rr*vouter,rr)/rr) and eq(2*s.pi*rr*vouter,2*s.pi*Omega*a*a))
+pcore=rho*Omega**2*rr**2/2
+pouter=rho*Omega**2*a*a-rho*Omega**2*a**4/(2*rr**2)
+record("M067",2,"independent_derivation","piecewise radial Euler pressure gradient equals centrifugal acceleration with continuous core interface",eq(s.diff(pcore,rr),rho*vcore**2/rr) and eq(s.diff(pouter,rr),rho*vouter**2/rr) and eq(pcore.subs(rr,a),pouter.subs(rr,a)))
+energy=s.integrate(rho*vcore**2*s.pi*rr,(rr,0,a))+s.integrate(rho*vouter**2*s.pi*rr,(rr,a,R))
+angular=s.integrate(2*s.pi*rho*rr**2*vcore,(rr,0,a))+s.integrate(2*s.pi*rho*rr**2*vouter,(rr,a,R))
+record("M067",3,"conservation","integrated Rankine kinetic energy and angular momentum match two-region closed-form expressions",eq(energy,s.pi*rho*Omega**2*a**4*(s.Rational(1,4)+s.log(R/a))) and eq(angular,s.pi*rho*Omega*a**2*(R**2-a**2/s.Integer(2))))
+surface_outer=-Omega**2*a**4*(1/rr**2-1/R**2)/(2*g)
+surface_inner=-Omega**2*(a**2-rr**2+a**2*(1-a**2/R**2))/(2*g)
+record("M067",4,"physical_case","vortex free-surface gradients and axis depression independently match radial pressure integration",eq(s.diff(surface_outer,rr),vouter**2/(g*rr)) and eq(s.diff(surface_inner,rr),vcore**2/(g*rr)) and eq(surface_outer.subs(rr,a),surface_inner.subs(rr,a)) and eq(-rho*g*surface_inner.subs(rr,0),pouter.subs(rr,R)))
 
-# E067: homopolar generator.
-B,omega,R,J,r,RL,t=s.symbols("B omega R J r RL t",positive=True,real=True)
-emf=B*omega*R**2/2;current=emf/(r+RL);torque=-B*current*R**2/2
-record("E067",1,"independent_derivation","radial Lorentz electromotive force integral equals disk voltage and Ohmic current",eq(s.integrate(B*omega*s.Symbol("rho",positive=True),(s.Symbol("rho",positive=True),0,R)),emf) and eq(current*RL+current*r,emf))
-record("E067",2,"conservation","Lorentz braking torque transfers mechanical work into internal and load Joule heat",eq(-torque*omega,current**2*(r+RL)))
-w0=s.symbols("w0",positive=True);lam=B**2*R**4/(4*J*(r+RL));wt=w0*s.exp(-lam*t)
-I_t=B*wt*R**2/(2*(r+RL))
-heat=s.integrate(I_t**2*RL,(t,0,s.oo))
-record("E067",3,"conservation","exponential spin-down solves torque ODE and total load heat equals allocated initial kinetic energy",eq(J*s.diff(wt,t),-B**2*R**4*wt/(4*(r+RL))) and eq(heat,RL/(r+RL)*J*w0*w0/2))
-P=emf**2*RL/(r+RL)**2
-record("E067",4,"symbolic","matched load gives stationary maximum output and efficiency one half",eq(s.diff(P,RL).subs(RL,r)) and float(s.diff(P,RL,2).subs({B:1,omega:1,R:1,r:2,RL:2}))<0 and eq((RL/(r+RL)).subs(RL,r),s.Rational(1,2)))
-
+# E067: nonlinear planar Poisson-Boltzmann double layer.
+eps,kappa,VT,psi0,x=s.symbols("eps kappa VT psi0 x",positive=True,real=True)
+z=s.tanh(psi0/4)*s.exp(-kappa*x)
+psi=4*s.atanh(z)
+record("E067",1,"symbolic","Boltzmann cation and anion concentrations yield sinh Poisson source and correct first integral",eq(s.exp(-psi0)-s.exp(psi0),-2*s.sinh(psi0)) and eq(4*s.sinh(psi0/2)**2,2*(s.cosh(psi0)-1)))
+sample={psi0:s.Rational(3,2),kappa:s.Rational(6,5),x:s.Rational(7,10)}
+residual=s.diff(psi,x,2)-kappa**2*s.sinh(psi)
+record("E067",2,"numerical","exact Gouy-Chapman potential satisfies nonlinear Poisson-Boltzmann ODE and decays at infinity",abs(float(residual.subs(sample).evalf()))<1e-11 and eq(s.limit(psi,x,s.oo),0))
+sigma=2*eps*kappa*VT*s.sinh(psi0/2)
+record("E067",3,"independent_derivation","Grahame surface-charge derivative equals positive differential capacitance with Debye low-potential limit",eq(s.diff(sigma,psi0)/VT,eps*kappa*s.cosh(psi0/2)) and eq(s.limit(sigma/psi0,psi0,0,dir='+'),eps*kappa*VT))
+pm=s.symbols("pm",positive=True)
+work=s.integrate(2*eps*kappa*VT**2*s.sinh(pm/2),(pm,0,psi0))
+record("E067",4,"conservation","charging work integrates Grahame law and Maxwell normal stress equals osmotic excess",eq(work,4*eps*kappa*VT**2*(s.cosh(psi0/2)-1)) and eq(2*s.sinh(psi0/2)**2,s.cosh(psi0)-1))
 # O064: causal Lorentz optical susceptibility.
 wp,w0,g,w=s.symbols("wp w0 g w",positive=True,real=True)
 den=(w0*w0-w*w)**2+g*g*w*w

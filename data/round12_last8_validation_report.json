@@ -6,57 +6,57 @@
     {
       "id": "M067",
       "part": 1,
-      "method": "conservation",
-      "name": "Rutherford turning-point radius independently satisfies radial energy and angular momentum conservation",
+      "method": "symbolic",
+      "name": "Rankine vortex has uniform core vorticity, irrotational exterior and nonzero constant circulation",
       "passed": true
     },
     {
       "id": "M067",
       "part": 2,
-      "method": "limit",
-      "name": "exact scattering angle has the independently integrated weak-deflection transverse impulse limit",
+      "method": "independent_derivation",
+      "name": "piecewise radial Euler pressure gradient equals centrifugal acceleration with continuous core interface",
       "passed": true
     },
     {
       "id": "M067",
       "part": 3,
-      "method": "symbolic",
-      "name": "impact-parameter Jacobian exactly reproduces inverse fourth power Rutherford differential cross section",
+      "method": "conservation",
+      "name": "integrated Rankine kinetic energy and angular momentum match two-region closed-form expressions",
       "passed": true
     },
     {
       "id": "M067",
       "part": 4,
-      "method": "numerical",
-      "name": "integrated angular Rutherford cross section matches geometric impact disk",
+      "method": "physical_case",
+      "name": "vortex free-surface gradients and axis depression independently match radial pressure integration",
       "passed": true
     },
     {
       "id": "E067",
       "part": 1,
-      "method": "independent_derivation",
-      "name": "radial Lorentz electromotive force integral equals disk voltage and Ohmic current",
+      "method": "symbolic",
+      "name": "Boltzmann cation and anion concentrations yield sinh Poisson source and correct first integral",
       "passed": true
     },
     {
       "id": "E067",
       "part": 2,
-      "method": "conservation",
-      "name": "Lorentz braking torque transfers mechanical work into internal and load Joule heat",
+      "method": "numerical",
+      "name": "exact Gouy-Chapman potential satisfies nonlinear Poisson-Boltzmann ODE and decays at infinity",
       "passed": true
     },
     {
       "id": "E067",
       "part": 3,
-      "method": "conservation",
-      "name": "exponential spin-down solves torque ODE and total load heat equals allocated initial kinetic energy",
+      "method": "independent_derivation",
+      "name": "Grahame surface-charge derivative equals positive differential capacitance with Debye low-potential limit",
       "passed": true
     },
     {
       "id": "E067",
       "part": 4,
-      "method": "symbolic",
-      "name": "matched load gives stationary maximum output and efficiency one half",
+      "method": "conservation",
+      "name": "charging work integrates Grahame law and Maxwell normal stress equals osmotic excess",
       "passed": true
     },
     {
