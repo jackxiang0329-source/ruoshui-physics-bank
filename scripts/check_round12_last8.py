@@ -96,7 +96,7 @@ hv=mp.atan(2*av/qv)/qv
 record("W063",2,"numerical","SH displacement and shear stress match across both interfaces for exact dispersion root",abs(float(mp.tan(qv*hv)-2*av/qv))<1e-12 and abs(float(qv*mp.sin(qv*hv)-2*av*mp.cos(qv*hv)))<1e-12)
 wcut=lambda n:n*math.pi/(1*math.sqrt(1/2**2-1/3**2))
 record("W063",3,"limit","Love higher-mode cutoff frequencies scale with positive integer mode order while fundamental cutoff is zero",wcut(2)/wcut(1)==2 and wcut(1)>0 and wcut(0)==0)
-record("W063",4,"conservation","substrate mode energy integral has inverse decay length and diverges at loss of confinement",eq(s.integrate(s.exp(-2*al*s.Symbol("zz",positive=True)),(s.Symbol("zz",positive=True),0,s.oo)),1/(2*al)) and eq(s.limit(1/(2*al),al,0,dir='+'),s.oo))
+record("W063",4,"conservation","substrate mode energy integral has inverse decay length and diverges at loss of confinement",eq(s.integrate(s.exp(-2*al*s.Symbol("zz",positive=True)),(s.Symbol("zz",positive=True),0,s.oo)),1/(2*al)) and s.limit(1/(2*al),al,0,dir='+')==s.oo)
 
 # O065: exact Bessel angular spectrum and finite aperture.
 rr,kp=s.symbols("rr kp",positive=True)
