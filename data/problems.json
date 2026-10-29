@@ -1509,6 +1509,29 @@
     "solution": "(1) 定常质量守恒 \\(\\dot M=4\\pi r^2\\rho u\\) 与向心速率的Euler方程 \\(u\\,du/dr=-c_s^2\\rho'/\\rho-GM/r^2\\) 共同成立。对连续方程对数微分得到 \\(\\rho'/\\rho=-u'/u-2/r\\)，代入可消去密度，得到\n\\[\n\\boxed{(u-c_s^2/u)\\frac{du}{dr}=\\frac{2c_s^2}{r}-\\frac{GM}{r^2}}.\n\\]\n左侧在 \\(u=c_s\\) 为零，若右侧非零就会产生不光滑的无穷导数；不能随意选择跨音速点的位置。\n\n(2) 正则声速点同时满足 \\(u_s=c_s\\) 和 \\(2c_s^2/r_s-GM/r_s^2=0\\)，故 \\(r_s=GM/(2c_s^2)\\)。等温Bernoulli积分为\n\\(u^2/2+c_s^2\\ln(\\rho/\\rho_\\infty)-GM/r=0\\)，在音速点代入 \\(GM/r_s=2c_s^2\\) 得\n\\(\\ln(\\rho_s/\\rho_\\infty)=3/2\\)，即 \\(\\rho_s=e^{3/2}\\rho_\\infty\\)。所以\n\\[\n\\boxed{\\dot M=4\\pi r_s^2\\rho_sc_s=\\pi e^{3/2}(GM)^2\\rho_\\infty/c_s^3}.\n\\]\n临界解在无穷远选亚音速、中心附近选超音速，任意非临界流率并不能在全域光滑满足这些边界。\n\n(3) 将 \\(\\rho/\\rho_\\infty=(\\dot M/(4\\pi\\rho_\\infty r^2u))\\) 代入Bernoulli并用音速量消去流率，定义 \\(w=u/c_s,x=r/r_s\\)，可整理为\n\\[\n\\boxed{\\frac{w^2}{2}-\\ln w=2\\ln x+\\frac2x-\\frac32}.\n\\]\n直接在 \\(x=w=1\\) 检查两侧都为 \\(1/2\\)，且一阶导数均在临界点抵消；该超越方程存在多分支，需要通过在无穷远的边界与连续跨音速条件选出物理分支，不能仅由平方根选符号。\n\n(4) 无穷远 \\(u\\ll c_s,\\rho\\to\\rho_\\infty\\)，故 \\(u\\simeq\\dot M/(4\\pi\\rho_\\infty r^2)\\)。强引力内区在惯性项主导时 \\(u\\simeq\\sqrt{2GM/r}\\)，所以 \\(\\rho=\\dot M/(4\\pi r^2u)\\propto r^{-3/2}\\)。等温声速假设要求足够有效的气体冷却或加热维持温度；若 \\(u\\) 逼近光速、流体平均自由程过大或中心半径接近黑洞尺度，理想牛顿连续流近似不再有效。\n"
   },
   {
+    "id": "M072",
+    "topic": "力学",
+    "title": "Rayleigh空泡塌缩的非线性半径动力学、Beta塌缩时间与流体动能",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 115,
+    "tags": [
+      "无黏不可压球对称径向势流",
+      "Rayleigh空泡运动方程",
+      "塌缩积分Beta函数和奇点",
+      "流体动能与压力做功平衡"
+    ],
+    "answer": "\\dot R^2=\\frac{2\\Delta p}{3\\rho}[(R_0/R)^3-1],\\quad t_c=\\frac{R_0}{3}\\sqrt{\\frac{3\\rho}{2\\Delta p}}B(5/6,1/2)",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v3.9-round13-draft",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C",
+    "question": "无限无黏、不可压、密度 \\(\\rho>0\\) 的液体中有球形真空空泡，初半径 \\(R_0>0\\)，初速度 \\(\\dot R(0)=0\\)，远场静压比泡内高 \\(\\Delta p>0\\)，无表面张力、重力、黏性及声辐射。随时间液体保持球对称径向无旋流动，泡壁半径为 \\(R(t)\\)。\n(1) 由液体连续性和无穷远静止边界求速度场，并在非定常Bernoulli方程中推导Rayleigh半径方程。\n(2) 以首次积分给出收缩速度和泡壁加速度，检查初态与压力力方向。\n(3) 求从静止初态塌缩至零半径的形式时间，用Beta函数给精确积分，并求小半径速度渐近。\n(4) 独立积分全外域流体动能，证明其恰等于压强差释放的体积功，说明理想模型在 \\(R\\to0\\) 的物理失效。\n",
+    "solution": "(1) 不可压球对称连续性给 \\(\\partial_r(r^2v_r)=0\\)，泡面随液体运动要求 \\(v_r(R)=\\dot R\\)，所以 \\(v_r(r,t)=R^2\\dot R/r^2\\)。其势函数可取 \\(\\phi=-R^2\\dot R/r\\)，满足远处速度消失。在泡壁应用无黏非定常Bernoulli \\(p/\\rho+\\phi_t+v^2/2=\\mathrm{const}\\)，比较无穷远静压与泡内真空压强得到\n\\[\n\\boxed{R\\ddot R+\\tfrac32\\dot R^2=-\\Delta p/\\rho}.\n\\]\n符号表示初始 \\(\\dot R=0\\) 时加速度 \\(\\ddot R=-\\Delta p/(\\rho R_0)<0\\)，压强推动空泡收缩，不能错写成膨胀。\n\n(2) 令 \\(v(R)=\\dot R\\)，把方程乘以 \\(2R^2\\dot R\\) 可化为\n\\(\\frac{d}{dt}(R^3\\dot R^2)=-2(\\Delta p/\\rho)R^2\\dot R\\)，积分且用静止初态得\n\\[\n\\boxed{\\dot R^2=\\frac{2\\Delta p}{3\\rho}\\left[(R_0/R)^3-1\\right]}.\n\\]\n选塌缩分支 \\(\\dot R<0\\)。对它对时间求导可还原原运动方程，且 \\(R=R_0\\) 时 \\(\\dot R=0\\)，说明能量和符号一致。\n\n(3) 时间积分 \\(t_c=\\int_0^{R_0}dR/\\sqrt{(2\\Delta p/(3\\rho))[(R_0/R)^3-1]}\\)。令 \\(x=R/R_0\\)，整理为\n\\[\nt_c=R_0\\sqrt{\\frac{3\\rho}{2\\Delta p}}\\int_0^1\\frac{x^{3/2}}{\\sqrt{1-x^3}}dx\n=\\boxed{\\frac{R_0}{3}\\sqrt{\\frac{3\\rho}{2\\Delta p}}B(\\tfrac56,\\tfrac12)}.\n\\]\n该无量纲系数约0.91468。当 \\(R\\ll R_0\\)，\\(|\\dot R|\\sim\\sqrt{2\\Delta p/(3\\rho)}(R_0/R)^{3/2}\\) 发散，预示不可压模型出现有限时刻速度奇点。\n\n(4) 外域瞬时动能为\n\\[\nT_f=\\frac\\rho2\\int_R^\\infty v_r^2 4\\pi r^2dr\n=2\\pi\\rho R^3\\dot R^2 .\n\\]\n由第二问化简\n\\(T_f=\\frac{4\\pi\\Delta p}{3}(R_0^3-R^3)\\)，正好等于环境压强超过泡内压强所做的体积功 \\(\\Delta p[V(R_0)-V(R)]\\)。真实空泡末期流速接近音速、液体可压缩且产生激波、黏性和表面张力重要，所以不能把 \\(R=0\\) 时的无限速度当作真实物理结论。\n"
+  },
+  {
     "id": "E007",
     "topic": "电磁学",
     "title": "滑动导体棒的自感反馈与能量耗散",
@@ -3017,6 +3040,29 @@
     "solution": "(1) 驻点由 \\(f_P=a(T-T_c)P+bP^3-E=0\\) 给出。取 \\(E=0\\)，根为 \\(P=0\\) 及在 \\(T<T_c\\) 的 \\(P=\\pm\\sqrt{-a(T-T_c)/b}\\)。曲率 \\(f_{PP}=a(T-T_c)+3bP^2\\) 必须为正才能局部稳定，因此 \\(T>T_c\\) 只有 \\(P=0\\) 稳定；在 \\(T<T_c\\)，零极化变为极大值，两非零根为简并最小值。\\(\\boxed{|P_0|\\propto(T_c-T)^{1/2}}\\)，这是平均场临界指数 \\(1/2\\)，并不是任意维数实材料的普适精确指数。\n\n(2) 对平衡方程隐式微分得\n\\((a(T-T_c)+3bP^2)\\,\\partial P/\\partial E=1\\)，所以稳定支的响应\n\\(\\chi=1/[a(T-T_c)+3bP^2]\\)。在 \\(T>T_c,E=0\\)，\\(\\chi_+=1/[a(T-T_c)]\\)；在 \\(T<T_c\\) 的选定非零支，代入 \\(bP_0^2=-a(T-T_c)\\)，得\n\\[\n\\boxed{\\chi_-=\\frac1{2a(T_c-T)}}.\n\\]\n两侧均按 \\(|T-T_c|^{-1}\\) 发散，但同等温差时高温幅度是低温的两倍；响应定义必须在选定稳定相上求导，而非对跨跃迁的混合平均直接求导。\n\n(3) 旋节点满足 \\(f_P=f_{PP}=0\\)。令 \\(A=a(T_c-T)>0\\)，则\n\\(P_{\\rm sp}=\\pm\\sqrt{A/(3b)}\\)，对应场\n\\(E_{\\rm sp}=-AP_{\\rm sp}+bP_{\\rm sp}^3=-(2A/3)P_{\\rm sp}\\)，故\n\\[\n\\boxed{|E_{\\rm sp}|=\\frac{2A^{3/2}}{3\\sqrt{3b}}}.\n\\]\n这是均匀单畴自由能的局部极小消失极限；实际切换可在较小场通过成核、缺陷与畴壁运动实现，故不得将理想旋节场无条件当作实验矫顽场。\n\n(4) 低温零场在 \\(P=0\\) 的自由能取0，在 \\(\\pm P_0\\) 的值 \\(f(P_0)=-A^2/(4b)\\)，因此能垒为 \\(\\Delta f=A^2/(4b)\\)。选定正负态施加微弱电场后自由能差主阶为 \\(\\Delta f_{+-}\\simeq-2EP_0\\)，外场选择与自身方向同号的极化。若 \\(b\\to0^+\\) 而保留负二次系数，自发极化与该四次模型的能垒形式发散，说明更高偶次项和材料饱和机制不可忽略，不能把四阶Landau截断继续当作定量模型。\n"
   },
   {
+    "id": "E072",
+    "topic": "电磁学",
+    "title": "过阻尼Josephson结的倾斜洗衣板势、临界电流与精确I–V关系",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 115,
+    "tags": [
+      "Josephson相位和超电流关系",
+      "电阻并联模型RSJ",
+      "滑移相位时间积分和电压",
+      "势垒、热逃逸与焦耳功率"
+    ],
+    "answer": "\\langle V\\rangle=R\\sqrt{I^2-I_c^2}\\ (I>I_c),\\quad \\Delta U=2E_J[\\sqrt{1-i^2}-i\\arccos i]",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v3.9-round13-draft",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C",
+    "question": "一个无电容Josephson结由临界超电流 \\(I_c>0\\) 与并联电阻 \\(R>0\\) 组成，外部恒定偏流 \\(I\\ge0\\)。超导相位差 \\(\\phi\\)，满足\n\\(I=I_c\\sin\\phi+V/R,\\quad V=(\\hbar/2e)\\dot\\phi\\)，其中 \\(e>0\\)。忽略热噪声及相位量子隧穿。\n(1) 导出相位在倾斜周期势中的一阶动力学及偏流 \\(0\\le I<I_c\\) 时的稳定定常相位。\n(2) 求超临界 \\(I>I_c\\) 时相位滑动一个 \\(2\\pi\\) 的精确周期，导出平均直流电压与外流电流之间的非线性关系。\n(3) 对亚临界 \\(i=I/I_c<1\\) 求从局部稳定井底到相邻鞍顶的势垒高度，给出 \\(i=0\\) 与 \\(i\\to1^-\\) 极限。\n(4) 对滑移稳态计算一周期平均能量平衡，说明为什么应使用 \\(\\langle V^2\\rangle/R\\) 而不是 \\(\\langle V\\rangle^2/R\\) 作为实际耗散功率。\n",
+    "solution": "(1) 由Josephson电压关系代入并联电流式，得\n\\[\n\\dot\\phi=\\frac{2eR}{\\hbar}(I-I_c\\sin\\phi).\n\\]\n定义 \\(E_J=\\hbar I_c/(2e)\\)，倾斜洗衣板势 \\(U(\\phi)=-E_J[\\cos\\phi+i\\phi]\\)，则 \\(U'(\\phi)=E_J(\\sin\\phi-i)\\)，动力学为 \\(\\dot\\phi=-(2eR/\\hbar E_J)U'\\)。若 \\(0\\le i<1\\)，平衡点 \\(\\sin\\phi_0=i\\)，正曲率 \\(\\cos\\phi_0>0\\) 的 \\(\\phi_0=\\arcsin i+2\\pi n\\) 为稳定支，平均电压0；另一支为势垒鞍顶。\n\n(2) 对 \\(I>I_c\\)，\\(\\dot\\phi>0\\) 全相位区间，单滑移周期为\n\\[\nT_\\phi=\\frac{\\hbar}{2eR}\\int_0^{2\\pi}\\frac{d\\phi}{I-I_c\\sin\\phi}\n=\\frac{\\hbar}{2eR}\\frac{2\\pi}{\\sqrt{I^2-I_c^2}} .\n\\]\n使用恒等积分时需满足 \\(I>I_c\\) 避免积分极点。平均电压\n\\[\n\\boxed{\\langle V\\rangle=\\frac{\\hbar}{2e}\\frac{2\\pi}{T_\\phi}\n=R\\sqrt{I^2-I_c^2}}.\n\\]\n当 \\(I\\gg I_c\\)，恢复欧姆近似 \\(RI\\)；接近临界从上方时 \\(\\langle V\\rangle\\propto\\sqrt{I-I_c}\\) 而非线性起振。\n\n(3) 井底 \\(\\phi_m=\\arcsin i\\)，邻近鞍顶 \\(\\phi_s=\\pi-\\arcsin i\\)。势差\n\\(\\Delta U=U(\\phi_s)-U(\\phi_m)\\)，由 \\(\\cos\\phi_s=-\\sqrt{1-i^2}\\)，\\(\\cos\\phi_m=\\sqrt{1-i^2}\\)，得到\n\\[\n\\boxed{\\Delta U=2E_J[\\sqrt{1-i^2}-i\\arccos i]}.\n\\]\n\\(i=0\\) 时势垒 \\(2E_J\\)，\\(i\\to1^-\\) 时趋零。它描述无噪声相位粒子局部稳定区间；加入热逃逸或量子隧穿可在小于临界偏流时提前发生相位滑移。\n\n(4) 乘上瞬时电压，电流功率 \\(IV=I_cV\\sin\\phi+V^2/R\\)。一整次 \\(2\\pi\\) 相位滑移积分\n\\(\\int I_cV\\sin\\phi\\,dt=(\\hbar I_c/(2e))\\oint\\sin\\phi\\,d\\phi=0\\)，故周期平均\n\\[\n\\boxed{I\\langle V\\rangle=\\langle V^2\\rangle/R}.\n\\]\n超电流的Josephson势能一个周期净变化为零，驱动平均供能全部由电阻耗散。一般 \\(\\langle V^2\\rangle>\\langle V\\rangle^2\\)（电压有周期波动），把平均电压平方代入焦耳热必然少计损耗。\n"
+  },
+  {
     "id": "T007",
     "topic": "热学",
     "title": "导热可动活塞的不可逆终态与熵产生",
@@ -4439,6 +4485,29 @@
     "solution": "(1) 在共转系下单分子有效离心势 \\(\\Phi_{\\rm eff}=-m\\Omega^2r^2/2\\)。等温理想气体满足 \\(dp/dr=mn(r)\\Omega^2r\\)，而 \\(p=nk_BT\\)，故 \\(d\\ln n/dr=m\\Omega^2r/(k_BT)=2\\alpha r\\)。积分得到\n\\[\n\\boxed{n(r)=n_0e^{\\alpha r^2}},\n\\]\n密度向外增加，是离心稳定平衡，而非把离心力错写向内得到指数衰减。必须有有限半径壁面，否则指数分布在无限平面不可归一。\n\n(2) 总粒子数\n\\(N=2\\pi Hn_0\\int_0^R re^{\\alpha r^2}dr=\\pi Hn_0(e^{\\alpha R^2}-1)/\\alpha\\)，所以\n\\[\nn_0=\\frac{N\\alpha}{\\pi H(e^{\\alpha R^2}-1)},\\quad\np(R)=k_BTn_0e^{\\alpha R^2}.\n\\]\n当 \\(\\alpha\\to0\\) 时利用 \\(e^{\\alpha R^2}-1\\simeq\\alpha R^2\\) 恢复 \\(n_0=N/(\\pi R^2H)\\)，壁压为 \\(Nk_BT/(\\pi R^2H)\\)；不可将 \\(\\alpha=0\\) 直接代入未化简的零比零式。\n\n(3) 用截面积权重 \\(2\\pi r\\,dr\\) 计算\n\\[\n\\langle r^2\\rangle\n=\\frac{\\int_0^Rr^3e^{\\alpha r^2}dr}{\\int_0^Rr e^{\\alpha r^2}dr}\n=\\boxed{\\frac{R^2e^{\\alpha R^2}}{e^{\\alpha R^2}-1}-\\frac1\\alpha}.\n\\]\n气体平均绕轴角动量 \\(L_z=m\\Omega N\\langle r^2\\rangle\\)。小 \\(\\Omega\\) 时 \\(\\langle r^2\\rangle\\to R^2/2\\)，故 \\(L_z\\simeq\\frac12NmR^2\\Omega\\)；强旋转 \\(\\alpha R^2\\gg1\\) 时 \\(\\langle r^2\\rangle\\simeq R^2-1/\\alpha\\)，气体集中在近壁薄壳而不是中心。\n\n(4) 在旋转热浴的平衡配分函数中，单粒子Boltzmann权为 \\(\\exp[-\\beta(H_{\\rm lab}-\\Omega L_z)]\\)。对动量完成平方，积分因子给 \\(\\exp[\\beta m\\Omega^2r^2/2]=e^{\\alpha r^2}\\)，正好再现第一问。在固定 \\(T,N,R,H\\) 下 \\(F_{\\rm rot}=-k_BT\\ln Z_{\\rm rot}\\) 且\n\\(-\\partial_\\Omega F_{\\rm rot}=k_BT\\partial_\\Omega\\ln Z_{\\rm rot}=\\langle L_z\\rangle\\)。\n因此共转势是一种Legendre势而非实验室的额外真实能量来源；容器施加约束并维持转速时机械功应在实验室账本中另算。\n"
   },
   {
+    "id": "T068",
+    "topic": "热学",
+    "title": "对称Flory–Huggins聚合物混合物的旋节线、共存曲线与临界标度",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 115,
+    "tags": [
+      "高分子混合自由能和熵",
+      "不稳定区旋节判据",
+      "二元混合物Binodal共存",
+      "平均场临界浓度与指数"
+    ],
+    "answer": "\\chi_c=2/N,\\quad\\phi_c=1/2,\\quad m^2\\simeq(3N/8)(\\chi-2/N)",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v3.9-round13-draft",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C",
+    "question": "两个聚合度相等 \\(N\\ge1\\) 的聚合物A、B在不可压格点模型中混合，A的体积分数 \\(0<\\phi<1\\)。无量纲每格点Flory–Huggins混合自由能为\n\\[\ng(\\phi)=\\frac{\\phi}{N}\\ln\\phi+\\frac{1-\\phi}{N}\\ln(1-\\phi)+\\chi\\phi(1-\\phi),\n\\]\n其中相互作用参数 \\(\\chi\\) 可随温度改变，忽略梯度能和动力学。\n(1) 求混合自由能的二阶导数与局部稳定性，得到旋节线 \\(\\chi_s(\\phi)\\)。\n(2) 用临界点二阶、三阶导数同时为零求临界浓度与临界 \\(\\chi_c\\)，检验四阶导数的稳定号。\n(3) 利用对称性给出两相共存的binodal隐式方程，并在临界附近推导组分差随 \\(\\chi-\\chi_c\\) 的平方根标度。\n(4) 比较binodal与spinodal的含义，讨论 \\(\\chi\\to0\\)、\\(N\\to\\infty\\) 和有限尺寸时相分离判据的适用范围。\n",
+    "solution": "(1) 对混合自由能两次微分有\n\\[\ng'=\\frac1N\\ln\\frac{\\phi}{1-\\phi}+\\chi(1-2\\phi),\\qquad\ng''=\\frac1{N\\phi}+\\frac1{N(1-\\phi)}-2\\chi.\n\\]\n在固定平均成分下小的局部涨落要求 \\(g''>0\\) 方有局部稳定性，旋节为 \\(g''=0\\)，故\n\\[\n\\boxed{\\chi_s(\\phi)=\\frac1{2N\\phi(1-\\phi)}}.\n\\]\n进入 \\(g''<0\\) 区域的均匀混合态对微小浓度波动线性不稳定，而旋节外部仍可能是亚稳而非全球稳定。\n\n(2) 临界点同时要求 \\(g''=g'''=0\\)。由于\n\\(g'''=-1/(N\\phi^2)+1/[N(1-\\phi)^2]\\)，在 \\(0<\\phi<1\\) 只有 \\(\\phi_c=1/2\\)，代回得 \\(\\boxed{\\chi_c=2/N}\\)。再求 \\(g''''=2/(N\\phi^3)+2/[N(1-\\phi)^3]\\)，在临界点为 \\(32/N>0\\)，因此四阶项正使临界自由能局部有界；与二阶曲率变号组成平均场二阶分相临界结构。\n\n(3) 对称体系 \\(g(\\phi)=g(1-\\phi)\\)，若两相共存的A体积分数为 \\(\\phi_-\\) 和 \\(\\phi_+=1-\\phi_-\\)，共切线的斜率为零，所以有\n\\[\n\\boxed{\\frac1N\\ln\\frac{\\phi_-}{1-\\phi_-}+\\chi(1-2\\phi_-)=0}.\n\\]\n令 \\(\\phi_\\pm=1/2\\pm m\\)，对 \\(|m|\\ll1\\) 展开\n\\(\\ln[(1+2m)/(1-2m)]=4m+16m^3/3+O(m^5)\\)，于是\n\\((4/N-2\\chi)m+(16/(3N))m^3+O(m^5)=0\\)。非零分支给\n\\[\n\\boxed{m^2\\simeq\\frac{3N}{8}(\\chi-2/N)}.\n\\]\n该平方根是对称平均场binodal临界标度，并非旋节方程本身。\n\n(4) 共存线binodal由两相全局自由能共切线决定；旋节线spinodal由单相局部曲率为零决定，两者之间是可能成核的亚稳区。 \\(\\chi\\to0\\) 时所有 \\(0<\\phi<1\\) 的混合熵使 \\(g''>0\\)；对很大 \\(N\\)，\\(\\chi_c=2/N\\to0\\)，长链混合熵变小而更易分相。但无限聚合度、有限链尺度、界面能和非均匀涨落将改变精确转变性质，不能把无梯度均匀自由能曲线冒充真实动力学成核速率。\n"
+  },
+  {
     "id": "W007",
     "topic": "振动与波动",
     "title": "双弦接点附加质量的波散射",
@@ -5857,6 +5926,29 @@
     "complexity_tier": "L5-C",
     "question": "半径 \\(R\\) 的自由不可压、无黏、无旋液滴，密度 \\(\\rho\\)、表面张力 \\(\\sigma>0\\)，位于真空，忽略引力与耗散。小振幅表面形变为 \\(r_s=R+\\eta_{\\ell m}(t)Y_{\\ell m}(\\theta,\\varphi)\\)，其中 \\(\\ell\\ge2\\) 且球谐归一为 \\(\\int|Y_{\\ell m}|^2d\\Omega=1\\)。\n(1) 用内部速度势满足Laplace方程、自由面的运动学边界求对应 \\(\\ell,m\\) 的径向速度势。\n(2) 将表面曲率一阶变化与线性Bernoulli压力条件联立，推导Rayleigh毛细模态频率，检查同一 \\(\\ell\\) 的角向简并。\n(3) 独立通过液体动能和二阶表面张力势能构造模态简谐振子的广义质量及刚度，核对与动态边界法相同的频率。\n(4) 讨论 \\(\\ell=1\\) 纯平移、\\(\\ell=0\\) 体积约束，以及 \\(R\\) 缩小和表面张力趋零时频率与模型有效性。\n",
     "solution": "(1) 内部无旋且不可压，\\(\\nabla^2\\phi=0\\)。正则 \\(\\ell\\) 阶球谐解只能选 \\(r^\\ell Y_{\\ell m}\\)，中心奇异的 \\(r^{-\\ell-1}\\) 项被排除。线性运动学边界 \\(v_r(R)=\\dot\\eta Y_{\\ell m}\\)，故\n\\[\n\\boxed{\\phi(r,\\theta,\\varphi,t)=\\frac{\\dot\\eta(t)}{\\ell R^{\\ell-1}}r^\\ell Y_{\\ell m}}.\n\\]\n球内速度为 \\(\\nabla\\phi\\)，表面满足 \\(v_r=\\dot\\eta Y\\)。该模型以真空为外界，未计任何外流体的附加惯量。\n\n(2) 球面平均曲率的一阶扰动为 \\(\\delta(2H)=(\\ell-1)(\\ell+2)\\eta Y/R^2\\)，由Laplace压差得 \\(\\delta p=\\sigma(\\ell-1)(\\ell+2)\\eta Y/R^2\\)。线性非定常Bernoulli在表面给 \\(\\delta p=-\\rho\\,\\partial_t\\phi|_R=-\\rho R\\ddot\\eta Y/\\ell\\)。两式相等得到\n\\[\n\\boxed{\\ddot\\eta+\\omega_\\ell^2\\eta=0,\\quad\n\\omega_\\ell^2=\\frac{\\sigma\\ell(\\ell-1)(\\ell+2)}{\\rho R^3}}.\n\\]\n频率仅依赖 \\(\\ell\\) 不依赖 \\(m\\)，故在球对称自由液滴中每个 \\(\\ell\\) 有 \\(2\\ell+1\\) 重简并；外部约束会打破此简并。\n\n(3) 体动能可由Green恒等式求：\n\\(T=\\frac\\rho2\\int_{r<R}|\\nabla\\phi|^2dV=\\frac\\rho2\\oint_R\\phi\\partial_r\\phi\\,dS\n=\\frac{\\rho R^3}{2\\ell}|\\dot\\eta|^2\\)，使用了单位归一球谐。表面张力在固定总体积条件下的二阶面积变化\n\\(\\Delta A=\\frac12(\\ell-1)(\\ell+2)|\\eta|^2\\)，故\n\\[\nV_\\sigma=\\frac{\\sigma}{2}(\\ell-1)(\\ell+2)|\\eta|^2.\n\\]\n广义质量 \\(M_\\ell=\\rho R^3/\\ell\\)、刚度 \\(K_\\ell=\\sigma(\\ell-1)(\\ell+2)\\)，比值 \\(K_\\ell/M_\\ell\\) 正是上问 \\(\\omega_\\ell^2\\)，构成独立的能量法核验。\n\n(4) \\(\\ell=1\\) 对应将球整体平移而不改变形状，频率为零；\\(\\ell=0\\) 对应总体积变化，若液体严格不可压且总质量固定，它不属于可自由振荡的形变自由度。固定 \\(\\ell,\\sigma,\\rho\\) 时 \\(\\omega_\\ell\\propto R^{-3/2}\\)，微小液滴频率增大；但当 \\(R\\) 接近分子尺度时连续介质与恒定表面张力近似失效。令 \\(\\sigma\\to0\\) 时无形变恢复力，所有该类毛细模趋于零。\n"
+  },
+  {
+    "id": "W068",
+    "topic": "振动与波动",
+    "title": "线性声速梯度中的声线圆弧、水平慢度守恒与转向点行时",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 115,
+    "tags": [
+      "声学几何光学射线",
+      "梯度声速Snell水平慢度",
+      "精确圆弧传播路径",
+      "转向点和波包传播时间"
+    ],
+    "answer": "p=\\cos\\theta/c(z),\\quad [\\gamma p(x-x_c)]^2+[p(c_0+\\gamma z)]^2=1",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v3.9-round13-draft",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C",
+    "question": "二维分层无耗散静止介质，局地声速 \\(c(z)=c_0+\\gamma z>0\\)，\\(c_0>0,\\gamma>0\\)。考虑频率固定、波长远小于声速变化尺度的几何声学射线，角度 \\(\\theta\\) 从水平向上测量，水平坐标 \\(x\\)，竖直坐标 \\(z\\)。从初点向上发出的射线满足 \\(0<\\theta_0<\\pi/2\\)。\n(1) 从局地色散 \\(\\omega=c(z)|\\boldsymbol k|\\) 与水平方向平移不变性推导水平慢度不变量，给出转向高度。\n(2) 对上行支积分射线斜率求精确路径，证明在 \\((x,z)\\) 平面上是某圆弧而非抛物线。\n(3) 用 \\(dt=ds/c(z)\\) 求从任意初高度到转向点的有限行时积分或闭式对数表达。\n(4) 检查 \\(\\gamma\\to0\\) 的局地直线极限、转向点群速度垂直分量及几何声学的失效尺度。\n",
+    "solution": "(1) 局地Hamilton色散 \\(\\omega=c(z)\\sqrt{k_x^2+k_z^2}\\) 不显含水平 \\(x\\)，所以 \\(k_x\\) 沿射线守恒，\\(\\omega\\) 在静止介质中也守恒。故水平慢度\n\\[\n\\boxed{p=k_x/\\omega=\\cos\\theta/c(z)}\n\\]\n不变。上行时 \\(c(z)\\) 随高度增大，\\(\\cos\\theta=pc(z)\\) 增大，\\(\\theta\\) 减小，直到 \\(\\theta=0\\) 在 \\(c(z_t)=1/p\\) 处转向；若该高度超出物理介质范围则没有实际转向。\n\n(2) 对上行支有 \\(\\tan\\theta=dz/dx=\\sqrt{1-p^2c^2}/(pc)\\)，故\n\\(dx/dz=pc(z)/\\sqrt{1-p^2c(z)^2}\\)。利用 \\(dc/dz=\\gamma\\) 积分：\n\\[\nx-x_0=\\frac1{\\gamma p}\\left[\\sqrt{1-p^2c(z_0)^2}-\\sqrt{1-p^2c(z)^2}\\right].\n\\]\n取圆心横坐标 \\(x_c=x_0+\\sqrt{1-p^2c(z_0)^2}/(\\gamma p)\\)，整理得\n\\[\n\\boxed{\\bigl[\\gamma p(x-x_c)\\bigr]^2+[p(c_0+\\gamma z)]^2=1}.\n\\]\n因为 \\(z\\) 仅作线性平移与尺度变换，真实 \\(x,z\\) 轨迹也是圆弧，半径 \\(1/(\\gamma p)\\)，不是简单二次曲线。\n\n(3) 由传播速度沿光线大小为 \\(c(z)\\)，有 \\(dt=dz/[c(z)\\sin\\theta]=dz/[c(z)\\sqrt{1-p^2c(z)^2}]\\)。令 \\(u=pc(z)\\)，得到\n\\[\nt(z)-t(z_0)=\\frac1\\gamma\\int_{u_0}^{u}\\frac{du'}{u'\\sqrt{1-u'^2}}\n=\\frac1\\gamma\\ln\\frac{u/(1+\\sqrt{1-u^2})}{u_0/(1+\\sqrt{1-u_0^2})}.\n\\]\n上行至转向点 \\(u=1\\) 时，\n\\(\\boxed{t_t-t_0=\\gamma^{-1}\\ln[(1+\\sqrt{1-u_0^2})/u_0]}\\)，有限且为正。若错误把速度水平分量当成总声速，就得不到该正确积分。\n\n(4) 当 \\(\\gamma\\to0\\) 并保持起点局地发射角时，曲率半径 \\(1/(\\gamma p)\\to\\infty\\)，有限路径段趋近直线，转向点可能远离区域。转向点有 \\(\\theta\\to0\\)，垂直群速 \\(c\\sin\\theta\\to0\\) 且上行/下行支连续连接；这不意味着声能在该点永久停止。几何声学要求 \\(\\lambda\\ll c/|\\gamma|\\) 并在转向点附近采用更精确的Airy型波动匹配，避免直接使用奇异的 \\(dx/dz\\) 或光线密度。\n"
   },
   {
     "id": "O007",
@@ -7302,6 +7394,29 @@
     "solution": "(1) 由傍轴方程\n\\(\\Psi_z=i\\nabla_\\perp^2\\Psi/(2k)\\)，强度导数\n\\(\\partial_zI=\\Psi^*\\Psi_z+\\Psi\\Psi_z^*\n=(i/2k)(\\Psi^*\\nabla_\\perp^2\\Psi-\\Psi\\nabla_\\perp^2\\Psi^*)\\)。\n利用乘积散度恒等式及 \\(\\operatorname{Im}(\\Psi^*\\nabla_\\perp\\Psi)=I\\nabla_\\perp\\phi\\) 得\n\\[\n\\boxed{\\partial_zI=-\\frac1k\\nabla_\\perp\\cdot(I\\nabla_\\perp\\phi)}.\n\\]\n等效横向流密度为 \\(\\boldsymbol J_\\perp=I\\nabla_\\perp\\phi/k\\)，相位增大方向对应局部傍轴传播方向；符号来自采用 \\(e^{+ikz}\\) 的约定。\n\n(2) 在参考面 \\(I=I_0\\) 时，\\(I_z=-(I_0/k)\\nabla_\\perp^2\\phi\\)。对周期横向区域写 \\(\\widehat{\\nabla^2\\phi}(\\boldsymbol q)=-|\\boldsymbol q|^2\\widehat\\phi(\\boldsymbol q)\\)，于是\n\\[\n\\boxed{\\widehat\\phi(\\boldsymbol q)=\\frac{k\\,\\widehat{I_z}(\\boldsymbol q)}{I_0|\\boldsymbol q|^2}},\\quad\\boldsymbol q\\ne0.\n\\]\n常数相位 \\(\\widehat\\phi(\\boldsymbol0)\\) 不影响强度、无从由TIE确定，需要外加相位规范，例如取横向平均相位为0；这不是仪器计算错误。\n\n(3) 对 \\(\\phi=\\epsilon\\cos(qx)\\)，\\(\\partial_x^2\\phi=-\\epsilon q^2\\cos(qx)\\)，故\n\\(I_z=(I_0/k)\\epsilon q^2\\cos(qx)\\)。代入傅里叶反演乘 \\(k/(I_0q^2)\\) 后恰得 \\(\\epsilon\\cos(qx)\\)，核对了符号和 \\(q^2\\) 系数。若输入强度导数带小幅随机误差 \\(\\delta\\widehat{I_z}\\)，相位误差却按 \\(1/q^2\\) 放大，因此低波数对噪声尤其敏感，需正规化与先验，而非简单声称所有频率都同样稳定。\n\n(4) 在周期边界或横向通量衰减到零时积分连续方程，得到 \\(d\\int I\\,dxdy/dz=-(1/k)\\oint I\\nabla\\phi\\cdot\\boldsymbol n\\,ds=0\\)。这保证总光能在无损傍轴传播下守恒。若 \\(I=0\\)，相位可有光学涡旋且 \\(I\\nabla\\phi\\) 的反演椭圆算符退化；若边界通量未知或两焦面距离过大，有限差分导数不再近似局部 \\(I_z\\)，不可把均匀强度傅里叶Poisson解当作任意真实照明的严格重建。\n"
   },
   {
+    "id": "O070",
+    "topic": "光学",
+    "title": "Kolmogorov大气湍流相位屏的互相干度、长曝光OTF与Fried参数标度",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 115,
+    "tags": [
+      "Kolmogorov湍流5/3相位结构",
+      "高斯相位差互相干函数",
+      "大气光学传递函数和seeing",
+      "Fried相干尺度波长律"
+    ],
+    "answer": "D_\\phi(\\rho)=6.88(\\rho/r_0)^{5/3},\\quad \\Gamma(\\rho)=e^{-3.44(\\rho/r_0)^{5/3}},\\quad r_0\\propto\\lambda^{6/5}",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v3.9-round13-draft",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C",
+    "question": "考虑远场恒星光穿过薄湍流相位屏形成的随机瞳面相位 \\(\\phi(\\boldsymbol r)\\)，其平稳增量为零均值高斯，给定Kolmogorov惯性区结构函数\n\\[\nD_\\phi(\\rho)=\\langle[\\phi(\\boldsymbol r+\\boldsymbol\\rho)-\\phi(\\boldsymbol r)]^2\\rangle\n=6.88(\\rho/r_0)^{5/3}.\n\\]\n这里 \\(\\rho=|\\boldsymbol\\rho|\\)，\\(r_0\\) 为Fried参数，先假定无限外尺度、没有振幅闪烁。\n(1) 从高斯变量的特征函数推导瞳面复互相干函数 \\(\\Gamma(\\rho)=\\langle e^{i[\\phi(\\boldsymbol r+\\boldsymbol\\rho)-\\phi(\\boldsymbol r)]}\\rangle\\)。\n(2) 在傅里叶成像与长曝光假设下求大气OTF因子，解释它与有限口径衍射OTF如何相乘。\n(3) 由结构函数的波数与波长依赖 \\(D_\\phi\\propto (2\\pi/\\lambda)^2\\rho^{5/3}\\) 推导 \\(r_0\\) 的波长标度及湍流限制的角分辨率趋势。\n(4) 讨论 \\(\\rho\\to0,\\rho\\gg r_0\\) 两端相干极限，检查有限外尺度、振幅起伏与非高斯增量对结论的影响。\n",
+    "solution": "(1) 令高斯相位增量 \\(X=\\phi(\\boldsymbol r+\\boldsymbol\\rho)-\\phi(\\boldsymbol r)\\)，有 \\(\\langle X\\rangle=0\\)、\\(\\operatorname{Var}(X)=D_\\phi(\\rho)\\)。零均值高斯的特征函数 \\(\\langle e^{iX}\\rangle=\\exp[-\\operatorname{Var}(X)/2]\\)，故\n\\[\n\\boxed{\\Gamma(\\rho)=\\exp[-D_\\phi(\\rho)/2]\n=\\exp[-3.44(\\rho/r_0)^{5/3}]}.\n\\]\n该结果使用了高斯增量而非任意随机相位的普适恒等式；若结构函数相同但高阶累积量不为零，互相干函数可不同。\n\n(2) 长曝光光学传递函数由瞳面相差两点的互相关决定，瞳面横向间距为 \\(\\rho=\\lambda|\\boldsymbol f|\\)，其中 \\(\\boldsymbol f\\) 是焦平面角坐标共轭的空间频率（在相应成像约定下）。大气因子因此\n\\[\n\\boxed{\\operatorname{OTF}_{\\rm atm}(\\boldsymbol f)\n=\\exp[-3.44(\\lambda|\\boldsymbol f|/r_0)^{5/3}]}.\n\\]\n若相位屏统计均匀且与光学瞳孔不相关，系统长曝光OTF为 \\(\\operatorname{OTF}_{\\rm aperture}\\operatorname{OTF}_{\\rm atm}\\)。不可把理想衍射瞳孔因子删除后便称大气决定所有空间频率，即使望远镜口径小于 \\(r_0\\) 也需保留有限口径衍射。\n\n(3) 给定相同湍流路径与空气统计特性，结构函数系数 \\(D_\\phi\\propto\\lambda^{-2}\\rho^{5/3}\\)。而参数定义给 \\(D_\\phi\\propto r_0^{-5/3}\\rho^{5/3}\\)，故 \\(r_0^{-5/3}\\propto\\lambda^{-2}\\)，即\n\\[\n\\boxed{r_0\\propto\\lambda^{6/5}}.\n\\]\n大口径湍流限制的角宽尺度约 \\(\\theta_{\\rm seeing}\\sim\\lambda/r_0\\propto\\lambda^{-1/5}\\)，与理想小口径衍射宽 \\(\\lambda/D\\) 对波长的线性标度不同。具体FWHM系数依赖长曝光PSF、惯性区和外尺度假设。\n\n(4) \\(\\rho\\to0\\) 时 \\(D_\\phi\\to0,\\Gamma\\to1\\)；\\(\\rho/r_0\\to\\infty\\) 时 \\(\\Gamma\\to0\\)，表明长间距瞳点相位完全失相关。若湍流具有有限外尺度，结构函数在大 \\(\\rho\\) 时可能饱和，不会严格按 \\(5/3\\) 幂无限增长；振幅闪烁使互相干还包含幅度协方差；非高斯相位分布需使用完整特征函数。因此本题不能替代真实大气自适应光学误差预算。\n"
+  },
+  {
     "id": "Q007",
     "topic": "近代物理",
     "title": "相对论两体衰变的能量区间与阈值",
@@ -8742,5 +8857,28 @@
     "complexity_tier": "L5-C",
     "question": "考虑无限一维格点 \\(|n\\rangle,n\\in\\mathbb Z\\)，格距 \\(a>0\\)，最近邻跃迁 \\(J>0\\)，恒定外场势斜率 \\(F>0\\)，单粒子哈密顿量\n\\[\nH=-J\\sum_n(|n+1\\rangle\\langle n|+\\mathrm{h.c.})+Fa\\sum_n n|n\\rangle\\langle n|.\n\\]\n粒子初态可取局域态 \\(|0\\rangle\\)，忽略多体相互作用与散射。\n(1) 用Bessel递推求全部正则可归一本征态及Wannier–Stark等间距能级，并检查强场近邻振幅。\n(2) 证明本征态族的正交完备结构，说明为什么恒定电场并不在这个无限单带模型中带来不可逆加速。\n(3) 用等间隔能级或显式时间传播求局域初态的Bloch复现周期，给出波包的平均平方格点位移精确式。\n(4) 用半经典速度与晶体动量方程核对Bloch振荡幅度，讨论 \\(F\\to0\\)、有限晶格以及Zener跨带跃迁的边界。\n",
     "solution": "(1) 本征方程为\n\\[\n-J(\\psi_{n-1}+\\psi_{n+1})+Fa\\,n\\psi_n=E\\psi_n.\n\\]\n设 \\(E=mFa\\)、\\(z=2J/(Fa)\\)，取 \\(\\psi_n=J_{n-m}(z)\\)。由于Bessel递推\n\\(J_{\\nu-1}(z)+J_{\\nu+1}(z)=2\\nu J_\\nu(z)/z\\)，跃迁项正好等于 \\(-Fa(n-m)\\psi_n\\)，与势能项相消得 \\(\\boxed{E_m=mFa}\\)。强场 \\(z\\ll1\\) 时 \\(J_0(z)\\simeq1\\)、\\(J_{\\pm1}(z)\\simeq\\pm z/2\\)，状态主要集中在中心 \\(m\\) 附近。\n\n(2) Bessel乘法生成函数或离散傅里叶正交性给\n\\(\\sum_{n\\in\\mathbb Z}J_{n-m}(z)J_{n-m'}(z)=\\delta_{mm'}\\)，完备关系亦然。因此这些是完备正交的纯点谱局域态，波函数可由离散能级叠加，理想单带且无耗散时不会无限加速。其局域性不是随机无序的Anderson机制，而是静态倾斜势引起的确定性能阶梯。\n\n(3) 所有能级差为整数倍 \\(Fa\\)，传播相位 \\(e^{-imFa t/\\hbar}\\)，当\n\\(\\boxed{T_B=2\\pi\\hbar/(Fa)}\\) 全部相位同时复现为1。对初始 \\(|0\\rangle\\)，显式传播概率为\n\\[\nP_n(t)=J_n^2\\left(\\frac{4J}{Fa}\\sin\\frac{Fa t}{2\\hbar}\\right).\n\\]\n用 \\(J_{-n}^2=J_n^2\\) 得 \\(\\langle n\\rangle=0\\)，以及 \\(\\sum_n n^2J_n(z)^2=z^2/2\\)，得\n\\[\n\\boxed{\\langle n^2(t)\\rangle=\\frac12\\left(\\frac{4J}{Fa}\\sin\\frac{Fa t}{2\\hbar}\\right)^2}.\n\\]\n故局域初态虽扩展，却每个Bloch周期严格回缩，无永久扩散。\n\n(4) 纯净单带色散 \\(\\varepsilon(k)=-2J\\cos(ka)\\)，群速度 \\(v(k)=(2Ja/\\hbar)\\sin(ka)\\)，外力为 \\(-F\\)，故 \\(\\hbar\\dot k=-F\\)。积分得到\n\\(x(t)-x(0)=(2J/F)[\\cos(k_0a-Fat/\\hbar)-\\cos(k_0a)]\\)，最大峰峰幅度 \\(4J/F\\)，周期与上问相符。\\(F\\to0\\) 时 \\(T_B\\to\\infty\\)，应在有限时间先展开余弦才恢复自由晶格传播；有限边界反射、跨带Landau–Zener跃迁以及相互作用均可能破坏严格周期复现。\n"
+  },
+  {
+    "id": "Q070",
+    "topic": "近代物理",
+    "title": "双原子Rydberg阻塞的集体增强Rabi振荡、暗态与有限阻塞误差",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 115,
+    "tags": [
+      "两原子对称Dicke态与暗态",
+      "Rydberg强相互作用阻塞",
+      "sqrt2集体Rabi增强",
+      "二阶虚跃迁及Bell态纠缠"
+    ],
+    "answer": "\\Omega_{\\rm coll}=\\sqrt2\\Omega,\\quad t_\\pi=\\pi/(\\sqrt2\\Omega),\\quad \\delta E_W\\simeq-\\hbar^2\\Omega^2/(2V)",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v3.9-round13-draft",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C",
+    "question": "两个等同两能级原子 \\(|g\\rangle,|r\\rangle\\) 被共振激光同时驱动，单原子Rabi频率为 \\(\\Omega>0\\)。双激发态 \\(|rr\\rangle\\) 因Rydberg相互作用具有额外能量 \\(V>0\\)。在旋转波近似的四态空间取\n\\[\nH=\\frac{\\hbar\\Omega}{2}(\\sigma_x^{(1)}+\\sigma_x^{(2)})+V|rr\\rangle\\langle rr|.\n\\]\n起始 \\(|gg\\rangle\\)，假设强阻塞 \\(V\\gg\\hbar\\Omega\\)。\n(1) 使用 \\(|W\\rangle=(|gr\\rangle+|rg\\rangle)/\\sqrt2\\) 与反对称态 \\(|D\\rangle=(|gr\\rangle-|rg\\rangle)/\\sqrt2\\)，写出完整的对称子空间哈密顿量与暗态解耦。\n(2) 严格阻塞 \\(V\\to\\infty\\) 时解集体两态Rabi动力学，给最大单激发转移概率及产生纠缠W态的脉冲时间。\n(3) 对大而有限的 \\(V\\) 用二阶消元求 \\(|W\\rangle\\) 的光移及 \\(|rr\\rangle\\) 的残余概率阶，解释误差为什么不随阻塞强度零次幂保持不变。\n(4) 求理想 \\(|W\\rangle\\) 的单原子约化态熵，检验其Bell纠缠与集体增强并非来自真正的双激发占据。\n",
+    "solution": "(1) 在激光对称驱动下反对称态 \\(|D\\rangle=(|gr\\rangle-|rg\\rangle)/\\sqrt2\\) 的两条跃迁振幅相消，\\(H|D\\rangle=0\\)，是暗态。对称基 \\((|gg\\rangle,|W\\rangle,|rr\\rangle)\\) 中每一相邻跃迁耦合为 \\(\\hbar\\Omega/\\sqrt2\\)，故\n\\[\n\\boxed{H_{\\rm sym}=\\begin{pmatrix}0&\\hbar\\Omega/\\sqrt2&0\\\\\n\\hbar\\Omega/\\sqrt2&0&\\hbar\\Omega/\\sqrt2\\\\0&\\hbar\\Omega/\\sqrt2&V\\end{pmatrix}}.\n\\]\n始态完全对称，因此反对称暗态在整个理想演化中不被激发，不能将其错误计入亮态增强系数。\n\n(2) 当 \\(V/\\hbar\\Omega\\to\\infty\\)，高能 \\(|rr\\rangle\\) 动力学解耦，剩下两态有效哈密顿量为\n\\(H_{\\rm eff}=\\frac{\\hbar\\Omega_{\\rm coll}}2(|gg\\rangle\\langle W|+\\mathrm{h.c.})\\)，\n\\(\\boxed{\\Omega_{\\rm coll}=\\sqrt2\\Omega}\\)。从 \\(|gg\\rangle\\) 出发得\n\\(|\\psi(t)\\rangle=\\cos(\\Omega_{\\rm coll}t/2)|gg\\rangle-i\\sin(\\Omega_{\\rm coll}t/2)|W\\rangle\\)，\n最大转移概率1。第一个理想 \\(\\pi\\) 脉冲长 \\(\\boxed{t_\\pi=\\pi/(\\sqrt2\\Omega)}\\)，制得单激发Bell型 \\(|W\\rangle\\)。\n\n(3) 对有限但很大 \\(V\\)，由高能态定态振幅方程 \\(V c_{rr}+(\\hbar\\Omega/\\sqrt2)c_W\\simeq0\\) 得\n\\(c_{rr}\\simeq-(\\hbar\\Omega/(\\sqrt2V))c_W\\)。回代亮态方程，产生二阶对角光移\n\\[\n\\boxed{\\delta E_W\\simeq-\\frac{(\\hbar\\Omega/\\sqrt2)^2}{V}\n=-\\frac{\\hbar^2\\Omega^2}{2V}},\n\\]\n并有双激发概率 \\(P_{rr}=O[(\\hbar\\Omega/V)^2]\\)。该近似需避开瞬时开启脉冲造成的其他高频跃迁，不能把它误当所有时间的严格数值上界。\n\n(4) 对纯 \\(|W\\rangle=(|gr\\rangle+|rg\\rangle)/\\sqrt2\\)，对任意一个原子求偏迹给 \\(\\rho_1=(|g\\rangle\\langle g|+|r\\rangle\\langle r|)/2\\)。其纯度 \\(1/2\\)，von Neumann熵 \\(S=-2(1/2)\\ln(1/2)=\\boxed{\\ln2}\\)，是最大两量子比特纯态纠缠。集体增强的 \\(\\sqrt2\\) 来自两个单激发路径的相干叠加；理想阻塞态根本没有 \\(|rr\\rangle\\) 占据，不是双激发光子数效应。\n"
   }
 ]
