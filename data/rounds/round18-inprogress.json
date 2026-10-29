@@ -58,8 +58,14 @@
   },
   "quality_status": "待独立复核",
   "expert_review": "待独立复核",
-  "structural_qa": "pending",
-  "executed_model_checks": 0,
+  "structural_qa": {
+    "status": "passed",
+    "items": 40,
+    "question_parts": 160,
+    "solution_parts": 160,
+    "run_id": 40882310594
+  },
+  "executed_model_checks": 40,
   "independent_subpart_checks": 0,
   "required_subpart_checks": 160,
   "global_history_semantic_rescreen": "not performed",
@@ -68,5 +74,59 @@
   "solution_pdf": "not compiled",
   "qualified_released_items": 0,
   "merge_allowed": false,
-  "note": "40 new user-requested drafts separate from formal 50/200 admission policy; never auto-merge."
+  "note": "40 new user-requested drafts separate from formal 50/200 admission policy; never auto-merge.",
+  "technical_status": "40 source entries and 40 representative physical checks pass CI #40882310594 at 49e520f. Independent full-main title/model audit flagged 33 strongly duplicated model cores, 5 further model-family overlaps. All collisions require complete model replacement or verified independent review. No formal admission.",
+  "model_qa": {
+    "status": "passed",
+    "model_level_tests": 40,
+    "run_id": 40882310594,
+    "source_sha": "49e520f9f7e36d9af4a9a2dfdcc1ff2f12b6f11a"
+  },
+  "strong_model_duplicate_blockers": [
+    "M109",
+    "M111",
+    "M112",
+    "M113",
+    "M114",
+    "E109",
+    "E110",
+    "E111",
+    "E112",
+    "E113",
+    "E114",
+    "E115",
+    "T102",
+    "T103",
+    "T105",
+    "T106",
+    "T107",
+    "T108",
+    "W102",
+    "W104",
+    "W106",
+    "W107",
+    "W108",
+    "O103",
+    "O104",
+    "O105",
+    "O106",
+    "O107",
+    "Q102",
+    "Q103",
+    "Q104",
+    "Q105",
+    "Q106"
+  ],
+  "model_families_to_review": [
+    "M110",
+    "M115",
+    "W103",
+    "W105",
+    "O102"
+  ],
+  "unblocked_title_screen_candidates": [
+    "T104",
+    "Q107"
+  ],
+  "status": "REJECTED_DRAFT_PENDING_33_CORE_REWRITES_5_SIMILARITY_REVIEWS_160_SUBPART_TESTS"
 }
