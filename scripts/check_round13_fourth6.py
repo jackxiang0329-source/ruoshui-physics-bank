@@ -3,6 +3,7 @@
 import json
 import sympy as s
 import mpmath as mp
+mp.mp.dps=50
 from pathlib import Path
 checks=[]
 def ck(uid,part,method,name,condition):
