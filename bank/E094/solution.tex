@@ -1,0 +1,20 @@
+(1) 在界面两侧用电场振幅 \(E_i,E_r,E_t\)，切向电场连续 \(E_i+E_r=E_t\)。磁场振幅分别为 \(H_i=E_i/Z_0,H_r=-E_r/Z_0,H_t=E_t/Z_0\)。Maxwell边界 \(\boldsymbol n\times(H_+-H_-)=J_s\) 取 \(\boldsymbol n=\boldsymbol e_z\)，对x向电场与y向磁场得 \(H_- -H_+=\sigma_sE_t\)，即
+\[
+(E_i-E_r-E_t)/Z_0=\sigma_sE_t.
+\]
+结合 \(E_t=E_i+E_r\)，令 \(s=Z_0\sigma_s\)，得
+\[
+r=-{s\over2+s},\qquad t={2\over2+s}.
+\]
+(2) 两侧同为真空，功率模平方为 \(R=|r|^2=|s|^2/|2+s|^2\)、\(T=|t|^2=4/|2+s|^2\)。故
+\[
+\mathcal A=1-R-T={4\Re s\over|2+s|^2}\ge0
+\]
+对被动片成立，且 \(R+T+\mathcal A=1\)。也可由平均面焦耳热 \(\langle P_s\rangle/A=\Re\sigma_s|E_t|^2/2\) 独立核验。
+(3) 对 \(s=x\ge0\) 实数，
+\(\mathcal A(x)=4x/(2+x)^2\)，
+\[
+\mathcal A'(x)=4(2-x)/(2+x)^3.
+\]
+故唯一最大在 \(x=2\)，\(\mathcal A_{\max}=1/2\)，面电阻 \(R_\square=1/\sigma_s=Z_0/2\)。当 \(\sigma_s\) 纯虚时 \(\Re s=0\)，吸收严格为0（但可反射）。
+(4) Drude模型 \(\sigma_s=\sigma_{\rm dc}(1+i\omega\tau)/(1+\omega^2\tau^2)\)，其实部 \(\sigma_{\rm dc}/(1+\omega^2\tau^2)\ge0\)；\(\omega\tau\ll1\) 为近直流实阻，\(\omega\tau\gg1\) 以虚电抗为主且吸收趋0。若薄片厚度不再远小于波长或皮肤深度，或者表面非局域性、磁响应、有限孔径显著，则不能用单一局域 \(\sigma_s\) 边界。

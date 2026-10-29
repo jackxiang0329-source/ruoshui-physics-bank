@@ -1,0 +1,24 @@
+(1) 力 \(F=-U'(x)=-\lambda x(x^2-a^2)\)。平衡为 \(x=\pm a,0\)，且 \(U''(x)=\lambda(3x^2-a^2)\)。所以 \(\pm a\) 是稳定极小，\(x=0\) 是不稳定极大。阱底小振动
+\[
+\omega_0=\sqrt{U''(a)/m}=a\sqrt{2\lambda/m},\qquad E_b=\lambda a^4/4.
+\]
+中心线性指数增长率 \(\omega_b=a\sqrt{\lambda/m}\)。
+(2) 置 \(E_b=\lambda a^4/4\)、\(s=\sqrt{4E/\lambda}\)（其量纲为长度平方）。方程 \(U(x)=E\) 等价于 \(x^2=a^2\pm s\)。左阱区间 \(-\sqrt{a^2+s}\le x\le-\sqrt{a^2-s}\)。故
+\[
+T(E)=\sqrt{2m}\int_{-\sqrt{a^2+s}}^{-\sqrt{a^2-s}}
+{dx\over\sqrt{E-\lambda(x^2-a^2)^2/4}}.
+\]
+被积式中分母是平方根四次多项式，作三角换元后得到完全椭圆积分。
+(3) 令 \(\delta=E_b-E\downarrow0\)，中心势垒附近
+\(U(x)=E_b-\lambda a^2x^2/2+O(x^4)=E_b-\frac12m\omega_b^2x^2+O(x^4)\)。靠近中心的左侧转折点 \(|x_t|\simeq\sqrt{2\delta/(m\omega_b^2)}\)。一次接近势垒邻域的时间
+\[
+\int_{|x_t|}^{\varepsilon}{dx\over\sqrt{(2/m)(E-U(x))}}
+\simeq {1\over\omega_b}\operatorname{arcosh}(\varepsilon/|x_t|)
+={1\over2\omega_b}\ln(C/\delta)+O(1),
+\]
+其中C为具有能量量纲的常数。一个完整周期包括两次经过近势垒区域，故
+\[
+T(E)={1\over\omega_b}\ln(C/\delta)+O(1),
+\]
+主对数系数 \(1/\omega_b\) 与中心负曲率唯一确定。分界轨道到势垒顶需无限时间，不能按有限频率的小振动处理。
+(4) 当 \(E>E_b\)，可跨过中心，转折点仅为 \(x=\pm\sqrt{a^2+\sqrt{4E/\lambda}}\)；总机械能 \(\frac12m\dot x^2+U(x)=E\) 守恒，因为无显含时驱动。\(E\to0\) 且粒子位于任一阱底附近时 \(T\to2\pi/\omega_0\)。\(E\uparrow E_b\) 时趋无限周期；\(\omega_b^{-1}=\sqrt{m/(\lambda a^2)}\) 是时间量纲，符合对数前因子要求。
