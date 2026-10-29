@@ -1,0 +1,16 @@
+(1) 采用横向小斜率近似，
+\[
+\Pi_2[w]=\tfrac12 EI\int_0^L(w'')^2dx-\tfrac12P\int_0^L(w')^2dx.
+\]
+变分得 \(EIw''''+Pw''=0\)，铰端条件 \(w(0)=w(L)=w''(0)=w''(L)=0\)。模态 \(\sin(n\pi x/L)\) 的临界载荷 \(P_n=EI(n\pi/L)^2\)，首阶 \(P_c=\pi^2 EI/L^2\)。
+(2) 令 \(w=A\sin(\pi x/L)\)，则 \(\int(w')^2dx=\pi^2A^2/(2L)\)，\(\int(w'')^2dx=\pi^4 A^2/(2L^3)\)。设杆的轴向拉伸刚度为 \(EA\!_\mathrm{ax}>0\)（此处 \(A\!_\mathrm{ax}\) 为横截面积，不是挠度振幅），则
+\[
+\Pi(A)={\pi^2(P_c-P)\over4L}A^2+
+{EA\!_\mathrm{ax}\pi^4\over32L^3}A^4 .
+\]
+(3) 记 \(\alpha=\pi^2(P_c-P)/(4L)\)、\(\beta=EA\!_\mathrm{ax}\pi^4/(32L^3)>0\)。驻点为 \(A=0\) 或
+\[
+A^2=-{\alpha\over2\beta}={4L^2(P-P_c)\over EA\!_\mathrm{ax}\pi^2}.
+\]
+当 \(P>P_c\)，两非零分支满足 \(\Pi''(A)=-4\alpha>0\) 为稳定极小，而直杆 \(A=0\) 变不稳定。相对直杆势能差 \(\Delta\Pi=-\alpha^2/(4\beta)=-L(P-P_c)^2/[2EA\!_\mathrm{ax}]\)。
+(4) \(P\downarrow P_c\) 时振幅按 \((P-P_c)^{1/2}\) 消失；要求 \(|A|\pi/L\ll1\) 且近临界只激励第一模。四次系数来自指定的位移兼容/拉伸简化模型，不应与无约束Euler死载荷的一切几何非线性等同；初始弯曲、材料塑性和端点转动刚度改变实际屈曲曲线。

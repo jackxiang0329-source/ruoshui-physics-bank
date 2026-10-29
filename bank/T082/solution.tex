@@ -1,0 +1,23 @@
+(1) 机器内部可逆意味着 \(\dot Q_h/T_1=\dot Q_c/T_2\)。代入热导律得到
+\[
+{T_h\over T_1}+{T_c\over T_2}=2,\quad
+P=\dot Q_h-\dot Q_c=\dot Q_h(1-T_2/T_1).
+\]
+(2) 定义 \(r=T_2/T_1\in(T_c/T_h,1)\)。约束给
+\(T_1=(T_h+T_c/r)/2,\ T_2=(rT_h+T_c)/2\)。于是
+\[
+P(r)={K\over2}[T_h+T_c-T_hr-T_c/r].
+\]
+\(P'(r)=K(-T_h+T_c/r^2)/2\)，\(P''(r)=-KT_c/r^3<0\)，唯一最优 \(r_*=\sqrt{T_c/T_h}\)。写 \(s=\sqrt{T_hT_c}\)，则
+\[
+T_{1*}=(T_h+s)/2,\quad T_{2*}=(T_c+s)/2,
+\quad P_{\max}={K\over2}(\sqrt{T_h}-\sqrt{T_c})^2,
+\quad\eta_*=1-\sqrt{T_c/T_h}.
+\]
+(3) 两接触界面分别产生 \(\dot S_{h}=\dot Q_h(1/T_1-1/T_h)>0\)、
+\(\dot S_c=\dot Q_c(1/T_c-1/T_2)>0\)。内机熵流相抵，整体
+\[
+\dot S_\mathrm{gen}=\dot Q_c/T_c-\dot Q_h/T_h>0
+\]
+由两项之和保证非负。传热存在有限温差，是外部不可逆的来源。
+(4) \(K\to0\) 时 \(P_{\max}\to0\)；\(T_h\to T_c\) 时 \(P_{\max}\sim K(T_h-T_c)^2/(8T_h)\to0\)。若 \(T_1=T_2\)，内部可逆热机效率0且不能输出正功。Carnot效率 \(1-T_c/T_h\) 大于 \(1-\sqrt{T_c/T_h}\)，因为最大功率选择了有限接触温差，不是准静态可逆的零功率极限。

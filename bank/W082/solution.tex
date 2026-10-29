@@ -1,0 +1,29 @@
+(1) 平衡 \(p_0'=-\rho_0g\)，且 \(c^2=\gamma p_0/\rho_0=\gamma gH\)。线性方程
+\[
+\rho_t'=-\partial_z(\rho_0v),\quad
+\rho_0v_t=-p_z'-g\rho',\quad
+p_t'=-vp_0'-\gamma p_0v_z=\rho_0gv-\rho_0c^2v_z .
+\]
+动量方程再对时间微分，并消去 \(\rho_t'\)、\(p_t'\)，可得
+\[
+v_{tt}=c^2(v_{zz}-H^{-1}v_z).
+\]
+(2) 以 \(v=e^{z/(2H)}\psi\) 代入得
+\[
+\psi_{tt}-c^2\psi_{zz}+\omega_a^2\psi=0,\qquad
+\omega_a=c/(2H).
+\]
+若 \(\psi=e^{i(kz-\omega t)}\)，则 \(\omega^2=\omega_a^2+c^2k^2\)。\(\omega>\omega_a\) 才有实垂向波数；更低频为沿z指数衰减/增长的非传播解，不能赋予实群速。
+(3) 对正频支，
+\[
+v_\mathrm{ph}=\omega/k>c,\qquad
+v_g=d\omega/dk=c^2k/\omega<c,\quad v_\mathrm{ph}v_g=c^2.
+\]
+\(\omega\downarrow\omega_a\) 时 \(v_g\to0\) 而 \(v_\mathrm{ph}\to\infty\)；高频两速度趋 \(c\)。原速度中的 \(e^{z/(2H)}\propto\rho_0^{-1/2}\) 对应波上行至稀薄层时为维持能流而振幅提高。
+(4) 约化方程乘 \(\psi_t\) 后整理成
+\[
+\partial_t\mathcal E+\partial_z\mathcal F=0,\quad
+\mathcal E={1\over2}(\psi_t^2+c^2\psi_z^2+\omega_a^2\psi^2),\quad
+\mathcal F=-c^2\psi_t\psi_z.
+\]
+\(\mathcal E\ge0\)，零通量边界下 \(\int\mathcal E dz\) 严格守恒。它是对经变量变换后的二阶方程的正定数学能量；真实流体声能还需使用压力、密度、速度与引力势的完整扰动表达，不应未经推导便把 \(\mathcal E\) 直接当作单位体积物理声能。
