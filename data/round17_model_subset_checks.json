@@ -1,0 +1,245 @@
+{
+  "round": 17,
+  "source_branch": "physics-round17-40-draft",
+  "verified_source_sha": "f9660e149734f56d1fb66c560d4a14f0992b7f83",
+  "github_actions_run": 40879037324,
+  "github_actions_url": "https://github.com/jackxiang0329-source/ruoshui-physics-bank/actions/runs/40879037324",
+  "conclusion": "success",
+  "checked_models": 40,
+  "executed_checks": 46,
+  "scope": "representative physical model tests, not full 160 independent subpart QA",
+  "independent_subpart_checks": 0,
+  "independent_expert_review": "待独立复核",
+  "tests": [
+    {
+      "id": "M102",
+      "method": "rotating_hoop_equilibrium",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "M102",
+      "method": "rotating_hoop_small_oscillation_curvature",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "M103",
+      "method": "spherical_pendulum_equilibrium",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "M103",
+      "method": "spherical_pendulum_nutation_frequency",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "M104",
+      "method": "central_powerlaw_orbit_radius_stationarity",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "M104",
+      "method": "central_powerlaw_radial_frequency",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "M105",
+      "method": "eccentric_collision_kinetic_energy_loss",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "M106",
+      "method": "elastic_rotating_disk_radial_force_balance",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "M107",
+      "method": "falling_body_quadratic_drag_ODE",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "M108",
+      "method": "balloon_pressure_as_energy_volume_derivative",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "E102",
+      "method": "graded_coaxial_radial_field_integration",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "E103",
+      "method": "two_mutually_coupled_inductors_dissipation",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "E104",
+      "method": "semiinfinite_RC_input_current_vs_charge_growth",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "E105",
+      "method": "sinusoidal_sheet_current_magnetic_energy",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "E106",
+      "method": "nonlinear_dielectric_energy_conjugate",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "E107",
+      "method": "Debye_loss_frequency_derivative",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "E108",
+      "method": "cold_plasma_whistler_low_frequency_index",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "T095",
+      "method": "two_dimensional_phonon_Bose_energy_integral",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "T096",
+      "method": "rotating_gas_radial_second_moment",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "T097",
+      "method": "Langmuir_occupancy_fugacity_fluctuation",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "T098",
+      "method": "cooling_slab_Robin_eigenvalue_equation",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "T099",
+      "method": "endoreversible_heat_engine_maximum_power",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "T099",
+      "method": "endoreversible_heat_engine_efficiency",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "T100",
+      "method": "van_der_Waals_Joule_Thomson_inversion_pressure",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "T101",
+      "method": "two_reservoir_mixing_entropy_inequality",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "W095",
+      "method": "string_with_point_mass_odd_even_jump_condition",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "W096",
+      "method": "foundation_string_phase_group_velocity_product",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "W097",
+      "method": "two_layer_internal_gravity_wave_long_limit",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "W098",
+      "method": "discrete_spring_chain_mode_difference_equation",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "W099",
+      "method": "Kelvin_Helmholtz_capillary_critical_shear",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "W100",
+      "method": "moving_string_convected_dispersion",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "W101",
+      "method": "Euler_Bernoulli_bending_wave_energy_velocity",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "O096",
+      "method": "Gaussian_beam_thin_lens_inverse_q",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "O097",
+      "method": "binary_phase_grating_first_Fourier_sideband",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "O098",
+      "method": "geometric_phase_retarder_unitary_spin_conversion",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "O099",
+      "method": "asymmetric_Fabry_Perot_nonamplifying_peak",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "O100",
+      "method": "chirped_Gaussian_optimal_dispersion_first_derivative",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "O100",
+      "method": "chirped_Gaussian_minimum_pulse_duration",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "O101",
+      "method": "Kerr_SPM_spectral_variance_Gaussian_integral",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "Q096",
+      "method": "double_Delta_well_even_bound_state_root",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "Q097",
+      "method": "Bose_Hubbard_double_occupancy_energy_derivative",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "Q098",
+      "method": "squeezed_harmonic_oscillator_Fock_probabilities",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "Q098",
+      "method": "squeezed_harmonic_oscillator_mean_quanta",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "Q099",
+      "method": "thermal_Heisenberg_dimer_entangled_PPT_threshold",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "Q100",
+      "method": "effective_mass_interface_probability_current",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    },
+    {
+      "id": "Q101",
+      "method": "Thomas_Fermi_harmonic_trap_particle_normalization",
+      "status": "executed_passed_in_verified_GitHub_Action"
+    }
+  ]
+}
