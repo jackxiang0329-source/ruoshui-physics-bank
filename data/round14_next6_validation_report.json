@@ -98,29 +98,29 @@
     {
       "id": "W075",
       "part": 1,
-      "method": "symbolic",
-      "name": "both independent traveling waves solve convected PDE",
+      "method": "energy_boundary",
+      "name": "Reynolds moving-end energy flux and Dirichlet kinematic condition",
       "passed": true
     },
     {
       "id": "W075",
       "part": 2,
-      "method": "dispersion",
-      "name": "both Doppler shifted characteristic branches",
+      "method": "adiabatic",
+      "name": "adiabatic action forces mode energy inverse proportional to length",
       "passed": true
     },
     {
       "id": "W075",
       "part": 3,
-      "method": "conservation",
-      "name": "full two-branch flux continuity at T=rho c squared",
+      "method": "independent_derivation",
+      "name": "time averaged wall work equals negative adiabatic energy derivative",
       "passed": true
     },
     {
       "id": "W075",
       "part": 4,
-      "method": "physical_case",
-      "name": "upstream blockage at critical flow and Galilean limit",
+      "method": "doppler",
+      "name": "moving wall reflection plus collision rate gives -Ldot/L",
       "passed": true
     },
     {
