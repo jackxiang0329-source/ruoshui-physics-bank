@@ -47,3 +47,5 @@
 质检补正：逐一对照第十二批22道草稿的权威源与 `data/problems.json` 镜像，发现 Q060、E062、T059 三题的 question/solution 共6个片段末尾多一个换行符，导致正式准入脚本的逐字节同步断言可能失败。现只移除这6个源文件的末尾多余换行，保留数学内容不变，镜像与权威源重新严格一致；草稿仍22/50，不增加题数。后续CI和PDF以修正提交对应工作流为准。
 
 分问验证补强：T059 第(4)问的 `dimensions` 方法现在显式使用 kg/m/s/A/K 五个SI基本量指数向量，独立验证 `GS²T/K` 无量纲、焦耳熵产生项与热漏项均为 W/K；不再仅凭代数恒等式声称量纲检查。此为检查方法实质增强，不增加题数或分问计数。
+
+发布门禁预检：发现草稿报告中22种细分检查方法标签（例如 `energy`、`symbolic_and_limit`、`maxwell_boundary_and_eigenchannels`）不在正式准入策略 `allowed_evidence_methods` 的七种类别内。保留原有每项实质检查内容，在记录函数中以显式映射规范为 `symbolic/numerical/limit/dimensions/conservation/independent_derivation/physical_case`，同步重生报告方法标签；核对22道题每题仍有至少两种独立检查类别，88项分问编号未变。此修复仅清除未来正式门禁的证据分类障碍，不声称完成200项检查或专家复核。

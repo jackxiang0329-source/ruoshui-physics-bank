@@ -5,10 +5,37 @@ import math
 import mpmath as mp
 import sympy as s
 from pathlib import Path
+METHOD_CATEGORIES={
+    'energy': 'conservation',
+    'canonical_commutator': 'symbolic',
+    'symbolic_and_limit': 'limit',
+    'strong_shock_limit': 'limit',
+    'symbolic_and_conservation': 'conservation',
+    'local_series': 'limit',
+    'symbolic_and_boundary': 'symbolic',
+    'local_derivative': 'symbolic',
+    'independent_numerical_asymptotics': 'numerical',
+    'symbolic_stationary_master_equation': 'symbolic',
+    'linear_response_and_entropy_inequality': 'conservation',
+    'tilted_generator_and_fluctuation_symmetry': 'independent_derivation',
+    'uncertainty_bound_and_near_equilibrium_limit': 'limit',
+    'symbolic_and_normalization': 'symbolic',
+    'independent_factorization': 'independent_derivation',
+    'scattering_flux_and_limit': 'conservation',
+    'chiral_symmetry_and_gap': 'physical_case',
+    'redshift_energy_and_limit': 'limit',
+    'maxwell_boundary_and_eigenchannels': 'independent_derivation',
+    'polarization_and_energy': 'conservation',
+    'passivity_optimization': 'symbolic',
+    'substrate_fresnel_and_quantized_hall': 'physical_case',
+}
+ALLOWED_EVIDENCE_METHODS={'symbolic','numerical','limit','dimensions','conservation','independent_derivation','physical_case'}
 checks=[]
 def record(uid,part,method,description,ok):
     assert bool(ok),(uid,part,description)
-    checks.append(dict(id=uid,part=part,method=method,name=description,passed=True))
+    normalized=METHOD_CATEGORIES.get(method,method)
+    assert normalized in ALLOWED_EVIDENCE_METHODS,(uid,part,method)
+    checks.append(dict(id=uid,part=part,method=normalized,name=description,passed=True))
 def eq(a,b=0):
     return s.simplify(a-b)==0
 pi=s.pi

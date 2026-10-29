@@ -104,7 +104,7 @@
     {
       "id": "W056",
       "part": 3,
-      "method": "energy",
+      "method": "conservation",
       "name": "Rayleigh quotient including boundary kinetic and spring energy equals eigenfrequency square",
       "passed": true
     },
@@ -146,7 +146,7 @@
     {
       "id": "Q057",
       "part": 1,
-      "method": "canonical_commutator",
+      "method": "symbolic",
       "name": "Stinespring one excitation rotation and Kraus completeness yield a trace preserving channel",
       "passed": true
     },
@@ -188,14 +188,14 @@
     {
       "id": "T057",
       "part": 3,
-      "method": "symbolic_and_limit",
+      "method": "limit",
       "name": "entropy production derivative is nonnegative and weak shock entropy begins cubically",
       "passed": true
     },
     {
       "id": "T057",
       "part": 4,
-      "method": "strong_shock_limit",
+      "method": "limit",
       "name": "strong shock finite compression, pressure and temperature scaling, subsonic downstream",
       "passed": true
     },
@@ -216,14 +216,14 @@
     {
       "id": "M060",
       "part": 3,
-      "method": "symbolic_and_limit",
+      "method": "limit",
       "name": "dragged bang bang terminal velocity and exact displacement inversion hold",
       "passed": true
     },
     {
       "id": "M060",
       "part": 4,
-      "method": "energy",
+      "method": "conservation",
       "name": "minimum time weak and strong drag asymptotics agree with exact arcosh solution",
       "passed": true
     },
@@ -244,7 +244,7 @@
     {
       "id": "E060",
       "part": 3,
-      "method": "energy",
+      "method": "conservation",
       "name": "Poynting power over electromagnetic energy density equals group velocity",
       "passed": true
     },
@@ -272,7 +272,7 @@
     {
       "id": "W057",
       "part": 3,
-      "method": "energy",
+      "method": "conservation",
       "name": "KdV soliton Hamiltonian includes correct negative gradient contribution",
       "passed": true
     },
@@ -321,7 +321,7 @@
     {
       "id": "M061",
       "part": 2,
-      "method": "symbolic_and_conservation",
+      "method": "conservation",
       "name": "exact heteroclinic orbit solves both nonholonomic equations and preserves energy",
       "passed": true
     },
@@ -335,28 +335,28 @@
     {
       "id": "M061",
       "part": 4,
-      "method": "local_series",
+      "method": "limit",
       "name": "cusp acceleration and zero second u derivative follow equations; reaction vanishes at reversal",
       "passed": true
     },
     {
       "id": "O058",
       "part": 1,
-      "method": "symbolic_and_boundary",
+      "method": "symbolic",
       "name": "complex Fresnel kernel derivative and edge amplitude agree with normalized erfc",
       "passed": true
     },
     {
       "id": "O058",
       "part": 2,
-      "method": "local_derivative",
+      "method": "symbolic",
       "name": "edge intensity equals one quarter and its slope has correct Fresnel length",
       "passed": true
     },
     {
       "id": "O058",
       "part": 3,
-      "method": "independent_numerical_asymptotics",
+      "method": "numerical",
       "name": "bright oscillations and shadow inverse-square tail agree with complex erfc numerical evaluation",
       "passed": true
     },
@@ -398,28 +398,28 @@
     {
       "id": "T058",
       "part": 1,
-      "method": "symbolic_stationary_master_equation",
+      "method": "symbolic",
       "name": "all three stationary tree-theorem edge currents equal the cycle-product difference",
       "passed": true
     },
     {
       "id": "T058",
       "part": 2,
-      "method": "linear_response_and_entropy_inequality",
+      "method": "conservation",
       "name": "cycle-affinity linear response and strictly positive sample entropy production",
       "passed": true
     },
     {
       "id": "T058",
       "part": 3,
-      "method": "tilted_generator_and_fluctuation_symmetry",
+      "method": "independent_derivation",
       "name": "counting-field eigenvalue has Gallavotti-Cohen symmetry and both exact cumulant rates",
       "passed": true
     },
     {
       "id": "T058",
       "part": 4,
-      "method": "uncertainty_bound_and_near_equilibrium_limit",
+      "method": "limit",
       "name": "exact thermodynamic uncertainty product approaches two at equilibrium and exceeds two away from it",
       "passed": true
     },
@@ -510,28 +510,28 @@
     {
       "id": "Q060",
       "part": 1,
-      "method": "symbolic_and_normalization",
+      "method": "symbolic",
       "name": "Dirac mass kink zero mode solves first order equation, has positive chirality and exact normalization",
       "passed": true
     },
     {
       "id": "Q060",
       "part": 2,
-      "method": "independent_factorization",
+      "method": "independent_derivation",
       "name": "SUSY partner A-dagger A has the Pöschl Teller well and A A-dagger is free above the gap",
       "passed": true
     },
     {
       "id": "Q060",
       "part": 3,
-      "method": "scattering_flux_and_limit",
+      "method": "conservation",
       "name": "Darboux-generated scattering wave solves partner equation with unit-modulus reflectionless transmission",
       "passed": true
     },
     {
       "id": "Q060",
       "part": 4,
-      "method": "chiral_symmetry_and_gap",
+      "method": "physical_case",
       "name": "uniform chiral-breaking mass shifts the bound eigenvalue exactly and preserves a positive continuum gap",
       "passed": true
     },
@@ -545,7 +545,7 @@
     {
       "id": "M062",
       "part": 2,
-      "method": "symbolic_and_limit",
+      "method": "limit",
       "name": "radial proper and coordinate epicyclic frequencies give ISCO and six pi M over r periapsis advance",
       "passed": true
     },
@@ -559,35 +559,35 @@
     {
       "id": "M062",
       "part": 4,
-      "method": "redshift_energy_and_limit",
+      "method": "limit",
       "name": "independent local Lorentz boost and gravitational redshift yield ISCO forward and backward photon shifts",
       "passed": true
     },
     {
       "id": "E062",
       "part": 1,
-      "method": "maxwell_boundary_and_eigenchannels",
+      "method": "independent_derivation",
       "name": "Maxwell magnetic sheet jump yields inverse Jones matrix and Hall circular eigenvalues",
       "passed": true
     },
     {
       "id": "E062",
       "part": 2,
-      "method": "polarization_and_energy",
+      "method": "conservation",
       "name": "lossless Hall sheet has orthogonal transmitted/reflected linear polarizations and unit total flux",
       "passed": true
     },
     {
       "id": "E062",
       "part": 3,
-      "method": "passivity_optimization",
+      "method": "symbolic",
       "name": "Joule dissipation equals missing Poynting flux and unique longitudinal optimum is global",
       "passed": true
     },
     {
       "id": "E062",
       "part": 4,
-      "method": "substrate_fresnel_and_quantized_hall",
+      "method": "physical_case",
       "name": "asymmetric dielectric Hall sheet obeys exact boundary and flux conservation, vacuum limit matches free sheet",
       "passed": true
     },
