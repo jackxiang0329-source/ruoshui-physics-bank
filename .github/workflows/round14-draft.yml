@@ -9,6 +9,7 @@ on:
       - 'scripts/check_round14_group3.py'
       - 'scripts/check_round14_group4.py'
       - 'scripts/check_round14_group5.py'
+      - 'scripts/check_round14_final8.py'
       - '.github/workflows/round14-draft.yml'
   workflow_dispatch:
 permissions:
@@ -32,6 +33,7 @@ jobs:
           python scripts/check_round14_group3.py
           python scripts/check_round14_group4.py
           python scripts/check_round14_group5.py
+          python scripts/check_round14_final8.py
       - name: Synchronize mirror and both TeX masters from bank canonical sources
         run: |
           python - <<'PY'
@@ -45,16 +47,17 @@ jobs:
           assert len(by_id)==len(data)
           manifest=json.loads((root/'data/rounds/round14-inprogress.json').read_text(encoding='utf8'))
           ids=manifest['ids']
-          assert len(ids)==manifest['actual_draft_items']
+          assert len(ids)==manifest['actual_draft_items']==50
           assert len(ids)==len(set(ids))
-          assert len(data)==402+len(ids)
           for uid in ids:
               folder=root/'bank'/uid
               meta=json.loads((folder/'meta.json').read_text(encoding='utf8'))
               meta['question']=(folder/'question.tex').read_text(encoding='utf8')
               meta['solution']=(folder/'solution.tex').read_text(encoding='utf8')
-              assert by_id[uid]==meta, f'draft mirror conflict: {uid}'
-          assert len(data)==402+manifest['actual_draft_items']
+              by_id[uid]=meta
+          assert len(by_id)==452
+          topic_order={'力学':0,'电磁学':1,'热学':2,'振动与波动':3,'光学':4,'近代物理':5}
+          data=sorted(by_id.values(),key=lambda v:(topic_order[v['topic']],v['id']))
           path.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
           PY
           python scripts/build.py
@@ -80,7 +83,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/problems.json data/index.csv tex/questions.tex tex/solutions.tex data/round14_draft_validation_report.json data/round14_extra6_validation_report.json data/round14_next6_validation_report.json data/round14_group3_validation_report.json data/round14_group4_validation_report.json data/round14_group5_validation_report.json
+          git add data/problems.json data/index.csv tex/questions.tex tex/solutions.tex data/round14_draft_validation_report.json data/round14_extra6_validation_report.json data/round14_next6_validation_report.json data/round14_group3_validation_report.json data/round14_group4_validation_report.json data/round14_group5_validation_report.json data/round14_final8_validation_report.json
           if ! git diff --cached --quiet; then
             git commit -m "draft(round14): sync canonical mirror and two TeX books; record cumulative executed checks"
             git push origin HEAD:physics-round14-50-work
