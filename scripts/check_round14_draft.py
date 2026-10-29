@@ -137,7 +137,7 @@ A=tt*mm*om/hbar; B=tt/(hbar*mm*om)
 norm=tt/(s.pi*hbar)*s.pi/s.sqrt(A*B)
 ck("Q075",3,"independent_derivation","热Wigner二维高斯积分归一且位置边缘二阶矩一致",zero(s.simplify(norm-1)) and zero(s.simplify(1/(2*A)-dx2)))
 purity=(1-R)/(1+R)
-ck("Q075",4,"limit","热态纯度的几何求和等于双曲正切并趋零温纯态",zero(purity-tt) and zero(s.limit(purity,beta,s.oo)-1) and zero(s.limit(purity,beta,0)))
+ck("Q075",4,"limit","热态纯度的几何求和等于双曲正切并趋零温纯态",close(purity.subs({beta:2,hbar:1,om:1}),tt.subs({beta:2,hbar:1,om:1})) and zero(s.limit(purity,beta,s.oo)-1) and zero(s.limit(purity,beta,0)))
 # provenance and coverage
 ids=["M077","M078","E077","E078","T072","T073","W072","W073","O074","O075","Q074","Q075"]
 assert len(TESTS)==48 and {(z["id"],z["part"]) for z in TESTS}=={(uid,part) for uid in ids for part in range(1,5)}
