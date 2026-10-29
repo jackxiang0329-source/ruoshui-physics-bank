@@ -1,0 +1,20 @@
+(1) 定义含时储能
+\[
+E(t)=\tfrac12m\dot x^2+\tfrac12m\omega_0^2[1+h\cos(\Omega t)]x^2.
+\]
+乘运动方程以 \(m\dot x\) 得
+\[
+\dot E=-2m\beta\dot x^2-\tfrac12m\omega_0^2h\Omega\sin(\Omega t)x^2.
+\]
+第二项是调制刚度的外控制参数功率，可以正也可以负。
+(2) 设 \(x=A(t)e^{i\Omega t/2}+A^*(t)e^{-i\Omega t/2}\)，丢弃 \(3\Omega/2\) 快谐波并保留小参数一阶，缓变方程等价于两实正交振幅的矩阵，其本征指数
+\[
+s_\pm=-\beta\pm\sqrt{\left({h\omega_0\over4}\right)^2-\left({\delta\over2}\right)^2}
+\]
+（误差为 \(O(h^2\omega_0,\beta h,\delta^2/\omega_0)\) 的平均量级）。
+(3) 无阻尼主失谐舌为 \(|\delta|<h\omega_0/2\)。有阻尼时增长需要
+\[
+(h\omega_0/4)^2>\beta^2+(\delta/2)^2.
+\]
+在 \(\delta=\beta=0\) 时 \(x\) 的包络增长指数 \(h\omega_0/4\)，平均能量随 \(e^{h\omega_0 t/2}\) 增长，直到线性与小振幅假设失效。
+(4) \(h\to0\) 时无激励指数实部 \(-\beta\)，\(\beta\to0\) 恢复无耗散舌边界，远离主共振振幅主阶不增长。能量由调制弹簧的外部执行器注入，不是无源能量创造；平均法仅对 \(|h|,\beta/\omega_0,|\delta|/\omega_0\ll1\) 且慢包络阶段有效。

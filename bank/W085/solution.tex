@@ -1,0 +1,20 @@
+(1) 令自由面 \(z=0\)、流体 \(z<0\)，速度势满足 \(\nabla^2\phi=0\)，深处衰减。线性边界条件
+\[
+\eta_t=\phi_z|_{z=0},\qquad
+\phi_t+g\eta-{\gamma\over\rho}\eta_{xx}=0\quad(z=0).
+\]
+代 \(\phi=\Phi e^{kz}e^{i(kx-\omega t)}\)、\(\eta=\eta_0e^{i(kx-\omega t)}\)，消去幅值得
+\[
+\omega^2=gk+{\gamma\over\rho}k^3.
+\]
+(2) \(c_p^2=\omega^2/k^2=g/k+\gamma k/\rho\)，微分为 \(-g/k^2+\gamma/\rho\)，故唯一最小点 \(k_*=\sqrt{\rho g/\gamma}\)，
+\[
+c_{p,\min}=\big(4g\gamma/\rho\big)^{1/4}.
+\]
+群速
+\[
+c_g={d\omega\over dk}={g+3\gamma k^2/\rho\over2\sqrt{gk+\gamma k^3/\rho}}.
+\]
+(3) 当 \(k\ll k_*\)，\(\omega\simeq\sqrt{gk},\,c_g\simeq c_p/2\)；当 \(k\gg k_*\)，\(\omega\simeq\sqrt{\gamma/\rho}\,k^{3/2},\,c_g\simeq3c_p/2\)。相位传播与窄带波包包络并不相同。
+(4) 对单位水平面积的表面波 \(\eta=a\cos(kx-\omega t)\)，时间平均重力位能 \(\langle U_g\rangle=\rho ga^2/4\)、界面能 \(\langle U_\gamma\rangle=\gamma k^2 a^2/4\)。由速度势和深度积分得平均动能
+\(\langle K\rangle=\rho\omega^2a^2/(4k)=(\rho g+\gamma k^2)a^2/4\)，故 \(\langle K\rangle=\langle U_g+U_\gamma\rangle\)，能量正定。有限水深会引入 \(\tanh(kh)\)，粘性产生衰减，大振幅破碎波超出线性近似。

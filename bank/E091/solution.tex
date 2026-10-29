@@ -1,0 +1,18 @@
+(1) 电子到达电势 \(\phi\) 的动能为 \(\frac12mv^2=e\phi\)，故 \(v=\sqrt{2e\phi/m}\)。电流绝对值 \(j=en v\)，体电荷 \(\rho=-en=-j/v\)，因此
+\[
+\phi''=-\rho/\epsilon_0={j\over\epsilon_0\sqrt{2e/m}}\phi^{-1/2}.
+\]
+记 \(A=\epsilon_0\sqrt{2e/m}\)，则 \(\phi''=(j/A)\phi^{-1/2}\)，边界 \(\phi(0)=\phi'(0)=0\)。
+(2) 乘 \(\phi'\) 积分，\((\phi')^2=4(j/A)\sqrt\phi\)，取正根 \(\phi'=2\sqrt{j/A}\phi^{1/4}\)。再积分有 \(\phi^{3/4}=(3/2)\sqrt{j/A}x\)。阳极 \(\phi(d)=V\) 给
+\[
+\phi(x)=V(x/d)^{4/3},\quad
+j={4\over9}\epsilon_0\sqrt{2e/m}\,{V^{3/2}\over d^2},
+\quad v(x)=\sqrt{2eV/m}(x/d)^{2/3},
+\quad n(x)=j/[ev(x)].
+\]
+(3) 令 \(v_a=\sqrt{2eV/m}\)，则
+\[
+t_{\rm tr}=\int_0^d{dx\over v_a(x/d)^{2/3}}={3d\over v_a}.
+\]
+电荷量绝对值/面积 \(\int_0^d en(x)dx=j\int_0^d dx/v(x)=jt_{\rm tr}\)，说明稳态储电荷与连续通量一致。
+(4) \(j\propto V^{3/2}d^{-2}\)，不是普通欧姆律。近阴极 \(n\sim x^{-2/3}\) 可积但发散，是零注入速度、冷单向流和连续介质极限的理想化；非零电子初速、等离子体碰撞、有限孔径与阴极发射能力不足会改变结果。

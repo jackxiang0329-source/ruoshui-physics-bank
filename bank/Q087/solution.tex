@@ -1,0 +1,17 @@
+(1) 总自旋 \(\boldsymbol S=(\hbar/2)(\boldsymbol\sigma_1+\boldsymbol\sigma_2)\)，
+\(\boldsymbol\sigma_1\cdot\boldsymbol\sigma_2=2S^2/\hbar^2-3I\)。triplet \(S=1\) 有本征值+1、能量 \(E_t=J/4\) 且3重简并；singlet \(S=0\) 有本征值-3、能量 \(E_s=-3J/4\) 且1重。
+(2) \(|\uparrow\downarrow\rangle=(|t_0\rangle+|s\rangle)/\sqrt2\)，演化
+\[
+|\psi(t)\rangle={e^{-iJt/(4\hbar)}|t_0\rangle+e^{i3Jt/(4\hbar)}|s\rangle\over\sqrt2}.
+\]
+去掉整体相位，写 \(\theta=Jt/\hbar\)，得
+\[
+|\psi(t)\rangle=e^{i\theta/4}\left[\cos(\theta/2)|\uparrow\downarrow\rangle-i\sin(\theta/2)|\downarrow\uparrow\rangle\right].
+\]
+交换概率 \(\sin^2(\theta/2)\)；当 \(\theta=\pi\)，实现SWAP（对全Hilbert空间相差整体相位）。
+(3) 对纯态 \(a|\uparrow\downarrow\rangle+b|\downarrow\uparrow\rangle\)，concurrence \(C=2|ab|\)，因此
+\[
+C(t)=|\sin\theta|.
+\]
+当 \(\theta=\pi/2\) 时 \(C=1\)，对该输入产生Bell最大纠缠；该时间所对应全空间算符的平方在相差局部或整体相位规范下等价SWAP，因此称sqrt(SWAP)交换门。
+(4) 因H自伴，\(U^\dagger U=I\)，\(|a|^2+|b|^2=1\)；初态平均能量 \((E_s+E_t)/2=-J/4\)，全过程不变。若两自旋存在不同Zeeman频率，\(|t_0\rangle\) 与\(|s\rangle\) 不再简单本征，需重新对角化；交换各向异性同样改变门角和纠缠演化。
