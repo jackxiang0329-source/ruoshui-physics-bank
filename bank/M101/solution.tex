@@ -1,0 +1,7 @@
+(1) 对于 \(r>0\)，直接计算 \(\partial_iG_{ij}=0\)，因为 \(\partial_j(1/r)=-r_j/r^3\) 而 \(\partial_i(r_ir_j/r^3)=r_j/r^3\)。压强 \(p(\mathbf r)=\mathbf F\cdot\mathbf r/(4\pi r^3)\)；代入 \(-\nabla p+\mu\nabla^2\mathbf u=0\) 在 \(r>0\) 成立，原点的delta源由包围小球的总应力通量承载。
+
+(2) 当 \(\mathbf r=r\mathbf e_x\) 时 \(G_{xx}=2/(8\pi\mu r)=1/(4\pi\mu r)\)，因此 \(u_x=F/(4\pi\mu r)\)。横向 \(\mathbf r=r\mathbf e_y\) 时 \(G_{xx}=1/(8\pi\mu r)\)，因此 \(u_x=F/(8\pi\mu r)\)；同样半径处沿力轴响应是横向的两倍。
+
+(3) Green张量满足 \(G_{ij}(\mathbf r)=G_{ji}(\mathbf r)=G_{ij}(-\mathbf r)\)。因而 \(\mathbf F_1^T G(\mathbf r_1-\mathbf r_2)\mathbf F_2=\mathbf F_2^T G(\mathbf r_2-\mathbf r_1)\mathbf F_1\)。这是自伴Stokes算子的互易性，也是两球远场水动力相互作用的基本对称约束。
+
+(4) 当 \(r\to0\)，\(G_{ij}\propto1/r\) 发散，点力不能提供真实有限半径物体的自移动率。半径 \(a\) 的刚球以速度 \(V\) 受 \(F=6\pi\mu aV\) 阻力，故自移动率为 \(\mu_{\rm self}=1/(6\pi\mu a)\)。若两球相距 \(r\gg a\)，互相诱导的领先项正是 \(G_{ij}(\mathbf r)\)，高阶有限尺寸修正依赖 \((a/r)^2\)。

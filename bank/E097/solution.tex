@@ -1,0 +1,7 @@
+(1) 稳态连续性 \(\nabla\cdot\mathbf j=(1/r)\partial_r(rj_r)=0\) 使 \(rj_r\) 为常数。与 \(\mathbf j=-\sigma\nabla\phi\) 联立得 \(\phi(r)=V\ln(b/r)/\ln(b/a)\)、\(j_r=\sigma V/[r\ln(b/a)]\)，流向径向外侧。
+
+(2) 柱面通量 \(I=2\pi r\ell j_r=2\pi\sigma\ell V/\ln(b/a)\) 与半径无关，故 \(\boxed{R=\ln(b/a)/(2\pi\sigma\ell)}\)。单位体积Joule热 \(q=j^2/\sigma=\sigma V^2/[r^2\ln^2(b/a)]\)，在靠内电极处最大。
+
+(3) 总体积积分 \(P=\int_a^b q(r)2\pi r\ell dr=(2\pi\sigma\ell V^2/\ln^2(b/a))\int_a^bdr/r=2\pi\sigma\ell V^2/\ln(b/a)=IV=I^2R\)。\(j_r\propto1/r\) 是因为每个圆柱壳的导电面积 \(2\pi r\ell\) 随半径增加。
+
+(4) 任意 \(\sigma(r)\) 有 \(E_r=I/[2\pi r\ell\sigma(r)]\)。所以 \(R_s=\int_a^b dr/[2\pi r\ell\sigma_0(r/a)^s]=[1-(a/b)^s]/(2\pi\ell\sigma_0s)\)。令 \(V(r)=I\int_r^bdr'/[2\pi r'\ell\sigma(r')]\)，可写为 \(\phi(r)=V[(a/r)^s-(a/b)^s]/[1-(a/b)^s]\)。利用 \(\lim_{s\to0}[1-x^s]/s=-\ln x\)，回到 \(R_0=\ln(b/a)/(2\pi\sigma_0\ell)\)。

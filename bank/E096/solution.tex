@@ -1,0 +1,7 @@
+(1) 记旋转阵 \(R(\theta)=\begin{pmatrix}\cos\theta&-\sin\theta\\\sin\theta&\cos\theta\end{pmatrix}\)。电导 \(\sigma=R\operatorname{diag}(\sigma_1,\sigma_2)R^T\)，因此 \(\sigma_{xx}=\sigma_1c^2+\sigma_2s^2\)，\(\sigma_{yy}=\sigma_1s^2+\sigma_2c^2\)，\(\sigma_{xy}=(\sigma_1-\sigma_2)cs\)。
+
+(2) 施加 \(E_x=E_0,E_y=0\)，得 \(J_x=\sigma_{xx}E_0\)、\(J_y=\sigma_{xy}E_0\)，偏转角为 \(\tan\phi=\sigma_{xy}/\sigma_{xx}\)。因为 \(\sigma\) 的本征值均正，\(\mathbf E\cdot\mathbf J=\sigma_1E_{x'}^2+\sigma_2E_{y'}^2>0\) 对非零电场严格成立。
+
+(3) 横向开路 \(0=\sigma_{xy}E_x+\sigma_{yy}E_y\)，故 \(E_y/E_x=-\sigma_{xy}/\sigma_{yy}\)。代回 \(J_x\) 得 \(\sigma_{\rm eff}=\sigma_{xx}-\sigma_{xy}^2/\sigma_{yy}=\det\sigma/\sigma_{yy}=\sigma_1\sigma_2/\sigma_{yy}\)。对应纵向有效电阻率是 \(\rho_{xx}=\sigma_{yy}/(\sigma_1\sigma_2)\)，始终正定。
+
+(4) 对于固定 \(|\mathbf E|=E_0\)，主轴分解给 \(\mathbf E\cdot\mathbf J=E_0^2(\sigma_1\cos^2\beta+\sigma_2\sin^2\beta)\)，所以最大和最小分别为 \(E_0^2\max(\sigma_1,\sigma_2)\) 与 \(E_0^2\min(\sigma_1,\sigma_2)\)。当 \(\sigma_1=\sigma_2=\sigma\)，张量是 \(\sigma I\)，偏角为0，全部旋转依赖消失。

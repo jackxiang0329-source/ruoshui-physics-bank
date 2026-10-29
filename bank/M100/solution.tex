@@ -1,0 +1,7 @@
+(1) 动力方程为 \(\partial_tu=\nu\partial_y^2u\)，\(\nu=\mu/\rho\)。以 \(u=\Re[\tilde u(y)e^{i\omega t}]\)，边界 \(\tilde u(0)=U_0,\tilde u(\infty)=0\)，得到 \(\tilde u''=(i\omega/\nu)\tilde u\)。选择实部为正的平方根 \(\sqrt{i\omega/\nu}=(1+i)/\delta\)，故 \(\boxed{\tilde u=U_0 e^{-(1+i)y/\delta}}\)。
+
+(2) \(\delta=\sqrt{2\nu/\omega}\)。实际速度 \(u=U_0e^{-y/\delta}\cos(\omega t-y/\delta)\)，幅度按 \(e^{-y/\delta}\) 衰减，深度 \(y\) 的相位滞后为 \(y/\delta\)。壁面流体侧剪应力 \(\tau_{xy}=\mu\partial_yu\)，其复幅 \(-\mu U_0(1+i)/\delta\)；壁面对流体的牵引方向与之相反。
+
+(3) 平均壁面供能 \(\overline{P}_{\rm wall}=-\langle\tau_{xy}(0,t)u(0,t)\rangle=\mu U_0^2/(2\delta)>0\)。体内耗散 \(\mathcal D=\int_0^\infty\mu\langle(\partial_yu)^2\rangle dy\)；复导数模平方是 \(2U_0^2e^{-2y/\delta}/\delta^2\)，时间平均再乘 \(1/2\)，故 \(\mathcal D=\mu U_0^2/(2\delta)\)，能量守恒精确成立。
+
+(4) 频率趋零时 \(\delta\propto\omega^{-1/2}\to\infty\)、应力幅 \(\sqrt2\mu U_0/\delta\to0\)；频率增大时 \(\delta\to0\)、应力幅 \(\propto\sqrt\omega\)。半无限流体的低频极限不一致收敛到有第二静壁的有限间距Couette解；不能交换远场 \(y\to\infty\) 与 \(\omega\to0\)。

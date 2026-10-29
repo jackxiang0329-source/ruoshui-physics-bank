@@ -1,0 +1,7 @@
+(1) 线性Boussinesq在 \(\nabla\cdot\mathbf u=0\) 下为 \(\partial_t\mathbf u=-\nabla p'/\rho+\nu\nabla^2\mathbf u+g\alpha_T\theta\mathbf e_z\)，\(\partial_t\theta=(\Delta T/H)w+\kappa\nabla^2\theta\)。定义 \(Ra=g\alpha_T\Delta TH^3/(\nu\kappa)\)。
+
+(2) 对横向 \(e^{ikx}\) 和竖直 \(\sin(n\pi z/H)\) 模型，无惯性中性态 \(s=0\) 下温度关系 \(\theta=(\Delta T/H)w/[\kappa(k^2+n^2\pi^2/H^2)]\)。消去压力得 \(\nu(k^2+q_n^2)^2w=g\alpha_T k^2\theta\)，其中 \(q_n=n\pi/H\)，故 \(Ra_n(a)=(a^2+n^2\pi^2)^3/a^2\)，\(a=kH\)。
+
+(3) 令 \(z=a^2\)，求导 \(d[(z+n^2\pi^2)^3/z]/dz=(z+n^2\pi^2)^2(2z-n^2\pi^2)/z^2\)。因此 \(a_c=\pi/\sqrt2\)（\(n=1\)），\(Ra_c=27\pi^4/4\)，\(\lambda_x=2\pi/k_c=2\sqrt2 H\)。第 \(n\) 模最小值按 \(n^4\) 增长，因此 \(n=1\) 最先失稳。
+
+(4) 上述是静态导热解的小扰动谱阈值。有限振幅可产生模态耦合、改变温度剖面，且边界的刚性/定热流条件会改变临界数；因此 \(Ra<Ra_c\) 表示针对所给理想边界的小扰动不增长，不可直接宣称非线性全局稳定。
