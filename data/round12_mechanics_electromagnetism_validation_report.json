@@ -1,0 +1,120 @@
+{
+  "status": "draft-continuation-only",
+  "new_problem_count": 4,
+  "passed_count": 16,
+  "tests": [
+    {
+      "id": "M065",
+      "part": 1,
+      "method": "symbolic",
+      "name": "effective-potential derivative vanishes exactly at prescribed circular orbit",
+      "passed": true
+    },
+    {
+      "id": "M065",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "radial force derivative equals negative effective-potential curvature",
+      "passed": true
+    },
+    {
+      "id": "M065",
+      "part": 3,
+      "method": "physical_case",
+      "name": "Kepler apsidal angle 2pi and isotropic oscillator angle pi",
+      "passed": true
+    },
+    {
+      "id": "M065",
+      "part": 4,
+      "method": "symbolic",
+      "name": "circular-orbit dE/dL equals positive orbital angular frequency",
+      "passed": true
+    },
+    {
+      "id": "M066",
+      "part": 1,
+      "method": "symbolic",
+      "name": "arc-length derivative and gravitational potential are exactly harmonic",
+      "passed": true
+    },
+    {
+      "id": "M066",
+      "part": 2,
+      "method": "physical_case",
+      "name": "quarter-period fall time independent of initial displacement and exact energy oscillator",
+      "passed": true
+    },
+    {
+      "id": "M066",
+      "part": 3,
+      "method": "numerical",
+      "name": "curvature radius and inward normal gravity projection checked at nontrivial angle",
+      "passed": true
+    },
+    {
+      "id": "M066",
+      "part": 4,
+      "method": "symbolic",
+      "name": "theta-coordinate energy exactly equals arc-length energy after Jacobian transformation",
+      "passed": true
+    },
+    {
+      "id": "E065",
+      "part": 1,
+      "method": "symbolic",
+      "name": "both dielectric boundary conditions hold at outer and inner interfaces",
+      "passed": true
+    },
+    {
+      "id": "E065",
+      "part": 2,
+      "method": "limit",
+      "name": "effective permittivity reduces to shell-only and equal-material sphere limits",
+      "passed": true
+    },
+    {
+      "id": "E065",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "neutral inclusion condition algebraically equivalent to zero exterior dipole",
+      "passed": true
+    },
+    {
+      "id": "E065",
+      "part": 4,
+      "method": "numerical",
+      "name": "sample positive dielectric stack has finite field and satisfies all four interface equations",
+      "passed": true
+    },
+    {
+      "id": "E066",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Maxwell conductor propagation constant satisfies diffusion dispersion",
+      "passed": true
+    },
+    {
+      "id": "E066",
+      "part": 2,
+      "method": "symbolic",
+      "name": "Faraday law and positive-real surface impedance exactly agree",
+      "passed": true
+    },
+    {
+      "id": "E066",
+      "part": 3,
+      "method": "conservation",
+      "name": "Poynting input equals depth-integrated Joule dissipation",
+      "passed": true
+    },
+    {
+      "id": "E066",
+      "part": 4,
+      "method": "limit",
+      "name": "depth-integrated dissipated power fraction approaches unity and skin depth obeys inverse square root of frequency",
+      "passed": true
+    }
+  ],
+  "independent_expert_review": "pending"
+}
