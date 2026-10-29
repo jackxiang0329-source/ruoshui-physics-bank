@@ -71,7 +71,7 @@ gap2=1-4*(1-1/N)*ss*(1-ss)
 ck('Q072',1,'symbolic','two dimensional Grover effective projector has unit trace and determinant proportional to marked overlap',eq(s.Rational(1,1),1) and eq((ss+(1-ss)/N)*(1-ss)*(N-1)/N-(1-ss)**2*(N-1)/N**2,ss*(1-ss)*(N-1)/N))
 ck('Q072',2,'limit','Grover avoided crossing reaches exact inverse root N minimum gap at half interpolation',eq(gap2.subs(ss,s.Rational(1,2)),1/N) and eq(s.diff(gap2,ss).subs(ss,s.Rational(1,2))))
 T=N/(epsilon*s.sqrt(N-1))*s.atan(s.sqrt(N-1))
-ck('Q072',3,'independent_derivation','local adiabatic inverse squared gap integral has exact arctangent form and square root asymptotic',eq(s.integrate(1/gap2,(ss,0,1)),N/s.sqrt(N-1)*s.atan(s.sqrt(N-1))) and eq(s.limit(T/(s.sqrt(N)/epsilon),N,s.oo),s.pi/2))
+ck('Q072',3,'independent_derivation','local adiabatic inverse squared gap integral has exact arctangent form and square root asymptotic',eq(s.diff(N/(2*s.sqrt(N-1))*s.atan(2*s.sqrt(N-1)*(ss-s.Rational(1,2))),ss),1/gap2) and abs(float(mp.quad(lambda t:1/(1-4*(1-1/10)*t*(1-t)),[0,0.5,1]))-float((N/s.sqrt(N-1)*s.atan(s.sqrt(N-1))).subs(N,10)))<1e-10 and eq(s.limit(T/(s.sqrt(N)/epsilon),N,s.oo),s.pi/2))
 coupling=s.sqrt(N-1)/(N*s.sqrt(gap2))
 ck('Q072',4,'physical_case','nonadiabatic matrix element peaks below unity and local schedule bounds transition ratio by epsilon',eq(coupling.subs(ss,s.Rational(1,2)),s.sqrt(1-1/N)) and eq(s.limit(T,N,1,dir='+'),1/epsilon))
 assert len(checks)==24 and len({(x['id'],x['part']) for x in checks})==24
