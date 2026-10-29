@@ -1348,6 +1348,52 @@
     "solution": "(1) 参考轨道引力梯度为 \\(\\delta\\boldsymbol g=-n^2[\\boldsymbol\\xi-3x\\boldsymbol e_x]\\)。旋转系离心线性项给平面坐标加 \\(n^2(x,y)\\)，科里奥利项为 \\(-2\\boldsymbol\\Omega\\times\\dot{\\boldsymbol\\xi}\\)，故\n\\[\n\\boxed{\\ddot x-2n\\dot y-3n^2x=0,\\quad\\ddot y+2n\\dot x=0,\\quad\\ddot z+n^2z=0}.\n\\]\n径向系数3正是引力潮汐2与离心1的合成，不能把参考轨道的加速度误认为追踪器的全部引力。\n\n(2) 由第二式得守恒 \\(C=\\dot y+2nx=\\dot y_0+2nx_0\\)，代入第一式得到 \\(\\ddot x+n^2x=2nC\\)。取 \\(A=x_0-2C/n,\\ B=\\dot x_0/n\\)，则\n\\[\nx=A\\cos nt+B\\sin nt+2C/n,\\quad\ny=y_0-3Ct-2A\\sin nt+2B(\\cos nt-1),\\quad\nz=z_0\\cos nt+\\dot z_0\\sin nt/n.\n\\]\n逐项代回可核对全部初值及方程。无沿轨道线性漂移等价于 \\(C=0\\)，否则 \\(y\\) 中存在零频Jordan模的 \\(t\\) 项，不可视为有界单频振荡。\n\n(3) 三个方程分别乘 \\(2\\dot x,2\\dot y,2\\dot z\\) 再相加，科里奥利功率严格抵消，得到\n\\[\n\\mathcal J=\\dot x^2+\\dot y^2+\\dot z^2-3n^2x^2+n^2z^2=\\mathrm{constant}.\n\\]\n该量不正定，因而单靠其守恒不能保证相对运动有界。对 \\(T=2\\pi/n\\) 取正弦余弦的整周期值，得到位置 \\((x_0,y_0-3CT,z_0)\\)、速度 \\((\\dot x_0,\\dot y_0,\\dot z_0)\\)。只有 \\(C=0\\) 才实现位置闭合，而闭合轨道的相对速度可以非零。\n\n(4) 若 \\(x_0=y_0=z_0=0\\)，则 \\(C=\\dot y_0\\)，故一周期后 \\(y(T)=-3T\\dot y_0\\)，重逢当且仅当 \\(\\dot y_0=0\\)；若要求零速对接，则全部初速度必须为零。 \\(\\mu\\to0^+\\) 同时使 \\(n\\to0\\)、\\(T\\to\\infty\\)，故不允许固定“一个周期”讨论自由运动极限；在固定物理时间展开三角函数才恢复匀速轨迹。要求 \\(\\sup_t|\\boldsymbol\\xi(t)|/R\\ll1\\)，特别是漂移情形 \\(3|C|t/R\\ll1\\)，否则原线性化已失效。\n"
   },
   {
+    "id": "M065",
+    "topic": "力学",
+    "title": "幂律中心势的圆轨道稳定性、径向频率与近心点进动",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 115,
+    "tags": [
+      "幂律有效势",
+      "近圆轨道进动",
+      "径向稳定性",
+      "能量角动量变分"
+    ],
+    "answer": "\\omega_r^2=(\\alpha+2)\\omega_\\phi^2,\\quad\\Delta\\phi=2\\pi/\\sqrt{\\alpha+2}",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v3.7-round12-draft",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C",
+    "question": "质量 \\(m>0\\) 的质点在中心势 \\(U(r)=kr^\\alpha/\\alpha\\) 内运动，\\(k>0,\\alpha\\ne0\\)，非零角动量 \\(L>0\\) 守恒。对 \\(\\alpha\\to0\\) 采用减去势能常数 \\(k/\\alpha\\) 后的对数势极限。\n(1) 构造径向有效势，求给定 \\(L\\) 时的圆轨道半径、角频率及能量，讨论 \\(\\alpha=-2\\) 的例外。\n(2) 求径向小振动频率、稳定性充要条件，并以两种不同方法核对。\n(3) 求近圆轨道每个径向周期的方位角增量，讨论Kepler与谐振子特例及有限偏心率限制。\n(4) 证明沿圆轨道族 \\(dE_c/dL=\\omega_\\phi\\)，讨论对数势和临界 \\(\\alpha\\to-2^+\\) 极限。\n",
+    "solution": "(1) 径向能量积分 \\(E=m\\dot r^2/2+U_{\\rm eff}\\)，其中 \\(U_{\\rm eff}=L^2/(2mr^2)+kr^\\alpha/\\alpha\\)。圆轨道满足 \\(U_{\\rm eff}'=-L^2/(mr^3)+kr^{\\alpha-1}=0\\)，故\n\\[\nL^2=mk r_0^{\\alpha+2},\\quad\n\\omega_\\phi=L/(mr_0^2),\\quad\n\\omega_\\phi^2=kr_0^{\\alpha-2}/m,\\quad\nE_c=kr_0^\\alpha(1/2+1/\\alpha).\n\\]\n\\(\\alpha=-2\\) 时只有调谐 \\(L^2=mk\\) 才允许任意半径的中性圆轨道，没有孤立 \\(r_0\\)。\n\n(2) \\(U_{\\rm eff}''=3L^2/(mr^4)+k(\\alpha-1)r^{\\alpha-2}\\)，在圆轨道为 \\((\\alpha+2)kr_0^{\\alpha-2}\\)。令 \\(r=r_0+\\rho\\)，有\n\\[\n\\ddot\\rho+\\omega_r^2\\rho=0,\\qquad\n\\boxed{\\omega_r^2=(\\alpha+2)\\omega_\\phi^2}.\n\\]\n\\(\\alpha>-2\\) 时孤立圆轨道稳定，\\(\\alpha=-2\\) 中性，\\(\\alpha<-2\\) 指数失稳。直接线性化 \\(m\\ddot r=L^2/(mr^3)-kr^{\\alpha-1}\\) 也得到同一结果。\n\n(3) \\(T_r=2\\pi/\\omega_r\\)，而 \\(\\dot\\phi=L/(mr^2)=\\omega_\\phi(1-2\\rho/r_0+O(\\rho^2))\\)，一阶周期平均扰动为零，因此\n\\[\n\\boxed{\\Delta\\phi=2\\pi/\\sqrt{\\alpha+2}},\\quad\\delta\\phi=\\Delta\\phi-2\\pi.\n\\]\nKepler势 \\(\\alpha=-1\\) 给 \\(2\\pi\\) 无进动，谐振子势 \\(\\alpha=2\\) 给 \\(\\pi\\)，两径向周期后闭合。频率比有理仅保证线性近圆轨道局部闭合，非线性有限振幅一般不能照搬。\n\n(4) \\(L=\\sqrt{mk}\\,r_0^{(\\alpha+2)/2}\\)，故 \\(dL/dr_0=(\\alpha+2)L/(2r_0)\\)，\\(dE_c/dr_0=(\\alpha+2)kr_0^{\\alpha-1}/2\\)，两者相除为 \\(dE_c/dL=L/(mr_0^2)=\\omega_\\phi\\)。\\(\\alpha\\to0\\) 应先减 \\(k/\\alpha\\) 常数，得到 \\(U=k\\ln r\\) 与 \\(\\omega_r=\\sqrt2\\omega_\\phi\\)；\\(\\alpha\\to-2^+\\) 径向软模趋零，近心点角发散，必须重新检查 \\(|\\rho|/r_0\\ll1\\) 的适用性。\n"
+  },
+  {
+    "id": "M066",
+    "topic": "力学",
+    "title": "摆线最速降线的等时性、精确简谐化与约束反力",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 115,
+    "tags": [
+      "摆线弧长坐标",
+      "等时曲线",
+      "非线性坐标简谐化",
+      "重力约束反力"
+    ],
+    "answer": "V(s)=mg s^2/(8a),\\quad\\ddot s+\\frac{g}{4a}s=0,\\quad T=4\\pi\\sqrt{a/g}",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v3.7-round12-draft",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C",
+    "question": "质点质量 \\(m>0\\) 在竖直平面内沿光滑固定倒置摆线滑动。取最低点为原点，令参数 \\(-\\pi<\\theta<\\pi\\)，轨道参数方程为 \\(x=a(\\theta+\\sin\\theta)\\)、\\(y=a(1-\\cos\\theta)\\)，其中 \\(y\\) 向上，\\(a>0\\)。重力加速度 \\(g>0\\)，无摩擦。\n(1) 由轨道参数化求弧长坐标 \\(s(\\theta)\\) 和重力势 \\(V(s)\\)，验证精确而非近似的简谐化。\n(2) 对任意不越过摆线尖点的释放位置 \\(s_0\\) 求到最低点的时间及完整振动周期，证明等时性。\n(3) 从曲率公式求轨道曲率半径，并求运动中的法向约束反力的表达式，判断尖点附近的适用边界。\n(4) 给出能量守恒的两种写法并分析 \\(a\\to\\infty\\)、小振幅极限与轨道法向失去接触时模型的局限。\n",
+    "solution": "(1) 求导 \\(x'=a(1+\\cos\\theta)\\)、\\(y'=a\\sin\\theta\\)，故\n\\(ds/d\\theta=\\sqrt{x'^2+y'^2}=2a\\cos(\\theta/2)>0\\)。\n取最低点 \\(s(0)=0\\)，积分得 \\(s=4a\\sin(\\theta/2)\\)。又 \\(y=a(1-\\cos\\theta)=2a\\sin^2(\\theta/2)=s^2/(8a)\\)，因此\n\\[\n\\boxed{V(s)=mgy=mg s^2/(8a)},\\qquad\nL_{\\rm mech}=\\tfrac12m\\dot s^2-\\tfrac{mg}{8a}s^2.\n\\]\n欧拉—拉格朗日方程精确成为 \\(\\ddot s+gs/(4a)=0\\)，不依赖小角度展开。\n\n(2) 从 \\(s(0)=s_0\\)、\\(\\dot s(0)=0\\) 释放，解为\n\\(s(t)=s_0\\cos(\\sqrt{g/(4a)}\\,t)\\)。\n首次抵达最低点时相位为 \\(\\pi/2\\)，故\n\\[\n\\boxed{t_{\\rm bottom}=\\pi\\sqrt{a/g}},\\qquad\n\\boxed{T=4\\pi\\sqrt{a/g}}.\n\\]\n两者与 \\(|s_0|<4a\\) 无关。此等时性来自弧长坐标下严格二次势，不等于任意轨道上所有振幅均等时。\n\n(3) 平面曲率 \\(\\kappa_c=|x'y''-y'x''|/(x'^2+y'^2)^{3/2}\\)。代入 \\(x''=-a\\sin\\theta\\)、\\(y''=a\\cos\\theta\\)，得\n\\(\\kappa_c=1/[4a\\cos(\\theta/2)]\\)，曲率半径 \\(R_c=4a\\cos(\\theta/2)\\)。以朝向曲率中心的单位法向为正，重力法向投影为 \\(mg\\cos(\\theta/2)\\)，法向约束力有符号分量满足\n\\[\n\\boxed{N_{\\rm signed}=m\\dot s^2/R_c-mg\\cos(\\theta/2)}.\n\\]\n这里 \\(N_{\\rm signed}\\) 可正可负；若轨道只允许单侧接触而不能双侧约束，负值意味着可能脱离，不能简单把它取绝对值仍当作同侧支持力。\n\n(4) 能量写为 \\(E=\\tfrac12m\\dot s^2+mg s^2/(8a)\\)，亦为 \\(E=\\tfrac12m(2a\\cos(\\theta/2)\\dot\\theta)^2+mga(1-\\cos\\theta)\\)，二者恒等。小振幅时 \\(\\theta\\simeq s/(2a)\\)，频率仍为 \\(\\sqrt{g/(4a)}\\)，并非只在此极限有效。固定 \\(g\\) 而 \\(a\\to\\infty\\) 时曲率趋零、周期趋无穷，局部近水平轨道上重力切向恢复力消失。靠近 \\(|\\theta|=\\pi\\) 的尖点，弧长雅可比趋零、曲率半径趋零，有限速度的法向加速度发散，真实有限强度导轨模型不再适用。\n"
+  },
+  {
     "id": "E007",
     "topic": "电磁学",
     "title": "滑动导体棒的自感反馈与能量耗散",
@@ -2693,6 +2739,52 @@
     "complexity_tier": "L5-C",
     "question": "带电粒子 \\(q\\ne0,m>0\\) 在均匀磁场 \\(B\\boldsymbol e_z\\) 中垂直磁场运动，初态 \\(\\gamma_0>1\\)。以每圈辐射能量远小于粒子总能量为假设，使用准圆轨道慢耗散模型；电磁辐射在经典、真空近似下计算。\n(1) 从相对论洛伦兹力推出瞬时半径、回旋频率及加速度，解释磁场不做功与粒子仍能辐射并不矛盾。\n(2) 利用Liénard公式 \\(P=q^2\\gamma^6[a^2-(\\boldsymbol v\\times\\boldsymbol a)^2/c^2]/(6\\pi\\varepsilon_0c^3)\\) 求总辐射功率，核对低速Larmor极限。\n(3) 使用辐射能量损失方程精确求出 \\(\\gamma(t)\\)、半径 \\(r(t)\\) 和长期衰减率，检查极限与量纲。\n(4) 在 \\(\\gamma\\gg1\\) 时估计前向聚束脉冲与临界角频率，写出绝热小参数，指出超相对论近似何时失效。\n",
     "solution": "(1) \\(\\dot{\\boldsymbol p}=q\\boldsymbol v\\times\\boldsymbol B\\)，因 \\(\\boldsymbol v\\cdot(\\boldsymbol v\\times\\boldsymbol B)=0\\)，故磁场不对质点做功。瞬时准圆运动满足 \\(\\gamma mv^2/r=|q|vB\\)，于是\n\\[\nr=\\gamma mv/(|q|B)=mc\\sqrt{\\gamma^2-1}/(|q|B),\\quad\n\\omega_B=|q|B/(\\gamma m),\\quad a=|q|Bv/(\\gamma m).\n\\]\n辐射所减少的机械能由粒子自身的辐射反作用负责，不能解释为静磁场向粒子输能。\n\n(2) 圆轨道上 \\(\\boldsymbol v\\perp\\boldsymbol a\\)，故Liénard括号是 \\(a^2(1-\\beta^2)=a^2/\\gamma^2\\)，结果为\n\\[\n\\boxed{P=q^2\\gamma^4a^2/(6\\pi\\varepsilon_0c^3)\n=\\frac{q^4B^2}{6\\pi\\varepsilon_0m^2c}(\\gamma^2-1)}.\n\\]\n在 \\(v/c\\to0\\) 时使用 \\(a\\simeq |q|Bv/m\\) 正好回到 \\(P=q^2a^2/(6\\pi\\varepsilon_0c^3)\\)，这也排除了把相对论质量重复计入加速度的错误。\n\n(3) 定义 \\(\\kappa=q^4B^2/(6\\pi\\varepsilon_0m^3c^3)\\)，由 \\(mc^2\\dot\\gamma=-P\\) 得\n\\[\n\\dot\\gamma=-\\kappa(\\gamma^2-1),\\quad\n\\frac12\\log\\frac{\\gamma-1}{\\gamma+1}=-\\kappa t+\\frac12\\log\\frac{\\gamma_0-1}{\\gamma_0+1}.\n\\]\n因此 \\(\\gamma(t)=\\coth[u_0+\\kappa t]\\)、\\(u_0=\\operatorname{arccoth}\\gamma_0\\)，并有 \\(r(t)=mc\\,\\operatorname{csch}[u_0+\\kappa t]/(|q|B)\\)。当 \\(t\\to\\infty\\)，\\(\\gamma-1\\sim2e^{-2(u_0+\\kappa t)}\\)、\\(r\\sim2mc e^{-(u_0+\\kappa t)}/(|q|B)\\)；\\(\\kappa\\) 的单位为逆时间。固定时间下 \\(B\\to0\\) 恢复几乎恒定的能量与直线轨迹。\n\n(4) 超相对论辐射聚束角约 \\(1/\\gamma\\)，掠过观测者的脉冲时长约 \\(r/(c\\gamma^3)\\)，同步辐射经典谱的标准临界尺度为\n\\[\n\\omega_{\\mathrm c}=\\frac{3\\gamma^3c}{2r}\\simeq\\frac{3|q|B}{2m}\\gamma^2\\quad(\\gamma\\gg1).\n\\]\n单圈周期 \\(2\\pi\\gamma m/(|q|B)\\)，故单圈能量损失相对于总能量为 \\(2\\pi P/(|q|Bc^2)\\ll1\\)，并须满足 \\(\\hbar\\omega_{\\mathrm c}\\ll\\gamma mc^2\\) 才可忽略量子效应。低速时前向聚束假设不成立，应使用回旋基频，不能错误外推临界谱公式。\n"
+  },
+  {
+    "id": "E065",
+    "topic": "电磁学",
+    "title": "核壳介电球的精确极化率、界面电场与中性包覆",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 115,
+    "tags": [
+      "球谐Laplace边值问题",
+      "核壳有效介电常数",
+      "中性包覆",
+      "极化自由能"
+    ],
+    "answer": "\\varepsilon_{\\rm eff}=\\varepsilon_2\\frac{\\varepsilon_1+2\\varepsilon_2+2f(\\varepsilon_1-\\varepsilon_2)}{\\varepsilon_1+2\\varepsilon_2-f(\\varepsilon_1-\\varepsilon_2)},\\quad\\alpha_e=4\\pi\\varepsilon_0\\varepsilon_3b^3\\frac{\\varepsilon_{\\rm eff}-\\varepsilon_3}{\\varepsilon_{\\rm eff}+2\\varepsilon_3}",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v3.7-round12-draft",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C",
+    "question": "半径 \\(a<b\\) 的同心核壳球位于无限均匀介质中，核、壳、背景相对介电常数为 \\(\\varepsilon_1,\\varepsilon_2,\\varepsilon_3>0\\)，无自由电荷。远处施加均匀场 \\(E_0\\boldsymbol e_z\\)，令 \\(f=(a/b)^3\\)。\n(1) 写出三区域轴对称电势及界面连续条件，说明外部偶极系数与总偶极矩关系。\n(2) 消去边界系数，求等效介电常数与总极化率，核对均匀球极限。\n(3) 求中性包覆的精确匹配条件，判断外部场在整个区域是否完全未扰动。\n(4) 计算核内均匀电场及壳层径向、切向电场，解释固定外场的极化自由能与外部电源功。\n",
+    "solution": "(1) 轴对称纯 \\(\\ell=1\\) 解可写\n\\[\n\\Phi_1=-AE_0r\\cos\\theta,\\quad\n\\Phi_2=-E_0(Br+C/r^2)\\cos\\theta,\\quad\n\\Phi_3=-E_0(r-D/r^2)\\cos\\theta .\n\\]\n在 \\(r=a,b\\) 均有电势连续 \\([\\Phi]=0\\) 与法向位移连续 \\([\\varepsilon\\partial_r\\Phi]=0\\)，因为无自由面电荷。外部偶极势系数 \\(E_0D\\)，故 \\(p=4\\pi\\varepsilon_0\\varepsilon_3E_0D\\)。\n\n(2) 在核壳界面 \\(A=B+C/a^3\\)、\\(\\varepsilon_1A=\\varepsilon_2(B-2C/a^3)\\)，得到 \\(C/a^3=(\\varepsilon_2-\\varepsilon_1)B/(\\varepsilon_1+2\\varepsilon_2)\\)。再代入外界面方程，定义\n\\[\n\\varepsilon_{\\rm eff}=\\varepsilon_2\n\\frac{\\varepsilon_1+2\\varepsilon_2+2f(\\varepsilon_1-\\varepsilon_2)}\n{\\varepsilon_1+2\\varepsilon_2-f(\\varepsilon_1-\\varepsilon_2)}.\n\\]\n消元得 \\(D=b^3(\\varepsilon_{\\rm eff}-\\varepsilon_3)/(\\varepsilon_{\\rm eff}+2\\varepsilon_3)\\)，故\n\\[\n\\boxed{\\alpha_e=\\frac p{E_0}=4\\pi\\varepsilon_0\\varepsilon_3b^3\n\\frac{\\varepsilon_{\\rm eff}-\\varepsilon_3}{\\varepsilon_{\\rm eff}+2\\varepsilon_3}}.\n\\]\n当 \\(f\\to0\\) 或 \\(\\varepsilon_1=\\varepsilon_2\\) 时均退化为均匀介质球的极化率。\n\n(3) 中性包覆要求 \\(\\alpha_e=0\\)，即 \\(\\varepsilon_{\\rm eff}=\\varepsilon_3\\)，等价于\n\\[\n(\\varepsilon_2-\\varepsilon_3)(\\varepsilon_1+2\\varepsilon_2)\n+f(\\varepsilon_1-\\varepsilon_2)(\\varepsilon_3+2\\varepsilon_2)=0.\n\\]\n均匀远场仅激发 \\(\\ell=1\\) 通道，因此 \\(D=0\\) 使 \\(r>b\\) 整个外部静电场严格等于原均匀场，并非仅在无限远处近似相等；内部电场和极化电荷仍可非零。\n\n(4) 由内界面条件 \\(A=3\\varepsilon_2B/(\\varepsilon_1+2\\varepsilon_2)\\)，其中\n\\[\nB=\\frac{3\\varepsilon_3}{\\varepsilon_{\\rm eff}+2\\varepsilon_3}\n\\frac{\\varepsilon_1+2\\varepsilon_2}{\\varepsilon_1+2\\varepsilon_2-f(\\varepsilon_1-\\varepsilon_2)}.\n\\]\n核内 \\(\\boldsymbol E_1=AE_0\\boldsymbol e_z\\)；壳层 \\(E_{2r}=E_0(B-2C/r^3)\\cos\\theta\\)、\\(E_{2\\theta}=-E_0(B+C/r^3)\\sin\\theta\\)。线性响应且外部电源固定 \\(E_0\\) 时，插入球体的极化自由能 \\(\\Delta F=-\\int_0^{E_0}p(E)dE=-\\alpha_eE_0^2/2\\)，包含电源的做功；固定自由电荷边界条件下必须变换热力学势，不能照搬此负号。\n"
+  },
+  {
+    "id": "E066",
+    "topic": "电磁学",
+    "title": "导电半空间高频趋肤效应、复表面阻抗与焦耳能流守恒",
+    "kind": "综合推导题",
+    "level": 5,
+    "estimated_minutes": 115,
+    "tags": [
+      "导体内复波数",
+      "趋肤深度与相位滞后",
+      "表面阻抗",
+      "Poynting焦耳能量平衡"
+    ],
+    "answer": "\\delta=\\sqrt{2/(\\mu\\sigma\\omega)},\\quad Z_s=(1-i)/(\\sigma\\delta),\\quad \\langle S_z\\rangle=\\sigma\\delta|E_0|^2/4",
+    "quality_status": "待独立复核",
+    "tier": "advanced_composite",
+    "format": "latex-fragment-v1",
+    "revision": "composite-v3.7-round12-draft",
+    "challenge_profile": "high-multistage",
+    "complexity_tier": "L5-C",
+    "question": "均匀各向同性良导体占据 \\(z>0\\)，磁导率 \\(\\mu>0\\)、电导率 \\(\\sigma>0\\)、介电常数 \\(\\varepsilon>0\\)。在 \\(z=0\\) 施加沿 \\(x\\) 的谐波切向电场 \\(E_x(0,t)=\\operatorname{Re}[E_0e^{-i\\omega t}]\\)，\\(\\omega>0\\)，且 \\(\\sigma\\gg\\omega\\varepsilon\\)。所有场仅依赖 \\(z\\)。\n(1) 由Maxwell方程推导导体内复波数和趋肤深度，选择满足 \\(z\\to\\infty\\) 衰减的分支。\n(2) 求伴随磁场和复表面阻抗 \\(Z_s=E_x(0)/H_y(0)\\)，检查相位及低频极限适用条件。\n(3) 独立计算表面平均Poynting通量与体内焦耳热积分，验证能量守恒。\n(4) 计算深度 \\(z\\) 以内的耗散占比，讨论频率翻倍、有限厚度及位移电流不可忽略时的修正边界。\n",
+    "solution": "(1) 采用 \\(e^{-i\\omega t}\\) 约定，Faraday方程给 \\(\\partial_zE_x=i\\omega\\mu H_y\\)，Ampère方程给 \\(-\\partial_zH_y=(\\sigma-i\\omega\\varepsilon)E_x\\)。因此\n\\[\nE_x''=( -i\\omega\\mu\\sigma-\\omega^2\\mu\\varepsilon)E_x.\n\\]\n良导体近似忽略位移电流，令 \\(\\delta=\\sqrt{2/(\\mu\\sigma\\omega)}\\)，衰减分支为\n\\[\n\\boxed{E_x(z)=E_0e^{-(1-i)z/\\delta}}.\n\\]\n复指数实部衰减，虚部体现向内部的相位推进，选另一根会在半无限导体内发散。\n\n(2) 由Faraday关系\n\\[\nH_y(z)=\\frac{1+i}{\\omega\\mu\\delta}E_x(z)\n=\\frac{\\sigma\\delta}{2}(1+i)E_x(z).\n\\]\n所以\n\\[\n\\boxed{Z_s=\\frac{E_x(0)}{H_y(0)}=\\frac{1-i}{\\sigma\\delta}}.\n\\]\n实部为正代表耗散，虚部符号取决于 \\(e^{-i\\omega t}\\) 约定。趋肤近似要求 \\(\\sigma\\gg\\omega\\varepsilon\\) 且导体厚度远大于 \\(\\delta\\)；\\(\\omega\\to0\\) 时 \\(\\delta\\to\\infty\\)，半无限趋肤解不能不加限制地替代静态电流边值问题。\n\n(3) 时间平均能流沿 \\(+z\\)，\n\\[\n\\langle S_z(0)\\rangle=\\tfrac12\\operatorname{Re}(E_0H_0^*)\n=\\frac{\\sigma\\delta|E_0|^2}{4}.\n\\]\n体内焦耳热每单位面积为\n\\[\nP_J/A=\\int_0^\\infty\\frac{\\sigma|E_0|^2}{2}e^{-2z/\\delta}dz\n=\\frac{\\sigma\\delta|E_0|^2}{4},\n\\]\n与输入能流完全一致。由于半无限远处场为零，稳态平均无净电磁能积累；这也独立检验了复表面阻抗实部的符号。\n\n(4) 深度 \\(z\\) 内耗散占比\n\\[\n\\frac{\\int_0^z\\sigma|E(z')|^2dz'}{\\int_0^\\infty\\sigma|E(z')|^2dz'}\n=1-e^{-2z/\\delta}.\n\\]\n频率加倍使 \\(\\delta\\) 变为原来的 \\(1/\\sqrt2\\)，在固定表面 \\(E_0\\) 条件下总耗散 \\(\\propto\\delta\\)，而在固定表面磁场条件下总耗散 \\(\\propto1/\\delta\\)；必须声明边界驱动。有限厚度接近 \\(\\delta\\) 时背面反射影响指数剖面，位移电流与传导电流可比时应使用完整复根而非良导体公式。\n"
   },
   {
     "id": "T007",

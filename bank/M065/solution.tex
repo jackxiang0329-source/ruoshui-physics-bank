@@ -1,0 +1,23 @@
+(1) 径向能量积分 \(E=m\dot r^2/2+U_{\rm eff}\)，其中 \(U_{\rm eff}=L^2/(2mr^2)+kr^\alpha/\alpha\)。圆轨道满足 \(U_{\rm eff}'=-L^2/(mr^3)+kr^{\alpha-1}=0\)，故
+\[
+L^2=mk r_0^{\alpha+2},\quad
+\omega_\phi=L/(mr_0^2),\quad
+\omega_\phi^2=kr_0^{\alpha-2}/m,\quad
+E_c=kr_0^\alpha(1/2+1/\alpha).
+\]
+\(\alpha=-2\) 时只有调谐 \(L^2=mk\) 才允许任意半径的中性圆轨道，没有孤立 \(r_0\)。
+
+(2) \(U_{\rm eff}''=3L^2/(mr^4)+k(\alpha-1)r^{\alpha-2}\)，在圆轨道为 \((\alpha+2)kr_0^{\alpha-2}\)。令 \(r=r_0+\rho\)，有
+\[
+\ddot\rho+\omega_r^2\rho=0,\qquad
+\boxed{\omega_r^2=(\alpha+2)\omega_\phi^2}.
+\]
+\(\alpha>-2\) 时孤立圆轨道稳定，\(\alpha=-2\) 中性，\(\alpha<-2\) 指数失稳。直接线性化 \(m\ddot r=L^2/(mr^3)-kr^{\alpha-1}\) 也得到同一结果。
+
+(3) \(T_r=2\pi/\omega_r\)，而 \(\dot\phi=L/(mr^2)=\omega_\phi(1-2\rho/r_0+O(\rho^2))\)，一阶周期平均扰动为零，因此
+\[
+\boxed{\Delta\phi=2\pi/\sqrt{\alpha+2}},\quad\delta\phi=\Delta\phi-2\pi.
+\]
+Kepler势 \(\alpha=-1\) 给 \(2\pi\) 无进动，谐振子势 \(\alpha=2\) 给 \(\pi\)，两径向周期后闭合。频率比有理仅保证线性近圆轨道局部闭合，非线性有限振幅一般不能照搬。
+
+(4) \(L=\sqrt{mk}\,r_0^{(\alpha+2)/2}\)，故 \(dL/dr_0=(\alpha+2)L/(2r_0)\)，\(dE_c/dr_0=(\alpha+2)kr_0^{\alpha-1}/2\)，两者相除为 \(dE_c/dL=L/(mr_0^2)=\omega_\phi\)。\(\alpha\to0\) 应先减 \(k/\alpha\) 常数，得到 \(U=k\ln r\) 与 \(\omega_r=\sqrt2\omega_\phi\)；\(\alpha\to-2^+\) 径向软模趋零，近心点角发散，必须重新检查 \(|\rho|/r_0\ll1\) 的适用性。

@@ -1,0 +1,39 @@
+(1) 采用 \(e^{-i\omega t}\) 约定，Faraday方程给 \(\partial_zE_x=i\omega\mu H_y\)，Ampère方程给 \(-\partial_zH_y=(\sigma-i\omega\varepsilon)E_x\)。因此
+\[
+E_x''=( -i\omega\mu\sigma-\omega^2\mu\varepsilon)E_x.
+\]
+良导体近似忽略位移电流，令 \(\delta=\sqrt{2/(\mu\sigma\omega)}\)，衰减分支为
+\[
+\boxed{E_x(z)=E_0e^{-(1-i)z/\delta}}.
+\]
+复指数实部衰减，虚部体现向内部的相位推进，选另一根会在半无限导体内发散。
+
+(2) 由Faraday关系
+\[
+H_y(z)=\frac{1+i}{\omega\mu\delta}E_x(z)
+=\frac{\sigma\delta}{2}(1+i)E_x(z).
+\]
+所以
+\[
+\boxed{Z_s=\frac{E_x(0)}{H_y(0)}=\frac{1-i}{\sigma\delta}}.
+\]
+实部为正代表耗散，虚部符号取决于 \(e^{-i\omega t}\) 约定。趋肤近似要求 \(\sigma\gg\omega\varepsilon\) 且导体厚度远大于 \(\delta\)；\(\omega\to0\) 时 \(\delta\to\infty\)，半无限趋肤解不能不加限制地替代静态电流边值问题。
+
+(3) 时间平均能流沿 \(+z\)，
+\[
+\langle S_z(0)\rangle=\tfrac12\operatorname{Re}(E_0H_0^*)
+=\frac{\sigma\delta|E_0|^2}{4}.
+\]
+体内焦耳热每单位面积为
+\[
+P_J/A=\int_0^\infty\frac{\sigma|E_0|^2}{2}e^{-2z/\delta}dz
+=\frac{\sigma\delta|E_0|^2}{4},
+\]
+与输入能流完全一致。由于半无限远处场为零，稳态平均无净电磁能积累；这也独立检验了复表面阻抗实部的符号。
+
+(4) 深度 \(z\) 内耗散占比
+\[
+\frac{\int_0^z\sigma|E(z')|^2dz'}{\int_0^\infty\sigma|E(z')|^2dz'}
+=1-e^{-2z/\delta}.
+\]
+频率加倍使 \(\delta\) 变为原来的 \(1/\sqrt2\)，在固定表面 \(E_0\) 条件下总耗散 \(\propto\delta\)，而在固定表面磁场条件下总耗散 \(\propto1/\delta\)；必须声明边界驱动。有限厚度接近 \(\delta\) 时背面反射影响指数剖面，位移电流与传导电流可比时应使用完整复根而非良导体公式。
