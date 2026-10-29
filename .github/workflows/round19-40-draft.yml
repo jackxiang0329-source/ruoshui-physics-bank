@@ -30,7 +30,7 @@ jobs:
       - name: Install XeLaTeX and Chinese typesetting
         run: |
           sudo apt-get update -qq
-          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends texlive-xetex texlive-lang-chinese fonts-noto-cjk
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends texlive-xetex texlive-lang-chinese texlive-fonts-recommended fonts-noto-cjk
       - name: Generate two draft-only books
         run: node scripts/build_round19_draft.js
       - name: Compile questions and worked solutions
