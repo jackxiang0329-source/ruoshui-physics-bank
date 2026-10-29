@@ -1,0 +1,23 @@
+(1) 取 \(x=R\sin\theta\cos\Omega t,\ y=R\sin\theta\sin\Omega t,\ z=-R\cos\theta\)，则动能 \(\frac12mR^2(\dot\theta^2+\Omega^2\sin^2\theta)\)，重力势 \(-mgR\cos\theta\)，故
+\[
+L={mR^2\over2}\dot\theta^2+{mR^2\Omega^2\over2}\sin^2\theta+mgR\cos\theta.
+\]
+运动方程 \(mR^2\ddot\theta=mR^2\Omega^2\sin\theta\cos\theta-mgR\sin\theta\)。
+(2) 有效势
+\[
+V_{\rm eff}=-mgR\cos\theta-\tfrac12mR^2\Omega^2\sin^2\theta.
+\]
+驻点 \(\sin\theta(g-R\Omega^2\cos\theta)=0\)。最低点 \(\theta=0\) 在 \(\Omega^2<g/R\) 稳定；最高点 \(\theta=\pi\) 始终不稳定；当 \(\Omega^2>g/R\) 出现 \(\theta_\pm=\pm\arccos[g/(R\Omega^2)]\) 两稳定平衡，而最低点转为不稳定。临界 \(\Omega_c=\sqrt{g/R}\)。
+(3) 在最低点 \(\omega_{\rm small}^2=g/R-\Omega^2\)。非零平衡处
+\[
+\omega_{\rm small}^2={V_{\rm eff}''(\theta_\pm)\over mR^2}
+=\Omega^2\left(1-{g^2\over R^2\Omega^4}\right).
+\]
+临界处两支软化为零，需要非线性分析；高速时稳定位置趋水平，\(\omega_{\rm small}\simeq\Omega\)。
+(4) 定常共转动力学积分
+\[
+J=\tfrac12mR^2\dot\theta^2+V_{\rm eff}(\theta)
+=E_{\rm lab}-\Omega L_z,
+\quad L_z=mR^2\Omega\sin^2\theta.
+\]
+由于 \(\Omega\) 恒定，\(\dot E_{\rm lab}=\Omega\dot L_z\)：外部电机以功率 \(\Omega\tau_z\) 向珠子传递能量；J守恒但地面机械能一般不守恒。

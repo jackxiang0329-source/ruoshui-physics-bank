@@ -1,0 +1,26 @@
+(1) 从拉格朗日密度
+\[
+\mathcal L={\mu\over2}(u_{1,t}^2+u_{2,t}^2)-{T\over2}(u_{1,x}^2+u_{2,x}^2)-{k_c\over2}(u_1-u_2)^2
+\]
+得到 \(\mu u_{1,tt}=T u_{1,xx}-k_c(u_1-u_2)\)、\(\mu u_{2,tt}=T u_{2,xx}+k_c(u_1-u_2)\)。令 \(u_\pm=(u_1\pm u_2)/\sqrt2\)，则
+\(\mu u_{+,tt}=Tu_{+,xx}\)、\(\mu u_{-,tt}=Tu_{-,xx}-2k_cu_-\)。
+(2) 代 \(e^{i(qx-\omega t)}\) 得
+\[
+\omega_+^2=(T/\mu)q^2,\quad
+\omega_-^2=(T/\mu)q^2+2k_c/\mu.
+\]
+反对称支在q=0有截止频率 \(\sqrt{2k_c/\mu}\)，正对称支为无隙声学波；群速 \(v_{g,\pm}=(Tq/\mu)/\omega_\pm\)，当 \(k_c\to0\) 两支简并。
+(3) 对给定q两模等幅激励可令
+\[
+u_1=A\cos(qx)[\cos(\omega_+t)+\cos(\omega_-t)]/2,\quad
+u_2=A\cos(qx)[\cos(\omega_+t)-\cos(\omega_-t)]/2,
+\]
+初时 \(u_1=A\cos qx,u_2=0\)，且两者初速均0。恒等式给 \(u_1=A\cos qx\cos(\bar\omega t)\cos(\Delta\omega t/2)\)，
+\(u_2=-A\cos qx\sin(\bar\omega t)\sin(\Delta\omega t/2)\)，其中 \(\bar\omega=(\omega_++\omega_-)/2\)、\(\Delta\omega=\omega_--\omega_+\)。对近简并 \(\Delta\omega\ll\bar\omega\)，时间平均包络能量近似在两弦间以周期 \(2\pi/|\Delta\omega|\) 交换；更精确是否完全转移还取决于动量分量和相位同步，不应把位移零点直接当作完整能量转移。
+(4) 正定能量密度
+\[
+\mathcal E={\mu\over2}(u_{1,t}^2+u_{2,t}^2)+{T\over2}(u_{1,x}^2+u_{2,x}^2)+{k_c\over2}(u_1-u_2)^2,
+\quad
+\mathcal F=-T(u_{1,t}u_{1,x}+u_{2,t}u_{2,x}).
+\]
+乘各方程以相应速度并相加，耦合项合并为耦合势能时间导数，故 \(\partial_t\mathcal E+\partial_x\mathcal F=0\)。

@@ -1,0 +1,22 @@
+(1) 设 \(\bar E=\langle H\rangle\)、\(\Delta E^2=\langle H^2\rangle-\bar E^2\)。由时间演化指数展开
+\[
+A(t)=1-{i\bar Et\over\hbar}-{\langle H^2\rangle t^2\over2\hbar^2}+o(t^2).
+\]
+取模平方
+\[
+P(t)=|A(t)|^2=1-{\Delta E^2t^2\over\hbar^2}+o(t^2).
+\]
+(2) 每次成功投影后复位同一态，故
+\[
+P_N(t)=\left[P(t/N)\right]^N
+\simeq\left(1-{\Delta E^2t^2\over N^2\hbar^2}\right)^N
+\to1 \quad(N\to\infty)
+\]
+在理想瞬时无限频投影极限成立。
+(3) 定义Zeno时间 \(\tau_Z=\hbar/\Delta E\)。当 \(\tau=t/N\ll\tau_Z\)，
+\[
+P_N(t)\approx\exp[-t\tau/\tau_Z^2],\qquad
+\Gamma_\mathrm{eff}={\tau\over\tau_Z^2}={\Delta E^2\over\hbar^2}\tau.
+\]
+所以减小间隔tau使有效衰减率线性降低；这与无记忆指数模型 \(e^{-\Gamma t}\) 从t=0即有非零斜率不同。
+(4) 理想投影被视为独立瞬时操作，实际测量有有限持续时间、探针反作用和能谱带宽。若 \(\langle H^2\rangle\) 不存在，短时二次展开未必成立；有漏检、非投影POVM或环境Markov过程也不保证完全Zeno冻结。

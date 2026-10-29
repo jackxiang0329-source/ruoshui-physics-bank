@@ -1,0 +1,25 @@
+(1) 设 \(x(t)=\Re[\tilde x e^{-i\omega t}]\)，得到 \(\tilde x=-(e/m)E_0/(\omega_0^2-\omega^2-i\gamma\omega)\)。每体积极化 \(P=-ne x\)，因此
+\[
+\chi(\omega)={ne^2\over m\epsilon_0}{1\over\omega_0^2-\omega^2-i\gamma\omega}
+={\omega_p^2\over\omega_0^2-\omega^2-i\gamma\omega},\quad
+\epsilon_r=1+\chi.
+\]
+与 \(J=\partial_tP=-i\omega\epsilon_0\chi E\) 比较，等效复电导 \(\sigma_{\rm eff}=-i\omega\epsilon_0\chi\)。
+(2) 设 \(A=\omega_0^2-\omega^2,B=\gamma\omega\)，则
+\[
+\chi'={\omega_p^2 A\over A^2+B^2},\qquad
+\chi''={\omega_p^2 B\over A^2+B^2}\ge0\ (\omega>0).
+\]
+弱阻尼在 \(\omega\simeq\omega_0\) 产生窄吸收峰；低频 \(\chi(0)=\omega_p^2/\omega_0^2\)，高频 \(\chi\simeq-\omega_p^2/\omega^2\)。时间因子 \(e^{-i\omega t}\) 下 \(\chi''>0\) 对应被动介质。
+(3) 平均摩擦热功率密度 \(n m\gamma\langle \dot x^2\rangle=nm\gamma\omega^2|\tilde x|^2/2\)，故
+\[
+p_{\rm loss}={ne^2\gamma\omega^2|E_0|^2\over2m(A^2+B^2)}
+={\omega\epsilon_0\over2}\chi''|E_0|^2.
+\]
+两种计算一致。
+(4) 令 \(\gamma=0,\omega\ne\omega_0\)，有
+\[
+{d[\omega\epsilon_r(\omega)]\over d\omega}
+=1+\omega_p^2{\omega_0^2+\omega^2\over(\omega_0^2-\omega^2)^2}>0,
+\]
+所以标准无损色散平均电储能 \(\epsilon_0 d(\omega\epsilon_r)/d\omega\,|E_0|^2/4\) 正定（另加磁能）。近共振无限响应是令阻尼为零的人工奇点，物理系统必须包含阻尼、非线性或有限测量带宽。
