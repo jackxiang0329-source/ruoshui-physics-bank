@@ -1,17 +1,70 @@
-(1) 写 \(E=-V_0+\hbar^2k^2/(2m)=-\hbar^2\kappa^2/(2m)\)，\(k,\kappa>0\) 且 \(k^2+\kappa^2=2mV_0/\hbar^2\)。偶态内部 \(A\cos kx\)，奇态 \(A\sin kx\)，外侧与 \(e^{-\kappa(|x|-a)}\) 连接。导数连续得
+(1) 在指定基中将
+\(\mathbf S\cdot\mathbf I=S_zI_z+(S_+I_-+S_-I_+)/2\) 展开，得到
 \[
-k\tan(ka)=\kappa\quad(\text{偶}),\qquad
--k\cot(ka)=\kappa\quad(\text{奇}).
+H=\begin{pmatrix}
+A/4+(b_s+b_i)/2&0&0&0\\
+0&-A/4+(b_s-b_i)/2&A/2&0\\
+0&A/2&-A/4-(b_s-b_i)/2&0\\
+0&0&0&A/4-(b_s+b_i)/2
+\end{pmatrix}.
 \]
-(2) 设 \(z=ka,z_0=a\sqrt{2mV_0}/\hbar,\ y=\kappa a=\sqrt{z_0^2-z^2}\)，故
-\(z\tan z=y\) 或 \(-z\cot z=y\)，\(0<z<z_0\)。每个tan/cot允许正右侧的连续半周期区间至多有一交点，交点按偶、奇、偶、奇交替。任意 \(z_0>0\) 第一偶态始终存在。
-(3) 当新态从 \(E\uparrow0\) 进入束缚谱时 \(y=0,z=z_0\)。偶阈值满足 \(\tan z_0=0\)，故除零外 \(z_0=\pi,2\pi,\dots\)；奇阈值满足 \(\cot z_0=0\)，故 \(z_0=\pi/2,3\pi/2,\dots\)。合并为 \(z_0=n\pi/2\)（正整数n）。在恰为阈值处 \(\kappa=0\)，外部波函数不衰减，不能平方可积，故真正负能束缚态数为
+它与 \(S_z+I_z\) 对易，因此 \(m=\pm1\) 为一维块，而
+\(m=0\) 为二维混合块。高磁场和零场均可在该固定分块下计算。
+
+(2) 记 \(\delta=b_s-b_i\)、\(R=\sqrt{A^2+\delta^2}\)。
+四个能量分别为
 \[
-N_\mathrm{bound}=\left\lceil {2z_0\over\pi}\right\rceil
+E_{\uparrow\uparrow}=A/4+(b_s+b_i)/2,\quad
+E_{\downarrow\downarrow}=A/4-(b_s+b_i)/2,\quad
+E_\pm=-A/4\pm R/2.
 \]
-（当 \(z_0\) 恰为整数个 \(\pi/2\) 时，阈值新态不计，旧的数目恰为该整数；否则为上一整数加一）。
-(4) \(z_0\to\infty\) 时穿透长度 \(1/\kappa\to0\) 对固定低模成立，边界近似Dirichlet，内部 \(k_n\to n\pi/(2a)\)（\(n=1,2,\dots\)），故
+中间二维块的本征投影为
 \[
-E_n+V_0\to{\hbar^2\pi^2n^2\over8ma^2}.
+P_\pm=\tfrac12[I\pm(\delta\sigma_z+A\sigma_x)/R],
 \]
-浅阱 \(z_0\ll1\) 时基态偶方程 \(z\tan z\simeq z^2\simeq z_0\!^2\) 给 \(y\simeq z_0^2\)，所以 \(E_0=-\hbar^2\kappa^2/(2m)\simeq-2mV_0^2a^2/\hbar^2\)。
+其中基序是 \(|\uparrow\downarrow\rangle,|\downarrow\uparrow\rangle\)。
+零场三个三重态能量 \(A/4\)，单重态能量 \(-3A/4\)，间距
+\(A\)。若 \(|\delta|\gg A\)，
+\(R=|\delta|+A^2/(2|\delta|)+O(A^4/|\delta|^3)\)，
+本征态趋于未耦合自旋直积态。
+
+(3) 电子横向算符作用于初态：
+\((S_x/\hbar)|\uparrow\uparrow\rangle
+=\tfrac12|\downarrow\uparrow\rangle\)。
+在二维中间块
+\(\langle\downarrow\uparrow|\sigma_z|\downarrow\uparrow\rangle=-1\)，因此投影概率为
+\[
+I_\pm=|\langle\psi_\pm|S_x/\hbar|\uparrow\uparrow\rangle|^2
+=\frac18(1\mp\delta/R).
+\]
+和则 \(I_++I_-=1/4\) 恰等于初态
+\(\langle(S_x/\hbar)^2\rangle\)。
+零场两线强度均 \(1/8\)；高场当 \(\delta\to+\infty\)，
+上能级通道趋零，下能级通道趋 \(1/4\)，负无穷的对应关系相反。若考虑真实谱线频率，还需取末初本征能量差的绝对值。
+
+(4) 定义 \(\beta=(k_BT)^{-1}\)、\(b_\Sigma=(\alpha_s+\alpha_i)B\)、\(\delta=(\alpha_s-\alpha_i)B\)，得到
+\[
+Z=2e^{-\beta A/4}\cosh(\beta b_\Sigma/2)
++2e^{\beta A/4}\cosh(\beta R/2).
+\]
+由 \(F=-k_BT\ln Z\)，
+\(M=\beta^{-1}\partial_B\ln Z\)，显式为
+\[
+M=\frac{
+e^{-\beta A/4}(\alpha_s+\alpha_i)\sinh(\beta b_\Sigma/2)
++e^{\beta A/4}(\alpha_s-\alpha_i)^2B\,R^{-1}\sinh(\beta R/2)
+}{Z}.
+\]
+在零磁场 \(Z_0=3e^{-\beta A/4}+e^{3\beta A/4}\)，磁化率为
+\[
+\chi=\frac{
+e^{-\beta A/4}\beta(\alpha_s+\alpha_i)^2/2
++e^{\beta A/4}(\alpha_s-\alpha_i)^2 A^{-1}\sinh(\beta A/2)
+}{Z_0}\ge0.
+\]
+高温 \(\beta A\ll1\) 时
+\(\chi\sim\beta(\alpha_s^2+\alpha_i^2)/4\)，
+低温 \(\beta A\gg1\) 时
+\(\chi\to(\alpha_s-\alpha_i)^2/(2A)\)。
+低温有正的Van Vleck量子混合响应，高温为两独立自旋的Curie形式；带符号的核磁矩使
+\(\alpha_s-\alpha_i\) 可能显著不同于 \(\alpha_s+\alpha_i\)。

@@ -1,18 +1,59 @@
-(1) 设 \(m=n_2/n_1<1\)，\(\theta>\theta_c=\arcsin m\)。切向波数 \(k_x=k_1\sin\theta\) 守恒，透射侧法向波矢为 \(k_{z2}=i\alpha\)，其中
+(1) 空间均匀、随时间突变的Maxwell方程满足
+\(\partial_t\mathbf B=-\nabla\times\mathbf E\)，
+\(\partial_t\mathbf D=\nabla\times\mathbf H\)。
+跨无自由脉冲的瞬间积分可知
 \[
-\alpha=k_1\sqrt{\sin^2\theta-m^2}>0,\quad k_{z1}=k_1\cos\theta.
+\mathbf B(0^+)=\mathbf B(0^-),\quad
+\mathbf D(0^+)=\mathbf D(0^-).
 \]
-TE边界条件给 \(r_s=(k_{z1}-i\alpha)/(k_{z1}+i\alpha)\)。
-(2) 分子分母互为复共轭，故 \(|r_s|=1\)，
+时间界面仍对空间平移不变，故波数 \(k\) 保持不变；
+\(\omega_j=ck/n_j\)，因此
+\(\omega_2/\omega_1=n_1/n_2\)。
+这与空间界面上频率不变、空间波数可变的折射完全不同。
+
+(2) 定义 \(r=n_1/n_2\)。正频波的磁场满足
+\(B_y=n_jE_x/c\)，而使用同样 \(+k\) 的负频波有
+\(B_y=-n_jE_x/c\)。
+时间界面的 \(D,B\) 连续条件为
 \[
-\phi_s=-2\arctan\left({\sqrt{\sin^2\theta-m^2}\over\cos\theta}\right).
+\varepsilon_2(E_++E_-)=\varepsilon_1E_i,\qquad
+n_2(E_+-E_-)=n_1E_i.
 \]
-微分得到 \(d\phi_s/d\theta=-2\sin\theta/\sqrt{\sin^2\theta-m^2}\)，因为反正切微分中的 \(1-m^2\) 约去。
-(3) \(dk_x/d\theta=k_1\cos\theta\)，故
+于是
 \[
-D=-{d\phi_s\over dk_x}
-={2\tan\theta\over k_1\sqrt{\sin^2\theta-m^2}}
-={2\tan\theta\over\alpha}.
+\boxed{E_+/E_i=\frac{r^2+r}{2},\qquad
+E_-/E_i=\frac{r^2-r}{2}.}
 \]
-临界角附近 \(\alpha\to0\) 的形式发散被有限角谱与非驻相近似修正；掠入射时 \(dk_x/d\theta\to0\)，窄角谱和有限束宽边界同样重要。
-(4) 第二侧场在z>0为 \(E_2(z)\propto e^{-\alpha z}\)，振幅穿透长度 \(1/\alpha\)、能量密度衰减长度 \(1/(2\alpha)\)，一般有横向能流但无净法向平均传输。吸收层会使 \(|r_s|<1\)，有限光束会使相位斜率之外的振幅滤波也影响中心偏移。
+负频分支虽写同一个 \(e^{ikz}\)，其传播能流方向为 \(-z\)。介电常数的阶跃使电场 \(E=D/\varepsilon\) 本身不必连续，错误地令 \(E,H\) 均连续会得到不同甚至违反Maxwell的结果。
+
+(3) 无磁非色散介质单个正或负频平面波的总平均电磁能密度为
+\(U_j=\varepsilon_j|E_j|^2/2\)。
+所以
+\[
+\frac{U_++U_-}{U_i}=\frac{1+r^2}{2},\qquad
+\frac{U_+-U_-}{U_i}=r.
+\]
+第二式用到了两支振幅平方之差
+\([(r^2+r)^2-(r^2-r)^2]/4=r^3\)。
+由于 \(\omega_2/\omega_1=r\)，立刻有
+\[
+(U_+-U_-)/\omega_2=U_i/\omega_1.
+\]
+这是一种带符号的作用量不变量，不能将它误称作总能量守恒；
+\(r=1\) 时正频幅度为1、负频幅度为0、能量比为1。
+
+(4) 第一界面后两支分别在持续时间 \(T\) 内积累相位
+\(e^{\mp i\vartheta}\)，\(\vartheta=\omega_2T\)。
+再使用反向时间界面 \(n_2\to n_1\) 的连续 \(D,B\) 方程，去掉不影响物理结果的公共相位，可得
+\[
+\boxed{A_{\rm out}=\cos\vartheta-\frac{i(r^2+1)}{2r}\sin\vartheta,\quad
+B_{\rm out}=\frac{i(r^2-1)}{2r}\sin\vartheta.}
+\]
+精确恒等式为
+\(|A_{\rm out}|^2-|B_{\rm out}|^2=1\)。初末介质相同，故输出负频能量比为
+\[
+U_{\rm back}/U_i=|B_{\rm out}|^2
+=\frac{(r^2-1)^2}{4r^2}\sin^2(\omega_2T).
+\]
+当 \(r=1\) 或 \(\omega_2T=j\pi\) 时没有净时间反射。总电磁能比
+\(U_{\rm out}/U_i=|A|^2+|B|^2=1+2|B|^2\)，新增能量来自外部调节介电常数所做的功，绝非无源恒定介质的放大。

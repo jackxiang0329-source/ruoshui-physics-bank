@@ -1,21 +1,56 @@
-(1) 线性方程
+(1) 设 \(f(x)=\tanh x\)，则
+\(f'=\operatorname{sech}^2x\)，
+\(f''=-2f\operatorname{sech}^2x\)，且 \(f^2-1=-\operatorname{sech}^2x\)，于是
 \[
-D_t\rho'+\rho_0 u_x'=0,\qquad
-D_tu'=-{c^2\over\rho_0}\rho_x'.
+-\frac12f''+(f^2-1)f
+=f\operatorname{sech}^2x-f\operatorname{sech}^2x=0.
 \]
-消元得 \((D_t^2-c^2\partial_x^2)u'=0\)，速度势 \(\phi\) 也满足同式。
-(2) 色散 \((\omega-Uk)^2=c^2k^2\)，所以对带符号k写
+因此它是精确静止解。背景两端实幅度由 \(-1\) 变成 \(+1\)，相位差为 \(\pi\)。
+相对于均匀凝聚的粒子数亏损
+\(N_{\mathrm{def}}=\int(1-f^2)dx=\int\operatorname{sech}^2x\,dx=2\)。
+能量两项各贡献 \(\frac12\operatorname{sech}^4x\)，因此
+\(E=\int_{-\infty}^\infty\operatorname{sech}^4x\,dx=4/3\)。
+无限背景本身能量已从题设能量泛函中扣除。
+
+(2) 令 \(u,v\) 为实小扰动；保持一阶项，虚部和实部分别给
 \[
-\omega_\pm=(U\pm c)k,\quad v_{g,\pm}=U\pm c.
+u_t=-\frac12v_{xx},\qquad
+-v_t=-\frac12u_{xx}+2u.
 \]
-对固定右向k>0，逆流支的实验室群速 \(U-c\) 在 \(U=c\) 变零；超声速 \(U>c\) 时两支均随流向右传播，声波不能沿负x逆流上溯。这是均匀流的运动学声学视界阈值，真正空间视界需非均匀U(x)。
-(3) 取
+用 \(u,v\propto e^{i(kx-\omega t)}\) 消元得
 \[
-\mathcal L={\rho_0\over2c^2}(D_t\phi)^2-{\rho_0\over2}\phi_x^2.
+\boxed{\omega_\pm^2=k^2+\frac{k^4}{4}.}
 \]
-Euler--Lagrange方程正是 \((D_t^2-c^2\partial_x^2)\phi=0\)。在随流坐标 \(X=x-Ut\) 的能量密度
+按正频支 \(\omega_+(k)=|k|\sqrt{1+k^2/4}\)，
+在 \(k>0\) 有
 \[
-\mathcal E'={\rho_0\over2c^2}(\partial_{t'}\phi)^2+{\rho_0\over2}(\partial_X\phi)^2\ge0.
+v_{\rm ph}=\frac{\omega_+}k=\sqrt{1+k^2/4},\qquad
+v_g=\frac{d\omega_+}{dk}=\frac{1+k^2/2}{\sqrt{1+k^2/4}}.
 \]
-对无端点能流的闭合区域，该二次能量守恒。
-(4) \(\omega'=\omega-Uk=\pm ck\)，是共动传播频率，实验室频率可因Doppler移频变号。在超声速背景中某些模的实验室规范能量可具有负号，但完整均匀无耗散体系的共动正定能量不随时间增长；负实验室频率或群速符号本身不等于有增益，须存在非均匀流、边界、耦合或耗散等额外能量交换机制。
+故小波数声速 \(c_s=1\)。当 \(k<0\) 时正频群速为负，不能直接将只在正波数推导的相速符号用于负波数。
+
+(3) 令 \(a=\sqrt{1-V^2}\)、\(y=a(x-Vt)\)。给定函数
+\(\psi=iV+a\tanh y\) 满足
+\[
+\psi_t=-a^2V\operatorname{sech}^2y,\qquad
+\psi_{xx}=-2a^3\tanh y\operatorname{sech}^2y,
+\]
+并有 \(|\psi|^2=1-a^2\operatorname{sech}^2y\)。于是
+\(-\psi_{xx}/2+(|\psi|^2-1)\psi
+=-iVa^2\operatorname{sech}^2y=i\psi_t\)，确为精确解。
+中心最小密度 \(V^2\)，密度亏损
+\[
+N_{\rm def}(V)=a^2\int_{\mathbb R}\operatorname{sech}^2[a(x-Vt)]dx=2a.
+\]
+两端取值 \(-a+iV\)、\(a+iV\)，对正 \(V\) 取沿短弧连续的相位差绝对值为 \(2\arccos V\)；负速度时选对应相位支。\(V=0\) 回到黑孤子，\(|V|\to1\) 时趋于均匀密度、亏损趋零。
+
+(4) 对灰孤子，
+\(|\psi_x|^2=a^4\operatorname{sech}^4y\) 与
+\((|\psi|^2-1)^2=a^4\operatorname{sech}^4y\)，故
+\[
+E(V)=a^4\int_{\mathbb R}\operatorname{sech}^4[a(x-Vt)]dx
+=\frac43 a^3=\frac43(1-V^2)^{3/2}.
+\]
+当 \(0<V<1\)，
+\(dE/dV=-4V\sqrt{1-V^2}<0\)。
+黑/灰孤子是非线性与色散自洽平衡的精确移动结构，因此在无限、均匀、无耗散的一维模型中以恒速传播并保持局域形状；外势、有限温度、横向激发和不可积损耗都会改变该结论。
