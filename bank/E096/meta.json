@@ -7,7 +7,7 @@
     "轴上磁偶极力",
     "远场多极一致性"
   ],
-  "answer": "偶极在外场的势能 $U_m(z)=-mB_z(z)$，力 $F_z=-dU_m/dz=m\\,dB_z/dz$，其中 $dB_z/dz=\\frac{\\mu_0nIa^2}{2}[(a^2+(z+L/2)^2)^{-3/2}-(a^2+(z-L/2)^2)^{-3/2}]$。$z=0$ 处导数为零，右端 $z>0$ 时负力向中心，反映同向磁偶极趋向强场",
+  "answer": "B_z=\\frac{\\mu_0 n I}{2}\\left(\\frac{z+L/2}{\\sqrt{a^2+(z+L/2)^2}}-\\frac{z-L/2}{\\sqrt{a^2+(z-L/2)^2}}\\right)",
   "kind": "综合推导题",
   "level": 5,
   "estimated_minutes": 90,
