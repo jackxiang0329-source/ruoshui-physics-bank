@@ -57,13 +57,30 @@
     "近代物理": 6
   },
   "quality_status": "待独立复核",
-  "technical_status": "Draft source complete; 40 models, four questions and derivations each, but no independent 160-subpart mathematical QA",
+  "technical_status": "40 unique four-part draft models and 160 solved parts structurally confirmed; 40 independent one-per-model numerical checks verified by GitHub Actions 40875522050 at SHA 08b0b54. Full 160-subpart mathematical checks, full-history semantic novelty, generated mirrors, 2 XeLaTeX PDFs, and independent expert review remain pending. No main merge.",
   "qualified_released_items": 0,
   "independent_expert_review": "待独立复核",
-  "model_level_numeric_checks": 0,
+  "model_level_numeric_checks": 40,
   "independent_subpart_checks": 0,
   "full_history_semantic_review": "not performed",
   "generated_mirrors_synced_sha": null,
   "pdf_status": "not run for round16",
-  "merge_allowed": false
+  "merge_allowed": false,
+  "status": "DRAFT_40_STRUCTURAL_AND_40_MODEL_QA_PASS_RELEASE_BLOCKED",
+  "structural_qa": {
+    "status": "passed",
+    "checked_draft_entries": 40,
+    "checked_question_parts": 160,
+    "checked_solution_parts": 160
+  },
+  "model_qa": {
+    "status": "passed",
+    "count": 40,
+    "checks_per_model": 1,
+    "source_sha": "08b0b54d877402e26dbabbe3d61ab516d96346eb",
+    "ci_run_id": 40875522050,
+    "ci_conclusion": "success",
+    "script": "scripts/check_round16_40_models.js",
+    "scope": "model-level representative check only, not four independent per-subpart checks"
+  }
 }
