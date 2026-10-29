@@ -1,0 +1,33 @@
+(1) 令 \(x(t)\propto e^{\lambda t}\)，得到
+\[
+\tau\lambda^3-\lambda^2-\omega_0^2=0.
+\]
+在 \(\lambda=0\) 左端为 \(-\omega_0^2<0\)，\(\lambda\to+\infty\) 时趋正，因此至少一个正实根。对该多项式，正实区间的符号变化恰一次，由Descartes符号法则只有一个正实根；设 \(\lambda=\tau^{-1}+\delta\)，首阶求 \(\delta\sim\omega_0^2\tau\)，故 \(\lambda_{\rm runaway}\sim1/\tau\)。它在小 \(\tau\) 时极快指数增长，违反微扰反作用近似的自洽性，物理边界须剔除这一初值方向。
+(2) 零阶有 \(\ddot x\simeq-\omega_0^2x\)，故 \(\dddot x\simeq-\omega_0^2\dot x\)。于是稳定降阶方程
+\[
+\ddot x+\tau\omega_0^2\dot x+\omega_0^2x=0.
+\]
+两根
+\[
+\lambda_\pm=-\frac{\tau\omega_0^2}{2}\pm i\omega_0+O(\tau^2\omega_0^3).
+\]
+故振幅按 \(e^{-\gamma_{\rm eff}t}\) 衰减，\(\gamma_{\rm eff}=\tau\omega_0^2/2\)；平均机械能按 \(e^{-\tau\omega_0^2t}\) 衰减。
+(3) 原方程乘 \(\dot x\)：
+\[
+\frac d{dt}\left[\frac m2(\dot x^2+\omega_0^2x^2)\right]
+=m\tau\dot x\,\dddot x
+=m\tau\frac d{dt}(\dot x\ddot x)-m\tau\ddot x^2.
+\]
+定义机械能 \(E_{\rm mech}=\frac m2(\dot x^2+\omega_0^2x^2)\)，则
+\[
+\boxed{\frac d{dt}[E_{\rm mech}-m\tau\dot x\ddot x]
+=-m\tau\ddot x^2\le0}.
+\]
+右侧 \(P_{\rm rad}=m\tau\ddot x^2\) 为非相对论Larmor辐射功率，近场Schott能形式上取 \(-m\tau\dot x\ddot x\)。它可正可负，故不能简单把机械能导数逐时等同负辐射功率。
+(4) 在一周期内取 \(x=A\cos\omega_0t\)，有 \(\langle\ddot x^2\rangle=A^2\omega_0^4/2\)，因此
+\[
+\langle P_{\rm rad}\rangle=\frac{m\tau A^2\omega_0^4}{2}
+=\tau\omega_0^2\left(\frac{m\omega_0^2A^2}{2}\right)
+=\tau\omega_0^2E_{\rm mech},
+\]
+与降阶能量衰减率吻合。辐射反作用时间 \(\tau\) 必比振荡尺度短，外驱动力不能在远短于 \(\tau\) 的时间尺度激变；原点电荷三阶模型还涉及跑逸与预加速病态，降阶模型是弱反作用有效近似。

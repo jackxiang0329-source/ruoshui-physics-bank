@@ -5,8 +5,8 @@
   "base_main_sha": "a3dd044e57c200e63e5ba0222aeb226efcd14242",
   "base_count": 402,
   "target_new_items": 50,
-  "actual_draft_items": 36,
-  "remaining_items": 14,
+  "actual_draft_items": 42,
+  "remaining_items": 8,
   "ids": [
     "M077",
     "E077",
@@ -43,17 +43,7 @@
     "T077",
     "W077",
     "O079",
-    "Q079"
-  ],
-  "topic_counts": {
-    "力学": 6,
-    "电磁学": 6,
-    "热学": 6,
-    "振动与波动": 6,
-    "光学": 6,
-    "近代物理": 6
-  },
-  "next_ids": [
+    "Q079",
     "M083",
     "E083",
     "T078",
@@ -61,20 +51,36 @@
     "O080",
     "Q080"
   ],
+  "topic_counts": {
+    "力学": 7,
+    "电磁学": 7,
+    "热学": 7,
+    "振动与波动": 7,
+    "光学": 7,
+    "近代物理": 7
+  },
+  "next_ids": [
+    "M084",
+    "E084",
+    "T079",
+    "W079",
+    "O081",
+    "Q081"
+  ],
   "quality_status": "待独立复核",
   "independent_expert_review": "待独立复核",
-  "technical_status": "DRAFT ONLY 36/50. Executable checks: 120/144 previously authored; six latest 24 subparts need new QA. Full 200 gate and expert audit pending.",
-  "executed_subpart_checks": 120,
+  "technical_status": "DRAFT ONLY: 42/50 questions; newest 24 subparts require executable QA; target 200 total not complete; expert review pending",
+  "executed_subpart_checks": 144,
   "required_final_checks": 200,
-  "preview_pdf_status": "previous SHA only; newest 36 item PDF not verified",
+  "preview_pdf_status": "new 42-question SHA not yet verified",
   "last_ci_verified_source_sha": "d48cd3b0532da15785713b97a367e86cdada1fca",
   "generated_mirrors_synced_sha": "pending current commit",
   "remaining_topic_counts": {
-    "力学": 3,
-    "电磁学": 3,
-    "热学": 2,
-    "振动与波动": 2,
-    "光学": 2,
-    "近代物理": 2
+    "力学": 2,
+    "电磁学": 2,
+    "热学": 1,
+    "振动与波动": 1,
+    "光学": 1,
+    "近代物理": 1
   }
 }

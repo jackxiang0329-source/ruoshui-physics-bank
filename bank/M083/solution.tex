@@ -1,0 +1,26 @@
+(1) 截面平均 \(\bar U=(2h)^{-1}\int_{-h}^h u(y)dy=2U_{\max}/3\)，故
+\(u(y)-\bar U=(\bar U/2)[1-3y^2/h^2]\)。
+在纵向缓变展开中令 \(c=\bar c+\chi(y)\bar c_x+\cdots\)，截面平均固定 \(\langle\chi\rangle=0\)。对 \(\bar c_x\) 的局部项配平得到
+\[
+D\chi''=u-\bar U,\qquad \chi'(\pm h)=0.
+\]
+符号选择与修正 \(+\chi\bar c_x\) 一致；若把修正写为负号，胞元方程也相应变号。
+(2) 积分一次得
+\[
+\chi'(y)=\frac{\bar U}{2D}\left(y-\frac{y^3}{h^2}\right).
+\]
+由平均通量 \(\langle uc\rangle-D\bar c_x=\bar U\bar c+\langle(u-\bar U)\chi\rangle\bar c_x-D\bar c_x\)，而分部 \(\langle(u-\bar U)\chi\rangle=D\langle\chi''\chi\rangle=-D\langle(\chi')^2\rangle\)。所以
+\[
+D_{\rm eff}=D+D\langle(\chi')^2\rangle
+=D+\frac{\bar U^2h^2}{4D}\int_0^1(s-s^3)^2ds.
+\]
+多项式积分为 \(1/3-2/5+1/7=8/105\)，得到
+\[
+\boxed{D_{\rm eff}=D+\frac{2\bar U^2h^2}{105D}}.
+\]
+(3) 长时平均浓度满足
+\[
+\partial_t\bar c+\bar U\partial_x\bar c=D_{\rm eff}\partial_{xx}\bar c
+\]
+（误差随纵向尺度与横向混合尺度之比下降）。在 \(X=x-\bar Ut\) 中，对有限质量且边界衰减的解乘 \(X\)、\(X^2\) 积分，分部给 \(\dot{\langle X\rangle}=0\)、\(\dot{\mathrm{Var}X}=2D_{\rm eff}\)。增强项是剪切流沿不同横向位置造成的位移差，待分子扩散跨越通道后变为不可逆的纵向有效弥散，故非负。
+(4) \(D_{\rm eff}/D=1+(2/105)Pe^2\)；\(Pe\to0\) 或固定 \(\bar U,D\) 且 \(h\to0\) 时恢复 \(D\)。\([\bar U^2h^2/D]=L^2/t\)。若 \(t\lesssim h^2/D\)，横向浓度尚未混匀，位移方差往往存在弹道式的 \(t^2\) 剪切贡献，不能用长期Fick常数取代原二维输运方程。

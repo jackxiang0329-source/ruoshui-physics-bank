@@ -1,0 +1,36 @@
+(1) 令 \(\beta=(k_BT)^{-1}\)，则
+\[
+Z=1+e^{-\beta\Delta},\quad
+p_1=\frac{e^{-\beta\Delta}}{1+e^{-\beta\Delta}}
+=\frac1{1+e^{\beta\Delta}},\quad p_0=1-p_1,
+\]
+\[
+F=-k_BT\ln(1+e^{-\beta\Delta}),\qquad U=\Delta p_1.
+\]
+初态 \(p_0=p_1=1/2,\ F_i=-k_BT\ln2,\ U_i=0\)。
+(2) 在平衡准静态变化过程中，功对偏置的共轭变量是 \(\partial_\Delta F=p_1\)，所以
+\[
+W_{\rm rev}=\int_0^\Delta p_1(\Delta')d\Delta'
+=F(\Delta)-F(0)
+=k_BT\ln\frac{2}{1+e^{-\beta\Delta}}.
+\]
+因 \(1-p_{\rm err}=(1+e^{-\beta\Delta})^{-1}\)，也有
+\[
+W_{\rm rev}=k_BT\ln[2(1-p_{\rm err})].
+\]
+当 \(\Delta\to\infty\)，\(p_{\rm err}\to0\)，最小功趋 \(k_BT\ln2\)。有限错误率允许低于这个理想擦除功的可逆偏置操作；状态仍非严格确定。
+(3) Shannon物理熵
+\[
+S=-k_B[p_0\ln p_0+p_1\ln p_1]
+=k_B[\ln Z+\beta U].
+\]
+初态 \(S_i=k_B\ln2\)，终态 \(S_f=-k_B[(1-p_{\rm err})\ln(1-p_{\rm err})+p_{\rm err}\ln p_{\rm err}]\)。可逆热量按系统吸收为正，\(Q_{\rm rev}=T(S_f-S_i)\le0\)。利用 \(F=U-TS\) 得
+\[
+W_{\rm rev}+Q_{\rm rev}=(F_f-F_i)+T(S_f-S_i)=U_f-U_i=\Delta p_{\rm err}.
+\]
+完美擦除极限 \(\Delta p_{\rm err}\to0\)，\(Q\to-k_BT\ln2\)；热库至少接收 \(k_BT\ln2\)。实际有限速操纵通常多耗散，使所需输入功更大。
+(4) \(p_{\rm err}\le\epsilon<1/2\) 当且仅当
+\[
+\Delta\ge\Delta_{\min}=k_BT\ln\frac{1-\epsilon}{\epsilon}.
+\]
+当 \(\epsilon\to0^+\)，\(\Delta_{\min}\sim k_BT\ln(1/\epsilon)\to\infty\)，然而 \(W_{\rm rev}\to k_BT\ln2\) 有界。能级间隔是操控参数而非所有概率态都同时储存的能量；终态平均内能 \(\Delta p_{\rm err}\to0\)，故不可用 \(\Delta\) 直接替代可逆功。

@@ -1,0 +1,33 @@
+(1) \(\boldsymbol E=(\boldsymbol J/ne)\times\boldsymbol B\)，Faraday方程给
+\[
+\partial_t\boldsymbol B=-\nabla\times\left[\frac{(\nabla\times\boldsymbol B)\times\boldsymbol B}{\mu_0ne}\right].
+\]
+对 \(B_0\hat z+\boldsymbol b(z,t)\) 线性化，\(\nabla\times\boldsymbol b=\hat z\times\partial_z\boldsymbol b\)，且 \((\hat z\times\boldsymbol b_z)\times\hat z=\boldsymbol b_z\)，故
+\[
+\partial_t\boldsymbol b=-D_H\,\hat z\times\partial_{zz}\boldsymbol b,\quad
+D_H=\frac{B_0}{\mu_0ne}.
+\]
+因 \([\mu_0ne]=[B]/(L^2/t)\)，所以 \([D_H]=L^2/t\)。
+(2) 傅里叶代入得 \(-i\omega\boldsymbol b=D_Hk^2\hat z\times\boldsymbol b\)。定义 \(\boldsymbol e_+=(\hat x+i\hat y)/\sqrt2\)，则 \(\hat z\times\boldsymbol e_+=-i\boldsymbol e_+\)，因此
+\[
+\omega_+(k)=D_Hk^2,\quad \omega_-(k)=-D_Hk^2,\quad
+v_{\phi,+}=D_Hk,\quad v_{g,+}=2D_Hk.
+\]
+对于 \(k>0,\omega>0\) 的真实波，实扰动可写为 \(b_0(\hat x\cos\phi-\hat y\sin\phi)\)，\(\phi=kz-\omega t\)。另一支是实场的相应负频共轭描述，不存在正虚部增长。
+(3) 用实向量点乘Hall方程，有
+\[
+\partial_t\frac{b^2}{2\mu_0}
+=-\frac{D_H}{\mu_0}\boldsymbol b\cdot(\hat z\times\boldsymbol b_{zz})
+=-\partial_z\left[\frac{D_H}{\mu_0}\boldsymbol b\cdot(\hat z\times\boldsymbol b_z)\right],
+\]
+因为 \(\boldsymbol b_z\cdot(\hat z\times\boldsymbol b_z)=0\)。因此
+\[
+S_z=\frac{D_H}{\mu_0}\boldsymbol b\cdot(\hat z\times\boldsymbol b_z).
+\]
+对上述正频圆偏振，\(\boldsymbol b_z=-k\hat z\times\boldsymbol b\)，所以 \(S_z=D_Hkb_0^2/\mu_0=(2D_Hk)b_0^2/(2\mu_0)=v_ge_b\)。又 \(\boldsymbol J\cdot\boldsymbol E=\boldsymbol J\cdot[(\boldsymbol J/ne)\times\boldsymbol B]=0\)，Hall项不作焦耳热。
+(4) 代入
+\[
+\Omega_ed_e^2=\frac{eB_0}{m_e}\frac{m_e}{\mu_0ne^2}
+=\frac{B_0}{\mu_0ne}=D_H.
+\]
+当 \(k d_e\) 接近一时电子惯性不可忽略，强耦合离子运动、碰撞、电子压强也会改变谱。\(B_0\to0\) 时 \(D_H\to0\) 并不意味着没有其他电磁波，而是固定离子、忽略惯性的Hall近似失去对该频段的描述能力。
