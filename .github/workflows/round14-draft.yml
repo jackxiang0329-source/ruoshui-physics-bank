@@ -7,6 +7,7 @@ on:
       - 'scripts/check_round14_draft.py'
       - 'scripts/check_round14_next6.py'
       - 'scripts/check_round14_group3.py'
+      - 'scripts/check_round14_group4.py'
       - '.github/workflows/round14-draft.yml'
   workflow_dispatch:
 permissions:
@@ -28,6 +29,7 @@ jobs:
           python scripts/check_round14_extra6.py
           python scripts/check_round14_next6.py
           python scripts/check_round14_group3.py
+          python scripts/check_round14_group4.py
       - name: Synchronize mirror and both TeX masters from bank canonical sources
         run: |
           python - <<'PY'
@@ -76,7 +78,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/problems.json data/index.csv tex/questions.tex tex/solutions.tex data/round14_draft_validation_report.json data/round14_extra6_validation_report.json data/round14_next6_validation_report.json data/round14_group3_validation_report.json
+          git add data/problems.json data/index.csv tex/questions.tex tex/solutions.tex data/round14_draft_validation_report.json data/round14_extra6_validation_report.json data/round14_next6_validation_report.json data/round14_group3_validation_report.json data/round14_group4_validation_report.json
           if ! git diff --cached --quiet; then
             git commit -m "draft(round14): sync canonical mirror and two TeX books; record cumulative executed checks"
             git push origin HEAD:physics-round14-50-work
