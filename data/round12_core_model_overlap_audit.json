@@ -50,7 +50,7 @@
       ]
     }
   ],
-  "disposition": "Historical core-model replacements remain resolved. M062 screened against Newtonian central-force and orbit problems; draft 20/50, independent review pending.",
+  "disposition": "Historical overlap replacements remain resolved. E062 screened against Drude Hall transport E022, classical polarization E040, magnetoplasma Faraday E061 and integer quantum Hall Q031; 21/50, independent review pending.",
   "independent_expert_review": "待独立复核",
   "new_draft_model_screening": [
     {
@@ -112,6 +112,18 @@
       ],
       "core_model": "Schwarzschild spacetime timelike and null geodesics: ISCO, proper versus coordinate epicyclic frequency, photon capture and local Lorentz plus gravitational frequency shift",
       "difference": "M033 is Newtonian power-law central-force precession; M035 is Hohmann transfer; M043 Newtonian restricted three-body Lagrange stability; M046 classical spinning top. None uses curved-spacetime Killing constants, null photon sphere or relativistic ISCO.",
+      "resolution_status": "screened_distinct_pending_independent_review"
+    },
+    {
+      "draft_id": "E062",
+      "compared_existing_ids": [
+        "E022",
+        "E040",
+        "E061",
+        "Q031"
+      ],
+      "core_model": "2D dissipative and Hall surface-conductivity Maxwell boundary scattering, reflection-transmission Jones matrices, exact passivity optimum and asymmetric dielectric substrate Faraday rotation",
+      "difference": "E022 is bulk Drude Hall bar with open-circuit transport, E040 treats free-space Stokes parameters, E061 propagating bulk magnetoplasma eigenmodes, and Q031 Landau-level quantized DC Hall conductance. None derives radiative boundary jumps, sheet absorption optimum or substrate scattering.",
       "resolution_status": "screened_distinct_pending_independent_review"
     }
   ]

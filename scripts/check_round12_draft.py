@@ -682,12 +682,68 @@ assert abs(mp.diff(potential062,rr062,2)/2-
 supplemental.append(dict(id='M062',method='independent_high_precision_finite_difference',
                          name='50 digit direct radial potential derivatives at ten gravitational radii verify circularity and epicyclic curvature',passed=True))
 
-assert len(checks)==80 and len(set((v['id'],v['part']) for v in checks))==80
+
+# E062: dissipative/Hall surface conductivity and dielectric-interface scattering.
+a062,b062=s.symbols('a062 b062',real=True,positive=True)
+n1062,n2062,h062=s.symbols('n1062 n2062 h062',real=True,positive=True)
+J062=s.Matrix([[0,-1],[1,0]]);I062=s.eye(2);v062=s.Matrix([1,0])
+D062=(1+a062)**2+b062**2
+T062=((1+a062)*I062+b062*J062).inv()
+R062=T062-I062
+record('E062',1,'maxwell_boundary_and_eigenchannels',
+       'Maxwell magnetic sheet jump yields inverse Jones matrix and Hall circular eigenvalues',
+       all(eq(z) for z in T062*((1+a062)*I062+b062*J062)-I062)
+       and all(eq(z) for z in R062+(a062*I062+b062*J062)*T062)
+       and eq(T062.det(),1/D062))
+tv062=T062*v062;rv062=R062*v062
+record('E062',2,'polarization_and_energy',
+       'lossless Hall sheet has orthogonal transmitted/reflected linear polarizations and unit total flux',
+       eq(s.expand((tv062.dot(rv062)).subs(a062,0)))
+       and eq((tv062.dot(tv062)+rv062.dot(rv062)).subs(a062,0),1)
+       and eq(tv062[1].subs(a062,0)/tv062[0].subs(a062,0),-b062))
+abs062=2*a062/D062
+record('E062',3,'passivity_optimization',
+       'Joule dissipation equals missing Poynting flux and unique longitudinal optimum is global',
+       eq(1-tv062.dot(tv062)-rv062.dot(rv062),abs062)
+       and eq(s.diff(abs062,a062).subs(a062,s.sqrt(1+b062**2)))
+       and eq(abs062.subs(a062,s.sqrt(1+b062**2)),1/(1+s.sqrt(1+b062**2)))
+       and eq(s.limit(abs062,a062,s.oo),0))
+q062=n1062+n2062
+Tn062=2*n1062*(q062*I062+h062*J062).inv()
+Rn062=Tn062-I062
+tnv062=Tn062*v062;rnv062=Rn062*v062
+record('E062',4,'substrate_fresnel_and_quantized_hall',
+       'asymmetric dielectric Hall sheet obeys exact boundary and flux conservation, vacuum limit matches free sheet',
+       all(eq(z) for z in (q062*I062+h062*J062)*Tn062-2*n1062*I062)
+       and eq(n2062/n1062*tnv062.dot(tnv062)+rnv062.dot(rnv062),1)
+       and all(eq(z) for z in Tn062.subs({n1062:1,n2062:1,h062:2*b062})-T062.subs(a062,0))
+       and eq(tnv062[1]/tnv062[0],-h062/q062))
+mp.mp.dps=50
+an062=mp.mpf('0.37');bn062=mp.mpf('0.61')
+dn062=(1+an062)**2+bn062**2
+ex062=(1+an062)/dn062;ey062=-bn062/dn062
+rx062=ex062-1;ry062=ey062
+assert abs(rx062+an062*ex062-bn062*ey062)<mp.mpf('1e-45')
+assert abs(ry062+an062*ey062+bn062*ex062)<mp.mpf('1e-45')
+assert abs(ex062**2+ey062**2+rx062**2+ry062**2+
+           2*an062*(ex062**2+ey062**2)-1)<mp.mpf('1e-45')
+n1v062=mp.mpf('1.3');n2v062=mp.mpf('2.2');hv062=mp.mpf('0.17')
+dn2062=(n1v062+n2v062)**2+hv062**2
+ex2062=2*n1v062*(n1v062+n2v062)/dn2062
+ey2062=-2*n1v062*hv062/dn2062
+assert abs((n1v062+n2v062)*ex2062-hv062*ey2062-2*n1v062)<mp.mpf('1e-45')
+assert abs((n1v062+n2v062)*ey2062+hv062*ex2062)<mp.mpf('1e-45')
+assert abs(n2v062/n1v062*(ex2062**2+ey2062**2)+
+           (ex2062-1)**2+ey2062**2-1)<mp.mpf('1e-45')
+supplemental.append(dict(id='E062',method='independent_high_precision_boundary_flux',
+                         name='50 digit Hall sheet boundary residuals, Joule flux balance and asymmetric substrate Poynting conservation',passed=True))
+
+assert len(checks)==84 and len(set((v['id'],v['part']) for v in checks))==84
 assert len(set(v['method'] for v in checks if v['id']=='W058'))>=2
 assert len(set(v['method'] for v in checks if v['id']=='Q059'))>=2
-assert len(supplemental)==20
+assert len(supplemental)==21
 
-result={'status':'draft-only','new_problem_count':20,'passed_count':len(checks),'tests':checks,'independent_expert_review':'pending','supplemental_numeric_checks':supplemental}
+result={'status':'draft-only','new_problem_count':21,'passed_count':len(checks),'tests':checks,'independent_expert_review':'pending','supplemental_numeric_checks':supplemental}
 path=Path(__file__).resolve().parents[1]/'data/round12_draft_validation_report.json'
 path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
 print(json.dumps({'status':result['status'],'checked_subparts':len(checks)},ensure_ascii=False))

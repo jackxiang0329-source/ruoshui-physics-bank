@@ -1,7 +1,7 @@
 {
   "status": "draft-only",
-  "new_problem_count": 20,
-  "passed_count": 80,
+  "new_problem_count": 21,
+  "passed_count": 84,
   "tests": [
     {
       "id": "M059",
@@ -562,6 +562,34 @@
       "method": "redshift_energy_and_limit",
       "name": "independent local Lorentz boost and gravitational redshift yield ISCO forward and backward photon shifts",
       "passed": true
+    },
+    {
+      "id": "E062",
+      "part": 1,
+      "method": "maxwell_boundary_and_eigenchannels",
+      "name": "Maxwell magnetic sheet jump yields inverse Jones matrix and Hall circular eigenvalues",
+      "passed": true
+    },
+    {
+      "id": "E062",
+      "part": 2,
+      "method": "polarization_and_energy",
+      "name": "lossless Hall sheet has orthogonal transmitted/reflected linear polarizations and unit total flux",
+      "passed": true
+    },
+    {
+      "id": "E062",
+      "part": 3,
+      "method": "passivity_optimization",
+      "name": "Joule dissipation equals missing Poynting flux and unique longitudinal optimum is global",
+      "passed": true
+    },
+    {
+      "id": "E062",
+      "part": 4,
+      "method": "substrate_fresnel_and_quantized_hall",
+      "name": "asymmetric dielectric Hall sheet obeys exact boundary and flux conservation, vacuum limit matches free sheet",
+      "passed": true
     }
   ],
   "independent_expert_review": "pending",
@@ -684,6 +712,12 @@
       "id": "M062",
       "method": "independent_high_precision_finite_difference",
       "name": "50 digit direct radial potential derivatives at ten gravitational radii verify circularity and epicyclic curvature",
+      "passed": true
+    },
+    {
+      "id": "E062",
+      "method": "independent_high_precision_boundary_flux",
+      "name": "50 digit Hall sheet boundary residuals, Joule flux balance and asymmetric substrate Poynting conservation",
       "passed": true
     }
   ]
