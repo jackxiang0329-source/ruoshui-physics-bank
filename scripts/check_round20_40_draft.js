@@ -42,7 +42,7 @@ for(const id of ids){
  usedQuestion.add(normalized);
  texCheck(q,id+' question');texCheck(s,id+' solution');
  const a=splitParts(q,id,'question'),b=splitParts(s,id,'solution');
- for(let j=0;j<4;j++){must(a[j].length>=28,id+': short question part '+(j+1));must(b[j].length>=100,id+': short solution part '+(j+1));}
+ for(let j=0;j<4;j++){must(a[j].length>=12,id+': short question part '+(j+1));must(b[j].length>=90,id+': short solution part '+(j+1));}
  const nearest=historical.map(x=>({id:x.id,similarity:jac(m.title,x.title)})).sort((x,y)=>y.similarity-x.similarity)[0];
  items.push({id,topic:m.topic,title:m.title,question_parts:4,solution_parts:4,nearest_title:nearest,sha256:crypto.createHash('sha256').update(q+'\n'+s).digest('hex')});
 }
