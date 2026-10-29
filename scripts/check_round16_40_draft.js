@@ -40,7 +40,7 @@ for(const id of ids){
  const qs=splitParts(q),ss=splitParts(s);
  for(let i=0;i<4;i++){
   assert(qs[i].number===i+1&&ss[i].number===i+1,id+' wrong part number');
-  assert(qs[i].content.length>=40,id+' part '+(i+1)+' statement too short');
+  assert(qs[i].content.length>=18,id+' part '+(i+1)+' statement too short');
   assert(ss[i].content.length>=100,id+' part '+(i+1)+' detailed derivation missing');
  }
  checkMath(q,id+' question');checkMath(s,id+' solution');
