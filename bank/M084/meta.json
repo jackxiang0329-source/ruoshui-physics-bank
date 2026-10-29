@@ -1,14 +1,14 @@
 {
   "id": "M084",
   "topic": "力学",
-  "title": "干床浅水破坝的Riemann稀疏波、湿润前沿与通量守恒",
+  "title": "Hele–Shaw双黏性流体的Saffman–Taylor指进谱、毛细截止与增长极值",
   "tags": [
-    "非线性Saint-Venant浅水方程",
-    "Riemann不变量与自相似稀疏波",
-    "干床前沿退化自由边界",
-    "质量动量守恒和通量核算"
+    "Hele–Shaw达西定律",
+    "双黏度移动界面扰动",
+    "Saffman–Taylor不稳定谱",
+    "毛细稳定化与能量来源"
   ],
-  "answer": "u=\\frac23\\left(c_0+\\frac xt\\right),\\quad h=\\frac{(2c_0-x/t)^2}{9g},\\quad -c_0<x/t<2c_0",
+  "answer": "\\sigma(k)=\\frac{U(\\kappa_1-\\kappa_2)}{\\kappa_1+\\kappa_2}|k|-\\frac{\\gamma\\kappa_1\\kappa_2}{\\kappa_1+\\kappa_2}|k|^3",
   "kind": "综合推导题",
   "level": 5,
   "estimated_minutes": 115,

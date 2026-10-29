@@ -1,21 +1,33 @@
-(1) 用 \(c^2=gh\) 写 \(\partial_t(h,u)^\top+A\partial_x(h,u)^\top=0\)，其中 \(A=\begin{pmatrix}u&h\\g&u\end{pmatrix}\)，特征速度 \(\lambda_\pm=u\pm c\)。沿 \(dx/dt=u\pm c\) 的不变量为 \(J_\pm=u\pm2c\)。
-(2) 连接左静水至右干床的是第一族稀疏扇：保持 \(J_+=u+2c=2c_0\)，令 \(\xi=\lambda_-=u-c\)。联立得
+(1) 不可压缩性与Darcy定律给 \(\nabla^2p'_j=0\)。对 \(k\ne0\) 且扰动在两侧远离界面时衰减，有
 \[
-u(\xi)=\frac23(c_0+\xi),\quad c(\xi)=\frac13(2c_0-\xi),\quad h(\xi)=\frac{(2c_0-\xi)^2}{9g}.
+p'_1=A_1e^{|k|x+iky+st},\qquad p'_2=A_2e^{-|k|x+iky+st}.
 \]
-完整解：\(\xi\le-c_0\) 时 \(h=h_0,u=0\)；\(-c_0<\xi<2c_0\) 时取上述表达式；\(\xi\ge2c_0\) 时 \(h=0\)，干床中的 \(u\) 无物理定义（不应强行给真空区赋速）。波尾速度 \(-c_0\)，湿润前沿 \(x_f=2c_0t\)，其水侧速度极限 \(u_f=2c_0\)，前沿随物质运动。两端深度连续，左端速度连续。
-(3) 湿润的右半轴水质量（按单位宽度）为
+实验室系基态压强斜率分别为 \(\partial_xp_j^{(0)}=-U/\kappa_j\)；界面移动参考系仅去掉速度的常量部分，并不能删去这些压强梯度。
+(2) 线性运动学条件为 \(\partial_t\eta=u'_{1x}(0)=u'_{2x}(0)\)，从而
 \[
-M_+(t)=\int_0^{2c_0t}h\,dx=\frac{t}{9g}\int_0^{2c_0}(2c_0-\xi)^2d\xi=\frac{8c_0^3}{27g}t.
+A_1=-{s\eta_0\over\kappa_1|k|},\quad A_2={s\eta_0\over\kappa_2|k|}.
 \]
-而 \(h(0,t)u(0,t)=(4c_0^2/9g)(2c_0/3)=8c_0^3/(27g)\)，故 \(\dot M_+=hu|_{x=0}\)。以连续方程消元将动量方程变成
+在实际移动到 \(x=\eta\) 的界面应用压力跳跃，保留 \(p_j^{(0)}(\eta)\) 的一阶项：
 \[
-(hu)_t+\bigl(hu^2+\tfrac12gh^2\bigr)_x=0.
+A_1-A_2+\left(-{U\over\kappa_1}+{U\over\kappa_2}\right)\eta_0
+=\gamma k^2\eta_0 .
 \]
-在 \(x_f\) 有 \(h\to0\)、\(hu\to0\)、\(hu^2+gh^2/2\to0\)，故不存在有限的动量或质量脉冲逸出前沿。
-(4) 波扇中 \(h=t^{-2}(2c_0t-x)^2/(9g)\)，且 \(u=2(c_0t+x)/(3t)\)。乘动量方程以 \(u\)，结合连续方程，得
+联立消去 \(A_j\)，得到
 \[
-\partial_t\left(\tfrac12hu^2+\tfrac12gh^2\right)+
-\partial_x\left[u\left(\tfrac12hu^2+gh^2\right)\right]=0.
+\boxed{s(k)=|k|\frac{U(\kappa_1-\kappa_2)-\gamma\kappa_1\kappa_2k^2}{\kappa_1+\kappa_2}}.
 \]
-各项量纲为单位宽度的能量面密度除密度后乘速度；前沿 \(h\downarrow0\) 时能流趋零。设底摩擦或毛细力非零，则干床附近纵深趋零而相对作用增强，需另引入接触线/湿润前沿模型。
+增长率实数；这是界面形变的失稳，而不是声波频散。
+(3) 当 \(\kappa_1>\kappa_2\) 即 \(\mu_1<\mu_2\)（低黏度液驱赶高黏度液）时，\(0<|k|<k_c\) 不稳定，其中
+\[
+k_c^2={U(\kappa_1-\kappa_2)\over\gamma\kappa_1\kappa_2}.
+\]
+写 \(s=A k-Bk^3\) 对 \(k>0\)，\(A=U(\kappa_1-\kappa_2)/(\kappa_1+\kappa_2)\)、\(B=\gamma\kappa_1\kappa_2/(\kappa_1+\kappa_2)\)，极值在 \(k_{\rm max}=k_c/\sqrt3\)，
+\[
+s_{\rm max}={2A k_c\over3\sqrt3}.
+\]
+若 \(U=0\) 则 \(s=-Bk^3<0\)；若 \(\mu_1=\mu_2\) 同样仅毛细衰减；若 \(\gamma=0\) 且 \(A>0\)，短波增长无限快，说明必须保留正则化机制。
+(4) \([\kappa_j]=\mathrm{m^2/(Pa\,s)}\)；\(U|k|\) 与 \(\gamma\kappa k^3\) 都是 \(\mathrm{s^{-1}}\)。界面面积的二阶超额能量（每条界面沿板厚 \(b\)）为
+\[
+\Delta E_\gamma={\gamma b\over2}\int(\partial_y\eta)^2dy+O(\eta_y^4)\ge0.
+\]
+在 \(U=0\) 时界面张力释放多余面积；有外驱时，维持不同黏度流体共同平移的压力源持续做功，足以克服部分毛细能代价。要求 \(b|k|\ll1\)、\(|k\eta_0|\ll1\)，有限横向尺寸使 \(k\) 离散；高频惯性、跨隙曲率及混溶扩散会改变该理想谱。

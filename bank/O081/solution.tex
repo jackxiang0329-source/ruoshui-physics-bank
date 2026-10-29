@@ -1,29 +1,31 @@
-(1) 将 \(\psi=\sqrt I e^{i\phi}\) 代入傍轴方程并将方程乘以 \(\psi^*\)，再减去其复共轭，得到
+(1) Snell 定律 \(\sin i=n\sin r\)，其中 \(r=\arcsin(\sin i/n)\)。两次折射与一次内反射的转角相加，
 \[
-\partial_z I=-\frac1k\nabla_\perp\cdot(I\nabla_\perp\phi),\qquad
-\boldsymbol J_\perp=\frac I k\nabla_\perp\phi.
+\boxed{D(i)=\pi+2i-4r(i)},\quad 0\le i<\pi/2.
 \]
-对横向平面积分，边界流为零则 \(d\int I\,d^2r/dz=0\)。
-(2) \(\nabla_\perp\phi=a\boldsymbol r_\perp\)，而 \(\nabla_\perp\cdot(Ia\boldsymbol r_\perp)=a(2-2r^2/w^2)I\)。因此
+对正常入射 \(i=0\)，\(D=\pi\) 是原路返回，符合一次镜面反射极限。
+(2) 有 \(r'(i)=\cos i/(n\cos r)\)。驻点条件 \(D'=2-4r'=0\) 即 \(r'=1/2\)，平方后结合 Snell 定律得
 \[
-\partial_z I=-\frac{2a}{k}\left(1-\frac{r^2}{w^2}\right)I,\quad
-a=-\frac{k}{2I_0}(\partial_zI)_{r=0}.
+\frac{\cos^2i_*}{n^2-\sin^2i_*}=\frac14\quad\Longrightarrow\quad
+\boxed{\sin^2i_*=\frac{4-n^2}{3}}.
 \]
-TIE只含梯度，\(\phi_0\) 无法由强度传播确定。
-(3) Fresnel传播对Gaussian保持复Gaussian形状，定义 \(z_R=kw_0^2\)，则
+在此点微分 \(r'=\cos i/(n\cos r)\) 得 \(r''=r'[-\tan i+\tan r\,r']\)，故
 \[
-w(z)=w_0\sqrt{1+(z/z_R)^2},\quad
-a(z)=\frac{kz}{z^2+z_R^2}=\frac{k w'}{w}.
+D''_*=2\tan i_*-\tan r_*>0
 \]
-传播场可写为 \(\psi=A_0(w_0/w)\exp[-r^2/(2w^2)+ia(z)r^2/2-i\arctan(z/z_R)]\)（Gouy相位可按整体符号约定）；直接核验可用
+（因为 \(i_*>r_*>0\)），为非退化极小值。\(n=4/3\) 时 \(i_*\simeq59.3911^\circ,r_*\simeq40.2030^\circ,D_*\simeq137.9703^\circ\)，相对反太阳点 \(180^\circ-D_*\simeq42.0297^\circ\)。
+(3) 球对称散射的经典截面关系为
 \[
-\partial_z\ln I=-2\frac{w'}w+2\frac{w'}w\frac{r^2}{w^2}
-=-\frac{2a}{k}\left(1-\frac{r^2}{w^2}\right).
+\frac{d\sigma}{d\Omega}=\sum_{\rm rays}\frac{b}{\sin D}\left|\frac{db}{dD}\right|,
+\quad b=a\sin i.
 \]
-横向总功率 \(\int I\,d^2r=\pi|A_0|^2w_0^2\) 恒定；远场半径 \(w\sim |z|/(kw_0)\)，角宽 \(1/(kw_0)\)。
-(4) 若 \(\phi_1,\phi_2\) 给出同一 \(\partial_zI\) 及同一 \(I\partial_n\phi\)，令 \(f=\phi_1-\phi_2\)，则 \(\nabla\cdot(I\nabla f)=0\)、\(I\partial_nf=0\)。乘以 \(f\) 后积分分部，
+在 \(i=i_*+\delta i\)，\(D-D_*=\tfrac12 D''_*(\delta i)^2+O(\delta i^3)\)，每一侧 \(|di/dD|\simeq[2D''_*(D-D_*)]^{-1/2}\)，相同 \(D>D_*\) 有两根，所以
 \[
-0=\int_\Omega f\nabla\cdot(I\nabla f)\,d^2r
-=-\int_\Omega I|\nabla f|^2d^2r,
+\boxed{\frac{d\sigma}{d\Omega}\sim
+\frac{2a^2\sin i_*\cos i_*}{\sin D_*\sqrt{2D''_*(D-D_*)}}}.
 \]
-所以 \(f\) 为常数（要求区域连通且 \(I>0\)）。强度节点使相位无法在节点定义，可能存在整数绕数；以 \([I(z+\Delta z)-I(z-\Delta z)]/(2\Delta z)\) 近似纵向导数的截断误差为 \(O(\Delta z^2)\)，噪声反演还需正则化。
+该式以弧度为无量纲角度，系数为面积；\((D-D_*)^{-1/2}\) 是几何焦散而不是无限光能。
+(4) 采用规范积分 \(\operatorname{Ai}(z)=\frac1{2\pi}\int_{\mathbb R}e^{i(s^3/3+zs)}ds\)（按振荡积分理解）。缩放 \(s=k^{1/3}t\) 得
+\[
+\mathcal A(\xi,k)=2\pi k^{-1/3}\operatorname{Ai}(k^{2/3}\xi),\qquad I\propto k^{-2/3}|\operatorname{Ai}(k^{2/3}\xi)|^2.
+\]
+Airy 在有限实自变量上有界，因而均匀波动近似代替两条几何光线在驻点的发散振幅；在 \(\xi<0\) 为振荡干涉条纹，\(\xi>0\) 快速衰减。焦散角宽按 \(k^{-2/3}\) 缩放，但物理问题中的 \(k\) 必须与焦散三次相位的有量纲系数共同归一化，不能仅把光学真空波数单独代入无量纲 \(t\)。有限光束、偏振Fresnel系数、水滴波长量级与吸收均改变实际强度。

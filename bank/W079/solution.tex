@@ -1,38 +1,30 @@
-(1) 线性声学连续方程与Euler方程是
+(1) 取周期 \(u_{j+N}=u_j\)，Hamilton函数为
 \[
-\frac1{c^2}\partial_t p=-\frac{\rho}{S}\partial_x(Sv),\qquad
-\rho\partial_t v=-\partial_x p.
+H=\sum_{j=1}^N\left[\frac{p_j^2}{2m}+\frac K2d_j^2+\frac\beta4d_j^4\right],\quad p_j=m\dot u_j.
 \]
-对第一式再求时间导数，代入第二式得
+由 \(\dot p_j=-\partial H/\partial u_j\) 得
 \[
-p_{tt}={c^2\over S}\partial_x(Sp_x)=c^2(p_{xx}+2\alpha p_x).
+m\ddot u_j=K(d_j-d_{j-1})+\beta(d_j^3-d_{j-1}^3).
 \]
-(2) 设 \(P=e^{-\alpha x}\psi\)，可得
+每条键对相邻质点作用大小相等、方向相反，故 \(\sum_j p_j\) 恒定。
+(2) 线性化并代入 \(e^{i(kja-\omega t)}\) 得
 \[
-\psi''+k^2\psi=0,\qquad k^2={\omega^2\over c^2}-\alpha^2.
+\omega_0^2=\frac{4K}{m}\sin^2\frac{ka}{2},\quad
+c_g=\frac{d\omega_0}{dk}=a\sqrt{\frac Km}\cos\frac{ka}{2}
+\quad(0<k<\pi/a).
 \]
-传播分支 \(\omega>\alpha c\) 时 \(k\) 实且 \(\omega=c\sqrt{k^2+\alpha^2}\)；相速度 \(v_p=\omega/k\)，群速度 \(v_g=d\omega/dk=c^2k/\omega\)。截止 \(\omega_c=\alpha c\)。低于截止 \(k=i\kappa,\ \kappa=(\alpha^2-\omega^2/c^2)^{1/2}\)，被动向右衰减压力为 \(e^{-(\alpha+\kappa)x}\)，其平均净功率为零。
-(3) 由 \(-i\omega\rho V=-P_x\)，对前行波
+长波 \(\omega_0\simeq a\sqrt{K/m}|k|\)，群速趋 \(a\sqrt{K/m}\)；区边 \(ka=\pi\) 群速度为零。
+(3) 令 \(\theta=kja-\omega t\)、\(s=\sin(ka/2)\)。键伸长
 \[
-V={k+i\alpha\over\rho\omega}P.
+d_j=-2A s\sin(\theta+ka/2).
 \]
-平均声功率
+用 \(\sin^3\varphi=(3\sin\varphi-\sin3\varphi)/4\)，在基频上 \(d_j^3\simeq(3/4)(2As)^2d_j\)，于是键等效劲度 \(K_{\rm eff}=K+3\beta A^2s^2\)，再用线性差分的本征值 \(4s^2\)，得
 \[
-\overline{\mathcal P}=\frac S2\Re(PV^*)=\frac{S_0|A|^2k}{2\rho\omega}
+\boxed{\omega^2\simeq\frac{4K}{m}s^2+\frac{12\beta A^2}{m}s^4}.
 \]
-与位置无关。单位长度声能
+\(\beta>0\) 使频率随振幅增大，\(k=0\) 则频率仍为零。遗漏三次力的 \(3k,3\omega\) 成分，故泛泛的单色波不是精确非线性解；非共振弱非线性时它对基频进一步影响起始于 \(A^4\) 阶。
+(4) 对全链求导，
 \[
-\overline{\mathcal E}=\frac S4\left({|P|^2\over\rho c^2}+\rho|V|^2\right)
-=\frac{S_0|A|^2}{2\rho c^2},
+\dot H=\sum_j\dot u_j\left[m\ddot u_j-K(d_j-d_{j-1})-\beta(d_j^3-d_{j-1}^3)\right]=0.
 \]
-因为 \(k^2+\alpha^2=\omega^2/c^2\)。故 \(\overline{\mathcal P}/\overline{\mathcal E}=c^2k/\omega=v_g\)。当 \(\alpha\to0\) 时 \(k=\omega/c\)、\(V=P/(\rho c)\)、\(v_g=c\)。
-(4) 写端面幅度 \(P(L)=e^{-\alpha L}(Ae^{ikL}+Be^{-ikL})\)，
-\[
-V(L)=\frac{e^{-\alpha L}}{\rho\omega}
-\bigl[(k+i\alpha)Ae^{ikL}+(-k+i\alpha)Be^{-ikL}\bigr].
-\]
-定义 \(R_L=Be^{-ikL}/(Ae^{ikL})\)，代入 \(Z_L=P/V\) 后
-\[
-R_L=\frac{Z_L(k+i\alpha)-\rho\omega}{\rho\omega-Z_L(-k+i\alpha)}.
-\]
-匹配阻抗 \(Z_{\rm match}=\rho\omega/(k+i\alpha)\) 使 \(R_L=0\)；刚性端 \(V(L)=0\) 时 \(R_L=(k+i\alpha)/(k-i\alpha)\)，模长1。正反传播的净声功率与 \(|A|^2-|B|^2\) 成正比；若 \(\Re Z_L\ge0\)，端面吸收功率非负，故 \(|R_L|\le1\)。此结论对 \(\omega>\omega_c\) 的实波数成立，不能将倏逝模反射率作同一功率解释。
+更独立地，将各键的功率写为 \(W'(d_j)(\dot u_{j+1}-\dot u_j)\)，逐项与两个邻居的内力功相消，因此机械能对任意初态严格守恒且 \(\beta>0\) 确保势能非负。全链刚性平移 \(u_j\mapsto u_j+C\) 不改变任何 \(d_j\)，给 \(k=0\) 零模及动量守恒。有限幅度若使被忽略的高谐波显著，需数值积分完整离散方程，不能外推单色近似。

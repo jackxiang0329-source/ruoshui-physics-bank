@@ -1,21 +1,25 @@
-(1) 片电流 \(\boldsymbol K=-\Sigma\nabla\phi\)，绝缘边界 \(\partial_y\phi=0\)（电极除外）。二维对数Green函数及同号Neumann镜源给
+(1) 对迁移率为 \(\mu>0\)、电荷符号 \(s_q=\pm1\) 的组分解 \(0=s_q e(\mathbf E+\mathbf v\times\mathbf B)-e\mathbf v/\mu\)。得到 \(\mathbf j=\sigma_0[1+(\mu B)^2]^{-1}\bigl(\begin{smallmatrix}1&s_q\mu B\\-s_q\mu B&1\end{smallmatrix}\bigr)\mathbf E\)，\(\sigma_0=ne\mu\)（空穴把 \(n\) 换为 \(p\)）。相加给
 \[
-\phi(x,y)=\frac{I}{\pi\Sigma}\ln\frac{\sqrt{(x-b)^2+y^2}}{\sqrt{(x-a)^2+y^2}}+C.
+S=e\!\left(\frac{n\mu_e}{1+\mu_e^2B^2}+\frac{p\mu_h}{1+\mu_h^2B^2}\right),\quad
+D=eB\!\left(\frac{p\mu_h^2}{1+\mu_h^2B^2}-\frac{n\mu_e^2}{1+\mu_e^2B^2}\right).
 \]
-源附近 \(\phi\sim-(I/\pi\Sigma)\ln r_a\)，故 \(K_r\sim I/(\pi r_a)\)。在半圆积分 \(\int_0^\pi K_r r_a d\theta=I\)；汇点反号。远场总注入为零，场衰减如 \(r^{-2}\)。
-(2) 沿 \(y=0\)，
+特别是 \(S>0\)，\(D(-B)=-D(B)\)。
+(2) 反矩阵为 \((S^2+D^2)^{-1}\bigl(\begin{smallmatrix}S&-D\\D&S\end{smallmatrix}\bigr)\)，所以 \(j_y=0\) 时 \(\rho_{xx}=S/(S^2+D^2)\)、\(R_H=D/[B(S^2+D^2)]\)。通分得
 \[
-V_{cd}=\frac I{\pi\Sigma}\ln\left|\frac{(c-b)(d-a)}{(c-a)(d-b)}\right|.
+\boxed{\rho_{xx}=\frac{n\mu_e+p\mu_h+(n\mu_h+p\mu_e)\mu_e\mu_hB^2}{e[(n\mu_e+p\mu_h)^2+(p-n)^2\mu_e^2\mu_h^2B^2]}},
 \]
-在给定等比位置，\(V_{cd}/I=\ln9/(\pi\Sigma)>0\)，\(\Sigma\) 为片电导（S），故 \(R\) 单位欧姆。
-(3) 两点差满足
 \[
-f(x)-f(y)=\frac{(\alpha\delta-\beta\gamma)(x-y)}{(\gamma x+\delta)(\gamma y+\delta)}.
+\boxed{R_H=\frac{p\mu_h^2-n\mu_e^2+(p-n)\mu_e^2\mu_h^2B^2}{e[(n\mu_e+p\mu_h)^2+(p-n)^2\mu_e^2\mu_h^2B^2]}}.
 \]
-代入交比，每点对应的分母因子恰好上下抵消，电阻不变。保角变换是二维导电问题的尺度不变性来源，不能推广至各向异性且未同步变换导电率的情形。
-(4) 将源、汇各切去半径 \(\varepsilon\) 的半圆，源近场 \(\phi_a\simeq(I/\pi\Sigma)\ln(L/\varepsilon)\)，汇近场 \(\phi_b\simeq-(I/\pi\Sigma)\ln(L/\varepsilon)\)。Green恒等式与 \(\nabla\cdot\boldsymbol K=0\) 给
+\(B\to0\) 时 \(\rho_0=[e(n\mu_e+p\mu_h)]^{-1}\)，\(R_{H,0}=(p\mu_h^2-n\mu_e^2)/[e(n\mu_e+p\mu_h)^2]\)。
+(3) \(n=p=N\) 时
 \[
-P_J=\Sigma\int_\Omega|\nabla\phi|^2 dA=I(\phi_a-\phi_b)
-=\frac{2I^2}{\pi\Sigma}\ln\frac L\varepsilon+O(I^2/\Sigma).
+\rho_{xx}=\frac{1+\mu_e\mu_hB^2}{eN(\mu_e+\mu_h)},\quad
+R_H=\frac{\mu_h-\mu_e}{eN(\mu_e+\mu_h)},
 \]
-亦可对两电极的环形近场分别积分 \(P_{\rm one}=\Sigma\int_\varepsilon^{O(L)}[I/(\pi\Sigma r)]^2\pi r dr=I^2\ln(L/\varepsilon)/(\pi\Sigma)\)，合并恰得同一主项。四探针不穿流且远离奇点，因而电压有限；真实有限接触面积只改变非普适常数项。
+故磁阻为正二次且在模型中不饱和。若 \(n\ne p\) 且 \(|B|\to\infty\)，
+\[
+\rho_{xx}\to\frac{n\mu_h+p\mu_e}{e(p-n)^2\mu_e\mu_h},\quad R_H\to\frac{1}{e(p-n)}.
+\]
+弱场Hall零点是 \(p\mu_h^2=n\mu_e^2\)，并不等价于 \(n=p\)。精确补偿且 \(\mu_e=\mu_h\) 时所有场的Hall电压为零。
+(4) \(\mathbf j\cdot\mathbf E=S(E_x^2+E_y^2)\ge0\)，反对称电导项相互抵消。\(j_y=0\) 给 \(j_xE_x=\rho_{xx}j_x^2\ge0\)。电导张量满足 \(\sigma_{ij}(B)=\sigma_{ji}(-B)\)；由 \(S\) 偶、\(D\) 奇可直接验证。取 \(p\to0\)，\(\rho_{xx}=1/(en\mu_e)\) 无单载流子经典磁阻，\(R_H=-1/(en)\)。注意真实强场中迁移率磁场依赖及量子振荡会破坏该常迁移率模型。

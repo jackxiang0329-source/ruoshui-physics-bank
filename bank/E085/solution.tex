@@ -1,29 +1,31 @@
-(1) 平面波满足 \(\partial_t B=-\partial_z E\)，\(\partial_t D=-(1/\mu)\partial_z B\)，其中 \(D=\epsilon(t)E\)。在 \(t=0\) 的任意微小时间区间积分并令其宽度趋零，因空间导数无Dirac冲量，得
+(1) 在共转局域系中，线性化动量含 Coriolis 力和剪切平衡，磁冻结含背景流对扰动磁场的拉伸。令 \(v_A=B_0/\sqrt{\mu_0\rho}\)，得到
 \[
-D(0^+)=D(0^-),\quad B(0^+)=B(0^-).
+\begin{aligned}
+s u_x-2\Omega u_y&=ikv_A b_x,&
+s u_y+(2-q)\Omega u_x&=ikv_A b_y,\\
+s b_x&=ikv_A u_x,&
+s b_y+q\Omega b_x&=ikv_A u_y.
+\end{aligned}
 \]
-介质空间平移不变使空间傅里叶模式 \(k\) 保持；\(\omega_j=k/\sqrt{\mu\epsilon_j}\) 则允许变更。
-(2) 界面后设 \(E=\Re[e^{ikz}(E_+e^{-i\omega_2t}+E_-e^{+i\omega_2t})]\)。取 \(B_y\) 的相应振幅为 \((k/\omega_2)(E_+e^{-i\omega_2t}-E_-e^{+i\omega_2t})\)，因法拉第方程分支间符号相反。于 \(t=0\)，
+背景压力与引力共同维持基本剪切流；只需考虑轴对称、无压缩的横向扰动。
+(2) 由第三式 \(b_x=ikv_Au_x/s\)，第四式 \(b_y=ikv_Au_y/s-q\Omega ikv_Au_x/s^2\)，代入前两式并清除分母，或计算 \(4\times4\) 行列式，得
 \[
-E_++E_-=\frac{\epsilon_1}{\epsilon_2}E_0,\qquad
-E_+-E_-=\frac{\omega_2}{\omega_1}E_0.
+\boxed{s^4+s^2(\kappa^2+2\omega_A^2)+\omega_A^2(\omega_A^2-2q\Omega^2)=0},\quad
+\kappa^2=2(2-q)\Omega^2.
 \]
-令 \(r=\omega_2/\omega_1=\sqrt{\epsilon_1/\epsilon_2}\)，可解
+当 \(\omega_A=0\)，方程为 \(s^2(s^2+\kappa^2)=0\)：回转振荡稳定，另外两个零根代表无磁张力的中性分支。
+(3) 把 \(y=s^2\) 视为二次方程。因 \(y\) 的一次系数正，若常数项 \(\omega_A^2(\omega_A^2-2q\Omega^2)<0\)，恰有一个正根，即
 \[
-E_+=\frac12(r^2+r)E_0,\quad E_-=\frac12(r^2-r)E_0.
+0<\omega_A^2<2q\Omega^2.
 \]
-正、负频分支的能流方向分别为 \(+z,-z\)，速度大小 \(1/\sqrt{\mu\epsilon_2}\)。当 \(r=1\)，有 \(E_+=E_0,E_-=0\)。
-(3) 一空间周期的平均能量 \(u_1=\epsilon_1 E_0^2/2\)；两分支空间/时间交叉项可按周期或时均消去（正反时间分支在空间平均时的交叉项一般含 \(e^{\pm2i\omega_2t}\)，但电能与磁能的交叉项符号相反，合计恒抵消）。故
+令 \(x=\omega_A^2\)，关系 \(F(y,x)=y^2+y(\kappa^2+2x)+x(x-2q\Omega^2)=0\)。增长极值满足 \(F_x=2y+2x-2q\Omega^2=0\)，故 \(x=q\Omega^2-y\)。代回并选正根，得到
 \[
-\frac{u_2}{u_1}=\frac{\epsilon_2(E_+^2+E_-^2)}{\epsilon_1 E_0^2}
-=\frac{1+r^2}{2}.
+s_{\max}=\frac{q\Omega}{2},\qquad
+k_{\max}^2v_A^2=\frac{q(4-q)}4\Omega^2.
 \]
-当 \(\epsilon_2<\epsilon_1\) 时 \(r>1\) 能量增加，所增来自驱动介质切换的外泵。
-正则动量（Minkowski型）空间均值 \(g_M=\langle D_xB_y\rangle\)。两分支方向相反，因此
+Kepler \(q=3/2\)：\(s_{\max}=3\Omega/4\)，\(k_{\max}v_A=\sqrt{15}\Omega/4\)。当 \(\omega_A^2\ge2q\Omega^2\) 时磁张力超过剪切释放的自由能，模式无增长。
+(4) 把第一、二式分别乘以 \(u_x^*,u_y^*\)，第三、四式乘以 \(b_x^*,b_y^*\)，取实部相加；含 \(ikv_A\) 的速度—磁场互换项逐对抵消，Coriolis 系数与磁剪切项剩下
 \[
-g_{M,2}=\frac{\epsilon_2k}{2\omega_2}(E_+^2-E_-^2)
-=\frac{\epsilon_2k}{2\omega_2}r^3E_0^2
-=\frac{\epsilon_1k}{2\omega_1}E_0^2=g_{M,1}.
+\boxed{\frac{d\mathcal E}{dt}=\rho q\Omega\operatorname{Re}(u_x^*u_y-b_x^*b_y)}.
 \]
-这并不意味着介质外泵过程的电磁场能守恒。
-(4) \(\epsilon_2=4\epsilon_1\) 时 \(r=1/2\)，故 \(E_+/E_0=3/8,E_-/E_0=-1/8\)，能量比 \((1+1/4)/2=5/8\)。动量比 \((E_+^2-E_-^2)/r^3=(9/64-1/64)/(1/8)=1\)；时间反射支的负号是相位信息而非负能量。实际介质跃变时间若短至接近电子响应时间，须采用有记忆的色散本构，瞬时 \(\epsilon(t)\) 只是理想化有效模型。
+这是从基本态差速运动提取的 Reynolds–Maxwell 总应力功；\(q=0\) 严格为零。若考虑实际物理实场的周期平均能量，各项统一乘 \(1/2\)，等式不变。结论需局域波长远小于盘半径、\(\rho\) 常数、\(k\) 沿竖直场、忽略电阻和黏性；加入非理想项会改变阈值。
