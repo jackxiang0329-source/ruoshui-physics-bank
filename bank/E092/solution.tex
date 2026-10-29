@@ -1,25 +1,67 @@
-(1) 设 \(x(t)=\Re[\tilde x e^{-i\omega t}]\)，得到 \(\tilde x=-(e/m)E_0/(\omega_0^2-\omega^2-i\gamma\omega)\)。每体积极化 \(P=-ne x\)，因此
+(1) Fourier分离的Laplace方程是 \(\Phi_{zz}-k^2\Phi=0\)，唯一Dirichlet解
 \[
-\chi(\omega)={ne^2\over m\epsilon_0}{1\over\omega_0^2-\omega^2-i\gamma\omega}
-={\omega_p^2\over\omega_0^2-\omega^2-i\gamma\omega},\quad
-\epsilon_r=1+\chi.
+\Phi=V_1\frac{\sinh k(d-z)}{\sinh kd}\cos kx+
+V_2\frac{\sinh kz}{\sinh kd}\cos(kx+\varphi).
 \]
-与 \(J=\partial_tP=-i\omega\epsilon_0\chi E\) 比较，等效复电导 \(\sigma_{\rm eff}=-i\omega\epsilon_0\chi\)。
-(2) 设 \(A=\omega_0^2-\omega^2,B=\gamma\omega\)，则
+对 \(x,z\) 求负梯度得
 \[
-\chi'={\omega_p^2 A\over A^2+B^2},\qquad
-\chi''={\omega_p^2 B\over A^2+B^2}\ge0\ (\omega>0).
+E_x=kV_1\frac{\sinh k(d-z)}{\sinh kd}\sin kx+
+kV_2\frac{\sinh kz}{\sinh kd}\sin(kx+\varphi),
 \]
-弱阻尼在 \(\omega\simeq\omega_0\) 产生窄吸收峰；低频 \(\chi(0)=\omega_p^2/\omega_0^2\)，高频 \(\chi\simeq-\omega_p^2/\omega^2\)。时间因子 \(e^{-i\omega t}\) 下 \(\chi''>0\) 对应被动介质。
-(3) 平均摩擦热功率密度 \(n m\gamma\langle \dot x^2\rangle=nm\gamma\omega^2|\tilde x|^2/2\)，故
 \[
-p_{\rm loss}={ne^2\gamma\omega^2|E_0|^2\over2m(A^2+B^2)}
-={\omega\epsilon_0\over2}\chi''|E_0|^2.
+E_z=kV_1\frac{\cosh k(d-z)}{\sinh kd}\cos kx-
+kV_2\frac{\cosh kz}{\sinh kd}\cos(kx+\varphi).
 \]
-两种计算一致。
-(4) 令 \(\gamma=0,\omega\ne\omega_0\)，有
+在两端的 \(\Phi\) 恰好等于指定电位，且电位在间隙内满足 \(\nabla^2\Phi=0\)。
+
+(2) 两端面向介质的法线分别为 \(+\mathbf e_z,-\mathbf e_z\)，故
 \[
-{d[\omega\epsilon_r(\omega)]\over d\omega}
-=1+\omega_p^2{\omega_0^2+\omega^2\over(\omega_0^2-\omega^2)^2}>0,
+\sigma_0=\varepsilon k[V_1\coth(kd)\cos kx-
+V_2\operatorname{csch}(kd)\cos(kx+\varphi)],
 \]
-所以标准无损色散平均电储能 \(\epsilon_0 d(\omega\epsilon_r)/d\omega\,|E_0|^2/4\) 正定（另加磁能）。近共振无限响应是令阻尼为零的人工奇点，物理系统必须包含阻尼、非线性或有限测量带宽。
+\[
+\sigma_d=\varepsilon k[V_2\coth(kd)\cos(kx+\varphi)-
+V_1\operatorname{csch}(kd)\cos kx].
+\]
+用复幅度 \(v=(V_1,V_2e^{i\varphi})^\mathsf T\)，矩阵
+\[
+C_k=\varepsilon k
+\begin{pmatrix}\coth kd&-\operatorname{csch}kd\\
+-\operatorname{csch}kd&\coth kd\end{pmatrix}.
+\]
+本征值为 \(\varepsilon k(\coth kd\pm\operatorname{csch}kd)>0\)。
+当 \(kd\gg1\)，\(C_k\to\varepsilon kI\)；当 \(kd\ll1\)，同相模本征值 \(\sim\varepsilon k^2d/2\)，反相模 \(\sim 2\varepsilon/d\)。这里的图案是由分段独立源施加的非均匀Dirichlet条件，不是一整块处处等势的金属板。
+
+(3) 按 \(\langle\cos^2kx\rangle_x=1/2\)，利用Green恒等式，得到每单位面积场能
+\[
+\boxed{\bar{\mathcal U}
+=\frac14\operatorname{Re}(v^\dagger C_kv)
+=\frac{\varepsilon k}{4}
+[(V_1^2+V_2^2)\coth(kd)-2V_1V_2\cos\varphi\,\operatorname{csch}(kd)]}.
+\]
+正定电容矩阵确保场能非负。
+对于 \(k\to0^+\) 但始终对整周期 \(2\pi/k\) 平均，场能极限是
+\[
+\bar{\mathcal U}\to\frac{\varepsilon}{4d}
+(V_1^2+V_2^2-2V_1V_2\cos\varphi).
+\]
+若先在有限 \(x\) 位置固定 \(k=0,\varphi=0\) 而把电极变成两个均匀电位，则其能量是 \(\varepsilon(V_1-V_2)^2/(2d)\)，恰为同相周期平均极限的两倍。原因是面积平均顺序改变，不能忽略平均 \(\cos^2\) 的不一致。
+
+(4) Maxwell静电张量在二维的 \(zz\) 分量为
+\(T_{zz}=\varepsilon(E_z^2-E_x^2)/2\)。
+对 \(x\) 周期平均，\(\partial_z\langle T_{zz}\rangle=0\)，因为 \(\partial_iT_{iz}=0\) 且横向全周期导数积分为零。代入上下任一边界的场可得
+\[
+\langle T_{zz}\rangle
+=\frac{\varepsilon k^2}{4}[
+(V_1^2+V_2^2)\operatorname{csch}^2(kd)
+-2V_1V_2\cos\varphi\,\operatorname{csch}(kd)\coth(kd)].
+\]
+另一方面，固定 \(V_1,V_2,\varphi,k\) 对第三问求间距导数，
+\[
+\frac{\partial\bar{\mathcal U}}{\partial d}
+=-\frac{\varepsilon k^2}{4}[
+(V_1^2+V_2^2)\operatorname{csch}^2(kd)
+-2V_1V_2\cos\varphi\,\operatorname{csch}(kd)\coth(kd)].
+\]
+所以 \(\langle T_{zz}\rangle=-\partial_d\bar{\mathcal U}\)。
+固定电势驱动的机械合力还须包含外电源所作功，不能仅对场能取负导数而遗漏源能量。

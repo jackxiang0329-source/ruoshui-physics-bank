@@ -1,20 +1,42 @@
-(1) 无矩 Euler 方程
+(1) 记 \(f=1-3a/(2r)+a^3/(2r^3)\)、\(g=1-3a/(4r)-a^3/(4r^3)\)。散度为
 \[
-I_1\dot\omega_1=(I_2-I_3)\omega_2\omega_3,\ 
-I_2\dot\omega_2=(I_3-I_1)\omega_3\omega_1,\ 
-I_3\dot\omega_3=(I_1-I_2)\omega_1\omega_2 .
+\nabla\!\cdot\mathbf u=U\cos\theta[f'+2(f-g)/r]=0.
 \]
-直接乘 \(\omega_i\) 相加得 \(\dot E=0\)，其中 \(E=\frac12\sum I_i\omega_i^2\)。再乘 \(I_i\omega_i\) 相加得 \(\frac d{dt}\sum I_i^2\omega_i^2=0\)，即空间角动量模 \(L^2\) 不变。
-(2) 绕第二轴取 \(\omega_2=\Omega,\omega_{1,3}\) 微小，则
+\(f(a)=g(a)=0\)，而 \(f(\infty)=g(\infty)=1\)，两项边界条件均满足。将速度代入向量Laplacian，\(-\nabla p+\mu\nabla^2\mathbf u=0\) 给出
 \[
-\dot\omega_1={(I_2-I_3)\Omega\over I_1}\omega_3,\quad
-\dot\omega_3={(I_1-I_2)\Omega\over I_3}\omega_1.
+p(r,\theta)=p_\infty-\frac{3\mu Ua}{2r^2}\cos\theta.
 \]
-两系数同为负，故
+可对各径向幂次分别求导再代回方程独立核对。
+
+(2) 于 \(r=a\) 有 \(\partial_ru_r=0\)，所以
 \[
-\ddot\omega_1=\lambda^2\omega_1,\quad
-\lambda=|\Omega|\sqrt{(I_3-I_2)(I_2-I_1)/(I_1I_3)}.
+\sigma_{rr}=-p_\infty+\frac{3\mu U}{2a}\cos\theta,\qquad
+\sigma_{r\theta}=\mu(\partial_ru_\theta+r^{-1}\partial_\theta u_r-u_\theta/r)
+=-\frac{3\mu U}{2a}\sin\theta.
 \]
-扰动指数增长。绕第一轴或第三轴线性化后两系数异号，得到振荡型而非指数失稳。
-(3) 在固定 \(L^2=\sum L_i^2\) 球面，动能 \(E=\sum L_i^2/(2I_i)\) 的主轴驻点中，轴1对应最大、轴3对应最小、轴2对应鞍点。能量与角动量同时守恒限制轨道沿两二次曲面交线运动，鞍点附近分离轨道使中间轴翻转；这是哈密顿不稳定而非耗散。
-(4) 若 \(I_1\to I_2\) 或 \(I_2\to I_3\)，\(\lambda\to0\)，须分析退化对称陀螺而不能直接以指数判定。线性解仅在 \(|\delta\boldsymbol\omega|\ll|\Omega|\) 时成立，失稳增长到有限幅度后必须用非线性Euler方程。全过程 \(E,L^2\) 守恒。
+取从球面指向流体的法向 \(\mathbf e_r\)，流体对球的轴向应力为
+\(t_z=\sigma_{rr}\cos\theta-\sigma_{r\theta}\sin\theta\)。
+去掉积分为零的均匀压强项，得到
+\[
+t_z=\frac{3\mu U}{2a},\quad
+F_{\rm p}=2\pi\mu aU,\quad F_{\rm shear}=4\pi\mu aU,
+\quad\boxed{F_z=6\pi\mu aU}.
+\]
+压力部分使用球面积 \(\int\cos^2\theta\,d\Omega=4\pi/3\)，剪切部分用 \(\int\sin^2\theta\,d\Omega=8\pi/3\)；流体力沿来流方向。
+
+(3) Stokes方程的应力散度为零，点乘速度并用不可压性得到
+\(\nabla\cdot(\sigma\mathbf u)=2\mu E:E\)。对球体外流体体积积分，由球面无滑移和远场机械功输入得
+\[
+\mathcal D=\int_{r>a}2\mu E:E\,dV=F_zU
+=\boxed{6\pi\mu aU^2}.
+\]
+也可换到球相对无穷远静液以速度 \(-U\mathbf e_z\) 运动的Galilean系；此时阻力耗散功率为 \(F_{\rm drag}U\)。稳态动能不累积不等于没有供能：正定剪切耗散由外部维持来流的机械功持续补足。
+
+(4) 终端运动时，净重力
+\((4\pi a^3/3)(\rho_s-\rho_f)g\)
+被 \(6\pi\mu aV_t\) 抵消，故对于重球
+\[
+V_t=\frac{2a^2(\rho_s-\rho_f)g}{9\mu}.
+\]
+以直径计的雷诺数
+\(Re=2\rho_faV_t/\mu\ll1\) 是忽略惯性的必要自洽条件。若有显著壁面阻塞、湍流或球形状变化，则应修正该线性拖曳公式。

@@ -1,24 +1,51 @@
-(1) 取 \(\beta=1/(k_BT)\)，对相邻键均分磁场能，转移矩阵
+(1) 换元 \(p=mc\sinh u\)，则 \(H=mc^2\cosh u\)，\(dp=mc\cosh u\,du\)。两种动量符号对称，所以
 \[
-\mathsf T_{ss'}=\exp[\beta Jss'+\tfrac12\beta h(s+s')]
-=\begin{pmatrix}e^{\beta(J+h)}&e^{-\beta J}\\e^{-\beta J}&e^{\beta(J-h)}\end{pmatrix}.
+Z_p=\int_\mathbb R e^{-\beta H}dp=2mcK_1(z).
 \]
-本征值
+经典稀薄、交换量子效应可忽略时，
 \[
-\lambda_\pm=e^{\beta J}\cosh(\beta h)\pm
-\sqrt{e^{2\beta J}\sinh^2(\beta h)+e^{-2\beta J}},
-\quad Z_N=\lambda_+^N+\lambda_-^N.
+\boxed{Z_N=\frac1{N!}\left(\frac{2mcL}{h}K_1(z)\right)^N},\qquad
+f_T(p)=\frac{e^{-\beta H(p)}}{2mcK_1(z)}.
 \]
-(2) 对有限T，\(|\lambda_-|<\lambda_+\)，所以 \(f=-k_BT\ln\lambda_+\)。磁化强度每自旋
+若粒子可区分，应去掉Gibbs \(1/N!\)，而单粒子能量公式不变。热力学积分中包含静质量能，故低温配分仍具有因子 \(e^{-z}\)。
+
+(2) \(K_1'=-K_0-K_1/z\)，设 \(R=K_0/K_1\)，求导
 \[
-m=\partial_{\beta h}\ln\lambda_+
-={\sinh(\beta h)\over\sqrt{\sinh^2(\beta h)+e^{-4\beta J}}}.
+\boxed{u=U/N=mc^2(R+z^{-1})},\qquad
+\boxed{c_V=k_B[1+z^2(1-R^2)-zR]}.
 \]
-在任意 \(T>0\)，取 \(h\to0^\pm\) 均有 \(m\to0\)，无有限温度自发磁化。
-(3) \(h=0\) 时 \(\lambda_+=2\cosh(\beta J)\)，单键能 \(u=-J\tanh(\beta J)\)，单位自旋热容
+第二式来自 \(R'=-1+R^2+R/z\)，而
+\(c_V=\operatorname{Var}(H)/(k_BT^2)>0\) 直接保证正性。
+当 \(z\gg1\)，利用
+\(K_\nu(z)\sim \sqrt{\pi/(2z)}e^{-z}[1+(4\nu^2-1)/(8z)+\cdots]\)，得
+\(u=mc^2+k_BT/2+O((k_BT)^2/mc^2)\)，
+\(c_V\to k_B/2\)。
+当 \(z\ll1\)，\(K_1\sim 1/z,K_0\sim-\ln(z/2)-\gamma_E\)，得到 \(u\sim k_BT,c_V\to k_B\)，体现一维色散关系由 \(p^2/(2m)\) 变为 \(c|p|\)。
+
+(3) 从 \(F=-k_BT\ln Z_N\) 对 \(L\) 求导有
 \[
-c_V=k_B(\beta J)^2\operatorname{sech}^2(\beta J).
+PL=Nk_BT,\qquad S=k_B(\ln Z_N+\beta U)
+=k_B[\ln Z_N+N(zR+1)].
 \]
-两点关联 \(\langle s_0s_r\rangle=(\tanh\beta J)^r=e^{-r/\xi}\)，其中
-\(\xi=-1/\ln[\tanh(\beta J)]\)（以晶格常数为长度单位）。
-(4) \(T\to0\) 时 \(\xi\to\infty\)、\(u\to-J\)、\(c_V\to0\)；高温 \(\xi\to0\)、\(u\to0\)、\(c_V\sim J^2/(k_BT^2)\)。有限T的 \(\lambda_+\) 解析，不出现自由能奇点；结论依赖一维有限程、平衡、有限J，无限程耦合可有不同相变。
+固定 \(m,N\) 的准静态等熵过程满足
+\[
+\boxed{L K_1(z)e^{zR(z)+1}=\mathrm{const}}.
+\]
+大 \(z\) 时 \(K_1 e^{zR+1}\propto z^{-1/2}\)，所以
+\(LT^{1/2}=\mathrm{const}\)；小 \(z\) 时 \(K_1\sim z^{-1}, zR\to0\)，故
+\(LT=\mathrm{const}\)。
+\(PL=Nk_BT\) 在两端形式不变，但热容和绝热幂律因能量色散而改变。
+
+(4) 群速度为 \(v=dH/dp=pc^2/H\)。在 \(p>0\) 用 \(v\,dp=dH\)：
+\[
+\int_{\mathbb R}|v|e^{-\beta H}dp
+=2\int_{mc^2}^\infty e^{-\beta E}dE=\frac{2e^{-z}}{\beta}.
+\]
+归一化给
+\[
+\boxed{\langle|v|\rangle=c\frac{e^{-z}}{zK_1(z)}}.
+\]
+低温 \(z\gg1\)，该式为 \(c\sqrt{2/(\pi z)}=
+\sqrt{2k_BT/(\pi m)}\)，吻合一维Maxwell分布；
+高温 \(z\ll1\) 时趋于 \(c\)。
+对任意有限 \(p\)，\(|v(p)|<c\)，而正则分布对每个有限 \(p\) 有正的密度，因此任何有限温度下严格有 \(\langle|v|\rangle<c\)，没有超光速平均速度。
