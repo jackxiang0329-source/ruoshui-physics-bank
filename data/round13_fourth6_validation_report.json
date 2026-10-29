@@ -1,0 +1,176 @@
+{
+  "status": "draft-qa-only",
+  "new_problem_count": 6,
+  "passed_count": 24,
+  "tests": [
+    {
+      "id": "M071",
+      "part": 1,
+      "method": "symbolic",
+      "name": "continuity-derived Bondi velocity gradient numerator vanishes precisely at the transonic regular sonic point",
+      "passed": true
+    },
+    {
+      "id": "M071",
+      "part": 2,
+      "method": "dimensions",
+      "name": "regular sonic radius and density determine classical isothermal Bondi accretion rate with exact pi exp three halves coefficient",
+      "passed": true
+    },
+    {
+      "id": "M071",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "dimensionless Bernoulli implicit Bondi transonic curve has stationary regular point at w equals x equals one",
+      "passed": true
+    },
+    {
+      "id": "M071",
+      "part": 4,
+      "method": "limit",
+      "name": "free fall inner Bondi density has minus three halves radial exponent and outer rate tends inverse square distance",
+      "passed": true
+    },
+    {
+      "id": "E071",
+      "part": 1,
+      "method": "symbolic",
+      "name": "ferroelectric double well has two nonzero stable roots with positive curvature and an unstable zero root",
+      "passed": true
+    },
+    {
+      "id": "E071",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "polarization differential susceptibility follows curvature inverse and critical amplitude ratio is two",
+      "passed": true
+    },
+    {
+      "id": "E071",
+      "part": 3,
+      "method": "symbolic",
+      "name": "Landau spinodal simultaneously zero first and second derivatives yields exact coercive spinodal field magnitude",
+      "passed": true
+    },
+    {
+      "id": "E071",
+      "part": 4,
+      "method": "conservation",
+      "name": "zero field double well free energy barrier is positive A squared over four b",
+      "passed": true
+    },
+    {
+      "id": "T067",
+      "part": 1,
+      "method": "symbolic",
+      "name": "centrifugal ideal gas equilibrium exponential density follows exact radial isothermal Euler balance",
+      "passed": true
+    },
+    {
+      "id": "T067",
+      "part": 2,
+      "method": "limit",
+      "name": "radial normalization yields uniform volume density as rotation vanishes",
+      "passed": true
+    },
+    {
+      "id": "T067",
+      "part": 3,
+      "method": "independent_derivation",
+      "name": "moment of inertia radius equals derivative of logarithmic partition factor and has correct small rotation limit",
+      "passed": true
+    },
+    {
+      "id": "T067",
+      "part": 4,
+      "method": "conservation",
+      "name": "rotating frame Legendre conjugate derivative equals mass times angular velocity times canonical mean radius squared",
+      "passed": true
+    },
+    {
+      "id": "W067",
+      "part": 1,
+      "method": "symbolic",
+      "name": "spherical harmonic interior radial velocity potential satisfies kinematic boundary exactly",
+      "passed": true
+    },
+    {
+      "id": "W067",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "dynamic Laplace curvature pressure and Bernoulli condition yield Rayleigh ell mode squared frequency",
+      "passed": true
+    },
+    {
+      "id": "W067",
+      "part": 3,
+      "method": "conservation",
+      "name": "Green kinetic integral and second-order surface energy reproduce oscillator mass and positive stiffness",
+      "passed": true
+    },
+    {
+      "id": "W067",
+      "part": 4,
+      "method": "physical_case",
+      "name": "ell one is pure translation zero frequency while high surface tension raises frequencies",
+      "passed": true
+    },
+    {
+      "id": "O069",
+      "part": 1,
+      "method": "symbolic",
+      "name": "paraxial continuity gives positive focused intensity derivative for positive sinusoidal phase curvature",
+      "passed": true
+    },
+    {
+      "id": "O069",
+      "part": 2,
+      "method": "independent_derivation",
+      "name": "Fourier inverse Poisson coefficient times measured defocus derivative recovers original nonzero phase",
+      "passed": true
+    },
+    {
+      "id": "O069",
+      "part": 3,
+      "method": "limit",
+      "name": "low spatial frequency inverse Poisson transfer grows with inverse square wave number",
+      "passed": true
+    },
+    {
+      "id": "O069",
+      "part": 4,
+      "method": "conservation",
+      "name": "periodic transverse intensity flux integrates to zero under no boundary leakage",
+      "passed": true
+    },
+    {
+      "id": "Q069",
+      "part": 1,
+      "method": "symbolic",
+      "name": "Bessel recurrence exactly solves tilted tight binding eigenvalue equation for Wannier Stark ladder",
+      "passed": true
+    },
+    {
+      "id": "Q069",
+      "part": 2,
+      "method": "numerical",
+      "name": "numerical Wannier Stark Bessel modes are orthonormal for two distinct translated ladder centers",
+      "passed": true
+    },
+    {
+      "id": "Q069",
+      "part": 3,
+      "method": "limit",
+      "name": "every Wannier Stark ladder eigenphase exactly revives after a complete Bloch period and wavepacket broadening vanishes",
+      "passed": true
+    },
+    {
+      "id": "Q069",
+      "part": 4,
+      "method": "independent_derivation",
+      "name": "semiclassical crystal velocity integral recovers exact time derivative of oscillatory position trajectory",
+      "passed": true
+    }
+  ],
+  "independent_expert_review": "pending"
+}

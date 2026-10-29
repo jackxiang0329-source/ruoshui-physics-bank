@@ -33,6 +33,10 @@ jobs:
         run: python scripts/check_round13_third6.py
       - name: Verify third six validation report is deterministic
         run: git diff --exit-code -- data/round13_third6_validation_report.json
+      - name: Round 13 fourth six full per-part physical verification
+        run: python scripts/check_round13_fourth6.py
+      - name: Round 13 fourth six deterministic report check
+        run: git diff --exit-code -- data/round13_fourth6_validation_report.json
       - name: Verify machine report is reproducible
         run: git diff --exit-code -- data/round13_draft_validation_report.json
       - name: Verify synchronized canonical TeX and CSV
