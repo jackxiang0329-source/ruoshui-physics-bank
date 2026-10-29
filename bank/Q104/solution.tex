@@ -1,7 +1,7 @@
-(1) 取Bloch基 $(a_k,b_k)$，可写 $H(k)=-\begin{pmatrix}0&v+we^{-ik}\\v+we^{ik}&0\end{pmatrix}$，能量为 $\boxed{E_\pm(k)=\pm\sqrt{v^2+w^2+2vw\cos k}}$。矩阵没有对角项，满足 $\sigma_zH\sigma_z=-H$ 的手征对称。
+(1) 令交换算符 $S|a\rangle|b\rangle=|b\rangle|a\rangle$，$S^2=I$、$S=S^\dagger$。辅助态为 $|+\rangle$ 时受控SWAP把两个寄存器置于按辅助路径的相干叠加，最后Hadamard将对称/反对称分量映射到测量结果。
 
-(2) 在Brillouin区 $k\in[-\pi,\pi]$，复数 $v+we^{ik}$ 描绘以正实轴 $v$ 为中心、半径 $w$ 的圆。$w>v$ 时曲线包围原点，绕数绝对值为1；$w<v$ 时不包围，绕数0。最小正带隙是 $|v-w|$，两带间隙为 $\boxed{\Delta=2|v-w|}$，仅在 $v=w$、$k=\pi$ 闭合。
+(2) 直接在辅助比特的两个投影分支取迹，有 $p_0=\operatorname{tr}[(I+S)(\rho\otimes\sigma)]/2$。利用 $\operatorname{tr}[S(A\otimes B)]=\operatorname{tr}(AB)$，得到 $\boxed{p_0=(1+\operatorname{tr}\rho\sigma)/2}$，$p_1=(1-\operatorname{tr}\rho\sigma)/2$。纯态时 $\rho=|\psi\rangle\langle\psi|$、$\sigma=|\phi\rangle\langle\phi|$，故重叠为 $|\langle\psi|\phi\rangle|^2$。
 
-(3) 半无限左端A轨道终止，在零能寻找所有B振幅为0的态。对B点的Schrödinger方程为 $v A_j+wA_{j+1}=0$，所以 $A_{j+1}=-(v/w)A_j$。因而 $\boxed{\psi_{A,j}=\sqrt{1-(v/w)^2}(-v/w)^{j-1},\quad\psi_{B,j}=0}$，仅当 $v<w$ 时归一化。局域长度为 $\xi=1/\ln(w/v)$（以晶胞为单位）。
+(3) 当两输入相同，记纯度 $P=\operatorname{tr}\rho^2$，则 $p_0=(1+P)/2$。为每次测试定义 $X=+1$ 当测到0、$X=-1$ 当测到1，故 $\mathbb EX=p_0-p_1=P$、$X^2=1$，单次方差为 $1-P^2$。重复 $N$ 次独立测试的样本均值 $\widehat P=N^{-1}\sum_jX_j$ 是无偏估计且 $\boxed{\operatorname{Var}\widehat P=(1-P^2)/N}$。
 
-(4) 穿越 $v=w$ 时体能隙闭合，绕数改变；开边界的拓扑相存在局域零模。有限链的左右端尾部重叠使两零模形成指数小的能量劈裂，量级随长度按 $(v/w)^N$ 下降。若增加不同子格的现场能差而破坏手征对称，零模一般不再严格钉在零能。
+(4) 若 $\rho$ 为纯态，$P=1$、$p_0=1$；若 $\rho=I/d$，$P=1/d$、$p_0=(1+1/d)/2$。两个正交纯态的交叠0，故 $p_0=1/2$，并非结果0绝不出现。交换测试只提供一个内积型实数，远不足以确定 $d^2-1$ 个态参量，因此不能替代量子态层析。

@@ -1,7 +1,7 @@
-(1) 由界面切向 $\mathbf E$ 和 $\mathbf H$ 连续以及 $n_1\sin\theta_i=n_2\sin\theta_t$，电场反射系数为 $\boxed{r_s=(n_1\cos\theta_i-n_2\cos\theta_t)/(n_1\cos\theta_i+n_2\cos\theta_t)}$，$\boxed{r_p=(n_2\cos\theta_i-n_1\cos\theta_t)/(n_2\cos\theta_i+n_1\cos\theta_t)}$，p的符号依平面偏振单位矢量约定。
+(1) 在旋转框架与单激发子空间 $|e,0\rangle,|g,1\rangle$ 中，振幅可写 $\dot c_e=-igc_a$、$\dot c_a=-(\kappa/2-i\Delta)c_a-igc_e$。这里 $\kappa$ 是腔光子数能量衰减率，故振幅的损失项为 $-\kappa c_a/2$；背景发射体辐射暂时忽略。
 
-(2) $r_p=0$ 要求 $n_2\cos\theta_i=n_1\cos\theta_t$，联立Snell定律可得到 $\boxed{\tan\theta_B=n_2/n_1}$。s偏振的零反射条件 $n_1\cos\theta_i=n_2\cos\theta_t$ 在非相同折射率下通常无满足的非零入射角，因此没有s偏振普通Brewster点。
+(2) 当 $g\ll\kappa$ 且腔模快速弛豫，近似 $c_a\simeq-igc_e/(\kappa/2-i\Delta)$。代回 $\dot c_e$ 并取实部得激发态布居衰减率 $\boxed{\Gamma_{\rm cav}=g^2\kappa/[(\kappa/2)^2+\Delta^2]}$。在 $\Delta=0$ 时 $\boxed{\Gamma_{\rm cav}=4g^2/\kappa}$，大失谐的增强以Lorentz因子 $[1+4\Delta^2/\kappa^2]^{-1}$ 下降。
 
-(3) 对无吸收介质的传播折射光，入射法向平均Poynting流与 $n\cos\theta|E|^2$ 成正比。故 $\mathcal R=|r|^2$，$\mathcal T=(n_2\cos\theta_t/(n_1\cos\theta_i))|t|^2$。用对应偏振的连续边值求 $t$，可代数核验 $\boxed{\mathcal R+\mathcal T=1}$，说明能量守恒而非简单的振幅平方相加。
+(3) 有效模体积 $V_{\rm eff}$ 处的单光子电场强度满足 $E_{1\rm ph}=\sqrt{\hbar\omega_c/(2\varepsilon_0n^2V_{\rm eff})}$，耦合 $g=|\mathbf d\cdot\mathbf E_{1\rm ph}|/\hbar$。均匀背景发射率 $\gamma_0=n\omega_e^3|\mathbf d|^2/(3\pi\varepsilon_0\hbar c^3)$。共振且位置/方向理想匹配时 $\boxed{F_P=\Gamma_{\rm cav}/\gamma_0=\frac{3}{4\pi^2}(\lambda_0/n)^3\frac Q{V_{\rm eff}}}$，其中 $\lambda_0=2\pi c/\omega_c$。
 
-(4) 若 $n_1>n_2$ 且 $\sin\theta_i>n_2/n_1$，Snell给复数 $\cos\theta_t$，折射场沿法线指数衰减。此时 $|r_s|=|r_p|=1$，但各自相位一般不为零；界面法向平均净功率为零，并不意味着低折射率侧完全没有局域电磁场。
+(4) 若其他背景通道仍以 $\gamma_0$ 辐射，进入腔模的分支比为 $\boxed{\beta=\Gamma_{\rm cav}/(\Gamma_{\rm cav}+\gamma_0)}$，共振时等于 $F_P/(1+F_P)$。若 $g$ 与 $\kappa$ 同量级，则腔—发射体形成可分辨的混合Rabi态，不能再简单绝热消去腔光子并声称有单一指数寿命。

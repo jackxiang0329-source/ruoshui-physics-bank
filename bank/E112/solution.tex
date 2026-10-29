@@ -1,7 +1,7 @@
-(1) 记 $r_+=\sqrt{x^2+y^2+(z-d)^2}$、$r_-=\sqrt{x^2+y^2+(z+d)^2}$。在上介质可取 $\Phi_1=(q/r_++q'/r_-)/(4\pi\varepsilon_1)$；下半空间用无源传递等效势 $\Phi_2=q''/(4\pi\varepsilon_2r_+)$，因为源点在下半空间域外。
+(1) 轴对称磁场满足 $B_z''+B_z'/r-B_z/\lambda^2=0$，这是零阶修正Bessel方程。通解为 $A I_0(r/\lambda)+C K_0(r/\lambda)$，其中 $K_0$ 在轴心对数发散，故正则性要求 $C=0$；外场通过表面边值给定。
 
-(2) 界面 $z=0$ 上 $r_+=r_-$，电势连续给 $(q+q')/\varepsilon_1=q''/\varepsilon_2$。法向位移连续要求 $q-q'=q''$，故 $\boxed{q'=q(\varepsilon_1-\varepsilon_2)/(\varepsilon_1+\varepsilon_2)}$，$\boxed{q''=2\varepsilon_2q/(\varepsilon_1+\varepsilon_2)}$，两侧边值条件同时满足。
+(2) 解为 $\boxed{B_z(r)=B_a I_0(r/\lambda)/I_0(a/\lambda)}$。Ampère定律 $\nabla\times\mathbf B=\mu_0\mathbf j$ 的环向分量是 $-B_z'(r)=\mu_0j_\theta$，故 $\boxed{j_\theta(r)=-B_aI_1(r/\lambda)/[\mu_0\lambda I_0(a/\lambda)]}$，其方向反抗外场穿入。
 
-(3) 真实电荷在位置 $z=d$ 只受上域镜像等效电荷的附加场，$\boxed{F_z=qq'/(16\pi\varepsilon_1d^2)}$。当 $\varepsilon_2>\varepsilon_1$ 时 $q'<0$，力向负 $z$、吸引界面；若 $\varepsilon_2<\varepsilon_1$ 则镜像同号，粒子受排斥。
+(3) 截面平均场 $\langle B\rangle=2a^{-2}\int_0^a rB_z(r)dr$。由 $\int rI_0(r/\lambda)dr=\lambda rI_1(r/\lambda)$，得 $\boxed{\langle B\rangle=(2B_a\lambda/a)I_1(a/\lambda)/I_0(a/\lambda)}$。单位长度磁矩 $m_z/L=\pi\int_0^a r^2j_\theta dr=-\pi a^2B_aI_2(a/\lambda)/[\mu_0I_0(a/\lambda)]$，并用 $I_0-I_2=2I_1/(a/\lambda)$ 得 $m_z/L=(\pi a^2/\mu_0)(\langle B\rangle-B_a)$。
 
-(4) 界面诱导势在电荷处为 $\Phi_{\rm ind}=q'/(8\pi\varepsilon_1d)$。正确相互作用能是 $U=\frac12q\Phi_{\rm ind}=qq'/(16\pi\varepsilon_1d)$，故 $-dU/dd=qq'/(16\pi\varepsilon_1d^2)=F_z$。$\varepsilon_2=\varepsilon_1$ 时无界面力；$\varepsilon_2\to\infty$ 时 $q'\to-q$，恢复接地理想导体平面镜像结果。
+(4) 当 $a\gg\lambda$，$I_1/I_0\to1$，故 $\langle B\rangle/B_a\sim2\lambda/a\ll1$，外场只在边缘薄层穿透。当 $a\ll\lambda$，$I_1(x)/I_0(x)\sim x/2$，平均场趋 $B_a$，磁矩相对体积很小。零London长度极限对应理想Meissner体屏蔽，但并非能让任意微小样品都表现完美抗磁。

@@ -1,7 +1,7 @@
-(1) 代入行波坐标得 $-Vf'+c_0f'+\alpha ff'+\beta f'''=0$。积分一次、利用远处边界条件把积分常数设零，得到 $\boxed{\beta f''=(V-c_0)f-\alpha f^2/2}$。再乘 $f'$ 积分可得 $(\beta/2)f'^2=(V-c_0)f^2/2-\alpha f^3/6$。
+(1) 浅水系统对变量 $(h,u)$ 的特征速度是 $\lambda_\pm=u\pm c$，$c=\sqrt{gh}$；相应的Riemann不变量为 $u\pm2c$，分别沿同号特征族守恒。初态左侧有 $u=0,c=c_0=\sqrt{gh_0}$，右侧是 $h=0$ 的干床。
 
-(2) 使用 $f=A\operatorname{sech}^2s$、$s=\xi/\ell$，有 $f''=(4/\ell^2)f-(6/(A\ell^2))f^2$。将它与二阶方程比较：$4\beta/\ell^2=V-c_0$、$6\beta/(A\ell^2)=\alpha/2$，故 $\boxed{A=3(V-c_0)/\alpha,\quad\ell=\sqrt{4\beta/(V-c_0)}}$。$V>c_0$ 才产生本题所设的正孤波。
+(2) 对右方扩展的自相似稀疏扇区，保持 $u+2c=2c_0$ 且满足 $\xi=u-c$。联立给 $\boxed{u(\xi)=\frac23(c_0+\xi)}$、$\boxed{c(\xi)=\frac13(2c_0-\xi)}$，故 $\boxed{h(\xi)=(2c_0-\xi)^2/(9g)}$，仅在 $-c_0\le\xi\le2c_0$ 适用。
 
-(3) 由 $\int_{-\infty}^{\infty}\operatorname{sech}^2u\,du=2$，质量积分 $M_1=2A\ell$；由 $\int\operatorname{sech}^4u\,du=4/3$，二次积分 $M_2=(4/3)A^2\ell$。$A\propto V-c_0$、$\ell\propto(V-c_0)^{-1/2}$，故更高更快的孤波也更窄。
+(3) 在扇区左端 $\xi=-c_0$，得 $u=0,h=h_0$，与左侧静止水精确衔接；在右端 $\xi=2c_0$，水深趋0，流速为 $2c_0$。因此稀疏波向左传播的边界 $x_L=-c_0t$，湿润前锋 $x_R=2c_0t$，前锋速度恰为其局部水速。
 
-(4) 将方程写成守恒形式 $\eta_t+\partial_x(c_0\eta+\alpha\eta^2/2+\beta\eta_{xx})=0$，远场消失时积分给 $d\int\eta dx/dt=0$。再乘 $2\eta$、通过分部积分可证 $d\int\eta^2dx/dt=0$，因为 $\int\eta^2\eta_xdx$ 与 $\int\eta\eta_{xxx}dx$ 均为边界项。
+(4) 稀疏扇区水量每单位渠宽为 $\int_{-c_0t}^{2c_0t}h(x,t)dx=t\int_{-c_0}^{2c_0}(2c_0-\xi)^2/(9g)\,d\xi=c_0^3t/g=h_0c_0t$。这恰等于初态区间 $[-c_0t,0]$ 原有水量。干床接触附近深度极小，实际黏性、表面张力及底面粗糙度会修正理想湿润前锋。
