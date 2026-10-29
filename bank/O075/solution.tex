@@ -1,0 +1,12 @@
+(1) 设列向量 \(\boldsymbol A=(A_s,A_i^*)^{\mathsf T}\)，方程 \(d\boldsymbol A/dz=g\sigma_x\boldsymbol A\)。因为 \(\sigma_x^2=I\)，矩阵指数
+\[
+\boldsymbol A(L)=\begin{pmatrix}\cosh gL&\sinh gL\\\sinh gL&\cosh gL\end{pmatrix}\boldsymbol A(0).
+\]
+行列式 \(\cosh^2gL-\sinh^2gL=1\)，可逆且保持双模不定度量。
+(2) 求导 \(\partial_z|A_s|^2=g(A_s^*A_i^*+A_sA_i)\)，而 \(\partial_z|A_i|^2=g(A_i^*A_s^*+A_iA_s)\)，两者相同，故差值不变。信号与闲频成对产生，泵浦供给两者的总能量，差通量不变不表示各自强度不变。
+(3) 单种子给
+\[
+|A_s(L)|^2=|A_0|^2\cosh^2gL,\quad |A_i(L)|^2=|A_0|^2\sinh^2gL,
+\]
+差为 \(|A_0|^2\)。若 \(A_s(0)=A_0,\ A_i^*(0)=\pm A_0\)，则 \(A_s(L)=A_0e^{\pm gL}\)，信号强度增益分别 \(e^{2gL}\)、\(e^{-2gL}\)，展示相敏放大与去放大。
+(4) \(x=gL\ll1\) 时 \(\sinh^2x=x^2+O(x^4)\)，闲频由二次强度开启；\(x\gg1\) 时 \(\cosh^2x\sim e^{2x}/4\)。相位失配使耦合矩阵出现对角相位项并降低增长率；大增益时未耗尽泵浦假设失效。若两经典输入均严格为零，方程给零输出；真实自发参量下转换来自量子真空涨落，不能用本经典方程声称已包含自发噪声。
