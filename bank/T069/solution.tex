@@ -1,7 +1,23 @@
-(1) 三维自由粒子的单粒子态密度为 \(D(\varepsilon)=V(2m)^{3/2}\varepsilon^{1/2}/(4\pi^2\hbar^3)\)。把 \((z^{-1}e^{\beta\varepsilon}-1)^{-1}\) 展为 \(\sum_{\ell\ge1}z^\ell e^{-\ell\beta\varepsilon}\)，逐项用 \(\Gamma(3/2)\) 与 \(\Gamma(5/2)\) 积分，得到 \(N_{\rm ex}=V\lambda_T^{-3}g_{3/2}(z)\)、\(U=(3/2)Vk_BT\lambda_T^{-3}g_{5/2}(z)\)。零能基态单独计数 \(N_0=N-N_{\rm ex}\)，不能用连续态密度替代其宏观占据。
-
-(2) 对自由玻色气体 \(\mu\le0\)，故 \(z=e^{\beta\mu}\le1\)，激发态容纳量上界为 \(V\lambda_T^{-3}\zeta(3/2)\)。当此上界等于总粒子数 \(nV\) 时 \(T_c=\frac{2\pi\hbar^2}{mk_B}[n/\zeta(3/2)]^{2/3}\)。低于此温度 \(z=1,\mu=0\)，于是 \(N_0/N=1-(T/T_c)^{3/2}\)。二维自由态密度为常数，\(g_1(z)\) 在 \(z\uparrow1\) 发散，因而均匀二维理想气体在有限温度下无同类热力学凝聚。
-
-(3) 低温 \(U=(3/2)Nk_BT\,\zeta(5/2)\zeta(3/2)^{-1}(T/T_c)^{3/2}\)，固定 \(N,V\) 求导得 \(C_V/Nk_B=(15/4)[\zeta(5/2)/\zeta(3/2)](T/T_c)^{3/2}\)。在正常相，\(N=V\lambda_T^{-3}g_{3/2}(z)\)，固定粒子数微分并用 \(z\,g_\nu'(z)=g_{\nu-1}(z)\) 得 \(d\ln z/d\ln T=-(3/2)g_{3/2}(z)/g_{1/2}(z)\)。于是 \(C_V/Nk_B=(15/4)g_{5/2}/g_{3/2}-(9/4)g_{3/2}/g_{1/2}\)。当 \(z\uparrow1\)，\(g_{1/2}\to\infty\)，两侧同趋 \((15/4)\zeta(5/2)/\zeta(3/2)\)，热容连续但非解析。
-
-(4) 巨配分函数的体积导数给 \(P=k_BT\lambda_T^{-3}g_{5/2}(z)\)。与第一问能量公式比较，精确得到 \(PV=2U/3\)，亦可从动量通量或非相对论尺度齐次性独立验证。凝聚态基态动能为零，在热力学极限的压力贡献 \(O(1/V)\) 消失。\(T\to0\) 时 \(U\propto T^{5/2}\)、\(P\propto T^{5/2}\)、\(C_V\propto T^{3/2}\) 均趋零；相互作用存在时则需引入不同的低能声子物理，不能外推理想气体结果。
+(1) 设激发态概率 \(p(t)\)，主方程 \(\dot p=a(1-p)-bp=a-(a+b)p\)。令 \(k=a+b=2\gamma\cosh(\beta\Delta/2)\)，其唯一归一化解为
+\[
+p(t)=p_*+(p_{\rm in}-p_*)e^{-kt},\qquad
+p_*=\frac a{a+b}=\frac1{1+e^{\beta\Delta}}.
+\]
+故 \(p_*/(1-p_*)=a/b=e^{-\beta\Delta}\)，与Boltzmann详细平衡一致。
+(2) 内能 \(U(t)=\Delta p(t)\)，能级不变所以外功 \(W=0\)，吸收热 \(Q(t)=\Delta[p(t)-p_{\rm in}]\)。系统熵为 \(S(t)=-k_B[p\ln p+(1-p)\ln(1-p)]\)，热浴熵变 \(\Delta S_b=-Q/T\)。以 \(D(p\Vert p_*)=p\ln(p/p_*)+(1-p)\ln[(1-p)/(1-p_*)]\) 展开，并利用 \(\ln[p_*/(1-p_*)]=-\beta\Delta\)，恰得
+\[
+\Delta S_{\rm tot}=S(t)-S(0)-Q/T
+=k_B[D(p_{\rm in}\Vert p_*)-D(p(t)\Vert p_*)].
+\]
+因此总熵是相对熵随动力学衰减所释放的非平衡自由能。
+(3) 直接求导得到
+\[
+\dot\Sigma=k_B[a(1-p)-bp]\ln\frac{a(1-p)}{bp}.
+\]
+令 \(x=a(1-p),y=bp>0\)，则 \((x-y)\ln(x/y)\ge0\)，端点概率用连续极限处理。靠近平衡令 \(p=p_*+\epsilon\)，有 \(x-y=-k\epsilon\) 且 \(\ln(x/y)=-k\epsilon/(ab/k)+O(\epsilon^2)\)，故 \(\dot\Sigma=k_Bk^3\epsilon^2/(ab)+O(\epsilon^3)\propto e^{-2kt}\)。若 \(p_{\rm in}=p_*\)，则 \(\epsilon\equiv0\)，始终无净流与熵产生。
+(4) 平衡态条件转移概率 \(P(1,t\mid1,0)=p_*+(1-p_*)e^{-k|t|}\)，故 \(\langle E(t)E(0)\rangle=\Delta^2p_*[p_*+(1-p_*)e^{-k|t|}]\)，扣除 \(\langle E\rangle^2\) 得
+\[
+C_E(t)=\Delta^2p_*(1-p_*)e^{-k|t|}.
+\]
+对 \(U_*=\Delta p_*\) 求 \(C_V=\partial_TU_*=
+k_B(\beta\Delta)^2p_*(1-p_*)\ge0\)。当 \(T\to0\) 热容指数趋零；\(T\to\infty\) 时 \(C_V\sim\Delta^2/(4k_BT^2)\)，关联时间为 \(k^{-1}\)，与主方程本征驰豫率吻合。

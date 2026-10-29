@@ -1,7 +1,7 @@
 {
   "round": "13",
   "scope": "pre-screen against main 352 problems",
-  "status": "five_historical_core_model_overlaps_still_blocked",
+  "status": "two_historical_core_model_overlaps_still_blocked",
   "independent_expert_review": "待独立复核",
   "items": [
     {
@@ -269,8 +269,8 @@
       "prior": [
         "T020"
       ],
-      "difference": "NOT ORIGINAL: 同一三维理想Bose气体BEC温度、凝聚分数与热容",
-      "status": "unresolved_requires_substantive_replacement"
+      "difference": "REPLACED core: 双态详细平衡Markov热动力学的精确驰豫、相对熵与涨落关联",
+      "status": "replaced_pending_qa"
     },
     {
       "id": "W069",
@@ -311,8 +311,8 @@
         "E013",
         "E034"
       ],
-      "difference": "NOT ORIGINAL: 同一良导体半空间磁扩散、趋肤深度与Joule-Poynting核验",
-      "status": "unresolved_requires_substantive_replacement"
+      "difference": "REPLACED core: Stoner–Wohlfarth单畴磁体的翻转星形线、磁滞阈值与热激活势垒",
+      "status": "replaced_pending_qa"
     },
     {
       "id": "T070",
@@ -385,8 +385,8 @@
         "Q038",
         "T019"
       ],
-      "difference": "NOT ORIGINAL: 同一三维理想Fermi气体Sommerfeld低温化学势热容；零温声速亦已存在",
-      "status": "unresolved_requires_substantive_replacement"
+      "difference": "REPLACED core: 守恒序参量Cahn–Hilliard相分离的最快增长模、界面孤子与耗散律",
+      "status": "replaced_pending_qa"
     },
     {
       "id": "W071",
@@ -521,8 +521,9 @@
         "E034"
       ],
       "reason": "同一良导体半空间磁扩散、趋肤深度与Joule-Poynting核验",
-      "resolution_status": "unresolved_requires_substantive_replacement",
-      "evidence": "Compared actual question.tex in merged main and draft, not just titles."
+      "resolution_status": "resolved",
+      "evidence": "Different governing equations and new four-part derivation; executable checks pending update.",
+      "replacement_title": "Stoner–Wohlfarth单畴磁体的翻转星形线、磁滞阈值与热激活势垒"
     },
     {
       "draft_id": "T069",
@@ -530,8 +531,9 @@
         "T020"
       ],
       "reason": "同一三维理想Bose气体BEC温度、凝聚分数与热容",
-      "resolution_status": "unresolved_requires_substantive_replacement",
-      "evidence": "Compared actual question.tex in merged main and draft, not just titles."
+      "resolution_status": "resolved",
+      "evidence": "Different governing equations and new four-part derivation; executable checks pending update.",
+      "replacement_title": "双态详细平衡Markov热动力学的精确驰豫、相对熵与涨落关联"
     },
     {
       "draft_id": "T071",
@@ -540,8 +542,9 @@
         "T019"
       ],
       "reason": "同一三维理想Fermi气体Sommerfeld低温化学势热容；零温声速亦已存在",
-      "resolution_status": "unresolved_requires_substantive_replacement",
-      "evidence": "Compared actual question.tex in merged main and draft, not just titles."
+      "resolution_status": "resolved",
+      "evidence": "Different governing equations and new four-part derivation; executable checks pending update.",
+      "replacement_title": "守恒序参量Cahn–Hilliard相分离的最快增长模、界面孤子与耗散律"
     },
     {
       "draft_id": "O072",

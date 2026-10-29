@@ -3180,25 +3180,25 @@
   {
     "id": "E074",
     "topic": "电磁学",
-    "title": "良导体半空间的电磁趋肤场、复表面阻抗与Poynting–焦耳热守恒",
+    "title": "Stoner–Wohlfarth单畴磁体的翻转星形线、磁滞阈值与热激活势垒",
     "kind": "综合推导题",
     "level": 5,
     "estimated_minutes": 115,
     "tags": [
-      "Maxwell磁扩散与趋肤深度",
-      "复表面阻抗",
-      "Poynting能流和焦耳热",
-      "位移电流近似边界"
+      "单畴磁各向异性能",
+      "Stoner–Wohlfarth星形线",
+      "磁化翻转与硬轴响应",
+      "热激活势垒"
     ],
-    "answer": "\\delta=\\sqrt{2/(\\mu\\sigma\\omega)},\\quad Z_s=(1-i)/(\\sigma\\delta),\\quad P_A=|H_0|^2/(2\\sigma\\delta)",
+    "answer": "\\left|\\frac{H_x}{H_k}\\right|^{2/3}+\\left|\\frac{H_y}{H_k}\\right|^{2/3}=1,\\quad H_k=\\frac{2K}{\\mu_0M_s},\\quad\\Delta E=KV(1-h)^2",
     "quality_status": "待独立复核",
     "tier": "advanced_composite",
     "format": "latex-fragment-v1",
-    "revision": "composite-v4.1-round13-draft",
-    "challenge_profile": "high-multistage",
+    "revision": "composite-v4.3-round13-core-replacement",
+    "challenge_profile": "high-multistage-original-core",
     "complexity_tier": "L5-C",
-    "question": "(1) 均匀各向同性良导体占 \\(x>0\\)，电导率 \\(\\sigma>0\\)，磁导率 \\(\\mu>0\\)，介电常数 \\(\\varepsilon\\)，在角频率 \\(\\omega>0\\) 下满足 \\(\\sigma\\gg\\omega\\varepsilon\\)。表面给定切向谐波磁场 \\(\\mathbf H(0,t)=\\operatorname{Re}[H_0e^{-i\\omega t}]\\hat z\\)，深处场消失。忽略位移电流，由Maxwell方程推导导体内磁扩散方程与衰减场 \\(H_z(x)\\)。\n(2) 求复电流密度 \\(j_y(x)\\)、电场 \\(E_y(x)\\)，定义表面阻抗 \\(Z_s=E_y(0)/H_z(0)\\)，给出实部、虚部和采用 \\(e^{-i\\omega t}\\) 约定的相位符号。\n(3) 用复Poynting矢量求穿过表面的时间平均输入功率密度，再独立积分全半空间的体焦耳热，证明两者严格相等。\n(4) 讨论 \\(\\omega\\to0^+\\)、\\(\\omega\\to\\infty\\) 时趋肤深度、阻抗与功率的标度，说明高频近似何时因位移电流、非局域输运或表面粗糙失效。\n",
-    "solution": "(1) 忽略位移电流时 \\(\\nabla\\times\\mathbf H=\\sigma\\mathbf E\\)、\\(\\nabla\\times\\mathbf E=-\\partial_t\\mathbf B=-\\mu\\partial_t\\mathbf H\\)。取旋度并用 \\(\\nabla\\cdot\\mathbf H=0\\) 得 \\(\\nabla^2\\mathbf H=\\mu\\sigma\\,\\partial_t\\mathbf H\\)。对 \\(e^{-i\\omega t}\\) 谐波，\\(H_z''=-i\\mu\\sigma\\omega H_z\\)，衰减根为 \\(q=(1-i)/\\delta\\)，其中 \\(\\delta=\\sqrt{2/(\\mu\\sigma\\omega)}\\)。所以 \\(\\boxed{H_z(x)=H_0e^{-(1-i)x/\\delta}}\\)，幅度按 \\(e^{-x/\\delta}\\) 衰减，场相位沿深度正向滞后于表面；不能选增长的根。\n\n(2) 由于 \\((\\nabla\\times\\mathbf H)_y=-H_z'\\)，有 \\(j_y=-H_z'=qH_z\\)，\\(E_y=j_y/\\sigma=qH_z/\\sigma\\)。因此 \\(\\boxed{Z_s=(1-i)/(\\sigma\\delta)}\\)。在本题 \\(e^{-i\\omega t}\\) 约定下 \\(\\operatorname{Im}Z_s<0\\)；若改用 \\(e^{+i\\omega t}\\)，电抗虚部应相应反号，而可测耗散实部 \\(\\operatorname{Re}Z_s=1/(\\sigma\\delta)\\) 不变。表面阻抗单位为欧姆，不能与体电阻率 \\(1/\\sigma\\) 混淆。\n\n(3) 切向 \\(\\mathbf E=E_y\\hat y,\\mathbf H=H_z\\hat z\\)，所以 \\(\\mathbf E\\times\\mathbf H^*\\) 指向导体内部 \\(+\\hat x\\)。平均入射功率密度为 \\(P_A=\\tfrac12\\operatorname{Re}(E_yH_z^*)|_{0}=\\frac{|H_0|^2}{2\\sigma\\delta}\\)。体焦耳热积分为 \\(\\int_0^\\infty(\\sigma/2)|E_y|^2dx=\\frac{\\sigma}{2}\\frac{2|H_0|^2}{\\sigma^2\\delta^2}\\int_0^\\infty e^{-2x/\\delta}dx=\\frac{|H_0|^2}{2\\sigma\\delta}\\)。两法完全一致，表明稳态周期内储存磁能的净变化为零。\n\n(4) 从 \\(\\delta\\propto\\omega^{-1/2}\\) 得 \\(\\operatorname{Re}Z_s\\propto\\sqrt\\omega\\)，固定表面磁场下平均损耗 \\(P_A\\propto\\sqrt\\omega\\)。形式 \\(\\omega\\to0^+\\) 时 \\(\\delta\\to\\infty,Z_s\\to0\\)，但无限半空间的有限频边界问题与真正静态磁场在整个导体中穿透的极限不可直接交换。频率升高到 \\(\\omega\\varepsilon\\) 与 \\(\\sigma\\) 可比时位移电流不可忽略；当 \\(\\delta\\) 与电子平均自由程或表面粗糙尺度相当时局域Ohm定律及平滑边界假设也会失效。\n"
+    "question": "(1) 体积 \\(V\\) 的单畴铁磁粒子具有单轴易磁化方向 \\(x\\)，饱和磁化强度 \\(M_s>0\\)，各向异性能密度 \\(K\\sin^2\\theta\\)，外场 \\((H_x,H_y)\\)。在磁化大小固定、仅发生面内相干转动的Stoner–Wohlfarth模型中写出能量及平衡和局部稳定的角度条件。\n(2) 定义 \\(H_k=2K/(\\mu_0M_s)\\)。由稳定极小与鞍点合并的双重条件推导翻转临界场的参数方程，消去角度得到完整星形线，并说明其内外的稳定态数目。\n(3) 分别分析沿易轴 \\(H_y=0\\) 和沿硬轴 \\(H_x=0\\) 的准静态磁化响应，求易轴矫顽阈值及硬轴无滞后饱和场。\n(4) 对沿正易轴外场 \\(0<H_x<H_k\\) 的反向亚稳磁化态，求通向顺场态的精确能量势垒，给出高势垒热激活翻转时间的指数律及模型失效情形。\n",
+    "solution": "(1) 取磁化方向 \\(\\boldsymbol M=M_s(\\cos\\theta,\\sin\\theta)\\)，总能量\n\\[\nE(\\theta)=V\\{K\\sin^2\\theta-\\mu_0M_s(H_x\\cos\\theta+H_y\\sin\\theta)\\}.\n\\]\n令 \\(H_k=2K/(\\mu_0M_s)\\)、\\(h_i=H_i/H_k\\)，有 \\(E'/(2KV)=\\sin\\theta\\cos\\theta+h_x\\sin\\theta-h_y\\cos\\theta\\)。平衡必须使该式为零，局部稳定还需 \\(E''/(2KV)=\\cos2\\theta+h_x\\cos\\theta+h_y\\sin\\theta>0\\)；等号是稳定性丧失的边界而非充分稳定条件。\n(2) 临界点满足上述一阶、二阶导数同时为零。把 \\(h_x,h_y\\) 看作未知量解二元线性方程，得\n\\[\nh_x=-\\cos^3\\theta,\\qquad h_y=\\sin^3\\theta.\n\\]\n于是 \\(|h_x|^{2/3}+|h_y|^{2/3}=1\\)。星形线内部通常存在两个局部极小及两个不稳定驻点（在特殊对称轴上需按简并情况计数），越过临界线时一对极小与鞍点合并；该线是相干旋转的自旋失稳界，不是普适实验磁滞曲线。\n(3) 易轴 \\(h_y=0\\) 时 \\(\\theta=0,\\pi\\) 均为驻点；它们的曲率分别为 \\(2KV(1+h_x)\\) 与 \\(2KV(1-h_x)\\)。从负向饱和逐渐加场，反向态在 \\(h_x=1\\) 失稳，反向扫场阈值为 \\(-1\\)，因此理想零温易轴矫顽场大小 \\(H_k\\)。硬轴 \\(h_x=0\\) 时 \\(E'=2KV\\cos\\theta(\\sin\\theta-h_y)\\)，稳定分支在 \\(|h_y|\\le1\\) 满足 \\(\\sin\\theta=h_y\\)，故 \\(M_y=M_sh_y\\)，超过该范围饱和为 \\(M_y=\\pm M_s\\)，无易轴式跳跃。\n(4) 令 \\(h=H_x/H_k\\in(0,1)\\)。反向亚稳态 \\(\\theta=\\pi\\) 的能量密度为 \\(2Kh\\)；鞍点满足 \\(\\cos\\theta=-h\\)，代入得 \\(K(1+h^2)\\)。故\n\\[\n\\Delta E=KV[(1+h^2)-2h]=KV(1-h)^2.\n\\]\n当 \\(\\Delta E\\gg k_BT\\) 时热激活平均等待时间的指数因子为 \\(\\tau\\simeq\\tau_0\\exp[\\Delta E/(k_BT)]\\)，其中前因子依阻尼和动力学而定。临近 \\(h=1\\)、多畴成核、强交换耦合或非均匀磁化时，单畴相干翻转假设与高势垒近似均失效。\n"
   },
   {
     "id": "E075",
@@ -4694,25 +4694,25 @@
   {
     "id": "T069",
     "topic": "热学",
-    "title": "三维理想Bose气体凝聚温度、热容尖点与压力能量恒等式",
+    "title": "双态详细平衡Markov热动力学的精确驰豫、相对熵与涨落关联",
     "kind": "综合推导题",
     "level": 5,
     "estimated_minutes": 115,
     "tags": [
-      "Bose–Einstein凝聚",
-      "多对数态密度积分",
-      "热容临界连续性",
-      "热力学维里恒等式"
+      "双态主方程",
+      "局部详细平衡",
+      "相对熵与总熵产生",
+      "平衡能量自关联"
     ],
-    "answer": "T_c=\\frac{2\\pi\\hbar^2}{mk_B}\\left(\\frac{n}{\\zeta(3/2)}\\right)^{2/3},\\quad N_0/N=1-(T/T_c)^{3/2}",
+    "answer": "p(t)=p_*+(p_0-p_*)e^{-(a+b)t},\\quad p_*=(1+e^{\\beta\\Delta})^{-1},\\quad \\dot\\Sigma=k_B(ap_0(t)-bp_1(t))\\ln\\frac{ap_0(t)}{bp_1(t)}\\ge0",
     "quality_status": "待独立复核",
     "tier": "advanced_composite",
     "format": "latex-fragment-v1",
-    "revision": "composite-v4.0-round13-draft",
-    "challenge_profile": "high-multistage",
+    "revision": "composite-v4.3-round13-core-replacement",
+    "challenge_profile": "high-multistage-original-core",
     "complexity_tier": "L5-C",
-    "question": "(1) 体积 \\(V\\) 中有 \\(N\\) 个无相互作用自旋零玻色粒子，质量 \\(m\\)，三维自由色散 \\(\\varepsilon=p^2/(2m)\\)，热力学极限且粒子数守恒。记 \\(g_\\nu(z)=\\sum_{\\ell\\ge1}z^\\ell/\\ell^\\nu\\)、\\(\\lambda_T=\\sqrt{2\\pi\\hbar^2/(mk_BT)}\\)。从态密度推导激发态粒子数与能量的Bose积分。\n(2) 求凝聚温度 \\(T_c\\)，在 \\(T<T_c\\) 求凝聚比例和化学势；说明二维理想气体为何不能照搬三维结论。\n(3) 在凝聚相求定容热容 \\(C_V(T)\\)，并从 \\(T>T_c\\) 的固定粒子数条件推导一般的 \\(C_V/Nk_B\\)，检查临界点两侧是否连续。\n(4) 计算压力 \\(P\\) 与能量 \\(U\\) 的关系，检查 \\(PV=2U/3\\) 和 \\(T\\to0\\) 极限，并解释理想凝聚态为何不对压强作直接贡献。\n",
-    "solution": "(1) 三维自由粒子的单粒子态密度为 \\(D(\\varepsilon)=V(2m)^{3/2}\\varepsilon^{1/2}/(4\\pi^2\\hbar^3)\\)。把 \\((z^{-1}e^{\\beta\\varepsilon}-1)^{-1}\\) 展为 \\(\\sum_{\\ell\\ge1}z^\\ell e^{-\\ell\\beta\\varepsilon}\\)，逐项用 \\(\\Gamma(3/2)\\) 与 \\(\\Gamma(5/2)\\) 积分，得到 \\(N_{\\rm ex}=V\\lambda_T^{-3}g_{3/2}(z)\\)、\\(U=(3/2)Vk_BT\\lambda_T^{-3}g_{5/2}(z)\\)。零能基态单独计数 \\(N_0=N-N_{\\rm ex}\\)，不能用连续态密度替代其宏观占据。\n\n(2) 对自由玻色气体 \\(\\mu\\le0\\)，故 \\(z=e^{\\beta\\mu}\\le1\\)，激发态容纳量上界为 \\(V\\lambda_T^{-3}\\zeta(3/2)\\)。当此上界等于总粒子数 \\(nV\\) 时 \\(T_c=\\frac{2\\pi\\hbar^2}{mk_B}[n/\\zeta(3/2)]^{2/3}\\)。低于此温度 \\(z=1,\\mu=0\\)，于是 \\(N_0/N=1-(T/T_c)^{3/2}\\)。二维自由态密度为常数，\\(g_1(z)\\) 在 \\(z\\uparrow1\\) 发散，因而均匀二维理想气体在有限温度下无同类热力学凝聚。\n\n(3) 低温 \\(U=(3/2)Nk_BT\\,\\zeta(5/2)\\zeta(3/2)^{-1}(T/T_c)^{3/2}\\)，固定 \\(N,V\\) 求导得 \\(C_V/Nk_B=(15/4)[\\zeta(5/2)/\\zeta(3/2)](T/T_c)^{3/2}\\)。在正常相，\\(N=V\\lambda_T^{-3}g_{3/2}(z)\\)，固定粒子数微分并用 \\(z\\,g_\\nu'(z)=g_{\\nu-1}(z)\\) 得 \\(d\\ln z/d\\ln T=-(3/2)g_{3/2}(z)/g_{1/2}(z)\\)。于是 \\(C_V/Nk_B=(15/4)g_{5/2}/g_{3/2}-(9/4)g_{3/2}/g_{1/2}\\)。当 \\(z\\uparrow1\\)，\\(g_{1/2}\\to\\infty\\)，两侧同趋 \\((15/4)\\zeta(5/2)/\\zeta(3/2)\\)，热容连续但非解析。\n\n(4) 巨配分函数的体积导数给 \\(P=k_BT\\lambda_T^{-3}g_{5/2}(z)\\)。与第一问能量公式比较，精确得到 \\(PV=2U/3\\)，亦可从动量通量或非相对论尺度齐次性独立验证。凝聚态基态动能为零，在热力学极限的压力贡献 \\(O(1/V)\\) 消失。\\(T\\to0\\) 时 \\(U\\propto T^{5/2}\\)、\\(P\\propto T^{5/2}\\)、\\(C_V\\propto T^{3/2}\\) 均趋零；相互作用存在时则需引入不同的低能声子物理，不能外推理想气体结果。\n"
+    "question": "(1) 单个系统具有能级 \\(E_0=0,E_1=\\Delta>0\\)，与恒温热浴 \\(T>0\\) 接触。设跃迁率 \\(0\\to1\\) 为 \\(a=\\gamma e^{-\\beta\\Delta/2}\\)，\\(1\\to0\\) 为 \\(b=\\gamma e^{\\beta\\Delta/2}\\)，\\(\\beta=(k_BT)^{-1}\\)。由主方程求任意初始激发态概率 \\(p(0)=p_{\\rm in}\\) 的精确时间演化及平衡态。\n(2) 在能级固定且不做功的过程中求系统平均内能变化、吸收热量及Shannon熵变化，证明系统与热浴的总熵变化等于相对熵 \\(D(p_{\\rm in}\\Vert p_*)-D(p(t)\\Vert p_*)\\) 乘 \\(k_B\\)。\n(3) 推导瞬时总熵产生率，利用正数对数单调性证明它始终非负；求其长时指数衰减标度，说明零初始偏离时为何恒为零。\n(4) 从平衡态双态转移概率独立推导能量自协方差 \\(C_E(t)\\)，并求平衡热容，核验高温和低温极限以及关联衰减时间。\n",
+    "solution": "(1) 设激发态概率 \\(p(t)\\)，主方程 \\(\\dot p=a(1-p)-bp=a-(a+b)p\\)。令 \\(k=a+b=2\\gamma\\cosh(\\beta\\Delta/2)\\)，其唯一归一化解为\n\\[\np(t)=p_*+(p_{\\rm in}-p_*)e^{-kt},\\qquad\np_*=\\frac a{a+b}=\\frac1{1+e^{\\beta\\Delta}}.\n\\]\n故 \\(p_*/(1-p_*)=a/b=e^{-\\beta\\Delta}\\)，与Boltzmann详细平衡一致。\n(2) 内能 \\(U(t)=\\Delta p(t)\\)，能级不变所以外功 \\(W=0\\)，吸收热 \\(Q(t)=\\Delta[p(t)-p_{\\rm in}]\\)。系统熵为 \\(S(t)=-k_B[p\\ln p+(1-p)\\ln(1-p)]\\)，热浴熵变 \\(\\Delta S_b=-Q/T\\)。以 \\(D(p\\Vert p_*)=p\\ln(p/p_*)+(1-p)\\ln[(1-p)/(1-p_*)]\\) 展开，并利用 \\(\\ln[p_*/(1-p_*)]=-\\beta\\Delta\\)，恰得\n\\[\n\\Delta S_{\\rm tot}=S(t)-S(0)-Q/T\n=k_B[D(p_{\\rm in}\\Vert p_*)-D(p(t)\\Vert p_*)].\n\\]\n因此总熵是相对熵随动力学衰减所释放的非平衡自由能。\n(3) 直接求导得到\n\\[\n\\dot\\Sigma=k_B[a(1-p)-bp]\\ln\\frac{a(1-p)}{bp}.\n\\]\n令 \\(x=a(1-p),y=bp>0\\)，则 \\((x-y)\\ln(x/y)\\ge0\\)，端点概率用连续极限处理。靠近平衡令 \\(p=p_*+\\epsilon\\)，有 \\(x-y=-k\\epsilon\\) 且 \\(\\ln(x/y)=-k\\epsilon/(ab/k)+O(\\epsilon^2)\\)，故 \\(\\dot\\Sigma=k_Bk^3\\epsilon^2/(ab)+O(\\epsilon^3)\\propto e^{-2kt}\\)。若 \\(p_{\\rm in}=p_*\\)，则 \\(\\epsilon\\equiv0\\)，始终无净流与熵产生。\n(4) 平衡态条件转移概率 \\(P(1,t\\mid1,0)=p_*+(1-p_*)e^{-k|t|}\\)，故 \\(\\langle E(t)E(0)\\rangle=\\Delta^2p_*[p_*+(1-p_*)e^{-k|t|}]\\)，扣除 \\(\\langle E\\rangle^2\\) 得\n\\[\nC_E(t)=\\Delta^2p_*(1-p_*)e^{-k|t|}.\n\\]\n对 \\(U_*=\\Delta p_*\\) 求 \\(C_V=\\partial_TU_*=\nk_B(\\beta\\Delta)^2p_*(1-p_*)\\ge0\\)。当 \\(T\\to0\\) 热容指数趋零；\\(T\\to\\infty\\) 时 \\(C_V\\sim\\Delta^2/(4k_BT^2)\\)，关联时间为 \\(k^{-1}\\)，与主方程本征驰豫率吻合。\n"
   },
   {
     "id": "T070",
@@ -4740,25 +4740,25 @@
   {
     "id": "T071",
     "topic": "热学",
-    "title": "三维自旋半理想Fermi气体的Sommerfeld展开、简并热容与零温声速",
+    "title": "守恒序参量Cahn–Hilliard相分离的最快增长模、界面孤子与耗散律",
     "kind": "综合推导题",
     "level": 5,
     "estimated_minutes": 115,
     "tags": [
-      "三维Fermi面与态密度",
-      "Sommerfeld低温展开",
-      "简并压力与热容",
-      "绝热声速和压缩率"
+      "Cahn–Hilliard守恒动力学",
+      "自旋odal增长谱",
+      "双阱界面tanh解",
+      "自由能Lyapunov耗散"
     ],
-    "answer": "\\mu(T)=\\varepsilon_F[1-\\pi^2(T/T_F)^2/12+\\cdots],\\quad C_V/Nk_B=\\pi^2T/(2T_F)+\\cdots",
+    "answer": "k_*=\\sqrt{-A/(2\\kappa)},\\quad\\lambda_{\\max}=MA^2/(4\\kappa),\\quad\\phi(x)=\\sqrt{-a/b}\\tanh\\!\\left(x\\sqrt{-a/(2\\kappa)}\\right)",
     "quality_status": "待独立复核",
     "tier": "advanced_composite",
     "format": "latex-fragment-v1",
-    "revision": "composite-v4.2-round13-draft",
-    "challenge_profile": "high-multistage",
+    "revision": "composite-v4.3-round13-core-replacement",
+    "challenge_profile": "high-multistage-original-core",
     "complexity_tier": "L5-C",
-    "question": "(1) 三维体积 \\(V\\) 内有 \\(N\\) 个自旋 \\(1/2\\)、质量 \\(m\\) 的非相互作用费米粒子，自旋简并度为2，密度 \\(n=N/V\\)，非相对论自由色散 \\(\\varepsilon=p^2/(2m)\\)。在热力学极限求 \\(k_F,\\varepsilon_F\\) 及 \\(T=0\\) 的能量和压强。\n(2) 在 \\(T\\ll T_F=\\varepsilon_F/k_B\\) 时，从固定粒子数的Sommerfeld展开推导化学势 \\(\\mu(T)\\) 的 \\(T^2\\) 修正。\n(3) 求低温内能到 \\(T^2\\) 阶及定容热容的首项，并用 \\(T\\to0\\) 检查热力学第三定律。\n(4) 由零温状态方程求等温压缩率 \\(\\kappa_T\\) 和小幅绝热密度波声速 \\(c_s\\)，说明忽略相互作用与相对论效应的适用范围。\n",
-    "solution": "(1) 自旋简并度2使动量球内态数 \\(N=2V(4\\pi k_F^3/3)/(2\\pi)^3=Vk_F^3/(3\\pi^2)\\)，故 \\(k_F=(3\\pi^2n)^{1/3}\\)、\\(\\varepsilon_F=\\hbar^2k_F^2/(2m)\\)。三维态密度 \\(D(\\varepsilon)=C\\sqrt\\varepsilon\\)，\\(N=\\int_0^{\\varepsilon_F}D(\\varepsilon)d\\varepsilon\\)，能量 \\(U_0=\\int_0^{\\varepsilon_F}\\varepsilon D(\\varepsilon)d\\varepsilon=(3/5)N\\varepsilon_F\\)。由尺度齐次性 \\(PV=2U_0/3\\)，所以 \\(\\boxed{P_0=(2/5)n\\varepsilon_F}\\)。该压力在 \\(T=0\\) 仍非零，源于Pauli填充而非热运动。\n\n(2) Sommerfeld公式为 \\(\\int_0^\\infty f(\\varepsilon)n_F(\\varepsilon)d\\varepsilon=\\int_0^\\mu f(\\varepsilon)d\\varepsilon+(\\pi^2/6)(k_BT)^2f'(\\mu)+O(T^4)\\)。取 \\(f=C\\sqrt\\varepsilon\\)，固定 \\(N\\) 得 \\((2C/3)\\mu^{3/2}+(\\pi^2C/12)(k_BT)^2\\mu^{-1/2}=(2C/3)\\varepsilon_F^{3/2}\\)。设 \\(\\mu=\\varepsilon_F+\\delta\\mu\\) 且 \\(\\delta\\mu=O(T^2)\\)，线性展开得 \\(C\\varepsilon_F^{1/2}\\delta\\mu+(\\pi^2C/12)(k_BT)^2\\varepsilon_F^{-1/2}=0\\)，故 \\(\\boxed{\\mu(T)=\\varepsilon_F[1-(\\pi^2/12)(T/T_F)^2+O(T^4/T_F^4)]}\\)。\n\n(3) 取能量积分权重 \\(f(\\varepsilon)=C\\varepsilon^{3/2}\\)，Sommerfeld展开得 \\(U=(2C/5)\\mu^{5/2}+(\\pi^2C/4)(k_BT)^2\\mu^{1/2}+O(T^4)\\)。代入上一问 \\(\\delta\\mu\\)，整理为 \\(\\boxed{U/N=(3/5)\\varepsilon_F[1+(5\\pi^2/12)(T/T_F)^2+O((T/T_F)^4)]}\\)。对固定 \\(N,V\\) 求导，\\(\\boxed{C_V/Nk_B=(\\pi^2/2)(T/T_F)+O((T/T_F)^3)}\\)。热容随 \\(T\\to0\\) 线性趋零，符合第三定律；仅有Fermi面附近厚度 \\(k_BT\\) 的粒子参与低温热激发。\n\n(4) 零温 \\(P_0\\propto n^{5/3}\\)，故 \\(\\partial P/\\partial n=(2/3)\\varepsilon_F\\)。压缩率 \\(\\boxed{\\kappa_T=[n(\\partial P/\\partial n)]^{-1}=3/(2n\\varepsilon_F)}\\)。零温熵为零，等温与绝热微小压缩在此极限一致，声速 \\(c_s^2=(1/m)\\partial P/\\partial n=2\\varepsilon_F/(3m)=v_F^2/3\\)，即 \\(\\boxed{c_s=v_F/\\sqrt3}\\)。若 \\(v_F\\) 接近光速、相互作用强或系统维度改变，非相对论自由气体的压缩率和声速必须修正。\n"
+    "question": "(1) 对守恒标量序参量 \\(\\phi(\\boldsymbol r,t)\\)，给定自由能 \\(F=\\int_\\Omega[a\\phi^2/2+b\\phi^4/4+\\kappa|\\nabla\\phi|^2/2]dV\\)，其中 \\(a<0,b,\\kappa>0\\)，边界周期或无通量。动力学为 \\(\\partial_t\\phi=M\\nabla^2\\mu\\)，迁移率 \\(M>0\\)。求化学势 \\(\\mu=\\delta F/\\delta\\phi\\)，证明总序参量守恒。\n(2) 围绕任意均匀态 \\(\\phi_0\\) 线性化，求平面扰动的完整增长率 \\(\\lambda(k)\\)；在不稳定区求临界波数、最快增长波数及最大增长率。\n(3) 对无限直线、无外场、共存的两相 \\(\\phi(\\pm\\infty)=\\pm\\sqrt{-a/b}\\)，求静态平面界面的精确剖面与界面厚度，利用一阶积分验证它满足Euler–Lagrange方程。\n(4) 计算界面相对体相的单位面积自由能（表面张力），再从动力学独立证明 \\(dF/dt\\le0\\)，说明均匀态线性增长与总自由能下降并不矛盾。\n",
+    "solution": "(1) 对 \\(F\\) 变分并将梯度项分部积分，周期或自然边界消去表面项，得到\n\\[\n\\mu=a\\phi+b\\phi^3-\\kappa\\nabla^2\\phi.\n\\]\n因此 \\(\\partial_t\\phi=M\\nabla^2\\mu=-\\nabla\\cdot\\boldsymbol J\\)，其中 \\(\\boldsymbol J=-M\\nabla\\mu\\)。在周期边界或 \\(\\boldsymbol n\\cdot\\nabla\\mu=0\\) 下，\\(\\frac d{dt}\\int_\\Omega\\phi\\,dV=M\\int_{\\partial\\Omega}\\boldsymbol n\\cdot\\nabla\\mu\\,dS=0\\)；非守恒Allen–Cahn动力学不能代替此式。\n(2) 置 \\(\\phi=\\phi_0+\\eta e^{\\lambda t+i\\boldsymbol k\\cdot\\boldsymbol r}\\)，记 \\(A=a+3b\\phi_0^2\\)。一阶化学势为 \\((A+\\kappa k^2)\\eta\\)，故\n\\[\n\\lambda(k)=-Mk^2(A+\\kappa k^2).\n\\]\n仅当 \\(A<0\\) 时 \\(0<k<k_c=\\sqrt{-A/\\kappa}\\) 的模增长。对 \\(k^2\\) 求导得 \\(k_*=\\sqrt{-A/(2\\kappa)}\\)，代回 \\(\\lambda_{\\max}=MA^2/(4\\kappa)\\)；\\(k=0\\) 严格中性正是总序参量守恒。\n(3) 静态共存两相令 \\(\\mu=0\\)，满足 \\(\\kappa\\phi''=a\\phi+b\\phi^3\\)。乘 \\(\\phi'\\) 积分并利用远场 \\(\\phi_b=\\sqrt{-a/b}\\)、\\(\\phi'(\\infty)=0\\)，得\n\\[\n\\frac{\\kappa}{2}(\\phi')^2=\\frac b4(\\phi^2-\\phi_b^2)^2.\n\\]\n分离变量可得 \\(\\phi(x)=\\phi_b\\tanh(x/\\ell)\\)，\\(\\ell=\\sqrt{2\\kappa/(-a)}\\)。直接求导可见 \\(\\kappa\\phi''=a\\phi+b\\phi^3\\)，且两端达到稳定极小。\n(4) 利用一阶积分，界面过剩自由能密度为 \\(\\kappa(\\phi')^2\\)。因此\n\\[\n\\sigma=\\kappa\\frac{\\phi_b^2}{\\ell^2}\\int_{-\\infty}^{\\infty}{\\rm sech}^4(x/\\ell)\\,dx\n=\\frac{4\\kappa\\phi_b^2}{3\\ell}\n=\\frac{2\\sqrt2}{3}\\frac{\\sqrt\\kappa(-a)^{3/2}}b.\n\\]\n另一方面 \\(\\dot F=\\int\\mu\\dot\\phi\\,dV=M\\int\\mu\\nabla^2\\mu\\,dV=-M\\int|\\nabla\\mu|^2dV\\le0\\)。不稳定均匀态的扰动增长正是朝更低自由能的两相态演化，并不违反Lyapunov耗散。\n"
   },
   {
     "id": "W007",

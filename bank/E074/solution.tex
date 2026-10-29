@@ -1,7 +1,16 @@
-(1) 忽略位移电流时 \(\nabla\times\mathbf H=\sigma\mathbf E\)、\(\nabla\times\mathbf E=-\partial_t\mathbf B=-\mu\partial_t\mathbf H\)。取旋度并用 \(\nabla\cdot\mathbf H=0\) 得 \(\nabla^2\mathbf H=\mu\sigma\,\partial_t\mathbf H\)。对 \(e^{-i\omega t}\) 谐波，\(H_z''=-i\mu\sigma\omega H_z\)，衰减根为 \(q=(1-i)/\delta\)，其中 \(\delta=\sqrt{2/(\mu\sigma\omega)}\)。所以 \(\boxed{H_z(x)=H_0e^{-(1-i)x/\delta}}\)，幅度按 \(e^{-x/\delta}\) 衰减，场相位沿深度正向滞后于表面；不能选增长的根。
-
-(2) 由于 \((\nabla\times\mathbf H)_y=-H_z'\)，有 \(j_y=-H_z'=qH_z\)，\(E_y=j_y/\sigma=qH_z/\sigma\)。因此 \(\boxed{Z_s=(1-i)/(\sigma\delta)}\)。在本题 \(e^{-i\omega t}\) 约定下 \(\operatorname{Im}Z_s<0\)；若改用 \(e^{+i\omega t}\)，电抗虚部应相应反号，而可测耗散实部 \(\operatorname{Re}Z_s=1/(\sigma\delta)\) 不变。表面阻抗单位为欧姆，不能与体电阻率 \(1/\sigma\) 混淆。
-
-(3) 切向 \(\mathbf E=E_y\hat y,\mathbf H=H_z\hat z\)，所以 \(\mathbf E\times\mathbf H^*\) 指向导体内部 \(+\hat x\)。平均入射功率密度为 \(P_A=\tfrac12\operatorname{Re}(E_yH_z^*)|_{0}=\frac{|H_0|^2}{2\sigma\delta}\)。体焦耳热积分为 \(\int_0^\infty(\sigma/2)|E_y|^2dx=\frac{\sigma}{2}\frac{2|H_0|^2}{\sigma^2\delta^2}\int_0^\infty e^{-2x/\delta}dx=\frac{|H_0|^2}{2\sigma\delta}\)。两法完全一致，表明稳态周期内储存磁能的净变化为零。
-
-(4) 从 \(\delta\propto\omega^{-1/2}\) 得 \(\operatorname{Re}Z_s\propto\sqrt\omega\)，固定表面磁场下平均损耗 \(P_A\propto\sqrt\omega\)。形式 \(\omega\to0^+\) 时 \(\delta\to\infty,Z_s\to0\)，但无限半空间的有限频边界问题与真正静态磁场在整个导体中穿透的极限不可直接交换。频率升高到 \(\omega\varepsilon\) 与 \(\sigma\) 可比时位移电流不可忽略；当 \(\delta\) 与电子平均自由程或表面粗糙尺度相当时局域Ohm定律及平滑边界假设也会失效。
+(1) 取磁化方向 \(\boldsymbol M=M_s(\cos\theta,\sin\theta)\)，总能量
+\[
+E(\theta)=V\{K\sin^2\theta-\mu_0M_s(H_x\cos\theta+H_y\sin\theta)\}.
+\]
+令 \(H_k=2K/(\mu_0M_s)\)、\(h_i=H_i/H_k\)，有 \(E'/(2KV)=\sin\theta\cos\theta+h_x\sin\theta-h_y\cos\theta\)。平衡必须使该式为零，局部稳定还需 \(E''/(2KV)=\cos2\theta+h_x\cos\theta+h_y\sin\theta>0\)；等号是稳定性丧失的边界而非充分稳定条件。
+(2) 临界点满足上述一阶、二阶导数同时为零。把 \(h_x,h_y\) 看作未知量解二元线性方程，得
+\[
+h_x=-\cos^3\theta,\qquad h_y=\sin^3\theta.
+\]
+于是 \(|h_x|^{2/3}+|h_y|^{2/3}=1\)。星形线内部通常存在两个局部极小及两个不稳定驻点（在特殊对称轴上需按简并情况计数），越过临界线时一对极小与鞍点合并；该线是相干旋转的自旋失稳界，不是普适实验磁滞曲线。
+(3) 易轴 \(h_y=0\) 时 \(\theta=0,\pi\) 均为驻点；它们的曲率分别为 \(2KV(1+h_x)\) 与 \(2KV(1-h_x)\)。从负向饱和逐渐加场，反向态在 \(h_x=1\) 失稳，反向扫场阈值为 \(-1\)，因此理想零温易轴矫顽场大小 \(H_k\)。硬轴 \(h_x=0\) 时 \(E'=2KV\cos\theta(\sin\theta-h_y)\)，稳定分支在 \(|h_y|\le1\) 满足 \(\sin\theta=h_y\)，故 \(M_y=M_sh_y\)，超过该范围饱和为 \(M_y=\pm M_s\)，无易轴式跳跃。
+(4) 令 \(h=H_x/H_k\in(0,1)\)。反向亚稳态 \(\theta=\pi\) 的能量密度为 \(2Kh\)；鞍点满足 \(\cos\theta=-h\)，代入得 \(K(1+h^2)\)。故
+\[
+\Delta E=KV[(1+h^2)-2h]=KV(1-h)^2.
+\]
+当 \(\Delta E\gg k_BT\) 时热激活平均等待时间的指数因子为 \(\tau\simeq\tau_0\exp[\Delta E/(k_BT)]\)，其中前因子依阻尼和动力学而定。临近 \(h=1\)、多畴成核、强交换耦合或非均匀磁化时，单畴相干翻转假设与高势垒近似均失效。

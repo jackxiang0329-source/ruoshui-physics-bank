@@ -1,7 +1,22 @@
-(1) 自旋简并度2使动量球内态数 \(N=2V(4\pi k_F^3/3)/(2\pi)^3=Vk_F^3/(3\pi^2)\)，故 \(k_F=(3\pi^2n)^{1/3}\)、\(\varepsilon_F=\hbar^2k_F^2/(2m)\)。三维态密度 \(D(\varepsilon)=C\sqrt\varepsilon\)，\(N=\int_0^{\varepsilon_F}D(\varepsilon)d\varepsilon\)，能量 \(U_0=\int_0^{\varepsilon_F}\varepsilon D(\varepsilon)d\varepsilon=(3/5)N\varepsilon_F\)。由尺度齐次性 \(PV=2U_0/3\)，所以 \(\boxed{P_0=(2/5)n\varepsilon_F}\)。该压力在 \(T=0\) 仍非零，源于Pauli填充而非热运动。
-
-(2) Sommerfeld公式为 \(\int_0^\infty f(\varepsilon)n_F(\varepsilon)d\varepsilon=\int_0^\mu f(\varepsilon)d\varepsilon+(\pi^2/6)(k_BT)^2f'(\mu)+O(T^4)\)。取 \(f=C\sqrt\varepsilon\)，固定 \(N\) 得 \((2C/3)\mu^{3/2}+(\pi^2C/12)(k_BT)^2\mu^{-1/2}=(2C/3)\varepsilon_F^{3/2}\)。设 \(\mu=\varepsilon_F+\delta\mu\) 且 \(\delta\mu=O(T^2)\)，线性展开得 \(C\varepsilon_F^{1/2}\delta\mu+(\pi^2C/12)(k_BT)^2\varepsilon_F^{-1/2}=0\)，故 \(\boxed{\mu(T)=\varepsilon_F[1-(\pi^2/12)(T/T_F)^2+O(T^4/T_F^4)]}\)。
-
-(3) 取能量积分权重 \(f(\varepsilon)=C\varepsilon^{3/2}\)，Sommerfeld展开得 \(U=(2C/5)\mu^{5/2}+(\pi^2C/4)(k_BT)^2\mu^{1/2}+O(T^4)\)。代入上一问 \(\delta\mu\)，整理为 \(\boxed{U/N=(3/5)\varepsilon_F[1+(5\pi^2/12)(T/T_F)^2+O((T/T_F)^4)]}\)。对固定 \(N,V\) 求导，\(\boxed{C_V/Nk_B=(\pi^2/2)(T/T_F)+O((T/T_F)^3)}\)。热容随 \(T\to0\) 线性趋零，符合第三定律；仅有Fermi面附近厚度 \(k_BT\) 的粒子参与低温热激发。
-
-(4) 零温 \(P_0\propto n^{5/3}\)，故 \(\partial P/\partial n=(2/3)\varepsilon_F\)。压缩率 \(\boxed{\kappa_T=[n(\partial P/\partial n)]^{-1}=3/(2n\varepsilon_F)}\)。零温熵为零，等温与绝热微小压缩在此极限一致，声速 \(c_s^2=(1/m)\partial P/\partial n=2\varepsilon_F/(3m)=v_F^2/3\)，即 \(\boxed{c_s=v_F/\sqrt3}\)。若 \(v_F\) 接近光速、相互作用强或系统维度改变，非相对论自由气体的压缩率和声速必须修正。
+(1) 对 \(F\) 变分并将梯度项分部积分，周期或自然边界消去表面项，得到
+\[
+\mu=a\phi+b\phi^3-\kappa\nabla^2\phi.
+\]
+因此 \(\partial_t\phi=M\nabla^2\mu=-\nabla\cdot\boldsymbol J\)，其中 \(\boldsymbol J=-M\nabla\mu\)。在周期边界或 \(\boldsymbol n\cdot\nabla\mu=0\) 下，\(\frac d{dt}\int_\Omega\phi\,dV=M\int_{\partial\Omega}\boldsymbol n\cdot\nabla\mu\,dS=0\)；非守恒Allen–Cahn动力学不能代替此式。
+(2) 置 \(\phi=\phi_0+\eta e^{\lambda t+i\boldsymbol k\cdot\boldsymbol r}\)，记 \(A=a+3b\phi_0^2\)。一阶化学势为 \((A+\kappa k^2)\eta\)，故
+\[
+\lambda(k)=-Mk^2(A+\kappa k^2).
+\]
+仅当 \(A<0\) 时 \(0<k<k_c=\sqrt{-A/\kappa}\) 的模增长。对 \(k^2\) 求导得 \(k_*=\sqrt{-A/(2\kappa)}\)，代回 \(\lambda_{\max}=MA^2/(4\kappa)\)；\(k=0\) 严格中性正是总序参量守恒。
+(3) 静态共存两相令 \(\mu=0\)，满足 \(\kappa\phi''=a\phi+b\phi^3\)。乘 \(\phi'\) 积分并利用远场 \(\phi_b=\sqrt{-a/b}\)、\(\phi'(\infty)=0\)，得
+\[
+\frac{\kappa}{2}(\phi')^2=\frac b4(\phi^2-\phi_b^2)^2.
+\]
+分离变量可得 \(\phi(x)=\phi_b\tanh(x/\ell)\)，\(\ell=\sqrt{2\kappa/(-a)}\)。直接求导可见 \(\kappa\phi''=a\phi+b\phi^3\)，且两端达到稳定极小。
+(4) 利用一阶积分，界面过剩自由能密度为 \(\kappa(\phi')^2\)。因此
+\[
+\sigma=\kappa\frac{\phi_b^2}{\ell^2}\int_{-\infty}^{\infty}{\rm sech}^4(x/\ell)\,dx
+=\frac{4\kappa\phi_b^2}{3\ell}
+=\frac{2\sqrt2}{3}\frac{\sqrt\kappa(-a)^{3/2}}b.
+\]
+另一方面 \(\dot F=\int\mu\dot\phi\,dV=M\int\mu\nabla^2\mu\,dV=-M\int|\nabla\mu|^2dV\le0\)。不稳定均匀态的扰动增长正是朝更低自由能的两相态演化，并不违反Lyapunov耗散。
