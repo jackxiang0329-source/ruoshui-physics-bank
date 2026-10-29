@@ -838,12 +838,61 @@ assert abs(fun059(opt059)-(1-mp.sqrt(1-zn059))/(1+mp.sqrt(1-zn059)))<mp.mpf('1e-
 supplemental.append(dict(id='T059',method='independent_high_precision_thermoelectric_leg',
                          name='50 digit independent physical-leg power heat and entropy balances plus numerical optimum efficiency',passed=True))
 
-assert len(checks)==88 and len(set((v['id'],v['part']) for v in checks))==88
+
+# W059 -- elastic Rayleigh surface waves, independent boundary and energy tests.
+zzr, gmr, ppr, qqr=s.symbols('zzr gmr ppr qqr',real=True)
+raymat=s.Matrix([[2*s.I*ppr,2-zzr],[2-zzr,-2*s.I*qqr]])
+record('W059',1,'independent_derivation',
+       'longitudinal and shear traction determinant equals the Rayleigh surface wave condition',
+       eq(raymat.det(),4*ppr*qqr-(2-zzr)**2))
+polyr=zzr**3-8*zzr**2+8*(3-2*gmr)*zzr-16*(1-gmr)
+record('W059',2,'symbolic',
+       'squared elastic Rayleigh equation factors into zero root and monotone cubic',
+       eq((2-zzr)**4-16*(1-zzr)*(1-gmr*zzr),zzr*polyr)
+       and eq(polyr.subs(zzr,0),-16*(1-gmr))
+       and eq(polyr.subs(zzr,1),1)
+       and eq(s.diff(polyr,zzr).subs(zzr,1),11-16*gmr))
+mp.mp.dps=50
+def cro(zz,gg):return zz**3-8*zz**2+(24-16*gg)*zz-16*(1-gg)
+gg=mp.mpf(1)/3
+zray=mp.findroot(lambda z:cro(z,gg),(.82,.88))
+pr=mp.sqrt(1-gg*zray);qr=mp.sqrt(1-zray);vr=mp.sqrt(zray)
+br=-2j*pr/(2-zray)
+def elastic_density(t):
+    ea=mp.exp(-pr*t);eb=mp.exp(-qr*t)
+    ux=1j*ea+qr*br*eb;uz=-pr*ea+1j*br*eb
+    exx=1j*ux;ezz=pr*pr*ea-1j*qr*br*eb
+    exz=(-1j*pr*ea-qr*qr*br*eb+1j*uz)/2
+    tr=exx+ezz
+    sx=tr+2*exx;sz=2*exz
+    kin=vr*vr*(abs(ux)**2+abs(uz)**2)/4
+    pot=(abs(tr)**2+2*(abs(exx)**2+abs(ezz)**2+2*abs(exz)**2))/4
+    power=vr*mp.im(sx*ux.conjugate()+sz*uz.conjugate())/2
+    return kin,pot,power
+Kray=mp.quad(lambda t:elastic_density(t)[0],[0,mp.inf])
+Vray=mp.quad(lambda t:elastic_density(t)[1],[0,mp.inf])
+Pray=mp.quad(lambda t:elastic_density(t)[2],[0,mp.inf])
+record('W059',3,'conservation',
+       'fifty digit depth quadrature confirms elastic equipartition and energy transport at Rayleigh group speed',
+       abs(Kray-Vray)<mp.mpf('1e-42')
+       and abs(Pray-vr*(Kray+Vray))<mp.mpf('1e-42')
+       and abs((2-zray)**2-4*pr*qr)<mp.mpf('1e-42'))
+zlo=mp.findroot(lambda z:cro(z,mp.mpf('.5')),(.7,.8))
+zhi=mp.findroot(lambda z:cro(z,mp.mpf('0')),(.9,.94))
+record('W059',4,'limit',
+       'bulk wave speeds bound the unique compressible to incompressible elastic surface phase speeds',
+       0<zlo<zray<zhi<1 and qr<pr
+       and abs(mp.sqrt(zlo)-mp.mpf('0.874032048897642'))<mp.mpf('1e-15')
+       and abs(mp.sqrt(zhi)-mp.mpf('0.955312501025632'))<mp.mpf('1e-15'))
+supplemental.append(dict(id='W059',method='high_precision_elastic_energy_flux',
+                         name='50-digit independent Rayleigh dispersion root and depth integrated energy-flux quadrature',passed=True))
+
+assert len(checks)==92 and len(set((v['id'],v['part']) for v in checks))==92
 assert len(set(v['method'] for v in checks if v['id']=='W058'))>=2
 assert len(set(v['method'] for v in checks if v['id']=='Q059'))>=2
-assert len(supplemental)==22
+assert len(supplemental)==23
 
-result={'status':'draft-only','new_problem_count':22,'passed_count':len(checks),'tests':checks,'independent_expert_review':'pending','supplemental_numeric_checks':supplemental}
+result={'status':'draft-only','new_problem_count':23,'passed_count':len(checks),'tests':checks,'independent_expert_review':'pending','supplemental_numeric_checks':supplemental}
 path=Path(__file__).resolve().parents[1]/'data/round12_draft_validation_report.json'
 path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
 print(json.dumps({'status':result['status'],'checked_subparts':len(checks)},ensure_ascii=False))

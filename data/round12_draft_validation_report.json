@@ -1,7 +1,7 @@
 {
   "status": "draft-only",
-  "new_problem_count": 22,
-  "passed_count": 88,
+  "new_problem_count": 23,
+  "passed_count": 92,
   "tests": [
     {
       "id": "M059",
@@ -618,6 +618,34 @@
       "method": "dimensions",
       "name": "Physical Seebeck Peltier heat and charge laws reconstruct symmetric Onsager matrix with correct determinant and ZT",
       "passed": true
+    },
+    {
+      "id": "W059",
+      "part": 1,
+      "method": "independent_derivation",
+      "name": "longitudinal and shear traction determinant equals the Rayleigh surface wave condition",
+      "passed": true
+    },
+    {
+      "id": "W059",
+      "part": 2,
+      "method": "symbolic",
+      "name": "squared elastic Rayleigh equation factors into zero root and monotone cubic",
+      "passed": true
+    },
+    {
+      "id": "W059",
+      "part": 3,
+      "method": "conservation",
+      "name": "fifty digit depth quadrature confirms elastic equipartition and energy transport at Rayleigh group speed",
+      "passed": true
+    },
+    {
+      "id": "W059",
+      "part": 4,
+      "method": "limit",
+      "name": "bulk wave speeds bound the unique compressible to incompressible elastic surface phase speeds",
+      "passed": true
     }
   ],
   "independent_expert_review": "pending",
@@ -752,6 +780,12 @@
       "id": "T059",
       "method": "independent_high_precision_thermoelectric_leg",
       "name": "50 digit independent physical-leg power heat and entropy balances plus numerical optimum efficiency",
+      "passed": true
+    },
+    {
+      "id": "W059",
+      "method": "high_precision_elastic_energy_flux",
+      "name": "50-digit independent Rayleigh dispersion root and depth integrated energy-flux quadrature",
       "passed": true
     }
   ]
