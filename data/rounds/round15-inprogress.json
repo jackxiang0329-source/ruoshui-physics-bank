@@ -1,7 +1,7 @@
 {
   "date": "2026-10-29",
   "round": "15",
-  "status": "REJECTED_PENDING_33_CORE_REPLACEMENTS_AND_8_REAUDITS",
+  "status": "REJECTED_PENDING_33_CORE_REPLACEMENTS_168_SUBPART_CHECKS_AND_PDF",
   "base_main_sha": "68f662554f7e4cf29b00d8b369a3e18445205ad8",
   "base_count": 452,
   "target_new_items": 50,
@@ -78,8 +78,8 @@
   "next_ids": [],
   "quality_status": "待独立复核",
   "independent_expert_review": "待独立复核",
-  "technical_status": "6 new substantive core replacements drafted across all six domains, plus previous T080/E087; 33 known duplicates still unreplaced. Only previously validated 8/200 checks are completed; replacement model checks now required. No PDFs/mirrors synced. DO NOT MERGE.",
-  "executed_subpart_checks": 8,
+  "technical_status": "8/41 original collided core models substantively rewritten, 33 not yet replaced. 32/200 executable per-subpart assertions passed in replacement subset GitHub Actions at 807ce777; no full-round originality certification, data mirrors synchronized, PDF build, or expert review. RELEASE BLOCKED.",
+  "executed_subpart_checks": 32,
   "required_final_checks": 200,
   "pdf_status": "not run for round15",
   "generated_mirrors_synced_sha": null,
@@ -133,17 +133,29 @@
     "Q082"
   ],
   "unresolved_core_replacements": 33,
-  "remaining_required_subpart_checks": 192,
+  "remaining_required_subpart_checks": 168,
   "subset_qa": {
-    "completed_qa_count": 8,
+    "completed_qa_count": 32,
     "affected_ids": [
       "T080",
-      "E087"
+      "E087",
+      "M086",
+      "E088",
+      "T081",
+      "W081",
+      "O082",
+      "Q082"
     ],
-    "status": "subset technical QA passed; global round still blocked",
-    "verified_source_sha": "b8f91f95251b3d9a8a38f4ec7ecca57c45032f13",
-    "run_id": 40856397830,
-    "run_url": "https://github.com/jackxiang0329-source/ruoshui-physics-bank/actions/runs/40856397830",
-    "conclusion": "success"
+    "status": "all eight rewritten candidate models passed 4 executable subpart assertions each on CI; no independent expert approval",
+    "verified_source_sha": "807ce777f4421eace65e4093710a9bf08be7374b",
+    "run_id": 40859768959,
+    "run_url": "https://github.com/jackxiang0329-source/ruoshui-physics-bank/actions/runs/40859768959",
+    "conclusion": "success",
+    "prior_check_run_id": 40856397830,
+    "validation_programs": [
+      "scripts/check_round15_replacements.js",
+      "scripts/check_round15_six_models.js"
+    ],
+    "provenance_note": "32/200 checks are scoped to 8 rewritten candidates. Remaining 42 draft candidates have not been independently validated."
   }
 }
