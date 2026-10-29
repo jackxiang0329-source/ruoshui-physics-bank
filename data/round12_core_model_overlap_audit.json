@@ -50,7 +50,7 @@
       ]
     }
   ],
-  "disposition": "Draft 30/50 screened for previous duplicate core models; all remain pending independent human review.",
+  "disposition": "Draft 34/50 with four new original core-model screenings, pending external independent review.",
   "independent_expert_review": "待独立复核",
   "new_draft_model_screening": [
     {
@@ -236,6 +236,47 @@
       ],
       "core_model": "Stimulated fluorescence depletion nonlinear two-state photophysics, exact Lambert W PSF radius and E1 photon budget",
       "difference": "O038 small-particle scattering, O043 diffraction, O053 Michelson shot noise, Q046 HOM quantum interference; none uses a nonlinear depletion fluorescence denominator and photon-rate tradeoff.",
+      "resolution_status": "screened_distinct_pending_independent_review"
+    },
+    {
+      "draft_id": "M064",
+      "compared_existing_ids": [
+        "M035",
+        "M043",
+        "M062"
+      ],
+      "core_model": "Kepler近圆轨道交会的Hill方程、漂移模与Jacobi不变量",
+      "difference": "Local circular Kepler rendezvous with secular Hill drift differs from three-body Lagrange stability.",
+      "resolution_status": "screened_distinct_pending_independent_review"
+    },
+    {
+      "draft_id": "E064",
+      "compared_existing_ids": [
+        "E049",
+        "E046"
+      ],
+      "core_model": "相对论同步辐射功率、缓慢冷却与回旋半径收缩",
+      "difference": "Relativistic radiative orbit shrinkage rather than electric-dipole radiation or magnetic mirror.",
+      "resolution_status": "screened_distinct_pending_independent_review"
+    },
+    {
+      "draft_id": "T061",
+      "compared_existing_ids": [
+        "T056",
+        "T025"
+      ],
+      "core_model": "一维伊辛环的转移矩阵严格解、关联长度与零场比热",
+      "difference": "Exact short-range one-dimensional transfer matrix versus mean-field Ising transition.",
+      "resolution_status": "screened_distinct_pending_independent_review"
+    },
+    {
+      "draft_id": "W061",
+      "compared_existing_ids": [
+        "W057",
+        "Q060"
+      ],
+      "core_model": "正弦Gordon拓扑孤子、能动量与无反射涨落谱",
+      "difference": "Classical sine-Gordon topological soliton and reflectionless fluctuation spectrum versus KdV or Dirac fermionic kink.",
       "resolution_status": "screened_distinct_pending_independent_review"
     }
   ]

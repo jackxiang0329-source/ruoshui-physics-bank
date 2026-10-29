@@ -1,0 +1,21 @@
+(1) 参考轨道引力梯度为 \(\delta\boldsymbol g=-n^2[\boldsymbol\xi-3x\boldsymbol e_x]\)。旋转系离心线性项给平面坐标加 \(n^2(x,y)\)，科里奥利项为 \(-2\boldsymbol\Omega\times\dot{\boldsymbol\xi}\)，故
+\[
+\boxed{\ddot x-2n\dot y-3n^2x=0,\quad\ddot y+2n\dot x=0,\quad\ddot z+n^2z=0}.
+\]
+径向系数3正是引力潮汐2与离心1的合成，不能把参考轨道的加速度误认为追踪器的全部引力。
+
+(2) 由第二式得守恒 \(C=\dot y+2nx=\dot y_0+2nx_0\)，代入第一式得到 \(\ddot x+n^2x=2nC\)。取 \(A=x_0-2C/n,\ B=\dot x_0/n\)，则
+\[
+x=A\cos nt+B\sin nt+2C/n,\quad
+y=y_0-3Ct-2A\sin nt+2B(\cos nt-1),\quad
+z=z_0\cos nt+\dot z_0\sin nt/n.
+\]
+逐项代回可核对全部初值及方程。无沿轨道线性漂移等价于 \(C=0\)，否则 \(y\) 中存在零频Jordan模的 \(t\) 项，不可视为有界单频振荡。
+
+(3) 三个方程分别乘 \(2\dot x,2\dot y,2\dot z\) 再相加，科里奥利功率严格抵消，得到
+\[
+\mathcal J=\dot x^2+\dot y^2+\dot z^2-3n^2x^2+n^2z^2=\mathrm{constant}.
+\]
+该量不正定，因而单靠其守恒不能保证相对运动有界。对 \(T=2\pi/n\) 取正弦余弦的整周期值，得到位置 \((x_0,y_0-3CT,z_0)\)、速度 \((\dot x_0,\dot y_0,\dot z_0)\)。只有 \(C=0\) 才实现位置闭合，而闭合轨道的相对速度可以非零。
+
+(4) 若 \(x_0=y_0=z_0=0\)，则 \(C=\dot y_0\)，故一周期后 \(y(T)=-3T\dot y_0\)，重逢当且仅当 \(\dot y_0=0\)；若要求零速对接，则全部初速度必须为零。 \(\mu\to0^+\) 同时使 \(n\to0\)、\(T\to\infty\)，故不允许固定“一个周期”讨论自由运动极限；在固定物理时间展开三角函数才恢复匀速轨迹。要求 \(\sup_t|\boldsymbol\xi(t)|/R\ll1\)，特别是漂移情形 \(3|C|t/R\ll1\)，否则原线性化已失效。
