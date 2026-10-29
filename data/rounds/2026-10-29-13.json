@@ -1,7 +1,7 @@
 {
   "date": "2026-10-29",
   "round": "13",
-  "status": "technical_gate_passed_awaiting_main_merge",
+  "status": "merged_technical_gate_passed",
   "target_new_items": 50,
   "actual_new_items": 50,
   "base_count": 352,
@@ -71,7 +71,7 @@
   "executed_subpart_checks": 200,
   "quality_status": "待独立复核",
   "independent_expert_review": "待独立复核",
-  "note": "Seven historically duplicated core models replaced by distinct equations, full four-part Chinese solutions and 28 fresh physical checks; all 50 models and 200 subpart QA passed; only technical review attested.",
+  "note": "Round 13 admitted exactly 50 substantively distinct four-part high-difficulty problems; seven duplicated historical core models were replaced with different physical models and 28 new runnable checks; all independent human expert review still pending.",
   "review_status": "待独立复核",
-  "technical_status": "passed: PR #36 HEAD 1573a8238c9fbaae9408ad8858805391e527fe8d; GitHub Actions runs 40832497875 and 40832492694 both success, 200 distinct executable subpart checks and two XeLaTeX PDFs compiled; pending independent expert review"
+  "technical_status": "passed: PR #36 final HEAD ba1eecacb52e11151f99cfeeb1aa09509eb76ce7; GitHub Actions runs 40832954720 and 40832946271 both success with 200 distinct executed subpart checks and both XeLaTeX PDFs; merged into main at 959101fab774e82f1a7a2aecf5ba5a19ddb56fdd; independent expert review pending"
 }
