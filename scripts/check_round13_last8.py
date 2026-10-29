@@ -36,7 +36,7 @@ ck('M076',4,'conservation','Coriolis acceleration is perpendicular to velocity a
 # E075: ellipsoid depolarization
 er,Li,vol,eps0,E0=s.symbols('er Li vol eps0 E0',positive=True)
 alpha=eps0*vol*(er-1)/(1+Li*(er-1))
-ck('E075',1,'symbolic','ellipsoid internal field self consistency reproduces exact anisotropic polarizability tensor eigenvalue',eq(alpha/vol,eps0*(er-1)/(1+Li*(er-1))))
+ck('E075',1,'symbolic','ellipsoid internal field self consistency reproduces exact anisotropic polarizability tensor eigenvalue',eq(E0/(1+Li*(er-1)),E0-Li*(eps0*(er-1)*E0/(1+Li*(er-1)))/eps0) and eq(alpha*E0,vol*eps0*(er-1)*E0/(1+Li*(er-1))))
 R,ss=s.symbols('R ss',positive=True)
 Ls=s.integrate(R**3/(2*(ss+R**2)**s.Rational(5,2)),(ss,0,s.oo))
 ck('E075',2,'independent_derivation','spherical depolarization integral gives one third and conducting sphere recovers four pi epsilon zero radius cubed',eq(Ls,s.Rational(1,3)) and eq(s.limit(alpha.subs({Li:s.Rational(1,3),vol:4*s.pi*R**3/3}),er,s.oo),4*s.pi*eps0*R**3))
@@ -100,7 +100,7 @@ cc=s.cos(theta/2);ss=s.sin(theta/2)
 overlap=cc**2-ss**2
 Aw=(cc**2+ss**2)/overlap
 ck('Q073',1,'symbolic','qubit pre post overlap gives secant weak value and exact cosine squared zero coupling success probability',eq(Aw,1/s.cos(theta)) and eq(overlap**2,s.cos(theta)**2))
-ck('Q073',2,'independent_derivation','first order weak pointer translation equals coupling times real weak value under nonzero postselection overlap',eq(g*Aw,g/s.cos(theta)) and eq(s.limit(g*Aw/g,theta,0),1))
+ck('Q073',2,'independent_derivation','first order weak pointer translation equals coupling times real weak value under nonzero postselection overlap',eq(s.diff(cc**2*s.exp(-(s.Symbol('q',real=True)-g)**2/(4*sigma**2))-ss**2*s.exp(-(s.Symbol('q',real=True)+g)**2/(4*sigma**2)),g).subs(g,0),-s.diff(s.exp(-s.Symbol('q',real=True)**2/(4*sigma**2)),s.Symbol('q',real=True))) and eq(s.limit(g*Aw/g,theta,0),1))
 prob=cc**4+ss**4-2*cc**2*ss**2*s.exp(-g**2/(2*sigma**2))
 mean=g*s.cos(theta)/prob
 ck('Q073',3,'limit','exact Gaussian postselection regularizes anomalous weak value as states become orthogonal at fixed nonzero coupling',eq(s.limit(mean,theta,s.pi/2,dir='-'),0) and eq(s.limit(prob,theta,s.pi/2,dir='-'),(1-s.exp(-g**2/(2*sigma**2)))/2))

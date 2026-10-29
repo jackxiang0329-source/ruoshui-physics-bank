@@ -44,7 +44,7 @@ ck('T070',4,'conservation','diffusion flux from fourth power temperature law exa
 Dx,Dy,Dxy,ms,kx,ky=s.symbols('Dx Dy Dxy ms kx ky',positive=True)
 S=Dx*kx**4+2*Dxy*kx*kx*ky*ky+Dy*ky**4
 omega=s.sqrt(S/ms)
-ck('W070',1,'symbolic','variational orthotropic fourth order plate operator yields correct doubled mixed derivative stiffness',eq(S,Dx*kx**4+2*Dxy*kx**2*ky**2+Dy*ky**4))
+ck('W070',1,'symbolic','variational orthotropic fourth order plate operator yields correct doubled mixed derivative stiffness',eq(Dx*s.diff(s.cos(kx*s.Symbol('X',real=True)+ky*s.Symbol('Y',real=True)),s.Symbol('X',real=True),4)+2*Dxy*s.diff(s.cos(kx*s.Symbol('X',real=True)+ky*s.Symbol('Y',real=True)),s.Symbol('X',real=True),2,s.Symbol('Y',real=True),2)+Dy*s.diff(s.cos(kx*s.Symbol('X',real=True)+ky*s.Symbol('Y',real=True)),s.Symbol('Y',real=True),4),S*s.cos(kx*s.Symbol('X',real=True)+ky*s.Symbol('Y',real=True))))
 ck('W070',2,'independent_derivation','differentiating orthotropic plate dispersion recovers both group velocity components',eq(s.diff(omega,kx),2*(Dx*kx**3+Dxy*kx*ky**2)/(ms*omega)) and eq(s.diff(omega,ky),2*(Dy*ky**3+Dxy*kx*kx*ky)/(ms*omega)))
 la,lb,amp,m,n=s.symbols('la lb amp m n',positive=True)
 kxmn=m*s.pi/la;kymn=n*s.pi/lb
@@ -68,7 +68,7 @@ ck('O072',4,'physical_case','Brillouin metal electric energy derivative remains 
 # Q072 adiabatic Grover
 N,ss,epsilon=s.symbols('N ss epsilon',positive=True)
 gap2=1-4*(1-1/N)*ss*(1-ss)
-ck('Q072',1,'symbolic','two dimensional Grover effective projector has unit trace and determinant proportional to marked overlap',eq(s.Rational(1,1),1) and eq((ss+(1-ss)/N)*(1-ss)*(N-1)/N-(1-ss)**2*(N-1)/N**2,ss*(1-ss)*(N-1)/N))
+ck('Q072',1,'symbolic','two dimensional Grover effective projector has unit trace and determinant proportional to marked overlap',eq(s.trace(s.Matrix([[ss+(1-ss)/N,(1-ss)*s.sqrt(N-1)/N],[(1-ss)*s.sqrt(N-1)/N,(1-ss)*(N-1)/N]])),1) and eq(s.det(s.Matrix([[ss+(1-ss)/N,(1-ss)*s.sqrt(N-1)/N],[(1-ss)*s.sqrt(N-1)/N,(1-ss)*(N-1)/N]])),ss*(1-ss)*(N-1)/N))
 ck('Q072',2,'limit','Grover avoided crossing reaches exact inverse root N minimum gap at half interpolation',eq(gap2.subs(ss,s.Rational(1,2)),1/N) and eq(s.diff(gap2,ss).subs(ss,s.Rational(1,2))))
 T=N/(epsilon*s.sqrt(N-1))*s.atan(s.sqrt(N-1))
 ck('Q072',3,'independent_derivation','local adiabatic inverse squared gap integral has exact arctangent form and square root asymptotic',eq(s.diff(N/(2*s.sqrt(N-1))*s.atan(2*s.sqrt(N-1)*(ss-s.Rational(1,2))),ss),1/gap2) and abs(float(mp.quad(lambda t:1/(1-4*(1-1/10)*t*(1-t)),[0,0.5,1]))-float((N/s.sqrt(N-1)*s.atan(s.sqrt(N-1))).subs(N,10)))<1e-10 and eq(s.limit(T/(s.sqrt(N)/epsilon),N,s.oo),s.pi/2))
