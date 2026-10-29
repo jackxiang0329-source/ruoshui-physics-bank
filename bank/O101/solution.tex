@@ -1,0 +1,7 @@
+(1) 沿固定延迟时间 $t$，方程给 $\partial_z|A|^2=0$，故 $A(z,t)=A(0,t)\exp[i\gamma z|A(0,t)|^2]$。对于题设Gaussian，非线性相位为 $\Phi(z,t)=\gamma zP_0e^{-t^2/\tau^2}$，中心相位最大，尾部趋零。
+
+(2) 瞬时频偏 $\delta\Omega=-\partial_t\Phi=2\gamma zP_0(t/\tau^2)e^{-t^2/\tau^2}$。前半脉冲 $t<0$ 红移，后半 $t>0$ 蓝移；绝对值最大在 $|t|=\tau/\sqrt2$，峰值 $\boxed{|\delta\Omega|_{\max}=\sqrt2\gamma zP_0e^{-1/2}/\tau}$。
+
+(3) 由 $\int\Omega^2|\widetilde A|^2d\Omega/\int|\widetilde A|^2=\int|\partial_tA|^2dt/\int|A|^2dt$，且奇对称啁啾使频谱平均频偏为零，可得 $\operatorname{Var}\Omega=1/(2\tau^2)+4\gamma^2z^2P_0^2\tau^{-4}[\int t^2e^{-3t^2/\tau^2}dt/\int e^{-t^2/\tau^2}dt]$。Gaussian积分给 $\boxed{\operatorname{Var}\Omega=\frac1{2\tau^2}+\frac{2\gamma^2z^2P_0^2}{3^{3/2}\tau^2}}$。
+
+(4) 因 $\partial_z|A|^2=0$，每个时间位置的强度保持 $P(t)=P_0e^{-t^2/\tau^2}$，总脉冲能量 $\int Pdt=P_0\tau\sqrt\pi$ 完全守恒。非线性自相位调制展宽光谱但不直接改变时域强度；加入色散后不同时间分量会发生耦合，加入吸收后能量账本还出现损失项。
