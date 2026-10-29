@@ -66,7 +66,7 @@ def verify_all():
     btemp=s.symbols('btemp',positive=True)
     peq=1/(1+s.exp(btemp*E))
     C=s.simplify(-btemp**2*s.diff(E*peq,btemp))
-    ck('T069',4,'independent_derivation','Equilibrium energy covariance relaxes at master equation rate and Schottky heat is positive',eq(corr.subs(t,0),E**2*pstar*(1-pstar)) and eq(C,btemp**2*E**2*peq*(1-peq)) and eq(s.limit(C,btemp,s.oo)))
+    ck('T069',4,'independent_derivation','Equilibrium energy covariance relaxes at master equation rate and Schottky heat is positive',eq(corr.subs(t,0),E**2*pstar*(1-pstar)) and eq(C.rewrite(s.exp),btemp**2*E**2*peq*(1-peq)) and eq(s.limit(C,btemp,s.oo)))
     # T071 Cahn Hilliard conserved gradient flow and kink
     A,B,kappa,M,k=s.symbols('A B kappa M k',positive=True)
     lam=M*k**2*(A-kappa*k**2)
