@@ -1,12 +1,36 @@
-(1) 取 \(h(q)=k_1+k_2e^{-iqa}\)，\(D(q)=m^{-1}[(k_1+k_2)I-\begin{psmallmatrix}0&h\\h^*&0\end{psmallmatrix}]\)。故
+(1) 对静止、均匀深度基本态线性化：
 \[
-\omega_\pm^2(q)={k_1+k_2\pm |h(q)|\over m},\quad
-|h|=\sqrt{k_1^2+k_2^2+2k_1k_2\cos qa}.
+u_t-fv=-g\eta_x,\quad v_t+fu=-g\eta_y,\quad
+\eta_t+H(u_x+v_y)=0.
 \]
-(2) 最小 \(|h|=|k_1-k_2|\) 位于 \(qa=\pi\)，故带隙在 \(k_1=k_2\) 闭合；两支的频率平方差在此为 \(2|k_1-k_2|/m\)。互换耦合改变单位胞切割与端点弱键的位置，体能谱保持但开边界拓扑模可能变化。
-(3) 去掉常数对角项后手征矩阵只有A-B跨子格耦合。若左端A未配对，令B幅值全部为零，零模方程在各B点为 \(k_1A_j+k_2A_{j+1}=0\)，所以
+对 \(e^{i(k_xx+k_yy-\omega t)}\) 的振幅，取
 \[
-A_j=A_1(-k_1/k_2)^{j-1},\quad \xi={a\over\ln(k_2/k_1)}.
+\begin{pmatrix}-i\omega&-f&igk_x\\f&-i\omega&igk_y\\iHk_x&iHk_y&-i\omega\end{pmatrix}
+\begin{pmatrix}\hat u\\\hat v\\\hat\eta\end{pmatrix}=0.
 \]
-仅当 \(k_1<k_2\) 才向体内衰减；长链另一端可能有指数小的边模劈裂，不能将有限链零模一概视为精确。
-(4) 若未使对角项均为 \(k_1+k_2\)，则平移矩阵含不等对角元素，反对易手征关系丧失，中隙频率不再固定。对正耦合，频率平方非负：\(|h|\le k_1+k_2\) 故 \(\omega_-^2\ge0\)。机械能 \(E=\tfrac12\sum m\dot u_i^2+\tfrac12\sum_{\langle ij\rangle}k_{ij}(u_i-u_j)^2+\)非负配平弹簧能，因此系统被动无源。
+(2) 行列式为 \(i\omega[\omega^2-f^2-gH(k_x^2+k_y^2)]\) 乘以非零实常数（按行列式整体符号约定不影响零点）。写 \(c=\sqrt{gH}\)，有
+\[
+\omega_0=0,\qquad \omega_\pm=\pm\sqrt{f^2+c^2k^2}.
+\]
+地转支满足 \(fu=-g\eta_y,\ fv=g\eta_x\)，即
+\[
+u=-{g\over f}\eta_y,\quad v={g\over f}\eta_x,
+\]
+且散度为零。正频群速度 \(\boldsymbol v_g=c^2\boldsymbol k/\sqrt{f^2+c^2k^2}\)；长波 \(\omega_+\simeq|f|+c^2k^2/(2|f|)\)，短波 \(\omega_+\simeq ck+f^2/(2ck)\)，故群速在长波趋零，在短波趋 \(c\)。
+(3) 乘前两式以 \(\rho H u,\rho H v\)，第三式乘 \(\rho g\eta\)，相加得到局部守恒律
+\[
+\partial_t {\rho\over2}[H(u^2+v^2)+g\eta^2]
++\nabla\cdot(\rho gH\eta\boldsymbol u)=0.
+\]
+科氏两项为 \(\rho H(-fuv+fvu)=0\)。边界净能流为零则总能量恒定。取波矢沿x轴，传播支方程有 \(v=-if u/\omega\)（相位按 \(e^{-i\omega t}\)），连续性给 \(\eta=Hku/\omega\)；因此动能与势能振幅比
+\[
+{H(|u|^2+|v|^2)\over g|\eta|^2}
+={\omega^2+f^2\over c^2k^2}
+={c^2k^2+2f^2\over c^2k^2},
+\]
+一般不相等，仅在 \(f\to0\) 或 \(ck\gg |f|\) 时近似均分；科氏惯性运动使动能偏多。
+(4) 对前两方程取涡度，\(\zeta_t+f\nabla\cdot\boldsymbol u=0\)，又 \(\eta_t=-H\nabla\cdot\boldsymbol u\)，所以
+\[
+q_t=\partial_t(\zeta-f\eta/H)=0.
+\]
+对非零频谐波 \(q=0\)；地转零频态可有任意空间分布的守恒位涡，描述不传播的平衡分量。令 \(f\to0\) 时两传播支变为 \(\omega=\pm ck\)，零支为静态无辐散涡旋；零模的显式地转公式含 \(1/f\) 因而不能在 \(f=0\) 直接套用。
