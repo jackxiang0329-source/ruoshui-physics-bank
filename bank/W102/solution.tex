@@ -1,7 +1,7 @@
-(1) 运动方程为 $\mu y_{tt}+b y_t-Ty_{xx}=f_0\sin(\pi x/L)\cos\omega t$，固定端 $y(0,t)=y(L,t)=0$。不含外力时模态 $\sin(n\pi x/L)$ 正交，$\int_0^L\sin(n\pi x/L)\sin(m\pi x/L)dx=(L/2)\delta_{nm}$。
+(1) 预张力由外部控制为常数，随膜共转的 $(r,\vartheta)$ 系中 $\boxed{\mu u_{tt}=T(u_{rr}+u_r/r+u_{\vartheta\vartheta}/r^2)}$，在 $r=R$ 边界固定 $u=0$。这是假设无面内离心应力重分布的标量波动模型，不适用于无限大的 $\Omega$。
 
-(2) 由于驱动力投影只在 $n=1$ 非零，稳态可设 $y=q(t)\sin(\pi x/L)$，其中 $\mu\ddot q+b\dot q+(T\pi^2/L^2)q=f_0\cos\omega t$。令 $\omega_1=\pi\sqrt{T/\mu}/L$、$2\gamma=b/\mu$，得 $q(t)=A\cos(\omega t-\delta)$，$\boxed{A=(f_0/\mu)/\sqrt{(\omega_1^2-\omega^2)^2+4\gamma^2\omega^2}}$，$\tan\delta=2\gamma\omega/(\omega_1^2-\omega^2)$，相位采用正确象限。
+(2) 分离变量 $u=J_m(kr)e^{im\vartheta-i\omega_0t}$，中心正则性排除第二类Bessel奇解，边缘要求 $J_{|m|}(kR)=0$。设正零点 $j_{|m|,n}$，则 $\boxed{\omega_{0,mn}=j_{|m|,n}\sqrt{T/\mu}/R}$。静止圆膜中 $m$ 和 $-m$ 简并。
 
-(3) 周期平均阻尼耗散为 $\bar P_d=\int_0^L b\langle y_t^2\rangle dx=(bL/4)\omega^2A^2$。驱动力平均输入为 $\bar P_{\rm in}=\int_0^L f_0\sin(\pi x/L)\langle\cos\omega t\, y_t\rangle dx=(f_0L/4)\omega A\sin\delta$，利用稳态相位式得 $\bar P_{\rm in}=\bar P_d$。
+(3) 共转角 $\vartheta=\phi-\Omega t$，故 $e^{im\vartheta-i\omega_0t}=e^{im\phi-i(\omega_0+m\Omega)t}$。实验室带符号频率为 $\boxed{\omega_{mn}^{\rm lab}=\omega_{0,mn}+m\Omega}$；对应正负角序数的差是 $2m\Omega$，属运动坐标的Doppler位移，不是新弹性常数。
 
-(4) 对位移幅度平方的分母求 $\omega$ 导数，除 $\omega=0$ 外极小点是 $\omega_r^2=\omega_1^2-2\gamma^2$。仅当 $\gamma<\omega_1/\sqrt2$ 时有非零频率共振峰；更强阻尼时最大位移发生于零频准静态响应。$b\to0$ 时共振靠近 $\omega_1$，理想无阻尼严格共振不再存在有界周期稳态。
+(4) 实模式图案的恒相位满足 $m\phi-(m\Omega+\omega_0)t=$ 常数，$m\ne0$ 时节点以 $\Omega+\omega_0/m$ 旋转。$m=0$ 不发生角向频移；$\Omega\to0$ 恢复常规谱。高速时预张力会因离心力变化，需要重新求应力分布，不能继续将该结果视为精确。
