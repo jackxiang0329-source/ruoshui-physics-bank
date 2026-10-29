@@ -1,0 +1,21 @@
+(1) 对 \(X,Y\) 的联合分布 \(p(x,y)=(\pi I_0)^{-1}e^{-(x^2+y^2)/I_0}\)，变换到极坐标 \(I=r^2\)，角积分 \(2\pi\)、Jacobian \(r\,dr=dI/2\)，得到
+\[
+\boxed{p(I)=I_0^{-1}e^{-I/I_0}},\quad I\ge0.
+\]
+直接Gamma积分得 \(\langle I\rangle=I_0,\ \langle I^2\rangle=2I_0^2\)、\(\operatorname{Var}(I)=I_0^2\)。单个完全发展散斑的标准差恰与均值相同，是指数分布而非高斯强度分布。
+
+(2) 四阶场矩 \(\langle E_1^*E_1E_2^*E_2\rangle\) 用圆对称复高斯的Isserlis配对可拆成
+\(\langle |E_1|^2\rangle\langle |E_2|^2\rangle+
+\langle E_1^*E_2\rangle\langle E_1E_2^*\rangle\)，反常配对 \(\langle E_1E_2\rangle=0\)。因此
+\[
+\boxed{g^{(2)}(1,2)=1+|\mu_{12}|^2}.
+\]
+Cauchy–Schwarz给 \(|\mu_{12}|\le1\)；同一点 \(|\mu|=1\) 得 \(g^{(2)}=2\)，互不相关点 \(\mu=0\) 得1。Siegert关系依赖高斯性而非任意光强序列都天然成立。
+
+(3) 令 \(S_M=M^{-1}\sum_{j=1}^M I_j\)，独立指数强度之和为形状参数 \(M\)、尺度 \(I_0\) 的Gamma变量，因此
+\[
+p_{S_M}(s)=\frac{(M/I_0)^M}{\Gamma(M)}s^{M-1}e^{-Ms/I_0},\quad s\ge0.
+\]
+均值 \(I_0\)，方差 \(I_0^2/M\)，故 \(\boxed{C_M=\sqrt{\operatorname{Var}S_M}/\langle S_M\rangle=1/\sqrt M}\)。大 \(M\) 时中心极限定理使相对涨落趋近零，但有限 \(M\) 仍为正偏Gamma分布，并非负强度的无界正态变量。
+
+(4) 两个统计独立且平均值均为 \(I_0\) 的正交偏振散斑在不分偏振探测中强度相加，均值 \(2I_0\)、方差 \(2I_0^2\)，所以 \(C=1/\sqrt2\)。若平均分别为 \(a,b\)，独立时 \(C=\sqrt{a^2+b^2}/(a+b)\)，一般不为 \(1/\sqrt2\)。若它们相关，还需协方差 \(2\operatorname{Cov}(I_1,I_2)\)；偏振正交只消除了探测的相干交叉项，并不自动保证随机强度的统计独立。
