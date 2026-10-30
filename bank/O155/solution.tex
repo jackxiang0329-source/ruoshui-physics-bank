@@ -1,0 +1,4 @@
+(1) Poisson分布为 $\Pr(N=n)=e^{-\bar N}\bar N^n/n!$，$n=0,1,\ldots$。对所有非负整数求和，$\sum_n\Pr(N=n)=e^{-\bar N}\sum_n\bar N^n/n!=e^{-\bar N}e^{\bar N}=1$，因此符合完整的离散概率归一条件。
+(2) 由生成函数 $G(t)=\exp[\bar N(t-1)]$，有 $\langle N\rangle=G'(1)=\bar N$，$\langle N(N-1)\rangle=G''(1)=\bar N^2$，所以 $\operatorname{Var}(N)=\bar N^2+\bar N-\bar N^2=\bar N$。相对均方根起伏 $\sqrt{\operatorname{Var}(N)}/\bar N=1/\sqrt{\bar N}$。
+(3) 若平均入射光子率为 $\Phi$、独立探测量子效率为 $\eta$，时窗内平均光电子数 $\bar N=\eta\Phi\tau$。若把平均计数作为信号、标准差作为噪声，计数信噪比 $\mathrm{SNR}=\bar N/\sqrt{\bar N}=\sqrt{\eta\Phi\tau}$，显示其随积累时间平方根增长。
+(4) 令积分时间增加四倍，则平均计数增四倍而Poisson噪声标准差仅增两倍，因此信噪比增为两倍。探测暗计数、电子读出噪声、光源强度漂移，以及热光的超Poisson涨落会改变方差，不能把理想相干态模型误当所有光源的普适统计律。
