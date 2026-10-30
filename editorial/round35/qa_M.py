@@ -21,8 +21,11 @@ def run():
     check("M239",2,"radial equilibrium critical balance",der(V,eq),0,method="equilibrium-derivative")
     check("M239",3,"stability frequency from Hessian",der2(V,eq)/m,k/m-Om*Om,method="Hessian-numeric")
     v=.8;dr=.4
-    check("M239",4,"electric motor work balances mechanical energy rate",
-          2*m*Om*Om*.9*v,2*m*Om*Om*.9*v,method="motor-power") # use finite mechanical energy gradient below
+    rstate=.9
+    accel=Om*Om*rstate-(k/m)*(rstate-r0)
+    mech_rate=m*v*accel+m*Om*Om*rstate*v+k*(rstate-r0)*v
+    check("M239",4,"motor torque balances inertial mechanical energy",
+          mech_rate,2*m*Om*Om*rstate*v,method="independent-energy-gradient")
     # M240 Euler buckling beam
     EI,Lb=4.,3.
     Pcrit=P*P*EI/(Lb*Lb);mode=lambda x:SI(P*x/Lb)
@@ -63,8 +66,9 @@ def run():
     D=omega0**2-Omega**2+3*beta*amp**2/4
     Z=2*zeta*omega0*Omega
     ff=S(D*D+Z*Z)*amp
-    check("M243",1,"Duffing averaged forcing projections",
-          (ff/amp)**2,D*D+Z*Z,method="phasor-harmonic-balance")
+    cubfund=integrate(lambda theta:C(theta)**4,0,2*P)/(integrate(lambda theta:C(theta)**2,0,2*P))
+    check("M243",1,"Duffing cubic restoring fundamental harmonic",
+          cubfund,.75,method="harmonic-Fourier-projection")
     check("M243",2,"Duffing nonlinear resonance shift",
           (omega0**2+3*beta*amp**2/4)-omega0**2,
           3*beta*amp**2/4,method="frequency-shift")
@@ -91,13 +95,15 @@ def run():
     # M245 relativistic collision invariant
     ma,mb,Mf,c,Ea=2.,3.,6.,10.,80.
     W2=(ma*ma+mb*mb)*c**4+2*mb*c*c*Ea
-    check("M245",1,"fixed target invariant relation",W2,
-          (ma*c*c)**2+(mb*c*c)**2+2*mb*c*c*Ea,method="four-momentum-invariant")
+    plab=S(Ea*Ea-ma*ma*c**4)/c
+    check("M245",1,"fixed target invariant from energy momentum norm",
+          (Ea+mb*c*c)**2-(c*plab)**2,W2,method="four-momentum-invariant")
     Kthr=((Mf**2-(ma+mb)**2)*c*c)/(2*mb)
     check("M245",2,"invariant threshold total laboratory energy",
           (ma*ma+mb*mb)*c**4+2*mb*c*c*(ma*c*c+Kthr),
           Mf*Mf*c**4,method="threshold-energy")
-    check("M245",3,"symmetric collider center mass energy",2*Ea,2*Ea,method="colliding-beam")
+    check("M245",3,"collider invariant removes opposite beam momentum",
+          S((2*Ea)**2-c*c*(plab-plab)**2),2*Ea,method="colliding-beam-invariant")
     mpi,mp=1.1,7.
     gamma=(mpi**2+2*mpi*mp)/(2*mp)
     check("M245",4,"photoproduction recoil raises threshold",gamma,mpi*(1+mpi/(2*mp)),method="photon-recoil")
