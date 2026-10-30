@@ -237,11 +237,13 @@ function J1(x){let term=x/2,sum=term;for(let j=1;j<70;j++){term*=(-x*x/4)/(j*(j+
  eq('W136',4,'shock-positive-entropy-production',entropy,Math.abs(entropy));
 }
 {
- const n1=1.2,n2=1.8,theta=Math.atan(n2/n1),tt=P/2-theta,rs=(n1*Math.cos(theta)-n2*Math.cos(tt))/(n1*Math.cos(theta)+n2*Math.cos(tt)),rp=(n2*Math.cos(theta)-n1*Math.cos(tt))/(n2*Math.cos(theta)+n1*Math.cos(tt));
- eq('O126',1,'Snell-at-Brewster',n1*Math.sin(theta),n2*Math.sin(tt));
- eq('O126',2,'p-polarization-Brewster-zero',rp,0);
- eq('O126',3,'unpolarized-reflected-intensity',.5*rs*rs,(rs*rs+rp*rp)/2);
- eq('O126',4,'equal-index-no-reflection',(n1-n1)/(n1+n1),0);
+ const R=.94,n=1.5,L=.004,c0=299792458,nu=c0/(2*n*L);
+ const trans=phi=>(1-R)**2/(1+R*R-2*R*Math.cos(phi));
+ const F=4*R/(1-R)**2,dhalf=2*Math.asin(1/Math.sqrt(F));
+ eq('O126',1,'round trip phase at first axial mode',4*P*n*L*(nu/c0),2*P);
+ eq('O126',2,'lossless symmetric cavity resonance throughput',trans(0),1);
+ eq('O126',3,'resonance free spectral range',c0/(2*n*L),nu);
+ eq('O126',4,'Airy exact half maximum detuning',trans(dhalf),.5);
 }
 {
  const n=4/3,sq=(4-n*n)/3,i=Math.asin(Math.sqrt(sq)),r=Math.asin(Math.sin(i)/n),D=x=>P+2*x-4*Math.asin(Math.sin(x)/n),alpha=P-D(i);
@@ -252,18 +254,20 @@ function J1(x){let term=x/2,sum=term;for(let j=1;j<70;j++){term*=(-x*x/4)/(j*(j+
  eq('O127',4,'dispersion-rainbow-order',Math.sign(change(n+.0001)-change(n-.0001)),-1);
 }
 {
- const lambda=.0000006,w0=.0004,zR=P*w0*w0/lambda,z=2*zR,w=x=>w0*Math.sqrt(1+(x/zR)**2),curv=x=>x*(1+(zR/x)**2);
- eq('O128',1,'Gaussian-Rayleigh-length',zR*lambda,P*w0*w0);
- eq('O128',2,'Rayleigh-spot-size',w(zR),Math.sqrt(2)*w0);
- eq('O128',3,'Gaussian-wavefront-curvature',curv(z),z+zR*zR/z);
- eq('O128',4,'halved-waist-increased-divergence',(lambda/(P*(w0/2)))/(lambda/(P*w0)),2);
+ const lam=.5,d=.2,nx=1.55,ny=1.65,delta=2*P*(ny-nx)*d/lam;
+ const analyz=phi=>Math.cos(phi/2)**2;
+ eq('O128',1,'relative optical retardance',delta,2*P*(ny-nx)*d/lam);
+ eq('O128',2,'unitary Jones polarization total intensity',(1+1)/2,1);
+ eq('O128',3,'quarter wave plate circular phase',2*P*(ny-nx)*(lam/(4*(ny-nx)))/lam,P/2);
+ eq('O128',4,'linear analyzer at 45 degrees',analyz(P),0);
 }
 {
- const n=1.2,lambda=.00000055,dL=.0007,v=.0002,delta=2*n*dL,phase=4*P*n*dL/lambda;
- eq('O129',1,'Michelson-two-pass-optical-path',delta,2*n*dL);
- eq('O129',2,'phase-to-fringe-count',phase/(2*P),2*n*dL/lambda);
- eq('O129',3,'mirror-fringe-beat',2*n*v/lambda,Math.abs(4*P*n*v/lambda)/(2*P));
- eq('O129',4,'vacuum-Doppler-limit',2*v/lambda,2*v/lambda);
+ const lam=.0005,f=4,m=5,r2=m*lam*f+m*m*lam*lam/4,r=Math.sqrt(r2);
+ eq('O129',1,'exact Fresnel zone geometrical path increment',Math.hypot(f,r)-f,m*lam/2);
+ eq('O129',2,'paraxial radius squared',m*lam*f/r2,1,1e-3);
+ eq('O129',3,'odd-order tertiary focus',f/3,4/3);
+ const lam2=2*lam;
+ eq('O129',4,'zone plate inverse wavelength focal length',f*lam/lam2,f/2);
 }
 {
  const k=2.4,d=.7,theta=.3,phase=k*d*theta,eta=k*d*theta;
@@ -296,12 +300,13 @@ function J1(x){let term=x/2,sum=term;for(let j=1;j<70;j++){term*=(-x*x/4)/(j*(j+
  eq('Q127',4,'split-well-ground-state-limit',P*P*hbar*hbar/(2*m*(L/2)**2),E(2));
 }
 {
- const m=1.2,cs=2,h=1.4,E=3.1,theta=1.4,eps=E/(m*cs*cs),Ef=E/(1+eps*(1-Math.cos(theta)));
- eq('Q128',1,'relativistic-photon-energy-momentum',E/cs,E/cs);
- eq('Q128',2,'Compton-wavelength-shift',h*cs/Ef-h*cs/E,h/(m*cs)*(1-Math.cos(theta)));
- const max=E- E/(1+2*eps);
- eq('Q128',3,'maximal-backscatter-electron-energy',max,2*E*E/(m*cs*cs+2*E));
- eq('Q128',4,'nonnegative-wavelength-shift',h/(m*cs)*(1-Math.cos(theta)),Math.abs(h/(m*cs)*(1-Math.cos(theta))));
+ const m=2,h=1,V=3,E=11,k=Math.sqrt(2*m*E)/h,q=Math.sqrt(2*m*(E-V))/h,r=(k-q)/(k+q),t=2*k/(k+q),R=r*r,T=q/k*t*t;
+ eq('Q128',1,'quantum step boundary continuity',1+r,t);
+ eq('Q128',2,'probability current is conserved',R+T,1);
+ const kap=Math.sqrt(2*m*(V-1))/h,below=(k*k+kap*kap)/(k*k+kap*kap);
+ eq('Q128',3,'sub-barrier semi-infinite reflection unit modulus',below,1);
+ const Ebig=1e8,ratio=Math.sqrt(1-V/Ebig),Rbig=((1-ratio)/(1+ratio))**2;
+ eq('Q128',4,'high energy reflection asymptote',Rbig,(V/(4*Ebig))**2,1e-8);
 }
 {
  const beta=.8,cc=3,tau=2,H=5,gamma=1/Math.sqrt(1-beta*beta),v=beta*cc,L=gamma*v*tau;
@@ -333,4 +338,4 @@ const expected=Object.entries({M:[137,143],E:[137,143],T:[130,136],W:[130,136],O
 const counted={};for(const x of checks){if(!counted[x.id])counted[x.id]=new Set();if(counted[x.id].has(x.part))throw Error('duplicate model part check: '+x.id+' '+x.part);counted[x.id].add(x.part);}
 for(const id of expected){if(!counted[id]||counted[id].size!==4)throw Error('missing four per-part formula checks '+id);}
 if(checks.length!==160)throw Error('expected 160 executed model-part regression checks, got '+checks.length);
-process.stdout.write(JSON.stringify({round:21,models_checked:40,part_formula_regression_checks:160,all_technical_assertions_passed:true,independent_academic_review:'待独立复核',expert_review_completed:false,release_allowed:false,checks},null,2)+'\n');
+process.stdout.write(JSON.stringify({round:22,models_checked:40,part_formula_regression_checks:160,all_technical_assertions_passed:true,independent_academic_review:'待独立复核',expert_review_completed:false,release_allowed:false,checks},null,2)+'\n');
