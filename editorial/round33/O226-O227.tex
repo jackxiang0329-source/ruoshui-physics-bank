@@ -1,0 +1,25 @@
+% 第33批光学高难综合候选：激光谐振腔与环孔衍射
+\subsection*{O226\quad 平面—凹面激光谐振腔的ABCD稳定性与高斯模}
+一条轴向长度$L$的空腔，一端为平面理想反射镜，另一端为曲率半径$R>0$的凹面反射镜，腔内折射率1，波长$\lambda$，近轴标量、高反射率且无介质损耗。
+(1) 建立往返光线矩阵并从特征值求稳定条件。
+(2) 求基模腰位置、瑞利长度和束腰半径。
+(3) 从横向Gouy相位推导模频率及纵模简并结构。
+(4) 检验共焦边界、近乎平面和同心式退化边界的光学意义。
+\par\textbf{逐问解析}
+(1) 自由传播$\mathsf P(L)=\begin{pmatrix}1&L\\0&1\end{pmatrix}$，凹面镜的近轴反射等效$\mathsf M(R)=\begin{pmatrix}1&0\\-2/R&1\end{pmatrix}$。从平面镜起算往返矩阵$\mathsf A=\mathsf P(L)\mathsf M(R)\mathsf P(L)$，其迹$\operatorname{tr}\mathsf A=2(1-2L/R)$、行列式为1。两个光线本征值在单位圆的严格条件为$|\operatorname{tr}\mathsf A|<2$，即$0<L<R$；在$L=0,R$为边界中性而非严格稳定。
+(2) 平面镜处高斯模波前曲率无穷，故它恰位于束腰，取$q(0)=iz_R$。传播到凹镜后波前几何曲率$R_{\rm wave}(L)=L[1+(z_R/L)^2]$必须与镜面曲率$R$相等，故$z_R^2=L(R-L)>0$。由$z_R=\pi w_0^2/\lambda$得到$w_0^2=(\lambda/\pi)\sqrt{L(R-L)}$；在凹镜处束宽$w(L)=w_0\sqrt{1+(L/z_R)^2}$，与谐振腔口径匹配。
+(3) Gouy相位由束腰到凹镜累积$\psi=\arctan(L/z_R)=\arccos\sqrt{1-L/R}$。一次往返的纵向相位为$2kL$，横向阶数$N=m+n$的Gouy相位为$2(N+1)\psi$；回程共振条件$2kL-2(N+1)\psi=2\pi q$，故$\nu_{qmn}=(c/2L)[q+(m+n+1)\psi/\pi]$。横向同阶$m+n$的不同模式理想简并，实际镜像散、像差使简并裂开。
+(4) 若$L=R/2$，则$z_R=R/2$且$\psi=\pi/4$，部分横模与不同纵模可能近简并；当$L\to0$时$z_R\sim\sqrt{LR}$，严格近轴高斯模的物理孔径和衍射损耗必须另核查；当$L\to R^-$，$z_R\to0$，凹镜面光束发散，进入平面—凹镜构型的稳定性边缘。此处不是两凹镜“同心腔”的几何条件，不能混同。
+\par\medskip
+\subsection*{O227\quad 环形孔径的Fraunhofer衍射、中心遮挡与极限零点}
+振幅均匀照明的环形理想孔径，外半径$a$，内半径$b=\epsilon a$，$0\le\epsilon<1$，真空波长$\lambda$，远场观察角$\theta$；设$u=ka\sin\theta$、$k=2\pi/\lambda$。
+(1) 从圆对称傅里叶—Bessel变换推导环孔复振幅。
+(2) 以轴上场作归一化，求强度及总开孔面积变化。
+(3) 求第一暗纹所满足的超越方程，并说明无中心遮挡极限。
+(4) 推导窄环极限的归一化场及其第一暗环与普通圆孔的差异。
+\par\textbf{逐问解析}
+(1) Fraunhofer振幅正比$\int_b^a r\,dr\int_0^{2\pi}e^{-ikr\sin\theta\cos\phi}\,d\phi=2\pi\int_b^a rJ_0(ur/a)\,dr$。用恒等式$\frac{d}{dr}[rJ_1(qr)]=qrJ_0(qr)$积分，得到$F(u)\propto (2\pi a^2/u)[J_1(u)-\epsilon J_1(\epsilon u)]$，这是两个同轴圆孔的振幅相减，而不是强度相减。
+(2) 轴向极限$J_1(x)=x/2+O(x^3)$使$F(0)\propto\pi a^2(1-\epsilon^2)$，正好等于透光环面积。在单位轴上强度归一化下，$A(u)=2[J_1(u)-\epsilon J_1(\epsilon u)]/[u(1-\epsilon^2)]$，相对强度$I(u)/I(0)=|A(u)|^2$。对固定照明幅度、同一传播距离，轴上绝对强度随$(1-\epsilon^2)^2$下降。
+(3) 非轴向第一零点由$J_1(u)=\epsilon J_1(\epsilon u)$给出，并应取最小正根（不能把$u=0$误作暗环）。若$\epsilon=0$，方程变为$J_1(u)=0$，第一根为$u_1\simeq3.831706$；因此圆孔第一暗环角满足$\sin\theta_1\simeq3.831706/(ka)=1.22\lambda/(2a)$，与标准Airy衍射一致。
+(4) 当$\epsilon\to1^-$，对$g(\epsilon)=\epsilon J_1(\epsilon u)$作Taylor展开，$J_1(u)-g(\epsilon)\sim(1-\epsilon)[J_1(u)+uJ_1'(u)]=(1-\epsilon)uJ_0(u)$。分母$u(1-\epsilon^2)\sim2u(1-\epsilon)$，于是$A(u)\to J_0(u)$。第一暗纹趋$J_0$第一正根$u_1\simeq2.404826$，比普通圆孔更靠近中心，但副瓣能量分布会增强；仅凭第一零点变小不能断言总体成像对比度更优。
+\par\medskip
