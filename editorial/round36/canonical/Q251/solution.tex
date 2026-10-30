@@ -1,0 +1,4 @@
+\par\noindent\textbf{(1)} 单位演化 \(U(\tau)=e^{-iH\tau/\hbar}=I-iH\tau/\hbar-H^2\tau^2/(2\hbar^2)+O(\tau^3)\)。存活振幅 \(A(\tau)=\langle\psi_0|U(\tau)|\psi_0\rangle\)，取模平方得 \(P(\tau)=1-(\Delta H)^2\tau^2/\hbar^2+O(\tau^3)\)，其中 \((\Delta H)^2=\langle H^2\rangle-\langle H\rangle^2\)。
+\par\noindent\textbf{(2)} 每次测量成功后态被重置为 \(|\psi_0\rangle\)，所以 \(N\) 次连续成功概率是 \(P_N(t)=[P(t/N)]^N\approx[1-t^2/(N^2\tau_Z^2)]^N\)，定义 \(\tau_Z=\hbar/\Delta H\)。这里关键是单次短时概率的二次而不是经典指数衰减。
+\par\noindent\textbf{(3)} 取对数 \(\ln P_N=N\ln[1-t^2/(N^2\tau_Z^2)]\sim-t^2/(N\tau_Z^2)\to0\)，故 \(\lim_{N\to\infty}P_N(t)=1\)。在理想零时长且非扰动投影极限下系统被冻结于初态，这并非在任意实际测量速度都成立。
+\par\noindent\textbf{(4)} 真实测量存在有限耗时、仪器频带及反作用；若体系能量方差 \((\Delta H)^2\) 不有限，或存活率在实验时间窗内已呈Markov指数形式 \(P(t)\approx e^{-\Gamma t}\)，二次短时前提可能失效。某些测量间隔还可增强衰减（反Zeno效应），需分析浴谱密度与测量频率。
