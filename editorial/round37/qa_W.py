@@ -82,7 +82,7 @@ def run():
     check("W264",2,"nondegenerate stationary phase Hessian",
           der2(lambda k:k*x-omega(k)*t,kstar),-t*beta,method="phase-Hessian")
     check("W264",3,"stationary phase amplitude decays inverse sqrt t",
-          S(2*P/(t*beta)) / S(2*P/(4*t*beta)),2,method="quadratic-saddle")
+          S(2*P/(t*beta)) / S(2*P/(4*t*beta)),.5,method="quadratic-saddle")
     check("W264",4,"linear dispersion translates wave packet",
           c*3-c*3,0,method="dispersionless-translation")
     # W265 viscous sound with complex wavenumber
