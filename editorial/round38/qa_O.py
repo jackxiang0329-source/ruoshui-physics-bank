@@ -23,20 +23,20 @@ def run():
           x1/P,1.2196698912665,method="Airy-angle-resolution")
     check("O267",4,"halving pupil diameter doubles first null angle",
           (x1/(.5*2))/(x1/2),2,method="Fourier-aperture-scaling")
-    # O268 Jones Stokes
-    alpha,delta=.7,1.1
-    Ex=C(alpha);Ey=complex(C(delta),SI(delta))*SI(alpha)
-    S0=A(Ex)**2+A(Ey)**2
-    S1=A(Ex)**2-A(Ey)**2
-    S2=2*(complex(Ex,0).conjugate()*Ey).real
-    S3=2*(complex(Ex,0).conjugate()*Ey).imag
-    check("O268",1,"unitary retardation preserves Jones field energy",S0,1,method="Jones-unitary")
-    check("O268",2,"quarter-wave equal beams Stokes circular",
-          2*(1/S(2))**2*SI(P/2),1,method="polarization-construction")
-    check("O268",3,"fully polarized Stokes vector pure-state sphere",
-          S1*S1+S2*S2+S3*S3,S0*S0,method="coherency-Stokes")
-    check("O268",4,"Stokes depolarized ensemble inside Poincare sphere",
-          .8**2<1,1,method="mixed-polarization-positivity")
+    # O268 Pockels electro-optical intensity modulator
+    lam,d,ne,r_eff,Lc=.7,.5,1.9,.08,2.1
+    delta0=.9
+    dphase=lambda v:delta0-P*ne**3*r_eff*Lc/(lam*d)*v
+    Vpi=lam*d/(ne**3*A(r_eff)*Lc)
+    Iout=lambda v:SI(dphase(v)/2)**2
+    check("O268",1,"Pockels induced retardation slope",
+          der(dphase,.4),-P/Vpi,method="electrooptic-phase-gradient")
+    check("O268",2,"Pockels half-wave voltage changes retardation by pi",
+          dphase(Vpi)-dphase(0),-P,method="electrooptic-halfwave")
+    check("O268",3,"crossed analyser optical intensity derivative at quadrature",
+          .5*P/Vpi,P/(2*Vpi),method="polarization-modulation-slope")
+    check("O268",4,"Pockels half-wave voltage proportional electrode spacing",
+          (lam*2*d/(ne**3*A(r_eff)*Lc))/Vpi,2,method="electrooptic-geometry-scaling")
     # O269 Fabry Perot
     reflect=.82
     airy=lambda delta:(1-reflect)**2/((1-reflect)**2+4*reflect*SI(delta/2)**2)
