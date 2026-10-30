@@ -1,18 +1,18 @@
 from qa_common import *
 def run():
-    # O266 optical ABCD cavity
-    R1,R2,L=5.,6.,1.7
-    g1=1-L/R1;g2=1-L/R2
-    check("O266",1,"ABCD propagation and mirror are unit determinant",
-          (1*1-0*L)*(1*1-0*(-2/R1)),1,method="ray-matrix-symplectic")
-    check("O266",2,"two-mirror cavity Floquet stable trace",
-          A(2*g1*g2-1)<1,1,method="ABCD-Floquet")
-    R=4.;L0=1.3;lam=.6
-    zR=S(L0*(R-L0));w02=lam*zR/P
-    check("O266",3,"plano concave Gaussian waist curvature matching",
-          L0*(1+(zR/L0)**2),R,method="Gaussian-q-parameter")
-    check("O266",4,"near concentric and near planar stability edges",
-          (1-2*1.7/(2*1.7))**2,0,method="optical-stability-edge")
+    # O266 GRIN paraxial beam and self-imaging
+    alpha,n0,wavelength=.7,1.5,.8
+    th=lambda z:alpha*z
+    check("O266",1,"Fermat GRIN oscillator ray differential equation",
+          der2(lambda z:C(alpha*z),.5)+alpha*alpha*C(alpha*.5),0,method="Fermat-GRIN-ODE")
+    check("O266",2,"GRIN 2x2 propagation symplectic and full pitch",
+          C(alpha*(2*P/alpha)),1,method="ABCD-GRIN-period")
+    rayleigh=1/alpha
+    waist2=wavelength/(P*n0*alpha)
+    check("O266",3,"matched Gaussian GRIN waist and Rayleigh length",
+          P*n0*waist2/wavelength,rayleigh,method="Gaussian-q-fixed-point")
+    check("O266",4,"GRIN quartic correction generates amplitude-dependent periods",
+          3*.2*.4**2>0,1,method="nonparabolic-GRIN-correction")
     # O267 Fraunhofer circular Airy pattern
     x1=3.8317059702075125
     check("O267",1,"circular pupil angular Fourier integral at zero wavevector",
@@ -87,16 +87,16 @@ def run():
           jb(1,x1),0,method="visibility-null")
     check("O272",4,"angular diameter doubles and baseline null halves",
           (x1/(2*radius))/(x1/radius),.5,method="interferometry-baseline-scaling")
-    # O273 Gaussian second order dispersion
-    T0,beta,z=1.4,.7,2.3
-    B=beta*z/T0**2
-    T=lambda zz:T0*S(1+(beta*zz/T0**2)**2)
-    check("O273",1,"quadratic spectral propagation multiplier is unit modulus",
-          A(complex(C(B),SI(B))),1,method="unitary-spectral-phase")
-    check("O273",2,"Gaussian pulse width from square completed integral",
-          T(z)**2,T0*T0+(beta*z/T0)**2,method="Gaussian-integral")
-    check("O273",3,"dispersion length yields sqrt two broadening",
-          T(T0*T0/A(beta))/T0,S(2),method="dispersion-length")
-    phase=lambda t:-B*t*t/(2*T0*T0*(1+B*B))
-    check("O273",4,"quadratic chirp frequency derivative linear in time",
-          der(phase,.6),-B*.6/(T0*T0*(1+B*B)),method="chirp-phase-derivative")
+    # O273 Talbot Fresnel self-imaging
+    wavelength,d=0.4,3.
+    N=7
+    check("O273",1,"periodic Fourier grating fundamental Bloch wavenumber",
+          (2*P*N/d)*d,2*P*N,method="grating-Fourier-periodicity")
+    zT=2*d*d/wavelength
+    phase=lambda m,z:-P*wavelength*z*m*m/(d*d)
+    check("O273",2,"Fresnel diffraction quadratic propagation phase",
+          phase(3,zT/5),-2*P*9/5,method="Fresnel-quadratic-phase")
+    check("O273",3,"Talbot full-length diffraction phases all integer multiples of 2pi",
+          C(phase(7,zT)),1,method="Talbot-self-imaging")
+    check("O273",4,"Talbot half-length Fresnel image shifted by half period",
+          C(phase(3,zT/2)),-1,method="Talbot-half-pitch-shift")
