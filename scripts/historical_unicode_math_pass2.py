@@ -64,7 +64,10 @@ def translate_token(token):
             out.append("_{"+"".join(SUB[x] for x in token[i:j])+"}")
             i=j;continue
         if c in CONVERSIONS:
-            out.append(CONVERSIONS[c]);i+=1;continue
+            replacement=CONVERSIONS[c]
+            if replacement.startswith("\\") and replacement[-1].isalpha():
+                replacement+=" "
+            out.append(replacement);i+=1;continue
         if c in "\\{}$%&#":
             return None,"unsafe_tex_metacharacters"
         if c not in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+-*/=<>|.,:()'[]_^":
