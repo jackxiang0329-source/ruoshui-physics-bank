@@ -1,0 +1,4 @@
+(1) 第一个密度矩阵 $\rho_0=\begin{pmatrix}1&0\\0&0\end{pmatrix}$；第二个为 $\rho_1=\begin{pmatrix}\cos^2\theta&\sin\theta\cos\theta\\\sin\theta\cos\theta&\sin^2\theta\end{pmatrix}$。两者之差 $\Delta=\begin{pmatrix}\sin^2\theta&-\sin\theta\cos\theta\\-\sin\theta\cos\theta&-\sin^2\theta\end{pmatrix}$，迹为零且行列式为 $-\sin^2\theta$。
+(2) 由特征多项式 $\lambda^2-\sin^2\theta=0$ 得 $\lambda_\pm=\pm\sin\theta$，故迹范数 $\|\Delta\|_1=|\lambda_+|+|\lambda_-|=2\sin\theta$。等先验 Helstrom 最优成功概率 $P_{\rm succ}=\frac12+\frac14\|\rho_0-\rho_1\|_1=(1+\sin\theta)/2$，错误概率 $P_{\rm err}=(1-\sin\theta)/2$。
+(3) 最优二元 POVM 是差算符 $\Delta$ 正、负本征子空间的投影：测得正本征值方向判 $\psi_0$，测得负本征值方向判 $\psi_1$，不需要第三结果。$\theta\to0^+$ 时两态不可区分，$P_{\rm succ}\to1/2$；$\theta\to\pi/2^-$ 时两态正交，$P_{\rm succ}\to1$，误差趋零。
+(4) 若完全禁止错误而允许无结论结果，等先验两纯态的最小不确定概率为 $P_?=|\langle\psi_0|\psi_1\rangle|=\cos\theta$，对应无歧义判别成功率 $1-\cos\theta$。这与Helstrom任务不同：后者必须每次二择一、以尽量少的错误为目标；前者牺牲部分确定性换取零错误，不能直接把 $P_?$ 当作第(2)问的错误概率。
