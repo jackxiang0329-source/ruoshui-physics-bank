@@ -1,0 +1,24 @@
+\subsection*{T222\quad 自旋半顺磁体的绝热退磁曲线、熵和Schottky热容}
+$N$个互不相互作用的磁矩大小$\mu>0$，能量为$-\mu Bs$，$s=\pm1$，外加磁场$B>0$、温度$T>0$；忽略晶格热容和磁相互作用。
+(1) 求配分函数、内能与平均磁化。
+(2) 计算绝对熵和定场热容。
+(3) 证明可逆绝热退磁满足$T/B$不变。
+(4) 讨论$B\to0$形式极限与第三定律、实际退磁制冷的限制。
+\par\textbf{逐问解析}
+(1) 置$x=\mu B/(k_BT)$，单自旋配分函数$z=e^x+e^{-x}=2\cosh x$，$Z=z^N$。内能$U=-\partial_\beta\ln Z=-N\mu B\tanh x$，总磁化$M=-\partial U_{\rm free}/\partial B=N\mu\tanh x$（其中自由能$F=-k_BT\ln Z$）。在$x\gg1$时磁矩近乎全沿外场，在$x\ll1$时$M\simeq N\mu^2B/(k_BT)$恢复Curie响应。
+(2) 熵$S=-\partial F/\partial T=Nk_B[\ln(2\cosh x)-x\tanh x]$，定场热容$C_B=(\partial U/\partial T)_B=Nk_Bx^2\operatorname{sech}^2x$。可用$C_B=Nk_B(\beta\mu B)^2[1-\tanh^2x]$独立核对，表明热容源于磁矩上下能级间的能量涨落而非连续动能。
+(3) 对$x>0$，$dS/dx=-Nk_Bx\operatorname{sech}^2x<0$，故固定熵严格意味着$x$固定。由$x=\mu B/(k_BT)$得到$B/T=\mathrm{const}$，即理想顺磁盐可逆退磁时$T_f=T_iB_f/B_i$。磁化随退磁过程保持相同$x$，因此无需假设磁化恒零。
+(4) 形式上令$B_f\to0$给$T_f\to0$，但在$B=0$有限$T$下$z=2$，残余熵$Nk_B\ln2$反映忽略相互作用的简并态。现实磁偶极、交换相互作用和核自旋效应会在极低温打破独立自旋模型，晶格又有正热容，所以不能凭理想比例律宣称有限步骤可达绝对零度。
+\par\medskip
+\subsection*{T223\quad 二维理想费米气体的常态密度与非解析低温化学势}
+面积$A$中二维非相对论自由费米子质量$m$、内禀简并度$g$，温度$T>0$，粒子总数$N$固定；忽略相互作用和边缘态，能量零点为单粒子色散最低值。
+(1) 由动量空间计数得到二维常量态密度$D$并定义$E_F$。
+(2) 精确求任意$T$的化学势$\mu(T)$。
+(3) 计算内能积分及低温热容主项。
+(4) 对比二维与三维费米气体的低温化学势变化并给高温经典极限。
+\par\textbf{逐问解析}
+(1) 每自旋的二维波矢态密度为$A/(2\pi)^2$，半径$k$内总态数$gAk^2/(4\pi)$。由$\varepsilon=\hbar^2k^2/(2m)$得能量态密度$D=dN(\varepsilon)/d\varepsilon=gAm/(2\pi\hbar^2)$，与能量无关。零温粒子数$N=DE_F$，所以$E_F=N/D$。
+(2) Fermi分布$f(\varepsilon)=[e^{(\varepsilon-\mu)/(k_BT)}+1]^{-1}$。粒子数$N=D\int_0^\infty f(\varepsilon)d\varepsilon=Dk_BT\ln(1+e^{\mu/(k_BT)})$。令该式等于$DE_F$后精确解得$\mu(T)=k_BT\ln(e^{E_F/(k_BT)}-1)$，不需要Sommerfeld截断即可得到任意温度结果。
+(3) 内能$U=D\int_0^\infty\varepsilon f(\varepsilon)d\varepsilon=-D(k_BT)^2\operatorname{Li}_2[-e^{\mu/(k_BT)}]$。在$T\ll T_F=E_F/k_B$下，Sommerfeld公式给$U=DE_F^2/2+(\pi^2/6)D(k_BT)^2+O(e^{-E_F/(k_BT)})$（固定$N$时指数小修正可乘温度多项式）。故$C_V=(\partial U/\partial T)_{N,A}\simeq(\pi^2/3)Dk_B^2T$，为线性低温热容。
+(4) 因$\mu=E_F+k_BT\ln(1-e^{-E_F/(k_BT)})$，二维低温化学势偏离$E_F$的量级是$-k_BT\,e^{-E_F/(k_BT)}$，而非三维自由电子的$-T^2$主项；原因正是二维态密度常数、其能量导数为零。高温$E_F/(k_BT)\ll1$时$\mu\simeq k_BT\ln(E_F/(k_BT))$，对应二维非简并Boltzmann气体。
+\par\medskip
