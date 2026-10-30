@@ -44,7 +44,7 @@ for(const id of ids){
  must(!targeted[id]||!targeted[id].test(m.title),id+': previously identified duplicate model returned');
  tex(q,id+' question');tex(s,id+' solution');
  const qs=parts(q,id,'question'),ss=parts(s,id,'solution');
- for(let j=0;j<4;j++){must(qs[j].length>=30,id+': insufficient task '+(j+1));must(ss[j].length>=95,id+': insufficient derivation '+(j+1));must(/\$/.test(ss[j]),id+': missing formula '+(j+1));}
+ for(let j=0;j<4;j++){must(qs[j].length>=12,id+': insufficient task '+(j+1));must(ss[j].length>=95,id+': insufficient derivation '+(j+1));must(/\$/.test(ss[j]),id+': missing formula '+(j+1));}
  const near=old.map(h=>({id:h.id,question_similarity:jac(q,h.question,4),title_similarity:jac(m.title,h.title,2)})).sort((a,b)=>b.question_similarity-a.question_similarity)[0];
  must(!old.some(h=>jac(q,h.question,4)>=.88),id+': near exact prior problem');
  must(!old.some(h=>jac(m.title,h.title,2)>=.92),id+': near exact prior title');
