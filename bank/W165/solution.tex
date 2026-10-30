@@ -1,0 +1,4 @@
+(1) 设三个质点自平衡位置起的位移为 $x_1,x_2,x_3$，两端墙位移为零。牛顿第二定律给 $m\ddot x_1=-K(2x_1-x_2)$、$m\ddot x_2=-K(2x_2-x_1-x_3)$、$m\ddot x_3=-K(2x_3-x_2)$，因此 $m\ddot{\mathbf x}+K A\mathbf x=0$，$A=\begin{pmatrix}2&-1&0\\-1&2&-1\\0&-1&2\end{pmatrix}$。
+(2) 对三自由度固定端链，特征模分量为 $v^{(j)}_n=\sqrt{2/4}\sin(nj\pi/4)$，$n,j=1,2,3$。相应本征值 $\lambda_j=2-2\cos(j\pi/4)$，故 $\omega_j=\sqrt{(K/m)[2-2\cos(j\pi/4)]}$，即 $\omega_1^2=(2-\sqrt2)K/m$、$\omega_2^2=2K/m$、$\omega_3^2=(2+\sqrt2)K/m$。
+(3) 实对称矩阵 $A$ 的不同本征值对应正交本征向量，故 $(v^{(j)})^\mathsf Tv^{(k)}=\delta_{jk}$。展开 $\mathbf x(t)=\sum_jq_j(t)v^{(j)}$ 后，各模满足独立 $\ddot q_j+\omega_j^2q_j=0$。若初始位移与速度都只沿第一模，则只有 $q_1$ 非零，故无拍频与模间能量交换。
+(4) 频率比 $\omega_3/\omega_1=\sqrt{(2+\sqrt2)/(2-\sqrt2)}=1+\sqrt2$，与 $K,m$ 的单独数值无关。$K\to0^+$ 时三个角频率全部按 $\sqrt K$ 趋零，物理上弱弹簧对相对位移的回复力逐渐消失。

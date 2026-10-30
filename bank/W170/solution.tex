@@ -1,0 +1,4 @@
+(1) 对谐波平面波的波数在 $k_0$ 周围展开，$\omega(k_0+q)=\omega_0+v_gq+\beta q^2/2$。其中 $v_g=\omega'(k_0)$ 决定包络中心的运输，$\beta=\omega''(k_0)$ 决定不同谱分量群速度差异；非零二次项产生色散。
+(2) 采用Fourier逆变换约定 $A(x,0)=\int\tilde A(q)e^{iqx}\,dq/(2\pi)$。初始高斯包络的变换为 $\tilde A(q)=2\sqrt\pi\,\sigma_0A_0e^{-\sigma_0^2q^2}$，可由完成平方的标准高斯积分直接核对。
+(3) 传播时各波数分量乘以 $e^{-iv_gqt-i\beta q^2t/2}$，于是 $A(x,t)=A_0\sigma_0[\sigma_0^2+i\beta t/2]^{-1/2}\exp[-(x-v_gt)^2/(4(\sigma_0^2+i\beta t/2))]$，略去载波相位。模平方是中心位于 $v_gt$ 的高斯，强度标准差为 $\sigma_x(t)=\sigma_0\sqrt{1+[\beta t/(2\sigma_0^2)]^2}$。
+(4) 若 $\beta=0$，波包仅整体移动，$\sigma_x(t)=\sigma_0$；在 $|\beta|t\gg2\sigma_0^2$ 时，$\sigma_x(t)\simeq|\beta|t/(2\sigma_0)$，呈近线性展宽。色散中的频率二次展开只在初始谱宽 $\Delta k\sim1/\sigma_0$ 足够窄时适用。
