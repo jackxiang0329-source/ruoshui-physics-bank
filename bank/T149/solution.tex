@@ -1,0 +1,4 @@
+(1) 对热流弛豫式取空间导数，得 $\tau(q_x)_t+q_x=-\kappa T_{xx}$，再由 $q_x=-c_v T_t$ 消去热流，可得 $\tau T_{tt}+T_t=D T_{xx}$，$D=\kappa/c_v$。因最高阶含二阶时间导数，这一模型为带阻尼的双曲热波方程，而非普通扩散方程。
+(2) 代入 $e^{i(kx-\omega t)}$，得 $-\tau\omega^2-i\omega=-Dk^2$，因此 $\tau\omega^2+i\omega-Dk^2=0$。根为 $\omega_\pm=[-i\pm\sqrt{4\tau Dk^2-1}]/(2\tau)$；在 $4\tau Dk^2\gg1$ 时 $\Re\omega\simeq\pm\sqrt{D/\tau}\,|k|$，故热扰动的高波数特征速度为 $v_{\rm th}=\sqrt{D/\tau}$。
+(3) 考虑温度相对某个均匀参考值的扰动，定义 $\mathcal E=\int[c_vT^2/2+\tau q^2/(2\kappa)]dx$，积分区间满足 $Tq$ 边界项为零。将守恒律乘 $T$、弛豫律乘 $q/\kappa$ 后相加，得到 $\partial_t[c_vT^2/2+\tau q^2/(2\kappa)]+\partial_x(Tq)=-q^2/\kappa$。于是 $\dot{\mathcal E}=-\int q^2/\kappa\,dx\le0$，这是控制扰动幅度的正定数学泛函，不宜混称热力学总内能。
+(4) 当 $\tau\to0^+$，本构律成为 $q=-\kappa T_x$、热方程成为 $T_t=D T_{xx}$。小波数条件 $4\tau Dk^2\ll1$ 下，慢根约为 $\omega_{\rm slow}\simeq-iDk^2$，另一快根约为 $-i/\tau$，说明长波长期演化接近扩散。$v_{\rm th}$ 由简化宏观输运参数决定，微观真实传热及相对论传播限制需要更详细理论。

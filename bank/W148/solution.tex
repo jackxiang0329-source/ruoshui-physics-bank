@@ -1,0 +1,4 @@
+(1) 代入 $\xi=x-ct$ 得 $-cU'+6UU'+U'''=0$。积分一次并利用无穷远衰减消去积分常数，得到 $U''-cU+3U^2=0$，这是孤立波满足的保守非线性二阶方程。
+(2) 对 $\operatorname{sech}^2$ 计算恒等式 $U''=4\kappa^2U-(6\kappa^2/A)U^2$。与上式比较，要求 $4\kappa^2=c$、$6\kappa^2/A=3$，所以 $\kappa=\sqrt c/2$、$A=c/2$。因而 $U=(c/2)\operatorname{sech}^2[\sqrt c(x-ct)/2]$；越高的孤波传播越快并更窄。
+(3) 标准积分 $\int_{-\infty}^\infty\operatorname{sech}^2s\,ds=2$、$\int\operatorname{sech}^4s\,ds=4/3$，因此 $\int U\,d\xi=2A/\kappa=2\sqrt c$，$\int U^2\,d\xi=4A^2/(3\kappa)=\frac23c^{3/2}$。KdV 方程可写成 $u_t+\partial_x(3u^2+u_{xx})=0$；又乘以 $2u$ 并分部积分可证 $\partial_t(u^2)+\partial_x[4u^3+2uu_{xx}-u_x^2]=0$，两空间积分在衰减边界下都守恒。
+(4) 当 $c\to0^+$，峰值 $A\sim c$ 趋零，特征宽度 $1/\kappa\sim c^{-1/2}$ 发散，质量积分按 $c^{1/2}$、平方积分按 $c^{3/2}$ 趋零。上述精确形状依赖非线性陡化与三阶色散的平衡；若方程附加粘性耗散或外力，必须重求解或采用微扰演化，孤波不再必然形状与速度恒定。
