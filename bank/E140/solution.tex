@@ -1,0 +1,4 @@
+(1) 沿线串联欧姆关系为 $\partial_x V=-rI$，对地电容的电荷守恒为 $\partial_x I=-c\partial_tV$。消去电流，得 $\partial_tV=D\partial_x^2V$，扩散常数 $D=1/(rc)$，其单位为面积每时间。线电流不是单一RC电路的指数过程，而会因半无限线的连续参数形成平方根时间尺度。
+(2) 边界与初值为 $V(0,t)=V_0$、$V(x,0)=0$（$x>0$）、$V(\infty,t)=0$。利用热方程的相似变量解，$V(x,t)=V_0\,\operatorname{erfc}[x/(2\sqrt{Dt})]$。沿线电流 $I=-V_x/r$，所以 $I(0,t)=V_0/[r\sqrt{\pi Dt}]=V_0\sqrt{c/r}/\sqrt{\pi t}$；最初的 $t^{-1/2}$ 奇异性是无电感、理想阶跃驱动的非物理极限。
+(3) 单位长度对地存储电荷是 $\lambda(x,t)=cV(x,t)$。利用积分恒等式 $\int_0^\infty\operatorname{erfc}u\,du=1/\sqrt\pi$，得全线总充电量 $Q(t)=c\int_0^\infty V(x,t)\,dx=2cV_0\sqrt{Dt/\pi}=2V_0\sqrt{ct/(\pi r)}$。对时间求导可验证 $\dot Q=I(0,t)$，与第二问的输入端电流精确吻合。
+(4) 电源功 $W_s(t)=\int_0^tV_0I(0,s)\,ds=V_0Q(t)=2cV_0^2\sqrt{Dt/\pi}$。电容储能为 $U_C(t)=\frac c2\int_0^\infty V(x,t)^2dx=cV_0^2\sqrt{Dt}(2-\sqrt2)/\sqrt\pi$，其中使用 $\int_0^\infty\operatorname{erfc}^2u\,du=(2-\sqrt2)/\sqrt\pi$。其余 $W_s-U_C>0$ 为沿线 $\int_0^t\int_0^\infty rI^2\,dx\,ds$ 的焦耳耗散；两者并存，不可把全部电源功等同于电容储能。
