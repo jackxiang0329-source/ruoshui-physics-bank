@@ -1,0 +1,226 @@
+[
+  {
+    "id": "O250",
+    "title": "全反射的倏逝波、穿透深度及Goos–Hänchen位移",
+    "setup": "单色 \\(s\\) 偏振光自介质 \\(n_1>n_2>0\\) 以入射角 \\(\\theta>\\arcsin(n_2/n_1)\\) 射至平面界面，真空波数 \\(k_0\\)。",
+    "q": [
+      "由切向波矢连续性求下层倏逝波。",
+      "写复Fresnel反射系数与相位。",
+      "用驻相法求Goos–Hänchen横向位移。",
+      "分析临界角和掠入射两个极限。"
+    ],
+    "s": [
+      "界面平行分量 \\(k_x=n_1k_0\\sin\\theta\\) 连续，下层法向满足 \\(k_{z2}^2=n_2^2k_0^2-k_x^2\\)。全反射区 \\(k_{z2}=i\\kappa\\)，其中 \\(\\kappa=k_0\\sqrt{n_1^2\\sin^2\\theta-n_2^2}>0\\)，所以透射场沿法向以 \\(e^{-\\kappa z}\\) 衰减，强度穿透长度为 \\(1/(2\\kappa)\\)。",
+      "对于 \\(s\\) 偏振，\\(r_s=(k_{z1}-k_{z2})/(k_{z1}+k_{z2})=(n_1k_0\\cos\\theta-i\\kappa)/(n_1k_0\\cos\\theta+i\\kappa)\\)。其模为1，相位为 \\(\\varphi_s=-2\\arctan[\\kappa/(n_1k_0\\cos\\theta)]\\)，反射全能量但可能引入与角度有关的相位延迟。",
+      "窄角谱束的反射相位 \\(\\varphi_s(k_x)\\) 导致驻相位置偏移，Artmann公式 \\(D_{\\mathrm{GH}}=-d\\varphi_s/dk_x\\)。令 \\(k_1=n_1k_0\\)、\\(k_2=n_2k_0\\)，由 \\(\\varphi_s=-2\\arctan[\\sqrt{k_x^2-k_2^2}/\\sqrt{k_1^2-k_x^2}]\\)，求导得到 \\(D_{\\mathrm{GH}}=2k_x/[\\,\\sqrt{k_1^2-k_x^2}\\sqrt{k_x^2-k_2^2}\\,]\\)。",
+      "临界角附近 \\(\\kappa\\to0\\)，平面波公式形式上使位移发散，但有限束宽角谱跨越临界角，驻相近似失效并截断该发散。掠入射 \\(k_{z1}\\to0\\) 也需考虑有限波束及界面条件；该位移不是自由空间超光速能流。"
+    ],
+    "tags": [
+      "全反射",
+      "倏逝场",
+      "驻相"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "O251",
+    "title": "光栅脉冲压缩中的角度色散和脉冲前倾",
+    "setup": "平面衍射光栅周期 \\(d\\)，入射角 \\(\\alpha\\) 固定，衍射级次 \\(m\\ne0\\)，波长 \\(\\lambda\\) 对应出射角 \\(\\beta(\\lambda)\\)，光栅方程 \\(d(\\sin\\alpha+\\sin\\beta)=m\\lambda\\)。",
+    "q": [
+      "由光栅方程求角度色散。",
+      "求小谱宽波束的横向波矢色散。",
+      "建立脉冲前倾与群延迟的关系。",
+      "讨论掠射、截止级次及几何光学失效。"
+    ],
+    "s": [
+      "在 \\(\\alpha\\) 固定时对 \\(\\lambda\\) 求导，得 \\(d\\cos\\beta\\,d\\beta/d\\lambda=m\\)，所以 \\(d\\beta/d\\lambda=m/[d\\cos\\beta]\\)。级次 \\(m\\) 的符号决定色散方向，\\(\\cos\\beta\\to0\\) 时角度色散剧增。",
+      "出射波在固定基准坐标中的横向波矢 \\(k_x(\\omega)=(\\omega/c)\\sin\\beta(\\omega)\\)。因此 \\(dk_x/d\\omega=c^{-1}[\\sin\\beta+\\omega\\cos\\beta\\,d\\beta/d\\omega]\\)。由 \\(\\lambda=2\\pi c/\\omega\\) 得 \\(d\\beta/d\\omega=-m\\lambda/(d\\omega\\cos\\beta)\\)，从而 \\(dk_x/d\\omega=c^{-1}(\\sin\\beta-m\\lambda/d)=-\\sin\\alpha/c\\)。",
+      "对复光场 \\(E\\propto\\int A(\\omega)e^{i[k_x(\\omega)x+k_z(\\omega)z-\\omega t]}d\\omega\\)，群延迟等相位条件 \\(t=x\\,dk_x/d\\omega+z\\,dk_z/d\\omega\\)。故同一脉冲面的时间与横向位置耦合，局部脉冲前倾由群延迟梯度 \\(\\partial t/\\partial x=dk_x/d\\omega\\)（在固定 \\(z\\)）定义，其数值依所选坐标和光栅安装几何。",
+      "靠近出射掠射 \\(|\\cos\\beta|\\ll1\\)，小带宽可能引起大角散、光束截断与偏振效率变化；若级次不满足 \\(|m\\lambda/d-\\sin\\alpha|\\le1\\)，它不再是远场传播级次，不能对不存在的出射角继续求导。"
+    ],
+    "tags": [
+      "光栅色散",
+      "脉冲前倾",
+      "群延迟"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "O252",
+    "title": "非线性晶体倍频的相位匹配与相干长度",
+    "setup": "均匀无吸收二阶非线性晶体，泵浦频率 \\(\\omega\\) 的慢变电场幅 \\(A_1\\) 可视为常数，倍频幅 \\(A_2(z)\\) 满足 \\(dA_2/dz=i\\kappa A_1^2 e^{i\\Delta k z}\\)，\\(\\Delta k=k(2\\omega)-2k(\\omega)\\)。",
+    "q": [
+      "积分得到倍频场幅和相位匹配函数。",
+      "求输出倍频功率对晶长的依赖。",
+      "定义相干长度并解释反相抵消。",
+      "讨论准相位匹配及强转换时泵浦耗尽。"
+    ],
+    "s": [
+      "设 \\(A_2(0)=0\\)。沿长度 \\(L\\) 积分得 \\(A_2(L)=i\\kappa A_1^2\\int_0^L e^{i\\Delta kz}dz=i\\kappa A_1^2 L e^{i\\Delta kL/2}\\operatorname{sinc}(\\Delta kL/2)\\)，其中 \\(\\operatorname{sinc}x=\\sin x/x\\)。",
+      "倍频功率与 \\(|A_2|^2\\) 成正比，故 \\(P_{2\\omega}\\propto|\\kappa|^2|A_1|^4L^2\\operatorname{sinc}^2(\\Delta kL/2)\\)。完美相位匹配 \\(\\Delta k=0\\) 时随 \\(L^2\\) 增长，而失配时出现振荡零点，反映不同晶体位置生成波的相干叠加。",
+      "源项相位相差 \\(\\pi\\) 的长度为相干长度 \\(L_c=\\pi/|\\Delta k|\\)。当晶长超过这一尺度，后段生成的倍频场可能抵消前段；\\(\\Delta kL=2\\pi n\\)（非零整数）时未耗尽近似下倍频幅恰为零。",
+      "在准相位匹配中按空间周期 \\(\\Lambda\\) 翻转非线性系数，利用倒格矢 \\(G=2\\pi/\\Lambda\\) 补偿失配，使 \\(\\Delta k-G\\approx0\\)，但有效非线性系数由傅里叶谐波降低。强转换时 \\(A_1(z)\\) 不再常数，应联立Manley–Rowe能量方程，不能保持无限二次增长。"
+    ],
+    "tags": [
+      "非线性光学",
+      "倍频",
+      "相位匹配"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "O253",
+    "title": "部分相干双源的相干矩阵、干涉可见度和正定界",
+    "setup": "两个同频光学随机源场 \\(E_1,E_2\\)，强度 \\(I_1,I_2>0\\)，互相关 \\(\\Gamma_{12}=\\langle E_1^*E_2\\rangle\\)，在探测点引入可调相位 \\(\\phi\\)。",
+    "q": [
+      "由二阶统计求合光平均强度。",
+      "建立归一复相干度并证明模不超过1。",
+      "求相位扫描的最大最小强度及可见度。",
+      "讨论完全相干、独立源和强度不平衡极限。"
+    ],
+    "s": [
+      "合光场 \\(E=E_1+e^{i\\phi}E_2\\)，故平均强度 \\(I(\\phi)=I_1+I_2+2\\operatorname{Re}[e^{i\\phi}\\Gamma_{12}]\\)。该式由复振幅二阶矩展开得到，若源场相关就不能将平均强度简单相加。",
+      "定义 \\(\\gamma_{12}=\\Gamma_{12}/\\sqrt{I_1I_2}\\)。相干矩阵 \\(J=\\begin{pmatrix}I_1&\\Gamma_{12}\\\\\\Gamma_{12}^*&I_2\\end{pmatrix}\\) 是协方差矩阵，必须半正定；由行列式非负得 \\(I_1I_2-|\\Gamma_{12}|^2\\ge0\\)，因此 \\(|\\gamma_{12}|\\le1\\)。",
+      "选择 \\(\\phi\\) 与相关相位同向或反向，得到 \\(I_{\\max,\\min}=I_1+I_2\\pm2|\\Gamma_{12}|\\)。于是条纹可见度 \\(V=(I_{\\max}-I_{\\min})/(I_{\\max}+I_{\\min})=2\\sqrt{I_1I_2}|\\gamma_{12}|/(I_1+I_2)\\)。",
+      "若两个源完全相干且等强，\\(V=1\\)，暗纹可为零；若互相关为零，\\(V=0\\)，不再干涉。即使 \\(|\\gamma_{12}|=1\\)，不等强的源也有 \\(V<1\\)，所以不能把低可见度全部归因于随机相位不相干。"
+    ],
+    "tags": [
+      "相干矩阵",
+      "统计光学",
+      "正定性"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "O254",
+    "title": "光纤阶跃折射率的全反射条件与数值孔径",
+    "setup": "理想阶跃折射率光纤芯折射率 \\(n_1>n_2\\)、包层 \\(n_2\\)，纤外均匀介质折射率 \\(n_0>0\\)，几何光学射线入射纤端面，忽略弯曲与波导模截止。",
+    "q": [
+      "用芯包界面全反射得到允许芯内射线角。",
+      "由端面Snell定律求接收锥与数值孔径。",
+      "建立弱导近似的相对折射率差。",
+      "讨论波动模式V数与几何射线近似的关系。"
+    ],
+    "s": [
+      "在芯包圆柱壁，轴向传播射线与光纤轴夹角为 \\(\\theta_1\\)，其壁面入射角为 \\(\\pi/2-\\theta_1\\)。全反射要求 \\(\\sin(\\pi/2-\\theta_1)\\ge n_2/n_1\\)，即 \\(\\cos\\theta_1\\ge n_2/n_1\\)，故 \\(\\sin\\theta_1\\le\\sqrt{n_1^2-n_2^2}/n_1\\)。",
+      "端面Snell定律 \\(n_0\\sin\\theta_0=n_1\\sin\\theta_1\\)。因此最大入射角满足 \\(n_0\\sin\\theta_{0,\\max}=\\sqrt{n_1^2-n_2^2}\\)，定义数值孔径 \\(\\mathrm{NA}=n_0\\sin\\theta_{0,\\max}=\\sqrt{n_1^2-n_2^2}\\)，若右侧超过 \\(n_0\\) 时接收锥受外介质物理角限制。",
+      "定义相对折射率差 \\(\\Delta=(n_1-n_2)/n_1\\ll1\\)。则 \\(n_1^2-n_2^2=n_1^2[1-(1-\\Delta)^2]\\approx2n_1^2\\Delta\\)，所以 \\(\\mathrm{NA}\\approx n_1\\sqrt{2\\Delta}\\)。该弱导展开对 \\(\\Delta^2\\) 项的舍弃需明确。",
+      "真正光纤模结构取决于无量纲 \\(V=(2\\pi a/\\lambda)\\mathrm{NA}\\)（\\(a\\) 为芯半径）。弱导阶跃光纤 \\(V<2.405\\) 时只有基本空间模式，而几何光学接收锥本身不保证多模或单模；靠近截止应求Maxwell本征方程。"
+    ],
+    "tags": [
+      "全反射波导",
+      "数值孔径",
+      "弱导近似"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "O255",
+    "title": "Jones向量的Pancharatnam几何相位与Poincaré球",
+    "setup": "完全偏振态由归一Jones向量 \\(|\\psi\\rangle\\) 描述。考虑三个非正交态 \\(|\\psi_1\\rangle,|\\psi_2\\rangle,|\\psi_3\\rangle\\)，相位选取任意但内积不为零。",
+    "q": [
+      "建立三态Bargmann不变量。",
+      "证明它的复相位规范不变。",
+      "将闭合几何相位与Poincaré球固角联系。",
+      "求正交态极限的相位奇点。"
+    ],
+    "s": [
+      "构造三态复乘积 \\(\\mathcal B=\\langle\\psi_1|\\psi_2\\rangle\\langle\\psi_2|\\psi_3\\rangle\\langle\\psi_3|\\psi_1\\rangle\\)。每个内积包含振幅与相位，定义闭合Pancharatnam相位为 \\(\\gamma=\\arg\\mathcal B\\)，沿短大圆弧连接三个偏振态。",
+      "各Jones向量可以独立改相位 \\(|\\psi_j\\rangle\\mapsto e^{i\\alpha_j}|\\psi_j\\rangle\\)。三内积分别多出 \\(e^{i(\\alpha_2-\\alpha_1)}\\)、\\(e^{i(\\alpha_3-\\alpha_2)}\\)、\\(e^{i(\\alpha_1-\\alpha_3)}\\)，乘积为1，故 \\(\\mathcal B\\) 的相位严格不受局部规范选择影响。",
+      "纯偏振态在Poincaré球上表示为Bloch单位矢量。对相邻态按最短测地线平行输运的闭合三角形，几何相位为 \\(\\gamma=-\\Omega_s/2\\)（具体正负取决于Jones/Stokes球取向约定），\\(\\Omega_s\\) 是有向球面固角。其几何意义与自旋 \\(1/2\\) Berry相位一致。",
+      "若任意相邻态正交，则相应内积为零，\\(\\mathcal B=0\\)，其 \\(\\arg\\) 不定义；靠近这种点相位可能剧变。物理上完全正交偏振场不形成通常意义的相干干涉相位，不能给零幅复数指派任意连续相位。"
+    ],
+    "tags": [
+      "偏振几何",
+      "Pancharatnam相位",
+      "规范不变"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "O256",
+    "title": "理想透镜的ABCD矩阵与Gaussian模式稳定共振腔",
+    "setup": "一维傍轴光线状态为 \\((x,\\theta)\\)，自由传播长度 \\(L>0\\)、薄透镜焦距 \\(f\\ne0\\)；两镜腔往返光线矩阵 \\(M\\) 为实、行列式为1。",
+    "q": [
+      "写自由传播与薄透镜ABCD矩阵。",
+      "导出任意单周期矩阵的稳定性判据。",
+      "求平凹两镜腔的稳定参数范围。",
+      "说明腔共焦边界与Gaussian复束参数变换。"
+    ],
+    "s": [
+      "自由传播矩阵 \\(P(L)=\\begin{pmatrix}1&L\\\\0&1\\end{pmatrix}\\)，薄透镜 \\(F(f)=\\begin{pmatrix}1&0\\\\-1/f&1\\end{pmatrix}\\)。任意组合通过顺序矩阵乘法得到 \\(M=\\begin{pmatrix}A&B\\\\C&D\\end{pmatrix}\\)，且 \\(\\det M=AD-BC=1\\)，与理想光线光学的辛结构相符。",
+      "往返本征值满足 \\(\\lambda^2-(A+D)\\lambda+1=0\\)。有界光线振荡需特征值在单位圆上，因此 \\(|(A+D)/2|<1\\) 为严格稳定条件；等号特征值重合属于边缘情况，是否长期有界还取决于Jordan结构，不能直接判定稳定。",
+      "两镜半径 \\(R_1,R_2\\)、间距 \\(L\\)，定义 \\(g_i=1-L/R_i\\)，标准两镜往返矩阵有半迹 \\((A+D)/2=2g_1g_2-1\\)。因此腔稳定条件 \\(0<g_1g_2<1\\)；平凹腔一镜平面 \\(R_1=\\infty\\) 即 \\(g_1=1\\)，另一镜 \\(R_2=R\\) 时要求 \\(0<L<R\\)。",
+      "Gaussian束复参数满足光线矩阵的Möbius变换 \\(q'=(Aq+B)/(Cq+D)\\)。稳定腔自洽模求固定点 \\(Cq^2+(D-A)q-B=0\\)，取 \\(\\operatorname{Im}q>0\\) 的物理解；几何稳定边界通常使有限束腰解退化，不能仅凭线性光线稳定保证无限高数值孔径或无衍射损耗。"
+    ],
+    "tags": [
+      "ABCD矩阵",
+      "光学共振腔",
+      "辛稳定"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "O257",
+    "title": "Fabry–Pérot腔色散镜的群延迟与腔线宽变化",
+    "setup": "一维无损两镜谐振腔，镜反射相位随频率为 \\(\\phi_1(\\omega),\\phi_2(\\omega)\\)，腔长 \\(L\\)、折射率色散 \\(n(\\omega)\\)，满足回程相位条件。",
+    "q": [
+      "写广义谐振量子化相位条件。",
+      "求模频间隔与往返群延迟。",
+      "从往返振幅损耗估算高精细度线宽。",
+      "解释负群延迟、因果性和强色散限度。"
+    ],
+    "s": [
+      "一个往返相位为 \\(\\Phi(\\omega)=2n(\\omega)\\omega L/c+\\phi_1(\\omega)+\\phi_2(\\omega)\\)。谐振条件 \\(\\Phi(\\omega_m)=2\\pi m\\)。若色散弱，可将它近似为整数光学长度条件；强色散镜的反射相位绝不能随意置零。",
+      "对相邻纵模条件差分 \\(2\\pi\\approx\\Phi'(\\omega_m)\\Delta\\omega\\)，所以 \\(\\Delta\\omega_{\\rm FSR}\\approx2\\pi/\\tau_g\\)，其中 \\(\\tau_g=\\Phi'(\\omega)=2L[n+\\omega n']/c+\\phi_1'+\\phi_2'\\) 是总往返群延迟。由此可用色散镜调节模间距。",
+      "设每往返复场幅衰减模为 \\(0<r<1\\)，响应几何级数分母 \\(1-re^{i\\Phi}\\)。共振近旁强度分母 \\((1-r)^2+r[\\tau_g(\\omega-\\omega_m)]^2\\)，故角频率全宽 \\(\\delta\\omega_{\\rm FWHM}\\approx2(1-r)/(\\sqrt r|\\tau_g|)\\)，在 \\(r\\to1\\) 时线宽趋窄。",
+      "镜面局部相位导数可以为负，但总输出脉冲群延迟不能只靠一个频点相位斜率就推断超光速信息。强吸收、明显群延迟色散与有限带宽时线宽Lorentz近似失效，应使用完整复反射系数和因果解析结构。"
+    ],
+    "tags": [
+      "频率梳腔模",
+      "色散镜",
+      "群延迟"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  }
+]
