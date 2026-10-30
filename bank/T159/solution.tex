@@ -1,0 +1,4 @@
+(1) 对态密度 $g(\omega)=9N\omega^2/\omega_D^3$ 积分，$\int_0^{\omega_D}g(\omega)d\omega=9N\omega_D^3/(3\omega_D^3)=3N$，对应每个原子三个振动自由度。定义Debye温度 $\Theta_D=\hbar\omega_D/k_B$，将温度尺度与谱截止联系起来。
+(2) 每个频率为 $\omega$ 的声子模平均热能为 $\hbar\omega/(e^{\hbar\omega/(k_BT)}-1)$，所以 $U=\int_0^{\omega_D}g(\omega)\hbar\omega/[e^{\hbar\omega/(k_BT)}-1]d\omega$。令 $x=\hbar\omega/(k_BT)$，得到 $U=9Nk_BT(T/\Theta_D)^3\int_0^{\Theta_D/T}x^3/(e^x-1)dx$。
+(3) 在 $T\ll\Theta_D$，积分上限可延至无穷，标准积分 $\int_0^\infty x^3/(e^x-1)dx=\pi^4/15$。因此 $U\simeq(3\pi^4/5)Nk_BT^4/\Theta_D^3$，求温度导数得 $C_V\simeq(12\pi^4/5)Nk_B(T/\Theta_D)^3$，呈明确的三次幂规律。
+(4) 当 $T\gg\Theta_D$，每个简谐模平均能量趋近 $k_BT$，由总模数 $3N$ 得 $C_V\to3Nk_B$，即Dulong–Petit定律。低温采用积分上限无穷的步骤在高温不成立，不能把 $T^3$ 关系外推到高温。
