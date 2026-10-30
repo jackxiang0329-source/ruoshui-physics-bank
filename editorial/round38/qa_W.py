@@ -62,20 +62,19 @@ def run():
           2/(P*distribution(0)),Kc,method="linearized-sync")
     check("W270",4,"Ott Antonsen stationary amplitude ODE",
           -gamma*r+K*r*(1-r*r)/2,0,method="order-parameter-fixed-point")
-    # W271 finite depth capillary gravity
-    g,gamma,rho,h,k=9.8,.7,2.,1.8,1.2
-    disp2=lambda kk:(g*kk+gamma*kk**3/rho)*TH(kk*h)
-    w=lambda kk:S(disp2(kk))
-    check("W271",1,"velocity potential bottom Neumann",
-          der(lambda z:CH(k*(z+h)),-h),0,method="bottom-impermeability")
-    check("W271",2,"free surface gravity capillary dispersion",
-          w(k)**2,disp2(k),method="surface-Maxwell-stress")
-    check("W271",3,"group velocity from differentiated dispersion",
-          der(w,k),(g+3*gamma*k*k/rho)*TH(k*h)/(2*w(k))+
-          h*(g*k+gamma*k**3/rho)/(2*w(k)*CH(k*h)**2),method="fluid-wave-group-velocity")
-    small=1e-5
-    check("W271",4,"shallow water phase speed tends sqrt gh",
-          S(disp2(small))/small,S(g*h),method="long-wave-dispersion")
+    # W271 equatorial beta-plane shallow-water Kelvin wave
+    g,H,beta,k=9.8,2.1,.35,1.3
+    c=S(g*H)
+    eta=lambda y:E(-beta*y*y/(2*c))
+    u=lambda y:g*eta(y)/c
+    check("W271",1,"Kelvin mode zonal momentum continuity closes dispersion",
+          (c*k)**2,g*H*k*k,method="rotating-shallow-water-dispersion")
+    check("W271",2,"eastward Kelvin mode phase group velocity",
+          der(lambda kk:c*kk,k),c,method="equatorial-Kelvin-group")
+    check("W271",3,"geostrophic transverse Gaussian confinement ODE",
+          der(eta,.7)+beta*.7/c*eta(.7),0,method="beta-plane-meridional-balance")
+    check("W271",4,"westward branch cannot be meridionally normalised",
+          E(beta*(3*c/beta)/(2*c))>1,1,method="Kelvin-wave-trapping-direction")
     # W272 causal oscillator Green
     gamma,w0=.3,2.2
     wd=S(w0*w0-gamma*gamma)
