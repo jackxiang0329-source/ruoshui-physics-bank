@@ -159,18 +159,18 @@
 
 \par\bigskip\hrule\bigskip
 \chapter{电磁学}
-\section*{E265\quad 矩形金属波导TE10模式的截止、阻抗及群速度}
-\textbf{物理条件}\par 理想导体矩形波导横截面 \(0<x<a,0<y<b\)，填充 \((\epsilon,\mu)\) 均匀无损介质，波沿 \(z\) 传播，选最低阶 \(\mathrm{TE}_{10}\) 模式。
-\par\noindent\textbf{(1)} 由横向Helmholtz边值问题构造纵向磁场。
-\par\noindent\textbf{(2)} 从Maxwell方程求轴向传播常数与截止频率。
-\par\noindent\textbf{(3)} 求TE模式波阻抗与群相速度乘积。
-\par\noindent\textbf{(4)} 讨论趋近截止时的能量输运与色散。
+\section*{E265\quad 二维电子气无门控等离激元的根号色散与金属栅声学极限}
+\textbf{物理条件}\par 无碰撞二维电子气位于均匀介电率 \(\epsilon\) 介质内的 \(z=0\) 平面，电子面密度 \(n_s\)、质量 \(m\)、电荷 \(-e\)，纵向波形 \(e^{i(kx-\omega t)}\)，取 \(k>0\)。
+\par\noindent\textbf{(1)} 由二维Poisson边界求面电荷密度波对应的电势。
+\par\noindent\textbf{(2)} 联立连续方程与电子动量方程求二维等离激元色散。
+\par\noindent\textbf{(3)} 计算相速度、群速度并检查长波极限。
+\par\noindent\textbf{(4)} 加入平行接地栅极距离 \(d\)，推导长波声学色散。
 
 \par\medskip\noindent\textbf{逐问解析}
-\par\noindent\textbf{(1)} TE模式定义 \(E_z=0\)，其 \(H_z\) 满足 \((\nabla_t^2+k_c^2)H_z=0\)。理想导体上切向电场为零，对TE纵磁场等价于 \(\partial_nH_z=0\)。最低非恒定本征模取 \(H_z=H_0\cos(\pi x/a)e^{i(\beta z-\omega t)}\)，截止波数 \(k_c=\pi/a\)。
-\par\noindent\textbf{(2)} 总介质波数 \(k=\omega\sqrt{\mu\epsilon}\)，分离得到 \(\beta^2=k^2-k_c^2=\omega^2\mu\epsilon-\pi^2/a^2\)。传播需要 \(\beta\) 为实，故 \(\omega>\omega_c=\pi/(a\sqrt{\mu\epsilon})\)；低于截止时沿轴向倏逝。
-\par\noindent\textbf{(3)} TE横向波阻抗 \(Z_{\mathrm{TE}}=\omega\mu/\beta\)，相速度 \(v_p=\omega/\beta\)，群速度 \(v_g=d\omega/d\beta=\beta/(\omega\mu\epsilon)\)。所以 \(v_pv_g=1/(\mu\epsilon)\)，虽然 \(v_p\) 可高于介质光速，但能量传递群速低于该速度。
-\par\noindent\textbf{(4)} 当 \(\omega\to\omega_c^+\)，\(\beta\to0\)、\(Z_{\mathrm{TE}}\to\infty\)、\(v_g\to0\)，而 \(v_p\to\infty\)。无限相速度不代表超光速信号；实际边界损耗、频带有限和波导群延迟色散决定脉冲传播，近截止需完整模式匹配。
+\par\noindent\textbf{(1)} 面密度涨落 \(\delta n\) 产生面电荷 \(\delta\sigma=-e\delta n\)。对单一横向波数 \(k\)，平面两侧解Laplace方程得 \(\phi(z)=\phi_0e^{-k|z|}\)。法向电位移跃变 \(\epsilon(E_z^+-E_z^-)=\delta\sigma\)，而 \(E_z^+=k\phi_0\)、\(E_z^-=-k\phi_0\)，因此 \(\phi_0=-e\delta n/(2\epsilon k)\)。
+\par\noindent\textbf{(2)} 二维电子连续方程 \(-i\omega\delta n+ikn_sv=0\)，动量式 \(-i\omega mv=-eE_x\)，其中 \(E_x=-ik\phi_0\)。代入上一问的 \(\phi_0\) 消元，得到 \(\omega^2=n_se^2k/(2m\epsilon)\)。二维等离激元是 \(\omega\propto\sqrt k\) 的非局域静电模式，不等同于三维体等离子体具有非零的 \(k=0\) 等离子频隙。
+\par\noindent\textbf{(3)} 记 \(C=\sqrt{n_se^2/(2m\epsilon)}\)，则 \(\omega=C\sqrt k\)，相速度 \(v_p=\omega/k=C/\sqrt k\)，群速度 \(v_g=d\omega/dk=C/(2\sqrt k)=v_p/2\)。形式上 \(k\to0\) 的相群速度都发散，说明准静态无迟滞模型不能无限外推；在电磁迟滞尺度需改用二维等离激元—极化激元。
+\par\noindent\textbf{(4)} 若栅极在距离 \(d\) 处接地，像电荷改变二维Fourier库仑核为 \(\phi_0=(\delta\sigma/(2\epsilon k))(1-e^{-2kd})\)。因此 \(\omega^2=[n_se^2k/(2m\epsilon)](1-e^{-2kd})\)。当 \(kd\ll1\) 时 \(1-e^{-2kd}\simeq2kd\)，得到声学模 \(\omega\simeq ck\)，\(c=\sqrt{n_se^2d/(m\epsilon)}\)，金属栅屏蔽改变了长波指数。
 
 \par\bigskip\hrule\bigskip
 \section*{E266\quad 带电粒子垂直进入均匀电磁场的漂移与回旋}
