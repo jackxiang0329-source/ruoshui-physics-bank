@@ -60,6 +60,8 @@ jobs:
           git add -f editorial/round36/canonical editorial/round36/review-release
           if ! git diff --cached --quiet; then
             git commit -m "Round36: publish 50 review sources, 200 model checks and two XeLaTeX PDFs [draft only]"
+            git fetch origin physics-round36-latex-advanced-review-20261030
+            git rebase origin/physics-round36-latex-advanced-review-20261030
             git push origin HEAD:refs/heads/physics-round36-latex-advanced-review-20261030
           else
             echo "GitHub reviewed sources and PDF artifacts already up to date."
