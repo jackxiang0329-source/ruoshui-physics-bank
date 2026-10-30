@@ -62,8 +62,10 @@ def run():
     check("E242",2,"image force from energy derivative",-der(U,d),force,tol=1e-6,method="image-energy-gradient")
     check("E242",3,"induced spherical total charge by Gauss flux",
           imageq,-q*a/d,method="Gauss-charge")
-    check("E242",4,"large separation attractive dipolar force",
-          force*d**3,-q*q*a/(4*P*eps),tol=.4,method="far-field-limit") # should use much larger d
+    d_far=50.*a
+    force_far=-q*q*a*d_far/(4*P*eps*(d_far*d_far-a*a)**2)
+    check("E242",4,"large separation attractive induced dipole force",
+          force_far*d_far**3,-q*q*a/(4*P*eps),tol=.002,method="far-field-limit")
     # E243 one-band Drude Hall conductivity and resistivity
     density,q,tau,m,B=4.,-2.,.7,1.6,.8
     sigma0=density*q*q*tau/m
@@ -84,7 +86,7 @@ def run():
     delt=S(2/(mu*sig*w))
     gamma=complex(1,-1)/delt
     check("E244",1,"diffusive conductor complex wave number",
-          gamma*gamma,complex(0,-mu*sig*w),method="complex-Maxwell")
+          A(gamma*gamma-complex(0,-mu*sig*w)),0,method="complex-Maxwell")
     check("E244",2,"skin depth amplitude decay",
           A(math.e**(-3/delt*delt)),math.e**(-3),method="evanescence")
     rs=1/(sig*delt)
