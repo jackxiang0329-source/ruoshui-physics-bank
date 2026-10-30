@@ -1,0 +1,226 @@
+[
+  {
+    "id": "W250",
+    "title": "一维周期层状声学介质的Bloch色散与布拉格禁带",
+    "setup": "一维无耗散声波介质交替由两层组成，层厚 \\(d_1,d_2\\)、波速 \\(c_1,c_2\\)、阻抗 \\(Z_1,Z_2>0\\)，周期 \\(a=d_1+d_2\\)。压力、质点速度在界面连续。",
+    "q": [
+      "建立单层传播转移矩阵。",
+      "构造单胞矩阵并求Bloch迹色散。",
+      "判定允许带与禁带。",
+      "讨论阻抗匹配及低频有效声速。"
+    ],
+    "s": [
+      "令状态 \\(\\boldsymbol v=(p,u)^T\\) 且采用 \\(e^{-i\\omega t}\\) 约定，单层长度 \\(d_j\\) 的传播矩阵可写 \\(M_j=\\begin{pmatrix}\\cos k_jd_j&iZ_j\\sin k_jd_j\\\\i\\sin k_jd_j/Z_j&\\cos k_jd_j\\end{pmatrix}\\)，\\(k_j=\\omega/c_j\\)。其行列式为1，反映无耗散的前、后行波输运。",
+      "单胞矩阵 \\(M=M_2M_1\\)。Bloch本征值为 \\(e^{\\pm iqa}\\)，所以 \\(2\\cos(qa)=\\operatorname{tr}M\\)。乘矩阵得 \\(\\cos(qa)=\\cos(k_1d_1)\\cos(k_2d_2)-\\frac12(Z_1/Z_2+Z_2/Z_1)\\sin(k_1d_1)\\sin(k_2d_2)\\)。",
+      "如果色散函数右侧绝对值不超过1，则 \\(q\\) 为实数，波能够在周期介质中传播；若绝对值大于1，则 \\(q\\) 含虚部，形成Bloch禁带。禁带源于每个单胞内阻抗不匹配导致的相干布拉格反射，而非材料本身必然吸收。",
+      "当 \\(Z_1=Z_2\\)，迹化成 \\(\\cos(qa)=\\cos[\\omega(d_1/c_1+d_2/c_2)]\\)，没有阻抗反射禁带。低频展开可定义 \\(q\\approx\\omega/c_{\\rm eff}\\)，其中 \\(c_{\\rm eff}^{-2}=[(d_1/c_1+d_2/c_2)^2+(Z_1/Z_2+Z_2/Z_1-2)d_1d_2/(c_1c_2)]/a^2\\)。必须用色散展开而非简单取算术平均波速。"
+    ],
+    "tags": [
+      "周期介质",
+      "转移矩阵",
+      "Bloch禁带"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "W251",
+    "title": "聚焦非线性Schrödinger方程亮孤子的幅宽与守恒量",
+    "setup": "无量纲聚焦NLS方程 \\(i\\psi_t+\\tfrac12\\psi_{xx}+|\\psi|^2\\psi=0\\)，\\(x\\in\\mathbb R\\)，解在无穷远衰减。",
+    "q": [
+      "建立驻波假设并约化为实振幅方程。",
+      "构造精确亮孤子并得到幅宽关系。",
+      "计算粒子数和Hamilton能量。",
+      "通过Galilean变换得到移动孤子并讨论散焦情形。"
+    ],
+    "s": [
+      "设 \\(\\psi(x,t)=f(x)e^{i\\lambda t}\\)，\\(f\\) 为实正且无穷远趋零。代入得 \\(\\tfrac12f''-\\lambda f+f^3=0\\)。乘 \\(f'\\) 并用衰减边界积分得 \\((f')^2=2\\lambda f^2-f^4\\)，要求 \\(\\lambda>0\\)，峰值 \\(f_{\\max}=\\sqrt{2\\lambda}\\)。",
+      "取 \\(f(x)=\\eta\\,\\operatorname{sech}(\\eta x)\\) 并代入，可得 \\(\\lambda=\\eta^2/2\\)。因此 \\(\\psi=\\eta\\,\\operatorname{sech}(\\eta x)e^{i\\eta^2t/2}\\)，峰值 \\(\\eta\\)，宽度尺度 \\(1/\\eta\\)，说明更强的非线性束缚对应更窄孤子。",
+      "粒子数 \\(N=\\int|\\psi|^2dx=\\eta^2\\int\\operatorname{sech}^2(\\eta x)dx=2\\eta\\)。Hamilton量 \\(H=\\int[\\tfrac12|\\psi_x|^2-\\tfrac12|\\psi|^4]dx\\)，利用 \\(\\int\\operatorname{sech}^2u\\tanh^2u\\,du=2/3\\)、\\(\\int\\operatorname{sech}^4u\\,du=4/3\\)，得到 \\(H=-\\eta^3/3\\)。",
+      "Galilean变换 \\(\\psi_v(x,t)=e^{i(vx-v^2t/2)}\\psi(x-vt,t)\\) 仍解同一NLS，故亮孤子可匀速传播。若改成散焦号 \\(i\\psi_t+\\psi_{xx}/2-|\\psi|^2\\psi=0\\)，在零背景下无此类正局域亮孤子；应考虑非零背景暗孤子。"
+    ],
+    "tags": [
+      "非线性波",
+      "亮孤子",
+      "Hamilton守恒"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "W252",
+    "title": "阻尼谐振子的因果Green函数与驱动共振带宽",
+    "setup": "线性振子满足 \\(\\ddot x+2\\gamma\\dot x+\\omega_0^2x=f(t)/m\\)，\\(0<\\gamma<\\omega_0\\)，初态因果且 \\(f(t<0)=0\\)。",
+    "q": [
+      "求时间域迟滞Green函数。",
+      "用卷积解任意驱动力。",
+      "求复频域易感率和稳态功率吸收。",
+      "讨论弱阻尼峰宽及 (gamma\to0^+) 极限。"
+    ],
+    "s": [
+      "Green函数满足 \\(G''+2\\gamma G'+\\omega_0^2G=\\delta(t)\\) 且 \\(G(t<0)=0\\)。写 \\(\\omega_d=\\sqrt{\\omega_0^2-\\gamma^2}\\)，由齐次方程和 \\(G(0^+)=0,\\ G'(0^+)=1\\) 得 \\(G(t)=\\Theta(t)e^{-\\gamma t}\\sin(\\omega_dt)/\\omega_d\\)。",
+      "对零初态，线性叠加给 \\(x(t)=m^{-1}\\int_0^tG(t-s)f(s)\\,ds\\)。将其代回微分方程，利用Green函数的 \\(\\delta\\) 源可直接重建 \\(f(t)/m\\)，因此卷积是任意因果外驱下的确切解。",
+      "对单频 \\(f(t)=\\operatorname{Re}(F e^{-i\\omega t})\\)，稳态位移幅为 \\(X=F\\chi(\\omega)\\)，\\(\\chi=1/[m(\\omega_0^2-\\omega^2-2i\\gamma\\omega)]\\)。驱动平均吸收功 \\(\\langle P\\rangle=\\tfrac12\\omega |F|^2\\operatorname{Im}\\chi\\)，其中 \\(\\operatorname{Im}\\chi=2\\gamma\\omega/[m((\\omega_0^2-\\omega^2)^2+4\\gamma^2\\omega^2)]>0\\)。",
+      "当 \\(\\gamma\\ll\\omega_0\\)，共振在 \\(\\omega\\approx\\omega_0\\) 附近，谱半宽约 \\(\\gamma\\)、全宽约 \\(2\\gamma\\)。若 \\(\\gamma\\to0^+\\)，谱趋向零宽共振，固定恰共振外驱的稳态振幅表达发散，实际因有限观测时间使能量线性或二次积累；应保留因果初态而非无穷稳态。"
+    ],
+    "tags": [
+      "Green函数",
+      "因果响应",
+      "谱线宽"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "W253",
+    "title": "二维浅水重力波的色散、群速度及斜坡放大",
+    "setup": "水深 \\(h(x)>0\\) 的浅水通道，液体密度常量，波幅 \\(|\\eta|\\ll h\\)，水平深度平均速度 \\(u(x,t)\\)，无耗散、无背景流。",
+    "q": [
+      "线化浅水连续与动量方程。",
+      "求常水深长波色散与能量流。",
+      "在缓变水深下推导Green振幅定律。",
+      "指出海啸近岸长波近似的破坏条件。"
+    ],
+    "s": [
+      "线性化质量守恒为 \\(\\eta_t+\\partial_x(hu)=0\\)，水平动量为 \\(u_t+g\\eta_x=0\\)。当水深 \\(h\\) 常数，消去 \\(u\\) 得 \\(\\eta_{tt}=gh\\,\\eta_{xx}\\)，是传播速度 \\(\\sqrt{gh}\\) 的双向波动方程。",
+      "设 \\(\\eta\\propto e^{i(kx-\\omega t)}\\)，得到 \\(\\omega^2=ghk^2\\)，故相速度与群速度都为 \\(c=\\sqrt{gh}\\)。平均单位面积总波能密度约为 \\(E=\\rho g\\langle\\eta^2\\rangle\\)，能流为 \\(F=Ec\\)，需同时计入等量的动能和重力势能。",
+      "若 \\(h(x)\\) 在单波长内变化缓慢，波作用守恒近似为平均能流 \\(F=\\rho g\\langle\\eta^2\\rangle\\sqrt{gh}\\) 沿传播近似不变。于是振幅 \\(A\\propto h^{-1/4}\\)，称Green定律；海岸变浅时波速降低、振幅升高，并非简单按 \\(h^{-1/2}\\) 变化。",
+      "当浅水条件 \\(kh\\ll1\\) 不满足，完整水波色散应为 \\(\\omega^2=gk\\tanh(kh)\\)。近岸破碎、摩擦、反射及非线性陡化也破坏无耗散缓变假设，因此不能把 \\(h^{-1/4}\\) 放大律延伸到 \\(h\\to0\\) 的岸线。"
+    ],
+    "tags": [
+      "浅水方程",
+      "能流守恒",
+      "WKB缓变"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "W254",
+    "title": "各向同性弹性体的纵波、横波与正定稳定性",
+    "setup": "三维均匀各向同性线性弹性体密度 \\(\\rho>0\\)，Lamé参数 \\(\\lambda,\\mu\\)，体积模量 \\(K=\\lambda+2\\mu/3>0\\)，\\(\\mu>0\\)，小位移 \\(\\boldsymbol u\\)。",
+    "q": [
+      "从应力应变关系建立Navier弹性波方程。",
+      "用Helmholtz分解得到纵、横两个波速。",
+      "证明能量正定与材料稳定条件。",
+      "比较近不可压极限与自由表面反射模。"
+    ],
+    "s": [
+      "小应变 \\(\\varepsilon_{ij}=(\\partial_iu_j+\\partial_ju_i)/2\\)，应力 \\(\\sigma_{ij}=\\lambda\\delta_{ij}\\nabla\\cdot\\boldsymbol u+2\\mu\\varepsilon_{ij}\\)。动量守恒 \\(\\rho u_{i,tt}=\\partial_j\\sigma_{ij}\\) 得Navier方程 \\(\\rho\\boldsymbol u_{tt}=(\\lambda+\\mu)\\nabla(\\nabla\\cdot\\boldsymbol u)+\\mu\\nabla^2\\boldsymbol u\\)。",
+      "把位移写成无旋 \\(\\boldsymbol u_L\\) 与无散 \\(\\boldsymbol u_T\\) 部分。平面纵波 \\(\\boldsymbol u\\parallel\\boldsymbol k\\) 给 \\(\\omega^2=(\\lambda+2\\mu)k^2/\\rho\\)，所以 \\(c_L=\\sqrt{(\\lambda+2\\mu)/\\rho}\\)；横波 \\(\\boldsymbol u\\perp\\boldsymbol k\\) 给 \\(c_T=\\sqrt{\\mu/\\rho}\\)。",
+      "单位体积弹性势能 \\(W=\\lambda(\\operatorname{tr}\\varepsilon)^2/2+\\mu\\varepsilon_{ij}\\varepsilon_{ij}\\)。将应变分解为体积与无迹部分，得 \\(W=(K/2)(\\operatorname{tr}\\varepsilon)^2+\\mu\\varepsilon_{ij}^{\\rm dev}\\varepsilon_{ij}^{\\rm dev}\\)。对任意应变正定要求 \\(K>0,\\mu>0\\)，从而 \\(c_L>c_T>0\\)。",
+      "近不可压极限 \\(K\\gg\\mu\\) 时 \\(c_L\\sim\\sqrt{K/\\rho}\\) 很大而 \\(c_T\\) 仍有限；表面存在由纵横体波耦合形成的Rayleigh表面波，其速度低于 \\(c_T\\)，不可把表面波直接等同任一体波。"
+    ],
+    "tags": [
+      "弹性张量",
+      "极化模式",
+      "能量正定"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "W255",
+    "title": "非线性Schrödinger平面波的调制不稳定与增长率",
+    "setup": "一般无量纲NLS方程 \\(i\\psi_t+\\tfrac D2\\psi_{xx}+g|\\psi|^2\\psi=0\\)，其中 \\(D,g\\) 为实数，背景幅 \\(A>0\\) 均匀。",
+    "q": [
+      "写出非线性平面波背景。",
+      "对背景作振幅与相位扰动线性化。",
+      "求调制色散及最大增长率。",
+      "讨论聚焦与散焦两类稳定性。"
+    ],
+    "s": [
+      "均匀背景 \\(\\psi_0=Ae^{igA^2t}\\) 满足NLS，因为 \\(i\\partial_t\\psi_0=-gA^2\\psi_0\\)，与非线性项相消。设 \\(\\psi=e^{igA^2t}[A+u(x,t)+iv(x,t)]\\)，其中 \\(u,v\\) 为实小扰动。",
+      "保留一阶扰动得 \\(u_t=-(D/2)v_{xx}\\)、\\(v_t=(D/2)u_{xx}+2gA^2u\\)。令扰动 \\(\\propto e^{i(Kx-\\Omega t)}\\)，消去振幅得 \\(\\Omega^2=(D^2K^4/4)-DgA^2K^2\\)。这个色散由两个实变量的线性矩阵行列式得到。",
+      "若 \\(Dg>0\\)，当 \\(0<K^2<4gA^2/D\\)（按 \\(g/D>0\\)）时 \\(\\Omega^2<0\\)，振幅按 \\(e^{\\Gamma t}\\) 增长，\\(\\Gamma=|K|\\sqrt{DgA^2-D^2K^2/4}\\)。对 \\(K^2\\) 求极值得 \\(K_*^2=2gA^2/D\\)，最大增长率 \\(\\Gamma_{\\max}=|g|A^2\\)。",
+      "若 \\(Dg<0\\)，色散 \\(\\Omega^2>0\\) 对所有非零 \\(K\\) 成立，平面波线性谱稳定；但这不证明大振幅非线性摄动绝对稳定。有限带宽、耗散和更高阶色散会改变不稳定带宽与阈值。"
+    ],
+    "tags": [
+      "调制失稳",
+      "NLS线性化",
+      "增长率"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "W256",
+    "title": "波导截止附近的脉冲展宽与因果传播",
+    "setup": "一维理想无损色散波导的单模关系 \\(\\omega^2=\\omega_c^2+c^2k^2\\)，\\(\\omega>\\omega_c>0\\)，载频 \\(\\omega_0\\) 附近传播窄谱包络。",
+    "q": [
+      "求相速度和群速度。",
+      "求群速度色散 (k''(omega_0))。",
+      "由Gaussian包络传播求时宽展宽。",
+      "讨论截止附近慢群速与失真不可分的原因。"
+    ],
+    "s": [
+      "选传播分支 \\(k(\\omega)=c^{-1}\\sqrt{\\omega^2-\\omega_c^2}\\)。故 \\(v_p=\\omega/k=c/\\sqrt{1-(\\omega_c/\\omega)^2}\\)，群速 \\(v_g=(dk/d\\omega)^{-1}=c\\sqrt{1-(\\omega_c/\\omega)^2}\\)。两者乘积 \\(v_pv_g=c^2\\)；超 \\(c\\) 的相速度不等于能量传播速度。",
+      "直接求导 \\(k'(\\omega)=\\omega/[c\\sqrt{\\omega^2-\\omega_c^2}]\\)，\\(k''(\\omega)=-\\omega_c^2/[c(\\omega^2-\\omega_c^2)^{3/2}]<0\\)。群延迟距离 \\(L\\) 为 \\(t_g=Lk'(\\omega_0)\\)，二阶色散系数随着 \\(\\omega_0\\downarrow\\omega_c\\) 以强幂次发散。",
+      "输入Gaussian包络 \\(A(0,t)=A_0e^{-t^2/(2T_0^2)}\\)，截断 \\(k\\approx k_0+k'_0\\Omega+k''_0\\Omega^2/2\\) 后得到 \\(T(L)=T_0\\sqrt{1+[k''_0L/T_0^2]^2}\\)。群坐标 \\(\\tau=t-Lk'_0\\) 下复包络为 \\((1-ik''_0L/T_0^2)^{-1/2}\\exp[-\\tau^2/(2T_0^2(1-ik''_0L/T_0^2))]\\)。",
+      "靠近截止 \\(v_g\\to0\\)，但 \\(|k''|\\to\\infty\\)，同样带宽脉冲容易严重展宽，且低频边带可能落入截止以下而倏逝。慢群速不是无失真存储，必须同时控制带宽、衰减和高阶色散。"
+    ],
+    "tags": [
+      "截止色散",
+      "波包传播",
+      "因果群速"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "W257",
+    "title": "周期Floquet振子的参数共振与Mathieu第一不稳定舌",
+    "setup": "微扰振动满足 \\(x''+[\\omega_0^2+\\epsilon\\cos(\\Omega t)]x=0\\)，\\(\\omega_0>0\\)、\\(|\\epsilon|\\ll\\omega_0^2\\)，求驱动频率接近 \\(2\\omega_0\\) 的增长条件。",
+    "q": [
+      "建立缓变复振幅多尺度近似。",
+      "得到接近主参数共振的二维振幅方程。",
+      "求增长率与第一不稳定舌边界。",
+      "与普通外力共振作区别并检查小调制极限。"
+    ],
+    "s": [
+      "设 \\(\\Omega=2\\omega_0+\\delta\\)，\\(|\\delta|\\ll\\omega_0\\)，取 \\(x=a(t)e^{i\\omega_0t}+a^*(t)e^{-i\\omega_0t}\\)，其中 \\(\\dot a=O(\\epsilon a/\\omega_0)\\)。代回方程后丢弃 \\(\\ddot a\\) 与快速非共振项，得到 \\(2i\\omega_0\\dot a=-(\\epsilon/2)a^*e^{i\\delta t}\\)。",
+      "令 \\(a=b e^{i\\delta t/2}\\)，将上一式化为 \\(\\dot b=-i\\delta b/2+i\\epsilon b^*/(4\\omega_0)\\)。连同共轭式构成二元线性系统，特征矩阵迹为零，行列式给增长指数平方 \\(\\lambda^2=(\\epsilon/(4\\omega_0))^2-(\\delta/2)^2\\)。",
+      "若 \\(|\\delta|<|\\epsilon|/(2\\omega_0)\\)，\\(\\lambda\\) 有正实根，解出现指数增长；临界驱动频率为 \\(\\Omega_\\pm=2\\omega_0\\pm|\\epsilon|/(2\\omega_0)\\)。严格共振 \\(\\delta=0\\) 时最大增长率 \\(|\\epsilon|/(4\\omega_0)\\)，是Mathieu第一不稳定舌的主阶结果。",
+      "普通加性驱动方程有源项 \\(F\\cos(\\Omega t)\\)，主要在 \\(\\Omega\\approx\\omega_0\\) 响应增强；此题调制的是自身刚度，故共振中心为 \\(2\\omega_0\\)。当 \\(\\epsilon\\to0\\) 不稳定舌闭合，增长率趋零；加入阻尼会出现有限阈值。"
+    ],
+    "tags": [
+      "Floquet理论",
+      "多尺度法",
+      "参数共振"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  }
+]
