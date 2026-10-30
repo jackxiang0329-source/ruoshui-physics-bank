@@ -175,7 +175,7 @@ function int(f,a,b,n=4000){const h=(b-a)/n;let s=f(a)+f(b);for(let i=1;i<n;i++)s
  const barK=(k1+k2)/2,barW=(w1+w2)/2,dk=k2-k1,dw=w2-w1;
  C('W124',1,'two-cosine interference factorization',tot,2*cos((dk*x-dw*t)/2)*cos(barK*x-barW*t));
  C('W124',2,'envelope crest propagates with difference quotient',dk*(dw/dk)-dw,0);
- C('W124',3,'smooth dispersion derivative',d(z=>3*z*z+2,z=2),12);
+ C('W124',3,'smooth dispersion derivative',d(z=>3*z*z+2,2),12);
  C('W124',4,'linear nondispersive phase group equality',(4*k1)/k1,4);
 }
 {
