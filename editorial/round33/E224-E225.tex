@@ -1,0 +1,24 @@
+\subsection*{E224\quad 带电枢电感的Faraday圆盘发电机与机电阻尼特征值}
+均匀磁场$B\hat z$中半径$R$的导体圆盘绕轴以角速度$\omega(t)$转动，轴与轮缘构成外接回路电阻$\mathcal R>0$、电感$L>0$。转子总转动惯量$J>0$，忽略摩擦和涡流，设$k=BR^2/2$。
+(1) 推出转盘轴到轮缘的动生电动势与电流方程。
+(2) 由磁力矩和角动量守恒求闭合机电耦合方程。
+(3) 消元得到转速的二阶常系数方程及过阻尼/欠阻尼阈值。
+(4) 证明机械能与磁储能之和严格按焦耳热率下降，并给无电感极限。
+\par\textbf{逐问解析}
+(1) 圆盘半径$r$处速度$\boldsymbol v=\omega r\hat\phi$，故$\boldsymbol v\times\boldsymbol B=\omega rB\hat r$。沿半径积分动生电动势$\mathcal E=\int_0^R\omega Br\,dr=k\omega$。将外电感的反电动势一并保留，Kirchhoff方程为$L\dot I+\mathcal RI=k\omega$，而不是在快速变化时立即令$I=k\omega/\mathcal R$。
+(2) 半径$r$处径向电流元在磁场中受切向Lorentz力，圆盘所受反向磁转矩大小为$\int_0^R IBr\,dr=kI$。所以$J\dot\omega=-kI$。两个一阶方程$\dot\omega=-kI/J$与$\dot I=(k\omega-\mathcal RI)/L$相耦合，电磁转矩自动满足能量回馈的互易系数$k$。
+(3) 对机械方程求导并用电路方程消去$I=-J\dot\omega/k$，得到$\ddot\omega+(\mathcal R/L)\dot\omega+(k^2/(JL))\omega=0$。指数模$e^{st}$的特征根$s_\pm=[-\mathcal R\pm\sqrt{\mathcal R^2-4Lk^2/J}]/(2L)$。当$\mathcal R^2>4Lk^2/J$时为两个负实根；当小于时为衰减振荡；等号时出现重根和$t e^{st}$项，均对应电磁阻尼。
+(4) 定义总储能$E=\tfrac12J\omega^2+\tfrac12LI^2$，求导$J\omega\dot\omega+LI\dot I=-k\omega I+I(k\omega-\mathcal RI)=-\mathcal RI^2\le0$。在$L\to0$、电路快速松弛后$I\simeq k\omega/\mathcal R$，于是$J\dot\omega=-k^2\omega/\mathcal R$，$\omega(t)=\omega_0\exp[-k^2t/(J\mathcal R)]$。剩余机械动能最终转成焦耳热。
+\par\medskip
+\subsection*{E225\quad 双层二维电子气的对称与反对称等离激元色散}
+两平行二维电子层位于$z=\pm d/2$，层间距$d>0$，每层平衡面密度$n_s$、电子质量$m$、电荷$-e$，背景绝对介电率$\epsilon$，忽略惯性外的碰撞与量子压力，研究静电近似下平面波$\exp[i(qx-\omega t)]$，$q>0$。
+(1) 从电子连续性与动量方程求层面电荷密度对层电势的响应。
+(2) 从二维Coulomb Green函数构造两层电势耦合矩阵。
+(3) 分离同相、反相模式并求两支等离激元频率。
+(4) 求$qd\ll1$与$qd\gg1$的渐近形式，并解释反相声学支。
+\par\textbf{逐问解析}
+(1) 每层电子速度扰动$v_j$满足$-i\omega mv_j=-eE_{xj}=+ieq\phi_j$，因此$v_j=-eq\phi_j/(m\omega)$。电子连续性$-i\omega\delta n_j+iqn_sv_j=0$给$\delta n_j=qn_sv_j/\omega=-n_se q^2\phi_j/(m\omega^2)$。面电荷$\delta\sigma_j=-e\delta n_j=n_se^2q^2\phi_j/(m\omega^2)$，同电势扰动正相关，符合电子负电荷双重符号。
+(2) 二维傅里叶空间内，Poisson方程$(\partial_z^2-q^2)\phi=-\sum_j\sigma_j\delta(z-z_j)/\epsilon$的Green函数是$e^{-q|z-z_j|}/(2\epsilon q)$。在两层位置求值，$\binom{\phi_1}{\phi_2}=(2\epsilon q)^{-1}\begin{pmatrix}1&e^{-qd}\\e^{-qd}&1\end{pmatrix}\binom{\sigma_1}{\sigma_2}$。它的正交本征向量$(1,1)$与$(1,-1)$分别描述同相和反相电荷涨落。
+(3) 联立电荷响应$\sigma_j=[n_se^2q^2/(m\omega^2)]\phi_j$，令矩阵行列式为零，得到$\omega_\pm^2(q)=\omega_{2D}^2(q)[1\pm e^{-qd}]$，其中单层二维等离激元$\omega_{2D}^2(q)=n_se^2q/(2m\epsilon)$。因$1\pm e^{-qd}>0$，理想无耗散谱均为实数，且对称支频率高于反对称支。
+(4) 当$qd\ll1$，$e^{-qd}=1-qd+O(q^2d^2)$，故$\omega_+^2\simeq n_se^2q/(m\epsilon)$仍为$\sqrt q$色散，而$\omega_-^2\simeq n_se^2dq^2/(2m\epsilon)$，所以反相模式变成声学型$\omega_-\simeq q\sqrt{n_se^2d/(2m\epsilon)}$。当$qd\gg1$，层间库仑耦合指数消失，两支均趋单层$\omega_{2D}(q)$。有限层厚与电子压强可在更短波长修改结果。
+\par\medskip
