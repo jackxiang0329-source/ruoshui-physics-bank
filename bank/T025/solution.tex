@@ -1,18 +1,18 @@
-(1) 在 N≫1 且 x=n/N 远离精确端点时，
+(1) 在 \(N\gg 1\) 且 x=n/N 远离精确端点时，
 \[
 \Omega(N,n)=\frac{N!}{n!(N-n)!},\quad
 S\simeq-Nk_B[x\ln x+(1-x)\ln(1-x)].
 \]
 熵对 x 关于 1/2 对称，并在 x=1/2 取最大值 \(S_{\max}\simeq Nk_B\ln2\)。
 
-(2) 由 U=Nεx，
+(2) 由 \(U=N\varepsilon x\)，
 \[
 \frac1T=\left(\frac{\partial S}{\partial U}\right)_N
 =\frac{k_B}{\epsilon}\ln\frac{1-x}{x}.
 \]
 因此 \(x=1/[1+\exp(\epsilon/(k_BT))]\)。当 0<x<1/2，温度为正；当 1/2<x<1，熵随内能增加而减少，故 T<0。这只有能谱上界有限、能实现布居反转且各内部自由度近似热平衡时才可能存在。
 
-(3) 单粒子正则配分函数为 \(z=1+e^{-\beta\epsilon}\)，平均激发比例 \(x=1/(1+e^{\beta\epsilon})\)，与微正则关系一致，包括 β<0 的形式延拓。平均内能 \(U=N\epsilon x\)，故
+(3) 单粒子正则配分函数为 \(z=1+e^{-\beta\epsilon}\)，平均激发比例 \(x=1/(1+e^{\beta\epsilon})\)，与微正则关系一致，包括 \(\beta <0\) 的形式延拓。平均内能 \(U=N\epsilon x\)，故
 \[
 C=\left(\frac{\partial U}{\partial T}\right)_N
 =Nk_B\left(\frac{\epsilon}{k_BT}\right)^2
@@ -20,4 +20,4 @@ C=\left(\frac{\partial U}{\partial T}\right)_N
 \]
 无论 T 正负，热容非负，因为 \(\mathrm{Var}(U)=k_BT^2C\ge0\)。
 
-(4) 在 x→1/2± 时，\(\ln[(1-x)/x]\to0^\pm\)，故温度分别趋 +∞ 与 −∞；负温度从“负无穷大”随布居反转增强趋近于 \(0^-\)（x→1⁻）。逆温 β 为热接触时能量流方向的根本变量，所有 β<0 的状态在热接触下可向任何 β>0 的体系放热，因此负绝对温度热力学上比任何正温度更“热”，并不是绝对零度以下。
+(4) 在 \(x\to 1/2\pm \) 时，\(\ln[(1-x)/x]\to0^\pm\)，故温度分别趋 \(+\infty \) 与 \(-\infty \)；负温度从“负无穷大”随布居反转增强趋近于 \(0^-\)（\(x\to 1^{-}\)）。逆温 \(\beta \) 为热接触时能量流方向的根本变量，所有 \(\beta <0\) 的状态在热接触下可向任何 \(\beta >0\) 的体系放热，因此负绝对温度热力学上比任何正温度更“热”，并不是绝对零度以下。
