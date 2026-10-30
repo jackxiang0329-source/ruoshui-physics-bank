@@ -1,4 +1,4 @@
 (1) 设 $K=B\ell$，沿杆运动方向为正，回路法拉第方程为 $L\dot I+RI=Kv$，安培力使 $m\dot v=-KI$。这些号数保证正速度产生反向磁阻力；初态 $v(0)=v_0$、$I(0)=0$。
 (2) 从 $I=-m\dot v/K$ 得 $mL\ddot v+mR\dot v+K^2v=0$，特征根 $s_\pm=[-mR\pm\sqrt{m^2R^2-4mLK^2}]/(2mL)$。若 $R^2\ge4LK^2/m$ 为非振荡衰减（等号临界），否则速度与电流呈指数包络的振荡交换；两根实部均负。
 (3) 两式分别乘以 $v$ 与 $I$ 并相加，得到 $\frac d{dt}[\frac12mv^2+\frac12LI^2]=-RI^2\le0$。$R>0$ 和 $K\ne0$ 时，若最终仍有非零静止电流，回路式迫使其衰减；若仍有非零速度则驱动非零电流，故唯一渐近平衡是 $v=I=0$。
-(4) 积分动力学方程给 $K\int_0^\infty I\,dt=mv_0$，积分电路方程且利用 $I(0)=I(\infty)=0$ 给 $R\int_0^\infty I\,dt=K\int_0^\infty v\,dt$，故净位移 $\Delta x=mRv_0/K^2=mRv_0/(B^2\ell^2)$，与 $L$ 无关。$L\to0$ 时 $I\approx Kv/R$，速度按 $e^{-K^2t/(mR)}$ 衰减；无电阻 $R=0$ 无耗散而会振荡，不能套用趋零行程推导。
+(4) 积分动力学方程给 $K\int_0^\infty I\,dt=mv_0$，积分电路方程且利用 $I(0)=I(\infty)=0$ 给 $R\int_0^\infty I\,dt=K\int_0^\infty v\,dt$，故有符号净位移 $\Delta x=mRv_0/K^2=mRv_0/(B^2\ell^2)$，与 $L$ 无关；欠阻尼情况下 $v(t)$ 可变号，因此实际走过的总路程 $\int_0^\infty|v(t)|dt$ 与净位移不同。$L\to0$ 时 $I\approx Kv/R$，速度按 $e^{-K^2t/(mR)}$ 衰减；无电阻 $R=0$ 无耗散而会振荡，不能套用趋零行程推导。
