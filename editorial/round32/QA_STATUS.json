@@ -25,7 +25,28 @@
     "generated_index_synced": false,
     "question_and_solutions_xelatex_compilation_verified": false,
     "main_merge_allowed": false,
-    "note": "200 executable formula/model-level checks, but do not equate them to 200 external expert validations. Confirm problem difficulty, check coverage, duplicates and XeLaTeX before acceptance."
+    "note": "200 executable formula/model-level checks, but do not equate them to 200 external expert validations. Confirm problem difficulty, check coverage, duplicates and XeLaTeX before acceptance.",
+    "structural_audit": {
+      "grouped_files": 5,
+      "grouped_problems": 41,
+      "mechanics_source_triples": 9,
+      "problem_ids_unique": true,
+      "grouped_math_delimiters_balanced": true,
+      "grouped_braces_balanced": true,
+      "solution_subparts_shorter_than_100_chars": 0,
+      "quality_scope": "Source structure and length only"
+    },
+    "ci": {
+      "workflow": "Physics Advanced-only QA and PDF",
+      "run_id": 41032446494,
+      "conclusion": "failure",
+      "failure_step": "python scripts/check_difficulty_gate.py",
+      "failure_reason": "REJECT: data mirror mismatch; advanced: 932 errors: 1",
+      "round32_candidate_two_book_workflow_verified": false
+    },
+    "xelatex_review_build_script": "editorial/round32/build_review.py",
+    "draft_pr": "https://github.com/jackxiang0329-source/ruoshui-physics-bank/pull/38",
+    "release_decision": "BLOCKED: main bank data mirror mismatch, review PDF not verified, canonical integration and independent review incomplete"
   },
   "group_reports": {
     "M": {
