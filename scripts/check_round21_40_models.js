@@ -69,9 +69,9 @@ function int(f,a,b,n=4000){const h=(b-a)/n;let s=f(a)+f(b);for(let i=1;i<n;i++)s
  C('E130',4,'outer return gives zero magnetic field',I-I,0);
 }
 {
- const eps=2,w=3,L=4,dg=1.5,k=2.4,x=1.2,Q=4,V=5,C=x=>eps*w*(L+(k-1)*x)/dg,Cp=eps*w*(k-1)/dg;
- C('E131',1,'parallel air dielectric area sum',C(x),eps*w*(k*x+(L-x))/dg);
- C('E131',2,'fixed charge electrostatic force',-d(y=>Q*Q/(2*C(y)),x),Q*Q*Cp/(2*C(x)**2));
+ const eps=2,w=3,L=4,dg=1.5,k=2.4,x=1.2,Q=4,V=5,Cap=x=>eps*w*(L+(k-1)*x)/dg,Cp=eps*w*(k-1)/dg;
+ C('E131',1,'parallel air dielectric area sum',Cap(x),eps*w*(k*x+(L-x))/dg);
+ C('E131',2,'fixed charge electrostatic force',-d(y=>Q*Q/(2*Cap(y)),x),Q*Q*Cp/(2*Cap(x)**2));
  C('E131',3,'fixed voltage source minus stored energy',V*V*Cp-V*V*Cp/2,V*V*Cp/2);
  C('E131',4,'no contrast gives zero force',eps*w*(1-1)/dg,0);
 }
@@ -119,13 +119,13 @@ function int(f,a,b,n=4000){const h=(b-a)/n;let s=f(a)+f(b);for(let i=1;i<n;i++)s
  C('T123',4,'isothermal work limit',R*T1*log(v2/v1),R*T1*log(v2/v1));
 }
 {
- const C=10,A=3,eps=.6,sigma=.1,h=.4,Ta=4,P=20;
+ const heatCap=10,A=3,eps=.6,sigma=.1,h=.4,Ta=4,P=20;
  const F=t=>eps*sigma*A*(t**4-Ta**4)+h*A*(t-Ta),dF=t=>4*eps*sigma*A*t**3+h*A;
  const eq=5.2;
  C('T124',1,'energy balance radiation plus convection',F(Ta),0);
  C('T124',2,'thermal equilibrium monotonicity',dF(eq),d(F,eq));
- C('T124',3,'linear relaxation time reciprocal',(C/dF(eq))*dF(eq),C);
- C('T124',4,'pure radiation algebraic solution',(Ta**(-3)+3*eps*sigma*A*2/C)**(-3===1?1:1/3),Math.pow(Ta**(-3)+3*eps*sigma*A*2/C,-1/3));
+ C('T124',3,'linear relaxation time reciprocal',(heatCap/dF(eq))*dF(eq),heatCap);
+ C('T124',4,'pure radiation algebraic solution',(Ta**(-3)+3*eps*sigma*A*2/heatCap)**(-3===1?1:1/3),Math.pow(Ta**(-3)+3*eps*sigma*A*2/heatCap,-1/3));
 }
 {
  const R=8,nA=2,nB=3,T=350,n=nA+nB,y=nA/n,z=nB/n,S=-R*(nA*log(y)+nB*log(z));
@@ -207,11 +207,11 @@ function int(f,a,b,n=4000){const h=(b-a)/n;let s=f(a)+f(b);for(let i=1;i<n;i++)s
  C('W128',4,'phase/group coincidence at minimum',cg(kstar),cp(kstar));
 }
 {
- const n=1,m=3,c=5,L=4,ep=.02,C=(c*pi/L)**2;
- const om2=(n,m)=>C*(n*n/(1+ep)**2+m*m/(1-ep)**2);
- C('W129',1,'membrane separated eigenvalue',C*(n*n+m*m),C*10);
+ const n=1,m=3,c=5,L=4,ep=.02,scale=(c*pi/L)**2;
+ const om2=(n,m)=>scale*(n*n/(1+ep)**2+m*m/(1-ep)**2);
+ C('W129',1,'membrane separated eigenvalue',scale*(n*n+m*m),scale*10);
  C('W129',2,'identical square axes degeneracy',n*n+m*m,m*m+n*n);
- C('W129',3,'perturbed mode antisymmetric splitting',(om2(n,m)-om2(m,n))/(4*C*ep*(m*m-n*n)),1,5e-3);
+ C('W129',3,'perturbed mode antisymmetric splitting',(om2(n,m)-om2(m,n))/(4*scale*ep*(m*m-n*n)),1,5e-3);
  C('W129',4,'diagonal mode no splitting',om2(2,2)-om2(2,2),0);
 }
 {
