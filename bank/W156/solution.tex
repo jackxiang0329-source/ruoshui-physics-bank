@@ -1,0 +1,4 @@
+(1) 线性应变 $\epsilon=u_x$，应力 $\sigma=E u_x+\eta u_{xt}$。单位体积动量平衡 $\rho u_{tt}=\partial_x\sigma$，因而 $\rho u_{tt}=Eu_{xx}+\eta u_{xxt}$；最后一项提供不可逆阻尼，不能把它误写为普通时间一阶摩擦项。
+(2) 取时间因子 $e^{-i\omega t}$，应力复幅为 $\tilde\sigma=(E-i\omega\eta)\tilde\epsilon$。代入平面波得 $\rho\omega^2=(E-i\omega\eta)k^2$，故 $k=\omega\sqrt{\rho/(E-i\omega\eta)}$，选 $\Re k>0,\Im k>0$ 的右行衰减分支，使 $e^{ikx}$ 的包络不随传播距离无限增长。
+(3) 令 $c_0=\sqrt{E/\rho}$、$\delta=\omega\eta/E\ll1$，则 $(1-i\delta)^{-1/2}\simeq1+i\delta/2$，所以 $k_r\simeq\omega/c_0$、$k_i\simeq\eta\omega^2/(2Ec_0)$。弱耗散下相速度 $v_p=\omega/k_r\simeq c_0$，幅度沿 $x$ 以 $e^{-k_ix}$ 衰减，$1/e$ 衰减长度 $\ell_{\rm att}=2Ec_0/(\eta\omega^2)$。
+(4) 粘性应力对局部应变率做功的不可逆耗散密度为 $\dot q=\eta\dot\epsilon^2\ge0$。若应变复幅为 $\tilde\epsilon=ikUe^{ikx}$，周期平均耗散 $\overline{\dot q}=\frac12\eta\omega^2|\tilde\epsilon|^2\ge0$，随 $\eta\to0$ 趋零，同时波数恢复实值 $\omega/c_0$。
