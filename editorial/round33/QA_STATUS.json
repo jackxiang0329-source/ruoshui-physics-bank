@@ -1,0 +1,43 @@
+{
+  "batch": 33,
+  "phase": "automated_technical_prequalification",
+  "source_branch": "physics-round33-advanced-qa-20261030",
+  "problem_count": 50,
+  "unique_problem_count": 50,
+  "distribution": {
+    "M": 9,
+    "E": 9,
+    "T": 8,
+    "W": 8,
+    "O": 8,
+    "Q": 8
+  },
+  "exactly_4_questions_and_solutions_for_each": true,
+  "machine_subpart_checks": 200,
+  "machine_passed": 200,
+  "machine_failed": 0,
+  "unique_problem_part_pairs": 200,
+  "each_problem_has_four_unique_subpart_tests": true,
+  "ids_match_test_reports": true,
+  "minimum_solution_subpart_non_whitespace_chars": 132,
+  "historical_full_bank_duplicate_review": "INCOMPLETE",
+  "independent_human_academic_review": "NOT_DONE",
+  "separate_independent_verification_for_every_subpart": "NOT_DONE",
+  "two_xelatex_books": "NOT_COMPILED_OR_VERIFIED",
+  "canonical_bank_import": false,
+  "all_generated_mirrors_synced": false,
+  "legacy_main_CI_blocker": "prior QA run failed: data/problems.json mismatch with canonical bank",
+  "allowed_main_merge": false,
+  "overall_status": "50 detailed review candidates, 200 automatic checks passed, formal strict QA not passed",
+  "check_reports": [
+    "editorial/round33/QA_48.json",
+    "editorial/round33/QA_48_second.json",
+    "editorial/round33/QA_48_third.json",
+    "editorial/round33/QA_48_fourth.json",
+    "editorial/round33/QA_8_final.json"
+  ],
+  "structural_reports": [
+    "editorial/round33/STRUCTURE_FIRST_25.json",
+    "editorial/round33/STRUCTURE_LAST_24.json"
+  ]
+}
