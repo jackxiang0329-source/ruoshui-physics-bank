@@ -1,0 +1,442 @@
+{
+  "round": 33,
+  "stage": "12 high-difficulty candidates",
+  "checks": 48,
+  "passed": 46,
+  "failed": 2,
+  "scope": "Model-specific formula, differential equation, integral, boundary, asymptotic, and stability tests. Not full independent expert review.",
+  "tests": [
+    {
+      "id": "M220",
+      "part": 1,
+      "name": "cyclic angular momentum inverse consistency",
+      "calc": 0.7000000000000001,
+      "expected": 0.7,
+      "error": 1.1102230246251565e-16,
+      "pass": true
+    },
+    {
+      "id": "M220",
+      "part": 2,
+      "name": "Routh effective potential vs explicit precession kinetic",
+      "calc": 1.2291586495357971,
+      "expected": 1.229158649535797,
+      "error": 2.220446049250313e-16,
+      "pass": true
+    },
+    {
+      "id": "M220",
+      "part": 3,
+      "name": "regular precession stationary quadratic",
+      "calc": -2.220446049250313e-16,
+      "expected": 0,
+      "error": 2.220446049250313e-16,
+      "pass": true
+    },
+    {
+      "id": "M220",
+      "part": 4,
+      "name": "sleeping top local energy curvature by centered difference",
+      "calc": 0.7000000135093387,
+      "expected": 0.7,
+      "error": 1.3509338758765921e-8,
+      "pass": true
+    },
+    {
+      "id": "M221",
+      "part": 1,
+      "name": "Coriolis power cancels in Jacobi energy",
+      "calc": -1.1102230246251565e-16,
+      "expected": 0,
+      "error": 1.1102230246251565e-16,
+      "pass": true
+    },
+    {
+      "id": "M221",
+      "part": 2,
+      "name": "normal-mode quartic determinant and polynomial",
+      "calc": -6.253900000000001,
+      "expected": -6.253899999999999,
+      "error": 1.7763568394002505e-15,
+      "pass": true
+    },
+    {
+      "id": "M221",
+      "part": 3,
+      "name": "low and high rotation stable, intermediate unstable",
+      "calc": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M221",
+      "part": 4,
+      "name": "high rotation Jacobi quadratic form indefinite by negative potential",
+      "calc": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E220",
+      "part": 1,
+      "name": "modified Bessel London radial PDE",
+      "calc": 0.6605225711328202,
+      "expected": 0.6605198599151013,
+      "error": 0.000002711217718887049,
+      "pass": true
+    },
+    {
+      "id": "E220",
+      "part": 2,
+      "name": "isolated vortex dimensionless flux integral",
+      "calc": 0.9998092914207203,
+      "expected": 1,
+      "error": 0.00019070857927971918,
+      "pass": false
+    },
+    {
+      "id": "E220",
+      "part": 3,
+      "name": "vortex core logarithmic field asymptotic under halved cutoff",
+      "calc": 0.6931469192920501,
+      "expected": 0.6931471805599453,
+      "error": 2.6126789520741767e-7,
+      "pass": true
+    },
+    {
+      "id": "E220",
+      "part": 4,
+      "name": "vortex Gibbs entry threshold",
+      "calc": 0,
+      "expected": 0,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E221",
+      "part": 1,
+      "name": "SPP tangential EM continuity",
+      "calc": 0,
+      "expected": 0,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E221",
+      "part": 2,
+      "name": "SPP in-plane dispersion identity",
+      "calc": 3.3333333333333335,
+      "expected": 3.3333333333333335,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E221",
+      "part": 3,
+      "name": "Drude SP mode diverges at cutoff relative to low-frequency branch",
+      "calc": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E221",
+      "part": 4,
+      "name": "positive TE decay constants cannot sum to zero",
+      "calc": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T218",
+      "part": 1,
+      "name": "Ising matrix eigenvalues product equals determinant",
+      "calc": 5.640392530579541,
+      "expected": 5.64039253057954,
+      "error": 8.881784197001252e-16,
+      "pass": true
+    },
+    {
+      "id": "T218",
+      "part": 2,
+      "name": "Ising magnetization derivative of free energy",
+      "calc": 0.8153761444806839,
+      "expected": 0.81537614457998,
+      "error": 9.929612687642475e-11,
+      "pass": true
+    },
+    {
+      "id": "T218",
+      "part": 3,
+      "name": "Ising correlation-sum susceptibility vs eigenvalue derivative",
+      "calc": 4.649949915522073,
+      "expected": 4.649949915522072,
+      "error": 8.881784197001252e-16,
+      "pass": true
+    },
+    {
+      "id": "T218",
+      "part": 4,
+      "name": "Ising no spontaneous finite temperature magnetization",
+      "calc": 0,
+      "expected": 0,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T219",
+      "part": 1,
+      "name": "load matched maximum output power",
+      "calc": 288,
+      "expected": 288.00000000000006,
+      "error": 5.684341886080802e-14,
+      "pass": true
+    },
+    {
+      "id": "T219",
+      "part": 2,
+      "name": "thermoelectric energy balance hot cold and electric output",
+      "calc": 288,
+      "expected": 288,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T219",
+      "part": 3,
+      "name": "optimal efficiency first derivative numerical",
+      "calc": 2.775557561562891e-12,
+      "expected": 0,
+      "error": 2.775557561562891e-12,
+      "pass": true
+    },
+    {
+      "id": "T219",
+      "part": 4,
+      "name": "thermoelectric maximum efficiency vs ZT formula",
+      "calc": 0.2393458994832685,
+      "expected": 0.2393458994832685,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "W226",
+      "part": 1,
+      "name": "Rayleigh evanescence both potentials",
+      "calc": 0.15470053837925146,
+      "expected": 0.15470053837925146,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "W226",
+      "part": 2,
+      "name": "Rayleigh traction determinant",
+      "calc": 2.220446049250313e-16,
+      "expected": 0,
+      "error": 2.220446049250313e-16,
+      "pass": true
+    },
+    {
+      "id": "W226",
+      "part": 3,
+      "name": "Rayleigh cubic after squaring",
+      "calc": 0,
+      "expected": 0,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "W226",
+      "part": 4,
+      "name": "incompressible Rayleigh-to-shear speed",
+      "calc": 0.9553125010256316,
+      "expected": 0.955316,
+      "error": 0.0000034989743684654684,
+      "pass": true
+    },
+    {
+      "id": "W227",
+      "part": 1,
+      "name": "unimodular layer transfer determinant",
+      "calc": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "W227",
+      "part": 2,
+      "name": "Bloch trace equal analytic bilayer expression",
+      "calc": -0.6873689288155403,
+      "expected": -0.6873689288155403,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "W227",
+      "part": 3,
+      "name": "quarter-wave impedance mismatch yields stop band",
+      "calc": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "W227",
+      "part": 4,
+      "name": "quarter-wave attenuation exponent",
+      "calc": 0.6931471805599453,
+      "expected": 0.6931471805599453,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O226",
+      "part": 1,
+      "name": "planar concave roundtrip ABCD trace",
+      "calc": 0.3999999999999999,
+      "expected": 0.3999999999999999,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O226",
+      "part": 2,
+      "name": "Gaussian mirror wavefront curvature matching",
+      "calc": 2,
+      "expected": 2,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O226",
+      "part": 3,
+      "name": "resonator transverse Gouy phase geometry",
+      "calc": 0.684719203002283,
+      "expected": 0.6847192030022828,
+      "error": 1.1102230246251565e-16,
+      "pass": true
+    },
+    {
+      "id": "O226",
+      "part": 4,
+      "name": "strict planar concave stability excludes endpoints",
+      "calc": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O227",
+      "part": 1,
+      "name": "annular Fraunhofer Bessel integral",
+      "calc": 0.7719763098561,
+      "expected": 0.7719763098561009,
+      "error": 8.881784197001252e-16,
+      "pass": true
+    },
+    {
+      "id": "O227",
+      "part": 2,
+      "name": "annular axis limit normalized one",
+      "calc": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O227",
+      "part": 3,
+      "name": "Airy first Bessel J1 zero",
+      "calc": 3.831705970207512,
+      "expected": 3.83170597020751,
+      "error": 2.220446049250313e-15,
+      "pass": true
+    },
+    {
+      "id": "O227",
+      "part": 4,
+      "name": "thin ring Fraunhofer Bessel J0 limit",
+      "calc": 0.6201199198911628,
+      "expected": 0.6200859895615092,
+      "error": 0.000033930329653597546,
+      "pass": true
+    },
+    {
+      "id": "Q226",
+      "part": 1,
+      "name": "double delta even transcendental eigen equation",
+      "calc": -4.440892098500626e-16,
+      "expected": 0,
+      "error": 4.440892098500626e-16,
+      "pass": true
+    },
+    {
+      "id": "Q226",
+      "part": 2,
+      "name": "odd bound state threshold and equation",
+      "calc": 0,
+      "expected": 0,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "Q226",
+      "part": 3,
+      "name": "widely separated delta dimer level splitting",
+      "calc": 1.0000000001347062,
+      "expected": 1,
+      "error": 1.3470624615763427e-10,
+      "pass": true
+    },
+    {
+      "id": "Q226",
+      "part": 4,
+      "name": "double delta merging single strength 2g",
+      "calc": 3.9998400127988054,
+      "expected": 4,
+      "error": 0.0001599872011945891,
+      "pass": true
+    },
+    {
+      "id": "Q227",
+      "part": 1,
+      "name": "Dirac-band Berry curvature direct Jacobian",
+      "calc": 0.34653181990185683,
+      "expected": 0.34653181990185683,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "Q227",
+      "part": 2,
+      "name": "continuum Dirac half-integer flux integral",
+      "calc": 0.4995859120757467,
+      "expected": 0.5,
+      "error": 0.00041408792425329244,
+      "pass": false
+    },
+    {
+      "id": "Q227",
+      "part": 3,
+      "name": "Wilson-regularized Dirac Chern number",
+      "calc": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "Q227",
+      "part": 4,
+      "name": "topological invariant insensitive to smooth gauge phase",
+      "calc": 0,
+      "expected": 0,
+      "error": 0,
+      "pass": true
+    }
+  ]
+}
