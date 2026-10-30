@@ -5,7 +5,7 @@ def run():
     rr=.85;F=4*rr/(1-rr)**2
     Airy=lambda ph:1/(1+F*SI(ph)**2)
     check("O234",1,"coherent multi-pass cavity amplitude magnitude",
-          A((1-rr)/(1-rr*E(1j*.4)))**2,
+          A((1-rr)/(1-rr*complex(C(.4),SI(.4))))**2,
           1/(1+F*SI(.2)**2),method="geometric-optical-series")
     check("O234",2,"Fabry Perot lossless on-resonance transmission",
           Airy(P),1,method="resonance-boundary")
