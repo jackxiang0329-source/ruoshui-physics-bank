@@ -1,0 +1,4 @@
+(1) 取$\boldsymbol u=\nabla\phi+\nabla\times(\psi\hat y)$，设$\phi=Ae^{pz}e^{i(kx-\omega t)}$、$\psi=Be^{qz}e^{i(kx-\omega t)}$，其中$p=\sqrt{k^2-\omega^2/c_p^2}$、$q=\sqrt{k^2-\omega^2/c_s^2}$取正实根。于是$u_x=ik\phi-\partial_z\psi$、$u_z=\partial_z\phi+ik\psi$；为了向$z\to-\infty$衰减，须有$0<c=\omega/k<c_s<c_p$。
+(2) 自由表面$\sigma_{xz}=\mu(\partial_zu_x+\partial_xu_z)=0$、$\sigma_{zz}=\lambda\nabla\cdot u+2\mu\partial_zu_z=0$。代入两势的表达式后，剪切方程给$2ikpA-(q^2+k^2)B=0$，法向方程可取$(2k^2-\omega^2/c_s^2)A+2ikqB=0$（若势$\psi$反向定义，系统相应整体符号改变）。只有两式行列式为零才有非平凡局域面波。
+(3) 从前述二式消去$A,B$，得到$(2k^2-\omega^2/c_s^2)^2-4k^2pq=0$。令$s=c^2/c_s^2$、$\eta=c_s^2/c_p^2$，$p=k\sqrt{1-\eta s}$、$q=k\sqrt{1-s}$，化为$(2-s)^2=4\sqrt{(1-s)(1-\eta s)}$。两边平方、去掉$s=0$伪根，得到$s^3-8s^2+(24-16\eta)s-16(1-\eta)=0$。
+(4) 物理Rayleigh模需选$0<s<1$的非零根并同时满足未平方的正根方程，不能把多项式其余根机械当作表面波。$c<c_s$确保$p,q$都为实数且振幅随深度指数局域；不可压极限$\lambda/\mu\to\infty$使$\eta\to0$，方程变为$s^3-8s^2+24s-16=0$，其物理根给$c_R\simeq0.9553c_s$。Rayleigh波因此低于体剪切波速，且不向半空间深处传播能量。
