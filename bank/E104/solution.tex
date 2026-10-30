@@ -1,7 +1,7 @@
-(1) 由局部电阻压降 $V_x=-rI$、电容充电连续式 $I_x=-cV_t$，交叉求导得 $V_{xx}=rcV_t$，即 $\boxed{V_t=D V_{xx},quad D=1/(rc)}$。此方程是耗散扩散，缺少波动方程的双时间导数。
+(1) 由局部电阻压降 \(V_x=-rI\)、电容充电连续式 \(I_x=-cV_t\)，交叉求导得 \(V_{xx}=rcV_t\)，即 \(\boxed{V_t=D V_{xx},quad D=1/(rc)}\)。此方程是耗散扩散，缺少波动方程的双时间导数。
 
-(2) 半轴热核的Dirichlet阶跃解为 $\boxed{V=V_0\operatorname{erfc}[x/(2\sqrt{Dt})]}$。用 $I=-V_x/r$ 得 $I(x,t)=\frac{V_0}{r\sqrt{\pi Dt}}\exp[-x^2/(4Dt)]$，满足边界供电、初始无电荷与远端衰减。
+(2) 半轴热核的Dirichlet阶跃解为 \(\boxed{V=V_0\operatorname{erfc}[x/(2\sqrt{Dt})]}\)。用 \(I=-V_x/r\) 得 \(I(x,t)=\frac{V_0}{r\sqrt{\pi Dt}}\exp[-x^2/(4Dt)]\)，满足边界供电、初始无电荷与远端衰减。
 
-(3) 输入 $I(0,t)=V_0\sqrt{c/(\pi rt)}$，短时发散为 $t^{-1/2}$，因为连续模型没有接触电阻或寄生电感。总线电荷 $Q(t)=c\int_0^\infty Vdx=2cV_0\sqrt{Dt/\pi}$；能量 $U_C=(c/2)\int V^2dx$ 由相似变量表明 $U_C\propto cV_0^2\sqrt{Dt}$，并非线性增长。
+(3) 输入 \(I(0,t)=V_0\sqrt{c/(\pi rt)}\)，短时发散为 \(t^{-1/2}\)，因为连续模型没有接触电阻或寄生电感。总线电荷 \(Q(t)=c\int_0^\infty Vdx=2cV_0\sqrt{Dt/\pi}\)；能量 \(U_C=(c/2)\int V^2dx\) 由相似变量表明 \(U_C\propto cV_0^2\sqrt{Dt}\)，并非线性增长。
 
-(4) 对 $V\propto e^{i\omega t-\gamma x}$，有 $\gamma^2=i\omega rc$，取衰减根 $\gamma=(1+i)\sqrt{\omega rc/2}$。电流相量为 $I=\gamma V/r$，输入导纳 $\boxed{Y_{\rm in}=(1+i)\sqrt{\omega c/(2r)}}$，相位 $+\pi/4$。这说明半无限RC线表现为具有扩散皮肤深度的频率相关耗散网络。
+(4) 对 \(V\propto e^{i\omega t-\gamma x}\)，有 \(\gamma^2=i\omega rc\)，取衰减根 \(\gamma=(1+i)\sqrt{\omega rc/2}\)。电流相量为 \(I=\gamma V/r\)，输入导纳 \(\boxed{Y_{\rm in}=(1+i)\sqrt{\omega c/(2r)}}\)，相位 \(+\pi/4\)。这说明半无限RC线表现为具有扩散皮肤深度的频率相关耗散网络。

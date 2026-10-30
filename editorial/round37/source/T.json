@@ -1,0 +1,226 @@
+[
+  {
+    "id": "T250",
+    "title": "二维Ising高温展开的闭合回路与临界奇异性",
+    "setup": "二维正方晶格 \\(N\\) 个Ising自旋 \\(s_i=\\pm1\\)，邻接耦合 \\(J>0\\)，零场配分函数 \\(Z=\\sum_{\\{s\\}}\\exp(K\\sum_{\\langle ij\\rangle}s_is_j)\\)，\\(K=\\beta J\\)。",
+    "q": [
+      "建立边权的高温展开恒等式。",
+      "求和自旋并识别闭合偶度子图。",
+      "求最低阶非平凡回路对自由能的修正。",
+      "说明为什么一维与二维临界行为不同。"
+    ],
+    "s": [
+      "每条键满足 \\(e^{Ks_is_j}=\\cosh K(1+t s_is_j)\\)，其中 \\(t=\\tanh K\\)。因此 \\(Z=(\\cosh K)^{N_b}\\sum_{\\{s\\}}\\prod_{\\langle ij\\rangle}(1+t s_is_j)\\)。展开的每个边子集贡献 \\(t^{|E'|}\\prod_i s_i^{\\deg_{E'}i}\\)。",
+      "对每个节点 \\(\\sum_{s_i=\\pm1}s_i^d\\) 在 \\(d\\) 为奇数时为零、偶数时为2。故 \\(Z=2^N(\\cosh K)^{N_b}\\sum_{\\Gamma:\\,\\deg_\\Gamma i\\ {\\rm even}}t^{|\\Gamma|}\\)。非零图由闭合回路和可能的交点组成，而非任意开路径；这保证高温图系数正。",
+      "正方晶格最短闭合回路为四边形，若忽略边界且有 \\(N_\\mathrm{plaq}\\) 个基本方格，则回路和在小 \\(t\\) 下为 \\(1+N_\\mathrm{plaq} t^4+O(t^6)\\)。在热力学极限必须用连通图的 \\(\\ln Z\\) 展开，最低自由能密度修正为 \\(-k_BT(N_\\mathrm{plaq}/N)t^4\\)，不能仅把 \\(N_\\mathrm{plaq} t^4\\) 当大体系微扰参数。",
+      "一维闭合回路在开链中不存在，周期链只出现长度 \\(N\\) 的整体回路 \\(t^N\\)，故有限 \\(T\\) 热力学极限解析；二维有各尺度闭合回路，其组合增长使高温级数在有限 \\(K_c\\) 产生非解析性。已知正方晶格精确临界条件 \\(\\sinh(2K_c)=1\\)，不是从单个方格的四阶项即可推出。"
+    ],
+    "tags": [
+      "图展开",
+      "统计场论",
+      "临界点"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "T251",
+    "title": "非相互作用玻色气体的凝聚临界温度与激发数涨落",
+    "setup": "三维体积 \\(V\\) 自由非相互作用玻色气体，粒子质量 \\(m\\)，粒子数 \\(N\\)，忽略自旋简并和边界效应，\\(T>0\\)。",
+    "q": [
+      "从Bose分布积分激发态粒子数。",
+      "推导三维临界凝聚温度。",
+      "计算临界温度以下内能和热容。",
+      "说明巨正则凝聚态粒子数异常涨落。"
+    ],
+    "s": [
+      "单粒子能量 \\(\\varepsilon=p^2/(2m)\\)，激发态平均数 \\(N_{\\rm ex}=\\frac{V}{(2\\pi\\hbar)^3}\\int d^3p[\\exp(\\beta(\\varepsilon-\\mu))-1]^{-1}\\)。令热德布罗意波长 \\(\\lambda_T=\\sqrt{2\\pi\\hbar^2/(mk_BT)}\\)、逸度 \\(z=e^{\\beta\\mu}\\le1\\)，则 \\(N_{\\rm ex}=V\\lambda_T^{-3}g_{3/2}(z)\\)。",
+      "当 \\(\\mu\\uparrow0\\)，激发数上限 \\(N_{\\rm ex,max}=V\\lambda_T^{-3}\\zeta(3/2)\\)。定密度 \\(n=N/V\\) 下 \\(T_c=(2\\pi\\hbar^2/(mk_B))[n/\\zeta(3/2)]^{2/3}\\)。若 \\(T<T_c\\)，剩余占基态 \\(N_0/N=1-(T/T_c)^{3/2}\\)。",
+      "在 \\(\\mu=0\\) 的凝聚区，激发态内能 \\(U=\\tfrac32 Vk_BT\\lambda_T^{-3}\\zeta(5/2)\\propto T^{5/2}\\)，所以 \\(C_V=\\partial_TU=\\tfrac{15}{4}Vk_B\\lambda_T^{-3}\\zeta(5/2)\\)。基态能零、宏观占有但不贡献理想气体热能。",
+      "对宏观占据的单基态，巨正则分布为几何分布，\\(\\operatorname{Var}(N_0)=\\bar N_0(1+\\bar N_0)\\)，可达到 \\(O(N^2)\\) 的异常涨落。固定 \\(N\\) 的正则系综不存在此独立几何涨落，因此用巨正则凝聚态结果外推真实封闭气体要注意系综效应。"
+    ],
+    "tags": [
+      "Bose凝聚",
+      "热力学积分",
+      "系综涨落"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "T252",
+    "title": "Langmuir吸附的巨配分函数与吸附热",
+    "setup": "固体表面有 \\(M\\) 个独立吸附位点，每位点最多一个分子，吸附分子能量 \\(-\\epsilon\\) 且与粒子库化学势 \\(\\mu\\) 交换，温度 \\(T\\)。",
+    "q": [
+      "建立单点与多点巨配分函数。",
+      "求平均覆盖率与吸附等温式。",
+      "计算吸附数涨落与响应关系。",
+      "讨论低压、饱和与相互作用失效。"
+    ],
+    "s": [
+      "单个位点占有数 \\(n=0,1\\)，权重为 \\(1\\) 与 \\(\\exp[\\beta(\\mu+\\epsilon)]\\)，故 \\(\\xi_1=1+e^{\\beta(\\mu+\\epsilon)}\\)，整表面 \\(\\Xi=\\xi_1^M\\)。这里位点独立且每位点不可重复占据，不能写成任意玻色占有的几何级数。",
+      "平均覆盖率 \\(\\theta=\\langle n\\rangle=(\\beta M)^{-1}\\partial_\\mu\\ln\\Xi=1/[1+e^{-\\beta(\\mu+\\epsilon)}]\\)。对于稀薄理想气体库 \\(e^{\\beta\\mu}\\propto p\\)，可写 \\(\\theta=K(T)p/[1+K(T)p]\\)，其中平衡常数含吸附束缚因子 \\(e^{\\beta\\epsilon}\\)。",
+      "每位点为Bernoulli变量，故 \\(\\operatorname{Var}(N_a)=M\\theta(1-\\theta)\\)。直接微分 \\(\\partial_\\mu\\langle N_a\\rangle=\\beta M\\theta(1-\\theta)\\)，验证巨正则涨落恒等式 \\(\\operatorname{Var}(N_a)=k_BT\\,\\partial_\\mu\\langle N_a\\rangle\\)。",
+      "在 \\(Kp\\ll1\\) 时 \\(\\theta\\simeq Kp\\)，与压力线性；在 \\(Kp\\gg1\\) 时 \\(\\theta\\to1\\)，最大吸附数为 \\(M\\)。若吸附分子之间存在侧向相互作用，位点独立假设破坏并可能产生协同吸附，不能用Langmuir曲线拟合临界覆盖行为。"
+    ],
+    "tags": [
+      "巨正则系综",
+      "表面热力学",
+      "吸附"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "T253",
+    "title": "理想气体自由膨胀的信息相对熵与熵产生",
+    "setup": "\\(N\\) 个经典理想气体分子在初态均匀分布体积 \\(V_i\\)，突然撤去隔板后在孤立容器内达到体积 \\(V_f>V_i\\) 的均匀平衡，温度保持不变。",
+    "q": [
+      "用Boltzmann态数估计两平衡态熵差。",
+      "从位置概率密度计算相对熵。",
+      "解释相对熵计算所用参考态和方向。",
+      "说明微观可逆性与粗粒化熵的区别。"
+    ],
+    "s": [
+      "经典配分函数的体积依赖为 \\(Z_N\\propto V^N\\)，故 \\(S=k_B(\\ln Z_N+\\beta U)\\) 在相同 \\(T\\) 下给 \\(\\Delta S=Nk_B\\ln(V_f/V_i)>0\\)。自由膨胀无外功、理想气体内能只依赖温度，故 \\(Q=W=0\\) 与 \\(T_f=T_i\\) 一致。",
+      "将单分子初始位置分布写 \\(p_i(x)=1/V_i\\) 在原占有区域内、其他为零；末态 \\(p_f(x)=1/V_f\\) 在全容器。相对熵 \\(D(p_i\\Vert p_f)=\\int p_i\\ln(p_i/p_f)dx=\\ln(V_f/V_i)\\)，所以 \\(\\Delta S=Nk_B D(p_i\\Vert p_f)\\)。",
+      "这里采用初态相对末态 \\(D(p_i\\Vert p_f)\\)，它有限；反向 \\(D(p_f\\Vert p_i)\\) 因初态在新增空间的概率为零而发散。相对熵不是在任意方向上相同的距离，必须指定参考平衡分布和测度。",
+      "哈密顿演化保持精细相空间分布的Gibbs熵，但分子混合后采用宏观空间密度的粗粒化描述，热力学熵增加 \\(Nk_B\\ln(V_f/V_i)\\)。这不要求基本动力学破坏时间反演，而要求初态约束释放以及宏观观测分辨率。"
+    ],
+    "tags": [
+      "信息热力学",
+      "相对熵",
+      "自由膨胀"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "T254",
+    "title": "Fermi气体绝热压缩与简并压力的多方指数",
+    "setup": "三维无自旋相互作用理想费米气体，粒子数 \\(N\\) 固定，低温 \\(k_BT\\ll E_F(n)\\)，对均匀体积 \\(V\\) 做缓慢可逆绝热压缩。",
+    "q": [
+      "用费米球计数推导费米能密度尺度。",
+      "求零温简并压力和多方指数。",
+      "求低温熵与绝热温度尺度。",
+      "讨论高密度相对论修正。"
+    ],
+    "s": [
+      "三维自由粒子的动量态数给 \\(n=k_F^3/(3\\pi^2)\\)（含两重自旋），故 \\(E_F=\\hbar^2k_F^2/(2m)\\propto n^{2/3}\\)。由 \\(n=N/V\\)，当 \\(V\\) 减小时 \\(E_F\\propto V^{-2/3}\\)。",
+      "零温内能 \\(U_0=\\tfrac35NE_F\\propto N^{5/3}V^{-2/3}\\)。由 \\(P_0=-(\\partial U_0/\\partial V)_N=(2/5)nE_F\\propto n^{5/3}\\)，故多方指数 \\(\\gamma=5/3\\)，是三维非相对论简并费米气体的固有指数。",
+      "Sommerfeld展开给 \\(S\\simeq(\\pi^2/2)Nk_B(k_BT/E_F)\\)。可逆绝热 \\(S,N\\) 固定，因此 \\(T/E_F=\\mathrm{const}\\)，即 \\(T\\propto n^{2/3}\\propto V^{-2/3}\\)。需保持 \\(T\\ll E_F/k_B\\) 保证展开。",
+      "若费米动量达到 \\(p_F\\gg mc\\)，色散由 \\(p^2/(2m)\\) 改为 \\(pc\\)，则 \\(E_F\\propto n^{1/3}\\)、\\(P\\propto n^{4/3}\\)。因此 \\(\\gamma=4/3\\) 是超相对论退化极限，不能继续使用 \\(5/3\\) 压缩率公式。"
+    ],
+    "tags": [
+      "费米简并",
+      "绝热压缩",
+      "多方状态"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "T255",
+    "title": "正则系综的自由能变分原理与相对熵下界",
+    "setup": "有限或可数离散微观态 \\(i\\) 的能量为 \\(E_i\\)，温度 \\(T>0\\)，任意归一概率分布 \\(p_i\\ge0\\)，定义 \\(\\mathcal F[p]=\\sum_i p_iE_i+k_BT\\sum_i p_i\\ln p_i\\)。",
+    "q": [
+      "在归一约束下求自由能极小分布。",
+      "用相对熵给出全局极小证明。",
+      "由二阶变分核验局部稳定性。",
+      "解释非平衡自由能下降的动力学条件。"
+    ],
+    "s": [
+      "引入乘子 \\(\\lambda(\\sum_i p_i-1)\\)，逐项变分得 \\(E_i+k_BT(\\ln p_i+1)+\\lambda=0\\)，故 \\(p_i=e^{-\\beta E_i}/Z\\)，其中 \\(Z=\\sum_i e^{-\\beta E_i}\\)。这确立Boltzmann分布是给定温度下的自由能极值解。",
+      "令平衡分布 \\(q_i=e^{-\\beta E_i}/Z\\)。代入得 \\(\\mathcal F[p]=-k_BT\\ln Z+k_BT\\sum_i p_i\\ln(p_i/q_i)=F_{\\rm eq}+k_BT D(p\\Vert q)\\)。由Gibbs不等式 \\(D\\ge0\\)，所以平衡态为全局极小，而非只满足驻点条件。",
+      "在 \\(p_i>0\\) 处对归一扰动 \\(\\delta p_i\\) 作二阶展开，\\(\\delta^2\\mathcal F=(k_BT/2)\\sum_i(\\delta p_i)^2/p_i\\ge0\\)，只有零扰动等号成立。温度正值确保严格凸性；若 \\(T<0\\) 的有限能谱反转系综，形式上极小性不能直接照用。",
+      "若动力学是满足详细平衡的Markov过程且以 \\(q\\) 为稳态，则 \\(D(p(t)\\Vert q)\\) 随时间非增，故 \\(\\mathcal F[p(t)]\\) 下降。但对任意非Markov、外驱或反馈动力学不能自动断言 \\(d\\mathcal F/dt\\le0\\)，必须说明热浴与转换率条件。"
+    ],
+    "tags": [
+      "自由能原理",
+      "KL散度",
+      "稳定性"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "T256",
+    "title": "二维晶格随机行走的扩散极限与Einstein迁移率",
+    "setup": "粒子在二维方格周期 \\(a\\) 上以独立泊松率 \\(\\gamma\\) 向四邻格中每个方向跳跃，外加小恒力 \\(F\\hat x\\)，温度 \\(T\\)，跃迁满足局域详细平衡。",
+    "q": [
+      "从主方程推导无偏连续扩散系数。",
+      "在弱力下给出前后跳率的详细平衡形式。",
+      "计算漂移速度和Einstein关系。",
+      "检查有偏跳跃的纵向扩散修正。"
+    ],
+    "s": [
+      "无偏主方程 \\(\\partial_tP_{i,j}=\\gamma(P_{i+1,j}+P_{i-1,j}+P_{i,j+1}+P_{i,j-1}-4P_{i,j})\\)。Taylor展开 \\(P(x\\pm a,y)=P\\pm aP_x+a^2P_{xx}/2+\\cdots\\)，得到 \\(\\partial_tP=D\\nabla^2P\\)，其中 \\(D=\\gamma a^2\\)。",
+      "若外力做功 \\(Fa\\)，局域详细平衡要求 \\(\\gamma_+/\\gamma_-=\\exp(\\beta Fa)\\)。取对称参数化 \\(\\gamma_\\pm=\\gamma e^{\\pm\\beta Fa/2}\\)，小力 \\(Fa\\ll k_BT\\) 下差值 \\(\\gamma_+-\\gamma_-\\approx\\gamma\\beta Fa\\)。",
+      "平均漂移速度 \\(v_x=a(\\gamma_+-\\gamma_-)\\approx\\gamma a^2\\beta F=DF/(k_BT)\\)。定义迁移率 \\(\\mu_{\\rm mob}=v_x/F\\)，得 \\(D=\\mu_{\\rm mob}k_BT\\)，同时从局域详细平衡与扩散尺度得到，没有额外假设连续时间白噪声。",
+      "有限驱动力下漂移 \\(v_x=2a\\gamma\\sinh(\\beta Fa/2)\\)，纵向扩散系数 \\(D_x=(a^2/2)(\\gamma_++\\gamma_-)=\\gamma a^2\\cosh(\\beta Fa/2)\\)。因此非线性强力响应的 \\(v_x/F\\) 不再是常数，弱场Einstein关系不等同于任意驱动力下的严格恒等式。"
+    ],
+    "tags": [
+      "随机过程",
+      "详细平衡",
+      "Einstein关系"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "T257",
+    "title": "声子气体与Umklapp输运中的热导尺度",
+    "setup": "三维晶体低能声子近似各向同性Debye色散 \\(\\omega=vk\\)，声子寿命 \\(\\tau(\\omega,T)\\) 有限，用Boltzmann弛豫时间近似描述热输运。",
+    "q": [
+      "建立声子热流的动理学积分。",
+      "对常寿命低温Debye体系求热导温标。",
+      "说明Umklapp散射为什么可以产生热阻。",
+      "讨论高温与强非简谐的局限。"
+    ],
+    "s": [
+      "线性温度梯度下 \\(\\delta n_{\\boldsymbol k}=-\\tau v_x(\\partial n_B/\\partial T)\\partial_xT\\)。热流 \\(j_{Qx}=\\int d^3k/(2\\pi)^3\\,\\hbar\\omega\\,v_x\\delta n\\)，球对称角平均 \\(\\langle v_x^2\\rangle=v^2/3\\)，故 \\(\\kappa=(1/3)\\int d\\omega\\,g(\\omega)\\hbar\\omega\\,v^2\\tau\\,\\partial_Tn_B\\)。",
+      "若边界散射主导且 \\(\\tau\\) 近似常数、\\(T\\ll\\Theta_D\\)，Debye热容 \\(C_V\\propto T^3\\)，动理学公式简化为 \\(\\kappa\\simeq C_Vv^2\\tau/3\\propto T^3\\)。若平均自由程 \\(\\ell=v\\tau\\)，也写 \\(\\kappa\\simeq C_Vv\\ell/3\\)。",
+      "普通声子碰撞在第一Brillouin区内守恒晶格准动量，而Umklapp过程满足 \\(\\boldsymbol k_1+\\boldsymbol k_2=\\boldsymbol k_3+\\boldsymbol G\\)，\\(\\boldsymbol G\\ne0\\) 为倒格矢，可将总声子准动量转移给晶格，从而松弛热流。单纯能量守恒不保证热流不衰减。",
+      "在 \\(T\\gg\\Theta_D\\) 时比热趋Dulong–Petit常数，若Umklapp率近似 \\(\\tau_U^{-1}\\propto T\\)，则 \\(\\kappa\\propto T^{-1}\\)。这依赖寿命模型；强无序、局域振动、二维水动力声子输运或接近熔融时不能无条件使用此反比律。"
+    ],
+    "tags": [
+      "声子Boltzmann",
+      "Debye热容",
+      "Umklapp"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  }
+]

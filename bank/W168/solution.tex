@@ -1,4 +1,4 @@
-(1) 总机械能以最低点为零，$E=mL^2\dot\theta^2/2+mgL(1-\cos\theta)$。在最高角 $\theta_0$ 瞬间 $\dot\theta=0$，所以 $E=mgL(1-\cos\theta_0)$。相减得 $\dot\theta^2=(2g/L)(\cos\theta-\cos\theta_0)$，适用于两转折点之间。
-(2) 周期是从最低点到转折点耗时的四倍，$T=4\sqrt{L/(2g)}\int_0^{\theta_0}d\theta/\sqrt{\cos\theta-\cos\theta_0}$。使用 $\cos\theta-\cos\theta_0=2[\sin^2(\theta_0/2)-\sin^2(\theta/2)]$ 可见在转折点积分有可积平方根奇异性。
-(3) 令 $k=\sin(\theta_0/2)$，代换 $\sin(\theta/2)=k\sin\varphi$，积分化为 $T=4\sqrt{L/g}K(k)$，$K(k)=\int_0^{\pi/2}(1-k^2\sin^2\varphi)^{-1/2}d\varphi$。对小 $k$ 展开 $K(k)=\frac\pi2(1+k^2/4+O(k^4))$，故 $T=2\pi\sqrt{L/g}[1+\theta_0^2/16+O(\theta_0^4)]$。
-(4) 当 $\theta_0\to\pi^-$，$k\to1^-$，完全椭圆积分 $K(k)\sim\ln[4/\sqrt{1-k^2}]$ 发散，因此单摆越接近最高不稳定平衡位置，周期越长且趋无穷。普通小角周期只在 $\theta_0\ll1$ 时有效，不能描述分离曲线附近的减速运动。
+(1) 总机械能以最低点为零，\(E=mL^2\dot\theta^2/2+mgL(1-\cos\theta)\)。在最高角 \(\theta_0\) 瞬间 \(\dot\theta=0\)，所以 \(E=mgL(1-\cos\theta_0)\)。相减得 \(\dot\theta^2=(2g/L)(\cos\theta-\cos\theta_0)\)，适用于两转折点之间。
+(2) 周期是从最低点到转折点耗时的四倍，\(T=4\sqrt{L/(2g)}\int_0^{\theta_0}d\theta/\sqrt{\cos\theta-\cos\theta_0}\)。使用 \(\cos\theta-\cos\theta_0=2[\sin^2(\theta_0/2)-\sin^2(\theta/2)]\) 可见在转折点积分有可积平方根奇异性。
+(3) 令 \(k=\sin(\theta_0/2)\)，代换 \(\sin(\theta/2)=k\sin\varphi\)，积分化为 \(T=4\sqrt{L/g}K(k)\)，\(K(k)=\int_0^{\pi/2}(1-k^2\sin^2\varphi)^{-1/2}d\varphi\)。对小 \(k\) 展开 \(K(k)=\frac\pi2(1+k^2/4+O(k^4))\)，故 \(T=2\pi\sqrt{L/g}[1+\theta_0^2/16+O(\theta_0^4)]\)。
+(4) 当 \(\theta_0\to\pi^-\)，\(k\to1^-\)，完全椭圆积分 \(K(k)\sim\ln[4/\sqrt{1-k^2}]\) 发散，因此单摆越接近最高不稳定平衡位置，周期越长且趋无穷。普通小角周期只在 \(\theta_0\ll1\) 时有效，不能描述分离曲线附近的减速运动。

@@ -1,7 +1,7 @@
-(1) 用 $\mathbf E=-\nabla\phi$、$\rho=\varepsilon\nabla\cdot\mathbf E=-\varepsilon\nabla^2\phi$，$\partial_t\rho+\nabla\cdot\mathbf j=0$，得 $\varepsilon\partial_t\nabla^2\phi+\nabla\cdot(\sigma\nabla\phi)=0$。需注意此式在 $\mathbf k=0$ 处不确定均匀电势零点。
+(1) 用 \(\mathbf E=-\nabla\phi\)、\(\rho=\varepsilon\nabla\cdot\mathbf E=-\varepsilon\nabla^2\phi\)，\(\partial_t\rho+\nabla\cdot\mathbf j=0\)，得 \(\varepsilon\partial_t\nabla^2\phi+\nabla\cdot(\sigma\nabla\phi)=0\)。需注意此式在 \(\mathbf k=0\) 处不确定均匀电势零点。
 
-(2) 代入非零波数，$-\varepsilon k^2\dot\phi_0-(\mathbf k\cdot\sigma\mathbf k)\phi_0=0$，得到 $\phi_0(t)=\phi_0(0)e^{-t/\tau(\hat k)}$，$\tau=\varepsilon k^2/(\mathbf k\cdot\sigma\mathbf k)=\varepsilon/[\sum_i\sigma_i\hat k_i^2]$。对应体电荷同样以该速率衰减。
+(2) 代入非零波数，\(-\varepsilon k^2\dot\phi_0-(\mathbf k\cdot\sigma\mathbf k)\phi_0=0\)，得到 \(\phi_0(t)=\phi_0(0)e^{-t/\tau(\hat k)}\)，\(\tau=\varepsilon k^2/(\mathbf k\cdot\sigma\mathbf k)=\varepsilon/[\sum_i\sigma_i\hat k_i^2]\)。对应体电荷同样以该速率衰减。
 
-(3) 单一空间实谐波平均电场能密度 $\bar u=\varepsilon k^2|\phi_0|^2/4$，因此 $-\dot{\bar u}=\varepsilon k^2|\phi_0|^2/(2\tau)=(\mathbf k\cdot\sigma\mathbf k)|\phi_0|^2/2$。焦耳损耗 $\overline{\mathbf j\cdot\mathbf E}=\langle\mathbf E\cdot\sigma\mathbf E\rangle=(\mathbf k\cdot\sigma\mathbf k)|\phi_0|^2/2$，二者一致。
+(3) 单一空间实谐波平均电场能密度 \(\bar u=\varepsilon k^2|\phi_0|^2/4\)，因此 \(-\dot{\bar u}=\varepsilon k^2|\phi_0|^2/(2\tau)=(\mathbf k\cdot\sigma\mathbf k)|\phi_0|^2/2\)。焦耳损耗 \(\overline{\mathbf j\cdot\mathbf E}=\langle\mathbf E\cdot\sigma\mathbf E\rangle=(\mathbf k\cdot\sigma\mathbf k)|\phi_0|^2/2\)，二者一致。
 
-(4) 令 $\sigma_{\max},\sigma_{\min}$ 为张量最大与最小本征值，Rayleigh商保证 $\sigma_{\min}\le\hat k\cdot\sigma\hat k\le\sigma_{\max}$。沿最大电导轴弛豫最快，最小轴最慢；各向同性 $\sigma_i=\sigma$ 时 $\tau=\varepsilon/\sigma$。$\mathbf k=0$ 的均匀场模式不产生体自由电荷，需由外边界供电与极化机制另外决定，不能套用对非零 $k$ 求得的弛豫公式。
+(4) 令 \(\sigma_{\max},\sigma_{\min}\) 为张量最大与最小本征值，Rayleigh商保证 \(\sigma_{\min}\le\hat k\cdot\sigma\hat k\le\sigma_{\max}\)。沿最大电导轴弛豫最快，最小轴最慢；各向同性 \(\sigma_i=\sigma\) 时 \(\tau=\varepsilon/\sigma\)。\(\mathbf k=0\) 的均匀场模式不产生体自由电荷，需由外边界供电与极化机制另外决定，不能套用对非零 \(k\) 求得的弛豫公式。

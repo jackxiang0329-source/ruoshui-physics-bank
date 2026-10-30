@@ -1,4 +1,4 @@
-(1) 取观测点 $(a,0,0)$，电荷元 $\lambda\,dz$ 距离为 $\sqrt{a^2+z^2}$。由库仑势叠加，$V(a)=\lambda/(4\pi\varepsilon_0)\int_{-L/2}^{L/2}dz/\sqrt{a^2+z^2}=\lambda/(2\pi\varepsilon_0)\operatorname{arsinh}(L/(2a))$。对有限段电荷积分收敛，并且 $a\to\infty$ 时势确实趋零。
-(2) 沿径向的电场 $E_a=-dV/da$。利用 $\frac d{da}\operatorname{arsinh}(L/(2a))=-L/[a\sqrt{4a^2+L^2}]$，得 $E_a=\lambda L/[4\pi\varepsilon_0 a\sqrt{a^2+L^2/4}]$，方向离开线段。直接对电场元作中垂线投影，$E_a=\lambda/(4\pi\varepsilon_0)\int_{-L/2}^{L/2}a\,dz/(a^2+z^2)^{3/2}$，积分后给出同一表达式，证明两种算法一致。
-(3) 对 $a\gg L$，$\sqrt{a^2+L^2/4}=a[1+O(L^2/a^2)]$，因此 $E_a\simeq\lambda L/(4\pi\varepsilon_0a^2)$。段电荷总量 $Q=\lambda L$，远场首项就是位于中心的点电荷库仑场；下一项与几何分布有关，属于多极修正。
-(4) 对 $a\ll L$，分母 $\sqrt{a^2+L^2/4}\simeq L/2$，故 $E_a\simeq\lambda/(2\pi\varepsilon_0a)$，与无限长均匀线电荷在径向的高斯定律结果一致。有限段的势在中区为 $V\sim[\lambda/(2\pi\varepsilon_0)]\ln(L/a)$，随 $L\to\infty$ 发散，所以无限线电荷只适合指定有限参考半径间的电势差，而不能再设无穷远电势为零。
+(1) 取观测点 \((a,0,0)\)，电荷元 \(\lambda\,dz\) 距离为 \(\sqrt{a^2+z^2}\)。由库仑势叠加，\(V(a)=\lambda/(4\pi\varepsilon_0)\int_{-L/2}^{L/2}dz/\sqrt{a^2+z^2}=\lambda/(2\pi\varepsilon_0)\operatorname{arsinh}(L/(2a))\)。对有限段电荷积分收敛，并且 \(a\to\infty\) 时势确实趋零。
+(2) 沿径向的电场 \(E_a=-dV/da\)。利用 \(\frac d{da}\operatorname{arsinh}(L/(2a))=-L/[a\sqrt{4a^2+L^2}]\)，得 \(E_a=\lambda L/[4\pi\varepsilon_0 a\sqrt{a^2+L^2/4}]\)，方向离开线段。直接对电场元作中垂线投影，\(E_a=\lambda/(4\pi\varepsilon_0)\int_{-L/2}^{L/2}a\,dz/(a^2+z^2)^{3/2}\)，积分后给出同一表达式，证明两种算法一致。
+(3) 对 \(a\gg L\)，\(\sqrt{a^2+L^2/4}=a[1+O(L^2/a^2)]\)，因此 \(E_a\simeq\lambda L/(4\pi\varepsilon_0a^2)\)。段电荷总量 \(Q=\lambda L\)，远场首项就是位于中心的点电荷库仑场；下一项与几何分布有关，属于多极修正。
+(4) 对 \(a\ll L\)，分母 \(\sqrt{a^2+L^2/4}\simeq L/2\)，故 \(E_a\simeq\lambda/(2\pi\varepsilon_0a)\)，与无限长均匀线电荷在径向的高斯定律结果一致。有限段的势在中区为 \(V\sim[\lambda/(2\pi\varepsilon_0)]\ln(L/a)\)，随 \(L\to\infty\) 发散，所以无限线电荷只适合指定有限参考半径间的电势差，而不能再设无穷远电势为零。

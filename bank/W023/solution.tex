@@ -1,4 +1,4 @@
-(1) 对球对称压强 $p'(r,t)=P(r)e^{-i\omega t}$，球坐标 Laplace 算符为 $\nabla^2P=r^{-2}(r^2P')'$，故
+(1) 对球对称压强 \(p'(r,t)=P(r)e^{-i\omega t}\)，球坐标 Laplace 算符为 \(\nabla^2P=r^{-2}(r^2P')'\)，故
 \[
 \frac1{r^2}(r^2P')'+k^2P=0,\qquad k=\omega/c.
 \]
@@ -7,31 +7,31 @@
 P(r)=A j_0(kr)+B y_0(kr)
 =A\frac{\sin kr}{kr}-B\frac{\cos kr}{kr}.
 \]
-由于 $y_0(kr)\propto1/r$ 在球心发散，必须取 $B=0$；而 $j_0(0)=1$ 有限且导数在原点为零。
+由于 \(y_0(kr)\propto1/r\) 在球心发散，必须取 \(B=0\)；而 \(j_0(0)=1\) 有限且导数在原点为零。
 
-(2) 流体线性动量方程 $\rho_0\partial_t v_r=-\partial_r p'$。对 $\omega>0$ 的谐波振动，刚性壁 $v_r(a,t)=0$ 等价于 $P'(a)=0$，即
+(2) 流体线性动量方程 \(\rho_0\partial_t v_r=-\partial_r p'\)。对 \(\omega>0\) 的谐波振动，刚性壁 \(v_r(a,t)=0\) 等价于 \(P'(a)=0\)，即
 \[
 j_0'(ka)=0\quad\Longleftrightarrow\quad
 ka\cos(ka)-\sin(ka)=0.
 \]
-对正根令 $z=ka$，则满足 $\tan z=z$，不包括 $z=0$ 的静态零模。第一个非零正根为 $z_1\simeq4.493409458$，所以最低球对称声学振荡频率
+对正根令 \(z=ka\)，则满足 \(\tan z=z\)，不包括 \(z=0\) 的静态零模。第一个非零正根为 \(z_1\simeq4.493409458\)，所以最低球对称声学振荡频率
 \[
 \omega_{1,\rm radial}=\frac{c z_1}{a}\simeq4.493409458\,\frac ca.
 \]
 这仅是球对称径向支的最低正频，不代表所有非球对称角模的最低正频。
 
-(3) 两个不同特征值 $k_m^2\ne k_n^2$ 对应的径向方程交叉相乘相减并在 $r\in(0,a)$ 积分，利用正则球心条件和 Neumann 壁条件，得到
+(3) 两个不同特征值 \(k_m^2\ne k_n^2\) 对应的径向方程交叉相乘相减并在 \(r\in(0,a)\) 积分，利用正则球心条件和 Neumann 壁条件，得到
 \[
 (k_m^2-k_n^2)\int_0^a r^2P_m(r)P_n(r)\,dr=0,
 \]
-故径向模在 $r^2dr$ 权重下正交。声压与速度的线性能量密度为
+故径向模在 \(r^2dr\) 权重下正交。声压与速度的线性能量密度为
 \[
 u=\frac{p'^2}{2\rho_0c^2}+\frac{\rho_0|\boldsymbol v|^2}{2}.
 \]
-结合连续方程 $\partial_tp'=-\rho_0c^2\nabla\cdot\boldsymbol v$ 和动量方程，可得局部能量平衡
+结合连续方程 \(\partial_tp'=-\rho_0c^2\nabla\cdot\boldsymbol v\) 和动量方程，可得局部能量平衡
 \[
 \partial_tu+\nabla\cdot(p'\boldsymbol v)=0.
 \]
-刚性壁 $\boldsymbol v\cdot\hat n=0$，故对空腔积分的总声能随时间守恒。
+刚性壁 \(\boldsymbol v\cdot\hat n=0\)，故对空腔积分的总声能随时间守恒。
 
-(4) $k=0$ 时径向正则解为常数 $P(r)=P_0$，对应 $\omega=0$ 的空间均匀静压微扰，而非周期性传播声波；因此频率谱中的零模不能算作第一声学振动。当半径 $a\mapsto\eta a$ 且介质声速不变时，本征无量纲根 $z_n$ 不变，全部球对称非零频率 $\omega_n=c z_n/a$ 按 $1/\eta$ 缩放，符合波动方程的尺度规律。
+(4) \(k=0\) 时径向正则解为常数 \(P(r)=P_0\)，对应 \(\omega=0\) 的空间均匀静压微扰，而非周期性传播声波；因此频率谱中的零模不能算作第一声学振动。当半径 \(a\mapsto\eta a\) 且介质声速不变时，本征无量纲根 \(z_n\) 不变，全部球对称非零频率 \(\omega_n=c z_n/a\) 按 \(1/\eta\) 缩放，符合波动方程的尺度规律。

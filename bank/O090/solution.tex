@@ -1,7 +1,7 @@
-(1) 初始向量为 $(1,0)^\mathsf T$，第一次分束后为 $(c_1,s_1)^\mathsf T$，两臂相位矩阵为 $\operatorname{diag}(e^{i\phi},1)$。再乘 $R(\theta_2)$，得到 $A_1=c_2c_1e^{i\phi}-s_2s_1$，$A_2=s_2c_1e^{i\phi}+c_2s_1$，其中 $c_j=\cos\theta_j,s_j=\sin\theta_j$。
+(1) 初始向量为 \((1,0)^\mathsf T\)，第一次分束后为 \((c_1,s_1)^\mathsf T\)，两臂相位矩阵为 \(\operatorname{diag}(e^{i\phi},1)\)。再乘 \(R(\theta_2)\)，得到 \(A_1=c_2c_1e^{i\phi}-s_2s_1\)，\(A_2=s_2c_1e^{i\phi}+c_2s_1\)，其中 \(c_j=\cos\theta_j,s_j=\sin\theta_j\)。
 
-(2) $I_1=c_2^2c_1^2+s_2^2s_1^2-2c_1s_1c_2s_2\cos\phi$，$I_2=1-I_1$，和为1反映整个系统幺正。令 $a=c_1c_2,b=s_1s_2$，端口1可见度 $\mathcal V=(I_{\max}-I_{\min})/(I_{\max}+I_{\min})=2ab/(a^2+b^2)\le1$；等号条件 $a=b$ 等价于 $\theta_1+\theta_2=\pi/2$。
+(2) \(I_1=c_2^2c_1^2+s_2^2s_1^2-2c_1s_1c_2s_2\cos\phi\)，\(I_2=1-I_1\)，和为1反映整个系统幺正。令 \(a=c_1c_2,b=s_1s_2\)，端口1可见度 \(\mathcal V=(I_{\max}-I_{\min})/(I_{\max}+I_{\min})=2ab/(a^2+b^2)\le1\)；等号条件 \(a=b\) 等价于 \(\theta_1+\theta_2=\pi/2\)。
 
-(3) $I_1=|ae^{i\phi}-b|^2$，要为0必须 $a=b$ 且 $\phi=2\pi n$。即使 $a\ne b$，端口2有可能因另一种匹配条件与相位 $\phi=\pi$ 而变暗，须分别求零点。两端口都不能同时变暗；幺正性使总光强恒为1，因而任一完全暗端口时另一个必须全亮。
+(3) \(I_1=|ae^{i\phi}-b|^2\)，要为0必须 \(a=b\) 且 \(\phi=2\pi n\)。即使 \(a\ne b\)，端口2有可能因另一种匹配条件与相位 \(\phi=\pi\) 而变暗，须分别求零点。两端口都不能同时变暗；幺正性使总光强恒为1，因而任一完全暗端口时另一个必须全亮。
 
-(4) 单光子端口1概率为 $I_1(\phi)$，二元Fisher信息 $\mathcal F=(\partial_\phi I_1)^2/[I_1(1-I_1)]=4a^2b^2\sin^2\phi/[I_1(1-I_1)]$，在不为0或1的工作点成立，极限值以连续延拓定义。对 $\theta_1=\theta_2=\pi/4$，$I_1=(1-\cos\phi)/2$，所以 $\mathcal F=1$ 每个单光子、几乎处处与相位无关。
+(4) 单光子端口1概率为 \(I_1(\phi)\)，二元Fisher信息 \(\mathcal F=(\partial_\phi I_1)^2/[I_1(1-I_1)]=4a^2b^2\sin^2\phi/[I_1(1-I_1)]\)，在不为0或1的工作点成立，极限值以连续延拓定义。对 \(\theta_1=\theta_2=\pi/4\)，\(I_1=(1-\cos\phi)/2\)，所以 \(\mathcal F=1\) 每个单光子、几乎处处与相位无关。

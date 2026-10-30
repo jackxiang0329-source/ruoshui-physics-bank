@@ -1,4 +1,4 @@
-(1) $V=\mathbf x^{\mathsf T}K\mathbf x/2$，其中 $K=k\,\mathrm{tridiag}(-1,2,-1)$ 为 $N\times N$ 对称正定矩阵。其特征值 $4k\sin^2[s\pi/(2(N+1))]$，$s=1,\ldots,N$，均严格正。
-(2) 高斯热平衡给出 $\langle x_i x_j\rangle=k_BT(K^{-1})_{ij}$。离散Dirichlet Green函数为 $(K^{-1})_{ij}=\min(i,j)[N+1-\max(i,j)]/[k(N+1)]$；代回差分方程 $2G_{ij}-G_{i-1,j}-G_{i+1,j}=\delta_{ij}/k$ 可独立核验。
-(3) 三对角行列式递推 $D_N=2D_{N-1}-D_{N-2}$，$D_0=1,D_1=2$，故 $\det K=k^N(N+1)$。构型配分 $Z_x=(2\pi k_BT/k)^{N/2}/\sqrt{N+1}$，再乘动量高斯因子 $(2\pi mk_BT)^{N/2}/h^N$，得 $U=Nk_BT$、$C=Nk_B$。
-(4) 中点 $i\simeq(N+1)/2$ 的方差约为 $k_BT(N+1)/(4k)$，随长度线性增长；端点方差严格为零。若两端均自由，刚度矩阵有整体平移零模，构型配分发散，必须去除质心自由度或加固定边界。
+(1) \(V=\mathbf x^{\mathsf T}K\mathbf x/2\)，其中 \(K=k\,\mathrm{tridiag}(-1,2,-1)\) 为 \(N\times N\) 对称正定矩阵。其特征值 \(4k\sin^2[s\pi/(2(N+1))]\)，\(s=1,\ldots,N\)，均严格正。
+(2) 高斯热平衡给出 \(\langle x_i x_j\rangle=k_BT(K^{-1})_{ij}\)。离散Dirichlet Green函数为 \((K^{-1})_{ij}=\min(i,j)[N+1-\max(i,j)]/[k(N+1)]\)；代回差分方程 \(2G_{ij}-G_{i-1,j}-G_{i+1,j}=\delta_{ij}/k\) 可独立核验。
+(3) 三对角行列式递推 \(D_N=2D_{N-1}-D_{N-2}\)，\(D_0=1,D_1=2\)，故 \(\det K=k^N(N+1)\)。构型配分 \(Z_x=(2\pi k_BT/k)^{N/2}/\sqrt{N+1}\)，再乘动量高斯因子 \((2\pi mk_BT)^{N/2}/h^N\)，得 \(U=Nk_BT\)、\(C=Nk_B\)。
+(4) 中点 \(i\simeq(N+1)/2\) 的方差约为 \(k_BT(N+1)/(4k)\)，随长度线性增长；端点方差严格为零。若两端均自由，刚度矩阵有整体平移零模，构型配分发散，必须去除质心自由度或加固定边界。

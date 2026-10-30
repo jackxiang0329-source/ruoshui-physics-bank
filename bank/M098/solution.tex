@@ -1,7 +1,7 @@
-(1) 自由面与出口同为大气压，忽略表面速度，$v_e=\sqrt{2gh}$。出口体积流率 $Q=av_e$；液面运动满足 $A(h)\dot h=-a\sqrt{2gh}$，这是质量守恒与流体机械能的组合，不是常加速度方程。
+(1) 自由面与出口同为大气压，忽略表面速度，\(v_e=\sqrt{2gh}\)。出口体积流率 \(Q=av_e\)；液面运动满足 \(A(h)\dot h=-a\sqrt{2gh}\)，这是质量守恒与流体机械能的组合，不是常加速度方程。
 
-(2) 积分 $dt=-A_0[1+h/H]dh/(a\sqrt{2gh})$，得到 $t(h)=\frac{A_0}{a\sqrt{2g}}[2(\sqrt{h_0}-\sqrt h)+\frac{2}{3H}(h_0^{3/2}-h^{3/2})]$；令 $h=0$ 得 $t_{\rm drain}=\frac{2A_0}{a\sqrt{2g}}(\sqrt{h_0}+h_0^{3/2}/(3H))$。临近排空时 $\sqrt h\sim[a\sqrt{2g}/(2A_0)](t_{\rm drain}-t)$，故 $h\propto(t_{\rm drain}-t)^2$。
+(2) 积分 \(dt=-A_0[1+h/H]dh/(a\sqrt{2gh})\)，得到 \(t(h)=\frac{A_0}{a\sqrt{2g}}[2(\sqrt{h_0}-\sqrt h)+\frac{2}{3H}(h_0^{3/2}-h^{3/2})]\)；令 \(h=0\) 得 \(t_{\rm drain}=\frac{2A_0}{a\sqrt{2g}}(\sqrt{h_0}+h_0^{3/2}/(3H))\)。临近排空时 \(\sqrt h\sim[a\sqrt{2g}/(2A_0)](t_{\rm drain}-t)\)，故 \(h\propto(t_{\rm drain}-t)^2\)。
 
-(3) 水的位能 $E_g=\rho g\int_0^h zA(z)dz=\rho gA_0(h^2/2+h^3/(3H))$。求导为 $\dot E_g=\rho ghA(h)\dot h=-\rho g hQ$。出口动能通量 $\frac12\rho Qv_e^2=\rho ghQ$，恰有 $-\dot E_g=P_{\rm out}$，忽略了罐内有限流速动能。
+(3) 水的位能 \(E_g=\rho g\int_0^h zA(z)dz=\rho gA_0(h^2/2+h^3/(3H))\)。求导为 \(\dot E_g=\rho ghA(h)\dot h=-\rho g hQ\)。出口动能通量 \(\frac12\rho Qv_e^2=\rho ghQ\)，恰有 \(-\dot E_g=P_{\rm out}\)，忽略了罐内有限流速动能。
 
-(4) 实际局部损失可写 $Q=C_da\sqrt{2gh}$，排空时间放大 $1/C_d$。若不能忽略液面速度 $v_s=Q/A(h)$，理想Bernoulli给 $v_e^2-v_s^2=2gh$，故 $Q=a\sqrt{2gh/[1-(a/A(h))^2]}$；近似要求 $a/A(h)\ll1$ 且几何、损失系数随时间缓慢变化。
+(4) 实际局部损失可写 \(Q=C_da\sqrt{2gh}\)，排空时间放大 \(1/C_d\)。若不能忽略液面速度 \(v_s=Q/A(h)\)，理想Bernoulli给 \(v_e^2-v_s^2=2gh\)，故 \(Q=a\sqrt{2gh/[1-(a/A(h))^2]}\)；近似要求 \(a/A(h)\ll1\) 且几何、损失系数随时间缓慢变化。

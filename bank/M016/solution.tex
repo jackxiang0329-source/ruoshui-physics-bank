@@ -1,21 +1,21 @@
-(1) 约束使 $\phi(t)=\Omega t$，因此惯性系加速度的径向分量为 $\ddot r-r\Omega^2$，方位分量为 $2\Omega\dot r$。杆光滑、无径向摩擦，故
+(1) 约束使 \(\phi(t)=\Omega t\)，因此惯性系加速度的径向分量为 \(\ddot r-r\Omega^2\)，方位分量为 \(2\Omega\dot r\)。杆光滑、无径向摩擦，故
 \[
 m(\ddot r-r\Omega^2)=0,\qquad F_\phi=2m\Omega\dot r.
 \]
 第二式的力由杆提供，不能在角速度固定时错误地把珠的角动量当作守恒量。
 
-(2) 径向方程 $\ddot r-\Omega^2r=0$，初值 $r(0)=r_0,\dot r(0)=0$，得到
+(2) 径向方程 \(\ddot r-\Omega^2r=0\)，初值 \(r(0)=r_0,\dot r(0)=0\)，得到
 \[
 r(t)=r_0\cosh(\Omega t),\qquad \dot r(t)=\Omega r_0\sinh(\Omega t).
 \]
-首次到达杆端 $r=R$ 的时间
+首次到达杆端 \(r=R\) 的时间
 \[
 t_R=\frac1\Omega\operatorname{arcosh}(R/r_0),\qquad
 \dot r(t_R)=\Omega\sqrt{R^2-r_0^2}.
 \]
-在 $r<R$ 内 $\dot r\ge0$，故这是首次到达时间，不存在未处理的径向转向点。
+在 \(r<R\) 内 \(\dot r\ge0\)，故这是首次到达时间，不存在未处理的径向转向点。
 
-(3) 杆施加的切向力为 $F_\phi=2m\Omega^2r_0\sinh(\Omega t)$。作用于珠的轴向力矩 $\tau_z=rF_\phi=2m\Omega r\dot r$，电机必须补给等大正转矩以维持匀速；对珠做功的瞬时功率是
+(3) 杆施加的切向力为 \(F_\phi=2m\Omega^2r_0\sinh(\Omega t)\)。作用于珠的轴向力矩 \(\tau_z=rF_\phi=2m\Omega r\dot r\)，电机必须补给等大正转矩以维持匀速；对珠做功的瞬时功率是
 \[
 \mathcal P=\tau_z\Omega=2m\Omega^2r\dot r
 =m\Omega^2\frac{d}{dt}(r^2)\ge0.
@@ -26,9 +26,9 @@ t_R=\frac1\Omega\operatorname{arcosh}(R/r_0),\qquad
 \[
 K=\frac m2(\dot r^2+\Omega^2r^2).
 \]
-由径向方程得 $\dot K=m\dot r\ddot r+m\Omega^2r\dot r=2m\Omega^2r\dot r=\mathcal P$。因此
+由径向方程得 \(\dot K=m\dot r\ddot r+m\Omega^2r\dot r=2m\Omega^2r\dot r=\mathcal P\)。因此
 \[
 W_{\rm motor}=\int_0^{t_R}\mathcal P\,dt
 =m\Omega^2(R^2-r_0^2).
 \]
-直接计算 $K(R)-K(0)$ 得到完全相同结果。固定 $R,r_0$ 下 $\Omega\to0^+$，$t_R\to\infty$、$\dot r(t_R)\to0$、$W_{\rm motor}\to0$；这反映无限缓慢驱动极限，不可误称为有限时间内珠会滑出。
+直接计算 \(K(R)-K(0)\) 得到完全相同结果。固定 \(R,r_0\) 下 \(\Omega\to0^+\)，\(t_R\to\infty\)、\(\dot r(t_R)\to0\)、\(W_{\rm motor}\to0\)；这反映无限缓慢驱动极限，不可误称为有限时间内珠会滑出。

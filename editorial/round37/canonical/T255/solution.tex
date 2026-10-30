@@ -1,0 +1,4 @@
+\par\noindent\textbf{(1)} 引入乘子 \(\lambda(\sum_i p_i-1)\)，逐项变分得 \(E_i+k_BT(\ln p_i+1)+\lambda=0\)，故 \(p_i=e^{-\beta E_i}/Z\)，其中 \(Z=\sum_i e^{-\beta E_i}\)。这确立Boltzmann分布是给定温度下的自由能极值解。
+\par\noindent\textbf{(2)} 令平衡分布 \(q_i=e^{-\beta E_i}/Z\)。代入得 \(\mathcal F[p]=-k_BT\ln Z+k_BT\sum_i p_i\ln(p_i/q_i)=F_{\rm eq}+k_BT D(p\Vert q)\)。由Gibbs不等式 \(D\ge0\)，所以平衡态为全局极小，而非只满足驻点条件。
+\par\noindent\textbf{(3)} 在 \(p_i>0\) 处对归一扰动 \(\delta p_i\) 作二阶展开，\(\delta^2\mathcal F=(k_BT/2)\sum_i(\delta p_i)^2/p_i\ge0\)，只有零扰动等号成立。温度正值确保严格凸性；若 \(T<0\) 的有限能谱反转系综，形式上极小性不能直接照用。
+\par\noindent\textbf{(4)} 若动力学是满足详细平衡的Markov过程且以 \(q\) 为稳态，则 \(D(p(t)\Vert q)\) 随时间非增，故 \(\mathcal F[p(t)]\) 下降。但对任意非Markov、外驱或反馈动力学不能自动断言 \(d\mathcal F/dt\le0\)，必须说明热浴与转换率条件。

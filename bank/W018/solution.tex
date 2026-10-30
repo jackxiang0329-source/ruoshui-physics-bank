@@ -1,8 +1,8 @@
-(1) 体内不可压 $\nabla\cdot\boldsymbol v=0$ 且 $\boldsymbol v=\nabla\Phi$，故 $\nabla^2\Phi=0$。固底没有垂直速度，$\partial_z\Phi(x,-h,t)=0$。设 $\Phi(x,z,t)=F(z)e^{i(kx-\omega t)}$，空间方程 $F''-k^2F=0$。由底部条件可取
+(1) 体内不可压 \(\nabla\cdot\boldsymbol v=0\) 且 \(\boldsymbol v=\nabla\Phi\)，故 \(\nabla^2\Phi=0\)。固底没有垂直速度，\(\partial_z\Phi(x,-h,t)=0\)。设 \(\Phi(x,z,t)=F(z)e^{i(kx-\omega t)}\)，空间方程 \(F''-k^2F=0\)。由底部条件可取
 \[
 F(z)=A\frac{\cosh[k(z+h)]}{\cosh(kh)}.
 \]
-在自由表面 $z=0$，$F(0)=A,\ F'(0)=Ak\tanh(kh)$。
+在自由表面 \(z=0\)，\(F(0)=A,\ F'(0)=Ak\tanh(kh)\)。
 
 (2) 小扰动自由表面的运动学条件是
 \[
@@ -12,7 +12,7 @@ F(z)=A\frac{\cosh[k(z+h)]}{\cosh(kh)}.
 \[
 \partial_t\Phi|_{z=0}+g\eta=0.
 \]
-取 $\eta=\eta_0 e^{i(kx-\omega t)}$，动力学条件给 $\eta_0=i\omega A/g$。代回运动学条件，
+取 \(\eta=\eta_0 e^{i(kx-\omega t)}\)，动力学条件给 \(\eta_0=i\omega A/g\)。代回运动学条件，
 \[
 -i\omega(i\omega A/g)=Ak\tanh(kh),
 \]
@@ -22,7 +22,7 @@ F(z)=A\frac{\cosh[k(z+h)]}{\cosh(kh)}.
 \]
 只有实正根对应向右传播的正频波，流体密度因无表面张力且重力为唯一回复机制而不出现在色散式中。
 
-(3) 相速度 $c_p=\omega/k=\sqrt{(g/k)\tanh(kh)}$。对 $\omega^2$ 求 $k$ 导数，
+(3) 相速度 \(c_p=\omega/k=\sqrt{(g/k)\tanh(kh)}\)。对 \(\omega^2\) 求 \(k\) 导数，
 \[
 2\omega\,\frac{d\omega}{dk}
 =g[\tanh(kh)+kh\,\operatorname{sech}^2(kh)].
@@ -32,6 +32,6 @@ F(z)=A\frac{\cosh[k(z+h)]}{\cosh(kh)}.
 c_g=\frac{d\omega}{dk}
 =\frac{c_p}{2}\left[1+\frac{2kh}{\sinh(2kh)}\right].
 \]
-对 $kh>0$，有 $0<2kh/\sinh(2kh)<1$，故 $c_p/2<c_g<c_p$，反映自由表面重力波的正常频散。
+对 \(kh>0\)，有 \(0<2kh/\sinh(2kh)<1\)，故 \(c_p/2<c_g<c_p\)，反映自由表面重力波的正常频散。
 
-(4) 浅水 $kh\ll1$ 时 $\tanh(kh)\sim kh$，故 $\omega\simeq k\sqrt{gh}$、$c_p\simeq c_g\simeq\sqrt{gh}$，波速几乎与波数无关，波包近似无频散。深水 $kh\gg1$ 时 $\tanh(kh)\to1$，故 $\omega\simeq\sqrt{gk}$、$c_p\simeq\sqrt{g/k}$、$c_g\simeq c_p/2$，波包移动速度是相位速度的一半。若加入表面张力，短波色散将改变，不能继续把高频结果当作普适定律。
+(4) 浅水 \(kh\ll1\) 时 \(\tanh(kh)\sim kh\)，故 \(\omega\simeq k\sqrt{gh}\)、\(c_p\simeq c_g\simeq\sqrt{gh}\)，波速几乎与波数无关，波包近似无频散。深水 \(kh\gg1\) 时 \(\tanh(kh)\to1\)，故 \(\omega\simeq\sqrt{gk}\)、\(c_p\simeq\sqrt{g/k}\)、\(c_g\simeq c_p/2\)，波包移动速度是相位速度的一半。若加入表面张力，短波色散将改变，不能继续把高频结果当作普适定律。

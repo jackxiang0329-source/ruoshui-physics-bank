@@ -1,7 +1,7 @@
-(1) 令交换算符 $S|a\rangle|b\rangle=|b\rangle|a\rangle$，$S^2=I$、$S=S^\dagger$。辅助态为 $|+\rangle$ 时受控SWAP把两个寄存器置于按辅助路径的相干叠加，最后Hadamard将对称/反对称分量映射到测量结果。
+(1) 令交换算符 \(S|a\rangle|b\rangle=|b\rangle|a\rangle\)，\(S^2=I\)、\(S=S^\dagger\)。辅助态为 \(|+\rangle\) 时受控SWAP把两个寄存器置于按辅助路径的相干叠加，最后Hadamard将对称/反对称分量映射到测量结果。
 
-(2) 直接在辅助比特的两个投影分支取迹，有 $p_0=\operatorname{tr}[(I+S)(\rho\otimes\sigma)]/2$。利用 $\operatorname{tr}[S(A\otimes B)]=\operatorname{tr}(AB)$，得到 $\boxed{p_0=(1+\operatorname{tr}\rho\sigma)/2}$，$p_1=(1-\operatorname{tr}\rho\sigma)/2$。纯态时 $\rho=|\psi\rangle\langle\psi|$、$\sigma=|\phi\rangle\langle\phi|$，故重叠为 $|\langle\psi|\phi\rangle|^2$。
+(2) 直接在辅助比特的两个投影分支取迹，有 \(p_0=\operatorname{tr}[(I+S)(\rho\otimes\sigma)]/2\)。利用 \(\operatorname{tr}[S(A\otimes B)]=\operatorname{tr}(AB)\)，得到 \(\boxed{p_0=(1+\operatorname{tr}\rho\sigma)/2}\)，\(p_1=(1-\operatorname{tr}\rho\sigma)/2\)。纯态时 \(\rho=|\psi\rangle\langle\psi|\)、\(\sigma=|\phi\rangle\langle\phi|\)，故重叠为 \(|\langle\psi|\phi\rangle|^2\)。
 
-(3) 当两输入相同，记纯度 $P=\operatorname{tr}\rho^2$，则 $p_0=(1+P)/2$。为每次测试定义 $X=+1$ 当测到0、$X=-1$ 当测到1，故 $\mathbb EX=p_0-p_1=P$、$X^2=1$，单次方差为 $1-P^2$。重复 $N$ 次独立测试的样本均值 $\widehat P=N^{-1}\sum_jX_j$ 是无偏估计且 $\boxed{\operatorname{Var}\widehat P=(1-P^2)/N}$。
+(3) 当两输入相同，记纯度 \(P=\operatorname{tr}\rho^2\)，则 \(p_0=(1+P)/2\)。为每次测试定义 \(X=+1\) 当测到0、\(X=-1\) 当测到1，故 \(\mathbb EX=p_0-p_1=P\)、\(X^2=1\)，单次方差为 \(1-P^2\)。重复 \(N\) 次独立测试的样本均值 \(\widehat P=N^{-1}\sum_jX_j\) 是无偏估计且 \(\boxed{\operatorname{Var}\widehat P=(1-P^2)/N}\)。
 
-(4) 若 $\rho$ 为纯态，$P=1$、$p_0=1$；若 $\rho=I/d$，$P=1/d$、$p_0=(1+1/d)/2$。两个正交纯态的交叠0，故 $p_0=1/2$，并非结果0绝不出现。交换测试只提供一个内积型实数，远不足以确定 $d^2-1$ 个态参量，因此不能替代量子态层析。
+(4) 若 \(\rho\) 为纯态，\(P=1\)、\(p_0=1\)；若 \(\rho=I/d\)，\(P=1/d\)、\(p_0=(1+1/d)/2\)。两个正交纯态的交叠0，故 \(p_0=1/2\)，并非结果0绝不出现。交换测试只提供一个内积型实数，远不足以确定 \(d^2-1\) 个态参量，因此不能替代量子态层析。

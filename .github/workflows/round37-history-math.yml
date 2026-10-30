@@ -1,0 +1,39 @@
+name: Round37 historical math LaTeX conservative audit and migration
+on:
+  pull_request:
+    paths:
+      - "scripts/historical_latex_migration.py"
+      - ".github/workflows/round37-history-math.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: round37-history-migration
+  cancel-in-progress: false
+jobs:
+  math-history:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: physics-round37-latex-historical-review-20261030
+          fetch-depth: 0
+      - name: Convert only unambiguous TeX math delimiters and audit full historical sources
+        run: python3 scripts/historical_latex_migration.py
+      - name: Commit historical TeX and audit directly to GitHub review branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -u
+          git add -f editorial/historical-latex-review
+          if ! git diff --cached --quiet; then
+            git commit -m "Round37 audit and migrate historical TeX math delimiters [review only]"
+            git fetch origin physics-round37-latex-historical-review-20261030
+            git rebase origin/physics-round37-latex-historical-review-20261030
+            git push origin HEAD:refs/heads/physics-round37-latex-historical-review-20261030
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: historical-math-audit
+          path: editorial/historical-latex-review/

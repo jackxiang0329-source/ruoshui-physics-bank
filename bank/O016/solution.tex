@@ -2,29 +2,29 @@
 \[
 r_{01}=\frac{n_0-n_1}{n_0+n_1},\qquad r_{12}=\frac{n_1-n_s}{n_1+n_s},
 \]
-膜单程相位 $\delta=2\pi n_1d/\lambda$。利用多次往返传播 $e^{2i\delta}$ 与界面振幅关系，整体复反射幅度为
+膜单程相位 \(\delta=2\pi n_1d/\lambda\)。利用多次往返传播 \(e^{2i\delta}\) 与界面振幅关系，整体复反射幅度为
 \[
 r(\lambda)=\frac{r_{01}+r_{12}e^{2i\delta}}{1+r_{01}r_{12}e^{2i\delta}},
 \qquad \mathcal R=|r|^2.
 \]
 这是电场幅度的相干和，不可以先将各反射强度相加。
 
-(2) 四分之一波条件 $\delta(\lambda_0)=\pi/2$ 使 $e^{2i\delta}=-1$。此时 $r=(r_{01}-r_{12})/(1-r_{01}r_{12})$，所以零反射要求 $r_{01}=r_{12}$。化简得
+(2) 四分之一波条件 \(\delta(\lambda_0)=\pi/2\) 使 \(e^{2i\delta}=-1\)。此时 \(r=(r_{01}-r_{12})/(1-r_{01}r_{12})\)，所以零反射要求 \(r_{01}=r_{12}\)。化简得
 \[
 n_1^2=n_0n_s,\qquad n_1=\sqrt{n_0n_s}.
 \]
-使 $\delta_0=\pi/2$ 的最小正厚度为
+使 \(\delta_0=\pi/2\) 的最小正厚度为
 \[
 d_{\min}=\frac{\lambda_0}{4\sqrt{n_0n_s}}.
 \]
-因为 $n_s>n_0$，此时 $n_0<n_1<n_s$，界面反射幅度均为负数，恰以半波往返相位抵消。
+因为 \(n_s>n_0\)，此时 \(n_0<n_1<n_s\)，界面反射幅度均为负数，恰以半波往返相位抵消。
 
-(3) 在零反射设计下令 $\rho=r_{01}=r_{12}$，$|\rho|<1$，以及 $\varepsilon=\delta-\pi/2$。有 $e^{2i\delta}=-e^{2i\varepsilon}$，因此
+(3) 在零反射设计下令 \(\rho=r_{01}=r_{12}\)，\(|\rho|<1\)，以及 \(\varepsilon=\delta-\pi/2\)。有 \(e^{2i\delta}=-e^{2i\varepsilon}\)，因此
 \[
 r=\frac{\rho(1-e^{2i\varepsilon})}{1-\rho^2e^{2i\varepsilon}}
 =-\frac{2i\rho}{1-\rho^2}\varepsilon+O(\varepsilon^2).
 \]
-由 $\delta=(\pi/2)(\lambda_0/\lambda)$，$\varepsilon=-(\pi/2)(\Delta\lambda/\lambda_0)+O((\Delta\lambda/\lambda_0)^2)$，所以
+由 \(\delta=(\pi/2)(\lambda_0/\lambda)\)，\(\varepsilon=-(\pi/2)(\Delta\lambda/\lambda_0)+O((\Delta\lambda/\lambda_0)^2)\)，所以
 \[
 \mathcal R(\lambda)
 =\frac{\pi^2\rho^2}{(1-\rho^2)^2}
@@ -33,4 +33,4 @@ r=\frac{\rho(1-e^{2i\varepsilon})}{1-\rho^2e^{2i\varepsilon}}
 \]
 一阶反射率项消失，说明设计中心处是严格的反射率极小值。
 
-(4) 正入射时能流与介质折射率成正比，若整体透射电场幅度为 $t$，则 $\mathcal T=(n_s/n_0)|t|^2$，不可直接用 $|t|^2$ 代替能流透射率。无吸收多层膜满足 $\mathcal R+\mathcal T=1$，所以设计波长 $\mathcal R=0,\mathcal T=1$。偏离设计波长、入射角非零、膜吸收或有色散时不再保证完全增透。
+(4) 正入射时能流与介质折射率成正比，若整体透射电场幅度为 \(t\)，则 \(\mathcal T=(n_s/n_0)|t|^2\)，不可直接用 \(|t|^2\) 代替能流透射率。无吸收多层膜满足 \(\mathcal R+\mathcal T=1\)，所以设计波长 \(\mathcal R=0,\mathcal T=1\)。偏离设计波长、入射角非零、膜吸收或有色散时不再保证完全增透。

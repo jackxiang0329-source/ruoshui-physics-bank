@@ -1,32 +1,32 @@
-(1) 记电容电荷为 $q$，电流为 $i=\dot q$。串联 Kirchhoff 方程为
+(1) 记电容电荷为 \(q\)，电流为 \(i=\dot q\)。串联 Kirchhoff 方程为
 \[
 L\dot i+Ri+q/C=V,\qquad q(0)=0,\quad i(0)=0.
 \]
-等价于 $L\ddot q+R\dot q+q/C=V$，初始电流导数为 $\dot i(0)=V/L$。令 $q_{\infty}=CV$，其偏离平衡量满足齐次阻尼方程。
+等价于 \(L\ddot q+R\dot q+q/C=V\)，初始电流导数为 \(\dot i(0)=V/L\)。令 \(q_{\infty}=CV\)，其偏离平衡量满足齐次阻尼方程。
 
-(2) 欠阻尼角频率 $\omega_d=\sqrt{\omega_0^2-\alpha^2}>0$。满足全部初值的显式解为
+(2) 欠阻尼角频率 \(\omega_d=\sqrt{\omega_0^2-\alpha^2}>0\)。满足全部初值的显式解为
 \[
 i(t)=\frac{V}{L\omega_d}e^{-\alpha t}\sin\omega_dt,\qquad
 q(t)=CV\left[1-e^{-\alpha t}\left(\cos\omega_dt+\frac{\alpha}{\omega_d}\sin\omega_dt\right)\right].
 \]
-第一次正时间的电流零点位于 $t_*=\pi/\omega_d$，电流在 $0<t<t_*$ 为正，之后转负，因此这是电容电荷第一次最大值：
+第一次正时间的电流零点位于 \(t_*=\pi/\omega_d\)，电流在 \(0<t<t_*\) 为正，之后转负，因此这是电容电荷第一次最大值：
 \[
 q_{\max}=CV\left(1+e^{-\alpha\pi/\omega_d}\right)>CV.
 \]
 有限阻尼导致第一次充电过冲。
 
-(3) 电路方程乘 $i$，并使用 $i=\dot q$：
+(3) 电路方程乘 \(i\)，并使用 \(i=\dot q\)：
 \[
 \frac d{dt}\left(\frac12Li^2+\frac{q^2}{2C}\right)+Ri^2=Vi.
 \]
-从0到无穷积分，因 $R>0$ 保证 $i\to0,q\to CV$，电源总供能 $\int_0^\infty Vi\,dt=V(q_\infty-q_0)=CV^2$，最终电容储能为 $CV^2/2$，从而
+从0到无穷积分，因 \(R>0\) 保证 \(i\to0,q\to CV\)，电源总供能 \(\int_0^\infty Vi\,dt=V(q_\infty-q_0)=CV^2\)，最终电容储能为 \(CV^2/2\)，从而
 \[
 \int_0^\infty Ri^2\,dt=\frac12CV^2.
 \]
 这是精确结果，不依赖电路阻尼弱到何种程度，只要电阻严格为正。
 
-(4) 固定 $t$ 先令 $R\to0^+$，则 $\alpha\to0,\omega_d\to\omega_0$，
+(4) 固定 \(t\) 先令 \(R\to0^+\)，则 \(\alpha\to0,\omega_d\to\omega_0\)，
 \[
 q(t)\to CV(1-\cos\omega_0t),\qquad i(t)\to \frac V{L\omega_0}\sin\omega_0t.
 \]
-此时电荷持续振荡，$q(t)$ 没有 $t\to\infty$ 极限；相反，任意 $R>0$ 先取 $t\to\infty$ 都得到 $q=CV$。因此不能先将 $R$ 置零再沿用总焦耳热的长期积分结论。
+此时电荷持续振荡，\(q(t)\) 没有 \(t\to\infty\) 极限；相反，任意 \(R>0\) 先取 \(t\to\infty\) 都得到 \(q=CV\)。因此不能先将 \(R\) 置零再沿用总焦耳热的长期积分结论。

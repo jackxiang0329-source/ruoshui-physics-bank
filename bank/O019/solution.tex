@@ -1,31 +1,31 @@
-(1) 设界面切向为 $x$，Snell 条件要求 $k_x=k_0n_1\sin\theta$ 在两侧相同。透射介质满足 $k_x^2+k_{z,2}^2=k_0^2n_2^2$，因此在 $\theta>\theta_c$ 时
+(1) 设界面切向为 \(x\)，Snell 条件要求 \(k_x=k_0n_1\sin\theta\) 在两侧相同。透射介质满足 \(k_x^2+k_{z,2}^2=k_0^2n_2^2\)，因此在 \(\theta>\theta_c\) 时
 \[
 k_{z,2}=ik_0\kappa,\qquad
 \kappa=\sqrt{n_1^2\sin^2\theta-n_2^2}>0.
 \]
-透射场振幅随 $z>0$ 按 $\exp(-k_0\kappa z)$ 衰减，其 $1/e$ 振幅穿透深度为
+透射场振幅随 \(z>0\) 按 \(\exp(-k_0\kappa z)\) 衰减，其 \(1/e\) 振幅穿透深度为
 \[
 \delta_{\rm ev}=\frac1{k_0\kappa}=\frac{\lambda}{2\pi\kappa}.
 \]
-不应把这一深度与强度的 $1/e$ 深度（后者为一半）混淆。
+不应把这一深度与强度的 \(1/e\) 深度（后者为一半）混淆。
 
-(2) TE 振幅反射系数可写为 $r_s=(k_{z,1}-k_{z,2})/(k_{z,1}+k_{z,2})$，其中 $k_{z,1}=k_0n_1\cos\theta$。代入虚数法向波数：
+(2) TE 振幅反射系数可写为 \(r_s=(k_{z,1}-k_{z,2})/(k_{z,1}+k_{z,2})\)，其中 \(k_{z,1}=k_0n_1\cos\theta\)。代入虚数法向波数：
 \[
 r_s=\frac{n_1\cos\theta-i\kappa}{n_1\cos\theta+i\kappa}
 =e^{i\varphi_s},
 \quad \varphi_s=-2\arctan\frac{\kappa}{n_1\cos\theta}.
 \]
-分母是分子的复共轭，因而 $|r_s|=1$，表示无吸收时反射的法向平均能流与入射相同，但透射介质仍可存在非零倏逝场。
+分母是分子的复共轭，因而 \(|r_s|=1\)，表示无吸收时反射的法向平均能流与入射相同，但透射介质仍可存在非零倏逝场。
 
-(3) 对窄角谱光束，沿 $x$ 的反射相位 $\varphi_s(k_x)$ 导致波包包络驻相位置产生位移
+(3) 对窄角谱光束，沿 \(x\) 的反射相位 \(\varphi_s(k_x)\) 导致波包包络驻相位置产生位移
 \[
 \Delta_{\rm GH}=-\frac{d\varphi_s}{dk_x}
 =-\frac{1}{k_0n_1\cos\theta}\frac{d\varphi_s}{d\theta}.
 \]
-对上式直接求导并使用 $\kappa^2=n_1^2\sin^2\theta-n_2^2$，得到 $d\varphi_s/d\theta=-2n_1\sin\theta/\kappa$，因此
+对上式直接求导并使用 \(\kappa^2=n_1^2\sin^2\theta-n_2^2\)，得到 \(d\varphi_s/d\theta=-2n_1\sin\theta/\kappa\)，因此
 \[
 \Delta_{\rm GH}=\frac{2\tan\theta}{k_0\kappa}>0 .
 \]
 在这一 TE、平面界面和窄角谱约定中，位移沿光束的界面投影前进方向。
 
-(4) 当 $\theta\downarrow\theta_c$，$\kappa\to0$，穿透深度和理想驻相位移都趋大；这并非预言有限宽度光束真的产生无限位移，因为角谱可能跨越全反射临界角，窄角谱近似失效。全反射时透射侧均匀倏逝波在 $z$ 方向的周期平均坡印廷通量为零，但沿界面方向可有非零局域能量流，二者不矛盾。
+(4) 当 \(\theta\downarrow\theta_c\)，\(\kappa\to0\)，穿透深度和理想驻相位移都趋大；这并非预言有限宽度光束真的产生无限位移，因为角谱可能跨越全反射临界角，窄角谱近似失效。全反射时透射侧均匀倏逝波在 \(z\) 方向的周期平均坡印廷通量为零，但沿界面方向可有非零局域能量流，二者不矛盾。

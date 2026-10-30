@@ -1,0 +1,226 @@
+[
+  {
+    "id": "O258",
+    "title": "自聚焦Kerr非线性介质的薄透镜相位与临界强度",
+    "setup": "近轴Gaussian光束强度 \\(I(r)=I_0e^{-2r^2/w^2}\\)，薄Kerr介质厚度 \\(L\\)，折射率 \\(n=n_0+n_2I\\)，其中 \\(n_2>0\\)，忽略吸收及在片内衍射。",
+    "q": [
+      "求横向非线性相位分布。",
+      "在光轴近旁推导等效薄透镜焦距。",
+      "计算非线性相位和束腰功率关系。",
+      "讨论薄片模型和自聚焦临界功率的区别。"
+    ],
+    "s": [
+      "光学相位 \\(\\phi(r)=k_0L[n_0+n_2I_0e^{-2r^2/w^2}]\\)，扣去均匀背景后 \\(\\Delta\\phi(r)=k_0Ln_2I_0e^{-2r^2/w^2}\\)。它取决于空间强度而不是光场振幅的一次方，来自三阶非线性折射。",
+      "用 \\(e^{-2r^2/w^2}\\approx1-2r^2/w^2\\)，非线性相位中的二次项为 \\(-2k_0Ln_2I_0r^2/w^2\\)。薄透镜相位为 \\(-k_0r^2/(2f)\\)，故 \\(1/f_{\\rm NL}=4Ln_2I_0/w^2\\)，正 \\(n_2\\) 导致自聚焦。",
+      "Gaussian束总功率 \\(P=\\int_0^\\infty I_0e^{-2r^2/w^2}2\\pi r\\,dr=\\pi w^2I_0/2\\)。因此 \\(I_0=2P/(\\pi w^2)\\)，非线性透镜强度 \\(f_{\\rm NL}^{-1}=8Ln_2P/(\\pi w^4)\\)，相同功率下更窄束腰产生更强非线性。",
+      "薄片等效焦距不等于体材料自聚焦的精确塌缩临界功率。后者须求二维非线性Schrödinger传播方程的Townes临界解，尺度约 \\(P_{\\rm cr}\\propto\\lambda^2/(n_0n_2)\\)，系数取决于束型与方程规范。若 \\(L\\) 足够大或出现多光子吸收，薄透镜近似失效。"
+    ],
+    "tags": [
+      "Kerr非线性",
+      "Gaussian束",
+      "自聚焦"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "O259",
+    "title": "Mie散射低阶极限的电磁偶极与磁偶极交叉干涉",
+    "setup": "均匀球的远场散射用Mie系数 \\(a_\\ell,b_\\ell\\) 展开，研究小尺寸参数 \\(x=ka\\ll1\\) 且介质相对介电率 \\(\\varepsilon_r\\) 有限的非磁性球。",
+    "q": [
+      "写出最低阶电偶极Mie系数。",
+      "求电偶极主导的总散射截面。",
+      "解释电磁偶极等强时的Kerker前后散射条件。",
+      "讨论光学定理对前向零散射的约束。"
+    ],
+    "s": [
+      "在 \\(x\\ll1\\) 的非磁性情形，电偶极项 \\(a_1\\approx\\frac{2i}{3}(\\varepsilon_r-1)/(\\varepsilon_r+2)\\,x^3\\)，具体正负 \\(i\\) 与时谐约定有关。相应磁偶极 \\(b_1=O(x^5)\\)，因此普通弱磁介质首先由电偶极主导。",
+      "Mie总散射截面 \\(\\sigma_{\\rm sca}=(2\\pi/k^2)\\sum_{\\ell=1}^\\infty(2\\ell+1)(|a_\\ell|^2+|b_\\ell|^2)\\)。保留 \\(\\ell=1\\) 电偶极，得 \\(\\sigma_{\\rm sca}\\approx(6\\pi/k^2)|a_1|^2=(8\\pi/3)k^4a^6|(\\varepsilon_r-1)/(\\varepsilon_r+2)|^2\\)，为Rayleigh六次方律。",
+      "若通过高折射率和尺寸调节使电、磁偶极幅度可比，后向散射振幅在最低阶与 \\(a_1-b_1\\) 成正比，前向散射与 \\(a_1+b_1\\) 成正比。因此 \\(a_1=b_1\\) 能抑制后向散射，属于Kerker型干涉条件；纯非磁Rayleigh极限一般不满足。",
+      "被动无吸收散射体满足 \\(\\sigma_{\\rm ext}=(2\\pi/k^2)\\sum_\\ell(2\\ell+1)\\operatorname{Re}(a_\\ell+b_\\ell)\\)，同时 \\(\\sigma_{\\rm ext}=\\sigma_{\\rm sca}\\ge0\\)。因此不能通过设置 \\(a_1=-b_1\\) 就在保留非零总散射的同时让所有前向散射严格消失；必须考虑光学定理、相位与高阶项。"
+    ],
+    "tags": [
+      "Mie散射",
+      "电磁偶极干涉",
+      "光学定理"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "O260",
+    "title": "光纤色散参数D与零色散波长的脉冲展宽",
+    "setup": "单模光纤传播常数 \\(\\beta(\\omega)\\) 在载频 \\(\\omega_0\\) 附近可作Taylor展开，二阶系数 \\(\\beta_2=d^2\\beta/d\\omega^2\\)；以真空波长 \\(\\lambda=2\\pi c/\\omega\\) 描述色散。",
+    "q": [
+      "由群延迟定义工程色散参数。",
+      "求两波长分量经过长度L的相对延迟。",
+      "推导零色散处三阶项主导的延迟。",
+      "比较材料与波导色散的可调节性。"
+    ],
+    "s": [
+      "群延迟每单位长度为 \\(\\beta_1=d\\beta/d\\omega=1/v_g\\)。对波长求导 \\(D=d\\beta_1/d\\lambda=(d\\beta_1/d\\omega)(d\\omega/d\\lambda)=-(2\\pi c/\\lambda^2)\\beta_2\\)。单位常写为 \\(\\mathrm{ps/(nm\\cdot km)}\\)，其符号与 \\(\\beta_2\\) 相反。",
+      "若输入谱宽 \\(\\Delta\\lambda\\) 很小，群延迟差 \\(\\Delta\\tau\\approx L D(\\lambda_0)\\Delta\\lambda\\)。公式基于一阶波长展开而非把相速度差直接当群延迟；更宽谱应积分 \\(L\\int D(\\lambda)d\\lambda\\)。",
+      "若 \\(\\beta_2(\\omega_0)=0\\)，二阶群速度色散消失，但 \\(\\beta_3=d^3\\beta/d\\omega^3\\) 可能非零。对频率偏移 \\(\\Omega\\)，群延迟 \\(\\tau_g(\\Omega)=L[\\beta_1+\\beta_3\\Omega^2/2+\\cdots]\\)，两侧对称谱的非线性时延仍引起波形畸变。",
+      "总色散为 \\(D_{\\rm total}=D_{\\rm material}+D_{\\rm waveguide}\\)，其中波导项依模式横向场与芯包尺寸。可设计 \\(D_{\\rm total}=0\\) 的波长，但这并不保证 \\(\\beta_3=0\\) 或所有频带无色散，亦不自动消除自相位调制及偏振模色散。"
+    ],
+    "tags": [
+      "光纤通信",
+      "群延迟",
+      "高阶色散"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "O261",
+    "title": "有限孔径成像系统的调制传递函数与空间频率截止",
+    "setup": "理想非相干、无像差、圆形瞳孔直径 \\(D\\)，成像光波长 \\(\\lambda\\)，焦距 \\(f\\)，考察像平面空间频率 \\(\\nu\\ge0\\)。",
+    "q": [
+      "说明非相干点扩散函数与瞳函数的联系。",
+      "推导圆瞳的归一重叠面积公式。",
+      "求像平面空间频率截止。",
+      "检验低频极限与像差影响。"
+    ],
+    "s": [
+      "相干振幅点扩散函数为瞳函数 \\(P(\\boldsymbol r)\\) 的Fourier变换，非相干强度点扩散函数 \\(h=|\\mathcal F P|^2\\)。光学传递函数 \\(\\mathrm{OTF}(\\boldsymbol\\nu)=\\mathcal F h\\) 因Wiener–Khinchin定理等于瞳函数的归一自相关。",
+      "两个半径 \\(R\\) 圆瞳平移距离 \\(s\\) 的交叠面积为 \\(A_\\cap=2R^2\\arccos(s/(2R))-(s/2)\\sqrt{4R^2-s^2}\\)。用原面积 \\(\\pi R^2\\) 归一，得到 \\(\\mathrm{MTF}(\\rho)=\\frac2\\pi[\\arccos\\rho-\\rho\\sqrt{1-\\rho^2}]\\)，其中 \\(\\rho=s/(2R)\\in[0,1]\\)。",
+      "对于像面坐标 \\(x=f\\theta\\)，瞳孔半径 \\(R=D/2\\) 对应相干振幅空间频率支撑半径 \\(\\nu_{\\mathrm{coh}}=R/(\\lambda f)=D/(2\\lambda f)\\)，非相干OTF的自相关支撑直径为 \\(\\nu_{\\max}=2R/(\\lambda f)=D/(\\lambda f)\\)。代入 \\(\\rho=\\nu/\\nu_{\\max}\\)，当 \\(\\nu\\ge\\nu_{\\max}\\) 时两个圆瞳无交集，\\(\\mathrm{MTF}=0\\)。不能误把直径与半径所定义的截止频率再多乘一倍。",
+      "在 \\(\\rho=0\\) 时 \\(\\mathrm{MTF}=1\\)，对低频展开为 \\(1-(4/\\pi)\\rho+O(\\rho^3)\\)。像差引入瞳函数的相位变化，虽然支撑截止频率不变，但自相关的模可能显著下降；不能只看几何孔径而断言实际系统达到衍射极限对比度。"
+    ],
+    "tags": [
+      "Fourier光学",
+      "MTF",
+      "圆瞳自相关"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "O262",
+    "title": "亚波长薄膜的表面等离激元色散与穿透深度",
+    "setup": "两个无损各向同性介质在 \\(z=0\\) 分界，\\(z>0\\) 介电率 \\(\\varepsilon_d>0\\)，\\(z<0\\) 金属有效介电率 \\(\\varepsilon_m<-\\varepsilon_d\\)，磁导率均为 \\(\\mu_0\\)，求沿 \\(x\\) 传播的TM表面模式。",
+    "q": [
+      "构造两侧指数衰减的TM场。",
+      "由Maxwell边界推出表面模式方程。",
+      "求两侧局域长度及强约束极限。",
+      "解释耗散和非局域响应对发散的截断。"
+    ],
+    "s": [
+      "取场 \\(\\propto e^{i(\\beta x-\\omega t)}e^{-\\kappa_dz}\\) 在介质侧、\\(e^{+\\kappa_mz}\\) 在金属侧，\\(\\kappa_j^2=\\beta^2-\\varepsilon_jk_0^2\\)。TM模式具有 \\(E_x,E_z,H_y\\) 分量，要求 \\(\\operatorname{Re}\\kappa_j>0\\) 保证表面局域化。",
+      "无自由面电流时切向 \\(E_x,H_y\\) 连续。使用TM波阻抗关系可化为 \\(\\kappa_d/\\varepsilon_d+\\kappa_m/\\varepsilon_m=0\\)。联立各自 \\(\\kappa_j^2\\)，得到 \\(\\beta=k_0\\sqrt{\\varepsilon_d\\varepsilon_m/(\\varepsilon_d+\\varepsilon_m)}\\)，在所给符号范围内为实大于介质光线。",
+      "每侧场幅 \\(1/e\\) 穿透长度为 \\(\\ell_j=1/\\kappa_j\\)。当 \\(\\varepsilon_m\\to-\\varepsilon_d^-\\) 时分母 \\(\\varepsilon_d+\\varepsilon_m\\to0^-\\)，理想局域波矢 \\(\\beta\\to\\infty\\)、局域长度趋零，意味着准静态表面等离激元极限。",
+      "真实金属 \\(\\varepsilon_m(\\omega)\\) 带虚部，\\(\\beta\\) 变复数并使沿界面传播有限；当 \\(\\beta\\) 接近电子微观非局域尺度时局域Drude近似失效。不能把理想无限大波矢解释为无需能量、无限分辨率的可实现模式。"
+    ],
+    "tags": [
+      "表面等离激元",
+      "TM边界",
+      "局域波"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "O263",
+    "title": "Mach–Zehnder相位估计的散粒噪声与Fisher信息",
+    "setup": "无损平衡Mach–Zehnder干涉仪输入相干态，平均检测光子数 \\(N\\)，两路相位差为 \\(\\phi\\)，每个输出端按理想独立Poisson过程计数。",
+    "q": [
+      "写两个探测端的平均光子数。",
+      "建立联合Poisson似然并求Fisher信息。",
+      "给出Cramér–Rao相位精度。",
+      "讨论损耗与暗计数对信息的影响。"
+    ],
+    "s": [
+      "平衡分束器的经典场振幅干涉给输出概率 \\(p_1=\\cos^2(\\phi/2)\\)、\\(p_2=\\sin^2(\\phi/2)\\)，故平均计数 \\(\\bar n_1=Np_1,\\bar n_2=Np_2\\)，总平均光子数固定为 \\(N\\)，损耗忽略。",
+      "独立Poisson均值 \\(\\lambda_j=Np_j\\) 的经典Fisher信息为 \\(F_\\phi=\\sum_j(\\partial_\\phi\\lambda_j)^2/\\lambda_j\\)。代入 \\(\\partial_\\phi p_1=-\\sin\\phi/2\\)、\\(\\partial_\\phi p_2=\\sin\\phi/2\\)，得 \\(F_\\phi=N\\)（开集内，端点取连续极限）。",
+      "对独立重复样本且总探测平均光子数 \\(N_{\\rm tot}\\)，任何局部无偏估计量满足 \\(\\operatorname{Var}(\\hat\\phi)\\ge1/F_\\phi=1/N_{\\rm tot}\\)，因此标准差 \\(\\Delta\\phi\\ge N_{\\rm tot}^{-1/2}\\)。这是相干光的散粒噪声标度，不是Heisenberg \\(1/N\\) 标度。",
+      "若检测效率 \\(\\eta\\in(0,1]\\)，有效光子数成为 \\(\\eta N\\)，理想无背景时 \\(F_\\phi=\\eta N\\)；若叠加相位无关背景 \\(d>0\\)，则各端 \\(\\lambda_j=\\eta Np_j+d\\)，Fisher分母增加而分子不变，信息严格下降。光子统计和探测模型必须同时说明。"
+    ],
+    "tags": [
+      "量子计量",
+      "相干干涉",
+      "Fisher信息"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "O264",
+    "title": "圆柱光纤波导的倏逝模与弯曲损耗机制",
+    "setup": "阶跃光纤芯半径 \\(a\\)、折射率 \\(n_1>n_2\\)，真空波数 \\(k_0\\)，轴向传播常数 \\(\\beta\\)，弱导、圆柱对称近似。",
+    "q": [
+      "建立芯内外标量径向本征方程。",
+      "用边界连续性获得弱导标量特征方程。",
+      "求包层的径向渐近尾与穿透长度。",
+      "说明光纤弯曲为什么增加泄漏。"
+    ],
+    "s": [
+      "令场包络 \\(F(r)e^{i(l\\phi+\\beta z)}\\)，径向方程 \\(F''+(1/r)F'+[(n(r)k_0)^2-\\beta^2-l^2/r^2]F=0\\)。芯内 \\(u^2=a^2(n_1^2k_0^2-\\beta^2)>0\\) 取 \\(J_l(ur/a)\\)，包层 \\(w^2=a^2(\\beta^2-n_2^2k_0^2)>0\\) 取衰减的 \\(K_l(wr/a)\\)。",
+      "若近似标量场及径向导数在 \\(r=a\\) 连续，则 \\(J_l'(u)u/J_l(u)=K_l'(w)w/K_l(w)\\)。再联立 \\(u^2+w^2=V^2\\)，\\(V=ak_0\\sqrt{n_1^2-n_2^2}\\)，求允许离散 \\(\\beta\\) 值；精确矢量模式需考虑切向 \\(E,H\\) 共同连续。",
+      "当 \\(wr/a\\gg1\\)，第二类修正Bessel函数 \\(K_l(wr/a)\\sim\\sqrt{\\pi a/(2wr)}e^{-wr/a}\\)，因此包层强度主要按 \\(e^{-2wr/a}\\) 衰减，典型幅穿透长度 \\(a/w=1/\\sqrt{\\beta^2-n_2^2k_0^2}\\)。",
+      "弯曲使局部外侧相速度条件改变，包层原本倏逝的区域可能在远侧转为可辐射传播，导致弯曲损耗；模式接近截止时 \\(w\\to0\\)、尾场变长，通常更易泄漏。单用直光纤的特征方程不能定量预测任意弯曲半径下的损耗。"
+    ],
+    "tags": [
+      "Bessel边值",
+      "导模色散",
+      "弯曲损耗"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "O265",
+    "title": "自相位调制产生的频谱展宽与啁啾的频率极值",
+    "setup": "无色散无损Kerr光纤中脉冲包络满足 \\(\\partial_zA=i\\gamma|A|^2A\\)，输入 \\(A(0,t)=\\sqrt{P_0}\\exp[-t^2/(2T_0^2)]\\)，\\(\\gamma>0\\)。",
+    "q": [
+      "解无色散自相位调制方程。",
+      "求脉冲瞬时频移并判定奇偶。",
+      "求最大频移出现的时间。",
+      "说明频谱展宽与强度不变可以同时发生。"
+    ],
+    "s": [
+      "取模平方可知 \\(\\partial_z|A|^2=0\\)，故每个时间点的功率保持 \\(P(t)=P_0e^{-t^2/T_0^2}\\)。传播解 \\(A(z,t)=A(0,t)e^{i\\phi_{\\rm NL}(t)}\\)，其中 \\(\\phi_{\\rm NL}(t)=\\gamma zP_0e^{-t^2/T_0^2}\\)。这是纯相位演化。",
+      "复场瞬时频率偏移 \\(\\delta\\omega(t)=-\\partial_t\\phi_{\\rm NL}=2\\gamma zP_0(t/T_0^2)e^{-t^2/T_0^2}\\)。其关于 \\(t\\) 为奇函数：脉冲前沿和后沿产生相反频移，虽然时间强度包络本身未变。",
+      "对 \\(f(t)=t e^{-t^2/T_0^2}\\) 求导 \\(f'=e^{-t^2/T_0^2}(1-2t^2/T_0^2)\\)，极值在 \\(t=\\pm T_0/\\sqrt2\\)。最大频移模为 \\(|\\delta\\omega|_{\\max}=(\\sqrt2\\gamma zP_0/T_0)e^{-1/2}\\)。",
+      "按Parseval定理 \\(\\int|A(t)|^2dt\\) 不变，频域谱密度却因为时间相关相位而向宽频带重新分布。若加入二阶色散 \\(i\\beta_2A_{tt}/2\\)，振幅与相位会耦合并产生脉冲压缩或展宽，不能继续沿用纯SPM时域强度不变结论。"
+    ],
+    "tags": [
+      "Kerr效应",
+      "瞬时频移",
+      "谱展宽"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  }
+]
