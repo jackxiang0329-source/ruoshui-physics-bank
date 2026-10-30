@@ -78,21 +78,21 @@ def run():
     check("T262",4,"detailed balance net steady probability current is zero",
           k01*(1-peq)-k10*peq,0,method="two-node-no-loop")
     # T263 conduction with radiation boundary
-    k,L,er,sigma,Th,Ta=2.,1.4,.7,.002,12.,3.
-    f=lambda ts:k*(Th-ts)/L-er*sigma*(ts**4-Ta**4)
+    k,plate_length,er,sigma,Th,Ta=2.,1.4,.7,.002,12.,3.
+    f=lambda ts:k*(Th-ts)/plate_length-er*sigma*(ts**4-Ta**4)
     rootT=root(f,Ta,Th)
     check("T263",1,"Fourier steady conduction temperature profile boundary",
-          Th-(k*(Th-rootT)/L)*L/k,rootT,method="heat-flux-temperature-gradient")
+          Th-(k*(Th-rootT)/plate_length)*plate_length/k,rootT,method="heat-flux-temperature-gradient")
     check("T263",2,"surface conduction radiation flux matching",f(rootT),0,method="nonlinear-radiation-boundary")
     check("T263",3,"radiative Robin boundary is strictly monotone",
           der(f,rootT)<0,1,method="unique-radiative-steady-state")
     hr=4*er*sigma*Ta**3
     small=1e-4; Th0=Ta+small
-    fr=lambda ts:k*(Th0-ts)/L-er*sigma*(ts**4-Ta**4)
+    fr=lambda ts:k*(Th0-ts)/plate_length-er*sigma*(ts**4-Ta**4)
     surface=root(fr,Ta,Th0)
-    flux=k*(Th0-surface)/L
+    flux=k*(Th0-surface)/plate_length
     check("T263",4,"small delta T series thermal resistance",
-          flux,small/(L/k+1/hr),tol=.0002,method="radiation-linearization")
+          flux,small/(plate_length/k+1/hr),tol=.0002,method="radiation-linearization")
     # T264 ideal reaction dissociation
     Kp,p=1.7,.9
     alpha=S(Kp/(Kp+4*p))
