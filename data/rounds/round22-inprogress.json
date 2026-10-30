@@ -59,9 +59,9 @@
   "source_triples": 40,
   "question_parts": 160,
   "solution_parts": 160,
-  "quality_status": "待独立复核",
+  "quality_status": "TECHNICAL_QA_PASSED_INDEPENDENT_ACADEMIC_REVIEW_PENDING",
   "expert_review": "待独立复核",
-  "automated_formula_regressions": "48 revised tests and all 160 pending CI",
+  "automated_formula_regressions": "PASS: 160/160 model-part assertions after 12 duplicate repairs",
   "independent_expert_subpart_reviews": 0,
   "required_expert_subpart_reviews": 160,
   "main_release_gate": "50 problem items, 200 accepted subpart checks",
@@ -69,8 +69,8 @@
   "history_semantic_overlap": "12 obvious round21 model repeats were rewritten and guarded; remaining whole-library expert review is not complete",
   "source_mirror_sync": "Draft branch only",
   "merge_allowed": false,
-  "ci_status": "pending new semantic gate and XeLaTeX CI",
-  "note": "Original 40 draft included 12 visibly overlapping core models with round21. Replaced those 12 problems and all four solution parts each, and replaced the corresponding 48 executable checks. Do not merge without separate expert approval.",
+  "ci_status": "PASS: source/model/semantic checks (run 40997405167); PDF pair independently verified from unchanged canonical sources (run 40997076231)",
+  "note": "12 overlapping core models were rewritten; their four subparts and corresponding 48 regression checks were replaced. 160/160 checks and cross-batch guard pass. Entire library still requires independent domain-expert review; source PDF artifact from earlier commit is equivalent because subsequent changes were only QA scripts, workflow, and manifest.",
   "curated_semantic_replacements": {
     "M137": "M134",
     "E137": "E133",
@@ -85,5 +85,16 @@
     "O129": "O120",
     "Q128": "Q123"
   },
-  "curated_semantic_replacements_count": 12
+  "curated_semantic_replacements_count": 12,
+  "semantic_qa_status": "PASS: history 4-gram near-exact checks plus 12 enforced cross-batch core-replacement guards",
+  "verification": {
+    "latest_source_and_semantic_ci_run": 40997405167,
+    "latest_source_and_semantic_ci_sha": "9248b6e11656f92e99a8e449f5300e6cd2506796",
+    "report_artifact_id": 12952191345,
+    "verified_both_pdf_ci_run": 40997076231,
+    "verified_both_pdf_source_sha": "f747cb92aa5a4916b8efaef57167de9c9298a25d",
+    "pdf_artifact_id": 12951458401,
+    "canonical_questions_solutions_unchanged_after_pdf_source": true
+  },
+  "pdf_status": "PASS: XeLaTeX rendered both questions and solutions from canonical source-equivalent commit; artifact 12951458401"
 }
