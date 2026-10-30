@@ -60,8 +60,9 @@ def run():
     sig,dg=2.,.8
     G=lambda r:4*P*sig*r*r-4*P*dg*r**3/3
     rc=2*sig/dg
-    check("T246",1,"surface and bulk spherical free-energy decomposition",
-          G(.7),4*P*sig*.7**2-4*P*dg*.7**3/3,method="interfacial-volume-work")
+    check("T246",1,"surface and bulk nucleation work from radial derivative integration",
+          integrate(lambda rr:8*P*sig*rr-4*P*dg*rr*rr,0,.7),G(.7),
+          method="thermodynamic-path-integral")
     check("T246",2,"critical nucleus stationarity",der(G,rc),0,method="saddle-point")
     check("T246",3,"nucleation barrier at critical radius",
           G(rc),16*P*sig**3/(3*dg**2),method="critical-free-energy")
@@ -99,8 +100,8 @@ def run():
     Pi=s0*T
     check("T249",1,"open circuit electric field offsets Seebeck field",
           (s0*.2-s0*.2),0,method="open-circuit-boundary")
-    check("T249",2,"Peltier coefficient from heat current divided by electric current",
-          Pi*2.3/2.3,Pi,method="reversible-heat-current")
+    check("T249",2,"Peltier coefficient as differential reversible heat flow",
+          der(lambda current:Pi*current,2.3),Pi,method="reversible-heat-current-derivative")
     check("T249",3,"Kelvin Onsager reciprocal identity",
           Pi/T,s0,method="Onsager-symmetry")
     Seebeck=lambda tt:1e-4+1e-6*tt
