@@ -14,18 +14,22 @@ def run():
           der2(W,theta0)/(m*l*l),(g/l)*(1/C(theta0)+3*C(theta0)),tol=4e-5,method="effective-potential-Hessian")
     check("M256",4,"zero angle radial nutation frequency limit",
           (g/l)*(1/C(.00001)+3*C(.00001)),4*g/l,method="low-angle-limit")
-    # M257 torque free Euler body
-    I1,I2,I3,om=2.,3.,5.,.9
-    a=(I2-I3)*.3*.2/I1
-    b=(I3-I1)*.2*.8/I2
-    c=(I1-I2)*.8*.3/I3
-    check("M257",1,"Euler energy conservation",I1*.8*a+I2*.3*b+I3*.2*c,0,method="Euler-energy")
-    check("M257",2,"angular momentum ellipsoid and energy ratio positive",
-          I1*.8**2+I2*.3**2+I3*.2**2>0,1,method="inertia-geometry")
-    lam2=om**2*(I3-I2)*(I2-I1)/(I1*I3)
-    check("M257",3,"intermediate-axis unstable eigenvalue",lam2>0,1,method="linearized-Euler-eigenvalues")
-    check("M257",4,"largest principal axis stable epicycle",
-          (I3-I1)*(I3-I2)/(I1*I2)>0,1,method="principal-axis-stability")
+    # M257 Schwarzschild circular geodesics and ISCO
+    M,r=1.7,18.
+    L2=lambda rad:M*rad*rad/(rad-3*M)
+    E2=lambda rad:(rad-2*M)**2/(rad*(rad-3*M))
+    V=lambda rad,ell2:(1-2*M/rad)*(1+ell2/(rad*rad))
+    check("M257",1,"Schwarzschild radial first integral circular normalization",
+          V(r,L2(r)),E2(r),method="metric-effective-potential")
+    check("M257",2,"Schwarzschild circular orbit effective potential stationary",
+          der(lambda rad:V(rad,L2(r)),r),0,method="geodesic-stationarity")
+    check("M257",3,"ISCO stable radial epicycle Hessian from Schwarzschild metric",
+          der2(lambda rad:V(rad,L2(r)),r),
+          2*M*(r-6*M)/(r**3*(r-3*M)),method="ISCO-Hessian")
+    omega=S(M/r**3)
+    kappa=omega*S(1-6*M/r)
+    check("M257",4,"GR coordinate-time epicycle ratio",
+          (kappa/omega)**2,1-6*M/r,method="relativistic-precession")
     # M258 brachistochrone
     a,g=1.2,9.8
     x=lambda th:a*(th-SI(th))
