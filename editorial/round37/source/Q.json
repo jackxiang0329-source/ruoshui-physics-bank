@@ -1,0 +1,226 @@
+[
+  {
+    "id": "Q258",
+    "title": "量子绝热Grover搜索的最小能隙与运行时间尺度",
+    "setup": "\\(N\\) 维Hilbert空间，均匀态 \\(|s\\rangle=N^{-1/2}\\sum_x|x\\rangle\\)，标记态 \\(|m\\rangle\\)。绝热Hamilton量 \\(H(u)=(1-u)(I-|s\\rangle\\langle s|)+u(I-|m\\rangle\\langle m|)\\)，\\(0\\le u\\le1\\)。",
+    "q": [
+      "把Hamilton量约化为二维子空间。",
+      "求绝热两能级谱隙。",
+      "定位最小能隙并求规模。",
+      "比较匀速与局部绝热日程。"
+    ],
+    "s": [
+      "由于 \\(|s\\rangle\\) 与 \\(|m\\rangle\\) 张成的不变子空间外，Hamilton量为恒等算符，搜索动力学只需基 \\((|m\\rangle,|r\\rangle)\\)，其中 \\(|r\\rangle=(\\sqrt N|s\\rangle-|m\\rangle)/\\sqrt{N-1}\\)。在此基，投影 \\(|s\\rangle\\langle s|\\) 矩阵元为 \\(1/N,\\sqrt{N-1}/N,(N-1)/N\\)。",
+      "二维有效Hamilton量迹为1，两个本征能差满足 \\(g(u)=\\sqrt{1-4(1-1/N)u(1-u)}\\)。该式从 \\(2\\times2\\) 行列式直接得到，端点 \\(u=0,1\\) 的能隙均为1。",
+      "由于 \\(u(1-u)\\) 在 \\(u=1/2\\) 最大，故 \\(g_{\\min}=g(1/2)=1/\\sqrt N\\)。随着数据库规模增大，最危险的非绝热跃迁发生在插值中点，而不是端点。",
+      "粗略匀速判据 \\(|\\dot u|\\ll g_{\\min}^2\\) 给 \\(T\\gg N\\) 的慢尺度；若采用局部日程 \\(\\dot u=\\epsilon g(u)^2\\)，则 \\(T=\\epsilon^{-1}\\int_0^1du/g(u)^2=O(\\sqrt N/\\epsilon)\\)，恢复Grover型平方加速，但实际误差还依绝热界与端点光滑性。"
+    ],
+    "tags": [
+      "量子绝热算法",
+      "二能级谱",
+      "复杂度"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "Q259",
+    "title": "Landau–Zener两能级穿越的非绝热概率和尺度",
+    "setup": "两能级Hamilton量 \\(H(t)=\\tfrac12[vt\\,\\sigma_z+\\Delta\\,\\sigma_x]\\)，其中 \\(v>0,\\Delta>0\\)，从 \\(t\\to-\\infty\\) 处绝热基态开始演化至 \\(t\\to+\\infty\\)。",
+    "q": [
+      "求瞬时本征谱与最小能隙。",
+      "写瞬时混合角和绝热变化率。",
+      "给出Landau–Zener精确过渡概率。",
+      "解释指数中的无量纲参数与适用性。"
+    ],
+    "s": [
+      "Pauli向量 \\(\\boldsymbol h=(\\Delta,0,vt)\\) 的模为 \\(\\sqrt{\\Delta^2+v^2t^2}\\)，故本征能 \\(E_\\pm=\\pm\\frac12\\sqrt{\\Delta^2+v^2t^2}\\)。能隙在 \\(t=0\\) 取最小值 \\(\\Delta\\)，而非零；当 \\(\\Delta=0\\) 才是真交叉。",
+      "令 \\(\\tan\\theta=\\Delta/(vt)\\)，选择连续支，\\(\\dot\\theta=-v\\Delta/(\\Delta^2+v^2t^2)\\)。绝热基的非对角耦合模为 \\(|\\dot\\theta|/2\\)，在交叉中心达到 \\(v/(2\\Delta)\\) 的最大值，解释小能隙和高速扫描容易产生跃迁。",
+      "通过将二分量Schrödinger方程化为抛物柱函数方程，并连接 \\(t\\to\\pm\\infty\\) 渐近解，可得从初始绝热基态跳至末态激发支的概率 \\(P_{\\rm LZ}=\\exp[-\\pi\\Delta^2/(2\\hbar v)]\\)。当 \\(v\\to0\\) 指数抑制跃迁，快扫描 \\(v\\to\\infty\\) 则 \\(P_{\\rm LZ}\\to1\\)。",
+      "无量纲绝热参数为 \\(\\delta=\\Delta^2/(4\\hbar v)\\)，指数可写 \\(-2\\pi\\delta\\)。该精确公式要求线性时间失谐从负无穷扫描到正无穷、耦合常数固定且系统封闭；有限时间端点、噪声和耗散会产生Stückelberg干涉或改动转移率。"
+    ],
+    "tags": [
+      "Landau–Zener",
+      "非绝热跃迁",
+      "渐近匹配"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "Q260",
+    "title": "Kronig–Penney周期δ势的Bloch能带与禁带",
+    "setup": "一维电子质量 \\(m\\) 受周期势 \\(V(x)=g\\sum_{n\\in\\mathbb Z}\\delta(x-na)\\)，其中 \\(g>0\\)、周期 \\(a>0\\)，自由区能量 \\(E=\\hbar^2k^2/(2m)>0\\)，Bloch准动量 \\(q\\)。",
+    "q": [
+      "建立δ势跃跃条件及自由传播矩阵。",
+      "由单胞矩阵迹求色散关系。",
+      "给出允许带与禁带判据。",
+      "分析弱势与零势极限。"
+    ],
+    "s": [
+      "每个δ点波函数连续而导数跃变 \\(\\psi'(0^+)-\\psi'(0^-)=(2mg/\\hbar^2)\\psi(0)\\)。用状态 \\((\\psi,\\psi')^T\\) 表示，自由段传播矩阵 \\(P(a)=\\begin{pmatrix}\\cos ka&\\sin ka/k\\\\-k\\sin ka&\\cos ka\\end{pmatrix}\\)，δ点跳跃矩阵 \\(D=\\begin{pmatrix}1&0\\\\2mg/\\hbar^2&1\\end{pmatrix}\\)。",
+      "单胞矩阵为 \\(M=DP(a)\\)，两矩阵行列式均为1。Bloch本征值 \\(e^{\\pm iqa}\\) 给 \\(\\operatorname{tr}M=2\\cos qa\\)，故 \\(\\cos(qa)=\\cos(ka)+(mg/(\\hbar^2k))\\sin(ka)\\)。",
+      "定义 \\(F(k)=\\cos(ka)+(mg/(\\hbar^2k))\\sin(ka)\\)。当 \\(|F(k)|\\le1\\)，存在实准动量 \\(q\\) 传播Bloch态；\\(|F(k)|>1\\) 时 \\(q\\) 复数，形成禁带。该禁带不是由周期δ势中的吸收产生，模型Hamilton量仍为自伴且无耗散。",
+      "当 \\(g\\to0\\)，\\(F(k)\\to\\cos ka\\)，全部正能连续自由粒子色散只发生布里渊区折叠，禁带闭合。小 \\(g>0\\) 时在Bragg点 \\(ka\\approx n\\pi\\) 附近打开小禁带，反映向前和反向平面波的简并耦合。"
+    ],
+    "tags": [
+      "周期量子势",
+      "转移矩阵",
+      "Bloch能带"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "Q261",
+    "title": "Bose–Hubbard双站点模型的粒子数阻塞与Josephson振荡",
+    "setup": "两站点Bose–Hubbard Hamilton量 \\(H=-J(a_1^\\dagger a_2+a_2^\\dagger a_1)+\\frac U2[n_1(n_1-1)+n_2(n_2-1)]\\)，\\(J>0,U\\ge0\\)，总玻色子数固定为2。",
+    "q": [
+      "在双粒子Fock基写Hamilton矩阵。",
+      "利用站点交换对称化约谱。",
+      "求对称块本征能及相互作用阻塞。",
+      "分析无相互作用极限的振荡频率。"
+    ],
+    "s": [
+      "基取 \\((|2,0\\rangle,|1,1\\rangle,|0,2\\rangle)\\)。相互作用能分别为 \\(U,0,U\\)，跃迁矩阵元由玻色升降算符给 \\(-\\sqrt2J\\) 在相邻Fock态之间，故矩阵 \\(H=\\begin{pmatrix}U&-\\sqrt2J&0\\\\-\\sqrt2J&0&-\\sqrt2J\\\\0&-\\sqrt2J&U\\end{pmatrix}\\)。",
+      "反对称态 \\(|A\\rangle=(|2,0\\rangle-|0,2\\rangle)/\\sqrt2\\) 与 \\(|1,1\\rangle\\) 解耦，能量 \\(E_A=U\\)。对称态 \\(|S\\rangle=(|2,0\\rangle+|0,2\\rangle)/\\sqrt2\\) 与 \\(|1,1\\rangle\\) 的块为 \\(\\begin{pmatrix}U&-2J\\\\-2J&0\\end{pmatrix}\\)。",
+      "两个本征能 \\(E_\\pm=[U\\pm\\sqrt{U^2+16J^2}]/2\\)。当 \\(U\\gg J\\) 时基态 \\(E_-\\approx-4J^2/U\\)，其主要为单站点各一个粒子的 \\(|1,1\\rangle\\)，双占据仅为 \\(O[(J/U)^2]\\)，体现相互作用阻塞。",
+      "当 \\(U=0\\)，对称块本征能为 \\(\\pm2J\\)，反对称态为零。任何初始 \\(|2,0\\rangle\\) 既含对称又含反对称分量，动力学具有能差 \\(2J/\\hbar\\) 与 \\(4J/\\hbar\\) 的相干成分；若加入随机相位或退相干，振荡可衰减但并非此封闭Hamilton模型本身造成。"
+    ],
+    "tags": [
+      "Bose-Hubbard",
+      "多体Fock态",
+      "隧穿"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "Q262",
+    "title": "双能级量子主方程的详细平衡与热化固定点",
+    "setup": "能级 \\(|0\\rangle,|1\\rangle\\) 相差 \\(\\hbar\\omega_0>0\\)，与温度 \\(T\\) 的热浴弱耦合。向下、向上跃迁率分别为 \\(\\Gamma_\\downarrow,\\Gamma_\\uparrow>0\\)，满足 \\(\\Gamma_\\uparrow/\\Gamma_\\downarrow=e^{-\\beta\\hbar\\omega_0}\\)。",
+    "q": [
+      "写Lindblad跃迁主方程。",
+      "导出激发态布居演化。",
+      "验证Gibbs分布为稳态。",
+      "求无额外纯退相干时的相干衰减尺度。"
+    ],
+    "s": [
+      "用 \\(\\sigma_-=|0\\rangle\\langle1|\\)、\\(\\sigma_+=|1\\rangle\\langle0|\\)，主方程 \\(\\dot\\rho=-i[H,\\rho]/\\hbar+\\Gamma_\\downarrow\\mathcal D[\\sigma_-]\\rho+\\Gamma_\\uparrow\\mathcal D[\\sigma_+]\\rho\\)，其中 \\(\\mathcal D[L]\\rho=L\\rho L^\\dagger-\\{L^\\dagger L,\\rho\\}/2\\)。",
+      "激发态布居 \\(p_1=\\rho_{11}\\) 满足 \\(\\dot p_1=-\\Gamma_\\downarrow p_1+\\Gamma_\\uparrow(1-p_1)\\)，解为 \\(p_1(t)=p_1^{\\rm eq}+[p_1(0)-p_1^{\\rm eq}]e^{-(\\Gamma_\\uparrow+\\Gamma_\\downarrow)t}\\)，\\(p_1^{\\rm eq}=\\Gamma_\\uparrow/(\\Gamma_\\uparrow+\\Gamma_\\downarrow)\\)。",
+      "利用热详细平衡 \\(\\Gamma_\\uparrow/\\Gamma_\\downarrow=e^{-\\beta\\hbar\\omega_0}\\)，得到 \\(p_1^{\\rm eq}=1/(1+e^{\\beta\\hbar\\omega_0})\\)，恰与两能级Gibbs态 \\(\\rho_{\\rm G}=e^{-\\beta H}/\\operatorname{tr}e^{-\\beta H}\\) 一致。若驱动浴不满足详细平衡，则固定点不一定为热态。",
+      "非对角元 \\(\\dot\\rho_{01}=[i\\omega_0-(\\Gamma_\\uparrow+\\Gamma_\\downarrow)/2]\\rho_{01}\\)，故 \\(T_2=2/(\\Gamma_\\uparrow+\\Gamma_\\downarrow)=2T_1\\)，其中 \\(T_1=1/(\\Gamma_\\uparrow+\\Gamma_\\downarrow)\\)。若另有纯退相干 \\(\\gamma_\\varphi\\)，则 \\(1/T_2=1/(2T_1)+\\gamma_\\varphi\\)。"
+    ],
+    "tags": [
+      "开放量子系统",
+      "详细平衡",
+      "热化"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "Q263",
+    "title": "相干态的位移算符、Poisson光子数与最小不确定度",
+    "setup": "量子谐振子升降算符满足 \\([a,a^\\dagger]=1\\)，相干态定义为 \\(|\\alpha\\rangle=D(\\alpha)|0\\rangle\\)，\\(D(\\alpha)=\\exp(\\alpha a^\\dagger-\\alpha^*a)\\)。",
+    "q": [
+      "用Baker–Campbell–Hausdorff展开相干态。",
+      "求光子数分布及Fano因子。",
+      "计算位置动量不确定度积。",
+      "求自由谐振子演化与相空间轨道。"
+    ],
+    "s": [
+      "因 \\([\\alpha a^\\dagger,-\\alpha^*a]=|\\alpha|^2\\) 为常数，BCH公式给 \\(D(\\alpha)=e^{-|\\alpha|^2/2}e^{\\alpha a^\\dagger}e^{-\\alpha^*a}\\)。施于真空得 \\(|\\alpha\\rangle=e^{-|\\alpha|^2/2}\\sum_{n=0}^\\infty\\alpha^n|n\\rangle/\\sqrt{n!}\\)。",
+      "光子数概率 \\(P_n=|\\langle n|\\alpha\\rangle|^2=e^{-|\\alpha|^2}|\\alpha|^{2n}/n!\\)，为Poisson分布。故 \\(\\bar n=|\\alpha|^2\\)、\\(\\operatorname{Var}(n)=|\\alpha|^2\\)，Fano因子 \\(F=\\operatorname{Var}(n)/\\bar n=1\\)，不同于热态的超Poisson涨落。",
+      "用 \\(x=\\sqrt{\\hbar/(2m\\omega)}(a+a^\\dagger)\\)、\\(p=-i\\sqrt{\\hbar m\\omega/2}(a-a^\\dagger)\\) 及 \\(a|\\alpha\\rangle=\\alpha|\\alpha\\rangle\\)，得 \\((\\Delta x)^2=\\hbar/(2m\\omega)\\)、\\((\\Delta p)^2=\\hbar m\\omega/2\\)，从而 \\(\\Delta x\\Delta p=\\hbar/2\\) 恰好饱和。",
+      "在 \\(H=\\hbar\\omega(a^\\dagger a+1/2)\\) 下，\\(e^{-iHt/\\hbar}|\\alpha\\rangle=e^{-i\\omega t/2}|\\alpha e^{-i\\omega t}\\rangle\\)。因此 \\(\\langle x(t)\\rangle\\) 和 \\(\\langle p(t)\\rangle\\) 沿经典谐振子椭圆轨道旋转，而波包方差保持基态宽度。"
+    ],
+    "tags": [
+      "相干态",
+      "BCH公式",
+      "量子统计"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "Q264",
+    "title": "一维量子散射的相移、时间延迟与共振态",
+    "setup": "实短程势 \\(V(x)\\) 对称、在远场趋零，考虑单通道相干散射振幅 \\(S(E)=e^{2i\\delta(E)}\\)（只讨论本征散射通道、无吸收），入射能 \\(E>0\\)。",
+    "q": [
+      "给出散射矩阵幺正性与相移参数化。",
+      "推导Wigner–Smith群延迟。",
+      "用Breit–Wigner相移求共振延迟峰。",
+      "说明负群延迟与因果性限制。"
+    ],
+    "s": [
+      "无吸收单通道电流守恒要求 \\(|S(E)|=1\\)，故可写 \\(S=e^{2i\\delta(E)}\\)，其中相移 \\(\\delta\\) 只在模 \\(\\pi\\) 意义下定义。若势关于原点对称，可进一步分偶宇称与奇宇称两个独立本征通道，各有自己的相移。",
+      "对窄能量波包，出射相位增加 \\(2\\delta(E)\\)，在驻相近似下相对自由传播的时间延迟为 \\(\\tau_W=2\\hbar\\,d\\delta/dE\\)。同样可写 \\(\\tau_W=-i\\hbar S^\\dagger(dS/dE)\\)，对单通道 \\(S=e^{2i\\delta}\\) 后二者相同。",
+      "窄共振附近可取相移 \\(\\delta(E)\\approx\\delta_{\\rm bg}+\\arctan[(\\Gamma/2)/(E_r-E)]\\) 的连续支。对共振项求导得 \\(d\\delta/dE=(\\Gamma/2)/[(E-E_r)^2+(\\Gamma/2)^2]\\)，因此峰值 \\(\\tau_W(E_r)\\approx4\\hbar/\\Gamma\\)（忽略背景相移斜率）。",
+      "一般势散射的 \\(\\tau_W\\) 可以在某些频带为负，但负相对延迟并不意味着信号最前沿超因果传播；有限程势满足Wigner因果界。若存在吸收或多通道非对角散射，单相移公式不再适用，需使用完整Smith矩阵。"
+    ],
+    "tags": [
+      "散射理论",
+      "相移",
+      "时间延迟"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "Q265",
+    "title": "一维Majorana链的拓扑边缘零模与奇偶简并",
+    "setup": "开边界Kitaev链含自旋极化费米子 \\(c_j\\)，近邻跃迁 \\(t>0\\)、配对幅度 \\(\\Delta=t\\)、化学势 \\(\\mu\\)，取恰好可解的 \\(\\mu=0\\) 特例。",
+    "q": [
+      "将复费米子分解为两个Majorana算符。",
+      "求特殊参数点的Hamilton配对结构。",
+      "构造非局域零能复费米子与两种奇偶态。",
+      "讨论离开恰好可解点后拓扑区与劈裂。"
+    ],
+    "s": [
+      "定义 \\(\\gamma_{A,j}=c_j+c_j^\\dagger\\)、\\(\\gamma_{B,j}=i(c_j^\\dagger-c_j)\\)，它们满足 \\(\\gamma^\\dagger=\\gamma\\)、\\(\\{\\gamma_{a,j},\\gamma_{b,k}\\}=2\\delta_{ab}\\delta_{jk}\\)。反解 \\(c_j=(\\gamma_{A,j}+i\\gamma_{B,j})/2\\)，故每个复费米模由两个实Majorana分量构成。",
+      "在 \\(\\mu=0,\\Delta=t\\) 的标准Kitaev链中，Hamilton量可整理为 \\(H=it\\sum_{j=1}^{N-1}\\gamma_{B,j}\\gamma_{A,j+1}\\)（整体正负随Hamilton规范）。只有相邻位点Majorana相互耦合，而最左 \\(\\gamma_{A,1}\\) 与最右 \\(\\gamma_{B,N}\\) 不进入Hamilton量。",
+      "令 \\(f=(\\gamma_{A,1}+i\\gamma_{B,N})/2\\)，则 \\(\\{f,f^\\dagger\\}=1\\)。因两端Majorana不与 \\(H\\) 耦合，\\([H,f]=0\\)，两个态 \\(|0_f\\rangle\\) 与 \\(f^\\dagger|0_f\\rangle\\) 能量相同但总费米奇偶不同，构成拓扑边缘零模的两重简并。",
+      "当 \\(|\\mu|<2t\\) 且 \\(\\Delta\\ne0\\) 时理想无限链处于拓扑相，其边缘Majorana具有指数局域尾；有限长链的两端尾部重叠产生 \\(\\Delta E\\propto e^{-N/\\xi}\\) 的小劈裂。超过 \\(|\\mu|=2t\\) 的体能隙闭合转变后，零模不再受相同拓扑保护。"
+    ],
+    "tags": [
+      "Majorana零模",
+      "拓扑超导",
+      "费米奇偶"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  }
+]
