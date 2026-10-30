@@ -1,0 +1,24 @@
+\subsection*{Q232\quad 时变谐振子的Ermakov–Lewis不变量与非平衡量子压缩}
+单位质量经典振子满足$\ddot x+\omega(t)^2x=0$，$\omega(t)>0$；辅助尺度$\rho(t)>0$满足Ermakov方程$\ddot\rho+\omega(t)^2\rho=\rho^{-3}$。在量子情形取$[x,p]=i\hbar$且$p=\dot x$形式对应哈密顿量$H(t)=p^2/2+\omega(t)^2x^2/2$。
+(1) 构造经典Ermakov–Lewis不变量并证明严格守恒。
+(2) 用新时标把变量频率振子映射为单位频率谐振子。
+(3) 写出对称排序的量子不变量及其本征值结构。
+(4) 在频率恒定与突变调制极限核对不变量的物理意义。
+\par\textbf{逐问解析}
+(1) 定义$X=x/\rho$、$P=\rho\dot x-\dot\rho x$，$I=(X^2+P^2)/2$。直接求导$\dot X=(\rho\dot x-\dot\rho x)/\rho^2=P/\rho^2$；同时$\dot P=\rho\ddot x-\ddot\rho x=-\rho\omega^2x-(\rho^{-3}-\omega^2\rho)x=-X/\rho^2$。所以$\dot I=X\dot X+P\dot P=(XP-PX)/\rho^2=0$（经典变量可交换），严格不依赖$\dot\omega$是否缓慢。
+(2) 定义新时标$\tau=\int^tdt'/\rho(t')^2$，则$dX/d\tau=P$、$dP/d\tau=-X$，从而$d^2X/d\tau^2+X=0$。任意时变$\omega(t)$的线性振子因辅助尺度$\rho$而化为单位频率振子；本征演化被重新分配为振幅尺度变化和相位积累。
+(3) 量子算符取$\hat I=\tfrac12[(\hat x/\rho)^2+(\rho\hat p-\dot\rho\hat x)^2]$，其中$\rho$为实c数时间函数，不存在跨算符歧义。因为$\hat X=\hat x/\rho$、$\hat P=\rho\hat p-\dot\rho\hat x$满足$[\hat X,\hat P]=i\hbar$，可构造$\hat a_I=(\hat X+i\hat P)/\sqrt{2\hbar}$并得$\hat I=\hbar(\hat a_I^\dagger\hat a_I+\tfrac12)$。它满足$d\hat I/dt=\partial_t\hat I+(i/\hbar)[H,\hat I]=0$。
+(4) 若$\omega(t)=\omega_0$恒定，选$\rho=\omega_0^{-1/2}$，则$\hat I=H/\omega_0$，返回能量除以频率的作用量。若$\omega(t)$快速变化，$H(t)$一般不守恒，但只要$\rho$满足Ermakov方程，$\hat I$仍严格守恒；此不变量的瞬时本征态可表现为相对$H(t)$本征态的压缩态，不能把两者无条件视为相同。
+\par\medskip
+\subsection*{Q233\quad Jaynes–Cummings腔量子电动力学的真空Rabi劈裂与失谐转移}
+单模量子腔频率$\omega_c$，二能级原子频率$\omega_q$，旋转波近似哈密顿量$H=\hbar\omega_ca^\dagger a+\hbar\omega_q\sigma_z/2+\hbar g(a\sigma_++a^\dagger\sigma_-)$，$g>0$。
+(1) 证明总激发数守恒并写每个固定激发子空间矩阵。
+(2) 求 dressed state 能级和共振真空Rabi劈裂。
+(3) 求初始原子激发态$|e,n\rangle$转移到$|g,n+1\rangle$的时间依赖几率。
+(4) 求大失谐色散频移并说明旋转波与二能级近似限制。
+\par\textbf{逐问解析}
+(1) 定义$\hat N=a^\dagger a+(\sigma_z+I)/2$。利用$[a^\dagger a,a]=-a$与$[\sigma_z,\sigma_+]=2\sigma_+$可见$[\hat N,a\sigma_+]=0$，其Hermitian共轭亦然，故$[\hat N,H]=0$。在$\hat N=n+1$子空间基底$(|e,n\rangle,|g,n+1\rangle)$中，哈密顿量为$\hbar\omega_c(n+\tfrac12)I+\frac\hbar2\begin{pmatrix}\Delta&2g\sqrt{n+1}\\2g\sqrt{n+1}&-\Delta\end{pmatrix}$，$\Delta=\omega_q-\omega_c$。
+(2) 迹零的非平凡矩阵平方是$[\Delta^2+4g^2(n+1)]I$，所以能级$E_{n,\pm}=\hbar\omega_c(n+\tfrac12)\pm\frac\hbar2\Omega_n$，$\Omega_n=\sqrt{\Delta^2+4g^2(n+1)}$。共振$\Delta=0$时成对dressed态能差为$2\hbar g\sqrt{n+1}$；真空$n=0$也有非零$2\hbar g$劈裂。
+(3) 在每个二能级子空间，去掉公共能量相位后演化算符为$U=\cos(\Omega_nt/2)I-i\sin(\Omega_nt/2)(\Delta\sigma_z+2g\sqrt{n+1}\sigma_x)/\Omega_n$。初始$(1,0)^T$时跃迁振幅为$-i[2g\sqrt{n+1}/\Omega_n]\sin(\Omega_nt/2)$，概率$P_{e,n\to g,n+1}(t)=4g^2(n+1)\sin^2(\Omega_nt/2)/[\Delta^2+4g^2(n+1)]$。失谐增加使最大转移率低于一。
+(4) 若$|\Delta|\gg g\sqrt{n+1}$，展开$\Omega_n=|\Delta|[1+2g^2(n+1)/\Delta^2+O(g^4n^2/\Delta^4)]$，dressed态获得大约$\pm\hbar g^2(n+1)/|\Delta|$的二阶频移，按分支连接原子裸态时符号随$\Delta$变化。共振外的该色散近似要求耦合相对失谐小；若$g$接近$\omega_c$、$\omega_q$或存在多能级跃迁，旋转波近似和二能级模型失效。
+\par\medskip
