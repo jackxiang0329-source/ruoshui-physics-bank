@@ -1,17 +1,20 @@
 from qa_common import *
 def run():
-    # Q258 adiabatic Grover
-    N=64
-    gap=lambda u:S(1-4*(1-1/N)*u*(1-u))
-    check("Q258",1,"Grover two-state invariant subspace basis normalization",
-          1/N+(N-1)/N,1,method="projection-orthogonality")
-    check("Q258",2,"Grover two-state gap at endpoints",
-          gap(0),1,method="spectral-discriminant")
-    check("Q258",3,"Grover minimum gap from u=half",
-          gap(.5),1/S(N),method="quantum-search-min-gap")
-    integral=integrate(lambda u:1/gap(u)**2,0,1,14000)
-    check("Q258",4,"Grover local-adiabatic integral scales square root N",
-          integral, (N/S(N-1))*math.atan(S(N-1)),method="local-adiabatic-integral")
+    # Q258 Jaynes Cummings cavity dressed states
+    g,delta,n,omegaC=1.2,2.3,4,3.2
+    Om=S(delta*delta+4*g*g*(n+1))
+    ep=omegaC*(n+.5)+Om/2
+    em=omegaC*(n+.5)-Om/2
+    check("Q258",1,"Jaynes Cummings excitation number conserved by one photon spin flip",
+          n+1,(n+1)+0,method="operator-excitation")
+    check("Q258",2,"Jaynes Cummings dressed energy splitting from block eigenvalues",
+          ep-em,Om,method="Jaynes-Cummings-spectrum")
+    Pe=lambda t:1-(4*g*g*(n+1)/Om**2)*SI(Om*t/2)**2
+    check("Q258",3,"Jaynes Cummings Rabi excited population in unit interval",
+          0<=Pe(.7)<=1,1,method="Rabi-probability")
+    shift=lambda d:(S(d*d+4*g*g*(n+1))-d)/2
+    check("Q258",4,"large detuning dispersive shift leading order",
+          shift(200.),g*g*(n+1)/200,tol=.0002,method="dispersive-perturbation")
     # Q259 Landau Zener
     v,delta,hbar=2.,.7,1.
     en=lambda t:.5*S(delta*delta+v*v*t*t)
