@@ -153,6 +153,8 @@ def model_tests(records):
     OUTPUT.mkdir(parents=True,exist_ok=True)
     (OUTPUT/"QA_200.json").write_text(
         json.dumps(status,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    if failed:
+        print(json.dumps({"failed_checks":failed},ensure_ascii=False),file=sys.stderr)
     if len(items)!=200 or failed or not status["pair_coverage_complete"]:
         raise RuntimeError(f"Physics check gate failed: {len(items)} tests; {len(failed)} failures; full coverage={status['pair_coverage_complete']}")
     return status
