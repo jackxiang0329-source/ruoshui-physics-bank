@@ -1,0 +1,443 @@
+{
+  "batch": 33,
+  "group": "third twelve",
+  "executed_tests": 48,
+  "passing": 48,
+  "failed": 0,
+  "tests": [
+    {
+      "id": "M224",
+      "part": 1,
+      "what": "HCW radial differential equation",
+      "actual": 0,
+      "expected": 0,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M224",
+      "part": 2,
+      "what": "HCW along-track differential equation",
+      "actual": 0,
+      "expected": 0,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M224",
+      "part": 3,
+      "what": "HCW drift constant from initial conditions",
+      "actual": 0.7999999999999994,
+      "expected": 0.8,
+      "error": 6.661338147750939e-16,
+      "pass": true
+    },
+    {
+      "id": "M224",
+      "part": 4,
+      "what": "HCW Jacobi quadratic invariant finite derivative",
+      "actual": 2.2204460492503128e-11,
+      "expected": 0,
+      "error": 2.2204460492503128e-11,
+      "pass": true
+    },
+    {
+      "id": "M225",
+      "part": 1,
+      "what": "Rindler proper-time velocity ratio",
+      "actual": 0.23549574953849803,
+      "expected": 0.235495749538498,
+      "error": 2.7755575615628914e-17,
+      "pass": true
+    },
+    {
+      "id": "M225",
+      "part": 2,
+      "what": "Rindler hyperbola invariant",
+      "actual": 1111.111111111111,
+      "expected": 1111.1111111111113,
+      "error": 2.2737367544323206e-13,
+      "pass": true
+    },
+    {
+      "id": "M225",
+      "part": 3,
+      "what": "Rindler same-direction light horizon",
+      "actual": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M225",
+      "part": 4,
+      "what": "Rindler Doppler factor",
+      "actual": 0.7866278610665534,
+      "expected": 0.7866278610665534,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E224",
+      "part": 1,
+      "what": "Faraday disk radial emf integral",
+      "actual": 0.9099999999999998,
+      "expected": 0.9099999999999999,
+      "error": 1.1102230246251565e-16,
+      "pass": true
+    },
+    {
+      "id": "E224",
+      "part": 2,
+      "what": "generator torque and armature reciprocity",
+      "actual": -0.52,
+      "expected": -0.52,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E224",
+      "part": 3,
+      "what": "generator eigenvalue sum",
+      "actual": -3.75,
+      "expected": -3.75,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E224",
+      "part": 4,
+      "what": "generator total energy dissipation",
+      "actual": -0.4800000000000001,
+      "expected": -0.4800000000000001,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E225",
+      "part": 1,
+      "what": "2D plasma continuity/charge response",
+      "actual": 0.78746878121841,
+      "expected": 0.78746878121841,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E225",
+      "part": 2,
+      "what": "two-layer Coulomb eigenvalue trace",
+      "actual": 0.16666666666666666,
+      "expected": 0.16666666666666666,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E225",
+      "part": 3,
+      "what": "symmetric versus anti-symmetric squared-frequency splitting",
+      "actual": 0.15080623633932658,
+      "expected": 0.15080623633932658,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E225",
+      "part": 4,
+      "what": "acoustic bilayer small q limit",
+      "actual": 0.13333066670210653,
+      "expected": 0.13333333333333333,
+      "error": 0.000002666631226805327,
+      "pass": true
+    },
+    {
+      "id": "T222",
+      "part": 1,
+      "what": "spin magnetic energy from partition",
+      "actual": -16.4000306030815,
+      "expected": -16.4000306030815,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T222",
+      "part": 2,
+      "what": "spin entropy thermodynamic derivative",
+      "actual": 3.15028663155914,
+      "expected": 3.1502866313953035,
+      "error": 1.6383649992235405e-10,
+      "pass": true
+    },
+    {
+      "id": "T222",
+      "part": 3,
+      "what": "adiabatic demagnetization invariant",
+      "actual": 0.4666666666666666,
+      "expected": 0.4666666666666666,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T222",
+      "part": 4,
+      "what": "positive paramagnetic Schottky heat capacity",
+      "actual": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T223",
+      "part": 1,
+      "what": "2D Fermi number integral at fixed mu",
+      "actual": 100,
+      "expected": 100,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T223",
+      "part": 2,
+      "what": "exact 2D chemical potential relation",
+      "actual": 4.999446437952257,
+      "expected": 4.999446437952257,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T223",
+      "part": 3,
+      "what": "2D low T nonanalytic mu shift",
+      "actual": 4.999446437952257,
+      "expected": 4.999446437952258,
+      "error": 8.881784197001252e-16,
+      "pass": true
+    },
+    {
+      "id": "T223",
+      "part": 4,
+      "what": "high T Boltzmann limit",
+      "actual": -4.600166019324897,
+      "expected": -4.605170185988091,
+      "error": 0.005004166663193921,
+      "pass": true
+    },
+    {
+      "id": "W230",
+      "part": 1,
+      "what": "Bragg transfer matrix square eigenvalue",
+      "actual": 0.48000000000000015,
+      "expected": 0.4800000000000001,
+      "error": 5.551115123125783e-17,
+      "pass": true
+    },
+    {
+      "id": "W230",
+      "part": 2,
+      "what": "Bragg gap inequality",
+      "actual": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "W230",
+      "part": 3,
+      "what": "Bragg reflectance/transmittance flux sum",
+      "actual": 0.9999999999999996,
+      "expected": 1,
+      "error": 4.440892098500626e-16,
+      "pass": true
+    },
+    {
+      "id": "W230",
+      "part": 4,
+      "what": "on-resonance Bragg reflectivity",
+      "actual": 0.8494729241817146,
+      "expected": 0.8494729241817147,
+      "error": 1.1102230246251565e-16,
+      "pass": true
+    },
+    {
+      "id": "W231",
+      "part": 1,
+      "what": "inertial-gravity shallow water wave dispersion",
+      "actual": 0,
+      "expected": 0,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "W231",
+      "part": 2,
+      "what": "zero-k inertia gap",
+      "actual": 1.3,
+      "expected": 1.3,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "W231",
+      "part": 3,
+      "what": "geostrophic zero-frequency horizontal divergence",
+      "actual": -1.1102230246251565e-16,
+      "expected": 0,
+      "error": 1.1102230246251565e-16,
+      "pass": true
+    },
+    {
+      "id": "W231",
+      "part": 4,
+      "what": "inertial gravity group speed slope",
+      "actual": 4.277407333055352,
+      "expected": 4.277407333086458,
+      "error": 3.1105784614737786e-11,
+      "pass": true
+    },
+    {
+      "id": "O230",
+      "part": 1,
+      "what": "fiber normalized V identity",
+      "actual": 15.669768585854445,
+      "expected": 15.669768585854444,
+      "error": 1.7763568394002505e-15,
+      "pass": true
+    },
+    {
+      "id": "O230",
+      "part": 2,
+      "what": "fiber modal transverse normalization",
+      "actual": 15.669768585854445,
+      "expected": 15.669768585854445,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O230",
+      "part": 3,
+      "what": "sample step-index V in single-mode range",
+      "actual": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true,
+      "correction": "Original example used a=4 micrometers, which actually yields V>2.405. Replaced numerical test example with a=2 micrometers while keeping physical single-mode cutoff unchanged; V recomputed."
+    },
+    {
+      "id": "O230",
+      "part": 4,
+      "what": "bound fiber beta between cladding and core via b",
+      "actual": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O231",
+      "part": 1,
+      "what": "one-photon QFI from state derivative",
+      "actual": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O231",
+      "part": 2,
+      "what": "N independent photons QFI additivity",
+      "actual": 10,
+      "expected": 10,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O231",
+      "part": 3,
+      "what": "NOON Fisher N²",
+      "actual": 100,
+      "expected": 100,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O231",
+      "part": 4,
+      "what": "lossy heralded NOON Fisher per initial trial",
+      "actual": 17.490122876598086,
+      "expected": 17.490122876598086,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "Q230",
+      "part": 1,
+      "what": "Rabi projective single step survival",
+      "actual": 0.9999977500016874,
+      "expected": 0.9999977500016874,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "Q230",
+      "part": 2,
+      "what": "Zeno survival log second order",
+      "actual": -0.0022500008438034584,
+      "expected": -0.00225,
+      "error": 8.438034585292464e-10,
+      "pass": true
+    },
+    {
+      "id": "Q230",
+      "part": 3,
+      "what": "selective/nonselective Markov recurrence",
+      "actual": 0.9977550515548779,
+      "expected": 0.9977550515549332,
+      "error": 5.5289106626332796e-14,
+      "pass": true
+    },
+    {
+      "id": "Q230",
+      "part": 4,
+      "what": "strong dephasing suppressed effective rate",
+      "actual": 0.04001601281281353,
+      "expected": 0.04,
+      "error": 0.000016012812813527566,
+      "pass": true
+    },
+    {
+      "id": "Q231",
+      "part": 1,
+      "what": "longitudinal periodic gauge derivative",
+      "actual": 1.8421219880057702,
+      "expected": 1.8421219880057702,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "Q231",
+      "part": 2,
+      "what": "Floquet high-frequency zero Fourier harmonic",
+      "actual": 0.6025661697724967,
+      "expected": 0.6025661697724921,
+      "error": 4.551914400963142e-15,
+      "pass": true
+    },
+    {
+      "id": "Q231",
+      "part": 3,
+      "what": "Floquet quasienergy gap from average Hamiltonian",
+      "actual": 0.180769850931749,
+      "expected": 0.18076985093174763,
+      "error": 1.3600232051658168e-15,
+      "pass": true
+    },
+    {
+      "id": "Q231",
+      "part": 4,
+      "what": "first J0 zero for coherent destruction",
+      "actual": 2.404825557695773,
+      "expected": 2.404825557695773,
+      "error": 0,
+      "pass": true
+    }
+  ],
+  "scope": "Numeric/algebraic subpart checks; not independent expert validation"
+}

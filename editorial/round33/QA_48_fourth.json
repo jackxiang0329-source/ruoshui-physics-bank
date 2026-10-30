@@ -1,0 +1,442 @@
+{
+  "batch": 33,
+  "group": "fourth twelve",
+  "executed_tests": 48,
+  "passing": 48,
+  "failed": 0,
+  "tests": [
+    {
+      "id": "M226",
+      "part": 1,
+      "name": "hyperbola periapsis conic relation",
+      "actual": 72,
+      "expected": 72,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M226",
+      "part": 2,
+      "name": "gravity scattering angle parameter equivalence",
+      "actual": 0.041630544712181326,
+      "expected": 0.04163054471218133,
+      "error": 6.938893903907228e-18,
+      "pass": true
+    },
+    {
+      "id": "M226",
+      "part": 3,
+      "name": "planetary gravity assist energy exchange Cauchy bound",
+      "actual": 1.665221788487253,
+      "expected": 1.665221788487253,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M226",
+      "part": 4,
+      "name": "weak gravitational scattering first order",
+      "actual": 1.9999999933333332,
+      "expected": 2,
+      "error": 6.66666677417993e-9,
+      "pass": true
+    },
+    {
+      "id": "M227",
+      "part": 1,
+      "name": "weak TT metric differential arm length",
+      "actual": 0.8000000039993793,
+      "expected": 0.8,
+      "error": 3.999379272201509e-9,
+      "pass": true
+    },
+    {
+      "id": "M227",
+      "part": 2,
+      "name": "geodesic tidal separation acceleration",
+      "actual": -0.035741110071541016,
+      "expected": -0.03574111089073918,
+      "error": 8.191981676342053e-10,
+      "pass": true
+    },
+    {
+      "id": "M227",
+      "part": 3,
+      "name": "Michelson round trip differential phase",
+      "actual": 10053096.49148734,
+      "expected": 10053096.49148734,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M227",
+      "part": 4,
+      "name": "detector plus tensor projection at 45 degrees",
+      "actual": 6.123233995736766e-17,
+      "expected": 0,
+      "error": 6.123233995736766e-17,
+      "pass": true
+    },
+    {
+      "id": "E226",
+      "part": 1,
+      "name": "dipole far field magnetic to electric ratio",
+      "actual": 0.007497537646299711,
+      "expected": 0.007497537646299711,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E226",
+      "part": 2,
+      "name": "dipole radiation angle sin squared integral",
+      "actual": 8.377580409572795,
+      "expected": 8.377580409572781,
+      "error": 1.4210854715202004e-14,
+      "pass": true
+    },
+    {
+      "id": "E226",
+      "part": 3,
+      "name": "dipole Larmor average versus radiation integral",
+      "actual": 0.028368125208137442,
+      "expected": 0.028368125208137442,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E226",
+      "part": 4,
+      "name": "radiation resistance versus dipole length",
+      "actual": 0.000037301939787162974,
+      "expected": 0.000037301939787162974,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E227",
+      "part": 1,
+      "name": "Maxwell eigenvalue perturbation sign negative",
+      "actual": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E227",
+      "part": 2,
+      "name": "cavity electric field normalization integral",
+      "actual": 2.999999999999995,
+      "expected": 3,
+      "error": 4.884981308350689e-15,
+      "pass": true
+    },
+    {
+      "id": "E227",
+      "part": 3,
+      "name": "small dielectric slab perturbation vs local approximation",
+      "actual": -0.0008725424729822792,
+      "expected": -0.000872677996249965,
+      "error": 1.3552326768575748e-7,
+      "pass": true
+    },
+    {
+      "id": "E227",
+      "part": 4,
+      "name": "cavity shift vanishes at electric field node",
+      "actual": 0,
+      "expected": 0,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T224",
+      "part": 1,
+      "name": "Ornstein Uhlenbeck equipartition from diffusion/friction",
+      "actual": 1.5,
+      "expected": 1.5,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T224",
+      "part": 2,
+      "name": "OU velocity autocorrelation positive decay",
+      "actual": 0.4517913178683032,
+      "expected": 0.4517913178683032,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T224",
+      "part": 3,
+      "name": "OU MSD from autocorrelation convolution",
+      "actual": 0.3758956589341512,
+      "expected": 0.3758956589341516,
+      "error": 3.885780586188048e-16,
+      "pass": true
+    },
+    {
+      "id": "T224",
+      "part": 4,
+      "name": "OU ballistic short time coefficient",
+      "actual": 1.4990004998092534,
+      "expected": 1.5,
+      "error": 0.0009995001907465717,
+      "pass": true
+    },
+    {
+      "id": "T225",
+      "part": 1,
+      "name": "virial equilibrium 2K+U=0",
+      "actual": 0,
+      "expected": 0,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T225",
+      "part": 2,
+      "name": "virial total energy thermal relation",
+      "actual": -900,
+      "expected": -900,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T225",
+      "part": 3,
+      "name": "self gravitational system heats as it loses energy",
+      "actual": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T225",
+      "part": 4,
+      "name": "positive canonical heat capacity from energy variance",
+      "actual": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "W232",
+      "part": 1,
+      "name": "NLS constant background temporal phase",
+      "actual": 0.75,
+      "expected": 0.75,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "W232",
+      "part": 2,
+      "name": "NLS sideband eigenmode polynomial",
+      "actual": -0.5095999999999999,
+      "expected": -0.5095999999999999,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "W232",
+      "part": 3,
+      "name": "NLS fastest modulational growth",
+      "actual": 0.75,
+      "expected": 0.75,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "W232",
+      "part": 4,
+      "name": "defocusing NLS yields real stable sideband",
+      "actual": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "W233",
+      "part": 1,
+      "name": "string harmonic frequency from tension",
+      "actual": 7.402203300817018,
+      "expected": 7.4022033008170185,
+      "error": 8.881784197001252e-16,
+      "pass": true
+    },
+    {
+      "id": "W233",
+      "part": 2,
+      "name": "Mathieu principal resonance growth",
+      "actual": 0.05441398092702653,
+      "expected": 0.05441398092702653,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "W233",
+      "part": 3,
+      "name": "Mathieu resonance tongue includes selected detuning",
+      "actual": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "W233",
+      "part": 4,
+      "name": "modulated-string gain exceeds damping threshold",
+      "actual": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O232",
+      "part": 1,
+      "name": "SHG complex amplitude direct integral versus analytic",
+      "actual": -5.9472819093267475,
+      "expected": -5.947281909326701,
+      "error": 4.618527782440651e-14,
+      "pass": true
+    },
+    {
+      "id": "O232",
+      "part": 2,
+      "name": "SHG intensity sinc phase mismatch",
+      "actual": 76.1252084393825,
+      "expected": 76.1252084393818,
+      "error": 7.105427357601002e-13,
+      "pass": true
+    },
+    {
+      "id": "O232",
+      "part": 3,
+      "name": "quasi-phase matching first Fourier harmonic",
+      "actual": 0.6366197723675814,
+      "expected": 0.6366197723675814,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O232",
+      "part": 4,
+      "name": "phase matched SHG amplitude linear in L",
+      "actual": 9.600000000000001,
+      "expected": 9.600000000000001,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O233",
+      "part": 1,
+      "name": "TE total internal reflection unit modulus",
+      "actual": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O233",
+      "part": 2,
+      "name": "TIR reflection phase equals minus twice atan",
+      "actual": -1.270294063310217,
+      "expected": -1.270294063310217,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O233",
+      "part": 3,
+      "name": "Goos Hanchen stationary phase shift",
+      "actual": 2.010075630698438,
+      "expected": 2.010075630518424,
+      "error": 1.8001378165877213e-10,
+      "pass": true
+    },
+    {
+      "id": "O233",
+      "part": 4,
+      "name": "evanescent gap and finite-beam regularization needed near critical",
+      "actual": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "Q232",
+      "part": 1,
+      "name": "Ermakov auxiliary equation residual",
+      "actual": 0.8517244354939596,
+      "expected": 0.8517244354939596,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "Q232",
+      "part": 2,
+      "name": "Ermakov transformed oscillator first order",
+      "actual": 0.6354175352848535,
+      "expected": 0.6354175352848535,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "Q232",
+      "part": 3,
+      "name": "Lewis invariant derivative",
+      "actual": 2.7755575615628914e-17,
+      "expected": 0,
+      "error": 2.7755575615628914e-17,
+      "pass": true
+    },
+    {
+      "id": "Q232",
+      "part": 4,
+      "name": "constant frequency Lewis invariant equals E over omega",
+      "actual": 0.3216666666666666,
+      "expected": 0.3216666666666667,
+      "error": 1.1102230246251565e-16,
+      "pass": true
+    },
+    {
+      "id": "Q233",
+      "part": 1,
+      "name": "JC excitation number conserved by rotating-wave coupling",
+      "actual": 3,
+      "expected": 3,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "Q233",
+      "part": 2,
+      "name": "JC dressed state eigenvalue splitting",
+      "actual": 2.6229754097208002,
+      "expected": 2.6229754097208002,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "Q233",
+      "part": 3,
+      "name": "JC transition probability physically bounded",
+      "actual": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "Q233",
+      "part": 4,
+      "name": "JC dispersive shift second order",
+      "actual": 0.07323185477233096,
+      "expected": 0.07349999999999998,
+      "error": 0.00026814522766901994,
+      "pass": true
+    }
+  ],
+  "scope": "Model-specific numerical/symbolic checks; independent academic review pending"
+}

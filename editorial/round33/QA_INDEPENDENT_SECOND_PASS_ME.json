@@ -1,0 +1,88 @@
+{
+  "scope": "Independent alternate calculations using finite differences, radial quadrature and full Mathieu monodromy",
+  "count": 10,
+  "pass": 10,
+  "failed": 0,
+  "checks": [
+    {
+      "id": "M220",
+      "method": "stationarity by finite differences of Routh potential",
+      "actual": -9.992007221626408e-11,
+      "expected": 0,
+      "err": 9.992007221626408e-11,
+      "pass": true
+    },
+    {
+      "id": "M221",
+      "method": "high-speed gyroscopic stabilization: lower omega squared",
+      "actual": 1.1752483470938753,
+      "expected": 1.1752483470938755,
+      "err": 2.220446049250313e-16,
+      "pass": true
+    },
+    {
+      "id": "M223",
+      "method": "Routh stability discriminant at critical mass ratio",
+      "actual": 6.661338147750939e-16,
+      "expected": 0,
+      "err": 6.661338147750939e-16,
+      "pass": true
+    },
+    {
+      "id": "M225",
+      "method": "accelerated horizon via null coordinate c t - x",
+      "actual": 3.325070826077779,
+      "expected": 3.3333333333333335,
+      "err": 0.008262507255554663,
+      "pass": true
+    },
+    {
+      "id": "M228",
+      "method": "Thomas precession exact gamma identity",
+      "actual": 0.15470053837925157,
+      "expected": 0.15470053837925168,
+      "err": 1.1102230246251565e-16,
+      "pass": true
+    },
+    {
+      "id": "E220",
+      "method": "cylindrical London Bessel modified Helmholtz residual",
+      "actual": 0.5653475056451029,
+      "expected": 0.5653471052658946,
+      "err": 4.0037920834290475e-7,
+      "pass": true
+    },
+    {
+      "id": "E221",
+      "method": "SPP TM boundary impedance continuity",
+      "actual": 0,
+      "expected": 0,
+      "err": 0,
+      "pass": true
+    },
+    {
+      "id": "E223",
+      "method": "compensated Hall response from separate Drude species",
+      "actual": 0,
+      "expected": 0,
+      "err": 0,
+      "pass": true
+    },
+    {
+      "id": "E227",
+      "method": "cavity dielectric perturbation integral vs local estimate",
+      "actual": -0.0005953832138494196,
+      "expected": -0.0005954194696096773,
+      "err": 3.625576025772376e-8,
+      "pass": true
+    },
+    {
+      "id": "E228",
+      "method": "Mathieu monodromy secular Floquet exponent against small-q",
+      "actual": 0.05663950404663788,
+      "expected": 0.056568542494923796,
+      "err": 0.00007096155171408547,
+      "pass": true
+    }
+  ]
+}

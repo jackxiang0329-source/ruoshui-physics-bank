@@ -1,0 +1,24 @@
+\subsection*{T224\quad Langevin–Ornstein–Uhlenbeck过程的涨落耗散与位移交叉极限}
+质量$m>0$的布朗粒子在温度$T$的均匀热库中作一维运动，动量阻尼系数$\gamma>0$，动力学满足$m\,dv=-\gamma v\,dt+\sqrt{2\gamma k_BT}\,dW_t$，其中$W_t$为标准Wiener过程，假设初速度已处于平衡分布。
+(1) 求平均速度的松弛时间和速度方差的平衡值。
+(2) 求平稳速度自关联$\langle v(t)v(0)\rangle$。
+(3) 积分得到任意时间的平均平方位移。
+(4) 求短时弹道和长时扩散极限，验证Einstein扩散系数。
+\par\textbf{逐问解析}
+(1) 将随机方程写成$dv=-av\,dt+b\,dW_t$，$a=\gamma/m$、$b=\sqrt{2\gamma k_BT}/m$，解为$v(t)=v(0)e^{-at}+b\int_0^te^{-a(t-s)}dW_s$。因噪声均值零，$\langle v(t)\rangle=\langle v(0)\rangle e^{-t/\tau}$，$\tau=m/\gamma$。对$v^2$应用Itô公式$d(v^2)=2v\,dv+b^2dt$，平衡方差满足$0=-2a\langle v^2\rangle+b^2$，故$\langle v^2\rangle=k_BT/m$。
+(2) 未来噪声增量独立于初速度，故上式乘$v(0)$取平均，$\langle v(t)v(0)\rangle=e^{-t/\tau}\langle v(0)^2\rangle=(k_BT/m)e^{-t/\tau}$，对负时差依平稳性为$(k_BT/m)e^{-|t|/\tau}$。这是涨落耗散定理的时间域表现：阻尼越大，速度记忆时间越短。
+(3) 位移$\Delta x(t)=\int_0^t v(s)ds$，所以$\langle\Delta x^2\rangle=\int_0^t\int_0^t\langle v(s)v(s')\rangle dsds'=2(k_BT/m)\int_0^t(t-u)e^{-u/\tau}du$。积分给$\langle\Delta x^2\rangle=2(k_BT/\gamma)[t-\tau(1-e^{-t/\tau})]$，此式在全时间范围从惯性连续过渡到扩散。
+(4) 当$t\ll\tau$，括号展开为$t^2/(2\tau)+O(t^3)$，因此$\langle\Delta x^2\rangle\simeq(k_BT/m)t^2$，为弹道段；当$t\gg\tau$，$\langle\Delta x^2\rangle\simeq2Dt$，$D=k_BT/\gamma$。这就是Einstein关系，若噪声强度不是$\sqrt{2\gamma k_BT}$将无法同时得到等分配和该扩散系数。
+\par\medskip
+\subsection*{T225\quad 自引力孤立星团的Virial平衡与负微正则热容}
+$N\gg1$个质量$m$的经典粒子构成近似球形、自束缚且统计稳态的星团，忽略质量流失、辐射和外部压力，粒子间势能总和$U<0$为反平方引力对应的$-1$次齐次势，平均动能$K$。
+(1) 用Virial定理推导动能与引力势能的稳态关系。
+(2) 以速度分布温度定义$K=3Nk_BT/2$，求总能量及微正则热容。
+(3) 解释星团能量损失为何可使核心升温，并与普通正热容系统对照。
+(4) 讨论有限体积、外压、二体逃逸及正则系综对结论的限制。
+\par\textbf{逐问解析}
+(1) 定义惯量矩$I_G=\sum_im_ir_i^2$，两次时间微分给$\frac12\ddot I_G=2K+\sum_i\boldsymbol r_i\cdot\boldsymbol F_i$。对于Newton引力势$U\propto r^{-1}$，Euler齐次关系$\sum_i\boldsymbol r_i\cdot\boldsymbol F_i=U$。处于长期统计稳态且$\langle\ddot I_G\rangle=0$时得到$2\langle K\rangle+\langle U\rangle=0$；这不是任一瞬时位置都严格满足的恒等式。
+(2) 稳态比能量$E=\langle K+U\rangle=-\langle K\rangle$。按动能定义有效温度$\langle K\rangle=(3/2)Nk_BT$，从而$E=-(3/2)Nk_BT$，对该族准稳态孤立平衡分支的微正则导数$C=(\partial E/\partial T)_N=-3Nk_B/2<0$。负热容允许于长程自引力、非加性系统，不代表粒子单体能量为负。
+(3) 若星团通过辐射或逃逸缓慢损失总能量$\Delta E<0$并重新Virial化，则$\Delta T=-2\Delta E/(3Nk_B)>0$；引力势能变得更负，释放出的势能超过向外输送的能量，剩余转成随机动能。与普通正热容样品不同，失能反而升温可导致核心收缩与gravothermal失稳。
+(4) 表面压力不可忽略时Virial定理应加$-3PV$型边界项（符号依定义），逃逸会改变$N$并携走能量，高密核心则受到碰撞、双星和量子效应影响。负微正则热容不能作为与无限温度热库稳定正则接触的平衡支：正则系综有$C_V=\operatorname{Var}(E)/(k_BT^2)\ge0$，且无限自引力点粒子气体无短程正规化时配分函数可能发散。
+\par\medskip

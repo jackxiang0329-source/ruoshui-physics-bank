@@ -1,0 +1,24 @@
+\subsection*{Q230\quad 投影量子Zeno效应、非选择测量与强退相干极限}
+二能级体系哈密顿量$H=\hbar\Omega\sigma_x/2$，初态为$\sigma_z$的$-1$本征态$|g\rangle$，总演化时间$t$，每经过$\delta t=t/N$进行一次理想$\{|g\rangle,|e\rangle\}$投影测量。
+(1) 求每段自由演化后仍在基态的几率。
+(2) 求$N$次均得到$g$的选择性存活概率及其$N\to\infty$极限。
+(3) 对不做选择、只记录最终布居的重复测量给出基态概率。
+(4) 用Markov型强退相干Lindblad方程求有效慢跃迁率并讨论与投影极限的联系。
+\par\textbf{逐问解析}
+(1) 利用$\sigma_x^2=I$，自由演化算符$U(\delta t)=\cos(\Omega\delta t/2)I-i\sin(\Omega\delta t/2)\sigma_x$。由$\langle g|\sigma_x|g\rangle=0$，单步基态存活振幅为$\cos(\Omega\delta t/2)$，概率$p=\cos^2(\Omega\delta t/2)$。单步偏离1的量级是$(\delta t)^2$，不是线性时间。
+(2) 选择性条件要求每一步结果都为$g$，各步状态重置到$|g\rangle$，因此$P_{\rm no\,jump}=p^N=[\cos^2(\Omega t/(2N))]^N$。展开$\ln\cos^2x=-x^2+O(x^4)$得$\ln P_{\rm no\,jump}=-\Omega^2t^2/(4N)+O(N^{-3})$，所以固定$t$下$N\to\infty$有$P_{\rm no\,jump}\to1$，即量子Zeno冻结。
+(3) 非选择性测量也允许从$g$跳到$e$再返回。每步状态满足二态转移矩阵$\mathsf P=\begin{pmatrix}p&1-p\\1-p&p\end{pmatrix}$，本征值为1及$2p-1=\cos(\Omega\delta t)$。初始基态后第$N$次测量得到$g$的总概率$P_g^{(N)}=[1+\cos^N(\Omega t/N)]/2$，它与从未跳跃的$p^N$不同，但两者在连续投影极限都趋1。
+(4) 若改用持续$\sigma_z$退相干，设$\dot\rho=-i(\Omega/2)[\sigma_x,\rho]+(\Gamma/2)(\sigma_z\rho\sigma_z-\rho)$，非对角元以速率$\Gamma$衰减。Bloch变量$z=\operatorname{Tr}(\rho\sigma_z)$满足$\ddot z+\Gamma\dot z+\Omega^2z=0$，当$\Gamma\gg\Omega$时慢模衰减率为$\Omega^2/\Gamma+O(\Omega^4/\Gamma^3)$，有效激发交换被强测量抑制。连续退相干与离散理想投影的定量参数需单独对应，不能直接把$\Gamma$设成$N/t$而忽略测量模型。
+\par\medskip
+\subsection*{Q231\quad 高频驱动二能级Floquet系统与Bessel抑制的有效隧穿}
+周期性驱动二能级哈密顿量$H(t)=\frac\Delta2\sigma_x+A\cos(\omega t)\sigma_z$，$\Delta>0$、$\omega>0$，并假设$\hbar\omega\gg\Delta$且可控制驱动幅度$A$。
+(1) 构造消除纵向驱动的周期性酉变换。
+(2) 求变换后横向耦合的谐波展开。
+(3) 在高频平均近似下推导有效Floquet哈密顿量。
+(4) 给出相干隧穿抑制的Bessel零点条件及近似适用边界。
+\par\textbf{逐问解析}
+(1) 置$\chi(t)=A\sin(\omega t)/(\hbar\omega)$，取$U_0(t)=e^{-i\chi(t)\sigma_z}$。将原态写$|\psi\rangle=U_0|\widetilde\psi\rangle$，变换哈密顿量为$\widetilde H=U_0^\dagger HU_0-i\hbar U_0^\dagger\dot U_0$。因$-i\hbar U_0^\dagger\dot U_0=-A\cos(\omega t)\sigma_z$，它与原纵向驱动严格相消。
+(2) 使用$\sigma_\pm=(\sigma_x\pm i\sigma_y)/2$与$U_0^\dagger\sigma_\pm U_0=e^{\pm 2i\chi(t)}\sigma_\pm$，得$\widetilde H(t)=\frac\Delta2[e^{2i\chi(t)}\sigma_++e^{-2i\chi(t)}\sigma_-]$。Jacobi–Anger公式$e^{iz\sin\omega t}=\sum_{n=-\infty}^\infty J_n(z)e^{in\omega t}$将耦合分解成多光子边带，驱动强度参数是$z=2A/(\hbar\omega)$。
+(3) 若$\Delta/(\hbar\omega)\ll1$，保留Magnus/Floquet展开首个周期平均项。因为$\langle e^{\pm iz\sin\omega t}\rangle=J_0(z)$，故$H_{\rm eff}^{(0)}=\frac\Delta2J_0(2A/(\hbar\omega))\sigma_x$。准能级的首阶有效劈裂为$|\Delta_{\rm eff}|=|\Delta J_0(2A/(\hbar\omega))|$，不同于简单把静态$\Delta$替换为$\Delta-2A$。
+(4) 当$2A/(\hbar\omega)$取$J_0$的零点，例如首根$2.404826\ldots$，首阶有效隧穿被抑制，称为相干隧穿抑制。该零点不是有限频率下严格零耦合的普遍定理：高阶Magnus项、非正弦驱动、噪声和与其他能级的多光子共振会造成残余劈裂，必须核查$\hbar\omega\gg\Delta$及二能级近似。
+\par\medskip

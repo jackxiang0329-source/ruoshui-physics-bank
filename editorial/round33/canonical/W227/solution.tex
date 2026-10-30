@@ -1,0 +1,4 @@
+(1) 在第$j$层，$p(x)=P^+e^{ik_jx}+P^-e^{-ik_jx}$、$u(x)=(P^+e^{ik_jx}-P^-e^{-ik_jx})/Z_j$，$k_j=\omega/c_j$。两端状态$(p,u)^T$由$\mathsf M_j=\begin{pmatrix}\cos\delta_j&iZ_j\sin\delta_j\\i\sin\delta_j/Z_j&\cos\delta_j\end{pmatrix}$联系，$\delta_j=\omega d_j/c_j$。因$\det\mathsf M_j=\cos^2\delta_j+\sin^2\delta_j=1$，无损层具有互逆Bloch特征值。
+(2) 单周期矩阵$\mathsf M=\mathsf M_2\mathsf M_1$，Bloch条件使其本征值为$e^{\pm iKa}$，故$\cos(Ka)=\tfrac12\operatorname{tr}\mathsf M=\cos\delta_1\cos\delta_2-\tfrac12(Z_1/Z_2+Z_2/Z_1)\sin\delta_1\sin\delta_2$。若迹的一半绝对值大于一，$K$有非零虚部，形成不传播的Bloch禁带。
+(3) 取设计频率使$\delta_1=\delta_2=\pi/2$，则$\cos(Ka)=-\tfrac12(r+r^{-1})$，$r=Z_1/Z_2>0$。由算术-几何均值$r+r^{-1}\ge2$，只有$r=1$时绝对值等于一；任意$r\ne1$均有$|\cos Ka|>1$，设计频率处严格为禁带。带隙来自传播相位与阻抗反射的协同，而不是材料内部吸收。
+(4) 禁带中写$Ka=\pi+i\chi$或纯虚加布里渊区选择，满足$\cosh\chi=|\tfrac12\operatorname{tr}\mathsf M|>1$。穿越$N$个周期时选衰减本征分量，幅度$|A_N|\sim |A_0|e^{-N\chi}$，对应强度$\propto e^{-2N\chi}$（边界耦合前因子另算）。在四分之一波中心，$\chi=|\ln r|$；若$Z_1=Z_2$，整个结构只有传播相位，矩阵等价于相位累加，不出现该反射带隙。

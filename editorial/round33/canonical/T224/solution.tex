@@ -1,0 +1,4 @@
+(1) 将随机方程写成$dv=-av\,dt+b\,dW_t$，$a=\gamma/m$、$b=\sqrt{2\gamma k_BT}/m$，解为$v(t)=v(0)e^{-at}+b\int_0^te^{-a(t-s)}dW_s$。因噪声均值零，$\langle v(t)\rangle=\langle v(0)\rangle e^{-t/\tau}$，$\tau=m/\gamma$。对$v^2$应用Itô公式$d(v^2)=2v\,dv+b^2dt$，平衡方差满足$0=-2a\langle v^2\rangle+b^2$，故$\langle v^2\rangle=k_BT/m$。
+(2) 未来噪声增量独立于初速度，故上式乘$v(0)$取平均，$\langle v(t)v(0)\rangle=e^{-t/\tau}\langle v(0)^2\rangle=(k_BT/m)e^{-t/\tau}$，对负时差依平稳性为$(k_BT/m)e^{-|t|/\tau}$。这是涨落耗散定理的时间域表现：阻尼越大，速度记忆时间越短。
+(3) 位移$\Delta x(t)=\int_0^t v(s)ds$，所以$\langle\Delta x^2\rangle=\int_0^t\int_0^t\langle v(s)v(s')\rangle dsds'=2(k_BT/m)\int_0^t(t-u)e^{-u/\tau}du$。积分给$\langle\Delta x^2\rangle=2(k_BT/\gamma)[t-\tau(1-e^{-t/\tau})]$，此式在全时间范围从惯性连续过渡到扩散。
+(4) 当$t\ll\tau$，括号展开为$t^2/(2\tau)+O(t^3)$，因此$\langle\Delta x^2\rangle\simeq(k_BT/m)t^2$，为弹道段；当$t\gg\tau$，$\langle\Delta x^2\rangle\simeq2Dt$，$D=k_BT/\gamma$。这就是Einstein关系，若噪声强度不是$\sqrt{2\gamma k_BT}$将无法同时得到等分配和该扩散系数。

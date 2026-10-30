@@ -1,0 +1,25 @@
+% 第33批波动八问以上：Rayleigh弹性面波与声学周期超晶格
+\subsection*{W226\quad 半无限弹性介质的Rayleigh表面波与本征方程}
+均匀各向同性线弹性体占$z<0$，自由表面$z=0$，密度$\rho$、Lamé常数$\lambda,\mu$，设$\mu>0$且$\lambda+2\mu>0$。沿$x$传播平面应变无耗散Rayleigh波，纵横波速$c_p=\sqrt{(\lambda+2\mu)/\rho}$、$c_s=\sqrt{\mu/\rho}$。
+(1) 用标量势和横向矢势构造向内部衰减的位移解。
+(2) 写自由表面剪切/法向应力为零的二元线性系统。
+(3) 导出Rayleigh特征方程并化为速度多项式。
+(4) 分析物理根范围、深度局域性和不可压极限。
+\par\textbf{逐问解析}
+(1) 取$\boldsymbol u=\nabla\phi+\nabla\times(\psi\hat y)$，设$\phi=Ae^{pz}e^{i(kx-\omega t)}$、$\psi=Be^{qz}e^{i(kx-\omega t)}$，其中$p=\sqrt{k^2-\omega^2/c_p^2}$、$q=\sqrt{k^2-\omega^2/c_s^2}$取正实根。于是$u_x=ik\phi-\partial_z\psi$、$u_z=\partial_z\phi+ik\psi$；为了向$z\to-\infty$衰减，须有$0<c=\omega/k<c_s<c_p$。
+(2) 自由表面$\sigma_{xz}=\mu(\partial_zu_x+\partial_xu_z)=0$、$\sigma_{zz}=\lambda\nabla\cdot u+2\mu\partial_zu_z=0$。代入两势的表达式后，剪切方程给$2ikpA-(q^2+k^2)B=0$，法向方程可取$(2k^2-\omega^2/c_s^2)A+2ikqB=0$（若势$\psi$反向定义，系统相应整体符号改变）。只有两式行列式为零才有非平凡局域面波。
+(3) 从前述二式消去$A,B$，得到$(2k^2-\omega^2/c_s^2)^2-4k^2pq=0$。令$s=c^2/c_s^2$、$\eta=c_s^2/c_p^2$，$p=k\sqrt{1-\eta s}$、$q=k\sqrt{1-s}$，化为$(2-s)^2=4\sqrt{(1-s)(1-\eta s)}$。两边平方、去掉$s=0$伪根，得到$s^3-8s^2+(24-16\eta)s-16(1-\eta)=0$。
+(4) 物理Rayleigh模需选$0<s<1$的非零根并同时满足未平方的正根方程，不能把多项式其余根机械当作表面波。$c<c_s$确保$p,q$都为实数且振幅随深度指数局域；不可压极限$\lambda/\mu\to\infty$使$\eta\to0$，方程变为$s^3-8s^2+24s-16=0$，其物理根给$c_R\simeq0.9553c_s$。Rayleigh波因此低于体剪切波速，且不向半空间深处传播能量。
+\par\medskip
+\subsection*{W227\quad 周期声学双层晶格的Bloch带隙与阻抗失配}
+一维理想无耗散声学超晶格由两种均匀介质逐层交替构成，厚度$d_1,d_2>0$，体密度$\rho_j$、声速$c_j$、平面波阻抗$Z_j=\rho_jc_j$，周期$a=d_1+d_2$，频率$\omega>0$。
+(1) 从声压和质点速度构造每层传播矩阵并说明行列式。
+(2) 求单周期Bloch色散的迹公式。
+(3) 用四分之一波厚度说明阻抗失配打开声学带隙。
+(4) 求禁带中有限周期数$N$的场包络衰减尺度并说明无失配极限。
+\par\textbf{逐问解析}
+(1) 在第$j$层，$p(x)=P^+e^{ik_jx}+P^-e^{-ik_jx}$、$u(x)=(P^+e^{ik_jx}-P^-e^{-ik_jx})/Z_j$，$k_j=\omega/c_j$。两端状态$(p,u)^T$由$\mathsf M_j=\begin{pmatrix}\cos\delta_j&iZ_j\sin\delta_j\\i\sin\delta_j/Z_j&\cos\delta_j\end{pmatrix}$联系，$\delta_j=\omega d_j/c_j$。因$\det\mathsf M_j=\cos^2\delta_j+\sin^2\delta_j=1$，无损层具有互逆Bloch特征值。
+(2) 单周期矩阵$\mathsf M=\mathsf M_2\mathsf M_1$，Bloch条件使其本征值为$e^{\pm iKa}$，故$\cos(Ka)=\tfrac12\operatorname{tr}\mathsf M=\cos\delta_1\cos\delta_2-\tfrac12(Z_1/Z_2+Z_2/Z_1)\sin\delta_1\sin\delta_2$。若迹的一半绝对值大于一，$K$有非零虚部，形成不传播的Bloch禁带。
+(3) 取设计频率使$\delta_1=\delta_2=\pi/2$，则$\cos(Ka)=-\tfrac12(r+r^{-1})$，$r=Z_1/Z_2>0$。由算术-几何均值$r+r^{-1}\ge2$，只有$r=1$时绝对值等于一；任意$r\ne1$均有$|\cos Ka|>1$，设计频率处严格为禁带。带隙来自传播相位与阻抗反射的协同，而不是材料内部吸收。
+(4) 禁带中写$Ka=\pi+i\chi$或纯虚加布里渊区选择，满足$\cosh\chi=|\tfrac12\operatorname{tr}\mathsf M|>1$。穿越$N$个周期时选衰减本征分量，幅度$|A_N|\sim |A_0|e^{-N\chi}$，对应强度$\propto e^{-2N\chi}$（边界耦合前因子另算）。在四分之一波中心，$\chi=|\ln r|$；若$Z_1=Z_2$，整个结构只有传播相位，矩阵等价于相位累加，不出现该反射带隙。
+\par\medskip

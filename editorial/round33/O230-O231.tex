@@ -1,0 +1,24 @@
+\subsection*{O230\quad 弱导引阶跃光纤的LP模截止与单模V数}
+芯半径$a$的圆柱阶跃折射率光纤，芯折射率$n_1>n_2>0$，外包层无限，真空波长$\lambda$；采用弱导引标量近似$\Delta=(n_1-n_2)/n_1\ll1$。
+(1) 从横向Helmholtz方程给出芯内、包层径向Bessel函数解。
+(2) 用界面连续条件导出LP模式超越本征方程。
+(3) 推导归一化频率$V$以及单模条件$V<2.405$的来源。
+(4) 讨论传播常数范围、模式截止和近似适用性。
+\par\textbf{逐问解析}
+(1) 设模式场$\psi(r,\phi,z)=F(r)e^{il\phi}e^{i\beta z}$，每个均匀区满足$F''+r^{-1}F'+[n_j^2k_0^2-\beta^2-l^2/r^2]F=0$。导引模要求$n_2k_0<\beta<n_1k_0$，芯内有限解为$F_1=A J_l(ur/a)$，包层指数衰减解为$F_2=B K_l(wr/a)$，其中$u^2=a^2(n_1^2k_0^2-\beta^2)>0$、$w^2=a^2(\beta^2-n_2^2k_0^2)>0$。
+(2) 在$r=a$连续标量场和径向导数，分别得到$AJ_l(u)=BK_l(w)$、$A uJ_l'(u)=B w K_l'(w)$。消元得$uJ_l'(u)/J_l(u)=wK_l'(w)/K_l(w)$。用Bessel导数递推可写成用于LP谱求根的超越方程；完整矢量Maxwell边界还存在偏振相关的细分模式，弱导引时才近似简并。
+(3) 两定义平方相加，$V^2=u^2+w^2=a^2k_0^2(n_1^2-n_2^2)$，即$V=(2\pi a/\lambda)\sqrt{n_1^2-n_2^2}$。LP$_{01}$基模无有限$V$截止，下一组LP$_{11}$在$w\to0$时的边界条件简化为$J_0(u)=0$，第一个正零点$u=2.404826\ldots$，因此严格单模近似条件为$V<2.405$。
+(4) 定义归一化传播常数$b=(\beta^2-n_2^2k_0^2)/(n_1^2k_0^2-n_2^2k_0^2)=w^2/V^2$，导引模有$0<b<1$；趋截止时$w\to0$、$b\to0$，模式向包层延伸，衰减长度$a/w$发散。大数值孔径、强折射率对比或显著材料色散时需解全矢量混合HE/EH模式，不能机械使用LP单模阈值。
+\par\medskip
+\subsection*{O231\quad 单光子干涉和NOON态的量子Fisher信息与相位极限}
+两路径构成理想无损相位干涉仪，相位$\phi$仅作用于第二路径。考虑单光子态$|\psi_1(\phi)\rangle=(|1,0\rangle+e^{i\phi}|0,1\rangle)/\sqrt2$，以及两模式N光子NOON态$|\psi_N(\phi)\rangle=(|N,0\rangle+e^{iN\phi}|0,N\rangle)/\sqrt2$。
+(1) 从纯态QFI公式求单光子相位信息量。
+(2) 求$N$个独立单光子的总QFI和标准量子极限。
+(3) 求NOON态的QFI与Heisenberg标度。
+(4) 在每个光子独立透过率$\eta<1$的后选择探测下求有效信息的损失因子。
+\par\textbf{逐问解析}
+(1) 纯态关于$\phi$的量子Fisher信息为$F_Q=4[\langle\partial_\phi\psi|\partial_\phi\psi\rangle-|\langle\psi|\partial_\phi\psi\rangle|^2]$。对单光子态，$|\partial_\phi\psi_1\rangle=ie^{i\phi}|0,1\rangle/\sqrt2$，前项为$1/2$、内积模方为$1/4$，所以$F_Q^{(1)}=4(1/2-1/4)=1$。
+(2) 对$N$次独立同分布单光子实验，量子Fisher信息相加$F_Q^{\rm prod}=N$。量子Cramér–Rao界给无偏估计方差$\operatorname{Var}(\hat\phi)\ge1/(\nu N)$，其中$\nu$为独立重复实验次数；一次配置的标度$\Delta\phi\gtrsim1/\sqrt N$就是散粒噪声标准量子极限。
+(3) NOON态导数$|\partial_\phi\psi_N\rangle=iNe^{iN\phi}|0,N\rangle/\sqrt2$，故$\langle\partial\psi|\partial\psi\rangle=N^2/2$、$|\langle\psi|\partial\psi\rangle|^2=N^2/4$，得到$F_Q^{\rm NOON}=N^2$，理想一次配置界为$\Delta\phi\gtrsim1/N$。增强来源于累积$N\phi$的多光子相位而非违反量子测量统计。
+(4) 若仅保留所有$N$个光子均存活的后选择事件，其成功率$p_{\rm surv}=\eta^N$，成功时仍有$F_Q=N^2$，所以按每次原始制备计算的有效信息为$F_{\rm eff}=p_{\rm surv}N^2=\eta^N N^2$。对固定$\eta<1$，随$N$增长此因子最终指数衰减，表明理想Heisenberg标度对损耗十分敏感；实际损耗后的非后选择QFI需按混态模型另算。
+\par\medskip

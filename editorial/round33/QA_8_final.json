@@ -1,0 +1,82 @@
+{
+  "batch": 33,
+  "group": "last two problems",
+  "checks": 8,
+  "passed": 8,
+  "failed": 0,
+  "tests": [
+    {
+      "id": "M228",
+      "part": 1,
+      "label": "Fermi-Walker boosts are local proper-spin transport",
+      "value": 1.0000000000000002,
+      "expected": 1,
+      "error": 2.220446049250313e-16,
+      "pass": true
+    },
+    {
+      "id": "M228",
+      "part": 2,
+      "label": "Thomas precession magnitude equals gamma-minus-one times orbital rate",
+      "value": 0.3867513459481289,
+      "expected": 0.3867513459481292,
+      "error": 3.3306690738754696e-16,
+      "pass": true
+    },
+    {
+      "id": "M228",
+      "part": 3,
+      "label": "Thomas spin accumulated angle per orbit",
+      "value": -0.9720121497572859,
+      "expected": -0.9720121497572859,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M228",
+      "part": 4,
+      "label": "low-beta Thomas angle approaches -pi beta squared",
+      "value": 1.0000007497623642,
+      "expected": 1,
+      "error": 7.497623641938844e-7,
+      "pass": true
+    },
+    {
+      "id": "E228",
+      "part": 1,
+      "label": "quadrupole Laplace trace",
+      "value": 0,
+      "expected": 0,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E228",
+      "part": 2,
+      "label": "Mathieu DC and RF coordinate coefficients traceless",
+      "value": 0,
+      "expected": 0,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E228",
+      "part": 3,
+      "label": "Paul trap radial to axial pseudopotential frequency",
+      "value": 4,
+      "expected": 4,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E228",
+      "part": 4,
+      "label": "Mathieu secular small-q frequency reproduces pseudopotential",
+      "value": 0.0014808644546253883,
+      "expected": 0.0014808644546253883,
+      "error": 0,
+      "pass": true
+    }
+  ],
+  "scope": "Executed model checks, not independent expert QA"
+}

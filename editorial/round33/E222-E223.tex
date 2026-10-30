@@ -1,0 +1,24 @@
+\subsection*{E222\quad 圆柱导线的高频趋肤效应与Bessel复阻抗}
+半径$a$的均匀无限长导线，电导率$\sigma$、磁导率$\mu$，流经轴向谐波电流$I(t)=\operatorname{Re}(I_0e^{-i\omega t})$，忽略位移电流且材料线性。
+(1) 从Maxwell方程和Ohm定律推导圆柱内轴向电场微分方程。
+(2) 给出满足轴心正则性的Bessel解并求截面总电流。
+(3) 求每单位长度复阻抗的精确表达式。
+(4) 分析低频直流与高频强趋肤极限，给出平均焦耳损耗。
+\par\textbf{逐问解析}
+(1) 由$\nabla\times H=\sigma E$和$\nabla\times E=i\omega\mu H$（因时间因子$e^{-i\omega t}$），消去$H$得$\nabla^2E=-i\mu\sigma\omega E$。圆对称轴向分量满足$E_z''+(1/r)E_z'=q^2E_z$，$q^2=-i\mu\sigma\omega$，选$q=(1-i)/\delta$，$\delta=\sqrt{2/(\mu\sigma\omega)}$，以保证物理表面层衰减。
+(2) 轴心有限要求舍弃奇异的$K_0(qr)$，因此$E_z(r)=E_s I_0(qr)/I_0(qa)$。总电流复幅$I_0^{(\mathrm{tot})}=2\pi\sigma\int_0^a E_z(r)r\,dr$，利用$\frac{d}{dr}[rI_1(qr)]=qrI_0(qr)$得$I_0^{(\mathrm{tot})}=2\pi\sigma E_sa I_1(qa)/[qI_0(qa)]$，各点电流相位一般不相同。
+(3) 以导线表面轴向电场$E_s$和总电流定义每米复阻抗$Z'=E_s/I_0^{(\mathrm{tot})}$，故$Z'=\frac q{2\pi\sigma a}\frac{I_0(qa)}{I_1(qa)}$。其单位是$\Omega/\mathrm m$，$\operatorname{Re}Z'>0$对应耗散，虚部对应随频率变化的内部磁储能；复数虚部符号依时间相位约定确定。
+(4) 若$|qa|\ll1$，$I_0(qa)=1+O((qa)^2)$、$I_1(qa)=qa/2+O((qa)^3)$，从而$Z'\to1/(\pi\sigma a^2)$，即直流圆截面电阻；若$a\gg\delta$，$I_0(qa)/I_1(qa)\to1$，有$Z'\sim(1-i)/(2\pi\sigma a\delta)$。每米周期平均焦耳损耗为$P'/\ell=\tfrac12\operatorname{Re}Z'|I_0^{(\mathrm{tot})}|^2$，高频实部按$\sqrt\omega$上升，符合趋肤截面积减小的直观图像。
+\par\medskip
+\subsection*{E223\quad 双载流子Drude模型的Hall补偿与非饱和磁电阻}
+电子密度$n$、迁移率$\mu_e>0$和空穴密度$p$、迁移率$\mu_h>0$的均匀金属薄片，外磁场$B\hat z$，两载流子各服从独立弛豫时间Drude方程，$e>0$。
+(1) 叠加两类载流子求平面电导张量。
+(2) 求纵向和Hall电阻率。
+(3) 推导弱场Hall系数并说明Hall符号反转条件。
+(4) 对完全补偿$n=p$且$\mu_e=\mu_h$分析磁电阻随场的增长规律。
+\par\textbf{逐问解析}
+(1) 每种载流子横向电导均有$1/(1+\mu_j^2B^2)$因子，而电子与空穴的Hall项符号相反。取$\mathbf J=\begin{pmatrix}\sigma_{xx}&\sigma_{xy}\\-\sigma_{xy}&\sigma_{xx}\end{pmatrix}\mathbf E$，得$\sigma_{xx}=e[n\mu_e/(1+\mu_e^2B^2)+p\mu_h/(1+\mu_h^2B^2)]$、$\sigma_{xy}=eB[p\mu_h^2/(1+\mu_h^2B^2)-n\mu_e^2/(1+\mu_e^2B^2)]$。
+(2) 对二维反对称矩阵直接求逆，$\rho=\sigma^{-1}=(\sigma_{xx}^2+\sigma_{xy}^2)^{-1}\begin{pmatrix}\sigma_{xx}&-\sigma_{xy}\\\sigma_{xy}&\sigma_{xx}\end{pmatrix}$。在$J_y=0$的Hall测量条件下，$E_y/J_x=\rho_{yx}=\sigma_{xy}/(\sigma_{xx}^2+\sigma_{xy}^2)$，纵向电阻率$\rho_{xx}=\sigma_{xx}/(\sigma_{xx}^2+\sigma_{xy}^2)$，不能单独用$1/\sigma_{xx}$替代。
+(3) 在$|\mu_jB|\ll1$下，$\sigma_{xx}=e(n\mu_e+p\mu_h)+O(B^2)$，$\sigma_{xy}=eB(p\mu_h^2-n\mu_e^2)+O(B^3)$。因此$R_H=\lim_{B\to0}\rho_{yx}/B=(p\mu_h^2-n\mu_e^2)/[e(n\mu_e+p\mu_h)^2]$。Hall电压反号不必等于$n=p$，而是取决于带迁移率平方权重的补偿条件$p\mu_h^2=n\mu_e^2$。
+(4) 若$n=p=N$且两迁移率均为$\mu$，则$\sigma_{xy}=0$严格对任意$B$成立，而$\sigma_{xx}=2eN\mu/(1+\mu^2B^2)$。因此$\rho_{xx}(B)=(1+\mu^2B^2)/(2eN\mu)$，相对磁电阻$[\rho_{xx}(B)-\rho_{xx}(0)]/\rho_{xx}(0)=\mu^2B^2$，在理想模型中无饱和。真实材料的多带散射、密度不均匀及量子振荡可改变这一高场结果。
+\par\medskip

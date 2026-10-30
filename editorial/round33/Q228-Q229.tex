@@ -1,0 +1,24 @@
+\subsection*{Q228\quad 四次微扰量子振子的能级非等间距与选择定则}
+一维谐振子质量$m$、角频率$\omega$，添加弱正四次势$V_1=\lambda x^4$，$\lambda>0$，假设在所研究量子数$n$范围内一阶微扰有效。
+(1) 用升降算符建立$x^4$的矩阵元结构与选择规则。
+(2) 求任意量子数$n$的一阶能级修正。
+(3) 求相邻能级跃迁频率随$n$的变化。
+(4) 给出高激发态下微扰适用的小参数并检验$\lambda\to0$极限。
+\par\textbf{逐问解析}
+(1) 定义$x=x_0(a+a^\dagger)$，$x_0=\sqrt{\hbar/(2m\omega)}$，并用$[a,a^\dagger]=1$正规排序。$x^4$作用于$|n\rangle$后只含$|n-4\rangle,|n-2\rangle,|n\rangle,|n+2\rangle,|n+4\rangle$分量，因而纯偶宇称耦合使$\Delta n=\pm1,\pm3$矩阵元为零。这并不是偶极辐射跃迁选择定则，而是四次势本身的算符奇偶性。
+(2) 由$a|n\rangle=\sqrt n|n-1\rangle$和$a^\dagger|n\rangle=\sqrt{n+1}|n+1\rangle$逐次作用，取$|n\rangle$的系数得$\langle n|(a+a^\dagger)^4|n\rangle=6n^2+6n+3=3(2n^2+2n+1)$。因此$E_n=\hbar\omega(n+\tfrac12)+\frac{3\lambda\hbar^2}{4m^2\omega^2}(2n^2+2n+1)+O(\lambda^2)$，基态修正为$3\lambda\hbar^2/(4m^2\omega^2)>0$。
+(3) 两相邻能级之差$\Delta E_{n+1,n}=E_{n+1}-E_n=\hbar\omega+\frac{3\lambda\hbar^2}{m^2\omega^2}(n+1)+O(\lambda^2)$，故跃迁角频率$\omega_{n+1,n}=\Delta E/\hbar=\omega+\frac{3\lambda\hbar}{m^2\omega^2}(n+1)+O(\lambda^2)$。四次正势导致能级随$n$愈发疏远，等时间隔的理想谐振子性质被破坏。
+(4) 高$n$时一阶修正量级为$\lambda\hbar^2 n^2/(m^2\omega^2)$，未扰动能量间距仍为$\hbar\omega$。确保相邻态混合受控的充分小参数约为$\lambda\hbar n^2/(m^2\omega^3)\ll1$（更精细地需检查非对角矩阵元与$2\hbar\omega$、$4\hbar\omega$间隙之比）。固定$n$令$\lambda\to0$时全部修正消失，严格回到等间距能谱。
+\par\medskip
+\subsection*{Q229\quad Breit–Wigner单共振散射与Wigner时间延迟}
+单弹性散射通道的孤立共振能量$E_0$、总宽度$\Gamma>0$，背景相移在共振附近可视为常数$\delta_{\rm bg}$。定义单位模散射矩阵$S(E)=e^{2i\delta_{\rm bg}}[E-E_0-i\Gamma/2]/[E-E_0+i\Gamma/2]$。
+(1) 证明弹性单通道散射矩阵的幺正性并求共振相位。
+(2) 由能量导数推导Wigner–Smith延迟的Lorentz线形和峰值。
+(3) 对两端口共振透射给出峰值上界及对称耦合条件。
+(4) 比较$\Gamma\to0$的时间—能量尺度与背景相位的影响。
+\par\textbf{逐问解析}
+(1) 令$x=E-E_0$与$a=\Gamma/2$，有$S=e^{2i\delta_{\rm bg}}(x-ia)/(x+ia)$，由于分子分母互为复共轭，$|S|=1$。取连续相位分支写$S=e^{2i\delta(E)}$，共振相位的导数为$d\delta_{\rm res}/dE=a/(x^2+a^2)$；在跨越极点的解析延拓中，相位连续增加$\pi$，不能因为主值的反正切跳跃而把导数符号弄错。
+(2) 单通道Wigner–Smith延迟$\tau_W=-i\hbar S^*(dS/dE)=2\hbar\,d\delta/dE$。背景相移若近似常量，$\tau_W(E)=\hbar\Gamma/[(E-E_0)^2+(\Gamma/2)^2]$，在$E_0$处峰值$4\hbar/\Gamma$，半高全宽$\Gamma$。该延迟定义的是散射相位对能量的导数，峰值不应不加区分地等同于概率驻留寿命$\hbar/\Gamma$。
+(3) 若共振能向左、右两端口衰减，分宽$\Gamma_L,\Gamma_R>0$，在无其他漏失通道时$\Gamma=\Gamma_L+\Gamma_R$。标准共振透射率$T(E)=\Gamma_L\Gamma_R/[(E-E_0)^2+(\Gamma/2)^2]$，峰值$T(E_0)=4\Gamma_L\Gamma_R/(\Gamma_L+\Gamma_R)^2\le1$，等号仅在$\Gamma_L=\Gamma_R$；不对称耦合使峰值下降却不改变能量守恒。
+(4) 当$\Gamma\to0^+$，共振能量宽度变窄、峰值延迟按$1/\Gamma$变长，说明长寿命准束缚态与窄共振之间的联系。若背景相移随能量缓变，应在$\tau_W$中增加$2\hbar\,d\delta_{\rm bg}/dE$，它可正可负；孤立Lorentz表达仅适用于背景可近似常量且无重叠共振的窗口。
+\par\medskip

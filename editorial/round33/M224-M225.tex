@@ -1,0 +1,24 @@
+\subsection*{M224\quad 近圆轨道编队的Hill–Clohessy–Wiltshire方程与漂移条件}
+两小卫星围绕引力参数$\mu_G$的中心天体，主星半径$r_0$的圆轨道角速度$n=\sqrt{\mu_G/r_0^3}$。设从星相对主星的位置为$(x,y,z)$，分别指向径向、顺轨和轨道法向，且相对距离远小于$r_0$。
+(1) 从旋转系相对引力梯度推导Hill线性化方程。
+(2) 给出平面运动的完整通解与法向振动解。
+(3) 求顺轨线性漂移被抑制的初值条件。
+(4) 写出与方程一致的守恒二次量并说明线性模型的范围。
+\par\textbf{逐问解析}
+(1) 在圆轨道旋转系中，Coriolis项$-2\boldsymbol n\times\dot{\boldsymbol r}$与离心项$-\boldsymbol n\times(\boldsymbol n\times\boldsymbol r)$必须同时保留。把引力梯度$-GM[\boldsymbol r-3(\hat r\cdot\boldsymbol r)\hat r]/r_0^3$与原圆轨道平衡相减，得到$\ddot x-2n\dot y-3n^2x=0$、$\ddot y+2n\dot x=0$、$\ddot z+n^2z=0$，这就是HCW线性模型。
+(2) 对平面方程作常系数求解，可写$x(t)=A\cos nt+B\sin nt+C$，$y(t)=-2A\sin nt+2B\cos nt-\frac32nCt+D$。独立法向运动为$z(t)=E\cos nt+F\sin nt$。逐项代回三条微分方程能验证形式完整：平面含两振荡常数、一个线性漂移常数和一个位置常数。
+(3) 从$t=0$初值，$x_0=A+C$且$\dot y_0=-2nA-\frac32nC$。消去$A$得$C=4x_0+2\dot y_0/n$，因此消除无界顺轨漂移必须$C=0$，即$\dot y_0=-2nx_0$。这一条件并不保证两颗卫星相互静止，只确保相对轨迹在该线性近似中不因半长轴偏差持续漂移。
+(4) 将HCW方程分别乘$\dot x,\dot y,\dot z$后相加，Coriolis做功抵消，得到$dJ/dt=0$，其中$J=\frac12(\dot x^2+\dot y^2+\dot z^2)-\frac32n^2x^2+\frac12n^2z^2$。该Jacobi型量不是正定能量，允许漂移模；当相对距离不再小于$r_0$或轨道明显非圆时，必须使用非线性三体或椭圆参考轨道方程。
+\par\medskip
+\subsection*{M225\quad 恒定固有加速度的Rindler双曲线、视界与Doppler频移}
+一艘理想航天器在一维闵可夫斯基时空中从实验室静止出发，之后沿$+x$方向保持固有加速度$a>0$常量，初始$(t,x)=(0,0)$，光速$c$。
+(1) 以固有时$\tau$求四速度、实验室坐标和速度。
+(2) 验证世界线为双曲线，且固有加速度确为常量。
+(3) 讨论从实验室原点稍后发出的同向光信号能否追上火箭，求临界发射时刻。
+(4) 推导从后方同向传播光信号在火箭上的瞬时Doppler频移。
+\par\textbf{逐问解析}
+(1) 用快速度$\eta$表示四速度，$U^\mu=(c\cosh\eta,c\sinh\eta)$；恒定固有加速度要求$d\eta/d\tau=a/c$，初值$\eta(0)=0$。积分$dt/d\tau=\cosh(a\tau/c)$、$dx/d\tau=c\sinh(a\tau/c)$，得到$t(\tau)=(c/a)\sinh(a\tau/c)$、$x(\tau)=(c^2/a)[\cosh(a\tau/c)-1]$，实验室速度$v=c\tanh(a\tau/c)$。
+(2) 从上述坐标消去$\tau$，得$(x+c^2/a)^2-c^2t^2=(c^2/a)^2$，为右支双曲线。四加速度$dU^\mu/d\tau=(a\sinh\eta,a\cosh\eta)$，闵氏范数$A^\mu A_\mu=-a^2$（取度规$+,-$），因此固有加速度大小始终为$a$，即使实验室坐标加速度$\ddot x=a/\gamma^3$随速度增大而趋零。
+(3) 若实验室原点在$t_e\ge0$发出沿$+x$光束，其轨迹为$x_{\gamma}=c(t-t_e)$。火箭轨迹满足$ct-x=(c^2/a)(1-e^{-a\tau/c})$，右边随$\tau$从0单调上升但上界为$c^2/a$。两世界线相交要求$ct_e<c^2/a$，即$t_e<c/a$；在$t_e=c/a$时只在无穷远极限相遇，之后发射的光永远追不上火箭。此为加速观察者的事件视界效应。
+(4) 同向追赶火箭的实验室光子四波矢$(\omega/c,\omega/c)$，火箭测得频率$\omega'=\gamma\omega(1-v/c)=\omega(\cosh\eta-\sinh\eta)=\omega e^{-\eta}$。所以$\omega'(\tau)=\omega\exp[-a\tau/c]$。越接近视界的追赶光子在火箭上越红移；这里假定实验室光源频率$\omega$不变且忽略引力曲率。
+\par\medskip

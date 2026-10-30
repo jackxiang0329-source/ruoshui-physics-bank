@@ -1,0 +1,25 @@
+% 第33批热物理两题：严格模型推导候选，待独立审核
+\subsection*{T218\quad 一维Ising链的转移矩阵、磁化率与有限温度无序}
+$N$个周期性边界自旋$s_j=\pm1$，哈密顿量$\mathcal H=-J\sum_js_js_{j+1}-h\sum_js_j$，$J>0$，温度$T>0$，热力学极限$N\to\infty$。
+(1) 建立$2\times2$转移矩阵并求两个本征值。
+(2) 求每自旋自由能与精确磁化曲线。
+(3) 在$h=0$时求两点关联、关联长度和线性磁化率。
+(4) 说明有限温度无自发磁化及$T\to0$的奇异极限。
+\par\textbf{逐问解析}
+(1) 取$\beta=1/(k_BT)$，为防止场项重复计数，将每条键的Boltzmann因子定义为$T_{s,s'}=\exp[\beta Jss'+(\beta h/2)(s+s')]$。用基底$(+1,-1)$得到$\mathsf T=\begin{pmatrix}e^{\beta(J+h)}&e^{-\beta J}\\e^{-\beta J}&e^{\beta(J-h)}\end{pmatrix}$；$\operatorname{tr}\mathsf T=2e^{\beta J}\cosh\beta h$，行列式$e^{2\beta J}-e^{-2\beta J}$，故$\lambda_\pm=e^{\beta J}[\cosh(\beta h)\pm\sqrt{\sinh^2(\beta h)+e^{-4\beta J}}]$。
+(2) 周期链配分函数$Z_N=\operatorname{tr}\mathsf T^N=\lambda_+^N+\lambda_-^N$。因$T>0$和$J>0$，最大本征值$\lambda_+$严格占优，故$f=\lim_{N\to\infty}(-k_BT/N)\ln Z_N=-k_BT\ln\lambda_+$。每自旋磁化$m=-\partial f/\partial h=\sinh(\beta h)/\sqrt{\sinh^2(\beta h)+e^{-4\beta J}}$；它的符号与外场同向且满足$|m|\le1$。
+(3) 在$h=0$，$\lambda_+=2\cosh(\beta J)$、$\lambda_-=2\sinh(\beta J)$。插入两个$s$算符或用最近邻Markov条件概率，得到$\langle s_0s_r\rangle=(\lambda_-/\lambda_+)^r=[\tanh(\beta J)]^r=e^{-r/\xi}$，$\xi=-1/\ln\tanh(\beta J)$。从磁化表达式求$\chi=\partial m/\partial h|_{h=0}=\beta e^{2\beta J}$；它也等于$\beta[1+2\sum_{r\ge1}(\tanh\beta J)^r]=\beta(1+\tanh\beta J)/(1-\tanh\beta J)$，利用双曲恒等式二者完全相等。
+(4) 对任何有限$\beta$，$e^{-4\beta J}>0$，所以$\lim_{h\to0}m(h)=0$，不存在$T>0$下的自发有序相；$T\to0$时$\xi\sim\tfrac12e^{2\beta J}$发散、$\chi\sim\beta e^{2\beta J}$发散。这一“零温临界”表明$T\downarrow0$与$h\to0$的极限不可随意交换，也展示了有限程一维Ising模型与高维临界行为的不同。
+\par\medskip
+\subsection*{T219\quad 热电发电器的焦耳分热与最大效率负载}
+均匀单级热电模块的Seebeck系数$\alpha$、内电阻$R$和零电流热导$K$均为常数，冷热端$T_h>T_c>0$，$\Delta T=T_h-T_c$；忽略Thomson效应和接触热阻，外接纯电阻$R_L$。
+(1) 从电压与负载匹配求电流、输出功率以及最大功率条件。
+(2) 结合Peltier热流与焦耳分热写热端吸热和制冷端放热，核对第一定律。
+(3) 以负载比$m=R_L/R$推导效率函数并给最大效率的最优$m$。
+(4) 写无量纲$ZT$形式，讨论$ZT\to0$与$ZT\to\infty$及可逆性。
+\par\textbf{逐问解析}
+(1) 开路电势$\mathcal E=\alpha\Delta T$，串联欧姆定律给$I=\alpha\Delta T/(R+R_L)=\alpha\Delta T/[R(1+m)]$。输出$P=I^2R_L=\alpha^2\Delta T^2 m/[R(1+m)^2]$。对$m>0$求导，$d[m/(1+m)^2]/dm=(1-m)/(1+m)^3$，故$m=1$时功率最大，$P_{\max}=\alpha^2\Delta T^2/(4R)$。
+(2) 热端吸热$Q_h=\alpha T_h I-\tfrac12I^2R+K\Delta T$，冷端放热$Q_c=\alpha T_c I+\tfrac12I^2R+K\Delta T$。两端Peltier热与Joule热符号相反，故$Q_h-Q_c=\alpha\Delta T\,I-I^2R=I(\alpha\Delta T-IR)=I^2R_L=P$，与电学输出严格相等，核对了本模型的能量守恒。
+(3) 将$I=\alpha\Delta T/[R(1+m)]$代入$\eta=P/Q_h$并令$Z=\alpha^2/(RK)$、$\bar T=(T_h+T_c)/2$，先约去公共因子$\alpha^2\Delta T/R$后有$\eta=\Delta T\,m/\{T_h(1+m)-\Delta T/2+(1+m)^2/Z\}$。对$m$求导并令导数零：分母$D=(1+m)^2/Z+T_h(1+m)-\Delta T/2$，要求$D-mD'=0$，即$(1-m^2)/Z+T_h-\Delta T/2=0$，所以$m_{\eta,\max}=\sqrt{1+Z\bar T}$。
+(4) 将$m_{\eta,\max}$代回效率并整理，得$\eta_{\max}=(\Delta T/T_h)[\sqrt{1+Z\bar T}-1]/[\sqrt{1+Z\bar T}+T_c/T_h]$。$Z\bar T\to0$时$\eta_{\max}\to0$；$Z\bar T\to\infty$时逼近Carnot效率$\eta_C=\Delta T/T_h$，但有限$Z$下$K>0$及电阻焦耳耗散使$\eta<\eta_C$。最大效率负载通常$m>1$，与最大功率条件$m=1$不同。
+\par\medskip

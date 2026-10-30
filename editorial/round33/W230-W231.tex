@@ -1,0 +1,24 @@
+\subsection*{W230\quad 均匀Bragg光栅的耦合模方程、禁带与反射率}
+一维无耗散弱折射率周期调制使同频前行、后行波振幅$A(z),B(z)$满足耦合模方程$dA/dz=i\delta A+i\kappa B$、$dB/dz=-i\delta B-i\kappa A$，其中实失谐$\delta$、耦合强度$\kappa>0$，光栅长$L$，远端无后向入射$B(L)=0$。
+(1) 建立矩阵形式并求传播本征指数。
+(2) 推出禁带条件和场包络衰减常数。
+(3) 求有限光栅的反射率与在Bragg共振$\delta=0$的简式。
+(4) 检验短光栅、长光栅及离带条件下的能量守恒。
+\par\textbf{逐问解析}
+(1) 写$\boldsymbol v=(A,B)^T$，$\boldsymbol v'=\mathsf K\boldsymbol v$，$\mathsf K=i\begin{pmatrix}\delta&\kappa\\-\kappa&-\delta\end{pmatrix}$。矩阵满足$\mathsf K^2=(\kappa^2-\delta^2)I$，所以两个空间指数为$\pm s$，$s=\sqrt{\kappa^2-\delta^2}$，若$|\delta|>\kappa$则$s$纯虚，场为传播拍振而非指数停带。
+(2) 由$\mathsf K^2=s^2I$得到传播算符$\exp(\mathsf KL)=I\cosh(sL)+\mathsf K\sinh(sL)/s$，无需逐项求本征矢。在$|\delta|<\kappa$，$s>0$，无限周期光栅存在一个随$z$增长、一个衰减的局域Bloch包络，物理有界边界条件选衰减支；停带宽度由$|\delta|=\kappa$的带缘确定。
+(3) 设$A(0)=A_{\rm in}$、$B(0)=rA_{\rm in}$，在$B(L)=0$下利用传播矩阵第二行求$r=i\kappa\sinh(sL)/[s\cosh(sL)-i\delta\sinh(sL)]$，整体相位可能因后向波定义相反而改变，但反射功率唯一：$R=|r|^2=\kappa^2\sinh^2(sL)/[s^2\cosh^2(sL)+\delta^2\sinh^2(sL)]$。当$\delta=0$，$s=\kappa$，严格简化为$R=\tanh^2(\kappa L)$。
+(4) 若$\kappa L\ll1$且$\delta=0$，$R\simeq(\kappa L)^2$；若$\kappa L\gg1$，$R\to1$，有限无损光栅逐渐成为高反镜。直接对方程求导有$d(|A|^2-|B|^2)/dz=0$，即前减后方向的净功率通量守恒，故$T=1-R$。出带时以$s=i\sqrt{\delta^2-\kappa^2}$解析延拓，双曲函数变三角函数，可出现透射共振。
+\par\medskip
+\subsection*{W231\quad 旋转浅水方程的惯性重力波与零频地转模}
+$f$平面近似下，均匀层深$H>0$的浅水流体，重力加速度$g>0$、Coriolis参数$f\ne0$。线性水平速度$(u,v)$和自由面扰动$\eta$满足$u_t-fv=-g\eta_x$、$v_t+fu=-g\eta_y$、$\eta_t+H(u_x+v_y)=0$。
+(1) 将方程写成平面波本征值问题。
+(2) 求两支惯性重力波色散及零频模。
+(3) 从线性潜在涡度守恒说明地转模的物理来源。
+(4) 求群速度及长短波极限，并区别地转模式与传播波。
+\par\textbf{逐问解析}
+(1) 取$\propto e^{i(k_xx+k_yy-\omega t)}$，得到$\begin{pmatrix}-i\omega&-f&igk_x\\f&-i\omega&igk_y\\iHk_x&iHk_y&-i\omega\end{pmatrix}(u,v,\eta)^T=0$。由于背景均匀且旋转固定，非零振幅要求行列式为零，从而得到三个线性本征频率。
+(2) 对上述矩阵求行列式或先消去$(u,v)$，特征方程为$\omega[\omega^2-f^2-gH(k_x^2+k_y^2)]=0$。因此$\omega_\pm=\pm\sqrt{f^2+gHk^2}$是惯性重力波，第三支$\omega_0=0$是地转平衡模；后者存在不意味着全部扰动都能静止。
+(3) 定义线性相对涡度$\zeta=v_x-u_y$。对动量方程分别求$x,y$导数并相减，得$\partial_t\zeta+f(u_x+v_y)=0$；联立连续性$\eta_t=-H(u_x+v_y)$得到$\partial_t(\zeta-f\eta/H)=0$。对零频模，速度与表面坡度满足$-fv=-g\eta_x$、$fu=-g\eta_y$，地转流沿等高线而非跨越坡度。
+(4) 传播支群速度$\boldsymbol v_g=\nabla_{\boldsymbol k}\omega_\pm=\pm gH\boldsymbol k/\sqrt{f^2+gHk^2}$。在$k\to0$时频率趋$|f|$而群速度趋零，体现转动惯性振荡；在$k\to\infty$时$\omega_\pm\simeq\pm\sqrt{gH}\,k$，群速趋浅水重力波速$\sqrt{gH}$。零频地转模无此传播能流。
+\par\medskip

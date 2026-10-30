@@ -1,0 +1,69 @@
+{
+  "batch": 33,
+  "phase": "automated_technical_prequalification",
+  "source_branch": "physics-round33-advanced-qa-20261030",
+  "problem_count": 50,
+  "unique_problem_count": 50,
+  "distribution": {
+    "M": 9,
+    "E": 9,
+    "T": 8,
+    "W": 8,
+    "O": 8,
+    "Q": 8
+  },
+  "exactly_4_questions_and_solutions_for_each": true,
+  "machine_subpart_checks": 200,
+  "machine_passed": 200,
+  "machine_failed": 0,
+  "unique_problem_part_pairs": 200,
+  "each_problem_has_four_unique_subpart_tests": true,
+  "ids_match_test_reports": true,
+  "minimum_solution_subpart_non_whitespace_chars": 132,
+  "historical_full_bank_duplicate_review": "INCOMPLETE",
+  "independent_human_academic_review": "NOT_DONE",
+  "separate_independent_verification_for_every_subpart": "NOT_DONE",
+  "two_xelatex_books": "PASS",
+  "canonical_bank_import": false,
+  "all_generated_mirrors_synced": false,
+  "legacy_main_CI_blocker": "Run 41042081786 failed at Enforce advanced-only admission; previous failure included data/problems.json mirror mismatch; main gate remains blocked",
+  "allowed_main_merge": false,
+  "overall_status": "50 review candidates / 200 model checks + 25 extra crosschecks PASS / dual PDFs compiled PASS / formal expert QA and history dedupe PENDING",
+  "check_reports": [
+    "editorial/round33/QA_48.json",
+    "editorial/round33/QA_48_second.json",
+    "editorial/round33/QA_48_third.json",
+    "editorial/round33/QA_48_fourth.json",
+    "editorial/round33/QA_8_final.json"
+  ],
+  "structural_reports": [
+    "editorial/round33/STRUCTURE_FIRST_25.json",
+    "editorial/round33/STRUCTURE_LAST_24.json"
+  ],
+  "canonical_review_triples_created": 50,
+  "canonical_review_fragment_files": 150,
+  "exact_grouped_to_canonical_text_matches": 50,
+  "executed_second_pass_independent_numeric_checks": 25,
+  "executed_second_pass_passed": 25,
+  "second_pass_reports": [
+    "editorial/round33/QA_INDEPENDENT_SECOND_PASS_ME.json",
+    "editorial/round33/QA_INDEPENDENT_SECOND_PASS_TWOQ.json"
+  ],
+  "two_xelatex_build": {
+    "workflow_run_id": 41042081676,
+    "conclusion": "success",
+    "artifact_id": 12970398892,
+    "artifact_url": "https://github.com/jackxiang0329-source/ruoshui-physics-bank/actions/runs/41042081676/artifacts/12970398892",
+    "questions_pages": 23,
+    "solutions_pages": 42,
+    "questions_pdf_bytes": 494510,
+    "solutions_pdf_bytes": 708255,
+    "pdf_ids_each": 50,
+    "questions_numbered_parts": 200,
+    "solutions_question_and_answer_parts": 400,
+    "pdftotext_replacement_chars": 0,
+    "rendered_sample_pages_inspected": true,
+    "notes": "Representative pages rendered and inspected; no obvious clipping or missing CJK characters on examined pages."
+  },
+  "review_pr": "https://github.com/jackxiang0329-source/ruoshui-physics-bank/pull/39"
+}

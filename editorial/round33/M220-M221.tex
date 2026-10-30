@@ -1,0 +1,25 @@
+% 第33批审核候选：力学，高难综合题（不计正式主库）
+\subsection*{M220\quad Lagrange重对称陀螺的循环积分与睡眠顶稳定性}
+质量$m$的重对称陀螺定点支承，质心距支点$l$，惯量$I_1=I_2=I$、$I_3$；对称轴相对竖直向上角为$\theta$，Euler角$(\phi,\theta,\psi)$，重力势能$U=mgl\cos\theta$。
+(1) 推出Lagrangian及两个循环动量。
+(2) 在固定动量下化为一自由度的倾角有效势和能量方程。
+(3) 求匀速规则进动的平衡条件及相应进动角速度分支。
+(4) 讨论直立快速自转（睡眠顶）线性稳定临界角动量并检验重力零极限。
+\par\textbf{逐问解析}
+(1) 对称轴角速度平方的横向部分为$\dot\theta^2+\dot\phi^2\sin^2\theta$，自旋分量为$\dot\psi+\dot\phi\cos\theta$，因此$L=\frac I2(\dot\theta^2+\dot\phi^2\sin^2\theta)+\frac{I_3}2(\dot\psi+\dot\phi\cos\theta)^2-mgl\cos\theta$。循环角$\psi,\phi$的正则动量分别为$\lambda=p_\psi=I_3(\dot\psi+\dot\phi\cos\theta)$与$\mu=p_\phi=I\dot\phi\sin^2\theta+\lambda\cos\theta$，均因Euler–Lagrange方程守恒。
+(2) 从上述动量消去$\dot\phi=(\mu-\lambda\cos\theta)/(I\sin^2\theta)$与自旋速度$\lambda/I_3$，将常数自旋能$\lambda^2/(2I_3)$从总能减掉，得$E'=\frac I2\dot\theta^2+U_{\mathrm{eff}}(\theta)$，$U_{\mathrm{eff}}=(\mu-\lambda\cos\theta)^2/(2I\sin^2\theta)+mgl\cos\theta$。允许的$\theta$区间须满足$E'\ge U_{\mathrm{eff}}$；端点决定章动幅度。
+(3) 规则进动有$\dot\theta=0$、$\dot\phi=\Omega_p$常量。倾角Lagrange方程给$I\Omega_p^2\sin\theta\cos\theta-\lambda\Omega_p\sin\theta+mgl\sin\theta=0$，故非竖直姿态满足$I\cos\theta\,\Omega_p^2-\lambda\Omega_p+mgl=0$。对$\cos\theta\ne0$，$\Omega_p=[\lambda\pm\sqrt{\lambda^2-4Imgl\cos\theta}]/(2I\cos\theta)$；判别式非负是给定倾角的存在条件。$\cos\theta=0$时直接由线性方程得到$\Omega_p=mgl/\lambda$，不应对分母为零的公式硬取值。
+(4) 直立时需$\mu=\lambda$以免有效势在$\theta=0$发散。小角展开$\cos\theta=1-\theta^2/2+\cdots$、$(1-\cos\theta)^2/\sin^2\theta=\theta^2/4+O(\theta^4)$，得到$U_{\mathrm{eff}}=mgl+[\lambda^2/(8I)-mgl/2]\theta^2+O(\theta^4)$。因此直立位置线性稳定须$\lambda^2>4Imgl$；等号时二次恢复刚度为零，必须作高阶判别。若$g\to0$，任意非零自旋满足该条件，符合无重力下的自由对称陀螺稳定性。
+\par\medskip
+\subsection*{M221\quad 旋转各向异性二维谐势的陀螺稳定区与负能模}
+质量$m$的质点限制在旋转平面内，实验室中一各向异性二次势以角速率$\Omega$绕竖直轴匀速转动；在旋转坐标中$U=\frac m2(\kappa_x x^2+\kappa_y y^2)$，其中$0<\kappa_x<\kappa_y$。
+(1) 写出旋转参考系的线性动力方程。
+(2) 求双圆偏振混合本征模对应的$\omega^2$方程。
+(3) 精确求线性谱稳定的转速区间，并说明临界转速的特殊性。
+(4) 计算Jacobi型守恒能量并说明高速稳定区为何不一定有正定能量。
+\par\textbf{逐问解析}
+(1) 在匀速转动坐标系中，$m\ddot{\boldsymbol r}=-\nabla U-2m\boldsymbol\Omega\times\dot{\boldsymbol r}-m\boldsymbol\Omega\times(\boldsymbol\Omega\times\boldsymbol r)$，所以$\ddot x-2\Omega\dot y+(\kappa_x-\Omega^2)x=0$、$\ddot y+2\Omega\dot x+(\kappa_y-\Omega^2)y=0$。科氏项反对称，离心项使对角曲率减少$\Omega^2$。
+(2) 置$(x,y)=(X,Y)e^{i\omega t}$得特征矩阵$\begin{pmatrix}\kappa_x-\Omega^2-\omega^2&-2i\Omega\omega\\2i\Omega\omega&\kappa_y-\Omega^2-\omega^2\end{pmatrix}$；行列式为零令$s=\omega^2$，得到$s^2-(\kappa_x+\kappa_y+2\Omega^2)s+(\kappa_x-\Omega^2)(\kappa_y-\Omega^2)=0$。判别式$D=(\kappa_x-\kappa_y)^2+8\Omega^2(\kappa_x+\kappa_y)>0$，两个$s$始终不同实数。
+(3) 两$s$的和恒正；所以两者皆正的充要条件是乘积$(\kappa_x-\Omega^2)(\kappa_y-\Omega^2)>0$。即$\Omega^2<\kappa_x$或$\Omega^2>\kappa_y$时为振荡有界的线性谱稳定；中间$\kappa_x<\Omega^2<\kappa_y$时一正一负，出现指数失稳。在$\Omega^2=\kappa_x$或$\kappa_y$，有$s=0$的零频模，其Jordan或漂移行为需独立讨论，不归入严格稳定域。
+(4) 用方程点乘速度，相加，科氏项的做功彼此严格抵消，得到$dJ/dt=0$，$J=\frac m2(\dot x^2+\dot y^2)+\frac m2[(\kappa_x-\Omega^2)x^2+(\kappa_y-\Omega^2)y^2]$。低速$\Omega^2<\kappa_x$时$J$正定；高速$\Omega^2>\kappa_y$时二次势能负定，虽谱本征频率仍实，$J$不正定，可能对耗散/参数扰动表现负能模不稳定。这与“高转速稳定意味着能量极小”并不等价。
+\par\medskip

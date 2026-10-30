@@ -1,0 +1,24 @@
+\subsection*{M226\quad 引力双曲遭遇的散射角与行星引力弹弓能量交换}
+测试粒子以相对行星的无穷远速度$v_\infty>0$、碰撞参数$b>0$接近引力参数$\mu_p=GM_p$的行星，忽略行星以外引力在遭遇区的影响；行星在恒星系中的速度为常矢量$\boldsymbol V_p$。
+(1) 由二体比能量与比角动量求双曲离心率和近心距离。
+(2) 推导无穷远入、出速度方向的偏转角。
+(3) 在恒星系中推导引力弹弓的动能变化公式及其绝对上界。
+(4) 检验弱引力和正碰近极限，并说明拼接圆锥轨道的适用条件。
+\par\textbf{逐问解析}
+(1) 行星静止系的比机械能$\varepsilon=v_\infty^2/2>0$，比角动量$h=bv_\infty$。由开普勒双曲轨道$e=\sqrt{1+2\varepsilon h^2/\mu_p^2}$得$e=\sqrt{1+b^2v_\infty^4/\mu_p^2}>1$。半通径$p=h^2/\mu_p$，近心距离$r_p=p/(1+e)=\{\sqrt{\mu_p^2+b^2v_\infty^4}-\mu_p\}/v_\infty^2$，亦满足$\frac12v_p^2-\mu_p/r_p=\frac12v_\infty^2$。
+(2) 在轨道方程$r=p/[1+e\cos f]$中，无穷远真近点角满足$\cos f_\infty=-1/e$。两条速度渐近线之间的散射偏角为$\delta=2f_\infty-\pi=2\arcsin(1/e)=2\arctan[\mu_p/(bv_\infty^2)]$。等价地用$\cot(\delta/2)=bv_\infty^2/\mu_p$，可直接看出引力越强或掠过越近，偏角越大。
+(3) 行星系能量守恒保证$|\boldsymbol u_{\rm in}|=|\boldsymbol u_{\rm out}|=v_\infty$，且两者夹角为$\delta$。恒星系速度$\boldsymbol v_{\rm in,out}=\boldsymbol V_p+\boldsymbol u_{\rm in,out}$，于是单位测试质量的比动能改变$\Delta K=\frac12(|\boldsymbol v_{\rm out}|^2-|\boldsymbol v_{\rm in}|^2)=\boldsymbol V_p\cdot(\boldsymbol u_{\rm out}-\boldsymbol u_{\rm in})$。因$|\boldsymbol u_{\rm out}-\boldsymbol u_{\rm in}|=2v_\infty\sin(\delta/2)$，有$|\Delta K|\le2|\boldsymbol V_p|v_\infty\sin(\delta/2)$；增能或减能取决于遭遇几何方位。
+(4) 若$\mu_p/(bv_\infty^2)\ll1$，$\delta\simeq2\mu_p/(bv_\infty^2)$，符合弱散射近似；若$b\to0^+$，形式上$\delta\to\pi$、$r_p\to0$，但实际有限行星半径和碰撞会在到达该数学极限前发生。恒星重力导致行星速度随时间变化，拼接圆锥近似仅在近行星遭遇时间远短于行星公转尺度时有效。
+\par\medskip
+\subsection*{M227\quad 引力波长波极限下的测地偏离与Michelson响应}
+在弱场横向无迹（TT）规范，沿$z$传播的线偏振引力波在探测器平面满足$h_{xx}(t)=h_0\cos\Omega t$、$h_{yy}(t)=-h_0\cos\Omega t$，$|h_0|\ll1$。Michelson探测器两臂沿$x,y$且未扰动长度均为$L$，探测激光真空波长$\lambda$；假设$\Omega L/c\ll1$。
+(1) 从线性化度规求两臂瞬时固有长度变化。
+(2) 用局部自由落体系测地偏离方程复核差动长度响应。
+(3) 求往返激光的主阶差动相位信号。
+(4) 说明长波近似、引力波偏振方向和高频响应函数的限制。
+\par\textbf{逐问解析}
+(1) 在TT规范的自由测试质量坐标近似不变，空间线元$dl^2=[1+h_+(t)]dx^2+[1-h_+(t)]dy^2$。两臂固有长度为$L_x=L\sqrt{1+h_+}\simeq L(1+h_+/2)$、$L_y=L\sqrt{1-h_+}\simeq L(1-h_+/2)$。所以差动长度$\Delta L=L_x-L_y\simeq Lh_+(t)=Lh_0\cos\Omega t$，公共尺度部分在一阶抵消。
+(2) 在干涉仪中心的局部自由落体系，横向相对位移满足$\ddot\xi^i=\frac12\ddot h_{ij}^{TT}\xi_0^j$，其中$\xi_0$为未扰动分离。对沿$x$的基线有$\ddot{\delta\xi_x}=\frac12L\ddot h_+$，取无额外自由振荡的初始条件得$\delta\xi_x=Lh_+/2$；沿$y$得$\delta\xi_y=-Lh_+/2$，故差动长度同样为$Lh_+$。两个规范图像的可观测响应一致。
+(3) 忽略有限光传播时间内$h_+$的变化时，长度变化$\delta L_i$使该臂往返光程改变$2\delta L_i$，往返相位$\delta\phi_i=(2\pi/\lambda)\,2\delta L_i$。因此干涉两臂差动相位$\Delta\phi=(4\pi/\lambda)(\delta L_x-\delta L_y)=(4\pi Lh_0/\lambda)\cos\Omega t$。该主阶相位随臂长增加，但实际信噪还受光学腔储能与散粒噪声影响。
+(4) 若$\Omega L/c$不小，光在臂内往返时引力波已发生显著相位变化，需积分沿光线传播时的度规扰动，响应将包含频率相关的sinc型传递函数；不能直接以$Lh_+$代替整个相位过程。若探测器两臂相对偏振主轴旋转角$\alpha$，差动主阶应乘$\cos2\alpha$；加号偏振主轴偏离45度时灵敏度下降，交叉偏振还需另一几何投影。
+\par\medskip

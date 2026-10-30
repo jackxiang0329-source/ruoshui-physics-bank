@@ -1,0 +1,24 @@
+\subsection*{W232\quad 聚焦非线性Schrödinger平面波的调制不稳定性}
+一维无损包络满足$i\psi_t+P\psi_{xx}+Q|\psi|^2\psi=0$，$P,Q$为实数且$P\ne0$；考虑均匀背景振幅$A_0>0$。
+(1) 求恒定幅值的平面波背景及相位频率。
+(2) 以实虚扰动线性化并导出侧带色散关系。
+(3) 给出调制不稳定的参数区与最大增长率、最易增长波数。
+(4) 讨论散焦介质、守恒量及模型小扰动适用性。
+\par\textbf{逐问解析}
+(1) 取$\psi_0(t)=A_0e^{iQA_0^2t}$，代入方程可见$\psi_t=iQA_0^2\psi_0$且$\psi_{xx}=0$，所以$i\psi_t+Q|\psi|^2\psi=-QA_0^2\psi_0+QA_0^2\psi_0=0$。该背景是理想无限均匀波，不代表有限能量局域孤子。
+(2) 令$\psi=[A_0+u(x,t)+iv(x,t)]e^{iQA_0^2t}$，$u,v$为小实扰动。保留一阶得$u_t=-P v_{xx}$、$v_t=P u_{xx}+2QA_0^2u$。设$(u,v)\propto e^{i(Kx-\Omega t)}$，消元得到$\Omega^2=P^2K^4-2PQA_0^2K^2$，因此侧带是否出现虚频完全由色散与非线性符号组合决定。
+(3) 若$PQ>0$，当$0<K^2<2QA_0^2/P$时$\Omega^2<0$，增长率$\sigma(K)=\sqrt{2PQA_0^2K^2-P^2K^4}$。对$K^2$求导得峰值位于$K_*^2=QA_0^2/P$，最大增长率$\sigma_{\max}=|Q|A_0^2$。如果$PQ<0$，所有$K$的$\Omega^2\ge0$，此类平面波线性调制稳定。
+(4) 无损NLS有粒子数（光功率）守恒$\partial_t|\psi|^2+\partial_x J=0$，$J=2P\,\operatorname{Im}(\psi^*\psi_x)$，总积分不随时间改变。线性不稳定意味着侧带从背景重新分配强度，不意味着凭空增加总功率；当扰动达到$O(A_0)$，线性增长率失效，须用非线性演化或更完整的色散/损耗模型。
+\par\medskip
+\subsection*{W233\quad 时变张力弦的Mathieu参数激发与阻尼阈值}
+一根两端固定、长度$L$、线密度$\rho_\ell$的理想弦，张力受小周期调制$T(t)=T_0[1+h\cos(\Omega t)]$，$|h|\ll1$，并允许每模具有弱线性阻尼$2\beta_n\dot q_n$。
+(1) 展开固定端本征空间模态并得到各模Mathieu方程。
+(2) 在主参数共振$\Omega\simeq2\omega_n$附近用慢变幅法求增长率。
+(3) 求频率失谐导致的不稳定舌边界。
+(4) 加入阻尼求主共振最低驱动阈值并讨论能量来源。
+\par\textbf{逐问解析}
+(1) 弦方程为$\rho_\ell y_{tt}=T(t)y_{xx}$，固定端本征函数$\sin(n\pi x/L)$，$n=1,2,\ldots$。写$y=\sum_nq_n(t)\sin(n\pi x/L)$，正交投影得$\ddot q_n+2\beta_n\dot q_n+\omega_n^2[1+h\cos(\Omega t)]q_n=0$，其中$\omega_n=(n\pi/L)\sqrt{T_0/\rho_\ell}$。空间模态不混合是张力沿全弦均匀的前提。
+(2) 在$\Omega=2\omega_n$附近，取$q=A(t)\cos(\Omega t/2)+B(t)\sin(\Omega t/2)$，幅变量相对快振动缓慢。在$|h|\ll1$且先忽略阻尼时，对一周期平均得到二维慢变矩阵，其共振耦合幅值为$|h|\omega_n/4$；精确主共振$\Omega=2\omega_n$时，存在增长指数$\sigma_0=|h|\omega_n/4+O(h^2\omega_n)$。
+(3) 置失谐$\Delta=\Omega-2\omega_n$且$\Delta=O(h\omega_n)$，慢幅本征指数为$\sigma_\pm=\pm\sqrt{(h\omega_n/4)^2-(\Delta/2)^2}$（保留最低非零阶）。因此主不稳定舌满足$|\Delta|<|h|\omega_n/2$；超出该范围，根号转为纯虚，慢变量只作拍振，不出现指数幅度增长。
+(4) 弱阻尼使慢幅整体多出$-\beta_n$，故主共振的净增长率$\sigma\simeq|h|\omega_n/4-\beta_n$。当$|h|\omega_n>4\beta_n$才克服耗散，在零失谐时可产生参数不稳定。增长能量来自外部周期改变张力的驱动机构，不违反能量守恒；若振幅不再小，非线性张紧和材料损耗会限制指数增长。
+\par\medskip

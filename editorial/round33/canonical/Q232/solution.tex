@@ -1,0 +1,4 @@
+(1) 定义$X=x/\rho$、$P=\rho\dot x-\dot\rho x$，$I=(X^2+P^2)/2$。直接求导$\dot X=(\rho\dot x-\dot\rho x)/\rho^2=P/\rho^2$；同时$\dot P=\rho\ddot x-\ddot\rho x=-\rho\omega^2x-(\rho^{-3}-\omega^2\rho)x=-X/\rho^2$。所以$\dot I=X\dot X+P\dot P=(XP-PX)/\rho^2=0$（经典变量可交换），严格不依赖$\dot\omega$是否缓慢。
+(2) 定义新时标$\tau=\int^tdt'/\rho(t')^2$，则$dX/d\tau=P$、$dP/d\tau=-X$，从而$d^2X/d\tau^2+X=0$。任意时变$\omega(t)$的线性振子因辅助尺度$\rho$而化为单位频率振子；本征演化被重新分配为振幅尺度变化和相位积累。
+(3) 量子算符取$\hat I=\tfrac12[(\hat x/\rho)^2+(\rho\hat p-\dot\rho\hat x)^2]$，其中$\rho$为实c数时间函数，不存在跨算符歧义。因为$\hat X=\hat x/\rho$、$\hat P=\rho\hat p-\dot\rho\hat x$满足$[\hat X,\hat P]=i\hbar$，可构造$\hat a_I=(\hat X+i\hat P)/\sqrt{2\hbar}$并得$\hat I=\hbar(\hat a_I^\dagger\hat a_I+\tfrac12)$。它满足$d\hat I/dt=\partial_t\hat I+(i/\hbar)[H,\hat I]=0$。
+(4) 若$\omega(t)=\omega_0$恒定，选$\rho=\omega_0^{-1/2}$，则$\hat I=H/\omega_0$，返回能量除以频率的作用量。若$\omega(t)$快速变化，$H(t)$一般不守恒，但只要$\rho$满足Ermakov方程，$\hat I$仍严格守恒；此不变量的瞬时本征态可表现为相对$H(t)$本征态的压缩态，不能把两者无条件视为相同。

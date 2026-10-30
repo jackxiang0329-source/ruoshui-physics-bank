@@ -1,0 +1,105 @@
+name: Round33 advanced physics source and XeLaTeX review
+on:
+  push:
+    branches:
+      - physics-round33-advanced-qa-20261030
+    paths:
+      - "editorial/round33/**"
+      - ".github/workflows/round33-review.yml"
+  pull_request:
+    paths:
+      - "editorial/round33/**"
+      - ".github/workflows/round33-review.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  two-review-books:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: physics-round33-advanced-qa-20261030
+          persist-credentials: true
+      - name: Install full XeLaTeX CJK build prerequisites
+        run: |
+          sudo apt-get update
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+            texlive-xetex texlive-lang-chinese texlive-latex-extra texlive-fonts-recommended fonts-noto-cjk
+      - name: Validate 50 source triples, 50 originals, 200 checks and compile
+        run: python3 editorial/round33/build_review.py --compile
+      - name: Publish compiled review files into GitHub branch
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'physics-round33-advanced-qa-20261030')
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+          import shutil
+          import zipfile
+          root = Path("editorial/round33")
+          out = root / "review-release"
+          out.mkdir(parents=True, exist_ok=True)
+          artifacts = ["questions.tex", "solutions.tex", "questions.pdf", "solutions.pdf",
+                       "verification.json", "questions.log", "solutions.log"]
+          for name in artifacts:
+              source = root / "build" / name
+              if not source.is_file() or source.stat().st_size == 0:
+                  raise RuntimeError(f"Missing or empty compiled artifact: {source}")
+              shutil.copy2(source, out / name)
+          report = json.loads((out / "verification.json").read_text(encoding="utf-8"))
+          if (report.get("xelatex_both_books") != "PASS"
+                  or report.get("canonical_fragment_count") != 50
+                  or report.get("machine_model_check_count") != 200
+                  or report.get("independent_expert_approval") != "NOT_DONE"):
+              raise RuntimeError("Review release gating is inconsistent or implies false expert approval")
+          (out / "README.md").write_text(
+              "# 第33批大学物理高难综合题（审核版本）\n\n"
+              "- questions.pdf：试题册；solutions.pdf：解析册。\n"
+              "- questions.tex、solutions.tex：两册完整 LaTeX 源码。\n"
+              "- verification.json：50题及200项模型检查、双 PDF 编译的构建核验。\n"
+              "- questions.log、solutions.log：两册 XeLaTeX 编译日志。\n"
+              "- round33-complete-review-package.zip：题册、解析册、TeX、核验及50题三文件题源。\n\n"
+              "**未正式入库。自动测试与排版编译不等于独立学术审稿；"
+              "历史查重及主库准入门禁仍待完成。**\n",
+              encoding="utf-8")
+          bundle = out / "round33-complete-review-package.zip"
+          includes = sorted(
+              [p for p in (root / "canonical").rglob("*") if p.is_file()]
+              + [p for p in root.glob("[METWOQ]*.tex") if p.is_file()]
+              + [p for p in root.glob("QA_*.json") if p.is_file()]
+              + [p for p in root.glob("STRUCTURE_*.json") if p.is_file()]
+              + [root / "build_review.py"]
+              + [out / x for x in artifacts + ["README.md"]]
+          )
+          with zipfile.ZipFile(bundle, "w", compression=zipfile.ZIP_DEFLATED) as z:
+              for src in includes:
+                  z.write(src, arcname=str(src.relative_to(root)))
+          print(f"GitHub review package contains {len(includes)} files, {bundle.stat().st_size} bytes")
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f editorial/round33/review-release/
+          if ! git diff --cached --quiet; then
+            git commit -m "Round33: publish XeLaTeX PDFs, TeX, QA logs and source bundle [review only]"
+            git push origin HEAD:refs/heads/physics-round33-advanced-qa-20261030
+          else
+            echo "Review release artifacts already current in GitHub."
+          fi
+
+      - name: Preserve source audit, compiled PDFs, and TeX logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: round33-physics-two-review-books
+          path: |
+            editorial/round33/build/questions.tex
+            editorial/round33/build/solutions.tex
+            editorial/round33/build/questions.pdf
+            editorial/round33/build/solutions.pdf
+            editorial/round33/build/questions.log
+            editorial/round33/build/solutions.log
+            editorial/round33/build/verification.json
+          if-no-files-found: warn
