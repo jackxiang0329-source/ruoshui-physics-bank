@@ -1,0 +1,4 @@
+(1) 总势能为 $U=\frac12k_0(x_1^2+x_2^2)+\frac12k(x_1-x_2)^2$，动能为 $T=m(\dot x_1^2+\dot x_2^2)/2$。Euler–Lagrange 方程为 $m\ddot x_1+(k_0+k)x_1-kx_2=0$、$m\ddot x_2+(k_0+k)x_2-kx_1=0$，刚度矩阵对称。
+(2) 用 $q_+=(x_1+x_2)/\sqrt2$、$q_-=(x_1-x_2)/\sqrt2$ 正交变换，运动方程解耦为 $\ddot q_++(k_0/m)q_+=0$、$\ddot q_-+[(k_0+2k)/m]q_-=0$。对称模式形状 $(1,1)/\sqrt2$ 对应 $\omega_+=\sqrt{k_0/m}$；反对称模式 $(1,-1)/\sqrt2$ 对应 $\omega_-=\sqrt{(k_0+2k)/m}$，两形状内积为零。
+(3) 初值使 $q_+(0)=q_-(0)=A/\sqrt2$，因此 $x_1(t)=\frac A2[\cos(\omega_+t)+\cos(\omega_-t)]$、$x_2(t)=\frac A2[\cos(\omega_+t)-\cos(\omega_-t)]$。利用和差化积，$x_1=A\cos[(\omega_-+\omega_+)t/2]\cos[(\omega_--\omega_+)t/2]$；弱耦合时包络差频导致慢拍振，而两模式仍独立守恒各自能量。
+(4) 初始系统弹簧势能为 $E(0)=\frac12(k_0+k)A^2$，正交模式能量之和为 $A^2m(\omega_+^2+\omega_-^2)/4$，两式一致。若 $k\to0$，两频率重合，$x_2(t)\equiv0$；耦合增大只使反对称频率上升、对称频率不变，绝不会导致任一模式无缘无故软化。

@@ -1,0 +1,4 @@
+(1) 定义带正号的自由回旋频率 $\omega_c=qB/m$，轴向电力 $qE_z=-qV_0 z/d^2$，径向电力 $qE_x=qV_0x/(2d^2)$。所以 $\ddot x=\frac{\omega_z^2}{2}x+\omega_c\dot y$、$\ddot y=\frac{\omega_z^2}{2}y-\omega_c\dot x$、$\ddot z=-\omega_z^2z$，其中 $\omega_z^2=qV_0/(md^2)$。
+(2) 轴向解 $z(t)=z_0\cos\omega_zt+v_{z0}\sin\omega_zt/\omega_z$。横向复坐标满足 $\ddot u+i\omega_c\dot u-\omega_z^2u/2=0$，取 $u\propto e^{-i\omega t}$ 得 $\omega^2-\omega_c\omega+\omega_z^2/2=0$，正频率为 $\omega_\pm=(\omega_c\pm\sqrt{\omega_c^2-2\omega_z^2})/2$。
+(3) 要求判别式非负且 $\omega_c>0$，即 $\omega_c^2\ge2\omega_z^2$；严格大于号使两种不同回转模存在。由二次方程 Vieta 关系得 $\omega_++\omega_-=\omega_c$、$\omega_+\omega_-=\omega_z^2/2$。等号处两根重合，应另检查 Jordan 型线性增长，故真正有界通用稳定解应取严格不等式。
+(4) 设 $\epsilon=2\omega_z^2/\omega_c^2\ll1$，展开 $\sqrt{1-\epsilon}=1-\epsilon/2+O(\epsilon^2)$ 得 $\omega_+\simeq\omega_c-\omega_z^2/(2\omega_c)$、$\omega_-\simeq\omega_z^2/(2\omega_c)$。前者接近自由回旋，后者是慢磁控漂移；四极电场自身在横向排斥，依靠足够强的磁场才形成受限运动。

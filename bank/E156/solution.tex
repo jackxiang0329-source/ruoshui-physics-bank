@@ -1,0 +1,4 @@
+(1) 微分方程一般解为 $B_z=C\cosh(x/\lambda_L)+D\sinh(x/\lambda_L)$。边界 $B_z(a)=B_z(-a)=B_0$ 导致 $D=0$、$C=B_0/\cosh(a/\lambda_L)$，故 $B_z(x)=B_0\cosh(x/\lambda_L)/\cosh(a/\lambda_L)$，在中心最弱、两侧为 $B_0$。
+(2) 仅 $B_z(x)$ 非零时 $\nabla\times\mathbf B=-B_z'(x)\hat y$，因此 $J_y(x)=-B_0\sinh(x/\lambda_L)/[\mu_0\lambda_L\cosh(a/\lambda_L)]$，关于中心为奇函数，两侧屏蔽电流方向相反。若 $a\gg\lambda_L$，磁场只在离两表面数个 $\lambda_L$ 的区域显著，表现为 Meissner 屏蔽。
+(3) 单位面积总储能 $U/A=\int_{-a}^a[B_z^2/(2\mu_0)+\mu_0\lambda_L^2J_y^2/2]\,dx$。代入双曲函数，括号为 $B_0^2[\cosh^2(x/\lambda_L)+\sinh^2(x/\lambda_L)]/[2\mu_0\cosh^2(a/\lambda_L)]$；积分得 $U/A=B_0^2\lambda_L\tanh(a/\lambda_L)/\mu_0$。
+(4) 若 $a/\lambda_L\ll1$，则 $\tanh(a/\lambda_L)\sim a/\lambda_L$，$U/A\sim B_0^2a/\mu_0$，等于近似均匀场填充厚度 $2a$ 的纯磁能。若 $a/\lambda_L\gg1$，$U/A\to B_0^2\lambda_L/\mu_0$，能量只储存在两侧穿透层。$[B'/\mu_0]=\mathrm{A\,m^{-2}}$，与体电流密度相符。
