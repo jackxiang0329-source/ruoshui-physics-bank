@@ -96,6 +96,9 @@ def emit_source_triples(records):
     assert len(list(CANONICAL.glob("*/solution.tex")))==50
 
 HEADER = r"""\documentclass[UTF8,a4paper,11pt,oneside,openany]{ctexbook}
+\usepackage{fontspec}
+\setmainfont{FreeSerif}
+\setsansfont{FreeSans}
 \usepackage{amsmath,amssymb,mathtools}
 \usepackage{geometry}
 \geometry{margin=22mm,headheight=15pt}
@@ -170,6 +173,11 @@ def compiled_pdf(name):
             print(res.stdout[-6000:],file=sys.stderr)
             print(res.stderr[-1000:],file=sys.stderr)
             raise RuntimeError(f"XeLaTeX failed: {name}")
+    compile_log=(OUTPUT/(name+".log")).read_text(encoding="utf-8",errors="replace")
+    lost=[line for line in compile_log.splitlines() if line.startswith("Missing character:")]
+    if lost:
+        print("UNRENDERED MATH/UNICODE CHARACTERS:",lost[:20],file=sys.stderr)
+        raise RuntimeError(f"{name}: {len(lost)} missing Unicode glyphs; refuse release")
     result=OUTPUT/(name+".pdf")
     if not result.exists() or result.stat().st_size<10000:
         raise RuntimeError(f"PDF missing or suspicious: {result}")
