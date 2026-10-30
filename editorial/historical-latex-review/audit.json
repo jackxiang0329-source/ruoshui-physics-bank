@@ -1,9 +1,9 @@
 {
   "scope": "bank canonical and historical editorial canonical tex",
   "scanned_tex_files": 2264,
-  "modified_tex_files": 0,
-  "converted_math_environments": 0,
-  "ambiguous_tex_files": 2,
+  "modified_tex_files": 1,
+  "converted_math_environments": 18,
+  "ambiguous_tex_files": 0,
   "unmarked_unicode_tex_files": 330,
   "source_json": [
     {
@@ -230,21 +230,13 @@
   "full_historical_conversion": "INCOMPLETE",
   "academic_semantics_review": "NOT_DONE",
   "publication": "REVIEW_BRANCH_ONLY",
-  "modified": [],
-  "ambiguous": [
+  "modified": [
     {
       "path": "bank/E012/solution.tex",
-      "problems": [
-        "unbalanced_math_environment"
-      ]
-    },
-    {
-      "path": "bank/Q072/solution.tex",
-      "problems": [
-        "unbalanced_math_environment"
-      ]
+      "math_environments": 18
     }
   ],
+  "ambiguous": [],
   "needs_review": [
     {
       "path": "bank/E024/question.tex",
