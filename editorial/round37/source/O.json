@@ -96,7 +96,7 @@
     "s": [
       "相干振幅点扩散函数为瞳函数 \\(P(\\boldsymbol r)\\) 的Fourier变换，非相干强度点扩散函数 \\(h=|\\mathcal F P|^2\\)。光学传递函数 \\(\\mathrm{OTF}(\\boldsymbol\\nu)=\\mathcal F h\\) 因Wiener–Khinchin定理等于瞳函数的归一自相关。",
       "两个半径 \\(R\\) 圆瞳平移距离 \\(s\\) 的交叠面积为 \\(A_\\cap=2R^2\\arccos(s/(2R))-(s/2)\\sqrt{4R^2-s^2}\\)。用原面积 \\(\\pi R^2\\) 归一，得到 \\(\\mathrm{MTF}(\\rho)=\\frac2\\pi[\\arccos\\rho-\\rho\\sqrt{1-\\rho^2}]\\)，其中 \\(\\rho=s/(2R)\\in[0,1]\\)。",
-      "对于像面坐标 \\(x=f\\theta\\)，圆瞳相干截止尺度为 \\(\\nu_c=D/(\\lambda f)\\)，非相干系统截止为 \\(\\nu_{\\max}=2\\nu_c=2D/(\\lambda f)\\)。代入 \\(\\rho=\\nu/\\nu_{\\max}\\)，当 \\(\\nu\\ge\\nu_{\\max}\\) 两圆无交集、\\(\\mathrm{MTF}=0\\)，高频物体对比度完全丧失。",
+      "对于像面坐标 \\(x=f\\theta\\)，瞳孔半径 \\(R=D/2\\) 对应相干振幅空间频率支撑半径 \\(\\nu_{\\mathrm{coh}}=R/(\\lambda f)=D/(2\\lambda f)\\)，非相干OTF的自相关支撑直径为 \\(\\nu_{\\max}=2R/(\\lambda f)=D/(\\lambda f)\\)。代入 \\(\\rho=\\nu/\\nu_{\\max}\\)，当 \\(\\nu\\ge\\nu_{\\max}\\) 时两个圆瞳无交集，\\(\\mathrm{MTF}=0\\)。不能误把直径与半径所定义的截止频率再多乘一倍。",
       "在 \\(\\rho=0\\) 时 \\(\\mathrm{MTF}=1\\)，对低频展开为 \\(1-(4/\\pi)\\rho+O(\\rho^3)\\)。像差引入瞳函数的相位变化，虽然支撑截止频率不变，但自相关的模可能显著下降；不能只看几何孔径而断言实际系统达到衍射极限对比度。"
     ],
     "tags": [
