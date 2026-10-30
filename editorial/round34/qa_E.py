@@ -64,7 +64,7 @@ def run():
     # E234 Hall boundary
     Q,eps1,eps2,d,sig=3.,2.,4.,.8,.12
     Er=lambda r:Q*r/(2*P*(eps1+eps2)*(r*r+d*d)**1.5)
-    check("E234",1,"Hall surface current orthogonal to radial E",0,0,method="vector-orthogonality")
+    check("E234",1,"Hall surface current orthogonal to radial E",Er(1.1)*C(.4)*(-sig*Er(1.1)*SI(.4))+Er(1.1)*SI(.4)*(sig*Er(1.1)*C(.4)),0,method="vector-orthogonality")
     K=lambda r:sig*Er(r)
     check("E234",2,"Hall response reverses sign upon Hall coefficient reversal",K(.7)+(-sig)*Er(.7),0,method="reciprocity-symmetry")
     R=100.
