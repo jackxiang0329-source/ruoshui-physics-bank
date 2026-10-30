@@ -215,7 +215,7 @@ function J(n,x){let term=(x/2)**n;for(let j=1;j<=n;j++)term/=j;let sum=term;for(
  const a=1.4,f=x=>a/Math.cosh(a*x),t=.6;
  eq('W157',1,'focusing NLS stationary ODE',.5*d2(f,t)+f(t)**3-a*a*f(t)/2,0);
  eq('W157',2,'bright soliton norm',sim(x=>f(x)**2,-15,15),2*a);
- eq('W157',3,'bright soliton Hamiltonian',sim(x=>.5*der(f,x)**2-.5*f(x)**4,-12,12),-a**3/3);
+ eq('W157',3,'bright soliton Hamiltonian',sim(x=>.5*der(f,x)**2-.5*f(x)**4,-12,12),-(a**3)/3);
  eq('W157',4,'soliton peak and width',f(0),a);
 }
 {
