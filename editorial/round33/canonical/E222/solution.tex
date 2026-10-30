@@ -1,0 +1,4 @@
+(1) 由$\nabla\times H=\sigma E$和$\nabla\times E=i\omega\mu H$（因时间因子$e^{-i\omega t}$），消去$H$得$\nabla^2E=-i\mu\sigma\omega E$。圆对称轴向分量满足$E_z''+(1/r)E_z'=q^2E_z$，$q^2=-i\mu\sigma\omega$，选$q=(1-i)/\delta$，$\delta=\sqrt{2/(\mu\sigma\omega)}$，以保证物理表面层衰减。
+(2) 轴心有限要求舍弃奇异的$K_0(qr)$，因此$E_z(r)=E_s I_0(qr)/I_0(qa)$。总电流复幅$I_0^{(\mathrm{tot})}=2\pi\sigma\int_0^a E_z(r)r\,dr$，利用$\frac{d}{dr}[rI_1(qr)]=qrI_0(qr)$得$I_0^{(\mathrm{tot})}=2\pi\sigma E_sa I_1(qa)/[qI_0(qa)]$，各点电流相位一般不相同。
+(3) 以导线表面轴向电场$E_s$和总电流定义每米复阻抗$Z'=E_s/I_0^{(\mathrm{tot})}$，故$Z'=\frac q{2\pi\sigma a}\frac{I_0(qa)}{I_1(qa)}$。其单位是$\Omega/\mathrm m$，$\operatorname{Re}Z'>0$对应耗散，虚部对应随频率变化的内部磁储能；复数虚部符号依时间相位约定确定。
+(4) 若$|qa|\ll1$，$I_0(qa)=1+O((qa)^2)$、$I_1(qa)=qa/2+O((qa)^3)$，从而$Z'\to1/(\pi\sigma a^2)$，即直流圆截面电阻；若$a\gg\delta$，$I_0(qa)/I_1(qa)\to1$，有$Z'\sim(1-i)/(2\pi\sigma a\delta)$。每米周期平均焦耳损耗为$P'/\ell=\tfrac12\operatorname{Re}Z'|I_0^{(\mathrm{tot})}|^2$，高频实部按$\sqrt\omega$上升，符合趋肤截面积减小的直观图像。
