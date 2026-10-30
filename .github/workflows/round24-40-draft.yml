@@ -1,0 +1,43 @@
+name: Round 24 forty-problem composite physics technical and PDF QA
+on:
+  push:
+    branches: [physics-round24-40-work-20261030]
+  workflow_dispatch:
+jobs:
+  source:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check 40 canonical triples and 160 detailed question-answer parts
+        run: node scripts/check_round24_40_draft.js > round24-source-qa.json
+      - name: Execute 160 numerical, symbolic and limit-identity regression assertions
+        run: node scripts/check_round24_40_models.js > round24-model-qa.json
+      - name: Verify draft manifest
+        run: python3 -m json.tool data/rounds/round24-inprogress.json > /dev/null
+      - uses: actions/upload-artifact@v4
+        with:
+          name: round24-technical-qa
+          path: |
+            round24-source-qa.json
+            round24-model-qa.json
+  pdf:
+    needs: source
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install XeLaTeX and Chinese typesetting
+        run: |
+          sudo apt-get update -qq
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends texlive-xetex texlive-lang-chinese texlive-fonts-recommended fonts-noto-cjk
+      - name: Assemble the 40-question and 40-solution TeX books
+        run: node scripts/build_round24_draft.js
+      - name: Compile both PDFs with XeLaTeX
+        run: |
+          xelatex -interaction=nonstopmode -halt-on-error -output-directory=build/round24 build/round24/round24-questions.tex
+          xelatex -interaction=nonstopmode -halt-on-error -output-directory=build/round24 build/round24/round24-solutions.tex
+      - uses: actions/upload-artifact@v4
+        with:
+          name: round24-draft-two-pdfs
+          path: |
+            build/round24/round24-questions.pdf
+            build/round24/round24-solutions.pdf
