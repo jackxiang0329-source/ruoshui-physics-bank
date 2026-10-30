@@ -10,12 +10,16 @@ jobs:
       - uses: actions/checkout@v4
       - name: Check 40 canonical triples and 160 detailed question-answer parts
         run: node scripts/check_round23_40_draft.js > round23-source-qa.json
+      - name: Execute 160 numerical, symbolic and limit-identity regression assertions
+        run: node scripts/check_round23_40_models.js > round23-model-qa.json
       - name: Verify draft manifest
         run: python3 -m json.tool data/rounds/round23-inprogress.json > /dev/null
       - uses: actions/upload-artifact@v4
         with:
           name: round23-technical-qa
-          path: round23-source-qa.json
+          path: |
+            round23-source-qa.json
+            round23-model-qa.json
   pdf:
     needs: source
     runs-on: ubuntu-latest
