@@ -1,0 +1,226 @@
+[
+  {
+    "id": "W258",
+    "title": "周期离散Klein–Gordon链的Bloch谱与连续极限",
+    "setup": "无限一维质量 \\(m\\) 格点的横向位移 \\(u_n\\)，近邻弹簧刚度 \\(K>0\\)，每格点还受线性钉扎势 \\(\\kappa u_n^2/2\\)，晶格距 \\(a\\)。",
+    "q": [
+      "建立晶格运动方程。",
+      "求Bloch色散与群速。",
+      "求低波数连续Klein–Gordon极限。",
+      "分析第一Brillouin区边界和无钉扎极限。"
+    ],
+    "s": [
+      "第 \\(n\\) 格点的合力为 \\(K(u_{n+1}+u_{n-1}-2u_n)-\\kappa u_n\\)。Newton方程 \\(m\\ddot u_n=K(u_{n+1}+u_{n-1}-2u_n)-\\kappa u_n\\)，能量 \\(H=\\sum_n[m\\dot u_n^2/2+K(u_{n+1}-u_n)^2/2+\\kappa u_n^2/2]\\) 为正定。",
+      "设 \\(u_n=Ae^{i(qna-\\omega t)}\\)，则 \\(\\omega^2(q)=\\kappa/m+(4K/m)\\sin^2(qa/2)\\)。取正频支，群速 \\(v_g=d\\omega/dq=(Ka/(m\\omega))\\sin(qa)\\)。当 \\(q=0\\) 因钉扎存在频隙 \\(\\omega_{\\min}=\\sqrt{\\kappa/m}\\)，不是声学零模。",
+      "对于 \\(|qa|\\ll1\\)，\\(\\sin(qa/2)\\approx qa/2\\)，故 \\(\\omega^2\\approx\\omega_0^2+c^2q^2\\)，其中 \\(\\omega_0^2=\\kappa/m\\)、\\(c^2=Ka^2/m\\)。连续位移 \\(u(x,t)\\) 满足 \\(u_{tt}=c^2u_{xx}-\\omega_0^2u\\)，即一维Klein–Gordon方程。",
+      "在 \\(q=\\pm\\pi/a\\) 时 \\(\\omega_{\\max}=\\sqrt{(\\kappa+4K)/m}\\) 且 \\(v_g=0\\)，因此包络在带边不传播。若 \\(\\kappa\\to0\\)，低波数恢复 \\(\\omega\\sim c|q|\\) 的声学分支，整数格点整体平移不消耗弹性能。"
+    ],
+    "tags": [
+      "晶格波",
+      "色散谱",
+      "连续极限"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "W259",
+    "title": "Kirchhoff弦的非线性几何张力与振幅依赖频率",
+    "setup": "长度 \\(L\\) 固定两端弦，初始张力 \\(T_0>0\\)，轴向拉伸刚度 \\(EA>0\\)，质量线密度 \\(\\mu\\)。小斜率但有限振幅的横向位移 \\(y(x,t)\\) 产生全弦近似统一的附加张力。",
+    "q": [
+      "从弦长度伸长建立非线性张力。",
+      "导出非局部非线性弦方程。",
+      "对基模作Galerkin约化。",
+      "求首阶幅频修正及适用范围。"
+    ],
+    "s": [
+      "伸长 \\(\\Delta L=\\int_0^L[\\sqrt{1+y_x^2}-1]dx\\approx\\frac12\\int_0^Ly_x^2dx\\)。Hooke轴向本构给附加张力 \\(\\Delta T=(EA/L)\\Delta L=(EA/(2L))\\int_0^Ly_x^2dx\\)，因此有效张力 \\(T_{\\rm eff}=T_0+\\Delta T\\)。",
+      "在横向微小坡度下力密度约为 \\(T_{\\rm eff}(t)y_{xx}\\)。故 \\(\\mu y_{tt}=[T_0+\\frac{EA}{2L}\\int_0^Ly_x^2dx]y_{xx}\\)。积分系数取决于全弦形状，是几何非局部非线性，不能简单替换成局域的 \\(y^3\\) 力。",
+      "取 \\(y=q(t)\\sin(\\pi x/L)\\)，则 \\(\\int y_x^2dx=q^2\\pi^2/(2L)\\)。投影到正弦基模得 \\(\\ddot q+\\omega_0^2q+\\alpha q^3=0\\)，其中 \\(\\omega_0^2=T_0\\pi^2/(\\mu L^2)\\)、\\(\\alpha=EA\\pi^4/(4\\mu L^4)\\)。",
+      "令峰幅 \\(q=A\\)，Duffing谐波平衡给 \\(\\omega(A)\\approx\\omega_0[1+3\\alpha A^2/(8\\omega_0^2)]\\)。因为 \\(\\alpha>0\\) 频率随振幅上升。需要 \\(\\max|y_x|=\\pi A/L\\ll1\\) 且 \\(EA A^2\\pi^2/(4T_0L^2)\\ll1\\)，避免遗漏被舍弃的高模。"
+    ],
+    "tags": [
+      "非线性弦",
+      "Galerkin约化",
+      "幅频依赖"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "W260",
+    "title": "旋转流体Poincaré惯性波的各向异性谱与群速",
+    "setup": "均匀不可压无黏流体在旋转角速度 \\(\\Omega\\hat z\\) 的参考系中，基流静止，扰动波矢 \\(\\boldsymbol k=(k_x,0,k_z)\\)，忽略重力分层。",
+    "q": [
+      "写线性Coriolis方程并消除压力。",
+      "求惯性波色散上限。",
+      "计算群速度并说明其与波矢正交。",
+      "检查水平和垂直传播极限。"
+    ],
+    "s": [
+      "线性化方程 \\(\\partial_t\\boldsymbol u+2\\boldsymbol\\Omega\\times\\boldsymbol u=-\\nabla p/\\rho\\)，\\(\\nabla\\cdot\\boldsymbol u=0\\)。对平面波取 \\(\\boldsymbol u=\\boldsymbol Ue^{i(\\boldsymbol k\\cdot\\boldsymbol x-\\omega t)}\\)，用 \\(\\boldsymbol k\\cdot\\boldsymbol U=0\\) 消去压力，只留下受Coriolis耦合的横、纵速度。",
+      "代数线性系统行列式给 \\(\\omega^2=4\\Omega^2k_z^2/(k_x^2+k_z^2)\\)，所以 \\(|\\omega|\\le2|\\Omega|\\)。正频率可写 \\(\\omega=2\\Omega k_z/k\\)（选定传播支和 \\(\\Omega>0\\)），频率仅由波矢与旋转轴夹角决定而非波长模。",
+      "对 \\(\\omega=2\\Omega k_z/\\sqrt{k_x^2+k_z^2}\\) 求梯度，得 \\(v_{gx}=-2\\Omega k_xk_z/k^3\\)、\\(v_{gz}=2\\Omega k_x^2/k^3\\)。点积 \\(k_xv_{gx}+k_zv_{gz}=0\\)，因此理想惯性波群能流垂直相位波矢，和普通各向同性声波截然不同。",
+      "若 \\(k_z=0\\)，则 \\(\\omega=0\\)，扰动成为静态地转型结构；若 \\(k_x=0\\)，则 \\(|\\omega|=2|\\Omega|\\)，群速度趋零。零波数时方向不定义，不能令 \\(k\\to0\\) 而忽略所取角度；有限边界和黏性会改变惯性模。"
+    ],
+    "tags": [
+      "旋转流体",
+      "Coriolis波",
+      "群速几何"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "W261",
+    "title": "浅水波中Boussinesq弱色散与Korteweg–de Vries孤波",
+    "setup": "一维弱非线性弱色散长波可用KdV方程 \\(\\eta_t+c_0\\eta_x+\\alpha\\eta\\eta_x+\\beta\\eta_{xxx}=0\\) 描述，取 \\(\\alpha,\\beta>0\\)，孤波在远场趋零。",
+    "q": [
+      "变换到移动坐标并积分行波方程。",
+      "求sech平方孤波剖面。",
+      "证明孤波质量与振幅尺度。",
+      "讨论KdV参数符号与弱非线性范围。"
+    ],
+    "s": [
+      "设 \\(\\eta(x,t)=f(\\xi)\\)、\\(\\xi=x-ct\\)，则 \\((c_0-c)f'+\\alpha f f'+\\beta f'''=0\\)。用 \\(f,f',f''\\to0\\) 的远场条件积分一次得 \\(\\beta f''-(c-c_0)f+\\alpha f^2/2=0\\)，不存在额外积分常数。",
+      "代入 \\(f=A\\operatorname{sech}^2(\\xi/\\ell)\\) 并用 \\((\\operatorname{sech}^2u)''=4\\operatorname{sech}^2u-6\\operatorname{sech}^4u\\)，比较二次与四次项得 \\(\\ell^2=4\\beta/(c-c_0)\\)、\\(A=3(c-c_0)/\\alpha\\)。因此 \\(c=c_0+\\alpha A/3\\)。",
+      "守恒质量 \\(M=\\int\\eta\\,dx=A\\ell\\int_{-\\infty}^\\infty\\operatorname{sech}^2u\\,du=2A\\ell\\)。由于 \\(\\ell\\propto A^{-1/2}\\)，总质量随振幅 \\(M\\propto A^{1/2}\\)，强孤波更高也更窄，并不保持相同宽度。",
+      "局域亮隆起孤波需 \\((c-c_0)/\\beta>0\\)、\\(A=3(c-c_0)/\\alpha\\)。若色散符号反转，需要相应负速度偏移才有实宽度。KdV是弱非线性、长波渐近，若波陡化到破碎或底深快速变化，不能沿用单个sech平方精确解。"
+    ],
+    "tags": [
+      "KdV孤波",
+      "弱色散",
+      "守恒律"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "W262",
+    "title": "二维鼓膜模态的Rayleigh商、边界摄动与变分上界",
+    "setup": "一张固定边界二维薄膜 \\(\\Omega\\)，均匀面密度 \\(\\rho\\)，张力 \\(T\\)，横向小振动本征值满足 \\(-\\Delta u=\\lambda u\\)，\\(u|_{\\partial\\Omega}=0\\)。",
+    "q": [
+      "由动能与势能构造Rayleigh商。",
+      "证明基频的变分下界与试探函数上界。",
+      "用正方域分离变量求精确基模。",
+      "讨论域单调性与孔洞边界。"
+    ],
+    "s": [
+      "膜的势能为 \\(U=\\frac T2\\int_\\Omega|\\nabla u|^2dA\\)，动能为 \\(K=\\frac\\rho2\\int_\\Omega \\dot u^2dA\\)。试设 \\(u(\\boldsymbol x,t)=f(\\boldsymbol x)\\cos\\omega t\\)，得到Rayleigh频率估计 \\(\\omega^2[f]=\\frac T\\rho\\frac{\\int|\\nabla f|^2}{\\int f^2}\\)，要求 \\(f|_{\\partial\\Omega}=0\\)。",
+      "对Dirichlet Laplace算子，Courant–Fischer原则给 \\(\\lambda_1=\\inf_{f\\ne0}R[f]\\)，故任意合法试探函数的 \\(R[f]\\ge\\lambda_1\\)。于是 \\(\\omega_{\\rm trial}\\ge\\omega_1\\)，是对真实基频的上界而非下界；若取非法边界函数结论不成立。",
+      "对正方域 \\(0<x,y<L\\)，分离得 \\(u_{mn}=\\sin(m\\pi x/L)\\sin(n\\pi y/L)\\)，\\(\\lambda_{mn}=\\pi^2(m^2+n^2)/L^2\\)。基模 \\(\\lambda_{11}=2\\pi^2/L^2\\)，角频率 \\(\\omega_{11}=(\\pi/L)\\sqrt{2T/\\rho}\\)，可用Rayleigh商直接核验。",
+      "Dirichlet本征值具有域单调性：若 \\(\\Omega_1\\subset\\Omega_2\\)，则 \\(\\lambda_1(\\Omega_1)\\ge\\lambda_1(\\Omega_2)\\)。增加固定边界的内部孔洞等于缩小可振动域，通常提高基频；但自由边界孔洞是不同边界条件，不能直接使用这条结论。"
+    ],
+    "tags": [
+      "谱变分",
+      "Rayleigh商",
+      "域单调"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "W263",
+    "title": "声波超材料的局域谐振禁带和有效动态密度",
+    "setup": "一维长波介质具有背景质量密度 \\(\\rho_0>0\\) 与附加每体积质量 \\(m_r\\) 的内部谐振器，谐振频率 \\(\\omega_r>0\\)，无耗散，压缩模量 \\(K>0\\)。",
+    "q": [
+      "由内部谐振器方程消去相对位移。",
+      "求有效动态密度与符号变化。",
+      "求负有效密度频窗与倏逝波数。",
+      "讨论近共振发散和阻尼修正。"
+    ],
+    "s": [
+      "设介质位移为 \\(u\\)，局域谐振器位移 \\(v\\)，弹簧刚度每体积 \\(k_r=m_r\\omega_r^2\\)。谐振器方程 \\(m_r\\ddot v=-k_r(v-u)\\)，代入 \\(e^{-i\\omega t}\\) 得 \\(v=\\omega_r^2u/(\\omega_r^2-\\omega^2)\\)。",
+      "宏观动量含背景质量与谐振器惯性，得 \\(\\rho_{\\rm eff}(\\omega)=\\rho_0+m_r\\omega_r^2/(\\omega_r^2-\\omega^2)\\)。当 \\(\\omega\\to0\\) 时 \\(\\rho_{\\rm eff}\\to\\rho_0+m_r\\)，而在 \\(\\omega>\\omega_r\\) 附近动态惯性可为负。",
+      "有效色散 \\(k^2=\\omega^2\\rho_{\\rm eff}/K\\)。令 \\(\\rho_{\\rm eff}=0\\) 得 \\(\\omega_z^2=\\omega_r^2(1+m_r/\\rho_0)\\)。对 \\(\\omega_r<\\omega<\\omega_z\\)，\\(\\rho_{\\rm eff}<0\\)、\\(k^2<0\\)，波在均匀有效介质内倏逝，形成局域共振禁带。",
+      "理想无耗散 \\(\\rho_{\\rm eff}\\) 在 \\(\\omega=\\omega_r\\) 有极点，此处局域内部振幅很大，线性近似及均匀化可能失效。若加阻尼 \\(2\\gamma\\dot v\\)，分母改为 \\(\\omega_r^2-\\omega^2-2i\\gamma\\omega\\)，有效密度变复数并出现吸收，而非真实无限响应。"
+    ],
+    "tags": [
+      "超材料",
+      "负有效密度",
+      "局域共振"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "W264",
+    "title": "色散无损波包的驻相渐近与群速度",
+    "setup": "一维线性波动场 \\(\\psi(x,t)=\\int_{-\\infty}^\\infty A(k)e^{i[kx-\\omega(k)t]}\\,dk\\)，\\(A(k)\\) 光滑且局限于有限带，观察 \\(t\\gg1\\) 时的传播。",
+    "q": [
+      "用驻相条件确定波包传播射线。",
+      "导出非退化驻相领先振幅。",
+      "解释色散拐点形成caustic的原因。",
+      "检查无色散线性色散的例外。"
+    ],
+    "s": [
+      "相位 \\(\\Phi(k)=kx-\\omega(k)t\\)。驻相点满足 \\(\\Phi'(k_*)=x-t\\omega'(k_*)=0\\)，故 \\(x/t=v_g(k_*)\\)。因此远场主贡献由群速等于观察射线速度的谱分量形成，并非一定取相速度 \\(\\omega/k\\)。",
+      "若 \\(\\omega''(k_*)\\ne0\\)，二阶展开 \\(\\Phi\\approx\\Phi_*-\\frac12t\\omega''(k_*)(k-k_*)^2\\)。Gaussian振荡积分得 \\(\\psi\\sim A(k_*)\\sqrt{2\\pi/[t|\\omega''(k_*)|]}\\exp[i\\Phi_*-i\\frac\\pi4\\operatorname{sgn}\\omega''(k_*)]\\)，振幅通常按 \\(t^{-1/2}\\) 衰减。",
+      "若 \\(\\omega''(k_*)=0\\) 而 \\(\\omega'''(k_*)\\ne0\\)，二阶驻相不再适用，须保留三阶相位 \\(-t\\omega'''(k_*)(k-k_*)^3/6\\)。重缩放 \\(\\Delta k\\sim t^{-1/3}\\) 引出Airy型统一近似与 \\(t^{-1/3}\\) 的不同振幅尺度。",
+      "若 \\(\\omega(k)=ck\\)，则 \\(\\psi(x,t)=\\int A(k)e^{ik(x-ct)}dk=\\psi(x-ct,0)\\)，形状不变。这时 \\(\\omega''=0\\) 在所有 \\(k\\) 上成立，但也没有非零三阶项，不能把普通驻相 \\(t^{-1/2}\\) 或Airy \\(t^{-1/3}\\) 套用到纯平移波。"
+    ],
+    "tags": [
+      "渐近分析",
+      "驻相法",
+      "caustic"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "W265",
+    "title": "一维耗散声波的复波数与能量衰减长度",
+    "setup": "均匀流体线性声压 \\(p(x,t)\\) 满足黏性近似 \\(p_{tt}-c^2p_{xx}=\\nu\\,p_{txx}\\)，\\(c>0,\\nu>0\\)，取谐时间因子 \\(e^{-i\\omega t}\\)，频率 \\(\\omega>0\\)。",
+    "q": [
+      "建立复色散方程。",
+      "求弱耗散下的衰减常数。",
+      "求声强的能流衰减长度。",
+      "讨论高频极限对有效方程的适用性。"
+    ],
+    "s": [
+      "代入 \\(p=p_0e^{i(kx-\\omega t)}\\) 后有 \\(-\\omega^2+c^2k^2=-i\\nu\\omega k^2\\)，即 \\(k^2=\\omega^2/(c^2-i\\nu\\omega)\\)。选择 \\(\\operatorname{Im}k>0\\) 的前向支，压力幅随 \\(x\\) 衰减而非增长。",
+      "若 \\(\\epsilon=\\nu\\omega/c^2\\ll1\\)，展开 \\(k=(\\omega/c)(1-i\\epsilon)^{-1/2}\\approx(\\omega/c)[1+i\\epsilon/2-3\\epsilon^2/8+\\cdots]\\)。故 \\(\\alpha=\\operatorname{Im}k\\approx\\nu\\omega^2/(2c^3)\\)，压力幅为 \\(e^{-\\alpha x}\\)。",
+      "在弱耗散下声强与压力振幅平方成正比，\\(I(x)\\approx I(0)e^{-2\\alpha x}\\)。因此强度的 \\(1/e\\) 传播长度 \\(\\ell_I=1/(2\\alpha)\\approx c^3/(\\nu\\omega^2)\\)，而压力幅的 \\(1/e\\) 长度为 \\(\\ell_p=1/\\alpha\\)，两者相差2倍。",
+      "当 \\(\\nu\\omega/c^2\\) 不再小，必须使用完整复根 \\(k=\\omega/\\sqrt{c^2-i\\nu\\omega}\\) 计算相速度和衰减，不能继续采用 \\(\\alpha\\propto\\omega^2\\) 的首阶式。高频分子松弛、热传导和非线性也需纳入真实声学耗散。"
+    ],
+    "tags": [
+      "黏性声波",
+      "复色散",
+      "能量衰减"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  }
+]
