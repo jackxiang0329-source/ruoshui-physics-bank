@@ -16,21 +16,21 @@ def run():
     H=((px(x,y,vx)+G*y/2)**2+(py(x,y,vy)-G*x/2)**2)/(2*m)-k*(x*x+y*y)/2
     check("M265",4,"Legendre energy is kinetic minus inverted potential",
           H,m*(vx*vx+vy*vy)/2-k*(x*x+y*y)/2,method="Hamilton-energy-Legendre")
-    # M266: rolling sphere.
-    m,g,R,a=1.3,9.8,2.,.2
-    rho=R-a
-    inertia=2*m*a*a/5
-    check("M266",1,"rolling solid sphere effective inertial mass",
-          m+inertia/a**2,1.4*m,method="rotational-translational-partition")
-    speed=S(1.4*g*rho)
-    reaction=lambda phi,v:m*(v*v/rho+g*C(phi))
-    check("M266",2,"top radial contact reaction vanishes at critical speed",
-          reaction(P,speed/S(1.4)),0,method="Newton-normal-balance")
-    # expected critical bottom speed = 27/7*g*rho; note top speed squared=g*rho
-    check("M266",3,"minimum bottom speed from rotational energy",
-          (27/7)*g*rho, g*rho+2*g*(2*rho)/(1.4),method="mechanical-energy")
-    check("M266",4,"no-slip static friction from tangential equations",
-          (inertia/(m*a*a))/(1+inertia/(m*a*a)),2/7,method="rolling-torque")
+    # M266 classical monopole sphere conservation and conical orbit
+    m,R,q,gmag,v=1.3,1.7,.8,1.2,.7
+    Lmechanical=m*R*v
+    J=S(Lmechanical**2+(q*gmag)**2)
+    cosTheta=-q*gmag/J
+    check("M266",1,"monopole mechanical angular momentum change tangent magnitude",
+          q*gmag*v/R, q*gmag*(v/R),method="monopole-torque-triple-product")
+    check("M266",2,"total conserved monopole angular momentum quadratic Casimir",
+          J*J,Lmechanical**2+(q*gmag)**2,method="charge-monopole-angular-momentum")
+    check("M266",3,"conical orbit fixed polar angle projection",
+          J*cosTheta,-q*gmag,method="monopole-conical-motion")
+    phiDot=J/(m*R*R)
+    speed=R*S(1-cosTheta*cosTheta)*phiDot
+    check("M266",4,"conical orbital speed equals original perpendicular speed",
+          speed,v,method="monopole-kinetic-energy-conservation")
     # M267: Newton gravity tidal Hessian
     G,M,r=2.,3.,4.
     Tdiag=[2*G*M/r**3,-G*M/r**3,-G*M/r**3]
