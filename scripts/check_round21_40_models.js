@@ -280,7 +280,7 @@ function J1(x){let term=x/2,sum=term;for(let j=1;j<70;j++){term*=(-x*x/4)/(j*(j+
  const mu=1.3,B=2.2,theta=.7,tau=4.3,hbar=1;
  const A=-(1-Math.cos(theta))/2,solid=2*P*(1-Math.cos(theta));
  eq('Q120',1,'spin-half-energy-gap',mu*B-(-mu*B),2*mu*B);
- eq('Q120',2,'Berry-connection-from-spinor',A,-Math.sin(theta/2)**2);
+ eq('Q120',2,'Berry-connection-from-spinor',A,-(Math.sin(theta/2)**2));
  eq('Q120',3,'Berry-solid-angle',2*P*A,-solid/2);
  eq('Q120',4,'dynamical-ground-phase',mu*B*tau/hbar,-(-mu*B)*tau/hbar);
 }
