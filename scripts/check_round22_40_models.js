@@ -119,7 +119,7 @@ const c=299792458;
  eq('E143',2,'quarter wave transformer matched',Zt*Zt/R,Z0);
  eq('E143',3,'linear detuning reactive input',inp(P/2+delta).im/(Z0*delta),R/Zt-Zt/R,2e-5);
  const zi=inp(P/2+delta),gamma2=((zi.re-Z0)**2+zi.im**2)/((zi.re+Z0)**2+zi.im**2);
- eq('E143',4,'lossless power into load normalized',1-gamma2,1-gamma2);
+ eq('E143',4,'load real power versus reflected power',4*Z0*zi.re/((zi.re+Z0)**2+zi.im**2),1-gamma2);
 }
 {
  const R=8,T=300,B=.3,v1=1.2,v2=2.7,p=v=>R*T*(1/v+B/(v*v));
@@ -303,10 +303,10 @@ function J1(x){let term=x/2,sum=term;for(let j=1;j<70;j++){term*=(-x*x/4)/(j*(j+
  const m=2,h=1,V=3,E=11,k=Math.sqrt(2*m*E)/h,q=Math.sqrt(2*m*(E-V))/h,r=(k-q)/(k+q),t=2*k/(k+q),R=r*r,T=q/k*t*t;
  eq('Q128',1,'quantum step boundary continuity',1+r,t);
  eq('Q128',2,'probability current is conserved',R+T,1);
- const kap=Math.sqrt(2*m*(V-1))/h,below=(k*k+kap*kap)/(k*k+kap*kap);
+ const kap=Math.sqrt(2*m*(V-1))/h,den=k*k+kap*kap,rRe=(k*k-kap*kap)/den,rIm=-2*k*kap/den,below=rRe*rRe+rIm*rIm;
  eq('Q128',3,'sub-barrier semi-infinite reflection unit modulus',below,1);
  const Ebig=1e8,ratio=Math.sqrt(1-V/Ebig),Rbig=((1-ratio)/(1+ratio))**2;
- eq('Q128',4,'high energy reflection asymptote',Rbig,(V/(4*Ebig))**2,1e-8);
+ eq('Q128',4,'high energy reflection asymptote scaled',Rbig*1e16,(V/(4*Ebig))**2*1e16,1e-5);
 }
 {
  const beta=.8,cc=3,tau=2,H=5,gamma=1/Math.sqrt(1-beta*beta),v=beta*cc,L=gamma*v*tau;
