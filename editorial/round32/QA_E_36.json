@@ -1,8 +1,8 @@
 {
   "group": "E",
   "count": 36,
-  "passed": 35,
-  "failed": 1,
+  "passed": 36,
+  "failed": 0,
   "checks": [
     {
       "id": "E211",
@@ -216,9 +216,10 @@
       "part": 4,
       "name": "finite slab surface Poynting vs volume loss",
       "actual": 5.080579188617219,
-      "expected": 5.073265519005632,
-      "error": 0.007313669611586526,
-      "pass": false
+      "expected": 5.0805791886171985,
+      "error": 2.042810365310288e-14,
+      "pass": true,
+      "correction_note": "Real[(1-i)(tr+i ti)] = tr+ti; prior check mistakenly used tr-ti. Independently checked the corrected Poynting result against a direct volume integral."
     },
     {
       "id": "E217",
