@@ -1,0 +1,296 @@
+{
+  "group": "T",
+  "count": 32,
+  "passed": 32,
+  "failed": 0,
+  "checks": [
+    {
+      "id": "T210",
+      "part": 1,
+      "name": "van der Waals critical first derivative",
+      "actual": 0,
+      "expected": 0,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T210",
+      "part": 2,
+      "name": "van der Waals critical second derivative",
+      "actual": 0,
+      "expected": 0,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T210",
+      "part": 3,
+      "name": "reduced cubic critical expansion",
+      "actual": -1.4989676166976549,
+      "expected": -1.5,
+      "error": 0.001032383302345119,
+      "pass": true
+    },
+    {
+      "id": "T210",
+      "part": 4,
+      "name": "critical compressibility",
+      "actual": 0.375,
+      "expected": 0.375,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T211",
+      "part": 1,
+      "name": "photon entropy temperature differential",
+      "actual": 383.9999999939891,
+      "expected": 383.99999999683126,
+      "error": 2.8421709430404007e-9,
+      "pass": true
+    },
+    {
+      "id": "T211",
+      "part": 2,
+      "name": "adiabatic radiation entropy conservation",
+      "actual": 512,
+      "expected": 512,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T211",
+      "part": 3,
+      "name": "adiabatic photon internal-energy scaling",
+      "actual": 1935.238732638525,
+      "expected": 1935.238732638525,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T211",
+      "part": 4,
+      "name": "radiation adiabatic pressure volume power",
+      "actual": 645.0795775461751,
+      "expected": 645.079577546175,
+      "error": 1.1368683772161603e-13,
+      "pass": true
+    },
+    {
+      "id": "T212",
+      "part": 1,
+      "name": "Sommerfeld chemical potential shift relative order",
+      "actual": 0.000044413219804972925,
+      "expected": 0.00004441321980490211,
+      "error": 7.081873065403754e-17,
+      "pass": true
+    },
+    {
+      "id": "T212",
+      "part": 2,
+      "name": "Fermi excitation thermal energy quadratic",
+      "actual": 0.0026647931882877174,
+      "expected": 0.0026647931882941268,
+      "error": 6.409369562865308e-15,
+      "pass": true
+    },
+    {
+      "id": "T212",
+      "part": 3,
+      "name": "Sommerfeld heat capacity density-of-states identity",
+      "actual": 0.29608813203268075,
+      "expected": 0.29608813203268075,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T212",
+      "part": 4,
+      "name": "Fermi heat capacity vanishes with T",
+      "actual": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T213",
+      "part": 1,
+      "name": "ideal Bose critical density from thermal wavelength",
+      "actual": 0.3,
+      "expected": 0.3,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T213",
+      "part": 2,
+      "name": "Bose condensate density sum",
+      "actual": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T213",
+      "part": 3,
+      "name": "Bose below Tc specific heat derivative",
+      "actual": 0.29578316936333604,
+      "expected": 0.29578316935402826,
+      "error": 9.307776771549925e-12,
+      "pass": true
+    },
+    {
+      "id": "T213",
+      "part": 4,
+      "name": "2D Bose infrared occupation diverges as cutoff shrinks",
+      "actual": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T214",
+      "part": 1,
+      "name": "shifted harmonic work from potential difference",
+      "actual": 0.12,
+      "expected": 0.11999999999999997,
+      "error": 2.7755575615628914e-17,
+      "pass": true
+    },
+    {
+      "id": "T214",
+      "part": 2,
+      "name": "Gaussian work variance",
+      "actual": 1.2,
+      "expected": 1.2,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T214",
+      "part": 3,
+      "name": "Jarzynski exponential average by independent quadrature",
+      "actual": 0.999999999999995,
+      "expected": 1,
+      "error": 4.9960036108132044e-15,
+      "pass": true
+    },
+    {
+      "id": "T214",
+      "part": 4,
+      "name": "harmonic trap partition function translation",
+      "actual": 1.1441140410797053,
+      "expected": 1.1441140410797053,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T215",
+      "part": 1,
+      "name": "Onsager off-diagonal reciprocal coefficients",
+      "actual": 0.7,
+      "expected": 0.7,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T215",
+      "part": 2,
+      "name": "entropy production equals flux-force pairing",
+      "actual": 3.1320000000000006,
+      "expected": 3.132,
+      "error": 4.440892098500626e-16,
+      "pass": true
+    },
+    {
+      "id": "T215",
+      "part": 3,
+      "name": "Onsager symmetric conductivity matrix positive determinant",
+      "actual": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T215",
+      "part": 4,
+      "name": "Onsager-Casimir magnetic reversal",
+      "actual": 1.02,
+      "expected": 1.02,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T216",
+      "part": 1,
+      "name": "thermal diffusion PDE finite-difference residual",
+      "actual": -0.08362130429350953,
+      "expected": -0.08362130154981884,
+      "error": 2.7436906913091974e-9,
+      "pass": true
+    },
+    {
+      "id": "T216",
+      "part": 2,
+      "name": "finite-plate availability by quadrature",
+      "actual": 0.000003173575027878735,
+      "expected": 0.0000031735750278787413,
+      "error": 6.3527471044072525e-21,
+      "pass": true
+    },
+    {
+      "id": "T216",
+      "part": 3,
+      "name": "non-equilibrium entropy production integral",
+      "actual": 8.628630871167869e-8,
+      "expected": 8.628630871167851e-8,
+      "error": 1.7205356741102976e-22,
+      "pass": true
+    },
+    {
+      "id": "T216",
+      "part": 4,
+      "name": "exergy loss equals T0 entropy generation",
+      "actual": 0.000025885892613503504,
+      "expected": 0.000025885892613503606,
+      "error": 1.0164395367051604e-19,
+      "pass": true
+    },
+    {
+      "id": "T217",
+      "part": 1,
+      "name": "nucleation surface and volume terms",
+      "actual": 0.0016755160819145565,
+      "expected": 0.0016755160819145565,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T217",
+      "part": 2,
+      "name": "stationarity of critical nucleus",
+      "actual": -2.0946785972419943e-10,
+      "expected": 0,
+      "error": 2.0946785972419943e-10,
+      "pass": true
+    },
+    {
+      "id": "T217",
+      "part": 3,
+      "name": "critical nucleation barrier",
+      "actual": 0.0018095573684677206,
+      "expected": 0.0018095573684677206,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T217",
+      "part": 4,
+      "name": "nucleation barrier decreases with bulk driving",
+      "actual": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    }
+  ]
+}
