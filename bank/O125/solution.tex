@@ -1,0 +1,4 @@
+(1) 夫琅禾费远场复振幅正比孔径平面的二维傅里叶变换。取孔面极坐标 $(r,\phi)$，观测角的横向波数 $q=k\sin\theta$，$k=2\pi/\lambda$，则 $\mathcal A(q)\propto\int_0^a r\,dr\int_0^{2\pi}e^{iqr\cos\phi}\,d\phi=2\pi\int_0^arJ_0(qr)\,dr$。角积分转为零阶 Bessel 函数，圆孔的径向对称性从而显现。
+(2) 由积分恒等式 $\int_0^a rJ_0(qr)\,dr=aJ_1(qa)/q$，并以轴上 $q=0$ 的振幅归一化，得到 $A(\theta)/A(0)=2J_1(ka\sin\theta)/(ka\sin\theta)$。强度为 $I(\theta)/I(0)=[2J_1(ka\sin\theta)/(ka\sin\theta)]^2$，其中 $J_1$ 是第一类一阶 Bessel 函数，零角极限用 $J_1(x)\sim x/2$ 得到强度一。
+(3) 第一暗环满足 $ka\sin\theta_1=j_{1,1}\approx3.8317$，因此小角时 $\theta_1\simeq3.8317/(ka)=0.61\lambda/a=1.22\lambda/D$。理想聚焦透镜在焦面上对应半径 $r_1\simeq f\theta_1\simeq1.22\lambda f/D$。增大孔径可缩小衍射图样，改善角分辨。
+(4) 对两个非相干等亮点源，瑞利判据以一个点的主峰落在另一个点的首暗环为临界，因此最小可分辨角距约为 $\theta_{\rm R}=1.22\lambda/D$。该标准不是绝对信息论边界：探测信噪比、点源相干性、孔径遮拦、光学像差与图像重建算法都会影响可辨性，但理想孔径衍射尺度仍按 $\lambda/D$ 决定。
