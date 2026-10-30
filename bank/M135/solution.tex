@@ -1,0 +1,4 @@
+(1) 纯转动能为 $K=I\omega^2/2$，恒输出功率条件 $P=dK/dt=I\omega\dot\omega$。积分得 $\omega^2(t)=\omega_i^2+2Pt/I$，因此 $\omega(t)=\sqrt{\omega_i^2+2Pt/I}$，而非恒角加速度线性增长。
+(2) 电机输出转矩 $\tau=P/\omega(t)$，由 $I\dot\omega=\tau$ 得 $\dot\omega=P/(I\omega(t))$。当形式上令 $\omega_i=0$ 时 $t=0$ 的转矩趋无穷，真实电机必须先以有限转矩起步，之后才可能进入近似恒功率区域；此模型需明确非零初始转速。
+(3) 薄环外缘速度为 $v=R\omega$，所以 $\omega_{\max}=v_{\max}/R$。可增加的转动能 $\Delta K_{\max}=\tfrac12MR^2[(v_{\max}/R)^2-\omega_i^2]=\tfrac12M(v_{\max}^2-R^2\omega_i^2)$，加速时间 $t_{\max}=\Delta K_{\max}/P$，要求 $R\omega_i\le v_{\max}$。
+(4) 恒功率再生制动给 $dK/dt=-P_b$，因此 $\omega^2(t)=\omega_{\rm start}^2-2P_bt/I$。达到目标角速 $\omega_f$ 的时间为 $t_b=I(\omega_{\rm start}^2-\omega_f^2)/(2P_b)$，恰好满足 $P_bt_b=K_{\rm start}-K_f$；若制动到零速，恒功率阶段末端同样需要以有限转矩控制替代。
