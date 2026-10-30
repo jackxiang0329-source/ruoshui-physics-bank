@@ -90,6 +90,9 @@ def run():
     check("W241",3,"finite-amplitude period correction coefficient",
           (Ktiny/(P/2)-1)/tiny**2,1/16,method="small-angle-derivative")
     nearly=P-1e-4;knear=SI(nearly/2)
-    Knear=integrate(lambda x:1/S(1-knear**2*SI(x)**2),0,P/2,50000)
+    agm_a,agm_b=1.,S(1-knear*knear)
+    for _ in range(30):
+        agm_a,agm_b=(agm_a+agm_b)/2,S(agm_a*agm_b)
+    Knear=P/(2*agm_a)
     check("W241",4,"separatrix logarithmic divergence of elliptic K",
           Knear,L(4/S(1-knear*knear)),tol=1e-4,method="separatrix-asymptotic")
