@@ -60,12 +60,12 @@ def run():
     check("Q245",4,"thermal Heisenberg product",
           S(varx*varp),hbar*(2*nB+1)/2,method="uncertainty-product")
     # Q246 Landau states and Hall effect
-    ee,B,m,hbar,A=1.4,2.3,3.,.8,8.
+    ee,B,m,hbar,area=1.4,2.3,3.,.8,8.
     wc=ee*B/m
     check("Q246",1,"Landau harmonic spacing",hbar*wc*(2.5-1.5),hbar*wc,method="Landau-ladder")
-    h=2*P*hbar;Nphi=ee*B*A/h
+    h=2*P*hbar;Nphi=ee*B*area/h
     check("Q246",2,"Landau degeneracy from magnetic length",
-          A/(2*P*(hbar/(ee*B))),Nphi,method="magnetic-flux-counting")
+          area/(2*P*(hbar/(ee*B))),Nphi,method="magnetic-flux-counting")
     nu=3
     density=lambda BB:nu*ee*BB/h
     check("Q246",3,"Streda Hall conductance from density derivative",
