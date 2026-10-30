@@ -1,0 +1,33 @@
+% 第30批高难综合题工作稿；8题候选，未独立复核、未进入正式主库。
+\subsection*{M200\quad 有限振幅单摆的椭圆积分与临界发散}
+\textbf{题目：}单摆长$l$，重力加速度$g$，由幅角$\theta_0\in(0,\pi)$静止释放。(1)建立周期积分。(2)化为完全椭圆积分。(3)给小振幅四阶展开。(4)求分离轨道附近渐近。
+\par\textbf{解析：}(1)能量守恒$\dot\theta^2=2(g/l)(\cos\theta-\cos\theta_0)$，因此$T=4\sqrt{l/(2g)}\int_0^{\theta_0}(\cos\theta-\cos\theta_0)^{-1/2}d\theta$。(2)置$k=\sin(\theta_0/2)$、$\sin(\theta/2)=k\sin\varphi$，得$T=4\sqrt{l/g}K(k)$，$K(k)=\int_0^{\pi/2}(1-k^2\sin^2\varphi)^{-1/2}d\varphi$。(3)先展开$K(k)=\frac\pi2(1+k^2/4+9k^4/64+\cdots)$，再代入$k=\theta_0/2-\theta_0^3/48+\cdots$，得$T=2\pi\sqrt{l/g}(1+\theta_0^2/16+11\theta_0^4/3072+O(\theta_0^6))$。(4)当$\theta_0\to\pi^-$，$k'=\cos(\theta_0/2)\sim(\pi-\theta_0)/2$，$K(k)\sim\ln(4/k')$，所以$T\sim4\sqrt{l/g}\ln[8/(\pi-\theta_0)]$。对数发散来自直立不稳定点附近速度趋零。
+\par\medskip
+\subsection*{M201\quad 反平方引力加弱逆立方项的轨道进动}
+\textbf{题目：}粒子质量$m$受$F_r=-k/r^2-\alpha/r^3$，$k>0$，角动量$L$，设$L^2>m\alpha$。(1)求有效势与圆轨道。(2)写Binet方程并求轨道。(3)求近心角间隔。(4)求微扰进动及稳定范围。
+\par\textbf{解析：}(1)势能$U=-k/r-\alpha/(2r^2)$，故$U_{eff}=(L^2/m-\alpha)/(2r^2)-k/r$，极小值半径$r_c=(L^2/m-\alpha)/k$。(2)令$u=1/r$，Binet方程$u''+\nu^2u=mk/L^2$，$\nu^2=1-m\alpha/L^2$，故$u=mk(1+e\cos\nu(\phi-\phi_0))/(L^2\nu^2)$；束缚轨道需$0\le e<1$。(3)相邻近心点满足$\nu\Delta\phi=2\pi$，所以$\Delta\phi=2\pi/\nu$，进动$\delta=2\pi(1/\nu-1)$。(4)当$|m\alpha/L^2|\ll1$时$\delta\simeq\pi m\alpha/L^2$；$U_{eff}''(r_c)=k/r_c^3>0$。在$\alpha=0$时回复开普勒闭合轨道。
+\par\medskip
+\subsection*{E200\quad 双层球形介质电容与界面极化}
+\textbf{题目：}同心球电极半径$a<b$，界面$c$满足$a<c<b$，两层介电常数分别为$\epsilon_1,\epsilon_2$，电极带自由电荷$\pm Q$。(1)求电位移与电场。(2)求电容。(3)求界面两侧极化面电荷。(4)求固定电荷下静电能对$c$的导数。
+\par\textbf{解析：}(1)由球面Gauss定律$D_r=Q/(4\pi r^2)$，各层$E_i=Q/(4\pi\epsilon_i r^2)$。(2)$V=Q[(1/a-1/c)/\epsilon_1+(1/c-1/b)/\epsilon_2]/(4\pi)$，故$C=4\pi/[(1/a-1/c)/\epsilon_1+(1/c-1/b)/\epsilon_2]$。(3)取内层介质外法线为$+\hat r$，外层介质内法线为$-\hat r$，两侧束缚电荷分别为$Q(1-\epsilon_0/\epsilon_1)/(4\pi c^2)$、$-Q(1-\epsilon_0/\epsilon_2)/(4\pi c^2)$；界面无自由电荷。(4)$U=Q^2/(2C)$，求导得$dU/dc=Q^2(1/\epsilon_1-1/\epsilon_2)/(8\pi c^2)$。当$\epsilon_1>\epsilon_2$时该导数负，扩大高介电率区域可降低固定电荷储能。
+\par\medskip
+\subsection*{E201\quad 导体磁扩散与趋肤损耗}
+\textbf{题目：}半无限良导体$x>0$，电导率$\sigma$、磁导率$\mu$，表面$H_y(0,t)=\Re(H_0e^{-i\omega t})$，忽略位移电流。(1)推导扩散方程。(2)求趋肤解。(3)求电流密度。(4)求单位表面积损耗。
+\par\textbf{解析：}(1)由$\nabla\times H=\sigma E$、$\nabla\times E=-\mu\partial_tH$和$\nabla\cdot H=0$得$\nabla^2H=\mu\sigma\partial_tH$。(2)设复幅$H_y=H_0e^{-qx}$，有$q^2=-i\mu\sigma\omega$。选衰减根$q=(1-i)/\delta$，$\delta=\sqrt{2/(\mu\sigma\omega)}$。(3)$J_z=\partial_xH_y$，复幅为$-qH_0e^{-qx}$，因此$|J_z|^2=2|H_0|^2e^{-2x/\delta}/\delta^2$。(4)平均焦耳功率密度为$|J_z|^2/(2\sigma)$，积分$x>0$给$P/A=|H_0|^2/(2\sigma\delta)$，亦即$\frac12R_s|H_0|^2$，其中$R_s=1/(\sigma\delta)$。
+\par\medskip
+\subsection*{T200\quad 两个有限热库间可逆取功的二阶极限}
+\textbf{题目：}两个热容量$C_h,C_c$恒定的物体初温$T_h>T_c>0$，整体绝热，借可逆热机达到共同温度。(1)求末温。(2)求最大功。(3)证明功非负。(4)在$T_h=T+\Delta T/2,T_c=T-\Delta T/2$时展开。
+\par\textbf{解析：}(1)总熵守恒$C_h\ln(T_f/T_h)+C_c\ln(T_f/T_c)=0$，故$T_f=T_h^wT_c^{1-w}$，$w=C_h/(C_h+C_c)$。(2)由总内能降低得到$W=(C_hT_h+C_cT_c)-(C_h+C_c)T_f$。(3)加权AM-GM不等式$wT_h+(1-w)T_c\ge T_h^wT_c^{1-w}$，所以$W\ge0$，相等仅在温度相同。(4)令$x=\Delta T/(2T)$，对$\ln(T_f/T)=w\ln(1+x)+(1-w)\ln(1-x)$展开至二阶，并指数化得$T_f/T=1+(2w-1)x-2w(1-w)x^2+O(x^3)$。代回得$W=C_hC_c(\Delta T)^2/[2T(C_h+C_c)]+O((\Delta T)^3/T^2)$。
+\par\medskip
+\subsection*{W200\quad 单原子离散链的色散与四阶连续近似}
+\textbf{题目：}无限单原子链粒子质量$m$、间距$a$，最近邻耦合弹簧劲度$K$。(1)由运动方程求色散。(2)求群速度。(3)作四阶长波展开。(4)比较相、群速度。
+\par\textbf{解析：}(1)$m\ddot u_n=K(u_{n+1}-2u_n+u_{n-1})$，代入$u_n=Ae^{i(kna-\omega t)}$得$\omega=2\sqrt{K/m}|\sin(ka/2)|$。(2)在$0<k<\pi/a$，$v_g=a\sqrt{K/m}\cos(ka/2)$，于布里渊区界趋于零。(3)以Taylor展开两邻位移得$u_{tt}=(Ka^2/m)u_{xx}+(Ka^4/12m)u_{xxxx}+O(a^6\partial_x^6u)$；于是$\omega^2=c^2k^2-c^2a^2k^4/12+\cdots$，其中$c=a\sqrt{K/m}$。(4)$v_p=c\sin z/z$、$v_g=c\cos z$，$z=ka/2\in(0,\pi/2)$；由$\sin z-z\cos z>0$得$v_p>v_g>0$，长波时均趋$c$。
+\par\medskip
+\subsection*{O200\quad 部分相干干涉的可见度界}
+\textbf{题目：}两同偏振准单色随机光场平均强度$I_1,I_2>0$，相关量$W_{12}=\langle E_1E_2^*\rangle$，复相干度$\gamma=W_{12}/\sqrt{I_1I_2}$。(1)求带相位$\phi$叠加强度。(2)求最大最小值。(3)证明可见度上界。(4)分析最佳平衡和零相干极限。
+\par\textbf{解析：}(1)令$E=E_1+e^{i\phi}E_2$，直接平方取平均得$I=I_1+I_2+2\Re(e^{-i\phi}W_{12})$。(2)调节$\phi$得到$I_{max/min}=I_1+I_2\pm2|W_{12}|$。(3)可见度$V=(I_{max}-I_{min})/(I_{max}+I_{min})=2\sqrt{I_1I_2}|\gamma|/(I_1+I_2)$。Cauchy-Schwarz给$|\gamma|\le1$，AM-GM给$2\sqrt{I_1I_2}\le I_1+I_2$，所以$V\le1$。(4)固定总强度时在$I_1=I_2$取$V=|\gamma|$；若$W_{12}=0$则$V=0$，光强不依赖相位。
+\par\medskip
+\subsection*{Q200\quad 失谐双能级的Rabi动力学}
+\textbf{题目：}自旋半体系在旋转波近似下$H=\hbar(\Delta\sigma_z+\Omega\sigma_x)/2$，$\Omega>0$，初态为$\sigma_z=-1$本征态。(1)求本征能量。(2)求演化算符。(3)求激发态概率。(4)分析全反转和强失谐极限。
+\par\textbf{解析：}(1)利用$\{\sigma_x,\sigma_z\}=0$得$H^2=\hbar^2(\Delta^2+\Omega^2)I/4$。所以$E_\pm=\pm\hbar\Omega_R/2$，$\Omega_R=\sqrt{\Delta^2+\Omega^2}$。(2)将指数级数按奇偶幂分组，得到$U=\cos(\Omega_Rt/2)I-i\sin(\Omega_Rt/2)(\Delta\sigma_z+\Omega\sigma_x)/\Omega_R$，显然$U^\dagger U=I$。(3)从基态到激发态的振幅$-i(\Omega/\Omega_R)\sin(\Omega_Rt/2)$，概率$P_e=\Omega^2\sin^2(\Omega_Rt/2)/(\Omega^2+\Delta^2)$。(4)共振$\Delta=0$时在$t=(2j+1)\pi/\Omega$全反转；非零失谐最大概率小于1，强失谐下最大值近似$\Omega^2/\Delta^2$。
+\par\medskip
