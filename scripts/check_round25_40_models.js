@@ -227,11 +227,13 @@ function J(n,x){let term=(x/2)**n;for(let j=1;j<=n;j++)term/=j;let sum=term;for(
  eq('O144',4,'Brewster complementary refraction',B+t,PI/2);
 }
 {
- const root=3.8317059702,D=2,lambda=.5,theta=root*lambda/(PI*D),f=1-J(0,root)**2-J(1,root)**2;
- eq('O145',1,'Airy first-dark Bessel root',J(1,root),0,1e-8);
- eq('O145',2,'first dark angle scaling',theta,1.22*lambda/D,2e-4);
- eq('O145',3,'Airy enclosed fraction',f,.838,5e-4);
- eq('O145',4,'Airy normalization on axis',2*J(1,1e-6)/1e-6,1);
+ const eps=2,es=5,a=.2,k=1.7,C=(es-eps)/(es+2*eps),alpha=4*PI*eps*a**3*C;
+ const diff=th=>k**4*alpha**2*Math.sin(th)**2/(16*PI**2*eps**2);
+ eq('O145',1,'dielectric sphere normal displacement continuity',es*(1-C),eps*(1+2*C));
+ eq('O145',2,'polarized dipole scattering angle pattern',diff(PI/2)/diff(PI/6),4);
+ eq('O145',3,'Rayleigh integrated cross-section',sim(th=>2*PI*Math.sin(th)*diff(th),0,PI),k**4*alpha**2/(6*PI*eps**2));
+ const unpol=chi=>k**4*alpha**2*(1+Math.cos(chi)**2)/(32*PI**2*eps**2);
+ eq('O145',4,'unpolarized forward-to-side angular ratio',unpol(0)/unpol(PI/2),2);
 }
 {
  const L=2,dk=.9,kappa=2,A1=.7,real=sim(z=>Math.cos(dk*z),0,L),imag=sim(z=>Math.sin(dk*z),0,L),mag=Math.sqrt(real*real+imag*imag);
