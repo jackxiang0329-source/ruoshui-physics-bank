@@ -1,0 +1,193 @@
+% 第32批光学八道高难候选题，待独立专家复核。
+
+\subsection*{O218\quad 无损分层膜的传输矩阵与能量守恒}
+
+非磁性一维平面分层介质，正入射、实折射率$n_j>0$，第$j$层厚$d_j$，真空波长$\lambda_0$，用电场和归一化磁场组成列矢量。
+
+(1) 推导单层的特征矩阵。
+
+(2) 证明无损层矩阵行列式为一。
+
+(3) 求任意多层堆叠的输入光学导纳及反射幅值。
+
+(4) 利用能流验证反射率与透射率守恒。
+
+\par\textbf{逐问解析}
+
+(1) 在每层解平面波$E(z)=E^+e^{ik_jz}+E^-e^{-ik_jz}$、$H(z)/Z_{vac}^{-1}=n_j(E^+e^{ik_jz}-E^-e^{-ik_jz})$。定义相厚$\delta_j=2\pi n_jd_j/\lambda_0$，由两端线性关系得到从层右侧映射到左侧的特征矩阵$M_j=\begin{pmatrix}\cos\delta_j&-i\sin\delta_j/n_j\\-in_j\sin\delta_j&\cos\delta_j\end{pmatrix}$（相位约定一致即可）。
+
+(2) 直接计算$\det M_j=\cos^2\delta_j-(-i\sin\delta_j/n_j)(-in_j\sin\delta_j)=\cos^2\delta_j+\sin^2\delta_j=1$。串接总矩阵$M=M_1M_2\cdots M_N$仍满足$\det M=1$，说明局域无损正反向波的Wronskian守恒；不同相位 convention 只会对矩阵共轭。
+
+(3) 令基底导纳为$n_s$，总矩阵元素为$M_{ab}$。右端场满足$H_s=n_sE_s$，左端场$E_0=(M_{11}+n_sM_{12})E_s$、$H_0=(M_{21}+n_sM_{22})E_s$，所以$Y_{in}=H_0/E_0=(M_{21}+n_sM_{22})/(M_{11}+n_sM_{12})$，入射介质导纳$n_0$时$r=(n_0-Y_{in})/(n_0+Y_{in})$。
+
+(4) 入射介质和基底均无吸收时$R=|r|^2$，$T=(n_s/n_0)|t|^2$，且由Poynting通量守恒$R+T=1$。单层或零厚度时矩阵还原相应界面公式；若膜内有吸收，折射率成为复数，$R+T<1$，不能再将所有矩阵视为无损传输。
+
+\par\medskip
+
+\subsection*{O219\quad 四分之一波 Bragg 镜的有限周期反射}
+
+高、低折射率介质$n_H>n_L>0$组成$N$周期$HL$薄膜，正入射，设计波长处每层满足光学厚度$\lambda_0/4$，外侧入射与基底导纳为$n_0,n_s$。
+
+(1) 求单层的四分之一波特征矩阵。
+
+(2) 相乘得到单周期及$N$周期矩阵。
+
+(3) 求设计波长下的输入导纳与反射率。
+
+(4) 证明反射随$N$指数接近一并讨论带宽限制。
+
+\par\textbf{逐问解析}
+
+(1) 沿用从右向左传播的膜特征矩阵$M_j=\begin{pmatrix}\cos\delta_j&-i\sin\delta_j/n_j\\-in_j\sin\delta_j&\cos\delta_j\end{pmatrix}$。在设计波长$\delta_j=\pi/2$，故$M_j=\begin{pmatrix}0&-i/n_j\\-in_j&0\end{pmatrix}$，这不是普通纯相位而是对电磁场两分量的交换。
+
+(2) 按$HL$顺序相乘，$M_{HL}=\operatorname{diag}(-n_L/n_H,-n_H/n_L)$。$N$个同序周期给$M_N=(-1)^N\operatorname{diag}[(n_L/n_H)^N,(n_H/n_L)^N]$；行列式为1，故同样符合无损Wronskian检验。
+
+(3) 将$H_s=n_sE_s$代入总矩阵，得输入导纳$Y_{in}=n_s(n_H/n_L)^{2N}$。于是$r=(n_0-Y_{in})/(n_0+Y_{in})$、$R=[(Y_{in}-n_0)/(Y_{in}+n_0)]^2$，其表达式包含基底阻抗，不应简单写成一个不含边界介质的固定数。
+
+(4) 因为$n_H/n_L>1$，$N\to\infty$时$Y_{in}\to\infty$且$1-R\sim4n_0/Y_{in}\propto(n_L/n_H)^{2N}$，反射逼近1。该结论仅在设计波长及理想无吸收、相位准确条件成立；偏离设计波长将出现通带、阻带边缘及有限周期共振结构。
+
+\par\medskip
+
+\subsection*{O220\quad 高斯光束穿透薄透镜后的新腰位置}
+
+真空基模高斯光束波长$\lambda$，束腰位于薄透镜平面，原腰半径$w_0$、瑞利长度$z_R=\pi w_0^2/\lambda$，透镜焦距$f>0$。
+
+(1) 建立复光束参数$q$与ABC D矩阵变换。
+
+(2) 求透镜后紧邻平面的$q_+$。
+
+(3) 求新束腰相对透镜的位置和新瑞利长度。
+
+(4) 检查弱透镜及强聚焦极限。
+
+\par\textbf{逐问解析}
+
+(1) 高斯光束满足$1/q=1/R-i\lambda/(\pi w^2)$，原腰处曲率$R=\infty$，因此$q_-=iz_R$。光学ABCD系统的复参数满足$q_{out}=(Aq_{in}+B)/(Cq_{in}+D)$；薄透镜$\begin{pmatrix}1&0\\-1/f&1\end{pmatrix}$，所以$1/q_+=1/q_- -1/f$。
+
+(2) 代入$q_-=iz_R$，$q_+=[-1/f-i/z_R]^{-1}$。有理化得到$q_+=-fz_R^2/(f^2+z_R^2)+i f^2z_R/(f^2+z_R^2)$；其虚部严格为正，是物理高斯束无增益、无异常腰径的必要条件。
+
+(3) 透镜后自由传播距离$z$，$q(z)=q_++z$。束腰位于$\operatorname{Re}q(z_w)=0$，因此$z_w=fz_R^2/(f^2+z_R^2)$，新瑞利长度$z'_R=\operatorname{Im}q_+=f^2z_R/(f^2+z_R^2)$。新腰半径$w'_0=\sqrt{\lambda z'_R/\pi}=w_0f/\sqrt{f^2+z_R^2}$。
+
+(4) 弱透镜$f\to\infty$时$z_w\to0$、$z'_R\to z_R$，光束近乎不变；强聚焦$f\ll z_R$时$z_w\simeq f$、$z'_R\simeq f^2/z_R$、$w'_0\simeq w_0f/z_R$。近轴和薄透镜近似要求实际数值孔径不太大。
+
+\par\medskip
+
+\subsection*{O221\quad van Cittert–Zernike 定理与角宽测量}
+
+远场准单色空间非相干均匀线光源，表观角范围$-\alpha\le\theta\le\alpha$，小角近似；两个观察孔的横向基线长度$b$。
+
+(1) 由光源不同角元非相干性建立互相干积分。
+
+(2) 计算均匀角谱的归一化复相干函数。
+
+(3) 求首个相干零点及对应角宽反演。
+
+(4) 分析双孔强度不平衡时的可见度。
+
+\par\textbf{逐问解析}
+
+(1) 不同角元的随机发射相互无关联，因此互相干函数是源亮度在角空间的傅里叶变换。对基线$b$，来自角度$\theta$的相位差近似$kb\theta$，其中$k=2\pi/\lambda$。所以$\Gamma(b)\propto\int_{-\alpha}^{\alpha}I(\theta)e^{ikb\theta}d\theta$，不是先把非相干电场振幅直接相加。
+
+(2) 均匀角亮度时除以零基线值$2\alpha I_0$，有$\gamma(b)=(2\alpha)^{-1}\int_{-\alpha}^{\alpha}e^{ikb\theta}d\theta=\sin(kb\alpha)/(kb\alpha)=\operatorname{sinc}(kb\alpha)$，其中定义$\operatorname{sinc}x=\sin x/x$并取零点极限为1。
+
+(3) 首个非零零点满足$kb\alpha=\pi$，故$b_0=\pi/(k\alpha)=\lambda/(2\alpha)$。因此测得互相干函数首零点可反演总角宽$2\alpha=\lambda/b_0$；这一式针对均匀一维角亮度，圆盘源则出现Bessel型可见度。
+
+(4) 若两孔独立测得强度$I_1,I_2$，干涉可见度为$V=2\sqrt{I_1I_2}|\gamma|/(I_1+I_2)$，由AM-GM知$V\le|\gamma|$，只有强度平衡时等号成立。有限频谱会产生额外时间相干包络，不能不校正就把所有可见度下降都归因于角宽。
+
+\par\medskip
+
+\subsection*{O222\quad Fresnel 半平面衍射的边缘四分之一强度}
+
+均匀平面单色光在$x=0$处受到理想不透明半平面遮挡，观察屏距障碍$z>0$，令几何光区方向为$x>0$，采用Fresnel近轴标量积分。
+
+(1) 从Fresnel传播积分引入无量纲坐标。
+
+(2) 将半平面积分表示为Fresnel积分。
+
+(3) 证明几何边缘处强度为未遮挡强度的四分之一。
+
+(4) 给出亮区、阴影区渐近并说明近轴条件。
+
+\par\textbf{逐问解析}
+
+(1) 自由传播核与$\exp[i\pi(x-x')^2/(\lambda z)]$成比例，入射孔径场在$x'>0$取1，其余为0。将积分变量换为$u=x\sqrt{2/(\lambda z)}$与$s=(x'-x)\sqrt{2/(\lambda z)}$，传播场归结为对$e^{i\pi s^2/2}$的半无限积分；选取归一化使无障碍平面波振幅为1。
+
+(2) 定义$C(u)=\int_0^u\cos(\pi s^2/2)ds$、$S(u)=\int_0^u\sin(\pi s^2/2)ds$。根据遮挡半平面的几何方向，归一化场可写$U(u)=[(1/2+C(u))+i(1/2+S(u))]/(1+i)$，在$u\to\infty$利用$C,S\to1/2$确实得$U\to1$。
+
+(3) 恰在几何边缘$u=0$时$C(0)=S(0)=0$，于是$U(0)=(1+i)/(2(1+i))=1/2$。强度与振幅模平方成正比，所以$I(0)/I_{unblocked}=|1/2|^2=1/4$，并非一半；这一结果可作为Fresnel半平面模型的重要标准测试。
+
+(4) 在明区$u\to+\infty$，$U\to1$；阴影区$u\to-\infty$时$C,S\to-1/2$，$U\to0$。边缘附近会因Fresnel积分的振荡出现过冲条纹。该标量结果需满足近轴、理想锐边、相干且屏距足以忽略微观边缘结构。
+
+\par\medskip
+
+\subsection*{O223\quad 延迟波片的 Jones–Stokes 映射}
+
+线偏振输入$\mathbf E_{in}=(\cos\alpha,\sin\alpha)^T$，理想无损线性延迟片的快轴沿$x$，两分量相位差$\delta$，定义$S_3=2\operatorname{Im}(E_x^*E_y)$。
+
+(1) 求输出Jones矢量与归一化Stokes参数。
+
+(2) 证明纯态偏振球条件。
+
+(3) 求圆偏振输入角及延迟条件。
+
+(4) 讨论快轴旋转与整体相位的可观测性。
+
+\par\textbf{逐问解析}
+
+(1) 忽略整体相位，延迟片$J=\operatorname{diag}(1,e^{i\delta})$，故输出$E_x=\cos\alpha$、$E_y=e^{i\delta}\sin\alpha$。归一化总强度$S_0=|E_x|^2+|E_y|^2=1$，$S_1=|E_x|^2-|E_y|^2=\cos2\alpha$。
+
+(2) 按Stokes定义$S_2=2\operatorname{Re}(E_x^*E_y)=\sin2\alpha\cos\delta$、$S_3=2\operatorname{Im}(E_x^*E_y)=\sin2\alpha\sin\delta$。因此$S_1^2+S_2^2+S_3^2=\cos^22\alpha+\sin^22\alpha(\cos^2\delta+\sin^2\delta)=1=S_0^2$。
+
+(3) 圆偏振要求$S_1=S_2=0$且$|S_3|=1$；首式给$\alpha=\pi/4$模$\pi/2$，第二式给$\delta=\pi/2$模$\pi$。于是等幅正交电场相差四分之一周期，偏振矢量端点作圆周运动；旋向取决于相位约定与传播观察方向。
+
+(4) 若波片快轴转角$\beta$，Jones矩阵变为$R(\beta)\operatorname{diag}(1,e^{i\delta})R(-\beta)$，对应Poincare球上的旋转。两分量共同乘$e^{i\chi}$不改变任何Stokes参数，显示整体光学相位与可测偏振态的区别。
+
+\par\medskip
+
+\subsection*{O224\quad 偏振态的 Pancharatnam–Berry 三角几何相位}
+
+取三个彼此非正交的归一化Jones偏振态$|\psi_1\rangle,|\psi_2\rangle,|\psi_3\rangle$，它们在Poincare球上依短测地线闭合成有向三角形。
+
+(1) 构造三态内积的不变复乘积。
+
+(2) 证明各态局域相位重定义不影响其相角。
+
+(3) 用自旋半态的球面几何给出有向固角表达式。
+
+(4) 说明遍历方向反转及正交极限的意义。
+
+\par\textbf{逐问解析}
+
+(1) 定义三点Bargmann不变量$\mathcal B=\langle\psi_1|\psi_2\rangle\langle\psi_2|\psi_3\rangle\langle\psi_3|\psi_1\rangle$。在每个相邻态不正交时它非零，其复相角$\gamma=\arg\mathcal B$定义三角闭合链的Pancharatnam相位。
+
+(2) 若独立改变各态相位$|\psi_j\rangle\mapsto e^{i\chi_j}|\psi_j\rangle$，则相邻内积分别多乘$e^{i(\chi_{j+1}-\chi_j)}$，三因子的所有相位严格相消，$\mathcal B$不变。故该相角可观测，和每个Jones矢量的任意相位规范无关。
+
+(3) 偏振纯态等价于Bloch球上自旋$1/2$的射线，沿最短测地线按规定方向闭合时，$\gamma$等于相应有向立体角$\Omega_s$的一半，具体正负号取决于内积次序与球面取向。对于此处乘积次序和通常Bloch球态约定可取$\gamma=-\Omega_s/2\pmod{2\pi}$。
+
+(4) 若将遍历顺序反转，$\mathcal B\mapsto\mathcal B^*$，因此$\gamma\mapsto-\gamma$，符合有向面积反号。若某一相邻态恰好正交，该内积为零，$\arg\mathcal B$未定义，不能继续当作平滑几何相位；应通过避开奇点的路径作极限。
+
+\par\medskip
+
+\subsection*{O225\quad 二阶群速度色散引起的高斯脉冲展宽和啁啾}
+
+脉冲包络满足$\partial_zA=-(i\beta_2/2)\partial_t^2A$，实常数$\beta_2$；初始$A(0,t)=A_0e^{-t^2/(2T_0^2)}$，$T_0>0$。
+
+(1) 建立高斯复宽度演化方程。
+
+(2) 求任意距离的精确包络解。
+
+(3) 推导强度宽度与啁啾。
+
+(4) 检验无色散及长距离标度并说明相位约定。
+
+\par\textbf{逐问解析}
+
+(1) 作高斯假设$A(z,t)=C(z)\exp[-t^2/(2q(z))]$，将$\partial_t^2A=(t^2/q^2-1/q)A$代入PDE，比较$t^2$系数得到$q'(z)=-i\beta_2$。初始$q(0)=T_0^2$，故$q(z)=T_0^2-i\beta_2z$，常数项则给$C(z)=A_0T_0/\sqrt{q(z)}$。
+
+(2) 因此$A(z,t)=A_0[1-i\beta_2z/T_0^2]^{-1/2}\exp\{-t^2/[2(T_0^2-i\beta_2z)]\}$。将$1/q=(T_0^2+i\beta_2z)/(T_0^4+\beta_2^2z^2)$拆为实虚部分，便可直接把振幅衰减与二次相位分离。
+
+(3) 强度分布为$|A|^2\propto\exp[-t^2T_0^2/(T_0^4+\beta_2^2z^2)]$，所以强度$1/e$半宽为$T(z)=T_0\sqrt{1+(\beta_2z/T_0^2)^2}$。随时间的相位$\phi(t)=-\beta_2zt^2/[2(T_0^4+\beta_2^2z^2)]$，故相对于载频的瞬时频移$-\partial_t\phi=\beta_2zt/(T_0^4+\beta_2^2z^2)$。
+
+(4) 当$\beta_2=0$，振幅和脉冲宽度不变；当$|\beta_2|z\gg T_0^2$，有$T(z)\sim|\beta_2|z/T_0$，展宽与距离线性。由于方程无损，时间积分$\int|A|^2dt$守恒；二次相位的符号取决于$e^{-i\omega t}$傅里叶约定，本题已用所列PDE明确固定。
+
+\par\medskip
