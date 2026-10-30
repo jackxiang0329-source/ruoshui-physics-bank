@@ -41,7 +41,7 @@ def run():
     check("Q236",4,"universal BCS gap ratio",
           2*(2*cut*E(-1/lam))/tc,2*P/E(Euler),method="universal-ratio")
     # Q237 Dirac potential step with negative branch
-    m,c,E0,V=1.,2.,5.,8.
+    m,c,E0,V=1.,2.,5.,10.
     enL=E0;enR=E0-V
     pL=S(enL*enL-m*m*c**4)/c
     pR=-S(enR*enR-m*m*c**4)/c
