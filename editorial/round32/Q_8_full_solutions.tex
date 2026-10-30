@@ -1,0 +1,193 @@
+% 第32批近代物理八题，逐问推导候选稿；尚需独立专家验证与交叉复算。
+
+\subsection*{Q218\quad Landau–Zener 反交叉的尺度不变量与跃迁}
+
+两态系统 $H(t)=\frac12(vt\sigma_z+\Delta\sigma_x)$，$v,\Delta>0$，演化时间从负无穷至正无穷；$\hbar$ 保留显式单位。
+
+(1) 求瞬时本征能量及最小能隙。
+
+(2) 建立无量纲 Schrödinger 方程并识别唯一绝热参数。
+
+(3) 写出标准 Landau–Zener 非绝热转移概率及其物理基底。
+
+(4) 检验快速扫场、慢扫场及特征扫场时间。
+
+\par\textbf{逐问解析}
+
+(1) 由于 Pauli 矩阵反对易，$H^2=[(vt)^2+\Delta^2]I/4$，故 $E_\pm(t)=\pm\sqrt{v^2t^2+\Delta^2}/2$。两支能量间隙为 $G(t)=\sqrt{v^2t^2+\Delta^2}$，在 $t=0$ 取得最小值 $\Delta$，避免交叉来自非零耦合项。
+
+(2) 把时间缩放为 $s=t\sqrt{v/\hbar}$，则 $i\partial_s\psi=\frac12[s\sigma_z+\delta\sigma_x]\psi$，其中 $\delta=\Delta/\sqrt{\hbar v}$。消去一个自旋分量可得到抛物柱函数（Weber）方程，其连接系数只依赖无量纲参数 $\delta^2$；因此跃迁概率必须是 $\Delta^2/(\hbar v)$ 的函数。
+
+(3) 由 Weber 方程在两端的渐近连接（标准 Landau–Zener 连结公式），如果起初跟随下绝热能级，则最终跃迁到上绝热能级的概率为 $P_{na}=\exp[-\pi\Delta^2/(2\hbar v)]$。这一概率等价于在足够远离交叉处保留原 diabatic 直线态的概率，须区别绝热与diabatic基底的标签。
+
+(4) 若 $v\to0^+$，$\Delta^2/(\hbar v)\to\infty$，$P_{na}\to0$，绝热跟随成立；若 $v\to\infty$，概率趋1，体系来不及交换 diabatic 态。间隙显著变化的特征时间约 $t_c\sim\Delta/v$，实际从有限时间起止时不能无条件用无限时间精确公式。
+
+\par\medskip
+
+\subsection*{Q219\quad 自旋半绝热演化与 Berry 曲率单极子}
+
+自旋半体系 $H=-\hbar\omega_0\mathbf n(t)\cdot\boldsymbol\sigma/2$，$\omega_0>0$，单位向量 $\mathbf n=(\sin\theta\cos\phi,\sin\theta\sin\phi,\cos\theta)$ 沿闭路缓慢变化。
+
+(1) 构造随场的瞬时归一化本征态。
+
+(2) 计算 Berry 规范势与曲率。
+
+(3) 给出有向固角公式并分析纬圈。
+
+(4) 解释规范奇点、方向反转与绝热条件。
+
+\par\textbf{逐问解析}
+
+(1) 取较低能态满足 $(\mathbf n\cdot\boldsymbol\sigma)|u_+\rangle=|u_+\rangle$，可在北极规范写 $|u_+(\theta,\phi)\rangle=(\cos(\theta/2),e^{i\phi}\sin(\theta/2))^T$。直接作用 Pauli 矩阵可核对本征值 $+1$，对应能量 $-\hbar\omega_0/2$。
+
+(2) 定义 Berry 联络 $\mathcal A_\mu=i\langle u_+|\partial_\mu u_+\rangle$。计算有 $\mathcal A_\theta=0$、$\mathcal A_\phi=-\sin^2(\theta/2)=-(1-\cos\theta)/2$。其曲率为 $\mathcal F_{\theta\phi}=\partial_\theta\mathcal A_\phi-\partial_\phi\mathcal A_\theta=-\sin\theta/2$，对应参数球面上的单极型通量。
+
+(3) 对不穿过规范奇点的闭合回路 $C$，Stokes 定理给 $\gamma_B=\oint_C\mathcal A_\mu d\lambda^\mu=\int_S\mathcal F_{\theta\phi}d\theta,d\phi=-\Omega_S/2\pmod{2\pi}$，$\Omega_S$是有向固角。固定极角 $\theta$ 绕一周时 $\Omega_S=2\pi(1-\cos\theta)$，故 $\gamma_B=-\pi(1-\cos\theta)$。
+
+(4) 本规范在南极不能无奇点地覆盖整球，需在重叠区作相位规变换，但闭环相位模 $2\pi$ 不变。绕行方向反转使 $\gamma_B$ 反号；绝热条件是 $|\dot{\mathbf n}|\ll\omega_0$，否则跃迁混合两本征态，单一 Berry 相位描述不再充分。
+
+\par\medskip
+
+\subsection*{Q220\quad 光滑势垒的 WKB 隧穿指数及转折点匹配}
+
+一维粒子质量 $m$、能量 $E$，通过光滑势垒 $V(x)$；存在两个简单转折点 $x_1<x_2$ 且其间 $V(x)>E$，两侧为经典允许区域。
+
+(1) 构建允许和禁阻区域的 WKB 波数。
+
+(2) 由概率流与连接公式得到隧穿指数。
+
+(3) 讨论宽高势垒的极限与矩形势垒对照。
+
+(4) 说明简单转折点与短波条件以及 WKB 预因子限制。
+
+\par\textbf{逐问解析}
+
+(1) 定态 Schrödinger 方程为 $-\hbar^2\psi''/(2m)+V\psi=E\psi$。允许区定义 $k(x)=\sqrt{2m(E-V)}/\hbar$，局域 WKB 行波为 $\psi\approx k^{-1/2}e^{\pm i\int kdx}$。禁阻区定义 $\kappa(x)=\sqrt{2m(V-E)}/\hbar$，解取 $\kappa^{-1/2}e^{\pm\int\kappa dx}$。
+
+(2) 在每个简单转折点附近对 $V-E$ 线性化，Schrödinger 方程缩放成 Airy 正规形。将两端 Airy 连接公式合并，禁阻区总指数作用量为 $S=\int_{x_1}^{x_2}\sqrt{2m(V-E)},dx$；对 $S/\hbar\gg1$，传播概率的主指数是 $T\asymp\exp(-2S/\hbar)$，而非振幅指数。
+
+(3) 若在宽度 $a$ 内近似常势 $V_0>E$，则 $S=a\sqrt{2m(V_0-E)}$，主指数变为 $e^{-2\kappa a}$，与厚矩形势垒的精确匹配渐近一致；但矩形势垒有不光滑边界，振幅前系数由边界匹配决定，不能仅靠光滑 WKB 公式推断。
+
+(4) 在允许区 WKB 条件是 $|k'|\ll k^2$，禁阻区同理 $|\kappa'|\ll\kappa^2$；两式在转折点处失效，必须用 Airy 匹配。$S/\hbar$ 不大、障碍共振或多重转折点接近时，单一指数不保证数值准确，更不能自称精确透射系数。
+
+\par\medskip
+
+\subsection*{Q221\quad delta 周期势的 Kronig–Penney 色散与带隙}
+
+质量 $m$ 粒子在一维周期点势 $V(x)=g\sum_{n\in\mathbb Z}\delta(x-na)$ 中运动，$g$ 实常数、晶格周期 $a>0$，只考虑正能量 $E=\hbar^2k^2/(2m)$。
+
+(1) 建立自由传播和 delta 势的传输矩阵。
+
+(2) 结合 Bloch 定理求色散条件。
+
+(3) 判定允许带和禁止带。
+
+(4) 检验零势极限以及第一 Brillouin 区的折叠。
+
+\par\textbf{逐问解析}
+
+(1) 在晶格单元的自由区，$\psi(x)=Ae^{ikx}+Be^{-ikx}$。把态写成 $(\psi,\psi')^T$，传播长度 $a$ 的矩阵为 $P(a)=\begin{pmatrix}\cos ka&\sin ka/k\\-k\sin ka&\cos ka\end{pmatrix}$。跨 delta 势时 $\psi$连续而 $\psi'(0^+)-\psi'(0^-)=2mg\psi(0)/\hbar^2$，因此跳跃矩阵为 $D=\begin{pmatrix}1&0\\2mg/\hbar^2&1\end{pmatrix}$。
+
+(2) 一周期矩阵可取 $M=DP(a)$，其行列式为1。Bloch 定理要求本征值 $e^{\pm iqa}$，所以 $2\cos qa=\operatorname{tr}M$。直接计算迹得到 $\cos qa=\cos ka+(mg/(\hbar^2k))\sin ka$，这是 delta-Kronig–Penney 模型的精确正能量色散隐式方程。
+
+(3) 因为真实 Bloch 准动量 $q$ 要求 $\cos qa\in[-1,1]$，所以仅当 $|\cos ka+(mg/(\hbar^2k))\sin ka|\le1$ 时存在传播带；若表达式绝对值大于1，Bloch 指数带有实增长/衰减部分，为带隙。禁止带并非人为加上的额外条件，而是矩阵本征值在单位圆外。
+
+(4) 当 $g\to0$，条件变为 $\cos qa=\cos ka$，即 $q=\pm k+2\pi n/a$，恢复自由粒子能谱在第一 Brillouin 区内折叠。非零周期耦合通常在简并的区边打开带隙，负 $g$ 还会带来负能束缚带，后者不属于本题只取 $E>0$ 的公式范围。
+
+\par\medskip
+
+\subsection*{Q222\quad 自旋 singlet 的 CHSH 贝尔不等式最大违反}
+
+两自旋 $1/2$ 粒子制备在 singlet $|S\rangle=(|\uparrow\downarrow\rangle-|\downarrow\uparrow\rangle)/\sqrt2$，测量可取任意单位方向的 Pauli 自旋，忽略噪声。
+
+(1) 推导单粒子的约化密度矩阵。
+
+(2) 求任意方向的二体关联函数。
+
+(3) 选择四个方向并计算 CHSH 组合。
+
+(4) 与局域隐变量上界及 Tsirelson 上界比较。
+
+\par\textbf{逐问解析}
+
+(1) 总态密度矩阵为 $\rho=|S\rangle\langle S|$。对第二粒子求偏迹，非对角的跨自旋项因 $\langle\uparrow|\downarrow\rangle=0$ 消失，得到 $\rho_1=(|\uparrow\rangle\langle\uparrow|+|\downarrow\rangle\langle\downarrow|)/2=I/2$；第二粒子相同，单粒子完全混合而整体纯态。
+
+(2) 利用 singlet 的旋转不变性及同向完美反相关，得 $\langle S|\sigma_{1i}\sigma_{2j}|S\rangle=-\delta_{ij}$。因此沿单位向量 $\mathbf a,\mathbf b$ 的二值测量关联 $E(\mathbf a,\mathbf b)=\langle(\boldsymbol\sigma_1\cdot\mathbf a)(\boldsymbol\sigma_2\cdot\mathbf b)\rangle=-\mathbf a\cdot\mathbf b$。
+
+(3) 取 $\mathbf a=\hat z$、$\mathbf a'=\hat x$、$\mathbf b=(\hat z+\hat x)/\sqrt2$、$\mathbf b'=(\hat z-\hat x)/\sqrt2$。则 $E(a,b)=E(a,b')=E(a',b)=-1/\sqrt2$，$E(a',b')=+1/\sqrt2$。CHSH组合 $S=E(a,b)+E(a,b')+E(a',b)-E(a',b')=-2\sqrt2$。
+
+(4) 局域确定性隐变量中每次试验的组合 $A(B+B')+A'(B-B')$ 绝对值为2，因此平均 $|S|\le2$。量子结果 $|S|=2\sqrt2$ 违反该界且达到 Tsirelson 上界；实际实验须控制探测效率、局域性等漏洞，此处只讨论理想态与理想测量的理论预测。
+
+\par\medskip
+
+\subsection*{Q223\quad 无质量 Dirac 载流子的正常入射 Klein 隧穿}
+
+二维无质量 Dirac 模型 $H=v_F(\sigma_xp_x+\sigma_yp_y)+V(x)I$，标量势垒只依赖 $x$，假设一个谷、无自旋翻转且横向动量 $p_y=0$。
+
+(1) 在任意常势区域求能量、速度与赝自旋本征态。
+
+(2) 证明一维标量势不混合正常入射的两种手征分量。
+
+(3) 推导任意宽度纯标量势垒的透射概率。
+
+(4) 讨论非零质量项及斜入射如何破坏完美透射。
+
+\par\textbf{逐问解析}
+
+(1) 在 $p_y=0$ 时 $H=v_F\sigma_xp_x+V(x)I$。若局域动量为常数，能量 $E=V+s v_F\hbar k_x$，其中 $s=\pm1$ 为 $\sigma_x$ 本征值。群速度 $v_x=\partial E/(\hbar\partial k_x)=s v_F$，所以右行态始终对应 $s=+1$，即使 $E-V$ 在势垒内改变符号。
+
+(2) 由于 $[H,\sigma_x]=0$ 对任意仅依赖$x$的标量势都成立，$\sigma_x=+1$ 与 $-1$ 两个扇区不混合。右行波对应 $+1$，左行反射波对应 $-1$；标量势只能改变各扇区传播相位，不能把一个右行态转换成反射态。
+
+(3) 对有限长度势垒，正手征分量满足一阶方程 $-i\hbar v_F\partial_x\psi_+=(E-V(x))\psi_+$，积分得 $\psi_+(x)=\psi_+(x_0)\exp[(i/\hbar v_F)\int_{x_0}^x(E-V(s))ds]$。指数模为1，反射振幅为零，故正常入射 $T=1$，与势垒宽高无关。
+
+(4) 若引入质量/能隙项 $m_*v_F^2\sigma_z$，它不与 $\sigma_x$ 对易，手征不再守恒，可产生反射；若 $p_y\ne0$，$v_F\sigma_yp_y$ 同样混合 $\sigma_x$ 分量，一般 $T<1$。谷间散射、边缘缺陷和相互作用也会破坏此理想单谷结论。
+
+\par\medskip
+
+\subsection*{Q224\quad 单模压缩真空态的 Bogoliubov 变换与测不准}
+
+单模量子谐振子 $[a,a^\dagger]=1$，实压缩参数 $r$，压缩算符 $S(r)=\exp[\tfrac r2(a^2-a^{\dagger2})]$，压缩真空态 $|0,r\rangle=S(r)|0\rangle$。
+
+(1) 求算符在压缩变换下的 Bogoliubov 关系。
+
+(2) 计算正交场幅的方差与测不准乘积。
+
+(3) 计算平均激发粒子数。
+
+(4) 检验零压缩与大压缩极限以及能量代价。
+
+\par\textbf{逐问解析}
+
+(1) 对 $A(r)=S^\dagger aS$ 求导，利用 $[a,a^{\dagger2}]=2a^\dagger$ 得 $dA/dr=-S^\dagger a^\dagger S$，并有共轭方程，初值 $A(0)=a$。解二元线性方程组得 $S^\dagger a S=a\cosh r-a^\dagger\sinh r$，这是保持玻色对易关系的Bogoliubov变换。
+
+(2) 定义 $X=(a+a^\dagger)/\sqrt2$ 与 $P=(a-a^\dagger)/(i\sqrt2)$，满足 $[X,P]=i$。变换给 $S^\dagger XS=e^{-r}X$、$S^\dagger PS=e^{r}P$。真空中两者方差均为 $1/2$，所以压缩真空态 $\Delta X^2=e^{-2r}/2$、$\Delta P^2=e^{2r}/2$，乘积 $\Delta X\Delta P=1/2$，精确饱和 Heisenberg 下界。
+
+(3) 由 $\langle0,r|a^\dagger a|0,r\rangle=\langle0|(a^\dagger\cosh r-a\sinh r)(a\cosh r-a^\dagger\sinh r)|0\rangle$，只有$aa^\dagger$项贡献，得到 $\bar n=\sinh^2r$。可见压缩某一正交分量的噪声并非免费，必伴随反向噪声与激发能增长。
+
+(4) 当 $r=0$，两方差都为 $1/2$、平均粒子数为零，回到普通真空；当 $r\to+\infty$，$\Delta X^2\to0$，但 $\Delta P^2\to\infty$、$\bar n\to\infty$，故不存在有限能量下精确零噪声状态。
+
+\par\medskip
+
+\subsection*{Q225\quad SSH 链的手征对称性、绕数和端态}
+
+无限晶格的SSH二聚化链，胞内跳跃$t_1>0$、胞间跳跃$t_2>0$，每晶胞含A、B两个子格。另考虑以A端起始的半无限开边界链。
+
+(1) 求 Bloch 哈密顿量和体能隙。
+
+(2) 将绕数解释为复跃迁函数包围原点的次数。
+
+(3) 构造半无限链的零能边缘态。
+
+(4) 检查归一化条件与拓扑相变、手征保护。
+
+\par\textbf{逐问解析}
+
+(1) 在周期边界条件下 $H(k)=\begin{pmatrix}0&t_1+t_2e^{-ik}\\t_1+t_2e^{ik}&0\end{pmatrix}$，满足$\sigma_zH(k)\sigma_z=-H(k)$，为手征对称。能带 $E_\pm(k)=\pm\sqrt{t_1^2+t_2^2+2t_1t_2\cos k}$；在$k=\pi$处间隙为$2|t_1-t_2|$，当$t_1=t_2$闭合。
+
+(2) 非对角复函数 $h(k)=t_1+t_2e^{-ik}$ 随 $k$ 走一周描绘以$t_1$为圆心、$t_2$为半径的复平面圆。若$t_2>t_1$则包围原点一次（按$e^{-ik}$约定绕数为$-1$），若$t_2<t_1$则绕数为零；两区无法在保持手征对称且能隙不闭合时连续变形。
+
+(3) 在以A端起始的半无限链，设零能态只有A子格振幅$a_n$，B子格振幅为零。每个B点的零能方程是$t_1a_n+t_2a_{n+1}=0$，故$a_n=(-t_1/t_2)^{n-1}a_1$。若$r=t_1/t_2<1$，规范化$\sum_{n\ge1}|a_n|^2=1$给$a_1=\sqrt{1-r^2}$，态在边界指数局域。
+
+(4) 当$t_2>t_1$，$|r|<1$，端态可归一化且零能受手征对称保护；当$t_2\le t_1$，递推解不再平方可和（临界等号时长度发散），端态消失。加入破坏手征的子格势差会移动端态能量，因此拓扑保护有其对称性条件。
+
+\par\medskip
