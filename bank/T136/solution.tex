@@ -1,0 +1,4 @@
+(1) 冷端 Peltier 吸热率为 $\alpha IT_c$，内阻电流发热 $I^2R$ 中有一半回到冷端，被动热传导从热端漏入冷端的热率为 $K(T_h-T_c)$。因此 $\dot Q_c=\alpha IT_c-\tfrac12I^2R-K(T_h-T_c)$。式中三个来源彼此独立，正号约定为从冷环境移走热量。
+(2) 热端释放热量为 $\dot Q_h=\alpha IT_h+\tfrac12I^2R-K(T_h-T_c)$，因为导热漏热绕过制冷过程、相当于从热端向冷端输送热流。两式相减，$P_{\rm el}=\dot Q_h-\dot Q_c=\alpha I(T_h-T_c)+I^2R$，恰是电源要克服的热电势项与欧姆损耗总和。由于 $I>0$、$T_h>T_c$，供电功率为正。
+(3) 对固定温差，$\dot Q_c(I)$ 为开口向下的二次函数，导数 $\partial_I\dot Q_c=\alpha T_c-IR$。最大值发生于 $I_*=\alpha T_c/R$，且 $\partial_I^2\dot Q_c=-R<0$，代回得 $\dot Q_{c,\max}=\alpha^2T_c^2/(2R)-K(T_h-T_c)$。电流无限增大时焦耳发热反而使冷端净吸热变负。
+(4) 存在正制冷量的必要充分条件是 $\alpha^2T_c^2/(2R)>K(T_h-T_c)$，此条件下选择适当正电流可令 $\dot Q_c>0$。工作点制冷系数 $\mathrm{COP}=\dot Q_c/P_{\rm el}=[\alpha IT_c-I^2R/2-K\Delta T]/[\alpha I\Delta T+I^2R]$，定义只在 $\dot Q_c>0$ 时表示制冷效率。若把焦耳热项全部丢掉，会错误预测吸热随电流无限增长，违反实际损耗与可用功预算。

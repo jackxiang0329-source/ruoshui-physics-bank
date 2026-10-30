@@ -1,0 +1,4 @@
+(1) 由总声子模态数 $\int_0^{\omega_D}g(\omega)\,d\omega=3N$，得到 $A\omega_D^3/3=3N$，因此 $g(\omega)=9N\omega^2/\omega_D^3$。德拜温度定义为 $\Theta_D=\hbar\omega_D/k_B$。单个振动模态的平均热激发能为 $\hbar\omega/[\exp(\hbar\omega/k_BT)-1]$，零点能与温度无关，计算热容时可删去。
+(2) 将 Bose 平均能按态密度积分，热内能为 $U_{\rm th}=9N\hbar\omega_D^{-3}\int_0^{\omega_D}\omega^3/[e^{\hbar\omega/(k_BT)}-1]\,d\omega$。令 $x=\hbar\omega/(k_BT)$，整理得 $U_{\rm th}=9Nk_BT(T/\Theta_D)^3\int_0^{\Theta_D/T}x^3/(e^x-1)\,dx$；其中有效振动模式始终只有 $3N$ 个。
+(3) 当 $T\ll\Theta_D$ 时积分上限可延伸到无穷，利用 $\int_0^\infty x^3/(e^x-1)\,dx=\pi^4/15$，得 $U_{\rm th}\simeq(3\pi^4/5)Nk_BT^4/\Theta_D^3$。对温度求导，$C_V\simeq(12\pi^4/5)Nk_B(T/\Theta_D)^3$，系数为正且热容随温度立方趋零。该渐近律要求声子线性色散和三维连续模态近似成立。
+(4) 高温时每一模式的 Bose 能量趋于 $k_BT$，总内能 $U_{\rm th}\to3Nk_BT$，因此 $C_V\to3Nk_B$，即杜隆–珀替极限。低温下高频模被冻结，只有 $\omega\lesssim k_BT/\hbar$ 的少数长波声子热激发，占有态数随 $\omega^3$ 增长，所以不能把每个量子模都按经典 $k_BT$ 平均能量处理。
