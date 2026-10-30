@@ -1,0 +1,226 @@
+[
+  {
+    "id": "Q266",
+    "title": "WKB量子隧穿的连接公式与Gamow指数",
+    "setup": "质量 \\(m\\) 粒子沿一维势 \\(V(x)\\) 运动，能量 \\(E\\) 低于势垒峰，两简单转折点为 \\(x_1<x_2\\) 且 \\(V(x_j)=E\\)，禁阻区 \\(V(x)>E\\)。",
+    "q": [
+      "推导禁阻区的局域WKB衰减波数。",
+      "经Airy连接导出指数透射系数。",
+      "求宽度为 \\(a\\) 的矩形势垒Gamow指数。",
+      "指出WKB转折点发散和近势顶区局限。"
+    ],
+    "s": [
+      "一维定态Schrödinger方程 \\(-\\hbar^2\\psi''/(2m)+V\\psi=E\\psi\\)。在禁阻区令 \\(\\kappa(x)=\\sqrt{2m[V(x)-E]}/\\hbar\\)，WKB解为 \\(\\psi(x)\\approx\\kappa(x)^{-1/2}[A e^{\\int^x\\kappa dx}+B e^{-\\int^x\\kappa dx}]\\)，要求 \\(|\\kappa'|\\ll\\kappa^2\\) 且远离转折点。",
+      "跨越两简单转折点的Airy局域连接，将透射波幅乘以禁阻区指数衰减因子。对厚势垒 \\(S=\\int_{x_1}^{x_2}\\kappa(x)dx\\gg1\\)，主指数透射率为 \\(\\mathcal T\\sim e^{-2S}\\)，前因子依势垒形状与左右入射通道匹配，不能由指数近似唯一确定。",
+      "对于 \\(V(x)=V_0>E\\) 的宽度 \\(a\\) 势垒，\\(\\kappa=\\sqrt{2m(V_0-E)}/\\hbar\\) 为常数，得到 \\(S=\\kappa a\\) 与 \\(\\mathcal T\\propto\\exp[-2a\\sqrt{2m(V_0-E)}/\\hbar]\\)。增加宽度或减小能量都指数压低透射。",
+      "在 \\(V(x_j)=E\\) 附近 \\(\\kappa\\to0\\)，幅度 \\(\\kappa^{-1/2}\\) 表面发散，必须通过Airy函数匹配。若两转折点汇合、\\(S\\not\\gg1\\)，厚势垒渐近不再可靠，需使用抛物线势顶或精确散射解计算透射。"
+    ],
+    "tags": [
+      "WKB隧穿",
+      "Airy连接",
+      "Gamow因子"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "Q267",
+    "title": "正常Zeeman效应的轨道角动量与选择规则",
+    "setup": "不考虑电子自旋时的单电子原子轨道角动量 \\(\\boldsymbol L\\)，弱均匀磁场 \\(\\boldsymbol B=B\\hat z\\)，以旋轨耦合与抗磁二阶项均可忽略为前提。",
+    "q": [
+      "从电子轨道磁矩建立线性Zeeman微扰。",
+      "计算 \\(|n,l,m_l\\rangle\\) 态的一阶能级移动。",
+      "根据电偶极跃迁求谱线偏移。",
+      "说明电子自旋不可忽略时的Landé因子。"
+    ],
+    "s": [
+      "电子电荷为 \\(-e\\)、质量 \\(m_e\\)，轨道磁矩 \\(\\boldsymbol\\mu_L=-e\\boldsymbol L/(2m_e)\\)。外场能量 \\(H_Z=-\\boldsymbol\\mu_L\\cdot\\boldsymbol B=(eB/(2m_e))L_z=\\mu_B B(L_z/\\hbar)\\)，其中Bohr磁子 \\(\\mu_B=e\\hbar/(2m_e)\\)。",
+      "因为 \\(L_z|l,m_l\\rangle=m_l\\hbar|l,m_l\\rangle\\)，一阶能量修正 \\(\\Delta E_{m_l}=\\mu_BBm_l\\)，\\(m_l=-l,-l+1,\\ldots,l\\)。原来 \\(2l+1\\) 重磁量子数简并裂为等间距能级，间距 \\(\\mu_BB\\)。",
+      "电偶极算符是角动量为1的球张量，选择规则 \\(\\Delta l=\\pm1\\)、\\(\\Delta m_l=0,\\pm1\\)。发射或吸收光子能量的磁场修正 \\(\\Delta(\\hbar\\omega)=\\mu_BB(m'_l-m_l)=0,\\pm\\mu_BB\\)，形成正常Zeeman三重偏移，而不是任意 \\(2l+1\\) 条等间距可见谱线。",
+      "若存在非零自旋和旋轨耦合，弱磁场好量子数应为 \\(J,m_J\\)，磁移动 \\(\\Delta E=\\mu_Bg_Jm_JB\\)，其中 \\(g_J=1+[J(J+1)+S(S+1)-L(L+1)]/[2J(J+1)]\\)。当电子自旋参与时可出现反常Zeeman结构，不能无条件使用 \\(g=1\\)。"
+    ],
+    "tags": [
+      "磁偶极矩",
+      "选择规则",
+      "谱线裂分"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "Q268",
+    "title": "压缩真空态的Bogoliubov变换与正交象限不确定度",
+    "setup": "单模玻色算符满足 \\([a,a^\\dagger]=1\\)，取实压缩参数 \\(r\\)，压缩算符 \\(S(r)=\\exp[(r/2)(a^2-a^{\\dagger2})]\\)，态 \\(|0;r\\rangle=S(r)|0\\rangle\\)。",
+    "q": [
+      "计算压缩算符对湮灭算符的变换。",
+      "求两个无量纲正交象限方差。",
+      "核验Heisenberg界与光子数分布特征。",
+      "讨论压缩角度旋转与损耗的影响。"
+    ],
+    "s": [
+      "利用BCH共轭展开或对 \\(S^\\dagger(r)aS(r)\\) 关于 \\(r\\) 求微分，得到 \\(S^\\dagger aS=a\\cosh r-a^\\dagger\\sinh r\\)。同理 \\(S^\\dagger a^\\dagger S=a^\\dagger\\cosh r-a\\sinh r\\)，两式保留正则对易关系。",
+      "定义 \\(X=(a+a^\\dagger)/\\sqrt2\\)、\\(P=(a-a^\\dagger)/(i\\sqrt2)\\)。Bogoliubov变换给 \\(S^\\dagger XS=e^{-r}X\\)、\\(S^\\dagger PS=e^{r}P\\)，所以压缩真空中 \\((\\Delta X)^2=e^{-2r}/2\\)、\\((\\Delta P)^2=e^{2r}/2\\)。",
+      "因为 \\([X,P]=i\\)，\\(\\Delta X\\Delta P=1/2\\) 恰饱和不确定度下界，但两个象限的涨落不等。平均粒子数 \\(\\langle a^\\dagger a\\rangle=\\sinh^2r\\)，压缩真空只含偶数光子数分量，这与相干态的Poisson光子统计不同。",
+      "若压缩参数是复数 \\(\\zeta=re^{i\\phi}\\)，最小噪声象限随 \\(\\phi/2\\) 旋转。效率 \\(\\eta<1\\) 的真空损耗通道把测量象限方差变成 \\(V_{\\rm out}=\\eta e^{-2r}/2+(1-\\eta)/2\\)，因此实际压缩不能无限抵消损耗注入的真空噪声。"
+    ],
+    "tags": [
+      "量子压缩",
+      "Bogoliubov变换",
+      "噪声界"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "Q269",
+    "title": "一维双δ势分子束缚态的对称与反对称劈裂",
+    "setup": "质量 \\(m\\) 粒子受两吸引点势 \\(V(x)=-g[\\delta(x-a)+\\delta(x+a)]\\)，\\(g,a>0\\)，束缚能 \\(E=-\\hbar^2\\kappa^2/(2m)<0\\)。",
+    "q": [
+      "写点势导数跃变及宇称约束。",
+      "推导偶宇称束缚态的超越条件。",
+      "推导奇宇称束缚态与存在阈值。",
+      "求远分离极限的隧穿能级劈裂。"
+    ],
+    "s": [
+      "在 \\(x=\\pm a\\) 处波函数连续，导数跳跃为 \\(\\psi'(a^+)-\\psi'(a^-)=-2mg\\psi(a)/\\hbar^2\\)，\\(-a\\) 处相同。势关于原点偶对称，可将束缚态分别取偶宇称与奇宇称；外区解按 \\(e^{-\\kappa|x|}\\) 衰减。",
+      "偶态在 \\(|x|<a\\) 取 \\(\\psi\\propto\\cosh(\\kappa x)\\)，外区衰减。于 \\(x=a\\) 连接后 \\(-\\kappa-\\kappa\\tanh(\\kappa a)=-2mg/\\hbar^2\\)，整理为 \\(\\kappa=(mg/\\hbar^2)[1+e^{-2\\kappa a}]\\)。对任意 \\(g>0\\) 至少有一个正偶态根。",
+      "奇态在 \\(|x|<a\\) 取 \\(\\psi\\propto\\sinh(\\kappa x)\\)，连接给 \\(-\\kappa-\\kappa\\coth(\\kappa a)=-2mg/\\hbar^2\\)，即 \\(\\kappa=(mg/\\hbar^2)[1-e^{-2\\kappa a}]\\)。当 \\(\\kappa\\to0\\) 时右侧斜率为 \\(2amg/\\hbar^2\\)，因此奇束缚态仅在 \\(2amg/\\hbar^2>1\\) 时存在。",
+      "令 \\(\\kappa_0=mg/\\hbar^2\\)、\\(\\kappa_0a\\gg1\\)，偶奇根近似 \\(\\kappa_\\pm\\approx\\kappa_0[1\\pm e^{-2\\kappa_0a}]\\)。能量 \\(E_\\pm=-\\hbar^2\\kappa_\\pm^2/(2m)\\)，劈裂模约 \\(|E_+-E_-|\\approx(2\\hbar^2\\kappa_0^2/m)e^{-2\\kappa_0a}\\)，体现量子隧穿的指数衰减。"
+    ],
+    "tags": [
+      "点相互作用",
+      "宇称束缚态",
+      "隧穿劈裂"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "Q270",
+    "title": "Bell态约化密度矩阵与纠缠熵及CHSH界",
+    "setup": "两个自旋 \\(1/2\\) 的Hilbert空间 \\(\\mathcal H_A\\otimes\\mathcal H_B\\)，考虑Bell态 \\(|\\Phi^+\\rangle=(|00\\rangle+|11\\rangle)/\\sqrt2\\)，用Pauli自旋测量。",
+    "q": [
+      "构造双体密度矩阵及局部约化态。",
+      "求von Neumann纠缠熵与纯度。",
+      "选择测量方向计算CHSH量。",
+      "比较局域隐变量CHSH界与量子Tsirelson界。"
+    ],
+    "s": [
+      "纯态密度算符 \\(\\rho_{AB}=|\\Phi^+\\rangle\\langle\\Phi^+|\\) 展开为 \\((|00\\rangle\\langle00|+|00\\rangle\\langle11|+|11\\rangle\\langle00|+|11\\rangle\\langle11|)/2\\)。对子系统B求偏迹，交叉项消失，得到 \\(\\rho_A=I_2/2\\)。",
+      "约化态本征值为 \\(1/2,1/2\\)，因此 \\(S(\\rho_A)=-\\operatorname{Tr}\\rho_A\\ln\\rho_A=\\ln2\\)，以比特为单位为1。局部纯度 \\(\\operatorname{Tr}\\rho_A^2=1/2\\)，而全态 \\(\\operatorname{Tr}\\rho_{AB}^2=1\\)，说明全局纯不意味着局部纯。",
+      "取 \\(A_0=\\sigma_z,A_1=\\sigma_x\\)，\\(B_0=(\\sigma_z+\\sigma_x)/\\sqrt2,B_1=(\\sigma_z-\\sigma_x)/\\sqrt2\\)。对于 \\(|\\Phi^+\\rangle\\)，\\(\\langle\\sigma_z\\otimes\\sigma_z\\rangle=\\langle\\sigma_x\\otimes\\sigma_x\\rangle=1\\)，交叉平均为0，所以 \\(\\langle A_0(B_0+B_1)+A_1(B_0-B_1)\\rangle=2\\sqrt2\\)。",
+      "局域确定性模型的每次赋值给 \\(|a_0(b_0+b_1)+a_1(b_0-b_1)|\\le2\\)，混合后仍不超过2；量子可达 \\(2\\sqrt2\\)，但不能超过Tsirelson界。实际检测损耗和通信漏洞需要实验额外条件，否则观测值不能简单视为无条件排除所有隐变量模型。"
+    ],
+    "tags": [
+      "双体纠缠",
+      "von Neumann熵",
+      "Bell不等式"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "Q271",
+    "title": "量子非谐振子四次微扰的一阶能量和态混合",
+    "setup": "一维量子谐振子 \\(H_0=p^2/(2m)+m\\omega^2x^2/2\\)，加小微扰 \\(H'=\\lambda x^4\\)，\\(\\lambda>0\\)，令 \\(x=\\sqrt{\\hbar/(2m\\omega)}(a+a^\\dagger)\\)。",
+    "q": [
+      "求任意数态的四次位置矩阵元对角值。",
+      "求一阶能级修正及能级间隔变化。",
+      "计算基态的一阶能量和首个非零态混合项。",
+      "说明微扰理论的参数与高能失效。"
+    ],
+    "s": [
+      "展开 \\((a+a^\\dagger)^4\\) 并使用 \\([a,a^\\dagger]=1\\) 正规序，可得 \\(\\langle n|(a+a^\\dagger)^4|n\\rangle=6n^2+6n+3\\)。因此 \\(\\langle n|x^4|n\\rangle=3(2n^2+2n+1)[\\hbar/(2m\\omega)]^2\\)。",
+      "非简并微扰给 \\(E_n^{(1)}=\\lambda\\langle n|x^4|n\\rangle=3\\lambda\\hbar^2(2n^2+2n+1)/(4m^2\\omega^2)\\)。因此相邻能级差的修正 \\(E_{n+1}^{(1)}-E_n^{(1)}=3\\lambda\\hbar^2(n+1)/(m^2\\omega^2)\\)，能级间隔随激发数增大。",
+      "对 \\(n=0\\)，\\(E_0^{(1)}=3\\lambda\\hbar^2/(4m^2\\omega^2)\\)。由于 \\(x^4\\) 为偶宇称，只能连接偶数态；例如 \\(\\langle2|x^4|0\\rangle=6\\sqrt2[\\hbar/(2m\\omega)]^2\\)，基态矢量的 \\(|2\\rangle\\) 一阶系数为该矩阵元乘 \\(\\lambda/(E_0^{(0)}-E_2^{(0)})\\)。",
+      "衡量小扰动的基态无量纲参数为 \\(\\epsilon=\\lambda\\hbar/(m^2\\omega^3)\\ll1\\)。在高 \\(n\\) 态，四次能量修正约按 \\(\\lambda n^2\\) 增长而无扰能量约按 \\(\\hbar\\omega n\\) 增长，即使基态满足微扰小量，大 \\(n\\) 区也会失效。"
+    ],
+    "tags": [
+      "量子微扰",
+      "正规序",
+      "非谐能级"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "Q272",
+    "title": "同种自旋相同费米子的散射交换干涉",
+    "setup": "两不可区分自旋极化费米子在中心散射势中发生弹性散射，质心系入射相对动量模为 \\(k\\)，散射角 \\(\\theta\\)，可辨粒子的散射振幅记为 \\(f(\\theta)\\)。",
+    "q": [
+      "由交换反对称性构造物理散射振幅。",
+      "求差分截面及交换干涉项。",
+      "证明90度方向的同向自旋费米子散射被抑制。",
+      "讨论同种玻色子与不同自旋混合的区别。"
+    ],
+    "s": [
+      "交换两出射相同费米子等价于把质心系散射角 \\(\\theta\\) 变为 \\(\\pi-\\theta\\)。对于自旋对称的同向自旋三重态，空间波函数必须反对称，因而物理振幅为 \\(f_F(\\theta)=f(\\theta)-f(\\pi-\\theta)\\)，不能直接用可辨粒子的单一散射幅。",
+      "微分截面与振幅模平方成正比，\\(|f_F|^2=|f(\\theta)|^2+|f(\\pi-\\theta)|^2-2\\operatorname{Re}[f(\\theta)f^*(\\pi-\\theta)]\\)。最后一项是量子交换干涉，具有相位依赖，不能简单地把可辨粒子截面乘2。",
+      "在 \\(\\theta=\\pi/2\\) 时两路径角度相同，所以 \\(f_F(\\pi/2)=f(\\pi/2)-f(\\pi/2)=0\\)。这一节点属于完全同向自旋费米子和所假定弹性单通道中心势的交换对称性；不同自旋组成的散射不一定有同一节点。",
+      "对对称空间态的同种玻色子或反对称自旋单态费米子，空间振幅是 \\(f_B(\\theta)=f(\\theta)+f(\\pi-\\theta)\\)，90度处增强。对于未极化两自旋 \\(1/2\\) 费米子，必须按自旋单态、三重态权重分别求截面，且总截面积分要注意相同末态的重复计数。"
+    ],
+    "tags": [
+      "交换统计",
+      "散射幅干涉",
+      "对称性"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "Q273",
+    "title": "离散时间量子行走的Bloch酉矩阵与弹道扩散",
+    "setup": "一维整数格点位置态 \\(|x\\rangle\\) 和二态硬币 \\(|\\uparrow\\rangle,|\\downarrow\\rangle\\)，每一步先应用Hadamard硬币 \\(H=(\\sigma_x+\\sigma_z)/\\sqrt2\\)，再根据自旋状态向左右平移。",
+    "q": [
+      "在动量空间建立一步酉算符。",
+      "计算准能谱与群速度。",
+      "求最大群速并解释弹道传播前沿。",
+      "比较量子干涉与经典随机游走及退相干。"
+    ],
+    "s": [
+      "定义条件平移 \\(S|x,\\uparrow\\rangle=|x+1,\\uparrow\\rangle\\)、\\(S|x,\\downarrow\\rangle=|x-1,\\downarrow\\rangle\\)。在Bloch波数 \\(k\\) 上，\\(S(k)=\\operatorname{diag}(e^{ik},e^{-ik})\\)，一步算符 \\(U(k)=S(k)H\\)；因为两因子均酉，\\(U(k)^\\dagger U(k)=I\\)。",
+      "矩阵行列式 \\(\\det U(k)=-1\\)，迹 \\(\\operatorname{tr}U(k)=i\\sqrt2\\sin k\\)。将本征值写 \\(e^{i\\omega(k)}\\) 与 \\(-e^{-i\\omega(k)}\\)，由迹得 \\(2i\\sin\\omega=i\\sqrt2\\sin k\\)，故 \\(\\sin\\omega(k)=\\sin k/\\sqrt2\\)，群速 \\(d\\omega/dk=\\cos k/\\sqrt{1+\\cos^2 k}\\)。",
+      "由 \\(|v_g(k)|=|\\cos k|/\\sqrt{1+\\cos^2k}\\)，最大值 \\(v_{\\max}=1/\\sqrt2\\)，在 \\(k=0,\\pi\\) 等位置达到。经过 \\(t\\) 步，具有宽频Bloch成分的波包传播支持主要集中在 \\(|x|\\lesssim t/\\sqrt2\\) 内，宽度随时间线性增长而非经典无偏随机行走的 \\(\\sqrt t\\)。",
+      "经典每步独立向左或右移动的位移方差为 \\(\\operatorname{Var}(x)=t\\)，典型宽度 \\(\\sqrt t\\)。量子行走因不同路径振幅相干叠加而呈 \\(O(t)\\) 弹道展宽；若每步硬币完全退相干，干涉项消失并逐渐恢复扩散标度，不能把酉行走的量子优势自动推广到含强噪声的实验。"
+    ],
+    "tags": [
+      "量子行走",
+      "Floquet谱",
+      "弹道扩散"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  }
+]

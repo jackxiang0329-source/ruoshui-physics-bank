@@ -1,0 +1,254 @@
+[
+  {
+    "id": "M265",
+    "title": "陀螺耦合倒置二维振子的稳定化谱与不定能Hamilton量",
+    "setup": "二维质点具有拉格朗日量 \\(L=\\tfrac m2(\\dot x^2+\\dot y^2)+\\tfrac G2(x\\dot y-y\\dot x)+\\tfrac k2(x^2+y^2)\\)，其中 \\(m,k,G>0\\)，势能为不稳定的倒置二次势，陀螺项不作功。",
+    "q": [
+      "求Euler–Lagrange方程及共轭动量。",
+      "用复坐标求两根正常模频率及稳定阈值。",
+      "求强陀螺耦合的快慢运动渐近。",
+      "写出Hamilton量和旋转Noether角动量并讨论能量不定。"
+    ],
+    "s": [
+      "共轭动量 \\(p_x=m\\dot x-Gy/2\\)、\\(p_y=m\\dot y+Gx/2\\)。Euler–Lagrange方程分别为 \\(m\\ddot x-G\\dot y-kx=0\\)、\\(m\\ddot y+G\\dot x-ky=0\\)。速度线性陀螺力矩与速度正交，不直接改变动能，而正的拉氏二次坐标项表示物理上倒置的不稳定势。",
+      "令 \\(z=x+iy\\)，方程合成 \\(m\\ddot z+iG\\dot z-kz=0\\)。代入 \\(z\\propto e^{-i\\omega t}\\)，得 \\(m\\omega^2-G\\omega+k=0\\)，两根 \\(\\omega_\\pm=[G\\pm\\sqrt{G^2-4mk}]/(2m)\\)。只有 \\(G^2>4mk\\) 时两个频率实且不同，线性振幅有界；低于阈值出现共轭复频率、指数不稳定。",
+      "在 \\(\\epsilon=mk/G^2\\ll1\\) 的强陀螺极限，展开 \\(\\sqrt{G^2-4mk}=G(1-2\\epsilon-2\\epsilon^2+\\cdots)\\)。因此 \\(\\omega_+\\approx G/m-k/G\\)，\\(\\omega_-\\approx k/G\\)，并有精确 \\(\\omega_+\\omega_-=k/m\\)。一个快旋进模和一个慢漂移模产生了动力学稳定化，不能把低频模漏掉。",
+      "Legendre变换得到 \\(H=[(p_x+Gy/2)^2+(p_y-Gx/2)^2]/(2m)-k(x^2+y^2)/2\\)，对 \\(k>0\\) 没有正下界。因拉氏量在平面旋转下不变，\\(J_z=xp_y-yp_x=m(x\\dot y-y\\dot x)+G(x^2+y^2)/2\\) 守恒。谱稳定只保证线性运动有界，不意味着能量正定；阈值重根时还需检查Jordan退化。"
+    ],
+    "tags": [
+      "陀螺稳定化",
+      "不定Hamilton量",
+      "谱判据"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "M266",
+    "title": "球面径向单极磁场中的质点守恒角动量与圆锥轨道",
+    "setup": "质量 \\(m\\)、电荷 \\(q\\) 的粒子由光滑球面 \\(|\\boldsymbol r|=R\\) 限制，中心存在理想化的径向单极磁场 \\(\\boldsymbol B=g_m\\boldsymbol r/r^3\\)，\\(g_m\\) 为单极场参数，球面对粒子仅提供法向约束反力。",
+    "q": [
+      "由Lorentz力推导机械角动量不守恒的确切形式。",
+      "构造含径向磁场贡献的守恒总角动量。",
+      "证明轨迹被限制在以总角动量为轴的圆锥上。",
+      "求圆锥上的均匀角速度并核验能量守恒。"
+    ],
+    "s": [
+      "机械角动量 \\(\\boldsymbol L=m\\boldsymbol r\\times\\dot{\\boldsymbol r}\\)，其导数为 \\(d\\boldsymbol L/dt=\\boldsymbol r\\times(q\\boldsymbol v\\times\\boldsymbol B)\\)，球面法向约束不产生关于球心的力矩。用 \\(\\boldsymbol B=g_m\\boldsymbol r/R^3\\)、\\(\\boldsymbol r\\cdot\\boldsymbol v=0\\) 及三重叉乘得 \\(\\dot{\\boldsymbol L}=qg_m\\boldsymbol v/R=qg_m\\,d\\hat{\\boldsymbol r}/dt\\)。",
+      "因此定义 \\(\\boldsymbol J=\\boldsymbol L-qg_m\\hat{\\boldsymbol r}\\)，直接得到 \\(d\\boldsymbol J/dt=0\\)。由于 \\(\\boldsymbol L\\perp\\hat{\\boldsymbol r}\\)，有 \\(J^2=L^2+(qg_m)^2\\)，同时 \\(\\boldsymbol J\\cdot\\hat{\\boldsymbol r}=-qg_m\\)。这是一种含磁场角动量项的守恒量，不等于普通机械角动量本身。",
+      "守恒标量 \\(\\boldsymbol J\\cdot\\hat{\\boldsymbol r}=-qg_m\\) 意味着粒子位置矢量始终与固定 \\(\\boldsymbol J\\) 形成固定夹角 \\(\\cos\\theta=-qg_m/J\\)。于是球面轨迹位于球 \\(r=R\\) 和以 \\(\\boldsymbol J\\) 为轴的圆锥相交的圆上，只有 \\(J>|qg_m|\\) 时轨道为非退化圆周。",
+      "以 \\(\\boldsymbol J\\) 为极轴，轴向分量满足 \\(J=mR^2\\sin^2\\theta\\,\\dot\\phi-qg_m\\cos\\theta\\)。代入 \\(\\cos\\theta=-qg_m/J\\) 得 \\(\\dot\\phi=J/(mR^2)\\)，为均匀进动。由于 \\(\\boldsymbol v\\cdot(q\\boldsymbol v\\times\\boldsymbol B)=0\\)、法向约束不做功，\\(E=mv^2/2\\) 守恒，与恒定角速率及定角轨迹一致。"
+    ],
+    "tags": [
+      "磁单极理想模型",
+      "修正角动量",
+      "圆锥轨道"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "M267",
+    "title": "Newton引力潮汐张量的本征谱、真空迹与Roche临界",
+    "setup": "质量 \\(M>0\\) 的Newton点质量中心体引力势 \\(\\Phi=-GM/r\\)；相邻自由粒子的分离矢量为 \\(\\boldsymbol\\xi\\)，研究真空区域 \\(r>0\\) 内的局部相对动力学。",
+    "q": [
+      "推导自由粒子相对加速度的潮汐张量。",
+      "求径向及两个切向的潮汐本征值。",
+      "用Poisson方程核对真空迹并说明球体内部例外。",
+      "以潮汐差加速度估计恒密度小天体的Roche破裂距离。"
+    ],
+    "s": [
+      "从 \\(a_i=-\\partial_i\\Phi=-GMx_i/r^3\\) 计算空间导数，得到相邻质点 \\(\\delta a_i=(\\partial_ja_i)\\xi_j=\\mathsf T_{ij}\\xi_j\\)，其中 \\(\\mathsf T_{ij}=GM(3x_ix_j/r^5-\\delta_{ij}/r^3)\\)。这一矩阵是引力加速度的真实梯度，而非某个旋转系中的离心项。",
+      "记径向单位矢量 \\(n_i=x_i/r\\)，则 \\(\\mathsf T=(GM/r^3)(3\\boldsymbol n\\boldsymbol n^T-I)\\)。因此 \\(\\mathsf T\\boldsymbol n=(2GM/r^3)\\boldsymbol n\\)，任意 \\(\\boldsymbol e\\perp\\boldsymbol n\\) 有 \\(\\mathsf T\\boldsymbol e=-(GM/r^3)\\boldsymbol e\\)。径向拉伸而横向压缩，三个本征值为 \\(2GM/r^3,-GM/r^3,-GM/r^3\\)。",
+      "本征值之和 \\(\\operatorname{tr}\\mathsf T=0\\) 与真空 \\(\\nabla^2\\Phi=0\\) 一致。对均匀密度实心球内部，\\(\\nabla^2\\Phi=4\\pi G\\rho\\)，故 \\(\\operatorname{tr}\\mathsf T=-4\\pi G\\rho\\ne0\\)，点质量真空潮汐表达式不再适用。边界应通过连续引力势与场匹配。",
+      "半径 \\(a\\)、密度 \\(\\rho_s\\) 的小天体表面自引力约为 \\(g_s=4\\pi G\\rho_s a/3\\)；其两端潮汐差加速度量级 \\(\\Delta g\\simeq2GM a/r^3\\)。令两者同阶得 \\(r_R\\sim[3M/(2\\pi\\rho_s)]^{1/3}\\)。该尺度只是一阶估计，精确Roche极限还取决于潮汐响应、同步转动、流体形状与材料强度。"
+    ],
+    "tags": [
+      "潮汐Hessian",
+      "真空迹",
+      "Roche极限"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "M268",
+    "title": "旋转圆环上珠子的对称破缺与小振动",
+    "setup": "质量 \\(m\\) 珠子无摩擦地套在半径 \\(R\\) 的竖直圆环上，圆环绕竖直直径以恒定角速度 \\(\\Omega\\) 旋转，取自最低点的角 \\(\\theta\\)。",
+    "q": [
+      "在共转约束下建立有效拉格朗日量。",
+      "求平衡角和临界角速度。",
+      "计算底点与分岔后平衡的振动频率。",
+      "用Landau展开识别叉形分岔阶数。"
+    ],
+    "s": [
+      "珠子位置在水平面到轴距离 \\(R\\sin\\theta\\)，速度平方 \\(v^2=R^2\\dot\\theta^2+\\Omega^2R^2\\sin^2\\theta\\)。因此 \\(L=\\tfrac12mR^2\\dot\\theta^2+\\tfrac12m\\Omega^2R^2\\sin^2\\theta-mgR(1-\\cos\\theta)\\)，其有效势是 \\(U=m gR(1-\\cos\\theta)-m\\Omega^2R^2\\sin^2\\theta/2\\)。",
+      "平衡条件 \\(U'=mR\\sin\\theta(g-\\Omega^2R\\cos\\theta)=0\\)。底点 \\(\\theta=0\\) 总是平衡；当 \\(\\Omega^2R>g\\) 时还出现两个对称平衡 \\(\\theta=\\pm\\arccos(g/(\\Omega^2R))\\)，临界 \\(\\Omega_c=\\sqrt{g/R}\\)。",
+      "底点 \\(U''(0)=mR(g-\\Omega^2R)\\)，所以 \\(\\omega_0^2=g/R-\\Omega^2\\)。对非零平衡使用 \\(\\cos\\theta_*=g/(\\Omega^2R)\\)，可得 \\(U''(\\theta_*)=m\\Omega^2R^2\\sin^2\\theta_*\\)，故 \\(\\omega_*^2=\\Omega^2[1-g^2/(\\Omega^4R^2)]>0\\)。",
+      "在 \\(\\theta\\approx0\\) 附近展开 \\(U=\\tfrac12mR(g-\\Omega^2R)\\theta^2+\\frac{mR}{24}(-g+4\\Omega^2R)\\theta^4+O(\\theta^6)\\)。在阈值 \\(\\Omega^2R=g\\) 时四次系数 \\(m gR/8>0\\)，故平衡连续分裂为超临界叉形分岔。"
+    ],
+    "tags": [
+      "旋转约束",
+      "对称破缺",
+      "叉形分岔"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "M269",
+    "title": "Foucault摆的Coriolis慢进动与纬度依赖",
+    "setup": "小摆置于地球纬度 \\(\\lambda\\)，长度 \\(l\\)，小位移 \\((x,y)\\) 分别取东、北，地球自转角速度 \\(\\Omega_E\\)，假定 \\(\\Omega_E\\ll\\sqrt{g/l}\\)。",
+    "q": [
+      "投影Coriolis力建立水平耦合方程。",
+      "以复坐标求精确常系数圆偏振频率。",
+      "由两圆振动拍频得到摆动平面进动。",
+      "讨论极点、赤道和昼夜周期。"
+    ],
+    "s": [
+      "本地竖直方向的地球自转分量为 \\(\\Omega_z=\\Omega_E\\sin\\lambda\\)。小摆的自由固有频率 \\(\\omega_0=\\sqrt{g/l}\\)，水平动力学为 \\(\\ddot x+\\omega_0^2x=2\\Omega_z\\dot y\\)、\\(\\ddot y+\\omega_0^2y=-2\\Omega_z\\dot x\\)，舍弃 \\(O(\\Omega_E^2)\\) 离心修正。",
+      "定义 \\(z=x+iy\\)，两方程合并 \\(\\ddot z+2i\\Omega_z\\dot z+\\omega_0^2z=0\\)。试 \\(z\\propto e^{-i\\omega t}\\) 得 \\(\\omega^2-2\\Omega_z\\omega-\\omega_0^2=0\\)，根为 \\(\\omega=\\Omega_z\\pm\\sqrt{\\omega_0^2+\\Omega_z^2}\\)，分别对应两种相反圆振动。",
+      "令 \\(z=e^{-i\\Omega_z t}u\\)，则 \\(\\ddot u+(\\omega_0^2+\\Omega_z^2)u=0\\)。因此在近似惯性参考的 \\(u\\) 中摆动平面固定，在地球共转坐标中以 \\(\\dot\\psi=-\\Omega_E\\sin\\lambda\\) 慢旋；北半球为顺时针进动。",
+      "极点 \\(|\\sin\\lambda|=1\\) 时进动周期为恒星日；赤道 \\(\\sin\\lambda=0\\) 时一阶Coriolis慢进动消失。一般纬度周期 \\(T_p=2\\pi/(|\\Omega_E\\sin\\lambda|)\\)，真实装置还受空气阻尼、悬挂非对称与驱动影响。"
+    ],
+    "tags": [
+      "Coriolis动力学",
+      "简并模拍频",
+      "地球自转"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "M270",
+    "title": "绝热变化惯量的无外力矩转动与能量交换",
+    "setup": "轴对称机械系统绕固定竖直轴自由转动，转动惯量 \\(I(t)>0\\) 由内部滑块缓慢改变，外轴力矩为零，忽略外摩擦。",
+    "q": [
+      "由角动量守恒建立角速度演化。",
+      "求转动能量及内部执行机构做功。",
+      "对两个可移动点质量计算惯量变化。",
+      "求准静态径向执行机构的广义力。"
+    ],
+    "s": [
+      "外力矩为零，轴向角动量 \\(L=I(t)\\omega(t)\\) 为常数，因此 \\(\\omega(t)=L/I(t)\\)。微分给 \\(\\dot\\omega=-(\\dot I/I)\\omega\\)。尽管没有外扭矩，角速度仍可随着内部质量径向运动而改变。",
+      "转动能量 \\(K=L^2/(2I)\\)。沿过程微分 \\(\\dot K=-L^2\\dot I/(2I^2)=-\\tfrac12\\omega^2\\dot I\\)。若质量向内收缩 \\(\\dot I<0\\)，旋转能量上升，来源是内部执行机构对滑块做正功而非无中生有。",
+      "若轴上本体惯量 \\(I_0\\)，另有两个质量为 \\(m\\) 的滑块位于半径 \\(r\\)，则 \\(I(r)=I_0+2mr^2\\)。从 \\(r_i\\) 移至 \\(r_f\\)，角速度比 \\(\\omega_f/\\omega_i=(I_0+2mr_i^2)/(I_0+2mr_f^2)\\)，可与角动量直接检验。",
+      "在固定总角动量下，\\(dK/dr=-L^2(4mr)/(2I^2)=-2mr\\omega^2\\)。向内慢移需抵抗离心效应，机构的功 \\(W=K_f-K_i=\\int_{r_i}^{r_f}(-2mr\\omega^2)dr\\)。若过程有滑动摩擦，还必须加入耗散热，不能只用转动能账。"
+    ],
+    "tags": [
+      "参数惯量",
+      "角动量守恒",
+      "内部做功"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "M271",
+    "title": "球对称自引力尘埃自由坍缩的能量与坍缩时间",
+    "setup": "质量 \\(M\\) 的均匀密度尘埃球初始静止，外半径 \\(R_0\\)，Newton引力常数 \\(G\\)，忽略压力与粒子相互穿越，取表面半径 \\(R(t)\\)。",
+    "q": [
+      "用Gauss引力定理推导表面动力学。",
+      "作三角参数化并求半径随参数变化。",
+      "计算完全坍缩时间并改用初始密度表示。",
+      "讨论壳层交叉和零压近似适用性。"
+    ],
+    "s": [
+      "均匀球表面壳受到球内全部质量 \\(M\\) 的Newton引力，故 \\(\\ddot R=-GM/R^2\\)。从初始静止 \\(R=R_0\\) 的能量式 \\(\\tfrac12\\dot R^2-GM/R=-GM/R_0\\)，给坍缩支 \\(\\dot R=-\\sqrt{2GM(1/R-1/R_0)}\\)。",
+      "令 \\(R=R_0\\cos^2\\eta\\)，\\(0\\le\\eta\\le\\pi/2\\)，由动力学给 \\(dt/d\\eta=2\\sqrt{R_0^3/(2GM)}\\cos^2\\eta\\)。积分可得 \\(t(\\eta)=\\sqrt{R_0^3/(2GM)}(\\eta+\\tfrac12\\sin2\\eta)\\)。",
+      "令 \\(\\eta=\\pi/2\\) 得 \\(t_{\\rm ff}=\\frac\\pi2\\sqrt{R_0^3/(2GM)}\\)。由于初始密度 \\(\\rho_0=3M/(4\\pi R_0^3)\\)，得到 \\(t_{\\rm ff}=\\sqrt{3\\pi/(32G\\rho_0)}\\)。时间由初始平均密度控制，与绝对球体大小无关。",
+      "均匀、严格同向坍缩时每个质量壳的 \\(M(r_0)\\propto r_0^3\\)，其自由落体时间相同，因而在理想模型内同时抵达中心。真实气体的压力梯度、角动量、磁场和非均匀密度会破坏同步性，中心奇点不能直接等同于可观测的物理终态。"
+    ],
+    "tags": [
+      "Newton自引力",
+      "参数积分",
+      "坍缩临界"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "M272",
+    "title": "不可压势流绕球的速度场与D’Alembert悖论",
+    "setup": "半径 \\(a\\) 的固定光滑球置于密度 \\(\\rho\\) 的无黏不可压定常均匀来流 \\(U\\hat z\\)，流体在无穷远速度趋于 \\(U\\hat z\\)，边界法向速度为零。",
+    "q": [
+      "解球外Laplace方程得到速度势。",
+      "计算球面切向速度与驻点。",
+      "由Bernoulli定理求球面压力分布。",
+      "积分压力阻力并讨论黏性修正。"
+    ],
+    "s": [
+      "不可压无旋给 \\(\\nabla^2\\Phi=0\\)，轴对称 \\(l=1\\) 一般解 \\(\\Phi=(Ar+B/r^2)\\cos\\theta\\)。无穷远 \\(A=U\\)，球面 \\(\\partial_r\\Phi|_{r=a}=0\\) 给 \\(B=Ua^3/2\\)。故 \\(\\Phi=U(r+a^3/(2r^2))\\cos\\theta\\)。",
+      "径向速度 \\(v_r=U(1-a^3/r^3)\\cos\\theta\\)，角向速度 \\(v_\\theta=-U(1+a^3/(2r^3))\\sin\\theta\\)。球面 \\(r=a\\) 上 \\(v_r=0\\)、\\(v_\\theta=-3U\\sin\\theta/2\\)，在上下游两极 \\(\\theta=0,\\pi\\) 形成理想驻点。",
+      "沿定常无旋流 \\(p+\\rho v^2/2=p_\\infty+\\rho U^2/2\\)。因此 \\(p(a,\\theta)=p_\\infty+\\tfrac12\\rho U^2[1-(9/4)\\sin^2\\theta]\\)。它关于 \\(\\theta\\to\\pi-\\theta\\) 对称，不能产生前后压差阻力。",
+      "球的流向压力力 \\(F_z=-\\int_0^\\pi p(a,\\theta)\\cos\\theta\\,2\\pi a^2\\sin\\theta d\\theta=0\\)，因为含 \\(1\\) 与 \\(\\sin^2\\theta\\) 的被积函数积分均为零。此D’Alembert零阻力依赖无黏无分离的理想势流；真实Reynolds数下边界层与尾涡产生阻力。"
+    ],
+    "tags": [
+      "势流边值",
+      "Bernoulli积分",
+      "流体阻力"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "M273",
+    "title": "曲面约束质点的测地线偏差与球面会聚点",
+    "setup": "半径 \\(R>0\\) 的球面上自由质点仅受法向约束，按弧长 \\(s\\) 沿测地线运动。考虑相邻测地线的无穷小法向分离 \\(J(s)\\)。",
+    "q": [
+      "由曲面度量写出单位速率大圆测地线。",
+      "求Jacobi测地偏差方程与通解。",
+      "寻找首个共轭点的弧长。",
+      "说明局部最短测地线的失效位置。"
+    ],
+    "s": [
+      "球面度量 \\(ds^2=R^2(d\\theta^2+\\sin^2\\theta d\\phi^2)\\)。沿赤道 \\(\\theta=\\pi/2\\) 取 \\(\\phi=s/R\\)，则 \\(g_{\\phi\\phi}(d\\phi/ds)^2=R^2/R^2=1\\)。其纬度方程中 \\(\\sin\\theta\\cos\\theta=0\\)，满足测地线条件。",
+      "球面Gaussian曲率常数为 \\(K_G=1/R^2\\)，二维横向Jacobi方程 \\(J''+K_GJ=0\\)，通解 \\(J(s)=A\\cos(s/R)+B\\sin(s/R)\\)。该公式量化相邻自由轨道的会聚发散，与球面正曲率直接关联。",
+      "若在起点相交 \\(J(0)=0\\)，则 \\(A=0\\)。对非平凡邻轨 \\(B\\ne0\\)，下一零点位于 \\(s=\\pi R\\)。这是球面对径的共轭点；多条大圆在两对径点相遇，并非所有短程轨道均唯一。",
+      "当 \\(0<s<\\pi R\\) 时大圆短弧是两点间最短路径；超过首个共轭点后仍可沿同一大圆保持测地线方程，却不再全局最短。共轭点体现变分二阶型出现零方向，不能由单纯Euler–Lagrange驻值性推断全局极小。"
+    ],
+    "tags": [
+      "Riemann几何",
+      "Jacobi偏差",
+      "共轭点"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  }
+]

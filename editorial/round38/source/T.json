@@ -1,0 +1,226 @@
+[
+  {
+    "id": "T258",
+    "title": "van der Waals状态方程的临界点与平均场指数",
+    "setup": "一摩尔van der Waals流体满足 \\(P=RT/(V-b)-a/V^2\\)，常数 \\(a,b>0\\)，体积 \\(V>b\\)，忽略非平衡成核。",
+    "q": [
+      "由临界等温线的拐点求 \\(V_c,T_c,P_c\\)。",
+      "建立对比态方程并验证普适压缩因子。",
+      "求临界等温线上压力随体积的领先非线性。",
+      "说明等温压缩率接近临界点的发散。"
+    ],
+    "s": [
+      "临界条件 \\((\\partial_VP)_T=-RT/(V-b)^2+2a/V^3=0\\) 与 \\((\\partial_V^2P)_T=2RT/(V-b)^3-6a/V^4=0\\) 联立给 \\(V_c=3b\\)，\\(T_c=8a/(27Rb)\\)，\\(P_c=a/(27b^2)\\)。必须同时满足两个导数为零，非任意拐点。",
+      "令 \\(p=P/P_c,t=T/T_c,v=V/V_c\\)，代入得到 \\(p=8t/(3v-1)-3/v^2\\)。临界压缩因子 \\(Z_c=P_cV_c/(RT_c)=3/8\\)。它是这一平均场模型的值，并非所有实际流体严格通用。",
+      "在 \\(t=1,v=1+x\\) 附近展开 \\(8/(2+3x)-3/(1+x)^2=1-\\tfrac32x^3+O(x^4)\\)。因为线性、二次项消失，\\(|P-P_c|\\propto|V-V_c|^3\\)，所以平均场临界指数 \\(\\delta=3\\)。",
+      "等温压缩率 \\(\\kappa_T=-(1/V)(\\partial V/\\partial P)_T\\)。在临界等容线 \\(v=1,t=1+\\tau\\) 上，\\((\\partial p/\\partial v)_t=-6\\tau\\)，故 \\(\\kappa_T\\propto|\\tau|^{-1}\\)，平均场 \\(\\gamma=1\\)。接近真实临界点时涨落改变指数，van der Waals并非精确临界理论。"
+    ],
+    "tags": [
+      "临界点",
+      "状态方程",
+      "平均场指数"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "T259",
+    "title": "辐射场Planck分布的Stefan定律与Wien位移",
+    "setup": "黑体腔内电磁辐射处于热平衡温度 \\(T>0\\)，两种横向偏振，光频 \\(\\omega=ck\\)，光子化学势为零。",
+    "q": [
+      "由模式数与Bose占有推导频谱能量密度。",
+      "积分求总能量密度与Stefan定律。",
+      "求按波长计的Wien峰条件。",
+      "解释频率峰与波长峰不能直接互相倒数。"
+    ],
+    "s": [
+      "在体积 \\(V\\) 内，两偏振模式每单位角频率状态密度 \\(g(\\omega)/V=\\omega^2/(\\pi^2c^3)\\)。每模平均能量 \\(\\hbar\\omega/(e^{\\beta\\hbar\\omega}-1)\\)，故 \\(u_\\omega=\\hbar\\omega^3/[\\pi^2c^3(e^{\\hbar\\omega/(k_BT)}-1)]\\)，零点能不贡献热辐射通量。",
+      "令 \\(x=\\hbar\\omega/(k_BT)\\)，使用 \\(\\int_0^\\infty x^3/(e^x-1)dx=\\pi^4/15\\)，得 \\(u=\\pi^2(k_BT)^4/(15\\hbar^3c^3)\\)。等方辐射穿过平面半空间的能流 \\(j^*=cu/4=\\sigma T^4\\)，\\(\\sigma=\\pi^2k_B^4/(60\\hbar^3c^2)\\)。",
+      "按波长频谱 \\(u_\\lambda=(8\\pi hc/\\lambda^5)/(e^{hc/(\\lambda k_BT)}-1)\\)。取 \\(x=hc/(\\lambda k_BT)\\)，驻点满足 \\(5(1-e^{-x})=x\\)，非零正根 \\(x\\approx4.9651\\)。所以 \\(\\lambda_{\\max}T=hc/(4.9651k_B)\\)。",
+      "谱密度变换必须乘Jacobian：\\(u_\\lambda=u_\\nu|d\\nu/d\\lambda|\\propto u_\\nu c/\\lambda^2\\)。因此频率谱极大值满足 \\(3(1-e^{-x})=x\\)，与波长谱的 \\(5(1-e^{-x})=x\\) 不同。不能仅令 \\(\\lambda=c/\\nu_{\\max}\\) 求波长峰。"
+    ],
+    "tags": [
+      "黑体辐射",
+      "Bose积分",
+      "变分峰值"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "T260",
+    "title": "定常等熵可压缩喷嘴的面积–Mach律与临界质量流率",
+    "setup": "理想气体定常无黏喷嘴，气体常数 \\(R\\)、比热比 \\(\\gamma>1\\)，流速 \\(u\\)、截面积 \\(A(x)\\)、局部声速 \\(c=\\sqrt{\\gamma RT}\\)，上游滞止量 \\(p_0,T_0\\)。",
+    "q": [
+      "由连续性和Euler方程推导面积—速度微分公式。",
+      "求滞止温度与Mach数的等熵关系。",
+      "求喉部音速堵塞的临界压强比。",
+      "推导最大喉部质量流率及适用条件。"
+    ],
+    "s": [
+      "质量连续 \\(\\rho uA=\\dot m\\) 给 \\(d\\rho/\\rho+du/u+dA/A=0\\)。Euler方程 \\(u,du+dp/\\rho=0\\)，等熵 \\(dp=c^2d\\rho\\)，于是 \\(d\\rho/\\rho=-u,du/c^2=-M^2du/u\\)。联立得到 \\(dA/A=(M^2-1)du/u\\)，亚声速加速要求收缩面积，超声速加速要求扩大面积。",
+      "定常绝热无轴功时总焓 \\(c_pT+u^2/2=c_pT_0\\)，\\(c_p=\\gamma R/(\\gamma-1)\\)，因此 \\(T_0/T=1+(\\gamma-1)M^2/2\\)。由理想气体等熵式 \\(p/\\rho^\\gamma=\\mathrm{const}\\) 得 \\(p/p_0=(T/T_0)^{\\gamma/(\\gamma-1)}\\)，这是可逆等熵压强关系，并不适用于激波内部。",
+      "在面积最小喉部 \\(dA=0\\) 且连续流光滑跨越音速，必须 \\(M=1\\)。此时 \\(T_*/T_0=2/(\\gamma+1)\\)，从而 \\(p_*/p_0=[2/(\\gamma+1)]^{\\gamma/(\\gamma-1)}\\)。背压低于该临界比后，定滞止状态和喉部面积的理想质量流达到堵塞上界。",
+      "由 \\(\\dot m=A\\rho u\\) 在喉部代入 \\(u_*=\\sqrt{\\gamma RT_*}\\) 及 \\(\\rho_*=p_*/(RT_*)\\)，得 \\(\\dot m_{\\max}=A_*p_0\\sqrt{\\gamma/(RT_0)}[2/(\\gamma+1)]^{(\\gamma+1)/(2(\\gamma-1))}\\)。实际黏性、热交换、喷管内激波和非理想状态式会降低或修改流率，不能直接当作任何喷流的精确上限。"
+    ],
+    "tags": [
+      "可压缩流",
+      "音速堵塞",
+      "等熵流"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "T261",
+    "title": "Curie–Weiss平均场自洽方程与磁响应分岔",
+    "setup": "\\(N\\) 个Ising自旋在配位均场近似下具有有效场 \\(h_{\\mathrm{eff}}=h+Jzm\\)，\\(J,z>0\\)，磁化强度定义 \\(m=\\langle s\\rangle\\in[-1,1]\\)。",
+    "q": [
+      "从单自旋配分函数建立自洽方程。",
+      "在无外场时求临界温度及局部分岔。",
+      "求临界附近自发磁化的指数。",
+      "求顺磁区零场静态磁化率。"
+    ],
+    "s": [
+      "平均场单自旋配分函数 \\(Z_1=2\\cosh[\\beta(h+Jzm)]\\)。自旋平均 \\(m=(1/Z_1)\\sum_{s=\\pm1}s e^{\\beta s(h+Jzm)}=\\tanh[\\beta(h+Jzm)]\\)。右侧包含自身平均值，必须解自洽而不能将 \\(m\\) 视为外部给定常量。",
+      "令 \\(h=0\\)，小 \\(m\\) 展开 \\(\\tanh x=x-x^3/3+O(x^5)\\)。自洽式变成 \\(0=[\\beta Jz-1]m-(\\beta Jz)^3m^3/3+\\cdots\\)。临界温度 \\(k_BT_c=Jz\\)，\\(T>T_c\\) 仅稳定零磁化，\\(T<T_c\\) 出现对称非零支。",
+      "当 \\(T\\uparrow T_c^-\\) 时 \\(\\beta Jz-1\\approx(T_c-T)/T_c\\)，非零磁化满足 \\(m^2\\approx3(\\beta Jz-1)/(\\beta Jz)^3\\sim3(T_c-T)/T_c\\)。因此 \\(m\\propto(T_c-T)^{1/2}\\)，平均场序参量临界指数 \\(\\beta_{\\mathrm{MF}}=1/2\\)。",
+      "对 \\(m=\\tanh[\\beta(h+Jzm)]\\) 在 \\(h=0,m=0\\) 求导得 \\(\\chi=\\partial m/\\partial h=\\beta(1+Jz\\chi)\\)。所以 \\(\\chi=\\beta/(1-\\beta Jz)=1/[k_B(T-T_c)]\\)（以自旋磁化对能量场计）。\\(T\\downarrow T_c^+\\) 时发散。"
+    ],
+    "tags": [
+      "自洽方程",
+      "临界分岔",
+      "磁化率"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "T262",
+    "title": "连续时间双态马尔可夫过程的熵产生率与详细平衡",
+    "setup": "两状态 \\(0,1\\) 的跃迁率为 \\(k_{01}>0,k_{10}>0\\)，概率 \\(p_0(t),p_1(t)=1-p_0(t)\\)，不引入其他隐藏通道。",
+    "q": [
+      "写主方程及唯一平衡概率。",
+      "求概率随时间的指数松弛。",
+      "由相对熵导出非负熵产生率。",
+      "解释为何至少三态环才能维持稳态非平衡流。"
+    ],
+    "s": [
+      "概率流 \\(J=k_{01}p_0-k_{10}p_1\\)，故 \\(\\dot p_1=J=- (k_{01}+k_{10})p_1+k_{01}\\)。平衡概率 \\(\\pi_1=k_{01}/(k_{01}+k_{10})\\)，\\(\\pi_0=k_{10}/(k_{01}+k_{10})\\)，在单一边连接的二态网络必满足稳态详细平衡。",
+      "线性常微分方程解为 \\(p_1(t)=\\pi_1+[p_1(0)-\\pi_1]e^{-(k_{01}+k_{10})t}\\)，故弛豫时间 \\(\\tau=1/(k_{01}+k_{10})\\)。这与两个逆向单独等待时间不同，不能将 \\(\\tau\\) 误写为 \\(1/k_{01}\\)。",
+      "定义 \\(D(p\\Vert\\pi)=\\sum_ip_i\\ln(p_i/\\pi_i)\\)。对主方程求导得 \\(-dD/dt=J\\ln[(k_{01}p_0)/(k_{10}p_1)]\\)。利用 \\((x-y)\\ln(x/y)\\ge0\\) 得 \\(\\sigma/k_B=-\\dot D\\ge0\\)，等号仅在净概率流为零的平衡态成立。",
+      "在仅两态且仅一对逆向通道的稳态，\\(\\dot p_1=J=0\\) 强制净流为零。若要在定常概率分布中保持非零循环流，必须有至少一个闭合回路，比如三态环且正反路径率乘积不等；否则不能声称稳态双态系统持续耗散正熵。"
+    ],
+    "tags": [
+      "主方程",
+      "相对熵",
+      "涨落热力学"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "T263",
+    "title": "带辐射边界的导热板稳态温度与热流上界",
+    "setup": "导热系数 \\(k>0\\) 的平板厚度 \\(L\\)，恒定左面温度 \\(T_h\\)，右面向温度 \\(T_a\\) 的黑体环境辐射，辐射系数 \\(\\epsilon\\sigma>0\\)，无内部热源。",
+    "q": [
+      "求一维稳态导热温度分布。",
+      "建立导热—辐射耦合边界方程。",
+      "利用单调性证明物理解唯一。",
+      "推导小温差极限的辐射热阻串联式。"
+    ],
+    "s": [
+      "傅里叶定律 \\(q=-kT'(x)\\)；稳态无热源给 \\(T''(x)=0\\)，故 \\(T(x)=T_h-(q/k)x\\)。右面温度 \\(T_s=T(L)=T_h-qL/k\\)，温度沿板线性，但由于辐射边界 \\(q\\) 未知。",
+      "右面以面积热流形式满足 \\(q=\\epsilon\\sigma(T_s^4-T_a^4)\\)。代入 \\(T_s=T_h-qL/k\\) 可改写 \\(k(T_h-T_s)/L=\\epsilon\\sigma(T_s^4-T_a^4)\\)。对 \\(T_h>T_a\\)，方程在 \\(T_a<T_s<T_h\\) 有唯一解。",
+      "设 \\(F(T_s)=k(T_h-T_s)/L-\\epsilon\\sigma(T_s^4-T_a^4)\\)，在正温度区间 \\(F'(T_s)=-k/L-4\\epsilon\\sigma T_s^3<0\\)，且 \\(F(T_a)>0,F(T_h)<0\\)。故存在唯一交点，不会出现多个稳定稳态。",
+      "若 \\(|T_h-T_a|\\ll T_a\\)，\\(T_s^4-T_a^4\\simeq4T_a^3(T_s-T_a)\\)。设 \\(h_r=4\\epsilon\\sigma T_a^3\\)，则 \\(q=(T_h-T_a)/[L/k+1/h_r]\\)。这是导热热阻与线性化辐射热阻串联，不能在大温差时无条件使用。"
+    ],
+    "tags": [
+      "边值导热",
+      "辐射非线性",
+      "稳态唯一性"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "T264",
+    "title": "可逆化学解离反应的质量作用定律与浓度方程",
+    "setup": "等温理想气体反应 \\(\\mathrm A_2\\rightleftharpoons2\\mathrm A\\)，初始有 \\(n_0\\) 摩尔双原子气体，解离度 \\(0\\le\\alpha\\le1\\)，总压强 \\(P\\)，反应平衡常数 \\(K_p(T)\\) 用标准压强 \\(P^\\circ\\) 无量纲化。",
+    "q": [
+      "用反应进度求各组分摩尔数。",
+      "导出无量纲平衡常数对解离度的关系。",
+      "反解解离度并讨论压强依赖。",
+      "分析低压和高压两个极限。"
+    ],
+    "s": [
+      "平衡时 \\(n_{A_2}=n_0(1-\\alpha)\\)，\\(n_A=2n_0\\alpha\\)，总物质的量 \\(n_{\\mathrm{tot}}=n_0(1+\\alpha)\\)。因此摩尔分数 \\(y_A=2\\alpha/(1+\\alpha)\\)、\\(y_{A_2}=(1-\\alpha)/(1+\\alpha)\\)，总压强因解离膨胀。",
+      "理想气体化学势满足 \\(\\mu_i=\\mu_i^\\circ+RT\\ln(y_iP/P^\\circ)\\)。平衡条件 \\(2\\mu_A-\\mu_{A_2}=0\\) 给 \\(K_p=(p_A/P^\\circ)^2/(p_{A_2}/P^\\circ)=4\\alpha^2(P/P^\\circ)/(1-\\alpha^2)\\)。必须保留标准压强使 \\(K_p\\) 无量纲。",
+      "由 \\(K_p(1-\\alpha^2)=4\\alpha^2(P/P^\\circ)\\)，得到 \\(\\alpha^2=K_p/[K_p+4P/P^\\circ]\\)。在定温 \\(K_p>0\\) 下，\\(P\\) 增大使解离度降低，符合反应气体分子数从1增至2的Le Chatelier趋势。",
+      "当 \\(P/P^\\circ\\ll K_p\\) 时 \\(\\alpha\\simeq1-2P/(K_pP^\\circ)\\)，几乎完全解离；高压 \\(P/P^\\circ\\gg K_p\\) 时 \\(\\alpha\\simeq\\tfrac12\\sqrt{K_pP^\\circ/P}\\)。如果活度系数显著偏离1，真实高压气体需要逸度而不是简单分压。"
+    ],
+    "tags": [
+      "化学势",
+      "质量作用",
+      "解离平衡"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "T265",
+    "title": "一维Fermi气体的态密度奇异性与低温比热",
+    "setup": "长度 \\(L\\) 的非相互作用一维自由电子气（自旋简并 \\(g_s=2\\)），色散 \\(\\varepsilon=\\hbar^2k^2/(2m)\\)，粒子数 \\(N\\) 固定，低温 \\(k_BT\\ll E_F\\)。",
+    "q": [
+      "计算一维费米波矢和零温费米能。",
+      "求每单位长度的单粒子态密度。",
+      "通过Sommerfeld展开计算低温线性比热。",
+      "验证一维零温压力及密度的幂次。"
+    ],
+    "s": [
+      "周期边界的波矢态间隔 \\(2\\pi/L\\)，每 \\(k\\) 含两个自旋。填满 \\(-k_F\\le k\\le k_F\\) 后 \\(N=2Lk_F/\\pi\\)，所以 \\(k_F=\\pi n/2\\)（\\(n=N/L\\)），\\(E_F=\\hbar^2\\pi^2n^2/(8m)\\)。",
+      "每个正负 \\(k\\) 与双自旋共计 \\(g(\\varepsilon)/L=(2/\\pi)(dk/d\\varepsilon)=(2/\\pi)(m/(\\hbar^2k))=\\frac{\\sqrt{2m}}{\\pi\\hbar\\sqrt\\varepsilon}\\)。态密度在低能阈值呈 \\(\\varepsilon^{-1/2}\\) 发散，属于一维van Hove型奇异。",
+      "对一般简并费米气体，低温热容 \\(C_V=(\\pi^2/3)g(E_F)k_B^2T+O(T^3)\\)，其中 \\(g\\) 包含全部自旋。代入 \\(g(E_F)=N/(2E_F)\\)，得 \\(C_V=(\\pi^2/6)Nk_B^2T/E_F\\)，不同于三维电子气系数。",
+      "零温内能 \\(U_0=2(L/\\pi)\\int_0^{k_F}\\hbar^2k^2/(2m)dk=NE_F/3\\propto N^3/L^2\\)。固定 \\(N\\) 求压强的一维对应张力 \\(P_{1D}=-(\\partial U_0/\\partial L)_N=2U_0/L\\propto n^3\\)。这与三维非相对论的 \\(n^{5/3}\\) 多方律不同。"
+    ],
+    "tags": [
+      "一维费米气",
+      "态密度",
+      "Sommerfeld"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  }
+]

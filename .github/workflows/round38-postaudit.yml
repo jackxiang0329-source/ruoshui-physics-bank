@@ -1,0 +1,40 @@
+name: Round38 historical math post-migration full audit
+on:
+  pull_request:
+    paths:
+      - "scripts/historical_post_migration_audit.py"
+      - ".github/workflows/round38-postaudit.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: round38-historical-postaudit
+  cancel-in-progress: false
+jobs:
+  historical-postaudit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: physics-round38-strict-latex-history-20261030
+          fetch-depth: 0
+      - name: Count remaining historical math formatting gaps
+        run: |
+          python3 -m py_compile scripts/historical_post_migration_audit.py
+          python3 scripts/historical_post_migration_audit.py
+      - name: Publish audit reports directly to GitHub review branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f editorial/historical-latex-review/post_migration_audit_v3.json editorial/historical-latex-review/post_migration_audit_v3.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Round38 publish complete historical math formatting residual audit"
+            git fetch origin physics-round38-strict-latex-history-20261030
+            git rebase origin/physics-round38-strict-latex-history-20261030
+            git push origin HEAD:refs/heads/physics-round38-strict-latex-history-20261030
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: round38-historical-postaudit
+          path: editorial/historical-latex-review/post_migration_audit_v3.*

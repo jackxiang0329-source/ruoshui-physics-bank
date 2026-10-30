@@ -1,0 +1,254 @@
+[
+  {
+    "id": "E265",
+    "title": "二维电子气无门控等离激元的根号色散与金属栅声学极限",
+    "setup": "无碰撞二维电子气位于均匀介电率 \\(\\epsilon\\) 介质内的 \\(z=0\\) 平面，电子面密度 \\(n_s\\)、质量 \\(m\\)、电荷 \\(-e\\)，纵向波形 \\(e^{i(kx-\\omega t)}\\)，取 \\(k>0\\)。",
+    "q": [
+      "由二维Poisson边界求面电荷密度波对应的电势。",
+      "联立连续方程与电子动量方程求二维等离激元色散。",
+      "计算相速度、群速度并检查长波极限。",
+      "加入平行接地栅极距离 \\(d\\)，推导长波声学色散。"
+    ],
+    "s": [
+      "面密度涨落 \\(\\delta n\\) 产生面电荷 \\(\\delta\\sigma=-e\\delta n\\)。对单一横向波数 \\(k\\)，平面两侧解Laplace方程得 \\(\\phi(z)=\\phi_0e^{-k|z|}\\)。法向电位移跃变 \\(\\epsilon(E_z^+-E_z^-)=\\delta\\sigma\\)，而 \\(E_z^+=k\\phi_0\\)、\\(E_z^-=-k\\phi_0\\)，因此 \\(\\phi_0=-e\\delta n/(2\\epsilon k)\\)。",
+      "二维电子连续方程 \\(-i\\omega\\delta n+ikn_sv=0\\)，动量式 \\(-i\\omega mv=-eE_x\\)，其中 \\(E_x=-ik\\phi_0\\)。代入上一问的 \\(\\phi_0\\) 消元，得到 \\(\\omega^2=n_se^2k/(2m\\epsilon)\\)。二维等离激元是 \\(\\omega\\propto\\sqrt k\\) 的非局域静电模式，不等同于三维体等离子体具有非零的 \\(k=0\\) 等离子频隙。",
+      "记 \\(C=\\sqrt{n_se^2/(2m\\epsilon)}\\)，则 \\(\\omega=C\\sqrt k\\)，相速度 \\(v_p=\\omega/k=C/\\sqrt k\\)，群速度 \\(v_g=d\\omega/dk=C/(2\\sqrt k)=v_p/2\\)。形式上 \\(k\\to0\\) 的相群速度都发散，说明准静态无迟滞模型不能无限外推；在电磁迟滞尺度需改用二维等离激元—极化激元。",
+      "若栅极在距离 \\(d\\) 处接地，像电荷改变二维Fourier库仑核为 \\(\\phi_0=(\\delta\\sigma/(2\\epsilon k))(1-e^{-2kd})\\)。因此 \\(\\omega^2=[n_se^2k/(2m\\epsilon)](1-e^{-2kd})\\)。当 \\(kd\\ll1\\) 时 \\(1-e^{-2kd}\\simeq2kd\\)，得到声学模 \\(\\omega\\simeq ck\\)，\\(c=\\sqrt{n_se^2d/(m\\epsilon)}\\)，金属栅屏蔽改变了长波指数。"
+    ],
+    "tags": [
+      "二维电子气",
+      "非局域等离激元",
+      "金属栅屏蔽"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "E266",
+    "title": "带电粒子垂直进入均匀电磁场的漂移与回旋",
+    "setup": "电荷 \\(q\\ne0\\)、质量 \\(m\\) 粒子置于 \\(\\boldsymbol B=B\\hat z\\) 与 \\(\\boldsymbol E=E\\hat x\\)，忽略辐射耗散和碰撞，初始速度 \\((v_{x0},v_{y0})\\)。",
+    "q": [
+      "写平面Lorentz方程并求漂移速度。",
+      "平移至漂移坐标并解回旋速度。",
+      "积分得到旋轮线型轨迹及回旋半径。",
+      "通过功率恒等式检验外电场能量交换。"
+    ],
+    "s": [
+      "速度满足 \\(m\\dot v_x=q(E+Bv_y)\\)，\\(m\\dot v_y=-qBv_x\\)。取稳态 \\(\\dot v_x=\\dot v_y=0\\) 得 \\(v_{dx}=0,\\ v_{dy}=-E/B\\)，即 \\(\\boldsymbol v_d=\\boldsymbol E\\times\\boldsymbol B/B^2\\)，与粒子电荷符号无关。",
+      "令 \\(u_x=v_x\\)、\\(u_y=v_y+E/B\\)，则 \\(\\dot u_x=\\omega_cu_y\\)、\\(\\dot u_y=-\\omega_cu_x\\)，带符号 \\(\\omega_c=qB/m\\)。解为 \\(u_x=A\\cos\\omega_ct+C\\sin\\omega_ct\\)，\\(u_y=-A\\sin\\omega_ct+C\\cos\\omega_ct\\)，由初值确定两个常量。",
+      "以 \\(A=u_x(0),C=u_y(0)\\)，积分得 \\(x(t)-x_0=[A\\sin\\omega_ct+C(1-\\cos\\omega_ct)]/\\omega_c\\)，\\(y(t)-y_0=-Et/B+[A(\\cos\\omega_ct-1)+C\\sin\\omega_ct]/\\omega_c\\)。绕漂移中心回旋半径 \\(\\rho_L=\\sqrt{A^2+C^2}/|\\omega_c|\\)。",
+      "磁力始终垂直速度，\\(d(mv^2/2)/dt=q\\boldsymbol E\\cdot\\boldsymbol v=qEv_x\\)。代入 \\(v_x=u_x\\) 周期振荡，平均功率在完整回旋周期为零；电场可使瞬时实验系动能变化，却不会引起无限加速。若电场随时空变化，简单恒定漂移解不再适用。"
+    ],
+    "tags": [
+      "Lorentz动力学",
+      "E交B漂移",
+      "回旋轨迹"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "E267",
+    "title": "突变p–n结耗尽区、反偏结电容与少子扩散电流",
+    "setup": "一维突变半导体p–n结，受主浓度 \\(N_A\\)、施主浓度 \\(N_D\\)、介电率 \\(\\epsilon_s\\)、温度 \\(T\\)，内建势 \\(V_{bi}\\) 与偏置 \\(V<V_{bi}\\)，采用耗尽近似和低注入。",
+    "q": [
+      "从Poisson方程与耗尽层电中性求两侧宽度。",
+      "求耗尽宽度与内建势、电压的精确关系。",
+      "计算反向偏置下的结电容及测试关系。",
+      "利用少子扩散方程导出理想二极管Shockley电流。"
+    ],
+    "s": [
+      "耗尽层p侧电荷 \\(\\rho=-qN_A\\)、n侧 \\(\\rho=qN_D\\)，Poisson方程 \\(dE/dx=\\rho/\\epsilon_s\\)，边界 \\(E(-x_p)=E(x_n)=0\\)。界面电场连续要求 \\(N_Ax_p=N_Dx_n\\)，故 \\(x_p=N_DW/(N_A+N_D)\\)、\\(x_n=N_AW/(N_A+N_D)\\)，\\(W=x_p+x_n\\)，是几何电荷中性而非电子与空穴浓度相等。",
+      "静电势差是两段电场三角形积分：\\(V_{bi}-V=q(N_Ax_p^2+N_Dx_n^2)/(2\\epsilon_s)\\)。用 \\(N_Ax_p=N_Dx_n\\) 消去两未知量，得到 \\(W^2=(2\\epsilon_s/q)(1/N_A+1/N_D)(V_{bi}-V)\\)。因此强反偏使耗尽宽度增大；正偏逼近内建势时耗尽近似最终失效。",
+      "单位面积耗尽电荷模 \\(Q_A=qN_Ax_p=qN_AN_DW/(N_A+N_D)\\)。微分单位面积结电容 \\(C_j/A=|dQ_A/dV|=\\epsilon_s/W\\)，所以 \\(1/C_j^2=[2(V_{bi}-V)/(q\\epsilon_sA^2)](1/N_A+1/N_D)\\)。测量反偏下 \\(1/C_j^2\\) 对电压的斜率可反演掺杂，但需注意串联电阻和界面陷阱。",
+      "在低注入条件下少子扩散满足 \\(D_n\\delta n''-\\delta n/\\tau_n=0\\)，解 \\(\\delta n(x)=\\delta n(0)e^{-x/L_n}\\)，\\(L_n=\\sqrt{D_n\\tau_n}\\)。结边界 \\(\\delta n(0)=n_{p0}(e^{qV/(k_BT)}-1)\\)，电子、空穴扩散电流相加为 \\(I=I_s(e^{qV/(k_BT)}-1)\\)，\\(I_s=qA(D_nn_{p0}/L_n+D_pp_{n0}/L_p)\\)，实际大注入、复合和电阻使其偏离。"
+    ],
+    "tags": [
+      "半导体耗尽层",
+      "Poisson边值",
+      "Shockley扩散"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "E268",
+    "title": "有限厚London超导薄膜的磁场屏蔽与表面电流",
+    "setup": "厚度 \\(d>0\\) 的均匀超导平板占 \\(-d/2<x<d/2\\)，平行表面外磁场 \\(B_0\\hat z\\)，London穿透深度 \\(\\lambda_L>0\\)，两侧环境磁场同为 \\(B_0\\)。",
+    "q": [
+      "由London与Ampère方程建立场方程。",
+      "求有限厚度磁感应强度剖面。",
+      "求屏蔽电流和每侧总表面电流。",
+      "求薄片极限下屏蔽效率与厚片极限。"
+    ],
+    "s": [
+      "London关系给 \\(\\nabla\\times\\boldsymbol J=-\\boldsymbol B/(\\mu_0\\lambda_L^2)\\)，与 \\(\\nabla\\times\\boldsymbol B=\\mu_0\\boldsymbol J\\) 联立得到 \\(\\nabla^2\\boldsymbol B=\\boldsymbol B/\\lambda_L^2\\)。平板一维情形 \\(B_z''=B_z/\\lambda_L^2\\)，边界 \\(B_z(\\pm d/2)=B_0\\)。",
+      "由两侧相同外场的偶对称性可排除 \\(\\sinh\\) 项，解为 \\(B_z(x)=B_0\\cosh(x/\\lambda_L)/\\cosh[d/(2\\lambda_L)]\\)。中心磁场 \\(B_z(0)=B_0\\operatorname{sech}[d/(2\\lambda_L)]\\)，厚片 \\(d\\gg\\lambda_L\\) 时中心场指数减小。",
+      "因为 \\((\\nabla\\times\\boldsymbol B)_y=-dB_z/dx\\)，得 \\(J_y(x)=-(B_0/(\\mu_0\\lambda_L))\\sinh(x/\\lambda_L)/\\cosh[d/(2\\lambda_L)]\\)。右半片积分 \\(\\int_0^{d/2}J_y dx=-(B_0/\\mu_0)[1-\\operatorname{sech}(d/(2\\lambda_L))]\\)，两侧电流反向。",
+      "若 \\(d\\ll\\lambda_L\\)，\\(B_z(0)/B_0\\simeq1-d^2/(8\\lambda_L^2)\\)，无法有效屏蔽平行磁场；若 \\(d\\gg\\lambda_L\\)，中心比值 \\(\\simeq2e^{-d/(2\\lambda_L)}\\)。这些结果适用于Meissner态，不包括涡旋穿透或接近临界场的非线性。"
+    ],
+    "tags": [
+      "London方程",
+      "薄膜屏蔽",
+      "超导电流"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "E269",
+    "title": "充电平行板电容器中的位移电流与磁场一致性",
+    "setup": "半径 \\(a\\) 的圆形平行板电容器极板面积 \\(\\pi a^2\\)，极板间距远小于半径，忽略边缘场，外电路以总电流 \\(I(t)\\) 充电，间隙介电率 \\(\\epsilon\\)。",
+    "q": [
+      "由电荷守恒求间隙电位移变化率。",
+      "用Ampère–Maxwell定律求板间环向磁场。",
+      "求板间电能增长率并与输入功率比较。",
+      "说明不含位移电流会遇到的曲面矛盾。"
+    ],
+    "s": [
+      "极板自由电荷满足 \\(\\dot Q=I(t)\\)，板间电位移 \\(D_z=Q/(\\pi a^2)\\)。因此 \\(\\partial_tD_z=I(t)/(\\pi a^2)\\)，穿过半径 \\(r\\le a\\) 圆盘的位移电流为 \\(I_d(r)=I(t)r^2/a^2\\)，在 \\(r=a\\) 处等于导线传导电流。",
+      "对半径 \\(r<a\\) 的同轴圆环，积分式 \\(\\oint\\boldsymbol H\\cdot d\\boldsymbol l=d/dt\\int\\boldsymbol D\\cdot d\\boldsymbol S\\) 给 \\(2\\pi rH_\\phi=I(t)r^2/a^2\\)。故 \\(H_\\phi(r)=I(t)r/(2\\pi a^2)\\)，磁场在轴心为零并随 \\(r\\) 线性增大。",
+      "板间电压 \\(V=Qd/(\\epsilon\\pi a^2)\\)，储能 \\(U=Q^2d/(2\\epsilon\\pi a^2)=CV^2/2\\)。时间导数 \\(dU/dt=(Q/C)\\dot Q=VI\\)，与理想无损电容的输入电功一致；电磁场储能由边缘Poynting通量进入间隙。",
+      "同一闭合导线环路可张成穿过导线的曲面，也可张成穿过电容间隙的曲面。仅用 \\(\\oint Hdl=I_{\\mathrm{cond}}\\) 时两个曲面分别包住 \\(I\\) 与零，造成矛盾；引入 \\(\\partial_t\\boldsymbol D\\) 才使结果与曲面选择无关。"
+    ],
+    "tags": [
+      "位移电流",
+      "能量流",
+      "Maxwell一致性"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "E270",
+    "title": "固定电压与固定电荷下半插入介质板的吸引力",
+    "setup": "平行板电容器面积为 \\(wL\\)、板距 \\(d\\)，相对介电常数 \\(\\epsilon_r>1\\) 的介质以插入长度 \\(0<x<L\\) 填满板隙，边缘效应忽略，极板宽 \\(w\\)。",
+    "q": [
+      "从并联区域计算电容随插入距离。",
+      "固定电荷时由储能求介质受力。",
+      "固定电压时正确处理电源功并求力。",
+      "验证固定电压和固定电荷结果的瞬时一致性。"
+    ],
+    "s": [
+      "覆盖空气和介质的两块区域承受相同电压，因此并联电容 \\(C(x)=\\epsilon_0w(L-x)/d+\\epsilon_0\\epsilon_rw x/d=\\epsilon_0w[L+(\\epsilon_r-1)x]/d\\)。其导数 \\(C'(x)=\\epsilon_0w(\\epsilon_r-1)/d>0\\)。",
+      "若电容器与电源断开、总电荷 \\(Q\\) 固定，储能 \\(U_Q=Q^2/(2C(x))\\)。机械力为 \\(F_Q=-dU_Q/dx=Q^2C'(x)/(2C(x)^2)>0\\)，介质被吸入；力随 \\(x\\) 变化，因为电压随电容变化。",
+      "若端电压被保持 \\(V\\)，电容场能 \\(U_C=C(x)V^2/2\\) 随插入而增大，不能直接取其负导数求力。包括电源功后的热力学势 \\(\\mathcal F=U_C-VQ=-C(x)V^2/2\\)，故 \\(F_V=-d\\mathcal F/dx=V^2C'(x)/2>0\\)。",
+      "在同一瞬时状态 \\(Q=CV\\)，代入 \\(F_Q=Q^2C'/(2C^2)\\) 得 \\(F_Q=V^2C'/2=F_V\\)。两种协议的力函数不同，是因为移动后 \\(Q\\) 或 \\(V\\) 的变化规则不同；忽略电源会导致错误的力符号。"
+    ],
+    "tags": [
+      "热力学势",
+      "介质受力",
+      "电容变分"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "E271",
+    "title": "无损传输线端接负载的反射、驻波比与输入阻抗",
+    "setup": "均匀无损传输线每单位长度电感 \\(L'\\)、电容 \\(C'\\)，特性阻抗 \\(Z_0=\\sqrt{L'/C'}\\)，角频率 \\(\\omega>0\\)，线长 \\(\\ell\\)，负载阻抗 \\(Z_L\\)。",
+    "q": [
+      "由电报方程求前后行波传播。",
+      "求负载电压反射系数与能量反射率。",
+      "推导距负载 \\(\\ell\\) 处的输入阻抗。",
+      "求驻波比与开短路极限。"
+    ],
+    "s": [
+      "电报方程 \\(\\partial_zV=-L'\\partial_tI\\)、\\(\\partial_zI=-C'\\partial_tV\\) 导出波速 \\(v=1/\\sqrt{L'C'}\\)，相位常数 \\(\\beta=\\omega\\sqrt{L'C'}\\)。采用 \\(e^{i\\omega t}\\) 约定，电压 \\(V(z)=V_+e^{-i\\beta z}+V_-e^{i\\beta z}\\)，电流 \\(I(z)=Z_0^{-1}(V_+e^{-i\\beta z}-V_-e^{i\\beta z})\\)。",
+      "令负载位于 \\(z=0\\)，边界 \\(V(0)=Z_LI(0)\\) 解得 \\(\\Gamma_L=V_-/V_+=(Z_L-Z_0)/(Z_L+Z_0)\\)。对无损实负载，功率反射率 \\(R=|\\Gamma_L|^2\\)，吸收份额 \\(1-R\\)，匹配 \\(Z_L=Z_0\\) 时无反射。",
+      "将行波解代入 \\(Z_{\\mathrm{in}}=V(-\\ell)/I(-\\ell)\\)，利用正弦余弦恒等式化为 \\(Z_{\\mathrm{in}}=Z_0[Z_L+iZ_0\\tan(\\beta\\ell)]/[Z_0+iZ_L\\tan(\\beta\\ell)]\\)。四分之一波长且负载为实正时 \\(Z_{\\mathrm{in}}=Z_0^2/Z_L\\)，可实现阻抗变换。",
+      "对 \\(|\\Gamma_L|<1\\)，驻波最大最小电压幅比分别为 \\((1+|\\Gamma_L|)/(1-|\\Gamma_L|)\\)。开路 \\(Z_L\\to\\infty\\) 时 \\(\\Gamma_L\\to+1\\)，短路 \\(Z_L=0\\) 时 \\(\\Gamma_L=-1\\)，两者均全反射；若负载有增益或负阻，普通被动驻波比公式需重新界定。"
+    ],
+    "tags": [
+      "传输线",
+      "复反射",
+      "阻抗匹配"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "E272",
+    "title": "冷等离子体电磁波截止与相群速度",
+    "setup": "均匀无磁冷电子等离子体电子密度 \\(n_e\\)，电子质量 \\(m_e\\)，正离子视为不动背景，入射角频率 \\(\\omega\\)，忽略碰撞与热压强。",
+    "q": [
+      "由电子动量方程求介电函数。",
+      "推导横向电磁波色散关系和传播条件。",
+      "计算相速、群速与能量传输关系。",
+      "分析截止附近的穿透深度与高频极限。"
+    ],
+    "s": [
+      "电子线性动量式 \\(m_e\\dot{\\boldsymbol v}=-e\\boldsymbol E\\)，对于 \\(e^{-i\\omega t}\\) 得 \\(\\boldsymbol v=-i e\\boldsymbol E/(m_e\\omega)\\)。电流 \\(\\boldsymbol J=-n_ee\\boldsymbol v=i(n_ee^2/(m_e\\omega))\\boldsymbol E\\)。写入Ampère方程得到 \\(\\epsilon(\\omega)=\\epsilon_0[1-\\omega_p^2/\\omega^2]\\)，\\(\\omega_p^2=n_ee^2/(\\epsilon_0m_e)\\)。",
+      "横波Maxwell方程给 \\(k^2c^2=\\omega^2\\epsilon(\\omega)/\\epsilon_0=\\omega^2-\\omega_p^2\\)。当 \\(\\omega>\\omega_p\\) 时 \\(k\\) 实、允许传播；当 \\(\\omega<\\omega_p\\) 时 \\(k=i\\sqrt{\\omega_p^2-\\omega^2}/c\\)，进入等离子体的波场指数衰减。",
+      "对传播支 \\(\\omega=\\sqrt{\\omega_p^2+c^2k^2}\\)，相速度 \\(v_p=\\omega/k=c/\\sqrt{1-\\omega_p^2/\\omega^2}>c\\)，群速度 \\(v_g=d\\omega/dk=c\\sqrt{1-\\omega_p^2/\\omega^2}<c\\)。二者满足 \\(v_pv_g=c^2\\)，超光速相速度不表示超光速能量传播。",
+      "低于截止时场幅穿透长度 \\(\\delta=c/\\sqrt{\\omega_p^2-\\omega^2}\\)，趋近截止从下侧 \\(\\delta\\to\\infty\\)，高频 \\(\\omega\\gg\\omega_p\\) 则 \\(v_g\\to c\\)。该理想模型忽略碰撞耗散、磁化后的左右旋分支及温度导致的纵向等离子体波。"
+    ],
+    "tags": [
+      "冷等离子体",
+      "截止波",
+      "相群色散"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "E273",
+    "title": "直角接地导体楔形区中点电荷的四电荷镜像能量与力",
+    "setup": "两无限相互垂直的理想接地导体平面 \\(x=0\\)、\\(y=0\\) 夹出正象限 \\(x,y>0\\)，真实电荷 \\(q\\) 位于 \\((a,b,0)\\) 且 \\(a,b>0\\)。",
+    "q": [
+      "构造四电荷镜像并验证两个接地边界。",
+      "求真实电荷受到三个镜像的水平力分量。",
+      "从半镜像能量求同样的机械力。",
+      "计算对称与单平面远离极限。"
+    ],
+    "s": [
+      "在平面外布置三个镜像：\\(-q\\) 于 \\((-a,b,0)\\)、\\(-q\\) 于 \\((a,-b,0)\\)、\\(+q\\) 于 \\((-a,-b,0)\\)。加上真实 \\(q\\) 的四项Coulomb势 \\(\\Phi(\\boldsymbol r)=\\sum_jq_j/(4\\pi\\epsilon_0|\\boldsymbol r-\\boldsymbol r_j|)\\)，在 \\(x=0\\) 与 \\(y=0\\) 上各对镜像贡献相互抵消，满足双接地Dirichlet边界条件。",
+      "左侧镜像引力是 \\(-q^2/(16\\pi\\epsilon_0a^2)\\hat x\\)，下侧镜像引力是 \\(-q^2/(16\\pi\\epsilon_0b^2)\\hat y\\)。斜对角同号镜像的力为 \\(q^2(a\\hat x+b\\hat y)/[16\\pi\\epsilon_0(a^2+b^2)^{3/2}]\\)。三者叠加给 \\(F_x=C[-1/a^2+a/(a^2+b^2)^{3/2}]\\)、\\(F_y=C[-1/b^2+b/(a^2+b^2)^{3/2}]\\)，\\(C=q^2/(16\\pi\\epsilon_0)\\)。",
+      "感应电荷随位置变化，故静电机械势能必须取一半像电势：\\(U=\\tfrac12q\\Phi_{\\rm images}(a,b)=-C[1/a+1/b-1/\\sqrt{a^2+b^2}]\\)。分别求 \\(-\\partial_aU\\) 与 \\(-\\partial_bU\\)，恰得到逐镜像Coulomb矢量叠加的两个分量。忽略因子 \\(1/2\\) 将把机械力错误地放大。",
+      "当 \\(a=b\\) 时 \\(F_x=F_y<0\\)，说明电荷趋近两面的交点。令 \\(b\\to\\infty\\)，剩余 \\(F_x\\to-q^2/(16\\pi\\epsilon_0a^2)\\) 且 \\(F_y\\to0\\)，严格恢复单接地平面的镜像力。只有直角等特殊楔角才可用有限数目镜像电荷直接闭合。"
+    ],
+    "tags": [
+      "导体楔形边界",
+      "镜像唯一性",
+      "感应自能"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  }
+]

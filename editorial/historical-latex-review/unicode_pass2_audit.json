@@ -1,0 +1,2017 @@
+{
+  "phase": "Round38 historical Unicode math token conversion",
+  "review_only": true,
+  "fully_verified_academic_content": false,
+  "scanned_bank_tex": 1864,
+  "modified_bank_tex": 0,
+  "converted_bank_tokens": 0,
+  "edited_round34_35_json": 0,
+  "converted_editorial_json_tokens": 0,
+  "unresolved_segments": 334,
+  "modified": [],
+  "edited_json": [],
+  "requires_human_math_review": [
+    {
+      "path": "bank/E012/solution.tex",
+      "reason": "math_delimiter_validation",
+      "kind": "bank-tex"
+    },
+    {
+      "path": "bank/Q072/solution.tex",
+      "reason": "math_delimiter_validation",
+      "kind": "bank-tex"
+    },
+    {
+      "path": "editorial/round34/source/E.json#E229/s2",
+      "context": "[−iω+νk²,−ik",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/E.json#E229/s2",
+      "context": "−ikB₀,−iω+η_mk²]",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/E.json#E229/s2",
+      "context": "v_A=B₀/√(μ₀ρ)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/E.json#E229/s2",
+      "context": "ω_±=−i(ν+η_m)k²/2±√[v_A²k²−(ν−η_m)²k⁴/4]",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/E.json#E229/s3",
+      "context": "b_x=∓√(μ₀ρ)u_x",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/E.json#E230/s2",
+      "context": "∫ρ_ion",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/E.json#E230/s2",
+      "context": "d³r=−Qκ²∫₀∞r",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/E.json#E230/s4",
+      "context": "Qe/(4πεa",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/E.json#E230/s4",
+      "context": "k_BT)≪1",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/E.json#E231/s1",
+      "context": "cosθ)",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/E.json#E231/s3",
+      "context": "√(k_x²/ε_e+k_z²/ε_o)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/E.json#E232/s2",
+      "context": "Z₀=V/I=√[(R′−iωL′)/(G′−iωC′)]",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/E.json#E232/s3",
+      "context": "β≈ω√(L′C′)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/E.json#E232/s3",
+      "context": "α≈(R′/2)√(C′/L′)+(G′/2)√(L′/C′)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/E.json#E232/s3",
+      "context": "v_p≈1/√(L′C′)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/E.json#E232/s4",
+      "context": "γ=√(−iωR′C′)=(1−i)√(ωR′C′/2)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/E.json#E233/s1",
+      "context": "H=[ω₁,g",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/E.json#E233/s1",
+      "context": "g,ω₂]",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/E.json#E233/s1",
+      "context": "±√[(Δ/2)²+g²]",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/E.json#E233/s2",
+      "context": "exp(−iH′t)=cos(Ω_R",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/E.json#E233/s2",
+      "context": "t/2)I−2iH′sin(Ω_Rt/2)/Ω_R",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/E.json#E233/s2",
+      "context": "Ω_R=√(Δ²+4g²)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/E.json#E234/s2",
+      "context": "r/[2π(ε₁+ε₂)(r²+d²)^",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/E.json#E234/s3",
+      "context": "m_z(R_c)=πσ_H∫₀^",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/E.json#E235/s3",
+      "context": "d²W/(dx",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/E.json#E235/s3",
+      "context": "dω)=q²ω/(4πε₀c²)[1−c²/(v²n(ω)²)]",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/E.json#E235/s4",
+      "context": "∫ωdω",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/E.json#E236/s1",
+      "context": "[L₁,M",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/E.json#E236/s1",
+      "context": "M,L₂]",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/E.json#E236/s3",
+      "context": "|M|≤√(L₁L₂)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/E.json#E236/s3",
+      "context": "k=M/√(L₁L₂)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/E.json#E237/setup",
+      "context": "B₁[cosωt",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/E.json#E237/s1",
+      "context": "M×B−(M_xx",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/E.json#E237/s1",
+      "context": ")/T₂−(M_z−M₀)z",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/M.json#M229/s1",
+      "context": "a²(θ",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/M.json#M229/s1",
+      "context": "²+Ω²sin²θ)",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/M.json#M229/s2",
+      "context": "Ω_c=√(g/a)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/M.json#M229/s4",
+      "context": "Ω=√(g/a)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/M.json#M230/s1",
+      "context": "ω_0=√(g/l)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/M.json#M230/s2",
+      "context": "Ω_z±√(ω_0²+Ω_z²)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/M.json#M230/s3",
+      "context": "cos(√(ω_0²+Ω_z²)t)+B",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/M.json#M230/s3",
+      "context": "sin(√(ω_0²+Ω_z²)t)]",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/M.json#M230/s4",
+      "context": "Ω_E≪√(g/l)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/M.json#M231/setup",
+      "context": "J₂R²P₂(sin",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/M.json#M231/setup",
+      "context": ")/r³",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/M.json#M231/s1",
+      "context": "Φ=−μ/r+[μJ₂R²/r³]P₂(sin",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/M.json#M231/s1",
+      "context": "r=a(1−e²)/(1+e",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/M.json#M231/s1",
+      "context": "=μJ₂R²[1−3cos²i]/[4a³(1−e²)^",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/M.json#M231/s2",
+      "context": "L_D=√(μa)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/M.json#M231/s2",
+      "context": "G_D=L_D√(1−e²)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/M.json#M231/s2",
+      "context": "n=√(μ/a³)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/M.json#M231/s3",
+      "context": "i_c=arccos(1/√5)≈63.435°",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/M.json#M232/s2",
+      "context": "u(φ)=mk/(ℓ²α²)[1+e_*",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/M.json#M232/s2",
+      "context": "cos(α(φ−φ_0))]",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/M.json#M232/s3",
+      "context": "δ=2π(α^",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/M.json#M232/s3",
+      "context": "−1)",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/M.json#M234/s2",
+      "context": "−[1+naξ²+",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/M.json#M235/s2",
+      "context": "(t)=(F/γ)[1−e^",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/M.json#M235/s4",
+      "context": "(F/γ)(1−e^",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/M.json#M235/s4",
+      "context": ")→Ft/M_eff",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/M.json#M236/s2",
+      "context": "|v'|=v√[m²+M²+2mMcosχ]/(m+M)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/M.json#M237/s1",
+      "context": "v=√(2gy)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/M.json#M237/s1",
+      "context": "T[y]=∫√(1+y'²)/(√(2gy))",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/M.json#M237/s1",
+      "context": "=1/[√(2gy)√(1+y'²)]=",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/M.json#M237/s2",
+      "context": "v=2√(ga)sin(θ/2)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/M.json#M237/s2",
+      "context": "√(a/g)θ_f",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/M.json#M237/s3",
+      "context": "∫_0^s",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/O.json#O234/s1",
+      "context": ")^j=(1−R)e^",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/O.json#O234/s1",
+      "context": "/(1−Re^",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/O.json#O234/s2",
+      "context": "T(δ)=(1−R)²/[(1−R)²+4Rsin²δ]=1/[1+F",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/O.json#O234/s2",
+      "context": "sin²δ]",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/O.json#O234/s3",
+      "context": "|δ−mπ|=1/√F",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/O.json#O234/s3",
+      "context": "Δν≈FSR·2/(π√F)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/O.json#O234/s3",
+      "context": "=FSR/Δν≈π√R/(1−R)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/O.json#O236/s3",
+      "context": "Δφ≥1/√N",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/O.json#O236/s4",
+      "context": "Δφ≈√N/(N|sinφ|)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/O.json#O237/s1",
+      "context": "[I±√(Q²+U²+V²)]/2",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/O.json#O237/s1",
+      "context": "I≥√(Q²+U²+V²)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/O.json#O237/s1",
+      "context": "P=√(Q²+U²+V²)/I≤1",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/O.json#O238/s3",
+      "context": "w=√2w₀",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/O.json#O238/s4",
+      "context": "P=∫₀∞I2πrdr=πI₀w₀²/2",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/O.json#O239/s2",
+      "context": "Δ(k",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/O.json#O239/s2",
+      "context": "sinθ)=2π/d",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/O.json#O240/s1",
+      "context": "U_F(ξ)=C∫u(x)e^",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/O.json#O240/s2",
+      "context": "h(x)=∫_",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/O.json#O240/s3",
+      "context": "u(x)=u₀[1+m",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/O.json#O240/s3",
+      "context": "cos(2πfx)]",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q234/s1",
+      "context": "4m²[E_n²−2E_n",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q234/s1",
+      "context": "=4m²[−3E_n²+",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q235/setup",
+      "context": ")/√2",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q235/s4",
+      "context": "=Trρ(σ_i",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q235/s4",
+      "context": "σ_j)=−pδ_ij",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q235/s4",
+      "context": "S_max=2√(m₁+m₂)=2√2p",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q235/s4",
+      "context": "p>1/√2",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q235/s4",
+      "context": "1/3<p≤1/√2",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q236/s1",
+      "context": "E(ξ)=√(ξ²+Δ²)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q236/s1",
+      "context": "1=λ∫₀^",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q236/s3",
+      "context": "1/λ=∫₀^",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q238/s1",
+      "context": "k(x)=√[2m(E−V)]/ℏ",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q238/s1",
+      "context": "i∫kdx",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q238/s1",
+      "context": "−i∫kdx",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q238/s1",
+      "context": "κ(x)=√[2m(V−E)]/ℏ",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q238/s1",
+      "context": "exp(±∫κdx)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q238/s2",
+      "context": "cos(∫_",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q238/s2",
+      "context": "^xkdx−π/4)",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q238/s3",
+      "context": "∫_",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q238/s3",
+      "context": "√[2m(E−V(x))]dx=πℏ(n+1/2)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q238/s4",
+      "context": "a=√[2E/(mω)]",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q238/s4",
+      "context": "∫_",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q238/s4",
+      "context": "mω√(a²−x²)dx=πE/ω",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q239/s1",
+      "context": "f_B(q)=−[m/(2πℏ²)]∫e^",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q239/s1",
+      "context": "∫e^",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q239/s3",
+      "context": "∫₀¹du/(4k²u+κ²)²=16πm²g²/[ℏ⁴",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q239/s3",
+      "context": "κ²(4k²+κ²)]",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q240/s1",
+      "context": "0|+√η|1",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q240/s1",
+      "context": "K₁=√(1−η)|0",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q240/s2",
+      "context": "ρ=[ρ₀₀,ρ₀₁",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q240/s2",
+      "context": "ρ₁₀,ρ₁₁]",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q240/s2",
+      "context": "E(ρ)=[ρ₀₀+(1−η)ρ₁₁,√ηρ₀₁",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q240/s2",
+      "context": "√ηρ₁₀,ηρ₁₁]",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q240/s2",
+      "context": "√η",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q240/s3",
+      "context": "√η",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q240/s4",
+      "context": ")/√2",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q240/s4",
+      "context": "+√η|11",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q240/s4",
+      "context": ")/√2",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q240/s4",
+      "context": "√(1−η)|10",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q240/s4",
+      "context": "/√2",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/Q.json#Q240/s4",
+      "context": "=(1+√η)²/4",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/T.json#T226/s2",
+      "context": "F(v_g)−F(v_l)=−∫_",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/T.json#T226/s2",
+      "context": "∫_",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/T.json#T227/setup",
+      "context": "λ_T=h/√(2πmk_BT)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/T.json#T228/s1",
+      "context": "z=1/(1−e^",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/T.json#T228/s1",
+      "context": "−1)^",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/T.json#T228/s2",
+      "context": "Var(U)=M(hν)²[",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/T.json#T228/s2",
+      "context": "n²]=hν",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/T.json#T228/s3",
+      "context": "√Var(U)/",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/T.json#T228/s3",
+      "context": "=√[(1+",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/T.json#T228/s3",
+      "context": "1/√(M",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/T.json#T228/s3",
+      "context": "1/√M",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/T.json#T229/s1",
+      "context": "q=L₁₂/√(L₁₁L₂₂)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/T.json#T229/s3",
+      "context": "y*=[1−√(1−q²)]/q²=1/[1+√(1−q²)]",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/T.json#T229/s3",
+      "context": "η_max/η_C=[1−√(1−q²)]/[1+√(1−q²)]",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/T.json#T231/s1",
+      "context": "√ε",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/T.json#T231/s2",
+      "context": "N_ex=∫g(ε)/(e^",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/T.json#T231/s2",
+      "context": "−1)dε=ζ(3)(k_BT)³/(ℏ³ω_xω_yω_z)",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/T.json#T231/s3",
+      "context": "U_ex=∫εg(ε)/(e^",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/T.json#T231/s3",
+      "context": "−1)dε=3ζ(4)(k_BT)⁴/(ℏ³ω_xω_yω_z)",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/T.json#T232/s1",
+      "context": "x/L=[∫_",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/T.json#T232/s1",
+      "context": "κ(s)ds]/[∫_",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/T.json#T232/s1",
+      "context": "κ(s)ds]",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/T.json#T232/s2",
+      "context": "j_q=(1/L)∫_",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/T.json#T232/s3",
+      "context": "∫₀^Lσ",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W234/s2",
+      "context": "ω_±=−iν_lk²/2±√(c²k²−ν_l²k⁴/4)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W235/s1",
+      "context": "∫φ_mnφ_pq",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W235/s3",
+      "context": "δω/ω=−(1/2)[∫δμ|φ|²dA]/[μ_s∫|φ|²dA]",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W235/s4",
+      "context": "K_ij=−(ω₀/2μ_s)∫δμ",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W235/s4",
+      "context": "dA/∫φ_i²dA",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W236/s2",
+      "context": "u(x,t)=(c/2)sech²[√c(x−ct−x₀)/2]",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W236/s3",
+      "context": "M₁=∫u",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W236/s3",
+      "context": "∫(−3(u²)_x−u_xxx)dx=0",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W236/s3",
+      "context": "M₂=∫u²",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W236/s3",
+      "context": "−12∫u²u_x",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W236/s3",
+      "context": "dx−2∫uu_xxx",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W236/s4",
+      "context": "∫sech²",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W236/s4",
+      "context": "∫sech⁴",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W236/s4",
+      "context": "M₁=(c/2)(2/k)=2√c",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W236/s4",
+      "context": "k=√c/2",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W237/s2",
+      "context": "ω_±=[−i±√(4τDk²−1)]/(2τ)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W237/s2",
+      "context": "k>1/(2√(τD))",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W237/s2",
+      "context": "v_2=√(D/τ)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W237/s4",
+      "context": "d/dt∫[C",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W237/s4",
+      "context": "T²/2+τq²/(2κ)]dx=−∫q²/κ",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W238/s1",
+      "context": "iω(k²+l²+L_D^",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W238/s1",
+      "context": ")ψ+iβkψ=0",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W238/s1",
+      "context": "ω=−βk/(k²+l²+L_D^",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W238/s2",
+      "context": "c_px=ω/k=−β/(k²+l²+L_D^",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W238/s2",
+      "context": "c_gx=∂ω/∂k=β(k²−l²−L_D^",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W238/s2",
+      "context": ")²",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W238/s2",
+      "context": "c_gy=∂ω/∂l=2βkl/(k²+l²+L_D^",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W238/s2",
+      "context": ")²",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W238/s4",
+      "context": "ω≈−βk/(l²+L_D^",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W239/s1",
+      "context": "M=[α,β",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W239/s1",
+      "context": "β*,α*]",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W241/setup",
+      "context": "ω₀=√(g/l)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W241/s1",
+      "context": "T/4=∫₀^",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W241/s1",
+      "context": "dθ/[√2ω₀√(cosθ−cosθ₀)]",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W241/s2",
+      "context": "dφ/√(1−k²sin²φ)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W241/s2",
+      "context": "K(k)=∫₀^",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round34/source/W.json#W241/s4",
+      "context": "ln[4/√(1−k²)]",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/E.json#E238/s2",
+      "context": "V=∫_a^b",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/E.json#E238/s2",
+      "context": "U_B′=∫_a^b",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/E.json#E238/s3",
+      "context": "P=∫(E×H)_z2πrdr=VI",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/E.json#E238/s3",
+      "context": "V/I=√(L′/C′)=Z0=[ln(b/a)/(2π)]√(μ/ε)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/E.json#E238/s4",
+      "context": "v=1/√(L′C′)=1/√(με)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/E.json#E239/s2",
+      "context": "ω_c=π/(a√(με))",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/E.json#E239/s2",
+      "context": "f_c=1/[2a√(με)]",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/E.json#E239/s3",
+      "context": "v=1/√(με)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/E.json#E239/s3",
+      "context": "β=√[(ω/v)²−k_c²]",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/E.json#E239/s3",
+      "context": "v_p=ω/β=v/√[1−(ω_c/ω)²]",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/E.json#E239/s3",
+      "context": "v_g=dω/dβ=v√[1−(ω_c/ω)²]",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/E.json#E242/s1",
+      "context": "Φ=[q/|r−dz",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/E.json#E242/s1",
+      "context": "|]/(4πε0)=0",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/E.json#E242/s4",
+      "context": "|F|≈q²a/(4πε0",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/E.json#E242/s4",
+      "context": "d³)",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/E.json#E244/s1",
+      "context": "δ=√[2/(μσω)]",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/E.json#E244/s3",
+      "context": "P_A=∫_0∞σ|E(z)|²/2",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/E.json#E244/s3",
+      "context": "Z_s=E_t/H_t=(1−i)√[ωμ/(2σ)]",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/E.json#E244/s3",
+      "context": "R_s=ReZ_s=1/(σδ)=√(ωμ/(2σ))",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/E.json#E244/s4",
+      "context": "R_s∝√ω",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/E.json#E245/s2",
+      "context": "ΔV=∫|E|dx=|E_max|W/2",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/E.json#E246/s3",
+      "context": "B'_y=√(B²−E²/c²)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/E.json#E246/s4",
+      "context": "E'_x=√(E²−c²B²)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/M.json#M238/s2",
+      "context": "ν1=|Ω|√[(I3−I1)(I2−I1)/(I2I3)]",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/M.json#M238/s3",
+      "context": "λ=|Ω|√[(I3−I2)(I2−I1)/(I1I3)]>0",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/M.json#M238/s4",
+      "context": "ν3=|Ω|√[(I3−I2)(I3−I1)/(I1I2)]",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/M.json#M239/s1",
+      "context": "²+Ω²r²)/2−k(r−r0)²/2",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/M.json#M239/s2",
+      "context": "Ω_c=√(k/m)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/M.json#M239/s3",
+      "context": "s_±=[−b±√(b²−4m(k−mΩ²))]/(2m)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/M.json#M239/s3",
+      "context": "√(k/m−Ω²)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/M.json#M240/s1",
+      "context": "(EI/2)∫w''²dx",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/M.json#M240/s1",
+      "context": "(P/2)∫w'²dx",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/M.json#M240/s1",
+      "context": "Π2=(1/2)∫[EIw''²−Pw'²]dx",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/M.json#M240/s4",
+      "context": "A∝√(P−P_cr)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/M.json#M241/s1",
+      "context": "cosα)²+s",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/M.json#M241/s1",
+      "context": "²sin²α]/2",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/M.json#M244/s1",
+      "context": "T=ml²(θ",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/M.json#M244/s1",
+      "context": "2²)/2",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/M.json#M244/s1",
+      "context": "+[(g/l+k/m),−k/m",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/M.json#M244/s1",
+      "context": "−k/m,(g/l+k/m)]θ=0",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/M.json#M244/s2",
+      "context": "e+=(1,1)/√2",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/M.json#M244/s2",
+      "context": "e−=(1,−1)/√2",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/M.json#M244/s3",
+      "context": "A/√2",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/M.json#M244/s4",
+      "context": "Δω≈(k/m)/√(g/l)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/M.json#M244/s4",
+      "context": "sin²(Δω",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/M.json#M245/s2",
+      "context": "W_thr=(Σ_i",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/M.json#M245/s2",
+      "context": "mi)c²",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/M.json#M245/s3",
+      "context": "W≈√(2mc²E)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/M.json#M245/s3",
+      "context": "√E",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/M.json#M246/s1",
+      "context": "²)/2+Φ(R)",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/M.json#M246/s3",
+      "context": "κ=√2Ω",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/M.json#M246/s4",
+      "context": "δE=[ξ",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/M.json#M246/s4",
+      "context": "²+κ²ξ²]/2",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/O.json#O242/s1",
+      "context": "U(θ)∝∫_0^a",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/O.json#O242/s1",
+      "context": "dr∫_0^",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/O.json#O242/s1",
+      "context": "exp[−ikr",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/O.json#O242/s1",
+      "context": "sinθcosφ]dφ",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/O.json#O242/s1",
+      "context": "2πJ0(kr",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/O.json#O242/s1",
+      "context": "sinθ)",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/O.json#O242/s1",
+      "context": "U∝2πaJ1(ka",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/O.json#O242/s1",
+      "context": "sinθ)",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/O.json#O243/s3",
+      "context": "n1=√(n0n2)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/O.json#O244/s1",
+      "context": "sinα)",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/O.json#O245/s2",
+      "context": "Γ(τ)=∫_",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/O.json#O245/s2",
+      "context": "γ(τ)=∫S(ν)e^",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/O.json#O245/s2",
+      "context": "dν/∫S(ν)dν",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/O.json#O245/s3",
+      "context": "τc=1/(√2πσν)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/O.json#O245/s4",
+      "context": "V=2√(I1I2)/(I1+I2)|γ|",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/O.json#O247/s2",
+      "context": "|D>=(Ωc|1>−Ωp|2>)/√(|Ωc|²+|Ωp|²)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/O.json#O247/s3",
+      "context": "=c/[n+ω",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/O.json#O247/s3",
+      "context": "dn/dω]",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/O.json#O248/s3",
+      "context": "Ω|β|/√2",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q242/s2",
+      "context": "κ=(mg/ℏ²)(1+e^",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q242/s2",
+      "context": "κ=(mg/ℏ²)(1−e^",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q242/s3",
+      "context": "κ_±≈κ0[1±e^",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q242/s3",
+      "context": "E_±≈−ℏ²κ0²/(2m)[1±2e^",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q242/s4",
+      "context": "κ=κ0(1−e^",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q243/s2",
+      "context": "or|n,+>=(cosθ/2,e^",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q243/s2",
+      "context": "sinθ/2)^T",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q244/setup",
+      "context": "(|0>+|1>)/√2",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q244/s1",
+      "context": "|1>)/√2",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q244/s1",
+      "context": "ρ(t)=(1/2)[[1,e^",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q244/s1",
+      "context": "(1±e^",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q244/s2",
+      "context": "cos(φ−",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q244/s3",
+      "context": "sin²(φ−",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q244/s3",
+      "context": ")/[1−V²",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q244/s3",
+      "context": "cos²(φ−",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q245/setup",
+      "context": "H=ℏω(a",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q245/s1",
+      "context": "/(1−e^",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q245/s1",
+      "context": ")=[2sinh(βℏω/2)]^",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q245/s4",
+      "context": "=√(ℏ/(2mω))(a+a",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q245/s4",
+      "context": "=−i√(ℏmω/2)(a−a",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q246/s1",
+      "context": "H=ℏωc(a",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q246/s2",
+      "context": "ℓ_B=√(ℏ/(eB))",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q247/s2",
+      "context": "|ψ1>=s|ψ0>+√(1−s²)|ψ0^⊥>",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q247/s2",
+      "context": "±√(1−s²)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q247/s2",
+      "context": "±√(1−s²)/2",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q247/s3",
+      "context": "||Δ||_1=√(1−s²)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q247/s3",
+      "context": "Perr,min=[1−√(1−s²)]/2",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q247/s4",
+      "context": "[1−√(1−s^",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q248/s1",
+      "context": "|=±√(v²+w²+2vwcoska)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q248/s2",
+      "context": "ν=(1/2π)∫∂karg",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q248/s3",
+      "context": "√[1−(v/w)²]",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q249/s1",
+      "context": "a_ω=√(mω/(2ℏ))x",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q249/s1",
+      "context": "/√(2ℏmω)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q249/s2",
+      "context": "=√(ℏ/(2mωi))(a_i+a_i",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q249/s2",
+      "context": "=−i√(ℏmωi/2)(a_i−a_i",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q249/s2",
+      "context": "α=(√(ωf/ωi)+√(ωi/ωf))/2",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/Q.json#Q249/s2",
+      "context": "β=(√(ωf/ωi)−√(ωi/ωf))/2",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/T.json#T234/s1",
+      "context": "f'=Jz[m−tanh((Jz",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/T.json#T235/s1",
+      "context": "g(ε)=C√ε",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/T.json#T235/s1",
+      "context": "N=∫₀∞g(ε)f_F(ε,μ)dε",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/T.json#T235/s1",
+      "context": "N=∫₀^μg(ε)dε+(π²/6)(k_BT)²g'(μ)+O(T⁴)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/T.json#T235/s3",
+      "context": "U=∫εg(ε)f_F",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/T.json#T237/s1",
+      "context": "U=∫₀^",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/T.json#T237/s1",
+      "context": "g(ω)ℏω/[e^",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/T.json#T237/s1",
+      "context": "−1]dω",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/T.json#T237/s1",
+      "context": "U=9Nk_BT(T/θD)³∫₀^",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/T.json#T237/s2",
+      "context": "∫₀∞x³/(e^x−1)dx=π⁴/15",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/T.json#T237/s3",
+      "context": "ℏω/(e^",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/T.json#T237/s3",
+      "context": "−1)≈k_BT",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/T.json#T239/s1",
+      "context": "W_ext=∫_",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/T.json#T240/s3",
+      "context": "T_inv(v)=2a(v−b)²/(R",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/T.json#T240/s3",
+      "context": "v²)",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/T.json#T241/s1",
+      "context": "J_Q=∫₀∞(dω/2π)ℏω[n_B(ω,TL)−n_B(ω,TR)]",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/T.json#T241/s1",
+      "context": "−1]^",
+      "reason": "unbalanced_math_token_brackets",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/T.json#T241/s2",
+      "context": "∫₀∞x/(e^x−1)dx=π²/6",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/W.json#W242/setup",
+      "context": "c_j=√(T/μ_j)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/W.json#W242/s2",
+      "context": "Z_j=T/c_j=√(Tμ_j)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/W.json#W243/setup",
+      "context": "c=√(T/μ)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/W.json#W244/s2",
+      "context": "∫exp(−aΩ²/2−iΩτ)dΩ∝a^",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/W.json#W244/s3",
+      "context": "T=T0√(1+D²)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/W.json#W245/s3",
+      "context": "k*=√[(ρ1−ρ2)g/σ]",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/W.json#W245/s3",
+      "context": "2ρΣ√[(ρ1−ρ2)gσ]/(ρ1ρ2)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/W.json#W246/s2",
+      "context": "ω∝√(k²+m²)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/W.json#W246/s3",
+      "context": "ω=Nk/√(k²+m²)",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/W.json#W247/s1",
+      "context": "−2u_n)",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/W.json#W247/s1",
+      "context": "−2v_n)",
+      "reason": "unbalanced_math_token_parentheses",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/W.json#W247/s3",
+      "context": "ω²_±=K(1/m1+1/m2)±K√[(1/m1+1/m2)²−4sin²(qa/2)/(m1m2)]",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/W.json#W249/s2",
+      "context": "√(T/μ)/a",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/W.json#W249/s3",
+      "context": "(k_n²−k_p²)∫₀^a",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/W.json#W249/s4",
+      "context": "√(T/μ)/a",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    },
+    {
+      "path": "editorial/round35/source/W.json#W249/s4",
+      "context": "√T",
+      "reason": "nonlocal_math_scope",
+      "kind": "editorial-json"
+    }
+  ]
+}

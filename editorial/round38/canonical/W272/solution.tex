@@ -1,0 +1,4 @@
+\par\noindent\textbf{(1)} Green函数满足 \((\partial_t^2+2\gamma\partial_t+\omega_0^2)G(t)=\delta(t)\)、\(G(t<0)=0\)。欠阻尼情形 \(G(t)=\Theta(t)e^{-\gamma t}\sin(\omega_dt)/\omega_d\)，\(\omega_d=\sqrt{\omega_0^2-\gamma^2}\)。它连续且 \(G'(0^+)-G'(0^-)=1\)。
+\par\noindent\textbf{(2)} 零初值解为 \(x(t)=\int_0^tG(t-s)f(s)ds\)。对 \(t>0\) 微分并使用 \(G(0)=0,G'(0^+)=1\) 可核验 \(x''+2\gamma x'+\omega_0^2x=f(t)\)，这并非只对正弦激励成立。
+\par\noindent\textbf{(3)} 对 \(f(t)=\operatorname{Re}[F e^{-i\omega t}]\)，稳态 \(x=\operatorname{Re}[\chi(\omega)F e^{-i\omega t}]\)，\(\chi=[\omega_0^2-\omega^2-2i\gamma\omega]^{-1}\)。平均输入功率 \[\langle f\dot x\rangle=\tfrac12\omega|F|^2\operatorname{Im}\chi(\omega)=\gamma\omega^2|F|^2/[(\omega_0^2-\omega^2)^2+4\gamma^2\omega^2]\]。
+\par\noindent\textbf{(4)} 因果 \(G(t<0)=0\) 的Fourier-Laplace变换在适当上半频平面解析，对应易感率实部与虚部的Kramers–Kronig联系。\(\gamma>0\) 确保被动吸收功率非负；若外力不是稳态单频，不能直接用单一频率的平均功率代替全频能量积分。

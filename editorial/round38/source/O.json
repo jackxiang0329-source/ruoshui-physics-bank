@@ -1,0 +1,226 @@
+[
+  {
+    "id": "O266",
+    "title": "抛物线型GRIN介质中的光线简谐运动与Gaussian束自成像",
+    "setup": "柱对称梯度折射率介质满足 \\(n(r)=n_0[1-\\alpha^2r^2/2]\\)，其中 \\(n_0,\\alpha>0\\)，考虑近轴光线 \\(r\\ll1/\\alpha\\) 及波长 \\(\\lambda\\) 的Gaussian光束。",
+    "q": [
+      "从Fermat变分求近轴光线方程。",
+      "求GRIN传播的ABCD矩阵和完整自成像节距。",
+      "由Gaussian复束参数不动点求匹配束腰。",
+      "说明大孔径和非抛物线误差对自成像的破坏。"
+    ],
+    "s": [
+      "近轴光学路程泛函 \\(\\mathcal S=\\int n(r)\\sqrt{1+r'^2}dz\\approx\\int n_0[1+r'^2/2-\\alpha^2r^2/2]dz\\)。Euler–Lagrange式给 \\(n_0r''+n_0\\alpha^2r=0\\)，即 \\(r''+\\alpha^2r=0\\)。这是横向光线的简谐振子方程，近似假定 \\(|r'|\\ll1\\)。",
+      "以列向量 \\((r,r')^T\\) 表示光线，长 \\(z\\) 的GRIN传输矩阵为 \\(M(z)=\\begin{pmatrix}\\cos\\alpha z&\\sin\\alpha z/\\alpha\\\\-\\alpha\\sin\\alpha z&\\cos\\alpha z\\end{pmatrix}\\)，\\(\\det M=1\\)。在 \\(z_T=2\\pi/\\alpha\\) 时 \\(M=I\\)，任意近轴光线的横向位置和斜率同时恢复，半节距 \\(\\pi/\\alpha\\) 则有 \\(M=-I\\)。",
+      "Gaussian复束参数依 \\(q_{\\rm out}=(Aq+B)/(Cq+D)\\) 变换。设自洽不动点 \\(q=(Aq+B)/(Cq+D)\\)，对GRIN矩阵化为 \\(-\\alpha^2q^2=1\\)，取稳定上半平面根 \\(q=i/\\alpha\\)。因此匹配Rayleigh长度 \\(z_R=1/\\alpha\\)，在折射率近似 \\(n_0\\) 中束腰 \\(w_0^2=\\lambda/(\\pi n_0\\alpha)\\)。",
+      "若真实折射率还有 \\(n(r)=n_0[1-\\alpha^2r^2/2+\\beta r^4+\\cdots]\\)，近轴光线方程变成幅度依赖的非线性振荡，节距随振幅改变并损害自成像。对于 \\(r\\sim1/\\alpha\\) 或高数值孔径，简谐近轴模型不再精确；Gaussian模式还会受材料吸收与衍射边界影响。"
+    ],
+    "tags": [
+      "GRIN光学",
+      "Fermat变分",
+      "Gaussian自成像"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "O267",
+    "title": "圆形孔径Fraunhofer衍射的Airy振幅与第一暗环",
+    "setup": "单色波长 \\(\\lambda\\) 的平面波垂直照射半径 \\(a\\) 的均匀圆孔，远场或透镜焦平面以小观察角 \\(\\theta\\) 表示。",
+    "q": [
+      "从Fraunhofer积分得到二维Fourier变换。",
+      "利用Bessel积分求Airy圆斑强度。",
+      "求第一暗环角与Rayleigh分辨标度。",
+      "讨论孔径变小与环纹能量重新分布。"
+    ],
+    "s": [
+      "远场复振幅与孔面均匀透过函数的二维Fourier变换成正比。令横向波矢 \\(q=k\\sin\\theta\\)，角积分 \\(\\int_0^{2\\pi}e^{iqr\\cos\\phi}d\\phi=2\\pi J_0(qr)\\)，故振幅 \\(A(q)\\propto2\\pi\\int_0^arJ_0(qr)dr\\)。",
+      "使用 \\(\\int_0^arJ_0(qr)dr=aJ_1(qa)/q\\)，归一复振幅 \\(A(\\theta)/A(0)=2J_1(x)/x\\)，其中 \\(x=ka\\sin\\theta\\)。故强度 \\(I(\\theta)/I(0)=[2J_1(x)/x]^2\\)，中心按 \\(J_1(x)\\sim x/2\\) 连续趋1。",
+      "Bessel函数 \\(J_1\\) 首个正零点为 \\(x_1\\approx3.831706\\)，因此 \\(\\sin\\theta_1=x_1/(ka)\\approx1.22\\lambda/D\\)，\\(D=2a\\)。Rayleigh判据将一个点像中心放置到另一个点像第一暗环作为分辨参考尺度，但不是严格的信息理论极限。",
+      "当 \\(D\\) 减半，第一暗环角约增加一倍，中心主瓣扩展。透过孔径的总功率按面积 \\(\\pi a^2\\) 下降，但归一化衍射强度图形仍服从 \\(x=ka\\sin\\theta\\) 的自相似尺度。不可将远场中心归一强度保持1误解释为总能量不变。"
+    ],
+    "tags": [
+      "Bessel衍射",
+      "Airy斑",
+      "Rayleigh分辨"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "O268",
+    "title": "Pockels电光调制器的半波电压、偏振投影与小信号灵敏度",
+    "setup": "一块长 \\(L\\) 的单轴电光晶体夹在电极间距 \\(d\\) 的平行电极中，寻常折射率 \\(n_o\\) 不随电压变化，非寻常折射率 \\(n_e(V)\\approx n_{e0}-n_{e0}^3r_{\\rm eff}V/(2d)\\)，入射线偏振与两本征轴成 \\(45^\\circ\\) 且后接交叉检偏器。",
+    "q": [
+      "推导电压诱导的两正交本征波相位差。",
+      "求绝对半波电压及调制器输出强度。",
+      "在正交检偏器输出的正交工作点求电压灵敏度。",
+      "求晶体长、极间距等参数的灵敏度与强场失效范围。"
+    ],
+    "s": [
+      "两个偏振本征分量积累的相位分别为 \\(\\phi_o=k_0n_oL\\)、\\(\\phi_e(V)=k_0n_e(V)L\\)，其中 \\(k_0=2\\pi/\\lambda\\)。相对相位 \\(\\delta(V)=\\phi_e-\\phi_o=\\delta_0-\\pi(n_{e0}^3r_{\\rm eff}L/(\\lambda d))V\\)，\\(\\delta_0=2\\pi(n_{e0}-n_o)L/\\lambda\\)。故电压控制相位差是线性Pockels效应，不依赖传播中光强。",
+      "令 \\(V_\\pi=\\lambda d/(n_{e0}^3|r_{\\rm eff}|L)\\)，则电压变化 \\(|\\Delta V|=V_\\pi\\) 对应差相位移动 \\(\\pi\\)。输入归一Jones态 \\((1,1)^T/\\sqrt2\\)，晶体后成为 \\((1,e^{i\\delta})^T/\\sqrt2\\)（略去公共相位）。交叉检偏器取 \\((1,-1)^T/\\sqrt2\\)，透射强度比为 \\(I_{\\rm out}/I_{\\rm in}=|1-e^{i\\delta}|^2/4=\\sin^2(\\delta/2)\\)。",
+      "输出强度 \\(I(V)=I_0\\sin^2[\\delta(V)/2]\\)，直接求导 \\(dI/dV=(I_0/2)\\sin\\delta\\,d\\delta/dV\\)。在偏置 \\(\\delta_b=\\pi/2\\) 的正交工作点 \\(|dI/dV|_{\\max}=I_0\\pi/(2V_\\pi)\\)，能对很小的电压变化作近似线性光强响应；在极大或极小输出点 \\(\\sin\\delta=0\\) 则一阶强度灵敏度为零。",
+      "因为 \\(V_\\pi\\propto d/L\\)，增大光电作用长度或缩小电极间距均降低半波电压，但极端设计会增加电容、带宽限制及光学吸收。在强场 \\(|r_{\\rm eff}V/d|\\) 不再小的情况下，折射率线性化和忽略电光晶体横向场不均匀的近似失效，不能用 \\(V_\\pi\\) 单一指标替代器件完整响应。"
+    ],
+    "tags": [
+      "Pockels效应",
+      "调制器传输函数",
+      "相位灵敏度"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "O269",
+    "title": "Fabry–Pérot多光束干涉的Airy公式与精细度",
+    "setup": "两相同无损平行镜的强度反射率 \\(0<R<1\\)，腔长 \\(L\\)，折射率 \\(n\\)，法向入射波长 \\(\\lambda\\)，忽略横模与镜相位色散。",
+    "q": [
+      "对无限多次透射场求几何级数。",
+      "导出标准Airy透过率曲线。",
+      "求自由光谱范围及高反射率精细度。",
+      "解释镜损耗和色散如何修改理想结果。"
+    ],
+    "s": [
+      "单程相位为 \\(\\varphi=2\\pi nL/\\lambda\\)，往返相位 \\(\\delta=2\\varphi\\)。镜的振幅反射模平方为 \\(R\\)，总透射振幅为 \\(t^2 e^{i\\varphi}\\sum_{m=0}^{\\infty}(Re^{i\\delta})^m=t^2e^{i\\varphi}/(1-Re^{i\\delta})\\)，无损镜满足 \\(|t|^2=1-R\\)。",
+      "取强度平方得 \\(\\mathcal T(\\delta)=(1-R)^2/[1+R^2-2R\\cos\\delta]\\)。用 \\(1+R^2-2R\\cos\\delta=(1-R)^2+4R\\sin^2(\\delta/2)\\)，得到 \\(\\mathcal T=1/[1+F\\sin^2(\\delta/2)]\\)，其中系数 \\(F=4R/(1-R)^2\\)。",
+      "纵模条件 \\(\\delta=2\\pi m\\)，相邻频率差 \\(\\Delta\\nu_{\\rm FSR}=c/(2nL)\\)。在 \\(R\\to1\\) 时半峰条件 \\(F\\sin^2(\\delta/2)=1\\)，相位半宽约 \\(2/\\sqrt F\\)，全宽约 \\(4/\\sqrt F\\)，精细度 \\(\\mathcal F\\approx\\pi\\sqrt R/(1-R)\\)。",
+      "若腔内吸收或散射存在，往返振幅系数不再恰为 \\(R\\)，峰透射率低于1；若镜面相位随频率改变，则 \\(\\Delta\\nu_{\\rm FSR}\\) 要由总往返相位导数确定。理想 \\(c/(2nL)\\) 只在介质与反射相位可视为常数时成立。"
+    ],
+    "tags": [
+      "Fabry-Perot",
+      "多束干涉",
+      "腔精细度"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "O270",
+    "title": "衍射光栅的闪耀角与角分辨率色散",
+    "setup": "反射光栅光栅间距 \\(d\\)，入射与出射角 \\(\\alpha,\\beta\\) 相对于法线按同一侧约定，衍射级次 \\(m\\) 和真空波长 \\(\\lambda\\)，有 \\(d(\\sin\\alpha+\\sin\\beta)=m\\lambda\\)。",
+    "q": [
+      "由相邻沟槽相位差求光栅方程。",
+      "固定入射角求角度色散。",
+      "计算N条均匀光栅槽的Rayleigh分辨本领。",
+      "建立闪耀条件与镜面反射方向匹配。"
+    ],
+    "s": [
+      "相邻两槽的入射光程差为 \\(d\\sin\\alpha\\)，出射方向光程差为 \\(d\\sin\\beta\\)。相长干涉需 \\(k d(\\sin\\alpha+\\sin\\beta)=2\\pi m\\)，所以 \\(d(\\sin\\alpha+\\sin\\beta)=m\\lambda\\)，只有满足 \\(|m\\lambda/d-\\sin\\alpha|\\le1\\) 的级次能传播。",
+      "对光栅方程固定 \\(\\alpha\\) 求波长微分，得 \\(d\\cos\\beta\\,d\\beta=m,d\\lambda\\)，因此 \\(d\\beta/d\\lambda=m/(d\\cos\\beta)\\)。当 \\(\\cos\\beta\\) 很小时形式角度色散很大，但掠射角光学效率及实际孔径变得关键。",
+      "对 \\(N\\) 条等间距槽，相位因子之和形成 \\(\\sin(N\\Delta/2)/\\sin(\\Delta/2)\\) 的主峰；第一零点相位偏移约 \\(2\\pi/N\\)。将两个邻近谱线分离到Rayleigh极限，得 \\(\\lambda/\\Delta\\lambda\\approx mN\\)，不是单独由槽宽决定。",
+      "若锯齿槽面法线相对总法线倾角为 \\(\\theta_B\\)，单个斜面镜面反射最强方向近似满足 \\(\\alpha+\\beta=2\\theta_B\\)（按约定同侧角）。同时需满足光栅衍射方程，才能使所选级次落在闪耀包络峰；真实效率还需考虑偏振和槽形矢量衍射。"
+    ],
+    "tags": [
+      "光栅色散",
+      "谱线分辨",
+      "闪耀效率"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "O271",
+    "title": "有限低折射率间隙中的受挫全反射透射",
+    "setup": "高折射率介质 \\(n_1\\) 通过厚 \\(d\\) 的低折射率层 \\(n_2<n_1\\) 与另一高折射率介质耦合。入射角使 \\(n_1\\sin\\theta>n_2\\)，取TE偏振。",
+    "q": [
+      "求低折射层中的虚法向波数。",
+      "解释有限厚度下为何允许透射。",
+      "求厚势垒极限的透射指数依赖。",
+      "讨论接近临界角与能量守恒。"
+    ],
+    "s": [
+      "切向动量守恒给 \\(k_x=k_0n_1\\sin\\theta\\)。低折射层法向波数 \\(k_{z2}^2=k_0^2n_2^2-k_x^2<0\\)，写 \\(k_{z2}=i\\kappa\\) 且 \\(\\kappa=k_0\\sqrt{n_1^2\\sin^2\\theta-n_2^2}>0\\)。层内场由增衰两支指数线性组合构成。",
+      "单独半无限低折射介质内的法向平均Poynting流为零，但有限厚度薄层在第二界面形成重新传播的出射波。解两界面的 \\(E_t,H_t\\) 连续条件必须同时包含两个倏逝指数分量，不能只保留 \\(e^{-\\kappa z}\\) 一个分量。",
+      "用薄层传输矩阵写透射振幅分母含 \\(\\cosh(\\kappa d)\\) 与 \\(\\sinh(\\kappa d)\\)；当 \\(\\kappa d\\gg1\\) 时分母 \\(\\propto e^{\\kappa d}\\)，故透射率 \\(T\\propto e^{-2\\kappa d}\\)，前因子由两侧折射率和偏振阻抗决定。",
+      "在 \\(\\theta\\to\\theta_c^+\\) 时 \\(\\kappa\\to0\\)，厚势垒指数近似失效，应使用完整传输矩阵。若三层介质均无损且入射、出射均为传播波，则功率满足 \\(R+T=1\\)。受挫全反射不是吸收，也不能推断其有超光速信号传送。"
+    ],
+    "tags": [
+      "受挫全反射",
+      "倏逝耦合",
+      "薄膜传输"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "O272",
+    "title": "van Cittert–Zernike定理下均匀圆光源的空间相干度",
+    "setup": "远场空间非相干、角半径 \\(\\theta_s\\ll1\\) 的均匀圆盘光源，被两个相距基线长度 \\(B\\) 的孔径观测，中心波长 \\(\\lambda\\)，满足窄带傍轴近似。",
+    "q": [
+      "建立强度分布Fourier归一互相干函数。",
+      "评价角积分与Bessel函数结果。",
+      "求第一次相干零点的干涉基线。",
+      "讨论非均匀亮度对可见度曲线的影响。"
+    ],
+    "s": [
+      "根据van Cittert–Zernike定理，归一复相干度 \\(\\gamma_{12}=\\int I(\\boldsymbol\\theta)e^{-i2\\pi\\boldsymbol B\\cdot\\boldsymbol\\theta/\\lambda}d^2\\theta/\\int I(\\boldsymbol\\theta)d^2\\theta\\)。均匀圆光源 \\(I(\\theta)=I_0\\) 在 \\(\\theta\\le\\theta_s\\)，所以二维积分为圆盘Fourier变换。",
+      "取基线沿极坐标零方向，角积分是 \\(2\\pi J_0(2\\pi B\\theta/\\lambda)\\)。径向积分 \\(\\int_0^{\\theta_s}\\theta J_0(q\\theta)d\\theta=\\theta_sJ_1(q\\theta_s)/q\\)，归一后 \\(\\gamma_{12}=2J_1(x)/x\\)，其中 \\(x=2\\pi B\\theta_s/\\lambda\\)。",
+      "第一非零 \\(J_1\\) 根为 \\(x_1\\approx3.831706\\)。因此 \\(B_1=x_1\\lambda/(2\\pi\\theta_s)\\approx0.610\\lambda/\\theta_s\\)。若用圆盘角直径 \\(\\Theta=2\\theta_s\\) 表示，则 \\(B_1\\approx1.22\\lambda/\\Theta\\)，可以由干涉可见度零点反推光源角尺寸。",
+      "若真实光源存在临边昏暗、热点或不对称结构，角强度不再是均匀圆盘，\\(\\gamma_{12}\\) 需对实际亮度作归一二维Fourier变换，零点位置和相位均可能变化。该定理要求源点之间统计不相干，不适用于单一空间相干激光圆孔的相同解释。"
+    ],
+    "tags": [
+      "空间相干",
+      "Fourier可见度",
+      "恒星干涉"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "O273",
+    "title": "周期光栅近轴Fresnel传播的Talbot自成像与半周期平移",
+    "setup": "无限一维周期光栅的复透射函数 \\(t(x+d)=t(x)\\)，周期 \\(d\\gg\\lambda\\)，单色相干平面波照明；在传播方向 \\(z>0\\) 使用近轴Fresnel衍射近似。",
+    "q": [
+      "将光栅复振幅表示为离散空间Fourier级数。",
+      "推导Fresnel传播时各衍射级次的二次相位。",
+      "求Talbot自成像距离并验证完全重现。",
+      "求半Talbot距离的平移图像及失效条件。"
+    ],
+    "s": [
+      "周期边界允许将入射复振幅展开为 \\(U(x,0)=t(x)=\\sum_{m\\in\\mathbb Z}c_me^{i2\\pi mx/d}\\)，其中 \\(c_m=d^{-1}\\int_0^dt(x)e^{-i2\\pi mx/d}dx\\)。每个离散谐波的横向波数为 \\(k_{x,m}=2\\pi m/d\\)，不是连续任意角谱；光栅结构已包含于复系数 \\(c_m\\)。",
+      "自由空间色散 \\(k_{z,m}=\\sqrt{k_0^2-k_{x,m}^2}\\)，在 \\(|k_{x,m}|\\ll k_0=2\\pi/\\lambda\\) 时展开为 \\(k_{z,m}\\approx k_0-k_{x,m}^2/(2k_0)\\)。去掉公共相位 \\(e^{ik_0z}\\) 后每个级次获得 \\(e^{-ik_{x,m}^2z/(2k_0)}=\\exp[-i\\pi\\lambda z m^2/d^2]\\)。因此 \\(U(x,z)\\propto\\sum_m c_me^{i2\\pi mx/d}e^{-i\\pi\\lambda zm^2/d^2}\\)。",
+      "取 \\(z_T=2d^2/\\lambda\\)，每个Fourier级次的相位因子为 \\(e^{-i2\\pi m^2}=1\\)，与 \\(m\\) 无关。故 \\(U(x,z_T)=e^{ik_0z_T}t(x)\\)，强度 \\(I(x,z_T)=I(x,0)\\)，形成Talbot自成像。这是相干近轴场的精确周期性，不是几何光学单根射线的成像。",
+      "当 \\(z=z_T/2=d^2/\\lambda\\)，相位因子 \\(e^{-i\\pi m^2}=(-1)^m=e^{i\\pi m}\\)，所以 \\(U(x,z_T/2)\\propto\\sum_m c_me^{i2\\pi m(x+d/2)/d}=t(x+d/2)\\)，得到半周期横向位移。若光源不相干、光栅有限孔径、\\(d\\) 接近 \\(\\lambda\\) 或高衍射级非近轴，严格Talbot自成像会退化。"
+    ],
+    "tags": [
+      "Talbot效应",
+      "Fresnel级次相位",
+      "光栅自成像"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  }
+]
