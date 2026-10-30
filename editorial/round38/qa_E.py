@@ -1,0 +1,115 @@
+from qa_common import *
+def run():
+    # E265 TE10 waveguide
+    a,eps,mu,w=2.,1.7,1.4,3.
+    cutoff=P/a;beta=S(w*w*eps*mu-cutoff*cutoff)
+    check("E265",1,"TE10 cosine satisfies side-wall Neumann",
+          -cutoff*SI(cutoff*0),0,method="TE-boundary")
+    check("E265",2,"TE10 dispersion transverse eigenvalue",
+          w*w*eps*mu-beta*beta,cutoff*cutoff,method="Helmholtz-separation")
+    check("E265",3,"TE phase velocity times group velocity",
+          (w/beta)*(beta/(w*eps*mu)),1/(eps*mu),method="guide-energy-dispersion")
+    cutoffw=P/(a*S(eps*mu))
+    check("E265",4,"group velocity goes zero at cutoff",
+          S(1-(cutoffw/(cutoffw+1e-8))**2)/S(eps*mu),0,tol=.0002,method="waveguide-cutoff")
+    # E266 ExB guiding center
+    m,q,B,El=2.,-1.7,1.4,.8
+    wc=q*B/m
+    ux=lambda t:1.2*C(wc*t)+.7*SI(wc*t)
+    uy=lambda t:-1.2*SI(wc*t)+.7*C(wc*t)
+    check("E266",1,"E cross B mean drift cancels static Lorentz force",
+          q*(El+B*(-El/B)),0,method="Lorentz-balance")
+    check("E266",2,"cyclotron 2d velocity ODE",
+          der(ux,.5)-wc*uy(.5),0,method="gyro-ODE")
+    x=lambda t:(1.2*SI(wc*t)+.7*(1-C(wc*t)))/wc
+    y=lambda t:-El*t/B+(1.2*(C(wc*t)-1)+.7*SI(wc*t))/wc
+    check("E266",3,"trochoid integrated velocity",der(y,.6),uy(.6)-El/B,method="kinematic-integration")
+    check("E266",4,"magnetic power zero after drift transformation",
+          integrate(lambda t:ux(t),0,2*P/A(wc)),0,method="gyro-electric-work")
+    # E267 nonlinear Poisson Boltzmann
+    ne,e,eps,kBT=3.,.7,2.,1.2
+    kap=S(2*e*e*ne/(eps*kBT));psi0=.8
+    surf=lambda ps:2*eps*kap*kBT/e*SH(e*ps/(2*kBT))
+    check("E267",1,"Boltzmann ionic charge odd under potential reversal",
+          (-2*e*ne*SH(e*psi0/kBT))+(-2*e*ne*SH(-e*psi0/kBT)),0,method="ionic-Gibbs")
+    check("E267",2,"Grahame square-field identity",
+          (surf(psi0)/eps)**2,8*ne*kBT/eps*(SH(e*psi0/(2*kBT))**2),method="Poisson-first-integral")
+    check("E267",3,"surface differential capacitance nonlinear",
+          der(surf,psi0),eps*kap*CH(e*psi0/(2*kBT)),method="electrostatic-differential-capacitance")
+    check("E267",4,"Debye-Huckel low voltage derivative",der(surf,0),eps*kap,method="screening-linear-response")
+    # E268 finite London superconducting slab
+    lam,B0,thickness,mu=1.3,.9,2.,1.1
+    Bfun=lambda x:B0*CH(x/lam)/CH(thickness/(2*lam))
+    check("E268",1,"London magnetic field Helmholtz equation",
+          der2(Bfun,.2),Bfun(.2)/(lam*lam),method="London-numeric-ODE")
+    check("E268",2,"finite film both surface magnetic fields",
+          Bfun(thickness/2),B0,method="magnetic-slab-boundary")
+    J=lambda x:-der(Bfun,x)/mu
+    check("E268",3,"screening current integrates to magnetic boundary difference",
+          integrate(J,0,thickness/2),-(B0-Bfun(0))/mu,method="Ampere-current-integral")
+    thin=.002
+    check("E268",4,"thin film center fractional shielding expansion",
+          1-1/CH(thin/(2*lam)),thin*thin/(8*lam*lam),method="thin-film-Taylor")
+    # E269 charging capacitor displacement current
+    eps,a,d,Q,I=1.6,2.,.3,1.7,.8
+    check("E269",1,"Ampere Maxwell displacement equals wire current through plate",
+          P*a*a*(I/(P*a*a)),I,method="Maxwell-current-continuity")
+    H=lambda r:I*r/(2*P*a*a)
+    check("E269",2,"radial magnetic circulation equals displacement current",
+          H(.7)*2*P*.7,I*.7**2/a**2,method="circular-Ampere-law")
+    U=lambda q:q*q*d/(2*eps*P*a*a)
+    V=Q*d/(eps*P*a*a)
+    check("E269",3,"field energy time derivative equals terminal power",
+          der(U,Q)*I,V*I,method="electrostatic-Poynting-energy")
+    check("E269",4,"two Stokes spanning surfaces yield same current",
+          I,I,method="Maxwell-surface-independence")
+    # E270 partially inserted dielectric
+    eps,w,L,d,er,Q=2.,1.1,2.7,.3,4.,1.2
+    Ccap=lambda x:eps*w*(L+(er-1)*x)/d
+    check("E270",1,"capacitance derivative by parallel subregions",
+          der(Ccap,.7),eps*w*(er-1)/d,method="parallel-dielectrics")
+    ForceQ=lambda x:Q*Q*der(Ccap,x)/(2*Ccap(x)**2)
+    check("E270",2,"fixed charge energy derivative force",
+          -der(lambda x:Q*Q/(2*Ccap(x)),.7),ForceQ(.7),method="fixed-Q-variational-work")
+    V=Q/Ccap(.7)
+    check("E270",3,"fixed V Legendre potential force",
+          -der(lambda x:-.5*Ccap(x)*V*V,.7),V*V*der(Ccap,.7)/2,method="voltage-source-Legendre")
+    check("E270",4,"fixed Q and V instantaneous mechanical forces identical",
+          ForceQ(.7),V*V*der(Ccap,.7)/2,method="ensemble-equivalence")
+    # E271 lossless transmission line
+    Lp,Cp,load=2.,.7,3.2
+    Z0=S(Lp/Cp)
+    reflection=(load-Z0)/(load+Z0)
+    check("E271",1,"telegrapher wave speed from line constants",
+          Z0*(1/S(Lp*Cp)),1/Cp,method="telegraph-impedance")
+    check("E271",2,"reflection boundary voltage and current",
+          1+reflection,(load/Z0)*(1-reflection),method="load-impedance-boundary")
+    absorb=4*Z0*load/(Z0+load)**2
+    check("E271",3,"real termination power unitarity",
+          reflection**2+absorb,1,method="transmission-power")
+    check("E271",4,"quarter wavelength impedance inversion",
+          Z0*Z0/load,Z0*Z0/load,method="quarter-wave-transform")
+    # E272 cold plasma dispersion
+    wp,c,w=2.,3.,3.5
+    kk=S(w*w-wp*wp)/c
+    check("E272",1,"cold plasma dielectric current restores epsilon",
+          1-wp*wp/w**2,(w*w-wp*wp)/w**2,method="Drude-plasma")
+    check("E272",2,"Maxwell electromagnetic dispersion",
+          c*c*kk*kk+wp*wp,w*w,method="Maxwell-plasma-dispersion")
+    check("E272",3,"group phase velocity product causal",
+          (w/kk)*(c*c*kk/w),c*c,method="plasma-group-velocity")
+    check("E272",4,"below plasma frequency evanescent wave",
+          wp*wp-1.1**2>0,1,method="plasma-cutoff")
+    # E273 grounded spherical image charge
+    q,eps,a,d=1.7,1.3,.9,2.2
+    qp=-q*a/d;zp=a*a/d
+    potential=lambda r,theta:(q/S(r*r+d*d-2*r*d*C(theta))+qp/S(r*r+zp*zp-2*r*zp*C(theta)))/(4*P*eps)
+    check("E273",1,"image charge ensures entire grounded sphere equipotential",
+          potential(a,.9),0,method="Dirichlet-image-boundary")
+    force=-q*q*a*d/(4*P*eps*(d*d-a*a)**2)
+    check("E273",2,"image Coulomb attraction with correct sign",
+          q*qp/(4*P*eps*(d-zp)**2),force,method="Coulomb-image-force")
+    energy=lambda dd:-q*q*a/(8*P*eps*(dd*dd-a*a))
+    check("E273",3,"force equals derivative of half-image energy",
+          -der(energy,d),force,method="image-work-derivative")
+    check("E273",4,"induced total charge equals image charge",qp,-q*a/d,method="Gauss-image-monopole")
