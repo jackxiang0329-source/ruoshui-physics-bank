@@ -1,0 +1,24 @@
+\subsection*{W228\quad 受张力Euler–Bernoulli梁的色散与自由端自然边界}
+均匀细梁弯曲刚度$EI>0$、质量线密度$\mu>0$，沿轴向有恒定拉力$T\ge0$，忽略阻尼和剪切形变。横向小位移$y(x,t)$。
+(1) 从动能、弯曲能和拉伸能变分推导梁方程。
+(2) 求无限长梁的弯曲—张力混合色散、相速与群速。
+(3) 给出两种回复机制交叉波数并分析长短波极限。
+(4) 对一端固支、另一端自由的有限梁，严格推导四个边界条件。
+\par\textbf{逐问解析}
+(1) 作用量为$\mathcal S=\int dt\int dx[\mu y_t^2/2-Ty_x^2/2-EIy_{xx}^2/2]$。对$y$变分并分部积分两次，体项给$-\mu y_{tt}+Ty_{xx}-EIy_{xxxx}=0$，故运动方程$\mu y_{tt}+EIy_{xxxx}-Ty_{xx}=0$。拉力项抵抗横向曲率，弯曲项对应四阶空间导数。
+(2) 代入$y=Ae^{i(kx-\omega t)}$，有$\mu\omega^2=EIk^4+Tk^2$。正向波相速度$v_p=\omega/k=\sqrt{(EI k^2+T)/\mu}$；群速度$v_g=d\omega/dk=(2EIk^3+Tk)/(\mu\omega)$。当弯曲项主导时$v_g\simeq2v_p$，不能把此色散波的能流速度简单设为其相速度。
+(3) 两种势能量级在$EIk^4\sim Tk^2$时平衡，故$k_*=\sqrt{T/(EI)}$（$T=0$时无交叉尺度）。若$k\ll k_*$且$T>0$，$\omega\simeq\sqrt{T/\mu}|k|$，接近非色散张紧弦波；若$k\gg k_*$，$\omega\simeq\sqrt{EI/\mu}\,k^2$，弯曲色散成为主导。
+(4) 变分后的边界项为$[(-Ty_x+EI y_{xxx})\delta y-EIy_{xx}\delta y_x]$的符号约定等价形式。固支端$x=0$几何条件$y(0,t)=y_x(0,t)=0$；自由端$x=L$独立允许$\delta y,\delta y_x$变化，必须满足$EIy_{xx}(L,t)=0$与$EIy_{xxx}(L,t)-Ty_x(L,t)=0$，分别对应端弯矩为零和有效端剪力为零。任何仅给$y_{xx}=y_{xxx}=0$的自由端条件都只适用于$T=0$。
+\par\medskip
+\subsection*{W229\quad Sine–Gordon拓扑孤子、Lorentz收缩与精确能量}
+连续场$\phi(x,t)$满足$\phi_{tt}-c^2\phi_{xx}+\omega_0^2\sin\phi=0$，$c,\omega_0>0$，能量密度$\mathcal E=\phi_t^2/2+c^2\phi_x^2/2+\omega_0^2(1-\cos\phi)$。
+(1) 利用静态一阶积分求连接0与$2\pi$的拓扑kink。
+(2) 构造以恒定速度$|v|<c$传播的移动解。
+(3) 求静止kink能量和移动kink的Lorentz能量。
+(4) 证明拓扑荷守恒并说明该解不同于小振幅线性波。
+\par\textbf{逐问解析}
+(1) 静态方程$-c^2\phi''+\omega_0^2\sin\phi=0$，乘$\phi'$积分得$c^2\phi'^2/2=\omega_0^2(1-\cos\phi)$，积分常数由无穷远真空边界取零。取$\ell=c/\omega_0$，分离变量得到$\phi_K(x)=4\arctan e^{(x-x_0)/\ell}$。其导数$\phi_K'=2\operatorname{sech}[(x-x_0)/\ell]/\ell$，代回方程可逐式核验。
+(2) 该方程在以$c$为极限速度的时空缩放下具Lorentz型不变性。令$\gamma_v=(1-v^2/c^2)^{-1/2}$，把静态坐标替换为$\gamma_v(x-vt-x_0)$，得到$\phi_{K,v}=4\arctan\exp[\gamma_v(x-vt-x_0)/\ell]$。固定相位宽度$\ell_v=\ell/\gamma_v=\ell\sqrt{1-v^2/c^2}$，速度趋$c$时 kink 空间收缩。
+(3) 静态解有$c^2\phi_x^2/2=\omega_0^2(1-\cos\phi)=2\omega_0^2\operatorname{sech}^2[(x-x_0)/\ell]$，总能量$E_0=4\omega_0^2\int\operatorname{sech}^2[(x-x_0)/\ell]dx=8c\omega_0$。移动解满足$\phi_t=-v\phi_x$且$\phi_x$增长$\gamma_v$，将其代入能量积分并换元得$E_v=\gamma_v E_0$，体现孤子整体的相对论色散。
+(4) 对有限能量边界，场在$x\to\pm\infty$必须落于势的真空$\phi=2\pi n$，定义$Q=[\phi(+\infty)-\phi(-\infty)]/(2\pi)\in\mathbb Z$。时间演化若保持端点真空，$dQ/dt=[\phi_t(+\infty)-\phi_t(-\infty)]/(2\pi)=0$。本kink的$Q=1$无法连续缩成$Q=0$的小振幅线性波，除非破坏边界或引入缺陷。
+\par\medskip
