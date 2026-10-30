@@ -1,0 +1,254 @@
+[
+  {
+    "id": "E265",
+    "title": "矩形金属波导TE10模式的截止、阻抗及群速度",
+    "setup": "理想导体矩形波导横截面 \\(0<x<a,0<y<b\\)，填充 \\((\\epsilon,\\mu)\\) 均匀无损介质，波沿 \\(z\\) 传播，选最低阶 \\(\\mathrm{TE}_{10}\\) 模式。",
+    "q": [
+      "由横向Helmholtz边值问题构造纵向磁场。",
+      "从Maxwell方程求轴向传播常数与截止频率。",
+      "求TE模式波阻抗与群相速度乘积。",
+      "讨论趋近截止时的能量输运与色散。"
+    ],
+    "s": [
+      "TE模式定义 \\(E_z=0\\)，其 \\(H_z\\) 满足 \\((\\nabla_t^2+k_c^2)H_z=0\\)。理想导体上切向电场为零，对TE纵磁场等价于 \\(\\partial_nH_z=0\\)。最低非恒定本征模取 \\(H_z=H_0\\cos(\\pi x/a)e^{i(\\beta z-\\omega t)}\\)，截止波数 \\(k_c=\\pi/a\\)。",
+      "总介质波数 \\(k=\\omega\\sqrt{\\mu\\epsilon}\\)，分离得到 \\(\\beta^2=k^2-k_c^2=\\omega^2\\mu\\epsilon-\\pi^2/a^2\\)。传播需要 \\(\\beta\\) 为实，故 \\(\\omega>\\omega_c=\\pi/(a\\sqrt{\\mu\\epsilon})\\)；低于截止时沿轴向倏逝。",
+      "TE横向波阻抗 \\(Z_{\\mathrm{TE}}=\\omega\\mu/\\beta\\)，相速度 \\(v_p=\\omega/\\beta\\)，群速度 \\(v_g=d\\omega/d\\beta=\\beta/(\\omega\\mu\\epsilon)\\)。所以 \\(v_pv_g=1/(\\mu\\epsilon)\\)，虽然 \\(v_p\\) 可高于介质光速，但能量传递群速低于该速度。",
+      "当 \\(\\omega\\to\\omega_c^+\\)，\\(\\beta\\to0\\)、\\(Z_{\\mathrm{TE}}\\to\\infty\\)、\\(v_g\\to0\\)，而 \\(v_p\\to\\infty\\)。无限相速度不代表超光速信号；实际边界损耗、频带有限和波导群延迟色散决定脉冲传播，近截止需完整模式匹配。"
+    ],
+    "tags": [
+      "波导本征值",
+      "Maxwell边界",
+      "截止色散"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "E266",
+    "title": "带电粒子垂直进入均匀电磁场的漂移与回旋",
+    "setup": "电荷 \\(q\\ne0\\)、质量 \\(m\\) 粒子置于 \\(\\boldsymbol B=B\\hat z\\) 与 \\(\\boldsymbol E=E\\hat x\\)，忽略辐射耗散和碰撞，初始速度 \\((v_{x0},v_{y0})\\)。",
+    "q": [
+      "写平面Lorentz方程并求漂移速度。",
+      "平移至漂移坐标并解回旋速度。",
+      "积分得到旋轮线型轨迹及回旋半径。",
+      "通过功率恒等式检验外电场能量交换。"
+    ],
+    "s": [
+      "速度满足 \\(m\\dot v_x=q(E+Bv_y)\\)，\\(m\\dot v_y=-qBv_x\\)。取稳态 \\(\\dot v_x=\\dot v_y=0\\) 得 \\(v_{dx}=0,\\ v_{dy}=-E/B\\)，即 \\(\\boldsymbol v_d=\\boldsymbol E\\times\\boldsymbol B/B^2\\)，与粒子电荷符号无关。",
+      "令 \\(u_x=v_x\\)、\\(u_y=v_y+E/B\\)，则 \\(\\dot u_x=\\omega_cu_y\\)、\\(\\dot u_y=-\\omega_cu_x\\)，带符号 \\(\\omega_c=qB/m\\)。解为 \\(u_x=A\\cos\\omega_ct+C\\sin\\omega_ct\\)，\\(u_y=-A\\sin\\omega_ct+C\\cos\\omega_ct\\)，由初值确定两个常量。",
+      "以 \\(A=u_x(0),C=u_y(0)\\)，积分得 \\(x(t)-x_0=[A\\sin\\omega_ct+C(1-\\cos\\omega_ct)]/\\omega_c\\)，\\(y(t)-y_0=-Et/B+[A(\\cos\\omega_ct-1)+C\\sin\\omega_ct]/\\omega_c\\)。绕漂移中心回旋半径 \\(\\rho_L=\\sqrt{A^2+C^2}/|\\omega_c|\\)。",
+      "磁力始终垂直速度，\\(d(mv^2/2)/dt=q\\boldsymbol E\\cdot\\boldsymbol v=qEv_x\\)。代入 \\(v_x=u_x\\) 周期振荡，平均功率在完整回旋周期为零；电场可使瞬时实验系动能变化，却不会引起无限加速。若电场随时空变化，简单恒定漂移解不再适用。"
+    ],
+    "tags": [
+      "Lorentz动力学",
+      "E交B漂移",
+      "回旋轨迹"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "E267",
+    "title": "非线性Poisson–Boltzmann双电层的首积分与表面电荷",
+    "setup": "温度 \\(T\\) 的对称一价电解质，体相正负离子数密度均为 \\(n_0\\)，平面带电壁位于 \\(x=0\\)，溶液占 \\(x>0\\)，介电率 \\(\\epsilon\\)。",
+    "q": [
+      "建立Boltzmann离子分布与Poisson方程。",
+      "使用积分常数求Grahame第一积分。",
+      "推导表面电荷与表面电势的非线性关系。",
+      "求微小表面电势的Debye–Hückel极限。"
+    ],
+    "s": [
+      "热平衡局域离子浓度为 \\(n_\\pm(x)=n_0e^{\\mp e\\psi/(k_BT)}\\)，净电荷密度 \\(\\rho=e(n_+-n_-)=-2en_0\\sinh(e\\psi/(k_BT))\\)。Poisson方程 \\(\\psi''=-\\rho/\\epsilon=(2en_0/\\epsilon)\\sinh(e\\psi/(k_BT))\\)，远场 \\(\\psi,\\psi'\\to0\\)。",
+      "将方程乘以 \\(\\psi'\\) 并从无穷远积分，得 \\(\\tfrac12\\psi'^2=(2n_0k_BT/\\epsilon)[\\cosh(e\\psi/(k_BT))-1]\\)。用 \\(\\cosh u-1=2\\sinh^2(u/2)\\)，故 \\(|\\psi'|=\\sqrt{8n_0k_BT/\\epsilon}\\,|\\sinh(e\\psi/(2k_BT))|\\)，用于连接表面电荷。",
+      "壁面自由电荷密度 \\(\\sigma=-\\epsilon\\psi'(0^+)\\)。定义 \\(\\kappa_D^2=2e^2n_0/(\\epsilon k_BT)\\)，则 \\(\\sigma=2\\epsilon\\kappa_D(k_BT/e)\\sinh[e\\psi_0/(2k_BT)]\\)。它在大电势下非线性增长，不能把线性Debye电容外推到所有电压。",
+      "当 \\(|e\\psi|\\ll k_BT\\)，\\(\\sinh(e\\psi/(k_BT))\\simeq e\\psi/(k_BT)\\)，得 \\(\\psi''=\\kappa_D^2\\psi\\)。满足远场条件的解 \\(\\psi(x)=\\psi_0e^{-\\kappa_Dx}\\)，故低压电容每单位面积 \\(C_A=d\\sigma/d\\psi_0|_0=\\epsilon\\kappa_D\\)。"
+    ],
+    "tags": [
+      "非线性静电",
+      "双电层",
+      "Debye屏蔽"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "E268",
+    "title": "有限厚London超导薄膜的磁场屏蔽与表面电流",
+    "setup": "厚度 \\(d>0\\) 的均匀超导平板占 \\(-d/2<x<d/2\\)，平行表面外磁场 \\(B_0\\hat z\\)，London穿透深度 \\(\\lambda_L>0\\)，两侧环境磁场同为 \\(B_0\\)。",
+    "q": [
+      "由London与Ampère方程建立场方程。",
+      "求有限厚度磁感应强度剖面。",
+      "求屏蔽电流和每侧总表面电流。",
+      "求薄片极限下屏蔽效率与厚片极限。"
+    ],
+    "s": [
+      "London关系给 \\(\\nabla\\times\\boldsymbol J=-\\boldsymbol B/(\\mu_0\\lambda_L^2)\\)，与 \\(\\nabla\\times\\boldsymbol B=\\mu_0\\boldsymbol J\\) 联立得到 \\(\\nabla^2\\boldsymbol B=\\boldsymbol B/\\lambda_L^2\\)。平板一维情形 \\(B_z''=B_z/\\lambda_L^2\\)，边界 \\(B_z(\\pm d/2)=B_0\\)。",
+      "由两侧相同外场的偶对称性可排除 \\(\\sinh\\) 项，解为 \\(B_z(x)=B_0\\cosh(x/\\lambda_L)/\\cosh[d/(2\\lambda_L)]\\)。中心磁场 \\(B_z(0)=B_0\\operatorname{sech}[d/(2\\lambda_L)]\\)，厚片 \\(d\\gg\\lambda_L\\) 时中心场指数减小。",
+      "因为 \\((\\nabla\\times\\boldsymbol B)_y=-dB_z/dx\\)，得 \\(J_y(x)=-(B_0/(\\mu_0\\lambda_L))\\sinh(x/\\lambda_L)/\\cosh[d/(2\\lambda_L)]\\)。右半片积分 \\(\\int_0^{d/2}J_y dx=-(B_0/\\mu_0)[1-\\operatorname{sech}(d/(2\\lambda_L))]\\)，两侧电流反向。",
+      "若 \\(d\\ll\\lambda_L\\)，\\(B_z(0)/B_0\\simeq1-d^2/(8\\lambda_L^2)\\)，无法有效屏蔽平行磁场；若 \\(d\\gg\\lambda_L\\)，中心比值 \\(\\simeq2e^{-d/(2\\lambda_L)}\\)。这些结果适用于Meissner态，不包括涡旋穿透或接近临界场的非线性。"
+    ],
+    "tags": [
+      "London方程",
+      "薄膜屏蔽",
+      "超导电流"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "E269",
+    "title": "充电平行板电容器中的位移电流与磁场一致性",
+    "setup": "半径 \\(a\\) 的圆形平行板电容器极板面积 \\(\\pi a^2\\)，极板间距远小于半径，忽略边缘场，外电路以总电流 \\(I(t)\\) 充电，间隙介电率 \\(\\epsilon\\)。",
+    "q": [
+      "由电荷守恒求间隙电位移变化率。",
+      "用Ampère–Maxwell定律求板间环向磁场。",
+      "求板间电能增长率并与输入功率比较。",
+      "说明不含位移电流会遇到的曲面矛盾。"
+    ],
+    "s": [
+      "极板自由电荷满足 \\(\\dot Q=I(t)\\)，板间电位移 \\(D_z=Q/(\\pi a^2)\\)。因此 \\(\\partial_tD_z=I(t)/(\\pi a^2)\\)，穿过半径 \\(r\\le a\\) 圆盘的位移电流为 \\(I_d(r)=I(t)r^2/a^2\\)，在 \\(r=a\\) 处等于导线传导电流。",
+      "对半径 \\(r<a\\) 的同轴圆环，积分式 \\(\\oint\\boldsymbol H\\cdot d\\boldsymbol l=d/dt\\int\\boldsymbol D\\cdot d\\boldsymbol S\\) 给 \\(2\\pi rH_\\phi=I(t)r^2/a^2\\)。故 \\(H_\\phi(r)=I(t)r/(2\\pi a^2)\\)，磁场在轴心为零并随 \\(r\\) 线性增大。",
+      "板间电压 \\(V=Qd/(\\epsilon\\pi a^2)\\)，储能 \\(U=Q^2d/(2\\epsilon\\pi a^2)=CV^2/2\\)。时间导数 \\(dU/dt=(Q/C)\\dot Q=VI\\)，与理想无损电容的输入电功一致；电磁场储能由边缘Poynting通量进入间隙。",
+      "同一闭合导线环路可张成穿过导线的曲面，也可张成穿过电容间隙的曲面。仅用 \\(\\oint Hdl=I_{\\mathrm{cond}}\\) 时两个曲面分别包住 \\(I\\) 与零，造成矛盾；引入 \\(\\partial_t\\boldsymbol D\\) 才使结果与曲面选择无关。"
+    ],
+    "tags": [
+      "位移电流",
+      "能量流",
+      "Maxwell一致性"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "E270",
+    "title": "固定电压与固定电荷下半插入介质板的吸引力",
+    "setup": "平行板电容器面积为 \\(wL\\)、板距 \\(d\\)，相对介电常数 \\(\\epsilon_r>1\\) 的介质以插入长度 \\(0<x<L\\) 填满板隙，边缘效应忽略，极板宽 \\(w\\)。",
+    "q": [
+      "从并联区域计算电容随插入距离。",
+      "固定电荷时由储能求介质受力。",
+      "固定电压时正确处理电源功并求力。",
+      "验证固定电压和固定电荷结果的瞬时一致性。"
+    ],
+    "s": [
+      "覆盖空气和介质的两块区域承受相同电压，因此并联电容 \\(C(x)=\\epsilon_0w(L-x)/d+\\epsilon_0\\epsilon_rw x/d=\\epsilon_0w[L+(\\epsilon_r-1)x]/d\\)。其导数 \\(C'(x)=\\epsilon_0w(\\epsilon_r-1)/d>0\\)。",
+      "若电容器与电源断开、总电荷 \\(Q\\) 固定，储能 \\(U_Q=Q^2/(2C(x))\\)。机械力为 \\(F_Q=-dU_Q/dx=Q^2C'(x)/(2C(x)^2)>0\\)，介质被吸入；力随 \\(x\\) 变化，因为电压随电容变化。",
+      "若端电压被保持 \\(V\\)，电容场能 \\(U_C=C(x)V^2/2\\) 随插入而增大，不能直接取其负导数求力。包括电源功后的热力学势 \\(\\mathcal F=U_C-VQ=-C(x)V^2/2\\)，故 \\(F_V=-d\\mathcal F/dx=V^2C'(x)/2>0\\)。",
+      "在同一瞬时状态 \\(Q=CV\\)，代入 \\(F_Q=Q^2C'/(2C^2)\\) 得 \\(F_Q=V^2C'/2=F_V\\)。两种协议的力函数不同，是因为移动后 \\(Q\\) 或 \\(V\\) 的变化规则不同；忽略电源会导致错误的力符号。"
+    ],
+    "tags": [
+      "热力学势",
+      "介质受力",
+      "电容变分"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "E271",
+    "title": "无损传输线端接负载的反射、驻波比与输入阻抗",
+    "setup": "均匀无损传输线每单位长度电感 \\(L'\\)、电容 \\(C'\\)，特性阻抗 \\(Z_0=\\sqrt{L'/C'}\\)，角频率 \\(\\omega>0\\)，线长 \\(\\ell\\)，负载阻抗 \\(Z_L\\)。",
+    "q": [
+      "由电报方程求前后行波传播。",
+      "求负载电压反射系数与能量反射率。",
+      "推导距负载 \\(\\ell\\) 处的输入阻抗。",
+      "求驻波比与开短路极限。"
+    ],
+    "s": [
+      "电报方程 \\(\\partial_zV=-L'\\partial_tI\\)、\\(\\partial_zI=-C'\\partial_tV\\) 导出波速 \\(v=1/\\sqrt{L'C'}\\)，相位常数 \\(\\beta=\\omega\\sqrt{L'C'}\\)。采用 \\(e^{i\\omega t}\\) 约定，电压 \\(V(z)=V_+e^{-i\\beta z}+V_-e^{i\\beta z}\\)，电流 \\(I(z)=Z_0^{-1}(V_+e^{-i\\beta z}-V_-e^{i\\beta z})\\)。",
+      "令负载位于 \\(z=0\\)，边界 \\(V(0)=Z_LI(0)\\) 解得 \\(\\Gamma_L=V_-/V_+=(Z_L-Z_0)/(Z_L+Z_0)\\)。对无损实负载，功率反射率 \\(R=|\\Gamma_L|^2\\)，吸收份额 \\(1-R\\)，匹配 \\(Z_L=Z_0\\) 时无反射。",
+      "将行波解代入 \\(Z_{\\mathrm{in}}=V(-\\ell)/I(-\\ell)\\)，利用正弦余弦恒等式化为 \\(Z_{\\mathrm{in}}=Z_0[Z_L+iZ_0\\tan(\\beta\\ell)]/[Z_0+iZ_L\\tan(\\beta\\ell)]\\)。四分之一波长且负载为实正时 \\(Z_{\\mathrm{in}}=Z_0^2/Z_L\\)，可实现阻抗变换。",
+      "对 \\(|\\Gamma_L|<1\\)，驻波最大最小电压幅比分别为 \\((1+|\\Gamma_L|)/(1-|\\Gamma_L|)\\)。开路 \\(Z_L\\to\\infty\\) 时 \\(\\Gamma_L\\to+1\\)，短路 \\(Z_L=0\\) 时 \\(\\Gamma_L=-1\\)，两者均全反射；若负载有增益或负阻，普通被动驻波比公式需重新界定。"
+    ],
+    "tags": [
+      "传输线",
+      "复反射",
+      "阻抗匹配"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "E272",
+    "title": "冷等离子体电磁波截止与相群速度",
+    "setup": "均匀无磁冷电子等离子体电子密度 \\(n_e\\)，电子质量 \\(m_e\\)，正离子视为不动背景，入射角频率 \\(\\omega\\)，忽略碰撞与热压强。",
+    "q": [
+      "由电子动量方程求介电函数。",
+      "推导横向电磁波色散关系和传播条件。",
+      "计算相速、群速与能量传输关系。",
+      "分析截止附近的穿透深度与高频极限。"
+    ],
+    "s": [
+      "电子线性动量式 \\(m_e\\dot{\\boldsymbol v}=-e\\boldsymbol E\\)，对于 \\(e^{-i\\omega t}\\) 得 \\(\\boldsymbol v=-i e\\boldsymbol E/(m_e\\omega)\\)。电流 \\(\\boldsymbol J=-n_ee\\boldsymbol v=i(n_ee^2/(m_e\\omega))\\boldsymbol E\\)。写入Ampère方程得到 \\(\\epsilon(\\omega)=\\epsilon_0[1-\\omega_p^2/\\omega^2]\\)，\\(\\omega_p^2=n_ee^2/(\\epsilon_0m_e)\\)。",
+      "横波Maxwell方程给 \\(k^2c^2=\\omega^2\\epsilon(\\omega)/\\epsilon_0=\\omega^2-\\omega_p^2\\)。当 \\(\\omega>\\omega_p\\) 时 \\(k\\) 实、允许传播；当 \\(\\omega<\\omega_p\\) 时 \\(k=i\\sqrt{\\omega_p^2-\\omega^2}/c\\)，进入等离子体的波场指数衰减。",
+      "对传播支 \\(\\omega=\\sqrt{\\omega_p^2+c^2k^2}\\)，相速度 \\(v_p=\\omega/k=c/\\sqrt{1-\\omega_p^2/\\omega^2}>c\\)，群速度 \\(v_g=d\\omega/dk=c\\sqrt{1-\\omega_p^2/\\omega^2}<c\\)。二者满足 \\(v_pv_g=c^2\\)，超光速相速度不表示超光速能量传播。",
+      "低于截止时场幅穿透长度 \\(\\delta=c/\\sqrt{\\omega_p^2-\\omega^2}\\)，趋近截止从下侧 \\(\\delta\\to\\infty\\)，高频 \\(\\omega\\gg\\omega_p\\) 则 \\(v_g\\to c\\)。该理想模型忽略碰撞耗散、磁化后的左右旋分支及温度导致的纵向等离子体波。"
+    ],
+    "tags": [
+      "冷等离子体",
+      "截止波",
+      "相群色散"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "E273",
+    "title": "接地导体球外点电荷的镜像力和感应总电荷",
+    "setup": "真空中半径 \\(a\\) 的接地理想导体球，点电荷 \\(q\\) 位于球心外距 \\(d>a\\) 的 \\(z\\) 轴，介电常数 \\(\\epsilon_0\\)。",
+    "q": [
+      "利用球面等势条件求镜像电荷位置和数值。",
+      "求点电荷所受的导体吸引力。",
+      "积分获得外电荷—导体体系的相互作用能。",
+      "求导体感应总电荷及远场极限。"
+    ],
+    "s": [
+      "在导体球内放虚拟镜像电荷 \\(q'=-qa/d\\)，位于 \\(z'=a^2/d\\)。球外势 \\(\\Phi=(4\\pi\\epsilon_0)^{-1}[q/|\\boldsymbol r-d\\hat z|+q'/|\\boldsymbol r-z'\\hat z|]\\)，因为球面各点两距离比为 \\(a/d\\)，两项严格抵消。",
+      "真实点电荷受像电荷的库仑力，指向球心，大小 \\(F=|qq'|/[4\\pi\\epsilon_0(d-z')^2]=q^2ad/[4\\pi\\epsilon_0(d^2-a^2)^2]\\)。向量形式 \\(\\boldsymbol F=-F\\hat z\\)，接地使导体可与大地交换电荷。",
+      "因改变外电荷位置时感应电荷也随之变动，能量不能直接取全像电荷库仑势的 \\(qq'/(4\\pi\\epsilon_0(d-z'))\\)，而应取一半：\\(U(d)=\\tfrac12q\\Phi_{\\mathrm{image}}(d)=-q^2a/[8\\pi\\epsilon_0(d^2-a^2)]\\)。验证 \\(F_z=-dU/dd\\)。",
+      "导体总感应自由电荷等于镜像电荷 \\(Q_{\\rm ind}=q'=-qa/d\\)，可由远场势中 \\(1/r\\) 单极项与Gauss定律核验。\\(d\\gg a\\) 时 \\(F\\sim-q^2a/(4\\pi\\epsilon_0d^3)\\)；若球不接地且规定总电荷为零，必须另外放中心镜像电荷，结论改变。"
+    ],
+    "tags": [
+      "镜像法",
+      "导体边值",
+      "电荷重排"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  }
+]
