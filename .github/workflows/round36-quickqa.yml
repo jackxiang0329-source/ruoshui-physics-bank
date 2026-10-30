@@ -1,0 +1,36 @@
+name: Round36 fast physics model quality gate
+on:
+  pull_request:
+    paths:
+      - "editorial/round36/source/**"
+      - "editorial/round36/qa_*.py"
+      - "editorial/round36/build_review.py"
+      - ".github/workflows/round36-quickqa.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: physics-round36-latex-advanced-review-20261030
+      - name: Execute 200 per-subpart numeric checks and validate source structure
+        run: |
+          cd editorial/round36
+          python3 - <<'PY'
+          import build_review
+          rows=build_review.load_sources()
+          build_review.emit_source_triples(rows)
+          report=build_review.model_tests(rows)
+          print("Round36",len(rows),"problem sources and",report["passing"],"model checks PASS")
+          PY
+      - name: Upload detailed failure diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: round36-model-checks
+          path: editorial/round36/review-release/QA_200.json
+          if-no-files-found: warn
