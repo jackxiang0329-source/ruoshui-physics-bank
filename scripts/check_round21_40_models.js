@@ -16,7 +16,7 @@ function int(f,a,b,n=4000){const h=(b-a)/n;let s=f(a)+f(b);for(let i=1;i<n;i++)s
  C('M130',1,'mass derivative',d(enc,2.4),4*pi*rho*2.4**2*(1-alpha*(2.4/R)**2));
  C('M130',2,'small oscillation restoring coefficient',g(1e-3)/1e-3,4*pi*G*rho/3,1e-7);
  C('M130',3,'potential integrated versus closed',int(g,0.001,R),4*pi*G*rho*R*R*(1/6-alpha/20),1e-6);
- C('M130',4,'uniform sphere central escape speed',2*(G*enc(R)/R+int(x=>4*pi*G*rho*x/3,0,R)),3*G*(4*pi*rho*R**3/3)/R,1e-7);
+ C('M130',4,'uniform sphere central escape speed',2*(G*(4*pi*rho*R**3/3)/R+int(x=>4*pi*G*rho*x/3,0,R)),3*G*(4*pi*rho*R**3/3)/R,1e-7);
 }
 {
  const m1=3,m2=7,I=2,R=.8,g=9.8,tau=1.2,h=1.4,M=m1+m2+I/R**2,a=((m2-m1)*g-tau/R)/M;
