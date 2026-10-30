@@ -324,7 +324,7 @@ function C(id,x){if(x.length!==4)throw Error(id+' missing four checks');x.forEac
  ['qubit state purity',(1+p*p)/2,.5+2*rho01*rho01]]);
 }
 {
- const h=2,hh=3,e=1.5,V=.4,Ic=2,Ej=hh*Ic/(2*e),phi=.8,flux=0.3,fluxQ=h/e*1;
+ const hh=3,h=2*PI*hh,e=1.5,V=.4,Ic=2,Ej=hh*Ic/(2*e),phi=.8,flux=0.3,fluxQ=h/(2*e);
  C('Q161',[
  ['ac Josephson frequency from voltage',(2*e*V/h)*(2*PI),2*e*V/(h/(2*PI))],
  ['Josephson phase energy derivative',der(x=>-Ej*Math.cos(x),phi),Ej*Math.sin(phi)],
