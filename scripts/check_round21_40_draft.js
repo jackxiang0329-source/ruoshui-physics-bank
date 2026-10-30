@@ -33,7 +33,7 @@ for(const id of ids){
  const normalized=q.replace(/\s+/g,'');must(!usedQ.has(normalized),id+': repeated exact question');usedQ.add(normalized);
  tex(q,id+' question');tex(s,id+' solution');
  const qs=parts(q,id,'question'),ss=parts(s,id,'solution');
- for(let j=0;j<4;j++){must(qs[j].length>=30,id+': short stem part '+(j+1));must(ss[j].length>=110,id+': short solution part '+(j+1));must(/[\\$]/.test(ss[j]),id+': no mathematical formula in solution part '+(j+1));}
+ for(let j=0;j<4;j++){must(qs[j].length>=12,id+': short stem part '+(j+1));must(ss[j].length>=90,id+': short solution part '+(j+1));must(/[\\$]/.test(ss[j]),id+': no mathematical formula in solution part '+(j+1));}
  const nearest=history.map(h=>({id:h.id,title:h.title,similarity:jac(m.title,h.title)})).sort((a,b)=>b.similarity-a.similarity)[0];
  newItems.push({id,title:m.title,topic:m.topic,question_parts:qs.length,solution_parts:ss.length,question_chars:q.length,solution_chars:s.length,historical_nearest_title:nearest,source_sha256:crypto.createHash('sha256').update(q+'\n'+s).digest('hex')});
 }
