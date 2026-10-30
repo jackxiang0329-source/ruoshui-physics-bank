@@ -1,54 +1,56 @@
 {
   "status": {
-    "mechanics_meta_checked": 9,
-    "passed": 9,
-    "mechanics_latex_files_checked_previous_call": 18,
-    "mechanics_latex_files_passed_previous_call": 18,
-    "groups_previous_audit": 41,
-    "round32_total_advanced_candidates": 50,
-    "subparts": 200,
-    "model_validation_passed": false,
-    "independent_review_count": 0,
-    "pdf_compilation_verified": false,
-    "formal_main_merge": false,
-    "notes": "Checks verify fragment structure and ID uniqueness in five grouped files; they do not verify independent physics correctness or formal acceptance."
+    "batch": "round32",
+    "new_candidate_items": 50,
+    "source_status": "审核分支（非正式主库）",
+    "topics": {
+      "M": 9,
+      "E": 9,
+      "T": 8,
+      "W": 8,
+      "O": 8,
+      "Q": 8
+    },
+    "question_subparts": 200,
+    "solution_subparts": 200,
+    "executed_machine_checks": 200,
+    "passed_machine_checks": 200,
+    "unique_subpart_pairs": 200,
+    "all_subpart_check_pairs_present": true,
+    "failures": [],
+    "independent_expert_approvals": 0,
+    "independent_review_status": "待独立复核",
+    "historical_core_model_audit": "已替换三道已知重复模型；其他跨轮重叠尚未完整审定",
+    "canonical_bank_import": false,
+    "generated_index_synced": false,
+    "question_and_solutions_xelatex_compilation_verified": false,
+    "main_merge_allowed": false,
+    "note": "200 executable formula/model-level checks, but do not equate them to 200 external expert validations. Confirm problem difficulty, check coverage, duplicates and XeLaTeX before acceptance."
   },
-  "meta_results": [
-    {
-      "id": "M211",
-      "pass": true
+  "group_reports": {
+    "M": {
+      "count": 36,
+      "passing": 36
     },
-    {
-      "id": "M212",
-      "pass": true
+    "E": {
+      "count": 36,
+      "passing": 36
     },
-    {
-      "id": "M213",
-      "pass": true
+    "T": {
+      "count": 32,
+      "passing": 32
     },
-    {
-      "id": "M214",
-      "pass": true
+    "W": {
+      "count": 32,
+      "passing": 32
     },
-    {
-      "id": "M215",
-      "pass": true
+    "O": {
+      "count": 32,
+      "passing": 32
     },
-    {
-      "id": "M216",
-      "pass": true
-    },
-    {
-      "id": "M217",
-      "pass": true
-    },
-    {
-      "id": "M218",
-      "pass": true
-    },
-    {
-      "id": "M219",
-      "pass": true
+    "Q": {
+      "count": 32,
+      "passing": 32
     }
-  ]
+  }
 }
