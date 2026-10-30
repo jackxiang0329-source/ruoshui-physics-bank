@@ -1,0 +1,12 @@
+\subsection*{M228\quad Thomas进动的Fermi–Walker输运与相对论轨道几何相位}
+自旋陀螺在平直闵可夫斯基时空中以实验室恒定速率$v<c$绕半径$R$的圆轨道运动，$\boldsymbol v(t)$切向、$\boldsymbol a(t)$径向向内，轨道角速率$\Omega=v/R$，假定陀螺无外加自旋转矩。
+(1) 用瞬时共动惯性系的连续非共线Lorentz推动说明自旋会有Thomas进动。
+(2) 写实验室Thomas进动角速度的通式并计算圆周运动的方向和大小。
+(3) 求完成一周实验室轨道后的总Thomas进动角。
+(4) 给出低速展开，说明其与普通动力学扭矩造成的进动区别。
+\par\textbf{逐问解析}
+(1) 无外转矩自旋四向量$S^\mu$满足$S\cdot U=0$及Fermi–Walker输运$dS^\mu/d\tau=[U^\mu A_\nu-A^\mu U_\nu]S^\nu/c^2$（四速度、四加速度符号取与所选度规一致）。在每个瞬时共动惯性系中，陀螺自身方向没有任意附加转动，但相邻时刻的速度Boost不共线，其复合含Wigner旋转，因此在固定实验室三维坐标中出现几何性的Thomas进动。
+(2) 以实验室速度$\boldsymbol v$、坐标加速度$\boldsymbol a=d\boldsymbol v/dt$表达，Thomas角速度可写$\boldsymbol\omega_T=\frac{\gamma^2}{\gamma+1}\frac{\boldsymbol a\times\boldsymbol v}{c^2}$，$\gamma=(1-v^2/c^2)^{-1/2}$。圆周运动有$|\boldsymbol a|=v^2/R$且$\boldsymbol a\times\boldsymbol v$指向轨道角动量反方向，故$|\omega_T|=[\gamma^2/(\gamma+1)](v^3/(Rc^2))=(\gamma-1)\Omega$，方向与公转相反；最后一步使用$\gamma^2\beta^2/(\gamma+1)=\gamma-1$。
+(3) 因$v$、$R$恒定，Thomas进动角速度恒定。实验室一周时间$T_{\rm orb}=2\pi/\Omega$，总几何转角$\Delta\phi_T=\omega_T T_{\rm orb}=-2\pi(\gamma-1)$（绕公转轴采用右手正方向）。它不等于简单的轨道转角$2\pi$，也不依赖陀螺本身的质量或自旋模长。
+(4) 在$v/c\ll1$时$\gamma=1+\frac12(v/c)^2+\frac38(v/c)^4+\cdots$，故$\Delta\phi_T=-\pi v^2/c^2-\frac{3\pi}{4}v^4/c^4+\cdots$。它是相继Lorentz Boost的几何效应，在无自旋扭矩的Fermi–Walker输运中也存在；若同时有磁场或机械力矩引起的Larmor/机械进动，必须额外叠加相应动力学贡献，不能将Thomas项重复计算。
+\par\medskip
