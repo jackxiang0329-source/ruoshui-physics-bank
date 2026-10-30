@@ -1,0 +1,254 @@
+[
+  {
+    "id": "M247",
+    "title": "圆形限制性三体问题的三角平衡与Routh稳定性",
+    "setup": "两主天体的无量纲质量分别为 \\(1-\\mu\\) 与 \\(\\mu\\)，\\(0<\\mu<1/2\\)，间距与旋转角速度均归一为 \\(1\\)。在共转平面 \\((x,y)\\) 分析试验质点。",
+    "q": [
+      "写出旋转系有效势和运动方程。",
+      "证明两个三角平衡点的位置。",
+      "求三角点线性特征多项式。",
+      "给出Routh稳定阈值并解释临界情形。"
+    ],
+    "s": [
+      "设 \\(r_1^2=(x+\\mu)^2+y^2\\)、\\(r_2^2=(x-1+\\mu)^2+y^2\\)。定义 \\(\\Omega=\\tfrac12(x^2+y^2)+(1-\\mu)/r_1+\\mu/r_2\\)。旋转系方程由惯性力得 \\(\\ddot x-2\\dot y=\\Omega_x,\\ \\ddot y+2\\dot x=\\Omega_y\\)。Jacobi量 \\(C=2\\Omega-(\\dot x^2+\\dot y^2)\\) 守恒，可通过乘速度相加核对。",
+      "平衡点满足 \\(\\Omega_x=\\Omega_y=0\\)。取两主星到试验点的距离均为 \\(1\\)，两边等边三角形顶点为 \\(x_*=1/2-\\mu,\\ y_*=\\pm\\sqrt3/2\\)。代入梯度，分别利用 \\((x+\\mu)=1/2\\)、\\((x-1+\\mu)=-1/2\\) 验证两个分量严格为零。",
+      "在三角点 Hessian 为 \\(\\Omega_{xx}=3/4,\\ \\Omega_{yy}=9/4,\\ \\Omega_{xy}=\\pm (3\\sqrt3/4)(1-2\\mu)\\)。扰动取 \\(e^{\\lambda t}\\) 后，行列式 \\((\\lambda^2-\\Omega_{xx})(\\lambda^2-\\Omega_{yy})+4\\lambda^2-\\Omega_{xy}^2=0\\)，化成 \\(\\lambda^4+\\lambda^2+\\tfrac{27}{4}\\mu(1-\\mu)=0\\)。",
+      "令 \\(z=\\lambda^2\\)，则 \\(z_{\\pm}=(-1\\pm\\sqrt{1-27\\mu(1-\\mu)})/2\\)。若 \\(27\\mu(1-\\mu)<1\\)，两个 \\(z\\) 都是负实数而线性频率为实；临界质量比为 \\(\\mu_R=(1-\\sqrt{23/27})/2\\approx0.03852\\)。等号是频率重合的边缘情形，不能把纯虚特征值自动当作非线性稳定性证明。"
+    ],
+    "tags": [
+      "旋转坐标",
+      "平衡Hessian",
+      "谱稳定"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "M248",
+    "title": "悬链线变分极小、水平张力及小幅横波",
+    "setup": "不可伸长均匀细索线密度 \\(\\rho\\)，在恒重力 \\(g\\) 下两端固定于同一高度，跨距 \\(2a\\)，总长 \\(\\ell>2a\\)。静态形状 \\(y(x)\\) 向上为正。",
+    "q": [
+      "在固定长度约束下变分总势能。",
+      "求对称悬链线和长度参数方程。",
+      "求张力沿索的分布。",
+      "建立索上局部横向小扰动的波速及极限。"
+    ],
+    "s": [
+      "势能 \\(U=\\rho g\\int_{-a}^{a} y\\sqrt{1+y'^2}\\,dx\\)，长度约束为 \\(\\int\\sqrt{1+y'^2}\\,dx=\\ell\\)。乘子法得到泛函 \\(F=(\\rho gy+\\Lambda)\\sqrt{1+y'^2}\\)。由于不显含 \\(x\\)，Beltrami积分 \\(F-y'F_{y'}=(\\rho gy+\\Lambda)/\\sqrt{1+y'^2}=H\\) 为常量，\\(H\\) 即水平张力。",
+      "设 \\(c=H/(\\rho g)\\)，整理 \\(1+y'^2=[(y+\\Lambda/\\rho g)/c]^2\\)，积分得对称解 \\(y(x)=c\\cosh(x/c)+y_0\\)。弧长元 \\(ds=\\cosh(x/c)\\,dx\\)，所以 \\(\\ell=2c\\sinh(a/c)\\)。在 \\(\\ell>2a\\) 时这一定义 \\(c>0\\) 的唯一对称解。",
+      "索上张力沿切向，水平分量固定为 \\(H=\\rho gc\\)；因切线斜率 \\(y'=\\sinh(x/c)\\)，总张力 \\(T(x)=H\\sqrt{1+y'^2}=\\rho gc\\cosh(x/c)\\)。最低点处最小，支点张力为 \\(\\rho gc\\cosh(a/c)\\)，而竖向总支持力 \\(2H\\sinh(a/c)=\\rho g\\ell\\)。",
+      "在小横向位移 \\(\\eta(s,t)\\) 且忽略纵向耦合的局部短波近似，线性式为 \\(\\rho\\eta_{tt}=\\partial_s[T(s)\\eta_s]\\)，所以局部波速 \\(v(s)=\\sqrt{T(s)/\\rho}=\\sqrt{gc\\cosh(x/c)}\\)。当 \\(\\ell\\downarrow2a\\) 时 \\(c\\to\\infty\\)，张力发散，说明完全绷直的极限不能用有限张力静态近似描述。"
+    ],
+    "tags": [
+      "变分法",
+      "非均匀张力",
+      "小扰动波"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "M249",
+    "title": "陀螺的定常进动、章动根及快自旋极限",
+    "setup": "对称重陀螺固定一点 \\(O\\)，主惯量 \\(I_1=I_2=I\\)、\\(I_3\\)，质心距 \\(O\\) 为 \\(l\\)，质量 \\(m\\)，Euler角为 \\((\\phi,\\theta,\\psi)\\)，\\(\\theta\\) 为自竖直向上的极角。",
+    "q": [
+      "写Lagrangian并识别两个循环动量。",
+      "构建一维有效势。",
+      "由恒定倾角导出定常进动的二次方程。",
+      "讨论快自旋两个进动分支与章动稳定条件。"
+    ],
+    "s": [
+      "动能 \\(T=\\tfrac I2(\\dot\\theta^2+\\dot\\phi^2\\sin^2\\theta)+\\tfrac{I_3}{2}(\\dot\\psi+\\dot\\phi\\cos\\theta)^2\\)，重力势 \\(U=mgl\\cos\\theta\\)。故 \\(L=T-U\\)，循环动量 \\(p_\\psi=I_3(\\dot\\psi+\\dot\\phi\\cos\\theta)=s\\)，\\(p_\\phi=I\\dot\\phi\\sin^2\\theta+s\\cos\\theta=j\\) 均守恒。",
+      "消去循环速度，约化能量为 \\(E=\\tfrac I2\\dot\\theta^2+V_{\\mathrm{eff}}(\\theta)+s^2/(2I_3)\\)，其中 \\(V_{\\mathrm{eff}}(\\theta)=\\frac{(j-s\\cos\\theta)^2}{2I\\sin^2\\theta}+mgl\\cos\\theta\\)。章动转折角是 \\(E-s^2/(2I_3)=V_{\\mathrm{eff}}\\) 的根，存在性取决于能量和两个守恒动量。",
+      "定常进动取 \\(\\theta=\\theta_0\\)、\\(\\dot\\phi=\\Omega\\) 常数。由 \\(\\theta\\) 的Euler方程并以 \\(s=I_3\\omega_3\\) 表示自旋动量，得 \\(I\\Omega^2\\cos\\theta_0-s\\Omega+mgl=0\\)。故 \\(\\Omega_\\pm=[s\\pm\\sqrt{s^2-4Imgl\\cos\\theta_0}]/(2I\\cos\\theta_0)\\)，当 \\(\\cos\\theta_0=0\\) 时应直接用原方程而非除零公式。",
+      "若 \\(s^2\\gg 4Imgl|\\cos\\theta_0|\\)，慢进动 \\(\\Omega_-\\approx mgl/s\\)，快进动 \\(\\Omega_+\\approx s/(I\\cos\\theta_0)\\)，两者可分辨。定常倾角还必须满足 \\(V_{\\mathrm{eff}}'(\\theta_0)=0\\)，小章动稳定需 \\(V_{\\mathrm{eff}}''(\\theta_0)>0\\)，频率平方为 \\(V_{\\mathrm{eff}}''/I\\)，仅判别式为正不够。"
+    ],
+    "tags": [
+      "刚体陀螺",
+      "循环坐标",
+      "章动稳定"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "M250",
+    "title": "二维各向异性振子的Hamilton–Jacobi分离与作用变量",
+    "setup": "质量 \\(m\\) 粒子在二维谐振势 \\(V(x,y)=m(\\omega_x^2x^2+\\omega_y^2y^2)/2\\) 中运动，频率均正，且无相互作用和摩擦。",
+    "q": [
+      "分离Hamilton–Jacobi特征函数。",
+      "计算两个单周期作用变量。",
+      "用作用角方程重建轨道。",
+      "判定轨道闭合条件并讨论共振。"
+    ],
+    "s": [
+      "Hamilton量 \\(H=(p_x^2+p_y^2)/(2m)+m(\\omega_x^2x^2+\\omega_y^2y^2)/2\\)。设 \\(S=W_x(x)+W_y(y)-Et\\)，分离常数 \\(E_x+E_y=E\\)，得到 \\((W_x')^2=2mE_x-m^2\\omega_x^2x^2\\)，另一坐标同理。分离成立的原因是势函数对两坐标可加。",
+      "定义 \\(J_i=(2\\pi)^{-1}\\oint p_i\\,dq_i\\)。把相平面椭圆 \\(p_i^2/(2m)+m\\omega_i^2q_i^2/2=E_i\\) 的面积除以 \\(2\\pi\\)，得 \\(J_i=E_i/\\omega_i\\)。因此 \\(H(J_x,J_y)=\\omega_xJ_x+\\omega_yJ_y\\)，作用变量在静态Hamilton系统中均为常量。",
+      "正则共轭角满足 \\(\\dot\\vartheta_i=\\partial H/\\partial J_i=\\omega_i\\)。相空间轨道写为 \\(q_i=\\sqrt{2J_i/(m\\omega_i)}\\sin(\\vartheta_i)\\) 与 \\(p_i=\\sqrt{2m\\omega_iJ_i}\\cos(\\vartheta_i)\\)，其中 \\(\\vartheta_i=\\omega_it+\\vartheta_{i0}\\)。将其代回Hamilton方程可同时验证位置、动量演化。",
+      "轨道在有限时间 \\(T\\) 闭合要求 \\(\\omega_xT=2\\pi n_x,\\ \\omega_yT=2\\pi n_y\\) 对整数成立，即 \\(\\omega_x/\\omega_y\\in\\mathbb Q\\)；无理频率比时在相应二维相位环面上稠密。共振为退化频率关系，并不使本可分离无扰系统自身出现能量交换。"
+    ],
+    "tags": [
+      "Hamilton-Jacobi",
+      "作用角变量",
+      "共振"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "M251",
+    "title": "高速阻力下的变质量火箭与最优推力脉冲",
+    "setup": "竖直上升火箭初始质量 \\(m_0\\)、尾气相对火箭速率 \\(u>0\\)，质量按 \\(\\dot m=-\\alpha\\) 消耗且 \\(m(t)=m_0-\\alpha t>0\\)。重力 \\(g\\) 固定，气动阻力 \\(F_d=-bv\\)（\\(b>0\\)）。",
+    "q": [
+      "建立变质量动力学并保留重力项。",
+      "积分得到速度的精确积分表达。",
+      "在 (b=0) 时化为Tsiolkovsky加重力损失公式。",
+      "建立高度积分和燃料用尽时的参数约束。"
+    ],
+    "s": [
+      "控制体动量守恒给火箭受到的推进力 \\(u(-\\dot m)=u\\alpha\\)。牛顿形式为 \\(m\\dot v=u\\alpha-mg-bv\\)，所以 \\(\\dot v+[b/m(t)]v=u\\alpha/m(t)-g\\)。不允许写成 \\(\\frac{d}{dt}(mv)=F_{\\mathrm{ext}}\\) 而忽略喷流携带的动量。",
+      "设 \\(m(t)=m_0-\\alpha t\\) 和 \\(p=b/\\alpha\\)，积分因子为 \\(I(t)=\\exp\\int b/m\\,dt=(m_0/m)^p\\)。于是 \\(v(t)=(m/m_0)^p\\left[v_0+\\int_0^t(m_0/m(s))^p(u\\alpha/m(s)-g)\\,ds\\right]\\)，积分表达对任意 \\(p>0\\) 且 \\(m>0\\) 有效。",
+      "若 \\(b\\to0\\)，积分因子趋 \\(1\\)，并用 \\(\\int_0^t \\alpha/m(s)\\,ds=\\ln(m_0/m(t))\\)，得 \\(v(t)=v_0+u\\ln[m_0/m(t)]-gt\\)。重力损失不能与喷流的对数速度增量混同；只在 \\(g=0\\) 时回到理想Tsiolkovsky关系。",
+      "位移 \\(h(t)=h_0+\\int_0^t v(s)\\,ds\\)；若推力需维持上升，启动时要求 \\(u\\alpha>m_0g+bv_0\\)。有效燃尽时间必须小于 \\(m_0/\\alpha\\)，实际设干质量 \\(m_d>0\\) 后 \\(t_b=(m_0-m_d)/\\alpha\\)，避免将 \\(m\\to0\\) 的非物理对数发散当作真实加速能力。"
+    ],
+    "tags": [
+      "变质量系统",
+      "线性微分方程",
+      "推进"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "M252",
+    "title": "球面测地线的变分一阶积分与Jacobi场",
+    "setup": "半径 \\(R\\) 的球面上质点无外力，轨道以球坐标 \\((\\theta,\\phi)\\) 表示，采用仿射参数 \\(s\\)，线元 \\(ds^2=R^2(d\\theta^2+\\sin^2\\theta\\,d\\phi^2)\\)。",
+    "q": [
+      "建立测地线的二次变分Lagrangian。",
+      "求循环动量与Clairaut关系。",
+      "证明大圆平面交线为测地线。",
+      "从测地线偏差方程求共轭点距离。"
+    ],
+    "s": [
+      "取仿射参数 \\(s\\)，测地线Lagrangian为 \\(\\mathcal L=\\tfrac{R^2}{2}(\\theta'^2+\\sin^2\\theta\\,\\phi'^2)\\)。变分给 \\(\\theta''-\\sin\\theta\\cos\\theta\\,\\phi'^2=0\\) 与 \\((\\sin^2\\theta\\,\\phi')'=0\\)。弧长归一时 \\(R^2(\\theta'^2+\\sin^2\\theta\\,\\phi'^2)=1\\)。",
+      "因 \\(\\phi\\) 为循环坐标，\\(p_\\phi=R^2\\sin^2\\theta\\,\\phi'\\) 恒定。若 \\(\\alpha\\) 为曲线切线与纬线方向的夹角，沿纬线的弧长分量为 \\(R\\sin\\theta\\,\\phi'=\\cos\\alpha\\)，故 \\(\\sin\\theta\\cos\\alpha=p_\\phi/R\\) 为常量，这就是球面Clairaut关系。",
+      "任意经过球心的平面与球面相交为大圆。选择平面为赤道时 \\(\\theta=\\pi/2,\\ \\phi=s/R+\\phi_0\\)，它满足两条测地线方程；由于球面旋转对称，任意大圆由赤道旋转得到，也必满足测地线方程。小圆纬线一般不是自由测地线。",
+      "球面的高斯曲率 \\(K=1/R^2\\)。沿单位速测地线的垂直Jacobi场幅度 \\(j(s)\\) 满足 \\(j''+Kj=0\\)，若 \\(j(0)=0,j'(0)\\ne0\\)，则 \\(j(s)\\propto\\sin(s/R)\\)。首个共轭点出现在 \\(s=\\pi R\\)，即反足点处，大圆局部最短性质在此之后失去全局唯一性。"
+    ],
+    "tags": [
+      "曲面测地线",
+      "Noether对称",
+      "测地偏差"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "M253",
+    "title": "Kapitza倒立摆的快振平均稳定与振动阈值",
+    "setup": "长度 \\(l\\) 的平面单摆，其悬点作竖直快速振动 \\(y_p(t)=a\\cos(\\Omega t)\\)，向上为正，重力 \\(g>0\\)。角度 \\(\\theta\\) 从铅直向下计，满足 \\(a\\ll l,\\ \\Omega\\gg\\sqrt{g/l}\\)。",
+    "q": [
+      "建立随动支点的精确角动力学。",
+      "分离慢变量与高频微振并求微振主项。",
+      "导出平均有效势及倒立位置稳定条件。",
+      "讨论 (Omega) 过低与非线性近似失效。"
+    ],
+    "s": [
+      "摆球坐标为 \\(x=l\\sin\\theta,\\ y=a\\cos(\\Omega t)-l\\cos\\theta\\)。对惯性系Lagrangian \\(L=m(\\dot x^2+\\dot y^2)/2-mgy\\) 用Euler方程，或在支点加速度框架下求切向力，得 \\(\\ddot\\theta+[g-a\\Omega^2\\cos(\\Omega t)]\\sin\\theta/l=0\\)。支点加速度为 \\(-a\\Omega^2\\cos(\\Omega t)\\)。",
+      "取 \\(\\theta=\\Theta(t)+\\xi(t)\\) 且慢变量 \\(\\Theta\\) 在一周期近似常数。高频部分方程为 \\(\\ddot\\xi=(a\\Omega^2/l)\\cos(\\Omega t)\\sin\\Theta\\)，可取 \\(\\xi=-(a/l)\\sin\\Theta\\cos(\\Omega t)\\)。微振幅相对于慢角为 \\(O(a/l)\\)，其符号由对时间二阶导数检验。",
+      "将 \\(\\theta=\\Theta+\\xi\\) 代回并对快周期平均，使用 \\(\\langle\\cos^2\\Omega t\\rangle=1/2\\)，得 \\(\\ddot\\Theta+(g/l)\\sin\\Theta+(a^2\\Omega^2/(2l^2))\\sin\\Theta\\cos\\Theta=0\\)。因此 \\(V_{\\mathrm{eff}}(\\Theta)=mgl(1-\\cos\\Theta)+(ma^2\\Omega^2/4)\\sin^2\\Theta\\)，在慢近似下为守恒有效势。",
+      "倒立点 \\(\\Theta=\\pi\\) 的有效势曲率 \\(V_{\\mathrm{eff}}''(\\pi)=-mgl+ma^2\\Omega^2/2\\)，稳定要求 \\(a^2\\Omega^2>2gl\\)。若频率不够快、振幅不小或接近参数共振，截断平均不受保证；不能据该不等式宣称所有有限频率驱动都稳定。"
+    ],
+    "tags": [
+      "参数振动",
+      "多尺度平均",
+      "倒立稳定"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "M254",
+    "title": "Kepler双曲散射的偏转角、冲量参数和近心点",
+    "setup": "质量 \\(m\\) 试验粒子在势 \\(V(r)=-k/r\\) 中以无穷远速度 \\(v_\\infty\\)、冲量参数 \\(b>0\\) 散射，\\(k>0\\)。轨道能量 \\(E=m v_\\infty^2/2\\)、角动量 \\(L=mv_\\infty b\\)。",
+    "q": [
+      "用Binet方程求圆锥曲线及偏心率。",
+      "计算近心距离和允许轨道支。",
+      "推导经典偏转角与冲量参数关系。",
+      "从角度映射导出Rutherford微分截面。"
+    ],
+    "s": [
+      "令 \\(u=1/r\\)，中心吸引力 \\(F=-k/r^2\\) 的Binet式为 \\(u''+u=mk/L^2\\)，解为 \\(u=(mk/L^2)[1+e\\cos(\\phi-\\phi_0)]\\)。利用能量积分得 \\(e^2=1+2EL^2/(mk^2)=1+(mv_\\infty^2b/k)^2>1\\)，因此轨道为双曲线。",
+      "取近心点在 \\(\\phi=\\phi_0\\)，则 \\(r_p=L^2/[mk(1+e)]\\)。又记 \\(h=mv_\\infty^2b/k\\)，代入可得 \\(r_p=(k/(mv_\\infty^2))[\\sqrt{1+h^2}-1]\\)，两式相等并且 \\(r_p\\to0\\) 当 \\(b\\to0\\)；碰撞中心在点势下出现奇异。",
+      "无穷远处 \\(u\\to0\\) 要求 \\(\\cos(\\phi_\\infty-\\phi_0)=-1/e\\)。两条渐近线之间的速度偏转角为 \\(\\chi=2\\arcsin(1/e)=2\\arctan[k/(mv_\\infty^2b)]\\)。等价地 \\(b=[k/(mv_\\infty^2)]\\cot(\\chi/2)\\)，高能或大 \\(b\\) 时散射角很小。",
+      "轴对称散射有 \\(d\\sigma/d\\Omega=(b/\\sin\\chi)|db/d\\chi|\\)。代入 \\(b=C\\cot(\\chi/2)\\)、\\(C=k/(mv_\\infty^2)\\)，得 \\(\\frac{d\\sigma}{d\\Omega}=\\frac{C^2}{4\\sin^4(\\chi/2)}=\\frac{k^2}{4m^2v_\\infty^4\\sin^4(\\chi/2)}\\)。总截面在小角因长程势而发散，需要实验角截断。"
+    ],
+    "tags": [
+      "中心势散射",
+      "Binet轨道",
+      "微分截面"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "M255",
+    "title": "深水毛细—重力波的自由边界色散与最小相速度",
+    "setup": "理想无黏不可压液体密度 \\(\\rho\\) 占据深度趋于无穷的容器，自由面小扰动 \\(\\eta(x,t)\\)，表面张力 \\(\\gamma>0\\)，重力 \\(g>0\\)，基流静止且速度势 \\(\\Phi\\) 满足Laplace方程。",
+    "q": [
+      "建立线化自由面的运动与动态条件。",
+      "对单模 (k>0) 求速度势深度依赖。",
+      "推导毛细重力表面波色散与相、群速度。",
+      "求相速度最低点波数及重力、毛细两个极限。"
+    ],
+    "s": [
+      "不可压无旋流满足 \\(\\nabla^2\\Phi=0\\)。在 \\(z=0\\) 的线化自由面运动学边界是 \\(\\eta_t=\\Phi_z\\)，动态Bernoulli加Laplace压强给 \\(\\Phi_t+g\\eta-(\\gamma/\\rho)\\eta_{xx}=0\\)。这些边界来自压力和法向速度连续，深水处要求 \\(\\Phi\\to0\\)。",
+      "设 \\(\\eta=\\eta_0e^{i(kx-\\omega t)}\\)，深水衰减解 \\(\\Phi=Ae^{kz}e^{i(kx-\\omega t)}\\)（液体为 \\(z<0\\)）。运动学边界给 \\(-i\\omega\\eta_0=kA\\)，因此 \\(A=-i\\omega\\eta_0/k\\)。这使流动振幅随深度在尺度 \\(1/k\\) 内衰减。",
+      "动态边界代入 \\(A\\) 得 \\(\\omega^2=(gk+\\gamma k^3/\\rho)\\)。相速度 \\(c_p=\\omega/k=\\sqrt{g/k+\\gamma k/\\rho}\\)，群速度 \\(c_g=d\\omega/dk=(g+3\\gamma k^2/\\rho)/(2\\omega)\\)，可分别在频谱上求导验证而不把两者混同。",
+      "最小相速度满足 \\(d(c_p^2)/dk=-g/k^2+\\gamma/\\rho=0\\)，故 \\(k_*=\\sqrt{\\rho g/\\gamma}\\)，且 \\(c_{p,\\min}^2=2\\sqrt{g\\gamma/\\rho}\\)。在 \\(k\\ll k_*\\) 时重力波 \\(\\omega\\sim\\sqrt{gk}\\)，在 \\(k\\gg k_*\\) 时毛细波 \\(\\omega\\sim\\sqrt{\\gamma/\\rho}\\,k^{3/2}\\)；这不是有限深度水波色散。"
+    ],
+    "tags": [
+      "自由界面",
+      "Laplace边值",
+      "毛细色散"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  }
+]

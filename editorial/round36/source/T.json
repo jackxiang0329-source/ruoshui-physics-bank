@@ -1,0 +1,226 @@
+[
+  {
+    "id": "T242",
+    "title": "一维Ising链转移矩阵、有限温磁化与关联长度",
+    "setup": "周期边界 \\(N\\) 自旋 \\(s_i=\\pm1\\)，Hamilton量 \\(H=-J\\sum_i s_is_{i+1}-h\\sum_i s_i\\)，\\(J>0\\)，温度 \\(T>0\\)。",
+    "q": [
+      "构造对称转移矩阵及其两个本征值。",
+      "在热力学极限求每自旋自由能与磁化。",
+      "在零场求二点关联函数和关联长度。",
+      "证明有限温无自发相变并分析零温极限。"
+    ],
+    "s": [
+      "将磁场项平均分给相邻键，转移矩阵 \\(T_{ss'}=\\exp[\\beta Jss'+\\beta h(s+s')/2]\\)，即 \\(\\begin{pmatrix}e^{\\beta(J+h)}&e^{-\\beta J}\\\\e^{-\\beta J}&e^{\\beta(J-h)}\\end{pmatrix}\\)。特征值为 \\(\\lambda_\\pm=e^{\\beta J}\\cosh(\\beta h)\\pm\\sqrt{e^{2\\beta J}\\sinh^2(\\beta h)+e^{-2\\beta J}}\\)。",
+      "配分函数 \\(Z_N=\\operatorname{tr}(T^N)=\\lambda_+^N+\\lambda_-^N\\)。热力学极限 \\(f=-k_BT\\ln\\lambda_+\\)，每自旋平均磁化 \\(m=-\\partial f/\\partial h=\\sinh(\\beta h)/\\sqrt{\\sinh^2(\\beta h)+e^{-4\\beta J}}\\)。在 \\(h=0\\) 该式对任意有限 \\(T\\) 给 \\(m=0\\)。",
+      "零场转移矩阵的本征值为 \\(2\\cosh(\\beta J)\\) 与 \\(2\\sinh(\\beta J)\\)，故 \\(\\langle s_0s_r\\rangle=(\\lambda_-/\\lambda_+)^r=[\\tanh(\\beta J)]^r\\)。写成 \\(e^{-r/\\xi}\\)，关联长度 \\(\\xi^{-1}=-\\ln[\\tanh(\\beta J)]\\)，随低温指数增长。",
+      "任意 \\(T>0\\) 时 \\(\\lambda_+>|\\lambda_-|\\)，自由能解析、零场磁化恒为零，因此一维有限邻接铁磁Ising模型没有有限温自发铁磁相变。仅当 \\(T\\to0\\)，\\(\\tanh(\\beta J)\\to1\\)，关联长度发散；引入长程作用可能改变结论。"
+    ],
+    "tags": [
+      "转移矩阵",
+      "关联函数",
+      "临界行为"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "T243",
+    "title": "二能级Schottky峰、能量涨落和最优热容温度",
+    "setup": "独立二能级粒子能级为 \\(0,\\Delta\\)（\\(\\Delta>0\\)），每级简并度相同；\\(N\\) 粒子可分辨且无相互作用，恒体积热平衡。",
+    "q": [
+      "求单粒子正则配分函数及激发态概率。",
+      "求总内能、热容和能量方差。",
+      "求热容峰值的超越方程及数值位置。",
+      "讨论高低温极限与零点能平移不变性。"
+    ],
+    "s": [
+      "单粒子 \\(z=1+e^{-\\beta\\Delta}\\)，总 \\(Z=z^N\\)。激发态概率 \\(p=e^{-\\beta\\Delta}/z=1/(1+e^{\\beta\\Delta})\\)，基态概率 \\(1-p\\)，故平均能量 \\(U=N\\Delta p\\)。这是独立伯努利占有的乘积分布而非Bose无限占有。",
+      "令 \\(x=\\Delta/(k_BT)\\)，热容 \\(C_V=\\partial_TU=Nk_Bx^2e^x/(1+e^x)^2=Nk_Bx^2/[4\\cosh^2(x/2)]\\)。能量方差 \\(\\operatorname{Var}(H)=N\\Delta^2p(1-p)\\)，可直接验证 \\(\\operatorname{Var}(H)=k_BT^2C_V\\)。",
+      "对无量纲热容 \\(c(x)=x^2/[4\\cosh^2(x/2)]\\) 求导，得到 \\(c'/c=2/x-\\tanh(x/2)\\)。正极值满足 \\(x\\tanh(x/2)=2\\)，唯一正根 \\(x_*\\approx2.39936\\)，因此峰温 \\(T_*=\\Delta/(k_Bx_*)\\)，峰值有限而不代表相变。",
+      "低温 \\(x\\gg1\\) 时 \\(C_V\\sim Nk_Bx^2e^{-x}\\) 指数抑制；高温 \\(x\\ll1\\) 时 \\(C_V\\sim Nk_Bx^2/4\\to0\\)。若整体平移两个能级，\\(U\\) 增常量但热容、概率及方差不变，说明零点选择不影响可测热容。"
+    ],
+    "tags": [
+      "Schottky反常",
+      "正则涨落",
+      "热容极值"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "T244",
+    "title": "真实气体二阶Virial系数与分子对势的Mayer积分",
+    "setup": "三维稀薄经典单组分气体，两体中心势 \\(u(r)\\) 短程且稳定，\\(n=N/V\\) 很小，温度 \\(T\\)。定义 \\(p/(nk_BT)=1+B_2(T)n+O(n^2)\\)。",
+    "q": [
+      "由经典构型配分函数给Mayer函数。",
+      "推导二阶Virial系数径向积分。",
+      "计算硬球直径 (d) 的 (B_2)。",
+      "解释吸引势导致负Virial项及稀薄近似条件。"
+    ],
+    "s": [
+      "把粒子相互作用写成 \\(\\sum_{i<j}u(r_{ij})\\)，经典构型权重为 \\(e^{-\\beta\\sum u}\\)。定义Mayer函数 \\(f(r)=e^{-\\beta u(r)}-1\\)。二阶簇积分由两粒子相对位移积分给出 \\(b_2=\\frac12\\int f(\\boldsymbol r)\\,d^3r\\)，与理想气体的 \\(N!\\) 计数区分开。",
+      "簇展开消去逸度后得到 \\(B_2=-b_2=-\\frac12\\int_{\\mathbb R^3}[e^{-\\beta u(r)}-1]\\,d^3r\\)。对各向同性势化成 \\(B_2=-2\\pi\\int_0^\\infty[e^{-\\beta u(r)}-1]r^2dr\\)。若吸引尾部不使积分收敛，普通低密Virial级数不能直接使用。",
+      "硬球模型 \\(u(r)=+\\infty\\) 对 \\(r<d\\)、其余为零，故 \\(f=-1\\) 在排除球内、其余为零。积分给 \\(B_2=2\\pi\\int_0^d r^2dr=2\\pi d^3/3\\)，是单粒子硬球体积 \\(\\pi d^3/6\\) 的四倍。正号表示排除体积使压强高于理想气体。",
+      "若某温区存在明显吸引势 \\(u<0\\)，则相应区间 \\(e^{-\\beta u}-1>0\\)，对 \\(B_2\\) 给负贡献；在Boyle温度两类贡献可能抵消。必须要求 \\(|B_2|n\\ll1\\) 且更高阶簇积分可以忽略，不能用第二Virial近似描述凝聚临界区。"
+    ],
+    "tags": [
+      "簇展开",
+      "Mayer函数",
+      "非理想气体"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "T245",
+    "title": "理想Otto循环的熵守恒效率与不可逆损失",
+    "setup": "理想气体比热比 \\(\\gamma=C_p/C_v>1\\)，Otto循环由两段可逆绝热压缩/膨胀和两段定容吸放热构成，压缩比 \\(r=V_1/V_2>1\\)。",
+    "q": [
+      "由绝热定律写四个状态温度关系。",
+      "求循环吸放热及热效率。",
+      "推导效率的压缩比微分与极限。",
+      "讨论非可逆过程导致的偏离和热源可用功。"
+    ],
+    "s": [
+      "状态1到2是可逆绝热压缩，\\(T_2/T_1=(V_1/V_2)^{\\gamma-1}=r^{\\gamma-1}\\)；3到4是可逆绝热膨胀，\\(T_4/T_3=(V_3/V_4)^{\\gamma-1}=r^{1-\\gamma}\\)。两段定容给 \\(V_2=V_3,\\ V_1=V_4\\)。",
+      "定容吸热 \\(Q_{\\rm in}=nC_v(T_3-T_2)\\)、放热幅值 \\(Q_{\\rm out}=nC_v(T_4-T_1)\\)。利用 \\(T_4=T_3/r^{\\gamma-1}\\)、\\(T_1=T_2/r^{\\gamma-1}\\) 得 \\(Q_{\\rm out}=Q_{\\rm in}/r^{\\gamma-1}\\)，故 \\(\\eta=1-Q_{\\rm out}/Q_{\\rm in}=1-r^{1-\\gamma}\\)。",
+      "对压缩比求导 \\(\\partial_r\\eta=(\\gamma-1)r^{-\\gamma}>0\\)。\\(r\\downarrow1\\) 时 \\(\\eta\\to0\\)，\\(r\\to\\infty\\) 时形式上 \\(\\eta\\to1\\)；但实际气体温度、材料耐热与燃烧控制限制允许压缩比，不能将无穷大极限视作真实发动机效率。",
+      "不可逆压缩、热损失、燃烧不完全及温度相关的 \\(C_v\\) 使上述可逆模型效率降低或结构改变。特别是两段定容热交换本身在有限温差下不可逆，理想Otto效率也不是两个固定温热库间可逆Carnot效率，不能混淆不同的比较基准。"
+    ],
+    "tags": [
+      "循环热力学",
+      "熵守恒",
+      "性能极限"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "T246",
+    "title": "经典成核理论的临界液滴、势垒和形核率",
+    "setup": "过饱和母相中生成半径 \\(r\\) 的球形新相液滴，界面张力 \\(\\sigma>0\\)，单位体积驱动自由能降低 \\(\\Delta g>0\\)，连续介质近似，忽略形状涨落。",
+    "q": [
+      "写球形核的体积与表面自由能。",
+      "求临界核半径及形核势垒。",
+      "求势垒对过饱和度的敏感性。",
+      "说明小核收缩、大核增长及动力学 prefactor 的作用。"
+    ],
+    "s": [
+      "球表面自由能为 \\(4\\pi\\sigma r^2\\)，体相转换释放自由能为 \\((4\\pi/3)\\Delta g\\,r^3\\)。总自由能变化 \\(\\Delta G(r)=4\\pi\\sigma r^2-\\frac{4\\pi}{3}\\Delta g\\,r^3\\)，二次和三次项的不同幂次产生势垒。",
+      "求导 \\(d\\Delta G/dr=8\\pi\\sigma r-4\\pi\\Delta g\\,r^2\\)，非零驻点 \\(r_c=2\\sigma/\\Delta g\\)。代入得 \\(\\Delta G_c=\\Delta G(r_c)=16\\pi\\sigma^3/(3\\Delta g^2)\\)，二阶导数在 \\(r_c\\) 为负，故其为自由能最大值而不是稳定核。",
+      "临界半径 \\(r_c\\propto\\Delta g^{-1}\\)，势垒 \\(\\Delta G_c\\propto\\Delta g^{-2}\\)。例如把过饱和驱动力增为两倍，临界半径减半、势垒减为四分之一；形核率中指数因子 \\(\\exp[-\\Delta G_c/(k_BT)]\\) 因此会对小的热力学驱动变化极其敏感。",
+      "若 \\(r<r_c\\)，增长方向增加自由能，核倾向缩小；若 \\(r>r_c\\)，增长方向降低自由能，核倾向长大。真实形核率一般写 \\(J=J_0e^{-\\Delta G_c/(k_BT)}\\)，前因子 \\(J_0\\) 来自扩散、附着与Zeldovich因子，并非只由静态势垒决定。"
+    ],
+    "tags": [
+      "亚稳态",
+      "形核势垒",
+      "界面张力"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "T247",
+    "title": "热力学压缩率、数涨落和临界放大",
+    "setup": "单组分经典均匀流体置于巨正则系综 \\((T,V,\\mu)\\)，数密度 \\(n=\\langle N\\rangle/V\\)，等温压缩率 \\(\\kappa_T=-(1/V)(\\partial V/\\partial p)_{T,N}\\)。",
+    "q": [
+      "由巨配分函数求粒子数均值和方差。",
+      "用Gibbs–Duhem关系导出数涨落—压缩率等式。",
+      "对理想气体验证Poisson数涨落。",
+      "解释临界压缩率发散与有限体积截断。"
+    ],
+    "s": [
+      "巨配分函数 \\(\\Xi=\\sum_N e^{\\beta\\mu N}Z_N(T,V)\\)。利用 \\(\\partial_{\\beta\\mu}\\ln\\Xi\\) 得 \\(\\langle N\\rangle\\)，再求导得 \\(\\operatorname{Var}(N)=\\partial_{\\beta\\mu}\\langle N\\rangle=k_BT(\\partial\\langle N\\rangle/\\partial\\mu)_{T,V}\\)。它是巨正则数涨落的确切公式。",
+      "固定温度下Gibbs–Duhem式 \\(dp=n\\,d\\mu\\)，所以 \\((\\partial n/\\partial\\mu)_T=n(\\partial n/\\partial p)_T=n^2\\kappa_T\\)。于是 \\(\\operatorname{Var}(N)=k_BTVn^2\\kappa_T\\)，归一形式为 \\(\\operatorname{Var}(N)/\\langle N\\rangle=nk_BT\\kappa_T\\)。",
+      "理想气体 \\(p=nk_BT\\)，有 \\(\\kappa_T=1/p=1/(nk_BT)\\)，所以 \\(\\operatorname{Var}(N)=\\langle N\\rangle\\)。这正是理想经典气体巨正则粒子数Poisson分布；若直接使用严格固定 \\(N\\) 的正则系综，\\(\\operatorname{Var}(N)=0\\)，不可混淆系综。",
+      "靠近连续相变临界点，\\(\\kappa_T\\) 可能显著增长，因此密度涨落放大并体现临界散射；有限体积会限制相关长度，且长程相关破坏简单独立粒子直观。以上等式要求均匀单相且巨正则平衡可定义，非平衡相分离过程不能直接代入。"
+    ],
+    "tags": [
+      "巨正则系综",
+      "压缩率",
+      "数涨落"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "T248",
+    "title": "理想顺磁体的绝热退磁与磁化熵",
+    "setup": "\\(N\\) 个独立自旋 \\(1/2\\)，各磁矩模为 \\(\\mu_0>0\\)，外磁场 \\(B\\) 沿 \\(z\\)，能级 \\(\\mp\\mu_0 B\\)，与热库接触可达到平衡，忽略相互作用。",
+    "q": [
+      "写配分函数和平均磁矩。",
+      "求磁熵及高温低场级数。",
+      "推导理想可逆绝热过程中的 (B/T) 不变量。",
+      "讨论趋近零温与晶格热容的限制。"
+    ],
+    "s": [
+      "单自旋配分函数 \\(z=2\\cosh x\\)，其中 \\(x=\\mu_0B/(k_BT)\\)，总 \\(\\ln Z=N\\ln(2\\cosh x)\\)。平均总磁矩 \\(M=N\\mu_0\\tanh x\\)，由 \\(\\partial_B(k_BT\\ln Z)\\) 得到，磁化在低场满足Curie近似 \\(M\\approx N\\mu_0^2B/(k_BT)\\)。",
+      "自由能 \\(F=-Nk_BT\\ln(2\\cosh x)\\)。熵 \\(S=-\\partial_TF|_B=Nk_B[\\ln(2\\cosh x)-x\\tanh x]\\)。当 \\(x\\to0\\)，展开 \\(S=Nk_B[\\ln2-x^2/2+O(x^4)]\\)，强场 \\(x\\gg1\\) 时熵趋零。",
+      "理想可逆绝热退磁 \\(dS=0\\)。由于 \\(S\\) 仅依赖 \\(x=B\\mu_0/(k_BT)\\) 且 \\(dS/dx=-Nk_Bx\\operatorname{sech}^2x\\neq0\\)（\\(B>0\\)），故 \\(B/T=\\mathrm{const}\\)。将场从 \\(B_i\\) 降到 \\(B_f\\) 给 \\(T_f=T_i(B_f/B_i)\\)，体现理想磁冷却。",
+      "若 \\(B_f\\to0\\)，该模型形式上 \\(T_f\\to0\\)，但真实磁体有自旋耦合、核磁有序、晶格热容和不可逆热漏，不能有限步骤达到绝对零度。若额外晶格熵对 \\(T\\) 有贡献，恒总熵时 \\(B/T\\) 不再严格不变。"
+    ],
+    "tags": [
+      "磁熵",
+      "绝热退磁",
+      "第三定律"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "T249",
+    "title": "热电材料的Seebeck、Peltier与Kelvin关系",
+    "setup": "一维各向同性线性热电材料，导电率 \\(\\sigma>0\\)，Seebeck系数 \\(S(T)\\)，热导率 \\(\\kappa>0\\)，近局部平衡，流密度 \\(J\\) 与热流 \\(J_Q\\)。",
+    "q": [
+      "写线性输运本构并确定开路Seebeck电压。",
+      "求Peltier系数与热电势中的热流项。",
+      "利用Onsager互易推导Kelvin关系。",
+      "求Thomson系数并讨论常Seebeck的极限。"
+    ],
+    "s": [
+      "选取正方向定义 \\(J=\\sigma(E-S\\,\\partial_xT)\\) 和 \\(J_Q=\\Pi J-\\kappa\\partial_xT\\)。开路 \\(J=0\\) 给 \\(E=S\\partial_xT\\)，故两端电势差 \\(\\Delta V=-\\int E\\,dx=-\\int_{T_1}^{T_2}S(T)\\,dT\\)，符号需与测量端定义一致。",
+      "Peltier系数定义为均匀温度下每单位电流携带的可逆热流 \\(\\Pi=J_Q/J\\)（扣除Fourier项后）。在不同材料界面，电流穿界时可逆Peltier热率 \\( \\dot Q=I(\\Pi_A-\\Pi_B)\\) ，而内部焦耳项 \\(J^2/\\sigma\\ge0\\) 属不可逆耗散，不能合并进 \\(\\Pi\\)。",
+      "令热力学力为 \\(X_e=E/T\\)、\\(X_T=-\\partial_xT/T^2\\)，线性Onsager矩阵满足 \\(L_{eQ}=L_{Qe}\\)（无磁场）。与本构对比可得第一Kelvin关系 \\(\\Pi=ST\\)。这是可逆热电交叉效应的互易约束，不由简单能量守恒单独保证。",
+      "沿温度梯度载流的可逆体热含Thomson项，系数 \\(\\tau=T\\,dS/dT\\)，称第二Kelvin关系；若 \\(S\\) 为温度常数则 \\(\\tau=0\\)，但只要 \\(S\\neq0\\) 仍有Peltier热。高温相变或非局域电子输运时线性系数可能不适用。"
+    ],
+    "tags": [
+      "Onsager互易",
+      "热电耦合",
+      "Kelvin关系"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  }
+]

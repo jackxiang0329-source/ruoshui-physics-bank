@@ -1,0 +1,742 @@
+\documentclass[UTF8,a4paper,11pt,oneside,openany]{ctexbook}
+\usepackage{fontspec}
+\usepackage{amsmath,mathtools}
+\usepackage{unicode-math}
+\IfFontExistsTF{TeX Gyre Pagella}{\setmainfont{TeX Gyre Pagella}}{\setmainfont{FreeSerif}}
+\IfFontExistsTF{TeX Gyre Pagella Math}{\setmathfont{TeX Gyre Pagella Math}}{\setmathfont{Latin Modern Math}}
+\IfFontExistsTF{Noto Serif CJK SC}{\setCJKmainfont{Noto Serif CJK SC}}{}
+\usepackage{xcolor,geometry}
+\usepackage{fancyhdr}
+\definecolor{accent}{HTML}{17365D}
+\geometry{margin=22mm,headheight=15pt}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{colorlinks=true,linkcolor=accent}
+\allowdisplaybreaks
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.6em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{accent}{大学物理高难综合题}}
+\fancyhead[R]{\small\textcolor{accent}{第36批\,\textbar\,审核稿}}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{15pt}
+\sloppy
+\begin{document}
+\title{\textcolor{accent}{大学物理高难综合题}\\\Large 第36批（审核稿）}
+\author{Ruoshui Physics Bank}
+\date{2026年10月}
+\maketitle
+\tableofcontents
+\chapter*{质量与准入声明}
+本册包含五十道综合题和各四个分问，所有数学表达式使用真正的 \LaTeX{} 数学模式。
+自动技术检查不等于独立学术专家质检。资料仅存 GitHub 审核分支，不纳入正式主库。
+
+\chapter{力学}
+\section*{M247\quad 圆形限制性三体问题的三角平衡与Routh稳定性}
+\textbf{物理条件}\par 两主天体的无量纲质量分别为 \(1-\mu\) 与 \(\mu\)，\(0<\mu<1/2\)，间距与旋转角速度均归一为 \(1\)。在共转平面 \((x,y)\) 分析试验质点。
+\par\noindent\textbf{(1)} 写出旋转系有效势和运动方程。
+\par\noindent\textbf{(2)} 证明两个三角平衡点的位置。
+\par\noindent\textbf{(3)} 求三角点线性特征多项式。
+\par\noindent\textbf{(4)} 给出Routh稳定阈值并解释临界情形。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 设 \(r_1^2=(x+\mu)^2+y^2\)、\(r_2^2=(x-1+\mu)^2+y^2\)。定义 \(\Omega=\tfrac12(x^2+y^2)+(1-\mu)/r_1+\mu/r_2\)。旋转系方程由惯性力得 \(\ddot x-2\dot y=\Omega_x,\ \ddot y+2\dot x=\Omega_y\)。Jacobi量 \(C=2\Omega-(\dot x^2+\dot y^2)\) 守恒，可通过乘速度相加核对。
+\par\noindent\textbf{(2)} 平衡点满足 \(\Omega_x=\Omega_y=0\)。取两主星到试验点的距离均为 \(1\)，两边等边三角形顶点为 \(x_*=1/2-\mu,\ y_*=\pm\sqrt3/2\)。代入梯度，分别利用 \((x+\mu)=1/2\)、\((x-1+\mu)=-1/2\) 验证两个分量严格为零。
+\par\noindent\textbf{(3)} 在三角点 Hessian 为 \(\Omega_{xx}=3/4,\ \Omega_{yy}=9/4,\ \Omega_{xy}=\pm (3\sqrt3/4)(1-2\mu)\)。扰动取 \(e^{\lambda t}\) 后，行列式 \((\lambda^2-\Omega_{xx})(\lambda^2-\Omega_{yy})+4\lambda^2-\Omega_{xy}^2=0\)，化成 \(\lambda^4+\lambda^2+\tfrac{27}{4}\mu(1-\mu)=0\)。
+\par\noindent\textbf{(4)} 令 \(z=\lambda^2\)，则 \(z_{\pm}=(-1\pm\sqrt{1-27\mu(1-\mu)})/2\)。若 \(27\mu(1-\mu)<1\)，两个 \(z\) 都是负实数而线性频率为实；临界质量比为 \(\mu_R=(1-\sqrt{23/27})/2\approx0.03852\)。等号是频率重合的边缘情形，不能把纯虚特征值自动当作非线性稳定性证明。
+
+\par\bigskip\hrule\bigskip
+\section*{M248\quad 悬链线变分极小、水平张力及小幅横波}
+\textbf{物理条件}\par 不可伸长均匀细索线密度 \(\rho\)，在恒重力 \(g\) 下两端固定于同一高度，跨距 \(2a\)，总长 \(\ell>2a\)。静态形状 \(y(x)\) 向上为正。
+\par\noindent\textbf{(1)} 在固定长度约束下变分总势能。
+\par\noindent\textbf{(2)} 求对称悬链线和长度参数方程。
+\par\noindent\textbf{(3)} 求张力沿索的分布。
+\par\noindent\textbf{(4)} 建立索上局部横向小扰动的波速及极限。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 势能 \(U=\rho g\int_{-a}^{a} y\sqrt{1+y'^2}\,dx\)，长度约束为 \(\int\sqrt{1+y'^2}\,dx=\ell\)。乘子法得到泛函 \(F=(\rho gy+\Lambda)\sqrt{1+y'^2}\)。由于不显含 \(x\)，Beltrami积分 \(F-y'F_{y'}=(\rho gy+\Lambda)/\sqrt{1+y'^2}=H\) 为常量，\(H\) 即水平张力。
+\par\noindent\textbf{(2)} 设 \(c=H/(\rho g)\)，整理 \(1+y'^2=[(y+\Lambda/\rho g)/c]^2\)，积分得对称解 \(y(x)=c\cosh(x/c)+y_0\)。弧长元 \(ds=\cosh(x/c)\,dx\)，所以 \(\ell=2c\sinh(a/c)\)。在 \(\ell>2a\) 时这一定义 \(c>0\) 的唯一对称解。
+\par\noindent\textbf{(3)} 索上张力沿切向，水平分量固定为 \(H=\rho gc\)；因切线斜率 \(y'=\sinh(x/c)\)，总张力 \(T(x)=H\sqrt{1+y'^2}=\rho gc\cosh(x/c)\)。最低点处最小，支点张力为 \(\rho gc\cosh(a/c)\)，而竖向总支持力 \(2H\sinh(a/c)=\rho g\ell\)。
+\par\noindent\textbf{(4)} 在小横向位移 \(\eta(s,t)\) 且忽略纵向耦合的局部短波近似，线性式为 \(\rho\eta_{tt}=\partial_s[T(s)\eta_s]\)，所以局部波速 \(v(s)=\sqrt{T(s)/\rho}=\sqrt{gc\cosh(x/c)}\)。当 \(\ell\downarrow2a\) 时 \(c\to\infty\)，张力发散，说明完全绷直的极限不能用有限张力静态近似描述。
+
+\par\bigskip\hrule\bigskip
+\section*{M249\quad 陀螺的定常进动、章动根及快自旋极限}
+\textbf{物理条件}\par 对称重陀螺固定一点 \(O\)，主惯量 \(I_1=I_2=I\)、\(I_3\)，质心距 \(O\) 为 \(l\)，质量 \(m\)，Euler角为 \((\phi,\theta,\psi)\)，\(\theta\) 为自竖直向上的极角。
+\par\noindent\textbf{(1)} 写Lagrangian并识别两个循环动量。
+\par\noindent\textbf{(2)} 构建一维有效势。
+\par\noindent\textbf{(3)} 由恒定倾角导出定常进动的二次方程。
+\par\noindent\textbf{(4)} 讨论快自旋两个进动分支与章动稳定条件。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 动能 \(T=\tfrac I2(\dot\theta^2+\dot\phi^2\sin^2\theta)+\tfrac{I_3}{2}(\dot\psi+\dot\phi\cos\theta)^2\)，重力势 \(U=mgl\cos\theta\)。故 \(L=T-U\)，循环动量 \(p_\psi=I_3(\dot\psi+\dot\phi\cos\theta)=s\)，\(p_\phi=I\dot\phi\sin^2\theta+s\cos\theta=j\) 均守恒。
+\par\noindent\textbf{(2)} 消去循环速度，约化能量为 \(E=\tfrac I2\dot\theta^2+V_{\mathrm{eff}}(\theta)+s^2/(2I_3)\)，其中 \(V_{\mathrm{eff}}(\theta)=\frac{(j-s\cos\theta)^2}{2I\sin^2\theta}+mgl\cos\theta\)。章动转折角是 \(E-s^2/(2I_3)=V_{\mathrm{eff}}\) 的根，存在性取决于能量和两个守恒动量。
+\par\noindent\textbf{(3)} 定常进动取 \(\theta=\theta_0\)、\(\dot\phi=\Omega\) 常数。由 \(\theta\) 的Euler方程并以 \(s=I_3\omega_3\) 表示自旋动量，得 \(I\Omega^2\cos\theta_0-s\Omega+mgl=0\)。故 \(\Omega_\pm=[s\pm\sqrt{s^2-4Imgl\cos\theta_0}]/(2I\cos\theta_0)\)，当 \(\cos\theta_0=0\) 时应直接用原方程而非除零公式。
+\par\noindent\textbf{(4)} 若 \(s^2\gg 4Imgl|\cos\theta_0|\)，慢进动 \(\Omega_-\approx mgl/s\)，快进动 \(\Omega_+\approx s/(I\cos\theta_0)\)，两者可分辨。定常倾角还必须满足 \(V_{\mathrm{eff}}'(\theta_0)=0\)，小章动稳定需 \(V_{\mathrm{eff}}''(\theta_0)>0\)，频率平方为 \(V_{\mathrm{eff}}''/I\)，仅判别式为正不够。
+
+\par\bigskip\hrule\bigskip
+\section*{M250\quad 二维各向异性振子的Hamilton–Jacobi分离与作用变量}
+\textbf{物理条件}\par 质量 \(m\) 粒子在二维谐振势 \(V(x,y)=m(\omega_x^2x^2+\omega_y^2y^2)/2\) 中运动，频率均正，且无相互作用和摩擦。
+\par\noindent\textbf{(1)} 分离Hamilton–Jacobi特征函数。
+\par\noindent\textbf{(2)} 计算两个单周期作用变量。
+\par\noindent\textbf{(3)} 用作用角方程重建轨道。
+\par\noindent\textbf{(4)} 判定轨道闭合条件并讨论共振。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} Hamilton量 \(H=(p_x^2+p_y^2)/(2m)+m(\omega_x^2x^2+\omega_y^2y^2)/2\)。设 \(S=W_x(x)+W_y(y)-Et\)，分离常数 \(E_x+E_y=E\)，得到 \((W_x')^2=2mE_x-m^2\omega_x^2x^2\)，另一坐标同理。分离成立的原因是势函数对两坐标可加。
+\par\noindent\textbf{(2)} 定义 \(J_i=(2\pi)^{-1}\oint p_i\,dq_i\)。把相平面椭圆 \(p_i^2/(2m)+m\omega_i^2q_i^2/2=E_i\) 的面积除以 \(2\pi\)，得 \(J_i=E_i/\omega_i\)。因此 \(H(J_x,J_y)=\omega_xJ_x+\omega_yJ_y\)，作用变量在静态Hamilton系统中均为常量。
+\par\noindent\textbf{(3)} 正则共轭角满足 \(\dot\vartheta_i=\partial H/\partial J_i=\omega_i\)。相空间轨道写为 \(q_i=\sqrt{2J_i/(m\omega_i)}\sin(\vartheta_i)\) 与 \(p_i=\sqrt{2m\omega_iJ_i}\cos(\vartheta_i)\)，其中 \(\vartheta_i=\omega_it+\vartheta_{i0}\)。将其代回Hamilton方程可同时验证位置、动量演化。
+\par\noindent\textbf{(4)} 轨道在有限时间 \(T\) 闭合要求 \(\omega_xT=2\pi n_x,\ \omega_yT=2\pi n_y\) 对整数成立，即 \(\omega_x/\omega_y\in\mathbb Q\)；无理频率比时在相应二维相位环面上稠密。共振为退化频率关系，并不使本可分离无扰系统自身出现能量交换。
+
+\par\bigskip\hrule\bigskip
+\section*{M251\quad 高速阻力下的变质量火箭与最优推力脉冲}
+\textbf{物理条件}\par 竖直上升火箭初始质量 \(m_0\)、尾气相对火箭速率 \(u>0\)，质量按 \(\dot m=-\alpha\) 消耗且 \(m(t)=m_0-\alpha t>0\)。重力 \(g\) 固定，气动阻力 \(F_d=-bv\)（\(b>0\)）。
+\par\noindent\textbf{(1)} 建立变质量动力学并保留重力项。
+\par\noindent\textbf{(2)} 积分得到速度的精确积分表达。
+\par\noindent\textbf{(3)} 在 (b=0) 时化为Tsiolkovsky加重力损失公式。
+\par\noindent\textbf{(4)} 建立高度积分和燃料用尽时的参数约束。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 控制体动量守恒给火箭受到的推进力 \(u(-\dot m)=u\alpha\)。牛顿形式为 \(m\dot v=u\alpha-mg-bv\)，所以 \(\dot v+[b/m(t)]v=u\alpha/m(t)-g\)。不允许写成 \(\frac{d}{dt}(mv)=F_{\mathrm{ext}}\) 而忽略喷流携带的动量。
+\par\noindent\textbf{(2)} 设 \(m(t)=m_0-\alpha t\) 和 \(p=b/\alpha\)，积分因子为 \(I(t)=\exp\int b/m\,dt=(m_0/m)^p\)。于是 \(v(t)=(m/m_0)^p\left[v_0+\int_0^t(m_0/m(s))^p(u\alpha/m(s)-g)\,ds\right]\)，积分表达对任意 \(p>0\) 且 \(m>0\) 有效。
+\par\noindent\textbf{(3)} 若 \(b\to0\)，积分因子趋 \(1\)，并用 \(\int_0^t \alpha/m(s)\,ds=\ln(m_0/m(t))\)，得 \(v(t)=v_0+u\ln[m_0/m(t)]-gt\)。重力损失不能与喷流的对数速度增量混同；只在 \(g=0\) 时回到理想Tsiolkovsky关系。
+\par\noindent\textbf{(4)} 位移 \(h(t)=h_0+\int_0^t v(s)\,ds\)；若推力需维持上升，启动时要求 \(u\alpha>m_0g+bv_0\)。有效燃尽时间必须小于 \(m_0/\alpha\)，实际设干质量 \(m_d>0\) 后 \(t_b=(m_0-m_d)/\alpha\)，避免将 \(m\to0\) 的非物理对数发散当作真实加速能力。
+
+\par\bigskip\hrule\bigskip
+\section*{M252\quad 球面测地线的变分一阶积分与Jacobi场}
+\textbf{物理条件}\par 半径 \(R\) 的球面上质点无外力，轨道以球坐标 \((\theta,\phi)\) 表示，采用仿射参数 \(s\)，线元 \(ds^2=R^2(d\theta^2+\sin^2\theta\,d\phi^2)\)。
+\par\noindent\textbf{(1)} 建立测地线的二次变分Lagrangian。
+\par\noindent\textbf{(2)} 求循环动量与Clairaut关系。
+\par\noindent\textbf{(3)} 证明大圆平面交线为测地线。
+\par\noindent\textbf{(4)} 从测地线偏差方程求共轭点距离。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 取仿射参数 \(s\)，测地线Lagrangian为 \(\mathcal L=\tfrac{R^2}{2}(\theta'^2+\sin^2\theta\,\phi'^2)\)。变分给 \(\theta''-\sin\theta\cos\theta\,\phi'^2=0\) 与 \((\sin^2\theta\,\phi')'=0\)。弧长归一时 \(R^2(\theta'^2+\sin^2\theta\,\phi'^2)=1\)。
+\par\noindent\textbf{(2)} 因 \(\phi\) 为循环坐标，\(p_\phi=R^2\sin^2\theta\,\phi'\) 恒定。若 \(\alpha\) 为曲线切线与纬线方向的夹角，沿纬线的弧长分量为 \(R\sin\theta\,\phi'=\cos\alpha\)，故 \(\sin\theta\cos\alpha=p_\phi/R\) 为常量，这就是球面Clairaut关系。
+\par\noindent\textbf{(3)} 任意经过球心的平面与球面相交为大圆。选择平面为赤道时 \(\theta=\pi/2,\ \phi=s/R+\phi_0\)，它满足两条测地线方程；由于球面旋转对称，任意大圆由赤道旋转得到，也必满足测地线方程。小圆纬线一般不是自由测地线。
+\par\noindent\textbf{(4)} 球面的高斯曲率 \(K=1/R^2\)。沿单位速测地线的垂直Jacobi场幅度 \(j(s)\) 满足 \(j''+Kj=0\)，若 \(j(0)=0,j'(0)\ne0\)，则 \(j(s)\propto\sin(s/R)\)。首个共轭点出现在 \(s=\pi R\)，即反足点处，大圆局部最短性质在此之后失去全局唯一性。
+
+\par\bigskip\hrule\bigskip
+\section*{M253\quad Kapitza倒立摆的快振平均稳定与振动阈值}
+\textbf{物理条件}\par 长度 \(l\) 的平面单摆，其悬点作竖直快速振动 \(y_p(t)=a\cos(\Omega t)\)，向上为正，重力 \(g>0\)。角度 \(\theta\) 从铅直向下计，满足 \(a\ll l,\ \Omega\gg\sqrt{g/l}\)。
+\par\noindent\textbf{(1)} 建立随动支点的精确角动力学。
+\par\noindent\textbf{(2)} 分离慢变量与高频微振并求微振主项。
+\par\noindent\textbf{(3)} 导出平均有效势及倒立位置稳定条件。
+\par\noindent\textbf{(4)} 讨论 (Omega) 过低与非线性近似失效。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 摆球坐标为 \(x=l\sin\theta,\ y=a\cos(\Omega t)-l\cos\theta\)。对惯性系Lagrangian \(L=m(\dot x^2+\dot y^2)/2-mgy\) 用Euler方程，或在支点加速度框架下求切向力，得 \(\ddot\theta+[g-a\Omega^2\cos(\Omega t)]\sin\theta/l=0\)。支点加速度为 \(-a\Omega^2\cos(\Omega t)\)。
+\par\noindent\textbf{(2)} 取 \(\theta=\Theta(t)+\xi(t)\) 且慢变量 \(\Theta\) 在一周期近似常数。高频部分方程为 \(\ddot\xi=(a\Omega^2/l)\cos(\Omega t)\sin\Theta\)，可取 \(\xi=-(a/l)\sin\Theta\cos(\Omega t)\)。微振幅相对于慢角为 \(O(a/l)\)，其符号由对时间二阶导数检验。
+\par\noindent\textbf{(3)} 将 \(\theta=\Theta+\xi\) 代回并对快周期平均，使用 \(\langle\cos^2\Omega t\rangle=1/2\)，得 \(\ddot\Theta+(g/l)\sin\Theta+(a^2\Omega^2/(2l^2))\sin\Theta\cos\Theta=0\)。因此 \(V_{\mathrm{eff}}(\Theta)=mgl(1-\cos\Theta)+(ma^2\Omega^2/4)\sin^2\Theta\)，在慢近似下为守恒有效势。
+\par\noindent\textbf{(4)} 倒立点 \(\Theta=\pi\) 的有效势曲率 \(V_{\mathrm{eff}}''(\pi)=-mgl+ma^2\Omega^2/2\)，稳定要求 \(a^2\Omega^2>2gl\)。若频率不够快、振幅不小或接近参数共振，截断平均不受保证；不能据该不等式宣称所有有限频率驱动都稳定。
+
+\par\bigskip\hrule\bigskip
+\section*{M254\quad Kepler双曲散射的偏转角、冲量参数和近心点}
+\textbf{物理条件}\par 质量 \(m\) 试验粒子在势 \(V(r)=-k/r\) 中以无穷远速度 \(v_\infty\)、冲量参数 \(b>0\) 散射，\(k>0\)。轨道能量 \(E=m v_\infty^2/2\)、角动量 \(L=mv_\infty b\)。
+\par\noindent\textbf{(1)} 用Binet方程求圆锥曲线及偏心率。
+\par\noindent\textbf{(2)} 计算近心距离和允许轨道支。
+\par\noindent\textbf{(3)} 推导经典偏转角与冲量参数关系。
+\par\noindent\textbf{(4)} 从角度映射导出Rutherford微分截面。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 令 \(u=1/r\)，中心吸引力 \(F=-k/r^2\) 的Binet式为 \(u''+u=mk/L^2\)，解为 \(u=(mk/L^2)[1+e\cos(\phi-\phi_0)]\)。利用能量积分得 \(e^2=1+2EL^2/(mk^2)=1+(mv_\infty^2b/k)^2>1\)，因此轨道为双曲线。
+\par\noindent\textbf{(2)} 取近心点在 \(\phi=\phi_0\)，则 \(r_p=L^2/[mk(1+e)]\)。又记 \(h=mv_\infty^2b/k\)，代入可得 \(r_p=(k/(mv_\infty^2))[\sqrt{1+h^2}-1]\)，两式相等并且 \(r_p\to0\) 当 \(b\to0\)；碰撞中心在点势下出现奇异。
+\par\noindent\textbf{(3)} 无穷远处 \(u\to0\) 要求 \(\cos(\phi_\infty-\phi_0)=-1/e\)。两条渐近线之间的速度偏转角为 \(\chi=2\arcsin(1/e)=2\arctan[k/(mv_\infty^2b)]\)。等价地 \(b=[k/(mv_\infty^2)]\cot(\chi/2)\)，高能或大 \(b\) 时散射角很小。
+\par\noindent\textbf{(4)} 轴对称散射有 \(d\sigma/d\Omega=(b/\sin\chi)|db/d\chi|\)。代入 \(b=C\cot(\chi/2)\)、\(C=k/(mv_\infty^2)\)，得 \(\frac{d\sigma}{d\Omega}=\frac{C^2}{4\sin^4(\chi/2)}=\frac{k^2}{4m^2v_\infty^4\sin^4(\chi/2)}\)。总截面在小角因长程势而发散，需要实验角截断。
+
+\par\bigskip\hrule\bigskip
+\section*{M255\quad 深水毛细—重力波的自由边界色散与最小相速度}
+\textbf{物理条件}\par 理想无黏不可压液体密度 \(\rho\) 占据深度趋于无穷的容器，自由面小扰动 \(\eta(x,t)\)，表面张力 \(\gamma>0\)，重力 \(g>0\)，基流静止且速度势 \(\Phi\) 满足Laplace方程。
+\par\noindent\textbf{(1)} 建立线化自由面的运动与动态条件。
+\par\noindent\textbf{(2)} 对单模 (k>0) 求速度势深度依赖。
+\par\noindent\textbf{(3)} 推导毛细重力表面波色散与相、群速度。
+\par\noindent\textbf{(4)} 求相速度最低点波数及重力、毛细两个极限。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 不可压无旋流满足 \(\nabla^2\Phi=0\)。在 \(z=0\) 的线化自由面运动学边界是 \(\eta_t=\Phi_z\)，动态Bernoulli加Laplace压强给 \(\Phi_t+g\eta-(\gamma/\rho)\eta_{xx}=0\)。这些边界来自压力和法向速度连续，深水处要求 \(\Phi\to0\)。
+\par\noindent\textbf{(2)} 设 \(\eta=\eta_0e^{i(kx-\omega t)}\)，深水衰减解 \(\Phi=Ae^{kz}e^{i(kx-\omega t)}\)（液体为 \(z<0\)）。运动学边界给 \(-i\omega\eta_0=kA\)，因此 \(A=-i\omega\eta_0/k\)。这使流动振幅随深度在尺度 \(1/k\) 内衰减。
+\par\noindent\textbf{(3)} 动态边界代入 \(A\) 得 \(\omega^2=(gk+\gamma k^3/\rho)\)。相速度 \(c_p=\omega/k=\sqrt{g/k+\gamma k/\rho}\)，群速度 \(c_g=d\omega/dk=(g+3\gamma k^2/\rho)/(2\omega)\)，可分别在频谱上求导验证而不把两者混同。
+\par\noindent\textbf{(4)} 最小相速度满足 \(d(c_p^2)/dk=-g/k^2+\gamma/\rho=0\)，故 \(k_*=\sqrt{\rho g/\gamma}\)，且 \(c_{p,\min}^2=2\sqrt{g\gamma/\rho}\)。在 \(k\ll k_*\) 时重力波 \(\omega\sim\sqrt{gk}\)，在 \(k\gg k_*\) 时毛细波 \(\omega\sim\sqrt{\gamma/\rho}\,k^{3/2}\)；这不是有限深度水波色散。
+
+\par\bigskip\hrule\bigskip
+\chapter{电磁学}
+\section*{E247\quad 谐振偶极子的辐射场、总功率与辐射反作用尺度}
+\textbf{物理条件}\par 真空中点电偶极矩 \(\boldsymbol p(t)=p_0\cos(\omega t)\hat{\boldsymbol z}\)，\(\omega>0\)，观察远场 \(r\gg c/\omega\)，忽略源体积。
+\par\noindent\textbf{(1)} 从推迟势的横向项写辐射电磁场。
+\par\noindent\textbf{(2)} 求角向平均辐射强度与极化。
+\par\noindent\textbf{(3)} 积分总辐射功率并推导辐射阻尼阶数。
+\par\noindent\textbf{(4)} 讨论轴向零辐射及准静态极限。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 推迟矢势远区与 \(\dot{\boldsymbol p}(t-r/c)\) 成正比，横向电场为 \[\boldsymbol E_{\rm rad}=\frac{1}{4\pi\varepsilon_0c^2r}\hat{\boldsymbol r}\times[\ddot{\boldsymbol p}(t-r/c)\times\hat{\boldsymbol r}]\]。对应磁场 \(\boldsymbol B_{\rm rad}=\hat{\boldsymbol r}\times\boldsymbol E_{\rm rad}/c\)。两场均横向且随 \(r^{-1}\) 衰减。
+\par\noindent\textbf{(2)} 设观测极角 \(\theta\)，因偶极加速度沿 \(z\) 轴，远场幅 \(E_\theta=\omega^2p_0\sin\theta/(4\pi\varepsilon_0c^2r)\)。时间平均Poynting通量 \(\langle S_r\rangle=\varepsilon_0 cE_{\theta,0}^2/2\)，于是每立体角功率 \(\frac{dP}{d\Omega}=\frac{\omega^4p_0^2}{32\pi^2\varepsilon_0c^3}\sin^2\theta\)。
+\par\noindent\textbf{(3)} 球面积分用 \(\int\sin^2\theta\,d\Omega=8\pi/3\)，得到 \(\langle P\rangle=\omega^4p_0^2/(12\pi\varepsilon_0c^3)\)。若偶极来自带电粒子位移 \(p=qx\)，则能量损失与 \(q^2\ddot x^2/(6\pi\varepsilon_0c^3)\) 的周期平均一致，辐射反作用属于 \(c^{-3}\) 阶小效应。
+\par\noindent\textbf{(4)} 当 \(\theta=0,\pi\) 时横向加速度为零，故辐射沿偶极轴消失而在赤道最强。远场总功率不随 \(r\) 变，是 \(r^{-2}\) 通量和球面积 \(r^2\) 的平衡；\(\omega\to0\) 时辐射功率按 \(\omega^4\) 消失，不能用静电近场 \(r^{-3}\) 项计算远区辐射。
+
+\par\bigskip\hrule\bigskip
+\section*{E248\quad 平行板电容的Maxwell应力、位移电流和储能}
+\textbf{物理条件}\par 面积 \(A\) 的大平行板电容器，板距 \(d\ll\sqrt A\)，介质 \(\varepsilon\)，瞬时电压 \(V(t)\) 缓慢变化，边缘效应忽略。
+\par\noindent\textbf{(1)} 求板间电场、储能和等效电容。
+\par\noindent\textbf{(2)} 从Maxwell应力张量求板间吸引力。
+\par\noindent\textbf{(3)} 以位移电流检验安培—Maxwell定律。
+\par\noindent\textbf{(4)} 区别恒电压与恒电荷移动板距时的功。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 板间近似均匀电场 \(E=V/d\)，电容 \(C=\varepsilon A/d\)。体场能 \(U_E=\frac12\int\varepsilon E^2d^3r=\varepsilon AV^2/(2d)=CV^2/2\)。在固定板上电荷时应改写为 \(U_E=Q^2d/(2\varepsilon A)\)，两种控制条件对应不同导数。
+\par\noindent\textbf{(2)} 无磁场时Maxwell应力张量 \(T_{ij}=\varepsilon(E_iE_j-\delta_{ij}E^2/2)\)。在板法向为场方向的理想平行板中，法向压力 \(p=\varepsilon E^2/2\)，总吸引力幅值 \(F=\varepsilon AV^2/(2d^2)=Q^2/(2\varepsilon A)\)。吸引方向可由闭合曲面积分判定。
+\par\noindent\textbf{(3)} 穿过板间任一跨越两导线的面积，位移电流 \[I_D=\frac{d}{dt}\int\boldsymbol D\cdot d\boldsymbol A=\varepsilon A\dot E=\frac{\varepsilon A}{d}\dot V=C\dot V\]。这与导线传导电流连续；若忽略位移电流，安培环路对不同跨面会给矛盾结果。
+\par\noindent\textbf{(4)} 固定 \(Q\) 时 \(U_E=Q^2d/(2\varepsilon A)\)，对增大 \(d\) 求导，外界需做功 \(dU=F\,dd\)。固定 \(V\) 时场能 \(CV^2/2\) 随 \(d\) 增大反而下降，但电源交换电荷作功；正确总势是 \(U_E-VQ=-CV^2/2\)，对 \(d\) 求导仍得到吸引力。
+
+\par\bigskip\hrule\bigskip
+\section*{E249\quad London超导半空间的磁场穿透与表面电流}
+\textbf{物理条件}\par 理想局域London超导体占据 \(x>0\)，外加静磁场沿 \(z\) 方向，边界场 \(B_z(0)=B_0\)，穿透深度 \(\lambda_L>0\)，忽略涡旋。
+\par\noindent\textbf{(1)} 由London方程与Maxwell方程推出磁场Helmholtz式。
+\par\noindent\textbf{(2)} 解半空间Meissner磁场与超流分布。
+\par\noindent\textbf{(3)} 积分计算每单位面积磁场能。
+\par\noindent\textbf{(4)} 讨论 (lambda\_L	o0) 与穿透条件的范围。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 第二London方程为 \(\nabla\times\boldsymbol J_s=-(n_se^2/m)\boldsymbol B\)，静态Ampère方程 \(\nabla\times\boldsymbol B=\mu_0\boldsymbol J_s\)。取旋度并利用 \(\nabla\cdot\boldsymbol B=0\)，得 \(\nabla^2\boldsymbol B=\boldsymbol B/\lambda_L^2\)，其中 \(\lambda_L^2=m/(\mu_0n_se^2)\)。
+\par\noindent\textbf{(2)} 由于场只依赖 \(x\)，满足 \(B_z''=B_z/\lambda_L^2\)。半空间不发散的解为 \(B_z(x)=B_0e^{-x/\lambda_L}\)。由 \((\nabla\times\boldsymbol B)_y=-B_z'(x)\) 得 \(J_y(x)=B_0e^{-x/\lambda_L}/(\mu_0\lambda_L)\)，与屏蔽外场的面电流方向一致。
+\par\noindent\textbf{(3)} 每单位面积磁场储能 \(U_B/A=\int_0^\infty B_z(x)^2/(2\mu_0)\,dx=B_0^2\lambda_L/(4\mu_0)\)。总表面电流 \(K_y=\int_0^\infty J_y\,dx=B_0/\mu_0\)，与边界磁场跃变相符；London动能另外贡献能量，不能把纯磁场积分冒充完整超导自由能。
+\par\noindent\textbf{(4)} 当 \(\lambda_L\to0\)，场趋于表面薄层而内部 \(B_z(x>0)\to0\)，即理想Meissner屏蔽。实际第二类超导体超过下临界场 \(H_{c1}\) 可进入涡旋混合态，非局域响应、有限厚度及临界电流也会使简单指数解失效。
+
+\par\bigskip\hrule\bigskip
+\section*{E250\quad 非均匀介电界面的静电边界、等效镜像电荷与自能}
+\textbf{物理条件}\par 两无限均匀线性介电半空间以 \(z=0\) 分界，上方介电率 \(\varepsilon_1>0\)，下方 \(\varepsilon_2>0\)。点电荷 \(q\) 位于 \((0,0,d)\)、\(d>0\) 处。
+\par\noindent\textbf{(1)} 用镜像构造两侧电势并列出边界条件。
+\par\noindent\textbf{(2)} 求上方像电荷和下方等效源的强度。
+\par\noindent\textbf{(3)} 计算电荷所受界面极化力。
+\par\noindent\textbf{(4)} 讨论导体极限和相同介电率极限。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 界面无外加自由面电荷时要求 \(\Phi_1(0^+)=\Phi_2(0^-)\) 和 \(\varepsilon_1\partial_z\Phi_1(0^+)=\varepsilon_2\partial_z\Phi_2(0^-)\)。取上方 \(\Phi_1=\frac{1}{4\pi\varepsilon_1}(q/r_++q'/r_-)\)，\(r_\pm^2=\rho^2+(z\mp d)^2\)，下方 \(\Phi_2=q''/(4\pi\varepsilon_2r_+)\)。
+\par\noindent\textbf{(2)} 由电势连续得 \((q+q')/\varepsilon_1=q''/\varepsilon_2\)，法向位移连续得 \(q-q'=q''\)。联立求 \(q'=q(\varepsilon_1-\varepsilon_2)/(\varepsilon_1+\varepsilon_2)\)，\(q''=2\varepsilon_2q/(\varepsilon_1+\varepsilon_2)\)，这同时满足无穷远衰减条件。
+\par\noindent\textbf{(3)} 原电荷只受感应像场的力，沿 \(z\) 方向 \[F_z=qq'/(4\pi\varepsilon_1(2d)^2)=q^2(\varepsilon_1-\varepsilon_2)/[16\pi\varepsilon_1(\varepsilon_1+\varepsilon_2)d^2]\]。若下层介电常数大于上层，\(q'<0\)，电荷被吸向界面；其自能修正为 \(\Delta U=qq'/(16\pi\varepsilon_1d)\)。
+\par\noindent\textbf{(4)} 当 \(\varepsilon_2\to\infty\) 时 \(q'\to-q\)，回复接地导体平面像电荷；\(\varepsilon_2=\varepsilon_1\) 时像电荷消失、力为零。镜像点电荷只是边值数学表示，不代表另一介质内有真实自由点电荷。
+
+\par\bigskip\hrule\bigskip
+\section*{E251\quad 回旋运动中的碰撞Drude介电函数与吸收峰}
+\textbf{物理条件}\par 电子等离子体密度 \(n\)，电子电荷 \(-e\)、质量 \(m\)，沿 \(z\) 方向外磁场 \(B_0\)。电子动量弛豫率 \(\nu>0\)，探测横向圆偏振电场频率 \(\omega>0\)，固定离子背景。
+\par\noindent\textbf{(1)} 写包含碰撞的线性运动方程。
+\par\noindent\textbf{(2)} 导出两个圆偏振复电导与介电函数。
+\par\noindent\textbf{(3)} 给出共振附近正的焦耳吸收谱。
+\par\noindent\textbf{(4)} 核对 (
+u	o0) 与反向磁场极限。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 电子线性方程 \(m(\partial_t+\nu)\boldsymbol v=-e(\boldsymbol E+\boldsymbol v\times B_0\hat{\boldsymbol z})\)。以 \(\boldsymbol E\propto e^{-i\omega t}\) 并取圆偏振 \(v_\pm=v_x\pm iv_y\)，得到 \([\nu-i(\omega\mp\omega_c)]v_\pm=-(e/m)E_\pm\)，其中 \(\omega_c=eB_0/m\)。
+\par\noindent\textbf{(2)} 因为 \(\boldsymbol J=-ne\boldsymbol v\)，复电导为 \(\sigma_\pm(\omega)=ne^2/[m(\nu-i(\omega\mp\omega_c))]\)。由 \(\boldsymbol D=\varepsilon_0\boldsymbol E+i\boldsymbol J/\omega\) 得 \[\varepsilon_\pm/\varepsilon_0=1+i\sigma_\pm/(\varepsilon_0\omega)=1-\omega_p^2/[\omega(\omega\mp\omega_c+i\nu)]\]，\(\omega_p^2=ne^2/(\varepsilon_0m)\)。
+\par\noindent\textbf{(3)} 时间平均耗散功率密度为 \(\langle p_\pm\rangle=\tfrac12\operatorname{Re}\sigma_\pm|E_\pm|^2\)，其中 \(\operatorname{Re}\sigma_\pm=\frac{ne^2\nu/m}{\nu^2+(\omega\mp\omega_c)^2}\ge0\)。适当手性的共振峰位于 \(\omega\approx\omega_c\)，半高全宽 \(2\nu\)（角频率）。
+\par\noindent\textbf{(4)} 碰撞趋零时Lorentz吸收峰宽趋零，其积分谱权重有限，远离共振处耗散消失；反向 \(B_0\) 则交换两种圆偏振的峰。近回旋共振还可能有动理学波粒相互作用，不能以此冷单流体谱描述所有高温等离子体。
+
+\par\bigskip\hrule\bigskip
+\section*{E252\quad 电感耦合谐振电路的本征分裂与阻抗驱动}
+\textbf{物理条件}\par 两个理想LC回路自感 \(L_1,L_2>0\)、电容 \(C_1,C_2>0\)，互感 \(M\) 满足 \(M^2<L_1L_2\)，环路电荷 \(q_1,q_2\)。无电阻、无外驱动。
+\par\noindent\textbf{(1)} 由磁能和电能建立双回路Lagrangian。
+\par\noindent\textbf{(2)} 求耦合频率的广义特征多项式。
+\par\noindent\textbf{(3)} 对相同回路给出正常模与频率。
+\par\noindent\textbf{(4)} 验证耦合临界与能量正定性。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 电流为 \(I_i=\dot q_i\)，磁能 \(T_L=\tfrac12(L_1I_1^2+L_2I_2^2+2MI_1I_2)\)，电场储能 \(U_C=q_1^2/(2C_1)+q_2^2/(2C_2)\)。Lagrangian取 \(L=T_L-U_C\)。Euler方程为 \(L_1\ddot q_1+M\ddot q_2+q_1/C_1=0\) 与 \(M\ddot q_1+L_2\ddot q_2+q_2/C_2=0\)。
+\par\noindent\textbf{(2)} 取 \(q_j=Q_je^{-i\omega t}\)，非零模态要求 \(\det\begin{pmatrix}C_1^{-1}-\omega^2L_1&-\omega^2M\\-\omega^2M&C_2^{-1}-\omega^2L_2\end{pmatrix}=0\)。展开得到 \((L_1L_2-M^2)\omega^4-(L_1/C_2+L_2/C_1)\omega^2+1/(C_1C_2)=0\)。
+\par\noindent\textbf{(3)} 对 \(L_1=L_2=L\)、\(C_1=C_2=C\)，同相 \(Q_1=Q_2\) 满足 \(\omega_+^2=1/[(L+M)C]\)，反相 \(Q_1=-Q_2\) 满足 \(\omega_-^2=1/[(L-M)C]\)。正互感增加同相磁能，因而同相模频率降低，反相模频率升高。
+\par\noindent\textbf{(4)} 储磁能矩阵 \(\begin{pmatrix}L_1&M\\M&L_2\end{pmatrix}\) 必须正定，即 \(L_1L_2>M^2\)。在 \(|M|\to\sqrt{L_1L_2}\) 极限，一个组合的磁惯量趋零、相应理想模频率发散；这表明模型的零漏感奇异性，而非可实现无限频率。
+
+\par\bigskip\hrule\bigskip
+\section*{E253\quad 带电薄球壳的球谐多极边界问题}
+\textbf{物理条件}\par 半径 \(R\) 的薄球壳上自由面电荷密度 \(\sigma(\theta)=\sigma_0+\sigma_2P_2(\cos\theta)\)，内外均为真空，无其他自由电荷，静电电势在原点有限、无穷远趋零。
+\par\noindent\textbf{(1)} 用Legendre多极展开写球内外电势。
+\par\noindent\textbf{(2)} 利用边界连续性和法向电场跳跃求系数。
+\par\noindent\textbf{(3)} 求内部轴上电场和球外远场多极矩。
+\par\noindent\textbf{(4)} 检查均匀壳及总电荷守恒极限。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 轴对称Laplace解可写 \(\Phi_{\rm in}=\sum_l A_lr^lP_l(\cos\theta)\)、\(\Phi_{\rm out}=\sum_l B_lr^{-l-1}P_l(\cos\theta)\)。只需 \(l=0,2\) 两阶：其他模式边界源为零，正交性保证对应系数均为零。
+\par\noindent\textbf{(2)} 球面电势连续给 \(A_lR^l=B_lR^{-l-1}\)，法向Gauss跳跃 \(-\varepsilon_0(\partial_r\Phi_{\rm out}-\partial_r\Phi_{\rm in})|_R=\sigma_lP_l\)。代入得到 \(\varepsilon_0(2l+1)A_lR^{l-1}=\sigma_l\)，于是 \(A_l=\sigma_lR^{1-l}/[\varepsilon_0(2l+1)]\)、\(B_l=\sigma_lR^{l+2}/[\varepsilon_0(2l+1)]\)。
+\par\noindent\textbf{(3)} 因此 \(\Phi_{\rm in}=\sigma_0R/\varepsilon_0+\sigma_2r^2P_2(\cos\theta)/(5\varepsilon_0R)\)，\(\Phi_{\rm out}=\sigma_0R^2/(\varepsilon_0r)+\sigma_2R^4P_2(\cos\theta)/(5\varepsilon_0r^3)\)。轴上 \(P_2(1)=1\) 且 \(E_z=-\partial_z\Phi_{\rm in}=-2\sigma_2z/(5\varepsilon_0R)\)，四极场内部呈线性。
+\par\noindent\textbf{(4)} 总自由电荷 \(Q=\int\sigma\,dA=4\pi R^2\sigma_0\)，因为 \(\int P_2d\Omega=0\)。若 \(\sigma_2=0\)，内部场为零，外部 \(\Phi=Q/(4\pi\varepsilon_0r)\)；若 \(\sigma_0=0\)，远场从 \(r^{-3}\) 四极项开始而非单极库仑项。
+
+\par\bigskip\hrule\bigskip
+\section*{E254\quad 磁偶极子在非均匀场中的保守力与力矩}
+\textbf{物理条件}\par 固定磁偶极矩大小 \(m_0\) 的小电流环，外静磁场近似 \(\boldsymbol B=B(z)\hat{\boldsymbol z}\)（仅在局部轴上），偶极方向与 \(z\) 夹角 \(\theta\)，忽略高阶多极矩。
+\par\noindent\textbf{(1)} 从电流环Lorentz力推导偶极力矩。
+\par\noindent\textbf{(2)} 用势能求轴向梯度力。
+\par\noindent\textbf{(3)} 求取向小振动频率并区分平行、反平行。
+\par\noindent\textbf{(4)} 检查空间均匀场与磁场反向的极限。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 微小电流环的磁矩 \(\boldsymbol m=IA\hat{\boldsymbol n}\)。对各线段磁力 \(d\boldsymbol F=I\,d\boldsymbol l\times\boldsymbol B\) 求力矩，均匀场的净力为零而总力矩 \(\boldsymbol\tau=\boldsymbol m\times\boldsymbol B\)。因此取向势能 \(U=-\boldsymbol m\cdot\boldsymbol B=-m_0B\cos\theta\)。
+\par\noindent\textbf{(2)} 对沿场轴非均匀强度 \(B(z)\) 且磁矩方向暂定，轴向力 \(F_z=-\partial_z U=m_0\cos\theta\,B'(z)\)。一般矢量近似为 \(\boldsymbol F=\nabla(\boldsymbol m\cdot\boldsymbol B)\)，其中磁矩取固定而非与位置任意独立变化。最大吸引力来自磁矩顺场并沿场增强方向。
+\par\noindent\textbf{(3)} 若偶极环有关于转向轴的转动惯量 \(I_r\)，在固定位置 \(B>0\) 时角方程 \(I_r\ddot\theta=-m_0B\sin\theta\)。顺场 \(\theta=0\) 附近有 \(\ddot\theta+(m_0B/I_r)\theta=0\)，小振动频率 \(\sqrt{m_0B/I_r}\)；反向 \(\theta=\pi\) 的线性化则为指数不稳定。
+\par\noindent\textbf{(4)} 若 \(B'(z)=0\) 但 \(B\ne0\)，轴向净力为零而取向力矩仍可非零。反转场方向可交换顺场与逆场平衡；若外场强度在空间变化太快，有限尺寸电流环必须引入高阶磁多极项。
+
+\par\bigskip\hrule\bigskip
+\section*{E255\quad 球形介电粒子的Rayleigh散射、极化率与散射截面}
+\textbf{物理条件}\par 半径 \(a\ll\lambda\) 的非磁、无耗散介电球置于真空，介电常数 \(\varepsilon_r>0\)，照射波数 \(k=2\pi/\lambda\)，幅值为 \(E_0\)。
+\par\noindent\textbf{(1)} 用静电球边界条件求诱导偶极极化率。
+\par\noindent\textbf{(2)} 从偶极辐射求角向微分截面。
+\par\noindent\textbf{(3)} 积分求Rayleigh总散射截面。
+\par\noindent\textbf{(4)} 说明粒径六次方律与动态修正范围。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 外均匀静电场下设 \(\Phi_{\rm out}=-E_0r\cos\theta+C\cos\theta/r^2\)，内场 \(\Phi_{\rm in}=-E_{\rm in}r\cos\theta\)。在 \(r=a\) 处使电势与法向位移连续，求得 \(E_{\rm in}=3E_0/(\varepsilon_r+2)\)，\(C=a^3E_0(\varepsilon_r-1)/(\varepsilon_r+2)\)。所以偶极极化率 \(\alpha=4\pi\varepsilon_0a^3(\varepsilon_r-1)/(\varepsilon_r+2)\)。
+\par\noindent\textbf{(2)} 诱导偶极 \(p_0=\alpha E_0\) 随入射频率振荡。远场电场振幅 \(E_{\theta,0}=\omega^2p_0\sin\theta/(4\pi\varepsilon_0c^2r)\)。以 \(\langle S_r\rangle=\varepsilon_0cE_{\theta,0}^2/2\) 求每立体角辐射功率 \(dP/d\Omega=\omega^4|p_0|^2\sin^2\theta/(32\pi^2\varepsilon_0c^3)\)。除以入射平均强度 \(I_0=\varepsilon_0c|E_0|^2/2\)，严格得到 \(d\sigma/d\Omega=k^4|\alpha|^2\sin^2\theta/(16\pi^2\varepsilon_0^2)\)。
+\par\noindent\textbf{(3)} 直接代入偶极辐射 \(dP/d\Omega=\omega^4|p_0|^2\sin^2\theta/(32\pi^2\varepsilon_0c^3)\) 及 \(I_0=\varepsilon_0c|E_0|^2/2\)，严格得到 \(\frac{d\sigma}{d\Omega}=\frac{k^4|\alpha|^2}{16\pi^2\varepsilon_0^2}\sin^2\theta\)。利用 \(\int\sin^2\theta\,d\Omega=8\pi/3\)，总散射截面 \[\sigma_{\rm sca}=k^4|\alpha|^2/(6\pi\varepsilon_0^2)=\frac{8\pi}{3}k^4a^6\left|\frac{\varepsilon_r-1}{\varepsilon_r+2}\right|^2\]。
+\par\noindent\textbf{(4)} 固定波长与介电率时 \(\sigma_{\rm sca}\propto a^6\)，解释小粒径散射快速减弱；\(\varepsilon_r\to1\) 时极化率与散射消失。若 \(ka\) 不是小量或材料吸收明显，需使用复极化率、辐射反作用修正乃至Mie理论，不可将静态极化率用于任意大球。
+
+\par\bigskip\hrule\bigskip
+\chapter{热学与统计物理}
+\section*{T242\quad 一维Ising链转移矩阵、有限温磁化与关联长度}
+\textbf{物理条件}\par 周期边界 \(N\) 自旋 \(s_i=\pm1\)，Hamilton量 \(H=-J\sum_i s_is_{i+1}-h\sum_i s_i\)，\(J>0\)，温度 \(T>0\)。
+\par\noindent\textbf{(1)} 构造对称转移矩阵及其两个本征值。
+\par\noindent\textbf{(2)} 在热力学极限求每自旋自由能与磁化。
+\par\noindent\textbf{(3)} 在零场求二点关联函数和关联长度。
+\par\noindent\textbf{(4)} 证明有限温无自发相变并分析零温极限。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 将磁场项平均分给相邻键，转移矩阵 \(T_{ss'}=\exp[\beta Jss'+\beta h(s+s')/2]\)，即 \(\begin{pmatrix}e^{\beta(J+h)}&e^{-\beta J}\\e^{-\beta J}&e^{\beta(J-h)}\end{pmatrix}\)。特征值为 \(\lambda_\pm=e^{\beta J}\cosh(\beta h)\pm\sqrt{e^{2\beta J}\sinh^2(\beta h)+e^{-2\beta J}}\)。
+\par\noindent\textbf{(2)} 配分函数 \(Z_N=\operatorname{tr}(T^N)=\lambda_+^N+\lambda_-^N\)。热力学极限 \(f=-k_BT\ln\lambda_+\)，每自旋平均磁化 \(m=-\partial f/\partial h=\sinh(\beta h)/\sqrt{\sinh^2(\beta h)+e^{-4\beta J}}\)。在 \(h=0\) 该式对任意有限 \(T\) 给 \(m=0\)。
+\par\noindent\textbf{(3)} 零场转移矩阵的本征值为 \(2\cosh(\beta J)\) 与 \(2\sinh(\beta J)\)，故 \(\langle s_0s_r\rangle=(\lambda_-/\lambda_+)^r=[\tanh(\beta J)]^r\)。写成 \(e^{-r/\xi}\)，关联长度 \(\xi^{-1}=-\ln[\tanh(\beta J)]\)，随低温指数增长。
+\par\noindent\textbf{(4)} 任意 \(T>0\) 时 \(\lambda_+>|\lambda_-|\)，自由能解析、零场磁化恒为零，因此一维有限邻接铁磁Ising模型没有有限温自发铁磁相变。仅当 \(T\to0\)，\(\tanh(\beta J)\to1\)，关联长度发散；引入长程作用可能改变结论。
+
+\par\bigskip\hrule\bigskip
+\section*{T243\quad 二能级Schottky峰、能量涨落和最优热容温度}
+\textbf{物理条件}\par 独立二能级粒子能级为 \(0,\Delta\)（\(\Delta>0\)），每级简并度相同；\(N\) 粒子可分辨且无相互作用，恒体积热平衡。
+\par\noindent\textbf{(1)} 求单粒子正则配分函数及激发态概率。
+\par\noindent\textbf{(2)} 求总内能、热容和能量方差。
+\par\noindent\textbf{(3)} 求热容峰值的超越方程及数值位置。
+\par\noindent\textbf{(4)} 讨论高低温极限与零点能平移不变性。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 单粒子 \(z=1+e^{-\beta\Delta}\)，总 \(Z=z^N\)。激发态概率 \(p=e^{-\beta\Delta}/z=1/(1+e^{\beta\Delta})\)，基态概率 \(1-p\)，故平均能量 \(U=N\Delta p\)。这是独立伯努利占有的乘积分布而非Bose无限占有。
+\par\noindent\textbf{(2)} 令 \(x=\Delta/(k_BT)\)，热容 \(C_V=\partial_TU=Nk_Bx^2e^x/(1+e^x)^2=Nk_Bx^2/[4\cosh^2(x/2)]\)。能量方差 \(\operatorname{Var}(H)=N\Delta^2p(1-p)\)，可直接验证 \(\operatorname{Var}(H)=k_BT^2C_V\)。
+\par\noindent\textbf{(3)} 对无量纲热容 \(c(x)=x^2/[4\cosh^2(x/2)]\) 求导，得到 \(c'/c=2/x-\tanh(x/2)\)。正极值满足 \(x\tanh(x/2)=2\)，唯一正根 \(x_*\approx2.39936\)，因此峰温 \(T_*=\Delta/(k_Bx_*)\)，峰值有限而不代表相变。
+\par\noindent\textbf{(4)} 低温 \(x\gg1\) 时 \(C_V\sim Nk_Bx^2e^{-x}\) 指数抑制；高温 \(x\ll1\) 时 \(C_V\sim Nk_Bx^2/4\to0\)。若整体平移两个能级，\(U\) 增常量但热容、概率及方差不变，说明零点选择不影响可测热容。
+
+\par\bigskip\hrule\bigskip
+\section*{T244\quad 真实气体二阶Virial系数与分子对势的Mayer积分}
+\textbf{物理条件}\par 三维稀薄经典单组分气体，两体中心势 \(u(r)\) 短程且稳定，\(n=N/V\) 很小，温度 \(T\)。定义 \(p/(nk_BT)=1+B_2(T)n+O(n^2)\)。
+\par\noindent\textbf{(1)} 由经典构型配分函数给Mayer函数。
+\par\noindent\textbf{(2)} 推导二阶Virial系数径向积分。
+\par\noindent\textbf{(3)} 计算硬球直径 (d) 的 (B\_2)。
+\par\noindent\textbf{(4)} 解释吸引势导致负Virial项及稀薄近似条件。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 把粒子相互作用写成 \(\sum_{i<j}u(r_{ij})\)，经典构型权重为 \(e^{-\beta\sum u}\)。定义Mayer函数 \(f(r)=e^{-\beta u(r)}-1\)。二阶簇积分由两粒子相对位移积分给出 \(b_2=\frac12\int f(\boldsymbol r)\,d^3r\)，与理想气体的 \(N!\) 计数区分开。
+\par\noindent\textbf{(2)} 簇展开消去逸度后得到 \(B_2=-b_2=-\frac12\int_{\mathbb R^3}[e^{-\beta u(r)}-1]\,d^3r\)。对各向同性势化成 \(B_2=-2\pi\int_0^\infty[e^{-\beta u(r)}-1]r^2dr\)。若吸引尾部不使积分收敛，普通低密Virial级数不能直接使用。
+\par\noindent\textbf{(3)} 硬球模型 \(u(r)=+\infty\) 对 \(r<d\)、其余为零，故 \(f=-1\) 在排除球内、其余为零。积分给 \(B_2=2\pi\int_0^d r^2dr=2\pi d^3/3\)，是单粒子硬球体积 \(\pi d^3/6\) 的四倍。正号表示排除体积使压强高于理想气体。
+\par\noindent\textbf{(4)} 若某温区存在明显吸引势 \(u<0\)，则相应区间 \(e^{-\beta u}-1>0\)，对 \(B_2\) 给负贡献；在Boyle温度两类贡献可能抵消。必须要求 \(|B_2|n\ll1\) 且更高阶簇积分可以忽略，不能用第二Virial近似描述凝聚临界区。
+
+\par\bigskip\hrule\bigskip
+\section*{T245\quad 理想Otto循环的熵守恒效率与不可逆损失}
+\textbf{物理条件}\par 理想气体比热比 \(\gamma=C_p/C_v>1\)，Otto循环由两段可逆绝热压缩/膨胀和两段定容吸放热构成，压缩比 \(r=V_1/V_2>1\)。
+\par\noindent\textbf{(1)} 由绝热定律写四个状态温度关系。
+\par\noindent\textbf{(2)} 求循环吸放热及热效率。
+\par\noindent\textbf{(3)} 推导效率的压缩比微分与极限。
+\par\noindent\textbf{(4)} 讨论非可逆过程导致的偏离和热源可用功。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 状态1到2是可逆绝热压缩，\(T_2/T_1=(V_1/V_2)^{\gamma-1}=r^{\gamma-1}\)；3到4是可逆绝热膨胀，\(T_4/T_3=(V_3/V_4)^{\gamma-1}=r^{1-\gamma}\)。两段定容给 \(V_2=V_3,\ V_1=V_4\)。
+\par\noindent\textbf{(2)} 定容吸热 \(Q_{\rm in}=nC_v(T_3-T_2)\)、放热幅值 \(Q_{\rm out}=nC_v(T_4-T_1)\)。利用 \(T_4=T_3/r^{\gamma-1}\)、\(T_1=T_2/r^{\gamma-1}\) 得 \(Q_{\rm out}=Q_{\rm in}/r^{\gamma-1}\)，故 \(\eta=1-Q_{\rm out}/Q_{\rm in}=1-r^{1-\gamma}\)。
+\par\noindent\textbf{(3)} 对压缩比求导 \(\partial_r\eta=(\gamma-1)r^{-\gamma}>0\)。\(r\downarrow1\) 时 \(\eta\to0\)，\(r\to\infty\) 时形式上 \(\eta\to1\)；但实际气体温度、材料耐热与燃烧控制限制允许压缩比，不能将无穷大极限视作真实发动机效率。
+\par\noindent\textbf{(4)} 不可逆压缩、热损失、燃烧不完全及温度相关的 \(C_v\) 使上述可逆模型效率降低或结构改变。特别是两段定容热交换本身在有限温差下不可逆，理想Otto效率也不是两个固定温热库间可逆Carnot效率，不能混淆不同的比较基准。
+
+\par\bigskip\hrule\bigskip
+\section*{T246\quad 经典成核理论的临界液滴、势垒和形核率}
+\textbf{物理条件}\par 过饱和母相中生成半径 \(r\) 的球形新相液滴，界面张力 \(\sigma>0\)，单位体积驱动自由能降低 \(\Delta g>0\)，连续介质近似，忽略形状涨落。
+\par\noindent\textbf{(1)} 写球形核的体积与表面自由能。
+\par\noindent\textbf{(2)} 求临界核半径及形核势垒。
+\par\noindent\textbf{(3)} 求势垒对过饱和度的敏感性。
+\par\noindent\textbf{(4)} 说明小核收缩、大核增长及动力学 prefactor 的作用。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 球表面自由能为 \(4\pi\sigma r^2\)，体相转换释放自由能为 \((4\pi/3)\Delta g\,r^3\)。总自由能变化 \(\Delta G(r)=4\pi\sigma r^2-\frac{4\pi}{3}\Delta g\,r^3\)，二次和三次项的不同幂次产生势垒。
+\par\noindent\textbf{(2)} 求导 \(d\Delta G/dr=8\pi\sigma r-4\pi\Delta g\,r^2\)，非零驻点 \(r_c=2\sigma/\Delta g\)。代入得 \(\Delta G_c=\Delta G(r_c)=16\pi\sigma^3/(3\Delta g^2)\)，二阶导数在 \(r_c\) 为负，故其为自由能最大值而不是稳定核。
+\par\noindent\textbf{(3)} 临界半径 \(r_c\propto\Delta g^{-1}\)，势垒 \(\Delta G_c\propto\Delta g^{-2}\)。例如把过饱和驱动力增为两倍，临界半径减半、势垒减为四分之一；形核率中指数因子 \(\exp[-\Delta G_c/(k_BT)]\) 因此会对小的热力学驱动变化极其敏感。
+\par\noindent\textbf{(4)} 若 \(r<r_c\)，增长方向增加自由能，核倾向缩小；若 \(r>r_c\)，增长方向降低自由能，核倾向长大。真实形核率一般写 \(J=J_0e^{-\Delta G_c/(k_BT)}\)，前因子 \(J_0\) 来自扩散、附着与Zeldovich因子，并非只由静态势垒决定。
+
+\par\bigskip\hrule\bigskip
+\section*{T247\quad 热力学压缩率、数涨落和临界放大}
+\textbf{物理条件}\par 单组分经典均匀流体置于巨正则系综 \((T,V,\mu)\)，数密度 \(n=\langle N\rangle/V\)，等温压缩率 \(\kappa_T=-(1/V)(\partial V/\partial p)_{T,N}\)。
+\par\noindent\textbf{(1)} 由巨配分函数求粒子数均值和方差。
+\par\noindent\textbf{(2)} 用Gibbs–Duhem关系导出数涨落—压缩率等式。
+\par\noindent\textbf{(3)} 对理想气体验证Poisson数涨落。
+\par\noindent\textbf{(4)} 解释临界压缩率发散与有限体积截断。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 巨配分函数 \(\Xi=\sum_N e^{\beta\mu N}Z_N(T,V)\)。利用 \(\partial_{\beta\mu}\ln\Xi\) 得 \(\langle N\rangle\)，再求导得 \[\operatorname{Var}(N)=\partial_{\beta\mu}\langle N\rangle=k_BT(\partial\langle N\rangle/\partial\mu)_{T,V}\]。它是巨正则数涨落的确切公式。
+\par\noindent\textbf{(2)} 固定温度下Gibbs–Duhem式 \(dp=n\,d\mu\)，所以 \((\partial n/\partial\mu)_T=n(\partial n/\partial p)_T=n^2\kappa_T\)。于是 \(\operatorname{Var}(N)=k_BTVn^2\kappa_T\)，归一形式为 \(\operatorname{Var}(N)/\langle N\rangle=nk_BT\kappa_T\)。
+\par\noindent\textbf{(3)} 理想气体 \(p=nk_BT\)，有 \(\kappa_T=1/p=1/(nk_BT)\)，所以 \(\operatorname{Var}(N)=\langle N\rangle\)。这正是理想经典气体巨正则粒子数Poisson分布；若直接使用严格固定 \(N\) 的正则系综，\(\operatorname{Var}(N)=0\)，不可混淆系综。
+\par\noindent\textbf{(4)} 靠近连续相变临界点，\(\kappa_T\) 可能显著增长，因此密度涨落放大并体现临界散射；有限体积会限制相关长度，且长程相关破坏简单独立粒子直观。以上等式要求均匀单相且巨正则平衡可定义，非平衡相分离过程不能直接代入。
+
+\par\bigskip\hrule\bigskip
+\section*{T248\quad 理想顺磁体的绝热退磁与磁化熵}
+\textbf{物理条件}\par \(N\) 个独立自旋 \(1/2\)，各磁矩模为 \(\mu_0>0\)，外磁场 \(B\) 沿 \(z\)，能级 \(\mp\mu_0 B\)，与热库接触可达到平衡，忽略相互作用。
+\par\noindent\textbf{(1)} 写配分函数和平均磁矩。
+\par\noindent\textbf{(2)} 求磁熵及高温低场级数。
+\par\noindent\textbf{(3)} 推导理想可逆绝热过程中的 (B/T) 不变量。
+\par\noindent\textbf{(4)} 讨论趋近零温与晶格热容的限制。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 单自旋配分函数 \(z=2\cosh x\)，其中 \(x=\mu_0B/(k_BT)\)，总 \(\ln Z=N\ln(2\cosh x)\)。平均总磁矩 \(M=N\mu_0\tanh x\)，由 \(\partial_B(k_BT\ln Z)\) 得到，磁化在低场满足Curie近似 \(M\approx N\mu_0^2B/(k_BT)\)。
+\par\noindent\textbf{(2)} 自由能 \(F=-Nk_BT\ln(2\cosh x)\)。熵 \(S=-\partial_TF|_B=Nk_B[\ln(2\cosh x)-x\tanh x]\)。当 \(x\to0\)，展开 \(S=Nk_B[\ln2-x^2/2+O(x^4)]\)，强场 \(x\gg1\) 时熵趋零。
+\par\noindent\textbf{(3)} 理想可逆绝热退磁 \(dS=0\)。由于 \(S\) 仅依赖 \(x=B\mu_0/(k_BT)\) 且 \(dS/dx=-Nk_Bx\operatorname{sech}^2x\neq0\)（\(B>0\)），故 \(B/T=\mathrm{const}\)。将场从 \(B_i\) 降到 \(B_f\) 给 \(T_f=T_i(B_f/B_i)\)，体现理想磁冷却。
+\par\noindent\textbf{(4)} 若 \(B_f\to0\)，该模型形式上 \(T_f\to0\)，但真实磁体有自旋耦合、核磁有序、晶格热容和不可逆热漏，不能有限步骤达到绝对零度。若额外晶格熵对 \(T\) 有贡献，恒总熵时 \(B/T\) 不再严格不变。
+
+\par\bigskip\hrule\bigskip
+\section*{T249\quad 热电材料的Seebeck、Peltier与Kelvin关系}
+\textbf{物理条件}\par 一维各向同性线性热电材料，导电率 \(\sigma>0\)，Seebeck系数 \(S(T)\)，热导率 \(\kappa>0\)，近局部平衡，流密度 \(J\) 与热流 \(J_Q\)。
+\par\noindent\textbf{(1)} 写线性输运本构并确定开路Seebeck电压。
+\par\noindent\textbf{(2)} 求Peltier系数与热电势中的热流项。
+\par\noindent\textbf{(3)} 利用Onsager互易推导Kelvin关系。
+\par\noindent\textbf{(4)} 求Thomson系数并讨论常Seebeck的极限。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 选取正方向定义 \(J=\sigma(E-S\,\partial_xT)\) 和 \(J_Q=\Pi J-\kappa\partial_xT\)。开路 \(J=0\) 给 \(E=S\partial_xT\)，故两端电势差 \(\Delta V=-\int E\,dx=-\int_{T_1}^{T_2}S(T)\,dT\)，符号需与测量端定义一致。
+\par\noindent\textbf{(2)} Peltier系数定义为均匀温度下每单位电流携带的可逆热流 \(\Pi=J_Q/J\)（扣除Fourier项后）。在不同材料界面，电流穿界时可逆Peltier热率 \( \dot Q=I(\Pi_A-\Pi_B)\) ，而内部焦耳项 \(J^2/\sigma\ge0\) 属不可逆耗散，不能合并进 \(\Pi\)。
+\par\noindent\textbf{(3)} 令热力学力为 \(X_e=E/T\)、\(X_T=-\partial_xT/T^2\)，线性Onsager矩阵满足 \(L_{eQ}=L_{Qe}\)（无磁场）。与本构对比可得第一Kelvin关系 \(\Pi=ST\)。这是可逆热电交叉效应的互易约束，不由简单能量守恒单独保证。
+\par\noindent\textbf{(4)} 沿温度梯度载流的可逆体热含Thomson项，系数 \(\tau=T\,dS/dT\)，称第二Kelvin关系；若 \(S\) 为温度常数则 \(\tau=0\)，但只要 \(S\neq0\) 仍有Peltier热。高温相变或非局域电子输运时线性系数可能不适用。
+
+\par\bigskip\hrule\bigskip
+\chapter{振动与波动}
+\section*{W250\quad 一维周期层状声学介质的Bloch色散与布拉格禁带}
+\textbf{物理条件}\par 一维无耗散声波介质交替由两层组成，层厚 \(d_1,d_2\)、波速 \(c_1,c_2\)、阻抗 \(Z_1,Z_2>0\)，周期 \(a=d_1+d_2\)。压力、质点速度在界面连续。
+\par\noindent\textbf{(1)} 建立单层传播转移矩阵。
+\par\noindent\textbf{(2)} 构造单胞矩阵并求Bloch迹色散。
+\par\noindent\textbf{(3)} 判定允许带与禁带。
+\par\noindent\textbf{(4)} 讨论阻抗匹配及低频有效声速。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 令状态 \(\boldsymbol v=(p,u)^T\) 且采用 \(e^{-i\omega t}\) 约定，单层长度 \(d_j\) 的传播矩阵可写 \(M_j=\begin{pmatrix}\cos k_jd_j&iZ_j\sin k_jd_j\\i\sin k_jd_j/Z_j&\cos k_jd_j\end{pmatrix}\)，\(k_j=\omega/c_j\)。其行列式为1，反映无耗散的前、后行波输运。
+\par\noindent\textbf{(2)} 单胞矩阵 \(M=M_2M_1\)。Bloch本征值为 \(e^{\pm iqa}\)，所以 \(2\cos(qa)=\operatorname{tr}M\)。乘矩阵得 \(\cos(qa)=\cos(k_1d_1)\cos(k_2d_2)-\frac12(Z_1/Z_2+Z_2/Z_1)\sin(k_1d_1)\sin(k_2d_2)\)。
+\par\noindent\textbf{(3)} 如果色散函数右侧绝对值不超过1，则 \(q\) 为实数，波能够在周期介质中传播；若绝对值大于1，则 \(q\) 含虚部，形成Bloch禁带。禁带源于每个单胞内阻抗不匹配导致的相干布拉格反射，而非材料本身必然吸收。
+\par\noindent\textbf{(4)} 当 \(Z_1=Z_2\)，迹化成 \(\cos(qa)=\cos[\omega(d_1/c_1+d_2/c_2)]\)，没有阻抗反射禁带。低频展开可定义 \(q\approx\omega/c_{\rm eff}\)，其中 \(c_{\rm eff}^{-2}=[(d_1/c_1+d_2/c_2)^2+(Z_1/Z_2+Z_2/Z_1-2)d_1d_2/(c_1c_2)]/a^2\)。必须用色散展开而非简单取算术平均波速。
+
+\par\bigskip\hrule\bigskip
+\section*{W251\quad 聚焦非线性Schrödinger方程亮孤子的幅宽与守恒量}
+\textbf{物理条件}\par 无量纲聚焦NLS方程 \(i\psi_t+\tfrac12\psi_{xx}+|\psi|^2\psi=0\)，\(x\in\mathbb R\)，解在无穷远衰减。
+\par\noindent\textbf{(1)} 建立驻波假设并约化为实振幅方程。
+\par\noindent\textbf{(2)} 构造精确亮孤子并得到幅宽关系。
+\par\noindent\textbf{(3)} 计算粒子数和Hamilton能量。
+\par\noindent\textbf{(4)} 通过Galilean变换得到移动孤子并讨论散焦情形。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 设 \(\psi(x,t)=f(x)e^{i\lambda t}\)，\(f\) 为实正且无穷远趋零。代入得 \(\tfrac12f''-\lambda f+f^3=0\)。乘 \(f'\) 并用衰减边界积分得 \((f')^2=2\lambda f^2-f^4\)，要求 \(\lambda>0\)，峰值 \(f_{\max}=\sqrt{2\lambda}\)。
+\par\noindent\textbf{(2)} 取 \(f(x)=\eta\,\operatorname{sech}(\eta x)\) 并代入，可得 \(\lambda=\eta^2/2\)。因此 \(\psi=\eta\,\operatorname{sech}(\eta x)e^{i\eta^2t/2}\)，峰值 \(\eta\)，宽度尺度 \(1/\eta\)，说明更强的非线性束缚对应更窄孤子。
+\par\noindent\textbf{(3)} 粒子数 \(N=\int|\psi|^2dx=\eta^2\int\operatorname{sech}^2(\eta x)dx=2\eta\)。Hamilton量 \(H=\int[\tfrac12|\psi_x|^2-\tfrac12|\psi|^4]dx\)，利用 \(\int\operatorname{sech}^2u\tanh^2u\,du=2/3\)、\(\int\operatorname{sech}^4u\,du=4/3\)，得到 \(H=-\eta^3/3\)。
+\par\noindent\textbf{(4)} Galilean变换 \(\psi_v(x,t)=e^{i(vx-v^2t/2)}\psi(x-vt,t)\) 仍解同一NLS，故亮孤子可匀速传播。若改成散焦号 \(i\psi_t+\psi_{xx}/2-|\psi|^2\psi=0\)，在零背景下无此类正局域亮孤子；应考虑非零背景暗孤子。
+
+\par\bigskip\hrule\bigskip
+\section*{W252\quad 阻尼谐振子的因果Green函数与驱动共振带宽}
+\textbf{物理条件}\par 线性振子满足 \(\ddot x+2\gamma\dot x+\omega_0^2x=f(t)/m\)，\(0<\gamma<\omega_0\)，初态因果且 \(f(t<0)=0\)。
+\par\noindent\textbf{(1)} 求时间域迟滞Green函数。
+\par\noindent\textbf{(2)} 用卷积解任意驱动力。
+\par\noindent\textbf{(3)} 求复频域易感率和稳态功率吸收。
+\par\noindent\textbf{(4)} 讨论弱阻尼峰宽及 (gamma	o0\textasciicircum{}+) 极限。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} Green函数满足 \(G''+2\gamma G'+\omega_0^2G=\delta(t)\) 且 \(G(t<0)=0\)。写 \(\omega_d=\sqrt{\omega_0^2-\gamma^2}\)，由齐次方程和 \(G(0^+)=0,\ G'(0^+)=1\) 得 \(G(t)=\Theta(t)e^{-\gamma t}\sin(\omega_dt)/\omega_d\)。
+\par\noindent\textbf{(2)} 对零初态，线性叠加给 \(x(t)=m^{-1}\int_0^tG(t-s)f(s)\,ds\)。将其代回微分方程，利用Green函数的 \(\delta\) 源可直接重建 \(f(t)/m\)，因此卷积是任意因果外驱下的确切解。
+\par\noindent\textbf{(3)} 对单频 \(f(t)=\operatorname{Re}(F e^{-i\omega t})\)，稳态位移幅为 \(X=F\chi(\omega)\)，\(\chi=1/[m(\omega_0^2-\omega^2-2i\gamma\omega)]\)。驱动平均吸收功 \(\langle P\rangle=\tfrac12\omega |F|^2\operatorname{Im}\chi\)，其中 \(\operatorname{Im}\chi=2\gamma\omega/[m((\omega_0^2-\omega^2)^2+4\gamma^2\omega^2)]>0\)。
+\par\noindent\textbf{(4)} 当 \(\gamma\ll\omega_0\)，共振在 \(\omega\approx\omega_0\) 附近，谱半宽约 \(\gamma\)、全宽约 \(2\gamma\)。若 \(\gamma\to0^+\)，谱趋向零宽共振，固定恰共振外驱的稳态振幅表达发散，实际因有限观测时间使能量线性或二次积累；应保留因果初态而非无穷稳态。
+
+\par\bigskip\hrule\bigskip
+\section*{W253\quad 二维浅水重力波的色散、群速度及斜坡放大}
+\textbf{物理条件}\par 水深 \(h(x)>0\) 的浅水通道，液体密度常量，波幅 \(|\eta|\ll h\)，水平深度平均速度 \(u(x,t)\)，无耗散、无背景流。
+\par\noindent\textbf{(1)} 线化浅水连续与动量方程。
+\par\noindent\textbf{(2)} 求常水深长波色散与能量流。
+\par\noindent\textbf{(3)} 在缓变水深下推导Green振幅定律。
+\par\noindent\textbf{(4)} 指出海啸近岸长波近似的破坏条件。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 线性化质量守恒为 \(\eta_t+\partial_x(hu)=0\)，水平动量为 \(u_t+g\eta_x=0\)。当水深 \(h\) 常数，消去 \(u\) 得 \(\eta_{tt}=gh\,\eta_{xx}\)，是传播速度 \(\sqrt{gh}\) 的双向波动方程。
+\par\noindent\textbf{(2)} 设 \(\eta\propto e^{i(kx-\omega t)}\)，得到 \(\omega^2=ghk^2\)，故相速度与群速度都为 \(c=\sqrt{gh}\)。平均单位面积总波能密度约为 \(E=\rho g\langle\eta^2\rangle\)，能流为 \(F=Ec\)，需同时计入等量的动能和重力势能。
+\par\noindent\textbf{(3)} 若 \(h(x)\) 在单波长内变化缓慢，波作用守恒近似为平均能流 \(F=\rho g\langle\eta^2\rangle\sqrt{gh}\) 沿传播近似不变。于是振幅 \(A\propto h^{-1/4}\)，称Green定律；海岸变浅时波速降低、振幅升高，并非简单按 \(h^{-1/2}\) 变化。
+\par\noindent\textbf{(4)} 当浅水条件 \(kh\ll1\) 不满足，完整水波色散应为 \(\omega^2=gk\tanh(kh)\)。近岸破碎、摩擦、反射及非线性陡化也破坏无耗散缓变假设，因此不能把 \(h^{-1/4}\) 放大律延伸到 \(h\to0\) 的岸线。
+
+\par\bigskip\hrule\bigskip
+\section*{W254\quad 各向同性弹性体的纵波、横波与正定稳定性}
+\textbf{物理条件}\par 三维均匀各向同性线性弹性体密度 \(\rho>0\)，Lamé参数 \(\lambda,\mu\)，体积模量 \(K=\lambda+2\mu/3>0\)，\(\mu>0\)，小位移 \(\boldsymbol u\)。
+\par\noindent\textbf{(1)} 从应力应变关系建立Navier弹性波方程。
+\par\noindent\textbf{(2)} 用Helmholtz分解得到纵、横两个波速。
+\par\noindent\textbf{(3)} 证明能量正定与材料稳定条件。
+\par\noindent\textbf{(4)} 比较近不可压极限与自由表面反射模。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 小应变 \(\varepsilon_{ij}=(\partial_iu_j+\partial_ju_i)/2\)，应力 \(\sigma_{ij}=\lambda\delta_{ij}\nabla\cdot\boldsymbol u+2\mu\varepsilon_{ij}\)。动量守恒 \(\rho u_{i,tt}=\partial_j\sigma_{ij}\) 得Navier方程 \(\rho\boldsymbol u_{tt}=(\lambda+\mu)\nabla(\nabla\cdot\boldsymbol u)+\mu\nabla^2\boldsymbol u\)。
+\par\noindent\textbf{(2)} 把位移写成无旋 \(\boldsymbol u_L\) 与无散 \(\boldsymbol u_T\) 部分。平面纵波 \(\boldsymbol u\parallel\boldsymbol k\) 给 \(\omega^2=(\lambda+2\mu)k^2/\rho\)，所以 \(c_L=\sqrt{(\lambda+2\mu)/\rho}\)；横波 \(\boldsymbol u\perp\boldsymbol k\) 给 \(c_T=\sqrt{\mu/\rho}\)。
+\par\noindent\textbf{(3)} 单位体积弹性势能 \(W=\lambda(\operatorname{tr}\varepsilon)^2/2+\mu\varepsilon_{ij}\varepsilon_{ij}\)。将应变分解为体积与无迹部分，得 \(W=(K/2)(\operatorname{tr}\varepsilon)^2+\mu\varepsilon_{ij}^{\rm dev}\varepsilon_{ij}^{\rm dev}\)。对任意应变正定要求 \(K>0,\mu>0\)，从而 \(c_L>c_T>0\)。
+\par\noindent\textbf{(4)} 近不可压极限 \(K\gg\mu\) 时 \(c_L\sim\sqrt{K/\rho}\) 很大而 \(c_T\) 仍有限；表面存在由纵横体波耦合形成的Rayleigh表面波，其速度低于 \(c_T\)，不可把表面波直接等同任一体波。
+
+\par\bigskip\hrule\bigskip
+\section*{W255\quad 非线性Schrödinger平面波的调制不稳定与增长率}
+\textbf{物理条件}\par 一般无量纲NLS方程 \(i\psi_t+\tfrac D2\psi_{xx}+g|\psi|^2\psi=0\)，其中 \(D,g\) 为实数，背景幅 \(A>0\) 均匀。
+\par\noindent\textbf{(1)} 写出非线性平面波背景。
+\par\noindent\textbf{(2)} 对背景作振幅与相位扰动线性化。
+\par\noindent\textbf{(3)} 求调制色散及最大增长率。
+\par\noindent\textbf{(4)} 讨论聚焦与散焦两类稳定性。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 均匀背景 \(\psi_0=Ae^{igA^2t}\) 满足NLS，因为 \(i\partial_t\psi_0=-gA^2\psi_0\)，与非线性项相消。设 \(\psi=e^{igA^2t}[A+u(x,t)+iv(x,t)]\)，其中 \(u,v\) 为实小扰动。
+\par\noindent\textbf{(2)} 保留一阶扰动得 \(u_t=-(D/2)v_{xx}\)、\(v_t=(D/2)u_{xx}+2gA^2u\)。令扰动 \(\propto e^{i(Kx-\Omega t)}\)，消去振幅得 \(\Omega^2=(D^2K^4/4)-DgA^2K^2\)。这个色散由两个实变量的线性矩阵行列式得到。
+\par\noindent\textbf{(3)} 若 \(Dg>0\)，当 \(0<K^2<4gA^2/D\)（按 \(g/D>0\)）时 \(\Omega^2<0\)，振幅按 \(e^{\Gamma t}\) 增长，\(\Gamma=|K|\sqrt{DgA^2-D^2K^2/4}\)。对 \(K^2\) 求极值得 \(K_*^2=2gA^2/D\)，最大增长率 \(\Gamma_{\max}=|g|A^2\)。
+\par\noindent\textbf{(4)} 若 \(Dg<0\)，色散 \(\Omega^2>0\) 对所有非零 \(K\) 成立，平面波线性谱稳定；但这不证明大振幅非线性摄动绝对稳定。有限带宽、耗散和更高阶色散会改变不稳定带宽与阈值。
+
+\par\bigskip\hrule\bigskip
+\section*{W256\quad 波导截止附近的脉冲展宽与因果传播}
+\textbf{物理条件}\par 一维理想无损色散波导的单模关系 \(\omega^2=\omega_c^2+c^2k^2\)，\(\omega>\omega_c>0\)，载频 \(\omega_0\) 附近传播窄谱包络。
+\par\noindent\textbf{(1)} 求相速度和群速度。
+\par\noindent\textbf{(2)} 求群速度色散 (k''(omega\_0))。
+\par\noindent\textbf{(3)} 由Gaussian包络传播求时宽展宽。
+\par\noindent\textbf{(4)} 讨论截止附近慢群速与失真不可分的原因。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 选传播分支 \(k(\omega)=c^{-1}\sqrt{\omega^2-\omega_c^2}\)。故 \(v_p=\omega/k=c/\sqrt{1-(\omega_c/\omega)^2}\)，群速 \(v_g=(dk/d\omega)^{-1}=c\sqrt{1-(\omega_c/\omega)^2}\)。两者乘积 \(v_pv_g=c^2\)；超 \(c\) 的相速度不等于能量传播速度。
+\par\noindent\textbf{(2)} 直接求导 \(k'(\omega)=\omega/[c\sqrt{\omega^2-\omega_c^2}]\)，\(k''(\omega)=-\omega_c^2/[c(\omega^2-\omega_c^2)^{3/2}]<0\)。群延迟距离 \(L\) 为 \(t_g=Lk'(\omega_0)\)，二阶色散系数随着 \(\omega_0\downarrow\omega_c\) 以强幂次发散。
+\par\noindent\textbf{(3)} 输入Gaussian包络 \(A(0,t)=A_0e^{-t^2/(2T_0^2)}\)，截断 \(k\approx k_0+k'_0\Omega+k''_0\Omega^2/2\) 后得到 \(T(L)=T_0\sqrt{1+[k''_0L/T_0^2]^2}\)。群坐标 \(\tau=t-Lk'_0\) 下复包络为 \((1-ik''_0L/T_0^2)^{-1/2}\exp[-\tau^2/(2T_0^2(1-ik''_0L/T_0^2))]\)。
+\par\noindent\textbf{(4)} 靠近截止 \(v_g\to0\)，但 \(|k''|\to\infty\)，同样带宽脉冲容易严重展宽，且低频边带可能落入截止以下而倏逝。慢群速不是无失真存储，必须同时控制带宽、衰减和高阶色散。
+
+\par\bigskip\hrule\bigskip
+\section*{W257\quad 周期Floquet振子的参数共振与Mathieu第一不稳定舌}
+\textbf{物理条件}\par 微扰振动满足 \(x''+[\omega_0^2+\epsilon\cos(\Omega t)]x=0\)，\(\omega_0>0\)、\(|\epsilon|\ll\omega_0^2\)，求驱动频率接近 \(2\omega_0\) 的增长条件。
+\par\noindent\textbf{(1)} 建立缓变复振幅多尺度近似。
+\par\noindent\textbf{(2)} 得到接近主参数共振的二维振幅方程。
+\par\noindent\textbf{(3)} 求增长率与第一不稳定舌边界。
+\par\noindent\textbf{(4)} 与普通外力共振作区别并检查小调制极限。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 设 \(\Omega=2\omega_0+\delta\)，\(|\delta|\ll\omega_0\)，取 \(x=a(t)e^{i\omega_0t}+a^*(t)e^{-i\omega_0t}\)，其中 \(\dot a=O(\epsilon a/\omega_0)\)。代回方程后丢弃 \(\ddot a\) 与快速非共振项，得到 \(2i\omega_0\dot a=-(\epsilon/2)a^*e^{i\delta t}\)。
+\par\noindent\textbf{(2)} 令 \(a=b e^{i\delta t/2}\)，将上一式化为 \(\dot b=-i\delta b/2+i\epsilon b^*/(4\omega_0)\)。连同共轭式构成二元线性系统，特征矩阵迹为零，行列式给增长指数平方 \(\lambda^2=(\epsilon/(4\omega_0))^2-(\delta/2)^2\)。
+\par\noindent\textbf{(3)} 若 \(|\delta|<|\epsilon|/(2\omega_0)\)，\(\lambda\) 有正实根，解出现指数增长；临界驱动频率为 \(\Omega_\pm=2\omega_0\pm|\epsilon|/(2\omega_0)\)。严格共振 \(\delta=0\) 时最大增长率 \(|\epsilon|/(4\omega_0)\)，是Mathieu第一不稳定舌的主阶结果。
+\par\noindent\textbf{(4)} 普通加性驱动方程有源项 \(F\cos(\Omega t)\)，主要在 \(\Omega\approx\omega_0\) 响应增强；此题调制的是自身刚度，故共振中心为 \(2\omega_0\)。当 \(\epsilon\to0\) 不稳定舌闭合，增长率趋零；加入阻尼会出现有限阈值。
+
+\par\bigskip\hrule\bigskip
+\chapter{光学}
+\section*{O250\quad 全反射的倏逝波、穿透深度及Goos–Hänchen位移}
+\textbf{物理条件}\par 单色 \(s\) 偏振光自介质 \(n_1>n_2>0\) 以入射角 \(\theta>\arcsin(n_2/n_1)\) 射至平面界面，真空波数 \(k_0\)。
+\par\noindent\textbf{(1)} 由切向波矢连续性求下层倏逝波。
+\par\noindent\textbf{(2)} 写复Fresnel反射系数与相位。
+\par\noindent\textbf{(3)} 用驻相法求Goos–Hänchen横向位移。
+\par\noindent\textbf{(4)} 分析临界角和掠入射两个极限。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 界面平行分量 \(k_x=n_1k_0\sin\theta\) 连续，下层法向满足 \(k_{z2}^2=n_2^2k_0^2-k_x^2\)。全反射区 \(k_{z2}=i\kappa\)，其中 \(\kappa=k_0\sqrt{n_1^2\sin^2\theta-n_2^2}>0\)，所以透射场沿法向以 \(e^{-\kappa z}\) 衰减，强度穿透长度为 \(1/(2\kappa)\)。
+\par\noindent\textbf{(2)} 对于 \(s\) 偏振，\(r_s=(k_{z1}-k_{z2})/(k_{z1}+k_{z2})=(n_1k_0\cos\theta-i\kappa)/(n_1k_0\cos\theta+i\kappa)\)。其模为1，相位为 \(\varphi_s=-2\arctan[\kappa/(n_1k_0\cos\theta)]\)，反射全能量但可能引入与角度有关的相位延迟。
+\par\noindent\textbf{(3)} 窄角谱束的反射相位 \(\varphi_s(k_x)\) 导致驻相位置偏移，Artmann公式 \(D_{\mathrm{GH}}=-d\varphi_s/dk_x\)。令 \(k_1=n_1k_0\)、\(k_2=n_2k_0\)，由 \(\varphi_s=-2\arctan[\sqrt{k_x^2-k_2^2}/\sqrt{k_1^2-k_x^2}]\)，求导得到 \(D_{\mathrm{GH}}=2k_x/[\,\sqrt{k_1^2-k_x^2}\sqrt{k_x^2-k_2^2}\,]\)。
+\par\noindent\textbf{(4)} 临界角附近 \(\kappa\to0\)，平面波公式形式上使位移发散，但有限束宽角谱跨越临界角，驻相近似失效并截断该发散。掠入射 \(k_{z1}\to0\) 也需考虑有限波束及界面条件；该位移不是自由空间超光速能流。
+
+\par\bigskip\hrule\bigskip
+\section*{O251\quad 光栅脉冲压缩中的角度色散和脉冲前倾}
+\textbf{物理条件}\par 平面衍射光栅周期 \(d\)，入射角 \(\alpha\) 固定，衍射级次 \(m\ne0\)，波长 \(\lambda\) 对应出射角 \(\beta(\lambda)\)，光栅方程 \(d(\sin\alpha+\sin\beta)=m\lambda\)。
+\par\noindent\textbf{(1)} 由光栅方程求角度色散。
+\par\noindent\textbf{(2)} 求小谱宽波束的横向波矢色散。
+\par\noindent\textbf{(3)} 建立脉冲前倾与群延迟的关系。
+\par\noindent\textbf{(4)} 讨论掠射、截止级次及几何光学失效。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 在 \(\alpha\) 固定时对 \(\lambda\) 求导，得 \(d\cos\beta\,d\beta/d\lambda=m\)，所以 \(d\beta/d\lambda=m/[d\cos\beta]\)。级次 \(m\) 的符号决定色散方向，\(\cos\beta\to0\) 时角度色散剧增。
+\par\noindent\textbf{(2)} 出射波在固定基准坐标中的横向波矢 \(k_x(\omega)=(\omega/c)\sin\beta(\omega)\)。因此 \(dk_x/d\omega=c^{-1}[\sin\beta+\omega\cos\beta\,d\beta/d\omega]\)。由 \(\lambda=2\pi c/\omega\) 得 \(d\beta/d\omega=-m\lambda/(d\omega\cos\beta)\)，从而 \(dk_x/d\omega=c^{-1}(\sin\beta-m\lambda/d)=-\sin\alpha/c\)。
+\par\noindent\textbf{(3)} 对复光场 \(E\propto\int A(\omega)e^{i[k_x(\omega)x+k_z(\omega)z-\omega t]}d\omega\)，群延迟等相位条件 \(t=x\,dk_x/d\omega+z\,dk_z/d\omega\)。故同一脉冲面的时间与横向位置耦合，局部脉冲前倾由群延迟梯度 \(\partial t/\partial x=dk_x/d\omega\)（在固定 \(z\)）定义，其数值依所选坐标和光栅安装几何。
+\par\noindent\textbf{(4)} 靠近出射掠射 \(|\cos\beta|\ll1\)，小带宽可能引起大角散、光束截断与偏振效率变化；若级次不满足 \(|m\lambda/d-\sin\alpha|\le1\)，它不再是远场传播级次，不能对不存在的出射角继续求导。
+
+\par\bigskip\hrule\bigskip
+\section*{O252\quad 非线性晶体倍频的相位匹配与相干长度}
+\textbf{物理条件}\par 均匀无吸收二阶非线性晶体，泵浦频率 \(\omega\) 的慢变电场幅 \(A_1\) 可视为常数，倍频幅 \(A_2(z)\) 满足 \(dA_2/dz=i\kappa A_1^2 e^{i\Delta k z}\)，\(\Delta k=k(2\omega)-2k(\omega)\)。
+\par\noindent\textbf{(1)} 积分得到倍频场幅和相位匹配函数。
+\par\noindent\textbf{(2)} 求输出倍频功率对晶长的依赖。
+\par\noindent\textbf{(3)} 定义相干长度并解释反相抵消。
+\par\noindent\textbf{(4)} 讨论准相位匹配及强转换时泵浦耗尽。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 设 \(A_2(0)=0\)。沿长度 \(L\) 积分得 \[A_2(L)=i\kappa A_1^2\int_0^L e^{i\Delta kz}dz=i\kappa A_1^2 L e^{i\Delta kL/2}\operatorname{sinc}(\Delta kL/2)\]，其中 \(\operatorname{sinc}x=\sin x/x\)。
+\par\noindent\textbf{(2)} 倍频功率与 \(|A_2|^2\) 成正比，故 \(P_{2\omega}\propto|\kappa|^2|A_1|^4L^2\operatorname{sinc}^2(\Delta kL/2)\)。完美相位匹配 \(\Delta k=0\) 时随 \(L^2\) 增长，而失配时出现振荡零点，反映不同晶体位置生成波的相干叠加。
+\par\noindent\textbf{(3)} 源项相位相差 \(\pi\) 的长度为相干长度 \(L_c=\pi/|\Delta k|\)。当晶长超过这一尺度，后段生成的倍频场可能抵消前段；\(\Delta kL=2\pi n\)（非零整数）时未耗尽近似下倍频幅恰为零。
+\par\noindent\textbf{(4)} 在准相位匹配中按空间周期 \(\Lambda\) 翻转非线性系数，利用倒格矢 \(G=2\pi/\Lambda\) 补偿失配，使 \(\Delta k-G\approx0\)，但有效非线性系数由傅里叶谐波降低。强转换时 \(A_1(z)\) 不再常数，应联立Manley–Rowe能量方程，不能保持无限二次增长。
+
+\par\bigskip\hrule\bigskip
+\section*{O253\quad 部分相干双源的相干矩阵、干涉可见度和正定界}
+\textbf{物理条件}\par 两个同频光学随机源场 \(E_1,E_2\)，强度 \(I_1,I_2>0\)，互相关 \(\Gamma_{12}=\langle E_1^*E_2\rangle\)，在探测点引入可调相位 \(\phi\)。
+\par\noindent\textbf{(1)} 由二阶统计求合光平均强度。
+\par\noindent\textbf{(2)} 建立归一复相干度并证明模不超过1。
+\par\noindent\textbf{(3)} 求相位扫描的最大最小强度及可见度。
+\par\noindent\textbf{(4)} 讨论完全相干、独立源和强度不平衡极限。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 合光场 \(E=E_1+e^{i\phi}E_2\)，故平均强度 \(I(\phi)=I_1+I_2+2\operatorname{Re}[e^{i\phi}\Gamma_{12}]\)。该式由复振幅二阶矩展开得到，若源场相关就不能将平均强度简单相加。
+\par\noindent\textbf{(2)} 定义 \(\gamma_{12}=\Gamma_{12}/\sqrt{I_1I_2}\)。相干矩阵 \(J=\begin{pmatrix}I_1&\Gamma_{12}\\\Gamma_{12}^*&I_2\end{pmatrix}\) 是协方差矩阵，必须半正定；由行列式非负得 \(I_1I_2-|\Gamma_{12}|^2\ge0\)，因此 \(|\gamma_{12}|\le1\)。
+\par\noindent\textbf{(3)} 选择 \(\phi\) 与相关相位同向或反向，得到 \(I_{\max,\min}=I_1+I_2\pm2|\Gamma_{12}|\)。于是条纹可见度 \(V=(I_{\max}-I_{\min})/(I_{\max}+I_{\min})=2\sqrt{I_1I_2}|\gamma_{12}|/(I_1+I_2)\)。
+\par\noindent\textbf{(4)} 若两个源完全相干且等强，\(V=1\)，暗纹可为零；若互相关为零，\(V=0\)，不再干涉。即使 \(|\gamma_{12}|=1\)，不等强的源也有 \(V<1\)，所以不能把低可见度全部归因于随机相位不相干。
+
+\par\bigskip\hrule\bigskip
+\section*{O254\quad 光纤阶跃折射率的全反射条件与数值孔径}
+\textbf{物理条件}\par 理想阶跃折射率光纤芯折射率 \(n_1>n_2\)、包层 \(n_2\)，纤外均匀介质折射率 \(n_0>0\)，几何光学射线入射纤端面，忽略弯曲与波导模截止。
+\par\noindent\textbf{(1)} 用芯包界面全反射得到允许芯内射线角。
+\par\noindent\textbf{(2)} 由端面Snell定律求接收锥与数值孔径。
+\par\noindent\textbf{(3)} 建立弱导近似的相对折射率差。
+\par\noindent\textbf{(4)} 讨论波动模式V数与几何射线近似的关系。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 在芯包圆柱壁，轴向传播射线与光纤轴夹角为 \(\theta_1\)，其壁面入射角为 \(\pi/2-\theta_1\)。全反射要求 \(\sin(\pi/2-\theta_1)\ge n_2/n_1\)，即 \(\cos\theta_1\ge n_2/n_1\)，故 \(\sin\theta_1\le\sqrt{n_1^2-n_2^2}/n_1\)。
+\par\noindent\textbf{(2)} 端面Snell定律 \(n_0\sin\theta_0=n_1\sin\theta_1\)。因此最大入射角满足 \(n_0\sin\theta_{0,\max}=\sqrt{n_1^2-n_2^2}\)，定义数值孔径 \(\mathrm{NA}=n_0\sin\theta_{0,\max}=\sqrt{n_1^2-n_2^2}\)，若右侧超过 \(n_0\) 时接收锥受外介质物理角限制。
+\par\noindent\textbf{(3)} 定义相对折射率差 \(\Delta=(n_1-n_2)/n_1\ll1\)。则 \(n_1^2-n_2^2=n_1^2[1-(1-\Delta)^2]\approx2n_1^2\Delta\)，所以 \(\mathrm{NA}\approx n_1\sqrt{2\Delta}\)。该弱导展开对 \(\Delta^2\) 项的舍弃需明确。
+\par\noindent\textbf{(4)} 真正光纤模结构取决于无量纲 \(V=(2\pi a/\lambda)\mathrm{NA}\)（\(a\) 为芯半径）。弱导阶跃光纤 \(V<2.405\) 时只有基本空间模式，而几何光学接收锥本身不保证多模或单模；靠近截止应求Maxwell本征方程。
+
+\par\bigskip\hrule\bigskip
+\section*{O255\quad Jones向量的Pancharatnam几何相位与Poincaré球}
+\textbf{物理条件}\par 完全偏振态由归一Jones向量 \(|\psi\rangle\) 描述。考虑三个非正交态 \(|\psi_1\rangle,|\psi_2\rangle,|\psi_3\rangle\)，相位选取任意但内积不为零。
+\par\noindent\textbf{(1)} 建立三态Bargmann不变量。
+\par\noindent\textbf{(2)} 证明它的复相位规范不变。
+\par\noindent\textbf{(3)} 将闭合几何相位与Poincaré球固角联系。
+\par\noindent\textbf{(4)} 求正交态极限的相位奇点。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 构造三态复乘积 \(\mathcal B=\langle\psi_1|\psi_2\rangle\langle\psi_2|\psi_3\rangle\langle\psi_3|\psi_1\rangle\)。每个内积包含振幅与相位，定义闭合Pancharatnam相位为 \(\gamma=\arg\mathcal B\)，沿短大圆弧连接三个偏振态。
+\par\noindent\textbf{(2)} 各Jones向量可以独立改相位 \(|\psi_j\rangle\mapsto e^{i\alpha_j}|\psi_j\rangle\)。三内积分别多出 \(e^{i(\alpha_2-\alpha_1)}\)、\(e^{i(\alpha_3-\alpha_2)}\)、\(e^{i(\alpha_1-\alpha_3)}\)，乘积为1，故 \(\mathcal B\) 的相位严格不受局部规范选择影响。
+\par\noindent\textbf{(3)} 纯偏振态在Poincaré球上表示为Bloch单位矢量。对相邻态按最短测地线平行输运的闭合三角形，几何相位为 \(\gamma=-\Omega_s/2\)（具体正负取决于Jones/Stokes球取向约定），\(\Omega_s\) 是有向球面固角。其几何意义与自旋 \(1/2\) Berry相位一致。
+\par\noindent\textbf{(4)} 若任意相邻态正交，则相应内积为零，\(\mathcal B=0\)，其 \(\arg\) 不定义；靠近这种点相位可能剧变。物理上完全正交偏振场不形成通常意义的相干干涉相位，不能给零幅复数指派任意连续相位。
+
+\par\bigskip\hrule\bigskip
+\section*{O256\quad 理想透镜的ABCD矩阵与Gaussian模式稳定共振腔}
+\textbf{物理条件}\par 一维傍轴光线状态为 \((x,\theta)\)，自由传播长度 \(L>0\)、薄透镜焦距 \(f\ne0\)；两镜腔往返光线矩阵 \(M\) 为实、行列式为1。
+\par\noindent\textbf{(1)} 写自由传播与薄透镜ABCD矩阵。
+\par\noindent\textbf{(2)} 导出任意单周期矩阵的稳定性判据。
+\par\noindent\textbf{(3)} 求平凹两镜腔的稳定参数范围。
+\par\noindent\textbf{(4)} 说明腔共焦边界与Gaussian复束参数变换。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 自由传播矩阵 \(P(L)=\begin{pmatrix}1&L\\0&1\end{pmatrix}\)，薄透镜 \(F(f)=\begin{pmatrix}1&0\\-1/f&1\end{pmatrix}\)。任意组合通过顺序矩阵乘法得到 \(M=\begin{pmatrix}A&B\\C&D\end{pmatrix}\)，且 \(\det M=AD-BC=1\)，与理想光线光学的辛结构相符。
+\par\noindent\textbf{(2)} 往返本征值满足 \(\lambda^2-(A+D)\lambda+1=0\)。有界光线振荡需特征值在单位圆上，因此 \(|(A+D)/2|<1\) 为严格稳定条件；等号特征值重合属于边缘情况，是否长期有界还取决于Jordan结构，不能直接判定稳定。
+\par\noindent\textbf{(3)} 两镜半径 \(R_1,R_2\)、间距 \(L\)，定义 \(g_i=1-L/R_i\)，标准两镜往返矩阵有半迹 \((A+D)/2=2g_1g_2-1\)。因此腔稳定条件 \(0<g_1g_2<1\)；平凹腔一镜平面 \(R_1=\infty\) 即 \(g_1=1\)，另一镜 \(R_2=R\) 时要求 \(0<L<R\)。
+\par\noindent\textbf{(4)} Gaussian束复参数满足光线矩阵的Möbius变换 \(q'=(Aq+B)/(Cq+D)\)。稳定腔自洽模求固定点 \(Cq^2+(D-A)q-B=0\)，取 \(\operatorname{Im}q>0\) 的物理解；几何稳定边界通常使有限束腰解退化，不能仅凭线性光线稳定保证无限高数值孔径或无衍射损耗。
+
+\par\bigskip\hrule\bigskip
+\section*{O257\quad Fabry–Pérot腔色散镜的群延迟与腔线宽变化}
+\textbf{物理条件}\par 一维无损两镜谐振腔，镜反射相位随频率为 \(\phi_1(\omega),\phi_2(\omega)\)，腔长 \(L\)、折射率色散 \(n(\omega)\)，满足回程相位条件。
+\par\noindent\textbf{(1)} 写广义谐振量子化相位条件。
+\par\noindent\textbf{(2)} 求模频间隔与往返群延迟。
+\par\noindent\textbf{(3)} 从往返振幅损耗估算高精细度线宽。
+\par\noindent\textbf{(4)} 解释负群延迟、因果性和强色散限度。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 一个往返相位为 \(\Phi(\omega)=2n(\omega)\omega L/c+\phi_1(\omega)+\phi_2(\omega)\)。谐振条件 \(\Phi(\omega_m)=2\pi m\)。若色散弱，可将它近似为整数光学长度条件；强色散镜的反射相位绝不能随意置零。
+\par\noindent\textbf{(2)} 对相邻纵模条件差分 \(2\pi\approx\Phi'(\omega_m)\Delta\omega\)，所以 \(\Delta\omega_{\rm FSR}\approx2\pi/\tau_g\)，其中 \(\tau_g=\Phi'(\omega)=2L[n+\omega n']/c+\phi_1'+\phi_2'\) 是总往返群延迟。由此可用色散镜调节模间距。
+\par\noindent\textbf{(3)} 设每往返复场幅衰减模为 \(0<r<1\)，响应几何级数分母 \(1-re^{i\Phi}\)。共振近旁强度分母 \((1-r)^2+r[\tau_g(\omega-\omega_m)]^2\)，故角频率全宽 \(\delta\omega_{\rm FWHM}\approx2(1-r)/(\sqrt r|\tau_g|)\)，在 \(r\to1\) 时线宽趋窄。
+\par\noindent\textbf{(4)} 镜面局部相位导数 \(d\phi_i/d\omega\) 可以为负，但总输出脉冲群延迟 \(\tau_g=d\Phi/d\omega\) 不能仅靠一个频点斜率推断信息超光速；有限带宽信号仍由因果响应约束。强吸收、明显群延迟色散与有限带宽时，线宽的Lorentz近似失效，应使用完整复反射系数 \(r_i(\omega)\) 与因果解析结构。
+
+\par\bigskip\hrule\bigskip
+\chapter{近代物理}
+\section*{Q250\quad Aharonov–Bohm磁通相位与环形粒子的能谱周期}
+\textbf{物理条件}\par 质量 \(m\)、电荷 \(q\) 的量子粒子被限制在半径 \(R\) 的一维环，环内无磁场，但环内包围磁通 \(\Phi\)，选择切向矢势 \(A_\varphi=\Phi/(2\pi R)\)。
+\par\noindent\textbf{(1)} 由最小耦合写环形Hamilton算符。
+\par\noindent\textbf{(2)} 求单值波函数的能谱与本征态。
+\par\noindent\textbf{(3)} 计算平衡态持续电流及磁通周期。
+\par\noindent\textbf{(4)} 讨论磁通半整数处简并与规范不变性。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 环上角动量算符 \(p_\varphi=-i\hbar\partial_\varphi/R\)。最小耦合 \(p\mapsto p-qA\) 得 \(H=\frac{1}{2mR^2}[-i\hbar\partial_\varphi-q\Phi/(2\pi)]^2\)。由于环上 \(\boldsymbol B=0\)，作用仍可依赖非可缩回路的磁矢势环流 \(\oint\boldsymbol A\cdot d\boldsymbol l=\Phi\)。
+\par\noindent\textbf{(2)} 波函数单值要求 \(\psi_n(\varphi)=e^{in\varphi}/\sqrt{2\pi}\)、\(n\in\mathbb Z\)。对应能谱 \(E_n(\Phi)=\frac{\hbar^2}{2mR^2}(n-\Phi/\Phi_0)^2\)，其中磁通量子 \(\Phi_0=h/q\) 带电荷符号，若关心周期幅值可取 \(|h/q|\)。
+\par\noindent\textbf{(3)} 单个本征态能量对磁通导数给平衡持续电流 \(I_n=-\partial E_n/\partial\Phi=\frac{\hbar^2}{mR^2\Phi_0}(n-\Phi/\Phi_0)\)。把磁通变为 \(\Phi+\Phi_0\) 时可重新标号 \(n\to n+1\)，整个能谱与平衡可观测量周期不变，而同一固定量子数的能量函数非周期。
+\par\noindent\textbf{(4)} 当 \(\Phi/\Phi_0=n+1/2\)，邻近 \(n,n+1\) 两支能量相等，理想无杂质环形成简并点。规范变换可以把矢势局部消掉，却会令波函数绕环边界相位扭曲；不可同时去掉可测的AB相位 \(q\Phi/\hbar\) 和单值性要求。
+
+\par\bigskip\hrule\bigskip
+\section*{Q251\quad 量子Zeno效应的短时存活率与重复投影测量}
+\textbf{物理条件}\par 初态 \(|\psi_0\rangle\) 对Hamilton量 \(H\) 有有限能量方差 \((\Delta H)^2\)，以相同时间间隔 \(\tau=t/N\) 重复做是否仍在初态的理想投影测量。
+\par\noindent\textbf{(1)} 对短时存活振幅做二阶展开。
+\par\noindent\textbf{(2)} 求 (N) 次成功测量的联合概率。
+\par\noindent\textbf{(3)} 取 (N	oinfty) 得Zeno冻结极限。
+\par\noindent\textbf{(4)} 说明连续测量、有限带宽及非Markov短时条件。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 单位演化 \(U(\tau)=e^{-iH\tau/\hbar}=I-iH\tau/\hbar-H^2\tau^2/(2\hbar^2)+O(\tau^3)\)。存活振幅 \(A(\tau)=\langle\psi_0|U(\tau)|\psi_0\rangle\)，取模平方得 \(P(\tau)=1-(\Delta H)^2\tau^2/\hbar^2+O(\tau^3)\)，其中 \((\Delta H)^2=\langle H^2\rangle-\langle H\rangle^2\)。
+\par\noindent\textbf{(2)} 每次测量成功后态被重置为 \(|\psi_0\rangle\)，所以 \(N\) 次连续成功概率是 \(P_N(t)=[P(t/N)]^N\approx[1-t^2/(N^2\tau_Z^2)]^N\)，定义 \(\tau_Z=\hbar/\Delta H\)。这里关键是单次短时概率的二次而不是经典指数衰减。
+\par\noindent\textbf{(3)} 取对数 \(\ln P_N=N\ln[1-t^2/(N^2\tau_Z^2)]\sim-t^2/(N\tau_Z^2)\to0\)，故 \(\lim_{N\to\infty}P_N(t)=1\)。在理想零时长且非扰动投影极限下系统被冻结于初态，这并非在任意实际测量速度都成立。
+\par\noindent\textbf{(4)} 真实测量存在有限耗时、仪器频带及反作用；若体系能量方差 \((\Delta H)^2\) 不有限，或存活率在实验时间窗内已呈Markov指数形式 \(P(t)\approx e^{-\Gamma t}\)，二次短时前提可能失效。某些测量间隔还可增强衰减（反Zeno效应），需分析浴谱密度与测量频率。
+
+\par\bigskip\hrule\bigskip
+\section*{Q252\quad 一维有限深方势阱的奇偶束缚态与阈值}
+\textbf{物理条件}\par 粒子质量 \(m\)，对称势 \(V(x)=-V_0\) 当 \(|x|<a\)，其余为零，\(V_0,a>0\)，束缚能量 \(-V_0<E<0\)。
+\par\noindent\textbf{(1)} 建立井内外波数并利用宇称分解。
+\par\noindent\textbf{(2)} 导出偶、奇束缚态超越方程。
+\par\noindent\textbf{(3)} 从图像判断最低束缚态总存在。
+\par\noindent\textbf{(4)} 求浅阱能量近似及奇态出现临界深度。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 井内波数 \(k=\sqrt{2m(E+V_0)}/\hbar\)，井外指数衰减常数 \(\kappa=\sqrt{-2mE}/\hbar\)。两者满足 \(k^2+\kappa^2=2mV_0/\hbar^2\)。对称势允许波函数取偶态 \(\cos kx\) 或奇态 \(\sin kx\)，外区分别按宇称接指数尾。
+\par\noindent\textbf{(2)} 在 \(x=a\) 处波函数与导数连续。偶态内外对数导数匹配给 \(k\tan(ka)=\kappa\)，奇态给 \(-k\cot(ka)=\kappa\)。结合圆关系 \(k^2+\kappa^2=\mathrm{const}\) 可图解每个束缚能根；不能只用井内量子化 \(ka=n\pi\) 而忽略尾波。
+\par\noindent\textbf{(3)} 最低偶态在 \(ka\in(0,\pi/2)\) 内的 \(k\tan(ka)\) 从零增大，而 \(\kappa=\sqrt{k_0^2-k^2}\) 从正变零，必有交点，因此任意小正 \(V_0\) 在一维都至少有一个束缚态。奇态最低根要求 \(ka>\pi/2\)，从阈值 \(\kappa\to0\) 得 \(k_0a>\pi/2\)。
+\par\noindent\textbf{(4)} 浅阱 \(k_0a\ll1\) 下 \(ka\ll1\)，偶态方程给 \(\kappa\approx k^2a\approx(2mV_0/\hbar^2)a\)。所以 \(E\approx-\hbar^2\kappa^2/(2m)=-2mV_0^2a^2/\hbar^2\)。当 \(V_0\downarrow0\) 束缚能二次趋零，波函数外尾尺度 \(\kappa^{-1}\) 发散。
+
+\par\bigskip\hrule\bigskip
+\section*{Q253\quad 开放两能级系统Lindblad退相干与Bloch球收缩}
+\textbf{物理条件}\par qubit Hamilton量 \(H=\hbar\omega\sigma_z/2\)，纯退相干Lindblad算符 \(L=\sqrt{\gamma/2}\,\sigma_z\)，\(\gamma>0\)，初始密度矩阵 \(\rho(0)\)。
+\par\noindent\textbf{(1)} 从Lindblad方程求矩阵元演化。
+\par\noindent\textbf{(2)} 求Bloch矢量及保迹完全正性。
+\par\noindent\textbf{(3)} 对 (|+
+angle) 初态计算纯度与熵。
+\par\noindent\textbf{(4)} 分析长时间极限与有耗能自发辐射的区别。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 主方程 \(\dot\rho=-i[H,\rho]/\hbar+L\rho L^\dagger-\tfrac12\{L^\dagger L,\rho\}\)。代入 \(L=\sqrt{\gamma/2}\sigma_z\) 得耗散项 \((\gamma/2)(\sigma_z\rho\sigma_z-\rho)\)。因此对角元不变，非对角元 \(\dot\rho_{01}=-(\gamma+i\omega)\rho_{01}\)，解为 \(\rho_{01}(t)=\rho_{01}(0)e^{-(\gamma+i\omega)t}\)。
+\par\noindent\textbf{(2)} Bloch表示 \(\rho=(I+\boldsymbol r\cdot\boldsymbol\sigma)/2\) 给 \(r_x+ir_y\) 绕 \(z\) 转动并按 \(e^{-\gamma t}\) 衰减，而 \(r_z\) 不变。演化可写为单位ary \(z\) 旋转结合相位翻转Kraus通道，权重 \((1\pm e^{-\gamma t})/2\) 均非负，故迹保持且完全正。
+\par\noindent\textbf{(3)} 初态 \(|+\rangle=(|0\rangle+|1\rangle)/\sqrt2\)，其Bloch长度为 \(e^{-\gamma t}\)。本征值为 \(\lambda_\pm=[1\pm e^{-\gamma t}]/2\)，纯度 \(\operatorname{tr}\rho^2=[1+e^{-2\gamma t}]/2\)，von Neumann熵为 \(S=-\sum_\pm\lambda_\pm\ln\lambda_\pm\)，从零单调升至 \(\ln2\)。
+\par\noindent\textbf{(4)} 长时态为计算基上的退相干对角混合，初始能量 \(\operatorname{tr}(H\rho)\) 保持不变，因为人口不变；自发辐射振幅阻尼则改变布居并将能量传给环境。不要用纯退相干模型预测激发态寿命 \(T_1\)。
+
+\par\bigskip\hrule\bigskip
+\section*{Q254\quad 量子绝热定理的跃迁幅度与两能级绕行}
+\textbf{物理条件}\par 缓慢变化的Hamilton量 \(H(t)\) 有瞬时归一非简并本征态 \(|n(t)\rangle\) 与本征能 \(E_n(t)\)，能隙 \(E_m-E_n\) 非零。
+\par\noindent\textbf{(1)} 在瞬时本征态基中展开Schrödinger方程。
+\par\noindent\textbf{(2)} 推导非绝热跃迁耦合的能隙分母。
+\par\noindent\textbf{(3)} 得到常见绝热条件的量纲形式。
+\par\noindent\textbf{(4)} 讨论能隙闭合、Berry相位及周期演化。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 写 \(|\psi(t)\rangle=\sum_n c_n(t)e^{-(i/\hbar)\int^t E_n(s)ds}|n(t)\rangle\)。代入 \(i\hbar|\dot\psi\rangle=H|\psi\rangle\) 得 \(\dot c_m=-\sum_nc_n\langle m|\dot n\rangle e^{(i/\hbar)\int^t(E_m-E_n)ds}\)。对角项产生几何相位，非对角项驱动跃迁。
+\par\noindent\textbf{(2)} 对 \(H|n\rangle=E_n|n\rangle\) 求导并左乘 \(\langle m|\)（\(m\ne n\)），可得 \(\langle m|\dot n\rangle=\langle m|\dot H|n\rangle/(E_n-E_m)\)。因此跃迁振幅被瞬时能隙抑制，但随时间变化越快，\(\dot H\) 越大。
+\par\noindent\textbf{(3)} 常用充分的局部慢变判据量纲为 \(\hbar|\langle m|\dot H|n\rangle|/|E_m-E_n|^2\ll1\)，并须兼顾总演化时间内的相位干涉和端点平滑性。它是估计而非所有时间依赖系统中严格充分的数学定理。
+\par\noindent\textbf{(4)} 若能隙关闭，分母趋零，普通非简并绝热展开失效，需处理简并子空间或避免交叉；对闭合参数回路，沿单一本征态演化可积累Berry相位 \(\gamma_n=i\oint\langle n|\nabla_\lambda n\rangle\cdot d\boldsymbol\lambda\)，与动力相位不同且规范不变模 \(2\pi\)。
+
+\par\bigskip\hrule\bigskip
+\section*{Q255\quad 有限温自由费米气体的Pauli自旋顺磁率}
+\textbf{物理条件}\par 三维自旋 \(1/2\) 理想电子气，电子磁矩模 \(\mu_B\)，外弱磁场 \(B\)，单自旋态密度 \(g_s(\varepsilon)\) 在费米能 \(E_F\) 附近平滑，\(k_BT\ll E_F\)。
+\par\noindent\textbf{(1)} 写外场引起的两自旋占有差。
+\par\noindent\textbf{(2)} 推导弱场线性磁化率。
+\par\noindent\textbf{(3)} 对三维抛物色散写零温Pauli磁化率。
+\par\noindent\textbf{(4)} 说明有限温修正与经典Curie极限差异。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} Zeeman分裂使两自旋能量相对偏移 \(\mp\mu_BB\)，因而磁化 \(M=\mu_B\int d\varepsilon\,g_s(\varepsilon)[f_F(\varepsilon-\mu_BB)-f_F(\varepsilon+\mu_BB)]\)。对小场展开占有差为 \(-2\mu_BB f_F'(\varepsilon)+O(B^3)\)。
+\par\noindent\textbf{(2)} 于是线性响应 \(\chi_B=\partial M/\partial B=2\mu_B^2\int_0^\infty g_s(\varepsilon)[-f_F'(\varepsilon)]d\varepsilon\)。零温时 \(-f_F'(\varepsilon)\to\delta(\varepsilon-E_F)\)，故 \(\chi_B(0)=2\mu_B^2g_s(E_F)\)，是费米面附近态密度而非全部电子数直接贡献。
+\par\noindent\textbf{(3)} 三维抛物色散总态密度 \(g_{\rm tot}(E_F)=3N/(2E_F)\)，单自旋为 \(g_s=3N/(4E_F)\)。因此样品总磁化对 \(B\) 的响应为 \(\chi_B=3N\mu_B^2/(2E_F)\)；若取体积磁化 \(M/V\)，应再除以 \(V\)，对外场 \(H\) 的SI磁化率还需相应乘 \(\mu_0\)。
+\par\noindent\textbf{(4)} 有限低温用Sommerfeld展开，磁响应主项为费米面态密度，修正 \(O[(k_BT/E_F)^2]\)。经典非简并高温极限则 \(\chi_B\propto N\mu_B^2/(k_BT)\) 呈Curie律，因Fermi–Dirac占有不再阶跃；不可把零温Pauli常数外推到高温。
+
+\par\bigskip\hrule\bigskip
+\section*{Q256\quad 两粒子自旋交换的singlet—triplet谱与热纠缠}
+\textbf{物理条件}\par 两个自旋 \(1/2\) 的Heisenberg交换Hamilton量 \(H=J\,\boldsymbol S_1\cdot\boldsymbol S_2/\hbar^2\)，\(J>0\) 为反铁磁耦合，无外场。
+\par\noindent\textbf{(1)} 通过总自旋求所有本征能和简并度。
+\par\noindent\textbf{(2)} 求热配分函数和能量。
+\par\noindent\textbf{(3)} 计算热态singlet布居与纠缠阈值。
+\par\noindent\textbf{(4)} 讨论零温和高温极限。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} 总自旋 \(\boldsymbol S=\boldsymbol S_1+\boldsymbol S_2\)，有 \(\boldsymbol S_1\cdot\boldsymbol S_2=[S^2-S_1^2-S_2^2]/2\)。两单自旋均为 \(\hbar^2(3/4)\)，总自旋 \(S=0\) singlet给能 \(E_s=-3J/4\)，三重 \(S=1\) triplet给 \(E_t=J/4\)。
+\par\noindent\textbf{(2)} 热配分函数 \(Z=e^{3\beta J/4}+3e^{-\beta J/4}\)，平均能量 \(U=[(-3J/4)e^{3\beta J/4}+3(J/4)e^{-\beta J/4}]/Z\)。能隙为 \(J\)，低温主要占据singlet，高温各四个自旋态趋等概率。
+\par\noindent\textbf{(3)} 热态为singlet与三重子空间的各向同性混合，singlet概率 \(p_s=e^{\beta J}/(e^{\beta J}+3)\)。两qubit的Bell对角态当最大本征概率超过 \(1/2\) 时纠缠，因此 \(p_s>1/2\) 等价于 \(e^{\beta J}>3\)，即 \(k_BT<J/\ln3\)。
+\par\noindent\textbf{(4)} 当 \(T\to0\)，\(p_s\to1\)，态趋纯singlet；当 \(T\to\infty\)，\(p_s\to1/4\)，密度矩阵趋 \(I_4/4\) 而不纠缠。这里的温度纠缠阈值是理想两自旋、各向同性交换模型结果，外场和各向异性会改变。
+
+\par\bigskip\hrule\bigskip
+\section*{Q257\quad 氢样原子的Stark效应与简并一阶微扰}
+\textbf{物理条件}\par 氢原子在静态弱均匀电场 \(\mathcal E\hat z\) 下，扰动 \(H' = e\mathcal E z\)（采用电子电势能符号的这一约定）。先忽略精细结构，研究 \(n=2\) 四重空间态。
+\par\noindent\textbf{(1)} 确定 (n=2) 态中宇称导致的矩阵零元。
+\par\noindent\textbf{(2)} 给出 (2s) 与 (2p,m=0) 的非零耦合。
+\par\noindent\textbf{(3)} 求一阶Stark能级分裂与本征态。
+\par\noindent\textbf{(4)} 解释 (m=pm1) 及非简并基态的一阶效应。
+
+\par\medskip\noindent\textbf{逐问解析}
+\par\noindent\textbf{(1)} \(n=2\) 空间态为 \(|200\rangle\) 与 \(|21m\rangle\)（\(m=0,\pm1\)）。算符 \(z=r\cos\theta\) 在宇称下为奇，故同宇称对角元 \(\langle 200|z|200\rangle\)、\(\langle21m|z|21m\rangle\) 为零。角动量选择规则为 \(\Delta l=\pm1,\Delta m=0\)，因此只耦合 \(|200\rangle\) 与 \(|210\rangle\)。
+\par\noindent\textbf{(2)} 由标准归一氢原子径向函数直接积分 \( \langle 200|z|210\rangle=-3a_0\)（相位约定可翻转号），其中 \(a_0\) 为Bohr半径。积分可分为角积分 \(\int Y_{00}^*\cos\theta Y_{10}\,d\Omega=1/\sqrt3\) 与径向积分 \(\int R_{20}R_{21}r^3dr=-3\sqrt3a_0\)。
+\par\noindent\textbf{(3)} 在 \((|200\rangle,|210\rangle)\) 基底，微扰矩阵为 \(H'_{2\times2}=\begin{pmatrix}0&-3ea_0\mathcal E\\-3ea_0\mathcal E&0\end{pmatrix}\)，本征能修正 \(\Delta E_\pm=\pm3ea_0|\mathcal E|\)，本征态是两态的等幅对称、反对称组合（标签随电场与相位约定）。这是氢样简并能级的线性Stark效应。
+\par\noindent\textbf{(4)} \(m=\pm1\) 与 \(2s\) 不耦合，其一阶修正为零；氢基态 \(|100\rangle\) 为非简并且宇称确定，也有 \(\langle100|z|100\rangle=0\)，故其主要Stark响应从二阶开始。真实氢原子精细结构与Lamb位移解除部分简并，过弱场时线性结果的适用性需重新评估。
+
+\par\bigskip\hrule\bigskip
+\end{document}

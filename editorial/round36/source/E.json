@@ -1,0 +1,254 @@
+[
+  {
+    "id": "E247",
+    "title": "谐振偶极子的辐射场、总功率与辐射反作用尺度",
+    "setup": "真空中点电偶极矩 \\(\\boldsymbol p(t)=p_0\\cos(\\omega t)\\hat{\\boldsymbol z}\\)，\\(\\omega>0\\)，观察远场 \\(r\\gg c/\\omega\\)，忽略源体积。",
+    "q": [
+      "从推迟势的横向项写辐射电磁场。",
+      "求角向平均辐射强度与极化。",
+      "积分总辐射功率并推导辐射阻尼阶数。",
+      "讨论轴向零辐射及准静态极限。"
+    ],
+    "s": [
+      "推迟矢势远区与 \\(\\dot{\\boldsymbol p}(t-r/c)\\) 成正比，横向电场为 \\(\\boldsymbol E_{\\rm rad}=\\frac{1}{4\\pi\\varepsilon_0c^2r}\\hat{\\boldsymbol r}\\times[\\ddot{\\boldsymbol p}(t-r/c)\\times\\hat{\\boldsymbol r}]\\)。对应磁场 \\(\\boldsymbol B_{\\rm rad}=\\hat{\\boldsymbol r}\\times\\boldsymbol E_{\\rm rad}/c\\)。两场均横向且随 \\(r^{-1}\\) 衰减。",
+      "设观测极角 \\(\\theta\\)，因偶极加速度沿 \\(z\\) 轴，远场幅 \\(E_\\theta=\\omega^2p_0\\sin\\theta/(4\\pi\\varepsilon_0c^2r)\\)。时间平均Poynting通量 \\(\\langle S_r\\rangle=\\varepsilon_0 cE_{\\theta,0}^2/2\\)，于是每立体角功率 \\(\\frac{dP}{d\\Omega}=\\frac{\\omega^4p_0^2}{32\\pi^2\\varepsilon_0c^3}\\sin^2\\theta\\)。",
+      "球面积分用 \\(\\int\\sin^2\\theta\\,d\\Omega=8\\pi/3\\)，得到 \\(\\langle P\\rangle=\\omega^4p_0^2/(12\\pi\\varepsilon_0c^3)\\)。若偶极来自带电粒子位移 \\(p=qx\\)，则能量损失与 \\(q^2\\ddot x^2/(6\\pi\\varepsilon_0c^3)\\) 的周期平均一致，辐射反作用属于 \\(c^{-3}\\) 阶小效应。",
+      "当 \\(\\theta=0,\\pi\\) 时横向加速度为零，故辐射沿偶极轴消失而在赤道最强。远场总功率不随 \\(r\\) 变，是 \\(r^{-2}\\) 通量和球面积 \\(r^2\\) 的平衡；\\(\\omega\\to0\\) 时辐射功率按 \\(\\omega^4\\) 消失，不能用静电近场 \\(r^{-3}\\) 项计算远区辐射。"
+    ],
+    "tags": [
+      "推迟势",
+      "偶极辐射",
+      "Poynting能流"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "E248",
+    "title": "平行板电容的Maxwell应力、位移电流和储能",
+    "setup": "面积 \\(A\\) 的大平行板电容器，板距 \\(d\\ll\\sqrt A\\)，介质 \\(\\varepsilon\\)，瞬时电压 \\(V(t)\\) 缓慢变化，边缘效应忽略。",
+    "q": [
+      "求板间电场、储能和等效电容。",
+      "从Maxwell应力张量求板间吸引力。",
+      "以位移电流检验安培—Maxwell定律。",
+      "区别恒电压与恒电荷移动板距时的功。"
+    ],
+    "s": [
+      "板间近似均匀电场 \\(E=V/d\\)，电容 \\(C=\\varepsilon A/d\\)。体场能 \\(U_E=\\frac12\\int\\varepsilon E^2d^3r=\\varepsilon AV^2/(2d)=CV^2/2\\)。在固定板上电荷时应改写为 \\(U_E=Q^2d/(2\\varepsilon A)\\)，两种控制条件对应不同导数。",
+      "无磁场时Maxwell应力张量 \\(T_{ij}=\\varepsilon(E_iE_j-\\delta_{ij}E^2/2)\\)。在板法向为场方向的理想平行板中，法向压力 \\(p=\\varepsilon E^2/2\\)，总吸引力幅值 \\(F=\\varepsilon AV^2/(2d^2)=Q^2/(2\\varepsilon A)\\)。吸引方向可由闭合曲面积分判定。",
+      "穿过板间任一跨越两导线的面积，位移电流 \\(I_D=\\frac{d}{dt}\\int\\boldsymbol D\\cdot d\\boldsymbol A=\\varepsilon A\\dot E=\\frac{\\varepsilon A}{d}\\dot V=C\\dot V\\)。这与导线传导电流连续；若忽略位移电流，安培环路对不同跨面会给矛盾结果。",
+      "固定 \\(Q\\) 时 \\(U_E=Q^2d/(2\\varepsilon A)\\)，对增大 \\(d\\) 求导，外界需做功 \\(dU=F\\,dd\\)。固定 \\(V\\) 时场能 \\(CV^2/2\\) 随 \\(d\\) 增大反而下降，但电源交换电荷作功；正确总势是 \\(U_E-VQ=-CV^2/2\\)，对 \\(d\\) 求导仍得到吸引力。"
+    ],
+    "tags": [
+      "Maxwell应力",
+      "位移电流",
+      "热力学势"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "E249",
+    "title": "London超导半空间的磁场穿透与表面电流",
+    "setup": "理想局域London超导体占据 \\(x>0\\)，外加静磁场沿 \\(z\\) 方向，边界场 \\(B_z(0)=B_0\\)，穿透深度 \\(\\lambda_L>0\\)，忽略涡旋。",
+    "q": [
+      "由London方程与Maxwell方程推出磁场Helmholtz式。",
+      "解半空间Meissner磁场与超流分布。",
+      "积分计算每单位面积磁场能。",
+      "讨论 (lambda_L\to0) 与穿透条件的范围。"
+    ],
+    "s": [
+      "第二London方程为 \\(\\nabla\\times\\boldsymbol J_s=-(n_se^2/m)\\boldsymbol B\\)，静态Ampère方程 \\(\\nabla\\times\\boldsymbol B=\\mu_0\\boldsymbol J_s\\)。取旋度并利用 \\(\\nabla\\cdot\\boldsymbol B=0\\)，得 \\(\\nabla^2\\boldsymbol B=\\boldsymbol B/\\lambda_L^2\\)，其中 \\(\\lambda_L^2=m/(\\mu_0n_se^2)\\)。",
+      "由于场只依赖 \\(x\\)，满足 \\(B_z''=B_z/\\lambda_L^2\\)。半空间不发散的解为 \\(B_z(x)=B_0e^{-x/\\lambda_L}\\)。由 \\((\\nabla\\times\\boldsymbol B)_y=-B_z'(x)\\) 得 \\(J_y(x)=B_0e^{-x/\\lambda_L}/(\\mu_0\\lambda_L)\\)，与屏蔽外场的面电流方向一致。",
+      "每单位面积磁场储能 \\(U_B/A=\\int_0^\\infty B_z(x)^2/(2\\mu_0)\\,dx=B_0^2\\lambda_L/(4\\mu_0)\\)。总表面电流 \\(K_y=\\int_0^\\infty J_y\\,dx=B_0/\\mu_0\\)，与边界磁场跃变相符；London动能另外贡献能量，不能把纯磁场积分冒充完整超导自由能。",
+      "当 \\(\\lambda_L\\to0\\)，场趋于表面薄层而内部 \\(B_z(x>0)\\to0\\)，即理想Meissner屏蔽。实际第二类超导体超过下临界场 \\(H_{c1}\\) 可进入涡旋混合态，非局域响应、有限厚度及临界电流也会使简单指数解失效。"
+    ],
+    "tags": [
+      "London方程",
+      "Meissner效应",
+      "边值谱"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "E250",
+    "title": "非均匀介电界面的静电边界、等效镜像电荷与自能",
+    "setup": "两无限均匀线性介电半空间以 \\(z=0\\) 分界，上方介电率 \\(\\varepsilon_1>0\\)，下方 \\(\\varepsilon_2>0\\)。点电荷 \\(q\\) 位于 \\((0,0,d)\\)、\\(d>0\\) 处。",
+    "q": [
+      "用镜像构造两侧电势并列出边界条件。",
+      "求上方像电荷和下方等效源的强度。",
+      "计算电荷所受界面极化力。",
+      "讨论导体极限和相同介电率极限。"
+    ],
+    "s": [
+      "界面无外加自由面电荷时要求 \\(\\Phi_1(0^+)=\\Phi_2(0^-)\\) 和 \\(\\varepsilon_1\\partial_z\\Phi_1(0^+)=\\varepsilon_2\\partial_z\\Phi_2(0^-)\\)。取上方 \\(\\Phi_1=\\frac{1}{4\\pi\\varepsilon_1}(q/r_++q'/r_-)\\)，\\(r_\\pm^2=\\rho^2+(z\\mp d)^2\\)，下方 \\(\\Phi_2=q''/(4\\pi\\varepsilon_2r_+)\\)。",
+      "由电势连续得 \\((q+q')/\\varepsilon_1=q''/\\varepsilon_2\\)，法向位移连续得 \\(q-q'=q''\\)。联立求 \\(q'=q(\\varepsilon_1-\\varepsilon_2)/(\\varepsilon_1+\\varepsilon_2)\\)，\\(q''=2\\varepsilon_2q/(\\varepsilon_1+\\varepsilon_2)\\)，这同时满足无穷远衰减条件。",
+      "原电荷只受感应像场的力，沿 \\(z\\) 方向 \\(F_z=qq'/(4\\pi\\varepsilon_1(2d)^2)=q^2(\\varepsilon_1-\\varepsilon_2)/[16\\pi\\varepsilon_1(\\varepsilon_1+\\varepsilon_2)d^2]\\)。若下层介电常数大于上层，\\(q'<0\\)，电荷被吸向界面；其自能修正为 \\(\\Delta U=qq'/(16\\pi\\varepsilon_1d)\\)。",
+      "当 \\(\\varepsilon_2\\to\\infty\\) 时 \\(q'\\to-q\\)，回复接地导体平面像电荷；\\(\\varepsilon_2=\\varepsilon_1\\) 时像电荷消失、力为零。镜像点电荷只是边值数学表示，不代表另一介质内有真实自由点电荷。"
+    ],
+    "tags": [
+      "介电边界",
+      "镜像法",
+      "极化自能"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "E251",
+    "title": "回旋运动中的碰撞Drude介电函数与吸收峰",
+    "setup": "电子等离子体密度 \\(n\\)，电子电荷 \\(-e\\)、质量 \\(m\\)，沿 \\(z\\) 方向外磁场 \\(B_0\\)。电子动量弛豫率 \\(\\nu>0\\)，探测横向圆偏振电场频率 \\(\\omega>0\\)，固定离子背景。",
+    "q": [
+      "写包含碰撞的线性运动方程。",
+      "导出两个圆偏振复电导与介电函数。",
+      "给出共振附近正的焦耳吸收谱。",
+      "核对 (\nu\to0) 与反向磁场极限。"
+    ],
+    "s": [
+      "电子线性方程 \\(m(\\partial_t+\\nu)\\boldsymbol v=-e(\\boldsymbol E+\\boldsymbol v\\times B_0\\hat{\\boldsymbol z})\\)。以 \\(\\boldsymbol E\\propto e^{-i\\omega t}\\) 并取圆偏振 \\(v_\\pm=v_x\\pm iv_y\\)，得到 \\([\\nu-i(\\omega\\mp\\omega_c)]v_\\pm=-(e/m)E_\\pm\\)，其中 \\(\\omega_c=eB_0/m\\)。",
+      "因为 \\(\\boldsymbol J=-ne\\boldsymbol v\\)，复电导为 \\(\\sigma_\\pm(\\omega)=ne^2/[m(\\nu-i(\\omega\\mp\\omega_c))]\\)。由 \\(\\boldsymbol D=\\varepsilon_0\\boldsymbol E+i\\boldsymbol J/\\omega\\) 得 \\(\\varepsilon_\\pm/\\varepsilon_0=1+i\\sigma_\\pm/(\\varepsilon_0\\omega)=1-\\omega_p^2/[\\omega(\\omega\\mp\\omega_c+i\\nu)]\\)，\\(\\omega_p^2=ne^2/(\\varepsilon_0m)\\)。",
+      "时间平均耗散功率密度为 \\(\\langle p_\\pm\\rangle=\\tfrac12\\operatorname{Re}\\sigma_\\pm|E_\\pm|^2\\)，其中 \\(\\operatorname{Re}\\sigma_\\pm=\\frac{ne^2\\nu/m}{\\nu^2+(\\omega\\mp\\omega_c)^2}\\ge0\\)。适当手性的共振峰位于 \\(\\omega\\approx\\omega_c\\)，半高全宽 \\(2\\nu\\)（角频率）。",
+      "碰撞趋零时Lorentz吸收峰宽趋零，其积分谱权重有限，远离共振处耗散消失；反向 \\(B_0\\) 则交换两种圆偏振的峰。近回旋共振还可能有动理学波粒相互作用，不能以此冷单流体谱描述所有高温等离子体。"
+    ],
+    "tags": [
+      "磁化等离子体",
+      "复电导",
+      "共振吸收"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "E252",
+    "title": "电感耦合谐振电路的本征分裂与阻抗驱动",
+    "setup": "两个理想LC回路自感 \\(L_1,L_2>0\\)、电容 \\(C_1,C_2>0\\)，互感 \\(M\\) 满足 \\(M^2<L_1L_2\\)，环路电荷 \\(q_1,q_2\\)。无电阻、无外驱动。",
+    "q": [
+      "由磁能和电能建立双回路Lagrangian。",
+      "求耦合频率的广义特征多项式。",
+      "对相同回路给出正常模与频率。",
+      "验证耦合临界与能量正定性。"
+    ],
+    "s": [
+      "电流为 \\(I_i=\\dot q_i\\)，磁能 \\(T_L=\\tfrac12(L_1I_1^2+L_2I_2^2+2MI_1I_2)\\)，电场储能 \\(U_C=q_1^2/(2C_1)+q_2^2/(2C_2)\\)。Lagrangian取 \\(L=T_L-U_C\\)。Euler方程为 \\(L_1\\ddot q_1+M\\ddot q_2+q_1/C_1=0\\) 与 \\(M\\ddot q_1+L_2\\ddot q_2+q_2/C_2=0\\)。",
+      "取 \\(q_j=Q_je^{-i\\omega t}\\)，非零模态要求 \\(\\det\\begin{pmatrix}C_1^{-1}-\\omega^2L_1&-\\omega^2M\\\\-\\omega^2M&C_2^{-1}-\\omega^2L_2\\end{pmatrix}=0\\)。展开得到 \\((L_1L_2-M^2)\\omega^4-(L_1/C_2+L_2/C_1)\\omega^2+1/(C_1C_2)=0\\)。",
+      "对 \\(L_1=L_2=L\\)、\\(C_1=C_2=C\\)，同相 \\(Q_1=Q_2\\) 满足 \\(\\omega_+^2=1/[(L+M)C]\\)，反相 \\(Q_1=-Q_2\\) 满足 \\(\\omega_-^2=1/[(L-M)C]\\)。正互感增加同相磁能，因而同相模频率降低，反相模频率升高。",
+      "储磁能矩阵 \\(\\begin{pmatrix}L_1&M\\\\M&L_2\\end{pmatrix}\\) 必须正定，即 \\(L_1L_2>M^2\\)。在 \\(|M|\\to\\sqrt{L_1L_2}\\) 极限，一个组合的磁惯量趋零、相应理想模频率发散；这表明模型的零漏感奇异性，而非可实现无限频率。"
+    ],
+    "tags": [
+      "耦合LC",
+      "广义本征谱",
+      "能量正定"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "E253",
+    "title": "带电薄球壳的球谐多极边界问题",
+    "setup": "半径 \\(R\\) 的薄球壳上自由面电荷密度 \\(\\sigma(\\theta)=\\sigma_0+\\sigma_2P_2(\\cos\\theta)\\)，内外均为真空，无其他自由电荷，静电电势在原点有限、无穷远趋零。",
+    "q": [
+      "用Legendre多极展开写球内外电势。",
+      "利用边界连续性和法向电场跳跃求系数。",
+      "求内部轴上电场和球外远场多极矩。",
+      "检查均匀壳及总电荷守恒极限。"
+    ],
+    "s": [
+      "轴对称Laplace解可写 \\(\\Phi_{\\rm in}=\\sum_l A_lr^lP_l(\\cos\\theta)\\)、\\(\\Phi_{\\rm out}=\\sum_l B_lr^{-l-1}P_l(\\cos\\theta)\\)。只需 \\(l=0,2\\) 两阶：其他模式边界源为零，正交性保证对应系数均为零。",
+      "球面电势连续给 \\(A_lR^l=B_lR^{-l-1}\\)，法向Gauss跳跃 \\(-\\varepsilon_0(\\partial_r\\Phi_{\\rm out}-\\partial_r\\Phi_{\\rm in})|_R=\\sigma_lP_l\\)。代入得到 \\(\\varepsilon_0(2l+1)A_lR^{l-1}=\\sigma_l\\)，于是 \\(A_l=\\sigma_lR^{1-l}/[\\varepsilon_0(2l+1)]\\)、\\(B_l=\\sigma_lR^{l+2}/[\\varepsilon_0(2l+1)]\\)。",
+      "因此 \\(\\Phi_{\\rm in}=\\sigma_0R/\\varepsilon_0+\\sigma_2r^2P_2(\\cos\\theta)/(5\\varepsilon_0R)\\)，\\(\\Phi_{\\rm out}=\\sigma_0R^2/(\\varepsilon_0r)+\\sigma_2R^4P_2(\\cos\\theta)/(5\\varepsilon_0r^3)\\)。轴上 \\(P_2(1)=1\\) 且 \\(E_z=-\\partial_z\\Phi_{\\rm in}=-2\\sigma_2z/(5\\varepsilon_0R)\\)，四极场内部呈线性。",
+      "总自由电荷 \\(Q=\\int\\sigma\\,dA=4\\pi R^2\\sigma_0\\)，因为 \\(\\int P_2d\\Omega=0\\)。若 \\(\\sigma_2=0\\)，内部场为零，外部 \\(\\Phi=Q/(4\\pi\\varepsilon_0r)\\)；若 \\(\\sigma_0=0\\)，远场从 \\(r^{-3}\\) 四极项开始而非单极库仑项。"
+    ],
+    "tags": [
+      "多极展开",
+      "球谐正交",
+      "静电边界"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "E254",
+    "title": "磁偶极子在非均匀场中的保守力与力矩",
+    "setup": "固定磁偶极矩大小 \\(m_0\\) 的小电流环，外静磁场近似 \\(\\boldsymbol B=B(z)\\hat{\\boldsymbol z}\\)（仅在局部轴上），偶极方向与 \\(z\\) 夹角 \\(\\theta\\)，忽略高阶多极矩。",
+    "q": [
+      "从电流环Lorentz力推导偶极力矩。",
+      "用势能求轴向梯度力。",
+      "求取向小振动频率并区分平行、反平行。",
+      "检查空间均匀场与磁场反向的极限。"
+    ],
+    "s": [
+      "微小电流环的磁矩 \\(\\boldsymbol m=IA\\hat{\\boldsymbol n}\\)。对各线段磁力 \\(d\\boldsymbol F=I\\,d\\boldsymbol l\\times\\boldsymbol B\\) 求力矩，均匀场的净力为零而总力矩 \\(\\boldsymbol\\tau=\\boldsymbol m\\times\\boldsymbol B\\)。因此取向势能 \\(U=-\\boldsymbol m\\cdot\\boldsymbol B=-m_0B\\cos\\theta\\)。",
+      "对沿场轴非均匀强度 \\(B(z)\\) 且磁矩方向暂定，轴向力 \\(F_z=-\\partial_z U=m_0\\cos\\theta\\,B'(z)\\)。一般矢量近似为 \\(\\boldsymbol F=\\nabla(\\boldsymbol m\\cdot\\boldsymbol B)\\)，其中磁矩取固定而非与位置任意独立变化。最大吸引力来自磁矩顺场并沿场增强方向。",
+      "若偶极环有关于转向轴的转动惯量 \\(I_r\\)，在固定位置 \\(B>0\\) 时角方程 \\(I_r\\ddot\\theta=-m_0B\\sin\\theta\\)。顺场 \\(\\theta=0\\) 附近有 \\(\\ddot\\theta+(m_0B/I_r)\\theta=0\\)，小振动频率 \\(\\sqrt{m_0B/I_r}\\)；反向 \\(\\theta=\\pi\\) 的线性化则为指数不稳定。",
+      "若 \\(B'(z)=0\\) 但 \\(B\\ne0\\)，轴向净力为零而取向力矩仍可非零。反转场方向可交换顺场与逆场平衡；若外场强度在空间变化太快，有限尺寸电流环必须引入高阶磁多极项。"
+    ],
+    "tags": [
+      "磁偶极",
+      "梯度力",
+      "取向稳定"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "E255",
+    "title": "球形介电粒子的Rayleigh散射、极化率与散射截面",
+    "setup": "半径 \\(a\\ll\\lambda\\) 的非磁、无耗散介电球置于真空，介电常数 \\(\\varepsilon_r>0\\)，照射波数 \\(k=2\\pi/\\lambda\\)，幅值为 \\(E_0\\)。",
+    "q": [
+      "用静电球边界条件求诱导偶极极化率。",
+      "从偶极辐射求角向微分截面。",
+      "积分求Rayleigh总散射截面。",
+      "说明粒径六次方律与动态修正范围。"
+    ],
+    "s": [
+      "外均匀静电场下设 \\(\\Phi_{\\rm out}=-E_0r\\cos\\theta+C\\cos\\theta/r^2\\)，内场 \\(\\Phi_{\\rm in}=-E_{\\rm in}r\\cos\\theta\\)。在 \\(r=a\\) 处使电势与法向位移连续，求得 \\(E_{\\rm in}=3E_0/(\\varepsilon_r+2)\\)，\\(C=a^3E_0(\\varepsilon_r-1)/(\\varepsilon_r+2)\\)。所以偶极极化率 \\(\\alpha=4\\pi\\varepsilon_0a^3(\\varepsilon_r-1)/(\\varepsilon_r+2)\\)。",
+      "诱导偶极 \\(p_0=\\alpha E_0\\) 随入射频率振荡。远场电场振幅 \\(E_{\\theta,0}=\\omega^2p_0\\sin\\theta/(4\\pi\\varepsilon_0c^2r)\\)。以 \\(\\langle S_r\\rangle=\\varepsilon_0cE_{\\theta,0}^2/2\\) 求每立体角辐射功率 \\(dP/d\\Omega=\\omega^4|p_0|^2\\sin^2\\theta/(32\\pi^2\\varepsilon_0c^3)\\)。除以入射平均强度 \\(I_0=\\varepsilon_0c|E_0|^2/2\\)，严格得到 \\(d\\sigma/d\\Omega=k^4|\\alpha|^2\\sin^2\\theta/(16\\pi^2\\varepsilon_0^2)\\)。",
+      "直接代入偶极辐射 \\(dP/d\\Omega=\\omega^4|p_0|^2\\sin^2\\theta/(32\\pi^2\\varepsilon_0c^3)\\) 及 \\(I_0=\\varepsilon_0c|E_0|^2/2\\)，严格得到 \\(\\frac{d\\sigma}{d\\Omega}=\\frac{k^4|\\alpha|^2}{16\\pi^2\\varepsilon_0^2}\\sin^2\\theta\\)。利用 \\(\\int\\sin^2\\theta\\,d\\Omega=8\\pi/3\\)，总散射截面 \\(\\sigma_{\\rm sca}=k^4|\\alpha|^2/(6\\pi\\varepsilon_0^2)=\\frac{8\\pi}{3}k^4a^6\\left|\\frac{\\varepsilon_r-1}{\\varepsilon_r+2}\\right|^2\\)。",
+      "固定波长与介电率时 \\(\\sigma_{\\rm sca}\\propto a^6\\)，解释小粒径散射快速减弱；\\(\\varepsilon_r\\to1\\) 时极化率与散射消失。若 \\(ka\\) 不是小量或材料吸收明显，需使用复极化率、辐射反作用修正乃至Mie理论，不可将静态极化率用于任意大球。"
+    ],
+    "tags": [
+      "介电边值",
+      "偶极辐射",
+      "Rayleigh散射"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  }
+]
