@@ -23,7 +23,7 @@ def run():
     check("O243",3,"ideal single-layer AR coating zero reflection",A(rt),0,method="multiple-reflection-amplitude")
     check("O243",4,"zero-index contrast yields zero reflection", (n0-n0)/(n0+n0),0,method="index-match-limit")
     # O244 waveplate Jones and Stokes
-    alpha,delta=.7,Pha=P/2
+    alpha=.7;delta=P/2;Pha=P/2
     ex=complex(C(delta/2),SI(delta/2))*C(alpha)
     ey=complex(C(delta/2),-SI(delta/2))*SI(alpha)
     stQ=A(ex)**2-A(ey)**2
