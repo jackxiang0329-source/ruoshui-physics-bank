@@ -1,0 +1,4 @@
+(1) 动能 $T=\frac12I_1(\dot\theta^2+\dot\phi^2\sin^2\theta)+\frac12I_3(\dot\psi+\dot\phi\cos\theta)^2$；由于质心高度 $z=\ell\cos\theta$，重力势能 $U=Mg\ell\cos\theta$，所以拉氏量为 $L=T-U$，固定点反力不对轴做功。
+(2) 在规则进动中 $\dot\theta=\ddot\theta=0$。对 $\theta$ 的 Euler–Lagrange 方程为 $\partial L/\partial\theta=0$，即 $I_1\omega_p^2\sin\theta\cos\theta-I_3s\omega_p\sin\theta+Mg\ell\sin\theta=0$。除以 $\sin\theta>0$ 得 $I_1\cos\theta\,\omega_p^2-I_3s\,\omega_p+Mg\ell=0$。
+(3) 二次方程的两根 $\omega_{p,\pm}=[I_3s\pm\sqrt{I_3^2s^2-4I_1Mg\ell\cos\theta}]/(2I_1\cos\theta)$，在 $s>0$ 下分别对应快、慢进动。存在实规则进动要求 $I_3^2s^2\ge4I_1Mg\ell\cos\theta$；若不满足，指定倾角无法维持恒定进动而出现章动。
+(4) 在 $I_3^2s^2\gg4I_1Mg\ell\cos\theta$ 时，对较小根作平方根展开，得 $\omega_{p,-}\simeq Mg\ell/(I_3s)$，而快根约为 $I_3s/(I_1\cos\theta)$。$[Mg\ell/(I_3s)]=(\mathrm{kg\,m^2\,s^{-2}})/(\mathrm{kg\,m^2\,s^{-1}})=\mathrm{s^{-1}}$，量纲正确。

@@ -1,0 +1,4 @@
+(1) 对任意索段静力平衡，张力的水平分量 $H$ 为常量，竖直分量 $V(x)$ 等于最低点到 $x$ 的索重 $w s(x)$。几何切线斜率 $y'=V/H$，弧长微分 $ds/dx=\sqrt{1+y'^2}$，联立得 $y''=(w/H)\sqrt{1+y'^2}$，最低点条件为 $y(0)=y'(0)=0$。
+(2) 令 $a=H/w$，积分方程 $d[\operatorname{arsinh}y']/dx=1/a$，故 $y'=\sinh(x/a)$。再次积分得 $y(x)=a[\cosh(x/a)-1]$，弧长 $s(x)=\int_0^x\sqrt{1+y'^2}\,du=a\sinh(x/a)$，对 $x\ge0$ 为正。
+(3) 端点竖向支座反力 $V_D=ws(D)=wa\sinh(D/a)$；端点张力大小 $T_D=\sqrt{H^2+V_D^2}=H\cosh(D/a)$。垂度 $f=a[\cosh(D/a)-1]$，给定 $D,f>0$ 可用数值单调求根确定唯一 $a>0$，进而 $H=wa$；总索长为 $2a\sinh(D/a)$。
+(4) 当 $D/a\ll1$，$\cosh(x/a)-1=x^2/(2a^2)+O(x^4/a^4)$，所以 $y(x)\simeq x^2/(2a)=wx^2/(2H)$，垂度 $f\simeq wD^2/(2H)$。全索重为 $w(2a\sinh(D/a))$，每侧反力 $wa\sinh(D/a)$，恰为总重一半，静力核对成立。
