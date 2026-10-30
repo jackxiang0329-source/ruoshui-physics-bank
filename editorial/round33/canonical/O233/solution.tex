@@ -1,0 +1,4 @@
+(1) 界面切向波数守恒，$k_x=n_1k_0\sin\theta$。入射侧法向分量$k_{z1}=\sqrt{n_1^2k_0^2-k_x^2}=n_1k_0\cos\theta>0$，透射侧在全反射区为$k_{z2}=i\kappa$，$\kappa=\sqrt{k_x^2-n_2^2k_0^2}>0$；因此低折射率侧场沿法线指数衰减而无传播法向功率。
+(2) 对TE偏振，Fresnel反射系数$r_s=(k_{z1}-k_{z2})/(k_{z1}+k_{z2})=(k_{z1}-i\kappa)/(k_{z1}+i\kappa)$，故$|r_s|=1$，相位可取$\phi_r(k_x)=-2\arctan(\kappa/k_{z1})$。虽反射率为1，但相位随入射波数变化，形成反射波包空间移动的机制。
+(3) 将入射束作围绕中心$k_x$的角谱积分，反射振幅额外含$e^{i\phi_r(k_x)}$。对窄角谱作驻相，光斑位移$D=-d\phi_r/dk_x$。利用$dk_{z1}/dk_x=-k_x/k_{z1}$、$d\kappa/dk_x=k_x/\kappa$，得到$d[\arctan(\kappa/k_{z1})]/dk_x=k_x/(\kappa k_{z1})$，故$D=2k_x/(\kappa k_{z1})$，单位是长度且为正。
+(4) 当$\theta\downarrow\theta_c$，$\kappa\to0$使平面波公式的$D$形式发散；当$\theta\to\pi/2$，$k_{z1}\to0$也会产生形式发散。真实有限宽度束在临界角附近有宽角谱，不能将反射相位仅作一阶Taylor展开，需用完整角谱积分；束宽、偏振和材料吸收都会使位移有限或改变峰位。
