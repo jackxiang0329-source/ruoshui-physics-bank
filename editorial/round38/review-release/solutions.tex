@@ -187,18 +187,18 @@
 \par\noindent\textbf{(4)} 磁力始终垂直速度，\(d(mv^2/2)/dt=q\boldsymbol E\cdot\boldsymbol v=qEv_x\)。代入 \(v_x=u_x\) 周期振荡，平均功率在完整回旋周期为零；电场可使瞬时实验系动能变化，却不会引起无限加速。若电场随时空变化，简单恒定漂移解不再适用。
 
 \par\bigskip\hrule\bigskip
-\section*{E267\quad 非线性Poisson–Boltzmann双电层的首积分与表面电荷}
-\textbf{物理条件}\par 温度 \(T\) 的对称一价电解质，体相正负离子数密度均为 \(n_0\)，平面带电壁位于 \(x=0\)，溶液占 \(x>0\)，介电率 \(\epsilon\)。
-\par\noindent\textbf{(1)} 建立Boltzmann离子分布与Poisson方程。
-\par\noindent\textbf{(2)} 使用积分常数求Grahame第一积分。
-\par\noindent\textbf{(3)} 推导表面电荷与表面电势的非线性关系。
-\par\noindent\textbf{(4)} 求微小表面电势的Debye–Hückel极限。
+\section*{E267\quad 突变p–n结耗尽区、反偏结电容与少子扩散电流}
+\textbf{物理条件}\par 一维突变半导体p–n结，受主浓度 \(N_A\)、施主浓度 \(N_D\)、介电率 \(\epsilon_s\)、温度 \(T\)，内建势 \(V_{bi}\) 与偏置 \(V<V_{bi}\)，采用耗尽近似和低注入。
+\par\noindent\textbf{(1)} 从Poisson方程与耗尽层电中性求两侧宽度。
+\par\noindent\textbf{(2)} 求耗尽宽度与内建势、电压的精确关系。
+\par\noindent\textbf{(3)} 计算反向偏置下的结电容及测试关系。
+\par\noindent\textbf{(4)} 利用少子扩散方程导出理想二极管Shockley电流。
 
 \par\medskip\noindent\textbf{逐问解析}
-\par\noindent\textbf{(1)} 热平衡局域离子浓度为 \(n_\pm(x)=n_0e^{\mp e\psi/(k_BT)}\)，净电荷密度 \(\rho=e(n_+-n_-)=-2en_0\sinh(e\psi/(k_BT))\)。Poisson方程 \(\psi''=-\rho/\epsilon=(2en_0/\epsilon)\sinh(e\psi/(k_BT))\)，远场 \(\psi,\psi'\to0\)。
-\par\noindent\textbf{(2)} 将方程乘以 \(\psi'\) 并从无穷远积分，得 \(\tfrac12\psi'^2=(2n_0k_BT/\epsilon)[\cosh(e\psi/(k_BT))-1]\)。用 \(\cosh u-1=2\sinh^2(u/2)\)，故 \(|\psi'|=\sqrt{8n_0k_BT/\epsilon}\,|\sinh(e\psi/(2k_BT))|\)，用于连接表面电荷。
-\par\noindent\textbf{(3)} 壁面自由电荷密度 \(\sigma=-\epsilon\psi'(0^+)\)。定义 \(\kappa_D^2=2e^2n_0/(\epsilon k_BT)\)，则 \(\sigma=2\epsilon\kappa_D(k_BT/e)\sinh[e\psi_0/(2k_BT)]\)。它在大电势下非线性增长，不能把线性Debye电容外推到所有电压。
-\par\noindent\textbf{(4)} 当 \(|e\psi|\ll k_BT\)，\(\sinh(e\psi/(k_BT))\simeq e\psi/(k_BT)\)，得 \(\psi''=\kappa_D^2\psi\)。满足远场条件的解 \(\psi(x)=\psi_0e^{-\kappa_Dx}\)，故低压电容每单位面积 \(C_A=d\sigma/d\psi_0|_0=\epsilon\kappa_D\)。
+\par\noindent\textbf{(1)} 耗尽层p侧电荷 \(\rho=-qN_A\)、n侧 \(\rho=qN_D\)，Poisson方程 \(dE/dx=\rho/\epsilon_s\)，边界 \(E(-x_p)=E(x_n)=0\)。界面电场连续要求 \(N_Ax_p=N_Dx_n\)，故 \(x_p=N_DW/(N_A+N_D)\)、\(x_n=N_AW/(N_A+N_D)\)，\(W=x_p+x_n\)，是几何电荷中性而非电子与空穴浓度相等。
+\par\noindent\textbf{(2)} 静电势差是两段电场三角形积分：\(V_{bi}-V=q(N_Ax_p^2+N_Dx_n^2)/(2\epsilon_s)\)。用 \(N_Ax_p=N_Dx_n\) 消去两未知量，得到 \(W^2=(2\epsilon_s/q)(1/N_A+1/N_D)(V_{bi}-V)\)。因此强反偏使耗尽宽度增大；正偏逼近内建势时耗尽近似最终失效。
+\par\noindent\textbf{(3)} 单位面积耗尽电荷模 \(Q_A=qN_Ax_p=qN_AN_DW/(N_A+N_D)\)。微分单位面积结电容 \(C_j/A=|dQ_A/dV|=\epsilon_s/W\)，所以 \(1/C_j^2=[2(V_{bi}-V)/(q\epsilon_sA^2)](1/N_A+1/N_D)\)。测量反偏下 \(1/C_j^2\) 对电压的斜率可反演掺杂，但需注意串联电阻和界面陷阱。
+\par\noindent\textbf{(4)} 在低注入条件下少子扩散满足 \(D_n\delta n''-\delta n/\tau_n=0\)，解 \(\delta n(x)=\delta n(0)e^{-x/L_n}\)，\(L_n=\sqrt{D_n\tau_n}\)。结边界 \(\delta n(0)=n_{p0}(e^{qV/(k_BT)}-1)\)，电子、空穴扩散电流相加为 \(I=I_s(e^{qV/(k_BT)}-1)\)，\(I_s=qA(D_nn_{p0}/L_n+D_pp_{n0}/L_p)\)，实际大注入、复合和电阻使其偏离。
 
 \par\bigskip\hrule\bigskip
 \section*{E268\quad 有限厚London超导薄膜的磁场屏蔽与表面电流}
@@ -469,18 +469,18 @@
 \par\noindent\textbf{(4)} 利用Lorentz分布的Ott–Antonsen约化或直接评价自洽积分，稳定同步支满足 \(0=-\gamma r+(K/2)(1-r^2)r\)。因此对 \(K>2\gamma\)，\(r=\sqrt{1-2\gamma/K}\)；\(K\downarrow K_c^+\) 时 \(r\propto(K-K_c)^{1/2}\)，为连续同步分岔。
 
 \par\bigskip\hrule\bigskip
-\section*{W271\quad 有限水深毛细—重力波的色散与相群速度}
-\textbf{物理条件}\par 密度 \(\rho\) 的不可压无黏液体深度 \(h\)，重力加速度 \(g\)、表面张力 \(\gamma\)，取波数 \(k>0\) 的小幅自由面波。
-\par\noindent\textbf{(1)} 构造满足底部不可穿透的速度势。
-\par\noindent\textbf{(2)} 结合自由面Bernoulli与曲率压差求色散。
-\par\noindent\textbf{(3)} 求浅水和深水两个渐近极限。
-\par\noindent\textbf{(4)} 求群速度表达并说明毛细主导下的关系。
+\section*{W271\quad 赤道β平面旋转浅水Kelvin波的东向传播与经向束缚}
+\textbf{物理条件}\par 赤道附近的旋转浅水模型用 \(f(y)=\beta y\)、\(\beta>0\) 近似Coriolis参数，均匀静水深 \(H\)、重力 \(g\)，水平扰动速度 \((u,v)\)、表面位移 \(\eta\)。
+\par\noindent\textbf{(1)} 建立线性旋转浅水方程并寻找 \(v=0\) 的模式。
+\par\noindent\textbf{(2)} 求束缚模的相群速与传播方向。
+\par\noindent\textbf{(3)} 由经向平衡求Gaussian幅度与变形半径。
+\par\noindent\textbf{(4)} 解释西向模式不束缚及β平面模型失效条件。
 
 \par\medskip\noindent\textbf{逐问解析}
-\par\noindent\textbf{(1)} 流体内扰动势满足 \(\nabla^2\phi=0\)，底部 \(z=-h\) 条件 \(\partial_z\phi=0\)。令 \(\phi=A\cosh[k(z+h)]e^{i(kx-\omega t)}\) 便满足底部条件。自由面线性运动条件 \(\eta_t=\phi_z|_{z=0}\)。
-\par\noindent\textbf{(2)} 动态边界为 \(\phi_t+g\eta-(\gamma/\rho)\eta_{xx}=0\) 于 \(z=0\)。消去 \(\eta,A\) 得 \(\omega^2=(gk+\gamma k^3/\rho)\tanh(kh)\)。重力与毛细回复力在频率平方中相加，有限深度由 \(\tanh(kh)\) 修正。
-\par\noindent\textbf{(3)} 当 \(kh\ll1\)，\(\tanh(kh)\simeq kh\)，故 \(\omega^2\simeq h(gk^2+\gamma k^4/\rho)\)，长波低毛细时 \(v_p\to\sqrt{gh}\)。当 \(kh\gg1\)，恢复深水 \(\omega^2\simeq gk+\gamma k^3/\rho\)。
-\par\noindent\textbf{(4)} 由 \(v_g=(2\omega)^{-1}d(\omega^2)/dk\) 得 \(v_g=\{[g+3\gamma k^2/\rho]\tanh(kh)+h[gk+\gamma k^3/\rho]\operatorname{sech}^2(kh)\}/(2\omega)\)。深水纯毛细主导时 \(\omega\propto k^{3/2}\)，所以 \(v_g=(3/2)v_p\)。
+\par\noindent\textbf{(1)} 线性动量与连续方程是 \(u_t-fv=-g\eta_x\)、\(v_t+fu=-g\eta_y\)、\(\eta_t+H(u_x+v_y)=0\)。选择经向速度恒为 \(v=0\)，其余量设为 \(e^{i(kx-\omega t)}\) 乘以 \(y\) 的包络。由东西动量与连续式分别得到 \(\omega u=kg\eta\)、\(\omega\eta=kHu\)，两者共同决定沿赤道的色散。
+\par\noindent\textbf{(2)} 消去振幅得到 \(\omega^2=gHk^2\)。令 \(c=\sqrt{gH}\)，为使北半球 \(f=\beta y>0\) 与南半球同样束缚，需选择 \(\omega=ck\)、\(u=g\eta/c\) 的东向Kelvin模式。它的相速度和群速度相等 \(v_p=v_g=c\)，在常水深线性浅水近似下不展宽。
+\par\noindent\textbf{(3)} 经向动量平衡 \(fu=-g\eta_y\) 与 \(f=\beta y\)、\(u=g\eta/c\) 联立得 \(\eta_y=-(\beta y/c)\eta\)。积分 \(\eta(y)=\eta(0)\exp[-\beta y^2/(2c)]\)，所以经向俘获尺度 \(L_e=\sqrt{c/\beta}\)。这不是普通边界海岸Kelvin波，而是赤道Coriolis参数变号产生的双侧束缚。
+\par\noindent\textbf{(4)} 若选择反向 \(\omega=-ck\)，有 \(u=-g\eta/c\)，进而 \(\eta_y=+(\beta y/c)\eta\)，所得 \(\exp(+\beta y^2/(2c))\) 在无界经向不可归一。故不存在同型的西向赤道Kelvin束缚波。此结论适用于 \(|y|\ll R_E\) 的β平面和近似常水深，真实海洋分层、海岸与球面曲率会修改谱。
 
 \par\bigskip\hrule\bigskip
 \section*{W272\quad Green函数驱动阻尼振子与共振功率谱}
