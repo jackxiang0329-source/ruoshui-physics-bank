@@ -27,7 +27,10 @@ def run():
     # M249 symmetric heavy top
     moment,spin,mgl,theta=2.,9.,2.1,.55
     omgsmall=(spin-S(spin*spin-4*moment*mgl*C(theta)))/(2*moment*C(theta))
-    check("M249",1,"Euler cyclic spin conjugate momentum",spin,spin,method="cyclic-Noether") # strengthen independent by spin inertia derivative below
+    I3=3.1; phidot=.6; psidot=spin/I3-phidot*C(theta)
+    Lkin=lambda vv:.5*I3*(vv+phidot*C(theta))**2
+    check("M249",1,"Euler cyclic spin as finite-differenced Lagrangian momentum",
+          der(Lkin,psidot),spin,method="Noether-momentum-derivative")
     check("M249",2,"effective potential derivative at stationary precession",
           moment*omgsmall*omgsmall*C(theta)-spin*omgsmall+mgl,0,method="stationary-tilt-torque")
     discr=spin*spin-4*moment*mgl*C(theta)
