@@ -1,18 +1,21 @@
 from qa_common import *
 def run():
-    # M265: linearised double pendulum, generalized eigensystem.
-    m,l,g=1.7,1.9,9.8
-    mass=[[2*m*l*l,m*l*l],[m*l*l,m*l*l]]
-    K=[[2*m*g*l,0],[0,m*g*l]]
-    det=lambda w:(K[0][0]-w*w*mass[0][0])*(K[1][1]-w*w*mass[1][1])-(w*w*mass[0][1])**2
-    check("M265",1,"double pendulum translational cross kinetic energy",
-          mass[0][1],m*l*l,method="kinetic-coordinate-Hessian")
-    wmin=S(g/l*(2-S(2)));wmax=S(g/l*(2+S(2)))
-    check("M265",2,"generalized eigenfrequency characteristic determinant",det(wmin),0,method="normal-mode-determinant")
-    check("M265",3,"high normal mode spectral determinant",det(wmax),0,method="normal-mode-spectrum")
-    v1=[1,S(2)];v2=[1,-S(2)]
-    check("M265",4,"normal-mode mass matrix orthogonality",
-          sum(v1[i]*mass[i][j]*v2[j] for i in range(2) for j in range(2)),0,method="kinetic-energy-orthogonality")
+    # M265 gyroscopically stabilised inverted harmonic oscillator
+    m,G,k=2.,6.,2.
+    px=lambda x,y,vx: m*vx-G*y/2
+    py=lambda x,y,vy: m*vy+G*x/2
+    check("M265",1,"gyroscopic canonical momentum differentiates Lagrangian",
+          px(.3,.4,.7)+G*.4/2,m*.7,method="Lagrangian-Legendre")
+    disc=G*G-4*m*k
+    op=(G+S(disc))/(2*m);om=(G-S(disc))/(2*m)
+    check("M265",2,"inverted oscillator gyroscopic spectral characteristic",
+          m*op*op-G*op+k,0,method="gyroscopic-characteristic")
+    check("M265",3,"gyro large coupling slow fast mode frequency product",
+          om*op,k/m,method="two-branch-spectral-invariant")
+    x,y,vx,vy=.5,-.4,.6,.7
+    H=((px(x,y,vx)+G*y/2)**2+(py(x,y,vy)-G*x/2)**2)/(2*m)-k*(x*x+y*y)/2
+    check("M265",4,"Legendre energy is kinetic minus inverted potential",
+          H,m*(vx*vx+vy*vy)/2-k*(x*x+y*y)/2,method="Hamilton-energy-Legendre")
     # M266: rolling sphere.
     m,g,R,a=1.3,9.8,2.,.2
     rho=R-a
