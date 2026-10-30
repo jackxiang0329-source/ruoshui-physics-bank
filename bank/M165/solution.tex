@@ -1,0 +1,4 @@
+(1) 旋转系假想加速度为 $-2\boldsymbol\Omega\times\mathbf v$。直接计算叉乘得 $a_x=-2\Omega(\cos\lambda v_z-\sin\lambda v_y)$、$a_y=-2\Omega\sin\lambda v_x$、$a_z=2\Omega\cos\lambda v_x$。此处 $g$ 已含零阶离心效应，忽略 $O(\Omega^2)$。
+(2) 代入零阶速度 $(v_0,0,w_0-gt)$，并以初始位置为零积分两次，得到 $x=v_0t-\Omega\cos\lambda(w_0t^2-gt^3/3)$、$y=-\Omega v_0t^2\sin\lambda$、$z=w_0t-gt^2/2+\Omega v_0t^2\cos\lambda$，式中误差均为 $O(\Omega^2)$。
+(3) 将 $z(t_f)=0$ 的非零根展开，$t_f=2w_0/(g-2\Omega v_0\cos\lambda)=2w_0/g+4\Omega v_0w_0\cos\lambda/g^2+O(\Omega^2)$。求 $y$ 的一阶量时只需代入零阶时间，得到 $y_f=-4\Omega v_0w_0^2\sin\lambda/g^2$。
+(4) 赤道处 $\sin\lambda=0$，一阶南北偏移为零，但竖向加速度可变化；北极 $\cos\lambda=0$ 时竖向修正消失而南北偏移最大。必须有 $\Omega t_f\ll1$，且假设曲率、风阻及重力场随高度的变化可忽略。
