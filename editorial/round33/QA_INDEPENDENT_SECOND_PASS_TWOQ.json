@@ -1,0 +1,128 @@
+{
+  "scope": "Independent alternate numeric quadratures, derivatives, Berry tail control and field amplitudes",
+  "count": 15,
+  "passed": 15,
+  "failed": 0,
+  "checks": [
+    {
+      "id": "T218",
+      "what": "Ising transfer-matrix susceptibility by finite magnetic field derivative",
+      "actual": 8.185150135926447,
+      "expected": 8.185150163148899,
+      "error": 2.722245184827443e-8,
+      "pass": true
+    },
+    {
+      "id": "T219",
+      "what": "max-efficiency load by numerical stationarity",
+      "actual": 2.775557561562891e-12,
+      "expected": 0,
+      "error": 2.775557561562891e-12,
+      "pass": true
+    },
+    {
+      "id": "T221",
+      "what": "Schottky heat-capacity extremum computed numerically",
+      "actual": 5.551115123125782e-12,
+      "expected": 0,
+      "error": 5.551115123125782e-12,
+      "pass": true
+    },
+    {
+      "id": "T223",
+      "what": "two-dimensional constant-DOS Fermi number constraint",
+      "actual": 30.000000000000004,
+      "expected": 30,
+      "error": 3.552713678800501e-15,
+      "pass": true
+    },
+    {
+      "id": "T224",
+      "what": "OU position MSD independent velocity-correlation convolution",
+      "actual": 0.6261197396678339,
+      "expected": 0.6261197396678346,
+      "error": 7.771561172376096e-16,
+      "pass": true
+    },
+    {
+      "id": "W226",
+      "what": "Rayleigh traction condition root inserted in cubic",
+      "actual": 3.552713678800501e-15,
+      "expected": 0,
+      "error": 3.552713678800501e-15,
+      "pass": true
+    },
+    {
+      "id": "W232",
+      "what": "maximal growth of NLS modulation band",
+      "actual": 1.0799999999999998,
+      "expected": 1.0799999999999998,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "W233",
+      "what": "damped Mathieu instability exponent in principal resonance",
+      "actual": 0.016832815729997473,
+      "expected": 0.016832815729997473,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O229",
+      "what": "ring critical coupling exact zero for matched rates",
+      "actual": 0,
+      "expected": 0,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O227",
+      "what": "annular diffraction analytic Bessel formula vs radial integral",
+      "actual": 0.7719763098561,
+      "expected": 0.7719763098560972,
+      "error": 2.7755575615628914e-15,
+      "pass": true
+    },
+    {
+      "id": "O228",
+      "what": "phase-grating zeroth Fourier coefficient vs J0",
+      "actual": 0.9603982266595619,
+      "expected": 0.9603982266595634,
+      "error": 1.5543122344752192e-15,
+      "pass": true
+    },
+    {
+      "id": "O231",
+      "what": "NOON survival-weighted quantum Fisher information",
+      "actual": 0.2044140858654975,
+      "expected": 0.2044140858654975,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "Q227",
+      "what": "Wilson-free Dirac Berry half-Chern plus controlled ultraviolet tail",
+      "actual": 0.5000241491491928,
+      "expected": 0.5,
+      "error": 0.00002414914919279809,
+      "pass": true
+    },
+    {
+      "id": "Q229",
+      "what": "Breit-Wigner Wigner-Smith phase derivative independent finite difference",
+      "actual": 1.7241379310251046,
+      "expected": 1.7241379310344827,
+      "error": 9.378053889008697e-12,
+      "pass": true
+    },
+    {
+      "id": "Q233",
+      "what": "JC resonant maximum transition probability at half Rabi oscillation",
+      "actual": 0.9878226984900146,
+      "expected": 0.9878226984900146,
+      "error": 0,
+      "pass": true
+    }
+  ]
+}
