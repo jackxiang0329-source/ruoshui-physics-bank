@@ -173,7 +173,7 @@ const J0=x=>{let sum=1,term=1;for(let i=1;i<=38;i++){term*=-(x*x/4)/(i*i);sum+=t
  const re=Math.sqrt(disc)/(2*tau),im=-1/(2*tau);
  eq('T149',1,'telegraph dispersion root',tau*(re*re-im*im)+(-im)-D*k*k,0);
  eq('T149',2,'wave front speed',(Math.sqrt(D/tau))**2,D/tau);
- eq('T149',3,'Lyapunov dissipation sign',(-3**2/4)<=0?1:0,1);
+ eq('T149',3,'Lyapunov dissipation sign',(-(3**2)/4)<=0?1:0,1);
  const eps=1e-5,slow=(-1+Math.sqrt(1-4*tau*D*eps*eps))/(2*tau);
  eq('T149',4,'long-wave diffusive root',slow,-D*eps*eps,1e-8);
 }
