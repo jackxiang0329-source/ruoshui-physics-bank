@@ -97,11 +97,12 @@
     },
     {
       "id": "E213",
-      "name": "nonlinear Poisson Boltzmann residual by finite differences",
-      "actual": 0.6882557856968674,
-      "reference": 0.6882557913140442,
-      "error": 5.617176834782356e-9,
-      "pass": true
+      "name": "London slab penetration equation finite difference",
+      "actual": 1.9486110447441973,
+      "reference": 1.948611023113782,
+      "error": 2.1630415236728595e-8,
+      "pass": true,
+      "replaced_model_test": "Replaces obsolete Poisson-Boltzmann check; tests B''=B/lambda_L^2"
     },
     {
       "id": "E214",
@@ -357,11 +358,12 @@
     },
     {
       "id": "Q219",
-      "name": "Berry latitude phase half solid angle",
-      "actual": -0.9528239737980191,
-      "reference": -0.9528239737980191,
-      "error": 0,
-      "pass": true
+      "name": "Landau orbit-center degeneracy discrete counting",
+      "actual": 955,
+      "reference": 954.9296585513721,
+      "error": 0.07034144862791436,
+      "pass": true,
+      "replaced_model_test": "Replaces obsolete Berry phase check; integer count versus thermodynamic degeneracy"
     },
     {
       "id": "Q220",
@@ -407,13 +409,14 @@
     },
     {
       "id": "Q225",
-      "name": "SSH geometric edge-state normalization",
-      "actual": 1.0000000000000002,
+      "name": "three-bit flip stabilizer syndrome independence",
+      "actual": 1,
       "reference": 1,
-      "error": 2.220446049250313e-16,
+      "error": 0,
       "pass": true,
-      "correction_note": "Evaluated finite partial norm of SSH exponentially localized edge state rather than identical algebraic expressions."
+      "correction_note": "Evaluated finite partial norm of SSH exponentially localized edge state rather than identical algebraic expressions.",
+      "replaced_model_test": "Replaces obsolete SSH edge normalization check; evaluates all three parity syndromes"
     }
   ],
-  "review_note": "One failure in prior report was caused by insufficient excitation amplitude in a threshold test; corrected with explicit numerical recomputation. Other weak spotchecks were replaced by matrix, recurrence, and exact-asymptotic comparisons. This remains a numerical spotcheck set, NOT 200 independent reviews."
+  "review_note": "One failure in prior report was caused by insufficient excitation amplitude in a threshold test; corrected with explicit numerical recomputation. Other weak spotchecks were replaced by matrix, recurrence, and exact-asymptotic comparisons. This remains a numerical spotcheck set, NOT 200 independent reviews. Replaced three duplicated-core-model entries with London screening, Landau levels, and quantum error correction, and replaced their obsolete tests."
 }
