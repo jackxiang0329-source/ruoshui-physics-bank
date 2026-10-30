@@ -10,6 +10,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validate 40 distinct source triples and 160 four-part solutions
         run: node scripts/check_round22_40_draft.js > round22-source-report.json
+      - name: Check 40 against repository history and 12 repaired repeated cores
+        run: node scripts/check_round22_semantic_dedup.js > round22-semantic-report.json
       - name: Execute 160 independently formulated numerical and analytic regression assertions
         run: node scripts/check_round22_40_models.js > round22-model-report.json
       - name: Validate draft manifest
@@ -19,6 +21,7 @@ jobs:
           name: round22-draft-qa-reports
           path: |
             round22-source-report.json
+            round22-semantic-report.json
             round22-model-report.json
   draft-pdf:
     needs: source-and-model

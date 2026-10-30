@@ -61,14 +61,29 @@
   "solution_parts": 160,
   "quality_status": "待独立复核",
   "expert_review": "待独立复核",
-  "automated_formula_regressions": "Pending CI: 160 assertions",
+  "automated_formula_regressions": "48 revised tests and all 160 pending CI",
   "independent_expert_subpart_reviews": 0,
   "required_expert_subpart_reviews": 160,
   "main_release_gate": "50 problem items, 200 accepted subpart checks",
   "history_title_screen": "Pending CI; exact-match and nearest neighbor listing",
-  "history_semantic_overlap": "Needs expert review",
+  "history_semantic_overlap": "12 obvious round21 model repeats were rewritten and guarded; remaining whole-library expert review is not complete",
   "source_mirror_sync": "Draft branch only",
   "merge_allowed": false,
-  "ci_status": "pending",
-  "note": "New round22 draft appended on top of the other existing round21 40-problem CI-approved draft; no overlapping canonical IDs."
+  "ci_status": "pending new semantic gate and XeLaTeX CI",
+  "note": "Original 40 draft included 12 visibly overlapping core models with round21. Replaced those 12 problems and all four solution parts each, and replaced the corresponding 48 executable checks. Do not merge without separate expert approval.",
+  "curated_semantic_replacements": {
+    "M137": "M134",
+    "E137": "E133",
+    "E138": "E131",
+    "E143": "E136",
+    "T130": "T127",
+    "T132": "T125",
+    "W130": "W125",
+    "W134": "W128",
+    "O126": "O124",
+    "O128": "O125",
+    "O129": "O120",
+    "Q128": "Q123"
+  },
+  "curated_semantic_replacements_count": 12
 }
