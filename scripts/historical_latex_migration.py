@@ -45,7 +45,9 @@ def swap_delimiters(src):
     if opened is not None:problems.append("unclosed_math_delimiter")
     if problems:return src,0,sorted(set(problems))
     dest="".join(out)
-    if dest.count(r"\(")!=dest.count(r"\)") or dest.count(r"\[")!=dest.count(r"\]"):
+    def actual_delimiters(text, token):
+        return len(re.findall(r"(?<!\\)"+re.escape(token),text))
+    if actual_delimiters(dest,r"\(")!=actual_delimiters(dest,r"\)") or actual_delimiters(dest,r"\[")!=actual_delimiters(dest,r"\]"):
         return src,0,["unbalanced_math_environment"]
     return dest,count,[]
 
