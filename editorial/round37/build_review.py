@@ -223,6 +223,8 @@ def compiled_pdf(name):
     if lost:
         print("UNRENDERED MATH/UNICODE CHARACTERS:",lost[:20],file=sys.stderr)
         raise RuntimeError(f"{name}: {len(lost)} missing Unicode glyphs; refuse release")
+    if "TeXGyrePagellaMath" not in compile_log:
+        raise RuntimeError(f"{name}: required TeX Gyre Pagella Math font not loaded, refuse default-font fallback")
     result=OUTPUT/(name+".pdf")
     if not result.exists() or result.stat().st_size<10000:
         raise RuntimeError(f"PDF missing or suspicious: {result}")
