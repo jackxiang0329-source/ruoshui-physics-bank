@@ -57,11 +57,11 @@ def run():
     omegaC=e*wp/m
     adm=lambda w:complex(n*e*e/m,0)/complex(nu,-(w-omegaC))
     check("E251",1,"cyclotron equation in helicity basis",
-          adm(omegaC)*complex(nu,0),n*e*e/m,method="complex-Drude-equation")
+          A(adm(omegaC)*complex(nu,0)-n*e*e/m),0,method="complex-Drude-equation")
     eps0=2.;freq=3.8
     dielectric=1+1j*adm(freq)/(eps0*freq)
     check("E251",2,"electrodynamic epsilon from finite conductivity",
-          (dielectric-1)*eps0*freq/1j,adm(freq),method="constitutive-Maxwell")
+          A((dielectric-1)*eps0*freq/1j-adm(freq)),0,method="constitutive-Maxwell")
     check("E251",3,"cyclotron absorption peak is positive",
           adm(omegaC).real>0,1,method="Joule-positivity")
     check("E251",4,"collision frequency sets Lorentz FWHM",
