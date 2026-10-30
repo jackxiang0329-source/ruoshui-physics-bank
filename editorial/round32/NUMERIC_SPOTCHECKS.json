@@ -1,8 +1,8 @@
 {
   "checked_on": "2026-10-30",
   "executed_spot_checks": 50,
-  "passed": 49,
-  "failed": 1,
+  "passed": 50,
+  "failed": 0,
   "scope": "Model-specific numeric/algebraic spotchecks, NOT 200 independently checked subparts, NOT independent expert QA",
   "quality_status": "待独立复核",
   "checks": [
@@ -25,10 +25,11 @@
     {
       "id": "M213",
       "name": "Kapitza inverted restoring curvature",
-      "actual": 0,
-      "reference": 1,
-      "error": 1,
-      "pass": false
+      "actual": 1.9583333333333321,
+      "reference": 1.9583333333333321,
+      "error": 0,
+      "pass": true,
+      "correction_note": "Replaced previously inconsistent sub-threshold test parameters with a=0.12 m, Omega=45 rad/s. Now computes actual restoring curvature, not a boolean placeholder."
     },
     {
       "id": "M214",
@@ -145,10 +146,11 @@
     {
       "id": "E219",
       "name": "unmagnetized cold plasma helicity degeneracy",
-      "actual": 0.84,
-      "reference": 0.84,
+      "actual": 1,
+      "reference": 1,
       "error": 0,
-      "pass": true
+      "pass": true,
+      "correction_note": "Now tests magnetized circular birefringence ordering instead of identical B=0 limits."
     },
     {
       "id": "T210",
@@ -289,10 +291,11 @@
     {
       "id": "O219",
       "name": "Bragg optical input admittance increases with periods",
-      "actual": 1,
-      "reference": 1,
-      "error": 0,
-      "pass": true
+      "actual": 57.66503906249993,
+      "reference": 57.665039062499915,
+      "error": 1.4210854715202004e-14,
+      "pass": true,
+      "correction_note": "Iterated quarter-wave transfer matrix period-by-period, comparing input admittance to analytic power law."
     },
     {
       "id": "O220",
@@ -332,7 +335,8 @@
       "actual": 0.7853981633974483,
       "reference": 0.7853981633974483,
       "error": 0,
-      "pass": true
+      "pass": true,
+      "correction_note": "Bargmann triangular inner-product example uses explicit product (1+i)/4 and checks orientation."
     },
     {
       "id": "O225",
@@ -348,7 +352,8 @@
       "actual": 1,
       "reference": 1,
       "error": 0,
-      "pass": true
+      "pass": true,
+      "correction_note": "Independently compared fast- and slow-sweep nonadiabatic transitions; simple pass/fail physical limit check."
     },
     {
       "id": "Q219",
@@ -361,10 +366,11 @@
     {
       "id": "Q220",
       "name": "WKB thick barrier transmission is exponentially small",
-      "actual": 1,
+      "actual": 0.9999999985370002,
       "reference": 1,
-      "error": 0,
-      "pass": true
+      "error": 1.4629998323911764e-9,
+      "pass": true,
+      "correction_note": "Independent exact rectangular-barrier formula compared against thick-barrier asymptotic, via their ratio."
     },
     {
       "id": "Q221",
@@ -388,7 +394,8 @@
       "actual": 0,
       "reference": 0,
       "error": 0,
-      "pass": true
+      "pass": true,
+      "correction_note": "Evaluated scalar-potential off-diagonal matrix element between opposite chiral spinors."
     },
     {
       "id": "Q224",
@@ -401,10 +408,12 @@
     {
       "id": "Q225",
       "name": "SSH geometric edge-state normalization",
-      "actual": 1,
+      "actual": 1.0000000000000002,
       "reference": 1,
-      "error": 0,
-      "pass": true
+      "error": 2.220446049250313e-16,
+      "pass": true,
+      "correction_note": "Evaluated finite partial norm of SSH exponentially localized edge state rather than identical algebraic expressions."
     }
-  ]
+  ],
+  "review_note": "One failure in prior report was caused by insufficient excitation amplitude in a threshold test; corrected with explicit numerical recomputation. Other weak spotchecks were replaced by matrix, recurrence, and exact-asymptotic comparisons. This remains a numerical spotcheck set, NOT 200 independent reviews."
 }
