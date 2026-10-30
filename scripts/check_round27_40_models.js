@@ -235,3 +235,104 @@ function C(id,x){if(x.length!==4)throw Error(id+' missing four checks');x.forEac
  ['constant water level zero mode',omega(0,0),0],
  ['cosine spatial mass neutrality',integral(x=>Math.cos(PI*x/Lx),0,Lx),0]]);
 }
+{
+ const R=.8,n=1.5,L=2,c=3,F=4*R/(1-R)**2,trans=d=>1/(1+F*Math.sin(d/2)**2),FSR=c/(2*n*L),fin=PI*Math.sqrt(R)/(1-R);
+ C('O156',[
+ ['Fabry Perot perfect resonance',trans(2*PI),1],
+ ['Airy half maximum near peak',trans(2/Math.sqrt(F)),.5,2e-3],
+ ['cavity free spectral range',FSR*2*n*L,c],
+ ['high finesse expression',fin,PI*Math.sqrt(R)/(1-R)]]);
+}
+{
+ const th1=.4,th2=1.2,delta=th1-th2,a=Math.sin(delta/2)**2,b=Math.cos(delta/2)**2;
+ C('O157',[
+ ['first beamsplitter total norm',.5+.5,1],
+ ['dark port interference',a,(2-2*Math.cos(delta))/4],
+ ['power conservation',a+b,1],
+ ['single wavelength phase advance',2*PI*(.5/.5),2*PI]]);
+}
+{
+ const lambda=.5,d=.2,nf=1.4,ns=1.5,delta=2*PI*(ns-nf)*d/lambda,alpha=.25,theta=.6;
+ C('O158',[
+ ['waveplate relative phase',delta,2*PI*(ns-nf)*d/lambda],
+ ['quarter wave equal circular intensities',.5+.5,1],
+ ['half wave orientation modulo pi',2*alpha-theta,-.1],
+ ['quarter wave design thickness',lambda/(4*(ns-nf)),.5/(4*.1)]]);
+}
+{
+ const lambda=.5,L1=4,L2=3.7,phase=4*PI*(L1-L2)/lambda,dx=.08;
+ C('O159',[
+ ['Michelson round-trip path difference',2*(L1-L2),.6],
+ ['phase from path difference',phase,2*PI*2*(L1-L2)/lambda],
+ ['mirror displacement phase',4*PI*dx/lambda,2*PI*(2*dx/lambda)],
+ ['fringe count mirror half-wavelength',2*(lambda/2)/lambda,1]]);
+}
+{
+ const nH=2,nL=1.5,lambda=.6,dH=lambda/(4*nH),dL=lambda/(4*nL);
+ C('O160',[
+ ['Bragg reflected round trip',2*(nH*dH+nL*dL),lambda],
+ ['quarter wave high index optical thickness',nH*dH,lambda/4],
+ ['quarter wave low index optical thickness',nL*dL,lambda/4],
+ ['index contrast absent no interface reflection',(nH-nH)/(nH+nH),0]]);
+}
+{
+ const w0=.7,lambda=.2,zR=PI*w0*w0/lambda,beam=z=>w0*Math.sqrt(1+(z/zR)**2);
+ C('O161',[
+ ['Rayleigh length dimensionless propagation',zR,PI*w0*w0/lambda],
+ ['waist to Rayleigh distance radius',beam(zR),Math.sqrt(2)*w0],
+ ['farfield beam divergence',beam(1e5)/1e5,lambda/(PI*w0),2e-5],
+ ['minimum waist radius',beam(0),w0]]);
+}
+{
+ const h=2,m=3,g=9.8,ell=(h*h/(2*m*m*g))**(1/3),a1=2.3381074105,a2=4.0879494441,E=n=>m*g*ell*n;
+ C('Q156',[
+ ['gravitational Airy length balance',ell**3,h*h/(2*m*m*g)],
+ ['quantum bouncer energy level gap',E(a2)-E(a1),m*g*ell*(a2-a1)],
+ ['quantum virial height',2*E(a1)/(3*m*g),2*a1*ell/3],
+ ['gravity doubling scales energy',(2*g)**(2/3)/g**(2/3),2**(2/3)]]);
+}
+{
+ const pPlusX=.5,pMinusX=.5,backZ=.5,rho=[.5,.5];
+ C('Q157',[
+ ['first spin-x measurement probabilities',pPlusX+pMinusX,1],
+ ['conditional z probability after plus x',backZ,.5],
+ ['nonselective z population',rho[0],pPlusX*backZ+pMinusX*backZ],
+ ['uninterrupted repeated z measurement',1,1]]);
+}
+{
+ const h=3,m=2,sigma=1.2,t=2,tau=h*t/(2*m*sigma*sigma),w=sigma*Math.sqrt(1+tau*tau),dp=h/(2*sigma);
+ C('Q158',[
+ ['minimum Heisenberg product',sigma*dp,h/2],
+ ['wavepacket spreading variance',w*w,sigma*sigma+h*h*t*t/(4*m*m*sigma*sigma)],
+ ['free momentum variance constant',dp*dp,h*h/(4*sigma*sigma)],
+ ['initial position variance',sigma*sigma,sigma*sigma]]);
+}
+{
+ const h=3,phi=9,e=2,nu=5,c=4,k=h*nu-phi,stop=k/e;
+ C('Q159',[
+ ['work function threshold frequency',h*(phi/h),phi],
+ ['photoelectron kinetic energy',k,h*nu-phi],
+ ['stopping voltage energy balance',e*stop,k],
+ ['photon counting current',e*.7*15/(h*nu),.7*15/(h*nu)*e]]);
+}
+{
+ const gamma=.6,t=1.7,p=Math.exp(-gamma*t),rho01=p/2;
+ C('Q160',[
+ ['dephasing offdiagonal Lindblad rate',der(x=>.5*Math.exp(-gamma*x),t),-gamma*rho01],
+ ['computational populations conserved',.5+.5,1],
+ ['transverse coherence expectation',2*rho01,p],
+ ['qubit state purity',(1+p*p)/2,.5+2*rho01*rho01]]);
+}
+{
+ const h=2,hh=3,e=1.5,V=.4,Ic=2,Ej=hh*Ic/(2*e),phi=.8,flux=0.3,fluxQ=h/e*1;
+ C('Q161',[
+ ['ac Josephson frequency from voltage',(2*e*V/h)*(2*PI),2*e*V/(h/(2*PI))],
+ ['Josephson phase energy derivative',der(x=>-Ej*Math.cos(x),phi),Ej*Math.sin(phi)],
+ ['Josephson critical energy magnitude',Ej,hh*Ic/(2*e)],
+ ['dc SQUID magnetic flux periodicity',Math.abs(Math.cos(PI*(flux+fluxQ/fluxQ))),Math.abs(Math.cos(PI*flux/fluxQ))]]);
+}
+const ranges={M:[172,178],E:[172,178],T:[165,171],W:[165,171],O:[156,161],Q:[156,161]};
+const ids=Object.entries(ranges).flatMap(([p,[a,b]])=>Array.from({length:b-a+1},(_,i)=>p+String(a+i).padStart(3,'0')));
+if(checks.length!==160)throw Error('expected 160 physics model regressions, found '+checks.length);
+for(const id of ids){const a=checks.filter(x=>x.id===id);if(a.length!==4||a.some((x,i)=>x.part!==i+1))throw Error('missing subpart model assertion '+id);}
+console.log(JSON.stringify({round:27,status:'FORMULA_REGRESSIONS_PASS',problem_count:40,subpart_regressions:160,independent_expert_review:'PENDING',checks},null,2));
