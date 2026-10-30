@@ -40,7 +40,7 @@ jobs:
           assert report["both_pdf_compilation"] == "PASS"
           expected=({f"M{i:03d}" for i in range(247,256)} |
                     {f"E{i:03d}" for i in range(247,256)} |
-                    {f"T{i:03d}" for i in range(250,258)} |
+                    {f"T{i:03d}" for i in range(242,250)} |
                     {f"W{i:03d}" for i in range(250,258)} |
                     {f"O{i:03d}" for i in range(250,258)} |
                     {f"Q{i:03d}" for i in range(250,258)})
