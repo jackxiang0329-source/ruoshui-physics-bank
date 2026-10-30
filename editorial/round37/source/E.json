@@ -124,7 +124,7 @@
     "s": [
       "短天线两端累积电荷满足连续性 \\(i\\omega Q_0=I_0\\)，偶极矩幅 \\(p_0=Q_0l=I_0l/\\omega\\)（相位依时谐约定）。把天线当作赫兹短偶极子必须满足沿长度电流近似均匀，否则有效长度应由电流分布积分。",
       "电偶极总平均辐射功率为 \\(P_{\\rm rad}=\\omega^4|p_0|^2/(12\\pi\\varepsilon_0c^3)\\)。代入 \\(p_0=I_0l/\\omega\\) 得 \\(P_{\\rm rad}=I_0^2\\omega^2l^2/(12\\pi\\varepsilon_0c^3)=I_0^2\\eta_0k^2l^2/(12\\pi)\\)，\\(k=\\omega/c\\)。",
-      "以电流峰值约定 \\(P_{\\rm rad}=I_0^2R_{\\rm rad}/2\\)，得 \\(R_{\\rm rad}=\\eta_0(k l)^2/(6\\pi)=80\\pi^2(l/\\lambda)^2\\,\\Omega\\)（真空 \\(\\eta_0\\approx120\\pi\\,\\Omega\\)）。因此天线尺寸减半时辐射电阻降为四分之一。",
+      "以电流峰值约定 \\(P_{\\rm rad}=I_0^2R_{\\rm rad}/2\\)，得 \\(R_{\\rm rad}=\\eta_0(k l)^2/(6\\pi)=80\\pi^2(l/\\lambda)^2\\,\\mathrm{ohm}\\)（真空 \\(\\eta_0\\approx120\\pi\\,\\mathrm{ohm}\\)）。因此天线尺寸减半时辐射电阻降为四分之一。",
       "若馈线等效电阻为 \\(R_{\\rm ohm}\\)，在谐振阻抗匹配近似下辐射效率 \\(\\eta=R_{\\rm rad}/(R_{\\rm rad}+R_{\\rm ohm})\\)。\\(\\eta\\) 不能通过忽略 \\(R_{\\rm ohm}\\) 就推断很小天线仍高效；大部分输入功率可能转为热。"
     ],
     "tags": [
@@ -236,7 +236,7 @@
     "s": [
       "定义 \\(L_n=\\int d\\varepsilon\\,\\Sigma(\\varepsilon)(\\varepsilon-\\mu)^n[-\\partial_\\varepsilon f]\\)，\\(\\Sigma(\\varepsilon)\\) 为能量分辨电导核。在线性响应中 \\(\\sigma=e^2L_0\\)，电子热导 \\(\\kappa_e=(L_2-L_1^2/L_0)/T\\)，Seebeck系数 \\(S=-L_1/(eTL_0)\\)。",
       "在 \\(\\Sigma\\) 平滑条件下，\\(L_0=\\Sigma(E_F)+O(T^2)\\)，\\(L_1=(\\pi^2/3)(k_BT)^2\\Sigma'(E_F)+O(T^4)\\)，\\(L_2=(\\pi^2/3)(k_BT)^2\\Sigma(E_F)+O(T^4)\\)。奇偶性保证常数项对 \\(L_1\\) 不贡献。",
-      "最低阶有 \\(\\kappa_e/T\\approx(\\pi^2/3)k_B^2\\Sigma(E_F)\\)，与 \\(\\sigma=e^2\\Sigma(E_F)\\) 相除得 \\(L_0^{\\mathrm{Lorenz}}=\\kappa_e/(\\sigma T)=\\pi^2k_B^2/(3e^2)\\)。数值约 \\(2.44\\times10^{-8}\\,\\mathrm{W\\,\\Omega\\,K^{-2}}\\)，在弹性散射主导简并金属中成立。",
+      "最低阶有 \\(\\kappa_e/T\\approx(\\pi^2/3)k_B^2\\Sigma(E_F)\\)，与 \\(\\sigma=e^2\\Sigma(E_F)\\) 相除得 \\(L_0^{\\mathrm{Lorenz}}=\\kappa_e/(\\sigma T)=\\pi^2k_B^2/(3e^2)\\)。数值约 \\(2.44\\times10^{-8}\\,\\mathrm{W\\,\\mathrm{ohm}\\,K^{-2}}\\)，在弹性散射主导简并金属中成立。",
       "修正项 \\(L_1^2/L_0\\sim T^4\\) 对 \\(\\kappa_e\\) 为 \\(O(T^3)\\)，因此不影响领先Lorenz数。强非弹性散射、非费米液体、极低载流子浓度或声子热导占优时，\\(\\kappa/(\\sigma T)\\) 可显著偏离常数；不能将这个结果当作所有材料的精确恒等式。"
     ],
     "tags": [
