@@ -1,0 +1,42 @@
+name: Round38 conservative historical Unicode formula modernization
+on:
+  pull_request:
+    paths:
+      - "scripts/historical_unicode_math_pass2.py"
+      - ".github/workflows/round38-history-unicode.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: round38-history-unicode
+  cancel-in-progress: false
+jobs:
+  historical-unicode:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: physics-round38-strict-latex-history-20261030
+          fetch-depth: 0
+      - name: Verify migration script syntax and run conservative Unicode math token conversion
+        run: |
+          python3 -m py_compile scripts/historical_unicode_math_pass2.py
+          python3 scripts/historical_unicode_math_pass2.py
+      - name: Publish exact historical changes and review ledger to GitHub review branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -u bank editorial/round34/source editorial/round35/source
+          git add -f editorial/historical-latex-review/unicode_pass2_audit.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Round38 historical Unicode formula modernization [draft, semantics review pending]"
+            git fetch origin physics-round38-strict-latex-history-20261030
+            git rebase origin/physics-round38-strict-latex-history-20261030
+            git push origin HEAD:refs/heads/physics-round38-strict-latex-history-20261030
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: round38-historical-unicode-audit
+          path: editorial/historical-latex-review/unicode_pass2_audit.json
