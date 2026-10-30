@@ -1,4 +1,4 @@
-(1) 时间 $dt$ 内入料质量 $\alpha dt$、携带水平动量 $u\alpha dt$，车原质量 $m(t)=m_0+\alpha t$。将小车与即将捕获的落料作为短时整体，动量守恒及外力冲量给 $d(mv)/dt=F+\alpha u$，即 $m\dot v=F+\alpha(u-v)$；漏掉 $-\alpha v$ 会错误处理随车增加的惯量。
-(2) 积分得到 $m(t)v(t)=m_0v_0+(F+\alpha u)t$，从而令 $v_* =u+F/\alpha$，有 $v(t)=v_*+(v_0-v_*)m_0/(m_0+\alpha t)$。再积分得 $x(t)-x(0)=v_*t+(v_0-v_*)m_0\ln(1+\alpha t/m_0)/\alpha$，将 $t=0$ 代入可同时复现初始速度和位置。
-(3) 小车动能 $K=mv^2/2$，由 $m\dot v=F+\alpha(u-v)$ 计算 $\dot K=Fv+\alpha uv-\alpha v^2/2$。入料动能流为 $\alpha u^2/2$，两者相减给吸附耗散率 $\dot Q_{\rm loss}=\alpha(u-v)^2/2\ge0$，因此 $\dot K=Fv+\alpha u^2/2-\dot Q_{\rm loss}$，功率单位与能量收支一致。
-(4) 无外力时 $mv=m_0v_0+\alpha ut$，小车最终趋近来料速度 $u$；若 $u=0$ 则水平动量 $mv=m_0v_0+Ft$。在 $t$ 固定下 $\alpha\to0$，对数展开及速度分式均给 $v(t)\to v_0+Ft/m_0$、$x-x_0\to v_0t+Ft^2/(2m_0)$。只有 $u=v$ 时瞬间相对碰撞损耗为零，否则完全粘附属于非弹性过程。
+(1) 时间 \(dt\) 内入料质量 \(\alpha dt\)、携带水平动量 \(u\alpha dt\)，车原质量 \(m(t)=m_0+\alpha t\)。将小车与即将捕获的落料作为短时整体，动量守恒及外力冲量给 \(d(mv)/dt=F+\alpha u\)，即 \(m\dot v=F+\alpha(u-v)\)；漏掉 \(-\alpha v\) 会错误处理随车增加的惯量。
+(2) 积分得到 \(m(t)v(t)=m_0v_0+(F+\alpha u)t\)，从而令 \(v_* =u+F/\alpha\)，有 \(v(t)=v_*+(v_0-v_*)m_0/(m_0+\alpha t)\)。再积分得 \(x(t)-x(0)=v_*t+(v_0-v_*)m_0\ln(1+\alpha t/m_0)/\alpha\)，将 \(t=0\) 代入可同时复现初始速度和位置。
+(3) 小车动能 \(K=mv^2/2\)，由 \(m\dot v=F+\alpha(u-v)\) 计算 \(\dot K=Fv+\alpha uv-\alpha v^2/2\)。入料动能流为 \(\alpha u^2/2\)，两者相减给吸附耗散率 \(\dot Q_{\rm loss}=\alpha(u-v)^2/2\ge0\)，因此 \(\dot K=Fv+\alpha u^2/2-\dot Q_{\rm loss}\)，功率单位与能量收支一致。
+(4) 无外力时 \(mv=m_0v_0+\alpha ut\)，小车最终趋近来料速度 \(u\)；若 \(u=0\) 则水平动量 \(mv=m_0v_0+Ft\)。在 \(t\) 固定下 \(\alpha\to0\)，对数展开及速度分式均给 \(v(t)\to v_0+Ft/m_0\)、\(x-x_0\to v_0t+Ft^2/(2m_0)\)。只有 \(u=v\) 时瞬间相对碰撞损耗为零，否则完全粘附属于非弹性过程。

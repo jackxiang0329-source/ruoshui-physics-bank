@@ -1,4 +1,4 @@
-(1) 小球体积 $V=4\pi R^3/3$、表面积 $A=4\pi R^2$。导热特征长度 $L_c=V/A=R/3$，Biot数 $\mathrm{Bi}=hL_c/k=hR/(3k)$；若 $\mathrm{Bi}\ll0.1$，内部导热足够快，近似可令每个时刻球内温度均匀。该条件与冷却时间常数大小不同，不能只凭 $h$ 小作判断。
-(2) 球能量方程 $\rho cV\,dT/dt=-hA(T-T_\infty)$，初值 $T(0)=T_i$。解为 $T(t)=T_\infty+(T_i-T_\infty)e^{-t/\tau}$，$\tau=\rho cV/(hA)=\rho cR/(3h)$。$\tau$ 的量纲为时间，且不含 $k$ 是因为 $k$ 只用来保证内部足够均温。
-(3) 定义至时刻 $t$ 的散出热量 $Q(t)=\rho cV[T_i-T(t)]$。环境在理想恒温热库假设下吸收同量热，故 $Q_{\rm env}=\int_0^t hA[T(s)-T_\infty]ds=\rho cV(T_i-T_\infty)(1-e^{-t/\tau})$，两式相同，满足球加环境总能量守恒。
-(4) 最终球的熵变为 $\Delta S_b=\rho cV\ln(T_\infty/T_i)$，环境熵增为 $\Delta S_{\rm env}=\rho cV(T_i-T_\infty)/T_\infty$。总熵产生 $\Delta S_{\rm gen}=\rho cV[(T_i-T_\infty)/T_\infty+\ln(T_\infty/T_i)]>0$，因为 $x-1-\ln x>0$ ($x=T_i/T_\infty>1$)。内部近似等温不排除球表面与环境间有限温差引起不可逆熵产生。
+(1) 小球体积 \(V=4\pi R^3/3\)、表面积 \(A=4\pi R^2\)。导热特征长度 \(L_c=V/A=R/3\)，Biot数 \(\mathrm{Bi}=hL_c/k=hR/(3k)\)；若 \(\mathrm{Bi}\ll0.1\)，内部导热足够快，近似可令每个时刻球内温度均匀。该条件与冷却时间常数大小不同，不能只凭 \(h\) 小作判断。
+(2) 球能量方程 \(\rho cV\,dT/dt=-hA(T-T_\infty)\)，初值 \(T(0)=T_i\)。解为 \(T(t)=T_\infty+(T_i-T_\infty)e^{-t/\tau}\)，\(\tau=\rho cV/(hA)=\rho cR/(3h)\)。\(\tau\) 的量纲为时间，且不含 \(k\) 是因为 \(k\) 只用来保证内部足够均温。
+(3) 定义至时刻 \(t\) 的散出热量 \(Q(t)=\rho cV[T_i-T(t)]\)。环境在理想恒温热库假设下吸收同量热，故 \(Q_{\rm env}=\int_0^t hA[T(s)-T_\infty]ds=\rho cV(T_i-T_\infty)(1-e^{-t/\tau})\)，两式相同，满足球加环境总能量守恒。
+(4) 最终球的熵变为 \(\Delta S_b=\rho cV\ln(T_\infty/T_i)\)，环境熵增为 \(\Delta S_{\rm env}=\rho cV(T_i-T_\infty)/T_\infty\)。总熵产生 \(\Delta S_{\rm gen}=\rho cV[(T_i-T_\infty)/T_\infty+\ln(T_\infty/T_i)]>0\)，因为 \(x-1-\ln x>0\) (\(x=T_i/T_\infty>1\))。内部近似等温不排除球表面与环境间有限温差引起不可逆熵产生。

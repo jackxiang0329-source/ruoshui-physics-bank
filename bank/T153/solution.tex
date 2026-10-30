@@ -1,4 +1,4 @@
-(1) 令 $\vartheta=T-T_0$，一维能量守恒与 Fourier 定律给 $c_v\vartheta_t=k\vartheta_{xx}$，即 $\vartheta_t=D\vartheta_{xx}$，$D=k/c_v$。两端 Dirichlet 边界 $\vartheta(0,t)=\vartheta(L,t)=0$，初值 $\vartheta(x,0)=\Delta T\sin(\pi x/L)$。
-(2) 初始温度差恰为基频正弦本征模，因此 $\vartheta(x,t)=\Delta T\sin(\pi x/L)e^{-t/\tau}$，$\tau=L^2/(\pi^2D)=c_vL^2/(\pi^2k)$。局部热流密度 $j_x=-kT_x=-(k\pi\Delta T/L)\cos(\pi x/L)e^{-t/\tau}$。
-(3) 总相对热能 $U_{\rm exc}=Ac_v\int_0^L\vartheta dx=2Ac_vL\Delta T e^{-t/\tau}/\pi$。因此 $-\dot U_{\rm exc}=2Ac_vL\Delta T e^{-t/\tau}/(\pi\tau)=2Ak\pi\Delta T e^{-t/\tau}/L$；两端分别向外输送热量大小 $Ak\pi\Delta T e^{-t/\tau}/L$，求和与内能下降率完全相等。
-(4) $k\to0^+$ 时 $\tau\to\infty$，杆内温度差趋于长期保持；若长度变成 $2L$ 而材料参数不变，单基模时间尺度变成原来的四倍。恒温边界意味着外部热浴可以持续吸收热量，否则末态温度及边值问题都要改变。
+(1) 令 \(\vartheta=T-T_0\)，一维能量守恒与 Fourier 定律给 \(c_v\vartheta_t=k\vartheta_{xx}\)，即 \(\vartheta_t=D\vartheta_{xx}\)，\(D=k/c_v\)。两端 Dirichlet 边界 \(\vartheta(0,t)=\vartheta(L,t)=0\)，初值 \(\vartheta(x,0)=\Delta T\sin(\pi x/L)\)。
+(2) 初始温度差恰为基频正弦本征模，因此 \(\vartheta(x,t)=\Delta T\sin(\pi x/L)e^{-t/\tau}\)，\(\tau=L^2/(\pi^2D)=c_vL^2/(\pi^2k)\)。局部热流密度 \(j_x=-kT_x=-(k\pi\Delta T/L)\cos(\pi x/L)e^{-t/\tau}\)。
+(3) 总相对热能 \(U_{\rm exc}=Ac_v\int_0^L\vartheta dx=2Ac_vL\Delta T e^{-t/\tau}/\pi\)。因此 \(-\dot U_{\rm exc}=2Ac_vL\Delta T e^{-t/\tau}/(\pi\tau)=2Ak\pi\Delta T e^{-t/\tau}/L\)；两端分别向外输送热量大小 \(Ak\pi\Delta T e^{-t/\tau}/L\)，求和与内能下降率完全相等。
+(4) \(k\to0^+\) 时 \(\tau\to\infty\)，杆内温度差趋于长期保持；若长度变成 \(2L\) 而材料参数不变，单基模时间尺度变成原来的四倍。恒温边界意味着外部热浴可以持续吸收热量，否则末态温度及边值问题都要改变。

@@ -1,13 +1,13 @@
-令 $K=B\ell$。由楞次定律，磁力阻碍速度正向运动，故
+令 \(K=B\ell\)。由楞次定律，磁力阻碍速度正向运动，故
 \[m\dot v=-Ki,\qquad L\dot i+Ri=Kv.\]
-消去 $i=-m\dot v/K$，得
+消去 \(i=-m\dot v/K\)，得
 \[\ddot v+\frac RL\dot v+\frac{K^2}{mL}v=0,\qquad v(0)=v_0,\quad\dot v(0)=0.\]
-特征根 $r_\pm=(-R/L\pm\sqrt{(R/L)^2-4K^2/(mL)})/2$。在 $r_+\ne r_-$ 时
+特征根 \(r_\pm=(-R/L\pm\sqrt{(R/L)^2-4K^2/(mL)})/2\)。在 \(r_+\ne r_-\) 时
 \[v(t)=v_0\frac{-r_-e^{r_+t}+r_+e^{r_-t}}{r_+-r_-}.\]
-判别式正、零、负分别对应非振荡双指数、临界、振荡衰减；临界时 $v=v_0(1+Rt/(2L))e^{-Rt/(2L)}$。无论哪类，由 $R>0,L>0$ 可得 $v,i\to0$。
-将动力学式乘 $v$、电路式乘 $i$ 后相加：
+判别式正、零、负分别对应非振荡双指数、临界、振荡衰减；临界时 \(v=v_0(1+Rt/(2L))e^{-Rt/(2L)}\)。无论哪类，由 \(R>0,L>0\) 可得 \(v,i\to0\)。
+将动力学式乘 \(v\)、电路式乘 \(i\) 后相加：
 \[\frac d{dt}\left(\tfrac12mv^2+\tfrac12Li^2\right)=-Ri^2.\]
-初始磁能为零，最终机械能和磁能均为零，因此 $\int_0^\infty Ri^2dt=mv_0^2/2$。
-对两条原方程从 $0$ 积分到 $\infty$，先得 $\int_0^\infty i\,dt=mv_0/K$，再得 $R\int i\,dt=K\int v\,dt$，故
+初始磁能为零，最终机械能和磁能均为零，因此 \(\int_0^\infty Ri^2dt=mv_0^2/2\)。
+对两条原方程从 \(0\) 积分到 \(\infty\)，先得 \(\int_0^\infty i\,dt=mv_0/K\)，再得 \(R\int i\,dt=K\int v\,dt\)，故
 \[x(\infty)-x(0)=\int_0^\infty v\,dt=\frac{mRv_0}{B^2\ell^2}.\]
-若直接使用 $i=Kv/R$，即相当于删去 $L\dot i$，不满足 $i(0)=0$ 且丢失电感中的瞬态储能。
+若直接使用 \(i=Kv/R\)，即相当于删去 \(L\dot i\)，不满足 \(i(0)=0\) 且丢失电感中的瞬态储能。

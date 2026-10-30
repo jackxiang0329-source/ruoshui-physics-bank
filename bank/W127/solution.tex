@@ -1,4 +1,4 @@
-(1) 对第 $j$ 个质点，相邻两弹簧恢复力相加为 $K(u_{j+1}-u_j)+K(u_{j-1}-u_j)$，故 $m\ddot u_j=K(u_{j+1}-2u_j+u_{j-1})$，$j=1,\dots,N$，边界 $u_0=u_{N+1}=0$。这是离散二阶差分波动方程。
-(2) 设 $u_j(t)=A\sin(jq)e^{-i\omega t}$，边界要求 $\sin[(N+1)q]=0$，给出 $q_s=s\pi/(N+1)$，$s=1,\ldots,N$。代入差分关系得 $\omega_s^2=(4K/m)\sin^2(q_s/2)$，所以 $\omega_s=2\sqrt{K/m}\sin[s\pi/(2(N+1))]$，模态彼此正交。
-(3) 最低模 $\omega_1=2\sqrt{K/m}\sin[\pi/(2(N+1))]$，最高模 $\omega_N=2\sqrt{K/m}\cos[\pi/(2(N+1))]$。由于正弦不超过一，$\omega_s<2\sqrt{K/m}$，存在离散晶格的最高传播频率。连续经典弦模型没有这种来自原子间距的有限带宽。
-(4) 在 $s\ll N$ 的长波范围，$\sin[s\pi/(2(N+1))]\simeq s\pi/(2(N+1))$，得到 $\omega_s\simeq\sqrt{K/m}\,s\pi a/L$。借助 $Ka\to T$、$m/a\to\mu$ 有 $a\sqrt{K/m}\to\sqrt{T/\mu}=c$，故 $\omega_s\to s\pi c/L$，正是两端固定连续弦的本征频率。
+(1) 对第 \(j\) 个质点，相邻两弹簧恢复力相加为 \(K(u_{j+1}-u_j)+K(u_{j-1}-u_j)\)，故 \(m\ddot u_j=K(u_{j+1}-2u_j+u_{j-1})\)，\(j=1,\dots,N\)，边界 \(u_0=u_{N+1}=0\)。这是离散二阶差分波动方程。
+(2) 设 \(u_j(t)=A\sin(jq)e^{-i\omega t}\)，边界要求 \(\sin[(N+1)q]=0\)，给出 \(q_s=s\pi/(N+1)\)，\(s=1,\ldots,N\)。代入差分关系得 \(\omega_s^2=(4K/m)\sin^2(q_s/2)\)，所以 \(\omega_s=2\sqrt{K/m}\sin[s\pi/(2(N+1))]\)，模态彼此正交。
+(3) 最低模 \(\omega_1=2\sqrt{K/m}\sin[\pi/(2(N+1))]\)，最高模 \(\omega_N=2\sqrt{K/m}\cos[\pi/(2(N+1))]\)。由于正弦不超过一，\(\omega_s<2\sqrt{K/m}\)，存在离散晶格的最高传播频率。连续经典弦模型没有这种来自原子间距的有限带宽。
+(4) 在 \(s\ll N\) 的长波范围，\(\sin[s\pi/(2(N+1))]\simeq s\pi/(2(N+1))\)，得到 \(\omega_s\simeq\sqrt{K/m}\,s\pi a/L\)。借助 \(Ka\to T\)、\(m/a\to\mu\) 有 \(a\sqrt{K/m}\to\sqrt{T/\mu}=c\)，故 \(\omega_s\to s\pi c/L\)，正是两端固定连续弦的本征频率。

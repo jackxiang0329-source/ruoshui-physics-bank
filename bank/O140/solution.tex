@@ -1,4 +1,4 @@
-(1) 均匀矩形瞳 $P(\xi)=1$（$|\xi|\le D/2$），其远场振幅按 Fourier 变换为 $A(x)\propto\int_{-D/2}^{D/2}e^{-i2\pi \xi x/(\lambda f)}d\xi=D\,\operatorname{sinc}[\pi D x/(\lambda f)]$。非相干点源强度PSF因而是 $h(x)\propto\operatorname{sinc}^2[\pi D x/(\lambda f)]$，其中 $\operatorname{sinc}z=\sin z/z$，归一化常数由 $\int h\,dx=1$ 确定。
-(2) 非相干强度传递函数等于瞳函数的归一化自相关。像面空间频率 $\nu$ 对应瞳坐标移位 $\Delta\xi=\lambda f\nu$，两个宽度为 $D$ 的矩形区间交集长度为 $\max(D-|\Delta\xi|,0)$。所以 $\mathrm{OTF}(\nu)=\max(1-|\nu|/\nu_c,0)$，$\nu_c=D/(\lambda f)$；该理想对称瞳无相位畸变，MTF与OTF一致且为实非负函数。
-(3) 非相干线性成像中输出强度是物强度与PSF的卷积；常量分量乘 $\mathrm{OTF}(0)=1$，余弦分量乘 $\mathrm{OTF}(\nu)$。因此 $I_{\rm img}(x)=I_0[1+m\,\mathrm{OTF}(\nu)\cos(2\pi\nu x)]$，输出调制度 $m_{\rm out}=m\max(1-|\nu|/\nu_c,0)$，没有增加对比度。
-(4) 当 $|\nu|\ll\nu_c$，传递因子约为 $1-|\nu|/\nu_c$，低频对比度接近保留；当 $|\nu|\ge\nu_c$，该强度成像模型的线性传递为零，无法直接记录相应正弦调制。截止源于有限瞳自相关的有限支撑，并非笼统的感光器噪声；若改为完全相干振幅成像，传递函数和截止定义不同。
+(1) 均匀矩形瞳 \(P(\xi)=1\)（\(|\xi|\le D/2\)），其远场振幅按 Fourier 变换为 \(A(x)\propto\int_{-D/2}^{D/2}e^{-i2\pi \xi x/(\lambda f)}d\xi=D\,\operatorname{sinc}[\pi D x/(\lambda f)]\)。非相干点源强度PSF因而是 \(h(x)\propto\operatorname{sinc}^2[\pi D x/(\lambda f)]\)，其中 \(\operatorname{sinc}z=\sin z/z\)，归一化常数由 \(\int h\,dx=1\) 确定。
+(2) 非相干强度传递函数等于瞳函数的归一化自相关。像面空间频率 \(\nu\) 对应瞳坐标移位 \(\Delta\xi=\lambda f\nu\)，两个宽度为 \(D\) 的矩形区间交集长度为 \(\max(D-|\Delta\xi|,0)\)。所以 \(\mathrm{OTF}(\nu)=\max(1-|\nu|/\nu_c,0)\)，\(\nu_c=D/(\lambda f)\)；该理想对称瞳无相位畸变，MTF与OTF一致且为实非负函数。
+(3) 非相干线性成像中输出强度是物强度与PSF的卷积；常量分量乘 \(\mathrm{OTF}(0)=1\)，余弦分量乘 \(\mathrm{OTF}(\nu)\)。因此 \(I_{\rm img}(x)=I_0[1+m\,\mathrm{OTF}(\nu)\cos(2\pi\nu x)]\)，输出调制度 \(m_{\rm out}=m\max(1-|\nu|/\nu_c,0)\)，没有增加对比度。
+(4) 当 \(|\nu|\ll\nu_c\)，传递因子约为 \(1-|\nu|/\nu_c\)，低频对比度接近保留；当 \(|\nu|\ge\nu_c\)，该强度成像模型的线性传递为零，无法直接记录相应正弦调制。截止源于有限瞳自相关的有限支撑，并非笼统的感光器噪声；若改为完全相干振幅成像，传递函数和截止定义不同。

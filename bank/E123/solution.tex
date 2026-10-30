@@ -1,4 +1,4 @@
-(1) 取圆柱半径 $r$、轴向单位长度的高斯曲面，法向电位移通量满足 $2\pi rD_r=\lambda$，故 $D_r=\lambda/(2\pi r)$，$E_r=\lambda/[2\pi\varepsilon_0r(1+\alpha r/a)]$。由于介电常数随径向变化，不能先取常介质场再仅替换为一个平均介电常数，局部本构关系必须逐点使用。
-(2) 从内到外的电势降为 $\Delta V=\lambda\mathcal I/(2\pi)$，其中 $\mathcal I=\int_a^b dr/[r\varepsilon(r)]=\varepsilon_0^{-1}\ln\{b(1+\alpha)/[a(1+\alpha b/a)]\}$。于是 $C'=\lambda/\Delta V=2\pi/\mathcal I$，当 $\alpha\to0$ 时恢复 $2\pi\varepsilon_0/\ln(b/a)$。条件 $\alpha>-a/b$ 保证全间隙介电常数为正。
-(3) 电介质静电能密度为 $u=\boldsymbol E\cdot\boldsymbol D/2$。径向积分得到 $U'=\int_a^b \pi rE_rD_r\,dr=\lambda^2\mathcal I/(4\pi)=\lambda\Delta V/2=\lambda^2/(2C')$，其中撇号表示每单位轴长而非径向微分。与第一问的位移场和第二问的电容计算完全一致。
-(4) 固定 $\lambda$，将电磁储能视为 $b$ 的函数，$f_b=-\partial U'/\partial b|_\lambda=-\lambda^2/[4\pi b\varepsilon(b)]<0$，表示外电极受到向内的吸力。固定端电压时必须用源参与后的势 $\mathcal F=U'-\lambda\Delta V=-C'\Delta V^2/2$ 求力，因 $dC'/db<0$ 仍得到向内作用；直接对固定电压的储能取负导数会给错号。
+(1) 取圆柱半径 \(r\)、轴向单位长度的高斯曲面，法向电位移通量满足 \(2\pi rD_r=\lambda\)，故 \(D_r=\lambda/(2\pi r)\)，\(E_r=\lambda/[2\pi\varepsilon_0r(1+\alpha r/a)]\)。由于介电常数随径向变化，不能先取常介质场再仅替换为一个平均介电常数，局部本构关系必须逐点使用。
+(2) 从内到外的电势降为 \(\Delta V=\lambda\mathcal I/(2\pi)\)，其中 \(\mathcal I=\int_a^b dr/[r\varepsilon(r)]=\varepsilon_0^{-1}\ln\{b(1+\alpha)/[a(1+\alpha b/a)]\}\)。于是 \(C'=\lambda/\Delta V=2\pi/\mathcal I\)，当 \(\alpha\to0\) 时恢复 \(2\pi\varepsilon_0/\ln(b/a)\)。条件 \(\alpha>-a/b\) 保证全间隙介电常数为正。
+(3) 电介质静电能密度为 \(u=\boldsymbol E\cdot\boldsymbol D/2\)。径向积分得到 \(U'=\int_a^b \pi rE_rD_r\,dr=\lambda^2\mathcal I/(4\pi)=\lambda\Delta V/2=\lambda^2/(2C')\)，其中撇号表示每单位轴长而非径向微分。与第一问的位移场和第二问的电容计算完全一致。
+(4) 固定 \(\lambda\)，将电磁储能视为 \(b\) 的函数，\(f_b=-\partial U'/\partial b|_\lambda=-\lambda^2/[4\pi b\varepsilon(b)]<0\)，表示外电极受到向内的吸力。固定端电压时必须用源参与后的势 \(\mathcal F=U'-\lambda\Delta V=-C'\Delta V^2/2\) 求力，因 \(dC'/db<0\) 仍得到向内作用；直接对固定电压的储能取负导数会给错号。

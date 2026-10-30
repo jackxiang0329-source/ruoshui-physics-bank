@@ -1,4 +1,4 @@
-(1) 取竖直向下为正，牛顿第二定律是 $m\dot v=mg-kv^2$，且 $v(0)=0$。定义终端速度 $v_T=\sqrt{mg/k}$ 和时间尺度 $\tau=v_T/g=\sqrt{m/(kg)}$，则 $\dot v=g[1-(v/v_T)^2]$，适用于未发生方向反转的下落过程。
-(2) 分离变量 $\int_0^{v/v_T}du/(1-u^2)=gt/v_T$，从而 $\operatorname{artanh}(v/v_T)=t/\tau$。故 $v(t)=v_T\tanh(t/\tau)$，位移 $x(t)-x(0)=v_T\tau\ln\cosh(t/\tau)=(v_T^2/g)\ln\cosh(gt/v_T)$。
-(3) 当 $\dot v=0$，有 $mg=kv_T^2$，故 $v_T=\sqrt{mg/k}$。阻力瞬时耗散功率 $P_{\rm diss}=kv^3\ge0$；将动力学方程乘以 $v$ 得 $mgv=m v\dot v+kv^3=d(mv^2/2)/dt+P_{\rm diss}$，证明重力做功被分成动能增长与热耗散。
-(4) 在 $t\ll\tau$，$\tanh(t/\tau)\sim t/\tau$，故 $v\sim gt$、$x-x_0\sim gt^2/2$。$t\gg\tau$ 时 $v\to v_T$、$x\simeq v_Tt-(v_T^2/g)\ln2$。固定时间令 $k\to0$，有 $v_T\to\infty$ 但 $t/\tau\to0$，结合展开仍恢复匀加速下落；不能将极限理解为无限大的实际速度。
+(1) 取竖直向下为正，牛顿第二定律是 \(m\dot v=mg-kv^2\)，且 \(v(0)=0\)。定义终端速度 \(v_T=\sqrt{mg/k}\) 和时间尺度 \(\tau=v_T/g=\sqrt{m/(kg)}\)，则 \(\dot v=g[1-(v/v_T)^2]\)，适用于未发生方向反转的下落过程。
+(2) 分离变量 \(\int_0^{v/v_T}du/(1-u^2)=gt/v_T\)，从而 \(\operatorname{artanh}(v/v_T)=t/\tau\)。故 \(v(t)=v_T\tanh(t/\tau)\)，位移 \(x(t)-x(0)=v_T\tau\ln\cosh(t/\tau)=(v_T^2/g)\ln\cosh(gt/v_T)\)。
+(3) 当 \(\dot v=0\)，有 \(mg=kv_T^2\)，故 \(v_T=\sqrt{mg/k}\)。阻力瞬时耗散功率 \(P_{\rm diss}=kv^3\ge0\)；将动力学方程乘以 \(v\) 得 \(mgv=m v\dot v+kv^3=d(mv^2/2)/dt+P_{\rm diss}\)，证明重力做功被分成动能增长与热耗散。
+(4) 在 \(t\ll\tau\)，\(\tanh(t/\tau)\sim t/\tau\)，故 \(v\sim gt\)、\(x-x_0\sim gt^2/2\)。\(t\gg\tau\) 时 \(v\to v_T\)、\(x\simeq v_Tt-(v_T^2/g)\ln2\)。固定时间令 \(k\to0\)，有 \(v_T\to\infty\) 但 \(t/\tau\to0\)，结合展开仍恢复匀加速下落；不能将极限理解为无限大的实际速度。

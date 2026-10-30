@@ -1,7 +1,7 @@
-(1) 每层背景是均匀水平流，线性扰动势满足 $\nabla^2\phi_j=0$。上下层对界面采用倏逝因子 $e^{\mp k|z|}$，运动条件为 $(\partial_t+U_j\partial_x)\eta=\partial_z\phi_j(0)$；动态条件加入重力压力跃变与界面Laplace压强 $\sigma\eta_{xx}$。
+(1) 每层背景是均匀水平流，线性扰动势满足 \(\nabla^2\phi_j=0\)。上下层对界面采用倏逝因子 \(e^{\mp k|z|}\)，运动条件为 \((\partial_t+U_j\partial_x)\eta=\partial_z\phi_j(0)\)；动态条件加入重力压力跃变与界面Laplace压强 \(\sigma\eta_{xx}\)。
 
-(2) 消去势幅得到 $\rho_1(\omega-kU_1)^2+\rho_2(\omega-kU_2)^2=gk(\rho_2-\rho_1)+\sigma k^3$。令 $R=\rho_1+\rho_2$，解二次式：$\boxed{\omega=k(\rho_1U_1+\rho_2U_2)/R\pm\sqrt{[gk(\rho_2-\rho_1)+\sigma k^3]/R-(\rho_1\rho_2/R^2)k^2(U_1-U_2)^2}}$。根号为负时两分支出现一增一减的指数模。
+(2) 消去势幅得到 \(\rho_1(\omega-kU_1)^2+\rho_2(\omega-kU_2)^2=gk(\rho_2-\rho_1)+\sigma k^3\)。令 \(R=\rho_1+\rho_2\)，解二次式：\(\boxed{\omega=k(\rho_1U_1+\rho_2U_2)/R\pm\sqrt{[gk(\rho_2-\rho_1)+\sigma k^3]/R-(\rho_1\rho_2/R^2)k^2(U_1-U_2)^2}}\)。根号为负时两分支出现一增一减的指数模。
 
-(3) 对给定 $k>0$，稳定条件为 $(\Delta U)^2\le\frac{R}{\rho_1\rho_2}[g(\rho_2-\rho_1)/k+\sigma k]$。右式关于 $k$ 的最小值在 $\boxed{k_*=\sqrt{g(\rho_2-\rho_1)/\sigma}}$，从而整体失稳阈值 $\boxed{(\Delta U_c)^2=\frac{2R}{\rho_1\rho_2}\sqrt{g(\rho_2-\rho_1)\sigma}}$。
+(3) 对给定 \(k>0\)，稳定条件为 \((\Delta U)^2\le\frac{R}{\rho_1\rho_2}[g(\rho_2-\rho_1)/k+\sigma k]\)。右式关于 \(k\) 的最小值在 \(\boxed{k_*=\sqrt{g(\rho_2-\rho_1)/\sigma}}\)，从而整体失稳阈值 \(\boxed{(\Delta U_c)^2=\frac{2R}{\rho_1\rho_2}\sqrt{g(\rho_2-\rho_1)\sigma}}\)。
 
-(4) 若 $U_1=U_2=U$，只是将静止界面波频率整体平移 $\omega\mapsto\omega+kU$，增长率不变。若 $\sigma\to0$ 且有非零剪切差，短波重力稳定项按 $1/k$ 减小，最终任意有限剪切都会在充分高的 $k$ 失稳；实际流体黏性和有限界面厚度会改变紫外极限。
+(4) 若 \(U_1=U_2=U\)，只是将静止界面波频率整体平移 \(\omega\mapsto\omega+kU\)，增长率不变。若 \(\sigma\to0\) 且有非零剪切差，短波重力稳定项按 \(1/k\) 减小，最终任意有限剪切都会在充分高的 \(k\) 失稳；实际流体黏性和有限界面厚度会改变紫外极限。

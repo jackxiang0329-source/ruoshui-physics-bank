@@ -1,4 +1,4 @@
-(1) 取位移列向量 $x=(x_1,x_2)^T$，运动方程为 $m\ddot x+Kx=0$，$K=\begin{pmatrix}k+\kappa&-\kappa\\-\kappa&k+\kappa\end{pmatrix}$。对称模 $x_1=x_2$ 不拉伸中间弹簧，频率 $\omega_s^2=k/m$；反对称模 $x_1=-x_2$ 的中间弹簧应变加倍，频率 $\omega_a^2=(k+2\kappa)/m$，两模正交。
-(2) 令 $x_j=\Re[X_j e^{i\omega t}]$，置 $A=k+\kappa-m\omega^2$。频域方程 $\begin{pmatrix}A&-\kappa\\-\kappa&A\end{pmatrix}(X_1,X_2)^T=(F,0)^T$，由逆矩阵得到 $X_1=FA/(A^2-\kappa^2)$、$X_2=F\kappa/(A^2-\kappa^2)$。零阻尼且恰在本征频率时分母为零，稳态幅度不再有有限解。
-(3) 第一质点的位移在 $A=0$ 即 $\omega_{\rm ar}^2=(k+\kappa)/m$ 时为零；这时分母 $-\kappa^2\ne0$，第二质点幅度为 $X_2=-F/\kappa$，中间弹簧恰好以反相内力抵消外驱力。该频率严格介于 $\omega_s$ 与 $\omega_a$ 之间，反共振不是额外的第三个自由振动模。
-(4) $\kappa\to0$ 时两模简并为 $\sqrt{k/m}$，但 $X_2\to0$ 且反共振条件与极点相撞，不能在极限前后交换约分步骤。若各质量受到 $-c\dot x_j$ 的阻尼，则 $A$ 被替换为 $A+i c\omega$，实数激励频率下无法令复数分子同时为零，所以凹陷成为有限深度而非精确零点。
+(1) 取位移列向量 \(x=(x_1,x_2)^T\)，运动方程为 \(m\ddot x+Kx=0\)，\(K=\begin{pmatrix}k+\kappa&-\kappa\\-\kappa&k+\kappa\end{pmatrix}\)。对称模 \(x_1=x_2\) 不拉伸中间弹簧，频率 \(\omega_s^2=k/m\)；反对称模 \(x_1=-x_2\) 的中间弹簧应变加倍，频率 \(\omega_a^2=(k+2\kappa)/m\)，两模正交。
+(2) 令 \(x_j=\Re[X_j e^{i\omega t}]\)，置 \(A=k+\kappa-m\omega^2\)。频域方程 \(\begin{pmatrix}A&-\kappa\\-\kappa&A\end{pmatrix}(X_1,X_2)^T=(F,0)^T\)，由逆矩阵得到 \(X_1=FA/(A^2-\kappa^2)\)、\(X_2=F\kappa/(A^2-\kappa^2)\)。零阻尼且恰在本征频率时分母为零，稳态幅度不再有有限解。
+(3) 第一质点的位移在 \(A=0\) 即 \(\omega_{\rm ar}^2=(k+\kappa)/m\) 时为零；这时分母 \(-\kappa^2\ne0\)，第二质点幅度为 \(X_2=-F/\kappa\)，中间弹簧恰好以反相内力抵消外驱力。该频率严格介于 \(\omega_s\) 与 \(\omega_a\) 之间，反共振不是额外的第三个自由振动模。
+(4) \(\kappa\to0\) 时两模简并为 \(\sqrt{k/m}\)，但 \(X_2\to0\) 且反共振条件与极点相撞，不能在极限前后交换约分步骤。若各质量受到 \(-c\dot x_j\) 的阻尼，则 \(A\) 被替换为 \(A+i c\omega\)，实数激励频率下无法令复数分子同时为零，所以凹陷成为有限深度而非精确零点。

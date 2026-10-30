@@ -1,15 +1,15 @@
-(1) 旋转盘上半径为 $r$ 的导体质元速度为 $\boldsymbol v=\Omega r\hat{\boldsymbol\phi}$，洛伦兹力的正电荷方向为 $\boldsymbol v\times\boldsymbol B=\Omega rB\hat{\boldsymbol r}$。沿半径从圆心积分动生电动势：
+(1) 旋转盘上半径为 \(r\) 的导体质元速度为 \(\boldsymbol v=\Omega r\hat{\boldsymbol\phi}\)，洛伦兹力的正电荷方向为 \(\boldsymbol v\times\boldsymbol B=\Omega rB\hat{\boldsymbol r}\)。沿半径从圆心积分动生电动势：
 \[
 \mathcal E=\int_0^a(\boldsymbol v\times\boldsymbol B)\cdot d\boldsymbol\ell
 =\int_0^a B\Omega r\,dr=\frac12B\Omega a^2.
 \]
-盘外缘电势高于圆心，闭合回路中正电荷电流沿盘由内向外，外负载再回到圆心。忽略电感时 $I=\mathcal E/R=B\Omega a^2/(2R)$。
+盘外缘电势高于圆心，闭合回路中正电荷电流沿盘由内向外，外负载再回到圆心。忽略电感时 \(I=\mathcal E/R=B\Omega a^2/(2R)\)。
 
-(2) 盘内径向电流元 $I\,dr\,\hat r$ 与 $\boldsymbol B$ 的叉乘沿 $-\hat{\boldsymbol\phi}$，每元所受电磁阻力矩大小为 $d\tau=IBr\,dr$。积分得
+(2) 盘内径向电流元 \(I\,dr\,\hat r\) 与 \(\boldsymbol B\) 的叉乘沿 \(-\hat{\boldsymbol\phi}\)，每元所受电磁阻力矩大小为 \(d\tau=IBr\,dr\)。积分得
 \[
 \tau_B=-\frac12IBa^2=-\frac{B^2a^4}{4R}\Omega .
 \]
-令 $\gamma_B=B^2a^4/(4R)>0$，则转动方程
+令 \(\gamma_B=B^2a^4/(4R)>0\)，则转动方程
 \[
 J\dot\Omega=\tau_0-\gamma_B\Omega .
 \]
@@ -21,10 +21,10 @@ J\dot\Omega=\tau_0-\gamma_B\Omega .
 \Omega_\infty=\frac{\tau_0}{\gamma_B}=\frac{4R\tau_0}{B^2a^4},
 \qquad\tau=\frac J{\gamma_B}.
 \]
-电流 $I(t)=Ba^2\Omega(t)/(2R)$。终端状态电磁阻力矩正好抵消电机转矩，$\dot\Omega\to0$，但盘与外电阻仍持续有能量流入及耗散。
+电流 \(I(t)=Ba^2\Omega(t)/(2R)\)。终端状态电磁阻力矩正好抵消电机转矩，\(\dot\Omega\to0\)，但盘与外电阻仍持续有能量流入及耗散。
 
-(4) 对方程乘 $\Omega$：
+(4) 对方程乘 \(\Omega\)：
 \[
 \tau_0\Omega=\frac{d}{dt}\left(\frac J2\Omega^2\right)+\gamma_B\Omega^2.
 \]
-又电阻热功率 $I^2R=(B^2a^4/(4R))\Omega^2=\gamma_B\Omega^2$，两种推导完全吻合。若固定有限时间令 $R\to\infty$，$\gamma_B\to0$、$\tau\to\infty$，圆盘近似按 $J\dot\Omega=\tau_0$ 匀加速，闭合电流和磁制动力矩趋零；先取每个有限 $R$ 的 $t\to\infty$ 则得随 $R$ 增大的终端速度，两种极限不能交换。
+又电阻热功率 \(I^2R=(B^2a^4/(4R))\Omega^2=\gamma_B\Omega^2\)，两种推导完全吻合。若固定有限时间令 \(R\to\infty\)，\(\gamma_B\to0\)、\(\tau\to\infty\)，圆盘近似按 \(J\dot\Omega=\tau_0\) 匀加速，闭合电流和磁制动力矩趋零；先取每个有限 \(R\) 的 \(t\to\infty\) 则得随 \(R\) 增大的终端速度，两种极限不能交换。

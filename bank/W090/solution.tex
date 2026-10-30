@@ -1,7 +1,7 @@
-(1) 线性声学在每层满足行波 $p=Ae^{ik_jx}+Be^{-ik_jx}$，$v=(Ae^{ik_jx}-Be^{-ik_jx})/Z_j$，$k_j=\omega/c_j$。把边界状态 $\Psi=(p,v)^\mathsf T$ 从层一端移至另一端，可写 $\Psi(x+\ell)=M_j\Psi(x)$，其中 $M_j=\begin{pmatrix}\cos(k_j\ell)&iZ_j\sin(k_j\ell)\\iZ_j^{-1}\sin(k_j\ell)&\cos(k_j\ell)\end{pmatrix}$，行波时间约定决定共同的 $i$ 符号但不改变迹。
+(1) 线性声学在每层满足行波 \(p=Ae^{ik_jx}+Be^{-ik_jx}\)，\(v=(Ae^{ik_jx}-Be^{-ik_jx})/Z_j\)，\(k_j=\omega/c_j\)。把边界状态 \(\Psi=(p,v)^\mathsf T\) 从层一端移至另一端，可写 \(\Psi(x+\ell)=M_j\Psi(x)\)，其中 \(M_j=\begin{pmatrix}\cos(k_j\ell)&iZ_j\sin(k_j\ell)\\iZ_j^{-1}\sin(k_j\ell)&\cos(k_j\ell)\end{pmatrix}\)，行波时间约定决定共同的 \(i\) 符号但不改变迹。
 
-(2) 单胞矩阵 $M=M_2M_1$ 且 $\det M=1$，Bloch本征值为 $e^{\pm iKd}$，所以 $\boxed{\cos Kd=\cos(k_1a)\cos(k_2b)-\tfrac12(Z_1/Z_2+Z_2/Z_1)\sin(k_1a)\sin(k_2b)}$。右端绝对值不超过1时存在实数Bloch波数；大于1时 $K$ 获得非零虚部，形成禁带衰减。
+(2) 单胞矩阵 \(M=M_2M_1\) 且 \(\det M=1\)，Bloch本征值为 \(e^{\pm iKd}\)，所以 \(\boxed{\cos Kd=\cos(k_1a)\cos(k_2b)-\tfrac12(Z_1/Z_2+Z_2/Z_1)\sin(k_1a)\sin(k_2b)}\)。右端绝对值不超过1时存在实数Bloch波数；大于1时 \(K\) 获得非零虚部，形成禁带衰减。
 
-(3) 如果 $Z_1=Z_2$，括号为2，利用余弦加法公式 $\cos Kd=\cos(k_1a+k_2b)$，因此 $K=(k_1a+k_2b)/d$ 模去布里渊区折叠。界面反射系数 $(Z_2-Z_1)/(Z_1+Z_2)=0$，即使声速不同也没有由界面反射产生的Bragg禁带。
+(3) 如果 \(Z_1=Z_2\)，括号为2，利用余弦加法公式 \(\cos Kd=\cos(k_1a+k_2b)\)，因此 \(K=(k_1a+k_2b)/d\) 模去布里渊区折叠。界面反射系数 \((Z_2-Z_1)/(Z_1+Z_2)=0\)，即使声速不同也没有由界面反射产生的Bragg禁带。
 
-(4) 四分之一声学波条件下 $\cos Kd=-\tfrac12(Z_1/Z_2+Z_2/Z_1)$，由AM–GM有绝对值 $\ge1$，若 $Z_1\ne Z_2$ 则严格大于1，处于禁带中心。若 $Z_1=Z_2$，恰为允许带边缘。黏滞或热损耗使传输矩阵一般为复非幺正，Bloch指数即使原先允许带也会衰减，此时不能仍以实数绝对值 $\le1$ 作为完整谱判据。
+(4) 四分之一声学波条件下 \(\cos Kd=-\tfrac12(Z_1/Z_2+Z_2/Z_1)\)，由AM–GM有绝对值 \(\ge1\)，若 \(Z_1\ne Z_2\) 则严格大于1，处于禁带中心。若 \(Z_1=Z_2\)，恰为允许带边缘。黏滞或热损耗使传输矩阵一般为复非幺正，Bloch指数即使原先允许带也会衰减，此时不能仍以实数绝对值 \(\le1\) 作为完整谱判据。

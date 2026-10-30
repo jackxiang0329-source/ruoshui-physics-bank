@@ -1,4 +1,4 @@
-(1) 沿固定主轴的角动量为 $L=I\Omega$，力矩平衡给 $I\dot\Omega=\tau-b\Omega$。将方程写成 $\dot\Omega+\Omega/t_r=\tau/I$，得弛豫时间 $t_r=I/b$，其维度为秒，因而是一阶线性松弛方程。
-(2) 通解为 $\Omega(t)=\Omega_\infty+(\Omega_0-\Omega_\infty)e^{-t/t_r}$，其中 $\Omega_\infty=\tau/b$。在 $t=0$ 恢复给定初值；随时间延长，指数项消失，最终由驱动矩与阻尼矩相抵达到恒定旋转速度。
-(3) 转动动能 $K=I\Omega^2/2$，因此 $\dot K=I\Omega\dot\Omega=(\tau-b\Omega)\Omega=\tau\Omega-b\Omega^2$。其中 $\tau\Omega$ 是马达输入功率，$b\Omega^2\ge0$ 是阻尼耗散率，两者之差严格等于机械能变化率。
-(4) 驱动功为 $W=\int_0^t\tau\Omega(s)ds=\tau[\Omega_\infty t+(\Omega_0-\Omega_\infty)t_r(1-e^{-t/t_r})]$。当 $b\to0$，应直接由原方程取极限得到 $\Omega=\Omega_0+\tau t/I$、$W=\tau\Omega_0t+\tau^2t^2/(2I)$；有阻尼稳态则持续耗能而不再增加动能。
+(1) 沿固定主轴的角动量为 \(L=I\Omega\)，力矩平衡给 \(I\dot\Omega=\tau-b\Omega\)。将方程写成 \(\dot\Omega+\Omega/t_r=\tau/I\)，得弛豫时间 \(t_r=I/b\)，其维度为秒，因而是一阶线性松弛方程。
+(2) 通解为 \(\Omega(t)=\Omega_\infty+(\Omega_0-\Omega_\infty)e^{-t/t_r}\)，其中 \(\Omega_\infty=\tau/b\)。在 \(t=0\) 恢复给定初值；随时间延长，指数项消失，最终由驱动矩与阻尼矩相抵达到恒定旋转速度。
+(3) 转动动能 \(K=I\Omega^2/2\)，因此 \(\dot K=I\Omega\dot\Omega=(\tau-b\Omega)\Omega=\tau\Omega-b\Omega^2\)。其中 \(\tau\Omega\) 是马达输入功率，\(b\Omega^2\ge0\) 是阻尼耗散率，两者之差严格等于机械能变化率。
+(4) 驱动功为 \(W=\int_0^t\tau\Omega(s)ds=\tau[\Omega_\infty t+(\Omega_0-\Omega_\infty)t_r(1-e^{-t/t_r})]\)。当 \(b\to0\)，应直接由原方程取极限得到 \(\Omega=\Omega_0+\tau t/I\)、\(W=\tau\Omega_0t+\tau^2t^2/(2I)\)；有阻尼稳态则持续耗能而不再增加动能。

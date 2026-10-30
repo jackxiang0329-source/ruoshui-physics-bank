@@ -1,4 +1,4 @@
-(1) 位移列向量满足 $m\ddot{\boldsymbol x}+\mathsf K\boldsymbol x=0$，其中
+(1) 位移列向量满足 \(m\ddot{\boldsymbol x}+\mathsf K\boldsymbol x=0\)，其中
 \[
 \mathsf K=\begin{pmatrix}k+\kappa&-\kappa&0\\-\kappa&k+2\kappa&-\kappa\\0&-\kappa&k+\kappa\end{pmatrix}.
 \]
@@ -8,9 +8,9 @@
 \boldsymbol e_1=(1,0,-1)^T/\sqrt2,\quad
 \boldsymbol e_2=(1,-2,1)^T/\sqrt6.
 \]
-相应 $\omega_0^2=k/m,\ \omega_1^2=(k+\kappa)/m,\ \omega_2^2=(k+3\kappa)/m$，均为正，故三模稳定。
+相应 \(\omega_0^2=k/m,\ \omega_1^2=(k+\kappa)/m,\ \omega_2^2=(k+3\kappa)/m\)，均为正，故三模稳定。
 
-(2) 因所有初速度为零，模态振幅为 $A(\boldsymbol e_j)_1$，所以
+(2) 因所有初速度为零，模态振幅为 \(A(\boldsymbol e_j)_1\)，所以
 \[
 \boldsymbol x(t)=A\left[\tfrac13(1,1,1)^T\cos\omega_0t+
 \tfrac12(1,0,-1)^T\cos\omega_1t+
@@ -22,15 +22,15 @@ x_3(t)=A\left(\tfrac13\cos\omega_0t-\tfrac12\cos\omega_1t+\tfrac16\cos\omega_2t\
 \]
 尽管最右质点初始静止，后续可从耦合获得能量。
 
-(3) 模态坐标初值分别为 $Q_0=A/\sqrt3,\ Q_1=A/\sqrt2,\ Q_2=A/\sqrt6$，故
+(3) 模态坐标初值分别为 \(Q_0=A/\sqrt3,\ Q_1=A/\sqrt2,\ Q_2=A/\sqrt6\)，故
 \[
 E_0=\frac{kA^2}{6},\qquad E_1=\frac{(k+\kappa)A^2}{4},\qquad E_2=\frac{(k+3\kappa)A^2}{12}.
 \]
-相加恰好为 $(k+\kappa)A^2/2$，与初始储能 $kA^2/2+\kappa A^2/2$ 相同；各正交正规模能量分别守恒。
+相加恰好为 \((k+\kappa)A^2/2\)，与初始储能 \(kA^2/2+\kappa A^2/2\) 相同；各正交正规模能量分别守恒。
 
-(4) 令 $\omega_b=\sqrt{k/m}$，当 $\epsilon=\kappa/k\ll1$，
+(4) 令 \(\omega_b=\sqrt{k/m}\)，当 \(\epsilon=\kappa/k\ll1\)，
 \[
 \omega_0=\omega_b,\quad\omega_1=\omega_b(1+\epsilon/2)+O(\epsilon^2),\quad
 \omega_2=\omega_b(1+3\epsilon/2)+O(\epsilon^2).
 \]
-故 $\omega_1-\omega_0\simeq\epsilon\omega_b/2$，$\omega_2-\omega_1\simeq\epsilon\omega_b$，出现缓慢能量交换的包络。将 $t=0$ 代入解，三个分量依次为 $A,0,0$；求导含正弦项，故三个初速度均为零。
+故 \(\omega_1-\omega_0\simeq\epsilon\omega_b/2\)，\(\omega_2-\omega_1\simeq\epsilon\omega_b\)，出现缓慢能量交换的包络。将 \(t=0\) 代入解，三个分量依次为 \(A,0,0\)；求导含正弦项，故三个初速度均为零。

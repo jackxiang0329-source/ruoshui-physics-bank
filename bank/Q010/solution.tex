@@ -1,23 +1,23 @@
-(1) 在一维运动中定义快度 $\eta=\operatorname{artanh}(v/c)$，则
+(1) 在一维运动中定义快度 \(\eta=\operatorname{artanh}(v/c)\)，则
 \[
 v=c\tanh\eta,\qquad \frac{dt}{d\tau}=\cosh\eta,\qquad
 \frac{dx}{d\tau}=c\sinh\eta.
 \]
-固有加速度的大小为 $\alpha=c\,d\eta/d\tau$；初始静止条件 $\eta(0)=0$，因此 $\eta(\tau)=\alpha\tau/c$，$v(\tau)=c\tanh(\alpha\tau/c)$，速度始终严格低于 $c$。
+固有加速度的大小为 \(\alpha=c\,d\eta/d\tau\)；初始静止条件 \(\eta(0)=0\)，因此 \(\eta(\tau)=\alpha\tau/c\)，\(v(\tau)=c\tanh(\alpha\tau/c)\)，速度始终严格低于 \(c\)。
 
 (2) 将上式对固有时积分并施加初值：
 \[
 t(\tau)=\frac c\alpha\sinh\frac{\alpha\tau}{c},\qquad
 x(\tau)=\frac{c^2}{\alpha}\left(\cosh\frac{\alpha\tau}{c}-1\right).
 \]
-由于 $\cosh^2-\sinh^2=1$，消去 $\tau$：
+由于 \(\cosh^2-\sinh^2=1\)，消去 \(\tau\)：
 \[
 \left(1+\frac{\alpha x}{c^2}\right)^2-\left(\frac{\alpha t}{c}\right)^2=1,\quad
 x(t)=\frac{c^2}{\alpha}\left[\sqrt{1+\left(\frac{\alpha t}{c}\right)^2}-1\right].
 \]
 这是匀固有加速度运动的双曲线世界线；坐标时间与固有时不可混为一谈。
 
-(3) 设 $h=1+\alpha D/c^2>1$，由 $\cosh(\alpha\tau_D/c)=h$，得到
+(3) 设 \(h=1+\alpha D/c^2>1\)，由 \(\cosh(\alpha\tau_D/c)=h\)，得到
 \[
 \tau_D=\frac c\alpha\operatorname{arcosh}h,\quad
 t_D=\frac c\alpha\sqrt{h^2-1},\quad
@@ -25,7 +25,7 @@ v_D=c\sqrt{1-h^{-2}}.
 \]
 实验室时间总比乘员钟的固有时长；该表达式也可用恒定固有加速度的动量增长独立检查。
 
-(4) 当 $\alpha t/c\ll1$，开方展成 $x(t)=\alpha t^2/2+O(\alpha^3t^4/c^2)$，速度 $v(t)=\alpha t/\sqrt{1+(\alpha t/c)^2}\simeq\alpha t$。实际实验室坐标加速度
+(4) 当 \(\alpha t/c\ll1\)，开方展成 \(x(t)=\alpha t^2/2+O(\alpha^3t^4/c^2)\)，速度 \(v(t)=\alpha t/\sqrt{1+(\alpha t/c)^2}\simeq\alpha t\)。实际实验室坐标加速度
 \[
 \frac{dv}{dt}=\frac{\alpha}{[1+(\alpha t/c)^2]^{3/2}}
 =\alpha/\gamma^3

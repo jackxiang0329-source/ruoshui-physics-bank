@@ -1,4 +1,4 @@
-(1) 展开 $|\alpha\rangle=\sum_{n=0}^\infty c_n|n\rangle$，使用 $a|n\rangle=\sqrt n|n-1\rangle$，本征值方程给 $c_{n+1}=\alpha c_n/\sqrt{n+1}$。归一化取整体相位为零，得到
+(1) 展开 \(|\alpha\rangle=\sum_{n=0}^\infty c_n|n\rangle\)，使用 \(a|n\rangle=\sqrt n|n-1\rangle\)，本征值方程给 \(c_{n+1}=\alpha c_n/\sqrt{n+1}\)。归一化取整体相位为零，得到
 \[
 |\alpha\rangle=e^{-|\alpha|^2/2}\sum_{n=0}^\infty\frac{\alpha^n}{\sqrt{n!}}|n\rangle.
 \]
@@ -6,28 +6,28 @@
 \[
 P_n=e^{-|\alpha|^2}\frac{|\alpha|^{2n}}{n!}.
 \]
-这是参数 $\bar n=|\alpha|^2$ 的泊松分布，$\langle n\rangle=|\alpha|^2,\ \operatorname{Var}(n)=|\alpha|^2$；当 $\alpha=0$ 时回到基态。
+这是参数 \(\bar n=|\alpha|^2\) 的泊松分布，\(\langle n\rangle=|\alpha|^2,\ \operatorname{Var}(n)=|\alpha|^2\)；当 \(\alpha=0\) 时回到基态。
 
-(2) 由 $H=\hbar\omega(n+1/2)$，平均能量为
+(2) 由 \(H=\hbar\omega(n+1/2)\)，平均能量为
 \[
 \langle H\rangle=\hbar\omega(|\alpha|^2+1/2).
 \]
-其中 $\hbar\omega|\alpha|^2$ 是可与经典谐振运动对应的激发能，$\hbar\omega/2$ 是不因经典振幅消失而消失的零点能。
+其中 \(\hbar\omega|\alpha|^2\) 是可与经典谐振运动对应的激发能，\(\hbar\omega/2\) 是不因经典振幅消失而消失的零点能。
 
-(3) 各 Fock 分量演化因子为 $e^{-i(n+1/2)\omega t}$，因此
+(3) 各 Fock 分量演化因子为 \(e^{-i(n+1/2)\omega t}\)，因此
 \[
 |\psi(t)\rangle=e^{-i\omega t/2}|\alpha e^{-i\omega t}\rangle.
 \]
-令 $\alpha_t=\alpha e^{-i\omega t}$，则
+令 \(\alpha_t=\alpha e^{-i\omega t}\)，则
 \[
 \langle x(t)\rangle=\sqrt{\frac{2\hbar}{m\omega}}\Re\alpha_t,\qquad
 \langle p(t)\rangle=\sqrt{2m\hbar\omega}\Im\alpha_t.
 \]
-直接微分得 $d\langle x\rangle/dt=\langle p\rangle/m$ 与 $d\langle p\rangle/dt=-m\omega^2\langle x\rangle$，完全满足经典中心轨迹方程。
+直接微分得 \(d\langle x\rangle/dt=\langle p\rangle/m\) 与 \(d\langle p\rangle/dt=-m\omega^2\langle x\rangle\)，完全满足经典中心轨迹方程。
 
-(4) 使用 $a|\alpha\rangle=\alpha|\alpha\rangle$ 及 $aa^\dagger=a^\dagger a+1$ 计算
+(4) 使用 \(a|\alpha\rangle=\alpha|\alpha\rangle\) 及 \(aa^\dagger=a^\dagger a+1\) 计算
 \[
 (\Delta x)^2=\frac{\hbar}{2m\omega},\qquad
 (\Delta p)^2=\frac{m\hbar\omega}{2},
 \]
-且协方差为零，因此 $\Delta x\,\Delta p=\hbar/2$，各方差在时间演化中保持不变。相干态是最小不确定性、形状不变的位移基态；频率骤变后的高斯压缩态则通常使两个方差周期性交换，不能将二者混为一谈。
+且协方差为零，因此 \(\Delta x\,\Delta p=\hbar/2\)，各方差在时间演化中保持不变。相干态是最小不确定性、形状不变的位移基态；频率骤变后的高斯压缩态则通常使两个方差周期性交换，不能将二者混为一谈。

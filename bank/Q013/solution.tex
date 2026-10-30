@@ -1,21 +1,21 @@
-(1) 自由演化算符为 $U_\delta(t)=e^{-i\delta t\sigma_z/2}$。由 $U^\dagger_\delta(t)\sigma_xU_\delta(t)$ 的泡利旋转恒等式，初态 $|+x\rangle$ 的期望值为
+(1) 自由演化算符为 \(U_\delta(t)=e^{-i\delta t\sigma_z/2}\)。由 \(U^\dagger_\delta(t)\sigma_xU_\delta(t)\) 的泡利旋转恒等式，初态 \(|+x\rangle\) 的期望值为
 \[
 \langle\sigma_x(t)\rangle_\delta=\cos(\delta t),
 \qquad \langle\sigma_y(t)\rangle_\delta=\sin(\delta t)
 \]
-（本题哈密顿量的符号对应 Bloch 向量绕 $z$ 轴正向转动）。每个粒子保持纯态，单粒子相干模长不减小。
+（本题哈密顿量的符号对应 Bloch 向量绕 \(z\) 轴正向转动）。每个粒子保持纯态，单粒子相干模长不减小。
 
-(2) 对群分布 $p(\delta)=(2\pi\sigma^2)^{-1/2}e^{-\delta^2/(2\sigma^2)}$ 积分，
+(2) 对群分布 \(p(\delta)=(2\pi\sigma^2)^{-1/2}e^{-\delta^2/(2\sigma^2)}\) 积分，
 \[
 \overline{\langle\sigma_x(t)\rangle}=\int_{-\infty}^\infty p(\delta)\cos(\delta t)d\delta
 =e^{-\sigma^2t^2/2}.
 \]
-这是高斯分布的特征函数。定义信号衰减至 $1/e$ 的时间为 $T_2^*=\sqrt2/\sigma$。它描述群失相而不是单粒子相位随机跃迁造成的不可逆相干损失。
+这是高斯分布的特征函数。定义信号衰减至 \(1/e\) 的时间为 \(T_2^*=\sqrt2/\sigma\)。它描述群失相而不是单粒子相位随机跃迁造成的不可逆相干损失。
 
-(3) 施加 $\pi$ 脉冲后总演化是 $U_{\rm echo}=U_\delta(\tau)U_\pi U_\delta(\tau)$。由于 $\sigma_x\sigma_z=-\sigma_z\sigma_x$，有 $U_\delta(\tau)\sigma_x=\sigma_x U_\delta(-\tau)$，因此
+(3) 施加 \(\pi\) 脉冲后总演化是 \(U_{\rm echo}=U_\delta(\tau)U_\pi U_\delta(\tau)\)。由于 \(\sigma_x\sigma_z=-\sigma_z\sigma_x\)，有 \(U_\delta(\tau)\sigma_x=\sigma_x U_\delta(-\tau)\)，因此
 \[
 U_{\rm echo}=-iU_\delta(\tau)\sigma_xU_\delta(\tau)=-i\sigma_x
 \]
-与 $\delta$ 完全无关。它将初态 $|+x\rangle$ 仅乘上整体相位，故每个粒子在 $t=2\tau$ 的 $\langle\sigma_x\rangle$ 回到 $1$，群平均也严格等于1。
+与 \(\delta\) 完全无关。它将初态 \(|+x\rangle\) 仅乘上整体相位，故每个粒子在 \(t=2\tau\) 的 \(\langle\sigma_x\rangle\) 回到 \(1\)，群平均也严格等于1。
 
-(4) 回波取消的是两段中相同的静态失谐产生的相反相位，而不需知道各粒子的 $\delta$。如果第一段与第二段失谐分别为 $\delta_1,\delta_2$，则剩余相位是 $(\delta_2-\delta_1)\tau$，总体信号为其分布特征函数；若两段独立且均服从标准差 $\sigma$ 的高斯分布，回波信号为 $e^{-\sigma^2\tau^2}<1$。因此理想回波不能消除任意时间依赖噪声，实验室还需考虑脉冲误差和真正的不可逆退相干。
+(4) 回波取消的是两段中相同的静态失谐产生的相反相位，而不需知道各粒子的 \(\delta\)。如果第一段与第二段失谐分别为 \(\delta_1,\delta_2\)，则剩余相位是 \((\delta_2-\delta_1)\tau\)，总体信号为其分布特征函数；若两段独立且均服从标准差 \(\sigma\) 的高斯分布，回波信号为 \(e^{-\sigma^2\tau^2}<1\)。因此理想回波不能消除任意时间依赖噪声，实验室还需考虑脉冲误差和真正的不可逆退相干。
