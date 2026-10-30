@@ -48,9 +48,11 @@ def run():
     # O253 partial coherence matrix positive
     I1,I2,gamma=2.,3.,.6
     cross=S(I1*I2)*gamma
-    check("O253",1,"two-mode interferometric mean intensity",
-          I1+I2+2*cross*C(.7),
-          I1+I2+2*cross*C(.7),method="two-beam-second-moment")
+    basephase=.7;correlationphase=math.acos(gamma)
+    coherence_ensemble=lambda angle:A(complex(S(I1),0)+S(I2)*complex(C(basephase+angle),SI(basephase+angle)))**2
+    check("O253",1,"interference mean from two symmetric correlated optical ensembles",
+          (coherence_ensemble(correlationphase)+coherence_ensemble(-correlationphase))/2,
+          I1+I2+2*cross*C(basephase),method="statistical-two-beam-ensemble")
     check("O253",2,"coherency matrix positivity determinant",
           I1*I2-cross*cross>0,1,method="Hermitian-PSD")
     hi=I1+I2+2*cross;lo=I1+I2-2*cross
