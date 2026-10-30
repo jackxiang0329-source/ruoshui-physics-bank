@@ -25,7 +25,7 @@ jobs:
           sudo apt-get update
           sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
             texlive-xetex texlive-lang-chinese texlive-latex-extra \
-            texlive-fonts-recommended fonts-noto-cjk poppler-utils
+            texlive-fonts-recommended fonts-noto-cjk fonts-freefont-otf poppler-utils
       - name: Validate 50 originals, generate 150 source files and run 200 real subpart calculations
         run: python3 editorial/round34/build_review.py --compile
       - name: Verify the two output PDFs contain the 50 distinct problem IDs
