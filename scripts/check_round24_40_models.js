@@ -94,7 +94,7 @@ const J0=x=>{let sum=1,term=1;for(let i=1;i<=38;i++){term*=-(x*x/4)/(i*i);sum+=t
 }
 {
  const z=2.1,c=6,D=Math.sqrt(c*c-2*z*z),wp=(c+D)/2,wm=(c-D)/2;
- eq('E154',1,'axial oscillatory frequency',z*z,z*z);
+ eq('E154',1,'axial harmonic solution residual',d2(t=>Math.cos(z*t),.6)+z*z*Math.cos(z*.6),0,1e-5);
  eq('E154',2,'radial quadratic root',wp*wp-c*wp+z*z/2,0);
  eq('E154',3,'Vieta roots and square frequency',wp+wm,c);
  const zz=.01,ww=(c-Math.sqrt(c*c-2*zz*zz))/2;
@@ -128,7 +128,7 @@ const J0=x=>{let sum=1,term=1;for(let i=1;i<=38;i++){term*=-(x*x/4)/(i*i);sum+=t
  eq('T144',1,'thermodynamic energy derivative',d(v=>Cv*Ti-a/v,Vi),a/Vi**2);
  eq('T144',2,'free expansion total energy',Cv*(Tf-Ti)-a/Vf,-a/Vi);
  eq('T144',3,'isothermal mechanical path integral',sim(p,Vi,Vf),W);
- eq('T144',4,'vanishing-attraction temperature',Ti+0/Cv*(1/Vf-1/Vi),Ti);
+ eq('T144',4,'ideal gas Joule internal-energy invariant',Cv*Tf-a/Vf,Cv*Ti-a/Vi);
 }
 {
  const g=9.8,cp=1005,Rs=287,T0=300,p0=100000,z=1000,T=z=>T0-g*z/cp,pressure=z=>p0*(T(z)/T0)**(cp/Rs);
@@ -158,7 +158,8 @@ const J0=x=>{let sum=1,term=1;for(let i=1;i<=38;i++){term*=-(x*x/4)/(i*i);sum+=t
  eq('T147',2,'Schottky heat derivative',d(U,T),C);
  const xstar=2.3993572805;
  eq('T147',3,'unique Schottky peak root',2/xstar,Math.tanh(xstar/2),1e-8);
- eq('T147',4,'high temperature entropy limit',Math.log(2),Math.log(2));
+ const entropy=t=>k*(Math.log(1+Math.exp(-Delta/(k*t)))+(Delta/(k*t))/(1+Math.exp(Delta/(k*t))));
+ eq('T147',4,'entropy thermodynamic derivative',d(entropy,T),C/T);
 }
 {
  const n1=2,n2=3,T1=400,T2=280,V=10,Cv=12,R=8.31,Tf=(n1*T1+n2*T2)/(n1+n2),V1=n1*V/(n1+n2),V2=n2*V/(n1+n2);
@@ -173,7 +174,8 @@ const J0=x=>{let sum=1,term=1;for(let i=1;i<=38;i++){term*=-(x*x/4)/(i*i);sum+=t
  const re=Math.sqrt(disc)/(2*tau),im=-1/(2*tau);
  eq('T149',1,'telegraph dispersion root',tau*(re*re-im*im)+(-im)-D*k*k,0);
  eq('T149',2,'wave front speed',(Math.sqrt(D/tau))**2,D/tau);
- eq('T149',3,'Lyapunov dissipation sign',(-(3**2)/4)<=0?1:0,1);
+ const cv=2,kappa=3,ta=1,TT=x=>2*Math.sin(x),qq=x=>Math.cos(x),TD=x=>Math.sin(x)/cv,qD=x=>-7*Math.cos(x)/ta;
+ eq('T149',3,'Lyapunov balance from independently differentiated fields',sim(x=>cv*TT(x)*TD(x)+ta/kappa*qq(x)*qD(x),0,2*P),-sim(x=>qq(x)**2/kappa,0,2*P));
  const eps=1e-5,slow=(-1+Math.sqrt(1-4*tau*D*eps*eps))/(2*tau);
  eq('T149',4,'long-wave diffusive root',slow,-D*eps*eps,1e-8);
 }
@@ -201,7 +203,8 @@ const J0=x=>{let sum=1,term=1;for(let i=1;i<=38;i++){term*=-(x*x/4)/(i*i);sum+=t
 }
 {
  const g=9.8,L=4,j01=2.4048255577,w=j01/2*Math.sqrt(g/L);
- eq('W146',1,'static hanging tension at zero',0,0);
+ const mu=2,Tension=z=>mu*g*z;
+ eq('W146',1,'nonuniform tension gradient equals distributed gravity',d(Tension,L/3),mu*g);
  eq('W146',2,'Bessel regular free-end',J0(0),1);
  eq('W146',3,'clamped top Bessel zero',J0(2*w*Math.sqrt(L/g)),0,1e-9);
  eq('W146',4,'frequency scales as inverse sqrt length', (j01/2*Math.sqrt(g/(4*L)))/(w),.5);
@@ -239,7 +242,8 @@ const J0=x=>{let sum=1,term=1;for(let i=1;i<=38;i++){term*=-(x*x/4)/(i*i);sum+=t
  const n1=1.6,n2=1,theta=1,k0=3,kx=n1*k0*Math.sin(theta),kz=Math.sqrt((n1*k0)**2-kx*kx),kap=Math.sqrt(kx*kx-(n2*k0)**2);
  const phase=x=>-2*Math.atan2(Math.sqrt(x*x-(n2*k0)**2),Math.sqrt((n1*k0)**2-x*x));
  eq('O138',1,'total internal reflection evanescent wave',kap*kap+k0*k0*n2*n2,kx*kx);
- eq('O138',2,'TE reflection unit modulus',(kz*kz+kap*kap)/(kz*kz+kap*kap),1);
+ const rsRe=(kz*kz-kap*kap)/(kz*kz+kap*kap),rsIm=-2*kz*kap/(kz*kz+kap*kap);
+ eq('O138',2,'complex Fresnel reflection unit modulus',rsRe**2+rsIm**2,1);
  eq('O138',3,'Goos-Hanchen phase derivative',-d(phase,kx),2*kx/(kz*kap));
  eq('O138',4,'positive lateral shift',2*kx/(kz*kap)>0?1:0,1);
 }
@@ -280,12 +284,14 @@ const J0=x=>{let sum=1,term=1;for(let i=1;i<=38;i++){term*=-(x*x/4)/(i*i);sum+=t
  eq('O143',2,'zero-gap full transmission',tr(0),1);
  const h=10/kap,asym=16*kz*kz*kap*kap/(kz*kz+kap*kap)**2*Math.exp(-2*kap*h);
  eq('O143',3,'thick-gap evanescent decay',tr(h),asym,2e-7);
- eq('O143',4,'total reflection and transmission',tr(d0)+(1-tr(d0)),1);
+ const tiny=1e-4;
+ eq('O143',4,'small-gap transmission curvature',1-tr(tiny),F*kap*kap*tiny*tiny,1e-7);
 }
 {
  const wi=2,wf=5,h=1,m=3,nbar=(wf/wi+wi/wf-2)/4,energy=h*(wi+wf*wf/wi)/4;
  eq('Q138',1,'quench mean new level count',energy/(h*wf)-.5,nbar);
- eq('Q138',2,'ground-state Gaussian overlap',2*Math.sqrt(wi*wf)/(wi+wf),2*Math.sqrt(wi*wf)/(wi+wf));
+ const gi=x=>(m*wi/(P*h))**.25*Math.exp(-m*wi*x*x/(2*h)),gf=x=>(m*wf/(P*h))**.25*Math.exp(-m*wf*x*x/(2*h));
+ eq('Q138',2,'ground-state Gaussian integral overlap',sim(x=>gi(x)*gf(x),-7,7)**2,2*Math.sqrt(wi*wf)/(wi+wf));
  const varx=t=>h/(2*m)*(Math.cos(wf*t)**2/wi+(wi/(wf*wf))*Math.sin(wf*t)**2);
  eq('Q138',3,'initial spatial variance',varx(0),h/(2*m*wi));
  eq('Q138',4,'breathing second moment recurrence',varx(P/wf),varx(0));
@@ -295,8 +301,8 @@ const J0=x=>{let sum=1,term=1;for(let i=1;i<=38;i++){term*=-(x*x/4)/(i*i);sum+=t
  eq('Q139',1,'singlet two-by-two characteristic determinant',minus*plus,-4*t*t);
  eq('Q139',2,'superexchange energy gap',-minus,J);
  eq('Q139',3,'Hellmann Feynman occupancy derivative',d(z=>(z-Math.sqrt(z*z+16*t*t))/2,U),.5*(1-U/delta));
- const smallt=.0001,exact=(Math.sqrt(U*U+16*smallt*smallt)-U)/2;
- eq('Q139',4,'strong-coupling superexchange',exact,4*smallt*smallt/U,1e-7);
+ const smallt=.08,exact=(Math.sqrt(U*U+16*smallt*smallt)-U)/2;
+ eq('Q139',4,'strong-coupling exchange ratio',exact/(4*smallt*smallt/U),1,2e-3);
 }
 {
  const Z=2,z=Z-5/16,Ef=zz=>zz*zz-2*Z*zz+5*zz/8;
@@ -322,7 +328,7 @@ const J0=x=>{let sum=1,term=1;for(let i=1;i<=38;i++){term*=-(x*x/4)/(i*i);sum+=t
  eq('Q142',2,'Kramers partner second component',vv[1].im,-b.im);
  const mu=.7,B=2;
  eq('Q142',3,'Zeeman spin splitting',mu*B-(-mu*B),2*mu*B);
- eq('Q142',4,'vanishing field time reversal recovery',2*mu*0,0);
+ eq('Q142',4,'Zeeman field splitting derivative',d(field=>2*mu*field,B),2*mu);
 }
 {
  const th=.45,s=Math.sin(th),c=Math.cos(th),diag=s*s,off=-s*c,eig=Math.sqrt(diag*diag+off*off);
