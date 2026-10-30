@@ -235,7 +235,7 @@
     ],
     "s": [
       "外均匀静电场下设 \\(\\Phi_{\\rm out}=-E_0r\\cos\\theta+C\\cos\\theta/r^2\\)，内场 \\(\\Phi_{\\rm in}=-E_{\\rm in}r\\cos\\theta\\)。在 \\(r=a\\) 处使电势与法向位移连续，求得 \\(E_{\\rm in}=3E_0/(\\varepsilon_r+2)\\)，\\(C=a^3E_0(\\varepsilon_r-1)/(\\varepsilon_r+2)\\)。所以偶极极化率 \\(\\alpha=4\\pi\\varepsilon_0a^3(\\varepsilon_r-1)/(\\varepsilon_r+2)\\)。",
-      "诱导偶极 \\(p_0=\\alpha E_0\\) 随入射频率振荡。其远场按偶极辐射 \\(\\langle S\\rangle\\propto\\omega^4|p_0|^2\\sin^2\\theta/r^2\\)，除以入射强度 \\(I_0=\\varepsilon_0c|E_0|^2/2\\) 得 \\(\\frac{d\\sigma}{d\\Omega}=\\frac{k^4|\\alpha|^2}{16\\pi^2\\varepsilon_0^2}\\frac{\\sin^2\\theta}{?}\\)；采用标准偶极辐射规范后精确值为 \\(\\frac{k^4|\\alpha|^2}{16\\pi^2\\varepsilon_0^2}\\sin^2\\theta\\) 的半因子校准须使用完整Poynting推导，见下式。",
+      "诱导偶极 \\(p_0=\\alpha E_0\\) 随入射频率振荡。远场电场振幅 \\(E_{\\theta,0}=\\omega^2p_0\\sin\\theta/(4\\pi\\varepsilon_0c^2r)\\)。以 \\(\\langle S_r\\rangle=\\varepsilon_0cE_{\\theta,0}^2/2\\) 求每立体角辐射功率 \\(dP/d\\Omega=\\omega^4|p_0|^2\\sin^2\\theta/(32\\pi^2\\varepsilon_0c^3)\\)。除以入射平均强度 \\(I_0=\\varepsilon_0c|E_0|^2/2\\)，严格得到 \\(d\\sigma/d\\Omega=k^4|\\alpha|^2\\sin^2\\theta/(16\\pi^2\\varepsilon_0^2)\\)。",
       "直接代入偶极辐射 \\(dP/d\\Omega=\\omega^4|p_0|^2\\sin^2\\theta/(32\\pi^2\\varepsilon_0c^3)\\) 及 \\(I_0=\\varepsilon_0c|E_0|^2/2\\)，严格得到 \\(\\frac{d\\sigma}{d\\Omega}=\\frac{k^4|\\alpha|^2}{16\\pi^2\\varepsilon_0^2}\\sin^2\\theta\\)。利用 \\(\\int\\sin^2\\theta\\,d\\Omega=8\\pi/3\\)，总散射截面 \\(\\sigma_{\\rm sca}=k^4|\\alpha|^2/(6\\pi\\varepsilon_0^2)=\\frac{8\\pi}{3}k^4a^6\\left|\\frac{\\varepsilon_r-1}{\\varepsilon_r+2}\\right|^2\\)。",
       "固定波长与介电率时 \\(\\sigma_{\\rm sca}\\propto a^6\\)，解释小粒径散射快速减弱；\\(\\varepsilon_r\\to1\\) 时极化率与散射消失。若 \\(ka\\) 不是小量或材料吸收明显，需使用复极化率、辐射反作用修正乃至Mie理论，不可将静态极化率用于任意大球。"
     ],
