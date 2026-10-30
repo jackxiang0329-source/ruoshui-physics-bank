@@ -301,7 +301,7 @@ const J0=x=>{let sum=1,term=1;for(let i=1;i<=38;i++){term*=-(x*x/4)/(i*i);sum+=t
 {
  const Z=2,z=Z-5/16,Ef=zz=>zz*zz-2*Z*zz+5*zz/8;
  eq('Q140',1,'hydrogenic radial density normalization',sim(r=>4*z**3*r*r*Math.exp(-2*z*r),0,20),1);
- eq('Q140',2,'Coulomb-screening trial energy',Ef(z),-(Z-5/16)**2);
+ eq('Q140',2,'Coulomb-screening trial energy',Ef(z),-((Z-5/16)**2));
  eq('Q140',3,'variational optimum stationary derivative',d(Ef,z),0);
  eq('Q140',4,'variational minimum convexity',d2(Ef,z),2,1e-5);
 }
