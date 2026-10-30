@@ -1,0 +1,38 @@
+name: Round32 review XeLaTeX books
+on:
+  push:
+    branches:
+      - physics-round32-50-rigorous-review-20261030
+    paths:
+      - "editorial/round32/**"
+      - ".github/workflows/round32-review.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install XeLaTeX and CJK support
+        run: |
+          sudo apt-get update
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+            texlive-xetex texlive-lang-chinese texlive-latex-extra fonts-noto-cjk
+      - name: Parse 50 questions, gate 200 solution subparts, compile two books
+        run: python3 editorial/round32/build_review.py --compile
+      - name: Attach both review PDFs and verification summary
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: round32-questions-solutions-review
+          path: |
+            editorial/round32/build/questions.pdf
+            editorial/round32/build/solutions.pdf
+            editorial/round32/build/build_report.json
+            editorial/round32/build/questions.log
+            editorial/round32/build/solutions.log
+          if-no-files-found: warn
