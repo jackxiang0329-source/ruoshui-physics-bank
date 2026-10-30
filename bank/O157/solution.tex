@@ -1,0 +1,4 @@
+(1) 对输入向量应用单位分束矩阵，$U_{\rm BS}(E_0,0)^T=(E_0/\sqrt2,iE_0/\sqrt2)^T$。输出总功率仍为 $|E_0|^2$，因为矩阵是酉矩阵，第二臂振幅带有反射引起的相位因子 $i$。
+(2) 传播后的双臂向量为 $(E_0e^{i\phi_1}/\sqrt2,iE_0e^{i\phi_2}/\sqrt2)^T$。再经同一理想分束器，两个输出为 $E_a=E_0(e^{i\phi_1}-e^{i\phi_2})/2$、$E_b=iE_0(e^{i\phi_1}+e^{i\phi_2})/2$，可直接由矩阵乘法验证。
+(3) 令相位差 $\Delta\phi=\phi_1-\phi_2$，两端强度分别为 $I_a/I_0=|e^{i\phi_1}-e^{i\phi_2}|^2/4=\sin^2(\Delta\phi/2)$、$I_b/I_0=\cos^2(\Delta\phi/2)$。因 $\sin^2+\cos^2=1$，两端总输出功率恒为输入功率，体现器件无吸收。
+(4) 光程差变化 $\Delta\ell$ 带来 $\Delta\phi=2\pi\Delta\ell/\lambda_0$，输出光强随 $\Delta\ell$ 变化一个真空波长 $\lambda_0$ 后重复。在完全同相 $\Delta\ell=0$ 且无其他相移时，$I_a=0,I_b=I_0$，体现两个端口的互补干涉。
