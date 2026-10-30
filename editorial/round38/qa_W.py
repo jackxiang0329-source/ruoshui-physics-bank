@@ -36,20 +36,21 @@ def run():
           r*r+(Z2/Z1)*tran*tran,1,method="string-Poynting")
     check("W268",4,"heavy string reflection reverses displacement sign",
           r<0,1,method="fixed-end-heavy-limit")
-    # W269 diatomic lattice
-    m1,m2,K,a=2.,3.,1.5,.9
-    s0=lambda q:SI(q*a/2)**2
-    w2=lambda q,sgn:K*(1/m1+1/m2)+sgn*K*S((1/m1+1/m2)**2-4*s0(q)/(m1*m2))
-    determinant=lambda q,w:(2*K-m1*w)*(2*K-m2*w)-4*K*K*C(q*a/2)**2
-    check("W269",1,"two site Bloch characteristic determinant",
-          determinant(.6,w2(.6,1)),0,method="diatomic-Bloch-determinant")
-    check("W269",2,"lower branch characteristic root",
-          determinant(.6,w2(.6,-1)),0,method="acoustic-normal-mode")
-    cs2=K*a*a/(2*(m1+m2))
-    check("W269",3,"diatomic acoustic small wavenumber limit",
-          w2(.001,-1)/(.001**2),cs2,tol=.0005,method="acoustic-continuum")
-    check("W269",4,"zone-edge two discrete mass resonances",
-          w2(P/a,1)+w2(P/a,-1),2*K/m1+2*K/m2,method="zone-boundary-split")
+    # W269 ferromagnetic exchange spin waves
+    gamma,H0,D,k=1.6,2.,.7,.8
+    w=lambda wave:gamma*(H0+D*wave*wave)
+    mx=lambda t:C(w(k)*t)
+    my=lambda t:SI(w(k)*t)
+    check("W269",1,"Landau Lifshitz spin precession linearized cross product",
+          der(mx,.6)+w(k)*my(.6),0,method="LLG-spin-ODE")
+    check("W269",2,"spin wave quadratic exchange dispersion",
+          w(k),gamma*(H0+D*k*k),method="spinwave-exchange")
+    check("W269",3,"exchange magnon group speed spectral gradient",
+          der(w,k),2*gamma*D*k,method="magnon-group-velocity")
+    length=2.3;n=3
+    kn=n*P/length
+    check("W269",4,"finite magnetic strip free exchange boundary quantization",
+          der(lambda x:C(kn*x),length),0,method="magnetic-Neumann-spectrum")
     # W270 Kuramoto order parameter
     gamma=1.4;Kc=2*gamma;K=4.1
     distribution=lambda om:gamma/(P*(om*om+gamma*gamma))
