@@ -24,28 +24,17 @@
 
 \par\medskip
 
-\subsection*{Q219\quad 自旋半绝热演化与 Berry 曲率单极子}
-
-自旋半体系 $H=-\hbar\omega_0\mathbf n(t)\cdot\boldsymbol\sigma/2$，$\omega_0>0$，单位向量 $\mathbf n=(\sin\theta\cos\phi,\sin\theta\sin\phi,\cos\theta)$ 沿闭路缓慢变化。
-
-(1) 构造随场的瞬时归一化本征态。
-
-(2) 计算 Berry 规范势与曲率。
-
-(3) 给出有向固角公式并分析纬圈。
-
-(4) 解释规范奇点、方向反转与绝热条件。
-
+\subsection*{Q219\quad Landau 能级、简并度与电磁漂移}
+质量 $m$、非零电荷 $q$ 的二维粒子置于均匀磁场 $B\hat z$，$B>0$，选 Landau 规范 $\mathbf A=(0,Bx,0)$。忽略自旋 Zeeman 能量和边界势。
+(1) 从最小耦合哈密顿量求一维简谐振子形式。
+(2) 求 Landau 能级并推导每级单位面积简并度。
+(3) 在弱均匀电场 $E_x\hat x$ 中求各态能量对 $k_y$ 的依赖。
+(4) 由能带群速验证横向 $\mathbf E\times\mathbf B$ 漂移与电荷符号无关。
 \par\textbf{逐问解析}
-
-(1) 取较低能态满足 $(\mathbf n\cdot\boldsymbol\sigma)|u_+\rangle=|u_+\rangle$，可在北极规范写 $|u_+(\theta,\phi)\rangle=(\cos(\theta/2),e^{i\phi}\sin(\theta/2))^T$。直接作用 Pauli 矩阵可核对本征值 $+1$，对应能量 $-\hbar\omega_0/2$。
-
-(2) 定义 Berry 联络 $\mathcal A_\mu=i\langle u_+|\partial_\mu u_+\rangle$。计算有 $\mathcal A_\theta=0$、$\mathcal A_\phi=-\sin^2(\theta/2)=-(1-\cos\theta)/2$。其曲率为 $\mathcal F_{\theta\phi}=\partial_\theta\mathcal A_\phi-\partial_\phi\mathcal A_\theta=-\sin\theta/2$，对应参数球面上的单极型通量。
-
-(3) 对不穿过规范奇点的闭合回路 $C$，Stokes 定理给 $\gamma_B=\oint_C\mathcal A_\mu d\lambda^\mu=\int_S\mathcal F_{\theta\phi}d\theta,d\phi=-\Omega_S/2\pmod{2\pi}$，$\Omega_S$是有向固角。固定极角 $\theta$ 绕一周时 $\Omega_S=2\pi(1-\cos\theta)$，故 $\gamma_B=-\pi(1-\cos\theta)$。
-
-(4) 本规范在南极不能无奇点地覆盖整球，需在重叠区作相位规变换，但闭环相位模 $2\pi$ 不变。绕行方向反转使 $\gamma_B$ 反号；绝热条件是 $|\dot{\mathbf n}|\ll\omega_0$，否则跃迁混合两本征态，单一 Berry 相位描述不再充分。
-
+(1) 最小耦合 $H=(\mathbf p-q\mathbf A)^2/(2m)$。由于 $[H,p_y]=0$，令 $\psi(x,y)=e^{ik_yy}\phi(x)$，得 $H_{k_y}=p_x^2/(2m)+(\hbar k_y-qBx)^2/(2m)$。置 $x_0=\hbar k_y/(qB)$ 与 $\omega_c=|q|B/m$，即 $H_{k_y}=p_x^2/(2m)+m\omega_c^2(x-x_0)^2/2$；中心位置随纵向波数移动。
+(2) 该哈密顿量是频率 $\omega_c$ 的谐振子，故 $E_n=\hbar\omega_c(n+1/2)$，$n=0,1,\ldots$。沿 $y$ 取周期边界长 $L_y$，$k_y=2\pi j/L_y$，相邻轨道中心间距 $|\Delta x_0|=2\pi\hbar/(|q|BL_y)$。使中心落在宽 $L_x$ 的样品内得到每级态数约 $N_\phi=L_xL_y|q|B/(2\pi\hbar)$，单位面积简并度 $|q|B/(2\pi\hbar)$。
+(3) 加电势能 $-qE_xx$，对谐振子配方后中心移为 $x_c=x_0+qE_x/(m\omega_c^2)$，能量成为 $E_n(k_y)=\hbar\omega_c(n+1/2)-qE_xx_0-q^2E_x^2/(2m\omega_c^2)$。第二项即 $-\hbar k_yE_x/B$，能级关于 $k_y$ 线性倾斜，不应在存在外电场时继续声称完全简并。
+(4) 沿 $y$ 的群速度 $v_y=\hbar^{-1}\partial E_n/\partial k_y=-E_x/B$，与 $q$ 的正负无关。向量式 $\mathbf v_D=(\mathbf E\times\mathbf B)/B^2=-E_x\hat y/B$，与量子能级斜率完全一致。这是均匀场体态结果，边缘电流需另处理边界束缚势。
 \par\medskip
 
 \subsection*{Q220\quad 光滑势垒的 WKB 隧穿指数及转折点匹配}
