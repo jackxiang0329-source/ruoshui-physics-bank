@@ -59,12 +59,28 @@
   "new_source_files": 120,
   "question_subparts": 160,
   "solution_subparts": 160,
-  "technical_source_status": "CI PENDING",
-  "formula_regression_status": "CI PENDING",
-  "pdf_status": "CI PENDING",
-  "quality_status": "待独立复核",
+  "technical_source_status": "PASS: 40 canonical source triples, four questions and derivations each, syntax and historical similarity checks",
+  "formula_regression_status": "PASS: 160/160 executable physics-model numerical/analytical assertions",
+  "pdf_status": "PASS: both Chinese XeLaTeX question book and solution book compiled",
+  "quality_status": "自动技术质检与双PDF编译通过；独立专家逐题审校待完成",
   "independent_expert_subpart_reviews": 0,
   "merge_to_main_allowed": false,
   "main_release_gate": "50 problems, 200 expert-checked subparts, two XeLaTeX books",
-  "note": "Machine checks do not constitute independent expert review."
+  "note": "40 problems and 160 subparts satisfy draft work-branch technical QA; formal main release remains gated at 50 questions/200 certified checks. Never conflate automated checks with external expert review.",
+  "verified_ci_run_id": 41022923771,
+  "verified_ci_sha": "192c76ffc490e07a7251c30f92711780894d6a7d",
+  "artifacts": {
+    "two_pdfs": {
+      "name": "round27-draft-two-pdfs",
+      "artifact_id": 12962616094,
+      "size_bytes": 1133377
+    },
+    "qa": {
+      "name": "round27-technical-qa",
+      "artifact_id": 12962286670,
+      "size_bytes": 9444
+    }
+  },
+  "independent_expert_review": "待独立复核",
+  "sources_unchanged_after_verified_run": true
 }
