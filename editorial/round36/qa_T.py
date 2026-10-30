@@ -13,7 +13,7 @@ def run():
           SH(beta*h)/S(SH(beta*h)**2+E(-4*beta*J)),method="Gibbs-derivative")
     ratio=TH(beta*J)
     check("T242",3,"Ising correlation length reproduces transfer eigenvalue ratio",
-          E(-1/(-L(ratio))),ratio,method="transfer-correlation")
+          E(-1/(-1/L(ratio))),ratio,method="transfer-correlation")
     check("T242",4,"finite temperature 1d Ising spontaneous magnetization absent",
           SH(0)/S(SH(0)**2+E(-4*beta*J)),0,method="symmetry-field-limit")
     # T243 Schottky two level heat capacity
@@ -33,7 +33,7 @@ def run():
           (Delta/(kB*1e6))**2/4,0,tol=1e-8,method="large-temperature-asymptotic")
     # T244 Mayer virial integral
     d=.8
-    f=lambda r:-1 if r<d else 0
+    f=lambda r:-1 if r<=d else 0
     check("T244",1,"Mayer two particle radial configuration integral",
           2*P*integrate(lambda r:-f(r)*r*r,0,d,12000),
           2*P*d**3/3,method="configuration-volume")
