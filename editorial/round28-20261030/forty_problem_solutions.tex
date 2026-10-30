@@ -1,0 +1,327 @@
+% 第28批四十道原创候选题与解析汇编（审核分支）
+
+% 注意：本文件是审核候选汇编，不是正式 bank/ID 三文件权威源。
+
+% 自动脚本/专家未完成逐题校验；不能宣称严格质检通过。
+
+\section*{第28批：40题候选题解（待独立复核）}
+
+\subsection*{M179\quad 非惯性系斜面}
+
+\textbf{题目}\quad 光滑斜面倾角 $\alpha$，水平向右加速 $a$；坡面向右上方。求：(1)切向加速度；(2)法向力；(3)静止条件；(4)法力非负条件。
+
+\par\textbf{解析}\quad 沿坡向上取正：$\ddot s=-g\sin\alpha-a\cos\alpha$；$N=m(g\cos\alpha-a\sin\alpha)$。静止需 $a=-g\tan\alpha$，与右向 $a\ge0$ 不相容（$0<\alpha<\pi/2$）。接触条件 $a\le g\cot\alpha$。
+
+\par\medskip
+
+\subsection*{M180\quad 圆锥摆能量}
+
+\textbf{题目}\quad 质量 $m$、绳长 $l$ 的圆锥摆与竖直夹角 $\theta$。求：(1)张力；(2)角速度；(3)动能；(4)总机械能（最低点势能零）。
+
+\par\textbf{解析}\quad 竖直平衡 $T\cos\theta=mg$，水平 $T\sin\theta=m\omega^2l\sin\theta$，故 $T=mg/\cos\theta$、$\omega^2=g/(l\cos\theta)$；$K=\tfrac12ml^2\omega^2\sin^2\theta=\tfrac12mgl\sin^2\theta/\cos\theta$；$E=K+mgl(1-\cos\theta)$。
+
+\par\medskip
+
+\subsection*{M181\quad 弹簧双体相对运动}
+
+\textbf{题目}\quad 光滑水平面上质量 $m_1,m_2$ 用劲度 $k$ 弹簧相连，初始相对伸长 $x_0$，相对速度零。求：(1)质心速度；(2)相对方程；(3)周期；(4)最大相对速度。
+
+\par\textbf{解析}\quad 无外水平力，$V_{\rm cm}$ 守恒。约化质量 $\mu=m_1m_2/(m_1+m_2)$，$\mu\ddot x+kx=0$，故 $\Omega=\sqrt{k/\mu}$、$P=2\pi\sqrt{\mu/k}$、$|\dot x|_{\max}=|x_0|\sqrt{k/\mu}$。
+
+\par\medskip
+
+\subsection*{M182\quad 变力做功与转折点}
+
+\textbf{题目}\quad 一维质点势能 $U(x)=ax^4-bx^2$，$a,b>0$。求：(1)平衡点；(2)稳定性；(3)阱底振动频率；(4)能量 $E=0$ 的转折位置。
+
+\par\textbf{解析}\quad $U'=4ax^3-2bx=0$：$x=0,\pm\sqrt{b/(2a)}$；$U''(0)=-2b<0$ 不稳定，阱底 $U''=4b$，$\omega=2\sqrt{b/m}$；$U(x)=0$ 给出 $x=0,\pm\sqrt{b/a}$。
+
+\par\medskip
+
+\subsection*{M183\quad 轨道冲量}
+
+\textbf{题目}\quad 质量 $m$ 的卫星沿半径 $r$ 圆轨道绕引力参数 $\mu_g=GM$ 的天体运动。切向瞬时加速至抛物逃逸。求：(1)圆轨速；(2)逃逸速；(3)冲量；(4)单位质量能量变化。
+
+\par\textbf{解析}\quad $v_c=\sqrt{\mu_g/r}$，$v_e=\sqrt{2\mu_g/r}$，$J=m(v_e-v_c)=m(\sqrt2-1)\sqrt{\mu_g/r}$；比机械能由 $-\mu_g/(2r)$ 增至零，变化 $\Delta\varepsilon=\mu_g/(2r)$。
+
+\par\medskip
+
+\subsection*{M184\quad 滚动斜坡}
+
+\textbf{题目}\quad 均匀实心球质量 $m$ 半径 $R$ 从斜坡高度 $h$ 静止纯滚下降。求：(1)惯量；(2)末速；(3)加速度；(4)静摩擦系数最低值。
+
+\par\textbf{解析}\quad $I=2mR^2/5$；$mgh=(m/2+I/(2R^2))v^2=7mv^2/10$，$v=\sqrt{10gh/7}$；$a=5g\sin\alpha/7$；$f=(2/5)ma=2mg\sin\alpha/7$，$N=mg\cos\alpha$，故 $\mu_s\ge(2/7)\tan\alpha$。
+
+\par\medskip
+
+\subsection*{M185\quad 阻尼自由振子}
+
+\textbf{题目}\quad $m\ddot x+b\dot x+kx=0$，初始 $x(0)=x_0,\dot x(0)=0$，欠阻尼。求：(1)判据；(2)阻尼频率；(3)位移；(4)机械能耗散率。
+
+\par\textbf{解析}\quad 令 $\gamma=b/(2m)$，欠阻尼 $\gamma<\omega_0=\sqrt{k/m}$，$\omega_d=\sqrt{\omega_0^2-\gamma^2}$；$x=x_0e^{-\gamma t}[\cos\omega_dt+(\gamma/\omega_d)\sin\omega_dt]$；$\dot E=(m\ddot x+kx)\dot x=-b\dot x^2\le0$。
+
+\par\medskip
+
+\subsection*{E179\quad 介质球电容}
+
+\textbf{题目}\quad 内半径 $a$ 外半径 $b$ 的同心金属球壳间填充均匀介电常数 $\epsilon$。求：(1)场强；(2)电压；(3)电容；(4)储能。
+
+\par\textbf{解析}\quad $E(r)=Q/(4\pi\epsilon r^2)$（$a<r<b$），$V=Q(1/a-1/b)/(4\pi\epsilon)$，$C=4\pi\epsilon ab/(b-a)$，$U=Q^2/(2C)=CV^2/2$。
+
+\par\medskip
+
+\subsection*{E180\quad 带电圆环轴上场}
+
+\textbf{题目}\quad 半径 $R$ 均匀带电圆环总电荷 $Q$。求：(1)轴上电势；(2)轴上电场；(3)中心附近展开；(4)远场极限。
+
+\par\textbf{解析}\quad $\varphi(z)=Q/[4\pi\epsilon_0\sqrt{R^2+z^2}]$；$E_z=-\varphi'=Qz/[4\pi\epsilon_0(R^2+z^2)^{3/2}]$；$|z|\ll R$ 时 $E_z\simeq Qz/(4\pi\epsilon_0R^3)$；$|z|\gg R$ 时 $E_z\simeq Qz/(4\pi\epsilon_0|z|^3)$。
+
+\par\medskip
+
+\subsection*{E181\quad RC阶跃充电}
+
+\textbf{题目}\quad 电源 $V_0$、电阻 $R$、电容 $C$ 串联，$q(0)=0$。求：(1)方程；(2)电荷；(3)电流；(4)长期电阻耗热。
+
+\par\textbf{解析}\quad $R\dot q+q/C=V_0$；$q=CV_0(1-e^{-t/RC})$，$i=(V_0/R)e^{-t/RC}$；$Q_R=\int_0^\infty Ri^2dt=CV_0^2/2$，等于电源做功 $CV_0^2$ 与电容末储能 $CV_0^2/2$ 之差。
+
+\par\medskip
+
+\subsection*{E182\quad 无限长同轴电缆}
+
+\textbf{题目}\quad 内导体半径 $a$ 通电流 $I$，外薄壳半径 $b>a$ 回流 $-I$；电流在内截面均匀。求：(1)内场；(2)间隙场；(3)外场；(4)间隙每长度磁能。
+
+\par\textbf{解析}\quad 由安培环路定律，$r<a$：$B_\phi=\mu_0Ir/(2\pi a^2)$；$a<r<b$：$B_\phi=\mu_0I/(2\pi r)$；$r>b$：$B=0$。间隙 $U'/=\int_a^b B^2/(2\mu_0)\,2\pi r\,dr=\mu_0I^2\ln(b/a)/(4\pi)$，故间隙电感每长度 $L'=\mu_0\ln(b/a)/(2\pi)$。
+
+\par\medskip
+
+\subsection*{E183\quad 磁场中霍尔效应}
+
+\textbf{题目}\quad 宽 $w$ 厚 $t$ 的单载流子导体沿 $x$ 传电流 $I$，$B=B\hat z$。求：(1)漂移速率；(2)霍尔场；(3)霍尔电压幅值；(4)符号判定。
+
+\par\textbf{解析}\quad 载流子电荷 $q$、数密度 $n$，$v_x=I/(nqwt)$（有向）；平衡 $q(\mathbf E_H+\mathbf v\times\mathbf B)=0$，$E_y=v_xB$，$V_H=-E_yw=-IB/(nqt)$（取 $V(y=w)-V(y=0)$）；正负号随 $q$ 改变。
+
+\par\medskip
+
+\subsection*{E184\quad 电磁感应旋杆}
+
+\textbf{题目}\quad 长 $l$ 导电杆绕一端以角速度 $\omega$ 在垂直均匀磁场 $B$ 中旋转。求：(1)微元电动势；(2)总动生电动势；(3)负载电阻 $R$ 下电流；(4)维持匀速的机械功率。
+
+\par\textbf{解析}\quad $d\mathcal E=B\omega r\,dr$，$\mathcal E=B\omega l^2/2$（极性由 $\mathbf v\times\mathbf B$ 判定），$I=\mathcal E/R$。磁阻力矩大小 $\tau=\int_0^l IBr\,dr=IBl^2/2$，$P_{\rm mech}=\tau\omega=\mathcal E I=\mathcal E^2/R$。
+
+\par\medskip
+
+\subsection*{E185\quad RLC自由衰减}
+
+\textbf{题目}\quad 串联 $R,L,C$ 回路，初始电容电荷 $q_0$，初始电流零。求：(1)电荷方程；(2)欠阻尼条件；(3)电荷时间式；(4)能量损耗率。
+
+\par\textbf{解析}\quad $L\ddot q+R\dot q+q/C=0$，令 $\gamma=R/(2L)$、$\omega_0=1/\sqrt{LC}$，欠阻尼 $\gamma<\omega_0$；$\omega_d=\sqrt{\omega_0^2-\gamma^2}$，$q=q_0e^{-\gamma t}(\cos\omega_dt+\gamma\sin\omega_dt/\omega_d)$；$E=q^2/(2C)+L\dot q^2/2$，$\dot E=-R\dot q^2$。
+
+\par\medskip
+
+\subsection*{T172\quad 绝热理想气体}
+
+\textbf{题目}\quad $n$ mol 定热容理想气体，初态 $(P_1,V_1,T_1)$，准静态绝热膨胀至 $V_2$。求：(1)指数；(2)终温；(3)终压；(4)气体做功。
+
+\par\textbf{解析}\quad $\gamma=C_P/C_V>1$，由 $nC_VdT=-PdV$ 和 $PV=nRT$ 得 $TV^{\gamma-1}=\mathrm{const}$、$PV^\gamma=\mathrm{const}$；$T_2=T_1(V_1/V_2)^{\gamma-1}$、$P_2=P_1(V_1/V_2)^\gamma$、$W=nC_V(T_1-T_2)$。
+
+\par\medskip
+
+\subsection*{T173\quad 两热库有限热容平衡}
+
+\textbf{题目}\quad 两物体热容量恒为 $C_1,C_2$，初温 $T_1>T_2>0$，隔热接触。求：(1)终温；(2)总熵变；(3)非负证明；(4)可逆极限。
+
+\par\textbf{解析}\quad $T_f=(C_1T_1+C_2T_2)/(C_1+C_2)$，$\Delta S=C_1\ln(T_f/T_1)+C_2\ln(T_f/T_2)\ge0$，由加权算术平均不小于加权几何平均（或 $\ln$ 凹性）证明；$T_1=T_2$ 时等号成立。
+
+\par\medskip
+
+\subsection*{T174\quad 卡诺机联合热泵}
+
+\textbf{题目}\quad 卡诺热机在 $T_h>T_c$ 间从热源每周期吸热 $Q_h$，输出功驱动反卡诺制冷机在 $T_c$ 吸热。求：(1)热机效率；(2)做功；(3)制冷系数；(4)制冷量。
+
+\par\textbf{解析}\quad $\eta=1-T_c/T_h$，$W=\eta Q_h$，卡诺制冷系数 $\beta=T_c/(T_h-T_c)$；$Q_{c,\mathrm{ref}}=\beta W=Q_hT_c/T_h$。假设两装置理想、处于同两热库。
+
+\par\medskip
+
+\subsection*{T175\quad 等温压缩自由能}
+
+\textbf{题目}\quad $n$ mol 理想气体在温度 $T$ 下由 $V_i$ 等温可逆压缩到 $V_f<V_i$。求：(1)气体做功；(2)吸热；(3)熵变；(4)Helmholtz自由能变。
+
+\par\textbf{解析}\quad $W_{\rm by}=nRT\ln(V_f/V_i)<0$，$\Delta U=0$ 故 $Q=W_{\rm by}$；$\Delta S=nR\ln(V_f/V_i)$，$\Delta F=\Delta U-T\Delta S=nRT\ln(V_i/V_f)>0$，等于外界最小等温功。
+
+\par\medskip
+
+\subsection*{T176\quad 热传导复合墙}
+
+\textbf{题目}\quad 平面墙两层厚 $d_1,d_2$、导热系数 $k_1,k_2$、面积 $A$，边界恒温 $T_h,T_c$。求：(1)热阻；(2)热流率；(3)界面温度；(4)两层交换次序的影响。
+
+\par\textbf{解析}\quad $R_i=d_i/(k_iA)$，稳态 $\dot Q=(T_h-T_c)/(R_1+R_2)$，界面 $T_m=T_h-\dot Q R_1$；交换次序不改变总热流，但界面温度因热阻顺序改变。忽略接触热阻。
+
+\par\medskip
+
+\subsection*{T177\quad 气体混合熵}
+
+\textbf{题目}\quad 两份相同温压下不同种理想气体，物质的量 $n_1,n_2$，移除隔板，容器绝热刚性。求：(1)终温；(2)摩尔分数；(3)混合熵；(4)同种气体极限。
+
+\par\textbf{解析}\quad 若两初温相同且无反应，内能守恒给 $T_f=T_i$；$x_i=n_i/(n_1+n_2)$，$\Delta S_{\rm mix}=-R(n_1\ln x_1+n_2\ln x_2)>0$（两种可区分气体）；若为同种气体且初态完全相同，$\Delta S=0$，不可继续使用不同组分公式。
+
+\par\medskip
+
+\subsection*{T178\quad 热膨胀约束应力}
+
+\textbf{题目}\quad 长杆弹性模量 $Y$，线膨胀系数 $\alpha$，两端刚固，温升 $\Delta T$。求：(1)自由热应变；(2)总应变；(3)轴向应力；(4)单位体积弹性能。
+
+\par\textbf{解析}\quad 自由应变 $\epsilon_T=\alpha\Delta T$；端距固定故总应变零，$\epsilon_{\rm mech}=-\alpha\Delta T$，$\sigma=-Y\alpha\Delta T$ 为压应力；弹性能密度 $u=\sigma^2/(2Y)=Y\alpha^2\Delta T^2/2$（在线弹性、小应变范围）。
+
+\par\medskip
+
+\subsection*{W172\quad 双端固定弦驻波}
+
+\textbf{题目}\quad 长度 $L$、线密度 $\mu$、张力 $F$ 的均匀弦双端固定。求：(1)波速；(2)允许波数；(3)本征频率；(4)第 $n$ 模节点数。
+
+\par\textbf{解析}\quad $v=\sqrt{F/\mu}$，边界 $y(0)=y(L)=0$ 得 $k_n=n\pi/L$；$f_n=nv/(2L)$，含端点共 $n+1$ 个节点，内节点 $n-1$ 个。
+
+\par\medskip
+
+\subsection*{W173\quad 两频拍}
+
+\textbf{题目}\quad 相近频率 $f_1,f_2$ 的等振幅同向简谐波在一点叠加。求：(1)合振幅式；(2)快振动频率；(3)拍频；(4)连续相邻强度极大时间距。
+
+\par\textbf{解析}\quad $A\cos2\pi f_1t+A\cos2\pi f_2t=2A\cos[\pi(f_1-f_2)t]\cos[\pi(f_1+f_2)t]$；载频 $(f_1+f_2)/2$；包络幅值取绝对值后拍频 $|f_1-f_2|$，峰距 $1/|f_1-f_2|$。
+
+\par\medskip
+
+\subsection*{W174\quad 阻尼波传播}
+
+\textbf{题目}\quad 一维波振幅随距离 $x$ 按 $A(x)=A_0e^{-\alpha x}$ 衰减，介质阻抗保持不变。求：(1)振幅比；(2)强度比；(3)半强度距离；(4)以dB表示的强度损耗。
+
+\par\textbf{解析}\quad $A/A_0=e^{-\alpha x}$，$I/I_0=e^{-2\alpha x}$，$x_{1/2}=\ln2/(2\alpha)$；损耗 $10\log_{10}(I_0/I)=20\alpha x/\ln10$ dB。
+
+\par\medskip
+
+\subsection*{W175\quad 声波多普勒}
+
+\textbf{题目}\quad 静止介质声速 $c$，声源以速度 $u_s$ 向静止接收者靠近（$0<u_s<c$）。求：(1)前向波长；(2)接收频率；(3)远离接收者频率；(4)低速一阶近似。
+
+\par\textbf{解析}\quad 发射周期 $1/f_0$，前向波长 $(c-u_s)/f_0$，$f_+=f_0c/(c-u_s)$；后向 $f_-=f_0c/(c+u_s)$；$u_s\ll c$ 时 $f_\pm\simeq f_0(1\pm u_s/c)$。
+
+\par\medskip
+
+\subsection*{W176\quad 管内空气柱谐振}
+
+\textbf{题目}\quad 一端封闭一端开口的细管长度 $L$，忽略端修正，声速 $c$。求：(1)压力节点位置；(2)允许波长；(3)频率；(4)第3个共振频率。
+
+\par\textbf{解析}\quad 开口端压力扰动节点、封口端压力扰动腹部，$L=(2n-1)\lambda_n/4$，$\lambda_n=4L/(2n-1)$，$f_n=(2n-1)c/(4L)$，第三个共振 $f_3=5c/(4L)$。
+
+\par\medskip
+
+\subsection*{W177\quad 弦波能流}
+
+\textbf{题目}\quad 弦上行波 $y=A\cos(kx-\omega t)$，张力 $F$、线密度 $\mu$。求：(1)波速；(2)瞬时横向动能密度；(3)平均总能量密度；(4)平均输能功率。
+
+\par\textbf{解析}\quad $v=\omega/k=\sqrt{F/\mu}$；$u_K=\tfrac12\mu(\partial_ty)^2=\tfrac12\mu A^2\omega^2\sin^2(kx-\omega t)$；势能密度相同，$\bar u=\mu A^2\omega^2/2$；$\bar P=v\bar u=\mu vA^2\omega^2/2$。
+
+\par\medskip
+
+\subsection*{W178\quad 色散波群速度}
+
+\textbf{题目}\quad 介质色散 $\omega(k)=ck+\beta k^3$，$k>0$。求：(1)相速；(2)群速；(3)差值；(4)何时群速大于相速。
+
+\par\textbf{解析}\quad $v_p=\omega/k=c+\beta k^2$，$v_g=d\omega/dk=c+3\beta k^2$，$v_g-v_p=2\beta k^2$；当 $\beta>0$ 时群速大于相速；这是色散关系的数学结果，不自动意味着信号前沿超光速。
+
+\par\medskip
+
+\subsection*{O162\quad 薄透镜成像}
+
+\textbf{题目}\quad 薄会聚透镜焦距 $f>0$，实物距离 $s>f$。求：(1)像距；(2)横向放大率；(3)像性质；(4)远物极限。
+
+\par\textbf{解析}\quad $1/f=1/s+1/s'$，$s'=fs/(s-f)>0$；$m=-s'/s=-f/(s-f)<0$，倒立实像；$s\to\infty$ 时 $s'\to f$，$m\to0^- $。
+
+\par\medskip
+
+\subsection*{O163\quad 杨氏双缝}
+
+\textbf{题目}\quad 双缝间距 $d$，屏距 $L\gg d$，波长 $\lambda$。求：(1)光程差；(2)亮纹位置；(3)条纹间距；(4)整套装置浸入折射率 $n$ 介质后的间距。
+
+\par\textbf{解析}\quad 近轴 $\delta\simeq dy/L$；亮纹 $y_m=m\lambda L/d$，$\Delta y=\lambda L/d$；介质波长 $\lambda/n$，条纹间距 $\Delta y_n=\lambda L/(nd)$（假设装置几何不变）。
+
+\par\medskip
+
+\subsection*{O164\quad 单缝夫琅禾费衍射}
+
+\textbf{题目}\quad 缝宽 $a$，单色光波长 $\lambda$，透镜焦距 $f$，小角。求：(1)强度函数；(2)暗纹条件；(3)中央主极大宽；(4)缝宽加倍效果。
+
+\par\textbf{解析}\quad $I(\theta)=I_0(\sin\beta/\beta)^2$，$\beta=\pi a\sin\theta/\lambda$；零点 $a\sin\theta=m\lambda$，$m\ne0$；第一暗纹位于 $y\simeq\pm f\lambda/a$，中央宽 $2f\lambda/a$；$a$ 加倍宽减半。
+
+\par\medskip
+
+\subsection*{O165\quad 布儒斯特角}
+
+\textbf{题目}\quad 非磁性透明介质折射率 $n_1,n_2$，光从介质1入射界面。求：(1)折射角关系；(2)布儒斯特条件；(3)入射角；(4)玻璃到空气时是否可实现。
+
+\par\textbf{解析}\quad Snell定律 $n_1\sin\theta_i=n_2\sin\theta_t$；p偏振反射消失时 $\theta_i+\theta_t=\pi/2$，故 $\tan\theta_B=n_2/n_1$；任意正折射率可存在此角度，玻璃到空气时 $\theta_B=\arctan(n_2/n_1)$ 小于临界角 $\arcsin(n_2/n_1)$（当 $n_1>n_2$）。
+
+\par\medskip
+
+\subsection*{O166\quad 光栅色散}
+
+\textbf{题目}\quad 透射光栅周期 $d$，垂直入射波长 $\lambda$。求：(1)极大条件；(2)级次上限；(3)角度色散；(4)相邻波长角分离一阶式。
+
+\par\textbf{解析}\quad $d\sin\theta_m=m\lambda$；$|m|\le\lfloor d/\lambda\rfloor$（掠射极限须注意出射收集），$d\theta/d\lambda=m/(d\cos\theta)$；$\Delta\theta\simeq m\Delta\lambda/(d\cos\theta_m)$。
+
+\par\medskip
+
+\subsection*{O167\quad 全反射光纤}
+
+\textbf{题目}\quad 阶跃型光纤纤芯折射率 $n_1>n_2$，外介质 $n_0$。求：(1)全反射临界角；(2)数值孔径；(3)最大入射角；(4)空气中表达式。
+
+\par\textbf{解析}\quad 芯包界面 $\sin\theta_c=n_2/n_1$（相对法线）；子午光线近轴导光 $\mathrm{NA}=\sqrt{n_1^2-n_2^2}$，外部接受半角 $\theta_a$ 满足 $n_0\sin\theta_a=\mathrm{NA}$（如右侧超过 $n_0$ 则接受半角上限为 $\pi/2$）；空气中 $\sin\theta_a=\sqrt{n_1^2-n_2^2}$，适用值不大于1。
+
+\par\medskip
+
+\subsection*{Q162\quad 狭义相对论寿命}
+
+\textbf{题目}\quad 粒子本征寿命 $\tau_0$，以速率 $v$ 相对实验室匀速运动。求：(1)洛伦兹因子；(2)实验室平均寿命；(3)平均飞行距离；(4)低速极限。
+
+\par\textbf{解析}\quad $\gamma=(1-v^2/c^2)^{-1/2}$；$\tau=\gamma\tau_0$；$\ell=v\gamma\tau_0$，低速 $v\ll c$ 时 $\tau\simeq\tau_0$、$\ell\simeq v\tau_0$。这里平均距离指衰变指数分布的均值。
+
+\par\medskip
+
+\subsection*{Q163\quad 光电效应}
+
+\textbf{题目}\quad 光频率 $\nu$、逸出功 $\Phi$ 的金属表面光电效应。求：(1)阈值频率；(2)最大动能；(3)截止电势大小；(4)频率提高 $\Delta\nu$ 的影响。
+
+\par\textbf{解析}\quad $\nu_0=\Phi/h$；$K_{\max}=h\nu-\Phi$（仅 $\nu\ge\nu_0$）；截止电压大小 $V_s=(h\nu-\Phi)/e$；$\Delta K_{\max}=h\Delta\nu$，$\Delta V_s=h\Delta\nu/e$（两频率均在阈上）。
+
+\par\medskip
+
+\subsection*{Q164\quad 无限深方势阱}
+
+\textbf{题目}\quad 质量 $m$ 粒子在 $0<x<L$ 的无限深势阱。求：(1)波函数；(2)能级；(3)基态平均位置；(4)基态位置方差。
+
+\par\textbf{解析}\quad $\psi_n=\sqrt{2/L}\sin(n\pi x/L)$，$E_n=n^2\pi^2\hbar^2/(2mL^2)$；对称性 $\langle x\rangle=L/2$；积分 $\langle x^2\rangle=L^2(1/3-1/(2\pi^2))$，$\mathrm{Var}(x)=L^2(1/12-1/(2\pi^2))$。
+
+\par\medskip
+
+\subsection*{Q165\quad 玻尔氢原子}
+
+\textbf{题目}\quad 玻尔氢原子约化质量 $\mu$，核电荷 $+e$。求：(1)轨道半径；(2)能级；(3)从 $n_i$ 跃迁至 $n_f<n_i$ 的光频；(4)电离能。
+
+\par\textbf{解析}\quad 角动量量子化 $\mu vr=n\hbar$、库仑向心条件给 $r_n=4\pi\epsilon_0n^2\hbar^2/(\mu e^2)$；$E_n=-\mu e^4/[2(4\pi\epsilon_0)^2\hbar^2n^2]$；$h\nu=E_{n_i}-E_{n_f}$ 的符号应取 $E_{n_i}-E_{n_f}>0$（$E_n=-C/n^2$，即 $h\nu=C(1/n_f^2-1/n_i^2)$）；基态电离能 $C$。
+
+\par\medskip
+
+\subsection*{Q166\quad 康普顿散射}
+
+\textbf{题目}\quad 初始静止自由电子与波长 $\lambda$ 光子散射，光子散射角 $\theta$。求：(1)波长移位；(2)背散射最大移位；(3)散射后光子能量；(4)低能长波极限。
+
+\par\textbf{解析}\quad 四动量守恒给 $\lambda'-\lambda=(h/m_ec)(1-\cos\theta)$；背散射 $\Delta\lambda_{\max}=2h/(m_ec)$；$E'=hc/[\lambda+(h/m_ec)(1-\cos\theta)]$；$\lambda\gg h/(m_ec)$ 时相对变化很小，近经典弹性极限。
+
+\par\medskip
+
+\subsection*{Q167\quad 量子谐振子}
+
+\textbf{题目}\quad 质量 $m$、角频率 $\omega$ 的一维量子谐振子。求：(1)能级；(2)基态能量；(3)基态位置方差；(4)基态动量方差及测不准乘积。
+
+\par\textbf{解析}\quad $E_n=\hbar\omega(n+1/2)$；$E_0=\hbar\omega/2$；$\langle x\rangle=\langle p\rangle=0$，$\Delta x^2=\hbar/(2m\omega)$、$\Delta p^2=m\hbar\omega/2$，$\Delta x\Delta p=\hbar/2$。
+
+\par\medskip
