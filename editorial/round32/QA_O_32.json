@@ -1,0 +1,297 @@
+{
+  "group": "O",
+  "count": 32,
+  "passed": 32,
+  "failed": 0,
+  "checks": [
+    {
+      "id": "O218",
+      "part": 1,
+      "name": "single lossless layer transfer determinant",
+      "actual": 1,
+      "reference": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O218",
+      "part": 2,
+      "name": "zero-thickness stack input admittance",
+      "actual": 1.8,
+      "reference": 1.8,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O218",
+      "part": 3,
+      "name": "index matched Fresnel reflection",
+      "actual": 0,
+      "reference": 0,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O218",
+      "part": 4,
+      "name": "normal-incidence Poynting flux balance",
+      "actual": 1,
+      "reference": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O219",
+      "part": 1,
+      "name": "quarter-wave bilayer determinant",
+      "actual": 1,
+      "reference": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O219",
+      "part": 2,
+      "name": "Bragg stack diagonal product",
+      "actual": 0.9999999999999998,
+      "reference": 1,
+      "error": 2.220446049250313e-16,
+      "pass": true
+    },
+    {
+      "id": "O219",
+      "part": 3,
+      "name": "iterated input admittance vs closed power",
+      "actual": 57.66503906249993,
+      "reference": 57.665039062499915,
+      "error": 1.4210854715202004e-14,
+      "pass": true
+    },
+    {
+      "id": "O219",
+      "part": 4,
+      "name": "more quarter-wave layers increase design-wavelength reflectance",
+      "actual": 1,
+      "reference": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O220",
+      "part": 1,
+      "name": "thin-lens q reciprocal real part",
+      "actual": -4,
+      "reference": -4,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O220",
+      "part": 2,
+      "name": "thin-lens q reciprocal imaginary part",
+      "actual": -1.2499999999999998,
+      "reference": -1.25,
+      "error": 2.220446049250313e-16,
+      "pass": true
+    },
+    {
+      "id": "O220",
+      "part": 3,
+      "name": "new Gaussian waist location and zR",
+      "actual": 3.2000000000000006,
+      "reference": 3.2,
+      "error": 4.440892098500626e-16,
+      "pass": true
+    },
+    {
+      "id": "O220",
+      "part": 4,
+      "name": "weak lens recovers initial waist position",
+      "actual": 1,
+      "reference": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O221",
+      "part": 1,
+      "name": "van Cittert–Zernike Fourier angular integral",
+      "actual": 0.5410264615989978,
+      "reference": 0.5410264615989973,
+      "error": 5.551115123125783e-16,
+      "pass": true
+    },
+    {
+      "id": "O221",
+      "part": 2,
+      "name": "uniform source coherence first zero",
+      "actual": 1.2246467991473532e-16,
+      "reference": 0,
+      "error": 1.2246467991473532e-16,
+      "pass": true
+    },
+    {
+      "id": "O221",
+      "part": 3,
+      "name": "zero-baseline coherence normalization",
+      "actual": 1,
+      "reference": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O221",
+      "part": 4,
+      "name": "unbalanced interferometer visibility below coherence magnitude",
+      "actual": 1,
+      "reference": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O222",
+      "part": 1,
+      "name": "Fresnel integrals vanish at edge",
+      "actual": 0,
+      "reference": 0,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O222",
+      "part": 2,
+      "name": "Fresnel straight-edge intensity quarter",
+      "actual": 0.25,
+      "reference": 0.25,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O222",
+      "part": 3,
+      "name": "geometrical shadow below edge intensity",
+      "actual": 1,
+      "reference": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O222",
+      "part": 4,
+      "name": "bright Fresnel illuminated field above edge intensity",
+      "actual": 1,
+      "reference": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O223",
+      "part": 1,
+      "name": "Jones retardance intensity preserved",
+      "actual": 1,
+      "reference": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O223",
+      "part": 2,
+      "name": "polarization first Stokes parameter",
+      "actual": 0.16996714290024112,
+      "reference": 0.16996714290024104,
+      "error": 8.326672684688674e-17,
+      "pass": true
+    },
+    {
+      "id": "O223",
+      "part": 3,
+      "name": "Stokes vector norm on sphere",
+      "actual": 0.9999999999999999,
+      "reference": 1,
+      "error": 1.1102230246251565e-16,
+      "pass": true
+    },
+    {
+      "id": "O223",
+      "part": 4,
+      "name": "quarter-wave diagonal input yields pure circular Stokes",
+      "actual": 1,
+      "reference": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O224",
+      "part": 1,
+      "name": "Bargmann polarization triangle phase",
+      "actual": 0.7853981633974483,
+      "reference": 0.7853981633974483,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O224",
+      "part": 2,
+      "name": "three-state local gauge cancellation",
+      "actual": 0,
+      "reference": 0,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O224",
+      "part": 3,
+      "name": "triangle orientation reversal",
+      "actual": -0.7853981633974483,
+      "reference": -0.7853981633974483,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O224",
+      "part": 4,
+      "name": "orthogonal polarization pair has zero Bargmann product",
+      "actual": 0,
+      "reference": 0,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O225",
+      "part": 1,
+      "name": "complex Gaussian width evolution",
+      "actual": -4.199999999999999,
+      "reference": -4.199999999999999,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O225",
+      "part": 2,
+      "name": "dispersed Gaussian intensity width",
+      "actual": 2.9,
+      "reference": 2.9,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O225",
+      "part": 3,
+      "name": "Gaussian pulse energy conservation by quadrature",
+      "actual": 3.544907701811011,
+      "reference": 3.5449077018110304,
+      "error": 1.9539925233402755e-14,
+      "pass": true,
+      "correction_note": "Squared complex Gaussian envelope normalization |T0/sqrt(q)|^2=T0^2/|q|, previously mistakenly used T0/|q|^{1/2}."
+    },
+    {
+      "id": "O225",
+      "part": 4,
+      "name": "GVD-induced chirp changes sign in pulse center",
+      "actual": 1,
+      "reference": 1,
+      "error": 0,
+      "pass": true
+    }
+  ]
+}

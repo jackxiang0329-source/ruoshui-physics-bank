@@ -1,0 +1,333 @@
+{
+  "group": "M",
+  "count": 36,
+  "pass": 36,
+  "fail": 0,
+  "scope": "Numerical, quadrature and algebraic tests; not external review",
+  "tests": [
+    {
+      "id": "M211",
+      "part": 1,
+      "name": "positive generalized mass determinant",
+      "actual": 1,
+      "reference": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M211",
+      "part": 2,
+      "name": "two-pendulum upper normal root",
+      "actual": 0,
+      "reference": 0,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M211",
+      "part": 3,
+      "name": "mass-metric eigenmode orthogonality",
+      "actual": 1.1102230246251565e-16,
+      "reference": 0,
+      "error": 1.1102230246251565e-16,
+      "pass": true
+    },
+    {
+      "id": "M211",
+      "part": 4,
+      "name": "positive modal mechanical energy",
+      "actual": 1,
+      "reference": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M212",
+      "part": 1,
+      "name": "Coriolis vertical projection at equator",
+      "actual": 0,
+      "reference": 0,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M212",
+      "part": 2,
+      "name": "circular polarization frequency splitting",
+      "actual": 0.00009405578233678824,
+      "reference": 0.00009405578233670289,
+      "error": 8.535381602892134e-17,
+      "pass": true
+    },
+    {
+      "id": "M212",
+      "part": 3,
+      "name": "complex rotation-factor angle speed",
+      "actual": 0.000047027891168351443,
+      "reference": 0.000047027891168351443,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M212",
+      "part": 4,
+      "name": "north and south precession reversal",
+      "actual": 0,
+      "reference": 0,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M213",
+      "part": 1,
+      "name": "averaged effective-potential gradient",
+      "actual": 9.809085607770385,
+      "reference": 9.809085608207251,
+      "error": 4.368665429410612e-10,
+      "pass": true
+    },
+    {
+      "id": "M213",
+      "part": 2,
+      "name": "fast-motion forcing equation",
+      "actual": -71.84919312286374,
+      "reference": -71.84919433260143,
+      "error": 0.0000012097376895781053,
+      "pass": true
+    },
+    {
+      "id": "M213",
+      "part": 3,
+      "name": "inverted state stable for selected fast drive",
+      "actual": 1,
+      "reference": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M213",
+      "part": 4,
+      "name": "unshaken inverted state restoring curvature",
+      "actual": -8.166666666666668,
+      "reference": -8.166666666666668,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M214",
+      "part": 1,
+      "name": "Euler top energy invariance",
+      "actual": 0,
+      "reference": 0,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M214",
+      "part": 2,
+      "name": "angular momentum norm invariance",
+      "actual": 0,
+      "reference": 0,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M214",
+      "part": 3,
+      "name": "intermediate axis eigenvalue squared",
+      "actual": 1.3333333333333333,
+      "reference": 1.3333333333333333,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M214",
+      "part": 4,
+      "name": "extreme-axis linear stability sign",
+      "actual": 1,
+      "reference": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M215",
+      "part": 1,
+      "name": "Kepler circular balance",
+      "actual": 3,
+      "reference": 2.9999999999999996,
+      "error": 4.440892098500626e-16,
+      "pass": true
+    },
+    {
+      "id": "M215",
+      "part": 2,
+      "name": "Kepler epicycle equals orbital frequency",
+      "actual": 1.224744871391589,
+      "reference": 1.224744871391589,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M215",
+      "part": 3,
+      "name": "Rayleigh epicyclic derivative",
+      "actual": 1.5,
+      "reference": 1.5,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M215",
+      "part": 4,
+      "name": "power-law q=2 instability threshold",
+      "actual": 1,
+      "reference": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M216",
+      "part": 1,
+      "name": "rotating-hoop effective force by finite difference",
+      "actual": -3.0295156958737297,
+      "reference": -3.0295156963207335,
+      "error": 4.470037673343086e-10,
+      "pass": true
+    },
+    {
+      "id": "M216",
+      "part": 2,
+      "name": "rotating-hoop bifurcation above threshold",
+      "actual": 1,
+      "reference": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M216",
+      "part": 3,
+      "name": "off-axis stationary force",
+      "actual": 0,
+      "reference": 0,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M216",
+      "part": 4,
+      "name": "new equilibrium curvature from eigenfrequency",
+      "actual": 18.99749108025261,
+      "reference": 18.997500000000002,
+      "error": 0.000008919747394031674,
+      "pass": true
+    },
+    {
+      "id": "M217",
+      "part": 1,
+      "name": "magnetized oscillator characteristic sum",
+      "actual": 5,
+      "reference": 5,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M217",
+      "part": 2,
+      "name": "magnetized oscillator characteristic product",
+      "actual": 4,
+      "reference": 4,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M217",
+      "part": 3,
+      "name": "real stable spectral region",
+      "actual": 1,
+      "reference": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M217",
+      "part": 4,
+      "name": "unmagnetized inverted-trap instability",
+      "actual": 1,
+      "reference": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M218",
+      "part": 1,
+      "name": "homoclinic trajectory ODE residual",
+      "actual": -2.467300586062038e-9,
+      "reference": 0,
+      "error": 2.467300586062038e-9,
+      "pass": true
+    },
+    {
+      "id": "M218",
+      "part": 2,
+      "name": "homoclinic Hamiltonian zero",
+      "actual": -3.3306690738754696e-16,
+      "reference": 0,
+      "error": 3.3306690738754696e-16,
+      "pass": true
+    },
+    {
+      "id": "M218",
+      "part": 3,
+      "name": "dissipative Melnikov integral by quadrature",
+      "actual": 1.394920634920623,
+      "reference": 1.394920634920635,
+      "error": 1.199040866595169e-14,
+      "pass": true
+    },
+    {
+      "id": "M218",
+      "part": 4,
+      "name": "forcing Melnikov integral by quadrature",
+      "actual": 1.161511391325228,
+      "reference": 1.1615113913252313,
+      "error": 3.3306690738754696e-15,
+      "pass": true
+    },
+    {
+      "id": "M219",
+      "part": 1,
+      "name": "exact instantaneous energy derivative constant-frequency limit",
+      "actual": 0,
+      "reference": 0,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M219",
+      "part": 2,
+      "name": "WKB amplitude inverse-square-root scaling",
+      "actual": 0.5,
+      "reference": 0.5,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M219",
+      "part": 3,
+      "name": "adiabatic action invariance",
+      "actual": 6,
+      "reference": 6,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M219",
+      "part": 4,
+      "name": "constant-frequency WKB residual",
+      "actual": 0,
+      "reference": 0,
+      "error": 0,
+      "pass": true
+    }
+  ]
+}

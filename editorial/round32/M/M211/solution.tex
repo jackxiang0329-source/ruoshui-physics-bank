@@ -1,0 +1,7 @@
+(1) 两质点速度一阶分别为 $l\dot\theta_1$ 和 $l(\dot\theta_1+\dot\theta_2)$，故 $T=\frac12 ml^2(2\dot\theta_1^2+2\dot\theta_1\dot\theta_2+\dot\theta_2^2)$；$U=\frac12mgl(2\theta_1^2+\theta_2^2)$。所以 $M=ml^2\begin{pmatrix}2&1\\1&1\end{pmatrix}$，$K=mgl\operatorname{diag}(2,1)$。忽略 $O(\theta^3)$ 是小角前提。
+
+(2) 令 $\lambda=\omega^2l/g$，有 $\det(K-\omega^2M)/(mgl)^2=(2-2\lambda)(1-\lambda)-\lambda^2=\lambda^2-4\lambda+2$。故 $\lambda_{1,2}=2\mp\sqrt2$，$\omega_{1,2}=\sqrt{(2\mp\sqrt2)g/l}$，均为正。
+
+(3) 首行给 $(2-2\lambda)q_1-\lambda q_2=0$，故 $q_2/q_1=2(1-\lambda)/\lambda$。对两不同本征值的向量 $q_i,q_j$，由 $Kq_i=\omega_i^2Mq_i$ 左乘 $q_j^T$ 并交换 $i,j$，得 $(\omega_i^2-\omega_j^2)q_j^TMq_i=0$，故质量加权正交。
+
+(4) 令 $Q=[q_1,q_2]$ 且 $Q^TMQ=I$，写 $\theta=Q\eta$，则 $\ddot\eta_i+\omega_i^2\eta_i=0$；初值 $\eta(0)=Q^TM\theta(0)$，$\dot\eta(0)=Q^TM\dot\theta(0)$。能量为 $\sum_i(\dot\eta_i^2+\omega_i^2\eta_i^2)/2$，每模独立守恒。

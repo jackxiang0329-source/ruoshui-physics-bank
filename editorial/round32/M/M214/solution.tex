@@ -1,0 +1,7 @@
+(1) 刚体固定主轴坐标中 Euler 方程为 $I_1\dot\omega_1=(I_2-I_3)\omega_2\omega_3$、$I_2\dot\omega_2=(I_3-I_1)\omega_3\omega_1$、$I_3\dot\omega_3=(I_1-I_2)\omega_1\omega_2$。基准解 $\omega_2=\Omega$、$\omega_1=\omega_3=0$。
+
+(2) 取 $\omega_1=\delta_1$、$\omega_3=\delta_3$，忽略二阶乘积后 $\dot\delta_1=(I_2-I_3)\Omega\delta_3/I_1$，$\dot\delta_3=(I_1-I_2)\Omega\delta_1/I_3$，而 $\dot\omega_2=O(\delta^2)$。这给出封闭的两维线性系统。
+
+(3) 再次微分第一式并代入第二式，得到 $\ddot\delta_1=\lambda^2\delta_1$，其中 $\lambda=|\Omega|\sqrt{(I_3-I_2)(I_2-I_1)/(I_1I_3)}$。由于两差均为正，存在 $e^{\lambda t}$ 增长模，故中间轴转动线性不稳定；扰动增长阶段不违反总角动量守恒。
+
+(4) 绕最小轴 $I_1$ 或最大轴 $I_3$ 旋转时，同样线性化使横向二阶方程的系数变为负，从而得到纯虚增长率、线性振荡稳定。临界重根惯量需要更高阶分析；本题假设严格 $I_1<I_2<I_3$ 排除了该退化。还需强调线性稳定只描述足够小扰动的局域行为，不能用它断言受任意有限扰动时的全局姿态演化。

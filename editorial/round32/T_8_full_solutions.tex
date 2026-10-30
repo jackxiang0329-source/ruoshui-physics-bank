@@ -1,0 +1,193 @@
+% 第32批热学八道综合题：校核中，非正式合并。
+
+\subsection*{T210\quad van der Waals 临界条件与立方正规形}
+
+一摩尔流体满足 $(P+a/V^2)(V-b)=RT$，$a,b>0$。在热力学平衡内考虑临界点附近的局域展开。
+
+(1) 由等温曲线拐点条件求临界参数。
+
+(2) 引入约化变量求临界等温线的最低非零阶。
+
+(3) 推导临界温度以下的局域自旋odal曲线。
+
+(4) 说明临界指数与平均场近似适用界限。
+
+\par\textbf{逐问解析}
+
+(1) 写 $P=RT/(V-b)-a/V^2$。临界点满足 $\partial_VP=-RT/(V-b)^2+2a/V^3=0$ 与 $\partial_V^2P=2RT/(V-b)^3-6a/V^4=0$。联立两式首先解出 $V_c=3b$，再有 $T_c=8a/(27Rb)$、$P_c=a/(27b^2)$，所以 $Z_c=P_cV_c/(RT_c)=3/8$。
+
+(2) 置 $p=P/P_c$、$v=V/V_c$、$t=T/T_c$，状态方程转为 $p=8t/(3v-1)-3/v^2$。令 $v=1+\eta$、$t=1+\tau$，Taylor展开至 $\eta^3$，得 $p=1+4\tau-6\tau\eta-\frac32\eta^3+O(\tau\eta^2,\eta^4)$。临界等温 $\tau=0$ 时 $|p-1|\propto|\eta|^3$，平均场指数 $\delta=3$。
+
+(3) 自旋odal满足等温压缩模量零，即 $\partial p/\partial\eta=-6\tau-\frac92\eta^2+\cdots=0$。在 $\tau<0$ 的近临界范围有 $\eta_{sp,\pm}=\pm\sqrt{-4\tau/3}+O(\tau)$。该开方标度只描述机械稳定边界，不是直接把两相共存线等同于自旋odal。
+
+(4) 在均值场模型中，临界等温指数为 $3$，自旋odal的体积偏移具有 $(-\tau)^{1/2}$ 标度；真实三维简单流体无限接近临界点时涨落造成与均值场不同的普适指数，因此这套推导不应外推到涨落主导的临界区域。
+
+\par\medskip
+
+\subsection*{T211\quad 黑体光子气体的绝热定律与熵}
+
+密闭反射腔内黑体辐射处于准静态平衡，能量 $U=aVT^4$，压强 $p=aT^4/3$；容器膨胀不损失光子。
+
+(1) 由热力学关系求光子气体的熵函数。
+
+(2) 从第一定律推导可逆绝热温度-体积关系。
+
+(3) 求绝热内能和压强随体积的幂律。
+
+(4) 解释与物质气体的粒子数守恒差异及边界。
+
+\par\textbf{逐问解析}
+
+(1) 辐射满足 $dU=T,dS-p,dV$，代入 $dU=4aVT^3dT+aT^4dV$ 与 $p=aT^4/3$，得 $T,dS=4aVT^3dT+(4/3)aT^4dV$。积分得 $S=(4/3)aVT^3+S_0$；取 $T\to0$ 时熵零令 $S_0=0$，热力学一致性由交叉偏导验证。
+
+(2) 可逆绝热令 $dS=0$，因此 $d(VT^3)=0$，$VT^3=\mathrm{const}$。等价地从 $dU+pdV=0$ 得 $4aVT^3dT+(4/3)aT^4dV=0$，积分 $TV^{1/3}=\mathrm{const}$；两条独立路线的结果相同。
+
+(3) 由 $T\propto V^{-1/3}$ 得 $U=aVT^4\propto V^{-1/3}$，$p=aT^4/3\propto V^{-4/3}$，即 $pV^{4/3}=\mathrm{const}$。核对 $-dU/dV=(1/3)U/V=p$，它正是绝热边界作功的力学关系。
+
+(4) 辐射化学势为零，平衡时光子数不守恒，故不能沿用固定粒子数理想气体的 $C_V$ 常量假设。若腔壁不绝热、辐射谱非 Planck 平衡，或膨胀过快导致失衡，则推导的状态函数前提不再满足。特别是局域平衡失效时不能仅以一个共同温度刻画整个光子谱，绝热指数也不再由该平衡态方程单独确定。
+
+\par\medskip
+
+\subsection*{T212\quad 三维自由电子 Fermi 气体的 Sommerfeld 展开}
+
+三维非相对论、无相互作用自旋 $1/2$ 电子，固定粒子数 $N$，Fermi 能为 $E_F$，满足 $k_BT\ll E_F$，体积固定。
+
+(1) 从态密度与粒子数约束求低温化学势。
+
+(2) 计算能量的温度平方修正。
+
+(3) 求线性比热系数并连接态密度。
+
+(4) 检查 $T\to0$ 和与经典气体比热差异。
+
+\par\textbf{逐问解析}
+
+(1) 三维态密度 $g(E)=CE^{1/2}$，$N=\int_0^\infty g(E)f(E)dE$。Sommerfeld公式 $\int_0^\infty\phi(E)f(E)dE=\int_0^\mu\phi(E)dE+(\pi^2/6)(k_BT)^2\phi'(\mu)+O(T^4)$。取 $\phi=g$，使粒子数保持 $N=\frac23 CE_F^{3/2}$，求得 $\mu=E_F[1-(\pi^2/12)(k_BT/E_F)^2+O(T^4)]$。
+
+(2) 总能量 $U=\int_0^\infty E g(E)f(E)dE$。用 $Eg(E)=CE^{3/2}$ 进行同一Sommerfeld展开，并把已得到的 $\mu(T)$ 一并展开，$T^2$ 阶为 $U(T)=\frac35NE_F+(\pi^2/4)N(k_BT)^2/E_F+O(T^4)$。温度项来自 Fermi 面附近宽度 $k_BT$ 的少数电子。
+
+(3) 在定容定粒子条件下微分，$C_V=(\partial U/\partial T)_{V,N}=(\pi^2/2)Nk_B^2T/E_F+O(T^3)$。由于 $g(E_F)=3N/(2E_F)$，也可写 $C_V=(\pi^2/3)g(E_F)k_B^2T$，两种系数表达式独立一致。
+
+(4) 当 $T\to0$，$C_V\to0$，符合热力学第三定律对非简并基态的要求；与经典单原子气体 $3Nk_B/2$ 相比，低温比热受到 $k_BT/E_F$ 压低。若温度接近 $T_F$，Sommerfeld级数不再收敛为小参数展开。
+
+\par\medskip
+
+\subsection*{T213\quad 三维理想 Bose 气体的凝聚温度与热容}
+
+体积 $V$ 中三维非相对论、无相互作用、自旋零 Bose 粒子总数 $N$，质量 $m$，热力学极限、能级底取零。
+
+(1) 从激发态积分确定临界温度。
+
+(2) 求凝聚相的基态占有数。
+
+(3) 求 $T<T_c$ 时内能和定容热容。
+
+(4) 检查临界温度以下的标度和维数限制。
+
+\par\textbf{逐问解析}
+
+(1) 在临界点化学势 $\mu\uparrow0$，激发态最大密度为 $n_{ex}=\lambda_T^{-3}\zeta(3/2)$，热德布罗意波长 $\lambda_T=\sqrt{2\pi\hbar^2/(mk_BT)}$。令 $n=N/V=n_{ex}(T_c)$，得到 $T_c=(2\pi\hbar^2/mk_B)[n/\zeta(3/2)]^{2/3}$。
+
+(2) 在 $T<T_c$ 时 $\mu=0$（热力学极限），激发态粒子数 $N_{ex}=V\lambda_T^{-3}\zeta(3/2)=N(T/T_c)^{3/2}$。于是凝聚基态粒子数 $N_0=N-N_{ex}$，凝聚分数 $N_0/N=1-(T/T_c)^{3/2}$，并非在 $T_c$ 下所有粒子立刻凝聚。
+
+(3) 激发态能量积分给 $U=\frac32Vk_BT\lambda_T^{-3}\zeta(5/2)$；由于 $\lambda_T^{-3}\propto T^{3/2}$，故 $U\propto T^{5/2}$。定容微分得到 $C_V=\frac{15}{4}Vk_B\lambda_T^{-3}\zeta(5/2)$，在凝聚相中随 $T^{3/2}$ 缩小。
+
+(4) 上述宏观凝聚依赖三维态密度积分在零能量附近有限；均匀二维或一维理想 Bose 气体在无限大热力学极限的有限温度没有同样的理想气体凝聚。弱相互作用会改变低能激发及低温热容，本式只属理想气体。凝聚分数的温度幂律也假定盒内均匀体密度且热力学极限先于临界取极限；有限尺寸会使宏观跃迁平滑化。
+
+\par\medskip
+
+\subsection*{T214\quad 谐势突变中的 Jarzynski 等式与耗散功}
+
+经典粒子在温度 $T$ 热平衡的一维谐势 $U_i(x)=kx^2/2$，在远短于弛豫时间内将势阱中心突变到 $a$，终势 $U_f(x)=k(x-a)^2/2$，取 $k>0$。
+
+(1) 求瞬时功随机变量及其分布。
+
+(2) 求功的均值和方差。
+
+(3) 直接积分验证 Jarzynski 等式。
+
+(4) 比较平均耗散功与自由能变化。
+
+\par\textbf{逐问解析}
+
+(1) 突变时位置 $x$ 不变，因而外界做功 $W=U_f(x)-U_i(x)=ka^2/2-kax$。初始正则分布 $p(x)=\sqrt{\beta k/(2\pi)}e^{-\beta kx^2/2}$，所以 $x$ 是零均值、高斯方差 $1/(\beta k)$ 的变量，$W$ 亦为高斯随机变量。
+
+(2) 由线性变换立即得 $\langle W\rangle=ka^2/2$，$\operatorname{Var}(W)=k^2a^2\operatorname{Var}(x)=ka^2/\beta=ka^2k_BT$。因初始位置可能偏向新阱中心，一些轨道可出现 $W<0$，并不违背平均第二定律。
+
+(3) 对高斯随机变量的指数矩 $\langle e^{-\beta W}\rangle=\exp[-\beta\langle W\rangle+\beta^2\operatorname{Var}(W)/2]$。代入上述均值、方差，指数为 $-\beta ka^2/2+\beta ka^2/2=0$，因此 $\langle e^{-\beta W}\rangle=1=e^{-\beta\Delta F}$。
+
+(4) 由于平移谐势不改变正则配分函数，$Z_f=\int e^{-\beta k(x-a)^2/2}dx=Z_i$，自由能差 $\Delta F=0$，与指数平均结果独立一致。平均耗散功 $\langle W\rangle-\Delta F=ka^2/2\ge0$；等号只在 $a=0$。
+
+\par\medskip
+
+\subsection*{T215\quad Onsager 交叉输运的正熵产约束}
+
+平衡附近有两种广义热力学力 $X_1,X_2$ 和流 $J_1,J_2$，关系 $\mathbf J=L\mathbf X$，暂设无磁场、两流的时间反演奇偶性相同。
+
+(1) 根据微观可逆性说明 Onsager 对称性。
+
+(2) 写出熵产率并分离耗散矩阵。
+
+(3) 推导两个交叉系数的热力学上界。
+
+(4) 讨论存在外磁场时的 Onsager–Casimir 变化。
+
+\par\textbf{逐问解析}
+
+(1) 在给定同时间反演奇偶的流-力变量约定下，Onsager互易关系为 $L_{12}=L_{21}$。这是平衡附近线性响应和微观可逆性所依赖的条件，不是任意远离平衡系统的普遍公式；变量变换时必须保持流力配对的熵产定义。
+
+(2) 体积熵产率为 $\sigma=J_1X_1+J_2X_2=\mathbf X^TL\mathbf X=L_{11}X_1^2+2L_{12}X_1X_2+L_{22}X_2^2$。若允许反对称矩阵部分，则 $\mathbf X^TL_a\mathbf X=0$，因此只有对称部分贡献瞬时不可逆耗散。
+
+(3) 第二定律要求任意 $X_1,X_2$ 下 $\sigma\ge0$，等价于 $L_s$ 半正定。对称两通道条件为 $L_{11}\ge0$、$L_{22}\ge0$、$L_{11}L_{22}-L_{12}^2\ge0$，即 $|L_{12}|\le\sqrt{L_{11}L_{22}}$。违反将可选到负熵产方向。
+
+(4) 若存在磁场 $B$，微观时间反演翻转磁场，正确互易性为 $L_{ij}(B)=\varepsilon_i\varepsilon_jL_{ji}(-B)$，其中 $\varepsilon_i$ 体现变量时间反演奇偶。故固定非零磁场下通常不能直接置 $L_{12}=L_{21}$；熵产仍由固定场的对称部分控制。
+
+\par\medskip
+
+\subsection*{T216\quad 有限热导板的扩散特征模与熵产一致性}
+
+截面 $A$、厚度 $L$ 的均匀板处于热库温度 $T_0$ 附近，热扩散率 $D=k/c_v$，两面保持 $T_0$，初始超温 $\vartheta(x,0)=\Theta\sin(\pi x/L)$，$|\Theta|\ll T_0$。
+
+(1) 求温度松弛的精确一阶模解。
+
+(2) 计算相对热库的二阶可用能。
+
+(3) 计算非平衡热传导的熵产生率。
+
+(4) 直接证明可用能损失率等于 $T_0$ 乘熵产率。
+
+\par\textbf{逐问解析}
+
+(1) 令 $\vartheta=T-T_0$，热扩散方程 $\partial_t\vartheta=D\partial_x^2\vartheta$，固定端条件 $\vartheta(0,t)=\vartheta(L,t)=0$。初态恰好是一阶本征函数，故 $\vartheta(x,t)=\Theta e^{-Dt\pi^2/L^2}\sin(\pi x/L)$，特征松弛时间 $\tau=L^2/(D\pi^2)$。
+
+(2) 以 $T_0$ 热库为参考的可用能密度 $b=(u-u_0)-T_0(s-s_0)$。对常量体积热容 $c_v$，$u-u_0=c_v\vartheta$、$s-s_0=c_v\ln(1+\vartheta/T_0)$，展开得 $b=c_v\vartheta^2/(2T_0)+O(\vartheta^3)$。积分得 $B=Ac_vL\Theta^2e^{-2t/\tau}/(4T_0)$。
+
+(3) 局域熵产 $\sigma_s=k(\partial_xT)^2/T^2\simeq k(\partial_x\vartheta)^2/T_0^2$。用 $\partial_x\vartheta=(\pi/L)\Theta e^{-t/\tau}\cos(\pi x/L)$ 积分，得到 $\dot S_{gen}=Ak\pi^2\Theta^2 e^{-2t/\tau}/(2LT_0^2)$，严格为正且随时间指数衰减。
+
+(4) 由上式 $-\dot B=Ac_vL\Theta^2e^{-2t/\tau}/(2T_0\tau)$。代入 $1/\tau=D\pi^2/L^2=k\pi^2/(c_vL^2)$ 后，$-\dot B=Ak\pi^2\Theta^2e^{-2t/\tau}/(2LT_0)=T_0\dot S_{gen}$。两种独立计算在二阶小温差精度下完全一致。
+
+\par\medskip
+
+\subsection*{T217\quad 经典成核理论的临界半径与能垒}
+
+新相球形核半径 $R$，界面张力 $\gamma>0$，单位新相体积的化学自由能优势 $\Delta g>0$；假设各向同性界面、连续介质和均匀成核。
+
+(1) 建立球形核形成的自由能函数。
+
+(2) 求临界半径并判定其极值性质。
+
+(3) 求成核能垒并讨论过饱和度依赖。
+
+(4) 解释分子尺度、非球形和异质成核对模型的限制。
+
+\par\textbf{逐问解析}
+
+(1) 球面面积 $4\pi R^2$ 产生界面自由能成本 $4\pi\gamma R^2$，球体积 $4\pi R^3/3$ 产生体相收益 $-(4\pi/3)\Delta gR^3$，因此 $\Delta G(R)=4\pi\gamma R^2-(4\pi/3)\Delta gR^3$。两个项对半径有不同幂次，形成激活能垒。
+
+(2) 微分得 $d\Delta G/dR=8\pi\gamma R-4\pi\Delta gR^2=4\pi R(2\gamma-\Delta gR)$，非零驻点为 $R_c=2\gamma/\Delta g$。再次微分在 $R_c$ 处有 $\Delta G''(R_c)=-8\pi\gamma<0$，故临界核为自由能障碍顶点而非稳定最小值。
+
+(3) 代 $R_c$ 得 $\Delta G_*=16\pi\gamma^3/(3\Delta g^2)$。若 $\Delta g$ 增大（过饱和度或过冷度增强），$R_c$ 按 $1/\Delta g$ 缩小、能垒按 $1/\Delta g^2$ 下降。经典热激活成核率的指数部分为 $\exp[-\Delta G_*/(k_BT)]$，前因子另由动力学决定。
+
+(4) 公式要求 $R_c$ 显著大于分子尺度、界面张力近似常数，且新核形状接近球形。表面、杂质或容器壁会减小异质成核能垒；若 $R_c$ 与分子尺度同量级，连续界面假设失效，不应从式子外推出精确微观成核率。此外，该公式只描述静态势垒，成核尝试频率与扩散输运必须由独立动力学模型确定。
+
+\par\medskip

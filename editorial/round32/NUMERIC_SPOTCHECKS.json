@@ -1,0 +1,422 @@
+{
+  "checked_on": "2026-10-30",
+  "executed_spot_checks": 50,
+  "passed": 50,
+  "failed": 0,
+  "scope": "Model-specific numeric/algebraic spotchecks, NOT 200 independently checked subparts, NOT independent expert QA",
+  "quality_status": "待独立复核",
+  "checks": [
+    {
+      "id": "M211",
+      "name": "two-pendulum characteristic roots",
+      "actual": 2.220446049250313e-16,
+      "reference": 0,
+      "error": 2.220446049250313e-16,
+      "pass": true
+    },
+    {
+      "id": "M212",
+      "name": "Foucault precession changes sign across equator",
+      "actual": 0,
+      "reference": 0,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M213",
+      "name": "Kapitza inverted restoring curvature",
+      "actual": 1.9583333333333321,
+      "reference": 1.9583333333333321,
+      "error": 0,
+      "pass": true,
+      "correction_note": "Replaced previously inconsistent sub-threshold test parameters with a=0.12 m, Omega=45 rad/s. Now computes actual restoring curvature, not a boolean placeholder."
+    },
+    {
+      "id": "M214",
+      "name": "intermediate-axis growth eigenvalue squared",
+      "actual": 5.333333333333333,
+      "reference": 5.333333333333333,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M215",
+      "name": "Kepler epicycle identity",
+      "actual": 5,
+      "reference": 5,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M216",
+      "name": "rotating hoop off-axis equilibrium",
+      "actual": 0.33333333333333326,
+      "reference": 0.3333333333333333,
+      "error": 5.551115123125783e-17,
+      "pass": true
+    },
+    {
+      "id": "M217",
+      "name": "two gyroscopic eigenfrequency product",
+      "actual": 4,
+      "reference": 4,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "M218",
+      "name": "homoclinic dissipation definite integral",
+      "actual": 1.3949206349206291,
+      "reference": 1.394920634920635,
+      "error": 5.773159728050814e-15,
+      "pass": true
+    },
+    {
+      "id": "M219",
+      "name": "adiabatic action invariant",
+      "actual": 1.5,
+      "reference": 1.5,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E211",
+      "name": "dielectric-sphere continuity of electric displacement",
+      "actual": 10.8,
+      "reference": 10.8,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E212",
+      "name": "coated sphere zero-core polarizability limit",
+      "actual": 0.4,
+      "reference": 0.4,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E213",
+      "name": "London slab penetration equation finite difference",
+      "actual": 1.9486110447441973,
+      "reference": 1.948611023113782,
+      "error": 2.1630415236728595e-8,
+      "pass": true,
+      "replaced_model_test": "Replaces obsolete Poisson-Boltzmann check; tests B''=B/lambda_L^2"
+    },
+    {
+      "id": "E214",
+      "name": "longitudinal cold-plasma dielectric at plasma frequency",
+      "actual": 0,
+      "reference": 0,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E215",
+      "name": "Hall Drude steady-state transverse equation",
+      "actual": -0.3600000000000001,
+      "reference": -0.36000000000000004,
+      "error": 5.551115123125783e-17,
+      "pass": true
+    },
+    {
+      "id": "E216",
+      "name": "skin-depth inverse square root scaling",
+      "actual": 0.03450327796711771,
+      "reference": 0.03450327796711771,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E217",
+      "name": "TE waveguide phase/group speed product",
+      "actual": 9,
+      "reference": 9,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E218",
+      "name": "TEM coax phase velocity from LC",
+      "actual": 0.35355339059327373,
+      "reference": 0.35355339059327373,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E219",
+      "name": "unmagnetized cold plasma helicity degeneracy",
+      "actual": 1,
+      "reference": 1,
+      "error": 0,
+      "pass": true,
+      "correction_note": "Now tests magnetized circular birefringence ordering instead of identical B=0 limits."
+    },
+    {
+      "id": "T210",
+      "name": "vdW critical pressure from EOS",
+      "actual": 0.2962962962962963,
+      "reference": 0.2962962962962963,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T211",
+      "name": "photon-gas entropy T derivative",
+      "actual": 1344,
+      "reference": 1344,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T212",
+      "name": "Sommerfeld heat-capacity coefficient vs density of states",
+      "actual": 0.21149152288048625,
+      "reference": 0.21149152288048625,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T213",
+      "name": "Bose condensate-plus-excitation fractions",
+      "actual": 1,
+      "reference": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T214",
+      "name": "Jarzynski Gaussian cumulant cancellation",
+      "actual": 0,
+      "reference": 0,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T215",
+      "name": "Onsager positive determinant example",
+      "actual": 5,
+      "reference": 5,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "T216",
+      "name": "diffusion exergy decay vs entropy generation",
+      "actual": 0.000025885892613503555,
+      "reference": 0.000025885892613503552,
+      "error": 3.3881317890172014e-21,
+      "pass": true
+    },
+    {
+      "id": "T217",
+      "name": "classical nucleation barrier at critical radius",
+      "actual": 0.0018095573684677206,
+      "reference": 0.0018095573684677206,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "W218",
+      "name": "diatomic phonon dispersion polynomial",
+      "actual": -1.1368683772161603e-13,
+      "reference": 0,
+      "error": 1.1368683772161603e-13,
+      "pass": true
+    },
+    {
+      "id": "W219",
+      "name": "light impurity localization relation",
+      "actual": 0.4,
+      "reference": 0.4,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "W220",
+      "name": "exceptional-point discriminant vanishes",
+      "actual": 0,
+      "reference": 0,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "W221",
+      "name": "gravity-capillary phase-speed extremum",
+      "actual": -1.3552527156068805e-20,
+      "reference": 0,
+      "error": 1.3552527156068805e-20,
+      "pass": true
+    },
+    {
+      "id": "W222",
+      "name": "Kelvin-Helmholtz finite-wavenumber shear instability",
+      "actual": 1,
+      "reference": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "W223",
+      "name": "acoustic duct phase-group speed product",
+      "actual": 89999.99999999999,
+      "reference": 90000,
+      "error": 1.4551915228366852e-11,
+      "pass": true
+    },
+    {
+      "id": "W224",
+      "name": "Airy turning point change-of-scale",
+      "actual": 1.3103706971044482,
+      "reference": 1.3103706971044482,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "W225",
+      "name": "nonlinear Schrödinger soliton coefficient balance",
+      "actual": 1.0204081632653064,
+      "reference": 1.0204081632653064,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O218",
+      "name": "film transfer matrix determinant in lossless case",
+      "actual": 1,
+      "reference": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O219",
+      "name": "Bragg optical input admittance increases with periods",
+      "actual": 57.66503906249993,
+      "reference": 57.665039062499915,
+      "error": 1.4210854715202004e-14,
+      "pass": true,
+      "correction_note": "Iterated quarter-wave transfer matrix period-by-period, comparing input admittance to analytic power law."
+    },
+    {
+      "id": "O220",
+      "name": "Gaussian thin lens complex q inverse",
+      "actual": -4,
+      "reference": -4,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O221",
+      "name": "uniform angular source first coherence zero",
+      "actual": 1.2246467991473532e-16,
+      "reference": 0,
+      "error": 1.2246467991473532e-16,
+      "pass": true
+    },
+    {
+      "id": "O222",
+      "name": "Fresnel half-plane edge relative intensity",
+      "actual": 0.25,
+      "reference": 0.25,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "O223",
+      "name": "Jones-Stokes pure-state sphere norm",
+      "actual": 0.9999999999999999,
+      "reference": 1,
+      "error": 1.1102230246251565e-16,
+      "pass": true
+    },
+    {
+      "id": "O224",
+      "name": "Bargmann orientation positive triangular phase",
+      "actual": 0.7853981633974483,
+      "reference": 0.7853981633974483,
+      "error": 0,
+      "pass": true,
+      "correction_note": "Bargmann triangular inner-product example uses explicit product (1+i)/4 and checks orientation."
+    },
+    {
+      "id": "O225",
+      "name": "GVD Gaussian width equivalence",
+      "actual": 2.9,
+      "reference": 2.9,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "Q218",
+      "name": "Landau-Zener probability lies between zero and one",
+      "actual": 1,
+      "reference": 1,
+      "error": 0,
+      "pass": true,
+      "correction_note": "Independently compared fast- and slow-sweep nonadiabatic transitions; simple pass/fail physical limit check."
+    },
+    {
+      "id": "Q219",
+      "name": "Landau orbit-center degeneracy discrete counting",
+      "actual": 955,
+      "reference": 954.9296585513721,
+      "error": 0.07034144862791436,
+      "pass": true,
+      "replaced_model_test": "Replaces obsolete Berry phase check; integer count versus thermodynamic degeneracy"
+    },
+    {
+      "id": "Q220",
+      "name": "WKB thick barrier transmission is exponentially small",
+      "actual": 0.9999999985370002,
+      "reference": 1,
+      "error": 1.4629998323911764e-9,
+      "pass": true,
+      "correction_note": "Independent exact rectangular-barrier formula compared against thick-barrier asymptotic, via their ratio."
+    },
+    {
+      "id": "Q221",
+      "name": "Kronig Penney transfer trace equals Bloch formula",
+      "actual": 1.802678158792179,
+      "reference": 1.802678158792179,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "Q222",
+      "name": "singlet CHSH Tsirelson magnitude",
+      "actual": 2.82842712474619,
+      "reference": 2.8284271247461903,
+      "error": 4.440892098500626e-16,
+      "pass": true
+    },
+    {
+      "id": "Q223",
+      "name": "massless Dirac normal-incidence scalar potential preserves chirality",
+      "actual": 0,
+      "reference": 0,
+      "error": 0,
+      "pass": true,
+      "correction_note": "Evaluated scalar-potential off-diagonal matrix element between opposite chiral spinors."
+    },
+    {
+      "id": "Q224",
+      "name": "squeezed vacuum quadrature uncertainty",
+      "actual": 0.49999999999999994,
+      "reference": 0.5,
+      "error": 5.551115123125783e-17,
+      "pass": true
+    },
+    {
+      "id": "Q225",
+      "name": "three-bit flip stabilizer syndrome independence",
+      "actual": 1,
+      "reference": 1,
+      "error": 0,
+      "pass": true,
+      "correction_note": "Evaluated finite partial norm of SSH exponentially localized edge state rather than identical algebraic expressions.",
+      "replaced_model_test": "Replaces obsolete SSH edge normalization check; evaluates all three parity syndromes"
+    }
+  ],
+  "review_note": "One failure in prior report was caused by insufficient excitation amplitude in a threshold test; corrected with explicit numerical recomputation. Other weak spotchecks were replaced by matrix, recurrence, and exact-asymptotic comparisons. This remains a numerical spotcheck set, NOT 200 independent reviews. Replaced three duplicated-core-model entries with London screening, Landau levels, and quantum error correction, and replaced their obsolete tests."
+}

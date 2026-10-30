@@ -1,0 +1,333 @@
+{
+  "group": "E",
+  "count": 36,
+  "passed": 36,
+  "failed": 0,
+  "checks": [
+    {
+      "id": "E211",
+      "part": 1,
+      "name": "sphere boundary potential",
+      "actual": 1.8,
+      "expected": 1.8,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E211",
+      "part": 2,
+      "name": "sphere dielectric normal displacement",
+      "actual": 10.8,
+      "expected": 10.8,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E211",
+      "part": 3,
+      "name": "matched dielectric dipole cancellation",
+      "actual": 0,
+      "expected": 0,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E211",
+      "part": 4,
+      "name": "perfect conductor internal field decays",
+      "actual": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E212",
+      "part": 1,
+      "name": "coated sphere uniform-shell f=0",
+      "actual": -0.2,
+      "expected": -0.2,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E212",
+      "part": 2,
+      "name": "coated sphere bare-core f=1",
+      "actual": 0.25,
+      "expected": 0.25,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E212",
+      "part": 3,
+      "name": "positive dielectric static denominator",
+      "actual": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E212",
+      "part": 4,
+      "name": "polarization canceling core fraction",
+      "actual": 0,
+      "expected": 0,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E213",
+      "part": 1,
+      "name": "London slab PDE finite difference",
+      "actual": 7.2686607843763795,
+      "expected": 7.268660709430852,
+      "error": 7.494552711762026e-8,
+      "pass": true
+    },
+    {
+      "id": "E213",
+      "part": 2,
+      "name": "symmetric slab boundary imposed B",
+      "actual": 2,
+      "expected": 2,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E213",
+      "part": 3,
+      "name": "London mean magnetic field by quadrature",
+      "actual": 0.9640275800758185,
+      "expected": 0.9640275800758169,
+      "error": 1.5543122344752192e-15,
+      "pass": true
+    },
+    {
+      "id": "E213",
+      "part": 4,
+      "name": "London field plus kinetic free energy",
+      "actual": 1.1568330960909776,
+      "expected": 1.1568330960909803,
+      "error": 2.6645352591003757e-15,
+      "pass": true
+    },
+    {
+      "id": "E214",
+      "part": 1,
+      "name": "electron continuity equation kinematic density",
+      "actual": 1.0799999999999998,
+      "expected": 1.0799999999999998,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E214",
+      "part": 2,
+      "name": "Langmuir dispersion",
+      "actual": 0.6000000000000001,
+      "expected": 0.6,
+      "error": 1.1102230246251565e-16,
+      "pass": true
+    },
+    {
+      "id": "E214",
+      "part": 3,
+      "name": "longitudinal dielectric root",
+      "actual": 2.220446049250313e-16,
+      "expected": 0,
+      "error": 2.220446049250313e-16,
+      "pass": true
+    },
+    {
+      "id": "E214",
+      "part": 4,
+      "name": "warm plasma Bohm-Gross shift",
+      "actual": 2.1599999999999997,
+      "expected": 2.1599999999999997,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E215",
+      "part": 1,
+      "name": "Drude transverse Lorentz x balance",
+      "actual": -0.8,
+      "expected": -0.7999999999999999,
+      "error": 1.1102230246251565e-16,
+      "pass": true
+    },
+    {
+      "id": "E215",
+      "part": 2,
+      "name": "Drude transverse Lorentz y balance",
+      "actual": -0.27999999999999997,
+      "expected": -0.27999999999999997,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E215",
+      "part": 3,
+      "name": "zero transverse current Hall resistivity",
+      "actual": -0.1875,
+      "expected": -0.1875,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E215",
+      "part": 4,
+      "name": "Joule power equals collisional dissipation",
+      "actual": 10.564705882352943,
+      "expected": 10.564705882352943,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E216",
+      "part": 1,
+      "name": "complex diffusion wavenumber imaginary square",
+      "actual": -52,
+      "expected": -52,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E216",
+      "part": 2,
+      "name": "finite slab same imposed field both faces",
+      "actual": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E216",
+      "part": 3,
+      "name": "odd-symmetry induced current",
+      "actual": 0,
+      "expected": 0,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E216",
+      "part": 4,
+      "name": "finite slab surface Poynting vs volume loss",
+      "actual": 5.080579188617219,
+      "expected": 5.0805791886171985,
+      "error": 2.042810365310288e-14,
+      "pass": true,
+      "correction_note": "Real[(1-i)(tr+i ti)] = tr+ti; prior check mistakenly used tr-ti. Independently checked the corrected Poynting result against a direct volume integral."
+    },
+    {
+      "id": "E217",
+      "part": 1,
+      "name": "TE10 cutoff geometry",
+      "actual": 1.4250553668465158,
+      "expected": 1.4250553668465156,
+      "error": 2.220446049250313e-16,
+      "pass": true
+    },
+    {
+      "id": "E217",
+      "part": 2,
+      "name": "propagation constant dispersion",
+      "actual": 48.738787165873376,
+      "expected": 48.73878716587338,
+      "error": 7.105427357601002e-15,
+      "pass": true
+    },
+    {
+      "id": "E217",
+      "part": 3,
+      "name": "waveguide phase/group velocity",
+      "actual": 0.16666666666666669,
+      "expected": 0.16666666666666666,
+      "error": 2.7755575615628914e-17,
+      "pass": true
+    },
+    {
+      "id": "E217",
+      "part": 4,
+      "name": "waveguide high-frequency group velocity approaches c",
+      "actual": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E218",
+      "part": 1,
+      "name": "coax capacitance and electrostatic voltage",
+      "actual": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E218",
+      "part": 2,
+      "name": "coax inductive energy expression",
+      "actual": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E218",
+      "part": 3,
+      "name": "TEM characteristic impedance product",
+      "actual": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E218",
+      "part": 4,
+      "name": "skin-loss attenuation and power decay",
+      "actual": 11.442423638219296,
+      "expected": 11.442423638219296,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E219",
+      "part": 1,
+      "name": "helicity Lorentz denominator separation",
+      "actual": 2.4000000000000004,
+      "expected": 2.4,
+      "error": 4.440892098500626e-16,
+      "pass": true
+    },
+    {
+      "id": "E219",
+      "part": 2,
+      "name": "magnetized circular dielectric contrast",
+      "actual": 0.10777589134125631,
+      "expected": 0.10777589134125636,
+      "error": 4.163336342344337e-17,
+      "pass": true
+    },
+    {
+      "id": "E219",
+      "part": 3,
+      "name": "electron cyclotron pole in minus helicity",
+      "actual": 1,
+      "expected": 1,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "id": "E219",
+      "part": 4,
+      "name": "zero field circular degeneracy",
+      "actual": 0.7884,
+      "expected": 0.7884,
+      "error": 0,
+      "pass": true
+    }
+  ]
+}

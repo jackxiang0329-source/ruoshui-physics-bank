@@ -1,0 +1,206 @@
+% 第32批电磁学9题：严肃审核候选，未独立专家质检。
+
+\subsection*{E211\quad 均匀外场中的电介质球与极化能量}
+
+半径 $a$、介电率 $\epsilon_1$ 的线性介质球置于外介电率 $\epsilon_2$ 的无限介质中，远处施加均匀电场 $E_0\hat z$，无自由电荷。
+
+(1) 写出满足轴对称Laplace方程的球内外势函数。
+
+(2) 利用电势与位移法向连续求极化系数。
+
+(3) 求等效诱导偶极矩和内部均匀电场。
+
+(4) 检验电容率相等及导体极限并讨论能量。
+
+\par\textbf{解答}
+
+(1) 自由电荷密度为零，$\nabla^2\phi=0$。满足远场均匀势的 $\ell=1$ 通解可写 $\phi_{out}=-E_0r\cos\theta+A\cos\theta/r^2$，内部有界性要求 $\phi_{in}=-Cr\cos\theta$。该形式已使用轴对称性消除所有无关高多极分量。
+
+(2) 在 $r=a$，切向电场连续等价于 $\phi$ 连续，得 $C=E_0-A/a^3$。径向位移连续给 $\epsilon_1C=\epsilon_2(E_0+2A/a^3)$。联立得到 $A=a^3E_0(\epsilon_1-\epsilon_2)/(\epsilon_1+2\epsilon_2)$、$C=3\epsilon_2E_0/(\epsilon_1+2\epsilon_2)$。
+
+(3) 球外偶极电势为 $p\cos\theta/(4\pi\epsilon_2r^2)$，所以 $p=4\pi\epsilon_2a^3(\epsilon_1-\epsilon_2)E_0/(\epsilon_1+2\epsilon_2)$。内部场 $\mathbf E_{in}=C\hat z$ 均匀。对 $\epsilon_1>\epsilon_2$，偶极沿外场方向，而低介电率球可能出现反向有效极化。
+
+(4) 若 $\epsilon_1=\epsilon_2$，则 $p=0$、$E_{in}=E_0$，无界面效应；若 $\epsilon_1\to\infty$，则内部场趋零、$p\to4\pi\epsilon_2a^3E_0$。在线性静态定外场边界条件下，诱导偶极的可逆组装能为 $-pE_0/2$，系数一半反映偶极随场线性建立。
+
+\par\medskip
+
+\subsection*{E212\quad 球形包覆介质的等效极化率}
+
+半径 $a$ 的球核电容率 $\epsilon_1$，球壳外半径 $b>a$ 电容率 $\epsilon_2$，背景电容率 $\epsilon_3$，受静态均匀外场 $E_0\hat z$；定义体积分数 $f=(a/b)^3$。
+
+(1) 建立三个区域的Laplace解与四个界面条件。
+
+(2) 给出核壳球的等效偶极极化因子。
+
+(3) 检验无核 $f\to0$ 及无壳 $f\to1$ 极限。
+
+(4) 求零极化（静态隐身）条件并说明被动材料限制。
+
+\par\textbf{解答}
+
+(1) 在核区取 $\phi_1=-A_1r\cos\theta$；壳层取 $\phi_2=-(A_2r+B_2/r^2)\cos\theta$；背景取 $\phi_3=-E_0r\cos\theta+C\cos\theta/r^2$。分别在 $a,b$ 施加 $\phi$ 连续和 $\epsilon\partial_r\phi$ 连续，给出四个线性方程确定四个未知量。
+
+(2) 消去中间系数，得外部有效偶极 $p=4\pi\epsilon_3b^3 E_0N/D$，其中 $N=(\epsilon_2-\epsilon_3)(\epsilon_1+2\epsilon_2)+f(\epsilon_1-\epsilon_2)(\epsilon_3+2\epsilon_2)$，$D=(\epsilon_2+2\epsilon_3)(\epsilon_1+2\epsilon_2)+2f(\epsilon_2-\epsilon_3)(\epsilon_1-\epsilon_2)$。可直接代回界面线性系统核对。
+
+(3) 当 $f\to0$，$N/D\to(\epsilon_2-\epsilon_3)/(\epsilon_2+2\epsilon_3)$，只剩外壳均匀球；当 $f\to1$，代数因式消去 $\epsilon_2$ 后得 $N/D=(\epsilon_1-\epsilon_3)/(\epsilon_1+2\epsilon_3)$，对应外半径 $b=a$ 的核球。这两个极限检查有助于发现界面符号错误。
+
+(4) 零极化条件就是 $N=0$ 而 $D\ne0$；解得 $f=-(\epsilon_2-\epsilon_3)(\epsilon_1+2\epsilon_2)/[(\epsilon_1-\epsilon_2)(\epsilon_3+2\epsilon_2)]$。只有 $0<f<1$ 才对应实际几何；对所有正电容率，该条件需要材料介电率按适当顺序分布，不能任意声称普通同序介质均可隐身。
+
+\par\medskip
+
+\subsection*{E213\quad London 超导薄板的磁通屏蔽与自由能}
+厚度 $2a$ 的理想 London 超导平板位于 $-a<x<a$，穿板方向取 $x$，外加磁场 $B_z(\pm a)=B_0$，London 穿透深度 $\lambda_L>0$。忽略涡旋、温度依赖和边缘效应。
+(1) 从静态 Maxwell–London 方程推导磁场微分方程。
+(2) 求双面边值条件下的磁场和屏蔽电流分布。
+(3) 求板内平均磁场与厚板、薄板极限。
+(4) 求 London 磁场及电流动能对应的总自由能，并核对极限。
+\par\textbf{逐问解析}
+(1) London 第二方程为 $\nabla\times\mathbf J=-\mathbf B/(\mu_0\lambda_L^2)$；静磁 Ampere 方程为 $\nabla\times\mathbf B=\mu_0\mathbf J$。再取 curl，用 $\nabla\cdot\mathbf B=0$ 得 $-\nabla^2\mathbf B=\mu_0\nabla\times\mathbf J=-\mathbf B/\lambda_L^2$，即 $B_z''=B_z/\lambda_L^2$。这与正常金属的耗散磁扩散方程物理机制不同。
+(2) 通解 $B_z=C\cosh(x/\lambda_L)+D\sinh(x/\lambda_L)$；由于两面施加相同 $B_0$，奇项 $D=0$，故 $B_z(x)=B_0\cosh(x/\lambda_L)/\cosh(a/\lambda_L)$。由 $\nabla\times\mathbf B=\mu_0\mathbf J$ 的 $y$ 分量得 $J_y=-B'_z/\mu_0=-B_0\sinh(x/\lambda_L)/(\mu_0\lambda_L\cosh(a/\lambda_L))$，左右表面电流方向相反。
+(3) 体平均磁场为 $\bar B=(2a)^{-1}\int_{-a}^aB_zdx=B_0(\lambda_L/a)\tanh(a/\lambda_L)$。当 $a\gg\lambda_L$，$\bar B/B_0\sim\lambda_L/a\ll1$，呈 Meissner 屏蔽；当 $a\ll\lambda_L$，$\tanh z/z\to1$，则 $\bar B\to B_0$，薄板不能强烈屏蔽外场。
+(4) London 体自由能密度含磁能与超导载流子动能 $f=[B_z^2+\mu_0^2\lambda_L^2J_y^2]/(2\mu_0)=[B_z^2+\lambda_L^2(B'_z)^2]/(2\mu_0)$。积分得到 $F/A=(B_0^2\lambda_L/\mu_0)\tanh(a/\lambda_L)$。在 $a\gg\lambda_L$ 时能量集中于两表面穿透层；在 $a\ll\lambda_L$ 时 $F/A\simeq B_0^2a/\mu_0$，即均匀场磁能 $B_0^2(2a)/(2\mu_0)$。
+\par\medskip
+
+\subsection*{E214\quad 冷等离子体纵向振荡与介电函数}
+
+均匀静止离子背景，电子平衡密度 $n_0$、质量 $m_e$、电荷 $-e$，忽略压力、碰撞与磁场；考虑波数 $k\ne0$ 的纵向扰动。
+
+(1) 线性化电子连续性及动量方程。
+
+(2) 联立 Poisson 方程求振荡频率。
+
+(3) 推导纵向相对介电函数。
+
+(4) 添加绝热电子压力得到 Bohm–Gross 型近似并标出假设。
+
+\par\textbf{解答}
+
+(1) 取 $\exp[i(kx-\omega t)]$。连续性 $-i\omega n_1+ikn_0v_1=0$，故 $n_1=kn_0v_1/\omega$；动量方程 $-i\omega m_ev_1=-eE_1$，给 $v_1=-i eE_1/(m_e\omega)$（注意 $1/i=-i$）。这些关系只保留扰动一阶。
+
+(2) Poisson方程 $ikE_1=\rho_1/\epsilon_0=-en_1/\epsilon_0$。将前述两式消去 $n_1,v_1$，得到 $\omega^2=\omega_p^2$，$\omega_p=\sqrt{n_0e^2/(m_e\epsilon_0)}$；冷流体等离子体频率在本模型中与波数无关。
+
+(3) 对外场的电子位移响应满足 $P=-\epsilon_0\omega_p^2E/\omega^2$，因此 $D=\epsilon_0E+P$ 对应 $\epsilon_L(\omega)=1-\omega_p^2/\omega^2$；纵向自由本征模要求 $\epsilon_L=0$。这是无阻尼冷等离子体近似，不能用于碰撞或 Landau 阻尼明显时。
+
+(4) 加压强扰动 $\delta p=\gamma_e k_BT_e\,n_1$ 后，动量多出 $-ik\delta p/n_0$；消元得 $\omega^2=\omega_p^2+\gamma_e k_BT_e k^2/m_e$。若采用一维快速绝热闭合 $\gamma_e=3$，便是 $\omega^2\simeq\omega_p^2+3k^2v_T^2$。此式是小 $k\lambda_D$、忽略碰撞的流体近似。
+
+\par\medskip
+
+\subsection*{E215\quad 磁场下 Drude 电导张量与 Hall 功率}
+
+均匀单载流子 Drude 金属，电荷 $q$（可正可负）、有效质量 $m$、密度 $n$、碰撞时间 $\tau$，恒定外场 $B\hat z$。
+
+(1) 从稳态受力推导横向速度线性系统。
+
+(2) 求二维电导张量并讨论电荷符号。
+
+(3) 求零横向电流条件下的 Hall 电阻率。
+
+(4) 证明磁场项不作功以及无磁场极限。
+
+\par\textbf{解答}
+
+(1) 稳态 Drude 方程 $0=q(\mathbf E+\mathbf v\times\mathbf B)-m\mathbf v/\tau$。取 $\mu=q\tau/m$、$b=qB\tau/m$，有 $v_x-bv_y=\mu E_x$、$v_y+bv_x=\mu E_y$。该矩阵直接体现纵向阻尼和反对称 Lorentz 力。
+
+(2) 解得 $\binom{v_x}{v_y}=\mu(1+b^2)^{-1}\begin{pmatrix}1&b\\-b&1\end{pmatrix}\binom{E_x}{E_y}$。乘 $nq$ 得 $\sigma_{xy}=\sigma_0b/(1+b^2)$、$\sigma_{yx}=-\sigma_{xy}$ 和 $\sigma_{xx}=\sigma_{yy}=\sigma_0/(1+b^2)$，其中 $\sigma_0=nq^2\tau/m>0$；Hall 非对角项随 $q$ 翻号。
+
+(3) 若 $J_y=0$，则第二行要求 $E_y=bE_x$，又 $J_x=\sigma_0E_x$。故 $E_y/J_x=b/\sigma_0=B/(nq)$，对应本坐标与 $E_y$ 定义的 Hall 电阻率符号；纵向 $E_x/J_x=1/\sigma_0$，简单单带模型没有经典纵向磁电阻。
+
+(4) 点乘稳态方程与 $\mathbf v$，有 $q\mathbf E\cdot\mathbf v=m v^2/\tau$，因 $\mathbf v\cdot(\mathbf v\times\mathbf B)=0$。故焦耳功率 $\mathbf J\cdot\mathbf E=nmv^2/\tau\ge0$；$B\to0$ 时 $b\to0$，张量还原 $\sigma_0I$，检查正定耗散与单位正确。
+
+\par\medskip
+
+\subsection*{E216\quad 有限厚度导体中的磁扩散与复阻抗}
+
+厚度 $2a$ 的平板导体占 $-a<x<a$，导电率 $\sigma$、磁导率 $\mu$，两面施加同相切向磁场 $H_y(\pm a,t)=\Re(H_se^{-i\omega t})$，忽略位移电流。
+
+(1) 推导谐波磁扩散方程与复波数。
+
+(2) 求平板内满足双边边界的磁场。
+
+(3) 导出电流密度和总焦耳损耗的边界表达式。
+
+(4) 验证薄板和厚板极限。
+
+\par\textbf{解答}
+
+(1) 由 $\nabla\times H=\sigma E$ 与 $\nabla\times E=-\mu\partial_tH$，得 $\partial_x^2H=\mu\sigma\partial_tH$。采用 $e^{-i\omega t}$ 约定，$q^2=-i\mu\sigma\omega$，取 $q=(1-i)/\delta$，趋肤深度 $\delta=\sqrt{2/(\mu\sigma\omega)}$。
+
+(2) 谐波解为 $H_y(x)=A\cosh qx+B\sinh qx$。边界 $H_y(\pm a)=H_s$ 意味奇函数项为零，故 $H_y(x)=H_s\cosh(qx)/\cosh(qa)$。在板中央场梯度为零，符合左右两面同相对称驱动。
+
+(3) Ampere 定律给 $J_z=\partial_xH_y=qH_s\sinh(qx)/\cosh(qa)$，$E_z=J_z/\sigma$。单位面积平均焦耳损耗为 $P/A=\int_{-a}^{a}|J_z|^2/(2\sigma)dx$。利用 Maxwell-Poynting 定理把体积分写成两表面通量，得到 $P/A=|H_s|^2\operatorname{Re}[q\tanh(qa)]/\sigma$。
+
+(4) 在厚板 $a\gg\delta$ 时，$\tanh(qa)\to1$，因此两表面总损耗 $P/A\to|H_s|^2/(\sigma\delta)$，即单面半无限损耗的两倍。薄板 $|qa|\ll1$ 时 $q\tanh(qa)\simeq q^2a-q^4a^3/3$，其实部主项来自 $-q^4a^3/3=4a^3/(3\delta^4)$，损耗按 $\omega^2 a^3$ 缩小。
+
+\par\medskip
+
+\subsection*{E217\quad 矩形理想波导 TE10 模的截止与能速}
+
+空心金属矩形理想波导横截面 $0<x<a,0<y<b$ 且 $a>b$，均匀填充介电率 $\epsilon$、磁导率 $\mu$，传播因子 $e^{i(\beta z-\omega t)}$。
+
+(1) 从 Helmholtz 方程和理想导体边界导出 TE10 截止频率。
+
+(2) 求轴向传播常数与相速度。
+
+(3) 计算群速度并验证速度乘积关系。
+
+(4) 解释截止附近与远离截止极限的能量传输。
+
+\par\textbf{解答}
+
+(1) 对 TE 模，$E_z=0$，$H_z$ 满足横向 Helmholtz 方程及金属边界条件 $\partial_nH_z=0$。最低非平凡模式可取 $H_z=H_0\cos(\pi x/a)$，其横向波数 $k_c=\pi/a$；由介质波数 $k=\omega\sqrt{\mu\epsilon}$，截止频率 $\omega_c=\pi/(a\sqrt{\mu\epsilon})$。
+
+(2) 色散关系 $\beta^2=\mu\epsilon\omega^2-(\pi/a)^2$。仅 $\omega>\omega_c$ 时 $\beta$ 为实数，能有传播模；$\omega<\omega_c$ 时 $\beta$ 为纯虚数，理想无限长波导中的场沿轴向倏逝。相速 $v_p=\omega/\beta$ 可高于材料平面波速度。
+
+(3) 由 $v_g=d\omega/d\beta$ 得 $v_g=\beta/(\mu\epsilon\omega)$；因此 $v_pv_g=1/(\mu\epsilon)=v^2$，其中 $v=1/\sqrt{\mu\epsilon}$。这是 TE10 的精确无耗散色散关系，需区别相位前沿与信息速度。
+
+(4) 当 $\omega\downarrow\omega_c$，$\beta\to0$，所以 $v_g\to0$、$v_p\to\infty$，群速度为平均能流与平均储能之比；当 $\omega\gg\omega_c$，二者都趋向介质波速 $v$。理想无损条件下能量不因 $v_p>v$ 而超速。
+
+\par\medskip
+
+\subsection*{E218\quad 同轴传输线的 TEM 模与导体趋肤损耗}
+
+同轴线内外导体半径 $a<b$，间隙介质 $(\epsilon,\mu)$，高频金属表面电阻 $R_s$，假设良导体、低损耗且趋肤深度远小于金属厚度。
+
+(1) 由静电与静磁边值问题求单位长度电容电感。
+
+(2) 计算无损特性阻抗与 TEM 波速。
+
+(3) 从两导体表面电阻得单位长度串联电阻。
+
+(4) 求低损耗衰减常数并检查尺寸。
+
+\par\textbf{解答}
+
+(1) 单位长线电荷 $\lambda$ 在间隙产生 $E_r=\lambda/(2\pi\epsilon r)$，积分得 $V=\lambda\ln(b/a)/(2\pi\epsilon)$，故 $C'=2\pi\epsilon/\ln(b/a)$。Ampere定律给 $H_\phi=I/(2\pi r)$，磁能积分 $U'_m=\mu I^2\ln(b/a)/(4\pi)$，故 $L'=\mu\ln(b/a)/(2\pi)$。
+
+(2) 取电报方程的无损极限 $\partial_zV=-L'\partial_tI$、$\partial_zI=-C'\partial_tV$，得到 $v=1/\sqrt{L'C'}=1/\sqrt{\mu\epsilon}$，$Z_0=\sqrt{L'/C'}=\ln(b/a)\sqrt{\mu/\epsilon}/(2\pi)$，该表达式包含几何和材料因素。
+
+(3) 高频表面电流在内导体外表面和外导体内表面流动，单位长两表面平均欧姆耗损为 $\frac12R_s|I|^2[1/(2\pi a)+1/(2\pi b)]$。等效串联电阻 $R'=R_s(1/a+1/b)/(2\pi)$；若还存在介质损耗，则需另引并联电导 $G'$。
+
+(4) 低损耗条件 $R'\ll\omega L'$ 且 $G'\approx0$ 时，传播常数 $\gamma=\sqrt{(R'+i\omega L')(i\omega C')}$ 展开得 $\alpha\simeq R'/(2Z_0)$、$\beta\simeq\omega\sqrt{L'C'}$。$R'$ 单位 $\Omega/\mathrm m$、$\alpha$ 单位 $1/\mathrm m$；$R_s\to0$ 则 $\alpha\to0$。
+
+\par\medskip
+
+\subsection*{E219\quad 磁化冷等离子体圆偏振色散}
+
+电子密度 $n_0$ 的冷等离子体，离子固定，均匀磁场 $B_0\hat z$；横向电磁平面波沿 $+z$ 传播，取时间因子 $e^{-i\omega t}$。
+
+(1) 线性化电子 Lorentz 运动并分离圆偏振分量。
+
+(2) 求两支等效介电函数和折射率。
+
+(3) 确定回旋共振分母并讨论有界适用区域。
+
+(4) 检验无磁场与高频极限及偏振色散。
+
+\par\textbf{解答}
+
+(1) 线性动量方程 $-i\omega m_e\mathbf v=-e(\mathbf E+\mathbf v\times B_0\hat z)$。令 $v_\pm=v_x\pm i v_y$、$E_\pm=E_x\pm iE_y$，则 $(\mathbf v\times B_0\hat z)_\pm=\mp iB_0v_\pm$。取 $\Omega_e=eB_0/m_e>0$，得到 $-i(\omega\pm\Omega_e)v_\pm=-(e/m_e)E_\pm$。
+
+(2) 解得 $v_\pm=-i eE_\pm/[m_e(\omega\pm\Omega_e)]$，电流 $J_\pm=-en_0v_\pm$。以 $J=-i\omega P$ 定义极化，有 $P_\pm=-\epsilon_0\omega_p^2E_\pm/[\omega(\omega\pm\Omega_e)]$，其中 $\omega_p^2=n_0e^2/(m_e\epsilon_0)$。故 $\epsilon_\pm=1-\omega_p^2/[\omega(\omega\mp\Omega_e)]$。
+
+(3) 平行传播时 Maxwell 波动方程给 $n_\pm^2=c^2k^2/\omega^2=\epsilon_\pm$。其中 $-$ 分支分母在 $\omega=\Omega_e$ 出现冷流体回旋共振，邻域内碰撞、热效应和有限阻尼不能忽略，理想实频公式不可直接视为有限振幅响应。
+
+(4) 当 $B_0\to0$ 两分支重合为 $n^2=1-\omega_p^2/\omega^2$；当 $\omega\gg\Omega_e,\omega_p$，二者均趋 $n^2\to1$，但一阶磁场项符号相反导致圆双折射及 Faraday 旋转。只有在 $n_\pm^2>0$ 的频带对应传播波。
+
+\par\medskip
