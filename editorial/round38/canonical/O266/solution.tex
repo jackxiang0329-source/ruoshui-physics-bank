@@ -1,4 +1,4 @@
-\par\noindent\textbf{(1)} 自由传播距离 \(L\) 的ABCD矩阵为 \(P(L)=\begin{pmatrix}1&L\\0&1\end{pmatrix}\)，曲率半径 \(R\) 的球面镜反射光线矩阵可在一致的方向约定下记为 \(M(R)=\begin{pmatrix}1&0\\-2/R&1\end{pmatrix}\)。往返矩阵由这些基本矩阵按路径顺序相乘，各自行列式均为1。
-\par\noindent\textbf{(2)} 周期光线满足线性辛映射，往返矩阵本征值乘积为1。稳定要求本征值位于单位圆，等价于 \(|(A+D)/2|<1\)。对两镜腔算得 \((A+D)/2=2g_1g_2-1\)，故稳定区 \(0<g_1g_2<1\)，端点属于边界退化。
-\par\noindent\textbf{(3)} 若一面平镜 \(R_1=\infty\)，另一面凹镜 \(R_2=R>L\)，平镜处波前曲率无限，束腰恰位于平镜。传播到另一镜时 Gaussian曲率 \(R(L)=L[1+(z_R/L)^2]\)。镜面匹配给 \(z_R^2=L(R-L)\)，而 \(w_0^2=\lambda z_R/\pi\)。
-\par\noindent\textbf{(4)} 对相同镜面曲率 \(R_1=R_2=L\)，\(g_1g_2=0\) 为共焦稳定边界之一，但光线共振简并显著；而 \(R_j\gg L\) 的近平面腔有 \(g_1g_2\approx1\)，也靠近稳定边界。机械微小失准可能强烈改变光斑位置，严格稳定区应排除边界。
+\par\noindent\textbf{(1)} 近轴光学路程泛函 \(\mathcal S=\int n(r)\sqrt{1+r'^2}dz\approx\int n_0[1+r'^2/2-\alpha^2r^2/2]dz\)。Euler–Lagrange式给 \(n_0r''+n_0\alpha^2r=0\)，即 \(r''+\alpha^2r=0\)。这是横向光线的简谐振子方程，近似假定 \(|r'|\ll1\)。
+\par\noindent\textbf{(2)} 以列向量 \((r,r')^T\) 表示光线，长 \(z\) 的GRIN传输矩阵为 \(M(z)=\begin{pmatrix}\cos\alpha z&\sin\alpha z/\alpha\\-\alpha\sin\alpha z&\cos\alpha z\end{pmatrix}\)，\(\det M=1\)。在 \(z_T=2\pi/\alpha\) 时 \(M=I\)，任意近轴光线的横向位置和斜率同时恢复，半节距 \(\pi/\alpha\) 则有 \(M=-I\)。
+\par\noindent\textbf{(3)} Gaussian复束参数依 \(q_{\rm out}=(Aq+B)/(Cq+D)\) 变换。设自洽不动点 \(q=(Aq+B)/(Cq+D)\)，对GRIN矩阵化为 \(-\alpha^2q^2=1\)，取稳定上半平面根 \(q=i/\alpha\)。因此匹配Rayleigh长度 \(z_R=1/\alpha\)，在折射率近似 \(n_0\) 中束腰 \(w_0^2=\lambda/(\pi n_0\alpha)\)。
+\par\noindent\textbf{(4)} 若真实折射率还有 \(n(r)=n_0[1-\alpha^2r^2/2+\beta r^4+\cdots]\)，近轴光线方程变成幅度依赖的非线性振荡，节距随振幅改变并损害自成像。对于 \(r\sim1/\alpha\) 或高数值孔径，简谐近轴模型不再精确；Gaussian模式还会受材料吸收与衍射边界影响。

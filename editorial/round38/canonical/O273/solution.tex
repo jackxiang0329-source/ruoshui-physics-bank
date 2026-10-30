@@ -1,4 +1,4 @@
-\par\noindent\textbf{(1)} 慢包络频谱 \(\tilde A(z,\Omega)=\tilde A(0,\Omega)e^{i\beta_2z\Omega^2/2}\)，其中 \(\Omega\) 为相对载频的角频率偏移；整体相位与一阶群延迟已移除。由于乘子的模为1，频域能量积分 \(\int|\tilde A|^2d\Omega\) 守恒。
-\par\noindent\textbf{(2)} 频域输入 \(\tilde A(0,\Omega)\propto e^{-T_0^2\Omega^2/2}\)。逆变换完成平方得到 \(A(z,t)=A_0[1-i\beta_2z/T_0^2]^{-1/2}\exp\{-t^2/[2T_0^2(1-i\beta_2z/T_0^2)]\}\)；指数中的 \(i\) 符号随傅里叶约定改变，但强度宽度不变。
-\par\noindent\textbf{(3)} 取模平方得强度Gaussian \(|A(z,t)|^2\propto\exp[-t^2/T(z)^2]\)，其中 \(T(z)=T_0\sqrt{1+(\beta_2z/T_0^2)^2}\)。定义色散长度 \(L_D=T_0^2/|\beta_2|\)，则 \(T(z)=T_0\sqrt{1+(z/L_D)^2}\)，在纯二阶色散下总展宽不依 \(\beta_2\) 的符号。
-\par\noindent\textbf{(4)} 时域相位的二次项为 \(-[\beta_2z/T_0^2]t^2/[2T_0^2(1+(\beta_2z/T_0^2)^2)]\)（依据所选频域符号）。对时间求导得到线性于 \(t\) 的瞬时频移，随 \(\beta_2\) 改变符号；若输入已有预啁啾，则脉宽可先压缩再扩展，不能照搬无啁啾公式。
+\par\noindent\textbf{(1)} 周期边界允许将入射复振幅展开为 \(U(x,0)=t(x)=\sum_{m\in\mathbb Z}c_me^{i2\pi mx/d}\)，其中 \(c_m=d^{-1}\int_0^dt(x)e^{-i2\pi mx/d}dx\)。每个离散谐波的横向波数为 \(k_{x,m}=2\pi m/d\)，不是连续任意角谱；光栅结构已包含于复系数 \(c_m\)。
+\par\noindent\textbf{(2)} 自由空间色散 \(k_{z,m}=\sqrt{k_0^2-k_{x,m}^2}\)，在 \(|k_{x,m}|\ll k_0=2\pi/\lambda\) 时展开为 \(k_{z,m}\approx k_0-k_{x,m}^2/(2k_0)\)。去掉公共相位 \(e^{ik_0z}\) 后每个级次获得 \(e^{-ik_{x,m}^2z/(2k_0)}=\exp[-i\pi\lambda z m^2/d^2]\)。因此 \(U(x,z)\propto\sum_m c_me^{i2\pi mx/d}e^{-i\pi\lambda zm^2/d^2}\)。
+\par\noindent\textbf{(3)} 取 \(z_T=2d^2/\lambda\)，每个Fourier级次的相位因子为 \(e^{-i2\pi m^2}=1\)，与 \(m\) 无关。故 \(U(x,z_T)=e^{ik_0z_T}t(x)\)，强度 \(I(x,z_T)=I(x,0)\)，形成Talbot自成像。这是相干近轴场的精确周期性，不是几何光学单根射线的成像。
+\par\noindent\textbf{(4)} 当 \(z=z_T/2=d^2/\lambda\)，相位因子 \(e^{-i\pi m^2}=(-1)^m=e^{i\pi m}\)，所以 \(U(x,z_T/2)\propto\sum_m c_me^{i2\pi m(x+d/2)/d}=t(x+d/2)\)，得到半周期横向位移。若光源不相干、光栅有限孔径、\(d\) 接近 \(\lambda\) 或高衍射级非近轴，严格Talbot自成像会退化。

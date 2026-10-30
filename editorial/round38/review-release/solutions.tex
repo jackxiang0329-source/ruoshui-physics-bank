@@ -512,18 +512,18 @@
 
 \par\bigskip\hrule\bigskip
 \chapter{光学}
-\section*{O266\quad 稳定光学谐振腔的ABCD矩阵与Gaussian束腰}
-\textbf{物理条件}\par 两球面镜曲率半径 \(R_1,R_2\)，间距 \(L\)，近轴光线用 \((x,\theta)\) 表示；定义 \(g_j=1-L/R_j\)。
-\par\noindent\textbf{(1)} 建立自由传播与镜面反射矩阵。
-\par\noindent\textbf{(2)} 用往返矩阵迹判定腔稳定性。
-\par\noindent\textbf{(3)} 求平凹腔镜面处的Gaussian束腰。
-\par\noindent\textbf{(4)} 讨论共焦与近平面极限中的模式敏感性。
+\section*{O266\quad 抛物线型GRIN介质中的光线简谐运动与Gaussian束自成像}
+\textbf{物理条件}\par 柱对称梯度折射率介质满足 \(n(r)=n_0[1-\alpha^2r^2/2]\)，其中 \(n_0,\alpha>0\)，考虑近轴光线 \(r\ll1/\alpha\) 及波长 \(\lambda\) 的Gaussian光束。
+\par\noindent\textbf{(1)} 从Fermat变分求近轴光线方程。
+\par\noindent\textbf{(2)} 求GRIN传播的ABCD矩阵和完整自成像节距。
+\par\noindent\textbf{(3)} 由Gaussian复束参数不动点求匹配束腰。
+\par\noindent\textbf{(4)} 说明大孔径和非抛物线误差对自成像的破坏。
 
 \par\medskip\noindent\textbf{逐问解析}
-\par\noindent\textbf{(1)} 自由传播距离 \(L\) 的ABCD矩阵为 \(P(L)=\begin{pmatrix}1&L\\0&1\end{pmatrix}\)，曲率半径 \(R\) 的球面镜反射光线矩阵可在一致的方向约定下记为 \(M(R)=\begin{pmatrix}1&0\\-2/R&1\end{pmatrix}\)。往返矩阵由这些基本矩阵按路径顺序相乘，各自行列式均为1。
-\par\noindent\textbf{(2)} 周期光线满足线性辛映射，往返矩阵本征值乘积为1。稳定要求本征值位于单位圆，等价于 \(|(A+D)/2|<1\)。对两镜腔算得 \((A+D)/2=2g_1g_2-1\)，故稳定区 \(0<g_1g_2<1\)，端点属于边界退化。
-\par\noindent\textbf{(3)} 若一面平镜 \(R_1=\infty\)，另一面凹镜 \(R_2=R>L\)，平镜处波前曲率无限，束腰恰位于平镜。传播到另一镜时 Gaussian曲率 \(R(L)=L[1+(z_R/L)^2]\)。镜面匹配给 \(z_R^2=L(R-L)\)，而 \(w_0^2=\lambda z_R/\pi\)。
-\par\noindent\textbf{(4)} 对相同镜面曲率 \(R_1=R_2=L\)，\(g_1g_2=0\) 为共焦稳定边界之一，但光线共振简并显著；而 \(R_j\gg L\) 的近平面腔有 \(g_1g_2\approx1\)，也靠近稳定边界。机械微小失准可能强烈改变光斑位置，严格稳定区应排除边界。
+\par\noindent\textbf{(1)} 近轴光学路程泛函 \(\mathcal S=\int n(r)\sqrt{1+r'^2}dz\approx\int n_0[1+r'^2/2-\alpha^2r^2/2]dz\)。Euler–Lagrange式给 \(n_0r''+n_0\alpha^2r=0\)，即 \(r''+\alpha^2r=0\)。这是横向光线的简谐振子方程，近似假定 \(|r'|\ll1\)。
+\par\noindent\textbf{(2)} 以列向量 \((r,r')^T\) 表示光线，长 \(z\) 的GRIN传输矩阵为 \(M(z)=\begin{pmatrix}\cos\alpha z&\sin\alpha z/\alpha\\-\alpha\sin\alpha z&\cos\alpha z\end{pmatrix}\)，\(\det M=1\)。在 \(z_T=2\pi/\alpha\) 时 \(M=I\)，任意近轴光线的横向位置和斜率同时恢复，半节距 \(\pi/\alpha\) 则有 \(M=-I\)。
+\par\noindent\textbf{(3)} Gaussian复束参数依 \(q_{\rm out}=(Aq+B)/(Cq+D)\) 变换。设自洽不动点 \(q=(Aq+B)/(Cq+D)\)，对GRIN矩阵化为 \(-\alpha^2q^2=1\)，取稳定上半平面根 \(q=i/\alpha\)。因此匹配Rayleigh长度 \(z_R=1/\alpha\)，在折射率近似 \(n_0\) 中束腰 \(w_0^2=\lambda/(\pi n_0\alpha)\)。
+\par\noindent\textbf{(4)} 若真实折射率还有 \(n(r)=n_0[1-\alpha^2r^2/2+\beta r^4+\cdots]\)，近轴光线方程变成幅度依赖的非线性振荡，节距随振幅改变并损害自成像。对于 \(r\sim1/\alpha\) 或高数值孔径，简谐近轴模型不再精确；Gaussian模式还会受材料吸收与衍射边界影响。
 
 \par\bigskip\hrule\bigskip
 \section*{O267\quad 圆形孔径Fraunhofer衍射的Airy振幅与第一暗环}
@@ -610,18 +610,18 @@
 \par\noindent\textbf{(4)} 若真实光源存在临边昏暗、热点或不对称结构，角强度不再是均匀圆盘，\(\gamma_{12}\) 需对实际亮度作归一二维Fourier变换，零点位置和相位均可能变化。该定理要求源点之间统计不相干，不适用于单一空间相干激光圆孔的相同解释。
 
 \par\bigskip\hrule\bigskip
-\section*{O273\quad Gaussian频谱脉冲的群速度色散与啁啾展宽}
-\textbf{物理条件}\par 输入Gaussian包络 \(A(0,t)=A_0e^{-t^2/(2T_0^2)}\)，在无损线性介质中传播 \(z\)，在共动时间坐标下仅保留常数 \(\beta_2\) 的二阶群速度色散。
-\par\noindent\textbf{(1)} 把传播方程写成频域二次相位传递函数。
-\par\noindent\textbf{(2)} 利用Gaussian积分求传播后的时域包络。
-\par\noindent\textbf{(3)} 求强度脉宽与传播长度的关系。
-\par\noindent\textbf{(4)} 求传播后的瞬时啁啾并解释符号。
+\section*{O273\quad 周期光栅近轴Fresnel传播的Talbot自成像与半周期平移}
+\textbf{物理条件}\par 无限一维周期光栅的复透射函数 \(t(x+d)=t(x)\)，周期 \(d\gg\lambda\)，单色相干平面波照明；在传播方向 \(z>0\) 使用近轴Fresnel衍射近似。
+\par\noindent\textbf{(1)} 将光栅复振幅表示为离散空间Fourier级数。
+\par\noindent\textbf{(2)} 推导Fresnel传播时各衍射级次的二次相位。
+\par\noindent\textbf{(3)} 求Talbot自成像距离并验证完全重现。
+\par\noindent\textbf{(4)} 求半Talbot距离的平移图像及失效条件。
 
 \par\medskip\noindent\textbf{逐问解析}
-\par\noindent\textbf{(1)} 慢包络频谱 \(\tilde A(z,\Omega)=\tilde A(0,\Omega)e^{i\beta_2z\Omega^2/2}\)，其中 \(\Omega\) 为相对载频的角频率偏移；整体相位与一阶群延迟已移除。由于乘子的模为1，频域能量积分 \(\int|\tilde A|^2d\Omega\) 守恒。
-\par\noindent\textbf{(2)} 频域输入 \(\tilde A(0,\Omega)\propto e^{-T_0^2\Omega^2/2}\)。逆变换完成平方得到 \(A(z,t)=A_0[1-i\beta_2z/T_0^2]^{-1/2}\exp\{-t^2/[2T_0^2(1-i\beta_2z/T_0^2)]\}\)；指数中的 \(i\) 符号随傅里叶约定改变，但强度宽度不变。
-\par\noindent\textbf{(3)} 取模平方得强度Gaussian \(|A(z,t)|^2\propto\exp[-t^2/T(z)^2]\)，其中 \(T(z)=T_0\sqrt{1+(\beta_2z/T_0^2)^2}\)。定义色散长度 \(L_D=T_0^2/|\beta_2|\)，则 \(T(z)=T_0\sqrt{1+(z/L_D)^2}\)，在纯二阶色散下总展宽不依 \(\beta_2\) 的符号。
-\par\noindent\textbf{(4)} 时域相位的二次项为 \(-[\beta_2z/T_0^2]t^2/[2T_0^2(1+(\beta_2z/T_0^2)^2)]\)（依据所选频域符号）。对时间求导得到线性于 \(t\) 的瞬时频移，随 \(\beta_2\) 改变符号；若输入已有预啁啾，则脉宽可先压缩再扩展，不能照搬无啁啾公式。
+\par\noindent\textbf{(1)} 周期边界允许将入射复振幅展开为 \(U(x,0)=t(x)=\sum_{m\in\mathbb Z}c_me^{i2\pi mx/d}\)，其中 \(c_m=d^{-1}\int_0^dt(x)e^{-i2\pi mx/d}dx\)。每个离散谐波的横向波数为 \(k_{x,m}=2\pi m/d\)，不是连续任意角谱；光栅结构已包含于复系数 \(c_m\)。
+\par\noindent\textbf{(2)} 自由空间色散 \(k_{z,m}=\sqrt{k_0^2-k_{x,m}^2}\)，在 \(|k_{x,m}|\ll k_0=2\pi/\lambda\) 时展开为 \(k_{z,m}\approx k_0-k_{x,m}^2/(2k_0)\)。去掉公共相位 \(e^{ik_0z}\) 后每个级次获得 \(e^{-ik_{x,m}^2z/(2k_0)}=\exp[-i\pi\lambda z m^2/d^2]\)。因此 \(U(x,z)\propto\sum_m c_me^{i2\pi mx/d}e^{-i\pi\lambda zm^2/d^2}\)。
+\par\noindent\textbf{(3)} 取 \(z_T=2d^2/\lambda\)，每个Fourier级次的相位因子为 \(e^{-i2\pi m^2}=1\)，与 \(m\) 无关。故 \(U(x,z_T)=e^{ik_0z_T}t(x)\)，强度 \(I(x,z_T)=I(x,0)\)，形成Talbot自成像。这是相干近轴场的精确周期性，不是几何光学单根射线的成像。
+\par\noindent\textbf{(4)} 当 \(z=z_T/2=d^2/\lambda\)，相位因子 \(e^{-i\pi m^2}=(-1)^m=e^{i\pi m}\)，所以 \(U(x,z_T/2)\propto\sum_m c_me^{i2\pi m(x+d/2)/d}=t(x+d/2)\)，得到半周期横向位移。若光源不相干、光栅有限孔径、\(d\) 接近 \(\lambda\) 或高衍射级非近轴，严格Talbot自成像会退化。
 
 \par\bigskip\hrule\bigskip
 \chapter{近代物理}
