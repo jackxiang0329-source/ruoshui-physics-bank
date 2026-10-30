@@ -329,7 +329,7 @@ function C(id,x){if(x.length!==4)throw Error(id+' missing four checks');x.forEac
  ['ac Josephson frequency from voltage',(2*e*V/h)*(2*PI),2*e*V/(h/(2*PI))],
  ['Josephson phase energy derivative',der(x=>-Ej*Math.cos(x),phi),Ej*Math.sin(phi)],
  ['Josephson critical energy magnitude',Ej,hh*Ic/(2*e)],
- ['dc SQUID magnetic flux periodicity',Math.abs(Math.cos(PI*(flux+fluxQ/fluxQ))),Math.abs(Math.cos(PI*flux/fluxQ))]]);
+ ['dc SQUID magnetic flux periodicity',Math.abs(Math.cos(PI*((flux+fluxQ)/fluxQ))),Math.abs(Math.cos(PI*flux/fluxQ))]]);
 }
 const ranges={M:[172,178],E:[172,178],T:[165,171],W:[165,171],O:[156,161],Q:[156,161]};
 const ids=Object.entries(ranges).flatMap(([p,[a,b]])=>Array.from({length:b-a+1},(_,i)=>p+String(a+i).padStart(3,'0')));
