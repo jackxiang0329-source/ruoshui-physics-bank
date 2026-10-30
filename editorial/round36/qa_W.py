@@ -45,7 +45,9 @@ def run():
     chi=1/den
     check("W252",3,"driven susceptibility imaginary part positive",
           chi.imag>0,1,method="passive-spectral-response")
-    check("W252",4,"weak damping frequency half-width",2*gamma,2*gamma,method="pole-imaginary-part")
+    pole=complex(-gamma,wd)
+    check("W252",4,"complex damped oscillator pole residual",
+          A(pole*pole+2*gamma*pole+w0*w0),0,method="pole-characteristic")
     # W253 shallow water waves and Green law
     g,h,k=9.8,2.4,.15
     cc=S(g*h)
@@ -99,8 +101,9 @@ def run():
     w0,eps=.8,.025
     delta=0.
     lamgrowth=S((eps/(4*w0))**2-(delta/2)**2)
-    check("W257",1,"fast-resonant Mathieu carrier cancellation",
-          C(w0*.7)*w0*w0+(-w0*w0*C(w0*.7)),0,method="multiple-scale-carrier")
+    check("W257",1,"Mathieu resonant Fourier projection of parametric pump",
+          integrate(lambda theta:C(theta)*C(theta)*C(2*theta),0,2*P)/
+          integrate(lambda theta:C(theta)**2,0,2*P),.5,method="multiple-scale-resonant-Fourier")
     check("W257",2,"parametric resonance eigenvalue growth",
           lamgrowth,eps/(4*w0),method="Floquet-spectrum")
     edge=eps/(2*w0)
