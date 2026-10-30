@@ -1,0 +1,25 @@
+% 第33批电磁学审核候选：两个场论/凝聚态交叉综合模型
+\subsection*{E220\quad London涡旋的磁场、磁通量量子化与下临界场}
+第二类超导体在London极限$\kappa=\lambda_L/\xi\gg1$，考虑沿$z$轴的一条孤立直涡旋，穿透深度$\lambda_L$、芯半径$\xi$，通量子$\Phi_0=h/(2e)$，忽略其他涡旋及边界。
+(1) 写含点源的London磁场方程，求轴对称磁场分布。
+(2) 证明单涡旋携带的总磁通为$\Phi_0$并求绕向屏蔽电流。
+(3) 用场能和超流动能求涡旋每单位长度能量的对数主项。
+(4) 在外加场$H$下推导下临界场的主阶，并说明芯截止和相互作用限制。
+\par\textbf{逐问解析}
+(1) 无涡旋区满足$\boldsymbol B-\lambda_L^2\nabla^2\boldsymbol B=0$；涡旋相位绕数导致$(1-\lambda_L^2\nabla_\perp^2)B_z=\Phi_0\delta^{(2)}(\boldsymbol r)$。二维修正Helmholtz算符的Green函数为$K_0(r/\lambda_L)/(2\pi\lambda_L^2)$，因此对$r\gtrsim\xi$，$B_z(r)=\Phi_0 K_0(r/\lambda_L)/(2\pi\lambda_L^2)$，远离涡旋按$e^{-r/\lambda_L}/\sqrt r$衰减。
+(2) 极坐标积分$\Phi=\int_0^\infty B_z\,2\pi r\,dr=\Phi_0\int_0^\infty uK_0(u)\,du=\Phi_0$，其中$\int_0^\infty uK_0(u)\,du=1$，也可把源方程全平面积分得到同样结论。Ampere定律给$J_\phi=-\partial_rB_z/\mu_0=\Phi_0 K_1(r/\lambda_L)/(2\pi\mu_0\lambda_L^3)$，电流方向与涡旋通量取向一致。
+(3) London单位长度自由能$F_\ell=(2\mu_0)^{-1}\int_\xi^\infty[B_z^2+\lambda_L^2(\partial_rB_z)^2]\,2\pi r\,dr+E_{\rm core}$。在无源区域用$B-\lambda_L^2\nabla^2B=0$并分部积分，面积项化为核心圆边界；对$\xi\ll r\ll\lambda_L$，$K_0(r/\lambda_L)\simeq\ln(\lambda_L/r)+O(1)$，遂有$F_\ell=\Phi_0^2\ln(\lambda_L/\xi)/(4\pi\mu_0\lambda_L^2)+O(\Phi_0^2/(\mu_0\lambda_L^2))$。对数系数无需知道芯内微观细节。
+(4) 单位长度涡旋在外磁场$H$中的Gibbs能量差为$\Delta G_\ell\simeq F_\ell-\Phi_0H$，因为磁场源对新增通量作功。令$\Delta G_\ell=0$，得到$H_{c1}\simeq\Phi_0\ln\kappa/(4\pi\mu_0\lambda_L^2)$，对应$B_{c1}=\mu_0H_{c1}$。核芯能改变量级为对数项以外的常数；接近$H_{c1}$的涡旋间相互作用、退磁场和边界势垒都不能仅由孤立涡旋模型决定。
+\par\medskip
+\subsection*{E221\quad 金属—介质界面表面等离激元的TM色散与光锥}
+平面界面$z=0$，上方$z>0$为无损介质$\epsilon_d>0$，下方$z<0$为各向同性金属$\epsilon_m(\omega)<0$；磁导率均为$\mu_0$。电场沿$xz$面，传播沿$x$，真空波数$k_0=\omega/c$。
+(1) 构造界面两侧指数衰减的TM模并写界面条件。
+(2) 解出表面波传播常数与局域衰减长度。
+(3) 对无耗散Drude金属$\epsilon_m(\omega)=1-\omega_p^2/\omega^2$，求长波与高波数极限。
+(4) 讨论TE模的缺失、能量局域和小损耗对波数的影响。
+\par\textbf{逐问解析}
+(1) 取$H_y^{(d)}=A e^{ik_xx-\alpha_d z-i\omega t}$、$H_y^{(m)}=A e^{ik_xx+\alpha_m z-i\omega t}$，其中$\alpha_j=\sqrt{k_x^2-\epsilon_j k_0^2}$并选$\operatorname{Re}\alpha_j>0$。由$\nabla\times H=-i\omega\epsilon_0\epsilon_jE$得到$E_x^{(d)}\propto-\alpha_d H_y^{(d)}/\epsilon_d$、$E_x^{(m)}\propto+\alpha_mH_y^{(m)}/\epsilon_m$；切向$E_x,H_y$连续给$\alpha_d/\epsilon_d+\alpha_m/\epsilon_m=0$。
+(2) 联立$\alpha_j^2=k_x^2-\epsilon_j k_0^2$及上述边界式，消元得$k_x^2=k_0^2\epsilon_d\epsilon_m/(\epsilon_d+\epsilon_m)$，选择正向传播支$k_x=k_0\sqrt{\epsilon_d\epsilon_m/(\epsilon_d+\epsilon_m)}$。纯实无损束缚模存在条件$\epsilon_m<-\epsilon_d$，此时$k_x>k_0\sqrt{\epsilon_d}$位于介质光锥之外；两侧穿透长度分别为$1/\alpha_d$和$1/\alpha_m$。
+(3) Drude函数满足$\epsilon_m<-\epsilon_d$仅当$0<\omega<\omega_{\rm sp}=\omega_p/\sqrt{1+\epsilon_d}$。$\omega\to0$时$\epsilon_m\to-\infty$，故$k_x\sim k_0\sqrt{\epsilon_d}$，表面模接近介质光线；$\omega\uparrow\omega_{\rm sp}$时$\epsilon_m+\epsilon_d\to0^-$，传播常数$k_x\to\infty$，局域场尺度缩小，表面等离激元频率渐近$\omega_{\rm sp}$。
+(4) 对非磁性两介质，TE模连续切向场会要求$\alpha_d+\alpha_m=0$，与两个正衰减常数矛盾，因此无对应束缚TE模。TM模式的时间平均能流须包含金属色散储能，不能把$\epsilon_m<0$直接当成负总能量；若考虑$\operatorname{Im}\epsilon_m>0$的吸收，则$k_x$成为复数，沿$x$的传播振幅衰减，无损$k_x\to\infty$的奇异极限被阻尼和非局域效应钝化。
+\par\medskip
