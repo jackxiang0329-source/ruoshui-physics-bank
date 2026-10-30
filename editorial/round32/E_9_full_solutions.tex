@@ -48,28 +48,17 @@
 
 \par\medskip
 
-\subsection*{E213\quad 对称电解质平板双电层的非线性 Poisson–Boltzmann 解}
-
-1:1 电解质体相数密度 $n_\infty$、温度 $T$、介电率 $\epsilon$，单个带电平板位于 $x=0$，电势满足 $\psi(\infty)=0$；忽略离子尺寸。
-
-(1) 从 Boltzmann 浓度推导非线性 Poisson–Boltzmann 方程。
-
-(2) 使用第一积分得到电势梯度与电势关系。
-
-(3) 求无限半空间的解析电势分布。
-
-(4) 求表面电荷与表面势的关系及弱势极限。
-
-\par\textbf{解答}
-
-(1) 阳、阴离子平衡浓度为 $n_\pm=n_\infty e^{\mp e\psi/(k_BT)}$，电荷密度 $\rho=e(n_+-n_-)=-2en_\infty\sinh(e\psi/(k_BT))$。Poisson方程 $-\epsilon\psi''=\rho$，因此 $\psi''=2en_\infty\sinh(e\psi/(k_BT))/\epsilon$。
-
-(2) 令 $y=e\psi/(k_BT)$，$\kappa^2=2e^2n_\infty/(\epsilon k_BT)$，则 $y''=\kappa^2\sinh y$。乘以 $y'$ 并从无穷远 $y=y'=0$ 积分，得 $y'^2=2\kappa^2(\cosh y-1)=4\kappa^2\sinh^2(y/2)$，对于正表面势选 $y'=-2\kappa\sinh(y/2)$。
-
-(3) 对 $dy/\sinh(y/2)=-2\kappa dx$ 积分，利用 $d\ln\tanh(y/4)/dy=1/[2\sinh(y/2)]$，得 $\tanh[y(x)/4]=\tanh[y(0)/4]e^{-\kappa x}$。故 $\psi(x)=(4k_BT/e)\operatorname{artanh}(\gamma e^{-\kappa x})$，$\gamma=\tanh[e\psi_0/(4k_BT)]$。
-
-(4) 电极表面自由电荷 $\sigma=-\epsilon\psi'(0)=2\epsilon\kappa(k_BT/e)\sinh[e\psi_0/(2k_BT)]$。$|e\psi_0|\ll k_BT$ 时 $\sigma\simeq\epsilon\kappa\psi_0$、$\psi\simeq\psi_0e^{-\kappa x}$，回到 Debye–Hückel 线性屏蔽。正负表面电荷由公式自动给出相应符号。
-
+\subsection*{E213\quad London 超导薄板的磁通屏蔽与自由能}
+厚度 $2a$ 的理想 London 超导平板位于 $-a<x<a$，穿板方向取 $x$，外加磁场 $B_z(\pm a)=B_0$，London 穿透深度 $\lambda_L>0$。忽略涡旋、温度依赖和边缘效应。
+(1) 从静态 Maxwell–London 方程推导磁场微分方程。
+(2) 求双面边值条件下的磁场和屏蔽电流分布。
+(3) 求板内平均磁场与厚板、薄板极限。
+(4) 求 London 磁场及电流动能对应的总自由能，并核对极限。
+\par\textbf{逐问解析}
+(1) London 第二方程为 $\nabla\times\mathbf J=-\mathbf B/(\mu_0\lambda_L^2)$；静磁 Ampere 方程为 $\nabla\times\mathbf B=\mu_0\mathbf J$。再取 curl，用 $\nabla\cdot\mathbf B=0$ 得 $-\nabla^2\mathbf B=\mu_0\nabla\times\mathbf J=-\mathbf B/\lambda_L^2$，即 $B_z''=B_z/\lambda_L^2$。这与正常金属的耗散磁扩散方程物理机制不同。
+(2) 通解 $B_z=C\cosh(x/\lambda_L)+D\sinh(x/\lambda_L)$；由于两面施加相同 $B_0$，奇项 $D=0$，故 $B_z(x)=B_0\cosh(x/\lambda_L)/\cosh(a/\lambda_L)$。由 $\nabla\times\mathbf B=\mu_0\mathbf J$ 的 $y$ 分量得 $J_y=-B'_z/\mu_0=-B_0\sinh(x/\lambda_L)/(\mu_0\lambda_L\cosh(a/\lambda_L))$，左右表面电流方向相反。
+(3) 体平均磁场为 $\bar B=(2a)^{-1}\int_{-a}^aB_zdx=B_0(\lambda_L/a)\tanh(a/\lambda_L)$。当 $a\gg\lambda_L$，$\bar B/B_0\sim\lambda_L/a\ll1$，呈 Meissner 屏蔽；当 $a\ll\lambda_L$，$\tanh z/z\to1$，则 $\bar B\to B_0$，薄板不能强烈屏蔽外场。
+(4) London 体自由能密度含磁能与超导载流子动能 $f=[B_z^2+\mu_0^2\lambda_L^2J_y^2]/(2\mu_0)=[B_z^2+\lambda_L^2(B'_z)^2]/(2\mu_0)$。积分得到 $F/A=(B_0^2\lambda_L/\mu_0)\tanh(a/\lambda_L)$。在 $a\gg\lambda_L$ 时能量集中于两表面穿透层；在 $a\ll\lambda_L$ 时 $F/A\simeq B_0^2a/\mu_0$，即均匀场磁能 $B_0^2(2a)/(2\mu_0)$。
 \par\medskip
 
 \subsection*{E214\quad 冷等离子体纵向振荡与介电函数}
