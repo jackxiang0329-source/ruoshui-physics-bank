@@ -1,0 +1,4 @@
+(1) 单位长度电荷为 $cV$，连续性方程 $c\,\partial_tV+\partial_xi=0$；局部欧姆定律为 $i=-(1/r)\partial_xV$。消去电流得 $\partial_tV=(1/(rc))\partial_x^2V$，扩散系数 $D=1/(rc)$，单位确为长度平方每时间。
+(2) 初始形状恰是 Dirichlet 边界的第一正弦本征模，故 $V(x,t)=V_0\sin(\pi x/L)e^{-t/\tau}$，$\tau=rcL^2/\pi^2$。从欧姆定律还原 $i(x,t)=-(\pi V_0/(rL))\cos(\pi x/L)e^{-t/\tau}$，两端接地电源可以吸收或供应边界电流。
+(3) 电容能量 $U=\frac12\int_0^LcV^2dx=(cL V_0^2/4)e^{-2t/\tau}$。沿线热率 $P_R=\int_0^Lr i^2dx=(\pi^2V_0^2/(2rL))e^{-2t/\tau}$。由于 $-dU/dt=(cL V_0^2/(2\tau))e^{-2t/\tau}$，代入 $\tau=rcL^2/\pi^2$ 即得 $-dU/dt=P_R$，且两端 $V=0$ 不输送电功率。
+(4) 衰减时间随 $r,c,L^2$ 线性或二次增长；$r\to0^+$ 时电压以极快速度重排，$c\to\infty$ 则减慢。抛物方程容许数学上的瞬时影响，但这来自忽略传输线电感和电磁波传播时延，不应解释为真实超光速信号。

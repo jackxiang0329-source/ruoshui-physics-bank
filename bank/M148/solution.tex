@@ -1,0 +1,4 @@
+(1) 用复数试探 $x_{\rm st}=\Re[X e^{i\Omega t}]$，得 $X=F_0/(k-m\Omega^2+i b\Omega)$。因而 $x_{\rm st}=A\cos(\Omega t-\delta)$，其中 $A=F_0/\sqrt{(k-m\Omega^2)^2+b^2\Omega^2}$，$\delta=\operatorname{atan2}(b\Omega,k-m\Omega^2)$，保证共振前后相位的正确象限。
+(2) 对稳定稳态，$\dot x=-A\Omega\sin(\Omega t-\delta)$；外力平均功率为 $\langle F\dot x\rangle=F_0A\Omega\sin\delta/2$，由 $F_0\sin\delta=b\Omega A$ 得 $\langle P_{\rm in}\rangle=b\Omega^2A^2/2=\langle b\dot x^2\rangle$。储存的动能和弹性能每周期净变化为零。
+(3) 最小化振幅分母平方 $D(\Omega)=(k-m\Omega^2)^2+b^2\Omega^2$；正频率极值满足 $-4m\Omega(k-m\Omega^2)+2b^2\Omega=0$，故在 $b^2<2mk$ 时 $\Omega_{\rm peak}=\sqrt{k/m-b^2/(2m^2)}<\sqrt{k/m}$；若 $b^2\ge2mk$ 则位移响应峰值在零频端。
+(4) 低频极限 $A\to F_0/k$，高频极限 $A\sim F_0/(m\Omega^2)$。若先取 $b\to0$ 且 $\Omega=\sqrt{k/m}$，稳态振幅形式发散，实际有限时间增长必须使用包含初值的完整解；当 $b>0$，完整解另含衰减的齐次振动，长时间后才剩上述受迫稳态。
