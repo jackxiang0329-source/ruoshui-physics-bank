@@ -1,4 +1,4 @@
-(1) 设入射光子四动量 $k^\mu=(E/c,\boldsymbol p)$，$|\boldsymbol p|=E/c$；静止电子四动量 $p^\mu=(mc,\boldsymbol0)$。散射末态为 $k'^\mu=(E'/c,\boldsymbol p')$ 与电子 $p'^\mu$，满足 $p+k=p'+k'$，且电子质量壳条件 $p'^2=p^2=m^2c^2$、光子满足 $k^2=k'^2=0$。
-(2) 从 $(p+k-k')^2=p^2$ 展开并利用光子质量壳条件，得到 $m(E-E')=(EE'/c^2)(1-\cos\theta)$。整理为 $1/E'-1/E=(1-\cos\theta)/(mc^2)$，故 $E'=E/[1+(E/mc^2)(1-\cos\theta)]$。利用 $E=hc/\lambda$、$E'=hc/\lambda'$ 可得 $\lambda'-\lambda=h(1-\cos\theta)/(mc)$。
-(3) 由能量守恒，反冲电子动能 $K_e=E-E'=E\{[(E/mc^2)(1-\cos\theta)]/[1+(E/mc^2)(1-\cos\theta)]\}$。其中 $1-\cos\theta$ 在 $0\le\theta\le\pi$ 单调增加，故最大动能发生在光子背散射 $\theta=\pi$，其值为 $K_{e,\max}=2E^2/(mc^2+2E)$；这也说明反冲能来自光子能量降低。
-(4) 在 $E\ll mc^2$ 时，$E'\simeq E[1-(E/mc^2)(1-\cos\theta)]$，光子能量改变相对很小，接近经典 Thomson 散射的弹性频率极限。高能背散射时 $E' = E/[1+2E/(mc^2)]\to mc^2/2$，电子可带走几乎全部入射光子能量。因 $1-\cos\theta\ge0$，必有 $E'\le E$、$\lambda'\ge\lambda$，自由静止电子不能在这类碰撞中把能量无源转给光子。
+(1) 左区自由波数 $k=\sqrt{2mE}/\hbar$，右区传播波数 $q=\sqrt{2m(E-V_0)}/\hbar$。令左方波函数 $\psi_L=e^{ikx}+r e^{-ikx}$，右方无向左来波为 $\psi_R=t e^{iqx}$。有限势阶处要求 $\psi_L(0)=\psi_R(0)$ 和 $\psi_L'(0)=\psi_R'(0)$，即 $1+r=t$、$k(1-r)=qt$。
+(2) 解联立边界条件得 $r=(k-q)/(k+q)$、$t=2k/(k+q)$。概率流密度是 $j=(\hbar/m)\operatorname{Im}(\psi^*\psi')$，因此左区入射流 $j_{\rm in}=\hbar k/m$、反射流大小为 $|r|^2j_{\rm in}$，右区透射流 $j_t=(\hbar q/m)|t|^2$。反射率 $R=(k-q)^2/(k+q)^2$、透射率 $T=(q/k)|t|^2=4kq/(k+q)^2$，显然 $R+T=1$。
+(3) 当 $E<V_0$ 时，定义 $\kappa=\sqrt{2m(V_0-E)}/\hbar$，右区不可归一化的增长指数必须舍去，留下 $\psi_R=t e^{-\kappa x}$，穿透长度 $\ell_p=1/\kappa$。把 $q$ 替为 $i\kappa$ 得 $r=(k-i\kappa)/(k+i\kappa)$，其模为1，所以 $R=1$。纯实指数的空间概率流 $j_R=0$，倏逝概率密度存在却没有穿过半无限势区的持续透射流。
+(4) 当 $E\gg V_0$，$q/k=\sqrt{1-V_0/E}=1-V_0/(2E)+O(E^{-2})$，所以 $r\simeq V_0/(4E)$、$R\simeq V_0^2/(16E^2)$。当 $E\downarrow V_0$ 且仍高于势阶时 $q\to0^+$，于是 $T=4kq/(k+q)^2\to0$、$R\to1$；这与低于势阶时全反射的连续极限一致，但不代表右区波函数振幅必为零。

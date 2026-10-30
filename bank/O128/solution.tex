@@ -1,4 +1,4 @@
-(1) 标量傍轴方程的基模解可通过复光束参量 $q(z)=z+iz_R$ 表示，$z_R=\pi w_0^2/\lambda$。由 $1/q=1/R-i\lambda/(\pi w^2)$ 可得 $w(z)=w_0\sqrt{1+(z/z_R)^2}$；对自由空间传播，$w(z)$ 关于束腰 $z=0$ 对称且取得最小值 $w_0$。
-(2) 在 $z=z_R$，$w(z_R)=\sqrt2\,w_0$，束宽增加 $\sqrt2$。远场 $|z|\gg z_R$，$w(z)\approx w_0|z|/z_R$，因而半发散角 $\theta\simeq w_0/z_R=\lambda/(\pi w_0)$（小角近似）。束腰越小，衍射发散越大，这是空间傅里叶带宽的表现。
-(3) 波前曲率半径 $R(z)=z[1+(z_R/z)^2]$，束腰处取极限 $R(0)=\infty$，远场时 $R(z)\sim z$。Gouy相位 $\psi(z)=\arctan(z/z_R)$，从负远场到正远场总变化为 $\pi$，在束腰为零。它是傍轴聚焦波的纵向附加相位，不是材料折射率引起的普通相移。
-(4) 若 $w_0$ 变为原来的一半，$z_R\propto w_0^2$ 故变为四分之一，远场半发散角 $\theta\propto1/w_0$ 则增大为两倍。采用小束腰可以提高聚焦空间分辨能力，但光束在更短的传播距离内就开始明显发散，准直系统必须权衡两者。
+(1) 两主轴传播相位分别为 $\phi_x=2\pi n_xd/\lambda$、$\phi_y=2\pi n_yd/\lambda$。剔除公共相位 $e^{i\phi_x}$ 后，相对延迟为 $\delta=\phi_y-\phi_x=2\pi(n_y-n_x)d/\lambda$，Jones 矩阵可写 $J=\operatorname{diag}(1,e^{i\delta})$。无损波片的矩阵满足 $J^\dagger J=I$，故不改变总光强。
+(2) 主轴各有相同实幅度的入射 Jones 向量 $\boldsymbol E_{\rm in}=(1,1)^T/\sqrt2$。透射为 $\boldsymbol E_{\rm out}=J\boldsymbol E_{\rm in}=(1,e^{i\delta})^T/\sqrt2$，其范数平方 $\boldsymbol E_{\rm out}^\dagger\boldsymbol E_{\rm out}=(1+1)/2=1$。两分量的相对相位决定偏振椭圆形状，整体相位无可测影响。
+(3) 圆偏振要求两正交分量等幅且相位差 $\delta=\pm\pi/2$（模 $2\pi$），所以最薄正厚度为 $d_{\rm QWP}=\lambda/[4|n_y-n_x|]$，圆偏振左右旋向由相位符号决定。与初始 $45^\circ$ 线偏振正交的输出是 $(1,-1)^T/\sqrt2$，要求 $\delta=\pi$（模 $2\pi$），故最薄半波片厚度 $d_{\rm HWP}=\lambda/[2|n_y-n_x|]$。
+(4) 分析器透射 Jones 单位矢量为 $\boldsymbol e=(1,1)^T/\sqrt2$，其透过幅度 $\boldsymbol e^\dagger\boldsymbol E_{\rm out}=(1+e^{i\delta})/2$。所以总强度比 $I_{\rm out}/I_{\rm in}=|(1+e^{i\delta})/2|^2=\cos^2(\delta/2)$。当 $\delta=0$ 透过率为1；当 $\delta=\pi/2$ 为1/2；当 $\delta=\pi$ 为0，清楚体现由偏振干涉而非吸收产生的分析器消光。
