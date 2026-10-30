@@ -113,7 +113,7 @@ def checks(records):
         raise ValueError(f"{len(failed)} model tests still failed: {failed[:2]}")
     return len(tests)
 
-FRONT = r"""\documentclass[UTF8,a4paper,11pt]{ctexbook}
+FRONT = r"""\documentclass[UTF8,a4paper,11pt,oneside,openany]{ctexbook}
 \usepackage{amsmath,amssymb,mathtools}
 \usepackage{geometry}
 \geometry{margin=23mm}
@@ -131,6 +131,9 @@ FRONT = r"""\documentclass[UTF8,a4paper,11pt]{ctexbook}
 这是一份审核分支候选资料；自动模型检查不等于独立专家逐式复核。
 在跨批查重、人工复核及双册编译均完成前，严禁标记为正式主库验收。
 """
+def format_parts(fragment):
+    return re.sub(r"(?m)^\(([1-4])\) ", r"\\par\\smallskip\\noindent (\1) ", fragment)
+
 def book(records, solved):
     out=[FRONT]
     topic=None
@@ -139,9 +142,9 @@ def book(records, solved):
             topic=r["topic"]
             out.append(r"\chapter{"+topic+"}")
         out.extend([r"\section*{"+r["id"]+r"\quad "+r["title"]+"}",
-                    r"\textbf{题目}\par",r["q"]])
+                    r"\textbf{题目}\par",format_parts(r["q"])])
         if solved:
-            out.extend([r"\par\medskip\textbf{逐问解析}\par",r["s"]])
+            out.extend([r"\par\medskip\textbf{逐问解析}\par",format_parts(r["s"])])
         out.append(r"\par\medskip\hrule\medskip")
     out.append(r"\end{document}")
     return "\n".join(out)+"\n"
