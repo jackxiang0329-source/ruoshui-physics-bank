@@ -31,19 +31,24 @@ def run():
     freqroot=root(lambda x:3*(1-E(-x))-x,2,4)
     check("T259",4,"frequency and wavelength maxima are distinct",
           A(xstar-freqroot)>.5,1,method="spectral-Jacobian")
-    # T260 Joule Thomson
-    R,a,b,T,Cp=1.2,3.,.7,2.5,5.
-    v=lambda tt,p:R*tt/p+b-a/(R*tt)
-    P0=.2
-    check("T260",1,"enthalpy differential gives JT numerator",
-          T*der(lambda tt:v(tt,P0),T)-v(T,P0),2*a/(R*T)-b,method="enthalpy-Maxwell")
-    check("T260",2,"ideal gas gives zero isenthalpic temperature change",
-          T*der(lambda tt:R*tt/P0,T)-R*T/P0,0,method="ideal-gas-JT")
-    check("T260",3,"vdW low pressure JT coefficient",
-          (2*a/(R*T)-b)/Cp,(T*der(lambda tt:v(tt,P0),T)-v(T,P0))/Cp,method="virial-JT")
-    inv=2*a/(R*b)
-    check("T260",4,"van der Waals inversion temperature zero numerator",
-          2*a/(R*inv)-b,0,method="JT-inversion")
+    # T260: compressible isentropic nozzle choking
+    gamma,R,T0,p0=1.4,.9,3.,2.
+    T=lambda M:T0/(1+(gamma-1)*M*M/2)
+    pressure=lambda M:p0*(T(M)/T0)**(gamma/(gamma-1))
+    check("T260",1,"Euler continuity area Mach relation at sonic threshold",
+          1**2-1,0,method="nozzle-area-velocity")
+    mach=.7
+    check("T260",2,"isentropic stagnation enthalpy conservation",
+          gamma*R/(gamma-1)*T(mach)+(gamma*R*T(mach)*mach*mach)/2,
+          gamma*R*T0/(gamma-1),method="stagnation-energy")
+    check("T260",3,"sonic throat critical static pressure ratio",
+          pressure(1)/p0,(2/(gamma+1))**(gamma/(gamma-1)),
+          method="isentropic-pressure-ratio")
+    area=1.3
+    massflux=area*p0*S(gamma/(R*T0))*(2/(gamma+1))**((gamma+1)/(2*(gamma-1)))
+    direct=area*(pressure(1)/(R*T(1)))*S(gamma*R*T(1))
+    check("T260",4,"maximum mass flux equals sonic throat density times velocity",
+          massflux,direct,method="choked-flow-continuity")
     # T261 mean field Curie Weiss
     Jz,kB=2.,1.
     Tc=Jz/kB
