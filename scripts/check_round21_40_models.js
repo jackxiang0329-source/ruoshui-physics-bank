@@ -71,8 +71,8 @@ const c=299792458;
  eq('E130',4,'surface-resistance-from-power',2*(H*H/(2*sigma*delta))/(H*H),Rs);
 }
 {
- const e0=1.8,w=1.3,L=2,d=.2,K=3.1,Q=4,V=1.4,x=.7,C=x=>e0*w*(L+(K-1)*x)/d,energy=x=>Q*Q/(2*C(x));
- const Cp=e0*w*(K-1)/d,Fq=Q*Q*Cp/(2*C(x)**2),Fv=V*V*Cp/2;
+ const e0=1.8,w=1.3,L=2,gap=.2,K=3.1,Q=4,V=1.4,x=.7,C=x=>e0*w*(L+(K-1)*x)/gap,energy=x=>Q*Q/(2*C(x));
+ const Cp=e0*w*(K-1)/gap,Fq=Q*Q*Cp/(2*C(x)**2),Fv=V*V*Cp/2;
  eq('E131',1,'parallel-plate-capacitance-derivative',d(C,x),Cp);
  eq('E131',2,'fixed-charge-electrostatic-force',-d(energy,x),Fq);
  eq('E131',3,'fixed-voltage-source-force',-d(y=>-C(y)*V*V/2,x),Fv);
