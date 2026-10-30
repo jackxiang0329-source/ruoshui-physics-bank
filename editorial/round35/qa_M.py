@@ -93,7 +93,7 @@ def run():
     check("M244",4,"weak-coupling frequency splitting",
           (S(om0**2+2*.0001)-om0)/.0001,1/om0,tol=3e-5,method="perturbative-splitting")
     # M245 relativistic collision invariant
-    ma,mb,Mf,c,Ea=2.,3.,6.,10.,80.
+    ma,mb,Mf,c,Ea=2.,3.,6.,10.,800.
     W2=(ma*ma+mb*mb)*c**4+2*mb*c*c*Ea
     plab=S(Ea*Ea-ma*ma*c**4)/c
     check("M245",1,"fixed target invariant from energy momentum norm",
