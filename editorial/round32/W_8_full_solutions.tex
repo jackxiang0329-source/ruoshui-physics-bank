@@ -1,0 +1,193 @@
+% 第32批波动八题：高难题稿，严谨性及历史重叠待独立审阅。
+
+\subsection*{W218\quad 双原子链声学支、光学支与带隙}
+
+无限一维双原子链，晶胞长度$a$，两类原子质量$m_1,m_2>0$，最近邻弹簧劲度$K$且无阻尼。
+
+(1) 建立两个子晶格的耦合运动方程。
+
+(2) 求两支精确声子色散关系。
+
+(3) 求长波声速与布里渊区边界频率。
+
+(4) 证明质量不等时出现声学—光学频率间隙。
+
+\par\textbf{逐问解析}
+
+(1) 令第$n$胞中两位移为$u_n,v_n$，则$m_1\ddot u_n=K(v_n+v_{n-1}-2u_n)$、$m_2\ddot v_n=K(u_n+u_{n+1}-2v_n)$。对布洛赫解$(u_n,v_n)=(u,v)e^{i(nka-\omega t)}$，耦合矩阵为$\begin{pmatrix}2K-m_1\omega^2&-K(1+e^{-ika})\\-K(1+e^{ika})&2K-m_2\omega^2\end{pmatrix}$。
+
+(2) 令行列式为零并用$|1+e^{ika}|^2=4\cos^2(ka/2)$，得$m_1m_2\omega^4-2K(m_1+m_2)\omega^2+4K^2\sin^2(ka/2)=0$。因此$\omega_\pm^2=K(1/m_1+1/m_2)\pm K\sqrt{(1/m_1+1/m_2)^2-4\sin^2(ka/2)/(m_1m_2)}$，两支均非负。
+
+(3) $k\to0$时低支$\omega_-^2\simeq Ka^2k^2/[2(m_1+m_2)]$，声速$c=a\sqrt{K/[2(m_1+m_2)]}$；高支$\omega_+^2(0)=2K(1/m_1+1/m_2)$。区边$k=\pi/a$时，频率平方恰为$2K/m_1$与$2K/m_2$，分别对应两子晶格的不同主导振动。
+
+(4) 若$m_1\ne m_2$，声学带最高平方频率为$2K/\max(m_1,m_2)$，光学带最低平方频率为$2K/\min(m_1,m_2)$，所以存在非零频隙。若两质量相等，频隙闭合；这等价于把单原子链人为选取双原胞导致的布里渊区折叠。
+
+\par\medskip
+
+\subsection*{W219\quad 轻质量点缺陷导致的局域声子模式}
+
+单原子无限链每粒质量$m$、最近邻弹簧劲度$K$，惟有$n=0$粒子质量$m_d<m$，格点间距$a$。
+
+(1) 寻找频带之外对称局域模的空间形式。
+
+(2) 从远离缺陷的方程导出频率和衰减指数关系。
+
+(3) 由缺陷边界方程确定局域化长度。
+
+(4) 验证缺陷消失与极轻缺陷极限。
+
+\par\textbf{逐问解析}
+
+(1) 正常链体波最高频率为$\omega_{max}=2\sqrt{K/m}$。高于上沿的局域模需要相邻位置符号交替并指数衰减，取$u_n=A(-1)^ne^{-\kappa|n|}e^{-i\omega t}$，$\kappa>0$。此选择保证$n\to\pm\infty$时平方可和，不是延伸布洛赫波。
+
+(2) 在$n\ne0$处代入$m\ddot u_n=K(u_{n+1}+u_{n-1}-2u_n)$，利用$u_{n+1}+u_{n-1}=-2\cosh\kappa\,u_n$，得$m\omega^2=2K(1+\cosh\kappa)=4K\cosh^2(\kappa/2)$，从而$\omega>2\sqrt{K/m}$。
+
+(3) 缺陷位置有$u_{\pm1}=-Ae^{-\kappa}$，故$m_d\omega^2=2K(1+e^{-\kappa})$。与体方程相除并化简，$m_d/m=2/(1+e^\kappa)$，即$\kappa=\ln(2m/m_d-1)$。该式要求$m_d<m$，局域化长度为$\ell_{loc}=a/\kappa$。
+
+(4) 若$m_d\to m^-$，则$\kappa\to0^+$，局域模趋于带边而空间长度发散；若$m_d/m\to0^+$，则$\kappa\to\infty$，频率随$\sqrt{2K/m_d}$增长且振型集中于缺陷点。此两个极限独立验证缺陷态存在条件。
+
+\par\medskip
+
+\subsection*{W220\quad 非厄米耦合共振器的二阶例外点}
+
+两个振幅$a_1,a_2$满足$i\dot{\mathbf a}=H\mathbf a$，$H=\begin{pmatrix}\omega_0-i\gamma_1&g\\g&\omega_0-i\gamma_2\end{pmatrix}$，$g>0$且$\gamma_{1,2}\ge0$。
+
+(1) 求非厄米频谱及模式判别式。
+
+(2) 求二阶例外点的条件和特征向量数量。
+
+(3) 写出例外点处的时间演化特殊项。
+
+(4) 区分频率实部劈裂与耗散率劈裂并检验无损极限。
+
+\par\textbf{逐问解析}
+
+(1) 定义$\bar\gamma=(\gamma_1+\gamma_2)/2$、$\Delta\gamma=\gamma_1-\gamma_2$。写$H=(\omega_0-i\bar\gamma)I+g\sigma_x-i(\Delta\gamma/2)\sigma_z$，后两项平方为$[g^2-(\Delta\gamma/2)^2]I$，所以$\lambda_\pm=\omega_0-i\bar\gamma\pm\sqrt{g^2-(\Delta\gamma/2)^2}$。
+
+(2) 当$g=|\Delta\gamma|/2$且$\Delta\gamma\ne0$，判别式为零并且$N=H-(\omega_0-i\bar\gamma)I$非零、满足$N^2=0$。此时代数重数为2而几何重数只有1，两个本征向量合并，构成非厄米二阶例外点；$g=0,\Delta\gamma=0$只是普通退化。
+
+(3) 在例外点$e^{-iHt}=e^{-i(\omega_0-i\bar\gamma)t}e^{-iNt}$，由于$N^2=0$，指数精确截断为$e^{-iHt}=e^{-i\omega_0t-\bar\gamma t}(I-iNt)$。对于一般初值存在$t e^{-\bar\gamma t}$项，体现Jordan块，不能只写两个相同普通指数。
+
+(4) 若$2g>|\Delta\gamma|$，根号为实数，频率实部分裂；若$2g<|\Delta\gamma|$，根号为纯虚数，衰减率分裂。$\gamma_1=\gamma_2=0$时$\lambda_\pm=\omega_0\pm g$并恢复厄米耦合振子的无耗散拍频。
+
+\par\medskip
+
+\subsection*{W221\quad 有限水深重力—毛细波的相速极小值}
+
+不可压、无黏流体深度$h$，自由面有表面张力$\sigma$，密度$\rho$，重力$g$，小振幅平面波波数$k>0$。
+
+(1) 从势流与自由表面边界条件导出色散关系。
+
+(2) 求深水及浅水渐近。
+
+(3) 在深水极限求相速度最小的波数。
+
+(4) 证明最小相速处群速等于相速并给出速度值。
+
+\par\textbf{逐问解析}
+
+(1) 速度势满足$\nabla^2\phi=0$、底部$\phi_z(-h)=0$。选$\phi=A\cosh[k(z+h)]e^{i(kx-\omega t)}$；自由面运动学条件$\eta_t=\phi_z(0)$，动态条件$\phi_t+g\eta-(\sigma/\rho)\eta_{xx}=0$。消去$A,\eta$，得$\omega^2=(gk+\sigma k^3/\rho)\tanh(kh)$。
+
+(2) 若$kh\gg1$，$\tanh(kh)\to1$，则$\omega^2\simeq gk+\sigma k^3/\rho$；若$kh\ll1$，$\tanh(kh)\simeq kh$，故$\omega^2\simeq ghk^2+(\sigma h/\rho)k^4$。无表面张力且浅水时，波速趋$\sqrt{gh}$。
+
+(3) 深水相速度满足$c_p^2=\omega^2/k^2=g/k+(\sigma/\rho)k$。微分$dc_p^2/dk=-g/k^2+\sigma/\rho$，故惟一极小点$k_*=(\rho g/\sigma)^{1/2}$；二阶导$2g/k_*^3>0$，确为最小。
+
+(4) 代回得到$c_{p,min}=(4g\sigma/\rho)^{1/4}$。因$\omega=kc_p(k)$，群速度$c_g=d\omega/dk=c_p+k,dc_p/dk$，在相速度极值点$dc_p/dk=0$，故$c_g(k_*)=c_p(k_*)$。这一等式不依赖具体深水公式，只依赖光滑色散。
+
+\par\medskip
+
+\subsection*{W222\quad Kelvin–Helmholtz 界面稳定性与毛细抑制}
+
+两层无限深、不可压、无黏且无旋流体，上层密度$\rho_1$、速度$U_1$，下层密度$\rho_2>\rho_1$、速度$U_2$，界面张力$\sigma\ge0$，重力$g$向下。
+
+(1) 写出上下流体的衰减势流扰动。
+
+(2) 用运动学与动力学界面条件导出色散关系。
+
+(3) 给出波数依赖的失稳阈值。
+
+(4) 分析大波数表面张力与小波数重力的稳定作用。
+
+\par\textbf{逐问解析}
+
+(1) 令界面位移为$\eta e^{i(kx-\omega t)}$，上、下扰动势可分别取$\phi_1=A_1e^{-kz}e^{i(kx-\omega t)}$、$\phi_2=A_2e^{kz}e^{i(kx-\omega t)}$，因为必须在远离界面处衰减。运动学条件$(\partial_t+U_j\partial_x)\eta=\partial_z\phi_j|_0$给出$A_j$与$\eta$之间关系。
+
+(2) 线性Bernoulli方程给两侧压强扰动$p'_j=-\rho_j[(\partial_t+U_j\partial_x)\phi_j+g\eta]$。把界面压强跃迁与曲率回复项$\sigma k^2\eta$连接并消去$A_j$，得到$\omega=k\bar U\pm\sqrt{[(\rho_2-\rho_1)gk+\sigma k^3]/(\rho_1+\rho_2)-[\rho_1\rho_2/(\rho_1+\rho_2)^2](U_1-U_2)^2k^2}$，其中$\bar U=(\rho_1U_1+\rho_2U_2)/(\rho_1+\rho_2)$。
+
+(3) 根号内为负时频率产生共轭虚部并存在指数增长模。失稳条件可重排为$\rho_1\rho_2(U_1-U_2)^2k^2>(\rho_1+\rho_2)[(\rho_2-\rho_1)gk+\sigma k^3]$；这给出每一波数的临界剪切速度，不是单一与波数无关的数值。
+
+(4) 当$k\to0$，稳定的密度层结提供$gk$回复项，压制长波剪切；当$k\to\infty$且$\sigma>0$，$\sigma k^3$最终占优，压制极短波。若$\sigma=0$，无黏尖锐界面模型可出现无限高波数增长，暴露真实流体黏性和有限剪切层厚度的重要性。
+
+\par\medskip
+
+\subsection*{W223\quad 刚性圆管中的高阶声学模截止}
+
+半径$a$的圆柱形刚性管充满声速$c$的无耗散均匀流体，声压满足波动方程，沿$z$方向传播。
+
+(1) 分离变量建立横向 Bessel 本征问题。
+
+(2) 用硬壁法向速度为零求横向波数。
+
+(3) 求轴向色散与截止频率。
+
+(4) 分析群速、相速和无截止平面模的差异。
+
+\par\textbf{逐问解析}
+
+(1) 取声压$p(r,\theta,z,t)=P(r)e^{im\theta}e^{i(\beta z-\omega t)}$，代入$\nabla^2p-c^{-2}p_{tt}=0$，得到$P''+r^{-1}P'+[k_\perp^2-m^2/r^2]P=0$，其中$k_\perp^2=\omega^2/c^2-\beta^2$。轴心有限要求选择Bessel $J_m(k_\perp r)$，而舍去发散的$Y_m$。
+
+(2) 硬壁无法向速度意味着声压法向梯度为零，$\partial_rp|_{r=a}=0$，因此$J_m'(k_\perp a)=0$。设非零导数零点为$\chi'_{mn}$，则$k_\perp=\chi'_{mn}/a$；每个$(m,n)$模的截止角频率$\omega_{c,mn}=c\chi'_{mn}/a$。
+
+(3) 轴向传播常数满足$\beta^2=\omega^2/c^2-(\chi'_{mn}/a)^2$。$\omega>\omega_c$时$\beta$实、可传播；$\omega<\omega_c$时$\beta$纯虚、沿传播方向倏逝。由微分得$v_g=d\omega/d\beta=c^2\beta/\omega$、$v_p=\omega/\beta$，故$v_pv_g=c^2$。
+
+(4) 管中还存在$m=0,k_\perp=0$的均匀平面声模，其$\omega_c=0$且$\beta=\omega/c$，所以不能笼统说圆管全部声模都有截止。高阶模靠近截止时群速趋零而相速发散，传播能流受到限制。
+
+\par\medskip
+
+\subsection*{W224\quad 简单转折点的 Airy 匹配公式}
+
+一维实波方程$y''+k(x)^2y=0$，在$x=x_t$存在简单转折点；附近$k^2(x)\simeq\alpha(x_t-x)$，$\alpha>0$，左侧振荡右侧指数衰减。
+
+(1) 通过缩放把方程化为 Airy 方程。
+
+(2) 选取禁阻侧衰减解。
+
+(3) 求振荡侧的相位连接与相对振幅。
+
+(4) 解释普通 WKB 在转折点的失效与适用区。
+
+\par\textbf{逐问解析}
+
+(1) 令$\xi=\alpha^{1/3}(x-x_t)$，于是$d^2/dx^2=\alpha^{2/3}d^2/d\xi^2$，$k^2\simeq-\alpha^{2/3}\xi$。原方程成为$y_{\xi\xi}-\xi y=0$。其基本解为$\mathrm{Ai}(\xi)$与$\mathrm{Bi}(\xi)$，转折点被精确统一为无参数正规形。
+
+(2) 当$x>x_t$，$\xi>0$，物理上选择向右衰减的$\mathrm{Ai}(\xi)$，并排除随$x$指数增长的$\mathrm{Bi}(\xi)$。其大正参数渐近为$\mathrm{Ai}(\xi)\sim e^{-2\xi^{3/2}/3}/(2\sqrt\pi\xi^{1/4})$，指数积分等价于$\exp[-\int_{x_t}^{x}\sqrt{-k^2(s)},ds]$。
+
+(3) 当$x<x_t$时$\xi=-z$，$z>0$，$\mathrm{Ai}(-z)\sim\sin(2z^{3/2}/3+\pi/4)/(\sqrt\pi z^{1/4})$。与禁阻侧渐近对比，可写连接式：右侧衰减波$C\exp[-\int_{x_t}^x\kappa ds]/(2\sqrt\kappa)$对应左侧$C\sin[\int_x^{x_t}k ds+\pi/4]/\sqrt{k}$，展示$\pi/4$相位和2倍幅度。
+
+(4) 普通WKB振幅$k(x)^{-1/2}$在$k(x_t)=0$发散，因此必须用Airy局域解桥接。转折点外的渐近要求$|k'|\ll k^2$，亦即远离$|x-x_t|\sim\alpha^{-1/3}$的Airy尺度；若转折点非简单零点则需另一种正规形。
+
+\par\medskip
+
+\subsection*{W225\quad 聚焦非线性 Schrödinger 方程的亮孤子}
+
+无损光学或物质波包络满足$i\partial_zA+(\beta/2)\partial_t^2A+\gamma|A|^2A=0$，$\beta>0,\gamma>0$，假设局域包络且无高阶色散。
+
+(1) 采用行波驻相位假设并推导常微分方程。
+
+(2) 求具有有限能量的sech型孤子条件。
+
+(3) 验证功率积分守恒并计算孤子范数。
+
+(4) 检验线性色散与非线性项的平衡及失效因素。
+
+\par\textbf{逐问解析}
+
+(1) 试$A(z,t)=u(t)e^{i\lambda z}$，$u$取实、趋无穷远衰减。代入方程有$-\lambda u+(\beta/2)u''+\gamma u^3=0$，其保守一阶积分为$(\beta/4)(u')^2-(\lambda/2)u^2+(\gamma/4)u^4=0$，积分常数由$u,u'\to0$确定。
+
+(2) 取$u(t)=A_0\operatorname{sech}(t/T)$，利用$u''=u/T^2-2u^3/(A_0^2T^2)$，代入后逐项比较$u$与$u^3$的系数，得$\lambda=\beta/(2T^2)$以及$A_0^2=\beta/(\gamma T^2)$。故精确亮孤子为$A=\sqrt{\beta/\gamma}\,T^{-1}\operatorname{sech}(t/T)e^{i\beta z/(2T^2)}$。
+
+(3) 方程乘$A^*$并减去复共轭可得连续性方程$\partial_z|A|^2+\partial_tJ=0$（边界通量消失），因此$N=\int_{-\infty}^{\infty}|A|^2dt$沿$z$守恒。对孤子直接积分$\int\operatorname{sech}^2(t/T)dt=2T$，得到$N=2\beta/(\gamma T)$。
+
+(4) 孤子宽度$T$减小使所需峰值$A_0^2=\beta/(\gamma T^2)$按$T^{-2}$升高，恰好平衡二阶色散和Kerr非线性。在$\gamma\to0$时固定$T$所需幅度发散，说明纯线性方程没有此类有限幅度非展宽孤子；吸收、高阶色散和Raman效应可破坏精确形状。
+
+\par\medskip
