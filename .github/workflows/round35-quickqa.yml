@@ -1,0 +1,36 @@
+name: Round35 fast physics model quality gate
+on:
+  pull_request:
+    paths:
+      - "editorial/round35/source/**"
+      - "editorial/round35/qa_*.py"
+      - "editorial/round35/build_review.py"
+      - ".github/workflows/round35-quickqa.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: physics-round35-50-advanced-review-20261030
+      - name: Execute 200 per-subpart numeric checks and validate source structure
+        run: |
+          cd editorial/round35
+          python3 - <<'PY'
+          import build_review
+          rows=build_review.load_sources()
+          build_review.emit_source_triples(rows)
+          report=build_review.model_tests(rows)
+          print("Round35",len(rows),"problem sources and",report["passing"],"model checks PASS")
+          PY
+      - name: Upload detailed failure diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: round35-model-checks
+          path: editorial/round35/review-release/QA_200.json
+          if-no-files-found: warn
