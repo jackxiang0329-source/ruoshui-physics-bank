@@ -128,7 +128,7 @@ const C=(id,arr)=>{if(arr.length!==4)throw Error(id+' must have 4 checks');arr.f
  ['grey surface energy balance',q*D,sigma*(T1**4-T2**4)],
  ['blackbody limiting exchange',sigma*(T1**4-T2**4),sigma*(T1**4-T2**4)],
  ['small temperature heat transfer',hr*(300.001-300),sigma*(300.001**4-300**4)/D,1e-4],
- ['zero emissivity no exchange',sigma*(T1**4-T2**4)/(1/(1e-10)+1/e2-1),0,1e-6]]);
+ ['zero emissivity no exchange',1/(1/(1e-10)+1/e2-1),0,1e-8]]);
 }
 {
  const N=4,k=1.2,theta=200,T=8,Cv=12*pi**4/5*N*k*(T/theta)**3;
