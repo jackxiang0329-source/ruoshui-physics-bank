@@ -1,4 +1,4 @@
-(1) 入射 Jones 向量为 $(1,1)^T/\sqrt2$，相位延迟片仅改变两正交分量的相对相位，故透过为 $\mathbf e=(1,e^{i\delta})^T/\sqrt2$。模平方 $|E_x|^2+|E_y|^2=1$，说明无吸收波片不会改变总强度。
-(2) 按题中明确规定的 Stokes 符号约定，$S_0=1$、$S_1=0$、$S_2=\cos\delta$、$S_3=\sin\delta$。恒等式 $S_1^2+S_2^2+S_3^2=1=S_0^2$ 表明输出仍是完全偏振态；若换用另一种右左旋圆偏振约定，只有 $S_3$ 符号随之更换。
-(3) 检偏器 Jones 投影为 $(\cos\beta,\sin\beta)\mathbf e=(\cos\beta+e^{i\delta}\sin\beta)/\sqrt2$。取模平方得 $I(\beta)/I_0=\frac12[1+\sin(2\beta)\cos\delta]$；改变偏振片角度只选择光强分量，不会使无损相位延迟片产生或消灭光子能量。
-(4) $\delta=0$ 时仍是 $45^\circ$ 线偏振，$I/I_0=\cos^2(\beta-\pi/4)$；$\delta=\pi$ 时为 $-45^\circ$ 线偏振，$I/I_0=\cos^2(\beta+\pi/4)$。$\delta=\pi/2$ 时两分量等幅正交相位，为圆偏振，任意线检偏器均透过 $I_0/2$。三种情况下波片透过总强度均保持 $I_0$。
+(1) 单色自由空间标量场满足 $(\partial_x^2+\partial_z^2+k_0^2)E=0$。将横向因子 $e^{ik_xx}$ 分离后 $E(x,z)=E_0e^{ik_xx}e^{ik_zz}$，$k_z^2=k_0^2-k_x^2$。辐射边界条件选向 $+z$ 传播或衰减的根，不可任意取造成无界增长的解。
+(2) 当 $|k_x|<k_0$ 时 $k_z=\sqrt{k_0^2-k_x^2}$ 为实数，波以纵向相位传播。当 $|k_x|>k_0$ 时 $k_z=i\kappa$，$\kappa=\sqrt{k_x^2-k_0^2}>0$，因此 $E=E_0e^{ik_xx}e^{-\kappa z}$；振幅衰减长度 $\ell_{\rm ev}=1/\kappa$，强度的 $1/e$ 长度是 $1/(2\kappa)$。
+(3) 周期结构基波对应 $k_x=\pm2\pi/\Lambda$。当 $\Lambda<\lambda=2\pi/k_0$ 时 $|k_x|>k_0$，两个一级谐波均为倏逝波，其振幅在距离 $z$ 处衰减为 $\exp[-z\sqrt{(2\pi/\Lambda)^2-(2\pi/\lambda)^2}]$ 倍。若 $\Lambda>\lambda$ 则可以成为倾角传播分量，临界 $\Lambda=\lambda$ 为掠射边界。
+(4) 对纯倏逝场 $\partial_zE=-\kappa E$，所以 $E^*\partial_zE=-\kappa|E|^2$ 为实数，$J_z\propto\Im(E^*\partial_zE)=0$。倏逝近场可以在界面附近携带亚波长结构，但远离界面会指数消失；近场探针可在有限小距离耦合这些谱分量，不能据此宣称自由空间远场无需任何条件即可实现任意分辨率。

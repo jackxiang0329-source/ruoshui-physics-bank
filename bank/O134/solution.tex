@@ -1,4 +1,4 @@
-(1) 近轴近似下两缝至屏上 $x$ 的光程差 $\Delta\ell\simeq dx/L$，相位差为 $2\pi dx/(\lambda L)$，因此明纹相邻间距 $\Delta x=\lambda L/d$。此式只取决于双缝间距、波长和观测几何，暂不涉及照明的空间相干长度。
-(2) 将线光源坐标记为 $s\in[-a/2,a/2]$。不同 $s$ 发出的光彼此非相干，而每一光源点到双缝的相位差为 $2\pi ds/(\lambda S)$；归一化相干度为 $\gamma_{12}=(1/a)\int_{-a/2}^{a/2}e^{i2\pi ds/(\lambda S)}ds=\sin(\pi ad/(\lambda S))/[\pi ad/(\lambda S)]$。
-(3) 若各缝在观察屏贡献强度为 $I_s$，则 $I(x)=2I_s[1+\gamma_{12}\cos(2\pi dx/(\lambda L))]$，此处 $\gamma_{12}$ 为实数，若为负则对应 $\pi$ 相位翻转。可见度 $\mathcal V=|\gamma_{12}|$，其第一个非平凡零点为 $ad/(\lambda S)=1$，即 $a_{\rm zero}=\lambda S/d$。
-(4) 当 $a\to0$ 时利用 $\sin z/z\to1$，恢复点源的完全空间相干照明；$d\to0$ 时两采样位置重合，相干度也趋一，但条纹间距发散而不再形成可辨周期条纹。线光源中不同发光点给出的条纹整体横向错位，强度非相干叠加使对比度被平均掉，并非每个点源自身失去干涉能力。
+(1) 令横向空间频率 $q=k_0\sin\theta=2\pi\sin\theta/\lambda$。两狭缝的孔径函数是中心位于 $\pm d/2$、宽度各为 $a$ 的两个矩形函数之和。其 Fourier 振幅为 $A(q)=2a\,\operatorname{sinc}(qa/2)\cos(qd/2)$，其中 $\operatorname{sinc}x=\sin x/x$，忽略共同光程与成像比例常数。
+(2) 强度与 $|A(q)|^2$ 成正比，归一到中央峰后 $I(\theta)/I(0)=\operatorname{sinc}^2(\pi a\sin\theta/\lambda)\cos^2(\pi d\sin\theta/\lambda)$。干涉主峰候选满足 $d\sin\theta=m\lambda$，单缝包络零点满足 $a\sin\theta=p\lambda$（$p$ 为非零整数），但复合光栅的真实局部峰值可被包络稍微移位。
+(3) 当 $d/a=N\in\mathbb N$，在 $m$ 级干涉主峰候选处，单缝变量为 $\pi a(m\lambda/d)/\lambda=\pi m/N$。当 $m=\pm N,\pm2N,\ldots$ 且对应角度可传播时，单缝因子为零，故这些级次严格缺失；若 $|m\lambda|>d$，该级本身不存在，不能称为观测到的缺级。
+(4) 采用 Fourier 对 $A(q)=\int t(x)e^{-iqx}dx$ 的约定，Parseval 定理给 $\int_{-\infty}^{\infty}|A(q)|^2dq=2\pi\int|t(x)|^2dx=4\pi a$，因两缝互不重叠，其透射面积长度为 $2a$。故总横向波数谱能量不依赖缝距；但实际角度只允许 $|q|\le k_0$，且斜入射和倾斜通量权重会修改有限角范围内的积分，不可混淆。

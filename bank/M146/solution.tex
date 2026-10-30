@@ -1,4 +1,4 @@
-(1) 全链各段具有相同速率 $\dot x$，动能为 $\frac12\lambda L\dot x^2$。以桌面为零势能，只有悬垂段具有位能 $U(x)=-\lambda g x^2/2$。在无耗散且忽略折角储能的理想条件下，拉氏方程得 $\lambda L\ddot x=\lambda g x$，故 $\ddot x=(g/L)x$；有效惯性始终是整条链而不是仅悬垂段。
-(2) 设 $\omega=\sqrt{g/L}$，初值 $x(0)=x_0$、$\dot x(0)=0$ 对应 $x(t)=x_0\cosh(\omega t)$、$\dot x=x_0\omega\sinh(\omega t)$。到达 $x=L$ 的第一时间为 $t_*= \sqrt{L/g}\,\operatorname{arcosh}(L/x_0)$，仅在 $0\le t\le t_*$ 时符合指定几何约束。
-(3) 从初态能量 $-\lambda gx_0^2/2$ 与任意时刻 $E=\frac12\lambda L\dot x^2-\frac12\lambda g x^2$ 相等，得 $\dot x^2=(g/L)(x^2-x_0^2)$。将双曲函数解代入，右端为 $(g/L)x_0^2\sinh^2(\omega t)$，恰与速度平方相符；能量和动力学推导相互独立。
-(4) $x_0\to0^+$ 时 $t_*\sim\sqrt{L/g}\ln(2L/x_0)\to\infty$，说明理想零悬垂长没有初始驱动力。$x_0\to L^-$ 时 $t_*\to0$。末端越过桌角以后自由端、弯曲波、碰撞或非理想耗散会改变运动，故不能把本解延拓至 $x>L$。
+(1) 质心运动与相对运动分离，约化质量为 $\mu=m_1m_2/(m_1+m_2)$。在接触压缩阶段取 $\dot\delta(0)=v_0$，满足 $\mu\ddot\delta=-k\delta^{3/2}$，积分给 $\frac12\mu\dot\delta^2+\frac25k\delta^{5/2}=\frac12\mu v_0^2$，因为接触势能为 $\int_0^\delta k s^{3/2}ds$。
+(2) 在转折点 $\dot\delta=0$，由能量守恒有 $\delta_{\max}^{5/2}=5\mu v_0^2/(4k)$，故 $\delta_{\max}=[5\mu v_0^2/(4k)]^{2/5}$。最大接触力 $F_{\max}=k\delta_{\max}^{3/2}=k[5\mu v_0^2/(4k)]^{3/5}$；它分别正比于 $v_0^{4/5}$ 的压缩量和 $v_0^{6/5}$ 的峰值力。
+(3) 由速度积分 $\dot\delta=v_0\sqrt{1-(\delta/\delta_{\max})^{5/2}}$，压缩与恢复阶段时间相等，所以 $t_{\rm col}=2\delta_{\max}v_0^{-1}\int_0^1(1-u^{5/2})^{-1/2}du$。代换 $w=u^{5/2}$ 给 $\int_0^1\cdots du=(2/5)B(2/5,1/2)$，故 $t_{\rm col}=[4\delta_{\max}/(5v_0)]B(2/5,1/2)$。
+(4) 接触势为保守势，重新分离时 $\delta=0$，故 $\dot\delta=-v_0$，恢复系数 $e=1$。相对动量变化大小为 $|\Delta p_{\rm rel}|=2\mu v_0$，等于一物体所受法向冲量大小。若塑性形变、声辐射或粘弹耗散不可忽略，势能守恒及 $e=1$ 均不再成立，必须改用有耗散接触模型。

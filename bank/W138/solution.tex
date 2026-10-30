@@ -1,4 +1,4 @@
-(1) 横向力平衡给 $\mu y_{tt}=Ty_{xx}-2\mu\gamma y_t$，即 $y_{tt}+2\gamma y_t=c^2y_{xx}$，$c=\sqrt{T/\mu}$。固定端 $y(0,t)=y(L,t)=0$ 使空间本征模为 $\sin(n\pi x/L)$、波数 $k_n=n\pi/L$，$n=1,2,\ldots$。
-(2) 设 $y(x,t)=q_n(t)\sin k_nx$，可得 $\ddot q_n+2\gamma\dot q_n+\omega_{0n}^2q_n=0$，$\omega_{0n}=ck_n$。当 $\gamma<\omega_{0n}$ 时 $q_n=e^{-\gamma t}[A_n\cos(\omega_dt)+B_n\sin(\omega_dt)]$，$\omega_d=\sqrt{\omega_{0n}^2-\gamma^2}$，振幅包络确为 $e^{-\gamma t}$。
-(3) 能量 $E=\frac12\int_0^L[\mu y_t^2+T y_x^2]dx$。微分并分部积分，固定端不做功，得 $dE/dt=-2\mu\gamma\int_0^L y_t^2dx\le0$。弱阻尼下周期平均动能约占总能量一半，故能量包络为 $e^{-2\gamma t}$，每弧度耗散比给 $Q_n\simeq\omega_{0n}/(2\gamma)$。
-(4) 模态满足 $\gamma<ck_n$ 才振荡，等号临界阻尼，$\gamma>ck_n$ 时为两个实衰减根的非振荡解。$\gamma\to0$ 恢复标准弦的正弦时间振动且能量守恒；强阻尼不能把 $\omega_d$ 当成实数振荡频率，也不应继续套用弱阻尼品质因数近似。
+(1) 原子受到两侧弹簧力 $K(u_{n+1}-u_n)$ 和 $K(u_{n-1}-u_n)$，故 $m\ddot u_n=K(u_{n+1}-2u_n+u_{n-1})$。这里离散二阶差分在长波极限才近似连续二阶空间导数，不能在任意 $ka$ 下直接令晶格无色散。
+(2) 代入行波后 $-m\omega^2=K(e^{ika}+e^{-ika}-2)=-4K\sin^2(ka/2)$，因此 $\omega(k)=2\sqrt{K/m}\,|\sin(ka/2)|$。第一 Brillouin 区为 $-\pi/a\le k\le\pi/a$，最高频率 $\omega_D=2\sqrt{K/m}$，对应区边界。
+(3) 对 $0<ka<\pi$，相速度 $v_p=(2/k)\sqrt{K/m}\sin(ka/2)$，群速度 $v_g=d\omega/dk=a\sqrt{K/m}\cos(ka/2)$。当 $ka\ll1$，$\sin(ka/2)\simeq ka/2$，两速度都趋于连续声速 $c=a\sqrt{K/m}$；区边界群速度趋零，说明波包传播变慢。
+(4) 允许波数密度为 $L/(2\pi)$，正频率同时有 $\pm k$ 两个态，故 $g(\omega)/L=(1/\pi)|dk/d\omega|=[\pi a\sqrt{K/m}\sqrt{1-(\omega/\omega_D)^2}]^{-1}$，$0<\omega<\omega_D$。频带边缘 $v_g\to0$ 导致态密度具有平方根奇性，但积分总态数有限，并非无限多个原子。
