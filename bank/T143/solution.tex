@@ -1,0 +1,4 @@
+(1) 内部工质经历可逆循环，所以内部传热的熵流平衡为 $\dot Q_c/\dot Q_h=T_2/T_1\equiv r$，其中 $T_c/T_h<r<1$。定义输出功率 $P=\dot Q_h-\dot Q_c=\dot Q_h(1-r)$；各侧有限温差造成外部熵产生，但不改变内部可逆关系。
+(2) 由 $K(T_2-T_c)=rK(T_h-T_1)$ 且 $T_2=rT_1$，解得 $T_1=(rT_h+T_c)/(2r)$，$T_2=(rT_h+T_c)/2$。于是 $\dot Q_h=K(T_h-T_c/r)/2$，功率 $P(r)=\frac K2[T_h+T_c-rT_h-T_c/r]$，它在可行区两端趋零。
+(3) 求导 $dP/dr=K[-T_h+T_c/r^2]/2$，唯一极大点为 $r_*=\sqrt{T_c/T_h}$，二阶导 $d^2P/dr^2=-KT_c/r^3<0$。代入得 $P_{\max}=\frac K2(\sqrt{T_h}-\sqrt{T_c})^2$，最大功率效率 $\eta_*=1-\dot Q_c/\dot Q_h=1-\sqrt{T_c/T_h}$。
+(4) 卡诺上限 $\eta_C=1-T_c/T_h$，对 $0<T_c/T_h<1$ 有 $\eta_*<\eta_C$，原因是必须保留有限温差才能有非零传热功率。$T_c\to T_h$ 时 $\eta_*,P_{\max}\to0$；$K$ 翻倍使最优功率翻倍，但温度比和最优效率不变。
