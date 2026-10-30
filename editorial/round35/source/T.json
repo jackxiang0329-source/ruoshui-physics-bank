@@ -180,7 +180,7 @@
     "s": [
       "焓H=U+Pv满足dH=T dS+v dP，熵微分dS=(Cp/T)dT−(∂v/∂T)_P dP（Maxwell关系）。因此 dH=Cp dT+[v−T(∂v/∂T)_P]dP，在等焓节流中μJT=(∂T/∂P)_H=[T(∂v/∂T)_P−v]/Cp。",
       "低密度van der Waals反解近似v≈RT/P+b−a/(RT)，故T(∂v/∂T)_P−v≈[RT/P+a/(RT)]−[RT/P+b−a/(RT)]=2a/(RT)−b。因此μJT≈[2a/(RT)−b]/Cp，稀气反转温度T_inv≈2a/(Rb)。",
-      "由隐式方程P_v=−RT/(v−b)²+2a/v³、P_T=R/(v−b)，固定P下v_T=−P_T/P_v。反转T v_T=v并代入化简，得RT [2v−b]/(v−b)²=2a/v，故T_inv(v)=2a(v−b)²/[R v(2v−b)]，再用原状态方程求P_inv(v)。",
+      "由隐式状态方程求P_v=−RT/(v−b)²+2a/v³、P_T=R/(v−b)，故恒压体积温度导数v_T=−P_T/P_v。反转条件T v_T=v，代入得TR/(v−b)=v[RT/(v−b)²−2a/v³]，整理成RT b/(v−b)²=2a/v²，因此严格反转曲线为T_inv(v)=2a(v−b)²/(R b v²)，对应压力用原van der Waals方程求出。",
       "理想气体a=b=0时v=RT/P，故T v_T−v=0，节流不升也不降温；有吸引/排斥的真实气体可随温压改变符号。临界区Cp、压缩率可能剧变，稀密展开与恒Cp假设不能定量套用。"
     ],
     "tags": [
