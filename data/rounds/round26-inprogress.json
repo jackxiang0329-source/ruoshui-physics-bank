@@ -59,12 +59,28 @@
   "source_triples": 120,
   "question_subparts": 160,
   "solution_subparts": 160,
-  "quality_status": "待独立复核",
-  "technical_source_status": "CI pending",
-  "formula_regressions": "CI pending",
-  "pdf_status": "CI pending",
+  "quality_status": "自动结构与公式核验及双PDF编译通过；独立专家审校待完成",
+  "technical_source_status": "PASS: 40 source triples, 160 question parts, 160 solution parts, TeX syntax and near-duplicate screening",
+  "formula_regressions": "PASS: 160/160 formula and numerical regression assertions on round26 model script",
+  "pdf_status": "PASS: question and solution Chinese XeLaTeX PDF compilation",
   "independent_expert_review": "待独立复核",
   "independent_expert_subpart_reviews": 0,
   "merge_to_main_allowed": false,
-  "formal_main_gate": "50 items and 200 independently evaluated subparts, successful two XeLaTeX books"
+  "formal_main_gate": "50 items and 200 independently evaluated subparts, successful two XeLaTeX books",
+  "verified_ci_run_id": 41020624965,
+  "verified_ci_commit": "72cf4f121c16f54e215501ba09d8cc8c6638b75a",
+  "verified_artifacts": {
+    "pdfs": {
+      "name": "round26-draft-two-pdfs",
+      "id": 12961611354,
+      "size_bytes": 1097587
+    },
+    "qa_report": {
+      "name": "round26-technical-qa",
+      "id": 12960699140,
+      "size_bytes": 8937
+    }
+  },
+  "sources_unchanged_since_verified_run": true,
+  "note": "40 problems/160 subparts meet a draft-work-branch technical gate only; formal main release 50 problems/200 independent checks; no certification of external expert review."
 }
