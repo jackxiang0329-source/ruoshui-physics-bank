@@ -1,4 +1,4 @@
-(1) 小横振动满足 $\mu_j y_{tt}=Ty_{xx}$，在第 $j$ 根弦上相速度 $c_j=\sqrt{T/\mu_j}$、波数 $k_j=\omega/c_j$。以 $e^{-i\omega t}$ 为公共因子，左侧位移为 $A(e^{ik_1x}+r e^{-ik_1x})$，右侧为 $At e^{ik_2x}$；两侧波的频率必须一致，因为连接点静止且边界条件不随时间变化。
-(2) 连接点位移连续给 $1+r=t$，横向张力分量连续给 $T ik_1(1-r)=T ik_2 t$。联立解得 $r=(k_1-k_2)/(k_1+k_2)=(c_2-c_1)/(c_1+c_2)$，$t=2k_1/(k_1+k_2)=2c_2/(c_1+c_2)$。如果第二根弦更重则 $c_2<c_1$，反射位移振幅为负，意味着相位翻转。
-(3) 对位移波幅 $A$，沿弦方向的时间平均功率为 $\bar P_j=T\omega k_j|A_j|^2/2$。因此 $\mathcal R=|r|^2=(k_1-k_2)^2/(k_1+k_2)^2$，$\mathcal T=(k_2/k_1)|t|^2=4k_1k_2/(k_1+k_2)^2$。两者相加为 $(k_1+k_2)^2/(k_1+k_2)^2=1$；不能把位移透射振幅平方直接当透射能流率。
-(4) 当 $\mu_1=\mu_2$，两侧波速与波数相同，有 $r=0,t=1$，没有反射。当 $\mu_2\gg\mu_1$ 时 $k_2\gg k_1$，$r\to-1,t\to0$，连接近似固定端，反射位移发生 $\pi$ 相位翻转。反方向轻弦连接也可出现同相反射，但能量恒守恒。
+(1) 微小弦元横向张力合力为 $T\partial_x^2y\,dx$，黏滞力为 $-\gamma\partial_ty\,dx$，牛顿第二定律给 $\mu y_{tt}+\gamma y_t=Ty_{xx}$。两端固定为 $y(0,t)=y(L,t)=0$。$\mu$ 的单位是质量每长度，而 $\gamma$ 的单位是质量每长度每时间，两者不可混用。
+(2) 用正弦本征函数代入方程得到 $\ddot q_n+(\gamma/\mu)\dot q_n+\omega_n^2q_n=0$，其中 $\omega_n=(n\pi/L)\sqrt{T/\mu}$。定义 $\alpha=\gamma/(2\mu)$，欠阻尼条件是 $\omega_n>\alpha$，此时振荡角频率 $\omega_{dn}=\sqrt{\omega_n^2-\alpha^2}$，不是原来无阻尼的 $\omega_n$。
+(3) 该模态方程的通解为 $q_n=e^{-\alpha t}[C\cos(\omega_{dn}t)+D\sin(\omega_{dn}t)]$。施加 $q_n(0)=A$ 得 $C=A$，施加 $\dot q_n(0)=0$ 得 $D=\alpha A/\omega_{dn}$。故 $q_n(t)=Ae^{-\alpha t}[\cos(\omega_{dn}t)+(\alpha/\omega_{dn})\sin(\omega_{dn}t)]$，同时满足初始位移与速度约束。
+(4) 把波方程乘 $y_t$ 并沿 $0<x<L$ 积分，利用固定端边界可得 $dE/dt=-\gamma\int_0^Ly_t^2dx\le0$，其中 $E=\int_0^L[\mu y_t^2+Ty_x^2]dx/2$。弱阻尼下模态振幅包络为 $e^{-\alpha t}$，能量包络近似 $e^{-2\alpha t}=e^{-\gamma t/\mu}$，寿命 $\tau_E=\mu/\gamma$，品质因子 $Q_n\simeq\omega_n/(2\alpha)=\mu\omega_n/\gamma$。
