@@ -1,0 +1,254 @@
+[
+  {
+    "id": "E256",
+    "title": "同轴电缆中的电磁动量、能流与Maxwell应力",
+    "setup": "理想无耗散同轴电缆内外导体半径 \\(a<b\\)，电介质 \\((\\varepsilon,\\mu)\\)，单位长度电荷 \\(\\lambda\\)、轴向电流 \\(I\\)。",
+    "q": [
+      "求径向电场、环向磁场和电压。",
+      "积分Poynting能流得到传输功率。",
+      "计算每单位长度电磁能量与传播速度。",
+      "求电磁场动量密度并解释定常场。"
+    ],
+    "s": [
+      "Gauss定律给 \\(E_r(r)=\\lambda/(2\\pi\\varepsilon r)\\)，Ampère环路给 \\(H_\\phi(r)=I/(2\\pi r)\\)，仅在 \\(a<r<b\\) 适用。两导体间电压 \\(V=\\int_a^bE_rdr=\\lambda\\ln(b/a)/(2\\pi\\varepsilon)\\)，必须明确符号随内导体正电荷方向决定。",
+      "Poynting矢量为 \\(\\boldsymbol S=\\boldsymbol E\\times\\boldsymbol H=E_rH_\\phi\\hat z\\)。横截面积分 \\(P=\\int_a^bE_rH_\\phi\\,2\\pi r\\,dr=\\lambda I\\ln(b/a)/(2\\pi\\varepsilon)=VI\\)，说明无耗散电缆中的能量主要经介电间隙而不是导体内部传播。",
+      "电能 \\(U_E'=\\int_a^b\\varepsilon E_r^2\\,\\pi r\\,dr=\\lambda^2\\ln(b/a)/(4\\pi\\varepsilon)\\)，磁能 \\(U_B'=\\mu I^2\\ln(b/a)/(4\\pi)\\)。故 \\(C'=2\\pi\\varepsilon/\\ln(b/a)\\)，\\(L'=\\mu\\ln(b/a)/(2\\pi)\\)，相速度 \\(v=1/\\sqrt{L'C'}=1/\\sqrt{\\mu\\varepsilon}\\)。",
+      "Abraham型电磁动量密度可写 \\(\\boldsymbol g=\\boldsymbol S/c_m^2\\)，其中 \\(c_m=1/\\sqrt{\\mu\\varepsilon}\\) 在理想无色散介质近似下成立，故 \\(\\boldsymbol g=\\mu\\varepsilon E_rH_\\phi\\hat z\\)。若需处理介质机械动量及Abraham–Minkowski差异，必须指定封闭系统的应力—能量张量；不能将此局部表达当作普适总动量。"
+    ],
+    "tags": [
+      "电磁能流",
+      "传输线",
+      "动量张量"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "E257",
+    "title": "球形介电体置于均匀外场的极化能与表面电荷",
+    "setup": "半径 \\(a\\) 的无损线性介电球 \\(\\varepsilon_1>0\\) 嵌在无限介质 \\(\\varepsilon_2>0\\) 中，远场外电场为 \\(E_0\\hat z\\)。",
+    "q": [
+      "从轴对称Laplace方程建立电势。",
+      "求球内均匀电场和诱导偶极矩。",
+      "计算球面极化电荷的角分布。",
+      "核验导体极限与无介电对比极限。"
+    ],
+    "s": [
+      "设 \\(\\Phi_{\\rm in}=-E_{\\rm in}r\\cos\\theta\\)，\\(\\Phi_{\\rm out}=-E_0r\\cos\\theta+C\\cos\\theta/r^2\\)，前者原点正则、后者远场恢复外场。电势连续与 \\(\\varepsilon\\partial_r\\Phi\\) 连续给两条独立线性边界方程。",
+      "由连续性求 \\(E_{\\rm in}=3\\varepsilon_2E_0/(\\varepsilon_1+2\\varepsilon_2)\\)，\\(C=a^3E_0(\\varepsilon_1-\\varepsilon_2)/(\\varepsilon_1+2\\varepsilon_2)\\)。将偶极电势 \\(p\\cos\\theta/(4\\pi\\varepsilon_2r^2)\\) 与 \\(C\\) 项比较，得 \\(p=4\\pi\\varepsilon_2a^3(\\varepsilon_1-\\varepsilon_2)E_0/(\\varepsilon_1+2\\varepsilon_2)\\)。",
+      "若球内的绝对极化定义为 \\(\\boldsymbol P=(\\varepsilon_1-\\varepsilon_0)\\boldsymbol E_{\\rm in}\\)，则球表面束缚电荷密度 \\(\\sigma_b=\\boldsymbol P\\cdot\\hat r=(\\varepsilon_1-\\varepsilon_0)E_{\\rm in}\\cos\\theta\\)。注意包围介质本身有极化时，两侧束缚面电荷应分别计算，而净界面电荷依两侧 \\(\\boldsymbol P\\) 跳跃。",
+      "若 \\(\\varepsilon_1\\to\\infty\\)，则 \\(E_{\\rm in}\\to0\\)、\\(p\\to4\\pi\\varepsilon_2a^3E_0\\)，为完美导体球结果；若 \\(\\varepsilon_1=\\varepsilon_2\\)，则 \\(C=p=0\\)、\\(E_{\\rm in}=E_0\\)，无介电界面散射。若 \\(\\varepsilon_1<\\varepsilon_2\\)，诱导偶极与远场方向相反。"
+    ],
+    "tags": [
+      "Laplace边值",
+      "介质极化",
+      "偶极矩"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "E258",
+    "title": "一维静态磁畴壁的交换—各向异性能量与宽度",
+    "setup": "单轴铁磁体磁化单位向量 \\(\\boldsymbol n(x)\\)，取畴壁角度 \\(\\theta(x)\\)，交换刚度 \\(A>0\\)，易轴各向异性 \\(K>0\\)，能量每单位面积 \\(\\mathcal E=\\int[A(\\theta')^2+K\\sin^2\\theta]dx\\)，边界 \\(\\theta(-\\infty)=0,\\theta(\\infty)=\\pi\\)。",
+    "q": [
+      "写Euler–Lagrange方程和一次积分。",
+      "构造Bloch型畴壁的角度剖面。",
+      "求畴壁总自由能与交换—各向异性均分。",
+      "讨论 (A) 与 (K) 的不同调节。"
+    ],
+    "s": [
+      "变分给 \\(-2A\\theta''+2K\\sin\\theta\\cos\\theta=0\\)，即 \\(A\\theta''=(K/2)\\sin2\\theta\\)。乘 \\(\\theta'\\) 并用无穷远边界 \\(\\theta'\\to0,\\sin\\theta\\to0\\)，得到一次积分 \\(A(\\theta')^2=K\\sin^2\\theta\\)。",
+      "选从0增至 \\(\\pi\\) 的支 \\(\\theta'=\\sqrt{K/A}\\sin\\theta\\)，分离积分 \\(\\int d\\theta/\\sin\\theta=\\ln\\tan(\\theta/2)=(x-x_0)/\\delta\\)，其中 \\(\\delta=\\sqrt{A/K}\\)。因此 \\(\\theta=2\\arctan e^{(x-x_0)/\\delta}\\)、\\(\\cos\\theta=-\\tanh[(x-x_0)/\\delta]\\)。",
+      "利用 \\(A\\theta'^2=K\\sin^2\\theta\\)，能量 \\(\\sigma=2K\\int_{-\\infty}^\\infty\\sin^2\\theta\\,dx\\)。因 \\(\\sin\\theta=\\operatorname{sech}((x-x_0)/\\delta)\\)，积分为 \\(2\\delta\\)，得 \\(\\sigma=4K\\delta=4\\sqrt{AK}\\)。交换能和各向异性能各为 \\(2\\sqrt{AK}\\)。",
+      "交换刚度增大使 \\(\\delta\\propto\\sqrt A\\) 变宽、壁能 \\(\\sigma\\propto\\sqrt A\\) 增大；各向异性增大则壁变窄而总壁能仍增加。若加入Dzyaloshinskii–Moriya相互作用，一次积分与旋转手性会改变，不能直接沿用此无手性壁。"
+    ],
+    "tags": [
+      "连续介质磁学",
+      "孤子畴壁",
+      "变分"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "E259",
+    "title": "理想霍尔条中的边缘电场、功率与多载流子反演",
+    "setup": "二维导电薄层厚度 \\(t\\)，单种载流子密度 \\(n\\)、带电量 \\(q\\ne0\\)、迁移率 \\(\\mu_c>0\\)，垂直磁场 \\(B\\hat z\\)，驱动电流 \\(I_x\\)。",
+    "q": [
+      "从Drude稳态速度平衡求霍尔场。",
+      "推导霍尔电压与电流的几何关系。",
+      "分析霍尔场对焦耳热的贡献。",
+      "解释两载流子Hall符号可能反转。"
+    ],
+    "s": [
+      "横向开路稳态条件是 \\(q(E_y+\\boldsymbol v\\times\\boldsymbol B|_y)=0\\)。若电流沿 \\(x\\)、载流子速度为 \\(v_x\\)，有 \\(E_y=v_xB\\)（方向依坐标约定），且 \\(j_x=nqv_x\\)，故带符号Hall系数 \\(R_H=E_y/(j_xB)=1/(nq)\\) 在指定电压极性下成立。",
+      "设条宽 \\(w\\)，有 \\(j_x=I_x/(wt)\\)，电压幅值 \\(V_H=|E_y|w=|R_H|I_xB/t=I_xB/(n|q|t)\\)。宽度抵消，厚度不能遗漏；若使用二维面密度 \\(n_s=nt\\)，则 \\(V_H=I_xB/(n_s|q|)\\)。",
+      "横向Hall电场产生的功率密度 \\(j_yE_y=0\\)，因为开路 \\(j_y=0\\)。电流仍通过纵向电场耗散，功率 \\(P=I_xV_x\\ge0\\)；单载流子Drude模型中纯Hall项为反对称无耗散输运，不是额外能量来源。",
+      "若电子、空穴密度为 \\(n,p\\)，迁移率分别 \\(\\mu_e,\\mu_h\\)，弱场两载流子Hall系数为 \\(R_H=(p\\mu_h^2-n\\mu_e^2)/[e(p\\mu_h+n\\mu_e)^2]\\)。因此Hall符号由迁移率平方加权决定，不能只按多数载流子的粒子数判断。"
+    ],
+    "tags": [
+      "输运理论",
+      "霍尔效应",
+      "载流子反演"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "E260",
+    "title": "小天线辐射电阻与短电偶极子匹配",
+    "setup": "长度 \\(l\\ll\\lambda\\) 的理想短线天线，电流分布近似均匀且谐波电流峰值 \\(I_0\\cos\\omega t\\)，自由空间阻抗 \\(\\eta_0=\\sqrt{\\mu_0/\\varepsilon_0}\\)。",
+    "q": [
+      "从电流连续性得到电偶极矩振幅。",
+      "从偶极辐射积分求总平均功率。",
+      "定义辐射电阻并给出小尺寸缩放。",
+      "区分辐射损失与金属欧姆损失。"
+    ],
+    "s": [
+      "短天线两端累积电荷满足连续性 \\(i\\omega Q_0=I_0\\)，偶极矩幅 \\(p_0=Q_0l=I_0l/\\omega\\)（相位依时谐约定）。把天线当作赫兹短偶极子必须满足沿长度电流近似均匀，否则有效长度应由电流分布积分。",
+      "电偶极总平均辐射功率为 \\(P_{\\rm rad}=\\omega^4|p_0|^2/(12\\pi\\varepsilon_0c^3)\\)。代入 \\(p_0=I_0l/\\omega\\) 得 \\(P_{\\rm rad}=I_0^2\\omega^2l^2/(12\\pi\\varepsilon_0c^3)=I_0^2\\eta_0k^2l^2/(12\\pi)\\)，\\(k=\\omega/c\\)。",
+      "以电流峰值约定 \\(P_{\\rm rad}=I_0^2R_{\\rm rad}/2\\)，得 \\(R_{\\rm rad}=\\eta_0(k l)^2/(6\\pi)=80\\pi^2(l/\\lambda)^2\\,\\Omega\\)（真空 \\(\\eta_0\\approx120\\pi\\,\\Omega\\)）。因此天线尺寸减半时辐射电阻降为四分之一。",
+      "若馈线等效电阻为 \\(R_{\\rm ohm}\\)，在谐振阻抗匹配近似下辐射效率 \\(\\eta=R_{\\rm rad}/(R_{\\rm rad}+R_{\\rm ohm})\\)。\\(\\eta\\) 不能通过忽略 \\(R_{\\rm ohm}\\) 就推断很小天线仍高效；大部分输入功率可能转为热。"
+    ],
+    "tags": [
+      "电偶极辐射",
+      "天线阻抗",
+      "能流"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "E261",
+    "title": "静磁球外场与均匀磁化球的退磁因子",
+    "setup": "半径 \\(a\\) 的线性磁性球处于真空中，内部总均匀磁化 \\(\\boldsymbol M=M\\hat z\\)，不考虑自由体电流；外加均匀 \\(\\boldsymbol H_0=H_0\\hat z\\)。",
+    "q": [
+      "从磁化束缚电流建立标量磁势。",
+      "求球内退磁场和球外偶极子场。",
+      "计算线性磁化率下内部场自洽值。",
+      "比较高磁化率与无磁响应极限。"
+    ],
+    "s": [
+      "体束缚电流 \\(\\boldsymbol J_b=\\nabla\\times\\boldsymbol M=0\\)，表面束缚电流 \\(\\boldsymbol K_b=\\boldsymbol M\\times\\hat r=M\\sin\\theta\\,\\hat\\phi\\)。在无自由电流的区域用 \\(\\boldsymbol H=-\\nabla\\Phi_m\\)，边界满足切向 \\(H\\) 连续和法向 \\(B=\\mu_0(H+M)\\) 连续。",
+      "解 \\(l=1\\) Laplace边值，可得球内 \\(\\boldsymbol H_{\\rm demag}=-\\boldsymbol M/3\\)。外场为磁偶极 \\(\\boldsymbol H_{\\rm dip}=[3(\\boldsymbol m\\cdot\\hat r)\\hat r-\\boldsymbol m]/(4\\pi r^3)\\)，其中 \\(\\boldsymbol m=(4\\pi a^3/3)\\boldsymbol M\\)。球形退磁因子 \\(N_d=1/3\\)。",
+      "若材料本构 \\(M=\\chi H_{\\rm in}\\)，而 \\(\\boldsymbol H_{\\rm in}=\\boldsymbol H_0-\\boldsymbol M/3\\)，则 \\(M=\\chi(H_0-M/3)\\)。解得 \\(M=[3\\chi/(\\chi+3)]H_0\\) 和 \\(H_{\\rm in}=3H_0/(\\chi+3)\\)，不能直接令 \\(M=\\chi H_0\\)。",
+      "当 \\(\\chi\\to\\infty\\)，\\(H_{\\rm in}\\to0\\) 而 \\(M\\to3H_0\\)，球体退磁场抵消外加场；\\(\\chi\\to0\\) 时 \\(M\\to0\\)、\\(H_{\\rm in}\\to H_0\\)。该结果依赖球形与均匀线性本构，不能用于细长磁针的退磁因子。"
+    ],
+    "tags": [
+      "磁化边值",
+      "退磁因子",
+      "偶极场"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "E262",
+    "title": "时变磁通穿过圆环导体的涡电流与焦耳损耗",
+    "setup": "半径 \\(a\\)、单位长度电阻 \\(r_\\ell>0\\) 的细圆形导电环处于均匀随时间变化的轴向磁场 \\(B(t)\\)，可忽略自感及趋肤效应。",
+    "q": [
+      "由Faraday定律求总感应电动势。",
+      "求感应电流与热功率。",
+      "求随时间变化的磁矩和外源功。",
+      "加入自感后建立动态方程并分析低频极限。"
+    ],
+    "s": [
+      "环所链磁通 \\(\\Phi_B(t)=\\pi a^2B(t)\\)。Faraday定律 \\(\\mathcal E=-d\\Phi_B/dt=-\\pi a^2\\dot B(t)\\)，负号体现Lenz反抗变化；在圆对称理想化中环上切向电场平均为 \\(E_\\phi=\\mathcal E/(2\\pi a)=-a\\dot B/2\\)。",
+      "环总电阻 \\(R=2\\pi ar_\\ell\\)。忽略自感时 \\(I(t)=\\mathcal E/R=-a\\dot B/(2r_\\ell)\\)，焦耳功率 \\(P=I^2R=\\mathcal E^2/R=\\pi a^3\\dot B^2/(2r_\\ell)\\ge0\\)。此结果用于外磁场缓慢驱动，不能忽略在高频产生的涡流自感。",
+      "环磁矩 \\(m_z=I\\pi a^2=-\\pi a^3\\dot B/(2r_\\ell)\\)，与磁场变化方向相反。外源施加磁通变化的电功 \\(I\\mathcal E=I^2R=P\\)，因此能量以热的形式耗散，没有出现负功率。",
+      "若自感为 \\(L>0\\)，环路满足 \\(L\\dot I+RI=-\\pi a^2\\dot B\\)。其电磁能量恒等式 \\(d(LI^2/2)/dt+RI^2=I\\mathcal E\\) 显示一部分外源功存入磁能。只有驱动角频率 \\(\\omega L/R\\ll1\\) 才可退化到 \\(I\\approx\\mathcal E/R\\)。"
+    ],
+    "tags": [
+      "Faraday感应",
+      "能量守恒",
+      "电路动力学"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "E263",
+    "title": "双层磁介质平面边界的电流片散射与边界阻抗",
+    "setup": "两个半无限无耗散、各向同性介质具有 \\((\\varepsilon_j,\\mu_j)>0\\)，在 \\(z=0\\) 交界并存在面电导 \\(\\sigma_s>0\\) 的无限薄导电片。电磁平面波法向从1入射。",
+    "q": [
+      "列出法向入射电、磁场边界。",
+      "求含耗散表面的复振幅系数。",
+      "计算功率反射、透射、吸收并验证守恒。",
+      "给出同介质对称薄片的最大单侧吸收。"
+    ],
+    "s": [
+      "令电场沿 \\(x\\)，磁场沿 \\(y\\)，波阻抗 \\(\\eta_j=\\sqrt{\\mu_j/\\varepsilon_j}\\)。界面切向电场连续 \\(1+r=t\\)；Ampère边界给 \\(H_{1y}-H_{2y}=J_{sx}=\\sigma_sE_t\\) 在相应法向符号约定下，故 \\((1-r)/\\eta_1-t/\\eta_2=\\sigma_st\\)。",
+      "以 \\(Y_j=1/\\eta_j\\) 定义导纳，联立得 \\(r=(Y_1-Y_2-\\sigma_s)/(Y_1+Y_2+\\sigma_s)\\)，\\(t=2Y_1/(Y_1+Y_2+\\sigma_s)\\)。当 \\(\\sigma_s=0\\) 退化为普通Fresnel法向反射与透射，正 \\(\\sigma_s\\) 增强总衰减。",
+      "对实正介质阻抗，功率比 \\(R=r^2\\)，\\(T=(Y_2/Y_1)t^2\\)，片层吸收 \\(A=(\\sigma_s/Y_1)t^2\\)。代入分母 \\(D=Y_1+Y_2+\\sigma_s\\) 得 \\(R+T+A=[(Y_1-Y_2-\\sigma_s)^2+4Y_1(Y_2+\\sigma_s)]/D^2=1\\)。",
+      "若 \\(Y_1=Y_2=Y\\)，则 \\(A=4Y\\sigma_s/(2Y+\\sigma_s)^2\\)。对 \\(\\sigma_s>0\\) 求导，最大值发生在 \\(\\sigma_s=2Y\\)，此时 \\(A_{\\max}=1/2\\)。对称单片单侧相干入射不能超过这一理想50%吸收阈值；背板或双侧相干照明可改变上界。"
+    ],
+    "tags": [
+      "电磁边界",
+      "表面电导",
+      "吸收极限"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "E264",
+    "title": "低温金属热输运的Wiedemann–Franz关系与Lorenz数",
+    "setup": "各向同性三维简并电子气，费米能 \\(E_F\\gg k_BT\\)，弛豫时间 \\(\\tau(\\varepsilon)\\) 在费米面附近缓变，忽略声子热导。",
+    "q": [
+      "用Boltzmann响应写输运矩定义。",
+      "用Sommerfeld展开求费米面附近的主要矩。",
+      "导出Lorenz常数并说明单位。",
+      "说明低温热电修正与失效条件。"
+    ],
+    "s": [
+      "定义 \\(L_n=\\int d\\varepsilon\\,\\Sigma(\\varepsilon)(\\varepsilon-\\mu)^n[-\\partial_\\varepsilon f]\\)，\\(\\Sigma(\\varepsilon)\\) 为能量分辨电导核。在线性响应中 \\(\\sigma=e^2L_0\\)，电子热导 \\(\\kappa_e=(L_2-L_1^2/L_0)/T\\)，Seebeck系数 \\(S=-L_1/(eTL_0)\\)。",
+      "在 \\(\\Sigma\\) 平滑条件下，\\(L_0=\\Sigma(E_F)+O(T^2)\\)，\\(L_1=(\\pi^2/3)(k_BT)^2\\Sigma'(E_F)+O(T^4)\\)，\\(L_2=(\\pi^2/3)(k_BT)^2\\Sigma(E_F)+O(T^4)\\)。奇偶性保证常数项对 \\(L_1\\) 不贡献。",
+      "最低阶有 \\(\\kappa_e/T\\approx(\\pi^2/3)k_B^2\\Sigma(E_F)\\)，与 \\(\\sigma=e^2\\Sigma(E_F)\\) 相除得 \\(L_0^{\\mathrm{Lorenz}}=\\kappa_e/(\\sigma T)=\\pi^2k_B^2/(3e^2)\\)。数值约 \\(2.44\\times10^{-8}\\,\\mathrm{W\\,\\Omega\\,K^{-2}}\\)，在弹性散射主导简并金属中成立。",
+      "修正项 \\(L_1^2/L_0\\sim T^4\\) 对 \\(\\kappa_e\\) 为 \\(O(T^3)\\)，因此不影响领先Lorenz数。强非弹性散射、非费米液体、极低载流子浓度或声子热导占优时，\\(\\kappa/(\\sigma T)\\) 可显著偏离常数；不能将这个结果当作所有材料的精确恒等式。"
+    ],
+    "tags": [
+      "Boltzmann输运",
+      "Sommerfeld展开",
+      "Lorenz数"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  }
+]
