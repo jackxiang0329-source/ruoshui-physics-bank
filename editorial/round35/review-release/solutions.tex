@@ -384,7 +384,7 @@
 \par\noindent\textbf{(1)} 一维向右声子态密度每长每频为1/(2πv\_g)，乘速度v\_g使传播通量与色散细节抵消。因此净能流J\_Q=∫₀∞(dω/2π)ℏω[n\_B(ω,TL)−n\_B(ω,TR)]，其中n\_B=[e\textasciicircum{}\{ℏω/k\_BT\}−1]\textasciicircum{}\{-1\}。
 \par\noindent\textbf{(2)} 令x=ℏω/(k\_BT)，标准Bose积分∫₀∞x/(e\textasciicircum{}x−1)dx=π²/6，从而每个热库向一方向输出J(T)=πk\_B²T²/(12ℏ)，净J\_Q=πk\_B²(TL²−TR²)/(12ℏ)。这一结果是单个无反射、非简并传播通道的净功率，单位W。
 \par\noindent\textbf{(3)} 设TL=T+ΔT/2、TR=T−ΔT/2，平方差为2TΔT，热导G\_Q=lim\_\{ΔT→0\}J\_Q/ΔT=πk\_B²T/(6ℏ)=π²k\_B²T/(3h)，为普适单通道量子热导，不依赖质量密度或声速。
-\par\noindent\textbf{(4)} T→0时G\_Q∝T消失，符合第三定律低温热流限制；若通道截止频率非零或存在反射，则积分需乘透射函数𝒯(ω)且不再普适。费米通道在适当粒子/能量通道计数与基准下有对应量子热导，但不能忽略其化学势和反粒子支。
+\par\noindent\textbf{(4)} T→0时G\_Q∝T消失，符合第三定律低温热流限制；若通道截止频率非零或存在反射，则积分需乘透射函数T\_trans(ω)且不再普适。费米通道在适当粒子/能量通道计数与基准下有对应量子热导，但不能忽略其化学势和反粒子支。
 
 \par\bigskip\hrule\bigskip
 \chapter{振动与波动}
@@ -398,8 +398,8 @@
 \par\medskip\noindent\textbf{逐问解析}
 \par\noindent\textbf{(1)} 取左侧y1=e\textasciicircum{}\{i(k1x−ωt)\}+r e\textasciicircum{}\{i(−k1x−ωt)\}、右侧y2=t e\textasciicircum{}\{i(k2x−ωt)\}，k\_j=ω/c\_j。界面位移连续给1+r=t，张力T∂xy连续给k1(1−r)=k2t；这两个条件来自质量零的界面，不应另外添加惯性跳跃项。
 \par\noindent\textbf{(2)} 联立两条件得r=(k1−k2)/(k1+k2)、t=2k1/(k1+k2)。定义弦特性机械阻抗Z\_j=T/c\_j=√(Tμ\_j)，因k1/k2=Z1/Z2，故r=(Z1−Z2)/(Z1+Z2)、t=2Z1/(Z1+Z2)。当Z2>Z1，位移反射符号为负。
-\par\noindent\textbf{(3)} 行波时间平均功率P\_j=Z\_jω²|A\_j|²/2，所以反射功率比R=|r|²、透射比𝒯=(Z2/Z1)|t|²=4Z1Z2/(Z1+Z2)²。直接代数求和R+𝒯=[(Z1−Z2)²+4Z1Z2]/(Z1+Z2)²=1，满足无耗散界面能量守恒。
-\par\noindent\textbf{(4)} 当Z2≫Z1时r→−1、t→0，呈近固定端；当Z2≪Z1时r→1、t→2，但功率透射因Z2/Z1趋零而消失。若Z1=Z2，r=0且𝒯=1，即使两段弦的密度或几何不同，只要行波阻抗相等就不会发生反射。
+\par\noindent\textbf{(3)} 行波时间平均功率P\_j=Z\_jω²|A\_j|²/2，所以反射功率比R=|r|²、透射比T\_trans=(Z2/Z1)|t|²=4Z1Z2/(Z1+Z2)²。直接代数求和R+T\_trans=[(Z1−Z2)²+4Z1Z2]/(Z1+Z2)²=1，满足无耗散界面能量守恒。
+\par\noindent\textbf{(4)} 当Z2≫Z1时r→−1、t→0，呈近固定端；当Z2≪Z1时r→1、t→2，但功率透射因Z2/Z1趋零而消失。若Z1=Z2，r=0且T\_trans=1，即使两段弦的密度或几何不同，只要行波阻抗相等就不会发生反射。
 
 \par\bigskip\hrule\bigskip
 \section*{W243\quad 负载点质量对弦波的频率选择反射与动力边界}
@@ -412,7 +412,7 @@
 \par\medskip\noindent\textbf{逐问解析}
 \par\noindent\textbf{(1)} 弦位移在点质量处连续，故t=1+r。点质量垂向受力为T[y\_x(0+)−y\_x(0−)]，令位移随e\textasciicircum{}\{−iωt\}变化，牛顿方程−Mω²t=2iTk r，其中k=ω/c。此式的右侧是左右弦拉力之差，不能错误设成零。
 \par\noindent\textbf{(2)} 把Z=T/c=Tk/ω代入跳跃式得−Mω(1+r)=2iZr，所以r=−Mω/(Mω+2iZ)而t=2iZ/(Mω+2iZ)。两者满足t=1+r；给定入射位移归一化后可通过复数代数独立核验两个界面条件。
-\par\noindent\textbf{(3)} 左右介质相同，所以R=|r|²=(Mω)²/[(Mω)²+4Z²]、𝒯=|t|²=4Z²/[(Mω)²+4Z²]。二者相加等于1，点质量在周期内只储存动能、没有净耗散功，因而透射降低并不等价于能量消失。
+\par\noindent\textbf{(3)} 左右介质相同，所以R=|r|²=(Mω)²/[(Mω)²+4Z²]、T\_trans=|t|²=4Z²/[(Mω)²+4Z²]。二者相加等于1，点质量在周期内只储存动能、没有净耗散功，因而透射降低并不等价于能量消失。
 \par\noindent\textbf{(4)} 低频Mω≪2Z有r≈iMω/(2Z)趋零，质量能跟随弦缓慢运动；高频Mω≫2Z时r→−1、t→0，形成近固定端条件。该无弹簧自由质量没有有限频率内部谐振，若加入弹簧或阻尼才会出现额外谐振与吸收。
 
 \par\bigskip\hrule\bigskip
@@ -653,7 +653,7 @@
 \par\noindent\textbf{(1)} 自由演化纯态相位为(|0>+e\textasciicircum{}\{iφ\}|1>)/√2；纯退相干通道使ρ(t)=(1/2)[[1,e\textasciicircum{}\{−Γφt\}e\textasciicircum{}\{−iφ\}],[e\textasciicircum{}\{−Γφt\}e\textasciicircum{}\{iφ\},1]]，迹保持且本征值(1±e\textasciicircum{}\{−Γφt\})/2非负。Bloch矢量长度e\textasciicircum{}\{−Γφt\}逐步收缩。
 \par\noindent\textbf{(2)} 测量旋转后的赤道投影，选择分析相位ϑ时二值事件概率p\_+=(1+V cos(φ−ϑ))/2，其中可见度V=e\textasciicircum{}\{−Γφt\}。另一事件p\_−=1−p\_+，相位信息主要来自干涉曲线斜率大的象限而不是峰顶。
 \par\noindent\textbf{(3)} 二值Fisher信息F\_φ=(∂φp\_+)²/[p\_+(1−p\_+)]=V² sin²(φ−ϑ)/[1−V² cos²(φ−ϑ)]。在ϑ=φ±π/2最佳，F\_φ,max=V²=e\textasciicircum{}\{−2Γφt\}；退相干损失信息而非增加相位灵敏度。
-\par\noindent\textbf{(4)} 若估计频率失谐Δ，因φ=Δt，单次F\_Δ=t²e\textasciicircum{}\{−2Γφt\}，在固定每次实验、忽略制备开销时对t求极值得t*=1/Γφ；若固定总实验时长，实验次数约𝒯/t使总信息∝𝒯 t e\textasciicircum{}\{−2Γφt\}，最优改为t=1/(2Γφ)，必须说明资源约束。
+\par\noindent\textbf{(4)} 若估计频率失谐Δ，因φ=Δt，单次F\_Δ=t²e\textasciicircum{}\{−2Γφt\}，在固定每次实验、忽略制备开销时对t求极值得t*=1/Γφ；若固定总实验时长，实验次数约T\_total/t使总信息∝T\_total t e\textasciicircum{}\{−2Γφt\}，最优改为t=1/(2Γφ)，必须说明资源约束。
 
 \par\bigskip\hrule\bigskip
 \section*{Q245\quad 量子谐振子热态的配分函数、能量涨落及位置不确定度}
