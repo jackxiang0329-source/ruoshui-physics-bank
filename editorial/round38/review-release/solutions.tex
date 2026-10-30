@@ -46,18 +46,18 @@
 \par\noindent\textbf{(4)} Legendre变换得到 \(H=[(p_x+Gy/2)^2+(p_y-Gx/2)^2]/(2m)-k(x^2+y^2)/2\)，对 \(k>0\) 没有正下界。因拉氏量在平面旋转下不变，\(J_z=xp_y-yp_x=m(x\dot y-y\dot x)+G(x^2+y^2)/2\) 守恒。谱稳定只保证线性运动有界，不意味着能量正定；阈值重根时还需检查Jordan退化。
 
 \par\bigskip\hrule\bigskip
-\section*{M266\quad 滚动球绕竖直圆轨道的最低速度与约束力}
-\textbf{物理条件}\par 质量 \(m\)、半径 \(a\) 的均匀实心球在半径为 \(R\) 的竖直圆形轨道内侧无滑动滚动，球心轨道半径 \(\rho=R-a\)，绕球心惯量 \(I=2ma^2/5\)。
-\par\noindent\textbf{(1)} 建立含自转的机械能积分。
-\par\noindent\textbf{(2)} 推导沿圆法向的轨道反力。
-\par\noindent\textbf{(3)} 求顶点保持接触所需最低底点速度。
-\par\noindent\textbf{(4)} 说明静摩擦与纯滚动条件的局限。
+\section*{M266\quad 球面径向单极磁场中的质点守恒角动量与圆锥轨道}
+\textbf{物理条件}\par 质量 \(m\)、电荷 \(q\) 的粒子由光滑球面 \(|\boldsymbol r|=R\) 限制，中心存在理想化的径向单极磁场 \(\boldsymbol B=g_m\boldsymbol r/r^3\)，\(g_m\) 为单极场参数，球面对粒子仅提供法向约束反力。
+\par\noindent\textbf{(1)} 由Lorentz力推导机械角动量不守恒的确切形式。
+\par\noindent\textbf{(2)} 构造含径向磁场贡献的守恒总角动量。
+\par\noindent\textbf{(3)} 证明轨迹被限制在以总角动量为轴的圆锥上。
+\par\noindent\textbf{(4)} 求圆锥上的均匀角速度并核验能量守恒。
 
 \par\medskip\noindent\textbf{逐问解析}
-\par\noindent\textbf{(1)} 无滑动约束 \(\omega=v/a\) 使总动能为 \(\tfrac12mv^2+\tfrac12I(v/a)^2=\tfrac7{10}mv^2\)。球心以最低点为零位势，角位置 \(\phi\) 的高度 \(h=\rho(1-\cos\phi)\)，故 \(\tfrac7{10}mv^2+mg\rho(1-\cos\phi)=E\)。
-\par\noindent\textbf{(2)} 以向圆心为径向正向，重力径向分量是 \(-mg\cos\phi\)（\(\phi=0\) 时重力远离圆心），法向动力学 \(N-mg\cos\phi=mv^2/\rho\)，因此 \(N=m(v^2/\rho+g\cos\phi)\)。在顶点 \(\phi=\pi\) 得 \(N=m(v_{\mathrm{top}}^2/\rho-g)\)。
-\par\noindent\textbf{(3)} 顶点接触条件 \(N\ge0\) 即 \(v_{\mathrm{top}}^2\ge g\rho\)。从底部到顶部抬升 \(2\rho\)，能量守恒 \(\tfrac7{10}mv_0^2=\tfrac7{10}mv_{\mathrm{top}}^2+2mg\rho\)。因此临界 \(v_{0,\min}^2=(27/7)g\rho\)，高于忽略滚动惯量的结果。
-\par\noindent\textbf{(4)} 轨道静摩擦可以传递切向力矩但在接触点瞬时速度为零，故不做功。用切向方程 \(ma_t=mg\sin\phi-f\) 和自转方程 \(Ia_t/a=fa\) 求出 \(f=(2/7)mg\sin\phi\)。应进一步要求 \(|f|\le\mu_sN\)；近接触临界点 \(N\to0\) 时纯滚动假设可能先失效。
+\par\noindent\textbf{(1)} 机械角动量 \(\boldsymbol L=m\boldsymbol r\times\dot{\boldsymbol r}\)，其导数为 \(d\boldsymbol L/dt=\boldsymbol r\times(q\boldsymbol v\times\boldsymbol B)\)，球面法向约束不产生关于球心的力矩。用 \(\boldsymbol B=g_m\boldsymbol r/R^3\)、\(\boldsymbol r\cdot\boldsymbol v=0\) 及三重叉乘得 \(\dot{\boldsymbol L}=qg_m\boldsymbol v/R=qg_m\,d\hat{\boldsymbol r}/dt\)。
+\par\noindent\textbf{(2)} 因此定义 \(\boldsymbol J=\boldsymbol L-qg_m\hat{\boldsymbol r}\)，直接得到 \(d\boldsymbol J/dt=0\)。由于 \(\boldsymbol L\perp\hat{\boldsymbol r}\)，有 \(J^2=L^2+(qg_m)^2\)，同时 \(\boldsymbol J\cdot\hat{\boldsymbol r}=-qg_m\)。这是一种含磁场角动量项的守恒量，不等于普通机械角动量本身。
+\par\noindent\textbf{(3)} 守恒标量 \(\boldsymbol J\cdot\hat{\boldsymbol r}=-qg_m\) 意味着粒子位置矢量始终与固定 \(\boldsymbol J\) 形成固定夹角 \(\cos\theta=-qg_m/J\)。于是球面轨迹位于球 \(r=R\) 和以 \(\boldsymbol J\) 为轴的圆锥相交的圆上，只有 \(J>|qg_m|\) 时轨道为非退化圆周。
+\par\noindent\textbf{(4)} 以 \(\boldsymbol J\) 为极轴，轴向分量满足 \(J=mR^2\sin^2\theta\,\dot\phi-qg_m\cos\theta\)。代入 \(\cos\theta=-qg_m/J\) 得 \(\dot\phi=J/(mR^2)\)，为均匀进动。由于 \(\boldsymbol v\cdot(q\boldsymbol v\times\boldsymbol B)=0\)、法向约束不做功，\(E=mv^2/2\) 守恒，与恒定角速率及定角轨迹一致。
 
 \par\bigskip\hrule\bigskip
 \section*{M267\quad Newton引力潮汐张量的本征谱、真空迹与Roche临界}
@@ -441,18 +441,18 @@
 \par\noindent\textbf{(4)} 若 \(Z_2\gg Z_1\)，位移反射系数 \(r\to-1\)，界面近似固定端，反射波相位翻转；若 \(Z_2\ll Z_1\)，\(r\to+1\)，近似自由端反射。有限界面质量或弯曲刚度会引入频率相关散射，不再仅由两侧阻抗决定。
 
 \par\bigskip\hrule\bigskip
-\section*{W269\quad 双原子一维晶格的声学与光学声子双分支}
-\textbf{物理条件}\par 交替质量 \(m_1,m_2>0\) 的一维弹簧晶格，相邻质点弹簧刚度均为 \(K>0\)，原胞长 \(a\)，每胞位移为 \((u_n,v_n)\)。
-\par\noindent\textbf{(1)} 写双原胞的耦合Newton方程。
-\par\noindent\textbf{(2)} 从Bloch行列式求双支色散。
-\par\noindent\textbf{(3)} 求长波极限声速和光学模频率。
-\par\noindent\textbf{(4)} 分析布里渊区边界处的禁带。
+\section*{W269\quad 铁磁体Landau–Lifshitz交换自旋波的色散、波包与边界量子化}
+\textbf{物理条件}\par 单轴铁磁体平衡磁化 \(\boldsymbol n\approx\hat z\)，外有效场 \(H_0\hat z\)，一维交换场 \(D\partial_x^2\boldsymbol n\)，其中 \(H_0,D,\gamma>0\)，以 \(\dot{\boldsymbol n}=-\gamma\boldsymbol n\times\boldsymbol H_{\rm eff}\) 描述无耗散进动。
+\par\noindent\textbf{(1)} 线性化Landau–Lifshitz方程并给出两横向变量耦合。
+\par\noindent\textbf{(2)} 求传播自旋波的频率与群速度。
+\par\noindent\textbf{(3)} 对自由交换边界的有限长磁条求离散本征谱。
+\par\noindent\textbf{(4)} 说明Gilbert弱阻尼与正能谱的关系。
 
 \par\medskip\noindent\textbf{逐问解析}
-\par\noindent\textbf{(1)} 胞内质量 \(m_1\) 连接 \(v_n,v_{n-1}\)，故 \(m_1\ddot u_n=K(v_n+v_{n-1}-2u_n)\)；质量 \(m_2\) 连接 \(u_n,u_{n+1}\)，\(m_2\ddot v_n=K(u_n+u_{n+1}-2v_n)\)。原胞使用长度 \(a\) 而非两倍任意坐标。
-\par\noindent\textbf{(2)} 取 \(u_n=Ue^{i(qna-\omega t)}\)、\(v_n=Ve^{i(qna-\omega t)}\)，得 \((2K-m_1\omega^2)(2K-m_2\omega^2)-4K^2\cos^2(qa/2)=0\)。整理 \(\omega_\pm^2=K(1/m_1+1/m_2)\pm K\sqrt{(1/m_1+1/m_2)^2-4\sin^2(qa/2)/(m_1m_2)}\)。
-\par\noindent\textbf{(3)} 当 \(qa\to0\)，低支 \(\omega_-^2\sim Ka^2q^2/[2(m_1+m_2)]\)，所以 \(c_s=a\sqrt{K/[2(m_1+m_2)]}\)。高支 \(\omega_+(0)^2=2K(1/m_1+1/m_2)\)，两质量反相运动，产生非零光学频隙。
-\par\noindent\textbf{(4)} 在 \(q=\pi/a\) 时 \(\cos(qa/2)=0\)，动态矩阵对角化，两个频率平方分别为 \(2K/m_1\)、\(2K/m_2\)。若 \(m_1\ne m_2\)，两支之间存在频隙；若 \(m_1=m_2\)，区边发生折叠简并而不产生真正的质量差禁带。
+\par\noindent\textbf{(1)} 令 \(\boldsymbol n=(m_x,m_y,1)+O(m_\perp^2)\)，\(\boldsymbol H_{\rm eff}=H_0\hat z+D(m_x''\hat x+m_y''\hat y)\)。线性Landau–Lifshitz方程为 \(\dot m_x=-\gamma(H_0-D\partial_x^2)m_y\)、\(\dot m_y=+\gamma(H_0-D\partial_x^2)m_x\)。交换导数项的相对符号来自向量叉积，不能直接写两个独立标量声波方程。
+\par\noindent\textbf{(2)} 定义 \(m_+=m_x+i m_y\)，联立得到 \(\partial_t m_+=i\gamma(H_0-D\partial_x^2)m_+\)。取螺旋极化 \(m_+\propto e^{i(kx+\omega t)}\)，给正频 \(\omega(k)=\gamma(H_0+Dk^2)\)。频谱在 \(k=0\) 有Larmor间隙 \(\gamma H_0\)，群速度 \(v_g=d\omega/dk=2\gamma Dk\)，与线性色散声波不同。
+\par\noindent\textbf{(3)} 长度 \(L\) 的无表面钉扎磁条采用自由交换边界 \(\partial_xm_\perp|_{0,L}=0\)。驻波基函数 \(\cos(k_nx)\) 满足边界且 \(k_n=n\pi/L\)，\(n=0,1,2,\dots\)，因此 \(\omega_n=\gamma[H_0+D(n\pi/L)^2]\)。\(n=0\) 是空间均匀铁磁共振，而非应被排除的平移零模。
+\par\noindent\textbf{(4)} 磁化偏离平衡的二次能量密度正比 \(H_0|m_\perp|^2+D|\partial_xm_\perp|^2\)，在 \(H_0,D>0\) 时为正。加入小Gilbert阻尼 \(\alpha_G\ll1\) 后谱频率实部只产生 \(O(\alpha_G^2)\) 修正，而每模幅度衰减率近似 \(\Gamma_n=\alpha_G\omega_n\)。真实材料还受偶极退磁场、表面各向异性与磁晶不均匀影响。
 
 \par\bigskip\hrule\bigskip
 \section*{W270\quad Kuramoto振子群的Lorentz频率分布与同步阈值}
