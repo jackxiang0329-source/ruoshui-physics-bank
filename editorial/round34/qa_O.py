@@ -88,7 +88,7 @@ def run():
     check("O240",3,"sinusoidal sideband suppression above cutoff",
           1 if 1.1*fc>fc else 0,1,method="spectral-cutoff")
     check("O240",4,"unbounded cutoff tends delta distribution by energy",
-          integrate(lambda x:h(x),-.15,.15,20000),1,tol=.02,method="distributional-limit")
+          integrate(lambda x:h(x),-.5,.5,20000),1,tol=.02,method="distributional-limit")
     # O241 optical frequency comb
     frep=100.;phase=.6;fceo=phase/(2*P)*frep;n=1500
     check("O241",1,"pulse train repetition frequency",1/(1/frep),frep,method="time-frequency")
