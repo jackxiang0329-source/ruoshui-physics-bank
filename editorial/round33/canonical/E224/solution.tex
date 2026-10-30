@@ -1,0 +1,4 @@
+(1) 圆盘半径$r$处速度$\boldsymbol v=\omega r\hat\phi$，故$\boldsymbol v\times\boldsymbol B=\omega rB\hat r$。沿半径积分动生电动势$\mathcal E=\int_0^R\omega Br\,dr=k\omega$。将外电感的反电动势一并保留，Kirchhoff方程为$L\dot I+\mathcal RI=k\omega$，而不是在快速变化时立即令$I=k\omega/\mathcal R$。
+(2) 半径$r$处径向电流元在磁场中受切向Lorentz力，圆盘所受反向磁转矩大小为$\int_0^R IBr\,dr=kI$。所以$J\dot\omega=-kI$。两个一阶方程$\dot\omega=-kI/J$与$\dot I=(k\omega-\mathcal RI)/L$相耦合，电磁转矩自动满足能量回馈的互易系数$k$。
+(3) 对机械方程求导并用电路方程消去$I=-J\dot\omega/k$，得到$\ddot\omega+(\mathcal R/L)\dot\omega+(k^2/(JL))\omega=0$。指数模$e^{st}$的特征根$s_\pm=[-\mathcal R\pm\sqrt{\mathcal R^2-4Lk^2/J}]/(2L)$。当$\mathcal R^2>4Lk^2/J$时为两个负实根；当小于时为衰减振荡；等号时出现重根和$t e^{st}$项，均对应电磁阻尼。
+(4) 定义总储能$E=\tfrac12J\omega^2+\tfrac12LI^2$，求导$J\omega\dot\omega+LI\dot I=-k\omega I+I(k\omega-\mathcal RI)=-\mathcal RI^2\le0$。在$L\to0$、电路快速松弛后$I\simeq k\omega/\mathcal R$，于是$J\dot\omega=-k^2\omega/\mathcal R$，$\omega(t)=\omega_0\exp[-k^2t/(J\mathcal R)]$。剩余机械动能最终转成焦耳热。
