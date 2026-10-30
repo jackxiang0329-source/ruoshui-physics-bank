@@ -1,0 +1,226 @@
+[
+  {
+    "id": "Q250",
+    "title": "Aharonov–Bohm磁通相位与环形粒子的能谱周期",
+    "setup": "质量 \\(m\\)、电荷 \\(q\\) 的量子粒子被限制在半径 \\(R\\) 的一维环，环内无磁场，但环内包围磁通 \\(\\Phi\\)，选择切向矢势 \\(A_\\varphi=\\Phi/(2\\pi R)\\)。",
+    "q": [
+      "由最小耦合写环形Hamilton算符。",
+      "求单值波函数的能谱与本征态。",
+      "计算平衡态持续电流及磁通周期。",
+      "讨论磁通半整数处简并与规范不变性。"
+    ],
+    "s": [
+      "环上角动量算符 \\(p_\\varphi=-i\\hbar\\partial_\\varphi/R\\)。最小耦合 \\(p\\mapsto p-qA\\) 得 \\(H=\\frac{1}{2mR^2}[-i\\hbar\\partial_\\varphi-q\\Phi/(2\\pi)]^2\\)。由于环上 \\(\\boldsymbol B=0\\)，作用仍可依赖非可缩回路的磁矢势环流 \\(\\oint\\boldsymbol A\\cdot d\\boldsymbol l=\\Phi\\)。",
+      "波函数单值要求 \\(\\psi_n(\\varphi)=e^{in\\varphi}/\\sqrt{2\\pi}\\)、\\(n\\in\\mathbb Z\\)。对应能谱 \\(E_n(\\Phi)=\\frac{\\hbar^2}{2mR^2}(n-\\Phi/\\Phi_0)^2\\)，其中磁通量子 \\(\\Phi_0=h/q\\) 带电荷符号，若关心周期幅值可取 \\(|h/q|\\)。",
+      "单个本征态能量对磁通导数给平衡持续电流 \\(I_n=-\\partial E_n/\\partial\\Phi=\\frac{\\hbar^2}{mR^2\\Phi_0}(n-\\Phi/\\Phi_0)\\)。把磁通变为 \\(\\Phi+\\Phi_0\\) 时可重新标号 \\(n\\to n+1\\)，整个能谱与平衡可观测量周期不变，而同一固定量子数的能量函数非周期。",
+      "当 \\(\\Phi/\\Phi_0=n+1/2\\)，邻近 \\(n,n+1\\) 两支能量相等，理想无杂质环形成简并点。规范变换可以把矢势局部消掉，却会令波函数绕环边界相位扭曲；不可同时去掉可测的AB相位 \\(q\\Phi/\\hbar\\) 和单值性要求。"
+    ],
+    "tags": [
+      "拓扑量子相位",
+      "最小耦合",
+      "持续电流"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "Q251",
+    "title": "量子Zeno效应的短时存活率与重复投影测量",
+    "setup": "初态 \\(|\\psi_0\\rangle\\) 对Hamilton量 \\(H\\) 有有限能量方差 \\((\\Delta H)^2\\)，以相同时间间隔 \\(\\tau=t/N\\) 重复做是否仍在初态的理想投影测量。",
+    "q": [
+      "对短时存活振幅做二阶展开。",
+      "求 (N) 次成功测量的联合概率。",
+      "取 (N\toinfty) 得Zeno冻结极限。",
+      "说明连续测量、有限带宽及非Markov短时条件。"
+    ],
+    "s": [
+      "单位演化 \\(U(\\tau)=e^{-iH\\tau/\\hbar}=I-iH\\tau/\\hbar-H^2\\tau^2/(2\\hbar^2)+O(\\tau^3)\\)。存活振幅 \\(A(\\tau)=\\langle\\psi_0|U(\\tau)|\\psi_0\\rangle\\)，取模平方得 \\(P(\\tau)=1-(\\Delta H)^2\\tau^2/\\hbar^2+O(\\tau^3)\\)，其中 \\((\\Delta H)^2=\\langle H^2\\rangle-\\langle H\\rangle^2\\)。",
+      "每次测量成功后态被重置为 \\(|\\psi_0\\rangle\\)，所以 \\(N\\) 次连续成功概率是 \\(P_N(t)=[P(t/N)]^N\\approx[1-t^2/(N^2\\tau_Z^2)]^N\\)，定义 \\(\\tau_Z=\\hbar/\\Delta H\\)。这里关键是单次短时概率的二次而不是经典指数衰减。",
+      "取对数 \\(\\ln P_N=N\\ln[1-t^2/(N^2\\tau_Z^2)]\\sim-t^2/(N\\tau_Z^2)\\to0\\)，故 \\(\\lim_{N\\to\\infty}P_N(t)=1\\)。在理想零时长且非扰动投影极限下系统被冻结于初态，这并非在任意实际测量速度都成立。",
+      "真实测量存在有限耗时、仪器频带及测量反作用；若体系无有限能量方差或存活率在实验时间窗内已呈Markov指数形式，二次短时前提就会失效。测量在其他能级也可能产生反Zeno效应，须分析浴谱密度和测量间隔。"
+    ],
+    "tags": [
+      "投影测量",
+      "量子Zeno",
+      "短时动力学"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "Q252",
+    "title": "一维有限深方势阱的奇偶束缚态与阈值",
+    "setup": "粒子质量 \\(m\\)，对称势 \\(V(x)=-V_0\\) 当 \\(|x|<a\\)，其余为零，\\(V_0,a>0\\)，束缚能量 \\(-V_0<E<0\\)。",
+    "q": [
+      "建立井内外波数并利用宇称分解。",
+      "导出偶、奇束缚态超越方程。",
+      "从图像判断最低束缚态总存在。",
+      "求浅阱能量近似及奇态出现临界深度。"
+    ],
+    "s": [
+      "井内波数 \\(k=\\sqrt{2m(E+V_0)}/\\hbar\\)，井外指数衰减常数 \\(\\kappa=\\sqrt{-2mE}/\\hbar\\)。两者满足 \\(k^2+\\kappa^2=2mV_0/\\hbar^2\\)。对称势允许波函数取偶态 \\(\\cos kx\\) 或奇态 \\(\\sin kx\\)，外区分别按宇称接指数尾。",
+      "在 \\(x=a\\) 处波函数与导数连续。偶态内外对数导数匹配给 \\(k\\tan(ka)=\\kappa\\)，奇态给 \\(-k\\cot(ka)=\\kappa\\)。结合圆关系 \\(k^2+\\kappa^2=\\mathrm{const}\\) 可图解每个束缚能根；不能只用井内量子化 \\(ka=n\\pi\\) 而忽略尾波。",
+      "最低偶态在 \\(ka\\in(0,\\pi/2)\\) 内的 \\(k\\tan(ka)\\) 从零增大，而 \\(\\kappa=\\sqrt{k_0^2-k^2}\\) 从正变零，必有交点，因此任意小正 \\(V_0\\) 在一维都至少有一个束缚态。奇态最低根要求 \\(ka>\\pi/2\\)，从阈值 \\(\\kappa\\to0\\) 得 \\(k_0a>\\pi/2\\)。",
+      "浅阱 \\(k_0a\\ll1\\) 下 \\(ka\\ll1\\)，偶态方程给 \\(\\kappa\\approx k^2a\\approx(2mV_0/\\hbar^2)a\\)。所以 \\(E\\approx-\\hbar^2\\kappa^2/(2m)=-2mV_0^2a^2/\\hbar^2\\)。当 \\(V_0\\downarrow0\\) 束缚能二次趋零，波函数外尾尺度 \\(\\kappa^{-1}\\) 发散。"
+    ],
+    "tags": [
+      "量子边值",
+      "偶奇宇称",
+      "束缚阈值"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "Q253",
+    "title": "开放两能级系统Lindblad退相干与Bloch球收缩",
+    "setup": "qubit Hamilton量 \\(H=\\hbar\\omega\\sigma_z/2\\)，纯退相干Lindblad算符 \\(L=\\sqrt{\\gamma/2}\\,\\sigma_z\\)，\\(\\gamma>0\\)，初始密度矩阵 \\(\\rho(0)\\)。",
+    "q": [
+      "从Lindblad方程求矩阵元演化。",
+      "求Bloch矢量及保迹完全正性。",
+      "对 (|+\rangle) 初态计算纯度与熵。",
+      "分析长时间极限与有耗能自发辐射的区别。"
+    ],
+    "s": [
+      "主方程 \\(\\dot\\rho=-i[H,\\rho]/\\hbar+L\\rho L^\\dagger-\\tfrac12\\{L^\\dagger L,\\rho\\}\\)。代入 \\(L=\\sqrt{\\gamma/2}\\sigma_z\\) 得耗散项 \\((\\gamma/2)(\\sigma_z\\rho\\sigma_z-\\rho)\\)。因此对角元不变，非对角元 \\(\\dot\\rho_{01}=-(\\gamma+i\\omega)\\rho_{01}\\)，解为 \\(\\rho_{01}(t)=\\rho_{01}(0)e^{-(\\gamma+i\\omega)t}\\)。",
+      "Bloch表示 \\(\\rho=(I+\\boldsymbol r\\cdot\\boldsymbol\\sigma)/2\\) 给 \\(r_x+ir_y\\) 绕 \\(z\\) 转动并按 \\(e^{-\\gamma t}\\) 衰减，而 \\(r_z\\) 不变。演化可写为单位ary \\(z\\) 旋转结合相位翻转Kraus通道，权重 \\((1\\pm e^{-\\gamma t})/2\\) 均非负，故迹保持且完全正。",
+      "初态 \\(|+\\rangle=(|0\\rangle+|1\\rangle)/\\sqrt2\\)，其Bloch长度为 \\(e^{-\\gamma t}\\)。本征值为 \\(\\lambda_\\pm=[1\\pm e^{-\\gamma t}]/2\\)，纯度 \\(\\operatorname{tr}\\rho^2=[1+e^{-2\\gamma t}]/2\\)，von Neumann熵为 \\(S=-\\sum_\\pm\\lambda_\\pm\\ln\\lambda_\\pm\\)，从零单调升至 \\(\\ln2\\)。",
+      "长时态为计算基上的退相干对角混合，初始能量 \\(\\operatorname{tr}(H\\rho)\\) 保持不变，因为人口不变；自发辐射振幅阻尼则改变布居并将能量传给环境。不要用纯退相干模型预测激发态寿命 \\(T_1\\)。"
+    ],
+    "tags": [
+      "Lindblad方程",
+      "完全正性",
+      "量子熵"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "Q254",
+    "title": "量子绝热定理的跃迁幅度与两能级绕行",
+    "setup": "缓慢变化的Hamilton量 \\(H(t)\\) 有瞬时归一非简并本征态 \\(|n(t)\\rangle\\) 与本征能 \\(E_n(t)\\)，能隙 \\(E_m-E_n\\) 非零。",
+    "q": [
+      "在瞬时本征态基中展开Schrödinger方程。",
+      "推导非绝热跃迁耦合的能隙分母。",
+      "得到常见绝热条件的量纲形式。",
+      "讨论能隙闭合、Berry相位及周期演化。"
+    ],
+    "s": [
+      "写 \\(|\\psi(t)\\rangle=\\sum_n c_n(t)e^{-(i/\\hbar)\\int^t E_n(s)ds}|n(t)\\rangle\\)。代入 \\(i\\hbar|\\dot\\psi\\rangle=H|\\psi\\rangle\\) 得 \\(\\dot c_m=-\\sum_nc_n\\langle m|\\dot n\\rangle e^{(i/\\hbar)\\int^t(E_m-E_n)ds}\\)。对角项产生几何相位，非对角项驱动跃迁。",
+      "对 \\(H|n\\rangle=E_n|n\\rangle\\) 求导并左乘 \\(\\langle m|\\)（\\(m\\ne n\\)），可得 \\(\\langle m|\\dot n\\rangle=\\langle m|\\dot H|n\\rangle/(E_n-E_m)\\)。因此跃迁振幅被瞬时能隙抑制，但随时间变化越快，\\(\\dot H\\) 越大。",
+      "常用充分的局部慢变判据量纲为 \\(\\hbar|\\langle m|\\dot H|n\\rangle|/|E_m-E_n|^2\\ll1\\)，并须兼顾总演化时间内的相位干涉和端点平滑性。它是估计而非所有时间依赖系统中严格充分的数学定理。",
+      "若能隙关闭，分母趋零，普通非简并绝热展开失效，需处理简并子空间或避免交叉；对闭合参数回路，沿单一本征态演化可积累Berry相位 \\(\\gamma_n=i\\oint\\langle n|\\nabla_\\lambda n\\rangle\\cdot d\\boldsymbol\\lambda\\)，与动力相位不同且规范不变模 \\(2\\pi\\)。"
+    ],
+    "tags": [
+      "量子绝热",
+      "非绝热耦合",
+      "Berry联络"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "Q255",
+    "title": "有限温自由费米气体的Pauli自旋顺磁率",
+    "setup": "三维自旋 \\(1/2\\) 理想电子气，电子磁矩模 \\(\\mu_B\\)，外弱磁场 \\(B\\)，单自旋态密度 \\(g_s(\\varepsilon)\\) 在费米能 \\(E_F\\) 附近平滑，\\(k_BT\\ll E_F\\)。",
+    "q": [
+      "写外场引起的两自旋占有差。",
+      "推导弱场线性磁化率。",
+      "对三维抛物色散写零温Pauli磁化率。",
+      "说明有限温修正与经典Curie极限差异。"
+    ],
+    "s": [
+      "Zeeman分裂使两自旋能量相对偏移 \\(\\mp\\mu_BB\\)，因而磁化 \\(M=\\mu_B\\int d\\varepsilon\\,g_s(\\varepsilon)[f_F(\\varepsilon-\\mu_BB)-f_F(\\varepsilon+\\mu_BB)]\\)。对小场展开占有差为 \\(-2\\mu_BB f_F'(\\varepsilon)+O(B^3)\\)。",
+      "于是线性响应 \\(\\chi_B=\\partial M/\\partial B=2\\mu_B^2\\int_0^\\infty g_s(\\varepsilon)[-f_F'(\\varepsilon)]d\\varepsilon\\)。零温时 \\(-f_F'(\\varepsilon)\\to\\delta(\\varepsilon-E_F)\\)，故 \\(\\chi_B(0)=2\\mu_B^2g_s(E_F)\\)，是费米面附近态密度而非全部电子数直接贡献。",
+      "三维抛物色散总态密度 \\(g_{\\rm tot}(E_F)=3N/(2E_F)\\)，单自旋为 \\(g_s=3N/(4E_F)\\)。因此样品总磁化对 \\(B\\) 的响应为 \\(\\chi_B=3N\\mu_B^2/(2E_F)\\)；若取体积磁化 \\(M/V\\)，应再除以 \\(V\\)，对外场 \\(H\\) 的SI磁化率还需相应乘 \\(\\mu_0\\)。",
+      "有限低温用Sommerfeld展开，磁响应主项为费米面态密度，修正 \\(O[(k_BT/E_F)^2]\\)。经典非简并高温极限则 \\(\\chi_B\\propto N\\mu_B^2/(k_BT)\\) 呈Curie律，因Fermi–Dirac占有不再阶跃；不可把零温Pauli常数外推到高温。"
+    ],
+    "tags": [
+      "Fermi统计",
+      "自旋磁化",
+      "Sommerfeld展开"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "Q256",
+    "title": "两粒子自旋交换的singlet—triplet谱与热纠缠",
+    "setup": "两个自旋 \\(1/2\\) 的Heisenberg交换Hamilton量 \\(H=J\\,\\boldsymbol S_1\\cdot\\boldsymbol S_2/\\hbar^2\\)，\\(J>0\\) 为反铁磁耦合，无外场。",
+    "q": [
+      "通过总自旋求所有本征能和简并度。",
+      "求热配分函数和能量。",
+      "计算热态singlet布居与纠缠阈值。",
+      "讨论零温和高温极限。"
+    ],
+    "s": [
+      "总自旋 \\(\\boldsymbol S=\\boldsymbol S_1+\\boldsymbol S_2\\)，有 \\(\\boldsymbol S_1\\cdot\\boldsymbol S_2=[S^2-S_1^2-S_2^2]/2\\)。两单自旋均为 \\(\\hbar^2(3/4)\\)，总自旋 \\(S=0\\) singlet给能 \\(E_s=-3J/4\\)，三重 \\(S=1\\) triplet给 \\(E_t=J/4\\)。",
+      "热配分函数 \\(Z=e^{3\\beta J/4}+3e^{-\\beta J/4}\\)，平均能量 \\(U=[(-3J/4)e^{3\\beta J/4}+3(J/4)e^{-\\beta J/4}]/Z\\)。能隙为 \\(J\\)，低温主要占据singlet，高温各四个自旋态趋等概率。",
+      "热态为singlet与三重子空间的各向同性混合，singlet概率 \\(p_s=e^{\\beta J}/(e^{\\beta J}+3)\\)。两qubit的Bell对角态当最大本征概率超过 \\(1/2\\) 时纠缠，因此 \\(p_s>1/2\\) 等价于 \\(e^{\\beta J}>3\\)，即 \\(k_BT<J/\\ln3\\)。",
+      "当 \\(T\\to0\\)，\\(p_s\\to1\\)，态趋纯singlet；当 \\(T\\to\\infty\\)，\\(p_s\\to1/4\\)，密度矩阵趋 \\(I_4/4\\) 而不纠缠。这里的温度纠缠阈值是理想两自旋、各向同性交换模型结果，外场和各向异性会改变。"
+    ],
+    "tags": [
+      "Heisenberg交换",
+      "热纠缠",
+      "Bell对角谱"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "Q257",
+    "title": "氢样原子的Stark效应与简并一阶微扰",
+    "setup": "氢原子在静态弱均匀电场 \\(\\mathcal E\\hat z\\) 下，扰动 \\(H' = e\\mathcal E z\\)（采用电子电势能符号的这一约定）。先忽略精细结构，研究 \\(n=2\\) 四重空间态。",
+    "q": [
+      "确定 (n=2) 态中宇称导致的矩阵零元。",
+      "给出 (2s) 与 (2p,m=0) 的非零耦合。",
+      "求一阶Stark能级分裂与本征态。",
+      "解释 (m=pm1) 及非简并基态的一阶效应。"
+    ],
+    "s": [
+      "\\(n=2\\) 空间态为 \\(|200\\rangle\\) 与 \\(|21m\\rangle\\)（\\(m=0,\\pm1\\)）。算符 \\(z=r\\cos\\theta\\) 在宇称下为奇，故同宇称对角元 \\(\\langle 200|z|200\\rangle\\)、\\(\\langle21m|z|21m\\rangle\\) 为零。角动量选择规则为 \\(\\Delta l=\\pm1,\\Delta m=0\\)，因此只耦合 \\(|200\\rangle\\) 与 \\(|210\\rangle\\)。",
+      "由标准归一氢原子径向函数直接积分 \\( \\langle 200|z|210\\rangle=-3a_0\\)（相位约定可翻转号），其中 \\(a_0\\) 为Bohr半径。积分可分为角积分 \\(\\int Y_{00}^*\\cos\\theta Y_{10}\\,d\\Omega=1/\\sqrt3\\) 与径向积分 \\(\\int R_{20}R_{21}r^3dr=-3\\sqrt3a_0\\)。",
+      "在 \\((|200\\rangle,|210\\rangle)\\) 基底，微扰矩阵为 \\(H'_{2\\times2}=\\begin{pmatrix}0&-3ea_0\\mathcal E\\\\-3ea_0\\mathcal E&0\\end{pmatrix}\\)，本征能修正 \\(\\Delta E_\\pm=\\pm3ea_0|\\mathcal E|\\)，本征态是两态的等幅对称、反对称组合（标签随电场与相位约定）。这是氢样简并能级的线性Stark效应。",
+      "\\(m=\\pm1\\) 与 \\(2s\\) 不耦合，其一阶修正为零；氢基态 \\(|100\\rangle\\) 为非简并且宇称确定，也有 \\(\\langle100|z|100\\rangle=0\\)，故其主要Stark响应从二阶开始。真实氢原子精细结构与Lamb位移解除部分简并，过弱场时线性结果的适用性需重新评估。"
+    ],
+    "tags": [
+      "简并微扰",
+      "Stark效应",
+      "角动量选择"
+    ],
+    "tier": "advanced_composite",
+    "level": 5,
+    "estimated_minutes": 90,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  }
+]
