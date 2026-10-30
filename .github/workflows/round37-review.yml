@@ -1,0 +1,76 @@
+name: Round37 physics 50 strict mathematical LaTeX review and PDF
+on:
+  pull_request:
+    paths:
+      - "editorial/round37/source/**"
+      - "editorial/round37/qa_*.py"
+      - "editorial/round37/build_review.py"
+      - ".github/workflows/round37-review.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  high-difficulty-review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: physics-round37-latex-advanced-review-20261030
+          persist-credentials: true
+      - name: Install XeLaTeX Chinese typesetting and PDF tools
+        run: |
+          sudo apt-get update
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+            texlive-xetex texlive-lang-chinese texlive-latex-extra \
+            texlive-fonts-recommended fonts-noto-cjk fonts-freefont-otf fonts-texgyre poppler-utils
+      - name: Validate 50 originals, generate 150 source files and run 200 real subpart calculations
+        run: python3 editorial/round37/build_review.py --compile
+      - name: Verify the two output PDFs contain the 50 distinct problem IDs
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json, re, subprocess
+          base=Path("editorial/round37/review-release")
+          report=json.loads((base/"verification.json").read_text())
+          assert report["machine_checks_passed"] == 200
+          assert report["source_triples"] == 150
+          assert report["both_pdf_compilation"] == "PASS"
+          expected=({f"M{i:03d}" for i in range(256,265)} |
+                    {f"E{i:03d}" for i in range(256,265)} |
+                    {f"T{i:03d}" for i in range(250,258)} |
+                    {f"W{i:03d}" for i in range(258,266)} |
+                    {f"O{i:03d}" for i in range(258,266)} |
+                    {f"Q{i:03d}" for i in range(258,266)})
+          for name in ("questions","solutions"):
+              text=subprocess.check_output(["pdftotext","-layout",str(base/(name+".pdf")),"-"],text=True)
+              found=set(re.findall(r"\b[METWOQ]\d{3}\b",text))
+              missing=expected-found
+              assert not missing,(name,sorted(missing))
+              assert len(text)>(9000 if name == 'questions' else 25000),(name,len(text))
+              print(name, "pages", report["pdfs"][name]["pages"], "text chars",len(text))
+          PY
+      - name: Commit all books, complete source files, QA evidence and ZIP to GitHub review branch
+        if: github.event_name == 'workflow_dispatch' || (github.event_name == 'pull_request' && github.head_ref == 'physics-round37-latex-advanced-review-20261030' && github.event.pull_request.head.repo.full_name == github.repository)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f editorial/round37/canonical editorial/round37/review-release
+          if ! git diff --cached --quiet; then
+            git commit -m "Round37: publish 50 review sources, 200 model checks and two XeLaTeX PDFs [draft only]"
+            git fetch origin physics-round37-latex-advanced-review-20261030
+            git rebase origin/physics-round37-latex-advanced-review-20261030
+            git push origin HEAD:refs/heads/physics-round37-latex-advanced-review-20261030
+          else
+            echo "GitHub reviewed sources and PDF artifacts already up to date."
+          fi
+      - name: Keep audit artifacts even when tests or TeX fail
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: round37-advanced-physics-review
+          path: |
+            editorial/round37/review-release/
+          if-no-files-found: warn
