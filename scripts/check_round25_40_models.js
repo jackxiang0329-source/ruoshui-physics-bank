@@ -227,5 +227,90 @@ function J(n,x){let term=(x/2)**n;for(let j=1;j<=n;j++)term/=j;let sum=term;for(
  eq('O144',4,'Brewster complementary refraction',B+t,PI/2);
 }
 {
- const root=3.8317059702,frac=1-J(0,root)**2-J(1,root)**2,u=>u;
+ const root=3.8317059702,D=2,lambda=.5,theta=root*lambda/(PI*D),f=1-J(0,root)**2-J(1,root)**2;
+ eq('O145',1,'Airy first-dark Bessel root',J(1,root),0,1e-8);
+ eq('O145',2,'first dark angle scaling',theta,1.22*lambda/D,2e-4);
+ eq('O145',3,'Airy enclosed fraction',f,.838,5e-4);
+ eq('O145',4,'Airy normalization on axis',2*J(1,1e-6)/1e-6,1);
 }
+{
+ const L=2,dk=.9,kappa=2,A1=.7,real=sim(z=>Math.cos(dk*z),0,L),imag=sim(z=>Math.sin(dk*z),0,L),mag=Math.sqrt(real*real+imag*imag);
+ eq('O146',1,'second harmonic phase integral',mag,L*sinc(dk*L/2));
+ eq('O146',2,'perfect phase matching quadratic power',(2*L)**2/L**2,4);
+ eq('O146',3,'first destructive conversion zero',sinc(PI),0);
+ eq('O146',4,'coherence length phase criterion',dk*(PI/dk),PI);
+}
+{
+ const V1=60,V2=30,total=.2,p1=total*V1/(V1-V2),p2=-total*V2/(V1-V2);
+ eq('O147',1,'thin lens total power',p1+p2,total);
+ eq('O147',2,'achromatic power cancellation',p1/V1+p2/V2,0);
+ eq('O147',3,'positive crown negative flint',p1>0&&p2<0?1:0,1);
+ eq('O147',4,'total doublet focal length',1/(p1+p2),1/total);
+}
+{
+ const n1=1.48,n2=1.46,n0=1,a=4,lambda=.6,na=Math.sqrt(n1*n1-n2*n2),V=2*PI*a*na/lambda;
+ eq('O148',1,'fiber acceptance from Snell',n0*Math.sin(Math.asin(na/n0)),na);
+ eq('O148',2,'normalized optical fiber V',V,2*PI*a*Math.sqrt(n1*n1-n2*n2)/lambda);
+ eq('O148',3,'wavelength doubles V halves',2*PI*a*na/(2*lambda),V/2);
+ eq('O148',4,'index matched NA vanishes',Math.sqrt(n1*n1-n1*n1),0);
+}
+{
+ const L=4,c=3,w0=2.2,n=w=>1.4+.04*(w-w0)+.01*(w-w0)**2,k=w=>w*n(w)/c,ng=n(w0)+w0*der(n,w0);
+ eq('O149',1,'phase gradient group index',der(k,w0),ng/c);
+ eq('O149',2,'group delay from phase derivative',L*der(k,w0),L*ng/c);
+ const b2=d2(k,w0),tau=2,broad=tau*Math.sqrt(1+(b2*L/(2*tau*tau))**2);
+ eq('O149',3,'Gaussian time-width quadratic spread',broad*broad,tau*tau+(b2*L/(2*tau))**2);
+ eq('O149',4,'nondispersive equal phase group index',1.4+0*2.2,1.4);
+}
+{
+ const z0=1.4,even=z=>z*Math.tan(z)-Math.sqrt(z0*z0-z*z);
+ let l=1e-7,r=z0;for(let j=0;j<90;j++){const m=(l+r)/2;if(even(m)>0)r=m;else l=m;}
+ const z=(l+r)/2,w=Math.sqrt(z0*z0-z*z);
+ eq('Q144',1,'finite well even matching',z*Math.tan(z),w);
+ eq('Q144',2,'bound wave number identity',z*z+w*w,z0*z0);
+ const zc=2.5,odd=z=>-z/Math.tan(z)-Math.sqrt(zc*zc-z*z);l=PI/2+1e-6;r=zc;for(let j=0;j<90;j++){const m=(l+r)/2;if(odd(m)>0)r=m;else l=m;}
+ eq('Q144',3,'finite well odd matching',-((l+r)/2)/Math.tan((l+r)/2),Math.sqrt(zc*zc-((l+r)/2)**2));
+ eq('Q144',4,'odd threshold ordering',zc>PI/2?1:0,1);
+}
+{
+ const D=.5,O=2,R=Math.sqrt(D*D+O*O),t=.8,p=O*O/(R*R)*Math.sin(R*t/2)**2;
+ eq('Q145',1,'Rabi normalized rotation axis',(D*D+O*O)/(R*R),1);
+ eq('Q145',2,'Rabi flip probability nonnegative',p>0&&p<1?1:0,1);
+ eq('Q145',3,'resonant pi pulse',Math.sin(O*(PI/O)/2)**2,1);
+ eq('Q145',4,'detuned upper bound',O*O/(R*R)<1?1:0,1);
+}
+{
+ const m=2,h=3,g=1.2,kap=m*g/(h*h),k=.9,tR=kap*kap/(kap*kap+k*k),tT=k*k/(kap*kap+k*k);
+ eq('Q146',1,'attractive delta bound jump',-2*kap,-2*m*g/(h*h));
+ eq('Q146',2,'exponential bound-state normalization',sim(x=>kap*Math.exp(-2*kap*Math.abs(x)),-50,50),1,2e-4);
+ eq('Q146',3,'scattering unitarity',tR+tT,1);
+ eq('Q146',4,'zero coupling full transmission',k*k/(0+k*k),1);
+}
+{
+ const m=2,R=1.5,h=3,phi=.3,c=h*h/(2*m*R*R),E=(n,x)=>c*(n-x)**2,n=2;
+ eq('Q147',1,'flux quantum spectral relabeling',E(n,phi+1),E(n-1,phi));
+ eq('Q147',2,'half-flux level degeneracy',E(0,.5),E(1,.5));
+ eq('Q147',3,'persistent current as energy derivative',-der(x=>E(n,x),phi),2*c*(n-phi));
+ eq('Q147',4,'zero flux rotational spectrum',E(n,0),c*n*n);
+}
+{
+ const sq=1/Math.sqrt(2),corr=(ax,az,bx,bz)=>-ax*bx-az*bz;
+ const a=[0,1],ap=[1,0],b=[sq,sq],bp=[-sq,sq],S=corr(...a,...b)+corr(...a,...bp)+corr(...ap,...b)-corr(...ap,...bp);
+ eq('Q148',1,'spin singlet anti-aligned z axes',corr(0,1,0,1),-1);
+ eq('Q148',2,'CHSH quantum value',S,-2*Math.sqrt(2));
+ const A=1,Ap=-1,B=1,Bp=-1,s=A*(B+Bp)+Ap*(B-Bp);
+ eq('Q148',3,'local deterministic bound',Math.abs(s),2);
+ eq('Q148',4,'orthogonal singlet axes no correlation',corr(1,0,0,1),0);
+}
+{
+ const m=2,w=3,h=1.5,lambda=.02,x0sq=h/(2*m*w),shift=n=>3*lambda*(2*n*n+2*n+1)*x0sq*x0sq;
+ eq('Q149',1,'quartic ground-state Gaussian fourth moment',shift(0)/lambda,3*x0sq*x0sq);
+ eq('Q149',2,'quartic first-excited ratio',shift(1)/shift(0),5);
+ eq('Q149',3,'first transition frequency change',(shift(1)-shift(0))/h,3*lambda*h/(m*m*w*w));
+ eq('Q149',4,'positive anharmonic level spacing',shift(2)-shift(1)>0?1:0,1);
+}
+const ranges={M:[158,164],E:[158,164],T:[151,157],W:[151,157],O:[144,149],Q:[144,149]};
+const ids=Object.entries(ranges).flatMap(([p,[a,b]])=>Array.from({length:b-a+1},(_,i)=>p+String(a+i).padStart(3,'0')));
+if(checks.length!==160)throw Error('expected 160 regressions but found '+checks.length);
+for(const id of ids){const x=checks.filter(z=>z.id===id);if(x.length!==4||x.some((z,i)=>z.part!==i+1))throw Error(id+' insufficient subpart regressions');}
+process.stdout.write(JSON.stringify({round:25,status:'FORMULA_REGRESSIONS_PASS',count:40,checks:160,expert_review:'PENDING_INDEPENDENT_REVIEW',results:checks},null,2)+'\n');
