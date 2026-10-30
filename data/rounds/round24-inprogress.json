@@ -61,10 +61,19 @@
   "solution_subparts": 160,
   "expert_review": "待独立复核",
   "independent_expert_subpart_reviews": 0,
-  "technical_source_status": "pending CI",
-  "formula_regression_status": "pending CI",
-  "pdf_status": "pending CI",
+  "technical_source_status": "PASS: 40 canonical source triples, 160 four-part stems and 160 four-part solutions, duplicate near-match gate",
+  "formula_regression_status": "PASS: 160/160 physics-model regression assertions on improved model-qa script (source job run 41015107794)",
+  "pdf_status": "PASS: dual XeLaTeX PDF compilation from unchanged canonical problem sources on run 41014968168; latest QA-only script revision under recompile",
   "merge_to_main_allowed": false,
   "main_release_gate": "50 problems, 200 real subpart checks, two PDF books, independent expert review must be reported separately",
-  "note": "40-item work branch with explicit source and numerical QA; no claim of independently certified answers. Official main not modified."
+  "note": "40-item work branch with explicit source and numerical QA; no claim of independently certified answers. Official main not modified.",
+  "technical_qa_runs": {
+    "first_full_success": 41014968168,
+    "enhanced_regression_source_pass": 41015107794,
+    "first_verified_pdf_artifact_id": 12959192532,
+    "first_verified_source_qa_artifact_id": 12959451443,
+    "latest_regression_source_commit": "82db173dc3b75fc4f4c00bd1c6cce9a6ddb97d10"
+  },
+  "source_problem_canonical_unchanged_after_pdf_success": true,
+  "release_gate_note": "Individual draft branch has 40 verified source items and 160 technical checks, while formal main requires 50 with 200 checks; do not merge or imply certified expert review."
 }
