@@ -1,0 +1,4 @@
+(1) 链条不可伸长且均沿自身移动，所有链元的速度大小均为 $v=\dot x$，总动能是 $K=\tfrac12\mu L\dot x^2$。以桌面高度为重力势能零点，只有垂直悬挂的质量产生位置相关势能，其质心低于桌面 $x/2$，故 $U(x)=-\tfrac12\mu gx^2$；桌面上的链元高度不变。
+(2) 拉氏量 $\mathcal L=K-U=\tfrac12\mu L\dot x^2+\tfrac12\mu gx^2$，Euler–Lagrange 方程是 $\mu L\ddot x=\mu gx$，即 $\ddot x=(g/L)x$。虽然驱动力仅是悬垂段重力 $\mu gx$，整根链条同时运动，惯性必须为 $\mu L$，不能把动力学错误写成 $\mu x\ddot x=\mu gx$。
+(3) 记 $\omega=\sqrt{g/L}$，初值问题 $\ddot x=\omega^2x$、$\dot x(0)=0$ 的解为 $x(t)=x_0\cosh(\omega t)$、$\dot x(t)=x_0\omega\sinh(\omega t)$。当最后一段将要越过桌缘时 $x(t_*)=L$，所以 $t_*=\sqrt{L/g}\,\operatorname{arcosh}(L/x_0)$；仅当 $0<x_0<L$ 时该表达式是正的有限到达时间。
+(4) 能量 $E=\tfrac12\mu L\dot x^2-\tfrac12\mu gx^2$ 守恒，代入初态得到 $\dot x^2=g(x^2-x_0^2)/L$；把第三问双曲函数关系代入可逐项验证。光滑转向假设避免链段与尖锐桌缘发生冲击和局部弯曲损失；若实际桌角诱发摩擦、撞击或链条的有限弯曲刚度，需加入额外作用并重新检验能量守恒。
