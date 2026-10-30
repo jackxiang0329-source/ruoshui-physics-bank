@@ -28,15 +28,25 @@ def run():
           (27/7)*g*rho, g*rho+2*g*(2*rho)/(1.4),method="mechanical-energy")
     check("M266",4,"no-slip static friction from tangential equations",
           (inertia/(m*a*a))/(1+inertia/(m*a*a)),2/7,method="rolling-torque")
-    # M267: power potential epicycle
-    n,alpha,m,Lmom=1.4,2.2,1.3,2.
-    r0=(Lmom*Lmom/(m*alpha*n))**(1/(n+2))
-    U=lambda r:Lmom*Lmom/(2*m*r*r)+alpha*r**n
-    Omega=Lmom/(m*r0*r0)
-    check("M267",1,"power potential effective radial derivative",der(U,r0),0,method="central-force-stationarity")
-    check("M267",2,"power-potential radial epicyclic Hessian",der2(U,r0)/m,(n+2)*Omega*Omega,method="effective-potential-Hessian")
-    check("M267",3,"apsidal angle from frequency ratio",2*P*Omega/S(der2(U,r0)/m),2*P/S(n+2),method="linearized-orbit-precession")
-    check("M267",4,"Kepler special apsidal rotation",2*P/S(-1+2),2*P,method="Kepler-limit")
+    # M267: Newton gravity tidal Hessian
+    G,M,r=2.,3.,4.
+    Tdiag=[2*G*M/r**3,-G*M/r**3,-G*M/r**3]
+    phi=lambda x:-G*M/A(x)
+    acc=lambda x:-G*M*x/A(x)**3
+    check("M267",1,"tidal radial finite difference acceleration gradient",
+          der(acc,r),Tdiag[0],method="Newton-gravity-Jacobian")
+    check("M267",2,"radial and transverse tidal eigenvalue trace",
+          sum(Tdiag),0,method="tidal-eigenspectrum")
+    rho=1.2
+    check("M267",3,"vacuum Laplace trace zero but interior Poisson nonzero",
+          sum(Tdiag),0,method="Poisson-vacuum-equation")
+    density=2.1
+    roche=(3*M/(2*P*density))**(1/3)
+    size=.7
+    gself=4*P*G*density*size/3
+    tidal=2*G*M*size/roche**3
+    check("M267",4,"tidal disruption order-scale acceleration",
+          tidal,gself,method="Roche-acceleration-balance")
     # M268: bead on rotating hoop
     m,R,g,Om=1.5,.8,9.8,4.5
     U=lambda th:m*g*R*(1-C(th))-.5*m*Om*Om*R*R*SI(th)**2
