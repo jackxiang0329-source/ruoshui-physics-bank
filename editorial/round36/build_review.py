@@ -50,7 +50,11 @@ def tex_render(s):
                 raise ValueError("Unmarked LaTeX slash outside math mode")
             chunks[i]=tex_escape(part)
         else:
-            chunks[i]=part
+            body=part[2:-2]
+            if len(body)>105 and part.startswith(r"\("):
+                chunks[i]=r"\["+body+r"\]"
+            else:
+                chunks[i]=part
     return "".join(chunks)
 
 def load_sources():
@@ -127,11 +131,12 @@ def emit_source_triples(records):
 
 HEADER = r"""\documentclass[UTF8,a4paper,11pt,oneside,openany]{ctexbook}
 \usepackage{fontspec}
+\usepackage{amsmath,mathtools}
 \usepackage{unicode-math}
 \IfFontExistsTF{TeX Gyre Pagella}{\setmainfont{TeX Gyre Pagella}}{\setmainfont{FreeSerif}}
 \IfFontExistsTF{TeX Gyre Pagella Math}{\setmathfont{TeX Gyre Pagella Math}}{\setmathfont{Latin Modern Math}}
 \IfFontExistsTF{Noto Serif CJK SC}{\setCJKmainfont{Noto Serif CJK SC}}{}
-\usepackage{xcolor,geometry,amsmath,amssymb,mathtools}
+\usepackage{xcolor,geometry}
 \usepackage{fancyhdr}
 \definecolor{accent}{HTML}{17365D}
 \geometry{margin=22mm,headheight=15pt}
