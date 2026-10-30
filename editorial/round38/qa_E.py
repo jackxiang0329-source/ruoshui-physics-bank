@@ -1,17 +1,21 @@
 from qa_common import *
 def run():
-    # E265 TE10 waveguide
-    a,eps,mu,w=2.,1.7,1.4,3.
-    cutoff=P/a;beta=S(w*w*eps*mu-cutoff*cutoff)
-    check("E265",1,"TE10 cosine satisfies side-wall Neumann",
-          -cutoff*SI(cutoff*0),0,method="TE-boundary")
-    check("E265",2,"TE10 dispersion transverse eigenvalue",
-          w*w*eps*mu-beta*beta,cutoff*cutoff,method="Helmholtz-separation")
-    check("E265",3,"TE phase velocity times group velocity",
-          (w/beta)*(beta/(w*eps*mu)),1/(eps*mu),method="guide-energy-dispersion")
-    cutoffw=P/(a*S(eps*mu))
-    check("E265",4,"group velocity goes zero at cutoff",
-          S(1-(cutoffw/(cutoffw+1e-8))**2)/S(eps*mu),0,tol=.0002,method="waveguide-cutoff")
+    # E265 2D plasmon and gated acoustic dispersion
+    ns,e,m,eps,k,d=2.2,.7,1.5,1.8,.6,.25
+    surface=-e*.4
+    potential=surface/(2*eps*k)
+    check("E265",1,"Poisson surface charge jump from decaying sheet potential",
+          2*eps*k*potential,surface,method="sheet-Poisson-jump")
+    freq=lambda kk:S(ns*e*e*kk/(2*m*eps))
+    check("E265",2,"2D plasmon continuity momentum and Coulomb kernel",
+          freq(k)**2,ns*e*e*k/(2*m*eps),method="hydrodynamic-plasmon")
+    check("E265",3,"2D plasmon group speed half phase speed",
+          der(freq,k),freq(k)/(2*k),method="plasmon-group-gradient")
+    gated=lambda kk:S(ns*e*e*kk/(2*m*eps)*(1-E(-2*kk*d)))
+    small=.0001
+    cs=S(ns*e*e*d/(m*eps))
+    check("E265",4,"metal gate small-k acoustic plasmon",
+          gated(small)/small,cs,tol=.0001,method="gated-screening-limit")
     # E266 ExB guiding center
     m,q,B,El=2.,-1.7,1.4,.8
     wc=q*B/m
