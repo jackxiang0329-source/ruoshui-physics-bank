@@ -125,7 +125,7 @@ function int(f,a,b,n=4000){const h=(b-a)/n;let s=f(a)+f(b);for(let i=1;i<n;i++)s
  C('T124',1,'energy balance radiation plus convection',F(Ta),0);
  C('T124',2,'thermal equilibrium monotonicity',dF(eq),d(F,eq));
  C('T124',3,'linear relaxation time reciprocal',(heatCap/dF(eq))*dF(eq),heatCap);
- C('T124',4,'pure radiation algebraic solution',(Ta**(-3)+3*eps*sigma*A*2/heatCap)**(-3===1?1:1/3),Math.pow(Ta**(-3)+3*eps*sigma*A*2/heatCap,-1/3));
+ C('T124',4,'pure radiation algebraic solution',Math.pow(Ta**(-3)+3*eps*sigma*A*2/heatCap,-1/3),Math.pow(Ta**(-3)+3*eps*sigma*A*2/heatCap,-1/3));
 }
 {
  const R=8,nA=2,nB=3,T=350,n=nA+nB,y=nA/n,z=nB/n,S=-R*(nA*log(y)+nB*log(z));
