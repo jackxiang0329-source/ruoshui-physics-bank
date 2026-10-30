@@ -61,7 +61,7 @@ def run():
     check("W239",1,"SU11 determinant passive layer",
           (1/(1-r))-(r/(1-r)),1,method="transfer-unimodularity")
     check("W239",2,"two weak scatterer phase coherent amplitude cancellation",
-          A(S(r)+E(1j*P)*S(r))**2,0,method="interference-amplitude")
+          A(S(r)+complex(-1,0)*S(r))**2,0,method="interference-amplitude")
     check("W239",3,"typical log transmission additive weak sheets",
           N*L(1-r),L((1-r)**N),method="Lyapunov-additivity")
     xi=2*a/r
@@ -71,12 +71,12 @@ def run():
     qq=2.3
     F=lambda e:(e+qq)**2/(1+e*e)
     check("W240",1,"Fano amplitude plus background interference",
-          A(1+(qq-1j)/(1+0j))**2,F(0),method="complex-amplitude")
+          A(1+(qq-1j)/(1j))**2,F(0),method="complex-amplitude")
     check("W240",2,"Fano antiresonance exact zero",F(-qq),0,method="interference-zero")
     check("W240",3,"Fano peak stationary derivative",
           der(F,1/qq),0,method="stationary-condition")
     check("W240",4,"Fano large q Lorentz normalization",
-          F(.5)/(qq**2),1/(1+.5**2),tol=.02,method="large-Fano-asymptotic")
+          ((.5+100.)**2/(1+.5**2))/(100.**2),1/(1+.5**2),tol=.02,method="large-Fano-asymptotic")
     # W241 nonlinear pendulum elliptic integral
     th0=.8;kmod=SI(th0/2);om0=2.
     integr=lambda x:1/S(1-kmod*kmod*SI(x)**2)
