@@ -1,0 +1,4 @@
+(1) 单模热平衡中数态权重正比于 $q^n$，其中 $q=e^{-\hbar\omega/(k_BT)}\in(0,1)$。正规化配分函数为 $Z=\sum_{n\ge0}q^n=(1-q)^{-1}$，所以 $P_n=(1-q)q^n$。由 $\bar n=q/(1-q)$ 解出 $q=\bar n/(1+\bar n)$，故 $P_n=\bar n^n/(1+\bar n)^{n+1}$。
+(2) 母函数 $G(z)=\sum_nP_n z^n=(1-q)/(1-qz)$，于是 $G'(1)=\bar n$、$G''(1)=2\bar n^2$。据 $\operatorname{Var}(n)=G''(1)+G'(1)-G'(1)^2$，得方差 $\bar n(1+\bar n)$；Fano 因子 $F=\operatorname{Var}(n)/\bar n=1+\bar n$，二阶关联 $g^{(2)}(0)=\langle n(n-1)\rangle/\bar n^2=2$，前提是 $\bar n>0$。
+(3) 同平均的相干态具有泊松分布 $P_n^{\rm coh}=e^{-\bar n}\bar n^n/n!$，故 $\operatorname{Var}_{\rm coh}(n)=\bar n$、$F_{\rm coh}=1$、$g_{\rm coh}^{(2)}(0)=1$。两者的真空概率分别为 $P_0^{\rm th}=1/(1+\bar n)$ 与 $P_0^{\rm coh}=e^{-\bar n}$；热态的零光子概率较高，同时高光子数尾部也较重。
+(4) 热态 $g^{(2)}(0)=2$ 表示两次接近同时的光子计数存在正相关，称为聚束；相干态的 $g^{(2)}(0)=1$ 是泊松无聚束基准。严格真空 $\bar n=0$ 时比值定义的分母为零，不能直接宣称真空的可测 $g^{(2)}$ 等于某常数；应讨论非零占据的极限。光子能量量纲由 $\hbar\omega$ 提供，$\bar n$、$F$ 与 $g^{(2)}$ 均无量纲。
