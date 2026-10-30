@@ -26,17 +26,22 @@ def run():
     check("E266",3,"trochoid integrated velocity",der(y,.6),uy(.6)-El/B,method="kinematic-integration")
     check("E266",4,"magnetic power zero after drift transformation",
           integrate(lambda t:ux(t),0,2*P/A(wc)),0,method="gyro-electric-work")
-    # E267 nonlinear Poisson Boltzmann
-    ne,e,eps,kBT=3.,.7,2.,1.2
-    kap=S(2*e*e*ne/(eps*kBT));psi0=.8
-    surf=lambda ps:2*eps*kap*kBT/e*SH(e*ps/(2*kBT))
-    check("E267",1,"Boltzmann ionic charge odd under potential reversal",
-          (-2*e*ne*SH(e*psi0/kBT))+(-2*e*ne*SH(-e*psi0/kBT)),0,method="ionic-Gibbs")
-    check("E267",2,"Grahame square-field identity",
-          (surf(psi0)/eps)**2,8*ne*kBT/eps*(SH(e*psi0/(2*kBT))**2),method="Poisson-first-integral")
-    check("E267",3,"surface differential capacitance nonlinear",
-          der(surf,psi0),eps*kap*CH(e*psi0/(2*kBT)),method="electrostatic-differential-capacitance")
-    check("E267",4,"Debye-Huckel low voltage derivative",der(surf,0),eps*kap,method="screening-linear-response")
+    # E267 abrupt p-n junction depletion and low injection transport
+    q,eps,NA,ND,Vbi,V=1.2,2.4,3.,5.,1.9,.4
+    width=lambda vv:S(2*eps/q*(1/NA+1/ND)*(Vbi-vv))
+    xp=ND/(NA+ND)*width(V);xn=NA/(NA+ND)*width(V)
+    check("E267",1,"depletion junction space-charge neutrality",
+          NA*xp-ND*xn,0,method="semiconductor-Gauss-neutrality")
+    check("E267",2,"built-in junction potential is triangle-field integral",
+          q*(NA*xp*xp+ND*xn*xn)/(2*eps),Vbi-V,method="Poisson-depletion-integral")
+    charge=lambda vv:q*NA*ND/(NA+ND)*width(vv)
+    check("E267",3,"junction differential capacitance from depletion charge",
+          -der(charge,V),eps/width(V),method="junction-differential-capacitance")
+    Dn,tn,voltage,kBT=1.3,2.,.7,1.
+    Ln=S(Dn*tn)
+    minor=lambda x:(E(q*voltage/kBT)-1)*E(-x/Ln)
+    check("E267",4,"Shockley minority carrier diffusion-recombination equation",
+          Dn*der2(minor,.4)-minor(.4)/tn,0,method="minority-diffusion-ODE")
     # E268 finite London superconducting slab
     lam,B0,thickness,mu=1.3,.9,2.,1.1
     Bfun=lambda x:B0*CH(x/lam)/CH(thickness/(2*lam))
