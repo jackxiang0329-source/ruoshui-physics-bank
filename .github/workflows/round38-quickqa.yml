@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: physics-round38-latex-historical-review-20261030
+          ref: physics-round38-strict-latex-history-20261030
       - name: Execute 200 per-subpart numeric checks and validate source structure
         run: |
           cd editorial/round38
