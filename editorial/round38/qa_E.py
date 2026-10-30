@@ -100,16 +100,21 @@ def run():
           (w/kk)*(c*c*kk/w),c*c,method="plasma-group-velocity")
     check("E272",4,"below plasma frequency evanescent wave",
           wp*wp-1.1**2>0,1,method="plasma-cutoff")
-    # E273 grounded spherical image charge
-    q,eps,a,d=1.7,1.3,.9,2.2
-    qp=-q*a/d;zp=a*a/d
-    potential=lambda r,theta:(q/S(r*r+d*d-2*r*d*C(theta))+qp/S(r*r+zp*zp-2*r*zp*C(theta)))/(4*P*eps)
-    check("E273",1,"image charge ensures entire grounded sphere equipotential",
-          potential(a,.9),0,method="Dirichlet-image-boundary")
-    force=-q*q*a*d/(4*P*eps*(d*d-a*a)**2)
-    check("E273",2,"image Coulomb attraction with correct sign",
-          q*qp/(4*P*eps*(d-zp)**2),force,method="Coulomb-image-force")
-    energy=lambda dd:-q*q*a/(8*P*eps*(dd*dd-a*a))
-    check("E273",3,"force equals derivative of half-image energy",
-          -der(energy,d),force,method="image-work-derivative")
-    check("E273",4,"induced total charge equals image charge",qp,-q*a/d,method="Gauss-image-monopole")
+    # E273 grounded orthogonal conductor wedge
+    q,eps,a,b=1.7,1.3,.9,1.5
+    pos=[(a,b,q),(-a,b,-q),(a,-b,-q),(-a,-b,q)]
+    def V(x,y):
+        return sum(Q/S((x-xj)**2+(y-yj)**2) for xj,yj,Q in pos)/(4*P*eps)
+    check("E273",1,"both grounded infinite planes Dirichlet boundary",
+          V(0,.7)+V(.6,0),0,method="wedge-Dirichlet-images")
+    Cconst=q*q/(16*P*eps)
+    Fx=Cconst*(-1/a**2+a/(a*a+b*b)**1.5)
+    Fy=Cconst*(-1/b**2+b/(a*a+b*b)**1.5)
+    def energy(aa,bb):
+        return -Cconst*(1/aa+1/bb-1/S(aa*aa+bb*bb))
+    check("E273",2,"wedge mirror forces leftward",
+          Fx<0 and Fy<0,1,method="Coulomb-image-forces")
+    check("E273",3,"wedge exact mechanical half-image self-energy gradient",
+          -der(lambda x:energy(x,b),a),Fx,method="wedge-image-work")
+    check("E273",4,"single grounded plane recovered as second plane distant",
+          -der(lambda x:energy(x,1e5),a),-Cconst/a**2,method="one-plane-limit")
