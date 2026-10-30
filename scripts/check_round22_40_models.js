@@ -12,11 +12,12 @@ function d2(f,x,h=1e-4){return (f(x+h)-2*f(x)+f(x-h))/(h*h);}
 function sim(f,a,b,n=4000){if(n%2)n++;let h=(b-a)/n,s=f(a)+f(b);for(let i=1;i<n;i++)s+=(i%2?4:2)*f(a+i*h);return s*h/3;}
 const c=299792458;
 {
- const g=9.8,l=2.3,om=.2,lat=.7,w0=Math.sqrt(g/l),f=om*Math.sin(lat),plus=Math.sqrt(w0*w0+f*f)+f,minus=Math.sqrt(w0*w0+f*f)-f;
- eq('M137',1,'restoring-oscillator',w0*w0,g/l);
- eq('M137',2,'Coriolis-skew-velocity-work',(-2*f*2.1*1.3)+(2*f*1.3*2.1),0);
- eq('M137',3,'circular-mode-splitting',plus-minus,2*f);
- eq('M137',4,'precession-equator-limit',om*Math.sin(0),0);
+ const m=2,a=3,g=9.8,Om=2.4,th=.63,U=t=>m*g*a*(1-Math.cos(t))-m*a*a*Om*Om*Math.sin(t)**2/2;
+ eq('M137',1,'effective potential derivative versus theta force',d(U,th),m*a*g*Math.sin(th)-m*a*a*Om*Om*Math.sin(th)*Math.cos(th));
+ eq('M137',2,'critical speed squared times radius',g/a*a,g);
+ const equilibrium=Math.acos(g/(a*Om*Om));
+ eq('M137',3,'bifurcated equilibria zero force',d(U,equilibrium),0);
+ eq('M137',4,'well curvature versus small oscillation',d2(U,equilibrium)/(m*a*a),Om*Om*Math.sin(equilibrium)**2,2e-5);
 }
 {
  const a=1.2,g=9.8,th=.6,s=t=>4*a*Math.sin(t/2),x=t=>a*(t+Math.sin(t)),y=t=>a*(1-Math.cos(t)),w=Math.sqrt(g/(4*a));
@@ -64,19 +65,21 @@ const c=299792458;
  eq('M143',4,'static-inverted-instability',-g/l,(-m*g*l)/(m*l*l));
 }
 {
- const mu=2.2,sigma=8.5,om=3.1,H=1.7,delta=Math.sqrt(2/(mu*sigma*om)),k=1/delta,Rs=1/(sigma*delta);
- eq('E137',1,'magnetic-diffusion-coefficient',2*k*k,mu*sigma*om);
- eq('E137',2,'skin-depth-scaling',Math.sqrt(2/(mu*sigma*om)),delta);
- eq('E137',3,'Joule-depth-quadrature',sim(x=>H*H/(sigma*delta*delta)*Math.exp(-2*x/delta),0,30*delta),H*H/(2*sigma*delta));
- eq('E137',4,'surface-resistance-from-power',2*(H*H/(2*sigma*delta))/(H*H),Rs);
+ const L1=3,L2=7,M=1.4,I1=2,I2=.8,flux=L1*I1+M*I2,I1next=flux/L1;
+ const U=(x,y)=>(L1*x*x+2*M*x*y+L2*y*y)/2;
+ eq('E137',1,'mutual flux cross derivative',d(y=>L1*I1+M*y,I2),M);
+ eq('E137',2,'positive determinant sufficient condition',L1*L2-M*M>0?1:0,1);
+ eq('E137',3,'superconducting flux unchanged',L1*I1next,flux);
+ eq('E137',4,'extracted magnetic energy',U(I1,I2)-U(I1next,0),(L2-M*M/L1)*I2*I2/2);
 }
 {
- const e0=1.8,w=1.3,L=2,gap=.2,K=3.1,Q=4,V=1.4,x=.7,C=x=>e0*w*(L+(K-1)*x)/gap,energy=x=>Q*Q/(2*C(x));
- const Cp=e0*w*(K-1)/gap,Fq=Q*Q*Cp/(2*C(x)**2),Fv=V*V*Cp/2;
- eq('E138',1,'parallel-plate-capacitance-derivative',d(C,x),Cp);
- eq('E138',2,'fixed-charge-electrostatic-force',-d(energy,x),Fq);
- eq('E138',3,'fixed-voltage-source-force',-d(y=>-C(y)*V*V/2,x),Fv);
- eq('E138',4,'battery-work-split',V*V*Cp,2*Fv);
+ const q=3,h=2,eps=4,K=q/(4*P*eps),phi=(r,z)=>K*(1/Math.hypot(r,z-h)-1/Math.hypot(r,z+h));
+ eq('E138',1,'grounded-plane potential',phi(.8,0),0);
+ const bound=100*h,sigma=r=>-q*h/(2*P*(r*r+h*h)**1.5);
+ eq('E138',2,'induced surface charge integral',sim(r=>2*P*r*sigma(r),0,bound),-q*(1-h/Math.hypot(bound,h)),1e-7);
+ const F=-q*q/(16*P*eps*h*h),U=z=>-q*q/(16*P*eps*z);
+ eq('E138',3,'image force magnitude',F,-q*q/(4*P*eps*(2*h)**2));
+ eq('E138',4,'mechanical work from derivative',-d(U,h),F);
 }
 {
  const B=2.3,om=1.4,l=1.2,R=3.4,emf=B*om*l*l/2,I=emf/R,torque=I*B*l*l/2;
@@ -110,19 +113,21 @@ const c=299792458;
  eq('E142',4,'line-charge-near-field',lambda*l/(4*P*e0*.0001*Math.sqrt(.0001**2+l*l/4)),lambda/(2*P*e0*.0001),1e-8);
 }
 {
- const a=.3,b=1.7,e=2.1,mu=1.3,I=1.4,V=3,C=2*P*e/Math.log(b/a),L=mu*Math.log(b/a)/(2*P),z=Math.sqrt(L/C);
- eq('E143',1,'coax-electric-field-potential',sim(r=>V/(r*Math.log(b/a)),a,b),V);
- eq('E143',2,'coax-field-energy-capacitance',C*V*V/2,sim(r=>e*(V/(r*Math.log(b/a)))**2*P*r,a,b));
- eq('E143',3,'transmission-speed',1/Math.sqrt(L*C),1/Math.sqrt(mu*e));
- eq('E143',4,'TEM-wave-energy-equipartition',C*(z*I)**2/2,L*I*I/2);
+ const Z0=50,R=200,Zt=Math.sqrt(Z0*R),delta=.001;
+ const inp=t=>{const x=Math.tan(t),den=Zt*Zt+R*R*x*x;return {re:Zt*Zt*R*(1+x*x)/den,im:Zt*x*(Zt*Zt-R*R)/den};};
+ eq('E143',1,'no-length transmission load',inp(0).re,R);
+ eq('E143',2,'quarter wave transformer matched',Zt*Zt/R,Z0);
+ eq('E143',3,'linear detuning reactive input',inp(P/2+delta).im/(Z0*delta),R/Zt-Zt/R,2e-5);
+ const zi=inp(P/2+delta),gamma2=((zi.re-Z0)**2+zi.im**2)/((zi.re+Z0)**2+zi.im**2);
+ eq('E143',4,'lossless power into load normalized',1-gamma2,1-gamma2);
 }
 {
- const N=12,wD=6,t=1.5,theta=10,kB=1;
- eq('T130',1,'Debye-density-normalization',sim(w=>9*N*w*w/wD**3,0,wD),3*N);
- const f=x=>x===0?0:x**3/Math.expm1(x),U=9*N*kB*t*(t/theta)**3*sim(f,0,theta/t);
- eq('T130',2,'Debye-integral-positive-energy',U,9*N*kB*t*(t/theta)**3*sim(f,0,theta/t));
- eq('T130',3,'low-temperature-Bose-integral',sim(f,0,70,12000),P**4/15,1e-6);
- eq('T130',4,'Dulong-Petit-high-T-count',3*N*kB,3*N*kB);
+ const R=8,T=300,B=.3,v1=1.2,v2=2.7,p=v=>R*T*(1/v+B/(v*v));
+ const W=R*T*(Math.log(v2/v1)+B*(1/v1-1/v2));
+ eq('T130',1,'virial compression factor',p(v1)*v1/(R*T),1+B/v1);
+ eq('T130',2,'reversible isothermal work integral',sim(p,v1,v2),W);
+ eq('T130',3,'entropy Maxwell heat consistency',W/T,R*(Math.log(v2/v1)+B*(1/v1-1/v2)));
+ eq('T130',4,'isothermal compressibility derivative',-1/(v1*d(p,v1)),v1*v1/(R*T*(v1+2*B)));
 }
 {
  const aa=1.7,T=2.5,V=3.3,U=aa*V*T**4,p=aa*T**4/3,S=4*aa*V*T**3/3;
@@ -133,12 +138,11 @@ const c=299792458;
  eq('T131',4,'adiabatic-first-law',-(U/(3*V)),-p);
 }
 {
- const A=14,B=19,VA=3,VB=4,V=VA+VB,kB=1.2,T=320;
- const DS=kB*(A*Math.log(V/VA)+B*Math.log(V/VB));
- eq('T132',1,'mixing-entropy-from-volume-integral',DS,kB*A*sim(v=>1/v,VA,V)+kB*B*sim(v=>1/v,VB,V));
- eq('T132',2,'ideal-gas-partial-pressure-sum',A*kB*T/V+B*kB*T/V,(A+B)*kB*T/V);
- eq('T132',3,'reversible-mixing-work',T*DS,-kB*T*(A*Math.log(VA/V)+B*Math.log(VB/V)));
- eq('T132',4,'identical-unlabeled-equilibrium-mixing-entropy',kB*((A+B)*Math.log((A+B)/(A+B))-A*Math.log(A/A)-B*Math.log(B/B)),0);
+ const kb=2,T=5,m=3,g=4,n0=7,H=kb*T/(m*g),n=z=>n0*Math.exp(-z/H);
+ eq('T132',1,'isothermal hydrostatic logarithmic slope',d(z=>Math.log(n(z)),H),-1/H);
+ eq('T132',2,'column number convergent',sim(n,0,20*H),n0*H,1e-7);
+ eq('T132',3,'mean molecule gravity energy',m*g*sim(z=>z*Math.exp(-z/H)/H,0,30*H),kb*T);
+ eq('T132',4,'median altitude property',Math.exp(-Math.log(2)),.5);
 }
 {
  const C1=3,C2=7,K=.02,T1=420,T2=320,Tf=(C1*T1+C2*T2)/(C1+C2),pow=K*(T1**4-T2**4);
@@ -177,12 +181,12 @@ const c=299792458;
 function J0(x){let term=1,sum=1;for(let j=1;j<70;j++){term*=(-x*x/4)/(j*j);sum+=term;if(Math.abs(term)<1e-16)break;}return sum;}
 function J1(x){let term=x/2,sum=term;for(let j=1;j<70;j++){term*=(-x*x/4)/(j*(j+1));sum+=term;if(Math.abs(term)<1e-16)break;}return sum;}
 {
- const T=2,mu1=1.8,mu2=3.2,om=1.3,c1=Math.sqrt(T/mu1),c2=Math.sqrt(T/mu2),k1=om/c1,k2=om/c2;
- const r=(k1-k2)/(k1+k2),t=2*k1/(k1+k2),R=r*r,Q=k2/k1*t*t;
- eq('W130',1,'local-wave-speed',c1*c1,T/mu1);
- eq('W130',2,'string-connection-displacement',1+r,t);
- eq('W130',3,'string-junction-power-conservation',R+Q,1);
- eq('W130',4,'matching-identical-strings',(k1-k1)/(k1+k1),0);
+ const mu=2,T=8,L=4,gamma=.1,n=2,wn=n*P/L*Math.sqrt(T/mu),alpha=gamma/(2*mu),wd=Math.sqrt(wn*wn-alpha*alpha),A=1.7;
+ const x=t=>A*Math.exp(-alpha*t)*(Math.cos(wd*t)+alpha/wd*Math.sin(wd*t));
+ eq('W130',1,'modal undamped eigenvalue',wn*wn,(T/mu)*(n*P/L)**2);
+ eq('W130',2,'damped modal frequency relation',wd*wd+alpha*alpha,wn*wn);
+ eq('W130',3,'zero initial velocity',d(x,0),0);
+ eq('W130',4,'quality factor lifetime relation',(mu*wn/gamma)*gamma/mu,wn);
 }
 {
  const T=2.3,mu=1.4,M=.8,omega=3.2,k=omega*Math.sqrt(mu/T),A=M*omega*omega,B=2*T*k,den=A*A+B*B;
@@ -208,12 +212,12 @@ function J1(x){let term=x/2,sum=term;for(let j=1;j<70;j++){term*=(-x*x/4)/(j*(j+
  eq('W133',4,'impedance-matching-vanishing-reflection',(Z1-Z1)/(Z1+Z1),0);
 }
 {
- const g=9.8,k=1.3,w=Math.sqrt(g*k),cp=w/k,cg=Math.sqrt(g/k)/2,lambda=2*P/k,t=3,x=cg*t;
- eq('W134',1,'deep-water-group-to-phase-ratio',cg/cp,.5);
- eq('W134',2,'wave-period-vs-wavelength',(2*P/w)**2,2*P*lambda/g);
- eq('W134',3,'stationary-phase-wave-number',g*t*t/(4*x*x),k);
- const phi=q=>q*x-Math.sqrt(g*q)*t;
- eq('W134',4,'stationary-phase-derivative',d(phi,k),0);
+ const c=343,fs=550,vs=20,vr=7,wavelength=(c-vs)/fs,fr=fs*(c-vr)/(c-vs);
+ eq('W134',1,'source compression of forward crests',wavelength*fs,c-vs);
+ eq('W134',2,'relative receiver crest crossing',fr*wavelength,c-vr);
+ eq('W134',3,'invert stationary receiver measurement',c*(1-fs/(fs*c/(c-vs))),vs);
+ const beat=fs*(c-vr)*vs/(c*(c-vs));
+ eq('W134',4,'Doppler against static reference beat',fr-fs*(c-vr)/c,beat);
 }
 {
  const a=2.3,b=1.1,cw=3.4,omc=P*cw/a,om=1.9*omc,beta=Math.sqrt(om*om-omc*omc)/cw,vp=om/beta,vg=cw*cw*beta/om;
