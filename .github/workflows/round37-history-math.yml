@@ -24,7 +24,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add bank editorial/round34/canonical editorial/round35/canonical editorial/round36/canonical editorial/historical-latex-review
+          git add -u
+          git add -f editorial/historical-latex-review
           if ! git diff --cached --quiet; then
             git commit -m "Round37 audit and migrate historical TeX math delimiters [review only]"
             git fetch origin physics-round37-latex-historical-review-20261030
