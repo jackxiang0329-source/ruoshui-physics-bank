@@ -1,0 +1,226 @@
+[
+  {
+    "id": "O266",
+    "title": "稳定光学谐振腔的ABCD矩阵与Gaussian束腰",
+    "setup": "两球面镜曲率半径 \\(R_1,R_2\\)，间距 \\(L\\)，近轴光线用 \\((x,\\theta)\\) 表示；定义 \\(g_j=1-L/R_j\\)。",
+    "q": [
+      "建立自由传播与镜面反射矩阵。",
+      "用往返矩阵迹判定腔稳定性。",
+      "求平凹腔镜面处的Gaussian束腰。",
+      "讨论共焦与近平面极限中的模式敏感性。"
+    ],
+    "s": [
+      "自由传播距离 \\(L\\) 的ABCD矩阵为 \\(P(L)=\\begin{pmatrix}1&L\\\\0&1\\end{pmatrix}\\)，曲率半径 \\(R\\) 的球面镜反射光线矩阵可在一致的方向约定下记为 \\(M(R)=\\begin{pmatrix}1&0\\\\-2/R&1\\end{pmatrix}\\)。往返矩阵由这些基本矩阵按路径顺序相乘，各自行列式均为1。",
+      "周期光线满足线性辛映射，往返矩阵本征值乘积为1。稳定要求本征值位于单位圆，等价于 \\(|(A+D)/2|<1\\)。对两镜腔算得 \\((A+D)/2=2g_1g_2-1\\)，故稳定区 \\(0<g_1g_2<1\\)，端点属于边界退化。",
+      "若一面平镜 \\(R_1=\\infty\\)，另一面凹镜 \\(R_2=R>L\\)，平镜处波前曲率无限，束腰恰位于平镜。传播到另一镜时 Gaussian曲率 \\(R(L)=L[1+(z_R/L)^2]\\)。镜面匹配给 \\(z_R^2=L(R-L)\\)，而 \\(w_0^2=\\lambda z_R/\\pi\\)。",
+      "对相同镜面曲率 \\(R_1=R_2=L\\)，\\(g_1g_2=0\\) 为共焦稳定边界之一，但光线共振简并显著；而 \\(R_j\\gg L\\) 的近平面腔有 \\(g_1g_2\\approx1\\)，也靠近稳定边界。机械微小失准可能强烈改变光斑位置，严格稳定区应排除边界。"
+    ],
+    "tags": [
+      "ABCD矩阵",
+      "光学谐振",
+      "Gaussian束"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "O267",
+    "title": "圆形孔径Fraunhofer衍射的Airy振幅与第一暗环",
+    "setup": "单色波长 \\(\\lambda\\) 的平面波垂直照射半径 \\(a\\) 的均匀圆孔，远场或透镜焦平面以小观察角 \\(\\theta\\) 表示。",
+    "q": [
+      "从Fraunhofer积分得到二维Fourier变换。",
+      "利用Bessel积分求Airy圆斑强度。",
+      "求第一暗环角与Rayleigh分辨标度。",
+      "讨论孔径变小与环纹能量重新分布。"
+    ],
+    "s": [
+      "远场复振幅与孔面均匀透过函数的二维Fourier变换成正比。令横向波矢 \\(q=k\\sin\\theta\\)，角积分 \\(\\int_0^{2\\pi}e^{iqr\\cos\\phi}d\\phi=2\\pi J_0(qr)\\)，故振幅 \\(A(q)\\propto2\\pi\\int_0^arJ_0(qr)dr\\)。",
+      "使用 \\(\\int_0^arJ_0(qr)dr=aJ_1(qa)/q\\)，归一复振幅 \\(A(\\theta)/A(0)=2J_1(x)/x\\)，其中 \\(x=ka\\sin\\theta\\)。故强度 \\(I(\\theta)/I(0)=[2J_1(x)/x]^2\\)，中心按 \\(J_1(x)\\sim x/2\\) 连续趋1。",
+      "Bessel函数 \\(J_1\\) 首个正零点为 \\(x_1\\approx3.831706\\)，因此 \\(\\sin\\theta_1=x_1/(ka)\\approx1.22\\lambda/D\\)，\\(D=2a\\)。Rayleigh判据将一个点像中心放置到另一个点像第一暗环作为分辨参考尺度，但不是严格的信息理论极限。",
+      "当 \\(D\\) 减半，第一暗环角约增加一倍，中心主瓣扩展。透过孔径的总功率按面积 \\(\\pi a^2\\) 下降，但归一化衍射强度图形仍服从 \\(x=ka\\sin\\theta\\) 的自相似尺度。不可将远场中心归一强度保持1误解释为总能量不变。"
+    ],
+    "tags": [
+      "Bessel衍射",
+      "Airy斑",
+      "Rayleigh分辨"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "O268",
+    "title": "Jones矩阵中四分之一波片与偏振椭圆的Stokes参数",
+    "setup": "相干单色横向电场 \\(\\boldsymbol E=(E_x,E_y)^T\\)，使用 \\(e^{-i\\omega t}\\) 约定，入射线偏振与水平轴成角 \\(\\alpha\\)，理想无耗散波片主轴沿 \\(x,y\\)。",
+    "q": [
+      "写入射Jones矢量及相位延迟矩阵。",
+      "给出四分之一波片产生圆偏振的条件。",
+      "计算输出Stokes参数及总强度守恒。",
+      "说明非偏振光不能用单个Jones态描述。"
+    ],
+    "s": [
+      "归一入射线偏振 \\(\\boldsymbol e_{\\rm in}=(\\cos\\alpha,\\sin\\alpha)^T\\)。若 \\(y\\) 轴比 \\(x\\) 轴多延迟相位 \\(\\delta\\)，波片 Jones矩阵可取 \\(J(\\delta)=\\operatorname{diag}(1,e^{i\\delta})\\)，输出 \\(\\boldsymbol e_{\\rm out}=(\\cos\\alpha,e^{i\\delta}\\sin\\alpha)^T\\)，整体公共相位无物理影响。",
+      "当 \\(\\alpha=\\pi/4,\\delta=\\pi/2\\) 时输出 \\(\\boldsymbol e=(1,i)^T/\\sqrt2\\)。两个正交分量幅相相等且相差四分之一周期，实场合成圆轨迹，满足 \\(|E_x|=|E_y|\\)，其旋向依时谐、观察方向与左右旋定义。",
+      "定义 \\(S_0=|E_x|^2+|E_y|^2\\)、\\(S_1=|E_x|^2-|E_y|^2\\)、\\(S_2=2\\operatorname{Re}(E_x^*E_y)\\)、\\(S_3=2\\operatorname{Im}(E_x^*E_y)\\)。输出有 \\(S_0=1,S_1=\\cos2\\alpha,S_2=\\sin2\\alpha\\cos\\delta,S_3=\\sin2\\alpha\\sin\\delta\\)，且 \\(S_1^2+S_2^2+S_3^2=S_0^2\\)。",
+      "Jones矢量只能描述完全相干的确定偏振纯态。若光束在统计平均后出现混合偏振，须使用 \\(2\\times2\\) 相干矩阵或Stokes–Mueller形式；此时一般满足 \\(S_1^2+S_2^2+S_3^2<S_0^2\\)，不能凭单一输出椭圆假定完全偏振。"
+    ],
+    "tags": [
+      "Jones演算",
+      "Stokes球",
+      "偏振相干"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "O269",
+    "title": "Fabry–Pérot多光束干涉的Airy公式与精细度",
+    "setup": "两相同无损平行镜的强度反射率 \\(0<R<1\\)，腔长 \\(L\\)，折射率 \\(n\\)，法向入射波长 \\(\\lambda\\)，忽略横模与镜相位色散。",
+    "q": [
+      "对无限多次透射场求几何级数。",
+      "导出标准Airy透过率曲线。",
+      "求自由光谱范围及高反射率精细度。",
+      "解释镜损耗和色散如何修改理想结果。"
+    ],
+    "s": [
+      "单程相位为 \\(\\varphi=2\\pi nL/\\lambda\\)，往返相位 \\(\\delta=2\\varphi\\)。镜的振幅反射模平方为 \\(R\\)，总透射振幅为 \\(t^2 e^{i\\varphi}\\sum_{m=0}^{\\infty}(Re^{i\\delta})^m=t^2e^{i\\varphi}/(1-Re^{i\\delta})\\)，无损镜满足 \\(|t|^2=1-R\\)。",
+      "取强度平方得 \\(\\mathcal T(\\delta)=(1-R)^2/[1+R^2-2R\\cos\\delta]\\)。用 \\(1+R^2-2R\\cos\\delta=(1-R)^2+4R\\sin^2(\\delta/2)\\)，得到 \\(\\mathcal T=1/[1+F\\sin^2(\\delta/2)]\\)，其中系数 \\(F=4R/(1-R)^2\\)。",
+      "纵模条件 \\(\\delta=2\\pi m\\)，相邻频率差 \\(\\Delta\\nu_{\\rm FSR}=c/(2nL)\\)。在 \\(R\\to1\\) 时半峰条件 \\(F\\sin^2(\\delta/2)=1\\)，相位半宽约 \\(2/\\sqrt F\\)，全宽约 \\(4/\\sqrt F\\)，精细度 \\(\\mathcal F\\approx\\pi\\sqrt R/(1-R)\\)。",
+      "若腔内吸收或散射存在，往返振幅系数不再恰为 \\(R\\)，峰透射率低于1；若镜面相位随频率改变，则 \\(\\Delta\\nu_{\\rm FSR}\\) 要由总往返相位导数确定。理想 \\(c/(2nL)\\) 只在介质与反射相位可视为常数时成立。"
+    ],
+    "tags": [
+      "Fabry-Perot",
+      "多束干涉",
+      "腔精细度"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "O270",
+    "title": "衍射光栅的闪耀角与角分辨率色散",
+    "setup": "反射光栅光栅间距 \\(d\\)，入射与出射角 \\(\\alpha,\\beta\\) 相对于法线按同一侧约定，衍射级次 \\(m\\) 和真空波长 \\(\\lambda\\)，有 \\(d(\\sin\\alpha+\\sin\\beta)=m\\lambda\\)。",
+    "q": [
+      "由相邻沟槽相位差求光栅方程。",
+      "固定入射角求角度色散。",
+      "计算N条均匀光栅槽的Rayleigh分辨本领。",
+      "建立闪耀条件与镜面反射方向匹配。"
+    ],
+    "s": [
+      "相邻两槽的入射光程差为 \\(d\\sin\\alpha\\)，出射方向光程差为 \\(d\\sin\\beta\\)。相长干涉需 \\(k d(\\sin\\alpha+\\sin\\beta)=2\\pi m\\)，所以 \\(d(\\sin\\alpha+\\sin\\beta)=m\\lambda\\)，只有满足 \\(|m\\lambda/d-\\sin\\alpha|\\le1\\) 的级次能传播。",
+      "对光栅方程固定 \\(\\alpha\\) 求波长微分，得 \\(d\\cos\\beta\\,d\\beta=m,d\\lambda\\)，因此 \\(d\\beta/d\\lambda=m/(d\\cos\\beta)\\)。当 \\(\\cos\\beta\\) 很小时形式角度色散很大，但掠射角光学效率及实际孔径变得关键。",
+      "对 \\(N\\) 条等间距槽，相位因子之和形成 \\(\\sin(N\\Delta/2)/\\sin(\\Delta/2)\\) 的主峰；第一零点相位偏移约 \\(2\\pi/N\\)。将两个邻近谱线分离到Rayleigh极限，得 \\(\\lambda/\\Delta\\lambda\\approx mN\\)，不是单独由槽宽决定。",
+      "若锯齿槽面法线相对总法线倾角为 \\(\\theta_B\\)，单个斜面镜面反射最强方向近似满足 \\(\\alpha+\\beta=2\\theta_B\\)（按约定同侧角）。同时需满足光栅衍射方程，才能使所选级次落在闪耀包络峰；真实效率还需考虑偏振和槽形矢量衍射。"
+    ],
+    "tags": [
+      "光栅色散",
+      "谱线分辨",
+      "闪耀效率"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "O271",
+    "title": "有限低折射率间隙中的受挫全反射透射",
+    "setup": "高折射率介质 \\(n_1\\) 通过厚 \\(d\\) 的低折射率层 \\(n_2<n_1\\) 与另一高折射率介质耦合。入射角使 \\(n_1\\sin\\theta>n_2\\)，取TE偏振。",
+    "q": [
+      "求低折射层中的虚法向波数。",
+      "解释有限厚度下为何允许透射。",
+      "求厚势垒极限的透射指数依赖。",
+      "讨论接近临界角与能量守恒。"
+    ],
+    "s": [
+      "切向动量守恒给 \\(k_x=k_0n_1\\sin\\theta\\)。低折射层法向波数 \\(k_{z2}^2=k_0^2n_2^2-k_x^2<0\\)，写 \\(k_{z2}=i\\kappa\\) 且 \\(\\kappa=k_0\\sqrt{n_1^2\\sin^2\\theta-n_2^2}>0\\)。层内场由增衰两支指数线性组合构成。",
+      "单独半无限低折射介质内的法向平均Poynting流为零，但有限厚度薄层在第二界面形成重新传播的出射波。解两界面的 \\(E_t,H_t\\) 连续条件必须同时包含两个倏逝指数分量，不能只保留 \\(e^{-\\kappa z}\\) 一个分量。",
+      "用薄层传输矩阵写透射振幅分母含 \\(\\cosh(\\kappa d)\\) 与 \\(\\sinh(\\kappa d)\\)；当 \\(\\kappa d\\gg1\\) 时分母 \\(\\propto e^{\\kappa d}\\)，故透射率 \\(T\\propto e^{-2\\kappa d}\\)，前因子由两侧折射率和偏振阻抗决定。",
+      "在 \\(\\theta\\to\\theta_c^+\\) 时 \\(\\kappa\\to0\\)，厚势垒指数近似失效，应使用完整传输矩阵。若三层介质均无损且入射、出射均为传播波，则功率满足 \\(R+T=1\\)。受挫全反射不是吸收，也不能推断其有超光速信号传送。"
+    ],
+    "tags": [
+      "受挫全反射",
+      "倏逝耦合",
+      "薄膜传输"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "O272",
+    "title": "van Cittert–Zernike定理下均匀圆光源的空间相干度",
+    "setup": "远场空间非相干、角半径 \\(\\theta_s\\ll1\\) 的均匀圆盘光源，被两个相距基线长度 \\(B\\) 的孔径观测，中心波长 \\(\\lambda\\)，满足窄带傍轴近似。",
+    "q": [
+      "建立强度分布Fourier归一互相干函数。",
+      "评价角积分与Bessel函数结果。",
+      "求第一次相干零点的干涉基线。",
+      "讨论非均匀亮度对可见度曲线的影响。"
+    ],
+    "s": [
+      "根据van Cittert–Zernike定理，归一复相干度 \\(\\gamma_{12}=\\int I(\\boldsymbol\\theta)e^{-i2\\pi\\boldsymbol B\\cdot\\boldsymbol\\theta/\\lambda}d^2\\theta/\\int I(\\boldsymbol\\theta)d^2\\theta\\)。均匀圆光源 \\(I(\\theta)=I_0\\) 在 \\(\\theta\\le\\theta_s\\)，所以二维积分为圆盘Fourier变换。",
+      "取基线沿极坐标零方向，角积分是 \\(2\\pi J_0(2\\pi B\\theta/\\lambda)\\)。径向积分 \\(\\int_0^{\\theta_s}\\theta J_0(q\\theta)d\\theta=\\theta_sJ_1(q\\theta_s)/q\\)，归一后 \\(\\gamma_{12}=2J_1(x)/x\\)，其中 \\(x=2\\pi B\\theta_s/\\lambda\\)。",
+      "第一非零 \\(J_1\\) 根为 \\(x_1\\approx3.831706\\)。因此 \\(B_1=x_1\\lambda/(2\\pi\\theta_s)\\approx0.610\\lambda/\\theta_s\\)。若用圆盘角直径 \\(\\Theta=2\\theta_s\\) 表示，则 \\(B_1\\approx1.22\\lambda/\\Theta\\)，可以由干涉可见度零点反推光源角尺寸。",
+      "若真实光源存在临边昏暗、热点或不对称结构，角强度不再是均匀圆盘，\\(\\gamma_{12}\\) 需对实际亮度作归一二维Fourier变换，零点位置和相位均可能变化。该定理要求源点之间统计不相干，不适用于单一空间相干激光圆孔的相同解释。"
+    ],
+    "tags": [
+      "空间相干",
+      "Fourier可见度",
+      "恒星干涉"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "O273",
+    "title": "Gaussian频谱脉冲的群速度色散与啁啾展宽",
+    "setup": "输入Gaussian包络 \\(A(0,t)=A_0e^{-t^2/(2T_0^2)}\\)，在无损线性介质中传播 \\(z\\)，在共动时间坐标下仅保留常数 \\(\\beta_2\\) 的二阶群速度色散。",
+    "q": [
+      "把传播方程写成频域二次相位传递函数。",
+      "利用Gaussian积分求传播后的时域包络。",
+      "求强度脉宽与传播长度的关系。",
+      "求传播后的瞬时啁啾并解释符号。"
+    ],
+    "s": [
+      "慢包络频谱 \\(\\tilde A(z,\\Omega)=\\tilde A(0,\\Omega)e^{i\\beta_2z\\Omega^2/2}\\)，其中 \\(\\Omega\\) 为相对载频的角频率偏移；整体相位与一阶群延迟已移除。由于乘子的模为1，频域能量积分 \\(\\int|\\tilde A|^2d\\Omega\\) 守恒。",
+      "频域输入 \\(\\tilde A(0,\\Omega)\\propto e^{-T_0^2\\Omega^2/2}\\)。逆变换完成平方得到 \\(A(z,t)=A_0[1-i\\beta_2z/T_0^2]^{-1/2}\\exp\\{-t^2/[2T_0^2(1-i\\beta_2z/T_0^2)]\\}\\)；指数中的 \\(i\\) 符号随傅里叶约定改变，但强度宽度不变。",
+      "取模平方得强度Gaussian \\(|A(z,t)|^2\\propto\\exp[-t^2/T(z)^2]\\)，其中 \\(T(z)=T_0\\sqrt{1+(\\beta_2z/T_0^2)^2}\\)。定义色散长度 \\(L_D=T_0^2/|\\beta_2|\\)，则 \\(T(z)=T_0\\sqrt{1+(z/L_D)^2}\\)，在纯二阶色散下总展宽不依 \\(\\beta_2\\) 的符号。",
+      "时域相位的二次项为 \\(-[\\beta_2z/T_0^2]t^2/[2T_0^2(1+(\\beta_2z/T_0^2)^2)]\\)（依据所选频域符号）。对时间求导得到线性于 \\(t\\) 的瞬时频移，随 \\(\\beta_2\\) 改变符号；若输入已有预啁啾，则脉宽可先压缩再扩展，不能照搬无啁啾公式。"
+    ],
+    "tags": [
+      "脉冲色散",
+      "Gaussian积分",
+      "群速啁啾"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  }
+]
