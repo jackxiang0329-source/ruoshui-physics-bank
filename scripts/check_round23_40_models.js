@@ -229,7 +229,7 @@ function near(id,part,label,a,b,tol=1e-4){eq(id,part,label,a,b,tol);}
  eq('O133',4,'paraxial criterion',lambda/d0<1?1:0,1);
 }
 {
- const a=.3,d0=.9,q=.7,amp=x=>2*a*Math.sin(x*a/2)/(x*a/2)*Math.cos(x*d0/2);
+ const a=.3,d0=.9,q=.7,amp=x=>2*a*(Math.abs(x)<1e-12?1:Math.sin(x*a/2)/(x*a/2))*Math.cos(x*d0/2);
  eq('O134',1,'zero spatial frequency amplitude',2*a,2*a);
  eq('O134',2,'missing third order envelope',Math.sin(P*3*a/d0),0);
  near('O134',3,'Fourier Parseval',sim(x=>amp(x)**2,-450,450,30000),4*P*a,2e-3);
