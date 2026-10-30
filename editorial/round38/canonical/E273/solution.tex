@@ -1,4 +1,4 @@
-\par\noindent\textbf{(1)} 在导体球内放虚拟镜像电荷 \(q'=-qa/d\)，位于 \(z'=a^2/d\)。球外势 \(\Phi=(4\pi\epsilon_0)^{-1}[q/|\boldsymbol r-d\hat z|+q'/|\boldsymbol r-z'\hat z|]\)，因为球面各点两距离比为 \(a/d\)，两项严格抵消。
-\par\noindent\textbf{(2)} 真实点电荷受像电荷的库仑力，指向球心，大小 \(F=|qq'|/[4\pi\epsilon_0(d-z')^2]=q^2ad/[4\pi\epsilon_0(d^2-a^2)^2]\)。向量形式 \(\boldsymbol F=-F\hat z\)，接地使导体可与大地交换电荷。
-\par\noindent\textbf{(3)} 因改变外电荷位置时感应电荷也随之变动，能量不能直接取全像电荷库仑势的 \(qq'/(4\pi\epsilon_0(d-z'))\)，而应取一半：\(U(d)=\tfrac12q\Phi_{\mathrm{image}}(d)=-q^2a/[8\pi\epsilon_0(d^2-a^2)]\)。验证 \(F_z=-dU/dd\)。
-\par\noindent\textbf{(4)} 导体总感应自由电荷等于镜像电荷 \(Q_{\rm ind}=q'=-qa/d\)，可由远场势中 \(1/r\) 单极项与Gauss定律核验。\(d\gg a\) 时 \(F\sim-q^2a/(4\pi\epsilon_0d^3)\)；若球不接地且规定总电荷为零，必须另外放中心镜像电荷，结论改变。
+\par\noindent\textbf{(1)} 在平面外布置三个镜像：\(-q\) 于 \((-a,b,0)\)、\(-q\) 于 \((a,-b,0)\)、\(+q\) 于 \((-a,-b,0)\)。加上真实 \(q\) 的四项Coulomb势 \(\Phi(\boldsymbol r)=\sum_jq_j/(4\pi\epsilon_0|\boldsymbol r-\boldsymbol r_j|)\)，在 \(x=0\) 与 \(y=0\) 上各对镜像贡献相互抵消，满足双接地Dirichlet边界条件。
+\par\noindent\textbf{(2)} 左侧镜像引力是 \(-q^2/(16\pi\epsilon_0a^2)\hat x\)，下侧镜像引力是 \(-q^2/(16\pi\epsilon_0b^2)\hat y\)。斜对角同号镜像的力为 \(q^2(a\hat x+b\hat y)/[16\pi\epsilon_0(a^2+b^2)^{3/2}]\)。三者叠加给 \(F_x=C[-1/a^2+a/(a^2+b^2)^{3/2}]\)、\(F_y=C[-1/b^2+b/(a^2+b^2)^{3/2}]\)，\(C=q^2/(16\pi\epsilon_0)\)。
+\par\noindent\textbf{(3)} 感应电荷随位置变化，故静电机械势能必须取一半像电势：\(U=\tfrac12q\Phi_{\rm images}(a,b)=-C[1/a+1/b-1/\sqrt{a^2+b^2}]\)。分别求 \(-\partial_aU\) 与 \(-\partial_bU\)，恰得到逐镜像Coulomb矢量叠加的两个分量。忽略因子 \(1/2\) 将把机械力错误地放大。
+\par\noindent\textbf{(4)} 当 \(a=b\) 时 \(F_x=F_y<0\)，说明电荷趋近两面的交点。令 \(b\to\infty\)，剩余 \(F_x\to-q^2/(16\pi\epsilon_0a^2)\) 且 \(F_y\to0\)，严格恢复单接地平面的镜像力。只有直角等特殊楔角才可用有限数目镜像电荷直接闭合。

@@ -271,18 +271,18 @@
 \par\noindent\textbf{(4)} 低于截止时场幅穿透长度 \(\delta=c/\sqrt{\omega_p^2-\omega^2}\)，趋近截止从下侧 \(\delta\to\infty\)，高频 \(\omega\gg\omega_p\) 则 \(v_g\to c\)。该理想模型忽略碰撞耗散、磁化后的左右旋分支及温度导致的纵向等离子体波。
 
 \par\bigskip\hrule\bigskip
-\section*{E273\quad 接地导体球外点电荷的镜像力和感应总电荷}
-\textbf{物理条件}\par 真空中半径 \(a\) 的接地理想导体球，点电荷 \(q\) 位于球心外距 \(d>a\) 的 \(z\) 轴，介电常数 \(\epsilon_0\)。
-\par\noindent\textbf{(1)} 利用球面等势条件求镜像电荷位置和数值。
-\par\noindent\textbf{(2)} 求点电荷所受的导体吸引力。
-\par\noindent\textbf{(3)} 积分获得外电荷—导体体系的相互作用能。
-\par\noindent\textbf{(4)} 求导体感应总电荷及远场极限。
+\section*{E273\quad 直角接地导体楔形区中点电荷的四电荷镜像能量与力}
+\textbf{物理条件}\par 两无限相互垂直的理想接地导体平面 \(x=0\)、\(y=0\) 夹出正象限 \(x,y>0\)，真实电荷 \(q\) 位于 \((a,b,0)\) 且 \(a,b>0\)。
+\par\noindent\textbf{(1)} 构造四电荷镜像并验证两个接地边界。
+\par\noindent\textbf{(2)} 求真实电荷受到三个镜像的水平力分量。
+\par\noindent\textbf{(3)} 从半镜像能量求同样的机械力。
+\par\noindent\textbf{(4)} 计算对称与单平面远离极限。
 
 \par\medskip\noindent\textbf{逐问解析}
-\par\noindent\textbf{(1)} 在导体球内放虚拟镜像电荷 \(q'=-qa/d\)，位于 \(z'=a^2/d\)。球外势 \(\Phi=(4\pi\epsilon_0)^{-1}[q/|\boldsymbol r-d\hat z|+q'/|\boldsymbol r-z'\hat z|]\)，因为球面各点两距离比为 \(a/d\)，两项严格抵消。
-\par\noindent\textbf{(2)} 真实点电荷受像电荷的库仑力，指向球心，大小 \(F=|qq'|/[4\pi\epsilon_0(d-z')^2]=q^2ad/[4\pi\epsilon_0(d^2-a^2)^2]\)。向量形式 \(\boldsymbol F=-F\hat z\)，接地使导体可与大地交换电荷。
-\par\noindent\textbf{(3)} 因改变外电荷位置时感应电荷也随之变动，能量不能直接取全像电荷库仑势的 \(qq'/(4\pi\epsilon_0(d-z'))\)，而应取一半：\(U(d)=\tfrac12q\Phi_{\mathrm{image}}(d)=-q^2a/[8\pi\epsilon_0(d^2-a^2)]\)。验证 \(F_z=-dU/dd\)。
-\par\noindent\textbf{(4)} 导体总感应自由电荷等于镜像电荷 \(Q_{\rm ind}=q'=-qa/d\)，可由远场势中 \(1/r\) 单极项与Gauss定律核验。\(d\gg a\) 时 \(F\sim-q^2a/(4\pi\epsilon_0d^3)\)；若球不接地且规定总电荷为零，必须另外放中心镜像电荷，结论改变。
+\par\noindent\textbf{(1)} 在平面外布置三个镜像：\(-q\) 于 \((-a,b,0)\)、\(-q\) 于 \((a,-b,0)\)、\(+q\) 于 \((-a,-b,0)\)。加上真实 \(q\) 的四项Coulomb势 \(\Phi(\boldsymbol r)=\sum_jq_j/(4\pi\epsilon_0|\boldsymbol r-\boldsymbol r_j|)\)，在 \(x=0\) 与 \(y=0\) 上各对镜像贡献相互抵消，满足双接地Dirichlet边界条件。
+\par\noindent\textbf{(2)} 左侧镜像引力是 \(-q^2/(16\pi\epsilon_0a^2)\hat x\)，下侧镜像引力是 \(-q^2/(16\pi\epsilon_0b^2)\hat y\)。斜对角同号镜像的力为 \(q^2(a\hat x+b\hat y)/[16\pi\epsilon_0(a^2+b^2)^{3/2}]\)。三者叠加给 \(F_x=C[-1/a^2+a/(a^2+b^2)^{3/2}]\)、\(F_y=C[-1/b^2+b/(a^2+b^2)^{3/2}]\)，\(C=q^2/(16\pi\epsilon_0)\)。
+\par\noindent\textbf{(3)} 感应电荷随位置变化，故静电机械势能必须取一半像电势：\(U=\tfrac12q\Phi_{\rm images}(a,b)=-C[1/a+1/b-1/\sqrt{a^2+b^2}]\)。分别求 \(-\partial_aU\) 与 \(-\partial_bU\)，恰得到逐镜像Coulomb矢量叠加的两个分量。忽略因子 \(1/2\) 将把机械力错误地放大。
+\par\noindent\textbf{(4)} 当 \(a=b\) 时 \(F_x=F_y<0\)，说明电荷趋近两面的交点。令 \(b\to\infty\)，剩余 \(F_x\to-q^2/(16\pi\epsilon_0a^2)\) 且 \(F_y\to0\)，严格恢复单接地平面的镜像力。只有直角等特殊楔角才可用有限数目镜像电荷直接闭合。
 
 \par\bigskip\hrule\bigskip
 \chapter{热学与统计物理}
@@ -314,18 +314,18 @@
 \par\noindent\textbf{(4)} 谱密度变换必须乘Jacobian：\(u_\lambda=u_\nu|d\nu/d\lambda|\propto u_\nu c/\lambda^2\)。因此频率谱极大值满足 \(3(1-e^{-x})=x\)，与波长谱的 \(5(1-e^{-x})=x\) 不同。不能仅令 \(\lambda=c/\nu_{\max}\) 求波长峰。
 
 \par\bigskip\hrule\bigskip
-\section*{T260\quad Joule–Thomson节流系数与van der Waals反转温度}
-\textbf{物理条件}\par 一摩尔气体经过绝热节流阀，稳态压强改变、忽略宏观动能及位能变化，满足焓 \(H=U+PV\) 守恒，体积依 \(P,T\) 而变。
-\par\noindent\textbf{(1)} 从焓全微分导出Joule–Thomson系数。
-\par\noindent\textbf{(2)} 说明理想气体节流不改变温度。
-\par\noindent\textbf{(3)} 利用低压van der Waals展开求 \(\mu_{JT}\)。
-\par\noindent\textbf{(4)} 求低压反转温度与冷热效应。
+\section*{T260\quad 定常等熵可压缩喷嘴的面积–Mach律与临界质量流率}
+\textbf{物理条件}\par 理想气体定常无黏喷嘴，气体常数 \(R\)、比热比 \(\gamma>1\)，流速 \(u\)、截面积 \(A(x)\)、局部声速 \(c=\sqrt{\gamma RT}\)，上游滞止量 \(p_0,T_0\)。
+\par\noindent\textbf{(1)} 由连续性和Euler方程推导面积—速度微分公式。
+\par\noindent\textbf{(2)} 求滞止温度与Mach数的等熵关系。
+\par\noindent\textbf{(3)} 求喉部音速堵塞的临界压强比。
+\par\noindent\textbf{(4)} 推导最大喉部质量流率及适用条件。
 
 \par\medskip\noindent\textbf{逐问解析}
-\par\noindent\textbf{(1)} 基本关系 \(dH=TdS+VdP\)，以及Maxwell关系 \((\partial S/\partial P)_T=-(\partial V/\partial T)_P\)，整理得 \(dH=C_PdT+[V-T(\partial V/\partial T)_P]dP\)。因此 \(\mu_{JT}=(\partial T/\partial P)_H=[T(\partial V/\partial T)_P-V]/C_P\)。
-\par\noindent\textbf{(2)} 理想气体 \(V=RT/P\)，故 \(T(\partial_TV)_P=RT/P=V\)，得到 \(\mu_{JT}=0\)。这是忽略真实气体相互作用的严格结论，并不表明节流没有熵产生；不可逆流动仍可有正熵产生。
-\par\noindent\textbf{(3)} 在 \(P\) 很小的极限，van der Waals气体有 \(V\approx RT/P+b-a/(RT)\)。于是 \(T(\partial_TV)_P-V\approx[RT/P+a/(RT)]-[RT/P+b-a/(RT)]=2a/(RT)-b\)。故 \(\mu_{JT}\approx[2a/(RT)-b]/C_P\)。
-\par\noindent\textbf{(4)} 反转条件 \(\mu_{JT}=0\) 给 \(T_{\mathrm{inv}}\approx2a/(Rb)\)。若 \(T<T_{\mathrm{inv}}\)，正节流系数配合压降 \(dP<0\) 产生冷却；高于反转温度则升温。这里是低压近似，完整反转曲线需处理实际状态方程及可能的相变。
+\par\noindent\textbf{(1)} 质量连续 \(\rho uA=\dot m\) 给 \(d\rho/\rho+du/u+dA/A=0\)。Euler方程 \(u,du+dp/\rho=0\)，等熵 \(dp=c^2d\rho\)，于是 \(d\rho/\rho=-u,du/c^2=-M^2du/u\)。联立得到 \(dA/A=(M^2-1)du/u\)，亚声速加速要求收缩面积，超声速加速要求扩大面积。
+\par\noindent\textbf{(2)} 定常绝热无轴功时总焓 \(c_pT+u^2/2=c_pT_0\)，\(c_p=\gamma R/(\gamma-1)\)，因此 \(T_0/T=1+(\gamma-1)M^2/2\)。由理想气体等熵式 \(p/\rho^\gamma=\mathrm{const}\) 得 \(p/p_0=(T/T_0)^{\gamma/(\gamma-1)}\)，这是可逆等熵压强关系，并不适用于激波内部。
+\par\noindent\textbf{(3)} 在面积最小喉部 \(dA=0\) 且连续流光滑跨越音速，必须 \(M=1\)。此时 \(T_*/T_0=2/(\gamma+1)\)，从而 \(p_*/p_0=[2/(\gamma+1)]^{\gamma/(\gamma-1)}\)。背压低于该临界比后，定滞止状态和喉部面积的理想质量流达到堵塞上界。
+\par\noindent\textbf{(4)} 由 \(\dot m=A\rho u\) 在喉部代入 \(u_*=\sqrt{\gamma RT_*}\) 及 \(\rho_*=p_*/(RT_*)\)，得 \(\dot m_{\max}=A_*p_0\sqrt{\gamma/(RT_0)}[2/(\gamma+1)]^{(\gamma+1)/(2(\gamma-1))}\)。实际黏性、热交换、喷管内激波和非理想状态式会降低或修改流率，不能直接当作任何喷流的精确上限。
 
 \par\bigskip\hrule\bigskip
 \section*{T261\quad Curie–Weiss平均场自洽方程与磁响应分岔}
