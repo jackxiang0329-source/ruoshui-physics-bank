@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: physics-round37-latex-advanced-review-20261030
+          ref: physics-round37-latex-historical-review-20261030
           persist-credentials: true
       - name: Install XeLaTeX Chinese typesetting and PDF tools
         run: |
@@ -53,16 +53,16 @@ jobs:
               print(name, "pages", report["pdfs"][name]["pages"], "text chars",len(text))
           PY
       - name: Commit all books, complete source files, QA evidence and ZIP to GitHub review branch
-        if: github.event_name == 'workflow_dispatch' || (github.event_name == 'pull_request' && github.head_ref == 'physics-round37-latex-advanced-review-20261030' && github.event.pull_request.head.repo.full_name == github.repository)
+        if: github.event_name == 'workflow_dispatch' || (github.event_name == 'pull_request' && github.head_ref == 'physics-round37-latex-historical-review-20261030' && github.event.pull_request.head.repo.full_name == github.repository)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -f editorial/round37/canonical editorial/round37/review-release
           if ! git diff --cached --quiet; then
             git commit -m "Round37: publish 50 review sources, 200 model checks and two XeLaTeX PDFs [draft only]"
-            git fetch origin physics-round37-latex-advanced-review-20261030
-            git rebase origin/physics-round37-latex-advanced-review-20261030
-            git push origin HEAD:refs/heads/physics-round37-latex-advanced-review-20261030
+            git fetch origin physics-round37-latex-historical-review-20261030
+            git rebase origin/physics-round37-latex-historical-review-20261030
+            git push origin HEAD:refs/heads/physics-round37-latex-historical-review-20261030
           else
             echo "GitHub reviewed sources and PDF artifacts already up to date."
           fi
