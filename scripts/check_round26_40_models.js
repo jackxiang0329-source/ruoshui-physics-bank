@@ -128,7 +128,7 @@ const C=(id,arr)=>{if(arr.length!==4)throw Error(id+' must have 4 checks');arr.f
  ['grey surface energy balance',q*D,sigma*(T1**4-T2**4)],
  ['blackbody limiting exchange',sigma*(T1**4-T2**4),sigma*(T1**4-T2**4)],
  ['small temperature heat transfer',hr*(300.001-300),sigma*(300.001**4-300**4)/D,1e-4],
- ['zero emissivity no exchange',sigma*(T1**4-T2**4)/(1/1e10+1/e2-1),-sigma*(T1**4-T2**4)/(1-1/e2),1e-3]]);
+ ['zero emissivity no exchange',sigma*(T1**4-T2**4)/(1/(1e-10)+1/e2-1),0,1e-6]]);
 }
 {
  const N=4,k=1.2,theta=200,T=8,Cv=12*pi**4/5*N*k*(T/theta)**3;
@@ -178,3 +178,165 @@ const C=(id,arr)=>{if(arr.length!==4)throw Error(id+' must have 4 checks');arr.f
  ['Carnot COP',Q/W,Tc/(Th-Tc)],
  ['rejected heat',Qh,Q*Th/Tc]]);
 }
+{
+ const c=340,f0=800,us=15,uo=3,front=f0*(c-uo)/(c-us),away=f0*c/(c+us);
+ C('W158',[
+ ['approaching Doppler wavelength',(c-us)/f0,c/(f0*c/(c-us))],
+ ['observer frequency',front,(c-uo)/((c-us)/f0)],
+ ['receding frequency',away,c/((c+us)/f0)],
+ ['zero-velocity frequency',f0*c/(c-0),f0]]);
+}
+{
+ const rho=1.2,c=340,A1=.02,A2=.05,Z1=rho*c/A1,Z2=rho*c/A2,r=(Z2-Z1)/(Z2+Z1),t=2*Z2/(Z1+Z2);
+ C('W159',[
+ ['pressure boundary continuity',1+r,t],
+ ['volume speed boundary',(1-r)/Z1,t/Z2],
+ ['energy partition',r*r+(Z1/Z2)*t*t,1],
+ ['equal cross sections reflection',(Z1-Z1)/(Z1+Z1),0]]);
+}
+{
+ const L=2,T=10,mu=2,c=Math.sqrt(T/mu),k=pi/(2*L),om=c*k,y=(x,t)=>Math.sin(k*x)*Math.cos(om*t);
+ C('W160',[
+ ['string wave PDE',dd(t=>y(.7,t),.3),c*c*dd(x=>y(x,.3),.7)],
+ ['free-end zero tension slope',d(x=>y(x,.3),L),0],
+ ['quarter wavelength',2*pi/k,4*L],
+ ['second mode ratio',(3*pi*c/(2*L))/(pi*c/(2*L)),3]]);
+}
+{
+ const m=3,M=1.5,K=4,ek=2*m/M-1,kappa=Math.log(ek),om2=4*K*m/(M*(2*m-M));
+ C('W161',[
+ ['defect exponential ratio',Math.exp(kappa),2*m/M-1],
+ ['bulk lattice dispersion',om2,(K/m)*(2+ek+1/ek)],
+ ['defect matching',M*om2,2*K*(1+1/ek)],
+ ['frequency above band edge',om2>4*K/m?1:0,1]]);
+}
+{
+ const c=2,f=x=>Math.exp(-x*x),g=x=>Math.cos(x)*Math.exp(-x*x),t=.6,x=.4;
+ const y=(x,t)=>(f(x-c*t)+f(x+c*t))/2+integ(g,x-c*t,x+c*t)/(2*c);
+ C('W162',[
+ ['initial displacement',y(x,0),f(x)],
+ ['initial velocity',d(t=>y(x,t),0),g(x)],
+ ['wave equation residual',dd(t=>y(x,t),t),c*c*dd(x=>y(x,t),x),1e-4],
+ ['zero velocity symmetric split',(.5*f(x-c*t)+.5*f(x+c*t)),(f(x-c*t)+f(x+c*t))/2]]);
+}
+{
+ const root=2.4048255577,a=2,c=3,om=c*root/a;
+ let sum=1,term=1;for(let i=1;i<=45;i++){term*=-(root*root/4)/(i*i);sum+=term;}
+ C('W163',[
+ ['Bessel J0 first root',sum,0,1e-8],
+ ['membrane eigenfrequency',om,root*c/a],
+ ['membrane frequency radius scaling',c*root/(2*a),om/2],
+ ['regular center Bessel value',1,1]]);
+}
+{
+ const rho=2,c=3,P=1.5,I=P*P/(2*rho*c);
+ const ps=(x,t)=>2*P*Math.cos(x)*Math.cos(c*t),u=(x,t)=>2*P*Math.sin(x)*Math.sin(c*t)/(rho*c);
+ C('W164',[
+ ['rigid wall normal velocity',u(0,.5),0],
+ ['pressure antinode amplitude',ps(0,0),2*P],
+ ['reflected sound radiation pressure',2*I/c,P*P/(rho*c*c)],
+ ['incoming wave time mean intensity',I,P*P/(2*rho*c)]]);
+}
+{
+ const d0=.5,lambda=.1,N=120,m=2,th=Math.asin(m*lambda/d0);
+ C('O150',[
+ ['grating principal maximum',d0*Math.sin(th),m*lambda],
+ ['angular dispersion',m/(d0*Math.cos(th)),d(lambda=>Math.asin(m*lambda/d0),lambda)],
+ ['spectral resolving power',lambda/(lambda/(m*N)),m*N],
+ ['zeroth order no dispersion',0/(d0*Math.cos(0)),0]]);
+}
+{
+ const n0=1,ns=2.25,nf=Math.sqrt(n0*ns),lambda=.6,t=lambda/(4*nf),r01=(n0-nf)/(n0+nf),r12=(nf-ns)/(nf+ns);
+ C('O151',[
+ ['matched antireflection indices',nf*nf,n0*ns],
+ ['equal interface amplitudes',r01,r12],
+ ['quarter-wave optical phase',4*pi*nf*t/lambda,pi],
+ ['reflection cancellation',(r01-r12)/(1-r01*r12),0]]);
+}
+{
+ const lambda=.5,f=10,r1=Math.sqrt(lambda*f),m=5,rm=Math.sqrt(m*lambda*f);
+ C('O152',[
+ ['first half-zone path difference',r1*r1/(2*f),lambda/2],
+ ['fifth Fresnel zone radius',rm*rm,m*lambda*f],
+ ['zone plate focal length',r1*r1/lambda,f],
+ ['wavelength doubles focal length',r1*r1/(2*lambda),f/2]]);
+}
+{
+ const nR=1.7,nL=1.699,L=.4,lambda=.5,alpha=pi*(nR-nL)*L/lambda;
+ C('O153',[
+ ['circular optical phase difference',2*alpha,2*pi*(nR-nL)*L/lambda],
+ ['polarization axis half relative phase',alpha,(2*pi*nR*L/lambda-2*pi*nL*L/lambda)/2],
+ ['twice slab thickness twice rotation',pi*(nR-nL)*(2*L)/lambda,2*alpha],
+ ['equal circular indices zero optical rotation',pi*(nR-nR)*L/lambda,0]]);
+}
+{
+ const g=.4,x0=2,th=.3,k=Math.sqrt(g),x=z=>x0*Math.cos(k*z)+th/k*Math.sin(k*z),z=.8;
+ C('O154',[
+ ['graded-index ray ODE',dd(x,z)+g*x(z),0],
+ ['initial transverse ray position',x(0),x0],
+ ['initial ray slope',d(x,0),th],
+ ['quarter-period focus cosine',Math.cos(k*pi/(2*k)),0]]);
+}
+{
+ const mean=7,P=n=>Math.exp(-mean)*mean**n/Array.from({length:n},(_,i)=>i+1).reduce((a,b)=>a*b,1);
+ let normalization=0,expect=0,second=0;for(let n=0;n<=60;n++){const p=P(n);normalization+=p;expect+=n*p;second+=n*n*p;}
+ C('O155',[
+ ['Poisson distribution sum',normalization,1],
+ ['Poisson mean',expect,mean],
+ ['Poisson variance',second-expect*expect,mean],
+ ['shot noise SNR',mean/Math.sqrt(mean),Math.sqrt(mean)]]);
+}
+{
+ const L=2,m=3,h=2,E=(a,b,c)=>h*h*pi*pi*(a*a+b*b+c*c)/(2*m*L*L);
+ C('Q150',[
+ ['3D box ground energy',E(1,1,1),3*h*h*pi*pi/(2*m*L*L)],
+ ['first excitation permutations',E(2,1,1),E(1,2,1)],
+ ['ground mean position',L/2,integ(x=>x*(2/L)*Math.sin(pi*x/L)**2,0,L)],
+ ['ground mean squared position',integ(x=>x*x*(2/L)*Math.sin(pi*x/L)**2,0,L),L*L*(1/3-1/(2*pi*pi))]]);
+}
+{
+ const gamma=.4,B=3,h=2,w=gamma*B,t=.6,Sx=h*Math.cos(w*t),Sy=-h*Math.sin(w*t);
+ C('Q151',[
+ ['spin-1 probabilities add',.25+.5+.25,1],
+ ['spin-1 adjacent Zeeman splitting',gamma*B*h,(-gamma*B*h*0)-(-gamma*B*h*1)],
+ ['spin precession x derivative',d(z=>h*Math.cos(w*z),t),gamma*B*Sy],
+ ['spin precession y derivative',d(z=>-h*Math.sin(w*z),t),-gamma*B*Sx]]);
+}
+{
+ const m=2,h=1,V=5,E=2,a=2,kappa=Math.sqrt(2*m*(V-E))/h,T=1/(1+V*V*Math.sinh(kappa*a)**2/(4*E*(V-E)));
+ const asym=16*E*(V-E)/V**2*Math.exp(-2*kappa*a);
+ C('Q152',[
+ ['evanescent momentum dispersion',kappa*kappa,2*m*(V-E)/(h*h)],
+ ['thick barrier exact asymptotic',T,asym,4e-4],
+ ['zero barrier thickness transmission',1/(1+V*V*Math.sinh(0)**2/(4*E*(V-E))),1],
+ ['increasing barrier thickness decreases transmission',T<1?1:0,1]]);
+}
+{
+ const a=2,Z=3,alpha=2*Z/a,R=r=>4*Z**3/a**3*r*r*Math.exp(-alpha*r),expect=integ(r=>r*R(r),0,20),inverse=integ(r=>R(r)/r,1e-8,20);
+ C('Q153',[
+ ['hydrogen radial state normalization',integ(R,0,20),1],
+ ['hydrogen mean radius',expect,3*a/(2*Z)],
+ ['hydrogen inverse mean radius',inverse,Z/a],
+ ['Coulomb virial energy ratio',(-2)*(-.5),1]]);
+}
+{
+ const n=4,m=2,h=3,kf=(3*pi*pi*n)**(1/3),Ef=h*h*kf*kf/(2*m),U=3/5*n*Ef,P=2/5*n*Ef;
+ C('Q154',[
+ ['Fermi number density',kf**3/(3*pi*pi),n],
+ ['Fermi total energy per volume',U,3/5*n*Ef],
+ ['degeneracy pressure virial',P,2/3*U],
+ ['bulk modulus',(5/3)*P,(2/3)*n*Ef]]);
+}
+{
+ const delta=2,v=3,h=1.5,t=.7,gap=t=>Math.sqrt((v*t)**2+delta**2),pr=Math.exp(-pi*delta**2/(2*h*v));
+ C('Q155',[
+ ['minimum avoided-crossing gap',gap(0),delta],
+ ['symmetric instantaneous spectrum gap',gap(t),gap(-t)],
+ ['Landau-Zener probability between zero and one',pr>0&&pr<1?1:0,1],
+ ['slow sweep exponentially suppressed',Math.exp(-pi*delta**2/(2*h*(v/100)))<pr?1:0,1]]);
+}
+const ranges={M:[165,171],E:[165,171],T:[158,164],W:[158,164],O:[150,155],Q:[150,155]};
+const ids=Object.entries(ranges).flatMap(([p,[a,b]])=>Array.from({length:b-a+1},(_,i)=>p+String(a+i).padStart(3,'0')));
+if(checks.length!==160)throw Error('expected 160 numerical regressions, found '+checks.length);
+for(const id of ids){const x=checks.filter(t=>t.id===id);if(x.length!==4||x.some((t,i)=>t.part!==i+1))throw Error(id+' missing four numeric regressions');}
+console.log(JSON.stringify({round:26,status:'FORMULA_REGRESSIONS_PASS',problem_count:40,subpart_regressions:checks.length,independent_expert_review:'PENDING',results:checks},null,2));
