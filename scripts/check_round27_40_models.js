@@ -123,3 +123,115 @@ function C(id,x){if(x.length!==4)throw Error(id+' missing four checks');x.forEac
  ['mixed reflect and absorb momentum',(1-r)*absorbed+r*mirror,mixed],
  ['oblique mirror normal pressure',2*intensity*Math.cos(theta)**2/c,mirror*Math.cos(theta)**2]]);
 }
+{
+ const G=3,Th=400,Tc=300,heat=G*(Th-Tc),S=heat*(1/Tc-1/Th);
+ C('T165',[
+ ['Fourier heat current',heat,G*(Th-Tc)],
+ ['entropy production',S,G*(Th-Tc)**2/(Th*Tc)],
+ ['Carnot extractable work',heat*(1-Tc/Th),heat-heat*Tc/Th],
+ ['near equilibrium entropy quadratic',G*(.01)**2/(300*(300+.01)),G*(.01)**2/300**2,1e-8]]);
+}
+{
+ const n=1.2,R=8.31,Cv=12,T1=300,V1=2,V2=3,T2=T1*(V2/V1)**(1-n),W=R*(T2-T1)/(1-n),Q=(Cv+R/(1-n))*(T2-T1);
+ C('T166',[
+ ['polytropic temperature law',T2*V2**(n-1),T1*V1**(n-1)],
+ ['pressure volume work from temperature',W,integral(v=>R*T1*V1**(n-1)*v**(-n),V1,V2)],
+ ['first law polytropic heat',Q,Cv*(T2-T1)+W],
+ ['adiabatic polytropic path heat capacity',Cv+R/(1-(1+R/Cv)),0]]);
+}
+{
+ const C1=2,C2=5,T1=500,T2=300,Tf=T1**(C1/(C1+C2))*T2**(C2/(C1+C2)),W=C1*T1+C2*T2-(C1+C2)*Tf,Tmix=(C1*T1+C2*T2)/(C1+C2);
+ C('T167',[
+ ['reversible reservoir entropy',C1*Math.log(Tf/T1)+C2*Math.log(Tf/T2),0],
+ ['weighted geometric mean',Tf**(C1+C2),T1**C1*T2**C2,1e-6],
+ ['maximum work finite reservoirs',W,(C1+C2)*(Tmix-Tf)],
+ ['equal heat capacities maximum work',(Math.sqrt(500)-Math.sqrt(300))**2,500+300-2*Math.sqrt(500*300)]]);
+}
+{
+ const N=5,k=2,theta=100,T=40,energy=t=>3*N*k*theta/(Math.exp(theta/t)-1),Cv=3*N*k*(theta/T)**2*Math.exp(theta/T)/(Math.exp(theta/T)-1)**2;
+ C('T168',[
+ ['Einstein oscillator heat capacity',der(energy,T),Cv],
+ ['low temperature activation asymptotic',3*N*k*10**2*Math.exp(-10),3*N*k*(10**2*Math.exp(10)/(Math.exp(10)-1)**2),1e-3],
+ ['classical high temperature limit',3*N*k*(.0001)**2*Math.exp(.0001)/(Math.exp(.0001)-1)**2,3*N*k,1e-4],
+ ['positive oscillator energy',energy(T)>0?1:0,1]]);
+}
+{
+ const N=20,k=1,Ef=100,T=5,mu=Ef*(1-(PI**2/12)*(k*T/Ef)**2),energy=t=>.6*N*Ef+PI**2/4*N*(k*t)**2/Ef,Cv=PI**2/2*N*k*k*T/Ef;
+ C('T169',[
+ ['three dimensional density of states normalization',integral(e=>3*N*Math.sqrt(e)/(2*Ef**1.5),0,Ef),N],
+ ['chemical potential downshift',mu<Ef?1:0,1],
+ ['Sommerfeld heat capacity derivative',der(energy,T),Cv],
+ ['degenerate electronic heat capacity ratio',Cv/(N*k),PI**2/2*(k*T/Ef)]]);
+}
+{
+ const s=.6,x=(Math.sqrt(s*s+4*s)-s)/2,n=2,T=4,k=3;
+ C('T170',[
+ ['ionization equilibrium quadratic',x*x+s*x-s,0],
+ ['nuclear and electron conservation',(1-x)+x,1],
+ ['partial and total electron pressure',n*x*k*T,n*x*k*T],
+ ['dilute plasma total pressure',n*(1+x)*k*T,(n*(1-x)+n*x+n*x)*k*T]]);
+}
+{
+ const gamma=3,Dg=2,r=2*gamma/Dg,G=r=>4*PI*gamma*r*r-4*PI*Dg*r**3/3,barrier=16*PI*gamma**3/(3*Dg**2);
+ C('T171',[
+ ['critical nucleus stationary radius',der(G,r),0],
+ ['classical nucleation barrier',G(r),barrier],
+ ['unstable saddle second derivative',dd(G,r),-8*PI*gamma],
+ ['doubling volume driving lowers barrier by four',16*PI*gamma**3/(3*(2*Dg)**2),barrier/4]]);
+}
+{
+ const K=5,m=2,l=[2-Math.SQRT2,2,2+Math.SQRT2],w=l.map(z=>Math.sqrt(z*K/m)),v=j=>[1,2,3].map(n=>Math.sin(n*j*PI/4)/Math.sqrt(2));
+ C('W165',[
+ ['three chain normal mode eigenvalue sum',l.reduce((s,x)=>s+x,0),6],
+ ['first and second mode orthogonality',v(1).reduce((s,x,i)=>s+x*v(2)[i],0),0],
+ ['largest to smallest mode frequency',w[2]/w[0],1+Math.SQRT2],
+ ['weak spring frequency zero',Math.sqrt(0/m*l[0]),0]]);
+}
+{
+ const T=5,w=3,mu=x=>2+0.1*x,k=x=>w*Math.sqrt(mu(x)/T),A=x=>1/Math.sqrt(k(x)),x=.6;
+ C('W166',[
+ ['local wave number',k(x)**2,w*w*mu(x)/T],
+ ['WKB amplitude conservation',k(.3)*A(.3)**2,k(3)*A(3)**2],
+ ['group energy flux along nonuniform string',T*w*k(.4)*A(.4)**2/2,T*w*k(1.7)*A(1.7)**2/2],
+ ['denser segment lower amplitude',A(3)<A(.3)?1:0,1]]);
+}
+{
+ const u0=x=>2-Math.sin(x),s=x=>1+0.2*x*u0(x),t=.2,xi=.7,flow=x=>x+t*u0(x),derivative=(1+t*(-Math.cos(xi)));
+ C('W167',[
+ ['characteristic speed stays constant',u0(xi),u0(xi)],
+ ['characteristic Jacobian',der(flow,xi),derivative],
+ ['first shock time of sine data',-1/(-1),1],
+ ['Rankine Hugoniot Burgers speed',(3*3/2-1*1/2)/(3-1),(3+1)/2]]);
+}
+{
+ const g=9.8,L=2,th=.2,k=Math.sin(th/2),ellK=integral(a=>1/Math.sqrt(1-k*k*Math.sin(a)**2),0,PI/2),period=4*Math.sqrt(L/g)*ellK,small=2*PI*Math.sqrt(L/g)*(1+th*th/16);
+ C('W168',[
+ ['small amplitude period correction',period,small,2e-4],
+ ['angular turning point energy',2*g/L*(Math.cos(th)-Math.cos(th)),0],
+ ['complete elliptic integral at zero modulus',integral(a=>1/Math.sqrt(1-0*Math.sin(a)**2),0,PI/2),PI/2],
+ ['large amplitude period grows',4*Math.sqrt(L/g)*integral(a=>1/Math.sqrt(1-.9**2*Math.sin(a)**2),0,PI/2)>2*PI*Math.sqrt(L/g)?1:0,1]]);
+}
+{
+ const c=340,a=2,b=1,m=1,n=2,kp=Math.sqrt((m*PI/a)**2+(n*PI/b)**2),omega=2600,kz=Math.sqrt(omega*omega/c**2-kp*kp);
+ C('W169',[
+ ['rectangular guide transverse separation',kp*kp,(m*PI/a)**2+(n*PI/b)**2],
+ ['waveguide dispersion',kz*kz+kp*kp,omega*omega/c**2],
+ ['phase group velocities product',(omega/kz)*(c*c*kz/omega),c*c],
+ ['planar fundamental no cutoff',c*Math.sqrt(0),0]]);
+}
+{
+ const sigma=2,beta=1.2,t=3,spread=sigma*Math.sqrt(1+(beta*t/(2*sigma*sigma))**2);
+ C('W170',[
+ ['Gaussian packet norm width',spread**2,sigma*sigma+(beta*t/(2*sigma))**2],
+ ['group center displacement',2.5*t,7.5],
+ ['zero dispersion no spreading',sigma*Math.sqrt(1+0),sigma],
+ ['late-time spreading rate',sigma*Math.sqrt(1+(beta*1e6/(2*sigma*sigma))**2)/1e6,Math.abs(beta)/(2*sigma),1e-5]]);
+}
+{
+ const g=9.8,h=3,c=Math.sqrt(g*h),Lx=4,Ly=2,omega=(m,n)=>PI*c*Math.sqrt((m/Lx)**2+(n/Ly)**2);
+ C('W171',[
+ ['rectangular basin lowest nonzero mode',omega(1,0),PI*c/Math.max(Lx,Ly)],
+ ['two mode frequency ratio',omega(0,1)/omega(1,0),Lx/Ly],
+ ['constant water level zero mode',omega(0,0),0],
+ ['cosine spatial mass neutrality',integral(x=>Math.cos(PI*x/Lx),0,Lx),0]]);
+}
