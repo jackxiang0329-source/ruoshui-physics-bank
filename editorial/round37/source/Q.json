@@ -1,24 +1,24 @@
 [
   {
     "id": "Q258",
-    "title": "量子绝热Grover搜索的最小能隙与运行时间尺度",
-    "setup": "\\(N\\) 维Hilbert空间，均匀态 \\(|s\\rangle=N^{-1/2}\\sum_x|x\\rangle\\)，标记态 \\(|m\\rangle\\)。绝热Hamilton量 \\(H(u)=(1-u)(I-|s\\rangle\\langle s|)+u(I-|m\\rangle\\langle m|)\\)，\\(0\\le u\\le1\\)。",
+    "title": "Jaynes–Cummings腔量子电动力学的极化激发与色散位移",
+    "setup": "单模量子腔频率 \\(\\omega_c\\) 与两能级原子频率 \\(\\omega_q\\) 耦合，Hamilton量 \\(H=\\hbar\\omega_c a^\\dagger a+\\hbar\\omega_q\\sigma_z/2+\\hbar g(a\\sigma_++a^\\dagger\\sigma_-)\\)，\\(g>0\\)，定义失谐 \\(\\Delta=\\omega_q-\\omega_c\\)。",
     "q": [
-      "把Hamilton量约化为二维子空间。",
-      "求绝热两能级谱隙。",
-      "定位最小能隙并求规模。",
-      "比较匀速与局部绝热日程。"
+      "证明总激发数守恒并构造每个激发子空间。",
+      "精确对角化腔—原子混合后的极化本征能。",
+      "求从激发原子初态出发的Rabi占有振荡。",
+      "导出大失谐色散位移及微扰适用尺度。"
     ],
     "s": [
-      "由于 \\(|s\\rangle\\) 与 \\(|m\\rangle\\) 张成的不变子空间外，Hamilton量为恒等算符，搜索动力学只需基 \\((|m\\rangle,|r\\rangle)\\)，其中 \\(|r\\rangle=(\\sqrt N|s\\rangle-|m\\rangle)/\\sqrt{N-1}\\)。在此基，投影 \\(|s\\rangle\\langle s|\\) 矩阵元为 \\(1/N,\\sqrt{N-1}/N,(N-1)/N\\)。",
-      "二维有效Hamilton量迹为1，两个本征能差满足 \\(g(u)=\\sqrt{1-4(1-1/N)u(1-u)}\\)。该式从 \\(2\\times2\\) 行列式直接得到，端点 \\(u=0,1\\) 的能隙均为1。",
-      "由于 \\(u(1-u)\\) 在 \\(u=1/2\\) 最大，故 \\(g_{\\min}=g(1/2)=1/\\sqrt N\\)。随着数据库规模增大，最危险的非绝热跃迁发生在插值中点，而不是端点。",
-      "粗略匀速判据 \\(|\\dot u|\\ll g_{\\min}^2\\) 给 \\(T\\gg N\\) 的慢尺度；若采用局部日程 \\(\\dot u=\\epsilon g(u)^2\\)，则 \\(T=\\epsilon^{-1}\\int_0^1du/g(u)^2=O(\\sqrt N/\\epsilon)\\)，恢复Grover型平方加速，但实际误差还依绝热界与端点光滑性。"
+      "总激发数算符 \\(N_{\\rm exc}=a^\\dagger a+\\sigma_+\\sigma_-\\)，由 \\([a^\\dagger a,a]=-a\\)、\\([\\sigma_+\\sigma_-,\\sigma_+]=\\sigma_+\\) 得 \\([N_{\\rm exc},a\\sigma_+]=0\\)，共轭项亦为零，所以 \\([H,N_{\\rm exc}]=0\\)。激发数为 \\(n+1\\) 的二维不变子空间由 \\(|e,n\\rangle,|g,n+1\\rangle\\) 张成。",
+      "在该基底减去中心能量 \\(\\hbar\\omega_c(n+1/2)\\)，剩余 \\(2\\times2\\) 矩阵为 \\(\\frac\\hbar2\\begin{pmatrix}\\Delta&2g\\sqrt{n+1}\\\\2g\\sqrt{n+1}&-\\Delta\\end{pmatrix}\\)。两个极化能为 \\(E_{n,\\pm}=\\hbar\\omega_c(n+1/2)\\pm\\frac\\hbar2\\sqrt{\\Delta^2+4g^2(n+1)}\\)，混合角满足 \\(\\tan(2\\theta_n)=2g\\sqrt{n+1}/\\Delta\\)。",
+      "初态为 \\(|e,n\\rangle\\) 时，两个混合本征态之间能级差为 \\(\\hbar\\Omega_n\\)，其中 \\(\\Omega_n=\\sqrt{\\Delta^2+4g^2(n+1)}\\)。精确激发态占有率 \\(P_e(t)=1-\\frac{4g^2(n+1)}{\\Omega_n^2}\\sin^2(\\Omega_nt/2)\\)。共振 \\(\\Delta=0\\) 时 \\(P_e(t)=\\cos^2(g\\sqrt{n+1}\\,t)\\)，可完全转移激发到 \\(|g,n+1\\rangle\\)。",
+      "在 \\(|\\Delta|\\gg2g\\sqrt{n+1}\\) 的色散区，展开 \\(\\sqrt{\\Delta^2+4g^2(n+1)}=|\\Delta|+2g^2(n+1)/|\\Delta|+O[g^4(n+1)^2/|\\Delta|^3]\\)。取带符号 \\(\\chi=g^2/\\Delta\\)，有效Hamilton量包含 \\(\\hbar\\chi(a^\\dagger a+1/2)\\sigma_z\\)，给原子态依赖的腔频移 \\(\\pm\\chi\\)；临界光子数尺度 \\(n_{\\rm crit}\\sim\\Delta^2/(4g^2)\\)。"
     ],
     "tags": [
-      "量子绝热算法",
-      "二能级谱",
-      "复杂度"
+      "腔量子电动力学",
+      "极化激发",
+      "色散近似"
     ],
     "tier": "advanced_composite",
     "level": 5,
