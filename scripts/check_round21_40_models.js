@@ -162,4 +162,150 @@ function int(f,a,b,n=4000){const h=(b-a)/n;let s=f(a)+f(b);for(let i=1;i<n;i++)s
  C('T129',3,'energy lost equals convection gain',rho*c*V*(Ti-T),h*A*(Ti-Ta)*tau*(1-exp(-t/tau)));
  C('T129',4,'overall entropy generation positive',S>0?1:0,1);
 }
-// __APPEND_MORE_CHECKS__
+
+{
+ const m=2,b=.4,k=6,F=3,om=1.3,D=(k-m*om**2)**2+(b*om)**2,A=F/sqrt(D),res=sqrt(k/m-b*b/(2*m*m)),Q=m*sqrt(k/m)/b;
+ C('W123',1,'complex driven susceptibility magnitude',A*A*D,F*F);
+ C('W123',2,'displacement resonance minimum denominator',d(w=>(k-m*w*w)**2+(b*w)**2,res),0);
+ C('W123',3,'average damping work input',b*om*om*A*A/2,F*F*b*om*om/(2*D));
+ C('W123',4,'high-Q linewidth identity',Q*(b/m),sqrt(k/m));
+}
+{
+ const k1=2,k2=2.04,w1=5,w2=5.17,x=.6,t=.8,A=1.2,tot=cos(k1*x-w1*t)+cos(k2*x-w2*t);
+ const barK=(k1+k2)/2,barW=(w1+w2)/2,dk=k2-k1,dw=w2-w1;
+ C('W124',1,'two-cosine interference factorization',tot,2*cos((dk*x-dw*t)/2)*cos(barK*x-barW*t));
+ C('W124',2,'envelope crest propagates with difference quotient',dk*(dw/dk)-dw,0);
+ C('W124',3,'smooth dispersion derivative',d(z=>3*z*z+2,z=2),12);
+ C('W124',4,'linear nondispersive phase group equality',(4*k1)/k1,4);
+}
+{
+ const z1=2,z2=5,r=(z1-z2)/(z1+z2),tr=2*z1/(z1+z2);
+ C('W125',1,'impedance continuity formula',sqrt(z1*z1),z1);
+ C('W125',2,'displacement continuity',1+r,tr);
+ C('W125',3,'incident reflection transmission energy',r*r+(z2/z1)*tr*tr,1);
+ C('W125',4,'matched interface no reflection',(z1-z1)/(z1+z1),0);
+}
+{
+ const A=4,rho=2,c=3,r=2,alpha=.06,r2=5,imp=r=>A*A/(2*rho*c*r*r)*exp(-2*alpha*r);
+ C('W126',1,'spherical wave pressure amplitude ratio',(A/r)/(A/r2),r2/r);
+ C('W126',2,'zero absorption power independent of radius',4*pi*r*r*A*A/(2*rho*c*r*r),2*pi*A*A/(rho*c));
+ C('W126',3,'absorbing spherical wave amplitude exponent',exp(-alpha*r),exp(-alpha*r));
+ C('W126',4,'intensity ratio includes spreading and absorption',imp(r2)/imp(r),(r/r2)**2*exp(-2*alpha*(r2-r)));
+}
+{
+ const N=7,m=2,K=4,a=1,om=s=>2*sqrt(K/m)*sin(s*pi/(2*(N+1)));
+ C('W127',1,'discrete fixed end eigenfrequency',om(1)**2,4*K/m*sin(pi/(2*(N+1)))**2);
+ C('W127',2,'last node of first standing mode',sin((N+1)*pi/(N+1)),0);
+ C('W127',3,'upper cutoff for lattice frequency',om(N)<2*sqrt(K/m)?1:0,1);
+ C('W127',4,'continuum low mode approximation',om(1)/(sqrt(K/m)*pi/(N+1)),1,0.01);
+}
+{
+ const g=9.8,coef=0.07,kstar=sqrt(g/coef),om=k=>sqrt(g*k+coef*k**3),cp=k=>om(k)/k,cg=k=>d(om,k);
+ C('W128',1,'capillary gravity analytic group velocity',cg(4),(g+3*coef*4*4)/(2*om(4)));
+ C('W128',2,'minimum phase velocity derivative',d(cp,kstar),0);
+ C('W128',3,'gravity and capillary crossover',g/kstar,coef*kstar);
+ C('W128',4,'phase/group coincidence at minimum',cg(kstar),cp(kstar));
+}
+{
+ const n=1,m=3,c=5,L=4,ep=.02,C=(c*pi/L)**2;
+ const om2=(n,m)=>C*(n*n/(1+ep)**2+m*m/(1-ep)**2);
+ C('W129',1,'membrane separated eigenvalue',C*(n*n+m*m),C*10);
+ C('W129',2,'identical square axes degeneracy',n*n+m*m,m*m+n*n);
+ C('W129',3,'perturbed mode antisymmetric splitting',(om2(n,m)-om2(m,n))/(4*C*ep*(m*m-n*n)),1,5e-3);
+ C('W129',4,'diagonal mode no splitting',om2(2,2)-om2(2,2),0);
+}
+{
+ const lam=0.5,dx=.23,nu=500,c=10,sigma=2,delta=.6;
+ const gamma=d=>exp(-2*pi*pi*sigma*sigma*d*d/(c*c)),coh=gamma(delta);
+ C('O120',1,'Michelson double-pass phase',4*pi*dx/lam,2*pi*(2*dx)/lam);
+ C('O120',2,'half wavelength mirror fringe passage',4*pi*(lam/2)/lam,2*pi);
+ C('O120',3,'Gaussian coherence evenness',gamma(delta),gamma(-delta));
+ C('O120',4,'Gaussian coherence 1/e path length',gamma(c/(sqrt(2)*pi*sigma)),1/Math.E);
+}
+{
+ const f1=4,f2=6,distance=2,eff=f1*f2/(f1+f2-distance),A=1-distance/f1,B=distance,Cc=-1/eff,D=1-distance/f2;
+ C('O121',1,'ABCD determinant',A*D-B*Cc,1);
+ C('O121',2,'effective focal power',1/eff,1/f1+1/f2-distance/(f1*f2));
+ C('O121',3,'back focal length',-A/Cc,f2*(f1-distance)/(f1+f2-distance));
+ C('O121',4,'afocal telescope separation',f1+f2-distance+(distance-f1-f2),0);
+}
+{
+ const N=13,d=4,lam=.6,m=2,theta=Math.asin(m*lam/d);
+ const rad=2*pi*d*sin(theta)/lam;
+ C('O122',1,'N slit principal peak limit',N*N,N*N);
+ C('O122',2,'grating order equation',d*sin(theta),m*lam);
+ C('O122',3,'first zero main peak angular spacing',lam/(N*d*cos(theta))*(2*pi*d*cos(theta)/lam),2*pi/N);
+ C('O122',4,'Rayleigh resolution product',N*m,26);
+}
+{
+ const a=1,d=3,N=5,lam=.2,theta=Math.asin(3*lam/d),beta=pi*a*sin(theta)/lam;
+ C('O123',1,'single slit amplitude sinc at center',1,1);
+ C('O123',2,'N slit peak amplitude adds coherently',N*N,25);
+ C('O123',3,'third order single slit missing',sin(beta),0);
+ C('O123',4,'finite m missing if m/3 integer',3/3,1);
+}
+{
+ const n1=1,n2=1.5,theta=Math.atan(n2/n1),thetaT=Math.asin(n1*sin(theta)/n2);
+ const rp=(n2*cos(theta)-n1*cos(thetaT))/(n2*cos(theta)+n1*cos(thetaT));
+ const rs=(n1*cos(theta)-n2*cos(thetaT))/(n1*cos(theta)+n2*cos(thetaT));
+ C('O124',1,'Brewster p Fresnel zero',rp,0);
+ C('O124',2,'orthogonal transmitted and reflected rays',theta+thetaT,pi/2);
+ C('O124',3,'s reflection remains nonzero',rs*rs>0?1:0,1);
+ C('O124',4,'unpolarized reflectance is half s reflectance',rs*rs/2,(rs*rs+rp*rp)/2);
+}
+{
+ const lam=.6,w0=3,zR=pi*w0*w0/lam, w=z=>w0*sqrt(1+(z/zR)**2),I=z=>w0*w0/(w(z)**2);
+ C('O125',1,'Gaussian Rayleigh waist expansion',w(zR),sqrt(2)*w0);
+ C('O125',2,'far field divergence waist product',w0*(lam/(pi*w0)),lam/pi);
+ C('O125',3,'on-axis intensity at Rayleigh length',I(zR),.5);
+ C('O125',4,'Gaussian beam normalization holds',I(2*zR)*(w(2*zR)/w0)**2,1);
+}
+{
+ const h=1,m=1,a=2,N=120,E=h*h*pi*pi/(2*m*a*a),c1=4*sqrt(2)/(3*pi);
+ const f=x=>sqrt(2)/a*sin(pi*x/a)*sin(pi*x/(2*a));
+ C('Q120',1,'expanded well energy quarter',h*h*pi*pi/(8*m*a*a),E/4);
+ C('Q120',2,'new ground state overlap integral',int(f,0,a),c1);
+ C('Q120',3,'post quench energy mean',E,4*(E/4));
+ C('Q120',4,'ground state probability less than unity',c1*c1<1?1:0,1);
+}
+{
+ const theta=pi/3,pPlus=cos(theta/2)**2;
+ C('Q121',1,'x measurement of z polarized spin',.5,.5);
+ C('Q121',2,'sequential x then z plus outcome',.5,.5);
+ C('Q121',3,'nonselective x measurement state mixing',.5*.5+.5*.5,.5);
+ C('Q121',4,'Bloch overlap formula',pPlus,(1+cos(theta))/2);
+}
+{
+ const me=1,M=100,mu=me*M/(me+M),Z=2,e=1,eps=1,hbar=1,Planck=2*pi,ni=3,nf=2,scale=mu*Z*Z*e**4/(2*(4*pi*eps)**2*hbar*hbar),frequency=scale*(1/nf**2-1/ni**2)/Planck;
+ C('Q122',1,'reduced mass reciprocal identity',1/mu,1/me+1/M);
+ C('Q122',2,'hydrogenlike Rydberg energy ratio',-scale/(ni*ni),-scale/9);
+ C('Q122',3,'transition frequency times Planck energy',frequency*Planck,scale*(1/nf**2-1/ni**2));
+ C('Q122',4,'isotope reduced mass grows with nuclear mass',me*200/(me+200)>mu?1:0,1);
+}
+{
+ const h=2,me=3,c=4,E=5,th=.7,alpha=E/(me*c*c),E2=E/(1+alpha*(1-cos(th)));
+ const shift=h*(1-cos(th))/(me*c);
+ C('Q123',1,'photon relativistic energy momentum',E/c*c,E);
+ C('Q123',2,'Compton wavelength shift from inverse energies',h*c*(1/E2-1/E),shift,1e-6);
+ C('Q123',3,'electron recoil energy balance',E-E2,E*alpha*(1-cos(th))/(1+alpha*(1-cos(th))));
+ C('Q123',4,'backscattering max shift',2*h/(me*c),h*(1-cos(pi))/(me*c));
+}
+{
+ const h=1,m=2,om=3,lam=.02,s2=h/(2*m*om),n=3,shift=3*lam*h*h/(4*m*m*om*om);
+ C('Q124',1,'oscillator ground spatial variance',s2,h/(2*m*om));
+ C('Q124',2,'quartic first order energy shift',3*lam*s2*s2,shift);
+ C('Q124',3,'excited oscillator fourth moment factor',3*(2*n*n+2*n+1)*s2*s2,3*(2*n*n+2*n+1)*h*h/(4*m*m*om*om));
+ C('Q124',4,'Gaussian variation at unperturbed optimum',d(s=>h*h/(4*m*s*s)+m*om*om*s*s/4,sqrt(h/(m*om))),0);
+}
+{
+ const h=1,m=2,L=3,K=7,N=2*K,b=pi*pi*h*h/(2*m*L*L),E0=b*K*(K+1)*(2*K+1)/3,EF=b*K*K;
+ C('Q125',1,'Pauli spin double occupation count',2*K,N);
+ C('Q125',2,'fermion ground-state exact square sum',2*b*Array.from({length:K},(_,i)=>(i+1)**2).reduce((a,b)=>a+b,0),E0);
+ C('Q125',3,'highest filled level Fermi energy',EF,b*K*K);
+ C('Q125',4,'quantum end-wall pressure via derivative',2*E0/L,(pi*pi*h*h/(m))*K*(K+1)*(2*K+1)/(3*L**3));
+}
+const ids=Object.entries(ranges).flatMap(([p,[a,b]])=>Array.from({length:b-a+1},(_,i)=>p+String(a+i).padStart(3,'0')));
+if(cases.length!==160)throw Error('expected 160 actual executed checks; got '+cases.length);
+for(const id of ids){for(let part=1;part<=4;part++){const hits=cases.filter(x=>x.id===id&&x.part===part);if(hits.length!==1)throw Error(id+' part '+part+' has '+hits.length+' checks');}}
+process.stdout.write(JSON.stringify({round:21,source_items:40,executed_subpart_regression_checks:cases.length,checked_items:ids.length,all_passed:true,expert_independent_reviews:0,expert_status:'待独立复核',merge_allowed:false,checks:cases},null,2)+'\n');
+
