@@ -23,8 +23,10 @@ def run():
     pn=pshort(t/N)**N
     check("Q251",2,"repeated projection joint survival probability",
           pn,E(N*L(pshort(t/N))),method="projective-measurement-product")
-    check("Q251",3,"Zeno probability tends to unity for dense measurements",
-          pshort(t/100000)**100000,1,tol=1e-6,method="quantum-Zeno-limit")
+    nlarge=100000
+    check("Q251",3,"Zeno logarithmic survival finite-N asymptotic",
+          -nlarge*L(pshort(t/nlarge)),
+          (dE*t/hbar)**2/nlarge,method="quantum-Zeno-asymptotic")
     check("Q251",4,"finite-energy-variance Zeno time scale",
           hbar/dE*dE/hbar,1,method="dimensional-time")
     # Q252 finite potential well parity
