@@ -1,0 +1,226 @@
+[
+  {
+    "id": "W266",
+    "title": "缓变非均匀弦波的WKB相位与振幅输运",
+    "setup": "长度远大于局域波长的无限弦具有恒张力 \\(T>0\\)，缓慢变化的质量线密度 \\(\\mu(x)>0\\)，位移满足 \\(\\mu(x)y_{tt}=Ty_{xx}\\)。",
+    "q": [
+      "建立局域色散波数与WKB近似。",
+      "求次领先阶振幅守恒律。",
+      "计算平均波能流并验证守恒。",
+      "给出转折点及急剧不均匀时的失效条件。"
+    ],
+    "s": [
+      "设固定频率波 \\(y(x,t)=\\operatorname{Re}[u(x)e^{-i\\omega t}]\\)，则 \\(u''+k(x)^2u=0\\)，其中 \\(k(x)=\\omega\\sqrt{\\mu(x)/T}\\)。若 \\(|k'|/k^2\\ll1\\)，作WKB形式 \\(u(x)=A(x)e^{i\\int^xk(s)ds}\\)，用慢振幅近似逐阶求解。",
+      "把 \\(u=Ae^{iS}\\)、\\(S'=k\\) 代入，最高阶给 \\(S'^2=k^2\\)，下一阶虚部 \\(2kA'+k'A=0\\)，即 \\((A^2k)'=0\\)。所以 \\(A\\propto k^{-1/2}\\propto\\mu^{-1/4}\\)，密度大的区域横向位移振幅较小。",
+      "对右行窄带波，平均张力做功通量 \\(\\langle P\\rangle=-T\\langle y_ty_x\\rangle\\approx(T/2)\\omega k|A|^2\\)。由 \\(A^2k=\\mathrm{const}\\)，通量为常数，验证WKB振幅系数来自能流守恒而非任意归一。",
+      "当 \\(k(x)\\) 变化尺度接近局域波长，即 \\(|k'|/k^2\\not\\ll1\\)，向前和向后传播模发生显著反射，WKB单行波解失效。对于 \\(k(x)\\to0\\) 的转折点，\\(k^{-1/2}\\) 形式发散，必须用Airy型局域连接方法。"
+    ],
+    "tags": [
+      "WKB渐近",
+      "波能通量",
+      "非均匀介质"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "W267",
+    "title": "Euler–Bernoulli梁横向弯曲波的四阶色散与边界模态",
+    "setup": "均匀细梁长度 \\(L\\)、线密度 \\(\\mu>0\\)、抗弯刚度 \\(EI>0\\)，小横挠度 \\(y(x,t)\\)，忽略轴向力与剪切转动惯量。",
+    "q": [
+      "由弹性能建立弯曲波方程。",
+      "求无限梁的弯曲色散与群速度。",
+      "求两端简支梁离散频率及节点结构。",
+      "用Rayleigh商验证最低弯曲模态。"
+    ],
+    "s": [
+      "弯曲能为 \\(U=\\tfrac12EI\\int_0^L(y_{xx})^2dx\\)，动能 \\(K=\\tfrac12\\mu\\int_0^L(y_t)^2dx\\)。变分给 \\(\\mu y_{tt}+EIy_{xxxx}=0\\)，是四阶空间偏导方程，边界条件不仅需要位移还可能需要转角或弯矩。",
+      "代入 \\(y=e^{i(kx-\\omega t)}\\) 得 \\(\\omega^2=(EI/\\mu)k^4\\)。正频率 \\(\\omega=\\sqrt{EI/\\mu}\\,k^2\\)，相速度 \\(v_p=\\sqrt{EI/\\mu}|k|\\)，群速度 \\(v_g=2\\sqrt{EI/\\mu}|k|=2v_p\\)。这一理想模型的高频速度无界，说明短波需要Timoshenko修正。",
+      "简支条件是 \\(y(0)=y(L)=0\\)、\\(y_{xx}(0)=y_{xx}(L)=0\\)。选择 \\(y_n=\\sin(n\\pi x/L)\\) 满足四个边界条件，频率 \\(\\omega_n=\\sqrt{EI/\\mu}(n\\pi/L)^2\\)，所以 \\(\\omega_n/\\omega_1=n^2\\)。",
+      "对合法试探形状 \\(f(x)\\)，\\(\\omega^2[f]=(EI/\\mu)\\int(f'')^2dx/\\int f^2dx\\)。取 \\(f=\\sin(\\pi x/L)\\) 直接得到 \\(\\omega_1^2=(EI/\\mu)\\pi^4/L^4\\)。若改成自由端，则边界为零弯矩与零剪力，不能套用正弦基谱。"
+    ],
+    "tags": [
+      "弹性梁波",
+      "四阶色散",
+      "变分谱"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "W268",
+    "title": "两条弦交界的行波反射与张力功率守恒",
+    "setup": "两条半无限弦在 \\(x=0\\) 连接，张力相同为 \\(T\\)，线密度分别 \\(\\mu_1,\\mu_2>0\\)，右行谐波从区域1入射，忽略节点质量与耗散。",
+    "q": [
+      "定义波阻抗并写入射、反射与透射波。",
+      "由位移连续与横向力连续求振幅系数。",
+      "从波功率导出反射率与透射率。",
+      "讨论极端阻抗差与相位反转。"
+    ],
+    "s": [
+      "两区波速 \\(c_j=\\sqrt{T/\\mu_j}\\)、波数 \\(k_j=\\omega/c_j\\)，横波力对速度的特性阻抗 \\(Z_j=T/c_j=\\sqrt{T\\mu_j}\\)。在界面设 \\(y_1=(Ae^{ik_1x}+Be^{-ik_1x})e^{-i\\omega t}\\)、\\(y_2=Ce^{ik_2x-i\\omega t}\\)。",
+      "节点无质量且张力相同，边界 \\(A+B=C\\) 及 \\(k_1(A-B)=k_2C\\)。故振幅反射系数 \\(r=B/A=(k_1-k_2)/(k_1+k_2)=(Z_1-Z_2)/(Z_1+Z_2)\\)，透射振幅 \\(t=C/A=2Z_1/(Z_1+Z_2)\\)。",
+      "弦波的平均功率通量 \\(\\langle P\\rangle=(\\omega^2/2)Z|A|^2\\)。因此能量反射率 \\(R=|r|^2\\)，透射率 \\(\\mathcal T=(Z_2/Z_1)|t|^2=4Z_1Z_2/(Z_1+Z_2)^2\\)。两者和为1，符合无质量无耗散节点的功率守恒。",
+      "若 \\(Z_2\\gg Z_1\\)，位移反射系数 \\(r\\to-1\\)，界面近似固定端，反射波相位翻转；若 \\(Z_2\\ll Z_1\\)，\\(r\\to+1\\)，近似自由端反射。有限界面质量或弯曲刚度会引入频率相关散射，不再仅由两侧阻抗决定。"
+    ],
+    "tags": [
+      "界面散射",
+      "波阻抗",
+      "能量守恒"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "W269",
+    "title": "双原子一维晶格的声学与光学声子双分支",
+    "setup": "交替质量 \\(m_1,m_2>0\\) 的一维弹簧晶格，相邻质点弹簧刚度均为 \\(K>0\\)，原胞长 \\(a\\)，每胞位移为 \\((u_n,v_n)\\)。",
+    "q": [
+      "写双原胞的耦合Newton方程。",
+      "从Bloch行列式求双支色散。",
+      "求长波极限声速和光学模频率。",
+      "分析布里渊区边界处的禁带。"
+    ],
+    "s": [
+      "胞内质量 \\(m_1\\) 连接 \\(v_n,v_{n-1}\\)，故 \\(m_1\\ddot u_n=K(v_n+v_{n-1}-2u_n)\\)；质量 \\(m_2\\) 连接 \\(u_n,u_{n+1}\\)，\\(m_2\\ddot v_n=K(u_n+u_{n+1}-2v_n)\\)。原胞使用长度 \\(a\\) 而非两倍任意坐标。",
+      "取 \\(u_n=Ue^{i(qna-\\omega t)}\\)、\\(v_n=Ve^{i(qna-\\omega t)}\\)，得 \\((2K-m_1\\omega^2)(2K-m_2\\omega^2)-4K^2\\cos^2(qa/2)=0\\)。整理 \\(\\omega_\\pm^2=K(1/m_1+1/m_2)\\pm K\\sqrt{(1/m_1+1/m_2)^2-4\\sin^2(qa/2)/(m_1m_2)}\\)。",
+      "当 \\(qa\\to0\\)，低支 \\(\\omega_-^2\\sim Ka^2q^2/[2(m_1+m_2)]\\)，所以 \\(c_s=a\\sqrt{K/[2(m_1+m_2)]}\\)。高支 \\(\\omega_+(0)^2=2K(1/m_1+1/m_2)\\)，两质量反相运动，产生非零光学频隙。",
+      "在 \\(q=\\pi/a\\) 时 \\(\\cos(qa/2)=0\\)，动态矩阵对角化，两个频率平方分别为 \\(2K/m_1\\)、\\(2K/m_2\\)。若 \\(m_1\\ne m_2\\)，两支之间存在频隙；若 \\(m_1=m_2\\)，区边发生折叠简并而不产生真正的质量差禁带。"
+    ],
+    "tags": [
+      "双原子链",
+      "声学光学模",
+      "Bloch分支"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "W270",
+    "title": "Kuramoto振子群的Lorentz频率分布与同步阈值",
+    "setup": "无限数量相位振子满足 \\(\\dot\\theta_j=\\omega_j+K r\\sin(\\psi-\\theta_j)\\)，序参量 \\(re^{i\\psi}=\\lim_{N\\to\\infty}N^{-1}\\sum_je^{i\\theta_j}\\)，固有频率密度 \\(g(\\omega)=\\gamma/[\\pi(\\omega^2+\\gamma^2)]\\)。",
+    "q": [
+      "变换到同步框架并区分锁定振子。",
+      "写同步自洽积分。",
+      "由小序参量展开求临界耦合。",
+      "求Lorentz分布同步支的显式 \\(r(K)\\)。"
+    ],
+    "s": [
+      "取对称频率分布平均中心为0、稳定平均相位 \\(\\psi=0\\)。单振子 \\(\\dot\\theta=\\omega-Kr\\sin\\theta\\)，若 \\(|\\omega|\\le Kr\\)，存在稳定锁相 \\(\\sin\\theta=\\omega/(Kr)\\)；若 \\(|\\omega|>Kr\\) 则持续漂移。序参量自洽来自所有锁相贡献。",
+      "对偶对称 \\(g(\\omega)\\)，漂移振子的实部平均相互抵消，锁相振子对序参量贡献 \\(\\cos\\theta=\\sqrt{1-(\\omega/(Kr))^2}\\)。因此 \\(r=\\int_{-Kr}^{Kr}g(\\omega)\\sqrt{1-\\omega^2/(K^2r^2)}\\,d\\omega\\)，并在 \\(r>0\\) 的支上求解。",
+      "在 \\(r\\to0^+\\) 时令 \\(\\omega=Krx\\)，自洽式两边约去 \\(r\\) 得 \\(1=K g(0)\\int_{-1}^1\\sqrt{1-x^2}dx=K\\pi g(0)/2\\)。因此 \\(K_c=2/[\\pi g(0)]=2\\gamma\\)。阈值以下非零锁相自洽支不存在。",
+      "利用Lorentz分布的Ott–Antonsen约化或直接评价自洽积分，稳定同步支满足 \\(0=-\\gamma r+(K/2)(1-r^2)r\\)。因此对 \\(K>2\\gamma\\)，\\(r=\\sqrt{1-2\\gamma/K}\\)；\\(K\\downarrow K_c^+\\) 时 \\(r\\propto(K-K_c)^{1/2}\\)，为连续同步分岔。"
+    ],
+    "tags": [
+      "非线性同步",
+      "自洽积分",
+      "临界阈值"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "W271",
+    "title": "有限水深毛细—重力波的色散与相群速度",
+    "setup": "密度 \\(\\rho\\) 的不可压无黏液体深度 \\(h\\)，重力加速度 \\(g\\)、表面张力 \\(\\gamma\\)，取波数 \\(k>0\\) 的小幅自由面波。",
+    "q": [
+      "构造满足底部不可穿透的速度势。",
+      "结合自由面Bernoulli与曲率压差求色散。",
+      "求浅水和深水两个渐近极限。",
+      "求群速度表达并说明毛细主导下的关系。"
+    ],
+    "s": [
+      "流体内扰动势满足 \\(\\nabla^2\\phi=0\\)，底部 \\(z=-h\\) 条件 \\(\\partial_z\\phi=0\\)。令 \\(\\phi=A\\cosh[k(z+h)]e^{i(kx-\\omega t)}\\) 便满足底部条件。自由面线性运动条件 \\(\\eta_t=\\phi_z|_{z=0}\\)。",
+      "动态边界为 \\(\\phi_t+g\\eta-(\\gamma/\\rho)\\eta_{xx}=0\\) 于 \\(z=0\\)。消去 \\(\\eta,A\\) 得 \\(\\omega^2=(gk+\\gamma k^3/\\rho)\\tanh(kh)\\)。重力与毛细回复力在频率平方中相加，有限深度由 \\(\\tanh(kh)\\) 修正。",
+      "当 \\(kh\\ll1\\)，\\(\\tanh(kh)\\simeq kh\\)，故 \\(\\omega^2\\simeq h(gk^2+\\gamma k^4/\\rho)\\)，长波低毛细时 \\(v_p\\to\\sqrt{gh}\\)。当 \\(kh\\gg1\\)，恢复深水 \\(\\omega^2\\simeq gk+\\gamma k^3/\\rho\\)。",
+      "由 \\(v_g=(2\\omega)^{-1}d(\\omega^2)/dk\\) 得 \\(v_g=\\{[g+3\\gamma k^2/\\rho]\\tanh(kh)+h[gk+\\gamma k^3/\\rho]\\operatorname{sech}^2(kh)\\}/(2\\omega)\\)。深水纯毛细主导时 \\(\\omega\\propto k^{3/2}\\)，所以 \\(v_g=(3/2)v_p\\)。"
+    ],
+    "tags": [
+      "自由边界",
+      "毛细—重力波",
+      "群速度"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "W272",
+    "title": "Green函数驱动阻尼振子与共振功率谱",
+    "setup": "质量归一的阻尼振子满足 \\(\\ddot x+2\\gamma\\dot x+\\omega_0^2x=f(t)\\)，\\(0<\\gamma<\\omega_0\\)，初始扰动为零，外力可取任意因果函数。",
+    "q": [
+      "求因果Green函数并验证跃变条件。",
+      "由Duhamel原理写任意驱动下的响应。",
+      "求稳态复易感率与吸收功率。",
+      "说明时域因果性和频域解析性。"
+    ],
+    "s": [
+      "Green函数满足 \\((\\partial_t^2+2\\gamma\\partial_t+\\omega_0^2)G(t)=\\delta(t)\\)、\\(G(t<0)=0\\)。欠阻尼情形 \\(G(t)=\\Theta(t)e^{-\\gamma t}\\sin(\\omega_dt)/\\omega_d\\)，\\(\\omega_d=\\sqrt{\\omega_0^2-\\gamma^2}\\)。它连续且 \\(G'(0^+)-G'(0^-)=1\\)。",
+      "零初值解为 \\(x(t)=\\int_0^tG(t-s)f(s)ds\\)。对 \\(t>0\\) 微分并使用 \\(G(0)=0,G'(0^+)=1\\) 可核验 \\(x''+2\\gamma x'+\\omega_0^2x=f(t)\\)，这并非只对正弦激励成立。",
+      "对 \\(f(t)=\\operatorname{Re}[F e^{-i\\omega t}]\\)，稳态 \\(x=\\operatorname{Re}[\\chi(\\omega)F e^{-i\\omega t}]\\)，\\(\\chi=[\\omega_0^2-\\omega^2-2i\\gamma\\omega]^{-1}\\)。平均输入功率 \\(\\langle f\\dot x\\rangle=\\tfrac12\\omega|F|^2\\operatorname{Im}\\chi(\\omega)=\\gamma\\omega^2|F|^2/[(\\omega_0^2-\\omega^2)^2+4\\gamma^2\\omega^2]\\)。",
+      "因果 \\(G(t<0)=0\\) 的Fourier-Laplace变换在适当上半频平面解析，对应易感率实部与虚部的Kramers–Kronig联系。\\(\\gamma>0\\) 确保被动吸收功率非负；若外力不是稳态单频，不能直接用单一频率的平均功率代替全频能量积分。"
+    ],
+    "tags": [
+      "因果Green函数",
+      "阻尼谱",
+      "能量耗散"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "W273",
+    "title": "无黏Burgers方程的梯度灾难与守恒激波",
+    "setup": "一维标量波形 \\(u_t+uu_x=0\\)，初值 \\(u(x,0)=u_0(x)\\) 连续可微且某处负斜率，研究未发生激波前的解析动力学与弱解。",
+    "q": [
+      "用特征线法求激波前的隐式解。",
+      "求首次梯度奇异时间。",
+      "由守恒形式求激波Rankine–Hugoniot速度。",
+      "由熵条件判别激波与稀疏波。"
+    ],
+    "s": [
+      "沿特征 \\(dx/dt=u\\)，\\(du/dt=0\\)，故初始标记 \\(\\xi\\) 上 \\(u(x,t)=u_0(\\xi)\\)、\\(x=\\xi+t u_0(\\xi)\\)。在映射 \\(\\xi\\mapsto x\\) 单调时该式唯一；若出现特征相交，单值经典解失效。",
+      "对隐式映射求导 \\(\\partial\\xi/\\partial x=[1+t u_0'(\\xi)]^{-1}\\)，所以 \\(u_x=u_0'(\\xi)/[1+t u_0'(\\xi)]\\)。若 \\(\\min_\\xi u_0'(\\xi)<0\\)，梯度首次发散时刻 \\(t_*=-1/\\min u_0'\\)，是有限时间波形破碎。",
+      "方程可写 \\(u_t+[u^2/2]_x=0\\)。对左右状态 \\(u_L,u_R\\) 的跳跃面 \\(x=s t\\) 积分守恒律得 \\(s(u_L-u_R)=u_L^2/2-u_R^2/2\\)，故 \\(s=(u_L+u_R)/2\\)。这是守恒跃变条件，不保证任意跳跃都物理可接受。",
+      "通量 \\(f(u)=u^2/2\\) 为凸函数，粘性极限给Lax熵条件 \\(u_L>s>u_R\\) 对应 \\(u_L>u_R\\) 的压缩激波。若 \\(u_L<u_R\\)，物理解为扇形稀疏波 \\(u=x/t\\) 在两态之间，不得用不满足熵条件的膨胀跳跃替代。"
+    ],
+    "tags": [
+      "非线性波",
+      "梯度灾难",
+      "熵弱解"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  }
+]
