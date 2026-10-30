@@ -1,0 +1,254 @@
+[
+  {
+    "id": "M256",
+    "title": "球摆的循环动量、定常圆锥运动及小章动",
+    "setup": "质量 \\(m\\) 的小球由长度 \\(l\\) 的轻杆限制在球面，重力势 \\(V=mgl(1-\\cos\\theta)\\)，用球角 \\((\\theta,\\phi)\\) 描述，\\(0<\\theta<\\pi\\)。",
+    "q": [
+      "求守恒的方位动量并化成有效一维势。",
+      "建立圆锥摆定角进动的力学条件。",
+      "求定常圆锥摆周围小章动频率。",
+      "检验小角极限并识别离心奇点。"
+    ],
+    "s": [
+      "动能 \\(T=\\frac12ml^2(\\dot\\theta^2+\\sin^2\\theta\\dot\\phi^2)\\)。由于 \\(\\phi\\) 循环，\\(p_\\phi=ml^2\\sin^2\\theta\\dot\\phi=L_z\\) 守恒。消去 \\(\\dot\\phi\\) 得 \\(\\frac12ml^2\\dot\\theta^2+V_{\\mathrm{eff}}(\\theta)=E\\)，其中 \\(V_{\\mathrm{eff}}=mgl(1-\\cos\\theta)+L_z^2/(2ml^2\\sin^2\\theta)\\)。",
+      "定角运动 \\(\\theta=\\theta_0,\\dot\\phi=\\Omega\\) 需 \\(V_{\\mathrm{eff}}'(\\theta_0)=0\\)。代入 \\(L_z=ml^2\\Omega\\sin^2\\theta_0\\) 得 \\(mgl\\sin\\theta_0-ml^2\\Omega^2\\sin\\theta_0\\cos\\theta_0=0\\)，故非竖直解满足 \\(\\Omega^2=g/(l\\cos\\theta_0)\\)，存在时 \\(\\cos\\theta_0>0\\)。",
+      "对有效势求二阶导数并用平衡关系消去 \\(L_z\\)，得到 \\(V_{\\mathrm{eff}}''(\\theta_0)=mgl(1/\\cos\\theta_0+3\\cos\\theta_0)\\)。微扰 \\(\\eta=\\theta-\\theta_0\\) 满足 \\(\\ddot\\eta+\\omega_n^2\\eta=0\\)，其中 \\(\\omega_n^2=(g/l)(\\sec\\theta_0+3\\cos\\theta_0)\\)。",
+      "当 \\(\\theta_0\\to0^+\\)，\\(\\omega_n^2\\to4g/l\\)，与小角圆锥摆的径向扰动相符；与此同时 \\(\\Omega\\to\\sqrt{g/l}\\)。固定 \\(L_z\\ne0\\) 时 \\(V_{\\mathrm{eff}}\\propto\\sin^{-2}\\theta\\) 阻止轨道穿过极点；令 \\(\\theta\\to0\\) 必须先说明角动量随之缩放。"
+    ],
+    "tags": [
+      "循环坐标",
+      "有效势",
+      "稳定性"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "M257",
+    "title": "刚体自由陀螺的Euler–Poinsot几何与中间轴稳定",
+    "setup": "主惯量 \\(I_1<I_2<I_3\\) 的自由刚体，无外力矩，在体轴速度 \\(\\omega_i\\) 下旋转；初始角动量 \\(\\boldsymbol L\\) 与转动能量 \\(E\\) 有限。",
+    "q": [
+      "导出转动惯量椭球与两个守恒二次型。",
+      "在角动量空间解释Poinsot接触曲线。",
+      "求中间惯量主轴旋转的扰动增长指数。",
+      "给出两个外轴线性稳定与临界近简并极限。"
+    ],
+    "s": [
+      "Euler式 \\(I_i\\dot\\omega_i=(I_j-I_k)\\omega_j\\omega_k\\) 对 \\((i,j,k)\\) 循环成立。乘以 \\(\\omega_i\\) 求和得 \\(\\dot E=\\frac12d(\\sum I_i\\omega_i^2)/dt=0\\)，乘以 \\(I_i\\omega_i\\) 求和得 \\(\\frac12d(\\sum I_i^2\\omega_i^2)/dt=0\\)。这分别是能量椭球与动量球的交线约束。",
+      "在体轴角动量分量 \\(L_i=I_i\\omega_i\\) 中，两曲面为 \\(\\sum L_i^2=L^2\\) 和 \\(\\sum L_i^2/I_i=2E\\)。惯量椭球切平面的法线沿 \\((L_1/I_1,L_2/I_2,L_3/I_3)=\\boldsymbol\\omega\\)，从而瞬时角速度与接触几何相关；实际轨迹为两曲面交线，不可理解为两曲面随意相交。",
+      "在 \\(\\omega_2=\\Omega,\\omega_1=u,\\omega_3=v\\) 附近，线性化得 \\(\\dot u=(I_2-I_3)\\Omega v/I_1\\)、\\(\\dot v=(I_1-I_2)\\Omega u/I_3\\)。故 \\(\\ddot u=\\lambda^2u\\)，\\(\\lambda^2=\\Omega^2(I_3-I_2)(I_2-I_1)/(I_1I_3)>0\\)，表现指数不稳定。",
+      "绕 \\(I_1\\) 轴线性频率平方为 \\(\\Omega^2(I_3-I_1)(I_2-I_1)/(I_2I_3)\\)，绕 \\(I_3\\) 轴为 \\(\\Omega^2(I_3-I_1)(I_3-I_2)/(I_1I_2)\\)，均正。若两惯量趋于相同，其中一频率趋零，意味着轴对称简并而不是出现固定非零频率。"
+    ],
+    "tags": [
+      "非线性刚体",
+      "Poinsot几何",
+      "谱稳定"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "M258",
+    "title": "含重力的最速降线等时性质与Jacobi第一积分",
+    "setup": "点粒子自静止沿重力场中无摩擦轨道下滑，采用向下的坐标 \\(y\\ge0\\)，两端高度差为正且轨道单调，重力加速度 \\(g\\)。",
+    "q": [
+      "建立到达时间变分泛函。",
+      "导出旋轮线参数方程。",
+      "求整个旋轮线一拱的时间。",
+      "用线性方程说明等时曲线的性质。"
+    ],
+    "s": [
+      "机械能给 \\(v=\\sqrt{2gy}\\)，线元 \\(ds=\\sqrt{1+y'^2}\\,dx\\)，故运动时间 \\(t=(2g)^{-1/2}\\int\\sqrt{(1+y'^2)/y}\\,dx\\)。被积函数不显含 \\(x\\)，可用Beltrami第一积分，需对起点 \\(y=0\\) 的可积奇性单独处理。",
+      "第一积分 \\(F-y'F_{y'}=[y(1+y'^2)]^{-1/2}=1/\\sqrt{2a}\\)，即 \\(y(1+y'^2)=2a\\)。令 \\(y=a(1-\\cos\\theta)\\)，则 \\(dx/d\\theta=a(1-\\cos\\theta)\\)，积分得 \\(x=a(\\theta-\\sin\\theta)\\)，为向下旋轮线。",
+      "从参数解计算 \\(ds/d\\theta=2a\\sin(\\theta/2)\\)，能量速率 \\(v=2\\sqrt{ga}\\sin(\\theta/2)\\)，故 \\(dt/d\\theta=\\sqrt{a/g}\\)。从 \\(\\theta=0\\) 到 \\(2\\pi\\) 的全拱运动时间 \\(t=2\\pi\\sqrt{a/g}\\)，不存在末端发散。",
+      "对旋轮线最低点定义有符号弧长 \\(s=-4a\\cos(\\theta/2)\\)，重力切向分量与 \\(\\sin(\\theta/2)\\) 成正比，严格得到 \\(\\ddot s+[g/(4a)]s=0\\)。因此在同一拱内往返最低点的周期 \\(4\\pi\\sqrt{a/g}\\) 与幅度无关；轨道和初始条件必须符合无摩擦约束。"
+    ],
+    "tags": [
+      "变分法",
+      "旋轮线",
+      "等时性"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "M259",
+    "title": "中心力径向作用变量与Kepler能级的经典简并",
+    "setup": "质量 \\(m\\) 粒子在 \\(V(r)=-k/r\\) 中束缚运动，\\(k>0,E<0\\)，角动量模 \\(L>0\\)，近日点和远日点均有限。",
+    "q": [
+      "写Hamilton–Jacobi分离和径向动量。",
+      "计算径向作用变量并核验量纲。",
+      "求作用形式Hamilton量和闭合轨道原因。",
+      "讨论附加 (r^{-2}) 扰动如何破坏简并。"
+    ],
+    "s": [
+      "Hamilton量为 \\(H=p_r^2/(2m)+L^2/(2mr^2)-k/r\\)。令 \\(S=W_r(r)+L\\phi-Et\\)，得到 \\(p_r=W_r'=\\sqrt{2mE+2mk/r-L^2/r^2}\\)。其两个正根界定束缚径向区间。",
+      "径向作用 \\(J_r=(2\\pi)^{-1}\\oint p_r\\,dr\\)。对开普勒势积分可得 \\(J_r=mk/\\sqrt{-2mE}-L\\)。每项量纲均为角动量；极圆轨道 \\(J_r=0\\)，此时 \\(L=mk/\\sqrt{-2mE}\\)。",
+      "反解得到 \\(H(J_r,L)=-mk^2/[2(J_r+L)^2]\\)。因此 \\(\\omega_r=\\partial H/\\partial J_r=mk^2/(J_r+L)^3\\)，\\(\\omega_\\phi=\\partial H/\\partial L\\) 同值。径向和角向频率恰相等，解释理想Kepler椭圆无拱点进动。",
+      "若增加小势 \\(+\\alpha/r^2\\)，等效离心项由 \\(L^2/(2m)\\) 改为 \\(L^2/(2m)+\\alpha\\)，可定义 \\(L_{\\mathrm{eff}}=\\sqrt{L^2+2m\\alpha}\\)。作用变成 \\(J_r=mk/\\sqrt{-2mE}-L_{\\mathrm{eff}}\\)，故 \\(\\omega_\\phi/\\omega_r=L/L_{\\mathrm{eff}}\\) 的倒数需由实际作用偏导计算；正确为 \\(\\omega_\\phi/\\omega_r=L/L_{\\mathrm{eff}}\\)，表明拱点进动。"
+    ],
+    "tags": [
+      "作用角",
+      "Kepler对称",
+      "轨道进动"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "M260",
+    "title": "刚球弹性碰撞与质心系微分散射截面",
+    "setup": "半径分别为 \\(a_1,a_2\\) 的光滑刚球无黏弹性碰撞，等效硬核半径 \\(R=a_1+a_2\\)，相对初速度 \\(v\\)，冲量参数 \\(0\\le b\\le R\\)。",
+    "q": [
+      "建立约化质量和相对运动等效模型。",
+      "由几何关系求中心系偏转角。",
+      "计算经典硬球微分散射截面。",
+      "积分总截面并解释质心系和实验系差异。"
+    ],
+    "s": [
+      "引入约化质量 \\(\\mu=m_1m_2/(m_1+m_2)\\)、质心速度 \\(\\boldsymbol V=(m_1\\boldsymbol v_1+m_2\\boldsymbol v_2)/(m_1+m_2)\\)。动能分解为 \\(T=\\tfrac12(m_1+m_2)V^2+\\tfrac12\\mu v_{\\mathrm{rel}}^2\\)。硬球碰撞只反转相对速度的接触法向分量，切向分量不变。",
+      "接触点的法向与入射速度夹角 \\(\\alpha\\) 满足 \\(b=R\\sin\\alpha\\)。镜面反射使相对轨迹的偏转角 \\(\\chi=\\pi-2\\alpha=2\\arccos(b/R)\\)。因此 \\(b=R\\cos(\\chi/2)\\)，中心碰撞为 \\(\\chi=\\pi\\)，擦边碰撞为 \\(\\chi=0\\)。",
+      "轴对称经典公式 \\(d\\sigma/d\\Omega=(b/\\sin\\chi)|db/d\\chi|\\)。代入 \\(db/d\\chi=-(R/2)\\sin(\\chi/2)\\)，以及 \\(\\sin\\chi=2\\sin(\\chi/2)\\cos(\\chi/2)\\)，得到 \\(d\\sigma/d\\Omega=R^2/4\\)，角分布在中心系各向同性。",
+      "积分所有散射立体角给 \\(\\sigma=4\\pi(R^2/4)=\\pi R^2\\)，恰是几何截面。若目标球初始静止，实验室散射角与中心系 \\(\\chi\\) 的映射取决于 \\(m_1/m_2\\)，不能无条件把质心系的常数微分截面直接用于实验室角分布。"
+    ],
+    "tags": [
+      "质心变换",
+      "经典散射",
+      "几何截面"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "M261",
+    "title": "磁约束回旋轨道的绝热不变量与磁镜反射",
+    "setup": "带电粒子质量 \\(m\\)、电荷模 \\(|q|\\) 在缓慢变化的磁场强度 \\(B(s)\\) 中运动，磁场方向变化尺度远大于Larmor半径，忽略电场、碰撞。",
+    "q": [
+      "从回旋运动求第一绝热不变量。",
+      "用能量守恒求平行速度演化。",
+      "推出磁镜反射位置和损失锥条件。",
+      "指出绝热近似破坏的空间尺度。"
+    ],
+    "s": [
+      "局域回旋频率 \\(\\omega_c=|q|B/m\\)，垂直能量 \\(E_\\perp=mv_\\perp^2/2\\)。快变量作用 \\(J_\\perp=(2\\pi)^{-1}\\oint p\\,dq\\) 与 \\(E_\\perp/\\omega_c\\) 成正比，故 \\(\\mu_{\\mathrm{ad}}=E_\\perp/B=mv_\\perp^2/(2B)\\) 在慢变磁场中近似守恒。",
+      "无电场时总动能 \\(E=mv_\\parallel^2/2+\\mu_{\\mathrm{ad}}B(s)\\) 近似守恒，因此 \\(v_\\parallel^2(s)=2[E-\\mu_{\\mathrm{ad}}B(s)]/m\\)。磁强增大时，垂直能量上升、平行动能下降，是能量在两方向间交换而非磁场作净功。",
+      "反射点满足 \\(v_\\parallel=0\\)，即 \\(B_m=E/\\mu_{\\mathrm{ad}}\\)。在最小磁场 \\(B_0\\) 处定义俯仰角 \\(\\sin^2\\alpha_0=E_{\\perp0}/E=\\mu_{\\mathrm{ad}}B_0/E\\)，故 \\(B_m=B_0/\\sin^2\\alpha_0\\)。若 \\(B_{\\max}\\) 是镜区最大场，反射需 \\(\\sin^2\\alpha_0\\ge B_0/B_{\\max}\\)。",
+      "一阶磁矩守恒要求 \\(\\rho_L/L_B\\ll1\\)、\\(\\omega_c^{-1}/T_B\\ll1\\)，其中 \\(L_B=|B/\\nabla_\\parallel B|\\)。靠近磁零点 \\(B\\to0\\) 时回旋频率衰减、Larmor半径增大，粒子可能非绝热散射，磁镜公式无法继续简单外推。"
+    ],
+    "tags": [
+      "绝热不变量",
+      "磁镜",
+      "带电粒子"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "M262",
+    "title": "受迫陀螺的无耗散Lagrange点与Cassini姿态",
+    "setup": "轴对称自旋体的对称轴单位矢量 \\(\\boldsymbol n\\) 受恒定外轴 \\(\\boldsymbol k\\) 的势 \\(U=-\\kappa(\\boldsymbol n\\cdot\\boldsymbol k)^2/2\\)，\\(\\kappa>0\\)，自旋动量模 \\(S\\) 很大，忽略横摆惯性。",
+    "q": [
+      "写快自旋极限的向量进动方程。",
+      "求保持定倾角的进动速率。",
+      "求功率并验证无耗散。",
+      "分析扰动有限惯性后的快速章动。"
+    ],
+    "s": [
+      "总自旋角动量近似为 \\(\\boldsymbol L=S\\boldsymbol n\\)。力矩由取向势变分给 \\(\\boldsymbol\\tau=-\\boldsymbol n\\times\\partial U/\\partial\\boldsymbol n=\\kappa(\\boldsymbol n\\cdot\\boldsymbol k)(\\boldsymbol n\\times\\boldsymbol k)\\)。故 \\(S\\dot{\\boldsymbol n}=\\kappa\\cos\\theta(\\boldsymbol n\\times\\boldsymbol k)\\)，法向长度 \\(|\\boldsymbol n|=1\\) 自动保持。",
+      "因为 \\(\\dot{\\boldsymbol n}\\perp\\boldsymbol k\\)，\\(\\boldsymbol n\\cdot\\boldsymbol k=\\cos\\theta\\) 守恒。若 \\(\\dot{\\boldsymbol n}=\\Omega_p(\\boldsymbol k\\times\\boldsymbol n)\\)，与上式比较得 \\(\\Omega_p=-\\kappa\\cos\\theta/S\\)；进动方向取决于符号约定和倾角，近赤道处速率趋零。",
+      "瞬时功率为 \\(P=\\boldsymbol\\tau\\cdot\\boldsymbol\\omega\\)。对势随时间的变化，\\(\\dot U=-\\kappa(\\boldsymbol n\\cdot\\boldsymbol k)(\\dot{\\boldsymbol n}\\cdot\\boldsymbol k)=0\\)，说明理想轴对称力矩只重定向自旋，不改变自旋能量；不能把进动与摩擦损失混为一谈。",
+      "若保留横向惯量 \\(I_\\perp\\)，角动力学包含 \\(I_\\perp\\ddot{\\boldsymbol n}\\) 的快速项，除低频进动外出现尺度约为 \\(\\omega_{\\mathrm{nut}}\\sim S/I_\\perp\\) 的章动。快自旋近似的适用条件是 \\(\\kappa I_\\perp/S^2\\ll1\\)，在失效时必须使用完整Euler角动力学。"
+    ],
+    "tags": [
+      "自旋快慢分离",
+      "姿态动力学",
+      "能量守恒"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "M263",
+    "title": "弹簧双质点的非线性FPUT正常模频率偏移",
+    "setup": "两等质量 \\(m\\) 粒子用对称弹簧连接，中心相对位移 \\(x=x_1-x_2\\)。相对势 \\(U(x)=\\frac12kx^2+\\frac14\\beta x^4\\)，\\(k>0,\\beta>0\\)，质心自由。",
+    "q": [
+      "分离质心与相对运动的Hamilton量。",
+      "写相对位移的Duffing方程。",
+      "通过谐波平衡求首阶非线性频率修正。",
+      "检验能量与相空间有界性。"
+    ],
+    "s": [
+      "令 \\(X=(x_1+x_2)/2\\) 及 \\(x=x_1-x_2\\)，则 \\(T=m\\dot X^2+\\frac14m\\dot x^2\\)。相对运动的约化质量为 \\(m_r=m/2\\)，Hamilton量 \\(H=P_X^2/(4m)+p_x^2/(2m_r)+kx^2/2+\\beta x^4/4\\)，质心动量守恒。",
+      "Euler方程 \\(m_r\\ddot x+kx+\\beta x^3=0\\)。定义线性角频率 \\(\\omega_0^2=k/m_r=2k/m\\)，则 \\(\\ddot x+\\omega_0^2x+(\\beta/m_r)x^3=0\\)。正四次非线性使振幅越大回复力越强，属于硬化型。",
+      "设 \\(x\\approx A\\cos(\\Omega t)\\)，用 \\(\\cos^3u=(3\\cos u+\\cos3u)/4\\)，丢弃三次谐波的首阶作用得 \\(\\Omega^2\\approx\\omega_0^2+3\\beta A^2/(4m_r)\\)。因此 \\(\\Omega\\approx\\omega_0[1+3\\beta A^2/(8k)]\\)，要求 \\(\\beta A^2/k\\ll1\\)。",
+      "相对运动能量 \\(E_r=\\frac12m_r\\dot x^2+\\frac12kx^2+\\frac14\\beta x^4\\) 守恒。因 \\(k,\\beta>0\\)，势能随 \\(|x|\\to\\infty\\) 发散，给定有限能量的相对轨道有界；若换 \\(\\beta<0\\)，四次截断势在大振幅不再有界，不能据小振幅展开预测全局稳定。"
+    ],
+    "tags": [
+      "FPUT链",
+      "非线性正常模",
+      "谐波平衡"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  },
+  {
+    "id": "M264",
+    "title": "Hill方程与圆轨道附近的潮汐Clohessy–Wiltshire相对动力学",
+    "setup": "中心体引力参数 \\(\\mu=GM\\)，参考航天器处在半径 \\(r_0\\) 的圆轨道，平均角速度 \\(n=\\sqrt{\\mu/r_0^3}\\)；小相对位移 \\((x,y)\\) 分别沿径向和切向，忽略互相引力。",
+    "q": [
+      "用旋转坐标线性化相对运动方程。",
+      "求Clohessy–Wiltshire闭式解。",
+      "导出无长期漂移的初始条件。",
+      "通过精确轨道频率解释线性漂移。"
+    ],
+    "s": [
+      "将二体引力 \\(-\\mu\\boldsymbol r/r^3\\) 在参考圆轨道一阶Taylor展开，叠加共转系Coriolis与离心惯性项，得到 \\(\\ddot x-2n\\dot y-3n^2x=0\\)，\\(\\ddot y+2n\\dot x=0\\)。其有效潮汐矩阵只在径向出现 \\(-3n^2x\\)。",
+      "记初值 \\((x_0,y_0,v_{x0},v_{y0})\\)，解为 \\(x(t)=(4-3\\cos nt)x_0+\\sin(nt)v_{x0}/n+2(1-\\cos nt)v_{y0}/n\\)，\\(y(t)=y_0+6(\\sin nt-nt)x_0-2(1-\\cos nt)v_{x0}/n+(4\\sin nt-3nt)v_{y0}/n\\)。可代回两式与四个初值核对。",
+      "切向解中线性漂移项是 \\(-6nt\\,x_0-3t\\,v_{y0}\\)，要使其消失需 \\(v_{y0}=-2nx_0\\)。代回径向解得 \\(x(t)=x_0\\cos nt+(v_{x0}/n)\\sin nt\\)，轨道只具有周期相对振荡。",
+      "邻近Kepler圆轨道的平均角速度 \\(n(r)=\\sqrt{\\mu/r^3}\\)，求导 \\(dn/dr=-3n/(2r)\\)。半长轴微差导致长期相位差随 \\(t\\) 线性增长，正是CW切向漂移模；相对距离不再满足小量条件时需回到非线性二体轨道。"
+    ],
+    "tags": [
+      "轨道动力学",
+      "Clohessy-Wiltshire",
+      "潮汐线性化"
+    ],
+    "level": 5,
+    "tier": "advanced_composite",
+    "estimated_minutes": 100,
+    "status": "review_only",
+    "quality_status": "待独立复核",
+    "latex_mode": "strict"
+  }
+]
