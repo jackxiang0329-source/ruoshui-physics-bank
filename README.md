@@ -1,6 +1,8 @@
 # 三千弱水 · 大学物理高难度综合压轴题库
 
-自 2026-10-28 起，主库**只收录高难度综合压轴题**。正式主库目前 **352 道**（5/5 342 道，4/5 10 道），均为待独立复核，不能视为六轮专家质检完成。
+**主要入口** · [题目源文件](bank/) · [题目索引](data/index.csv) · [题目合订 TeX](tex/questions.tex) · [解答合订 TeX](tex/solutions.tex)
+
+主库收录高难度综合压轴题。当前题目索引与第 14 批记录均为 **452 道**。第 14 批新增 50 道，技术校验和两册 XeLaTeX 构建通过，仍待独立专家复核。详见 [第 14 批记录](data/rounds/2026-10-29-14.json)。
 
 ## 当前唯一正式题库
 - `bank/ID/meta.json`、`question.tex`、`solution.tex` 为权威源；`data/problems.json` 是可读镜像。
@@ -16,6 +18,8 @@
 
 **第十一批起，每轮必须新增50道高难度综合题及详细解析，六领域各8或9道，分问技术校验200项，全部两册PDF编译通过后才能合并主分支。第十一批从252道增至302道，已完成50道技术质检批量录入。** 自动检查与独立专家审稿分开记录，未独立审校仍标注「待独立复核」。详见 docs/HIGH_DIFFICULTY_POLICY.md。
 
+<details>
+<summary>历史扩库记录（第 2–12 批）</summary>
 
 ## 2026-10-28 第二批新增
 
@@ -99,3 +103,5 @@ M020/M021、E020/E021、T020/T021 新增于六大模块之一半；每题四问�
 第十二批的 `data/rounds/2026-10-28-12.json` 是唯一正式批次清单；`scripts/check_round12_physics.py` 会执行200项逐分问检查并生成 `data/round12_validation_report.json`。跨轮发现的五项重复核心模型已全部替换为标准映射、悬链线、Rankine涡、剪切Alfvén波与非线性Poisson–Boltzmann双电层，并重写20项可执行检查；详见 `data/round12_core_model_overlap_audit.json`。
 
 合并前草稿和正式GitHub Actions工作流均成功（runs 40823846731、40823851509），正式双XeLaTeX PDF工件为 `advanced-physics-pdf`（artifact 12876280438）。合并提交为 `ae15c99dcc3bd9f5ce0fca7aa81c48720d0ec815`。**技术检查通过不等于独立专家审稿；全部题目继续标记「待独立复核」。**
+
+</details>
