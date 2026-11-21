@@ -1,0 +1,18 @@
+% !TeX program = xelatex
+\documentclass[tikz,border=0pt]{standalone}
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm]
+\path[fill={rgb,255:red,12;green,33;blue,54}] (0,0) rectangle (21,8.5);
+\foreach \i in {0,1,...,20}{\draw[white,opacity=.04] (\i,0)--(\i,8.5);}
+\foreach \j in {0,1,...,8}{\draw[white,opacity=.04] (0,\j)--(21,\j);}
+\begin{scope}[shift={(14.3,4.25)}]
+\foreach \ang in {0,55,110}{\draw[rotate=\ang,cyan!60!white,opacity=.55,line width=.75pt] (0,0) ellipse[x radius=4.8,y radius=1.4];}
+\fill[cyan!70!white] (0,0) circle (.4);
+\end{scope}
+\draw[cyan!60!white,line width=3pt] (1.1,1.4)--(1.1,7.1);
+\node[anchor=west,text=white,font=\bfseries\fontsize{29}{36}\selectfont] at (1.7,5.9) {PROBLEMS IN};
+\node[anchor=west,text=white,font=\bfseries\fontsize{33}{38}\selectfont] at (1.7,4.7) {GENERAL PHYSICS};
+\node[anchor=west,text=cyan!55!white,font=\large] at (1.7,2.9) {I. E. IRODOV};
+\node[anchor=west,text=white!80,font=\small] at (1.7,2.1) {Chinese translation and worked solutions};
+\end{tikzpicture}
+\end{document}

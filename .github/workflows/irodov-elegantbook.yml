@@ -1,0 +1,31 @@
+name: Irodov ElegantBook Chinese build
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'external_sources/irodov-zh-elegant/**'
+      - '.github/workflows/irodov-elegantbook.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: xu-cheng/latex-action@v4
+        with:
+          working_directory: external_sources/irodov-zh-elegant
+          root_file: |
+            cover.tex
+            main.tex
+          texlive_version: '2026'
+          args: -xelatex -file-line-error -halt-on-error -interaction=nonstopmode
+      - uses: actions/upload-artifact@v4
+        with:
+          name: irodov-zh-elegantbook-pdf
+          path: |
+            external_sources/irodov-zh-elegant/main.pdf
+            external_sources/irodov-zh-elegant/cover.pdf
+          if-no-files-found: error
+          retention-days: 30
