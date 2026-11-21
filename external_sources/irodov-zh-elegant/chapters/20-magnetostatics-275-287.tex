@@ -1,0 +1,431 @@
+% Irodov Part III §3.5 last 275--287; PDF pp.141--143,
+% printed pp.132--134. Graph of original Fig 3.76 consulted.
+\electromagproblem{275}{132}
+一根很长的圆柱形顺磁导线
+流轴向总电流 $I$，
+均匀磁化率为 $\chi$。
+求：(a) 导线表面束缚分子电流总量；
+(b) 体内束缚分子电流总量；
+并说明相对流向。
+\exsolution
+导线半径记为 $R$。
+自由电流密度
+$j=I/(\pi R^2)$，
+线内
+$H_\varphi(r)=jr/2=Ir/(2\pi R^2)$。
+磁化强度
+$J_\varphi(r)=\chi H_\varphi(r)
+=\chi I r/(2\pi R^2)$。
+体束缚电流密度
+$\bm j_b=\nabla\times\bm J$，
+其轴向分量
+\[
+j_{b,z}=\frac1r\frac{\mathrm d}{\mathrm dr}
+(rJ_\varphi)
+=\frac{\chi I}{\pi R^2}.
+\]
+截面积分体束缚电流
+\[
+\boxed{I'_{\rm vol}=\chi I}.
+\]
+表面束缚电流密度
+$\bm K_b=\bm J\times\bm n$，
+在 $r=R$，
+$\bm J\parallel\bm e_\varphi$、
+$\bm n=\bm e_r$，
+故 $\bm K_b\parallel-\bm e_z$，
+沿周长积分模为
+\[
+\boxed{I'_{\rm surf}=
+2\pi R\,J_\varphi(R)=\chi I}.
+\]
+\excheck 两者\emph{大小相等、方向相反}，
+导线及外侧整体的束缚电流净量为零。
+
+\electromagproblem{276}{132}
+图3.75：很长的通电螺线管
+从中部 $O$ 开始，轴线 $x>0$
+的半段填充相对磁导率为 $\mu$ 的介质，
+$x<0$ 为真空。
+画出轴线上 $B(x)$、$H(x)$、
+磁化强度 $J(x)$ 的大致分布。
+\exsolution
+远离分界面，螺线管的自由表面电流
+等效密度为 $K=nI$。
+真空一侧（$x\ll-R$）
+\[
+\boxed{H_-\simeq nI,\qquad
+B_-\simeq\mu_0nI,\qquad J_-=0}.
+\]
+介质一侧（$x\gg R$）
+\[
+\boxed{H_+\simeq nI,\qquad
+B_+\simeq\mu\mu_0nI,\qquad
+J_+\simeq(\mu-1)nI}.
+\]
+在 $O$ 附近，由端部和磁荷退极化效应，
+$B$、$H$ 的真实变化不能只以
+两边常值拼接；沿轴无自由磁荷，
+磁感应强度的法向分量连续，
+故 $B(x)$ 应平滑连接两侧平台。
+磁化强度在介质外为零，
+进入介质后建立并趋于平台。
+\excheck 此处说明的是原书要求的
+\emph{定性图形}，不是磁介质有限端部精确边值解。
+若只把 $\mu$ 作为乘数应用到整个轴上，
+会错误地改变真空侧远处的场。
+
+\electromagproblem{277}{132}
+无限长直导线通电流 $I$，
+恰位于两种非导电磁介质的平面交界线上，
+相对磁导率分别为 $\mu_1,\mu_2$。
+磁力线为以导线为中心的圆周，
+求距导线 $r$ 处磁感应强度模。
+\exsolution
+在同一环路上，$\bm B$
+沿界面切向的法向跨界条件以及
+题设圆形磁力线使其模在两半圆上相同。
+相应磁场强度分别为
+$H_1=B/(\mu_0\mu_1)$、
+$H_2=B/(\mu_0\mu_2)$。
+半径为 $r$ 的整圆安培环路由两半圆组成，
+\[
+I=\oint\bm H\cdot\mathrm d\bm\ell
+=\pi r\frac B{\mu_0\mu_1}
++\pi r\frac B{\mu_0\mu_2}.
+\]
+解得
+\[
+\boxed{B(r)=\frac{\mu_0I\,\mu_1\mu_2}
+{\pi r(\mu_1+\mu_2)}}.
+\]
+\excheck $\mu_1=\mu_2=1$ 时
+恢复真空直导线场
+$B=\mu_0I/(2\pi r)$。
+
+\electromagproblem{278}{132}
+半径为 $R$ 的环形电流位于
+真空与磁介质的\emph{平面边界内}，
+磁介质相对磁导率 $\mu$。
+若无磁介质时场为 $\bm B_0$，
+求该构型在电流环轴上及其余空间的磁感应强度。
+\exsolution
+把电流环所在平面作为介质分界面，
+两侧均是无自由体电流区域。
+对各个毕奥—萨伐尔自由电流元产生的
+磁矢势使用线性材料边界条件，
+可将本几何中的总场写成
+原均匀真空问题的固定比例：
+\[
+\bm B(\bm r)=\frac{2\mu}{1+\mu}\bm B_0(\bm r).
+\]
+因此轴上及其它适用的场点：
+\[
+\boxed{B=\frac{2\mu}{1+\mu}B_0}.
+\]
+\excheck $\mu=1$ 还原 $\bm B_0$；
+$\mu\to\infty$ 比例趋于2。
+该结果依赖环电流\emph{严格位于两介质平界面}
+的特殊几何，而非任意介质分布都适用。
+
+\electromagproblem{279}{132}
+相对磁导率为 $\mu$ 的
+均匀各向同性磁介质球
+置于外加均匀磁场 $\bm B_0$ 中，
+球内均匀磁化。
+已知均匀磁化球的退磁场
+$\bm H_d=-\bm J/3$。
+求球内磁感应强度。
+\exsolution
+外加磁场强度
+$\bm H_0=\bm B_0/\mu_0$，
+球内
+$\bm H=\bm H_0-\bm J/3$。
+线性材料磁化
+$\bm J=(\mu-1)\bm H$，
+因此
+\[
+\bm H=\bm H_0-\frac{\mu-1}{3}\bm H,
+\quad
+\bm H=\frac3{\mu+2}\bm H_0.
+\]
+材料内
+$\bm B=\mu\mu_0\bm H$，所以
+\[
+\boxed{\bm B=
+\frac{3\mu}{\mu+2}\bm B_0}.
+\]
+\excheck $\mu\to1$ 时系数为1；
+$\mu\to\infty$ 时系数趋于3。
+
+\electromagproblem{280}{132}
+长 $\ell=15\,\mathrm{cm}$ 的
+圆柱形永久磁铁上均匀绕
+$N=300$ 匝线圈。
+通电流 $I=3.0\,\mathrm A$ 后
+磁铁外磁场恰好消失，
+求磁性材料的矫顽力 $H_c$。
+\exsolution
+线圈在长圆柱轴上产生磁场强度
+$H_{\rm coil}\simeq nI=NI/\ell$。
+要抵消永久磁化所产生的外场，
+需施加相反方向的矫顽磁场。
+故矫顽力模为
+\[
+\boxed{H_c=\frac{NI}{\ell}}.
+\]
+代数值：
+\[
+\boxed{H_c=\frac{(300)(3.0)}{0.15}
+=6.0\times10^3\,\mathrm{A/m}
+=6.0\,\mathrm{kA/m}}.
+\]
+\excheck 题目测量使用的是磁场强度
+$\bm H$ 而不是磁感应强度 $\bm B$，
+单位为 $\mathrm{A/m}$。
+
+\electromagproblem{281}{132}
+永久磁铁制成平均直径
+$d=20\,\mathrm{cm}$ 的闭合圆环，
+环上留宽
+$b=2.0\,\mathrm{mm}$ 的小气隙。
+气隙内磁感应强度
+$B=40\,\mathrm{mT}$。
+忽略边缘漏磁，求磁铁内部磁场强度模。
+\exsolution
+没有自由绕组电流，
+沿闭合环路有
+$\oint\bm H\cdot\mathrm d\bm\ell=0$。
+设铁磁体中的磁场强度为 $H_m$，
+气隙中
+$H_g=B/\mu_0$。
+忽略气隙长度对主圆周的微小影响：
+\[
+H_m(\pi d-b)+\frac B{\mu_0}b=0.
+\]
+因此
+\[
+\boxed{|H_m|=
+\frac{bB}{\mu_0(\pi d-b)}
+\simeq\frac{bB}{\mu_0\pi d}}.
+\]
+代入：
+\[
+\boxed{|H_m|\simeq1.0\times10^2\,
+\mathrm{A/m}=0.10\,\mathrm{kA/m}}.
+\]
+\excheck 磁铁内部的 $\bm H_m$
+与气隙场方向相反；
+此处报磁场强度的模。
+
+\electromagproblem{282}{132--133}
+平均半径
+$R=250\,\mathrm{mm}$ 的环形铁芯，
+绕有 $N=1000$ 匝，
+电流 $I=0.85\,\mathrm A$。
+铁芯切有气隙
+$b=1.00\,\mathrm{mm}$，
+气隙磁感应强度
+$B=0.75\,\mathrm T$。
+忽略漏磁，求该工况下铁的相对磁导率 $\mu$。
+\exsolution
+沿环路应用安培定律：
+\[
+NI=H_{\rm iron}(2\pi R-b)+H_{\rm gap}b.
+\]
+两处磁通守恒且截面相同，
+$B_{\rm iron}\simeq B_{\rm gap}=B$。
+因此
+$H_{\rm iron}=B/(\mu\mu_0)$、
+$H_{\rm gap}=B/\mu_0$。
+解出
+\[
+\boxed{\mu=
+\frac{B(2\pi R-b)}
+{\mu_0NI-Bb}}.
+\]
+在 $b\ll R$ 下近似
+$\mu\simeq2\pi RB/(\mu_0NI-Bb)$。
+代入：
+\[
+\boxed{\mu\simeq3.7\times10^3}.
+\]
+\excheck 分母 $\mu_0NI-Bb$ 必须为正，
+否则所假设的同向磁化与场分布
+不适用于题设工况。
+
+\electromagproblem{283}{133}
+原书图3.76给出了商业纯铁的初始磁化曲线
+$B(H)$。由图推绘相对磁导率 $\mu(H)$，
+并估计最大值与对应磁场强度。
+\exsolution
+在各个图上的非零 $H$ 点，
+相对磁导率按定义为
+\[
+\boxed{\mu(H)=\frac{B(H)}{\mu_0H}}.
+\]
+因此应逐点用纵坐标 $B$ 除以
+横坐标 $H$（以 SI
+$\mathrm{A/m}$ 代入），再把所得点作图。
+在 $H$ 很小时，$B$ 起初随 $H$ 迅速增加，
+$\mu$ 上升；到饱和区
+$B$ 增长缓慢，而分母 $H$ 增大，
+故 $\mu$ 下降。
+从原书图3.76读数，
+最大值大约位于
+\[
+\boxed{H_{\max}\simeq0.06\,\mathrm{kA/m}
+=60\,\mathrm{A/m}},
+\]
+该处磁感应强度约 $0.75\,\mathrm T$，
+所以
+\[
+\boxed{\mu_{\max}\approx
+\frac{0.75}{(4\pi\times10^{-7})(60)}
+\simeq1.0\times10^4}.
+\]
+\excheck 此题采用\emph{从印刷图读数}
+的近似值，不具有精密物性测量的有效数字；
+$\mu(H)$ 是非线性材料的割线磁导率。
+
+\electromagproblem{284}{133}
+图3.76同一铁磁材料，
+平均直径
+$d=50\,\mathrm{cm}$ 的细环形铁芯
+绕 $N=800$ 匝，
+电流 $I=3.0\,\mathrm A$，
+铁芯气隙宽
+$b=2.0\,\mathrm{mm}$。
+忽略漏磁，结合原图求工作点 $\mu$。
+\exsolution
+沿磁路
+$NI=H(\pi d-b)+Hb_g$，
+其中气隙内
+$H_g=B/\mu_0$，
+因此
+\[
+B=\frac{\mu_0NI}{b}
+-\frac{\mu_0(\pi d-b)}{b}\,H.
+\]
+代入数据并把 $H$ 的横坐标写作
+$\mathrm{kA/m}$：
+\[
+\boxed{B(\mathrm T)\simeq
+1.51-0.987H(\mathrm{kA/m})}.
+\]
+与原书图3.76的非线性磁化曲线求交，
+读得
+$H\simeq0.26\,\mathrm{kA/m}$、
+$B\simeq1.25\,\mathrm T$。
+相对磁导率
+\[
+\boxed{\mu=\frac B{\mu_0H}
+\simeq\frac{1.25}
+{(4\pi\times10^{-7})(260)}
+\simeq3.8\times10^3\approx4\times10^3}.
+\]
+\excheck \textbf{书后答案数量级冲突：}
+书后简答似给“$4\times10^2$”，
+但使用同一书后读数 $B\approx1.25$T、
+$H\approx0.26$kA/m，
+必得 $\sim4\times10^3$，
+相差10倍；本稿按 SI 数值计算。
+
+\electromagproblem{285}{133}
+横截面积 $S$、磁化率为 $\chi$
+的细长顺磁棒，
+沿通电线圈轴向放置。
+一端位于线圈中心、局部磁感应强度为 $B$，
+另一端位于磁场可以忽略的远处。
+求线圈对棒的磁力。
+\exsolution
+弱顺磁体的磁化
+$J=\chi H\simeq\chi B/\mu_0$。
+恒定线圈电流下，
+棒单位体积的可用磁势能近似
+$u=-\chi B^2/(2\mu_0)$。
+棒沿轴微量进入线圈，
+相当于有体积 $S\,\mathrm dx$
+从无场处移到场强 $B$ 处。
+有效能下降
+$\mathrm dU\simeq
+-[\chi B^2/(2\mu_0)]S\,\mathrm dx$，
+吸入力模为
+\[
+\boxed{F\simeq\frac{\chi SB^2}{2\mu_0}}.
+\]
+\excheck 方向为将顺磁棒\emph{吸入}
+强磁场一侧；
+该式只适用于弱磁化与细棒近似。
+
+\electromagproblem{286}{133--134}
+图3.77中体积
+$V=41\,\mathrm{mm^3}$
+的顺磁小球位于电磁铁极靴轴线上。
+磁场随高度变化为
+$B(x)=B_0e^{-a x^2}$，
+$B_0=1.50\,\mathrm T$、
+$a=100\,\mathrm{m^{-2}}$。
+求 (a) 磁吸引力最大的高度；
+(b) 若 $F_{\max}=160\,\mathrm{\mu N}$，
+求材料磁化率 $\chi$。
+\exsolution
+弱顺磁小球的磁势能近似为
+$U(x)=-\chi VB(x)^2/(2\mu_0)$。
+磁力沿 $x$ 方向
+$F_x=-\mathrm dU/\mathrm dx
+=[\chi V/(2\mu_0)]\,\mathrm d(B^2)/\mathrm dx$。
+因为
+$B^2=B_0^2e^{-2ax^2}$，
+吸引力模
+\[
+|F(x)|=\frac{2\chi Va B_0^2}{\mu_0}
+x\,e^{-2ax^2},\quad x>0.
+\]
+对 $x e^{-2ax^2}$ 求导，
+极值条件
+$1-4ax^2=0$，于是
+\[
+\boxed{x_{\max}=\frac1{2\sqrt a}
+=0.050\,\mathrm m=5.0\,\mathrm{cm}}.
+\]
+在该处
+$|F_{\max}|=
+\chi VB_0^2\sqrt a\,e^{-1/2}/\mu_0$，
+所以
+\[
+\boxed{\chi=
+\frac{\mu_0F_{\max}e^{1/2}}
+{VB_0^2\sqrt a}
+\simeq3.6\times10^{-4}}.
+\]
+\excheck 球体积换算
+$41\,\mathrm{mm^3}=41\times10^{-9}\,\mathrm{m^3}$。
+书后纯文本提取的 $x_m$ 可能丢平方根；
+从极值方程所得长度尺度必须是 $1/\sqrt a$。
+
+\electromagproblem{287}{134}
+一颗体积为 $V$、
+顺磁磁化率为 $\chi$ 的小球，
+从线圈轴上磁感应强度为 $B$ 的位置，
+被缓慢移动到场可以忽略的远处。
+求外力所做功。
+\exsolution
+弱线性顺磁球在给定外场中的
+等效磁势能（保持线圈电流不变）
+为
+$U=-\chi VB^2/(2\mu_0)$。
+初态
+$U_i=-\chi VB^2/(2\mu_0)$，
+末态
+$U_f\simeq0$。
+准静态移走小球的外力功
+$A_{\rm ext}=U_f-U_i$：
+\[
+\boxed{A_{\rm ext}\simeq
+\frac{\chi VB^2}{2\mu_0}}.
+\]
+\excheck 对顺磁材料 $\chi>0$，
+外界需克服吸引力做正功；
+若改为抗磁材料 $\chi<0$，
+力方向与功号将相反。
