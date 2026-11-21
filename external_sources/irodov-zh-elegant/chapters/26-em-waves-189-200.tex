@@ -1,0 +1,278 @@
+% Irodov Part IV §4.4 189--200. Source PDF 190--191, printed 181--182,
+% answers PDF 332--333. Source figure 4.37/4.38.
+\emwaveproblem{189}{181}
+频率 $\nu=3.0\,\mathrm{MHz}$ 的电磁波从真空垂直进入非磁性介质，介电常数 $\varepsilon_r=4.0$。求波长增量。
+\exsolution
+真空中 $\lambda_0=c/\nu$，非磁介质相速度 $v=c/\sqrt{\varepsilon_r}$，
+介质中波长 $\lambda=v/\nu$，故
+\[
+\boxed{\Delta\lambda=\lambda-\lambda_0
+=\frac c\nu\left(\frac1{\sqrt{\varepsilon_r}}-1\right)}.
+\]
+代 $c=3.0\times10^8$m/s，
+$\lambda_0=100$m、$\lambda=50$m，
+\[
+\boxed{\Delta\lambda=-50\,\mathrm m}.
+\]
+\excheck 频率越过静止界面时不变；变化的是相速度和波长。
+
+\emwaveproblem{190}{181}
+平面波垂直入射厚度为 $\ell$ 的平行板非磁介质，其相对介电常数从前表面 $\varepsilon_1$ 到后表面 $\varepsilon_2$ 按位置指数衰减。求某一固定波面穿越该板所需时间。
+\exsolution
+取 $x=0$ 为前表面，则
+$\varepsilon(x)=\varepsilon_1
+\exp[(x/\ell)\ln(\varepsilon_2/\varepsilon_1)]$。
+局部相速度 $v(x)=c/\sqrt{\varepsilon(x)}$。
+因此
+\[
+t=\frac1c\int_0^\ell\sqrt{\varepsilon(x)}\,\mathrm dx
+=\frac{\ell\sqrt{\varepsilon_1}}c
+\int_0^1 e^{(u/2)\ln(\varepsilon_2/\varepsilon_1)}\,\mathrm du.
+\]
+积分得到
+\[
+\boxed{t=
+\frac{2\ell(\sqrt{\varepsilon_1}-\sqrt{\varepsilon_2})}
+{c\ln(\varepsilon_1/\varepsilon_2)}}.
+\]
+\excheck $\varepsilon_2\to\varepsilon_1=\varepsilon$ 时取极限
+$t=\ell\sqrt\varepsilon/c$，与均匀介质传播时间一致。
+
+\emwaveproblem{191}{181}
+频率 $\nu=10\,\mathrm{MHz}$ 的平面电磁波穿过弱导电介质，
+电导率 $\sigma=10\,\mathrm{mS/m}$、相对介电常数 $\varepsilon_r=9$。求传导与位移电流密度振幅之比。
+\exsolution
+线性介质中传导电流
+$\bm j_c=\sigma\bm E$，
+位移电流
+$\bm j_d=\partial_t\bm D
+=\varepsilon_0\varepsilon_r\partial_t\bm E$。
+若 $\bm E=\bm E_m\cos\omega t$，
+振幅
+$j_{c,m}=\sigma E_m$、
+$j_{d,m}=\varepsilon_0\varepsilon_r\omega E_m$，
+故
+\[
+\boxed{\frac{j_{c,m}}{j_{d,m}}
+=\frac{\sigma}{2\pi\nu\varepsilon_0\varepsilon_r}
+\simeq2.0}.
+\]
+\excheck 此比与电场幅度无关；两个电流分量相位相差 $\pi/2$，不能将它们的瞬时模直接相加。
+
+\emwaveproblem{192}{181}
+已知真空中平面电磁波的电场
+$\bm E(\bm r,t)=\bm E_m\cos(\omega t-\bm k\cdot\bm r)$。
+求 $\bm r=0$ 处的磁场强度矢量 $\bm H(t)$，
+假设 $\bm E_m,\bm k$ 已知。
+\exsolution
+以法拉第方程
+$\nabla\times\bm E=-\partial_t\bm B$：
+$\nabla\times\bm E=
+\bm k\times\bm E_m\sin(\omega t-\bm k\cdot\bm r)$，
+故可取
+$\bm B_m=(\bm k\times\bm E_m)/\omega$。
+真空中 $\bm H=\bm B/\mu_0$，
+$\omega=c|\bm k|$，于是
+\[
+\boxed{\bm H(0,t)=
+\frac{\bm k\times\bm E_m}
+{\mu_0c|\bm k|}\cos(\omega t)
+=\sqrt{\frac{\varepsilon_0}{\mu_0}}
+(\hat{\bm k}\times\bm E_m)\cos(\omega t)}.
+\]
+\excheck $\bm E$、$\bm H$、$\bm k$ 两两正交，
+$\bm E\times\bm H$ 指向能量传播方向。
+
+\emwaveproblem{193}{181}
+真空平面电磁波电场
+$\bm E=E_m\bm e_y\cos(\omega t-kx)$，
+沿 $+x$ 传播。求位于
+$\bm r=x\bm e_x$ 的磁场强度在
+(a) $t=0$；(b) $t=t_0$。
+取 $E_m=160\,\mathrm{V/m}$、
+$k=0.51\,\mathrm{m^{-1}}$、
+$x=7.7$m、$t_0=33$ns。
+\exsolution
+由第192题
+\[
+\boxed{\bm H(x,t)=\bm e_z E_m
+\sqrt{\frac{\varepsilon_0}{\mu_0}}
+\cos(ckt-kx)}.
+\]
+真空波阻抗
+$Z_0=\sqrt{\mu_0/\varepsilon_0}\simeq377\,\Omega$，
+故磁场强度幅度 $H_m=160/377\simeq0.424$A/m。
+(a) 相位 $-kx=-3.927$：
+$\boxed{\bm H(x,0)\simeq-0.30\bm e_z\,\mathrm{A/m}}$。
+(b) $ckt_0-kx=(3.0\times10^8)(0.51)(33\times10^{-9})-3.927\simeq1.12$：
+$\boxed{\bm H(x,t_0)\simeq+0.18\bm e_z\,\mathrm{A/m}}$。
+\excheck 真空中给的是磁场强度 $\bm H$（A/m），若要磁感应强度须再乘 $\mu_0$。
+
+\emwaveproblem{194}{181}
+真空平面电磁波沿 $+x$ 传播，其电场
+$\bm E=E_m\bm e_y\cos(\omega t-kx)$。
+图4.37中边长 $\ell$ 的正方形导线框置于 $xy$ 平面，磁场沿 $z$。
+求感应电动势的峰值；取
+$E_m=0.50\,\mathrm{mV/m}$、
+$\nu=5.0\,\mathrm{MHz}$、
+$\ell=0.50$m。
+\exsolution
+磁感应强度
+$B_z=(E_m/c)\cos(\omega t-kx)$，
+$\omega=2\pi\nu$、$k=\omega/c$。
+磁通
+$\Phi(t)=\ell(E_m/c)\int_0^\ell\cos(\omega t-kx)\,\mathrm dx$，
+因此
+\[
+\mathcal E=-\dot\Phi
+=-\frac{\omega\ell E_m}{ck}
+\left[\cos\omega t-\cos(\omega t-k\ell)\right].
+\]
+峰值的精确式是
+\[
+\boxed{\mathcal E_m=
+2E_m\ell\left|\sin\frac{k\ell}{2}\right|}.
+\]
+由于 $k\ell\ll1$，近似为
+\[
+\boxed{\mathcal E_m\simeq\frac{\omega E_m\ell^2}{c}
+=\frac{2\pi\nu E_m\ell^2}{c}
+\simeq1.3\times10^{-5}\,\mathrm V=13\,\mathrm{\mu V}}.
+\]
+\excheck 源题明确写 $E_m=0.50\,\mathrm{mV/m}$，按 SI 单位计算应为 $13\,\mathrm{\mu V}$；书末印 $13\,\mathrm{mV}$，相差1000倍，需列为原书数值疑点。
+
+\emwaveproblem{195}{182}
+根据麦克斯韦方程证明图4.38所示真空平面波
+$\bm E=E_y(x,t)\bm e_y$、
+$\bm B=B_z(x,t)\bm e_z$
+满足
+$\partial_tE_y=-c^2\partial_xB_z$ 以及
+$\partial_tB_z=-\partial_xE_y$。
+\exsolution
+法拉第方程
+$\nabla\times\bm E=-\partial_t\bm B$。
+在给定几何中旋度仅有 $z$ 分量
+$(\nabla\times\bm E)_z=\partial_xE_y$，
+所以
+\[
+\boxed{\partial_tB_z=-\partial_xE_y}.
+\]
+真空安培—麦克斯韦方程
+$\nabla\times\bm B=\mu_0\varepsilon_0\partial_t\bm E$。
+磁场只有 $B_z$ 分量，
+其旋度 $y$ 分量为
+$(\nabla\times\bm B)_y=-\partial_xB_z$，
+故
+$\partial_tE_y=-(\mu_0\varepsilon_0)^{-1}\partial_xB_z$，即
+\[
+\boxed{\partial_tE_y=-c^2\partial_xB_z}.
+\]
+\excheck 两式互相求导可分别得到
+$\partial_t^2E=c^2\partial_x^2E$ 与
+$\partial_t^2B=c^2\partial_x^2B$。
+
+\emwaveproblem{196}{182}
+真空平面电磁波
+$\bm E=\bm E_m\cos(\omega t-\bm k\cdot\bm r)$。
+求一周期平均坡印廷矢量。
+\exsolution
+根据平面波关系
+$\bm H=(1/Z_0)\hat{\bm k}\times\bm E$，
+能流密度
+$\bm S=\bm E\times\bm H
+=(E^2/Z_0)\hat{\bm k}$。
+对周期取平均
+$\langle\cos^2\rangle=1/2$：
+\[
+\boxed{\overline{\bm S}=
+\frac12\varepsilon_0cE_m^2\hat{\bm k}
+=\frac{\varepsilon_0c^2E_m^2}{2\omega}\bm k}.
+\]
+\excheck 单位为 W/m²，方向沿波矢；$E_m$ 是峰值不是有效值。
+
+\emwaveproblem{197}{182}
+真空中频率 $\nu=100\,\mathrm{MHz}$ 的线偏振平面电磁波，其电场振幅 $E_m=50\,\mathrm{mV/m}$。求：(a) 位移电流密度有效值；(b) 周期平均能流密度。
+\exsolution
+位移电流
+$\bm j_d=\varepsilon_0\partial_t\bm E$，
+幅度
+$j_m=\varepsilon_0\omega E_m$。
+正弦有效值为幅度除 $\sqrt2$，故
+\[
+\boxed{j_{d,\mathrm{rms}}=
+\frac{\varepsilon_0(2\pi\nu)E_m}{\sqrt2}
+\simeq0.20\,\mathrm{mA/m^2}}.
+\]
+平面波平均坡印廷通量
+\[
+\boxed{\overline S=
+\frac12\varepsilon_0cE_m^2
+\simeq3.3\,\mathrm{\mu W/m^2}}.
+\]
+\excheck $\varepsilon_0(2\pi10^8)(0.050)\simeq0.278$mA/m² 是\emph{振幅}，有效值再乘 $1/\sqrt2$。
+
+\emwaveproblem{198}{182}
+相对介电常数 $\varepsilon_r=4.0$ 的非磁介质中，振幅 $E_m=200$V/m 的平面电磁波掠过半径 $R=50$cm 的球，求 $t=1.0$min 内入射到球的总电磁能。
+\exsolution
+介质相速度 $v=c/\sqrt{\varepsilon_r}$，
+波阻抗 $Z=Z_0/\sqrt{\varepsilon_r}$，
+平均能流强度
+$\overline S=E_m^2/(2Z)
+=\tfrac12\varepsilon_0c\sqrt{\varepsilon_r}E_m^2$。
+球在行波中的有效迎波面积为 $\pi R^2$，
+故
+\[
+\boxed{W=\tfrac12\varepsilon_0c\sqrt{\varepsilon_r}\,
+E_m^2\,\pi R^2t}.
+\]
+取 $t=60$s、$R=0.50$m，
+$\boxed{W\simeq5.0\times10^3\,\mathrm J=5\,\mathrm{kJ}}$。
+\excheck 不能以整个球表面积 $4\pi R^2$ 乘平面波能流强度；需使用迎波投影面积 $\pi R^2$。
+
+\emwaveproblem{199}{182}
+真空中沿 $x$ 建立电场驻波
+$\bm E(x,t)=\bm e_yE_m\cos kx\cos\omega t$，
+求磁感应强度的时空表达式，并描述
+$t=0$、$t=T/4$ 时电磁场分布。
+\exsolution
+法拉第方程
+$\partial_tB_z=-\partial_xE_y
+=kE_m\sin kx\cos\omega t$。
+积分得到振荡磁场
+\[
+\boxed{\bm B(x,t)=\bm e_z\frac{E_m}{c}
+\sin kx\sin\omega t},
+\quad \omega=ck.
+\]
+这选择无额外静磁场的纯驻波。
+$t=0$ 时
+$\bm E=\bm e_yE_m\cos kx$、$\bm B=0$；
+$t=T/4$ 时 $\bm E=0$、
+$\bm B=\bm e_z(E_m/c)\sin kx$。
+\excheck 电、磁驻波的时间相位差四分之一周期，空间结点相互错开四分之一波长。
+
+\emwaveproblem{200}{182}
+真空电场驻波
+$\bm E=E_m\bm e_y\cos kx\cos\omega t$。
+求坡印廷矢量沿 x 的分量 $S_x(x,t)$，以及一周期的时间平均。
+\exsolution
+由第199题
+$\bm H=\bm e_z(E_m/(\mu_0c))\sin kx\sin\omega t$。
+坡印廷矢量
+$\bm S=\bm E\times\bm H$，
+因此
+\[
+S_x=
+\frac{E_m^2}{\mu_0c}
+\cos kx\sin kx\cos\omega t\sin\omega t.
+\]
+由积化和差并用 $(\mu_0c)^{-1}=\varepsilon_0c$：
+\[
+\boxed{S_x(x,t)=
+\frac14\varepsilon_0cE_m^2\sin(2kx)\sin(2\omega t)}.
+\]
+对一完整周期平均
+\[
+\boxed{\overline{S_x}=0}.
+\]
+\excheck 驻波电磁能在空间往复交换，没有净单向远距离能流，但瞬时坡印廷矢量可不为零。
