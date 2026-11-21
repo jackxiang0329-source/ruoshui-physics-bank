@@ -1,0 +1,350 @@
+% Irodov, Part II, original problems 62--72, printed pp.70--71, PDF pp.79--80.
+% k_B Boltzmann constant, R universal gas constant, N_A Avogadro constant.
+\thermokineticproblem{62}{70}
+现代真空泵可在室温下将压强降至
+$p=4\times10^{-15}\,\mathrm{atm}$。
+若剩余气体是氮气，求每立方厘米内的分子数
+以及分子间平均间距。
+\exsolution
+对理想稀薄气体，
+数密度 $n=p/(k_BT)$。
+取室温 $T\simeq300\,\mathrm K$、
+玻尔兹曼常数 $k_B=1.380649\times10^{-23}\,\mathrm{J/K}$，
+换算
+$p=4\times10^{-15}(101325)
+\simeq4.05\times10^{-10}\,\mathrm{Pa}$，
+所以
+\[
+n\simeq\frac{4.05\times10^{-10}}
+{(1.38\times10^{-23})(300)}
+\simeq9.8\times10^{10}\,\mathrm{m^{-3}}
+=\boxed{9.8\times10^4\,\mathrm{cm^{-3}}}.
+\]
+若以每个分子占据的平均体积 $1/n$
+定义典型间距，则
+\[
+\boxed{\ell\simeq n^{-1/3}
+\simeq2.2\times10^{-4}\,\mathrm m=0.22\,\mathrm{mm}}.
+\]
+\excheck $\ell$ 是估计的平均空间尺度，
+不是分子硬球直径或气体分子平均自由程。
+
+\thermokineticproblem{63}{70}
+体积 $V=5.0\,\mathrm L$ 的密闭容器
+含 $m=1.4\,\mathrm g$ 氮气，
+温度 $T=1800\,\mathrm K$。
+其中原有氮分子的 $\eta=30\%$
+已分解成两个氮原子。
+求气体压强。
+\exsolution
+分解前氮分子总摩尔数
+$n_0=m/M_{\mathrm{N_2}}$，
+$M_{\mathrm{N_2}}=28\,\mathrm{g/mol}$，
+故 $n_0=1.4/28=0.050\,\mathrm{mol}$。
+若有分数 $\eta$ 的原分子解离，
+剩余分子摩尔数 $(1-\eta)n_0$，
+产生氮原子摩尔数 $2\eta n_0$。
+总粒子摩尔数为
+$n_{\rm particles}=(1+\eta)n_0$。
+按理想气体分压相加，
+\[
+\boxed{p=\frac{(1+\eta)mRT}{M_{\mathrm{N_2}}V}}.
+\]
+代入
+$V=5.0\times10^{-3}\,\mathrm{m^3}$、
+$R=8.314$，得到
+$\boxed{p\simeq1.9\,\mathrm{atm}}$。
+\excheck 解离后粒子总数增加，
+但是氮元素总质量保持不变，
+不能直接只计算剩余的双原子分子。
+
+\thermokineticproblem{64}{70}
+氦和氮气的混合物在标准状况下，
+总质量密度为
+$\rho=0.60\,\mathrm{g/L}$。
+求氦原子数密度 $n_{\rm He}$。
+\exsolution
+设混合物中氦原子和氮分子数密度
+为 $n_{\rm He},n_{\mathrm N_2}$。
+标准状况下总粒子数密度
+\[
+n_{\rm tot}=n_{\rm He}+n_{\mathrm N_2}
+=\frac{p_0}{k_BT_0}.
+\]
+设每个氦原子质量 $m_{\rm He}$
+和每个氮分子质量 $m_{\rm N_2}$，则
+\[
+\rho=m_{\rm He}n_{\rm He}
++m_{\rm N_2}n_{\mathrm N_2}
+=m_{\rm N_2}n_{\rm tot}
+-(m_{\rm N_2}-m_{\rm He})n_{\rm He}.
+\]
+解出
+\[
+\boxed{n_{\rm He}=
+\frac{m_{\rm N_2}p_0/(k_BT_0)-\rho}
+{m_{\rm N_2}-m_{\rm He}}}.
+\]
+也可用混合物平均摩尔质量
+$M_{\rm av}=\rho RT_0/p_0$，
+求氦摩尔分数
+$x_{\rm He}=(28-M_{\rm av})/24$。
+取标准 $T_0=273.15\,\mathrm K$、$p_0=1\,\mathrm{atm}$，
+得到
+\[
+\boxed{n_{\rm He}\simeq1.6\times10^{19}\,\mathrm{cm^{-3}}}.
+\]
+\excheck 标准总分子数密度约为
+$2.7\times10^{19}\,\mathrm{cm^{-3}}$；
+氦原子只是其中一部分。
+
+\thermokineticproblem{65}{70}
+一束平行氮分子以
+$v=400\,\mathrm{m/s}$ 撞击平面墙，
+入射方向与墙法线夹角为
+$\theta=30^\circ$；
+束内分子数密度
+$n=0.9\times10^{19}\,\mathrm{cm^{-3}}$。
+假设镜面完全弹性反射，求墙所受压强。
+\exsolution
+单位墙面积每秒碰撞的粒子数为
+$\Phi=nv\cos\theta$，
+因为只有速度的法向分量决定通量。
+设单个氮分子质量为 $m$。
+理想弹性镜面反射使法向动量从
+$mv\cos\theta$ 变为其相反数，
+因此单粒子给墙冲量模为
+$2mv\cos\theta$。
+由动量通量得
+\[
+\boxed{p=2nmv^2\cos^2\theta}.
+\]
+氮分子质量约
+$m=28u=4.65\times10^{-26}\,\mathrm{kg}$，
+且 $n=9.0\times10^{24}\,\mathrm{m^{-3}}$，
+代入可得
+\[
+\boxed{p\simeq1.0\times10^5\,\mathrm{Pa}\approx1\,\mathrm{atm}}.
+\]
+\excheck 若散射不再是镜面弹性反射，
+法向动量变化量可能不同，
+不能沿用冲量 $2mv\cos\theta$。
+
+\thermokineticproblem{66}{70}
+一种气体在标准状况下密度为
+$\rho=1.3\,\mathrm{mg/cm^3}$，
+其中声速为 $v=330\,\mathrm{m/s}$。
+求其分子的有效自由度数 $i$。
+\exsolution
+在理想气体中，声速满足
+\[
+v^2=\gamma\frac p\rho,\qquad
+\gamma=\frac{C_p}{C_V}=\frac{i+2}{i}.
+\]
+所以
+$\gamma=\rho v^2/p$，
+再由 $\gamma=1+2/i$：
+\[
+\boxed{i=\frac2{\rho v^2/p-1}}.
+\]
+密度换算为
+$\rho=1.3\,\mathrm{kg/m^3}$，
+取标准气压
+$p=1.013\times10^5\,\mathrm{Pa}$，
+代入有
+$\gamma\simeq1.40$，
+所以
+\[
+\boxed{i\simeq5}.
+\]
+\excheck 该结果符合振动模尚未显著激发的
+刚性双原子分子（3平移+2转动自由度）。
+
+\thermokineticproblem{67}{71}
+气体的声速 $v_s$ 与气体分子均方根速率
+$v_{\rm rms}$ 之比是多少？
+分别求：(a) 单原子气体；(b) 刚性双原子气体。
+\exsolution
+理想气体声速
+$v_s=\sqrt{\gamma k_BT/m}$，
+分子均方根速率
+$v_{\rm rms}=\sqrt{3k_BT/m}$，
+两式相除得到
+\[
+\boxed{\frac{v_s}{v_{\rm rms}}=\sqrt{\frac\gamma3}}.
+\]
+对单原子气体，$\gamma=5/3$，
+\[
+\boxed{(v_s/v_{\rm rms})_{\rm mono}
+=\frac{\sqrt5}{3}\simeq0.75}.
+\]
+对刚性双原子气体，$\gamma=7/5$，
+\[
+\boxed{(v_s/v_{\rm rms})_{\rm di}
+=\sqrt{\frac7{15}}\simeq0.68}.
+\]
+\excheck 分子热运动速率并不是声波传播速率；
+二者受同一热量纲控制，却有不同系数。
+
+\thermokineticproblem{68}{71}
+由 $N$ 个原子构成的理想气体分子，
+在所有平移、转动与振动自由度均被热激发的温区，
+求分子的平均能量及其中平动动能所占比例。
+分别讨论空间（非线性）分子与线性分子。
+\exsolution
+能量均分定理规定每个\emph{二次型能量项}
+平均贡献 $k_BT/2$。
+对非线性分子有3平移、3转动及
+$3N-6$ 个振动模；每个谐振动有动、势
+各一个二次项，所以
+\[
+i=3+3+2(3N-6)=6N-6.
+\]
+因此
+\[
+\boxed{\overline\varepsilon_{\rm nonlinear}
+=\tfrac i2k_BT=3(N-1)k_BT},
+\quad
+\boxed{f_{\rm trans}=\frac{3k_BT/2}{3(N-1)k_BT}
+=\frac1{2(N-1)}}.
+\]
+线性分子有3平移、2转动及
+$3N-5$ 个振动模，故
+\[
+i=3+2+2(3N-5)=6N-5,
+\]
+\[
+\boxed{\overline\varepsilon_{\rm linear}
+=\left(3N-\frac52\right)k_BT},\quad
+\boxed{f_{\rm trans}=\frac3{6N-5}}.
+\]
+\excheck 对非线性分子要求 $N\ge3$；
+线性分子可取 $N\ge2$，
+两种分子不能套用同一转动自由度计数。
+
+\thermokineticproblem{69}{71}
+在所有平动、转动、振动自由度均已热激发的
+经典理想气体中，求定容摩尔热容 $C_V$ 与
+绝热指数 $\gamma$：
+(a) 双原子分子；
+(b) 线性 $N$ 原子分子；
+(c) 空间非线性 $N$ 原子分子。
+\exsolution
+能量均分给每摩尔内能
+$U_{\rm mol}=\frac i2RT$，
+故
+$C_V=iR/2$、$C_p=C_V+R$，
+$\gamma=1+2/i$。
+(a) 双原子分子 $i=3+2+2=7$：
+\[
+\boxed{C_V=\frac72R,\qquad\gamma=\frac97}.
+\]
+(b) 线性 $N$ 原子分子
+$i=6N-5$：
+\[
+\boxed{C_V=\left(3N-\frac52\right)R,\qquad
+\gamma=\frac{6N-3}{6N-5}}.
+\]
+(c) 空间非线性分子
+$i=6N-6$：
+\[
+\boxed{C_V=3(N-1)R,\qquad
+\gamma=\frac{3N-2}{3N-3}}.
+\]
+\excheck 该经典高温极限已计入全部振动模；
+常温氧、氮气通常振动模冻结，不能把
+高温双原子结果 $7R/2$ 直接用于常温。
+
+\thermokineticproblem{70}{71}
+由 $N$ 原子分子组成的理想气体在
+所有自由度均激发的条件下等压膨胀。
+求所吸热量中用于气体膨胀功的比例，
+并给出单原子气体的这一比例。
+\exsolution
+等压理想气体过程中
+$A=\nu R\Delta T$，
+$Q=\nu C_p\Delta T$，
+因此
+\[
+\frac AQ=\frac R{C_p}
+=\frac R{(i/2+1)R}=\frac2{i+2}.
+\]
+非线性 $N$ 原子分子 $i=6N-6$，
+故
+\[
+\boxed{(A/Q)_{\rm nonlinear}=\frac1{3N-2}}.
+\]
+线性分子 $i=6N-5$，
+故
+\[
+\boxed{(A/Q)_{\rm linear}=\frac1{3N-3/2}}.
+\]
+对于单原子气体 $i=3$，
+\[
+\boxed{(A/Q)_{\rm mono}=\frac25}.
+\]
+\excheck 一般不能把单原子 $N=1$
+代入“非线性分子具有3个转动自由度”
+的推导；单原子需单独用 $i=3$。
+
+\thermokineticproblem{71}{71}
+某气体的质量定容和定压比热容已知：
+$c_V=0.65\,\mathrm{J/(g\,K)}$、
+$c_p=0.91\,\mathrm{J/(g\,K)}$。
+求气体的摩尔质量 $M$ 与分子的有效自由度数 $i$。
+\exsolution
+由摩尔 Mayer 关系 $C_p-C_V=R$，
+而质量比热与摩尔热容满足
+$C_p=Mc_p,C_V=Mc_V$，
+所以
+\[
+M(c_p-c_V)=R,
+\qquad
+\boxed{M=\frac R{c_p-c_V}
+=\frac{8.314}{0.91-0.65}\,\mathrm{g/mol}
+\simeq32\,\mathrm{g/mol}}.
+\]
+又
+$c_p/c_V=C_p/C_V=\gamma=(i+2)/i$，
+于是
+\[
+\boxed{i=\frac2{\gamma-1}
+=\frac2{c_p/c_V-1}
+=\frac{2c_V}{c_p-c_V}=5}.
+\]
+\excheck 摩尔质量约32 g/mol，
+有效自由度5符合常温刚性双原子气体。
+
+\thermokineticproblem{72}{71}
+求气体分子的有效自由度数 $i$：
+(a) 已知定压摩尔热容
+$C_p=29\,\mathrm{J/(mol\,K)}$；
+(b) 已知沿 $pT=\text{常数}$ 路径
+的摩尔热容为
+$C=29\,\mathrm{J/(mol\,K)}$。
+\exsolution
+(a) 理想气体
+$C_p=(i/2+1)R$，所以
+\[
+\boxed{i=2\left(\frac{C_p}{R}-1\right)
+\simeq5}.
+\]
+(b) 一摩尔理想气体
+$V=RT/p$。沿 $pT=\text{常数}$，
+$p\propto1/T$，故 $V\propto T^2$，
+于是
+$p\,\mathrm dV=2R\,\mathrm dT$。
+第一定律
+$\delta Q=C_V\,\mathrm dT+p\,\mathrm dV$
+给
+\[
+C=C_V+2R=\left(\frac i2+2\right)R.
+\]
+所以
+\[
+\boxed{i=2\left(\frac{C}{R}-2\right)
+\simeq3}.
+\]
+\excheck (b) 不能误把 $pT=\text{常数}$
+当作等压或等温过程；该路径的
+多方指数为 $n=1/2$。
