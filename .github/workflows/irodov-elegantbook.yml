@@ -26,6 +26,8 @@ jobs:
         run: python3 external_sources/irodov-zh-elegant/spectra_molecules_regression.py
       - name: Independently audit Rutherford scattering and atomic spectra
         run: python3 external_sources/irodov-zh-elegant/atomic_scattering_regression.py
+      - name: Independently audit de Broglie waves and quantum wells
+        run: python3 external_sources/irodov-zh-elegant/wave_quantum_regression.py
       - uses: xu-cheng/latex-action@v4
         with:
           working_directory: external_sources/irodov-zh-elegant
