@@ -1,0 +1,364 @@
+% 原书印刷页85--86；本版PDF页94--95。
+% 注意底本在第213题后将第214题误排为“224”，后文又继续215。
+\thermophaseproblem{205}{85--86}
+标准大气压下，
+把水过冷到 $t=-20^\circ\mathrm C$。
+随后体系自发转变到相平衡态时，
+有多大质量分数 $\eta$ 的水结冰？
+若希望过冷水全部结冰，
+需要初始过冷至多少温度？
+\exsolution
+设液态过冷水质量为 $m$，
+初温 $t<0^\circ\mathrm C$。
+按绝热转变模型，结冰放出潜热
+$\eta m q_m$，使尚未冻结的物质
+从 $t$ 升至平衡凝固点 $0^\circ\mathrm C$。
+以液态水比热 $c\simeq4.18\,\mathrm{kJ/(kg\,K)}$
+近似，
+热平衡为
+\[
+\eta m q_m\simeq mc|t|,
+\]
+故
+\[
+\boxed{\eta\simeq\frac{c|t|}{q_m}}.
+\]
+取冰融化潜热
+$q_m\simeq334\,\mathrm{kJ/kg}$、
+$|t|=20\,\mathrm K$：
+\[
+\boxed{\eta\simeq\frac{4.18\times20}{334}
+\simeq0.25=25\%}.
+\]
+若过冷足以使全部质量结冰，
+临界条件 $\eta=1$ 给
+\[
+\boxed{t_{\rm full}\simeq-\frac{q_m}{c}
+\simeq-80^\circ\mathrm C}.
+\]
+\excheck $-80^\circ\mathrm C$ 是常比热、
+无外部换热模型的\emph{形式阈值}，
+不声称现实纯水在常压下
+能稳定维持到该过冷程度。
+
+\thermophaseproblem{206}{86}
+在 $0^\circ\mathrm C$ 附近，
+压强升高 $\Delta p=1.00\,\mathrm{atm}$。
+冰的质量比体积比液态水大
+$\Delta v=0.091\,\mathrm{cm^3/g}$。
+求冰的熔点变化。
+\exsolution
+沿固液共存线，
+Clapeyron 方程
+\[
+\frac{\mathrm dp}{\mathrm dT}
+=\frac{q_m}{T(v_{\rm water}-v_{\rm ice})}
+=-\frac{q_m}{T\Delta v}.
+\]
+在压强变化较小时
+\[
+\boxed{\Delta T\simeq
+-\frac{T\Delta v}{q_m}\Delta p}.
+\]
+将 $\Delta v=0.091\,\mathrm{cm^3/g}
+=9.1\times10^{-5}\,\mathrm{m^3/kg}$、
+$T\simeq273.15\,\mathrm K$、
+$q_m\simeq3.34\times10^5\,\mathrm{J/kg}$ 代入，
+\[
+\boxed{\Delta T\simeq-7.5\times10^{-3}\,\mathrm K
+=-7.5\,\mathrm{mK}}.
+\]
+\excheck 因液态水比冰密，压强升高利于液态，
+熔点降低。本版纯文本提取将体积单位
+$\mathrm{cm^3/g}$ 误作 $\mathrm{cm^2/g}$，
+已按物理量纲澄清。
+
+\thermophaseproblem{207}{86}
+在标准气压下，
+如果压强降低 $\Delta p=3.2\,\mathrm{kPa}$
+会使水的沸点降低 $\Delta T=0.9\,\mathrm K$，
+求原来饱和水蒸汽的质量比体积。
+\exsolution
+Clapeyron 方程
+$\mathrm dp/\mathrm dT=
+q_v/[T(v_v-v_\ell)]$。
+在沸点附近
+$v_v\gg v_\ell$，
+故
+$\Delta p/\Delta T
+\simeq q_v/(T v_v)$。
+取压强、温度变化的模：
+\[
+\boxed{v_v\simeq\frac{q_v\Delta T}{T\Delta p}}.
+\]
+用
+$q_v\simeq2.26\times10^6\,\mathrm{J/kg}$、
+$T\simeq373\,\mathrm K$：
+\[
+\boxed{v_v\simeq
+\frac{2.26\times10^6(0.9)}{373(3.2\times10^3)}
+\simeq1.7\,\mathrm{m^3/kg}}.
+\]
+\excheck 这是单位\emph{质量}蒸汽的体积，
+而非一摩尔蒸汽的体积；
+结果与 $100^\circ\mathrm C$ 附近饱和蒸汽量级一致。
+
+\thermophaseproblem{208}{86}
+假设饱和水蒸气为理想气体，
+求温度
+$101.1^\circ\mathrm C$ 时的饱和蒸气压。
+\exsolution
+以 $T_0=373.15\,\mathrm K$
+处 $p_0=1\,\mathrm{atm}$ 为参考，
+温度增量
+$\Delta T=1.1\,\mathrm K$。
+在忽略液态比体积和汽化潜热温度依赖的近似下，
+\[
+\frac{\mathrm d\ln p}{\mathrm dT}
+=\frac{q_vM}{RT^2}.
+\]
+对小 $\Delta T$，用一阶展开：
+\[
+p(T_0+\Delta T)
+\simeq p_0\left[
+1+\frac{q_vM}{RT_0^2}\Delta T\right].
+\]
+代入
+$q_v\simeq2.26\times10^6\,\mathrm{J/kg}$、
+$M=0.018\,\mathrm{kg/mol}$：
+\[
+\boxed{p\simeq1.04\,\mathrm{atm}}.
+\]
+\excheck 本题温差仅1.1 K，
+可以用线性近似；
+若温差较大，则应对 $T^{-2}$ 积分。
+
+\thermophaseproblem{209}{86}
+在 $100^\circ\mathrm C$ 时，
+少量水与其饱和蒸汽共存于密闭容器。
+温度升高 $\Delta T=1.5\,\mathrm K$，
+在水的液相比体积可以忽略、
+饱和蒸汽为理想气体的条件下，
+求饱和蒸汽质量增加的百分比。
+\exsolution
+容器总体积固定，液相占容积很小。
+饱和蒸汽质量为
+$m_v=p_{\rm sat}VM/(RT)$，所以
+\[
+\frac{\mathrm dm_v}{m_v}
+=\frac{\mathrm dp_{\rm sat}}{p_{\rm sat}}
+-\frac{\mathrm dT}{T}.
+\]
+Clausius--Clapeyron 近似给
+$\mathrm d\ln p_{\rm sat}/\mathrm dT
+=q_vM/(RT^2)$。
+因此
+\[
+\frac{\Delta m_v}{m_v}
+\simeq
+\left(\frac{q_vM}{RT}-1\right)\frac{\Delta T}{T}.
+\]
+代入 $T=373.15\,\mathrm K$、
+$\Delta T=1.5\,\mathrm K$：
+\[
+\boxed{\frac{\Delta m_v}{m_v}\simeq0.05
+\approx5\%}.
+\]
+\excheck 必须同时计入
+饱和蒸汽压随温度上升和
+理想气体密度中 $1/T$ 的减小因子。
+
+\thermophaseproblem{210}{86}
+已知饱和蒸汽压强在温度 $T_0$ 时为 $p_0$。
+假设汽化比潜热 $q_v$ 与温度无关、
+液相比体积远小于蒸汽比体积、
+饱和蒸汽为理想气体，
+求饱和蒸汽压强函数 $p(T)$，
+并说明这些近似的适用范围。
+\exsolution
+Clapeyron 方程
+$\mathrm dp/\mathrm dT
+=q_v/[T(v_v-v_\ell)]$。
+取 $v_v\gg v_\ell$ 且
+$v_v=RT/(Mp)$：
+\[
+\frac1p\frac{\mathrm dp}{\mathrm dT}
+=\frac{q_vM}{RT^2}.
+\]
+在 $T_0$ 到 $T$ 上积分：
+\[
+\ln\frac{p(T)}{p_0}
+=\frac{q_vM}{R}
+\int_{T_0}^{T}\frac{\mathrm dT'}{T'^2}
+=\frac{q_vM}{R}
+\left(\frac1{T_0}-\frac1T\right).
+\]
+故
+\[
+\boxed{p(T)=p_0
+\exp\left[\frac{q_vM}{R}
+\left(\frac1{T_0}-\frac1T\right)\right]}.
+\]
+\excheck 近似适用于远低于临界温度的
+\emph{较窄温区}；
+靠近临界点时蒸汽与液态比体积接近，
+潜热随温度显著变动，上式失效。
+
+\thermophaseproblem{211}{86}
+处于初始标准状况的冰，
+被压缩到 $p=640\,\mathrm{atm}$。
+假设冰的熔点下降与压强升高成正比，
+水与冰的质量比体积差
+$\Delta v=0.09\,\mathrm{cm^3/g}$
+（液水比冰小）。
+求有多少质量分数的冰熔化。
+\exsolution
+由于压强升高降低熔点，
+在绝热压缩与相平衡近似下，
+冰体温度需随新的融化温度降低，
+一部分冰熔化并吸收潜热。
+由 Clapeyron 近似
+\[
+|\Delta T|\simeq
+\frac{T\Delta v}{q_m}\,\Delta p.
+\]
+降温释放的冰显热约为
+$mc_{\rm ice}|\Delta T|$，
+用于熔化质量 $\eta m$ 的潜热：
+$\eta m q_m\simeq mc_{\rm ice}|\Delta T|$。
+因此
+\[
+\boxed{\eta\simeq
+\frac{c_{\rm ice}T\Delta v\,\Delta p}{q_m^2}}.
+\]
+取
+$c_{\rm ice}\simeq2.1\times10^3\,\mathrm{J/(kg\,K)}$、
+$T\simeq273\,\mathrm K$、
+$\Delta p\simeq639\,\mathrm{atm}$、
+$q_m\simeq3.34\times10^5\,\mathrm{J/kg}$，
+\[
+\boxed{\eta\simeq0.03=3\%}.
+\]
+\excheck 这里使用了\emph{压缩近似绝热}
+与熔点线性下降假设；
+若大量压缩功以热形式内化，需进一步修正能量平衡。
+
+\thermophaseproblem{212}{86}
+二氧化碳三相点附近的饱和蒸汽压
+满足以10为底的经验关系
+$\log_{10}p=a-b/T$，
+其中 $p$ 以 atm 为单位。
+升华支路：
+$a_s=9.05,\ b_s=1.80\,\mathrm{kK}$；
+汽化支路：
+$a_v=6.78,\ b_v=1.31\,\mathrm{kK}$。
+求：(a) 三相点温度和压强；
+(b) 三相点附近的升华、汽化、熔化质量潜热。
+\exsolution
+三相点两支路压强相等：
+\[
+a_s-\frac{b_s}{T_t}
+=a_v-\frac{b_v}{T_t}.
+\]
+解得
+\[
+\boxed{T_t=\frac{b_s-b_v}{a_s-a_v}
+=\frac{1800-1310}{9.05-6.78}
+\simeq216\,\mathrm K}.
+\]
+任一支路回代：
+\[
+\boxed{p_t=10^{\,a_s-b_s/T_t}
+\simeq5.1\,\mathrm{atm}}.
+\]
+由理想蒸汽和 Clausius--Clapeyron 近似
+$\mathrm d\ln p/\mathrm dT
+=L_{\rm mol}/(RT^2)$。
+题给为\emph{十进制对数}：
+\[
+\frac{\mathrm d\ln p}{\mathrm dT}
+=(\ln10)\frac b{T^2},
+\quad L_{\rm mol}=R(\ln10)b.
+\]
+故每单位质量潜热
+$q=R(\ln10)b/M$，
+二氧化碳 $M\simeq0.044\,\mathrm{kg/mol}$：
+\[
+\boxed{q_s\simeq0.78\,\mathrm{kJ/g}},\qquad
+\boxed{q_v\simeq0.57\,\mathrm{kJ/g}}.
+\]
+由三相点焓变相加，
+$q_s=q_m+q_v$，所以
+\[
+\boxed{q_m=q_s-q_v\simeq0.21\,\mathrm{kJ/g}}.
+\]
+\excheck 必须把 $\log_{10}$ 转为自然对数，
+带上 $\ln10$，否则潜热会被低估约2.3倍。
+
+\thermophaseproblem{213}{86}
+质量 $m=1.00\,\mathrm{kg}$ 的水，
+由 $t_1=10^\circ\mathrm C$ 加热至
+$t_2=100^\circ\mathrm C$，
+再于沸点全部汽化。
+求系统的熵增。
+\exsolution
+先将液态水由
+$T_1=283.15\,\mathrm K$
+加热至
+$T_2=373.15\,\mathrm K$，
+视比热 $c$ 为常数，
+熵增为
+$m c\ln(T_2/T_1)$。
+随后在温度 $T_2$ 等温汽化，
+熵增为
+$m q_v/T_2$。
+两段相加：
+\[
+\boxed{\Delta S=
+m\left[c\ln\frac{T_2}{T_1}+\frac{q_v}{T_2}\right]}.
+\]
+取水 $c\simeq4.18\,\mathrm{kJ/(kg\,K)}$、
+$q_v\simeq2.26\,\mathrm{MJ/kg}$，
+\[
+\boxed{\Delta S\simeq7.2\,\mathrm{kJ/K}}.
+\]
+\excheck 绝对温度必须用 K；
+先升温后相变的两段熵贡献不能遗漏其中一项。
+
+\thermophaseproblem{214}{86}
+冰初温为 $t_1=0^\circ\mathrm C$，
+先全部融化，再把水加热至
+$t_2=100^\circ\mathrm C$，最后完全汽化。
+求系统\emph{单位质量}的熵增。
+\exsolution
+熔化发生在
+$T_m\simeq273.15\,\mathrm K$，
+其单位质量熵增
+$q_m/T_m$。
+液态水升温至
+$T_b\simeq373.15\,\mathrm K$，
+熵增
+$c\ln(T_b/T_m)$。
+在沸点汽化，
+熵增
+$q_v/T_b$。
+总单位质量熵增：
+\[
+\boxed{\Delta s=
+\frac{q_m}{T_m}
++c\ln\frac{T_b}{T_m}
++\frac{q_v}{T_b}}.
+\]
+用
+$q_m\simeq334\,\mathrm{J/g}$、
+$c\simeq4.18\,\mathrm{J/(g\,K)}$、
+$q_v\simeq2257\,\mathrm{J/g}$，
+\[
+\boxed{\Delta s\simeq8.6\,\mathrm{J/(g\,K)}}.
+\]
+\excheck \textbf{原书题号排印：}
+在本版正文 PDF 印刷页86，
+第213题之后此题被误印为“224”，
+下题紧接着却是“215”；书后答案亦对应第214题。
+为使题库和第213、215题连续，
+本稿按\emph{第214题}录入并保留此处勘误。
