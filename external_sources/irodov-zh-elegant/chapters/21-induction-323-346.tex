@@ -1,0 +1,390 @@
+% Irodov Part III §3.6 original 323--346, source PDF pp.150--153
+% (printed 141--144), answers PDF pp.317--318.
+\electroinductionproblem{323}{141}
+半径为 $a$、自感为 $L$ 的超导圆环，起初圆环平面平行于磁场 $\bm B$，环电流为零。将其翻转 $90^\circ$，使环面垂直磁场。求 (a) 最终电流；(b) 转动所做外功。
+\exsolution
+超导环的总磁链守恒，初始外磁通为零。最终外磁通 $\Phi_{\rm ext}=\pi a^2B$，故
+$LI+\Phi_{\rm ext}=0$，从而
+\[
+\boxed{|I|=\frac{\pi a^2B}{L}}.
+\]
+超导体无焦耳热，外界输入的能量在最终状态体现为环的磁场能，
+\[
+\boxed{A=\frac12LI^2=\frac{\pi^2a^4B^2}{2L}}.
+\]
+\excheck 方向由楞次定律确定，所激发环流反抗外磁通的增加。
+
+\electroinductionproblem{324}{141}
+一根很长的闭合超导螺线管初始电流 $I_0=1.9\,\mathrm A$。将螺线管长度增加 $\eta=5\%$，求最终电流。
+\exsolution
+紧密绕制螺线管总匝数和截面积不变时，
+$L=\mu_0N^2S/\ell$ 与长度 $\ell$ 成反比。
+超导回路磁链 $LI$ 保持不变，故
+$L_f=L_0/(1+\eta)$，
+$I_f=I_0L_0/L_f=I_0(1+\eta)$。因此
+\[
+\boxed{I_f=1.9(1.05)\,\mathrm A\simeq2.0\,\mathrm A}.
+\]
+\excheck 电流增加不是外电源加速，而是几何变化与磁链守恒共同作用。
+
+\electroinductionproblem{325}{141}
+半径为 $a=50\,\mathrm{mm}$ 的细导线圆环，线半径为 $b=1.0\,\mathrm{mm}$，初处于垂直圆环的均匀磁场 $B=0.50\,\mathrm{mT}$ 中。圆环冷却成为超导体后撤去磁场。已知
+$L=\mu_0a[\ln(8a/b)-2]$，求最终电流。
+\exsolution
+在超导后撤场过程中总磁链不变：
+$LI_f=BS$，$S=\pi a^2$。
+因此
+\[
+\boxed{I_f=
+\frac{\pi aB}{\mu_0[\ln(8a/b)-2]}}.
+\]
+数据 $8a/b=400$，得
+$\boxed{I_f\simeq49\,\mathrm A\approx50\,\mathrm A}$。
+\excheck 该电流保持原磁通方向，且即使无外加场仍由超导回路维持。
+
+\electroinductionproblem{326}{141}
+电动势为 $\mathcal E$ 的直流电源与阻抗为 $R$、初始自感 $L$ 的扼流圈串联并已达到稳态。在 $t=0$ 瞬间将电感降为原来的 $1/\eta$（$\eta>1$），求随后电流 $I(t)$。
+\exsolution
+突变前电流 $I_0=\mathcal E/R$。
+理想瞬间磁链连续：
+$LI_0=(L/\eta)I(0^+)$，
+因此 $I(0^+)=\eta\mathcal E/R$。
+新 RL 方程
+$(L/\eta)\dot I+RI=\mathcal E$，
+解为
+\[
+\boxed{I(t)=\frac{\mathcal E}{R}
+\left[1+(\eta-1)e^{-\eta Rt/L}\right]}.
+\]
+\excheck 不能在电感瞬变瞬间假定电流连续；
+题目明确给定磁链连续这一特殊理想过程。
+
+\electroinductionproblem{327}{141}
+图3.93直流电源电动势 $\mathcal E$、两个相等电阻 $R$ 和电感 $L$ 按图连接，初始开关断开，$t=0$ 将开关短接。求电感电流的时间变化。
+\exsolution
+闭合开关后从电感支路看外部其余电路，用戴维南化简。图中两个相等电阻支路给电感等效稳态电流
+$I_\infty=\mathcal E/R$，等效作用时间常数为 $\tau=2L/R$。自感电流由零开始，满足
+\[
+\dot I+\frac{R}{2L}I=\frac{\mathcal E}{2L}.
+\]
+故
+\[
+\boxed{I_L(t)=\frac{\mathcal E}{R}
+\left(1-e^{-Rt/(2L)}\right)}.
+\]
+\excheck 初始电感电流为0，末态为 $\mathcal E/R$，且初始斜率为 $\mathcal E/(2L)$，与原图电路等效一致。
+
+\electroinductionproblem{328}{142}
+图3.94理想电源电动势 $\mathcal E$、电阻 $R$，与两个无电阻电感 $L_1,L_2$ 组成网络。原先开关断开，达到稳定后闭合开关。求此后两个线圈的稳态电流。
+\exsolution
+断开前电路经电阻限流，总电流
+$I_{\rm tot}=\mathcal E/R$。
+闭合后两个理想电感分支电压相同：
+$L_1\dot I_1=L_2\dot I_2$，
+由初始条件积分，有
+$L_1I_1=L_2I_2$（在图示零初始相对磁链条件下）。
+同时节点电流守恒
+$I_1+I_2=\mathcal E/R$。解联立式：
+\[
+\boxed{I_{1,\infty}=
+\frac{\mathcal E L_2}{R(L_1+L_2)},\qquad
+I_{2,\infty}=
+\frac{\mathcal E L_1}{R(L_1+L_2)}}.
+\]
+\excheck 分流与电感倒数成正比，且两支流之和为 $\mathcal E/R$。
+
+\electroinductionproblem{329}{142}
+长直导线与矩形线框共面。线框边长为 $a,b$，其中长度为 $b$ 的一条边与长导线平行，最近距离为 $\ell$。求互感。
+\exsolution
+长直导线电流为 $I$，距导线 $r$ 处的磁感应强度
+$B(r)=\mu_0I/(2\pi r)$。
+线框沿导线方向宽为 $b$，径向范围从 $\ell$ 到 $\ell+a$，
+磁通为
+\[
+\Phi_{21}=\int_\ell^{\ell+a}
+\frac{\mu_0I}{2\pi r}b\,\mathrm dr
+=\frac{\mu_0Ib}{2\pi}
+\ln\left(1+\frac a\ell\right).
+\]
+故
+\[
+\boxed{M=\frac{\Phi_{21}}I
+=\frac{\mu_0b}{2\pi}\ln\left(1+\frac a\ell\right)}.
+\]
+\excheck 互感取绝对值；符号随两回路选定的法向而改变。
+
+\electroinductionproblem{330}{142}
+有矩形截面的环形线圈，内外半径为 $a,b$，截面在轴向的高度为 $h$，共 $N$ 匝，磁介质相对磁导率为 $\mu$。一根无限长直导线穿过环形线圈中心轴。求互感。
+\exsolution
+直导线电流 $I$ 产生环向场
+$B_\varphi(r)=\mu\mu_0I/(2\pi r)$。
+环形线圈每匝所穿的矩形截面磁通
+\[
+\Phi=\int_a^bB_\varphi(r)h\,\mathrm dr
+=\frac{\mu\mu_0Ih}{2\pi}\ln\frac ba.
+\]
+$N$ 匝总磁链为 $N\Phi$，故
+\[
+\boxed{M=\frac{\mu\mu_0Nh}{2\pi}\ln\frac ba}.
+\]
+\excheck 导线沿环芯对称轴通过而非与环形线圈绕线相切；安培环路是圆周。
+
+\electroinductionproblem{331}{142}
+两条同心细圆导线位于同一平面，半径分别 $a,b$，$a\ll b$。求 (a) 互感；(b) 内圈通电流 $I$ 时穿过外圈所围表面的磁通。
+\exsolution
+利用互感对易性，令外圈带电流 $I_b$，其中心附近磁场在小内圈上近似均匀：
+$B_0=\mu_0I_b/(2b)$。
+小圈磁通
+$\Phi_a\simeq B_0\pi a^2$，
+故
+\[
+\boxed{M\simeq\frac{\mu_0\pi a^2}{2b}}.
+\]
+互感对称性 $M_{ab}=M_{ba}$，所以内圈电流 $I$ 在外圈的有向磁通
+\[
+\boxed{\Phi_b=MI\simeq\frac{\mu_0\pi a^2I}{2b}}.
+\]
+\excheck 若直接在外圈面积内积分内圈磁场，会遇到磁场正负抵消；互感对易性是更简便而严格的主阶方法。
+
+\electroinductionproblem{332}{142}
+图3.95小圆柱永磁体处于半径为 $a$、共 $N$ 匝的细线圈中心；线圈连接总电阻 $R$ 的冲击电流计，移走磁体时通过电荷 $q$。求磁体磁矩 $p_m$。
+\exsolution
+利用互易性：若线圈通电流 $I$，它在中心产生
+$B=\mu_0NI/(2a)$。磁偶极子的能量 $-p_mB$ 意味着磁体对线圈的总磁链为
+$\Psi=\mu_0Np_m/(2a)$（共轴方向取正）。
+将磁体移至远处后磁链降为零，
+感生电流的时间积分满足
+$Rq=|\Delta\Psi|$。
+因此
+\[
+\boxed{p_m=\frac{2aRq}{\mu_0N}}.
+\]
+\excheck 不必已知移走速度，只要线圈初、末磁链确定即可；磁矩单位为 $\mathrm{A\,m^2}$。
+
+\electroinductionproblem{333}{142}
+两个同轴细圆环半径都为 $a$，两环中心轴向距离 $\ell\gg a$。求互感的主阶近似。
+\exsolution
+第一圆环通电流 $I$，在第二环中心的轴向磁场
+$B(\ell)=\mu_0Ia^2/[2(a^2+\ell^2)^{3/2}]$。
+因 $\ell\gg a$，该场在第二环面上近似均匀：
+$\Phi_2\simeq B(\ell)\pi a^2$。
+故
+\[
+\boxed{M=\frac{\Phi_2}I
+\simeq\frac{\mu_0\pi a^4}{2\ell^3}}.
+\]
+\excheck 互感随着两环距增大按 $\ell^{-3}$ 下降，符合磁偶极远场。
+
+\electroinductionproblem{334}{142}
+两个静止线圈互感为 $M$，第二线圈自感为 $L_2$、电阻为 $R$。第一线圈电流从 $t=0$ 开始按 $I_1=\alpha t$ 增大，求第二线圈感生电流 $I_2(t)$，初始为零。
+\exsolution
+第二回路电动势
+$\mathcal E_2=-M\dot I_1=-M\alpha$，满足
+$L_2\dot I_2+RI_2=-M\alpha$。
+解常系数微分方程：
+\[
+\boxed{I_2(t)=-\frac{M\alpha}{R}
+\left(1-e^{-Rt/L_2}\right)}.
+\]
+取电流模则为
+$|I_2|=(|M\alpha|/R)(1-e^{-Rt/L_2})$。
+\excheck 负号正是楞次定律，感生电流的磁通反抗第一线圈磁通上升。
+
+\electroinductionproblem{335}{142}
+图3.96电源 $\mathcal E=3.0\,\mathrm V$ 接电阻为 $R=1.0\,\Omega$、自感为 $L=2.0\,\mathrm{\mu H}$ 的线圈，同时有 $R_0=2.0\,\Omega$ 与之并联。电路稳定后断开开关，求其后在线圈\emph{自身电阻}中产生的热量。
+\exsolution
+初始稳定时线圈自感不影响直流，线圈电流
+$I_0=\mathcal E/R=3.0\,\mathrm A$。磁场能
+$U_m=\frac12LI_0^2$。
+断开电源后线圈经过 $R$ 与 $R_0$ 组成闭合放电回路，两电阻流同一个电流，其焦耳热占比为 $R/(R+R_0)$。因此线圈电阻发热
+\[
+Q_R=\frac12LI_0^2\frac{R}{R+R_0}
+=\frac{L\mathcal E^2}{2R(1+R_0/R)}.
+\]
+数值：
+$\boxed{Q_R=3.0\,\mathrm{\mu J}}$。
+\excheck 电路总发热为 $\frac12LI_0^2=9\,\mathrm{\mu J}$，但题目只问线圈自身电阻分得的1/3。
+
+\electroinductionproblem{336}{143}
+铁磁环形线圈共有 $N=500$ 匝，电流 $I=2.0\,\mathrm A$ 时每匝截面磁通为 $\Phi=1.0\,\mathrm{mWb}$。求磁场能。
+\exsolution
+若使用本题书末采用的等效线性磁化近似，磁链 $\Psi=N\Phi=LI$，
+磁能为 $U=\frac12 LI^2=\frac12\Psi I$，
+所以
+\[
+\boxed{U\simeq\frac12N\Phi I
+=\frac12(500)(10^{-3})(2)=0.50\,\mathrm J}.
+\]
+\excheck 铁磁体一般存在非线性与磁滞。若只给单个工况的 $I,\Phi$，而不指定磁化历史及完整 $\Phi(I)$ 曲线，严格磁场建立功应为 $\int_0^I I'\,\mathrm d\Psi(I')$，不能无条件等于 $\frac12I\Psi$。本题保留书末的线性近似及适用条件。
+
+\electroinductionproblem{337}{143}
+环形铁芯的圆截面半径 $a=3.0\,\mathrm{cm}$，平均环半径 $b=32\,\mathrm{cm}$，绕 $N=1000$ 匝，电流 $I=1.0\,\mathrm A$。利用原书图3.76的磁化曲线，估算铁芯磁场能；近似取整个截面的 $H$ 与中心处相同。
+\exsolution
+由安培环路
+$H=NI/(2\pi b)\simeq(1000)/(2\pi\cdot0.32)
+\simeq0.50\,\mathrm{kA/m}$。
+从原书图3.76此工作点读取磁感应强度约 $B\simeq1.4$T（仅图上读数）。
+圆截面环形芯体积
+$V=(\pi a^2)(2\pi b)=2\pi^2a^2b$。
+本版书末按 $w_m\simeq BH/2$ 估算，
+\[
+\boxed{W\simeq\frac12BH\,V
+=\pi^2a^2bBH\simeq2\,\mathrm J}.
+\]
+\excheck 对真正非线性铁磁体完整可逆储能需积分 $w=\int H\,\mathrm dB$；$BH/2$ 是本题采用的近似。图3.76读数并非高精度材料常数。
+
+\electroinductionproblem{338}{143}
+平均直径 $d=30\,\mathrm{cm}$ 的细环形磁芯，绕 $N=800$ 匝，截面积 $S=5.0\,\mathrm{cm^2}$，有宽 $b=2.0\,\mathrm{mm}$ 气隙，磁芯相对磁导率 $\mu=1400$。忽略漏磁，求 (a) 气隙和芯体储能之比；(b) 电感。
+\exsolution
+磁通密度 $B$ 在芯和气隙近似相同，
+各处能量密度分别为 $B^2/(2\mu\mu_0)$ 和 $B^2/(2\mu_0)$。体积约为 $S\pi d$ 与 $Sb$，故
+\[
+\boxed{\frac{W_{\rm gap}}{W_{\rm core}}
+\simeq\frac{\mu b}{\pi d}
+=\frac{1400(0.002)}{\pi(0.30)}\simeq3.0}.
+\]
+磁路磁阻
+$\mathcal R=(\pi d)/(\mu\mu_0S)+b/(\mu_0S)$，
+故
+\[
+\boxed{L=\frac{N^2}{\mathcal R}
+=\frac{\mu_0N^2S}{b+\pi d/\mu}
+\simeq0.15\,\mathrm H}.
+\]
+\excheck 用 $U=LI^2/2$ 与分区场能积分应得相同自感。
+
+\electroinductionproblem{339}{143}
+无限长半径为 $a$ 的绝缘圆柱，其表面均匀带电，总线电荷密度为 $\lambda$，绕轴以角速度 $\omega$ 旋转，真空磁导率。求单位长度磁场能。
+\exsolution
+圆柱表面面电荷密度
+$\sigma=\lambda/(2\pi a)$，
+转动产生环向表面电流密度
+$K=\sigma\omega a=\lambda\omega/(2\pi)$。
+理想无限长环向电流片内场
+$B=\mu_0K=\mu_0\lambda\omega/(2\pi)$，外场为零。
+单位长度场能
+\[
+W'=\frac{B^2}{2\mu_0}\pi a^2
+=\boxed{\frac{\mu_0\lambda^2\omega^2a^2}{8\pi}}.
+\]
+\excheck 此处单位长度能量量纲为 J/m，非总能量。
+
+\electroinductionproblem{340}{143}
+在真空中，何种电场强度 $E$ 的能量密度等于磁感应强度 $B=1.0\,\mathrm T$ 的磁场能量密度？
+\exsolution
+电场能量密度 $w_e=\varepsilon_0E^2/2$，
+磁场能量密度 $w_m=B^2/(2\mu_0)$。
+令两者相等：
+$\varepsilon_0E^2=B^2/\mu_0$。
+所以
+\[
+\boxed{E=\frac B{\sqrt{\varepsilon_0\mu_0}}=cB
+\simeq3.0\times10^8\,\mathrm{V/m}}.
+\]
+\excheck 在 SI 单位下 $c=1/\sqrt{\varepsilon_0\mu_0}$，且 $cB$ 的量纲为 V/m。
+
+\electroinductionproblem{341}{143}
+一只半径 $a=10\,\mathrm{cm}$ 的细均匀带电环以 $\omega=100\,\mathrm{rad/s}$ 绕轴旋转，在距环心 $\ell=a$ 的轴上点求磁场与电场能量密度之比。
+\exsolution
+环总电荷 $q$，等效电流
+$I=q\omega/(2\pi)$。轴上
+\[
+E=\frac{q\ell}{4\pi\varepsilon_0(a^2+\ell^2)^{3/2}},
+\quad
+B=\frac{\mu_0Ia^2}{2(a^2+\ell^2)^{3/2}}
+=\frac{\mu_0q\omega a^2}{4\pi(a^2+\ell^2)^{3/2}}.
+\]
+因此
+\[
+\frac{w_m}{w_e}
+=\frac{B^2/(2\mu_0)}{\varepsilon_0E^2/2}
+=\boxed{\mu_0\varepsilon_0\frac{\omega^2a^4}{\ell^2}}.
+\]
+在 $\ell=a$：
+$\boxed{w_m/w_e=(\omega a/c)^2\simeq1.1\times10^{-15}}$。
+\excheck 环总电荷 $q$ 在比值中相消，最后结果仅与旋转切向速度和光速之比有关。
+
+\electroinductionproblem{342}{143}
+依据磁场能量密度证明：将单位体积线性顺磁体或抗磁体置于均匀磁场 $\bm B$ 中，磁化过程所贡献的有效能量为
+$A=-\bm J\cdot\bm B/2$，其中 $\bm J$ 为磁化强度。
+\exsolution
+线性弱磁化条件下，磁化强度随外场建立而线性增加：
+$\bm J(\lambda)=\lambda\bm J$，
+$\bm B(\lambda)=\lambda\bm B$，
+$0\le\lambda\le1$。对固定外部电流源的磁偶极子而言，磁化产生的能量变化微元等于
+$\mathrm dA=-\bm B\cdot\mathrm d\bm J$，
+其中场强从0同步建立。代入
+$\mathrm d\bm J=\bm J\,\mathrm d\lambda$、
+$\bm B(\lambda)=\lambda\bm B$，可得
+\[
+A=-\int_0^1\lambda\,\bm B\cdot\bm J\,\mathrm d\lambda
+=\boxed{-\frac12\bm J\cdot\bm B}.
+\]
+\excheck 若物质磁化非线性或有磁滞，不能直接以终值的 $JB/2$ 代替磁化全过程积分。
+
+\electroinductionproblem{343}{143}
+两只相同线圈各自感为 $L$，忽略互感，分别 (a) 串联；(b) 并联，求等效电感。
+\exsolution
+(a) 串联总磁链等效为
+$(L+L)I$，故
+$\boxed{L_{\rm s}=2L}$。
+(b) 并联时两线圈电压相同，
+$\dot I_1=\dot I_2=V/L$，
+总电流导数 $\dot I=2V/L$，故
+$\boxed{L_{\rm p}=L/2}$。
+\excheck 如果互感不能忽略，串联还需加减 $2M$，本题已排除该情形。
+
+\electroinductionproblem{344}{143}
+两个长度相等、截面积几乎相同的长螺线管完全套在一起，自感分别为 $L_1,L_2$。求互感的模。
+\exsolution
+长螺线管
+$L_1=\mu_0N_1^2S_1/\ell$、
+$L_2=\mu_0N_2^2S_2/\ell$。
+若二者同轴、同长且截面几乎完全重合，磁耦合系数 $k\simeq1$，
+\[
+M=\frac{\mu_0N_1N_2S}{\ell},
+\]
+从而
+\[
+\boxed{|M|\simeq\sqrt{L_1L_2}}.
+\]
+\excheck 理想完全耦合时等号成立；实际线圈有漏磁，通常 $|M|\le\sqrt{L_1L_2}$。
+
+\electroinductionproblem{345}{143}
+证明真空中两只载流回路的磁相互作用能可写为
+$W_{12}=\mu_0^{-1}\int\bm B_1\cdot\bm B_2\,\mathrm dV$。
+\exsolution
+磁场满足叠加 $\bm B=\bm B_1+\bm B_2$。
+总磁场能
+\[
+W=\frac1{2\mu_0}\int|\bm B|^2\,\mathrm dV
+=\frac1{2\mu_0}\int(B_1^2+B_2^2+
+2\bm B_1\cdot\bm B_2)\,\mathrm dV.
+\]
+前两项是各自回路的自场能量，
+第三项为两回路之间的交互能：
+\[
+\boxed{W_{12}=\frac1{\mu_0}
+\int_{\mathbb R^3}\bm B_1\cdot\bm B_2\,\mathrm dV}.
+\]
+\excheck 交互项的2来自平方展开，并被总能量系数1/2抵消；不能再额外除以2。
+
+\electroinductionproblem{346}{144}
+两只电流圆环半径分别为 $a,b$，$a\ll b$，中心重合，平面间夹角 $\theta$，电流为 $I_1,I_2$。求相互作用能。
+\exsolution
+大圆环在中心产生
+$B_2\simeq\mu_0I_2/(2b)$，
+小圆环的磁矩
+$\bm p_1=I_1\pi a^2\bm n_1$。
+两个面法线夹角为 $\theta$。
+按磁场能\emph{交叉项}的互感约定
+$W_{12}=MI_1I_2$，
+其中
+$M\simeq\mu_0\pi a^2\cos\theta/(2b)$。
+因此
+\[
+\boxed{W_{12}=\frac{\mu_0\pi a^2}{2b}
+I_1I_2\cos\theta}.
+\]
+\excheck 对固定电流源的\emph{机械有效势}
+常采用 $-MI_1I_2$，与此处磁场交互能 $+MI_1I_2$ 定义不同，不能混淆。
