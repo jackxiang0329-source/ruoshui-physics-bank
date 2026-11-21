@@ -1,0 +1,221 @@
+% 张三慧《大学物理学》第4版，第1章习题 1.1--1.10 的独立复算解析
+% 参考《学习辅导与习题解答》PDF扫描页15--19；不直接照搬其推导。
+% 默认采用 g=9.80 m/s^2，除非题目另有给定。
+% 本文件是 LaTeX 片段，不含 documentclass；独立专家复核状态：待审。
+\section*{第1章\quad 质点运动学：独立解析}
+
+\paragraph{习题 1.1}
+设岩块竖直喷出速率为 \(v_0\)，最高点速率为零。
+忽略空气阻力，由运动学关系 \(0=v_0^2-2gh\) 得
+\[
+ v_0=\sqrt{2gh}
+ =\sqrt{2(1.80\,\mathrm{m/s^2})(200\times10^3\,\mathrm{m})}
+ \approx 8.49\times10^2\,\mathrm{m/s}.
+\]
+检查：\(v_0^2/(2g)=200\,\mathrm{km}\)，与题设相符。
+
+\paragraph{习题 1.2}
+由 \(1600\,\mathrm{km/h}=444.44\,\mathrm{m/s}\) 与初速为零，
+\[
+ a=\frac{444.44}{1.80}=246.91\,\mathrm{m/s^2}
+ \approx25.20g>25g.
+\]
+因此略超过题目给定的 \(25g\) 阈值。匀加速运动的位移
+\[
+ s=\frac12at^2
+ =\frac12(246.91)(1.80)^2=400\,\mathrm{m}.
+\]
+此结论只针对题目给定的加速度阈值，不代表真实人体耐受判定。
+
+\paragraph{习题 1.3}
+两车迎面运动，初速分别为
+\(u_1=90/3.6=25.00\,\mathrm{m/s}\) 与
+\(u_2=65/3.6=18.0556\,\mathrm{m/s}\)。
+在共同反应时间 \(\tau=0.70\,\mathrm{s}\) 内，
+车距减为
+\[
+ d=80-(u_1+u_2)\tau=49.8611\,\mathrm{m}.
+\]
+两车各以大小 \(a=7.5\,\mathrm{m/s^2}\) 的减速度制动，
+从制动起计时 \(t\)，闭合距离为
+\[
+ (u_1+u_2)t-\tfrac12(2a)t^2
+ =(u_1+u_2)t-at^2.
+\]
+相撞方程
+\[
+ 7.5t^2-(25+65/3.6)t+49.8611=0
+\]
+的较小正根为 \(t\approx1.6164\,\mathrm{s}\)。
+此时 \(t<u_2/a\approx2.41\,\mathrm{s}\)，
+两车尚未停住，所以根对应实际碰撞。
+卡车碰撞瞬间速率
+\[
+ v_1=u_1-at
+ \approx25-7.5(1.6164)
+ =12.88\,\mathrm{m/s}\approx46.4\,\mathrm{km/h}.
+\]
+校验：反应结束时的停车距离之和
+\(u_1^2/(2a)+u_2^2/(2a)\approx63.4\,\mathrm{m}>d\)，
+故相撞结论一致。
+
+\paragraph{习题 1.4}
+设前一段平均加速度按题设取 \(a=g/2\)，
+终极速率 \(v_1=200/3.6=55.5556\,\mathrm{m/s}\)，
+开伞后着地速率 \(v_2=18/3.6=5\,\mathrm{m/s}\)。
+三个阶段（第一段加速、第二段匀速、第三段开伞后匀速）的时间为
+\[
+ t_1=\frac{v_1}{g/2}=\frac{2v_1}{g}\approx11.34\,\mathrm{s},
+ \qquad
+ s_1=\frac{v_1^2}{2(g/2)}=\frac{v_1^2}{g}\approx314.94\,\mathrm{m},
+\]
+\[
+ t_2=\frac{1200-s_1-50}{v_1}\approx15.03\,\mathrm{s},
+ \qquad t_3=\frac{50}{v_2}=10.00\,\mathrm{s}.
+\]
+故总时间 \(t=t_1+t_2+t_3\approx36.37\,\mathrm{s}\)。
+本理想化模型按题意忽略开伞减速的过渡时间。
+
+\paragraph{习题 1.5}
+无空气阻力且喷水竖直向上，
+\[
+ h_{\max}=\frac{v^2}{2g}
+ =\frac{26^2}{2(9.8)}\approx34.49\,\mathrm{m}.
+\]
+稳定喷水时，每份水从喷口上升又回到喷口高度所需时间为
+\[
+ T=\frac{2v}{g}\approx5.306\,\mathrm{s}.
+\]
+因此喷口以上空间内瞬时水量等于体积流量乘驻留时间：
+\[
+ V=qT=(280\,\mathrm{L/min})
+ \frac{5.306\,\mathrm{s}}{60\,\mathrm{s/min}}
+ \approx24.76\,\mathrm{L}.
+\]
+这一体积结论假定水流连续、稳定，并忽略雾化与空气阻力。
+
+\paragraph{习题 1.6}
+第一块石头以抛出时刻为 \(t=0\)，高度函数为
+\(y_1(t)=15.0t-\frac12gt^2\)。
+在 \(y_1=11.0\,\mathrm{m}\) 时满足
+\[
+ 4.9t^2-15t+11=0,\qquad
+ t_\pm=\frac{15\pm\sqrt{15^2-2(9.8)(11)}}{9.8}.
+\]
+由此得到两个合法的相遇时刻：
+\(t_-=1.217761\,\mathrm{s}\)（第一块石头上升时），
+\(t_+=1.843463\,\mathrm{s}\)（第一块石头下降时）。
+若第二块石头在 \(\Delta\) 秒后上抛，要在高度
+\(11\,\mathrm{m}\) 相遇，其初速必须满足
+\[
+ 11=v_2(t-\Delta)-\tfrac12g(t-\Delta)^2,
+ \qquad
+ v_2=\frac{11}{t-\Delta}+\frac{g}{2}(t-\Delta),
+ \quad t>\Delta.
+\]
+\begin{enumerate}
+\item 当 \(\Delta=1.0\,\mathrm{s}\) 时，两个时间分支均符合
+ \(t>\Delta\)。取 \(t_-\) 得 \(v_2\approx51.58\,\mathrm{m/s}\)；
+ 取 \(t_+\) 得 \(v_2\approx17.17\,\mathrm{m/s}\)。
+ 因此本小题有两个初速解。
+\item 当 \(\Delta=1.3\,\mathrm{s}\) 时，
+ \(t_-<\Delta\)，上升分支不可能相遇；
+ 只能取 \(t_+\)，得到 \(v_2\approx22.90\,\mathrm{m/s}\)。
+\end{enumerate}
+\textbf{审校说明：}辅导书在第(1)问上升分支给出的约
+\(51.1\,\mathrm{m/s}\) 源于将碰撞时刻较早取整为
+\(1.22\,\mathrm{s}\) 后代入；由于分母
+\(t-\Delta\) 很小，舍入会明显影响结果。
+保留未提前舍入的时间可得约 \(51.6\,\mathrm{m/s}\)。
+对不同数值精度应以原始方程和单位检验为准。
+
+\paragraph{习题 1.7}
+消去参数 \(t=x/2\)，得到轨道方程
+\[
+ y=4(x/2)^2-8=x^2-8.
+\]
+该曲线是顶点 \((0,-8)\)、开口向 \(+y\) 的抛物线，
+运动方向随 \(t\) 增加沿 \(+x\) 方向前进。
+\[
+ \boldsymbol r(t)=(2t)\boldsymbol i+(4t^2-8)\boldsymbol j,\quad
+ \boldsymbol v(t)=2\boldsymbol i+8t\boldsymbol j,\quad
+ \boldsymbol a(t)=8\boldsymbol j.
+\]
+于是
+\[
+ \begin{array}{c|c|c|c}
+ t & \boldsymbol r\ (\mathrm m)
+ &\boldsymbol v\ (\mathrm{m/s})&\boldsymbol a\ (\mathrm{m/s^2})\\\hline
+ 1\,\mathrm s&2\boldsymbol i-4\boldsymbol j&
+ 2\boldsymbol i+8\boldsymbol j&8\boldsymbol j\\
+ 2\,\mathrm s&4\boldsymbol i+8\boldsymbol j&
+ 2\boldsymbol i+16\boldsymbol j&8\boldsymbol j
+ \end{array}
+\]
+
+\paragraph{习题 1.8}
+球从高 \(h=3.5\,\mathrm{m}\) 的位置水平飞出，
+落在距击球位置水平位移 \(d=8.5+9.0=17.5\,\mathrm{m}\)
+的对方后方边线上。飞行时间及初速为
+\[
+ T=\sqrt{\frac{2h}{g}}\approx0.84515\,\mathrm{s},\qquad
+ v_0=\frac{d}{T}\approx20.71\,\mathrm{m/s}.
+\]
+球到网所在竖直平面时的时间
+\(t_{\rm net}=8.5/v_0\approx0.4105\,\mathrm{s}\)，
+高度
+\[
+ y_{\rm net}=h-\tfrac12g t_{\rm net}^2\approx2.674\,\mathrm{m}.
+\]
+高于 \(2.43\,\mathrm{m}\) 球网的高度约
+\(\Delta h=2.674-2.43=0.244\,\mathrm{m}\)。
+落地瞬间水平、竖直分速度分别为 \(v_0\)、\(-gT\)，
+故速率
+\[
+ v_{\rm land}=\sqrt{v_0^2+(gT)^2}\approx22.3\,\mathrm{m/s}.
+\]
+
+\paragraph{习题 1.9}
+设起飞点为原点、\(x\) 轴水平向前、\(y\) 轴竖直向下。
+忽略空气阻力，质点运动方程为
+\(x=vt,\ y=\frac12gt^2\)。
+斜坡方程为 \(y=x\tan\theta\)；
+非零的落地时刻满足
+\[
+ \tfrac12gt^2=vt\tan\theta
+ \quad\Rightarrow\quad t=\frac{2v\tan\theta}{g}.
+\]
+沿斜坡距离为 \(L=x/\cos\theta\)，
+所以当 \(\theta=45^\circ\)、\(v=110/3.6\,\mathrm{m/s}\) 时
+\[
+ L=\frac{2v^2\tan\theta}{g\cos\theta}
+ =\frac{2(110/3.6)^2}{9.8\cos45^\circ}
+ \approx269\,\mathrm{m}.
+\]
+实测 \(165\,\mathrm{m}\) 与理想值不一致：
+主要可能由于题设忽略了空气阻力，
+真实运动员起跳姿态、风况与实际地形也不完全符合
+“水平出射、同一点起始的理想斜坡”模型；
+这些因素不能从给定数据中单独定量反演。
+
+\paragraph{习题 1.10}
+以出手位置为原点，抛射角为 \(\alpha\)，
+在水平距离 \(x=L\) 处的高度为
+\[
+ y(L)=L\tan\alpha-\frac{gL^2}{2v^2\cos^2\alpha}.
+\]
+令 \(u=\tan\alpha\)，并用 \(\sec^2\alpha=1+u^2\)，得
+\[
+ y(L)=Lu-\frac{gL^2}{2v^2}(1+u^2).
+\]
+这是关于 \(u\) 的严格凹二次函数，
+极大值出现在 \(u=v^2/(gL)\)，此时
+\[
+ y_{\max}(L)=\frac{v^2}{2g}-\frac{gL^2}{2v^2}
+ =\frac{25^2}{2(9.8)}-\frac{9.8(50)^2}{2(25)^2}
+ \approx12.29\,\mathrm{m}.
+\]
+因为 \(12.29<13\,\mathrm{m}\)，
+无论选取何种发射角，在题设水平距离处都无法越过墙顶。
+实现该最大高度的角度
+\(\alpha=\arctan(25^2/(9.8\times50))\approx51.9^\circ\)。
