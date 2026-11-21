@@ -77,6 +77,11 @@ THERMO_CHAPTERS = [
     "09-thermo-state-021-025.tex",
 ]
 THERMO_EXPECTED = [range(1, 12), range(12, 21), range(21, 26)]
+THERMO_ENERGY_CHAPTERS = [
+    "10-thermo-first-law-026-035.tex",
+    "10-thermo-first-law-036-045.tex",
+]
+THERMO_ENERGY_EXPECTED = [range(26, 36), range(36, 46)]
 
 errors = []
 main = (ROOT / "main.tex").read_text(encoding="utf-8")
@@ -150,6 +155,38 @@ for name, expected in zip(THERMO_CHAPTERS, THERMO_EXPECTED):
 
 if thermo_ids != list(range(1, 26)):
     errors.append("Part II section 2.1 original IDs are not exactly 1..25")
+
+energy_ids = []
+for name, expected in zip(THERMO_ENERGY_CHAPTERS, THERMO_ENERGY_EXPECTED):
+    path = ROOT / "chapters" / name
+    if not path.exists():
+        errors.append(f"missing: {name}")
+        continue
+    content = path.read_text(encoding="utf-8")
+    ids = [int(x) for x in re.findall(r"\\thermoenergyproblem\{(\d+)\}\{", content)]
+    want = list(expected)
+    energy_ids.extend(ids)
+    if ids != want:
+        errors.append(f"{name}: first-law original IDs {ids} != {want}")
+    solutions = len(re.findall(r"\\exsolution\b", content))
+    checks = len(re.findall(r"\\excheck\b", content))
+    if solutions != len(want):
+        errors.append(f"{name}: {solutions} solutions, expected {len(want)}")
+    if checks != len(want):
+        errors.append(f"{name}: {checks} checks, expected {len(want)}")
+    if content.count("{") != content.count("}"):
+        errors.append(f"{name}: unbalanced TeX braces")
+    entry = r"\input{chapters/" + path.stem + "}"
+    if entry not in main:
+        errors.append(f"main.tex does not include: {name}")
+
+if energy_ids != list(range(26, 46)):
+    errors.append("Part II section 2.2 original IDs are not exactly 26..45")
+if r"\newcommand{\thermoenergyproblem}" not in main:
+    errors.append("main.tex missing thermoenergyproblem macro")
+if main.count(r"\section{热力学第一定律与热容") != 1:
+    errors.append("first law section count is not one")
+
 if main.count(r"\chapter{热力学与分子物理}") != 1:
     errors.append("Part II chapter count is not one")
 if main.count(r"\section{气体状态方程与过程") != 1:
@@ -161,4 +198,4 @@ if errors:
     for e in errors:
         print("FAIL:", e, file=sys.stderr)
     sys.exit(1)
-print("PASS: 388 Part-I problems + 25 separately numbered Part-II problems = 413 translated solved problems; all chapters included")
+print("PASS: 388 Part-I + 25 Part-II gas-state + 20 Part-II first-law = 433 translated solved problems; original numbering and all chapters verified")
