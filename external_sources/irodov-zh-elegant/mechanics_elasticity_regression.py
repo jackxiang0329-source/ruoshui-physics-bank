@@ -61,7 +61,7 @@ TperArea=.5*rho*omega**2*(length**2-r*r)
 elong=rho*omega**2*length**3/(3*Y)
 residual(296,"spinning copper rod section tension from exterior centrifugal load",
       TperArea-.5*rho*omega**2*(length**2-r*r),scale=TperArea)
-check(296,"spinning rod elongation metres",elong,1.186666667e-6,.001)
+check(296,"spinning rod elongation metres",elong,1.186666667e-5,.001)
 exact(296,"free end force must vanish",0,0)
 E=1.2e11;nu=.35;F=1000;L=.65
 deltaV=-(1-2*nu)*F*L/E
@@ -93,14 +93,14 @@ exact(300,"beam curvature width cancels, compare widths",
 E=Y;a=.1;beamI=a**4/12;L=2.;N0=50.;F=20.
 tip_couple=N0*L**2/(2*E*beamI)
 tip_force=F*L**3/(3*E*beamI)
-check(301,"beam pure-end-couple tip displacement m",tip_couple,.00060)
-check(301,"beam transverse end load tip displacement m",tip_force,.00032)
+check(301,"beam pure-end-couple tip displacement m",tip_couple,.000060)
+check(301,"beam transverse end load tip displacement m",tip_force,.000032)
 residual(301,"end-force bending moment free-end boundary",
          F*(L-L))
 residual(301,"clamped-end slope for couple bending form",N0*0/(E*beamI))
 simply_mid=F*L**3/(48*E*beamI)
 check(302,"simple support center load deflection m",
-      simply_mid,.0000200)
+      simply_mid,.00000200)
 exact(302,"simply supported center deflection 1/16 cantilever tip load",
       simply_mid/tip_force,1/16)
 rho=7800;L=2.;h=.1
@@ -131,9 +131,9 @@ residual(305,"thin tube torque via Saint-Venant polar J",
 residual(305,"solid rod torque via exact polar J",
          torque-((pi*R**4/2)*G*theta_solid/L),scale=torque)
 check(305,"thin tube torsion angle 100Nm at assumed dims rad",
-      theta_tube,.0031831)
+      theta_tube,.00159155)
 check(305,"solid rod torsion angle 100Nm at assumed dims rad",
-      theta_solid,.0025465)
+      theta_solid,.00025465)
 L=3;d1=.03;d2=.05;angle=2*pi/180
 torque=pi*G*(d2**4-d1**4)*angle/(32*L)
 check(306,"thick-walled tube torque for original dimensions Nm",
@@ -154,7 +154,7 @@ residual(308,"annular ring interior torque at bore = total I beta",
          m*angacc*(r2**4-r1**4)/(2*(r2**2-r1**2))-Nroot,scale=Nroot)
 exact(308,"annular ring outer free boundary torque zero",
       m*angacc*(r2**4-r2**4)/(2*(r2**2-r1**2)),0)
-check(308,"annular ring torque at internal radius r0.3 Nm",Ne,.59875)
+check(308,"annular ring torque at internal radius r0.3 Nm",Ne,1.09375)
 m=3.1;rho=7800.;eps=.001
 energy=.5*Y*(m/rho)*eps**2
 check(309,"steel rod elastic strain energy with source mass J",energy,39.74)
@@ -177,7 +177,7 @@ L=1.;R=.01;angle=pi/3
 U=pi*G*R**4*angle**2/(4*L)
 check(312,"steel shaft twist energy for source geometry J",U,690)
 exact(312,"source book final numeric 7J differs about 100 fold",
-      round(U/7),99)
+      round(U/7),98)
 stress=G*angle*R/L
 check(312,"maximum elastic-model outer-wall shear stress Pa",
       stress,8.38e8)
