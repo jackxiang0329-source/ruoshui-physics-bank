@@ -1,4 +1,7 @@
 name: Irodov ElegantBook Chinese build
+concurrency:
+  group: irodov-elegantbook-main
+  cancel-in-progress: true
 on:
   push:
     branches: [main]
@@ -13,6 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Validate all translated problem blocks
+        run: python3 external_sources/irodov-zh-elegant/check_sources.py
       - uses: xu-cheng/latex-action@v4
         with:
           working_directory: external_sources/irodov-zh-elegant
@@ -37,5 +42,9 @@ jobs:
           git add -f external_sources/irodov-zh-elegant/main.pdf external_sources/irodov-zh-elegant/cover.pdf
           if ! git diff --cached --quiet; then
             git commit -m "docs: publish Irodov Chinese ElegantBook PDFs [skip ci]"
+            if ! git push origin HEAD:main; then
+            git fetch origin main
+            git rebase origin/main
             git push origin HEAD:main
+          fi
           fi
