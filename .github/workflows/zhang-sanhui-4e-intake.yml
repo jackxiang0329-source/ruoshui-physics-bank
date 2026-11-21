@@ -1,0 +1,39 @@
+name: Zhang Sanhui 4e intake structural and XeLaTeX QA
+
+on:
+  push:
+    branches:
+      - intake/zhang-sanhui-4e-20261122-batch01
+    paths:
+      - 'external_sources/zhang_sanhui_4e/**'
+      - '.github/workflows/zhang-sanhui-4e-intake.yml'
+  pull_request:
+    paths:
+      - 'external_sources/zhang_sanhui_4e/**'
+  workflow_dispatch:
+
+jobs:
+  structural-and-math-spotchecks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate canonical source register and independent numeric spotmodels
+        run: python3 external_sources/zhang_sanhui_4e/qa_check.py
+  xelatex-candidate-proof:
+    runs-on: ubuntu-latest
+    needs: structural-and-math-spotchecks
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile candidate exercise and solution proof (NOT expert approval)
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: build_intake.tex
+          work_in_root_file_dir: true
+          latexmk_use_xelatex: true
+          working_directory: external_sources/zhang_sanhui_4e
+      - name: Save candidate PDF for review
+        uses: actions/upload-artifact@v4
+        with:
+          name: zhang-sanhui-4e-candidate-proof
+          path: external_sources/zhang_sanhui_4e/build_intake.pdf
+          if-no-files-found: error
