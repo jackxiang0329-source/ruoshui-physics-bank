@@ -1,0 +1,196 @@
+% Irodov user PDF p.46--47, original printed pp.37--38.
+% Opening of section 1.5: rigid-body statics and inertia tensors.
+\exproblem{234}{37}
+一根质量为 $m=1.0\,\mathrm{kg}$ 的均匀细杆 $AB$
+在同一平面内受两个反平行力作用而只作平动，
+其加速度为 $a_C=2.0\,\mathrm{m/s^2}$（图1.52）。
+两个施力点沿杆方向相距
+$d=20\,\mathrm{cm}$，已知其中一个力
+$F_2=5.0\,\mathrm N$，求杆长 $\ell$。
+\exsolution
+按原图，上端 $A$ 的力 $F_1$ 向左，
+另一力 $F_2$ 向右且施力点比 $A$ 低 $d$。
+向右取正，纯平动要求
+$F_2-F_1=ma_C$，故
+\[
+F_1=5-1(2)=3.0\,\mathrm N.
+\]
+均匀细杆质心在杆中点。
+无角加速度意味着关于质心的合力矩为零：
+\[
+F_1\frac{\ell}{2}
+=F_2\left(\frac{\ell}{2}-d\right).
+\]
+移项得
+\[
+\boxed{\ell=\frac{2F_2d}{F_2-F_1}
+=\frac{2(5)(0.20)}{2.0}=1.00\,\mathrm m}.
+\]
+\excheck 当所有力都沿水平方向时，
+平动加速度由合力决定；无转动则必须另外满足
+关于质心合力矩为零。
+
+\exproblem{235}{37}
+在 $xy$ 平面中，力
+$\bm F=A\bm i+B\bm j$ 作用于位置
+$\bm r=a\bm i+b\bm j$。
+求该力关于坐标原点 $O$ 的力矩矢量及力臂长度。
+\exsolution
+力矩由叉积定义：
+\[
+\bm N_O=\bm r\times\bm F
+=(a\bm i+b\bm j)\times(A\bm i+B\bm j)
+=(aB-bA)\bm k.
+\]
+力臂是从原点到作用线的垂直距离，
+利用 $|\bm N|=|\bm F|\ell$：
+\[
+\boxed{\bm N_O=(aB-bA)\bm k},\qquad
+\boxed{\ell=\frac{|aB-bA|}{\sqrt{A^2+B^2}}}.
+\]
+\excheck 若 $aB=bA$，力作用线穿过原点，
+力矩和力臂均为零；若 $\bm F=\bm0$，
+则作用线未定义而力矩仍为零。
+
+\exproblem{236}{37}
+在平面内两个力分别为
+$\bm F_1=A\bm j$、$\bm F_2=B\bm i$，
+施力点的位置矢量分别为
+$\bm r_1=a\bm i$ 和 $\bm r_2=b\bm j$。
+求合力相对于原点的力臂。
+\exsolution
+合力矢量
+$\bm F=\bm F_1+\bm F_2=B\bm i+A\bm j$。
+两个力矩分别为
+$\bm N_1=aA\bm k$ 与
+$\bm N_2=-bB\bm k$，故总力矩
+\[
+\bm N=(aA-bB)\bm k.
+\]
+因此合力大小为 $\sqrt{A^2+B^2}$ 时，
+其等效作用线到原点的距离
+\[
+\boxed{\ell=\frac{|aA-bB|}{\sqrt{A^2+B^2}}}.
+\]
+\excheck 力臂必须由\emph{合力的总力矩}计算；
+不能把两力各自的力臂直接相加。
+
+\exproblem{237}{37}
+如图1.53，正方形薄板顶点依次为
+$A$（左）、$B$（上）、$C$（右）、$D$（下）。
+在 $A$ 点施竖直向上的力 $F$，
+在 $B$ 点施水平向右的力 $F$，
+在 $D$ 点沿右下方向施大小为 $F\sqrt2$ 的力。
+求合力的大小、方向；
+若作用点选择在边 $BC$ 上，求它的位置。
+\exsolution
+取正方形中心为原点，四顶点分别为
+$A=(-d,0),B=(0,d),C=(d,0),D=(0,-d)$。
+三个力的坐标分量分别为
+$(0,F),(F,0),(F,-F)$。故
+\[
+\bm F_{\rm res}=(2F,0),
+\quad\boxed{|\bm F_{\rm res}|=2F},
+\]
+方向水平向右，即平行于对角线 $AC$。
+总力矩（取垂直板面分量）为
+\[
+N_z=(-d)F-dF+dF=-dF.
+\]
+设等效合力作用点为 $(x,y)$，
+则 $N_z=xF_y-yF_x=-2Fy$，
+所以 $y=d/2$。
+边 $BC$ 上从 $(0,d)$ 到 $(d,0)$
+满足 $x+y=d$，于是 $x=d/2$。
+\[
+\boxed{\text{合力作用于边 $BC$ 的中点。}}
+\]
+\excheck 该解保留了总力和总力矩，因此与原三力体系
+对薄板的平动、转动作用等效。
+
+\exproblem{238}{37--38}
+求：（a）长为 $\ell$、质量 $m$ 的均匀细杆
+对过一端且垂直于杆的轴的转动惯量；
+（b）长宽为 $a,b$、质量为 $m$ 的均匀矩形薄板
+对过一个顶点且垂直于薄板的轴的转动惯量。
+\exsolution
+（a）细杆线密度为 $m/\ell$，
+从转轴端量距离 $x\in[0,\ell]$，
+\[
+I_a=\int_0^\ell x^2\frac m\ell\,\mathrm dx
+=\boxed{\frac13m\ell^2}.
+\]
+（b）选顶点为原点、两邻边沿坐标轴，
+薄板面密度为 $m/(ab)$，轴距平方为 $x^2+y^2$：
+\[
+I_b=\frac{m}{ab}\int_0^a\int_0^b
+(x^2+y^2)\,\mathrm dy\,\mathrm dx
+=\boxed{\frac m3(a^2+b^2)}.
+\]
+\excheck 也可由平行轴定理验证，矩形板的质心轴惯量
+$m(a^2+b^2)/12$，顶点距质心平方为 $(a^2+b^2)/4$，
+相加得到同一结果。
+
+\exproblem{239}{38}
+求：（a）均匀铜圆盘，厚度
+$b=2.0\,\mathrm{mm}$，半径
+$R=100\,\mathrm{mm}$，绕轴线的转动惯量；
+（b）质量 $m$、底面半径 $R$ 的均匀实心圆锥
+绕其轴线的转动惯量。
+\exsolution
+（a）铜密度记为 $\rho$，
+圆盘质量为 $M=\rho\pi R^2b$。
+由均匀实心圆盘绕轴惯量
+$I=\tfrac12MR^2$，得
+\[
+\boxed{I_a=\frac12\pi\rho bR^4}.
+\]
+取铜密度 $\rho\simeq8.9\times10^3\,\mathrm{kg/m^3}$，
+数值得
+$\boxed{I_a\simeq2.80\times10^{-3}\,\mathrm{kg\,m^2}}$。
+（b）设圆锥高为 $H$，从锥顶起截面半径
+$r(z)=Rz/H$。在高度 $z$ 处取厚度
+$\mathrm dz$ 的薄圆盘，
+$\mathrm dm=\rho\pi r(z)^2\,\mathrm dz$，
+微元绕轴惯量 $\mathrm dI=\tfrac12r(z)^2\,\mathrm dm$。
+积分：
+\[
+I=\frac12\rho\pi\frac{R^4}{H^4}
+\int_0^H z^4\,\mathrm dz
+=\frac{\rho\pi R^4H}{10}.
+\]
+又 $m=\rho\pi R^2H/3$，故
+\[
+\boxed{I_b=\frac{3}{10}mR^2}.
+\]
+\excheck $I_a$ 的原书单位写法 $2.8\,\mathrm{g\,m^2}$
+与 $2.8\times10^{-3}\,\mathrm{kg\,m^2}$ 相同；
+此处统一用 SI 单位。
+
+\exproblem{240}{38}
+证明：任意形状的薄板通过同一点的三条互相垂直轴中，
+若前两条轴在板面内、第三条轴垂直板面，
+则转动惯量满足 $I_1+I_2=I_3$。
+据此求半径 $R$、质量 $m$ 的均匀薄圆盘
+绕任一直径的转动惯量。
+\exsolution
+选薄板面为 $xy$ 平面，三条轴分别为 $x,y,z$，
+薄板任一质元到相应轴的距离平方分别为
+$y^2,x^2,x^2+y^2$。按转动惯量定义：
+\[
+I_x=\int y^2\,\mathrm dm,\quad
+I_y=\int x^2\,\mathrm dm,\quad
+I_z=\int(x^2+y^2)\,\mathrm dm.
+\]
+积分线性性直接给出
+\[
+\boxed{I_x+I_y=I_z}.
+\]
+均匀圆盘的对称性意味着过圆心的两条正交直径轴
+转动惯量相等：$I_x=I_y$。
+由于 $I_z=\tfrac12mR^2$，
+\[
+\boxed{I_{\rm diameter}=\frac12I_z=\frac14mR^2}.
+\]
+\excheck 垂直轴定理只适用于质量分布被认为在同一平面内的
+薄板；对厚度不能忽略的三维刚体不能直接套用。
