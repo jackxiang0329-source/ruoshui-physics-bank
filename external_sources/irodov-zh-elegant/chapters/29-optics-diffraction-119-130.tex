@@ -1,0 +1,321 @@
+% Irodov Part V §5.3 originals 119--130.
+% Uploaded source pp.216--218 (printed 208--209); source answers pp.330--331.
+\diffractionproblem{119}{208}
+波长为 $\lambda$ 的平面单色光垂直入射长矩形单缝，缝宽为 $b$。
+求夫琅禾费远场光强随衍射角 $\theta$ 的分布与暗纹位置。
+\exsolution
+取缝宽横坐标 $x\in[-b/2,b/2]$。
+方向 $\theta$ 上的复振幅为均匀孔径相量积分
+\[
+\widetilde E(\theta)\propto
+\int_{-b/2}^{b/2}e^{ikx\sin\theta}\,\mathrm dx
+=b\frac{\sin\alpha}{\alpha},
+\qquad
+\alpha=\frac{\pi b}{\lambda}\sin\theta.
+\]
+平方得
+\[
+\boxed{I(\theta)=I(0)
+\left(\frac{\sin\alpha}{\alpha}\right)^2}.
+\]
+除中央主极大以外，
+暗纹要求 $\sin\alpha=0$ 且 $\alpha\ne0$，
+\[
+\boxed{b\sin\theta=m\lambda},
+\quad m=\pm1,\pm2,\ldots .
+\]
+\excheck $\alpha\to0$ 时
+$(\sin\alpha/\alpha)^2\to1$，
+中央主极大不应因 $\sin0=0$ 而误判为暗纹。
+
+\diffractionproblem{120}{208}
+利用第119题结果求单缝夫琅禾费衍射的第一、第二、第三\emph{副极大}角位置。
+\exsolution
+令
+$f(\alpha)=(\sin\alpha/\alpha)^2$，
+对非零且非暗纹处求导：
+$f'(\alpha)\propto
+\sin\alpha(\alpha\cos\alpha-\sin\alpha)$。
+因此副极大必须满足
+\[
+\boxed{\tan\alpha=\alpha}.
+\]
+逐区间解此超越方程的前三个正根为
+\[
+\alpha_1\simeq1.4303\pi,\quad
+\alpha_2\simeq2.4590\pi,\quad
+\alpha_3\simeq3.4709\pi.
+\]
+因 $\alpha=\pi b\sin\theta/\lambda$，
+\[
+\boxed{b\sin\theta_1\simeq1.43\lambda},\quad
+\boxed{b\sin\theta_2\simeq2.46\lambda},\quad
+\boxed{b\sin\theta_3\simeq3.47\lambda}.
+\]
+\excheck $\alpha=(m+1/2)\pi$ 只是近似，不是副极大严格条件；高阶根趋近此近似。
+
+\diffractionproblem{121}{208}
+波长
+$\lambda=0.50\,\mathrm{\mu m}$ 的光以
+$\theta_0=30^\circ$ 入射宽
+$b=10\,\mathrm{\mu m}$ 的单缝。
+求中央夫琅禾费极大两侧相邻第一暗纹的衍射角。
+\exsolution
+斜入射的相位差由
+$k(\sin\theta-\sin\theta_0)x$ 给出，
+故单缝第一暗纹满足
+\[
+\boxed{b(\sin\theta-\sin\theta_0)=\pm\lambda}.
+\]
+代
+$\sin\theta_0=0.50$、
+$\lambda/b=0.050$，
+\[
+\theta_-=\arcsin(0.450)\simeq26.7^\circ,\quad
+\theta_+=\arcsin(0.550)\simeq33.4^\circ .
+\]
+因此
+\[
+\boxed{\theta_-\simeq27^\circ,\qquad
+\theta_+\simeq33^\circ}.
+\]
+\excheck 它们关于 $\theta_0$ 的角度并非精确对称，
+因为 $\sin\theta$ 是非线性函数。
+
+\diffractionproblem{122}{208}
+波长 $\lambda=0.60\,\mathrm{\mu m}$ 的平面光垂直照到玻璃楔的第一表面，
+楔角 $\theta=15^\circ$；
+相反面不透明但有一条宽
+$b=10\,\mathrm{\mu m}$、平行楔棱的单缝。
+求：(a) 零级衍射主极大相对原入射光的偏转角；
+(b) 零级主极大的角宽。
+\exsolution
+假定玻璃 $n\simeq1.50$。
+楔内光在第二表面的入射角为 $\theta$，
+折出空气的中央方向满足
+$\sin\beta=n\sin\theta$。
+(a) 相对原光线的偏折量
+\[
+\boxed{\Delta\theta_0=\arcsin(n\sin\theta)-\theta
+\simeq7.9^\circ}.
+\]
+(b) 相对内部相位中心，屏外第一暗纹满足
+$b[\sin\beta_\pm-n\sin\theta]=\pm\lambda$，
+所以零级角宽
+\[
+\boxed{\Delta\theta_{\rm width}=
+\arcsin\left(n\sin\theta+\frac{\lambda}{b}\right)
+-\arcsin\left(n\sin\theta-\frac{\lambda}{b}\right)
+\simeq7.3^\circ}.
+\]
+\excheck (a) 是中央方向\emph{偏转量}，
+(b) 是中央主瓣两侧第一暗纹的\emph{全角宽}，两者物理含义不同。
+
+\diffractionproblem{123}{208}
+平面单色光以掠射角
+$\alpha_0=1.0^\circ$ 入射周期
+$d=1.0$mm 的反射光栅；
+若在掠射角 $\alpha=3.0^\circ$ 方向出现二级夫琅禾费主极大，求波长。
+\exsolution
+反射式光栅的掠射角相位差为
+$d(\cos\alpha_0-\cos\alpha)$，
+二级极大满足
+\[
+2\lambda=d(\cos\alpha_0-\cos\alpha),
+\]
+故
+\[
+\boxed{\lambda=
+\frac d2(\cos1^\circ-\cos3^\circ)
+\simeq0.61\,\mathrm{\mu m}}.
+\]
+\excheck 掠射角是光线与\emph{光栅面}的夹角，
+不能把它当与法线的入射角直接套正弦公式。
+
+\diffractionproblem{124}{208}
+对由三条等宽缝组成的透射光栅，作夫琅禾费衍射的强度分布草图，
+其中光栅周期 $d$ 与缝宽 $b$ 之比为
+(a) $d/b=2$；
+(b) $d/b=3$。
+指出缺级和副极大数目。
+\exsolution
+三缝场为单缝衍射包络乘三等距缝相干和，
+\[
+\boxed{I(\theta)=I_1
+\left(\frac{\sin\alpha}{\alpha}\right)^2
+\left(\frac{\sin3\beta}{\sin\beta}\right)^2},
+\quad
+\alpha=\frac{\pi b\sin\theta}{\lambda},\
+\beta=\frac{\pi d\sin\theta}{\lambda}.
+\]
+主极大在 $d\sin\theta=m\lambda$，
+包络零点在 $b\sin\theta=p\lambda$。
+(a) 若 $d/b=2$，
+主极大的偶数级 $m=2p$ 同时落在包络零点，
+$\boxed{\text{偶数级缺级}}$。
+(b) 若 $d/b=3$，
+$m=3p$ 缺级，
+$\boxed{\text{每第三级缺级}}$。
+三缝干涉因子在相邻两个主极大之间有
+$N-2=1$ 个副极大、$N-1=2$ 个附加极小；
+依此绘制包络与主峰即可。
+\excheck 只给主峰位置而不乘单缝包络会漏掉缺级现象。
+
+\diffractionproblem{125}{208}
+单色光垂直入射光栅，
+$\lambda_1=0.65\,\mathrm{\mu m}$ 的二级极大出现在
+$45^\circ$；
+求波长
+$\lambda_2=0.50\,\mathrm{\mu m}$ 的三级极大角度。
+\exsolution
+由
+$d\sin45^\circ=2\lambda_1$，
+得
+$d=2\lambda_1/\sin45^\circ$。
+同一光栅的三级满足
+\[
+\sin\theta_3=\frac{3\lambda_2}{d}
+=\frac{3\lambda_2\sin45^\circ}{2\lambda_1}.
+\]
+所以
+\[
+\boxed{\theta_3=
+\arcsin\frac{3(0.50)\sin45^\circ}{2(0.65)}
+\simeq55^\circ}.
+\]
+\excheck 必须确认 $\sin\theta_3<1$，否则该衍射级不存在。
+
+\diffractionproblem{126}{208}
+波长 $\lambda=535$nm 的光垂直入射光栅。
+$35^\circ$ 是某一级主极大方向，
+且最高可见衍射级数为5。
+求光栅周期 $d$。
+\exsolution
+设 $35^\circ$ 对应级次 $m$，
+$d\sin35^\circ=m\lambda$，
+所以 $d/\lambda=m/\sin35^\circ$。
+最高级数为
+$\lfloor d/\lambda\rfloor=5$，
+即
+$5\le m/\sin35^\circ<6$，
+$5\sin35^\circ\le m<6\sin35^\circ$，
+只有整数 $m=3$ 可满足。
+因此
+\[
+\boxed{d=\frac{3\lambda}{\sin35^\circ}
+\simeq2.8\,\mathrm{\mu m}}.
+\]
+\excheck 角度为35°的级次\emph{不等于最高级次5}，
+应先用最高级次范围反推出 $m=3$。
+
+\diffractionproblem{127}{208}
+波长未知的单色光垂直落在周期
+$d=2.2\,\mathrm{\mu m}$ 的光栅，
+同一侧一级和二级主极大方向的角距为
+$\Delta\theta=15^\circ$。
+求波长。
+\exsolution
+设 $\theta_2=\theta_1+\Delta\theta$，
+光栅方程
+$\sin\theta_1=\lambda/d=x$，
+$\sin\theta_2=2x$。
+由正弦加角公式
+$2x=x\cos\Delta\theta+
+\sqrt{1-x^2}\sin\Delta\theta$，
+解得
+\[
+x=\frac{\sin\Delta\theta}
+{\sqrt{5-4\cos\Delta\theta}}.
+\]
+因此
+\[
+\boxed{\lambda=
+\frac{d\sin15^\circ}
+{\sqrt{5-4\cos15^\circ}}
+\simeq0.54\,\mathrm{\mu m}}.
+\]
+\excheck 两级必须同侧、且二级出射角小于90°；计算得到的解满足这一条件。
+
+\diffractionproblem{128}{208}
+波长 $\lambda=530$nm 的光落到周期
+$d=1.50\,\mathrm{\mu m}$ 的透射光栅。
+求\emph{最高级}主极大相对光栅法线的方向角，分别在
+(a) 垂直入射；
+(b) 以 $60^\circ$ 倾角入射时。
+\exsolution
+透射光栅方程
+\[
+d(\sin\theta_m-\sin\theta_0)=m\lambda
+\]
+（有向 $\theta_m$）。
+(a) $\theta_0=0$，
+最高 $m_{\max}=\lfloor d/\lambda\rfloor=2$，
+\[
+\boxed{\theta_2=\arcsin(2\lambda/d)
+\simeq45^\circ}.
+\]
+(b) $\theta_0=60^\circ$，
+可见角 $\sin\theta\in[-1,1]$；
+负向可见级次下限
+$m_{\min}=\lceil(-1-\sin60^\circ)d/\lambda\rceil=-5$。
+最高绝对级的 $m=-5$ 对应
+\[
+\boxed{\theta_{-5}=
+\arcsin\left(\sin60^\circ-\frac{5\lambda}{d}\right)
+\simeq-65^\circ}.
+\]
+\excheck 斜入射时不同侧允许的最大正、负级次不对称，
+不能只用 $\lfloor d/\lambda\rfloor$。
+
+\diffractionproblem{129}{209}
+在平凸柱面玻璃透镜的平面上刻透射光栅，
+光栅周期 $d=6.0\,\mathrm{\mu m}$，
+柱面曲率半径 $R=20$cm。
+波长 $\lambda=0.60\,\mathrm{\mu m}$ 的平面光垂直入射，
+求焦平面内左右对称的两个一级主极大之间的距离。
+\exsolution
+普通玻璃取 $n\simeq1.50$，
+平凸柱面透镜在聚焦方向焦距
+$f=R/(n-1)=0.40$m。
+一级衍射角满足
+$\sin\theta_1=\lambda/d=0.10$。
+焦面左右极大坐标为
+$x_\pm=\pm f\tan\theta_1$，故
+\[
+\boxed{\Delta x=2f\tan(\arcsin(\lambda/d))
+\simeq2(0.40)\frac{0.10}{\sqrt{1-0.10^2}}
+\simeq8.0\,\mathrm{cm}}.
+\]
+\excheck 本题是\emph{柱面}透镜，焦线沿光栅刻线延展，但垂直刻线的坐标间距仍可用上述焦面几何求解。
+
+\diffractionproblem{130}{209}
+波长 $\lambda=0.50\,\mathrm{\mu m}$ 的平面波垂直入射顶角
+$A=30^\circ$ 的玻璃楔前表面；
+在另一面刻透射光栅，周期
+$d=2.00\,\mathrm{\mu m}$，
+刻线平行楔棱。
+求零级和一级主极大与原入射光的夹角，
+并求最高级主极大的级次及角位置。
+\exsolution
+玻璃取 $n\simeq1.50$。
+原光沿前表面法线，在后表面上的内部入射角为 $A$。
+透射光栅相位条件可写为
+\[
+d[n\sin A-\sin(A+\theta_m)]=m\lambda,
+\]
+其中 $\theta_m$ 以原入射方向为有向零点。
+因此
+$\sin(A+\theta_m)=n\sin A-m\lambda/d
+=0.75-0.25m$；
+依本书图中的角度方向取
+\[
+\boxed{\theta_0\simeq-18.5^\circ},\quad
+\boxed{\theta_{+1}=0^\circ}
+\]
+（原书所用有向角与上式屏侧方向相反，其大小一致）。
+在原图可出射方向范围内可见最高正级
+$\boxed{m_{\max}=+6}$，其对原入射方向的角度
+\[
+\boxed{\theta_{+6}\simeq+78.5^\circ}.
+\]
+\excheck 源题角号依图的具体零向量正方向决定，光栅方程应先给出；级次不能仅凭 $d/\lambda=4$ 判定，因为光线在楔内斜入射。
