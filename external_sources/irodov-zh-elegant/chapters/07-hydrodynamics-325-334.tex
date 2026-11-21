@@ -1,0 +1,349 @@
+% Irodov user PDF, printed pp.52-54, PDF pp.61-63,
+% hydrodynamics problems 325-334, Figs 1.87-1.89 inspected.
+\exproblem{325}{52}
+从理想流体的欧拉运动方程出发，
+证明在不可压缩流体的定常流动中，
+沿任一流线成立伯努利方程。
+\exsolution
+理想流体在重力场中的欧拉方程为
+\[
+\rho\frac{D\bm v}{Dt}=-\nabla p+\rho\bm g.
+\]
+定常流动时
+$\partial\bm v/\partial t=0$，因此
+$D\bm v/Dt=(\bm v\cdot\nabla)\bm v$。
+令流线弧长为 $s$、单位切向矢量
+$\bm t=\bm v/v$，
+把上式与 $\bm t$ 作点积：
+\[
+\rho v\frac{\mathrm dv}{\mathrm ds}
+=-\frac{\mathrm dp}{\mathrm ds}
+-\rho g\frac{\mathrm dz}{\mathrm ds}.
+\]
+这里竖直坐标 $z$ 向上，故
+$\bm g\cdot\bm t=-g\,\mathrm dz/\mathrm ds$。
+在 $\rho$ 为常数的不可压缩近似下，
+\[
+\frac{\mathrm d}{\mathrm ds}
+\left(\frac12\rho v^2+p+\rho gz\right)=0.
+\]
+对同一条流线积分：
+\[
+\boxed{\frac12\rho v^2+p+\rho gz=C_{\rm streamline}}.
+\]
+\excheck 每条流线的常数一般可能不同；
+只有特定条件（如无旋势流）才能进一步说明不同
+流线拥有同一个伯努利常数。
+
+\exproblem{326}{52}
+一个很宽的竖直水槽两相对侧壁分别有两个
+截面积相同的小孔 $S=0.50\,\mathrm{cm^2}$。
+两孔高度差 $\Delta h=51\,\mathrm{cm}$。
+打开后两股水流向相反水平方向喷出。
+求容器受到的合反冲力大小。
+\exsolution
+设两孔位于水面下的深度分别为 $h_1,h_2$。
+由托里拆利定律，两孔出口速率满足
+$v_i^2=2gh_i$。
+射流质量通量为
+$\dot m_i=\rho S v_i$，
+容器对应的反冲力模为
+$F_i=\dot m_i v_i=\rho S v_i^2
+=2\rho g S h_i$。
+两股喷流方向相反，反冲合力大小为
+\[
+F_{\rm net}=|F_1-F_2|
+=2\rho gS|h_1-h_2|
+=\boxed{2\rho gS\Delta h}.
+\]
+换算 $S=5.0\times10^{-5}\,\mathrm{m^2}$、
+$\Delta h=0.51\,\mathrm m$，
+\[
+\boxed{F_{\rm net}
+=2(1000)(9.81)(5.0\times10^{-5})(0.51)
+\simeq0.50\,\mathrm N}.
+\]
+\excheck 水槽越深的孔喷速越大、反冲力越大，
+净反冲方向指向较深孔\emph{喷射方向的反方向}。
+
+\exproblem{327}{52}
+一个宽的竖直水槽高 $H=75\,\mathrm{cm}$，
+侧壁上有一条自槽底向上延伸的狭窄竖直缝，
+长度为 $\ell=50\,\mathrm{cm}$、宽
+$b=1.0\,\mathrm{mm}$。
+开缝前水槽装满水，求刚打开缝时
+全部出流水对槽壁的合反冲力大小。
+\exsolution
+设自槽底向上量坐标 $y\in[0,\ell]$。
+此处水面下深度为 $H-y$，
+出口速率由托里拆利公式为
+$v(y)=\sqrt{2g(H-y)}$。
+微小出流面积 $\mathrm dA=b\,\mathrm dy$。
+单位时间流出的水平动量为
+$\mathrm dF=\rho v(y)^2\,\mathrm dA
+=2\rho g(H-y)b\,\mathrm dy$。
+沿整个缝长度积分：
+\[
+F=\int_0^\ell2\rho gb(H-y)\,\mathrm dy
+=2\rho gb(H\ell-\ell^2/2).
+\]
+因此
+\[
+\boxed{F=\rho gb\ell(2H-\ell)}.
+\]
+代入数值：
+$\boxed{F\simeq4.91\,\mathrm N\approx5.0\,\mathrm N}$。
+\excheck 这是\emph{打开瞬间}的反冲力。
+随水面下降，各点深度改变，反冲力不再保持不变。
+
+\exproblem{328}{53}
+一个大水箱经内径半径
+$r=0.50\,\mathrm{cm}$ 的直角弯管出水
+（原书图1.87）。
+弯管水平部分长 $\ell=22\,\mathrm{cm}$，
+相对点 $O$ 的水平动量作用力臂为 $\ell$。
+体积流量为 $Q=0.50\,\mathrm{L/s}$。
+求出流水对管壁关于 $O$ 的反作用\emph{力矩大小}。
+\exsolution
+设管截面积 $A=\pi r^2$。
+由不可压缩连续性，出水速度
+$v=Q/A$。垂直向下的出口质量流率
+$\dot m=\rho Q$，每秒携出的竖向动量为
+$\dot m\,v=\rho Q^2/A$。
+相对入口点 $O$，垂直动量通量的力臂为
+$\ell$；入口水平动量通量沿通过 $O$ 的方向，
+不贡献该点的力矩。
+因此液体对弯管的反力矩模为
+\[
+\boxed{N=\ell\frac{\rho Q^2}{\pi r^2}}.
+\]
+取水密度 $\rho=1000\,\mathrm{kg/m^3}$、
+$Q=5.0\times10^{-4}\,\mathrm{m^3/s}$、
+$r=5.0\times10^{-3}\,\mathrm m$、$\ell=0.22\,\mathrm m$，
+\[
+\boxed{N\simeq0.70\,\mathrm{N\,m}}.
+\]
+\excheck 必须将升/秒换算成立方米/秒；
+该式假定忽略管内流动产生的复杂附加壁面力矩与
+非均匀出口速度剖面。
+
+\exproblem{329}{53}
+一个大开口水箱侧壁装有向外收缩的水平短管
+（原书图1.88），入口横截面积
+$S=3.0\,\mathrm{cm^2}$、出口面积
+$s=1.0\,\mathrm{cm^2}$。
+自由水面高出短管中心 $h=4.6\,\mathrm m$，
+忽略黏性。求试图将短管从水箱侧壁
+\emph{向外拔出}的水平水动力大小。
+\exsolution
+出水口通大气，流速
+$v_s=\sqrt{2gh}$，
+入口流速由连续性为
+$v_S=(s/S)v_s$。
+入口相对大气的静压由伯努利式为
+\[
+p_S-p_0=\rho gh-\frac12\rho v_S^2
+=\rho gh\left(1-\frac{s^2}{S^2}\right).
+\]
+取收缩短管内水为控制体。
+其水平动量流出减流入的通量为
+$\rho s v_s(v_s-v_S)$。
+入口压强、出口大气压与短管壁对流体作用力
+合起来提供该动量变化。
+以相对大气压计，短管\emph{对水}的水平合力为
+\[
+F_{{\rm wall}\to{\rm water}}
+=\rho s v_s(v_s-v_S)-(p_S-p_0)S
+=-\rho gh\,\frac{(S-s)^2}{S}.
+\]
+牛顿第三定律使水对短管向外的作用力为
+\[
+\boxed{F_{\rm pull}=\rho gh\frac{(S-s)^2}{S}}.
+\]
+代入 SI 单位 $S=3\times10^{-4}\,\mathrm{m^2}$、
+$s=10^{-4}\,\mathrm{m^2}$，得
+$\boxed{F_{\rm pull}\simeq6.0\,\mathrm N}$。
+\excheck 不可只用静水压强乘出口面积，
+还必须计入收缩管两端的动量流率变化。
+
+\exproblem{330}{53}
+一个盛水的竖直圆柱形容器以恒角速度
+$\omega$ 绕自身对称轴旋转，液体最终达到
+相对容器静止的稳定状态。
+求：(a) 自由液面的形状；
+(b) 如果槽底中心静压为 $p_0$，
+槽底离轴距离 $r$ 处的静压强。
+\exsolution
+在随容器转动的参考系中，
+液体处于相对静力平衡：
+\[
+\nabla p=\rho(\omega^2r\,\bm e_r-g\bm e_z).
+\]
+因此径向与竖直偏导数满足
+$\partial_rp=\rho\omega^2r$、
+$\partial_zp=-\rho g$。
+积分得
+\[
+p(r,z)=C+\tfrac12\rho\omega^2r^2-\rho gz.
+\]
+自由液面压强为大气常数，
+故自由表面相对其轴心的高度为
+\[
+\boxed{z(r)-z(0)=\frac{\omega^2r^2}{2g}},
+\]
+是旋转抛物面。
+槽底各点同高 $z=0$，
+压强分布为
+\[
+\boxed{p_{\rm bottom}(r)=p_0+\frac12\rho\omega^2r^2}.
+\]
+\excheck 自由表面上压强处处相同，
+但高度随 $r$ 增加；底面同高而压强随 $r$ 增加，
+二者不矛盾。
+
+\exproblem{331}{53}
+半径为 $R=10\,\mathrm{cm}$ 的水平薄圆盘
+置于充满油的水平圆柱形狭缝内
+（原书图1.89）。
+圆盘与上、下固定平面的间隙均为
+$h=1.0\,\mathrm{mm}$，
+油的动力黏度
+$\eta=0.08\,\mathrm{P}$
+（泊，$1\,\mathrm P=0.1\,\mathrm{Pa\,s}$）。
+圆盘绕中心轴以角速度
+$\omega=60\,\mathrm{rad/s}$ 旋转。
+忽略边缘效应，求黏滞力耗散功率。
+\exsolution
+盘面距轴半径为 $r$ 处线速度为
+$v_\theta=\omega r$。在窄隙内，近似线性速度剖面
+产生剪切应力
+\[
+\tau(r)=\eta\frac{\omega r}{h}.
+\]
+单侧盘面半径 $r$、宽 $\mathrm dr$ 的环带面积
+$2\pi r\,\mathrm dr$，
+其摩擦力矩微元
+$\mathrm dN_1=\tau(r)\,2\pi r\,\mathrm dr\cdot r
+=2\pi\eta\omega r^3\,\mathrm dr/h$。
+上下两面都有黏滞作用，总力矩
+\[
+N=2\int_0^R\mathrm dN_1
+=\frac{\pi\eta\omega R^4}{h}.
+\]
+所需驱动功率等于力矩乘角速度：
+\[
+\boxed{P=N\omega=\frac{\pi\eta\omega^2R^4}{h}}.
+\]
+用 $\eta=0.008\,\mathrm{Pa\,s}$ 计算，
+$\boxed{P\simeq9.0\,\mathrm W}$。
+\excheck 必须包含圆盘的\emph{上下两个面}，
+并正确把泊换算为 SI 黏度单位。
+
+\exproblem{332}{53}
+半径为 $R_1$ 的无限长内圆柱
+以恒定轴向速度 $v_0$ 在
+半径为 $R_2>R_1$ 的静止同轴外圆柱内移动，
+中间充满黏性液体。
+忽略端部效应、假定稳定层流且无轴向压强梯度。
+求液体轴向速度 $v_z(r)$ 的径向分布。
+\exsolution
+流动只沿轴向，速度只随半径 $r$ 变化。
+牛顿黏性流体的稳定轴向运动方程在无压强梯度时为
+\[
+0=\eta\frac1r\frac{\mathrm d}{\mathrm dr}
+\left(r\frac{\mathrm dv_z}{\mathrm dr}\right).
+\]
+积分一次给 $r\,\mathrm dv_z/\mathrm dr=C_1$，
+再积分得到
+$v_z(r)=C_1\ln r+C_2$。
+利用无滑移边界
+$v_z(R_1)=v_0$、$v_z(R_2)=0$，
+\[
+\boxed{v_z(r)=v_0
+\frac{\ln(r/R_2)}{\ln(R_1/R_2)}},
+\qquad R_1\le r\le R_2.
+\]
+\excheck 在内壁为 $v_0$、外壁为零，
+中间连续单调下降；圆柱坐标中的分布是对数函数，
+不是两平行平板间的严格线性函数。
+
+\exproblem{333}{53--54}
+两长同轴圆柱之间有黏度为 $\eta$ 的层流液体，
+内柱半径 $R_1$ 且静止，
+外柱半径 $R_2>R_1$、以角速度 $\omega_2$
+绕公共轴旋转。已知半径 $r$ 处圆柱面上的剪切应力
+$\tau(r)=\eta r\,\mathrm d\omega_f/\mathrm dr$，
+其中 $\omega_f(r)$ 是流体局部角速度。
+求：(a) $\omega_f(r)$；
+(b) 单位轴向长度上作用于外柱的摩擦力矩大小。
+\exsolution
+稳定轴对称层流中，单位长度通过半径 $r$ 圆柱面的
+扭矩为
+\[
+N'(r)=2\pi r^2\tau(r)
+=2\pi\eta r^3\frac{\mathrm d\omega_f}{\mathrm dr}.
+\]
+稳态角动量传递要求 $N'(r)$ 与 $r$ 无关。
+故 $\mathrm d\omega_f/\mathrm dr=C/r^3$，
+积分得到
+$\omega_f(r)=A+B/r^2$。
+无滑移边界为
+$\omega_f(R_1)=0$、
+$\omega_f(R_2)=\omega_2$。
+解得
+\[
+\boxed{\omega_f(r)=
+\frac{\omega_2R_2^2}{R_2^2-R_1^2}
+\left(1-\frac{R_1^2}{r^2}\right)}.
+\]
+由导数
+$\omega_f'(r)=
+2\omega_2R_1^2R_2^2/
+[(R_2^2-R_1^2)r^3]$，
+得到外柱受到的阻转力矩每单位长度大小
+\[
+\boxed{N'=
+\frac{4\pi\eta\omega_2 R_1^2R_2^2}
+{R_2^2-R_1^2}}.
+\]
+\excheck 该结果是\emph{单位轴向长度}的力矩，
+量纲为 $\mathrm{N\,m/m}=\mathrm N$；
+实际长为 $L$ 的外柱总阻转矩为 $N'L$。
+
+\exproblem{334}{54}
+半径为 $R$、长度为 $\ell$ 的圆管中流过
+密度为 $\rho$、动力黏度为 $\eta$ 的稳定层流，
+轴向流速剖面为
+$v(r)=v_0(1-r^2/R^2)$。
+求：(a) 体积流量；
+(b) 管内流体动能；
+(c) 流体对管壁的总黏滞摩擦力；
+(d) 两端压强差。
+\exsolution
+(a) 以同心环带积分流量：
+\[
+Q=\int_0^R v(r)2\pi r\,\mathrm dr
+=2\pi v_0\int_0^R(r-r^3/R^2)\,\mathrm dr
+=\boxed{\frac12\pi v_0R^2}.
+\]
+(b) 管内各环带长度均为 $\ell$，动能
+\[
+K=\frac12\rho\ell\int_0^R v(r)^2\,2\pi r\,\mathrm dr
+=\boxed{\frac16\pi\ell R^2\rho v_0^2}.
+\]
+(c) 牛顿黏性应力在管壁的大小
+$|\tau_w|=\eta|v'(R)|=2\eta v_0/R$。
+壁面积 $2\pi R\ell$，所以
+\[
+\boxed{F_f=|\tau_w|(2\pi R\ell)=4\pi\eta\ell v_0}.
+\]
+(d) 稳态充分发展流动中，
+端面压强推动力平衡壁面黏滞阻力，
+$\Delta p\,(\pi R^2)=F_f$，故
+\[
+\boxed{\Delta p=\frac{4\eta\ell v_0}{R^2}}.
+\]
+\excheck 与泊肃叶定律
+$Q=\pi R^4\Delta p/(8\eta\ell)$
+互相一致；本题 $v_0$ 是轴心最大速率，
+平均速率为 $v_0/2$。
