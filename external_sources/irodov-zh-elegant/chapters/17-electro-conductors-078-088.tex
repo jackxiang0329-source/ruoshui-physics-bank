@@ -1,0 +1,481 @@
+% Irodov Part III §3.2, original 78--88, PDF pp.111--112,
+% printed pp.102--103; Fig 3.10--3.14 checked against source images.
+\electroconductproblem{78}{102}
+玻璃与真空分界面上的点 A
+（见图3.10），真空侧电场强度
+$E_0=10.0\,\mathrm{V/m}$，
+与从玻璃指向真空的法线夹角
+$\alpha_0=30^\circ$。
+求玻璃内近边界处的场强 $E$、
+与法线夹角 $\alpha$、
+以及玻璃的束缚表面电荷密度。
+\exsolution
+设玻璃相对介电常数为 $\varepsilon_r$。
+界面无自由面电荷时，
+法向 $\bm D$ 连续、切向 $\bm E$ 连续：
+\[
+E_n=\frac{E_0\cos\alpha_0}{\varepsilon_r},
+\qquad E_t=E_0\sin\alpha_0.
+\]
+因此
+\[
+\boxed{E=E_0\sqrt{
+\frac{\cos^2\alpha_0}{\varepsilon_r^2}
++\sin^2\alpha_0}},
+\qquad
+\boxed{\tan\alpha=\varepsilon_r\tan\alpha_0}.
+\]
+玻璃极化
+$\bm P=\varepsilon_0(\varepsilon_r-1)\bm E$，
+故面束缚电荷
+\[
+\boxed{\sigma_b=
+\varepsilon_0\frac{\varepsilon_r-1}{\varepsilon_r}
+E_0\cos\alpha_0}.
+\]
+取原书数值答案所用的玻璃介电常数
+$\varepsilon_r\simeq6$，
+得到
+\[
+\boxed{E\simeq5.2\,\mathrm{V/m}},\quad
+\boxed{\alpha\simeq74^\circ},\quad
+\boxed{\sigma_b\simeq64\,\mathrm{pC/m^2}}.
+\]
+\excheck 玻璃的 $\varepsilon_r$ 未在本题直接列数值，
+因此数值须说明采用的常用玻璃介电常数，
+公式不依赖这一选择。
+
+\electroconductproblem{79}{102}
+一均匀各向同性电介质半空间的表面为平面，
+其相对介电常数为 $\varepsilon_r$。
+真空侧近表面的均匀电场
+$\bm E_0$ 与法线成 $\theta$ 角
+（图3.11）。
+假设两侧场分别均匀，求：
+(a) 以界面上点为球心、半径 $R$ 的球面的
+$\bm E$ 通量；
+(b) 沿图中与 $\bm E_0$ 平行的法截面内、
+跨越界面的长为 $\ell$ 的狭矩形闭路的
+$\bm D$ 环流。
+\exsolution
+无自由面电荷时
+$E_{{\rm diel},n}=E_0\cos\theta/\varepsilon_r$，
+$E_{{\rm diel},t}=E_0\sin\theta$。
+(a) 球面的一半处于真空、一半在电介质。
+每半球均匀场的通量由投影面积
+$\pi R^2$ 给出，
+所以
+\[
+\Phi_E=
+\pi R^2E_0\cos\theta-
+\pi R^2\frac{E_0\cos\theta}{\varepsilon_r}.
+\]
+即
+\[
+\boxed{\Phi_E=
+\frac{\varepsilon_r-1}{\varepsilon_r}
+\pi R^2 E_0\cos\theta}.
+\]
+(b) 让狭矩形两个长边分别位于界面的
+真空侧和介质侧，
+并按图3.11给定方向取闭路。
+切向电场连续，
+但切向位移分别为
+$D_{0,t}=\varepsilon_0E_0\sin\theta$、
+$D_{{\rm diel},t}=\varepsilon_0\varepsilon_rE_0\sin\theta$。
+跨界面短边在宽度趋零时不贡献，
+所以
+\[
+\boxed{\oint_\Gamma\bm D\cdot\mathrm d\bm l
+=-\varepsilon_0(\varepsilon_r-1)
+\ell E_0\sin\theta}.
+\]
+\excheck $\bm E$ 满足无旋性，
+但 $\bm D$ 穿越不同介电常数的边界时
+其切向分量一般不连续，
+故 $\oint\bm D\cdot\mathrm d\bm l$
+可以非零。
+
+\electroconductproblem{80}{102}
+一块沿 $x$ 轴法向、厚度为 $2d$
+的无限大均匀电介质平板，
+相对介电常数为 $\varepsilon_r$，
+在 $|x|<d$ 内存在均匀\emph{自由体电荷密度}
+$\rho_f$。
+设中心电势为零，求：
+(a) 电场 $E_x(x)$、电势 $\varphi(x)$；
+(b) 束缚电荷的体密度和表面密度。
+\exsolution
+系统关于 $x=0$ 对称，
+$\bm D$ 在介质内部满足
+$\mathrm dD_x/\mathrm dx=\rho_f$，
+由 $D_x(0)=0$，
+$D_x=\rho_fx$。
+在外侧
+$D_x=\rho_fd\,\operatorname{sgn}x$。
+因此
+\[
+\boxed{E_x(x)=
+\begin{cases}
+\dfrac{\rho_f x}{\varepsilon_0\varepsilon_r},
+&|x|\le d,\\[2mm]
+\dfrac{\rho_fd}{\varepsilon_0}\operatorname{sgn}x,
+&|x|\ge d.
+\end{cases}}
+\]
+用 $E_x=-\varphi'(x)$，
+并取 $\varphi(0)=0$、电势连续，
+\[
+\boxed{\varphi(x)=
+\begin{cases}
+-\dfrac{\rho_fx^2}{2\varepsilon_0\varepsilon_r},
+&|x|\le d,\\[2mm]
+-\dfrac{\rho_fd^2}{2\varepsilon_0\varepsilon_r}
+-\dfrac{\rho_fd}{\varepsilon_0}(|x|-d),
+&|x|\ge d.
+\end{cases}}
+\]
+极化
+$\bm P=(\varepsilon_r-1)\bm D/\varepsilon_r$。
+内部束缚体密度
+\[
+\boxed{\rho'_b=-\nabla\cdot\bm P
+=-\rho_f\frac{\varepsilon_r-1}{\varepsilon_r}}.
+\]
+两侧束缚面电荷均同号且大小相等：
+\[
+\boxed{\sigma'_b(\pm d)=
++\rho_fd\frac{\varepsilon_r-1}{\varepsilon_r}}.
+\]
+\excheck 电场为\emph{奇函数}，
+电势为\emph{偶函数}；
+两侧束缚面电荷与内部束缚体电荷
+总量每单位面积相消：
+$2\sigma'_b+2d\rho'_b=0$。
+
+\electroconductproblem{81}{102}
+半径 $R$ 的均匀各向同性电介质实心球
+相对介电常数为 $\varepsilon_r$，
+内部自由体电荷密度
+$\rho_f>0$ 均匀分布。
+求 (a) 内外电场与电势的半径函数；
+(b) 束缚电荷体密度与表面密度；
+说明图线形状。
+\exsolution
+高斯定律对位移矢量：
+$D_r(r)=\rho_fr/3$（$r<R$），
+$D_r(r)=\rho_fR^3/(3r^2)$（$r>R$）。
+因此
+\[
+\boxed{E(r)=
+\begin{cases}
+\dfrac{\rho_fr}{3\varepsilon_0\varepsilon_r},
+&r<R,\\[2mm]
+\dfrac{\rho_fR^3}{3\varepsilon_0r^2},
+&r>R.
+\end{cases}}
+\]
+取无穷远电势为零，
+球面
+$\varphi(R)=\rho_fR^2/(3\varepsilon_0)$，
+由内场积分得到
+\[
+\boxed{\varphi(r)=
+\begin{cases}
+\dfrac{\rho_fR^2}{3\varepsilon_0}
++\dfrac{\rho_f(R^2-r^2)}
+{6\varepsilon_0\varepsilon_r},&r\le R,\\[2mm]
+\dfrac{\rho_fR^3}{3\varepsilon_0r},&r\ge R.
+\end{cases}}
+\]
+内部极化
+$\bm P=(\varepsilon_r-1)\rho_f\bm r/(3\varepsilon_r)$，
+所以
+\[
+\boxed{\rho'_b=
+-\rho_f\frac{\varepsilon_r-1}{\varepsilon_r}},
+\quad
+\boxed{\sigma'_b=
+\frac{\varepsilon_r-1}{\varepsilon_r}
+\frac{\rho_fR}{3}}.
+\]
+\excheck $E(r)$ 在球内线性增加，
+在 $r=R$ 因介电常数改变而跳跃，
+球外按 $1/r^2$ 衰减；
+电势连续，内段为抛物线、外段为 $1/r$。
+全部束缚体、面电荷代数和为零。
+
+\electroconductproblem{82}{102}
+半径 $R$、厚度 $d\ll R$ 的薄圆盘形电介质，
+具有均匀固定极化强度 $\bm P$，
+其方向\emph{位于圆盘平面内}。
+求圆盘中心电场。
+\exsolution
+取 $\bm P=P\bm e_x$。
+上下两个平面因其法线与 $\bm P$ 垂直，
+束缚面电荷为零；
+只有侧面 $r=R$ 带束缚电荷
+$\sigma_b=P\cos\phi$。
+在圆盘中心，侧面元
+$\mathrm dS=R\,\mathrm d\phi\,\mathrm dz$
+产生
+$\mathrm d\bm E=
+-k\sigma_b(R\bm e_r+z\bm e_z)
+\,\mathrm dS/(R^2+z^2)^{3/2}$。
+积分侧壁
+$z\in[-d/2,d/2]$ 及角度，
+由
+$\int_0^{2\pi}\cos^2\phi\,\mathrm d\phi=\pi$，
+得
+\[
+\bm E(0)=
+-\frac{PR^2}{4\varepsilon_0}
+\left(\int_{-d/2}^{d/2}
+\frac{\mathrm dz}{(R^2+z^2)^{3/2}}\right)\bm e_x.
+\]
+在 $d\ll R$ 时，
+括号内约为 $d/R^3$，
+故
+\[
+\boxed{\bm E(0)\simeq
+-\frac{d}{4\varepsilon_0R}\bm P}.
+\]
+\excheck 圆盘极化平行盘面，
+故只有侧壁带束缚电荷；
+若误当成盘面法向极化，将得到完全不同的场。
+
+\electroconductproblem{83}{102--103}
+无自由电荷的无限大电介质平板，
+厚度为 $2d$，取中面为 $x=0$。
+其极化分布
+$\bm P(x)=\bm P_0(1-x^2/d^2)$，
+$\bm P_0$ 垂直平板。
+求板内电场与两表面间电势差。
+\exsolution
+设 $\bm P_0=P_0\bm e_x$。
+没有自由电荷，
+$\mathrm dD_x/\mathrm dx=0$。
+且极化在 $|x|=d$ 处为零，
+无外加电场的孤立板在外侧场为零，
+故 $D_x=0$，即
+$\varepsilon_0E_x+P_x=0$。
+因此
+\[
+\boxed{\bm E(x)=
+-\frac{\bm P_0}{\varepsilon_0}
+\left(1-\frac{x^2}{d^2}\right)},\qquad |x|\le d.
+\]
+两表面间电势差定义为
+$\varphi(d)-\varphi(-d)$，
+有
+\[
+\Delta\varphi=
+-\int_{-d}^dE_x\,\mathrm dx
+=\frac{P_0}{\varepsilon_0}
+\int_{-d}^d(1-x^2/d^2)\,\mathrm dx,
+\]
+故
+\[
+\boxed{\Delta\varphi=\frac{4dP_0}{3\varepsilon_0}}.
+\]
+\excheck 电介质平板外侧场为零是此\emph{无外加场}
+的边界条件；否则 $D$ 可能带另一常数。
+
+\electroconductproblem{84}{103}
+两板间初始为空气的平行板电容器，
+间距 $d$，初电场 $E_0$。
+现按图3.12把\emph{沿场强方向的半层厚度}
+替换为相对介电常数 $\varepsilon_r$ 的材料，
+形成两个各厚 $d/2$ 的\emph{串联层}。
+求气隙部分1和介质部分2的
+$\bm E,\bm D$ 模：
+(a) 极板电压不变；(b) 极板自由电荷不变。
+\exsolution
+界面没有自由面电荷，故
+$D_1=D_2=D$。
+两层法向场
+$E_1=D/\varepsilon_0$、
+$E_2=D/(\varepsilon_0\varepsilon_r)$。
+(a) 电压固定为初值 $V_0=E_0d$，
+\[
+V_0=\frac d2(E_1+E_2)
+=\frac{dD}{2\varepsilon_0}
+(1+1/\varepsilon_r).
+\]
+所以
+\[
+\boxed{E_1=\frac{2\varepsilon_r}{\varepsilon_r+1}E_0},
+\qquad
+\boxed{E_2=\frac2{\varepsilon_r+1}E_0},
+\quad
+\boxed{D_1=D_2=
+\frac{2\varepsilon_r}{\varepsilon_r+1}\varepsilon_0E_0}.
+\]
+(b) 极板自由电荷不变，
+$D=D_0=\varepsilon_0E_0$，因此
+\[
+\boxed{E_1=E_0,\quad E_2=E_0/\varepsilon_r},
+\qquad
+\boxed{D_1=D_2=\varepsilon_0E_0}.
+\]
+\excheck 图3.12 是\emph{沿电场方向的串联半层}，
+与第85题的并联半面积构型不同。
+
+\electroconductproblem{85}{103}
+把前题的电介质改按图3.13布置，
+占电容器极板面积的一半，
+且每块区域均跨越\emph{全板间距}，
+形成空气区1与介质区2的\emph{并联}。
+其余条件相同。求 (a) 电压不变；
+(b) 极板电荷不变时各区 $E,D$。
+\exsolution
+忽略边缘效应时，
+两区域上下极板相同，
+因此具有相同电压 $V$，
+$E_1=E_2=V/d$。
+(a) $V=V_0=E_0d$，
+故
+\[
+\boxed{E_1=E_2=E_0},\qquad
+\boxed{D_1=\varepsilon_0E_0,\quad
+D_2=\varepsilon_r\varepsilon_0E_0}.
+\]
+(b) 极板总面积为 $S$，
+原自由电荷
+$Q_0=\varepsilon_0E_0S$。
+新电容为两个面积 $S/2$ 的电容并联：
+\[
+C_{\rm new}=\frac{\varepsilon_0S}{2d}
+(1+\varepsilon_r).
+\]
+因此
+$V=Q_0/C_{\rm new}
+=2E_0d/(1+\varepsilon_r)$，
+\[
+\boxed{E_1=E_2=\frac{2E_0}{1+\varepsilon_r}},
+\]
+\[
+\boxed{D_1=\frac{2\varepsilon_0E_0}{1+\varepsilon_r},
+\quad
+D_2=\frac{2\varepsilon_r\varepsilon_0E_0}
+{1+\varepsilon_r}}.
+\]
+\excheck 固定\emph{总电荷}不表示两半极板
+各自的自由电荷密度保持原值；
+并联两区的自由电荷会重新分配。
+
+\electroconductproblem{86}{103}
+一个同心球形电容器，
+内外导体球壳同心、内导体带自由电荷 $q$。
+两极板之间的空间按图3.14
+沿穿过球心的平面划为两半：
+一半是真空，一半填相对介电常数
+$\varepsilon_r$ 的均匀材料。
+求极板之间的场强模 $E(r)$。
+\exsolution
+球形等势导体的边界迫使电场沿径向。
+两半空间共用同一径向电势梯度，
+故两侧 $E_r(r)$ 相同，
+而 $D$ 不同：
+$D_{\rm vac}=\varepsilon_0 E_r$，
+$D_{\rm diel}=\varepsilon_0\varepsilon_r E_r$。
+对半径 $r$ 的球面取高斯通量，
+真空和介质各占半球面积 $2\pi r^2$：
+\[
+q=\oint\bm D\cdot\mathrm d\bm S
+=2\pi r^2\varepsilon_0E_r+
+2\pi r^2\varepsilon_r\varepsilon_0E_r.
+\]
+因此
+\[
+\boxed{E(r)=
+\frac{|q|}{2\pi\varepsilon_0(1+\varepsilon_r)r^2}}.
+\]
+\excheck 两半分区\emph{并联}，不能把介质
+误当成径向串联层；
+当 $\varepsilon_r=1$ 恢复
+$|q|/(4\pi\varepsilon_0r^2)$。
+
+\electroconductproblem{87}{103}
+两个带同号等量电荷的相同小球，
+由等长绝缘线悬挂于同一点。
+将周围介质由空气换成煤油后，
+两线间张角\emph{保持不变}。
+求小球材料密度 $\rho$，
+煤油密度记为 $\rho_0$，
+相对介电常数为 $\varepsilon_r$。
+\exsolution
+在空气中静电排斥力为 $F_e$，
+球的有效重力约为 $mg$。
+在煤油中，同样球间距离下
+库仑力降为 $F_e/\varepsilon_r$；
+与此同时浮力使有效重力变为
+\[
+mg-\rho_0Vg=(\rho-\rho_0)Vg
+=mg\left(1-\frac{\rho_0}{\rho}\right).
+\]
+张角不变要求
+\[
+\frac{F_e}{mg}
+=\frac{F_e/\varepsilon_r}
+{mg(1-\rho_0/\rho)}.
+\]
+约去公共因子，
+$1-\rho_0/\rho=1/\varepsilon_r$，
+得
+\[
+\boxed{\rho=
+\frac{\varepsilon_r}{\varepsilon_r-1}\rho_0}.
+\]
+取煤油常用近似
+$\varepsilon_r\simeq2.0$、
+$\rho_0\simeq0.80\,\mathrm{g/cm^3}$，
+\[
+\boxed{\rho\simeq1.6\,\mathrm{g/cm^3}}.
+\]
+\excheck 不能只考虑介电常数使库仑力减小，
+必须同时计入煤油对小球的浮力。
+
+\electroconductproblem{88}{103}
+一个半径
+$R=3.0\,\mathrm{cm}$ 的均匀各向同性电介质球，
+相对介电常数为
+$\varepsilon_r=5.00$，
+球内部产生均匀电场
+$E=100\,\mathrm{V/m}$。
+求：(a) 最大束缚面电荷密度；
+(b) 同号束缚电荷的总量。
+\exsolution
+线性介质的极化矢量为
+$\bm P=\varepsilon_0(\varepsilon_r-1)\bm E$。
+均匀极化球的表面束缚电荷
+$\sigma_b(\theta)=\bm P\cdot\bm n
+=P\cos\theta$。
+故最大面密度位于极化轴两极：
+\[
+\boxed{\sigma_{b,\max}=
+\varepsilon_0(\varepsilon_r-1)E}.
+\]
+代入数值：
+\[
+\boxed{\sigma_{b,\max}\simeq
+(8.854\times10^{-12})(4)(100)
+=3.5\,\mathrm{nC/m^2}}.
+\]
+同号电荷全部位于一半球面，
+其总量是
+\[
+Q'_+=\int_0^{2\pi}\int_0^{\pi/2}
+P\cos\theta R^2\sin\theta
+\,\mathrm d\theta\,\mathrm d\phi
+=\pi R^2P.
+\]
+因此
+\[
+\boxed{Q'_+=\pi R^2
+\varepsilon_0(\varepsilon_r-1)E
+\simeq1.0\times10^{-11}\,\mathrm C
+=10\,\mathrm{pC}}.
+\]
+\excheck 负束缚电荷总量为 $-Q'_+$，
+所以中性电介质球的束缚电荷代数和为零。
