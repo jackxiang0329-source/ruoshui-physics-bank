@@ -1,0 +1,137 @@
+% I. E. Irodov, Problems in General Physics, Part V §5.1, original 58--63.
+% Verified source: uploaded PDF pages 205--206, printed 196--197; book answers PDF ~336.
+\opticsproblem{58}{196}
+一片空气中的厚玻璃弯月透镜，凸面曲率半径为 $R_1$、凹面为 $R_2$，凸面半径比凹面大 $\Delta R=1.5\,\mathrm{cm}$。(a) 求成为无焦望远系统时所需厚度。(b) 若两曲率半径分别为 $10.0$ 与 $7.5\,\mathrm{cm}$，求总光焦度为 $-1.0\,\mathrm D$ 时的厚度。
+\exsolution
+以入射方向为正，厚度为 $d$，玻璃折射率取 $n\simeq1.50$。两面的面光焦度为
+$\Phi_1=(n-1)/R_1$、
+$\Phi_2=-(n-1)/R_2$。厚透镜总光焦度
+\[
+\Phi=\Phi_1+\Phi_2-\frac dn\Phi_1\Phi_2
+=(n-1)\left(\frac1{R_1}-\frac1{R_2}\right)
++\frac{d(n-1)^2}{nR_1R_2}.
+\]
+(a) 无焦条件 $\Phi=0$：
+\[
+\boxed{d=\frac{n(R_1-R_2)}{n-1}
+=\frac{n\Delta R}{n-1}=4.5\,\mathrm{cm}}.
+\]
+(b) 由上式解 $d$，
+\[
+d=\frac{nR_1R_2}{(n-1)^2}
+\left[\Phi-(n-1)\left(\frac1{R_1}-\frac1{R_2}\right)\right],
+\]
+代入 $R_1=0.100$m、$R_2=0.075$m、$\Phi=-1\,\mathrm D$，
+\[
+\boxed{d=3.0\,\mathrm{cm}}.
+\]
+\excheck 厚度单位在光焦度方程中必须为米；令 $d=0$ 还原为普通发散弯月薄透镜。
+
+\opticsproblem{59}{196}
+求厚玻璃弯月透镜的主平面位置、焦距及光焦度的正负：(a) 厚度 $d$，两面的曲率半径模均为 $R$；(b) 两面同心，半径分别为 $R_1,R_2$，且 $R_2>R_1$。
+\exsolution
+总光焦度与主平面位置满足
+\[
+\Phi=\Phi_1+\Phi_2-\frac dn\Phi_1\Phi_2,\quad
+x=\frac{d\Phi_2}{n\Phi},\quad
+x'=-\frac{d\Phi_1}{n\Phi},
+\]
+$x,x'$ 分别从前、后表面顶点沿入射方向量取。
+(a) $\Phi_1=(n-1)/R$、
+$\Phi_2=-(n-1)/R$，得
+\[
+\boxed{\Phi=\frac{d(n-1)^2}{nR^2}>0},\qquad
+\boxed{f'=\frac1\Phi=\frac{nR^2}{d(n-1)^2}},
+\]
+\[
+\boxed{x=x'=-\frac R{n-1}}.
+\]
+因此前后主平面相距 $d$，都位于凸面一侧的外部。
+(b) 同心两表面的几何曲率中心相同。以第一折射面曲率中心及第二面半径的几何符号代入，消去 $d=R_2-R_1$：
+\[
+\boxed{\Phi=\frac{n-1}{n}
+\left(\frac1{R_2}-\frac1{R_1}\right)<0}.
+\]
+两个主平面通过共同曲率中心，系统为发散型，有向焦距 $\boxed{f'=1/\Phi<0}$。
+\excheck (a) 中虽然两面的薄透镜光焦度和为零，有限厚度的传播项仍形成正光焦度；(b) 中 $R_2>R_1$ 确保所给光焦度为负。
+
+\opticsproblem{60}{196}
+由半径 $R_1=5.0$cm、$R_2=1.0$cm 的两个均匀玻璃球透镜组成无焦望远系统。较大球作物镜，求两球中心距离与角放大率。
+\exsolution
+折射率为 $n$ 的玻璃球在空气中可作球透镜，其等效焦距（相对球心主平面）为
+$f=nR/[2(n-1)]$。两球球心即各自对称主平面位置。
+无焦望远条件使两球间距
+$d=f_1+f_2$：
+\[
+\boxed{d=\frac{n(R_1+R_2)}{2(n-1)}
+\simeq9.0\,\mathrm{cm}}\quad(n=1.50).
+\]
+系统角放大率的模
+\[
+\boxed{|\Gamma|=\frac{f_1}{f_2}=\frac{R_1}{R_2}=5.0}.
+\]
+\excheck 两球均为会聚元件，对无穷远望远系统有倒像；若要保留方向，带符号角放大率为 $-5$。
+
+\opticsproblem{61}{196}
+两只完全相同的厚对称双凸玻璃透镜紧密相贴。每只透镜厚度等于球面曲率半径 $d=R=3.0$cm，求组合系统在空气中的光焦度。
+\exsolution
+每个球面折射的光焦度模为
+$\phi=(n-1)/R$。以约化角为变量的光线矩阵分别为
+\[
+\mathsf S(\phi)=\begin{pmatrix}1&0\\-\phi&1\end{pmatrix},\quad
+\mathsf T=\begin{pmatrix}1&R/n\\0&1\end{pmatrix}.
+\]
+单片透镜的矩阵是
+$\mathsf M=\mathsf S(\phi)\mathsf T\mathsf S(\phi)$，
+组合后是 $\mathsf M^2$。
+取系统矩阵下左元的负数作为空气中等效光焦度，并令 $d=R$，代数整理：
+\[
+\boxed{\Phi_{\rm tot}=\frac{2(n^2-1)}{n^2R}}.
+\]
+以 $n=1.50$、$R=0.030$m 算得
+\[
+\boxed{\Phi_{\rm tot}\simeq37\,\mathrm D}.
+\]
+\excheck 若两厚透镜中心厚度不可忽略，不能只把两个零厚薄透镜光焦度简单相加；透镜矩阵保留了内部传播效应。
+
+\opticsproblem{62}{196}
+各向同性但折射率 $n(\bm r)$ 缓慢变化的介质中，一条光线曲率半径 $\rho$ 满足
+$1/\rho=\partial_N(\ln n)$；其中 $\partial_N$ 为沿光线主法线的方向导数。利用局部折射定律推导。
+\exsolution
+沿光线弧长记单位切线 $\bm t=\mathrm d\bm r/\mathrm ds$，费马原理在光学非均匀介质中的光线方程为
+\[
+\frac{\mathrm d}{\mathrm ds}(n\bm t)=\nabla n.
+\]
+展开左端：
+$(\mathrm dn/\mathrm ds)\bm t+
+n\,\mathrm d\bm t/\mathrm ds=\nabla n$。
+取垂直 $\bm t$ 的主法线 $\bm N$ 的投影，第一项消失。
+弗雷内公式 $\mathrm d\bm t/\mathrm ds=\bm N/\rho$，
+从而
+\[
+\frac n\rho=\nabla n\cdot\bm N=\partial_N n,
+\qquad
+\boxed{\frac1\rho=\partial_N(\ln n)}.
+\]
+\excheck 曲率朝折射率增大的方向，若折射率梯度垂直于光线为零，则曲率为零，恢复直线传播。
+
+\opticsproblem{63}{196--197}
+地表附近水平方向传播的光线，空气折射率沿高度的梯度模为
+$|\nabla n|\simeq3\times10^{-8}\,\mathrm{m^{-1}}$。
+求光线的曲率半径；若光线要沿地球表面弯曲绕地一周，需多大的折射率梯度？
+\exsolution
+由上题
+$\rho^{-1}=|\partial_N\ln n|\simeq|\nabla n|/n$。
+空气 $n\simeq1$，故
+\[
+\boxed{\rho\simeq\frac1{3\times10^{-8}}
+\simeq3.3\times10^7\,\mathrm m}.
+\]
+若光线与地球表面保持同曲率，
+$\rho=R_\oplus\simeq6.4\times10^6$m，
+要求
+\[
+\boxed{|\nabla n|_{\rm req}\simeq
+\frac1{R_\oplus}\simeq1.6\times10^{-7}\,\mathrm{m^{-1}}}.
+\]
+\excheck 需折射率朝地面方向增大才可使光线朝地心弯曲；只给梯度大小不确定方向。
