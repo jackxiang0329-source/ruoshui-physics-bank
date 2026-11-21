@@ -287,7 +287,7 @@ part_two = (thermo_ids + energy_ids
             + subject_results["kinetic"] + subject_results["entropy"]
             + subject_results["capillarity"] + subject_results["phase"]
             + subject_results["transport"])
-if part_two != list(range(1, 293)):
+if part_two != list(range(1, 258)):
     errors.append("Part II combined original IDs are not exactly 1..257")
 if main.count(r"\section{气体分子运动论") != 1:
     errors.append("kinetic theory section count is not one")
