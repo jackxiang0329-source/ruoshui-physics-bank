@@ -1,0 +1,304 @@
+% Irodov VI §6.3 originals 135--147, printed p248, PDF p257.
+% Answers user PDF pages 354--355.
+\atomictermsproblem{135}{248}
+两种元素的特征$K_\alpha$线波长分别为
+$250\,\mathrm{pm}$和$179\,\mathrm{pm}$。
+求它们在周期表中间隔着多少个元素。
+\exsolution
+莫塞莱定律给
+$\lambda_{K\alpha}=hc/[(3/4)\mathrm{Ry}(Z-1)^2]$，
+所以
+\[
+ Z=1+\sqrt{\frac{hc}{(3/4)\mathrm{Ry}\lambda}}.
+\]
+对$250\,\mathrm{pm}$得$Z_1\simeq23$（钒），
+对$179\,\mathrm{pm}$得$Z_2\simeq27$（钴）。
+中间的元素序数为24、25、26，故
+\[
+ \boxed{N=Z_2-Z_1-1=3}.
+\]
+\excheck “位于两者之间”不包含端点元素，
+因而是三种而不是四种。
+
+\atomictermsproblem{136}{248}
+以镍（$Z=28$）为靶的X射线管，
+其$K_\alpha$谱线与连续谱短波限的波长差
+为$\Delta\lambda=84\,\mathrm{pm}$。
+求加速电压$U$。
+\exsolution
+莫塞莱近似给
+$K_\alpha$光子能量
+$\Delta E_\alpha=(3/4)\mathrm{Ry}(27)^2$，
+故其波长$\lambda_\alpha=hc/\Delta E_\alpha
+\simeq167\,\mathrm{pm}$。
+连续谱短波限更短，
+$\lambda_{\min}=\lambda_\alpha-\Delta\lambda
+\simeq83\,\mathrm{pm}$。
+由$eU=hc/\lambda_{\min}$，
+\[
+ \boxed{U=\frac{hc}{e(\lambda_\alpha-\Delta\lambda)}
+ \simeq15\,\mathrm{kV}}.
+\]
+\excheck 若误把短波限设为$\lambda_\alpha+\Delta\lambda$，
+会得到不合理的低电压；短波限应位于更短波一侧。
+
+\atomictermsproblem{137}{248}
+铝靶X射线管的连续谱短波限
+为$\lambda_{\min}=0.50\,\mathrm{nm}$，
+而其K系激发电压为$U_K=1.56\,\mathrm{kV}$。
+问这时还能观察到特征K系谱线吗？
+\exsolution
+连续谱短波限对应最高电子动能
+$eU=hc/\lambda_{\min}$。
+因此
+\[
+ U=\frac{hc}{e(0.50\,\mathrm{nm})}
+ \simeq2.48\,\mathrm{kV}.
+\]
+因$2.48\,\mathrm{kV}>1.56\,\mathrm{kV}$，
+入射电子足以从K层击出电子，
+随后更高层电子填空位便发出K系特征线，
+\[
+ \boxed{\text{可以观察到K系谱线。}}
+\]
+\excheck 产生连续谱不自动保证能产生某一特征系，
+要比较实际电子能量与对应内层电离阈值。
+
+\atomictermsproblem{138}{248}
+某X射线管的电压从$U_1=10\,\mathrm{kV}$
+升高为$U_2=20\,\mathrm{kV}$。
+其K系极限线$K_\infty$与连续谱短波限
+的\emph{波长差}增加为原来的$\eta=3.0$倍。
+依莫塞莱定律确定靶元素原子序数$Z$。
+\exsolution
+令$K_\infty$的固定波长为$\lambda_K$，
+连续谱短波限为
+$\lambda_i=hc/(eU_i)$。
+其值依次为$\lambda_1=123.984\,\mathrm{pm}$、
+$\lambda_2=61.992\,\mathrm{pm}$。
+若在两个电压下均\emph{实际能够产生K系}，
+必须$eU_1$不小于K层结合能，即
+$\lambda_K\ge\lambda_1$。
+此时两次间隔均为
+$\Delta_i=\lambda_K-\lambda_i$。
+由$\Delta_2=3\Delta_1$得到
+\[
+ \lambda_K-\lambda_2=3(\lambda_K-\lambda_1)
+ \quad\Longrightarrow\quad
+ \boxed{\lambda_K=\frac{3\lambda_1-\lambda_2}{2}
+ \simeq155.0\,\mathrm{pm}}.
+\]
+近似K边能量
+$E_K=\mathrm{Ry}(Z-1)^2=hc/\lambda_K$，
+故
+\[
+ \boxed{Z\simeq1+\sqrt{\frac{hc}
+ {\mathrm{Ry}\lambda_K}}\simeq25}.
+\]
+\excheck 底本书末给$Z=29$，
+但此时K层近似电离能$\sim10.7\,\mathrm{keV}$
+高于初始$10\,\mathrm{kV}$，初始状态根本无法形成K系。
+按题面“两个电压下均有K系线”的物理条件，
+所得近似$Z=25$；源书数值冲突须独立复核。
+
+\atomictermsproblem{139}{248}
+某金属X射线K、L两吸收限对应角频率之差为
+$\Delta\omega=6.85\times10^{18}\,\mathrm{s^{-1}}$。
+求该金属。
+\exsolution
+在莫塞莱模型中，
+K、L结合能的差约为
+$\Delta E=(3/4)\mathrm{Ry}(Z-1)^2$，
+故
+\[
+ \Delta\omega=\frac{\Delta E}{\hbar}
+ =\frac{3\mathrm{Ry}}{4\hbar}(Z-1)^2.
+\]
+反解
+\[
+ \boxed{Z=1+\sqrt{\frac{4\hbar\Delta\omega}
+ {3\mathrm{Ry}}}\simeq22}.
+\]
+原子序数22是$\boxed{\mathrm{Ti}\text{（钛）}}$。
+\excheck 题目给的是\emph{角频率}，
+因此用$\Delta E=\hbar\Delta\omega$，不是$h\Delta\omega$。
+
+\atomictermsproblem{140}{248}
+钒（$Z=23$）的L层吸收限波长
+$\lambda_L=2.4\,\mathrm{nm}$。
+求其K层电子结合能。
+\exsolution
+L层结合能为
+$E_L=hc/\lambda_L\simeq0.517\,\mathrm{keV}$。
+莫塞莱近似给K、L层结合能差
+$\Delta E_{KL}=(3/4)\mathrm{Ry}(Z-1)^2$，
+对钒$Z-1=22$，
+$\Delta E_{KL}\simeq4.94\,\mathrm{keV}$。
+所以
+\[
+ \boxed{E_K=E_L+\Delta E_{KL}\simeq5.46\,\mathrm{keV}
+ \approx5.5\,\mathrm{keV}}.
+\]
+\excheck 不能直接用K$\alpha$能量当K电子全部结合能，
+因为该谱线对应两层能量\emph{之差}。
+
+\atomictermsproblem{141}{248}
+已知钛的K系第一条谱线$K_\alpha$
+与本系短波极限的波长差为
+$\Delta\lambda=26\,\mathrm{pm}$。
+求钛L层电子结合能。
+\exsolution
+钛$Z=22$。
+莫塞莱关系给K$\alpha$能量
+$E_\alpha=(3/4)\mathrm{Ry}(21)^2
+\simeq4.50\,\mathrm{keV}$，
+所以$\lambda_\alpha=hc/E_\alpha\simeq275.5\,\mathrm{pm}$。
+K系短波极限对应K层结合能，
+其波长
+$\lambda_K=\lambda_\alpha-\Delta\lambda
+\simeq249.5\,\mathrm{pm}$。
+于是
+$E_K=hc/\lambda_K\simeq4.97\,\mathrm{keV}$，
+$E_L=E_K-E_\alpha$，故
+\[
+ \boxed{E_L\simeq0.47\,\mathrm{keV}
+ \approx0.5\,\mathrm{keV}}.
+\]
+\excheck 两谱线间隔是波长差，不等于能量差；
+计算必须分别取$hc/\lambda$再相减。
+
+\atomictermsproblem{142}{248}
+锌的$K_\alpha$辐射照射铁，
+从铁K层打出电子。
+已知铁的K吸收限波长$\lambda_K=174\,\mathrm{pm}$。
+求光电子动能和速率。
+\exsolution
+锌$Z=30$的K$\alpha$光子能量
+$\varepsilon=(3/4)\mathrm{Ry}(29)^2
+\simeq8.58\,\mathrm{keV}$。
+铁K层结合能
+$E_{b,\mathrm{Fe}}=hc/(174\,\mathrm{pm})
+\simeq7.13\,\mathrm{keV}$。
+光电子动能
+\[
+ \boxed{T=\varepsilon-E_b\simeq1.45\,\mathrm{keV}}.
+\]
+在此能区可用非相对论近似
+$v=\sqrt{2T/m_e}$，故
+\[
+ \boxed{v\simeq2.26\times10^7\,\mathrm{m/s}}.
+\]
+\excheck 必须用锌的特征谱线能量减去\emph{铁}的K层结合能。
+
+\atomictermsproblem{143}{248}
+求朗德$g$因子：(a) S项；(b)单重态。
+\exsolution
+一般LS耦合有
+\[
+ g_J=1+\frac{J(J+1)+S(S+1)-L(L+1)}
+ {2J(J+1)}.
+\]
+(a) S项$L=0,J=S>0$，
+故$\boxed{g_J=2}$。
+若同时$S=0$则$J=0$，上述公式为$0/0$，
+磁矩本身为零。
+(b) 单重态$S=0$、$J=L>0$，
+故$\boxed{g_J=1}$。
+\excheck 单重S态的$J=0$使$g$的常规定义不适用，
+不能强行把$0/0$写成某个数。
+
+\atomictermsproblem{144}{248}
+求下列光谱项的朗德因子：
+(a)\({}^{6}F_{1/2}\)；
+(b)\({}^{4}D_{1/2}\)；
+(c)\({}^{5}F_2\)；
+(d)\({}^{5}P_1\)；
+(e)\({}^{3}P_0\)。
+\exsolution
+代入
+$g=1+[J(J+1)+S(S+1)-L(L+1)]/[2J(J+1)]$。
+(a)$(S,L,J)=(5/2,3,1/2)$，故$g=-2/3$；
+(b)$(3/2,2,1/2)$，得$g=0$；
+(c)$(2,3,2)$，得$g=1$；
+(d)$(2,1,1)$，得$g=5/2$；
+(e)$J=0$，公式分母为零、磁矩为零，
+$g$不作通常定义。于是
+\[
+ \boxed{g_a=-\tfrac23,\quad g_b=0,\quad
+ g_c=1,\quad g_d=\tfrac52,\quad g_e:\text{未定义}}.
+\]
+\excheck $g$可为负，零总角动量态不应硬算$g$的数值。
+
+\atomictermsproblem{145}{248}
+求以下原子磁矩模，以玻尔磁子为单位：
+(a)单重F态；
+(b)\({}^{2}D_{3/2}\)；
+(c)$S=1,L=2,g_J=4/3$的状态。
+\exsolution
+取
+$\mu=g_J\mu_B\sqrt{J(J+1)}$。
+(a) $S=0,L=J=3,g=1$，
+\[
+ \boxed{\mu_a=\sqrt{12}\,\mu_B=2\sqrt3\,\mu_B}.
+\]
+(b) $S=1/2,L=2,J=3/2$，
+$g=1+[(15/4)+(3/4)-6]/[2(15/4)]=4/5$，故
+\[
+ \boxed{\mu_b=\frac45\sqrt{\frac{15}4}\,\mu_B
+ =\frac{2\sqrt{15}}5\,\mu_B}.
+\]
+(c) $S=1,L=2$，由$g_J=4/3$反求$J=3$，
+因此
+\[
+ \boxed{\mu_c=\frac43\sqrt{12}\,\mu_B
+ =\frac{8\sqrt3}{3}\,\mu_B}.
+\]
+\excheck (c)必须先从$g$确定$J$，
+不能任取$J=1$或2。
+
+\atomictermsproblem{146}{248}
+一个原子的谱项为$D_2$，
+磁矩沿外场的最大投影为$4\mu_B$。
+求其总自旋角动量模。
+\exsolution
+$D$给$L=2$，下标给$J=2$。
+最大磁矩投影$g_JJ\mu_B=4\mu_B$，
+故$g_J=2$。
+朗德公式化简为
+\[
+ g_J=1+\frac{S(S+1)}{2J(J+1)}
+ =1+\frac{S(S+1)}{12}.
+\]
+令$g_J=2$得$S(S+1)=12$，
+即$S=3$，所以
+\[
+ \boxed{M_S=\hbar\sqrt{S(S+1)}=
+ 2\sqrt3\,\hbar}.
+\]
+\excheck 此题使用的是磁矩\emph{沿场最大投影}，
+不是磁矩模$g\sqrt{J(J+1)}\mu_B$。
+
+\atomictermsproblem{147}{248}
+某原子$L=2,S=1$，处于弱磁场中。
+已知总角动量与磁场方向的最小夹角为$30^\circ$。
+求原子磁矩的模。
+\exsolution
+空间量子化下总角动量最大投影
+$M_{J,z}=J\hbar$，而模为
+$M_J=\hbar\sqrt{J(J+1)}$，
+故最小夹角满足
+\[
+ \cos\theta_{\min}=
+ \frac J{\sqrt{J(J+1)}}=
+ \sqrt{\frac J{J+1}}.
+\]
+取$\theta_{\min}=30^\circ$，
+解得$J=3$。
+对$L=2,S=1,J=3$，
+$g_J=4/3$，因此
+\[
+ \boxed{\mu=\frac43\mu_B\sqrt{3\cdot4}
+ =\frac{8\sqrt3}{3}\,\mu_B}.
+\]
+\excheck 磁矩模与沿磁场投影不同；
+前者有$\sqrt{J(J+1)}$系数。
