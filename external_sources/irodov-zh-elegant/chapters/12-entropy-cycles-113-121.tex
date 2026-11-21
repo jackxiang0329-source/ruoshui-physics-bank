@@ -1,0 +1,310 @@
+% Irodov Part II section 2.4, original 113--121, printed p.76, PDF p.85.
+% Carnot, Otto, Brayton and mixed reversible ideal-gas engine cycles.
+\thermoentropyproblem{113}{76}
+在温度分别为 $T_h>T_c>0$ 的两个热源间工作的
+可逆卡诺热机，哪种方式对提高热效率更有效：
+将高温热源的温度升高相同的
+$\Delta T>0$，
+还是将低温热源的温度降低 $\Delta T$
+（假设 $T_c>\Delta T$）？
+\exsolution
+卡诺效率
+$\eta=1-T_c/T_h$。
+提高高温热源温度得到
+\[
+\eta_h=1-\frac{T_c}{T_h+\Delta T},
+\]
+降低低温热源温度得到
+\[
+\eta_c=1-\frac{T_c-\Delta T}{T_h}.
+\]
+直接相减：
+\[
+\eta_c-\eta_h
+=\frac{\Delta T}{T_h}
+-\frac{T_c\Delta T}{T_h(T_h+\Delta T)}
+=\frac{\Delta T(T_h+\Delta T-T_c)}
+{T_h(T_h+\Delta T)}>0.
+\]
+故
+\[
+\boxed{\text{降低低温热源温度的同量 }\Delta T
+\text{ 可得到更大的效率提高}}.
+\]
+\excheck 比较必须在仍有
+$T_c-\Delta T>0$ 的物理范围中进行。
+
+\thermoentropyproblem{114}{76}
+氢气作为卡诺热机的工质。
+若绝热膨胀阶段：
+(a) 气体体积增加 $n=2.0$ 倍；
+(b) 气体压强下降 $n=2.0$ 倍，
+求各情况下的卡诺效率。
+\exsolution
+卡诺循环两等温温度为 $T_h,T_c$，
+效率
+$\eta=1-T_c/T_h$。
+假设氢气为刚性双原子理想气体，
+$\gamma=7/5$。
+(a) 可逆绝热过程满足
+$TV^{\gamma-1}=\text{常数}$，
+若 $V_c/V_h=n$，则
+$T_c/T_h=n^{-(\gamma-1)}$。
+因此
+\[
+\boxed{\eta_a=1-n^{1-\gamma}
+=1-2^{-2/5}\simeq0.24\approx25\%}.
+\]
+(b) 由可逆绝热关系
+$T\propto p^{(\gamma-1)/\gamma}$，
+$T_c/T_h=n^{-(\gamma-1)/\gamma}$。
+故
+\[
+\boxed{\eta_b=1-n^{-(\gamma-1)/\gamma}
+=1-2^{-2/7}\simeq0.18}.
+\]
+\excheck 两问给定的是不同的绝热压缩比，
+不能把体积倍率与压力倍率直接混用。
+
+\thermoentropyproblem{115}{76}
+一台卡诺热机原先工作在两个热源之间，
+其热机效率为 $\eta=10\%$。
+若将同一装置倒转用作卡诺制冷机，
+且冷热热源仍不变，
+求制冷系数 $\varepsilon$。
+\exsolution
+对可逆卡诺循环，
+热机效率
+$\eta=1-T_c/T_h$。
+反向制冷机吸收冷源热量 $Q_c$、
+消耗外功 $W=Q_h-Q_c$，
+制冷系数定义为
+$\varepsilon=Q_c/W$。
+卡诺关系
+$Q_c/Q_h=T_c/T_h$，
+因此
+\[
+\varepsilon=\frac{T_c}{T_h-T_c}
+=\frac{T_c/T_h}{1-T_c/T_h}
+=\frac{1-\eta}{\eta}.
+\]
+代入 $\eta=0.10$：
+\[
+\boxed{\varepsilon=\frac{0.90}{0.10}=9.0}.
+\]
+\excheck 制冷系数不是热机效率，
+可以大于1，因为它衡量的是
+搬运的冷源热量与外功之比。
+
+\thermoentropyproblem{116}{76}
+一理想气体经过由等温线和绝热线交替组成的
+可逆热机循环（原图2.2）。
+三段等温过程分别处于
+$T_1>T_2>T_3$。
+其中两个等温膨胀阶段的体积均以相同倍率
+$r>1$ 增大。
+求整个循环效率。
+\exsolution
+在温度 $T_1,T_2$ 上，
+各发生一次等温膨胀，
+理想气体等温吸热分别为
+$Q_1=\nu RT_1\ln r$、
+$Q_2=\nu RT_2\ln r$。
+绝热连接段不交换热。
+由于闭合循环内总熵变化为零，
+低温 $T_3$ 的等温压缩须排出
+$Q_3$ 满足
+\[
+\frac{Q_1}{T_1}+\frac{Q_2}{T_2}
+-\frac{Q_3}{T_3}=0.
+\]
+故
+\[
+Q_3=2\nu RT_3\ln r.
+\]
+热机做净功
+$W=Q_1+Q_2-Q_3$，
+热效率为
+\[
+\boxed{\eta=\frac{W}{Q_1+Q_2}
+=1-\frac{2T_3}{T_1+T_2}}.
+\]
+\excheck 倍率 $r$ 通过等温吸热表达式相消；
+若忽略第二条中温等温线，
+会错误地套用普通两热源卡诺公式。
+
+\thermoentropyproblem{117}{76}
+一理想热机循环由两条等容线和
+两条可逆绝热线构成（Otto 循环）。
+若体积比 $r=V_{\max}/V_{\min}=10$，
+且工质为氮气，求效率。
+\exsolution
+在绝热压缩与绝热膨胀上，
+$TV^{\gamma-1}=\text{常数}$。
+令四状态的两等容吸放热
+$Q_{\rm in}=\nu C_V(T_3-T_2)$、
+$Q_{\rm out}=\nu C_V(T_4-T_1)$。
+配对使用绝热关系
+$T_2/T_1=T_3/T_4=r^{\gamma-1}$，
+可得
+\[
+\frac{Q_{\rm out}}{Q_{\rm in}}
+=r^{1-\gamma}.
+\]
+故循环效率
+\[
+\boxed{\eta=1-r^{1-\gamma}}.
+\]
+氮气取 $\gamma=7/5$，代入 $r=10$：
+\[
+\boxed{\eta=1-10^{-2/5}\simeq0.60=60\%}.
+\]
+\excheck 与两条\emph{等压}的循环不同，
+这里的压缩倍率定义为体积倍率。
+
+\thermoentropyproblem{118}{76}
+一理想气体的可逆热机循环
+由两条等压线和两条绝热线组成
+（Brayton 循环）。
+若循环中最高与最低压强之比为 $n$，
+气体绝热指数为 $\gamma$，
+求热效率。
+\exsolution
+设高低压强分别为
+$p_h,p_l$，$p_h/p_l=n>1$。
+在两绝热支路上
+$T\propto p^{(\gamma-1)/\gamma}$，
+故成对状态的温度比
+\[
+\frac{T_2}{T_1}=\frac{T_3}{T_4}
+=n^{(\gamma-1)/\gamma}.
+\]
+高压等压支路吸热
+$Q_{\rm in}=\nu C_p(T_3-T_2)$，
+低压等压支路排热
+$Q_{\rm out}=\nu C_p(T_4-T_1)$。
+因此
+\[
+\frac{Q_{\rm out}}{Q_{\rm in}}
+=n^{-(\gamma-1)/\gamma}.
+\]
+效率为
+\[
+\boxed{\eta=1-n^{-(\gamma-1)/\gamma}}.
+\]
+\excheck 必须保证循环方向为正功热机，
+并使用正的吸热、排热量计算效率。
+
+\thermoentropyproblem{119}{76}
+一理想气体的顺时针循环由两条等容线
+与两条等压线组成，
+气体绝热指数为 $\gamma$。
+若等容加热和等压膨胀时
+气体的绝对温度都各自增加 $n$ 倍，
+求循环效率。
+\exsolution
+取初态
+$(p_1,V_1,T_1)$，
+等容加热使压强变为 $np_1$、
+温度变为 $nT_1$；
+随后在高压 $np_1$ 下等压膨胀，
+温度再增至 $n^2T_1$、
+体积变为 $nV_1$。
+剩下两支路为等容冷却和低压等压压缩。
+循环矩形面积是净功：
+\[
+W=(np_1-p_1)(nV_1-V_1)
+=p_1V_1(n-1)^2
+=\nu RT_1(n-1)^2.
+\]
+吸热在等容加热和高压等压膨胀段：
+\[
+Q_{\rm in}=\nu C_VT_1(n-1)
++\nu C_pT_1n(n-1).
+\]
+因此
+\[
+\eta=\frac{R(n-1)}{C_V+nC_p}.
+\]
+用 $C_p=\gamma C_V$、
+$R=(\gamma-1)C_V$ 化简：
+\[
+\boxed{\eta=\frac{(\gamma-1)(n-1)}
+{1+\gamma n}}.
+\]
+\excheck 若 $n\to1$ 循环面积与功趋零，
+效率也随之趋零。
+
+\thermoentropyproblem{120}{76}
+一理想气体经历由
+(a) 等容、绝热、等温三支路；
+(b) 等压、绝热、等温三支路组成的可逆热机循环。
+假设等温支路始终处于\emph{最低温度}
+$T_c$，循环的最高温度与最低温度之比为
+$n=T_h/T_c>1$。
+求两循环的效率。
+\exsolution
+(a) 等容加热将温度由 $T_c$ 提升至 $T_h$，
+随后可逆绝热膨胀回到 $T_c$，
+最后在低温等温压缩回初态。
+等容吸热
+$Q_{\rm in}=\nu C_V(T_h-T_c)
+=\nu C_VT_c(n-1)$。
+绝热支路给
+$V_{\rm after}/V_{\rm before}
+=n^{1/(\gamma-1)}$，
+因此低温等温排热
+$Q_{\rm out}=\nu RT_c\ln n/(\gamma-1)
+=\nu C_VT_c\ln n$。
+故
+$\eta_a=1-\ln n/(n-1)$。
+(b) 等压加热的吸热
+$Q_{\rm in}=\nu C_pT_c(n-1)$。
+绝热连接使低温等温压缩的体积比为
+$n^{\gamma/(\gamma-1)}$，
+从而
+$Q_{\rm out}=\nu RT_c\gamma\ln n/(\gamma-1)
+=\nu C_pT_c\ln n$。
+于是两情况均有
+\[
+\boxed{\eta_a=\eta_b=1-\frac{\ln n}{n-1}}.
+\]
+\excheck 正循环必须沿吸热支路升温至
+$T_h$；若把等温支路误当作最高温，
+会得到第121题的不同结果。
+
+\thermoentropyproblem{121}{76}
+条件与上一题相同，
+但等温支路改在整个循环的
+\emph{最高温度} $T_h$ 上进行。
+已知最高、最低温比为
+$n=T_h/T_c>1$，
+求两种循环各自的效率。
+\exsolution
+(a) 高温等温膨胀吸热，
+随后等容冷却至 $T_c$，
+再通过绝热压缩回高温起点。
+绝热支路给
+$V_{\rm high}/V_{\rm low}
+=n^{1/(\gamma-1)}$，
+高温等温吸热
+$Q_{\rm in}=\nu RT_h\ln n/(\gamma-1)
+=\nu C_VT_h\ln n$。
+等容冷却排热
+$Q_{\rm out}=\nu C_V(T_h-T_c)
+=\nu C_VT_h(1-1/n)$，
+故
+$\eta_a=1-(n-1)/(n\ln n)$。
+(b) 高温等温膨胀的体积比是
+$n^{\gamma/(\gamma-1)}$，
+所以
+$Q_{\rm in}=\nu C_pT_h\ln n$；
+等压冷却排热
+$Q_{\rm out}=\nu C_pT_h(1-1/n)$。
+两种情况同为
+\[
+\boxed{\eta_a=\eta_b=1-\frac{n-1}{n\ln n}}.
+\]
+\excheck $n>1$ 时
+$\ln n>(n-1)/n$，
+故效率为正且小于1。
