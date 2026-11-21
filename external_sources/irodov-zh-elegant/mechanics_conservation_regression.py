@@ -12,10 +12,11 @@ from math import sqrt, sin, cos, tan, pi, log, exp, atan, asin, degrees, isclose
 G=9.81
 RHO=1.0
 checks=[]
+failures=[]
 
 def test(n,label,actual,expected,rtol=.025,atol=1e-12):
     if not isclose(actual,expected,rel_tol=rtol,abs_tol=atol):
-        raise AssertionError(f"I.{n} {label}: actual={actual:.9g}, expected={expected:.9g}")
+        failures.append(f"I.{n} {label}: actual={actual:.9g}, expected={expected:.9g}")
     checks.append((n,label,actual))
 def equal(n,label,actual,expected):
     test(n,label,actual,expected,rtol=1e-10,atol=1e-10)
@@ -347,6 +348,10 @@ test(199,"small-extension approximation relative energy residual",
      abs(eq)/(100*.5**2*eps_pred**2),.0,.6,atol=.6)
 test(199,"small extension parameter from energy/angular momentum",
      eps_pred,.04,1e-10)
+if failures:
+    for error in failures:
+        print("FAIL:",error)
+    raise AssertionError(f"{len(failures)} incorrect numerical benchmarks or physical inconsistencies")
 print(f"PASS: {len(checks)} independent work-energy, collision, COM,"
       " rocket and torque checks for original Part I.118--199.")
 for n,name,val in checks:
