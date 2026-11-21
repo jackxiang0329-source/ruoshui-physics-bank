@@ -256,7 +256,7 @@ omegab=mbullet*v0*ell/(Irod+Ibullet)
 contact_speed=omegab*ell
 axis_impulse=mbullet*v0-(mrod+mbullet)*omegab*(ell/2) 
 check(275,"bullet+rod hinge supplies nonzero horizontal impact impulse",
-      abs(axis_impulse),.498,0.05)
+      abs(axis_impulse),.470874,0.001)
 residual(275,"angular momentum about fixed hinge conserved in embedding",
          mbullet*v0*ell-(Irod+Ibullet)*omegab)
 M,m,R,omega0=5.,1.,.2,4.
