@@ -1,0 +1,317 @@
+% User-provided Irodov PDF pp.70, printed p.61;
+% Section 1.8 final problems 381--388.
+% Source answer p.295 has a unit error in problem 386: 1.43e3 GeV,
+% not 1.43e3 MeV, for T=25 GeV per proton.
+\exproblem{381}{61}
+一个相对论性粒子在惯性系 $K$ 中沿
+$x$ 轴运动，动量为 $p_x$、总能量为 $E$。
+证明在相对 $K$ 沿 $+x$ 方向以恒速 $V$
+运动的另一惯性系 $K'$ 中，
+粒子动量和总能量变换为
+\[
+p'_x=\frac{p_x-EV/c^2}{\sqrt{1-V^2/c^2}},
+\qquad
+E'=\frac{E-Vp_x}{\sqrt{1-V^2/c^2}}.
+\]
+\exsolution
+粒子在自身世界线上的固有时间
+$\mathrm d\tau$ 为洛伦兹标量。
+四动量定义为
+\[
+P^\mu=m_0\frac{\mathrm dx^\mu}{\mathrm d\tau},
+\quad
+x^\mu=(ct,x,y,z),
+\quad
+P^\mu=(E/c,p_x,p_y,p_z).
+\]
+坐标的洛伦兹变换为
+\[
+ct'=\gamma_V(ct-\beta x),\qquad
+x'=\gamma_V(x-Vt),
+\quad
+\gamma_V=(1-\beta^2)^{-1/2},\quad\beta=V/c.
+\]
+由于分母 $\mathrm d\tau$ 不变，
+对坐标变换沿世界线求导可知四动量
+具有完全相同的线性变换律：
+\[
+P'^0=\gamma_V(P^0-\beta P^1),\qquad
+P'^1=\gamma_V(P^1-\beta P^0).
+\]
+代回物理分量：
+\[
+\boxed{E'=\gamma_V(E-Vp_x)},\qquad
+\boxed{p'_x=\gamma_V(p_x-VE/c^2)}.
+\]
+\excheck 四动量变换同时适用于有质量粒子和光子；
+不能将能量视为标量而使其在各惯性系不变。
+
+\exproblem{382}{61}
+一光子在惯性系 $K$ 中的能量为
+$\varepsilon$。
+惯性系 $K'$ 沿光子传播方向以速度 $V$
+相对 $K$ 运动。
+用上一题四动量变换求光子在 $K'$ 中的能量
+$\varepsilon'$；并求使
+$\varepsilon'=\varepsilon/2$ 的 $V$。
+\exsolution
+光子沿正向传播，动量
+$p_x=\varepsilon/c$。
+由四动量能量变换，
+\[
+\varepsilon'=\gamma_V(\varepsilon-Vp_x)
+=\gamma_V\varepsilon(1-\beta)
+=\boxed{\varepsilon\sqrt{\frac{1-\beta}{1+\beta}}},
+\qquad \beta=V/c.
+\]
+令 $\varepsilon'/\varepsilon=1/2$，
+平方得
+$(1-\beta)/(1+\beta)=1/4$，
+故 $4-4\beta=1+\beta$，
+\[
+\boxed{V=\frac35c}.
+\]
+\excheck 与光子同向运动的观察者测得红移；
+若 $V$ 逆光子方向，变换应得到蓝移而不是这一公式。
+
+\exproblem{383}{61}
+证明对于有静质量的粒子，组合
+$E^2-p^2c^2$ 是所有惯性系中的不变量，
+并给出这一不变量的数值。
+\exsolution
+在粒子静止系有
+$E_0=m_0c^2$、$\bm p_0=\bm0$，
+故
+$E_0^2-p_0^2c^2=m_0^2c^4$。
+由上一题的四动量洛伦兹变换，
+\[
+\begin{aligned}
+E'^2-c^2p_x'^2
+&=\gamma_V^2[(E-Vp_x)^2-
+c^2(p_x-VE/c^2)^2]\\
+&=\gamma_V^2(1-\beta^2)(E^2-c^2p_x^2)
+=E^2-c^2p_x^2.
+\end{aligned}
+\]
+垂直方向动量不变，因此一般三维情况下
+$E'^2-c^2|\bm p'|^2=E^2-c^2|\bm p|^2$。
+结论为
+\[
+\boxed{E^2-p^2c^2=m_0^2c^4}.
+\]
+\excheck 静止质量 $m_0$ 与惯性系无关，
+而粒子的总能量、动量分别随参考系改变。
+
+\exproblem{384}{61}
+一颗静质量为 $m_0$ 的中子动能为
+$T=2m_0c^2$，撞向另一颗实验室静止的中子。
+求：(a) 两中子在质心系的总动能
+$\widetilde T$ 与每颗中子的动量模
+$\widetilde p$；
+(b) 这个质心系相对实验室的速度。
+\exsolution
+实验室中，入射中子总能量
+$E_1=m_0c^2+T=3m_0c^2$，
+靶中子总能量 $E_2=m_0c^2$。
+故系统总能量
+$E_{\rm tot}=4m_0c^2$。
+入射动量模由
+$p_1c=\sqrt{E_1^2-m_0^2c^4}
+=2\sqrt2\,m_0c^2$。
+系统四动量不变量为
+\[
+E_{\rm cm}^2
+=E_{\rm tot}^2-p_{\rm tot}^2c^2
+=(16-8)m_0^2c^4=8m_0^2c^4.
+\]
+因此
+$E_{\rm cm}=2\sqrt2\,m_0c^2$。
+去掉两颗静止能量得质心系总动能：
+\[
+\boxed{\widetilde T
+=2(\sqrt2-1)m_0c^2
+\simeq777\,\mathrm{MeV}}.
+\]
+两中子在质心系总动量为零且质量相等，
+每颗总能量为
+$E_{\rm cm}/2=\sqrt2 m_0c^2$，
+因此
+\[
+\boxed{\widetilde p=
+\frac1c\sqrt{2m_0^2c^4-m_0^2c^4}
+=m_0c\simeq940\,\mathrm{MeV}/c}.
+\]
+质心速度可由实验室总能量与总动量确定：
+\[
+\boxed{V_{\rm cm}
+=\frac{p_{\rm tot}c^2}{E_{\rm tot}}
+=\frac{c}{\sqrt2}
+\simeq2.12\times10^8\,\mathrm{m/s}}.
+\]
+\excheck 必须使用系统的\emph{四动量不变量}
+而非只在实验室中对两颗中子动能做算术平均。
+
+\exproblem{385}{61}
+静质量为 $m_0$、动能为 $T$ 的粒子
+撞上一颗实验室静止、具有相同静质量的粒子，
+两者完全结合为一个复合粒子。
+求复合粒子的静质量 $M_0$
+及它相对于实验室的速度 $V$。
+\exsolution
+碰前系统总能量与动量为
+\[
+E_{\rm tot}=(2m_0c^2+T),\qquad
+p_{\rm tot}c=\sqrt{T(T+2m_0c^2)}.
+\]
+碰后复合粒子的静质量由四动量不变量定义：
+\[
+M_0^2c^4=E_{\rm tot}^2-p_{\rm tot}^2c^2
+=(2m_0c^2+T)^2-T(T+2m_0c^2).
+\]
+展开后
+$M_0^2c^4=4m_0^2c^4+2m_0c^2T$，
+\[
+\boxed{M_0=\sqrt{2m_0(2m_0+T/c^2)}}.
+\]
+复合粒子速度由
+$\bm V=\bm p_{\rm tot}c^2/E_{\rm tot}$，
+故
+\[
+\boxed{V=c\sqrt{\frac{T}{T+2m_0c^2}}}.
+\]
+\excheck $T>0$ 时 $M_0>2m_0$，
+多出的静质量体现碰撞耗散的内部能量；
+若把它直接写成 $2m_0$，违反总能量守恒。
+
+\exproblem{386}{61}
+问一个高能质子撞向实验室中\emph{静止}的另一质子时，
+入射质子动能 $T_{\rm beam}$ 至少需要多高，
+才能使该过程的\emph{质心系总动能}
+等于两束相向质子、每束动能
+$T=25.0\,\mathrm{GeV}$ 时的质心系总动能？
+\exsolution
+两质子相向且各自动能为 $T$ 时，
+质心系就是两束的对称实验室系。
+质心系总能量为
+$E_{\rm cm}=2(m_pc^2+T)$。
+对应的固定靶碰撞中，
+实验室总能量
+$E_{\rm lab}=2m_pc^2+T_{\rm beam}$，
+入射动量满足
+$p_{\rm lab}^2c^2
+=T_{\rm beam}(T_{\rm beam}+2m_pc^2)$。
+四动量不变量为
+\[
+s=E_{\rm lab}^2-p_{\rm lab}^2c^2
+=4m_p^2c^4+2m_pc^2T_{\rm beam}.
+\]
+令它等于对撞束的
+$s=4(m_pc^2+T)^2$，
+得到
+\[
+2m_pc^2T_{\rm beam}
+=4[(m_pc^2+T)^2-m_p^2c^4]
+=4T(T+2m_pc^2).
+\]
+所以
+\[
+\boxed{T_{\rm beam}=
+\frac{2T(T+2m_pc^2)}{m_pc^2}}.
+\]
+用质子静能 $m_pc^2\simeq0.938\,\mathrm{GeV}$：
+\[
+\boxed{T_{\rm beam}
+\simeq\frac{2(25.0)(25.0+1.876)}{0.938}
+\,\mathrm{GeV}\simeq1.43\times10^3\,\mathrm{GeV}
+=1.43\,\mathrm{TeV}}.
+\]
+\excheck \textbf{本版答案单位冲突：}
+书末公式与原题 $T=25\,\mathrm{GeV}$ 相容，
+但数值旁印 $1.43\times10^3\,\mathrm{MeV}$；
+按单位计算应为
+$1.43\times10^3\,\mathrm{GeV}$，
+相差1000倍。本稿保留物理量纲正确的值。
+
+\exproblem{387}{61}
+一颗静质量为 $m_0$ 的粒子
+原来在实验室静止，
+自发衰变为静质量分别为
+$m_1,m_2,m_3$ 的三颗粒子。
+求粒子1可能获得的最大总能量。
+\exsolution
+初态总四动量为
+$(m_0c,\bm0)$。
+将粒子2与3组成一个复合末态系统，
+其不变质量记为 $M_{23}$。
+总静质量下界
+$M_{23}\ge m_2+m_3$；
+仅当粒子2、3相对静止、
+具有同一速度时取等。
+把衰变视为
+$m_0\to m_1+M_{23}$ 的二体末态。
+在初始粒子静止系，由
+$P_{23}=P_0-P_1$ 和
+$P_{23}^2=M_{23}^2c^2$，
+\[
+M_{23}^2c^4
+=(m_0c^2-E_1)^2-p_1^2c^2
+=m_0^2c^4+m_1^2c^4-2m_0c^2E_1.
+\]
+于是
+\[
+E_1=
+\frac{m_0^2+m_1^2-M_{23}^2}{2m_0}c^2.
+\]
+为使 $E_1$ 最大，令 $M_{23}=m_2+m_3$：
+\[
+\boxed{E_{1,\max}=
+\frac{m_0^2+m_1^2-(m_2+m_3)^2}{2m_0}c^2}.
+\]
+\excheck 该值可达到的必要条件是
+$m_0\ge m_1+m_2+m_3$；
+要最大化单个粒子的能量，
+\emph{其余两粒子须作为一个共动整体}
+使不变质量最小。
+
+\exproblem{388}{61}
+一枚相对论火箭沿直线喷出气体，
+气体相对火箭的速度大小固定为
+$u$ 且满足 $u\ll c$。
+火箭的静质量由初始 $m_0$
+逐渐减到 $m$，无外力。
+求火箭相对初始静止系的速度 $v(m)$。
+\exsolution
+每次考虑一个火箭的\emph{瞬时共动惯性系}。
+以沿推进方向的火箭速度增量为正，
+喷气速度为 $-u$。
+在非相对论喷流近似下，
+微元动量守恒得到
+$m\,\mathrm dv_{\rm com}=-u\,\mathrm dm$，
+其中 $\mathrm dm<0$。
+为使不同瞬时共动系中的速度增量相加，
+引入快度
+$\chi=\operatorname{artanh}(v/c)$。
+快度差与瞬时共动速度增量满足
+$\mathrm d\chi=\mathrm dv_{\rm com}/c$，
+因此
+\[
+\mathrm d\chi=-\frac{u}{c}\frac{\mathrm dm}{m}.
+\]
+从 $m_0$、初速零积分到 $m$：
+\[
+\chi=\frac uc\ln\frac{m_0}{m}.
+\]
+最后 $v/c=\tanh\chi$，
+利用
+$\tanh z=(1-e^{-2z})/(1+e^{-2z})$：
+\[
+\boxed{\frac vc=
+\tanh\!\left(\frac uc\ln\frac{m_0}{m}\right)
+=\frac{1-(m/m_0)^{2u/c}}
+{1+(m/m_0)^{2u/c}}}.
+\]
+\excheck 当 $u/c$ 很小且累计速度也远小于 $c$，
+$\tanh z\simeq z$，
+退化为通常的火箭方程
+$v\simeq u\ln(m_0/m)$；
+在严格相对论模型中 $v<c$ 恒成立。
