@@ -1,0 +1,357 @@
+% Irodov 第2.6节原题195--204，底本PDF页94--95，印刷页85--86。
+\thermophaseproblem{195}{85}
+假设水分子间的相互吸引作用突然消失，
+其余宏观状态变量保持不变，
+那么水施加到容器壁上的压强会增加多少？
+\exsolution
+范德瓦耳斯形式的状态方程可写为
+\[
+p=p_{\rm rep}-\frac{a}{V_m^2},
+\]
+其中 $V_m$ 为摩尔体积，
+$p_{\rm rep}=RT/(V_m-b)$ 为排除体积修正的
+有效斥力压强，
+$a/V_m^2$ 代表分子间吸引的压强修正。
+若吸引项消失而体积、温度瞬时保持不变，
+墙压增加
+\[
+\boxed{\Delta p=\frac a{V_m^2}
+=a\left(\frac{\rho}{M}\right)^2}.
+\]
+对密度约
+$\rho\simeq1.0\,\mathrm{kg/L}$ 的水，
+摩尔质量 $M\simeq18\,\mathrm{g/mol}$，
+取水的范德瓦耳斯参数
+$a\simeq5.5\,\mathrm{atm\,L^2/mol^2}$，
+则
+$V_m\simeq0.018\,\mathrm{L/mol}$，
+\[
+\boxed{\Delta p\simeq1.7\times10^4\,\mathrm{atm}}.
+\]
+\excheck 这是范德瓦耳斯模型的瞬态分子作用
+\emph{形式估算}；
+现实水移除吸引作用后通常不可能维持原有液态结构。
+
+\thermophaseproblem{196}{85}
+液体密度为 $\rho$，
+单位质量汽化潜热为 $q$。
+假设汽化所需潜热主要用于克服液体的
+内聚压强 $p_i$，
+且液体服从范德瓦耳斯模型，
+求 $p_i$ 的近似值，并估算水的数值。
+\exsolution
+取质量为 $m$ 的液体，
+汽化到密度远小于液体的蒸汽时，
+克服内聚压力的机械能约为
+$p_i$ 乘初始液体的相应有效体积
+$m/\rho$。
+按题设将潜热近似视为内聚作用功，
+\[
+mq\simeq p_i\frac m\rho.
+\]
+消去质量：
+\[
+\boxed{p_i\simeq\rho q}.
+\]
+对于水，
+$\rho\simeq10^3\,\mathrm{kg/m^3}$、
+$q\simeq2.26\times10^6\,\mathrm{J/kg}$，
+故
+\[
+\boxed{p_i\simeq2.3\times10^9\,\mathrm{Pa}
+\simeq2.2\times10^4\,\mathrm{atm}}.
+\]
+\excheck 题给将潜热全归于内聚功属于近似假定，
+真实汽化焓还包含对外做功和分子内能等贡献。
+
+\thermophaseproblem{197}{85}
+证明：一摩尔范德瓦耳斯气体在临界状态满足
+\[
+V_{m,c}=3b,\qquad
+p_c=\frac{a}{27b^2},\qquad
+T_c=\frac{8a}{27Rb},
+\qquad
+p_cV_{m,c}=\frac38RT_c.
+\]
+\exsolution
+一摩尔范德瓦耳斯状态方程：
+\[
+p(V_m,T)=\frac{RT}{V_m-b}-\frac{a}{V_m^2}.
+\]
+临界等温线出现水平拐点，故
+\[
+\left(\frac{\partial p}{\partial V_m}\right)_{T_c}
+=-\frac{RT_c}{(V_m-b)^2}+\frac{2a}{V_m^3}=0,
+\]
+\[
+\left(\frac{\partial^2p}{\partial V_m^2}\right)_{T_c}
+=\frac{2RT_c}{(V_m-b)^3}-\frac{6a}{V_m^4}=0.
+\]
+由第一式
+$RT_c=2a(V_m-b)^2/V_m^3$，
+由第二式
+$RT_c=3a(V_m-b)^3/V_m^4$。
+两式相等，约去公共因子：
+$2V_m=3(V_m-b)$，
+所以
+\[
+\boxed{V_{m,c}=3b}.
+\]
+代入第一式得
+$RT_c=8a/(27b)$，
+再代入状态方程得
+$p_c=a/(27b^2)$。
+于是
+\[
+\boxed{p_cV_{m,c}
+=\frac a{27b^2}(3b)
+=\frac a{9b}
+=\frac38RT_c}.
+\]
+\excheck 临界点是等温线的\emph{水平拐点}，
+因此必须同时使用一阶、二阶导数为零，
+不能仅仅令斜率为零。
+
+\thermophaseproblem{198}{85}
+已知二氧化碳的临界温度
+$T_c=304\,\mathrm K$、
+临界压强 $p_c=73\,\mathrm{atm}$。
+求范德瓦耳斯常数 $a,b$。
+\exsolution
+由上一题临界关系，
+$p_c=a/(27b^2)$、
+$RT_c=8a/(27b)$。
+先由两式联立消去 $a$：
+\[
+\boxed{b=\frac{RT_c}{8p_c}},
+\]
+再由 $a=27p_cb^2$：
+\[
+\boxed{a=\frac{27R^2T_c^2}{64p_c}}.
+\]
+以
+$R=0.082057\,\mathrm{L\,atm/(mol\,K)}$
+计算：
+\[
+\boxed{b\simeq0.0427\,\mathrm{L/mol}},
+\qquad
+\boxed{a\simeq3.6\,\mathrm{atm\,L^2/mol^2}}.
+\]
+\excheck $a$ 的量纲为压强乘摩尔体积的平方；
+$b$ 的量纲为摩尔体积。
+
+\thermophaseproblem{199}{85}
+苯 $\mathrm{C_6H_6}$ 的临界温度
+$T_c=562\,\mathrm K$、
+临界压强 $p_c=47\,\mathrm{atm}$。
+若按范德瓦耳斯模型，
+求苯临界态的质量比体积 $v_c$。
+\exsolution
+由临界恒等式
+$p_cV_{m,c}=(3/8)RT_c$，
+临界摩尔体积为
+$V_{m,c}=3RT_c/(8p_c)$。
+质量比体积是单位质量物质的体积，
+\[
+v_c=\frac{V_{m,c}}M
+=\boxed{\frac{3RT_c}{8Mp_c}}.
+\]
+取苯摩尔质量
+$M\simeq78\,\mathrm{g/mol}$、
+$R=0.082057\,\mathrm{L\,atm/(mol\,K)}$，
+得到
+\[
+\boxed{v_c\simeq4.7\times10^{-3}\,\mathrm{L/g}
+=4.7\,\mathrm{cm^3/g}}.
+\]
+\excheck 临界\emph{质量比体积}
+与摩尔体积不同，必须除以摩尔质量 $M$。
+
+\thermophaseproblem{200}{85}
+将范德瓦耳斯状态方程改写为约化变量形式，
+其中
+$\pi=p/p_c$、
+$\upsilon=V_m/V_{m,c}$、
+$\tau=T/T_c$。
+如果气体压强达到临界压强的12倍，
+而体积是临界体积的一半，
+求温度与临界温度之比。
+\exsolution
+原方程
+$(p+a/V_m^2)(V_m-b)=RT$。
+代入临界关系
+$V_{m,c}=3b$、
+$p_c=a/(27b^2)$、
+$RT_c=8a/(27b)$：
+\[
+p=p_c\pi,\quad V_m=3b\upsilon,\quad T=T_c\tau.
+\]
+得
+\[
+\left[p_c\pi+\frac a{9b^2\upsilon^2}\right]
+(3b\upsilon-b)=RT_c\tau.
+\]
+用 $a/(9b^2)=3p_c$、
+$RT_c=8p_cb$，化为
+\[
+\boxed{\left(\pi+\frac3{\upsilon^2}\right)
+(3\upsilon-1)=8\tau}.
+\]
+给定 $\pi=12$、$\upsilon=1/2$，
+\[
+8\tau=(12+3/(1/2)^2)(3/2-1)
+=(12+12)\frac12=12,
+\]
+故
+\[
+\boxed{\tau=\frac32=1.5}.
+\]
+\excheck $\upsilon=1/2>1/3$，
+满足范德瓦耳斯方程 $V_m>b$ 的必要体积约束。
+
+\thermophaseproblem{201}{85}
+已知水的范德瓦耳斯常数 $a,b$。
+求：(a) 质量
+$m=1.00\,\mathrm{kg}$ 的水在仍作为液体时
+可占据的最大体积；
+(b) 饱和水蒸气压强的最大可能值
+（范德瓦耳斯模型临界上界）。
+\exsolution
+范德瓦耳斯模型的液气共存支路在临界点终止。
+气、液态临界摩尔体积为
+$V_{m,c}=3b$。
+对总物质的量
+$\nu=m/M$，临界总体积
+\[
+\boxed{V_{\max,\ell}=\nu(3b)=\frac{3bm}{M}}.
+\]
+当温度达到临界值时，
+饱和蒸汽压强达到临界压强：
+\[
+\boxed{p_{\rm sat,max}=p_c=\frac a{27b^2}}.
+\]
+以水在模型中的常用近似参数
+$b\simeq0.030\,\mathrm{L/mol}$、
+$a\simeq5.5\,\mathrm{atm\,L^2/mol^2}$，
+$M=0.018\,\mathrm{kg/mol}$，
+\[
+\boxed{V_{\max,\ell}\simeq5.0\,\mathrm L},\qquad
+\boxed{p_{\rm sat,max}\simeq2.3\times10^2\,\mathrm{atm}}.
+\]
+\excheck 这里的“最大液体体积”指
+范德瓦耳斯\emph{液相支路延至临界点}，
+不是任意温度或压力下液态水体积上限。
+
+\thermophaseproblem{202}{85}
+把二氧化碳视为范德瓦耳斯气体，
+利用其参数 $a,b$ 求临界温度和临界质量密度。
+\exsolution
+对每摩尔范德瓦耳斯气体，
+\[
+T_c=\frac{8a}{27Rb},\qquad V_{m,c}=3b.
+\]
+临界质量密度为
+\[
+\boxed{\rho_c=\frac M{V_{m,c}}=\frac M{3b}}.
+\]
+取二氧化碳
+$a\simeq3.59\,\mathrm{atm\,L^2/mol^2}$、
+$b\simeq0.0427\,\mathrm{L/mol}$、
+$M\simeq44.0\,\mathrm{g/mol}$，
+以适配的 $R=0.082057$，
+\[
+\boxed{T_c\simeq3.0\times10^2\,\mathrm K
+=0.30\,\mathrm{kK}},
+\]
+\[
+\boxed{\rho_c\simeq\frac{44}{3(0.0427)}
+\,\mathrm{g/L}\simeq0.34\,\mathrm{g/cm^3}}.
+\]
+\excheck 摩尔质量与 $b$ 均须使用同一物质，
+单位换算
+$1000\,\mathrm{g/L}=1\,\mathrm{g/cm^3}$。
+
+\thermophaseproblem{203}{85}
+室温下盛有一部分液态乙醚的密闭容器，
+准备将其加热至临界状态。
+乙醚临界温度
+$T_c=467\,\mathrm K$、
+临界压强
+$p_c=35.5\,\mathrm{atm}$、
+摩尔质量
+$M=74\,\mathrm{g/mol}$。
+求室温时液态乙醚所占容器体积的比例。
+\exsolution
+设容器总体积为 $V_{\rm vessel}$，
+乙醚质量为 $m$，
+若总平均比容需要等于临界比容，
+则
+$V_{\rm vessel}=mV_{m,c}/M$。
+而室温液态乙醚自身占据体积
+$V_\ell=m/\rho_\ell$。
+所以所求体积分数
+\[
+f=\frac{V_\ell}{V_{\rm vessel}}
+=\frac M{\rho_\ell V_{m,c}}.
+\]
+范德瓦耳斯临界关系
+$V_{m,c}=3RT_c/(8p_c)$，
+所以
+\[
+\boxed{f=\frac{8Mp_c}{3\rho_\ell RT_c}}.
+\]
+以室温乙醚密度
+$\rho_\ell\simeq0.71\,\mathrm{g/cm^3}
+=710\,\mathrm{g/L}$ 计算，
+\[
+\boxed{f\simeq0.25}.
+\]
+\excheck 乙醚室温密度\emph{并未在题面中给出}，
+因此数值需要外部物性表或教材常用近似；
+公式本身只依赖临界关系和 $\rho_\ell$。
+
+\thermophaseproblem{204}{85}
+证明：图2.5中连接气液两相共存态1与5的
+等温等压水平线，
+会把范德瓦耳斯等温曲线夹出的
+区域 I 与 II 分为相同面积
+（Maxwell 等面积构造）。
+\exsolution
+设共存温度为 $T$、
+共存压强为 $p_s$，
+液相端摩尔体积为 $V_\ell$，
+气相端摩尔体积为 $V_g$。
+对于沿平衡态、可逆等温路径的
+Helmholtz 自由能有
+\[
+\mathrm dF=-p\,\mathrm dV
+\quad(T=\text{常数}).
+\]
+共存两相在相同 $T,p_s$ 下，
+其摩尔 Gibbs 自由能相同：
+\[
+F(V_g)+p_sV_g=F(V_\ell)+p_sV_\ell.
+\]
+故
+\[
+F(V_g)-F(V_\ell)
+=-p_s(V_g-V_\ell).
+\]
+另一方面沿范德瓦耳斯等温曲线
+形式积分：
+\[
+F(V_g)-F(V_\ell)
+=-\int_{V_\ell}^{V_g}p_{\rm vdW}(V,T)\,\mathrm dV.
+\]
+将两式相等：
+\[
+\boxed{\int_{V_\ell}^{V_g}
+[p_{\rm vdW}(V,T)-p_s]\,\mathrm dV=0}.
+\]
+这意味着等温曲线位于水平线之上的
+有符号面积与位于其下方的面积模相等，
+即图示区域 I 与 II 面积相等。
+\excheck 等面积规则是由\emph{共存端点的
+自由能相等}导出；
+不能把范德瓦耳斯中间不稳定分支
+误当作真实液气共存时可以稳定走过的物理过程。
