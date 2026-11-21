@@ -451,8 +451,12 @@ DIFFRACTION_RANGES = [
 ]
 POLARIZATION_CHAPTERS = [
     "30-optics-polarization-157-157.tex",
+    "30-optics-polarization-158-175.tex",
+    "30-optics-polarization-176-199.tex",
 ]
-POLARIZATION_RANGES = [range(157, 158)]
+POLARIZATION_RANGES = [range(157, 158), range(158, 176), range(176, 200)]
+DISPERSION_CHAPTERS = ["31-optics-dispersion-200-215.tex"]
+DISPERSION_RANGES = [range(200, 216)]
 
 part_three = []
 for macro, filenames, expected_ranges in [
@@ -554,6 +558,7 @@ for macro, filenames, ranges in [
     ("interferenceproblem", INTERFERENCE_CHAPTERS, INTERFERENCE_RANGES),
     ("diffractionproblem", DIFFRACTION_CHAPTERS, DIFFRACTION_RANGES),
     ("polarizationproblem", POLARIZATION_CHAPTERS, POLARIZATION_RANGES),
+    ("dispersionproblem", DISPERSION_CHAPTERS, DISPERSION_RANGES),
 ]:
     if (r"\newcommand{" + chr(92) + macro + "}") not in main:
         errors.append(f"main.tex missing macro {macro}")
@@ -577,12 +582,12 @@ for macro, filenames, ranges in [
             errors.append(f"{name}: TeX braces unbalanced")
         if r"\input{chapters/" + path.stem + "}" not in main:
             errors.append(f"main.tex missing chapter: {name}")
-if part_five != list(range(1, 158)):
-    errors.append("Part V independent numbering is not exactly 1..157")
+if part_five != list(range(1, 216)):
+    errors.append("Part V independent numbering is not exactly 1..215")
 if main.count(r"\chapter{光学}") != 1:
     errors.append("Part V chapter count is not one")
 for heading in (
-    "光度学与几何光学", "光的干涉", "光的衍射", "光的偏振",
+    "光度学与几何光学", "光的干涉", "光的衍射", "光的偏振", "光的色散与吸收",
 ):
     if main.count(r"\section{" + heading) != 1:
         errors.append(f"Part V section missing or duplicated: {heading}")
@@ -591,4 +596,4 @@ if errors:
     for e in errors:
         print("FAIL:", e, file=sys.stderr)
     sys.exit(1)
-print("PASS: 388 Part-I + 257 Part-II + 407 Part-III + 224 Part-IV + 157 Part-V = 1433 translated solved problems in 131 chapter files; all five independent numbering ranges verified")
+print("PASS: 388 Part-I + 257 Part-II + 407 Part-III + 224 Part-IV + 215 Part-V = 1491 translated solved problems in 134 chapter files; all five independent numbering ranges verified")
