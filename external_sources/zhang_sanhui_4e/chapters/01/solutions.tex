@@ -219,3 +219,378 @@
 无论选取何种发射角，在题设水平距离处都无法越过墙顶。
 实现该最大高度的角度
 \(\alpha=\arctan(25^2/(9.8\times50))\approx51.9^\circ\)。
+
+
+% 第二批独立解析：第1章 1.11--1.26。
+% 用户提供的教材PDF物理页54--55，对照辅导书PDF约20--25页。
+% 数值计算统一优先以题设原始有效数字及 g=9.80 m/s^2 计算，
+% 中间步骤不先舍入；未有独立外审、正式XeLaTeX认证或出版授权认证。
+\subsection*{习题 1.11--1.26：独立复算}
+
+\paragraph{习题 1.11}
+汽车在东岸从静止以匀加速度行进 \(s=265\,\mathrm m\)，
+冲出时速率 \(v=150/3.6=41.6667\,\mathrm{m/s}\)，
+取 \(g=9.80\,\mathrm{m/s^2}\)。由
+\(v^2=2as\) 及 \(s=\frac12vt\)，得
+\[
+ a=\frac{(150/3.6)^2}{2(265)}
+ \approx3.276\,\mathrm{m/s^2},\qquad
+ t_{\rm run}=\frac{2(265)}{150/3.6}=12.72\,\mathrm s.
+\]
+把起飞点取作坐标原点，抛射方程
+\[
+ x(t)=v\cos(5^\circ)t,\qquad
+ y(t)=v\sin(5^\circ)t-\frac12gt^2.
+\]
+飞越水平跨度 \(L=57\,\mathrm m\) 所需
+\[
+ t_{\rm flight}=\frac{L}{v\cos5^\circ}
+ \approx1.373\,\mathrm s.
+\]
+距起飞点最高竖直升高
+\(\Delta H=(v\sin5^\circ)^2/(2g)
+\approx0.673\,\mathrm m\)，
+故距河面的最高高度约
+\(10.0+0.673=10.673\,\mathrm m\)。
+桥面相对起飞点的高度差为
+\[
+ \Delta y=y(t_{\rm flight})
+ =v\sin5^\circ\,t_{\rm flight}
+ -\frac12gt_{\rm flight}^2
+ \approx-4.25\,\mathrm m.
+\]
+负号表示桥面比起飞点低约 \(4.25\,\mathrm m\)；
+忽略空气阻力，题设中的匀加速只用于东岸跑道阶段。
+
+\paragraph{习题 1.12}
+把下炮设为 \((0,0)\)，上炮设为 \((s,h)\)，
+两炮初始均沿两点连线瞄准对方，发射速率同为 \(u\)。
+两弹受相同的竖直重力加速度，因此相对加速度为零；
+相对位置以速率 \(2u\) 沿炮口连线匀速缩短，
+故两弹若在自由飞行期间相遇，相遇时刻
+\[
+ t_*=\frac{\sqrt{s^2+h^2}}{2u}.
+\]
+相遇点的实际高度为
+\[
+ y_*=\frac h2-\frac12gt_*^2
+ =\frac h2-\frac{g(s^2+h^2)}{8u^2}.
+\]
+要在地面以上（含临界触地）相遇，必要且在题设
+无障碍理想条件下充分的是 \(y_*\ge0\)，
+即
+\[
+ u\ge u_{\min}
+ =\frac12\sqrt{\frac{g(s^2+h^2)}{h}}
+ =\frac12\sqrt{\frac{9.80(200^2+50^2)}{50}}
+ \approx45.63\,\mathrm{m/s}.
+\]
+注意山体或障碍物的实际几何形状未建模；“相遇”只针对两弹空中轨迹。
+
+\paragraph{习题 1.13}
+转速 \(n=6\times10^4\,\mathrm{r/min}
+=1000\,\mathrm{s^{-1}}\)。
+角速度 \(\omega=2\pi n\)，
+在 \(r=0.10\,\mathrm m\) 处的向心加速度为
+\[
+ a_c=\omega^2r=(2\pi\times1000)^2(0.10)
+ \approx3.948\times10^6\,\mathrm{m/s^2}.
+\]
+相对重力加速度
+\[
+ \frac{a_c}{g}\approx\frac{3.948\times10^6}{9.80}
+ =4.03\times10^5.
+\]
+加速度方向为水平指向转轴，题目所求是大小之比。
+
+\paragraph{习题 1.14}
+设地球半径 \(R_\oplus=6.37\times10^6\,\mathrm m\)，
+按 \(T=24\,\mathrm h\) 近似自转一周，
+纬度 \(\phi=39.9^\circ\)，自转轴到地表点的距离
+\(R_\perp=R_\oplus\cos\phi\)。
+天安门随自转运动的速率与向心加速度为
+\[
+ v=\frac{2\pi R_\oplus\cos\phi}{T}
+ \approx355\,\mathrm{m/s},\qquad
+ a_c=\left(\frac{2\pi}{T}\right)^2R_\oplus\cos\phi
+ \approx2.58\times10^{-2}\,\mathrm{m/s^2}.
+\]
+速率沿当地纬线向东，向心加速度指向地球自转轴。
+若使用恒星日 \(T=86164\,\mathrm s\) 将有轻微数值差别。
+
+\paragraph{习题 1.15}
+在玻尔圆轨道的题设理想模型下，
+周期 \(T_e=2\pi r/v\)，频率
+\[
+ f=\frac{v}{2\pi r}
+ =\frac{2.2\times10^6}{2\pi(0.53\times10^{-10})}
+ \approx6.61\times10^{15}\,\mathrm{Hz}.
+\]
+向心加速度
+\[
+ a_c=\frac{v^2}{r}
+ =\frac{(2.2\times10^6)^2}{0.53\times10^{-10}}
+ \approx9.13\times10^{22}\,\mathrm{m/s^2},
+\]
+指向原子核。这是原题采用的经典轨道模型结果，
+并不是现代量子力学对电子确定轨道的断言。
+
+\paragraph{习题 1.16}
+将储存环近似为圆环，周长 \(C=240\,\mathrm m\)，
+半径 \(R=C/(2\pi)\)。电子速率近似 \(c\)，
+\[
+ \frac{a_c}{g}=
+ \frac{c^2/R}{g}
+ =\frac{2\pi c^2}{Cg}
+ \approx2.40\times10^{14}
+ \quad
+ (c\approx2.998\times10^8\,\mathrm{m/s}).
+\]
+这是轨道曲率导致的坐标向心加速度；
+高速电子的受力与动力学仍需相对论处理，
+不能把 \(F=ma_c\) 当作相对论动力学定律。
+
+\paragraph{习题 1.17}
+法向加速度 \(a_n=v^2/R=10^2/400
+=0.250\,\mathrm{m/s^2}\)，方向指向弯道圆心。
+因为汽车正在减速，切向加速度大小为
+\(0.20\,\mathrm{m/s^2}\) 且方向与速度相反。
+二者正交，故总加速度
+\[
+ |\boldsymbol a|=\sqrt{a_n^2+a_t^2}
+ =\sqrt{0.250^2+0.200^2}
+ \approx0.320\,\mathrm{m/s^2}.
+\]
+相对于\emph{反向切线}向圆心偏转
+\[
+ \theta=\arctan\frac{a_n}{a_t}
+ =\arctan\frac{0.250}{0.200}
+ \approx51.3^\circ;
+\]
+若从向心方向量起，则偏向反向切线约
+\(38.7^\circ\)。
+
+\paragraph{习题 1.18}
+以径向音轨密度 \(N=650\,\mathrm{mm^{-1}}
+=6.50\times10^5\,\mathrm{m^{-1}}\) 计，
+半径增加 \(dr\) 时需要 \(d\mathcal N=Ndr\) 圈。
+在半径 \(r\) 处，线速固定 \(v\)，转一圈用时
+\(dt=(2\pi r/v)\,d\mathcal N\)。
+因而全部放音时间为
+\[
+ T=\int_{R_1}^{R_2}\frac{2\pi rN}{v}\,dr
+ =\frac{\pi N(R_2^2-R_1^2)}{v}
+ =\frac{\pi(6.5\times10^5)(0.056^2-0.022^2)}{1.3}
+ \approx4.166\times10^3\,\mathrm s
+ \approx69.43\,\mathrm{min}.
+\]
+激光头以 \(dr/dt=v/(2\pi Nr)>0\) 逐渐外移，
+光盘角速度 \(\omega=v/r\)，故
+\[
+ \alpha=\frac{d\omega}{dt}
+ =-\frac{v}{r^2}\frac{dr}{dt}
+ =-\frac{v^2}{r^2}\frac{v}{2\pi Nr}
+ =-\frac{v^3}{2\pi Nr^3}.
+\]
+在 \(r=0.050\,\mathrm m\) 时
+\[
+ \omega=26.0\,\mathrm{rad/s},\qquad
+ \alpha\approx-4.30\times10^{-3}\,\mathrm{rad/s^2}.
+\]
+负号表示为维持固定线速度，转速随外移而降低。
+检查：\(Ndr\) 无量纲为圈数，\(T\) 的量纲为时间。
+
+\paragraph{习题 1.19}
+取向前为正，右手相对躯干向后划动
+\(\Delta x_{\rm hb}=-1.20\,\mathrm m\)，
+躯干相对静水前进
+\(\Delta x_{\rm bw}=+0.90\,\mathrm m\)。
+位移的参考系加法为
+\[
+ \Delta x_{\rm hw}
+ =\Delta x_{\rm hb}+\Delta x_{\rm bw}
+ =-1.20+0.90=-0.30\,\mathrm m.
+\]
+所以手对水向后划过 \(0.30\,\mathrm m\)。
+假定这段时间内水相对泳池静止，未计局部水流。
+
+\paragraph{习题 1.20}
+西风表示空气相对地面以
+\(u=30\,\mathrm{m/s}\) 向东吹。
+空气中的声速 \(c_s=344\,\mathrm{m/s}\)。
+沿风向地面传播，速率 \(c_s+u=374\,\mathrm{m/s}\)；
+逆风向西传播，速率 \(c_s-u=314\,\mathrm{m/s}\)。
+若要求声波\emph{相对地面}沿正北方向传播，则
+声速相对空气的东向分量必须为 \(-u\) 以抵消风，
+其北向分量为
+\[
+ v_{\rm north}=\sqrt{c_s^2-u^2}
+ =\sqrt{344^2-30^2}
+ \approx342.69\,\mathrm{m/s}.
+\]
+这里区分了“传播的合速度严格向北”和
+“声波相对于空气正向北”的不同假设；后者地面合速度并不正北。
+
+\paragraph{习题 1.21}
+电梯自静止以 \(a_e=1.2\,\mathrm{m/s^2}\)
+向下加速，开始 \(t_0=0.5\,\mathrm s\) 后抛球。
+此时电梯速度向下大小 \(v_{e0}=a_et_0=0.6\,\mathrm{m/s}\)，
+球释放瞬间具有相同的地面速度。
+球相对于电梯地板的初速度为零，相对向下加速度
+\(g-a_e\)，高度 \(h=1.5\,\mathrm m\)：
+\[
+ h=\frac12(g-a_e)\tau^2,\quad
+ \tau=\sqrt{\frac{2h}{g-a_e}}
+ =\sqrt{\frac{3.0}{9.8-1.2}}
+ \approx0.5906\,\mathrm s.
+\]
+球释放后相对地面向下的位移为
+\[
+ s_g=v_{e0}\tau+\frac12g\tau^2
+ =0.6(0.5906)+4.9(0.5906)^2
+ \approx2.064\,\mathrm m.
+\]
+球相对于电梯只下降 \(1.5\,\mathrm m\)，
+相对地面下降更远，因为电梯底板也同时下移。
+
+\paragraph{习题 1.22}
+以骑行方向\emph{向西}为水平正向，
+令雨滴对地速度的水平分量为 \(v_x\)，
+竖直向下分量为 \(v_y>0\)。
+第一种骑行速率 \(u_1=18/3.6=5\,\mathrm{m/s}\) 时
+观察雨滴竖直下落，即雨滴相对于骑行者
+\(v_x-u_1=0\)，故 \(v_x=5\,\mathrm{m/s}\) 向西。
+第二种骑行速率 \(u_2=36/3.6=10\,\mathrm{m/s}\)，
+相对水平分速度 \(v_x-u_2=-5\,\mathrm{m/s}\)，向东。
+相对雨滴方向与骑行正西方向成 \(120^\circ\)，所以
+\[
+ \cos120^\circ=\frac{-5}{\sqrt{5^2+v_y^2}}
+ =-\frac12\quad\Longrightarrow\quad
+ v_y=5\sqrt3\approx8.66\,\mathrm{m/s}.
+\]
+雨滴对地速率为
+\[
+ |\boldsymbol v_{\rm rain}|=\sqrt{5^2+(5\sqrt3)^2}
+ =10.0\,\mathrm{m/s},
+\]
+方向为向西斜下 \(60^\circ\)
+（即与铅直向下成 \(30^\circ\) 向西）。
+仅凭第一种观察不能求竖直分量，需利用第二种角度。
+
+\paragraph{习题 1.23}
+取向东为 \(x\) 正方向、向北为 \(y\) 正方向。
+飞机 \(A\) 向南飞，飞机 \(B\) 从正东向南偏转
+\(30^\circ\)，所以地面速度为
+\[
+ \boldsymbol v_A=(0,-1000),\qquad
+ \boldsymbol v_B=(800\cos30^\circ,-800\sin30^\circ)
+ =(400\sqrt3,-400)
+ \quad (\mathrm{km/h}).
+\]
+由相对速度差
+\[
+ \boldsymbol v_{A/B}=\boldsymbol v_A-\boldsymbol v_B
+ =(-400\sqrt3,-600)\quad(\mathrm{km/h}),
+\]
+其大小
+\[
+ |\boldsymbol v_{A/B}|
+ =\sqrt{(400\sqrt3)^2+600^2}
+ =400\sqrt{\tfrac{21}{4}}
+ \approx916.5\,\mathrm{km/h}.
+\]
+方向向西偏南
+\[
+ \beta=\arctan\frac{600}{400\sqrt3}
+ \approx40.89^\circ.
+\]
+反向相对速度
+\(\boldsymbol v_{B/A}=-\boldsymbol v_{A/B}
+=(400\sqrt3,600)\,\mathrm{km/h}\)，
+大小相等，方向向东偏北 \(40.89^\circ\)。
+\textbf{风险复核：}“向东偏南30度”不等于“向南偏东30度”，
+这两种误读会给出不同速度，须严格保留原书方向措辞。
+
+\paragraph{习题 1.24}
+本题依赖原书图1.24对大楼日夜位置的画法。
+在图示通常采用的理想模型中，假定大楼位于赤道附近，
+地球公转速度 \(\boldsymbol v_{\rm orb}\) 的方向在
+被比较的日夜两位置近似不变，
+地球自转表面线速度大小
+\(v_{\rm rot}=2\pi R_\oplus/T\)。
+若两位置的自转切向速度分别与公转方向同向和反向，
+则
+\[
+ v_{\rm day}=v_{\rm orb}+v_{\rm rot},\quad
+ v_{\rm night}=v_{\rm orb}-v_{\rm rot},\quad
+ |\Delta v|=2v_{\rm rot}
+ =\frac{4\pi R_\oplus}{T}.
+\]
+取 \(R_\oplus=6.37\times10^6\,\mathrm m\)，
+\(T=86400\,\mathrm s\)，得
+\[
+ |\Delta v|\approx 0.926\,\mathrm{km/s}.
+\]
+若建筑物所在纬度为 \(\phi\) 而比较仍符合方向投影的假设，
+自转速率为 \(\Omega R_\oplus\cos\phi\)，
+速率差还取决于两点的投影几何。
+\textbf{审校风险：}未完整重绘图1.24前，不可把赤道模型的
+\(0.926\,\mathrm{km/s}\) 当作对所有纬度和日期无条件成立的数值。
+
+\paragraph{习题 1.25}
+设介子相对实验室向前运动速率
+\(u=0.99975c\)，实验室测得正、反向发出的光的速度
+分别为 \(+c\) 和 \(-c\)。
+如果\emph{错误地}套用伽利略速度变换
+\(v'=v-u\)，则相对介子
+\[
+ v'_{\rm forward}=c-u=(1-0.99975)c
+ =0.00025c\approx7.495\times10^4\,\mathrm{m/s},
+\]
+\[
+ v'_{\rm backward}=-c-u=-(1+0.99975)c
+ =-1.99975c,
+ \qquad
+ |v'_{\rm backward}|\approx5.995\times10^8\,\mathrm{m/s}.
+\]
+这两个只是伽利略变换的预言，而非实际光速。
+相对论速度变换
+\(v'=(v-u)/(1-vu/c^2)\) 对两束光仍给出
+\(+c\) 与 \(-c\)，验证了实际光速不变。
+注意要区分带方向的\emph{速度}与非负的\emph{速率}。
+
+\paragraph{习题 1.26}
+定义地面坐标系的 \(x\) 轴向东、\(y\) 轴向北。
+西风 \(150\,\mathrm{km/h}\) 表示空气吹向东，
+飞机相对空气以 \(750\,\mathrm{km/h}\) 向北飞行，
+故飞机对地速度矢量
+\[
+ \boldsymbol v_{P/G}=(150,750)\quad(\mathrm{km/h}).
+\]
+导弹相对于飞机以 \(5750\,\mathrm{km/h}\)
+“向西偏南 \(19.5^\circ\)”飞行，因此
+\[
+ \boldsymbol v_{M/P}
+ =(-5750\cos19.5^\circ,-5750\sin19.5^\circ).
+\]
+根据参考系速度的矢量加法，
+\[
+ \boldsymbol v_{M/G}
+ =\boldsymbol v_{M/P}+\boldsymbol v_{P/G}
+ =(150-5750\cos19.5^\circ,\;
+  750-5750\sin19.5^\circ)
+ \approx(-5270.19,-1169.39)\quad(\mathrm{km/h}).
+\]
+故地面观测的速率与方向为
+\[
+ |\boldsymbol v_{M/G}|
+ \approx5398.4\,\mathrm{km/h}\approx5.40\times10^3\,\mathrm{km/h},
+\]
+\[
+ \gamma=\arctan\frac{1169.39}{5270.19}
+ \approx12.51^\circ,
+\]
+即\emph{向西偏南约 \(12.5^\circ\)}。
+检查：由于飞机对地速度远小于导弹对飞机速度，
+所求大小接近 \(5750\,\mathrm{km/h}\) 且并不相等；
+必须使用矢量加法而非标量直接相加。
