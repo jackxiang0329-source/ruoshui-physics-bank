@@ -1,0 +1,350 @@
+% Irodov Part III §3.4 problems 189--200, source PDF pp.128--129,
+% printed pp.119--120. The user-provided book, not invented examples.
+\electrocurrentproblem{189}{119}
+电阻为 $R$ 的线圈通过的总电荷为 $q$，电流逐渐降为零。
+求焦耳热：(a) 电流在 $\Delta t$ 内线性减小；
+(b) 电流连续衰减，每经过 $\Delta t$ 减半。
+\exsolution
+(a) 设初始电流为 $I_0$，
+$I(t)=I_0(1-t/\Delta t)$，$0\le t\le\Delta t$。
+通过的电荷
+$q=\int_0^{\Delta t}I\,\mathrm dt=I_0\Delta t/2$，
+故 $I_0=2q/\Delta t$。
+焦耳热
+\[
+Q_a=R\int_0^{\Delta t}I(t)^2\,\mathrm dt
+=RI_0^2\frac{\Delta t}{3}
+=\boxed{\frac{4Rq^2}{3\Delta t}}.
+\]
+(b) 令
+$I(t)=I_0e^{-\lambda t}$，
+每隔 $\Delta t$ 减半意味着
+$\lambda=\ln2/\Delta t$。
+由 $q=I_0/\lambda$，得 $I_0=q\lambda$。
+于是
+\[
+Q_b=R\int_0^\infty I_0^2e^{-2\lambda t}\,\mathrm dt
+=\frac{RI_0^2}{2\lambda}
+=\boxed{\frac{Rq^2\ln2}{2\Delta t}}.
+\]
+\excheck 量纲均为焦耳。
+第(b)问“每隔固定时段减半”表示连续指数规律，
+不能擅自改为逐段阶梯电流。
+
+\electrocurrentproblem{190}{119}
+一只内阻为 $R_0$ 的直流电源，
+接到图3.52中三个相同电阻 $R$ 组成的负载。
+求电路产生热功率最大时 $R$ 的取值。
+\exsolution
+检查图3.52的导线短接节点：
+第一只、第三只以及第二只 $R$
+实际上都跨在同一对等势节点上，
+故三只电阻并联，
+$R_{\rm L}=R/3$。
+若电动势为 $\mathcal E$，
+电路热功率
+$P_{\rm total}=I^2(R_0+R_{\rm L})
+=\mathcal E^2/(R_0+R/3)$
+会随 $R$ 变小单调增加，\emph{没有正的内部极大值}。
+但若题目所称“产生热功率最大”是
+\emph{负载上释放的热功率}，
+\[
+P_{\rm L}=\frac{\mathcal E^2(R/3)}
+{(R_0+R/3)^2},
+\]
+对负载电阻微分，
+最大功率传输条件
+$R_{\rm L}=R_0$，因此
+\[
+\boxed{R=3R_0}.
+\]
+\excheck 本题书末答案为 $3R_0$，
+故所指的“thermal power generated in this circuit”
+实际采用\emph{负载功率}口径；
+已与全电路总热功率明确区分。
+
+\electrocurrentproblem{191}{119}
+证明两个并联电阻 $R_1,R_2$
+在给定总电流 $I$ 时，
+实际稳态分流使焦耳热功率最小。
+\exsolution
+设分流为 $I_1$ 与 $I_2=I-I_1$。
+总焦耳功率
+\[
+P(I_1)=I_1^2R_1+(I-I_1)^2R_2.
+\]
+求导并令零：
+$P'(I_1)=2I_1R_1-2(I-I_1)R_2=0$，
+故
+\[
+\boxed{I_1=\frac{R_2}{R_1+R_2}I,\quad
+I_2=\frac{R_1}{R_1+R_2}I}.
+\]
+二阶导数
+$P''=2(R_1+R_2)>0$，
+为严格极小值，
+且
+$P_{\min}=I^2R_1R_2/(R_1+R_2)$。
+\excheck 极小条件等价于
+$I_1R_1=I_2R_2$，
+即两并联支路电压相同。
+
+\electrocurrentproblem{192}{119}
+蓄电池电动势 $\mathcal E=2.6\,\mathrm V$，
+向外电阻输出电流 $I=1.0\,\mathrm A$，
+端电压 $V=2.0\,\mathrm V$。
+求电池内部产生的热功率，
+以及\emph{电场力在电池内部}做功功率。
+\exsolution
+电池内部电压损失
+$\mathcal E-V=Ir$，
+故内阻 $r=(2.6-2.0)/1=0.60\,\Omega$。
+电池内焦耳热
+\[
+\boxed{P_{\rm heat}=I^2r=I(\mathcal E-V)
+=0.60\,\mathrm W}.
+\]
+电池内部电场沿电位\emph{降低}的方向做功；
+电池内部电荷被非静电化学力逆电场推进，
+电场力做功为负：
+\[
+\boxed{P_{\rm electric,inside}=-IV=-2.0\,\mathrm W}.
+\]
+\excheck 电动势贡献的非电场力功率
+$\mathcal EI=2.6\,\mathrm W$，
+与负的内部静电场功率及正的发热功率
+满足能量平衡。不能把 $IV$ 误标为内部电场力的正功。
+
+\electrocurrentproblem{193}{119}
+直流电动机端电压固定为 $V$，
+电枢绕组电阻为 $R$。
+求电机有用机械功率最大时的电流、
+最大有用功率及效率。
+\exsolution
+输入电功率 $P_{\rm in}=VI$，
+电枢焦耳损耗 $P_{\rm heat}=I^2R$。
+忽略其他损失，有用功率
+\[
+P_{\rm use}=VI-I^2R.
+\]
+对 $I$ 求导：
+$\mathrm dP_{\rm use}/\mathrm dI=V-2IR=0$，
+故
+\[
+\boxed{I_*=\frac V{2R}}.
+\]
+因二阶导数 $-2R<0$，
+这是最大值；
+\[
+\boxed{P_{\max}=\frac{V^2}{4R}},
+\qquad
+\boxed{\eta_*=\frac{P_{\max}}{VI_*}=\frac12}.
+\]
+\excheck 50\%效率只是此理想模型的
+\emph{最大输出功率工况}，
+不是一般直流电机的最高效率。
+
+\electrocurrentproblem{194}{119}
+灯丝蒸发使其直径变小，
+为维持原温度需将电压提高
+$\eta=1.0\%$。
+若灯丝向环境失热功率正比于表面积，
+求灯丝直径减少的百分比。
+\exsolution
+温度不变时电阻率近似不变，
+长度保持不变，电阻 $R\propto d^{-2}$。
+电加热功率
+$P_{\rm el}=V^2/R\propto V^2d^2$；
+热散失 $P_{\rm loss}\propto d$。
+维持温度意味着
+$V^2d^2\propto d$，故 $V^2d=\text{常数}$。
+若 $V_f=V_i(1+\eta)$，
+\[
+\frac{d_f}{d_i}=\frac1{(1+\eta)^2}.
+\]
+因此直径相对减少量
+\[
+\boxed{\frac{d_i-d_f}{d_i}
+=1-(1+\eta)^{-2}\simeq2\eta=2.0\%}.
+\]
+\excheck 一阶近似的 2\% 与
+精确值 $1-1/1.01^2\simeq1.97\%$ 一致。
+
+\electrocurrentproblem{195}{119}
+电阻为 $R$、总热容为 $C$ 的均匀导体
+从初温 $T_0$ 起在 $t=0$ 接恒压 $V$。
+向环境散热功率为
+$k(T-T_0)$。求 $T(t)$。
+\exsolution
+热容乘温升速率等于电加热减散热：
+\[
+C\frac{\mathrm dT}{\mathrm dt}
+=\frac{V^2}R-k(T-T_0).
+\]
+令 $\theta=T-T_0$，
+则
+$\dot\theta+(k/C)\theta=V^2/(RC)$。
+初值 $\theta(0)=0$，
+由常系数微分方程得
+\[
+\boxed{T(t)=T_0+
+\frac{V^2}{kR}\left(1-e^{-kt/C}\right)}.
+\]
+\excheck $t\to\infty$ 时温升
+$V^2/(kR)$，正好令电加热和环境散热相等；
+书后文本若丢失负指数应以微分方程为准。
+
+\electrocurrentproblem{196}{119--120}
+图3.53中电压 $V_{AB}$ 恒定，
+串联 $R_1=20\,\Omega$，
+之后接并联 $R_2=30\,\Omega$
+及可变 $R_x$。求令 $R_x$ 产生热功率
+对其小变化一阶不敏感的 $R_x$。
+\exsolution
+从 $R_x$ 端看其余网络的戴维南电阻
+是
+$R_{\rm th}=R_1\parallel R_2
+=R_1R_2/(R_1+R_2)$。
+开路戴维南电压为
+$V_{\rm th}=V_{AB}R_2/(R_1+R_2)$。
+因此
+\[
+P_x=\frac{V_{\rm th}^2R_x}
+{(R_{\rm th}+R_x)^2}.
+\]
+求导有
+$\mathrm dP_x/\mathrm dR_x\propto
+R_{\rm th}-R_x$，
+故
+\[
+\boxed{R_x=R_{\rm th}
+=\frac{R_1R_2}{R_1+R_2}
+=\frac{20\cdot30}{20+30}=12\,\Omega}.
+\]
+\excheck 该点实际上是 $P_x$ 的局部极大点，
+因此对于小的 $\delta R_x$，
+功率的一阶改变量为零。
+
+\electrocurrentproblem{197}{120}
+图3.54中两只电源电动势
+$\mathcal E_1,\mathcal E_2$，内阻
+$R_1,R_2$，与电阻 $R$ 并联。
+求电阻 $R$ 的热功率最大时
+$R$ 的数值和最大功率。
+\exsolution
+从负载 $R$ 端向两并联源看，
+它们的戴维南电动势为
+\[
+\mathcal E_{\rm th}=
+\frac{\mathcal E_1R_2+\mathcal E_2R_1}{R_1+R_2},
+\]
+等效内阻
+$R_{\rm th}=R_1R_2/(R_1+R_2)$。
+于是负载功率
+$P_R=\mathcal E_{\rm th}^2R/(R+R_{\rm th})^2$。
+最大功率传输条件为
+\[
+\boxed{R_*=\frac{R_1R_2}{R_1+R_2}},
+\]
+\[
+\boxed{P_{\max}=
+\frac{\mathcal E_{\rm th}^2}{4R_{\rm th}}
+=\frac{(\mathcal E_1R_2+\mathcal E_2R_1)^2}
+{4R_1R_2(R_1+R_2)}}.
+\]
+\excheck 本题求电阻 $R$ 的功率，
+不是包括两个内阻的全网络耗散。
+
+\electrocurrentproblem{198}{120}
+共有 $N=300$ 节相同电池，
+每节内阻 $r=0.3\,\Omega$，
+外接负载 $R=10\,\Omega$。
+把电池分为 $n$ 组并联，
+每组有 $N/n$ 节串联。
+求使负载热功率最大的并联组数 $n$。
+\exsolution
+设单节电池电动势 $\mathcal E_0$。
+每组串联后电动势
+$\mathcal E_{\rm eq}=(N/n)\mathcal E_0$，
+一组内阻 $(N/n)r$，
+$n$ 组并联等效内阻
+$R_{\rm int}=Nr/n^2$。
+负载功率
+\[
+P_R=\frac{(N\mathcal E_0/n)^2 R}
+{(R+Nr/n^2)^2}
+=\frac{N^2\mathcal E_0^2Rn^2}
+{(Rn^2+Nr)^2}.
+\]
+把 $n^2$ 视为连续变量，
+求极大得 $Rn^2=Nr$，
+所以
+\[
+\boxed{n_*=\sqrt{\frac{Nr}R}
+=\sqrt{\frac{300(0.3)}{10}}=3}.
+\]
+\excheck $n=3$ 正好整除 $N=300$，
+各并联组均有100节电池。
+
+\electrocurrentproblem{199}{120}
+图3.55中先将 $C=5.0\,\mathrm{\mu F}$
+接电动势 $\mathcal E=200\,\mathrm V$
+充电，随后开关由1拨到2，
+经 $R_1=500\,\Omega$、
+$R_2=330\,\Omega$ 放电。
+求在 $R_1$ 中产生的焦耳热。
+\exsolution
+初态储能
+$U_0=\frac12C\mathcal E^2$。
+拨到2后电容通过
+$R_1$、$R_2$ 的串联回路放电，
+瞬时回路电流相同，
+各电阻耗散功率比恒为
+$P_1/P_2=R_1/R_2$。
+因此总储能中由 $R_1$ 耗散的份额
+\[
+Q_1=U_0\frac{R_1}{R_1+R_2}
+=\boxed{\frac{C\mathcal E^2R_1}{2(R_1+R_2)}}.
+\]
+代数值：
+\[
+\boxed{Q_1\simeq0.060\,\mathrm J=60\,\mathrm{mJ}}.
+\]
+\excheck 注意放电回路内两电阻\emph{串联}，
+不是按照并联电阻分流比例分配热量。
+
+\electrocurrentproblem{200}{120}
+空气平板电容器原电容
+$C=20\,\mathrm{nF}$，
+接固定电压 $V=100\,\mathrm V$。
+板间有金属插片，其厚度占间距
+$\eta=0.60$，随后缓慢抽出。
+求 (a) 电容器场能变化；(b) 外力机械功。
+\exsolution
+金属插片使有效电场间隙减为
+$d(1-\eta)$，
+插入时电容
+$C_i=C/(1-\eta)$。
+抽出后电容为 $C_f=C$，
+电压始终由电源维持。
+电容器储能 $U=\frac12CV^2$，
+所以
+\[
+\boxed{\Delta U=
+\frac12(C_f-C_i)V^2
+=-\frac{CV^2\eta}{2(1-\eta)}}.
+\]
+恒电压下外力反抗吸引插片的电力，
+外界机械功
+\[
+\boxed{A_{\rm ext}=-\frac12V^2(C_f-C_i)
+=\frac{CV^2\eta}{2(1-\eta)}}.
+\]
+代入 SI 数值：
+\[
+\boxed{\Delta U=-0.15\,\mathrm{mJ},
+\quad A_{\rm ext}=+0.15\,\mathrm{mJ}}.
+\]
+\excheck 电压由电源固定时，
+电场储能变化与外界机械功不直接相等；
+电源也交换电荷和能量。
