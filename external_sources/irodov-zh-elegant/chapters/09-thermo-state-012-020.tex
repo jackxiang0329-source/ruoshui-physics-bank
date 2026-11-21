@@ -1,0 +1,311 @@
+% Irodov, user-supplied book, section 2.1 original problems 12--20,
+% printed p.64 / PDF p.73.
+\thermoproblem{12}{64}
+一摩尔理想气体沿下列过程变化：
+$T=T_0+\alpha V^2$，
+其中 $T_0,\alpha$ 为正常数，
+$V$ 为该摩尔气体的体积。
+求过程中能够达到的最小压强，
+并定性画出 $p$ 随 $V$ 变化的图线。
+\exsolution
+一摩尔理想气体满足 $pV=RT$。
+代入过程方程：
+\[
+p(V)=\frac{R(T_0+\alpha V^2)}{V}
+=R\left(\frac{T_0}{V}+\alpha V\right),
+\quad V>0.
+\]
+对体积求导：
+\[
+\frac{\mathrm dp}{\mathrm dV}
+=R\left(-\frac{T_0}{V^2}+\alpha\right).
+\]
+极小值在
+$V_*=\sqrt{T_0/\alpha}$，
+此点二阶导数
+$2RT_0/V_*^3>0$。
+于是
+\[
+\boxed{p_{\min}=p(V_*)
+=2R\sqrt{\alpha T_0}}.
+\]
+图线在 $V\to0^+$ 时由 $RT_0/V$
+主导而趋无穷，在 $V\to\infty$ 时
+由 $R\alpha V$ 主导亦趋无穷，
+在 $V_*$ 处有唯一谷底。
+\excheck 过程曲线为 U 形，
+不是理想气体等温过程的双曲线；
+这里气体温度随体积而变化。
+
+\thermoproblem{13}{64}
+在均匀重力场中放置一个高圆柱形容器，
+内装氮气。
+自由落体加速度大小为 $g$，
+气体沿高度 $h$ 的温度分布使得
+其\emph{质量密度处处相同}。
+求温度梯度 $\mathrm dT/\mathrm dh$。
+\exsolution
+高度向上取正，
+静力学平衡给出
+$\mathrm dp/\mathrm dh=-\rho g$。
+由理想气体状态方程
+$p=\rho RT/M$，
+其中氮气摩尔质量 $M$、
+$\rho$ 为质量密度。
+题设 $\rho$ 在所有高度都相同，
+所以
+\[
+\frac{\mathrm dp}{\mathrm dh}
+=\frac{\rho R}{M}\frac{\mathrm dT}{\mathrm dh}.
+\]
+与静力方程联立：
+\[
+\boxed{\frac{\mathrm dT}{\mathrm dh}
+=-\frac{Mg}{R}}.
+\]
+以氮气 $M=0.0280\,\mathrm{kg/mol}$
+及 $g=9.81\,\mathrm{m/s^2}$，
+得
+$\boxed{\mathrm dT/\mathrm dh
+\simeq-0.033\,\mathrm{K/m}=-33\,\mathrm{mK/m}}$。
+\excheck 温度随高度线性下降，
+与常温气体密度不随高度变化这一特定假设相容；
+该梯度不是任意大气环境的实际气温直减率。
+
+\thermoproblem{14}{64}
+假设大气中的压强与质量密度满足
+$p/\rho^{\,n}=\text{常数}$，
+其中 $n$ 与高度无关。
+利用静力学平衡和理想气体状态方程，
+求相应温度梯度。
+\exsolution
+写多方关系为 $p=C\rho^n$，
+则气体温度满足
+\[
+T=\frac{Mp}{R\rho}
+=\frac{MC}{R}\rho^{n-1}.
+\]
+两边求导：
+\[
+\frac{\mathrm dT}{T}
+=(n-1)\frac{\mathrm d\rho}{\rho},
+\qquad
+\frac{\mathrm dp}{p}=n\frac{\mathrm d\rho}{\rho}.
+\]
+由静力方程
+$\mathrm dp/\mathrm dh=-\rho g$，
+以及 $p/\rho=RT/M$，
+得到
+\[
+\frac{\mathrm dT}{\mathrm dh}
+=(n-1)\frac{T}{n p}\frac{\mathrm dp}{\mathrm dh}
+=-(n-1)\frac{T\rho g}{np}.
+\]
+化简：
+\[
+\boxed{\frac{\mathrm dT}{\mathrm dh}
+=-\frac{Mg}{nR}(n-1)}.
+\]
+\excheck $n=1$ 时等温且温度梯度为零；
+如果 $n>1$，温度随高度升高而降低。
+
+\thermoproblem{15}{64}
+地表附近空气处于标准状况，
+假设温度和平均摩尔质量随高度不变。
+求地表上方 $5.0\,\mathrm{km}$ 处，
+以及地面下方深 $5.0\,\mathrm{km}$ 的矿井中的气压。
+\exsolution
+等温静力平衡的气压分布为
+\[
+p(h)=p_0\exp\left(-\frac{Mgh}{RT}\right),
+\]
+其中高度 $h$ 在地面以上取正、矿井中取负。
+取 $p_0=1.00\,\mathrm{atm}$、
+$T=273.15\,\mathrm K$、
+$M\simeq0.029\,\mathrm{kg/mol}$。
+定义
+$a=M g(5000\,\mathrm m)/(RT)\simeq0.63$。
+于是
+\[
+\boxed{p(+5.0\,\mathrm{km})
+=p_0e^{-a}\simeq0.53\,\mathrm{atm}\approx0.5\,\mathrm{atm}},
+\]
+\[
+\boxed{p(-5.0\,\mathrm{km})
+=p_0e^{a}\simeq1.9\,\mathrm{atm}\approx2\,\mathrm{atm}}.
+\]
+\excheck 结果来自温度在上下5 km范围内均恒定的
+理想化模型；现实矿井的地温梯度与空气流动会改变数值。
+
+\thermoproblem{16}{64}
+在均匀重力场中，
+假设空气温度为 $0^\circ\mathrm C$、
+平均摩尔质量 $M$ 与 $g$ 均不随高度改变。
+求两个高度之间的距离 $\Delta h$，
+使相应空气密度分别：
+(a) 相差 $e$ 倍；
+(b) 相差 $\eta=1.0\%$。
+\exsolution
+等温大气的密度与气压同指数衰减：
+\[
+\rho(h)=\rho(0)e^{-h/H},
+\qquad H=\frac{RT}{Mg}
+\]
+是密度标高。
+两点间距 $\Delta h>0$ 的密度比
+$\rho(h)/\rho(h+\Delta h)=e^{\Delta h/H}$。
+(a) 若密度相差 $e$ 倍，
+$\Delta h/H=\ln e=1$，所以
+\[
+\boxed{\Delta h_a=\frac{RT}{Mg}}.
+\]
+(b) 若相差 $1+\eta$ 倍，
+\[
+\boxed{\Delta h_b=\frac{RT}{Mg}\ln(1+\eta)
+\simeq\eta\frac{RT}{Mg}}.
+\]
+取 $T=273.15\,\mathrm K$、
+$M=0.029\,\mathrm{kg/mol}$，
+得到
+$\boxed{\Delta h_a\simeq8.0\,\mathrm{km}}$、
+$\boxed{\Delta h_b\simeq0.080\,\mathrm{km}=80\,\mathrm m}$。
+\excheck 当 $\eta\ll1$ 时
+$\ln(1+\eta)\simeq\eta$；
+不能把 $1.0\%$ 错当成倍率 $1.0$。
+
+\thermoproblem{17}{64}
+一个高为 $h$、底面积为 $S$ 的竖直圆柱容器中
+装有摩尔质量为 $M$ 的等温理想气体，
+温度为 $T$。
+容器底面压强为 $p_0$，
+重力加速度为常数 $g$。
+求容器内气体总质量 $m$。
+\exsolution
+底端 $z=0$ 向上取高度 $z$。
+等温静力平衡给出
+\[
+p(z)=p_0\exp(-Mg z/(RT)).
+\]
+理想气体质量密度为
+$\rho(z)=Mp(z)/(RT)$。
+因此总质量
+\[
+m=S\int_0^h\rho(z)\,\mathrm dz
+=\frac{MS p_0}{RT}
+\int_0^h\exp(-Mg z/(RT))\,\mathrm dz.
+\]
+积分得
+\[
+\boxed{m=\frac{S p_0}{g}
+\left(1-e^{-Mgh/(RT)}\right)}.
+\]
+\excheck 对薄层高度 $h\ll RT/(Mg)$，
+指数展开给
+$m\simeq S p_0 M h/(RT)$，
+恢复均匀近似密度 $\rho_0$ 乘体积 $Sh$。
+
+\thermoproblem{18}{64}
+把摩尔质量为 $M$ 的等温理想气体
+放在均匀重力场中一个\emph{非常高}的竖直容器里，
+温度为 $T$、重力加速度为 $g$。
+求气体质量分布的质心高度
+$h_C$（相对容器底面）。
+\exsolution
+等温大气密度分布为
+$\rho(h)=\rho_0e^{-h/H}$，
+其中 $H=RT/(Mg)$。
+容器足够高，可用上限无穷大。
+质心高度是质量加权平均：
+\[
+h_C=\frac{\int_0^\infty h\,\rho(h)S\,\mathrm dh}
+{\int_0^\infty\rho(h)S\,\mathrm dh}
+=\frac{\int_0^\infty h e^{-h/H}\,\mathrm dh}
+{\int_0^\infty e^{-h/H}\,\mathrm dh}.
+\]
+由
+$\int_0^\infty e^{-h/H}\mathrm dh=H$、
+$\int_0^\infty h e^{-h/H}\mathrm dh=H^2$，
+得到
+\[
+\boxed{h_C=H=\frac{RT}{Mg}}.
+\]
+\excheck 质心高度不受容器截面积与底部压强影响，
+是这一指数密度模型的标高。
+
+\thermoproblem{19}{64}
+在均匀重力场中，理想气体摩尔质量为 $M$、
+自由落体加速度为 $g$。
+已知 $h=0$ 时压强 $p=p_0$，
+若温度随高度分别满足
+(a) $T=T_0(1-ah)$；
+(b) $T=T_0(1+ah)$，
+其中 $a>0$，
+求相应压强分布 $p(h)$。
+\exsolution
+静力学平衡为
+$\mathrm dp/\mathrm dh=-\rho g$，
+用
+$\rho=Mp/(RT(h))$ 消去密度：
+\[
+\frac{\mathrm dp}{p}
+=-\frac{Mg}{RT(h)}\,\mathrm dh.
+\]
+记
+$\nu=Mg/(aRT_0)>0$。
+(a) 对 $T(h)=T_0(1-ah)$，
+\[
+\ln\frac p{p_0}
+=-\frac{Mg}{RT_0}\int_0^h\frac{\mathrm dz}{1-az}
+=\nu\ln(1-ah),
+\]
+所以
+\[
+\boxed{p_a(h)=p_0(1-ah)^\nu},
+\qquad h<1/a.
+\]
+(b) 对 $T(h)=T_0(1+ah)$，
+\[
+\ln\frac p{p_0}
+=-\frac{Mg}{RT_0}\int_0^h\frac{\mathrm dz}{1+az}
+=-\nu\ln(1+ah),
+\]
+所以
+\[
+\boxed{p_b(h)=p_0(1+ah)^{-\nu}}.
+\]
+\excheck 两式在 $h=0$ 均给 $p_0$；
+(a) 的物理定义域须保证温度 $T(h)>0$。
+
+\thermoproblem{20}{64}
+一根水平圆柱形管一端封闭、
+另一端在旋转轴上与外界大气连通。
+管绕穿过其开放端的竖直轴以角速度
+$\omega$ 匀速旋转。
+管内空气处于温度 $T$ 的等温平衡，
+摩尔质量为 $M$，开放端大气压为 $p_0$。
+求管内气压随距旋转轴距离 $r$ 的分布。
+\exsolution
+在随管转动的参考系中，
+空气相对管静止。
+气体在沿管轴径向满足离心静力平衡：
+\[
+\frac{\mathrm dp}{\mathrm dr}=\rho\omega^2r.
+\]
+用等温理想气体关系
+$\rho=Mp/(RT)$ 代入：
+\[
+\frac{\mathrm dp}{p}
+=\frac{M\omega^2}{RT}r\,\mathrm dr.
+\]
+由开放端边界 $p(0)=p_0$ 积分：
+\[
+\ln\frac{p(r)}{p_0}
+=\frac{M\omega^2r^2}{2RT},
+\]
+所以
+\[
+\boxed{p(r)=p_0
+\exp\left(\frac{M\omega^2r^2}{2RT}\right)}.
+\]
+\excheck 离心平衡使压强随半径\emph{增加}；
+本题不是地球大气沿竖直高度衰减的模型。
