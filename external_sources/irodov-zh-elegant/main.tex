@@ -30,20 +30,22 @@
 \newcommand{\thermalopticsproblem}[2]{\par\bigskip\noindent\textbf{\large 原书第五篇·第5.7节·第\,#1\,题}\hfill{\small 原书印刷页 #2}\par\smallskip}
 \newcommand{\dispersionproblem}[2]{\par\bigskip\noindent\textbf{\large 原书第五篇·第5.5节·第\,#1\,题}\hfill{\small 原书印刷页 #2}\par\smallskip}
 \newcommand{\polarizationproblem}[2]{\par\bigskip\noindent\textbf{\large 原书第五篇·第5.4节·第\,#1\,题}\hfill{\small 原书印刷页 #2}\par\smallskip}
+\newcommand{\atomicproblem}[2]{\par\bigskip\noindent\textbf{\large 原书第六篇·第6.1节·第\,#1\,题}\hfill{\small 原书印刷页 #2}\par\smallskip}
+\newcommand{\wavequantproblem}[2]{\par\bigskip\noindent\textbf{\large 原书第六篇·第6.2节·第\,#1\,题}\hfill{\small 原书印刷页 #2}\par\smallskip}
 \newcommand{\exsolution}{\par\medskip\noindent\textbf{【详细解析】}\quad}
 \newcommand{\excheck}{\par\smallskip\noindent\textbf{【核验】}\quad}
 \title{《普通物理学习题》中文译注与详解}
 \subtitle{Problems in General Physics --- 逐题整理（进行中）}
 \author{原著：I. E. Irodov \quad 中文译注与题解：三千弱水}
-\date{2026年11月22日 · 已录入1568题（力学388题 + 热学257题 + 电动力学407题 + 振动与波动224题 + 光学292题）}
-\version{2.2}
+\date{2026年11月22日 · 已录入1633题（力学388题 + 热学257题 + 电动力学407题 + 振动与波动224题 + 光学292题 + 原子与核物理65题）}
+\version{2.3}
 \cover{cover.pdf}
 \begin{document}
 \maketitle
 \frontmatter
 \chapter*{编辑说明}
 以用户上传的 Arihant 版 \emph{Problems in General Physics}（PDF共385页）为底本。
-现已覆盖第一篇力学388题、第二篇热学与分子物理257题、第三篇电动力学407题、第四篇振动与波动224题（均为对应篇全部题号），第五篇光学已完整译注第1--292题，其中5.4节偏振第157--199题、5.5节色散与吸收第200--223题、5.6节运动光源光学第224--245题均已完成；5.7节热辐射与量子光学第246--292题已完成。\textbf{全书尚未译完}。
+现已覆盖第一篇力学388题、第二篇热学与分子物理257题、第三篇电动力学407题、第四篇振动与波动224题（均为对应篇全部题号），第五篇光学已完整译注第1--292题；第六篇原子与核物理新录入6.1节1--48题及6.2节49--65题。其中5.4节偏振第157--199题、5.5节色散与吸收第200--223题、5.6节运动光源光学第224--245题均已完成；5.7节热辐射与量子光学第246--292题已完成。\textbf{全书尚未译完}。
 原书答案部分以简答为主，本稿补写公式推导、必要条件及核验。第4、17、18、43、50、51题的图以TikZ重绘；其余部分题目以明确的向量定义代替简单示意图。
 其中第4题示意图不是原曲线的数字化精密拟合，结果依原图读数。
 公式已自查，\textbf{不宣称经过独立专家审查}。
@@ -230,9 +232,16 @@
 \input{chapters/33-thermal-radiation-258-268}
 \input{chapters/33-thermal-radiation-269-280}
 \input{chapters/33-thermal-radiation-281-292}
+\chapter{原子与核物理}
+\section{散射、卢瑟福--玻尔原子：第1--48题（原书第六篇重新编号，本节完成）}
+\input{chapters/34-atomic-scattering-001-018}
+\input{chapters/34-atomic-scattering-019-032}
+\input{chapters/34-atomic-scattering-033-048}
+\section{粒子的波动性质与薛定谔方程：第49--65题（后续继续）}
+\input{chapters/35-wave-properties-049-065}
 \backmatter
 \chapter*{版本信息}
-本书现累计1568题：第一篇力学388题、第二篇热学与分子物理257题、第三篇电动力学407题、第四篇振动与波动224题（前四篇全部），第五篇光学1--292题。五篇各自沿用原书独立编号。
-v2.2本批次新增100题：第五篇5.4偏振158--199（42题）、5.5色散与吸收200--223（24题）、5.6运动光源光学224--245（22题）、5.7热辐射与量子光学246--257（12题）。均有中文题面、推导和核验。对照原PDF印刷页213--228及原书答案页332--337；第174、208题原PDF文本漏根号；第245题按题面得0.290MeV但书末约0.23MeV；第254题原题印 $\omega^2$，书末则按 $\omega^3$ 计算，均明确记录在errata.md。
-已完成结构与局部物理自查，图解需继续复绘；GitHub Actions全书XeLaTeX编译结果及独立专家二校属于独立验收项目，不能因为有源码便宣称新PDF已生成。
+本书目前录入六篇1633道有中文题面、完整推导和核验说明的题目。第一篇力学388题、第二篇热学与分子物理257题、第三篇电动力学407题、第四篇振动与波动224题、第五篇光学292题均已覆盖对应篇的全部原书题号。第六篇《原子与核物理》已录入独立编号1--65题。
+v2.3本轮新增100道：第五篇第258--292题35道使光学完结；第六篇第1--65题65道，分别为6.1节卢瑟福散射与玻尔原子1--48题及6.2节物质波49--65题。相关译解均以用户提供385页Arihant英文底本为依据，保留原书印刷页标识、公式推导和逐题核验。
+本轮专门校勘第六篇10、12题的原书数值差异，第29题“第50条”与上能级n=50的编号分歧，以及第32题书末漏列的95.0 nm莱曼吸收线。原书第六篇采用高斯单位制，本版明确转换为SI且注明库仑常数。完整的学术独立二校及部分图形复绘尚未完成；结构检查通过不等于PDF编译或学术终审通过。
 \end{document}
