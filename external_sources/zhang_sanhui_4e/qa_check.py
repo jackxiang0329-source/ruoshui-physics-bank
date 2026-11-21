@@ -1,0 +1,157 @@
+#!/usr/bin/env python3
+"""Strict structural QC for the Zhang Sanhui textbook candidate intake.
+
+Does NOT certify physics correctness, copyright, original figures, or expert review.
+Run from any working directory: python external_sources/zhang_sanhui_4e/qa_check.py
+"""
+from __future__ import annotations
+
+import json
+import math
+import re
+import sys
+from collections import Counter
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent
+REGISTER = ROOT / "source_register.json"
+SECTIONS = re.compile(r"\\paragraph\{习题\s+(\d+\.\d+)\}")
+CANDIDATE_STATUS = "pending_independent_verification"
+
+
+def require(condition: bool, message: str) -> None:
+    if not condition:
+        raise AssertionError(message)
+
+
+def check_latex_fragment(path: Path, name: str) -> list[str]:
+    require(path.is_file(), f"missing {name}: {path}")
+    text = path.read_text(encoding="utf-8")
+    require(r"\documentclass" not in text, f"must be input fragment: {path}")
+    for op, cl in [(r"\(", r"\)"), (r"\[", r"\]"),
+                   (r"\begin{enumerate}", r"\end{enumerate}")]:
+        require(text.count(op) == text.count(cl),
+                f"unbalanced TeX delimiter {op}/{cl} in {path}")
+    ids = SECTIONS.findall(text)
+    require(ids, f"no problem sections: {path}")
+    require(len(ids) == len(set(ids)), f"duplicate IDs in {path}")
+    return ids
+
+
+def check_numeric_spotmodels() -> int:
+    """Independent reference computations, NOT a full automated physics proof."""
+    g = 9.80
+    close = lambda a, b, rel=0.001: math.isclose(a, b, rel_tol=rel)
+
+    # 1.11: ballistic bridge landing height
+    v = 150 / 3.6
+    t = 57 / (v * math.cos(math.radians(5)))
+    require(close(v * math.sin(math.radians(5)) * t - .5 * g*t*t,
+                  -4.253313229, rel=.002), "1.11 projectile check")
+    # 1.12: collision above lower cannon level
+    require(close(.5 * math.sqrt(g*(200**2 + 50**2)/50), 45.63441684),
+            "1.12 meeting threshold")
+    # 1.18: CD radial scan and spin-down
+    N, r, v, r1, r2 = 650000, .05, 1.3, .022, .056
+    require(close(math.pi*N*(r2*r2-r1*r1)/v/60, 69.42919764),
+            "1.18 timing")
+    require(close(-v**3/(2*math.pi*N*r**3), -.00430354966),
+            "1.18 angular acceleration")
+    # 1.23: EAST by SOUTH, not SOUTH by EAST
+    require(close(math.hypot(800*math.cos(math.pi/6),
+                             1000-800*math.sin(math.pi/6)),
+                  916.51513899), "1.23 relative aircraft speed")
+    # 2.2: explicit 30 degree angle must survive scan transcription
+    m, a, theta = .50, 2.0, math.pi/6
+    require(close(m*(g*math.sin(theta)+a*math.cos(theta)),3.3160254),
+            "2.2 tension")
+    require(close(m*(g*math.cos(theta)-a*math.sin(theta)),3.74352448),
+            "2.2 support force")
+    # 2.5: double rope
+    m1, m2, m3 = .200, .100, .050
+    t2 = 4*g/(4/m1 + 1/m2 + 1/m3)
+    require(close(t2,.784), "2.5 pulley tension")
+    # 2.6: downward incline 1:10
+    mu = (25**2/(2*35))/g
+    theta = math.atan(.1)
+    decel = g*(mu*math.cos(theta)-math.sin(theta))
+    require(close(25**2/(2*decel),39.51132804), "2.6 downhill stop")
+    # 2.7: board relative slip threshold
+    require(close(2*.25*(1.5+2.45)*g,19.355), "2.7 slip threshold")
+    # 2.11: friction on banked road
+    a = 25**2/400
+    require(close(1200*(a*math.cos(math.radians(6))
+                         -g*math.sin(math.radians(6))),
+                  635.47382579), "2.11 bank friction")
+    # 2.12: radius must be in metres, not km
+    M = 4*math.pi**2*(1.07e9)**3/(6.6743e-11*(7.16*86400)**2)
+    require(close(M,1.89344117254e27), "2.12 Jupiter mass")
+    return 11
+
+
+def main() -> None:
+    raw = json.loads(REGISTER.read_text(encoding="utf-8"))
+    require(raw.get("schema") == "zhang-sanhui-4e-exercise-intake/v1",
+            "wrong register schema")
+    pages = {x["id"]: x["pdf_page_count"] for x in raw["source_files"]}
+    require(all(pages[x] > 0 for x in ("V1", "V2", "S")), "missing PDF inventory")
+    entries = raw["entries"]
+    ids = [x["source_problem_number"] for x in entries]
+    stable = [x["canonical_id"] for x in entries]
+    require(len(ids) == len(set(ids)), "duplicate original problem number")
+    require(len(stable) == len(set(stable)), "duplicate canonical ID")
+    require(raw["progress"]["verified_questions"] == len(entries),
+            "progress count differs from register")
+    for row in entries:
+        num = row["source_problem_number"]
+        chapter, item = map(int, num.split("."))
+        require(row["canonical_id"] ==
+                f"ZS4-{chapter:02d}-{item:03d}", f"unstable ID: {num}")
+        require(row["exam_ready"] is False, f"unsafe exam admission: {num}")
+        require(row["academic_review"] == CANDIDATE_STATUS,
+                f"fake expert clearance: {num}")
+        require(row["question_status"] == "transcribed_from_pdf_scan",
+                f"not actually transcribed: {num}")
+        require(row["solution_status"] == "independent_derivation_written",
+                f"missing original solution: {num}")
+        v = row["volume"]
+        require(v in ("V1", "V2"), f"wrong book: {num}")
+        for p in row["textbook_pdf_pages"]:
+            require(isinstance(p,int) and 1 <= p <= pages[v],
+                    f"invalid textbook page: {num} page {p}")
+        for p in row["supplement_pdf_pages"]:
+            require(isinstance(p,int) and 1 <= p <= pages["S"],
+                    f"invalid supplement page: {num} page {p}")
+    reported = []
+    for ch in raw["chapters"]:
+        qpath, spath = ch.get("question_file"), ch.get("solution_file")
+        if qpath is None and spath is None:
+            require(ch.get("verified_exercise_count",0) == 0,
+                    f"chapter without files claims entries: {ch['number']}")
+            continue
+        require(qpath and spath, f"half-created chapter: {ch['number']}")
+        qs = check_latex_fragment(ROOT / qpath, "questions")
+        ss = check_latex_fragment(ROOT / spath, "solutions")
+        expected = [num for num in ids if int(num.split(".")[0]) == ch["number"]]
+        require(qs == ss == expected,
+                f"source/solution/register ordering mismatch in chapter {ch['number']}"
+                f": questions={qs}; solutions={ss}; register={expected}")
+        require(ch["verified_exercise_count"] == len(qs),
+                f"chapter count mismatch: {ch['number']}")
+        reported.extend(qs)
+    require(Counter(reported) == Counter(ids),
+            "unindexed exercises or missing fragment sections")
+    computed = check_numeric_spotmodels()
+    print(f"PASS: {len(ids)} candidate exercises have unique IDs, "
+          "paired TeX sections, source pages and no exam admission.")
+    print(f"PASS: {computed} independent numerical spotmodel checks.")
+    print("NOT VERIFIED: full source transcription accuracy, external expert "
+          "review, source permissions and independent physical model sufficiency.")
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except Exception as exc:
+        print(f"FAIL: {exc}", file=sys.stderr)
+        sys.exit(1)
