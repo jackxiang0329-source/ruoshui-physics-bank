@@ -130,9 +130,10 @@ THERMO_TRANSPORT_CHAPTERS = [
     "15-transport-220-229.tex",
     "15-transport-230-239.tex",
     "15-transport-240-245.tex",
+    "15-transport-246-257.tex",
 ]
 THERMO_TRANSPORT_EXPECTED = [
-    range(220, 230), range(230, 240), range(240, 246),
+    range(220, 230), range(230, 240), range(240, 246), range(246, 258),
 ]
 
 errors = []
@@ -239,7 +240,7 @@ if r"\newcommand{\thermoenergyproblem}" not in main:
 if main.count(r"\section{热力学第一定律与热容") != 1:
     errors.append("first law section count is not one")
 
-# The second book part is a SINGLE independent 1..245 range,
+# The second book part is a SINGLE independent 1..257 range,
 # and each newly introduced subject has its own macro and source list.
 subject_results = {}
 for label, chapters, ranges, macro, expected_ids in [
@@ -252,7 +253,7 @@ for label, chapters, ranges, macro, expected_ids in [
     ("phase", THERMO_PHASE_CHAPTERS, THERMO_PHASE_EXPECTED,
      "thermophaseproblem", list(range(185, 220))),
     ("transport", THERMO_TRANSPORT_CHAPTERS, THERMO_TRANSPORT_EXPECTED,
-     "thermotransportproblem", list(range(220, 246))),
+     "thermotransportproblem", list(range(220, 258))),
 ]:
     observed = []
     for name, expected in zip(chapters, ranges):
@@ -286,8 +287,8 @@ part_two = (thermo_ids + energy_ids
             + subject_results["kinetic"] + subject_results["entropy"]
             + subject_results["capillarity"] + subject_results["phase"]
             + subject_results["transport"])
-if part_two != list(range(1, 246)):
-    errors.append("Part II combined original IDs are not exactly 1..245")
+if part_two != list(range(1, 258)):
+    errors.append("Part II combined original IDs are not exactly 1..257")
 if main.count(r"\section{气体分子运动论") != 1:
     errors.append("kinetic theory section count is not one")
 if main.count(r"\section{热力学第二定律与熵") != 1:
@@ -308,8 +309,64 @@ if main.count(r"\section{气体状态方程与过程") != 1:
 if r"\newcommand{\thermoproblem}" not in main:
     errors.append("main.tex missing original-numbering thermoproblem macro")
 
+# Part III starts with original problem 1, independently of Parts I and II.
+ELECTRO_VACUUM_CHAPTERS = [
+    "16-electrostatics-vacuum-001-012.tex",
+    "16-electrostatics-vacuum-013-027.tex",
+    "16-electrostatics-vacuum-028-040.tex",
+    "16-electrostatics-vacuum-041-053.tex",
+]
+ELECTRO_VACUUM_RANGES = [
+    range(1, 13), range(13, 28), range(28, 41), range(41, 54),
+]
+ELECTRO_CONDUCT_CHAPTERS = [
+    "17-electro-conductors-054-065.tex",
+    "17-electro-conductors-066-077.tex",
+    "17-electro-conductors-078-088.tex",
+]
+ELECTRO_CONDUCT_RANGES = [
+    range(54, 66), range(66, 78), range(78, 89),
+]
+
+part_three = []
+for macro, filenames, expected_ranges in [
+    ("electroproblem", ELECTRO_VACUUM_CHAPTERS, ELECTRO_VACUUM_RANGES),
+    ("electroconductproblem", ELECTRO_CONDUCT_CHAPTERS, ELECTRO_CONDUCT_RANGES),
+]:
+    if (r"\newcommand{" + chr(92) + macro + "}") not in main:
+        errors.append(f"main.tex missing macro {macro}")
+    for name, expected in zip(filenames, expected_ranges):
+        path = ROOT / "chapters" / name
+        if not path.exists():
+            errors.append(f"missing: {name}")
+            continue
+        content = path.read_text(encoding="utf-8")
+        ids = [int(x) for x in re.findall(
+            r"\\" + macro + r"\{(\d+)\}\{", content)]
+        want = list(expected)
+        part_three.extend(ids)
+        if ids != want:
+            errors.append(f"{name}: Part-III original IDs {ids} != {want}")
+        for command in ("exsolution", "excheck"):
+            count = len(re.findall(r"\\" + command + r"\b", content))
+            if count != len(want):
+                errors.append(f"{name}: {command} count {count} != {len(want)}")
+        if content.count("{") != content.count("}"):
+            errors.append(f"{name}: TeX braces unbalanced")
+        entry = r"\input{chapters/" + path.stem + "}"
+        if entry not in main:
+            errors.append(f"main.tex missing chapter: {name}")
+if part_three != list(range(1, 89)):
+    errors.append("Part III independent numbering is not exactly 1..88")
+if main.count(r"\chapter{电动力学}") != 1:
+    errors.append("Part III chapter count is not one")
+if main.count(r"\section{真空中的恒定电场") != 1:
+    errors.append("Part III vacuum electrostatics section count is not one")
+if main.count(r"\section{静电场中的导体与电介质") != 1:
+    errors.append("Part III conductor/dielectric section count is not one")
+
 if errors:
     for e in errors:
         print("FAIL:", e, file=sys.stderr)
     sys.exit(1)
-print("PASS: 388 Part-I + 245 Part-II (25 gas-state + 36 first-law + 51 kinetic + 47 entropy + 25 capillarity + 35 phase + 26 transport) = 633 translated solved problems; original numbering and all chapters verified")
+print("PASS: 388 Part-I + 257 Part-II + 88 Part-III = 733 translated solved problems in 76 chapter files; all three independent numbering ranges verified")
