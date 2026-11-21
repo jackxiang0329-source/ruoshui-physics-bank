@@ -1,0 +1,508 @@
+% Irodov, original Part III §3.7 389--407, complete Part III.
+% Based on user-supplied Arihant PDF pp.158--161, printed pp.149--152;
+% original answers PDF pp.321--322. Figure 3.102--3.105 cross-checked.
+\electrochargedproblem{389}{149}
+非相对论质子束穿过互相垂直的均匀横向电场与磁场区域，且不发生偏转。
+已知 $E=120\,\mathrm{kV/m}$、$B=50\,\mathrm{mT}$；
+质子束随后撞击接地靶，束电流 $I=0.80\,\mathrm{mA}$。
+求束流对靶的作用力。
+\exsolution
+不偏转条件为电场力与磁场力抵消：
+$eE=evB$，故束速
+$v=E/B=2.4\times10^6\,\mathrm{m/s}$。
+每秒撞靶质子数 $\dot N=I/e$；
+若质子被靶吸收，其纵向动量每秒减少
+$\dot N m_pv$，靶受力
+\[
+\boxed{F=\frac{Im_pv}{e}
+=\frac{m_pEI}{eB}
+\simeq2.0\times10^{-5}\,\mathrm N
+=20\,\mathrm{\mu N}}.
+\]
+\excheck 条件为束流撞靶且停止；若有反弹需考虑反冲动量。$v/c\ll1$，非相对论适用。
+
+\electrochargedproblem{390}{149--150}
+质子在相互垂直的均匀电场与磁场
+$E=4.0\,\mathrm{kV/m}$、$B=50\,\mathrm{mT}$
+中作直线运动。
+轨迹位于 $xz$ 平面、与 $x$ 轴夹角 $\phi=30^\circ$，
+方向参见图3.102。
+关闭电场后，求沿磁场方向的螺旋轨迹螺距。
+\exsolution
+图中 $\bm E\parallel y$、$\bm B\parallel z$，
+质子原本沿 $xz$ 直线，其横向磁力大小取决于
+$v_x$。不偏转条件为 $eE=eBv_x$，即
+$v_x=E/B$。
+原速度与 $x$ 轴夹角 $\phi$，因此
+$v_\parallel=v_z=v_x\tan\phi=(E/B)\tan\phi$。
+关去电场后，平行磁场速度不变，
+回旋周期 $T_c=2\pi m_p/(eB)$，故
+\[
+\boxed{h=v_\parallel T_c
+=\frac{2\pi m_pE}{eB^2}\tan\phi
+\simeq6.1\,\mathrm{cm}}.
+\]
+\excheck 注意本题电子书图3.102的磁场沿 $z$ 轴，
+$v_x$ 而非总速率等于 $E/B$；
+因此结果含 $\tan\phi$，不是 $\sin\phi$。
+
+\electrochargedproblem{391}{150}
+图3.103：非相对论带电粒子束穿过长度 $a$ 的互相垂直横向电场和磁场区域 A，
+不发生偏转。区域后方距出口 $b$ 处设屏幕 S。
+切断磁场后束斑移动 $\Delta x$。
+求粒子比荷 $q/m$。
+\exsolution
+初始速度选择条件为 $v=E/B$。
+切断磁场，只有横向加速度
+$a_\perp=qE/m$（取模时用 $|q|$）。
+穿越场区的时间 $t_1=a/v$；
+在其中获得横向位移
+$\Delta x_1=a_\perp t_1^2/2$
+及出射横向速度 $v_\perp=a_\perp t_1$。
+再飞越距离 $b$ 所需时间 $t_2=b/v$，
+增加位移 $\Delta x_2=v_\perp t_2$。
+因此
+\[
+|\Delta x|=\frac{|q|E}{2mv^2}a(a+2b)
+=\frac{|q|B^2}{2mE}a(a+2b).
+\]
+解出
+\[
+\boxed{\frac{|q|}{m}=
+\frac{2E|\Delta x|}{B^2a(a+2b)}}.
+\]
+\excheck 本版书末将
+$a(a+2b)B^2/[2E\Delta x]$ 标成 $q/m$，
+但它的量纲为 $\mathrm{kg/C}$，
+实际上是 $m/|q|$；已在勘误中记录这个倒数问题。
+
+\electrochargedproblem{392}{150}
+图3.104中互相垂直的均匀电场 $E$、磁场 $B$，
+粒子比荷 $q/m$，在 $t=0$ 位于 O 且初速度为零。
+在非相对论近似下求
+(a) 运动规律与轨迹；
+(b) 连续两次速度为零之间的轨迹长度；
+(c) 平均 $x$ 方向漂移速度。
+\exsolution
+选 $\bm E=E\bm e_y$、
+$\bm B=B\bm e_z$，取 $q>0$。
+令 $\omega=qB/m$，$u=E/B$，
+洛伦兹方程为
+$\dot v_x=\omega v_y$、
+$\dot v_y=\omega(u-v_x)$。
+在初值 $v_x=v_y=0$ 下积分得到
+\[
+\boxed{x(t)=a(\omega t-\sin\omega t),\quad
+y(t)=a(1-\cos\omega t),\qquad
+a=\frac{mE}{qB^2}}.
+\]
+(a) 轨迹为摆线：半径 $a$ 的圆在 $x$ 轴上无滑动滚动时圆周上一点的轨迹。
+(b) 速度为零的时刻为
+$t_n=2\pi n/\omega$，两个连续尖点之间
+$\mathrm ds=a\sqrt{(1-\cos u)^2+\sin^2u}\,\mathrm du
+=2a|\sin(u/2)|\,\mathrm du$，
+\[
+\boxed{s=\int_0^{2\pi}2a\sin(u/2)\,\mathrm du=8a
+=\frac{8mE}{qB^2}}.
+\]
+(c) 一周期内
+$\Delta x=2\pi a$、$T=2\pi/\omega$，
+\[
+\boxed{\langle v_x\rangle=\frac{\Delta x}{T}=\frac EB}.
+\]
+\excheck 对负电荷应使用有向 $\omega=qB/m$ 并同步调整方向；三个模和尺度关系相同。
+
+\electrochargedproblem{393}{150}
+同轴长圆筒电极：阳极半径为 $a$，阴极半径为 $b<a$。
+轴线上加热线通电流 $I$ 形成环向磁场；
+从阴极表面静止发射的电子，至少需要多大阴阳极电势差才能到达阳极？
+\exsolution
+轴线电流在半径 $r$ 产生
+$B_\varphi(r)=\mu_0I/(2\pi r)$。
+选矢势
+$A_z(r)=-(\mu_0I/2\pi)\ln(r/b)$。
+系统沿 $z$ 方向平移对称，
+电子电荷 $-e$ 的正则轴向动量
+$p_z-eA_z$ 守恒。
+从 $r=b$ 静止出发，
+在 $r=a$ 处必须有轴向动量模
+\[
+|p_z(a)|=\frac{e\mu_0I}{2\pi}\ln\frac ab.
+\]
+电子达到阳极的阈值对应径向动能刚好为零，
+故 $eV_{\min}=p_z(a)^2/(2m_e)$，
+\[
+\boxed{V_{\min}=
+\frac{e\mu_0^2I^2}{8\pi^2m_e}
+\ln^2\frac ab
+=\frac{2e}{m_e}\left(\frac{\mu_0I}{4\pi}\right)^2
+\ln^2\frac ab}.
+\]
+\excheck 对数必须平方；$V_{\min}$ 随 $I^2$ 增长，符合磁场更强时电子更难跨径向间隙。
+
+\electrochargedproblem{394}{150}
+磁控管由半径 $a$ 的轴向灯丝与同轴半径 $b>a$ 的阳极组成，
+均匀轴向磁场为 $B$，加速电压为 $V$。
+电子从灯丝表面零初速出发，
+求它恰能达到阳极的临界磁感应强度。
+\exsolution
+轴向磁场选圆柱矢势
+$A_\varphi=Br/2$。
+因角坐标循环，对电子
+$p_\varphi=mr^2\dot\varphi-eBr^2/2$ 守恒。
+初始在 $r=a$ 且静止，
+故在半径 $r$ 的方位切向速度
+\[
+v_\varphi(r)=\frac{eB(r^2-a^2)}{2mr}.
+\]
+在临界场下，电子到阳极 $r=b$ 时
+径向速度恰好为零；
+能量守恒 $eV=\tfrac12m_ev_\varphi(b)^2$，
+得到
+\[
+\boxed{B_c=\frac{2b}{b^2-a^2}
+\sqrt{\frac{2m_eV}{e}}}.
+\]
+电子能够到达阳极的条件为 $B\le B_c$。
+\excheck $a\to0$ 时恢复
+$B_c=2b^{-1}\sqrt{2m_eV/e}$；
+临界场强越大，圆周偏转越强。
+
+\electrochargedproblem{395}{150--151}
+粒子在互相垂直的均匀电、磁场中运动，
+磁场恒为 $B$；电场随时间变化为
+$E_y(t)=E_m\cos\omega t$，且
+$\omega=qB/m$。
+粒子初始位于 O 且速度为零。
+求非相对论坐标 $x(t),y(t)$ 并描述轨迹。
+\exsolution
+取 $\bm B=B\bm e_z$，令
+$a=qE_m/m$、
+$\omega=qB/m$。
+运动方程
+$\dot v_x=\omega v_y$、
+$\dot v_y=a\cos\omega t-\omega v_x$。
+对第一式再微分可得
+$\ddot v_x+\omega^2v_x=a\omega\cos\omega t$。
+因外驱频率恰等于回旋频率，
+零初始条件的共振解为
+$v_x=(a/2)t\sin\omega t$，
+并由 $v_y=\dot v_x/\omega$ 得
+$v_y=(a/2\omega)\sin\omega t+
+(a/2)t\cos\omega t$。
+积分：
+\[
+\boxed{x(t)=\frac{a}{2\omega^2}
+(\sin\omega t-\omega t\cos\omega t)},
+\quad
+\boxed{y(t)=\frac{a}{2\omega}t\sin\omega t}.
+\]
+\excheck 轨迹具有随时间展开的旋臂趋势；
+两式在 $t=0$ 给零位置和零速度，且满足受驱洛伦兹方程。
+
+\electrochargedproblem{396}{151}
+回旋加速器高频电源频率
+$\nu=10\,\mathrm{MHz}$，要求质子在轨道半径
+$r=0.50\,\mathrm m$ 附近，
+相邻相继轨道的径向距离至少为
+$\Delta r=1.0\,\mathrm{cm}$。
+求两 D 形电极间所需有效加速电压。
+\exsolution
+非相对论回旋角频率为
+$\omega=2\pi\nu$，轨道动能
+$T(r)=\tfrac12m_p\omega^2r^2$。
+相邻两\emph{整圈}轨道能量差
+$\Delta T\simeq m_p\omega^2r\,\Delta r$，
+而一圈经过两个间隙、每次获得能量 $eV$，
+故 $\Delta T=2eV$。
+因此
+\[
+\boxed{V\ge
+\frac{m_p(2\pi\nu)^2r\Delta r}{2e}
+=\frac{2\pi^2m_p\nu^2r\Delta r}{e}
+\simeq1.0\times10^5\,\mathrm V=0.10\,\mathrm{MV}}.
+\]
+\excheck 两次加速/圈的因子2不能漏；近似需 $\Delta r\ll r$。
+
+\electrochargedproblem{397}{151}
+质子回旋加速器最大圆轨道半径为 $r=50\,\mathrm{cm}$。
+求 (a) 在 $B=1.0\,\mathrm T$ 时末动能；
+(b) 若末动能要达 $20\,\mathrm{MeV}$，高频电源的最低频率。
+\exsolution
+(a) 磁场半径关系 $p=eBr$，
+非相对论动能
+\[
+\boxed{T=\frac{(eBr)^2}{2m_p}
+\simeq12\,\mathrm{MeV}}.
+\]
+(b) 回旋频率 $\nu=eB/(2\pi m_p)$，
+由 $T=\frac12m_p(2\pi\nu r)^2$，
+得
+\[
+\boxed{\nu_{\min}=\frac1{\pi r}
+\sqrt{\frac{T}{2m_p}}
+\simeq2.0\times10^7\,\mathrm{Hz}=20\,\mathrm{MHz}}.
+\]
+\excheck 本题按原书采用非相对论近似；
+20 MeV 质子的相对论修正约几个百分点。
+
+\electrochargedproblem{398}{151}
+单电荷 $\mathrm{He}^+$ 离子在回旋加速器中加速，
+最大轨道半径 $r=60\,\mathrm{cm}$、
+高频频率 $\nu=10.0\,\mathrm{MHz}$、
+每次跨越间隙有效电压 $V=50\,\mathrm{kV}$。
+忽略间隙宽度，求 (a) 总加速时间；(b) 所走路程。
+\exsolution
+回旋角频率 $\omega=2\pi\nu$，
+末动能 $T_f=\frac12m_{\rm He}\omega^2r^2$。
+每转一圈跨越间隙两次，
+所得能量 $2eV$，
+每圈用时 $1/\nu$。
+故加速总时间
+\[
+\boxed{t=\frac{T_f}{2eV\nu}
+=\frac{\pi^2m_{\rm He}\nu r^2}{eV}
+\simeq17\,\mathrm{\mu s}}.
+\]
+速度随能量按 $\sqrt n$ 增长，
+相邻半圈路程对圈数作连续积分可得
+\[
+s\simeq\int_0^t v(t')\,\mathrm dt'
+=\frac23v_ft
+=\boxed{\frac{4\pi^2m_{\rm He}\nu^2r^3}{3eV}
+\simeq0.74\,\mathrm{km}}.
+\]
+\excheck 从零动能起算、能量近似匀速增加时
+$v(t)\propto\sqrt t$，所以平均速度是末速的 $2/3$。
+
+\electrochargedproblem{399}{151}
+微波微回旋加速器（microtron）
+设电子每次绕行周期的增量
+$\Delta T$ 恰等于加速场周期
+$T_0=1/\nu$。
+当 $B=107\,\mathrm{mT}$、
+$\nu=3000\,\mathrm{MHz}$ 时，
+电子要获得动能 $W=4.6\,\mathrm{MeV}$，
+需经过加速间隙几次？
+\exsolution
+相对论电子回旋周期
+$T=2\pi\gamma m_e/(eB)$。
+每次跨间隙的能量增加量
+$\Delta W=m_ec^2\Delta\gamma$，
+故
+$\Delta T=2\pi\Delta W/(eBc^2)$。
+令 $\Delta T=T_0=1/\nu$，
+得每跨间隙增能
+$\Delta W=eBc^2/(2\pi\nu)$。
+总增能 $W=n\Delta W$，故
+\[
+\boxed{n=\frac{2\pi\nu W}{eBc^2}\simeq9}.
+\]
+\excheck $W$ 代入计算需用焦耳或先统一 eV；
+微回旋的核心是加速场与逐渐变长的相对论回旋周期保持同步。
+
+\electrochargedproblem{400}{151}
+同步回旋加速器以缓慢调节加速场频率补偿粒子相对论周期增加。
+均匀磁场为 $B$，粒子电荷 $q$、静质量 $m$，
+每转一圈获得恒定动能 $\Delta W$。
+求需采用的角频率 $\omega(t)$。
+\exsolution
+相对论回旋角频率
+$\omega=qB/(\gamma m)$（取 $q>0$），
+回旋周期
+$T=2\pi\gamma m/(qB)$。
+单位时间能量增长率近似为
+$\dot W=\Delta W/T=qB\Delta W/(2\pi\gamma m)$。
+以 $W=(\gamma-1)mc^2$，
+得到
+$\gamma\dot\gamma=qB\Delta W/(2\pi m^2c^2)$。
+初始 $\gamma(0)=1$，
+积分为
+$\gamma^2(t)=1+at$，
+$a=qB\Delta W/(\pi m^2c^2)$。
+因此
+\[
+\boxed{\omega(t)=\frac{\omega_0}{\sqrt{1+at}}},
+\quad
+\boxed{\omega_0=\frac{qB}{m},\qquad
+a=\frac{qB\Delta W}{\pi m^2c^2}}.
+\]
+\excheck 开始时 $\omega(0)=\omega_0$，随后单调下降；平方根来自积分 $\gamma\dot\gamma$，不能遗漏。
+
+\electrochargedproblem{401}{151--152}
+一个比荷为 $q/m$ 的粒子原先静止在圆截面螺线管内部，
+距轴为 $r$；接通绕组电流，使磁感应强度由零变为 $B$。
+假设磁场建立期间粒子径向位移可忽略。
+求获得的速度与随后轨道曲率半径。
+\exsolution
+利用半径 $r$ 的同轴圆形回路
+$2\pi rE_\varphi=-\pi r^2\dot B$，
+即 $E_\varphi=-r\dot B/2$。
+角向动量增量
+$mv=q\int E_\varphi\,\mathrm dt
+=-qrB/2$，
+故速度模
+\[
+\boxed{v=\frac{|q|rB}{2m}}.
+\]
+磁场建立后回旋半径
+$\rho=mv/(|q|B)$，
+\[
+\boxed{\rho=\frac r2}.
+\]
+\excheck 结果与磁场随时间变化的具体历程无关，但依赖粒子在建场过程中位置近似不变。
+
+\electrochargedproblem{402}{152}
+在感应加速器（betatron）中，
+平衡圆轨道半径为 $r=25\,\mathrm{cm}$，
+轨道内磁通量以约
+$\dot\Phi=5.0\,\mathrm{Wb/s}$ 增长。
+电子获得动能 $W=25\,\mathrm{MeV}$。
+求整个加速过程电子转过的圈数与路径长度。
+\exsolution
+沿圆周的感生电场
+$E_\varphi=|\dot\Phi|/(2\pi r)$。
+每转一圈电子获得的能量
+$\Delta W_{\rm rev}=e(2\pi rE_\varphi)=e|\dot\Phi|$。
+因为 $\dot\Phi=5$ Wb/s，等效每圈加速电压是 $5$V，
+即每圈 $5$eV，所以
+\[
+\boxed{N=\frac{W}{e|\dot\Phi|}
+=\frac{25\times10^6\,\mathrm{eV}}{5\,\mathrm{eV}}
+=5.0\times10^6}.
+\]
+总路径长度
+\[
+\boxed{s=2\pi rN
+\simeq7.9\times10^6\,\mathrm m
+=7.9\times10^3\,\mathrm{km}}.
+\]
+\excheck 原书答案写 $8\times10^2$ km，
+但按其自己的 $N=5\times10^6$ 及 $r=0.25$m
+应得约 $8\times10^3$ km；已列勘误。
+
+\electrochargedproblem{403}{152}
+证明：在 betatron 中，电子在半径不变的圆轨道上运动的条件为
+该处磁感应强度等于圆轨道以内平均磁感应强度的一半。
+\exsolution
+记圆轨道半径为 $r$，轨道处场为 $B_r$，
+磁通量为 $\Phi=\pi r^2\bar B$，
+其中 $\bar B$ 是内圆面积平均场。
+对固定 $r$，磁力维持圆周运动
+$p=erB_r$；对时间求导得
+$\dot p=er\dot B_r$。
+法拉第定律给环向感生电场
+$E_\varphi=-\dot\Phi/(2\pi r)
+=-r\dot{\bar B}/2$。
+沿速率方向的电力为
+$\dot p=e|E_\varphi|$，比较得到
+$\dot B_r=\tfrac12\dot{\bar B}$。
+若从零场开始建立，则积分得到
+\[
+\boxed{B(r)=\frac{\bar B(r)}2}.
+\]
+\excheck 更一般形式首先是
+$\dot B(r)=\tfrac12\dot{\bar B}(r)$；
+要直接推出 $B=\bar B/2$ 还需符合所述初始或同步建立条件。
+
+\electrochargedproblem{404}{152}
+利用 betatron 平衡条件确定电子圆轨道半径。
+已知轴对称磁场径向分布 $B(r)$，
+并讨论 $B(r)=B_0-ar^2$，
+其中 $B_0,a>0$。
+\exsolution
+半径 $r$ 内平均磁场为
+$\bar B(r)=(2/r^2)\int_0^rB(s)s\,\mathrm ds$。
+平衡条件
+$B(r)=\bar B(r)/2$ 等价于
+\[
+\boxed{r^2B(r)=\int_0^rB(s)s\,\mathrm ds}.
+\]
+在 $B=B_0-as^2$ 情况下，
+右端
+$\int_0^r(B_0-as^2)s\,\mathrm ds
+=B_0r^2/2-ar^4/4$，
+左端为
+$B_0r^2-ar^4$。
+约去非零 $r^2$：
+$B_0/2-3ar^2/4=0$，
+所以
+\[
+\boxed{r_0=\sqrt{\frac{2B_0}{3a}}}.
+\]
+\excheck $a$ 单位为 T/m²，
+$B_0/a$ 单位为 m²，故答案必须带平方根；
+本版书后文本抽取的根号不清晰。
+
+\electrochargedproblem{405}{152}
+利用 betatron 平衡条件，证明在平衡圆轨道半径处，
+环向涡旋电场强度的径向分布出现驻点。
+\exsolution
+法拉第定律
+$E_\varphi(r)=-\dot\Phi(r)/(2\pi r)$。
+对 $r$ 求导，利用
+$\partial_r\Phi=2\pi rB(r)$，得到
+\[
+\frac{\mathrm dE_\varphi}{\mathrm dr}
+=-\dot B(r)+\frac{\dot\Phi(r)}{2\pi r^2}
+=-\dot B(r)+\frac12\dot{\bar B}(r).
+\]
+betatron 平衡条件在建场过程中要求
+$\dot B(r_0)=\dot{\bar B}(r_0)/2$，
+所以
+\[
+\boxed{\left.
+\frac{\mathrm dE_\varphi}{\mathrm dr}
+\right|_{r=r_0}=0}.
+\]
+\excheck 证明得到的是涡旋电场的驻点；
+要确定是极大还是极小需看具体场分布的二阶导数。
+
+\electrochargedproblem{406}{152}
+Betatron 中半径为 $r=20\,\mathrm{cm}$ 的平衡轨道处磁感应强度
+在 $\Delta t=1.0\,\mathrm{ms}$ 内近似匀速由零增至 $B=0.40\,\mathrm T$。
+求电子每转一圈获得的能量。
+\exsolution
+betatron 条件 $\bar B=2B$，故轨道内磁通变化
+$\Delta\Phi=\pi r^2(2B)$；
+磁通变化率
+$|\dot\Phi|=2\pi r^2B/\Delta t$。
+每圈感生电动势的环流等于 $|\dot\Phi|$，
+电子每圈增能
+\[
+\boxed{\Delta W_{\rm rev}=e\frac{2\pi r^2B}{\Delta t}}.
+\]
+代入 $r=0.20$m、$B=0.40$T、$\Delta t=10^{-3}$s，
+等效电压约 $100.5$V，故
+\[
+\boxed{\Delta W_{\rm rev}\simeq0.10\,\mathrm{keV}}.
+\]
+\excheck 一圈的能量增量以 eV 表达时数值等于环路感生电动势的伏特数。
+
+\electrochargedproblem{407}{152}
+Betatron 电子在固定半径 $r$ 的平衡轨道上加速，
+轨道处磁感应强度在时间 $\Delta t$ 内
+由零近似匀速增至 $B$，
+初速度忽略。求 (a) 获得的最终动能；
+(b) 这段时间内沿轨道运动的路程。
+\exsolution
+固定半径下回旋动量约束为
+$p=eBr$，最后总能量
+$E_{\rm tot}=\sqrt{m_e^2c^4+p^2c^2}$，
+因此动能
+\[
+\boxed{W=m_ec^2\left[
+\sqrt{1+\left(\frac{eBr}{m_ec}\right)^2}-1
+\right]}.
+\]
+由 betatron 条件，圆周感应电场模恒为
+$E_\varphi=rB/\Delta t$；
+电子受到沿切向恒力
+$F=eE_\varphi=erB/\Delta t$。
+力做功 $W=Fs$，解得
+\[
+\boxed{s=\frac{W\Delta t}{erB}}.
+\]
+\excheck (a) 使用相对论动能与动量公式而非全程非相对论近似；
+(b) 可写为 $s=\int_0^{\Delta t}v(t)\,\mathrm dt$，
+其结果与功—能定理一致。
