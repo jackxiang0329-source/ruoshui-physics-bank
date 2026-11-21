@@ -1,0 +1,499 @@
+% Irodov Part IV §4.1 independent original problems 66--81.
+% User PDF pp.172--175, printed pp.163--165, original answers PDF 325--326.
+\oscproblem{66}{163}
+两根竖直铜轨之间距为 $\ell$，
+上端由自感为 $L$ 的线圈短接，
+水平活动导杆质量为 $m$，
+起初静止，随后沿两导轨自由下落。
+整个装置处于垂直导轨平面的匀强磁场 $B$ 中，
+各导体电阻忽略。
+求导杆下降位移 $x(t)$。
+\exsolution
+取向下为 $x$ 正向，初始 $x(0)=0$、
+$\dot x(0)=0$，初始线圈电流为零。
+磁链守恒
+$LI+B\ell x=0$，
+所以 $I=-(B\ell/L)x$。
+活动杆的安培力沿上方、大小
+$B^2\ell^2x/L$。
+运动方程
+\[
+m\ddot x=mg-\frac{B^2\ell^2}{L}x.
+\]
+令
+$\omega_0=B\ell/\sqrt{mL}$，
+方程化为
+$\ddot x+\omega_0^2x=g$。
+因此
+\[
+\boxed{x(t)=\frac{g}{\omega_0^2}
+(1-\cos\omega_0t)}.
+\]
+\excheck 从静止起初加速度为 $g$，
+因 $I(0)=0$；回路无电阻时系统能量只在重力势、动能与磁能间交换。
+
+\oscproblem{67}{163}
+质点的阻尼振动规律为
+$x=a_0e^{-\beta t}\sin\omega t$，
+其中 $\beta,\omega>0$。
+求 (a) $t=0$ 时位移振幅和速度；
+(b) 各个位置转折点所对应的时刻。
+\exsolution
+幅度包络为
+$A(t)=a_0e^{-\beta t}$，
+初始包络为
+$\boxed{A(0)=a_0}$。
+速度
+$v=a_0e^{-\beta t}[\omega\cos\omega t-
+\beta\sin\omega t]$，
+故
+$\boxed{v(0)=a_0\omega}$。
+转折点满足 $v(t_n)=0$，
+即
+$\tan\omega t_n=\omega/\beta$，
+因此
+\[
+\boxed{t_n=\frac1\omega
+\left[\arctan\frac{\omega}{\beta}+n\pi\right],
+\quad n=0,1,2,\ldots}.
+\]
+\excheck 阻尼会使转折点提前于普通正弦振动的
+$\omega t=\pi/2$；$\beta\to0$ 时恢复其极限。
+
+\oscproblem{68}{163}
+刚体作阻尼扭转振动，
+$\varphi(t)=\varphi_0e^{-\beta t}\cos\omega t$。
+求 (a) 初始角速度和角加速度；
+(b) 角速度达到局部极值的时刻。
+\exsolution
+直接求导：
+\[
+\dot\varphi=-\varphi_0e^{-\beta t}
+(\beta\cos\omega t+\omega\sin\omega t),
+\]
+\[
+\ddot\varphi=\varphi_0e^{-\beta t}
+[(\beta^2-\omega^2)\cos\omega t+
+2\beta\omega\sin\omega t].
+\]
+所以
+\[
+\boxed{\dot\varphi(0)=-\beta\varphi_0},
+\quad
+\boxed{\ddot\varphi(0)=(\beta^2-\omega^2)\varphi_0}.
+\]
+角速度极值条件 $\ddot\varphi(t)=0$，
+\[
+\boxed{t_n=\frac1\omega
+\left[\arctan\frac{\omega^2-\beta^2}{2\beta\omega}
++n\pi\right]},
+\]
+其中选取使 $t_n\ge0$ 的整数 $n$。
+\excheck 这些是\emph{有符号角速度}的局部极值点；
+比较速度模的全部峰值时需区分正峰与负峰。
+
+\oscproblem{69}{163}
+阻尼振动写成
+$x(t)=a_0e^{-\beta t}\cos(\omega t+\alpha)$。
+求初始振幅 $a_0$、初相 $\alpha$，
+当初始条件为
+(a) $x(0)=0$、$\dot x(0)=v_0$；
+(b) $x(0)=x_0$、$\dot x(0)=0$。
+\exsolution
+一般初值满足
+$x_0=a_0\cos\alpha$、
+$v_0=-a_0(\beta\cos\alpha+\omega\sin\alpha)$。
+(a) $\cos\alpha=0$，
+$a_0=|v_0|/\omega$，
+并由 $v_0=-a_0\omega\sin\alpha$ 决定相位，
+\[
+\boxed{a_0=\frac{|v_0|}{\omega},
+\quad
+\alpha=
+\begin{cases}
+-\pi/2,&v_0>0,\\
++\pi/2,&v_0<0.
+\end{cases}}
+\]
+(b) $v_0=0$ 给
+$\tan\alpha=-\beta/\omega$；
+由 $x_0=a_0\cos\alpha$，
+\[
+\boxed{a_0=|x_0|
+\sqrt{1+\left(\frac\beta\omega\right)^2}}.
+\]
+当 $x_0>0$，
+可取
+$\alpha=-\arctan(\beta/\omega)$；
+当 $x_0<0$，
+按相位加 $\pi$ 选择等效分支。
+\excheck $\beta=0$ 时退化为标准无阻尼简谐振动初值关系。
+
+\oscproblem{70}{163}
+某阻尼振动角频率
+$\omega=25\,\mathrm{s^{-1}}$，
+在 $t=0$ 时瞬时速度为零，
+而实际位移模比该时刻的包络振幅小
+$\eta=1.020$ 倍。
+求阻尼系数 $\beta$。
+\exsolution
+写
+$x=a_0e^{-\beta t}\cos(\omega t+\alpha)$。
+初始速度零给
+$\beta\cos\alpha+\omega\sin\alpha=0$，
+即
+$\tan\alpha=-\beta/\omega$。
+位移与包络幅度之比
+$|x(0)|/a_0=|\cos\alpha|
+=1/\sqrt{1+(\beta/\omega)^2}$。
+题设此比为 $1/\eta$，所以
+\[
+\boxed{\beta=\omega\sqrt{\eta^2-1}
+=25\sqrt{1.020^2-1}
+\simeq5.0\,\mathrm{s^{-1}}}.
+\]
+\excheck 对阻尼振动，“速度为零的转折点”
+并不恰等于瞬时包络振幅，
+其差由 $\beta/\omega$ 决定。
+
+\oscproblem{71}{164}
+质点阻尼振动角频率为 $\omega$、
+阻尼系数为 $\beta$。
+求速度振幅包络随时间的关系，
+当 $t=0$：
+(a) 位移幅度为 $a_0$；
+(b) 实际位移为零，实际速度为 $v_0$。
+\exsolution
+一般位移
+$x=a_0e^{-\beta t}\cos(\omega t+\alpha)$，
+速度可写成
+\[
+v=-a_0e^{-\beta t}\sqrt{\omega^2+\beta^2}
+\cos(\omega t+\alpha-\delta)
+\]
+（适当取相位 $\delta$）。
+故
+\[
+\boxed{V_a(t)=a_0\sqrt{\omega^2+\beta^2}\,
+e^{-\beta t}}.
+\]
+(b) 初始 $x(0)=0$，
+按第69题有
+$a_0=|v_0|/\omega$，
+从而
+\[
+\boxed{V_b(t)=|v_0|
+\sqrt{1+\left(\frac\beta\omega\right)^2}
+e^{-\beta t}}.
+\]
+\excheck 速度包络与位移包络的比例是
+$\sqrt{\omega^2+\beta^2}$，不是简单的 $\omega$。
+
+\oscproblem{72}{164}
+两种阻尼振动的参数为
+$T_1=0.10\,\mathrm{ms}$、
+$\beta_1=100\,\mathrm{s^{-1}}$；
+$T_2=10\,\mathrm{ms}$、
+$\beta_2=10\,\mathrm{s^{-1}}$。
+判断哪一种衰减更快。
+\exsolution
+振幅包络 $A(t)=A_0e^{-\beta t}$。
+若比较\emph{相同真实时间}，
+$\beta_1>\beta_2$，
+所以第一种衰减更快，
+其时间常数分别为
+$\tau_1=1/\beta_1=0.010$s、
+$\tau_2=1/\beta_2=0.10$s。
+若比较\emph{每振动一周}衰减程度，
+对数减量
+$\lambda_i=\beta_iT_i$：
+\[
+\boxed{\lambda_1=100(10^{-4})=0.010},
+\qquad
+\boxed{\lambda_2=10(10^{-2})=0.10}.
+\]
+因此按单周期比例衰减，第二种更快。
+\excheck 题目未给“更快”的比较基准，
+两个答案分别对应真实时间和自身周期，
+与原书书末的提醒一致。
+
+\oscproblem{73}{164}
+单摆在某介质中振荡，
+对数减量为
+$\lambda_0=1.50$。
+若介质阻力系数加大
+$n=2.00$ 倍，求新对数减量；
+阻力加大多少倍后不再出现振荡？
+\exsolution
+设无阻尼固有角频率为
+$\omega_0$，
+原阻尼系数 $\beta_0$，
+阻尼振动频率
+$\omega_{d0}=\sqrt{\omega_0^2-\beta_0^2}$。
+对数减量
+$\lambda_0=2\pi\beta_0/\omega_{d0}$。
+阻力倍数为 $n$ 时
+$\beta=n\beta_0$，
+$\omega_d=\sqrt{\omega_0^2-n^2\beta_0^2}$，
+故
+\[
+\boxed{\lambda(n)=
+\frac{n\lambda_0}
+{\sqrt{1+(1-n^2)(\lambda_0/2\pi)^2}}}.
+\]
+代 $n=2$ 得
+$\boxed{\lambda\simeq3.3}$。
+临界阻尼为
+$n_c\beta_0=\omega_0$，
+因此
+\[
+\boxed{n_c=\sqrt{1+\left(\frac{2\pi}{\lambda_0}\right)^2}
+\simeq4.3}.
+\]
+\excheck $n\ge n_c$ 时系统转为临界或过阻尼，
+不再围绕平衡位置反复振荡。
+
+\oscproblem{74}{164}
+质量块悬挂在无质量轻弹簧下，
+静伸长
+$\Delta x=9.8$cm；
+轻微竖直推动后阻尼振荡的对数减量为
+$\lambda=3.1$。
+求实际振荡周期。
+\exsolution
+静平衡
+$k\Delta x=mg$，
+无阻尼固有角频率
+$\omega_0^2=k/m=g/\Delta x$。
+对于欠阻尼振荡，
+$\omega_d^2=\omega_0^2-\beta^2$，
+周期 $T=2\pi/\omega_d$，
+对数减量
+$\lambda=\beta T$。
+消去 $\beta$：
+\[
+\frac{4\pi^2}{T^2}
+=\frac g{\Delta x}-\frac{\lambda^2}{T^2},
+\]
+故
+\[
+\boxed{T=
+\sqrt{\frac{(4\pi^2+\lambda^2)\Delta x}{g}}
+\simeq0.70\,\mathrm s}.
+\]
+\excheck 若错误采用无阻尼周期
+$2\pi\sqrt{\Delta x/g}$，
+将忽略 $\lambda=3.1$ 的显著阻尼效应。
+
+\oscproblem{75}{164}
+某振子经过
+$n=110$ 次振动后，位移幅度降低
+$\eta=2.0$ 倍。
+求品质因数 $Q$。
+\exsolution
+若每周期振幅比
+$A_{k+1}/A_k=e^{-\lambda}$，
+则经过 $n$ 周期有
+$A_n/A_0=e^{-n\lambda}=1/\eta$，
+所以
+$\lambda=(\ln\eta)/n$。
+欠阻尼振子的品质因数按
+$Q\simeq\pi/\lambda$，故
+\[
+\boxed{Q\simeq\frac{\pi n}{\ln\eta}
+=\frac{\pi(110)}{\ln2}
+\simeq5.0\times10^2}.
+\]
+\excheck 这里 $\lambda\ll1$，
+因此用 $Q\simeq\pi/\lambda$ 的弱阻尼近似非常好。
+
+\oscproblem{76}{164}
+粒子初始离开平衡位置 $\ell=1.0$cm，
+随后由静止释放，
+发生阻尼振动直至停止。
+对数减量
+$\lambda=0.020$。
+求整个过程中累计走过的总路程。
+\exsolution
+相邻两个转折点间隔半个阻尼周期，
+对应位移极值的模按因子
+$r=e^{-\lambda/2}$ 递减。
+起始极值为 $\ell$，
+之后转折点依次为
+$-\ell r,+\ell r^2,\ldots$。
+总路径为
+\[
+s=\ell+\ell r+
+(\ell r+\ell r^2)+(\ell r^2+\ell r^3)+\cdots
+=\ell\frac{1+r}{1-r}.
+\]
+因此
+\[
+\boxed{s=\ell
+\frac{1+e^{-\lambda/2}}{1-e^{-\lambda/2}}
+\simeq2.0\,\mathrm m}.
+\]
+\excheck 虽然每次反转位移很小，
+衰减率仅每半周期约1%，
+累计路程可远大于初始1cm振幅。
+
+\oscproblem{77}{164}
+数学单摆长度 $\ell=50$cm，
+在
+$\tau=5.2$min 内总机械能下降
+$\eta=4.0\times10^4$ 倍。
+求品质因数。
+\exsolution
+阻尼振动能量包络
+$W(t)\propto e^{-2\beta t}$，
+故
+$\eta=e^{2\beta\tau}$，
+$\beta=(\ln\eta)/(2\tau)$。
+无阻尼固有角频率
+$\omega_0=\sqrt{g/\ell}$，
+阻尼角频率
+$\omega_d=\sqrt{\omega_0^2-\beta^2}$。
+用本书弱阻尼定义
+$Q=\omega_d/(2\beta)$，
+\[
+\boxed{Q=\frac12
+\sqrt{\frac{4g\tau^2}{\ell(\ln\eta)^2}-1}
+\simeq1.3\times10^2}.
+\]
+\excheck $5.2$min 需换为312s；
+$Q\gg1$ 支持弱阻尼模型。
+
+\oscproblem{78}{164}
+均匀薄圆盘半径
+$R=13$cm，
+可绕垂直盘面、穿过盘缘的水平轴转动，
+作小幅阻尼摆动，对数减量
+$\lambda=1.00$。
+求振荡周期。
+\exsolution
+圆盘对悬轴的转动惯量
+$J=J_{\rm cm}+mR^2=(3/2)mR^2$。
+质心距悬轴 $R$，
+故无阻尼角频率
+$\omega_0^2=mgR/J=2g/(3R)$。
+对数减量 $\lambda=\beta T$，
+阻尼角频率
+$\omega_d=2\pi/T$，
+于是
+$\omega_0^2=(4\pi^2+\lambda^2)/T^2$，
+\[
+\boxed{T=
+\sqrt{\frac{3R(4\pi^2+\lambda^2)}{2g}}
+\simeq0.90\,\mathrm s}.
+\]
+\excheck 悬轴在\emph{盘缘}且轴垂直盘面，
+所以 $J$ 不是圆盘中心惯量 $mR^2/2$。
+
+\oscproblem{79}{164}
+水平薄均匀圆盘质量为 $m$、半径为 $R$，
+由弹性细线悬挂，扭转回复力矩大小
+$\alpha|\varphi|$。
+浸于黏性流体中，
+每单位盘面面积的阻力大小
+$\eta v$（$v$ 为局部速度）。
+求小扭转振动角频率。
+\exsolution
+圆盘绕轴转动惯量
+$J=mR^2/2$。
+半径 $r$ 处的速度
+$v=r|\dot\varphi|$，
+每个表面元受到切向阻力密度
+$\eta r|\dot\varphi|$，
+相对轴的力矩元
+$\eta r^2\dot\varphi\,\mathrm dS$。
+盘上下两面总阻力矩系数
+\[
+b=2\eta\int_{\rm disc}r^2\,\mathrm dS
+=2\eta\left(\frac{\pi R^4}{2}\right)
+=\pi\eta R^4.
+\]
+方程
+$J\ddot\varphi+b\dot\varphi+\alpha\varphi=0$。
+设阻尼系数
+$\beta=b/(2J)=\pi\eta R^2/m$，
+则
+\[
+\boxed{\omega=
+\sqrt{\frac{2\alpha}{mR^2}-
+\left(\frac{\pi\eta R^2}{m}\right)^2}}.
+\]
+\excheck 只有根号内为正时存在欠阻尼振动；
+两面流体黏性阻力均需计入。
+
+\oscproblem{80}{165}
+图4.24：半径为 $R$ 的薄盘 A
+在上下两个固定平面之间扭转振动，
+盘对中心轴转动惯量为 $J$，
+盘与每个平面的间隙为
+$h\ll R$。
+振动周期 $T$、对数减量 $\lambda$ 已知。
+求周围气体的动力黏度 $\eta$。
+\exsolution
+半径 $r$ 处盘面切向速度
+$v=r\dot\varphi$，
+在狭缝内近似线性速度剖面，
+切应力为
+$\tau_s=\eta v/h=\eta r\dot\varphi/h$。
+上下两面总阻力矩
+\[
+M_{\rm drag}=-2\frac{\eta\dot\varphi}{h}
+\int_{\rm disc}r^2\,\mathrm dS
+=-\frac{\pi\eta R^4}{h}\dot\varphi.
+\]
+即线性阻尼系数
+$b=\pi\eta R^4/h$。
+运动方程
+$J\ddot\varphi+b\dot\varphi+k\varphi=0$，
+位移包络衰减率
+$\beta=b/(2J)$，
+对数减量 $\lambda=\beta T$。
+所以
+\[
+\boxed{\eta=\frac{2\lambda hJ}{\pi R^4T}}.
+\]
+\excheck $\eta$ 维度为
+$\mathrm{Pa\,s}$；
+本式要求层流薄隙 $h\ll R$ 以及线性黏滞近似。
+
+\oscproblem{81}{165}
+图4.25：边长为 $a$ 的正方形导线框
+悬在弹性细线下，
+处于均匀水平磁场 $B$ 中。
+平衡时框面平行磁场，
+绕通过框中心的竖轴作微小扭转振动，
+框对轴惯量为 $J$、电阻为 $R$，
+忽略自感。
+求振动角幅度衰减到原来的
+$1/e$ 所需时间。
+\exsolution
+微小转角 $\varphi$ 时，
+框面法向磁通
+$\Phi=Ba^2\sin\varphi
+\simeq Ba^2\varphi$。
+感生电动势
+$\mathcal E=-Ba^2\dot\varphi$，
+感生电流
+$I_{\rm ind}=\mathcal E/R$。
+磁力矩
+$\tau_m=I_{\rm ind}\,\mathrm d\Phi/\mathrm d\varphi
+\simeq-(B^2a^4/R)\dot\varphi$，
+等效黏性阻尼系数
+$b=B^2a^4/R$。
+微小扭转方程
+$J\ddot\varphi+b\dot\varphi+k\varphi=0$，
+在欠阻尼条件下振幅包络为
+$A(t)=A_0e^{-\beta t}$，
+$\beta=b/(2J)$。
+所以
+\[
+\boxed{\tau_{1/e}=\frac1\beta
+=\frac{2JR}{a^4B^2}}.
+\]
+\excheck 题设未给扭转弹性常数 $k$，
+但幅度包络的 e 倍衰减时间只由
+惯量和线性电磁阻尼系数决定。
