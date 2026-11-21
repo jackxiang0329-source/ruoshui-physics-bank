@@ -189,7 +189,7 @@ lam=2e-6
 simple=a*n/lam*(1-exp(-lam*t))
 exact_prod=a*n/(lam-a)*(exp(-a*t)-exp(-lam*t))
 test(286,"finite target depletion activation state ratio",
-     exact_prod/simple,.98,.04)
+     exact_prod/simple,.94904,.002)
 # 287 delayed activity neutron flux inverse solution.
 N0=.2/197*NA
 half=2.7*86400
