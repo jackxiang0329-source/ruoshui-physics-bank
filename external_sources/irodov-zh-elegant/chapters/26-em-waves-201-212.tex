@@ -1,0 +1,278 @@
+% Irodov Part IV §4.4 original 201--212.
+% Source PDF pp.191--192 printed pp.182--183; original answer PDF 333--334.
+\emwaveproblem{201}{182}
+空气平行板电容器两极板为半径 $R=6.0$cm 的圆盘，接频率 $\omega=1000\,\mathrm{s^{-1}}$ 的交变电压。求电容器内部磁场能峰值与电场能峰值之比。
+\exsolution
+忽略边缘场，极板间均匀电场
+$E(t)=E_m\cos\omega t$。
+半径 $r\le R$ 的环路上，由安培—麦克斯韦式
+$2\pi rB_\varphi/\mu_0=
+\varepsilon_0\pi r^2\dot E$，
+所以磁场振幅
+$B_{\varphi,m}=\mu_0\varepsilon_0\omega rE_m/2$。
+若板距为 $d$，
+\[
+W_{B,m}=\int_0^R\frac{B_{\varphi,m}^2}{2\mu_0}
+(2\pi rd)\,\mathrm dr
+=\frac{\pi d\mu_0\varepsilon_0^2\omega^2E_m^2R^4}{16}.
+\]
+电场能峰值
+$W_{E,m}=\frac12\varepsilon_0E_m^2\pi R^2d$。
+故
+\[
+\boxed{\frac{W_{B,m}}{W_{E,m}}
+=\frac{\varepsilon_0\mu_0\omega^2R^2}{8}
+=\frac{\omega^2R^2}{8c^2}
+\simeq5.0\times10^{-15}}.
+\]
+\excheck 两种峰值不同时刻出现，但可分别取各自时间最大值；比例与场振幅和板距无关。
+
+\emwaveproblem{202}{182--183}
+无限长螺线管圆形截面半径
+$R=6.0$cm，绕组通角频率
+$\omega=1000\,\mathrm{s^{-1}}$ 的正弦交流电。
+求管内感应电场能峰值与磁场能峰值之比。
+\exsolution
+理想长螺线管内部均匀
+$B_z(t)=B_m\cos\omega t$。
+由法拉第定律对半径 $r<R$ 的圆环积分，
+$2\pi rE_\varphi=-\pi r^2\dot B_z$，
+故
+$E_{\varphi,m}=\omega rB_m/2$。
+单位长度的感应电场能峰值
+\[
+W'_{E,m}=\int_0^R\frac12\varepsilon_0E_{\varphi,m}^2(2\pi r)\,\mathrm dr
+=\frac{\pi\varepsilon_0\omega^2B_m^2R^4}{16}.
+\]
+磁场能峰值（单位长度）
+$W'_{B,m}=\pi R^2B_m^2/(2\mu_0)$。
+因而
+\[
+\boxed{\frac{W'_{E,m}}{W'_{B,m}}
+=\frac{\varepsilon_0\mu_0\omega^2R^2}{8}
+\simeq5.0\times10^{-15}}.
+\]
+\excheck 与第201题呈电磁对偶：电容器电场为主、螺线管磁场为主，微弱的伴随场能比相同。
+
+\emwaveproblem{203}{183}
+空气平板圆盘电容器电极缓慢充电，忽略边缘场。证明：穿过电容器侧表面的坡印廷能流等于电容器电场储能的增长率。
+\exsolution
+板间电场 $E(t)$ 沿轴向 $z$，极板圆半径为 $R$、板距为 $d$。
+由位移电流导致的环向磁场
+$H_\varphi(r)=\varepsilon_0r\dot E/2$。
+侧面 $r=R$ 处
+$\bm S=\bm E\times\bm H$，
+$\bm e_z\times\bm e_\varphi=-\bm e_r$，
+即能流朝内，大小
+$S_{\rm in}=EH_\varphi(R)=\varepsilon_0R E\dot E/2$。
+穿过侧面的向内功率
+\[
+P_{\rm in}=2\pi Rd\,S_{\rm in}
+=\varepsilon_0E\dot E\,\pi R^2d.
+\]
+电场储能
+$W_E=\frac12\varepsilon_0E^2(\pi R^2d)$，
+故
+\[
+\boxed{P_{\rm in}=\frac{\mathrm dW_E}{\mathrm dt}}.
+\]
+\excheck 充电时坡印廷矢量从空间侧面向内流入电容器，而不是沿导线穿越极板；严格瞬时场分布仍取准静态近似。
+
+\emwaveproblem{204}{183}
+一根圆截面直导体通直流 $I$。取一段导体，其电阻为 $R$，求穿过该段导体侧面的坡印廷能流。
+\exsolution
+设导体半径为 $a$、长度为 $\ell$，
+轴向电场
+$E_z=IR/\ell$。
+在侧面磁场强度
+$H_\varphi=I/(2\pi a)$。
+坡印廷矢量
+$\bm S=\bm E\times\bm H
+=-E_zH_\varphi\bm e_r$，
+朝向导体内部。
+由侧面积 $2\pi a\ell$，
+\[
+\boxed{P_{\rm in}=2\pi a\ell E_zH_\varphi
+=2\pi a\ell\frac{IR}{\ell}\frac{I}{2\pi a}
+=I^2R}.
+\]
+\excheck 侧向流入导体的电磁能正好转化为焦耳热；结果与所选导体半径、长度的单独数值无关。
+
+\emwaveproblem{205}{183}
+非相对论质子经加速电压 $U$ 后形成圆柱形均匀离子束，其电流为 $I$。求束流外部距轴线 $r$ 处的坡印廷矢量模与方向。
+\exsolution
+质子束速度由动能给定
+$v=\sqrt{2eU/m_p}$。
+线电荷密度
+$\lambda=I/v$。
+束外径向电场
+$E_r=\lambda/(2\pi\varepsilon_0r)
+=I/(2\pi\varepsilon_0vr)$；
+磁场强度
+$H_\varphi=I/(2\pi r)$。
+对沿 $+z$ 运动的正质子束，
+$\bm E=E_r\bm e_r$、
+$\bm H=H_\varphi\bm e_\varphi$，
+所以
+$\bm S=E_rH_\varphi\bm e_z$。
+因此
+\[
+\boxed{\bm S=
+\frac{I^2}{4\pi^2\varepsilon_0r^2}
+\sqrt{\frac{m_p}{2eU}}\;\bm e_z}.
+\]
+\excheck $\bm e_r\times\bm e_\varphi=\bm e_z$；
+坡印廷矢量沿束流前进方向，且束外按 $r^{-2}$ 衰减。
+
+\emwaveproblem{206}{183}
+长直螺线管的绕组电流以缓慢速率增大。证明：螺线管内部磁能的增长率等于从侧面流入的坡印廷能流。
+\exsolution
+设螺线管半径 $R$、长度 $\ell$，
+内部近似均匀磁场 $B_z(t)$。
+法拉第定律给侧面环向电场
+$E_\varphi(R)=-R\dot B_z/2$，
+磁场强度
+$H_z=B_z/\mu_0$。
+坡印廷矢量
+$\bm S=\bm E\times\bm H
+=E_\varphi H_z\bm e_r$，
+当 $\dot B_z>0$ 时其径向分量为负，指向管内。
+侧面流入功率
+\[
+P_{\rm in}
+=2\pi R\ell\left(\frac{R\dot B_z}{2}\frac{B_z}{\mu_0}\right)
+=\frac{\pi R^2\ell}{\mu_0}B_z\dot B_z.
+\]
+内部磁能
+$W_B=B_z^2(\pi R^2\ell)/(2\mu_0)$，故
+\[
+\boxed{P_{\rm in}=\dot W_B}.
+\]
+\excheck 与第203题类似，能量从导体周围的空间流入充能区域；螺线管足够长且缓慢变化保证边缘及辐射修正小。
+
+\emwaveproblem{207}{183}
+图4.39表示双导线直流回路的一段，箭头给出两根导线内的电流方向，下导线电势高于上导线（$\varphi_2>\varphi_1$）。依据坡印廷能流判断电源在图的哪侧。
+\exsolution
+两导线之间的静电场从高电势导线2指向低电势导线1。
+按图4.39，利用右手定则判断两导线电流合成的磁场在两线之间的方向。
+取 $\bm E\times\bm H$，该能流沿两导线之间的空隙\emph{从左向右}输送能量。
+因此提供电磁能的一端在上游：
+\[
+\boxed{\text{电源位于图4.39的左侧}}.
+\]
+\excheck 判断的是\emph{能流方向}而非沿单根导线的电子漂移方向；本题依赖原图给定的两个电流箭头与电势高低。
+
+\emwaveproblem{208}{183}
+理想长直同轴电缆以忽略的有功电阻向负载传输电压 $V$、电流 $I$。外同轴导电薄壳为回流导体。求穿过电缆任一横截面的电磁能流。
+\exsolution
+内芯与外壳间径向电场
+$E_r=V/[r\ln(b/a)]$，
+其中 $a,b$ 为内外电极半径。
+环向磁场强度
+$H_\varphi=I/(2\pi r)$。
+坡印廷矢量沿电缆轴向，
+\[
+S_z=E_rH_\varphi
+=\frac{VI}{2\pi r^2\ln(b/a)}.
+\]
+对环状电磁场截面积积分：
+\[
+\Phi=\int_a^bS_z\,2\pi r\,\mathrm dr
+=\frac{VI}{\ln(b/a)}\int_a^b\frac{\mathrm dr}{r}.
+\]
+因此
+\[
+\boxed{\Phi=VI}.
+\]
+\excheck 电磁能主要经内芯与外导体之间的介质空间向负载传播，而非简单地“在铜导线内部流动”。
+
+\emwaveproblem{209}{183}
+理想长直同轴电缆向交流负载供能，
+端口电压
+$V(t)=V_0\cos\omega t$，
+电流
+$I(t)=I_0\cos(\omega t-\varphi)$。
+求横截面平均坡印廷能流。
+\exsolution
+在准 TEM 传播模型中，
+每一横截面的瞬时能流与端口电功率相等：
+$\Phi(t)=V(t)I(t)$。
+用恒等式
+$\cos A\cos B=\tfrac12[\cos(A-B)+\cos(A+B)]$，
+得到
+\[
+\Phi(t)=\tfrac12V_0I_0
+[\cos\varphi+\cos(2\omega t-\varphi)].
+\]
+一完整周期平均，双频项为零：
+\[
+\boxed{\overline\Phi=
+\frac12V_0I_0\cos\varphi
+=V_{\rm rms}I_{\rm rms}\cos\varphi}.
+\]
+\excheck 无功电流分量导致场能往返交换，但平均功率只由功率因数 $\cos\varphi$ 决定。
+
+\emwaveproblem{210}{183}
+证明在两个介质的分界面上，坡印廷矢量法向分量在适当边界条件下连续。
+\exsolution
+坡印廷矢量 $\bm S=\bm E\times\bm H$。
+在\emph{无自由面电流且边界不存在面层吸收或释放功率}的通常介质界面，
+由法拉第定律与安培定律的边界条件，
+切向分量满足
+$\bm E_{1t}=\bm E_{2t}$、
+$\bm H_{1t}=\bm H_{2t}$。
+坡印廷矢量法向分量只由切向场交叉积决定：
+\[
+S_{1n}=\bm n\cdot(\bm E_{1t}\times\bm H_{1t}),
+\quad
+S_{2n}=\bm n\cdot(\bm E_{2t}\times\bm H_{2t}),
+\]
+所以
+\[
+\boxed{S_{1n}=S_{2n}}.
+\]
+\excheck 若界面承载自由面电流或具有表面耗散，切向 $\bm H$ 可跳变，界面能量平衡出现面功率项，题述连续性\emph{不再无条件成立}；本稿明确了原书省略的物理假设。
+
+\emwaveproblem{211}{183}
+证明在质心不受外力的非相对论封闭带电粒子系统中，若所有粒子具有相同比荷 $q_i/m_i=\kappa$，则没有电\emph{偶极}辐射。
+\exsolution
+系统电偶极矩
+$\bm p=\sum_iq_i\bm r_i
+=\kappa\sum_im_i\bm r_i
+=\kappa M\bm R_{\rm cm}$，
+其中 $M=\sum_i m_i$ 为总质量。
+封闭系统质心匀速运动，因此
+$\ddot{\bm R}_{\rm cm}=0$。
+由经典非相对论电偶极辐射公式
+\[
+P_{\rm dip}=
+\frac{|\ddot{\bm p}|^2}{6\pi\varepsilon_0c^3},
+\]
+得到
+\[
+\boxed{\ddot{\bm p}=\kappa M\ddot{\bm R}_{\rm cm}=0,
+\qquad P_{\rm dip}=0}.
+\]
+\excheck 结论只是\emph{无电偶极辐射}；
+并不排除更高多极矩辐射，不能误写成所有形式的电磁辐射都为零。
+
+\emwaveproblem{212}{183}
+电子沿一直线作谐振动，
+振幅 $a=0.10\,\mathrm{nm}$，
+角频率 $\omega=6.5\times10^{14}\,\mathrm{s^{-1}}$。
+求一周期平均电磁辐射功率。
+\exsolution
+坐标 $x=a\cos\omega t$，
+加速度
+$\ddot x=-a\omega^2\cos\omega t$。
+非相对论拉莫尔辐射瞬时功率
+$P(t)=e^2\ddot x^2/(6\pi\varepsilon_0c^3)$，
+周期平均平方加速度
+$\langle\ddot x^2\rangle=\tfrac12a^2\omega^4$。
+所以
+\[
+\boxed{\overline P=
+\frac{e^2a^2\omega^4}{12\pi\varepsilon_0c^3}
+\simeq5\times10^{-15}\,\mathrm W}.
+\]
+\excheck 振动加速度的\emph{均方值}而非峰值代入平均功率；使用 $a=10^{-10}$m。
