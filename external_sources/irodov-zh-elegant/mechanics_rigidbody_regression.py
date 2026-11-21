@@ -194,7 +194,7 @@ v2=10/17*g*(R+r)
 check(263,"rolling sphere falling off cos(theta)",cth,.5882353)
 residual(263,"detach centripetal vs radial gravitational force",
          g*cth-v2/(R+r))
-check(263,"detach angular velocity rad/s",sqrt(v2)/r,7.97)
+check(263,"detach angular velocity rad/s",sqrt(v2)/r,25.19)
 R,alpha=.15,pi/6
 v0max2=g*R*(7*cos(alpha)-4)/3
 check(264,"down-step rolling cylinder threshold v0 m/s",
@@ -211,7 +211,7 @@ exact(267,"r/R -> 0 is ordinary free rolling K/(mv²)",.7,.7)
 m,omega,ell,theta=2.,3.,1.5,pi/4
 Irod=m*ell**2/12
 N=Irod*omega**2*sin(theta)*cos(theta)
-check(269,"inclined rod centrifugal moment Nm",N,.84375)
+check(269,"inclined rod centrifugal moment Nm",N,1.6875)
 exact(269,"centrifugal rod torque agrees with gyroscopic angular momentum rate",
       N,Irod*omega**2*sin(theta)*cos(theta))
 exact(270,"rod conical pendulum critical omega²ell/g",1.5,1.5)
@@ -249,8 +249,16 @@ residual(274,"plate impact axial angular momentum",
 Faxis=M*omega**2*ell/2
 exact(274,"plate post-impact hinge centripetal force",
       Faxis,72*M*m*m*v*v/(ell*(4*M+3*m)**2))
-exact(275,"bullet-rod impact initial linear momentum not conserved",
-      float(0.5>0),1)
+mrod,mbullet,ell,v0=5.,.05,2.,20.
+Irod=mrod*ell**2/3
+Ibullet=mbullet*ell**2
+omegab=mbullet*v0*ell/(Irod+Ibullet)
+contact_speed=omegab*ell
+axis_impulse=mbullet*v0-(mrod+mbullet)*omegab*(ell/2) 
+check(275,"bullet+rod hinge supplies nonzero horizontal impact impulse",
+      abs(axis_impulse),.498,0.05)
+residual(275,"angular momentum about fixed hinge conserved in embedding",
+         mbullet*v0*ell-(Irod+Ibullet)*omegab)
 M,m,R,omega0=5.,1.,.2,4.
 I=.5*M*R*R
 omegaf=(I+m*R*R)/I*omega0
