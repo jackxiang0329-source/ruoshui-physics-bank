@@ -36,15 +36,36 @@ jobs:
           retention-days: 30
       - name: Commit successfully compiled PDFs to the repository
         if: github.ref == 'refs/heads/main'
+        shell: bash
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f external_sources/irodov-zh-elegant/main.pdf external_sources/irodov-zh-elegant/cover.pdf
-          if ! git diff --cached --quiet; then
-            git commit -m "docs: publish Irodov Chinese ElegantBook PDFs [skip ci]"
-            if ! git push origin HEAD:main; then
+          root=external_sources/irodov-zh-elegant
+          cp "$root/main.pdf" "$RUNNER_TEMP/irodov-main-compiled.pdf"
+          cp "$root/cover.pdf" "$RUNNER_TEMP/irodov-cover-compiled.pdf"
+          for attempt in 1 2 3 4 5; do
             git fetch origin main
-            git rebase origin/main
-            git push origin HEAD:main
-          fi
-          fi
+            # An older compilation must never replace a newer translated book.
+            if ! git diff --quiet "$GITHUB_SHA" FETCH_HEAD -- \
+              "$root/main.tex" "$root/cover.tex" "$root/chapters"; then
+              echo "Newer TeX sources exist: skipping stale PDF publication; queued build will publish."
+              exit 0
+            fi
+            git reset --hard FETCH_HEAD
+            cp "$RUNNER_TEMP/irodov-main-compiled.pdf" "$root/main.pdf"
+            cp "$RUNNER_TEMP/irodov-cover-compiled.pdf" "$root/cover.pdf"
+            git add -f "$root/main.pdf" "$root/cover.pdf"
+            if git diff --cached --quiet; then
+              echo "Compiled PDFs are already current."
+              exit 0
+            fi
+            git commit -m "docs: publish Irodov Chinese ElegantBook PDFs [skip ci]"
+            if git push origin HEAD:main; then
+              echo "Published compiled PDFs on latest main."
+              exit 0
+            fi
+            echo "Concurrent GitHub update on attempt $attempt; retrying without binary rebase."
+          done
+          echo "Failed to publish PDFs after five optimistic retries." >&2
+          exit 1
