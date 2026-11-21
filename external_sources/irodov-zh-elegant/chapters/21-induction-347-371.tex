@@ -1,0 +1,518 @@
+% Irodov Part III §3.6 original 347--371, source uploaded PDF pp.153--155
+% (printed 144--146); answers PDF pp.318--320.
+\electroinductionproblem{347}{144}
+同心金属球之间填有均匀弱导电介质，电阻率 $\rho$、相对介电常数 $\varepsilon$。在 $t=0$ 内球获得自由电荷。求：(a) 任一点位移电流密度与传导电流密度的关系；(b) 某时刻内球剩余电荷为 $q$ 时，包围内球且完全处于介质中的闭合曲面位移电流。
+\exsolution
+径向漏电电阻与电容满足
+$RC=\rho\varepsilon\varepsilon_0$。
+局部电场随自由电荷指数衰减，
+$\dot{\bm E}=-\bm E/(\rho\varepsilon\varepsilon_0)$。
+位移电流密度
+$\bm j_d=\partial\bm D/\partial t
+=\varepsilon\varepsilon_0\dot{\bm E}
+=-\bm E/\rho$，而传导电流密度
+$\bm j_c=\bm E/\rho$，故
+\[
+\boxed{\bm j_d=-\bm j_c}.
+\]
+(b) 任意所述闭合曲面的电位移通量等于内球自由电荷 $q$。其时间导数
+\[
+I_d=\frac{\mathrm d}{\mathrm dt}\oint\bm D\cdot\mathrm d\bm S
+=\dot q=-\frac q{\rho\varepsilon\varepsilon_0}.
+\]
+因此
+\[
+\boxed{I_d=-\frac q{\rho\varepsilon\varepsilon_0}},
+\quad |I_d|=\frac{|q|}{\rho\varepsilon\varepsilon_0}.
+\]
+\excheck 传导和位移电流矢量相反，整个介质内部不需要由它们的和产生额外的环向磁场。
+
+\electroinductionproblem{348}{144}
+平行圆盘板电容器充电后断开电源，极板之间填满均匀弱导电材料。忽略边缘效应，说明其极板之间为何没有磁场。
+\exsolution
+板间电场在放电时满足
+$\varepsilon\varepsilon_0\dot E+\sigma E=0$，
+其中 $\sigma=1/\rho$ 为电导率。
+故传导电流密度与位移电流密度分别为
+$\bm j_c=\sigma\bm E$、
+$\bm j_d=\varepsilon\varepsilon_0\dot{\bm E}
+=-\sigma\bm E$。
+麦克斯韦—安培定律
+$\nabla\times\bm H=\bm j_c+\bm j_d=0$。
+在无限宽平板对称条件下，周围无外加环向场且边缘效应忽略，
+\[
+\boxed{\bm B=0\quad\text{（板间）}}.
+\]
+\excheck 仅用传导电流的旧安培定律会错误预测有磁场；位移电流恰好抵消传导电流。
+
+\electroinductionproblem{349}{144}
+空气平板电容器每块板面积
+$S=100\,\mathrm{cm^2}$，与交变电路串联，导线电流振幅 $I_m=1.0\,\mathrm{mA}$、角频率 $\omega=1.6\times10^7\,\mathrm{s^{-1}}$。求板间电场振幅。
+\exsolution
+电容器板间位移电流
+$I_d=\varepsilon_0S\,\dot E$，
+与导线电流相等。设
+$E=E_m\cos(\omega t+\phi)$，
+则
+$I_m=\varepsilon_0S\omega E_m$，所以
+\[
+\boxed{E_m=\frac{I_m}{\varepsilon_0\omega S}}.
+\]
+代 $S=0.010\,\mathrm{m^2}$ 得
+$\boxed{E_m\simeq7.1\times10^2\,\mathrm{V/m}
+=7.1\,\mathrm{V/cm}}$。
+\excheck 电流给的是振幅而非有效值，不需再乘 $\sqrt2$。
+
+\electroinductionproblem{350}{144}
+两块圆盘极板间距为 $d$，板间为电导率 $\sigma$、相对介电常数 $\varepsilon$ 的均匀弱导电材料，外加
+$V(t)=V_m\cos\omega t$。忽略边缘效应，求距轴 $r$ 处的磁场强度 $H_\varphi(r,t)$。
+\exsolution
+板间电场
+$E_z=V_m\cos\omega t/d$。
+纵向传导电流密度
+$j_c=\sigma V_m\cos\omega t/d$，
+位移电流密度
+$j_d=\varepsilon_0\varepsilon\dot E_z
+=-\varepsilon_0\varepsilon\omega V_m\sin\omega t/d$。
+半径 $r$ 的圆形安培环路：
+$2\pi rH_\varphi=\pi r^2(j_c+j_d)$，
+故
+\[
+\boxed{H_\varphi(r,t)=\frac{rV_m}{2d}
+[\sigma\cos\omega t-
+\varepsilon_0\varepsilon\omega\sin\omega t]}.
+\]
+其振幅
+\[
+\boxed{H_m=\frac{rV_m}{2d}
+\sqrt{\sigma^2+(\varepsilon_0\varepsilon\omega)^2}}.
+\]
+\excheck $H$ 单位是 A/m；当 $\sigma\to0$ 时仍有位移电流所产生的磁场。
+
+\electroinductionproblem{351}{144}
+无限长螺线管半径为 $R$、单位长度匝数 $n$，交变电流
+$I(t)=I_m\sin\omega t$。求轴距为 $r$ 处位移电流密度随时间的变化。
+\exsolution
+理想螺线管内部
+$B_z(t)=\mu_0nI_m\sin\omega t$，
+外部磁场近似为零。法拉第定律给环向感生电场
+\[
+E_\varphi(r,t)=
+-\frac12\dot B_z
+\begin{cases}r,&r<R,\\R^2/r,&r>R.\end{cases}
+\]
+真空中的位移电流密度
+$\bm j_d=\varepsilon_0\partial\bm E/\partial t$，
+因
+$\ddot B_z=-\mu_0nI_m\omega^2\sin\omega t$，
+得到
+\[
+\boxed{j_{d,\varphi}(r,t)=
+\frac{\varepsilon_0\mu_0nI_m\omega^2}{2}
+\sin\omega t
+\begin{cases}r,&r<R,\\R^2/r,&r>R.\end{cases}}
+\]
+\excheck 位移电流密度的 SI 单位为 A/m²。原书书末提取的式子似省略 $\varepsilon_0$，但按定义 $\bm j_d=\partial\bm D/\partial t$ 必须含此系数，已区别写出。
+
+\electroinductionproblem{352}{144}
+点电荷 $q$ 以非相对论恒速 $\bm v$ 直线运动。求在离电荷距离为 $r$ 的点处的位移电流密度：(a) 观测点在运动直线上；(b) 在通过电荷且与运动方向垂直的线上。
+\exsolution
+电位移矢量
+$\bm D=q\bm r/(4\pi r^3)$，
+其中 $\bm r=\bm x-\bm vt$。
+固定观测点对时间求导：
+\[
+\bm j_d=\frac{\partial\bm D}{\partial t}
+=\frac q{4\pi r^3}
+\left[3(\bm v\cdot\hat{\bm r})\hat{\bm r}-\bm v\right].
+\]
+(a) 若 $\bm v\parallel\bm r$，
+前一项为 $3\bm v$，故
+\[
+\boxed{\bm j_{d,\parallel}=\frac{2q\bm v}{4\pi r^3}}.
+\]
+(b) 若 $\bm v\perp\bm r$，点积为零，故
+\[
+\boxed{\bm j_{d,\perp}=-\frac{q\bm v}{4\pi r^3}}.
+\]
+\excheck 两者方向一正一负，不能只给正的模；采用运动电荷非相对论库仑场的瞬时近似。
+
+\electroinductionproblem{353}{144}
+半径为 $a$ 的均匀带电细圆环总电荷 $q$，沿轴线以恒速 $v$ 朝固定观察点 P 运动，圆环面始终与运动方向垂直。问观察点处位移电流密度达到最大时圆环中心距离 $x_m$，以及最大值。
+\exsolution
+轴上电位移为
+$D_z(x)=qx/[4\pi(a^2+x^2)^{3/2}]$。
+由于圆环相对观察点以速率 $v$ 接近，
+$j_{d,z}=\partial_t D_z=-v\,\mathrm dD_z/\mathrm dx$，
+所以
+\[
+j_{d,z}(x)=
+-\frac{qv}{4\pi}\frac{a^2-2x^2}{(a^2+x^2)^{5/2}}.
+\]
+在 $x=0$，其模为 $|qv|/(4\pi a^3)$；
+对无量纲 $u=x/a$ 检查上述函数的极值，
+其余位置的绝对值均更小，
+因此
+\[
+\boxed{x_m=0,\qquad
+j_{d,\max}=\frac{|q|v}{4\pi a^3}}.
+\]
+\excheck 最大值发生在环心恰好经过观察点时；
+电位移本身此时为零，但其时间变化率可最大。
+
+\electroinductionproblem{354}{145}
+图3.97点电荷 $q$ 以非相对论匀速 $\bm v$ 运动。利用磁场强度 $\bm H$ 的环路定律，求相对电荷位置矢量为 $\bm r$ 的观察点 A 的 $\bm H$。
+\exsolution
+以粒子运动方向为轴，对通过观察点 A 的圆形安培环路取半径 $r_\perp=r\sin\theta$。传导电流与位移电流在对称性下的总环流给
+$H_\varphi=qv\sin\theta/(4\pi r^2)$。
+方向沿 $\bm v\times\bm r$，矢量形式
+\[
+\boxed{\bm H(\bm r)=\frac{q}{4\pi}
+\frac{\bm v\times\bm r}{r^3}}.
+\]
+\excheck 由 $\bm B=\mu_0\bm H$ 还原运动点电荷的非相对论磁场公式；$H$ 的单位是 A/m。
+
+\electroinductionproblem{355}{145}
+用麦克斯韦方程证明：(a) 随时间变化的磁场不可能没有电场；(b) 存在随时间变化的磁场时，空间完全均匀的电场不可能成立；(c) 真空空腔内均匀电场（或磁场）在特殊情况下可随时间变化。
+\exsolution
+(a) 法拉第方程
+$\nabla\times\bm E=-\partial_t\bm B$。
+若 $\partial_t\bm B\ne0$，则
+$\nabla\times\bm E\ne0$，故不可能 $\bm E=0$。
+(b) 空间常矢量场满足 $\nabla\times\bm E=0$，
+故只能有 $\partial_t\bm B=0$。
+(c) 设空腔内 $\bm E(t)=\bm a f(t)$，
+$\bm a$ 是空间常矢量。法拉第式要求
+$\partial_t\bm B=0$，
+但无自由电流的安培—麦克斯韦方程为
+$\nabla\times\bm B=\mu_0\varepsilon_0\bm a f'(t)$。
+左边若 $\bm B$ 固定不随时间变化，则 $f'(t)$ 必为常量，即
+\[
+\boxed{\bm E(t)=\bm E_0+\bm A t}
+\]
+是可兼容的一类均匀时间变化电场，同时需有空间非均匀而时间不变的 $\bm B$。磁场与电场对偶交换后同理可构造均匀线性时间变化的磁场。
+\excheck (c) 不表示任意函数 $f(t)$ 都允许；两个旋度方程同时成立对时间依赖施加严格限制。
+
+\electroinductionproblem{356}{145}
+证明电荷守恒连续性方程
+$\nabla\cdot\bm j=-\partial\rho_f/\partial t$
+可由麦克斯韦方程推出。
+\exsolution
+对安培—麦克斯韦方程
+$\nabla\times\bm H=\bm j+\partial_t\bm D$
+两边取散度。
+由于恒等式
+$\nabla\cdot(\nabla\times\bm H)=0$，
+得到
+\[
+0=\nabla\cdot\bm j+
+\frac{\partial}{\partial t}(\nabla\cdot\bm D).
+\]
+再用电位移高斯定律
+$\nabla\cdot\bm D=\rho_f$，
+即得
+\[
+\boxed{\frac{\partial\rho_f}{\partial t}
++\nabla\cdot\bm j=0}.
+\]
+\excheck 位移电流项不可省略，否则取散度会错误要求稳态 $\nabla\cdot\bm j=0$ 对所有时间成立。
+
+\electroinductionproblem{357}{145}
+证明麦克斯韦方程
+$\nabla\times\bm E=-\partial\bm B/\partial t$
+与 $\nabla\cdot\bm B=0$ 相容。
+\exsolution
+对法拉第方程取散度，
+\[
+0=\nabla\cdot(\nabla\times\bm E)
+=-\frac{\partial}{\partial t}(\nabla\cdot\bm B).
+\]
+因此
+$\nabla\cdot\bm B$ 在时间上为常量。若初始满足
+$\nabla\cdot\bm B=0$，
+则以后仍恒满足
+\[
+\boxed{\nabla\cdot\bm B=0}.
+\]
+\excheck 法拉第式不单独强制初值为零，而是保证初始无磁单极约束在时间演化下保持。
+
+\electroinductionproblem{358}{145}
+某区域磁场 $\bm B$ 以角速度矢量 $\bm\omega$ 转动，求 $\nabla\times\bm E$。
+\exsolution
+若磁场是大小不变、作为空间给定点处的旋转矢量，则时间导数满足
+$\partial_t\bm B=\bm\omega\times\bm B$。
+法拉第方程立即给出
+\[
+\boxed{\nabla\times\bm E
+=-\bm\omega\times\bm B}.
+\]
+\excheck 这里的 $\bm\omega$ 为磁场矢量转动角速度，不能与第3.6节中的交变电场角频率混同。
+
+\electroinductionproblem{359}{145}
+惯性系 K 中只有均匀磁场 $\bm B$，另一惯性系 K' 以非相对论速度 $\bm v\perp\bm B$ 相对 K 匀速运动。求 K' 系中的电场。
+\exsolution
+取一虚拟试探电荷，在 K' 系某瞬间速度为零。
+其在 K 系的速度为 $\bm v$。
+在 K 系受磁洛伦兹力
+$\bm F=q\bm v\times\bm B$。
+非相对论近似中两系的实际受力一致，K' 系该电荷静止，磁力为零，
+故 $q\bm E'=\bm F$，
+\[
+\boxed{\bm E'=\bm v\times\bm B}.
+\]
+\excheck 非相对论形式无需 $\gamma$ 因子；正方向随所定义的 K' 相对 K 速度而定。
+
+\electroinductionproblem{360}{145}
+图3.98一块非铁磁性大金属板以速度
+$v=90\,\mathrm{cm/s}$ 在均匀磁场
+$B=50\,\mathrm{mT}$ 中平移，方向如图。求运动引起的表面电荷密度模。
+\exsolution
+板内载流子达到静态分离平衡后
+$\bm E=-\bm v\times\bm B$，
+场强模 $E=vB$。
+若板厚方向垂直于 $\bm v,\bm B$，
+两大表面产生等量反号电荷，
+$|\sigma_s|=\varepsilon_0vB$。
+因此
+\[
+\boxed{|\sigma_s|=
+(8.854\times10^{-12})(0.90)(0.050)
+\simeq4.0\times10^{-13}\,\mathrm{C/m^2}
+=0.40\,\mathrm{pC/m^2}}.
+\]
+\excheck 两侧电荷符号相反，整体板净电荷仍为零。
+
+\electroinductionproblem{361}{145}
+半径 $a=5.0\,\mathrm{cm}$ 的实心铝圆柱绕轴以 $\omega=45\,\mathrm{rad/s}$ 旋转，沿轴磁场
+$B=10\,\mathrm{mT}$，$\bm\omega\parallel\bm B$。忽略自身产生磁场，求出现的体电荷密度与侧表面电荷密度。
+\exsolution
+位置 $r$ 处金属速度
+$\bm v=\bm\omega\times\bm r$，
+径向洛伦兹分量为
+$\bm v\times\bm B=\omega Br\,\bm e_r$。
+载流子平衡要求
+$\bm E=-\omega Br\,\bm e_r$。
+高斯微分式
+$\rho_f=\varepsilon_0\nabla\cdot\bm E$，
+柱坐标有
+$\nabla\cdot\bm E=(1/r)\partial_r(rE_r)
+=-2\omega B$，于是
+\[
+\boxed{\rho_f=-2\varepsilon_0\omega B
+\simeq-8.0\times10^{-12}\,\mathrm{C/m^3}
+=-0.0080\,\mathrm{nC/m^3}}.
+\]
+由于圆柱整体电中性，每单位长度体电荷
+$\rho_f\pi a^2$ 与侧面电荷
+$\sigma_s2\pi a$ 相消，
+\[
+\boxed{\sigma_s=\varepsilon_0a\omega B
+\simeq2.0\times10^{-13}\,\mathrm{C/m^2}
+=0.20\,\mathrm{pC/m^2}}.
+\]
+\excheck 原书书末给的 $-0.08\,\mathrm{nC/m^3}$ 与 $2\,\mathrm{pC/m^2}$ 分别比直接代入公式大10倍；本稿按题面 $B=10$mT 复算，记录为待核对底本数值问题。
+
+\electroinductionproblem{362}{145}
+非相对论点电荷 $q$ 以恒定速度 $\bm v$ 运动。利用场变换公式求其在相对位置矢量为 $\bm r$ 的观察点产生的磁场。
+\exsolution
+在电荷静止系中只有库仑电场
+$\bm E_0=q\bm r/(4\pi\varepsilon_0r^3)$、$\bm B_0=0$。
+将静止系向实验室逆变换，在 $v\ll c$ 的一阶下
+$\bm B\simeq\bm v\times\bm E_0/c^2$。
+由 $1/(\varepsilon_0c^2)=\mu_0$，得到
+\[
+\boxed{\bm B(\bm r)=
+\frac{\mu_0q}{4\pi}\frac{\bm v\times\bm r}{r^3}}.
+\]
+\excheck 与第354题的 $\bm B=\mu_0\bm H$ 一致，且沿运动方向的观察点磁场为零。
+
+\electroinductionproblem{363}{145--146}
+利用电磁场洛伦兹变换说明：若惯性系 K 中只有电场或只有磁场，则在任一与 K 作非平行匀速相对运动的惯性系 K' 中，通常同时出现相互垂直的电场和磁场。
+\exsolution
+先设 K 中只有电场 $\bm E$，$\bm B=0$。
+取相对速度 $\bm v$，平行电场分量不变，横向分量经因子 $\gamma$ 放大，另诱生
+$\bm B'=-\gamma\bm v\times\bm E/c^2$。
+因此 $\bm B'$ 同时垂直于 $\bm v$ 与 $\bm E$，且
+$\bm E'\cdot\bm B'=0$。
+若 K 中只有磁场 $\bm B$，
+则
+$\bm E'=\gamma\bm v\times\bm B$，
+$\bm B'_{\parallel}=\bm B_{\parallel}$、
+$\bm B'_\perp=\gamma\bm B_\perp$，
+同样有
+$\bm E'\cdot\bm B'=0$。
+\[
+\boxed{\bm E'\perp\bm B'\quad
+\text{（当两个场均非零时）}}.
+\]
+\excheck 若相对速度恰平行于原场，叉积为零，不出现新场；原题中“任一另一系”需理解为通常非平行的情形。
+
+\electroinductionproblem{364}{146}
+K 系中只有磁场
+$\bm B=b(y\bm i-x\bm j)/(x^2+y^2)$。
+K' 系以低速 $\bm v=v\bm k$ 沿 z 轴运动，两系 z 轴重合。求 K' 系电场及其场线形状。
+\exsolution
+令横向位置矢量
+$\bm r_\perp=x\bm i+y\bm j$，则
+$\bm B=-b\,\bm e_\varphi/r_\perp$。
+非相对论场变换
+$\bm E'=\bm v\times\bm B$ 给
+\[
+\bm E'=v\bm k\times
+\frac{b(y\bm i-x\bm j)}{x^2+y^2}
+=\boxed{\frac{vb(x\bm i+y\bm j)}{x^2+y^2}}.
+\]
+\excheck 场线在横截面内沿径向直线辐射或汇聚，模 $E'=|vb|/r_\perp$；原书答案的 PDF 抽取可能丢掉速度因子 $v$。
+
+\electroinductionproblem{365}{146}
+K 系中只有电场
+$\bm E=a(x\bm i+y\bm j)/(x^2+y^2)$，
+K' 系以非相对论速度 $\bm v=v\bm k$ 沿 z 轴运动。求 K' 系磁场及场线。
+\exsolution
+非相对论场变换
+$\bm B'=\bm B-\bm v\times\bm E/c^2$，
+且原系 $\bm B=0$，故
+\[
+\boxed{\bm B'=
+-\frac{av}{c^2}\frac{x\bm j-y\bm i}{x^2+y^2}
+=\frac{a}{c^2}\frac{\bm r_\perp\times\bm v}{r_\perp^2}}.
+\]
+\excheck 磁场线是围绕 z 轴的同心圆，模为 $|av|/(c^2r_\perp)$。
+
+\electroinductionproblem{366}{146}
+证明当两惯性系相对速度 $v\ll c$ 时，电磁场的精确洛伦兹变换简化为非相对论变换。
+\exsolution
+设 K' 相对 K 的速度为 $\bm v$，
+分解为平行/垂直 $\bm v$ 的分量。
+精确变换满足
+$\bm E'_{\parallel}=\bm E_\parallel$，
+$\bm E'_\perp=\gamma(\bm E_\perp+\bm v\times\bm B)$，
+$\bm B'_\parallel=\bm B_\parallel$，
+$\bm B'_\perp=\gamma(\bm B_\perp-\bm v\times\bm E/c^2)$。
+当 $v\ll c$，
+$\gamma=1+O(v^2/c^2)$，保留速度一阶项，
+\[
+\boxed{\bm E'\simeq\bm E+\bm v\times\bm B},
+\qquad
+\boxed{\bm B'\simeq\bm B-\frac{\bm v\times\bm E}{c^2}}.
+\]
+\excheck 这两个变换同时成立，且需统一规定 K' 相对 K 的速度方向；换成 K 相对 K' 时叉积项反号。
+
+\electroinductionproblem{367}{146}
+K 系只有强度 $E=8.0\,\mathrm{kV/m}$ 的均匀电场。K' 系以 $v=\beta c$、$\beta=0.60$ 相对运动，速度与 $\bm E$ 夹角 $\alpha=45^\circ$。求 (a) K' 电场强度及方向；(b) K' 磁感应强度。
+\exsolution
+$\gamma=(1-\beta^2)^{-1/2}=1.25$。
+$E'_\parallel=E\cos\alpha$，
+$E'_\perp=\gamma E\sin\alpha$，
+故
+\[
+\boxed{E'=E
+\sqrt{\frac{1-\beta^2\cos^2\alpha}{1-\beta^2}}
+\simeq9.1\,\mathrm{kV/m}}.
+\]
+相对速度方向为基准，其夹角
+\[
+\boxed{\tan\alpha'=\gamma\tan\alpha
+\quad\Rightarrow\quad
+\alpha'\simeq51^\circ}.
+\]
+原系没有磁场，K' 中
+$B'=\gamma vE\sin\alpha/c^2$，所以
+\[
+\boxed{B'=\frac{\beta E\sin\alpha}
+{c\sqrt{1-\beta^2}}
+\simeq1.4\times10^{-5}\,\mathrm T=14\,\mathrm{\mu T}}.
+\]
+\excheck 原系没有磁场不代表运动系也没有；电磁变换把横向电场与磁场联系起来。
+
+\electroinductionproblem{368}{146}
+将第367题的原系纯电场换成均匀磁场 $B=0.80\,\mathrm T$，其与相对速度夹角同为 $\alpha=45^\circ$，$\beta=0.60$。求 K' 的电场与磁场。
+\exsolution
+原系 $\bm E=0$。精确变换得
+$E'=\gamma vB\sin\alpha$：
+\[
+\boxed{E'=\frac{\beta c B\sin\alpha}
+{\sqrt{1-\beta^2}}
+\simeq1.27\times10^8\,\mathrm{V/m}}.
+\]
+磁场的平行分量不变，横向放大 $\gamma$，
+\[
+\boxed{B'=B
+\sqrt{\frac{1-\beta^2\cos^2\alpha}{1-\beta^2}}
+\simeq0.91\,\mathrm T}.
+\]
+$\tan\alpha'=\gamma\tan\alpha$，
+方向夹角约 $51^\circ$。
+\excheck 第368题书末对 $E'$ 的抽取有奇怪的“nV/m”字样，按 $\gamma vB$ 的量纲与数字，真实值必须为 $10^8$V/m 数量级，已列出明确推导。
+
+\electroinductionproblem{369}{146}
+利用电磁场洛伦兹变换证明两个不变量：
+(a) $\bm E\cdot\bm B$；
+(b) $E^2-c^2B^2$。
+\exsolution
+分解各场到平行相对速度方向与垂直方向。代入
+$\bm E'_\parallel=\bm E_\parallel$、
+$\bm B'_\parallel=\bm B_\parallel$、
+$\bm E'_\perp=\gamma(\bm E_\perp+\bm v\times\bm B)$、
+$\bm B'_\perp=\gamma(\bm B_\perp-\bm v\times\bm E/c^2)$。
+展开点积，运用
+$\bm a\cdot(\bm v\times\bm a)=0$
+及
+$(\bm v\times\bm B)\cdot(\bm v\times\bm E)
+=v^2\bm E_\perp\cdot\bm B_\perp$，
+各交叉项抵消，得到
+\[
+\boxed{\bm E'\cdot\bm B'=\bm E\cdot\bm B}.
+\]
+类似地展开两平方项，用
+$\gamma^2(1-v^2/c^2)=1$，
+得到
+\[
+\boxed{E'^2-c^2B'^2=E^2-c^2B^2}.
+\]
+\excheck 第二不变量的量纲是 $(\mathrm{V/m})^2$；必须给磁场项乘 $c^2$ 才能相减。
+
+\electroinductionproblem{370}{146}
+K 系中有互相垂直的均匀电场
+$E=40\,\mathrm{kV/m}$ 与磁场
+$B=0.20\,\mathrm{mT}$。
+求某惯性系 K' 中仅剩单一种场时的场强。
+\exsolution
+因 $\bm E\perp\bm B$，不变量
+$\bm E\cdot\bm B=0$。
+比较
+$E=4.0\times10^4\,\mathrm{V/m}$、
+$cB\simeq6.0\times10^4\,\mathrm{V/m}$，
+有 $c^2B^2>E^2$，
+故可选 K' 使 $\bm E'=0$，
+剩下纯磁场。
+由第二不变量
+$-c^2B'^2=E^2-c^2B^2$，
+得到
+\[
+\boxed{B'=\sqrt{B^2-(E/c)^2}
+=B\sqrt{1-(E/(cB))^2}
+\simeq0.15\,\mathrm{mT}}.
+\]
+\excheck 不是纯电场系，因为原系属于磁场占优场型。
+
+\electroinductionproblem{371}{146}
+点电荷 $q$ 以恒定相对论速度 $v=\beta c$ 沿直线运动。在某瞬间，观察点相对电荷的位置矢量 $\bm r$ 与速度夹角为 $\theta$。求该点电场矢量。
+\exsolution
+在电荷静止系只有径向库仑场
+$\bm E_0=q\bm r_0/(4\pi\varepsilon_0r_0^3)$。
+实验室系中沿速度方向的长度收缩，使同一瞬间
+$r_{0,\parallel}=\gamma r_\parallel$、
+$r_{0,\perp}=r_\perp$。
+电场分量满足
+$E_\parallel=E_{0,\parallel}$、
+$E_\perp=\gamma E_{0,\perp}$，
+最后合成仍沿实验室瞬间位置 $\hat{\bm r}$，模为
+\[
+\boxed{\bm E(\bm r)=
+\frac{q}{4\pi\varepsilon_0r^2}
+\frac{1-\beta^2}{(1-\beta^2\sin^2\theta)^{3/2}}
+\hat{\bm r}}.
+\]
+\excheck $\theta=0$ 时沿运动轴场比静止库仑场小 $1-\beta^2$；
+$\theta=\pi/2$ 时横向场增强 $\gamma$ 倍。
