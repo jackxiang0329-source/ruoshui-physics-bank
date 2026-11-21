@@ -5,8 +5,8 @@
 
 ## 真实进度（2026-11-21）
 
-- **本轮新增：第二篇原书第146—245题，共100题。**
-- **累计：633题——第一篇力学1—388题（全部），第二篇热力学与分子物理1—245题；按原书分篇独立编号。**
+- **本轮新增：100题——第二篇原书第246—257题（12题）、第三篇《电动力学》第1—88题（88题）。**
+- **累计：733题——第一篇力学1—388题（全部）、第二篇热学1—257题（全部）、第三篇电动力学1—88题；按原书三篇独立编号。**
 - 第 1.1 节“运动学”1—58 题已覆盖（全部）。
 - 第 1.2 节“动力学基本方程”59—117 题已覆盖（全部）。
 - 第 1.3 节“能量、动量与角动量守恒”118—199 题已覆盖（全部）。
@@ -22,7 +22,10 @@
 - 第 2.4 节“热力学第二定律与熵”第113—159题已覆盖（全部）。
 - 第 2.5 节“液体与毛细现象”第160—184题已覆盖（全部）。
 - 第 2.6 节“相变”第185—219题已覆盖（全部）。
-- 第 2.7 节“输运现象”第220—245题已覆盖（后续继续）。
+- 第 2.7 节“输运现象”第220—257题已覆盖（全部），原书第二篇至此结束。
+- **原书第三篇“电动力学”从第1题重新编号。**
+- 第 3.1 节“真空中的恒定电场”第1—53题已覆盖（全部）。
+- 第 3.2 节“静电场中的导体与电介质”第54—88题已覆盖（后续继续）。
 - 本项目尚未完成整书翻译或独立学术二校；任何“编译成功”仅说明技术排版通过。
 
 | 内容 | 文件 |
@@ -96,6 +99,14 @@
 | 第二篇2.7节220—229题 | [15-transport-220-229.tex](chapters/15-transport-220-229.tex) |
 | 第二篇2.7节230—239题 | [15-transport-230-239.tex](chapters/15-transport-230-239.tex) |
 | 第二篇2.7节240—245题 | [15-transport-240-245.tex](chapters/15-transport-240-245.tex) |
+| 第二篇2.7节246—257题 | [15-transport-246-257.tex](chapters/15-transport-246-257.tex) |
+| 第三篇3.1节1—12题 | [16-electrostatics-vacuum-001-012.tex](chapters/16-electrostatics-vacuum-001-012.tex) |
+| 第三篇3.1节13—27题 | [16-electrostatics-vacuum-013-027.tex](chapters/16-electrostatics-vacuum-013-027.tex) |
+| 第三篇3.1节28—40题 | [16-electrostatics-vacuum-028-040.tex](chapters/16-electrostatics-vacuum-028-040.tex) |
+| 第三篇3.1节41—53题 | [16-electrostatics-vacuum-041-053.tex](chapters/16-electrostatics-vacuum-041-053.tex) |
+| 第三篇3.2节54—65题 | [17-electro-conductors-054-065.tex](chapters/17-electro-conductors-054-065.tex) |
+| 第三篇3.2节66—77题 | [17-electro-conductors-066-077.tex](chapters/17-electro-conductors-066-077.tex) |
+| 第三篇3.2节78—88题 | [17-electro-conductors-078-088.tex](chapters/17-electro-conductors-078-088.tex) |
 | 源书勘误 | [errata.md](errata.md) |
 | 技术与学术质检记录 | [quality-check.md](quality-check.md) |
 | 结构完整性检查 | [check_sources.py](check_sources.py) |
@@ -118,4 +129,4 @@ GitHub Actions 工作流 .github/workflows/irodov-elegantbook.yml
 
 本目录放在 external_sources/，不得将翻译题目混入
 大学物理原创高难度题库 bank/ 的题数和质量门禁，也不修改它们的权威源文件。
-后续继续从原书第二篇第2.7节第246题起逐题补充；第一篇已覆盖1—388题。保留原书的分篇重新编号体系。
+后续继续从原书第三篇第3.2节第89题起逐题补充；第一篇已覆盖1—388题。保留原书的分篇重新编号体系。
