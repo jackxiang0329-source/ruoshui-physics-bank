@@ -423,11 +423,36 @@ OPTICS_CHAPTERS = [
     "27-optics-photometry-026-035.tex",
     "27-optics-photometry-036-045.tex",
     "27-optics-photometry-046-057.tex",
+    "27-optics-photometry-058-063.tex",
 ]
 OPTICS_RANGES = [
     range(1, 13), range(13, 26), range(26, 36),
-    range(36, 46), range(46, 58),
+    range(36, 46), range(46, 58), range(58, 64),
 ]
+INTERFERENCE_CHAPTERS = [
+    "28-optics-interference-064-075.tex",
+    "28-optics-interference-076-086.tex",
+    "28-optics-interference-087-096.tex",
+]
+INTERFERENCE_RANGES = [
+    range(64, 76), range(76, 87), range(87, 97),
+]
+DIFFRACTION_CHAPTERS = [
+    "29-optics-diffraction-097-108.tex",
+    "29-optics-diffraction-109-118.tex",
+    "29-optics-diffraction-119-130.tex",
+    "29-optics-diffraction-131-142.tex",
+    "29-optics-diffraction-143-150.tex",
+    "29-optics-diffraction-151-156.tex",
+]
+DIFFRACTION_RANGES = [
+    range(97, 109), range(109, 119), range(119, 131),
+    range(131, 143), range(143, 151), range(151, 157),
+]
+POLARIZATION_CHAPTERS = [
+    "30-optics-polarization-157-157.tex",
+]
+POLARIZATION_RANGES = [range(157, 158)]
 
 part_three = []
 for macro, filenames, expected_ranges in [
@@ -524,37 +549,46 @@ if main.count(r"\section{电磁波与辐射") != 1:
     errors.append("Part IV §4.4 electromagnetic-waves section count is not one")
 
 part_five = []
-if r"\newcommand{\opticsproblem}" not in main:
-    errors.append("main.tex missing macro opticsproblem")
-for name, expected in zip(OPTICS_CHAPTERS, OPTICS_RANGES):
-    path = ROOT / "chapters" / name
-    if not path.exists():
-        errors.append(f"missing: {name}")
-        continue
-    content = path.read_text(encoding="utf-8")
-    ids = [int(x) for x in re.findall(r"\\opticsproblem\{(\d+)\}\{", content)]
-    want = list(expected)
-    part_five.extend(ids)
-    if ids != want:
-        errors.append(f"{name}: Part-V IDs {ids} != {want}")
-    for command in ("exsolution", "excheck"):
-        count = len(re.findall(r"\\" + command + r"\b", content))
-        if count != len(want):
-            errors.append(f"{name}: {command} count {count} != {len(want)}")
-    if content.count("{") != content.count("}"):
-        errors.append(f"{name}: TeX braces unbalanced")
-    if r"\input{chapters/" + path.stem + "}" not in main:
-        errors.append(f"main.tex missing chapter: {name}")
-if part_five != list(range(1, 58)):
-    errors.append("Part V independent numbering is not exactly 1..57")
+for macro, filenames, ranges in [
+    ("opticsproblem", OPTICS_CHAPTERS, OPTICS_RANGES),
+    ("interferenceproblem", INTERFERENCE_CHAPTERS, INTERFERENCE_RANGES),
+    ("diffractionproblem", DIFFRACTION_CHAPTERS, DIFFRACTION_RANGES),
+    ("polarizationproblem", POLARIZATION_CHAPTERS, POLARIZATION_RANGES),
+]:
+    if (r"\newcommand{" + chr(92) + macro + "}") not in main:
+        errors.append(f"main.tex missing macro {macro}")
+    for name, expected in zip(filenames, ranges):
+        path = ROOT / "chapters" / name
+        if not path.exists():
+            errors.append(f"missing: {name}")
+            continue
+        content = path.read_text(encoding="utf-8")
+        ids = [int(x) for x in re.findall(
+            r"\\" + macro + r"\{(\d+)\}\{", content)]
+        want = list(expected)
+        part_five.extend(ids)
+        if ids != want:
+            errors.append(f"{name}: Part-V original IDs {ids} != {want}")
+        for command in ("exsolution", "excheck"):
+            count = len(re.findall(r"\\" + command + r"\b", content))
+            if count != len(want):
+                errors.append(f"{name}: {command} count {count} != {len(want)}")
+        if content.count("{") != content.count("}"):
+            errors.append(f"{name}: TeX braces unbalanced")
+        if r"\input{chapters/" + path.stem + "}" not in main:
+            errors.append(f"main.tex missing chapter: {name}")
+if part_five != list(range(1, 158)):
+    errors.append("Part V independent numbering is not exactly 1..157")
 if main.count(r"\chapter{光学}") != 1:
     errors.append("Part V chapter count is not one")
-if main.count(r"\section{光度学与几何光学") != 1:
-    errors.append("Part V §5.1 section count is not one")
-
+for heading in (
+    "光度学与几何光学", "光的干涉", "光的衍射", "光的偏振",
+):
+    if main.count(r"\section{" + heading) != 1:
+        errors.append(f"Part V section missing or duplicated: {heading}")
 
 if errors:
     for e in errors:
         print("FAIL:", e, file=sys.stderr)
     sys.exit(1)
-print("PASS: 388 Part-I + 257 Part-II + 407 Part-III + 224 Part-IV + 57 Part-V = 1333 translated solved problems in 120 chapter files; all five independent numbering ranges verified")
+print("PASS: 388 Part-I + 257 Part-II + 407 Part-III + 224 Part-IV + 157 Part-V = 1433 translated solved problems in 131 chapter files; all five independent numbering ranges verified")
