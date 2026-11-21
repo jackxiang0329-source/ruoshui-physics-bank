@@ -1,0 +1,274 @@
+% Irodov supplied PDF pp.43--44, printed pp.34--35.
+% Gravitational shell theorem, self-energy, pressure, satellite phase recurrence.
+\exproblem{211}{34}
+质量为 $m$ 的质点位于均匀球体外，
+球体总质量 $M$、半径 $R$，
+质点距球心为 $r>R$。
+求：（a）引力相互作用势能；（b）球体施加于质点的引力。
+\exsolution
+先将球体分解为许多同心薄球壳。由球壳定理，
+壳外的引力势与把该壳全部质量集中在球心时相同。
+将所有壳的质量积分，球外的总引力势
+$\Phi(r)=-GM/r$（取无穷远为零）。
+因此
+\[
+\boxed{U(r)=m\Phi(r)=-\frac{GMm}{r}},
+\]
+而引力矢量由 $-\nabla U$ 给出：
+\[
+\boxed{\bm F(r)=-\frac{GMm}{r^3}\bm r},
+\qquad |\bm F|=\frac{GMm}{r^2}.
+\]
+\excheck 球体必须具有球对称密度分布；
+“球外等效质点”并不适用于任意非球形物体。
+
+\exproblem{212}{34}
+证明均匀薄球壳内部任意一点 $A$ 处的引力矢量为零。
+\exsolution
+设球壳半径 $R$、总质量 $M$，
+内部考察点距壳心为 $r<R$。
+壳面质量密度为 $\sigma=M/(4\pi R^2)$。
+按以球心为极点的极角 $\theta$ 分环，
+环质量
+$\mathrm dM=2\pi R^2\sigma\sin\theta\,\mathrm d\theta$，
+该环上每个质量元到 $A$ 的距离
+$d=\sqrt{R^2+r^2-2Rr\cos\theta}$。
+引力势直接积分为
+\[
+\Phi(r)=-G\int\frac{\mathrm dM}{d}
+=-\frac{GM}{2}\int_0^\pi
+\frac{\sin\theta\,\mathrm d\theta}
+{\sqrt{R^2+r^2-2Rr\cos\theta}}.
+\]
+令 $u=R^2+r^2-2Rr\cos\theta$，积分得
+\[
+\Phi(r)=-\frac{GM}{2Rr}
+\bigl[(R+r)-|R-r|\bigr].
+\]
+因 $r<R$，有 $|R-r|=R-r$，
+所以 $\Phi(r)=-GM/R$ 为常数，
+\[
+\boxed{\bm g=-\nabla\Phi=\bm0\qquad(r<R)}.
+\]
+\excheck 球壳内势不等于零，而是常数；
+“力为零”来自势的空间梯度为零。
+
+\exproblem{213}{34--35}
+质量为 $m$ 的粒子从一个均匀实心半球
+平底面的圆心处被移到无穷远。
+半球质量为 $M$、半径 $R$。
+求\emph{半球引力}在此过程中做的功。
+\exsolution
+将同样密度的两个半球拼成质量 $2M$ 的均匀完整球，
+原位置正好处于该球的中心。
+完整球在中心的引力势为
+$\Phi_{\rm full}(0)=-3G(2M)/(2R)=-3GM/R$。
+上下两个相同半球对该点势的贡献相等，
+因此半球在平底面圆心处产生的势为
+$\Phi_{\rm hemi}=-3GM/(2R)$。
+初始势能 $U_i=m\Phi_{\rm hemi}$，无穷远 $U_f=0$。
+保守引力做功为势能减少：
+\[
+\boxed{W_g=U_i-U_f=-\frac{3GMm}{2R}}.
+\]
+\excheck 将粒子搬到无穷远时外力须做正功，
+但题目所问的是\emph{引力本身做功}，故答案为负。
+
+\exproblem{214}{35}
+质量为 $M$、半径为 $R$ 的均匀实心球，
+求球心距离 $r$ 处引力场强矢量 $\bm g(r)$
+及以无穷远为零点的引力势 $\Phi(r)$，
+分球内、球外给出，并说明随 $r$ 的图形变化。
+\exsolution
+由球壳定理，半径 $r<R$ 内部包含的质量
+$M(r)=M r^3/R^3$，
+故球内场强
+$\bm g=-GM\bm r/R^3$。
+球外等效为中心质点，得到
+\[
+\boxed{\bm g(\bm r)=
+\begin{cases}
+-\dfrac{GM}{R^3}\bm r,&0\le r\le R,\\[4pt]
+-\dfrac{GM}{r^3}\bm r,&r\ge R .
+\end{cases}}
+\]
+球外势为 $\Phi=-GM/r$。
+球内利用
+$\Phi(r)=\Phi(R)-\int_R^r g_s(s)\,\mathrm ds$，
+其中带符号径向场强 $g_s(s)=-GMs/R^3$，可得
+\[
+\boxed{\Phi(r)=
+\begin{cases}
+-\dfrac{GM}{2R}\left(3-\dfrac{r^2}{R^2}\right),
+ &0\le r\le R,\\[4pt]
+-\dfrac{GM}{r},&r\ge R .
+\end{cases}}
+\]
+\excheck $r=R$ 时场强、势均连续；
+场强模从球心零线性增长到表面 $GM/R^2$，随后
+按 $r^{-2}$ 减小；势从中心 $-3GM/(2R)$ 单调升至零。
+
+\exproblem{215}{35}
+均匀大球密度为 $\rho$，
+其中挖去一个球形空腔，空腔球心
+相对原大球球心的矢量为 $\bm \ell$。
+求空腔内部任一点的引力场强。
+\exsolution
+使用叠加法：有空腔的球等于完整的密度为 $\rho$
+的大球加上一个空腔位置处密度为 $-\rho$ 的虚拟小球。
+选原大球球心为坐标原点，空腔内一点位置为 $\bm r$。
+完整球在该点的场强为
+$-(4\pi G\rho/3)\bm r$。
+虚拟小球在该点的场强为
+$+(4\pi G\rho/3)(\bm r-\bm\ell)$。
+相加得
+\[
+\boxed{\bm g_{\rm cavity}=-\frac{4\pi G\rho}{3}\bm\ell}.
+\]
+\excheck 场强与空腔内考察点的具体位置无关，是均匀场；
+若空腔与大球同心（$\bm\ell=\bm0$），场强为零。
+
+\exproblem{216}{35}
+质量 $M$、半径 $R$ 的均匀自引力球体，
+求自引力压缩造成的内部压强 $p(r)$，
+并把地球理想化成均匀球估算地心压强。
+\exsolution
+设密度 $\rho=3M/(4\pi R^3)$。
+球内引力场强模为
+$g(r)=GM r/R^3=(4\pi/3)G\rho r$。
+静力学平衡微分方程
+$\mathrm dp/\mathrm dr=-\rho g(r)$，
+表面边界条件 $p(R)=0$。积分得
+\[
+p(r)=\int_r^R\frac{4\pi}{3}G\rho^2s\,\mathrm ds
+=\frac{2\pi}{3}G\rho^2(R^2-r^2),
+\]
+亦即
+\[
+\boxed{p(r)=\frac{3GM^2}{8\pi R^4}
+\left(1-\frac{r^2}{R^2}\right)}.
+\]
+地心 $p(0)=3GM^2/(8\pi R^4)$。
+用地球 $M\simeq5.97\times10^{24}\,\mathrm{kg}$、
+$R\simeq6.37\times10^6\,\mathrm m$，
+得约 $1.7\times10^{11}\,\mathrm{Pa}$
+（约 $1.7\times10^6$ 个标准大气压）。
+\excheck 这只是\emph{均匀密度}地球的估值；
+实际地球密度随深度变化，不应将此直接称为真实地心压强。
+
+\exproblem{217}{35}
+求构成以下物体的全部质量之间的\emph{自身引力势能}：
+（a）质量 $m$、半径 $R$ 的均匀薄球壳；
+（b）质量 $m$、半径 $R$ 的均匀实心球。
+\exsolution
+（a）均匀球壳面上的引力势为
+$\Phi_{\rm shell}=-Gm/R$。
+将球壳微元逐一相互作用的势能总和写为
+$U=\tfrac12\int\Phi\,\mathrm dm$，
+系数 $1/2$ 避免每一对质量元重复计算：
+\[
+\boxed{U_{\rm shell}=-\frac{Gm^2}{2R}}.
+\]
+（b）把均匀实心球由半径 $r$ 的内球逐层组装。
+密度 $\rho=3m/(4\pi R^3)$，
+已装好的内球质量 $M(r)=(4\pi/3)\rho r^3$，
+新外壳质量 $\mathrm dm=4\pi\rho r^2\,\mathrm dr$。
+装配微元势能
+\[
+\mathrm dU=-\frac{GM(r)\,\mathrm dm}{r}
+=-\frac{16\pi^2G\rho^2}{3}r^4\,\mathrm dr.
+\]
+积分至 $R$ 并代入密度得
+\[
+\boxed{U_{\rm solid}=-\frac{3Gm^2}{5R}}.
+\]
+\excheck 两项都为负；均匀实心球相对相同质量和外半径
+的薄壳更紧密，因此自身引力势能更负。
+
+\exproblem{218}{35}
+两颗地球卫星在同一平面内分别沿半径
+$r_1=7000\,\mathrm{km}$ 和
+$r_2=6930\,\mathrm{km}$ 的圆轨道运动。
+求它们周期性达到\emph{最小相互距离}的相邻时间间隔，
+讨论同向和逆向运行。
+\exsolution
+取地球引力参数 $\mu=GM_E$。
+两颗卫星的角速度大小分别为
+$\omega_1=\sqrt{\mu/r_1^3}$、
+$\omega_2=\sqrt{\mu/r_2^3}$，且 $\omega_2>\omega_1$。
+当两卫星从地心看角位置相同时，二者相距
+$|r_1-r_2|$，即最小距离。
+若同向运行，角位置之差的增长速率为
+$\omega_2-\omega_1$，故
+\[
+\boxed{\Delta t_{\rm same}=
+\frac{2\pi}{\omega_2-\omega_1}
+\simeq4.44\,\mathrm d}.
+\]
+若两卫星逆向运行，相对角速度为
+$\omega_1+\omega_2$，故
+\[
+\boxed{\Delta t_{\rm opposite}=
+\frac{2\pi}{\omega_1+\omega_2}
+\simeq0.803\,\mathrm h}.
+\]
+\excheck 原题未指定两卫星旋转方向，因此必须报告两种情况。
+数值取 $\mu\simeq3.986\times10^{14}\,\mathrm{m^3/s^2}$；
+均为最小距离事件的\emph{重复间隔}，并非各自公转周期。
+
+\exproblem{219}{35}
+比较三种加速度的大小之比：
+$g_1$ 为地球表面地球重力所致加速度，
+$g_2$ 为地球赤道自转的离心惯性加速度，
+$g_3$ 为太阳\emph{直接}对地面物体的万有引力加速度。
+\exsolution
+取地球表面重力
+$g_1\simeq9.81\,\mathrm{m/s^2}$；
+赤道处自转离心加速度
+$g_2=\Omega_E^2R_E$，
+其中 $\Omega_E\simeq7.292\times10^{-5}\,\mathrm{s^{-1}}$、
+$R_E\simeq6.37\times10^6\,\mathrm m$，
+得到 $g_2\simeq0.0339\,\mathrm{m/s^2}$。
+太阳直接引力加速度为
+\[
+g_3=\frac{GM_\odot}{D^2}
+\simeq\frac{1.327\times10^{20}}
+{(1.496\times10^{11})^2}
+\simeq5.93\times10^{-3}\,\mathrm{m/s^2},
+\]
+其中 $D$ 为日地距离。因此
+\[
+\boxed{g_1:g_2:g_3
+\simeq1:0.00345:0.000605}.
+\]
+\excheck $g_3$ 是\emph{太阳的直接引力加速度}，
+并非潮汐差分加速度；若误用
+$GM_\odot R_E/D^3$ 会低估约 $D/R_E$ 倍。
+
+\exproblem{220}{35}
+沿地球极点上空（忽略地球自转影响），
+求自由落体加速度比地面值分别减少
+$1\%$ 和减少一半时的高度。
+\exsolution
+设地球半径为 $R_E$，极点地面附近
+$g_0=GM_E/R_E^2$。离地高度为 $h$ 时
+\[
+\frac{g(h)}{g_0}
+=\left(\frac{R_E}{R_E+h}\right)^2.
+\]
+若加速度降为原来的比例 $q$，
+解出高度的通式
+\[
+\boxed{h(q)=R_E(q^{-1/2}-1)}.
+\]
+对 $q=0.99$ 与 $q=0.50$，分别有
+\[
+\boxed{h_{1\%}=R_E(1/\sqrt{0.99}-1)
+\simeq32\,\mathrm{km}},
+\]
+\[
+\boxed{h_{1/2}=R_E(\sqrt2-1)
+\simeq2.64\times10^3\,\mathrm{km}}.
+\]
+\excheck 题目所给“减少一半”指剩余加速度为 $g_0/2$，
+而不是减少 $50\%$ 的高度；地球应近似为球对称。
