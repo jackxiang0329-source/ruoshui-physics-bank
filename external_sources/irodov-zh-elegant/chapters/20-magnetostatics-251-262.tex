@@ -1,0 +1,353 @@
+% Irodov Part III §3.5 251--262, user PDF pp.137--139,
+% printed pp.128--130; figures 3.68--3.73 visually reviewed.
+\electromagproblem{251}{128}
+图3.68中细导线通电流 $I=8.0\,\mathrm A$。
+求图示点 $O$ 处单位长度导线所受磁力模与方向：
+(a) 半圆弯曲半径 $R=10\,\mathrm{cm}$；
+(b) U 形两长平行段距离 $\ell=20\,\mathrm{cm}$。
+\exsolution
+局部导线受力每单位长度
+$\bm f=I\,\bm t\times\bm B_{\rm others}$。
+(a) 半圆弧在其中心产生
+$B_{\rm arc}=\mu_0I/(4R)$，
+直径段中心处的其他平直部分磁场不贡献，
+故
+\[
+\boxed{f_a=\frac{\mu_0I^2}{4R}
+\simeq0.20\,\mathrm{mN/m}}.
+\]
+(b) 图中点 $O$ 在左竖直连接段上，
+每条半无限水平长直线距离它 $\ell/2$，
+两条电流的磁场方向在该位置相加：
+$B=2\mu_0I/[4\pi(\ell/2)]
+=\mu_0I/(\pi\ell)$，
+所以
+\[
+\boxed{f_b=\frac{\mu_0I^2}{\pi\ell}
+\simeq0.13\,\mathrm{mN/m}}.
+\]
+\excheck 对每段导线应用
+$I\mathrm d\bm\ell\times\bm B$，
+按图中的电流箭头确定力朝向弯曲内部或外部；
+图示 $O$ 不等于整个回路的质心。
+
+\electromagproblem{252}{128}
+单层紧密铜线线圈半径 $R=30\,\mathrm{mm}$，
+导线直径 $d=0.10\,\mathrm{mm}$，
+电流 $I=10\,\mathrm{mA}$，
+线圈轴与均匀外磁场方向重合。
+估算使绕组拉断的外部磁感应强度。
+\exsolution
+圆环上的磁力每单位导线长度为
+$f=IB$，近似沿径向向外。
+圆环微小弧元两端张力的径向合力
+$T\,\mathrm d\theta$
+与外力
+$IBR\,\mathrm d\theta$ 平衡，
+所以张力 $T=IBR$。
+若铜线的极限抗拉应力为 $\sigma_m$，
+允许最大张力
+$T_{\max}=\sigma_m A=
+\sigma_m\pi d^2/4$。
+断裂条件：
+\[
+\boxed{B_{\rm rupture}=
+\frac{\pi d^2\sigma_m}{4RI}}.
+\]
+以铜线强度数量级
+$\sigma_m\sim3\times10^8\,\mathrm{Pa}$
+估算：
+$\boxed{B_{\rm rupture}\sim8\times10^3\,\mathrm T
+=8\,\mathrm{kT}}$。
+\excheck 题面未给具体铜材的抗拉强度，
+因此数值必须注明采用的材料强度假设；
+理想估算的8 kT远超普通实验室磁场。
+
+\electromagproblem{253}{128}
+截面积 $S=2.5\,\mathrm{mm^2}$
+的铜线弯成正方形三条边，
+可绕水平轴 OO' 转动
+（图3.69）。外磁场竖直，
+通电流 $I=16\,\mathrm A$ 后偏转
+$\theta=20^\circ$。
+求磁场模。
+\exsolution
+设正方形边长为 $a$，
+铜密度为 $\rho_{\rm Cu}$。
+图示三条边的重力矩由重心几何求得：
+\[
+\tau_g=2\rho_{\rm Cu}Sa^2g\sin\theta.
+\]
+电流在底部与两侧形成的有效磁力矩为
+$\tau_B=Ia^2B\cos\theta$。
+平衡：
+$Ia^2B\cos\theta
+=2\rho_{\rm Cu}Sa^2g\sin\theta$。
+因此
+\[
+\boxed{B=\frac{2\rho_{\rm Cu}gS}{I}\tan\theta}.
+\]
+取 $\rho_{\rm Cu}\simeq8.9\times10^3
+\,\mathrm{kg/m^3}$，
+\[
+\boxed{B\simeq1.0\times10^{-2}\,\mathrm T
+=10\,\mathrm{mT}}.
+\]
+\excheck 两边含 $a^2$ 的矩相消，
+故题目不需给正方形边长。
+
+\electromagproblem{254}{128--129}
+图3.70：$N=200$ 匝小线圈
+位于磁极间，面积
+$S=1.0\,\mathrm{cm^2}$，
+以一端悬于天平横杆上，
+力臂 $\ell=30\,\mathrm{cm}$。
+线圈电流
+$I=22\,\mathrm{mA}$。
+追加配重
+$\Delta m=60\,\mathrm{mg}$
+才恢复平衡。
+求该处磁感应强度。
+\exsolution
+线圈磁矩
+$p_m=NIS$。
+外磁场对它产生力矩模
+$\tau_B=NISB$（图中转角使磁矩与场方向垂直）。
+追加配重产生的重力矩
+$\tau_g=\Delta mg\ell$。
+平衡条件
+$NISB=\Delta mg\ell$，
+于是
+\[
+\boxed{B=\frac{\Delta mg\ell}{NIS}}.
+\]
+SI 单位：
+$\Delta m=6.0\times10^{-5}\,\mathrm{kg}$，
+$S=10^{-4}\,\mathrm{m^2}$，
+\[
+\boxed{B\simeq0.40\,\mathrm T}.
+\]
+\excheck 重量单位是毫克 mg，
+不是克 g；换算错误会放大1000倍。
+
+\electromagproblem{255}{129}
+边长 $a=8.0\,\mathrm{cm}$ 的正方形电流框
+$I=0.90\,\mathrm A$，
+与无限长直导线电流
+$I_0=5.0\,\mathrm A$ 同处平面。
+电流框的转轴与长导线平行，
+轴距是 $\eta a$，$\eta=1.5$。
+求 (a) 合安培力；(b) 恒定电流下
+绕该轴翻转 $180^\circ$ 的外功。
+\exsolution
+长线在距线 $r$ 处
+$B(r)=\mu_0I_0/(2\pi r)$。
+电流框的两条长边距直线分别为
+$r_1=a(\eta-\tfrac12)$、
+$r_2=a(\eta+\tfrac12)$。
+两边受力方向相反，
+其差为
+\[
+F=Ia[B(r_1)-B(r_2)]
+=\frac{\mu_0II_0a}{2\pi}
+\left(\frac1{r_1}-\frac1{r_2}\right),
+\]
+整理：
+\[
+\boxed{F=\frac{2\mu_0II_0}{\pi(4\eta^2-1)}
+\simeq0.4\,\mathrm{\mu N}}.
+\]
+(b) 在恒定电流源约束下
+两回路磁相互作用势的改变等于
+需要的机械外功。
+由电流框两长边位置积分长线磁场的磁通，
+原平面构型与翻面构型的互感符号相反，
+得到
+\[
+\boxed{A=\frac{\mu_0aII_0}{\pi}
+\ln\frac{2\eta+1}{2\eta-1}
+\simeq0.10\,\mathrm{\mu J}}.
+\]
+\excheck 本题要求机械外功而且\emph{电流恒定}；
+不能把固定电流源提供的能量交换忽略。
+
+\electromagproblem{256}{129}
+两根很长平行导线半径为 $r$，
+轴间距是 $\eta r$，$\eta=20$，
+两导线电阻可忽略，
+一端由外电阻 $R$ 连接，
+另一端接直流电压源。
+求两导线之间电磁合力为零时的 $R$。
+\exsolution
+两线带反号线电荷 $\pm\lambda$，
+其横向静电斥力每单位长为
+$F_e/L=\lambda^2/(2\pi\varepsilon_0d)$，
+其中 $d=\eta r$。
+两线中电流反向，
+磁相互作用力方向也需依图中回路判定；
+在比较\emph{相反方向的两种横向力}
+时，磁力模
+$F_m/L=\mu_0I^2/(2\pi d)$。
+合力为零意味着
+$\lambda/I=\sqrt{\mu_0\varepsilon_0}$。
+两线每单位长电容
+$C'\simeq\pi\varepsilon_0/\ln\eta$，
+电压 $V=IR$，
+$\lambda=C'V=C'IR$。
+于是
+\[
+\boxed{R=
+\frac{\sqrt{\mu_0\varepsilon_0}}{C'}
+\simeq\frac{\ln\eta}{\pi}
+\sqrt{\frac{\mu_0}{\varepsilon_0}}}.
+\]
+代 $\sqrt{\mu_0/\varepsilon_0}
+\simeq377\,\Omega$，
+\[
+\boxed{R\simeq0.36\,\mathrm{k\Omega}}.
+\]
+\excheck 零合力前提要求两相互作用
+方向相反；若导线电流实际反向且静电也为吸引，
+则不可能通过增大 $R$ 使总力为零。
+必须按完整图示与电极极性核对该物理条件。
+
+\electromagproblem{257}{129}
+图3.61中的薄半圆截面长导体
+通纵向电流 $I$，
+另有中心细直线导体
+沿\emph{相反方向}通相同电流。
+求两导体间的单位长度磁相互作用力。
+\exsolution
+第225题已得到半圆电流截面
+在中心的磁场模
+$B_O=\mu_0I/(\pi^2R)$。
+中心细线单位长度的磁力
+$f=I B_O$，故
+\[
+\boxed{\frac FL=\frac{\mu_0I^2}{\pi^2R}}.
+\]
+\excheck 力方向沿半圆形截面对称轴，
+由电流方向确定是朝半圆弧还是背离弧；
+此处求的是模。
+
+\electromagproblem{258}{129}
+图3.71：两根无限长平行导体
+通电流 $I_1,I_2$，
+第一根为细线，第二根为宽 $b$
+的均匀电流带，
+最近距离为 $a$。
+求两者单位长度磁相互作用力。
+\exsolution
+把宽带从近边缘 $x=a$
+到远边缘 $x=a+b$
+分割为并联细电流线，
+每个宽度 $\mathrm dx$
+中的电流
+$\mathrm dI_2=(I_2/b)\mathrm dx$。
+细线与其中一段的单位长度磁力
+$\mathrm df/L=
+\mu_0I_1\,\mathrm dI_2/(2\pi x)$。
+积分：
+\[
+\frac FL=
+\frac{\mu_0I_1I_2}{2\pi b}
+\int_a^{a+b}\frac{\mathrm dx}{x}
+=\boxed{\frac{\mu_0I_1I_2}{2\pi b}
+\ln(1+b/a)}.
+\]
+\excheck 若 $b\ll a$，
+对数约为 $b/a$，
+恢复两条相距 $a$ 的细线公式。
+
+\electromagproblem{259}{129}
+两张无限平行电流片
+形成仅在两片之间存在的均匀磁场 $B$，
+片外磁场为零。求每片所受单位面积磁力。
+\exsolution
+对某一片，磁场的法向 Maxwell
+应力差与两侧磁能密度差有关。
+磁能密度 $w_m=B^2/(2\mu_0)$。
+片内侧磁场为 $B$、片外为0，
+故片面所受磁压力模
+\[
+\boxed{p_m=\frac FA=\frac{B^2}{2\mu_0}}.
+\]
+也可先求每片表面电流密度
+$K=B/\mu_0$，
+再取\emph{另一片}产生的局部场 $B/2$，
+得 $p_m=K(B/2)$。
+\excheck 计算自受力时不可直接
+用本片两侧磁场的总值作用自身，
+否则会多一倍。
+
+\electromagproblem{260}{129--130}
+图3.72(a)、(b)、(c)：
+无限大电流片放在外加均匀磁场中，
+其两侧总磁感应强度分别为
+$B_1,B_2$。
+求单位面积磁力及图示电流方向。
+\exsolution
+片面左、右两侧的磁压力分别为
+$B_1^2/(2\mu_0)$、
+$B_2^2/(2\mu_0)$。
+因此沿从左侧指向右侧的正向，
+单位面积合力为
+\[
+\boxed{\frac{F_x}{A}=
+\frac{B_1^2-B_2^2}{2\mu_0}}.
+\]
+若图示 $B_1>B_2$，合力朝右。
+电流方向由磁场切向跳变
+$\bm K=\bm n\times
+(\bm B_{\rm right}-\bm B_{\rm left})/\mu_0$
+推定；图3.72的三组箭头对应
+\emph{指向纸内}的表面电流。
+\excheck 方向须结合图3.72的
+\emph{磁场箭头}，
+不能只由场强正数 $B_1,B_2$
+决定表面电流的有向符号。
+
+\electromagproblem{261}{130}
+图3.73电磁泵中，熔融金属
+在管道截面积近似为边长
+$a=2.0\,\mathrm{cm}$ 的方形区域流动。
+跨管道通电流 $I=100\,\mathrm A$，
+磁场 $B=0.10\,\mathrm T$
+垂直电流和管轴。求泵产生的表压。
+\exsolution
+电流在磁场中的总安培力
+$F=IBa$，沿管道轴向推动金属。
+若管截面积为 $a^2$，
+泵的表压增量由
+$\Delta p\,a^2=F$ 得
+\[
+\boxed{\Delta p=\frac{IB}{a}}.
+\]
+代入：
+\[
+\boxed{\Delta p=
+\frac{(100)(0.10)}{0.020}
+=500\,\mathrm{Pa}=0.50\,\mathrm{kPa}}.
+\]
+\excheck 表压正号方向取沿电磁泵
+实际推动金属的方向。
+
+\electromagproblem{262}{130}
+长薄壁圆柱导体半径为 $R$，
+沿轴向通总电流 $I$。
+求导体圆柱壁受到的磁压力。
+\exsolution
+无限长薄壁圆柱内磁场为零，
+外部磁场
+$B_{\rm out}=\mu_0I/(2\pi R)$。
+圆柱壁两侧磁能密度分别为
+0 与
+$B_{\rm out}^2/(2\mu_0)$。
+磁压力（箍缩向内）的模
+\[
+\boxed{p_m=\frac{B_{\rm out}^2}{2\mu_0}
+=\frac{\mu_0I^2}{8\pi^2R^2}}.
+\]
+\excheck 电流方向不影响压力大小，
+因为压力正比于 $I^2$；
+磁压力沿径向指向圆柱轴。
