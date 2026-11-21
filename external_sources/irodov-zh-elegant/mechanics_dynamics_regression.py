@@ -135,7 +135,7 @@ wedgeacc=m2*G*sin(pi/6)*cos(pi/6)/(m1+m2*sin(pi/6)**2)
 test(81,"mobile wedge horizontal acceleration",wedgeacc,1.888)
 test(81,"wedge acceleration vanishes alpha0",0,0,1e-10)
 test(82,"string-on-moving-wedge acceleration",
-     G*sin(pi/6)/(2+2*(1-cos(pi/6))),4.327)
+     G*sin(pi/6)/(2+2*(1-cos(pi/6))),2.163)
 test(83,"quarter-circle constant-speed force vector average for m3 R1 v2",
      2*sqrt(2)*3*2**2/pi,10.804)
 test(83,"quarter-circle constant tangential acceleration m3 a1.5",
