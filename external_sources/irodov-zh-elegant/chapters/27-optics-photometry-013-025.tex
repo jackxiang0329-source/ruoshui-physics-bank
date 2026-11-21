@@ -1,0 +1,218 @@
+% Original Irodov Part V §5.1 problems 13--25, source printed pp.189--190.
+\opticsproblem{13}{189}
+用入射光线方向单位矢量 $\bm e$、反射光线方向 $\bm e'$ 及镜面外法线单位矢量 $\bm n$，写出反射定律的矢量形式。
+\exsolution
+分解入射矢量为切向与法向分量：
+$\bm e=\bm e_t+(\bm e\cdot\bm n)\bm n$。
+反射时切向保持、法向反号，故
+\[
+\boxed{\bm e'=\bm e-2(\bm e\cdot\bm n)\bm n}.
+\]
+\excheck $|\bm e'|=1$、$\bm e'\cdot\bm n=-\bm e\cdot\bm n$，分别验证速度方向模不变、入射与反射角相同。
+
+\opticsproblem{14}{189}
+证明依次在三个相互垂直的平面镜上反射后，出射光线方向恰与入射方向相反。
+\exsolution
+取三个镜法线 $\bm n_1,\bm n_2,\bm n_3$ 为正交单位基。
+任一入射单位方向
+$\bm e=\sum_{i=1}^3 e_i\bm n_i$，
+在法线 $\bm n_i$ 的镜面反射会将对应分量 $e_i$ 变号，其他两个分量保持。
+三次反射分别对三个分量变号，因此
+\[
+\boxed{\bm e_{\rm out}=-\bm e_{\rm in}}.
+\]
+\excheck 该结论不依赖入射方向，前提是光线依次确实击中三个镜面。
+
+\opticsproblem{15}{189--190}
+光从空气射向水面，求反射光线与折射光线互相垂直时的入射角。
+\exsolution
+两光线垂直意味着入射角 $\theta_B$ 与折射角 $r$ 满足
+$\theta_B+r=90^\circ$。
+斯涅尔定律
+$\sin\theta_B=n\sin r=n\cos\theta_B$，
+故
+\[
+\boxed{\theta_B=\arctan n\simeq53^\circ}
+\]
+（水折射率约 $n=1.33$）。
+\excheck 正是布儒斯特角几何条件。
+
+\opticsproblem{16}{190}
+光从高折射率介质1射向介质2，
+临界角为 $\theta_c$、反射与折射光垂直的入射角为 $\theta_B$，
+已知 $\sin\theta_c/\sin\theta_B=\eta=1.28$，求 $n_1/n_2$。
+\exsolution
+记 $m=n_2/n_1<1$。全反射临界角
+$\sin\theta_c=m$；布儒斯特角
+$\tan\theta_B=m$，故
+$\sin\theta_B=m/\sqrt{1+m^2}$。
+于是 $\eta=\sqrt{1+m^2}$，得
+\[
+\boxed{\frac{n_1}{n_2}=\frac1{\sqrt{\eta^2-1}}
+\simeq1.25}.
+\]
+\excheck 结果大于1，符合介质1光学更密；书末纯文本可能漏了根号。
+
+\opticsproblem{17}{190}
+光以入射角 $\theta=60^\circ$ 穿过厚
+$d=6.0$cm 的平行玻璃板，求透射光的横向侧移。按普通玻璃折射率 $n=1.50$ 计算。
+\exsolution
+折射角 $r$ 满足 $\sin r=\sin\theta/n$。
+侧移几何式
+$\delta=d\sin(\theta-r)/\cos r$，
+消元得
+\[
+\boxed{\delta=d\sin\theta
+\left[1-\frac{\cos\theta}{\sqrt{n^2-\sin^2\theta}}\right]
+\simeq3.1\,\mathrm{cm}}.
+\]
+\excheck 出射与入射光线平行；原题未单独给 $n$，数值以普通玻璃 $n\simeq1.5$ 为前提。
+
+\opticsproblem{18}{190}
+池底石头在水下真实深度为 $h$，
+在空气中沿与法线夹角 $\theta$ 的方向观察。
+求子午面内近轴光束形成的表观像深度。
+\exsolution
+令水折射率为 $n$，折射定律
+$n\sin r=\sin\theta$。
+主光线水面交点的横向位置
+$x(\theta)=h\tan r=h\sin\theta/\sqrt{n^2-\sin^2\theta}$。
+对邻近出射方向求导，
+$\mathrm dx/\mathrm d\theta
+=hn^2\cos\theta/(n^2-\sin^2\theta)^{3/2}$。
+子午面小光束反向延长线交点深度
+$h'=\cos^2\theta\,\mathrm dx/\mathrm d\theta$：
+\[
+\boxed{h'=\frac{hn^2\cos^3\theta}
+{(n^2-\sin^2\theta)^{3/2}}}.
+\]
+\excheck $\theta\to0$ 时恢复 $h/n$；此处求的是小光束的子午像深度，而非单条光线的简单外推截距。
+
+\opticsproblem{19}{190}
+证明小顶角 $A$ 的棱镜在入射角亦很小时，偏折角一阶近似的模为 $(n-1)A$。
+\exsolution
+设第一面内外角 $i_1,r_1$，
+第二面内外角 $r_2,i_2$。
+几何 $r_1+r_2=A$，总偏折
+$\delta=i_1+i_2-A$。
+小角近似折射律给
+$i_1\simeq nr_1$、
+$i_2\simeq nr_2$，因而
+\[
+\boxed{|\delta|\simeq(n-1)A}.
+\]
+\excheck 原书取相反有向正角而写负号；
+偏折大小和入射角的一阶无关性不受此选择影响。
+
+\opticsproblem{20}{190}
+证明棱镜对称穿过光路的偏折角最小，并给出最小偏折公式。
+\exsolution
+顶角 $A$，棱镜内两折射角满足
+$r_1+r_2=A$；
+外部两角
+$i_j=\arcsin(n\sin r_j)$，
+偏折 $\delta=i_1+i_2-A$。
+在允许透射区间，
+$f(r)=\arcsin(n\sin r)$ 的二阶导数
+$f''(r)=n(n^2-1)\sin r/
+(1-n^2\sin^2r)^{3/2}\ge0$。
+凸性得
+$f(r_1)+f(r_2)\ge2f(A/2)$，
+因此最小在 $r_1=r_2=A/2$，
+有 $i_1=i_2=(A+\delta_{\min})/2$：
+\[
+\boxed{\sin\frac{\delta_{\min}+A}{2}
+=n\sin\frac A2}.
+\]
+\excheck 最小偏折对应入、出射角相等；必须存在两面都不全反射的实际传播光路。
+
+\opticsproblem{21}{190}
+某普通玻璃棱镜的最小偏折角恰等于顶角 $A$，求 $A$。
+\exsolution
+由第20题
+$\sin[(\delta_{\min}+A)/2]=n\sin(A/2)$，
+令 $\delta_{\min}=A$，
+$\sin A=n\sin(A/2)$。
+对于非零顶角，
+$2\cos(A/2)=n$，所以
+\[
+\boxed{A=2\arccos(n/2)\simeq83^\circ}
+\]
+（按普通玻璃 $n\simeq1.50$）。
+\excheck 原题未具体说明玻璃折射率，书末 $83^\circ$ 使用普通玻璃近似。
+
+\opticsproblem{22}{190}
+玻璃棱镜顶角 $A=60^\circ$，求偏折角的允许最小与最大值。采用普通玻璃 $n\simeq1.50$。
+\exsolution
+最小偏折：
+\[
+\delta_{\min}=2\arcsin[n\sin(A/2)]-A
+=2\arcsin(0.75)-60^\circ\simeq37^\circ.
+\]
+在掠入射界限 $i_1\to90^\circ$ 时，
+$r_1=\arcsin(1/n)$，
+$r_2=A-r_1$，
+$i_2=\arcsin(n\sin r_2)$，
+因此
+\[
+\boxed{\delta_{\max}
+=90^\circ+\arcsin[n\sin(A-\arcsin(1/n))]-A
+\simeq58^\circ}.
+\]
+\excheck 最大值对应极限入射光线，实际表面透射功率会受到菲涅耳反射影响。
+
+\opticsproblem{23}{190}
+顶角 $60^\circ$ 的棱镜在空气中的最小偏折角为 $37^\circ$。把棱镜浸入水中，求新的最小偏折角。
+\exsolution
+空气中玻璃折射率
+$n=\sin[(60^\circ+37^\circ)/2]/\sin30^\circ
+\simeq1.50$。
+水折射率取 $n_w\simeq1.33$；
+浸水后的\emph{相对}折射率为 $n/n_w$，
+所以
+\[
+\boxed{\delta_{w,\min}
+=2\arcsin\left[\frac n{n_w}\sin30^\circ\right]
+-60^\circ\simeq8.7^\circ}.
+\]
+\excheck 外介质改变必须将绝对折射率除以水折射率；直接照用空气中的 n 会高估偏折。
+
+\opticsproblem{24}{190}
+顶角 $A=60^\circ$ 的棱镜中两个单色分量折射率为 $n_1=1.515,n_2=1.520$。光路接近最小偏折，求出射角距。
+\exsolution
+最小偏折函数
+$\delta(n)=2\arcsin[n\sin(A/2)]-A$，
+微分：
+$\mathrm d\delta/\mathrm dn=
+2\sin(A/2)/\sqrt{1-n^2\sin^2(A/2)}$。
+以平均折射率 $\bar n\simeq1.518$、
+$\Delta n=0.005$ 计算：
+\[
+\boxed{\Delta\delta\simeq
+\frac{2\sin(A/2)\Delta n}
+{\sqrt{1-\bar n^2\sin^2(A/2)}}
+\simeq0.0077\,\mathrm{rad}\simeq0.44^\circ}.
+\]
+\excheck 将弧度换成角度后才能与书末0.44°比较。
+
+\opticsproblem{25}{190}
+利用费马原理推导平面界面处光的反射和折射定律。
+\exsolution
+取界面上的可变光路交点横坐标为 $x$，
+两段到源/目标的距离分别为 $r_1(x),r_2(x)$。
+透射光程
+$\mathcal L=n_1r_1+n_2r_2$，
+费马原理令
+$\mathrm d\mathcal L/\mathrm dx=0$。
+几何微分
+$\mathrm dr_1/\mathrm dx=\sin i$、
+$\mathrm dr_2/\mathrm dx=-\sin r$，故
+\[
+\boxed{n_1\sin i=n_2\sin r}.
+\]
+若两段均在同一介质且终点位于反射侧，
+同样变分得到
+$n(\sin i-\sin i')=0$，
+在通常角域内
+$\boxed{i=i'}$。
+\excheck 费马原理要求光程为\emph{驻值}，并非所有情形下严格的最短路径。
