@@ -1,0 +1,414 @@
+% Irodov Part III §3.1 original 41--53, PDF pp.106--107,
+% printed pp.97--98; source figures 3.5--3.7 checked.
+\electroproblem{41}{97}
+点偶极矩 $\bm p$ 与均匀外电场 $\bm E_0$
+方向相同。证明总电场有一张
+以偶极子为球心的球形等势面，
+求该球半径。
+\exsolution
+取 $z$ 轴沿 $\bm p$ 与 $\bm E_0$ 方向。
+点偶极子电势
+$\varphi_d=kp\cos\theta/r^2$，
+均匀电场电势（选零点在原点）
+$\varphi_0=-E_0r\cos\theta$。
+总电势
+\[
+\varphi(r,\theta)=
+\cos\theta\left(\frac{kp}{r^2}-E_0r\right).
+\]
+若括号为零，对\emph{全部}极角 $\theta$
+有 $\varphi=0$，形成球形等势面。
+由 $kp/R^2=E_0R$，
+\[
+\boxed{R=\left(\frac{p}{4\pi\varepsilon_0E_0}\right)^{1/3}}.
+\]
+\excheck 半径需取\emph{立方根}；
+PDF 文字抽取容易把根号前的3写成乘数。
+
+\electroproblem{42}{97}
+两根相互平行、间距 $\ell$ 的长直细线，
+线电荷密度分别为 $\lambda,-\lambda$。
+求远离两线、距中点 $r\gg\ell$
+且与连线夹角为 $\theta$ 处的电势和电场模。
+\exsolution
+在垂直两线的截面上，选两线中点为原点，
+正负线位于 $\pm\bm \ell/2$。
+二维线电荷的电势差叠加为
+\[
+\varphi=\frac{\lambda}{2\pi\varepsilon_0}
+\ln\frac{r_-}{r_+}.
+\]
+在 $r\gg\ell$ 时，
+$\ln(r_-/r_+)\simeq(\ell/r)\cos\theta$，
+因此
+\[
+\boxed{\varphi(r,\theta)\simeq
+\frac{\lambda\ell\cos\theta}{2\pi\varepsilon_0r}}.
+\]
+其极坐标场分量为
+\[
+E_r=-\partial_r\varphi=
+\frac{\lambda\ell\cos\theta}{2\pi\varepsilon_0r^2},
+\quad
+E_\theta=-r^{-1}\partial_\theta\varphi=
+\frac{\lambda\ell\sin\theta}{2\pi\varepsilon_0r^2}.
+\]
+故
+\[
+\boxed{E\simeq\frac{|\lambda|\ell}{2\pi\varepsilon_0r^2}}.
+\]
+\excheck 势依赖方向 $\cos\theta$，
+但此二维偶极近场阶的\emph{场强模}
+不依赖角度。
+
+\electroproblem{43}{97}
+两个同轴均匀带电细圆环，半径均为 $R$，
+总电荷分别为 $+q,-q$，
+中心相距 $\ell\ll R$。
+按图3.6取中点为轴坐标 $x=0$，
+求轴上电势 $\varphi(x)$ 和 $E_x(x)$
+及其大致图形，并讨论 $|x|\gg R$。
+\exsolution
+令正环位于 $x=+\ell/2$，
+负环位于 $x=-\ell/2$。
+轴上电势精确表达式
+\[
+\varphi(x)=kq\left[
+\frac1{\sqrt{R^2+(x-\ell/2)^2}}
+-\frac1{\sqrt{R^2+(x+\ell/2)^2}}\right].
+\]
+对 $\ell/R\ll1$ 作一阶泰勒展开：
+\[
+\boxed{\varphi(x)\simeq
+\frac{q\ell\,x}{4\pi\varepsilon_0
+(R^2+x^2)^{3/2}}}.
+\]
+由 $E_x=-\mathrm d\varphi/\mathrm dx$ 得
+\[
+\boxed{E_x(x)\simeq
+\frac{q\ell(2x^2-R^2)}
+{4\pi\varepsilon_0(R^2+x^2)^{5/2}}}.
+\]
+$\varphi(x)$ 是奇函数，在 $x=0$ 过零，
+在 $x=\pm R/\sqrt2$ 处有极值；
+$E_x(x)$ 是偶函数，
+中心为负，$|x|>R/\sqrt2$ 为正，
+且远方趋于零。
+当 $|x|\gg R$，
+\[
+\boxed{\varphi\sim\frac{q\ell\,\operatorname{sgn}x}
+{4\pi\varepsilon_0x^2}},\qquad
+\boxed{E_x\sim\frac{q\ell}{2\pi\varepsilon_0|x|^3}}.
+\]
+\begin{center}
+\begin{tikzpicture}[scale=0.56,>=Stealth]
+\draw[->](-3.4,0)--(3.4,0) node[right]{$x/R$};
+\draw[->](0,-1.35)--(0,1.35) node[above]{$\varphi$};
+\draw[thick,domain=-3:3,samples=60]
+plot(\x,{2.6*\x/((1+\x*\x)^1.5)});
+\begin{scope}[shift={(8,0)}]
+\draw[->](-3.4,0)--(3.4,0) node[right]{$x/R$};
+\draw[->](0,-1.35)--(0,1.35) node[above]{$E_x$};
+\draw[thick,domain=-3:3,samples=60]
+plot(\x,{1.8*(2*\x*\x-1)/((1+\x*\x)^2.5)});
+\end{scope}
+\end{tikzpicture}
+\end{center}
+\excheck 图线为无量纲形状示意。
+远场是电偶极矩 $p=q\ell$ 沿环轴方向，
+因此 $\varphi\propto |x|^{-2}$、
+$E\propto|x|^{-3}$。
+
+\electroproblem{44}{97}
+两张无限大平面面电荷密度为
+$+\sigma,-\sigma$，间距 $\ell\ll R$，
+各有半径 $R$ 的同轴圆孔（图3.7）。
+以孔轴中点为原点，沿轴取 $x$，
+求电势 $\varphi(x)$ 与场分量 $E_x(x)$，
+说明电势图像。
+\exsolution
+将“带圆孔平面”分解为
+无限均匀带电平面，减去同号的带电圆盘。
+两平面分离 $\ell\ll R$，
+用薄层偶极展开并选
+$\varphi(0)=0$，得到
+\[
+\boxed{\varphi(x)\simeq
+\frac{\sigma\ell}{2\varepsilon_0}
+\frac{x}{\sqrt{x^2+R^2}}}.
+\]
+对其求导：
+\[
+\boxed{E_x(x)=-\frac{\mathrm d\varphi}{\mathrm dx}
+=-\frac{\sigma\ell R^2}
+{2\varepsilon_0(x^2+R^2)^{3/2}}}.
+\]
+电势为单调增加的奇函数，
+在 $x\to\pm\infty$ 时趋于
+$\pm\sigma\ell/(2\varepsilon_0)$，
+电场为关于原点对称的负向单峰。
+\begin{center}
+\begin{tikzpicture}[scale=0.67,>=Stealth]
+\draw[->](-3.7,0)--(3.7,0) node[right]{$x/R$};
+\draw[->](0,-1.3)--(0,1.3) node[above]{$\varphi$};
+\draw[dashed](-3.3,1)--(3.3,1);
+\draw[dashed](-3.3,-1)--(3.3,-1);
+\draw[thick,domain=-3.3:3.3,samples=50]
+plot(\x,{\x/sqrt(1+\x*\x)});
+\end{tikzpicture}
+\end{center}
+\excheck 这里选择了图3.7中的面电荷符号；
+若将正负平面互换，
+$\varphi,E_x$ 整体反号，但模和函数形状不变。
+
+\electroproblem{45}{98}
+两张半径 $R$ 的平行圆盘相距
+$\ell\ll R$，
+面电荷密度分别为 $+\sigma,-\sigma$。
+求沿轴线、离两圆盘距离
+$x\gg\ell$ 处的电势和电场模，
+再讨论 $x\gg R$。
+\exsolution
+一张均匀带电圆盘在轴上的电势为
+$\varphi_{\rm disk}(z)=
+[\sigma/(2\varepsilon_0)]
+(\sqrt{R^2+z^2}-|z|)$。
+分别对两个盘取正负号并用
+$\ell\ll x$ 展开其轴向位移，
+得到正盘外侧
+\[
+\boxed{\varphi_+(x)\simeq
+\frac{\sigma\ell}{2\varepsilon_0}
+\left(1-\frac{x}{\sqrt{x^2+R^2}}\right)},
+\]
+负盘外侧的电势取相反符号。
+沿轴场强模由电势微分给出：
+\[
+\boxed{E(x)\simeq
+\frac{|\sigma|\ell R^2}
+{2\varepsilon_0(x^2+R^2)^{3/2}}}.
+\]
+远处 $x\gg R$，定义电偶极矩
+$p=(\pi R^2\sigma)\ell$，于是
+\[
+\boxed{|\varphi|\simeq
+\frac{|p|}{4\pi\varepsilon_0x^2}},\qquad
+\boxed{E\simeq\frac{2|p|}{4\pi\varepsilon_0x^3}}.
+\]
+\excheck 圆盘尺寸仍远小于观察距离时才可
+将有限平行板电容器视为点电偶极子。
+
+\electroproblem{46}{98}
+点偶极矩 $\bm p$ 位于距无限长均匀线电荷
+$r$ 处，线电荷密度为 $\lambda$。
+求作用力，当 $\bm p$ 分别：
+(a) 沿直线；(b) 沿径向；
+(c) 垂直于直线和径向。
+\exsolution
+线电荷外场为
+$\bm E(\bm r_\perp)=
+[\lambda/(2\pi\varepsilon_0)]\bm r_\perp/r^2$。
+固定偶极矩的受力
+$\bm F=(\bm p\cdot\nabla)\bm E$。
+(a) 若沿线方向 $\bm p=p\bm e_z$，
+场与 $z$ 无关，
+\[
+\boxed{\bm F_a=0}.
+\]
+(b) 若 $\bm p=p\bm e_r$，
+径向求导
+$\mathrm d(\lambda/(2\pi\varepsilon_0r))/\mathrm dr
+=-\lambda/(2\pi\varepsilon_0r^2)$，
+\[
+\boxed{\bm F_b=
+-\frac{\lambda p}{2\pi\varepsilon_0r^2}\bm e_r}.
+\]
+(c) 若 $\bm p=p\bm e_\varphi$，
+在固定观察位置处沿切向微分
+$\bm E$, 结果沿切向同向：
+\[
+\boxed{\bm F_c=
+\frac{\lambda p}{2\pi\varepsilon_0r^2}\bm e_\varphi}.
+\]
+\excheck 受力是场梯度作用，
+不是均匀场中的 $qE$；
+若改变偶极矩的指向，受力也相应反向。
+
+\electroproblem{47}{98}
+两个水分子相距
+$\ell=10\,\mathrm{nm}$，
+各自电偶极矩大小
+$p=0.62\times10^{-29}\,\mathrm{C\,m}$，
+并沿两分子连线同向排列。
+求两分子间相互作用力。
+\exsolution
+同轴同向的两点偶极子的相互作用势能为
+\[
+U(\ell)=
+\frac{1}{4\pi\varepsilon_0\ell^3}
+[\bm p_1\cdot\bm p_2
+-3(\bm p_1\cdot\bm e_r)(\bm p_2\cdot\bm e_r)]
+=-\frac{2p^2}{4\pi\varepsilon_0\ell^3}.
+\]
+相对连线方向的力
+$F_r=-\mathrm dU/\mathrm d\ell$，
+\[
+F_r=-\frac{6p^2}{4\pi\varepsilon_0\ell^4}.
+\]
+所以力为吸引力，大小
+\[
+\boxed{|F|=
+\frac{3p^2}{2\pi\varepsilon_0\ell^4}
+\simeq2.1\times10^{-16}\,\mathrm N}.
+\]
+\excheck 假定两水分子可视为定向的点偶极子，
+不是在自由转动分子的热平均取向下计算。
+
+\electroproblem{48}{98}
+电场给定为
+$\bm E=a(y\bm i+x\bm j)$，
+求电势 $\varphi(x,y)$。
+\exsolution
+由 $E_x=-\partial_x\varphi=-ay$，
+对 $x$ 积分
+$\varphi=-axy+f(y)$。
+再用 $E_y=-\partial_y\varphi=-ax$，
+得到 $f'(y)=0$，
+因此
+\[
+\boxed{\varphi(x,y)=-axy+C}.
+\]
+\excheck $\partial_yE_x=\partial_xE_y=a$，
+满足静电场无旋性，电势存在。
+
+\electroproblem{49}{98}
+电场
+$\bm E=2axy\,\bm i+a(x^2-y^2)\bm j$，
+求电势 $\varphi(x,y)$。
+\exsolution
+由
+$\partial_x\varphi=-2axy$，
+积分得
+$\varphi=-ax^2y+f(y)$。
+第二分量要求
+$-\partial_y\varphi=a(x^2-y^2)$，
+代入
+$ax^2-f'(y)=ax^2-ay^2$，
+所以 $f'(y)=ay^2$、
+$f(y)=ay^3/3+C$。
+最终
+\[
+\boxed{\varphi(x,y)=
+ay\left(\frac{y^2}{3}-x^2\right)+C}.
+\]
+\excheck 两个场分量都由该电势的负梯度恢复，
+可用 $\partial_yE_x=\partial_xE_y=2ax$
+作独立检查。
+
+\electroproblem{50}{98}
+电场
+\[
+\bm E=ay\,\bm i+(ax+bz)\bm j+by\,\bm k,
+\]
+其中 $a,b$ 常数。求三维电势。
+\exsolution
+由 $\partial_x\varphi=-ay$，
+先积分
+$\varphi=-axy+f(y,z)$。
+由 $E_y=-(\partial_y\varphi)
+=ax+bz$，
+得
+$\partial_yf=-bz$，
+所以
+$f=-byz+g(z)$。
+最后由
+$E_z=-\partial_z\varphi=by-g'(z)$
+得 $g'(z)=0$，
+故
+\[
+\boxed{\varphi(x,y,z)=-y(ax+bz)+C}.
+\]
+\excheck 逐项负梯度给出原题全部三个分量，
+表明输入场确为保守静电场。
+
+\electroproblem{51}{98}
+某区域电势只与 $x$ 有关：
+$\varphi(x)=-ax^3+b$。
+求该区域体电荷密度 $\rho(x)$。
+\exsolution
+泊松方程为
+$\nabla^2\varphi=-\rho/\varepsilon_0$。
+电势只依赖 $x$，所以
+\[
+\frac{\mathrm d^2\varphi}{\mathrm dx^2}
+=\frac{\mathrm d}{\mathrm dx}(-3ax^2)=-6ax.
+\]
+由泊松方程
+\[
+\boxed{\rho(x)=-\varepsilon_0\nabla^2\varphi
+=6\varepsilon_0ax}.
+\]
+\excheck 同时
+$E_x=-\varphi_x=3ax^2$，
+$\varepsilon_0\,\mathrm dE_x/\mathrm dx
+=6\varepsilon_0ax$，与高斯定律一致。
+
+\electroproblem{52}{98}
+两块很大平行平板相距 $d$，
+板间空间均匀填充体电荷密度 $\rho$，
+板间电势差大小为 $|\Delta\varphi|$。
+求使一块板附近电场强度为零的 $\rho$，
+及另一板附近的场强大小。
+\exsolution
+沿板法线取 $x\in[0,d]$，
+泊松方程等价于
+$\mathrm dE_x/\mathrm dx=\rho/\varepsilon_0$。
+若在 $x=0$ 处 $E_x(0)=0$，则
+\[
+E_x(x)=\frac{\rho x}{\varepsilon_0}.
+\]
+电势差
+$\varphi(d)-\varphi(0)
+=-\int_0^dE_x(x)\,\mathrm dx
+=-\frac{\rho d^2}{2\varepsilon_0}$。
+所以密度的\emph{大小}
+\[
+\boxed{|\rho|=
+\frac{2\varepsilon_0|\Delta\varphi|}{d^2}},
+\]
+另一板邻近场强模为
+\[
+\boxed{|E(d)|=\frac{|\rho|d}{\varepsilon_0}
+=\frac{2|\Delta\varphi|}{d}}.
+\]
+\excheck $\rho$ 的代数符号由
+$\Delta\varphi$ 的端点定义确定；
+本题若未指定电势差方向，
+只能无歧义地报告其大小。
+
+\electroproblem{53}{98}
+带电实心球内部电势为
+$\varphi(r)=ar^2+b$，
+$a,b$ 为常数。
+求球内空间电荷密度 $\rho(r)$。
+\exsolution
+径向球对称电势的拉普拉斯算符为
+\[
+\nabla^2\varphi=
+\frac1{r^2}\frac{\mathrm d}{\mathrm dr}
+\left(r^2\frac{\mathrm d\varphi}{\mathrm dr}\right).
+\]
+因为 $\varphi'(r)=2ar$，
+\[
+\nabla^2\varphi
+=\frac1{r^2}\frac{\mathrm d(2ar^3)}{\mathrm dr}
+=6a.
+\]
+由泊松方程
+$\nabla^2\varphi=-\rho/\varepsilon_0$，
+得到
+\[
+\boxed{\rho(r)=-6a\varepsilon_0=\text{常数}}.
+\]
+\excheck 常数电势偏移 $b$ 不产生电场或电荷；
+体密度均匀，与球心正则性一致。
