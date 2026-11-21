@@ -1,0 +1,351 @@
+% 第2章运动与力：章末习题2.1--2.12的独立推导
+% 原书 PDF 物理页82--84，对照《学习辅导与习题解答》第2章。
+% 按 g=9.80 m/s^2；模型近似和图示依赖均在题解内说明。
+% 未经独立专家审核，所有结果均不可声称已通过最终学术质检。
+\section*{第2章\quad 运动与力：独立解析}
+\subsection*{习题 2.1--2.12}
+
+\paragraph{习题 2.1}
+令推动力向右下方，与水平正向夹角
+\(0\le\theta<90^\circ\)，则法向支持力
+\(N=Mg+F\sin\theta\)；推动的水平分量是
+\(F\cos\theta\)。
+恰要克服最大静摩擦时
+\[
+ F\cos\theta=\mu_s(Mg+F\sin\theta),
+ \qquad
+ \boxed{F_{\min}=\frac{\mu_s Mg}
+ {\cos\theta-\mu_s\sin\theta}}.
+\]
+这个表达式只有在
+\(\cos\theta-\mu_s\sin\theta>0\) 时才有有限正解。
+匀速滑动时由滑动摩擦公式同理得
+\[
+ \boxed{F_{\rm uniform}=\frac{\mu_k Mg}
+ {\cos\theta-\mu_k\sin\theta}}.
+\]
+若 \(\mu_s>0\)，一旦
+\(\tan\theta\ge1/\mu_s\)，
+外力越大也同时压紧木箱，
+\(F\cos\theta\le\mu_sF\sin\theta\)
+而无法从静止推动，因此
+\[
+ \boxed{\theta_c=\arctan(1/\mu_s)}.
+\]
+在临界角本身不可能以有限力克服静摩擦；
+若外力方向改为斜向上拉，则法向力公式不同，
+不可套用上述结果。
+
+\paragraph{习题 2.2}
+假定小球相对于向右作水平加速运动的斜面静止，
+绳方向沿斜面向右上方（见原图2.33），
+加速度大小为 \(a\)。
+选斜面上行方向为切向正向，法向向斜面外侧。
+小球在地面惯性系有加速度 \((a,0)\)；
+绳张力 \(T\) 沿斜面向上、法向力 \(N\) 垂直斜面向外。
+牛顿第二定律分解为
+\[
+ T-mg\sin\theta=ma\cos\theta,\qquad
+ N-mg\cos\theta=-ma\sin\theta.
+\]
+故
+\[
+ \boxed{T=m(g\sin\theta+a\cos\theta)},\qquad
+ \boxed{N=m(g\cos\theta-a\sin\theta)}.
+\]
+代入 \(m=0.50\,\mathrm{kg}\)、\(a=2.0\,\mathrm{m/s^2}\)：
+\[
+ T=(4.90\sin\theta+1.00\cos\theta)\,\mathrm N,\quad
+ N=(4.90\cos\theta-1.00\sin\theta)\,\mathrm N.
+\]
+若法向力降为零，小球将与斜面失去接触，
+在 \(0<\theta<90^\circ\) 条件下
+\[
+ \boxed{a_{\rm critical}=g\cot\theta}.
+\]
+当 \(a>a_{\rm critical}\) 时，
+上述有接触假设将给出负法向力，不再物理可行；
+这正是脱离斜面的判据。
+
+\paragraph{习题 2.3}
+直升机与被吊起汽车的加速度均为向上
+\(a=0.60\,\mathrm{m/s^2}\)。
+忽略空气阻力的其余分力，将飞机与汽车合看成整体，
+外界上举力 \(L\) 与总重力平衡到加速度：
+\[
+ L-(M+m)g=(M+m)a
+ \quad\Rightarrow\quad
+ \boxed{L=(5000+1500)(9.80+0.60)=6.76\times10^4\,\mathrm N}.
+\]
+对被吊汽车单独列式
+\(T-mg=ma\)，得
+\[
+ \boxed{T=m(g+a)=1500(10.4)
+ =1.56\times10^4\,\mathrm N}.
+\]
+交叉检验：飞机自身满足
+\(L-Mg-T=Ma\)，数值亦相符。
+
+\paragraph{习题 2.4}
+采用图2.34的简单理想滑轮模型，擦窗工人与吊桶
+总质量 \(m=75\,\mathrm{kg}\)；一条绳的两段分别
+向上拉吊桶和工人的手，故整体受两份同样张力 \(T\)。
+缓慢匀速下降时
+\[
+ mg-2T=0,\qquad
+ \boxed{F_{\rm hand}=T=\tfrac12mg
+ =367.5\,\mathrm N}.
+\]
+拉力减小 \(10\%\) 后
+\(T'=0.90T\)，向下净力
+\(mg-2T'=0.10mg\)，因此
+\[
+ \boxed{a=0.10g=0.980\,\mathrm{m/s^2}}
+\]
+方向向下。
+仅在绳端、吊桶都按图连接且滑轮无摩擦时适用；
+如果把绳误作只有一端拉人的情形，系数2会丢失。
+
+\paragraph{习题 2.5}
+取竖直向下为各物体的加速度正方向，
+固定上滑轮为 \(A\)，下动滑轮为 \(B\)。
+上绳张力为 \(T_1\)，下绳张力为 \(T_2\)。
+无质量的动滑轮要求
+\(T_1=2T_2\)。
+若下滑轮位移为 \(y_B\)，两根绳长约束分别是
+\[
+ y_1+y_B=\mathrm{const},\qquad
+ (y_2-y_B)+(y_3-y_B)=\mathrm{const},
+\]
+从而
+\[
+ a_B=-a_1,\qquad a_2+a_3=-2a_1.
+\]
+三物体分别满足
+\[
+ m_1g-T_1=m_1a_1,\quad
+ m_2g-T_2=m_2a_2,\quad
+ m_3g-T_2=m_3a_3.
+\]
+消去各加速度，得到
+\[
+ \boxed{T_2=\frac{4g}{4/m_1+1/m_2+1/m_3}},\quad
+ \boxed{T_1=2T_2}.
+\]
+代入 \((m_1,m_2,m_3)=(0.200,0.100,0.050)\,\mathrm{kg}\)，
+有 \(T_2=0.784\,\mathrm N,\ T_1=1.568\,\mathrm N\)，
+并且
+\[
+ \boxed{a_1=+1.96\,\mathrm{m/s^2},\quad
+ a_2=+1.96\,\mathrm{m/s^2},\quad
+ a_3=-5.88\,\mathrm{m/s^2}}.
+\]
+所以 \(m_1,m_2\) 向下加速，
+\(m_3\) 向上加速，下滑轮 \(B\) 向上加速
+\(1.96\,\mathrm{m/s^2}\)。
+验证：\(1.96-5.88=-2(1.96)\)，绳长约束成立。
+
+\paragraph{习题 2.6}
+假设同一路面上制动时的动摩擦等效减速度不变。
+在水平面上初速
+\(v_0=90/3.6=25\,\mathrm{m/s}\)，
+停车距离 \(s_0=35\,\mathrm m\)，
+因此有效摩擦系数为
+\[
+ \mu=\frac{v_0^2}{2gs_0}
+ =\frac{25^2}{2(9.80)(35)}
+ \approx0.9111.
+\]
+坡道下降斜度 \(1:10\) 取
+\(\tan\theta=1/10\)，车沿下坡行驶时
+沿车速反向的减速度是
+\[
+ a_{\rm down}
+ =\mu g\cos\theta-g\sin\theta
+ =\frac{25^2}{2s_0}\cos\theta-g\sin\theta
+ \approx7.909\,\mathrm{m/s^2}>0.
+\]
+故新的停车距离
+\[
+ \boxed{s_{\rm down}=\frac{v_0^2}{2a_{\rm down}}
+ \approx39.51\,\mathrm m}.
+\]
+下坡距离大于水平路面的 \(35\,\mathrm m\)；
+若 \(\mu\cos\theta\le\sin\theta\)，则理想模型将不能制动停车。
+
+\paragraph{习题 2.7}
+取板与上方物体、板与桌面间静摩擦与滑动摩擦
+均为题设的 \(\mu=0.25\)，
+假设受力水平、系统初始静止。
+设板与上方物体尚未发生相对滑动，
+两个物体共同加速时，桌面对板的摩擦力大小
+\(f_0=\mu(M+m)g\)；
+共同加速度
+\[
+ a=\frac{F-\mu(M+m)g}{M+m}.
+\]
+要保持上物体与板无相对滑动，所需界面摩擦
+\(ma\) 不得大于最大静摩擦
+\(\mu mg\)，即 \(a\le\mu g\)。
+发生相对滑动的临界条件
+\[
+ \frac{F-\mu(M+m)g}{M+m}=\mu g,
+ \qquad
+ \boxed{F_{\rm crit}=2\mu(M+m)g}.
+\]
+代入得
+\[
+ \boxed{F_{\rm crit}=2(0.25)(1.50+2.45)(9.8)
+ \approx19.36\,\mathrm N}.
+\]
+持续抽出须取略大于该值的水平力。
+\textbf{条件提醒：}这与单纯让板\emph{相对桌面}开始滑动
+的门槛不同；这里要求板最终相对上物体发生滑动。
+若静、动摩擦系数并不相等，必须分别重新计算。
+
+\paragraph{习题 2.8}
+令小车加速度 \(A>0\) 表示向右，
+\(m_1\) 相对小车的加速度 \(u\) 向右为正，
+绳长守恒使 \(m_2\) 相对小车向下的加速度亦为 \(u\)。
+\(m_2\) 贴靠小车竖直前壁，故在地面系的水平加速度为 \(A\)。
+质量可忽略的绳的张力 \(T\) 满足
+\[
+ T=m_1(A+u),\qquad m_2g-T=m_2u.
+\]
+消去 \(u\)，得到
+\[
+ T=\frac{m_1m_2}{m_1+m_2}(A+g)
+ =:\mu_{\rm red}(A+g),\quad
+ \mu_{\rm red}=\frac{m_1m_2}{m_1+m_2}.
+\]
+对小车和两物体的水平运动合并列式，
+\[
+ F=(M+m_2)A+T.
+\]
+因此
+\[
+ \boxed{A=\frac{F-\mu_{\rm red}g}
+ {M+m_2+\mu_{\rm red}}}.
+\]
+若想使 \(m_2\) 高度不变，
+须取 \(u=0\)，故由 \(m_2g-T=0\) 与
+\(T=m_1A\) 得
+\(A=m_2g/m_1\)，代入水平动力学方程
+\[
+ \boxed{F=(M+m_1+m_2)\frac{m_2g}{m_1}}.
+\]
+本解要求始终保持绳张紧且 \(m_2\) 贴住车壁。
+\(A<0\) 或张力非正的参数区间会改变接触模式，
+不能无条件外推。
+
+\paragraph{习题 2.9}
+绕月飞行器视作作半径
+\(r=R_{\rm Moon}+h\) 的圆形轨道运动，取教材数值表常用近似
+\(R_{\rm Moon}=1.74\times10^6\,\mathrm m\)、
+\(M_{\rm Moon}=7.35\times10^{22}\,\mathrm{kg}\)、
+\(h=2.00\times10^5\,\mathrm m\)、
+\(G=6.67\times10^{-11}\,\mathrm{N\,m^2/kg^2}\)。
+轨道向心加速度由引力提供：
+\[
+ \frac{mv^2}{r}=\frac{GM_{\rm Moon}m}{r^2}
+ \quad\Longrightarrow\quad
+ \boxed{v=\sqrt{\frac{GM_{\rm Moon}}r}}
+ \approx1.59\times10^3\,\mathrm{m/s}.
+\]
+周期为
+\[
+ \boxed{T=\frac{2\pi r}{v}
+ =2\pi\sqrt{\frac{r^3}{GM_{\rm Moon}}}
+ \approx7.67\times10^3\,\mathrm s
+ \approx2.13\,\mathrm h}.
+\]
+量纲检查：\(GM/r\) 为速度平方；
+若采用稍有不同的月球半径与引力参数，最后有效位会略有差异。
+
+\paragraph{习题 2.10}
+胡克定律 \(|F|=k\,\Delta x\)。
+串联时两弹簧中拉力大小相同 \(F\)，
+总伸长量是两个伸长量之和：
+\[
+ \Delta x=\Delta x_1+\Delta x_2
+ =\frac F{k_1}+\frac F{k_2}
+ =F\left(\frac1{k_1}+\frac1{k_2}\right).
+\]
+因此
+\[
+ \boxed{\frac1{k_{\rm series}}=\frac1{k_1}+\frac1{k_2}},
+ \qquad
+ \boxed{k_{\rm series}=\frac{k_1k_2}{k_1+k_2}}.
+\]
+并联时两弹簧伸长相同，力相加：
+\[
+ F=F_1+F_2=k_1\Delta x+k_2\Delta x
+ =(k_1+k_2)\Delta x,
+ \qquad
+ \boxed{k_{\rm parallel}=k_1+k_2}.
+\]
+均假定线性弹性范围，弹簧自重及端部连接形变忽略。
+
+\paragraph{习题 2.11}
+取水平方向指向圆心为正、竖直向上为正。
+汽车质量 \(m=1200\,\mathrm{kg}\)，
+平面曲率半径 \(R=400\,\mathrm m\)，
+速率 \(v=25\,\mathrm{m/s}\)，倾角
+\(\theta=6^\circ\)。
+设路面对轮胎的支持力 \(N\) 垂直路面，
+静摩擦 \(f\) 指向\emph{沿斜坡向内下方}，
+其分量满足
+\[
+ N\sin\theta+f\cos\theta=\frac{mv^2}{R},\qquad
+ N\cos\theta-f\sin\theta=mg.
+\]
+解得
+\[
+ \boxed{N=m\left(g\cos\theta+\frac{v^2}{R}\sin\theta\right)}
+ \approx1.1892\times10^4\,\mathrm N,
+\]
+\[
+ \boxed{f=m\left(\frac{v^2}{R}\cos\theta-g\sin\theta\right)}
+ \approx6.35\times10^2\,\mathrm N.
+\]
+汽车在水平面内的法向（向心）合力
+\(mv^2/R=1875\,\mathrm N\)；它是支持力与
+摩擦力\emph{水平分量的合力}，不是路面的垂直支持力。
+此时 \(f/N\approx0.0534<0.9\)，静摩擦足够。
+求最大允许速率时，沿坡向内下方的摩擦达到
+\(f=\mu_sN\)，于是
+\[
+ \frac{v_{\max}^2}{R}
+ =g\frac{\sin\theta+\mu_s\cos\theta}
+ {\cos\theta-\mu_s\sin\theta},
+ \qquad
+ \boxed{v_{\max}
+ =\sqrt{Rg\frac{\sin\theta+\mu_s\cos\theta}
+ {\cos\theta-\mu_s\sin\theta}}}
+ \approx65.97\,\mathrm{m/s}.
+\]
+取值前需检验分母正且轮胎未失去接触。
+上式是经典静摩擦的理想极限，不包含真实轮胎、
+转弯半径变化与车辆侧倾等车辆动力学问题。
+
+\paragraph{习题 2.12}
+设木卫三到木星距离近似为轨道半径
+\(r=1.07\times10^6\,\mathrm{km}
+=1.07\times10^9\,\mathrm m\)，
+公转周期
+\(T=7.16\,\mathrm d=7.16(86400)\,\mathrm s\)。
+忽略卫星质量及其他摄动，引力提供向心力：
+\[
+ \frac{GM_Jm}{r^2}
+ =m\frac{4\pi^2r}{T^2}
+ \quad\Longrightarrow\quad
+ \boxed{M_J=\frac{4\pi^2r^3}{GT^2}}.
+\]
+取 \(G=6.6743\times10^{-11}\,
+\mathrm{N\,m^2/kg^2}\) 时，
+\[
+ \boxed{M_J\approx1.89\times10^{27}\,\mathrm{kg}}.
+\]
+月卫距离的单位必须从 \(\mathrm{km}\) 转为
+\(\mathrm m\) 后立方；遗漏这一转换将造成
+\(10^9\) 倍量级错误。
