@@ -404,9 +404,29 @@ ELEC_OSC_RANGES = [
 WAVES_CHAPTERS = [
     "25-elastic-waves-150-165.tex",
     "25-elastic-waves-166-181.tex",
+    "25-elastic-waves-182-188.tex",
 ]
 WAVES_RANGES = [
-    range(150, 166), range(166, 182),
+    range(150, 166), range(166, 182), range(182, 189),
+]
+EM_WAVES_CHAPTERS = [
+    "26-em-waves-189-200.tex",
+    "26-em-waves-201-212.tex",
+    "26-em-waves-213-224.tex",
+]
+EM_WAVES_RANGES = [
+    range(189, 201), range(201, 213), range(213, 225),
+]
+OPTICS_CHAPTERS = [
+    "27-optics-photometry-001-012.tex",
+    "27-optics-photometry-013-025.tex",
+    "27-optics-photometry-026-035.tex",
+    "27-optics-photometry-036-045.tex",
+    "27-optics-photometry-046-057.tex",
+]
+OPTICS_RANGES = [
+    range(1, 13), range(13, 26), range(26, 36),
+    range(36, 46), range(46, 58),
 ]
 
 part_three = []
@@ -466,6 +486,7 @@ for macro, filenames, ranges in [
     ("oscproblem", OSC_CHAPTERS, OSC_RANGES),
     ("electricoscproblem", ELEC_OSC_CHAPTERS, ELEC_OSC_RANGES),
     ("waveproblem", WAVES_CHAPTERS, WAVES_RANGES),
+    ("emwaveproblem", EM_WAVES_CHAPTERS, EM_WAVES_RANGES),
 ]:
     if (r"\newcommand{" + chr(92) + macro + "}") not in main:
         errors.append(f"main.tex missing macro {macro}")
@@ -489,8 +510,8 @@ for macro, filenames, ranges in [
             errors.append(f"{name}: TeX braces unbalanced")
         if r"\input{chapters/" + path.stem + "}" not in main:
             errors.append(f"main.tex missing chapter: {name}")
-if part_four != list(range(1, 182)):
-    errors.append("Part IV independent numbering is not exactly 1..181")
+if part_four != list(range(1, 225)):
+    errors.append("Part IV independent numbering is not exactly 1..224")
 if main.count(r"\chapter{振动与波动}") != 1:
     errors.append("Part IV chapter count is not one")
 if main.count(r"\section{机械振动") != 1:
@@ -499,9 +520,41 @@ if main.count(r"\section{电振荡") != 1:
     errors.append("Part IV §4.2 electric-oscillations section count is not one")
 if main.count(r"\section{弹性波与声学") != 1:
     errors.append("Part IV §4.3 waves section count is not one")
+if main.count(r"\section{电磁波与辐射") != 1:
+    errors.append("Part IV §4.4 electromagnetic-waves section count is not one")
+
+part_five = []
+if r"\newcommand{\opticsproblem}" not in main:
+    errors.append("main.tex missing macro opticsproblem")
+for name, expected in zip(OPTICS_CHAPTERS, OPTICS_RANGES):
+    path = ROOT / "chapters" / name
+    if not path.exists():
+        errors.append(f"missing: {name}")
+        continue
+    content = path.read_text(encoding="utf-8")
+    ids = [int(x) for x in re.findall(r"\\opticsproblem\{(\d+)\}\{", content)]
+    want = list(expected)
+    part_five.extend(ids)
+    if ids != want:
+        errors.append(f"{name}: Part-V IDs {ids} != {want}")
+    for command in ("exsolution", "excheck"):
+        count = len(re.findall(r"\\" + command + r"\b", content))
+        if count != len(want):
+            errors.append(f"{name}: {command} count {count} != {len(want)}")
+    if content.count("{") != content.count("}"):
+        errors.append(f"{name}: TeX braces unbalanced")
+    if r"\input{chapters/" + path.stem + "}" not in main:
+        errors.append(f"main.tex missing chapter: {name}")
+if part_five != list(range(1, 58)):
+    errors.append("Part V independent numbering is not exactly 1..57")
+if main.count(r"\chapter{光学}") != 1:
+    errors.append("Part V chapter count is not one")
+if main.count(r"\section{光度学与几何光学") != 1:
+    errors.append("Part V §5.1 section count is not one")
+
 
 if errors:
     for e in errors:
         print("FAIL:", e, file=sys.stderr)
     sys.exit(1)
-print("PASS: 388 Part-I + 257 Part-II + 407 Part-III + 181 Part-IV = 1233 translated solved problems in 111 chapter files; all four independent numbering ranges verified")
+print("PASS: 388 Part-I + 257 Part-II + 407 Part-III + 224 Part-IV + 57 Part-V = 1333 translated solved problems in 120 chapter files; all five independent numbering ranges verified")
