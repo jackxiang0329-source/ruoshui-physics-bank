@@ -1,0 +1,360 @@
+% Irodov, Part VI §6.6, original questions 267--280 (printed pp.262--263).
+% Source: user-provided Arihant PDF pages 271--272; answers PDF page 359.
+% Use SI units except energies explicitly measured in MeV.
+\nuclearreactionproblem{267}{262}
+极慢中子照射静止的$^{10}\mathrm B$核，
+发生反应
+$^{10}\mathrm B(n,\alpha){}^{7}\mathrm{Li}$。
+利用原子质量表求两种产物分离时的速度。
+\exsolution
+用中性原子质量计算反应能，
+\[
+ Q=\bigl[M(^{10}\mathrm B)+m_n-
+ M(^{7}\mathrm{Li})-M(^{4}\mathrm{He})\bigr]c^2
+ \simeq2.79\,\mathrm{MeV}.
+\]
+入射中子初动量可忽略，末态两核动量等大反向。
+由$p_\alpha=p_{\rm Li}$及
+$Q=p^2(1/m_\alpha+1/m_{\rm Li})/2$，得
+\[
+ T_\alpha=Q\frac{m_{\rm Li}}{m_\alpha+m_{\rm Li}}
+ \simeq\frac7{11}Q=1.78\,\mathrm{MeV},\quad
+ T_{\rm Li}\simeq\frac4{11}Q=1.01\,\mathrm{MeV}.
+\]
+所以
+\[
+ \boxed{v_\alpha=\sqrt{2T_\alpha/m_\alpha}
+ \simeq9.2\times10^6\,\mathrm{m/s}},\qquad
+ \boxed{v_{\rm Li}\simeq5.3\times10^6\,\mathrm{m/s}}.
+\]
+\excheck 动量守恒要求$m_\alpha v_\alpha=m_{\rm Li}v_{\rm Li}$；
+原书答案约$0.92\times10^7$与$0.53\times10^7\,\mathrm{m/s}$。
+
+\nuclearreactionproblem{268}{262}
+质子轰击静止$^{7}\mathrm{Li}$靶，
+激发吸能反应$^{7}\mathrm{Li}(p,n){}^{7}\mathrm{Be}$。
+在何种入射质子动能下，产物中子可恰好静止？
+\exsolution
+用原子质量求得反应能$Q\simeq-1.65\,\mathrm{MeV}$。
+若末态中子静止，入射质子的全部动量
+$p_p$由$^{7}\mathrm{Be}$承担。
+初始动能$T=p_p^2/(2m_p)$，
+反冲铍核动能$T_{\rm Be}=p_p^2/(2M_{\rm Be})
+=(m_p/M_{\rm Be})T$。
+能量守恒
+$T+Q=T_{\rm Be}$，得
+\[
+ \boxed{T=\frac{-Q}{1-m_p/M_{\rm Be}}}
+ \simeq\frac{1.65}{1-1/7}\,\mathrm{MeV}
+ \simeq1.9\,\mathrm{MeV}.
+\]
+\excheck 此题条件是\emph{中子末态速度为零}，
+并非一般吸能反应的最小阈值条件；
+二者虽相近，物理含义不同。
+
+\nuclearreactionproblem{269}{262}
+动能$T_\alpha=5.3\,\mathrm{MeV}$的
+$\alpha$粒子打静止$^{9}\mathrm{Be}$靶，
+发生$^{9}\mathrm{Be}(\alpha,n){}^{12}\mathrm C$，
+放能$Q=+5.7\,\mathrm{MeV}$。
+求垂直入射束方向飞出的中子动能。
+\exsolution
+设末态中子动量垂直$\boldsymbol p_\alpha$，
+反冲碳核动量为$\boldsymbol p_C=\boldsymbol p_\alpha-\boldsymbol p_n$。
+故$p_C^2=p_\alpha^2+p_n^2$。
+由非相对论关系$p_i^2=2m_iT_i$，
+\[
+ T_C=\frac{m_\alpha}{m_C}T_\alpha+
+ \frac{m_n}{m_C}T_n.
+\]
+代入能量守恒$T_\alpha+Q=T_C+T_n$，
+\[
+ \boxed{T_n=
+ \frac{Q+(1-m_\alpha/m_C)T_\alpha}
+ {1+m_n/m_C}}
+ \simeq\frac{5.7+(1-4/12)5.3}{1+1/12}
+ =8.5\,\mathrm{MeV}.
+\]
+\excheck 碳核虽重仍有反冲动能，
+不得把$T_n$直接设为$T_\alpha+Q=11.0$MeV。
+
+\nuclearreactionproblem{270}{262}
+动能$T_p=1.0\,\mathrm{MeV}$的质子
+轰击静止$^{7}\mathrm{Li}$核，
+发生$p+{}^{7}\mathrm{Li}\to2\alpha$。
+如果两个$\alpha$粒子的运动方向
+相对于入射束方向对称，
+求各自动能及两速度夹角。
+\exsolution
+由质量亏损$Q\simeq17.3\,\mathrm{MeV}$。
+在对称条件下两$\alpha$动能相同，
+能量守恒给
+\[
+ \boxed{T_\alpha=(T_p+Q)/2\simeq9.1\,\mathrm{MeV}}.
+\]
+记两末态动量与入射方向的夹角均为$\phi$，
+垂直分量互消，平行分量满足
+$p_p=2p_\alpha\cos\phi$。
+用$p_p^2=2m_pT_p$、
+$p_\alpha^2=2m_\alpha T_\alpha$，
+\[
+ \cos\phi=
+ \sqrt{\frac{m_pT_p}{4m_\alpha T_\alpha}},
+ \qquad
+ \boxed{\theta=2\phi\simeq170.5^\circ}.
+\]
+\excheck 接近背向的两条末态轨迹仍略向前倾斜，
+合动量方向才能与入射质子一致。
+
+\nuclearreactionproblem{271}{263}
+质量$m$的非相对论入射粒子
+轰击质量$M$的静止核，触发
+反应能$Q<0$的吸能核反应。
+证明其最小入射动能满足
+$T_{\rm th}=(-Q)(1+m/M)$。
+\exsolution
+入射束实验室动能为$T$，初态相对运动的
+质心系动能为
+\[
+ T_{\rm CM}=\frac{\mu}{m}T
+ =\frac{M}{m+M}T,\qquad
+ \mu=\frac{mM}{m+M}.
+\]
+在阈值处，反应末态各粒子在质心系均无相对动能，
+故反应所需的最小质心动能恰为$-Q$。
+因此
+\[
+ \frac{M}{m+M}T_{\rm th}=-Q,\qquad
+ \boxed{T_{\rm th}=(-Q)\frac{m+M}{M}}.
+\]
+\excheck 此为非相对论阈值公式；
+高入射能量或粒子静质量显著改变时
+须改用总四动量不变量。
+
+\nuclearreactionproblem{272}{263}
+质子轰击静止氘核，
+将其分裂为质子和中子。
+氘核结合能$E_b=2.2\,\mathrm{MeV}$，
+求入射质子的最小动能。
+\exsolution
+反应可写为$p+d\to p+p+n$，
+总反应能$Q=-E_b$。
+入射质子质量$m_p$、
+静止靶氘核质量$m_d\simeq2m_p$。
+由前题阈值公式
+\[
+ \boxed{T_{\rm th}\simeq
+ E_b\left(1+\frac{m_p}{m_d}\right)
+ \simeq2.2(1+\tfrac12)
+ =3.3\,\mathrm{MeV}}.
+\]
+\excheck 不能只给$E_b=2.2$MeV，
+因为实验室入射粒子需携带整个体系的质心平动能。
+
+\nuclearreactionproblem{273}{263}
+同一单能质子束分别轰击锂、铍靶。
+观测到$^{7}\mathrm{Li}(p,n){}^{7}\mathrm{Be}$
+（$Q=-1.65\,\mathrm{MeV}$）发生，
+而$^{9}\mathrm{Be}(p,n){}^{9}\mathrm B$
+（$Q=-1.85\,\mathrm{MeV}$）未发生。
+求质子动能可能的范围。
+\exsolution
+阈值公式$T_{\rm th}=(-Q)(1+m_p/M)$：
+\[
+ T_{{\rm th},\mathrm{Li}}
+ \simeq1.65\left(1+\frac17\right)
+ =1.886\,\mathrm{MeV},
+\]
+\[
+ T_{{\rm th},\mathrm{Be}}
+ \simeq1.85\left(1+\frac19\right)
+ =2.056\,\mathrm{MeV}.
+\]
+第一反应允许、第二反应不允许意味着
+\[
+ \boxed{1.89\,\mathrm{MeV}\lesssim T_p
+ <2.06\,\mathrm{MeV}}.
+\]
+\excheck 实验上反应阈值附近产额可能很低；
+这里“发生/不发生”按理想运动学允许性判断。
+
+\nuclearreactionproblem{274}{263}
+中子照射静止$^{11}\mathrm B$核，
+激发$(n,\alpha)$反应的入射阈值为
+$T_{\rm th}=4.0\,\mathrm{MeV}$。
+求反应能$Q$。
+\exsolution
+由$T_{\rm th}=(-Q)(1+m_n/M_B)$，
+$\;m_n\simeq u$、$M_B\simeq11u$，所以
+\[
+ \boxed{Q=-T_{\rm th}\frac{M_B}{M_B+m_n}
+ \simeq-4.0\frac{11}{12}
+ =-3.7\,\mathrm{MeV}}.
+\]
+\excheck 反应能为负，
+符合必须以非零阈值粒子激发的事实。
+
+\nuclearreactionproblem{275}{263}
+计算静止$^{7}\mathrm{Li}$靶在
+$(p,n)$、$(p,d)$两反应中所需的最小质子动能。
+\exsolution
+$(p,n)$通道为
+$^{7}\mathrm{Li}+p\to{}^{7}\mathrm{Be}+n$，
+质量亏损给$Q_n\simeq-1.65$MeV。
+$(p,d)$通道为
+$^{7}\mathrm{Li}+p\to{}^{6}\mathrm{Li}+d$，
+原子质量给
+$Q_d=[M(^{7}\mathrm{Li})+M(^1\mathrm H)
+ -M(^{6}\mathrm{Li})-M(^2\mathrm H)]c^2
+ \simeq-5.03$MeV。
+两者都以锂为静止靶，
+\[
+ \boxed{T_{\mathrm{th},(p,n)}
+ =-Q_n(1+1/7)\simeq1.88\,\mathrm{MeV}},
+\]
+\[
+ \boxed{T_{\mathrm{th},(p,d)}
+ =-Q_d(1+1/7)\simeq5.75\,\mathrm{MeV}}.
+\]
+\excheck 相同入射核与靶核使两个阈值具有相同的
+运动学修正因子$8/7$。
+
+\nuclearreactionproblem{276}{263}
+使用原子质量表，
+求引发$^{7}\mathrm{Li}(\alpha,n){}^{10}\mathrm B$
+所需的最小$\alpha$粒子动能，
+并求此时$^{10}\mathrm B$核的实验室速度。
+\exsolution
+质量亏损给反应能
+$Q=[M(^{7}\mathrm{Li})+M(^{4}\mathrm{He})
+-M(^{10}\mathrm B)-m_n]c^2\simeq-2.79$MeV。
+在静止锂核前，$m_\alpha\simeq4u$、
+$M_{\rm Li}\simeq7u$，因此
+\[
+ \boxed{T_{\rm th}=(-Q)(1+4/7)
+ \simeq4.4\,\mathrm{MeV}}.
+\]
+阈值处所有产物在质心系相对静止，
+因此$^{10}\mathrm B$的实验室速度
+等于初始质心速度：
+\[
+ v_B=V_{\rm CM}
+ =\frac{p_\alpha}{m_\alpha+M_{\rm Li}}
+ =\frac{\sqrt{2m_\alpha T_{\rm th}}}{m_\alpha+M_{\rm Li}}
+ \simeq\boxed{5.3\times10^6\,\mathrm{m/s}}.
+\]
+\excheck 书末印$5.3\times10^4$ m/s；
+按本题$4.4$MeV能量与动量守恒必约为
+$5.3\times10^6$ m/s，差100倍，须记入勘误。
+
+\nuclearreactionproblem{277}{263}
+动能$T_n=10\,\mathrm{MeV}$的中子
+引发$^{12}\mathrm C(n,\alpha){}^{9}\mathrm{Be}$。
+反应阈值$T_{\rm th}=6.17\,\mathrm{MeV}$，
+求以$90^\circ$离开入射中子方向的
+$\alpha$粒子动能。
+\exsolution
+由静止碳靶阈值
+\[
+ Q=-\frac{M_C}{m_n+M_C}T_{\rm th}
+ \simeq-\frac{12}{13}(6.17)
+ =-5.70\,\mathrm{MeV}.
+\]
+出射$\alpha$与入射中子动量垂直，
+故反冲Be核动量模平方
+$p_{\rm Be}^2=p_n^2+p_\alpha^2$。
+因此
+$T_{\rm Be}=(m_n/M_{\rm Be})T_n+
+(m_\alpha/M_{\rm Be})T_\alpha$。
+代入能量守恒$T_n+Q=T_\alpha+T_{\rm Be}$，
+\[
+ \boxed{T_\alpha=
+ \frac{(1-m_n/M_{\rm Be})T_n+Q}
+ {1+m_\alpha/M_{\rm Be}}
+ \simeq\frac{(1-1/9)10-5.70}{1+4/9}
+ \simeq2.2\,\mathrm{MeV}}.
+\]
+\excheck 若忘掉Be核反冲，
+会把入射动能减阈值的差误作$\alpha$的动能。
+
+\nuclearreactionproblem{278}{263}
+在光致氘核解离
+$\gamma+d\to n+p$中，
+氘结合能$E_b=2.2\,\mathrm{MeV}$。
+求光子反应阈值比结合能高百分之多少。
+\exsolution
+初态为静止氘核与入射光子，
+末态质心需守恒入射光子动量。
+严格不变量阈值关系
+\[
+ (M_dc^2+\varepsilon)^2-\varepsilon^2
+ =(m_p+m_n)^2c^4
+ \quad\Rightarrow\quad
+ \varepsilon_{\rm th}
+ =\frac{(m_p+m_n)^2-M_d^2}{2M_d}c^2.
+\]
+设$(m_p+m_n-M_d)c^2=E_b$，化简
+\[
+ \varepsilon_{\rm th}
+ =E_b+\frac{E_b^2}{2M_dc^2}.
+\]
+故相对超过值
+\[
+ \boxed{\frac{\varepsilon_{\rm th}-E_b}{E_b}\times100\%
+ =\frac{E_b}{2M_dc^2}\times100\%
+ \simeq0.059\%\approx0.06\%}.
+\]
+\excheck 高出的一小部分供末态质心反冲；
+光子动量不可忽略。
+
+\nuclearreactionproblem{279}{263}
+动能$T_p=1.5\,\mathrm{MeV}$的质子
+被静止氘核俘获，形成$^{3}\mathrm{He}$。
+求生成核的激发能。
+\exsolution
+氘核质量约为$2u$，
+初态质心相对动能
+$T_{\rm CM}=[m_d/(m_d+m_p)]T_p
+\simeq(2/3)T_p=1.0$MeV。
+质子俘获成$^{3}\mathrm{He}$的
+反应能由结合能差给
+$Q=B(^{3}\mathrm{He})-B(d)
+\simeq7.72-2.22=5.50$MeV。
+故复合核的激发能
+\[
+ \boxed{E^*=Q+T_{\rm CM}
+ \simeq5.50+\frac23(1.50)
+ =6.5\,\mathrm{MeV}}.
+\]
+\excheck 质心平动能不能转换为核内激发，
+所以不应直接把实验室全部1.5MeV加在$Q$上。
+
+\nuclearreactionproblem{280}{263}
+$^{13}\mathrm C(d,n){}^{14}\mathrm N$
+的核反应产额在氘核实验室动能
+$0.60,0.90,1.55,1.80\,\mathrm{MeV}$
+时出现极大。利用原子质量表，
+求中间复合核的四个激发能级。
+\exsolution
+该反应经复合$^{15}\mathrm N$核发生。
+以$^{13}\mathrm C+d$相对于
+$^{15}\mathrm N$基态的质量能差
+\[
+ S_d=[M(^{13}\mathrm C)+M(d)-M(^{15}\mathrm N)]c^2
+ \simeq16.16\,\mathrm{MeV}
+\]
+表示氘的结合阈值。每一个共振入射能
+在质心系贡献
+$T_{\rm CM}=[M_C/(M_C+m_d)]T_d
+\simeq13T_d/15$。
+所以
+\[
+ \boxed{E_i^*=S_d+\frac{13}{15}T_i}
+\]
+逐一得到
+\[
+ \boxed{E_i^*\simeq
+ 16.7,\quad16.9,\quad17.5,\quad17.7\ \mathrm{MeV}}.
+\]
+\excheck 峰值是激发的复合核$^{15}$N能级，
+不能把四个实验室入射动能直接当作核能级。
