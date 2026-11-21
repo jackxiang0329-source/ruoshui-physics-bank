@@ -1,0 +1,189 @@
+% Irodov Part V §5.3 originals 151--156 (end of diffraction section).
+% Uploaded PDF printed pp.212; original answers pp.331--332.
+\diffractionproblem{151}{212}
+X 射线以掠入射角
+$\alpha_0=60.0^\circ$ 照射周期为 $a$ 的一维线性散射中心链。
+若 $\lambda=2a/5$，
+求所有出现衍射主极大的入射或散射方向角。
+\exsolution
+以原书把光与链轴夹角记为 $\alpha$，
+相邻散射中心的相位差（以入射方向60°为基准）为
+$(2\pi a/\lambda)(\cos\alpha-\cos60^\circ)$。
+相长需它为 $2\pi m$：
+\[
+\boxed{\cos\alpha=\cos60^\circ+m\frac{\lambda}{a}
+=\frac12+\frac{2m}{5}}.
+\]
+要求 $-1\le\cos\alpha\le1$，
+给整数
+$m=-3,-2,-1,0,1$。
+逐一计算：
+\[
+\boxed{\alpha\simeq
+134^\circ,\ 107^\circ,\ 84^\circ,\ 60^\circ,\ 26^\circ}.
+\]
+\excheck 题目提到的是与\emph{链轴的掠入射方向角}，不是普通二维平面光栅的法线入射角；必须用余弦方向差。
+
+\diffractionproblem{152}{212}
+波长
+$\lambda=40$pm 的 X 射线垂直照到二维矩形散射点阵（图5.29）。
+屏距 $\ell=10$cm，
+$x$ 轴两个对称二级极大间隔
+$\Delta x=60$mm，
+$y$ 轴两个对称二级极大间隔
+$\Delta y=40$mm。
+求两个点阵周期 $a,b$。
+\exsolution
+两个对称二级极大各离中心的半距为
+$x=\Delta x/2$、
+$y=\Delta y/2$。
+横向出射角满足
+$\tan\theta_x=x/\ell$，
+$\tan\theta_y=y/\ell$。
+二级点阵相长条件
+$a\sin\theta_x=2\lambda$、
+$b\sin\theta_y=2\lambda$。
+故
+\[
+\boxed{a=\frac{2\lambda}
+{\sin(\arctan[\Delta x/(2\ell)])}
+\simeq0.28\,\mathrm{nm}},
+\]
+\[
+\boxed{b=\frac{2\lambda}
+{\sin(\arctan[\Delta y/(2\ell)])}
+\simeq0.41\,\mathrm{nm}}.
+\]
+\excheck 图5.29给的是对称极大之间的\emph{总间距}，计算散射角时必须先除以2。
+
+\diffractionproblem{153}{212}
+一束 X 射线沿三维直角点阵的 $a$ 轴周期方向入射；
+另外两条互相垂直的晶格周期为 $b,c$。
+求衍射主极大方向和可能的波长。
+\exsolution
+设出射方向与三轴的夹角为
+$\alpha,\beta,\gamma$，
+方向余弦满足
+$\cos^2\alpha+\cos^2\beta+\cos^2\gamma=1$。
+对三方向相邻散射中心的相位差应用相长条件，得
+\[
+\boxed{a(1-\cos\alpha)=m_1\lambda},\quad
+\boxed{b\cos\beta=m_2\lambda},\quad
+\boxed{c\cos\gamma=m_3\lambda},
+\]
+其中 $m_i$ 为使所给方向物理可行的整数。
+故
+$\cos\alpha=1-m_1\lambda/a$、
+$\cos\beta=m_2\lambda/b$、
+$\cos\gamma=m_3\lambda/c$。
+代入单位方向约束，消去二次项中常数：
+\[
+-2\frac{m_1\lambda}{a}
++\lambda^2\left[
+\left(\frac{m_1}{a}\right)^2+
+\left(\frac{m_2}{b}\right)^2+
+\left(\frac{m_3}{c}\right)^2
+\right]=0.
+\]
+非零波长的解
+\[
+\boxed{\lambda=
+\frac{2m_1/a}
+{(m_1/a)^2+(m_2/b)^2+(m_3/c)^2}}.
+\]
+\excheck 选取整数三元组后仍必须核查
+$|\cos\alpha|,|\cos\beta|,|\cos\gamma|\le1$ 与 $\lambda>0$。
+
+\diffractionproblem{154}{212}
+X 射线以掠射角
+$\alpha=60.0^\circ$ 照射氯化钠单晶天然晶面，
+NaCl 密度
+$\rho=2.16\,\mathrm{g/cm^3}$，
+镜面反射为二级布拉格极大。
+求辐射波长。
+\exsolution
+设一个 NaCl 化学式单位的质量
+$m=M/N_A$，
+$M=58.44\,\mathrm{g/mol}$。
+NaCl 岩盐晶胞包含4个化学式单位，
+晶胞边长
+$a_{\rm lat}=(4m/\rho)^{1/3}$。
+该天然晶面相邻反射层间距
+$d=a_{\rm lat}/2=(m/(2\rho))^{1/3}$。
+布拉格方程
+$2d\sin\alpha=k\lambda$，
+$k=2$，所以
+\[
+\boxed{\lambda=\frac{2}{k}
+\left(\frac{m}{2\rho}\right)^{1/3}
+\sin\alpha}.
+\]
+代
+$\rho=2160\,\mathrm{kg/m^3}$、
+$m=0.05844/(6.02214076\times10^{23})$kg，
+\[
+\boxed{\lambda\simeq244\,\mathrm{pm}}.
+\]
+\excheck 应使用NaCl岩盐结构的反射层间距，
+而非把晶胞边长直接当布拉格层距；题目没有单独给晶格常数，须由密度和单胞粒子数求出。
+
+\diffractionproblem{155}{212}
+波长
+$\lambda=174$pm 的 X 射线入射一旋转单晶，
+晶体围绕平行表面且垂直入射方向的轴旋转。
+平行表面的晶面组的二级与三级衍射峰方向夹角
+$\alpha=60^\circ$。
+求晶面间距 $d$。
+\exsolution
+布拉格条件
+$2d\sin\theta_2=2\lambda$、
+$2d\sin\theta_3=3\lambda$。
+由于不同衍射级的反射方向在旋转扫描时夹角为
+$\alpha$，对应掠射角的差为
+$|\theta_3-\theta_2|=\alpha/2$。
+利用
+$\sin(\theta_3-\theta_2)
+=\sin\theta_3\cos\theta_2-\cos\theta_3\sin\theta_2$，
+结合两式消元，可得
+\[
+\boxed{d=
+\frac{\lambda}{2\sin(\alpha/2)}
+\sqrt{k_2^2+k_3^2-2k_2k_3\cos(\alpha/2)}},
+\quad k_2=2,\ k_3=3.
+\]
+取 $\alpha/2=30^\circ$：
+\[
+\boxed{d\simeq
+\frac{174\,\mathrm{pm}}{1}
+\sqrt{13-12\cos30^\circ}
+\simeq281\,\mathrm{pm}
+=0.28\,\mathrm{nm}}.
+\]
+\excheck 书末答案的纯文本提取似为“0.28 pm”，但公式与174pm入射波长严格给\emph{0.28 nm}；单位需在勘误注明。
+
+\diffractionproblem{156}{212}
+波长
+$\lambda=17.8$pm 的 X 射线穿过多晶试样，
+距样品 $\ell=15$cm 的屏上出现环形衍射条纹。
+晶面间距
+$d=155$pm，
+求第二级布拉格反射对应的亮环半径。
+\exsolution
+第二级布拉格条件
+$2d\sin\alpha=k\lambda$，
+$k=2$，所以
+$\sin\alpha=2\lambda/(2d)=\lambda/d$，
+$\alpha\simeq6.59^\circ$。
+衍射光束与直射光束的夹角为
+$2\alpha$，
+环半径满足
+$r=\ell\tan(2\alpha)$。
+故
+\[
+\boxed{r=\ell
+\tan\left[2\arcsin\frac{k\lambda}{2d}\right]
+\simeq0.15\tan(13.18^\circ)
+\simeq3.5\,\mathrm{cm}}.
+\]
+\excheck 多晶体德拜环几何出射角为 $2\alpha$，
+而不是直接把布拉格掠射角 $\alpha$ 代入屏上半径公式。
