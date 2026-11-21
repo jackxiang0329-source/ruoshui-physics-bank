@@ -1,0 +1,211 @@
+% Irodov Part III §3.3 final problems 141--146;
+% source PDF pp.120--121 (printed 111--112); figures 3.33, 3.34.
+\electrocapproblem{141}{111}
+空气平板电容器的极板面积均为 $S$，
+缓慢把板间距从 $x_1$ 增至 $x_2>x_1$。
+求所需的外界机械功：
+(a) 极板自由电荷 $q$ 保持不变；
+(b) 两极板电压 $V$ 保持不变。
+\exsolution
+忽略边缘场，
+$C(x)=\varepsilon_0S/x$。
+(a) 固定自由电荷时
+$U(q,x)=q^2/(2C)=q^2x/(2\varepsilon_0S)$。
+外界准静态功等于场能增加量：
+\[
+\boxed{A_q=\frac{q^2(x_2-x_1)}{2\varepsilon_0S}}.
+\]
+(b) 固定电压时电源会交换电荷，
+不能简单取储能差作外功。
+极板间吸引压力为
+$p_e=\varepsilon_0V^2/(2x^2)$，
+力 $F=p_eS$，
+因此
+\[
+A_V=\int_{x_1}^{x_2}\frac{\varepsilon_0SV^2}{2x^2}
+\,\mathrm dx
+=\boxed{\frac{\varepsilon_0SV^2}{2}
+\left(\frac1{x_1}-\frac1{x_2}\right)}.
+\]
+\excheck 原书(a)英文正文有
+“capacitance ... equal to q”的明显笔误，
+$q$ 量纲为电荷，依物理意义必须是
+“charge $q$ remains constant”；
+与原书答案的 $q^2$ 表达式一致。
+
+\electrocapproblem{142}{111}
+平板电容器原电容 $C_0=20\,\mathrm{nF}$，
+极板间隙为 $d$。
+先插入厚度为 $h=\eta d$ 的平行板
+（$\eta=0.60$），接电压
+$V=200\,\mathrm V$ 充电，随后切断电源，
+再缓慢抽出该插板。
+求抽出所需机械功：
+(a) 金属板；(b) 玻璃介质板。
+\exsolution
+设充电时插板在位的电容为 $C_i$。
+电源断开后自由电荷
+$Q=C_iV$ 保持不变；
+抽出后电容回到 $C_0$。
+因此机械功
+\[
+A=\Delta U=
+\frac{Q^2}{2}\left(\frac1{C_0}-\frac1{C_i}\right)
+=\frac{C_i^2V^2}{2}
+\left(\frac1{C_0}-\frac1{C_i}\right).
+\]
+(a) 金属板内部电场为零，
+只剩有效气隙厚度
+$d-h=d(1-\eta)$，
+故 $C_i=C_0/(1-\eta)$，得到
+\[
+\boxed{A_{\rm metal}=
+\frac12C_0V^2\frac{\eta}{(1-\eta)^2}
+=1.5\,\mathrm{mJ}}.
+\]
+(b) 玻璃相对介电常数为 $\varepsilon$，
+与两侧空气为法向串联。
+设
+$f=1-\eta+\eta/\varepsilon$，
+则 $C_i=C_0/f$，所以
+\[
+\boxed{A_{\rm glass}=
+\frac12C_0V^2
+\frac{\eta(1-\varepsilon^{-1})}
+{(1-\eta+\eta/\varepsilon)^2}}.
+\]
+\excheck 第(b)问题面未给玻璃 $\varepsilon$ 数值，
+应保留参数表达式，
+不可擅自代入某种玻璃的介电常数。
+
+\electrocapproblem{143}{111}
+将水平放置的平板电容器浸没在水中，
+极板间距 $d=1.0\,\mathrm{mm}$，
+水完全填满间隙。
+两极板电压保持为 $V=500\,\mathrm V$。
+求水在间隙中的电压力增量。
+\exsolution
+取水的相对介电常数为
+$\varepsilon$，忽略边缘效应。
+水中电场 $E=V/d$。
+界面电场能和介质极化在固定外加电势的
+电机械耦合关系给水中附加的电压力
+\[
+\Delta p=\frac12\varepsilon_0
+\varepsilon(\varepsilon-1)E^2.
+\]
+代入 $E=V/d$：
+\[
+\boxed{\Delta p=
+\frac{\varepsilon_0\varepsilon(\varepsilon-1)V^2}{2d^2}}.
+\]
+室温水取 $\varepsilon\simeq81$：
+\[
+\boxed{\Delta p\simeq7.2\times10^3\,\mathrm{Pa}
+\approx7\,\mathrm{kPa}\approx0.07\,\mathrm{atm}}.
+\]
+\excheck 该式是本题所采用的水介电响应
+电压与压力模型，
+与只计算真空 Maxwell 电压力
+$\varepsilon_0E^2/2$ 不同。
+
+\electrocapproblem{144}{111}
+水平平板电容器的一块极板浸在液体内，
+另一块位于液面上方（图3.33）。
+液体密度 $\rho$，相对介电常数
+$\varepsilon$。
+极板表面自由电荷密度模为 $\sigma$，
+求液体在两极板之间升高的高度 $h$。
+\exsolution
+两板间浸入介质的部分增加时，
+其单位体积静电储能由
+$u_{\rm vac}=\sigma^2/(2\varepsilon_0)$
+变为
+$u_{\rm diel}=\sigma^2/(2\varepsilon_0\varepsilon)$。
+在保持自由电荷密度的准静态近似下，
+每单位上升体积可释放的电场能为
+\[
+\Delta u=\frac{\sigma^2}{2\varepsilon_0}
+\left(1-\frac1\varepsilon\right).
+\]
+与上升液柱静水压头 $\rho gh$ 平衡，
+\[
+\rho gh=\Delta u.
+\]
+因此
+\[
+\boxed{h=\frac{(\varepsilon-1)\sigma^2}
+{2\varepsilon_0\varepsilon\rho g}}.
+\]
+\excheck 如果改为固定\emph{极板电压}，
+电荷密度会随介质分布改变，
+必须使用相应不同的热力学约束。
+
+\electrocapproblem{145}{111}
+同轴圆柱电容器，
+两电极平均半径为 $R$，
+径向间隙 $d\ll R$。
+向间隙沿轴向插入相对介电常数
+$\varepsilon$ 的圆柱形介质层，
+两电极保持恒定电压 $V$。
+求把介质进一步吸入的电力。
+\exsolution
+忽略端部效应，插入轴向长度为 $x$
+时增加的介质体积为
+$2\pi Rd\,x$。
+这相当于单位插入长度新增并联电容
+\[
+\frac{\mathrm dC}{\mathrm dx}
+\simeq\frac{\varepsilon_0(\varepsilon-1)}d
+(2\pi R).
+\]
+在固定电压下，
+电源—电场系统的有效势为
+$-\frac12CV^2$，
+故吸入力
+\[
+F=\frac12V^2\frac{\mathrm dC}{\mathrm dx}.
+\]
+于是
+\[
+\boxed{F=\frac{\pi R\varepsilon_0
+(\varepsilon-1)V^2}{d}}.
+\]
+\excheck 这是介质已部分插入时
+接近轴向端缘的电力，
+不表示介质无限延伸后的
+横向均匀区域仍有非零吸入力。
+
+\electrocapproblem{146}{112}
+图3.34：固定电极由两片半径为 $R$
+的半圆形金属极板组成，
+板间距 $d$。薄可转动介质板绕
+半圆中心 O 转动，
+相对介电常数为 $\varepsilon$，
+转角为 $\phi$，固定电压 $V$。
+求绕 O 的电力矩模。
+\exsolution
+忽略边缘场，
+介质覆盖的两极板重叠面积随转角改变。
+半径 $R$ 的圆扇形面积为
+$A(\phi)=\frac12R^2\phi$，
+所以
+$\mathrm dA/\mathrm d\phi=R^2/2$。
+被介质覆盖区域相对于真空的
+增量电容为
+$\Delta C=(\varepsilon-1)\varepsilon_0A/d$，
+因此
+\[
+\frac{\mathrm dC}{\mathrm d\phi}
+=\frac{\varepsilon_0(\varepsilon-1)R^2}{2d}.
+\]
+固定电压的电力矩
+$\mathcal N=\frac12V^2\mathrm dC/\mathrm d\phi$，
+故
+\[
+\boxed{|\mathcal N|=
+\frac{\varepsilon_0(\varepsilon-1)R^2V^2}{4d}}.
+\]
+\excheck 在原图允许的旋转角度范围内，
+扇形覆盖面积随 $\phi$ 线性变化，
+故电力矩大小不依赖 $\phi$。
