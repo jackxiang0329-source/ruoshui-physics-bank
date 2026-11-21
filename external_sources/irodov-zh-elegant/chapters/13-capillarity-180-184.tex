@@ -1,0 +1,192 @@
+% 原书第二篇第2.5节最后五题，用户上传底本印刷页83、PDF页92。
+\thermocapillaryproblem{180}{83}
+两颗相同的水银小液滴，
+每颗直径为 $d=1.5\,\mathrm{mm}$，
+在温度不变的条件下合并为一颗液滴。
+求表面层自由能变化 $\Delta F$。
+\exsolution
+设两小液滴直径均为 $d$，
+单滴球体积为
+$\pi d^3/6$，
+合并后体积为两倍，
+故新液滴直径
+$d_f=2^{1/3}d$。
+单球的表面自由能为
+$F=\alpha\pi d^2$。
+因此初、末自由能分别为
+\[
+F_i=2\pi\alpha d^2,\qquad
+F_f=\pi\alpha d_f^2
+=\pi\alpha d^2\,2^{2/3}.
+\]
+自由能变化
+\[
+\boxed{\Delta F=\pi\alpha d^2(2^{2/3}-2)
+=2\pi\alpha d^2(2^{-1/3}-1)<0}.
+\]
+取水银表面张力
+$\alpha\simeq0.48\,\mathrm{N/m}$，
+得
+\[
+\boxed{\Delta F\simeq-1.4\times10^{-6}\,\mathrm J
+\approx-1.5\,\mathrm{\mu J}}.
+\]
+\excheck 合并后体积守恒而表面积减小，
+所以自由能降低；
+不能错误地让新液滴直径直接变为 $2d$。
+
+\thermocapillaryproblem{181}{83}
+肥皂水溶液表面张力为 $\alpha$，
+外界气压为 $p_0$。
+若鼓起半径为 $R$ 的肥皂泡，
+求需要做的功；
+注意气泡气体按可逆等温方式由外界压强
+$p_0$ 的气源压入。
+\exsolution
+肥皂泡有两层表面，
+半径从零增至 $R$ 后新增界面自由能为
+\[
+F_{\rm surf}=2\alpha(4\pi R^2)
+=\boxed{8\pi\alpha R^2}.
+\]
+终态气泡内部超压为
+$4\alpha/R$，
+内部气体压强
+$p=p_0+4\alpha/R$，
+气体体积
+$V=4\pi R^3/3$。
+若补充考虑从外部压强 $p_0$ 的气源
+把终态泡内的气体在等温方式下压至 $p$，
+这批气体（其终态体积 $V$）的
+可逆等温压缩功为
+\[
+A_{\rm gas}=pV\ln(p/p_0).
+\]
+因此原书所采用的全系统做功表达式为
+\[
+\boxed{A=8\pi\alpha R^2+
+pV\ln\frac{p}{p_0}},\qquad
+p=p_0+\frac{4\alpha}{R},\quad
+V=\frac{4\pi R^3}{3}.
+\]
+\excheck 若只问膜本身增加的\emph{表面自由能}，
+答案为第一项 $8\pi\alpha R^2$；
+原书把从气源压缩泡内气体的功也算入，
+须清楚说明所采用的功的边界定义。
+
+\thermocapillaryproblem{182}{83}
+半径为 $r$ 的肥皂泡内充有一摩尔理想气体，
+外界气压为 $p_0$，
+肥皂液表面张力为 $\alpha$。
+求气体在泡内加热过程的摩尔热容 $C$
+与定压热容 $C_p$ 的差。
+\exsolution
+泡内外压强差为
+$4\alpha/r$，
+故气体压强
+$p(r)=p_0+4\alpha/r$，
+体积
+$V(r)=4\pi r^3/3$。
+一摩尔理想气体：
+\[
+RT=pV=\frac{4\pi}{3}(p_0r^3+4\alpha r^2).
+\]
+假设表面张力在这一温区近似恒定，
+对 $r$ 微分：
+\[
+R\frac{\mathrm dT}{\mathrm dr}
+=\frac{4\pi}{3}(3p_0r^2+8\alpha r),
+\qquad
+\frac{\mathrm dV}{\mathrm dr}=4\pi r^2.
+\]
+过程热容
+$C=C_V+p\,\mathrm dV/\mathrm dT$，
+而 $C_p=C_V+R$，所以
+\[
+C-C_p
+=\frac{p(4\pi r^2)}
+{(4\pi/(3R))(3p_0r^2+8\alpha r)}-R.
+\]
+化简：
+\[
+\boxed{C-C_p=
+\frac{4R\alpha}{3p_0r+8\alpha}
+=\frac{R/2}{1+3p_0r/(8\alpha)}}.
+\]
+\excheck 当 $r$ 很大、毛细压差相对大气压极小时，
+$C\to C_p$，符合等压过程极限。
+
+\thermocapillaryproblem{183}{83}
+把卡诺循环的思想用于一张液体薄膜，
+证明在温度 $T$ 下等温地
+增加单位液膜\emph{单界面面积}时，
+必须交换的热量
+$q=-T\,\mathrm d\alpha/\mathrm dT$，
+其中 $\alpha(T)$ 是表面张力。
+\exsolution
+先把一层气液界面的面积记为 $S$。
+液膜做可逆形变时，面积广义力为
+$\alpha$，内能微分满足
+$\mathrm dU=T\,\mathrm d\mathcal S+\alpha\,\mathrm dS$，
+其中 $\mathcal S$ 是热力学熵。
+定义自由能
+$F=U-T\mathcal S$，得
+\[
+\mathrm dF=-\mathcal S\,\mathrm dT+\alpha\,\mathrm dS.
+\]
+混合二阶偏导交换：
+\[
+\left(\frac{\partial\mathcal S}{\partial S}\right)_T
+=-\left(\frac{\partial\alpha}{\partial T}\right)_S.
+\]
+因此等温面积增量 $\mathrm dS>0$ 的
+可逆吸热
+\[
+\delta Q_{\rm rev}=T\,\mathrm d\mathcal S
+=-T\frac{\mathrm d\alpha}{\mathrm dT}\,\mathrm dS.
+\]
+单位\emph{单界面}新增面积所需热量：
+\[
+\boxed{q=\frac{\delta Q_{\rm rev}}{\mathrm dS}
+=-T\frac{\mathrm d\alpha}{\mathrm dT}}.
+\]
+这一 Maxwell 推导等价于取温差
+$\mathrm dT$、面积差 $\mathrm dS$ 的
+无穷小可逆卡诺循环：
+循环功 $\simeq-\alpha'(T)\mathrm dT\,\mathrm dS$，
+由效率 $\mathrm dT/T$ 即得到同式。
+\excheck 若对象为一整张肥皂薄膜，存在\emph{两个表面}，
+同一投影面积增量对应的吸热应再乘2；
+本题公式按单个界面定义。
+
+\thermocapillaryproblem{184}{83}
+一张肥皂薄膜在温度 $T$ 下等温地
+把其投影表面积增大 $\Delta\sigma$。
+肥皂水表面张力为 $\alpha(T)$，
+其温度导数为 $\mathrm d\alpha/\mathrm dT$。
+求表面层的：(a) 熵增 $\Delta\mathcal S$；
+(b) 内能增量 $\Delta U$。
+\exsolution
+肥皂薄膜两侧均有气液界面，
+因此总新增界面面积是 $2\Delta\sigma$。
+自由能的表面增量为
+$\Delta F=2\alpha\Delta\sigma$。
+由
+$\mathcal S=-(\partial F/\partial T)_\sigma$，
+在温度固定而面积变化时，
+\[
+\boxed{\Delta\mathcal S
+=-2\frac{\mathrm d\alpha}{\mathrm dT}
+\,\Delta\sigma}.
+\]
+用热力学关系
+$U=F+T\mathcal S$，
+求同温表面层内能增量：
+\[
+\boxed{\Delta U
+=2\left(\alpha-
+T\frac{\mathrm d\alpha}{\mathrm dT}\right)
+\Delta\sigma}.
+\]
+\excheck 面积 $\Delta\sigma$ 是薄膜的一面\emph{投影面积}，
+内外两界面贡献须乘2；熵单位应为 $\mathrm{J/K}$。
