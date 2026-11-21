@@ -1,0 +1,201 @@
+% Irodov, source PDF 78, printed p.69; 2.2 ends at original problem 61.
+% One mol van der Waals equation: p = RT/(V-b)-a/V^2.
+% For nu mol, U=nu*C_V*T-a*nu^2/V under constant C_V approximation.
+\thermoenergyproblem{57}{69}
+求一摩尔范德瓦耳斯气体在温度 $T$ 不变时，
+由体积 $V_1$ 可逆等温膨胀至 $V_2$ 所做的功。
+假定气体遵循
+$(p+a/V^2)(V-b)=RT$。
+\exsolution
+将范德瓦耳斯方程解成压强形式：
+\[
+p(V,T)=\frac{RT}{V-b}-\frac a{V^2}.
+\]
+气体在可逆准静态膨胀中所做功为
+\[
+A=\int_{V_1}^{V_2}p(V,T)\,\mathrm dV
+=RT\int_{V_1}^{V_2}\frac{\mathrm dV}{V-b}
+-a\int_{V_1}^{V_2}\frac{\mathrm dV}{V^2}.
+\]
+分别积分，
+\[
+\boxed{A=
+RT\ln\frac{V_2-b}{V_1-b}
++a\left(\frac1{V_2}-\frac1{V_1}\right)}.
+\]
+\excheck 要求 $V_1,V_2>b$；
+$a\to0,b\to0$ 时恢复理想气体的
+$A=RT\ln(V_2/V_1)$。
+
+\thermoenergyproblem{58}{69}
+一摩尔氧气在温度
+$T=280\,\mathrm K$ 不变时，
+由体积 $V_1=1.00\,\mathrm L$
+膨胀至 $V_2=5.0\,\mathrm L$。
+把氧气视为范德瓦耳斯气体，求
+(a) 内能变化 $\Delta U$；
+(b) 气体吸热 $Q$。
+\exsolution
+在常定容热容的范德瓦耳斯模型中，
+一摩尔内能可写成
+\[
+U(T,V)=C_VT-\frac aV+\text{常数}.
+\]
+等温过程中 $\Delta T=0$，
+所以
+\[
+\boxed{\Delta U=a\left(\frac1{V_1}-\frac1{V_2}\right)}.
+\]
+另一方面第57题给气体做功
+\[
+A=RT\ln\frac{V_2-b}{V_1-b}
++a\left(\frac1{V_2}-\frac1{V_1}\right).
+\]
+由第一定律 $Q=\Delta U+A$，
+两项中含 $a$ 的部分相消：
+\[
+\boxed{Q=RT\ln\frac{V_2-b}{V_1-b}}.
+\]
+取氧气常用范德瓦耳斯参数
+$a\simeq1.36\,\mathrm{atm\,L^2/mol^2}$、
+$b\simeq0.0318\,\mathrm{L/mol}$：
+\[
+\Delta U\simeq1.09\,\mathrm{atm\,L}
+\simeq\boxed{0.11\,\mathrm{kJ}},
+\quad
+Q\simeq(8.314)(280)
+\ln\frac{5-0.0318}{1-0.0318}
+\simeq\boxed{3.8\,\mathrm{kJ}}.
+\]
+\excheck 与理想气体等温过程的 $\Delta U=0$ 不同：
+分子间吸引项 $-a/V$ 导致范德瓦耳斯内能
+还依赖体积。
+
+\thermoenergyproblem{59}{69}
+范德瓦耳斯气体满足
+$(p+a/V^2)(V-b)=RT$（一摩尔）。
+在定容摩尔热容 $C_V$ 近似为常数的条件下，求
+(a) 可逆绝热曲线在 $T,V$ 坐标中的方程；
+(b) 热容差 $C_p-C_V$ 随 $T,V$ 的函数。
+\exsolution
+由范德瓦耳斯内能
+$U=C_VT-a/V$，
+有
+$\mathrm dU=C_V\,\mathrm dT+(a/V^2)\mathrm dV$。
+可逆绝热 $\delta Q=0$，
+第一定律给
+\[
+0=C_V\,\mathrm dT+
+\left(\frac a{V^2}+p\right)\mathrm dV
+=C_V\,\mathrm dT+\frac{RT}{V-b}\mathrm dV.
+\]
+分离变量积分：
+\[
+C_V\frac{\mathrm dT}{T}
+=-R\frac{\mathrm dV}{V-b}
+\quad\Longrightarrow\quad
+\boxed{T(V-b)^{R/C_V}=\text{常数}}.
+\]
+(b) 使用一般热容差恒等式
+\[
+C_p-C_V=
+-T\frac{(\partial p/\partial T)_V^2}
+{(\partial p/\partial V)_T}.
+\]
+由于
+\[
+\left(\frac{\partial p}{\partial T}\right)_V=\frac R{V-b},
+\qquad
+\left(\frac{\partial p}{\partial V}\right)_T
+=-\frac{RT}{(V-b)^2}+\frac{2a}{V^3},
+\]
+得
+\[
+\boxed{C_p-C_V=
+\frac R{1-\dfrac{2a(V-b)^2}{RTV^3}}}.
+\]
+\excheck 在稀薄气体极限
+$a,b\to0$，两结果退化为
+$TV^{R/C_V}=\text{常数}$ 和 $C_p-C_V=R$。
+热容差表达式仅在稳定的单相分支有物理意义。
+
+\thermoenergyproblem{60}{69}
+两个绝热刚性容器由阀门相通：
+第一容器体积 $V_1=10\,\mathrm L$，
+内有 $\nu=2.5$ mol 二氧化碳；
+第二容器体积 $V_2=100\,\mathrm L$，
+原来是真空。打开阀门后气体自由膨胀，
+假设遵从范德瓦耳斯方程，
+求气体的温度变化 $\Delta T$。
+\exsolution
+两容器总系统绝热且刚性，
+向真空自由膨胀不对外做功，
+因此总内能守恒：
+\[
+\Delta U=0.
+\]
+对 $\nu$ 摩尔的范德瓦耳斯模型，
+内能为
+\[
+U=\nu C_VT-\frac{a\nu^2}{V}+\text{常数}.
+\]
+最终容积是\emph{两容器之和}
+$V_f=V_1+V_2$。
+故
+\[
+0=\nu C_V(T_f-T_i)
+-a\nu^2\left(\frac1{V_f}-\frac1{V_1}\right).
+\]
+因此
+\[
+\boxed{\Delta T=T_f-T_i=
+\frac{a\nu}{C_V}
+\left(\frac1{V_1+V_2}-\frac1{V_1}\right)<0}.
+\]
+若采用二氧化碳近似参数
+$a\simeq3.59\,\mathrm{atm\,L^2/mol^2}$，
+常温线性分子的刚性模态
+$C_V\simeq5R/2$，
+则
+\[
+\boxed{\Delta T\simeq-4\,\mathrm K}.
+\]
+\excheck 理想气体向真空自由膨胀温度不变，
+但范德瓦耳斯吸引作用导致内能中的
+$-a\nu^2/V$ 随体积改变，温度因而降低。
+
+\thermoenergyproblem{61}{69}
+$\nu=3.0$ mol 二氧化碳
+在\emph{向真空自由膨胀}时，
+由体积 $V_1=5.0\,\mathrm L$
+变为 $V_2=10\,\mathrm L$，
+欲保持气体温度不变，
+需要向气体传入多少热量？
+按范德瓦耳斯气体处理。
+\exsolution
+气体向真空自由膨胀，
+对外做功 $A=0$。
+范德瓦耳斯总内能
+$U=\nu C_VT-a\nu^2/V$，
+在 $\Delta T=0$ 时：
+\[
+\Delta U=
+a\nu^2\left(\frac1{V_1}-\frac1{V_2}\right).
+\]
+由第一定律
+$Q=\Delta U+A=\Delta U$，得到
+\[
+\boxed{Q=a\nu^2\frac{V_2-V_1}{V_1V_2}}.
+\]
+用 $a\simeq3.59\,\mathrm{atm\,L^2/mol^2}$，
+\[
+Q\simeq3.59(3.0)^2
+\left(\frac15-\frac1{10}\right)
+\,\mathrm{atm\,L}
+=3.23\,\mathrm{atm\,L}
+\simeq\boxed{0.33\,\mathrm{kJ}}.
+\]
+\excheck \emph{向真空}的自由膨胀与
+第57题\emph{可逆等温}膨胀不同。
+在自由膨胀中没有准静态 $p\,\mathrm dV$
+外功，不能套用第57题的做功积分。
