@@ -1,0 +1,372 @@
+% Irodov Part III Electrodynamics §3.1, original 1--12.
+% Source PDF pp.101--102 (printed pp.92--93), answers PDF pp.304--305.
+% k=1/(4*pi*epsilon_0). Part III RESTARTS independent numbering.
+\electroproblem{1}{92}
+求两电子、两质子之间静电力与万有引力之比。
+若两相同粒子的静电力和万有引力大小相等，
+其电荷质量比 $|q|/m$ 应为多少？
+\exsolution
+库仑力与引力大小为
+$F_e=e^2/(4\pi\varepsilon_0r^2)$、
+$F_g=Gm^2/r^2$。
+故比值与距离无关：
+\[
+\frac{F_e}{F_g}=\frac{e^2}{4\pi\varepsilon_0 Gm^2}.
+\]
+代入 $e=1.602\times10^{-19}\,\mathrm C$、
+$m_e=9.109\times10^{-31}\,\mathrm{kg}$、
+$m_p=1.673\times10^{-27}\,\mathrm{kg}$，
+得到
+\[
+\boxed{(F_e/F_g)_{ee}\simeq4.2\times10^{42}},\quad
+\boxed{(F_e/F_g)_{pp}\simeq1.2\times10^{36}}.
+\]
+一般相同粒子两力相等要求
+$q^2/(4\pi\varepsilon_0r^2)=Gm^2/r^2$，
+故
+\[
+\boxed{|q|/m=\sqrt{4\pi\varepsilon_0G}
+\simeq8.6\times10^{-11}\,\mathrm{C/kg}}.
+\]
+\excheck \textbf{底本勘误：}
+书末把质子比值印作 $10^{26}$，
+与所列基本常数相差10个数量级；
+应为约 $10^{36}$，两种力均按真空中的点粒子处理。
+
+\electroproblem{2}{92}
+两个铜球，质量各为 $1.0\,\mathrm g$，
+球心相距 $1.0\,\mathrm m$。
+若每球的电子总电荷与核内正电荷之差
+为核电荷的 $1\%$，
+求它们之间的电相互作用力数量级。
+\exsolution
+铜原子序数 $Z=29$、
+摩尔质量 $M_{\rm Cu}\simeq63.5\,\mathrm{g/mol}$。
+单球的原子数为
+$N=(m/M_{\rm Cu})N_A$，
+其核正电荷总量为 $ZNe$。
+净电荷模
+\[
+|Q|=0.01\,ZNe
+=0.01\cdot29\cdot\frac{1.0}{63.5}
+(6.022\times10^{23})(1.602\times10^{-19})
+\simeq4.4\times10^2\,\mathrm C.
+\]
+用库仑定律
+\[
+\boxed{F=\frac{Q^2}{4\pi\varepsilon_0r^2}
+\simeq1.8\times10^{15}\,\mathrm N
+\approx2\times10^{15}\,\mathrm N}.
+\]
+\excheck 这是概念性的巨大电荷差假设；
+实际金属球不可能在普通环境下
+稳定承载数百库仑的同号电荷。
+
+\electroproblem{3}{92--93}
+两相同小球，各质量 $m$、电荷 $q(t)$，
+由长为 $\ell$ 的等长绝缘线悬挂于同一点。
+两球距离 $x\ll\ell$。
+若两球靠近速率满足
+$-\dot x=v=a/x$，求电荷泄漏速率 $\dot q$。
+\exsolution
+在小角度准静态平衡下
+$\tan\theta\simeq x/(2\ell)$，
+两球间静电排斥力
+$F_e=q^2/(4\pi\varepsilon_0x^2)$，
+竖直平衡给线张力约为 $mg$，
+因此
+\[
+\frac{q^2}{4\pi\varepsilon_0x^2}
+=mg\frac{x}{2\ell}
+\quad\Longrightarrow\quad
+q=\sqrt{\frac{2\pi\varepsilon_0mg}{\ell}}\,
+x^{3/2}.
+\]
+对时间求导并用 $\dot x=-a/x$：
+\[
+\boxed{\dot q=
+-\frac{3a}{2}
+\sqrt{\frac{2\pi\varepsilon_0mg}{\ell x}}}.
+\]
+泄漏量率为
+$-\dot q=(3a/2)\sqrt{2\pi\varepsilon_0mg/(\ell x)}$。
+\excheck 若原书抽取答案将 $x^{-1/2}$ 漏掉，
+会导致量纲不等于 $\mathrm{C/s}$；
+上式由逐步微分和单位检查确认。
+
+\electroproblem{4}{93}
+两个正点电荷 $q_1,q_2$，
+位置矢量分别为 $\bm r_1,\bm r_2$。
+求应放置在何处、大小为何的第三个负点电荷
+$q_3$，使三个电荷各自受合力为零。
+\exsolution
+要使两正电荷的排斥力被吸引力抵消，
+$q_3<0$ 必须处于两者连线之间。
+设两正电荷间距 $L$，第三电荷距 $q_1$ 为 $x$。
+第三电荷自身零受力要求
+$q_1/x^2=q_2/(L-x)^2$，
+得
+\[
+x=\frac{\sqrt{q_1}}{\sqrt{q_1}+\sqrt{q_2}}L,
+\quad
+\boxed{\bm r_3=
+\frac{\sqrt{q_2}\,\bm r_1+\sqrt{q_1}\,\bm r_2}
+{\sqrt{q_1}+\sqrt{q_2}}}.
+\]
+对 $q_1$ 的力平衡：
+$q_1q_2/L^2=q_1|q_3|/x^2$，
+故
+\[
+\boxed{q_3=-\frac{q_1q_2}
+{(\sqrt{q_1}+\sqrt{q_2})^2}}.
+\]
+\excheck 对称特例 $q_1=q_2=q$，
+$q_3=-q/4$ 且位于中点，
+与库仑力的距离平方关系相符。
+
+\electroproblem{5}{93}
+半径 $r$ 的细导线圆环总电荷为 $q$。
+若在圆环中心加入点电荷 $q_0$，
+求导线的\emph{拉伸张力增量} $\Delta\mathcal T$。
+\exsolution
+环上每单位弧长的电荷
+$\lambda=q/(2\pi r)$。
+取中心角为 $\mathrm d\varphi$ 的微小圆环元，
+其电荷
+$\mathrm dq=\lambda r\,\mathrm d\varphi
+=q\,\mathrm d\varphi/(2\pi)$。
+中心电荷对该弧元施加径向力
+$\mathrm dF=(1/(4\pi\varepsilon_0))
+q_0\mathrm dq/r^2$。
+两端张力增量的径向合力
+$2\Delta\mathcal T\sin(\mathrm d\varphi/2)
+\simeq\Delta\mathcal T\,\mathrm d\varphi$。
+比较两式：
+\[
+\boxed{\Delta\mathcal T=
+\frac{q q_0}{8\pi^2\varepsilon_0r^2}}.
+\]
+\excheck 相同符号电荷导致张力增加，
+不同符号则为负增量；
+这里求的是新增张力而非环自身静电排斥
+原有的总张力。
+
+\electroproblem{6}{93}
+真空中有正点电荷 $q=50\,\mathrm{\mu C}$，
+位于二维位置
+$\bm r_0=(2\bm i+3\bm j)\,\mathrm m$。
+求在
+$\bm r=(8\bm i-5\bm j)\,\mathrm m$
+处的电场矢量及模。
+\exsolution
+位移矢量
+$\bm R=\bm r-\bm r_0
+=(6\bm i-8\bm j)\,\mathrm m$，
+其模 $R=10\,\mathrm m$。
+点电荷电场
+\[
+\bm E=\frac{q}{4\pi\varepsilon_0}
+\frac{\bm R}{R^3}.
+\]
+代入
+$1/(4\pi\varepsilon_0)\simeq8.988\times10^9$
+得
+\[
+\boxed{\bm E\simeq
+(2.7\bm i-3.6\bm j)\,\mathrm{kV/m}},
+\quad
+\boxed{|\bm E|\simeq4.5\,\mathrm{kV/m}}.
+\]
+\excheck 负 $y$ 分量反映测量点位于电荷下方；
+模满足 $\sqrt{2.7^2+3.6^2}=4.5$。
+
+\electroproblem{7}{93}
+图3.1所示的正方形两上顶点各放置 $+q$，
+两下顶点各放置 $-q$，
+正方形两条对角线长均为 $2\ell$。
+求从正方形中心沿其法线距离 $x$ 处的
+电场强度模。
+\exsolution
+取正方形位于 $z=0$，
+上、下顶点纵坐标为
+$\pm\ell/\sqrt2$，
+各顶点到轴上观察点
+$(0,0,x)$ 的距离均为
+$\sqrt{\ell^2+x^2}$。
+库仑场叠加时，
+水平方向分量相互抵消，
+轴向分量因总电荷为零而抵消，
+只余从正电荷向负电荷方向的平面内分量。
+单个顶点对该分量的贡献
+为 $k q(\ell/\sqrt2)/(\ell^2+x^2)^{3/2}$，
+四项相加：
+\[
+\boxed{E(x)=
+\frac{q\ell}{\sqrt2\,\pi\varepsilon_0
+(\ell^2+x^2)^{3/2}}}.
+\]
+\excheck 该场\emph{平行正方形所在平面}，
+而不是垂直于平面；
+$x\gg\ell$ 时呈偶极型 $x^{-3}$ 衰减。
+
+\electroproblem{8}{93}
+一条薄半圆弧半径 $R=20\,\mathrm{cm}$，
+沿弧均匀带总电荷 $q=0.70\,\mathrm{nC}$。
+求其曲率中心处电场强度模。
+\exsolution
+弧长 $\pi R$，线密度
+$\lambda=q/(\pi R)$。
+沿半圆以角度 $\varphi$ 参数化，
+弧元
+$\mathrm dq=\lambda R\,\mathrm d\varphi$，
+电场大小微元为
+$\mathrm dE=k\,\mathrm dq/R^2$。
+平行弧直径的场分量两两抵消，
+对称轴分量求和：
+\[
+E=\frac{k\lambda}{R}
+\int_{-\pi/2}^{\pi/2}\cos\varphi\,\mathrm d\varphi
+=\frac{2k\lambda}R
+=\boxed{\frac{q}{2\pi^2\varepsilon_0R^2}}.
+\]
+代入得
+\[
+\boxed{E\simeq1.0\times10^2\,\mathrm{V/m}
+=0.10\,\mathrm{kV/m}}.
+\]
+\excheck 完整均匀圆环的中心电场为零，
+但半圆环沿其对称轴的场不为零。
+
+\electroproblem{9}{93}
+半径为 $r$ 的均匀带电细圆环总电荷为 $q$。
+求圆环轴线上距中心 $\ell$ 处的电场模，
+讨论 $\ell\gg r$，求最大值及其位置，
+并说明 $E(\ell)$ 的大致图像。
+\exsolution
+每个环元到轴上点距离
+$s=\sqrt{r^2+\ell^2}$，
+径向分量由对称性相消，
+仅保留轴向分量：
+\[
+E(\ell)=\frac{1}{4\pi\varepsilon_0}
+\frac{|q\ell|}{(r^2+\ell^2)^{3/2}}.
+\]
+在 $\ell\gg r$ 时，
+$E\simeq|q|/(4\pi\varepsilon_0\ell^2)$。
+对 $\ell>0$ 求导：
+\[
+E'(\ell)\propto
+\frac{r^2-2\ell^2}{(r^2+\ell^2)^{5/2}},
+\]
+故最大值出现在 $\ell=r/\sqrt2$，
+\[
+\boxed{E_{\max}=
+\frac{|q|}{6\sqrt3\,\pi\varepsilon_0r^2}}.
+\]
+图像从 $E(0)=0$ 起先上升，
+到 $\ell=r/\sqrt2$ 达峰值后按
+$\ell^{-2}$ 衰减。
+\excheck 环轴电场在中心恰为零；
+若把环误当成点电荷，会在 $\ell=0$
+得到错误的发散。
+
+\electroproblem{10}{93}
+一点电荷 $+q$ 处于均匀带电细圆环中心，
+环半径为 $R$、总电荷为 $-q$。
+求在轴线上 $x\gg R$ 处的电场模。
+\exsolution
+在 $x>0$ 处，
+中心点电荷的轴向场
+$E_+=kq/x^2$，
+负圆环的轴向场
+$E_-=-kq x/(x^2+R^2)^{3/2}$。
+所以
+\[
+E_x=\frac{kq}{x^2}
+\left[1-\left(1+\frac{R^2}{x^2}\right)^{-3/2}\right].
+\]
+当 $R/x\ll1$，
+展开
+$(1+u)^{-3/2}=1-\frac32u+O(u^2)$，
+得到
+\[
+\boxed{E\simeq
+\frac{3qR^2}{8\pi\varepsilon_0x^4}}.
+\]
+\excheck \textbf{原书书末系数争议：}
+本版简答印
+$3qR^2/(4\pi\varepsilon_0x^4)$，
+是上述逐项叠加与二项式展开结果的两倍。
+按照题面点电荷 $+q$ 与圆环总电荷 $-q$
+的条件，本稿取 $3/(8\pi)$ 系数，
+待独立对照原版勘误或其他版本。
+
+\electroproblem{11}{93}
+一个半径 $R$、总电荷为 $q$ 的均匀带电细圆环，
+与一根从圆环中心沿轴向延伸至远方的
+均匀带电细长直线同轴；
+长直线从圆环中心开始，
+线电荷密度为 $\lambda$。
+求两者间的相互作用力。
+\exsolution
+从长直线起点起沿轴向取坐标 $z\ge0$。
+线元电荷为 $\lambda\,\mathrm dz$，
+到圆环任意环元的距离为
+$\sqrt{R^2+z^2}$。
+线元对圆环元的\emph{径向}场分量为
+\[
+\mathrm dE_R=
+\frac1{4\pi\varepsilon_0}
+\frac{\lambda R\,\mathrm dz}{(R^2+z^2)^{3/2}}.
+\]
+径向分量对整个均匀环对称相消；
+更方便的办法是求\emph{轴向作用力}：
+圆环轴线上电场为
+$E_z(z)=kqz/(R^2+z^2)^{3/2}$，
+长直线上受力为
+\[
+F=\lambda\int_0^\infty E_z(z)\,\mathrm dz
+=kq\lambda
+\int_0^\infty\frac{z\,\mathrm dz}{(R^2+z^2)^{3/2}}
+=\boxed{\frac{q\lambda}{4\pi\varepsilon_0R}}.
+\]
+\excheck 作用力方向沿公共轴，
+符号由 $q\lambda$ 决定；
+使用牛顿第三定律，圆环受力大小相同方向相反。
+
+\electroproblem{12}{93}
+半径为 $R$ 的绝缘细圆环线电荷密度
+$\lambda(\varphi)=\lambda_0\cos\varphi$。
+求电场模：(a) 圆心；
+(b) 环轴线上距圆心 $x$ 处；
+并求 $x\gg R$ 的渐近表达式。
+\exsolution
+取 $\varphi=0$ 沿平面内 $+X$ 轴。
+电荷元
+$\mathrm dq=\lambda_0R\cos\varphi\,\mathrm d\varphi$，
+$\int_0^{2\pi}\mathrm dq=0$。
+观察点在轴线上时，场的轴向分量与总电荷成正比，
+故为零；平面内 $X$ 分量为
+\[
+E_X=-k\frac{R}{(x^2+R^2)^{3/2}}
+\int_0^{2\pi}\cos\varphi\,\mathrm dq
+=-k\frac{\pi\lambda_0R^2}{(x^2+R^2)^{3/2}}.
+\]
+所以
+\[
+\boxed{E(0)=\frac{|\lambda_0|}{4\varepsilon_0R}},
+\qquad
+\boxed{E(x)=
+\frac{|\lambda_0|R^2}{4\varepsilon_0(x^2+R^2)^{3/2}}}.
+\]
+定义环的偶极矩
+$p=\int(R\cos\varphi)\,\mathrm dq
+=\pi\lambda_0R^2$。
+在 $x\gg R$ 时
+\[
+\boxed{E\simeq\frac{|p|}{4\pi\varepsilon_0x^3}}.
+\]
+\excheck 由于线密度正负交替，
+该环\emph{净电荷为零}；
+轴上场方向在环平面内，
+表现为偶极场而非点电荷的 $x^{-2}$ 场。
