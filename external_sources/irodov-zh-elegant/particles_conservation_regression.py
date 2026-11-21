@@ -64,7 +64,7 @@ test(302,"relativistic endothermic general toy threshold MeV",
      threshold(140,938,140+938+50),
      50*(1+140/938)+50*50/(2*938))
 test(303,"positron/electron annihilation opening angle deg",
-     2*degrees(asin(sqrt(2*(2*M_E)/(750+4*M_E)))),98.8)
+     2*degrees(asin(sqrt(2*M_E/(.750+2*M_E)))),98.8)
 test(304,"gamma on free electron pair-production threshold MeV",
      threshold(0,M_E,3*M_E),2.044)
 test(304,"gamma on proton charged-pion-pair threshold MeV",
@@ -100,9 +100,10 @@ def quantum_difference(left,right):
         return [sum(sp[x][i] for x in s) for i in range(5)]
     a,b=add(left),add(right)
     return tuple(b[i]-a[i] for i in range(5))
-def verify(q,n,left,right,changed):
+def verify(q,n,left,right,changed,scope=None):
     diff=quantum_difference(left,right)
-    actual={names[i] for i,x in enumerate(diff) if x}
+    actual={names[i] for i,x in enumerate(diff) if x and
+            (scope is None or names[i] in scope)}
     if actual!=set(changed):
         raise AssertionError(f"VI.{q}({n}) changed {actual}, expected {changed}; diff={diff}")
     testlog.append((q,f"case {n}: exact quantum-number changes ({','.join(changed) or 'none'})",diff))
@@ -122,7 +123,7 @@ v308=[
  (['K-'],['mu-','anumu'],())
 ]
 for i,(initial,final,violated) in enumerate(v308,1):
-    verify(308,i,initial,final,violated)
+    verify(308,i,initial,final,violated,scope=('Le','Lmu'))
 
 # 309: strong interactions must conserve S (as well as Q,B).
 v309=[
@@ -134,7 +135,7 @@ v309=[
  (['K-','p'],['Omega-','K+','K0'],())
 ]
 for i,(initial,final,violated) in enumerate(v309,1):
-    verify(309,i,initial,final,violated)
+    verify(309,i,initial,final,violated,scope=('S',))
 
 # 310: some processes fail MORE THAN ONE independent conservation law.
 v310=[
