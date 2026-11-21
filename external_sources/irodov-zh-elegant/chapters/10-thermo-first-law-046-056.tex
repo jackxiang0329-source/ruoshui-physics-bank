@@ -1,0 +1,381 @@
+% Irodov, user-supplied Arihant PDF, section 2.2, original problems 46--56,
+% printed pages 67--69 (PDF pp.76--78). One-mole expressions unless stated.
+\thermoenergyproblem{46}{67}
+氩气在一次多方过程中，体积增大到原来的
+$\alpha=4.0$ 倍，同时压强降至原来的
+$1/\beta$，其中 $\beta=8.0$。
+把氩气视为理想单原子气体，求此过程的摩尔热容。
+\exsolution
+设多方过程为 $pV^n=\text{常数}$，
+则
+\[
+\frac{p_2}{p_1}=\left(\frac{V_1}{V_2}\right)^n
+\Longrightarrow \frac1\beta=\alpha^{-n},\qquad
+n=\frac{\ln\beta}{\ln\alpha}
+=\frac{\ln8}{\ln4}=\frac32.
+\]
+由理想气体第一定律，
+过程摩尔热容
+\[
+C=C_V+\frac{R}{1-n}.
+\]
+单原子气体 $C_V=3R/2$，
+故
+\[
+\boxed{C=\frac{3R}{2}+\frac{R}{1-3/2}
+=-\frac R2\simeq-4.16\,\mathrm{J/(mol\,K)}}.
+\]
+\excheck 负热容是\emph{此多方路径的热量变化率}
+$\delta Q/\mathrm dT<0$，不是单原子气体
+平衡定容热容变成负值。
+
+\thermoenergyproblem{47}{68}
+一摩尔氩气沿多方指数 $n=1.50$ 的过程膨胀，
+温度变化 $\Delta T=-26\,\mathrm K$。
+求：(a) 气体吸热 $Q$；(b) 气体做功 $A$。
+\exsolution
+单原子氩气 $C_V=3R/2$，
+多方过程的摩尔热容
+\[
+C=C_V+\frac R{1-n}
+=\frac{3R}{2}-2R=-\frac R2.
+\]
+因此
+\[
+\boxed{Q=C\Delta T
+=\left(-\frac R2\right)(-26\,\mathrm K)
+\simeq+108\,\mathrm J}.
+\]
+理想气体沿多方过程有
+$p\,\mathrm dV=R\,\mathrm dT/(1-n)$，
+故
+\[
+\boxed{A=\frac{R\Delta T}{1-n}
+=\frac{8.314(-26)}{-0.50}\,\mathrm J
+\simeq432\,\mathrm J}.
+\]
+\excheck 内能变化
+$\Delta U=(3R/2)(-26)\simeq-324\,\mathrm J$，
+故 $\Delta U+A\simeq108\,\mathrm J=Q$，
+与第一定律一致。
+
+\thermoenergyproblem{48}{68}
+绝热指数为 $\gamma$ 的理想气体
+沿 $p=\alpha V$ 的规律膨胀，
+其中 $\alpha$ 为常数，
+初体积 $V_0$，末体积 $\eta V_0$。
+求：(a) 内能增量；(b) 气体做功；
+(c) 该过程的摩尔热容。
+\exsolution
+设气体含 $\nu$ 摩尔，则
+$pV=\nu RT$、$\nu C_V=\nu R/(\gamma-1)$。
+沿 $p=\alpha V$ 有
+$\nu RT=\alpha V^2$，所以
+\[
+\Delta U=\nu C_V\Delta T
+=\frac{\alpha}{\gamma-1}(V_2^2-V_0^2).
+\]
+取 $V_2=\eta V_0$，
+\[
+\boxed{\Delta U=
+\frac{\alpha V_0^2(\eta^2-1)}{\gamma-1}}.
+\]
+机械功
+\[
+\boxed{A=\int_{V_0}^{\eta V_0}\alpha V\,\mathrm dV
+=\frac{\alpha V_0^2}{2}(\eta^2-1)}.
+\]
+微分状态方程有
+$\nu R\,\mathrm dT=2\alpha V\,\mathrm dV$，
+故每摩尔过程热容
+\[
+C=C_V+\frac{p\,\mathrm dV}{\nu\,\mathrm dT}
+=\frac R{\gamma-1}+\frac R2
+=\boxed{\frac{R(\gamma+1)}{2(\gamma-1)}}.
+\]
+\excheck 题目未指定摩尔数；
+$\Delta U,A$ 是\emph{整团气体的}能量，
+而 $C$ 是每摩尔的热容。
+
+\thermoenergyproblem{49}{68}
+绝热指数为 $\gamma$ 的理想气体在膨胀中
+吸收的热量恰好等于其\emph{内能减少的量}。
+求：(a) 过程摩尔热容；(b) $T,V$ 过程方程；
+(c) 一摩尔气体从初温 $T_0$ 出发、
+体积增大 $\eta$ 倍时对外做功。
+\exsolution
+题意为 $\delta Q=-\mathrm dU$，
+由第一定律
+$\delta Q=\mathrm dU+p\,\mathrm dV$
+得到
+$p\,\mathrm dV=-2\,\mathrm dU=-2\nu C_V\,\mathrm dT$。
+于是
+\[
+\boxed{C=\frac{\delta Q}{\nu\,\mathrm dT}=-C_V
+=-\frac R{\gamma-1}}.
+\]
+由 $pV=\nu RT$，
+\[
+\frac{\mathrm dT}{T}
+=-\frac{R}{2C_V}\frac{\mathrm dV}{V}
+=-\frac{\gamma-1}{2}\frac{\mathrm dV}{V}.
+\]
+积分：
+\[
+\boxed{TV^{(\gamma-1)/2}=\text{常数}}.
+\]
+若为一摩尔，末温
+$T_2=T_0\eta^{-(\gamma-1)/2}$，
+机械功 $A=-2\Delta U$，故
+\[
+\boxed{A=\frac{2RT_0}{\gamma-1}
+\left[1-\eta^{-(\gamma-1)/2}\right]}.
+\]
+\excheck 膨胀导致 $T_2<T_0$，
+因此 $\Delta U<0$，
+$\delta Q=-\mathrm dU>0$，即仍吸热。
+
+\thermoenergyproblem{50}{68}
+一摩尔绝热指数为 $\gamma$ 的理想气体，
+经历过程 $p=aT^\alpha$，$a,\alpha$ 为常数。
+求：(a) 温度增加 $\Delta T$ 时气体做功；
+(b) 过程摩尔热容与热容为负的条件。
+\exsolution
+由理想气体状态方程
+$V=RT/p=(R/a)T^{1-\alpha}$，
+故
+\[
+\mathrm dV=(R/a)(1-\alpha)T^{-\alpha}\mathrm dT,
+\qquad p\,\mathrm dV=R(1-\alpha)\mathrm dT.
+\]
+因此
+\[
+\boxed{A=R(1-\alpha)\Delta T}.
+\]
+再用
+$\delta Q=C_V\,\mathrm dT+p\,\mathrm dV$，
+\[
+\boxed{C=C_V+R(1-\alpha)
+=R\left(\frac{\gamma}{\gamma-1}-\alpha\right)}.
+\]
+当
+\[
+\boxed{\alpha>\frac{\gamma}{\gamma-1}}
+\]
+时 $C<0$。
+\excheck $\alpha=1$ 是等容路径，
+$A=0$；$\alpha=0$ 是等压路径，
+$C=C_p$，均可反查。
+
+\thermoenergyproblem{51}{68}
+某理想气体的内能和体积沿过程中满足
+$U=aV^\alpha$，
+其中 $a,\alpha$ 为常数，
+气体绝热指数为 $\gamma$。
+若内能增量为 $\Delta U$，求：(a) 气体做功
+和传递给气体的热量；(b) 过程摩尔热容。
+\exsolution
+理想气体满足
+$pV=\nu RT=(\gamma-1)U$，
+所以
+\[
+p=\frac{(\gamma-1)U}{V}
+=(\gamma-1)aV^{\alpha-1}.
+\]
+对于 $\alpha\ne0$，
+\[
+A=\int p\,\mathrm dV
+=\frac{\gamma-1}{\alpha}
+\,a(V_2^\alpha-V_1^\alpha)
+=\boxed{\frac{\gamma-1}{\alpha}\Delta U}.
+\]
+由第一定律
+\[
+\boxed{Q=\Delta U+A
+=\frac{\alpha+\gamma-1}{\alpha}\Delta U}.
+\]
+因 $\mathrm dU=\nu C_V\,\mathrm dT$，
+过程摩尔热容为
+\[
+\boxed{C=C_V\frac{\alpha+\gamma-1}{\alpha}
+=\frac{R(\alpha+\gamma-1)}
+{\alpha(\gamma-1)}}.
+\]
+\excheck $\alpha=0$ 时沿路径内能不变、
+温度不变，此题以非零 $\Delta U$ 给出的
+比式不能直接使用，需单独讨论等温极限。
+
+\thermoenergyproblem{52}{68}
+某理想气体的定容摩尔热容为 $C_V$。
+在下列过程中，求过程摩尔热容随体积 $V$ 的函数：
+(a) $T=T_0e^{\alpha V}$；
+(b) $p=p_0e^{\alpha V}$。
+\exsolution
+对一摩尔理想气体，
+第一定律给出
+\[
+C=\frac{\delta Q}{\mathrm dT}
+=C_V+p\frac{\mathrm dV}{\mathrm dT}
+=C_V+\frac{RT/V}{\mathrm dT/\mathrm dV}.
+\]
+(a) $T=T_0e^{\alpha V}$，
+因此 $\mathrm dT/\mathrm dV=\alpha T$，
+\[
+\boxed{C_a(V)=C_V+\frac R{\alpha V}}.
+\]
+(b) $p=p_0e^{\alpha V}$，
+状态方程 $T=pV/R$，
+故
+$\mathrm dT/\mathrm dV=(p/R)(1+\alpha V)$。
+代入：
+\[
+\boxed{C_b(V)=C_V+\frac R{1+\alpha V}}.
+\]
+\excheck 在 $T'(V)=0$ 的特殊位置，
+用 $\delta Q/\mathrm dT$ 定义的过程热容会发散；
+与 $C_V$ 常数并不矛盾。
+
+\thermoenergyproblem{53}{68}
+一摩尔理想气体的绝热指数为 $\gamma$，
+沿 $p=p_0+\alpha/V$ 变化，
+其中 $p_0,\alpha>0$。
+求：(a) 过程摩尔热容 $C(V)$；
+(b) 当 $V_1\to V_2$ 时，
+内能增量、气体做功和吸热量。
+\exsolution
+状态方程给出
+$RT=pV=p_0V+\alpha$，
+所以 $\mathrm dT=(p_0/R)\,\mathrm dV$，
+$\mathrm dV/\mathrm dT=R/p_0$。
+于是
+\[
+\boxed{C(V)=C_V+\frac{Rp}{p_0}
+=C_p+\frac{R\alpha}{p_0V}
+=\frac{\gamma R}{\gamma-1}+\frac{R\alpha}{p_0V}}.
+\]
+积分内能变化：
+\[
+\boxed{\Delta U=\frac{p_0(V_2-V_1)}{\gamma-1}}.
+\]
+气体做功
+\[
+\boxed{A=\int_{V_1}^{V_2}
+\left(p_0+\frac{\alpha}{V}\right)\mathrm dV
+=p_0(V_2-V_1)+\alpha\ln\frac{V_2}{V_1}}.
+\]
+所以
+\[
+\boxed{Q=\frac{\gamma p_0}{\gamma-1}(V_2-V_1)
++\alpha\ln\frac{V_2}{V_1}}.
+\]
+\excheck $p_0V$、$\alpha$ 均有能量量纲，
+故每一项都为焦耳。
+
+\thermoenergyproblem{54}{69}
+一摩尔理想气体的定压摩尔热容为 $C_p$，
+过程满足 $T=T_0+\alpha V$。
+求：(a) 过程摩尔热容；
+(b) 体积由 $V_1$ 增至 $V_2$ 的吸热量。
+\exsolution
+由状态方程
+$p=RT/V=R(T_0/V+\alpha)$，
+且 $\mathrm dT/\mathrm dV=\alpha$。
+因此
+\[
+C=C_V+p\,\frac{\mathrm dV}{\mathrm dT}
+=C_p+\frac{RT_0}{\alpha V},
+\quad
+\boxed{C(V)=C_p+\frac{RT_0}{\alpha V}}.
+\]
+沿过程吸热
+\[
+Q=\int_{V_1}^{V_2}C(V)\,\mathrm dT
+=\alpha\int_{V_1}^{V_2}C(V)\,\mathrm dV.
+\]
+计算：
+\[
+\boxed{Q=C_p\alpha(V_2-V_1)+
+RT_0\ln\frac{V_2}{V_1}}.
+\]
+\excheck 若 $\alpha=0$，
+过程为等温且不能把 $C(V)$ 的表达式
+当成有限量；但吸热的积分形式仍有极限
+$Q=RT_0\ln(V_2/V_1)$。
+
+\thermoenergyproblem{55}{69}
+求一摩尔理想气体满足下列过程热容规律时，
+$T,V$ 之间的过程方程：
+(a) $C=C_V+\alpha T$；
+(b) $C=C_V+\beta V$；
+(c) $C=C_V+a p$。
+\exsolution
+对一摩尔理想气体，
+$\delta Q=C_V\,\mathrm dT+p\,\mathrm dV$
+及 $p=RT/V$ 给出
+\[
+(C-C_V)\,\mathrm dT
+=\frac{RT}{V}\,\mathrm dV.
+\]
+(a) 代入 $C-C_V=\alpha T$，
+\[
+\alpha\,\mathrm dT=\frac R V\,\mathrm dV
+\Longrightarrow
+\boxed{V=V_0e^{\alpha(T-T_0)/R}}.
+\]
+(b) 若 $C-C_V=\beta V$，
+\[
+\beta\,\mathrm dT=\frac{RT}{V^2}\,\mathrm dV
+\Longrightarrow
+\boxed{\frac1V+\frac\beta R T=\text{常数}}.
+\]
+(c) 若 $C-C_V=ap$，则
+$ap\,\mathrm dT=p\,\mathrm dV$，消去 $p$：
+\[
+\boxed{V-aT=\text{常数}}.
+\]
+\excheck (b) 的积分需将
+$\mathrm dT/T=(R/\beta)\,\mathrm dV/V^2$；
+因 $\mathrm d(1/V)=-\mathrm dV/V^2$，
+所以符号为正。
+
+\thermoenergyproblem{56}{69}
+一摩尔理想气体的绝热指数为 $\gamma$，
+某过程热容随温度满足 $C=\alpha/T$。
+若气体从 $T_0$ 加热到 $\eta T_0$，
+求：(a) 气体做功；(b) 以 $p,V$ 表示的过程方程。
+\exsolution
+由
+$\delta Q=C\,\mathrm dT=(\alpha/T)\,\mathrm dT$，
+$\mathrm dU=C_V\,\mathrm dT$，
+第一定律给
+\[
+\delta A=p\,\mathrm dV
+=\left(\frac{\alpha}{T}-C_V\right)\mathrm dT.
+\]
+因此
+\[
+\boxed{A=\alpha\ln\eta-C_VT_0(\eta-1)
+=\alpha\ln\eta-\frac{RT_0(\eta-1)}{\gamma-1}}.
+\]
+另一方面 $p=RT/V$，
+\[
+R\,\frac{\mathrm dV}{V}
+=\left(\frac{\alpha}{T^2}-\frac{C_V}{T}\right)\mathrm dT.
+\]
+积分得
+\[
+R\ln V=-\frac\alpha T-C_V\ln T+\text{常数}.
+\]
+所以
+$V T^{1/(\gamma-1)}e^{\alpha/(RT)}=\text{常数}$。
+代入 $T=pV/R$ 并对两边取
+$\gamma-1$ 次方：
+\[
+\boxed{pV^\gamma
+\exp\left(\frac{(\gamma-1)\alpha}{pV}\right)
+=\text{常数}}.
+\]
+\excheck 若 $\alpha=0$，
+过程为绝热，末式退化为
+$pV^\gamma=\text{常数}$，
+与热力学第一定律一致。
