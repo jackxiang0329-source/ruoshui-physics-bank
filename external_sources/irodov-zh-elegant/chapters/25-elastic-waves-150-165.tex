@@ -1,0 +1,469 @@
+% Irodov Part IV §4.3 original 150--165.
+% Source user PDF pp.184--187 (printed pp.175--178), answers pp.320--322.
+\waveproblem{150}{175--176}
+空气中 A、B 两点相距 $\ell$，
+其间绝对温度沿直线由 $T_1$ 线性变化到 $T_2$。
+声速与温度的关系为
+$v(T)=\alpha\sqrt T$，$\alpha$ 为常数。
+求声波从 A 到 B 所需时间。
+\exsolution
+令 $x=0$ 为 A，$x=\ell$ 为 B，
+$T(x)=T_1+(T_2-T_1)x/\ell$。
+传播时间是局部速度倒数的路径积分：
+\[
+t=\int_0^\ell\frac{\mathrm dx}{\alpha\sqrt{T(x)}}
+=\frac{2\ell}{\alpha}
+\frac{\sqrt{T_2}-\sqrt{T_1}}{T_2-T_1}.
+\]
+因
+$T_2-T_1=(\sqrt{T_2}-\sqrt{T_1})
+(\sqrt{T_2}+\sqrt{T_1})$，得
+\[
+\boxed{t=\frac{2\ell}
+{\alpha(\sqrt{T_1}+\sqrt{T_2})}}.
+\]
+\excheck 当 $T_2\to T_1=T$ 时，
+$t\to\ell/(\alpha\sqrt T)$；
+底本 PDF 文字抽取把 $v=\alpha\sqrt T$
+中的根号部分遗漏，已据物理单位与书末恢复。
+
+\waveproblem{151}{176}
+角频率为 $\omega$、相速度为 $v$ 的平面谐波，
+传播方向与 $x,y,z$ 正轴分别成角
+$\alpha,\beta,\gamma$。
+求介质两点
+$\bm r_1=(x_1,y_1,z_1)$、
+$\bm r_2=(x_2,y_2,z_2)$ 之间的振动相位差。
+\exsolution
+传播方向单位矢量
+$\bm n=(\cos\alpha,\cos\beta,\cos\gamma)$，
+波矢 $\bm k=(\omega/v)\bm n$。
+波动相位
+$\phi(\bm r,t)=\omega t-\bm k\cdot\bm r+\phi_0$。
+同一时刻两点相位差
+$\Delta\phi=-\bm k\cdot(\bm r_2-\bm r_1)$。
+因此
+\[
+\boxed{|\Delta\phi|=\frac{\omega}{v}
+\left|
+(x_2-x_1)\cos\alpha+
+(y_2-y_1)\cos\beta+
+(z_2-z_1)\cos\gamma
+\right|}.
+\]
+\excheck 必须满足方向余弦恒等式
+$\cos^2\alpha+\cos^2\beta+\cos^2\gamma=1$。
+
+\waveproblem{152}{176}
+一列角频率为 $\omega$ 的平面波，
+同一相位前沿沿三坐标轴分别以速度
+$v_1,v_2,v_3$ 经过固定坐标。
+用 $\bm e_x,\bm e_y,\bm e_z$ 表示波矢。
+\exsolution
+相位面满足
+$\omega t-k_xx-k_yy-k_zz=\text{const}$。
+沿 x 轴取 y,z 固定，恒相位点的速度
+$\mathrm dx/\mathrm dt=\omega/k_x=v_1$，
+故 $k_x=\omega/v_1$；
+其它方向同理。
+于是
+\[
+\boxed{\bm k=\omega\left(
+\frac{\bm e_x}{v_1}+
+\frac{\bm e_y}{v_2}+
+\frac{\bm e_z}{v_3}\right)}.
+\]
+\excheck 各 $v_i$ 是波面在\emph{坐标轴方向的相位交点速度}，
+并非波速矢量的三个分量；
+可有 $v_i>|\bm v|$ 而不违背波速定义。
+
+\waveproblem{153}{176}
+介质静止参考系 K 内，向 +x 传播的平面弹性波
+$\xi=a\cos(\omega t-kx)$。
+参考系 K' 以速度 $V$ 沿 +x 相对介质运动。
+求 K' 中的波方程，讨论观测频率与传播方向。
+\exsolution
+非相对论介质中的坐标变换
+$x=x'+Vt$、$t'=t$。
+将其代入原相位：
+\[
+\boxed{\xi'(x',t')=
+a\cos[(\omega-kV)t'-kx']}.
+\]
+观测有向角频率为
+$\omega'=\omega-kV=\omega(1-V/v)$，
+其中原波相速度 $v=\omega/k$；
+相对 K' 的有向相速度
+\[
+\boxed{v'=v-V}.
+\]
+当 $V=v$，观察者随波面同行，场的时域变化静止；
+$V>v$ 时有向相位变化反号，
+观测到波面相对 K' 沿 -x 运动。
+\excheck 这是弹性波在介质中的伽利略坐标变换，
+不能无条件替换为真空光波的相对论变换。
+
+\waveproblem{154}{176}
+证明任何二阶可微函数
+$\xi=f(t+\alpha x)$
+在适当 $\alpha$ 下满足一维波动方程，并说明 $\alpha$ 的物理意义。
+\exsolution
+令 $u=t+\alpha x$，
+链式法则给
+\[
+\frac{\partial^2\xi}{\partial t^2}=f''(u),
+\qquad
+\frac{\partial^2\xi}{\partial x^2}=\alpha^2f''(u).
+\]
+一维波动方程
+$\partial_x^2\xi=v^{-2}\partial_t^2\xi$
+要求
+$(\alpha^2-v^{-2})f''(u)=0$。
+对任意非平凡 $f$，必须有
+\[
+\boxed{\alpha=\pm\frac1v}.
+\]
+若 $\alpha=-1/v$，
+相位 $t-x/v=\text{const}$ 对应沿 +x 传播；
+若 $\alpha=+1/v$ 则沿 -x。
+\excheck 题干仅说“differentiable”略弱于含二阶导数的经典波动方程要求；
+作经典解至少需要二阶可微，弱解则另论。
+
+\waveproblem{155}{176}
+行波
+$\xi=60\cos(1800t-5.3x)$，
+其中 $\xi$ 单位为微米、$t$ 用秒、$x$ 用米。
+求：(a) 介质质点位移振幅与波长之比；
+(b) 质点振动速度幅度及其与传播速度之比；
+(c) 纵向相对形变的振幅及其与质点速度幅度的关系。
+\exsolution
+振幅 $a=60\times10^{-6}$m，
+角频率 $\omega=1800\,\mathrm{s^{-1}}$，
+波数 $k=5.3\,\mathrm{m^{-1}}$。
+波长 $\lambda=2\pi/k$，
+传播速度 $v=\omega/k\simeq340$m/s。
+(a)
+\[
+\boxed{\frac a\lambda=\frac{ak}{2\pi}
+\simeq5.1\times10^{-5}}.
+\]
+(b) 质点速度幅度
+\[
+\boxed{v_m=a\omega=0.108\,\mathrm{m/s}
+\simeq11\,\mathrm{cm/s}},
+\quad
+\boxed{\frac{v_m}{v}=\frac{a\omega}{\omega/k}
+=ak\simeq3.2\times10^{-4}}.
+\]
+(c) 相对形变
+$\epsilon=\partial_x\xi
+=ak\sin(\omega t-kx)$，
+因此
+\[
+\boxed{\epsilon_m=ak\simeq3.2\times10^{-4}},
+\quad
+\boxed{v_m=v\epsilon_m}.
+\]
+\excheck 传播速度和质点速度不同；
+质点速度约0.1m/s，波传播约340m/s。
+
+\waveproblem{156}{176}
+平面波
+$\xi=a\cos(\omega t-kx)$
+在均匀弹性介质传播。
+于 $t=0$ 绘出
+(a) $\xi$、$\partial_t\xi$、$\partial_x\xi$ 随 $x$ 的曲线；
+(b) $\xi=0$ 处质点速度方向（纵波和横波）；
+(c) 纵波中密度变化曲线。
+\exsolution
+直接求导并令 $t=0$：
+\[
+\boxed{\xi(x,0)=a\cos kx},\quad
+\boxed{\partial_t\xi(x,0)=a\omega\sin kx},\quad
+\boxed{\partial_x\xi(x,0)=-ak\sin kx}.
+\]
+因此两导数曲线均是以 $kx$ 为相位的正弦波，
+彼此反相，而位移曲线是余弦波。
+在零位移点 $kx=(n+1/2)\pi$，
+速度模达到最大；
+纵波中质点速度沿传播轴，其正负由
+$\sin kx$ 决定；
+横波中质点速度沿指定的横向偏振轴，同样由
+$\sin kx$ 控制。
+连续性方程的一阶近似
+$\delta\rho/\rho_0=-\partial_x\xi$，
+故
+\[
+\boxed{\rho(x,0)\simeq
+\rho_0[1+ak\sin kx]}.
+\]
+\excheck 密度极大处对应局部压缩
+$\partial_x\xi<0$，与质量守恒一致；
+该三组函数即可逐点绘制原题所求曲线。
+
+\waveproblem{157}{176}
+均匀介质中衰减平面波
+$\xi=ae^{-\gamma x}\cos(\omega t-kx)$。
+两点处质点位移振幅相差
+$\eta=1.0\%$（按前一点振幅减少百分比），
+给定 $\gamma=0.42\,\mathrm{m^{-1}}$、
+波长 $\lambda=50$cm。
+求两点的相位差。
+\exsolution
+若位置差为 $\Delta x>0$，
+后一点振幅
+$A_2=A_1e^{-\gamma\Delta x}
+=(1-\eta)A_1$，
+则
+\[
+\Delta x=-\frac{\ln(1-\eta)}{\gamma}.
+\]
+相位差模
+$|\Delta\phi|=k\Delta x$，
+$k=2\pi/\lambda$，
+故
+\[
+\boxed{|\Delta\phi|=
+-\frac{2\pi}{\gamma\lambda}\ln(1-\eta)}.
+\]
+代 $\eta=0.010$：
+\[
+\boxed{|\Delta\phi|\simeq0.30\,\mathrm{rad}}.
+\]
+\excheck 使用 $\ln(1-\eta)\approx-\eta$ 时近似结果
+$2\pi\eta/(\gamma\lambda)$ 同样约0.30。
+
+\waveproblem{158}{176--177}
+均匀无吸收介质中的点球面波源 P
+已知位于两位置矢量分别为
+$\bm r_1,\bm r_2$ 的点之间的直线上。
+该两点处质点振动幅度分别为 $a_1,a_2$。
+求源点位置矢量。
+\exsolution
+无吸收的球面波位移振幅
+$a(r)=A/r$，
+其中 $r$ 是离声源的距离。
+设两点到源的距离为 $d_1,d_2$，
+则
+$a_1d_1=a_2d_2=A$。
+因为源在两点之间，
+$d_1+d_2=d=|\bm r_2-\bm r_1|$。
+解得
+$d_1=a_2d/(a_1+a_2)$、
+$d_2=a_1d/(a_1+a_2)$。
+源点相当于从 $\bm r_1$ 沿两点连线走比例
+$d_1/d$，
+所以
+\[
+\boxed{\bm r_P=
+\frac{a_1\bm r_1+a_2\bm r_2}{a_1+a_2}}.
+\]
+\excheck 当 $a_1>a_2$，
+源更靠近点1，因此位置权重应使结果更靠近 $\bm r_1$。
+
+\waveproblem{159}{177}
+频率 $\nu=1.45$kHz 的各向同性点声源，
+距离 $r_0=5.0$m 处质点位移振幅
+$a_0=50\,\mathrm{\mu m}$。
+距声源 $r=10.0$m 的 A 点振幅比 $a_0$ 小
+$\eta=3.0$ 倍。
+求：(a) 振幅衰减系数 $\gamma$；
+(b) A 点质点速度幅度。
+\exsolution
+衰减球面波幅度随径向距离变化
+$a(r)=a_0(r_0/r)e^{-\gamma(r-r_0)}$。
+由 $a_0/a(r)=\eta$，
+\[
+\eta=\frac r{r_0}e^{\gamma(r-r_0)},
+\qquad
+\boxed{\gamma=\frac{\ln(\eta r_0/r)}{r-r_0}}.
+\]
+代 $\eta r_0/r=1.5$、$r-r_0=5$m，
+\[
+\boxed{\gamma\simeq0.081\,\mathrm{m^{-1}}}.
+\]
+A 点位移幅度 $a(r)=a_0/\eta$，
+质点速度幅度
+\[
+\boxed{v_m=2\pi\nu\,\frac{a_0}{\eta}
+\simeq0.15\,\mathrm{m/s}=15\,\mathrm{cm/s}}.
+\]
+\excheck 既要包括球面波几何扩散 $r_0/r$，
+也要包括材料吸收 $e^{-\gamma(r-r_0)}$；不能只用指数衰减。
+
+\waveproblem{160}{177}
+同种弹性介质中，两列同频同幅平面波分别沿 x、y 轴传播，
+振动分别为
+$\xi_1=a\cos(\omega t-kx)$、
+$\xi_2=a\cos(\omega t-ky)$。
+求 $xy$ 平面各点质点的合运动情况：
+(a) 两波均为振动方向相同的横波；
+(b) 两波均为各自沿传播方向振动的纵波。
+\exsolution
+(a) 合位移沿共同横向方向：
+\[
+\xi=\xi_1+\xi_2
+=2a\cos\frac{k(y-x)}2
+\cos\left(\omega t-\frac{k(x+y)}2\right).
+\]
+故
+$\boxed{y-x=n\lambda}$ 为振幅极大线，
+$\boxed{y-x=(n+\tfrac12)\lambda}$ 为结点线，
+$n\in\mathbb Z$。
+(b) 对纵波，
+质点的二维位移分量为
+$x_{\rm osc}=a\cos(\omega t-kx)$、
+$y_{\rm osc}=a\cos(\omega t-ky)$。
+两分量同频、相位差
+$\delta=k(y-x)$：
+当 $\delta=n\pi$ 时为直线运动，
+其中偶数 $n$ 沿 $(1,1)$、奇数 $n$ 沿 $(1,-1)$；
+当 $\delta=\pi/2+n\pi$ 时为圆周运动，
+其它情形一般为椭圆。
+\excheck 两波的\emph{纵波}位移沿不同方向，
+不能标量相加代替二维参数轨迹。
+
+\waveproblem{161}{177}
+均匀介质中无衰减的平面谐波传播。
+某固定点在经过质点位移最大时刻后的
+$T/6$，测得\emph{瞬时总振动能量密度}为 $w_0$。
+求该波的时间平均总能量密度。
+\exsolution
+平面行波的动能与弹性势能密度相同，
+其总能量密度随相位
+$\theta$ 为
+$w(\theta)=\rho a^2\omega^2\sin^2\theta$。
+位移最大时 $\theta=0$，
+再过 $T/6$：
+$\theta=2\pi(T/6)/T=\pi/3$，
+所以
+$w_0=\rho a^2\omega^2\sin^2(\pi/3)
+=\frac34\rho a^2\omega^2$。
+时间平均
+$\overline w=\frac12\rho a^2\omega^2$，
+从而
+\[
+\boxed{\overline w=\frac23w_0}.
+\]
+\excheck 这是某时刻的\emph{总}能量密度与周期平均的关系，
+不应把动能或势能单项误当总能。
+
+\waveproblem{162}{177}
+各向同性点声源位于圆环所在平面法线上的一点，
+离圆心 O 距离 $\ell=1.00$m，
+圆环半径 $R=0.50$m。
+已知 O 点平均声强
+$I_0=30\,\mathrm{\mu W/m^2}$，
+忽略衰减，求通过圆环所围圆盘面的平均能流。
+\exsolution
+由球面扩散，
+声源总功率
+$P=4\pi\ell^2I_0$。
+圆盘从声源所张立体角
+$\Omega=2\pi[1-\cos\theta]$，
+$\cos\theta=\ell/\sqrt{\ell^2+R^2}$。
+穿过圆盘的功率为
+$P\Omega/(4\pi)$，故
+\[
+\boxed{\Phi=
+2\pi\ell^2I_0
+\left[1-\frac{\ell}{\sqrt{\ell^2+R^2}}\right]}.
+\]
+代数值
+$\boxed{\Phi\simeq2.0\times10^{-5}\,\mathrm W
+=20\,\mathrm{\mu W}}$。
+\excheck 必须计算声流的\emph{法向投影}，不能只以圆盘面积乘中心声强，
+因为声强沿圆盘位置及方向均变化。
+
+\waveproblem{163}{177}
+各向同性点声源功率 $P=0.10$W，
+位于空心圆柱中心，
+圆柱半径 $R=1.0$m、高度 $h=2.0$m。
+假定圆柱壁完全吸收声波，求达到圆柱\emph{侧面}的平均能流。
+\exsolution
+对从源点出发的射线，
+若与轴的极角为 $\theta$，
+当 $|\tan\theta|>2R/h$ 时先撞侧壁，
+否则先撞端盖。
+因此两端盖张的两个锥形区域所占功率比例为
+$1-\cos\theta_0$，
+其中
+$\cos\theta_0=(h/2)/\sqrt{R^2+(h/2)^2}$。
+侧壁所得比例为 $\cos\theta_0$，故
+\[
+\boxed{\Phi_{\rm side}
+=P\frac{h/2}{\sqrt{R^2+(h/2)^2}}
+=\frac P{\sqrt{1+(2R/h)^2}}}.
+\]
+代 $h=2R$，
+\[
+\boxed{\Phi_{\rm side}\simeq0.071\,\mathrm W}.
+\]
+\excheck 只有部分球面立体角对应侧壁，
+不能把总功率 $P$ 全部归入侧面。
+
+\waveproblem{164}{177}
+均匀介质内平面驻波
+$\xi=a\cos kx\,\cos\omega t$。
+作出：(a) $t=0$ 与 $t=T/2$ 的位移和空间导数；
+(b) 同时刻的纵波介质密度分布；
+(c) $t=T/4$ 质点速度分布及各腹点速度方向。
+\exsolution
+位移、空间导数与质点速度为
+\[
+\xi=a\cos kx\cos\omega t,\quad
+\frac{\partial\xi}{\partial x}
+=-ak\sin kx\cos\omega t,\quad
+u=\frac{\partial\xi}{\partial t}
+=-a\omega\cos kx\sin\omega t.
+\]
+在 $t=0$：
+$\xi=a\cos kx$、
+$\partial_x\xi=-ak\sin kx$；
+在 $t=T/2$：
+$\xi=-a\cos kx$、
+$\partial_x\xi=+ak\sin kx$。
+纵波一阶密度
+$\rho(x,t)\simeq\rho_0[1-\partial_x\xi]$，故
+\[
+\boxed{\rho(x,0)=\rho_0(1+ak\sin kx)},\quad
+\boxed{\rho(x,T/2)=\rho_0(1-ak\sin kx)}.
+\]
+在 $t=T/4$，
+$\boxed{u(x,T/4)=-a\omega\cos kx}$。
+腹点 $kx=n\pi$ 的质点速度交替反向，
+纵波时沿 x、横波时沿横向偏振轴。
+\excheck 位移结点在 $\cos kx=0$，速度始终为零；
+邻近腹点的质点速度在该时刻方向相反。
+
+\waveproblem{165}{177--178}
+均匀介质密度为 $\rho$，
+纵向平面驻波
+$\xi=a\cos kx\cos\omega t$。
+求：(a) 弹性势能密度；
+(b) 动能密度；
+并给出在相邻两个位移结点之间，
+$t=0$、$t=T/4$ 的\emph{总能量密度}分布。
+\exsolution
+介质纵向线性应变
+$\epsilon=\partial_x\xi=-ak\sin kx\cos\omega t$。
+弹性势能密度为
+$\tfrac12\rho v^2\epsilon^2$，
+利用 $\omega=vk$：
+\[
+\boxed{w_p(x,t)=\frac12\rho a^2\omega^2
+\sin^2kx\,\cos^2\omega t}.
+\]
+质点速度
+$\dot\xi=-a\omega\cos kx\sin\omega t$，
+所以
+\[
+\boxed{w_k(x,t)=\frac12\rho a^2\omega^2
+\cos^2kx\,\sin^2\omega t}.
+\]
+$t=0$ 时动能为零，
+$\boxed{w(x,0)=\tfrac12\rho a^2\omega^2\sin^2kx}$；
+$t=T/4$ 时势能为零，
+$\boxed{w(x,T/4)=\tfrac12\rho a^2\omega^2\cos^2kx}$。
+\excheck 两曲线互为四分之一波长的空间相位平移；
+相邻结点间的\emph{积分总能量}不变，尽管局部能量密度随时间迁移。
