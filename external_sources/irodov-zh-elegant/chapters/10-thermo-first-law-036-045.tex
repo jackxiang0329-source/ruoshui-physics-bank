@@ -1,0 +1,416 @@
+% Irodov, Part II Section 2.2, original numbered problems 36--45,
+% printed pp.66--67 (PDF pp.75--76). Fig. 13 in original Answers
+% gives qualitative P-T and V-T diagrams, here reproduced in TikZ.
+
+\thermoenergyproblem{36}{66}
+一根两端封闭的水平圆筒被一个可无摩擦移动的
+活塞分成体积均为 $V_0$ 的左右两腔。
+两侧各装有压强 $p_0$、温度相同的理想气体，
+初始处于平衡。
+现缓慢移动活塞，使其中一腔体积变成另一腔的
+$\eta$ 倍，整个过程中两腔气体\emph{等温}。
+求外界移动活塞需做的功。
+\exsolution
+整个圆筒体积保持
+$V_1+V_2=2V_0$。
+题给最终体积比 $V_1/V_2=\eta$，
+因此
+\[
+V_1=\frac{2\eta}{1+\eta}V_0,\qquad
+V_2=\frac2{1+\eta}V_0.
+\]
+初始时两腔各自的理想气体摩尔数满足
+$\nu RT=p_0V_0$。
+两腔等温膨胀功之和为
+\[
+W_{\rm gas}=p_0V_0\ln\frac{V_1}{V_0}
++p_0V_0\ln\frac{V_2}{V_0}
+=p_0V_0\ln\frac{4\eta}{(1+\eta)^2}.
+\]
+因 $(1+\eta)^2\ge4\eta$，
+$W_{\rm gas}\le0$；
+外力的准静态做功为其相反数：
+\[
+\boxed{A_{\rm ext}=p_0V_0
+\ln\frac{(1+\eta)^2}{4\eta}}.
+\]
+\excheck 对 $\eta=1$，活塞不发生净位移且
+$A_{\rm ext}=0$；对偏离1的比例，外力功非负。
+
+\thermoenergyproblem{37}{67}
+三摩尔理想气体初温
+$T_0=273\,\mathrm K$。
+先等温膨胀至初始体积的
+$n=5.0$ 倍，再等容加热，
+使最终压强回到最初数值。
+两过程总吸热量为
+$Q=80\,\mathrm{kJ}$。
+求气体的热容比
+$\gamma=C_p/C_V$。
+\exsolution
+第一段等温，
+$V_1=nV_0$、$T_1=T_0$，
+吸热等于气体做功：
+\[
+Q_1=\nu RT_0\ln n,\qquad \nu=3.
+\]
+第一段结束时压强为 $p_0/n$。
+第二段等容使压强回到 $p_0$，
+故末温为 $T_2=nT_0$。
+其吸热
+\[
+Q_2=\nu C_V(T_2-T_1)
+=\nu\frac R{\gamma-1}(n-1)T_0.
+\]
+总吸热为
+$Q=\nu RT_0[\ln n+(n-1)/(\gamma-1)]$，
+故
+\[
+\boxed{\gamma
+=1+\frac{n-1}{Q/(\nu RT_0)-\ln n}}.
+\]
+代入
+$\nu=3,T_0=273\,\mathrm K,n=5,Q=80\,\mathrm{kJ}$：
+\[
+\boxed{\gamma\simeq1.4}.
+\]
+\excheck 初段为等温，\emph{不}改变气体内能；
+最终压力回到初压的第二段是等容加热，温度必须升至
+$nT_0$。
+
+\thermoenergyproblem{38}{67}
+定性画出理想气体的
+等容、等压、等温、绝热四种准静态过程曲线，
+分别采用坐标
+(a) $(T,p)$；
+(b) $(T,V)$，其中 $T$ 为横轴。
+\exsolution
+从理想气体状态方程
+$pV=\nu RT$ 和可逆绝热方程
+$pV^\gamma=\text{常数}$ 出发：
+\[
+\begin{array}{c|c|c}
+\text{过程}&p\text{ 对 }T&V\text{ 对 }T\\ \hline
+\text{等容}&p\propto T&V=\text{常数}\\
+\text{等压}&p=\text{常数}&V\propto T\\
+\text{等温}&T=\text{常数}&T=\text{常数}\\
+\text{绝热}&p\propto T^{\gamma/(\gamma-1)}
+&V\propto T^{-1/(\gamma-1)}
+\end{array}
+\]
+因此在 $(T,p)$ 坐标中，
+等压是水平线、等容是过原点的直线、
+等温是竖线、绝热为向上弯曲曲线；
+在 $(T,V)$ 坐标中，
+等容是水平线、等压是过原点的直线、
+等温是竖线、绝热为单调下降的曲线。
+以下给出两组示意图，均不表示精确比例：
+\begin{center}
+\begin{tikzpicture}[scale=0.78,>=Stealth]
+\draw[->] (0,0)--(4.3,0) node[right] {$T$};
+\draw[->] (0,0)--(0,3.2) node[above] {$p$};
+\draw[thick] (0,1.2)--(4.1,1.2) node[right] {\scriptsize 等压};
+\draw[thick] (0,0)--(2.8,2.8) node[right] {\scriptsize 等容};
+\draw[thick] (2.1,0)--(2.1,2.95) node[above] {\scriptsize 等温};
+\draw[thick,domain=0.6:2.8,samples=45]
+plot (\x,{0.16*(\x)^2.6});
+\node at (3.55,2.55) {\scriptsize 绝热};
+\begin{scope}[xshift=7cm]
+\draw[->] (0,0)--(4.3,0) node[right] {$T$};
+\draw[->] (0,0)--(0,3.2) node[above] {$V$};
+\draw[thick] (0,1.4)--(4.0,1.4) node[right] {\scriptsize 等容};
+\draw[thick] (0,0)--(3.2,2.65) node[right] {\scriptsize 等压};
+\draw[thick] (2.2,0)--(2.2,2.95) node[above] {\scriptsize 等温};
+\draw[thick,domain=0.85:3.6,samples=45]
+plot (\x,{2.6/(\x)^1.35});
+\node at (0.9,2.9) {\scriptsize 绝热};
+\end{scope}
+\end{tikzpicture}
+\end{center}
+\excheck 绝热曲线的指数由 $\gamma>1$ 决定；
+图示的坐标轴不采用一般教材常见的 $(V,p)$，
+而是原题明确要求的 $(T,p)$ 和 $(T,V)$。
+
+\thermoenergyproblem{39}{67}
+一摩尔氧气初始温度
+$T_0=290\,\mathrm K$，
+进行可逆绝热压缩，
+压强增加 $\eta=10.0$ 倍。
+求：(a) 压缩后的气体温度；
+(b) 外界对气体做的功。
+\exsolution
+取常温氧气为理想双原子气体，
+绝热指数 $\gamma\simeq7/5$，
+定容摩尔热容
+$C_V=R/(\gamma-1)$。
+可逆绝热关系
+$TV^{\gamma-1}=\text{常数}$、
+$pV^\gamma=\text{常数}$，
+消去体积：
+\[
+\frac T{T_0}=
+\left(\frac p{p_0}\right)^{(\gamma-1)/\gamma}.
+\]
+因此
+\[
+\boxed{T=T_0\eta^{(\gamma-1)/\gamma}
+=290\cdot10^{2/7}
+\simeq0.56\,\mathrm{kK}}.
+\]
+绝热条件 $Q=0$，
+外界对气体做功
+$A_{\rm on}=\Delta U=C_V(T-T_0)$，
+于是
+\[
+\boxed{A_{\rm on}
+=\frac{RT_0}{\gamma-1}
+\left[\eta^{(\gamma-1)/\gamma}-1\right]
+\simeq5.6\,\mathrm{kJ}}.
+\]
+\excheck 压缩升温且外力做正功；
+气体\emph{自身}做功为负 $-A_{\rm on}$，
+不能与外力做功混同。
+
+\thermoenergyproblem{40}{67}
+某质量的氮气从相同初态开始，
+分别以可逆绝热方式和等温方式
+把气体体积压缩 $\eta=5.0$ 倍。
+求两种压缩中外力所做功的比值
+$A_{\rm ad}/A_{\rm iso}$。
+\exsolution
+设初温 $T_0$、摩尔数 $\nu$、
+绝热指数 $\gamma$。
+对于绝热压缩，
+末温
+$T_{\rm ad}=T_0\eta^{\gamma-1}$，
+外力做功等于内能增加：
+\[
+A_{\rm ad}=
+\nu C_V(T_{\rm ad}-T_0)
+=\frac{\nu RT_0}{\gamma-1}
+(\eta^{\gamma-1}-1).
+\]
+等温压缩外力做功为
+\[
+A_{\rm iso}=\nu RT_0\ln\eta.
+\]
+相除：
+\[
+\boxed{\frac{A_{\rm ad}}{A_{\rm iso}}
+=\frac{\eta^{\gamma-1}-1}
+{(\gamma-1)\ln\eta}}.
+\]
+氮气 $\gamma\simeq1.40$，
+$\eta=5$，得
+\[
+\boxed{\frac{A_{\rm ad}}{A_{\rm iso}}
+\simeq1.4}.
+\]
+\excheck 绝热压缩过程中气体温度升高，
+因此需要的外力功比等温压缩大。
+
+\thermoenergyproblem{41}{67}
+一封闭绝热圆筒内有理想气体，
+中间有一个\emph{导热且可无摩擦移动}的活塞。
+初始两腔体积相等，
+两侧气体温度同为 $T_0$，
+随后缓慢推动活塞，
+使两腔体积比
+$V_{\rm large}/V_{\rm small}=\eta$。
+求新共同温度 $T(\eta)$，
+假设各腔初始气体物质的量相同、
+过程整体可逆。
+\exsolution
+绝热是指整体与环境没有热交换，
+但外力推动活塞仍可向整个系统做功。
+因活塞导热，两腔全过程温度在准静态极限下相同，
+且可逆过程的整个系统熵守恒。
+设两腔各有 $\nu$ 摩尔理想气体，
+初始各容积为 $V_0$。
+末态总体积固定 $2V_0$，且体积比为 $\eta$，
+所以
+\[
+V_1=\frac{2\eta}{1+\eta}V_0,\quad
+V_2=\frac2{1+\eta}V_0.
+\]
+对两腔分别使用理想气体熵变化，
+\[
+\Delta S_i=\nu C_V\ln\frac T{T_0}
++\nu R\ln\frac{V_i}{V_0}.
+\]
+总熵变化为零：
+\[
+2\nu C_V\ln\frac T{T_0}
++\nu R\ln\frac{V_1V_2}{V_0^2}=0.
+\]
+因 $R/C_V=\gamma-1$，
+\[
+\ln\frac T{T_0}
+=\frac{\gamma-1}{2}
+\ln\frac{(1+\eta)^2}{4\eta}.
+\]
+因此
+\[
+\boxed{T=T_0
+\left[\frac{(1+\eta)^2}{4\eta}\right]^{(\gamma-1)/2}}.
+\]
+\excheck 仅靠“总体绝热”不能推出 $U$ 守恒，
+因为外界移动活塞\emph{对整个系统做功}；
+使用可逆等熵条件才得到本题结果。
+
+\thermoenergyproblem{42}{67}
+充有氦气的绝热容器温度为
+$T=1000\,\mathrm K$，
+气体通过小孔进入真空。
+若容器内流速远小于出口速率，
+忽略黏性，求出流速率 $v$。
+\exsolution
+对准稳态绝热无黏流动，
+单位质量的总焓和动能守恒：
+\[
+h_0+\frac12v_0^2=h+\frac12v^2.
+\]
+题设容器内速度可忽略 $v_0\simeq0$，
+并将出流气体对外静态焓的余量在理想真空出口
+近似全部转为动能。
+理想气体比焓为
+$h=C_{p,\rm mol}T/M$，
+故
+\[
+\frac12v^2\simeq\frac{C_{p,\rm mol}T}{M},
+\quad
+C_{p,\rm mol}=\frac{\gamma R}{\gamma-1}.
+\]
+因此
+\[
+\boxed{v=\sqrt{
+\frac{2\gamma RT}{(\gamma-1)M}}}.
+\]
+氦是单原子气体，
+$\gamma=5/3$、
+$M\simeq4.0\times10^{-3}\,\mathrm{kg/mol}$，
+\[
+\boxed{v\simeq\sqrt{\frac{5RT}{M}}
+\simeq3.2\,\mathrm{km/s}\approx3.3\,\mathrm{km/s}}.
+\]
+\excheck 这是理想绝热能量转换的流速估计，
+不描述实际小孔分子逸出分布的全部动力学细节。
+
+\thermoenergyproblem{43}{67}
+一摩尔、热容比为 $\gamma$ 的理想气体
+沿 $V=a/T$ 过程变化，
+其中 $a$ 为正常数。
+若温度上升 $\Delta T$，
+求气体净吸收的热量 $Q$。
+\exsolution
+一摩尔理想气体有
+$pV=RT$，由
+$V=a/T$ 得
+$p=RT/V=RT^2/a$。
+沿给定过程的体积微分为
+$\mathrm dV=-a\,\mathrm dT/T^2$，
+所以气体做功微分
+\[
+\delta A=p\,\mathrm dV
+=\frac{RT^2}{a}
+\left(-\frac a{T^2}\mathrm dT\right)
+=-R\,\mathrm dT.
+\]
+内能微分为
+$\mathrm dU=C_V\,\mathrm dT
+=R\,\mathrm dT/(\gamma-1)$。
+根据热力学第一定律，
+\[
+\delta Q=\mathrm dU+\delta A
+=R\left(\frac1{\gamma-1}-1\right)\mathrm dT.
+\]
+积分得
+\[
+\boxed{Q=\frac{R(2-\gamma)}{\gamma-1}\Delta T}.
+\]
+\excheck $T$ 上升使体积 $V=a/T$ 减少，
+气体做功为负；不能把 $\delta A$ 当成正值。
+
+\thermoenergyproblem{44}{67}
+证明：如果理想气体所做功
+与其内能的相应增量成正比，
+那么它所经历的准静态过程
+可写成多方方程
+$pV^n=\text{常数}$。
+\exsolution
+设比例系数为常数 $k$，
+即气体做功微分与内能变化满足
+\[
+\delta A=p\,\mathrm dV=k\,\mathrm dU.
+\]
+理想气体内能
+$\mathrm dU=\nu C_V\,\mathrm dT$，
+而状态方程微分
+$\nu R\,\mathrm dT=p\,\mathrm dV+V\,\mathrm dp$。
+用
+$C_V/R=1/(\gamma-1)$：
+\[
+p\,\mathrm dV
+=\frac{k}{\gamma-1}
+(p\,\mathrm dV+V\,\mathrm dp).
+\]
+对于 $k\ne0$，移项得
+\[
+\frac{\mathrm dp}{p}
+=-\left(1-\frac{\gamma-1}{k}\right)
+\frac{\mathrm dV}{V}.
+\]
+令多方指数
+$n=1-(\gamma-1)/k$，
+积分为
+$\ln p+n\ln V=\text{常数}$，
+即
+\[
+\boxed{pV^n=\text{常数},\qquad
+n=1-\frac{\gamma-1}{k}}.
+\]
+\excheck 如果 $k=0$，
+则 $\delta A=0$ 对应体积不变的等容过程，
+可视为多方指数 $n\to\infty$ 的极限；
+证明中的除以 $k$ 步骤不适用于这一退化情形。
+
+\thermoenergyproblem{45}{67}
+一摩尔理想气体的绝热指数为 $\gamma$，
+沿多方过程 $pV^n=\text{常数}$
+变化。
+求过程摩尔热容 $C_n$，
+并判断何种多方指数 $n$ 下 $C_n<0$。
+\exsolution
+多方关系微分为
+\[
+V\,\mathrm dp+n p\,\mathrm dV=0.
+\]
+一摩尔理想气体状态方程
+$RT=pV$，两边求微分得
+\[
+R\,\mathrm dT=p\,\mathrm dV+V\,\mathrm dp
+=(1-n)p\,\mathrm dV.
+\]
+因此沿此过程
+$\delta A=p\,\mathrm dV=
+R\,\mathrm dT/(1-n)$，
+而内能微分
+$\mathrm dU=C_V\,\mathrm dT
+=R\,\mathrm dT/(\gamma-1)$。
+按 $C_n=\delta Q/\mathrm dT$，
+\[
+C_n=
+\frac{R}{\gamma-1}+\frac{R}{1-n}
+=\boxed{\frac{R(n-\gamma)}
+{(n-1)(\gamma-1)}}.
+\]
+对通常 $\gamma>1$ 且 $n\ne1$，
+它为负数当且仅当
+\[
+\boxed{1<n<\gamma}.
+\]
+\excheck $n=1$ 是等温过程，
+$\mathrm dT=0$ 而可发生热量交换，
+因而“摩尔热容 $\delta Q/\mathrm dT$”
+在这一点不具通常有限定义；
+$n=\gamma$ 为绝热过程，$C_n=0$。
