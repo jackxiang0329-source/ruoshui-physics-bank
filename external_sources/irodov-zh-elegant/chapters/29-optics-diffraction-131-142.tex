@@ -1,0 +1,333 @@
+% Irodov Part V §5.3 originals 131--142. Original PDF printed 209--211,
+% source page 210 visually checked: #139 prints 10.0 m, #140 prints 670.8 mm,
+% both inconsistent with answer; variants explicitly preserved.
+\diffractionproblem{131}{209}
+图5.26：平面单色光 $\lambda$ 垂直入射玻璃相位光栅，
+材料折射率 $n$，相邻沟槽与凸脊等宽均为 $a$、刻槽深度 $h$。
+求：(a) 使零级夫琅禾费极大强度为零的深度；
+(b) 此时一级衍射角。
+\exsolution
+沟槽与未刻区的光程差
+$\Delta=(n-1)h$，相位差
+$\delta=2\pi(n-1)h/\lambda$。
+零级复振幅与
+$\tfrac12(1+e^{i\delta})$ 成正比，
+因此零级为零要求
+$\delta=(2j+1)\pi$，即
+\[
+\boxed{h_j=\frac{(2j+1)\lambda}{2(n-1)}},\qquad j=0,1,\ldots.
+\]
+光栅周期 $d=2a$，一级主极大
+$d\sin\theta_1=\lambda$，所以
+\[
+\boxed{a\sin\theta_1=\lambda/2}.
+\]
+\excheck 相位光栅的零级消光来自等面积两区域\emph{复振幅}相反，不是吸收光损失。
+
+\diffractionproblem{132}{209}
+图5.27：波长
+$\lambda=0.55\,\mathrm{\mu m}$ 的平面光穿过装有水的超声槽，
+槽内驻波频率
+$\nu=4.7$MHz，后接焦距
+$f=35$cm 的物镜。
+焦面相邻主极大距离
+$\Delta x=0.60$mm，求水中超声波传播速度。
+\exsolution
+超声形成沿传播方向周期性折射率调制，其有效光栅周期与声波长相同：
+$d=v_s/\nu$。
+近轴一级衍射角差
+$\Delta\theta\simeq\lambda/d$，
+焦面间距
+$\Delta x\simeq f\Delta\theta$。
+故
+\[
+\boxed{v_s=\frac{\lambda\nu f}{\Delta x}}
+=\frac{(0.55\times10^{-6})(4.7\times10^6)(0.35)}
+{0.60\times10^{-3}}
+\simeq1.5\,\mathrm{km/s}.
+\]
+\excheck 源题说明是超声驻波；本模型的有效周期按原书声波空间周期处理，不能凭“驻波”一词无说明地再除以2。
+
+\diffractionproblem{133}{209}
+用迈克耳孙方法测量双星角距 $\psi$：
+在望远镜物镜前放间距可调的两条平行窄缝，
+缩小缝距至
+$d=95$cm 时首次观察到条纹可见度变差。
+取波长 $\lambda=0.55\,\mathrm{\mu m}$，求 $\psi$。
+\exsolution
+双星两点源各产生一套双缝条纹；
+它们对应的中心相位差为
+$\Delta\phi=(2\pi d/\lambda)\psi$
+（小角近似）。
+首次最差可见度发生在两套条纹互移半周期：
+$\Delta\phi=\pi$，
+即
+\[
+\boxed{\psi=\frac{\lambda}{2d}}
+=\frac{0.55\times10^{-6}}{2(0.95)}
+\simeq2.9\times10^{-7}\,\mathrm{rad}.
+\]
+用 $1$rad $=206265''$，
+\[
+\boxed{\psi\simeq0.060''}.
+\]
+\excheck 两套条纹来自\emph{不相干}恒星，
+相互不能相干叠加振幅，但两套强度花样错位会降低总可见度。
+
+\diffractionproblem{134}{210}
+透射光栅周期
+$d=1.50\,\mathrm{\mu m}$，
+波长 $\lambda=530$nm。
+求最高可见级主极大对应角散度
+$D=\mathrm d\theta/\mathrm d\lambda$，
+单位为角分/nm：
+(a) 垂直入射；
+(b) 入射角 $\theta_0=45^\circ$。
+\exsolution
+有向光栅方程
+$d(\sin\theta-\sin\theta_0)=m\lambda$，
+对波长微分：
+\[
+\boxed{|D|=\frac{|m|}{d|\cos\theta|}}.
+\]
+(a) 正入射最高级
+$|m|=\lfloor d/\lambda\rfloor=2$，
+$\sin\theta=2\lambda/d$，
+所以
+\[
+\boxed{D_a=
+\frac2{d\sqrt{1-(2\lambda/d)^2}}
+\simeq6.5\,\text{角分/nm}}.
+\]
+(b) 因角度向另一侧延伸，最高绝对级是
+$m=-4$，
+$\sin\theta=\sin45^\circ-4\lambda/d$，
+\[
+\boxed{D_b=
+\frac4{d\sqrt{1-(\sin45^\circ-4\lambda/d)^2}}
+\simeq13\,\text{角分/nm}}.
+\]
+\excheck 将 rad/m 换成角分/nm：
+乘 $3437.75\times10^{-9}$；不应仅报告无量纲13。
+
+\diffractionproblem{135}{210}
+波长为 $\lambda$ 的平面光垂直入射周期 $d$ 的光栅。
+求主极大角散度 $D=\mathrm d\theta/\mathrm d\lambda$
+用衍射角 $\theta$ 表示的公式。
+\exsolution
+第 $m$ 级光栅方程
+$d\sin\theta=m\lambda$。
+对 $\lambda$ 微分
+$d\cos\theta\,\mathrm d\theta=m\,\mathrm d\lambda$，
+从而
+$D=m/(d\cos\theta)$。
+再由 $m/d=\sin\theta/\lambda$，
+得到
+\[
+\boxed{D=\frac{\tan\theta}{\lambda}}.
+\]
+\excheck 固定的是\emph{衍射级次} $m$；若改变级次而非波长，上式不是同一个偏导数。
+
+\diffractionproblem{136}{210}
+波长
+$\lambda=589.0$nm 的光垂直入射光栅，
+周期 $d=2.5\,\mathrm{\mu m}$，
+总刻线数 $N=10000$。
+求二级主极大的全角宽（两侧最近零点之间）。
+\exsolution
+二级方向满足
+$\sin\theta_2=2\lambda/d$。
+$N$ 缝干涉因子的最近零点在
+$d\sin\theta=(2\pm1/N)\lambda$，
+故峰两侧的全角宽
+\[
+\boxed{\Delta\theta\simeq
+\frac{2\lambda}{Nd\cos\theta_2}
+=\frac{2\lambda}
+{Nd\sqrt{1-(2\lambda/d)^2}}}.
+\]
+代数值
+$\Delta\theta\simeq5.3\times10^{-5}$rad，
+\[
+\boxed{\Delta\theta\simeq11''}.
+\]
+\excheck 题中“angular width”采用全主峰零点间宽度；若定义半宽则差一个因子2。
+
+\diffractionproblem{137}{210}
+证明光垂直入射宽度为 $\ell$ 的透射光栅时，
+其最大分辨本领不能超过 $\ell/\lambda$。
+\exsolution
+波长分辨本领由瑞利判据给出
+$\mathcal R=\lambda/\delta\lambda=mN$，
+其中 $N$ 是照亮的刻线数、$m$ 为衍射级次。
+若光栅周期为 $d$，则 $N\simeq\ell/d$。
+另一方面衍射必须满足
+$|m\lambda/d|\le1$，
+即 $|m|\le d/\lambda$。
+两者结合
+\[
+\boxed{\mathcal R_{\max}=mN
+\le\frac d\lambda\frac\ell d
+=\frac\ell\lambda}.
+\]
+\excheck 极限只是几何与衍射级次的上界，实际仪器还受光栅效率、缺陷、像差影响。
+
+\diffractionproblem{138}{210}
+用衍射光栅说明：
+按瑞利判据刚能分辨的两条相邻谱线的频差
+$\delta\nu$ 等于参与干涉的最远两振动传播时间差 $\Delta t$ 的倒数。
+\exsolution
+对第 $m$ 级，
+在最远两光栅缝之间的路程差约
+$\Delta\ell=N d\sin\theta
+=N m\lambda$，
+传播时延
+$\Delta t=\Delta\ell/c
+=Nm/\nu$。
+瑞利判据的相邻谱线刚可分辨时，
+$\delta\nu/\nu\simeq1/(mN)$，
+故
+\[
+\boxed{\delta\nu=
+\frac{\nu}{mN}
+=\frac1{\Delta t}}.
+\]
+\excheck 对有限光栅应取 $N-1$ 个缝间隔，更精确的系数含 $N-1$；
+书中公式为刻线多时 $N\gg1$ 的近似。
+
+\diffractionproblem{139}{210}
+原书题面印有宽 $\ell=10.0\,\mathrm m$ 的透射光栅，
+光垂直入射，两条谱线分别为
+$600.000$nm 与 $600.050$nm。
+在某衍射角 $\theta$ 下按瑞利判据刚好可分辨，求 $\theta$。
+\exsolution
+按瑞利条件
+$\delta\lambda=\lambda/(mN)$，
+而 $m\lambda=d\sin\theta$、
+$N=\ell/d$，故
+\[
+\boxed{\sin\theta\simeq
+\frac{\lambda^2}{\ell\,\delta\lambda}}.
+\]
+\textbf{按原书题面字面 $\ell=10.0\,\mathrm m$：}
+$\lambda=600$nm、
+$\delta\lambda=0.050$nm，得
+\[
+\boxed{\theta\simeq
+\arcsin(7.2\times10^{-4})\simeq0.041^\circ}.
+\]
+\textbf{若宽度本意是 $\ell=10.0\,\mathrm{mm}$：}
+则
+$\sin\theta=0.72$，
+\[
+\boxed{\theta\simeq46^\circ},
+\]
+这与\emph{原书书末}结果相符。
+\excheck 已直接查看原版印刷页210：题面\emph{确实印“10.0 m wide”}。
+因此书末46°与题面相差1000倍的宽度设定，二者必须分开报告，不能悄悄把题面改成毫米。
+
+\diffractionproblem{140}{210}
+原版书印：光栅宽
+$\ell=6.5$cm、每毫米200条线，
+研究谱线 $\lambda=670.8\,\mathrm{mm}$，双线间隔
+$\delta\lambda=0.015$nm。
+求：(a) 能分辨双线的最低级次；
+(b) 波长约670nm时此光栅的最小可分辨谱间隔。
+\exsolution
+\textbf{单位疑点：}题面确实印“670.8 mm”，
+但后文明确要在 $\lambda\approx670\,\mathrm{nm}$ 下分析，
+并且周期 $d=5\,\mathrm{\mu m}$ 根本不可能衍射
+$670.8\,\mathrm{mm}$ 的光。
+因此分别保留原文并按明确的670nm语境计算。
+刻线数
+$N=(6.5\,\mathrm{cm})(200\,\mathrm{mm^{-1}})
+=13000$。
+瑞利判据
+$mN\ge\lambda/\delta\lambda$，
+需要
+$m\ge670.8/(0.015\cdot13000)=3.44$，
+所以
+\[
+\boxed{m_{\min}=4}.
+\]
+最高级次
+$m_{\max}=\lfloor d/\lambda\rfloor=7$，
+最小可分辨波长差
+\[
+\boxed{\delta\lambda_{\min}\simeq
+\frac{\lambda}{m_{\max}N}
+\simeq\frac{670\,\mathrm{nm}}{7(13000)}
+\simeq7.4\,\mathrm{pm}\approx7\,\mathrm{pm}}.
+\]
+\excheck 原书印刷“670.8 mm”和书末7pm、第四级无法同时成立；订正单位应留在勘误中明确标识。
+
+\diffractionproblem{141}{210}
+一片宽
+$\ell=10$mm 的透射光栅，在垂直入射时，
+钠黄双线 $589.0$nm 与 $589.6$nm 从第五级开始可被分辨。
+估计：(a) 光栅周期；
+(b) 若仍用同样周期，欲在第三级分辨波长
+$\lambda=460.0$nm、间隔
+$\delta\lambda=0.13$nm 的双线，光栅宽度至少应取多少？
+\exsolution
+(a) 临界分辨本领
+$mN\simeq\lambda/\delta\lambda$，
+取 $m=5$，
+$N\simeq589/[5(0.6)]\simeq196$。
+周期
+\[
+\boxed{d\simeq\frac{\ell}{N}
+\simeq\frac{10\,\mathrm{mm}}{196}
+\simeq0.050\,\mathrm{mm}}.
+\]
+(b) 第三级
+$N_{\rm req}\simeq460/[3(0.13)]
+\simeq1180$，
+所以
+\[
+\boxed{\ell_{\min}\simeq N_{\rm req}d
+\simeq1180(0.050\,\mathrm{mm})
+\simeq6.0\,\mathrm{cm}}.
+\]
+\excheck 第一级别能分辨是在$m=5$，
+并不说明其他更高衍射级的主峰强度足够强；
+此处只比较理论分辨本领。
+
+\diffractionproblem{142}{210--211}
+石英光谱仪透射光栅宽
+$\ell=25$mm、每毫米250条线，
+物镜焦距
+$f=80$cm。
+波长为 $310.154$ 与
+$310.184$nm 的双线垂直入射。
+求：(a) 在一级、二级谱中像面上的分离距离；
+(b) 两级是否可分辨。
+\exsolution
+光栅周期
+$d=1/250\,\mathrm{mm}=4\,\mathrm{\mu m}$，
+总刻线数
+$N=25(250)=6250$。
+双线差
+$\delta\lambda=0.030$nm，
+第 $m$ 级满足
+$d\sin\theta_m=m\lambda$。
+焦平面坐标 $x_m=f\tan\theta_m$，
+故
+\[
+\delta x_m\simeq
+f\frac{m\,\delta\lambda}{d\cos^3\theta_m}.
+\]
+代 $m=1,2$：
+\[
+\boxed{\delta x_1\simeq6\,\mathrm{\mu m}},
+\qquad
+\boxed{\delta x_2\simeq12\,\mathrm{\mu m}}.
+\]
+瑞利分辨条件
+$\delta\lambda\ge\lambda/(mN)$：
+一级阈值约 $0.050$nm（大于0.030nm），不可分辨；
+二级约 $0.025$nm（小于0.030nm），可以分辨。
+\[
+\boxed{\text{一级不能分辨；二级可以分辨。}}
+\]
+\excheck 判断能否分辨应使用相同的光栅线数与瑞利准则，而不是只看像面双线分离几微米。
