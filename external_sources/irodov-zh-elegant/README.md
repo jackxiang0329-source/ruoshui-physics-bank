@@ -5,8 +5,8 @@
 
 ## 真实进度（2026-11-21）
 
-- **本轮新增：第三篇《电动力学》第89—188题，连续100题。**
-- **累计：833题——第一篇力学1—388题（全部）、第二篇热学1—257题（全部）、第三篇电动力学1—188题；三篇独立编号。**
+- **本轮新增：第三篇《电动力学》第189—288题，连续100题。**
+- **累计：933题——第一篇力学1—388题（全部）、第二篇热学1—257题（全部）、第三篇电动力学1—288题；三篇独立编号。**
 - 第 1.1 节“运动学”1—58 题已覆盖（全部）。
 - 第 1.2 节“动力学基本方程”59—117 题已覆盖（全部）。
 - 第 1.3 节“能量、动量与角动量守恒”118—199 题已覆盖（全部）。
@@ -27,7 +27,9 @@
 - 第 3.1 节“真空中的恒定电场”第1—53题已覆盖（全部）。
 - 第 3.2 节“静电场中的导体与电介质”第54—100题已覆盖（全部）。
 - 第 3.3 节“电容与电场能”第101—146题已覆盖（全部）。
-- 第 3.4 节“恒定电流”第147—188题已覆盖（后续继续）。
+- 第 3.4 节“恒定电流”第147—218题已覆盖（全部）。
+- 第 3.5 节“恒定磁场与磁介质”第219—287题已覆盖（全部）。
+- 第 3.6 节“电磁感应与麦克斯韦方程”第288题开始录入（后续继续）。
 - 本项目尚未完成整书翻译或独立学术二校；任何“编译成功”仅说明技术排版通过。
 
 | 内容 | 文件 |
@@ -118,6 +120,14 @@
 | 第三篇3.4节147—160题 | [19-electric-current-147-160.tex](chapters/19-electric-current-147-160.tex) |
 | 第三篇3.4节161—175题 | [19-electric-current-161-175.tex](chapters/19-electric-current-161-175.tex) |
 | 第三篇3.4节176—188题 | [19-electric-current-176-188.tex](chapters/19-electric-current-176-188.tex) |
+| 第三篇3.4节189—200题 | [19-electric-current-189-200.tex](chapters/19-electric-current-189-200.tex) |
+| 第三篇3.4节201—218题 | [19-electric-current-201-218.tex](chapters/19-electric-current-201-218.tex) |
+| 第三篇3.5节219—235题 | [20-magnetostatics-219-235.tex](chapters/20-magnetostatics-219-235.tex) |
+| 第三篇3.5节236—250题 | [20-magnetostatics-236-250.tex](chapters/20-magnetostatics-236-250.tex) |
+| 第三篇3.5节251—262题 | [20-magnetostatics-251-262.tex](chapters/20-magnetostatics-251-262.tex) |
+| 第三篇3.5节263—274题 | [20-magnetostatics-263-274.tex](chapters/20-magnetostatics-263-274.tex) |
+| 第三篇3.5节275—287题 | [20-magnetostatics-275-287.tex](chapters/20-magnetostatics-275-287.tex) |
+| 第三篇3.6节288题 | [21-induction-288-288.tex](chapters/21-induction-288-288.tex) |
 | 源书勘误 | [errata.md](errata.md) |
 | 技术与学术质检记录 | [quality-check.md](quality-check.md) |
 | 结构完整性检查 | [check_sources.py](check_sources.py) |
@@ -140,4 +150,4 @@ GitHub Actions 工作流 .github/workflows/irodov-elegantbook.yml
 
 本目录放在 external_sources/，不得将翻译题目混入
 大学物理原创高难度题库 bank/ 的题数和质量门禁，也不修改它们的权威源文件。
-后续继续从原书第三篇第3.4节第189题起逐题补充；第一篇已覆盖1—388题。保留原书的分篇重新编号体系。
+后续继续从原书第三篇第3.6节第289题起逐题补充；第一篇已覆盖1—388题。保留原书的分篇重新编号体系。
