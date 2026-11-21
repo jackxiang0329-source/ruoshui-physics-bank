@@ -5,8 +5,8 @@
 
 ## 真实进度（2026-11-21）
 
-- **本轮新增：73题（第一篇力学361—388题28题；第二篇2.1节1—25题25题；第二篇2.2节26—45题20题）。**
-- **累计：433题，第一篇第1—388题 + 第二篇第2.1节第1—25题 + 第二篇第2.2节第26—45题；保持原书两篇独立编号。**
+- **本轮新增：第二篇原书第46—145题，共100题。**
+- **累计：533题——第一篇力学1—388题（全部），第二篇热力学与分子物理1—145题；按原书分篇独立编号。**
 - 第 1.1 节“运动学”1—58 题已覆盖（全部）。
 - 第 1.2 节“动力学基本方程”59—117 题已覆盖（全部）。
 - 第 1.3 节“能量、动量与角动量守恒”118—199 题已覆盖（全部）。
@@ -17,7 +17,9 @@
 - 第 1.8 节“相对论力学”340—388 题已覆盖（全部）。
 - **第二篇“热力学与分子物理”从原书第1题重新编号。**
 - 第 2.1 节“气体状态方程与过程”第1—25题已覆盖（全部）。
-- 第 2.2 节“热力学第一定律与热容”第26—45题已覆盖（本节尚未结束）。
+- 第 2.2 节“热力学第一定律与热容”第26—61题已覆盖（全部）。
+- 第 2.3 节“气体分子运动论、玻尔兹曼与麦克斯韦分布”第62—112题已覆盖（全部）。
+- 第 2.4 节“热力学第二定律与熵”第113—145题已覆盖（后续继续）。
 - 本项目尚未完成整书翻译或独立学术二校；任何“编译成功”仅说明技术排版通过。
 
 | 内容 | 文件 |
@@ -69,6 +71,17 @@
 | 第二篇2.1节21—25题 | [09-thermo-state-021-025.tex](chapters/09-thermo-state-021-025.tex) |
 | 第二篇2.2节26—35题 | [10-thermo-first-law-026-035.tex](chapters/10-thermo-first-law-026-035.tex) |
 | 第二篇2.2节36—45题 | [10-thermo-first-law-036-045.tex](chapters/10-thermo-first-law-036-045.tex) |
+| 第二篇2.2节46—56题 | [10-thermo-first-law-046-056.tex](chapters/10-thermo-first-law-046-056.tex) |
+| 第二篇2.2节57—61题 | [10-thermo-first-law-057-061.tex](chapters/10-thermo-first-law-057-061.tex) |
+| 第二篇2.3节62—72题 | [11-kinetic-theory-062-072.tex](chapters/11-kinetic-theory-062-072.tex) |
+| 第二篇2.3节73—83题 | [11-kinetic-theory-073-083.tex](chapters/11-kinetic-theory-073-083.tex) |
+| 第二篇2.3节84—94题 | [11-kinetic-theory-084-094.tex](chapters/11-kinetic-theory-084-094.tex) |
+| 第二篇2.3节95—103题 | [11-kinetic-theory-095-103.tex](chapters/11-kinetic-theory-095-103.tex) |
+| 第二篇2.3节104—112题 | [11-kinetic-theory-104-112.tex](chapters/11-kinetic-theory-104-112.tex) |
+| 第二篇2.4节113—121题 | [12-entropy-cycles-113-121.tex](chapters/12-entropy-cycles-113-121.tex) |
+| 第二篇2.4节122—129题 | [12-entropy-cycles-122-129.tex](chapters/12-entropy-cycles-122-129.tex) |
+| 第二篇2.4节130—139题 | [12-entropy-cycles-130-139.tex](chapters/12-entropy-cycles-130-139.tex) |
+| 第二篇2.4节140—145题 | [12-entropy-cycles-140-145.tex](chapters/12-entropy-cycles-140-145.tex) |
 | 源书勘误 | [errata.md](errata.md) |
 | 技术与学术质检记录 | [quality-check.md](quality-check.md) |
 | 结构完整性检查 | [check_sources.py](check_sources.py) |
@@ -91,4 +104,4 @@ GitHub Actions 工作流 .github/workflows/irodov-elegantbook.yml
 
 本目录放在 external_sources/，不得将翻译题目混入
 大学物理原创高难度题库 bank/ 的题数和质量门禁，也不修改它们的权威源文件。
-后续继续从原书第二篇第2.2节第46题起逐题补充；第一篇已覆盖1—388题。保留原书的分篇重新编号体系。
+后续继续从原书第二篇第2.4节第146题起逐题补充；第一篇已覆盖1—388题。保留原书的分篇重新编号体系。
