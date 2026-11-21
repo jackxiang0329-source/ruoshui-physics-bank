@@ -28,6 +28,12 @@ jobs:
         run: python3 external_sources/irodov-zh-elegant/atomic_scattering_regression.py
       - name: Independently audit de Broglie waves and quantum wells
         run: python3 external_sources/irodov-zh-elegant/wave_quantum_regression.py
+      - name: Deep-check original radioactive decay and Bateman chains
+        run: python3 external_sources/irodov-zh-elegant/radioactivity_deep_regression.py
+      - name: Deep-check original nuclear energy/momentum and reactor physics
+        run: python3 external_sources/irodov-zh-elegant/nuclear_reactions_deep_regression.py
+      - name: Deep-check relativistic particles and independent conservation laws
+        run: python3 external_sources/irodov-zh-elegant/particles_conservation_regression.py
       - uses: xu-cheng/latex-action@v4
         with:
           working_directory: external_sources/irodov-zh-elegant
