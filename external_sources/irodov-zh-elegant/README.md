@@ -7,6 +7,7 @@
 
 - **本轮新增：44题——第六篇6.6节核反应267—290题24道（本节完成），6.7节基本粒子291—310题20道（第六篇终题）。原书六篇所有题号至此已录入。**
 - **累计：1878题——第一篇力学388题、第二篇热学257题、第三篇电动力学407题、第四篇振动与波动224题、第五篇光学292题、第六篇原子与核物理310题；六篇原书独立编号均完整覆盖。**
+- **后续质检阶段：** 第六篇1—213题建立分章节数值复算回归，单独修订第14、130、138、195、196题的物理适用条件、线系歧义或图示；保持原书题数不变。
 - 第 1.1 节“运动学”1—58 题已覆盖（全部）。
 - 第 1.2 节“动力学基本方程”59—117 题已覆盖（全部）。
 - 第 1.3 节“能量、动量与角动量守恒”118—199 题已覆盖（全部）。
@@ -233,11 +234,17 @@
     python3 check_sources.py
     python3 lint_problems.py
     python3 numeric_regression.py
+    python3 atomic_scattering_regression.py
+    python3 wave_quantum_regression.py
+    python3 spectra_molecules_regression.py
     bash build.sh
 
 - `check_sources.py`：验证原书六篇独立编号1,878题及164份章节来源；
 - `lint_problems.py`：把各TeX章分割为独立习题，逐题检查中文题面、推导和核验标记的完整性及顺序，并提示数学环境疑点；
 - `numeric_regression.py`：独立于正文重算37项高风险物理数值（原子与核物理，覆盖反冲、阈值、放射性及粒子衰变等）；
+- `atomic_scattering_regression.py`：对第六篇1—48题的卢瑟福散射、玻尔原子、氢谱系及原子反冲开展独立数值回归，并核查一次散射近似条件；
+- `wave_quantum_regression.py`：对第六篇49—96题的德布罗意波、相对论校正、不确定原理、束缚态归一化、势阱能级和WKB主指数做独立回归；
+- `spectra_molecules_regression.py`：对第六篇97—213题的原子光谱、磁矩、Debye晶体、费米电子及本征半导体数值做独立回归；
 - 这些门禁只能验证结构与已选的回归结果，不能代替全书逐题独立物理学二校。
 
 需要 XeLaTeX、latexmk、TikZ 与 ElegantBook 4.7。
