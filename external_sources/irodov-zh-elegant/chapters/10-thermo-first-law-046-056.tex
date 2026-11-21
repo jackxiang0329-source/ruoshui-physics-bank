@@ -325,18 +325,22 @@ $\delta Q=C_V\,\mathrm dT+p\,\mathrm dV$
 (b) 若 $C-C_V=\beta V$，
 \[
 \beta\,\mathrm dT=\frac{RT}{V^2}\,\mathrm dV
-\Longrightarrow
-\boxed{\frac1V+\frac\beta R T=\text{常数}}.
+\quad\Longrightarrow\quad
+\frac{\mathrm dT}{T}=\frac R\beta\frac{\mathrm dV}{V^2}.
+\]
+积分得到
+$\ln T=-R/(\beta V)+\text{常数}$，即
+\[
+\boxed{T\exp\left(\frac R{\beta V}\right)=\text{常数}}.
 \]
 (c) 若 $C-C_V=ap$，则
 $ap\,\mathrm dT=p\,\mathrm dV$，消去 $p$：
 \[
 \boxed{V-aT=\text{常数}}.
 \]
-\excheck (b) 的积分需将
-$\mathrm dT/T=(R/\beta)\,\mathrm dV/V^2$；
-因 $\mathrm d(1/V)=-\mathrm dV/V^2$，
-所以符号为正。
+\excheck (b) 的关键是先除以 $T$ 再积分；
+否则会错误得到 $T\propto1/V$。
+所得式与原书第55(b)题答案一致。
 
 \thermoenergyproblem{56}{69}
 一摩尔理想气体的绝热指数为 $\gamma$，
