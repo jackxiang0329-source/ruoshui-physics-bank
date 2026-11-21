@@ -1,0 +1,359 @@
+% Irodov, original numbered Part II problems 84--94, printed pp.72--73.
+% Maxwell speed density F(v)=4/sqrt(pi) v^2/vp^3 exp[-(v/vp)^2],
+% vp=sqrt(2kBT/m), exact normalization.
+\thermokineticproblem{84}{72}
+在麦克斯韦分布下，
+求分子速率与下列特征速率相差不超过
+$\delta=1.00\%$ 的分子所占比例：
+(a) 最概然速率 $v_p$；
+(b) 均方根速率 $v_{\rm rms}$。
+\exsolution
+令无量纲速率 $u=v/v_p$，
+其归一化分布为
+$f(u)=\frac4{\sqrt\pi}u^2e^{-u^2}$。
+若速率容许偏差是特征速率 $v_*$ 的
+$\delta$ 倍，则区间
+$u\in[u_*(1-\delta),u_*(1+\delta)]$，
+小 $\delta$ 下比例近似为
+\[
+P\simeq f(u_*)\,2\delta u_*
+=\frac8{\sqrt\pi}\delta u_*^3e^{-u_*^2}.
+\]
+(a) $u_*=1$，故
+\[
+\boxed{P_p\simeq\frac8{e\sqrt\pi}\delta
+\simeq1.66\%}.
+\]
+(b) 均方根速率
+$v_{\rm rms}=\sqrt{3k_BT/m}$，
+$u_*=\sqrt{3/2}$，
+因此
+\[
+\boxed{P_{\rm rms}\simeq
+\frac8{\sqrt\pi}\left(\frac32\right)^{3/2}
+e^{-3/2}\delta\simeq1.85\%}.
+\]
+\excheck 用的是速率区间而非某一固定精确速率；
+连续分布在单个点的概率为零，
+须对小但非零宽度的区间积分。
+
+\thermokineticproblem{85}{72}
+求气体温度：
+(a) 氢分子的均方根速率
+比最概然速率大
+$\Delta v=400\,\mathrm{m/s}$；
+(b) 氧分子的速率分布函数
+在 $v=420\,\mathrm{m/s}$ 处取最大值。
+\exsolution
+(a) 由麦克斯韦分布，
+\[
+v_{\rm rms}-v_p
+=(\sqrt3-\sqrt2)\sqrt{\frac{k_BT}{m_H}}
+=\Delta v.
+\]
+所以
+\[
+\boxed{T_a=\frac{m_H(\Delta v)^2}
+{k_B(\sqrt3-\sqrt2)^2}}.
+\]
+用分子氢质量 $m_H\simeq2u$
+可得
+$\boxed{T_a\simeq380\,\mathrm K}$。
+(b) 最大值出现在
+$v_p=\sqrt{2k_BT/m_O}$，
+故
+\[
+\boxed{T_b=\frac{m_Ov^2}{2k_B}
+\simeq340\,\mathrm K},
+\]
+其中氧分子质量 $m_O\simeq32u$。
+\excheck 这两问的气体摩尔质量不同；
+不能把氢分子的质量用于氧分子计算。
+
+\thermokineticproblem{86}{72}
+对于氮气，求：
+(a) 麦克斯韦速率密度函数
+在 $v_1=300\,\mathrm{m/s}$ 和
+$v_2=600\,\mathrm{m/s}$ 处数值相等的温度；
+(b) 在给定速率 $v$ 处，
+温度为 $T_0$ 与 $\eta T_0$ 的两个
+麦克斯韦速率密度函数数值相等时的 $v$。
+\exsolution
+在某一温度下，
+麦克斯韦速率概率密度为
+\[
+F_T(v)=4\pi\left(\frac m{2\pi k_BT}\right)^{3/2}
+v^2e^{-mv^2/(2k_BT)}.
+\]
+(a) 令 $F_T(v_1)=F_T(v_2)$，
+约掉温度的共同归一化系数，
+得
+\[
+v_1^2e^{-mv_1^2/(2k_BT)}
+=v_2^2e^{-mv_2^2/(2k_BT)}.
+\]
+取对数化简为
+\[
+\boxed{T=
+\frac{m(v_2^2-v_1^2)}
+{4k_B\ln(v_2/v_1)}}.
+\]
+取 $m\simeq28u$，得
+$\boxed{T\simeq330\,\mathrm K}$。
+(b) 比较同一个速率的两温度概率密度，
+\[
+T_0^{-3/2}e^{-mv^2/(2k_BT_0)}
+=(\eta T_0)^{-3/2}
+e^{-mv^2/(2k_B\eta T_0)}.
+\]
+两边取对数，得
+\[
+\boxed{v=
+\sqrt{\frac{3k_BT_0\eta\ln\eta}
+{m(\eta-1)}}}.
+\]
+\excheck 当 $\eta\to1$ 时，
+$\eta\ln\eta/(\eta-1)\to1$，
+两分布趋于相同，此式的极限只对应
+由非平凡交点连续延伸到的特征速率。
+
+\thermokineticproblem{87}{72}
+在含氮分子与氧分子的混合气中，
+温度为何值时氮、氧分子的最概然速率
+相差 $\Delta v=30\,\mathrm{m/s}$？
+\exsolution
+同温混合气中，
+分子量为 $m$ 的组分最概然速率为
+$v_p=\sqrt{2k_BT/m}$。
+氮分子比氧分子轻，
+故氮的最概然速率较大。
+因此
+\[
+\Delta v=\sqrt{2k_BT}
+\left(\frac1{\sqrt{m_N}}-\frac1{\sqrt{m_O}}\right).
+\]
+平方求温度：
+\[
+\boxed{T=\frac{(\Delta v)^2}
+{2k_B(1/\sqrt{m_N}-1/\sqrt{m_O})^2}}.
+\]
+取 $m_N\simeq28u$、$m_O\simeq32u$，
+\[
+\boxed{T\simeq0.37\,\mathrm K}.
+\]
+\excheck 这一数值仅是\emph{经典理想气体
+麦克斯韦模型的形式外推}；
+实际氮氧混合物在如此低温下不会保持常规气态，
+不应把它当作可直接实现的实验气体状态。
+
+\thermokineticproblem{88}{72}
+氢气与氦气的混合物温度为
+$T=300\,\mathrm K$。
+在什么速率 $v$ 处，
+两组分各自归一化的麦克斯韦速率分布密度
+取相同值？
+\exsolution
+氢分子质量为 $m_H\simeq2u$，
+氦原子质量为 $m_{\rm He}\simeq4u$。
+两个归一化速率概率密度相等意味着
+\[
+m_H^{3/2}v^2e^{-m_Hv^2/(2k_BT)}
+=m_{\rm He}^{3/2}v^2e^{-m_{\rm He}v^2/(2k_BT)}.
+\]
+除去共同的 $v^2$（取 $v>0$），
+两边取自然对数：
+\[
+\frac{(m_{\rm He}-m_H)v^2}{2k_BT}
+=\frac32\ln\frac{m_{\rm He}}{m_H}.
+\]
+所以
+\[
+\boxed{v=
+\sqrt{\frac{3k_BT\ln(m_{\rm He}/m_H)}
+{m_{\rm He}-m_H}}}.
+\]
+代入后
+$\boxed{v\simeq1.6\,\mathrm{km/s}}$。
+\excheck 这里比较的是\emph{各自归一化的函数}
+$F(v)$，不包含混合气未知的组分浓度权重。
+
+\thermokineticproblem{89}{72}
+分子质量为 $m$ 的理想气体中，
+对于固定速率区间 $[v,v+\mathrm dv]$，
+在何种温度 $T$ 下，
+速率处于该区间的分子数量最多？
+\exsolution
+归一化麦克斯韦速率密度
+\[
+F_T(v)=
+4\pi\left(\frac m{2\pi k_BT}\right)^{3/2}
+v^2e^{-mv^2/(2k_BT)}.
+\]
+当 $v$、$\mathrm dv$ 固定时，
+需最大化温度函数
+$T^{-3/2}\exp[-mv^2/(2k_BT)]$。
+取对数并求导：
+\[
+\frac{\mathrm d}{\mathrm dT}\ln F_T(v)
+=-\frac3{2T}+\frac{mv^2}{2k_BT^2}=0.
+\]
+得到唯一极大值
+\[
+\boxed{T=\frac{mv^2}{3k_B}}.
+\]
+\excheck 这是固定某一速率窗口对温度求最大；
+不同于固定温度下对速率求最概然值
+$v_p=\sqrt{2k_BT/m}$。
+
+\thermokineticproblem{90}{73}
+求气体中分子速度满足以下条件的概率：
+$x$ 方向速度分量属于
+$[v_x,v_x+\mathrm dv_x]$，
+同时垂直 $x$ 方向的速度分量模
+$v_\perp=\sqrt{v_y^2+v_z^2}$
+属于 $[v_\perp,v_\perp+\mathrm dv_\perp]$。
+分子质量 $m$，温度 $T$。
+\exsolution
+三维麦克斯韦速度密度为
+\[
+f(\bm v)=
+\left(\frac m{2\pi k_BT}\right)^{3/2}
+e^{-m(v_x^2+v_y^2+v_z^2)/(2k_BT)}.
+\]
+在垂直的 $(v_y,v_z)$ 平面上引入极坐标，
+$\mathrm dv_y\mathrm dv_z
+=v_\perp\,\mathrm dv_\perp\,\mathrm d\varphi$。
+把极角 $\varphi\in[0,2\pi)$ 积分掉：
+\[
+\boxed{\frac{\mathrm dN}{N}
+=2\pi\left(\frac m{2\pi k_BT}\right)^{3/2}
+v_\perp e^{-m(v_x^2+v_\perp^2)/(2k_BT)}
+\,\mathrm dv_x\,\mathrm dv_\perp}.
+\]
+\excheck 变量 $v_\perp$ 是二维分量\emph{模}，
+须包含极坐标雅可比因子 $2\pi v_\perp$。
+
+\thermokineticproblem{91}{73}
+从麦克斯韦分布直接计算
+理想气体分子速度 $x$ 分量的平均值
+$\overline{v_x}$，
+以及其绝对值的平均值
+$\overline{|v_x|}$。
+\exsolution
+一维速度分布为
+\[
+f_x(v_x)=\sqrt{\frac m{2\pi k_BT}}
+e^{-mv_x^2/(2k_BT)}.
+\]
+因为该函数为偶函数，
+$v_xf_x(v_x)$ 为奇函数，
+所以
+\[
+\boxed{\overline{v_x}
+=\int_{-\infty}^{\infty}v_xf_x(v_x)\,\mathrm dv_x=0}.
+\]
+绝对值平均为
+\[
+\overline{|v_x|}
+=2\sqrt{\frac m{2\pi k_BT}}
+\int_0^\infty
+v_xe^{-mv_x^2/(2k_BT)}\,\mathrm dv_x.
+\]
+令
+$u=mv_x^2/(2k_BT)$，
+$v_x\mathrm dv_x=(k_BT/m)\mathrm du$，
+得
+\[
+\boxed{\overline{|v_x|}
+=\sqrt{\frac{2k_BT}{\pi m}}}.
+\]
+\excheck 平均的有符号分量为零，
+但其绝对值平均严格为正；
+不能将两种平均混淆。
+
+\thermokineticproblem{92}{73}
+利用麦克斯韦分布求
+气体分子 $x$ 方向速度分量平方的平均值
+$\overline{v_x^2}$，气体温度 $T$、分子质量 $m$。
+\exsolution
+代入归一化一维高斯分布：
+\[
+\overline{v_x^2}
+=\sqrt{\frac m{2\pi k_BT}}
+\int_{-\infty}^{\infty}
+v_x^2e^{-mv_x^2/(2k_BT)}\,\mathrm dv_x.
+\]
+利用高斯积分恒等式
+\[
+\int_{-\infty}^{\infty}x^2e^{-ax^2}\,\mathrm dx
+=\frac{\sqrt\pi}{2a^{3/2}},\qquad a>0,
+\]
+取 $a=m/(2k_BT)$，化简为
+\[
+\boxed{\overline{v_x^2}=\frac{k_BT}{m}}.
+\]
+\excheck 三个正交速度分量独立且等方差，
+所以 $\overline{v^2}=3k_BT/m$，与均分定理一致。
+
+\thermokineticproblem{93}{73}
+在温度为 $T$、数密度为 $n$、
+分子质量为 $m$ 的理想气体中，
+根据麦克斯韦分布求
+单位墙面积每单位时间受到分子撞击的次数
+$\Phi$。
+\exsolution
+取墙法线为 $x$ 轴，
+只有朝墙运动、满足 $v_x>0$ 的分子
+能撞击墙。
+单位面积每秒碰撞数是正向粒子通量
+\[
+\Phi=n\int_0^\infty v_x f_x(v_x)\,\mathrm dv_x,
+\quad
+f_x(v_x)=\sqrt{\frac m{2\pi k_BT}}
+e^{-mv_x^2/(2k_BT)}.
+\]
+计算积分：
+\[
+\int_0^\infty v_x f_x(v_x)\,\mathrm dv_x
+=\sqrt{\frac{k_BT}{2\pi m}},
+\]
+所以
+\[
+\boxed{\Phi=n\sqrt{\frac{k_BT}{2\pi m}}
+=\frac14n\sqrt{\frac{8k_BT}{\pi m}}
+=\frac14n\bar v}.
+\]
+\excheck 因为正、负法向速度各占一半，
+而撞击通量还按速率加权，
+不能只用 $n\bar v/2$。
+
+\thermokineticproblem{94}{73}
+从麦克斯韦分布直接求
+数密度为 $n$、温度为 $T$ 的气体
+对静止平壁产生的压强 $p$，
+单分子质量为 $m$。
+\exsolution
+每个以正法向分量 $v_x>0$ 撞墙的
+分子在弹性反射中传给墙
+法向冲量 $2mv_x$；
+相应撞击通量微元为
+$n v_x f_x(v_x)\,\mathrm dv_x$。
+所以
+\[
+p=2mn\int_0^\infty v_x^2 f_x(v_x)\,\mathrm dv_x.
+\]
+由于高斯分布为偶函数，
+\[
+2\int_0^\infty v_x^2 f_x(v_x)\,\mathrm dv_x
+=\int_{-\infty}^\infty v_x^2 f_x(v_x)\,\mathrm dv_x
+=\overline{v_x^2}.
+\]
+上一题得到
+$\overline{v_x^2}=k_BT/m$，
+因此
+\[
+\boxed{p=mn\overline{v_x^2}=nk_BT}.
+\]
+\excheck 这是理想气体状态方程的动理论形式；
+压强取决于法向动量通量，而不是
+墙上单次碰撞冲量大小。
