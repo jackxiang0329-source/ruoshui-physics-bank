@@ -492,8 +492,18 @@ RADIOACTIVITY_RANGES = [range(214, 227), range(227, 238), range(238, 249)]
 NUCLEAR_REACTION_CHAPTERS = [
     "39-nuclear-reactions-249-258.tex",
     "39-nuclear-reactions-259-266.tex",
+    "39-nuclear-reactions-267-280.tex",
+    "39-nuclear-reactions-281-290.tex",
 ]
-NUCLEAR_REACTION_RANGES = [range(249, 259), range(259, 267)]
+NUCLEAR_REACTION_RANGES = [
+    range(249, 259), range(259, 267),
+    range(267, 281), range(281, 291),
+]
+ELEMENTARY_PARTICLE_CHAPTERS = [
+    "40-elementary-particles-291-300.tex",
+    "40-elementary-particles-301-310.tex",
+]
+ELEMENTARY_PARTICLE_RANGES = [range(291, 301), range(301, 311)]
 
 part_three = []
 for macro, filenames, expected_ranges in [
@@ -639,6 +649,7 @@ for macro, filenames, ranges in [
     ("moleculeproblem", MOLECULE_CHAPTERS, MOLECULE_RANGES),
     ("radioactivityproblem", RADIOACTIVITY_CHAPTERS, RADIOACTIVITY_RANGES),
     ("nuclearreactionproblem", NUCLEAR_REACTION_CHAPTERS, NUCLEAR_REACTION_RANGES),
+    ("elementaryproblem", ELEMENTARY_PARTICLE_CHAPTERS, ELEMENTARY_PARTICLE_RANGES),
 ]:
     if (r"\newcommand{" + chr(92) + macro + "}") not in main:
         errors.append(f"main.tex missing macro {macro}")
@@ -661,11 +672,11 @@ for macro, filenames, ranges in [
             errors.append(f"{name}: TeX braces unbalanced")
         if r"\input{chapters/" + path.stem + "}" not in main:
             errors.append(f"main.tex missing chapter: {name}")
-if part_six != list(range(1, 267)):
-    errors.append("Part VI independent numbering is not exactly 1..266")
+if part_six != list(range(1, 311)):
+    errors.append("Part VI independent numbering is not exactly 1..310")
 if main.count(r"\chapter{原子与核物理}") != 1:
     errors.append("Part VI chapter count is not one")
-for heading in ("散射、卢瑟福--玻尔原子", "粒子的波动性质与薛定谔方程", "原子性质与光谱", "分子与晶体", "放射性", "核反应"):
+for heading in ("散射、卢瑟福--玻尔原子", "粒子的波动性质与薛定谔方程", "原子性质与光谱", "分子与晶体", "放射性", "核反应", "基本粒子"):
     if main.count(r"\section{" + heading) != 1:
         errors.append(f"Part VI section missing or duplicated: {heading}")
 
@@ -673,4 +684,4 @@ if errors:
     for e in errors:
         print("FAIL:", e, file=sys.stderr)
     sys.exit(1)
-print("PASS: 388 Part-I + 257 Part-II + 407 Part-III + 224 Part-IV + 292 Part-V + 266 Part-VI = 1834 translated solved problems in 160 chapter files; all six independent numbering ranges verified")
+print("PASS: 388 Part-I + 257 Part-II + 407 Part-III + 224 Part-IV + 292 Part-V + 310 Part-VI = 1878 translated solved problems in 164 chapter files; all six independent numbering ranges verified")
