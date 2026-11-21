@@ -240,7 +240,7 @@ if r"\newcommand{\thermoenergyproblem}" not in main:
 if main.count(r"\section{热力学第一定律与热容") != 1:
     errors.append("first law section count is not one")
 
-# The second book part is a SINGLE independent 1..257 range,
+# The second book part is a SINGLE independent 1..292 range,
 # and each newly introduced subject has its own macro and source list.
 subject_results = {}
 for label, chapters, ranges, macro, expected_ids in [
@@ -287,7 +287,7 @@ part_two = (thermo_ids + energy_ids
             + subject_results["kinetic"] + subject_results["entropy"]
             + subject_results["capillarity"] + subject_results["phase"]
             + subject_results["transport"])
-if part_two != list(range(1, 258)):
+if part_two != list(range(1, 293)):
     errors.append("Part II combined original IDs are not exactly 1..257")
 if main.count(r"\section{气体分子运动论") != 1:
     errors.append("kinetic theory section count is not one")
@@ -459,8 +459,8 @@ DISPERSION_CHAPTERS = ["31-optics-dispersion-200-215.tex", "31-optics-dispersion
 DISPERSION_RANGES = [range(200, 216), range(216, 224)]
 MOVING_OPTICS_CHAPTERS = ["32-moving-optics-224-245.tex"]
 MOVING_OPTICS_RANGES = [range(224, 246)]
-THERMAL_OPTICS_CHAPTERS = ["33-thermal-radiation-246-257.tex"]
-THERMAL_OPTICS_RANGES = [range(246, 258)]
+THERMAL_OPTICS_CHAPTERS = ["33-thermal-radiation-246-257.tex", "33-thermal-radiation-258-268.tex", "33-thermal-radiation-269-280.tex", "33-thermal-radiation-281-292.tex"]
+THERMAL_OPTICS_RANGES = [range(246, 258), range(258, 269), range(269, 281), range(281, 293)]
 
 part_three = []
 for macro, filenames, expected_ranges in [
@@ -602,4 +602,4 @@ if errors:
     for e in errors:
         print("FAIL:", e, file=sys.stderr)
     sys.exit(1)
-print("PASS: 388 Part-I + 257 Part-II + 407 Part-III + 224 Part-IV + 257 Part-V = 1533 translated solved problems in 137 chapter files; all five independent numbering ranges verified")
+print("PASS: 388 Part-I + 257 Part-II + 407 Part-III + 224 Part-IV + 292 Part-V = 1568 translated solved problems in 140 chapter files; all five independent numbering ranges verified")
