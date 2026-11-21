@@ -167,7 +167,7 @@ test(246,"Ir191 resonant recoil Doppler compensation m/s",
 test(247,"upward source Doppler compensation m/s",
      9.81*20/C,6.54e-7)
 test(248,"Zn67 Mossbauer gravity-linewidth height metres",
-     HB*C*C/(9.81*93000*1e6*E*14e-6),4.6)
+     HB*C*C/(9.81*93000*E*14e-6),4.6)
 print(f"PASS: {len(checks)} independent decay-chain, activation, beta-kinematic"
       " and gamma-recoil checks, original VI.214-248.")
 for no,description,value in checks:
