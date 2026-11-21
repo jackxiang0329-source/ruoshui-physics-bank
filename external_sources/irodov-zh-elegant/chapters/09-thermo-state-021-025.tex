@@ -1,0 +1,231 @@
+% Irodov section 2.1, original numbered problems 21--25,
+% printed p.65, PDF p.74. Van der Waals equation for one mole:
+% p=RT/(V-b)-a/V^2, V is molar volume (one mole).
+\thermoproblem{21}{65}
+在温度 $T=300\,\mathrm K$ 时，
+二氧化碳的质量密度达到
+$\rho=500\,\mathrm{g/L}$，
+需有多大压强？
+分别用理想气体方程和范德瓦耳斯方程计算。
+\exsolution
+设二氧化碳的摩尔质量
+$M=44.0\,\mathrm{g/mol}$，
+每摩尔的体积为
+\[
+V_m=\frac M\rho
+=\frac{44.0\,\mathrm{g/mol}}{500\,\mathrm{g/L}}
+=0.0880\,\mathrm{L/mol}.
+\]
+理想气体方程给
+\[
+p_{\rm id}=\frac{RT}{V_m},
+\]
+取 $R=0.082057\,\mathrm{L\,atm/(mol\,K)}$，
+\[
+\boxed{p_{\rm id}\simeq280\,\mathrm{atm}}.
+\]
+范德瓦耳斯方程为
+$(p+a/V_m^2)(V_m-b)=RT$，
+解得
+\[
+\boxed{p_{\rm vdW}=
+\frac{RT}{V_m-b}-\frac{a}{V_m^2}}.
+\]
+采用该气体常用近似参数
+$a\simeq3.59\,\mathrm{atm\,L^2/mol^2}$、
+$b\simeq0.0427\,\mathrm{L/mol}$，
+代入
+\[
+p_{\rm vdW}
+\simeq\frac{0.082057(300)}{0.0880-0.0427}
+-\frac{3.59}{(0.0880)^2}
+\simeq\boxed{80\,\mathrm{atm}}.
+\]
+\excheck 两结果差异很大，因为该密度下
+分子排除体积 $b$ 已与摩尔体积同量级，
+理想气体近似失效。
+
+\thermoproblem{22}{65}
+容器体积为 $V=1.00\,\mathrm L$，
+内装一摩尔氮气。
+求在多高的温度下，
+理想气体方程计算的压强与范德瓦耳斯方程
+计算值的相对误差为 $\eta=10\%$
+（相对范德瓦耳斯压强定义）；
+并求此时压强。
+\exsolution
+取这一摩尔气体的两种压强模型：
+\[
+p_{\rm id}=\frac{RT}{V},\qquad
+p_{\rm vdW}=\frac{RT}{V-b}-\frac a{V^2}.
+\]
+按本题考虑的分支，理想气体压强高于
+范德瓦耳斯值，故
+$(p_{\rm id}-p_{\rm vdW})/p_{\rm vdW}=\eta$，
+即
+$p_{\rm vdW}=p_{\rm id}/(1+\eta)$。
+代入并整理：
+\[
+\frac{RT}{V-b}-\frac a{V^2}
+=\frac{RT}{V(1+\eta)}.
+\]
+移项求温度：
+\[
+\frac a{V^2}
+=RT\frac{\eta V+b}{V(1+\eta)(V-b)},
+\]
+\[
+\boxed{
+T=\frac{a(1+\eta)(V-b)}
+{R V(\eta V+b)}}.
+\]
+此时压强
+\[
+\boxed{p_{\rm vdW}=\frac{RT}{V(1+\eta)}}.
+\]
+代入氮气的常用近似
+$a\simeq1.4\,\mathrm{atm\,L^2/mol^2}$、
+$b\simeq0.039\,\mathrm{L/mol}$，
+得 $T$ 为约 $1.3\times10^2\,\mathrm K$，
+$p_{\rm vdW}$ 为约 $10\,\mathrm{atm}$，
+与书末所取参数给出的
+$\sim133\,\mathrm K$、
+$\sim9.9\,\mathrm{atm}$ 为相同数量级。
+\excheck 题面没有提供 $a,b$ 的具体数值，
+因此精确数值依赖选用的氮气材料常数表；
+不可把简答中的数值视作不依赖 $a,b$ 的普适结果。
+
+\thermoproblem{23}{65}
+一摩尔某种气体装在
+$V=0.250\,\mathrm L$ 的容器里。
+在 $T_1=300\,\mathrm K$ 时
+$p_1=90\,\mathrm{atm}$，
+在 $T_2=350\,\mathrm K$ 时
+$p_2=110\,\mathrm{atm}$。
+求该气体的范德瓦耳斯参数 $a,b$。
+\exsolution
+对同一摩尔体积 $V$，
+两状态均满足
+\[
+p_i=\frac{RT_i}{V-b}-\frac a{V^2}.
+\]
+相减消去 $a$：
+\[
+p_2-p_1=\frac{R(T_2-T_1)}{V-b},
+\]
+所以
+\[
+\boxed{b=V-\frac{R(T_2-T_1)}{p_2-p_1}}.
+\]
+再代回任一状态：
+\[
+\boxed{a=V^2\left(\frac{RT_1}{V-b}-p_1\right)}.
+\]
+也可代入第一式消去 $b$ 得
+\[
+a=V^2
+\frac{p_1T_2-p_2T_1}{T_1-T_2}.
+\]
+取 $R=0.082057\,\mathrm{L\,atm/(mol\,K)}$，
+数值为
+\[
+\boxed{b\simeq0.0449\,\mathrm{L/mol}},\qquad
+\boxed{a\simeq1.88\,\mathrm{atm\,L^2/mol^2}}.
+\]
+\excheck 在本版原书简答中，
+$a$ 约写成 $1.85$、
+$b$ 约为 $0.042\,\mathrm{L/mol}$；
+按题面印刷的两组 $p,T$ 和通用 $R$
+精确代入得到上式数值。
+该差别主要由取整或原版数值表造成，
+公式可直接代入反查两个实验压强。
+
+\thermoproblem{24}{65}
+一摩尔范德瓦耳斯气体在温度 $T$ 下
+摩尔体积为 $V$，其状态方程为
+$(p+a/V^2)(V-b)=RT$。
+求等温压缩系数
+\[
+\chi_T=-\frac1V
+\left(\frac{\partial V}{\partial p}\right)_T
+\]
+随 $V$ 的函数。
+\exsolution
+首先把压强显式写为
+\[
+p(V,T)=\frac{RT}{V-b}-\frac a{V^2}.
+\]
+在温度固定时求导：
+\[
+\left(\frac{\partial p}{\partial V}\right)_T
+=-\frac{RT}{(V-b)^2}+\frac{2a}{V^3}.
+\]
+故
+\[
+\chi_T=-\frac1V
+\frac{1}{(\partial p/\partial V)_T}
+=\frac1V
+\frac{1}{RT/(V-b)^2-2a/V^3}.
+\]
+通分得到
+\[
+\boxed{\chi_T=
+\frac{V^2(V-b)^2}
+{RTV^3-2a(V-b)^2}}.
+\]
+\excheck 力学稳定的单相气体须满足
+$(\partial p/\partial V)_T<0$，
+即上式分母为正；
+临界自旋odal附近压缩系数可能显著增大乃至发散。
+
+\thermoproblem{25}{65}
+接着上一题，
+判断在什么温度条件下，
+范德瓦耳斯气体的等温压缩系数
+$\chi_{\rm vdW}$ 大于理想气体压缩系数
+$\chi_{\rm id}$。
+讨论摩尔体积 $V\gg b$ 时的简化结果。
+\exsolution
+先明确采用\emph{相同温度 $T$ 和相同摩尔体积 $V$}
+比较两种状态方程。
+理想气体在同一 $V,T$ 时
+$p_{\rm id}=RT/V$，
+等温压缩系数为
+$\chi_{\rm id}=1/p_{\rm id}=V/(RT)$。
+范德瓦耳斯气体在力学稳定分支的
+压缩系数为
+\[
+\chi_{\rm vdW}
+=\frac1{V[RT/(V-b)^2-2a/V^3]}.
+\]
+比较
+$\chi_{\rm vdW}>\chi_{\rm id}$
+且两个分母均为正，等价于
+\[
+RT>\frac{RTV^2}{(V-b)^2}-\frac{2a}{V}.
+\]
+移项并使用
+$V^2-(V-b)^2=b(2V-b)$，
+得到
+\[
+\frac{2a}{V}>
+RT\frac{b(2V-b)}{(V-b)^2},
+\]
+因此
+\[
+\boxed{T<
+\frac{2a(V-b)^2}{RbV(2V-b)}}.
+\]
+当 $V\gg b$ 时，
+右边趋于 $a/(Rb)$，
+从而
+\[
+\boxed{T<\frac{a}{Rb}\qquad(V\gg b)}.
+\]
+\excheck \textbf{与本版书末不一致：}
+书末只给 $T>a/(Rb)$，方向与按\emph{同 $V,T$}
+直接比较压缩系数所得的严格不等式相反。
+比较不同气体的“压缩系数”必须明确
+是在相同 $T,V$ 还是相同 $T,p$ 条件下；
+本稿固定了前者，并将书末差异列入勘误，
+不默默改写不等式方向。
