@@ -1,0 +1,267 @@
+% Irodov Part V "Optics", §5.1, independently renumbered originals 1--12.
+% Source uploaded PDF pp.196--198, printed pp.187--189. Figure 5.1.
+\opticsproblem{1}{188}
+参考原书图5.1的人眼相对光谱视见函数 $V(\lambda)$，
+求：(a) 在 $\lambda=0.51,0.64\,\mathrm{\mu m}$ 两个单色波长下，产生 $1.0$lm 光通量所需的辐射能流；
+(b) 波段 $0.58$—$0.63\,\mathrm{\mu m}$ 内辐射功率均匀分配，总辐射能流 $\Phi_e=4.5$mW，若 $V(\lambda)$ 在此段线性，求对应光通量。
+\exsolution
+原书采用峰值视见波长 $0.555\,\mathrm{\mu m}$ 的换算常量
+$A=1.6\,\mathrm{mW/lm}$，
+光通量与辐射能流满足
+$\mathrm d\Phi_{\rm lum}=V(\lambda)\,\mathrm d\Phi_e/A$。
+(a) 对单色光
+$\Phi_e=A\Phi_{\rm lum}/V(\lambda)$。
+按图5.1读数，
+$V(0.51)\simeq0.53$、
+$V(0.64)\simeq0.18$，有
+\[
+\boxed{\Phi_e(0.51)\simeq3\,\mathrm{mW}},\qquad
+\boxed{\Phi_e(0.64)\simeq9\,\mathrm{mW}}.
+\]
+(b) 谱功率均匀、视见函数线性，故平均视见函数为端点算术平均：
+\[
+\boxed{\Phi_{\rm lum}
+=\frac{\Phi_e}{2A}
+[V(0.58)+V(0.63)]
+\simeq1.6\,\mathrm{lm}}.
+\]
+\excheck 光度量与辐射能流不是同一单位；视见函数必须从原图读取，以上数值只在图上读数精度内有效。
+
+\opticsproblem{2}{188}
+频率对应波长 $\lambda=0.59\,\mathrm{\mu m}$ 的各向同性点光源，总光通量 $\Phi=10$lm。求距声源（光源） $r=1.0$m 处电场与磁场强度的峰值，使用图5.1视见函数。
+\exsolution
+单色光总\emph{辐射}功率
+$P_e=A\Phi/V(0.59)$，
+图5.1该波长相对视见函数约为数十个百分点。
+各向同性辐射在距离 $r$ 处的平均能流
+$\overline S=P_e/(4\pi r^2)$。
+真空平面波在局部远场满足
+$\overline S=E_m^2/(2Z_0)$，
+$Z_0=\sqrt{\mu_0/\varepsilon_0}$，
+所以
+\[
+\boxed{E_m=
+\sqrt{\frac{Z_0 A\Phi}{2\pi r^2V(0.59)}}
+\simeq1.1\,\mathrm{V/m}},
+\quad
+\boxed{H_m=\frac{E_m}{Z_0}
+\simeq3.0\,\mathrm{mA/m}}.
+\]
+\excheck 题中 $\Phi$ 为可见光\emph{光通量}而非总电磁波辐射功率，必须先借助 $V(\lambda)$ 换算。
+
+\opticsproblem{3}{188}
+求不透明球被照亮部分的平均照度：
+(a) 受平行光照射，在法向入射点照度为 $E_0$；
+(b) 各向同性点源距离球心 $\ell=100$cm，球半径 $R=60$cm，光源光强 $I=36$cd。
+\exsolution
+(a) 受照半球上纬度角为 $\theta$ 的面元照度 $E=E_0\cos\theta$。
+半球平均
+\[
+\boxed{\bar E=\frac{\int_0^{2\pi}\!\!\int_0^{\pi/2}
+E_0\cos\theta R^2\sin\theta\,\mathrm d\theta\mathrm d\varphi}
+{2\pi R^2}=\frac{E_0}{2}}.
+\]
+(b) 点源看来球的张角满足
+$\sin\alpha=R/\ell$，
+被球遮挡的光通量
+$\Phi=2\pi I(1-\cos\alpha)
+=2\pi I[1-\sqrt{1-R^2/\ell^2}]$。
+从球心看受照球冠面积
+$S=2\pi R^2(1-R/\ell)$，因此
+\[
+\boxed{\bar E=
+\frac{I[1-\sqrt{1-R^2/\ell^2}]}
+{R^2(1-R/\ell)}
+\simeq50\,\mathrm{lx}}.
+\]
+\excheck (b) 分母应是实际被照球冠面积，而不是半球面积；当光源远去时可恢复半球近似。
+
+\opticsproblem{4}{188}
+某发光面亮度随发射方向与法线夹角变化
+$L(\theta)=L_0\cos\theta$，
+求该面单位面积向上半空间发出的光出射度。
+\exsolution
+光出射度
+$M=\int_{\Omega_+}L(\theta)\cos\theta\,\mathrm d\Omega$，
+$\mathrm d\Omega=2\pi\sin\theta\,\mathrm d\theta$。
+故
+\[
+M=2\pi L_0\int_0^{\pi/2}
+\cos^2\theta\sin\theta\,\mathrm d\theta
+=\boxed{\frac{2\pi}{3}L_0}.
+\]
+\excheck 方向亮度本身又带 $\cos\theta$，加上投影面积的 $\cos\theta$ 共形成平方，不能直接用朗伯源的 $\pi L_0$。
+
+\opticsproblem{5}{189}
+朗伯面光源的方向亮度为常数 $L$，求：
+(a) 面元 $\Delta S$ 朝面法线、半顶角为 $\theta$ 的圆锥内的光通量；
+(b) 光出射度 $M$。
+\exsolution
+面元向立体角微元发出
+$\mathrm d\Phi=L\Delta S\cos\alpha\,\mathrm d\Omega$。
+(a)
+\[
+\Phi_\theta=2\pi L\Delta S
+\int_0^\theta\cos\alpha\sin\alpha\,\mathrm d\alpha,
+\quad
+\boxed{\Phi_\theta=\pi L\Delta S\sin^2\theta}.
+\]
+(b) 对上半球 $\theta=\pi/2$，
+$\Phi=\pi L\Delta S$，所以
+\[
+\boxed{M=\Phi/\Delta S=\pi L}.
+\]
+\excheck 题中 $\theta$ 取\emph{圆锥半顶角}；若把开角理解为总顶角，须先除以2。
+
+\opticsproblem{6}{189}
+水平圆盘形朗伯光源面积
+$S=100\,\mathrm{cm^2}$、亮度
+$L=1.6\times10^4\,\mathrm{cd/m^2}$，
+悬挂于半径 $R=1.0$m 的圆桌中心上方。
+将圆盘视为点源，求使桌沿照度最大时的高度 $h$ 及最大照度。
+\exsolution
+从圆盘向桌沿的射线与竖直夹角 $\theta$，
+$\cos\theta=h/\sqrt{R^2+h^2}$。
+光源的方向光强 $I(\theta)=LS\cos\theta$，
+桌面面元亦具有投影因子 $\cos\theta$，
+所以
+\[
+E(h)=\frac{LS\cos^2\theta}{R^2+h^2}
+=\frac{LSh^2}{(R^2+h^2)^2}.
+\]
+求导可得
+$\mathrm dE/\mathrm dh\propto h(R^2-h^2)$，
+故最大在 $h=R$，
+\[
+\boxed{h_*=R=1.0\,\mathrm m},\quad
+\boxed{E_{\max}=\frac{LS}{4R^2}
+=\frac{(1.6\times10^4)(0.010)}4
+=40\,\mathrm{lx}}.
+\]
+\excheck 圆盘既是朗伯发射面又照亮水平桌面，方向光强和接受面各有一个 $\cos\theta$，不可仅保留一个。
+
+\opticsproblem{7}{189}
+点光源在半径 $R=1.0$m 的水平圆桌中心上方
+$h=1.0$m。
+希望桌面各点照度一致，求光强的方向函数
+$I(\theta)$（$\theta$ 为出光方向与竖直的夹角），并当
+$I(0)=I_0=100$cd 时求到达整个桌面的总光通量。
+\exsolution
+桌面距离为
+$r=h/\cos\theta$，入射角亦为 $\theta$，
+所以桌面照度
+\[
+E(\theta)=\frac{I(\theta)\cos\theta}{r^2}
+=\frac{I(\theta)\cos^3\theta}{h^2}.
+\]
+要求 $E(\theta)=E(0)=I_0/h^2$，得
+\[
+\boxed{I(\theta)=\frac{I_0}{\cos^3\theta}},\qquad
+0\le\theta\le\arctan(R/h).
+\]
+整个桌面光通量
+\[
+\boxed{\Phi=E(0)\pi R^2
+=\frac{\pi I_0R^2}{h^2}
+\simeq3.1\times10^2\,\mathrm{lm}}.
+\]
+\excheck 当 $\theta$ 增大，照射更远、更斜，为保持相同照度光强应\emph{增大}。书末文本似漏倒数，若照录 $I_0\cos^3\theta$ 则照度反而随 $\cos^6\theta$ 下降。
+
+\opticsproblem{8}{189}
+投影灯垂直照亮圆形房间天花板上的面积
+$S=100\,\mathrm{cm^2}$ 的小斑点，斑点照度
+$E=1000$lx，天花板朗伯反射率
+$\rho=0.80$，房间半径 $R=2.0$m。
+求反射斑点在圆柱形墙壁上造成的最大照度及其位置。
+\exsolution
+天花斑点向室内的光出射度
+$M=\rho E$，对应朗伯亮度
+$L=M/\pi=\rho E/\pi$。
+在墙上、距天花垂直距离为 $z$ 的点，
+与斑点的距离为 $d=\sqrt{R^2+z^2}$，
+辐射源方向余弦 $z/d$，
+墙法向余弦 $R/d$，故
+\[
+E_{\rm wall}(z)=\frac{\rho ES}{\pi}
+\frac{Rz}{(R^2+z^2)^2}.
+\]
+微分得
+$\mathrm dE/\mathrm dz\propto R^2-3z^2$，
+最大位置
+$\boxed{z_*=R/\sqrt3}$。
+峰值
+\[
+\boxed{E_{\max}=
+\frac{9}{16\sqrt3\pi}\frac{\rho ES}{R^2}
+\simeq0.21\,\mathrm{lx}}.
+\]
+\excheck 书后纯文本位置标作 $R/3$，缺失根号；若用 $R/3$ 则不能使上述照度函数取最大。
+
+\opticsproblem{9}{189}
+一个半球形发光穹顶放在水平面上，表面光出射度处处相同，方向亮度为常数 $L$。求底面圆心处水平面元的照度。
+\exsolution
+从底面圆心看，穹顶占据完整上半球
+$\Omega=2\pi$。
+任一来光方向的辐亮度/亮度为 $L$，
+水平接受面照度
+\[
+E=\int_{\Omega_+}L\cos\theta\,\mathrm d\Omega
+=2\pi L\int_0^{\pi/2}
+\cos\theta\sin\theta\,\mathrm d\theta.
+\]
+因此
+\[
+\boxed{E=\pi L}.
+\]
+\excheck 穹顶尺寸消去，因为每方向接收的亮度相同；假设穹顶发光均匀且无遮蔽。
+
+\opticsproblem{10}{189}
+亮度为常数 $L$ 的无限大朗伯平面，
+求与该平面平行的任意小面元的照度。
+\exsolution
+任意接收点能见光源的完整上半空间，
+且沿各入射方向的亮度为 $L$。
+由照度的立体角积分
+\[
+\boxed{E=\int_0^{2\pi}\int_0^{\pi/2}
+L\cos\theta\sin\theta\,
+\mathrm d\theta\mathrm d\varphi=\pi L}.
+\]
+\excheck 对\emph{无限大}均匀光源，照度与两平面间距无关；有限发光平面无此性质。
+
+\opticsproblem{11}{189}
+均匀朗伯圆盘光源半径 $R=25$cm，
+位于桌面上方 $h=75$cm。
+圆盘轴下桌面照度 $E_0=70$lx，求光源光出射度 $M$。
+\exsolution
+圆盘均匀亮度为 $L=M/\pi$。
+桌面轴上点对光源的立体角积分：
+$E_0=2\pi L\int_0^R
+[h^2r/(h^2+r^2)^2]\,\mathrm dr$，
+积分得到
+\[
+E_0=\pi L\frac{R^2}{h^2+R^2}
+=M\frac{R^2}{h^2+R^2}.
+\]
+因此
+\[
+\boxed{M=E_0\left(1+\frac{h^2}{R^2}\right)
+=70(1+9)=700\,\mathrm{lm/m^2}}.
+\]
+\excheck 此处不能把圆盘当点源，原题提供的 $R/h$ 关系需在几何积分中保留。
+
+\opticsproblem{12}{189}
+半径 $R=6.0$cm 的均匀亮球灯，球心距地面
+$h=3.0$m，亮度
+$L=2.0\times10^4\,\mathrm{cd/m^2}$，
+求球心正下方地面的照度。
+\exsolution
+小球在远处任一方向的表观投影面积为 $\pi R^2$，
+其方向光强 $I=L\pi R^2$。
+正下方的地面入射角为零，故
+\[
+\boxed{E_0=\frac{L\pi R^2}{h^2}}
+=\frac{(2.0\times10^4)\pi(0.060)^2}{(3.0)^2}
+\simeq25\,\mathrm{lx}.
+\]
+\excheck 当 $h\gg R$，球体可视为点源；计算采用\emph{投影圆盘面积}，不是球面总面积。
