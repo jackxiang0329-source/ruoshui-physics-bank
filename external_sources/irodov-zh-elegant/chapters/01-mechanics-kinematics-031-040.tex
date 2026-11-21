@@ -62,27 +62,27 @@ $t_1\cos\theta_1=t_2\cos\theta_2$；竖直位置重合意味着
  =\frac g2(t_1^2-t_2^2).
 \]
 由前式置 $t_1=k\cos\theta_2,\ t_2=k\cos\theta_1$，
-代入后式得 $k=2v_0/[g(\cos\theta_1+\cos\theta_2)]$。
-因 $\Delta=k(\cos\theta_2-\cos\theta_1)$，可得
+可将竖直位置方程改写成
 \[
- \boxed{\Delta=
+ v_0k\sin(\theta_1-\theta_2)
+ =\frac g2 k^2(\cos^2\theta_2-\cos^2\theta_1).
+\]
+由于 $\cos^2\theta_2-\cos^2\theta_1
+=(\cos\theta_2-\cos\theta_1)(\cos\theta_2+\cos\theta_1)$，
+非零碰撞时间对应
+\[
+ k=\frac{2v_0\sin(\theta_1-\theta_2)}
+ {g(\cos\theta_2-\cos\theta_1)(\cos\theta_2+\cos\theta_1)}.
+\]
+从而两次发射间隔
+\[
+ \boxed{\Delta=t_1-t_2=
  \frac{2v_0\sin(\theta_1-\theta_2)}
- {g(\sin\theta_1+\sin\theta_2)}}
+ {g(\cos\theta_1+\cos\theta_2)}\simeq10.9\,\mathrm s.}
 \]
-这里分母须为 $\sin\theta_1+\sin\theta_2$，它来自竖直运动方程。
-代入数值，$\Delta\simeq8.40\,\mathrm s$。
-\excheck 用另一种写法验证：$\Delta=
-2v_0(\cos\theta_2-\cos\theta_1)/
-[g(\sin\theta_1+\sin\theta_2)]$，
-此式与上式\emph{并不恒等}，前者缺失额外关系。
-为避免错误，直接从碰撞方程消元得到的正确式应为
-\[
- \Delta=\frac{2v_0\sin(\theta_1-\theta_2)}
- {g(\cos\theta_1+\cos\theta_2)}
- \simeq 10.9\,\mathrm s.
-\]
-上面中间的候选式不能使用；最终以本式为准。
-% The deliberate intermediate alternative above is explicitly rejected; QA should verify final boxed expression.
+\excheck 将以上 $t_1,t_2$ 代回水平和竖直位置式，两式均相等；
+且 $t_1>t_2>0$，故确为后发射炮弹追上前弹的碰撞。
+
 
 \exproblem{34}{6}
 一气球自地面起以恒定竖直速度 $v_0>0$ 上升；
