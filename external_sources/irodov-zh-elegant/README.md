@@ -3,10 +3,10 @@
 底本：I. E. Irodov, *Problems in General Physics*，用户上传 Arihant 版 PDF（385 页）。
 译注、补全推导以及本版勘误均属于研究用初稿；原书著作权与翻译、公开发行权归原权利人。
 
-## 真实进度（2026-11-21）
+## 真实进度（2026-11-22）
 
-- **本轮新增：100题——第四篇《振动与波动》第182—224题43题（全篇完成）；第五篇《光学》第5.1节第1—57题57题（新篇开启）。**
-- **累计：1333题——第一篇力学1—388题（全部）、第二篇热学1—257题（全部）、第三篇电动力学1—407题（全部）、第四篇振动与波动1—224题（全部）、第五篇光学1—57题；五篇独立编号。**
+- **本轮新增：100题——第五篇《光学》第58—157题；5.1节58—63题、5.2节64—96题、5.3节97—156题和5.4节157题。**
+- **累计：1433题——第一篇力学1—388题（全部）、第二篇热学1—257题（全部）、第三篇电动力学1—407题（全部）、第四篇振动与波动1—224题（全部）、第五篇光学1—157题；五篇独立编号。**
 - 第 1.1 节“运动学”1—58 题已覆盖（全部）。
 - 第 1.2 节“动力学基本方程”59—117 题已覆盖（全部）。
 - 第 1.3 节“能量、动量与角动量守恒”118—199 题已覆盖（全部）。
@@ -37,7 +37,10 @@
 - 第 4.3 节“弹性波与声学”第150—188题已覆盖（全部）。
 - 第 4.4 节“电磁波与辐射”第189—224题已覆盖（全部）；第四篇全部完成。
 - **第五篇“光学”从第1题重新编号。**
-- 第 5.1 节“光度学与几何光学”第1—57题已覆盖（继续）。
+- 第 5.1 节“光度学与几何光学”第1—63题已覆盖（全部）。
+- 第 5.2 节“光的干涉”第64—96题已覆盖（全部）。
+- 第 5.3 节“光的衍射”第97—156题已覆盖（全部）。
+- 第 5.4 节“光的偏振”第157题已覆盖（后续继续）。
 - 本项目尚未完成整书翻译或独立学术二校；任何“编译成功”仅说明技术排版通过。
 
 | 内容 | 文件 |
@@ -163,6 +166,17 @@
 | 第五篇5.1节26—35题 | [27-optics-photometry-026-035.tex](chapters/27-optics-photometry-026-035.tex) |
 | 第五篇5.1节36—45题 | [27-optics-photometry-036-045.tex](chapters/27-optics-photometry-036-045.tex) |
 | 第五篇5.1节46—57题 | [27-optics-photometry-046-057.tex](chapters/27-optics-photometry-046-057.tex) |
+| 第五篇5.1节58—63题（几何光学完结） | [27-optics-photometry-058-063.tex](chapters/27-optics-photometry-058-063.tex) |
+| 第五篇5.2节64—75题 | [28-optics-interference-064-075.tex](chapters/28-optics-interference-064-075.tex) |
+| 第五篇5.2节76—86题 | [28-optics-interference-076-086.tex](chapters/28-optics-interference-076-086.tex) |
+| 第五篇5.2节87—96题（干涉完结） | [28-optics-interference-087-096.tex](chapters/28-optics-interference-087-096.tex) |
+| 第五篇5.3节97—108题 | [29-optics-diffraction-097-108.tex](chapters/29-optics-diffraction-097-108.tex) |
+| 第五篇5.3节109—118题 | [29-optics-diffraction-109-118.tex](chapters/29-optics-diffraction-109-118.tex) |
+| 第五篇5.3节119—130题 | [29-optics-diffraction-119-130.tex](chapters/29-optics-diffraction-119-130.tex) |
+| 第五篇5.3节131—142题 | [29-optics-diffraction-131-142.tex](chapters/29-optics-diffraction-131-142.tex) |
+| 第五篇5.3节143—150题 | [29-optics-diffraction-143-150.tex](chapters/29-optics-diffraction-143-150.tex) |
+| 第五篇5.3节151—156题（衍射完结） | [29-optics-diffraction-151-156.tex](chapters/29-optics-diffraction-151-156.tex) |
+| 第五篇5.4节157题（偏振开始） | [30-optics-polarization-157-157.tex](chapters/30-optics-polarization-157-157.tex) |
 | 源书勘误 | [errata.md](errata.md) |
 | 技术与学术质检记录 | [quality-check.md](quality-check.md) |
 | 结构完整性检查 | [check_sources.py](check_sources.py) |
@@ -185,4 +199,4 @@ GitHub Actions 工作流 .github/workflows/irodov-elegantbook.yml
 
 本目录放在 external_sources/，不得将翻译题目混入
 大学物理原创高难度题库 bank/ 的题数和质量门禁，也不修改它们的权威源文件。
-后续从原书第五篇第5.1节第58题继续逐题补充；第一、二、三、四篇均已覆盖全部原书题号。保留各篇独立编号体系。
+后续从原书第五篇第5.4节第158题继续逐题补充；第一、二、三、四篇均已覆盖全部原书题号。保留各篇独立编号体系。
