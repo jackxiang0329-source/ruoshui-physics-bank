@@ -5,8 +5,8 @@
 
 ## 真实进度（2026-11-21）
 
-- **本轮新增：第三篇《电动力学》第389—407题19题（本篇完成），第四篇《振动与波动》第4.1节1—81题81题；合计100题。**
-- **累计：1133题——第一篇力学1—388题（全部）、第二篇热学1—257题（全部）、第三篇电动力学1—407题（全部）、第四篇振动与波动1—81题；四篇独立编号。**
+- **本轮新增：第四篇《振动与波动》第82—181题100题——第4.1节机械振动82—93、第4.2节电振荡94—149、第4.3节弹性波与声学150—181。**
+- **累计：1233题——第一篇力学1—388题（全部）、第二篇热学1—257题（全部）、第三篇电动力学1—407题（全部）、第四篇振动与波动1—181题；四篇独立编号。**
 - 第 1.1 节“运动学”1—58 题已覆盖（全部）。
 - 第 1.2 节“动力学基本方程”59—117 题已覆盖（全部）。
 - 第 1.3 节“能量、动量与角动量守恒”118—199 题已覆盖（全部）。
@@ -32,7 +32,9 @@
 - 第 3.6 节“电磁感应与麦克斯韦方程”第288—371题已覆盖（全部）。
 - 第 3.7 节“带电粒子在电场和磁场中的运动”第372—407题已覆盖（全部），第三篇完结。
 - **原书第四篇“振动与波动”再次从第1题独立编号。**
-- 第 4.1 节“机械振动”第1—81题已覆盖（后续继续）。
+- 第 4.1 节“机械振动”第1—93题已覆盖（全部）。
+- 第 4.2 节“电振荡”第94—149题已覆盖（全部）。
+- 第 4.3 节“弹性波与声学”第150—181题已覆盖（继续）。
 - 本项目尚未完成整书翻译或独立学术二校；任何“编译成功”仅说明技术排版通过。
 
 | 内容 | 文件 |
@@ -142,6 +144,13 @@
 | 第四篇4.1节34—50题 | [23-mechanical-oscillations-034-050.tex](chapters/23-mechanical-oscillations-034-050.tex) |
 | 第四篇4.1节51—65题 | [23-mechanical-oscillations-051-065.tex](chapters/23-mechanical-oscillations-051-065.tex) |
 | 第四篇4.1节66—81题 | [23-mechanical-oscillations-066-081.tex](chapters/23-mechanical-oscillations-066-081.tex) |
+| 第四篇4.1节82—93题（机械振动完结） | [23-mechanical-oscillations-082-093.tex](chapters/23-mechanical-oscillations-082-093.tex) |
+| 第四篇4.2节94—109题 | [24-electric-oscillations-094-109.tex](chapters/24-electric-oscillations-094-109.tex) |
+| 第四篇4.2节110—125题 | [24-electric-oscillations-110-125.tex](chapters/24-electric-oscillations-110-125.tex) |
+| 第四篇4.2节126—137题 | [24-electric-oscillations-126-137.tex](chapters/24-electric-oscillations-126-137.tex) |
+| 第四篇4.2节138—149题（电振荡完结） | [24-electric-oscillations-138-149.tex](chapters/24-electric-oscillations-138-149.tex) |
+| 第四篇4.3节150—165题 | [25-elastic-waves-150-165.tex](chapters/25-elastic-waves-150-165.tex) |
+| 第四篇4.3节166—181题 | [25-elastic-waves-166-181.tex](chapters/25-elastic-waves-166-181.tex) |
 | 源书勘误 | [errata.md](errata.md) |
 | 技术与学术质检记录 | [quality-check.md](quality-check.md) |
 | 结构完整性检查 | [check_sources.py](check_sources.py) |
@@ -164,4 +173,4 @@ GitHub Actions 工作流 .github/workflows/irodov-elegantbook.yml
 
 本目录放在 external_sources/，不得将翻译题目混入
 大学物理原创高难度题库 bank/ 的题数和质量门禁，也不修改它们的权威源文件。
-后续继续从原书第四篇第4.1节第82题起逐题补充；第一、二、三篇均已覆盖全部原书题号。保留各篇独立编号体系。
+后续从原书第四篇第4.3节第182题继续逐题补充；第一、二、三篇均已覆盖全部原书题号。保留各篇独立编号体系。
