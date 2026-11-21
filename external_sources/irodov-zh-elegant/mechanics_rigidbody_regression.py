@@ -10,9 +10,10 @@ remain separate from this independent executable QA file.
 from math import pi,sin,cos,tan,sqrt,atan,asin,acos,log,degrees,isclose
 g=9.81
 checks=[]
+failures=[]
 def check(n,label,observed,expected,tol=2e-2,atol=1e-11):
     if not isclose(observed,expected,rel_tol=tol,abs_tol=atol):
-        raise AssertionError(f"I.{n}: {label}: {observed:.10g}, expected {expected:.10g}")
+        failures.append(f"I.{n}: {label}: {observed:.10g}, expected {expected:.10g}")
     checks.append((n,label,observed))
 def exact(n,label,observed,expected):
     check(n,label,observed,expected,tol=1e-10,atol=1e-10)
@@ -238,7 +239,7 @@ omega=J*(ell/2)/(m*ell**2/12)
 Finternal=9*J**2/(2*m*ell)
 check(273,"post-impact rod middle internal centripetal force N",
       Finternal,9.0)
-exact(273,"rod impulsive angular velocity rad/s",omega,2*6*J/(m*ell))
+exact(273,"rod impulsive angular velocity rad/s",omega,6*J/(m*ell))
 M,m,v,ell=3.,2.,4.,1.5
 vp=v*(3*m-4*M)/(3*m+4*M)
 omega=12*m*v/(ell*(4*M+3*m))
@@ -354,6 +355,9 @@ Frail=I*(2*pi*n/60)*(v/R)/rail
 check(289,"locomotive outward rail gyroscopic load N",Frail,1396)
 exact(289,"gyro rail additional force moment conservation",
       Frail*rail,I*(2*pi*n/60)*(v/R))
+if failures:
+    for failure in failures:print("FAIL:",failure)
+    raise AssertionError(f"{len(failures)} rigid-body QA anchors failed")
 print(f"PASS: {len(checks)} independent rigid-body original Irodov I.234--289 "
       "force/torque/rolling/gyro checks.")
 for n,label,value in checks:
