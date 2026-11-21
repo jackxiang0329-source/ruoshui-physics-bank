@@ -5,11 +5,13 @@
 
 ## 真实进度（2026-11-21）
 
-- **本轮新增：第 71—170 题，共 100 题。**
-- **累计：第 1—170 题，中文题面 + 逐题详细解析 + 核验提示。**
+- **本轮新增：第 171—240 题，共 70 题。**
+- **累计：第 1—240 题，中文题面 + 逐题详细解析 + 核验提示。**
 - 第 1.1 节“运动学”1—58 题已覆盖（全部）。
 - 第 1.2 节“动力学基本方程”59—117 题已覆盖（全部）。
-- 第 1.3 节“能量、动量与角动量守恒”118—170 题已覆盖（本节尚未结束）。
+- 第 1.3 节“能量、动量与角动量守恒”118—199 题已覆盖（全部）。
+- 第 1.4 节“万有引力”200—233 题已覆盖（全部）。
+- 第 1.5 节“刚体动力学”234—240 题已覆盖（本节尚未结束）。
 - 本项目尚未完成整书翻译或独立学术二校；任何“编译成功”仅说明技术排版通过。
 
 | 内容 | 文件 |
@@ -32,6 +34,13 @@
 | 141—150题 | [03-mechanics-conservation-141-150.tex](chapters/03-mechanics-conservation-141-150.tex) |
 | 151—160题 | [03-mechanics-conservation-151-160.tex](chapters/03-mechanics-conservation-151-160.tex) |
 | 161—170题 | [03-mechanics-conservation-161-170.tex](chapters/03-mechanics-conservation-161-170.tex) |
+| 171—180题 | [03-mechanics-conservation-171-180.tex](chapters/03-mechanics-conservation-171-180.tex) |
+| 181—190题 | [03-mechanics-conservation-181-190.tex](chapters/03-mechanics-conservation-181-190.tex) |
+| 191—199题 | [03-mechanics-conservation-191-199.tex](chapters/03-mechanics-conservation-191-199.tex) |
+| 200—210题 | [04-gravitation-200-210.tex](chapters/04-gravitation-200-210.tex) |
+| 211—220题 | [04-gravitation-211-220.tex](chapters/04-gravitation-211-220.tex) |
+| 221—233题 | [04-gravitation-221-233.tex](chapters/04-gravitation-221-233.tex) |
+| 234—240题 | [05-rigid-body-234-240.tex](chapters/05-rigid-body-234-240.tex) |
 | 源书勘误 | [errata.md](errata.md) |
 | 技术与学术质检记录 | [quality-check.md](quality-check.md) |
 | 结构完整性检查 | [check_sources.py](check_sources.py) |
@@ -54,4 +63,4 @@ GitHub Actions 工作流 .github/workflows/irodov-elegantbook.yml
 
 本目录放在 external_sources/，不得将翻译题目混入
 大学物理原创高难度题库 bank/ 的题数和质量门禁，也不修改它们的权威源文件。
-后续继续从原书第 171 题起逐题补充，保持题号及印刷页对应。
+后续继续从原书第 241 题起逐题补充，保持题号及印刷页对应。
