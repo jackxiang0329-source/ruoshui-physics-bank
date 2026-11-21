@@ -244,7 +244,7 @@ for label, chapters, ranges, macro, expected_ids in [
             errors.append(f"main.tex does not include: {name}")
     if observed != expected_ids:
         errors.append(f"Part II {label} original IDs are not consecutive")
-    if ("\\newcommand{" + macro + "}") not in main:
+    if ("\\newcommand{" + chr(92) + macro + "}") not in main:
         errors.append(f"main.tex missing {macro} macro")
     subject_results[label] = observed
 
