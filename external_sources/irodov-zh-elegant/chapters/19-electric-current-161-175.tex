@@ -1,0 +1,481 @@
+% Irodov Part III §3.4 current 161--175; user PDF pp.123--125,
+% printed pp.114--116. Source 168 incomplete English clause, noted.
+\electrocurrentproblem{161}{114}
+两电极形状任意，浸没在均匀、弱导电介质中，
+介质电阻率 $\rho$、相对介电常数 $\varepsilon$。
+求两电极间漏电电阻 $R$ 与互电容 $C$ 的乘积。
+\exsolution
+对相同电极几何与边界电势差 $V$，
+静电位满足 $\nabla\cdot(\varepsilon\varepsilon_0
+\nabla\varphi)=0$，
+稳态导电满足
+$\nabla\cdot(\rho^{-1}\nabla\varphi)=0$。
+因为 $\rho,\varepsilon$ 均为常数，
+两问题的归一化电势分布相同。
+若电极在此场中通电流 $I$，
+则自由电荷量 $Q$ 与电流的面积通量
+分别为
+\[
+Q=\varepsilon\varepsilon_0\oint\bm E\cdot\mathrm d\bm S,
+\qquad
+I=\frac1\rho\oint\bm E\cdot\mathrm d\bm S.
+\]
+故 $Q/I=\rho\varepsilon\varepsilon_0$。
+用 $Q=CV$、$V=IR$，得到
+\[
+\boxed{RC=\rho\varepsilon\varepsilon_0}.
+\]
+\excheck 结果与电极形状无关；
+仅适用于相同空间中\emph{均匀}的
+电阻率及介电常数。
+
+\electrocurrentproblem{162}{114--115}
+电阻率为 $\rho$ 的导体与相对介电常数
+$\varepsilon$ 的电介质相接。
+在界面某点电介质侧
+位移矢量模为 $D$，指向远离导体方向，
+与界面法线夹角 $\alpha$。
+求导体表面自由电荷面密度
+及导体内部邻近界面的稳态电流密度模。
+\exsolution
+从导体指向电介质取法线 $\bm n$。
+法向位移的跃变为自由面电荷：
+$\sigma_f=D_n=D\cos\alpha$
+（理想导体法向电场内部可忽略）。
+所以
+\[
+\boxed{\sigma_f=D\cos\alpha}.
+\]
+电场切向分量跨介质界面连续，
+介质侧
+$E_t=D_t/(\varepsilon\varepsilon_0)
+=D\sin\alpha/(\varepsilon\varepsilon_0)$。
+在导电体中欧姆定律
+$j_t=E_t/\rho$，
+且稳态电流不能穿过绝缘介质界面，
+故仅有切向电流：
+\[
+\boxed{j=\frac{D\sin\alpha}
+{\rho\varepsilon\varepsilon_0}}.
+\]
+\excheck 边界取 $D_n$ 决定静电面电荷，
+取 $E_t$ 决定导体内沿表面的电流；
+两种法向与切向条件不能互换。
+
+\electrocurrentproblem{163}{115}
+平板电极面积
+$S=230\,\mathrm{cm^2}$，间距
+$d=2.0\,\mathrm{mm}$；
+其间弱导电介质电导率沿垂直电极方向
+由 $\sigma_1=1.0\,\mathrm{pS/m}$
+线性增至 $\sigma_2=2.0\,\mathrm{pS/m}$。
+两极板间电压 $V=300\,\mathrm V$，
+求稳态电流。
+\exsolution
+稳态时电流密度
+$j=I/S$ 与位置无关。
+局部欧姆定律
+$E(x)=j/\sigma(x)$。
+总电压
+\[
+V=j\int_0^d\frac{\mathrm dx}{\sigma_1+
+(\sigma_2-\sigma_1)x/d}
+=\frac{jd}{\sigma_2-\sigma_1}
+\ln\frac{\sigma_2}{\sigma_1}.
+\]
+所以
+\[
+\boxed{I=\frac{VS(\sigma_2-\sigma_1)}
+{d\ln(\sigma_2/\sigma_1)}}.
+\]
+代入 $S=0.0230\,\mathrm{m^2}$：
+\[
+\boxed{I\simeq5.0\times10^{-9}\,\mathrm A
+=5.0\,\mathrm{nA}}.
+\]
+\excheck $\sigma$ 代表电导率而非面电荷密度，
+其单位为 $\mathrm{S/m}$；
+$\mathrm{pS/m}=10^{-12}\,\mathrm{S/m}$。
+
+\electrocurrentproblem{164}{115}
+证明两种均匀导电介质交界处稳态电流线的折射律：
+若电导率分别为 $\sigma_1,\sigma_2$，
+电流线与界面法线角为 $\alpha_1,\alpha_2$，
+则
+$\tan\alpha_2/\tan\alpha_1=\sigma_2/\sigma_1$。
+\exsolution
+在无电荷随时间积累的稳态边界上，
+电流法向分量连续：
+$j_{1n}=j_{2n}$。
+由静电场切向连续：
+$E_{1t}=E_{2t}$。
+欧姆定律 $j_t=\sigma E_t$ 给
+$j_{2t}/j_{1t}=\sigma_2/\sigma_1$。
+由于
+$\tan\alpha_i=j_{it}/j_{in}$，
+故
+\[
+\frac{\tan\alpha_2}{\tan\alpha_1}
+=\frac{j_{2t}}{j_{1t}}
+\frac{j_{1n}}{j_{2n}}
+=\boxed{\frac{\sigma_2}{\sigma_1}}.
+\]
+\excheck 这一折射律作用于\emph{电流线}，
+不是光学斯涅尔定律；
+其源自电流连续与电场切向连续。
+
+\electrocurrentproblem{165}{115}
+两段截面积相同为 $S$ 的长圆柱导体
+首尾相接，电阻率分别为 $\rho_1,\rho_2$。
+恒定电流 $I$ 从导体1流入导体2。
+求界面上积累的总自由电荷。
+\exsolution
+电流密度沿圆柱轴为
+$j=I/S$。
+两段轴向电场分别为
+$E_1=\rho_1I/S$、
+$E_2=\rho_2I/S$。
+交界处电场法向跃变
+$E_2-E_1=\sigma_f/\varepsilon_0$，
+所以
+\[
+\sigma_f=\frac{\varepsilon_0 I}{S}
+(\rho_2-\rho_1).
+\]
+乘以界面面积：
+\[
+\boxed{q_{\rm interface}=
+\varepsilon_0 I(\rho_2-\rho_1)}.
+\]
+\excheck 即使直流达到稳态，
+不同电阻率材料的交界仍可带少量
+静止表面自由电荷，以维持电场跳变。
+
+\electrocurrentproblem{166}{115}
+两层均匀介质沿电流方向串联，
+厚度 $d_1,d_2$，相对介电常数
+$\varepsilon_1,\varepsilon_2$，
+电阻率 $\rho_1,\rho_2$。
+施加直流电压 $V$，电场从1层指向2层，
+求界面\emph{外来自由电荷}面密度及其为零的条件。
+\exsolution
+直流稳态时法向电流密度相同，
+$j=E_1/\rho_1=E_2/\rho_2$，
+故 $E_i=j\rho_i$。
+电压
+$V=j(\rho_1d_1+\rho_2d_2)$，
+于是
+\[
+j=\frac{V}{\rho_1d_1+\rho_2d_2}.
+\]
+界面自由电荷密度由
+$D_{2n}-D_{1n}$ 得
+\[
+\sigma_f=\varepsilon_0
+(\varepsilon_2E_2-\varepsilon_1E_1)
+=\varepsilon_0j
+(\varepsilon_2\rho_2-\varepsilon_1\rho_1).
+\]
+所以
+\[
+\boxed{\sigma_f=
+\frac{\varepsilon_0V
+(\varepsilon_2\rho_2-\varepsilon_1\rho_1)}
+{\rho_1d_1+\rho_2d_2}},
+\qquad
+\boxed{\sigma_f=0\iff
+\varepsilon_1\rho_1=\varepsilon_2\rho_2}.
+\]
+\excheck 零面电荷条件不是
+$\rho_1=\rho_2$ 或 $\varepsilon_1=\varepsilon_2$
+单独成立，而是两个乘积相等。
+
+\electrocurrentproblem{167}{115}
+平板电极之间的弱导电介质非均匀，
+靠电极1处相对介电常数和电阻率为
+$\varepsilon_1,\rho_1$，
+靠电极2处为 $\varepsilon_2,\rho_2$。
+稳态电流 $I$ 从1流向2。
+求介质\emph{体内}的总外来自由电荷。
+\exsolution
+取轴向坐标 $x$ 从电极1指向2，
+稳态电流密度 $j=I/S$。
+局部欧姆定律给 $E(x)=j\rho(x)$，
+位移为
+$D(x)=\varepsilon_0\varepsilon(x)j\rho(x)$。
+自由体电荷满足
+$\rho_f(x)=\mathrm dD/\mathrm dx$。
+对介质全厚度积分：
+\[
+Q_f=S\int_0^d\rho_f(x)\,\mathrm dx
+=S[D(d)-D(0)].
+\]
+因此
+\[
+\boxed{Q_f=
+\varepsilon_0I
+(\varepsilon_2\rho_2-\varepsilon_1\rho_1)}.
+\]
+\excheck 自由电荷总量由两边界的
+$\varepsilon\rho$ 值决定，
+与内部如何连续变化无关；
+这里不包括两极板表面自由电荷。
+
+\electrocurrentproblem{168}{115}
+平板电极间距 $d$，
+弱导电介质的电阻率沿法向线性变化，
+最大与最小值之比为 $\eta>1$。
+施加电压 $V$。
+求间隙体自由电荷密度。
+\exsolution
+先按\emph{相对介电常数均匀且取1}
+（与本版书后答案一致）计算。
+令 $\rho(x)=\rho_{\min}
+[1+(\eta-1)x/d]$，
+稳态 $j$ 恒定，
+$E(x)=j\rho(x)$。
+电压
+\[
+V=j\int_0^d\rho(x)\,\mathrm dx
+=\frac{jd\rho_{\min}(1+\eta)}2,
+\]
+故
+$j=2V/[d\rho_{\min}(1+\eta)]$。
+由一维高斯定律
+$\rho_f=\varepsilon_0\mathrm dE/\mathrm dx$，
+\[
+\boxed{\rho_f=
+\frac{2\varepsilon_0V(\eta-1)}
+{d^2(\eta+1)}}.
+\]
+如果实际材料相对介电常数为\emph{均匀的}
+$\varepsilon_r\ne1$，
+则严格应为
+$\rho_f=2\varepsilon_0\varepsilon_rV
+(\eta-1)/[d^2(\eta+1)]$。
+\excheck \textbf{底本条件不完整：}
+原版英文最后仅写
+“$\varepsilon$ is assumed to be everywhere.”
+未说明其常数或取值。
+书后公式不带 $\varepsilon$，相当于取
+$\varepsilon_r=1$；译稿保留一般修正，
+不暗称题面明确指定了1。
+
+\electrocurrentproblem{169}{115}
+长圆柱导体截面积为 $S$，
+电阻率沿半径变化为
+$\rho(r)=\alpha/r^2$，
+$\alpha>0$。求 (a) 沿轴单位长度电阻参数；
+(b) 流过总电流 $I$ 所需的轴向电场模。
+\exsolution
+假设轴向电场 $E$ 在同一截面各处相同，
+电流密度
+$j_z(r)=E/\rho(r)=Er^2/\alpha$。
+若截面半径为 $R$，
+\[
+I=\int_Sj_z\,\mathrm dA
+=\frac{2\pi E}{\alpha}\int_0^Rr^3\,\mathrm dr
+=\frac{\pi ER^4}{2\alpha}.
+\]
+由 $S=\pi R^2$，
+$I=ES^2/(2\pi\alpha)$。
+因此
+\[
+\boxed{\frac{R_{\rm wire}}{L}
+=\frac E I=\frac{2\pi\alpha}{S^2}},
+\qquad
+\boxed{E=\frac{2\pi\alpha I}{S^2}}.
+\]
+\excheck 这里 $R_{\rm wire}/L$ 为
+$\Omega/\mathrm m$，
+不同于第159题二维双线体系
+的 $\Omega\cdot\mathrm m$ 长度参数。
+
+\electrocurrentproblem{170}{116}
+电容 $C=400\,\mathrm{pF}$
+通过电阻 $R=650\,\Omega$ 接入
+恒压电源 $V_0$，初始未充电。
+问电容电压何时达到 $V=0.90V_0$。
+\exsolution
+串联 RC 充电时
+$C\dot V_c=(V_0-V_c)/R$，
+初值 $V_c(0)=0$。
+积分：
+\[
+V_c(t)=V_0(1-e^{-t/(RC)}).
+\]
+令 $V_c/V_0=0.90$，
+得 $e^{-t/(RC)}=0.10$，
+故
+\[
+\boxed{t=-RC\ln(1-0.90)=RC\ln10}.
+\]
+代入
+$RC=(650)(400\times10^{-12})\,\mathrm s
+=2.60\times10^{-7}\,\mathrm s$，
+\[
+\boxed{t\simeq0.60\,\mathrm{\mu s}}.
+\]
+\excheck 电压趋近 $V_0$ 是渐近过程，
+到达 $0.90V_0$ 需要有限时间。
+
+\electrocurrentproblem{171}{116}
+相对介电常数 $\varepsilon=2.1$ 的
+电容器填充材料漏电，
+电荷在 $\tau=3.0\,\mathrm{min}$
+内减少到原来的一半。
+假设只通过介质漏电，
+求介质电阻率 $\rho$。
+\exsolution
+对于相同几何的电容和漏电通道，
+$RC=\rho\varepsilon\varepsilon_0$。
+自由放电
+$Q(t)=Q_0e^{-t/(RC)}$。
+在 $t=\tau$ 时 $Q/Q_0=1/2$，
+所以
+\[
+RC=\frac{\tau}{\ln2},
+\qquad
+\boxed{\rho=
+\frac{\tau}{\varepsilon\varepsilon_0\ln2}}.
+\]
+用 $\tau=180\,\mathrm s$、
+$\varepsilon=2.1$，
+\[
+\boxed{\rho\simeq1.4\times10^{13}\,\Omega\cdot\mathrm m}.
+\]
+\excheck \textbf{书末数量级冲突：}
+本版书末若印
+$1.4\times10^{12}\,\Omega\cdot\mathrm m$，
+则按题给180s、2.1和所印公式
+少一个10倍；译稿按基本常数复算保留
+$1.4\times10^{13}$。
+
+\electrocurrentproblem{172}{116}
+电动势恒为 $\mathcal E$ 的理想电源、
+电阻 $R$ 与电容 $C$ 串联。
+原电路已稳定充电，
+在 $t=0$ 瞬间把电容减小为原来的
+$1/\eta$，$\eta>1$。
+求随后电流 $I(t)$。
+\exsolution
+原来稳态电容电荷
+$Q(0^-)=C\mathcal E$。
+电容突变瞬间电荷不及流走，
+$Q(0^+)=C\mathcal E$，
+但新的电容为 $C'=C/\eta$，
+故电压立即跃变为
+$U_C(0^+)=Q/C'=\eta\mathcal E$。
+随后 RC 回路满足
+$RC'\,\dot U_C=\mathcal E-U_C$，
+因此
+\[
+U_C(t)=\mathcal E+
+(\eta-1)\mathcal E\,e^{-t/(RC')}
+=\mathcal E+(\eta-1)\mathcal E
+e^{-\eta t/(RC)}.
+\]
+按从电源正端向电容充电为正，
+电流 $I=(\mathcal E-U_C)/R$：
+\[
+\boxed{I(t)=
+-\frac{(\eta-1)\mathcal E}{R}
+e^{-\eta t/(RC)}}.
+\]
+\excheck 负号表示电容因突然减小而
+\emph{倒流放电}；若以放电方向为正，
+电流模为 $(\eta-1)\mathcal E
+e^{-\eta t/(RC)}/R$。
+
+\electrocurrentproblem{173}{116}
+一个电动势 $\mathcal E=6.0\,\mathrm V$
+的电池、安培表与伏特表串联。
+随后给伏特表并联一只电阻，
+伏特表读数降为原来的
+$1/\eta$（$\eta=2.0$），
+安培表读数升为原来的 $\eta$ 倍。
+求并联电阻后伏特表读数。
+\exsolution
+设并联前的伏特表电压为 $U_0$，
+安培表串联部分上的总电压降为 $W_0$，
+电源电动势满足
+$\mathcal E=U_0+W_0$。
+并联后电压为 $U_0/\eta$，
+串联电流增为 $\eta$ 倍，
+故安培表与电源内阻合计电压降
+变为 $\eta W_0$：
+\[
+\mathcal E=\frac{U_0}{\eta}+\eta W_0.
+\]
+用第一式消去 $W_0=\mathcal E-U_0$，
+得
+$U_0=\eta\mathcal E/(\eta+1)$，
+所以新读数
+\[
+\boxed{U_{\rm new}=\frac{\mathcal E}{\eta+1}
+=\frac6{3}\,\mathrm V=2.0\,\mathrm V}.
+\]
+\excheck 并不需要单独知道安培表或伏特表的
+内阻值，读数倍率已足以确定电压。
+
+\electrocurrentproblem{174}{116}
+图3.39闭合回路，
+$R_1=10\,\Omega$、
+$R_2=20\,\Omega$、
+$\mathcal E_1=5.0\,\mathrm V$、
+$\mathcal E_2=2.0\,\mathrm V$，
+电源内阻忽略。
+求图中点1与点2的电势差。
+\exsolution
+图中两电源沿回路反向，
+设沿 $\mathcal E_1$ 有效驱动方向为正，
+回路电流
+\[
+I=\frac{\mathcal E_1-\mathcal E_2}{R_1+R_2}
+=\frac{5-2}{10+20}=0.10\,\mathrm A.
+\]
+从点1沿图中相应上支路到点2，
+需计电动势 $\mathcal E_1$
+和电阻 $R_1$ 的代数电压变化。
+由 Kirchhoff 第二定律：
+\[
+\varphi_1-\varphi_2
+=IR_1-\mathcal E_1
+=\frac{(\mathcal E_1-\mathcal E_2)R_1}
+{R_1+R_2}-\mathcal E_1.
+\]
+所以
+\[
+\boxed{\varphi_1-\varphi_2=-4.0\,\mathrm V}.
+\]
+\excheck 负号说明点1电势比点2低4V；
+电路中电源正负极必须依图3.39使用。
+
+\electrocurrentproblem{175}{116}
+两个电动势相同为 $\mathcal E$ 的电池
+串联，内阻分别为 $R_1<R_2$，
+外接电阻 $R$。
+求使其中某一个电池的\emph{端电压}
+恰为零时的外阻以及是哪一个电池。
+\exsolution
+两电池同向串联，
+回路电流为
+\[
+I=\frac{2\mathcal E}{R+R_1+R_2}.
+\]
+供电时第 $i$ 只电池的端电压
+$U_i=\mathcal E-IR_i$。
+零端电压要求
+$I=\mathcal E/R_i$。
+由于 $R$ 必须非负，
+在 $R_2>R_1$ 情况下可由
+内阻较大的第2只电池达到：
+\[
+\frac{2\mathcal E}{R+R_1+R_2}
+=\frac{\mathcal E}{R_2}
+\quad\Longrightarrow\quad
+\boxed{R=R_2-R_1}.
+\]
+\excheck 只有内阻较大的电源
+$R_2$ 可在非负外阻条件下满足端电压为零；
+这不表示该电池的电动势消失。
