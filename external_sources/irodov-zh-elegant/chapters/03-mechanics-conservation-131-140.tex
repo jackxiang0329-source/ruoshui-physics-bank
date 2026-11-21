@@ -1,0 +1,296 @@
+% Irodov, Arihant PDF pp. 31--33, printed pp. 22--24.
+\exproblem{131}{22}
+某球对称力场中的势能为
+$U(r)=a/r^2-b/r$，其中 $a,b>0$。
+求：（a）平衡半径及其稳定性；
+（b）最大吸引力，并说明 $U(r)$、径向力 $F_r(r)$ 的图像特点。
+\exsolution
+径向力为
+\[
+F_r(r)=-\frac{\mathrm dU}{\mathrm dr}
+=\frac{2a}{r^3}-\frac{b}{r^2}.
+\]
+平衡需 $F_r=0$，故
+$\boxed{r_0=2a/b}$。
+在此点
+\[
+U''(r_0)=\left(\frac{6a}{r^4}
+-\frac{2b}{r^3}\right)_{r=r_0}
+=\frac{2a}{r_0^4}>0,
+\]
+势能极小，平衡稳定。
+当 $r>r_0$ 时 $F_r<0$，吸引力大小
+$f(r)=b/r^2-2a/r^3$。
+求导 $f'=-2b/r^3+6a/r^4$，
+最大值出现在 $r_m=3a/b$，有
+\[
+\boxed{f_{\max}=\frac{b^3}{27a^2}}.
+\]
+\excheck $r\to0^+$ 时 $U\to+\infty,F_r\to+\infty$
+（强斥力）；$r\to\infty$ 时 $U\to0^-$、$F_r\to0^-$。
+$U$ 在 $r_0$ 取负极小，$F_r$ 在 $r_0$ 过零，
+在 $r_m$ 取最小负值。
+
+\exproblem{132}{22}
+二维势场的势能为
+$U(x,y)=\alpha x^2+\beta y^2$，
+其中 $\alpha,\beta>0$ 且 $\alpha\ne\beta$。
+求：（a）是否为中心力场；
+（b）等势线和力大小相同的点构成什么曲线，
+它们的半轴比各是多少。
+\exsolution
+力矢量
+\[
+\bm F=-\nabla U=(-2\alpha x,-2\beta y).
+\]
+若是以原点为中心的中心力，任一点的 $\bm F$
+必须与 $\bm r=(x,y)$ 平行。
+但 $\bm r\times\bm F$
+的平面垂直分量为 $2(\alpha-\beta)xy$，
+一般不为零，因此
+$\boxed{\text{非中心力场}}$。
+对于给定势能 $U_0>0$，等势线
+$\alpha x^2+\beta y^2=U_0$ 是椭圆；
+其 $x,y$ 轴半径分别为
+$\sqrt{U_0/\alpha},\sqrt{U_0/\beta}$，故
+$\boxed{a_x/a_y=\sqrt{\beta/\alpha}}$。
+力大小相同 $|\bm F|=F_0$ 则
+\[
+\alpha^2x^2+\beta^2y^2=\frac{F_0^2}{4},
+\quad\boxed{a_x/a_y=\frac{\beta}{\alpha}}.
+\]
+\excheck 两族曲线都是同轴椭圆，但长短轴比不同；
+仅 $\alpha=\beta$ 时力才处处径向。
+
+\exproblem{133}{22}
+考察两种与时间无关的平面力场：
+$\bm F_1=ay\,\bm i$ 和
+$\bm F_2=ax\,\bm i+by\,\bm j$，
+其中 $a,b$ 均为常数。
+求两力场分别是否存在势能函数。
+\exsolution
+在单连通平面上，足够光滑力场存在势函数的必要充分条件是
+$\partial F_y/\partial x=\partial F_x/\partial y$。
+对 $\bm F_1$，
+\[
+\frac{\partial F_{1y}}{\partial x}=0,\qquad
+\frac{\partial F_{1x}}{\partial y}=a.
+\]
+因此当 $a\ne0$ 时不满足条件，
+$\boxed{\bm F_1\text{ 非保守}}$；
+$a=0$ 时它为零场，当然保守。
+对 $\bm F_2$，两偏导均为零，故保守，
+相应势能可取
+\[
+\boxed{U_2(x,y)=-\frac12ax^2-\frac12by^2+C},
+\]
+因为 $-\nabla U_2=\bm F_2$。
+\excheck 即使力与时间无关也未必是保守力；
+判断标准是旋度而不是“定常”。
+
+\exproblem{134}{23}
+质量为 $m$ 的物块以初速 $v_0$
+沿倾角 $\alpha$ 的粗糙斜面向上滑动，
+摩擦系数为 $k$。
+求停下以前的路程及摩擦力在此过程中所做的功。
+\exsolution
+沿斜面向上运动时，重力切向分量及摩擦力均指向下方，
+减速度大小
+$a=g(\sin\alpha+k\cos\alpha)$。
+由 $0=v_0^2-2as$：
+\[
+\boxed{s_{\rm stop}=
+\frac{v_0^2}{2g(\sin\alpha+k\cos\alpha)}}.
+\]
+摩擦力大小 $kmg\cos\alpha$，恒反向于位移，
+所以
+\[
+W_f=-kmg\cos\alpha\,s_{\rm stop}
+=\boxed{-\frac{mv_0^2 k}
+ {2(\tan\alpha+k)}}.
+\]
+\excheck $k=0$ 时停下距离为 $v_0^2/(2g\sin\alpha)$
+且摩擦功为零；$k>0$ 时摩擦功为负。
+
+\exproblem{135}{23}
+图1.30中，小圆片从高度 $H$ 的光滑坡顶由静止滑下，
+坡道末端有一个高于地面 $h$ 的水平段，
+圆片从该段末端水平飞出。
+求使落地点与平台边缘的水平距离 $s$ 最大的 $h$
+及相应最大射程。
+\exsolution
+能量守恒给出水平飞出速度
+$v=\sqrt{2g(H-h)}$。
+从高 $h$ 的平台水平抛出，落地用时
+$t=\sqrt{2h/g}$，故
+\[
+s(h)=vt=2\sqrt{h(H-h)}.
+\]
+平方为
+$s^2=4[hH-h^2]=H^2-4(h-H/2)^2$，
+所以在 $0<h<H$ 中，唯一最大点为
+\[
+\boxed{h_{\rm opt}=\frac H2,\qquad
+s_{\max}=H}.
+\]
+\excheck $h\to0$ 或 $h\to H$ 时射程均趋零，
+验证内部极大值合理。
+
+\exproblem{136}{23}
+图1.31中，小物体从高度 $h$ 由静止出发，
+沿光滑槽道下滑，槽道随后变为
+半径 $R=h/2$ 的竖直半圆弧。
+物体在接近顶部前离开槽道，之后作抛体运动。
+求离槽后自由飞行过程中到达\emph{最高点}时的速率。
+\exsolution
+取半圆弧的圆心距地面高度为 $R=h/2$，
+用 $\theta$ 表示圆弧上质点半径与竖直向上的夹角。
+其高度 $y=R(1+\cos\theta)$。
+由能量守恒
+\[
+v^2=2g(h-y)=2gR(1-\cos\theta).
+\]
+在槽内向心方向列力学方程
+$N+mg\cos\theta=mv^2/R$；
+当 $N=0$ 时离开槽道，所以
+$g\cos\theta=2g(1-\cos\theta)$，
+即 $\cos\theta=2/3$、$v^2=2gR/3=gh/3$。
+离开时速度沿圆弧切线，其水平方向分量为
+$v_x=v\cos\theta$；之后忽略阻力，
+到抛体最高点的速率即 $|v_x|$，故
+\[
+\boxed{v_{\rm apex}=\frac23\sqrt{\frac{gh}{3}}}.
+\]
+\excheck 此“最高点”是离槽后的\emph{自由抛物线顶点}，
+不是圆槽最上端；二者不能混淆。
+
+\exproblem{137}{23}
+摆长 $\ell$ 的单摆起初竖直静止。
+将悬点突然以某水平方向的恒速移动，
+使小球相对悬点获得初速。
+求让小球能够在整个竖直圆周内绳始终绷紧所需的
+悬点最小速率，以及小球运动至水平位置时的绳张力。
+\exsolution
+设悬点移动速率为 $u$；
+悬点突然运动时小球速度尚未来得及变化，
+故小球相对悬点的初速大小为 $u$，
+初始位置在圆周最低点。
+从最低点到最高点的重力势能增量为 $2mg\ell$，
+能量守恒给出
+$v_{\rm top}^2=u^2-4g\ell$。
+为了在圆顶保持绳绷紧，
+由向心方程 $T_{\rm top}+mg=mv_{\rm top}^2/\ell$
+要求 $v_{\rm top}^2\ge g\ell$。
+故
+\[
+\boxed{u_{\min}=\sqrt{5g\ell}}.
+\]
+在水平位置高度较起点上升 $\ell$，
+此刻速度平方
+$v_{\rm side}^2=u_{\min}^2-2g\ell=3g\ell$。
+重力沿指向悬点的径向分量为零，
+于是
+\[
+\boxed{T_{\rm side}=\frac{mv_{\rm side}^2}{\ell}=3mg}.
+\]
+\excheck 临界最小初速对应最高点张力恰为零，
+再小便会在到达最高点之前绳子松弛。
+
+\exproblem{138}{23}
+如图1.32，从上方看，一质量很小的圆片 $A$
+用长为 $\ell_0$ 的水平细绳系于静止圆柱
+表面切点 $B$，圆柱半径为 $R$。
+初始圆片获得垂直于细绳的速度 $v_0$，
+随运动细绳不断绕圆柱缠绕。
+忽略摩擦，求圆片最终撞上圆柱的时间。
+\exsolution
+细绳张力始终垂直于圆片的瞬时速度，不做功，
+所以圆片速率保持 $v_0$。
+令绳子在柱面上新缠绕的圆心角为 $\varphi$，
+则自由绳长
+$\ell(\varphi)=\ell_0-R\varphi$。
+圆片轨迹是圆柱横截面的渐开线，其弧长微元
+\[
+\mathrm ds=\ell(\varphi)\,\mathrm d\varphi
+=(\ell_0-R\varphi)\,\mathrm d\varphi.
+\]
+从 $\varphi=0$ 到绳全绕完
+$\varphi_*=\ell_0/R$，总路程为
+\[
+s=\int_0^{\ell_0/R}
+(\ell_0-R\varphi)\,\mathrm d\varphi
+=\frac{\ell_0^2}{2R}.
+\]
+故
+\[
+\boxed{t=\frac{s}{v_0}=\frac{\ell_0^2}{2Rv_0}}.
+\]
+\excheck 绳长变短时圆片的瞬时曲率半径也逐渐变小；
+不能把它的运动当作以固定半径 $\ell_0$ 的圆周运动。
+
+\exproblem{139}{23}
+图1.33中，长为 $\ell$、劲度系数为 $k$ 的轻弹性绳
+上端固定在 $O$，下端带轻挡块 $B$。
+质量为 $m$ 的小环 $A$ 从 $O$ 处静止开始下落，
+先自由落下距离 $\ell$，随后挡块受力使弹性绳伸长。
+求绳子的最大伸长量 $\Delta\ell$。
+\exsolution
+从初始位置到最大伸长点，
+小环总下降距离为 $\ell+\Delta\ell$，
+初末速率均为零。
+忽略绳和挡块的质量以及耗散，
+重力势能损失全部转为弹性势能：
+\[
+mg(\ell+\Delta\ell)=\frac12 k(\Delta\ell)^2.
+\]
+这是关于 $\Delta\ell$ 的一元二次方程，
+取正根得
+\[
+\boxed{\Delta\ell=
+\frac{mg}{k}\left(1+
+\sqrt{1+\frac{2k\ell}{mg}}\right)}.
+\]
+\excheck $\ell\to0$ 时退化为从自然长位置
+自由下落的竖直弹簧最大伸长 $2mg/k$；
+另一负根没有物理意义。
+
+\exproblem{140}{24}
+图1.34中，质量为 $m$ 的物块 $A$
+在光滑水平面上，初始由左侧绳 $PA$ 固定，
+向右的绳跨过轻滑轮连接等质量重物 $B$。
+另有弹簧竖直连接 $A$ 与其正上方固定点 $O$，
+弹簧自然长 $\ell_0=0.50\,\mathrm m$，
+劲度系数 $k=5mg/\ell_0$。
+烧断左绳后，求 $A$ 刚开始离开水平面时的速度。
+\exsolution
+设 $A$ 向右滑过 $x$，由右绳长度守恒，
+$B$ 下降同样距离 $x$，两物块速率相同为 $v$。
+弹簧长度变为
+$L=\sqrt{\ell_0^2+x^2}$。
+弹簧向上的作用力分量为
+$k(L-\ell_0)\ell_0/L$；
+离面临界时地面支持力 $N=0$，故
+\[
+k(L-\ell_0)\frac{\ell_0}{L}=mg.
+\]
+代入 $k=5mg/\ell_0$ 得
+$5(1-\ell_0/L)=1$，
+所以 $L=5\ell_0/4$，进而
+$x=3\ell_0/4$。
+系统重物的势能损失为 $mgx$，
+弹簧势能增加为
+$\tfrac12 k(L-\ell_0)^2=5mg\ell_0/32$。
+两等质量物块总动能为
+$2(\tfrac12 mv^2)=mv^2$，故
+\[
+mv^2=mg\frac{3\ell_0}{4}
+-\frac{5mg\ell_0}{32}
+=\frac{19mg\ell_0}{32}.
+\]
+因此
+\[
+\boxed{v=\sqrt{\frac{19g\ell_0}{32}}
+\simeq1.70\,\mathrm{m/s}}.
+\]
+\excheck 此刻弹簧竖直分力恰好抵消重力，
+而非弹簧长度刚超过自然长时立刻离面。
