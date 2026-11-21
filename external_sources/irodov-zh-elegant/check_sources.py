@@ -343,9 +343,29 @@ ELECTRO_CURRENT_CHAPTERS = [
     "19-electric-current-147-160.tex",
     "19-electric-current-161-175.tex",
     "19-electric-current-176-188.tex",
+    "19-electric-current-189-200.tex",
+    "19-electric-current-201-218.tex",
 ]
 ELECTRO_CURRENT_RANGES = [
     range(147, 161), range(161, 176), range(176, 189),
+    range(189, 201), range(201, 219),
+]
+ELECTRO_MAGNET_CHAPTERS = [
+    "20-magnetostatics-219-235.tex",
+    "20-magnetostatics-236-250.tex",
+    "20-magnetostatics-251-262.tex",
+    "20-magnetostatics-263-274.tex",
+    "20-magnetostatics-275-287.tex",
+]
+ELECTRO_MAGNET_RANGES = [
+    range(219, 236), range(236, 251), range(251, 263),
+    range(263, 275), range(275, 288),
+]
+ELECTRO_INDUCTION_CHAPTERS = [
+    "21-induction-288-288.tex",
+]
+ELECTRO_INDUCTION_RANGES = [
+    range(288, 289),
 ]
 
 part_three = []
@@ -354,6 +374,8 @@ for macro, filenames, expected_ranges in [
     ("electroconductproblem", ELECTRO_CONDUCT_CHAPTERS, ELECTRO_CONDUCT_RANGES),
     ("electrocapproblem", ELECTRO_CAP_CHAPTERS, ELECTRO_CAP_RANGES),
     ("electrocurrentproblem", ELECTRO_CURRENT_CHAPTERS, ELECTRO_CURRENT_RANGES),
+    ("electromagproblem", ELECTRO_MAGNET_CHAPTERS, ELECTRO_MAGNET_RANGES),
+    ("electroinductionproblem", ELECTRO_INDUCTION_CHAPTERS, ELECTRO_INDUCTION_RANGES),
 ]:
     if (r"\newcommand{" + chr(92) + macro + "}") not in main:
         errors.append(f"main.tex missing macro {macro}")
@@ -378,8 +400,8 @@ for macro, filenames, expected_ranges in [
         entry = r"\input{chapters/" + path.stem + "}"
         if entry not in main:
             errors.append(f"main.tex missing chapter: {name}")
-if part_three != list(range(1, 189)):
-    errors.append("Part III independent numbering is not exactly 1..188")
+if part_three != list(range(1, 289)):
+    errors.append("Part III independent numbering is not exactly 1..288")
 if main.count(r"\chapter{电动力学}") != 1:
     errors.append("Part III chapter count is not one")
 if main.count(r"\section{真空中的恒定电场") != 1:
@@ -390,9 +412,13 @@ if main.count(r"\section{电容与静电场能") != 1:
     errors.append("Part III capacitance/energy section count is not one")
 if main.count(r"\section{恒定电流") != 1:
     errors.append("Part III electric-current section count is not one")
+if main.count(r"\section{恒定磁场与磁介质") != 1:
+    errors.append("Part III magnetostatics section count is not one")
+if main.count(r"\section{电磁感应与麦克斯韦方程") != 1:
+    errors.append("Part III induction section count is not one")
 
 if errors:
     for e in errors:
         print("FAIL:", e, file=sys.stderr)
     sys.exit(1)
-print("PASS: 388 Part-I + 257 Part-II + 188 Part-III = 833 translated solved problems in 85 chapter files; all three independent numbering ranges verified")
+print("PASS: 388 Part-I + 257 Part-II + 288 Part-III = 933 translated solved problems in 93 chapter files; all three independent numbering ranges verified")
