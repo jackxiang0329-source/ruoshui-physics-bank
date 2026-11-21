@@ -1,0 +1,347 @@
+% Irodov Part III §3.3 problems 101--112, user PDF pp.114--116,
+% printed pp.105--107. Capacitor figure 3.16--3.17 inspected.
+\electrocapproblem{101}{105}
+半径为 $R_1$ 的孤立金属球外表紧贴同心介质壳，
+介质相对介电常数为 $\varepsilon$，外半径 $R_2$；
+其外部真空。求金属球相对于无穷远的电容。
+\exsolution
+设球总自由电荷为 $q$。高斯定律给
+$D_r=q/(4\pi r^2)$，故
+$R_1<r<R_2$ 时
+$E_r=q/(4\pi\varepsilon_0\varepsilon r^2)$，
+$r>R_2$ 时
+$E_r=q/(4\pi\varepsilon_0r^2)$。
+球电势
+\[
+\varphi(R_1)=\frac{q}{4\pi\varepsilon_0}
+\left[\frac1\varepsilon
+\left(\frac1{R_1}-\frac1{R_2}\right)
++\frac1{R_2}\right].
+\]
+由 $C=q/\varphi(R_1)$：
+\[
+\boxed{C=
+\frac{4\pi\varepsilon_0\varepsilon R_1}
+{1+(\varepsilon-1)R_1/R_2}}.
+\]
+\excheck $R_2=R_1$ 时退化为真空导体球电容
+$4\pi\varepsilon_0R_1$；
+$R_2\to\infty$ 时得到
+$4\pi\varepsilon_0\varepsilon R_1$。
+
+\electrocapproblem{102}{105}
+两个空气平板电容器电容均为 $C$，
+串联接在电动势 $\mathcal E$ 不变的电池两端。
+随后将其中一个电容器完全填充
+相对介电常数为 $\varepsilon$ 的介质。
+问该电容器的电场减小多少倍，
+并求经电池流过的电荷量。
+\exsolution
+原串联等效电容 $C_{\rm eq,0}=C/2$，
+串联电荷 $Q_0=C\mathcal E/2$，
+每个电容器各承压 $\mathcal E/2$。
+填充后该电容器电容为 $\varepsilon C$，
+新串联电容为
+$C_{\rm eq}=\varepsilon C/(1+\varepsilon)$。
+故它的新电压
+$V_{\rm diel}=Q/(\varepsilon C)
+=\mathcal E/(1+\varepsilon)$。
+同一板距下 $E\propto V$，因此
+\[
+\boxed{\frac{E_{\rm new}}{E_{\rm old}}
+=\frac2{\varepsilon+1}},
+\quad
+\text{原电场减小 }(\varepsilon+1)/2\text{ 倍}.
+\]
+通过电池的电荷量等于两次串联电荷差：
+\[
+\boxed{\Delta Q=
+C\mathcal E\left[\frac{\varepsilon}{1+\varepsilon}
+-\frac12\right]
+=\frac{C\mathcal E(\varepsilon-1)}
+{2(\varepsilon+1)}}.
+\]
+\excheck 电源连接未断开，必须保持
+$\mathcal E$ 不变，而不能错误地保持串联电荷不变。
+
+\electrocapproblem{103}{105--106}
+平板电容器板面积为 $S$，间距由相邻
+两层介质填满；厚度 $d_1,d_2$，
+相对介电常数 $\varepsilon_1,\varepsilon_2$。
+求电容及两层界面处束缚面电荷密度
+（场从1层指向2层，外加电压 $V$）。
+\exsolution
+无自由界面电荷，法向位移量恒定 $D$，
+两层 $E_i=D/(\varepsilon_0\varepsilon_i)$。
+电压
+$V=D[d_1/\varepsilon_1+d_2/\varepsilon_2]/\varepsilon_0$。
+因此
+\[
+\boxed{C=
+\frac{\varepsilon_0S}{d_1/\varepsilon_1+d_2/\varepsilon_2}}.
+\]
+两层极化分别为
+$P_i=D(1-1/\varepsilon_i)$。
+在界面上定义沿1层指向2层为正法向，
+来自介质1的束缚面电荷为 $+P_1$，
+来自介质2的为 $-P_2$，
+相加得
+\[
+\sigma_b=P_1-P_2
+=D\left(\frac1{\varepsilon_2}-\frac1{\varepsilon_1}\right).
+\]
+代入
+$D=\varepsilon_0V/(d_1/\varepsilon_1+d_2/\varepsilon_2)$：
+\[
+\boxed{\sigma_b=
+\frac{\varepsilon_0V(\varepsilon_1-\varepsilon_2)}
+{\varepsilon_1d_2+\varepsilon_2d_1}}.
+\]
+\excheck 这是\emph{同一界面两侧束缚电荷之和}，
+不是单取其中一层的表面极化电荷。
+
+\electrocapproblem{104}{106}
+平板电容器面积 $S$，板距 $d$，
+介质相对介电常数沿电场方向线性地
+由 $\varepsilon_1$ 增至 $\varepsilon_2>\varepsilon_1$。
+求电容及带电 $q$ 时束缚体电荷密度
+关于局部 $\varepsilon$ 的关系。
+\exsolution
+没有自由体电荷，$D=q/S$ 恒定，
+$E(x)=D/[\varepsilon_0\varepsilon(x)]$。
+令
+$\varepsilon(x)=\varepsilon_1+
+(\varepsilon_2-\varepsilon_1)x/d$，
+则
+\[
+V=\frac{q}{\varepsilon_0S}
+\int_0^d\frac{\mathrm dx}{\varepsilon(x)}
+=\frac{qd}{\varepsilon_0S(\varepsilon_2-\varepsilon_1)}
+\ln\frac{\varepsilon_2}{\varepsilon_1}.
+\]
+因此
+\[
+\boxed{C=
+\frac{\varepsilon_0S(\varepsilon_2-\varepsilon_1)}
+{d\ln(\varepsilon_2/\varepsilon_1)}}.
+\]
+$P=D(1-1/\varepsilon)$，
+$\rho_b=-\mathrm dP/\mathrm dx$，故
+\[
+\boxed{\rho_b(x)=
+-\frac{q}{S}\frac{\varepsilon_2-\varepsilon_1}
+{d\,\varepsilon(x)^2}}.
+\]
+\excheck 若 $\varepsilon_2\to\varepsilon_1=\varepsilon$，
+洛必达法则给 $C\to\varepsilon\varepsilon_0S/d$、
+$\rho_b\to0$。
+
+\electrocapproblem{105}{106}
+半径为 $R_1,R_2$ 的同心球形电容器，
+$R_2>R_1$。填充介质相对介电常数随半径
+变化为 $\varepsilon(r)=a/r$，
+其中 $a$ 为具有长度量纲的常数。
+求电容。
+\exsolution
+径向位移
+$D_r=q/(4\pi r^2)$，
+电场
+$E_r=D_r/[\varepsilon_0(a/r)]
+=q/(4\pi\varepsilon_0 a r)$。
+电压
+\[
+V=\int_{R_1}^{R_2}E_r\,\mathrm dr
+=\frac{q}{4\pi\varepsilon_0a}
+\ln\frac{R_2}{R_1}.
+\]
+因此
+\[
+\boxed{C=\frac{4\pi\varepsilon_0a}
+{\ln(R_2/R_1)}}.
+\]
+\excheck 因 $\varepsilon=a/r$ 为无量纲，
+$a$ 必须具有长度量纲。
+
+\electrocapproblem{106}{106}
+同轴圆柱电容器两层介质分别占
+$R_1<r<R_2$ 与 $R_2<r<R_3$，
+介电常数为 $\varepsilon_1,\varepsilon_2$，
+击穿场强为 $E_{1m},E_{2m}$。
+求增大电压时两层同时达到各自击穿场的条件。
+\exsolution
+每单位轴向长度自由电荷量记为 $\lambda$。
+由柱面高斯定律
+$D_r=\lambda/(2\pi r)$，
+因此第 $i$ 层
+$E_i(r)=|\lambda|/(2\pi\varepsilon_0\varepsilon_i r)$。
+场强随半径增大而减小，
+所以第1层最大场在 $R_1$，
+第2层最大场在 $R_2$。
+若两层同步击穿：
+\[
+\frac{|\lambda|}{2\pi\varepsilon_0\varepsilon_1R_1}
+=E_{1m},\quad
+\frac{|\lambda|}{2\pi\varepsilon_0\varepsilon_2R_2}
+=E_{2m}.
+\]
+消去 $\lambda$：
+\[
+\boxed{\varepsilon_1R_1E_{1m}
+=\varepsilon_2R_2E_{2m}}.
+\]
+\excheck 不能用相同的径向位置比较不同层击穿，
+每层的危险位置是其各自内表面。
+
+\electrocapproblem{107}{106}
+图3.16的双层同轴圆柱电容器，
+半径依次为 $R_1<R_2<R_3$，
+介质参数同上。
+若
+$\varepsilon_1R_1E_{1m}<
+\varepsilon_2R_2E_{2m}$，
+求整体击穿电压。
+\exsolution
+由于第1层允许的线电荷阈值更小，
+先在 $r=R_1$ 达到 $E_{1m}$，
+此时
+$|\lambda|=2\pi\varepsilon_0\varepsilon_1R_1E_{1m}$。
+电压由两层径向积分：
+\[
+V=\frac{|\lambda|}{2\pi\varepsilon_0}
+\left[\frac1{\varepsilon_1}\ln\frac{R_2}{R_1}
++\frac1{\varepsilon_2}\ln\frac{R_3}{R_2}\right].
+\]
+代入阈值：
+\[
+\boxed{V_{\rm breakdown}=
+R_1E_{1m}
+\left[\ln\frac{R_2}{R_1}
++\frac{\varepsilon_1}{\varepsilon_2}\ln\frac{R_3}{R_2}\right]}.
+\]
+\excheck 条件为严格小于，因此先击穿第1层；
+同号等号时两层同时击穿。
+
+\electrocapproblem{108}{106}
+空气中两根等长平行细金属导线，
+截面半径均为 $a$，轴间距 $b\gg a$。
+求两导线\emph{每单位长度的互电容}。
+\exsolution
+设两线单位长度带自由电荷
+$+\lambda,-\lambda$。
+二维线电荷势
+$\varphi\propto\ln r$。
+以 $a\ll b$ 的近似在正线表面取
+距正线 $a$、负线 $b$，
+同理负线反向，得到电压
+\[
+V\simeq\frac{\lambda}{\pi\varepsilon_0}\ln\frac ba.
+\]
+故单位长度电容
+\[
+\boxed{C'=\frac{\lambda}{V}
+\simeq\frac{\pi\varepsilon_0}{\ln(b/a)}}.
+\]
+\excheck 更精确的两圆柱公式
+$C'=\pi\varepsilon_0/
+\operatorname{arcosh}(b/(2a))$，
+在 $b\gg a$ 化成上述结果。
+
+\electrocapproblem{109}{106}
+一根半径 $a$ 的长金属导线，
+平行于无限金属导体平面，
+轴线距平面 $b\gg a$。
+求两者的每单位长度互电容。
+\exsolution
+用导体平面镜像法，
+真实导线带线电荷 $+\lambda$，
+其镜像为距真线 $2b$ 的 $-\lambda$。
+真线与镜像的电势差约为
+$(\lambda/\pi\varepsilon_0)\ln(2b/a)$，
+但平面为对称零电势位置，
+真线到平面的电压为其中一半：
+\[
+V\simeq\frac{\lambda}{2\pi\varepsilon_0}\ln\frac{2b}{a}.
+\]
+故
+\[
+\boxed{C'=\frac{\lambda}{V}
+\simeq\frac{2\pi\varepsilon_0}{\ln(2b/a)}}.
+\]
+\excheck 对无限导体平面并未采用孤立双线的
+完整电压，否则会误少一倍。
+
+\electrocapproblem{110}{106}
+两个半径同为 $a$ 的导体球，
+球心距 $b\gg a$，
+均浸于相对介电常数为 $\varepsilon$ 的均匀介质中。
+求双球系统的互电容。
+\exsolution
+设两球带电 $+q,-q$，
+在 $b\gg a$ 下近似各自球面电荷均匀。
+正球电势约
+$\varphi_+=kq/(\varepsilon a)-kq/(\varepsilon b)$，
+负球电势相反。
+因此
+\[
+V=\varphi_+-\varphi_-=
+\frac{q}{2\pi\varepsilon_0\varepsilon}
+\left(\frac1a-\frac1b\right).
+\]
+电容
+\[
+C=\frac qV=
+\frac{2\pi\varepsilon_0\varepsilon}
+{1/a-1/b}
+\simeq\boxed{2\pi\varepsilon_0\varepsilon a}
+\quad(b\gg a).
+\]
+\excheck $b$ 有限时球面电荷并非严格均匀；
+上述 $1/b$ 项仅用于说明首阶近似。
+
+\electrocapproblem{111}{106}
+半径为 $a$ 的金属球，
+球心距无限导体平面为 $\ell\gg a$。
+求球—平面的互电容。
+\exsolution
+镜像法使金属球附近的电势
+近似为球自身带电 $q$ 的电势
+减去镜像 $-q$ 在距 $2\ell$ 处的电势：
+\[
+V\simeq\frac{q}{4\pi\varepsilon_0}
+\left(\frac1a-\frac1{2\ell}\right).
+\]
+因此
+\[
+C\simeq\frac{4\pi\varepsilon_0}
+{1/a-1/(2\ell)}
+\longrightarrow
+\boxed{4\pi\varepsilon_0a}\quad(\ell/a\to\infty).
+\]
+\excheck 球面电荷的畸变为更高阶修正，
+本题只要求 $\ell\gg a$ 的主阶。
+
+\electrocapproblem{112}{106--107}
+原书图3.17(a)、(b)为两种电容器连接网络，
+求 A、B 端等效电容，按图中标号
+(a) $C_1,C_2,C_3$，(b) 每只电容均为 $C$。
+\exsolution
+(a) 图3.17(a) 中三只电容器各连接同一对
+等势节点 A、B；它们两端的电势差相等，
+故各自电荷 $Q_i=C_iV$，
+总电荷 $Q=\sum_iQ_i$，
+因此
+\[
+\boxed{C_{AB}^{(a)}=C_1+C_2+C_3}.
+\]
+(b) 图3.17(b) 的四个边电容构成
+对称桥式结构；沿对称中心线的节点电势相等，
+可将桥的中间电容视为无压差。
+剩余两条支路各有两个相等电容串联，
+每支电容 $C/2$，两支并联：
+\[
+\boxed{C_{AB}^{(b)}
+=\frac C2+\frac C2=C}.
+\]
+\excheck 基于原书图3.17网络连线，
+不是将四只电容全串联或全并联；
+按 $C_i$ 同等电容极限可复核。
