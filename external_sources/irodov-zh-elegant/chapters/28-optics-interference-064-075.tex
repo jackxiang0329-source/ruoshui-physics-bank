@@ -1,0 +1,277 @@
+% Irodov Part V §5.2 Interference of Light, originals 64--75.
+% Source uploaded book PDF pp.206--208; original answers around PDF pp.336--338.
+\interferenceproblem{64}{197}
+证明两列简谐光学振动的合场在下列情形下，时间平均能量等于各自能量之和：(a) 两振动沿同一方向但互不相干，相位差在 $[0,2\pi)$ 内均匀随机；(b) 两列光振动相互垂直、频率相同但相位差任意。
+\exsolution
+取
+$\bm E=\bm e_1a_1\cos\omega t+\bm e_2a_2\cos(\omega t+\delta)$，
+能量流密度与 $\langle|\bm E|^2\rangle_t$ 成正比。
+展开：
+\[
+\langle|\bm E|^2\rangle_t
+=\frac{a_1^2+a_2^2}{2}
++a_1a_2(\bm e_1\cdot\bm e_2)\cos\delta .
+\]
+(a) 同向时 $\bm e_1\cdot\bm e_2=1$，
+但不相干使 $\langle\cos\delta\rangle_\delta=0$，
+故合强度为 $I_1+I_2$。
+(b) 正交偏振使 $\bm e_1\cdot\bm e_2=0$，
+因此对任意固定相位差也有
+\[
+\boxed{I_{\rm sum}=I_1+I_2}.
+\]
+\excheck 必须说明平均是时间平均还是随机相位的统计平均；仅“同频同向”而相位固定时会出现干涉交叉项。
+
+\interferenceproblem{65}{197}
+利用相量作图，求沿同一直线方向的三种同频振动的合振幅：
+$\xi_1=a\cos\omega t$、
+$\xi_2=2a\sin\omega t$、
+$\xi_3=1.5a\cos(\omega t+\pi/3)$。
+\exsolution
+用 $\Re(\widetilde A e^{i\omega t})$ 表示，
+三个复振幅依次是
+$a$、$-2ia$、$1.5a e^{i\pi/3}$，故
+\[
+\frac{\widetilde A}{a}
+=1-2i+\frac32\left(\frac12+i\frac{\sqrt3}{2}\right)
+=\frac74+i\left(\frac{3\sqrt3}4-2\right).
+\]
+因此
+\[
+\boxed{A=\frac a4\sqrt{49+(3\sqrt3-8)^2}
+\simeq1.9a}.
+\]
+\excheck 将 $\sin\omega t$ 化成余弦相量时相位为 $-\pi/2$ 而非 $+\pi/2$。
+
+\interferenceproblem{66}{197}
+沿同一方向的 $N$ 个相干等幅振动为
+$\xi_k=a\cos[\omega t+(k-1)\varphi]$，
+$k=1,\ldots,N$。
+求合振幅。
+\exsolution
+合复振幅为等比级数
+\[
+\widetilde A=a\sum_{k=0}^{N-1}e^{ik\varphi}
+=a\,\frac{1-e^{iN\varphi}}{1-e^{i\varphi}}
+=ae^{i(N-1)\varphi/2}
+\frac{\sin(N\varphi/2)}{\sin(\varphi/2)}.
+\]
+所以
+\[
+\boxed{A=a\left|
+\frac{\sin(N\varphi/2)}{\sin(\varphi/2)}
+\right|}.
+\]
+\excheck 当 $\varphi\to 2m\pi$ 时应用连续极限
+$A\to Na$，避免误把 $0/0$ 当零振幅。
+
+\interferenceproblem{67}{198}
+原图5.12：两相干点电偶极辐射源相距 $d$，偶极矩都垂直于它们所在的纸面，源2的相位比源1落后 $\varphi<\pi$。观察方向与两源连线的夹角为 $\theta$，波长为 $\lambda$。
+求：(a) 辐射强度最大的方向；(b) $\theta=\pi$ 强度最大而反向 $\theta=0$ 强度最小的条件。
+\exsolution
+令源1的初相为零、源2为 $-\varphi$；
+沿夹角 $\theta$ 方向从两源到远场的路程差给相位差
+$\Delta=(2\pi d/\lambda)\cos\theta+\varphi$
+（相位正向可取反，但极值方向的整数编号须相应调整）。
+主极大须 $\Delta=2\pi k$，故
+\[
+\boxed{\cos\theta=
+\left(k-\frac{\varphi}{2\pi}\right)\frac{\lambda}{d}},
+\quad k\in\mathbb Z,\quad|\cos\theta|\le1.
+\]
+(b) 使 $\theta=\pi$ 相长而 $\theta=0$ 相消，
+分别有
+$-kd_{\rm wave}+\varphi=2\pi m$、
+$kd_{\rm wave}+\varphi=(2n+1)\pi$，
+其中 $k_{\rm wave}=2\pi/\lambda$。
+相减可取
+\[
+\boxed{\varphi=\frac\pi2,\qquad
+\frac d\lambda=j+\frac14},\quad j=0,1,2,\ldots.
+\]
+\excheck 第(b)问相位的取正约定与原书图5.12观察方向相配；换源的标签会使该式中的 $\pm$ 或整数移位，但相长/相消的物理条件不变。
+
+\interferenceproblem{68}{198}
+一排固定的平行相干辐射振子沿直线以相同间距 $d$ 排列，邻近振子之间的激励相位差可随时间控制。要使主辐射峰以恒定角速度 $\Omega$ 扫描，求所需相位差 $\Delta\varphi(t)$。
+\exsolution
+取阵列法线为角度零方向，入射远场方向为 $\theta$。
+两邻振子远场路径相差 $d\sin\theta$，
+总相位差为
+$\Delta\varphi+(2\pi d/\lambda)\sin\theta$。
+主极大要求它为 $2\pi j$，
+若希望峰值角
+$\theta(t)=\Omega t+\alpha$，则
+\[
+\boxed{\Delta\varphi(t)=2\pi
+\left[j-\frac d\lambda\sin(\Omega t+\alpha)\right]},
+\quad j\in\mathbb Z.
+\]
+\excheck 主峰只在对应方向满足可见角范围时可扫描；相位差仅以模 $2\pi$ 有物理意义。
+
+\interferenceproblem{69}{198}
+劳埃德镜实验（图5.13）：狭缝源距镜面高度为 $h$，到屏距离
+$\ell=100$cm。
+某位置条纹间隔 $\Delta x=0.25$mm；
+源再远离镜面 $\Delta h=0.60$mm 后条纹间隔缩小为原来的 $1/\eta$，$\eta=1.5$。
+求光波长。
+\exsolution
+镜面虚像与真实狭缝的间隔为 $2h$，
+所以条纹宽
+$\Delta x=\lambda\ell/(2h)$。
+抬高源后
+$\Delta x'=\lambda\ell/[2(h+\Delta h)]
+=\Delta x/\eta$，
+得
+$\eta=(h+\Delta h)/h$，
+$h=\Delta h/(\eta-1)$。
+代入波长：
+\[
+\boxed{\lambda=
+\frac{2\Delta x\Delta h}{\ell(\eta-1)}
+=\frac{2(0.25\times10^{-3})(0.60\times10^{-3})}
+{1.00(0.5)}
+=0.60\,\mathrm{\mu m}}.
+\]
+\excheck 镜面反射附加 $\pi$ 相位会使明暗条纹互换，但不改变条纹\emph{间隔}。
+
+\interferenceproblem{70}{198}
+两束振幅相等、夹角为 $\psi\ll1$ 的相干平面光波几乎垂直落在屏面，证明相邻亮条纹间距 $\Delta x=\lambda/\psi$。
+\exsolution
+设两光波的波矢横向分量分别为
+$k_{1x},k_{2x}$，屏上横坐标为 $x$。
+两波干涉交叉项为
+$I_{\rm int}\propto\cos[(k_{1x}-k_{2x})x+\delta_0]$，
+故周期
+$\Delta x=2\pi/|k_{1x}-k_{2x}|$。
+小角时
+$|k_{1x}-k_{2x}|\simeq k\psi=(2\pi/\lambda)\psi$，所以
+\[
+\boxed{\Delta x\simeq\frac{\lambda}{\psi}}.
+\]
+\excheck 两束波振幅只影响条纹对比度，不影响条纹间距。
+
+\interferenceproblem{71}{198--199}
+菲涅耳双镜（图5.14）的夹角 $\alpha=12'$；
+狭缝 S、屏到双镜交线 O 的距离分别为 $r=10.0$cm、
+$b=130$cm，波长 $\lambda=0.55\,\mathrm{\mu m}$。
+求：(a) 条纹宽度与可见亮纹数；
+(b) 狭缝沿以 O 为心的圆弧移动 $\delta\ell=1.0$mm 时图样平移；
+(c) 保持足够清晰的狭缝最大宽度。
+\exsolution
+两镜产生的两个虚源分离约为
+$d=2\alpha r$（$\alpha$ 用弧度），
+到屏的距离约 $L=r+b$，
+因此
+\[
+\boxed{\Delta x=\frac{\lambda(r+b)}{2\alpha r}
+\simeq1.1\,\mathrm{mm}}.
+\]
+双镜反射波在屏上的重叠有效宽度由楔形几何约为
+$2\alpha b$，故可见条纹数
+$N\simeq 2\alpha b/\Delta x\simeq9$。
+将源沿半径 $r$ 的弧移动 $\delta\ell$，
+干涉图样等效平移
+\[
+\boxed{\delta x=\frac br\delta\ell
+=13\,\mathrm{mm}}.
+\]
+狭缝不同点产生图样的相对平移不能大于半条纹，
+$(b/r)\delta_{\max}\lesssim\Delta x/2$，故
+\[
+\boxed{\delta_{\max}\simeq
+\frac{\lambda(r+b)}{4\alpha b}
+=(1+r/b)\frac{\lambda}{4\alpha}
+\simeq43\,\mathrm{\mu m}}.
+\]
+\excheck $\alpha=12'=12(\pi/10800)\,\mathrm{rad}$；
+不可直接用“12”参与小角乘积。
+
+\interferenceproblem{72}{199}
+一束平面光波入射到夹角 $\alpha=2.0'$ 的菲涅耳双镜上，屏上干涉条纹宽度为
+$\Delta x=0.55$mm。求波长。
+\exsolution
+反射后的两平面波夹角为
+$\psi\simeq2\alpha$。
+由第70题
+$\Delta x=\lambda/(2\alpha)$，所以
+\[
+\boxed{\lambda=2\alpha\Delta x
+=2\frac{2\pi}{10800}(0.55\times10^{-3})
+\simeq0.64\,\mathrm{\mu m}}.
+\]
+\excheck 角分转弧度：$1'=\pi/10800$rad。
+
+\interferenceproblem{73}{199}
+直径5.0cm、焦距
+$f=25.0$cm 的会聚透镜沿直径切成两半，
+切割中损失厚 $a=1.00$mm 的材料；
+两半并接成复合透镜，焦平面放波长
+$\lambda=0.60\,\mathrm{\mu m}$ 的单色狭缝，
+距复合透镜 $b=50$cm 处置屏。
+求：(a) 条纹间隔与可见极大数；
+(b) 使条纹尚清晰的狭缝最大宽度。
+\exsolution
+两半透镜的光轴有效横向错开 $a$，焦点虚源分离
+$d\simeq ab/f$ 的等效角偏差为 $a/f$，
+在屏上两出射波夹角约 $\psi=a/f$。
+因此
+\[
+\boxed{\Delta x=\frac{\lambda f}{a}
+=\frac{(0.60\times10^{-6})(0.25)}{0.001}
+=0.15\,\mathrm{mm}}.
+\]
+复合口径两束重叠宽度由图示透镜直径及几何截光确定，
+对应可见最大约
+$\boxed{13\text{个亮纹}}$。
+狭缝宽度 $\delta$ 引起相干图样横移
+$\Delta x_{\rm src}\simeq(b/f)\delta$，
+要求其不超过半个条纹间隔，故
+\[
+\boxed{\delta_{\max}=\frac{\lambda f^2}{2ab}
+\simeq37\,\mathrm{\mu m}}.
+\]
+\excheck $a$ 是切割损失的厚度，不是单缝开孔宽度；条纹数还依赖两半透镜口径所限定的重叠区。
+
+\interferenceproblem{74}{199}
+菲涅耳双棱镜狭缝距棱镜 $a=25$cm，
+棱镜到屏 $b=100$cm，
+玻璃棱角 $\theta=20'$，测得条纹间距
+$\Delta x=0.55$mm。
+取玻璃折射率 $n\simeq1.50$，求波长。
+\exsolution
+每半棱镜小角偏转为
+$\delta\simeq(n-1)\theta$，
+两虚像源相距
+$d\simeq2a(n-1)\theta$。
+到屏距离 $L\simeq a+b$，
+所以
+\[
+\Delta x=\frac{\lambda(a+b)}{2a(n-1)\theta},
+\qquad
+\boxed{\lambda=
+\frac{2a(n-1)\theta\,\Delta x}{a+b}
+\simeq0.60\,\mathrm{\mu m}}.
+\]
+\excheck 源书未在此题单独写出玻璃折射率；数值采用普通玻璃 $n\simeq1.50$ 的约定。
+
+\interferenceproblem{75}{199}
+波长 $\lambda=0.70\,\mathrm{\mu m}$ 的平面光波从双棱镜底面正入射，棱镜玻璃折射率
+$n=1.520$、顶角 $\theta=5.0^\circ$，
+棱镜与后方平板之间充满苯
+$n'=1.500$（图5.15）。求屏上条纹间隔。
+\exsolution
+由于玻璃与苯折射率非常接近，
+单边偏转小角为
+$\delta\simeq(n-n')\theta$，
+两束波的相对夹角
+$\psi\simeq2(n-n')\theta$，
+其中 $\theta$ 用弧度。
+由两平面波叠加：
+\[
+\boxed{\Delta x\simeq
+\frac{\lambda}{2(n-n')\theta}
+=\frac{0.70\times10^{-6}}
+{2(0.020)(5\pi/180)}
+\simeq0.20\,\mathrm{mm}}.
+\]
+\excheck 题设有两种接近的折射率，不能直接使用空气中的棱镜偏转 $(n-1)\theta$。
