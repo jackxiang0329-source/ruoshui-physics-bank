@@ -1,0 +1,302 @@
+% Irodov Part V §5.7, originals 258--268 (printed pp.228--229).
+% Source: user-supplied Arihant PDF, actual pp.237--238.
+% Newly worked derivations; figures 5.40 and relevant boundary conventions
+% remain attached to source, no third-party academic review is asserted.
+\thermalopticsproblem{258}{228--229}
+原图5.40给出黑体辐射累积功率份额 $y(x)$，其中
+$x=\lambda/\lambda_m$，$\lambda_m$ 为波长谱辐出度峰值波长。
+据此求：(a) $T=3700\,\mathrm K$ 时将总辐射功率平分的波长；
+(b) $T=5000\,\mathrm K$ 时落在可见光
+$0.40$--$0.76\,\mu\mathrm m$ 内的功率份额；
+(c) 温度从 $3000\,\mathrm K$ 升为 $5000\,\mathrm K$ 时
+$\lambda>0.76\,\mu\mathrm m$ 部分的辐射功率增加倍数。
+\exsolution
+对黑体波长谱使用普朗克公式
+\[
+ M_\lambda(T)=\frac{2\pi hc^2}{\lambda^5}
+ \frac1{\exp\!\left(hc/(\lambda k_{\mathrm B}T)\right)-1}.
+\]
+令 $b=2.897771955\times10^{-3}\,\mathrm{m\,K}$，
+$\lambda_m=b/T$，累积份额写作
+\[
+ Y(x)=\frac{\displaystyle\int_0^{x\lambda_m}M_\lambda(T)\,d\lambda}
+ {\sigma T^4}.
+\]
+换元 $\lambda=x\lambda_m$ 可知 $Y$ 与 $T$ 无关，
+仅依赖 $x$；可由原图近似读数，或作上述定积分。
+(a) 数值求解 $Y(x_{1/2})=1/2$ 得
+$x_{1/2}\simeq1.41738$，于是
+\[
+ \boxed{\lambda_{1/2}=\frac{bx_{1/2}}{3700}
+ \simeq1.11\,\mu\mathrm m}.
+\]
+(b) 令 $x_1=0.40T/b\simeq0.6902$、
+$x_2=0.76T/b\simeq1.3114$（此处微米与 $b$ 一致换算），
+\[
+ \boxed{f_{\mathrm{vis}}=Y(x_2)-Y(x_1)\simeq0.377}.
+\]
+(c) 记 $x_T=0.76\,\mu\mathrm m\,T/b$。
+波长超过截止值的辐出度为
+$\sigma T^4[1-Y(x_T)]$，所以
+\[
+ \boxed{\eta=\left(\frac{5000}{3000}\right)^4
+ \frac{1-Y(x_{5000})}{1-Y(x_{3000})}
+ \simeq4.86}.
+\]
+\excheck (a) 是\emph{功率平分波长}，不是谱峰波长；
+(b) 为功率比例而非可见光的波长区间比例；
+(c) 不可只用 $T^4$，还须修正所选波段份额。
+
+\thermalopticsproblem{259}{229}
+从普朗克辐射谱推导温度为 $T$ 的黑体腔内，
+在角频率间隔 $(\omega,\omega+d\omega)$
+及波长间隔 $(\lambda,\lambda+d\lambda)$ 中，
+每立方厘米的平均光子数。
+\exsolution
+每单位体积、单位角频率内的辐射能量密度为
+\[
+ u_\omega=\frac{\hbar\omega^3}{\pi^2c^3}
+ \frac1{e^{\hbar\omega/(k_{\mathrm B}T)}-1}.
+\]
+每光子能量为 $\hbar\omega$，故光子数谱密度
+$n_\omega=u_\omega/(\hbar\omega)$；
+利用 $\omega=2\pi c/\lambda$ 和
+$|d\omega/d\lambda|=2\pi c/\lambda^2$，得到
+\[
+ \boxed{dN_\omega=
+ 10^{-6}\frac{\omega^2\,d\omega}{\pi^2c^3
+ [e^{\hbar\omega/(k_{\mathrm B}T)}-1]}}
+ \quad\text{每}\;\mathrm{cm^3},
+\]
+\[
+ \boxed{dN_\lambda=
+ 10^{-6}\frac{8\pi\,d\lambda}{\lambda^4
+ [e^{hc/(\lambda k_{\mathrm B}T)}-1]}}
+ \quad\text{每}\;\mathrm{cm^3},
+\]
+其中 $\omega,\lambda$ 及区间宽度使用 SI 单位。
+\excheck 角频率谱转波长谱必须引入
+$|d\omega/d\lambda|$，而且 $1\,\mathrm{cm^3}=10^{-6}\,\mathrm{m^3}$。
+
+\thermalopticsproblem{260}{229}
+功率 $P=10\,\mathrm W$ 的各向同性点光源
+发射波长 $\lambda=589\,\mathrm{nm}$ 的单色光。
+求：(a) 距光源 $r=2.0\,\mathrm m$ 处
+平均光子流密度；(b) 光子平均数密度降为
+$n=100\,\mathrm{cm^{-3}}$ 的距离。
+\exsolution
+单个光子能量 $\varepsilon=hc/\lambda$，
+各向同性源在半径 $r$ 球面上能流密度
+$P/(4\pi r^2)$，所以
+\[
+ \boxed{j_N(r)=\frac{P\lambda}{4\pi r^2hc}}.
+\]
+代入 $r=2.0\,\mathrm m$，
+\[
+ \boxed{j_N\simeq5.90\times10^{17}\,
+ \mathrm{m^{-2}s^{-1}}}.
+\]
+自由空间内沿径向传播的光子数密度为 $n=j_N/c$。
+将 $100\,\mathrm{cm^{-3}}=10^8\,\mathrm{m^{-3}}$ 代入，
+\[
+ \boxed{r=\sqrt{\frac{P\lambda}{4\pi hc^2n}}
+ \simeq8.87\,\mathrm m}.
+\]
+\excheck 题目(b)给的是单位\emph{体积}的光子数，
+不能误用(a)的单位面积光子通量。
+
+\thermalopticsproblem{261}{229}
+从光子观点证明：平行光束单位时间传给
+完全吸收靶面的动量，仅由光束总能流率
+$\Phi_e$ 决定，与辐射光谱组成无关。
+\exsolution
+任意频率为 $\nu_i$ 的光子能量为
+$\varepsilon_i=h\nu_i$，动量模为
+$p_i=\varepsilon_i/c$。
+若单位时间入射的第 $i$ 类光子数为 $\dot N_i$，
+且所有光子均被吸收，单位时间传递的动量
+\[
+ \frac{dp}{dt}=\sum_i\dot N_i p_i
+ =\frac1c\sum_i\dot N_i\varepsilon_i.
+\]
+括号内的能量总和恰为入射功率 $\Phi_e$，因此
+\[
+ \boxed{\frac{dp}{dt}=\frac{\Phi_e}{c}}.
+\]
+\excheck 若靶面理想镜面反射且正入射，
+动量传递率改成 $2\Phi_e/c$；
+本题所给书末关系对应全吸收条件。
+
+\thermalopticsproblem{262}{229}
+激光脉冲历时 $\tau=0.13\,\mathrm{ms}$，
+能量 $E=10\,\mathrm J$，
+聚焦到直径 $d=10\,\mu\mathrm m$ 的圆形光斑，
+垂直入射表面，表面反射率 $\rho=0.50$。
+求平均光压。
+\exsolution
+对于不透光表面，单位入射能量的法向动量转移
+为 $(1+\rho)/c$（吸收部分贡献1倍，
+反射部分贡献2倍）。
+脉冲平均功率 $E/\tau$，光斑面积
+$A=\pi d^2/4$，故
+\[
+ \boxed{p=\frac{(1+\rho)E}{Ac\tau}
+ =\frac{4(1+\rho)E}{\pi d^2c\tau}}.
+\]
+数值为
+\[
+ \boxed{p\simeq4.90\times10^6\,\mathrm{Pa}
+ \simeq48\,\mathrm{atm}\approx50\,\mathrm{atm}}.
+\]
+\excheck 必须将 $0.13\,\mathrm{ms}$ 换成
+$1.3\times10^{-4}\,\mathrm s$；该值是脉冲持续期间的平均压强。
+
+\thermalopticsproblem{263}{229}
+一束能量 $E=7.5\,\mathrm J$ 的短光脉冲
+以入射角 $\theta=30^\circ$ 照射不透光反射板，
+反射率 $\rho=0.60$。用光子观点求
+传给板的总动量\emph{模}。
+\exsolution
+取 $\hat{\boldsymbol n}$ 为板的法线，
+$\hat{\boldsymbol t}$ 为切线。
+入射总光子动量大小 $E/c$。
+镜面反射部分的法向动量反号、切向不变；
+吸收部分的动量全部交给板。
+于是板所获动量分量为
+\[
+ \Delta p_n=\frac Ec(1+\rho)\cos\theta,\qquad
+ \Delta p_t=\frac Ec(1-\rho)\sin\theta.
+\]
+因此
+\[
+ \boxed{\Delta p=\frac Ec
+ \sqrt{1+\rho^2+2\rho\cos(2\theta)}
+ \simeq3.50\times10^{-8}\,\mathrm{kg\,m/s}}.
+\]
+\excheck 光子束有非零切向动量损失；
+只取法向分量无法回答“总动量模”。
+该数值也可写为 $35\,\mathrm{nN\,s}$。
+
+\thermalopticsproblem{264}{229}
+强度 $I=0.20\,\mathrm{W/cm^2}$ 的平面光波
+以入射角 $\theta=45^\circ$ 照射反射率
+$\rho=0.80$ 的不透光平面镜。
+用光子观点求单位\emph{镜面面积}所受法向光压。
+\exsolution
+$I$ 是垂直于光束方向单位面积的能流密度；
+单位镜面面积每秒入射能量为 $I\cos\theta$。
+每单位入射能量的法向动量传递为
+$(1+\rho)\cos\theta/c$，所以
+\[
+ \boxed{p=\frac Ic(1+\rho)\cos^2\theta}.
+\]
+取 $I=2000\,\mathrm{W/m^2}$ 得
+\[
+ \boxed{p\simeq6.0\times10^{-6}\,\mathrm{Pa}
+ =0.60\,\mathrm{nN/cm^2}}.
+\]
+\excheck 两个 $\cos\theta$ 分别来自
+\emph{斜入射通量投影}与\emph{法向动量投影}。
+
+\thermalopticsproblem{265}{229}
+强度 $I=0.70\,\mathrm{W/cm^2}$ 的平行光
+照射半径 $R=5.0\,\mathrm{cm}$ 的理想镜面球，
+从光子观点求球所受的合力。
+\exsolution
+令 $\theta$ 为球面法线与入射光方向的锐角。
+镜面反射造成局部法向压强
+$p(\theta)=2I\cos^2\theta/c$，
+光沿传播方向的力分量再乘 $\cos\theta$。
+照明半球面积元为
+$dA=2\pi R^2\sin\theta\,d\theta$，横向力对称抵消。
+沿入射传播方向合力
+\[
+ F=\frac{4\pi IR^2}{c}
+ \int_0^{\pi/2}\cos^3\theta\sin\theta\,d\theta
+ =\boxed{\frac{\pi R^2I}{c}}.
+\]
+代入参数，
+\[
+ \boxed{F\simeq1.83\times10^{-7}\,\mathrm N
+ =0.18\,\mu\mathrm N}.
+\]
+\excheck 球面的积分与平面镜不同；
+不能简单把球投影面积乘 $2I/c$。
+
+\thermalopticsproblem{266}{229}
+功率为 $P$ 的各向同性点光源位于
+理想镜面圆盘的轴上，
+离盘心距离 $h=\eta R$，
+其中 $R$ 为盘半径。求光源对圆盘的轴向作用力。
+\exsolution
+令盘上距中心径向距离为 $r$ 的面积元
+$dA=2\pi r\,dr$，光源到该元距离
+$s=\sqrt{h^2+r^2}$，入射角满足 $\cos\theta=h/s$。
+各向同性光强为 $P/(4\pi s^2)$；
+镜面反射的法向压力为
+$2[P/(4\pi s^2)]\cos^2\theta/c$，所以
+\[
+ F=\frac{P}{c}\int_0^R
+ \frac{h^2r}{(h^2+r^2)^2}\,dr
+ =\frac{P}{2c}\frac{R^2}{h^2+R^2}.
+\]
+由 $h=\eta R$，
+\[
+ \boxed{F=\frac{P}{2c(1+\eta^2)}}.
+\]
+\excheck 当 $R\ll h$ 时 $F\propto R^2/h^2$；
+面板半径增大时 $F$ 单调增加。
+
+\thermalopticsproblem{267}{229}
+实验室系 $K$ 中角频率 $\omega$ 的单个光子
+垂直射向以相对论速度 $V$ 迎面运动的理想反射镜。
+在忽略镜面反冲速度变化的情况下求反射期间
+镜面所获动量：(a) 镜面瞬时静止系；
+(b) 实验室系 $K$。
+\exsolution
+令 $\beta=V/c>0$，光子能量 $E=\hbar\omega$。
+对镜面静止系作多普勒变换，
+$E'=E\sqrt{(1+\beta)/(1-\beta)}$；
+在此系中光子反向而能量不变，所以
+\[
+ \boxed{\Delta p'=\frac{2E'}c
+ =\frac{2\hbar\omega}{c}
+ \sqrt{\frac{1-\beta^2}{(1-\beta)^2}}}.
+\]
+实验室系中的反射光子能量为
+$E_r=E(1+\beta)/(1-\beta)$，
+入射与出射动量方向相反，故
+\[
+ \boxed{\Delta p_K=\frac{E+E_r}{c}
+ =\frac{2\hbar\omega}{c(1-\beta)}}.
+\]
+\excheck $\beta\to0$ 时两式均趋于
+$2\hbar\omega/c$；镜面接近光子时反射光蓝移，
+实验室动量转移相应增加。
+
+\thermalopticsproblem{268}{229}
+质量 $m=10\,\mathrm{mg}$ 的小理想平面镜，
+用长 $\ell=10\,\mathrm{cm}$ 的无质量细线悬挂。
+水平垂直向镜面发射能量为 $E=13\,\mathrm J$
+的短激光脉冲，求镜面偏转最大角
+$\theta$，并说明镜子的动能来自何处。
+\exsolution
+入射与反射光子的总法向动量差（小反冲近似）
+为 $p=2E/c$。
+镜子的初动能
+$K=p^2/(2m)=2E^2/(mc^2)$，
+在摆动最高点转化为重力势能
+$mg\ell(1-\cos\theta)$。
+所以
+\[
+ 2mg\ell\sin^2\frac\theta2
+ =\frac{2E^2}{mc^2},\qquad
+ \boxed{\sin\frac\theta2=\frac{E}{mc\sqrt{g\ell}}}.
+\]
+代入得
+\[
+ \boxed{\theta\simeq0.50^\circ}.
+\]
+\excheck 反射光因镜面反冲而发生极微小的红移，
+所失光能变成镜子的动能；
+不能以“理想反射”误认为无能量转移。
