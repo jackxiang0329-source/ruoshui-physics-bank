@@ -132,10 +132,14 @@ def main() -> int:
     if fatal:
         print(f"FAIL: {len(fatal)} per-problem integrity errors", file=sys.stderr)
         return 1
+    if notices:
+        print(f"FAIL: {len(notices)} TeX mathematical/environment delimiter anomalies",
+              file=sys.stderr)
+        return 1
     print(f"PASS: {problem_count} independently segmented problems in {chapter_count} chapters;"
           " each has statement, derivation, ordered QA and no duplicate problem input.")
-    print(f"Manual TeX delimiter review notices: {len(notices)};"
-          " XeLaTeX is authoritative for syntax; neither test proves physics correctness.")
+    print("PASS: no unmatched TeX math delimiters or named environments in any chapter;"
+          " XeLaTeX and independent physics peer review remain separate acceptance stages.")
     return 0
 
 
