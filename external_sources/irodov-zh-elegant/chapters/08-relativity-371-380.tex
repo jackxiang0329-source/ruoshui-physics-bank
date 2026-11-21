@@ -102,11 +102,28 @@ v=c\sqrt{2q}
 =\frac43(0.010)
 \simeq0.013}.
 \]
-\excheck 这是小 $q$ 的\emph{一阶误差界}，
-并非忽略高阶项后的严格解析不等式。
-如需严密阈值，应将
-$v_{\rm N}/v-1<\varepsilon$
-直接代入精确公式求解。
+为避免将一阶估计误当成严格上界，
+也可求\emph{精确}允许范围。利用
+\[
+\frac{v_{\rm N}}{v}
+=\sqrt{\frac{2q}{1-(1+q)^{-2}}}
+=(1+q)\sqrt{\frac{2}{2+q}},
+\]
+严格条件是
+\[
+\boxed{\frac{2(1+q)^2}{2+q}<(1+\varepsilon)^2}.
+\]
+取$\varepsilon=0.010$，该不等式对应
+\[
+\boxed{0<q<q_* \simeq0.0133704},\qquad
+q_*=\frac{(\varepsilon-1)(\varepsilon+3)
+ +(1+\varepsilon)\sqrt{\varepsilon^2+2\varepsilon+9}}4.
+\]
+\excheck 原书所用$q\lesssim 0.013$是
+低能小参数的一阶近似；实际严格阈值为
+$q_*\simeq0.0133704$。
+须声明所用相对误差分母是\emph{真实相对论速度}，
+若改用牛顿速度作分母，阈值会不同。
 
 \exproblem{375}{60}
 推导静质量为 $m_0$ 的粒子的
