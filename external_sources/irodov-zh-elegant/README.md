@@ -5,14 +5,16 @@
 
 ## 真实进度（2026-11-21）
 
-- **本轮新增：第 241—300 题，共 60 题。**
-- **累计：第 1—300 题，中文题面 + 逐题详细解析 + 核验提示。**
+- **本轮新增：第 301—360 题，共 60 题。**
+- **累计：第 1—360 题，中文题面 + 逐题详细解析 + 核验提示。**
 - 第 1.1 节“运动学”1—58 题已覆盖（全部）。
 - 第 1.2 节“动力学基本方程”59—117 题已覆盖（全部）。
 - 第 1.3 节“能量、动量与角动量守恒”118—199 题已覆盖（全部）。
 - 第 1.4 节“万有引力”200—233 题已覆盖（全部）。
-- - 第 1.5 节“刚体动力学”234—289 题已覆盖（全部）。
-- 第 1.6 节“固体弹性形变”290—300 题已覆盖（本节尚未结束）。
+- 第 1.5 节“刚体动力学”234—289 题已覆盖（全部）。
+- 第 1.6 节“固体弹性形变”290—314 题已覆盖（全部）。
+- 第 1.7 节“流体动力学”315—339 题已覆盖（全部）。
+- 第 1.8 节“相对论力学”340—360 题已覆盖（本节尚未结束）。
 - 本项目尚未完成整书翻译或独立学术二校；任何“编译成功”仅说明技术排版通过。
 
 | 内容 | 文件 |
@@ -49,6 +51,13 @@
 | 281—289题 | [05-rigid-body-281-289.tex](chapters/05-rigid-body-281-289.tex) |
 | 290题 | [06-elasticity-290-290.tex](chapters/06-elasticity-290-290.tex) |
 | 291—300题 | [06-elasticity-291-300.tex](chapters/06-elasticity-291-300.tex) |
+| 301—310题 | [06-elasticity-301-310.tex](chapters/06-elasticity-301-310.tex) |
+| 311—314题 | [06-elasticity-311-314.tex](chapters/06-elasticity-311-314.tex) |
+| 315—324题 | [07-hydrodynamics-315-324.tex](chapters/07-hydrodynamics-315-324.tex) |
+| 325—334题 | [07-hydrodynamics-325-334.tex](chapters/07-hydrodynamics-325-334.tex) |
+| 335—339题 | [07-hydrodynamics-335-339.tex](chapters/07-hydrodynamics-335-339.tex) |
+| 340—350题 | [08-relativity-340-350.tex](chapters/08-relativity-340-350.tex) |
+| 351—360题 | [08-relativity-351-360.tex](chapters/08-relativity-351-360.tex) |
 | 源书勘误 | [errata.md](errata.md) |
 | 技术与学术质检记录 | [quality-check.md](quality-check.md) |
 | 结构完整性检查 | [check_sources.py](check_sources.py) |
@@ -71,4 +80,4 @@ GitHub Actions 工作流 .github/workflows/irodov-elegantbook.yml
 
 本目录放在 external_sources/，不得将翻译题目混入
 大学物理原创高难度题库 bank/ 的题数和质量门禁，也不修改它们的权威源文件。
-后续继续从原书第 301 题起逐题补充，保持题号及印刷页对应。
+后续继续从原书第 361 题起逐题补充，保持题号及印刷页对应。
