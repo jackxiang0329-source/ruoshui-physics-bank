@@ -40,6 +40,13 @@ CHAPTERS = [
     "05-rigid-body-281-289.tex",
     "06-elasticity-290-290.tex",
     "06-elasticity-291-300.tex",
+    "06-elasticity-301-310.tex",
+    "06-elasticity-311-314.tex",
+    "07-hydrodynamics-315-324.tex",
+    "07-hydrodynamics-325-334.tex",
+    "07-hydrodynamics-335-339.tex",
+    "08-relativity-340-350.tex",
+    "08-relativity-351-360.tex",
 ]
 EXPECTED_RANGES = [
     range(1, 21), range(21, 31), range(31, 41),
@@ -53,7 +60,9 @@ EXPECTED_RANGES = [
     range(234, 241),
     range(241, 251), range(251, 261), range(261, 271),
     range(271, 281), range(281, 290), range(290, 291),
-    range(291, 301),
+    range(291, 301), range(301, 311), range(311, 315),
+    range(315, 325), range(325, 335), range(335, 340),
+    range(340, 351), range(351, 361),
 ]
 
 errors = []
@@ -81,8 +90,8 @@ for name, expected in zip(CHAPTERS, EXPECTED_RANGES):
     if entry not in main:
         errors.append(f"main.tex does not include: {name}")
 
-if all_ids != list(range(1, 301)):
-    errors.append("combined problem IDs are not exactly 1..300 in order")
+if all_ids != list(range(1, 361)):
+    errors.append("combined problem IDs are not exactly 1..360 in order")
 if main.count(r"\section{运动学") != 1:
     errors.append("kinematics section count is not one")
 if main.count(r"\section{动力学基本方程") != 1:
@@ -95,9 +104,13 @@ if main.count(r"\section{刚体动力学") != 1:
     errors.append("rigid body section count is not one")
 if main.count(r"\section{固体弹性形变") != 1:
     errors.append("elasticity section count is not one")
+if main.count(r"\section{流体动力学") != 1:
+    errors.append("hydrodynamics section count is not one")
+if main.count(r"\section{相对论力学") != 1:
+    errors.append("relativity section count is not one")
 
 if errors:
     for e in errors:
         print("FAIL:", e, file=sys.stderr)
     sys.exit(1)
-print("PASS: 300 consecutive translated problem sources, solutions, checks, and included chapters")
+print("PASS: 360 consecutive translated problem sources, solutions, checks, and included chapters")
