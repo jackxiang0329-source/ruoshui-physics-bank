@@ -36,6 +36,8 @@ jobs:
         run: python3 external_sources/irodov-zh-elegant/particles_conservation_regression.py
       - name: Independently recheck Part I kinematics and rigid-body motion
         run: python3 external_sources/irodov-zh-elegant/mechanics_kinematics_regression.py
+      - name: Independently recheck Part I Newtonian dynamics and constraints
+        run: python3 external_sources/irodov-zh-elegant/mechanics_dynamics_regression.py
       - uses: xu-cheng/latex-action@v4
         with:
           working_directory: external_sources/irodov-zh-elegant
