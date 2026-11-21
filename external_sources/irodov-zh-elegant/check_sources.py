@@ -47,6 +47,9 @@ CHAPTERS = [
     "07-hydrodynamics-335-339.tex",
     "08-relativity-340-350.tex",
     "08-relativity-351-360.tex",
+    "08-relativity-361-370.tex",
+    "08-relativity-371-380.tex",
+    "08-relativity-381-388.tex",
 ]
 EXPECTED_RANGES = [
     range(1, 21), range(21, 31), range(31, 41),
@@ -63,7 +66,17 @@ EXPECTED_RANGES = [
     range(291, 301), range(301, 311), range(311, 315),
     range(315, 325), range(325, 335), range(335, 340),
     range(340, 351), range(351, 361),
+    range(361, 371), range(371, 381), range(381, 389),
 ]
+
+
+# The book restarts numbering in Part II. Keep separate independent gates.
+THERMO_CHAPTERS = [
+    "09-thermo-state-001-011.tex",
+    "09-thermo-state-012-020.tex",
+    "09-thermo-state-021-025.tex",
+]
+THERMO_EXPECTED = [range(1, 12), range(12, 21), range(21, 26)]
 
 errors = []
 main = (ROOT / "main.tex").read_text(encoding="utf-8")
@@ -90,8 +103,8 @@ for name, expected in zip(CHAPTERS, EXPECTED_RANGES):
     if entry not in main:
         errors.append(f"main.tex does not include: {name}")
 
-if all_ids != list(range(1, 361)):
-    errors.append("combined problem IDs are not exactly 1..360 in order")
+if all_ids != list(range(1, 389)):
+    errors.append("combined problem IDs are not exactly 1..388 in order")
 if main.count(r"\section{运动学") != 1:
     errors.append("kinematics section count is not one")
 if main.count(r"\section{动力学基本方程") != 1:
@@ -109,8 +122,43 @@ if main.count(r"\section{流体动力学") != 1:
 if main.count(r"\section{相对论力学") != 1:
     errors.append("relativity section count is not one")
 
+
+# Thermodynamics uses ORIGINAL numbering 1,2,... instead of fake 389+.
+thermo_ids = []
+for name, expected in zip(THERMO_CHAPTERS, THERMO_EXPECTED):
+    path = ROOT / "chapters" / name
+    if not path.exists():
+        errors.append(f"missing: {name}")
+        continue
+    s = path.read_text(encoding="utf-8")
+    ids = [int(x) for x in re.findall(r"\\thermoproblem\{(\d+)\}\{", s)]
+    want = list(expected)
+    thermo_ids.extend(ids)
+    if ids != want:
+        errors.append(f"{name}: thermodynamics IDs {ids} != {want}")
+    solutions = len(re.findall(r"\\exsolution\b", s))
+    checks = len(re.findall(r"\\excheck\b", s))
+    if solutions != len(want):
+        errors.append(f"{name}: {solutions} solutions, expected {len(want)}")
+    if checks != len(want):
+        errors.append(f"{name}: {checks} checks, expected {len(want)}")
+    if s.count("{") != s.count("}"):
+        errors.append(f"{name}: unbalanced TeX braces")
+    entry = r"\input{chapters/" + path.stem + "}"
+    if entry not in main:
+        errors.append(f"main.tex does not include: {name}")
+
+if thermo_ids != list(range(1, 26)):
+    errors.append("Part II section 2.1 original IDs are not exactly 1..25")
+if main.count(r"\chapter{热力学与分子物理}") != 1:
+    errors.append("Part II chapter count is not one")
+if main.count(r"\section{气体状态方程与过程") != 1:
+    errors.append("thermodynamics section count is not one")
+if r"\newcommand{\thermoproblem}" not in main:
+    errors.append("main.tex missing original-numbering thermoproblem macro")
+
 if errors:
     for e in errors:
         print("FAIL:", e, file=sys.stderr)
     sys.exit(1)
-print("PASS: 360 consecutive translated problem sources, solutions, checks, and included chapters")
+print("PASS: 388 Part-I problems + 25 separately numbered Part-II problems = 413 translated solved problems; all chapters included")
