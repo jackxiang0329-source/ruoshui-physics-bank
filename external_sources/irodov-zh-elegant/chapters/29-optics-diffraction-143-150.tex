@@ -1,0 +1,198 @@
+% Irodov Part V §5.3 originals 143--150; printed pp.211--212.
+% Original book answers pp.331--332.
+\diffractionproblem{143}{211}
+光谱仪的三棱镜在最小偏折状态，底边宽度为 $b$（图5.28），
+材料折射率 $n=n(\lambda)$。
+利用夫琅禾费衍射与瑞利分辨准则证明极限分辨本领
+$\lambda/\delta\lambda=b|\mathrm dn/\mathrm d\lambda|$。
+\exsolution
+考虑来自棱镜左右极端的两条光线，
+它们的光程差在最小偏折方向满足同一波前条件。
+波长改变 $\delta\lambda$ 引起折射率改变量
+$\delta n=(\mathrm dn/\mathrm d\lambda)\delta\lambda$，
+于是两极端出射波新增相位对应光程差
+$\delta\Delta=b\,\delta n$。
+根据瑞利准则，当一条谱线的中心极大与另一谱线的第一个衍射极小重合时，
+两极端新增的光程差约等于一个波长：
+$|b\,\delta n|=\lambda$。
+因此
+\[
+b\left|\frac{\mathrm dn}{\mathrm d\lambda}\right|
+\delta\lambda\simeq\lambda,
+\qquad
+\boxed{\frac{\lambda}{\delta\lambda}
+=b\left|\frac{\mathrm dn}{\mathrm d\lambda}\right|}.
+\]
+\excheck 这是假设棱镜的分辨受其底边有效光束口径限制的\emph{衍射极限}；与仅给角散度的公式不同。
+
+\diffractionproblem{144}{211}
+光谱仪的三棱镜玻璃色散满足
+$n=A+B/\lambda^2$，其中
+$B=0.010\,\mathrm{\mu m^2}$。
+(a) 求极限分辨本领随波长的关系；棱镜底边
+$b=5.0$cm 时在
+$\lambda_1=434$nm、
+$\lambda_2=656$nm 处的数值；
+(b) 分辨钠黄双线
+$589.0,589.6$nm 所需的底边宽度。
+\exsolution
+对色散关系求导
+$\mathrm dn/\mathrm d\lambda=-2B/\lambda^3$。
+由第143题
+\[
+\boxed{\mathcal R=\frac{\lambda}{\delta\lambda}
+=\frac{2bB}{\lambda^3}},
+\]
+说明 $\mathcal R\propto\lambda^{-3}$。
+单位一致地取 $b=50000\,\mathrm{\mu m}$：
+\[
+\boxed{\mathcal R(0.434\,\mathrm{\mu m})
+\simeq1.2\times10^4},\quad
+\boxed{\mathcal R(0.656\,\mathrm{\mu m})
+\simeq0.35\times10^4}.
+\]
+(b) 分辨条件
+$2bB/\lambda^3\ge\lambda/\delta\lambda$，
+所以
+\[
+\boxed{b_{\min}=
+\frac{\lambda^4}{2B\delta\lambda}}.
+\]
+取 $\lambda\simeq0.589\,\mathrm{\mu m}$、
+$\delta\lambda=0.0006\,\mathrm{\mu m}$，
+$\boxed{b_{\min}\simeq1.0\,\mathrm{cm}}$。
+\excheck $B$ 的单位为 $\mathrm{\mu m^2}$；
+若把 $b$ 的厘米数直接当微米使用，会使分辨本领差四个数量级。
+
+\diffractionproblem{145}{211}
+若棱镜在目标波长附近
+$|\mathrm dn/\mathrm d\lambda|
+=0.10\,\mathrm{\mu m^{-1}}$，
+求棱镜底边宽度，
+使它具有一片刻线数
+$N=10000$ 的光栅在二级谱中的相同分辨本领。
+\exsolution
+二级光栅分辨本领
+$\mathcal R_{\rm gr}=mN=2(10000)=20000$。
+棱镜衍射极限分辨本领
+$\mathcal R_{\rm prism}=b|\mathrm dn/\mathrm d\lambda|$。
+令二者相同：
+\[
+\boxed{b=
+\frac{mN}{|\mathrm dn/\mathrm d\lambda|}
+=\frac{20000}{0.10}\,\mathrm{\mu m}
+=0.20\,\mathrm m=20\,\mathrm{cm}}.
+\]
+\excheck 这里采用棱镜\emph{底边}长度而非光路宽的任意投影，光栅亦以实际被照亮的刻线数计算。
+
+\diffractionproblem{146}{211}
+物镜直径 $D=5.0$cm 的望远镜，取
+$\lambda=0.55\,\mathrm{\mu m}$。
+求物镜的角分辨本领以及距望远镜
+$\ell=3.0$km 的两物点的最小可分辨间距。
+\exsolution
+圆孔艾里斑瑞利判据
+$\delta\psi_{\min}=1.22\lambda/D$，
+角分辨本领
+\[
+\boxed{\mathcal R_\psi=
+\frac1{\delta\psi_{\min}}
+=\frac D{1.22\lambda}
+\simeq7.4\times10^4}.
+\]
+远处两点最小间距
+$\Delta y\simeq\ell\delta\psi_{\min}$，
+所以
+\[
+\boxed{\Delta y_{\min}
+\simeq\ell\frac{1.22\lambda}{D}
+=\frac{3000(1.22)(0.55\times10^{-6})}{0.050}
+\simeq4.0\,\mathrm{cm}}.
+\]
+\excheck 这里的“分辨本领”按\emph{最小角度的倒数}定义，而不是线性放大率。
+
+\diffractionproblem{147}{211}
+口径 $D=5$m 的反射望远镜在
+$\lambda=0.55\,\mathrm{\mu m}$ 处工作。
+求在月面上能分辨的两个点之间的最小距离。
+\exsolution
+由瑞利判据最小角距
+$\delta\psi=1.22\lambda/D$。
+取平均地月距离
+$L_{\rm Moon}\simeq3.84\times10^8$m，
+则
+\[
+\boxed{\Delta y_{\min}=
+L_{\rm Moon}\delta\psi
+=\frac{(3.84\times10^8)(1.22)(0.55\times10^{-6})}{5}
+\simeq5.2\times10^1\,\mathrm m
+\approx50\,\mathrm m}.
+\]
+\excheck 此为理想衍射极限；地面大气视宁度通常会劣化实际角分辨率，不能直接当成现实观测保证。
+
+\diffractionproblem{148}{211}
+望远镜物镜口径
+$D=5.0$cm，观察者瞳孔直径
+$d_0=4.0$mm。
+求完全利用物镜理论分辨本领所需的最小角放大率。
+\exsolution
+物镜的瑞利最小角距
+$\delta\psi=1.22\lambda/D$，
+人眼瞳孔对同波长的理想衍射分辨极限
+$\delta\psi_{\rm eye}=1.22\lambda/d_0$。
+望远镜使角距放大 $\Gamma$，
+使
+$\Gamma\delta\psi\ge\delta\psi_{\rm eye}$。
+因此
+\[
+\boxed{\Gamma_{\min}=
+\frac{\delta\psi_{\rm eye}}{\delta\psi}
+=\frac D{d_0}
+=\frac{50\,\mathrm{mm}}{4.0\,\mathrm{mm}}
+=12.5\approx13}.
+\]
+\excheck 这里的最小放大率是衍射分辨利用条件，
+不是在所有目标亮度下的最佳视觉放大率。
+
+\diffractionproblem{149}{212}
+显微镜物镜的数值孔径
+$\mathrm{NA}=\sin\alpha=0.24$，
+用波长
+$\lambda=0.55\,\mathrm{\mu m}$ 的光照亮物体。
+求该显微镜能分辨的两物点最小间距。
+\exsolution
+圆孔物镜在物方的瑞利横向分辨极限
+\[
+\boxed{d_{\min}=
+\frac{0.61\lambda}{\mathrm{NA}}
+=\frac{0.61(0.55\,\mathrm{\mu m})}{0.24}
+\simeq1.4\,\mathrm{\mu m}}.
+\]
+\excheck 原题给的数值孔径已是 $\sin\alpha$，
+不可再对0.24取一次正弦；
+这里默认物体位于空气中，折射率为1。
+
+\diffractionproblem{150}{212}
+显微镜物镜数值孔径为
+$\sin\alpha=0.24$，观察者瞳孔
+$d_0=4.0$mm。
+求使物镜衍射分辨本领被眼睛完全利用的最小放大率。
+\exsolution
+显微镜物方线分辨极限
+$d_{\min}=0.61\lambda/\sin\alpha$。
+若将它放在标准明视距离
+$\ell_0=25$cm 观看，
+该间距所张裸眼角为
+$d_{\min}/\ell_0$。
+眼瞳衍射角极限约
+$1.22\lambda/d_0$。
+需放大
+$\Gamma_{\min}d_{\min}/\ell_0
+=1.22\lambda/d_0$，故
+\[
+\boxed{\Gamma_{\min}=
+\frac{2\ell_0\sin\alpha}{d_0}
+=\frac{2(0.25)(0.24)}{0.004}
+=30}.
+\]
+\excheck 公式中波长消掉，这只是将物镜极限角尺度匹配到眼瞳的衍射极限；视网膜和视觉神经等实际因素未纳入。
