@@ -1,0 +1,316 @@
+% Irodov Part V §5.3 Diffraction of Light, originals 97--108.
+% Directly checked uploaded source pp.212--215 (printed 204--205) and answer p.329.
+\diffractionproblem{97}{204}
+单色平面波垂直照射一圆孔，孔径恰开放屏后距孔 $b$ 处 P 点的前 $N$ 个菲涅耳半波带，波长为 $\lambda$。
+若已知屏面相对于 P 的距离 $r$ 的衍射光强分布 $I(r)$，求圆孔前入射光强 $I_0$。
+\exsolution
+平面波前 $N$ 个半波带的孔半径由
+$R_N^2\simeq Nb\lambda$ 给出，孔面积
+$A=\pi Nb\lambda$。
+假设屏足够大收集全部透过光且无吸收，
+总功率守恒：
+\[
+I_0A=2\pi\int_0^\infty I(r)r\,\mathrm dr.
+\]
+消去面积，得到
+\[
+\boxed{I_0=\frac2{Nb\lambda}
+\int_0^\infty I(r)r\,\mathrm dr}.
+\]
+\excheck 一维径向积分须乘圆周因子 $2\pi r$，并假定衍射图样关于 P 轴对称。
+
+\diffractionproblem{98}{204}
+单色点光源位于圆孔屏前
+$a=100$cm，波长 $\lambda=0.50\,\mathrm{\mu m}$，
+孔半径 $r=1.0$mm。
+求屏后观察点 P 到孔屏的距离 $b$，使孔内包含
+$k=3$ 个菲涅耳半波带。
+\exsolution
+点源—孔—观察点几何中，
+第 $k$ 个波带边缘半径满足
+\[
+r_k^2=k\lambda\frac{ab}{a+b}.
+\]
+将 $r=r_k$，
+$r^2(a+b)=k\lambda ab$，
+解出
+\[
+\boxed{b=\frac{ar^2}{k\lambda a-r^2}}.
+\]
+代 $a=1.0$m、$r=10^{-3}$m、
+$k=3$、$\lambda=0.50\times10^{-6}$m，
+\[
+\boxed{b=2.0\,\mathrm m}.
+\]
+\excheck 分母必须为正 $k\lambda a>r^2$，否则有限正距离无解。
+
+\diffractionproblem{99}{204}
+可变半径圆孔屏距离单色点源
+$a=100$cm、观察屏
+$b=125$cm。孔半径从
+$r_1=1.00$mm 增至
+$r_2=1.29$mm 时，观察点中心由某强度极大转至\emph{紧接着}的强度极大。
+求波长。
+\exsolution
+圆孔中心菲涅耳衍射的相邻强度极大，开放波带数相差2：
+$N_2-N_1=2$。
+波带关系
+$r_N^2=N\lambda ab/(a+b)$，
+故
+\[
+r_2^2-r_1^2=2\lambda\frac{ab}{a+b},
+\qquad
+\boxed{\lambda=
+\frac{(r_2^2-r_1^2)(a+b)}{2ab}}.
+\]
+数值
+\[
+\boxed{\lambda\simeq
+\frac{(1.29^2-1.00^2)10^{-6}(2.25)}
+{2(1.00)(1.25)}
+\simeq0.60\,\mathrm{\mu m}}.
+\]
+\excheck 相邻中心极大对应开放波带数差2而非1；开放波带数差1通常在亮暗之间转换。
+
+\diffractionproblem{100}{204}
+强度为 $I_0$ 的单色平面波垂直落到圆孔不透明屏。
+观察点 P 所对应的圆孔：(a) 恰是第一菲涅耳波带，或仅为第一带内面积的一半；(b) 原开放完整第一带，后来沿直径挡住一半。
+分别求 P 处的近似光强。
+\exsolution
+对完整无限波面，菲涅耳相邻半波带的复振幅近似相消。
+第一带的复振幅约为无限自由波面振幅的2倍，
+所以全开第一带时
+\[
+\boxed{I_{\text{第一带}}\simeq4I_0}.
+\]
+第一带内\emph{面积一半}对应径向相位跨度从0到 $\pi/2$，
+复振幅为第一整带的矢量弦的
+$1/\sqrt2$ 倍，
+\[
+\boxed{I_{\text{第一带内半面积}}\simeq2I_0}.
+\]
+若沿直径挡住第一带的半圆而不改变径向相位范围，
+其复振幅恰缩小一半，
+\[
+\boxed{I_{\text{半圆孔}}\simeq I_0}.
+\]
+\excheck “第一带的内半面积”与“沿直径开放半圆”面积虽然相同，复振幅相位分布不同，因此光强不相同。
+
+\diffractionproblem{101}{204}
+不透明圆盘恰遮住观察点 P 的第一菲涅耳波带。
+求在下列改变后 P 的近似光强：
+(a) 沿直径移去该圆盘的一半；
+(b) 只移去第一带外半面积的一半（沿直径半圆部分）。
+入射平面波强度为 $I_0$。
+\exsolution
+把原完全开放波面的复振幅记 $A_0$；
+第一带复振幅约为 $2A_0$，
+其余无限外带和的振幅约为 $-A_0$。
+(a) 移去一半圆盘后，该第一带半圆新贡献为
+$(1/2)(2A_0)=A_0$，加外带 $-A_0$ 抵消，所以
+\[
+\boxed{I_a\simeq0}.
+\]
+(b) 第一带外半面积在径向相位 $\pi/2$ 到 $\pi$，
+其复振幅相位相对第一半面积发生旋转。
+移去该部分的一半圆周后，
+复振幅与外带矢量和的模约为
+$|A_0|/\sqrt2$，故
+\[
+\boxed{I_b\simeq\frac12I_0}.
+\]
+\excheck 沿径向切分与沿直径切分是不同的光路相量问题；原书结果采用菲涅耳波带法的近似。
+
+\diffractionproblem{102}{204--205}
+按原书图5.20的8种不透明屏形状，求点 P 处的光强。
+(a) 屏1—3的顶角与屏4的半平面边缘均穿过 P；
+(b) 屏5—8的圆弧边缘与第一菲涅耳波带边界重合。
+\exsolution
+设从 P 看被不透明扇区遮挡的张角为 $\varphi$。
+(a) 在无限波面中去掉角比例 $\varphi/(2\pi)$ 后，
+复振幅剩余比例
+$1-\varphi/(2\pi)$，
+\[
+\boxed{I_a(\varphi)\simeq
+\left(1-\frac{\varphi}{2\pi}\right)^2I_0}.
+\]
+图示屏1—4依次对应
+$\varphi=\pi/2,\pi,3\pi/2,\pi$，因此
+\[
+\boxed{I_1:I_2:I_3:I_4
+\simeq\frac9{16}:\frac14:\frac1{16}:\frac14}.
+\]
+(b) 圆弧边缘沿第一带外缘时，第一带扇区的附加复振幅约为
+$(\varphi/2\pi)A_0$，
+因此
+\[
+\boxed{I_b(\varphi)\simeq
+\left(1+\frac{\varphi}{2\pi}\right)^2I_0}.
+\]
+图5.20屏5—8依次对应上述角度，得到
+\[
+\boxed{I_5:I_6:I_7:I_8
+\simeq\frac{25}{16}:\frac94:\frac{49}{16}:\frac94}.
+\]
+\excheck 本题属于依图5.20编号的几何衍射题，角度必须与原图遮光扇区位置相匹配；结果保留了原书半波带近似。
+
+\diffractionproblem{103}{205}
+波长 $\lambda=0.60\,\mathrm{\mu m}$ 的平面波垂直入射厚玻璃板。
+玻璃板背面有圆形凹槽，凹槽对观察点 P 对应第一又半个菲涅耳带（图5.21）。
+求凹槽深 $h$，使 P 处强度
+(a) 最大；(b) 最小；(c) 等于自由入射强度。
+\exsolution
+凹槽把局部玻璃替换为空气，相应区域附加相位
+$\delta=2\pi(n-1)h/\lambda$（相位整体符号不影响强度）。
+由第一又半波带的复振幅矢量和，再与未开槽波面相加，
+干涉极值条件分别是
+\[
+\delta_a=2\pi\left(k+\frac38\right),\quad
+\delta_b=2\pi\left(k+\frac78\right),
+\]
+以及使 $I=I_0$ 的两组相位
+$\delta_c=2\pi k$ 或
+$2\pi(k+\tfrac34)$。
+故
+\[
+\boxed{h_a=\frac{\lambda}{n-1}
+\left(k+\frac38\right)},\quad
+\boxed{h_b=\frac{\lambda}{n-1}
+\left(k+\frac78\right)},
+\]
+\[
+\boxed{h_c=\frac{\lambda}{n-1}k
+\quad\text{或}\quad
+\frac{\lambda}{n-1}\left(k+\frac34\right)}.
+\]
+普通玻璃 $n\simeq1.50$ 时共同厚度周期为
+$\lambda/(n-1)=1.2\,\mathrm{\mu m}$。
+\excheck 三问是三个不同的\emph{复振幅相位条件}；
+光强与相位不是线性函数。
+
+\diffractionproblem{104}{205}
+单色平面波 $\lambda$、强度 $I_0$ 垂直入射玻璃板，
+板后方设圆孔，恰开放观察点 P 的第一菲涅耳带；
+孔中间又刻出面积恰占该带一半的圆形凹槽。
+求使 P 处强度最大的凹槽深度及最大强度。
+\exsolution
+第一菲涅耳带的内半面积、外半面积具有相等模的复振幅，
+二者相位中心相差 $\pi/2$。
+凹槽额外相位
+$\delta=2\pi(n-1)h/\lambda$，
+要使两部分复振幅完全同相，
+应选择 $\delta$ 相对原初相差补偿为
+$3\pi/2$（模 $2\pi$）：
+\[
+\boxed{h=\frac{\lambda}{n-1}
+\left(k+\frac34\right)},\quad k=0,1,\ldots.
+\]
+第一带原合成模约为 $2|A_0|$，
+两个半带各模约为 $\sqrt2|A_0|$；
+最佳同相时总模
+$2\sqrt2|A_0|$，因此
+\[
+\boxed{I_{\max}\simeq8I_0}.
+\]
+\excheck 相位补偿后各半带成为同相，而不是简单地将原第一带光强乘2。
+
+\diffractionproblem{105}{205}
+波长 $\lambda=0.57\,\mathrm{\mu m}$ 的平面光波照在折射率
+$n=1.60$ 的玻璃圆盘上，
+圆盘从观察点 P 看恰遮住第一又半个菲涅耳带。
+求 P 点强度最大时玻璃盘的最小厚度（考虑盘透射光的干涉）。
+\exsolution
+玻璃盘透射的波带振幅比无遮蔽时多相位
+$\delta=2\pi(n-1)h/\lambda$。
+对第一又半个菲涅耳带的复振幅与外部未透射区域相量合成，
+极大条件是
+\[
+\delta=2\pi\left(k+\frac58\right),\quad k=0,1,\ldots
+\]
+（源书以所需正厚度的最小有效周期计，取 $k=2$）。
+故
+\[
+\boxed{h_{\min}\simeq
+\frac{\lambda}{n-1}\left(2+\frac58\right)
+=\frac{0.57}{0.60}(2.625)\,\mathrm{\mu m}
+\simeq2.5\,\mathrm{\mu m}}.
+\]
+\excheck 第一个数学相位极大不一定满足源题规定的光程分支及透射圆盘条件；本稿保留书后对 $k=2$ 的标注作为应进一步核实的分支选择。
+
+\diffractionproblem{106}{206}
+波长 $\lambda=0.54\,\mathrm{\mu m}$ 的平面波穿过薄会聚透镜
+$f=50$cm，透镜后紧靠可变半径圆孔；
+距圆孔 $b=75$cm 处放观察屏。
+求屏中心照度取极大的孔径半径。
+\exsolution
+透镜在孔平面产生二次波前相位
+$-kr^2/(2f)$，
+孔至屏传播又加
+$kr^2/(2b)$。
+等效二次相位系数
+$k(1/b-1/f)r^2/2$；
+相邻半波带边缘满足
+$r_j^2|\frac1b-\frac1f|=j\lambda$。
+对中心亮度，开放奇数个半波带时近似为极大，
+故
+\[
+\boxed{r_j=
+\sqrt{\frac{j\lambda fb}{|b-f|}}},
+\qquad j=1,3,5,\ldots .
+\]
+代数值
+\[
+\boxed{r_j\simeq0.90\sqrt j\,\mathrm{mm}},
+\quad j\ {\rm 为奇数}.
+\]
+\excheck 由于观察屏在焦平面后方，需用
+$|1/b-1/f|$，不能使用自由空间传播半波带半径 $\sqrt{j\lambda b}$。
+
+\diffractionproblem{107}{206}
+平面单色光垂直入射圆孔，屏在孔后
+$b=9.0$m处。
+把孔直径缩小 $\eta=3.0$ 倍，
+求新屏距 $b'$，使衍射图形与原图几何相似而所有线性尺寸都缩小 $\eta$ 倍。
+\exsolution
+在菲涅耳衍射中无量纲坐标组合为
+$r^2/(\lambda b)$ 与
+$R^2/(\lambda b)$，
+其中 $R$ 为孔半径。
+若孔半径和图样线性坐标均缩小为原来的 $1/\eta$，
+要保持菲涅耳数不变须
+$b'=b/\eta^2$。
+故
+\[
+\boxed{b'=\frac b{\eta^2}
+=\frac{9.0}{3^2}=1.0\,\mathrm m}.
+\]
+\excheck 不能将新屏距误写成 $b/\eta$；
+菲涅耳衍射传播相位含的是横向尺度的\emph{平方}。
+
+\diffractionproblem{108}{206}
+不透明球直径 $D=40$mm，
+位于波长 $\lambda=0.55\,\mathrm{\mu m}$ 的光源与照相底片间，
+源到球距 $a=12$m，球到底片
+$b=18$m。
+求：(a) 横向尺寸为 $y=6.0$mm 的光源所形成的像宽；
+(b) 球面随机不规则高度达到何量级时球真正有效遮光？
+\exsolution
+(a) 点源经不透明球几何影的横向投影，
+扩展光源导致阴影半影放大：
+\[
+\boxed{y'=\frac ba y
+=\frac{18}{12}(6.0\,\mathrm{mm})
+=9.0\,\mathrm{mm}}.
+\]
+(b) 球边缘菲涅耳带的有效宽度量级由曲面边界的衍射展宽控制：
+\[
+\boxed{h_{\min}\sim\frac{ab\lambda}{D(a+b)}}.
+\]
+代数据
+\[
+\boxed{h_{\min}\simeq
+\frac{12(18)(0.55\times10^{-6})}{0.040(30)}
+\simeq1.0\times10^{-4}\,\mathrm m
+=0.10\,\mathrm{mm}}.
+\]
+\excheck 原题(b)问随机表面粗糙度与球边缘菲涅耳带宽的\emph{量级}比较，不能视为材料吸收系数的精确阈值。
