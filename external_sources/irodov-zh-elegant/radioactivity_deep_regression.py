@@ -98,8 +98,10 @@ test(229,"Bateman daughter N2 at t=2",
      nb,la/(lb-la)*(exp(-2*la)-exp(-2*lb)),1e-10)
 peak=log(la/lb)/(la-lb)
 test(229,"daughter number peak time s",peak,3.135)
-test(229,"daughter derivative vanishes at peak",
-     la*exp(-la*peak)-lb*bateman(1.0,la,lb,peak),0,.00001)
+dpeak=la*exp(-la*peak)-lb*bateman(1.0,la,lb,peak)
+if abs(dpeak)>1e-12:
+    raise AssertionError(f"VI.229: peak does not satisfy rate equation: {dpeak}")
+checks.append((229,"daughter derivative zero at peak (absolute)",dpeak))
 test(230,"equal-lambda daughter peak t/tau",1.0,1.0,.00001)
 n1=exp(-la*2)
 n3=1-n1-nb
