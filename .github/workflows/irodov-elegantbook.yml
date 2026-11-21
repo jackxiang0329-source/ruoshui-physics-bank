@@ -46,6 +46,10 @@ jobs:
         run: python3 external_sources/irodov-zh-elegant/mechanics_rigidbody_regression.py
       - name: Independently recheck Part I elastic deformation and strength
         run: python3 external_sources/irodov-zh-elegant/mechanics_elasticity_regression.py
+      - name: Independently recheck Part I hydrodynamics and viscosity
+        run: python3 external_sources/irodov-zh-elegant/mechanics_fluids_regression.py
+      - name: Independently recheck Part I special relativity and four-momentum
+        run: python3 external_sources/irodov-zh-elegant/mechanics_relativity_regression.py
       - uses: xu-cheng/latex-action@v4
         with:
           working_directory: external_sources/irodov-zh-elegant
