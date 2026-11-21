@@ -1,0 +1,406 @@
+% Irodov, user-supplied PDF, problems 271--280, printed pp.43--45
+% (PDF pp.52--54). Source diagrams 1.71--1.72 and answer sheet checked.
+
+\exproblem{271}{43}
+边长为 $a$ 的均匀立方体放在摩擦系数为 $k$ 的
+水平面上，获得一初始水平速度后减速至停止。
+解释它关于\emph{经过质心且垂直于运动方向的水平轴}
+的角动量为什么能够保持不变，
+并求地面支持力合力作用线相对重力作用线的水平偏移
+$\Delta x$。
+\exsolution
+设立方体质量为 $m$，运动方向取为 $+x$，
+立方体质心离地高度为 $a/2$。
+滑动摩擦力大小为 $f=kmg$，指向 $-x$。
+摩擦作用于底面，在上述横向水平轴上产生大小
+\[
+N_f=f(a/2)=kmg(a/2)
+\]
+的倾覆力矩。若立方体只平动而不倾转，
+总转矩须为零。重力作用线穿过质心，
+而地面总支持力 $N=mg$ 可以在底面上偏离几何中心，
+对该轴产生反向力矩 $N\,\Delta x$。
+因此
+\[
+mg\,\Delta x=kmg\,\frac a2
+\quad\Longrightarrow\quad
+\boxed{\Delta x=\frac12ka}.
+\]
+\excheck 合支持力的偏移来自底面压力分布的不对称，
+正好抵消摩擦的力矩，所以没有角加速度。
+若 $\Delta x$ 大于底面半宽 $a/2$，即 $k>1$，
+理想不倾转的假设不再自洽；应考虑倾翻。
+
+\exproblem{272}{43}
+一根长为 $\ell$、质量为 $M$ 的均匀水平细杆 $AB$
+可绕通过端点 $A$ 的竖直固定轴无摩擦旋转，
+最初角速度为 $\omega_0$。
+质量为 $m$ 的小套环从轴心 $A$ 开始无摩擦地
+沿杆滑向另一端 $B$。
+求套环到达 $B$ 时相对杆的径向滑动速率 $v'$。
+\exsolution
+杆对端点的转动惯量为
+$I_0=M\ell^2/3$。
+套环离轴距离为 $r$ 时，总角动量
+$L_z=(I_0+mr^2)\omega$。
+外力对固定竖轴的力矩为零，故
+\[
+(I_0+mr^2)\omega=I_0\omega_0.
+\]
+套环在 $r=\ell$ 时
+$\omega_f=I_0\omega_0/(I_0+m\ell^2)$。
+无摩擦且轴不作功，机械能守恒：
+\[
+\tfrac12I_0\omega_0^2
+=\tfrac12(I_0+m\ell^2)\omega_f^2
++\tfrac12m{v'}^2.
+\]
+代入 $\omega_f$：
+\[
+m{v'}^2
+=I_0\omega_0^2
+\left[1-\frac{I_0}{I_0+m\ell^2}\right]
+=\frac{I_0m\ell^2\omega_0^2}{I_0+m\ell^2}.
+\]
+因此
+\[
+\boxed{v'=\frac{\omega_0\ell}{\sqrt{1+3m/M}}}.
+\]
+\excheck $v'$ 是套环沿杆的\emph{相对径向速率}，
+不是套环对地总速率，后者还含方位速度分量。
+
+\exproblem{273}{43}
+质量为 $m=5.0\,\mathrm{kg}$、
+长度为 $\ell=90\,\mathrm{cm}$ 的均匀细杆
+在光滑水平面上静止，一端突然受到
+大小为 $J=3.0\,\mathrm{N\,s}$、
+垂直于杆的水平冲量。
+求随后的运动中，杆一半对另一半的内力大小。
+\exsolution
+冲量使杆的质心获得平动速度
+$v_C=J/m$；关于质心的冲量矩为
+$J\ell/2$。
+均匀细杆对质心的转动惯量为
+$I_C=m\ell^2/12$，所以碰后角速度
+\[
+\omega=\frac{J\ell/2}{I_C}
+=\frac{6J}{m\ell}.
+\]
+冲量结束后外部水平合力为零，
+质心匀速运动、角速度恒定。
+每半杆的质心距整杆质心 $\ell/4$，
+做圆周运动所需向心加速度为
+$\omega^2\ell/4$。
+半杆质量 $m/2$，沿杆指向整体质心的
+内力大小因此为
+\[
+F_{\rm internal}=\frac m2\cdot\frac{\omega^2\ell}{4}
+=\frac{m\ell\omega^2}{8}.
+\]
+代入得
+\[
+\boxed{F=\frac{9J^2}{2m\ell}
+=\frac{9(3.0)^2}{2(5.0)(0.90)}
+=9.0\,\mathrm N}.
+\]
+\excheck 该内力是在\emph{碰撞结束后的转动阶段}
+维持两半杆的向心加速度，
+不是瞬时冲量 $J$ 除以未知碰撞时间得到的力。
+
+\exproblem{274}{43}
+质量为 $M$、边长为 $\ell$ 的均匀正方形薄板，
+绕其一条竖直侧边形成的固定轴无摩擦转动。
+质量为 $m$ 的小球以速度 $v$ 垂直薄板撞击其中心，
+发生完全弹性碰撞。
+求：(a) 小球碰后有符号速度 $v'$；
+(b) 碰后薄板轴承受到的水平合力大小。
+\exsolution
+薄板对过边的竖直轴惯量
+$I=\frac13M\ell^2$，
+撞击点距轴 $b=\ell/2$。
+设碰撞时小球对薄板冲量为 $J$，
+则小球碰后速度 $v'=v-J/m$，
+薄板角速度
+\[
+\omega=\frac{Jb}{I}.
+\]
+完全弹性的一维局部接触恢复条件为
+$b\omega-v'=v$，即
+$J(b^2/I+1/m)=2v$。
+因 $b^2/I=3/(4M)$，
+\[
+J=\frac{2v}{1/m+3/(4M)}
+=\frac{8mMv}{4M+3m}.
+\]
+于是
+\[
+\boxed{v'=v\frac{3m-4M}{3m+4M}}.
+\]
+碰后板质心距转轴 $\ell/2$，
+它以角速度 $\omega$ 作圆周运动，
+所需向心加速度为 $\omega^2\ell/2$，
+因此轴的水平合反力大小为
+\[
+F=M\omega^2\frac\ell2,\qquad
+\omega=\frac{J\ell/2}{M\ell^2/3}
+=\frac{12mv}{\ell(4M+3m)}.
+\]
+故
+\[
+\boxed{F=\frac{72Mm^2v^2}{\ell(4M+3m)^2}
+=\frac{8Mv^2}{\ell[1+4M/(3m)]^2}}.
+\]
+\excheck $v'$ 可为负，意味着小球反弹；
+碰撞时角动量关于轴守恒，但整体线动量会受轴冲量，
+不能直接令两物体的线动量守恒。
+
+\exproblem{275}{43--44}
+一根质量为 $M$、长度为 $\ell$ 的均匀细杆
+上端悬挂在固定水平铰点，初始竖直静止。
+质量为 $m$ 的子弹水平飞来击中杆下端并嵌入，
+随后杆摆过最大角度 $\alpha$。设 $m\ll M$。
+求：(a) 子弹飞来速率；
+(b) 碰撞过程中“子弹+杆”系统\emph{线动量增量}
+及其原因；(c) 为使碰撞过程中系统线动量不变，
+子弹应击中距上端多远的点 $x$？
+\exsolution
+碰撞很短，关于铰点的冲量矩为零，
+故子弹撞前角动量 $mv\ell$ 等于碰后杆子系统的
+角动量 $I\omega$，其中
+$I\simeq M\ell^2/3$，从而
+$\omega\simeq3mv/(M\ell)$。
+碰后摆起阶段机械能守恒。
+最大角处杆的质心升高
+$\frac\ell2(1-\cos\alpha)$，
+忽略 $m/M$ 高阶修正，
+\[
+\frac12I\omega^2
+=\frac12Mg\ell(1-\cos\alpha).
+\]
+联立求得
+\[
+\boxed{v\simeq\frac M m
+\sqrt{\frac{2g\ell}{3}}\sin\frac\alpha2}.
+\]
+碰后线动量主要来自杆的质心运动：
+$P_f\simeq M(\omega\ell/2)
+=\frac32mv$，碰前为 $P_i=mv$。
+故碰撞过程中的水平线动量增量
+\[
+\boxed{\Delta p\simeq\frac12mv
+=\frac M2\sqrt{\frac{2g\ell}{3}}\sin\frac\alpha2
+=M\sqrt{\frac{g\ell}{6}}\sin\frac\alpha2}.
+\]
+它由固定铰点施加的\emph{外部水平冲量}造成。
+若击中距上端为 $x$ 的位置，
+碰后 $\omega\simeq mvx/I$，
+线动量 $P_f\simeq M(\ell/2)\omega$。
+令 $P_f=mv$ 得
+\[
+\boxed{x=\frac{2I}{M\ell}\simeq\frac{2\ell}{3}}.
+\]
+\excheck 此处始终采用 $m\ll M$；
+撞击阶段不用机械能守恒，摆起阶段才使用。
+
+\exproblem{276}{44}
+一根质量为 $M$、半径为 $R$ 的均匀水平圆盘
+可绕过中心的固定竖轴自由旋转。
+盘上径向导槽中有质量为 $m$ 的小物体，
+以穿过轴心的轻绳相连。
+初始物体位于盘边缘，整体以角速度 $\omega_0$ 转动。
+随后缓慢拉绳使物体移到轴心。
+求：(a) 最后角速度；(b) 拉绳外力做功。
+\exsolution
+盘的转动惯量
+$I_d=\frac12MR^2$。
+拉绳通过竖轴，不提供关于轴的外力矩，
+故总角动量守恒：
+\[
+(I_d+mR^2)\omega_0=I_d\omega_f.
+\]
+由此
+\[
+\boxed{\omega_f=\left(1+\frac{2m}{M}\right)\omega_0}.
+\]
+缓慢操作使最终径向振动动能可忽略，
+拉绳的外力功等于系统转动动能增量：
+\[
+W=\frac12I_d\omega_f^2
+-\frac12(I_d+mR^2)\omega_0^2.
+\]
+将 $\omega_f$ 代入：
+\[
+\boxed{W=\frac12mR^2\omega_0^2
+\left(1+\frac{2m}{M}\right)}.
+\]
+\excheck 角动量守恒但动能\emph{增加}，
+多出的能量来自拉绳外力做功。
+
+\exproblem{277}{44}
+均匀水平圆盘质量为 $m_2$、半径为 $R$，
+能绕中心固定竖轴无摩擦转动。
+质量为 $m_1$ 的人站在盘边缘。
+原先整体静止，此后人沿盘边行走，
+相对于圆盘累计转过角度 $\varphi'$，
+相对于盘面的切向速率为 $v'(t)$，最后停下。
+忽略人的尺寸，求：
+(a) 圆盘相对地面转过角度 $\varphi$；
+(b) 人对圆盘施加的竖轴力矩 $N(t)$。
+\exsolution
+圆盘惯量
+$I_d=\frac12m_2R^2$。
+人在地面系中的角速度为
+$\dot\varphi+\dot\varphi'$。
+因整个系统关于竖轴无外力矩，初始角动量零：
+\[
+I_d\dot\varphi+
+m_1R^2(\dot\varphi+\dot\varphi')=0.
+\]
+所以
+$\dot\varphi=
+-\frac{m_1R^2}{I_d+m_1R^2}\dot\varphi'$。
+由零初角积分：
+\[
+\boxed{\varphi=-\frac{2m_1}{2m_1+m_2}\varphi'}.
+\]
+人对圆盘的力矩等于盘角动量变化率：
+\[
+N=I_d\ddot\varphi
+=-\frac{I_d m_1R^2}{I_d+m_1R^2}\ddot\varphi'.
+\]
+因 $v'=R\dot\varphi'$，
+\[
+\boxed{N(t)=-\frac{m_1m_2R}{2m_1+m_2}
+\frac{\mathrm dv'}{\mathrm dt}}.
+\]
+\excheck 人加速向前走时盘反向转动；
+当人减速并最终相对盘停住时两者地面系角速度
+也同时回到零，但盘可能已有非零角位移。
+
+\exproblem{278}{44}
+两个水平圆盘绕同一固定竖轴自由旋转，
+惯量分别为 $I_1,I_2$，初始角速度为
+$\omega_1,\omega_2$。
+上盘落到下盘，最终因摩擦一起以同一角速度旋转。
+求：(a) 最终角速度；(b) 此过程摩擦力做的总功。
+\exsolution
+轴无外力矩，故总角动量守恒：
+\[
+I_1\omega_1+I_2\omega_2=(I_1+I_2)\omega.
+\]
+因此
+\[
+\boxed{\omega=\frac{I_1\omega_1+I_2\omega_2}{I_1+I_2}}.
+\]
+两圆盘之间的滑动摩擦使动能损失，
+其对两盘的\emph{合计做功}等于末初动能差：
+\[
+W_f=\frac12(I_1+I_2)\omega^2
+-\frac12I_1\omega_1^2-\frac12I_2\omega_2^2.
+\]
+代入公共角速度并整理：
+\[
+\boxed{W_f=-\frac{I_1I_2}{2(I_1+I_2)}
+(\omega_1-\omega_2)^2}.
+\]
+\excheck $W_f\le0$，且仅当
+$\omega_1=\omega_2$ 时等于零；
+角动量守恒不表示转动动能守恒。
+
+\exproblem{279}{44}
+一小圆片质量为 $m$，在光滑水平面上以速度 $v$
+沿垂直于一根静止均匀细杆的方向运动，
+随后与该杆的一端发生完全弹性碰撞。
+细杆长为 $\ell$、质量为 $\eta m$，
+其中 $\eta>0$。求碰后圆片速度 $v'$、
+细杆角速度 $\omega$；
+并求圆片碰后停下或反弹的质量比条件。
+\exsolution
+设沿入射方向的碰撞冲量大小为 $J$。
+圆片碰后有符号速度
+$v'=v-J/m$。
+杆的质心平动速率
+$V=J/(\eta m)$。
+杆关于质心的惯量
+$I=\eta m\ell^2/12$，
+碰撞点距质心为 $\ell/2$，
+故其角速度大小
+\[
+\omega=\frac{J(\ell/2)}{I}
+=\frac{6J}{\eta m\ell}.
+\]
+杆端沿碰撞方向的速率为
+$V+\omega\ell/2=4J/(\eta m)$。
+弹性碰撞恢复系数为1，因而两接触点
+碰后的相对分离速率等于碰前接近速率：
+\[
+\frac{4J}{\eta m}-\left(v-\frac Jm\right)=v.
+\]
+所以 $J=\frac{2\eta m v}{4+\eta}$，
+\[
+\boxed{v'=v\frac{4-\eta}{4+\eta}},
+\qquad
+\boxed{\omega=\frac{12v}{\ell(4+\eta)}}.
+\]
+\excheck 当 $\eta=4$，$v'=0$；
+当 $\eta>4$，$v'<0$，圆片沿反方向弹回；
+$0<\eta<4$ 时圆片仍向前运动。
+
+\exproblem{280}{45}
+图1.72的水平平台 $P$ 可绕固定竖轴 $OO'$
+自由旋转；平台、电动机和配重关于此轴的惯量为 $I$。
+电动机装有轻框架，框架支承一颗可沿自身轴 $BB'$
+自由自转的均匀球 $A$；球关于任一直径的惯量为 $I_0$。
+初始 $BB'$ 与 $OO'$ 重合，
+球以自转角速度 $\omega_0$ 旋转，平台原先静止。
+电动机慢慢将自转轴 $BB'$ 从竖直方向转过
+$90^\circ$ 或 $180^\circ$，求：
+(a) 两种转角所需电动机功；
+(b) 轴转至 $90^\circ$ 后，为保持平台轴竖直
+所需外力矩的大小。
+\exsolution
+设球自转轴与竖直方向的瞬时夹角为 $\theta$，
+平台绕竖直轴的角速度为 $\Omega$。
+由于球绕自身轴\emph{自由}自转，
+平台自转对球附加的角速度
+仅为\emph{垂直于}球自转轴的分量，
+其大小为 $\Omega\sin\theta$。
+因此关于竖直轴的总角动量为
+\[
+L_z=[I+I_0\sin^2\theta]\Omega
++I_0\omega_0\cos\theta.
+\]
+系统竖直轴上无外力矩，初始
+$L_z=I_0\omega_0$，所以
+\[
+\Omega(\theta)=
+\frac{I_0\omega_0(1-\cos\theta)}
+{I+I_0\sin^2\theta}.
+\]
+转轴缓慢改变时忽略其瞬态动能，
+相对于初始纯自转的附加动能为
+\[
+\Delta K=\frac12[I+I_0\sin^2\theta]\Omega^2
+=\frac{I_0^2\omega_0^2(1-\cos\theta)^2}
+{2[I+I_0\sin^2\theta]}.
+\]
+无耗散时该增量等于电动机做功，故
+\[
+\boxed{W_{90^\circ}=
+\frac{I_0^2\omega_0^2}{2(I+I_0)}},\qquad
+\boxed{W_{180^\circ}=\frac{2I_0^2\omega_0^2}{I}}.
+\]
+在 $\theta=90^\circ$ 时平台角速度为
+$\Omega=I_0\omega_0/(I+I_0)$。
+此时球的主自转角动量
+$I_0\omega_0$ 位于水平面，
+该矢量随平台以 $\Omega$ 绕竖直轴转动，
+保持轴线方向所需外力矩大小等于其方向变化率：
+\[
+\boxed{N=I_0\omega_0\Omega
+=\frac{I_0^2\omega_0^2}{I+I_0}}.
+\]
+\excheck 若误认为球与平台绕竖直轴\emph{刚性锁定}，
+就会在 $\theta=180^\circ$ 得到错误的转动惯量；
+原题明确说球可绕 $BB'$ 自由转动，
+必须区分自转轴向和平面正交分量。
