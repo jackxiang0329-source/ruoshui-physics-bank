@@ -1,0 +1,387 @@
+% Irodov Part III §3.2, original 54--65, PDF pp.108--109,
+% printed pp.99--100. Image-charge signs checked; conductor assumed ideal.
+\electroconductproblem{54}{99}
+一个小球由劲度系数为 $k_s$ 的绝缘弹性细线
+悬挂在无限大水平导体平面上方。
+小球充电后比原平衡位置向下降
+$x$，此时距导体平面 $\ell$。
+求小球电荷模。
+\exsolution
+无限导体平面用镜像法，
+在平面下方距平面同为 $\ell$ 的位置
+放置大小相同、异号的镜像电荷。
+两电荷相距 $2\ell$，
+作用于真小球的镜像吸引力为
+\[
+F_e=\frac{q^2}{4\pi\varepsilon_0(2\ell)^2}
+=\frac{q^2}{16\pi\varepsilon_0\ell^2}.
+\]
+充电前后球的重力相同；
+新增加的弹性线拉力为 $k_sx$，
+故 $F_e=k_sx$。
+因此
+\[
+\boxed{|q|=4\ell\sqrt{\pi\varepsilon_0k_sx}}.
+\]
+\excheck $x$ 若以 cm 给出，
+代数值时须先换算成 m；
+结果与平面是否带净电荷无关的前提是
+理想接地或足够大的导体平面。
+
+\electroconductproblem{55}{99}
+点电荷 $q$ 位于距无限大接地导体平面
+$\ell$ 处。
+求把该电荷缓慢移到无穷远需要做的外功。
+\exsolution
+镜像电荷为 $-q$，位于平面另一侧
+对称位置。真电荷距平面 $z$ 时，
+受到指向平面的吸引力
+$F_z=-kq^2/(2z)^2=-q^2/(16\pi\varepsilon_0z^2)$。
+为准静态地从 $z=\ell$ 移至无穷远，
+外力必须做
+\[
+W_{\rm ext}=-\int_\ell^\infty F_z\,\mathrm dz
+=\frac{q^2}{16\pi\varepsilon_0}
+\int_\ell^\infty z^{-2}\,\mathrm dz.
+\]
+故
+\[
+\boxed{W_{\rm ext}=\frac{q^2}{16\pi\varepsilon_0\ell}}.
+\]
+\excheck 不应把真电荷与镜像电荷距离当作固定；
+且镜像电荷随真电荷移动，
+直接用“两真实点电荷的势能”会有
+多出一倍的计数问题。
+
+\electroconductproblem{56}{99}
+两个真点电荷 $+q,-q$ 在同一高度
+$h=\ell/2$、相互水平距离为 $\ell$，
+二者均位于无限接地导体平面上方。
+求：(a) 每个真电荷受力模；
+(b) 两电荷中点处电场强度模。
+\exsolution
+取平面为 $z=0$，真电荷位置为
+$(0,h),(\ell,h)$。
+对应镜像分别为 $-q$ 于 $(0,-h)$、
+$+q$ 于 $(\ell,-h)$。
+(a) 真正的 $+q$ 受三项作用：
+真 $-q$ 的水平吸引
+$+kq^2/\ell^2$，
+自身镜像的向下吸引
+$-kq^2/\ell^2$，
+另一镜像 $+q$ 的斜向排斥
+$kq^2/(2\ell^2)$、方向 $(-1,1)/\sqrt2$。
+合力分量互为相反数：
+\[
+F_x=\frac{kq^2}{\ell^2}
+\left(1-\frac{1}{2\sqrt2}\right),\quad F_z=-F_x.
+\]
+所以
+\[
+\boxed{F=\frac{(2\sqrt2-1)q^2}
+{8\pi\varepsilon_0\ell^2}}.
+\]
+(b) 中点两真电荷电场沿连线同向叠加，
+贡献 $8kq/\ell^2$；
+两个镜像对该方向的合贡献为
+$-8kq/(5\sqrt5\,\ell^2)$，
+竖直分量相消。故
+\[
+\boxed{E=
+\frac{2|q|}{\pi\varepsilon_0\ell^2}
+\left(1-\frac1{5\sqrt5}\right)}.
+\]
+\excheck 所有镜像仅为解边界值的数学工具，
+不是真实可自由移动的第三、第四个点电荷。
+
+\electroconductproblem{57}{99}
+两个无限大、相互垂直的接地导体半平面形成直角，
+一点电荷 $q$ 位于两平面之间，
+距每个平面均为 $\ell$。
+求该电荷所受合电场力模。
+\exsolution
+在直角区域坐标中取真电荷 $(\ell,\ell)$。
+两个单次反射镜像电荷为 $-q$，
+位置分别在 $(-\ell,\ell)$、
+$(\ell,-\ell)$；
+双次反射镜像为 $+q$，
+位置在 $(-\ell,-\ell)$。
+前两个分别沿 $-x,-y$ 方向吸引，
+每个力模为 $kq^2/(4\ell^2)$。
+第三个沿 $(+x,+y)$ 排斥，
+力模为 $kq^2/(8\ell^2)$，
+每分量为该值除以 $\sqrt2$。
+所以
+\[
+F_x=F_y=
+-\frac{kq^2}{4\ell^2}
++\frac{kq^2}{8\sqrt2\,\ell^2}.
+\]
+合力模
+\[
+\boxed{F=
+\sqrt2|F_x|=
+\frac{(2\sqrt2-1)q^2}
+{32\pi\varepsilon_0\ell^2}}.
+\]
+\excheck 必须有\emph{三个}镜像，
+且双次反射镜像与真电荷同号；
+漏掉它会造成错误的系数。
+
+\electroconductproblem{58}{99}
+点电偶极矩为 $\bm p$ 的偶极子
+距接地无限大导体平面 $\ell$，
+偶极矩垂直于导体表面。
+求作用在偶极子上的力模。
+\exsolution
+垂直导体平面的偶极子的镜像偶极矩
+与原偶极矩\emph{同向}，
+两偶极子中心距为 $2\ell$。
+在两同轴同向偶极子的轴线上，
+相互作用势能函数的距离部分为
+$U=-2kp^2/d^3$。
+对\emph{真偶极子在镜像场中的力}，
+在固定镜像构造下求其所受局部场梯度：
+\[
+F=\frac{6kp^2}{d^4}\bigg|_{d=2\ell}
+=\frac{6kp^2}{16\ell^4}.
+\]
+因此
+\[
+\boxed{F=\frac{3p^2}{32\pi\varepsilon_0\ell^4}}.
+\]
+方向朝向导体平面。
+\excheck 能量法处理镜像随距离改变时，
+镜像系统能量要乘 $1/2$；
+直接用 $\bm F=(\bm p\cdot\nabla)\bm E_{\rm image}$
+不会混淆这一因子。
+
+\electroconductproblem{59}{99}
+点电荷 $q$ 位于无限接地导体平面上方
+高度 $\ell$。
+求导体表面，距电荷垂足水平距离为 $r$
+处的感应面电荷密度，并求总感应电荷。
+\exsolution
+取导体为 $z=0$，镜像 $-q$ 在 $z=-\ell$。
+在平面上方，
+两者的法向电场分量叠加为
+\[
+E_z(0^+,r)=
+-\frac{q\ell}{2\pi\varepsilon_0
+(r^2+\ell^2)^{3/2}}.
+\]
+导体内部 $\bm E=0$，
+表面法向边界条件
+$\sigma=\varepsilon_0E_z(0^+,r)$，
+于是
+\[
+\boxed{\sigma(r)=
+-\frac{q\ell}{2\pi(r^2+\ell^2)^{3/2}}}.
+\]
+积分整个平面：
+\[
+Q_{\rm ind}
+=\int_0^\infty\sigma(r)2\pi r\,\mathrm dr
+=-q\ell\int_0^\infty
+\frac{r\,\mathrm dr}{(r^2+\ell^2)^{3/2}}
+=\boxed{-q}.
+\]
+\excheck 对正点电荷，感应面电荷密度应全为负；
+式子积分总量为 $-q$ 是重要自校。
+
+\electroconductproblem{60}{99}
+一根无限长线电荷密度 $\lambda$ 的细线，
+平行于无限接地导体平面，距平面 $\ell$。
+求 (a) 每单位长度所受电场力模；
+(b) 平面上距细线所在垂直投影平面
+横向距离 $x$ 的感应面电荷密度。
+\exsolution
+用镜像细线，线密度为 $-\lambda$，
+平行放在平面另一侧，距真线 $2\ell$。
+两无限直线之间每单位长度的静电作用力
+\[
+\boxed{\frac FL=
+\frac{\lambda^2}{2\pi\varepsilon_0(2\ell)}
+=\frac{\lambda^2}{4\pi\varepsilon_0\ell}}.
+\]
+方向朝向导体平面。
+(b) 设导体面为 $z=0$，
+真线位于 $(x,z)=(0,\ell)$，
+镜像线位于 $(0,-\ell)$。
+面上法向场
+\[
+E_z(0^+,x)
+=-\frac{\lambda\ell}{\pi\varepsilon_0(x^2+\ell^2)}.
+\]
+故
+\[
+\boxed{\sigma(x)=
+-\frac{\lambda\ell}{\pi(x^2+\ell^2)}}.
+\]
+\excheck 对正 $\lambda$，感应面电荷为负，
+且沿每单位线长积分
+$\int_{-\infty}^\infty\sigma(x)\,\mathrm dx=-\lambda$。
+
+\electroconductproblem{61}{100}
+半无限长直细线垂直于无限接地导体平面，
+其近端距平面为 $\ell$，
+线电荷密度为 $\lambda$。
+设该线在平面上的垂足为 O，
+求 (a) O 点感应电荷面密度；
+(b) 与 O 距离 $r$ 处的分布。
+\exsolution
+设真线沿 $z\ge\ell$ 延伸，
+每个高度 $z$ 的电荷元
+$\mathrm dq=\lambda\,\mathrm dz$，
+其镜像在 $-z$。
+由第59题的点电荷镜像诱导密度叠加：
+\[
+\sigma(r)=
+-\frac{\lambda}{2\pi}
+\int_\ell^\infty
+\frac{z\,\mathrm dz}{(r^2+z^2)^{3/2}}.
+\]
+积分原函数为
+$-1/\sqrt{r^2+z^2}$，
+因此
+\[
+\boxed{\sigma(r)=
+-\frac{\lambda}{2\pi\sqrt{r^2+\ell^2}}}.
+\]
+在 $r=0$：
+\[
+\boxed{\sigma(0)=-\frac{\lambda}{2\pi\ell}}.
+\]
+\excheck 本题的半无限线总电荷无限，
+因而不要求整个平面的感应电荷积分有限；
+面密度随 $r$ 缓慢衰减。
+
+\electroconductproblem{62}{100}
+半径 $R$ 的均匀带电细圆环总电荷 $q$，
+其所在平面平行于无限接地导体平面，
+且距离为 $\ell$。
+求 (a) 轴线投影点处的感应面电荷密度；
+(b) 环心处的电场强度模和电势。
+\exsolution
+真实环在 $z=\ell$，
+镜像为带 $-q$ 的相同圆环在 $z=-\ell$。
+(a) 对底部投影点，
+两圆环在导体平面上的法向场叠加，
+\[
+E_z(0)=
+-\frac{q\ell}{2\pi\varepsilon_0(R^2+\ell^2)^{3/2}},
+\]
+所以
+\[
+\boxed{\sigma(0)=
+-\frac{q\ell}{2\pi(R^2+\ell^2)^{3/2}}}.
+\]
+(b) 环心处真实圆环的自场为0，
+镜像环位于轴向距离 $2\ell$ 处，
+其场模为
+\[
+\boxed{E=
+\frac{|q|(2\ell)}
+{4\pi\varepsilon_0(R^2+4\ell^2)^{3/2}}}.
+\]
+电势由真实环及镜像环相加：
+\[
+\boxed{\varphi_{\rm center}=
+\frac q{4\pi\varepsilon_0}
+\left(\frac1R-\frac1{\sqrt{R^2+4\ell^2}}\right)}.
+\]
+\excheck 电场方向指向导体面（当 $q>0$）；
+电势是标量总和，必须计入真实环自电势。
+
+\electroconductproblem{63}{100}
+一颗总电荷为零、半径为 $R$ 的
+\emph{孤立}导体球，
+球心外距 $\ell>R$ 处有点电荷 $q$。
+求导体球的平衡电势。
+\exsolution
+接地导体球的镜像解是：
+在距球心 $R^2/\ell$ 处的镜像电荷
+$q'=-qR/\ell$，
+它与外部点电荷共同保证球面电势为0。
+现在球要求总电荷为0而非接地，
+需在球心再加补偿镜像
+$q''=-q'=qR/\ell$。
+由于球心点电荷使球面各处电势
+增加相同常数
+$kq''/R$，
+外部点电荷与偏心镜像在球面仍恰好抵消，
+故
+\[
+\boxed{\varphi_{\rm sphere}
+=\frac{q''}{4\pi\varepsilon_0R}
+=\frac{q}{4\pi\varepsilon_0\ell}}.
+\]
+\excheck 球电势不依赖半径 $R$，
+但诱导面电荷\emph{分布}依赖 $R$；
+本题的球是孤立无净电荷，
+不能直接当作接地导体球。
+
+\electroconductproblem{64}{100}
+一颗半径为 $R_1,R_2$（$R_1<R_2$）
+的中空导体球壳原本不带净电荷。
+点电荷 $q$ 位于球腔内部，
+距球心 O 为 $r<R_1$。
+求球心 O 处电势。
+\exsolution
+真实点电荷在 O 处产生电势 $kq/r$。
+为使金属内部场为零，
+内球面出现总感应电荷 $-q$，
+外球面出现总感应电荷 $+q$。
+尽管内球面的电荷分布可能不均匀，
+全部位于距 O 恰为 $R_1$ 的球面上，
+故其在 O 处总电势为
+$k(-q)/R_1$。
+外球面均匀总电荷 $+q$ 在 O 的电势为
+$kq/R_2$。
+因此
+\[
+\boxed{\varphi(O)=
+\frac q{4\pi\varepsilon_0}
+\left(\frac1r-\frac1{R_1}+\frac1{R_2}\right)}.
+\]
+\excheck 内表面\emph{不是}均匀感应电荷，
+但对球心电势，每个表面元距离相同，
+故只需其总量。
+
+\electroconductproblem{65}{100}
+两个同心薄导体球，
+内球半径为 $a$、带电 $q_1>0$，
+外球半径为 $b>a$。
+应给外球加多少总电荷 $q_2$，
+才能让内球电势为零？
+求各区间电势 $\varphi(r)$ 并描述图线。
+\exsolution
+内球表面电势为
+$\varphi(a)=k(q_1/a+q_2/b)$，
+故令其为0得到
+\[
+\boxed{q_2=-\frac ba q_1}.
+\]
+静电平衡时两球外电势按包围电荷求：
+$r\le a$ 内球内部为常势零；
+$a\le r\le b$，
+由内球场积分并使用 $\varphi(a)=0$：
+$\varphi(r)=kq_1(1/r-1/a)$；
+$r\ge b$，
+两球等效总电荷
+$q_1+q_2=q_1(1-b/a)$，
+所以
+\[
+\boxed{\varphi(r)=\frac{q_1}{4\pi\varepsilon_0}
+\begin{cases}
+0,&0\le r\le a,\\
+\dfrac1r-\dfrac1a,&a<r<b,\\
+\dfrac{1-b/a}{r},&r\ge b.
+\end{cases}}
+\]
+电势图像在 $r=a$ 从0起向负值下降，
+到 $r=b$ 后以负的 $1/r$ 形式趋向0，
+且在两个金属表面电势连续。
+\excheck 外球带电绝对值
+$|q_2|>q_1$，故远处总电荷为负；
+题目并未要求整个系统中性。
