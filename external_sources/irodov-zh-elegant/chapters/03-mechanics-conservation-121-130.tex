@@ -1,0 +1,291 @@
+% Irodov, Arihant PDF pp. 30--31, printed pp. 21--22.
+% The source's problem 130 has an apparent sign inconsistency;
+% report both the printed relation and the physics-consistent form.
+\exproblem{121}{21}
+一物体质量为 $m$，被一沿路径切线方向的外力
+缓慢拉上小山，始末高差为 $h$，山坡水平投影长为 $\ell$
+（图1.29）。物体与山坡之间摩擦系数为 $k$。
+求外力所做的功。
+\exsolution
+缓慢移动意味着忽略动能变化和沿切向的加速度。
+在局部坡角 $\theta(s)$ 处，
+支持力 $N=mg\cos\theta$，
+外力切向大小为
+$F=mg\sin\theta+kmg\cos\theta$。
+沿轨迹积分：
+\[
+W=\int F\,\mathrm ds
+=mg\int\sin\theta\,\mathrm ds
++kmg\int\cos\theta\,\mathrm ds.
+\]
+由于 $\mathrm dy=\sin\theta\,\mathrm ds$、
+$\mathrm dx=\cos\theta\,\mathrm ds$，
+两项积分分别为高差 $h$ 与水平投影 $\ell$，所以
+\[
+\boxed{W=mg(h+k\ell)}.
+\]
+\excheck 与山坡的具体曲线形状无关，
+前提是坡面始终单调向上、摩擦阻力始终与移动反向。
+
+\exproblem{122}{21}
+质量为 $m=50\,\mathrm g$ 的圆片从静止开始
+沿倾角 $\alpha=30^\circ$ 的粗糙斜面滑下，
+到达水平粗糙面后再滑行 $\ell=50\,\mathrm{cm}$ 停止。
+两段面的摩擦系数均为 $k=0.15$。
+求整段运动中摩擦力所做的总功。
+\exsolution
+设斜面段走过距离为 $L$。
+滑至坡底时由功—能定理
+\[
+K_{\rm bottom}=mgL\sin\alpha-kmgL\cos\alpha.
+\]
+在水平段，摩擦力做功 $-kmg\ell$，最终停止，所以
+\[
+mgL(\sin\alpha-k\cos\alpha)=kmg\ell
+\quad\Longrightarrow\quad
+L=\frac{k\ell}{\sin\alpha-k\cos\alpha}.
+\]
+总摩擦功为
+\[
+W_f=-kmg(L\cos\alpha+\ell)
+=-\frac{kmg\ell}{1-k\cot\alpha}.
+\]
+代入数值得
+\[
+\boxed{W_f\simeq-4.96\times10^{-2}\,\mathrm J
+\approx-0.050\,\mathrm J}.
+\]
+\excheck 要能顺利下滑，必须
+$\tan\alpha>k$；本题满足。
+负号表明摩擦耗散动能，而非创造能量。
+
+\exproblem{123}{21}
+两物块质量分别为 $m_1,m_2$，
+由一根初始未形变的轻弹簧连接，置于水平粗糙面，
+摩擦系数同为 $k$。
+对 $m_1$ 水平施加一个恒力 $F$，
+求使另一物块 $m_2$ 开始移动所需的最小 $F$。
+\exsolution
+设弹簧劲度系数为 $\kappa$。
+在 $m_2$ 尚未运动而 $m_1$ 已向前滑动的阶段，
+作用于 $m_1$ 的外力净做功为
+$(F-km_1g)x$，能量分配给 $m_1$ 的动能
+和弹簧弹性势能：
+\[
+(F-km_1g)x=\frac12m_1v_1^2+\frac12\kappa x^2.
+\]
+对于给定 $F$，最大弹簧形变出现在 $v_1=0$ 的转折点，
+故 $\kappa x_{\max}=2(F-km_1g)$。
+第二物块刚将克服静摩擦时，
+弹簧拉力需达 $km_2g$。临界条件
+$2(F-km_1g)=km_2g$，得到
+\[
+\boxed{F_{\min}=kg\left(m_1+\frac{m_2}{2}\right)}.
+\]
+\excheck 本题采用两块的动、静摩擦均以同一系数 $k$
+描述的理想模型，且力从静止起恒定施加；
+若缓慢准静态增加 $F$，阈值可能不同。
+
+\exproblem{124}{21}
+总质量 $m=0.80\,\mathrm{kg}$、
+长度 $\ell=1.50\,\mathrm m$ 的均匀链条搭在粗糙桌面上，
+一端悬垂。悬垂部分长度达到总长的
+$\eta=1/3$ 时，链条刚可自行滑下。
+求从此时起直到完全滑离桌面，
+桌面对链条的摩擦力所做总功。
+\exsolution
+设桌面与链条之间摩擦系数为 $k$。
+在临界滑动时悬垂部分重力与桌面最大摩擦力平衡：
+\[
+\eta mg=k(1-\eta)mg
+\quad\Longrightarrow\quad
+k=\frac{\eta}{1-\eta}.
+\]
+当悬垂长度为 $x$ 时，桌面上剩余链长为 $\ell-x$，
+摩擦力大小为
+$F_f(x)=k(m/\ell)(\ell-x)g$。
+链条增量滑移 $\mathrm dx$ 时，桌上各微元移动
+同样距离，因此摩擦力总功为
+\[
+W_f=-\int_{\eta\ell}^{\ell}
+ k\frac m\ell(\ell-x)g\,\mathrm dx
+=-\frac12kmg\ell(1-\eta)^2
+=-\frac12\eta(1-\eta)mg\ell .
+\]
+代入得
+\[
+\boxed{W_f\simeq-1.31\,\mathrm J}.
+\]
+\excheck 积分终点时桌面上的链长为零，
+摩擦力也降为零；不可假定摩擦力在整个过程中恒定。
+
+\exproblem{125}{21}
+质量为 $m$ 的物体以初速 $v_0$、
+与水平夹角 $\alpha$ 斜抛，忽略空气阻力。
+求：（a）重力在全飞行时间内的平均功率；
+（b）重力瞬时功率随时间的变化。
+\exsolution
+取竖直向上为正，$v_y(t)=v_0\sin\alpha-gt$。
+重力为 $\bm F_g=-mg\bm j$，故功率
+\[
+\boxed{P_g(t)=\bm F_g\cdot\bm v(t)
+=-mgv_y(t)=mg(gt-v_0\sin\alpha)}.
+\]
+如果落回发射高度，飞行全程重力的总功
+$W_g=-mg(y_{\rm final}-y_{\rm initial})=0$，
+因此
+\[
+\boxed{\overline{P}_g=\frac{W_g}{T}=0}.
+\]
+\excheck 上升阶段 $P_g<0$，下降阶段 $P_g>0$；
+全程平均值零并非瞬时功率始终为零。
+
+\exproblem{126}{21--22}
+质量为 $m$ 的质点沿半径 $R$ 的圆周运动，
+其法向加速度随时间变化为 $a_n=at^2$，$a>0$。
+求合外力的瞬时功率及其在最初 $t$ 秒的平均值。
+\exsolution
+法向加速度等于 $v^2/R$，因此在 $t\ge0$：
+\[
+v(t)=\sqrt{aR}\,t.
+\]
+运动的动能为
+$K=\frac12mv^2=\frac12maRt^2$。
+所有力的合功率等于动能变化率，而法向力与速度垂直不做功：
+\[
+\boxed{P(t)=\frac{\mathrm dK}{\mathrm dt}=maRt}.
+\]
+区间 $[0,t]$ 内的平均功率
+\[
+\boxed{\overline P(0,t)=\frac{K(t)-K(0)}t
+=\frac12maRt}.
+\]
+\excheck 两个结果分别有比例 $t$ 与 $t/2$，
+符合匀速增长功率在区间中的平均值。
+
+\exproblem{127}{22}
+一质量为 $m$ 的物块在水平地面上获得初速 $v_0$，
+随后仅受滑动摩擦。
+(a) 当 $k=0.27,m=1.0\,\mathrm{kg},v_0=1.5\,\mathrm{m/s}$
+时，求停止前摩擦力的平均功率；
+(b) 若摩擦系数随离起点距离 $x$ 变化为 $k(x)=\alpha x$，
+求运动期间摩擦力瞬时功率的最大绝对值。
+\exsolution
+(a) 减速度大小为 $kg$，
+停下用时 $t_*=v_0/(kg)$，
+摩擦力总功 $W_f=-mv_0^2/2$，所以
+\[
+\boxed{\overline P_f=
+\frac{W_f}{t_*}=-\frac12kmgv_0
+\simeq-1.98\,\mathrm W}.
+\]
+(b) 在 $x$ 处，摩擦力 $F_f=-m\alpha gx$。
+动能定理给出
+\[
+\frac12mv(x)^2-\frac12mv_0^2
+=-\int_0^x m\alpha gu\,\mathrm du,
+\quad
+v(x)=\sqrt{v_0^2-\alpha gx^2}.
+\]
+因此瞬时功率
+$P_f(x)=-m\alpha gx\sqrt{v_0^2-\alpha gx^2}$。
+为使 $|P_f|$ 最大，对
+$x^2(v_0^2-\alpha gx^2)$ 求极值，
+可得 $x_m^2=v_0^2/(2\alpha g)$，进而
+\[
+\boxed{P_{f,\rm most\,negative}
+=-\frac12m v_0^2\sqrt{\alpha g}},
+\quad
+\boxed{|P_f|_{\max}=\frac12m v_0^2\sqrt{\alpha g}}.
+\]
+\excheck 初始 $x=0$ 时摩擦力为零；
+终点速度为零时功率也为零，
+最大耗散功率发生在中间位置。
+
+\exproblem{128}{22}
+质量为 $m=0.10\,\mathrm{kg}$ 的物体位于以恒角速度
+$\omega=5.0\,\mathrm{rad/s}$ 绕固定轴旋转的参考系中。
+将它沿任意路径从离轴距离 $r_1=0.30\,\mathrm m$
+移至 $r_2=0.50\,\mathrm m$，
+求离心惯性力做的功。
+\exsolution
+旋转系内离心力大小为 $F_{\rm cf}=m\omega^2r$，
+沿远离转轴的径向。
+由于 $\bm F_{\rm cf}=m\omega^2r\,\bm e_r$，
+其做功微元为
+$\mathrm dW=m\omega^2r\,\mathrm dr$，
+角向运动不做功。所以
+\[
+\boxed{W_{\rm cf}=\int_{r_1}^{r_2}
+m\omega^2r\,\mathrm dr
+=\frac12m\omega^2(r_2^2-r_1^2)
+=0.200\,\mathrm J}.
+\]
+\excheck 此力在角速度恒定时可由径向有效势
+$U_{\rm cf}=-m\omega^2r^2/2$ 导出，因此与路径无关。
+
+\exproblem{129}{22}
+两根轻弹簧串联，弹性系数分别为
+$\kappa_1,\kappa_2$。若缓慢将其总长度拉长
+$\Delta\ell$，求外力至少须做多少功。
+\exsolution
+串联弹簧中的拉力相同，记为 $F$，
+两者伸长分别为 $x_1=F/\kappa_1$、
+$x_2=F/\kappa_2$，故
+\[
+\Delta\ell=F\left(\frac1{\kappa_1}+\frac1{\kappa_2}\right),
+\quad
+\kappa_{\rm eq}=\frac{\kappa_1\kappa_2}{\kappa_1+\kappa_2}.
+\]
+缓慢拉伸可使末态无多余动能，
+外力所做最小功即弹簧能量增量：
+\[
+\boxed{W_{\min}=
+\frac12\kappa_{\rm eq}(\Delta\ell)^2
+=\frac{\kappa_1\kappa_2}{2(\kappa_1+\kappa_2)}
+(\Delta\ell)^2}.
+\]
+\excheck 相对较软的弹簧伸长量更大，
+且等效劲度系数小于任一单根弹簧的劲度系数。
+
+\exproblem{130}{22}
+质量为 $m$ 的物体从地面被向上提升，
+外力随高度 $y$ 变化。本版题面\emph{印为}
+$F(y)=2(ay-1)mg$，$a>0$。
+求上升过程前半段外力的功及重力势能增加量。
+\exsolution
+\textbf{先作源书一致性核查。}
+若把印刷表达式中的 $F(y)$ 严格理解为沿\emph{向上}
+的有符号外力，则在地面 $F(0)=-2mg$，合力向下，
+物体从静止根本不能自发上升；而本版书末答案
+$W=3mg/(4a)$、$\Delta U=mg/(2a)$ 与此符号不符。
+这说明题面需要澄清外力方向或印刷符号。
+为得到与书末答案一致的上升模型，明确采用
+\emph{向上拉力大小}
+\[
+F_{\uparrow}(y)=2(1-ay)mg
+\quad(0\le y\le 1/a).
+\]
+它与印刷式在所讨论高度范围内符号相反，
+此处并未暗中改动题面，而是作为\emph{勘误后的条件分支}。
+物体若由静止开始，由净力
+$F_\uparrow-mg=mg(1-2ay)$ 得动能
+\[
+K(y)=\int_0^y mg(1-2au)\,\mathrm du
+=mg(y-ay^2).
+\]
+它再次归零的高度是 $H=1/a$，
+前半段上升对应 $0\le y\le H/2=1/(2a)$。
+故该条件分支下
+\[
+\boxed{W_\uparrow=\int_0^{1/(2a)}2(1-ay)mg\,\mathrm dy
+=\frac{3mg}{4a}},
+\]
+\[
+\boxed{\Delta U_g=mg\frac{H}{2}=\frac{mg}{2a}}.
+\]
+\excheck 若\emph{完全保留题面有符号力}
+$F=2(ay-1)mg$，对同样人为指定的位移区间，
+积分所算外力功会是 $-3mg/(4a)$，
+但这不是从静止上升到 $H$ 的自洽物理过程；
+该争议须在独立审校时回查其他版本，不得标注为已解决。
