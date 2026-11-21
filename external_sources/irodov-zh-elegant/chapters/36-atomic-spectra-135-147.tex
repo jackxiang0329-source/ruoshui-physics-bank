@@ -67,39 +67,77 @@ $eU=hc/\lambda_{\min}$。
 \atomictermsproblem{138}{248}
 某X射线管的电压从$U_1=10\,\mathrm{kV}$
 升高为$U_2=20\,\mathrm{kV}$。
-其K系极限线$K_\infty$与连续谱短波限
-的\emph{波长差}增加为原来的$\eta=3.0$倍。
-依莫塞莱定律确定靶元素原子序数$Z$。
+底本将所比较的固定特征波长称为$K_\infty$线，
+并说它与连续谱短波限的波长间距
+增为原来的$\eta=3.0$倍。
+求靶元素原子序数$Z$，并核查底本答案。
 \exsolution
-令$K_\infty$的固定波长为$\lambda_K$，
-连续谱短波限为
-$\lambda_i=hc/(eU_i)$。
-其值依次为$\lambda_1=123.984\,\mathrm{pm}$、
-$\lambda_2=61.992\,\mathrm{pm}$。
-若在两个电压下均\emph{实际能够产生K系}，
-必须$eU_1$不小于K层结合能，即
-$\lambda_K\ge\lambda_1$。
-此时两次间隔均为
-$\Delta_i=\lambda_K-\lambda_i$。
-由$\Delta_2=3\Delta_1$得到
+先单独解决\emph{几何上的波长间距}问题。
+两电压下连续谱短波限
 \[
- \lambda_K-\lambda_2=3(\lambda_K-\lambda_1)
- \quad\Longrightarrow\quad
- \boxed{\lambda_K=\frac{3\lambda_1-\lambda_2}{2}
- \simeq155.0\,\mathrm{pm}}.
+ \lambda_i=\frac{hc}{eU_i},\qquad
+ \lambda_1=123.984\,\mathrm{pm},\quad
+ \lambda_2=61.992\,\mathrm{pm}.
 \]
-近似K边能量
-$E_K=\mathrm{Ry}(Z-1)^2=hc/\lambda_K$，
-故
+令待定特征波长为$\lambda_X$。
+若初始$10$kV时该特征线已经能被激发，
+必须有$\lambda_X\ge\lambda_1$，
+所以波长间隔满足
 \[
- \boxed{Z\simeq1+\sqrt{\frac{hc}
- {\mathrm{Ry}\lambda_K}}\simeq25}.
+ \lambda_X-\lambda_2
+ =\eta(\lambda_X-\lambda_1),\qquad
+ \boxed{\lambda_X=
+ \frac{\eta\lambda_1-\lambda_2}{\eta-1}
+ =154.980\,\mathrm{pm}}.
 \]
-\excheck 底本书末给$Z=29$，
-但此时K层近似电离能$\sim10.7\,\mathrm{keV}$
-高于初始$10\,\mathrm{kV}$，初始状态根本无法形成K系。
-按题面“两个电压下均有K系线”的物理条件，
-所得近似$Z=25$；源书数值冲突须独立复核。
+它对应的光子能量为
+$\varepsilon_X=hc/\lambda_X=8.00\,\mathrm{keV}$。
+\emph{关键是辨认特征线的种类：}
+
+若按底本书末采用的\emph{莫塞莱$K_\alpha$线}
+近似能量
+$\varepsilon_{K_\alpha}
+=\frac34\mathrm{Ry}(Z-1)^2$，则
+\[
+ \boxed{Z=1+\sqrt{\frac{4\varepsilon_X}{3\mathrm{Ry}}}
+ \simeq29.0},\qquad
+ \boxed{\text{靶材为铜（Cu）}}.
+\]
+这与书末$Z=29$及其所列含$3\mathrm{Ry}/4$
+的公式相符。
+但原题\emph{字面写$K_\infty$}，
+它是K系极限（对应K层电离边），
+最简氢样屏蔽模型应使用
+$\varepsilon_{K_\infty}\simeq\mathrm{Ry}(Z-1)^2$，
+因而
+\[
+ \boxed{Z_{K_\infty}\simeq
+ 1+\sqrt{\frac{8.00\times10^3}{13.606}}
+ \simeq25.25\approx25}
+\]
+（模型精度内对应锰），而非29。
+再者，若把波长“间距”理解为绝对值且
+\emph{没有}要求第一电压下产生特征线，
+还存在跨越两短波限的代数分支：
+\[
+ |\lambda_X-\lambda_2|=3|\lambda_X-\lambda_1|,
+ \quad
+ \lambda_2<\lambda_X<\lambda_1
+ \ \Longrightarrow\
+ \lambda_X=\frac{3\lambda_1+\lambda_2}{4}
+ =108.486\,\mathrm{pm}.
+\]
+此时$\varepsilon_X=11.43$keV，
+超过第一电压电子最高能量10keV，
+第一状态不能激发该线。
+\excheck 已对底本原题图像和书末第138题公式直接校核：
+\emph{原题写$K_\infty$，书末解法却用了
+$K_\alpha$的$\frac34$莫塞莱系数}。
+所以保留\emph{书末口径}的$Z=29$，
+同时列出严格按字面$K_\infty$解读的
+$Z\approx25$与未激发分支；
+不能仅用前版“书末答案错误”一句带过，
+也不可把$K_\infty$静默改译成$K_\alpha$。
 
 \atomictermsproblem{139}{248}
 某金属X射线K、L两吸收限对应角频率之差为
