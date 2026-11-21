@@ -1,0 +1,493 @@
+% Irodov Part IV §4.1 original 34--50.
+% User uploaded source PDF pp.167--169, printed 158--160; answers pp.324--325.
+\oscproblem{34}{158}
+图4.9：质量为 $m_1=1.00$kg 的 A 物体与
+$m_2=4.10$kg 的 B 物体由一轻弹簧竖直相连，
+B 支承在地面上。
+A 的自由竖直振动振幅为
+$a=1.6$cm、角频率
+$\omega=25\,\mathrm{s^{-1}}$。
+求装置对地面压力的最大和最小值。
+\exsolution
+将 A、B 及弹簧整体视为系统，
+地面支持力减总重力等于 A 物体的加速度引起的系统竖直合力：
+\[
+N-(m_1+m_2)g=m_1\ddot y_A.
+\]
+A 的加速度振幅为 $a\omega^2$，
+所以
+\[
+\boxed{N_{\max,\min}=
+(m_1+m_2)g\pm m_1a\omega^2}.
+\]
+代入
+$(m_1+m_2)g\approx50$N、
+$m_1a\omega^2=1(0.016)(625)=10$N，
+\[
+\boxed{N_{\max}\simeq60\,\mathrm N,\quad
+N_{\min}\simeq40\,\mathrm N}.
+\]
+\excheck 两值均为正，说明 B 在本题所用数据下保持与地面接触。
+
+\oscproblem{35}{158}
+质量为 $m$ 的小物体放在竖直振动板上，
+板自 $t=0$ 起按
+$y=a(1-\cos\omega t)$ 上下运动，
+$\omega=11\,\mathrm{s^{-1}}$。
+求(a) 当 $a=4.0$cm 时物体压板力随时间变化；
+(b) 开始脱离板的临界振幅；
+(c) 物体在脱板后能上升到相对初始位置
+$h=50$cm 所需的振幅。
+\exsolution
+在未脱离期间，板加速度
+$\ddot y=a\omega^2\cos\omega t$，
+竖直受力
+$N-mg=m\ddot y$。
+因此
+\[
+\boxed{N(t)=mg[1+(a\omega^2/g)\cos\omega t]}.
+\]
+(a) $a=0.040$m 时
+$N/(mg)=1+0.494\cos(11t)$，
+全程正值。
+(b) 最小压力为 $m(g-a\omega^2)$，
+首次可脱离条件 $a\omega^2=g$：
+\[
+\boxed{a_{\min}=g/\omega^2
+\simeq8.1\,\mathrm{cm}}.
+\]
+(c) 脱板时刻满足
+$\cos\omega t_*=-g/(a\omega^2)$。
+那时高度
+$y_*=a+g/\omega^2$，
+向上速度平方
+$v_*^2=a^2\omega^2-g^2/\omega^2$。
+脱板后再升高度
+$v_*^2/(2g)$，
+总最高点
+$h=a+g/(2\omega^2)+a^2\omega^2/(2g)$，
+从而
+\[
+\boxed{a=\frac{\sqrt{2gh}-g/\omega}{\omega}
+\simeq0.20\,\mathrm m}.
+\]
+\excheck (c) 的振幅大于(b)阈值，确保确实会离板；使用二次抛体运动处理脱离后的上升。
+
+\oscproblem{36}{158}
+将质量为 $m$ 的物体悬挂于原先未伸长的竖直弹簧上，
+然后无初速度释放；弹簧劲度系数为 $k$，弹簧质量忽略。
+求(a)下降位置随时间的关系；
+(b)弹簧张力最大与最小值。
+\exsolution
+以弹簧自然长度处的释放位置为 $y=0$、
+向下为正，
+运动方程
+$m\ddot y=mg-ky$，
+令 $\omega=\sqrt{k/m}$，
+初值 $y(0)=\dot y(0)=0$，
+解为
+\[
+\boxed{y_{\rm release}(t)=\frac{mg}{k}
+[1-\cos(\omega t)]}.
+\]
+若严格以新静平衡位置 $y_{\rm eq}=mg/k$ 为零，
+则
+$\boxed{y_{\rm rel.eq}(t)=-(mg/k)\cos\omega t}$。
+弹簧张力 $F_s=ky_{\rm release}(t)$，
+故
+\[
+\boxed{F_{s,\max}=2mg,\qquad
+F_{s,\min}=0}.
+\]
+\excheck 原书文字说“相对于平衡位置的位移”，
+但书末 $[1-\cos]mg/k$ 明显是相对\emph{释放位置}的下降量；
+译稿同时给出两个坐标约定，避免混淆。
+
+\oscproblem{37}{158}
+质量为 $m$ 的粒子受中心回复力
+$\bm F=-\alpha m\bm r$，
+其中 $\alpha>0$。
+初始位置 $\bm r(0)=r_0\bm i$，
+速度 $\bm v(0)=v_0\bm j$。
+求平面运动轨迹。
+\exsolution
+沿两个互相垂直方向分别满足
+$\ddot x+\alpha x=0$、
+$\ddot y+\alpha y=0$。
+令 $\omega=\sqrt\alpha$，
+使用初值：
+\[
+x(t)=r_0\cos\omega t,\qquad
+y(t)=\frac{v_0}{\omega}\sin\omega t.
+\]
+消去时间：
+\[
+\boxed{\frac{x^2}{r_0^2}+
+\frac{\alpha y^2}{v_0^2}=1}.
+\]
+\excheck 轨迹是以原点为中心的椭圆；
+若 $v_0=\sqrt\alpha\,r_0$，特例为圆。
+
+\oscproblem{38}{158}
+质量为 $m$ 的物体悬挂在电梯顶端的轻弹簧下，
+劲度系数 $k$。
+从 $t=0$ 起电梯向上加速，
+物体相对于电梯的初始位移及速度均为零。
+求相对于原静平衡位置的运动规律：
+(a) 电梯加速度 $w$ 恒定；
+(b) $w(t)=\gamma t$。
+\exsolution
+设 $y$ 是相对电梯原静平衡位置的向下位移。
+初始时重力与弹簧力平衡；
+在电梯参考系，新增加的惯性力为 $mw(t)$，
+所以
+\[
+\ddot y+\omega_0^2y=w(t),
+\qquad \omega_0=\sqrt{k/m},
+\quad y(0)=\dot y(0)=0.
+\]
+(a) 对常数 $w$：
+\[
+\boxed{y(t)=\frac w{\omega_0^2}
+(1-\cos\omega_0t)}.
+\]
+(b) 用受迫系统格林函数
+$y(t)=\omega_0^{-1}\int_0^t
+w(s)\sin[\omega_0(t-s)]\,\mathrm ds$，
+当 $w=\gamma t$ 时
+\[
+\boxed{y(t)=\frac{\gamma}{\omega_0^3}
+(\omega_0t-\sin\omega_0t)}.
+\]
+\excheck 两式初始位置、速度为零，
+代回微分方程均得到相应驱动加速度。
+
+\oscproblem{39}{158}
+质量 $m=0.50$kg 的物体悬挂于弹性系数
+$k=50\,\mathrm{N/m}$ 的橡皮绳下。
+向下最多拉离平衡位置多少，释放后振动才仍是谐振动？
+此临界振动能量是多少？
+\exsolution
+橡皮绳只在伸长时产生张力，
+新静平衡伸长量
+$x_0=mg/k$。
+若围绕此点振幅 $A>x_0$，
+上转折点绳将松弛，回复力不再线性。
+临界振幅
+\[
+\boxed{A_{\max}=\frac{mg}{k}
+=\frac{0.50(9.8)}{50}
+=9.8\,\mathrm{cm}\approx10\,\mathrm{cm}}.
+\]
+此时振动能量
+\[
+\boxed{E_{\max}=\frac12kA_{\max}^2
+=\frac{m^2g^2}{2k}\simeq0.24\,\mathrm J}.
+\]
+\excheck 本版书后解析式与上式一致，
+但末尾数值写成约 $4.8\,\mathrm{mJ}$，
+与给定 $m,k$ 不符，差约50倍；记录待核验。
+
+\oscproblem{40}{158--159}
+图4.10：质量为 $m$ 的小球从静止自由落下高度 $h$，
+撞在弹簧秤的无质量托盘上并粘住，
+弹簧刚度为 $k$，初始未压缩。
+求其后的竖直振动振幅和机械振动能量。
+\exsolution
+接触前速度
+$v_0=\sqrt{2gh}$。
+接触后新静平衡弹簧压缩量
+$x_0=mg/k$，
+相对于新平衡位置初始坐标
+$y(0)=-x_0$，初速 $v_0$ 向下。
+角频率 $\omega_0=\sqrt{k/m}$，
+振幅由初始相空间半径给
+\[
+A^2=y(0)^2+\frac{v_0^2}{\omega_0^2}
+=\left(\frac{mg}{k}\right)^2+\frac{2mgh}{k}.
+\]
+所以
+\[
+\boxed{A=\frac{mg}{k}
+\sqrt{1+\frac{2hk}{mg}}},
+\quad
+\boxed{E=\frac12kA^2
+=mgh+\frac{m^2g^2}{2k}}.
+\]
+\excheck 题设托盘无质量，粘住碰撞后球速度仍为
+$\sqrt{2gh}$；若托盘有质量则碰撞时损失动能。
+
+\oscproblem{41}{159}
+承接第40题，现托盘质量为 $M$，
+在物体落下前托盘已停在自身的静平衡位置。
+小球质量 $m$ 从高度 $h$ 落下后粘住托盘。
+求碰撞后共同振动的振幅。
+\exsolution
+小球落下速度 $v_0=\sqrt{2gh}$。
+完全非弹性粘合碰撞，沿竖直方向短时动量守恒，
+新组合体初速
+$v_+=m v_0/(m+M)$。
+托盘原来压缩 $Mg/k$，
+粘合后新平衡压缩
+$(M+m)g/k$，
+因此相对新平衡初始坐标
+$y_0=-mg/k$。
+组合质量为 $m+M$，角频率
+$\omega_0=\sqrt{k/(m+M)}$，
+故
+\[
+\boxed{A=
+\sqrt{\left(\frac{mg}{k}\right)^2+
+\frac{m^2(2gh)}{k(m+M)}}
+=\frac{mg}{k}
+\sqrt{1+\frac{2hk}{(m+M)g}}}.
+\]
+\excheck $M\to0$ 时精确恢复第40题；碰撞中机械能一般不守恒，必须先守恒动量。
+
+\oscproblem{42}{159}
+质量为 $m$ 的粒子在 $xy$ 平面内运动。
+原书题面印作速度相关力
+$\bm F=\alpha(\dot y\bm i+\dot x\bm j)$，
+$\alpha>0$，
+初始 $\bm r(0)=0$、$\bm v(0)=v_0\bm j$。
+求 $x(t),y(t)$ 及轨迹。
+\exsolution
+按\emph{原版题面两个正号}，令
+$\omega=\alpha/m$，
+运动方程为
+$\ddot x=\omega\dot y$、
+$\ddot y=\omega\dot x$。
+初值 $\dot x(0)=0$、$\dot y(0)=v_0$，
+解为
+$\dot x=v_0\sinh\omega t$、
+$\dot y=v_0\cosh\omega t$，
+故
+\[
+\boxed{x(t)=\frac{v_0}{\omega}
+(\cosh\omega t-1),\qquad
+y(t)=\frac{v_0}{\omega}\sinh\omega t}.
+\]
+轨迹为
+\[
+\boxed{\left(1+\frac{\omega x}{v_0}\right)^2-
+\left(\frac{\omega y}{v_0}\right)^2=1}.
+\]
+\emph{书末答案采用另一种力：}
+它写
+$\ddot y=-\omega\dot x$，
+这对应
+$\bm F=\alpha(\dot y\bm i-\dot x\bm j)$，
+此时才是
+$x=(v_0/\omega)(1-\cos\omega t)$、
+$y=(v_0/\omega)\sin\omega t$
+的圆形轨迹。
+\excheck 不能把原题印出的“$+$”悄然改成“$-$”；
+本稿保留字面题面的双曲线解及书末另一个符号模型的圆轨迹，待校对印刷源。
+
+\oscproblem{43}{159}
+图4.11：轻质薄壁球壳半径 $R$，
+内部充满水，球心以轻刚杆悬于点 O，距离为 $\ell$。
+水结冰后小振动周期改变多少倍？
+忽略水的黏度与结冰体积变化。
+\exsolution
+结冰前，水在球壳内近似平动而不随壳整体刚性自转，
+系统可视为质量为 $m$、有效摆长为 $\ell$ 的单摆，
+$J_{\rm liquid}=m\ell^2$。
+结冰后水与壳刚性转动，实心冰球绕球心转动惯量
+$J_c=(2/5)mR^2$，
+绕悬点转动惯量
+$J_{\rm ice}=m\ell^2+(2/5)mR^2$。
+两态重力回复力矩系数相同为 $mg\ell$，
+小摆周期 $T=2\pi\sqrt{J/(mg\ell)}$。
+故
+\[
+\boxed{\frac{T_{\rm ice}}{T_{\rm liquid}}
+=\sqrt{1+\frac25\left(\frac R\ell\right)^2}}.
+\]
+\excheck 比值大于1，结冰后因新增自转惯量而振动变慢。
+
+\oscproblem{44}{159}
+图4.12：一根质量 $m$、长 $\ell$ 的均匀细杆，
+上端 O 铰接，自然垂直向下；
+下端由合刚度为 $k$ 的水平弹簧保持。
+求杆的微小平面摆动角频率。
+\exsolution
+杆相对于 O 转动惯量
+$J=m\ell^2/3$。
+小转角 $\theta$ 时，重力回复力矩
+$\tau_g\simeq-(mg\ell/2)\theta$；
+杆底横移 $\ell\theta$，
+弹簧回复力 $-k\ell\theta$，
+相对 O 的回复力矩
+$\tau_s\simeq-k\ell^2\theta$。
+所以
+\[
+J\ddot\theta+
+\left(\frac{mg\ell}{2}+k\ell^2\right)\theta=0,
+\]
+\[
+\boxed{\omega_0=
+\sqrt{\frac{3g}{2\ell}
+\left(1+\frac{2k\ell}{mg}\right)}}.
+\]
+\excheck $k\to0$ 时还原铰接细杆的物理单摆角频率 $\sqrt{3g/(2\ell)}$。
+
+\oscproblem{45}{159}
+图4.13：质量 $m=1.5$kg 的均匀水平杆由两条
+长 $\ell=90$cm 的相同细绳悬吊，
+绕竖直中心轴转动，
+两绳偏离竖直的最大角度
+$\alpha=5.0^\circ$，然后释放。
+求(a)小转角振动周期；(b)振动能量。
+\exsolution
+设杆长（两悬点间距）为 $d$，
+绕竖直中心轴转动惯量
+$J=md^2/12$。
+小转角 $\varphi$ 使两绳的横向偏移量约为 $d\varphi/2$，
+对应绳倾角 $\alpha\simeq d\varphi/(2\ell)$，
+支承高度每条绳缩短
+$\Delta h\simeq\ell\alpha^2/2$，
+重力势能增加
+$U\simeq mg\ell\alpha^2/2
+=mgd^2\varphi^2/(8\ell)$。
+故扭转回复刚度 $k_\varphi=mgd^2/(4\ell)$，
+\[
+\boxed{T=2\pi\sqrt{\frac{J}{k_\varphi}}
+=2\pi\sqrt{\frac{\ell}{3g}}
+\simeq1.1\,\mathrm s}.
+\]
+最大偏角 $\alpha$ 时全部能量为
+\[
+\boxed{E=\frac12mg\ell\alpha^2
+\simeq0.050\,\mathrm J}.
+\]
+\excheck $d$ 在周期中消去；$\alpha$ 计算时应换成弧度。
+
+\oscproblem{46}{160}
+图4.14：均匀水平圆盘质量为 $m$、半径 $R$，
+用扭转系数为 $k$ 的细杆悬挂。
+初始扭转角为 $\varphi_0$，
+同时给予有向角速度 $\dot\varphi_0$。
+求扭转小振动振幅及能量。
+\exsolution
+圆盘相对中心竖轴的转动惯量
+$J=mR^2/2$，
+运动方程
+$J\ddot\varphi+k\varphi=0$，
+频率
+$\omega_0=\sqrt{k/J}$。
+由初始相空间关系
+$\varphi_m^2=\varphi_0^2+
+\dot\varphi_0^2/\omega_0^2$，
+得到
+\[
+\boxed{\varphi_m=
+\sqrt{\varphi_0^2+\frac{mR^2}{2k}
+\dot\varphi_0^{\,2}}},
+\quad
+\boxed{E=\frac12k\varphi_m^2}.
+\]
+\excheck 原书对初始角与角速度的文字排印符号接近；
+译稿用 $\varphi_0$ 与 $\dot\varphi_0$ 明确区分。
+
+\oscproblem{47}{160}
+均匀细杆质量 $m$、长度 $\ell$，
+绕上端水平轴作小角振动。
+初始偏角为 $\theta_0$、
+角速度为 $\dot\theta_0$。
+求平均一个周期内的动能。
+\exsolution
+杆转动惯量
+$J=m\ell^2/3$，
+重力小角回复系数
+$K=mg\ell/2$。
+振动总能量
+$E=\tfrac12J\dot\theta_0^2+
+\tfrac12K\theta_0^2$。
+简谐振动中一周期平均动能等于总能量的一半，
+所以
+\[
+\boxed{\langle T_k\rangle=
+\frac14J\dot\theta_0^2+
+\frac14K\theta_0^2
+=\frac{m\ell^2\dot\theta_0^2}{12}
++\frac{mg\ell\theta_0^2}{8}}.
+\]
+\excheck 小角近似中 $\theta_0$ 须以弧度计；$E/2$ 的等分仅指完整周期平均。
+
+\oscproblem{48}{160}
+物理单摆的质心高于悬挂点，
+起初处于倒立不稳定平衡附近。
+它开始倒下、经过最低稳定平衡位置时的角速度为 $\Omega$。
+忽略摩擦，求最低位置附近小角振动周期。
+\exsolution
+设悬点到质心距离为 $h$，
+转动惯量为 $J$。
+从上方倒立平衡到下方稳定平衡，重力势能下降
+$2mgh$，所以
+$\tfrac12J\Omega^2=2mgh$，
+即
+$mg h/J=\Omega^2/4$。
+下方小振动角频率
+$\omega_0=\sqrt{mgh/J}=\Omega/2$，
+所以
+\[
+\boxed{T=\frac{2\pi}{\omega_0}
+=\frac{4\pi}{\Omega}}.
+\]
+\excheck 严格在不稳定平衡点零初速会永远不动；
+按题意需有任意微小扰动使其开始下落。
+
+\oscproblem{49}{160}
+物理单摆原来的小振动角频率
+$\omega_1=15.0\,\mathrm{s^{-1}}$；
+在距悬点下方 $\ell=20$cm 处固定一小物体，
+质量 $m=50$g，
+新角频率变成
+$\omega_2=10.0\,\mathrm{s^{-1}}$。
+求原单摆对悬点的转动惯量。
+\exsolution
+原摆的重力回复力矩系数设为 $K$，
+有
+$K=J\omega_1^2$。
+增加小质量后
+$K'=K+mg\ell$，
+$J'=J+m\ell^2$。
+新频率满足
+\[
+\omega_2^2=
+\frac{J\omega_1^2+mg\ell}{J+m\ell^2}.
+\]
+解出
+\[
+\boxed{J=
+\frac{m\ell^2(\omega_2^2-g/\ell)}
+{\omega_1^2-\omega_2^2}}
+\simeq8.2\times10^{-4}\,\mathrm{kg\,m^2}
+=0.82\,\mathrm{g\,m^2}}.
+\]
+\excheck 因 $J>0$，需
+$\omega_2^2>g/\ell$；本题数值满足。
+
+\oscproblem{50}{160}
+两个物理单摆绕同一水平轴作小振动，
+角频率分别为 $\omega_1,\omega_2$，
+转动惯量为 $J_1,J_2$。
+在稳定平衡位置把它们刚性连在一起，
+求复合单摆频率。
+\exsolution
+单摆小角回复力矩系数
+$K_i=J_i\omega_i^2$。
+刚性连接后两摆偏角相同，
+总转动惯量
+$J=J_1+J_2$，
+总回复系数
+$K=K_1+K_2$。
+所以
+\[
+\boxed{\omega=
+\sqrt{\frac{J_1\omega_1^2+J_2\omega_2^2}
+{J_1+J_2}}}.
+\]
+\excheck $\omega^2$ 是两频率平方的惯量加权平均，
+因此 $\min(\omega_1,\omega_2)\le\omega\le\max(\omega_1,\omega_2)$。
