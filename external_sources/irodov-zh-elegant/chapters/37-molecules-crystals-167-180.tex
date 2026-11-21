@@ -1,0 +1,338 @@
+% 原书第六篇6.4节：分子与晶体167--180题。
+% 底本 Irodov Problems in General Physics 印刷页251--253，PDF页260--262；
+% 原书书末答案印刷346--347，PDF355--356。
+\moleculeproblem{167}{251}
+双硫分子 $\mathrm{S_2}$ 的两核距离 $d=189\,\mathrm{pm}$。
+求其被激发到第一个转动激发态时的角速度。
+\exsolution
+两个相同硫原子质量为 $m_S$，绕质心转动惯量
+$I=2m_S(d/2)^2=m_Sd^2/2$。
+量子转子角动量模为
+$L_J=\hbar\sqrt{J(J+1)}$；第一个激发态 $J=1$，
+所以 $L_1=\sqrt2\hbar$，而 $L=I\Omega$。
+\[
+ \boxed{\Omega=\frac{\sqrt2\hbar}{I}
+ =\frac{2\sqrt2\hbar}{m_Sd^2}
+ \simeq1.57\times10^{11}\,\mathrm{s^{-1}}}.
+\]
+\excheck 使用角动量的模 $\sqrt{J(J+1)}\hbar$，
+不能在本题直接把 $J\hbar$ 视为转动角动量。
+
+\moleculeproblem{168}{251}
+HCl 分子的相邻两个转动能级之差为
+$\Delta E=7.86\,\mathrm{meV}$，核间距
+$d=127.5\,\mathrm{pm}$。
+求两能级的转动量子数。
+\exsolution
+刚性转子的能级为
+$E_J=\hbar^2J(J+1)/(2I)$，
+$I=\mu d^2$，
+$\mu=m_Hm_{\mathrm{Cl}}/(m_H+m_{\mathrm{Cl}})$。
+于是
+\[
+ E_{J+1}-E_J=\frac{\hbar^2}{I}(J+1),\qquad
+ J+1=\frac{I\Delta E}{\hbar^2}.
+\]
+代入 $m_H\simeq1.008u$、$m_{\mathrm{Cl}}\simeq35.45u$
+得 $J+1\simeq3.00$，故
+\[
+ \boxed{J=2,\quad J'=3}.
+\]
+\excheck 能级间隔与 $J+1$ 成正比，非恒定能量间隔。
+
+\moleculeproblem{169}{251}
+氧分子 $\mathrm{O_2}$ 核间距为
+$d=121\,\mathrm{pm}$，转动能量
+$E_{\mathrm{rot}}=2.16\,\mathrm{meV}$。
+求转动角动量模。
+\exsolution
+两氧核等质量，转动惯量
+$I=m_Od^2/2$。
+由经典转动能与量子转子能级一致的关系
+$E=L^2/(2I)$，有
+\[
+ \boxed{L=\sqrt{2IE}
+ =\sqrt{m_Od^2E}
+ \simeq3.48\hbar\approx3.5\hbar}.
+\]
+\excheck 此处 $L$ 是角动量的模，
+单位 $\mathrm{J\,s}$；不能仅凭能量直接令 $L=J\hbar$。
+
+\moleculeproblem{170}{251}
+证明双原子分子的纯转动谱相邻谱线角频率间隔相等。
+若 CH 分子的谱线角频率间隔
+$\Delta\omega=5.47\times10^{12}\,\mathrm{s^{-1}}$，
+求转动惯量与核间距。
+\exsolution
+转动跃迁遵守 $\Delta J=1$，
+其光子角频率
+\[
+ \omega_{J\to J+1}=
+ \frac{E_{J+1}-E_J}{\hbar}
+ =\frac{\hbar}{I}(J+1).
+\]
+因此相邻谱线的间隔
+$\Delta\omega=\hbar/I$，
+与 $J$ 无关。由此
+\[
+ \boxed{I=\frac{\hbar}{\Delta\omega}
+ \simeq1.93\times10^{-47}\,\mathrm{kg\,m^2}
+ =1.93\times10^{-40}\,\mathrm{g\,cm^2}}.
+\]
+设约化质量 $\mu=m_Cm_H/(m_C+m_H)$，
+$I=\mu d^2$，从而
+\[
+ \boxed{d=\sqrt{I/\mu}\simeq112\,\mathrm{pm}}.
+\]
+\excheck 角频率差对应 $\hbar$ 而非普通频率差对应的 $h$。
+
+\moleculeproblem{171}{252}
+HF 分子的自然振动角频率
+$\omega_v=7.79\times10^{14}\,\mathrm{s^{-1}}$，
+核间距 $d=91.7\,\mathrm{pm}$。
+忽略转动--振动耦合，
+问从振动基态到第一振动激发态之间
+容纳多少个转动激发能级？
+\exsolution
+第一振动能隙为 $\hbar\omega_v$。
+转动能量
+$E_J-E_0=\hbar^2J(J+1)/(2I)$，
+$I=\mu d^2$，$\mu=m_Hm_F/(m_H+m_F)$。
+低于振动激发能的转动能级满足
+\[
+ J(J+1)<\frac{2I\omega_v}{\hbar}.
+\]
+代入数据解得
+$J<13.56$，允许正整数 $J=1,2,\ldots,13$，
+因此
+\[
+ \boxed{13\text{ 个转动激发能级}}.
+\]
+\excheck 原有 $J=0$ 是转动基态，
+不计入题目要求的“在其间的激发能级”。
+
+\moleculeproblem{172}{252}
+CO 分子自然振动角频率
+$\omega_v=4.09\times10^{14}\,\mathrm{s^{-1}}$，
+转动惯量 $I=1.44\times10^{-39}\,\mathrm{g\,cm^2}$。
+估算纯转动谱能够出现多少条谱线。
+\exsolution
+约束转动能不超过一个振动量子
+$\hbar\omega_v$，即
+\[
+ \frac{\hbar^2}{2I}J(J+1)<\hbar\omega_v.
+\]
+对于 $J\gg1$，得到
+$J_{\max}\simeq\sqrt{2I\omega_v/\hbar}$。
+纯转动跃迁由相邻 $J$ 能级产生，
+因此光谱线数约为
+\[
+ \boxed{N\simeq\sqrt{\frac{2I\omega_v}{\hbar}}
+ \simeq33}.
+\]
+\excheck 估计线数需要对
+$J(J+1)$ 开平方；若误用 $2I\omega_v/\hbar$
+直接计数，会高估到千余条。
+
+\moleculeproblem{173}{252}
+推导双原子分子转动能量 $E$ 处
+单位能量间隔中的转动能级数 $dN/dE$，
+并计算核间距 $d=267\,\mathrm{pm}$、
+处于 $J=10$ 的 $\mathrm{I_2}$ 分子该值。
+\exsolution
+能量 $E_J=\hbar^2J(J+1)/(2I)$，
+高 $J$ 下将 $J$ 视为连续变量：
+\[
+ \frac{dN}{dE}\simeq\frac{dJ}{dE}
+ =\frac{2I}{\hbar^2(2J+1)}
+ =\frac{I}{\hbar^2\sqrt{1+8IE/\hbar^2}}.
+\]
+若 $J\gg1$，进一步化为
+$\sqrt{I/(2\hbar^2E)}$。
+对 $\mathrm{I_2}$，$I=m_Id^2/2$；
+$J=10$ 时
+\[
+ \boxed{\frac{dN}{dE}\simeq
+ \frac{I}{10.5\hbar^2}
+ \simeq1.03\times10^4\,\mathrm{eV^{-1}}}.
+\]
+\excheck 这里的能级密度不计每个 $J$ 的
+$2J+1$ 磁量子态简并度；若计态密度须另乘简并度。
+
+\moleculeproblem{174}{252}
+求将双原子分子激发到第一振动激发态
+和第一转动激发态所需能量之比。
+分别估算 $\mathrm{H_2}$（$\omega=8.3\times10^{14}\,\mathrm{s^{-1}}$、
+$d=74\,\mathrm{pm}$）、HI（$4.35\times10^{14}$、
+$160\,\mathrm{pm}$）、$\mathrm{I_2}$（$0.40\times10^{14}$、
+$267\,\mathrm{pm}$）。
+\exsolution
+第一振动激发能 $\Delta E_v=\hbar\omega$；
+第一转动激发能为
+$E_1-E_0=\hbar^2/I$，其中
+$I=\mu d^2$。所以
+\[
+ \boxed{\frac{\Delta E_v}{\Delta E_r}
+ =\frac{I\omega}{\hbar}
+ =\frac{\mu d^2\omega}{\hbar}}.
+\]
+取对应约化质量代入，
+\[
+ \boxed{\mathrm{H_2}:36,\qquad
+ \mathrm{HI}:1.75\times10^2,\qquad
+ \mathrm{I_2}:2.85\times10^3}.
+\]
+\excheck 振动量子通常显著高于转动量子；
+原书 $\mathrm{I_2}$ 给约 $2.9\times10^3$。
+
+\moleculeproblem{175}{252}
+氢分子振动角频率
+$\omega=8.25\times10^{14}\,\mathrm{s^{-1}}$，
+核间距 $d=74\,\mathrm{pm}$。
+在温度 $T=875\,\mathrm K$ 时，
+求处于第一振动激发能级 $v=1$
+与第一转动激发能级 $J=1$ 的分子数比。
+转动简并度为 $2J+1$。
+\exsolution
+振动 $v=1$ 与振动基态之差为
+$\hbar\omega$；
+第一转动激发能为
+$\hbar^2/I=2B$，记 $B=\hbar^2/(2I)$。
+忽略两自由度耦合，取相应激发态热平衡比例，
+转动态 $J=1$ 的权重为3，
+故
+\[
+ \boxed{\frac{N_{v=1}}{N_{J=1}}
+ =\frac13\exp\!\left[
+ -\frac{\hbar\omega-\hbar^2/I}{k_BT}\right]
+ \simeq3.0\times10^{-4}}.
+\]
+\excheck 必须纳入 $J=1$ 的三重转动简并，
+否则比例高估3倍。
+
+\moleculeproblem{176}{252}
+用玻尔兹曼分布推导谐振子的平均能量，
+并求双原子气体摩尔振动热容 $C_{V,\mathrm{vib}}$。
+对氯气 $\mathrm{Cl_2}$，$\omega=1.064\times10^{14}\,\mathrm{s^{-1}}$，
+$T=300\,\mathrm K$，计算数值。
+\exsolution
+设 $\beta=1/(k_BT)$，
+$E_v=\hbar\omega(v+1/2)$，
+配分函数
+\[
+ Z=\sum_{v=0}^\infty e^{-\beta E_v}
+ =\frac{e^{-\beta\hbar\omega/2}}{1-e^{-\beta\hbar\omega}}.
+\]
+平均能量
+$\overline E=-\partial_\beta\ln Z$，得
+\[
+ \boxed{\overline E=
+ \frac{\hbar\omega}{2}
+ +\frac{\hbar\omega}{e^{\hbar\omega/(k_BT)}-1}}.
+\]
+取 $x=\hbar\omega/(k_BT)$，
+对一摩尔的 $N_A\overline E$ 求导，
+\[
+ \boxed{C_{V,\mathrm{vib}}=
+ R\frac{x^2e^x}{(e^x-1)^2}}.
+\]
+氯气 $x\simeq2.709$，所以
+$\boxed{C_{V,\mathrm{vib}}\simeq0.561R
+ \simeq4.66\,\mathrm{J/(mol\,K)}}$。
+\excheck 零点能 $\hbar\omega/2$ 虽计入内能，
+但与温度无关，对热容没有贡献。
+
+\moleculeproblem{177}{252}
+HCl 发射谱转动--振动带中心的零级线不允许出现，
+相邻谱线角频率间隔
+$\Delta\omega=0.79\times10^{13}\,\mathrm{s^{-1}}$。
+求 HCl 核间距。
+\exsolution
+振转跃迁遵守 $\Delta J=\pm1$，
+两支谱线在带中心邻线的角频率间隔等于
+$2\hbar/I$，其中 $I=\mu d^2$。
+因此
+\[
+ \boxed{d=\sqrt{\frac{2\hbar}{\mu\Delta\omega}}
+ \simeq1.28\times10^{-10}\,\mathrm m
+ \simeq0.13\,\mathrm{nm}}.
+\]
+\excheck 使用带中心缺失零级线的几何事实
+来辨认给定间隔；换用普通频率需乘 $2\pi$。
+
+\moleculeproblem{178}{252}
+单色入射光波长 $\lambda_0=404.7\,\mathrm{nm}$，
+氟分子 $\mathrm{F_2}$ 的自然振动角频率
+$\omega_v=2.15\times10^{14}\,\mathrm{s^{-1}}$。
+求最靠近未移频线的红、紫拉曼伴线波长。
+\exsolution
+斯托克斯伴线光子频率减少振动频率，
+反斯托克斯线频率增加振动频率，
+\[
+ \frac{2\pi c}{\lambda_r}=
+ \frac{2\pi c}{\lambda_0}-\omega_v,\qquad
+ \frac{2\pi c}{\lambda_v}=
+ \frac{2\pi c}{\lambda_0}+\omega_v.
+\]
+解得
+\[
+ \boxed{\lambda_r=
+ \frac{\lambda_0}{1-\omega_v\lambda_0/(2\pi c)}
+ \simeq424\,\mathrm{nm}},\quad
+ \boxed{\lambda_v=
+ \frac{\lambda_0}{1+\omega_v\lambda_0/(2\pi c)}
+ \simeq387\,\mathrm{nm}}.
+\]
+\excheck 红伴线的光子能量低、波长长；
+紫伴线相反，符号不可交换。
+
+\moleculeproblem{179}{253}
+双硫分子 $\mathrm{S_2}$ 的拉曼红、紫近邻伴线波长
+分别为 $346.6\,\mathrm{nm}$ 和 $330.0\,\mathrm{nm}$。
+求分子的自然振动角频率与拟弹性回复力系数。
+\exsolution
+拉曼两线对入射角频率对称，
+两者角频率之差为 $2\omega_v$，于是
+\[
+ \boxed{\omega_v=\pi c\left(
+ \frac1{\lambda_v}-\frac1{\lambda_r}\right)
+ \simeq1.367\times10^{14}\,\mathrm{s^{-1}}}.
+\]
+近似谐振子有
+$\omega_v^2=\kappa/\mu$，
+两同质量硫原子的约化质量 $\mu=m_S/2$，
+故
+\[
+ \boxed{\kappa=\mu\omega_v^2
+ \simeq4.97\times10^2\,\mathrm{N/m}
+ =4.97\,\mathrm{N/cm}}.
+\]
+\excheck 将 $\mathrm{N/m}$ 换成 $\mathrm{N/cm}$
+必须除以100，不可漏换单位。
+
+\moleculeproblem{180}{253}
+对 $\mathrm{Cl_2}$ 分子的拉曼近邻紫、红伴线，
+在 $T=300\,\mathrm K$、
+$\omega_v=1.06\times10^{14}\,\mathrm{s^{-1}}$ 时，
+求强度比 $I_v/I_r$，
+以及温度加倍后该比值增加倍数。
+\exsolution
+斯托克斯（红线）强度与
+$v\to v+1$ 的占据权重成正比；
+反斯托克斯（紫线）强度与
+$v+1\to v$ 的占据权重成正比。
+谐振子热平衡给
+$N_{v+1}/N_v=e^{-\hbar\omega_v/(k_BT)}$，
+因而
+\[
+ \boxed{\frac{I_v}{I_r}
+ =e^{-\hbar\omega_v/(k_BT)}
+ \simeq0.0673}.
+\]
+温度倍增到 $2T$ 时，
+\[
+ \boxed{\frac{(I_v/I_r)_{2T}}{(I_v/I_r)_T}
+ =e^{\hbar\omega_v/(2k_BT)}\simeq3.86}.
+\]
+\excheck 采用原书近似，忽略两伴线光频
+四次幂的微小散射效率修正。
