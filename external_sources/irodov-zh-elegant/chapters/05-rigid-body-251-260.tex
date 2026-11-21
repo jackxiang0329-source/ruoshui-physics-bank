@@ -1,0 +1,374 @@
+% Irodov, user-provided PDF, printed pp. 39--41; PDF pp. 48--50.
+% Original diagrams 1.59--1.66 were inspected for pulley, spool and rolling constraints.
+
+\exproblem{251}{39}
+半径为 $R$、质量为 $M$ 的均匀实心圆柱可绕固定的水平轴
+$O$ 无摩擦转动。质量为 $m$、总长为 $\ell$ 的均匀轻柔细绳
+沿圆柱表面缠绕成一层（图1.59），自由下垂部分长为 $x$。
+题目规定缠绕部分的质心可视为在圆柱轴上。
+求圆柱的角加速度 $\beta(x)$。
+\exsolution
+记绳线密度为 $\lambda=m/\ell$，下垂部分质量为
+$m_h=mx/\ell$，它随圆柱放绳以速率 $v=R\omega$
+向下运动。缠绕部分虽质心位于轴上，其质量仍以角速度
+$\omega$ 随圆柱转动，因此旋转惯量约为
+$I_w=(m-m_h)R^2$；均匀圆柱惯量
+$I_c=\frac12MR^2$。
+将下垂绳的平动动能也用 $\omega$ 表示：
+\[
+K=\tfrac12 I_c\omega^2+
+\tfrac12(m-m_h)R^2\omega^2+
+\tfrac12m_hR^2\omega^2
+=\tfrac12(\tfrac12M+m)R^2\omega^2.
+\]
+下垂部分对轴的重力力矩为
+$\tau_g=m_hgR$；当绳从缠绕部分转换为下垂部分时，
+上述总等效惯量不变。由角动量平衡：
+\[
+(\tfrac12M+m)R^2\beta
+=\frac{mx}{\ell}gR.
+\]
+因此
+\[
+\boxed{\beta(x)=\frac{2mgx}{R\ell(M+2m)}}.
+\]
+\excheck 当 $x=0$ 时 $\beta=0$；若漏算绳的缠绕部分
+转动惯量或下垂部分平动动能，都不能得到原书的分母 $M+2m$。
+
+\exproblem{252}{39--40}
+质量 $m$、半径 $R$ 的均匀实心球沿倾角为
+$\alpha$ 的斜面无滑动滚下。求：
+(a) 保证不打滑的最小静摩擦系数；
+(b) 从静止起运动 $t$ 秒后的球的总动能。
+\exsolution
+令质心沿斜面向下加速度为 $a$，
+接触静摩擦力大小为 $f$，方向沿斜面向上。
+牛顿第二定律及绕球心的转动方程：
+\[
+mg\sin\alpha-f=ma,\quad
+fR=I_C\beta,\quad
+I_C=\tfrac25mR^2,\quad a=R\beta.
+\]
+由后两式 $f=\frac25ma$，
+代入第一式得
+$a=\frac57g\sin\alpha$，
+$f=\frac27mg\sin\alpha$。
+支持力 $N=mg\cos\alpha$，
+要求 $f\le kN$，故
+\[
+\boxed{k\ge\frac27\tan\alpha}.
+\]
+从静止开始 $v=at$，
+总动能为质心平动加自转：
+\[
+K=\frac12mv^2+\frac12I_C(v/R)^2
+=\frac7{10}mv^2
+=\boxed{\frac5{14}mg^2t^2\sin^2\alpha}.
+\]
+\excheck 静摩擦阻止滑动但接触点瞬时静止，
+在理想静止斜面上它不作机械功；
+总动能增加来自重力势能下降。
+
+\exproblem{253}{40}
+一根质量 $m=8.0\,\mathrm{kg}$、半径
+$R=1.3\,\mathrm{cm}$ 的均匀实心圆柱
+由两根对称细绳悬挂，绳端固定于天花板，
+圆柱从静止开始因重力向下放绳（图1.60）。
+求：(a) 每根绳的张力及圆柱角加速度；
+(b) 重力瞬时功率 $P(t)$。
+\exsolution
+设质心向下加速度为 $a$、
+每根绳张力为 $T$。两绳无滑动放开，
+角加速度 $\beta=a/R$。
+力平衡与转动方程为
+\[
+mg-2T=ma,\qquad
+2TR=I_C\beta=\tfrac12mR^2(a/R).
+\]
+第二式给出 $2T=\frac12ma$，
+代回得 $a=\frac23g$。
+所以
+\[
+\boxed{T=\frac16mg\simeq13.1\,\mathrm N},
+\qquad
+\boxed{\beta=\frac{2g}{3R}\simeq5.03\times10^2\,
+\mathrm{rad/s^2}}.
+\]
+从静止开始质心速度为 $v=at=(2g/3)t$，
+重力功率等于重力与速度点积：
+\[
+\boxed{P_g(t)=mgv=\frac23mg^2t}.
+\]
+\excheck 对两根绳应使用\emph{总张力 $2T$}列质心方程，
+不能误用单根张力。
+
+\exproblem{254}{40}
+一根均匀实心圆柱质量为 $m$，
+两端细绳对称缠绕于圆柱且自由端固定在电梯天花板。
+电梯从静止开始以恒定加速度 $a_0$ \emph{向上}运动。
+求：(a) 圆柱相对电梯的加速度；
+(b) 圆柱通过两绳对天花板的总作用力大小。
+\exsolution
+以电梯为参考系，并约定\emph{向下}为圆柱相对加速度
+$a'$ 的正方向。因电梯向上加速，
+电梯系的等效重力场为
+$g_{\mathrm{eff}}=g+a_0$，而不是 $g-a_0$。
+设每根绳张力为 $T$，圆柱实心惯量
+$I_C=\frac12mR^2$。方程为
+\[
+m(g+a_0)-2T=ma',\qquad
+2TR=I_C\frac{a'}R.
+\]
+于是 $2T=\frac12ma'$，
+从而 $m(g+a_0)=\frac32ma'$：
+\[
+\boxed{a'=\frac23(g+a_0)\quad\text{（相对电梯向下）}},
+\]
+\[
+\boxed{F_{\mathrm{ceiling}}=2T=\frac13m(g+a_0)
+\quad\text{（对天花板向下）}}.
+\]
+\excheck 本版书末答案将两式写为 $g-a_0$，
+与题面明确的“电梯向上加速”不相容；它对应
+\emph{电梯向下加速}的另一模型。
+本稿按原题方向列受力，并将差异列入勘误记录。
+
+\exproblem{255}{40}
+质量 $m=200\,\mathrm g$ 的线轴位于倾角
+$\alpha=30^\circ$ 的光滑斜面上，
+其细绳自由端固定于上方墙壁（原图1.61）。
+线轴对自转轴的转动惯量为
+$I=0.45\,\mathrm{g\,m^2}$，
+绕绳层半径 $r=3.0\,\mathrm{cm}$。
+绳无滑动地绕线轴放开，求线轴中心加速度。
+\exsolution
+沿斜面向下为正，设线轴中心加速度为 $a$，
+绳张力为 $T$，角加速度为 $\beta$。
+细绳与线轴接触处相对固定线端无滑动，
+因此 $a=r\beta$。
+沿斜面平动及绕质心转动方程分别为
+\[
+mg\sin\alpha-T=ma,\qquad
+Tr=I\beta=I\frac ar.
+\]
+从而 $T=Ia/r^2$，得到
+\[
+\boxed{a=\frac{g\sin\alpha}{1+I/(mr^2)}}.
+\]
+按题面\emph{明确印出的单位}
+$0.45\,\mathrm{g\,m^2}=4.5\times10^{-4}
+\,\mathrm{kg\,m^2}$，代入
+$I/(mr^2)=2.50$：
+\[
+\boxed{a\simeq\frac{9.81\cdot0.5}{3.50}
+\simeq1.40\,\mathrm{m/s^2}}.
+\]
+\excheck 底本书末给约 $1.6\,\mathrm{m/s^2}$，
+但题面数据和所印公式给出约 $1.4\,\mathrm{m/s^2}$。
+这属于源书数值冲突，不能通过擅改惯量单位来掩盖。
+
+\exproblem{256}{40}
+质量为 $m$ 的均匀实心圆柱放在两块平行、水平的
+粗糙窄支撑板上（图1.62）。
+细绳缠绕在圆柱表面，自由端受恒定竖直向下拉力 $F$。
+圆柱与支撑板之间的静摩擦系数为 $k$。
+求使圆柱仍能在板上无滑动滚动的最大拉力
+$F_{\max}$ 及此时圆柱轴线的最大平动加速度。
+\exsolution
+由图中的细绳下拉，圆柱作平面滚动；
+沿滚动方向只有支撑板施加的水平静摩擦合力 $f$，
+所以 $f=ma$。
+关于圆柱质心的转动方程（下拉力和摩擦力矩相反）：
+\[
+(F-f)R=I_C\beta,\qquad
+I_C=\tfrac12mR^2,\quad \beta=\frac aR.
+\]
+故 $F-f=\frac12ma$，
+结合 $f=ma$ 可得
+\[
+\boxed{a=\frac{2F}{3m}},\qquad
+f=\frac{2F}{3}.
+\]
+竖直方向支撑板共同支持
+$N=mg+F$；在无滑动极限有
+$f_{\max}=kN$。因此
+\[
+\frac{2F_{\max}}{3}=k(mg+F_{\max}),
+\qquad
+\boxed{F_{\max}=\frac{3kmg}{2-3k}},
+\]
+\[
+\boxed{a_{\max}=\frac{2kg}{2-3k}}.
+\]
+\excheck 这两个有限上界只适用于 $0\le k<2/3$。
+在理想库仑静摩擦模型且 $k\ge2/3$ 时，
+上述不滑动条件对任意有限 $F$ 均可满足，
+题目就没有有限的 $F_{\max}$。
+原书第256题末尾误出现“rolling down the inclined plane”
+字样，但图1.62明确是水平支撑板；
+本稿采用图示装置，指出文字拼接歧义。
+
+\exproblem{257}{40--41}
+线轴质量 $m$，外半径 $R$、绕线层半径 $r$，
+绕自转轴的转动惯量
+$I=\gamma mR^2$。
+线轴在粗糙\emph{水平}面上无滑动滚动。
+按原图1.63，轻绳沿内层的上侧切向受恒力
+$F$，拉力与水平正向 $x$ 夹角为 $\alpha$。
+求：(a) 轴心加速度的 $x$ 分量；
+(b) 从静止开始前 $t$ 秒拉力做功。
+\exsolution
+取轴心向右加速度为 $a$，
+绕轴角加速度取逆时针为正，接触点无滑动意味着
+$\beta=-a/R$。
+记地面水平摩擦力为 $f$（以右为正），
+平动方程为
+$m a=F\cos\alpha+f$。
+按图，内层拉力对轴心的力矩使线轴顺时针转动，
+故转动方程
+\[
+I\beta=-Fr+fR.
+\]
+代入 $\beta=-a/R$，解出
+$f=Fr/R-Ia/R^2$，再代入平动方程应注意
+图中绳从\emph{上侧}出线时对轴心力矩
+按选定取向是 $+Fr$，即正确写作
+\[
+I(-a/R)=Fr+fR
+\quad\Longrightarrow\quad
+f=-Fr/R-Ia/R^2.
+\]
+故
+\[
+ma=F\cos\alpha-Fr/R-Ia/R^2,
+\]
+最终
+\[
+\boxed{a_x=\frac{F(\cos\alpha-r/R)}{m(1+\gamma)}}.
+\]
+由无滑动，地面静摩擦作用点相对地面瞬时静止，
+故它不作功；刚体从静止开始总动能
+\[
+K=\tfrac12mv_C^2+\tfrac12I(v_C/R)^2
+=\tfrac12m(1+\gamma)(a_xt)^2.
+\]
+因此拉力在前 $t$ 秒的功
+\[
+\boxed{W_F=\frac{F^2t^2(\cos\alpha-r/R)^2}
+{2m(1+\gamma)}}.
+\]
+\excheck 当 $\cos\alpha=r/R$ 时
+加速度和总功均为零（理想瞬态静止）。
+两个方向的受力取向须与图1.63的绕绳方向对应。
+
+\exproblem{258}{41}
+原图1.64中，两根相同的均匀实心圆柱
+每根质量为 $m$、半径为 $R$，
+以两根对称、轻而不可伸长的细绳构成上下联动放绳装置。
+上圆柱轴固定且无摩擦，下圆柱自由悬挂、下落时
+两根绳在上下圆柱处均无滑动。
+求运动时\emph{每根}细绳的张力 $T$。
+\exsolution
+上下两圆柱的自转惯量都为
+$I=\frac12mR^2$，两根绳各张力为 $T$。
+对上圆柱、下圆柱分别列转动方程：
+\[
+I\beta_1=2TR,\qquad I\beta_2=2TR,
+\quad\Longrightarrow\quad
+\beta_1=\beta_2=\frac{4T}{mR}.
+\]
+依图示放绳的两级滚动约束，
+下圆柱质心向下加速度
+$a=R(\beta_1+\beta_2)=8T/m$。
+对下圆柱的质心列竖直方程：
+\[
+mg-2T=ma=8T.
+\]
+因而
+\[
+\boxed{T=\frac{mg}{10}},
+\qquad
+\boxed{a=\frac45g}.
+\]
+\excheck $T$ 是每根绳的张力，不是两绳总张力；
+若误认为上圆柱固定不转，会改变放绳约束并得出错误结果。
+
+\exproblem{259}{41}
+原图1.65为复合卷筒装置：重物 $A$ 质量为 $m$，
+可升降并转动的滑轮 $B$ 质量为 $M$，
+关于其自转轴的惯量为 $I$。
+两层卷绳半径分别为 $R$ 和 $2R$，
+其中小半径绳一端固定于天花板，
+大半径绳连接重物 $A$。从静止释放，
+求重物 $A$ 向下的加速度。
+\exsolution
+设滑轮轴向下位移为 $y$，旋转角为 $\varphi$。
+小半径绳上端固定且无滑动，
+故 $\dot y=R\dot\varphi$。
+大半径的绳从同向另一层放开，使
+重物 $A$ 的下降速度满足
+$\dot z=\dot y+2R\dot\varphi=3\dot y$。
+因此 $\ddot z=3\ddot y$，
+两层无滑动约束已将系统约化为一个自由度。
+总动能为
+\[
+K=\tfrac12M\dot y^2+
+\tfrac12I(\dot y/R)^2+
+\tfrac12m(3\dot y)^2
+=\tfrac12(M+I/R^2+9m)\dot y^2.
+\]
+当滑轮轴下降 $\mathrm dy$ 时，
+重物下降 $3\mathrm dy$，重力作功
+$\mathrm dW_g=(M+3m)g\,\mathrm dy$。
+由拉格朗日方程
+\[
+(M+I/R^2+9m)\ddot y=(M+3m)g.
+\]
+故重物加速度
+\[
+\boxed{a_A=3\ddot y
+=\frac{3g(M+3m)}{M+9m+I/R^2}}
+\quad\text{（向下）}.
+\]
+\excheck 必须区分滑轮轴的加速度 $\ddot y$
+与重物的加速度 $3\ddot y$；
+此式与原书答案一致。
+
+\exproblem{260}{41}
+质量为 $m_1$ 的均匀实心圆柱 $A$
+可绕固定于底座 $B$ 的水平轴无摩擦转动，
+底座质量为 $m_2$ 且能在光滑水平面上平移（图1.66）。
+轻绳绕在圆柱表面，水平自由端 $K$ 受恒力 $F$ 向右拉。
+从静止开始，求：(a) $K$ 点加速度；
+(b) 系统在前 $t$ 秒获得的总动能。
+\exsolution
+整个底座和圆柱的唯一水平外力为 $F$，
+故底座和圆柱轴心共同的水平加速度为
+\[
+a_C=\frac{F}{m_1+m_2}.
+\]
+圆柱绕自身轴受恒定力矩 $FR$，
+角加速度大小
+$\beta=FR/I=2F/(m_1R)$，
+因为 $I=\frac12m_1R^2$。
+按图中放绳切向方向，
+端点 $K$ 的平动加速度为底座平动
+加圆柱边缘的切向相对加速度：
+\[
+a_K=a_C+R\beta
+=\frac F{m_1+m_2}+\frac{2F}{m_1}.
+\]
+因此
+\[
+\boxed{a_K=\frac{F(3m_1+2m_2)}{m_1(m_1+m_2)}}.
+\]
+由于从静止开始、$a_K$ 恒定，
+端点位移为 $s_K=\frac12a_Kt^2$。
+地面光滑、轴无耗散，外力做功全变成总动能：
+\[
+\boxed{K_{\rm system}(t)=Fs_K
+=\frac{F^2t^2(3m_1+2m_2)}
+{2m_1(m_1+m_2)}}.
+\]
+\excheck $K$ 的功应按\emph{绳端位移}计算，
+不能只用底座的位移，否则漏掉圆柱自转动能。
