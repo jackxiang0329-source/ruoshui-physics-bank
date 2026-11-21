@@ -385,10 +385,28 @@ OSC_CHAPTERS = [
     "23-mechanical-oscillations-034-050.tex",
     "23-mechanical-oscillations-051-065.tex",
     "23-mechanical-oscillations-066-081.tex",
+    "23-mechanical-oscillations-082-093.tex",
 ]
 OSC_RANGES = [
     range(1, 21), range(21, 34), range(34, 51),
-    range(51, 66), range(66, 82),
+    range(51, 66), range(66, 82), range(82, 94),
+]
+ELEC_OSC_CHAPTERS = [
+    "24-electric-oscillations-094-109.tex",
+    "24-electric-oscillations-110-125.tex",
+    "24-electric-oscillations-126-137.tex",
+    "24-electric-oscillations-138-149.tex",
+]
+ELEC_OSC_RANGES = [
+    range(94, 110), range(110, 126),
+    range(126, 138), range(138, 150),
+]
+WAVES_CHAPTERS = [
+    "25-elastic-waves-150-165.tex",
+    "25-elastic-waves-166-181.tex",
+]
+WAVES_RANGES = [
+    range(150, 166), range(166, 182),
 ]
 
 part_three = []
@@ -444,36 +462,46 @@ if main.count(r"\section{带电粒子在电磁场中的运动") != 1:
     errors.append("Part III charged particles section count is not one")
 
 part_four = []
-if r"\newcommand{\oscproblem}" not in main:
-    errors.append("main.tex missing macro oscproblem")
-for name, expected in zip(OSC_CHAPTERS, OSC_RANGES):
-    path = ROOT / "chapters" / name
-    if not path.exists():
-        errors.append(f"missing: {name}")
-        continue
-    content = path.read_text(encoding="utf-8")
-    ids = [int(x) for x in re.findall(r"\\oscproblem\{(\d+)\}\{", content)]
-    want = list(expected)
-    part_four.extend(ids)
-    if ids != want:
-        errors.append(f"{name}: Part-IV original IDs {ids} != {want}")
-    for command in ("exsolution", "excheck"):
-        count = len(re.findall(r"\\" + command + r"\b", content))
-        if count != len(want):
-            errors.append(f"{name}: {command} count {count} != {len(want)}")
-    if content.count("{") != content.count("}"):
-        errors.append(f"{name}: TeX braces unbalanced")
-    if r"\input{chapters/" + path.stem + "}" not in main:
-        errors.append(f"main.tex missing chapter: {name}")
-if part_four != list(range(1, 82)):
-    errors.append("Part IV independent numbering is not exactly 1..81")
+for macro, filenames, ranges in [
+    ("oscproblem", OSC_CHAPTERS, OSC_RANGES),
+    ("electricoscproblem", ELEC_OSC_CHAPTERS, ELEC_OSC_RANGES),
+    ("waveproblem", WAVES_CHAPTERS, WAVES_RANGES),
+]:
+    if (r"\newcommand{" + chr(92) + macro + "}") not in main:
+        errors.append(f"main.tex missing macro {macro}")
+    for name, expected in zip(filenames, ranges):
+        path = ROOT / "chapters" / name
+        if not path.exists():
+            errors.append(f"missing: {name}")
+            continue
+        content = path.read_text(encoding="utf-8")
+        ids = [int(x) for x in re.findall(
+            r"\\" + macro + r"\{(\d+)\}\{", content)]
+        want = list(expected)
+        part_four.extend(ids)
+        if ids != want:
+            errors.append(f"{name}: Part-IV IDs {ids} != {want}")
+        for command in ("exsolution", "excheck"):
+            count = len(re.findall(r"\\" + command + r"\b", content))
+            if count != len(want):
+                errors.append(f"{name}: {command} count {count} != {len(want)}")
+        if content.count("{") != content.count("}"):
+            errors.append(f"{name}: TeX braces unbalanced")
+        if r"\input{chapters/" + path.stem + "}" not in main:
+            errors.append(f"main.tex missing chapter: {name}")
+if part_four != list(range(1, 182)):
+    errors.append("Part IV independent numbering is not exactly 1..181")
 if main.count(r"\chapter{振动与波动}") != 1:
     errors.append("Part IV chapter count is not one")
 if main.count(r"\section{机械振动") != 1:
     errors.append("Part IV §4.1 mechanical-oscillations section count is not one")
+if main.count(r"\section{电振荡") != 1:
+    errors.append("Part IV §4.2 electric-oscillations section count is not one")
+if main.count(r"\section{弹性波与声学") != 1:
+    errors.append("Part IV §4.3 waves section count is not one")
 
 if errors:
     for e in errors:
         print("FAIL:", e, file=sys.stderr)
     sys.exit(1)
-print("PASS: 388 Part-I + 257 Part-II + 407 Part-III + 81 Part-IV = 1133 translated solved problems in 104 chapter files; all four independent numbering ranges verified")
+print("PASS: 388 Part-I + 257 Part-II + 407 Part-III + 181 Part-IV = 1233 translated solved problems in 111 chapter files; all four independent numbering ranges verified")
