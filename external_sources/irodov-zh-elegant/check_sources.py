@@ -477,6 +477,24 @@ ATOMIC_TERMS_CHAPTERS = [
 ATOMIC_TERMS_RANGES = [range(97, 105), range(105, 118), range(118, 135),
                        range(135, 148), range(148, 159), range(159, 167)]
 
+MOLECULE_CHAPTERS = [
+    "37-molecules-crystals-167-180.tex",
+    "37-molecules-crystals-181-196.tex",
+    "37-molecules-crystals-197-213.tex",
+]
+MOLECULE_RANGES = [range(167, 181), range(181, 197), range(197, 214)]
+RADIOACTIVITY_CHAPTERS = [
+    "38-radioactivity-214-226.tex",
+    "38-radioactivity-227-237.tex",
+    "38-radioactivity-238-248.tex",
+]
+RADIOACTIVITY_RANGES = [range(214, 227), range(227, 238), range(238, 249)]
+NUCLEAR_REACTION_CHAPTERS = [
+    "39-nuclear-reactions-249-258.tex",
+    "39-nuclear-reactions-259-266.tex",
+]
+NUCLEAR_REACTION_RANGES = [range(249, 259), range(259, 267)]
+
 part_three = []
 for macro, filenames, expected_ranges in [
     ("electroproblem", ELECTRO_VACUUM_CHAPTERS, ELECTRO_VACUUM_RANGES),
@@ -618,6 +636,9 @@ for macro, filenames, ranges in [
     ("atomicproblem", ATOMIC_CHAPTERS, ATOMIC_RANGES),
     ("wavequantproblem", WAVE_QUANT_CHAPTERS, WAVE_QUANT_RANGES),
     ("atomictermsproblem", ATOMIC_TERMS_CHAPTERS, ATOMIC_TERMS_RANGES),
+    ("moleculeproblem", MOLECULE_CHAPTERS, MOLECULE_RANGES),
+    ("radioactivityproblem", RADIOACTIVITY_CHAPTERS, RADIOACTIVITY_RANGES),
+    ("nuclearreactionproblem", NUCLEAR_REACTION_CHAPTERS, NUCLEAR_REACTION_RANGES),
 ]:
     if (r"\newcommand{" + chr(92) + macro + "}") not in main:
         errors.append(f"main.tex missing macro {macro}")
@@ -640,11 +661,11 @@ for macro, filenames, ranges in [
             errors.append(f"{name}: TeX braces unbalanced")
         if r"\input{chapters/" + path.stem + "}" not in main:
             errors.append(f"main.tex missing chapter: {name}")
-if part_six != list(range(1, 167)):
-    errors.append("Part VI independent numbering is not exactly 1..166")
+if part_six != list(range(1, 267)):
+    errors.append("Part VI independent numbering is not exactly 1..266")
 if main.count(r"\chapter{原子与核物理}") != 1:
     errors.append("Part VI chapter count is not one")
-for heading in ("散射、卢瑟福--玻尔原子", "粒子的波动性质与薛定谔方程", "原子性质与光谱"):
+for heading in ("散射、卢瑟福--玻尔原子", "粒子的波动性质与薛定谔方程", "原子性质与光谱", "分子与晶体", "放射性", "核反应"):
     if main.count(r"\section{" + heading) != 1:
         errors.append(f"Part VI section missing or duplicated: {heading}")
 
@@ -652,4 +673,4 @@ if errors:
     for e in errors:
         print("FAIL:", e, file=sys.stderr)
     sys.exit(1)
-print("PASS: 388 Part-I + 257 Part-II + 407 Part-III + 224 Part-IV + 292 Part-V + 166 Part-VI = 1734 translated solved problems in 152 chapter files; all six independent numbering ranges verified")
+print("PASS: 388 Part-I + 257 Part-II + 407 Part-III + 224 Part-IV + 292 Part-V + 266 Part-VI = 1834 translated solved problems in 160 chapter files; all six independent numbering ranges verified")
