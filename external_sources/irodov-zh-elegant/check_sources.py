@@ -363,9 +363,20 @@ ELECTRO_MAGNET_RANGES = [
 ]
 ELECTRO_INDUCTION_CHAPTERS = [
     "21-induction-288-288.tex",
+    "21-induction-289-304.tex",
+    "21-induction-305-322.tex",
+    "21-induction-323-346.tex",
+    "21-induction-347-371.tex",
 ]
 ELECTRO_INDUCTION_RANGES = [
-    range(288, 289),
+    range(288, 289), range(289, 305), range(305, 323),
+    range(323, 347), range(347, 372),
+]
+ELECTRO_CHARGED_CHAPTERS = [
+    "22-charged-particles-372-388.tex",
+]
+ELECTRO_CHARGED_RANGES = [
+    range(372, 389),
 ]
 
 part_three = []
@@ -376,6 +387,7 @@ for macro, filenames, expected_ranges in [
     ("electrocurrentproblem", ELECTRO_CURRENT_CHAPTERS, ELECTRO_CURRENT_RANGES),
     ("electromagproblem", ELECTRO_MAGNET_CHAPTERS, ELECTRO_MAGNET_RANGES),
     ("electroinductionproblem", ELECTRO_INDUCTION_CHAPTERS, ELECTRO_INDUCTION_RANGES),
+    ("electrochargedproblem", ELECTRO_CHARGED_CHAPTERS, ELECTRO_CHARGED_RANGES),
 ]:
     if (r"\newcommand{" + chr(92) + macro + "}") not in main:
         errors.append(f"main.tex missing macro {macro}")
@@ -400,8 +412,8 @@ for macro, filenames, expected_ranges in [
         entry = r"\input{chapters/" + path.stem + "}"
         if entry not in main:
             errors.append(f"main.tex missing chapter: {name}")
-if part_three != list(range(1, 289)):
-    errors.append("Part III independent numbering is not exactly 1..288")
+if part_three != list(range(1, 389)):
+    errors.append("Part III independent numbering is not exactly 1..388")
 if main.count(r"\chapter{电动力学}") != 1:
     errors.append("Part III chapter count is not one")
 if main.count(r"\section{真空中的恒定电场") != 1:
@@ -416,9 +428,11 @@ if main.count(r"\section{恒定磁场与磁介质") != 1:
     errors.append("Part III magnetostatics section count is not one")
 if main.count(r"\section{电磁感应与麦克斯韦方程") != 1:
     errors.append("Part III induction section count is not one")
+if main.count(r"\section{带电粒子在电磁场中的运动") != 1:
+    errors.append("Part III charged particles section count is not one")
 
 if errors:
     for e in errors:
         print("FAIL:", e, file=sys.stderr)
     sys.exit(1)
-print("PASS: 388 Part-I + 257 Part-II + 288 Part-III = 933 translated solved problems in 93 chapter files; all three independent numbering ranges verified")
+print("PASS: 388 Part-I + 257 Part-II + 388 Part-III = 1033 translated solved problems in 98 chapter files; all three independent numbering ranges verified")
