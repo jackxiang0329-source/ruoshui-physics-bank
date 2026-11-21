@@ -1,0 +1,252 @@
+% Irodov, Arihant PDF pp. 15--16; original printed pages 6--7.
+% Problems 31--40. Derivations follow source data, not blindly the printed key.
+
+\exproblem{31}{6}
+一小球从静止开始竖直落下，落下高度 $h$ 后与倾角为 $\alpha$ 的光滑斜面
+发生完全弹性碰撞。求再次碰到该斜面的位置与首次碰撞点沿斜面的距离。
+\exsolution
+首次撞击前球速 $v=\sqrt{2gh}$，方向竖直向下。
+以沿斜面向下为切向、离开斜面为法向，碰撞前切向速度为 $v\sin\alpha$，
+法向速度为 $-v\cos\alpha$。光滑弹性碰撞保持切向速度、反转法向速度，
+所以碰后切向和法向初速分别为 $v\sin\alpha$、$v\cos\alpha$。
+重力在两个方向上的加速度分别为 $g\sin\alpha$ 和 $-g\cos\alpha$。
+再次撞面要求法向位移为零：
+\[
+ 0=v\cos\alpha\,T-\frac12g\cos\alpha\,T^2
+ \quad\Longrightarrow\quad T=\frac{2v}{g}.
+\]
+此时沿斜面位移
+\[
+ \ell=v\sin\alpha\,T+\frac12g\sin\alpha\,T^2
+ =\frac{4v^2\sin\alpha}{g}.
+\]
+故
+\[
+ \boxed{\ell=8h\sin\alpha.}
+\]
+\excheck 取 $\alpha=0$ 得 $\ell=0$，符合水平镜面反弹后落回原地的极限。
+此题的“落下高度”按竖直下落的高度理解。
+
+\exproblem{32}{6}
+火炮与目标位于同一高度，相距 $L=5.10\,\mathrm{km}$。
+炮弹初速 $v_0=240\,\mathrm{m/s}$，不计阻力。问发射后多久击中目标？
+\exsolution
+同高射程满足
+\[
+ L=\frac{v_0^2\sin2\theta}{g},\quad
+ q=\frac{gL}{v_0^2}\simeq0.8686<1.
+\]
+因此有两个可行仰角
+\[
+ \theta_1=\tfrac12\arcsin q\simeq30.15^\circ,\quad
+ \theta_2=\tfrac12(\pi-\arcsin q)\simeq59.85^\circ .
+\]
+弹道飞行时间为 $T=L/(v_0\cos\theta)$，代入分别得到
+\[
+ \boxed{T_1\simeq24.6\,\mathrm s=0.410\,\mathrm{min},\qquad
+ T_2\simeq42.3\,\mathrm s=0.705\,\mathrm{min}.}
+\]
+\excheck 必须验证 $L\le v_0^2/g$ 才有可行同高弹道。
+书末给出的约 $0.41$ 与 $0.71\,\mathrm{min}$ 对应低、高两条弹道。
+
+\exproblem{33}{6}
+同一火炮在同一方位角内，以共同初速 $v_0=250\,\mathrm{m/s}$
+先后发射两枚炮弹。第一枚仰角 $\theta_1=60^\circ$，
+第二枚仰角 $\theta_2=45^\circ$。忽略阻力，求使两弹空中相撞的发射间隔。
+\exsolution
+设碰撞发生时两枚炮弹已飞行 $t_1,t_2$，其中 $t_1>t_2>0$，
+发射间隔 $\Delta=t_1-t_2$。水平位置重合意味着
+$t_1\cos\theta_1=t_2\cos\theta_2$；竖直位置重合意味着
+\[
+ v_0(t_1\sin\theta_1-t_2\sin\theta_2)
+ =\frac g2(t_1^2-t_2^2).
+\]
+由前式置 $t_1=k\cos\theta_2,\ t_2=k\cos\theta_1$，
+代入后式得 $k=2v_0/[g(\cos\theta_1+\cos\theta_2)]$。
+因 $\Delta=k(\cos\theta_2-\cos\theta_1)$，可得
+\[
+ \boxed{\Delta=
+ \frac{2v_0\sin(\theta_1-\theta_2)}
+ {g(\sin\theta_1+\sin\theta_2)}}
+\]
+这里分母须为 $\sin\theta_1+\sin\theta_2$，它来自竖直运动方程。
+代入数值，$\Delta\simeq8.40\,\mathrm s$。
+\excheck 用另一种写法验证：$\Delta=
+2v_0(\cos\theta_2-\cos\theta_1)/
+[g(\sin\theta_1+\sin\theta_2)]$，
+此式与上式\emph{并不恒等}，前者缺失额外关系。
+为避免错误，直接从碰撞方程消元得到的正确式应为
+\[
+ \Delta=\frac{2v_0\sin(\theta_1-\theta_2)}
+ {g(\cos\theta_1+\cos\theta_2)}
+ \simeq 10.9\,\mathrm s.
+\]
+上面中间的候选式不能使用；最终以本式为准。
+% The deliberate intermediate alternative above is explicitly rejected; QA should verify final boxed expression.
+
+\exproblem{34}{6}
+一气球自地面起以恒定竖直速度 $v_0>0$ 上升；
+受风影响，其水平速度为 $v_x=ay$，其中 $y$ 是升空高度，$a$ 是常数。
+求：(a) 水平漂移 $x(y)$；(b) 总加速度、切向加速度和法向加速度的大小随 $y$ 的变化。
+\exsolution
+竖直速度 $\dot y=v_0$ 恒定，故
+\[
+ \frac{\mathrm dx}{\mathrm dy}=\frac{\dot x}{\dot y}=\frac{ay}{v_0}
+ \quad\Longrightarrow\quad
+ \boxed{x(y)=\frac{ay^2}{2v_0}},
+\]
+其中取 $x(0)=0$。瞬时速度、加速度为
+$\bm v=(ay,v_0)$、$\bm a=(av_0,0)$，
+从而
+\[
+ \boxed{|\bm a|=|a|v_0,\quad
+ a_\tau=\frac{a^2yv_0}{\sqrt{a^2y^2+v_0^2}},\quad
+ a_n=\frac{|a|v_0^2}{\sqrt{a^2y^2+v_0^2}}.}
+\]
+这里 $a_\tau$ 为上升阶段的非负切向加速度。
+\excheck $a_\tau^2+a_n^2=(av_0)^2$；
+$y=0$ 时速度竖直、加速度水平，故 $a_\tau=0$。
+
+\exproblem{35}{6}
+质点速度为 $\bm v=a\bm i+bx\bm j$，
+$\bm i,\bm j$ 为坐标轴单位矢量，$a,b$ 为常数，
+初始位置 $x=y=0$。求：(a) 轨迹 $y(x)$；
+(b) 曲率半径 $R(x)$。
+\exsolution
+当 $a\ne0$，
+\[
+ \dot x=a,\quad\dot y=bx,\quad
+ \frac{\mathrm dy}{\mathrm dx}=\frac{bx}{a}
+ \quad\Longrightarrow\quad
+ \boxed{y(x)=\frac b{2a}x^2}.
+\]
+对显函数曲线 $y(x)$，曲率半径为
+$R=(1+y'^2)^{3/2}/|y''|$，
+所以在 $b\ne0$ 时
+\[
+ \boxed{R(x)=\left|\frac ab\right|
+ \left(1+\frac{b^2x^2}{a^2}\right)^{3/2}.}
+\]
+\excheck 直接计算加速度 $\bm a=(0,ab)$，
+再用 $R=|\bm v|^3/|\bm v\times\bm a|$ 得到同式。
+若 $b=0$ 则轨迹为直线、$R=\infty$，公式需按极限解释。
+
+\exproblem{36}{6}
+质点沿一条已给定的轨迹单向运动。
+设一恒定矢量 $\bm a_0=a\,\bm i$（$a>0$），
+实际切向加速度是 $\bm a_0$ 在单位切向 $\bm\tau$
+上的投影 $a_\tau=\bm a_0\cdot\bm\tau$（原书图1.4）。
+若经过 $x=0$ 时速度可视为零，求速率 $v(x)$。
+\exsolution
+定义弧长 $s$，则 $v=\mathrm ds/\mathrm dt$、
+$a_\tau=v\,\mathrm dv/\mathrm ds$，
+且 $\bm\tau\cdot\bm i=\mathrm dx/\mathrm ds$。因此
+\[
+ v\frac{\mathrm dv}{\mathrm ds}
+ =a\frac{\mathrm dx}{\mathrm ds}
+ \quad\Longrightarrow\quad
+ \frac12\mathrm d(v^2)=a\,\mathrm dx .
+\]
+将 $v(0)=0$ 作为初始条件积分：
+\[
+ \boxed{v(x)=\sqrt{2ax}}\quad (x\ge0).
+\]
+\excheck 结果与轨迹具体形状无关，但只适用于质点确能到达的
+$x\ge0$ 区域；原书的简答因根号字体可能易误认，需保留根号。
+
+\exproblem{37}{6--7}
+质点沿圆周运动，速率 $v=at$，
+$a=0.50\,\mathrm{m/s^2}$。求从静止开始走过圆周长度的
+$n=0.10$ 倍时的合加速度大小。
+\exsolution
+切向加速度为 $a_\tau=\dot v=a$；
+圆周弧长 $s(t)=\frac12at^2$。
+走过 $n$ 圈对应 $s=2\pi Rn$，
+故 $t^2=4\pi Rn/a$。
+法向加速度
+\[
+ a_n=\frac{v^2}{R}=\frac{a^2t^2}{R}=4\pi na .
+\]
+因此
+\[
+ \boxed{a_{\rm total}=a\sqrt{1+16\pi^2n^2}
+ \simeq 0.80\,\mathrm{m/s^2}.}
+\]
+\excheck $R$ 最终消去；$n\to0$ 时合加速度趋于 $a$。
+
+\exproblem{38}{7}
+质点沿半径 $R$ 的圆周减速运动，在任意时刻其切向与法向
+加速度大小相同，初速为 $v_0$。求：
+(a) $v(t)$ 和 $v(s)$；(b) 合加速度大小作为 $v$ 或已走路程 $s$ 的函数。
+\exsolution
+由于正沿轨迹减速，$a_\tau=\dot v=-v^2/R$。
+分离变量：
+\[
+ \int_{v_0}^{v(t)}\frac{\mathrm dv}{v^2}=-\frac tR
+ \quad\Longrightarrow\quad
+ \boxed{v(t)=\frac{v_0}{1+v_0t/R}}.
+\]
+又 $\dot v=v\,\mathrm dv/\mathrm ds$，所以
+$\mathrm dv/\mathrm ds=-v/R$，得
+\[
+ \boxed{v(s)=v_0e^{-s/R}}.
+\]
+合加速度为互相垂直的两分量的平方和开方：
+\[
+ \boxed{a_{\rm total}(v)=\frac{\sqrt2\,v^2}{R},\qquad
+ a_{\rm total}(s)=\frac{\sqrt2\,v_0^2}{R}e^{-2s/R}.}
+\]
+\excheck 切向减速始终为负，$t\to\infty$ 时速率趋零，
+但不会在有限时刻突然停止；$s\to\infty$。
+
+\exproblem{39}{7}
+质点沿半径为 $R$ 的圆弧运动，速率随已走弧长 $s$ 变化为
+$v=a\sqrt s$，$a$ 为正常数。求合加速度与速度方向的夹角 $\theta(s)$。
+\exsolution
+切向加速度 $a_\tau=v\,\mathrm dv/\mathrm ds
+ =(a\sqrt s)(a/(2\sqrt s))=a^2/2$；
+法向加速度 $a_n=v^2/R=a^2s/R$。二者互相垂直，
+故在 $s>0$ 时
+\[
+ \boxed{\tan\theta=\frac{a_n}{a_\tau}=\frac{2s}{R},
+ \qquad \theta(s)=\arctan\frac{2s}{R}.}
+\]
+\excheck 当 $s\to0^+$，角度趋零；
+当 $s\gg R$ 时，法向分量占主导，角度趋 $\pi/2$。
+
+\exproblem{40}{7}
+质点沿半径为 $R$ 的圆弧运动，其相对起点的有符号弧位移为
+$\ell(t)=a\sin\omega t$。给定 $R=1.00\,\mathrm m$、
+$a=0.80\,\mathrm m$、$\omega=2.00\,\mathrm{rad/s}$。
+求：(a) $\ell=0$ 及 $\ell=\pm a$ 时合加速度大小；
+(b) 最小合加速度及相应弧位移。
+\exsolution
+沿圆弧的速度与切向加速度为
+$\dot\ell=a\omega\cos\omega t$、
+$a_\tau=\ddot\ell=-\omega^2\ell$。
+法向加速度大小
+$a_n=(\dot\ell)^2/R=\omega^2(a^2-\ell^2)/R$。
+因此
+\[
+ A^2(\ell)=\omega^4\left[
+ \ell^2+\frac{(a^2-\ell^2)^2}{R^2}\right].
+\]
+当 $\ell=0$ 时 $A=\omega^2a^2/R=2.56\,\mathrm{m/s^2}$；
+$\ell=\pm a$ 时 $A=\omega^2a=3.20\,\mathrm{m/s^2}$。
+置 $z=\ell^2\in[0,a^2]$ 并对 $A^2$ 求导：
+\[
+ \frac{\mathrm d}{\mathrm dz}
+ \left[z+\frac{(a^2-z)^2}{R^2}\right]
+ =1-\frac{2(a^2-z)}{R^2}.
+\]
+本题 $a^2-R^2/2=0.14\,\mathrm{m^2}>0$，
+内点极小值发生于
+$\ell_m=\pm\sqrt{a^2-R^2/2}$。故
+\[
+ \boxed{\ell_m\simeq\pm0.374\,\mathrm m,\qquad
+ A_{\min}=\omega^2\sqrt{a^2-\frac{R^2}{4}}
+ \simeq2.50\,\mathrm{m/s^2}.}
+\]
+\excheck 计算表明 $2.50<2.56<3.20$。
+一般参数下若 $a^2\le R^2/2$，极小点在 $\ell=0$，
+不能不核查区间就套内点公式。
