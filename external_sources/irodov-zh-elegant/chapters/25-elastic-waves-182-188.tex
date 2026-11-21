@@ -1,0 +1,153 @@
+% Irodov Part IV §4.3 182--188, completion of elastic waves and acoustics.
+% User source PDF 188--190, printed 179--180; book-end answers 323.
+\waveproblem{182}{179--180}
+沿 $+x$ 方向传播的平面声波振幅衰减系数 $\gamma=0.0230\,\mathrm{m^{-1}}$；在 $x=0$ 处响度级为 $L=60\,\mathrm{dB}$。求：(a) $x=50\,\mathrm m$ 处的响度级；(b) 声音恰低于听阈的位置。
+\exsolution
+位移振幅随距离变化 $a(x)=a_0e^{-\gamma x}$；声强与振幅平方成正比，因此 $I(x)=I(0)e^{-2\gamma x}$。
+分贝定义 $L(x)=10\log_{10}[I(x)/I_{\rm th}]$ 给
+\[
+L(x)=L(0)-\frac{20\gamma x}{\ln10}.
+\]
+(a)
+\[
+\boxed{L(50)=60-\frac{20(0.0230)(50)}{\ln10}
+\simeq50\,\mathrm{dB}}.
+\]
+(b) 以 $L(x_*)=0$ 为听阈：
+\[
+\boxed{x_*=\frac{L(0)\ln10}{20\gamma}
+\simeq300\,\mathrm m=0.30\,\mathrm{km}}.
+\]
+\excheck 衰减的是\emph{振幅}，声强的指数为 $-2\gamma x$，不能漏因子2。
+
+\waveproblem{183}{180}
+各向同性点声源在 $r_0=20.0\,\mathrm m$ 处响度级 $L_0=30.0\,\mathrm{dB}$。忽略介质吸收，求：(a) $r=10.0\,\mathrm m$ 处响度级；(b) 从多远开始不可听见。
+\exsolution
+点源球面扩散使 $I(r)\propto r^{-2}$，故
+\[
+L(r)-L_0=10\log_{10}\frac{I(r)}{I(r_0)}
+=20\log_{10}\frac{r_0}{r}.
+\]
+(a)
+$\boxed{L(10)=30+20\log_{10}2
+\simeq36\,\mathrm{dB}}$。
+(b) 听阈为零分贝，条件
+$0=L_0+20\log_{10}(r_0/r_*)$，故
+\[
+\boxed{r_*=r_0\,10^{L_0/20}
+=20\,10^{1.5}\,\mathrm m
+\simeq0.63\,\mathrm{km}}.
+\]
+\excheck 这里分贝基准是相同频率的听阈，且忽略环境噪声与吸收；物理声强并不会在阈值位置突然变成零。
+
+\waveproblem{184}{180}
+两个静止观察者 A、B 到正在衰减发声的音叉的距离分别为 $r_A=5.0\,\mathrm m$、$r_B=50\,\mathrm m$。A 听到声音消失的时刻比 B 晚 $\tau=19\,\mathrm s$。声速 $v=340\,\mathrm{m/s}$。求音叉的振幅阻尼系数 $\beta$。
+\exsolution
+令音叉发声振幅 $a_s(t_e)=a_0e^{-\beta t_e}$。
+声从源到半径 $r$ 的接收时刻 $t=t_e+r/v$，接收声压振幅正比于
+$e^{-\beta(t-r/v)}/r$。
+设听觉阈值声压相同；在各自最后可听时刻 $t_A,t_B$：
+\[
+\frac{e^{-\beta(t_A-r_A/v)}}{r_A}
+=\frac{e^{-\beta(t_B-r_B/v)}}{r_B}.
+\]
+取对数，使用 $t_A-t_B=\tau$：
+$\beta[\tau+(r_B-r_A)/v]=\ln(r_B/r_A)$。
+因此
+\[
+\boxed{\beta=\frac{\ln(r_B/r_A)}
+{\tau+(r_B-r_A)/v}
+=\frac{\ln10}{19+45/340}
+\simeq0.12\,\mathrm{s^{-1}}}.
+\]
+\excheck 要考虑额外 $45$m 的声传播迟延，而非仅用 $\ln10/19$；影响虽小但原题要求保留。
+
+\waveproblem{185}{180}
+密度为 $\rho$ 的均匀介质中传播平面纵向谐波，传播速度 $v$，扰动密度很小。证明：(a) 声压增量 $\Delta p=-\rho v^2\,\partial_x\xi$；(b) 平均声强与波振幅和能量密度的关系。
+\exsolution
+对截面积 $S$、厚度 $\mathrm dx$ 的薄介质层用牛顿第二定律，
+$\rho S\mathrm dx\,\partial_t^2\xi=-S(\partial_xp)\mathrm dx$，
+即
+$\rho\partial_t^2\xi=-\partial_x\Delta p$。
+由一维波动方程
+$\partial_t^2\xi=v^2\partial_x^2\xi$，
+得
+$\partial_x[\Delta p+\rho v^2\partial_x\xi]=0$。
+无扰动时附加压力与应变均为零，积分常数为零，
+\[
+\boxed{\Delta p=-\rho v^2\frac{\partial\xi}{\partial x}}.
+\]
+对于行波 $\xi=a\cos(\omega t-kx)$，
+$p'= -\rho v^2ak\sin(\omega t-kx)$，
+粒子速度 $u=-a\omega\sin(\omega t-kx)$；
+传播方向的瞬时能流密度 $S=p'u$，
+故
+\[
+\boxed{\overline S
+=\tfrac12\rho v\,\omega^2a^2
+=\frac{(\Delta p)_m^2}{2\rho v}
+=\overline w\,v}.
+\]
+\excheck 压强扰动与粒子速度同相，使平均声功率沿行波传播方向为正；若波朝反方向行进，能流矢量亦反向。
+
+\waveproblem{186}{180}
+半径 $R=50\,\mathrm{cm}$ 的球置于平面声波路径上，声波波长 $\lambda=20$cm、频率 $\nu=1700$Hz、声压振幅 $(\Delta p)_m=3.5$Pa。求一个周期平均抵达球表面的能流功率。
+\exsolution
+空气声速 $v=\nu\lambda=340$m/s。
+由第185题平均声强
+$\overline I=(\Delta p)_m^2/(2\rho v)$，
+球截获迎波有效截面积为 $\pi R^2$（不是完整球表面积 $4\pi R^2$），所以
+\[
+\boxed{\Phi=\pi R^2\,\frac{(\Delta p)_m^2}{2\rho\nu\lambda}}.
+\]
+以空气密度 $\rho\simeq1.29\,\mathrm{kg/m^3}$ 估算：
+\[
+\boxed{\Phi\simeq
+\frac{\pi(0.50)^2(3.5)^2}{2(1.29)(340)}
+\simeq0.011\,\mathrm W=11\,\mathrm{mW}}.
+\]
+\excheck 平面行波对球面的法向能流积分等于投影圆截面乘声强；即使球面面积更大也不能直接乘 $4\pi R^2$。
+
+\waveproblem{187}{180}
+点声源频率 $\nu=600$Hz、声功率 $P=0.80$W，在距声源 $r=1.5$m 的 A 点，取声速 $v=340$m/s，忽略衰减。求：(a) 声压振幅及其与大气压之比；(b) 介质质点位移幅度及它与波长之比。
+\exsolution
+各向同性点声源在 A 点的平均声强
+$\overline I=P/(4\pi r^2)$。
+由第185题
+$\overline I=(\Delta p)_m^2/(2\rho v)$，故
+\[
+\boxed{(\Delta p)_m=
+\sqrt{\frac{\rho vP}{2\pi r^2}}
+\simeq5\,\mathrm{Pa}}.
+\]
+取大气压 $p_{\rm atm}\simeq10^5$Pa，
+$\boxed{(\Delta p)_m/p_{\rm atm}\simeq5\times10^{-5}}$。
+声压—位移关系 $(\Delta p)_m=\rho v\omega a$，
+$\omega=2\pi\nu$，所以
+\[
+\boxed{a=\frac{(\Delta p)_m}{2\pi\nu\rho v}
+\simeq3\,\mathrm{\mu m}},
+\qquad
+\boxed{\frac a\lambda=\frac{a\nu}{v}
+\simeq5\times10^{-6}}.
+\]
+\excheck 声传播速度 $v$ 与介质质点速度幅度 $\omega a$ 是不同量；本题声压扰动相对大气压极小，线性声学适用。
+
+\waveproblem{188}{180}
+距各向同性点声源 $r=100$m 处，频率为200Hz的声音响度级 $L=50$dB；该频率的听阈声强 $I_0=0.10\,\mathrm{nW/m^2}$。振幅衰减系数 $\gamma=5.0\times10^{-4}\,\mathrm{m^{-1}}$。求点声源功率。
+\exsolution
+声强定义
+$I(r)=I_0\,10^{L/10}
+=10^{-10}\times10^5=10^{-5}\,\mathrm{W/m^2}$。
+球面波幅度为 $a\propto e^{-\gamma r}/r$，
+故声强为 $I=P e^{-2\gamma r}/(4\pi r^2)$。
+解得
+\[
+\boxed{P=4\pi r^2 I_0\,10^{L/10}e^{2\gamma r}}.
+\]
+代入 $2\gamma r=0.10$：
+\[
+\boxed{P=4\pi(100)^2(10^{-5})e^{0.10}
+\simeq1.4\,\mathrm W}.
+\]
+\excheck $I_0$ 为 $0.10$纳瓦每平方米，必须换算为 $10^{-10}\,\mathrm{W/m^2}$；分贝 $50$dB 对应强度比 $10^5$ 而非50。
