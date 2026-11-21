@@ -1,0 +1,374 @@
+% Irodov user PDF original pp.57-59, PDF pp.66-68.
+% Special relativity: simultaneity, spacetime interval, velocity addition.
+% Original diagrams 1.91-1.93 inspected.
+\exproblem{351}{57}
+在实验室惯性系 $K$ 中，两颗不稳定粒子沿
+同一条直线同向以 $v=0.990c$ 运动，
+任一相同实验室时刻它们的距离为 $\ell=120\,\mathrm m$。
+若它们在\emph{共同静止系}中同时衰变，
+求实验室系中两次衰变的时间差，
+并说明哪颗粒子衰变得较晚。
+\exsolution
+取沿运动方向为正，前粒子比后粒子
+在同一实验室时刻领先距离 $\ell$。
+令前、后粒子衰变事件在 $K$ 系的
+时空分离为 $\Delta t=t_f-t_r$、
+$\Delta x=x_f(t_f)-x_r(t_r)$。
+由于两粒子有相同速度，
+$\Delta x=\ell+v\Delta t$。
+共同静止系中的同时性要求
+$\Delta t'=\gamma(\Delta t-v\Delta x/c^2)=0$。
+代入：
+\[
+\Delta t=\frac v{c^2}(\ell+v\Delta t)
+\Longrightarrow
+\Delta t(1-v^2/c^2)=\frac{v\ell}{c^2}.
+\]
+故
+\[
+\boxed{\Delta t=\frac{\beta\ell}{c(1-\beta^2)}}
+,\qquad\beta=v/c.
+\]
+代入 $\beta=0.990,\ell=120\,\mathrm m$：
+\[
+\boxed{\Delta t\simeq19.9\,\mathrm{\mu s}
+\approx20\,\mathrm{\mu s}}.
+\]
+因为 $\Delta t>0$，实验室中\emph{前方粒子}
+衰变得更晚。
+\excheck 不可直接用 $\beta\ell/c$；
+它忽略了同一实验室时刻的初始距离与两个衰变
+事件发生在不同时刻之间的区别，漏掉 $1-\beta^2$。
+
+\exproblem{352}{57}
+杆 $AB$ 沿实验室 $K$ 系 $x$ 轴正方向以恒速 $v$
+平动，前端为 $A$、后端为 $B$。
+在时刻 $t_A$ 测得 $A$ 的坐标 $x_A$，
+在时刻 $t_B$ 测得 $B$ 的坐标 $x_B$。
+(a) 求杆固有长度 $L_0$；
+(b) 若要求两个所记坐标\emph{之差的模}
+恰等于固有长度，求可能的记录时间差。
+\exsolution
+记实验室中某一\emph{共同时间}的杆长为
+$L=L_0\sqrt{1-\beta^2}$。
+因 $A$ 匀速移动，
+它在时刻 $t_B$ 的位置为
+$x_A(t_B)=x_A-v(t_A-t_B)$。
+故同时长度
+\[
+L=x_A-v(t_A-t_B)-x_B,
+\]
+因此
+\[
+\boxed{L_0=
+\frac{x_A-x_B-v(t_A-t_B)}{\sqrt{1-\beta^2}}}.
+\]
+(b) 任意两个读数的有符号差满足
+$x_A-x_B=L+v(t_A-t_B)$。
+若要求 $x_A-x_B=+L_0$，则
+\[
+\boxed{t_A-t_B=\frac{L_0}{v}
+\left(1-\sqrt{1-\beta^2}\right)}.
+\]
+若取相反顺序的差
+$x_B-x_A=L_0$，则
+\[
+\boxed{t_B-t_A=\frac{L_0}{v}
+\left(1+\sqrt{1-\beta^2}\right)}.
+\]
+\excheck 这两种记录时差正是原书要求的两个分支；
+若只用同一时刻读数，则测得的是
+$L=L_0/\gamma$，不可能等于 $L_0$（除非 $v=0$）。
+
+\exproblem{353}{57}
+两根固有长度均为 $L_0$ 的杆 $AB$
+和 $A'B'$ 沿平行共线方向运动，后者相对前者
+向右匀速运动 $v$（原书图1.91）。
+每根杆两端各有彼此在\emph{该杆自身系内}同步的时钟。
+规定 $B'$ 与 $A$ 相遇事件为两杆参考系时间原点。
+求：(a) $B'$ 与 $B$ 相遇瞬间两只钟各自读数；
+(b) $A'$ 与 $A$ 相遇瞬间两只钟各自读数。
+\exsolution
+以杆 $AB$ 静止系为 $K$，取 $A$ 在 $x=0$、
+$B$ 在 $x=L_0$；令 $B'$ 与 $A$ 相遇为
+$x=t=x'=t'=0$。
+(a) $B'$ 在 $K$ 中以速度 $v$ 从 $A$ 走到 $B$
+需时间 $t=L_0/v$。
+静止钟 $B$ 读这个时间；随 $B'$ 运动的钟
+读固有时间
+\[
+\boxed{t_B=\frac{L_0}{v}},\qquad
+\boxed{t_{B'}=\frac{L_0}{\gamma v}
+=\frac{L_0}{v}\sqrt{1-\beta^2}}.
+\]
+(b) 在 $K$ 中运动杆长度缩短为 $L_0/\gamma$，
+因此 $A'$ 在初始实验室时刻位于
+$-L_0/\gamma$；它追至静止的 $A$ 耗时
+$t=L_0/(\gamma v)$。
+故 $A$ 的静止钟读数为
+\[
+\boxed{t_A=\frac{L_0}{\gamma v}
+=\frac{L_0}{v}\sqrt{1-\beta^2}}.
+\]
+该相遇事件的空间位置为 $x=0$，
+洛伦兹时间变换给
+$t'=\gamma(t-vx/c^2)=\gamma t=L_0/v$，
+因此
+\[
+\boxed{t_{A'}=\frac{L_0}{v}}.
+\]
+\excheck 两对时钟读数的差别由时间膨胀和
+\emph{同时性的相对性}共同造成，
+不能直接假设两根杆上四只钟在 $K$ 系同时同步。
+
+\exproblem{354}{57--58}
+参考系 $K$、$K'$ 分别配有在各自系中同步的
+一列空间时钟。$K'$ 相对 $K$ 沿 $+x$ 方向以
+恒速 $v$ 平动（原书图1.92）。
+在中央两只时钟 $A,A'$ 相遇且都读零的事件起，
+分别画出：(a) 对 $K$ 系同时的时钟读数分布；
+(b) 对 $K'$ 系同时的读数分布。
+\exsolution
+记 $\beta=v/c$、$\gamma=(1-\beta^2)^{-1/2}$，
+两列时钟都选择中央相遇事件
+$x=x'=t=t'=0$ 为零时刻。
+(a) 在 $K$ 系的同时面 $t=0$ 上，
+所有 $K$ 时钟同读 $0$。
+$K'$ 时钟在本征坐标 $x'$ 处的读数由
+洛伦兹变换
+\[
+t'=\gamma(t-vx/c^2),\qquad x'=\gamma x
+\]
+可得
+\[
+\boxed{t'(t=0,x')=-vx'/c^2}.
+\]
+因此沿 $K'$ 从左到右的钟依次为
+\emph{超前、超前、零、落后、落后}。
+(b) 在 $K'$ 同时面 $t'=0$ 上，
+所有 $K'$ 钟同读 $0$。
+由逆变换
+$t=\gamma(t'+vx'/c^2)$、
+$x=\gamma(x'+vt')$，
+可得位于 $K$ 本征坐标 $x$ 的钟读数为
+\[
+\boxed{t(t'=0,x)=vx/c^2}.
+\]
+所以沿 $K$ 从左到右的钟依次为
+\emph{落后、落后、零、超前、超前}。
+为直观表达，以下为按图1.92重新绘制的概念时钟图，
+左右两边指针的偏转只表示相对先后，不按数值比例：
+\begin{center}
+\begin{tikzpicture}[scale=0.82,>=Stealth]
+\node[anchor=east] at (-3.3,0) {$K\text{ 同时}$};
+\foreach \i in {-2,-1,0,1,2}{
+  \pgfmathsetmacro{\xx}{1.3*\i}
+  \pgfmathsetmacro{\ang}{90-20*\i}
+  \draw (\xx,0) circle (0.34);
+  \draw[->] (\xx,0) -- ++(\ang:0.28);
+  \node[below] at (\xx,-0.45) {\scriptsize $t'$};
+}
+\node[anchor=east] at (-3.3,-2.0) {$K'\text{ 同时}$};
+\foreach \i in {-2,-1,0,1,2}{
+  \pgfmathsetmacro{\xx}{1.3*\i}
+  \pgfmathsetmacro{\ang}{90+20*\i}
+  \draw (\xx,-2) circle (0.34);
+  \draw[->] (\xx,-2) -- ++(\ang:0.28);
+  \node[below] at (\xx,-2.45) {\scriptsize $t$};
+}
+\end{tikzpicture}
+\end{center}
+\excheck 不能简单把两系全部时钟都画成零；
+各自同步面不重合。上式的先后次序比示意指针
+更精确且可定量重绘。
+
+\exproblem{355}{58}
+$K'$ 参考系相对 $K$ 沿 $+x$ 方向以恒速
+$V$ 平动，两原点相遇时各自时钟读零。
+在 $K$ 系中，找出一条匀速轨迹
+$x=ut$，使它经过的每一对本地 $K$ 与 $K'$ 时钟
+在相遇事件处的读数\emph{始终相等}。
+求该轨迹速率 $u$，证明 $u<V$。
+\exsolution
+同一事件的坐标满足洛伦兹变换
+$t'=\gamma(t-Vx/c^2)$。
+要求在该事件读数相等即 $t'=t$，
+所以
+\[
+\gamma(t-Vx/c^2)=t,
+\qquad
+x=\frac{c^2}{V}(1-\gamma^{-1})t.
+\]
+因此轨迹速率为
+\[
+\boxed{u=\frac{c^2}{V}
+\left(1-\sqrt{1-V^2/c^2}\right)}.
+\]
+有理化得
+\[
+u=\frac{V}{1+\sqrt{1-V^2/c^2}}.
+\]
+因 $0<V<c$ 时分母严格大于 $1$，
+\[
+\boxed{0<u<V}.
+\]
+\excheck 这是两组同步时钟读数在\emph{对应相遇事件}
+相等的轨迹，不是其中一组时钟的物理运动轨迹。
+
+\exproblem{356}{58}
+证明：若参考系 $K$ 中两个事件
+存在真实因果联系，例如发射子弹与击中目标，
+则在任何其他惯性系 $K'$ 中，
+它们的发生先后顺序不能颠倒。
+\exsolution
+选两事件在 $K$ 系坐标差为
+$\Delta t=t_2-t_1>0$、
+$\Delta\bm x$。
+因它们有因果联系，
+任何连接它们的物理信号速率不能超过光速，
+所以
+$|\Delta\bm x|\le c\Delta t$。
+令 $K'$ 相对 $K$ 以速度 $V$ 沿 $x$ 方向移动，
+则
+\[
+\Delta t'=\gamma\left(
+\Delta t-\frac{V\Delta x}{c^2}\right).
+\]
+利用 $|\Delta x|\le|\Delta\bm x|\le c\Delta t$：
+\[
+\Delta t'\ge
+\gamma\Delta t\left(1-\frac{|V|}{c}\right)>0,
+\]
+因为惯性系间相对速率满足 $|V|<c$。
+因此
+\[
+\boxed{t_2'>t_1'\quad\text{在任一惯性系成立}}.
+\]
+\excheck 仅对时间样或光样分离的因果关联可证明。
+若事件为空间样分离，
+不同惯性系可以给出不同先后顺序，
+但它们不能彼此传递低于光速的因果信号。
+
+\exproblem{357}{58}
+原书图1.93的闵可夫斯基时空图中，
+横轴 $x$、纵轴 $ct$ 均以米为单位。
+三事件坐标为
+$A:(2,1)$、$B:(5,6)$、$C:(7,4)$。
+求：(a) 存在某惯性系使 $A,B$ 同地点发生时，
+两事件的时间间隔；
+(b) 存在另一惯性系使 $A,C$ 同时发生时，
+两地点的空间间距。
+\exsolution
+时空间隔
+$s^2=c^2(\Delta t)^2-(\Delta x)^2$
+在洛伦兹变换下不变。
+(a) $A\to B$：
+$c\Delta t=6-1=5\,\mathrm m$，
+$\Delta x=5-2=3\,\mathrm m$，
+故 $s^2=25-9=16\,\mathrm{m^2}>0$，
+是时间样分离。
+在同地点参考系有 $\Delta x'=0$，
+所以
+\[
+\boxed{\Delta t'=\frac{\sqrt{s^2}}{c}
+=\frac{4\,\mathrm m}{c}
+\simeq13.3\,\mathrm{ns}}.
+\]
+(b) $A\to C$：
+$c\Delta t=4-1=3\,\mathrm m$，
+$\Delta x=7-2=5\,\mathrm m$，
+$s^2=9-25=-16\,\mathrm{m^2}<0$，
+是空间样分离。在同时参考系
+$\Delta t'=0$，于是
+\[
+\boxed{|\Delta x'|=\sqrt{-s^2}=4.0\,\mathrm m}.
+\]
+\excheck 本题两个子问的区分取决于
+时空间隔的符号；读原图坐标不能把纵轴 $ct$
+直接当作以秒为单位的时间。
+
+\exproblem{358}{58}
+惯性系 $K$ 中一粒子在 $xy$ 平面运动，
+速度分量为 $v_x,v_y$。
+$K'$ 相对 $K$ 沿 $+x$ 轴以速度 $V$ 平动，
+两系坐标轴互相平行。
+求粒子在 $K'$ 系中的速率 $v'$。
+\exsolution
+洛伦兹速度分量变换为
+\[
+v_x'=\frac{v_x-V}{1-v_xV/c^2},
+\qquad
+v_y'=\frac{v_y\sqrt{1-V^2/c^2}}{1-v_xV/c^2}.
+\]
+因为对有质量粒子
+$|v_x|<c,|V|<c$，
+分母 $1-v_xV/c^2>0$。
+因此两分量平方相加并开方：
+\[
+\boxed{v'=\frac{
+\sqrt{(v_x-V)^2+v_y^2(1-V^2/c^2)}
+}{1-v_xV/c^2}}.
+\]
+\excheck 非平行方向速度不能简单用
+$v'=|\bm v-\bm V|$，
+横向分量也要经过洛伦兹因子和共同分母变换。
+
+\exproblem{359}{58}
+两粒子在实验室中沿同一直线相向运动，
+各自速率为 $v_1=0.50c$ 与 $v_2=0.75c$。
+求：(a) 实验室中两粒子间距缩小的速率；
+(b) 一粒子在另一粒子静止系中测得的相对速率。
+\exsolution
+(a) 在实验室同时坐标中，
+两粒子间距的变化率为两实验室速率之和：
+\[
+\boxed{v_{\rm closing}=v_1+v_2
+=1.25c}.
+\]
+这是\emph{两物体间距的坐标变化率}，
+不是某个物体相对一个惯性系的局部速度，
+因此允许大于 $c$。
+(b) 速度合成须用爱因斯坦速度加法：
+\[
+v_{\rm rel}=\frac{v_1+v_2}{1+v_1v_2/c^2}
+=\frac{1.25c}{1+0.50(0.75)},
+\]
+即
+\[
+\boxed{v_{\rm rel}\simeq0.909c\approx0.91c}.
+\]
+\excheck 两种“速度”属于不同定义；
+狭义相对论限制的是实际相对速度 $v_{\rm rel}<c$。
+
+\exproblem{360}{58--59}
+两根固有长度均为 $L_0$ 的杆，
+在实验室中沿共同轴线以相同速率 $v$
+彼此相向运动。
+在其中一根杆的静止系中，
+另一根杆的长度是多少？
+\exsolution
+取实验室中第一杆速度为 $+v$，
+第二杆速度为 $-v$。
+按一维速度叠加，
+第二杆相对第一杆的速率
+\[
+w=\frac{(-v)-(+v)}{1-(-v)(+v)/c^2}
+=-\frac{2v}{1+v^2/c^2}.
+\]
+令 $\beta=v/c$，相对速率的模为
+$|w|/c=2\beta/(1+\beta^2)$，
+对应洛伦兹因子
+\[
+\gamma_w=
+\frac1{\sqrt{1-w^2/c^2}}
+=\frac{1+\beta^2}{1-\beta^2}.
+\]
+因此另一根杆在第一根杆静止系中的收缩长度为
+\[
+\boxed{L=\frac{L_0}{\gamma_w}
+=L_0\frac{1-\beta^2}{1+\beta^2}},
+\qquad\beta=v/c.
+\]
+\excheck 不能直接套实验室速度 $v$ 的收缩因子，
+因为两根杆间实际相对速率是
+$2v/(1+\beta^2)$，而非 $2v$。
