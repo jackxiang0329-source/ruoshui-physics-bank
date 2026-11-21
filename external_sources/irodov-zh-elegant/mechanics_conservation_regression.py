@@ -345,7 +345,7 @@ eps=eps_pred*(1-1.5*eps_pred) # second order perturbative upper bound
 # as if it were exact.
 eq=1*1**2/2*(1-(1+eps)**(-2))-100*.5**2*eps**2
 test(199,"small-extension approximation relative energy residual",
-     abs(eq)/(100*.5**2*eps_pred**2),.0,.6,atol=.6)
+     abs(eq)/(100*.5**2*eps_pred**2),.0,.6,atol=.01)
 test(199,"small extension parameter from energy/angular momentum",
      eps_pred,.04,1e-10)
 if failures:
