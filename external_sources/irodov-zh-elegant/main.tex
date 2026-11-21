@@ -36,20 +36,21 @@
 \newcommand{\moleculeproblem}[2]{\par\bigskip\noindent\textbf{\large 原书第六篇·第6.4节·第\,#1\,题}\hfill{\small 原书印刷页 #2}\par\smallskip}
 \newcommand{\radioactivityproblem}[2]{\par\bigskip\noindent\textbf{\large 原书第六篇·第6.5节·第\,#1\,题}\hfill{\small 原书印刷页 #2}\par\smallskip}
 \newcommand{\nuclearreactionproblem}[2]{\par\bigskip\noindent\textbf{\large 原书第六篇·第6.6节·第\,#1\,题}\hfill{\small 原书印刷页 #2}\par\smallskip}
+\newcommand{\elementaryproblem}[2]{\par\bigskip\noindent\textbf{\large 原书第六篇·第6.7节·第\,#1\,题}\hfill{\small 原书印刷页 #2}\par\smallskip}
 \newcommand{\exsolution}{\par\medskip\noindent\textbf{【详细解析】}\quad}
 \newcommand{\excheck}{\par\smallskip\noindent\textbf{【核验】}\quad}
 \title{《普通物理学习题》中文译注与详解}
 \subtitle{Problems in General Physics --- 逐题整理（进行中）}
 \author{原著：I. E. Irodov \quad 中文译注与题解：三千弱水}
-\date{2026年11月22日 · 已录入1834题（力学388题 + 热学257题 + 电动力学407题 + 振动与波动224题 + 光学292题 + 原子与核物理266题）}
-\version{2.5}
+\date{2026年11月22日 · 已录入1878题（力学388题 + 热学257题 + 电动力学407题 + 振动与波动224题 + 光学292题 + 原子与核物理310题）}
+\version{2.6}
 \cover{cover.pdf}
 \begin{document}
 \maketitle
 \frontmatter
 \chapter*{编辑说明}
 以用户上传的 Arihant 版 \emph{Problems in General Physics}（PDF共385页）为底本。
-现已覆盖第一篇力学388题、第二篇热学与分子物理257题、第三篇电动力学407题、第四篇振动与波动224题（均为对应篇全部题号），第五篇光学已完整译注第1--292题；第六篇原子与核物理已录入1--266题（6.1节1--48、6.2节49--96、6.3节97--166、6.4节167--213、6.5节214--248全部完成；6.6节249--266继续录入）。其中5.4节偏振第157--199题、5.5节色散与吸收第200--223题、5.6节运动光源光学第224--245题均已完成；5.7节热辐射与量子光学第246--292题已完成。\textbf{全书尚未译完}。
+现已覆盖第一篇力学388题、第二篇热学与分子物理257题、第三篇电动力学407题、第四篇振动与波动224题（均为对应篇全部题号），第五篇光学已完整译注第1--292题；第六篇原子与核物理已按原书编号完整录入1--310题，6.1至6.7节全部完成；至此全书六篇题号均已覆盖。其中5.4节偏振第157--199题、5.5节色散与吸收第200--223题、5.6节运动光源光学第224--245题均已完成；5.7节热辐射与量子光学第246--292题已完成。\textbf{全书尚未译完}。
 原书答案部分以简答为主，本稿补写公式推导、必要条件及核验。第4、17、18、43、50、51题的图以TikZ重绘；其余部分题目以明确的向量定义代替简单示意图。
 其中第4题示意图不是原曲线的数字化精密拟合，结果依原图读数。
 公式已自查，\textbf{不宣称经过独立专家审查}。
@@ -260,13 +261,18 @@
 \input{chapters/38-radioactivity-214-226}
 \input{chapters/38-radioactivity-227-237}
 \input{chapters/38-radioactivity-238-248}
-\section{核反应：第249--266题（本节继续）}
+\section{核反应：第249--290题（本节完成）}
 \input{chapters/39-nuclear-reactions-249-258}
 \input{chapters/39-nuclear-reactions-259-266}
+\input{chapters/39-nuclear-reactions-267-280}
+\input{chapters/39-nuclear-reactions-281-290}
+\section{基本粒子：第291--310题（第六篇完结）}
+\input{chapters/40-elementary-particles-291-300}
+\input{chapters/40-elementary-particles-301-310}
 \backmatter
 \chapter*{版本信息}
-本书目前录入1834道有中文题面、LaTeX推导及单题核验的习题。原书第一篇力学388、第二篇热学257、第三篇电动力学407、第四篇振动与波动224、第五篇光学292题全部覆盖；第六篇原子与核物理独立编号1--266题。
-本轮v2.5新增100道：第六篇6.4分子与晶体167--213题47道（本节完结）；6.5放射性214--248题35道（本节完结）；6.6核反应249--266题18道（继续）。底本为用户提供的Arihant版《Problems in General Physics》PDF，印刷页251--262，原书答案印刷346--350。各题保留中文题面、显式变量定义、完整解析、适用条件及核验。
-校勘重点：6.209图6.11的坐标尺度；6.220书末平均寿命的天/年错误；6.227双指数表与书末答案不相容；6.249实际散射夹角符号；6.252核半径印刷系数与书末密度差百万倍；6.253(b)核反应质量数守恒；6.261(a)、6.262书末能量及煤的换算倍数差异。详见errata.md。
-本书独立学术二校与部分原书图形复绘未完，XeLaTeX最新整书编译须以GitHub Actions真实成功记录为准，不以静态结构通过冒充已生成新版PDF。
+本书以用户提供的 Arihant 版 I. E. Irodov《Problems in General Physics》原书PDF为底本，共有1878道按原书原有独立编号的练习题：第一篇力学388题、第二篇热学与分子物理257题、第三篇电动力学407题、第四篇振动与波动224题、第五篇光学292题、第六篇原子与核物理310题。v2.6阶段六篇所有原书题号均已译注覆盖。
+本轮新增44题：第六篇6.6节核反应267--290题24道（该节完结），第六篇6.7节基本粒子291--310题20道（最后一节完结）。以原书印刷页262--267、PDF物理页271--276和答案印刷页350--351、PDF物理页359--360核对原题及书末简答；按题逐一提供中文题面、物理条件、LaTeX推导及核验。
+勘误保留：第286题被原印错标为296；第276题书末核反冲速度低100倍；第285题原书薄箔耗尽时间与给定中子通量差约一万倍；第290题书末中子增长倍数及堆周期与印刷数据不相容；第291题书末低动量质子动能约高十倍。具体计算和底本页码见errata.md。
+“题号覆盖完成”表示中文译注及单题解析的已录入状态，不等于全部1878题已经过独立学术专家二校。全书排版是否能产生当前版本PDF仍以对应GitHub Actions XeLaTeX最新成功运行记录为准，未成功前不宣称已经发布新PDF。
 \end{document}
