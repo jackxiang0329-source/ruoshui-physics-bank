@@ -22,13 +22,15 @@
 \newcommand{\oscproblem}[2]{\par\bigskip\noindent\textbf{\large 原书第四篇·第4.1节·第\,#1\,题}\hfill{\small 原书印刷页 #2}\par\smallskip}
 \newcommand{\electricoscproblem}[2]{\par\bigskip\noindent\textbf{\large 原书第四篇·第4.2节·第\,#1\,题}\hfill{\small 原书印刷页 #2}\par\smallskip}
 \newcommand{\waveproblem}[2]{\par\bigskip\noindent\textbf{\large 原书第四篇·第4.3节·第\,#1\,题}\hfill{\small 原书印刷页 #2}\par\smallskip}
+\newcommand{\emwaveproblem}[2]{\par\bigskip\noindent\textbf{\large 原书第四篇·第4.4节·第\,#1\,题}\hfill{\small 原书印刷页 #2}\par\smallskip}
+\newcommand{\opticsproblem}[2]{\par\bigskip\noindent\textbf{\large 原书第五篇·第5.1节·第\,#1\,题}\hfill{\small 原书印刷页 #2}\par\smallskip}
 \newcommand{\exsolution}{\par\medskip\noindent\textbf{【详细解析】}\quad}
 \newcommand{\excheck}{\par\smallskip\noindent\textbf{【核验】}\quad}
 \title{《普通物理学习题》中文译注与详解}
 \subtitle{Problems in General Physics --- 逐题整理（进行中）}
 \author{原著：I. E. Irodov \quad 中文译注与题解：三千弱水}
-\date{2026年11月21日 · 已录入1233题（力学388题 + 热学257题 + 电动力学407题 + 振动与波动181题）}
-\version{1.8}
+\date{2026年11月21日 · 已录入1333题（力学388题 + 热学257题 + 电动力学407题 + 振动与波动224题 + 光学57题）}
+\version{1.9}
 \cover{cover.pdf}
 \begin{document}
 \maketitle
@@ -181,12 +183,24 @@
 \input{chapters/24-electric-oscillations-110-125}
 \input{chapters/24-electric-oscillations-126-137}
 \input{chapters/24-electric-oscillations-138-149}
-\section{弹性波与声学：第150--181题}
+\section{弹性波与声学：第150--188题}
 \input{chapters/25-elastic-waves-150-165}
 \input{chapters/25-elastic-waves-166-181}
+\input{chapters/25-elastic-waves-182-188}
+\section{电磁波与辐射：第189--224题}
+\input{chapters/26-em-waves-189-200}
+\input{chapters/26-em-waves-201-212}
+\input{chapters/26-em-waves-213-224}
+\chapter{光学}
+\section{光度学与几何光学：第1--57题（原书第五篇重新编号）}
+\input{chapters/27-optics-photometry-001-012}
+\input{chapters/27-optics-photometry-013-025}
+\input{chapters/27-optics-photometry-026-035}
+\input{chapters/27-optics-photometry-036-045}
+\input{chapters/27-optics-photometry-046-057}
 \backmatter
 \chapter*{版本信息}
-本书现已录入1233题：原书第一篇力学第1--388题（全部）、第二篇热力学与分子物理第1--257题（全部）、第三篇电动力学第1--407题（全部）、第四篇振动与波动第1--181题。各篇保留原版独立编号。本轮新增第四篇第4.1节机械振动82--93题12道（本节完成）、第4.2节电振荡94--149题56道（本节完成）、第4.3节弹性波与声学150--181题32道（本节继续），合计100道，每题有中文题面、LaTeX详细解析与核验段落。第4.1节82题干摩擦模型、第4.2节97题绝热过程与书末答案差异、106及113题书末单位和数值、116与119题电路模型、132题半功率带宽说明、第4.3节179题移动反射壁数值等均显式说明于errata.md。源PDF核对、逐题结构检查和XeLaTeX编译不能替代独立物理学专家二校。
+本书现已录入1333题：原书第一篇力学第1--388题（全部）、第二篇热力学与分子物理第1--257题（全部）、第三篇电动力学第1--407题（全部）、第四篇振动与波动第1--224题（全部），以及第五篇光学第1--57题。各篇严格保留原版独立编号；累计题数不是跨篇连续题号。本轮新增100题：第四篇第4.3节弹性波与声学182--188共7道补齐、第4.4节电磁波与辐射189--224共36道完成；第五篇第5.1节光度学与几何光学1--57共57道开始。新增每题包含中文题面、LaTeX推导与逐题核验。对原书图示、光度曲线、材料折射率隐含假设以及第4.4节194题单位、第5.1节7、8、16、30题源书数学排版疑点另列勘误记录。技术编译与结构通过不等于独立学术二校通过。
 
 编译通过不等于独立学术校审通过。
 \end{document}
