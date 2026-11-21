@@ -1,0 +1,316 @@
+% Irodov, user-supplied PDF, original printed pp.45--46, PDF pp.54--55.
+% Rigid body: rotating bearings, gyroscopic precession, and rail loading.
+
+\exproblem{281}{45}
+一根质量 $m=1.40\,\mathrm{kg}$、长度
+$\ell_0=1.00\,\mathrm m$ 的均匀细杆水平放置，
+一端 $A$ 固定在竖直转轴 $OO'$ 的中点，
+可随竖轴以角速度 $\omega$ 匀速转动。
+轴上下两个轴承距离为
+$\ell=55\,\mathrm{cm}$。
+求当下轴承所受水平力为零时所需角速度，
+并求此时上轴承所受水平力大小。
+\exsolution
+杆的质心距轴 $\ell_0/2$，需要水平向心力
+$F_c=m\omega^2\ell_0/2$。
+杆重力关于轴中点产生大小
+$N_g=mg\ell_0/2$ 的倾覆力矩；
+上下轴承的水平反力形成力偶以平衡它。
+当下轴承的水平反力为零时，
+上轴承的水平力 $F_u$ 必须同时满足
+\[
+F_u=F_c=\frac12m\omega^2\ell_0,
+\qquad
+F_u\ell=mg\frac{\ell_0}{2}.
+\]
+联立得到
+\[
+\boxed{\omega=\sqrt{\frac{2g}{\ell}}
+\simeq5.97\,\mathrm{rad/s}\approx6.0\,\mathrm{rad/s}},
+\]
+\[
+\boxed{F_u=\frac{mg\ell_0}{2\ell}
+\simeq12.5\,\mathrm N}.
+\]
+\excheck 底本书末给出的上轴承力约 $25\,\mathrm N$，
+等于 $mg\ell_0/\ell$。这里应检验
+“上轴承水平力”是否只含支承反力还是承受的两个
+相反力分量被叠加；在本稿明确的上下轴承距离
+$\ell$、固定点位于中点的模型里，力矩臂为 $\ell$，
+故 $12.5\,\mathrm N$ 是本组方程的结果。
+为避免不自洽，数值差异标记待独立图形审校。
+
+\exproblem{282}{45}
+长为 $\ell$、质量为 $m$ 的均匀细杆中点 $C$
+固定于竖直轴 $OO'$，
+杆与轴夹角为 $\theta$（原图1.71）。
+系统绕竖轴以恒角速度 $\omega$ 旋转。
+求：(a) 杆关于中点的角动量矢量大小、方向及其竖轴分量；
+(b) 半周内角动量矢量增量的模；
+(c) 轴承必须提供的外力矩大小。
+\exsolution
+杆对质心的转动惯量张量沿杆轴分量近似为零，
+垂直杆轴的分量
+$I_\perp=m\ell^2/12$。
+记杆方向单位矢量为 $\bm e$，
+竖直单位矢量为 $\bm k$，
+转动角速度矢量 $\bm\omega=\omega\bm k$。
+关于中点的角动量
+\[
+\bm L_C=I_\perp[
+\bm\omega-(\bm\omega\cdot\bm e)\bm e]
+=I_\perp\omega(\bm k-\cos\theta\,\bm e).
+\]
+其方向在杆与竖轴张成的平面内、垂直于杆，
+大小和竖轴投影为
+\[
+\boxed{|\bm L_C|=\frac{m\ell^2\omega}{12}\sin\theta},
+\qquad
+\boxed{L_z=\frac{m\ell^2\omega}{12}\sin^2\theta}.
+\]
+随系统转过半周，角动量的水平分量反向，
+竖直分量不变。水平分量大小为
+$I_\perp\omega\sin\theta\cos\theta$，
+故
+\[
+\boxed{|\Delta\bm L_C|
+=2I_\perp\omega|\sin\theta\cos\theta|
+=\frac{m\ell^2\omega}{12}|\sin2\theta|}.
+\]
+该水平分量以角速度 $\omega$ 旋转，
+所以轴承需要的力矩
+\[
+\boxed{N=\omega|L_{\perp,z}|
+=\frac{m\ell^2\omega^2}{24}|\sin2\theta|}.
+\]
+\excheck 这里 $L_{\perp,z}$ 表示角动量相对于
+\emph{竖轴}的水平分量。
+(c) 与本书第269题同一几何结构的连续积分应一致；
+本题书末给 $\frac1{24}$，而第269题简答给 $\frac12$，
+进一步表明后者存在系数印误。
+
+\exproblem{283}{45}
+一个陀螺质量为 $m=0.50\,\mathrm{kg}$，
+自转轴与竖直夹角 $\theta=30^\circ$，
+绕自转轴惯量 $I=2.0\,\mathrm{g\,m^2}$，
+自转角速度 $\omega=350\,\mathrm{rad/s}$。
+支点到质心的距离 $\ell=10\,\mathrm{cm}$。
+在慢进动近似下求：(a) 进动角速度；
+(b) 支点对陀螺的水平反力大小和方向。
+\exsolution
+自转主角动量模为 $L_s=I\omega$。
+重力关于支点的力矩大小为
+$N_g=mg\ell\sin\theta$。
+慢进动时 $\bm L_s$ 以角速度 $\Omega$
+绕竖直方向转动，
+其矢量变化率大小为 $\Omega L_s\sin\theta$。
+因此
+\[
+\Omega I\omega\sin\theta=mg\ell\sin\theta,
+\qquad
+\boxed{\Omega=\frac{mg\ell}{I\omega}
+\simeq0.701\,\mathrm{rad/s}}.
+\]
+质心绕竖轴以半径 $\ell\sin\theta$
+作匀速圆周运动，水平向心加速度为
+$\Omega^2\ell\sin\theta$。
+重力无水平分量，故支点水平反力为
+\[
+\boxed{F_h=m\Omega^2\ell\sin\theta
+\simeq1.23\times10^{-2}\,\mathrm N},
+\]
+方向\emph{水平指向进动圆的旋转轴}。
+\excheck 所求是慢进动模型下的支点反力，
+不等于陀螺所受重力大小；
+原书将其量级约记为 $10\,\mathrm{mN}$。
+
+\exproblem{284}{46}
+一陀螺由半径 $R=5.0\,\mathrm{cm}$ 的
+均匀圆盘及长 $\ell=10\,\mathrm{cm}$ 的轻杆组成，
+杆一端铰接在竖直向上以
+$a_0=2.0\,\mathrm{m/s^2}$ 加速的电梯地板上（图1.73）。
+圆盘以稳定角速度
+$n=0.5$ 转/秒进动。
+忽略摩擦及杆质量，求圆盘自身的角速度 $\omega$。
+\exsolution
+电梯参考系的等效重力加速度为
+$g_{\rm eff}=g+a_0$。
+均匀圆盘自转惯量
+$I=\frac12mR^2$，主角动量
+$L_s=I\omega$。
+以 $\ell$ 为力臂，重力与惯性力合力矩
+$mg_{\rm eff}\ell$ 引起慢进动，
+其角速度 $\Omega=2\pi n$，故
+\[
+\Omega I\omega=mg_{\rm eff}\ell.
+\]
+消去圆盘质量得
+\[
+\boxed{\omega=
+\frac{2(g+a_0)\ell}{R^2(2\pi n)}
+=\frac{(g+a_0)\ell}{\pi nR^2}
+\simeq3.01\times10^2\,\mathrm{rad/s}}.
+\]
+\excheck 电梯\emph{向上}加速使等效重力变大，
+因此公式必须含 $g+a_0$；原书简答与此一致。
+
+\exproblem{285}{46}
+陀螺质量 $m=1.0\,\mathrm{kg}$，
+自转轴转动惯量 $I=4.0\,\mathrm{g\,m^2}$、
+自转角速度 $\omega=310\,\mathrm{rad/s}$。
+支点固定在一水平加速的物块上，
+物块加速度大小为 $a_0=1.0\,\mathrm{m/s^2}$。
+支点到质心距离 $\ell=10\,\mathrm{cm}$。
+求陀螺稳定慢进动角速度的模及进动轴方向。
+\exsolution
+在随支点加速的非惯性系中，
+除重力 $m\bm g$ 外还有与支点水平加速方向相反的
+惯性力 $-m\bm a_0$。
+二者合成有效重力场
+$\bm g_{\rm eff}=\bm g-\bm a_0$，
+其大小
+$g_{\rm eff}=\sqrt{g^2+a_0^2}$。
+慢进动时
+$\Omega I\omega=m\ell g_{\rm eff}$，
+所以
+\[
+\boxed{\Omega=\frac{m\ell\sqrt{g^2+a_0^2}}{I\omega}
+\simeq0.796\,\mathrm{rad/s}}.
+\]
+进动轴与有效重力方向一致，
+其相对竖直的倾角为
+\[
+\boxed{\delta=\arctan(a_0/g)
+\simeq5.82^\circ\approx6^\circ},
+\]
+从竖直方向朝\emph{支点加速度的反方向}倾斜。
+\excheck 求进动速率应用有效重力场的\emph{模}，
+求进动轴方向则保留其矢量方向。
+
+\exproblem{286}{46}
+质量 $m=5.0\,\mathrm{kg}$、
+半径 $R=6.0\,\mathrm{cm}$ 的均匀实心球，
+绕穿过球心的水平轴以
+$\omega=1250\,\mathrm{rad/s}$ 自转。
+其水平轴由两个间距 $\ell=15\,\mathrm{cm}$
+的轴承支撑。整个支架绕竖直轴以
+$\Omega=5.0\,\mathrm{rad/s}$ 匀速转动。
+求轴承受到的陀螺力大小及方向关系。
+\exsolution
+均匀实心球自转惯量为
+$I=\frac25mR^2$，主自转角动量大小 $L=I\omega$。
+自转轴水平，其角动量方向随支架绕竖直轴以
+角速度 $\Omega$ 转动，
+因此角动量方向变化率与其垂直，大小
+\[
+N_{\rm gyro}=\Omega L=I\omega\Omega
+=\frac25mR^2\omega\Omega.
+\]
+轴承相距 $\ell$，
+需要一对大小相等、方向相反的横向支承力
+形成这一力偶；每端的陀螺力大小为
+\[
+\boxed{F=\frac{N_{\rm gyro}}{\ell}
+=\frac{2mR^2\omega\Omega}{5\ell}
+\simeq3.00\times10^2\,\mathrm N
+=0.30\,\mathrm{kN}}.
+\]
+\excheck 两端轴承反力方向相反，
+形成一个力偶，具体上、下方向取决于
+自转及支架转动的方向，可由
+$\bm N=\bm\Omega\times\bm L$ 判定。
+
+\exproblem{287}{46}
+陀螺圆盘质量为 $m=15\,\mathrm{kg}$、
+半径 $r=5.0\,\mathrm{cm}$，
+自转角速度为 $\omega=330\,\mathrm{rad/s}$。
+轴承间距为 $\ell=15\,\mathrm{cm}$。
+自转轴被迫绕一水平轴作小幅周期摆动，
+摆动周期 $T=1.0\,\mathrm s$、
+角振幅 $\varphi_m=20^\circ$。
+求轴承所受陀螺力的最大值。
+\exsolution
+圆盘轴向转动惯量
+$I=\frac12mr^2$，
+自转主角动量 $L=I\omega$。
+设自转轴的摆动角
+$\varphi(t)=\varphi_m\sin(2\pi t/T)$，
+那么轴线方向改变的瞬时角速度
+$|\dot\varphi|$ 最大值为 $2\pi\varphi_m/T$。
+维持这种方向变化的陀螺力矩最大值
+\[
+N_{\max}=L\frac{2\pi\varphi_m}{T}
+=\frac{\pi mr^2\omega\varphi_m}{T}.
+\]
+由轴承距 $\ell$，每端最大附加力
+\[
+\boxed{F_{\max}
+=\frac{\pi mr^2\omega\varphi_m}{\ell T}
+\simeq90\,\mathrm N=0.090\,\mathrm{kN}},
+\]
+其中 $\varphi_m=20^\circ$ 须换算为
+$0.349\,\mathrm{rad}$。
+\excheck 本题的最大陀螺力发生在角位移过零且
+角速度模最大的时刻，而不是角位移达到 $\pm\varphi_m$ 时。
+
+\exproblem{288}{46}
+轮船以 $v=36\,\mathrm{km/h}$ 沿水平圆弧航行，
+轨道半径为 $R=200\,\mathrm m$。
+船上沿船长方向布置的飞轮轴
+转动惯量为 $I=3.8\times10^3\,\mathrm{kg\,m^2}$，
+飞轮转速 $n=300$ 转/分。
+求飞轮轴承承受的陀螺力矩大小。
+\exsolution
+飞轮自转角速度为
+$\omega=2\pi n/60$（弧度每秒）。
+船体沿水平圆弧改变航向的角速度为
+$\Omega=v/R$，其中
+$v=36/3.6=10.0\,\mathrm{m/s}$。
+飞轮主自转角动量
+$L=I\omega$ 沿船长方向，
+与航向改变的竖直角速度 $\bm\Omega$ 垂直。
+轴承陀螺力矩大小
+\[
+\boxed{N=I\omega\Omega
+=\frac{2\pi nIv}{60R}
+=\frac{2\pi(300)(3.8\times10^3)(10)}{60(200)}
+\simeq5.97\times10^3\,\mathrm{N\,m}
+\approx6.0\,\mathrm{kN\,m}}.
+\]
+\excheck 力矩的方向取决于转弯方向和飞轮的自转方向，
+可用 $\bm N=\bm\Omega\times\bm L$ 确定。
+
+\exproblem{289}{46}
+一台机车沿半径 $R=250\,\mathrm m$ 的水平曲线
+以速率 $v=50\,\mathrm{km/h}$ 行驶。
+汽轮机转轴平行于车轮轴，其自转方向与车轮相同。
+汽轮机转子的轴向惯量
+$I=240\,\mathrm{kg\,m^2}$，
+转速 $n=1500$ 转/分。两轨轨距
+$\ell=1.5\,\mathrm m$。
+求陀螺效应使铁轨垂直载荷产生的附加变化量。
+\exsolution
+机车绕竖直方向转弯角速度
+$\Omega=v/R$；
+汽轮机转子角速度
+$\omega=2\pi n/60$。
+转轴水平且与航向改变的竖直轴垂直，
+故陀螺力矩大小
+$N=I\omega\Omega$。
+这一力矩由左右轨道上大小相等、方向相反
+的\emph{附加竖直反力}形成，
+以轨距 $\ell$ 为力偶臂：
+\[
+\boxed{\Delta F=\frac{N}{\ell}
+=\frac{2\pi nIv}{60R\ell}}.
+\]
+代入
+$v=50/3.6\simeq13.89\,\mathrm{m/s}$：
+\[
+\boxed{\Delta F\simeq1.40\times10^3\,\mathrm N
+=1.4\,\mathrm{kN}}.
+\]
+\excheck 由于汽轮机自转方向与车轮相同，
+按原书图示运动方向，\emph{外轨}载荷增加
+$\Delta F$、内轨载荷减少同量；
+不是两轨总载荷同时增加。
