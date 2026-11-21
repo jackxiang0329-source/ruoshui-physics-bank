@@ -52,7 +52,7 @@ test(125,"gravity average power full level-to-level projectile",
 test(125,"gravitational instantaneous power initial with v0=5 alpha30 m2",
      -2*G*5*sin(pi/6),-49.05)
 test(126,"kinetic energy normal acceleration a t² with a3 R2 at t4",
-     .5*2*3*2*4**2,48)
+     .5*2*3*2*4**2,96)
 test(126,"instantaneous force power at t4 for m2 a3 R2",
      2*3*2*4,48,1e-10)
 test(126,"time mean power 0--4 for m2 a3 R2",
