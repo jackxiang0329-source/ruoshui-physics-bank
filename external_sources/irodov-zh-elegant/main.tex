@@ -32,13 +32,14 @@
 \newcommand{\polarizationproblem}[2]{\par\bigskip\noindent\textbf{\large 原书第五篇·第5.4节·第\,#1\,题}\hfill{\small 原书印刷页 #2}\par\smallskip}
 \newcommand{\atomicproblem}[2]{\par\bigskip\noindent\textbf{\large 原书第六篇·第6.1节·第\,#1\,题}\hfill{\small 原书印刷页 #2}\par\smallskip}
 \newcommand{\wavequantproblem}[2]{\par\bigskip\noindent\textbf{\large 原书第六篇·第6.2节·第\,#1\,题}\hfill{\small 原书印刷页 #2}\par\smallskip}
+\newcommand{\atomictermsproblem}[2]{\par\bigskip\noindent\textbf{\large 原书第六篇·第6.3节·第\,#1\,题}\hfill{\small 原书印刷页 #2}\par\smallskip}
 \newcommand{\exsolution}{\par\medskip\noindent\textbf{【详细解析】}\quad}
 \newcommand{\excheck}{\par\smallskip\noindent\textbf{【核验】}\quad}
 \title{《普通物理学习题》中文译注与详解}
 \subtitle{Problems in General Physics --- 逐题整理（进行中）}
 \author{原著：I. E. Irodov \quad 中文译注与题解：三千弱水}
-\date{2026年11月22日 · 已录入1633题（力学388题 + 热学257题 + 电动力学407题 + 振动与波动224题 + 光学292题 + 原子与核物理65题）}
-\version{2.3}
+\date{2026年11月22日 · 已录入1734题（力学388题 + 热学257题 + 电动力学407题 + 振动与波动224题 + 光学292题 + 原子与核物理166题）}
+\version{2.4}
 \cover{cover.pdf}
 \begin{document}
 \maketitle
@@ -237,11 +238,21 @@
 \input{chapters/34-atomic-scattering-001-018}
 \input{chapters/34-atomic-scattering-019-032}
 \input{chapters/34-atomic-scattering-033-048}
-\section{粒子的波动性质与薛定谔方程：第49--65题（后续继续）}
+\section{粒子的波动性质与薛定谔方程：第49--96题（本节完成）}
 \input{chapters/35-wave-properties-049-065}
+\input{chapters/35-wave-properties-066-080}
+\input{chapters/35-wave-properties-081-096}
+\section{原子性质与光谱：第97--166题（本节完成）}
+\input{chapters/36-atomic-spectra-097-104}
+\input{chapters/36-atomic-spectra-105-117}
+\input{chapters/36-atomic-spectra-118-134}
+\input{chapters/36-atomic-spectra-135-147}
+\input{chapters/36-atomic-spectra-148-158}
+\input{chapters/36-atomic-spectra-159-166}
 \backmatter
 \chapter*{版本信息}
-本书目前录入六篇1633道有中文题面、完整推导和核验说明的题目。第一篇力学388题、第二篇热学与分子物理257题、第三篇电动力学407题、第四篇振动与波动224题、第五篇光学292题均已覆盖对应篇的全部原书题号。第六篇《原子与核物理》已录入独立编号1--65题。
-v2.3本轮新增100道：第五篇第258--292题35道使光学完结；第六篇第1--65题65道，分别为6.1节卢瑟福散射与玻尔原子1--48题及6.2节物质波49--65题。相关译解均以用户提供385页Arihant英文底本为依据，保留原书印刷页标识、公式推导和逐题核验。
-本轮专门校勘第六篇10、12题的原书数值差异，第29题“第50条”与上能级n=50的编号分歧，以及第32题书末漏列的95.0 nm莱曼吸收线。原书第六篇采用高斯单位制，本版明确转换为SI且注明库仑常数。完整的学术独立二校及部分图形复绘尚未完成；结构检查通过不等于PDF编译或学术终审通过。
+本书现累计1734道有中文题面、LaTeX步骤推导与单题核验的题目：第一篇力学388题、第二篇热学257题、第三篇电动力学407题、第四篇振动与波动224题、第五篇光学292题（前五篇全部按原书题号覆盖）；第六篇原子与核物理独立编号1--166题。
+v2.4本轮新增101道：第六篇6.2节物质波及薛定谔方程第66--96题31道（本节完成），第六篇6.3节原子性质与光谱第97--166题70道（本节完成）。原书印刷页239--250，对照用户提供的Arihant版PDF第248--259页以及书末相关答案页，逐题保留题号、中文题意、严格推导与必要的模型适用条件。
+重要校勘：6.95(b)书末WKB指数系数与原图积分差2倍；6.114(d)原题光谱项下标不满足角动量三角规则；6.130(a)书末指数估值与Boltzmann因子不符；6.138书末Z=29与初始10kV不足以激发该K边的事实冲突；6.155原印22MeV而书末梯度相当于22meV；6.159原印10^4微电子伏而书末对应约104微电子伏。详见errata.md。
+所有本轮源码已接入主文件并设置结构校验。源书图形复绘、独立物理学二校及GitHub Actions最新整书XeLaTeX编译是另行验收项目；不以源文件上传冒充PDF构建成功。
 \end{document}
