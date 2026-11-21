@@ -1,0 +1,363 @@
+% Irodov, Arihant PDF pp. 19--21; printed pp. 10--12.
+% Section 1.2 Newton dynamics: problems 59--70 with detailed derivations.
+\exproblem{59}{10}
+一气球及其载荷总质量为 $m$，最初以向下大小为 $w$ 的恒定加速度下降。
+忽略空气阻力。求应抛弃多少压舱物，才能使气球改为以同样大小的
+加速度 $w$ 向上运动。
+\exsolution
+设空气浮力大小为 $B$，抛弃前沿向下方向应用牛顿第二定律：
+\[
+ mg-B=mw\quad\Longrightarrow\quad B=m(g-w).
+\]
+抛弃质量 $\Delta m$ 后，若浮力在短时间内保持不变，
+沿向上方向列式：
+\[
+ B-(m-\Delta m)g=(m-\Delta m)w.
+\]
+消去 $B$ 得
+\[
+ m(g-w)=(m-\Delta m)(g+w)
+ \quad\Longrightarrow\quad
+ \boxed{\Delta m=\frac{2mw}{g+w}.}
+\]
+\excheck 要有正浮力且初态正常，需 $0<w<g$。
+若浮力随气球体积或高度显著变化，上式仅适用于浮力近似不变的模型。
+
+\exproblem{60}{10}
+如原书图1.9，质量 $m_0$ 的重物悬挂于滑轮一端，另一端连接水平面上的
+$m_1$，而 $m_1$ 再以另一根轻绳连接水平面上的 $m_2$。
+滑轮、绳质量及轴摩擦可忽略；两水平物体与地面的摩擦系数同为 $k$。
+题面特别给出 $m_0=m_1=m_2$。求 $m_0$ 向下加速度
+以及 $m_1$、$m_2$ 之间细绳的拉力，并讨论可能情形。
+\exsolution
+先保留三个质量作一般计算，设 $m_0$ 确实向下运动且加速度为 $a$。
+系统整体在运动方向列牛顿第二定律：
+\[
+ m_0g-k(m_1+m_2)g=(m_0+m_1+m_2)a.
+\]
+故在正在滑动的状态下
+\[
+ a=\frac{m_0-k(m_1+m_2)}{m_0+m_1+m_2}g.
+\]
+对 $m_2$ 单独列式，设两水平物体间绳的拉力为 $T_{12}$：
+\[
+ T_{12}-km_2g=m_2a
+ \quad\Longrightarrow\quad
+ T_{12}=\frac{(1+k)m_0m_2}{m_0+m_1+m_2}g.
+\]
+题给三质量均等于 $m$，若 $0\le k<1/2$，得
+\[
+ \boxed{a=\frac{1-2k}{3}g\quad(\text{$m_0$ 向下}),\qquad
+ T_{12}=\frac{1+k}{3}mg.}
+\]
+\excheck 若初态静止且 $k\ge1/2$，
+静摩擦力足以阻止系统从静止自行起动，故 $a=0$。
+在静止状态下，摩擦力可在容许范围内自适应，
+$T_{12}$ 未必仅由 $k,m$ 唯一确定；
+应区分\emph{运动摩擦模型}和\emph{静止受力平衡}，不能将滑动公式强行沿用。
+
+\exproblem{61}{10--11}
+两物块 $1,2$ 在倾角 $\alpha$ 的斜面上首尾相接且共同下滑（图1.10）。
+两块质量分别为 $m_1,m_2$，
+摩擦系数分别为 $k_1,k_2$，且 $k_1>k_2$；
+其中物块1位于下方。求：(a) 滑动时两物块之间的接触力；
+(b) 开始沿斜面下滑所需的最小倾角。
+\exsolution
+取沿斜面向下为正。物块1摩擦力较大，因而上方物块2向下推物块1。
+接触力大小记 $N_c$，分别列式：
+\[
+ \begin{aligned}
+ m_1a&=m_1g\sin\alpha-k_1m_1g\cos\alpha+N_c,\\
+ m_2a&=m_2g\sin\alpha-k_2m_2g\cos\alpha-N_c.
+ \end{aligned}
+\]
+两式相加求得共同加速度
+\[
+ a=g\left[\sin\alpha-
+ \frac{k_1m_1+k_2m_2}{m_1+m_2}\cos\alpha\right].
+\]
+代回任一块的方程：
+\[
+ \boxed{N_c=\frac{m_1m_2}{m_1+m_2}
+ (k_1-k_2)g\cos\alpha.}
+\]
+开始滑动对应共同加速度的临界值零，因此
+\[
+ \boxed{\tan\alpha_{\min}=
+ \frac{k_1m_1+k_2m_2}{m_1+m_2}.}
+\]
+\excheck $k_1=k_2$ 时 $N_c=0$，
+说明它们在相同摩擦模型下不必互相推挤。
+临界角公式把系数理解为相应的最大静摩擦系数；
+一旦滑动后的力和加速度则按滑动摩擦模型计算。
+
+\exproblem{62}{11}
+一小物体沿倾角 $\alpha=15^\circ$ 的斜面向上抛出。
+它上升所需时间比滑回出发点的时间短 $\eta=2.0$ 倍，
+即 $t_{\downarrow}=\eta t_{\uparrow}$。
+求摩擦系数 $k$。
+\exsolution
+沿斜面上行时，重力和摩擦力均向下，
+减速度大小
+$a_\uparrow=g(\sin\alpha+k\cos\alpha)$。
+设初速为 $v_0$，则
+\[
+ t_\uparrow=\frac{v_0}{a_\uparrow},\qquad
+ s_{\max}=\frac{v_0^2}{2a_\uparrow}.
+\]
+下行时加速度大小为
+$a_\downarrow=g(\sin\alpha-k\cos\alpha)>0$；
+从静止返回同一段路程的时间
+\[
+ t_\downarrow=\sqrt{\frac{2s_{\max}}{a_\downarrow}}
+ =\frac{v_0}{\sqrt{a_\uparrow a_\downarrow}}.
+\]
+所以
+\[
+ \eta^2=\frac{a_\uparrow}{a_\downarrow}
+ =\frac{\sin\alpha+k\cos\alpha}
+ {\sin\alpha-k\cos\alpha},
+\]
+解得
+\[
+ \boxed{k=\frac{\eta^2-1}{\eta^2+1}\tan\alpha
+ =\frac35\tan15^\circ\simeq0.161.}
+\]
+\excheck 算得 $k<\tan\alpha$，能保证物体从最高点自行滑下；
+这一条件不是可以随意忽略的。
+
+\exproblem{63}{11}
+斜面角 $\alpha$，质量 $m_1$ 的物体在斜面上、与斜面摩擦系数为 $k$，
+轻绳经无摩擦轻滑轮与悬挂物 $m_2$ 相连（图1.11）。
+系统初始静止，求何种 $m_2/m_1$ 导致：
+(a) $m_2$ 开始下降；(b) $m_2$ 开始上升；(c) 保持静止。
+\exsolution
+设比值 $r=m_2/m_1$。若 $m_2$ 将下降，
+斜面上 $m_1$ 将向上走，摩擦沿斜面向下。
+克服静摩擦所需的力学临界条件是
+\[
+ m_2g>m_1g\sin\alpha+km_1g\cos\alpha.
+\]
+因此
+$\boxed{r>\sin\alpha+k\cos\alpha}$。
+若 $m_2$ 将上升，则 $m_1$ 沿斜面下滑，
+摩擦反向，条件为
+\[
+ m_1g\sin\alpha>m_2g+km_1g\cos\alpha,
+\]
+即 $\boxed{r<\sin\alpha-k\cos\alpha}$。
+其他情况下静摩擦力能调整以平衡系统，故
+\[
+ \boxed{\sin\alpha-k\cos\alpha
+ \le r\le \sin\alpha+k\cos\alpha.}
+\]
+\excheck 若 $\sin\alpha-k\cos\alpha<0$，
+则对正质量比 $r>0$，(b) 的上升区域为空。
+边界等号代表临界静止，是否启动取决于额外扰动和静摩擦模型。
+
+\exproblem{64}{11}
+沿用第63题装置，给定
+$\alpha=30^\circ$、$m_2/m_1=2/3$、$k=0.10$，
+原先静止的系统释放后，求 $m_2$ 加速度的大小和方向。
+\exsolution
+下落驱动力相对斜面摩擦阻力的比值为
+\[
+ r-\sin\alpha-k\cos\alpha
+ =\frac23-\frac12-\frac{\sqrt3}{20}
+ \simeq0.0801>0.
+\]
+所以 $m_2$ 向下、$m_1$ 沿斜面向上。
+把两个物体合成一个系统：
+\[
+ m_2g-m_1g\sin\alpha-km_1g\cos\alpha
+ =(m_1+m_2)a.
+\]
+代入得
+\[
+ \boxed{a=g\,\frac{r-\sin\alpha-k\cos\alpha}{1+r}
+ \simeq0.0481g\simeq0.472\,\mathrm{m/s^2},}
+\]
+方向为 $m_2$ 向下。
+\excheck 系统达到滑动阈值，因为
+$r>\sin\alpha+k\cos\alpha$，所选摩擦方向自洽。
+
+\exproblem{65}{11}
+质量 $m_1$ 的木板放在光滑水平面上，
+质量 $m_2$ 的小块放在木板上；对小块施加从零起随时间线性增大的
+水平力 $F=at$（此处 $a$ 为正比例系数，而非加速度）。
+小块与木板之间摩擦系数为 $k$。求两者加速度
+$a_1(t),a_2(t)$ 并作定性图。
+\exsolution
+在两者尚未相对滑动时，共同加速度为
+$A(t)=at/(m_1+m_2)$。
+为推动木板所需摩擦力大小是
+$f=m_1A(t)=m_1at/(m_1+m_2)$。
+当 $f$ 达最大值 $km_2g$ 时开始滑动，所以
+\[
+ \boxed{t_0=\frac{km_2g(m_1+m_2)}{am_1}.}
+\]
+在 $0\le t\le t_0$：
+\[
+ \boxed{a_1=a_2=\frac{at}{m_1+m_2}.}
+\]
+在 $t\ge t_0$ 的持续相对滑动阶段，
+木板受摩擦力 $km_2g$，小块受反向摩擦力，因此
+\[
+ \boxed{a_1=\frac{km_2g}{m_1},\qquad
+ a_2=\frac{at-km_2g}{m_2}.}
+\]
+加速度曲线在 $t_0$ 处连续：
+$a_1$ 此后变为水平线，$a_2$ 此后增长斜率由
+$a/(m_1+m_2)$ 增为 $a/m_2$。
+\excheck $\lim_{t\downarrow t_0}a_2
+=\lim_{t\uparrow t_0}a_1=km_2g/m_1$；
+原书图仅给示意，本稿的分段表达式确定了图形。
+
+\exproblem{66}{11}
+如图1.12，斜面底边水平长度 $\ell=2.10\,\mathrm m$，
+斜面与水平夹角 $\alpha$，滑动摩擦系数 $k=0.140$。
+小物体由斜面顶端从静止下滑。求下滑时间最短时的倾角及最短时间。
+\exsolution
+滑行长度为 $L=\ell/\cos\alpha$，
+沿斜面加速度
+$a_\parallel=g(\sin\alpha-k\cos\alpha)$。
+仅当 $\tan\alpha>k$ 时能自然下滑；所需时间满足
+\[
+ t^2=\frac{2L}{a_\parallel}
+ =\frac{2\ell}{g(\sin\alpha\cos\alpha-k\cos^2\alpha)}.
+\]
+令分母中的角度函数
+$f(\alpha)=\frac12[\sin2\alpha-k(1+\cos2\alpha)]$。
+$t$ 最小时 $f$ 最大，求导：
+\[
+ f'(\alpha)=\cos2\alpha+k\sin2\alpha=0,
+\]
+在物理允许区间的最大点为
+\[
+ \boxed{\alpha_{\rm opt}
+ =\frac\pi4+\frac12\arctan k
+ \simeq48.99^\circ.}
+\]
+此时 $f_{\max}=(\sqrt{1+k^2}-k)/2$，故
+\[
+ \boxed{t_{\min}=
+ \sqrt{\frac{4\ell}{g(\sqrt{1+k^2}-k)}}
+ \simeq0.992\,\mathrm s.}
+\]
+\excheck 最优角大于 $45^\circ$，因为增大倾角能减小摩擦效应；
+极限 $k=0$ 时恢复 $45^\circ$。
+
+\exproblem{67}{11--12}
+质量为 $m$ 的物块通过一根绳子沿倾角为 $\alpha$ 的斜面向上拉动
+（图1.13）。绳子与斜面夹角为 $\beta$，摩擦系数为 $k$。
+求使匀速上拉所需拉力最小时的 $\beta$，以及最小拉力。
+\exsolution
+沿斜面向上为正。绳拉力 $T$ 减小斜面对物块的正压力，
+$N=mg\cos\alpha-T\sin\beta$。
+物块匀速上拉时
+\[
+ T\cos\beta=mg\sin\alpha+kN
+ =mg(\sin\alpha+k\cos\alpha)-kT\sin\beta.
+\]
+故
+\[
+ T(\beta)=\frac{mg(\sin\alpha+k\cos\alpha)}
+ {\cos\beta+k\sin\beta}.
+\]
+因为
+$\cos\beta+k\sin\beta\le\sqrt{1+k^2}$，
+等号在 $\tan\beta=k$ 处成立，所以
+\[
+ \boxed{\beta_{\rm opt}=\arctan k,\qquad
+ T_{\min}=\frac{mg(\sin\alpha+k\cos\alpha)}
+ {\sqrt{1+k^2}}.}
+\]
+\excheck 以上假定最优时仍保持斜面接触。
+把最优解代入正压力得
+$N=mg(\cos\alpha-k\sin\alpha)/(1+k^2)$；
+只有 $\cos\alpha\ge k\sin\alpha$ 时才自洽，
+否则必须改按接触边界或离面情形分析。
+
+\exproblem{68}{12}
+从 $t=0$ 起，质量 $m$ 的小块置于光滑水平面上，
+受到大小 $F(t)=at$、与水平方向恒成仰角 $\alpha$ 的拉力
+（图1.14），$a>0$。
+求物块刚离开水平面那一刻：
+(a) 速率；(b) 此前在水平面上移动的路程。
+\exsolution
+离地以前竖直方向无加速度，支持力
+$N(t)=mg-at\sin\alpha$。对于 $0<\alpha<\pi/2$，
+刚离地时
+\[
+ t_*=\frac{mg}{a\sin\alpha}.
+\]
+水平方向运动满足
+$m\ddot x=at\cos\alpha$，
+且 $x(0)=\dot x(0)=0$。两次积分：
+\[
+ v_x(t)=\frac{a\cos\alpha}{2m}t^2,\qquad
+ x(t)=\frac{a\cos\alpha}{6m}t^3.
+\]
+代入 $t_*$：
+\[
+ \boxed{v_*=\frac{mg^2\cos\alpha}{2a\sin^2\alpha},\qquad
+ s_*=\frac{m^2g^3\cos\alpha}{6a^2\sin^3\alpha}.}
+\]
+\excheck $N(t_*)=0$，此前 $N>0$；
+若 $\alpha=0$，竖直分力为零，物块始终不离面，
+本式不适用。
+
+\exproblem{69}{12}
+质量为 $m$ 的物块在光滑水平面上从静止开始直线运动，
+受到大小恒为 $F=mg/3$ 的外力。
+外力与水平方向的夹角随已走路程 $s$ 变化为 $\alpha=as$，
+其中 $a>0$。求速率 $v$ 关于角度 $\alpha$ 的函数。
+\exsolution
+仅水平分力做功：
+\[
+ F_\parallel(s)=\frac{mg}{3}\cos(as).
+\]
+由动能定理
+$\frac12mv^2=\int_0^s F_\parallel(u)\,\mathrm du$，
+得到
+\[
+ \frac12mv^2=\frac{mg}{3a}\sin(as)
+ =\frac{mg}{3a}\sin\alpha.
+\]
+所以在从静止出发并持续向前、$\sin\alpha\ge0$ 的阶段
+\[
+ \boxed{v(\alpha)=\sqrt{\frac{2g}{3a}\sin\alpha}.}
+\]
+\excheck 根号不可省略：$g/a$ 的量纲是
+$\mathrm{m^2/s^2}$，而速率量纲须为 $\mathrm{m/s}$。
+当 $\alpha$ 增至 $\pi/2$ 时速率最大；
+之后水平分力向后而做负功。
+
+\exproblem{70}{12}
+在水平面上放置一质量为 $2m$ 的物块与一质量为 $m$ 的
+电动机—电池组合体，两者之间距离 $\ell$，
+地面摩擦系数均为 $k$。绳子一端系于物块，
+另一端缠绕在电动机轴上。启动后，物块以恒加速度 $w$
+向电动机移动。求两者相遇时间。
+\exsolution
+设电动机组向物块运动的加速度为 $a_M$，
+绳拉力为 $T$。忽略电动机内部质量变化以及绳质量，
+两者均朝对方运动，且滑动摩擦力大小分别为 $2kmg$、$kmg$。
+对物块：
+\[
+ T-2kmg=2mw\quad\Longrightarrow\quad T=2m(w+kg).
+\]
+对电动机组：
+\[
+ T-kmg=ma_M
+ \quad\Longrightarrow\quad
+ a_M=2w+kg.
+\]
+故两者间距以相对加速度 $w+a_M=3w+kg$ 缩短，
+初始均静止时有
+$\ell=\frac12(3w+kg)t^2$，因此
+\[
+ \boxed{t=\sqrt{\frac{2\ell}{3w+kg}}.}
+\]
+\excheck 若书末答案未能清晰显示根号，应以此量纲正确的表达式为准；
+$2\ell/(3w+kg)$ 的量纲是时间平方，不能直接等于时间。
