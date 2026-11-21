@@ -1,0 +1,345 @@
+% Irodov Part VI §6.7, original 301--310; final 10 problems of the book.
+% Source PDF pp.275--276 (printed 266--267); answers PDF p.360 (printed 351).
+% Lists of reactions in problems 308--310 checked against the scanned page image.
+\elementaryproblem{301}{266}
+一个运动中的中性$\pi^0$介子衰变为
+能量相等的两个$\gamma$光子，
+两光子的传播方向夹角为
+$\theta=60^\circ$。
+求介子的动能以及每个光子能量。
+\exsolution
+记每个光子能量为$\varepsilon$。
+两光子总能量$E_\pi=2\varepsilon$，
+总动量模
+$p_\pi=(2\varepsilon/c)\cos(\theta/2)$。
+由初态介子的质能不变量
+\[
+ m_\pi^2c^4=E_\pi^2-p_\pi^2c^2
+ =4\varepsilon^2\sin^2\frac{\theta}{2},
+\]
+解得
+\[
+ \boxed{\varepsilon=
+ \frac{m_\pi c^2}{2\sin(\theta/2)}}.
+\]
+介子的动能
+$T_\pi=2\varepsilon-m_\pi c^2$，
+所以
+\[
+ \boxed{T_\pi=m_\pi c^2
+ \left[\frac1{\sin(\theta/2)}-1\right]}.
+\]
+对$\theta=60^\circ$，
+$\sin30^\circ=1/2$，
+\[
+ \boxed{T_\pi=m_\pi c^2\simeq135\,\mathrm{MeV}},\qquad
+ \boxed{\varepsilon=m_\pi c^2\simeq135\,\mathrm{MeV}}.
+\]
+\excheck 两光子在实验室中能量相等，
+但方向并非相反，所以母粒子可以携带非零动量。
+
+\elementaryproblem{302}{266}
+一个静质量为$m$、动能为$T$的粒子，
+轰击初始静止的静质量为$M$的粒子。
+反应生成若干静质量为
+$m_1,m_2,\ldots$的新粒子。
+利用不变量$E^2-p^2c^2$
+证明相对论反应阈值公式。
+\exsolution
+实验室初态总能量
+$E_{\rm in}=(mc^2+T)+Mc^2$，
+三动量等于入射粒子动量$p$。
+因此
+\[
+ s c^4=E_{\rm in}^2-p^2c^2
+ =m^2c^4+M^2c^4+2M(mc^2+T)c^2,
+\]
+这里$s$取质量平方量纲。
+阈值处末态在质心系没有相对动量，
+所以末态不变质量达到
+$\mathcal M_f=m_1+m_2+\cdots$，
+从而$s=\mathcal M_f^2$。
+解$T$得
+\[
+ \boxed{T_{\rm th}=
+ \frac{(\sum_i m_i)^2-(m+M)^2}
+ {2M}\,c^2}.
+\]
+\excheck 与第271题非相对论近似不同，
+本式以四动量不变性处理较高能量下的末态反冲，
+可用于粒子产生阈值计算。
+
+\elementaryproblem{303}{266}
+动能$T=750\,\mathrm{keV}$的正电子
+撞上静止的自由电子并湮灭，
+产生能量相同的两个$\gamma$光子。
+求两光子夹角。
+\exsolution
+入射正电子总能量
+$E_+=m_ec^2+T$，
+初始总能量$E_{\rm tot}=2m_ec^2+T$。
+两个光子各携带
+$\varepsilon=E_{\rm tot}/2$。
+初态不变量
+\[
+ s c^4=(p_++p_-)^2c^2
+ =4m_e^2c^4+2m_ec^2T
+ =2m_ec^2(2m_ec^2+T).
+\]
+末态两光子夹角为$\theta$，
+则相同能量光子的不变量
+$s c^4=4\varepsilon^2\sin^2(\theta/2)$。
+因此
+\[
+ \boxed{\sin^2\frac\theta2=
+ \frac{2m_ec^2}{T+2m_ec^2}},\quad
+ \boxed{\theta=
+ 2\arcsin\sqrt{\frac{2m_ec^2}{T+2m_ec^2}}}.
+\]
+取$2m_ec^2=1022$keV，得
+$\boxed{\theta\simeq98.8^\circ\approx99^\circ}$。
+\excheck 当正电子动能$T\to0$，
+两光子趋于背向发射$\theta\to180^\circ$，
+验证了角度公式的极限行为。
+
+\elementaryproblem{304}{266}
+求入射$\gamma$光子与静止靶粒子反应时的阈值：
+(a) 在自由电子场中产生一对$e^-e^+$；
+(b) 在静止质子场中产生一对带相反电荷的$\pi$介子。
+\exsolution
+质量为$M$的静止靶吸收高能光子后，
+初态不变量为$M^2c^4+2Mc^2\varepsilon$。
+在阈值处末态总静质量为$\mathcal M_f$，
+故
+$\varepsilon_{\rm th}=
+[(\mathcal M_f)^2-M^2]c^2/(2M)$。
+(a) 反应
+$\gamma+e^-\to e^-+e^-+e^+$，
+末态总质量$3m_e$，故
+\[
+ \boxed{\varepsilon_{\rm th}^{(a)}
+ =\frac{(3m_e)^2-m_e^2}{2m_e}c^2
+ =4m_ec^2\simeq2.04\,\mathrm{MeV}}.
+\]
+(b) 反应
+$\gamma+p\to p+\pi^++\pi^-$，
+末态总质量$m_p+2m_\pi$，故
+\[
+ \boxed{\varepsilon_{\rm th}^{(b)}=
+ \frac{(m_p+2m_\pi)^2-m_p^2}{2m_p}c^2
+ =2m_\pi c^2\!\left(1+\frac{m_\pi}{m_p}\right)
+ \simeq321\,\mathrm{MeV}}.
+\]
+\excheck 对自由电子靶的对产生阈值并非单纯
+$2m_ec^2$，因为初态单光子有动量，
+末态必须分走反冲动能。
+
+\elementaryproblem{305}{266}
+质子束轰击静止氢靶，求以下反应的
+最小质子动能：
+(a) $p+p\to p+p+p+\bar p$；
+(b) $p+p\to p+p+\pi^0$。
+\exsolution
+对静止质子靶使用第302题阈值公式，
+入射、靶质量都为$m_p$。
+(a) 末态四粒子的总静质量为$4m_p$，
+所以
+\[
+ \boxed{T_{{\rm th},a}=
+ \frac{(4m_p)^2-(2m_p)^2}{2m_p}c^2
+ =6m_pc^2\simeq5.63\,\mathrm{GeV}}.
+\]
+(b) 末态总静质量$2m_p+m_{\pi^0}$，
+所以
+\[
+ \boxed{T_{{\rm th},b}=
+ \frac{(2m_p+m_{\pi^0})^2-(2m_p)^2}{2m_p}c^2
+ =2m_{\pi^0}c^2+\frac{m_{\pi^0}^2c^2}{2m_p}
+ \simeq0.280\,\mathrm{GeV}}.
+\]
+\excheck (a) 产生反质子时同时必须有一个额外质子，
+以保证总重子数从初态2到末态2。
+
+\elementaryproblem{306}{267}
+$\pi$介子束轰击静止氢靶，
+求产生下列粒子的入射动能阈值：
+(a) $\pi^-+p\to K^++\Sigma^-$；
+(b) $\pi^0+p\to K^++\Lambda^0$。
+\exsolution
+对入射质量$m_\pi$、静止质子靶$m_p$，
+阈值条件
+\[
+ T_{\rm th}=
+ \frac{(M_f)^2-(m_\pi+m_p)^2}{2m_p}c^2.
+\]
+(a) 取
+$m_{\pi^\pm}c^2=139.57$MeV、
+$m_pc^2=938.27$MeV、
+$m_{K^+}c^2=493.68$MeV、
+$m_{\Sigma^-}c^2=1197.45$MeV，
+\[
+ \boxed{T_{{\rm th},a}\simeq0.905\,\mathrm{GeV}
+ \approx0.90\,\mathrm{GeV}}.
+\]
+(b) 取
+$m_{\pi^0}c^2=134.98$MeV、
+$m_{\Lambda^0}c^2=1115.68$MeV，
+\[
+ \boxed{T_{{\rm th},b}\simeq0.766\,\mathrm{GeV}
+ \approx0.77\,\mathrm{GeV}}.
+\]
+\excheck 末态两个粒子在阈值处
+具有相同的质心速度，不是实验室系静止；
+应使用质量平方不变量公式。
+
+\elementaryproblem{307}{267}
+某电中性基本粒子具有
+同位旋第三分量$T_z=+1/2$，
+重子数$B=+1$。
+求其奇异数$S$、超荷$Y$，
+并指出粒子名称。
+\exsolution
+强子满足盖尔曼--西岛关系
+\[
+ Q=T_z+\frac{Y}{2},\qquad Y=B+S.
+\]
+由$Q=0,T_z=+1/2$得$Y=-1$，
+再由$B=1$得$S=Y-B=-2$。
+因此
+\[
+ \boxed{S=-2,\qquad Y=-1},\qquad
+ \boxed{\text{粒子为中性级联超子 }\Xi^0}.
+\]
+\excheck $\Xi^0$含两个奇异夸克，
+故总奇异数恰为$-2$，
+与同位旋投影和电荷关系一致。
+
+\elementaryproblem{308}{267}
+判定下列过程哪些违反轻子数守恒
+（记$\nu_e,\nu_\mu$为各自中微子）：
+\[
+\begin{array}{ll}
+(1)\ n\to p+e^-+\nu_e;&
+(2)\ \pi^+\to\mu^++e^-+e^+;\\
+(3)\ \pi^-\to\mu^-+\nu_\mu;&
+(4)\ p+e^-\to n+\nu_e;\\
+(5)\ \mu^+\to e^++\nu_e+\bar\nu_\mu;&
+(6)\ K^-\to\mu^-+\bar\nu_\mu.
+\end{array}
+\]
+\exsolution
+约定每种轻子的轻子数为$+1$、
+相应反粒子为$-1$；
+介子、核子和光子轻子数为零。
+逐条对电子/缪子轻子数分别计数：
+(1) 末态$e^-$及$\nu_e$都为$+1$，
+初态为0，禁戒；允许的$\beta^-$衰变应发
+$\bar\nu_e$而不是$\nu_e$。
+(2) $e^-+e^+$轻子数互消，
+但单独出现$\mu^+$的$L_\mu=-1$，
+禁戒。
+(3) $\mu^-$和$\nu_\mu$均有$L_\mu=+1$，
+初态0，禁戒；应改为$\bar\nu_\mu$。
+(4) 初态电子轻子数$+1$，
+末态$\nu_e$为$+1$，允许。
+(5) 左端$\mu^+$有$L_\mu=-1$，
+右端$\bar\nu_\mu$亦为$-1$；
+$e^+$及$\nu_e$相消，允许。
+(6) $\mu^-$与$\bar\nu_\mu$
+分别为$+1,-1$，允许。
+\[
+ \boxed{\text{违反轻子数守恒的过程为(1)、(2)、(3)。}}
+\]
+\excheck 第(1)与第(3)题面\emph{明确写的是
+中微子而非反中微子}，不能把符号看漏；
+本版书末与判定一致。
+
+\elementaryproblem{309}{267}
+判断下列过程哪些违反强相互作用的奇异数守恒：
+\[
+\begin{array}{ll}
+(1)\ \pi^-+p\to\Sigma^-+K^+;&
+(2)\ \pi^-+p\to\Sigma^++K^-;\\
+(3)\ \pi^-+p\to K^++K^-+n;&
+(4)\ n+p\to\Lambda^0+\Sigma^+;\\
+(5)\ \pi^-+n\to\Xi^-+K^++K^-;&
+(6)\ K^-+p\to\Omega^-+K^++K^0.
+\end{array}
+\]
+\exsolution
+奇异数分配：
+$\pi,n,p$为0，
+$K^+,K^0$为$+1$，
+$K^-$为$-1$，
+$\Sigma,\Lambda$为$-1$，
+$\Xi$为$-2$，$\Omega$为$-3$。
+逐项比较初、末态总奇异数：
+\[
+\begin{array}{c|c|c}
+\text{过程}&S_{\rm in}&S_{\rm out}\\\hline
+(1)&0&-1+1=0\\
+(2)&0&-1-1=-2\\
+(3)&0&1-1+0=0\\
+(4)&0&-1-1=-2\\
+(5)&0&-2+1-1=-2\\
+(6)&-1&-3+1+1=-1
+\end{array}
+\]
+所以
+\[
+ \boxed{\text{违反强相互作用奇异数守恒的为
+ (2)、(4)、(5)。}}
+\]
+\excheck 过程(6)初始已经携带$S=-1$，
+只要求末态总奇异数同为$-1$，
+而非必须等于零。
+
+\elementaryproblem{310}{267}
+指出以下六个过程为何被禁戒：
+\[
+\begin{array}{ll}
+(1)\ \Sigma^-\to\Lambda^0+\pi^-;&
+(2)\ \pi^-+p\to K^++K^-;\\
+(3)\ K^-+\pi^-\to\Omega^-+K^++K^0;&
+(4)\ n+p\to\Sigma^++\Lambda^0;\\
+(5)\ \pi^-\to\mu^-+e^++e^-;&
+(6)\ \mu^-\to e^-+\nu_e+\bar\nu_\mu.
+\end{array}
+\]
+\exsolution
+(1) 能量守恒/静质量阈值：
+$m_{\Sigma^-}c^2\simeq1197$MeV，
+$m_{\Lambda^0}c^2+m_{\pi^-}c^2
+\simeq1116+140=1256$MeV；
+静止母粒子无法产生静质量更大的产物。
+(2) 重子数守恒：
+初态$p$有$B=+1$，末态仅为介子$B=0$。
+(3) 电荷守恒：
+初态电荷$-1-1=-2$，
+末态$\Omega^-+K^++K^0$电荷$-1+1+0=0$。
+(4) 奇异数守恒：
+初态$n+p$的$S=0$，
+末态$\Sigma^++\Lambda^0$的$S=-2$，
+不能经守恒奇异数的强相互作用产生。
+(5) 轻子数守恒：
+初态$\pi^-$的轻子数为0，
+末态$\mu^-$有缪轻子数$+1$，
+而$e^+e^-$电子轻子数互消。
+(6) 分味轻子数守恒：
+左端$\mu^-$有$L_\mu=+1$，
+右端$\bar\nu_\mu$有$L_\mu=-1$，
+而$e^-+\nu_e$使$L_e=+2$。
+虽然总轻子数在某些计数下形式相同，
+电子轻子数与缪轻子数分别不守恒。
+因此
+\[
+ \boxed{\begin{array}{l}
+ (1)\ \text{能量不足};\quad(2)\ \text{重子数};\quad
+ (3)\ \text{电荷};\\
+ (4)\ \text{奇异数};\quad(5)\ \text{轻子数};\quad
+ (6)\ \text{电子与缪轻子数各自不守恒}.
+ \end{array}}
+\]
+\excheck 原书最后一题的六项以扫描图片逐项核对；
+第(6)项特别需要分开统计电子与缪子轻子数，
+不可只看两边总轻子数是否巧合相等。
