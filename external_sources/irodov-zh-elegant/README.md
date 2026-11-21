@@ -5,8 +5,8 @@
 
 ## 真实进度（2026-11-21）
 
-- **本轮新增：100题——第二篇原书第246—257题（12题）、第三篇《电动力学》第1—88题（88题）。**
-- **累计：733题——第一篇力学1—388题（全部）、第二篇热学1—257题（全部）、第三篇电动力学1—88题；按原书三篇独立编号。**
+- **本轮新增：第三篇《电动力学》第89—188题，连续100题。**
+- **累计：833题——第一篇力学1—388题（全部）、第二篇热学1—257题（全部）、第三篇电动力学1—188题；三篇独立编号。**
 - 第 1.1 节“运动学”1—58 题已覆盖（全部）。
 - 第 1.2 节“动力学基本方程”59—117 题已覆盖（全部）。
 - 第 1.3 节“能量、动量与角动量守恒”118—199 题已覆盖（全部）。
@@ -25,7 +25,9 @@
 - 第 2.7 节“输运现象”第220—257题已覆盖（全部），原书第二篇至此结束。
 - **原书第三篇“电动力学”从第1题重新编号。**
 - 第 3.1 节“真空中的恒定电场”第1—53题已覆盖（全部）。
-- 第 3.2 节“静电场中的导体与电介质”第54—88题已覆盖（后续继续）。
+- 第 3.2 节“静电场中的导体与电介质”第54—100题已覆盖（全部）。
+- 第 3.3 节“电容与电场能”第101—146题已覆盖（全部）。
+- 第 3.4 节“恒定电流”第147—188题已覆盖（后续继续）。
 - 本项目尚未完成整书翻译或独立学术二校；任何“编译成功”仅说明技术排版通过。
 
 | 内容 | 文件 |
@@ -107,6 +109,15 @@
 | 第三篇3.2节54—65题 | [17-electro-conductors-054-065.tex](chapters/17-electro-conductors-054-065.tex) |
 | 第三篇3.2节66—77题 | [17-electro-conductors-066-077.tex](chapters/17-electro-conductors-066-077.tex) |
 | 第三篇3.2节78—88题 | [17-electro-conductors-078-088.tex](chapters/17-electro-conductors-078-088.tex) |
+| 第三篇3.2节89—100题 | [17-electro-conductors-089-100.tex](chapters/17-electro-conductors-089-100.tex) |
+| 第三篇3.3节101—112题 | [18-capacitance-energy-101-112.tex](chapters/18-capacitance-energy-101-112.tex) |
+| 第三篇3.3节113—121题 | [18-capacitance-energy-113-121.tex](chapters/18-capacitance-energy-113-121.tex) |
+| 第三篇3.3节122—130题 | [18-capacitance-energy-122-130.tex](chapters/18-capacitance-energy-122-130.tex) |
+| 第三篇3.3节131—140题 | [18-capacitance-energy-131-140.tex](chapters/18-capacitance-energy-131-140.tex) |
+| 第三篇3.3节141—146题 | [18-capacitance-energy-141-146.tex](chapters/18-capacitance-energy-141-146.tex) |
+| 第三篇3.4节147—160题 | [19-electric-current-147-160.tex](chapters/19-electric-current-147-160.tex) |
+| 第三篇3.4节161—175题 | [19-electric-current-161-175.tex](chapters/19-electric-current-161-175.tex) |
+| 第三篇3.4节176—188题 | [19-electric-current-176-188.tex](chapters/19-electric-current-176-188.tex) |
 | 源书勘误 | [errata.md](errata.md) |
 | 技术与学术质检记录 | [quality-check.md](quality-check.md) |
 | 结构完整性检查 | [check_sources.py](check_sources.py) |
@@ -129,4 +140,4 @@ GitHub Actions 工作流 .github/workflows/irodov-elegantbook.yml
 
 本目录放在 external_sources/，不得将翻译题目混入
 大学物理原创高难度题库 bank/ 的题数和质量门禁，也不修改它们的权威源文件。
-后续继续从原书第三篇第3.2节第89题起逐题补充；第一篇已覆盖1—388题。保留原书的分篇重新编号体系。
+后续继续从原书第三篇第3.4节第189题起逐题补充；第一篇已覆盖1—388题。保留原书的分篇重新编号体系。
