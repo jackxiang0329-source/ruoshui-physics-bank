@@ -103,7 +103,11 @@ TT=2*G*m0*m1*m2/(4*m1*m2+m0*(m1+m2))
 a73=G-TT/m1
 test(73,"two-pulley tension newtons",TT,4.06)
 test(73,"object1 downward acceleration",a73,7.78)
-check_equilibrium(73,"force balance on object2 with rope",m2*(G-TT/m2)-m2*(G-TT/m2))
+a2=G-TT/m2
+a0=2*TT/m0
+check_equilibrium(73,"two-cord moving pulley acceleration constraint",
+                  a73+a2-2*a0)
+check_equilibrium(73,"movable pulley net tension residual",m0*a0-2*TT)
 test(74,"friction ball-on-thread with M2 m.5 ell1 t3 N",
      2*1*.5*2/((2-.5)*3**2),4/27,1e-10)
 test(75,"two-stage pulley rod-ball meeting time s",
