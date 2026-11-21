@@ -1,0 +1,289 @@
+% Irodov Part VI §6.6, original 281--290 (section complete).
+% Printed pp.263--265, supplied PDF pp.272--274; answers PDF pp.359--360.
+% In the scanned source, problem 286 is misprinted as 296: numbering restored.
+\nuclearreactionproblem{281}{263}
+窄束热中子通过厚$d=0.50\,\mathrm{mm}$的镉板后，
+强度衰减为原来的$1/\eta$，
+$\eta=360$。求中子与镉核相互作用的
+有效截面（用靶材料密度和原子量计算）。
+\exsolution
+对于被准直束移出的中子，
+$J(d)=J_0e^{-n\sigma d}$，
+其中$n=\rho N_A/M$。
+因此
+\[
+ \boxed{\sigma=\frac{\ln\eta}{nd}
+ =\frac{M\ln\eta}{\rho N_A d}}.
+\]
+取镉$\rho\simeq8.65\,\mathrm{g/cm^3}$、
+$M\simeq112.4\,\mathrm{g/mol}$、
+$d=0.050\,\mathrm{cm}$，
+\[
+ \boxed{\sigma\simeq2.54\times10^{-21}\,\mathrm{cm^2}
+ =2.54\times10^3\,\mathrm b\approx2.5\,\mathrm{kb}}.
+\]
+\excheck $1\,\mathrm b=10^{-24}\,\mathrm{cm^2}$；
+衰减率用自然对数，不能用常用对数。
+
+\nuclearreactionproblem{282}{263}
+窄束热中子经过厚$d=5.0\,\mathrm{cm}$的重水。
+中子与氘、氧核的有效作用截面分别为
+$\sigma_D=7.0\,\mathrm b$、
+$\sigma_O=4.2\,\mathrm b$。
+求透射束的衰减倍数。
+\exsolution
+每个$\mathrm D_2\mathrm O$分子含两个氘核、一个氧核。
+设重水分子数密度
+$n=\rho N_A/M_{\mathrm D_2O}$，
+总宏观截面
+$\Sigma=n(2\sigma_D+\sigma_O)$。
+由指数衰减
+\[
+ \boxed{\frac{J_0}{J}=
+ \exp[n(2\sigma_D+\sigma_O)d]}.
+\]
+取重水密度$\rho\simeq1.11\,\mathrm{g/cm^3}$、
+摩尔质量$M_{\mathrm D_2O}\simeq20.0\,\mathrm{g/mol}$，
+得到指数约$3.04$，
+\[
+ \boxed{J_0/J\simeq20.9\approx20}.
+\]
+\excheck 氘核有两个，故应使用$2\sigma_D$；
+指数项的物质数密度是\emph{分子}浓度。
+
+\nuclearreactionproblem{283}{264}
+窄束热中子穿过厚$d=0.50\,\mathrm{cm}$的铁板，
+吸收截面$\sigma_a=2.5\,\mathrm b$，
+散射截面$\sigma_s=11\,\mathrm b$。
+求因散射离开原准直束的中子份额。
+\exsolution
+设$\sigma_t=\sigma_a+\sigma_s$，
+铁核数密度$n=\rho N_A/M$。
+在深度$x$首次发生散射的概率密度为
+$n\sigma_se^{-n\sigma_tx}\,dx$，
+因此散射损失份额为
+\[
+ w_s=\int_0^d n\sigma_se^{-n\sigma_tx}dx
+ =\boxed{\frac{\sigma_s}{\sigma_t}
+ \left(1-e^{-n\sigma_t d}\right)}.
+\]
+取$\rho=7.87\,\mathrm{g/cm^3}$、
+$M=55.85\,\mathrm{g/mol}$，
+$n\sigma_td\simeq0.573$，
+所以
+$\boxed{w_s\simeq0.355\approx0.35}$。
+\excheck 总束流损失与散射损失不相同；
+首次相互作用可能是吸收而不是散射。
+
+\nuclearreactionproblem{284}{264}
+生产放射性核素的核反应产额可分别表述为
+$w=N_{\rm react}/N_{\rm beam}$，
+以及$k=A/N_{\rm beam}$，
+即生成核素活度与入射粒子数之比。
+(a) 由$w,k$求生成物半衰期；
+(b) 质子束电流$I=10\,\mu\mathrm A$
+照射锂靶$t=2.0\,\mathrm h$，
+产生$^{7}\mathrm{Li}(p,n){}^{7}\mathrm{Be}$，
+辐照完$^{7}\mathrm{Be}$活度
+$A=1.35\times10^8\,\mathrm{Bq}$，
+半衰期$T_{1/2}=53\,\mathrm d$，
+求反应产额$w$。
+\exsolution
+(a) 定义给$A=\lambda N_{\rm react}$
+（忽略辐照期间生成物的损失），
+所以$k=A/N_{\rm beam}=\lambda w$。
+故
+\[
+ \boxed{T_{1/2}=\frac{\ln2}{\lambda}
+ =\frac{w\ln2}{k}}.
+\]
+(b) 入射质子总数$N_{\rm beam}=It/e$。
+生成的放射性核数$N_{\rm react}=A/\lambda=AT_{1/2}/\ln2$，
+从而
+\[
+ \boxed{w=
+ \frac{AT_{1/2}e}{It\ln2}}.
+\]
+代入$T_{1/2}=53\times86400$秒、
+$t=7200$秒和基本电荷，
+得到
+$\boxed{w\simeq1.99\times10^{-3}\approx2.0\times10^{-3}}$。
+\excheck 对给定$53$天半衰期，
+两小时内生成物的衰变不足以显著影响此近似。
+
+\nuclearreactionproblem{285}{264}
+通量密度$J=1.0\times10^{10}\,
+\mathrm{cm^{-2}s^{-1}}$的热中子
+垂直照射质量$m=10\,\mathrm{mg}$的
+稳定$^{197}\mathrm{Au}$薄箔，
+中子俘获截面$\sigma=98\,\mathrm b$，
+生成半衰期$T_{1/2}=2.7\,\mathrm d$的
+$\beta$活性$^{198}\mathrm{Au}$。
+(a) 需要辐照多长时间，
+才能使$^{197}\mathrm{Au}$核数减少1.0\%？
+(b) 长时间辐照时$^{198}\mathrm{Au}$的极限核数？
+\exsolution
+令$\eta=0.010$。母核被中子俘获速率
+$R=J\sigma N_{197}$，故
+$N_{197}(t)=N_0e^{-J\sigma t}$。
+于是
+\[
+ \boxed{t=\frac{-\ln(1-\eta)}{J\sigma}}.
+\]
+代$J\sigma=1.0\times10^{10}\cdot
+98\times10^{-24}=9.8\times10^{-13}\,\mathrm{s^{-1}}$，
+得
+\[
+ \boxed{t\simeq1.03\times10^{10}\,\mathrm s
+ \simeq3.25\times10^{2}\,\mathrm{yr}}.
+\]
+(b) 在生成物建立接近放射性平衡的
+几天时间内，稳定金核耗尽极微弱，
+可令母核$N_{197}\simeq N_0=mN_A/M$。
+生成物动力学
+$dN_{198}/dt=J\sigma N_0-\lambda N_{198}$，
+$\lambda=\ln2/T_{1/2}$。
+平衡时
+\[
+ \boxed{N_{\max}\simeq\frac{J\sigma N_0}{\lambda}
+ =\frac{J\sigma mN_A T_{1/2}}{M\ln2}
+ \simeq1.01\times10^{13}}.
+\]
+\excheck 底本(a)书末印$3\times10^6$年；
+按题面$J,\sigma$及1\%的下降量，
+严格指数计算得约325年，
+书末相差约$10^4$倍。
+(b)的“最大数”是\emph{母核近似不耗尽时的
+饱和量}，并非无限时间后真实母核耗尽的极限：
+若任由母核完全转化，最终两种放射性核数均趋零。
+
+\nuclearreactionproblem{286}{264}
+薄箔初始每单位面积含$n$个稳定核，
+以热中子通量密度$J$垂直辐照。
+俘获截面$\sigma$，生成核素衰变常数$\lambda$。
+推导单位面积放射性核数$N(t)$的积累规律。
+\exsolution
+薄箔中稳定靶核数近似不变且产物初始为零，
+生成速率为$J\sigma n$，
+衰变损失率为$\lambda N$，故
+\[
+ \frac{dN}{dt}=J\sigma n-\lambda N,\quad N(0)=0.
+\]
+积分因子$e^{\lambda t}$，
+\[
+ \boxed{N(t)=\frac{J\sigma n}{\lambda}
+ (1-e^{-\lambda t})}.
+\]
+若不允许忽略靶核耗尽，
+令$n_s(t)=n e^{-J\sigma t}$，
+则更精细的表达式是
+\[
+ \boxed{N(t)=\frac{J\sigma n}{\lambda-J\sigma}
+ \left(e^{-J\sigma t}-e^{-\lambda t}\right)}.
+\]
+\excheck \emph{原书扫描把本题题号误印为296}，
+实际位于285与287之间，按连续编号应为286。
+两个公式分别对应恒定靶量与显式耗尽模型。
+
+\nuclearreactionproblem{287}{264}
+一片$m=0.20\,\mathrm g$的金箔
+受热中子照射$t=6.0\,\mathrm h$，
+在照射结束后又过$\tau=12\,\mathrm h$，
+测得金箔活度
+$A=1.9\times10^7\,\mathrm{Bq}$。
+生成放射性核的截面$\sigma=96\,\mathrm b$，
+半衰期$T_{1/2}=2.7\,\mathrm d$。
+求照射期间中子通量密度。
+\exsolution
+稳定$^{197}\mathrm{Au}$初始核数
+$N_0=mN_A/197$。
+辐照时产生的放射性核数
+$N_{\rm end}=(J\sigma N_0/\lambda)
+(1-e^{-\lambda t})$。
+等待$\tau$后
+$A=\lambda N_{\rm end}e^{-\lambda\tau}$。
+所以
+\[
+ \boxed{J=\frac{A e^{\lambda\tau}}
+ {\sigma N_0(1-e^{-\lambda t})}},\qquad
+ \lambda=\frac{\ln2}{T_{1/2}}.
+\]
+代入$T_{1/2}=2.7\times86400$秒，
+得到
+\[
+ \boxed{J\simeq5.9\times10^9\,
+ \mathrm{cm^{-2}s^{-1}}\approx6\times10^9}.
+\]
+\excheck 辐照后等待时间使活度进一步下降，
+求$J$时必须乘$e^{+\lambda\tau}$补偿此衰变。
+
+\nuclearreactionproblem{288}{264}
+初始有$N_0=1000$个中子，
+每一代中子倍增系数$k=1.05$。
+求第100代中子数。
+\exsolution
+将初始中子定义为第1代，
+递推式$N_{j+1}=kN_j$，
+故$N_j=N_0k^{j-1}$。
+因此
+\[
+ \boxed{N_{100}=1000(1.05)^{99}
+ \simeq1.25\times10^5\approx1.3\times10^5}.
+\]
+\excheck 指数是99而不是100，
+因为初始的1000个中子已是第1代。
+
+\nuclearreactionproblem{289}{264--265}
+一台铀反应堆热功率
+$P=100\,\mathrm{MW}$，
+每次裂变平均产生$\nu=2.5$个中子，
+释放能量$E=200\,\mathrm{MeV}$。
+求单位时间产生的中子数。
+\exsolution
+核裂变每秒次数
+$\dot N_{\rm fiss}=P/E$，
+其中$200\,\mathrm{MeV}
+=3.20435\times10^{-11}\,\mathrm J$。
+故中子产生率
+\[
+ \boxed{\dot N_n=\nu\frac{P}{E}
+ =2.5\frac{10^8\,\mathrm{J/s}}
+ {3.20435\times10^{-11}\,\mathrm{J}}
+ \simeq7.8\times10^{18}\,\mathrm{s^{-1}}}.
+\]
+\excheck 此数为所有裂变产生的中子总数，
+不等于逸出堆芯的中子数或热中子数。
+
+\nuclearreactionproblem{290}{265}
+热中子反应堆中一代中子的平均寿命
+原书印为$\tau=1.10\,\mathrm s$，
+倍增系数$k=1.010$。
+求(a)经过$t=1.0\,\mathrm{min}$时
+中子数与功率增大倍数；
+(b)使功率增加$e$倍的堆周期。
+\exsolution
+逐代倍增$N_j=N_0k^j$，
+若一代平均时间为$\tau$，
+则在近似连续化$j=t/\tau$时
+\[
+ \frac{N(t)}{N_0}=k^{t/\tau}
+ =\exp\!\left(\frac{t\ln k}{\tau}\right).
+\]
+直接按扫描题面$\tau=1.10$秒、
+$t=60$秒计算，
+\[
+ \boxed{\frac{N(60\,\mathrm s)}{N_0}
+ =1.010^{60/1.10}\simeq1.72}.
+\]
+堆周期由$N(T)=eN_0$得
+\[
+ \boxed{T_{\rm reactor}=\frac{\tau}{\ln k}
+ \simeq110.5\,\mathrm s}.
+\]
+若按书末近似写为$T\simeq\tau/(k-1)$，
+仍为$\simeq110$秒。
+\excheck 原书书末分别印增益约$2\times10^4$、
+周期$10$秒，两者与扫描题面
+$\tau=1.10$秒、$k=1.010$和$t=1.0$分钟
+均不相容；本稿保留题面数据的物理一致解，
+不私改任何单位或数字。
