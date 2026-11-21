@@ -1,0 +1,297 @@
+% User-provided I. E. Irodov, Problems in General Physics, printed pp.48-50,
+% PDF pp.57-59; section 1.6 "Elastic Deformations of a Solid Body".
+% Elastic bending is under the small-slope Euler-Bernoulli approximation.
+\exproblem{301}{48--49}
+一根边长为 $a$ 的正方形截面钢悬臂杆，左端嵌入墙内，
+自由长度为 $\ell$，忽略杆自重。微小挠曲时挠曲线满足
+$EI\,y''(x)=N(x)$，其中 $I$ 是截面对中性轴的面积二次矩。
+求自由端受以下作用时的挠曲线与端点挠度：
+(a) 恒定力偶矩 $N_0$；(b) 沿 $y$ 方向的端点横向力 $F$。
+\exsolution
+取固定端 $x=0$、自由端 $x=\ell$，夹紧端条件
+$y(0)=y'(0)=0$。正方形截面
+$I=\int z^2\,\mathrm dS=a^4/12$。
+(a) 截面内弯矩恒为 $N(x)=N_0$，
+从 $y''=N_0/(EI)$ 两次积分：
+\[
+y'(x)=\frac{N_0x}{EI},\qquad
+\boxed{y(x)=\frac{N_0x^2}{2EI}},\quad
+\boxed{\lambda_a=\frac{N_0\ell^2}{2EI}}.
+\]
+(b) 端点受力时，位于 $x$ 的截面承担右侧
+力关于该截面的力矩 $N(x)=F(\ell-x)$。因此
+\[
+y''=\frac{F(\ell-x)}{EI},\quad
+y'=\frac F{EI}\left(\ell x-\frac{x^2}{2}\right),
+\]
+\[
+\boxed{y(x)=\frac{Fx^2(3\ell-x)}{6EI}},\quad
+\boxed{\lambda_b=\frac{F\ell^3}{3EI}}.
+\]
+\excheck 挠度的正负取决于载荷方向，上式展示正向载荷的
+正挠度；末端边界 $y''(\ell)=0$ 与端点无外加力偶矩一致。
+
+\exproblem{302}{49}
+一根长为 $\ell$、弯曲刚度为 $EI$ 的钢梁
+两端自由搁在两个支座上，忽略自重，
+在中央受到竖直向下的集中力 $F$。
+求中央的最大下挠量 $\lambda$。
+\exsolution
+由对称性，两支座反力均为 $F/2$。
+从左支座起取 $x\in[0,\ell/2]$，
+左半梁弯矩大小为 $M(x)=Fx/2$。
+取下挠正，曲率关系的符号按下挠统一，
+则 $|y''|=M/(EI)$。
+利用左支座位移为零、中央斜率为零，
+写出左半段的挠曲线（下挠为正）：
+\[
+y(x)=\frac{Fx(3\ell^2-4x^2)}{48EI},
+\quad 0\le x\le\ell/2.
+\]
+可验 $y(0)=0$ 且 $y'(\ell/2)=0$。
+在 $x=\ell/2$ 处，
+\[
+\boxed{\lambda=y(\ell/2)=\frac{F\ell^3}{48EI}}.
+\]
+\excheck 这里两端是\emph{简支}而非固支；
+若把两端误设成夹紧，挠度系数会不同。
+
+\exproblem{303}{49}
+截面为矩形、竖直厚度为 $h$ 的均匀钢梁，
+用杨氏模量 $E$、密度 $\rho$ 表示自重所致最大挠度：
+(a) 长为 $\ell$ 的悬臂梁，左端固支；
+(b) 长为 $2\ell$ 的简支梁，两端自由搁置。
+均采用微小弯曲近似。
+\exsolution
+设梁宽为 $b$，单位长度自重为
+$q=\rho b h g$；对水平中性轴的面积二次矩
+$I=bh^3/12$。
+(a) 从固支端量 $x$，其截面由右侧分布载荷产生的弯矩
+\[
+M(x)=\int_x^\ell q(s-x)\,\mathrm ds
+=\frac q2(\ell-x)^2.
+\]
+将 $EI\,y''=M(x)$ 两次积分并用
+$y(0)=y'(0)=0$ 得自由端
+$\lambda_a=q\ell^4/(8EI)$，因此
+\[
+\boxed{\lambda_a=\frac{3\rho g\ell^4}{2Eh^2}}.
+\]
+(b) 令跨度 $L=2\ell$，均匀载荷的简支梁两端
+反力均为 $qL/2$，截面弯矩为
+$M(x)=\frac q2x(L-x)$。
+用 $y(0)=y(L)=0$ 并在中央取最大挠度，
+可得标准积分式
+$\lambda_b=5qL^4/(384EI)$，即
+\[
+\boxed{\lambda_b=\frac{5\rho g\ell^4}{2Eh^2}}.
+\]
+\excheck 两式都不依赖梁宽 $b$，它在自重载荷与
+弯曲截面惯量中相消；须有 $\lambda\ll h,\ell$ 以保证小挠度近似。
+
+\exproblem{304}{49}
+一块厚度为 $h$、边长为 $\ell$ 的正方形薄钢板，
+其一条竖直边刚性固定在竖直旋转轴 $OO'$ 上
+（原书图1.79），以恒定角加速度 $\beta$ 绕轴转动。
+将板近似为等截面悬臂梁，求切向惯性力使自由边
+偏移的微小挠度 $\lambda$。
+\exsolution
+这里必须明确采用\emph{单一悬臂梁近似}：
+把板视为长 $\ell$、竖向宽 $\ell$、切向厚度 $h$ 的梁。
+取离旋转轴的横向位置 $x$，
+薄板微条质量为
+$\mathrm dm=\rho h\ell\,\mathrm dx$，
+在随轴转动的坐标系中有切向惯性加速度模
+$\beta x$；等效横向分布载荷为
+$q(x)=\rho h\ell\beta x$。
+弯曲轴的截面二次矩
+$I=\ell h^3/12$。
+距固定端 $x$ 处，右方微条所致总弯矩
+\[
+M(x)=\int_x^\ell q(s)(s-x)\,\mathrm ds
+=\rho h\ell\beta
+\left(\frac{\ell^3}{3}-\frac{x\ell^2}{2}+\frac{x^3}{6}\right).
+\]
+令 $EI\,y''(x)=M(x)$，并用固支端
+$y(0)=y'(0)=0$，可通过积分恒等式写出端部挠度
+\[
+\lambda=\frac1{EI}\int_0^\ell(\ell-x)M(x)\,\mathrm dx
+=\frac{11\,\rho h\ell\beta\ell^5}{120EI}.
+\]
+代入 $I$ 后
+\[
+\boxed{\lambda_{\rm beam}
+=\frac{11}{10}\frac{\rho\beta\ell^5}{Eh^2}}.
+\]
+\excheck 本版书末简答给出
+$\lambda=\tfrac95\rho\beta\ell^5/(Eh^2)$，
+与上面按\emph{明确提出的悬臂梁假设}
+积分所得 $11/10$ 不同。本稿保留该模型推导，并标记
+\emph{系数争议，需对照其他版本或二维薄板模型复核}；
+不能将两者当成已证等价。
+
+\exproblem{305}{49}
+长为 $\ell$、剪切模量为 $G$ 的钢制圆截面构件
+绕纵轴受扭矩 $N$。
+求其扭转角 $\varphi$ 与 $N$ 的关系：
+(a) 半径为 $r$、壁厚 $\Delta r\ll r$ 的薄壁圆管；
+(b) 半径为 $r$ 的实心圆杆。
+\exsolution
+小变形扭转时，距轴半径 $s$ 处的剪切应变
+$\gamma(s)=s\varphi/\ell$，
+剪切应力 $\tau=G\gamma$。
+对横截面的扭矩积分
+\[
+N=\int_S s\,\tau(s)\,\mathrm dS
+=\frac{G\varphi}{\ell}\underbrace{\int_Ss^2\,\mathrm dS}_{J},
+\]
+其中 $J$ 为截面极惯性矩。因此
+$\varphi=N\ell/(GJ)$。
+(a) 薄壁环
+$J\simeq2\pi r^3\Delta r$，
+\[
+\boxed{\varphi_a\simeq\frac{N\ell}{2\pi G r^3\Delta r}}.
+\]
+(b) 实心圆
+$J=\int_0^r2\pi s^3\,\mathrm ds=\pi r^4/2$，
+\[
+\boxed{\varphi_b=\frac{2N\ell}{\pi G r^4}}.
+\]
+\excheck $\varphi$ 以弧度计且无量纲；
+薄管近似要求截面壁厚远小于平均半径。
+
+\exproblem{306}{49}
+长度 $\ell=3.0\,\mathrm m$ 的钢圆管，
+内、外径分别为 $d_1=30\,\mathrm{mm}$、
+$d_2=50\,\mathrm{mm}$，
+扭转角 $\varphi=2.0^\circ$。
+求沿轴方向的所需扭矩 $N$。
+\exsolution
+均匀圆管的极惯性矩为
+\[
+J=\frac\pi{32}(d_2^4-d_1^4).
+\]
+由 $\varphi=N\ell/(GJ)$ 得
+\[
+\boxed{N=\frac{\pi G(d_2^4-d_1^4)}{32\ell}\varphi}.
+\]
+取钢的剪切模量
+$G\simeq8.0\times10^{10}\,\mathrm{Pa}$，
+换算角度 $\varphi=2\pi/180\simeq0.03491$
+和直径 SI 单位，
+得
+\[
+\boxed{N\simeq5.0\times10^2\,\mathrm{N\,m}
+=0.50\,\mathrm{kN\,m}}.
+\]
+\excheck 原书答案的差值是\emph{四次方之差}，
+不可误写成 $(d_2-d_1)^4$。
+
+\exproblem{307}{49}
+钢轴长 $\ell=200\,\mathrm{cm}$、半径
+$r=1.50\,\mathrm{cm}$，
+以角速度 $\omega=120\,\mathrm{rad/s}$ 旋转。
+许用轴向扭转角 $\varphi_{\max}=2.5^\circ$。
+求所能传递的最大机械功率 $P_{\max}$。
+\exsolution
+静态扭转关系为
+$N=GJ\varphi/\ell$，
+其中实心圆轴 $J=\pi r^4/2$。
+旋转轴的传递功率等于扭矩与角速度之积：
+\[
+P=N\omega
+=\frac{\pi G r^4}{2\ell}\varphi\omega.
+\]
+取钢材剪切模量
+$G\simeq8.0\times10^{10}\,\mathrm{Pa}$，
+代入 $\varphi=2.5\pi/180$：
+\[
+\boxed{P_{\max}=
+\frac{\pi G r^4\omega\varphi_{\max}}{2\ell}
+\simeq1.7\times10^4\,\mathrm W\approx17\,\mathrm{kW}}.
+\]
+\excheck 此上限只由许用扭转角约束，
+尚未纳入材料屈服、疲劳或轴扭振条件。
+
+\exproblem{308}{49--50}
+质量为 $m$ 的均匀圆环，内、外半径分别为
+$r_1,r_2$，紧套在半径为 $r_1$ 的轴上。
+轴以恒定角加速度 $\beta$ 自转。
+求圆环内部半径 $r$ 处圆柱截面
+传递的\emph{弹性力矩} $N(r)$（$r_1\le r\le r_2$）。
+\exsolution
+取整体圆环为均匀薄平板，面密度
+$\sigma=m/[\pi(r_2^2-r_1^2)]$。
+在半径 $r$ 的内截面，弹性力矩须使外侧
+$r\le s\le r_2$ 的物质取得角加速度 $\beta$。
+外侧圆环对轴的转动惯量
+\[
+I_{\rm out}(r)=\int_r^{r_2}s^2\,(2\pi\sigma s\,\mathrm ds)
+=\frac{\pi\sigma}{2}(r_2^4-r^4).
+\]
+故内部传递力矩大小为
+\[
+\boxed{N(r)=I_{\rm out}(r)\,\beta
+=\frac{m\beta(r_2^4-r^4)}{2(r_2^2-r_1^2)}}.
+\]
+\excheck 在自由外缘 $r=r_2$，内部力矩为零；
+在轴接触处 $r=r_1$，等于加速整个圆环所需力矩
+$I_{\rm ring}\beta$。
+
+\exproblem{309}{50}
+一根钢杆总质量 $m=3.1\,\mathrm{kg}$，
+沿轴向均匀伸长，拉伸应变
+$\varepsilon=\Delta\ell/\ell=1.0\times10^{-3}$。
+求杆内储存的弹性形变能。
+\exsolution
+线弹性拉伸时，应力
+$\sigma=E\varepsilon$。
+体积单位的储能为
+$u=\int_0^\varepsilon\sigma(\varepsilon')
+\,\mathrm d\varepsilon'
+=\tfrac12E\varepsilon^2$。
+杆总体积为 $V=m/\rho$，
+所以
+\[
+\boxed{U=\frac12EV\varepsilon^2
+=\frac{mE\varepsilon^2}{2\rho}}.
+\]
+采用钢典型数值
+$E=2.0\times10^{11}\,\mathrm{Pa}$、
+$\rho=7.8\times10^3\,\mathrm{kg/m^3}$，
+\[
+\boxed{U\simeq40\,\mathrm J
+=0.040\,\mathrm{kJ}}.
+\]
+\excheck 应变是无量纲的；$EV$ 的量纲为能量。
+该公式假设整个杆的轴向应变均匀。
+
+\exproblem{310}{50}
+半径为 $r$、长度为 $\ell$、密度为 $\rho$ 的
+均匀钢圆柱杆从天花板竖直悬挂，只由上端固定。
+求：(a) 自重造成的弹性形变能 $U$；
+(b) 用总相对伸长量
+$\varepsilon=\Delta\ell/\ell$ 表示 $U$。
+\exsolution
+杆截面积 $S=\pi r^2$。
+从自由下端向上取长度坐标 $x$，
+截面需承受下方长 $x$ 的杆重，
+所以局部拉应力 $\sigma(x)=\rho gx$。
+应变能密度为 $\sigma^2/(2E)$，由此
+\[
+U=\int_0^\ell
+\frac{(\rho gx)^2}{2E}S\,\mathrm dx
+=\boxed{\frac{\pi r^2\rho^2g^2\ell^3}{6E}}.
+\]
+总伸长量由胡克定律
+\[
+\Delta\ell=\int_0^\ell\frac{\rho gx}{E}\,\mathrm dx
+=\frac{\rho g\ell^2}{2E},
+\]
+故 $\rho g=2E\varepsilon/\ell$，代回储能公式：
+\[
+\boxed{U=\frac23\pi r^2\ell E\varepsilon^2}.
+\]
+\excheck 由于应力沿杆从自由端零线性增加，
+总储能不等于把\emph{平均应变}当作均匀应变直接计算的
+$\frac12E V\varepsilon^2$；正确系数为 $2/3$。
