@@ -376,27 +376,58 @@ $f_2(x)>f_4(x)$，
 若发表图稿，应据函数绘制坐标图，不用任意手画频谱。
 
 \moleculeproblem{196}{254}
-估算 Debye 温度 $\theta=330\,\mathrm K$ 的铜
-中一个声子（题面译为声学量子）
-可具有的最大能量与最大动量。
+估算Debye温度$\theta=330\,\mathrm K$的铜中
+一个声学量子（声子）可具有的
+最大能量和最大晶体准动量。
 \exsolution
-最大声子角频率
-$\omega_D=k_B\theta/\hbar$，故
+Debye截止角频率为
+$\omega_D=k_B\theta/\hbar$，
+故声子最大能量
 \[
- \boxed{E_{\max}=\hbar\omega_D=k_B\theta
- \simeq28.4\,\mathrm{meV}}.
+ \boxed{\varepsilon_{\max}=\hbar\omega_D=k_B\theta
+ \simeq4.556\times10^{-21}\,\mathrm J
+ =28.44\,\mathrm{meV}}.
 \]
-线性声学色散 $\omega=vk$，
-声子准动量 $p=\hbar k=\hbar\omega/v$，
-于是
+要求准动量不能只由能量得到，
+还需要声速或晶格的截止波数。
+本题给定材料是\emph{铜}，
+可使用其宏观密度与摩尔质量估计原子数密度，
+而无须任意指定一个声速：
 \[
- \boxed{p_{\max}\simeq\frac{k_B\theta}{v}}.
+ n_{\rm Cu}=\frac{\rho N_A}{M}
+ =\frac{8960\,\mathrm{kg/m^3}}
+ {0.063546\,\mathrm{kg/mol}}N_A
+ \simeq8.491\times10^{28}\,\mathrm{m^{-3}}.
 \]
-采用铜典型等效声速 $v\simeq3.5\,\mathrm{km/s}$
-求得
-$\boxed{p_{\max}\sim1.3\times10^{-24}\,
- \mathrm{kg\,m/s}
- =1.3\times10^{-19}\,\mathrm{g\,cm/s}}$。
-\excheck 原书用词“photon (acoustic quantum)”易造成混淆；
-这里是\emph{声子 phonon}而非光子 photon，
-且没有给定声速，动量只能给量级并说明选用的$v$。
+对三维Debye模型，三声学分支总模式数等于
+$3N$，从而
+\[
+ 3N=3\frac{V}{(2\pi)^3}\frac{4\pi k_D^3}{3},
+ \qquad
+ \boxed{k_D=(6\pi^2 n_{\rm Cu})^{1/3}
+ \simeq1.713\times10^{10}\,\mathrm{m^{-1}}}.
+\]
+故模型中的最大准动量
+\[
+ \boxed{p_{\max}=\hbar k_D
+ \simeq1.807\times10^{-24}\,\mathrm{kg\,m/s}
+ =1.807\times10^{-19}\,\mathrm{g\,cm/s}}.
+\]
+相应的等效声速由本题给定Debye温度
+\emph{反推}为
+\[
+ v_D=\frac{\omega_D}{k_D}
+ =\frac{k_B\theta}{\hbar k_D}
+ \simeq2.52\,\mathrm{km/s},
+\]
+并验证$p_{\max}=k_B\theta/v_D$。
+\excheck 原稿曾自行取$v=3.5$km/s，
+得到$1.3\times10^{-19}$g\,cm/s，
+只能作为声速假设下的量级估算；
+本版利用铜的原子数密度独立确定Debye截止波数，
+物理条件更明确。$\hbar k_D$是
+Debye连续介质模型的\emph{晶体准动量}，
+并不等同于自由空间光子的动量；
+原版英文“photon (acoustic quantum)”的称谓
+具有混淆性，此处按声学量子即声子处理。
+
