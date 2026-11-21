@@ -11,9 +11,9 @@
 - `elegantbook.cls`：ElegantLaTeX官方4.7类文件（LPPL 1.3c）。
 - `build.sh`：先编译封面，再编译正文。
 - `quality-check.md`：质检说明。
-- `.github/workflows/irodov-elegantbook.yml`：GitHub Actions自动生成PDF附件。
+- `.github/workflows/irodov-elegantbook.yml`：GitHub Actions自动生成PDF附件，并将成功编译的 `main.pdf`、`cover.pdf` 提交到此目录。
 
-在本目录执行 `bash build.sh`；需要XeLaTeX、latexmk和完整TeX Live 2026。Actions中名为 `irodov-zh-elegantbook-pdf` 的附件在成功构建后可供获取。
+在本目录执行 `bash build.sh`；需要XeLaTeX、latexmk和完整TeX Live 2026。Actions中名为 `irodov-zh-elegantbook-pdf` 的附件在成功构建后可供获取；目录中的PDF在工作流完成自动提交后可直接下载。
 
 ## 隔离要求
 本目录属于 `external_sources/`，是译著资料，不是原创综合压轴题，**不得计入**正式大学物理主库的题量统计，也不修改现有题库权威文件。

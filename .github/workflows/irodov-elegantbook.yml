@@ -7,7 +7,7 @@ on:
       - '.github/workflows/irodov-elegantbook.yml'
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -29,3 +29,13 @@ jobs:
             external_sources/irodov-zh-elegant/cover.pdf
           if-no-files-found: error
           retention-days: 30
+      - name: Commit successfully compiled PDFs to the repository
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f external_sources/irodov-zh-elegant/main.pdf external_sources/irodov-zh-elegant/cover.pdf
+          if ! git diff --cached --quiet; then
+            git commit -m "docs: publish Irodov Chinese ElegantBook PDFs [skip ci]"
+            git push origin HEAD:main
+          fi
