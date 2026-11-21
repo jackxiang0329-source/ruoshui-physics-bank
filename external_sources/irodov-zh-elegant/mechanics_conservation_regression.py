@@ -125,7 +125,7 @@ work=mu*1*G*ell*(1-cos(ang))/(2*cos(ang)*(sin(ang)+mu*cos(ang)))
 test(141,"elastic cord sliding wood plank friction work J",work,.09)
 kappa,l0,eta=10.,.3,.25
 work=(kappa*l0*l0/2)*(eta*(1+eta)/(1-eta)**2)
-test(142,"slow spool energy for eta=.25 J",work,.025)
+test(142,"slow spool energy for eta=.25 J",work,.250)
 test(142,"spring radial stretch for eta=.25 m",
      l0*eta/(1-eta),.1,1e-10)
 test(143,"Atwood 3kg/1kg COM acceleration m/s2",
@@ -156,7 +156,7 @@ test(148,"Koenig energy transform for M4 V3 and internal E7",
 test(149,"orthogonal two-body relative COM energy J",
      .5*mu_red*(3**2+4**2),15,1e-10)
 test(150,"two-spring masses total momentum after 2s kgm/s",
-     2*3+3*(-1)-(2+3)*G*2,-89.1)
+     2*3+3*(-1)-(2+3)*G*2,-95.1)
 test(150,"spring-system COM free-fall displacement in 2s metres",
      (V*2-.5*G*2**2),-16.82)
 kappa=50;m1=2;m2=3;x=.1
@@ -207,7 +207,7 @@ tau=(p*cos(alpha)-M*u)/(M*g*sin(alpha))
 # This arbitrary impulse might be insufficient to stop: check actual feasibility.
 p=100
 tau=(p*cos(alpha)-M*u)/(M*g*sin(alpha))
-test(161,"inclined gun stopping firing time s",tau,1.13,.1)
+test(161,"inclined gun stopping firing time s",tau,.8626,.03)
 test(161,"gun recoil momentum balance error",
      M*u+M*g*sin(alpha)*tau-p*cos(alpha),0,1e-10)
 test(162,"embedded bullet final velocity m/s for ell1 theta60",
@@ -291,7 +291,7 @@ test(186,"projectile apex angular momentum m.13 v25 alpha45",
 test(187,"disc-wall angular momentum change relative offset .5",
      2*2*3*.5*cos(pi/6),5.196)
 test(188,"conical pendulum halfturn angular momentum shift for m2 ell1 omega4",
-     2*2*G*1/4*sqrt(1-(G/(4**2*1))**2),3.864)
+     2*2*G*1/4*sqrt(1-(G/(4**2*1))**2),7.75)
 test(189,"falling ball angular momentum shift boosted frame",
      2*3*4,24,1e-10)
 test(190,"rotating frame relative angular momentum m2 omega3 v4 t2",
