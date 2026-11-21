@@ -1,0 +1,242 @@
+% Irodov, Arihant PDF pp. 25--26, printed pp. 16--17.
+\exproblem{91}{16}
+汽车以恒速沿水平道路行驶，道路中心线为
+$y=a\sin(x/\alpha)$，其中 $a,\alpha>0$，
+轮胎与地面的摩擦系数为 $k$。
+求不发生侧滑时允许的最高匀速车速。
+\exsolution
+车辆沿平面曲线匀速运动，法向加速度为 $v^2\kappa$，
+其中曲率
+\[
+\kappa(x)=\frac{|y''|}{(1+y'^2)^{3/2}}
+=\frac{(a/\alpha^2)|\sin(x/\alpha)|}
+{[1+(a/\alpha)^2\cos^2(x/\alpha)]^{3/2}}.
+\]
+该表达式在 $\cos(x/\alpha)=0$、$|\sin(x/\alpha)|=1$
+时取最大值 $\kappa_{\max}=a/\alpha^2$。
+摩擦极限 $mv^2\kappa_{\max}\le kmg$ 给出
+\[
+\boxed{v_{\max}=\alpha\sqrt{\frac{kg}{a}}}.
+\]
+\excheck $\alpha$ 和 $a$ 都具有长度量纲，所给结果的量纲为速度；
+不能遗漏根号。若只走过部分路段，应对该段实际最大曲率求极值。
+
+\exproblem{92}{16}
+总质量 $m$、长度 $2\pi R$ 的均匀链条围成半径 $R$ 的圆环，
+套在光滑圆锥面上。圆锥半顶角为 $\theta$，
+整个链条绕竖直对称轴以角速度 $\omega$ 匀速旋转。
+求链条中的张力。
+\exsolution
+线密度 $\lambda=m/(2\pi R)$。取一极短链段弧长
+$\mathrm ds=R\,\mathrm d\varphi$，
+两端张力的合力指向圆心，大小
+$T\,\mathrm ds/R$。
+光滑圆锥的法向支持力大小（每单位长度）为 $n$，
+其竖直向上分量为 $n\sin\theta$，
+水平径向向外分量为 $n\cos\theta$。
+竖直方向平衡：$n\sin\theta=\lambda g$；
+径向向心方向：
+\[
+\frac TR-n\cos\theta=\lambda\omega^2R.
+\]
+解得
+\[
+\boxed{T=\frac{mg}{2\pi}
+\left(\cot\theta+\frac{\omega^2R}{g}\right)}.
+\]
+\excheck $\omega=0$ 时链条仍需要张力抵消圆锥法向力的
+水平分量，因而张力一般不为零。
+
+\exproblem{93}{16}
+轻绳绕过固定滑轮，两端悬挂质量为 $m_1,m_2$ 的重物。
+绳与滑轮存在摩擦，质量比 $m_2/m_1=\eta_0>1$ 时刚好开始打滑。
+求：（a）绳—轮摩擦系数 $k$；
+（b）当质量比增至 $\eta>\eta_0$ 时两重物的加速度。
+\exsolution
+取与轮接触的微小绳段，其两端张力相差 $\mathrm dT$。
+静摩擦临界时切向平衡
+$|\mathrm dT|=k\,\mathrm dN$，
+而法向平衡给出 $\mathrm dN\simeq T\,\mathrm d\varphi$，
+所以 $\mathrm dT/T=k\,\mathrm d\varphi$。
+接触半圆包角为 $\pi$，积分得
+$T_2/T_1=e^{k\pi}$。临界时两端均静止，
+$T_2/T_1=m_2/m_1=\eta_0$，因此
+\[
+\boxed{k=\frac{\ln\eta_0}{\pi}}.
+\]
+当 $\eta>\eta_0$，若动摩擦系数沿用同一值，
+则滑动期间 $T_2/T_1=\eta_0$。
+较重的 $m_2$ 向下、$m_1$ 向上，设加速度 $a$，有
+\[
+T_1=m_1(g+a),\qquad T_2=m_2(g-a),
+\]
+结合 $T_2/T_1=\eta_0$，
+\[
+\boxed{a=g\,\frac{\eta-\eta_0}{\eta+\eta_0}}.
+\]
+\excheck 若静、动摩擦系数不同，临界比值仅决定静摩擦系数，
+滑动加速度不能仅由 $\eta_0$ 唯一确定；本解遵循原书同系数模型。
+
+\exproblem{94}{16}
+质量为 $m$ 的质点在半径为 $R$ 的竖直圆筒内壁无摩擦地运动，
+初始速率为 $v_0$，速度与水平面成角 $\alpha$。
+求质点对筒壁施加的作用力大小。
+\exsolution
+内壁光滑意味着筒壁法向力始终水平指向筒轴，
+重力只改变速度的竖直分量。
+因此水平切向速率为常数
+$v_\varphi=v_0\cos\alpha$；
+圆筒半径固定，所需水平向心加速度为
+$v_\varphi^2/R$。由牛顿第二定律
+\[
+N=\frac{mv_\varphi^2}{R}
+=\boxed{\frac{mv_0^2\cos^2\alpha}{R}}.
+\]
+\excheck 由牛顿第三定律，质点对筒壁的力与筒壁支持力
+大小相等、方向相反；它不随竖直落下时的总速率增加而增加。
+
+\exproblem{95}{16}
+质量为 $m$ 的质点在 $xy$ 平面内按
+$x=a\sin\omega t,\ y=b\cos\omega t$ 运动。
+求作用于质点的合力大小及方向。
+\exsolution
+分别对坐标求两阶导数：
+\[
+\ddot x=-a\omega^2\sin\omega t=-\omega^2x,\qquad
+\ddot y=-b\omega^2\cos\omega t=-\omega^2y.
+\]
+因此合力矢量
+\[
+\boxed{\bm F=-m\omega^2(x\bm i+y\bm j)
+=-m\omega^2\bm r},
+\]
+方向总指向坐标原点，大小为
+\[
+\boxed{|\bm F|=m\omega^2
+\sqrt{a^2\sin^2\omega t+b^2\cos^2\omega t}}.
+\]
+\excheck 轨迹一般为椭圆，但合力并非处处沿椭圆法线；
+只是在 $a=b$ 的圆轨迹情形合力总是纯法向。
+
+\exproblem{96}{16}
+质量为 $m$ 的物体以初速度矢量 $\bm v_0$ 斜抛，
+忽略空气阻力。求：（a）前 $t$ 秒的动量增量；
+（b）回到起抛高度的全程动量增量的大小。
+\exsolution
+动量增量等于重力冲量，在向上取正的直角坐标系中
+$\bm g=-g\bm j$：
+\[
+\boxed{\Delta\bm p(t)=m\bm g\,t=-mgt\,\bm j}.
+\]
+若初始竖直分量 $v_{0y}>0$，
+回到相同高度的飞行时间 $T=2v_{0y}/g$。
+故整个飞行期间
+\[
+\boxed{|\Delta\bm p_{\rm total}|=mgT
+=2m v_{0y}=2m v_0\sin\alpha}.
+\]
+\excheck 水平动量保持不变；此处 $\alpha$ 为初速度
+与水平面的正仰角，且默认全程不碰到其他障碍物。
+
+\exproblem{97}{16}
+质量为 $m$ 的静止质点在 $0\le t\le\tau$ 期间受时变力
+$\bm F(t)=\bm a\,t(\tau-t)$，
+其中 $\bm a$ 是恒定矢量，之后外力撤销。
+求：（a）外力刚撤销时的动量；
+（b）受力期间走过的路程。
+\exsolution
+由冲量定理
+\[
+\bm p(t)=\int_0^t\bm a\,u(\tau-u)\,\mathrm du
+=\bm a\left(\frac{\tau t^2}{2}-\frac{t^3}{3}\right).
+\]
+撤力时有
+\[
+\boxed{\bm p(\tau)=\frac{\bm a\tau^3}{6}}.
+\]
+由于 $t(\tau-t)\ge0$ 且方向恒定，质点始终沿 $\bm a$
+方向运动，故路程等于位移大小：
+\[
+s=\int_0^\tau\frac{|\bm p(t)|}{m}\,\mathrm dt
+=\frac{|\bm a|}{m}\left(\frac{\tau^4}{6}
+-\frac{\tau^4}{12}\right)
+=\boxed{\frac{|\bm a|\tau^4}{12m}}.
+\]
+\excheck 参数 $\bm a$ 并非普通加速度，因
+$[\bm F]=[\bm a]\,\mathrm s^2$；
+动量、路程表达式的量纲均正确。
+
+\exproblem{98}{16}
+质量为 $m$ 的质点从静止开始，在固定直线上受
+$F(t)=F_0\sin\omega t$ 的外力。求距出发点的
+总路程 $s(t)$，说明函数图形形状。
+\exsolution
+一维运动方程 $m\dot v=F_0\sin\omega t$。
+对初速度为零的情形积分得
+\[
+v(t)=\frac{F_0}{m\omega}(1-\cos\omega t)\ge0.
+\]
+尽管外力会周期性反向，速度始终非负，
+所以路程等于从原点的正向位移：
+\[
+\boxed{s(t)=\frac{F_0}{m\omega^2}
+(\omega t-\sin\omega t)},\quad t\ge0.
+\]
+\excheck 曲线整体单调不减，每当 $\omega t=2n\pi$
+斜率短暂降为零；平均斜率为 $F_0/(m\omega)$。
+
+\exproblem{99}{17}
+质量为 $m$ 的质点起初静止，在固定直线上受到
+$F(t)=F_0\cos\omega t$ 的作用。
+求第一次重新停止的时间、此前路程及最大速率。
+\exsolution
+积分可得
+\[
+v(t)=\frac{F_0}{m\omega}\sin\omega t.
+\]
+首次正时间零点为 $t_*=\pi/\omega$，
+在 $0<t<t_*$ 速度非负，因此
+\[
+\boxed{t_*=\frac\pi\omega,\qquad
+s_*=\int_0^{\pi/\omega}v(t)\,\mathrm dt
+=\frac{2F_0}{m\omega^2}}.
+\]
+在 $t=\pi/(2\omega)$ 时 $\sin\omega t=1$，
+故
+\[
+\boxed{v_{\max}=\frac{F_0}{m\omega}}.
+\]
+\excheck 在 $t_*$ 的瞬间质点停止后会反向运动，
+题目所问“首次停止”不包含之后的反向路程。
+
+\exproblem{100}{17}
+质量 $m$ 的摩托艇在湖上以速度 $v_0$ 前进，
+$t=0$ 时关闭发动机。阻力与速率成正比，
+大小为 $rv$，方向与速度相反。
+求：（a）停机后运动时间；
+（b）速率随已走路程 $s$ 的变化及总路程；
+（c）速率降至 $v_0/\eta$（$\eta>1$）期间的平均速率。
+\exsolution
+取前进方向为正，$m\dot v=-rv$，
+解得
+\[
+\boxed{v(t)=v_0e^{-rt/m}}.
+\]
+此速度只在 $t\to\infty$ 时趋零，所以在理想模型中
+完全停止所需时间为\emph{无限长}。
+用 $\dot v=v\,\mathrm dv/\mathrm ds$ 得
+$m v\,\mathrm dv/\mathrm ds=-rv$，在 $v>0$ 时可约去 $v$，
+积分得到
+\[
+\boxed{v(s)=v_0-\frac rm s,\qquad
+s_{\rm total}=\frac{mv_0}{r}}.
+\]
+达到 $v_0/\eta$ 的时间是
+$t_\eta=(m/r)\ln\eta$，期间位移为
+$s_\eta=(mv_0/r)(1-\eta^{-1})$，于是
+\[
+\boxed{\bar v=\frac{s_\eta}{t_\eta}
+=v_0\frac{\eta-1}{\eta\ln\eta}}.
+\]
+\excheck $v(s)$ 仅在 $0\le s<s_{\rm total}$ 的运动阶段适用；
+$0<v(t)\le v_0$，全程路程有限但持续时间无限。
