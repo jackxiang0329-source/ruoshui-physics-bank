@@ -80,8 +80,32 @@ THERMO_EXPECTED = [range(1, 12), range(12, 21), range(21, 26)]
 THERMO_ENERGY_CHAPTERS = [
     "10-thermo-first-law-026-035.tex",
     "10-thermo-first-law-036-045.tex",
+    "10-thermo-first-law-046-056.tex",
+    "10-thermo-first-law-057-061.tex",
 ]
-THERMO_ENERGY_EXPECTED = [range(26, 36), range(36, 46)]
+THERMO_ENERGY_EXPECTED = [
+    range(26, 36), range(36, 46), range(46, 57), range(57, 62),
+]
+THERMO_KINETIC_CHAPTERS = [
+    "11-kinetic-theory-062-072.tex",
+    "11-kinetic-theory-073-083.tex",
+    "11-kinetic-theory-084-094.tex",
+    "11-kinetic-theory-095-103.tex",
+    "11-kinetic-theory-104-112.tex",
+]
+THERMO_KINETIC_EXPECTED = [
+    range(62, 73), range(73, 84), range(84, 95),
+    range(95, 104), range(104, 113),
+]
+THERMO_ENTROPY_CHAPTERS = [
+    "12-entropy-cycles-113-121.tex",
+    "12-entropy-cycles-122-129.tex",
+    "12-entropy-cycles-130-139.tex",
+    "12-entropy-cycles-140-145.tex",
+]
+THERMO_ENTROPY_EXPECTED = [
+    range(113, 122), range(122, 130), range(130, 140), range(140, 146),
+]
 
 errors = []
 main = (ROOT / "main.tex").read_text(encoding="utf-8")
@@ -180,12 +204,57 @@ for name, expected in zip(THERMO_ENERGY_CHAPTERS, THERMO_ENERGY_EXPECTED):
     if entry not in main:
         errors.append(f"main.tex does not include: {name}")
 
-if energy_ids != list(range(26, 46)):
-    errors.append("Part II section 2.2 original IDs are not exactly 26..45")
+if energy_ids != list(range(26, 62)):
+    errors.append("Part II section 2.2 original IDs are not exactly 26..61")
 if r"\newcommand{\thermoenergyproblem}" not in main:
     errors.append("main.tex missing thermoenergyproblem macro")
 if main.count(r"\section{热力学第一定律与热容") != 1:
     errors.append("first law section count is not one")
+
+# The second book part is a SINGLE independent 1..145 range,
+# and each newly introduced subject has its own macro and source list.
+subject_results = {}
+for label, chapters, ranges, macro, expected_ids in [
+    ("kinetic", THERMO_KINETIC_CHAPTERS, THERMO_KINETIC_EXPECTED,
+     "thermokineticproblem", list(range(62, 113))),
+    ("entropy", THERMO_ENTROPY_CHAPTERS, THERMO_ENTROPY_EXPECTED,
+     "thermoentropyproblem", list(range(113, 146))),
+]:
+    observed = []
+    for name, expected in zip(chapters, ranges):
+        path = ROOT / "chapters" / name
+        if not path.exists():
+            errors.append(f"missing: {name}")
+            continue
+        content = path.read_text(encoding="utf-8")
+        ids = [int(x) for x in re.findall(
+            r"\\" + macro + r"\{(\d+)\}\{", content)]
+        want = list(expected)
+        observed.extend(ids)
+        if ids != want:
+            errors.append(f"{name}: original IDs {ids} != {want}")
+        for command in ("exsolution", "excheck"):
+            n = len(re.findall(r"\\" + command + r"\b", content))
+            if n != len(want):
+                errors.append(f"{name}: {n} {command}, expected {len(want)}")
+        if content.count("{") != content.count("}"):
+            errors.append(f"{name}: unbalanced TeX braces")
+        entry = r"\input{chapters/" + path.stem + "}"
+        if entry not in main:
+            errors.append(f"main.tex does not include: {name}")
+    if observed != expected_ids:
+        errors.append(f"Part II {label} original IDs are not consecutive")
+    if r"\newcommand{\" + macro + "}" not in main:
+        errors.append(f"main.tex missing {macro} macro")
+    subject_results[label] = observed
+
+part_two = thermo_ids + energy_ids + subject_results["kinetic"] + subject_results["entropy"]
+if part_two != list(range(1, 146)):
+    errors.append("Part II combined original IDs are not exactly 1..145")
+if main.count(r"\section{气体分子运动论") != 1:
+    errors.append("kinetic theory section count is not one")
+if main.count(r"\section{热力学第二定律与熵") != 1:
+    errors.append("entropy section count is not one")
 
 if main.count(r"\chapter{热力学与分子物理}") != 1:
     errors.append("Part II chapter count is not one")
@@ -198,4 +267,4 @@ if errors:
     for e in errors:
         print("FAIL:", e, file=sys.stderr)
     sys.exit(1)
-print("PASS: 388 Part-I + 25 Part-II gas-state + 20 Part-II first-law = 433 translated solved problems; original numbering and all chapters verified")
+print("PASS: 388 Part-I + 145 Part-II (25 gas-state + 36 first-law + 51 kinetic + 33 entropy) = 533 translated solved problems; original numbering and all chapters verified")
