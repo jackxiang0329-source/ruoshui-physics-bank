@@ -1,0 +1,424 @@
+% Irodov Part VI §6.2 original problems 49--65.
+% Source: supplied Arihant PDF pp.247--248, printed pp.238--239.
+% Answers PDF pp.349--350. Every TeX derivation has an excheck clause.
+\wavequantproblem{49}{238}
+动能均为 $T=100\,\mathrm{eV}$ 的电子、
+质子和铀原子，分别求其德布罗意波长。
+\exsolution
+三个粒子均在非相对论速度区间，
+$p=\sqrt{2mT}$，所以
+\[
+ \boxed{\lambda_{\rm dB}=\frac h{\sqrt{2mT}}}.
+\]
+代
+$m_e=9.109\times10^{-31}\,\mathrm{kg}$、
+$m_p=1.673\times10^{-27}\,\mathrm{kg}$、
+$m_{\rm U}\simeq238u$，得到
+\[
+ \boxed{\lambda_e\simeq123\,\mathrm{pm}},\qquad
+ \boxed{\lambda_p\simeq2.86\,\mathrm{pm}},\qquad
+ \boxed{\lambda_{\rm U}\simeq0.186\,\mathrm{pm}}.
+\]
+\excheck 相同动能下 $\lambda\propto m^{-1/2}$；
+最重的铀原子波长最短。
+
+\wavequantproblem{50}{238}
+一个电子的德布罗意波长从
+$100\,\mathrm{pm}$ 降到 $50\,\mathrm{pm}$，
+问需要增加多少动能？
+\exsolution
+在这一能区电子可采用非相对论关系
+\[
+ T(\lambda)=\frac{h^2}{2m_e\lambda^2}.
+\]
+$\lambda_2=\lambda_1/2$，所以
+$T_2=4T_1$，新增动能为
+\[
+ \boxed{\Delta T=T_2-T_1=
+ \frac{3h^2}{2m_e(100\,\mathrm{pm})^2}
+ \simeq0.45\,\mathrm{keV}}.
+\]
+\excheck 波长减半使动量加倍、动能增至4倍，
+但\emph{增加}的是初动能的3倍。
+
+\wavequantproblem{51}{238}
+动能为 $T=25\,\mathrm{eV}$ 的中子撞击
+起初静止的氘核。
+求两粒子在质心参考系内各自的德布罗意波长。
+\exsolution
+实验室系中中子速度
+$v_n=\sqrt{2T/m_n}$。
+质心速度
+$V_{\rm CM}=m_nv_n/(m_n+m_d)$。
+中子质心动量模
+\[
+ p_n^*=m_n(v_n-V_{\rm CM})
+ =\frac{m_nm_d}{m_n+m_d}v_n=\mu v_n.
+\]
+氘核的质心动量与它等大反向，
+所以两者波长相同：
+\[
+ \boxed{\lambda_n^*=\lambda_d^*=
+ \frac{h(m_n+m_d)}
+ {m_d\sqrt{2m_nT}}\simeq8.6\,\mathrm{pm}}.
+\]
+\excheck 质心系总动量为0，
+因此两粒子动量模相等，尽管质量不等。
+
+\wavequantproblem{52}{238}
+两相同非相对论粒子以相互垂直的方向运动，
+在实验室系的德布罗意波长为
+$\lambda_1,\lambda_2$。
+求它们在质心系内各自的德布罗意波长。
+\exsolution
+质量均为 $m$，实验室动量
+$\boldsymbol p_1\perp\boldsymbol p_2$，
+$p_i=h/\lambda_i$。
+质心速度
+$\boldsymbol V=(\boldsymbol p_1+\boldsymbol p_2)/(2m)$。
+第一粒子质心动量
+$\boldsymbol p'_1=\boldsymbol p_1-m\boldsymbol V
+=(\boldsymbol p_1-\boldsymbol p_2)/2$，
+第二粒子为它的相反数，大小
+$|\boldsymbol p'_1|=\tfrac12\sqrt{p_1^2+p_2^2}$。
+于是
+\[
+ \boxed{\lambda^*=
+ \frac{2}{\sqrt{1/\lambda_1^2+1/\lambda_2^2}}
+ =\frac{2\lambda_1\lambda_2}
+ {\sqrt{\lambda_1^2+\lambda_2^2}}}.
+\]
+\excheck 只有因为两实验室动量\emph{垂直}，
+平方和才没有交叉项。
+
+\wavequantproblem{53}{238}
+室温下氢分子的\emph{最概然速率}对应
+的德布罗意波长是多少？
+\exsolution
+麦克斯韦速度分布
+$f(v)\propto v^2\exp[-mv^2/(2k_{\mathrm B}T)]$，
+其速率峰值
+$v_{\rm mp}=\sqrt{2k_{\mathrm B}T/m}$。
+代入 $\lambda=h/(mv)$，
+\[
+ \boxed{\lambda(v_{\rm mp})=
+ \frac{h}{\sqrt{2mk_{\mathrm B}T}}}.
+\]
+氢分子质量约 $m=2.016u$，
+取 $T=300\,\mathrm K$，
+\[
+ \boxed{\lambda\simeq128\,\mathrm{pm}}.
+\]
+\excheck 本题问的是\emph{速率分布峰值对应的波长}，
+与下一题“波长分布本身的峰值”不是同一概念。
+
+\wavequantproblem{54}{238}
+处于室温热平衡的氢分子，
+若直接统计它们的德布罗意\emph{波长分布}，
+求最概然波长。
+\exsolution
+设 $\lambda=h/(mv)$。
+麦克斯韦速率分布
+$f(v)\,dv\propto
+v^2e^{-mv^2/(2k_{\mathrm B}T)}\,dv$。
+进行概率变量替换：
+\[
+ \varphi(\lambda)\,d\lambda
+ =f\!\left(\frac h{m\lambda}\right)
+ \left|\frac{dv}{d\lambda}\right|d\lambda
+ \propto\lambda^{-4}
+ \exp\!\left[-\frac{h^2}
+ {2mk_{\mathrm B}T\lambda^2}\right]d\lambda.
+\]
+极值条件 $d(\ln\varphi)/d\lambda=0$：
+$-4/\lambda+h^2/(mk_{\mathrm B}T\lambda^3)=0$，
+从而
+\[
+ \boxed{\lambda_{\rm mp}=
+ \frac h{2\sqrt{mk_{\mathrm B}T}}
+ \simeq0.089\,\mathrm{nm}\approx0.09\,\mathrm{nm}}.
+\]
+\excheck 概率密度在非线性变量变换下会改变形状；
+不能把速率峰值代入 $\lambda=h/(mv)$ 当成波长峰值。
+
+\wavequantproblem{55}{238}
+推导动能为 $T$ 的相对论粒子的德布罗意波长；
+若使用非相对论公式，要求相对误差不超过
+$1\%$，分别求电子和质子的动能上限。
+\exsolution
+总能量 $E=mc^2+T$，
+由相对论能量动量关系
+$E^2=p^2c^2+m^2c^4$，得
+\[
+ pc=\sqrt{T(T+2mc^2)},\quad
+ \boxed{\lambda_{\rm rel}=
+ \frac{hc}{\sqrt{T(T+2mc^2)}}}.
+\]
+非相对论近似
+$\lambda_{\rm nr}=h/\sqrt{2mT}$，
+因此
+\[
+ \frac{\lambda_{\rm nr}}{\lambda_{\rm rel}}
+ =\sqrt{1+\frac T{2mc^2}}.
+\]
+限定
+$\lambda_{\rm nr}/\lambda_{\rm rel}-1\le0.01$，
+有
+\[
+ \boxed{T\le2mc^2[(1.01)^2-1]
+ =0.0402\,mc^2}.
+\]
+故
+\[
+ \boxed{T_{e,\max}\simeq20.5\,\mathrm{keV}},\qquad
+ \boxed{T_{p,\max}\simeq37.7\,\mathrm{MeV}}.
+\]
+\excheck 1%是对\emph{波长}的相对误差；
+非相对论波长比精确波长稍大。
+
+\wavequantproblem{56}{238}
+电子的德布罗意波长等于其普通
+康普顿波长 $\lambda_C=h/(m_ec)$ 时，
+其动能应为多少？
+\exsolution
+德布罗意式 $\lambda=h/p$，
+令其等于 $h/(m_ec)$，得
+$p=m_ec$。
+由
+$E=\sqrt{m_e^2c^4+p^2c^2}=\sqrt2m_ec^2$，
+故动能
+\[
+ \boxed{T=(\sqrt2-1)m_ec^2
+ \simeq0.212\,\mathrm{MeV}}.
+\]
+\excheck 所谓康普顿波长是 $h/(mc)$，
+不是约化形式 $\hbar/(mc)$。
+
+\wavequantproblem{57}{238}
+X 射线管连续谱最短波长为
+$\lambda_{\rm sh}=10.0\,\mathrm{pm}$。
+求电子撞击阳极前的相对论德布罗意波长。
+\exsolution
+能量守恒给电子动能
+$T=hc/\lambda_{\rm sh}$。
+用相对论动量
+$pc=\sqrt{T(T+2m_ec^2)}$，
+于是
+\[
+ \boxed{\lambda_e=
+ \frac{hc}{\sqrt{T(T+2m_ec^2)}}
+ =\frac{\lambda_{\rm sh}}
+ {\sqrt{1+\dfrac{2m_ec^2\lambda_{\rm sh}}{hc}}}}.
+\]
+数值 $T\simeq124\,\mathrm{keV}$，
+\[
+ \boxed{\lambda_e\simeq3.3\,\mathrm{pm}}.
+\]
+\excheck X 射线短波限是光子的波长，
+不等于撞靶\emph{电子}的德布罗意波长。
+
+\wavequantproblem{58}{238}
+动能单一的电子束正入射宽
+$b=1.0\,\mu\mathrm m$ 的窄方缝，
+距缝 $\ell=50\,\mathrm{cm}$ 的屏上
+单缝衍射中央主极大宽
+$\Delta x=0.36\,\mathrm{mm}$。
+求电子速度。
+\exsolution
+单缝第一暗纹满足
+$b\sin\theta_1=\lambda_{\rm dB}$。
+小角下 $\theta_1\simeq\lambda_{\rm dB}/b$，
+中央主极大从左右第一暗纹之间的总宽度为
+$\Delta x\simeq2\ell\lambda_{\rm dB}/b$，
+即
+\[
+ \lambda_{\rm dB}=\frac{b\Delta x}{2\ell}.
+\]
+因 $\lambda_{\rm dB}=h/(m_ev)$，
+\[
+ \boxed{v=\frac{2h\ell}{m_eb\Delta x}
+ \simeq2.0\times10^6\,\mathrm{m/s}}.
+\]
+\excheck 中央主极大宽度是从 $-\theta_1$ 到
+$+\theta_1$ 的\emph{全宽}，不能少因子2。
+
+\wavequantproblem{59}{238}
+电子束经电压 $U=25\,\mathrm V$ 加速，
+正入射两细缝，间距
+$d=50\,\mu\mathrm m$。
+屏距 $\ell=100\,\mathrm{cm}$，
+求干涉条纹相邻亮纹距离。
+\exsolution
+加速电子获得动能
+$T=eU$，非相对论动量
+$p=\sqrt{2m_eeU}$，故波长
+$\lambda=h/\sqrt{2m_eeU}$。
+双缝相邻干涉亮纹角距满足
+$\Delta\theta\simeq\lambda/d$，
+屏上线距
+\[
+ \boxed{\Delta x=
+ \frac{\ell h}{d\sqrt{2m_eeU}}
+ \simeq4.9\,\mu\mathrm m}.
+\]
+\excheck 双缝条纹间距与双缝间距成反比，
+且随加速电压按 $U^{-1/2}$ 缩小。
+
+\wavequantproblem{60}{239}
+动能单一的电子束以
+$\theta=30^\circ$ 掠入射铝单晶天然晶面。
+相邻晶面距 $d=0.20\,\mathrm{nm}$，
+反射极大在某加速电压 $U_0$ 时出现。
+若电压增为原来的
+$\eta=2.25$ 倍，又出现相邻下一级反射极大，
+求 $U_0$。
+\exsolution
+布拉格反射条件 $2d\sin\theta=m\lambda_m$。
+非相对论电子
+$\lambda\propto U^{-1/2}$，
+因此电压变为 $\eta U_0$ 时
+$\lambda_{\rm new}=\lambda_0/\sqrt\eta$。
+对同一晶面和入射角，
+$\lambda\propto1/m$，相邻两个整数级次满足
+\[
+ \frac{m+1}{m}=\sqrt\eta=1.5,
+ \quad\Longrightarrow\quad m=2.
+\]
+所以
+$2d\sin\theta=2\lambda_0$，
+即 $\lambda_0=d\sin\theta$。
+于是
+\[
+ \boxed{U_0=\frac{h^2}
+ {2m_e e\,d^2\sin^2\theta}
+ \simeq0.15\,\mathrm{kV}=150\,\mathrm V}.
+\]
+\excheck 电压提高使波长变短，
+故对应的布拉格级次从2增到3。
+
+\wavequantproblem{61}{239}
+一束动能 $T=180\,\mathrm{eV}$ 的
+单色电子正入射镍单晶，
+在与晶体表面法线成
+$\theta=55^\circ$ 的方向观察到\emph{第四级}
+衍射反射极大。求晶面间距 $d$。
+\exsolution
+电子德布罗意波长
+$\lambda=h/\sqrt{2m_eT}$。
+入射方向沿向内的晶面法线、反射方向相对向外法线
+成 $\theta$，两束传播方向夹角是 $\pi-\theta$；
+布拉格掠射角为
+$\alpha=(\pi-\theta)/2$，从而
+$\sin\alpha=\cos(\theta/2)$。
+第四级布拉格条件
+$2d\sin\alpha=4\lambda$，得
+\[
+ \boxed{d=\frac{2\lambda}{\cos(\theta/2)}
+ =\frac{2h}{\sqrt{2m_eT}\cos(\theta/2)}
+ \simeq0.21\,\mathrm{nm}}.
+\]
+\excheck 若误将 $55^\circ$ 直接当作对晶面的
+掠射角，会产生不同的结果；此题给的是相对于\emph{法线}的出射角。
+
+\wavequantproblem{62}{239}
+动能为 $T=10\,\mathrm{keV}$ 的电子束穿过
+多晶铝箔，在距箔 $\ell=10.0\,\mathrm{cm}$
+的屏上产生直径 $D=3.20\,\mathrm{cm}$ 的衍射环。
+若该环由\emph{三级}布拉格反射形成，
+求对应晶面间距。
+\exsolution
+设布拉格掠射角为 $\alpha$，
+衍射圆锥半角为 $2\alpha$。
+屏上环半径 $D/2$，所以
+\[
+ \tan(2\alpha)=\frac{D}{2\ell},
+ \quad\alpha=\frac12\arctan\frac{D}{2\ell}
+ \simeq4.55^\circ.
+\]
+电子波长在 $10\,\mathrm{keV}$ 下
+$\lambda\simeq h/\sqrt{2m_eT}\simeq12.3\,\mathrm{pm}$
+（精确相对论值约12.2pm）。
+三级布拉格关系
+$2d\sin\alpha=3\lambda$，
+因此
+\[
+ \boxed{d=\frac{3\lambda}{2\sin\alpha}
+ \simeq0.23\,\mathrm{nm}}.
+\]
+\excheck 圆环\emph{直径}先除2求半径；
+衍射方向的偏转角为 $2\alpha$，不是 $\alpha$。
+
+\wavequantproblem{63}{239}
+电子被外部电压 $U$ 加速后入射金属，
+金属内势（使电子动能增加）为
+$U_i=15\,\mathrm V$。
+求：(a) $U=150\,\mathrm V$ 时
+电子波折射率 $n$；
+(b) 电子波折射率偏离1不超过
+$\eta=1.0\%$ 时 $U/U_i$ 应满足的范围。
+\exsolution
+金属外电子动能 $T_0=eU$，
+金属内的动能是 $T_i=e(U+U_i)$。
+动量随 $\sqrt T$ 增大，
+故德布罗意波长随 $\sqrt T$ 减小，
+定义折射率
+\[
+ \boxed{n=\frac{\lambda_{\rm out}}{\lambda_{\rm in}}
+ =\sqrt{1+\frac{U_i}{U}}}.
+\]
+(a) 代数值
+\[
+ \boxed{n=\sqrt{1.10}\simeq1.049\approx1.05}.
+\]
+(b) 条件 $n-1\le\eta=0.010$ 给
+$1+U_i/U\le(1+\eta)^2$，故
+\[
+ \boxed{\frac U{U_i}\ge
+ \frac1{2\eta+\eta^2}\simeq49.75\approx50}.
+\]
+\excheck 内势为正增加电子动能，
+所以 $n>1$；当 $U\to\infty$，$n\to1$。
+
+\wavequantproblem{64}{239}
+一维无限深方势阱宽度为 $\ell$。
+若仅允许整数个德布罗意\emph{半波长}
+恰好装入方阱，求粒子能级。
+\exsolution
+边界节点条件
+$\ell=n\lambda/2$，
+$n=1,2,\dots$。
+因此
+$\lambda=2\ell/n$，动量
+$p=h/\lambda=nh/(2\ell)=n\pi\hbar/\ell$。
+阱内势能为0，
+\[
+ \boxed{E_n=\frac{p^2}{2m}
+ =\frac{n^2\pi^2\hbar^2}{2m\ell^2}},
+ \quad n=1,2,\dots.
+\]
+\excheck $n=0$ 不对应可归一化的非零定态；
+基态能量严格大于0。
+
+\wavequantproblem{65}{239}
+从德布罗意波的驻波观点解释玻尔角动量量子化：
+证明氢原子电子只有沿周长能容纳
+\emph{整数个完整德布罗意波长}的圆轨道才满足驻波条件。
+\exsolution
+电子沿半径 $r$ 的圆周运动，
+动量为 $p=m_ev$，
+德布罗意波长为
+$\lambda=h/p$。
+为使波函数沿圆轨道绕行一周后具有相同相位，
+要求
+\[
+ 2\pi r=n\lambda,\qquad n=1,2,\dots.
+\]
+代入 $\lambda=h/p$，
+\[
+ 2\pi rp=nh,\quad
+ \boxed{L=rp=n\hbar}.
+\]
+这恰为玻尔的圆轨道角动量量子化条件。
+\excheck 非整数圈数会导致同一点相位不连续，
+无法形成稳定单值驻波；
+此结论是旧量子理论的波动解释，非完整现代氢原子轨道理论。
