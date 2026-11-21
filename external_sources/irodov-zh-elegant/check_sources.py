@@ -33,6 +33,13 @@ CHAPTERS = [
     "04-gravitation-211-220.tex",
     "04-gravitation-221-233.tex",
     "05-rigid-body-234-240.tex",
+    "05-rigid-body-241-250.tex",
+    "05-rigid-body-251-260.tex",
+    "05-rigid-body-261-270.tex",
+    "05-rigid-body-271-280.tex",
+    "05-rigid-body-281-289.tex",
+    "06-elasticity-290-290.tex",
+    "06-elasticity-291-300.tex",
 ]
 EXPECTED_RANGES = [
     range(1, 21), range(21, 31), range(31, 41),
@@ -44,6 +51,9 @@ EXPECTED_RANGES = [
     range(171, 181), range(181, 191), range(191, 200),
     range(200, 211), range(211, 221), range(221, 234),
     range(234, 241),
+    range(241, 251), range(251, 261), range(261, 271),
+    range(271, 281), range(281, 290), range(290, 291),
+    range(291, 301),
 ]
 
 errors = []
@@ -71,8 +81,8 @@ for name, expected in zip(CHAPTERS, EXPECTED_RANGES):
     if entry not in main:
         errors.append(f"main.tex does not include: {name}")
 
-if all_ids != list(range(1, 241)):
-    errors.append("combined problem IDs are not exactly 1..240 in order")
+if all_ids != list(range(1, 301)):
+    errors.append("combined problem IDs are not exactly 1..300 in order")
 if main.count(r"\section{运动学") != 1:
     errors.append("kinematics section count is not one")
 if main.count(r"\section{动力学基本方程") != 1:
@@ -83,9 +93,11 @@ if main.count(r"\section{万有引力") != 1:
     errors.append("gravitation section count is not one")
 if main.count(r"\section{刚体动力学") != 1:
     errors.append("rigid body section count is not one")
+if main.count(r"\section{固体弹性形变") != 1:
+    errors.append("elasticity section count is not one")
 
 if errors:
     for e in errors:
         print("FAIL:", e, file=sys.stderr)
     sys.exit(1)
-print("PASS: 240 consecutive translated problem sources, solutions, checks, and included chapters")
+print("PASS: 300 consecutive translated problem sources, solutions, checks, and included chapters")
