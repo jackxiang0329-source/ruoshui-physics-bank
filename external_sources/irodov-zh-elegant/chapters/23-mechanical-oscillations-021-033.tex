@@ -1,0 +1,335 @@
+% Irodov Part IV §4.1 independent original problems 21--33.
+% User source PDF pp.165--166; printed pp.156--157.
+\oscproblem{21}{156}
+单摆钟安置于电梯中。电梯从静止开始以恒加速度
+$w$ 向上运动（$w<g$），升高高度 $h$ 时将加速度方向反转而大小仍为 $w$。
+问从开始运动起经过多久，钟才重新显示正确时间？
+\exsolution
+上升加速阶段等效重力
+$g_+=g+w$，
+摆钟相对于真实时间的走时速率为
+$r_+=\sqrt{(g+w)/g}>1$。
+从静止上升高度 $h$ 所用真实时间
+$t_1=\sqrt{2h/w}$。
+反向加速阶段等效重力
+$g_-=g-w$，
+走时速率
+$r_-=\sqrt{(g-w)/g}<1$。
+要让累计超前量被追平，
+$(r_+-1)t_1+(r_--1)t_2=0$，
+所以
+$t_2=(r_+-1)t_1/(1-r_-)$。
+令 $\eta=w/g$，
+\[
+\boxed{t=t_1+t_2=
+\sqrt{\frac{2h}{w}}\,
+\frac{\sqrt{1+\eta}-\sqrt{1-\eta}}
+{1-\sqrt{1-\eta}}}.
+\]
+\excheck 该时刻钟再次准点发生在加速度反向之后；所求为真实经过时间，不是表盘累计时间。
+
+\oscproblem{22}{156}
+图4.2密度计（浮计）质量
+$m=50$g，细管半径
+$r=3.2$mm，浸在液体密度
+$\rho=1.00\,\mathrm{g/cm^3}$ 中。
+将它沿竖直方向轻微压下后释放，忽略液体阻力，求小振动周期。
+\exsolution
+下移 $x$ 后额外排开液体体积为
+$\Delta V=\pi r^2x$，
+增量浮力
+$\Delta F_b=\rho g\pi r^2x$，
+相对于静平衡的回复力为
+$F_x=-\rho g\pi r^2x$。
+等效弹性系数
+$k=\rho g\pi r^2$，
+故
+\[
+\boxed{T=2\pi\sqrt{\frac{m}{\rho g\pi r^2}}}
+=\boxed{2.5\,\mathrm s}\quad\text{（约）}.
+\]
+\excheck 必须使用浮计\emph{细管}的截面积，
+不是浮体整体横截面积。
+
+\oscproblem{23}{156}
+一根未变形弹簧两端均固定，
+其整体弹性系数为
+$k=3.2\,\mathrm{N/m}$。
+在距一端为全长
+$\eta=1/3$ 的位置附加质量
+$m=25$g 的小物体。
+忽略重力和弹簧质量，求小物体沿弹簧的微小纵向振动周期。
+\exsolution
+对同一均匀弹簧材料，
+弹簧刚度与其长度成反比。
+分段后左段刚度
+$k_1=k/\eta$，
+右段
+$k_2=k/(1-\eta)$。
+质量向右移动 $x$ 时，
+左段被拉长、右段被压缩，两段均提供回复力，
+所以
+\[
+k_{\rm eff}=k_1+k_2
+=\frac{k}{\eta(1-\eta)}.
+\]
+因此
+\[
+\boxed{T=2\pi\sqrt{\frac{m\eta(1-\eta)}{k}}
+\simeq0.26\,\mathrm s}.
+\]
+\excheck 本版答案页给出\emph{同一公式}，
+但数值标成 $0.13$s；代
+$m=0.025$kg、$\eta=1/3$、$k=3.2$N/m
+得 $0.26$s，数值相差约2倍，已列勘误。
+
+\oscproblem{24}{156}
+图4.3：质量为 $m$ 的小物体在水平光滑轨道上，
+左右分别通过刚度为 $k_1,k_2$ 的轻弹簧连接固定支座。
+求微小纵向振动周期。
+\exsolution
+相对平衡位置向右位移 $x$ 时，
+左弹簧伸长 $x$、右弹簧缩短 $x$，
+两者回复力同向，合力
+$F=-(k_1+k_2)x$。
+运动方程
+$m\ddot x+(k_1+k_2)x=0$，
+故
+\[
+\boxed{T=2\pi\sqrt{\frac{m}{k_1+k_2}}}.
+\]
+\excheck 两端各连接固定墙的两只弹簧对移动质量而言属于刚度相加，不是串联等效。
+
+\oscproblem{25}{156}
+图4.4：一质量为 $m$ 的物体悬挂在\emph{首尾串联}的两根轻弹簧下，
+两弹簧刚度分别为 $k_1,k_2$。
+求竖直小振动周期。
+\exsolution
+两弹簧串联时力相同，
+总位移 $x=x_1+x_2=F/k_1+F/k_2$，
+等效刚度
+$k_{\rm eq}=(1/k_1+1/k_2)^{-1}
+=k_1k_2/(k_1+k_2)$。
+竖直重力只移动静平衡位置，不改变小振动曲率，故
+\[
+\boxed{T=2\pi\sqrt{\frac{m(k_1+k_2)}{k_1k_2}}}.
+\]
+\excheck 与上一题不同，图4.4中弹簧确实首尾串联，不能把刚度直接相加。
+
+\oscproblem{26}{156}
+质量为 $m$ 的小物体固定在长 $2\ell$ 的水平张紧细绳中点，
+绳的静张力为 $T_0$。
+忽略重力和绳质量，求横向小振动角频率。
+\exsolution
+质点离开中点横向位移 $y$，
+两侧绳段各长约 $\ell$，
+小角度下
+$\sin\alpha\simeq y/\ell$，
+两侧绳张力的横向合力
+$F_y=-2T_0y/\ell$。
+所以
+$m\ddot y+(2T_0/\ell)y=0$，
+\[
+\boxed{\omega_0=\sqrt{\frac{2T_0}{m\ell}}}.
+\]
+\excheck 两段绳各提供一个横向分力，所以刚度带系数2。
+
+\oscproblem{27}{156}
+图4.5弯管内装水银总质量
+$m=200$g，等截面积
+$S=0.50\,\mathrm{cm^2}$，
+右臂与竖直夹角
+$\theta=30^\circ$。
+忽略黏滞，求水银振荡周期。
+\exsolution
+沿管路令水银柱整体偏移距离 $x$：
+左臂液面升高 $x$，
+右臂液面沿斜管下降 $x$，
+竖直高度改变为 $x\cos\theta$。
+两端自由液面竖直高度差为
+$(1+\cos\theta)x$，
+由液压产生的合回复力
+$F=-\rho gS(1+\cos\theta)x$。
+整个水银柱质量为 $m$，故
+\[
+\boxed{T=2\pi
+\sqrt{\frac{m}{\rho gS(1+\cos\theta)}}}.
+\]
+取水银密度 $\rho\simeq13.6\times10^3\,\mathrm{kg/m^3}$，
+得
+$\boxed{T\simeq0.80\,\mathrm s}$。
+\excheck $S$ 的单位换算是
+$0.50\,\mathrm{cm^2}=5.0\times10^{-5}\,\mathrm{m^2}$。
+
+\oscproblem{28}{156--157}
+图4.6中，一根均匀杆架在两只以相反方向旋转的轮子上。
+两轮轴间距 $\ell=20$cm，杆—轮间滑动摩擦系数为
+$k=0.18$。
+证明杆作简谐振动并求周期。
+\exsolution
+令杆质心相对两轮中点的位移为 $x$，
+左右法向支持力满足
+$N_1+N_2=mg$，
+力矩平衡
+$N_2-N_1=2mgx/\ell$，
+所以
+$N_1=mg(1/2-x/\ell)$、
+$N_2=mg(1/2+x/\ell)$。
+图中两轮顶面分别向中心移动，
+摩擦力分别为右向 $kN_1$ 与左向 $kN_2$，
+合力
+$F=k(N_1-N_2)=-2kmgx/\ell$。
+因此
+\[
+\ddot x+\frac{2kg}{\ell}x=0,
+\qquad
+\boxed{T=2\pi\sqrt{\frac{\ell}{2kg}}
+=\pi\sqrt{\frac{2\ell}{kg}}
+\simeq1.5\,\mathrm s}.
+\]
+\excheck 需保持杆始终压在两轮上，
+即 $|x|<\ell/2$，此时两支持力均为正。
+
+\oscproblem{29}{157}
+设地球为密度均匀的球体，
+从北极到南极沿地轴贯穿一条直隧道，
+忽略空气阻力和地球自转影响。
+求 (a) 质点在隧道中的运动方程；
+(b) 从一极到另一极的时间；
+(c) 通过地心的速率。
+\exsolution
+球对称均匀质量分布使距离地心 $x$ 处的引力加速度
+$g(x)=-gx/R$，
+其中 $R$ 为地球半径、
+$g$ 为地表重力加速度。
+因此
+\[
+\boxed{\ddot x+\frac gR x=0}.
+\]
+频率 $\omega_0=\sqrt{g/R}$，
+从一端到另一端是半周期：
+\[
+\boxed{t_{\rm pole}=\pi\sqrt{\frac Rg}
+\simeq42\,\mathrm{min}}.
+\]
+从地表 $x=R$ 静止释放，地心最大速度
+\[
+\boxed{v_{\max}=\omega_0R=\sqrt{gR}
+\simeq7.9\,\mathrm{km/s}}.
+\]
+\excheck 原题是沿地球\emph{自转轴}的隧道，
+所以忽略自转的离心效应与此几何一致。
+
+\oscproblem{30}{157}
+图4.7：长 $\ell$ 的单摆悬点 O 相对地面以恒加速度矢量
+$\bm w$ 作任意方向运动，
+与重力加速度矢量 $\bm g$ 夹角为 $\beta$。
+求小振动周期。计算
+$\ell=21$cm、$w=g/2$、$\beta=120^\circ$ 时的周期。
+\exsolution
+在随悬点加速的非惯性参考系，
+有效重力为
+$\bm g_{\rm eff}=\bm g-\bm w$，
+模
+\[
+g_{\rm eff}=\sqrt{g^2+w^2-2gw\cos\beta}.
+\]
+摆球围绕有效重力方向静平衡，小角运动
+$\ddot\theta+(g_{\rm eff}/\ell)\theta=0$，
+故
+\[
+\boxed{T=2\pi\sqrt{\frac{\ell}
+{\sqrt{g^2+w^2-2gw\cos\beta}}}}.
+\]
+代 $w=g/2$、$\cos120^\circ=-1/2$，
+$g_{\rm eff}=g\sqrt{7/4}$，
+得
+$\boxed{T\simeq0.80\,\mathrm s}$。
+\excheck 不能直接把加速度的模 $w$ 与 $g$ 相减；
+需作矢量差。
+
+\oscproblem{31}{157}
+图4.8：质量 $m=0.20$kg 的滑套 M 位于两只相同弹簧之间，
+两弹簧总有效刚度为 $k=20$N/m，
+可沿水平杆 AB 无摩擦滑动。
+整个装置绕通过杆中点的竖直轴以恒角速度
+$\Omega=4.4\,\mathrm{rad/s}$ 旋转。
+求小振动周期，以及使振动不可能出现的 $\Omega$ 范围。
+\exsolution
+在旋转参考系，
+离轴位移 $x$ 的离心力为 $m\Omega^2x$，
+两弹簧回复力为 $-kx$，故
+\[
+m\ddot x=-(k-m\Omega^2)x,
+\quad
+\omega_{\rm eff}^2=\frac km-\Omega^2.
+\]
+只在 $k/m>\Omega^2$ 时稳定：
+\[
+\boxed{T=\frac{2\pi}{\sqrt{k/m-\Omega^2}}
+\simeq0.70\,\mathrm s}.
+\]
+当
+$\boxed{|\Omega|\ge\sqrt{k/m}=10\,\mathrm{rad/s}}$
+时平衡点不再具有正回复曲率，
+不存在该中心平衡附近的小谐振动。
+\excheck 阈值等号时频率为零，是临界状态而不是有限周期振动。
+
+\oscproblem{32}{157}
+木块置于水平振动木板上，木板作简谐运动，
+振幅 $a=10$cm、周期 $T=1.0$s。
+当木块刚开始相对木板滑动时，求静摩擦系数的临界值。
+\exsolution
+木板最大水平加速度为
+$a\omega^2$，
+$\omega=2\pi/T$。
+木块不滑动所需最大水平力为
+$ma\omega^2$，
+最大静摩擦力为 $\mu mg$。
+临界条件
+$\mu mg=ma\omega^2$，所以
+\[
+\boxed{\mu_{\rm crit}=\frac{4\pi^2a}{gT^2}
+\simeq0.40}.
+\]
+\excheck 当 $\mu<\mu_{\rm crit}$ 时开始滑动；
+原题英文对幅度与周期的语序有些混乱，
+本稿以给出的 $a,T$ 与书末公式为准。
+
+\oscproblem{33}{157}
+长 $\ell=80$cm 的单摆在小角条件下，
+求三种初始条件对应角位移：
+(a) 初偏角 $3.0^\circ$，无初速；
+(b) 初在平衡处，摆球获得水平初速 $0.22$m/s；
+(c) 原版题面印作初偏角 $30^\circ$，
+并获得大小 $0.22$m/s、指向平衡位置的速度。
+\exsolution
+小角单摆角频率
+$\omega_0=\sqrt{g/\ell}=3.5$rad/s，
+一般解为
+$\theta(t)=\theta_0\cos\omega_0t+
+[\dot\theta_0/\omega_0]\sin\omega_0t$。
+(a)
+\[
+\boxed{\theta(t)=3.0^\circ\cos(3.5t)}.
+\]
+(b) $\dot\theta_0=v_0/\ell=0.275$rad/s，
+$|\dot\theta_0|/\omega_0=0.0786$rad$=4.5^\circ$，
+所以
+\[
+\boxed{\theta(t)=4.5^\circ\sin(3.5t)}.
+\]
+(c) 以印刷题面\emph{字面}初偏角
+$30^\circ$ 代入线性化公式得到
+\[
+\boxed{\theta(t)\approx30^\circ\cos(3.5t)
+-4.5^\circ\sin(3.5t)}.
+\]
+但 $30^\circ$ 已非严格小角，若求精确摆动应解
+$\ddot\theta+(g/\ell)\sin\theta=0$。
+书末答案却给
+$5.4^\circ\cos(3.5t+1.0)$，
+它对应初偏角约 $3.0^\circ$
+（而非 $30^\circ$），属于明显的原版题面/答案歧义。
+\excheck 不把 $30^\circ$ 擅改为 $3.0^\circ$；
+书末数据相容性已单独保留，且说明小角近似限制。
