@@ -1,0 +1,257 @@
+% Irodov, Arihant PDF pp. 23--25, printed pp. 14--16.
+\exproblem{81}{14}
+图1.23的光滑楔块质量 $m_1$，楔角 $\alpha$；
+物块质量 $m_2$，置于斜面上，从静止释放。
+楔块置于无摩擦水平面，求楔块水平加速度。
+\exsolution
+设楔块向右位移为 $X$，物块相对斜面下滑距离为 $s$，
+取斜面向右上升，则物块绝对坐标为
+$x_2=X-s\cos\alpha,\ y_2=-s\sin\alpha$（忽略常数）。
+系统动能
+\[
+K=\tfrac12(m_1+m_2)\dot X^2
+-m_2\dot X\dot s\cos\alpha+\tfrac12m_2\dot s^2,
+\]
+势能随 $s$ 减少 $m_2gs\sin\alpha$。
+水平动量守恒与沿斜面的运动方程为
+\[
+(m_1+m_2)\ddot X-m_2\ddot s\cos\alpha=0,\quad
+\ddot s-\ddot X\cos\alpha=g\sin\alpha.
+\]
+消去 $\ddot s$ 得
+\[
+\boxed{a_{\rm wedge}=
+\frac{m_2g\sin\alpha\cos\alpha}
+{m_1+m_2\sin^2\alpha}},
+\]
+方向向右（与物块水平运动方向相反）。
+\excheck $m_1\to\infty$ 时楔块近似静止；
+$\alpha\to0$ 或 $\pi/2$ 时楔块水平加速度趋零。
+
+\exproblem{82}{14}
+图1.24中，质量 $M$ 的楔块在无摩擦水平面上运动，
+质量 $m$ 的物块在倾角 $\alpha$ 的光滑斜面上滑动。
+物块系轻绳，经固定在楔块顶端的轻滑轮，绳的另一端固定于右侧墙壁。
+求楔块的加速度。
+\exsolution
+取楔块向右位移为 $X$。按图的绳长约束，
+物块相对楔块沿斜面向下移动的距离也为 $X$；
+因此物块对地速度的分量为
+\[
+v_x=(1-\cos\alpha)\dot X,\qquad
+v_y=-\sin\alpha\,\dot X.
+\]
+物块速率平方为
+$2(1-\cos\alpha)\dot X^2$，全系统动能是
+\[
+K=\frac12\bigl[M+2m(1-\cos\alpha)\bigr]\dot X^2.
+\]
+物块高度降低 $X\sin\alpha$，重力作功
+$mg\sin\alpha\,\mathrm dX$。于是
+\[
+\boxed{a_M=
+\frac{mg\sin\alpha}
+{M+2m(1-\cos\alpha)}},
+\]
+沿水平向右。
+\excheck 分母来自物块的对地速度而非单纯的斜面相对速度，
+不可误用 $M+m$ 代替。$m\to0$ 时 $a_M\to0$。
+
+\exproblem{83}{14--15}
+质量为 $m$ 的质点沿半径 $R$ 的圆周走过四分之一圆周，
+求这一时间段内作用力的\emph{平均矢量}的大小：
+(a) 匀速率 $v$；(b) 切向加速度恒为 $a_\tau$，
+初速度为零。
+\exsolution
+动量定理给出 $\overline{\bm F}=\Delta\bm p/\Delta t$。
+(a) 初末两速度方向相差 $\pi/2$，大小均为 $v$，
+故 $|\Delta\bm p|=\sqrt2mv$；
+用时 $\Delta t=(\pi R/2)/v$，于是
+\[
+\boxed{|\overline{\bm F}|=\frac{2\sqrt2\,mv^2}{\pi R}}.
+\]
+(b) 若初速为零，四分之一圆周的弧长
+$\pi R/2=\tfrac12a_\tau(\Delta t)^2$，
+末速为 $a_\tau\Delta t$。
+所以 $|\Delta\bm p|=ma_\tau\Delta t$，有
+\[
+\boxed{|\overline{\bm F}|=ma_\tau}.
+\]
+\excheck 平均\emph{力矢量}的大小不同于
+“各时刻力的模再取平均”；后者不可直接用动量定理计算。
+
+\exproblem{84}{15}
+质量 $m=70\,\mathrm{kg}$ 的飞行员随飞机沿半径
+$R=500\,\mathrm m$ 的竖直圆环以恒速
+$v=360\,\mathrm{km/h}$ 飞行。
+求飞机环底、环顶及左右侧点处飞行员的视重。
+\exsolution
+视重指座椅对飞行员作用力的大小。将速度换算为
+$v=100\,\mathrm{m/s}$，向心加速度
+$v^2/R=20.0\,\mathrm{m/s^2}$。在环底，座椅支持力向上：
+\[
+N_{\rm bottom}=m\left(g+\frac{v^2}{R}\right)
+\simeq2.09\,\mathrm{kN}.
+\]
+在环顶，指向圆心的方向向下，重力与座椅力同向：
+\[
+N_{\rm top}=m\left(\frac{v^2}{R}-g\right)
+\simeq0.714\,\mathrm{kN}.
+\]
+在侧点，重力竖直，向心加速度水平，座椅作用力须同时
+提供向心分量 $mv^2/R$ 并平衡重力，故
+\[
+\boxed{N_{\rm side}=
+m\sqrt{g^2+(v^2/R)^2}\simeq1.56\,\mathrm{kN}}.
+\]
+\excheck 顶点要求 $v^2/R\ge g$ 才能维持座椅向心作用，
+本题 $20>9.8$，接触条件成立。
+
+\exproblem{85}{15}
+长为 $L$ 的轻绳悬挂一小球，初始绳水平、由静止释放。
+设摆动过程中绳与向下竖直线夹角为 $\theta$。求：
+(a) 加速度大小和绳张力随 $\theta$ 的变化；
+(b) 竖直速度分量最大时的张力；
+(c) 合加速度恰好水平时的 $\theta$。
+\exsolution
+能量守恒给出 $v^2=2gL\cos\theta$，
+因此法向加速度 $a_n=v^2/L=2g\cos\theta$，
+切向加速度的大小 $|a_\tau|=g|\sin\theta|$，于是
+\[
+\boxed{a=g\sqrt{1+3\cos^2\theta},\quad
+T-mg\cos\theta=mv^2/L,\quad T=3mg\cos\theta.}
+\]
+摆动至最低点过程中，竖直速度大小
+$|v_y|=v\sin\theta$，平方正比于
+$\cos\theta(1-\cos^2\theta)$，
+对 $c=\cos\theta$ 求极值给出 $c=1/\sqrt3$。
+故
+\[
+\boxed{T_{|v_y|\max}=\sqrt3\,mg}.
+\]
+用径向、切向分解算合加速度的竖直分量：
+$a_y=2g\cos^2\theta-g\sin^2\theta
+=g(3\cos^2\theta-1)$。
+它为零时
+\[
+\boxed{\theta=\arccos(1/\sqrt3)\simeq54.7^\circ}.
+\]
+\excheck (b)(c) 的角度恰好相同；两种条件分别由速度极值和
+加速度的竖直分量为零给出，不宜只由数值巧合推断。
+
+\exproblem{86}{15}
+一单摆在竖直平面内摆动，它在极端位置和最低点的
+\emph{加速度大小}相等。求极端位置的摆线与竖直方向的夹角 $\theta_0$。
+\exsolution
+设摆长 $L$、最高点摆幅 $\theta_0$。
+在极端位置速度为零，只有切向重力加速度，
+故 $a_{\rm extreme}=g\sin\theta_0$。
+最低点切向加速度为零；由能量守恒，
+$v_{\rm low}^2=2gL(1-\cos\theta_0)$，故
+$a_{\rm low}=2g(1-\cos\theta_0)$。
+令两者相等：
+\[
+\sin\theta_0=2(1-\cos\theta_0)
+\Longrightarrow
+2\sin(\theta_0/2)\cos(\theta_0/2)
+=4\sin^2(\theta_0/2).
+\]
+舍去平凡解 $\theta_0=0$，得
+\[
+\boxed{\theta_0=2\arctan\frac12\simeq53.13^\circ}.
+\]
+\excheck 一般物理摆动要求 $0<\theta_0<\pi$，
+此解在允许范围内。
+
+\exproblem{87}{15}
+一小物块从光滑球面顶端由静止滑下，球半径为 $R$。
+求物块离开球面时，从竖直向上半径量起的角度 $\theta$，
+以及离面速率。
+\exsolution
+能量守恒：$v^2=2gR(1-\cos\theta)$。
+沿指向球心的方向列牛顿第二定律
+\[
+mg\cos\theta-N=\frac{mv^2}{R}.
+\]
+物块刚离面时 $N=0$，于是
+$g\cos\theta=2g(1-\cos\theta)$，得到
+\[
+\boxed{\cos\theta=\frac23,\quad
+\theta\simeq48.19^\circ,\quad
+v=\sqrt{\frac{2gR}{3}}}.
+\]
+\excheck 离面前 $N\ge0$，在 $\cos\theta=2/3$ 恰好变零；
+之后不能继续强制沿球面圆周运动。
+
+\exproblem{88}{15}
+图1.26中，L 形光滑刚杆水平转动，转轴过 $O$。
+质量为 $m$ 的滑套 $A$ 可沿杆的外伸径向段滑动，
+由原长为 $\ell_0$、劲度系数 $\kappa$ 的弹簧连到其内侧锚点 $B$。
+系统以恒角速度 $\omega$ 绕竖直轴转动。
+求弹簧伸长量，说明旋转方向的影响。
+\exsolution
+记 $OB=b$，则滑套离轴距离
+$r=b+\ell_0+\Delta\ell$。
+在随杆匀速转动的参考系中，滑套沿径向静止，
+弹簧向内的拉力等于离心惯性力：
+\[
+\kappa\Delta\ell=m\omega^2r
+=m\omega^2(b+\ell_0+\Delta\ell).
+\]
+解得
+\[
+\boxed{\Delta\ell=
+\frac{b+\ell_0}{\kappa/(m\omega^2)-1}},
+\qquad \kappa>m\omega^2.
+\]
+\excheck 弹簧轴向静力平衡只与 $\omega^2$ 有关，
+故正转和反转得到相同伸长量。若 $\kappa\le m\omega^2$，
+该线性模型不再有有限稳定径向平衡。
+图中 $b+\ell_0$ 是弹簧自然长时滑套的离轴半径，
+应与弹簧自身原长 $\ell_0$ 区分。
+
+\exproblem{89}{15}
+某水平圆形场地半径为 $R$，
+地面对车轮的摩擦系数随距圆心距离 $r$ 变化为
+$k(r)=k_0(1-r/R)$。
+自行车沿同心圆匀速行驶，求能达到最大速率的圆轨迹半径
+及其最大速率。
+\exsolution
+静摩擦必须足以提供向心加速度：
+\[
+\frac{mv^2}{r}\le k(r)mg
+=k_0mg\left(1-\frac rR\right).
+\]
+因此对任一半径 $r$，
+$v^2\le k_0g\,r(1-r/R)$。
+右侧为关于 $r$ 的凹二次函数，其顶点在 $r=R/2$，
+最大值为 $k_0gR/4$，故
+\[
+\boxed{r_{\rm opt}=\frac R2,\qquad
+v_{\max}=\frac12\sqrt{k_0gR}}.
+\]
+\excheck 最大速度的公式必须带根号；
+不带根号的 $k_0gR/2$ 量纲为速率平方。
+
+\exproblem{90}{16}
+汽车沿半径 $R=40\,\mathrm m$ 的水平圆周轨道
+以恒定切向加速度 $a_\tau=0.62\,\mathrm{m/s^2}$
+从静止启动，车轮与地面的摩擦系数为 $k=0.20$。
+求不发生侧滑之前汽车走过的最大路程。
+\exsolution
+切向加速度恒定，起速为零，
+$v^2=2a_\tau s$。
+法向加速度为 $a_n=v^2/R=2a_\tau s/R$。
+在水平面上，摩擦合力同时承担切向与法向分量，
+最大允许加速度为 $kg$，故
+\[
+a_\tau^2+\left(\frac{2a_\tau s}{R}\right)^2\le (kg)^2.
+\]
+取等号求首次达到摩擦极限的路程：
+\[
+\boxed{s_{\max}=\frac R2
+\sqrt{\left(\frac{kg}{a_\tau}\right)^2-1}
+\simeq60.0\,\mathrm m}.
+\]
+\excheck 只有 $a_\tau\le kg$ 才能从静止无滑动启动；
+本题 $0.62<1.96\,\mathrm{m/s^2}$，条件满足。
