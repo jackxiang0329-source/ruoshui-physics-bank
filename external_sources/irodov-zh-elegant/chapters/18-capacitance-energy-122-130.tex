@@ -1,0 +1,290 @@
+% Irodov Part III §3.3 122--130; PDF pp.117--119,
+% printed pp.108--110. Fig.3.24--3.29 checked.
+\electrocapproblem{122}{108}
+图3.24：左、右两个电源电动势都为
+$\mathcal E$，电容器 $C_1$ 接在右上分支，
+$C_2$ 接在中间竖支路。原先开关 Sw 断开，
+闭合后求沿图中箭头方向流过截面1、2的电荷量。
+\exsolution
+取底部左侧公共点为零电势。
+闭合前，左侧电源未接入，
+$C_1,C_2$ 串联接右侧电源，
+初始串联电荷
+$Q_0=\mathcal E C_1C_2/(C_1+C_2)$。
+闭合后左电源将中间上节点钳在
+$+\mathcal E$，右电源上端同样为
+$+\mathcal E$，故 $C_1$ 两端电压归零，
+$C_2$ 两端电压为 $\mathcal E$。
+截面1按左箭头的累计电荷
+等于 $C_2$ 的最终电荷：
+\[
+\boxed{q_1=\mathcal E C_2}.
+\]
+截面2按图中右箭头，$C_1$ 的
+初有电荷 $Q_0$ 被消去，对该方向贡献为负：
+\[
+\boxed{q_2=-\frac{\mathcal E C_1C_2}{C_1+C_2}}.
+\]
+\excheck 截面电荷是开关动作前后的\emph{累计通过量}，
+不等于最后流动的稳态电流（稳态电流为零）。
+
+\electrocapproblem{123}{108}
+图3.25：左侧两电源均为
+$\mathcal E=60\,\mathrm V$，右侧两只电容器
+$C_1=2.0\,\mathrm{\mu F}$、
+$C_2=3.0\,\mathrm{\mu F}$。
+闭合中间 Sw 后，求沿箭头1、2、3
+的累计电荷量。
+\exsolution
+闭合前，右侧串联电容器跨越两个电源
+给出的总电压 $2\mathcal E$，
+故每只电容器的电荷模
+$Q_0=2\mathcal E C_1C_2/(C_1+C_2)$。
+闭合后两只电容器各跨一只电动势
+$\mathcal E$，分别带电
+$Q_{1f}=\mathcal E C_1$、
+$Q_{2f}=\mathcal E C_2$。
+由各导线截面的电荷连续性，依原书箭头：
+\[
+\boxed{q_1=\mathcal E C_1-Q_0
+=\mathcal E C_1\frac{C_1-C_2}{C_1+C_2}},
+\]
+\[
+\boxed{q_2=-\mathcal E C_2
+\frac{C_2-C_1}{C_1+C_2}
+=\mathcal E C_2\frac{C_1-C_2}{C_1+C_2}},
+\]
+\[
+\boxed{q_3=\mathcal E(C_2-C_1)}.
+\]
+代入数据：
+\[
+\boxed{q_1=-24\,\mathrm{\mu C},\qquad
+q_2=-36\,\mathrm{\mu C},\qquad
+q_3=+60\,\mathrm{\mu C}}.
+\]
+\excheck 两个负号说明实际电荷流过截面1、2时
+与图中所指箭头相反；第3截面为正。
+
+\electrocapproblem{124}{108--109}
+原书图3.26：上支路为
+$C_1,C_2$ 两只串联电容器，
+中点 A 通过电容器 $C_3$ 连接下方 B，
+底部分别有电动势 $\mathcal E_1,\mathcal E_2$。
+求 $\varphi_A-\varphi_B$。
+\exsolution
+取 $\varphi_B=0$。
+按图中电源极性，
+$C_1$ 左端电势为 $-\mathcal E_1$，
+$C_2$ 右端电势为 $+\mathcal E_2$。
+A 是孤立浮置金属节点，初始无净自由电荷，
+其三个电容器极板电荷代数和为零：
+\[
+C_1(\varphi_A+\mathcal E_1)
++C_2(\varphi_A-\mathcal E_2)
++C_3\varphi_A=0.
+\]
+于是
+\[
+\boxed{\varphi_A-\varphi_B=
+\frac{C_2\mathcal E_2-C_1\mathcal E_1}
+{C_1+C_2+C_3}}.
+\]
+\excheck $C_3$ 越大，中间节点相对于 B
+的电势差越小，符合把 A 拉向 B 电势的直觉。
+
+\electrocapproblem{125}{109}
+原书图3.27：三个电源
+$\mathcal E_1,\mathcal E_2,\mathcal E_3$
+沿一竖支路串接，三只电容器
+$C_1,C_2,C_3$ 分别把各层节点
+1、2、3 接到公共点 O。
+规定 $\varphi_O=0$，求
+$\varphi_1,\varphi_2,\varphi_3$。
+\exsolution
+按图中各电动势极性设定，
+三个左侧节点之间满足
+$\varphi_i=\Phi-\mathcal E_i$，
+其中 $\Phi$ 为共同参考偏移。
+整个左侧电源组与外界通过电容耦合，
+总净电荷守恒：
+\[
+C_1\varphi_1+C_2\varphi_2+C_3\varphi_3=0.
+\]
+故
+$\Phi=(C_1\mathcal E_1+C_2\mathcal E_2+
+C_3\mathcal E_3)/(C_1+C_2+C_3)$。
+定义 $C_\Sigma=C_1+C_2+C_3$，得到
+\[
+\boxed{\varphi_1=
+\frac{C_2\mathcal E_2+C_3\mathcal E_3-
+(C_2+C_3)\mathcal E_1}{C_\Sigma}},
+\]
+\[
+\boxed{\varphi_2=
+\frac{C_1\mathcal E_1+C_3\mathcal E_3-
+(C_1+C_3)\mathcal E_2}{C_\Sigma}},
+\]
+\[
+\boxed{\varphi_3=
+\frac{C_1\mathcal E_1+C_2\mathcal E_2-
+(C_1+C_2)\mathcal E_3}{C_\Sigma}}.
+\]
+\excheck 将三式分别乘 $C_1,C_2,C_3$ 再相加，
+应得零，满足浮置导体组的总电荷守恒。
+
+\electrocapproblem{126}{109}
+原书图3.28电容桥：
+A—B 之间上支路依次为 $C_1,C_2$，
+下支路依次为 $C_2,C_1$；
+两串联支路中点通过一只 $C_3$ 桥接。
+求总等效电容。
+\exsolution
+设 A 电势为 $V$，B 为零。
+上下支路的中点电势分别为 $x,y$。
+电荷守恒：
+\[
+C_1(x-V)+C_2x+C_3(x-y)=0,
+\]
+\[
+C_2(y-V)+C_1y+C_3(y-x)=0.
+\]
+两式相加得 $x+y=V$；
+相减得到
+\[
+x-y=\frac{(C_1-C_2)V}{C_1+C_2+2C_3}.
+\]
+A 端净电荷为
+$Q=C_1(V-x)+C_2(V-y)$，
+代入得
+\[
+C_{AB}=\frac QV
+=\frac{2C_1C_2+C_3(C_1+C_2)}
+{C_1+C_2+2C_3}.
+\]
+因此
+\[
+\boxed{C_{AB}=
+\frac{2C_1C_2+C_3(C_1+C_2)}
+{C_1+C_2+2C_3}}.
+\]
+\excheck $C_3\to0$ 时恢复
+两条串联支路并联
+$2C_1C_2/(C_1+C_2)$；
+$C_1=C_2$ 时桥中点同势，结果为 $C_1$，
+不依赖 $C_3$。
+
+\electrocapproblem{127}{109}
+图3.29(a)、(b)、(c)：
+边长 $a$ 的正方形四顶点分别放置
+大小均为 $q$ 的点电荷；(a) 全为正，
+(b) 相邻顶点正负交错，
+(c) 上两顶点正、下两顶点负。
+求每种构型四电荷的相互作用总能。
+\exsolution
+离散点电荷的相互作用能
+$W=k\sum_{i<j}q_iq_j/r_{ij}$，
+正方形有4条边（距离 $a$）
+及2条对角线（距离 $\sqrt2a$）。
+(a) 全部相同，4条边贡献
+$4kq^2/a$、对角线贡献
+$\sqrt2kq^2/a$，所以
+\[
+\boxed{W_a=(4+\sqrt2)\frac{q^2}
+{4\pi\varepsilon_0a}}.
+\]
+(b) 四条边均为异号，贡献
+$-4kq^2/a$；两条对角线同号，
+贡献 $+\sqrt2kq^2/a$：
+\[
+\boxed{W_b=(\sqrt2-4)\frac{q^2}
+{4\pi\varepsilon_0a}}.
+\]
+(c) 两条水平边同号、两条竖直边异号，
+边贡献抵消；两条对角线异号：
+\[
+\boxed{W_c=-\sqrt2\frac{q^2}
+{4\pi\varepsilon_0a}}.
+\]
+\excheck 相互作用能只对每一\emph{无序电荷对}
+计数一次，不加点电荷本身的无穷自能。
+
+\electrocapproblem{128}{109}
+无限直线链由 $q,-q,q,-q,\ldots$
+交替排列，相邻距离为 $a$。
+求链中任意一个电荷与其余电荷的相互作用能。
+\exsolution
+取其中一个 $+q$ 位于原点。
+距离原点左右两侧各有
+$n a$ 处电荷 $(-1)^nq$，$n\ge1$。
+原点电荷的\emph{与其余所有电荷作用能}
+为 $q$ 乘外部电势：
+\[
+W=2k\frac{q^2}{a}
+\sum_{n=1}^\infty\frac{(-1)^n}{n}.
+\]
+利用
+$\ln(1+x)=\sum_{n\ge1}(-1)^{n-1}x^n/n$
+在 $x=1$ 的极限，
+$\sum_{n\ge1}(-1)^n/n=-\ln2$，
+得
+\[
+\boxed{W=-\frac{2q^2\ln2}
+{4\pi\varepsilon_0a}}.
+\]
+\excheck 本题问\emph{指定一个电荷与其余电荷}
+的能量。如果要求无限链的平均总能
+按每个电荷分摊，应再除以2以避免成对重复计数。
+
+\electrocapproblem{129}{109}
+点电荷 $q$ 距无限接地金属导体平面为
+$\ell$。求该电荷与导体表面
+\emph{感应电荷的相互作用能}。
+\exsolution
+导体的感应电荷在真电荷位置所产生的电势
+等于镜像电荷 $-q$ 在距离 $2\ell$ 处的电势：
+\[
+\varphi_{\rm ind}=
+-\frac{q}{4\pi\varepsilon_0(2\ell)}
+=-\frac{q}{8\pi\varepsilon_0\ell}.
+\]
+本题直接求\emph{真电荷与给定感应分布}
+之间的双体相互作用项
+$W_{\rm int}=q\varphi_{\rm ind}$，所以
+\[
+\boxed{W_{\rm int}=
+-\frac{q^2}{8\pi\varepsilon_0\ell}}.
+\]
+\excheck 这与从无限远\emph{组装}
+真电荷—导体完整体系所需的
+$-\frac{q^2}{16\pi\varepsilon_0\ell}$
+不相同：后者包含诱导分布随运动改变的
+$1/2$ 能量因子。原书本题明确问相互作用项。
+
+\electrocapproblem{130}{109--110}
+两颗球形对称带电小球，净电荷为
+$q_1,q_2$，两球中心距离为
+$\ell$，彼此不重叠。
+求两球间相互作用能。
+\exsolution
+对球外点，球对称电荷分布产生的静电势
+与中心点电荷相同：
+$\varphi_1(r)=kq_1/r$。
+如果第二球完整位于第一球之外，
+第一球的势在第二球的各球壳上按球对称平均，
+等于其中心位置的势
+$kq_1/\ell$（平均值定理）。
+因此
+\[
+W_{12}=\int_{\text{球2}}\varphi_1(\bm r)
+\,\mathrm dq_2(\bm r)
+=q_2\frac{kq_1}{\ell},
+\]
+故
+\[
+\boxed{W_{12}=
+\frac{q_1q_2}{4\pi\varepsilon_0\ell}}.
+\]
+\excheck 需两颗球的电荷分布均保持球对称；
+若球是相互极化的导体，近距离时分布可能改变，
+不能直接套此简式。
