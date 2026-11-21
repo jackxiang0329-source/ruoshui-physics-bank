@@ -62,6 +62,23 @@ $r=10\,\mathrm{mm}$、$\ell=1\,\mathrm m$，
 $10/\sqrt{10}\,\mathrm{mm}$ 才近似 $7\,\mathrm J$，
 但不能擅改原题数据。须将其作为待校数值错误记录。
 
+\textbf{线弹性模型的额外适用性检查：}
+本题外表面剪切应变模
+\[
+\gamma_{\max}=\frac{r\varphi}{\ell}
+=\frac{0.010(\pi/3)}{1.0}
+\simeq1.05\times10^{-2},
+\]
+用上述$G$换算最大剪切应力
+\[
+\boxed{\tau_{\max}=G\gamma_{\max}
+\simeq8.38\times10^8\,\mathrm{Pa}}.
+\]
+此应力可能超过常见钢材的剪切屈服极限。
+因此$\sim690\,\mathrm J$是\emph{理想线弹性模型}
+的形式计算值；若具体钢材已塑性屈服，
+必须另给强度与本构数据，不能当成严格可逆弹性能。
+
 \exproblem{313}{50}
 一根长 $\ell$ 的均匀钢制实心圆杆，
 一端固定，另一端绕杆轴扭转角 $\varphi$。
