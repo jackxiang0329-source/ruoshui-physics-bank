@@ -1,0 +1,275 @@
+% 原书第六篇6.5节238--248（放射性本节完），印刷259--260，
+% 用户原版PDF268--269，书末答案349，PDF358。
+\radioactivityproblem{238}{259}
+用母原子质量 $M_p$、娘原子质量 $M_d$
+和电子质量 $m_e$，
+推导 $\beta^-$、$\beta^+$ 与K俘获
+放出的反应能 $Q$。
+\exsolution
+令原子质量包含其相应数目的束缚电子。
+$\beta^-$ 衰变原子序数增加1，
+核衰变伴随发射一电子，
+母/娘中性原子的电子数差恰好抵消发射电子质量，
+故
+\[
+ \boxed{Q_{\beta^-}=(M_p-M_d)c^2}.
+\]
+$\beta^+$ 衰变原子序数减1，同时发射正电子，
+母原子与娘原子电子云计数以及正电子质量
+共使静质量差需扣除 $2m_e$：
+\[
+ \boxed{Q_{\beta^+}=(M_p-M_d-2m_e)c^2}.
+\]
+K俘获时被俘获的电子已属于母原子，
+原子质量的电子数恰能抵消，
+\[
+ \boxed{Q_{K}=(M_p-M_d)c^2}.
+\]
+\excheck 各式是中性\emph{原子质量}近似；
+如研究俘获后特定壳层的中微子能量，还应扣除
+电子空穴的激发能并考虑核反冲。
+
+\radioactivityproblem{239}{259}
+用原书原子质量表计算
+$\mathrm{^{10}Be}$ 的 $\beta^-$ 衰变最大电子动能，
+以及娘核直接处于基态时的反冲动能。
+\exsolution
+反应为
+$\mathrm{^{10}Be}\to\mathrm{^{10}B}+e^-+\bar\nu_e$。
+原版质量表中
+$\Delta M_{\mathrm{^{10}Be}}\simeq0.01354u$，
+$\Delta M_{\mathrm{^{10}B}}\simeq0.01294u$，
+故
+$Q\simeq(0.00060u)c^2\simeq0.559\,\mathrm{MeV}$。
+当中微子能量趋于0时，
+电子动能接近最大值，
+\[
+ \boxed{T_{e,\max}\simeq0.56\,\mathrm{MeV}}.
+\]
+此时娘核动量与电子相反；
+相对论电子满足
+$p_e^2c^2=T_e(T_e+2m_ec^2)$，
+娘核非相对论反冲能
+\[
+ \boxed{T_R\simeq
+ \frac{T_{e,\max}(T_{e,\max}+2m_ec^2)}
+ {2M_dc^2}\simeq47.5\,\mathrm{eV}}.
+\]
+\excheck 计算反冲必须使用相对论电子动量，
+不能简单取 $p_e^2=2m_eT_e$。
+
+\radioactivityproblem{240}{259}
+质量 $m=1.0\,\mathrm{mg}$ 的
+$\mathrm{^{24}Na}$ 纯 $\beta^-$ 放射性制剂，
+半衰期 $T_{1/2}=15$小时。
+假设每个 $\beta$ 的平均动能为其端点能的1/3，
+求一天内释放的热量。
+\exsolution
+反应
+$\mathrm{^{24}Na}\to\mathrm{^{24}Mg}+e^-+\bar\nu$。
+原书质量超额分别为
+$-0.00903u$、$-0.01496u$，
+所以
+$Q=(0.00593u)c^2\simeq5.53\,\mathrm{MeV}$。
+按题目假设
+$\bar T_\beta=Q/3$。
+初核数
+$N_0=(10^{-3}\,\mathrm g/24\,\mathrm{g/mol})N_A$，
+一天内衰变份额
+$f=1-2^{-24/15}$。
+故近似放热
+\[
+ \boxed{W=N_0 f\,\frac Q3
+ \simeq5.0\times10^6\,\mathrm J}.
+\]
+\excheck 题目明确把 $\beta$ 平均动能指定为端点的1/3；
+中微子逃逸能不计热量，
+娘核反冲及可能随后的其他退激辐射亦忽略。
+
+\radioactivityproblem{241}{259}
+用原子质量表计算 $\mathrm{^{11}C}$ 的
+$\beta^+$ 衰变中，当娘核\emph{不反冲}时
+正电子与中微子的动能。
+\exsolution
+从原书表得质量超额
+$\Delta_{\mathrm{^{11}C}}=0.01143u$、
+$\Delta_{\mathrm{^{11}B}}=0.00930u$，
+故正电子衰变可用动能
+$Q=(0.00213u)c^2-2m_ec^2\simeq0.96\,\mathrm{MeV}$。
+娘核零反冲要求正电子与中微子动量相等、方向相反。
+令正电子动能 $T$，中微子能量 $E_\nu$，
+则
+\[
+ T+E_\nu=Q,\quad
+ E_\nu=pc=\sqrt{T(T+2m_ec^2)}.
+\]
+两式平方求解
+\[
+ \boxed{T=\frac{Q^2}{2(Q+m_ec^2)}
+ \simeq0.32\,\mathrm{MeV}},
+ \quad
+ \boxed{E_\nu=Q-T\simeq0.65\,\mathrm{MeV}}.
+\]
+\excheck 由于正电子有静质量，而中微子近似无质量，
+零反冲不意味着两者分得相同能量。
+
+\radioactivityproblem{242}{259}
+$\mathrm{^{13}N}$ 的 $\beta^+$ 衰变中，
+当正电子动能最大时，
+求娘核反冲动能。
+\exsolution
+衰变为 $\mathrm{^{13}N}\to
+\mathrm{^{13}C}+e^++\nu_e$。
+原书质量表质量超额
+$0.00574u$ 与 $0.00335u$，
+故
+$Q=(0.00239u)c^2-2m_ec^2
+ \simeq1.20\,\mathrm{MeV}$。
+最大正电子动能对应中微子能量趋于零，
+娘核动量 $p_R\simeq p_e$。
+因此
+\[
+ \boxed{T_R\simeq
+ \frac{Q(Q+2m_ec^2)}{2M_Rc^2}
+ \simeq0.11\,\mathrm{keV}},
+ \quad M_R\simeq13u.
+\]
+\excheck 这里核反冲能远小于 MeV，
+可以在端点近似中令正电子动能 $T\simeq Q$。
+
+\radioactivityproblem{243}{259}
+使用原子质量表计算
+$\mathrm{^{7}Be}$ 发生 K 电子俘获、
+娘核处于基态时的反冲速度。
+\exsolution
+反应
+$\mathrm{^{7}Be}+e^-\to\mathrm{^{7}Li}+\nu_e$。
+原书质量超额分别
+$0.01693u$ 与 $0.01601u$，
+故 $Q\simeq(0.00092u)c^2
+ \simeq0.857\,\mathrm{MeV}$。
+中微子携带几乎全部释放能量，
+动量为 $p_\nu\simeq Q/c$，
+娘核反冲速率
+\[
+ \boxed{v_R\simeq\frac{Q}{M_Rc}
+ \simeq3.9\times10^4\,\mathrm{m/s}
+ \approx40\,\mathrm{km/s}}.
+\]
+\excheck K俘获后的壳层空穴可能影响
+中微子精细谱线能量；本题要求的数量级可忽略。
+
+\radioactivityproblem{244}{259}
+激发 $\mathrm{^{109}Ag}$ 核退激时，
+或发射能量 $87\,\mathrm{keV}$ 的 $\gamma$ 光子，
+或发射K内转换电子，其结合能为
+$26\,\mathrm{keV}$。
+求这些电子的速率。
+\exsolution
+内转换过程将核跃迁能量直接交给壳层电子，
+其动能近似
+$T_e=87-26=61\,\mathrm{keV}$。
+电子总能
+$E_e=m_ec^2+T_e=\gamma m_ec^2$，
+因此
+\[
+ \gamma=1+\frac{61}{511},\quad
+ \boxed{v_e=c\sqrt{1-\gamma^{-2}}
+ \simeq0.45c}.
+\]
+\excheck 内转换电子并非由 $\gamma$ 光子二次光电吸收产生，
+而是核与原子电子直接耦合的退激通道。
+
+\radioactivityproblem{245}{259}
+一个初始静止的自由
+$\mathrm{^{191}Ir}$ 激发核具有
+$E^*=129\,\mathrm{keV}$，
+向基态跃迁放出 $\gamma$ 光子。
+核反冲引起光子能量的相对改变是多少？
+\exsolution
+若不计反冲光子能量为 $\varepsilon_0=E^*$。
+发射后核动量 $p=\varepsilon/c$，
+反冲能
+$T_R\simeq\varepsilon^2/(2Mc^2)$。
+能量守恒
+$E^*=\varepsilon+T_R$。
+因 $\varepsilon\ll Mc^2$，
+相对光子能量降低为
+\[
+ \boxed{\frac{\varepsilon_0-\varepsilon}{\varepsilon_0}
+ \simeq\frac{E^*}{2Mc^2}
+ \simeq3.6\times10^{-7}}.
+\]
+\excheck 分母中是约 $191u\,c^2$ 的核静能，
+不是 $129\,\mathrm{keV}$ 本身。
+
+\radioactivityproblem{246}{259}
+自由 $\mathrm{^{191}Ir}$ 核组成的光源与吸收体
+发生 $129\,\mathrm{keV}$ 的共振吸收，
+为抵消发射、吸收两端的核反冲能差，
+两者应有多大相对速率？
+\exsolution
+自由核发射光子比核能级间隔少
+$E_R=\varepsilon^2/(2Mc^2)$；
+静止核吸收激发则要求比能级间隔多
+$E_R$。两端光子能量失配约
+$\Delta E=2E_R=\varepsilon^2/(Mc^2)$。
+小速度多普勒能移
+$|\Delta\varepsilon|\simeq\varepsilon v/c$，
+令其补偿失配，
+\[
+ \boxed{v=\frac{\varepsilon}{Mc}
+ \simeq2.2\times10^2\,\mathrm{m/s}
+ =0.22\,\mathrm{km/s}}.
+\]
+\excheck 这里只求相对速率的模，
+必须选择使吸收体观察到光子蓝移的相对运动方向。
+
+\radioactivityproblem{247}{260}
+$\gamma$ 射线源位于吸收体上方
+$h=20\,\mathrm m$，
+为了完全补偿光子向下传播时因地球重力
+产生的能量变化，光源应以多大速率向上运动？
+\exsolution
+弱引力场、低速极限，
+光子向下传播的引力能量增量相对为
+$\Delta\varepsilon/\varepsilon\simeq gh/c^2$。
+光源向上远离吸收体时，
+其发射光子相对吸收体发生红移，
+一阶相对量约 $v/c$。
+令两个效应抵消，
+$v/c=gh/c^2$，所以
+\[
+ \boxed{v=\frac{gh}{c}\simeq
+ 6.5\times10^{-7}\,\mathrm{m/s}
+ =0.65\,\mu\mathrm{m/s}}.
+\]
+\excheck 问的是光源\emph{向上}运动，
+用于抵消沿竖直向下传播光子的引力蓝移。
+
+\radioactivityproblem{248}{260}
+$\mathrm{^{67}Zn}$ 激发核发出能量
+$\varepsilon=93\,\mathrm{keV}$ 的
+Mössbauer 共振 $\gamma$ 光子，
+激发态平均寿命 $\tau=14\,\mu\mathrm s$。
+源应抬高至少多少，
+使在地面观测到的引力谱线位移超过其自然线宽？
+\exsolution
+弱场引力能量相对变化
+$\Delta\varepsilon/\varepsilon\simeq gh/c^2$，
+绝对能移
+$\Delta\varepsilon\simeq\varepsilon gh/c^2$。
+激发态有限寿命导致自然线宽数量级
+$\Gamma\simeq\hbar/\tau$。
+令 $\Delta\varepsilon\gtrsim\Gamma$，
+\[
+ \boxed{h_{\min}\simeq
+ \frac{\hbar c^2}{g\varepsilon\tau}}.
+\]
+取 $\varepsilon=93\,\mathrm{keV}$、
+$\tau=14\times10^{-6}\,\mathrm s$，
+得
+$\boxed{h_{\min}\simeq4.6\,\mathrm m}$。
+\excheck 使用 $\hbar$ 而非 $h$，
+因为自然宽度与角频率寿命关系
+$\Gamma\simeq\hbar/\tau$。
