@@ -15,10 +15,20 @@ CHAPTERS = [
     "01-mechanics-kinematics-041-050.tex",
     "01-mechanics-kinematics-051-058.tex",
     "02-mechanics-dynamics-059-070.tex",
+    "02-mechanics-dynamics-071-080.tex",
+    "02-mechanics-dynamics-081-090.tex",
+    "02-mechanics-dynamics-091-100.tex",
+    "02-mechanics-dynamics-101-110.tex",
+    "02-mechanics-dynamics-111-117.tex",
+    "03-mechanics-conservation-118-120.tex",
+    "03-mechanics-conservation-121-130.tex",
 ]
 EXPECTED_RANGES = [
     range(1, 21), range(21, 31), range(31, 41),
     range(41, 51), range(51, 59), range(59, 71),
+    range(71, 81), range(81, 91), range(91, 101),
+    range(101, 111), range(111, 118), range(118, 121),
+    range(121, 131),
 ]
 
 errors = []
@@ -46,15 +56,17 @@ for name, expected in zip(CHAPTERS, EXPECTED_RANGES):
     if entry not in main:
         errors.append(f"main.tex does not include: {name}")
 
-if all_ids != list(range(1, 71)):
-    errors.append("combined problem IDs are not exactly 1..70 in order")
+if all_ids != list(range(1, 131)):
+    errors.append("combined problem IDs are not exactly 1..130 in order")
 if main.count(r"\section{运动学") != 1:
     errors.append("kinematics section count is not one")
 if main.count(r"\section{动力学基本方程") != 1:
     errors.append("dynamics section count is not one")
+if main.count(r"\section{能量、动量与角动量守恒") != 1:
+    errors.append("conservation section count is not one")
 
 if errors:
     for e in errors:
         print("FAIL:", e, file=sys.stderr)
     sys.exit(1)
-print("PASS: 70 consecutive translated problem sources, solutions, checks, and included chapters")
+print("PASS: 130 consecutive translated problem sources, solutions, checks, and included chapters")
