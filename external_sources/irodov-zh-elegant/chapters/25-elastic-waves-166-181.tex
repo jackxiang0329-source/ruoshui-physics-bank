@@ -1,0 +1,482 @@
+% Irodov Part IV §4.3 original 166--181. User PDF pp.187--188
+% printed pp.178--179, answer PDF pp.322--323 (printed pp.321--323).
+\waveproblem{166}{178}
+长 $L=120$cm 的弦两端固定并形成驻波。
+在弦上位移\emph{振幅}等于
+$3.5$mm 的相邻点之间相距
+$d=15.0$cm。
+求弦振幅最大值，并指出所属泛音。
+\exsolution
+驻波振幅空间分布
+$A(x)=A_{\max}|\sin kx|$。
+方程 $|\sin kx|=3.5/A_{\max}$
+在每个半波长周期内通常有两组解，相邻解点间隔交替。
+题设把它们描述为相邻点间距均为同一个 $d$，
+因此两类间距相等，解的相位必须处于
+$|\sin kx|=1/\sqrt2$。
+于是
+\[
+\boxed{A_{\max}=3.5\sqrt2\,\mathrm{mm}
+\simeq5.0\,\mathrm{mm}}.
+\]
+这种情况下相邻指定点的相位差为 $\pi/2$，
+$d=\lambda/4$，故 $\lambda=4d=0.60$m。
+两端固定有
+$L=n\lambda/2$，所以
+$n=2L/\lambda=4$，
+即第四谐波，
+\[
+\boxed{\text{第三泛音（third overtone）}}.
+\]
+\excheck “第三泛音”对应第四谐波而非第三谐波；
+且数值 $5.0$mm 与原版答案一致。
+
+\waveproblem{167}{178}
+两根最初完全相同的弦，
+分别被拉长
+$\eta_1=2.0\%$、
+$\eta_2=4.0\%$。
+认为张力与相对伸长成正比。
+求两根弦的基频之比。
+\exsolution
+设原弦长 $L_0$、原线密度 $\mu_0$、
+材料张力常数为 $K$。
+伸长比例 $\eta$ 后长度
+$L=L_0(1+\eta)$，
+张力 $T=K\eta$，
+整根弦的质量不变，
+线密度 $\mu=\mu_0/(1+\eta)$。
+两端固定弦基频
+$f=(1/(2L))\sqrt{T/\mu}$，
+所以
+$f\propto\sqrt{\eta/(1+\eta)}$。
+因此
+\[
+\boxed{\frac{f_2}{f_1}
+=\sqrt{\frac{\eta_2(1+\eta_1)}
+{\eta_1(1+\eta_2)}}}
+=\sqrt{\frac{0.04(1.02)}{0.02(1.04)}}
+\simeq1.4.
+\]
+\excheck 此题不只是 $f\propto\sqrt T$，
+因为伸长还改变振动部分的弦长及线密度。
+
+\waveproblem{168}{178}
+一根均匀张紧金属丝被缩短 $35\%$，
+同时张力增加 $70\%$。
+若弦材料的线密度保持不变，
+求基频改变的方向及倍数。
+\exsolution
+弦两端固定基频
+$f=(1/(2L))\sqrt{T/\mu}$，
+缩短后
+$L'=0.65L$，
+新张力
+$T'=1.70T$。
+若取同材均匀金属丝重新截短而线密度不变，
+\[
+\boxed{\frac{f'}f=\frac1{0.65}\sqrt{1.70}
+\simeq2.0}.
+\]
+因此基频\emph{升高至约2倍}。
+\excheck 题目中“shortened”按截短同种金属丝理解；
+如果是将原丝整体机械压短而改变密度/线密度，则还需额外模型。
+
+\waveproblem{169}{178}
+用一端为振动膜、另一端为可滑动活塞的声学共振管，
+发声频率 $\nu=2000$Hz。
+测得活塞的\emph{相邻共振位置}间距
+$d=8.5$cm，求空气中的声速。
+\exsolution
+在相同端部边界条件下，
+管长每增加半个波长，
+便出现相邻一个纵向驻波共振：
+$d=\lambda/2$。
+故
+$\lambda=2d=0.17$m，
+声速
+\[
+\boxed{v=\nu\lambda=2\nu d
+=2(2000)(0.085)
+=340\,\mathrm{m/s}}.
+\]
+\excheck 不必知道端部修正的具体数值，
+因为相邻共振位置的差将其消去。
+
+\waveproblem{170}{178}
+长 $L=85$cm 的空气柱中声速
+$v=340$m/s。
+统计低于
+$\nu_{\max}=1250$Hz 的本征振动数：
+(a) 一端封闭、一端开放；
+(b) 两端均开放。
+开放端视为位移腹点。
+\exsolution
+(a) 一端固定为位移结点，
+另一端为位移腹点，
+仅允许奇数四分之一波长：
+\[
+\boxed{\nu_n^{(a)}
+=\frac{(2n+1)v}{4L}
+=(2n+1)\,100\,\mathrm{Hz}},
+\quad n=0,1,\ldots.
+\]
+小于1250Hz的为
+100、300、500、700、900、1100Hz，
+共
+$\boxed{6\text{个}}$。
+(b) 两端都是位移腹点：
+\[
+\boxed{\nu_n^{(b)}
+=\frac{(n+1)v}{2L}
+=(n+1)\,200\,\mathrm{Hz}},
+\quad n=0,1,\ldots.
+\]
+小于1250Hz的为
+200、400、600、800、1000、1200Hz，
+也是
+$\boxed{6\text{个}}$。
+\excheck 频率上限是\emph{低于}1250Hz，
+不包含等于上限的模态。
+
+\waveproblem{171}{178}
+铜棒长度 $L=50$cm，中点被夹紧，
+求频率在20—50kHz之间的\emph{纵向}固有振动模式数及各个频率。
+\exsolution
+一维纵波声速
+$v=\sqrt{E/\rho}$。
+取铜的杨氏模量约
+$E=1.1\times10^{11}$Pa、
+密度约
+$\rho=8.9\times10^3\,\mathrm{kg/m^3}$，
+约得 $v\simeq3.8\,\mathrm{km/s}$（依书末采用物性）。
+杆中点是位移结点，
+两自由端为应力零、位移腹点；
+所以每半根杆只能容纳奇数四分之一波长，
+本征频率
+\[
+\boxed{\nu_n=\frac{(2n+1)v}{2L}
+\simeq3.8(2n+1)\,\mathrm{kHz}},
+\quad n=0,1,\ldots.
+\]
+满足 $20\le\nu_n\le50$kHz 的奇数倍依次是
+7、9、11、13，因而
+\[
+\boxed{4\text{个模式： }
+26.6,\ 34.2,\ 41.8,\ 49.4\ \mathrm{kHz}}.
+\]
+\excheck 使用原版书末近似 $v\simeq3.8$km/s，
+模态编号 $n=3,4,5,6$；
+原题没有指定铜的物性精确温度。
+
+\waveproblem{172}{178}
+质量为 $m$ 的两端固定弦作\emph{基频}驻波，
+角频率 $\omega$，最大位移振幅为 $a_{\max}$。
+求：(a) 最大总动能；
+(b) 一个完整周期的平均动能。
+\exsolution
+取弦长 $L$，
+基频位移
+$\xi(x,t)=a_{\max}\sin(\pi x/L)\cos\omega t$。
+线密度
+$\mu=m/L$，
+总动能
+\[
+K(t)=\int_0^L\frac12\mu
+(\partial_t\xi)^2\,\mathrm dx
+=\frac12\frac mL a_{\max}^2\omega^2
+\sin^2\omega t\int_0^L\sin^2(\pi x/L)\,\mathrm dx.
+\]
+积分等于 $L/2$，故
+$K(t)=\frac14m a_{\max}^2\omega^2\sin^2\omega t$。
+由此
+\[
+\boxed{K_{\max}=\frac14m\omega^2a_{\max}^2},
+\quad
+\boxed{\langle K\rangle=\frac18m\omega^2a_{\max}^2}.
+\]
+\excheck 平均 $\langle\sin^2\rangle=1/2$，
+因而平均动能为最大值的一半。
+
+\waveproblem{173}{178}
+均匀长杆横截面积为 $S$、材料密度为 $\rho$，
+内部纵向驻波
+$\xi=a\sin kx\cos\omega t$。
+求相邻两个位移结点之间包含的全部振动机械能。
+\exsolution
+结点间距为
+$\Delta x=\pi/k$。
+在 $t=0$ 质点速度处处为零，
+机械能全部为弹性势能：
+$w_p=\tfrac12\rho v^2(\partial_x\xi)^2
+=\tfrac12\rho\omega^2a^2\cos^2kx$，
+因为 $v=\omega/k$。
+积分：
+\[
+W=S\int_0^{\pi/k}\frac12
+\rho\omega^2a^2\cos^2kx\,\mathrm dx
+=\frac12S\rho\omega^2a^2\frac{\pi}{2k}.
+\]
+因此
+\[
+\boxed{W=\frac{\pi S\rho\omega^2a^2}{4k}}.
+\]
+\excheck 对固定的一段相邻结点之间的介质，
+无耗散时总机械能保持不变，故可在速度全零的时刻求能。
+
+\waveproblem{174}{178}
+频率 $\nu_0=1000$Hz 的声源以
+$u=0.17$m/s 沿垂直墙面的直线运动。
+两个静止接收器的空间排列为
+$R_1$—声源—$R_2$—墙，
+声速 $v=340$m/s。
+指出哪个接收器会听到拍声以及拍频。
+\exsolution
+按题设声源向墙一侧移动。
+$R_1$ 位于声源后方，接收到直接\emph{远离}声源的频率
+$\nu_-= \nu_0v/(v+u)$，
+以及在墙上反射、由源\emph{接近}墙面时确定的频率
+$\nu_+=\nu_0v/(v-u)$。
+因为墙静止，反射频率不变；
+所以 $R_1$ 接收两不同频率的波，会产生拍声。
+$R_2$ 位于声源前方，其直达与反射波具有相同源趋近频率，不产生这种拍声。
+拍频为
+\[
+\boxed{\nu_b=\nu_+-\nu_-=
+\frac{2\nu_0vu}{v^2-u^2}
+\simeq\frac{2\nu_0u}{v}
+\simeq1.0\,\mathrm{Hz}}.
+\]
+\excheck 判断接收器的关键是直接声与反射声所对应的源径向运动方向，而不是离墙远近。
+
+\waveproblem{175}{179}
+静止观察者同时听到两只频率均为
+$\nu_0=680$Hz 的音叉，
+一只以速度 $u$ 接近、另一只以同速远离；
+听到拍频
+$\nu_b=2.0$Hz。
+空气声速 $v=340$m/s，求 $u$。
+\exsolution
+两只运动声源对应接收频率
+$\nu_\pm=\nu_0v/(v\mp u)$，
+拍频
+\[
+\nu_b=\nu_+-\nu_-
+=\frac{2\nu_0vu}{v^2-u^2}.
+\]
+化为关于 $u$ 的二次方程，
+$\nu_bu^2+2\nu_0vu-\nu_bv^2=0$，
+取正根：
+\[
+\boxed{u=\frac v{\nu_b}
+\left(\sqrt{\nu_0^2+\nu_b^2}-\nu_0\right)}.
+\]
+由于 $\nu_b\ll\nu_0$，
+\[
+\boxed{u\simeq\frac{v\nu_b}{2\nu_0}
+=\frac{340(2)}{2(680)}
+\simeq0.50\,\mathrm{m/s}}.
+\]
+\excheck 用数值计算直接相减两个相近大数容易舍入，
+实际可采用等价表达式
+$u=v\nu_b/(\sqrt{\nu_0^2+\nu_b^2}+\nu_0)$。
+
+\waveproblem{176}{179}
+频率 $\nu_0=2000$Hz 的声源沿接收者与声源连线作简谐往复运动，振幅 $a=50$cm、角频率为 $\Omega$；
+静止接收者接收频率的上下限之差
+$\Delta\nu=200$Hz，
+声速 $v=340$m/s。
+求 $\Omega$。
+\exsolution
+声源沿轴瞬时速度的极大模为
+$u_{\max}=a\Omega$。
+最高与最低接收频率分别为
+$\nu_{\rm hi}=\nu_0v/(v-u_{\max})$、
+$\nu_{\rm lo}=\nu_0v/(v+u_{\max})$。
+故
+\[
+\Delta\nu=
+\frac{2\nu_0v u_{\max}}{v^2-u_{\max}^2}.
+\]
+解出
+$u_{\max}=v[\sqrt{\nu_0^2+\Delta\nu^2}-\nu_0]/\Delta\nu$，
+进而
+\[
+\boxed{\Omega=\frac v{a\Delta\nu}
+\left(\sqrt{\nu_0^2+\Delta\nu^2}-\nu_0\right)}.
+\]
+取 $\Delta\nu\ll\nu_0$ 近似：
+\[
+\boxed{\Omega\simeq\frac{v\Delta\nu}
+{2a\nu_0}\simeq34\,\mathrm{s^{-1}}}.
+\]
+\excheck 瞬时频移由声源\emph{速度}决定，
+不由位移振幅本身直接决定。
+
+\waveproblem{177}{179}
+频率 $\nu_0=1700$Hz 的声源与静止接收者最初位于同一点，
+$t=0$ 起声源以
+$w=10.0\,\mathrm{m/s^2}$ 的恒加速度远离接收者。
+声速 $v=340$m/s。
+求从开始运动算起 $t=10.0$s 时接收者\emph{真正听到}的频率。
+\exsolution
+接收时刻 $t$ 的声波在较早的发声时刻
+$t_e$ 发出。
+当时声源与接收者相距
+$x_e=\tfrac12wt_e^2$，
+声波传播历时 $x_e/v$，因此
+\[
+t=t_e+\frac{wt_e^2}{2v}.
+\]
+取物理解
+$t_e=(v/w)[\sqrt{1+2wt/v}-1]$。
+发声时刻的声源速度
+$u_e=wt_e=v[\sqrt{1+2wt/v}-1]$。
+接收者所听频率为
+$\nu=\nu_0v/(v+u_e)$，故
+\[
+\boxed{\nu(t)=
+\frac{\nu_0}{\sqrt{1+2wt/v}}}.
+\]
+代 $t=10$s，
+\[
+\boxed{\nu\simeq
+\frac{1700}{\sqrt{1+200/340}}
+\simeq1.35\,\mathrm{kHz}}.
+\]
+\excheck 若错误地使用\emph{接收时刻}的声源速度 $wt$，
+而不考虑声波传播的迟延，会得到不同答案；
+本题必须用发声时刻的速度。
+
+\waveproblem{178}{179}
+频率 $\nu_0=1.8$kHz 的点声源沿直线匀速运动，
+其运动轨迹到静止观察者的最短距离为
+$\ell=250$m，
+声源速度 $u=\eta v$，
+$\eta=0.80$，$v$ 为声速。
+求：(a) 声源\emph{到达最近点的那个瞬间}观察者接收的频率；
+(b) 观察者\emph{收到原频率} $\nu_0$ 时，声源与观察者的实际距离。
+\exsolution
+(a) 设声源最近点时刻 $t=0$，观察者位于 $(0,\ell)$；
+此时收到的声波由较早的声源位置
+$x_e=-ut_r$ 发出。
+传播距离
+$r_e=\sqrt{\ell^2+u^2t_r^2}=vt_r$，
+解得
+$t_r=\ell/[v\sqrt{1-\eta^2}]$。
+传播方向上声源的趋近速度投影为
+$u^2/v$，
+因此接收频率
+\[
+\boxed{\nu_a=\frac{\nu_0v}{v-u^2/v}
+=\frac{\nu_0}{1-\eta^2}
+=\frac{1.8}{0.36}\,\mathrm{kHz}
+=5.0\,\mathrm{kHz}}.
+\]
+(b) 要接收到原频率，必须对应\emph{声源恰经过最近点时}发出的声波；
+该波抵达观察者需要 $\ell/v$ 时间。
+其间声源又沿轨迹移动
+$u\ell/v=\eta\ell$，
+故接收瞬间的实际距离
+\[
+\boxed{r_b=\ell\sqrt{1+\eta^2}
+=250\sqrt{1.64}\simeq0.32\,\mathrm{km}}.
+\]
+\excheck 本题(a)需考虑\emph{迟延发声位置}，
+不可把当前瞬间径向速度零直接用于多普勒公式；
+(b)源当前距离与发射时距离是不同的物理量。
+
+\waveproblem{179}{179}
+静止声源发出单色声波，
+一面墙以速度
+$u=33\,\mathrm{cm/s}$ 朝声源移动。
+介质声速
+$v=330\,\mathrm{m/s}$。
+求反射声的波长相对入射波如何改变，百分比多少。
+\exsolution
+墙作为运动接收者先听到频率
+$\nu_{\rm wall}=\nu_0(v+u)/v$；
+反射时墙作为朝声源移动的运动发射者，
+其反射波在介质中的频率
+$\nu_{\rm ref}=\nu_{\rm wall}v/(v-u)
+=\nu_0(v+u)/(v-u)$。
+故波长比
+\[
+\frac{\lambda_{\rm ref}}{\lambda_0}
+=\frac{\nu_0}{\nu_{\rm ref}}
+=\frac{v-u}{v+u}.
+\]
+相对减少百分率
+\[
+\boxed{100\frac{\lambda_0-\lambda_{\rm ref}}
+{\lambda_0}=100\frac{2u}{v+u}}
+=\boxed{0.20\%}.
+\]
+\excheck $u=33$cm/s $=0.33$m/s，
+所以 $2u/(v+u)\simeq0.0020$，
+对应百分数\emph{0.20\%}；
+本版书末似印2.0\%，有十倍出入，已记录。
+
+\waveproblem{180}{179}
+频率 $\nu_0=1700$Hz 的静止声源与静止接收者位于垂直于一面墙的直线上；
+墙以速度
+$u=6.0\,\mathrm{cm/s}$ 远离声源。
+声速 $v=340$m/s。
+求接收者听到的直达声与反射声之间的拍频。
+\exsolution
+墙作为向外远离的移动接收者，
+接收频率
+$\nu_{\rm wall}=\nu_0(v-u)/v$。
+反射后墙相当于远离静止接收者的移动声源，
+反射频率
+\[
+\nu_{\rm ref}=\frac{\nu_{\rm wall}v}{v+u}
+=\nu_0\frac{v-u}{v+u}.
+\]
+直达频率仍为 $\nu_0$，
+所以拍频
+\[
+\boxed{\nu_b=\nu_0-\nu_{\rm ref}
+=\frac{2\nu_0u}{v+u}}.
+\]
+代 $u=0.060$m/s，
+\[
+\boxed{\nu_b\simeq0.60\,\mathrm{Hz}}.
+\]
+\excheck 对运动反射墙要连续应用两次多普勒关系，不能只做一次声源或接收者变换。
+
+\waveproblem{181}{179}
+各向同性点声源发声，在距声源
+$r_1=10$m、$r_2=20$m 的两点，
+声强之比为
+$\eta=4.5$。
+求声波振幅按
+$e^{-\gamma r}$ 衰减时的衰减系数 $\gamma$。
+\exsolution
+球面波因几何扩散，位移幅度
+$A(r)\propto e^{-\gamma r}/r$。
+声强与幅度平方成比例，
+故
+$I(r)\propto e^{-2\gamma r}/r^2$。
+因此
+\[
+\frac{I(r_1)}{I(r_2)}
+=\left(\frac{r_2}{r_1}\right)^2
+e^{2\gamma(r_2-r_1)}
+=\eta.
+\]
+解出
+\[
+\boxed{\gamma=\frac1{2(r_2-r_1)}
+\ln\left(\eta\frac{r_1^2}{r_2^2}\right)}.
+\]
+数据：
+$\eta r_1^2/r_2^2=4.5/4=1.125$，
+所以
+\[
+\boxed{\gamma=\frac{\ln1.125}{20\,\mathrm m}
+\simeq5.9\times10^{-3}\,\mathrm{m^{-1}}
+\approx0.006\,\mathrm{m^{-1}}}.
+\]
+\excheck 若忽略球面扩散，直接用声强比拟合指数衰减，
+会高估介质本身的衰减系数。
