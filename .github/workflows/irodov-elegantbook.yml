@@ -18,6 +18,10 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validate all translated problem blocks
         run: python3 external_sources/irodov-zh-elegant/check_sources.py
+      - name: Audit 1878 individual statement/solution/check segments
+        run: python3 external_sources/irodov-zh-elegant/lint_problems.py
+      - name: Recompute selected numerical physics answers
+        run: python3 external_sources/irodov-zh-elegant/numeric_regression.py
       - uses: xu-cheng/latex-action@v4
         with:
           working_directory: external_sources/irodov-zh-elegant
