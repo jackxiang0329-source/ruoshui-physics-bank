@@ -19,13 +19,14 @@
 \newcommand{\electromagproblem}[2]{\par\bigskip\noindent\textbf{\large 原书第三篇·第3.5节·第\,#1\,题}\hfill{\small 原书印刷页 #2}\par\smallskip}
 \newcommand{\electroinductionproblem}[2]{\par\bigskip\noindent\textbf{\large 原书第三篇·第3.6节·第\,#1\,题}\hfill{\small 原书印刷页 #2}\par\smallskip}
 \newcommand{\electrochargedproblem}[2]{\par\bigskip\noindent\textbf{\large 原书第三篇·第3.7节·第\,#1\,题}\hfill{\small 原书印刷页 #2}\par\smallskip}
+\newcommand{\oscproblem}[2]{\par\bigskip\noindent\textbf{\large 原书第四篇·第4.1节·第\,#1\,题}\hfill{\small 原书印刷页 #2}\par\smallskip}
 \newcommand{\exsolution}{\par\medskip\noindent\textbf{【详细解析】}\quad}
 \newcommand{\excheck}{\par\smallskip\noindent\textbf{【核验】}\quad}
 \title{《普通物理学习题》中文译注与详解}
 \subtitle{Problems in General Physics --- 逐题整理（进行中）}
 \author{原著：I. E. Irodov \quad 中文译注与题解：三千弱水}
-\date{2026年11月21日 · 已录入1033题（力学388题 + 热学257题 + 电动力学388题）}
-\version{1.6}
+\date{2026年11月21日 · 已录入1133题（力学388题 + 热学257题 + 电动力学407题 + 振动与波动81题）}
+\version{1.7}
 \cover{cover.pdf}
 \begin{document}
 \maketitle
@@ -162,11 +163,19 @@
 \input{chapters/21-induction-305-322}
 \input{chapters/21-induction-323-346}
 \input{chapters/21-induction-347-371}
-\section{带电粒子在电磁场中的运动：第372--388题}
+\section{带电粒子在电磁场中的运动：第372--407题}
 \input{chapters/22-charged-particles-372-388}
+\input{chapters/22-charged-particles-389-407}
+\chapter{振动与波动}
+\section{机械振动：第1--81题（原书第四篇重新编号）}
+\input{chapters/23-mechanical-oscillations-001-020}
+\input{chapters/23-mechanical-oscillations-021-033}
+\input{chapters/23-mechanical-oscillations-034-050}
+\input{chapters/23-mechanical-oscillations-051-065}
+\input{chapters/23-mechanical-oscillations-066-081}
 \backmatter
 \chapter*{版本信息}
-本书目前已录入1033题：原书第一篇力学1--388题（全部）、第二篇热力学与分子物理1--257题（全部）、第三篇电动力学1--388题。第三篇已覆盖3.1节1--53、3.2节54--100、3.3节101--146、3.4节147--218、3.5节219--287、3.6节288--371；第3.7节已录入372--388并继续推进。三篇保留原书分篇独立编号，累计1033不作为原书连续题号。本轮重点记录第298、305、315、336、337、351、361、368等题在原书答案、材料模型、图示或单位方面的未决差异；所有争议在 errata.md 中显式留存，构建成功不能替代物理学二校。
+本书现已录入1133题：原书第一篇力学第1--388题（全部）、第二篇热力学与分子物理第1--257题（全部）、第三篇电动力学第1--407题（全部）、第四篇振动与波动第4.1节机械振动第1--81题（后续继续）。各篇严格保留原版独立编号。本轮新增100题，其中第三篇3.7节389--407题19道使第三篇完结，第四篇4.1节1--81题81道开启振动与波动；本稿将原书与答案不一致的3.7节第391、398、402、404题及第四篇第18、23、33、39、42题等明确记录于errata.md。所有新增题均附中文题面、LaTeX 推导与核验段；仅经结构校验和编译不等于通过独立学术二校。
 
 编译通过不等于独立学术校审通过。
 \end{document}
