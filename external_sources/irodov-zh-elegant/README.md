@@ -228,10 +228,17 @@
 
 ## 编译
 
-在此目录内运行下列两条命令：
+在此目录内依次运行结构检查、逐题检查、物理数值回归和PDF构建：
 
     python3 check_sources.py
+    python3 lint_problems.py
+    python3 numeric_regression.py
     bash build.sh
+
+- `check_sources.py`：验证原书六篇独立编号1,878题及164份章节来源；
+- `lint_problems.py`：把各TeX章分割为独立习题，逐题检查中文题面、推导和核验标记的完整性及顺序，并提示数学环境疑点；
+- `numeric_regression.py`：独立于正文重算37项高风险物理数值（原子与核物理，覆盖反冲、阈值、放射性及粒子衰变等）；
+- 这些门禁只能验证结构与已选的回归结果，不能代替全书逐题独立物理学二校。
 
 需要 XeLaTeX、latexmk、TikZ 与 ElegantBook 4.7。
 构建顺序为 cover.tex → main.tex。
