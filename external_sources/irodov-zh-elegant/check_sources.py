@@ -462,6 +462,11 @@ MOVING_OPTICS_RANGES = [range(224, 246)]
 THERMAL_OPTICS_CHAPTERS = ["33-thermal-radiation-246-257.tex", "33-thermal-radiation-258-268.tex", "33-thermal-radiation-269-280.tex", "33-thermal-radiation-281-292.tex"]
 THERMAL_OPTICS_RANGES = [range(246, 258), range(258, 269), range(269, 281), range(281, 293)]
 
+ATOMIC_CHAPTERS = ["34-atomic-scattering-001-018.tex", "34-atomic-scattering-019-032.tex", "34-atomic-scattering-033-048.tex"]
+ATOMIC_RANGES = [range(1, 19), range(19, 33), range(33, 49)]
+WAVE_QUANT_CHAPTERS = ["35-wave-properties-049-065.tex"]
+WAVE_QUANT_RANGES = [range(49, 66)]
+
 part_three = []
 for macro, filenames, expected_ranges in [
     ("electroproblem", ELECTRO_VACUUM_CHAPTERS, ELECTRO_VACUUM_RANGES),
@@ -588,8 +593,8 @@ for macro, filenames, ranges in [
             errors.append(f"{name}: TeX braces unbalanced")
         if r"\input{chapters/" + path.stem + "}" not in main:
             errors.append(f"main.tex missing chapter: {name}")
-if part_five != list(range(1, 258)):
-    errors.append("Part V independent numbering is not exactly 1..257")
+if part_five != list(range(1, 293)):
+    errors.append("Part V independent numbering is not exactly 1..292")
 if main.count(r"\chapter{光学}") != 1:
     errors.append("Part V chapter count is not one")
 for heading in (
@@ -598,8 +603,42 @@ for heading in (
     if main.count(r"\section{" + heading) != 1:
         errors.append(f"Part V section missing or duplicated: {heading}")
 
+part_six = []
+for macro, filenames, ranges in [
+    ("atomicproblem", ATOMIC_CHAPTERS, ATOMIC_RANGES),
+    ("wavequantproblem", WAVE_QUANT_CHAPTERS, WAVE_QUANT_RANGES),
+]:
+    if (r"\newcommand{" + chr(92) + macro + "}") not in main:
+        errors.append(f"main.tex missing macro {macro}")
+    for name, expected in zip(filenames, ranges):
+        path = ROOT / "chapters" / name
+        if not path.exists():
+            errors.append(f"missing: {name}")
+            continue
+        content = path.read_text(encoding="utf-8")
+        ids = [int(x) for x in re.findall(r"\\" + macro + r"\{(\d+)\}\{", content)]
+        want = list(expected)
+        part_six.extend(ids)
+        if ids != want:
+            errors.append(f"{name}: Part-VI original IDs {ids} != {want}")
+        for command in ("exsolution", "excheck"):
+            count = len(re.findall(r"\\" + command + r"\b", content))
+            if count != len(want):
+                errors.append(f"{name}: {command} count {count} != {len(want)}")
+        if content.count("{") != content.count("}"):
+            errors.append(f"{name}: TeX braces unbalanced")
+        if r"\input{chapters/" + path.stem + "}" not in main:
+            errors.append(f"main.tex missing chapter: {name}")
+if part_six != list(range(1, 66)):
+    errors.append("Part VI independent numbering is not exactly 1..65")
+if main.count(r"\chapter{原子与核物理}") != 1:
+    errors.append("Part VI chapter count is not one")
+for heading in ("散射、卢瑟福--玻尔原子", "粒子的波动性质与薛定谔方程"):
+    if main.count(r"\section{" + heading) != 1:
+        errors.append(f"Part VI section missing or duplicated: {heading}")
+
 if errors:
     for e in errors:
         print("FAIL:", e, file=sys.stderr)
     sys.exit(1)
-print("PASS: 388 Part-I + 257 Part-II + 407 Part-III + 224 Part-IV + 292 Part-V = 1568 translated solved problems in 140 chapter files; all five independent numbering ranges verified")
+print("PASS: 388 Part-I + 257 Part-II + 407 Part-III + 224 Part-IV + 292 Part-V + 65 Part-VI = 1633 translated solved problems in 144 chapter files; all six independent numbering ranges verified")
