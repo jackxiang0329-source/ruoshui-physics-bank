@@ -5,13 +5,14 @@
 
 ## 真实进度（2026-11-21）
 
-- **本轮新增：第 171—240 题，共 70 题。**
-- **累计：第 1—240 题，中文题面 + 逐题详细解析 + 核验提示。**
+- **本轮新增：第 241—300 题，共 60 题。**
+- **累计：第 1—300 题，中文题面 + 逐题详细解析 + 核验提示。**
 - 第 1.1 节“运动学”1—58 题已覆盖（全部）。
 - 第 1.2 节“动力学基本方程”59—117 题已覆盖（全部）。
 - 第 1.3 节“能量、动量与角动量守恒”118—199 题已覆盖（全部）。
 - 第 1.4 节“万有引力”200—233 题已覆盖（全部）。
-- 第 1.5 节“刚体动力学”234—240 题已覆盖（本节尚未结束）。
+- - 第 1.5 节“刚体动力学”234—289 题已覆盖（全部）。
+- 第 1.6 节“固体弹性形变”290—300 题已覆盖（本节尚未结束）。
 - 本项目尚未完成整书翻译或独立学术二校；任何“编译成功”仅说明技术排版通过。
 
 | 内容 | 文件 |
@@ -41,6 +42,13 @@
 | 211—220题 | [04-gravitation-211-220.tex](chapters/04-gravitation-211-220.tex) |
 | 221—233题 | [04-gravitation-221-233.tex](chapters/04-gravitation-221-233.tex) |
 | 234—240题 | [05-rigid-body-234-240.tex](chapters/05-rigid-body-234-240.tex) |
+| 241—250题 | [05-rigid-body-241-250.tex](chapters/05-rigid-body-241-250.tex) |
+| 251—260题 | [05-rigid-body-251-260.tex](chapters/05-rigid-body-251-260.tex) |
+| 261—270题 | [05-rigid-body-261-270.tex](chapters/05-rigid-body-261-270.tex) |
+| 271—280题 | [05-rigid-body-271-280.tex](chapters/05-rigid-body-271-280.tex) |
+| 281—289题 | [05-rigid-body-281-289.tex](chapters/05-rigid-body-281-289.tex) |
+| 290题 | [06-elasticity-290-290.tex](chapters/06-elasticity-290-290.tex) |
+| 291—300题 | [06-elasticity-291-300.tex](chapters/06-elasticity-291-300.tex) |
 | 源书勘误 | [errata.md](errata.md) |
 | 技术与学术质检记录 | [quality-check.md](quality-check.md) |
 | 结构完整性检查 | [check_sources.py](check_sources.py) |
@@ -63,4 +71,4 @@ GitHub Actions 工作流 .github/workflows/irodov-elegantbook.yml
 
 本目录放在 external_sources/，不得将翻译题目混入
 大学物理原创高难度题库 bank/ 的题数和质量门禁，也不修改它们的权威源文件。
-后续继续从原书第 241 题起逐题补充，保持题号及印刷页对应。
+后续继续从原书第 301 题起逐题补充，保持题号及印刷页对应。
