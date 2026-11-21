@@ -1,0 +1,502 @@
+% Irodov Part III §3.4 problems 176--188, source PDF pp.125--128,
+% printed pp.116--119; figures 3.40--3.51 visually inspected.
+\electrocurrentproblem{176}{116}
+图3.40：$N$ 只电源同向串联成闭合回路，
+每只电源的电动势 $\mathcal E_i$
+正比于其内阻 $R_i$，
+$\mathcal E_i=\alpha R_i$，
+导线电阻忽略。
+求 (a) 环路电流；(b) 任意两节点 A、B
+之间的电势差，它们把回路分成 $n$ 与
+$N-n$ 段。
+\exsolution
+依 Kirchhoff 第二定律，
+全回路总电动势
+$\sum_{i=1}^{N}\mathcal E_i
+=\alpha\sum_{i=1}^{N}R_i$，
+总电阻为 $\sum_iR_i$，
+所以
+\[
+\boxed{I=
+\frac{\sum_i\mathcal E_i}{\sum_iR_i}
+=\alpha}.
+\]
+沿任一串联源小段跨过其正向电动势时，
+电势增加 $\mathcal E_i$，
+流过内阻下降 $IR_i$。
+因 $\mathcal E_i=IR_i$，
+每一段的净电势跃变都为零，
+故任意两连接节点电势相等：
+\[
+\boxed{\varphi_A-\varphi_B=0}.
+\]
+\excheck 非零电流 $I=\alpha$
+与各段端电压为零并不矛盾：
+电源电动势恰好在每段内阻上消耗。
+
+\electrocurrentproblem{177}{116--117}
+图3.41，两个理想电源
+$\mathcal E_1=1.0\,\mathrm V$、
+$\mathcal E_2=2.5\,\mathrm V$，
+电阻
+$R_1=10\,\Omega$、
+$R_2=20\,\Omega$，
+电容器 C 两极板接于点 A、B。
+求平衡时 $\varphi_A-\varphi_B$。
+\exsolution
+稳定直流时电容器断路，
+并不改变外部闭合回路的电流。
+按图中两电源反向串联极性，
+电流
+\[
+I=\frac{\mathcal E_1-\mathcal E_2}{R_1+R_2}
+=\frac{1.0-2.5}{10+20}
+=-0.050\,\mathrm A
+\]
+（负号表明实际电流与所取正向相反）。
+由 A、B 两节点间的 $R_1$ 支路电势差，
+\[
+\varphi_A-\varphi_B=IR_1
+=\frac{(\mathcal E_1-\mathcal E_2)R_1}
+{R_1+R_2}.
+\]
+所以
+\[
+\boxed{\varphi_A-\varphi_B=-0.50\,\mathrm V}.
+\]
+\excheck 最终 $C$ 不导通直流，
+但其两板仍可维持非零电势差。
+
+\electrocurrentproblem{178}{117}
+图3.42：电源电动势
+$\mathcal E=5.0\,\mathrm V$，
+内阻 $R=0.10\,\Omega$，
+外接并联电阻
+$R_1=4.0\,\Omega$、
+$R_2=6.0\,\Omega$。
+求各电阻上的电流。
+\exsolution
+外电路等效电阻
+$R_L=R_1R_2/(R_1+R_2)$。
+总电流
+$I=\mathcal E/(R+R_L)$，
+外电路端电压
+$U=IR_L$。
+由并联分流：
+\[
+I_1=\frac U{R_1}
+=\boxed{\frac{\mathcal E R_2}
+{R(R_1+R_2)+R_1R_2}},
+\]
+\[
+I_2=\frac U{R_2}
+=\boxed{\frac{\mathcal E R_1}
+{R(R_1+R_2)+R_1R_2}}.
+\]
+代入数值：
+分母 $0.10(10)+24=25$，
+得到
+\[
+\boxed{I_1=1.2\,\mathrm A,\qquad
+I_2=0.80\,\mathrm A}.
+\]
+\excheck 总电流为2 A，
+内阻压降0.20 V，
+外电路端电压4.8 V；
+$1.2\times4=0.8\times6=4.8$，相符。
+
+\electrocurrentproblem{179}{117}
+图3.43：长为 $\ell$、总电阻
+$R_0$ 的均匀电位器两端维持电压
+$V_0$，滑动端距参考端为 $x$。
+负载电阻 $R$ 接在滑片和该参考端之间。
+求负载电压 $V(x)$，讨论 $R\gg R_0$。
+\exsolution
+电位器靠参考端一段电阻
+$R_{\rm low}=R_0x/\ell$，
+其余一段
+$R_{\rm high}=R_0(\ell-x)/\ell$。
+负载 $R$ 与 $R_{\rm low}$ 并联，
+二者组合与 $R_{\rm high}$ 串联。
+分压：
+\[
+V=V_0\frac{R\parallel R_{\rm low}}
+{R_{\rm high}+R\parallel R_{\rm low}}
+=V_0\frac{RR_{\rm low}}
+{R(R_{\rm high}+R_{\rm low})
++R_{\rm high}R_{\rm low}}.
+\]
+代入分段电阻：
+\[
+\boxed{V(x)=
+V_0\frac{Rx}
+{R\ell+R_0x(\ell-x)/\ell}}.
+\]
+当 $R\gg R_0$，负载影响可忽略：
+\[
+\boxed{V(x)\simeq V_0\,\frac{x}{\ell}}.
+\]
+\excheck $x=0$ 时 $V=0$，
+$x=\ell$ 时 $V=V_0$；
+中间段的真实电压一般小于理想线性分压。
+
+\electrocurrentproblem{180}{117}
+两只电源各具有电动势
+$\mathcal E_1,\mathcal E_2$
+及内阻 $R_1,R_2$，
+以相同端子极性并联。
+求该并联源的等效电动势
+及内阻（戴维南等效）。
+\exsolution
+设两电源并联输出端电压为 $U$，
+各支路向外输出的电流
+$I_i=(\mathcal E_i-U)/R_i$，
+合电流
+\[
+I=\frac{\mathcal E_1}{R_1}
++\frac{\mathcal E_2}{R_2}
+-U\left(\frac1{R_1}+\frac1{R_2}\right).
+\]
+把它改写为单个戴维南源形式
+$I=(\mathcal E_{\rm eq}-U)/R_{\rm eq}$，
+通过比较斜率与截距：
+\[
+\boxed{R_{\rm eq}=\frac{R_1R_2}{R_1+R_2}},
+\]
+\[
+\boxed{\mathcal E_{\rm eq}=
+\frac{\mathcal E_1R_2+\mathcal E_2R_1}
+{R_1+R_2}}.
+\]
+\excheck 两电源即使未接外负载，
+在 $\mathcal E_1\ne\mathcal E_2$ 时
+内部可存在环流；上式给的是外端口等效。
+
+\electrocurrentproblem{181}{117}
+图3.44：两并行电源支路，
+$\mathcal E_1=1.5\,\mathrm V$、
+$\mathcal E_2=3.7\,\mathrm V$，
+对应电阻
+$R_1=10\,\Omega$、
+$R_2=20\,\Omega$，
+另有连接电阻 $R=5.0\,\Omega$。
+求通过 $R$ 的电流大小与方向。
+\exsolution
+将上、中的两源电阻支路
+对底部电阻 $R$ 看作戴维南等效。
+依图中两电动势极性，
+两端开路电势差
+\[
+\mathcal E_{\rm th}=
+\frac{R_1\mathcal E_2-R_2\mathcal E_1}
+{R_1+R_2},
+\]
+内部等效电阻
+$R_{\rm th}=R_1R_2/(R_1+R_2)$。
+故通过底部连接电阻的电流：
+\[
+\boxed{I=
+\frac{R_1\mathcal E_2-R_2\mathcal E_1}
+{R(R_1+R_2)+R_1R_2}}.
+\]
+代入：
+\[
+I=\frac{10(3.7)-20(1.5)}
+{5(10+20)+10(20)}
+=\frac7{350}
+=\boxed{0.020\,\mathrm A}.
+\]
+正号对应原书图3.44
+\emph{自左向右}流过底部 $R$。
+\excheck 如果只看电动势
+$\mathcal E_2>\mathcal E_1$
+而忽略内串电阻，
+不能正确判定流向。
+
+\electrocurrentproblem{182}{117}
+图3.45：A、B 两节点间有三条并联支路，
+分别有 $(\mathcal E_1,R_1)$、
+$(\mathcal E_2,R_2)$、
+$(\mathcal E_3,R_3)$，
+其中第三电源按图反向连接。
+数据：
+$\mathcal E_1=1.5\,\mathrm V$、
+$\mathcal E_2=2.0\,\mathrm V$、
+$\mathcal E_3=2.5\,\mathrm V$，
+$R_1=10\,\Omega$、
+$R_2=20\,\Omega$、
+$R_3=30\,\Omega$。
+求 (a) $R_1$ 电流；(b) $\varphi_A-\varphi_B$。
+\exsolution
+设 $U=\varphi_A-\varphi_B$，
+三支路自 A 至 B 的电流分别取
+\[
+I_1=\frac{U-\mathcal E_1}{R_1},\quad
+I_2=\frac{U-\mathcal E_2}{R_2},\quad
+I_3=\frac{U+\mathcal E_3}{R_3}.
+\]
+A、B 之间无外部注入电流，
+所以 $I_1+I_2+I_3=0$。
+故
+\[
+\boxed{U=
+\frac{\mathcal E_1/R_1+
+\mathcal E_2/R_2-\mathcal E_3/R_3}
+{1/R_1+1/R_2+1/R_3}}.
+\]
+数据代入：
+$U=(0.15+0.10-0.08333)/
+(0.1+0.05+0.03333)\,\mathrm V
+\simeq0.909\,\mathrm V$，
+因此
+\[
+\boxed{\varphi_A-\varphi_B\simeq0.90\,\mathrm V}.
+\]
+经过 $R_1$ 向上（B 到 A）的电流
+\[
+I_{1,\uparrow}=
+\frac{\mathcal E_1-U}{R_1}
+\simeq\boxed{0.059\,\mathrm A\approx0.060\,\mathrm A}.
+\]
+整理一般式：
+\[
+\boxed{I_{1,\uparrow}=
+\frac{R_3(\mathcal E_1-\mathcal E_2)
++R_2(\mathcal E_1+\mathcal E_3)}
+{R_1R_2+R_2R_3+R_3R_1}}.
+\]
+\excheck 书末答案的纯文本提取似把
+第二项 $\mathcal E_3$ 混成 $\mathcal E_2$；
+用题给数据和书末 $0.06$ A
+可独立核实应为 $\mathcal E_3$。
+
+\electrocurrentproblem{183}{118}
+图3.46：电源 $\mathcal E_0$、$\mathcal E$
+和电阻 $R_1,R_2,R_3,R$
+按图连接，电源内阻可忽略。
+求通过右下方电阻 $R$ 的电流。
+\exsolution
+图中左侧理想电源 $\mathcal E_0$
+把其上下节点电势差固定，
+与它并联的 $R_1$ 仅改变电源输出电流，
+不改变流过 $R$ 的求解。
+把左侧 $\mathcal E_0$ 与 $R_2,R_3$
+看作对右侧支路的戴维南源：
+开路电压由 $R_2,R_3$ 的分压决定，
+\[
+U_{\rm th}=
+\frac{R_3}{R_2+R_3}\mathcal E_0.
+\]
+关闭理想源时，内部等效电阻为
+$R_{\rm th}=R_2R_3/(R_2+R_3)$。
+右侧电源 $\mathcal E$ 同向作用，
+故
+\[
+I=\frac{\mathcal E+U_{\rm th}}{R+R_{\rm th}}
+=\boxed{
+\frac{\mathcal E(R_2+R_3)+\mathcal E_0R_3}
+{R(R_2+R_3)+R_2R_3}}.
+\]
+\excheck 正如原书简答，
+结果\emph{不含 $R_1$}，
+因为它并联在理想电源两端，
+不会改变左右外端口的戴维南电压。
+
+\electrocurrentproblem{184}{118}
+图3.47：由
+$R_1=10\,\Omega$、
+$R_2=20\,\Omega$、
+$R_3=30\,\Omega$ 及电源
+$\mathcal E_1=4.0\,\mathrm V$、
+$\mathcal E_2=1.0\,\mathrm V$
+组成的电路，上方电容器
+C 两板为 A、B。求稳态电势差
+$\varphi_A-\varphi_B$。
+\exsolution
+稳态电容支路开路，
+所以电路主回路只由两电源和三电阻组成。
+按图3.47的连接，
+用 Kirchhoff 回路电流并分别积分
+从 A 到 B 的上下两条路径，
+可将开路电容两端电压写为
+\[
+\boxed{\varphi_A-\varphi_B=
+\frac{\mathcal E_2R_3(R_1+R_2)
+-\mathcal E_1R_1(R_2+R_3)}
+{R_1R_2+R_2R_3+R_3R_1}}.
+\]
+把给定数值代入，
+分母
+$10(20)+20(30)+30(10)=1100$，
+分子
+$1(30)(10+20)-4(10)(20+30)
+=900-2000=-1100$，
+所以
+\[
+\boxed{\varphi_A-\varphi_B=-1.0\,\mathrm V}.
+\]
+\excheck 电容器最终不通直流，
+但两端仍可有静态电压；
+该电压的符号必须按 A 减 B 计算。
+
+\electrocurrentproblem{185}{118}
+图3.48的 Y 形电阻网络，
+中心 O 经
+$R_1=10\,\Omega$、
+$R_2=20\,\Omega$、
+$R_3=30\,\Omega$
+分别连接外端1、2、3。
+三端电势
+$\varphi_1=10\,\mathrm V$、
+$\varphi_2=6\,\mathrm V$、
+$\varphi_3=5\,\mathrm V$。
+求流过 $R_1$ 的电流。
+\exsolution
+把 O 的电势记为 $U$。
+由 Kirchhoff 电流定律：
+\[
+\frac{U-\varphi_1}{R_1}
++\frac{U-\varphi_2}{R_2}
++\frac{U-\varphi_3}{R_3}=0.
+\]
+所以
+\[
+U=
+\frac{\varphi_1/R_1+\varphi_2/R_2+
+\varphi_3/R_3}
+{1/R_1+1/R_2+1/R_3}.
+\]
+从1流向 O 的电流
+$I_1=(\varphi_1-U)/R_1$，
+消去 $U$ 后得
+\[
+\boxed{I_1=
+\frac{R_3(\varphi_1-\varphi_2)
++R_2(\varphi_1-\varphi_3)}
+{R_1R_2+R_2R_3+R_3R_1}}.
+\]
+代数值：
+\[
+\boxed{I_1=\frac{30(4)+20(5)}{1100}
+=0.20\,\mathrm A}.
+\]
+\excheck 第1端电势高于中心 O，
+故电流从1流向 O，与正结果一致。
+
+\electrocurrentproblem{186}{118}
+图3.49：两条横支路自 A 到 B，
+上支依次 $R_1=1.0\,\Omega$、
+$R_2=2.0\,\Omega$，
+下支依次 $R_3=3.0\,\Omega$、
+$R_4=4.0\,\Omega$。
+两支中点 C、D 以理想导线短接。
+$V_A-V_B=25\,\mathrm V$。
+求导线 CD 的电流模与方向。
+\exsolution
+C、D 短接，电势相同为 $U$。
+左半的等效电阻
+\[
+R_L=R_1\parallel R_3
+=\frac{1\cdot3}{1+3}=0.75\,\Omega;
+\]
+右半
+\[
+R_R=R_2\parallel R_4
+=\frac{2\cdot4}{2+4}=\frac43\,\Omega.
+\]
+总电阻
+$R_L+R_R=25/12\,\Omega$，
+故总电流
+$I_{\rm tot}=25/(25/12)=12\,\mathrm A$。
+取 $V_B=0$，
+中点电势
+$U=I_{\rm tot}R_R=16\,\mathrm V$。
+上左流经 $R_1$ 电流
+$I_{AC}=(25-16)/1=9$ A，
+上右流经 $R_2$ 电流
+$I_{CB}=16/2=8$ A。
+C 点电荷守恒：
+\[
+I_{AC}=I_{CB}+I_{CD}
+\quad\Longrightarrow\quad
+\boxed{I_{CD}=1.0\,\mathrm A}.
+\]
+方向是
+$\boxed{\text{从 C 向 D}}$。
+\excheck 不能把短接的 C、D
+误当成两个不同电势节点；
+差的1 A 通过短线重新分配到下支路。
+
+\electrocurrentproblem{187}{118}
+图3.50的五电阻桥式网络，
+A—上中节点电阻 $r$、
+上中—B 为 $R$、
+A—下中为 $R$、
+下中—B 为 $r$，
+中间桥臂电阻亦为 $r$。
+求 A、B 之间的等效电阻。
+\exsolution
+取 $V_A=V$、$V_B=0$，
+上、下中间节点电势分别为 $x,y$。
+由节点电流守恒：
+\[
+\frac{x-V}r+\frac xR+\frac{x-y}r=0,
+\]
+\[
+\frac{y-V}R+\frac yr+\frac{y-x}r=0.
+\]
+把两式乘 $rR$：
+\[
+(2R+r)x-Ry=RV,\qquad
+-Rx+(2R+r)y=rV.
+\]
+解线性方程组，代入 A 端注入电流
+$I=(V-x)/r+(V-y)/R$，化简为
+\[
+I=\frac{V(R+3r)}{r(r+3R)}.
+\]
+所以
+\[
+\boxed{R_{AB}=\frac VI
+=\frac{r(r+3R)}{R+3r}}.
+\]
+\excheck 特例 $R=r$，
+五只相同电阻的对称桥中间无电流，
+两条 $2r$ 支路并联为 $r$；
+上式给 $r$，相符。
+
+\electrocurrentproblem{188}{118--119}
+图3.51：电动势为 $\mathcal E$ 的理想电源
+经开关 Sw 与串联底部电阻 $R$ 相连，
+在其负载两端还有一只电阻 $R$
+与电容器 $C$ 并联。
+$t=0$ 闭合开关，电容初始未充电。
+求电容电压 $V_C(t)$。
+\exsolution
+从电容两极端看向外电路，
+用戴维南定理化简。
+开路电容时，两只 $R$ 串联
+由电源 $\mathcal E$ 供电，
+端电压
+\[
+V_{\rm th}=\mathcal E\frac R{R+R}
+=\frac{\mathcal E}{2}.
+\]
+把理想电压源短接时，
+从电容端看到两只 $R$ 并联：
+\[
+R_{\rm th}=R\parallel R=\frac R2.
+\]
+所以这是初始电压0、时间常数
+$\tau=R_{\rm th}C=RC/2$ 的一阶充电过程：
+\[
+\boxed{V_C(t)=
+\frac{\mathcal E}{2}
+\left(1-e^{-t/\tau}\right)
+=\frac{\mathcal E}{2}
+\left(1-e^{-2t/(RC)}\right)}.
+\]
+\excheck $t=0$ 时电压0，
+$t\to\infty$ 时为电阻分压
+$\mathcal E/2$；指数衰减时间常数是 $RC/2$，
+不是 $RC$。
