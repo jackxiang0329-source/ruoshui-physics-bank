@@ -1,0 +1,304 @@
+% Irodov Part IV §4.4 original 213--224; closes Part IV at 224.
+% User source PDF 192--194, printed 183--185; answers PDF 334.
+\emwaveproblem{213}{183}
+带电量为 $e$、质量为 $m$ 的非相对论粒子，在静止点电荷 $q$ 的库仑场中沿半径 $R$ 的圆形轨道运动，求平均辐射功率。
+\exsolution
+库仑力大小
+$F=|eq|/(4\pi\varepsilon_0R^2)$，
+加速度大小
+$a=|eq|/(4\pi\varepsilon_0mR^2)$。
+非相对论拉莫尔公式
+$P=e^2a^2/(6\pi\varepsilon_0c^3)$。
+因圆周运动向心加速度模恒定，
+辐射功率不随时间变化：
+\[
+\boxed{P=\frac{e^2}{6\pi\varepsilon_0c^3}
+\left(\frac{eq}{4\pi\varepsilon_0mR^2}\right)^2
+=\frac{e^4q^2}{96\pi^3\varepsilon_0^3m^2c^3R^4}}.
+\]
+\excheck $q$ 的符号仅决定静电吸引还是排斥；若要靠静电形成圆轨道，两个电荷须相反号，功率取平方后不依赖电荷符号。
+
+\emwaveproblem{214}{184}
+带电量为 $e$、质量为 $m$ 的非相对论粒子，以初速度 $v$ 与固定点电荷 $q$ 发生远距离掠过，最接近距离为 $b$。忽略轨道偏折，求整个飞行过程中因辐射损失的能量。
+\exsolution
+在直线近似下取
+$\bm r(t)=(vt,b)$，
+$r(t)^2=b^2+v^2t^2$。
+库仑加速度大小
+$a(t)=|eq|/[4\pi\varepsilon_0m(b^2+v^2t^2)]$。
+拉莫尔功率
+\[
+P(t)=\frac{e^2}{6\pi\varepsilon_0c^3}
+\frac{e^2q^2}
+{(4\pi\varepsilon_0)^2m^2(b^2+v^2t^2)^2}.
+\]
+能量损失
+$\Delta W=\int_{-\infty}^{\infty}P(t)\,\mathrm dt$。
+设 $u=vt/b$，
+$\int_{-\infty}^{\infty}\mathrm du/(1+u^2)^2=\pi/2$，
+故
+\[
+\boxed{\Delta W=
+\frac{e^4q^2}{192\pi^2\varepsilon_0^3m^2c^3vb^3}}.
+\]
+\excheck 随碰撞参数 $b$ 增大，损耗按 $b^{-3}$ 快速减少；需满足散射偏折角及辐射反作用均足够小。
+
+\emwaveproblem{215}{184}
+非相对论质子沿法向进入磁感应强度
+$B=1.0$T 的横向均匀磁场半空间，
+在磁场内沿半圆轨迹离开。
+求半圈运动中因辐射损失能量与初始动能之比。
+\exsolution
+回旋半径 $r=m_pv/(eB)$，
+向心加速度
+$a=evB/m_p$。
+拉莫尔功率
+$P=e^2a^2/(6\pi\varepsilon_0c^3)
+=e^4v^2B^2/(6\pi\varepsilon_0c^3m_p^2)$。
+半圈时间
+$\Delta t=\pi m_p/(eB)$，
+初动能 $T=\tfrac12m_pv^2$。
+忽略微小辐射引起的速率变化，
+\[
+\frac{\Delta W}{T}
+=\frac{P\Delta t}{m_pv^2/2}
+=\boxed{\frac{e^3B}{3\varepsilon_0c^3m_p^2}
+\simeq2\times10^{-18}}.
+\]
+\excheck 初始速度 $v$ 消去；这个极小比值支持一阶近似中轨迹半径不变的处理。
+
+\emwaveproblem{216}{184}
+非相对论带电粒子（电荷模 $e$，质量 $m$）在垂直于均匀磁场 $\bm B$ 的平面内做回旋运动，
+因电磁辐射逐渐失能。求动能 $T(t)$ 的时间规律、减少到初值 $1/e$ 的时间；分别讨论电子和质子在 $B=1.0$T 时的结果。
+\exsolution
+回旋加速度模 $a=e vB/m$。
+拉莫尔辐射功率
+$P=e^4B^2v^2/(6\pi\varepsilon_0c^3m^2)$。
+非相对论动能 $T=mv^2/2$，
+所以
+\[
+-\frac{\mathrm dT}{\mathrm dt}
+=\frac{e^4B^2}{3\pi\varepsilon_0c^3m^3}T
+=\alpha T.
+\]
+解一阶方程：
+\[
+\boxed{T(t)=T_0e^{-\alpha t}},\qquad
+\boxed{\alpha=\frac{e^4B^2}{3\pi\varepsilon_0c^3m^3}},
+\qquad
+\boxed{t_{1/e}=\frac1\alpha}.
+\]
+在 $B=1.0$T 时，
+$\boxed{t_e\simeq2.5\,\mathrm s}$，
+$\boxed{t_p\simeq1.6\times10^{10}\,\mathrm s
+\simeq5\times10^2\,\text{年}}$。
+\excheck 动能衰减率随质量的\emph{三次方倒数}变化，故电子与质子的能量损失时间尺度相差极大。
+
+\emwaveproblem{217}{184}
+带电粒子沿 $y$ 轴做非相对论简谐运动 $y=a\cos\omega t$，
+远处观测点 P 在 x 轴距离 $\ell\gg a$ 处。
+求粒子在\emph{当前位置}分别为
+$y_1=0$ 与 $y_2=a$ 时观测点接收的辐射能流密度之比
+$S_1/S_2$，并取
+$\omega=3.3\times10^6\,\mathrm{s^{-1}}$、$\ell=190$m 计算。
+\exsolution
+远场观测依赖\emph{迟延时刻}
+$t_r\simeq t-\ell/c$ 的加速度，
+而非当前粒子加速度。
+沿 x 轴观测时辐射强度与
+$a_y(t_r)^2\propto\cos^2[\omega(t-\ell/c)]$ 成正比。
+取当前 $y(t_1)=0$，
+可令 $\omega t_1=\pi/2$；
+取 $y(t_2)=a$，可令
+$\omega t_2=0$。于是
+\[
+\frac{S_1}{S_2}
+=\frac{\cos^2(\pi/2-\omega\ell/c)}
+{\cos^2(-\omega\ell/c)}
+=\boxed{\tan^2\left(\frac{\omega\ell}{c}\right)}.
+\]
+代 $\omega\ell/c\simeq2.09$rad，
+\[
+\boxed{S_1/S_2\simeq3}.
+\]
+\excheck 若错误地采用粒子\emph{当前}加速度，会认为 $y=0$ 时辐射为零，遗漏光传播迟延。本题远场使用 $\ell\gg a$。
+
+\emwaveproblem{218}{184}
+图4.40：带电粒子沿半径 $R$ 的圆在 $xy$ 平面匀速运动，
+观察者 P 位于正 $x$ 轴极远处。
+求：(a) P 观察到的粒子 $y$ 坐标的表观二阶时间导数与该坐标的关系；
+(b) 粒子从观察者看来分别朝向和背离 P 运动时，辐射能流密度之比。
+\exsolution
+参数化
+$x=R\sin\omega t$、
+$y=R\cos\omega t$，
+$v=\omega R$。
+观测时刻
+$t'=t+(\ell-x(t))/c$，
+所以
+\[
+\frac{\mathrm dt'}{\mathrm dt}
+=1-\frac{\dot x}{c}
+=1-\beta\frac yR,\qquad
+\beta=\frac vc.
+\]
+观测坐标 $y'(t')=y(t)$，
+第一次求导：
+$\mathrm dy'/\mathrm dt'
+=\dot y/(1-\dot x/c)$。
+再次求导，并代
+$\ddot x=-\omega^2x$、
+$\ddot y=-\omega^2y$，
+整理得到
+\[
+\boxed{\frac{\mathrm d^2y'}{\mathrm dt'^2}
+=\frac{v^2}{R}
+\frac{\beta-y/R}{(1-\beta y/R)^3}}.
+\]
+粒子朝向 P 运动时 $y=+R$、
+$\dot x=v$，
+表观加速度模
+$v^2/[R(1-\beta)^2]$；
+背离时 $y=-R$、
+$\dot x=-v$，
+模为 $v^2/[R(1+\beta)^2]$。
+远区辐射能流与该表观横向加速度平方成正比，
+故
+\[
+\boxed{\frac{S_{\rm toward}}{S_{\rm away}}
+=\left(\frac{1+\beta}{1-\beta}\right)^4}.
+\]
+\excheck 此式强调光行时间与朝向运动所产生的辐射前向增强；在 $\beta\ll1$ 时趋近1。
+
+\emwaveproblem{219}{184}
+电偶极子辐射电磁波，在远场某点 P 距偶极中心 $r$，
+且 P 位于垂直于偶极轴的方向。
+该点周期平均能流密度为 $S_0$。
+求偶极子的总平均辐射功率。
+\exsolution
+远场偶极辐射角分布
+$\overline S(r,\theta)=S_0\sin^2\theta$，
+其中 $\theta$ 为观察方向与偶极轴夹角。
+总功率为包围偶极子的球面积分
+\[
+P=\int\overline S\,r^2\mathrm d\Omega
+=S_0r^2\,2\pi\int_0^\pi\sin^3\theta\,\mathrm d\theta.
+\]
+因为
+$\int_0^\pi\sin^3\theta\,\mathrm d\theta=4/3$，
+所以
+\[
+\boxed{P=\frac{8\pi}{3}r^2S_0}.
+\]
+\excheck 不能直接取 $4\pi r^2S_0$，
+因为电偶极辐射沿轴为零、赤道方向最大。
+
+\emwaveproblem{220}{184}
+电偶极子总平均辐射功率为 $P_0$。
+求在远区、距离 $r$ 且位于偶极轴垂直方向的电磁场平均能量密度。
+\exsolution
+由第219题
+$P_0=(8\pi/3)r^2S_\perp$，
+故赤道方向平均能流密度
+$S_\perp=3P_0/(8\pi r^2)$。
+远场真空电磁波的平均能流与平均能量密度满足
+$\overline S=c\overline w$，
+因此
+\[
+\boxed{\overline w_\perp
+=\frac{S_\perp}{c}
+=\frac{3P_0}{8\pi r^2c}}.
+\]
+\excheck $\overline w$ 为能量/体积（J/m³），
+而 $P_0/(r^2c)$ 正好具有该量纲。
+
+\emwaveproblem{221}{184}
+电偶极矩的模 $p$ 恒定，偶极子绕通过中点、垂直于自身轴的固定轴以恒角速度 $\omega$ 旋转。求平均电磁辐射功率。
+\exsolution
+在旋转平面中取
+$\bm p(t)=p[\cos\omega t\,\bm e_x+
+\sin\omega t\,\bm e_y]$，
+则
+$\ddot{\bm p}=-\omega^2\bm p$，
+其模恒为 $p\omega^2$。
+电偶极辐射功率
+$P=|\ddot{\bm p}|^2/(6\pi\varepsilon_0c^3)$，
+所以
+\[
+\boxed{\overline P=P=
+\frac{p^2\omega^4}{6\pi\varepsilon_0c^3}}.
+\]
+\excheck 旋转偶极子的加速度模恒定，而直线谐振偶极子的加速度模随时间变化，因此前者平均功率是后者相同峰值条件下的2倍。
+
+\emwaveproblem{222}{185}
+自由电子处于平面电磁波电场中，忽略波磁场对电子运动的影响。
+求电子单位时间平均辐射功率与入射电磁波平均能流密度之比。
+\exsolution
+入射电场
+$\bm E=E_m\cos\omega t\,\bm e$，
+电子的加速度
+$\bm a(t)=-(eE_m/m_e)\cos\omega t\,\bm e$。
+拉莫尔平均辐射功率
+\[
+\overline P=
+\frac{e^2}{6\pi\varepsilon_0c^3}
+\frac{e^2E_m^2}{2m_e^2}.
+\]
+入射平均能流
+$\overline S=\varepsilon_0cE_m^2/2$。
+二者之比
+\[
+\boxed{\frac{\overline P}{\overline S}
+=\frac{e^4}{6\pi\varepsilon_0^2m_e^2c^4}
+=\frac{\mu_0^2e^4}{6\pi m_e^2}}.
+\]
+\excheck 这一比值有面积量纲，是经典汤姆孙散射截面；入射振幅和频率均从结果中消去。
+
+\emwaveproblem{223}{185}
+频率为 $\omega$ 的平面电磁波入射到一只被弹性束缚的电子上，该电子固有角频率为 $\omega_0$。忽略阻尼和磁力，求电子平均辐射功率与入射平均能流密度之比。
+\exsolution
+令束缚电子位移
+$x=A\cos\omega t$。
+受迫振子方程
+$\ddot x+\omega_0^2x=-(eE_m/m_e)\cos\omega t$，
+非共振时
+$A=eE_m/[m_e|\omega_0^2-\omega^2|]$。
+加速度幅度
+$\omega^2A$，拉莫尔平均功率
+$\overline P=e^2\omega^4A^2/(12\pi\varepsilon_0c^3)$；
+入射平均流密度
+$\overline S=\varepsilon_0cE_m^2/2$。
+故
+\[
+\boxed{\frac{\overline P}{\overline S}
+=\frac{e^4\omega^4}
+{6\pi\varepsilon_0^2m_e^2c^4(\omega_0^2-\omega^2)^2}}.
+\]
+\excheck 该无阻尼公式在 $\omega=\omega_0$ 形式上发散，物理上辐射阻尼等不可再忽略；只能用于离共振足够远的情况。
+
+\emwaveproblem{224}{185}
+把微小颗粒视为密度 $\rho=1.0\,\mathrm{g/cm^3}$ 的完全吸收黑球，太阳总辐射功率
+$P_\odot=4\times10^{26}$W。
+求颗粒半径 $a$，使太阳引力与太阳光辐射压力平衡。
+\exsolution
+取颗粒至太阳距离 $r$、太阳质量 $M_\odot$。
+太阳能流强度
+$S=P_\odot/(4\pi r^2)$。
+完全吸收球的迎光截面积为 $\pi a^2$，
+辐射压力作用力
+\[
+F_{\rm rad}=\frac Sc\pi a^2
+=\frac{P_\odot a^2}{4cr^2}.
+\]
+球质量
+$m=(4\pi/3)\rho a^3$，
+太阳引力
+$F_g=GM_\odot m/r^2
+=4\pi GM_\odot\rho a^3/(3r^2)$。
+令二者相等，消去日距 $r$：
+\[
+\boxed{a=\frac{3P_\odot}
+{16\pi cG M_\odot\rho}
+\simeq0.6\,\mathrm{\mu m}}.
+\]
+\excheck 结果与日距无关，因为引力和光强都按 $1/r^2$ 衰减；若颗粒有反射或波长依赖吸收效率，平衡半径需修改。
