@@ -1,0 +1,255 @@
+% Irodov Part V §5.2 87--96, concludes Light Interference.
+% Source PDF ~210--211, printed pp.201--202; source answer pp.328--329.
+\interferenceproblem{87}{201}
+平凸透镜球面半径 $R=40$cm 与玻璃板接触。反射牛顿环中某一条环的初始半径
+$r=2.5$mm；缓慢将透镜整体上提
+$\Delta h=5.0\,\mathrm{\mu m}$，观察\emph{原来同一阶}环的新半径。
+\exsolution
+初始膜厚
+$h(r)=r^2/(2R)$。
+透镜抬高后
+$h'(r')=\Delta h+r'^2/(2R)$。
+同一干涉阶要求同一膜厚，
+$\Delta h+r'^2/(2R)=r^2/(2R)$，
+于是
+\[
+\boxed{r'=\sqrt{r^2-2R\Delta h}}
+=\sqrt{(2.5\,\mathrm{mm})^2-
+2(0.40\,\mathrm m)(5.0\,\mathrm{\mu m})}
+=\boxed{1.5\,\mathrm{mm}}.
+\]
+\excheck 必须确认根号内非负；再提升到 $2R\Delta h>r^2$ 后原阶环将消失。
+
+\interferenceproblem{88}{201}
+一块平凸透镜球面顶部被磨成半径
+$r_0=3.0$mm 的平坦区，该平面与下方玻璃板接触。
+原球面曲率半径
+$R=150$cm。
+用波长 $\lambda=655$nm 的光观察反射牛顿环，
+求第六个亮环半径。
+\exsolution
+磨去顶部后，从接触圆边缘 $r_0$ 开始，
+膜厚
+$h(r)\simeq(r^2-r_0^2)/(2R)$。
+反射时只有一个界面产生 $\pi$ 相位反转，
+第 $k$ 个亮环满足
+$2h=(k-\tfrac12)\lambda$。
+因此
+\[
+\boxed{r_k=\sqrt{r_0^2+(k-\tfrac12)\lambda R}}.
+\]
+第六亮环
+\[
+\boxed{r_6=
+\sqrt{(3.0\,\mathrm{mm})^2+
+5.5(655\,\mathrm{nm})(1.50\,\mathrm m)}
+\simeq3.8\,\mathrm{mm}}.
+\]
+\excheck 不能将平坦接触斑的半径 $r_0$ 当作新的曲率半径；它的平方作为几何偏移进入环半径。
+
+\interferenceproblem{89}{201}
+平凸玻璃透镜球面曲率半径
+$R=12.5$cm，压在玻璃板上。
+反射光第十、第十五暗牛顿环直径分别为
+$d_{10}=1.00$mm、
+$d_{15}=1.50$mm。
+求波长。
+\exsolution
+如存在未知微小中心膜厚 $h_0$，
+同类暗环满足
+$2h_0+r_k^2/R=k\lambda$。
+两阶相减消去 $h_0$：
+$(r_{15}^2-r_{10}^2)/R=5\lambda$。
+因 $r_k=d_k/2$，
+\[
+\boxed{\lambda=
+\frac{d_{15}^2-d_{10}^2}
+{4R(15-10)}}
+=\frac{(1.50^2-1.00^2)\times10^{-6}}
+{4(0.125)(5)}
+=\boxed{0.50\,\mathrm{\mu m}}.
+\]
+\excheck 单独用 $r_{10}^2=10\lambda R$ 与 $r_{15}^2=15\lambda R$ 会得到互相不一致的波长，说明应使用\emph{两环半径平方差}消去接触偏置。
+
+\interferenceproblem{90}{201}
+两片平凸薄玻璃透镜的球面相互接触，在反射光
+$\lambda=0.60\,\mathrm{\mu m}$ 下，第五个亮牛顿环的直径为
+$d=1.50$mm。
+求两片薄透镜组成的光学系统的光焦度。
+\exsolution
+两个凸球面之间的空气隙近轴厚度
+$h(r)=r^2(1/R_1+1/R_2)/2$，
+令
+$R_{\rm eff}^{-1}=R_1^{-1}+R_2^{-1}$，
+第 $k$ 个亮环
+$r_k^2=(k-\tfrac12)\lambda R_{\rm eff}$。
+所以
+\[
+\frac1{R_{\rm eff}}
+=\frac{(k-\tfrac12)\lambda}{r_k^2}
+=\frac{4(k-\tfrac12)\lambda}{d^2}.
+\]
+每片平凸透镜的光焦度为
+$(n-1)/R_i$，
+接触总光焦度
+$\Phi=(n-1)/R_{\rm eff}$，得
+\[
+\boxed{\Phi=
+\frac{2(n-1)(2k-1)\lambda}{d^2}
+\simeq2.4\,\mathrm D}
+\]
+（取玻璃 $n\simeq1.50$，$k=5$）。
+\excheck 每片透镜一面为\emph{平面}，因此不能在透镜光焦度公式中凭空多乘球面系数2。
+
+\interferenceproblem{91}{201}
+两只对称薄玻璃透镜（一双凸、一双凹）贴合成光焦度
+$\Phi=0.50$D 的系统，在空气隙中用
+$\lambda=0.61\,\mathrm{\mu m}$ 的反射光观察牛顿环。
+求：(a) 第十暗环的半径；
+(b) 在空隙填水后该环半径如何变化。
+\exsolution
+两透镜曲面对应空气隙的等效曲率差
+$1/R_{\rm gap}$；
+因两透镜各有两面且对称，
+其合光焦度满足
+$\Phi=2(n_g-1)/R_{\rm gap}$。
+因此
+$R_{\rm gap}=2(n_g-1)/\Phi$。
+暗环条件
+$r_k^2=k\lambda R_{\rm gap}$，故
+\[
+\boxed{r_{10}=
+\sqrt{\frac{2k\lambda(n_g-1)}{\Phi}}
+\simeq3.5\,\mathrm{mm}}
+\]
+（$n_g\simeq1.50$）。
+在水中膜光程差是原来的 $n_w$ 倍，
+同一暗环
+\[
+\boxed{r'=\frac r{\sqrt{n_w}}
+\simeq3.0\,\mathrm{mm}},\qquad n_w\simeq1.33.
+\]
+\excheck 两镜的净光焦度已知，避免单独求各面未知曲率；充水使相同阶次条纹的环半径变小。
+
+\interferenceproblem{92}{201}
+平凸透镜球面贴玻璃板，其空气隙换成二氧化碳介质（原书给
+$n_1=1.50$ 为透镜、
+$n_2=1.63$ 为填隙物、
+$n_3=1.70$ 为玻璃板）。
+球面半径 $R=100$cm，
+反射光波长 $\lambda=0.50\,\mathrm{\mu m}$。
+求第五暗环半径。
+\exsolution
+因 $n_1<n_2<n_3$，
+在透镜—填隙物与填隙物—玻璃两界面反射均有 $\pi$ 相位反转，
+相互反射波之间无额外 $\pi$ 相对翻转。
+暗环条件为
+$2n_2h=(k+\tfrac12)\lambda$，
+$h=r^2/(2R)$，所以
+\[
+\boxed{r_k=
+\sqrt{\frac{(2k+1)\lambda R}{2n_2}}}.
+\]
+对 $k=5$：
+\[
+\boxed{r_5\simeq
+\sqrt{\frac{11(0.50\times10^{-6})(1)}
+{2(1.63)}}
+\simeq1.3\,\mathrm{mm}}.
+\]
+\excheck 本题与通常空气隙牛顿环的中心明暗相反，
+必须用三个折射率确定两个反射相位。
+
+\interferenceproblem{93}{202}
+两光束干涉仪使用汞的橙色双线
+$\lambda_1=576.97$nm、
+$\lambda_2=579.03$nm。
+求最早使两套干涉条纹彼此可见度最低的干涉级次。
+\exsolution
+两条谱线对应不同波数
+$k_i=2\pi/\lambda_i$。
+两套条纹的相位差相差 $\pi$ 时互相抵消，
+因此
+$2\pi\Delta(1/\lambda_1-1/\lambda_2)=\pi$。
+以平均波长 $\bar\lambda$ 对应级次
+$m=\Delta/\bar\lambda$，
+有
+\[
+\boxed{m_{\min}\simeq
+\frac{\bar\lambda}{2|\lambda_2-\lambda_1|}
+=\frac{578\,\mathrm{nm}}{2(2.06\,\mathrm{nm})}
+\simeq140}.
+\]
+\excheck 这里对应可见度包络的\emph{首次最小值}，不是一个单一波长的干涉强度零点。
+
+\interferenceproblem{94}{202}
+米歇尔逊干涉仪使用钠黄双线
+$\lambda_1=589.0$nm、
+$\lambda_2=589.6$nm。
+解释为什么移动一镜时条纹会周期性消失，并求相邻两次最清晰干涉图样之间的镜面位移。
+\exsolution
+两波长的相对干涉相位
+$\Delta\phi=2\pi\Delta(1/\lambda_1-1/\lambda_2)$。
+因为各自干涉强度的周期稍不同，
+当相对相位约为 $\pi$ 时相互抵消使条纹可见度最小；
+相对相位增加 $2\pi$ 后两套条纹再度同相清晰。
+相邻最清晰状态的光程差改变
+$\delta\Delta=\lambda_1\lambda_2/|\lambda_2-\lambda_1|$。
+镜移动 $\delta h$ 使往返光程差改变
+$2\delta h$，所以
+\[
+\boxed{\delta h=
+\frac{\lambda_1\lambda_2}{2|\lambda_2-\lambda_1|}
+\simeq0.29\,\mathrm{mm}\approx0.30\,\mathrm{mm}}.
+\]
+\excheck 米歇尔逊反射为往返\emph{双程}，故镜面位移等于光程差增量的一半。
+
+\interferenceproblem{95}{202}
+厚度为 $d$ 的法布里—珀罗标准具受到单色光照射，在透镜焦平面出现同心干涉环（图5.18）。
+求：(a) 各环位置随干涉级次的变化；
+(b) 相邻极大角间距与干涉级次的关系。
+\exsolution
+标准具内光线与法线夹角为 $\theta$，
+两次透射光相长的条件
+\[
+\boxed{2d\cos\theta=m\lambda},\qquad m\in\mathbb Z.
+\]
+令近轴透镜焦距为 $f$，
+环半径 $r\simeq f\tan\theta\simeq f\theta$。
+因 $\cos\theta$ 随 $\theta$ 增大而减小，
+越向外的环对应\emph{更低}的 $m$。
+相邻阶次差1，对上述式微分：
+$2d|\sin\theta|\,\delta\theta\simeq\lambda$，
+\[
+\boxed{\delta\theta\simeq\frac{\lambda}{2d\sin\theta}}.
+\]
+\excheck 对较外侧较大 $\theta$，
+同阶间隔在角度上\emph{减小}；在 $\theta=0$ 需用小角的平方关系不能直接除以 $\sin0$。
+
+\interferenceproblem{96}{202}
+法布里—珀罗标准具厚度 $d=2.5$cm，
+观察 $\lambda=0.50\,\mathrm{\mu m}$ 的单色光。
+求：(a) 最高干涉级次；
+(b) 近此波长互不与相邻干涉级重叠的自由光谱范围 $\Delta\lambda$。
+\exsolution
+最大级次对应正入射，
+$2d=m_{\max}\lambda$，
+所以
+\[
+\boxed{m_{\max}=\frac{2d}{\lambda}
+=\frac{0.050}{0.50\times10^{-6}}
+=1.0\times10^5}.
+\]
+相邻谱线在不同干涉级次重叠时
+$m\lambda=(m+1)(\lambda-\Delta\lambda)$，
+对高阶 $m$，
+$\Delta\lambda\simeq\lambda/m\simeq\lambda^2/(2d)$。
+因此
+\[
+\boxed{\Delta\lambda\simeq
+\frac{\lambda^2}{2d}
+=\frac{(0.50\times10^{-6})^2}{0.050}
+=5.0\,\mathrm{pm}}.
+\]
+\excheck 自由光谱范围与分辨本领的\emph{仪器精细度}不同；
+前者由相邻级次重叠决定。
