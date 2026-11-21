@@ -455,8 +455,8 @@ POLARIZATION_CHAPTERS = [
     "30-optics-polarization-176-199.tex",
 ]
 POLARIZATION_RANGES = [range(157, 158), range(158, 176), range(176, 200)]
-DISPERSION_CHAPTERS = ["31-optics-dispersion-200-215.tex"]
-DISPERSION_RANGES = [range(200, 216)]
+DISPERSION_CHAPTERS = ["31-optics-dispersion-200-215.tex", "31-optics-dispersion-216-223.tex"]
+DISPERSION_RANGES = [range(200, 216), range(216, 224)]
 
 part_three = []
 for macro, filenames, expected_ranges in [
@@ -582,8 +582,8 @@ for macro, filenames, ranges in [
             errors.append(f"{name}: TeX braces unbalanced")
         if r"\input{chapters/" + path.stem + "}" not in main:
             errors.append(f"main.tex missing chapter: {name}")
-if part_five != list(range(1, 216)):
-    errors.append("Part V independent numbering is not exactly 1..215")
+if part_five != list(range(1, 224)):
+    errors.append("Part V independent numbering is not exactly 1..223")
 if main.count(r"\chapter{光学}") != 1:
     errors.append("Part V chapter count is not one")
 for heading in (
@@ -596,4 +596,4 @@ if errors:
     for e in errors:
         print("FAIL:", e, file=sys.stderr)
     sys.exit(1)
-print("PASS: 388 Part-I + 257 Part-II + 407 Part-III + 224 Part-IV + 215 Part-V = 1491 translated solved problems in 134 chapter files; all five independent numbering ranges verified")
+print("PASS: 388 Part-I + 257 Part-II + 407 Part-III + 224 Part-IV + 223 Part-V = 1499 translated solved problems in 135 chapter files; all five independent numbering ranges verified")
