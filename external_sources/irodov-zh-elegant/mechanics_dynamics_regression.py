@@ -105,7 +105,7 @@ test(73,"two-pulley tension newtons",TT,4.06)
 test(73,"object1 downward acceleration",a73,7.78)
 check_equilibrium(73,"force balance on object2 with rope",m2*(G-TT/m2)-m2*(G-TT/m2))
 test(74,"friction ball-on-thread with M2 m.5 ell1 t3 N",
-     2*1*.5*2/((2-.5)*3**2),.148148,1e-10)
+     2*1*.5*2/((2-.5)*3**2),4/27,1e-10)
 test(75,"two-stage pulley rod-ball meeting time s",
      sqrt(2*1*(4+1.8)/(3*G*(2-1.8))),1.40)
 test(75,"rod-ball limiting eta reaches 2",float(1.8<2),1,1e-10)
