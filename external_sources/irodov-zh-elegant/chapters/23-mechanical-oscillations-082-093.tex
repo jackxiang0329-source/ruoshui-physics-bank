@@ -1,0 +1,308 @@
+% Irodov Part IV §4.1 original 82--93.
+% Checked user-uploaded Arihant PDF pp.174--176, printed pp.165--167,
+% and book answers PDF pp.325--326 (printed pp.316--317).
+\oscproblem{82}{165}
+质量 $m=0.50\,\mathrm{kg}$ 的木块在水平面上由原长弹簧连接墙面；滑动摩擦系数 $\mu=0.10$，弹簧刚度 $k=2.45\,\mathrm{N/cm}$，弹簧质量忽略。先将弹簧拉长 $x_0=3.0\,\mathrm{cm}$，随后释放。求：(a) 振动周期；(b) 完全停下以前的振动次数。
+\exsolution
+块在每段单向滑行中受到大小为 $\mu mg$ 的恒定摩擦力，运动方程
+$m\ddot x+kx=-\mu mg\,\operatorname{sgn}\dot x$。
+分段仍是角频率 $\omega_0=\sqrt{k/m}$ 的简谐运动，因此
+\[
+\boxed{T=2\pi\sqrt{\frac mk}
+=2\pi\sqrt{\frac{0.50}{245}}\simeq0.28\,\mathrm s}.
+\]
+记 $\Delta=\mu mg/k=0.0020\,\mathrm m=0.20\,\mathrm{cm}$。
+从一个转折点运动到下一反向转折点时，由摩擦功或围绕偏移平衡点求解，幅值下降 $2\Delta$；每一整周下降 $4\Delta$。到最后一个转折点，若剩余弹簧力不超过最大静摩擦力（即 $|x|\le\Delta$），物块停住。按原题 $x_0/\Delta=15$，恰经过七个半周后到达 $|x|=\Delta$，所以
+\[
+\boxed{N=\frac{x_0-\Delta}{4\Delta}
+=\frac{3.0-0.20}{0.80}=3.5\ \text{周}}.
+\]
+\excheck 源题摩擦系数原记为 $k$、弹簧系数原记为 $\varkappa$；本稿用 $\mu,k$ 区别。临界转折点处所需静摩擦不超过 $\mu mg$。
+
+\oscproblem{83}{165}
+质量为 $m$ 的无阻尼谐振子固有角频率 $\omega_0$，$t=0$ 时处于平衡位置且静止；从此时起施加外力 $F_x=F_0\cos\omega t$。求随后位移 $x(t)$。
+\exsolution
+微分方程
+$\ddot x+\omega_0^2x=(F_0/m)\cos\omega t$，
+初值 $x(0)=\dot x(0)=0$。
+当 $\omega\ne\omega_0$，特解与齐次解叠加并由初值得
+\[
+\boxed{x(t)=\frac{F_0/m}{\omega_0^2-\omega^2}
+\left(\cos\omega t-\cos\omega_0t\right)}.
+\]
+利用 $\cos a-\cos b$ 的极限求共振：
+\[
+\boxed{x_{\rm res}(t)=\frac{F_0}{2m\omega_0}
+\,t\sin\omega_0t}\quad(\omega=\omega_0).
+\]
+\excheck 非共振时初始位移和速度均为零；共振时振幅包络随 $t$ 线性增长，只有在无阻尼理想模型中成立。
+
+\oscproblem{84}{165}
+质量 $m$ 的一维粒子在回复力 $-kx$ 下作自由简谐振动。原先位于平衡点静止，突然施加恒力 $F$ 并持续时间 $\tau$，然后撤去。求撤力后的振动振幅，讨论特殊持续时间并描述位移曲线。
+\exsolution
+令 $\omega_0=\sqrt{k/m}$。施力期间
+$\ddot x+\omega_0^2x=F/m$，
+零初值解
+\[
+x(t)=\frac Fk(1-\cos\omega_0t),\quad
+\dot x(t)=\frac{F\omega_0}{k}\sin\omega_0t
+\quad(0\le t\le\tau).
+\]
+撤力后的简谐振幅由撤力瞬间的相空间位置决定：
+\[
+a=\sqrt{x(\tau)^2+\frac{\dot x(\tau)^2}{\omega_0^2}}
+=\frac{|F|}{k}\sqrt{(1-\cos u)^2+\sin^2u},
+\quad u=\omega_0\tau.
+\]
+故
+\[
+\boxed{a=\frac{2|F|}{k}
+\left|\sin\frac{\omega_0\tau}{2}\right|}.
+\]
+若 $\tau=2\pi n/\omega_0$，撤力时返回原平衡点并静止，$a=0$；若 $\tau=(2n+1)\pi/\omega_0$，$a=2|F|/k$ 达到最大。
+\excheck 两段位移及速度在 $t=\tau$ 连续，只有加速度因外力撤去而跳变。
+
+\oscproblem{85}{165--166}
+质量为 $m$ 的弹簧振子悬挂后使弹簧伸长 $\Delta\ell$。受振幅为 $F_0$ 的竖直谐波外力，阻尼振动的对数减量为 $\lambda$。弹簧质量忽略，求位移响应幅度最大时的外力角频率和最大位移幅度。
+\exsolution
+由静平衡 $k\Delta\ell=mg$，固有角频率
+$\omega_0=\sqrt{g/\Delta\ell}$。
+令阻尼系数 $\beta$，阻尼自由振动频率
+$\omega_d=\sqrt{\omega_0^2-\beta^2}$，
+对数减量
+$\lambda=2\pi\beta/\omega_d$。
+记 $\delta=\lambda/(2\pi)$，
+则
+$\beta^2=\omega_0^2\delta^2/(1+\delta^2)$。
+稳态位移幅度
+\[
+A(\omega)=\frac{F_0/m}
+{\sqrt{(\omega_0^2-\omega^2)^2+4\beta^2\omega^2}}.
+\]
+对分母平方求极小得到
+$\omega_{\rm res}^2=\omega_0^2-2\beta^2$，因而
+\[
+\boxed{\omega_{\rm res}=
+\sqrt{\frac{g}{\Delta\ell}}
+\sqrt{\frac{1-\delta^2}{1+\delta^2}}},
+\qquad \delta=\frac{\lambda}{2\pi}.
+\]
+在 $\delta<1$ 且频率非零的共振区间，代回分母：
+\[
+\boxed{A_{\rm res}
+=\frac{F_0\Delta\ell}{4\pi mg}
+\left(\lambda+\frac{4\pi^2}{\lambda}\right)}.
+\]
+\excheck 当 $\delta\ge1$ 时非零共振峰消失，幅度最大转为静态极限 $\omega=0$，上式不能无条件继续应用。
+
+\oscproblem{86}{166}
+某受迫阻尼振子在外力角频率 $\omega_1=400\,\mathrm{s^{-1}}$ 和
+$\omega_2=600\,\mathrm{s^{-1}}$ 时有相同位移振幅。求位移幅度共振角频率。
+\exsolution
+位移响应幅度分母的平方
+$D(u)=(\omega_0^2-u)^2+4\beta^2u$，
+$u=\omega^2$。
+因 $D(\omega_1^2)=D(\omega_2^2)$ 且两频不同，二次多项式对称轴为
+\[
+u_{\rm res}=\omega_0^2-2\beta^2
+=\frac{\omega_1^2+\omega_2^2}{2}.
+\]
+于是
+\[
+\boxed{\omega_{\rm res}=
+\sqrt{\frac{\omega_1^2+\omega_2^2}{2}}
+=\sqrt{260000}\,\mathrm{s^{-1}}
+\simeq5.1\times10^2\,\mathrm{s^{-1}}}.
+\]
+\excheck 共振频率不是两频率的算术平均 $500\,\mathrm{s^{-1}}$，而是频率平方的平均值开根号。
+
+\oscproblem{87}{166}
+谐波外力频率分别为 $\omega_1,\omega_2$ 时，阻尼受迫振子的\emph{速度幅度}都恰为全频段最大速度幅度的一半。求：(a) 速度共振角频率；(b) 阻尼系数 $\beta$ 与自由阻尼角频率 $\omega_d$。
+\exsolution
+速度响应幅度
+$V(\Omega)=(F_0/m)\Omega/
+\sqrt{(\omega_0^2-\Omega^2)^2+4\beta^2\Omega^2}$。
+其最大值在 $\Omega=\omega_0$，为 $F_0/(2m\beta)$。
+半峰条件 $V(\Omega)=V_{\max}/2$ 得
+\[
+(\omega_0^2-\Omega^2)^2=12\beta^2\Omega^2.
+\]
+两个正根 $\omega_1,\omega_2$ 满足
+$\omega_1\omega_2=\omega_0^2$、
+$|\omega_2-\omega_1|=2\sqrt3\,\beta$。
+因此
+\[
+\boxed{\Omega_{\rm vel,res}=\omega_0
+=\sqrt{\omega_1\omega_2}},
+\qquad
+\boxed{\beta=\frac{|\omega_2-\omega_1|}{2\sqrt3}},
+\]
+\[
+\boxed{\omega_d=
+\sqrt{\omega_1\omega_2-
+\frac{(\omega_2-\omega_1)^2}{12}}}.
+\]
+\excheck 需区分\emph{位移共振}与\emph{速度共振}：后者精确位于 $\omega_0$。
+
+\oscproblem{88}{166}
+某机械振动系统的位移共振曲线对应对数减量
+$\lambda=1.60$。
+求最大稳态位移幅度与极低驱动频率下位移幅度的比值。
+\exsolution
+设 $\omega_0$ 为固有频率，阻尼 $\beta$；
+记 $\delta=\beta/\omega_d=\lambda/(2\pi)$。
+低频幅度
+$A(0)=F_0/(m\omega_0^2)$。
+位移共振最大幅度
+$A_{\max}=F_0/[2m\beta\sqrt{\omega_0^2-\beta^2}]$。
+由 $\omega_d^2=\omega_0^2-\beta^2$，得
+\[
+\frac{A_{\max}}{A(0)}
+=\frac{\omega_0^2}{2\beta\omega_d}
+=\frac{1+\delta^2}{2\delta}.
+\]
+故
+\[
+\boxed{\frac{A_{\max}}{A(0)}
+=\frac{\pi}{\lambda}+\frac{\lambda}{4\pi}
+\simeq2.1}.
+\]
+\excheck $\lambda=1.60<2\pi$，非零位移共振峰存在。
+
+\oscproblem{89}{166}
+悬挂的弹簧振子受外力
+$F_x=F_0\cos\omega t$，
+稳态位移
+$x=a\cos(\omega t-\varphi)$。
+求外力在一个完整振动周期内做功。
+\exsolution
+瞬时功率 $P=F_x\dot x$，
+且 $\dot x=-a\omega\sin(\omega t-\varphi)$。
+令 $\theta=\omega t$，
+\[
+W=\int_0^{2\pi/\omega}F_x\dot x\,\mathrm dt
+=-aF_0\int_0^{2\pi}\cos\theta\,
+\sin(\theta-\varphi)\,\mathrm d\theta.
+\]
+展开正弦，周期平均
+$\int_0^{2\pi}\cos^2\theta\,\mathrm d\theta=\pi$、
+$\int_0^{2\pi}\sin\theta\cos\theta\,\mathrm d\theta=0$，
+所以
+\[
+\boxed{W=\pi aF_0\sin\varphi}.
+\]
+\excheck 稳态周期中储能净变化为零，正功恰抵消阻尼耗能；保守力无此净输入。
+
+\oscproblem{90}{166}
+质量 $m=50\,\mathrm g$ 的球悬于弹簧
+$k=20.0\,\mathrm{N/m}$，
+在频率 $\omega=25.0\,\mathrm{s^{-1}}$ 的竖直周期外力作用下，
+稳态位移幅度 $a=1.3\,\mathrm{cm}$，
+位移相对外力滞后相位 $\varphi=3\pi/4$。
+求：(a) 品质因数；(b) 外力在一个周期内做功。
+\exsolution
+固有频率平方
+$\omega_0^2=k/m=400\,\mathrm{s^{-2}}$，
+阻尼力模型为 $2m\beta\dot x$。
+相位关系
+$\tan\varphi=2\beta\omega/(\omega_0^2-\omega^2)$；
+$\tan(3\pi/4)=-1$，
+$\omega_0^2-\omega^2=-225$，得
+$2\beta\omega=225$，即
+$\beta=4.5\,\mathrm{s^{-1}}$。
+品质因数按 $Q=\omega_0/(2\beta)$：
+\[
+\boxed{Q=\frac{20}{9}\simeq2.2}.
+\]
+由实部响应
+$F_0\cos\varphi=m a(\omega_0^2-\omega^2)$，
+并用第89题功公式
+$W=\pi aF_0\sin\varphi$，
+\[
+W=\pi m a^2(\omega_0^2-\omega^2)\tan\varphi,
+\quad
+\boxed{W\simeq6.0\,\mathrm{mJ}}.
+\]
+\excheck $\varphi$ 位于第二象限，表示驱动频率高于固有频率；尽管 $\cos\varphi<0$，做功为正。
+
+\oscproblem{91}{166}
+质量为 $m$ 的阻尼弹簧振子固有角频率 $\omega_0$、
+阻尼系数 $\beta$，受竖直外力
+$F=F_0\cos\omega t$ 而稳态振动。
+求：(a) 外力一周期平均功率；
+(b) 平均功率最大的驱动频率及其值。
+\exsolution
+稳态位移幅度
+$A=(F_0/m)/\sqrt{D}$，
+$D=(\omega_0^2-\omega^2)^2+4\beta^2\omega^2$。
+相位滞后满足
+$\sin\varphi=2\beta\omega/\sqrt D$。
+第89题每周做功为 $\pi AF_0\sin\varphi$，
+除以周期 $2\pi/\omega$：
+\[
+\boxed{\overline P=
+\frac{F_0^2\beta\omega^2/m}
+{(\omega_0^2-\omega^2)^2+4\beta^2\omega^2}}.
+\]
+将分母除以 $\omega^2$，
+可见当 $\omega=\omega_0$ 时取最小，
+故
+\[
+\boxed{\omega_{\rm Pmax}=\omega_0,\qquad
+\overline P_{\max}=\frac{F_0^2}{4m\beta}}.
+\]
+\excheck 平均\emph{吸收功率}共振发生在 $\omega_0$，而位移响应共振常在更低的频率。
+
+\oscproblem{92}{166}
+外力幅度保持恒定而频率可调，竖直作用于阻尼弹簧球。阻尼系数 $\beta=\omega_0/\eta$，即比固有角频率小 $\eta$ 倍。求在\emph{位移共振}频率下平均吸收功率较最大平均功率降低百分之多少。
+\exsolution
+位移共振频率满足
+$\omega_r^2=\omega_0^2-2\beta^2$，
+在 $\eta>\sqrt2$ 时存在非零峰。
+由第91题
+\[
+\frac{\overline P(\omega_r)}{\overline P_{\max}}
+=\frac{4\beta^2\omega_r^2}
+{(\omega_0^2-\omega_r^2)^2+4\beta^2\omega_r^2}
+=\frac{\omega_0^2-2\beta^2}{\omega_0^2-\beta^2}.
+\]
+所以相对差百分率
+\[
+\boxed{
+100\frac{\overline P_{\max}-\overline P(\omega_r)}
+{\overline P_{\max}}
+=\frac{100}{\eta^2-1}\,\%}.
+\]
+\excheck 若 $\eta\le\sqrt2$ 则位移共振峰移至零频极限，须单独讨论而不直接套入此式。
+
+\oscproblem{93}{167}
+均匀水平圆盘由中心弹性竖杆悬挂，
+外施谐波扭矩 $N_\tau=N_m\cos\omega t$，
+扭转稳态响应
+$\varphi(t)=\varphi_m\cos(\omega t-\alpha)$。
+求：(a) 摩擦力在一周期内所做功；
+(b) 已知圆盘对轴转动惯量为 $J$，求系统品质因数。
+\exsolution
+(a) 外扭矩每周做功
+$W_{\rm ext}=\pi N_m\varphi_m\sin\alpha$，
+稳态系统能量周期变化为零，
+因此摩擦做功是其负值：
+\[
+\boxed{W_{\rm fric}=-\pi N_m\varphi_m\sin\alpha}.
+\]
+(b) 稳态旋转方程
+$J\ddot\varphi+2J\beta\dot\varphi+
+J\omega_0^2\varphi=N_m\cos\omega t$。
+由相量实部和虚部
+\[
+\omega_0^2-\omega^2
+=\frac{N_m\cos\alpha}{J\varphi_m},
+\qquad
+2\beta\omega=\frac{N_m\sin\alpha}{J\varphi_m}.
+\]
+依 $Q=\omega_0/(2\beta)$，
+\[
+\boxed{Q=\frac{\omega J\varphi_m}{N_m\sin\alpha}
+\sqrt{\omega^2+\frac{N_m\cos\alpha}{J\varphi_m}}}.
+\]
+\excheck 只使用外力扭矩、响应幅相和惯量即可确定阻尼与固有频率；$\sin\alpha>0$ 保障耗散功为负。
