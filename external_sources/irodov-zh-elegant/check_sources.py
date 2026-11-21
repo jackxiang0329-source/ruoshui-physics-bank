@@ -102,9 +102,37 @@ THERMO_ENTROPY_CHAPTERS = [
     "12-entropy-cycles-122-129.tex",
     "12-entropy-cycles-130-139.tex",
     "12-entropy-cycles-140-145.tex",
+    "12-entropy-cycles-146-159.tex",
 ]
 THERMO_ENTROPY_EXPECTED = [
-    range(113, 122), range(122, 130), range(130, 140), range(140, 146),
+    range(113, 122), range(122, 130), range(130, 140),
+    range(140, 146), range(146, 160),
+]
+THERMO_CAPILLARY_CHAPTERS = [
+    "13-capillarity-160-169.tex",
+    "13-capillarity-170-179.tex",
+    "13-capillarity-180-184.tex",
+]
+THERMO_CAPILLARY_EXPECTED = [
+    range(160, 170), range(170, 180), range(180, 185),
+]
+THERMO_PHASE_CHAPTERS = [
+    "14-phase-transformations-185-194.tex",
+    "14-phase-transformations-195-204.tex",
+    "14-phase-transformations-205-214.tex",
+    "14-phase-transformations-215-219.tex",
+]
+THERMO_PHASE_EXPECTED = [
+    range(185, 195), range(195, 205),
+    range(205, 215), range(215, 220),
+]
+THERMO_TRANSPORT_CHAPTERS = [
+    "15-transport-220-229.tex",
+    "15-transport-230-239.tex",
+    "15-transport-240-245.tex",
+]
+THERMO_TRANSPORT_EXPECTED = [
+    range(220, 230), range(230, 240), range(240, 246),
 ]
 
 errors = []
@@ -211,14 +239,20 @@ if r"\newcommand{\thermoenergyproblem}" not in main:
 if main.count(r"\section{热力学第一定律与热容") != 1:
     errors.append("first law section count is not one")
 
-# The second book part is a SINGLE independent 1..145 range,
+# The second book part is a SINGLE independent 1..245 range,
 # and each newly introduced subject has its own macro and source list.
 subject_results = {}
 for label, chapters, ranges, macro, expected_ids in [
     ("kinetic", THERMO_KINETIC_CHAPTERS, THERMO_KINETIC_EXPECTED,
      "thermokineticproblem", list(range(62, 113))),
     ("entropy", THERMO_ENTROPY_CHAPTERS, THERMO_ENTROPY_EXPECTED,
-     "thermoentropyproblem", list(range(113, 146))),
+     "thermoentropyproblem", list(range(113, 160))),
+    ("capillarity", THERMO_CAPILLARY_CHAPTERS, THERMO_CAPILLARY_EXPECTED,
+     "thermocapillaryproblem", list(range(160, 185))),
+    ("phase", THERMO_PHASE_CHAPTERS, THERMO_PHASE_EXPECTED,
+     "thermophaseproblem", list(range(185, 220))),
+    ("transport", THERMO_TRANSPORT_CHAPTERS, THERMO_TRANSPORT_EXPECTED,
+     "thermotransportproblem", list(range(220, 246))),
 ]:
     observed = []
     for name, expected in zip(chapters, ranges):
@@ -248,13 +282,24 @@ for label, chapters, ranges, macro, expected_ids in [
         errors.append(f"main.tex missing {macro} macro")
     subject_results[label] = observed
 
-part_two = thermo_ids + energy_ids + subject_results["kinetic"] + subject_results["entropy"]
-if part_two != list(range(1, 146)):
-    errors.append("Part II combined original IDs are not exactly 1..145")
+part_two = (thermo_ids + energy_ids
+            + subject_results["kinetic"] + subject_results["entropy"]
+            + subject_results["capillarity"] + subject_results["phase"]
+            + subject_results["transport"])
+if part_two != list(range(1, 246)):
+    errors.append("Part II combined original IDs are not exactly 1..245")
 if main.count(r"\section{气体分子运动论") != 1:
     errors.append("kinetic theory section count is not one")
 if main.count(r"\section{热力学第二定律与熵") != 1:
     errors.append("entropy section count is not one")
+
+
+if main.count(r"\section{液体与毛细现象") != 1:
+    errors.append("capillarity section count is not one")
+if main.count(r"\section{相变与饱和蒸气") != 1:
+    errors.append("phase section count is not one")
+if main.count(r"\section{输运现象") != 1:
+    errors.append("transport section count is not one")
 
 if main.count(r"\chapter{热力学与分子物理}") != 1:
     errors.append("Part II chapter count is not one")
@@ -267,4 +312,4 @@ if errors:
     for e in errors:
         print("FAIL:", e, file=sys.stderr)
     sys.exit(1)
-print("PASS: 388 Part-I + 145 Part-II (25 gas-state + 36 first-law + 51 kinetic + 33 entropy) = 533 translated solved problems; original numbering and all chapters verified")
+print("PASS: 388 Part-I + 245 Part-II (25 gas-state + 36 first-law + 51 kinetic + 47 entropy + 25 capillarity + 35 phase + 26 transport) = 633 translated solved problems; original numbering and all chapters verified")
