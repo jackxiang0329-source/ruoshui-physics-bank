@@ -1,0 +1,133 @@
+% Irodov Part VI §6.3, original 97--104, printed page 245.
+% Input: user-provided PDF page 254 and appendix Rydberg constant.
+\atomictermsproblem{97}{245}
+锂原子的价电子在$2S$及$2P$态的结合能
+分别为$5.39\,\mathrm{eV}$和$3.54\,\mathrm{eV}$。
+求对应里德伯修正量。
+\exsolution
+碱金属结合能近似为
+$E_{nL}=\mathrm{Ry}/(n+\alpha_L)^2$，
+其中$\mathrm{Ry}=13.606\,\mathrm{eV}$。
+本题$n=2$，故
+\[
+ \boxed{\alpha_S=\sqrt{13.606/5.39}-2\simeq-0.41},
+ \qquad
+ \boxed{\alpha_P=\sqrt{13.606/3.54}-2\simeq-0.04}.
+\]
+\excheck 采用$n+\alpha$记号故修正量为负，
+常见量子亏损$\delta=-\alpha$为正。
+
+\atomictermsproblem{98}{245}
+钠价电子基态$3S$结合能为$5.14\,\mathrm{eV}$，
+第一次激发电势为$2.10\,\mathrm V$。
+求$3P$项的里德伯修正量。
+\exsolution
+激发态价电子结合能
+$E_b(3P)=5.14-2.10=3.04\,\mathrm{eV}$，
+故
+\[
+ \boxed{\alpha_{3P}=\sqrt{\mathrm{Ry}/3.04}-3
+ \simeq-0.88}.
+\]
+\excheck 由于电子被激发后更容易电离，
+$3P$结合能低于$3S$结合能。
+
+\atomictermsproblem{99}{245}
+锂锐线系第一条谱线波长$\lambda_1=813\,\mathrm{nm}$，
+系列短波限$\lambda_2=350\,\mathrm{nm}$。
+求基态价电子结合能。
+\exsolution
+锐线系对应$nS\to2P$。
+短波极限给$E_{b,2P}=hc/\lambda_2$，
+首条谱线$3S\to2P$给
+$E_{b,3S}=hc(1/\lambda_2-1/\lambda_1)$。
+S系列修正量
+$\alpha_S=\sqrt{\mathrm{Ry}/E_{b,3S}}-3$，
+所以
+\[
+ \boxed{E_{b,2S}=\frac{\mathrm{Ry}}{(2+\alpha_S)^2}
+ \simeq5.3\,\mathrm{eV}}.
+\]
+\excheck 本题最终求的是$2S$基态结合能，
+而非由系列短波限直接得出的$2P$结合能。
+
+\atomictermsproblem{100}{245}
+锂的S、P项里德伯修正量分别为$-0.41$、$-0.04$。
+求由$3S$经$2P$至基态$2S$时发出的谱线波长。
+\exsolution
+电偶极跃迁要求$\Delta L=\pm1$，
+故顺次发生$3S\to2P$、$2P\to2S$。
+令$E_{b,nL}=\mathrm{Ry}/(n+\alpha_L)^2$，
+\[
+ \lambda_1=\frac{hc}{E_{b,2P}-E_{b,3S}},
+ \qquad
+ \lambda_2=\frac{hc}{E_{b,2S}-E_{b,2P}}.
+\]
+代入各$n,L$项，得
+\[
+ \boxed{\lambda_{3S\to2P}\simeq0.82\,\mu\mathrm m},
+ \qquad
+ \boxed{\lambda_{2P\to2S}\simeq0.68\,\mu\mathrm m}.
+\]
+\excheck 两光子能量的和等于初末能级差；
+不能直接认为$3S\to2S$是一条允许电偶极谱线。
+
+\atomictermsproblem{101}{245}
+钠共振黄线双线的波长为
+$589.00$及$589.56\,\mathrm{nm}$，
+均对应$3P\to3S$，求$3P$项精细劈裂能。
+\exsolution
+因两线共用$3S$下能级，其光子能量之差
+等于上能级的差：
+\[
+ \boxed{\Delta E=hc\left|
+ \frac1{589.00\,\mathrm{nm}}-\frac1{589.56\,\mathrm{nm}}
+ \right|\simeq2.0\times10^{-3}\,\mathrm{eV}}.
+\]
+\excheck 必须用倒波长差，而非波长的直接差。
+
+\atomictermsproblem{102}{245}
+铯锐线系第一线是双线，
+波长为$1358.8$和$1469.5\,\mathrm{nm}$。
+求后续谱线双线分量的角频率间隔。
+\exsolution
+锐线系同一末态$P$项存在恒定精细结构分裂，
+因此全部锐线系双线角频率间隔一致。
+\[
+ \boxed{\Delta\omega=
+ 2\pi c\left|\frac1{1358.8\,\mathrm{nm}}
+ -\frac1{1469.5\,\mathrm{nm}}\right|
+ \simeq1.05\times10^{14}\,\mathrm{rad/s}}.
+\]
+\excheck 角频率比普通频率相差$2\pi$。
+
+\atomictermsproblem{103}{245}
+列出氢原子电子主量子数$n=3$时
+所有可能的光谱项。
+\exsolution
+轨道量子数$l=0,1,2$，
+电子自旋$s=1/2$，
+耦合允许$j=l\pm1/2$，舍去负$j$。
+于是
+\[
+ \boxed{3S_{1/2},\quad3P_{1/2},\quad3P_{3/2},\quad
+ 3D_{3/2},\quad3D_{5/2}}.
+\]
+\excheck $l=0$时只允许$j=1/2$，共五个谱项。
+
+\atomictermsproblem{104}{245}
+原子轨道角动量与自旋量子数$(L,S)$分别为
+(a)$(3,2)$；(b)$(3,3)$；(c)$(2,5/2)$，
+求总角动量量子数$J$的所有可能取值。
+\exsolution
+根据三角耦合规则，
+$J=|L-S|,|L-S|+1,\ldots,L+S$，
+\[
+ \boxed{\text{(a)}\ J=1,2,3,4,5},
+ \qquad
+ \boxed{\text{(b)}\ J=0,1,2,3,4,5,6},
+\]
+\[
+ \boxed{\text{(c)}\ J=\tfrac12,\tfrac32,\tfrac52,\tfrac72,\tfrac92}.
+\]
+\excheck 整数与半整数耦合时总$J$为半整数。
