@@ -1,0 +1,256 @@
+% Irodov Part VI §6.7 original problems 291--300.
+% User-supplied Arihant PDF pp.274--275 (printed pp.265--266);
+% answers PDF p.360 (printed 351). Particle rest energies are MeV.
+\elementaryproblem{291}{265}
+质子的动量大小分别为
+$0.10,\ 1.0,\ 10\,\mathrm{GeV}/c$，
+求三种情形的动能。
+\exsolution
+质子的静止能量$m_pc^2=0.93827\,\mathrm{GeV}$。
+由相对论质能关系
+$E^2=p^2c^2+m_p^2c^4$、
+$T=E-m_pc^2$，得到
+\[
+ \boxed{T(p)=\sqrt{p^2c^2+m_p^2c^4}-m_pc^2}.
+\]
+代入三种动量
+\[
+ \boxed{T_{0.10}=0.00531\,\mathrm{GeV}
+ =5.31\,\mathrm{MeV}},\qquad
+ \boxed{T_{1.0}=0.433\,\mathrm{GeV}},\qquad
+ \boxed{T_{10}=9.11\,\mathrm{GeV}}.
+\]
+\excheck 本版书末首项印$0.05\,\mathrm{GeV}$，
+但动量仅$0.10\,\mathrm{GeV}/c$时
+非相对论检验$T\simeq p^2/(2m_p)=5.3$MeV；
+书末首项有约十倍数量级差异，需记录。
+
+\elementaryproblem{292}{265}
+$\pi$介子的动能超过其静止能量$\eta=1.2$倍，
+即$T=\eta m_\pi c^2$。
+固有平均寿命$\tau_0=25.5\,\mathrm{ns}$，
+求实验室系平均飞行距离。
+\exsolution
+洛伦兹因子
+$\gamma=1+T/(m_\pi c^2)=1+\eta$。
+平均寿命延长至$\gamma\tau_0$，
+速率$v=\beta c$，
+所以
+\[
+ \overline l=\beta\gamma c\tau_0
+ =c\tau_0\sqrt{\gamma^2-1}
+ =\boxed{c\tau_0\sqrt{\eta(\eta+2)}}.
+\]
+代入$\eta=1.2$得
+\[
+ \boxed{\overline l\simeq
+ (299792458)(25.5\times10^{-9})\sqrt{1.2(3.2)}
+ \simeq15.0\,\mathrm m}.
+\]
+\excheck 既要考虑寿命膨胀$\gamma$，
+也要计算运动速度$\beta c$；
+不可简单取$c\gamma\tau_0$。
+
+\elementaryproblem{293}{266}
+负$\pi$介子动能
+$T=100\,\mathrm{MeV}$，
+从产生至衰变的平均实验室距离
+$l=11\,\mathrm m$。
+求其固有平均寿命。
+\exsolution
+定义$m_\pi c^2\simeq139.57\,\mathrm{MeV}$。
+由$pc=\sqrt{T(T+2m_\pi c^2)}$，
+$\beta\gamma=pc/(m_\pi c^2)$。
+相对论飞行距离$l=\beta\gamma c\tau_0$，
+反解
+\[
+ \boxed{\tau_0=
+ \frac{l\,m_\pi c^2}
+ {c\sqrt{T(T+2m_\pi c^2)}}}.
+\]
+代入$T=100$MeV及$l=11$m，
+\[
+ \boxed{\tau_0\simeq2.63\times10^{-8}\,\mathrm s
+ \simeq26\,\mathrm{ns}}.
+\]
+\excheck 得到的固有寿命与低速$\pi^\pm$
+约26ns的寿命一致，说明已正确剥离时间膨胀。
+
+\elementaryproblem{294}{266}
+一束单能负$\pi$介子，其动能恰等于静止能量
+$T=m_\pi c^2$，
+在两处相距$l=20\,\mathrm m$的束流截面测通量。
+固有平均寿命$\tau_0=25.5\,\mathrm{ns}$。
+求后、前两截面的通量比。
+\exsolution
+$T=m_\pi c^2$意味着$\gamma=2$，
+$\beta\gamma=\sqrt{\gamma^2-1}=\sqrt3$。
+平均衰变长度
+$L=\beta\gamma c\tau_0=\sqrt3c\tau_0$。
+稳定束源条件下通过距离$l$的生存概率
+就是通量比：
+\[
+ \boxed{\frac{J(l)}{J(0)}
+ =\exp\!\left(-\frac{l}{\sqrt3 c\tau_0}\right)}.
+\]
+代入得到
+$\boxed{J(l)/J(0)\simeq0.22}$。
+\excheck 两个截面之间只有粒子衰变引起的损失；
+不计束流几何发散或物质吸收。
+
+\elementaryproblem{295}{266}
+静止的正$\pi$介子衰变为
+$\mu^+$和中微子，
+求$\mu^+$动能及中微子能量。
+\exsolution
+取$m_\pi c^2=139.57$MeV、
+$m_\mu c^2=105.66$MeV，
+中微子静质量近似为零。
+静止母粒子的二体衰变满足
+$\boldsymbol p_\mu=-\boldsymbol p_\nu$。
+由$E_\mu+E_\nu=m_\pi c^2$与
+$E_\nu=p_\nu c$，
+\[
+ E_\nu=\frac{m_\pi^2-m_\mu^2}{2m_\pi}c^2,
+ \quad
+ T_\mu=\frac{(m_\pi-m_\mu)^2}{2m_\pi}c^2.
+\]
+代入
+\[
+ \boxed{T_\mu\simeq4.12\,\mathrm{MeV}},\qquad
+ \boxed{E_\nu\simeq29.79\,\mathrm{MeV}}.
+\]
+\excheck 中微子能量与$\mu$子的动能不同，
+因为$\mu$子携带显著静止能量。
+
+\elementaryproblem{296}{266}
+静止的$\Sigma^-$超子经
+$\Sigma^-\to n+\pi^-$衰变，
+求末态中子的动能。
+\exsolution
+取静止能量
+$m_\Sigma c^2\simeq1197.45$MeV、
+$m_nc^2\simeq939.57$MeV、
+$m_\pi c^2\simeq139.57$MeV。
+二体衰变的中子总能量
+\[
+ E_n=\frac{m_\Sigma^2+m_n^2-m_\pi^2}
+ {2m_\Sigma}c^2,
+\]
+因此
+\[
+ \boxed{T_n=E_n-m_nc^2
+ =\frac{(m_\Sigma-m_n)^2-m_\pi^2}
+ {2m_\Sigma}c^2
+ \simeq19.6\,\mathrm{MeV}}.
+\]
+\excheck 两粒子等动量而非等动能；
+书末近似$19.5$MeV。
+
+\elementaryproblem{297}{266}
+一个初始静止的正$\mu$子衰变成
+正电子和两个中微子。
+求正电子可能具有的最大动能。
+\exsolution
+三体衰变中，当两中微子近似平行同向、
+其组合的不变质量达到最小值零时，
+正电子总能量最大。
+视“两个中微子”为一个零质量系统，
+二体运动学给
+\[
+ E_{e,\max}=
+ \frac{m_\mu^2+m_e^2}{2m_\mu}c^2.
+\]
+减正电子静能
+\[
+ \boxed{T_{e,\max}=
+ \frac{(m_\mu-m_e)^2}{2m_\mu}c^2
+ \simeq52.32\,\mathrm{MeV}}.
+\]
+\excheck 若忽略电子质量，
+近似为$m_\mu c^2/2\simeq52.8$MeV；
+书末写约52.5MeV，属于所用质量常数精度差异。
+
+\elementaryproblem{298}{266}
+一个初始静止的电中性粒子
+衰变为动能$T_p=5.3\,\mathrm{MeV}$的质子
+及$\pi^-$。求母粒子的静止质量并指出名称。
+\exsolution
+静止母粒子衰变后二体动量等大反向，
+因此
+\[
+ pc=\sqrt{T_p(T_p+2m_pc^2)},\qquad
+ E_\pi=\sqrt{p^2c^2+m_\pi^2c^4}.
+\]
+母粒子静能
+$Mc^2=m_pc^2+T_p+E_\pi$，
+取$m_pc^2=938.27$MeV、
+$m_{\pi^-}c^2=139.57$MeV，得
+\[
+ \boxed{Mc^2\simeq1115.2\,\mathrm{MeV}
+ \approx1.115\,\mathrm{GeV}}.
+\]
+对应粒子为
+$\boxed{\Lambda^0\text{ 超子}}$，
+其标准静止能量约1115.7MeV。
+\excheck 不能把质子动能和$\pi$的静止能直接相加；
+$\pi$粒子还携带与质子等模的反冲动量。
+
+\elementaryproblem{299}{266}
+负$\pi$介子以动能$T_\pi=50\,\mathrm{MeV}$
+飞行时衰变成$\mu$子和中微子。
+若中微子在实验室系中与母介子运动方向
+成$90^\circ$，求中微子能量。
+\exsolution
+四动量守恒
+$P_\mu=P_\pi-P_\nu$，
+结合洛伦兹不变量
+$P_\mu^2=m_\mu^2c^2$。
+因为中微子与母介子动量垂直，
+$P_\pi\cdot P_\nu=E_\pi E_\nu/c^2$，
+且$P_\nu^2=0$，所以
+\[
+ m_\mu^2c^4=m_\pi^2c^4-2E_\pi E_\nu,
+ \qquad E_\pi=m_\pi c^2+T_\pi.
+\]
+解得
+\[
+ \boxed{E_\nu=
+ \frac{(m_\pi^2-m_\mu^2)c^4}
+ {2(m_\pi c^2+T_\pi)}
+ \simeq21.9\,\mathrm{MeV}\approx22\,\mathrm{MeV}}.
+\]
+\excheck 实验室垂直出射条件使初态
+空间动量点积为零，不能套静止母粒子的29.8MeV。
+
+\elementaryproblem{300}{266}
+动能$T_\Sigma=320\,\mathrm{MeV}$的
+$\Sigma^+$超子飞行中衰变为
+一粒电中性粒子和一粒$\pi^+$。
+$\pi^+$以相对母粒子前进方向$90^\circ$出射，
+其动能$T_\pi=42\,\mathrm{MeV}$。
+求中性产物的静止质量。
+\exsolution
+由四动量
+$P_X=P_\Sigma-P_\pi$，
+及两动量在实验室空间中垂直，
+得到
+\[
+ m_X^2c^4=
+ m_\Sigma^2c^4+m_\pi^2c^4-2E_\Sigma E_\pi,
+\]
+\[
+ E_\Sigma=m_\Sigma c^2+T_\Sigma,\qquad
+ E_\pi=m_\pi c^2+T_\pi.
+\]
+取$m_{\Sigma^+}c^2\simeq1189.37$MeV、
+$m_{\pi^+}c^2\simeq139.57$MeV，
+\[
+ \boxed{m_Xc^2\simeq
+ \sqrt{1189.37^2+139.57^2-
+ 2(1189.37+320)(139.57+42)}
+ \simeq941\,\mathrm{MeV}\approx0.94\,\mathrm{GeV}}.
+\]
+中性产物为$\boxed{n\text{（中子）}}$。
+\excheck 输入值取两位有效数字，
+所得约941MeV与中子939.6MeV在近似精度内一致。
