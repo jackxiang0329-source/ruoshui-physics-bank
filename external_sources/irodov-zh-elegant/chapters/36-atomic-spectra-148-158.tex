@@ -1,0 +1,264 @@
+% Irodov VI §6.3 original 148--158, printed p249, PDF p258.
+% Note: source problem 155 prints "22 MeV", answer presumes 22 meV.
+\atomictermsproblem{148}{249}
+钠原子价电子处于主量子数$n=3$的状态，
+且总角动量达到该主量子数所允许的最大值。
+求原子磁矩模。
+\exsolution
+$n=3$允许最大$l=2$（D态），电子自旋$s=1/2$，
+所以最大$J=l+s=5/2$，
+谱项\({}^{2}D_{5/2}\)。
+朗德因子
+\[
+ g_J=1+\frac{J(J+1)+s(s+1)-l(l+1)}
+ {2J(J+1)}
+ =\frac65.
+\]
+因此
+\[
+ \boxed{\mu=g_J\mu_B\sqrt{J(J+1)}
+ =\frac65\mu_B\frac{\sqrt{35}}2
+ =\frac{3\sqrt{35}}5\mu_B}.
+\]
+\excheck 题中$n=3$仍可有$3d$轨道，
+最大$J$不是$3p$态的$3/2$。
+
+\atomictermsproblem{149}{249}
+某激发原子的电子构型为$1s^22s^22p\,3d$，
+且处于该构型最大总角动量态。
+求原子磁矩的大小。
+\exsolution
+闭合壳层角动量相互抵消；
+未闭合$p,d$各一电子，
+取最大$L=1+2=3$，
+两个自旋平行$S=1$，最大$J=L+S=4$，
+即\({}^{3}F_4\)。
+朗德因子
+\[
+ g_J=1+\frac{20+2-12}{2(20)}=\frac54,
+\]
+所以
+\[
+ \boxed{\mu=\frac54\sqrt{20}\,\mu_B
+ =\frac{5\sqrt5}2\,\mu_B}.
+\]
+\excheck $J$最大不代表$g=2$，
+轨道与自旋磁旋比分别不同。
+
+\atomictermsproblem{150}{249}
+原子处于$S=3/2,L=2$态，
+已知其总磁矩为零。
+求总角动量模。
+\exsolution
+非零$J$时磁矩模
+$\mu=g_J\mu_B\sqrt{J(J+1)}$。
+允许$J=1/2,3/2,5/2,7/2$。
+由$g_J=0$得
+\[
+ 1+\frac{J(J+1)+15/4-6}{2J(J+1)}=0,
+\quad3J(J+1)=\frac94.
+\]
+所以$J(J+1)=3/4$即$J=1/2$，
+\[
+ \boxed{M_J=\frac{\sqrt3}2\hbar}.
+\]
+\excheck 此处磁矩为零来自朗德因子$g_J=0$，
+并非总角动量矢量模为零。
+
+\atomictermsproblem{151}{249}
+某原子自旋$S=2$，总角动量模为$\sqrt2\,\hbar$，
+且磁矩为零。写出相应光谱项。
+\exsolution
+由$J(J+1)=2$得$J=1$。
+磁矩零要求$g_J=0$，代入朗德公式：
+\[
+ 1+\frac{2+S(S+1)-L(L+1)}{2(2)}=0.
+\]
+$S(S+1)=6$，整理得$L(L+1)=12$，
+因此$L=3$（F项）。
+多重度$2S+1=5$，
+\[
+ \boxed{{}^{5}F_1}.
+\]
+\excheck $S=2,L=3$允许$J=1$，
+符合角动量三角不等式。
+
+\atomictermsproblem{152}{249}
+处于\({}^{2}P_{3/2}\)态的原子
+置于磁感应强度$B=1.0\,\mathrm{kG}$的均匀磁场。
+求总角动量矢量绕磁场的进动角频率。
+\exsolution
+对\({}^{2}P_{3/2}\)，$L=1,S=1/2,J=3/2$，
+朗德因子
+$g_J=1+[15/4+3/4-2]/[2(15/4)]=4/3$。
+弱场进动频率
+$\omega_L=g_J\mu_B B/\hbar$，
+$1\,\mathrm{kG}=0.10\,\mathrm T$，
+所以
+\[
+ \boxed{\omega_L=
+ \frac{4\mu_B(0.10\,\mathrm T)}{3\hbar}
+ \simeq1.17\times10^{10}\,\mathrm{rad/s}}.
+\]
+\excheck 高斯单位的$1$kG须换算为$0.1$T，
+不可数值原样代入SI公式。
+
+\atomictermsproblem{153}{249}
+\({}^{2}P_{1/2}\)态原子在圆环电流轴上，
+圆环半径$r=5.0\,\mathrm{cm}$，
+电流$I=10\,\mathrm A$，原子离环心的轴向距离也为$r$。
+求该环对原子的最大磁力。
+\exsolution
+\({}^{2}P_{1/2}\)有$L=1,S=1/2,J=1/2$，
+$g_J=2/3$；
+最大磁矩沿轴投影
+$|\mu_z|=g_JJ\mu_B=\mu_B/3$。
+SI制圆环轴向磁场
+\[
+ B(z)=\frac{\mu_0Ir^2}{2(r^2+z^2)^{3/2}},
+ \qquad
+ \left|\frac{dB}{dz}\right|_{z=r}
+ =\frac{3\mu_0I}{2^{7/2}r^2}.
+\]
+因此
+\[
+ \boxed{F_{\max}=|\mu_z B'|
+ =\frac{\mu_0I\mu_B}{2^{7/2}r^2}
+ \simeq4.1\times10^{-27}\,\mathrm N}.
+\]
+\excheck 应使用磁矩的\emph{轴向投影}；
+不能将磁矩模代入轴向梯度力。
+
+\atomictermsproblem{154}{249}
+基态氢原子在距长直导线$r=2.5\,\mathrm{cm}$处，
+导线电流$I=10\,\mathrm A$。
+求原子所受磁力的最大值。
+\exsolution
+氢基态为\({}^{2}S_{1/2}\)，$g_J=2,J=1/2$，
+最大磁矩沿场方向投影
+$|\mu_B|$。
+长直导线场
+$B(r)=\mu_0I/(2\pi r)$，
+梯度模
+$|dB/dr|=\mu_0I/(2\pi r^2)$。
+因此
+\[
+ \boxed{F_{\max}=\mu_B\frac{\mu_0 I}{2\pi r^2}
+ \simeq3.0\times10^{-26}\,\mathrm N}.
+\]
+\excheck 实际方向由原子的$m_J$取值决定，
+本题给出的数值是力的最大模。
+
+\atomictermsproblem{155}{249}
+窄钒原子束处于基态\({}^{4}F_{3/2}\)，
+经过长$l_1=5.0\,\mathrm{cm}$的横向非均匀磁场，
+屏位于磁场后$l_2=15\,\mathrm{cm}$，
+两个最外侧分束在屏上相距$\delta=2.0\,\mathrm{mm}$。
+原印动能是$T=22\,\mathrm{MeV}$。
+求磁场梯度，并说明与书末答案的差异。
+\exsolution
+该态$L=3,S=3/2,J=3/2$，
+$g_J=1+[15/4+15/4-12]/[2(15/4)]=2/5$。
+两最外侧$m_J=\pm J$磁矩投影差为
+$\Delta\mu=2g_JJ\mu_B$。
+设原子速度$v$，
+磁区内时间$t_1=l_1/v$，
+离开磁区至屏时间$t_2=l_2/v$，
+则两束位移差
+\[
+ \delta=\frac{\Delta\mu}{M}B'
+ \left(\frac{t_1^2}2+t_1t_2\right).
+\]
+用$T=Mv^2/2$消去质量和速率，
+\[
+ \boxed{B'=\frac{2T\delta}
+ {g_JJ\mu_B l_1(l_1+2l_2)}}.
+\]
+若\emph{严格照原印}$T=22\,\mathrm{MeV}$，
+\[
+ \boxed{B'\simeq1.45\times10^{11}\,\mathrm{T/m}}.
+\]
+若能量单位实际应为$22\,\mathrm{meV}$，
+则
+\[
+ \boxed{B'\simeq1.45\times10^2\,\mathrm{T/m}
+ \simeq15\,\mathrm{kG/cm}},
+\]
+与原书书末给出的15kG/cm一致。
+\excheck 原印MeV与书末数值隐含的meV相差
+$10^9$倍；本译本明确列出两种结果，
+不未经授权替换题面单位。
+
+\atomictermsproblem{156}{249}
+以下谱项在弱磁场中分裂为多少个子能级：
+(a)\({}^{3}P_0\)；
+(b)\({}^{2}F_{5/2}\)；
+(c)\({}^{4}D_{1/2}\)？
+\exsolution
+线性塞曼能移
+$\Delta E=g_J m_J\mu_BB$；
+$m_J=-J,\ldots,J$。
+(a)$J=0$，只有$m_J=0$，不劈裂；
+(b)$J=5/2$且$g_J\ne0$，共有
+$2J+1=6$个不同子能级；
+(c)$L=2,S=3/2,J=1/2$，
+朗德因子
+\[
+ g_J=1+\frac{3/4+15/4-6}{2(3/4)}=0,
+\]
+两磁态不发生一阶能量分离。
+因此
+\[
+ \boxed{\text{(a)不分裂；(b)6个；(c)一阶不分裂}}.
+\]
+\excheck “(c)不分裂”不代表不存在两个$m_J$态，
+而是它们在一阶弱场中能量重合。
+
+\atomictermsproblem{157}{249}
+弱磁场$B=2.50\,\mathrm{kG}$使谱项发生塞曼劈裂。
+求(a)单重D项；(b)\({}^{3}F_4\)
+的全劈裂能宽（eV）。
+\exsolution
+对总角动量$J$的子项，
+端到端全劈裂
+$\Delta E_{\rm tot}=2J|g_J|\mu_BB$。
+(a)单重D项$L=J=2,S=0,g_J=1$，
+\[
+ \boxed{\Delta E_a=4\mu_B(0.25\,\mathrm T)
+ \simeq5.79\times10^{-5}\,\mathrm{eV}}.
+\]
+(b)\({}^{3}F_4\)有$L=3,S=1,J=4$，
+$g_J=5/4$，
+\[
+ \boxed{\Delta E_b=8(5/4)\mu_B(0.25\,\mathrm T)
+ \simeq1.45\times10^{-4}\,\mathrm{eV}}.
+\]
+\excheck 这里全宽包含最大$m_J=+J$与最小$m_J=-J$
+两端之差，不是相邻子级间隔。
+
+\atomictermsproblem{158}{249}
+在弱磁场中判断下列光谱跃迁呈正常还是反常塞曼效应：
+(a)\({}^{1}P\to{}^{1}S\)；
+(b)\({}^{2}D_{5/2}\to{}^{2}P_{3/2}\)；
+(c)\({}^{3}D_1\to{}^{3}P_0\)；
+(d)\({}^{5}I_5\to{}^{5}H_4\)。
+\exsolution
+线频移取决于
+$\Delta\omega=(g_um_u-g_lm_l)\mu_BB/\hbar$，
+仅当允许跃迁的频移组成等距三线群，
+才表现为正常塞曼效应。
+(a)单重态$S=0$、$g=1$，正常。
+(b)两态分别$g_u=6/5$、
+$g_l=4/3$，频移不是单一等间隔三线群，反常。
+(c)下态$J_l=0$，上态$J_u=1$且
+$g_u=1/2$，
+只给三个等间隔频移，正常。
+(d)\({}^{5}I_5\)有$L=6,S=2,J=5$，
+\({}^{5}H_4\)有$L=5,S=2,J=4$，
+分别计算朗德因子均为$9/10$，
+所以允许$\Delta m=0,\pm1$只产生三线群，正常。
+\[
+ \boxed{\text{(a)正常；(b)反常；(c)正常；(d)正常}}.
+\]
+\excheck “正常”指观察到的等间隔三线型，
+不要求所有项都恰有$g=1$。
