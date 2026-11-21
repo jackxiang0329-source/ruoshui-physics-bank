@@ -5,8 +5,8 @@
 
 ## 真实进度（2026-11-21）
 
-- **本轮新增：第二篇原书第46—145题，共100题。**
-- **累计：533题——第一篇力学1—388题（全部），第二篇热力学与分子物理1—145题；按原书分篇独立编号。**
+- **本轮新增：第二篇原书第146—245题，共100题。**
+- **累计：633题——第一篇力学1—388题（全部），第二篇热力学与分子物理1—245题；按原书分篇独立编号。**
 - 第 1.1 节“运动学”1—58 题已覆盖（全部）。
 - 第 1.2 节“动力学基本方程”59—117 题已覆盖（全部）。
 - 第 1.3 节“能量、动量与角动量守恒”118—199 题已覆盖（全部）。
@@ -19,7 +19,10 @@
 - 第 2.1 节“气体状态方程与过程”第1—25题已覆盖（全部）。
 - 第 2.2 节“热力学第一定律与热容”第26—61题已覆盖（全部）。
 - 第 2.3 节“气体分子运动论、玻尔兹曼与麦克斯韦分布”第62—112题已覆盖（全部）。
-- 第 2.4 节“热力学第二定律与熵”第113—145题已覆盖（后续继续）。
+- 第 2.4 节“热力学第二定律与熵”第113—159题已覆盖（全部）。
+- 第 2.5 节“液体与毛细现象”第160—184题已覆盖（全部）。
+- 第 2.6 节“相变”第185—219题已覆盖（全部）。
+- 第 2.7 节“输运现象”第220—245题已覆盖（后续继续）。
 - 本项目尚未完成整书翻译或独立学术二校；任何“编译成功”仅说明技术排版通过。
 
 | 内容 | 文件 |
@@ -82,6 +85,17 @@
 | 第二篇2.4节122—129题 | [12-entropy-cycles-122-129.tex](chapters/12-entropy-cycles-122-129.tex) |
 | 第二篇2.4节130—139题 | [12-entropy-cycles-130-139.tex](chapters/12-entropy-cycles-130-139.tex) |
 | 第二篇2.4节140—145题 | [12-entropy-cycles-140-145.tex](chapters/12-entropy-cycles-140-145.tex) |
+| 第二篇2.4节146—159题 | [12-entropy-cycles-146-159.tex](chapters/12-entropy-cycles-146-159.tex) |
+| 第二篇2.5节160—169题 | [13-capillarity-160-169.tex](chapters/13-capillarity-160-169.tex) |
+| 第二篇2.5节170—179题 | [13-capillarity-170-179.tex](chapters/13-capillarity-170-179.tex) |
+| 第二篇2.5节180—184题 | [13-capillarity-180-184.tex](chapters/13-capillarity-180-184.tex) |
+| 第二篇2.6节185—194题 | [14-phase-transformations-185-194.tex](chapters/14-phase-transformations-185-194.tex) |
+| 第二篇2.6节195—204题 | [14-phase-transformations-195-204.tex](chapters/14-phase-transformations-195-204.tex) |
+| 第二篇2.6节205—214题 | [14-phase-transformations-205-214.tex](chapters/14-phase-transformations-205-214.tex) |
+| 第二篇2.6节215—219题 | [14-phase-transformations-215-219.tex](chapters/14-phase-transformations-215-219.tex) |
+| 第二篇2.7节220—229题 | [15-transport-220-229.tex](chapters/15-transport-220-229.tex) |
+| 第二篇2.7节230—239题 | [15-transport-230-239.tex](chapters/15-transport-230-239.tex) |
+| 第二篇2.7节240—245题 | [15-transport-240-245.tex](chapters/15-transport-240-245.tex) |
 | 源书勘误 | [errata.md](errata.md) |
 | 技术与学术质检记录 | [quality-check.md](quality-check.md) |
 | 结构完整性检查 | [check_sources.py](check_sources.py) |
@@ -104,4 +118,4 @@ GitHub Actions 工作流 .github/workflows/irodov-elegantbook.yml
 
 本目录放在 external_sources/，不得将翻译题目混入
 大学物理原创高难度题库 bank/ 的题数和质量门禁，也不修改它们的权威源文件。
-后续继续从原书第二篇第2.4节第146题起逐题补充；第一篇已覆盖1—388题。保留原书的分篇重新编号体系。
+后续继续从原书第二篇第2.7节第246题起逐题补充；第一篇已覆盖1—388题。保留原书的分篇重新编号体系。
