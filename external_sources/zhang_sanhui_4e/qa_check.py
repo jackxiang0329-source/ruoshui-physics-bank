@@ -763,8 +763,11 @@ def check_numeric_spotmodels() -> int:
     P0=2.7*101325
     Pf=P0*(Vi/Vf)**1.4
     gasW=(P0*Vi-Pf*Vf)/.4
-    require(close(math.sqrt(2*.75*gasW/70),84.38704853),
-            "10.12 human cannon exit speed using source volume geometry")
+    require(close(math.sqrt(2*(.75*gasW-101325*(Vf-Vi))/70),
+                  36.06149041),
+            "10.12 original p2.7atm m70kg after subtract atmospheric work")
+    require(close(math.sqrt(2*.315*101325/75),29.17413238),
+            "10.12 companion S p164 approximate p2.6atm m75kg alternate 29m/s")
     require(close(101300*.02/RG*2**.4,321.5268563),
             "10.16 two chamber final compressed A temperature")
     require(close(1-10**(-2/7),.4820525321),
@@ -821,7 +824,7 @@ def check_numeric_spotmodels() -> int:
     require(close(.08/muv*(.144/1600+.002),133.0535324),
             "19.14 electric bell iron gap NI")
 
-    return 308
+    return 309
 
 
 def main() -> None:
