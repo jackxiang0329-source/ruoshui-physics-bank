@@ -929,7 +929,54 @@ def check_numeric_spotmodels() -> int:
     require(close(mm*(3*5)*(.01)*2,3.7699111843e-7),
             "20.27 nested solenoid force formula dimensional sample")
 
-    return 355
+    # Chapter 21: independently reconstructed SI numerical models.
+    charge=1.602176634e-19
+    electron_mass=9.1093837139e-31
+    light=299792458.0
+    vacuum_eps=8.8541878128e-12
+    coulomb_k=1/(4*math.pi*vacuum_eps)
+    require(close(coulomb_k*charge*2e24*math.sin(math.pi/4)/(light**2*.20),
+                  .113290996318), "21.3 angular acceleration radiation E")
+    require(close(.20/light,6.67128190396e-10),"21.3 retarded signal time")
+    require(close(2e4*charge/(electron_mass*5e-9),7.03528003351e23),
+            "21.4 Xray target stopping acceleration")
+    require(close(coulomb_k*charge*(2e4*charge/(electron_mass*5e-9))/
+                  (light**2*.30),.0375725376316),"21.4 Xray radiation")
+    require(close(coulomb_k*charge*(8e-3*6e6)/(light**2*1000),
+                  7.69044784739e-25),"21.5 single electron antenna E")
+    require(close(coulomb_k*charge*1.1e14*math.sin(math.pi/4)/(light**2*.5),
+                  2.49240191899e-12),"21.6 proton radiation E")
+    require(close(charge*3.9e-3/electron_mass,685939803.267),
+            "21.7 wire electron acceleration")
+    e_single=coulomb_k*charge*(charge*3.9e-3/electron_mass)/(light**2*4)
+    require(close(e_single,2.74749181431e-18),"21.7 single electron radiation")
+    n_electrons=8.5e28*math.pi*(.0026/2)**2*.05
+    require(close(n_electrons,2.25644892344e22),"21.7 correct 0.26cm DIAMETER")
+    require(close(e_single*n_electrons,61995.7494656),
+            "21.7 companion coherent sum decimal order suspect")
+    require(close(math.sqrt(1380/(light*vacuum_eps)),721.03247698),
+            "21.8 rms sunlight E (not peak)")
+    require(close(3e5/(math.pi*(30e-6)**2),1.06103295395e14),
+            "21.9 laser beam Poynting intensity")
+    require(close(math.sqrt(2*3e5/(math.pi*(30e-6)**2*light*vacuum_eps)),
+                  282744859.388),"21.9 amplitude requires factor TWO")
+    radius_moon=3.82e8*.880e-6/2
+    require(close(radius_moon,168.08),"21.10 full divergence angle halved")
+    require(close(3800/(math.pi*radius_moon**2),.0428155616207),
+            "21.10 moon beam intensity")
+    require(close(vacuum_eps*30**2/2,3.98438451576e-9),
+            "21.13 absorbing surface pressure")
+    require(close(1.1e3*1.5*.5/light,2.75190378538e-6),
+            "21.14 50% reflectance radiation force")
+    require(close(2*1.5e9/(light*1.3e-6),7697632.96611),
+            "21.15 perfect reflector 7.7MPa peak")
+    require(close(math.sqrt(2*10*100*light/10000),7743.28687316),
+            "21.16 laser recoil return time")
+    require(close(3*6.9e7*(7e8)**2/
+                  (4*6.6743e-11*2e30*1000*light),6.33650835592e-7),
+            "21.17 gravity radiation balance size")
+
+    return 375
 
 
 def main() -> None:
@@ -1141,6 +1188,19 @@ def main() -> None:
             "20.6 wing polarity and 0.30V source answer absent")
     require("2A'_m" in s20 or "2A'_m" in s20.replace(" ", ""),
             "20.26 constant current source supplies double mechanical energy")
+
+    # Ch21 risk locks: source values and independently discovered companion issues.
+    q21=(ROOT/"chapters/21/questions.tex").read_text(encoding="utf-8")
+    s21=(ROOT/"chapters/21/solutions.tex").read_text(encoding="utf-8")
+    require("21.17" in q21 and "21.17" in s21,
+            "21.17 radiation-gravity end exercise missing")
+    require("0.26" in q21 and "6.2\\times10^4" in s21
+            and "相干" in s21,
+            "21.7 original diameter/coherent radiation source issue missing")
+    require("2\\langle S\\rangle" in s21,
+            "21.9 amplitude versus averaged intensity missing factor two")
+    require("-I^2R" in s21 and "向内" in s21,
+            "21.11 negative outward Poynting flux missing")
 
     computed = check_numeric_spotmodels()
     print(f"PASS: {len(ids)} candidate exercises have unique IDs, "
