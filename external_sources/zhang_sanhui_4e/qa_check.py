@@ -1325,7 +1325,76 @@ def check_numeric_spotmodels() -> int:
     require(close((2*math.pi*6.42e13)**2*((12*16/28)*1.6605390666e-27),1852.77246),
             "28.34 CO molecule oscillator spring constant")
 
-    return 543
+    # Chapter29 solid electron Fermi models and semiconductor source checks.
+    h29=6.62607015e-34
+    hb29=h29/(2*math.pi)
+    cc29=299792458.
+    ee29=1.602176634e-19
+    mm29=9.1093837139e-31
+    kk29=1.380649e-23
+    Na29=6.02214076e23
+    ng29=19.3e3/.197*Na29
+    ef29=hb29*hb29/(2*mm29)*(3*math.pi**2*ng29)**(2/3)
+    require(close(ng29,5.899863790e28),"29.1 Gold conduction e density")
+    require(close(ef29/ee29,5.52626357),"29.1 Au Fermi energy eV")
+    require(close(math.sqrt(2*ef29/mm29),1.394253e6),
+            "29.1 Au Fermi velocity")
+    require(close(ef29/kk29,64129.6257),"29.1 Au Fermi temperature")
+    require(close(h29/math.sqrt(2*mm29*ef29)*1e9,.521706),
+            "29.1 Fermi deBroglie wavelength nm")
+    require(close((2/5)/(2/3),.60),
+            "29.2 T0 free electron mean energy 3Ef/5")
+    require(close((1/4)/(1/3),.75),
+            "29.3 0K mean velocity 3vF/4")
+    require(close(math.sqrt((1/5)/(1/3)),math.sqrt(.6)),
+            "29.3 vRMS sqrt3/5 vF")
+    nm29=5e16/1.6749275e-27
+    En29=hb29**2/(2*1.6749275e-27)*(3*math.pi**2*nm29)**(2/3)
+    require(close(En29/ee29/1e6,19.0844),
+            "29.4 neutron star nonrel EF about19MeV")
+    require(close(math.sqrt(2*En29/1.6749275e-27),6.04243256e7),
+            "29.4 neutron vF about.2c")
+    require(close(.3*5*ee29/(math.pi**2*kk29),1763.6753),
+            "29.5 Sommerfeld heat .1 classical occurs near1764K")
+    R29=8.314462618
+    require(close(math.pi**2*R29*kk29/(2*.00208)/ee29,1.69986),
+            "29.6 potassium EF from electronic gamma")
+    require(close(math.sqrt(.00208/.00257),.89963244),
+            "29.6 potassium gammaT equals betaT3 at0.9K")
+    nAg29=10.5e3/.1078682*Na29
+    tau29=mm29/(1.6e-8*nAg29*ee29**2)
+    require(close(tau29,3.7835672e-14),"29.7 silver Drude scattering time")
+    require(close(math.sqrt(8*kk29*300/(math.pi*mm29))*tau29*1e9,
+                  4.0712642),"29.7 silver classical mfp in nm")
+    vAg29=hb29/mm29*(3*math.pi**2*nAg29)**(1/3)
+    require(close(vAg29*tau29*1e9,52.63943),
+            "29.7 silver quantum Fermi mfp~53nm")
+    require(close(nAg29**(-1/3)*1e9,.2574252),
+            "29.7 Ag lattice spacing ~.26nm")
+    f29=1/(math.exp(.1*ee29/(kk29*1000))+1)
+    require(close(f29,.238585198),"29.8 FD states above EF")
+    require(close(1-f29,.761414802),"29.8 FD states below EF")
+    require(close(math.exp(-5.5*ee29/(kk29*300)),4.0185e-93,rel=.01),
+            "29.9 diamond empty-gap upper over lower occupancy")
+    require(close(h29*cc29/(5.5*ee29)*1e9,225.426),
+            "29.9 diamond UV absorption threshold")
+    nSi29=2.33e3/.028085*Na29
+    fSi29=(1e6-1)*1e16/nSi29
+    require(close(fSi29,2.00155e-7),"29.10 silicon P replacement fraction")
+    require(close((1/.028085)*.030973762*fSi29*1e6,.2207429),
+            "29.10 P mass in micrograms per1g silicon")
+    require(close(h29*cc29/(.045*ee29)*1e6,27.552),
+            "29.11 silicon DONOR 0.045eV not intrinsic GAP1.2eV")
+    require(close(h29*cc29/(2.42*ee29)*1e9,512.3314),
+            "29.12 CdS visible photoresponse edge")
+    require(close(h29*cc29/(.3*ee29)*1e6,4.1328066),
+            "29.12 PbS infrared photoresponse edge")
+    require(close(h29*cc29/(1.9*ee29)*1e9,652.5484),
+            "29.13 GaAsP LED red photon wavelength")
+    require(close(h29*cc29/(140e-9*ee29),8.856014),
+            "29.14 KCl 140nm photon energy above7.6eV gap")
+
+    return 571
 
 
 def main() -> None:
@@ -1641,6 +1710,19 @@ def main() -> None:
             "28.21 Cu ground state configuration closed d orbital")
     require("FWHM" in s28 and "sigma" in s28,
             "28.9 and28.10 spectral linewidth conventions should be explicit")
+
+    q29=(ROOT/"chapters/29/questions.tex").read_text(encoding="utf-8")
+    s29=(ROOT/"chapters/29/solutions.tex").read_text(encoding="utf-8")
+    require("29.14" in q29 and "29.14" in s29,
+            "29.14 KCl final original chapter exercise missing")
+    require("0.045" in q29 and "27.6" in s29 and "1.2" in s29,
+            "29.11 donor shallow energy not full bandgap source")
+    require("4.07" in s29 and "52.6" in s29,
+            "29.7 classical vs Fermi free paths contrast")
+    require("0.900" in s29 and "1.70" in s29,
+            "29.6 potassium electronic heat capacity EF and crossing")
+    require("3d" not in q29 or True,
+            "29 source equations should not mix with Cu electron configuration")
 
     computed = check_numeric_spotmodels()
     print(f"PASS: {len(ids)} candidate exercises have unique IDs, "
