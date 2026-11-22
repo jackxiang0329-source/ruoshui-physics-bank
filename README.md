@@ -18,13 +18,17 @@
 
 其他辅助技术文档统一按用途归类：[文档目录](docs/README.md) · [命名规范](docs/policies/repository_naming.md)。
 
+## 精简后的顶层结构
+
+仓库根目录只保留 **8 个功能目录**；旧顶层的 `localization/`、`localized/`、`taxonomy/`、`qa/` 已统一迁入 [数据目录 `data/`](data/README.md)，其中中文主档、合订译稿、分类规则和质检凭证仍各自独立管理。题库编号、原始内容与审核状态不变。
+
 ## 目录结构（保留稳定接口）
 
 ```text
 ruoshui-physics-bank/
 ├── bank/                 452 道正式高难综合题；每题 3 份源文件
 ├── tex/                  正式题目与解答的合订 LaTeX
-├── data/                 正式索引、批次与技术质检数据
+├── data/                 正式索引、翻译稿、分类规则、质检凭证与批次报告
 ├── external_sources/
 │   ├── irodov-zh-elegant/  《普通物理学习题》1,878题，合订 PDF
 │   ├── _bundles/          7份无损候选压缩包+三份SHA-256清单
