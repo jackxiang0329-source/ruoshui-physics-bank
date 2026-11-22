@@ -326,3 +326,469 @@ D盒直径75cm，所以
 \]
 实际交流信号的极性受探头方向影响，
 此结果是速率大小。
+
+
+\paragraph{习题 18.16}
+图18.27的线圈一匝在磁场中的水平段
+受竖直安培力大小 \(F_1=IlB\)，
+\(n\) 匝为 \(nIlB\)。
+电流反向时磁力反向，
+天平两次状态的作用力\emph{差}为
+\(2nIlB\)，因此所加砝码满足
+\(mg=2nIlB\)。
+\[
+ \boxed{B=\frac{mg}{2nIl}
+ =\frac{(.00878)(9.80)}
+ {2(5)(.10)(.10)}
+ \approx0.860\,\mathrm T}.
+\]
+不可遗漏电流反向所产生的因子2，
+否则误报 \(1.72\,\mathrm T\)。
+
+\paragraph{习题 18.17}
+每匝面积
+\(S=ab=(.020)(.010)=2.00\times10^{-4}\,\mathrm{m^2}\)，
+匝数 \(N=1000\)，
+\(I=.100\,\mathrm A\)，
+\(B=1000\,\mathrm G=.100\,\mathrm T\)。
+(a) 图18.28(a)磁场\emph{垂直}线圈平面：
+对位于场内的每段直线
+\[
+ \boxed{\boldsymbol F_{\rm seg}
+ =NI\boldsymbol\ell\times\boldsymbol B}.
+\]
+按图18.28(a)下水平边在场内，
+其所受力大小
+\[
+ \boxed{F_{\rm lower}=NIaB
+ =1000(.100)(.020)(.100)=0.200\,\mathrm N}.
+\]
+此边的力指向按原图电流箭头与入纸面磁场的
+右手定则判断。
+场中两条\emph{对称且等长}侧边所受横向力
+大小相等、方向相反；
+若上水平边完全在场外，则无该边磁力，
+总平移力由下边决定。
+由于线圈磁矩垂直线圈平面，
+它与垂直外磁场平行或反平行，
+\(\tau=0\)；
+\emph{部分}线圈受场时还需以具体受力作用线
+相对支点求转矩，不能无条件套整圈匀强场公式。
+
+(b) 图18.28(b)磁场\emph{平行}线圈平面，
+整个线圈均处于匀强场：
+四边合力为零；
+沿磁场方向的边有
+\(d\boldsymbol\ell\parallel\boldsymbol B\)，
+其力为零；
+另两边分别受大小
+\(F=NIaB=0.200\,\mathrm N\) 的等大反向力
+（取图中与场垂直的边长为 \(a=.020\,\mathrm m\)），
+形成力偶：
+\[
+ \boxed{\tau_{\max}=NISB
+ =1000(.100)(2.00\times10^{-4})(.100)
+ =2.00\times10^{-3}\,\mathrm{N\,m}}.
+\]
+这与磁矩
+\(\boldsymbol\mu=NIS\,\hat{\boldsymbol n}\)
+满足
+\(\boldsymbol\tau=\boldsymbol\mu\times\boldsymbol B\)
+吻合。
+\textbf{审图风险：}上述边的“上/下/左右”及力箭头
+以图18.28的原始电流箭头、支点为准，
+后续TikZ重绘时必须逐边再次确认。
+
+\paragraph{习题 18.18}
+方形每边长 \(a=.150\,\mathrm m\)，
+\(N=200\)，\(I=8.0\,\mathrm A\)，
+面积 \(S=a^2=.0225\,\mathrm{m^2}\)。
+线圈磁矩
+\[
+ \boxed{\mu=NIS=200(8.0)(.0225)
+ =36.0\,\mathrm{A\,m^2}}.
+\]
+力矩 \(\tau=\mu B\sin\theta\)；
+当磁矩方向与磁场垂直时最大，
+\[
+ \boxed{\tau_{\max}=\mu B=(36.0)(4.0)
+ =144\,\mathrm{N\,m}}.
+\]
+
+\paragraph{习题 18.19}
+圆盘面电荷密度 \(\sigma\)，
+在半径 \(r\) 处宽 \(dr\) 的环上有
+\(dq=2\pi r\sigma\,dr\)，
+角速率 \(\omega\)，周期 \(2\pi/\omega\)，
+等效环电流
+\(dI=dq\,\omega/(2\pi)
+ =\sigma\omega r\,dr\)。
+该环磁矩 \(d\mu=dI\,\pi r^2\)，
+所以
+\[
+ \boxed{\mu=\pi\sigma\omega\int_0^Rr^3dr
+ =\frac14\pi\sigma\omega R^4}.
+\]
+总电量
+\(q=\pi\sigma R^2\)，
+盘的转动惯量
+\(I_{\rm rot}=\frac12mR^2\)，
+角动量
+\(L=I_{\rm rot}\omega
+ =\frac12mR^2\omega\)。
+故
+\[
+ \boxed{\mu=\frac12q\omega R^2
+ =\frac q{2m}L}.
+\]
+若 \(q<0\)，磁矩矢量与角动量反向，
+大小式要用 \(|q|\)。
+
+\paragraph{习题 18.20}
+每个夸克沿半径 \(r\) 的圆轨道
+速率大小 \(v\)，
+相应角速率大小 \(\omega=v/r\)。
+每个旋转点电荷的等效电流
+\(I_i=q_i\omega_i/(2\pi)\)，
+磁矩为
+\(\mu_i=q_i\omega_i r^2/2\)（有符号）。
+设两个下夸克沿正角向，
+上夸克沿负角向，
+\[
+ \sum_iq_i\omega_i
+ =2(-e/3)\omega+(+2e/3)(-\omega)
+ =-\frac43e\omega.
+\]
+因此磁矩矢量沿负轴，大小
+\[
+ \boxed{|\mu|=\frac23e\omega r^2
+ =\frac23evr}.
+\]
+按实验中子磁矩大小
+\(\mu=9.66\times10^{-27}\,\mathrm{A\,m^2}\)
+和原题半径
+\(r=1.20\times10^{-15}\,\mathrm m\)，
+\[
+ \boxed{v=\frac{3\mu}{2er}
+ \approx7.54\times10^7\,\mathrm{m/s}
+ \approx0.251c}.
+\]
+该夸克经典绕行模型只用于估算，
+真实中子磁矩涉及强相互作用与量子自旋，
+不能据此认为夸克在精确圆周上运动。
+
+\paragraph{习题 18.21}
+若把电子自旋磁矩
+\(\mu=0.928\times10^{-23}\,\mathrm{J/T}\)
+误作单个电荷 \(e\) 以速率 \(c\)
+绕半径 \(R\) 形成的经典环电流，
+则
+\[
+ \mu=IA=(e c/(2\pi R))(\pi R^2)
+ =\frac12ecR.
+\]
+于是
+\[
+ \boxed{R=\frac{2\mu}{ec}
+ \approx3.86\times10^{-13}\,\mathrm m}.
+\]
+这个经典半径比实验给出电子结构尺度上界
+\(10^{-18}\,\mathrm m\) 大约 \(4\times10^5\) 倍。
+若强迫 \(R\le10^{-18}\,\mathrm m\)、
+仍想保持相同磁矩，则所需表面运动速率
+\(v=2\mu/(eR)\)
+远大于 \(c\)，违反相对论。
+结论：
+\(\boxed{\text{电子自旋磁矩不是可旋转带电实心小球
+的经典环流磁矩}}\)；
+它是量子自旋本征性质。
+
+\paragraph{习题 18.22}
+图18.29中直导线电流 \(I\)，
+线圈近侧电流 \(I_1\) 与它同向；
+两者在同一平面。
+距直导线 \(x\) 处
+\(B(x)=\mu_0I/(2\pi x)\)，
+线圈近侧长 \(l\)
+受吸引力
+\(F_{\rm near}=\mu_0II_1l/(2\pi a)\)。
+远侧同长段电流反向，受排斥力
+\(F_{\rm far}=\mu_0II_1l/[2\pi(a+b)]\)。
+上下短边受大小相等、方向相反的磁力，
+合力抵消，因此
+\[
+ \boxed{F_{\rm net}
+ =\frac{\mu_0II_1l}{2\pi}
+ \left(\frac1a-\frac1{a+b}\right)}
+\]
+方向\emph{朝向无限长直导线}。
+线圈所在平面内的磁场始终垂直于线圈，
+每个电流段磁力都位于该平面内；
+刚性平面线圈在该对称分布下
+总力矩为零：
+\[
+ \boxed{\tau_{\rm loop}=0}.
+\]
+若用户要求的“最大磁力矩”
+指旋转线圈离开原图共面取向后的优化，
+则需要额外定义旋转轴和近场几何，
+不能沿用共面计算直接给非零数。
+
+\paragraph{习题 18.23}
+令无限薄圆筒半径为 \(R\)，
+轴向面电流密度
+\(\boldsymbol K=j\hat{\boldsymbol z}\)。
+磁场在筒内为零，
+筒外按安培定律
+\[
+ B_{\rm outside}(r)=\frac{\mu_0(2\pi Rj)}{2\pi r}
+ =\frac{\mu_0jR}{r},
+\]
+在筒壁外侧 \(B_{\rm out}(R)=\mu_0j\)，
+内侧 \(B_{\rm in}(R)=0\)。
+自作用薄电流层受力必须取
+\emph{两侧磁场平均}
+\(\boldsymbol B_{\rm av}
+ =\tfrac12(\boldsymbol B_{\rm out}+
+ \boldsymbol B_{\rm in})\)，
+不把自己电流元产生的奇异表面场重复算作外场。
+单位面积磁力
+\[
+ \boxed{\boldsymbol f_A=
+ \boldsymbol K\times\boldsymbol B_{\rm av}
+ =-\frac{\mu_0j^2}{2}
+ \hat{\boldsymbol r}}.
+\]
+大小为
+\(\boxed{\mu_0j^2/2\,\mathrm{N/m^2}}\)，
+方向\emph{指向圆筒轴线}（磁箍缩）。
+
+\paragraph{习题 18.24}
+把无限载流面看作
+两侧磁场有跃变的理想电流薄片。
+片面受磁力密度
+\[
+ \boxed{\boldsymbol f_A=
+ \boldsymbol K\times
+ \frac{\boldsymbol B_1+\boldsymbol B_2}{2}},
+\]
+这里两侧磁场应采用
+\emph{矢量平均}，方向取原图18.30的
+电流方向与磁场箭头确定。
+对于两侧场皆切于片、垂直面电流、
+并且平行/反平行于同一切向轴的情形，
+边界条件
+\(\mu_0\boldsymbol K
+ =\hat{\boldsymbol n}\times
+ (\boldsymbol B_2-\boldsymbol B_1)\)
+给磁压的等价形式：
+\[
+ \boxed{|f_A|=\frac{|B_2^2-B_1^2|}{2\mu_0}}.
+\]
+方向由较高磁压侧指向较低磁压侧。
+若图中的 \(B_1,B_2\)
+是带方向的\emph{矢量}，不能把
+\((B_1+B_2)/2\) 随意改成两正标量之和；
+需要按右手定则和边界电流作矢量代数。
+
+\paragraph{习题 18.25}
+两条无限平行线距
+\(d=.050\,\mathrm m\)，
+各通过 \(I_1=I_2=30\,\mathrm A\)，
+单位长度安培力
+\[
+ \boxed{\frac FL
+ =\frac{\mu_0I_1I_2}{2\pi d}
+ =\frac{(4\pi\times10^{-7})(30)^2}
+ {2\pi(.050)}
+ =3.60\times10^{-3}\,\mathrm{N/m}}.
+\]
+同向电流吸引，反向排斥。
+当只有电子以缓慢平均漂移速率
+\(10^{-3}\,\mathrm{m/s}\) 运输净电流时，
+金属导线整体还含静止正离子晶格，
+电荷总体近似中性，
+\emph{不可}把全部移动电子之间的
+库仑斥力当成两线总电力。
+静电中性时跨导线的净库仑场强近似抵消，
+而微小未抵消的速度相关场表现为磁相互作用。
+完整相对论处理还与参考系及表面电荷分布有关。
+
+\paragraph{习题 18.26}
+半圆柱壳的总电流 \(I\)
+沿轴向均匀分配在角度 \(\theta\in[0,\pi]\)，
+微元电流
+\(dI=(I/\pi)d\theta\)。
+圆弧上各无限直电流丝
+离轴心均为 \(R\)，
+对轴心提供场微元大小
+\(dB=\mu_0dI/(2\pi R)\)，
+方向在截面内垂直半径。
+沿半圆的垂直分量相互抵消，
+沿对称轴的分量相加，
+\[
+ \boxed{B_{\rm axis}
+ =\frac{\mu_0I}{2\pi^2R}
+ \int_0^\pi\sin\theta\,d\theta
+ =\frac{\mu_0I}{\pi^2R}}.
+\]
+与轴线电流 \(I\) 反向的直导线
+所受单位长度磁力
+\[
+ \boxed{\frac FL
+ =I B_{\rm axis}
+ =\frac{\mu_0I^2}{\pi^2R}}.
+\]
+它受到半圆柱壳的\emph{排斥}，
+方向沿壳面对称轴指向开口侧。
+若用位于半圆壳对称轴上的
+另一条同向于半圆壳的直导线
+替代壳，轴上线与它反向电流的相互排斥力
+大小为 \(\mu_0I^2/(2\pi d)\)。
+由大小相等
+\[
+ \boxed{d=\frac{\pi R}{2}}.
+\]
+等效线放在\emph{原半圆柱面所在一侧}，
+使它对中心轴线产生的磁力仍朝开口侧。
+本题必须按图18.31区分开口侧与壳面侧，
+不要把等效线放到相反一侧。
+
+\paragraph{习题 18.27}
+电磁轨道炮在题定平均匀加速模型中
+\(v^2=2\bar aL\)。
+\(v=4.2\times10^3\,\mathrm{m/s}\)，
+\(L=5.0\,\mathrm m\)：
+\[
+ \boxed{\bar a=\frac{v^2}{2L}
+ =1.764\times10^6\,\mathrm{m/s^2}
+ =1.80\times10^5\,g}.
+\]
+按源书给定近似磁力公式
+\[
+ F=\frac{\mu_0I^2}{2\pi}
+ \ln\frac{a+r}{r}=m\bar a.
+\]
+\(\,m=.317\,\mathrm{kg}\)，
+\(a=.012\,\mathrm m,\ r=.067\,\mathrm m\)，
+\(\ln[(a+r)/r]\approx.16476\)。
+故
+\[
+ \boxed{I=\left[\frac{2\pi m\bar a}
+ {\mu_0\ln((a+r)/r)}\right]^{1/2}
+ \approx4.12\times10^6\,\mathrm A}.
+\]
+子弹动能
+\(K=\frac12mv^2\approx2.796\times10^6\,\mathrm J\)；
+匀加速历时
+\(\Delta t=v/\bar a=2L/v\approx.002381\,\mathrm s\)。
+若总效率40%且电源在发射期间近似
+输出恒定平均功率，
+\[
+ \boxed{\bar P=\frac{K}{0.40\Delta t}
+ \approx2.94\times10^9\,\mathrm W
+ =2.94\times10^6\,\mathrm{kW}}.
+\]
+这是\emph{发射时段平均输入功率}，
+不是电网日均耗电；
+高脉冲功率通常需专用储能系统。
+源数据 \(a<r\) 的几何解释仍应按原图18.32
+复核，不擅改为不同尺寸。
+
+\paragraph{习题 18.28}
+磁场垂直软导线所在平面，
+长度 \(ds\) 的载流线元受安培力大小
+\(dF=IB\,ds\) 沿圆弧法向。
+曲线张力为 \(T\) 的细线
+在半径 \(r\) 的小角元 \(d\theta\) 上，
+两端张力的合向心力
+\(2T\sin(d\theta/2)\simeq T\,d\theta\)。
+由 \(ds=r\,d\theta\)：
+\[
+ T\,d\theta=IB\,r\,d\theta
+ \Longrightarrow
+ \boxed{r=\frac{T}{IB}}.
+\]
+另一方面带电量大小 \(q>0\)
+的粒子作磁场圆运动，
+\(qvB=mv^2/r\)，
+故 \(r=p/(qB)\)。
+令它与软导线几何圆半径相等，
+\[
+ \boxed{p=qBr=\frac{qT}{I}}.
+\]
+负电荷的绕行方向与正电荷相反，
+但半径和动量\emph{大小}公式使用 \(|q|\)。
+
+\paragraph{习题 18.29}
+取相距矢量
+\(\boldsymbol r=\boldsymbol r_2-\boldsymbol r_1
+ =a\hat{\boldsymbol x}\)，
+质子1速度沿连线远离质子2，
+故 \(\boldsymbol v_1\parallel\boldsymbol r\)；
+质子2速度
+\(\boldsymbol v_2\perp\boldsymbol r\)，
+为方便令 \(\boldsymbol v_2=v_2\hat y\)。
+静电相互作用力大小
+\(F_E=e^2/(4\pi\varepsilon_0a^2)\)，
+两质子因同号而相互斥离。
+
+低速带电点粒子产生的磁场近似
+\[
+ \boldsymbol B_1(\boldsymbol r_2)=
+ \frac{\mu_0e}{4\pi a^2}
+ \boldsymbol v_1\times\hat{\boldsymbol r}=\boldsymbol0
+\]
+（\(\boldsymbol v_1\parallel\hat{\boldsymbol r}\)），
+所以质子2受质子1的磁力为零。
+相反，质子2在质子1处的场
+\(\boldsymbol B_2=
+ \frac{\mu_0e}{4\pi a^2}
+ \boldsymbol v_2\times(-\hat x)\)
+一般不为零，
+质子1受磁力
+\[
+ \boxed{\boldsymbol F_{1\leftarrow2}^{(B)}
+ =\frac{\mu_0e^2}{4\pi a^2}
+ \boldsymbol v_1\times[
+ \boldsymbol v_2\times(-\hat x)]}
+\]
+方向按给定运动方向和右手法则求出。
+在坐标约定
+\(\boldsymbol v_1=-v_1\hat x\)
+（质子1位于左、向左远离质子2）、
+\(\boldsymbol v_2=+v_2\hat y\) 下，
+磁力沿 \(+\hat y\)，其大小
+\[
+ \boxed{F_B=\frac{\mu_0e^2}{4\pi a^2}v_1v_2
+ =F_E\frac{v_1v_2}{c^2}}.
+\]
+因此两质子\emph{机械}作用力
+在此瞬间不严格互为相反矢量：
+质子1有横向磁力而质子2没有。
+这\emph{不}违反完整电磁系统动量守恒，
+因为电磁场自身具有动量密度
+\(\boldsymbol g=\varepsilon_0
+ \boldsymbol E\times\boldsymbol B\)，
+机械动量与场动量之和才守恒。
+点电荷近场展开仅保留低速主项，
+更完整的相对论场还包括迟滞项。
+
+\paragraph{习题 18.30}
+磁矩在外磁场中的势能
+\(U=-\boldsymbol\mu\cdot\boldsymbol B
+ =-\mu B\cos\theta\)。
+\(\mu=2.39\times10^{-23}\,\mathrm{J/T}\)，
+\(B=2.0\,\mathrm T\)，
+\(\mu B=4.78\times10^{-23}\,\mathrm J\)。
+将源书四种量子化方向代入，按角度顺序得到
+\[
+ \boxed{\begin{aligned}
+ U(39.2^\circ)&\approx-3.70\times10^{-23}\,\mathrm J,\\
+ U(75.0^\circ)&\approx-1.24\times10^{-23}\,\mathrm J,\\
+ U(105.0^\circ)&\approx+1.24\times10^{-23}\,\mathrm J,\\
+ U(140.8^\circ)&\approx+3.70\times10^{-23}\,\mathrm J.
+ \end{aligned}}
+\]
+这对应原书磁矩相对于场方向的四种允许夹角；
+以 \(U=0\) 选为垂直取向时的势能。
