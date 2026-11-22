@@ -52,12 +52,12 @@
         16
       ],
       "tested_quantity": "head-on collision truck speed",
-      "independent_computed_value": 12.88,
+      "independent_computed_value": 12.931972891032123,
       "value_unit": "m/s",
       "companion_rounded_value": 12.9,
       "model_assumptions": "reactions .70s, both braking7.5m/s², early root only",
       "crosscheck": "checked_against_companion_scanned_answer_and_independently_derived_model",
-      "discrepancy_note": "rounded agreement",
+      "discrepancy_note": "companion rounds 65km/h→18m/s and closing distance→50m; independent exact-input collision t=1.6090703s v_truck=12.93197m/s; former local value12.88m/s corrected",
       "academic_review": "pending_independent_verification",
       "exam_ready": false
     },
@@ -445,7 +445,8 @@
     "companion_number_agreement": 26,
     "source_rounding_sensitive_cases": 1,
     "expert_signed_off": 0,
-    "source_unit_misprint_cases": 1
+    "source_unit_misprint_cases": 1,
+    "local_previous_calculation_corrected_cases": 1
   },
   "notes": "Full chapter-1 exercises 1.1--1.26 source answer value spotcomparison (not entire mathematical proof verification). Original scanned third companion S PDF physical pages 15--25. For 1.6 source difference is premature rounding, for 1.23 source text has incorrect speed unit m/s although numerical input is km/h. Distinct problem count unchanged 943; academic/expert review remains pending."
 }
