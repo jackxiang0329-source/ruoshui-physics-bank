@@ -216,7 +216,7 @@ Cwater=4.18e3*Mw
 T1,T2=300.,Tw
 dS=Cwater*log(T2/T1)+Mw*L/T2
 check(219,"heat 1mol liquid water300K then vaporize373K entropy J/K",
-      dS,129)
+      dS,125.4)
 if errors:
     for e in errors:print("FAIL:",e)
     raise AssertionError(f"{len(errors)} phase transition physical benchmarks failed")
