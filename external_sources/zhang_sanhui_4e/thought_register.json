@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "project": "Zhang Sanhui University Physics 4th ed three-scanned-PDF research intake",
   "source_volume": "V2",
-  "scope": "original separately numbered 思考题 (thought questions), distinct from 705 original 章末习题 candidate pairs",
+  "scope": "original separately numbered 思考题 (thought questions) ch22-30, distinct from 705 章末习题 candidate pairs",
   "main_chapter_end_count_unchanged": 705,
-  "thought_question_count": 80,
-  "thought_solution_count": 80,
+  "thought_question_count": 101,
+  "thought_solution_count": 101,
   "source_pdf_volume": "大学物理学（第4版）电磁学、光学、量子物理 (张三慧) .pdf",
   "companion_pdf": "大学物理学（第4版）学习辅导与习题解答 (张三慧) .pdf",
   "companion_extras_counted": 0,
@@ -15,6 +15,29 @@
   "exam_ready": false,
   "figures_not_formally_redrawn": true,
   "chapters": [
+    {
+      "chapter": 22,
+      "title": "光的干涉",
+      "source_thought_count": 12,
+      "source_pdf_physical_pages": [
+        261,
+        262
+      ],
+      "question_file": "thought_questions/22/questions.tex",
+      "solution_file": "thought_questions/22/solutions.tex",
+      "status": "paraphrased_source_numbered_candidate_with_independent_LaTeX_answers"
+    },
+    {
+      "chapter": 23,
+      "title": "光的衍射",
+      "source_thought_count": 9,
+      "source_pdf_physical_pages": [
+        287
+      ],
+      "question_file": "thought_questions/23/questions.tex",
+      "solution_file": "thought_questions/23/solutions.tex",
+      "status": "paraphrased_source_numbered_candidate_with_independent_LaTeX_answers"
+    },
     {
       "chapter": 24,
       "title": "光的偏振",
@@ -96,6 +119,489 @@
     }
   ],
   "entries": [
+    {
+      "canonical_id": "ZS4-T22-001",
+      "source_thought_number": "22.1",
+      "volume": "V2",
+      "chapter": 22,
+      "section": "思考题",
+      "textbook_pdf_pages": [
+        261
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_crosscheck_status": "not_independently_matched_in_companion",
+      "question_file": "thought_questions/22/questions.tex",
+      "solution_file": "thought_questions/22/solutions.tex",
+      "source_review": "paraphrased_from_uploaded_scan_with_original_number; figures_not_independently_redrawn",
+      "solution_review": "independent_conceptual_derivation_draft",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false,
+      "figure_review_pending": false,
+      "risk_flags": [
+        "interference_or_diffraction_model_assumptions"
+      ],
+      "answer_unresolved": false
+    },
+    {
+      "canonical_id": "ZS4-T22-002",
+      "source_thought_number": "22.2",
+      "volume": "V2",
+      "chapter": 22,
+      "section": "思考题",
+      "textbook_pdf_pages": [
+        261
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_crosscheck_status": "not_independently_matched_in_companion",
+      "question_file": "thought_questions/22/questions.tex",
+      "solution_file": "thought_questions/22/solutions.tex",
+      "source_review": "paraphrased_from_uploaded_scan_with_original_number; figures_not_independently_redrawn",
+      "solution_review": "independent_conceptual_derivation_draft",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false,
+      "figure_review_pending": true,
+      "risk_flags": [
+        "figure_22_30"
+      ],
+      "answer_unresolved": false
+    },
+    {
+      "canonical_id": "ZS4-T22-003",
+      "source_thought_number": "22.3",
+      "volume": "V2",
+      "chapter": 22,
+      "section": "思考题",
+      "textbook_pdf_pages": [
+        261
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_crosscheck_status": "not_independently_matched_in_companion",
+      "question_file": "thought_questions/22/questions.tex",
+      "solution_file": "thought_questions/22/solutions.tex",
+      "source_review": "paraphrased_from_uploaded_scan_with_original_number; figures_not_independently_redrawn",
+      "solution_review": "independent_conceptual_derivation_draft",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false,
+      "figure_review_pending": false,
+      "risk_flags": [
+        "interference_or_diffraction_model_assumptions"
+      ],
+      "answer_unresolved": false
+    },
+    {
+      "canonical_id": "ZS4-T22-004",
+      "source_thought_number": "22.4",
+      "volume": "V2",
+      "chapter": 22,
+      "section": "思考题",
+      "textbook_pdf_pages": [
+        261
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_crosscheck_status": "not_independently_matched_in_companion",
+      "question_file": "thought_questions/22/questions.tex",
+      "solution_file": "thought_questions/22/solutions.tex",
+      "source_review": "paraphrased_from_uploaded_scan_with_original_number; figures_not_independently_redrawn",
+      "solution_review": "independent_conceptual_derivation_draft",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false,
+      "figure_review_pending": true,
+      "risk_flags": [
+        "figure_22_31"
+      ],
+      "answer_unresolved": false
+    },
+    {
+      "canonical_id": "ZS4-T22-005",
+      "source_thought_number": "22.5",
+      "volume": "V2",
+      "chapter": 22,
+      "section": "思考题",
+      "textbook_pdf_pages": [
+        262
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_crosscheck_status": "not_independently_matched_in_companion",
+      "question_file": "thought_questions/22/questions.tex",
+      "solution_file": "thought_questions/22/solutions.tex",
+      "source_review": "paraphrased_from_uploaded_scan_with_original_number; figures_not_independently_redrawn",
+      "solution_review": "independent_conceptual_derivation_draft",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false,
+      "figure_review_pending": false,
+      "risk_flags": [
+        "interference_or_diffraction_model_assumptions"
+      ],
+      "answer_unresolved": false
+    },
+    {
+      "canonical_id": "ZS4-T22-006",
+      "source_thought_number": "22.6",
+      "volume": "V2",
+      "chapter": 22,
+      "section": "思考题",
+      "textbook_pdf_pages": [
+        262
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_crosscheck_status": "not_independently_matched_in_companion",
+      "question_file": "thought_questions/22/questions.tex",
+      "solution_file": "thought_questions/22/solutions.tex",
+      "source_review": "paraphrased_from_uploaded_scan_with_original_number; figures_not_independently_redrawn",
+      "solution_review": "independent_conceptual_derivation_draft",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false,
+      "figure_review_pending": false,
+      "risk_flags": [
+        "interference_or_diffraction_model_assumptions"
+      ],
+      "answer_unresolved": false
+    },
+    {
+      "canonical_id": "ZS4-T22-007",
+      "source_thought_number": "22.7",
+      "volume": "V2",
+      "chapter": 22,
+      "section": "思考题",
+      "textbook_pdf_pages": [
+        262
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_crosscheck_status": "not_independently_matched_in_companion",
+      "question_file": "thought_questions/22/questions.tex",
+      "solution_file": "thought_questions/22/solutions.tex",
+      "source_review": "paraphrased_from_uploaded_scan_with_original_number; figures_not_independently_redrawn",
+      "solution_review": "independent_conceptual_derivation_draft",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false,
+      "figure_review_pending": false,
+      "risk_flags": [
+        "interference_or_diffraction_model_assumptions"
+      ],
+      "answer_unresolved": false
+    },
+    {
+      "canonical_id": "ZS4-T22-008",
+      "source_thought_number": "22.8",
+      "volume": "V2",
+      "chapter": 22,
+      "section": "思考题",
+      "textbook_pdf_pages": [
+        262
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_crosscheck_status": "not_independently_matched_in_companion",
+      "question_file": "thought_questions/22/questions.tex",
+      "solution_file": "thought_questions/22/solutions.tex",
+      "source_review": "paraphrased_from_uploaded_scan_with_original_number; figures_not_independently_redrawn",
+      "solution_review": "independent_conceptual_derivation_draft",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false,
+      "figure_review_pending": false,
+      "risk_flags": [
+        "interference_or_diffraction_model_assumptions"
+      ],
+      "answer_unresolved": false
+    },
+    {
+      "canonical_id": "ZS4-T22-009",
+      "source_thought_number": "22.9",
+      "volume": "V2",
+      "chapter": 22,
+      "section": "思考题",
+      "textbook_pdf_pages": [
+        262
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_crosscheck_status": "not_independently_matched_in_companion",
+      "question_file": "thought_questions/22/questions.tex",
+      "solution_file": "thought_questions/22/solutions.tex",
+      "source_review": "paraphrased_from_uploaded_scan_with_original_number; figures_not_independently_redrawn",
+      "solution_review": "independent_conceptual_derivation_draft",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false,
+      "figure_review_pending": true,
+      "risk_flags": [
+        "figure_22_32"
+      ],
+      "answer_unresolved": false
+    },
+    {
+      "canonical_id": "ZS4-T22-010",
+      "source_thought_number": "22.10",
+      "volume": "V2",
+      "chapter": 22,
+      "section": "思考题",
+      "textbook_pdf_pages": [
+        262
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_crosscheck_status": "not_independently_matched_in_companion",
+      "question_file": "thought_questions/22/questions.tex",
+      "solution_file": "thought_questions/22/solutions.tex",
+      "source_review": "paraphrased_from_uploaded_scan_with_original_number; figures_not_independently_redrawn",
+      "solution_review": "independent_conceptual_derivation_draft",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false,
+      "figure_review_pending": false,
+      "risk_flags": [
+        "interference_or_diffraction_model_assumptions"
+      ],
+      "answer_unresolved": false
+    },
+    {
+      "canonical_id": "ZS4-T22-011",
+      "source_thought_number": "22.11",
+      "volume": "V2",
+      "chapter": 22,
+      "section": "思考题",
+      "textbook_pdf_pages": [
+        262
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_crosscheck_status": "not_independently_matched_in_companion",
+      "question_file": "thought_questions/22/questions.tex",
+      "solution_file": "thought_questions/22/solutions.tex",
+      "source_review": "paraphrased_from_uploaded_scan_with_original_number; figures_not_independently_redrawn",
+      "solution_review": "independent_conceptual_derivation_draft",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false,
+      "figure_review_pending": false,
+      "risk_flags": [
+        "VLBI_group_phase_delay"
+      ],
+      "answer_unresolved": false
+    },
+    {
+      "canonical_id": "ZS4-T22-012",
+      "source_thought_number": "22.12",
+      "volume": "V2",
+      "chapter": 22,
+      "section": "思考题",
+      "textbook_pdf_pages": [
+        262
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_crosscheck_status": "not_independently_matched_in_companion",
+      "question_file": "thought_questions/22/questions.tex",
+      "solution_file": "thought_questions/22/solutions.tex",
+      "source_review": "paraphrased_from_uploaded_scan_with_original_number; figures_not_independently_redrawn",
+      "solution_review": "independent_conceptual_derivation_draft",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false,
+      "figure_review_pending": false,
+      "risk_flags": [
+        "interference_or_diffraction_model_assumptions"
+      ],
+      "answer_unresolved": false
+    },
+    {
+      "canonical_id": "ZS4-T23-001",
+      "source_thought_number": "23.1",
+      "volume": "V2",
+      "chapter": 23,
+      "section": "思考题",
+      "textbook_pdf_pages": [
+        287
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_crosscheck_status": "not_independently_matched_in_companion",
+      "question_file": "thought_questions/23/questions.tex",
+      "solution_file": "thought_questions/23/solutions.tex",
+      "source_review": "paraphrased_from_uploaded_scan_with_original_number; figures_not_independently_redrawn",
+      "solution_review": "independent_conceptual_derivation_draft",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false,
+      "figure_review_pending": false,
+      "risk_flags": [
+        "interference_or_diffraction_model_assumptions"
+      ],
+      "answer_unresolved": false
+    },
+    {
+      "canonical_id": "ZS4-T23-002",
+      "source_thought_number": "23.2",
+      "volume": "V2",
+      "chapter": 23,
+      "section": "思考题",
+      "textbook_pdf_pages": [
+        287
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_crosscheck_status": "not_independently_matched_in_companion",
+      "question_file": "thought_questions/23/questions.tex",
+      "solution_file": "thought_questions/23/solutions.tex",
+      "source_review": "paraphrased_from_uploaded_scan_with_original_number; figures_not_independently_redrawn",
+      "solution_review": "independent_conceptual_derivation_draft",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false,
+      "figure_review_pending": false,
+      "risk_flags": [
+        "interference_or_diffraction_model_assumptions"
+      ],
+      "answer_unresolved": false
+    },
+    {
+      "canonical_id": "ZS4-T23-003",
+      "source_thought_number": "23.3",
+      "volume": "V2",
+      "chapter": 23,
+      "section": "思考题",
+      "textbook_pdf_pages": [
+        287
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_crosscheck_status": "not_independently_matched_in_companion",
+      "question_file": "thought_questions/23/questions.tex",
+      "solution_file": "thought_questions/23/solutions.tex",
+      "source_review": "paraphrased_from_uploaded_scan_with_original_number; figures_not_independently_redrawn",
+      "solution_review": "independent_conceptual_derivation_draft",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false,
+      "figure_review_pending": true,
+      "risk_flags": [
+        "figure_23_30"
+      ],
+      "answer_unresolved": false
+    },
+    {
+      "canonical_id": "ZS4-T23-004",
+      "source_thought_number": "23.4",
+      "volume": "V2",
+      "chapter": 23,
+      "section": "思考题",
+      "textbook_pdf_pages": [
+        287
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_crosscheck_status": "not_independently_matched_in_companion",
+      "question_file": "thought_questions/23/questions.tex",
+      "solution_file": "thought_questions/23/solutions.tex",
+      "source_review": "paraphrased_from_uploaded_scan_with_original_number; figures_not_independently_redrawn",
+      "solution_review": "independent_conceptual_derivation_draft",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false,
+      "figure_review_pending": false,
+      "risk_flags": [
+        "Fraunhofer_aperture_shift_vs_incidence_angle"
+      ],
+      "answer_unresolved": false
+    },
+    {
+      "canonical_id": "ZS4-T23-005",
+      "source_thought_number": "23.5",
+      "volume": "V2",
+      "chapter": 23,
+      "section": "思考题",
+      "textbook_pdf_pages": [
+        287
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_crosscheck_status": "not_independently_matched_in_companion",
+      "question_file": "thought_questions/23/questions.tex",
+      "solution_file": "thought_questions/23/solutions.tex",
+      "source_review": "paraphrased_from_uploaded_scan_with_original_number; figures_not_independently_redrawn",
+      "solution_review": "independent_conceptual_derivation_draft",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false,
+      "figure_review_pending": false,
+      "risk_flags": [
+        "interference_or_diffraction_model_assumptions"
+      ],
+      "answer_unresolved": false
+    },
+    {
+      "canonical_id": "ZS4-T23-006",
+      "source_thought_number": "23.6",
+      "volume": "V2",
+      "chapter": 23,
+      "section": "思考题",
+      "textbook_pdf_pages": [
+        287
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_crosscheck_status": "not_independently_matched_in_companion",
+      "question_file": "thought_questions/23/questions.tex",
+      "solution_file": "thought_questions/23/solutions.tex",
+      "source_review": "paraphrased_from_uploaded_scan_with_original_number; figures_not_independently_redrawn",
+      "solution_review": "independent_conceptual_derivation_draft",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false,
+      "figure_review_pending": false,
+      "risk_flags": [
+        "interference_or_diffraction_model_assumptions"
+      ],
+      "answer_unresolved": false
+    },
+    {
+      "canonical_id": "ZS4-T23-007",
+      "source_thought_number": "23.7",
+      "volume": "V2",
+      "chapter": 23,
+      "section": "思考题",
+      "textbook_pdf_pages": [
+        287
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_crosscheck_status": "not_independently_matched_in_companion",
+      "question_file": "thought_questions/23/questions.tex",
+      "solution_file": "thought_questions/23/solutions.tex",
+      "source_review": "paraphrased_from_uploaded_scan_with_original_number; figures_not_independently_redrawn",
+      "solution_review": "independent_conceptual_derivation_draft",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false,
+      "figure_review_pending": false,
+      "risk_flags": [
+        "interference_or_diffraction_model_assumptions"
+      ],
+      "answer_unresolved": false
+    },
+    {
+      "canonical_id": "ZS4-T23-008",
+      "source_thought_number": "23.8",
+      "volume": "V2",
+      "chapter": 23,
+      "section": "思考题",
+      "textbook_pdf_pages": [
+        287
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_crosscheck_status": "not_independently_matched_in_companion",
+      "question_file": "thought_questions/23/questions.tex",
+      "solution_file": "thought_questions/23/solutions.tex",
+      "source_review": "paraphrased_from_uploaded_scan_with_original_number; figures_not_independently_redrawn",
+      "solution_review": "independent_conceptual_derivation_draft",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false,
+      "figure_review_pending": false,
+      "risk_flags": [
+        "interference_or_diffraction_model_assumptions"
+      ],
+      "answer_unresolved": false
+    },
+    {
+      "canonical_id": "ZS4-T23-009",
+      "source_thought_number": "23.9",
+      "volume": "V2",
+      "chapter": 23,
+      "section": "思考题",
+      "textbook_pdf_pages": [
+        287
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_crosscheck_status": "not_independently_matched_in_companion",
+      "question_file": "thought_questions/23/questions.tex",
+      "solution_file": "thought_questions/23/solutions.tex",
+      "source_review": "paraphrased_from_uploaded_scan_with_original_number; figures_not_independently_redrawn",
+      "solution_review": "independent_conceptual_derivation_draft",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false,
+      "figure_review_pending": false,
+      "risk_flags": [
+        "interference_or_diffraction_model_assumptions"
+      ],
+      "answer_unresolved": false
+    },
     {
       "canonical_id": "ZS4-T24-001",
       "source_thought_number": "24.1",
@@ -1940,5 +2446,5 @@
       "answer_unresolved": false
     }
   ],
-  "notes": "Original textbook 思考题 numbered identically to 章末习题, so separate canonical identifiers ZS4-Txx-yyy and separate thought_register.json. Nothing appended to canonical 705 original exercise register. Q30.6 third/fourth Cu/Ni/Zn source isotope typographic ambiguity remains unresolved rather than inventing a conserved reaction. S companion thought-question crosschecks and exact TikZ figure redraw not completed."
+  "notes": "101 original separately numbered thought questions 22.1-30.10 transcribed as source-grounded paraphrases, distinct from705 textbook chapter-end exercise pairs. Companion independent extras not counted. All unapproved; 30.6 Cu/Ni/Zn source isotope equation remains unresolved. Figures22.30-22.32,23.30 and later chapter diagrams require exact redraw."
 }
