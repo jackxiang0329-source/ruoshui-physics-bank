@@ -1,0 +1,335 @@
+% 张三慧第四版第13章《电势》独立解析，V2 PDF物理页61--64
+% 全部是待审候选；参考 k_e=(4*pi*epsilon_0)^(-1)，电势零点依题而定。
+% 不能把公式编译或数值抽检通过理解为学术同行审核。
+\section*{第13章\quad 电势：独立解析}
+\subsection*{习题13.1--13.18}
+
+\paragraph{习题 13.1}
+取无穷远为电势零点，均匀带电薄球壳内各点的电势
+等于其表面电势。若 \(r\) 为距同心球心的距离，
+\[
+ \varphi(r)=\frac1{4\pi\varepsilon_0}
+ \left(\frac{Q_1}{\max(r,R_1)}+
+ \frac{Q_2}{\max(r,R_2)}\right).
+\]
+取 \(Q_1=10^{-8}\,\mathrm C,Q_2=1.5\times10^{-8}\,\mathrm C\),
+\(R_1=0.10\,\mathrm m,R_2=0.30\,\mathrm m\)，得
+\[
+ \boxed{\varphi(0.20)\approx 8.99\times10^2\,\mathrm V},\quad
+ \boxed{\varphi(0.50)\approx 4.49\times10^2\,\mathrm V}.
+\]
+注意在两壳之间，外壳的电势贡献仍是常数而非零。
+
+\paragraph{习题 13.2}
+设 \(U_{12}=\varphi(R_1)-\varphi(R_2)\)。
+球对称条件下两壳间场可写成
+\(E_r(r)=C/r^2\)。
+由电势差
+\[
+ U_{12}=\int_{R_1}^{R_2}E_r\,dr
+ =C\left(\frac1{R_1}-\frac1{R_2}\right)
+\]
+解出 \(C=U_{12}R_1R_2/(R_2-R_1)\)，故
+\[
+ \boxed{\boldsymbol E(r)=
+ \frac{U_{12}R_1R_2}{(R_2-R_1)r^2}
+ \,\hat{\boldsymbol r},\qquad R_1<r<R_2}.
+\]
+若定义电势差方向相反，场的符号应同步反转。
+
+\paragraph{习题 13.3}
+设内外薄球面带电量分别为 \(Q_1,Q_2\)。
+由球面势叠加：
+\[
+ \varphi_1=k_e\left(\frac{Q_1}{R_1}+\frac{Q_2}{R_2}\right),
+ \quad
+ \varphi_2=k_e\frac{Q_1+Q_2}{R_2},
+ \quad k_e=\frac1{4\pi\varepsilon_0}.
+\]
+相减后
+\[
+ k_eQ_1=\frac{\varphi_1-\varphi_2}{1/R_1-1/R_2}
+ =6.00\,\mathrm{V\,m},
+ \qquad k_e(Q_1+Q_2)=R_2\varphi_2=-6.00\,\mathrm{V\,m}.
+\]
+所以
+\[
+ \boxed{Q_1=+6.68\times10^{-10}\,\mathrm C,\quad
+ Q_2=-1.335\times10^{-9}\,\mathrm C}.
+\]
+在 \(R_1<r<R_2\) 内
+\(\varphi(r)=k_eQ_1/r+k_eQ_2/R_2=6/r-60\)（\(r\) 用米），
+故唯一零势点在半径
+\(\boxed{r=0.10\,\mathrm m}\) 的球面上。
+此半径确实在 \(0.05\) 与 \(0.20\,\mathrm m\) 之间。
+
+\paragraph{习题 13.4}
+令两个半径为 \(R_1<R_2\) 的均匀带电薄球面总电量
+\(q_1,q_2\)。在各自表面的电势为
+\[
+ \boxed{\varphi_1=k_e(q_1/R_1+q_2/R_2)},\qquad
+ \boxed{\varphi_2=k_e(q_1+q_2)/R_2}.
+\]
+电势差仅取决于内壳电量：
+\[
+ \boxed{\varphi_1-\varphi_2
+ =k_eq_1(1/R_1-1/R_2)}.
+\]
+因为括号为正，因此 \(q_1>0\) 时内壳势较高，
+\(q_1<0\) 时内壳势较低；外壳电量造成的相同
+常数电势在作差时消去。
+
+\paragraph{习题 13.5}
+令观察点位于 \(x>a\)，线元位置 \(s\in[-a,a]\)。
+电荷元 \(dq=\lambda ds\)，它与观察点距离 \(x-s>0\)，
+故
+\[
+ \varphi(x)=k_e\lambda\int_{-a}^a\frac{ds}{x-s}
+ =\boxed{k_e\lambda\ln\frac{x+a}{x-a}},\quad
+ k_e=\frac1{4\pi\varepsilon_0}.
+\]
+取无穷远为零，远场 \(x\gg a\) 时
+\(\varphi\simeq k_e(2a\lambda)/x\)，
+符合总电荷为 \(2a\lambda\) 的点电荷近似。
+
+\paragraph{习题 13.6}
+线密度 \(\lambda=2.0\times10^{-7}\,\mathrm{C/m}\)，
+杆长 \(l=0.15\,\mathrm m\)，
+令 \(k_e=(4\pi\varepsilon_0)^{-1}\)。
+(1) 延长线距一端 \(a=0.05\,\mathrm m\) 时
+\[
+ \varphi_{\rm ax}=k_e\lambda\int_0^l\frac{ds}{a+s}
+ =k_e\lambda\ln\frac{a+l}{a}
+ \approx\boxed{2.49\times10^3\,\mathrm V}.
+\]
+(2) 中垂线距杆中点 \(b=0.05\,\mathrm m\) 时
+\[
+ \varphi_\perp=k_e\lambda
+ \int_{-l/2}^{l/2}\frac{ds}{\sqrt{s^2+b^2}}
+ =2k_e\lambda\,\operatorname{arsinh}\frac{l}{2b}
+ \approx\boxed{4.30\times10^3\,\mathrm V}.
+\]
+由于电势为标量，沿整根杆积分时无分量抵消。
+
+\paragraph{习题 13.7}
+习题12.18中两无限长同轴圆筒半径 \(R_1<R_2\)，
+内外线电荷分别为 \(\lambda\)、\(-\lambda\)；
+筒间
+\(E_r=\lambda/(2\pi\varepsilon_0r)\)。
+沿径向积分电势差
+\[
+ \boxed{\varphi(R_1)-\varphi(R_2)
+ =\int_{R_1}^{R_2}\frac{\lambda\,dr}{2\pi\varepsilon_0r}
+ =\frac{\lambda}{2\pi\varepsilon_0}\ln\frac{R_2}{R_1}}.
+\]
+两圆筒外场为零，但各绝对电势仍须选择参照零点。
+
+\paragraph{习题 13.8}
+金属丝半径 \(a=(1.27\times10^{-5})/2
+=6.35\times10^{-6}\,\mathrm m\)，
+长圆筒内表面半径 \(b=0.01\,\mathrm m\)。
+同轴长圆柱的场在筒间为 \(E=C/r\)；
+电压 \(|U|=C\ln(b/a)=1000\,\mathrm V\)。
+所以
+\[
+ \boxed{|E(a)|=\frac{|U|}{a\ln(b/a)}
+ \approx2.14\times10^7\,\mathrm{V/m}},
+\quad
+ \boxed{|E(b)|=\frac{|U|}{b\ln(b/a)}
+ \approx1.36\times10^4\,\mathrm{V/m}}.
+\]
+场强大小之比 \(E(a)/E(b)=b/a\)，
+方向由细丝相对外筒的电势高低决定。
+
+\paragraph{习题 13.9}
+无限长均匀带电实心圆柱半径 \(a\)，
+体密度 \(\rho\)，由同轴高斯柱面
+\(E_r(2\pi rL)=Q_{\rm enc}/\varepsilon_0\)，得
+\[
+ \boxed{E_r(r)=
+ \begin{cases}
+ \rho r/(2\varepsilon_0),&0\le r\le a,\\
+ \rho a^2/(2\varepsilon_0r),&r\ge a.
+ \end{cases}}
+\]
+取轴线电势 \(\varphi(0)=0\)，用
+\(\varphi(r)=-\int_0^rE_r(s)\,ds\)：
+\[
+ \boxed{\varphi(r)=
+ \begin{cases}
+ -\rho r^2/(4\varepsilon_0),&0\le r\le a,\\
+ -\rho a^2/(4\varepsilon_0)
+ -\rho a^2/(2\varepsilon_0)\ln(r/a),&r\ge a.
+ \end{cases}}
+\]
+当 \(\rho>0\)，\(E_r\) 在 \(r<a\) 线性增长、
+在 \(r>a\) 按 \(1/r\) 衰减；电势从轴线零值先按
+\(-r^2\) 下降，外部按 \(-\ln r\) 下降。
+无限长带电柱不能同时取无穷远为有限的电势零点。
+
+\paragraph{习题 13.10}
+把圆盘分为半径 \(s\)、宽 \(ds\) 的同心细环，
+微元电荷 \(dq=\sigma_0(2\pi s\,ds)\)，
+到轴上 \(z\) 处距离
+\(\sqrt{s^2+z^2}\)。
+电势叠加为
+\[
+ \varphi(z)=k_e\int_0^R
+ \frac{\sigma_0\,2\pi s\,ds}{\sqrt{s^2+z^2}}
+ =\boxed{\frac{\sigma_0}{2\varepsilon_0}
+ (\sqrt{R^2+z^2}-|z|)}.
+\]
+这是无穷远电势零点的选择。
+验证另一途径：对 \(z>0\)，已知
+\(E_z=\sigma_0[1-z/\sqrt{R^2+z^2}]/(2\varepsilon_0)\)，
+由 \(\varphi(z)=\int_z^\infty E_z(s)\,ds\)
+得到同一表达式。\(z<0\) 由镜像对称延拓。
+
+\paragraph{习题 13.11}
+半径为 \(R\) 的完整圆盘减去半径为 \(R/2\)
+的带电小圆盘，轴上电势
+\[
+ \boxed{\varphi_{\rm ring}(z)=
+ \frac{\sigma}{2\varepsilon_0}
+ [\sqrt{R^2+z^2}-\sqrt{R^2/4+z^2}]}.
+\]
+中心电势
+\(\boxed{\varphi(0)=\sigma R/(4\varepsilon_0)}\)。
+由于轴上电势关于 \(z\) 为偶函数，
+\(E_z=-d\varphi/dz\) 在 \(z=0\) 为零；
+由旋转对称性其余方向分量也为零：
+\(\boxed{\boldsymbol E(0)=\boldsymbol0}\)。
+
+\paragraph{习题 13.12}
+球形导电雨滴外表面电势
+\(\varphi=k_eQ/R\)（相对无穷远）。
+取 \(R=0.40\times10^{-3}\,\mathrm m\)，
+\(Q=1.6\times10^{-12}\,\mathrm C\)，
+得
+\(\boxed{\varphi_1\approx35.95\,\mathrm V}\)。
+两滴合并时体积守恒使
+\(R_2=2^{1/3}R\)，净电荷守恒使
+\(Q_2=2Q\)，因此
+\[
+ \boxed{\varphi_2=\frac{k_e(2Q)}{2^{1/3}R}
+ =2^{2/3}\varphi_1\approx57.1\,\mathrm V}.
+\]
+未考虑非球形接触形变和电荷逸出。
+
+\paragraph{习题 13.13}
+均匀带电实心金核半径
+\(R=7.0\times10^{-15}\,\mathrm m\)，
+总电量 \(Q=79e\)。
+表面电势与外部点电荷相同：
+\[
+ \boxed{\varphi(R)=\frac{k_e(79e)}R
+ \approx1.63\times10^7\,\mathrm V}.
+\]
+均匀带电实心球内
+\(\varphi(r)=k_eQ(3R^2-r^2)/(2R^3)\)，
+故
+\(\boxed{\varphi(0)=\tfrac32\varphi(R)
+ \approx2.44\times10^7\,\mathrm V}\)。
+表面与中心的电势不能误认为相同（这不是导体球）。
+
+\paragraph{习题 13.14}
+按图13.16规定右侧圆环在 \(x=l/2\) 处带 \(+q\)，
+左侧在 \(x=-l/2\) 处带 \(-q\)，半径均为 \(R\)。
+轴上电势叠加为
+\[
+ \boxed{\varphi(x)=k_eq
+ \left[\frac1{\sqrt{(x-l/2)^2+R^2}}
+ -\frac1{\sqrt{(x+l/2)^2+R^2}}\right]}.
+\]
+在 \(l\ll R\) 时对 \(l\) 作一阶展开，
+\[
+ \varphi(x)\simeq k_eql
+ \frac{x}{(x^2+R^2)^{3/2}}.
+\]
+再取 \(x\gg R\)（且 \(x>0\)）得到
+\[
+ \boxed{\varphi(x)\simeq
+ \frac{ql}{4\pi\varepsilon_0x^2}},
+\]
+正是轴向点电偶极子电势的远场。
+
+\paragraph{习题 13.15}
+由习题13.5
+\(\varphi(x)=k_e\lambda\ln[(x+a)/(x-a)]\)，
+其沿 \(x\) 轴的场分量
+\[
+ E_x=-\frac{d\varphi}{dx}
+ =-k_e\lambda\left(\frac1{x+a}-\frac1{x-a}\right)
+ =\boxed{\frac{k_e\,2a\lambda}{x^2-a^2}},\quad x>a.
+\]
+\(\lambda>0\) 时沿正 \(x\) 方向；
+远场退化为 \(k_e(2a\lambda)/x^2\)。
+此结论与直接积分每个电荷元的库仑场一致。
+
+\paragraph{习题 13.16}
+两点电荷带相反符号，分别位于
+\(x=-b\) 的 \(q_1\) 和 \(x=+b\) 的 \(q_2\)。
+取 \(c=|q_1/q_2|>0\)，零势条件
+\(q_1/r_1+q_2/r_2=0\)，即
+\(r_1=cr_2\)。
+因此
+\[
+ (x+b)^2+y^2+z^2
+ =c^2[(x-b)^2+y^2+z^2].
+\]
+若 \(c\ne1\)，整理配方可得球心与半径
+\[
+ \boxed{x_c=-b\frac{1+c^2}{1-c^2},\quad
+ y_c=z_c=0,\quad
+ R_s=\frac{2bc}{|1-c^2|}}.
+\]
+若两点电荷大小相同、符号相反，则
+\(c=1\)，零势面退化为中垂平面
+\(\boxed{x=0}\)，不再是有限半径的球。
+
+\paragraph{习题 13.17}
+记到 \(x=-a\) 负线电荷的距离为
+\(r_-=\sqrt{(x+a)^2+y^2}\)，
+到 \(x=+a\) 正线电荷的距离为
+\(r_+=\sqrt{(x-a)^2+y^2}\)。
+由于总线电荷为零，电势可选为
+\[
+ \varphi(x,y)=\frac{\lambda}{2\pi\varepsilon_0}
+ \ln\frac{r_-}{r_+}.
+\]
+(1) 设某等势面为 \(r_-/r_+=c>0\)。
+配方得在 \(c\ne1\) 时
+\[
+ \boxed{(x-x_c)^2+y^2=R_c^2,\quad
+ x_c=-a\frac{1+c^2}{1-c^2},\quad
+ R_c=\frac{2ac}{|1-c^2|}}.
+\]
+沿 \(z\) 轴平移不变，空间等势面是圆柱面；
+其中在 \(xy\) 截面的交线为圆。\(c=1\) 为直线 \(x=0\)。
+(2) 电场线与等势线处处正交，由两个端点
+\((\pm a,0)\) 的共圆几何可得它们在
+\(xy\) 截面上的方程
+\[
+ \boxed{x^2+(y-y_0)^2=a^2+y_0^2}
+\]
+（\(y_0\) 由所取电场线确定），
+即圆心在 \(y\) 轴上的圆。
+电场没有 \(z\) 分量，所以各条场线均位于定 \(z\) 平面内。
+
+\paragraph{习题 13.18}
+按题设放电电压约 \(U=10^9\,\mathrm V\)，
+转移电荷约 \(Q=30\,\mathrm C\)。
+若以电势差在放电过程中近似保持该数值
+的模型估算，释放的能量为
+\[
+ \boxed{W\simeq QU=3.0\times10^{10}\,\mathrm J
+ =8.33\times10^3\,\mathrm{kW\,h}}.
+\]
+小学每天消耗 \(20\,\mathrm{kW\,h}\)，
+理论上可用
+\(\boxed{t\approx417\,\mathrm d}\)。
+\textbf{模型区别：}若上述电压指
+一个孤立等效电容从 \(U\) 完全放电至零的\emph{初始电压}，
+则储能为 \(\frac12 QU\)，对应约 \(208\,\mathrm d\)。
+原题未交代放电电压随时间的曲线，
+故必须标注所用近似，不能在两个模型间静默切换。
