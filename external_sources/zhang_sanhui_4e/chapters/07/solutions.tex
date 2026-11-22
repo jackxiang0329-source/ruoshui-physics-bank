@@ -1,0 +1,393 @@
+% 张三慧第4版V1第7章《波动》独立计算候选解
+% 原教材PDF物理页248--253；配套辅导书对照/原图重绘尚未验收。
+\section*{第7章\quad 波动：独立解析}
+
+\paragraph{习题 7.1}
+频率等于行波速度除以波长。
+题给
+\(u=740\,\mathrm{km/h}\)，
+\(\lambda=300\,\mathrm{km}\)，所以
+\[
+ \boxed{f=\frac u\lambda
+ =\frac{740}{300\times3600}
+ \approx6.85\times10^{-4}\,\mathrm{Hz}}.
+\]
+对应周期约 \(24.3\,\mathrm{min}\)。
+横跨 \(L=8000\,\mathrm{km}\)
+所需时间
+\[
+ \boxed{t=\frac Lu=\frac{8000}{740}
+ \approx10.81\,\mathrm h}.
+\]
+按题给的恒速波传播模型，不计不同水深的色散。
+
+\paragraph{习题 7.2}
+在 \(x_0=0.10\,\mathrm m\) 处
+\(y(x_0,t)=0.05\sin(1.0-4.0t)\)。
+角频率 \(\omega=4\,\mathrm{rad/s}\)，
+沿 \(+x\) 传播时
+\(k=\omega/u=4/0.80=5.0\,\mathrm{rad/m}\)，
+行波相位随 \((x-x_0)\) 增加 \(k(x-x_0)\)，
+因此
+\[
+ \boxed{y(x,t)=0.050
+ \sin[1.0-4.0t+5.0(x-0.10)]\ \mathrm m}
+ =0.050\sin(0.50+5x-4t)\,\mathrm m.
+\]
+\textbf{方向校核：}注意
+\(\sin(kx-\omega t)\) 确实向 \(+x\)
+传播，而 \(\sin(kx+\omega t)\) 反向传播。
+
+\paragraph{习题 7.3}
+原波函数
+\(y=0.020\sin[2\pi(200t-2x)]\)，
+故
+\[
+ \boxed{f=200\,\mathrm{Hz},\quad
+ \lambda=1/2=0.50\,\mathrm m,\quad
+ u=f\lambda=100\,\mathrm{m/s}}.
+\]
+相位固定时 \(200t-2x=C\)，
+因此波沿 \(+x\) 传播。
+绳上质元最大振动速率
+\(v_{\max}=A\omega
+ =0.020(2\pi 200)\approx25.13\,\mathrm{m/s}\)，
+与波速之比
+\[
+ \boxed{v_{\max}/u\approx0.2513}.
+\]
+质点振动速度不能和波形传播速度混同。
+
+\paragraph{习题 7.4}
+简谐地震波的
+\(f=1\,\mathrm{Hz}\)、
+波速 \(u=3000\,\mathrm{m/s}\)，
+波长
+\[
+ \boxed{\lambda=\frac uf=3.00\times10^3\,\mathrm m}.
+\]
+地面垂直振幅 \(A=2.0\,\mathrm m\)，
+最大速度
+\[
+ \boxed{|v|_{\max}=2\pi fA=4\pi
+ \approx12.57\,\mathrm{m/s}}.
+\]
+这是题设高度理想化的单频地震波，
+不是对实际地震时完整运动过程的预测。
+
+\paragraph{习题 7.5}
+原图7.44可读振幅
+\(A=0.040\,\mathrm m\)、波长
+\(\lambda=0.40\,\mathrm m\)，
+沿 \(+x\) 传播速度
+\(u=0.080\,\mathrm{m/s}\)，
+故
+\[
+ k=\frac{2\pi}{\lambda}=5\pi\,\mathrm{rad/m},\quad
+ \omega=uk=0.40\pi\,\mathrm{rad/s},\quad
+ T=\frac{\lambda}{u}=5.00\,\mathrm s.
+\]
+由 \(t=0\) 原点向上过零的\emph{空间曲线}，
+取
+\[
+ \boxed{y(x,t)=0.040\sin(5\pi x-0.40\pi t)\ \mathrm m}.
+\]
+注意波形沿 \(+x\) 运动，
+而 \(x=0,t=0\) 处的介质质点速度
+\(\partial_ty=-A\omega<0\)，
+不能把波形空间上升斜率误当成质点向上速度。
+当 \(t=T/8=0.625\,\mathrm s\)，
+波形相当于初图右移
+\(uT/8=\lambda/8=0.050\,\mathrm m\)：
+\[
+ \boxed{y(x,T/8)=0.040
+ \sin(5\pi x-\pi/4)\ \mathrm m}.
+\]
+原图矢量重绘仍待复核。
+
+\paragraph{习题 7.6}
+给定
+\(y=A\cos[\pi(4t+2x)]\)，
+有 \(\omega=4\pi\)，
+\(k=2\pi\)；
+因为相位 \(4t+2x\) 恒定需
+\(dx/dt=-2\,\mathrm{m/s}\)，
+波向 \(-x\) 传播。
+在 \(t=4.2\,\mathrm s\) 时
+\[
+ \boxed{y(x,4.2)=A\cos(0.8\pi+2\pi x)},
+\]
+其中相位已约去整周。
+波峰满足 \(4t+2x=2n\)，
+所以
+\(x=n-8.4\,\mathrm m\)。
+离原点最近的一峰在
+\[
+ \boxed{x_{\rm near}=-0.40\,\mathrm m}
+\]
+（右侧相邻峰位于 \(+0.60\,\mathrm m\)）。
+波向左行进，所以右侧波峰从
+\(x=0.60\) 到原点还需
+\(0.60/2=0.30\,\mathrm s\)，
+即经过原点的
+\[
+ \boxed{t=4.50\,\mathrm s}.
+\]
+此刻图形按上述余弦式直接绘出。
+
+\paragraph{习题 7.7}
+\(u=350\,\mathrm{m/s}\)，
+\(f=500\,\mathrm{Hz}\)，
+波长 \(\lambda=u/f=0.70\,\mathrm m\)。
+若两点相位差为
+\(60^\circ=\pi/3\)，
+取最近的正距离：
+\[
+ \boxed{\Delta x=\frac{\Delta\varphi}{2\pi}\lambda
+ =\frac{0.70}{6}\approx0.117\,\mathrm m}.
+\]
+同一质点相隔 \(10^{-3}\,\mathrm s\)：
+\[
+ \boxed{\Delta\varphi
+ =2\pi f\Delta t
+ =2\pi(500)(10^{-3})=\pi}.
+\]
+在相位差中可任选加整周 \(2n\pi\)，
+但物理状态由模 \(2\pi\) 决定。
+
+\paragraph{习题 7.8}
+均匀细杆的一维纵波速率为
+\(u=\sqrt{Y/\rho}\)，
+其中 \(Y\) 是杨氏模量。
+由题给参数
+\[
+ \boxed{Y=\rho u^2
+ =(7.8\times10^3)(5100)^2
+ \approx2.03\times10^{11}\,\mathrm{Pa}}.
+\]
+这是理想无限细均匀弹性杆的
+无色散纵波近似。
+
+\paragraph{习题 7.9}
+体积弹性模量定义
+\(K=-V\,dp/dV\)。
+若 \(|\Delta V|\ll V\)，
+则小形变的恢复压强增量大小
+\(\Delta p\simeq K|\Delta V|/V\)。
+从零应变到最终压缩量所作弹性储能功
+\[
+ W=\int_0^{|\Delta V|}
+ \frac{K\,\delta V}{V}\,d(\delta V)
+ =\frac{K(\Delta V)^2}{2V}.
+\]
+除以原体积 \(V\)，得
+\[
+ \boxed{u_{\rm elastic}
+ =W/V=\frac12K(\Delta V/V)^2}.
+\]
+压缩与膨胀的能量均为正，原因是
+它依赖形变的平方。
+
+\paragraph{习题 7.10}
+均匀一维简谐纵波平均强度
+\(I_{\rm wave}=\tfrac12\rho u\omega^2A^2\)，
+其中 \(\omega=2\pi f\)。
+代入
+\(\rho=7.9\times10^3\,\mathrm{kg/m^3}\)，
+\(u=5.1\times10^3\,\mathrm{m/s}\)，
+\(f=10^3\,\mathrm{Hz}\)，
+\(A=10^{-9}\,\mathrm m\)，有
+\[
+ \boxed{I_{\rm wave}
+ =\tfrac12(7900)(5100)(2\pi1000)^2(10^{-9})^2
+ \approx7.95\times10^{-4}\,\mathrm{W/m^2}}.
+\]
+钢轨截面积
+\(S=15\,\mathrm{cm^2}
+ =1.5\times10^{-3}\,\mathrm{m^2}\)，
+平均传输功率
+\[
+ \boxed{P=I_{\rm wave}S
+ \approx1.19\times10^{-6}\,\mathrm W}.
+\]
+注意声强单位为 \(\mathrm{W/m^2}\)，
+与声级的dB标度不同。
+
+\paragraph{习题 7.11}
+绳线密度 \(\mu\)，张力 \(F_T\)。
+小振幅右行波
+\(y=A\cos(kx-\omega t)\)。
+小斜率下从左侧传向右侧的瞬时弹性功率
+由横向张力分量与质元垂直速度的乘积给出：
+\[
+ P(x,t)=-F_T\frac{\partial y}{\partial x}
+ \frac{\partial y}{\partial t}.
+\]
+代入
+\(\partial_xy=-Ak\sin(kx-\omega t)\)，
+\(\partial_ty=A\omega\sin(kx-\omega t)\)，
+故
+\[
+ P=F_TA^2k\omega
+ \sin^2(kx-\omega t).
+\]
+用弦波波速
+\(u=\sqrt{F_T/\mu}\)，
+且 \(\omega=ku\)：
+\[
+ \boxed{\overline P=
+ \frac12F_TA^2k\omega
+ =\frac12\mu uA^2\omega^2}.
+\]
+若绳有效截面积为 \(S\)，
+平均强度 \(I=\overline P/S
+ =\tfrac12\rho u\omega^2A^2\)，
+与教材能流表达式一致。
+正号表示波能沿波传播方向传输。
+
+\paragraph{习题 7.12}
+频率100 Hz、波速400 m/s，
+波长
+\(\lambda=u/f=4.0\,\mathrm m\)。
+取直线AB长度30 m，
+坐标 \(x\) 从A指向B；
+两源原相差 \(\pi\)。
+两路波在点 \(x\) 的路径差
+\(\Delta r=(30-x)-x=30-2x\)。
+增强条件为
+\[
+ k\Delta r+\pi=2n\pi
+ \Longleftrightarrow
+ \Delta r=(n-\tfrac12)\lambda.
+\]
+故
+\(30-2x=(2n-1)2\)，
+解出
+\[
+ \boxed{x=2,4,6,\ldots,28\,\mathrm m}.
+\]
+即两源之间（不包括源本身）
+共有14个增强位置；
+而 \(x=15\,\mathrm m\) 两程相同，
+原初相相差 \(\pi\) 因而相消。
+此结论假定传播中两波振幅相等。
+
+\paragraph{习题 7.13}
+驻波
+\(y=0.020\cos(20x)\cos(750t)\)，
+与两反向等振幅波叠加式
+\(2a\cos(kx)\cos(\omega t)\) 比较：
+\[
+ \boxed{a=0.010\,\mathrm m,\quad
+ k=20\,\mathrm{rad/m},\
+ \omega=750\,\mathrm{rad/s}},\qquad
+ \boxed{u=\omega/k=37.5\,\mathrm{m/s}}.
+\]
+节点满足
+\(\cos(kx)=0\)，
+相邻节点间距
+\[
+ \boxed{\Delta x=\frac\pi k
+ =\frac\pi{20}\approx0.157\,\mathrm m}.
+\]
+质点速度
+\[
+ v_y=\frac{\partial y}{\partial t}
+ =-15\cos(20x)\sin(750t).
+\]
+于
+\(t=0.002\,\mathrm s,\ x=0.05\,\mathrm m\)
+代入
+\[
+ \boxed{v_y=-15\cos(1.0)\sin(1.5)
+ \approx-8.08\,\mathrm{m/s}}.
+\]
+符号表示此时质点向负 \(y\) 方向运动。
+
+\paragraph{习题 7.14}
+入射波沿 \(+x\) 传播，
+可选初相使
+\(y_i(0,0)=0\) 且
+\((\partial_ty_i)(0,0)>0\)：
+\[
+ \boxed{y_i=A\sin(\omega t-kx)},
+\quad
+ \omega=2\pi\nu,\ k=2\pi/\lambda.
+\]
+在距原点
+\(p=3\lambda/4\) 的反射面
+从波疏到波密，位移反射相位改变 \(\pi\)。
+从右向左的反射波为
+\[
+ y_r=-A\sin[\omega t+kx-2kp].
+\]
+因 \(2kp=3\pi\)，
+\[
+ \boxed{y_r=+A\sin(\omega t+kx)}.
+\]
+合振动
+\[
+ y_i+y_r
+ =2A\sin(\omega t)\cos(kx).
+\]
+故节点位置满足
+\(\cos(kx)=0\)，
+在原点与反射面之间
+\[
+ \boxed{x=\lambda/4,\quad
+ x=3\lambda/4=p},
+\]
+若继续考虑左侧空间，节点按
+\(x=(2n+1)\lambda/4\) 周期排列。
+反射面处的总位移确实为零，作为边界条件校验。
+
+\paragraph{习题 7.15}
+片厚
+\(d=2.00\times10^{-3}\,\mathrm m\)。
+厚度方向基频时
+\(d=\lambda/2\)，
+所以
+\[
+ \boxed{f=\frac{u}{2d}
+ =\frac{5.74\times10^3}{4.00\times10^{-3}}
+ =1.435\times10^6\,\mathrm{Hz}
+ =1.435\,\mathrm{MHz}}.
+\]
+这是理想厚度剪切/纵向驻波的
+几何估算，真实压电振动还受切型和电极负载影响。
+
+\paragraph{习题 7.16}
+采用声级定义
+\(\beta=10\log_{10}(I/I_0)\,\mathrm{dB}\)
+和题设
+\(I_0=10^{-12}\,\mathrm{W/m^2}\)。
+因此
+\[
+ \boxed{I_{115}=I_0\,10^{115/10}
+ \approx0.316\,\mathrm{W/m^2}},\qquad
+ \boxed{I_{141}=I_0\,10^{141/10}
+ \approx1.26\times10^2\,\mathrm{W/m^2}}.
+\]
+141 dB对应强度约为
+115 dB的 \(10^{(141-115)/10}\approx398\) 倍，
+并不是声级数值的简单比值。
+
+\paragraph{习题 7.17}
+从图7.47按分钟刻度估读
+两种地震波到时差
+\(\Delta t=t_S-t_P\approx5\,\mathrm{min}
+ =300\,\mathrm s\)。
+震源距离为 \(r\) 时
+\[
+ t_P=\frac r{u_P},\quad
+ t_S=\frac r{u_S},\quad
+ \Delta t=r\left(\frac1{u_S}-\frac1{u_P}\right).
+\]
+用 \(u_P=8\,\mathrm{km/s}\)、
+\(u_S=6\,\mathrm{km/s}\)，
+\[
+ \boxed{r=\frac{300}{1/6-1/8}
+ \approx7.20\times10^3\,\mathrm{km}}.
+\]
+该估算对图上P与S起跳时刻的读数敏感，
+将分钟错认成秒会导致60倍差错。
