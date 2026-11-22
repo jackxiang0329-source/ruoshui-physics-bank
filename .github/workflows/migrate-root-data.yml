@@ -47,8 +47,8 @@ jobs:
           }
           EXTS = {".md", ".json", ".csv", ".py", ".tex", ".sh", ".ps1", ".yml", ".yaml", ".txt", ".jsonl"}
           rules = (
-              (b"localization/zh_CN/", b"data/localization/zh_CN/"),
-              (b"localized/zh_CN/", b"data/localized/zh_CN/"),
+              (b"localization/zh_CN", b"data/localization/zh_CN"),
+              (b"localized/zh_CN", b"data/localized/zh_CN"),
               (b"taxonomy/physics_taxonomy.json", b"data/taxonomy/physics_taxonomy.json"),
           )
           changed = {}
