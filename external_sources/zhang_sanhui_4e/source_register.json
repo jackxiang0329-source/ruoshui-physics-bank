@@ -9909,9 +9909,12 @@
       "exam_ready": false,
       "requires_original_figure": false,
       "risk_flags": [
-        "source_human_cannon_adiabatic_75percent_transferred"
+        "source_human_cannon_adiabatic_75percent_transferred",
+        "source_2_7atm_70kg_vs_companion_2_6atm_75kg",
+        "subtract_atmospheric_p0_deltaV_to_obtain_launch_kinetic",
+        "power_transfer_efficiency_definition_75percent"
       ],
-      "notes": null
+      "notes": "Source V1 PDF p372-373 explicitly gives p1=2.7atm, body mass70kg. Independent adiabatic gas work gross332321J; 75% useful push minus atmospheric back-work203726J yields exit kinetic45515J and speed36.06m/s. Companion S PDF p164 instead substitutes p1=2.6atm and m75kg and reports ~29m/s; source-parameter mismatch preserved, not silently reconciled."
     },
     {
       "source_problem_number": "10.13",
@@ -10555,7 +10558,7 @@
     "last_completed_exercise_V1": "10.26",
     "next_to_transcribe_V1": "11.1",
     "next_to_transcribe_V2": "20.1",
-    "quality_summary": "Both original three-book scans reopened directly; ch10 and ch19 all numbered end exercises independently derived and source-indexed. Academic expert validation and exact figure vector redraw incomplete.",
+    "quality_summary": "Both original three-book scans reopened directly; ch10 and ch19 all numbered end exercises independently derived and source-indexed. Academic expert validation and exact figure vector redraw incomplete. Strict source correction10.12 printed p2.7atm,70kg gives speed36.1m/s when air resistance work deducted; companion p164 uses 2.6atm,75kg giving29m/s; discrepancy logged.",
     "chapter_2_end_exercises_transcribed": true,
     "chapter_3_end_exercises_transcribed": true,
     "chapter_12_end_exercises_transcribed": true,
