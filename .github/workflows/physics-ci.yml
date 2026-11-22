@@ -8,6 +8,18 @@ on:
 permissions:
   contents: read
 jobs:
+  layout-and-index-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify all three reversible corpus compactions
+        run: |
+          python3 scripts/compact_external_candidates.py --verify
+          python3 scripts/compact_small_external_sources.py --verify
+          python3 scripts/compact_webwork_sources.py --verify
+      - name: Enforce typed directories, filename conventions and doc links
+        run: python3 scripts/check_repository_layout.py
   validate-and-build:
     runs-on: ubuntu-latest
     timeout-minutes: 40
@@ -22,6 +34,8 @@ jobs:
         run: python3 scripts/compact_external_candidates.py --verify
       - name: Verify 318 newly bundled UBC and IntroPhysics candidates
         run: python3 scripts/compact_small_external_sources.py --verify
+      - name: Verify all 80 archived WeBWorK PG originals
+        run: python3 scripts/compact_webwork_sources.py --verify
       - name: Enforce advanced-only admission
         run: python scripts/check_difficulty_gate.py
       - name: Perform independent formula and numerical spotchecks
