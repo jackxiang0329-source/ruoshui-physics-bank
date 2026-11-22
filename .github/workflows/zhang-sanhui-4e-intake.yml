@@ -85,6 +85,8 @@ jobs:
         run: python3 external_sources/zhang_sanhui_4e/qa_supplement_thought_models.py
       - name: Cross-method checks for 20 high-risk existing physics candidates
         run: python3 external_sources/zhang_sanhui_4e/qa_high_risk_crossmethod.py
+      - name: Seven physical-domain and feasibility audits
+        run: python3 external_sources/zhang_sanhui_4e/qa_physical_feasibility_v2.py
   xelatex-candidate-proof:
     runs-on: ubuntu-latest
     needs: structural-and-math-spotchecks
