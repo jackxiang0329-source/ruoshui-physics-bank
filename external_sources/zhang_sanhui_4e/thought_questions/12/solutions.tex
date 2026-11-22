@@ -1,0 +1,31 @@
+% V2原书第12章思考题12.1--12.10，扫描PDF40--41；与章末习题同号但独立记录。
+\section*{第12章\quad 静电场：思考题解析}
+\paragraph{思考题 12.1}
+理想点电荷的场 \(\boldsymbol E=q\hat r/(4\pi\epsilon_0r^2)\) 在 \(r=0\) 具有分布型奇点，只表示电荷集中于零体积的\emph{有效模型}。真实带电物体有有限电荷分布，在其内部还需考虑微观量子、极化或经典扩展模型。因此 \(\lim_{r\to0}E=\infty\) 说明经典点源理想化的数学性质，不可把它当成可无限靠近真实电荷的实测预测。
+
+\paragraph{思考题 12.2}
+两点静电力为 \(\boldsymbol F_{12}=q_1q_2\hat{\boldsymbol r}/(4\pi\epsilon_0r^2)\)，它与试验电荷成正比，可定义源电荷产生、与 \(q_0\) 无关的电场。对多个源，静电线性场方程给 \(\boxed{\boldsymbol E(\boldsymbol r)=\sum_i\boldsymbol E_i(\boldsymbol r)}\)。\emph{叠加}不是简单“力与电荷相乘”直接推出的完整物理证明，非线性介质或源因感应而随试验电荷变化时须谨慎。
+
+\paragraph{思考题 12.3}
+电场定义为测试电荷受力与其电荷之比 \(\boxed{\boldsymbol E=\lim_{q_0\to0}\boldsymbol F/q_0}\)，其中 \(q_0\) 足够小，避免显著改变源分布。若源是静止孤立点电荷q，库仑力 \(\boldsymbol F=q_0 q\hat r/(4\pi\epsilon_0r^2)\)，消去 \(q_0\) 就得点源场。试验电荷必须可视为点状、足够小并处于不改变源的近似条件。
+
+\paragraph{思考题 12.4}
+电场线切线方向等于\(\boldsymbol E\)方向；线的疏密用来示意大小而非可观测线实体。正点电荷电场线指向外，负电荷指向内。沿定向面积S的电通量 \(\Phi_E=\int_S\boldsymbol E\cdot d\boldsymbol S\)，有正负号，与穿过的\emph{线数量}只在约定线密度比例后才对应。场强大小与磁通/电通量不是同一个物理量。
+
+\paragraph{思考题 12.5}
+三角形顶点上的三枚同号点电荷只具离散三重旋转对称性，并\emph{没有}让任意同心球面上的场强处处同大且纯法向的球对称性，因此高斯式不能将 \(E\) 从积分号提出。中心处由三根相等大小、相隔120°的电场矢量相加得 \(\boxed{\boldsymbol E_{\rm center}=0}\)，无需假造连续球形对称。
+
+\paragraph{思考题 12.6}
+高斯定律只说明 \(\oint_S\boldsymbol E\cdot d\boldsymbol S=Q_{\rm enc}/\epsilon_0\)。零通量表示代数总通量抵消或净包围电荷为零，完全不要求每一点 \(\boldsymbol E=0\)；例如均匀外电场穿过球面的进出通量相消。
+
+\paragraph{思考题 12.7}
+若封闭面上 \(\boldsymbol E=0\) 点点成立，则净电通量为零，故 \(\boxed{Q_{\rm enc}=0}\)。但是内部仍可以有\emph{等量异号}电荷，它们净电荷相消；在某些有导体屏蔽的构型，面上场也可能为零。不能由净电荷为零推出内部每处 \(\rho=0\)。
+
+\paragraph{思考题 12.8}
+在真空无电荷区域 \(\nabla\cdot\boldsymbol E=0\)，电场线不能在普通空间点突然产生或终止；它们可延续到边界、无穷远或真正的电荷所在位置。若存在空间电荷或极化束缚电荷，电场线可在电荷处起止；\emph{无自由电荷}并不排除\emph{束缚电荷}，故必须说明“完全无总电荷”还是“只无自由电荷”。
+
+\paragraph{思考题 12.9}
+在经典静电真空中从库仑点源场作闭面积分得到 \(\oint\boldsymbol E\cdot d\boldsymbol S=Q_{\rm enc}/\epsilon_0\)，利用线性叠加可推广多点与连续电荷。反过来高斯定律加上静电无旋条件 \(\nabla\times\boldsymbol E=0\) 与边界条件可恢复Poisson/Laplace解。但高斯定律\emph{只给出总通量}，若缺少球、柱或平面对称，不能求某点的E。
+
+\paragraph{思考题 12.10}
+两无限大均匀带电片各自仅在其面外产生大小 \(\sigma/(2\epsilon_0)\) 的场；在两片之间同向相加为 \(E_{\rm net}=\sigma/\epsilon_0\)，其中 \(\sigma=q/S\)。对\emph{其中一片}的总力只能由\emph{另一片的场}贡献，自身电场不能拿来对自身整体施力：\(\boxed{F=q E_{\rm other}=q\sigma/(2\epsilon_0)=q^2/(2\epsilon_0 S)}\)。其他错式 \(q^2/(4\pi\epsilon_0d^2)\) 错把大平板当点电荷，\(q^2/(\epsilon_0S)\) 错用总场计算单片受力；有效近似为 \(d\ll\sqrt S\) 且忽略边缘。
