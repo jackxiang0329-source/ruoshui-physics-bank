@@ -106,6 +106,21 @@ jobs:
       - name: Independently audit Part V.246-292 thermal radiation and photon scattering
         if: ${{ success() || failure() }}
         run: python3 external_sources/irodov-zh-elegant/optics_thermal_quantum_246_292_regression.py
+      - name: Deep-audit original VI.1-48 Coulomb scattering and Bohr spectroscopy
+        if: ${{ success() || failure() }}
+        run: python3 external_sources/irodov-zh-elegant/atomic_scattering_source_001_048_regression.py
+      - name: Deep-audit original VI.49-96 quantum wavefunctions and WKB
+        if: ${{ success() || failure() }}
+        run: python3 external_sources/irodov-zh-elegant/atomic_wave_quantum_source_049_096_regression.py
+      - name: Deep-audit original VI.97-166 angular momenta and atomic multiplets
+        if: ${{ success() || failure() }}
+        run: python3 external_sources/irodov-zh-elegant/atomic_spectra_source_097_166_regression.py
+      - name: Deep-audit original VI.167-213 molecular and crystal statistics
+        if: ${{ success() || failure() }}
+        run: python3 external_sources/irodov-zh-elegant/atomic_molecules_source_167_213_regression.py
+      - name: Deep-audit original VI.214-310 nuclear and particle conservation
+        if: ${{ success() || failure() }}
+        run: python3 external_sources/irodov-zh-elegant/atomic_nuclear_source_214_310_regression.py
       - uses: xu-cheng/latex-action@v4
         with:
           working_directory: external_sources/irodov-zh-elegant
