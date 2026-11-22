@@ -89,16 +89,22 @@ jobs:
       - name: Independently audit Irodov Part IV.189-224 Maxwell waves and radiation regressions
         run: python3 external_sources/irodov-zh-elegant/waves_electromagnetic_189_224_regression.py
       - name: Independently audit Part V.1-63 photometric and paraxial geometrical optics
+        if: ${{ success() || failure() }}
         run: python3 external_sources/irodov-zh-elegant/optics_geometrical_001_063_regression.py
       - name: Independently audit Part V.64-96 wave interference and thin films
+        if: ${{ success() || failure() }}
         run: python3 external_sources/irodov-zh-elegant/optics_interference_064_096_regression.py
       - name: Independently audit Part V.97-156 Fresnel diffraction and spectrometers
+        if: ${{ success() || failure() }}
         run: python3 external_sources/irodov-zh-elegant/optics_diffraction_097_156_regression.py
       - name: Independently audit Part V.157-199 polarization and optical activity
+        if: ${{ success() || failure() }}
         run: python3 external_sources/irodov-zh-elegant/optics_polarization_157_199_regression.py
       - name: Independently audit Part V.200-245 optical dispersion and relativistic Doppler
+        if: ${{ success() || failure() }}
         run: python3 external_sources/irodov-zh-elegant/optics_dispersion_moving_200_245_regression.py
       - name: Independently audit Part V.246-292 thermal radiation and photon scattering
+        if: ${{ success() || failure() }}
         run: python3 external_sources/irodov-zh-elegant/optics_thermal_quantum_246_292_regression.py
       - uses: xu-cheng/latex-action@v4
         with:
