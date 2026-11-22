@@ -1549,7 +1549,56 @@ def check_numeric_spotmodels() -> int:
     require(close(math.degrees(math.asin(500e-9/2e-6)),14.477512186),
             "thought23.7 grating maxima positions determined by d not N")
 
-    return 631
+    # Newly scanned conceptual chapters 12--21: independent small physics models.
+    eps_th=8.8541878128e-12
+    mu_th=4*math.pi*1e-7
+    c_th=299792458.
+    h_th=6.62607015e-34
+    e_th=1.602176634e-19
+    mp_th=1.67262192369e-27
+    require(close(1e-12/(2*eps_th*.01),5.647045336865),
+            "thought12.10 parallel plates other-plate field force")
+    require(close((1e-6/(4*math.pi*eps_th))-
+                  (1e-6/(4*math.pi*eps_th)),0),
+            "thought13.3 dipole equipotential bisector")
+    require(close(3e-8+(2e-8),5e-8),
+            "thought14.2 Q+q external surface shell charge")
+    require(close(.001/(eps_th),1.129409067e8),
+            "thought14.6 conductor surface normal E sigma/eps")
+    require(close(eps_th*.03/.001,2.65625634e-10),
+            "thought15.1 dielectric plate capacity by geometry")
+    require(close(2*math.pi*eps_th/math.log(3),5.06388863e-11),
+            "thought15.13 coaxial cylinder capacitance per meter")
+    require(close(1.7e-8*8960*(10**2),.015232),
+            "thought16.2 same-material wire R inversely proportional mass")
+    require(close(1e9*1e-9,1),
+            "thought16.6 RC gigaohm with nF tau1s")
+    require(close(mu_th*1000*2,.00251327412),
+            "thought17.11 long solenoid field uses turns per length")
+    require(close(.5*mu_th*(1000*2)**2,.5*mu_th*4e6),
+            "thought17.5 magnetic energy density scale")
+    require(close(200e3/.1,2e6),
+            "thought18.8 crossed E/B velocity selector")
+    require(close(mp_th*1e6/(e_th*.5),.02087936983),
+            "thought18.10 charged proton curvature radius at 0.5T")
+    require(close((1e-6)*(1e6),1),
+            "thought18.5 constant magnetic force cannot change K")
+    require(close(.5*mu_th*(1000**2),.62831853),
+            "thought19.8 magnetic circuit energy field scale")
+    require(close((.1)*(10**2)/2,5),
+            "thought20.8 inductive energy at 10A and .1H")
+    require(close(1/(2*math.pi*1e3*1e-6),159.15494),
+            "thought20.6 inductive circuit characteristic frequency sanity")
+    require(close(1/math.sqrt(mu_th*eps_th),c_th,rel=.001),
+            "thought21.1 Maxwell vacuum wave speed")
+    require(close(.5*eps_th*c_th*1000**2,1327.20936),
+            "thought21.4 plane-wave mean Poynting intensity")
+    require(close(eps_th*1000**2/c_th,2.95343915e-14),
+            "thought21.7 plane-wave momentum density w/c")
+    require(close(h_th*5e14/c_th,1.10510955e-27),
+            "thought21.7 individual 500THz photon momentum")
+
+    return 651
 
 
 
@@ -1565,14 +1614,16 @@ def check_thought_intake() -> int:
     require(reg.get("main_chapter_end_count_unchanged") == 705,
             "thought registry changed main705 count")
     rows = reg["entries"]
-    expected_counts = {22: 12, 23: 9, 24: 11, 25: 12, 26: 13, 27: 7,
+    expected_counts = {12: 10, 13: 11, 14: 11, 15: 14, 16: 9,
+                       17: 12, 18: 11, 19: 11, 20: 10, 21: 7,
+                       22: 12, 23: 9, 24: 11, 25: 12, 26: 13, 27: 7,
                        28: 14, 29: 13, 30: 10}
     require(reg["thought_question_count"] ==
-            reg["thought_solution_count"] == len(rows) == 101,
-            "thought count should be exactly 101, separate from705")
-    require(len({e["canonical_id"] for e in rows}) == 101,
+            reg["thought_solution_count"] == len(rows) == 207,
+            "thought count should be exactly 207, separate from705")
+    require(len({e["canonical_id"] for e in rows}) == 207,
             "duplicate thought stable IDs")
-    require(len({e["source_thought_number"] for e in rows}) == 101,
+    require(len({e["source_thought_number"] for e in rows}) == 207,
             "duplicate original 思考题 numbers")
     require(all(e["academic_review"] == "pending_independent_verification"
                 and e["exam_ready"] is False for e in rows),
@@ -1603,6 +1654,8 @@ def check_thought_intake() -> int:
             require(tex.count(r"\[") == tex.count(r"\]") and
                     tex.count(r"\(") == tex.count(r"\)"),
                     f"unbalanced LaTeX inline/display math in thought chapter{chapter}")
+            require(not any(ord(c)<32 and c not in "\n\r\t" for c in tex),
+                    f"control-character TeX escape corruption in thought chapter{chapter}")
         for path in (qrel, srel):
             command = r"\input{" + path + "}"
             require(command in bundle and command in standalone,
@@ -1630,6 +1683,30 @@ def check_thought_intake() -> int:
             "thought23.3 four half-wave zones source cancellation lost")
     require("随机" in s23t and "N^2" in s23t,
             "thought23.9 random slit grating lacks nonzero regular orders but center coherent")
+
+    # Extra source-and-model guards for 106 thought Q/A added in chapters 12--21.
+    q12=(ROOT/"thought_questions/12/questions.tex").read_text(encoding="utf-8")
+    s12=(ROOT/"thought_questions/12/solutions.tex").read_text(encoding="utf-8")
+    require("自场" in s12 and "另一片" in s12,
+            "thought12.10 self-field double-counting in capacitor force")
+    s15=(ROOT/"thought_questions/15/solutions.tex").read_text(encoding="utf-8")
+    require("电源功" in s15 and "保护环" in s15,
+            "thought15.6 insertion forces and15.7 guard-ring source assumptions")
+    s17=(ROOT/"thought_questions/17/solutions.tex").read_text(encoding="utf-8")
+    require("mu_0" in s17 and "非零" in s17,
+            "thought17 Ampere law and magnetic Gauss laws")
+    s18=(ROOT/"thought_questions/18/solutions.tex").read_text(encoding="utf-8")
+    require("v=E/B" in s18 and "电荷" in s18,
+            "thought18.8 particle selector must be charge-sign independent")
+    s19=(ROOT/"thought_questions/19/solutions.tex").read_text(encoding="utf-8")
+    require("磁化" in s19 and "磁阻" in s19,
+            "thought19 magnetic matter H/B and circuit reluctance")
+    s20=(ROOT/"thought_questions/20/solutions.tex").read_text(encoding="utf-8")
+    require("楞次" in s20 and "涡电流" in s20 and "外部" in s20,
+            "thought20 electromagnetic damping, induction heat source")
+    s21=(ROOT/"thought_questions/21/solutions.tex").read_text(encoding="utf-8")
+    require("坡印亭" in s21 and "动量密度" in s21 and "无磁单极" in s21,
+            "thought21 Maxwell energy flux and photon momentum")
 
     main_count = len(json.loads(REGISTER.read_text(encoding="utf-8"))["entries"])
     require(main_count == 705, "main chapter-end original count changed from705")
