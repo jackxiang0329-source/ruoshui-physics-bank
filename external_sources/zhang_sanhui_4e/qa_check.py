@@ -86,7 +86,40 @@ def check_numeric_spotmodels() -> int:
     # 2.12: radius must be in metres, not km
     M = 4*math.pi**2*(1.07e9)**3/(6.6743e-11*(7.16*86400)**2)
     require(close(M,1.89344117254e27), "2.12 Jupiter mass")
-    return 11
+
+    # Chapter 2 second half: independently reproduce raw model values,
+    # testing units, area conversion and asymptotic limits.
+    G = 6.6743e-11
+    # 2.13 Saturn: orbital radius given from planetary centre
+    saturn_mass = 4*math.pi**2*(1.36e8)**3/(G*(14.2*3600)**2)
+    require(close(saturn_mass, 5.69362746616e26), "2.13 Saturn mass")
+    # 2.14 break-up period and stellar minimum mass
+    period = math.sqrt(3*math.pi/(G*3e3))
+    require(close(period/3600, 1.90576599623), "2.14 minimum spin period")
+    star_min_mass = 4*math.pi**2*(1e4)**3/(G*.0016**2)
+    require(close(star_min_mass, 2.31054295982e29), "2.14 neutron star bound")
+    # 2.15 pressure should have Pascal dimensions; compare barometric factor
+    pressure = (2*math.pi/3)*G*1300**2*(7e7)**2
+    require(close(pressure/1.013e5, 1.14271433782e7), "2.15 pressure in atm")
+    # 2.19 test angular rotation rate and liquid force independently
+    omega = 2*math.pi*(5e4/60)
+    bottom_force = .5*.012*omega**2*(.020+.100)
+    require(close(bottom_force, 19739.20880218), "2.19 sample end pressure force")
+    # 2.20 total wing mass cancels
+    omega2 = 2*math.pi*400/60
+    require(close(omega2**2*5.97/(2*g), 534.43572131),
+            "2.20 blade root load over weight")
+    # 2.23 truck frame relative speed
+    require(close(math.sqrt(2*(7-.5*g)*2), 2.898275349),
+            "2.23 truck-relative collision speed")
+    # 2.24 space station artificial gravity
+    require(close(math.sqrt(g/1800), .0737864787373),
+            "2.24 rotating station angular rate")
+    # 2.26 drag and input power
+    drag = .5*.016*.062*math.pi*25**2*40**2
+    require(close(drag, 1558.22995618), "2.26 airship drag")
+    require(close(drag/.010, 155822.995618), "2.26 propulsion power")
+    return 21
 
 
 def main() -> None:
