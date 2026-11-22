@@ -824,7 +824,112 @@ def check_numeric_spotmodels() -> int:
     require(close(.08/muv*(.144/1600+.002),133.0535324),
             "19.14 electric bell iron gap NI")
 
-    return 309
+
+    # Chapter 11 Second Law: strict scanned source and companion numerical models.
+    rr=8.314462618
+    mm=4*math.pi*1e-7
+    ep0=8.8541878128e-12
+    c0=299792458
+    require(close((6+8)/2*100+(8+4)/2*100,1300),
+            "11.1 figure ab bc work trapezoids 1300J")
+    require(close(2.5*(1200-600),1500),
+            "11.1 SOURCE rigid diatomic OXYGEN five degrees not monatomic")
+    require(close(1300+1500,2800),
+            "11.1 rigid diatomic oxygen absorbs 2800J heat")
+    require(close(rr*(2.5*math.log(2)+math.log(3)),23.54223661),
+            "11.1 oxygen entropy 23.54J/K not helium 17.8J/K")
+    require(close(30*(2.1*40+334+4.2*100+2260),92940),
+            "11.2 full ice to 100C vapor four heat stages")
+    require(close(30*(2.1*math.log(273.15/233.15)+334/273.15
+                 +4.2*math.log(373.15/273.15)+2260/373.15),267.6617544),
+            "11.2 entropy of ice to vapor four stages 267.66J/K")
+    require(close(8e5/273,2930.40293),
+            "11.3 daily environmental entropy")
+    require(close(2e8/3600*(1/253.15-1/293.15),29.9446786),
+            "11.4 heat leak positive entropy production rate")
+    require(close(20000/285.15,70.1385236),
+            "11.5 car dissipated power entropy generation")
+    require(close(1000*1500*9.8*74/285.15,3.8148343e6),
+            "11.6 waterfall flow rate and potential energy entropy")
+    require(close(4200*(math.log(373.15/273.15)-100/373.15),
+                  184.676706),"11.7 single bath water heating total entropy")
+    require(close(4200*(math.log(373.15/273.15)-50/323.15
+                  -50/373.15),97.60006),
+            "11.7 staged heating entropy lower than single bath")
+    require(close(-.9*334000/273.15,-1100.494234),
+            "11.8 ice-water final EQUAL masses freeze 0.9 kg")
+    require(close(.9*334000*(1/273.15-1/373.15),294.920068),
+            "11.8 return from 100C bath, total entropy")
+    require(close(300*4**(-.4),172.3047533),
+            "11.9 isothermal -> isochoric -> reversible adiabatic final T3")
+    require(close(3.039e5*4*math.log(4),1.68501243e6),
+            "11.9 reversible isothermal work")
+    require(close(3.039e5*4*math.log(4)
+                  +(3.039e5*4/(300*.4))*(300*4**(-.4)-300),
+                  391626.576),"11.9 3-leg heat engine net work")
+    require(close(3.039e5*4/300*math.log(4),5617.26475),
+            "11.9 entropy isothermal = -isochoric entropy")
+    require(close(math.log((280+300)**2/(4*280*300)),.0011904765,rel=.04),
+            "11.10 unequal T equal liquid masses generate entropy")
+    require(close(math.log((1+2)**2/(4*1*2)),math.log(9/8)),
+            "11.11 equal species unequal pressure positive entropy")
+
+    # Chapter 20 electromagnetic induction and magnetic energy.
+    require(close(mm*5*10/(2*math.pi)*math.log(3),1.098612289e-5),
+            "20.1 a endpoint higher moving 20cm bar near 5A wire")
+    require(close(4000*5e-5*math.pi*.12**2*2*math.pi*30,1.70546764),
+            "20.2 source 4000-turns generator in 0.5Gauss")
+    require(close(mm*1000*5*.2*2/(2*math.pi)*(1/.1-1/.2),.002),
+            "20.3 moving 1000-turn rectangular loop 2mV")
+    require(close(mm*1000*.2/(2*math.pi)*math.log(2)*500*math.pi,
+                  .0435517218),"20.4 stationary coil AC induction amplitude")
+    require(close(.42e-4*12.705*1.7*330,.29935521),
+            "20.6 FBC-1 airplane south wing higher with speed sound330")
+    require(close(.007/(.70e-4*200),.5),
+            "20.7 seawater moving probe flux voltage .5m/s")
+    require(close(60*12/(2*math.pi*120*.02*.10*.20),2387.3241464),
+            "20.8 120-turn generator at12V 2387rpm")
+    require(close(mm*50*100*4e-4/(2*.2),6.283185307e-6),
+            "20.14 small big coax mutual inductance 6.28microhenry")
+    require(close(mm*50*100*4e-4/(2*.2)*50,3.14159265e-4),
+            "20.14 induced emf b 0.314mV")
+    require(close(mm*1200**2*math.pi*.02**2/.3,.00757985618),
+            "20.15 long coil self-inductance 7.58mH")
+    require(close(mm*1200**2*math.pi*.02**2/.3*300,2.273956854),
+            "20.15 induced self emf 2.27V")
+    require(close(.0032/4,.0008),
+            "20.16 L from change current and emf 0.8mH")
+    require(close(.0008*10/(20e-6),400),
+            "20.16 number turns from per turn flux")
+    require(close(mm/math.pi*math.log((.2-.005)/.005),
+                  4e-7*math.log(39)),
+            "20.18 two anti-parallel wires exact between-boundary L prime")
+    require(close(1e16/(2*mm),3.97887358e21),
+            "20.21 neutron star magnetic vacuum energy density")
+    require(close(1e16/(2*mm*c0**2),44270.9391),
+            "20.21 magnetic field equivalent mass density")
+    require(close(.5*ep0*1e12,4.42709391),
+            "20.22 strong laboratory electric field energy density")
+    require(close(4/(2*mm),1.59154943e6),
+            "20.22 2Tesla field energy density")
+    require(close(2*mm*3.6e6,9.047786842),
+            "20.23 magnetic storage 1kWh at 1T requires 9m3")
+    require(close(2*3.6e6/500**2,28.8),
+            "20.23 superconducting coil 500A requires28.8henry")
+    require(close((1.69e-8*20/(math.pi*.0055**2)),.003556652613),
+            "20.24 copper wire tangential E at surface")
+    require(close((mm*20/(2*math.pi*.0055)),.0007272727273),
+            "20.24 copper wire surface B at20A")
+    require(close((mm*20/(2*math.pi*.0055))**2/(2*mm),.2104528173),
+            "20.24 copper wire magnetic energy density")
+    require(close(mm/(8*math.pi),5e-8),
+            "20.25 coax internal conductor inductance per metre")
+    require(close(mm/(2*math.pi)*math.log(3),2e-7*math.log(3)),
+            "20.25 coax gap energy inductance coefficient")
+    require(close(mm*(3*5)*(.01)*2,3e-7),
+            "20.27 nested solenoid force formula dimensional sample")
+
+    return 355
 
 
 def main() -> None:
@@ -1012,6 +1117,30 @@ def main() -> None:
             "19.10 exact companion H170 source check regressed")
     require("3.14" in s19 and "5.03" in s19,
             "19.11 coercive inner-edge onset vs full cross-section caveat missing")
+
+    # New source-specific regression guards for the final V1 chapter and EM induction.
+    q11=(ROOT/"chapters/11/questions.tex").read_text(encoding="utf-8")
+    s11=(ROOT/"chapters/11/solutions.tex").read_text(encoding="utf-8")
+    q20=(ROOT/"chapters/20/questions.tex").read_text(encoding="utf-8")
+    s20=(ROOT/"chapters/20/solutions.tex").read_text(encoding="utf-8")
+    require("氧气" in q11 and "刚性双原子" in q11
+            and "23.54" in s11,
+            "11.1 OXYGEN five degrees i=5 source must not revert to He")
+    require("质量变成相等" in q11 and "0.9" in s11,
+            "11.8 initial 2.5kg water +0.7kg ice freeze only0.9kg")
+    require("节流" in q11 and "等焓" in s11 and "等熵" in s11
+            and "95" in s11 and "未" in s11,
+            "11.13 original throttling and reversible adiabatic differ from companion")
+    require("20.27" in q20 and "20.27" in s20,
+            "ch20 27 exercises must include nested solenoid force")
+    require("4\\\\times10^3" in q20 or "4\\\\times10^3" in q20.replace(" ", ""),
+            "20.2 original 4000 turns source regression")
+    require("0.9" in s11 and "267.66" not in s11,
+            "11.2 approximate entropy erroneous exact four steps check")
+    require("南翼尖" in s20 and "0.30" in s20,
+            "20.6 wing polarity and 0.30V source answer absent")
+    require("2A'_m" in s20 or "2A'_m" in s20.replace(" ", ""),
+            "20.26 constant current source supplies double mechanical energy")
 
     computed = check_numeric_spotmodels()
     print(f"PASS: {len(ids)} candidate exercises have unique IDs, "
