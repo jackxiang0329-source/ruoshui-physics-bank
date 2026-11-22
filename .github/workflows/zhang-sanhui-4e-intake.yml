@@ -61,6 +61,16 @@ jobs:
         run: python3 external_sources/zhang_sanhui_4e/qa_ch24_independent.py
       - name: Check chapter 25 wave/geometric optics candidates
         run: python3 external_sources/zhang_sanhui_4e/qa_ch25_independent.py
+      - name: Independently check chapter 26 modern physics model candidates
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch26_independent.py
+      - name: Independently check chapter 27 modern physics model candidates
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch27_independent.py
+      - name: Independently check chapter 28 modern physics model candidates
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch28_independent.py
+      - name: Independently check chapter 29 modern physics model candidates
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch29_independent.py
+      - name: Independently check chapter 30 modern physics model candidates
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch30_independent.py
   xelatex-candidate-proof:
     runs-on: ubuntu-latest
     needs: structural-and-math-spotchecks
