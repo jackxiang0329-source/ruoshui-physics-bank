@@ -1,0 +1,227 @@
+% 张三慧第4版 V2第27章 11题独立LaTeX解析
+% V2 PDF386--387，S PDF365--369；候选稿，需原图及专家复核。
+\section*{第27章\quad 薛定谔方程：独立解析}
+\paragraph{习题 27.1}
+无限深势阱的谱为
+\[
+E_n=\frac{\pi^2\hbar^2 n^2}{2ma^2}
+=\frac{h^2n^2}{8ma^2},\quad n=1,2,\ldots.
+\]
+\(m=10^{-14}\,\mathrm g=10^{-17}\,\mathrm{kg}\)，
+\(a=10^{-5}\,\mathrm m\)。于是
+\[
+\boxed{E_{100}\simeq5.488\times10^{-37}\,\mathrm J},
+\quad
+\boxed{E_{101}\simeq5.598\times10^{-37}\,\mathrm J},
+\]
+\[
+\boxed{\Delta E
+=\frac{h^2}{8ma^2}(101^2-100^2)
+\simeq1.103\times10^{-38}\,\mathrm J}.
+\]
+极微小能级间隔说明在细胞尺度、较大质量下
+能谱对实验几乎连续。
+
+\paragraph{习题 27.2}
+取氧气分子 \(m=32.0\times10^{-3}/N_A
+\simeq5.314\times10^{-26}\,\mathrm{kg}\)，
+\(a=.10\,\mathrm m\)：
+\[
+\boxed{E_1=\frac{h^2}{8ma^2}
+\simeq1.033\times10^{-40}\,\mathrm J}.
+\]
+令 \(E_n=n^2E_1=(3/2)k_BT\)，则
+\[
+\boxed{n\simeq\sqrt{\frac{3k_BT}{2E_1}}
+\simeq7.76\times10^9}.
+\]
+相邻能级差
+\[
+\boxed{\Delta E
+=E_1[(n+1)^2-n^2]=E_1(2n+1)
+\simeq1.60\times10^{-30}\,\mathrm J}.
+\]
+在如此巨大的 \(n\) 下，相邻能级不可实验分辨。
+配套S PDF366将该结果写为约
+\(1.6\times10^{-30}\,\mathrm J\)，符合精算。
+
+\paragraph{习题 27.3}
+本题是\emph{斜底}无限深势阱，
+不能用普通平底井的正弦函数直接绘图。
+对总能 \(E_5\)，局部经典动量
+\(p(x)=\sqrt{2m[E_5-U(x)]}\)，
+只在 \(E_5>U(x)\) 的允许区有振荡解。
+近似局部半波长
+\(\lambda(x)/2=h/[2p(x)]\)：
+势底由左往右抬升时，右侧 \(E_5-U\) 较小，
+波长较长，\emph{同一概率流正规化下}
+波函数的局部振幅亦较大。
+左侧振荡更密、振幅较小；
+在垂直壁处 \(\psi=0\)，有限斜坡越过
+\(E_5\) 的禁阻区中呈指数衰减。
+\(n=5\) 的非简并一维束缚本征态按节点定理
+在允许区域有4个内部节点。
+原图27.14(a)势阱右侧仍是垂直无穷壁，
+波函数须在右端再次降至零；
+(b)斜底右侧超出 \(E_5\) 后的经典禁阻区
+应是衰减尾部，不是继续周期正弦。
+\textit{确切节点坐标与WKB相位修正取决于
+图27.14所画斜坡，仍需逐像素重新制图。}
+
+\paragraph{习题 27.4}
+归一化基态
+\(\psi_1(x)=\sqrt{2/a}\sin(\pi x/a)\)。
+因此靠左边壁四分之一井宽内的概率
+\[
+P=\frac2a\int_0^{a/4}\sin^2\left(\frac{\pi x}a\right)\,dx
+=\left[\frac xa-\frac{\sin(2\pi x/a)}{2\pi}
+\right]_{0}^{a/4}.
+\]
+\[
+\boxed{P=\frac14-\frac1{2\pi}
+\simeq0.0908451}.
+\]
+靠右边壁同长度区间的概率由对称性相等；
+不能按均匀分布误答25\%。
+
+\paragraph{习题 27.5}
+\(\psi_n(x)=\sqrt{2/a}\sin(n\pi x/a)\)。
+由对称性
+\[
+\boxed{\langle x\rangle
+=\frac2a\int_0^a x\sin^2(n\pi x/a)\,dx
+=\frac a2}.
+\]
+再将 \(\sin^2z=(1-\cos2z)/2\) 代入，
+积分得
+\[
+\boxed{\langle x^2\rangle
+=\frac2a\int_0^a x^2\sin^2(n\pi x/a)\,dx
+=a^2\left(\frac13-\frac1{2\pi^2n^2}\right)}.
+\]
+故方差
+\(\boxed{(\Delta x)^2
+=a^2(1/12-1/(2\pi^2n^2))}\)。
+
+\paragraph{习题 27.6}
+两定态
+\(\Psi_n(x,t)=\sqrt{2/a}\sin(n\pi x/a)
+\exp(-iE_nt/\hbar)\)，
+因此
+\[
+\int_0^a\Psi_m^*\Psi_n\,dx
+=\frac2a e^{i(E_m-E_n)t/\hbar}
+\int_0^a\sin(m\pi x/a)\sin(n\pi x/a)\,dx.
+\]
+积化和差后
+\[
+\int_0^a\sin(m\pi x/a)\sin(n\pi x/a)\,dx
+=\frac a2\,\delta_{mn},
+\]
+故当 \(m\ne n\)
+\[
+\boxed{\langle\Psi_m,\Psi_n\rangle=0}.
+\]
+这种正交性对一般自伴哈密顿算符的
+不同本征值对应的本征态成立。
+
+\paragraph{习题 27.7}
+势阱宽度为外加控制参数 \(a\) 时，
+定态能量
+\(E_n=\pi^2\hbar^2n^2/(2ma^2)\)。
+粒子对\emph{右端活动壁}的平均向外压力
+从虚功得
+\[
+\boxed{F=-\frac{\partial E_n}{\partial a}
+=\frac{\pi^2\hbar^2n^2}{ma^3}>0}.
+\]
+这不是两端壁作用力的净矢量和：
+两壁分别向外受大小相等的力，
+粒子在定态下整体平均动量为零。
+
+\paragraph{习题 27.8}
+井壁处波函数为零，故
+\[
+a=n\frac{\lambda_n}{2},\qquad
+\lambda_n=\frac{2a}{n},\qquad n=1,2,\ldots.
+\]
+德布罗意关系 \(p_n=h/\lambda_n=nh/(2a)\)。
+非相对论粒子能量 \(E_n=p_n^2/(2m)\)：
+\[
+\boxed{E_n=\frac{h^2n^2}{8ma^2}
+=\frac{\pi^2\hbar^2n^2}{2ma^2}}.
+\]
+量子数 \(n=0\) 对应恒零波函数，
+不可作为归一化态。
+
+\paragraph{习题 27.9}
+立方体各壁坐标为 \(0,a\)，
+驻波沿三个轴满足
+\(p_j=n_jh/(2a)\)。
+\[
+E=\frac{p_x^2+p_y^2+p_z^2}{2m}
+=\frac{h^2}{8ma^2}(n_x^2+n_y^2+n_z^2).
+\]
+所以
+\[
+\boxed{E_{n_xn_yn_z}
+=\frac{\pi^2\hbar^2}{2ma^2}
+(n_x^2+n_y^2+n_z^2)},
+\quad n_x,n_y,n_z\ge1.
+\]
+最小能量为
+\(\boxed{E_{111}=3h^2/(8ma^2)}\)，
+三维零点能非零；不同排列量子数
+可带来几何简并。
+
+\paragraph{习题 27.10}
+谐振子势能 \(V(x)=m\omega^2x^2/2\)。
+将 \(\psi_0=Ae^{-\alpha x^2}\)
+求导：
+\(\psi_0''=(4\alpha^2x^2-2\alpha)\psi_0\)。
+定态方程
+\[
+-\frac{\hbar^2}{2m}\psi_0''+
+\frac12m\omega^2x^2\psi_0=E_0\psi_0
+\]
+给出
+\[
+\left(\frac{\hbar^2\alpha}{m}-E_0\right)
++\left(\frac{m\omega^2}2-
+\frac{2\hbar^2\alpha^2}{m}\right)x^2=0.
+\]
+对任意 \(x\) 恒等成立，且
+\(\alpha>0\) 以保证可归一化，
+\[
+\boxed{\alpha=\frac{m\omega}{2\hbar}},
+\qquad
+\boxed{E_0=\frac{\hbar\omega}{2}=\frac{h\nu}{2}}.
+\]
+负的 \(\alpha\) 会使波函数不归一化，不是基态。
+
+\paragraph{习题 27.11}
+\(\omega=\sqrt{k/m}\)，
+振动频率 \(\nu=\omega/(2\pi)\)；
+相邻能级间距
+\[
+\Delta E=\hbar\omega
+=\hbar\sqrt{\frac{1.13\times10^3}{1.67\times10^{-27}}}
+\simeq0.5414\,\mathrm{eV}.
+\]
+本征谱为
+\[
+\boxed{E_n=(n+\tfrac12)\,0.5414\,\mathrm{eV}},
+\qquad n=0,1,2,\ldots .
+\]
+因此基态 \(E_0\simeq0.2707\,\mathrm{eV}\)，
+相邻能级向下跃迁发射光子
+\[
+\boxed{E_\gamma=\Delta E\simeq0.5414\,\mathrm{eV}},
+\quad
+\boxed{\lambda=\frac{hc}{\Delta E}
+\simeq2.290\times10^{-6}\,\mathrm m
+=2290\,\mathrm{nm}}.
+\]
+这些是题设单一等效质量 \(m\) 的谐振子模型；
+若引入真实H$_2$约化质量与振动非谐性，
+频率会改变。
