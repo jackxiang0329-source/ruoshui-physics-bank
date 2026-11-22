@@ -505,7 +505,101 @@ def check_numeric_spotmodels() -> int:
     require(close(400*200/(4180*60)*60,19.13875598),
             "16.17 electromagnet minimum cooling liters/min")
 
-    return 180
+
+    # Chapter 8: source-grounded relativistic physics reference computations.
+    cc=299792458.0
+    mc=9.1093837139e-31
+    mpro=1.67262192369e-27
+    require(close(math.sqrt(5)*cc,6.7035631523e8),
+            "8.4 proper time 2s vs other-frame3s event distance")
+    require(close(math.sqrt(3)/cc,5.77749960e-9),
+            "8.5 simultaneity offset for event dx=1m -> dxprime=2m")
+    require(close(30*3e8,9.0e9),
+            "8.6 spaceship-frame EARTH reflection range, not initial Earth-frame range")
+    require(close(90*3e8,2.7e10),
+            "8.6 Earth-frame ship range at return signal")
+    require(close((5/3)*(-6e8+.8*1.8e17/3e8),-2e8),
+            "8.7 supernova event Earth-frame negative time")
+    require(close((5/3)*(1.8e17+.8*3e8*(-6e8)),6e16),
+            "8.7 supernova x spatial Lorentz event")
+    require(close(math.degrees(math.atan2(1.2e17,6e16)),63.43494882),
+            "8.7 supernova sky position angle from flight axis")
+    require(close(-6e8+math.hypot(1.8e17,1.2e17)/cc,
+                  1.21609469e8),"8.8 photon arrives at spaceship after explosion")
+    require(close((5/3)*(-6e8+math.hypot(1.8e17,1.2e17)/cc)*1.8,
+                  3.64828408e8),"8.8 report back to Earth later than direct light")
+    require(close((.6+.8)/(1+.6*.8),35/37),
+            "8.9 relativistic approach speed less than light")
+    require(close(5*math.sqrt(1-.6**2),4.0),
+            "8.9 time until collision measured on ship")
+    phi=(1+math.sqrt(5))/2
+    require(close(math.sqrt(1-1/phi**2),.7861513778),
+            "8.13 kinetic energy doubling differs from momentum doubling")
+    gam8=1+2.8e9*electron_q/(mc*cc**2)
+    require(close(cc/(gam8**2*(1+math.sqrt(1-1/gam8**2))),
+                  4.99063907),"8.14 stable electron c minus v at 2.8GeV")
+    pp8=math.sqrt((2.8e9*electron_q)*
+                  (2.8e9*electron_q+2*mc*cc**2))/cc
+    require(close(pp8/(electron_q*(240/(2*math.pi))),
+                  .2445598724),"8.14 storage ring B field")
+    gamma_p=1+50/(mpro*cc**2)
+    require(close(cc/(gamma_p**2*(1+math.sqrt(1-1/gamma_p**2))),
+                  1.35496813e-15),"8.15 ultra-high proton speed deficit")
+    require(close((1.67265+1.67495-3.34365)*1e-27*cc**2/
+                  (electron_q*1e6),2.21578750),
+            "8.16 deuteron binding MeV")
+    massdef=(4*1.6726-6.6425-2*.0009)*1e-27
+    require(close(massdef*cc**2/electron_q/1e6,25.86020346),
+            "8.17 simplified solar reaction release MeV")
+    require(close(massdef/(4*1.6726e-27),.00689046993),
+            "8.17 simplified fusion energy fraction")
+    require(close(3.9e26/((massdef/(4*1.6726e-27))*cc**2),
+                  6.29758966e11),"8.17 solar proton consumption kg per second")
+    require(close(G*1.989e30/(1e4*cc**2),.1477063278),
+            "8.18 neutron star Newtonian potential rest-energy fraction")
+    require(close((.5+.5)/(1+.5*.5),.8),
+            "8.19 two opposite 0.5c protons relative speed")
+    ep=mpro*cc**2/electron_q/1e9
+    ee=mc*cc**2/electron_q/1e9
+    require(close(math.sqrt(ep**2+ee**2+2*ep*(22+ee)),
+                  6.4934802351),"8.20 SOURCE available energy total CM not excess")
+    Ec=2*(2.8+ee)
+    require(close((Ec**2-2*ee**2)/(2*ee),30696.1950),
+            "8.21 fixed electron target needs ~3.07e4 GeV")
+    require(close(ep*1e18,9.38272088e17),
+            "8.23 BOTH protons boosted energy scale squared mass model")
+    # Chapter 17: independent current, field, flux and geometry reference checks.
+    mu=4*math.pi*1e-7
+    require(close((math.pi+2)/(4*math.pi),.4091549431),
+            "17.1(b) semicircle plus two half-infinite leads coefficient")
+    require(close(9/(2*math.pi),1.4323944878),
+            "17.1(c) three equal triangle side field coefficient")
+    require(close(mu*1800/(2*math.pi*25),1.44e-5),
+            "17.2 HV overhead line ground magnetic field")
+    require(close(math.degrees(math.atan(5/18)),15.524111),
+            "17.3 compass perpendicular wire field deflection")
+    require(close(math.degrees(math.asin(5/18)),16.127620),
+            "17.3 compass maximum freely-oriented horizontal field")
+    require(close(mu*20*.25/math.pi*math.log(3),2.197224577e-6),
+            "17.5 rectangular flux between antiparallel wires")
+    require(close(mu*5000/(2*math.pi*.025),.040),
+            "17.7 coax cable B peak at inner rod edge")
+    Nt=10000/(2*math.pi*1.0)
+    require(close(Nt,1591.54943),"17.12 toroid copper turn MINOR radius")
+    require(close(mu*Nt*7.3e4/(2*math.pi*2.0),11.61831085),
+            "17.12 tokamak peak B ~11.6T (not ~5.8T)")
+    require(close(mu/(4*math.pi),1e-7),
+            "17.15 internal radial-axial flux coefficient")
+    require(close((4/5)**1.5,.7155417528),
+            "17.17 Helmholtz axis centre field coefficient")
+    require(close(eps*math.pi*.05**2*1e12,.0695406285),
+            "17.19 circular capacitor displacement current")
+    require(close(mu*eps*.05*1e12/2,2.78162514e-7),
+            "17.19 plate-edge Ampere Maxwell B field")
+    require(close(2*math.pi*50*1e-12*1.74e5,5.466371217e-5),
+            "17.20 50Hz capacitor displacement current peak")
+
+    return 218
 
 
 def main() -> None:
@@ -631,6 +725,24 @@ def main() -> None:
             "16.18 homogeneous conductor end exercise missing")
     require("电源正端" in a16 or "电动势正端" in a16,
             "16.11–16.12 image polarity assumption not documented")
+
+    # New source-text risk regression for the two added chapters.
+    q8=(ROOT/"chapters/08/questions.tex").read_text(encoding="utf-8")
+    s8=(ROOT/"chapters/08/solutions.tex").read_text(encoding="utf-8")
+    q17=(ROOT/"chapters/17/questions.tex").read_text(encoding="utf-8")
+    s17=(ROOT/"chapters/17/solutions.tex").read_text(encoding="utf-8")
+    require("在飞船系" in q8 and "9.00\\times10^9" in s8,
+            "8.6 source first subquestion must use ship-frame reflection range")
+    require("两个" in q8 and "10^{18}" in s8 and "8.23" in s8,
+            "8.23 two-proton energy squared gravitational scaling missing")
+    require("资用" in q8 and "质心" in s8,
+            "8.20–8.21 source available-energy COM model absent")
+    require("17.20" in q17 and "17.20" in s17,
+            "17.20 displacement current last numbered exercise missing")
+    require("管截面" in q17 and "11.6" in s17,
+            "17.12 windings must use MINOR toroid radius for N")
+    require("横向分量" in q17 and "B_\\perp" in s17,
+            "17.6 semicircle transverse Biot-Savart component discarded")
 
     computed = check_numeric_spotmodels()
     print(f"PASS: {len(ids)} candidate exercises have unique IDs, "
