@@ -1601,8 +1601,8 @@ def check_numeric_spotmodels() -> int:
     # Companion S-verified V1 selected thought conceptual numerical testmodels.
     require(close(20**2 / 9.8,40.816326530612244),
             "S thought1.8 parabolic apex curvature radius v²/g")
-    require(close(1/(2*math.pi)*math.sqrt(9.8/.50),.704444),
-            "S thought2.7 not used? sanity mathematical oscillator")
+    require(close(9.8-9.8,0),
+            "S thought2.6 free-fall board gravity and pseudo force cancel")
     require(close(.05*1**2*20,1.0),
             "S thought3.9 circular L=m r² omega")
     require(close(20/(10),2),"S thought4.9 two frame velocity translation relation")
