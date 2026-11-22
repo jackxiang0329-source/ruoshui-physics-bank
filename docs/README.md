@@ -5,15 +5,15 @@
 | 文档类型 | 目录 | 常用入口 |
 |---|---|---|
 | 规范与质量门禁 | [`policies/`](policies/) | [命名规则](policies/repository_naming.md)、[高难准入](policies/high_difficulty_policy.md)、[六轮质检](policies/qa_protocol.md)、[翻译规范](policies/translation_catalog_policy.md) |
-| 使用与操作 | [`guides/`](guides/) | [LaTeX 架构](guides/tex_architecture.md)、[组卷](guides/exam_assembly.md)、[外部导入](guides/college_physics_import.md) |
+| 使用与操作 | [`guides/`](guides/) | [LaTeX 架构](guides/tex_architecture.md)、[组卷](guides/exam_assembly.md)、[外部来源工作流](guides/external_sources_workflow.md) |
 | 审核和统计 | [`reports/`](reports/) | [覆盖情况](reports/coverage_report.md)、[来源审计](reports/college_corpus_audit.md)、[历史过滤报告](reports/legacy_filter_report.json) |
-| 批次及项目历史 | [`history/`](history/) | [2026 历史记录](history/project_history_2026.md)、[第 12 轮工作记录](history/round_12_worklog.md) |
+| 批次及项目历史 | [`history/`](history/) | [2026 历史记录与早期批次工作原稿](history/project_history_2026.md) |
 | 逐题复核记录 | [`reviews/`](reviews/) | [第一轮初筛](reviews/round_01_triage.md)、[独立复算](reviews/round_01_independent_derivations.md) |
 | 外部参考书目 | [`references/`](references/) | [教材来源清单](references/textbook_references.md) |
 
 ## 如何继续录入
 
-1. 正式高难综合题：在 `bank/<ID>/{meta.json,question.tex,solution.tex}` 中维护，运行 `python3 scripts/build.py --check`。
+1. 正式高难综合题：在 `bank/<ID>/{meta.json,question.tex,solution.tex}` 中维护，先运行 `python3 scripts/build.py` 生成两册 TeX，再执行 `python3 scripts/build.py --check`。
 2. 教材译解：维持独立教材工程，未审的张三慧草稿仅在其 Draft PR 分支，不自动合并。
 3. 待审外部原文：由 `external_sources/<source_id>/index.json` 管理元数据，逐题原始字节按需从 `external_sources/_bundles/` 恢复；正式题库不自动吸收。
 4. 所有文件命名按 [仓库命名约定](policies/repository_naming.md)，由 CI 阻止格式回退。
