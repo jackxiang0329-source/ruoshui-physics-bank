@@ -106,7 +106,7 @@ M020/M021、E020/E021、T020/T021 新增于六大模块之一半；每题四问�
 
 第十二批经 [PR #35](https://github.com/jackxiang0329-source/ruoshui-physics-bank/pull/35) 完成并合并到主分支，主库从302道增至**352道**，新增恰好50道：力学9、电磁学9、热学8、振动与波动8、光学8、近代物理8。每题四个递进分问、完整中文解析，唯一权威源为 `bank/ID/{meta.json,question.tex,solution.tex}`；统一索引、JSON镜像、两册TeX均已同步。
 
-第十二批的 `data/rounds/2026-10-28-12.json` 是唯一正式批次清单；`scripts/check_round12_physics.py` 会执行200项逐分问检查并生成 `data/round12_validation_report.json`。跨轮发现的五项重复核心模型已全部替换为标准映射、悬链线、Rankine涡、剪切Alfvén波与非线性Poisson–Boltzmann双电层，并重写20项可执行检查；详见 `data/round12_core_model_overlap_audit.json`。
+第十二批的 `data/rounds/2026-10-28-12.json` 是唯一正式批次清单；`scripts/check_round12_physics.py` 会执行200项逐分问检查并生成 `data/round12_validation_report.json`（运行产物；2026-11-22 的历史版本原文保存于 `data/rounds/historical_reports_round12.json`，可用 `python3 scripts/qa_archive.py --restore 12` 恢复）。跨轮发现的五项重复核心模型已全部替换为标准映射、悬链线、Rankine涡、剪切Alfvén波与非线性Poisson–Boltzmann双电层，并重写20项可执行检查；详见 `data/round12_core_model_overlap_audit.json`。
 
 合并前草稿和正式GitHub Actions工作流均成功（runs 40823846731、40823851509），正式双XeLaTeX PDF工件为 `advanced-physics-pdf`（artifact 12876280438）。合并提交为 `ae15c99dcc3bd9f5ce0fca7aa81c48720d0ec815`。**技术检查通过不等于独立专家审稿；全部题目继续标记「待独立复核」。**
 

@@ -28,3 +28,13 @@ generated/
 # Third-round indexed, checksum-verified WeBWorK PG source archives.
 /external_sources/webwork_opl/raw/
 /external_sources/webwork_thermal/raw/
+
+# Round 12-14 historical QA outputs are preserved in data/rounds/historical_reports_round*.json.
+# Recomputed outputs are workspace artifacts; keep core overlap/approval audits tracked.
+/data/round12_*_validation_report.json
+/data/round12_validation_report.json
+/data/round13_*_validation_report.json
+!/data/round13_validation_report.json
+/data/round14_*_validation_report.json
+/data/round14_validation_report.json
+/data/round14_402_content_similarity_screen.json

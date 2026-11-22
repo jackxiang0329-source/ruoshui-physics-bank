@@ -58,6 +58,8 @@ python3 scripts/compact_small_external_sources.py --restore ubc_opbp
 python3 scripts/build.py --check
 ```
 
+**第四轮历史 QA 报告合并（2026-11-22）：** 将第 12—14 轮的 23 份中间检查 JSON 原文及 Git Blob SHA 无损收纳为 [3 份可校验档案](data/rounds/)；减少 20 个在仓库中逐份展示的文件，正式题库的 452 题（每题三份独立权威源）和 Irodov 章节均未动。第 12/13 轮核心模型审计、第 13 轮完整结果与第 14 轮核心模型审计仍独立保留；通过 `python3 scripts/qa_archive.py --verify` 检验，确需重跑历史脚本时用 `--restore 12`、`13`、`14` 或 `all` 还原。归档只说明技术检查留痕，并非人工学术审定。
+
 **第二轮与第三轮无损归档：** UBC 的 265 份与 IntroPhysics 的 53 份未审单题 Markdown 另打包为 2 个可逆归档；正式 452 题、Irodov、WeBWorK PG 程序原始字节也无损归档，张三慧 Draft PR 不变。当前活跃分支的精确文件数以 GitHub 文件树为准；二轮详情见 [归档索引](external_sources/_bundles/compaction_round_02.md)。
 
 **质量声明：** 自动化测试与 PDF 编译只能证明相应结构、公式和计算模型的程序化检查通过；所有标记“待独立复核”的题目仍需专业人士独立审稿。外部来源的归档不会改变其版权、正确性或学术审核状态。

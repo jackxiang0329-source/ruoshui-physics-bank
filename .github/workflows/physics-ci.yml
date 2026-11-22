@@ -20,6 +20,8 @@ jobs:
           python3 scripts/compact_webwork_sources.py --verify
       - name: Enforce typed directories, filename conventions and doc links
         run: python3 scripts/check_repository_layout.py
+      - name: Verify lossless archival of historical QA reports
+        run: python3 scripts/qa_archive.py --verify
   validate-and-build:
     runs-on: ubuntu-latest
     timeout-minutes: 40
