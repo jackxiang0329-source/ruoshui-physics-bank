@@ -429,3 +429,113 @@
 \]
 检查：\(r_2>r_1\)，且远日点速率更低，
 符合中心力角动量守恒。
+
+
+% 第3章末尾的4道习题：PDF物理页118。
+\subsection*{续录习题3.21--3.24：独立解析}
+
+\paragraph{习题 3.21}
+采用题设圆轨道近似，
+取月球质量 \(m_{\rm M}\simeq7.35\times10^{22}\,\mathrm{kg}\)，
+地月中心距 \(r\simeq3.844\times10^8\,\mathrm m\)；
+周期 \(T=27.3(86400)\,\mathrm s\)。
+月球速度沿切线，故对地心的角动量大小
+\[
+ \boxed{L=m_{\rm M}rv
+ =\frac{2\pi m_{\rm M}r^2}{T}
+ \approx2.89\times10^{34}\,\mathrm{kg\,m^2/s}}.
+\]
+月地连线每单位时间扫过面积为
+\[
+ \boxed{\frac{dA}{dt}=\frac{\pi r^2}{T}
+ \approx1.97\times10^{11}\,\mathrm{m^2/s}}.
+\]
+检查 \(dA/dt=L/(2m_{\rm M})\)；
+这一关系对任意中心力轨道成立，此处用圆轨道代数值。
+
+\paragraph{习题 3.22}
+设地球平均半径近似 \(R_\oplus=6371\,\mathrm{km}\)
+（具体数值随教材数据表略有不同）。
+近、远地点到地心的距离
+\[
+ r_p=R_\oplus+205.5\,\mathrm{km},\qquad
+ r_a=R_\oplus+35835.7\,\mathrm{km}.
+\]
+万有引力是中心力，角动量守恒；
+近远地点速度都沿切线，所以
+\[
+ r_pv_p=r_av_a
+ \quad\Rightarrow\quad
+ \boxed{v_a=\frac{r_p}{r_a}v_p
+ \approx1.59\,\mathrm{km/s}}.
+\]
+椭圆的长半轴
+\(a_e=(r_p+r_a)/2\)，短半轴
+\(b_e=\sqrt{r_pr_a}\)。
+按开普勒第二定律，掠面速度
+\(\dot A=r_pv_p/2\) 不变，整圈面积
+\(\pi a_eb_e\)。
+因此
+\[
+ \boxed{T=\frac{\pi a_eb_e}{r_pv_p/2}
+ =\frac{2\pi a_eb_e}{r_pv_p}
+ \approx3.81\times10^4\,\mathrm s
+ \approx10.57\,\mathrm h}.
+\]
+上述推导不需要已知卫星质量；
+近地点与远地点高度都必须先加地球半径再取比。
+
+\paragraph{习题 3.23}
+若细绳始终沿半径向内拉，绳张力对小方块
+绕桌孔中心的力矩为零；
+桌面光滑也没有其他水平力矩。
+故角动量守恒
+\[
+ m r_0v_0=mrv,\qquad
+ \boxed{v=v_0\,\frac{r_0}{r}}.
+\]
+因 \(r\) 变小，速率变大；
+增加的动能来自拉绳外力做功，
+所以不能将机械动能误认为恒定。
+
+\paragraph{习题 3.24}
+选两质点连线为 \(x\) 轴，原两质点位于
+\(x=-a/2,+a/2\)，各质量 \(m\)，
+其质心 \(O\) 静止且绕 \(O\) 以 \(\omega\) 旋转。
+第三个静止质量 \(m\) 的质点与 \(x=+a/2\) 端碰撞。
+(1) 碰前瞬间三个质点总体质心为
+\[
+ x_C=\frac{m(-a/2)+m(a/2)+m(a/2)}{3m}
+ =\boxed{\frac a6}
+\]
+（从原杆中心向碰撞端）。
+杆两端动量矢量互相抵消，第三点动量为零，
+故总动量零，\(\boxed{\boldsymbol v_C=\boldsymbol0}\)。
+(2) 因总动量为零，
+对新质心 \(C\) 的角动量与对原质心 \(O\)
+的角动量相同（原点平移修正项
+\(\boldsymbol a\times\boldsymbol P=0\)）。
+碰前仅旋转着的两个质点有角动量，
+\[
+ L_{C,\rm before}
+ =2m\left(\frac a2\right)^2\omega
+ =\boxed{\frac12ma^2\omega}.
+\]
+碰撞冲量均为系统内力，若忽略外力矩则
+\(\boxed{L_{C,\rm after}=L_{C,\rm before}}\)。
+(3) 粘在碰撞端后该端质量是 \(2m\)，
+距离新质心 \(a/3\)，另一端质量 \(m\)
+距离新质心 \(2a/3\)；
+故碰后转动惯量
+\[
+ I_C=2m(a/3)^2+m(2a/3)^2=\frac23ma^2.
+\]
+由 \(I_C\omega_f=L_C\) 得
+\[
+ \boxed{\omega_f=\frac{(ma^2\omega/2)}{(2ma^2/3)}
+ =\frac34\,\omega}.
+\]
+系统总动能在非弹性碰撞中下降：
+碰前 \(K_i=\frac14ma^2\omega^2\)，
+碰后 \(K_f=\frac12I_C\omega_f^2
+ =\frac3{16}ma^2\omega^2\)，符合耗散。
