@@ -142,6 +142,19 @@ def check_numeric_spotmodels() -> int:
             "3.14 burnout speed")
     require(close(u*(burn-mf/rate*math.log(m0/mf))-.5*g*burn**2,
                   203591.5636030566), "3.14 burnout height")
+    # 3.14: independent midpoint quadrature validates the analytic height,
+    # and explicitly differs from the companion book's printed 172 km.
+    n_int = 10000
+    delta_t = burn/n_int
+    h_mid = sum(
+        (u*math.log(m0/(m0-rate*(i+0.5)*delta_t))
+         -g*(i+0.5)*delta_t)*delta_t
+        for i in range(n_int)
+    )
+    require(close(h_mid,203591.5636030566,rel=.00001),
+            "3.14 independent midpoint quadrature")
+    require(abs(h_mid-172000)>30000,
+            "3.14 must preserve printed 172km vs independent integration discrepancy")
     # 3.15 jet engine mass flow and ram ingestion
     require(close(78*490 - 75*210, 22470), "3.15 air-breathing thrust")
     # 3.18 cube with removed cylindrical tunnel
@@ -190,7 +203,7 @@ def check_numeric_spotmodels() -> int:
     require(close(.5*(1.4e-13*1.6e6/(1.5e-10))*(.016/20)**2,
                   .0004778666666666667),"12.34 inkjet deflection")
 
-    return 45
+    return 46
 
 
 def main() -> None:
