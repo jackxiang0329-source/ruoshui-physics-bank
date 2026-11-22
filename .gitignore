@@ -15,3 +15,8 @@ generated/
 *.blg
 *.run.xml
 *.bcf
+
+# Losslessly bundled unreviewed candidate corpora; restore only on demand.
+/external_sources/hf_physics_dpo/raw/
+/external_sources/college_physics/raw/
+/external_sources/physics_refresher/raw/
