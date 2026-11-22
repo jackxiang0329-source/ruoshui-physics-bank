@@ -339,6 +339,21 @@ def main() -> None:
         reported.extend(qs)
     require(Counter(reported) == Counter(ids),
             "unindexed exercises or missing fragment sections")
+    # Guard previously discovered source transcription regressions.
+    ch4q = (ROOT / "chapters/04/questions.tex").read_text(encoding="utf-8")
+    ch13q = (ROOT / "chapters/13/questions.tex").read_text(encoding="utf-8")
+    # End-of-chapter exercise 4.8 is NOT the separate thought-question 4.8.
+    sec4_8 = ch4q.split(r"\\paragraph{习题 4.8}", 1)[1].split(
+        r"\\paragraph{习题 4.9}", 1)[0]
+    require("一竖直悬挂的弹簧" in sec4_8,
+            "4.8 chapter exercise confused with thought question")
+    require("两个相同的钯核" in ch13q and "两个相同的铯核" not in ch13q,
+            "13.29 nuclear species must be Pd Z=46, not Cs Z=55")
+    require("单数圆筒和双数圆筒分别" in ch13q,
+            "13.22 alternating AC cylinder wiring missing")
+    require("1\\,\\mathrm{kg}" not in sec4_8,
+            "unexpected spurious content in spring exercise")
+
     computed = check_numeric_spotmodels()
     print(f"PASS: {len(ids)} candidate exercises have unique IDs, "
           "paired TeX sections, source pages and no exam admission.")
