@@ -84,6 +84,10 @@ jobs:
         run: python3 external_sources/irodov-zh-elegant/oscillations_mechanical_051_093_regression.py
       - name: Independently audit Irodov Part IV.94-149 electrical oscillations and RLC circuits
         run: python3 external_sources/irodov-zh-elegant/oscillations_electric_094_149_regression.py
+      - name: Independently audit Irodov Part IV.150-188 acoustic wave and Doppler regressions
+        run: python3 external_sources/irodov-zh-elegant/waves_elastic_150_188_regression.py
+      - name: Independently audit Irodov Part IV.189-224 Maxwell waves and radiation regressions
+        run: python3 external_sources/irodov-zh-elegant/waves_electromagnetic_189_224_regression.py
       - uses: xu-cheng/latex-action@v4
         with:
           working_directory: external_sources/irodov-zh-elegant
