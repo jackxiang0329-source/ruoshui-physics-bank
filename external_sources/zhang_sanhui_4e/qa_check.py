@@ -1687,7 +1687,7 @@ def check_thought_intake() -> int:
     # Extra source-and-model guards for 106 thought Q/A added in chapters 12--21.
     q12=(ROOT/"thought_questions/12/questions.tex").read_text(encoding="utf-8")
     s12=(ROOT/"thought_questions/12/solutions.tex").read_text(encoding="utf-8")
-    require("自场" in s12 and "另一片" in s12,
+    require("自身电场" in s12 and "另一片" in s12,
             "thought12.10 self-field double-counting in capacitor force")
     s15=(ROOT/"thought_questions/15/solutions.tex").read_text(encoding="utf-8")
     require("电源功" in s15 and "保护环" in s15,
