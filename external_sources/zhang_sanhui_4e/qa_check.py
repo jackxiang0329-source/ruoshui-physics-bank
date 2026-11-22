@@ -663,6 +663,11 @@ def check_numeric_spotmodels() -> int:
                   (3.7e-10)**2*.004),1.70330853),
             "9.29 wall spacing Knudsen gas pressure transition")
 
+    require(close(3*7.23e6*(9.55e-5)**2,.1978123225),
+            "9.27 original critical CO2 a from companion scan p153")
+    require(close(9.55e-5/3,3.1833333333e-5),
+            "9.27 original critical CO2 b from companion scan p153")
+
     # Chapter 18: magnetic Lorentz forces, Hall effect, field-momentum models.
     echarge=1.602176634e-19
     mel=9.1093837e-31
@@ -728,7 +733,7 @@ def check_numeric_spotmodels() -> int:
     require(close(-2*2.39e-23*math.cos(math.radians(39.2)),
                   -3.7042347e-23),"18.30 sodium excited 39.2° energy")
 
-    return 269
+    return 271
 
 
 def main() -> None:
@@ -884,8 +889,9 @@ def main() -> None:
             "9.24 Perrin experiment source counts/independent result absent")
     require("冷却" in q9 and "87.3" in s9,
             "9.2 Newton cooling correct total elapsed minutes regressed")
-    require("9.27" in q9 and "图值复核" in s9,
-            "9.27 graphite critical diagram has no expert figure QA; do not invent exact graph value")
+    require("9.27" in q9 and "9.55\\times10^{-5}" in s9
+            and "7.23\\times10^6" in s9 and "0.198" in s9,
+            "9.27 companion S p153 critical values and source calculation regressed")
     require("18.30" in q18 and "18.30" in s18,
             "ch18 sodium atom magnetic energy last exercise missing")
     require("18.27" in q18 and "4.12" in s18,
