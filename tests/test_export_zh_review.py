@@ -21,7 +21,7 @@ class ChineseReviewTests(unittest.TestCase):
             "translation_status": "中文初译待双语复核",
             "physics_review": "未审核", "exam_ready": False
         }
-        reg = root / "localization" / "zh_CN" / "translations.json"
+        reg = root / "data" / "localization" / "zh_CN" / "translations.json"
         reg.parent.mkdir(parents=True)
         reg.write_text(json.dumps({"schema": "ruoshui-physics-zh-editorial-drafts/v1",
                                    "additional_entries": [item]}, ensure_ascii=False), encoding="utf-8")
