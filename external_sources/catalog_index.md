@@ -1,41 +1,26 @@
-# 大学物理开放题源目录（2026-10-26）
+# 大学物理外部题源 · 分类总索引
 
-本目录仅存储**外部开源题源**，与 `bank/` 内首批100道独立原创题分离。以下统计已通过GitHub远端目录及源文件Git blob SHA核对。
+请先看 [外部来源说明](README.md)；本页仅清点**候选原始资料**，不把候选文件、教材题号或机器 QA 等同于可以正式组卷的试题。
 
-| 来源 | 已发现上游题源文件 | 已实际归档 | 文件格式 | 权利与技术限制 |
-|---|---:|---:|---|---|
-| [UBC Open Physics Bank](https://github.com/open-resources/physics_bank) | 897 | 157 | MyST Markdown | 逐题CC BY 4.0或CC BY-NC-SA 4.0；参数、配图和来源原著权利仍需核查 |
-| [WeBWorK BrockPhysics / University Physics](https://github.com/openwebwork/webwork-open-problem-library) | 214 | 59 | PG | OPL缺省CC BY-NC-SA 3.0，有权利例外；需WeBWorK及宏依赖 |
-| [WeBWorK BrockPhysics / College Physics 热学](https://github.com/openwebwork/webwork-open-problem-library/tree/main/Contrib/BrockPhysics/College_Physics_Urone) | 215 | 21 | PG | 相同默认许可及例外；涉及气体动理论、热传递、热力学 |
-| **合计** | **1,326** | **237** | | **待审核可正式组卷：0** |
+| 来源类型 | 记录数量 | 存储方式 | 访问与限制 |
+|---|---:|---|---|
+| HF Physics DPO 合成候选 | 16,611 | [原始字节压缩包](_bundles/hf_physics_dpo-raw.tar.gz) | 模型生成候选，答案和许可待核 |
+| OpenStax College Physics | 2,526 | [原始字节压缩包](_bundles/college_physics-raw.tar.gz) | CC 条款/第三方权利待审 |
+| Physics Refresher | 700 | [原始字节压缩包](_bundles/physics_refresher-raw.tar.gz) | 教学候选，待审 |
+| UBC Open Physics Bank | 265 | [原始字节压缩包](_bundles/ubc_opbp-raw.tar.gz) | 原图依赖及 CC BY / NC / SA 逐题复核 |
+| IntroPhysics | 53 | [原始字节压缩包](_bundles/intro_physics-raw.tar.gz) | 教学材料题干，待审 |
+| WeBWorK 大学物理 | 59 | [原始 PG 压缩包](_bundles/webwork_opl-raw.tar.gz) | .pg 需要 WeBWorK 引擎与宏、版权需审 |
+| WeBWorK 热学 | 21 | [原始 PG 压缩包](_bundles/webwork_thermal-raw.tar.gz) | 同上 |
+| **未审资料合计** | **20,235** | **7 个可恢复归档** | **不是正式题数** |
 
-**关键区别：** 1,326是从上游固定Git树发现的文件路径，不代表1,326份试题已经拉取。已真正复制到本仓库的是237份，剩余**1,089个候选文件路径尚未下载正文**。不同文件可能包含多小问、相近题、依赖外部媒体或无法直接渲染；不能把文件数当作独立有效题数。
+外部索引仍在各来源 `index.json`；来源文件的引用、作者、许可、原始版本信息保留在索引或归档成员中。所有归档通过哈希清单校验：`_bundles/manifest.json`（19,837），`_bundles/small_sources_manifest.json`（318），`_bundles/webwork_sources_manifest.json`（80）。后续需要逐题程序运行时，可先按 `_bundles/README.md` 的指令恢复 `raw/`。
 
-## 文件与索引
+## 与正式题库严格区分
 
-- `ubc_opbp/raw/`、`webwork_opl/raw/`、`webwork_thermal/raw/`：真实题目源代码及Markdown，保留原始作者与许可证说明。
-- 各自 `index.json`：逐题ID、Git源版本、blob SHA、版权信号、原始位置、是否有图片或运行依赖。
-- `catalog/upstream_manifest.json`：1,326项上游文件路径清单；`downloaded=true` 才表示本仓库已有对应的题目源文件。
-- [`curation_queue.csv`](curation_queue.csv)：237条分类筛选记录，含力学、热学、电磁学、振动与波动、光学、近代物理6个模块、权利审查和组卷禁用状态。
+- 正式高难综合题：[`../bank/`](../bank/) 内的 452 道唯一权威 TeX/元数据。
+- Irodov《普通物理学习题》中文教材整理：[`irodov-zh-elegant/`](irodov-zh-elegant/) 独立的 1,878 道原书题号及编译工程。
+- 张三慧三册习题：仍在 [Draft PR #45](https://github.com/jackxiang0329-source/ruoshui-physics-bank/pull/45)，不可当作正式主库。
+- 外部候选完整分类：[中文分类导航](catalog/中文分类导航.md)、[待审清单](curation_queue.csv)。
+- 文件/文件夹命名与技术文档：[仓库规范](../docs/policies/repository_naming.md)。
 
-## 完整性与质量状态
-
-经远端Git树检查，237份归档文件全部存在，**237/237份的blob SHA与上游原始文件逐条一致**，未发现完全相同的源文件SHA。此结论只说明当前拷贝的字节准确，不证明题目在物理上正确，也不代表语义级去重已完成。
-
-外部题源**全部 `exam_ready=no`**，主要原因包括：
-
-- 许可证可能含NC（非商业）及SA（相同方式共享）限制，尤其需核实教材、教师答案、配图和机构原题的权利；
-- UBC题源含图片资源和参数表达式，缺少资源时不能作为完整试题；
-- WeBWorK `.pg` 依赖PG引擎及配套宏，不能直接当作ElegantBook的 `.tex` 文件；
-- 题干条件、解析、答案、语义重复度和中文术语尚未逐题学术复核。
-
-## 增量抓取与清点
-
-- 预览下一批：`python scripts/sync_external_physics.py --source ubc_opbp --limit 20`
-- 预览热学：`python scripts/sync_external_physics.py --source webwork_brock_thermal --limit 20`
-- 在确定使用范围符合NC等许可条款时，可增加 `--download --include-noncommercial` 真正下载；程序会核对Git blob SHA，保留归属，不自动批准题目。
-- 清点：`python scripts/external_inventory.py`
-- 重新生成组卷审核候选清单：`python scripts/rebuild_external_queue.py`
-- 回归测试：`python -m unittest discover -s tests -v`（源码已配置；GitHub Actions尚未取得本轮成功运行的证据）
-
-下一步应继续逐源拉取并补齐配图/宏依赖、物理审核、语义去重及出版级中文TeX转换。只有经过许可与独立质量审查的题目，才可明确加入正式试卷组卷池。
+各来源数量是当前索引条目数；上游文件量、授权和审核状态可能变化。没有人工逐题确认前，不能自动改变 `exam_ready`。
