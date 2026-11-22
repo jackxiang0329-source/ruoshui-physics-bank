@@ -1,0 +1,303 @@
+{
+  "schema": "zhang-sanhui-4e-companion-answer-crosscheck/v1",
+  "date": "2026-11-22",
+  "scope": "chapter2 exercises2.12–2.28 existing main exercise source formula/result spotcomparison, NOT full expert review",
+  "source": {
+    "volume": "S",
+    "filename": "大学物理学（第4版）学习辅导与习题解答 (张三慧) .pdf",
+    "sha256": "54126dd75edd65eb9ead0a9d7acb96a37bfb25674cf595c76b94f2fb30bce5a7",
+    "pdf_physical_page_count": 402
+  },
+  "question_bundle": "chapters/02/questions.tex",
+  "solution_bundle": "chapters/02/solutions.tex",
+  "records": [
+    {
+      "canonical_id": "ZS4-02-012",
+      "source_problem_number": "2.12",
+      "companion_pdf_physical_pages": [
+        35
+      ],
+      "tested_quantity": "Jupiter M",
+      "independent_computed_value": 1.89466183177e+27,
+      "value_unit": "kg",
+      "companion_rounded_value": 1.89e+27,
+      "model_assumptions": "Jupiter mass from Io moon period, not added question",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "rounding agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-02-013",
+      "source_problem_number": "2.13",
+      "companion_pdf_physical_pages": [
+        35
+      ],
+      "tested_quantity": "Saturn M",
+      "independent_computed_value": 5.6972980206e+26,
+      "value_unit": "kg",
+      "companion_rounded_value": 5.7e+26,
+      "model_assumptions": "Saturn mass using outer ring radius136000 km and period14.2h",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "rounding agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-02-014",
+      "source_problem_number": "2.14",
+      "companion_pdf_physical_pages": [
+        35,
+        36
+      ],
+      "tested_quantity": "homogeneous sphere minimum rotation period",
+      "independent_computed_value": 6862.96871871,
+      "value_unit": "s",
+      "companion_rounded_value": 6900,
+      "model_assumptions": "homogeneous star critical breakup period rho3000, source rounded6.9e3",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "SOURCE_IDEALIZED_HOMOGENEOUS_NEWTONIAN_STAR; relativistic EOS not accounted.",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-02-015",
+      "source_problem_number": "2.15",
+      "companion_pdf_physical_pages": [
+        36
+      ],
+      "tested_quantity": "Jupiter pressure atm",
+      "independent_computed_value": 11419781.3,
+      "value_unit": "atm",
+      "companion_rounded_value": 11000000,
+      "model_assumptions": "Jupiter uniform-density central pressure with rho1.3e3 R7e7 and 1.013e5Pa/atm",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "rounding agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-02-016",
+      "source_problem_number": "2.16",
+      "companion_pdf_physical_pages": [
+        36,
+        37
+      ],
+      "tested_quantity": "3-body triangle period sample",
+      "independent_computed_value": 32018.2259502,
+      "value_unit": "s",
+      "companion_rounded_value": null,
+      "model_assumptions": "three equal stars equilateral circular orbit; chosen M1e30kg R1e9m validation of symbolic period formula",
+      "crosscheck": "source_symbolic_formula_checked_with_independent_test_parameters",
+      "discrepancy_note": "REVIEWER_SAMPLE_PARAMETERS_NOT_IN_SOURCE",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-02-017",
+      "source_problem_number": "2.17",
+      "companion_pdf_physical_pages": [
+        37
+      ],
+      "tested_quantity": "Earth-Sun L1 distance",
+      "independent_computed_value": 1500837.05375,
+      "value_unit": "km",
+      "companion_rounded_value": 1500000,
+      "model_assumptions": "Earth-Sun L1 distance small mass ratio, source approximates1.5e6km",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "SOURCE_FIRST_ORDER_L1_AND_L2_MASS_RATIO approximation",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-02-018",
+      "source_problem_number": "2.18",
+      "companion_pdf_physical_pages": [
+        37,
+        38
+      ],
+      "tested_quantity": "ring deceleration speed sample",
+      "independent_computed_value": 1.25,
+      "value_unit": "m/s",
+      "companion_rounded_value": null,
+      "model_assumptions": "circular-ring drag velocity from v0=2m/s R1m mu0.1 t3s chosen numeric sample",
+      "crosscheck": "source_symbolic_formula_checked_with_independent_test_parameters",
+      "discrepancy_note": "REVIEWER_SAMPLE_PARAMETERS_NOT_IN_SOURCE",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-02-019",
+      "source_problem_number": "2.19",
+      "companion_pdf_physical_pages": [
+        38,
+        39
+      ],
+      "tested_quantity": "centrifuge liquid base normal force",
+      "independent_computed_value": 19739.2088022,
+      "value_unit": "N",
+      "companion_rounded_value": 19700,
+      "model_assumptions": "centrifuge liquid pressure force on tube bottom 12g and radius2cm to10cm",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "rounding agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-02-020",
+      "source_problem_number": "2.20",
+      "companion_pdf_physical_pages": [
+        39
+      ],
+      "tested_quantity": "rotor blade tension to weight",
+      "independent_computed_value": 534.435721311,
+      "value_unit": "1",
+      "companion_rounded_value": 534,
+      "model_assumptions": "rotor-root tension divided by own weight, uniform blade5.97m 400rpm",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "rounding agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-02-021",
+      "source_problem_number": "2.21",
+      "companion_pdf_physical_pages": [
+        39,
+        40
+      ],
+      "tested_quantity": "funnel min angular frequency divided2pi",
+      "independent_computed_value": 0.289785428518,
+      "value_unit": "s^-1",
+      "companion_rounded_value": null,
+      "model_assumptions": "funnel bead min rotation frequency test theta30deg mu0.2 radius1m, source symbolic formula",
+      "crosscheck": "source_symbolic_formula_checked_with_independent_test_parameters",
+      "discrepancy_note": "REVIEWER_SAMPLE_PARAMETERS_NOT_IN_SOURCE",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-02-022",
+      "source_problem_number": "2.22",
+      "companion_pdf_physical_pages": [
+        40
+      ],
+      "tested_quantity": "concentric string inside tension T1 sample",
+      "independent_computed_value": 16,
+      "value_unit": "N",
+      "companion_rounded_value": null,
+      "model_assumptions": "coaxial two mass strings source T1=m1 omega²L1+m2omega²(L1+L2); sample m1=2 m2=1 L1=L2=1 omega=2",
+      "crosscheck": "source_symbolic_formula_checked_with_independent_test_parameters",
+      "discrepancy_note": "REVIEWER_SAMPLE_PARAMETERS_NOT_IN_SOURCE",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-02-023",
+      "source_problem_number": "2.23",
+      "companion_pdf_physical_pages": [
+        40
+      ],
+      "tested_quantity": "braking box relative impact speed",
+      "independent_computed_value": 2.89827534924,
+      "value_unit": "m/s",
+      "companion_rounded_value": 2.9,
+      "model_assumptions": "truck box contact relative speed a7 friction0.5 distance2m",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "rounding agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-02-024",
+      "source_problem_number": "2.24",
+      "companion_pdf_physical_pages": [
+        40
+      ],
+      "tested_quantity": "space-station artificial gravity omega",
+      "independent_computed_value": 0.0737864787373,
+      "value_unit": "rad/s",
+      "companion_rounded_value": 0.074,
+      "model_assumptions": "rotating 1800m space station required artificial gravity g",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "rounding agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-02-025",
+      "source_problem_number": "2.25",
+      "companion_pdf_physical_pages": [
+        41,
+        42
+      ],
+      "tested_quantity": "rotating-hoop critical omega and stability",
+      "independent_computed_value": 3.1304951685,
+      "value_unit": "rad/s",
+      "companion_rounded_value": null,
+      "model_assumptions": "critical omega=sqrt(g/R) with chosen R=1m; quartic minimum stable at equality—companion calls equality unstable based only second derivative",
+      "crosscheck": "source_symbolic_formula_checked_with_independent_test_parameters",
+      "discrepancy_note": "SOURCE_STABILITY_CONCLUSION_QUESTIONABLE: source calls omega=critical theta=0 unstable from second derivative zero; effective potential quartic mgR theta^4/8 positive yields Lyapunov stable (degenerate). Retain candidate correction, expert review needed.",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-02-026",
+      "source_problem_number": "2.26",
+      "companion_pdf_physical_pages": [
+        42
+      ],
+      "tested_quantity": "airship wind drag",
+      "independent_computed_value": 1558.22995618,
+      "value_unit": "N",
+      "companion_rounded_value": 1560,
+      "model_assumptions": "stratosphere balloon drag force, D50m Cd0.016 rho0.062 wind40m/s",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "rounding agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-02-027",
+      "source_problem_number": "2.27",
+      "companion_pdf_physical_pages": [
+        42
+      ],
+      "tested_quantity": "terminal falling speed mg/k sample",
+      "independent_computed_value": 9.8,
+      "value_unit": "m/s",
+      "companion_rounded_value": null,
+      "model_assumptions": "linear drag terminal speed mg/k, own test m1kg k1kg/s to validate source symbolic formula",
+      "crosscheck": "source_symbolic_formula_checked_with_independent_test_parameters",
+      "discrepancy_note": "REVIEWER_SAMPLE_PARAMETERS_NOT_IN_SOURCE",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-02-028",
+      "source_problem_number": "2.28",
+      "companion_pdf_physical_pages": [
+        42,
+        43
+      ],
+      "tested_quantity": "surface tension sample",
+      "independent_computed_value": 0.198943678865,
+      "value_unit": "N/m",
+      "companion_rounded_value": null,
+      "model_assumptions": "two-sided thin film gamma=(F−mg)/(4πr), own F0.1N mg0.05N r0.02m",
+      "crosscheck": "source_symbolic_formula_checked_with_independent_test_parameters",
+      "discrepancy_note": "REVIEWER_SAMPLE_PARAMETERS_NOT_IN_SOURCE",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    }
+  ],
+  "summary": {
+    "reviewed_distinct_existing_pairs": 17,
+    "reviewed_numeric_source_answers": 10,
+    "reviewed_symbolic_source_formulas": 7,
+    "source_physical_model_disagreement": "2.25 degenerate quartic stability at critical speed",
+    "new_unique_source_questions": 0,
+    "expert_signed_off": 0
+  },
+  "notes": "All second chapter originals2.1–2.28 source-numeric/symbolic checked in two files; original canonical register count705 and cumulative943 remain unchanged. No figures independent redraw."
+}
