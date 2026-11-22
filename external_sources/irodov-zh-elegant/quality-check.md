@@ -1,5 +1,19 @@
 # Irodov 中文 ElegantBook：阶段质检记录
 
+## 2026-11-22：跨版本一致性与谱密度变量变换第三轮严检
+
+本轮不增加原书独立题号，针对此前已标注版本歧义或近轴近似易混淆的 II.162、V.139、V.140、V.142、V.254 做**源题对照＋物理可行性＋单位极限＋数值独立计算**。所有新脚本均直接提交到原仓库并接入 Actions（见 `cross_edition_physics_regression.py`）。
+
+- **II.162 肥皂泡：** 公开 Mir 英文对照把外压缩小倍数记 $n$，泡直径增大倍数另记 $\eta$。原稿和上轮记录的 Arihant 扫描用相同的 $n$ 导致 $ \alpha=-p_0d/8<0$。本轮将物理自洽的 $\alpha=p_0d(n-\eta^3)/[8n(\eta^2-1)]$ 作为标准双参数通解，并严格推出 $1<\eta<n^{1/3}$；当 $\eta^3=n$ 时 $\alpha=0$，当 $\eta\to1^+$ 时趋于正无穷。扫描版原字面情况另列保留。外部参照：https://sinhafoundation.org/physics/problems/2-162/ 与 https://studylib.net/doc/26000208/ie-irodov （文本OCR第二因子可能误作m，不能据此否定本扫描记录）。
+- **V.139：** 多份公开英文转录为 $10.0\,\mathrm{mm}$，对应 $\sin\theta=\lambda^2/(\ell\delta\lambda)=0.72$、$\theta=46.05^\circ$；本库旧记录扫描 $10.0\,\mathrm m$，得到 $0.04125^\circ$。更新为标准版主式与扫描版字面分支并列，明确 $\ell$ 差1000倍；外部参照 https://www.studiestoday.com/ie-irodov-solutions-chapter-29-diffraction-of-light-part-2 。
+- **V.140：** 普通光栅周期 $d=5\,\mu\mathrm m$ 不可能对 $670.8\,\mathrm{mm}$ 光发生非零级衍射；公开原题为 $670.8\,\mathrm{nm}$。据此题面 $N=13000$，分辨下限级次 $4$、最高可传播级次 $7$、最小可分辨双线间距约 $7.36\,\mathrm{pm}$。本扫描的毫米单位分支明确标记并保留，不混同于纳米。
+- **V.142：** 焦平面坐标严格按 $x=f\tan[\arcsin(m\lambda/d)]$；两端波长直接代入得第一级 $6.055\,\mu\mathrm m$、第二级 $12.446\,\mu\mathrm m$。普通答案 $6\,\mu\mathrm m$、$12\,\mu\mathrm m$ 是 $\theta\ll1$ 的近轴近似而非严格等式，二级相对几何近似误差约3.7%。分辨性结论仍为第一级不能、第二区能。
+- **V.254：** 公开 Mir 英文版和 Planck 高频极限给出角频率 Wien 谱 $u_\omega=A\omega^3e^{-a\omega/T}$，从而 $\omega_{\mathrm{peak}}=3T/a=7.85\times10^{14}\,\mathrm{rad/s}$，$u_\lambda\propto\lambda^{-5}e^{-2\pi ca/(T\lambda)}$，$\lambda_{\mathrm{peak}}=2\pi ca/(5T)=1.44\,\mu\mathrm m$。扫描版已记录的 $\omega^2$ 则为另一自洽模型，峰值分别 $2T/a$ 和 $\pi ca/(2T)$。两种极值各用独立数值优化以及频率—波长雅可比积分一致性回归验证。对照：https://sinhafoundation.org/physics/problems/5-254/ 。
+
+**验收边界：** 新增脚本是五个指定题号的跨版本独立物理验证，不能作为1878题的全数人工审校声明；公开版本文本只作交叉对照，不据此声称本轮已重新打开用户上传的385页扫描 PDF 原页。CI失败会阻止发布新的PDF；最新最终状态须检查 GitHub Actions。对含源书原始印刷差异的题目采用“两支明确标注”方法，而非无告知覆盖。
+
+---
+
 记录时间：2026-11-22。底本为用户提供的 Arihant 版 PDF（385 页）。
 
 ## 2026-11-22：第六篇 VI.1—310 五套源码锁定二次严检与两处公式纠错
