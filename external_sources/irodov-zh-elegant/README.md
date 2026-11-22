@@ -14,6 +14,7 @@
 - **2026-11-22 第二篇热学首批严格复算：** 重新独立核算第二篇1—61题的理想/非理想气体状态、真空抽气、重力/旋转气压分布、热力学第一定律、多方过程、范德瓦耳斯气体自由膨胀等，新增2套自动回归（61+76=137个静态断言点），既有累计基线1344项。
 - **2026-11-22 第二篇62—257题严格质检继续完成：** 依据本版原始英文题面及书末答案逐章建立5套回归：分子运动学和麦克斯韦分布62—112（85处静态断言）、熵与循环113—159（70处）、液体表面张力160—184（51处）、相变185—219（61处）、分子输运及导热220—257（101处）。**新增共368处静态断言点，按既有口径累计1712处**；有循环测试，实际执行次数可更多。II.87经原书书末PDF第298页核实印为0.37K，正确为约363.3K，已更正正文并反代最概然速率。项目不新增超出原书的习题号。
 - **2026-11-22 第三篇真空静电场1—53题同步质检：** 新增`electrostatics_vacuum_regression.py`，91处静态物理断言，验证库仑/万有引力比较、带电细线和球面分布、球壳/圆盘/偶极矩远场、高斯通量与泊松方程。已通过CI；连同第二篇62—257题新增368处，本轮新增**459处静态断言**，累计**1803处**。已记录III.1、10、17、18、25、36、40的书末系数、符号与近似数值疑点，已由物理积分或SI量纲反算核验。
+- **2026-11-22 第三篇54—407题及第四篇1—50题深度复算：** 新增7套分章节自动物理回归，覆盖第三篇全部407题并推进第四篇前50题。III.73远场诱导偶极力幂次纠正为x⁻⁵，III.148水浸圆柱电容电流纠正为0.11mA，III.210质子束表面电场与轴心电势差纠正为16.8kV/m及41.9V。新增**550处静态物理断言**，累计**2353处**，测试实际通过以[最新CI](https://github.com/jackxiang0329-source/ruoshui-physics-bank/actions)为准，非2353道不同原题。原题总数仍为1878，下一批从第四篇51题及第五篇开始。
 - 第 1.1 节“运动学”1—58 题已覆盖（全部）。
 - 第 1.2 节“动力学基本方程”59—117 题已覆盖（全部）。
 - 第 1.3 节“能量、动量与角动量守恒”118—199 题已覆盖（全部）。
@@ -262,6 +263,13 @@
     python3 thermo_phase_regression.py
     python3 thermo_transport_regression.py
     python3 electrostatics_vacuum_regression.py
+    python3 electro_conductors_regression.py
+    python3 electro_capacitance_regression.py
+    python3 electro_current_regression.py
+    python3 electro_magnetostatics_regression.py
+    python3 electro_induction_regression.py
+    python3 electro_charged_regression.py
+    python3 oscillations_mechanical_regression.py
     bash build.sh
 
 - `check_sources.py`：验证原书六篇独立编号1,878题及164份章节来源；
@@ -289,6 +297,13 @@
 - `thermo_phase_regression.py`：第二篇185—219题61处：汽化/冷凝、克拉佩龙方程、范德瓦耳斯临界点、三相点、量热器及多阶段熵；
 - `thermo_transport_regression.py`：第二篇220—257题101处：自由程、碰撞配对计数、分子逸出、气体黏性/扩散、泊肃叶流、傅里叶导热及圆柱/球热方程；
 - `electrostatics_vacuum_regression.py`：第三篇1—53题91处静态断言，场与引力基本常数、高斯定律、有限带电体积分、球/圆柱空腔、电偶极近场/远场、梯度与泊松方程；
+- electro_conductors_regression.py：第三篇54—100题87处镜像、介质和边界条件复算；
+- electro_capacitance_regression.py：第三篇101—146题72处电容与能量复算；
+- electro_current_regression.py：第三篇147—218题101处电路、电流和质子束复算；
+- electro_magnetostatics_regression.py：第三篇219—287题82处磁静力与霍尔复算；
+- electro_induction_regression.py：第三篇288—371题90处磁感应、RL与场变换复算；
+- electro_charged_regression.py：第三篇372—407题53处带电粒子和加速器复算；
+- oscillations_mechanical_regression.py：第四篇1—50题65处谐振动、弹簧、物理摆与勘误复算；
 - **历史基线说明：** 第一篇1—233题及第六篇重点回归基线847项已获前期CI验收；最新累计统计请见下条，不要把基线误当全部项目检查数。
 - **代码静态物理回归断言累计1803处：** 历史1344处 + 第二篇62—257题新增368处 + 第三篇1—53题新增91处；个别测试循环执行多次。1803不是不同习题数，也不能代替原书全部1878题的独立专家终审。详见 [质检记录](quality-check.md)。
 - 这些门禁只能验证结构与已选的回归结果，不能代替全书逐题独立物理学二校。
