@@ -5,6 +5,9 @@
 
 ## 真实进度（2026-11-22）
 
+- **2026-11-22 第四篇全覆盖自动质检程序续建：** 承接已检的 IV.1—50，新增四套独立物理/数值与源码一致性检查，逐段对应 IV.51—93（43题）、IV.94—149（56题）、IV.150—188（39题）、IV.189—224（36题），合计新增 **174个原书题号的源码覆盖**；连同既有 IV.1—50，第四篇 **224题均配置分段自动检查入口**。新增内容重点锁定物理摆、机械/电学阻尼共振、RLC 相量与初值、声波迟滞多普勒、声强积分、Maxwell方程、Poynting能流与偶极辐射。四套脚本已接入 GitHub Actions，但**运行通过与 PDF 回传须以对应最新工作流实际结果为准**；不宣称已完成逐题原版图像或专家二校。对应文件 `oscillations_mechanical_051_093_regression.py`、`oscillations_electric_094_149_regression.py`、`waves_elastic_150_188_regression.py`、`waves_electromagnetic_189_224_regression.py`，详细见 `quality-check.md`。**旧“2353项静态断言”口径为本轮扩展前的已记录基线，不应无依据累加。**
+
+
 - **本轮新增：44题——第六篇6.6节核反应267—290题24道（本节完成），6.7节基本粒子291—310题20道（第六篇终题）。原书六篇所有题号至此已录入。**
 - **累计：1878题——第一篇力学388题、第二篇热学257题、第三篇电动力学407题、第四篇振动与波动224题、第五篇光学292题、第六篇原子与核物理310题；六篇原书独立编号均完整覆盖。**
 - **后续质检阶段：** 第六篇1—213题建立分章节数值复算回归，单独修订第14、130、138、195、196题的物理适用条件、线系歧义或图示；保持原书题数不变。
@@ -270,6 +273,10 @@
     python3 electro_induction_regression.py
     python3 electro_charged_regression.py
     python3 oscillations_mechanical_regression.py
+    python3 oscillations_mechanical_051_093_regression.py
+    python3 oscillations_electric_094_149_regression.py
+    python3 waves_elastic_150_188_regression.py
+    python3 waves_electromagnetic_189_224_regression.py
     bash build.sh
 
 - `check_sources.py`：验证原书六篇独立编号1,878题及164份章节来源；
@@ -304,6 +311,10 @@
 - electro_induction_regression.py：第三篇288—371题90处磁感应、RL与场变换复算；
 - electro_charged_regression.py：第三篇372—407题53处带电粒子和加速器复算；
 - oscillations_mechanical_regression.py：第四篇1—50题65处谐振动、弹簧、物理摆与勘误复算；
+- oscillations_mechanical_051_093_regression.py：第四篇51—93题43个完整源码块及机械振动、阻尼和受迫共振独立约束；
+- oscillations_electric_094_149_regression.py：第四篇94—149题56个完整源码块及LC/RLC初值、相量、能量、频率与阻尼模型复核；
+- waves_elastic_150_188_regression.py：第四篇150—188题39个完整源码块及声波传播、驻波、多普勒迟滞、声强和几何能流独立约束；
+- waves_electromagnetic_189_224_regression.py：第四篇189—224题36个完整源码块及位移电流、Maxwell/Poynting守恒、辐射和汤姆孙截面复核；
 - **历史基线说明：** 第一篇1—233题及第六篇重点回归基线847项已获前期CI验收；最新累计统计请见下条，不要把基线误当全部项目检查数。
 - **代码静态物理回归断言累计1803处：** 历史1344处 + 第二篇62—257题新增368处 + 第三篇1—53题新增91处；个别测试循环执行多次。1803不是不同习题数，也不能代替原书全部1878题的独立专家终审。详见 [质检记录](quality-check.md)。
 - 这些门禁只能验证结构与已选的回归结果，不能代替全书逐题独立物理学二校。
