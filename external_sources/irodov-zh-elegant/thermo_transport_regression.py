@@ -115,7 +115,7 @@ eq(233,"diatomic path heat capacity for constant total event rate /R",
    5/2+1/2,3)
 V,S,T,M=.01,1e-6,300.,.028
 tau=4*V/(S*meanv(T,M))
-ck(234,"effusion thin-hole decay time s",tau,88.0,.04)
+ck(234,"effusion thin-hole decay time s",tau,84.0,.04)
 eq(234,"gas molecules decay e-fold at t=tau",exp(-tau/tau),1/exp(1))
 eq(234,"gas molecule loss derivative consistency",
    -(S*meanv(T,M)/(4*V)),-1/tau)
@@ -181,7 +181,7 @@ eq(245,"molecular disk shear proportional absolute pressure",
 # long ideal isothermal pipe, local Poiseuille Q(x) not constant, m-dot is.
 a=.001;L=1.;p1,p2=2e5,1e5;eta=1.8e-5;M=.028;T=300.
 mdot=pi*a**4*M*(p1*p1-p2*p2)/(16*eta*R*T*L)
-ck(246,"compressible isothermal Poiseuille mass flow kg/s",mdot,3.675e-6,.06)
+ck(246,"compressible isothermal Poiseuille mass flow kg/s",mdot,3.675e-3,.06)
 eq(246,"pressure endpoints exchanged flip signed flow",
    (p2*p2-p1*p1)/(p1*p1-p2*p2),-1)
 eq(246,"zero pressure drop zero isothermal mass flow",0,0)
@@ -192,7 +192,7 @@ ck(247,"two-piece rod joint temperature K",Tstar,385.714)
 eq(247,"left and right conducted heat flux equal",
    k1*(T1-Tstar)/L1,k2*(Tstar-T2)/L2)
 keq=(L1+L2)/(L1/k1+L2/k2)
-ck(248,"series rod effective thermal conductivity W/mK",keq,1.53846)
+ck(248,"series rod effective thermal conductivity W/mK",keq,1.428571)
 eq(248,"thermal resistances add for uniform cross-section",
    (L1+L2)/keq,L1/k1+L2/k2)
 T1,T2,L,A=400.,300.,2.,2.
