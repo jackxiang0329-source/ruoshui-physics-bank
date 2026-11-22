@@ -345,3 +345,373 @@
 \]
 该相等关系只适用于题设\emph{均匀地球、
 无阻力}模型，真实地球密度分布非均匀。
+
+
+\paragraph{习题 6.15}
+(1) 水平振动木板
+\(x=A\cos\omega t\)，
+最大加速度大小 \(A\omega^2\)。
+物体不相对木板滑动须有
+\(mA\omega^2\le\mu_smg\)，
+所以
+\[
+ \boxed{A_{\max}=\frac{\mu_sg}{(2\pi f)^2}
+ =\frac{0.50(9.80)}{(4\pi)^2}
+ \approx3.10\times10^{-2}\,\mathrm m}.
+\]
+(2) 竖直简谐振动过程中
+木板对物体的法向力
+\(N=m(g+\ddot y)\)，其中向上为正。
+当木板向下加速度最大时
+\(\ddot y_{\min}=-A\omega^2\)，
+保持接触要求
+\(N_{\min}=m(g-A\omega^2)\ge0\)。
+故
+\[
+ \boxed{f_{\max}=\frac1{2\pi}
+ \sqrt{\frac gA}
+ =\frac{1}{2\pi}\sqrt{\frac{9.8}{0.050}}
+ \approx2.23\,\mathrm{Hz}}.
+\]
+这里第（1）问用\emph{静摩擦系数}，
+第（2）问用单边法向约束，不把法向力允许为负。
+
+\paragraph{习题 6.16}
+木板质量为 \(m\)，两反向转动滚轴
+分别位于
+\(x=\pm l/2\)，轴间距
+\(l=0.20\,\mathrm m\)，
+动摩擦系数
+\(\mu_k=0.5\)。
+设木板质心从两轴中点向右偏移 \(x\)，
+左、右法向支持力为 \(N_L,N_R\)。
+竖直力平衡与绕质心力矩平衡
+\[
+ N_L+N_R=mg,\qquad
+ N_L(l/2+x)=N_R(l/2-x).
+\]
+从而
+\[
+ N_L=mg\left(\frac12-\frac{x}{l}\right),\quad
+ N_R=mg\left(\frac12+\frac{x}{l}\right).
+\]
+按滚轴转向，左接触摩擦向右、
+右接触摩擦向左，净力
+\(F_x=\mu_k(N_L-N_R)
+ =-(2\mu_kmg/l)x\)。
+故
+\[
+ \boxed{\ddot x+\frac{2\mu_kg}{l}x=0},\qquad
+ \boxed{T=2\pi\sqrt{\frac{l}{2\mu_kg}}
+ \approx0.898\,\mathrm s}.
+\]
+此线性结果要求木板始终架在两轴上，
+\(|x|<l/2\)，接触无脱离，滚轴保持题定转向。
+木板受到滚轴间的动摩擦，不代表振动必然有额外速度阻尼。
+
+\paragraph{习题 6.17}
+U形管内水银总体积为 \(V=m/\rho\)，
+管截面积 \(S\)，水银柱在管内的总长度
+\[
+ L=\frac{m}{\rho S}.
+\]
+两自由液面相对平衡位置一个上升 \(x\)、
+另一个下降 \(x\)，液面高差 \(2x\)；
+重力导致压差
+\(\Delta p=2\rho gx\)，
+恢复力 \(F=-2\rho g Sx\)。
+因水银整体质量为 \(m=\rho SL\)，
+\[
+ \boxed{\ddot x+\frac{2g}{L}x=0},\quad
+ \boxed{T=2\pi\sqrt{\frac{L}{2g}}
+ =2\pi\sqrt{\frac{m}{2\rho Sg}}}.
+\]
+代入
+\(m=0.121\,\mathrm{kg}\)，
+\(\rho=13.6\,\mathrm{g/cm^3}=13600\,\mathrm{kg/m^3}\)，
+\(S=0.30\,\mathrm{cm^2}=3.00\times10^{-5}\,\mathrm{m^2}\)，
+\[
+ \boxed{L\approx0.2966\,\mathrm m,\quad
+ T\approx0.773\,\mathrm s}.
+\]
+忽略液体黏性及弯管截面积变化。
+
+\paragraph{习题 6.18}
+径向坐标 \(r\)、极角 \(\theta\) 下，
+角动量守恒
+\(L=mr^2\dot\theta\)。
+所以角向动能
+\(\tfrac12mr^2\dot\theta^2=L^2/(2mr^2)\)，
+得
+\[
+ \boxed{E=\frac12m\dot r^2+
+ \frac{L^2}{2mr^2}-\frac{GM_Sm}{r}}.
+\]
+圆轨道 \(r=r_0\) 要求有效势能的一阶导数为零：
+\[
+ -\frac{L^2}{mr_0^3}
+ +\frac{GM_Sm}{r_0^2}=0
+ \Longrightarrow
+ L^2=GM_Sm^2r_0.
+\]
+对 \(r=r_0+x\)（\(|x|\ll r_0\)）
+作二阶泰勒展开：
+\[
+ \boxed{E=\frac12m\dot x^2+
+ \left(\frac{3L^2}{2mr_0^4}
+ -\frac{GM_Sm}{r_0^3}\right)x^2
+ -\frac{GM_Sm}{2r_0}+O(x^3)}.
+\]
+代入圆轨道角动量关系，
+二次项系数为
+\(GM_Sm/(2r_0^3)\)，
+因此径向扰动满足
+\[
+ \boxed{m\ddot x+
+ \frac{GM_Sm}{r_0^3}x=0},\quad
+ \boxed{k_{\rm eff}=\frac{GM_Sm}{r_0^3}}.
+\]
+径向振动周期
+\[
+ \boxed{T_r=2\pi\sqrt{\frac{r_0^3}{GM_S}}}.
+\]
+这与开普勒圆轨道公转周期相同；
+小偏心率时轨迹为封闭的近圆椭圆，
+而非一般阻尼螺旋轨道。
+以上是牛顿 \(1/r\) 引力势的结果，
+若有其他扰动势则两个周期可能分开。
+
+\paragraph{习题 6.19}
+刚体质量 \(m\)，固定水平转轴至质心
+距离 \(b\)，关于轴的转动惯量 \(I\)。
+偏角 \(\theta\) 时，重力矩
+\(\tau=-mgb\sin\theta\)，
+转动定律
+\(I\ddot\theta=-mgb\sin\theta\)。
+小角度 \(\sin\theta\simeq\theta\)，
+因此
+\[
+ \boxed{\ddot\theta+\frac{mgb}{I}\theta=0},\quad
+ \boxed{\omega=\sqrt{\frac{mgb}{I}}},\quad
+ \boxed{T=2\pi\sqrt{\frac{I}{mgb}}}.
+\]
+这是任意形状刚体的物理摆公式；
+幅角较大时周期依赖振幅，不能用线性式。
+
+\paragraph{习题 6.20}
+薄圆环质量 \(m\)、半径 \(R\)，
+通过圆环边缘的钉子为水平摆轴，
+质心到轴距离为 \(b=R\)。
+圆环对自身中心的垂直板面轴
+转动惯量 \(I_C=mR^2\)。
+由平行轴定理
+\(I_P=I_C+mR^2=2mR^2\)。
+代入上一题物理摆公式，
+\[
+ \boxed{T=2\pi\sqrt{\frac{I_P}{mgR}}
+ =2\pi\sqrt{\frac{2R}{g}}}.
+\]
+忽略钉子与环的接触摩擦，
+摆动须为小角度且钉子位置固定。
+
+\paragraph{习题 6.21}
+令 \(K_e=e^2/(4\pi\varepsilon_0)\)，
+离子势能
+\(U(r)=-K_e/r+B/r^9\)。
+在平衡间距
+\(r_0=1.3\times10^{-10}\,\mathrm m\)
+处 \(U'(r_0)=0\)，故
+\[
+ \frac{K_e}{r_0^2}-\frac{9B}{r_0^{10}}=0
+ \Longrightarrow
+ \boxed{B=\frac{K_e r_0^8}{9}}.
+\]
+二阶导数
+\(U''(r)=-2K_e/r^3+90B/r^{11}\)，
+于 \(r=r_0\) 得
+\[
+ \boxed{k=U''(r_0)=\frac{8K_e}{r_0^3}}.
+\]
+氯离子按题设视作固定，
+振动质量近似为质子质量 \(m_p\)，
+于是
+\[
+ \boxed{f=\frac1{2\pi}\sqrt{\frac{k}{m_p}}
+ =\frac1{2\pi}
+ \sqrt{\frac{8e^2}
+ {4\pi\varepsilon_0m_pr_0^3}}
+ \approx1.13\times10^{14}\,\mathrm{Hz}}.
+\]
+按原题所用「基态 \(n=1\)」编号，
+若采用最低能级
+\(E_{\rm vib}=\frac12\hbar\omega\)，
+再按经典谐振子的
+\(\frac12kA^2=E_{\rm vib}\)，
+\[
+ \boxed{A=\sqrt{\frac{\hbar\omega}{k}}
+ =\sqrt{\frac{\hbar}{m_p\omega}}
+ \approx9.44\times10^{-12}\,\mathrm m}.
+\]
+必须注意「\(n=1\) 表示基态」的编号约定
+与现代谐振子通常 \(n=0\) 表示基态不同；
+若所采用式(6.30)对能级编号不同，
+需要相应改写量子因子。
+该经典模型未计实际分子约化质量与非谐性。
+
+\paragraph{习题 6.22}
+欠阻尼小振幅时
+\(A(t)=A_0e^{-\beta t}\)。
+题给 \(A(100)/A_0=4/5\)，
+故
+\[
+ \boxed{\beta=\frac1{100}
+ \ln\frac54\approx2.2314\times10^{-3}\,\mathrm{s^{-1}}}.
+\]
+从 \(4^\circ\) 再降至 \(2^\circ\)
+所需额外时间
+\[
+ \boxed{\Delta t=\frac{\ln(4/2)}{\beta}
+ \approx310.6\,\mathrm s}.
+\]
+小角度单摆固有角频率
+\(\omega_0=\sqrt{g/l}\approx3.1305\,\mathrm{rad/s}\)，
+品质因数在弱阻尼下
+\[
+ \boxed{Q\simeq\frac{\omega_0}{2\beta}
+ \approx702}.
+\]
+本题的「阻尼系数」写为
+指数振幅常数 \(\beta\)，
+若课程定义方程为
+\(m\ddot x+b\dot x+kx=0\)，
+则 \(b/m=2\beta\)，
+不能混淆这两个符号。
+
+\paragraph{习题 6.23}
+对于带线性黏滞阻尼的受迫振子
+\[
+ m\ddot x+b\dot x+kx=F_0\cos\Omega t,
+\]
+稳态位移振幅
+\[
+ A(\Omega)=\frac{F_0}
+ {\sqrt{(k-m\Omega^2)^2+b^2\Omega^2}}.
+\]
+速度振幅 \(v_m=\Omega A\)，
+重写为
+\[
+ v_m(\Omega)=\frac{F_0}
+ {\sqrt{(k/\Omega-m\Omega)^2+b^2}}.
+\]
+由于对 \(\Omega>0\)
+分母的平方只多一个非负项
+\((k/\Omega-m\Omega)^2\)，
+最小值在
+\(k/\Omega=m\Omega\)，即
+\[
+ \boxed{\Omega=\sqrt{k/m}=\omega_0}.
+\]
+此时 \(v_m=F_0/b\) 达最大；
+\emph{位移}幅峰值在有阻尼时
+通常不恰好位于 \(\omega_0\)，
+应与速度共振区分。
+
+\paragraph{习题 6.24}
+同频沿同线合振动可用复相量：
+\[
+ \mathcal A=0.04e^{i\pi/6}
+ +0.03e^{-i\pi/6}
+ =0.07\cos(\pi/6)+i\,0.01\sin(\pi/6).
+\]
+故实部
+\(X=0.06062\,\mathrm m\)，
+虚部 \(Y=0.00500\,\mathrm m\)，
+幅角与振幅
+\[
+ \boxed{A=\sqrt{X^2+Y^2}
+ \approx0.06083\,\mathrm m},\qquad
+ \boxed{\varphi=\operatorname{atan2}(Y,X)
+ \approx0.0823\,\mathrm{rad}}.
+\]
+合振动
+\[
+ \boxed{x(t)=0.06083\cos(2t+0.0823)\ \mathrm m}.
+\]
+直接对余弦、正弦系数分别合并也得到此式。
+
+\paragraph{习题 6.25}
+三振动的复相量之和
+\[
+ \begin{aligned}
+ \mathcal A
+ &=0.08\left(e^{i\pi/6}+e^{i\pi/2}
+ +e^{i5\pi/6}\right)\\
+ &=0.08\,i(1/2+1+1/2)=0.16i.
+ \end{aligned}
+\]
+因此
+\[
+ \boxed{\omega=314\,\mathrm{rad/s},\
+ A=0.160\,\mathrm m,\ \varphi_0=\pi/2},\qquad
+ \boxed{x(t)=0.160\cos(314t+\pi/2)\ \mathrm m}.
+\]
+起始 \(x=0\)，速度向负位移方向。
+首次到达题给\emph{正位移}
+\(x=A/\sqrt2\) 时，
+需 \(-\sin(314t)=1/\sqrt2\)，
+最小正解
+\(314t=5\pi/4\)，
+所以
+\[
+ \boxed{t_{\min}=\frac{5\pi}{4(314)}
+ \approx1.25\times10^{-2}\,\mathrm s}.
+\]
+如果改问首次到达
+\(x=-A/\sqrt2\)，时间不同，
+不能忽略题面正号。
+
+\paragraph{习题 6.26}
+令 \(\alpha=20\pi t\)，
+则
+\(x=0.06\cos\alpha\)，
+\(y=0.04\cos(\alpha+\pi/2)
+ =-0.04\sin\alpha\)。
+平方相加消去 \(\alpha\)：
+\[
+ \boxed{\frac{x^2}{0.06^2}
+ +\frac{y^2}{0.04^2}=1}.
+\]
+故椭圆长半轴
+\(a=0.06\,\mathrm m\) 沿 \(x\)，
+短半轴 \(b=0.04\,\mathrm m\) 沿 \(y\)。
+绕行周期
+\[
+ \boxed{T=\frac{2\pi}{20\pi}=0.100\,\mathrm s}.
+\]
+在 \(t=0\) 处质点位于右端
+\((a,0)\)，而
+\(\dot y(0)=-0.04(20\pi)<0\)，
+故先朝下运动，
+从 \(+z\) 方向看为
+\(\boxed{\text{顺时针（右旋）}}\)。
+
+\paragraph{习题 6.27}
+原书PDF物理页212的图6.27显示闭合的李萨如曲线，
+顶端和底端各有两处相异的 \(y\) 极值接触点，
+左右侧各有三个 \(x\) 极值接触点
+（交叉点不能当作切点计数）。
+因此一个闭合周期内，
+水平方向振动数与垂直方向振动数之比
+\[
+ \boxed{f_x:f_y=3:2}.
+\]
+已知 \(f_x=2.70\times10^4\,\mathrm{Hz}\)，
+所以
+\[
+ \boxed{f_y=\frac23 f_x
+ =1.80\times10^4\,\mathrm{Hz}}.
+\]
+\textbf{独立图示复核尚未完成：}
+此数值依赖扫描图6.27的正确极值切点计数；
+若后续高分辨率矢量描摹显示不同接触点，
+须重新核对频率比，不能只依据此段答案定稿。
