@@ -1,6 +1,6 @@
 # 每 30 分钟自动更新大学物理开源题源
 
-**实施方式**：GitHub Actions 工作流 [auto-import-oer.yml](../.github/workflows/auto-import-oer.yml)。
+**实施方式**：GitHub Actions 工作流 [auto-import-oer.yml](../../.github/workflows/auto-import-oer.yml)。
 定时触发：UTC 每小时第 7、37 分钟（相隔 30 分钟）；支持在 Actions 页面手动运行。
 GitHub 计划任务并非实时调度器，平台拥堵时可能延迟甚至跳过。
 
