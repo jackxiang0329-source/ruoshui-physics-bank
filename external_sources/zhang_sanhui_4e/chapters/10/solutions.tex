@@ -1,0 +1,363 @@
+% 张三慧第四版V1第10章《热力学第一定律》独立候选解。
+% 原书PDF371--375；功A为气体对外作正功，Q为吸入热正。
+% 图示路径须继续比对原书及配套辅导扫描；不得视作专家验收。
+\section*{第10章\quad 热力学第一定律：独立解析}
+
+\paragraph{习题 10.1}
+理想气体 \(pV=nRT\)；
+以 \(A\) 为基准点 \(T_A=300\,\mathrm K\)：
+\[
+ \boxed{T_B=300\frac{2(20)}{2(10)}
+ =600\,\mathrm K},\quad
+ \boxed{T_C=300\frac{1(40)}{2(10)}
+ =600\,\mathrm K},\quad
+ \boxed{T_D=300\frac{1(20)}{2(10)}
+ =300\,\mathrm K}.
+\]
+图中 \(BC\) 双曲线是等温线
+\(pV=40\,\mathrm{atm\,L}\)。
+若按 \(A\to B\to C\to D\) 连接，
+气体作功
+\[
+ A_{AB}=2\,\mathrm{atm}(20-10)\,\mathrm L
+ =20\,\mathrm{atm\,L},
+\]
+\[
+ A_{BC}=(40\,\mathrm{atm\,L})\ln(40/20)
+ =40\ln2\,\mathrm{atm\,L},
+\quad
+ A_{CD}=1\,\mathrm{atm}(20-40)\,\mathrm L
+ =-20\,\mathrm{atm\,L}.
+\]
+故
+\[
+ \boxed{A_{A\to D}=40(101.325)\ln2
+ \approx2.809\times10^3\,\mathrm J}.
+\]
+各状态 \((V,T)\) 为
+\((10,300),(20,600),(40,600),(20,300)\)，
+第一和第三段等压，第二段等温。
+\textbf{图10.22原箭头审核：}
+图上部分箭头可能表示反向行程；
+上述数值明确是指定
+\(A\to B\to C\to D\) 的路径，
+若按箭头要求逆路径必须改变功符号。
+
+\paragraph{习题 10.2}
+由第一定律约定
+\(\Delta U=Q-A\)。
+\(a\to b\) 沿 \(acb\)：
+\[
+ \boxed{U_b-U_a=560-356=204\,\mathrm J}.
+\]
+换沿 \(adb\) 时
+\[
+ \boxed{Q_{adb}=\Delta U+220
+ =424\,\mathrm J}.
+\]
+沿 \(b\to a\)，
+\(\Delta U=-204\,\mathrm J\)，
+外界对系统作功 \(+282\,\mathrm J\)
+即气体对外功 \(A=-282\,\mathrm J\)，
+于是
+\[
+ \boxed{Q_{ba}=\Delta U+A
+ =-204-282=-486\,\mathrm J}.
+\]
+系统\emph{向外放出} \(486\,\mathrm J\) 热量。
+状态函数 \(\Delta U\) 不随路径变化。
+
+\paragraph{习题 10.3}
+\(64\,\mathrm g\) 氧气
+\(n=64/32=2\,\mathrm{mol}\)。
+常温双原子气体
+\(C_{V,m}=5R/2,C_{p,m}=7R/2\)；
+温度差 \(\Delta T=50\,\mathrm K\)。
+两过程均有
+\[
+ \boxed{\Delta U=nC_{V,m}\Delta T
+ \approx2079\,\mathrm J}.
+\]
+定容过程 \(A_V=0\)，
+\(\boxed{Q_V=\Delta U\approx2079\,\mathrm J}\)。
+定压过程
+\[
+ \boxed{A_p=nR\Delta T\approx831\,\mathrm J},
+ \qquad
+ \boxed{Q_p=nC_{p,m}\Delta T\approx2910\,\mathrm J}.
+\]
+这是同一始末温度的气体，
+定容与定压的\emph{内能变化}相同。
+
+\paragraph{习题 10.4}
+氮气 \(n=10/28\,\mathrm{mol}\)，
+等压吸热
+\(Q=nC_{p,m}(T_2-300)\)。
+\[
+ \boxed{T_2=300+\frac{1000}
+ {(10/28)(7R/2)}
+ \approx396.2\,\mathrm K}.
+\]
+若材料显著激发振动自由度，
+需要修改常温双原子热容模型。
+
+\paragraph{习题 10.5}
+等压双原子氢气
+\(Q_p=n(7R/2)\Delta T\)，
+故
+\[
+ \boxed{n=\frac{6.0\times10^4}{(7R/2)50}
+ \approx41.2\,\mathrm{mol}}.
+\]
+定压体积功
+\[
+ \boxed{A=nR\Delta T=\frac27Q_p
+ \approx1.71\times10^4\,\mathrm J}.
+\]
+内能变化
+\[
+ \boxed{\Delta U=n(5R/2)\Delta T
+ =\frac57Q_p\approx4.29\times10^4\,\mathrm J}.
+\]
+定容升温相同50K，吸热
+\(\boxed{Q_V=\Delta U\approx4.29\times10^4\,\mathrm J}\)。
+压强数值不影响这种用摩尔定压热容反算气量。
+
+\paragraph{习题 10.6}
+记始末为下标 \(1,2\)，
+\(A=\int p\,dV,\ \Delta U=nC_{V,m}(T_2-T_1)\)，
+\(Q=\Delta U+A\)。
+\[
+\begin{array}{c|c|c|c}
+\text{过程}&A\ (\text{对外功})&Q\ (\text{吸热})&
+\Delta U\\\hline
+V=\mathrm{const}&0&nC_V\Delta T&nC_V\Delta T\\
+T=\mathrm{const}&nRT\ln(V_2/V_1)&A&0\\
+Q=0\ \text{可逆绝热}&nC_V(T_1-T_2)&0&
+nC_V(T_2-T_1)\\
+p=\mathrm{const}&p(V_2-V_1)=nR\Delta T&
+nC_p\Delta T&nC_V\Delta T
+\end{array}
+\]
+其中 \(C_V=C_{V,m},C_p=C_{p,m}\)。
+对可逆绝热还可写
+\(A=(p_1V_1-p_2V_2)/(\gamma-1)\)。
+\emph{绝热不可逆过程}不能无条件套
+\(pV^\gamma=\mathrm{const}\)。
+
+\paragraph{习题 10.7}
+氧气 \(n=1\)，
+\(T_1=300\,\mathrm K,V_1=.010\,\mathrm{m^3}\)，
+\(V_2=.030\,\mathrm{m^3}\)。
+准静态绝热满足
+\(TV^{\gamma-1}=\mathrm{const}\)，
+故
+\[
+ \boxed{T_2=300(1/3)^{0.4}
+ \approx193.3\,\mathrm K}.
+\]
+初压
+\(p_1=nRT_1/V_1\approx2.494\times10^5\,\mathrm{Pa}\)，
+末压
+\[
+ \boxed{p_2=p_1(1/3)^{1.4}
+ \approx5.36\times10^4\,\mathrm{Pa}}.
+\]
+对外功与内能变化
+\[
+ \boxed{A=nC_V(T_1-T_2)
+ \approx2.22\times10^3\,\mathrm J},\quad
+ \boxed{\Delta U=-A\approx-2.22\times10^3\,\mathrm J}.
+\]
+
+\paragraph{习题 10.8}
+初态
+\(p_1=2\,\mathrm{atm}\)，
+\(V_1=40\,\mathrm L\)，\(n=3\)，
+\(T_1=p_1V_1/(nR)\approx325.0\,\mathrm K\)。
+先可逆绝热压缩到
+\(V_2=20\,\mathrm L\)，
+\[
+ \boxed{p_{\max}=2\cdot2^{1.4}\,\mathrm{atm}
+ \approx5.278\,\mathrm{atm}},
+\]
+\[
+ \boxed{T_{\max}=T_1\,2^{0.4}
+ \approx428.8\,\mathrm K}.
+\]
+压缩阶段
+\(Q_{12}=0\)，
+\(A_{12}=nC_V(T_1-T_2)
+ \approx-6.475\,\mathrm{kJ}\)。
+第二段在 \(T_2\) 等温从20L扩至40L，
+\[
+ \boxed{Q_{23}=A_{23}=nRT_2\ln2
+ \approx7.414\,\mathrm{kJ}}.
+\]
+全程
+\[
+ \boxed{Q_{\rm net}\approx+7.414\,\mathrm{kJ}},
+\quad
+ \boxed{A_{\rm net}\approx+0.939\,\mathrm{kJ}},
+\]
+\[
+ \boxed{\Delta U\approx+6.475\,\mathrm{kJ}}.
+\]
+在 \(p\)-\(V\) 图中先沿斜率较陡的
+绝热线向左上移动，
+再沿高温等温线向右下返回原体积；
+最后压强高于初始压强。
+
+\paragraph{习题 10.9}
+\textbf{原图10.24几何：
+气缸初总体积30L，气体占20L，
+其余10L为真空。}
+自由扩散时由20L充至30L，
+绝热且无外界功，故
+\(T_{\rm mid}=T_1\)。
+氮气 \(n=35/28=1.25\,\mathrm{mol}\)，
+\[
+ T_1=\frac{p_1V_1}{nR}
+ =\frac{(2\times101325)(.020)}{1.25R}
+ \approx390.0\,\mathrm K.
+\]
+自由扩散后
+\(p_{\rm mid}=p_1(20/30)
+ \approx1.333\,\mathrm{atm}\)。
+随后准静态绝热从
+\(V_{\rm mid}=30\,\mathrm L\)
+膨胀至50L，
+\[
+ \boxed{T_f=T_1(30/50)^{.4}
+ \approx317.9\,\mathrm K},
+\]
+\[
+ \boxed{p_f=p_{\rm mid}(30/50)^{1.4}
+ \approx6.61\times10^4\,\mathrm{Pa}}.
+\]
+第一阶段 \(A=Q=\Delta U=0\)，
+第二阶段
+\[
+ \boxed{A_{\rm all}=nC_V(T_1-T_f)
+ \approx1.87\times10^3\,\mathrm J},\quad
+ \boxed{\Delta U_{\rm all}=-A_{\rm all}}.
+\]
+如果把自由扩散误当作可逆绝热，
+会给错误中间温度与末压。
+
+\paragraph{习题 10.10}
+理想气体声速
+\(u=\sqrt{\gamma RT/M}\)。
+标准态 \(T=273.15\,\mathrm K\)，
+氧气 \(M=.032\,\mathrm{kg/mol}\)，
+声速 \(u=317.2\,\mathrm{m/s}\)，
+\[
+ \boxed{\gamma=\frac{Mu^2}{RT}
+ \approx1.418}.
+\]
+其接近双原子理想气体理论值
+\(\gamma=7/5=1.4\)，
+实验值差异含测量条件和热容温度依赖。
+
+\paragraph{习题 10.11}
+以一小块空气作绝热气团，
+令大气满足静力平衡
+\(dp/dh=-\rho g\)，
+理想气体 \(\rho=Mp/(RT)\)；
+可逆绝热关系
+\[
+ \frac{T}{T_0}
+ =\left(\frac p{p_0}\right)^{(\gamma-1)/\gamma},
+\]
+且 \(C_{p,m}=\gamma R/(\gamma-1)\)。
+用 \(dp=(C_{p,m}p/(RT))\,dT\)
+与上述静力平衡得
+\[
+ C_{p,m}\frac{dT}{dh}=-Mg,
+\quad
+ T=T_0-\frac{Mgh}{C_{p,m}}.
+\]
+代回绝热状态方程，
+\[
+ \boxed{p=p_0\left(
+ 1-\frac{Mgh}{C_{p,m}T_0}
+ \right)^{\gamma/(\gamma-1)}}.
+\]
+有效范围限定括号内为正，
+且假设气团局部沿干绝热线、
+大气静力平衡；有潜热时不适用同一温度递减率。
+
+\paragraph{习题 10.12}
+炮膛初高压燃气体积
+\(V_0=2.00\,\mathrm{m^3}\)，
+初压 \(p_0=2.7\,\mathrm{atm}\)。
+炮筒截面积 \(S=\pi(.80/2)^2\)，
+长度4m；到出口时总气体体积
+\[
+ V_f=V_0+4S
+ \approx4.0106\,\mathrm{m^3}.
+\]
+气体绝热膨胀
+\(pV^\gamma=\mathrm{const}\)，
+\[
+ p_f=p_0(V_0/V_f)^{1.4}
+ \approx1.019\,\mathrm{atm}
+\]
+与题给出口1atm近似吻合。
+对外功
+\[
+ \boxed{A=\frac{p_0V_0-p_fV_f}{\gamma-1}
+ \approx3.32\times10^5\,\mathrm J}.
+\]
+若其中75%转成
+质量 \(m=70\,\mathrm{kg}\)
+表演者平动动能，
+\[
+ \boxed{v=\sqrt{\frac{2(0.75)A}{m}}
+ \approx84.4\,\mathrm{m/s}}.
+\]
+\textbf{源模型限制：}出口常压与绝热公式末压
+略有舍入差异，且炮膛尾气的自身动能、
+噪声冲击及筒内摩擦不能用这个简化式刻画。
+
+\paragraph{习题 10.13}
+稳定流动节流，忽略外部轴功、
+热交换与上下游宏观流速/高度差：
+单位时间进流做流动功 \(p_1\dot V_1\)，
+出流流动功 \(p_2\dot V_2\)。
+第一定律的控制体形式
+\[
+ E_1+p_1V_1=E_2+p_2V_2.
+\]
+定义焓
+\(H=E+pV\)，于是
+\[
+ \boxed{H_1=H_2}.
+\]
+理想气体若定比热则
+\(H=nC_{p,m}T\)，节流温度不变；
+实际气体存在焦耳—汤姆孙效应。
+
+\paragraph{习题 10.14}
+按题目给出的\emph{两次从同一初态单独加热}
+理解，等量电功输入热量 \(Q\)。
+定容实验：
+\[
+ Q=nC_V(T_1-T_0)
+ =\frac{C_V}{R}(p_1-p_0)V_0.
+\]
+等压 \(p=p_0\) 实验：
+\[
+ Q=nC_p(T_2-T_0)
+ =\frac{C_p}{R}p_0(V_1-V_0).
+\]
+令两式相等并求 \(C_p/C_V\)，
+\[
+ \boxed{\gamma=\frac{C_p}{C_V}
+ =\frac{(p_1-p_0)V_0}{p_0(V_1-V_0)}}.
+\]
+若误理解为第二次加热\emph{接续}
+在第一实验终态 \(p_1,T_1\) 后，
+分母将出现 \(p_1\)，
+与原题待证公式不符；
+故须明确两次是从同初始态比较。
