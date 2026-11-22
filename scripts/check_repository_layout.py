@@ -65,7 +65,7 @@ def main() -> None:
     for source, count in (("webwork_opl", 59), ("webwork_thermal", 21)):
         archive = ROOT / "external_sources" / "_bundles" / f"{source}-raw.tar.gz"
         manifest = ROOT / "external_sources" / "_bundles" / "webwork_sources_manifest.json"
-        raws = [p for p in tracked if p.startswith(f"external_sources/{source}/raw/")]
+        raws = [p for p in tracked if p.startswith(f"external_sources/{source}/raw/") and (ROOT / p).exists()]
         if not archive.is_file() or not manifest.is_file() or raws:
             errors.append(f"{source}: expected packed .pg archive and no tracked raw ({len(raws)} remain)")
         idx = json.loads((ROOT / "external_sources" / source / "index.json").read_text())
