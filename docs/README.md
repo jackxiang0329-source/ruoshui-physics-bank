@@ -13,7 +13,7 @@
 
 ## 如何继续录入
 
-1. 正式高难综合题：在 `bank/<ID>/{meta.json,question.tex,solution.tex}` 中维护，运行 `python3 scripts/build.py --check`。
+1. 正式高难综合题：在 `bank/<ID>/{meta.json,question.tex,solution.tex}` 中维护，先运行 `python3 scripts/build.py` 生成两册 TeX，再执行 `python3 scripts/build.py --check`。
 2. 教材译解：维持独立教材工程，未审的张三慧草稿仅在其 Draft PR 分支，不自动合并。
 3. 待审外部原文：由 `external_sources/<source_id>/index.json` 管理元数据，逐题原始字节按需从 `external_sources/_bundles/` 恢复；正式题库不自动吸收。
 4. 所有文件命名按 [仓库命名约定](policies/repository_naming.md)，由 CI 阻止格式回退。

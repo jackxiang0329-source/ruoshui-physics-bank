@@ -8,7 +8,7 @@
 | 我要查看 | GitHub 路径 | 内容与状态 |
 |---|---|---|
 | **正式高难综合题** | [`bank/`](bank/) | **452 道**，每道含 `meta.json`、`question.tex`、`solution.tex` 三份权威源 |
-| 题目与解析的合订 LaTeX | [题目](tex/questions.tex) / [解答](tex/solutions.tex) | 从 `bank/` 构建；数学公式统一按 LaTeX 排版 |
+| 题目与解析的合订 LaTeX | [按需生成说明](tex/README.md) | `python3 scripts/build.py` 在工作区生成两本 TeX，PDF 由 GitHub Actions 编译并作为工件提供；不提交重复的生成型 TeX |
 | 查询题号、模块、质量信息 | [CSV 题目索引](data/index.csv) / [JSON 目录](data/problems.json) | 自动派生数据，不是新的独立题源 |
 | **《普通物理学习题》中文整理** | [Irodov ElegantBook 专区](external_sources/irodov-zh-elegant/) | **原书 1,878 题**，分篇章节、中文推导、勘误与独立回归 |
 | 《普通物理学习题》合订 PDF | [直接查看 `main.pdf`](external_sources/irodov-zh-elegant/main.pdf) | 已编译的仓库内成品 |
@@ -41,6 +41,8 @@ ruoshui-physics-bank/
 ```
 
 ## 维护原则
+
+**第四轮生成型 TeX 精简：** `tex/questions.tex`、`tex/solutions.tex` 改为按需构建并忽略 Git 跟踪（均由 `bank/` 中正式题源生成），**不删除任何原始 LaTeX 题解**。PDF 仍通过 CI 编译产出；开发者先运行 `python3 scripts/build.py` 再运行 `--check`。
 
 **唯一权威源：** 正式高难综合题只修改 `bank/题号/{meta.json,question.tex,solution.tex}`；`data/problems.json`、`data/index.csv`、`tex/*.tex` 属于派生合订或索引，不应另行复制成第二套题库。《普通物理学习题》保留独立的 ElegantBook 章节和回归系统；未通过版权、答案和物理审核的外部候选不直接进入正式题库。
 
