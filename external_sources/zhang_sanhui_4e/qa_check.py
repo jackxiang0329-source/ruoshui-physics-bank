@@ -203,7 +203,88 @@ def check_numeric_spotmodels() -> int:
     require(close(.5*(1.4e-13*1.6e6/(1.5e-10))*(.016/20)**2,
                   .0004778666666666667),"12.34 inkjet deflection")
 
-    return 46
+
+    # Chapter 4 independently computed mechanical-energy references.
+    require(close(((1200-1000)*g+(1200+1000)*1.5)*.75,
+                  3945.0), "4.1 motor energy during first 1s")
+    require(close(.5*132000*(942/3.6)**2,
+                  4518983333.333334), "4.3 aircraft kinetic energy")
+    require(close(50*1.5**2, 112.5), "4.4 belt motor power")
+    require(close(math.sqrt((1-.2)*g*1), 2.8), "4.5 pulley work balance")
+    m,k_s,L=72,60,20
+    x=(m*g+math.sqrt((m*g)**2+2*k_s*m*g*L))/k_s
+    require(close(x, 36.43179766453997), "4.10 maximum bungee stretch")
+    x_crit=m*g/k_s
+    require(close(math.sqrt(2*g*(L+x_crit)-(k_s/m)*x_crit**2),
+                  22.52216685845303), "4.10 maximum speed")
+    require(close(.3*g/math.sqrt(8.9*.5),1.3936936616315332),
+            "4.12 released spring mass")
+    GM=3.986004e14
+    r1,r2=6.37e6+1.4e6,6.37e6+3.6e7
+    a_transfer=(r1+r2)/2
+    require(close(GM*500*(1/(2*r1)-1/(2*a_transfer)),
+                  8850106343.165777), "4.18 Hohmann work first burn")
+    require(close(math.sqrt(GM*(2/r1-1/a_transfer))-math.sqrt(GM/r1),
+                  2148.905731636786), "4.18 Hohmann first delta-v")
+    require(close(math.sqrt(G*1e30*(1/40000-1/1e10)),
+                  40848112.878075525),"4.19 neutron star contact speed")
+    asteroid_mass=(4/3)*math.pi*(1e4)**3*6000
+    require(close(GM*asteroid_mass/6.37e6,
+                  1.5726720104966442e24),"4.20 asteroid gravity energy")
+    sun_mass=1.989e30
+    c_light=299792458.0
+    require(close(2*G*sun_mass/c_light**2,
+                  2954.126555055405),"4.21 solar black hole radius")
+    require(close(2*sun_mass*(2e10/1e67)**(1/3),
+                  501196593648.1817),"4.22 micro black hole mass")
+    require(close(3600*math.pi*.2**2*math.sqrt(2*g*5),
+                  4478.4260016636335),"4.27 ideal siphon volume")
+    require(close(60*math.pi*.004**2*
+                  math.sqrt(2*20*101325/1000)*1000,
+                  192.00361589622767),"4.28 nozzle L per min, absolute pressure")
+
+    # Chapter 13 independent electric-potential and energy references.
+    ke=1/(4*math.pi*eps)
+    require(close(ke*(1e-8/.2+1.5e-8/.3),
+                  898.7551792261171),"13.1 potential at 20 cm")
+    require(close(ke*2.5e-8/.5,
+                  449.37758961305855),"13.1 potential at 50 cm")
+    require(close(ke*2e-7*math.log(4),
+                  2491.8784739769253),"13.6 axial rod potential")
+    require(close(2*ke*2e-7*math.asinh(1.5),
+                  4295.198517942593),"13.6 bisector rod potential")
+    require(close(1e3/(6.35e-6*math.log(.01/6.35e-6)),
+                  21391301.68446818),"13.8 thin wire field")
+    require(close(ke*1.6e-12/.0004,
+                  35.95020716904468),"13.12 droplet potential")
+    require(close(ke*79*electron_q/7e-15,
+                  16251028.46850897),"13.13 Au nucleus surface potential")
+    electron_mass=9.1093837e-31
+    require(close(math.sqrt(2*electron_q*2.5e4/electron_mass),
+                  93776863.112971),"13.19 classical electron beam speed")
+    require(close((-1e-5*.05+3e-5*.07)/(2*eps),
+                  90352.72538984154),"13.21 infinite planes potential")
+    require(close(math.sqrt(5)/3,
+                  .7453559924999299),"13.23 relativistic beta")
+    require(close(-3.5*ke*electron_q/(.20e-10),
+                  -251.99379587244925),"13.24 He electronic energy eV")
+    require(close(12*ke*electron_q/(3e-15)/1e6,
+                  5.759858191370268),"13.25 alpha cluster MeV")
+    require(close(ke*electron_q**2/(2*electron_mass*c_light**2),
+                  1.408970163334473e-15),"13.27 shell classical radius")
+    initial_U=3*ke*(92*electron_q)**2/(5*7.4e-15)
+    require(close(initial_U*(1-2**(-2/3))/(electron_q*1e6),
+                  365.674807426954),"13.29 symmetric Pd fission energy")
+    require(close(math.sqrt(3*ke*92*electron_q**2/(3.17e-27*7.4e-15)),
+                  52100290.74000226),"13.31 tau particle nuclear-center speed")
+    require(close(eps*100**2/2*(4*math.pi*(6.37e6)**2*1e4)/3.6e6,
+                  62705.40282625374),"13.33 atmospheric field kWh")
+    hbar=1.054571817e-34
+    require(close(-electron_mass*electron_q**4/
+                  (2*(4*math.pi*eps)**2*hbar**2)/electron_q,
+                  -13.605693137318392),"13.34 Bohr energy in eV")
+
+    return 78
 
 
 def main() -> None:
