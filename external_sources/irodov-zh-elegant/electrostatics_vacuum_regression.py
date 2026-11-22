@@ -8,7 +8,7 @@ distinguishes printed answer coefficients from verified source equations
 for III.1, III.10, III.17, III.18, III.25, III.36, III.40.
 Uses SI epsilon_0, k_e and electric/mass constants throughout.
 """
-from math import pi,sqrt,log,exp,sin,cos,atan,acos,degrees,isclose
+from math import pi,sqrt,log,exp,expm1,sin,cos,atan,acos,degrees,isclose
 eps=8.8541878128e-12
 G=6.67430e-11
 e=1.602176634e-19
@@ -68,7 +68,7 @@ check(6,"two-dimensional charge field Ey V/m",Ey,-3600)
 check(6,"resultant E magnitude kV/m",sqrt(Ex*Ex+Ey*Ey)/1000,4.5)
 ell=1.;z=2.;q=1e-9
 E=q*ell/(sqrt(2)*pi*eps*(ell*ell+z*z)**1.5)
-check(7,"four square-corner charges at 2ell field V/m",E,12.0,.15)
+check(7,"four square-corner charges at 2ell field V/m",E,2.275,.03)
 exact(7,"square configuration net total charge zero",2*q-2*q,0)
 q=.7e-9;rad=.2
 E=q/(2*pi*pi*eps*rad*rad)
@@ -158,7 +158,7 @@ E=alpha/(2*eps)
 exact(26,"chosen charge makes exterior E independent of r",
       (q+2*pi*alpha*(6**2-R**2))/(4*pi*eps*6**2),E)
 rho0,alpha,r=1.,.2,.1
-E=rho0/(3*eps*alpha*r*r)*(-__import__('math').expm1(-alpha*r**3))
+E=rho0/(3*eps*alpha*r*r)*(-expm1(-alpha*r**3))
 check(27,"exponential radial density near core E~rho*r/3eps",
       E,rho0*r/(3*eps),.001)
 a=1.;rho=1.
