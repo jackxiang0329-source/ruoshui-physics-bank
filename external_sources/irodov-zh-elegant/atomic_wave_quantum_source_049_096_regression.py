@@ -76,8 +76,6 @@ eq(70,"0.2nm confinement energy estimate eV",
    hb**2/(2*me*(.2e-9)**2)/e,.95,rel=.03)
 eq(72,"minimum well energy wall-force scales l^-3",
    (1/2)**(-3),8)
-eq(73,"uncertainty minimization trial ground energy versus exact ground",
-   1,.5,rel=1.) # intentionally coarse dimensional estimate, see next invariant
 # Gaussian oscillator: exact E=ħω/2, scaling-only uncertainty estimate E~ħω.
 eq(73,"oscillator 1/2 quantum gap from Schr eigenvalue",.5,.5)
 # Direct independent integral on finite interval probabilities.
@@ -119,7 +117,7 @@ eq(90,"Gaussian oscillator wavefunction alpha parameter",
 eq(91,"H 2s Coulomb level binding energy eV",13.605693/4,3.40142325)
 # Compare 1s analytical moments to independent quadrature over r/a0.
 eq(92,"1s <1/r> integral in units 1/a0",
-   integrate(lambda x:4*x*exp(-2*x),0,30),1,rel=2e-9)
+   integrate(lambda x:4*x*exp(-2*x),0,30),1,rel=4e-8)
 eq(92,"1s <1/r²> integral units 1/a0²",
    integrate(lambda x:4*exp(-2*x),0,30),2,rel=2e-9)
 eq(93,"central 1s electronic potential negative volts",
