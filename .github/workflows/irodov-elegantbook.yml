@@ -74,6 +74,10 @@ jobs:
         run: python3 external_sources/irodov-zh-elegant/electro_current_regression.py
       - name: Independently recheck Part III magnetostatics and magnetic media
         run: python3 external_sources/irodov-zh-elegant/electro_magnetostatics_regression.py
+      - name: Independently recheck Part III Faraday induction and Maxwell equations
+        run: python3 external_sources/irodov-zh-elegant/electro_induction_regression.py
+      - name: Independently recheck Part III charged-particle cyclotron and betatron
+        run: python3 external_sources/irodov-zh-elegant/electro_charged_regression.py
       - uses: xu-cheng/latex-action@v4
         with:
           working_directory: external_sources/irodov-zh-elegant
