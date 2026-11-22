@@ -1,5 +1,21 @@
 # 底本核对与补充假设（持续更新）
 
+## 跨英文版本、扫描字面与物理主式的补充二校（2026-11-22）
+
+此次以另外可查的英文原题文本交叉核对，**不在当前会话宣称已重新打开用户上传的 Arihant 385页原始PDF图像**。以下是本仓库此前记录的扫描字面与外部版本的差异；各条件保持两支可逆推导，而不是悄悄替换原书。
+
+| 题号 | 标准公开英文版本与物理判据 | 此前记录的扫描版字面 | 本轮改动 |
+|---|---|---|---|
+| **II.162** | 外压为 $p_0/n$、泡径为 $\eta d$，双界面Young–Laplace压差 $8\alpha/d$，得到 $\alpha=p_0d(n-\eta^3)/[8n(\eta^2-1)]$，正常泡须满足 $1<\eta<n^{1/3}$。 | 把两倍数都写作$n$，会强迫 $\alpha=-p_0d/8<0$，普通肥皂水不可能。 | 中文题面分清 $n,\eta$；扫描版字面作为异常分支保留；以 Boyle 定律数值反代和极限回归。来源 https://sinhafoundation.org/physics/problems/2-162/ |
+| **V.139** | 光栅宽度 $10.0\,\mathrm{mm}$，由 $\sin\theta=\lambda^2/(\ell\delta\lambda)$ 得 $46.05^\circ$。 | 宽度 $10.0\,\mathrm m$ 则角度只有 $0.04125^\circ$。 | 主解按有一致物理答案的标准英文题面给出，10米分支另列；两者几何条件独立。来源 https://www.studiestoday.com/ie-irodov-solutions-chapter-29-diffraction-of-light-part-2 |
+| **V.140** | 光谱双线波长 $670.8\,\mathrm{nm}$，第4级可分辨；最高级7，最小线差 $7.36\,\mathrm{pm}$。 | 将波长误记为 $670.8\,\mathrm{mm}$，大于5μm周期，根本无非零传播级次。 | 以nm物理一致分支呈现计算、mm保留为扫描单位异常。来源同V.139 |
+| **V.142** | 正入射光栅两线焦平面距离，若用 $x=f\tan\theta$ 精确几何得到第一级 $6.055\,\mu\mathrm m$、第二级 $12.446\,\mu\mathrm m$。 | 常见书末近轴近似 $6\,\mu\mathrm m$、$12\,\mu\mathrm m$。 | 不把近轴值当精确恒等式；注明二级约3.7%偏差，不影响一/二级瑞利分辨判定。 |
+| **V.254** | Wien角频率谱 $\propto\omega^3e^{-a\omega/T}$，对应 $3T/a$ 与 $2\pi ca/(5T)$，是Planck高频极限。 | $\omega^2$ 则是另一模型，分别给 $2T/a$、$\pi ca/(2T)$；不可抄 $\omega^3$ 的书末答案。 | 原稿两版结果均保留，改为标准物理 $\omega^3$ 主式，补波长雅可比数值积分与峰值独立搜索。来源 https://sinhafoundation.org/physics/problems/5-254/ |
+
+上述各问题新增 `cross_edition_physics_regression.py`，并纳入GitHub Actions。五题的严检不等于全书逐题底本图像验收；尤其不同英文版次与历史OCR文本仍需分开标记。
+
+---
+
 底本：用户上传 Arihant 版 *Problems in General Physics*，PDF 共 385 页。
 原书印刷页与 PDF 实际页码不同（本记录所列 PDF 页码从封面起算）。
 以下为对底本**题面及书后答案图像**的直接核对，不等同于核实所有其他版次。
