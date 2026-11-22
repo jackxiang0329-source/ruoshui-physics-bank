@@ -139,8 +139,8 @@ for u in [u1,u2]:
     test(73,"charged-ring force extrema polynomial root",1-13*u*u+10*u**4,0)
 test(73,"force nontrivial sign zero at x/R=1/sqrt2",
      1-2*(1/sqrt(2))**2,0)
-test(73,"far-field force scales as minus x^-7",
-     (1e5**7)*((1e5)*(1-2*(1e5)**2)/(1+(1e5)**2)**4),-2,rtol=1e-9)
+test(73,"far-field induced force scales as minus x^-5 (ring monopole)",
+     (1e5**5)*((1e5)*(1-2*(1e5)**2)/(1+(1e5)**2)**4),-2,rtol=1e-9)
 eps=4.
 test(74,"polarized sphere center singular bound enclosed charge",
      -q*(eps-1)/eps,-.75*q)
