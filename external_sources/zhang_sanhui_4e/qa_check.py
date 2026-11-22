@@ -1420,7 +1420,7 @@ def main() -> None:
             "25.11 independently corrected eye curvature vs companion")
     require("576" in s25 and "578" in s25,
             "25.17 accurate area ratio not rounded companion result")
-    require("f_{\\rm eff}=3f_1=60" in s25 and "M=160" in s25,
+    require("f_{\\rm eff}=3f_1=60" in s25 and "角放大率160" in s25,
             "25.21 Cassegrain 60m EFL disagreement must remain marked")
 
     computed = check_numeric_spotmodels()
