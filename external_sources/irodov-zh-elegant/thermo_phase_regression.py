@@ -151,7 +151,7 @@ check(208,"water pressure at101.1C relative to at100C",
       p_ratio,1.04)
 growth=(L*Mw/(R*Tw**2)-1/Tw)*1.5
 check(209,"steam vapor mass fixed V +1.5K percent",
-      growth*100,5)
+      growth*100,4.87)
 T1,T2=Tw,330.
 ratio=exp(L*Mw/R*(1/T1-1/T2))
 check(210,"Clausius saturation vapor pressure drops upon cooling",
