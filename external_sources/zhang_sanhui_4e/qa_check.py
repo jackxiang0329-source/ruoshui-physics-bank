@@ -119,7 +119,7 @@ def check_numeric_spotmodels() -> int:
     drag = .5*.016*.062*math.pi*25**2*40**2
     require(close(drag, 1558.22995618), "2.26 airship drag")
     require(close(drag/.010, 155822.995618), "2.26 propulsion power")
-    return 21
+    return 22
 
 
 def main() -> None:
