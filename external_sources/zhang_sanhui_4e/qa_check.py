@@ -2095,6 +2095,106 @@ def check_companion_ch2_remaining_crosscheck() -> int:
 
 
 
+
+def check_companion_ch3_crosscheck() -> int:
+    """S scan ch3 problems3.1--3.24: 18 numeric values +6 analytical formulas."""
+    path=ROOT/"companion_crosscheck_ch03_01_24.json"
+    require(path.is_file(), "missing chapter3 S companion source audit")
+    d=json.loads(path.read_text(encoding="utf-8"))
+    rows=d["records"]
+    require(len(rows)==24 and d["summary"]["reviewed_distinct_existing_pairs"]==24,
+            "S scanned third chapter not all 24 problems audited")
+    require(d["summary"]["reviewed_numeric_source_answers"]==18
+            and d["summary"]["reviewed_symbolic_source_formulas"]==6,
+            "S ch3 formulas versus printed values mislabeled")
+    require(d["source"]["sha256"]==
+            "54126dd75edd65eb9ead0a9d7acb96a37bfb25674cf595c76b94f2fb30bce5a7",
+            "chapter3 original S scan fingerprint changed")
+    g=9.8
+    G=6.67e-11
+    pi=math.pi
+    m0=2.72e6
+    md=1290.
+    burnout=155.
+    mf=m0-md*burnout
+    vals={
+        "3.1":-2*.1/4,
+        "3.2":math.sqrt(2)*.05*20,
+        "3.3":150*(g+math.sqrt(2*g*5)/.3),
+        "3.4":120/60*.0079*735,
+        "3.5":1.29*22.5*2.62*38**2,
+        "3.6":3e3*10*math.sqrt(2),
+        "3.7":2*3*g+2*2**2,
+        "3.8":3*.8*2*g,
+        "3.9":math.hypot(9.22,5.33)*1e-21,
+        "3.10":7600-150/440*910,
+        "3.11":math.sqrt(2*.8*g*25),
+        "3.12":105+253*math.log(6090/6010),
+        "3.13":1-math.exp(-1),
+        "3.14":5.5e4*(burnout-mf/md*math.log(m0/mf))-.5*g*burnout**2,
+        "3.15":(75+3)*490-75*210,
+        "3.16":2*.0958*math.cos(math.radians(105/2))/18,
+        "3.17":4/(3*pi),
+        "3.18":pi/(4*(16-pi)),
+        "3.19":g*(2-5/7),
+        "3.20":8.75e10*5.46e4/908,
+        "3.21":2*pi*7.35e22*(3.82e8)**2/(27.3*86400),
+        "3.22":pi*(6378+205.5+6378+35835.7)*math.sqrt(
+            (6378+35835.7)/(6378+205.5))/10.2,
+        "3.23":2.,
+        "3.24":.75
+    }
+    require(len(vals)==24, "third chapter S source spotmodel size error")
+    own={"3.1","3.7","3.8","3.17","3.19","3.23"}
+    reg={x["canonical_id"]:x for x in json.loads(
+         REGISTER.read_text(encoding="utf-8"))["entries"]}
+    require(len(reg)==705, "new crosschecks cannot enlarge original formal count")
+    seen=set()
+    for row in rows:
+        n=row["source_problem_number"]
+        require(n in vals and n not in seen, f"S scanned ch3 original duplicates {n}")
+        seen.add(n)
+        cid=f"ZS4-03-{int(n.split('.')[1]):03d}"
+        require(row["canonical_id"]==cid and cid in reg,
+                f"S scanned ch3 original canonical mapping wrong {n}")
+        link=reg[cid].get("companion_numerical_source_audit",{})
+        require(link.get("audit_file")=="companion_crosscheck_ch03_01_24.json"
+            and link.get("scanned_companion_pdf_pages")==
+                 row["companion_pdf_physical_pages"]
+            and link.get("status")=="key_answer_value_crosschecked_not_full_proof_verified",
+            f"S ch3 source audit link broken {n}")
+        require(row["companion_pdf_physical_pages"] and
+                all(type(pg) is int and 1<=pg<=402
+                    for pg in row["companion_pdf_physical_pages"]),
+                f"missing S 402-page PDF original problem location {n}")
+        require(math.isclose(row["independent_computed_value"],vals[n],
+                             rel_tol=.006,abs_tol=1e-18),
+                f"original S ch3 model numeric failed {n}")
+        require(row["exam_ready"] is False and
+                row["academic_review"]=="pending_independent_verification",
+                f"ch3 S source check is not expert academic approval {n}")
+        if n in own:
+            require(row["companion_rounded_value"] is None and
+                row["crosscheck"]==
+                  "source_symbolic_formula_checked_with_independent_test_parameters",
+                f"S ch3 formula {n} incorrectly attributed reviewer sample to source")
+        else:
+            require(row["companion_rounded_value"] is not None,
+                    f"original S source numeric value absent at {n}")
+    require(set(vals)==seen, "S ch3 24 original source numbers not exhaustive")
+    flags={x["source_problem_number"]:x["discrepancy_note"] for x in rows}
+    require("FINITE_BATCH_VS_CONTINUOUS_EXHAUST" in flags["3.12"]
+            and "SOURCE_NUMERIC_DISAGREEMENT" in flags["3.14"]
+            and "COORDINATE_REFERENCE" in flags["3.18"],
+            "original source-model disagreements ch3 must be flagged")
+    sol=(ROOT/"chapters/03/solutions.tex").read_text(encoding="utf-8")
+    require("108.3455" in sol and "有限喷出质量" in sol,
+            "3.12 continuous-exhaust equation and one-shot distinction missing")
+    require("203.59" in sol and "172" in sol,
+            "3.14 original source reported172km vs exact-integral203.59km lost")
+    return len(rows)
+
+
 def main() -> None:
     raw = json.loads(REGISTER.read_text(encoding="utf-8"))
     require(raw.get("schema") == "zhang-sanhui-4e-exercise-intake/v1",
@@ -2438,6 +2538,7 @@ def main() -> None:
     checked_source_ch1 = check_companion_ch1_crosscheck()
     checked_source_ch2 = check_companion_ch2_crosscheck()
     checked_source_ch2_rest = check_companion_ch2_remaining_crosscheck()
+    checked_source_ch3 = check_companion_ch3_crosscheck()
     computed = check_numeric_spotmodels()
     print(f"PASS: {len(ids)} candidate exercises have unique IDs, "
           "paired TeX sections, source pages and no exam admission.")
@@ -2446,7 +2547,8 @@ def main() -> None:
     print(f"PASS: {checked_source_ch1} existing original chapter1 exercises S-companion source-value checked; two documented risks.")
     print(f"PASS: {checked_source_ch2} chapter2 S-companion original model/source spotchecks; 8 printed results and 3 symbolic cases.")
     print(f"PASS: {checked_source_ch2_rest} remaining chapter2 original source checks; all28 now covered.")
-    print(f"PASS: {computed+checked_source_ch1+checked_source_ch2+checked_source_ch2_rest} combined numerical/source-model spotchecks (663+26+11+17).")
+    print(f"PASS: {checked_source_ch3} third-chapter original S-source spotchecks; 18 actual numeric+6 symbolic.")
+    print(f"PASS: {computed+checked_source_ch1+checked_source_ch2+checked_source_ch2_rest+checked_source_ch3} numerical/source-model checks (663+26+11+17+24).")
     print("NOT VERIFIED: full source transcription accuracy, external expert "
           "review, source permissions and independent physical model sufficiency.")
 
