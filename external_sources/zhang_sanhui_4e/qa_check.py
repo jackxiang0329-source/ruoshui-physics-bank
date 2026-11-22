@@ -344,7 +344,87 @@ def check_numeric_spotmodels() -> int:
                   (1/(4*math.pi*eps))/8),
             "14.14 conducting sphere mutual-hemisphere force coefficient")
 
-    return 101
+
+    # Chapter 6 new independent oscillation spot computations.
+    require(close(.05*8*math.pi,1.25663706144),"6.1 v_max")
+    require(close(2*math.pi/(5*math.pi/6),2.4),"6.3 diagram-derived period")
+    require(close(2*math.pi/1.5,4.18879020479),"6.4 sine oscillator period")
+    require(close(math.sqrt(1.6/25),.252982212813),"6.8 total energy and amplitude")
+    require(close(math.sqrt(1000/.025)/(2*math.pi),31.8309886184),
+            "6.13 two-ball reduced-mass vibration frequency")
+    require(close(.5*g/(4*math.pi)**2,.0310296124905),
+            "6.15 maximum horizontal table amplitude")
+    require(close(math.sqrt(g/.05)/(2*math.pi),2.22816920329),
+            "6.15 vertical contact frequency threshold")
+    require(close(2*math.pi*math.sqrt(.2/(2*.5*g)),.897597901026),
+            "6.16 board on counterrotating rollers")
+    require(close(2*math.pi*math.sqrt((.121/(13600*.3e-4))/(2*g)),
+                  .772884212718),"6.17 mercury U tube")
+    HCL_r0=1.3e-10
+    kp=8*k*electron_q**2/HCL_r0**3
+    mp=1.67262192369e-27
+    omega_HCL=math.sqrt(kp/mp)
+    require(close(omega_HCL/(2*math.pi),1.1279303975519956e14),
+            "6.21 HCl small-oscillation frequency")
+    require(close(math.sqrt(1.054571817e-34/(mp*omega_HCL)),
+                  9.432093630413656e-12),
+            "6.21 HCl ground vibration amplitude model")
+    beta=math.log(5/4)/100
+    require(close(beta,.002231435513142098),
+            "6.22 exponential damping coefficient")
+    require(close(math.log(2)/beta,310.628371951),
+            "6.22 4deg to 2deg damping elapsed time")
+    require(close(math.sqrt(g)/(2*beta),701.453201328),
+            "6.22 pendulum quality factor")
+    require(close(math.sqrt((.07*math.cos(math.pi/6))**2+
+                   (.01*math.sin(math.pi/6))**2),
+                  .060827625303),"6.24 two-phasor resultant amplitude")
+    require(close(5*math.pi/(4*314),.0125063401815),
+            "6.25 first POSITIVE displaced crossing")
+    require(close(2.70e4*2/3,1.80e4),"6.27 Lissajous 3:2 hypothesis")
+
+    # Chapter 15 new independent dielectric, capacitor and bound-charge checks.
+    require(close(electron_q*.128e-9,2.05078609152e-29),
+            "15.1 fully ionic HCl moment")
+    require(close((.128e-9-3.4e-30/electron_q)/18,
+                  5.93215939705e-12),"15.1 centroid of ALL eighteen electrons")
+    U152=-6e-8*k*((1/6)*(1/.02-1/.04)+(1/3)*(1/.04-1/.06))
+    require(close(U152,-3744.81324677549),
+            "15.2 TWO spherical dielectric layers voltage")
+    require(close(2*math.pi*eps*.01*3e6,1.66897508317e-6),
+            "15.5 maximum air line charge for 1cm radius")
+    require(close(.52e-3/(eps*6),9788211.91723),
+            "15.6 cell membrane field with eps_r=6")
+    require(close(.6e-3-eps*50e-6/(eps*50e-6/.6e-3+.25e-12),
+                  .000151845071837),
+            "15.8 keyboard capacitor pressed distance")
+    require(close(3e-6*5e-5/(eps*2.3),7.36571130895),
+            "15.9 polyethylene film area")
+    require(close(eps*3e6/5e4,5.31251268768e-10),
+            "15.10 max plate capacitance per square metre")
+    require(close(4*math.pi*eps*.18,2.00277009981e-11),
+            "15.11 Van de Graaff isolated sphere capacitance")
+    require(close(2*math.pi*eps*.1/math.log(1000),
+                  8.05362965617e-13),"15.12 coaxial counter capacitance")
+    require(close(eps*.02*(1/.0005+1/(2*.00025)),
+                  7.08335025024e-10),
+            "15.14 floating three-conductor metal box capacitance")
+    require(close(1.5/.7,2.142857142857143),
+            "15.16 dielectric insertion voltage ratio")
+    require(close(200+800/12,266.666666667),
+            "15.18 series 12uF with parallel pair breakdown limit")
+    require(close(100e-12*(100/30-1),
+                  2.33333333333e-10),"15.23 second parallel capacitor")
+    require(close(math.pi*eps*5000**2/math.log(.07/.05),
+                  .0020667568047755),"15.25 coaxial cylinder initial force")
+    require(close(3/math.log(4),2.16404256133),
+            "15.28 dielectric graded profile effective capacitance coefficient")
+    require(close(2e-6/(1+3),5.0e-7),
+            "15.29 top half of half-immersed charged metal sphere")
+    require(close(-13.6/(15.8**2),-.0544784489665),
+            "15.30 hydrogenic dielectric-shielded Bohr binding")
+
+    return 136
 
 
 def main() -> None:
@@ -429,6 +509,22 @@ def main() -> None:
     require("E_{\\rm belt}" in ch14s
             and "\\frac{|\\sigma_{\\rm belt}|}{2\\varepsilon_0}" in ch14s,
             "14.8 insulating sheet field factor 1/2 omitted")
+
+    # Newly discovered source-scan transcription regression guards.
+    q6=(ROOT/"chapters/06/questions.tex").read_text(encoding="utf-8")
+    s6=(ROOT/"chapters/06/solutions.tex").read_text(encoding="utf-8")
+    q15=(ROOT/"chapters/15/questions.tex").read_text(encoding="utf-8")
+    s15=(ROOT/"chapters/15/solutions.tex").read_text(encoding="utf-8")
+    require("零点且上升" in q6 and "两均匀长木板" not in q6,
+            "6.3 zero-crossing or 6.16 one-board source wording regressed")
+    require("310.6" in s6 and "1.80\\times10^4" in s6,
+            "6.22 damping and 6.27 Lissajous analyses omitted")
+    require("15.30" in q15 and "15.30" in s15,
+            "chapter15 missing end exercise")
+    require("-3.75\\times10^3" in s15,
+            "15.2 layered dielectric voltage source regression")
+    require("2.33333333333e-10" not in q15,
+            "chapter15 questions accidentally contaminated by QA numerics")
 
     computed = check_numeric_spotmodels()
     print(f"PASS: {len(ids)} candidate exercises have unique IDs, "
