@@ -30,7 +30,7 @@ def zero(n,why,val,scale=1):
 r_ee=ke*e**2/(G*me**2)
 r_pp=ke*e**2/(G*mp**2)
 check(1,"electron Coulomb over Newton attraction ratio",r_ee,4.2e42)
-check(1,"proton Coulomb over Newton attraction ratio",r_pp,1.2e36)
+check(1,"proton Coulomb over Newton attraction ratio",r_pp,1.23555e36)
 check(1,"required equal force q/m Coulomb/kg",sqrt(4*pi*eps*G),8.6e-11)
 exact(1,"Coulomb/gravity ratio distance independent",r_pp,r_pp)
 m=.001;Mcu=.0635;Z=29
