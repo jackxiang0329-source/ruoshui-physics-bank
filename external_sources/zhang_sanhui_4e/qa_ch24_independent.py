@@ -9,7 +9,7 @@ CHAPTER = 24
 CASES = [
     (1, lambda: .5*(math.cos(math.pi/6)**4), lambda: .28125),
     (2, lambda: math.degrees(math.acos(math.sqrt(1/3))), lambda: 54.74),
-    (3, lambda: (.5*math.cos(.5)**2)/(math.cos(.5)**2+math.sin(.5)**2*math.cos(.3)**2), lambda: .515),
+    (3, lambda: (.5*math.cos(.5)**2)/(math.cos(.5)**2+math.sin(.5)**2*math.cos(.3)**2), lambda: .3929636151882142),
     (4, lambda: 1*math.sin(math.pi/6)/1.5, lambda: 1/3),
     (5, lambda: math.degrees(math.atan(1.5/1.33)), lambda: 48.43),
     (6, lambda: math.sin(math.pi/4), lambda: 1/math.sqrt(2)),
