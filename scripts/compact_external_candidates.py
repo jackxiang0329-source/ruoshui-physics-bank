@@ -170,7 +170,7 @@ def apply() -> None:
         "schema": 1,
         "scope": "unreviewed-external-candidates-only",
         "not_included": ["bank/", "external_sources/irodov-zh-elegant/",
-                         "tex/", "data/", "localized/"],
+                         "tex/", "data/", "data/localized/"],
         "sources": records,
     }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
