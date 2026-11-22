@@ -1,0 +1,34 @@
+% V2原书思考题13.1--13.11，PDF物理页60；图13.15同轴线待精确重绘。
+\section*{第13章\quad 电势：思考题解析}
+\paragraph{思考题 13.1}
+(1) 若指\emph{同一个}非零常矢量场，电势一般随位置变化，如 \(E_x=E_0\Rightarrow\varphi=-E_0x+C\)，故不必相等。(2)(3) 电势零值取决于参考基准，电场为电势梯度，二者零值不等价。(4) 强电场意味着单位距离电势变化\emph{较快}，不决定电势本身的高低或符号。关键公式为 \(\boxed{\boldsymbol E=-\nabla\varphi}\)。
+
+\paragraph{思考题 13.2}
+若以无穷远电势零为基准，孤立点电荷 \(q\) 的电势 \(\varphi(r)=q/(4\pi\epsilon_0r)\)。正电荷处 \(r>0\) 电势为正且随r增大趋向0；负电荷电势为负且随r增大从负值\emph{上升}到0。电场总沿电势下降方向，但对负电荷其场向内。
+
+\paragraph{思考题 13.3}
+偶极子两电荷 \(+q,-q\) 位置关于垂直平分面对称，该面上任一点到两电荷距离相等 \(r_+=r_-\)，其电势为 \(\varphi=\frac{q}{4\pi\epsilon_0r_+}-\frac{q}{4\pi\epsilon_0r_-}=0\)（无穷远零）。该面虽 \(\varphi=0\)，但电场往往沿该面法向非零，不能把电势零面错当无场面。
+
+\paragraph{思考题 13.4}
+静电场无旋 \(\nabla\times\boldsymbol E=0\)，闭合环路的电场做功 \(\oint\boldsymbol E\cdot d\boldsymbol l=0\)。若某场线在所有普通点沿 \(\boldsymbol E\) 方向行走而封闭，则沿全回路 \(\boldsymbol E\cdot d\boldsymbol l=E\,dl>0\)，与闭路积分为零矛盾。因此非零静电场线不能形成闭合环路。时变磁场产生的感应电场可以有闭合线，不属于静电。
+
+\paragraph{思考题 13.5}
+若开区域内 \(\varphi=C\)，其各方向梯度均零，故 \(\boldsymbol E=-\nabla\varphi=0\)。若只在二维曲面上 \(\varphi=C\)，仅能推出沿曲面的\emph{切向分量} \(E_t=0\)，法向分量可不为零；如带电导体表面的静电场。
+
+\paragraph{思考题 13.6}
+沿常规电场线，从A到B沿 \(\boldsymbol E\ne0\) 方向，电势差 \(\varphi_B-\varphi_A=-\int_A^B\boldsymbol E\cdot d\boldsymbol l<0\)，故若两点之间没有零场段或折返，两个不同点电势\emph{不相等}。在电场零或场线定义退化的特殊点，才需另行讨论；一条有效场线不会回头经过原点。
+
+\paragraph{思考题 13.7}
+静电势能是 \(\boxed{U=q\varphi}\)（相对于选定零点）。若 \(q>0\)，高电势对应高势能；若 \(q<0\)，高电势反而对应\emph{更低}电势能。因此不能把电子与正电荷的势能比较都按“电势越高势能越高”处理。
+
+\paragraph{思考题 13.8}
+取z向上，地表电场 \(\boldsymbol E\simeq-E_0\hat z\)，静电关系 \(E_z=-\partial\varphi/\partial z=-E_0\) 推出 \(\partial\varphi/\partial z=+E_0\)，故 \(\boxed{\varphi(z)-\varphi(0)\simeq E_0z>0}\)。这是给定向下电场的局部近似，不代表所有高度气象电场永远不变。
+
+\paragraph{思考题 13.9}
+单点的电场 \(\boldsymbol E(\boldsymbol r_0)\) 仅给出电势在该点的局部导数，不能确定 \(\varphi(\boldsymbol r_0)\)。需要参考电势和从参考点到目标点的一条路径上完整的场 \(\boldsymbol E(\boldsymbol r)\)，才能由 \(\boxed{\varphi(P)-\varphi(P_0)=-\int_{P_0}^P\boldsymbol E\cdot d\boldsymbol l}\) 得电势差。绝对电势零点仍可任选。
+
+\paragraph{思考题 13.10}
+电击主要取决于鸟身两处接触点间的\emph{电势差}和通过身体的电流。鸟仅以两脚停在同一根导线上、两脚距离很短且无接地接触时，两脚间电压差较小，所以通常安全，虽然整条线相对大地可能高达30kV。若同时触及另一根不同电位的线、接地塔架或发生空气电弧则非常危险；“处于高电势”本身不是安全充分条件。
+
+\paragraph{思考题 13.11}
+长同轴线的内部远离端口处场线近似从内导体径向指向外导体：\(\boldsymbol E(r)\approx U/[r\ln(b/a)]\,\hat r\)，等势面为同轴圆柱。开路端外导体终止使边界形状发生变化，电场线弯向空气与端口周边的\emph{边缘场}；它们仍从高电位导体起、终于低电位导体或外部环境，而不在开口处突然消失。原图13.15的细节依赖端口形状，须独立重绘。
