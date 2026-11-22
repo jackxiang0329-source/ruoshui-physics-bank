@@ -113,9 +113,9 @@ check(43,"V=a/T path net Q J if temperature rises 50K",Q,623.6)
 exact(43,"negative gas external work from decreasing volume",
       -R*dT,-R*dT)
 k=.5;gamma=1.4
-n=gamma/(1+k*(gamma-1))
+n=1-(gamma-1)/k
 exact(44,"work proportional internal change yields polytropic n",
-      (1-n)/(n*(gamma-1)),k)
+      (gamma-1)/(1-n),k)
 for n in [.5,1.2,1.5,2.]:
     Cv=R/(gamma-1)
     C=Cv+R/(1-n)
