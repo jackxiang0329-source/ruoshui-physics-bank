@@ -25,6 +25,10 @@ jobs:
         run: python3 external_sources/zhang_sanhui_4e/qa_ch06_independent.py
       - name: Validate 33 chapter-7 waves candidate models
         run: python3 external_sources/zhang_sanhui_4e/qa_ch07_independent.py
+      - name: Validate chapter 8 special relativity numerical models
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch08_independent.py
+      - name: Validate chapter 9 molecular thermodynamics numerical models
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch09_independent.py
   xelatex-candidate-proof:
     runs-on: ubuntu-latest
     needs: structural-and-math-spotchecks
