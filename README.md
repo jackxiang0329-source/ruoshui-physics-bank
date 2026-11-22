@@ -54,7 +54,7 @@ python3 scripts/compact_small_external_sources.py --restore ubc_opbp
 python3 scripts/build.py --check
 ```
 
-**第二轮与第三轮无损归档：** UBC 的 265 份与 IntroPhysics 的 53 份未审单题 Markdown 另打包为 2 个可逆归档；正式 452 题、Irodov、WeBWorK PG 程序原始字节也无损归档，张三慧 Draft PR 不变。当前活跃分支的精确文件数以 GitHub 文件树为准；二轮详情见 [归档索引](external_sources/_bundles/SECOND_ROUND.md)。
+**第二轮与第三轮无损归档：** UBC 的 265 份与 IntroPhysics 的 53 份未审单题 Markdown 另打包为 2 个可逆归档；正式 452 题、Irodov、WeBWorK PG 程序原始字节也无损归档，张三慧 Draft PR 不变。当前活跃分支的精确文件数以 GitHub 文件树为准；二轮详情见 [归档索引](external_sources/_bundles/compaction_round_02.md)。
 
 **质量声明：** 自动化测试与 PDF 编译只能证明相应结构、公式和计算模型的程序化检查通过；所有标记“待独立复核”的题目仍需专业人士独立审稿。外部来源的归档不会改变其版权、正确性或学术审核状态。
 
