@@ -2,7 +2,7 @@
 
 现已接入的可自动拉取来源包括 UBC Open Physics Bank 内逐题符合许可的 Markdown，以及 East Texas A&M University PHYS 2425 中无图片依赖的独立题干。
 
-每 30 分钟的 GitHub Actions 还会运行 scripts/discover_oer_sources.py，搜索公开 GitHub 教学/习题仓库，更新 catalog/discovered_repositories.json，记录发现时间、库名、许可证信号和复核状态。
+发现工具已合并为 `python3 scripts/discover_sources.py github`（GitHub 项目）与 `python3 scripts/discover_sources.py huggingface`（HF 数据集）；仅更新相应目录元数据，不自动将候选题判为合格。执行频率由实际工作流配置决定，不能假定每30分钟都有完整采集。
 
 **严禁将“GitHub 公开”误认为“版权许可开放”。** 新发现项目只存元数据，不自动复制、不自动标记可组卷。只有根据具体许可证、作者署名、来源权利、技术格式和去重检查完成审核后，才单独接入自动导入器。
 
