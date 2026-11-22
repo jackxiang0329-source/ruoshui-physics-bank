@@ -288,37 +288,63 @@ nC_p\Delta T&nC_V\Delta T
 大气静力平衡；有潜热时不适用同一温度递减率。
 
 \paragraph{习题 10.12}
-炮膛初高压燃气体积
-\(V_0=2.00\,\mathrm{m^3}\)，
-初压 \(p_0=2.7\,\mathrm{atm}\)。
-炮筒截面积 \(S=\pi(.80/2)^2\)，
-长度4m；到出口时总气体体积
+原题主教材PDF物理页372—373给出
+炮筒直径 \(d=.80\,\mathrm m\)、长
+\(L=4.0\,\mathrm m\)，
+初始燃气容积 \(V_1=2.0\,\mathrm{m^3}\)，
+初始\emph{绝对}压强
+\(p_1=2.7\,\mathrm{atm}\)，
+表演者质量 \(m=70\,\mathrm{kg}\)，
+绝热指数 \(\gamma=1.4\)。
+出口时燃气容积为
 \[
- V_f=V_0+4S
- \approx4.0106\,\mathrm{m^3}.
+ V_2=V_1+\pi(d/2)^2L
+ =2+\pi(.4)^2(4)
+ \approx4.01062\,\mathrm{m^3}.
 \]
-气体绝热膨胀
-\(pV^\gamma=\mathrm{const}\)，
+绝热关系给
 \[
- p_f=p_0(V_0/V_f)^{1.4}
- \approx1.019\,\mathrm{atm}
+ p_2=p_1(V_1/V_2)^\gamma
+ \approx1.0193\,\mathrm{atm}.
 \]
-与题给出口1atm近似吻合。
-对外功
+气体对活塞所作的\emph{总膨胀功}
 \[
- \boxed{A=\frac{p_0V_0-p_fV_f}{\gamma-1}
- \approx3.32\times10^5\,\mathrm J}.
+ A_g=\frac{p_1V_1-p_2V_2}{\gamma-1}
+ \approx3.3232\times10^5\,\mathrm J.
 \]
-若其中75%转成
-质量 \(m=70\,\mathrm{kg}\)
-表演者平动动能，
+\textbf{必须扣除大气压力作功。}
+主教材说明仅 \(75\%\) 的燃气推动功
+转为推动者前进的有效机械功，
+按配套辅导书采用的效率作用位置
+并在之后扣除大气压 \(p_0=1\,\mathrm{atm}\)
+对活塞的反功：
 \[
- \boxed{v=\sqrt{\frac{2(0.75)A}{m}}
- \approx84.4\,\mathrm{m/s}}.
+ K_{\rm exit}=0.75A_g-p_0(V_2-V_1)
+ \approx2.4924\times10^5-2.0373\times10^5
+ =4.5515\times10^4\,\mathrm J.
 \]
-\textbf{源模型限制：}出口常压与绝热公式末压
-略有舍入差异，且炮膛尾气的自身动能、
-噪声冲击及筒内摩擦不能用这个简化式刻画。
+因此按\emph{题面打印值}严格计算：
+\[
+ \boxed{v=\sqrt{2K_{\rm exit}/70}
+ \approx36.1\,\mathrm{m/s}}.
+\]
+\textbf{配套辅导书数据冲突：}
+S PDF物理页164第10.12题演算过程中
+实际使用 \(p_1=2.6\,\mathrm{atm}\)、
+\(p_2\approx.99\,\mathrm{atm}\)、
+\(m=75\,\mathrm{kg}\)，
+而主教材题面打印
+\(p_1=2.7\,\mathrm{atm},m=70\,\mathrm{kg}\)。
+辅导书由这一组不同的数值与粗舍入
+得到 \(K\simeq3.18\times10^4\,\mathrm J\)、
+\(v\approx29\,\mathrm{m/s}\)。
+两者差异不是相对论、热容模型造成，
+而是\emph{原题与配套书选用数字不一致}；
+本候选保留原题结果36.1m/s并明确报告
+辅导书29m/s，等待最终编辑审核。
+如改成把效率作用于扣除大气功\emph{之后}
+的净作功，还会得到另一个数；
+不能不声明效率约定。
 
 \paragraph{习题 10.13}
 稳定流动节流，忽略外部轴功、
