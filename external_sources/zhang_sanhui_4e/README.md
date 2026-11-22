@@ -13,7 +13,7 @@
 - S《大学物理学（第4版）学习辅导与习题解答》：402页，供题号关联与解答交叉核验，同一道题绝不重复计数。
 
 三本书 PDF 的文件名、SHA-256 与当前已录习题对应的源页码，统一见 [source_register.json](source_register.json)。
-新批次对辅导书的**精确页码映射尚未核实**，登记为 `pending_exact_page_verification`，不虚报交叉核验完成。
+本轮55道新题已按原编号定位配套辅导书的PDF物理页（第3章48–57页、第12章191–202页）；题解差异核对尚未全部通过独立专家审校。
 
 ## 唯一可编辑题稿结构
 
@@ -29,7 +29,7 @@
 不生成逐题冗余源文件。每条题号、原书PDF页、答案状态、原图依赖、复核状态记录于唯一的 `source_register.json`。
 
 - [PROGRESS.md](PROGRESS.md) — 完成量、原书题号、具体错误与下一轮接续。
-- [qa_check.py](qa_check.py) — 编号、配对、来源页合法性与45项数值抽检（不等于专家审核）。
+- [qa_check.py](qa_check.py) — 编号、配对、来源页合法性与46项数值抽检（包括第3.14题的独立数值积分）（不等于专家审核）。
 - [build_intake.tex](build_intake.tex) — 独立于正式高难题库的 XeLaTeX 候选校样合订入口。
 - [CI 工作流](../../.github/workflows/zhang-sanhui-4e-intake.yml) — GitHub Actions 上运行结构 QA、XeLaTeX 生成候选 PDF，具体通过情况需看运行日志。
 
