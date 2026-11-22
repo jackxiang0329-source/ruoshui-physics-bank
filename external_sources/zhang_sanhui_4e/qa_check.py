@@ -1145,7 +1145,62 @@ def check_numeric_spotmodels() -> int:
     require(close(1.22*590e-9/10,7.198e-8),
             "25.21 giant telescope Rayleigh resolution")
 
-    return 467
+    # Ch26 wave-particle original textbook independently computed numerical models.
+    hc=6.62607015e-34
+    cc=299792458.0
+    kb=1.380649e-23
+    SB=5.670374419e-8
+    qel=1.602176634e-19
+    me26=9.1093837e-31
+    mn26=1.6749275e-27
+    require(close(SB*(273.15-5)**4,293.172305169),
+            "26.1 ground -5C blackbody total emission not net")
+    peak=2.821439372
+    T26=hc*3.4e14/(peak*kb)
+    require(close(T26,5783.36951394),"26.2 frequency spectrum Sun blackbody T")
+    require(close(SB*T26**4,6.343595787e7),"26.2 Sun blackbody M0")
+    require(close((1000/SB)**.25-273.15,91.265688736),
+            "26.3 single hot water box blackbody Celsius")
+    power_sun=3.9e26
+    require(close((power_sun/(16*math.pi*SB*(1.5e11)**2))**.25,279.254464008),
+            "26.4 Earth distance equilibrium sphere vs disk")
+    require(close((power_sun/(16*math.pi*SB*(5.9e12)**2))**.25,44.526621917),
+            "26.4 Pluto equilibrium")
+    require(close(11*9.460730472e15*math.sqrt(1.7e-12/(SB*6600**4)),
+                  1.30812147816e7),"26.5 Procyon B source 11lightyears radius")
+    require(close(peak*kb*3/hc,1.76367772722e11),
+            "26.6 3K frequency-spectrum maximum")
+    require(close(4*math.pi*(6.371e6)**2*SB*3**4,2.34272779218e9),
+            "26.6 isotropic incoming Earth CMB power not net")
+    require(close(6.62607015e-34*cc/qel/200e-9-4.2,1.99920992166),
+            "26.11 aluminum 4.2eV work function source")
+    require(close(hc*cc/qel/4.2*1e9,295.20047246),
+            "26.11 photoelectric red-limit wavelength nm")
+    require(close(1e-15/(hc*cc/500e-9),2517.05828377),
+            "26.12 photon density from radiation energy density")
+    require(close(2.25*qel/(1/(4*math.pi)*math.pi*(1.3e-10)**2),
+                  85.323016),"26.13 classical light energy accumulation 85s")
+    require(close(5*math.sqrt(1-.5**2)/(1+.5),2.88675134595),
+            "26.14 photon proton rest-frame Doppler redshift")
+    require(close(600-600/1.2,100),"26.15 Compton 20% wavelength boost gives electron100keV")
+    require(close(4000*(2*4000/511000)/(1+2*4000/511000),
+                  61.6570327553),"26.16 max electron recoil with photon 4keV")
+    P26=50-math.sqrt(20*(20+2*511))
+    eps26=(581**2-P26**2-511**2)/(2*(581+P26))
+    require(close(eps26,69.3902653568),"26.18 moving electron inverse Compton photon keV")
+    require(close(581-eps26-511,.60973464323),
+            "26.18 electron final kinetic not initial 20keV")
+    require(close(hc*cc/(.2e-9)/qel,6199.20992166),
+            "26.19 photon energy same wavelength as electron")
+    require(close(math.hypot(hc*cc/(.2e-9),me26*cc*cc)/qel -
+                  me26*cc*cc/qel,37.601632818),
+            "26.19 electron kinetic same p but unequal energy")
+    require(close(hc/math.sqrt(3*mn26*kb*300)*1e9,.14524297194),
+            "26.20 3/2 kT neutron thermal wavelength nm")
+    require(close(hc*cc/math.sqrt(40e3*qel*(40e3*qel+2*me26*cc*cc))*1e9,
+                  .00601553854639),"26.21 40kV relativistic electron wavelength nm")
+
+    return 489
 
 
 def main() -> None:
@@ -1422,6 +1477,21 @@ def main() -> None:
             "25.17 accurate area ratio not rounded companion result")
     require("f_{\\rm eff}=3f_1=60" in s25 and "角放大率160" in s25,
             "25.21 Cassegrain 60m EFL disagreement must remain marked")
+
+    q26=(ROOT/"chapters/26/questions.tex").read_text(encoding="utf-8")
+    s26=(ROOT/"chapters/26/solutions.tex").read_text(encoding="utf-8")
+    require("26.22" in q26 and "26.22" in s26,
+            "ch26 final deBroglie group velocity proof missing")
+    require("频率谱" in q26 and "2.821439" in s26,
+            "26.2 Wien frequency peak instead of wavelength peak")
+    require("85.3" in s26 and "光电效应" in s26,
+            "26.13 classical accumulation vs immediate quantum electron")
+    require("69.39" in s26 and "逆康普顿" in s26,
+            "26.18 head-on moving electron energy conservation")
+    require("0.145" in s26 and "0.178" in s26,
+            "26.20 thermal neutron mean energy convention must be disclosed")
+    require("v_g=v" in s26 and "c^2/v" in s26,
+            "26.22 deBroglie group vs phase velocity distinction")
 
     computed = check_numeric_spotmodels()
     print(f"PASS: {len(ids)} candidate exercises have unique IDs, "
