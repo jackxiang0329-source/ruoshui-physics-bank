@@ -1200,7 +1200,132 @@ def check_numeric_spotmodels() -> int:
     require(close(hc*cc/math.sqrt(40e3*qel*(40e3*qel+2*me26*cc*cc))*1e9,
                   .00601553854639),"26.21 40kV relativistic electron wavelength nm")
 
-    return 489
+    # Ch27/28 original source scan: independent quantum mechanics and atomic model QC.
+    h28=6.62607015e-34
+    hb28=h28/(2*math.pi)
+    cc28=299792458.0
+    e28=1.602176634e-19
+    kb28=1.380649e-23
+    me28=9.1093837139e-31
+    a028=5.29177210903e-11
+    muB28=9.2740100783e-24
+    E27base=h28*h28/(8*1e-17*(1e-5)**2)
+    require(close(E27base*(101**2-100**2),1.10310824152e-38),
+            "27.1 cell particle levels 100/101 g->kg")
+    mO28=.032/6.02214076e23
+    E27oxy=h28*h28/(8*mO28*.1**2)
+    n27=math.sqrt(1.5*kb28*300/E27oxy)
+    require(close(E27oxy,1.032816092e-40),"27.2 oxygen lowest box E1")
+    require(close(n27,7.755975e9),"27.2 classical-energy n~7.76e9")
+    require(close(E27oxy*(2*n27+1),1.602099e-30),
+            "27.2 adjacent oxygen level spacing 1.6e-30J")
+    require(close(.25-1/(2*math.pi),.090845056908),
+            "27.4 quantum probability first quarter NOT 25percent")
+    require(close(1/3-1/(2*math.pi**2),.2826727415),
+            "27.5 n1 squared position expectation fraction")
+    require(close(math.pi**2*hb28**2/(1e-30*1e-27),1.097e-9,rel=1),
+            "27.7 dimensional wall-force proportional n^2/a^3")
+    require(close((2**2+2**2+1**2)/(1**2+1**2+1**2),3),
+            "27.9 cubic well excitation degeneracy energy ratio")
+    require(close(hb28*math.sqrt(1.13e3/1.67e-27)/e28,.5414355324),
+            "27.11 oscillator level spacing eV")
+    require(close(h28*cc28/(hb28*math.sqrt(1.13e3/1.67e-27))*1e9,2289.9162),
+            "27.11 H2 oscillator photon wavelength nm")
+    RH28=1.0967758e7
+    require(close(36/(5*RH28)*1e9,656.47,rel=.002),
+            "28.1 Balmer longest Halpha")
+    require(close(4/RH28*1e9,364.70,rel=.002),
+            "28.1 Balmer shortest continuum limit")
+    photon28=13.6*(1-1/25)
+    l28=h28*cc28/(photon28*e28)
+    require(close(l28*1e9,94.96,rel=.002),
+            "28.2 n5 to n1 photon wavelength")
+    require(close(h28/(1.6735575e-27*l28),4.18,rel=.003),
+            "28.2 photon recoil hydrogen atom")
+    rinfty28=me28*e28**4/(8*8.8541878128e-12**2*h28**3*cc28)
+    require(close(rinfty28,1.0973731534e7,rel=.00001),
+            "28.5 infinite-mass Rydberg constant")
+    require(close(2*a028*1e9,.10583544218),
+            "28.6 positronium reduced-mass radius doubled")
+    require(close(5.1*e28/h28,1.23317451346e15),
+            "28.6 positronium level2 to level1 frequency")
+    nEarth=5.97e24*math.sqrt(6.6743e-11*1.99e30*1.5e11)/hb28
+    require(2e74<nEarth<3e74,"28.7 gravitational Bohr Earth's huge quantum number")
+    require(1e-64<3e11/nEarth<2e-63,
+            "28.7 Earth next permitted Bohr radius imperceptibly small")
+    require(close(.5*((411.7/410.2-1)+(435.7/434.0-1))*cc28,1.136e6,rel=.02),
+            "28.8 Hdelta and Hgamma redshift averaged")
+    require(close(1/(2*math.pi*1e-8),1.59154943e7),
+            "28.9 natural linewidth Lorentz FWHM not HWHM")
+    sigma28=4.56e14/cc28*math.sqrt(kb28*300/1.6735575e-27)
+    require(close(sigma28,2.392908483e9),
+            "28.10 Doppler one-dimensional sigma frequency")
+    require(close(2*math.sqrt(2*math.log(2))*sigma28,5.63486886e9),
+            "28.10 Doppler Gaussian FWHM")
+    require(close(4/a028**3*math.factorial(2)/(2/a028)**3,1),
+            "28.11 hydrogen 1s radial probability integrates to1")
+    require(close(4/a028**3*math.factorial(3)/(2/a028)**4/a028,1.5),
+            "28.12 hydrogen mean radius 3a0/2")
+    require(close(24/(32*math.pi)*(4*math.pi/3),1),
+            "28.14 normalized 2p m0 electron wavefunction")
+    require(close(1/32,1/64+1/64),"28.14 2p density spherical sum")
+    require(close(math.degrees(math.acos(1/math.sqrt(2))),45),
+            "28.15 l1 angle45")
+    require(close(4.5e-5*e28/h28,1.08809515894e10),
+            "28.16 Lyman fine structure frequency NOT Balmer")
+    require(close(4.5e-5*e28/(2*muB28),.388709673),
+            "28.16 effective spin orbit B~.39T")
+    require(close(math.degrees(math.acos(1/math.sqrt(3))),54.7356),
+            "28.17 silver jhalf allowed angle")
+    require(close(muB28*1.5e3,1.3911015e-20),
+            "28.18 silver Stern Gerlach force")
+    require(close(muB28*(.04)**2*1.5e3/(3*kb28*2500),.000214948421),
+            "28.18 silver two traces split 0.215mm at magnet exit")
+    require(close(2*1.41e-26*1.6/h28,6.80946609e7),
+            "28.19 NMR resonance 68.1MHz")
+    require(sum(2*(2*l+1) for l in range(4))==2*4**2,
+            "28.20 n4 electron shell capacity 32")
+    require(close(.041e-9*30000*e28/cc28,6.573471771e-34),
+            "28.22 Planck inferred from Xray rounded short edge")
+    require(close(h28*cc28/(.1e-9*e28),12398.41984),
+            "28.23 Xray minimum 12.4kV")
+    require(close(h28*cc28/(20000*e28)*1e9,.0619921,rel=.002),
+            "28.24 Xray first of four collisions")
+    require(close(h28*cc28/(5000*e28)*1e9,.2479684,rel=.002),
+            "28.24 Xray last two equal 5keV")
+    require(close(h28*cc28/(3.16e-9*e28),392.3550583),
+            "28.25 Xray N element Kalpha")
+    require(close(h28*cc28/(8028*e28*2*math.sin(math.radians(74.1)))*1e9,.08029171),
+            "28.26 Bragg Kalpha d~0.080nm not NaCl cell parameter")
+    require(close(h28*cc28/(10.6e-6*e28),.1169662),
+            "28.27 CO2 photon energy eV")
+    require(close(math.exp(-h28*cc28/(10.6e-6*kb28*300)),.01084061457),
+            "28.27 thermal CO2 high-to-low Boltzmann 1.084percent")
+    require(close(-h28*cc28/(10.6e-6*kb28*math.log(1.01)),-136411.2),
+            "28.27 negative FORMAL inversion temperature")
+    require(close(cc28*10e-15/(500e-9),6),
+            "28.28 ten femtosecond laser pulse six carrier cycles")
+    require(close(cc28*12e-12,.003597509496),
+            "28.29 ruby pulse length 3.6mm not S typo0.36mm")
+    require(close(.15/(12e-12),1.25e10),
+            "28.29 average ruby pulse power12.5GW")
+    require(close(.15*694.4e-9/(h28*cc28),5.24353582e17),
+            "28.29 total photons per pulse")
+    require(close(.005*.8e-6/(h28*cc28),2.013646627e16),
+            "28.30 GaAlAs photons per second")
+    Rairy28=1.22*515e-9*.035/.003
+    require(close(Rairy28,7.3301667e-6),
+            "28.31 Airy first minimum radius7.33um")
+    require(close(.84*5/(math.pi*Rairy28**2),2.4881222734e10),
+            "28.31 Airy central bright spot mean not peak intensity")
+    require(close(math.sqrt(hb28/(math.pi*2.66e-26*8.6e10)),1.21135964e-10),
+            "28.32 oxygen rigid rotor molecular bond length")
+    require(close(5*hb28**2/(4*me28*a028**2*e28),34.01423276),
+            "28.33 H2 electron-cloud rotation about internuclear axis34eV")
+    require(close((2*math.pi*6.42e13)**2*((12*16/28)*1.6605390666e-27),1852.77246),
+            "28.34 CO molecule oscillator spring constant")
+
+    return 543
 
 
 def main() -> None:
@@ -1492,6 +1617,30 @@ def main() -> None:
             "26.20 thermal neutron mean energy convention must be disclosed")
     require("v_g=v" in s26 and "c^2/v" in s26,
             "26.22 deBroglie group vs phase velocity distinction")
+
+    # Two more scanned source chapters with exact-number and model-discrepancy guards.
+    q27=(ROOT/"chapters/27/questions.tex").read_text(encoding="utf-8")
+    s27=(ROOT/"chapters/27/solutions.tex").read_text(encoding="utf-8")
+    require("27.11" in q27 and "27.11" in s27,
+            "27.11 H2 harmonic oscillator last problem missing")
+    require("斜底" in q27 and "图27.14" in s27 and "4个内部节点" in s27,
+            "27.3 sloped well figure and node count check")
+    require("0.090845" in s27 and "1.60" in s27,
+            "27.4 quantum first-quarter probability and27.2 huge n energy")
+    q28=(ROOT/"chapters/28/questions.tex").read_text(encoding="utf-8")
+    s28=(ROOT/"chapters/28/solutions.tex").read_text(encoding="utf-8")
+    require("28.34" in q28 and "28.34" in s28,
+            "28.34 CO oscillator original last exercise missing")
+    require("Lyman" in q28 and "Lyman" in s28 and "Balmer系" in s28,
+            "28.16 source specifies LYMAN, must distinguish Balmer")
+    require("3.60" in s28 and "0.36" in s28 and "笔误" in s28,
+            "28.29 S382 laser pulse millimeters mismatch not flagged")
+    require("两个电子云" in q28 and "34" in s28 and "室温" in s28,
+            "28.33 two H electron-cloud spheres internuclear rotation model")
+    require("3d^{10}" in s28 and "4s^1" in s28,
+            "28.21 Cu ground state configuration closed d orbital")
+    require("FWHM" in s28 and "sigma" in s28,
+            "28.9 and28.10 spectral linewidth conventions should be explicit")
 
     computed = check_numeric_spotmodels()
     print(f"PASS: {len(ids)} candidate exercises have unique IDs, "
