@@ -391,3 +391,437 @@
 \]
 该估算对图上P与S起跳时刻的读数敏感，
 将分钟错认成秒会导致60倍差错。
+
+
+\paragraph{习题 7.18}
+教材式(7.45)采用常见地震震级—能量经验关系
+（能量以焦耳计）
+\[
+ \log_{10}(E/\mathrm J)=4.8+1.5M.
+\]
+按题给 \(M=9.2\)：
+\[
+ \boxed{E=10^{4.8+1.5(9.2)}
+ =10^{18.6}\,\mathrm J
+ \approx3.98\times10^{18}\,\mathrm J}.
+\]
+按原书TNT当量每千克释放
+\(4.6\times10^6\,\mathrm J\)，
+相当质量为
+\[
+ \boxed{m_{\rm TNT}=
+ \frac{3.98\times10^{18}}{4.6\times10^6}
+ \approx8.65\times10^{11}\,\mathrm{kg}
+ =8.65\times10^8\,\mathrm t}.
+\]
+本题采用的震级9.2按源教材保留，
+不是对唐山地震历史震级的独立认证。
+经验关系本身也只说明能量级数量关系，
+不等同于具体爆炸破坏方式的预测。
+
+\paragraph{习题 7.19}
+连续浪峰相距
+\(\lambda=25\,\mathrm m\)，
+周期 \(T=4.0\,\mathrm s\)，
+行波波速
+\[
+ \boxed{u=\lambda/T
+ =25/4.0=6.25\,\mathrm{m/s}}.
+\]
+船及近表层质元作周期性上下运动，
+若用图示的近圆形水粒子轨道近似，
+轨道半径可取垂直振幅
+\(A=0.60\,\mathrm m\)，
+粒子最大或等速轨道速率
+\[
+ \boxed{v_p=\omega A
+ =\frac{2\pi A}T
+ \approx0.942\,\mathrm{m/s}}.
+\]
+因此
+\(\boxed{v_p/u\approx0.151}\)。
+题目强调的是水粒子并不随浪峰
+以波速长距离平移。
+真实水粒子在有限水深和非线性波下
+轨道不必严格为圆。
+
+\paragraph{习题 7.20}
+警车为后方前行声源，
+朝摩托车方向传播的声音沿 \(+x\)；
+摩托车驾驶员同向运动远离入射声波，
+警车亦沿波方向接近前方观察者。
+多普勒公式
+\[
+ f_{\rm heard}=f_0
+ \frac{c-v_{\rm obs}}{c-v_{\rm src}}.
+\]
+将速度换成
+\(v_{\rm obs}=80/3.6=22.22\,\mathrm{m/s}\)，
+\(v_{\rm src}=120/3.6=33.33\,\mathrm{m/s}\)，
+\[
+ \boxed{f_{\rm heard}
+ =400\frac{330-22.22}{330-33.33}
+ \approx415\,\mathrm{Hz}}.
+\]
+因为警车追近摩托车，频率略升高；
+不能把同向运动套成正面相向公式。
+
+\paragraph{习题 7.21}
+海浪速度
+\(u=\lambda/T=120/10=12\,\mathrm{m/s}\)，
+波固有频率 \(f=u/\lambda=0.10\,\mathrm{Hz}\)。
+快艇速度 \(v_b=24\,\mathrm{m/s}\)。
+迎浪时相遇速率为 \(u+v_b\)，
+故
+\[
+ \boxed{f_{\rm head}=\frac{u+v_b}\lambda
+ =\frac{36}{120}=0.300\,\mathrm{Hz}},\quad
+ \boxed{T_{\rm head}=1/f_{\rm head}
+ =3.33\,\mathrm s}.
+\]
+顺浪时快艇速度高于波速，
+相对穿过浪峰的速率
+\(|v_b-u|=12\,\mathrm{m/s}\)，
+因此
+\[
+ \boxed{f_{\rm follow}=\frac{|v_b-u|}{\lambda}
+ =0.100\,\mathrm{Hz}},\quad
+ \boxed{T_{\rm follow}=10.0\,\mathrm s}.
+\]
+在顺浪且船速超过波速时，
+是船从后方\emph{追上}前面的浪峰，
+不是浪峰从后追上船。
+
+\paragraph{习题 7.22}
+海豚向静止潜艇游近，
+向潜艇传播的原声频率
+\(f_0=1.8\times10^4\,\mathrm{Hz}\)，
+海豚速度 \(v\)，
+水中声速 \(c=1540\,\mathrm{m/s}\)。
+静止潜艇接收的频率
+\(f_1=f_0c/(c-v)\)，
+又以静止反射界面把 \(f_1\) 原频率
+沿相反方向传回，海豚迎向反射波运动，
+最终
+\[
+ f_{\rm echo}=f_0\frac{c+v}{c-v}.
+\]
+题给
+\(\Delta f=f_{\rm echo}-f_0=220\,\mathrm{Hz}\)，
+则
+\[
+ \frac{\Delta f}{f_0}
+ =\frac{2v}{c-v}
+ \Longrightarrow
+ \boxed{v=\frac{c\Delta f}{2f_0+\Delta f}
+ =\frac{1540(220)}{36000+220}
+ \approx9.35\,\mathrm{m/s}}.
+\]
+只用一次单程多普勒公式会少算一个倍数效应。
+
+\paragraph{习题 7.23}
+红细胞作运动散射体，
+超声沿血液流动方向传播。
+在 \(v\ll c\) 下，
+运动散射往返两次多普勒效应给
+\[
+ \boxed{|\Delta f|\simeq
+ \frac{2v}{c}f_0}.
+\]
+代入 \(v=0.32\,\mathrm{m/s}\)，
+\(f_0=4.0\times10^6\,\mathrm{Hz}\)，
+\(c=1.54\times10^3\,\mathrm{m/s}\)，
+\[
+ \boxed{|\Delta f|\approx
+ \frac{2(0.32)}{1540}(4.0\times10^6)
+ \approx1.66\times10^3\,\mathrm{Hz}}.
+\]
+若红细胞沿发射声束方向\emph{远离}探头，
+回波频率降低，符号为
+\(-1.66\,\mathrm{kHz}\)；
+若逆向靠近探头则增加。
+题目若只问差的大小，取上述绝对值。
+
+\paragraph{习题 7.24}
+电磁测速雷达的发射频率
+\(f_0=5.0\times10^{10}\,\mathrm{Hz}\)，
+拍频
+\(|\Delta f|=1.1\times10^4\,\mathrm{Hz}\)。
+非相对论回波多普勒
+\[
+ |\Delta f|\simeq\frac{2v}{c}f_0.
+\]
+故
+\[
+ \boxed{v\simeq\frac{c|\Delta f|}{2f_0}
+ =\frac{3.00\times10^8(1.1\times10^4)}
+ {2(5.0\times10^{10})}
+ =33.0\,\mathrm{m/s}
+ \approx118.8\,\mathrm{km/h}}.
+\]
+因为 \(118.8>100\,\mathrm{km/h}\)，
+\[
+ \boxed{\text{汽车超速}}.
+\]
+假设波束沿车运动方向入射，
+否则必须乘以雷达视线与行驶方向夹角的
+余弦修正因子。
+
+\paragraph{习题 7.25}
+飞机速率 \(v=Mc=2.3(330)
+ =759\,\mathrm{m/s}\)。
+马赫锥半顶角 \(\mu\) 满足
+\(\sin\mu=c/v=1/M\)，所以
+\[
+ \boxed{\mu=\arcsin(1/2.3)
+ \approx25.8^\circ}.
+\]
+飞机高度
+\(h=5000\,\mathrm m\)。
+当飞机飞过观察者正上方之后，
+其后向马赫锥面首次与地面观察者重合
+所需的水平前进距离
+\(x=h\cot\mu=h\sqrt{M^2-1}\)。
+故延迟时间
+\[
+ \boxed{t=\frac{h\sqrt{M^2-1}}{Mc}
+ =\frac{5000\sqrt{2.3^2-1}}{759}
+ \approx13.6\,\mathrm s}.
+\]
+这是没有风和声速分层的几何声学模型；
+不能把 \(h/c\) 直接当作音爆到达延迟。
+
+\paragraph{习题 7.26}
+船速
+\(v_b=60/3.6\approx16.67\,\mathrm{m/s}\)。
+若原图7.49的波迹\emph{半张角}
+\(\theta=10^\circ\)
+即马赫型尾迹边缘相对航迹轴的夹角，
+则
+\[
+ \boxed{u=v_b\sin\theta
+ \approx16.67\sin10^\circ
+ \approx2.89\,\mathrm{m/s}}.
+\]
+\textbf{图示定义风险：}
+源文字把 \(10^\circ\) 称作「张角」，
+若严格指\emph{尾迹两侧之间的总夹角}，
+对应半角仅 \(5^\circ\)，
+应改为
+\(\boxed{u=16.67\sin5^\circ
+ \approx1.45\,\mathrm{m/s}}\)。
+实际湖面重力—毛细波又是色散波，
+简单声波马赫锥类比只给数量级；
+不在未核原图前强行确定唯一答案。
+
+\paragraph{习题 7.27}
+用和差化积公式：
+\[
+ \begin{aligned}
+ y&=A\sin(5x-10t)+A\sin(4x-9t)\\
+ &=\boxed{2A
+ \sin(4.5x-9.5t)
+ \cos(0.5x-0.5t)}.
+ \end{aligned}
+\]
+快速振动载波的相速度
+\(u_p=\bar\omega/\bar k=9.5/4.5
+ \approx2.11\,\mathrm{m/s}\)。
+包络项的波群速度取
+\[
+ \boxed{u_g=\frac{\Delta\omega}{\Delta k}
+ =\frac{10-9}{5-4}
+ =1.00\,\mathrm{m/s}}.
+\]
+相邻包络零点满足
+\(\Delta(0.5x)=\pi\)，
+一个主波包（两相邻零点之间）的空间宽度
+\[
+ \boxed{L_{\rm packet}=
+ \frac{2\pi}{|k_1-k_2|}
+ =2\pi\,\mathrm m\approx6.28\,\mathrm m}.
+\]
+若将正负两包络\emph{有向符号}都算一周期，
+余弦包络的周期是
+\(4\pi/|k_1-k_2|=4\pi\,\mathrm m\)；
+并非能量波包恰只有这一个长度，
+需说明「一个波包」采用相邻零点定义。
+
+\paragraph{习题 7.28}
+给
+\(\omega=ak^2\)，
+相速度
+\[
+ \boxed{u_p=\frac\omega k=ak}.
+\]
+群速度为频率—波数曲线斜率：
+\[
+ \boxed{u_g=\frac{d\omega}{dk}
+ =2ak=2u_p}.
+\]
+这表明弯曲波有明显色散，
+群速度不等于相速度。
+
+\paragraph{习题 7.29}
+等离子体色散关系
+\(\omega^2=\omega_p^2+c^2k^2\)。
+对传播模式 \(\omega>\omega_p\)，
+\[
+ \boxed{u_p=\frac{\omega}{k}
+ =\frac{c}{\sqrt{1-\omega_p^2/\omega^2}}}.
+\]
+两侧对 \(k\) 求导：
+\(2\omega\,d\omega/dk=2c^2k\)，
+故
+\[
+ \boxed{u_g=\frac{d\omega}{dk}
+ =\frac{c^2k}{\omega}
+ =c\sqrt{1-\omega_p^2/\omega^2}}.
+\]
+两者相乘
+\[
+ \boxed{u_pu_g=c^2}.
+\]
+当波不能传播
+\(\omega\le\omega_p\) 时，
+\(k\) 不再是实传播波数，
+不能套用上述实速度结论。
+
+\paragraph{习题 7.30}
+题述「波长增长 \(3/2\) 倍」
+即
+\(\lambda_{\rm obs}-\lambda_{\rm emit}
+ =\tfrac32\lambda_{\rm emit}\)，
+所以红移比
+\(r=\lambda_{\rm obs}/\lambda_{\rm emit}
+ =5/2=2.5\)。
+在单纯\emph{狭义相对论径向多普勒}
+解释下，
+\[
+ r=\sqrt{\frac{1+\beta}{1-\beta}},
+ \qquad \beta=v/c.
+\]
+故
+\[
+ \boxed{\beta=\frac{r^2-1}{r^2+1}
+ =\frac{6.25-1}{6.25+1}
+ =\frac{21}{29}\approx0.724},
+\]
+\[
+ \boxed{v\approx0.724c
+ \approx2.17\times10^8\,\mathrm{m/s}}.
+\]
+经典近似
+\(\Delta\lambda/\lambda\approx v/c\)
+会给 \(v\approx1.5c\)，
+已超出经典适用条件；
+真实远方星系的宇宙学红移还需膨胀模型，
+不能简单把该狭义相对论速度当作唯一宇宙学结果。
+
+\paragraph{习题 7.31}
+设波包由一束彼此相近的简谐分波构成，
+主要波数范围
+\(\Delta k\)。
+对近单色波
+\(k=2\pi/\lambda\)，小带宽极限
+\[
+ |\Delta k|\simeq
+ \left|\frac{dk}{d\lambda}\right|
+ |\Delta\lambda|
+ =\frac{2\pi}{\lambda^2}|\Delta\lambda|.
+\]
+若波包长度\emph{定义为}
+一个主包络波瓣（相邻包络节点所围长度）
+则
+\[
+ \boxed{\Delta x=\frac{2\pi}{\Delta k}
+ \simeq\frac{\lambda^2}{\Delta\lambda}},
+\quad
+ \boxed{\Delta x\,\Delta k\simeq2\pi}.
+\]
+群速度
+\(u_g=d\omega/dk=2\pi\,d\nu/dk\)，
+在窄谱近似
+\(\Delta\nu\simeq u_g\Delta k/(2\pi)\)。
+包络经过固定点的时间
+\(\Delta t=\Delta x/u_g\)，
+于是
+\[
+ \boxed{\Delta t\,\Delta\nu\simeq
+ \frac{\Delta x}{u_g}
+ \frac{u_g\Delta k}{2\pi}\simeq1}.
+\]
+严格傅里叶不确定性关系依赖
+波包宽度定义（方差、半高宽等），
+教材的等式是特定包络定义下的
+近似尺度关系，不能无条件当作所有脉冲的精确恒等式。
+
+\paragraph{习题 7.32}
+取平面界面为 \(y=0\)，
+入射点源 \(Q_1\) 到法线投影高度
+\(h_1\)，第二点 \(Q_2\) 的高度
+\(h_2\)；界面交点横坐标为 \(x\)，
+两点在横向投影相距 \(D\)。
+通过交点的总传播时间
+\[
+ t(x)=\frac{\sqrt{x^2+h_1^2}}{u_1}
+ +\frac{\sqrt{(D-x)^2+h_2^2}}{u_2}.
+\]
+对 \(x\) 微分要求驻时：
+\[
+ 0=\frac{dt}{dx}
+ =\frac{x}{u_1\sqrt{x^2+h_1^2}}
+ -\frac{D-x}{u_2\sqrt{(D-x)^2+h_2^2}}.
+\]
+两分式的分子/斜边正是
+相应光线与界面法线的正弦，
+因此
+\[
+ \boxed{\frac{\sin i}{u_1}
+ =\frac{\sin r}{u_2}},\qquad
+ \boxed{\frac{\sin i}{\sin r}
+ =\frac{u_1}{u_2}},
+\]
+这即折射定律的传播速度表述。
+反射时两段光都在同一介质中
+\(u_1=u_2\)，
+于是
+\(\sin i=\sin i'\)，
+两角均取 \([0,\pi/2]\)，得到
+\[
+ \boxed{i=i'}.
+\]
+反射的几何镜像法还可直接验证
+这条路径同时为行进时间的极小值。
+折射包含全反射、界面形态等边界条件时
+应依具体极值问题判断。
+
+\paragraph{习题 7.33}
+按源教材图7.51的金属片质元局部运动模型，
+令
+\(\psi=\omega t-kx\)，
+\(\xi_y=A_y\sin\psi\)，
+\(\xi_x=A_x\cos\psi\)。
+直接消去 \(\psi\)：
+\[
+ \frac{\xi_y^2}{A_y^2}+
+ \frac{\xi_x^2}{A_x^2}
+ =\sin^2\psi+\cos^2\psi
+ =\boxed{1}.
+\]
+故每个质元沿长短半轴各为
+\(A_x,A_y\) 的椭圆运动；
+同时接触滑块时，
+其水平方向的瞬时速度是
+\[
+ \boxed{v_x=\frac{\partial\xi_x}{\partial t}
+ =-\omega A_x\sin(\omega t-kx)}.
+\]
+当 \(\sin(\omega t-kx)>0\)，
+其速度沿负 \(x\) 方向，
+即题图所标的向左运动。
+这说明通过行波局部椭圆运动产生
+切向摩擦驱动的机制；
+实际滑块平均推进方向
+仍取决于接触时间、压力和摩擦作用，
+不能仅靠瞬时速度公式保证平均方向。
