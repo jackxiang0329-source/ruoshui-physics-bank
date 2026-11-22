@@ -1097,7 +1097,55 @@ def check_numeric_spotmodels() -> int:
     require(close((2*(2*math.pi)*(1/8)),math.pi/2),
             "24.16 counterpropagating waves relative phase pi/2 at lambda/8")
 
-    return 440
+    # V2 chapter 25: geometry, surface refraction, exact imaging and optical-model disputes.
+    require(close(8/(8-1.7)*1.5,1.90476190476),"25.1 lamp shadow END speed")
+    require(close(1.6+2*math.tan(math.asin(math.sin(math.pi/4)/1.33)),
+                  2.85545542923),"25.2 swimming pool refraction")
+    require(close(math.sin(math.pi/4)/math.sin(math.radians(17)),
+                  2.4185198833),"25.3 refraction into diamond")
+    require(close(c0/580e-9,5.16883548276e14),
+            "25.3 SOURCE 580nm not companion 589nm")
+    require(close(580/(math.sin(math.pi/4)/math.sin(math.radians(17))),
+                  239.81609744),"25.3 wavelength in diamond nm")
+    require(close(math.degrees(math.asin(1/1.52)),41.1395104149),
+            "25.5 total internal reflection to AIR")
+    require(close(math.degrees(math.asin(1.33/1.52)),61.0449756281),
+            "25.5 total internal reflection to WATER")
+    require(close(((1.52-1)/(1.52+1))**2,.04257999496),
+            "25.6 normal incidence Fresnel reflectance")
+    require(close(15*25/(25-15),37.5),"25.8 mirror REAL image for s25")
+    require(close(15*10/(10-15),-30),"25.8 mirror VIRTUAL image for s10")
+    require(close(5.0,2.0*(5/2)),"25.9 concave dental mirror R5cm")
+    require(close(.4/(1.4/2.6),.742857142857),"25.11 eye distant spherical radius")
+    require(close(.4/(1.4/2.6+1/25),.691489361702),
+            "25.11 companion typo 0.361 vs independent 0.691")
+    require(close(1/(.33/20-1.33/10),-8.58369098712),
+            "25.12 fish bowl spherical virtual image")
+    require(close(20/(2*.662)-20/(2*.698),.7790926168),
+            "25.13 chromatic focus shift")
+    require(close(math.degrees(math.acos(math.sqrt((1.333**2-1)/3))),
+                  59.4104730269),"25.14 red rainbow critical incidence")
+    require(close(math.degrees(math.acos(math.sqrt((1.342**2-1)/3))),
+                  58.88825686),"25.14 violet rainbow critical incidence")
+    require(close(20/(1.6-1),40),"25.15 plano convex lens 40cm focal")
+    require(close(((100**2-60**2)/(4*100)),16),
+            "25.16 two positions Bessel lens L100 d60 f16")
+    require(close(20*500/(500-20),125/6),
+            "25.17 slide original correct object position")
+    require(close((500/(125/6))**2,576),
+            "25.17 exact projected area ratio 576 not rounded 578")
+    require(close(1/(1/8+1/20),40/7),
+            "25.18 second convex lens virtual-object s=-20cm")
+    require(close(1.22*550e-9/1.02,6.57843137255e-7),
+            "25.20 Yerkes diffraction vs companion arithmetic")
+    require(close(1.22*550e-9/5.1,1.31568627451e-7),
+            "25.20 Palomar diffraction")
+    require(close(18/6*20,60),"25.21 Cassegrain secondary angular magnification 3 EFL60m")
+    require(close(60/.2,300),"25.21 geometrical Cassegrain actual angular 300")
+    require(close(1.22*590e-9/10,7.198e-8),
+            "25.21 giant telescope Rayleigh resolution")
+
+    return 467
 
 
 def main() -> None:
@@ -1361,6 +1409,19 @@ def main() -> None:
             "24.13 800nm quarter wave is 400nm half wave")
     require("尼科耳" in q24 and "69.2" in s24,
             "24.14 Nicol prism o ray total internal reflection")
+
+    q25=(ROOT/"chapters/25/questions.tex").read_text(encoding="utf-8")
+    s25=(ROOT/"chapters/25/solutions.tex").read_text(encoding="utf-8")
+    require("25.21" in q25 and "25.21" in s25,
+            "ch25 last Cassegrain exercise omitted")
+    require("580" in q25 and "589" in s25 and "580" in s25,
+            "25.3 main textbook 580nm must differ companion 589nm")
+    require("0.691" in s25 and "0.361" in s25,
+            "25.11 independently corrected eye curvature vs companion")
+    require("576" in s25 and "578" in s25,
+            "25.17 accurate area ratio not rounded companion result")
+    require("f_{\\rm eff}=3f_1=60" in s25 and "M=160" in s25,
+            "25.21 Cassegrain 60m EFL disagreement must remain marked")
 
     computed = check_numeric_spotmodels()
     print(f"PASS: {len(ids)} candidate exercises have unique IDs, "
