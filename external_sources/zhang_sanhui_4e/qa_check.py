@@ -455,8 +455,8 @@ def check_numeric_spotmodels() -> int:
             "7.25 sonic boom half angle")
     require(close(5000*math.sqrt(2.3**2-1)/(2.3*330),13.6444764),
             "7.25 supersonic delay")
-    require(close((60/3.6)*math.sin(math.radians(10)),
-                  2.894136294),"7.26 conditional wake half-angle speed")
+    require(close((60/3.6)*math.sin(math.radians(5)),
+                  1.45259571246),"7.26 source 10deg FULL opening means 5deg half-angle")
     require(close((9.5/4.5),2.111111111),"7.27 carrier phase speed")
     require(close(2*math.pi/(5-4),2*math.pi),
             "7.27 packet lobe width")
@@ -623,9 +623,9 @@ def main() -> None:
     require("外直径" in q16 and "2.5" in q16
             and "3.09\\times10^{-4}" in a16,
             "16.5 original pipe diameters or flow split regressed")
-        require("7.33" in q7 and "7.33" in a7,
+    require("7.33" in q7 and "7.33" in a7,
             "7.33 ultrasonic motor end exercise missing")
-    require("张角" in q7 and "半张角" in a7,
+    require("张角" in q7 and "半顶角" in a7,
             "7.26 printed ship wake opening-angle risk must be disclosed")
     require("16.18" in q16 and "16.18" in a16,
             "16.18 homogeneous conductor end exercise missing")
