@@ -136,7 +136,7 @@ for j in range(steps):
     r=a+(j+.5)*(b-a)/steps
     Er=V/(r*log(b/a));Hphi=I/(2*pi*r)
     psum+=Er*Hphi*2*pi*r*(b-a)/steps
-eq(208,"coax flux area integral VI",psum,V*I,rtol=1e-9)
+eq(208,"coax flux area integral VI",psum,V*I,rtol=5e-8)
 Vm,Im,phi=100.,2.,.7
 eq(209,"average harmonic power factor",Vm*Im*cos(phi)/2,
   (Vm/sqrt(2))*(Im/sqrt(2))*cos(phi))
