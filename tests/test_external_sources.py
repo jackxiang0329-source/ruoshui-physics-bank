@@ -6,7 +6,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
-from external_inventory import inventory
+from external_audit import inventory
 from sync_external_physics import SETTINGS, file_blob_sha, license_signal, sync
 
 

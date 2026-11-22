@@ -4,7 +4,7 @@ import tempfile
 import unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"scripts"))
-from report_external_coverage import audit
+from external_audit import audit
 
 class AuditTests(unittest.TestCase):
     def test_valid_candidate_and_closed_exam_gate(self):
