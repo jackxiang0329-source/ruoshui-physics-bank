@@ -1572,7 +1572,7 @@ def check_thought_intake() -> int:
             "thought count should be exactly 101, separate from705")
     require(len({e["canonical_id"] for e in rows}) == 101,
             "duplicate thought stable IDs")
-    require(len({e["source_thought_number"] for e in rows}) == 80,
+    require(len({e["source_thought_number"] for e in rows}) == 101,
             "duplicate original 思考题 numbers")
     require(all(e["academic_review"] == "pending_independent_verification"
                 and e["exam_ready"] is False for e in rows),
