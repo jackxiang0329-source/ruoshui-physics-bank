@@ -1062,7 +1062,42 @@ def check_numeric_spotmodels() -> int:
     require(close(.215*math.sin(math.radians(50)),.16469955527),
             "23.19 Davisson-Germer in-plane scattering lambda")
 
-    return 423
+    # Chapter 24 polarization: source-angle and Jones-vector numeric models.
+    require(close((math.cos(math.pi/6)**4)/(math.cos(math.pi/3)**2),2.25),
+            "24.1 inserted middle polarizer INCREASES transmitted intensity")
+    require(close(math.degrees(math.acos(math.sqrt(1/3))),54.735610317),
+            "24.2 one third of MAX transmitted intensity")
+    require(close(math.degrees(math.acos(math.sqrt(2/3))),35.264389683),
+            "24.2 one third of incident intensity")
+    require(close(.5*(.25/(.25+.75*.25)),2/7),
+            "24.3 transverse projected polarizer axis, theta60 phi60")
+    require(close(math.degrees(math.atan(1.5/1.33)),48.43766499),
+            "24.5 Brewster water to glass angle")
+    require(close(math.degrees(math.atan(1.33/1.5)),41.56233501),
+            "24.5 reciprocal Brewster complementary angles")
+    require(close(math.degrees(math.atan(math.sin(math.pi/4))),35.264389683),
+            "24.6 critical TIR 45deg gives Brewster35.26deg")
+    require(close(math.tan(math.radians(58)),1.600334529),
+            "24.7 refractive index from Brewster 58degrees")
+    require(close(90-math.degrees(math.atan(1.33)),36.93876273),
+            "24.8 solar elevation reflected horizontal lake")
+    require(close(math.degrees(math.asin(1.4864*.5)),48.004724656),
+            "24.9 calcite extraordinary ray along equilateral base")
+    require(close(3/16,.1875),"24.11 CROSSED P1/P2 analyzer transmitted3/16")
+    require(close(632.8/(4*(1.66-1.49)),930.588235294),
+            "24.12 632.8nm quartz quarter-wave plate thickness")
+    require(close((2*math.pi*(800/4))/400,math.pi),
+            "24.13 800nm QWP becomes 400nm HWP")
+    require(close(math.degrees(math.asin(1.55/1.658)),69.205745109),
+            "24.14 calcite ordinary crystal glue TIR critical angle")
+    require(90-math.degrees(math.asin(math.sin(math.radians(22))/1.658))>69.2,
+            "24.14 ordinary light hits glue above critical angle")
+    require(close(math.pi*(1.55821-1.55810)/396.8e-9,870.90522151),
+            "24.15 quartz optical rotation radians per meter")
+    require(close((2*(2*math.pi)*(1/8)),math.pi/2),
+            "24.16 counterpropagating waves relative phase pi/2 at lambda/8")
+
+    return 440
 
 
 def main() -> None:
@@ -1313,6 +1348,19 @@ def main() -> None:
             "23.16 mandatory integer ceiling and companion discrepancy")
     require("旁瓣" in s23 and "主极大" in s23,
             "23.17 sidelobe vs grating principal maximum distinction")
+
+    q24=(ROOT/"chapters/24/questions.tex").read_text(encoding="utf-8")
+    s24=(ROOT/"chapters/24/solutions.tex").read_text(encoding="utf-8")
+    require("24.16" in q24 and "24.16" in s24,
+            "ch24 final polarization gradient exercise omitted")
+    require("临界角" in q24 and "35.26" in s24,
+            "24.6 original TIR CRITICAL 45 not Brewster45")
+    require("正交" in q24 and "3}{16}" in s24,
+            "24.11 P1/P2 CROSSED, transmitted intensity 3Ii/16")
+    require("半波片" in s24 and "800nm" in s24,
+            "24.13 800nm quarter wave is 400nm half wave")
+    require("尼科耳" in q24 and "69.2" in s24,
+            "24.14 Nicol prism o ray total internal reflection")
 
     computed = check_numeric_spotmodels()
     print(f"PASS: {len(ids)} candidate exercises have unique IDs, "
