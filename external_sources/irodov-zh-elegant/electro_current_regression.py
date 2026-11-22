@@ -165,9 +165,9 @@ eta=2.;Esource=6.
 check(173,"voltmeter with parallel shunt new terminal potential",Esource/(eta+1),2)
 check(175,"higher internal resistance source terminal zero at Rext",
      6-2,4)
-E=1.5;R1=10;R2=20
+emf_cell=1.5;R1=10;R2=20
 check(176,"emf proportional to r yields I=alpha for any source count",
-      E/R1,.15)
+      emf_cell/R1,.15)
 R1,R2=4.,6.
 Rth=R1*R2/(R1+R2)
 check(178,"parallel 4/6ohm source current plus internal0.1",
