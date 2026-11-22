@@ -38,4 +38,4 @@ scripts/build.py --check 用于检查单题源合法性、ID/字段、题目精�
 
 ## 六、按考试约束选题
 
-已扩展 `scripts/assemble_exam.py`，支持题型筛选、模块精确配额、难度与预计时长上限、总分整数分配、随机种子重现，并输出JSON清单。详见 [EXAM_ASSEMBLY.md](EXAM_ASSEMBLY.md)。`\input` 独立性保持不变。尚待独立复核的题只能加 `--allow-pending` 组草稿卷。
+已扩展 `scripts/assemble_exam.py`，支持题型筛选、模块精确配额、难度与预计时长上限、总分整数分配、随机种子重现，并输出JSON清单。详见 [EXAM_ASSEMBLY.md](exam_assembly.md)。`\input` 独立性保持不变。尚待独立复核的题只能加 `--allow-pending` 组草稿卷。
