@@ -13,7 +13,7 @@
 | **《普通物理学习题》中文整理** | [Irodov ElegantBook 专区](external_sources/irodov-zh-elegant/) | **原书 1,878 题**，分篇章节、中文推导、勘误与独立回归 |
 | 《普通物理学习题》合订 PDF | [直接查看 `main.pdf`](external_sources/irodov-zh-elegant/main.pdf) | 已编译的仓库内成品 |
 | **张三慧《大学物理学（第4版）》三书** | [进行中的 Draft PR #45](https://github.com/jackxiang0329-source/ruoshui-physics-bank/pull/45) | 分支持续录入与质检；未合并前不计入正式主库 |
-| **未审外部候选资源** | [分类导航](external_sources/catalog/中文分类导航.md) / [无损压缩归档](external_sources/_bundles/) | **19,837 份原始候选**已按来源打包；不进入正式题库 |
+| **未审外部候选资源** | [分类导航](external_sources/catalog/中文分类导航.md) / [无损压缩归档](external_sources/_bundles/) | 19,837 份大型语料及另 318 份 UBC/IntroPhysics 原始候选无损打包；不进入正式题库 |
 | 技术质检与历史批次 | [QA 协议](docs/QA_PROTOCOL.md) / [高难准入标准](docs/HIGH_DIFFICULTY_POLICY.md) / [历史记录](docs/PROJECT_HISTORY_2026.md) | 技术检查不等于第三方学术审定 |
 
 ## 目录结构（保留稳定接口）
@@ -25,7 +25,7 @@ ruoshui-physics-bank/
 ├── data/                 正式索引、批次与技术质检数据
 ├── external_sources/
 │   ├── irodov-zh-elegant/  《普通物理学习题》1,878题，合订 PDF
-│   ├── _bundles/          3份无损候选数据压缩包+SHA-256清单
+│   ├── _bundles/          5份无损候选压缩包+两份SHA-256清单
 │   ├── catalog/           分类、去重与候选待审表
 │   └── ...                其他待审来源索引与少量原题
 ├── scripts/              校验、组卷、构建、压缩包还原
@@ -44,10 +44,14 @@ ruoshui-physics-bank/
 # 需要审查外部原文时校验或按数据源还原（仅在需要时）
 python3 scripts/compact_external_candidates.py --verify
 python3 scripts/compact_external_candidates.py --restore college_physics
+python3 scripts/compact_small_external_sources.py --verify
+python3 scripts/compact_small_external_sources.py --restore ubc_opbp
 
 # 核对正式题库源文件和生成文件一致性
 python3 scripts/build.py --check
 ```
+
+**第二轮无损归档：** UBC 的 265 份与 IntroPhysics 的 53 份未审单题 Markdown 另打包为 2 个可逆归档；正式 452 题、Irodov、WeBWorK PG 源和张三慧 Draft PR 不变。当前活跃分支的精确文件数以 GitHub 文件树为准；二轮详情见 [归档索引](external_sources/_bundles/SECOND_ROUND.md)。
 
 **质量声明：** 自动化测试与 PDF 编译只能证明相应结构、公式和计算模型的程序化检查通过；所有标记“待独立复核”的题目仍需专业人士独立审稿。外部来源的归档不会改变其版权、正确性或学术审核状态。
 
