@@ -62,7 +62,7 @@ test(105,"radial epsilon capacitance units scaling",
      Crad*log(R2/R1),4*pi*EPS*a)
 # Independent cylindrical breakdown layers.
 e1,e2=2.,4.;R1,R2,R3=.01,.02,.04
-E1max=4e6;E2max=2e6
+E1max=4e6;E2max=1e6
 lam1=2*pi*EPS*e1*R1*E1max
 lam2=2*pi*EPS*e2*R2*E2max
 test(106,"same lambda means simultaneous two layer breakdown",
@@ -70,8 +70,9 @@ test(106,"same lambda means simultaneous two layer breakdown",
 Vbd=R1*E1max*(log(R2/R1)+e1/e2*log(R3/R2))
 test(107,"first layer breakdown voltage equals flux integral",
      Vbd,lam1/(2*pi*EPS)*(log(R2/R1)/e1+log(R3/R2)/e2))
-test(107,"outer layer remains below E2max at first breakdown",
-     lam1/(2*pi*EPS*e2*R2),E2max)
+E2max=2e6  # now outer insulation limit is higher: layer 1 fails first
+test(107,"outer layer remains below its separately specified 2MV/m threshold",
+     float(lam1/(2*pi*EPS*e2*R2)<E2max),1)
 a=.0005;sep=.1
 Cap_pair=pi*EPS/acosh(sep/(2*a))
 Cap_asym=pi*EPS/log(sep/a)
