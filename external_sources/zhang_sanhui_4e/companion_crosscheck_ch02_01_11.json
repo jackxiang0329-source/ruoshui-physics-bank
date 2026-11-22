@@ -1,0 +1,205 @@
+{
+  "schema": "zhang-sanhui-4e-companion-answer-crosscheck/v1",
+  "date": "2026-11-22",
+  "source": {
+    "volume": "S",
+    "filename": "大学物理学（第4版）学习辅导与习题解答 (张三慧) .pdf",
+    "sha256": "54126dd75edd65eb9ead0a9d7acb96a37bfb25674cf595c76b94f2fb30bce5a7",
+    "pdf_physical_page_count": 402
+  },
+  "scope": "chapter2 questions1–11 formula/result spotcomparison only, no expert certification",
+  "question_bundle": "chapters/02/questions.tex",
+  "solution_bundle": "chapters/02/solutions.tex",
+  "records": [
+    {
+      "canonical_id": "ZS4-02-001",
+      "source_problem_number": "2.1",
+      "companion_pdf_physical_pages": [
+        29
+      ],
+      "tested_quantity": "static threshold push at angle θ; test M10kg μs0.4 θ30°",
+      "independent_computed_value": 58.86055,
+      "value_unit": "N",
+      "companion_rounded_value": null,
+      "model_assumptions": "source symbolic Fmin=μs Mg/(cosθ−μs sinθ); test parameters not printed",
+      "crosscheck": "source_symbolic_formula_checked_with_independent_test_parameters",
+      "discrepancy_note": "symbolic source matched; own test parameters",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-02-002",
+      "source_problem_number": "2.2",
+      "companion_pdf_physical_pages": [
+        30
+      ],
+      "tested_quantity": "incline accelerated bead rope tension",
+      "independent_computed_value": 3.316,
+      "value_unit": "N",
+      "companion_rounded_value": 3.32,
+      "model_assumptions": "m0.5kg θ30° accelerating right2.0m/s²",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "rounded agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-02-003",
+      "source_problem_number": "2.3",
+      "companion_pdf_physical_pages": [
+        30
+      ],
+      "tested_quantity": "helicopter rotor lift",
+      "independent_computed_value": 67600,
+      "value_unit": "N",
+      "companion_rounded_value": 67600,
+      "model_assumptions": "helicopter5000kg car1500kg upward acceleration0.6",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "exact agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-02-004",
+      "source_problem_number": "2.4",
+      "companion_pdf_physical_pages": [
+        30,
+        31
+      ],
+      "tested_quantity": "window washer hand tension",
+      "independent_computed_value": 367.5,
+      "value_unit": "N",
+      "companion_rounded_value": 368,
+      "model_assumptions": "combined mass75kg, two rope support segments",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "rounded agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-02-005",
+      "source_problem_number": "2.5",
+      "companion_pdf_physical_pages": [
+        31,
+        32
+      ],
+      "tested_quantity": "compound pulley m1 downward acceleration",
+      "independent_computed_value": 1.96,
+      "value_unit": "m/s²",
+      "companion_rounded_value": 1.96,
+      "model_assumptions": "three masses0.2,0.1,0.05kg; massless double pulley",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "exact agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-02-006",
+      "source_problem_number": "2.6",
+      "companion_pdf_physical_pages": [
+        32
+      ],
+      "tested_quantity": "downhill stopping distance exact slope tanθ0.1",
+      "independent_computed_value": 39.51,
+      "value_unit": "m",
+      "companion_rounded_value": 39.3,
+      "model_assumptions": "initial25m/s horizontal stopping35m; companion approximates sinθ≈0.1 cosθ≈1 but candidate retains cos",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "source small-angle approximation versus exact geometry; not an algebra error",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-02-007",
+      "source_problem_number": "2.7",
+      "companion_pdf_physical_pages": [
+        32
+      ],
+      "tested_quantity": "minimum extract-board horizontal force",
+      "independent_computed_value": 19.355,
+      "value_unit": "N",
+      "companion_rounded_value": 19.4,
+      "model_assumptions": "μ0.25 top mass2.45kg board1.5kg",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "rounded agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-02-008",
+      "source_problem_number": "2.8",
+      "companion_pdf_physical_pages": [
+        32,
+        33
+      ],
+      "tested_quantity": "cart acceleration from three-body pulley sample M10 m1=2 m2=1 F25",
+      "independent_computed_value": 1.582857,
+      "value_unit": "m/s²",
+      "companion_rounded_value": null,
+      "model_assumptions": "source exact symbolic A=(F−m1m2g/(m1+m2))/(M+m2+m1m2/(m1+m2)); numerical sample reviewer supplied",
+      "crosscheck": "source_symbolic_formula_checked_with_independent_test_parameters",
+      "discrepancy_note": "source analytic equation checked at non-source test parameters",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-02-009",
+      "source_problem_number": "2.9",
+      "companion_pdf_physical_pages": [
+        33,
+        34
+      ],
+      "tested_quantity": "Moon orbiter speed at altitude200km",
+      "independent_computed_value": 1589.9,
+      "value_unit": "m/s",
+      "companion_rounded_value": 1590,
+      "model_assumptions": "Moon GM from G6.67e-11 M7.35e22 r1.94e6m",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "rounded agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-02-010",
+      "source_problem_number": "2.10",
+      "companion_pdf_physical_pages": [
+        34
+      ],
+      "tested_quantity": "two springs in series sample k1=100 k2=200",
+      "independent_computed_value": 66.666667,
+      "value_unit": "N/m",
+      "companion_rounded_value": null,
+      "model_assumptions": "source symbolic keq=k1k2/(k1+k2) with numeric example reviewer supplied",
+      "crosscheck": "source_symbolic_formula_checked_with_independent_test_parameters",
+      "discrepancy_note": "symbolic equation validated, source gives no chosen numerical k",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-02-011",
+      "source_problem_number": "2.11",
+      "companion_pdf_physical_pages": [
+        34,
+        35
+      ],
+      "tested_quantity": "banked-curve tire friction at v25m/s",
+      "independent_computed_value": 634.7,
+      "value_unit": "N",
+      "companion_rounded_value": 635,
+      "model_assumptions": "car1200kg radius400m bank6°, static friction inward",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "rounded agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    }
+  ],
+  "summary": {
+    "reviewed_distinct_existing_pairs": 11,
+    "reviewed_numeric_source_answers": 8,
+    "reviewed_symbolic_source_formulas": 3,
+    "source_small_angle_approximation_cases": 1,
+    "new_unique_source_questions": 0,
+    "expert_signed_off": 0
+  },
+  "notes": "Candidate first11 of ch2; numbers and formula checks against companion S PDF physical pages29–35. Formula-only source cases2.1,2.8,2.10 have reviewer-chosen sample parameters, not numbers attributed to the book. Original count943 unchanged."
+}
