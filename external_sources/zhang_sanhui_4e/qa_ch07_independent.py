@@ -41,7 +41,7 @@ def run() -> None:
         (28, (2*.5*3)/(.5*3), 2, "quadratic dispersion group velocity / phase velocity, sample"),
         (29, (math.sqrt(2**2+3**2*4**2)/4)*((3**2*4)/math.sqrt(2**2+3**2*4**2)), 9, "plasma dispersion phase × group velocities = c²"),
         (30, ((2.5**2)-1)/((2.5**2)+1), 21/29, "radial relativistic Doppler, λobs/λemit=2.5"),
-        (31, ((2*P/1)**2 / .2) * (.2**2/(2*P)), 2*P, "wave-packet bandwidth scaling, explicit narrowband convention"),
+        (31, (1**2/.2) * (2*P*.2/1**2), 2*P, "wave-packet bandwidth scaling, explicit narrowband convention"),
         (32, 3/math.sqrt(3**2+4**2) - 5/math.sqrt(5**2+12**2) * (5/(125/39)), 0, "Snell stationary-time derivative, reviewer example"),
         (33, (math.cos(.73))**2+(math.sin(.73))**2, 1, "orthogonal transverse displacement ellipse identity"),
     ]
