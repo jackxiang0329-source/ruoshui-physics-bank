@@ -4,6 +4,7 @@ on:
     branches: [chore/physics-layout-naming-20261122]
     paths:
       - .github/workflows/compact-webwork-sources.yml
+      - scripts/check_repository_layout.py
   workflow_dispatch:
 permissions:
   contents: write
