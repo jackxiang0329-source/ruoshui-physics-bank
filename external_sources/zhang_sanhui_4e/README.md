@@ -1,44 +1,44 @@
-# 张三慧《大学物理学》第4版 · 三书习题候选录入区
+# 张三慧《大学物理学》第4版：三书习题候选录入区
 
-**项目状态：** 2026-11-22，工作分支 `intake/zhang-sanhui-4e-20261122-batch01`，
+**当前状态：2026-11-22，共112道题面及112份独立解析，最新一轮新增55道和55份解析。**
+工作分支 `intake/zhang-sanhui-4e-20261122-batch01`，
 [Draft PR #45](https://github.com/jackxiang0329-source/ruoshui-physics-bank/pull/45)。
-这是教材扫描的用户授权校对环境中的待审候选资料，**不是**正式高难题库 `bank/`。
 
-## 三份原始扫描
+> **隔离说明：** 候选原题与答案不属于正式高难度综合题库 `bank/`，不能因此获得考试组卷权限。外部教材出版许可和独立学术专家审核仍待完成，全部 `exam_ready=false`。
 
-- 《大学物理学（第4版）力学、热学》：V1，PDF 428页，第1—11章。
-- 《大学物理学（第4版）电磁学、光学、量子物理》：V2，PDF 515页，第12—30章。
-- 《大学物理学（第4版）学习辅导与习题解答》：S，PDF 402页，题号关联的核对参照，不重复收录同一道题。
+## 三份已提供的扫描教材
 
-来源 PDF 的准确文件名、SHA-256、各题原书章节、教材PDF物理页和辅导PDF物理页在
-[source_register.json](source_register.json)；不在 GitHub 重新散存整本扫描PDF。
+- V1《大学物理学（第4版）力学、热学》：428页，对应第1—11章。
+- V2《大学物理学（第4版）电磁学、光学、量子物理》：515页，对应第12—30章。
+- S《大学物理学（第4版）学习辅导与习题解答》：402页，供题号关联与解答交叉核验，同一道题绝不重复计数。
 
-## 已落库内容
+三本书 PDF 的文件名、SHA-256 与当前已录习题对应的源页码，统一见 [source_register.json](source_register.json)。
+新批次对辅导书的**精确页码映射尚未核实**，登记为 `pending_exact_page_verification`，不虚报交叉核验完成。
 
-| 模块 | 章节 | 编号 | 题面/解析数 | 进度 |
-| --- | --- | --- | ---: | --- |
-| V1 力学 | 第1章 质点运动学 | 1.1—1.26 | 26/26 | 章末习题转写覆盖，图示和外审未通过 |
-| V1 力学 | 第2章 运动与力 | 2.1—2.28 | 28/28 | 章末习题转写覆盖，图示和外审未通过 |
-| V2 电磁学 | 第12章 静电场 | 12.1—12.3 | 3/3 | 部分录入 |
+## 唯一可编辑题稿结构
 
-**累计57道候选习题、57份独立解析；本轮新增44道及44份解析。**
-同编号辅导题只关联解答，不重复计入。全书余下习题尚未逐页清点，不能宣称全部完成。
+| 章节 | 原书章末习题号 | 已录题目 | 独立解析 |
+| --- | --- | ---: | ---: |
+| [第1章](chapters/01/questions.tex) 质点运动学 | 1.1–1.26 | 26 | 26 |
+| [第2章](chapters/02/questions.tex) 运动与力 | 2.1–2.28 | 28 | 28 |
+| [第3章](chapters/03/questions.tex) 动量与角动量 | 3.1–3.24 | 24 | 24 |
+| [第12章](chapters/12/questions.tex) 静电场 | 12.1–12.34 | 34 | 34 |
+| **累计** | **四章章末题号已覆盖** | **112** | **112** |
 
-## 合订式唯一数据源
+每章仅有 `chapters/NN/questions.tex` 和 `chapters/NN/solutions.tex` 两份权威 TeX，
+不生成逐题冗余源文件。每条题号、原书PDF页、答案状态、原图依赖、复核状态记录于唯一的 `source_register.json`。
 
-- `chapters/NN/questions.tex`：一章一份原题编号的候选习题 LaTeX。
-- `chapters/NN/solutions.tex`：一章一份独立推导的 LaTeX。
-- `source_register.json`：所有已录题的唯一结构化索引及状态。
-- `PROGRESS.md`：当前批次与审校风险、下次接续题号。
-- `build_intake.tex`：独立于正式题库的整套候选 XeLaTeX 校样入口。
-- `qa_check.py`：登记与 TeX 对齐、来源页和数值模型抽检脚本。
+- [PROGRESS.md](PROGRESS.md) — 完成量、原书题号、具体错误与下一轮接续。
+- [qa_check.py](qa_check.py) — 编号、配对、来源页合法性与45项数值抽检（不等于专家审核）。
+- [build_intake.tex](build_intake.tex) — 独立于正式高难题库的 XeLaTeX 候选校样合订入口。
+- [CI 工作流](../../.github/workflows/zhang-sanhui-4e-intake.yml) — GitHub Actions 上运行结构 QA、XeLaTeX 生成候选 PDF，具体通过情况需看运行日志。
 
-所有公式用标准 LaTeX；不得因补录教材候选改变 `bank/` 高难度准入门槛。
-原题图、符号、方向、多个有效解和辅导书可能的错误均保留复核证据。
-脚本或 GitHub Actions 成功不等于独立学术复核，也不意味着版权许可已验证；
-全部 `exam_ready=false`。
+## 后续接续
 
-## 检查与编译
+V1 从 **第4章习题4.1**；V2 从 **第13章习题13.1**。
+两卷未录的第4—11章、第13—30章及各章思考题仍待逐页整理。
+题目转写覆盖、公式可编译、物理模型复核、版权许可审查是独立的进度指标；
+任何一个不能替代另外三个。
 
 ```bash
 python3 external_sources/zhang_sanhui_4e/qa_check.py
@@ -46,14 +46,3 @@ cd external_sources/zhang_sanhui_4e
 xelatex -interaction=nonstopmode -halt-on-error build_intake.tex
 xelatex -interaction=nonstopmode -halt-on-error build_intake.tex
 ```
-
-GitHub Actions 候选CI见
-[`.github/workflows/zhang-sanhui-4e-intake.yml`](../../.github/workflows/zhang-sanhui-4e-intake.yml)。
-**实际通过情况必须查工作流运行记录，不得仅凭存在脚本宣称编译通过。**
-
-## 下一步
-
-第3章习题 **3.1起**（V1 第3章习题所在扫描页待逐页定位）；
-第12章习题 **12.4起**（V2 PDF物理页41附近）。
-其余第3—11章、第13—30章和各章思考题都需继续扫描、录入及严格审核。
-具体见 [进度台账](PROGRESS.md)。
