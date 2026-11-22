@@ -15,15 +15,15 @@ files=[
   "26-em-waves-201-212.tex",
   "26-em-waves-213-224.tex",
 ]
-P={}
+SOURCE={}
 for filename in files:
     s=(root/filename).read_text(encoding="utf-8")
     hits=list(re.finditer(r"\\emwaveproblem\{(\d+)\}\{[^}]+\}",s))
     for k,m in enumerate(hits):
         n=int(m.group(1))
-        assert n not in P,f"duplicate IV.{n}"
-        P[n]=s[m.start():hits[k+1].start() if k+1<len(hits) else len(s)]
-assert set(P)==set(range(189,225)),f"IV.189-224 problems: {set(P)^set(range(189,225))}"
+        assert n not in SOURCE,f"duplicate IV.{n}"
+        SOURCE[n]=s[m.start():hits[k+1].start() if k+1<len(hits) else len(s)]
+assert set(SOURCE)==set(range(189,225)),f"IV.189-224 problems: {set(SOURCE)^set(range(189,225))}"
 ncheck=0
 def eq(n,description,a,b,rtol=1e-7,atol=1e-11):
     global ncheck
@@ -34,8 +34,8 @@ def truth(n,description,check):
 def anchor(n,token):
     global ncheck
     ncheck+=1
-    assert token in P[n],f"IV.{n} missing source anchor {token!r}"
-for n,block in P.items():
+    assert token in SOURCE[n],f"IV.{n} missing source anchor {token!r}"
+for n,block in SOURCE.items():
     anchor(n,r"\exsolution")
     anchor(n,r"\excheck")
     truth(n,"substantive LaTeX source problem",len(block)>200)
