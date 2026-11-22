@@ -71,7 +71,7 @@ for A in [.01,.05]:
    eq(19,"small-angle prism first-order deviation",(.5)*A,(1.5-1)*A)
 A=60*rad;n=1.5
 mind=2*asin(n*sin(A/2))-A
-eq(20,"symmetric prism minimum deviation degrees",mind/rad,37.,rtol=.004)
+eq(20,"symmetric prism minimum deviation degrees",mind/rad,37.1807557815,rtol=1e-10)
 eq(21,"prism apex when minimum deviation equals apex deg",2*acos(n/2)/rad,83.,rtol=.005)
 crit=asin(1/n)
 maxd=pi/2+asin(n*sin(A-crit))-A
