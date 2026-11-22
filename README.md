@@ -14,7 +14,7 @@
 | 《普通物理学习题》合订 PDF | [直接查看 `main.pdf`](external_sources/irodov-zh-elegant/main.pdf) | 已编译的仓库内成品 |
 | **张三慧《大学物理学（第4版）》三书** | [进行中的 Draft PR #45](https://github.com/jackxiang0329-source/ruoshui-physics-bank/pull/45) | 分支持续录入与质检；未合并前不计入正式主库 |
 | **未审外部候选资源** | [分类导航](external_sources/catalog/中文分类导航.md) / [无损压缩归档](external_sources/_bundles/) | 19,837 份大型语料及另 318 份 UBC/IntroPhysics 原始候选无损打包；不进入正式题库 |
-| 技术质检与历史批次 | [QA 协议](docs/QA_PROTOCOL.md) / [高难准入标准](docs/HIGH_DIFFICULTY_POLICY.md) / [历史记录](docs/PROJECT_HISTORY_2026.md) | 技术检查不等于第三方学术审定 |
+| 技术质检与历史批次 | [QA 协议](docs/policies/qa_protocol.md) / [高难准入标准](docs/policies/high_difficulty_policy.md) / [历史记录](docs/history/project_history_2026.md) | 技术检查不等于第三方学术审定 |
 
 ## 目录结构（保留稳定接口）
 
@@ -55,4 +55,4 @@ python3 scripts/build.py --check
 
 **质量声明：** 自动化测试与 PDF 编译只能证明相应结构、公式和计算模型的程序化检查通过；所有标记“待独立复核”的题目仍需专业人士独立审稿。外部来源的归档不会改变其版权、正确性或学术审核状态。
 
-[历史扩库与各批次完整记录](docs/PROJECT_HISTORY_2026.md) · [外部资料使用说明](external_sources/README.md) · [GitHub Actions](https://github.com/jackxiang0329-source/ruoshui-physics-bank/actions)
+[历史扩库与各批次完整记录](docs/history/project_history_2026.md) · [外部资料使用说明](external_sources/README.md) · [GitHub Actions](https://github.com/jackxiang0329-source/ruoshui-physics-bank/actions)
