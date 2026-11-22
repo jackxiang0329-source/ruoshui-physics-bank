@@ -119,7 +119,78 @@ def check_numeric_spotmodels() -> int:
     drag = .5*.016*.062*math.pi*25**2*40**2
     require(close(drag, 1558.22995618), "2.26 airship drag")
     require(close(drag/.010, 155822.995618), "2.26 propulsion power")
-    return 22
+
+    # Zhang Sanhui chapters 3 and 12: independently computed numerical invariants.
+    eps = 8.8541878128e-12
+    electron_q = 1.602176634e-19
+    k = 1/(4*math.pi*eps)
+    # 3.3 impact impulse with gravity included
+    require(close(150*(g+math.sqrt(2*g*5)/.30), 6419.747468305833),
+            "3.3 water impact force")
+    # 3.5 full momentum stoppage, no unwarranted factor 1/2
+    require(close(1.29*22.5*2.62*38**2, 109809.702),
+            "3.5 wind momentum force")
+    # 3.9 orthogonal vectors, not arithmetic sum
+    require(close(math.hypot(9.22, 5.33)*1e-21,
+                  1.0649755865746405e-20), "3.9 nucleus recoil")
+    # 3.14 source clearly gives 1.29e3 kg/s (NOT 1.29e4)
+    m0, rate, burn, u = 2.72e6, 1.29e3, 155, 5.5e4
+    mf = m0-rate*burn
+    require(close(mf, 2520050.0), "3.14 source mass-flow verification")
+    require(close(m0*g/rate, 20663.56589147287), "3.14 liftoff threshold")
+    require(close(u*math.log(m0/mf)-g*burn, 2680.4225741362498),
+            "3.14 burnout speed")
+    require(close(u*(burn-mf/rate*math.log(m0/mf))-.5*g*burn**2,
+                  203591.5636030566), "3.14 burnout height")
+    # 3.15 jet engine mass flow and ram ingestion
+    require(close(78*490 - 75*210, 22470), "3.15 air-breathing thrust")
+    # 3.18 cube with removed cylindrical tunnel
+    require(close((.5-math.pi/64)/(1-math.pi/16),.5610805166019814),
+            "3.18 cavity centroid under figure tangency")
+    # 3.20 comet aphelion, angular momentum conservation
+    require(close(8.75e10*5.46e4/(9.08e2),5261563876651.982),
+            "3.20 Halley aphelion")
+    # 3.22 transfer ellipse area and peri/apo angular momenta
+    rp,ra=(6371+205.5)*1000,(6371+35835.7)*1000
+    require(close(rp/ra*10200,1589.328234616779),"3.22 apogee speed")
+    require(close(2*math.pi*((rp+ra)/2)*math.sqrt(rp*ra)/(rp*10200),
+                  38063.89901380998),"3.22 transfer period")
+    # 12.4 quark electric repulsion
+    require(close(k*2*electron_q**2/(9*(1e-15)**2),
+                  51.26839005203858),"12.4 pion charge force")
+    # 12.5 original measurement error is 10^-21 * e, NOT 10^-21 C
+    require(close(k*(24e-21*electron_q)**2/
+                  (6.6743e-11*(16*1.66054e-27)**2),
+                  2.82059222767429e-6),"12.5 electrostatic/gravity bound")
+    # 12.11 broken charged circle
+    require(close(k*(3.12e-9/(2*math.pi*.5-.02))/.5*
+                  2*math.sin(.02/(2*.5)),0.7185893953517627),
+            "12.11 gap-center field")
+    require(close(eps*120/electron_q,6631619229.668532),
+            "12.15 excess electrons per square metre")
+    require(close(eps*.25/electron_q,13815873.395142775),
+            "12.16 electron deficit per cubic metre")
+    # 12.23 hydrogen electron cloud PLUS central proton
+    require(close(k*electron_q*5*math.exp(-2)/(.53e-10)**2,
+                  346881470154.7788),"12.23 hydrogen field with nucleus")
+    # 12.24 exponential proton distribution
+    x=1/.23
+    require(close(k*electron_q/(1e-15)**2*
+                  (1-math.exp(-x)*(1+x+x*x/2)),
+                  1.1643097581697867e21),"12.24 proton field")
+    # 12.26 uniform positive uranium sphere, radius 7.4 fm
+    require(close(math.sqrt(k*92*electron_q**2*(2.9e-15)**2/
+                  (3.17e-27*(7.4e-15)**3)),
+                  11788153.91384249),"12.26 tau orbit speed")
+    # 12.27 polarizability model
+    require(close(4*math.pi*eps*(.53e-10)**3*(3e6)/electron_q,
+                  3.101680528657228e-16),"12.27 cloud displacement")
+    require(close(eps*800*.1**2.5,2.2399520255482056e-11),
+            "12.29 cube's enclosed charge")
+    require(close(.5*(1.4e-13*1.6e6/(1.5e-10))*(.016/20)**2,
+                  .0004778666666666667),"12.34 inkjet deflection")
+
+    return 45
 
 
 def main() -> None:
