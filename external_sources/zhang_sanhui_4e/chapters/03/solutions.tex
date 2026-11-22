@@ -1,0 +1,431 @@
+% 张三慧大学物理学第四版第3章3.1--3.20独立解答
+% 依据教材力学热学PDF116--117页；配套辅导书第3章同题号比对待继续。
+% 原书图片的条件在 question.tex 记录；未经外审或版权许可核验。
+\section*{第3章\quad 动量与角动量：独立解析}
+\subsection*{章末习题3.1--3.20}
+
+\paragraph{习题 3.1}
+小球所受弹力的冲量等于该力在时间内的积分，
+\[
+ \boldsymbol J=\int_0^{\pi/(2\omega)}
+ (-kA\cos\omega t)\,dt\,\boldsymbol i
+ =-\frac{kA}{\omega}
+ \left[\sin\omega t\right]_0^{\pi/(2\omega)}\boldsymbol i
+ =\boxed{-\frac{kA}{\omega}\boldsymbol i}.
+\]
+负号表示向负 \(x\) 方向，量纲为
+\(\mathrm{N\,s}\)。结果还须符合动量定理
+\(\boldsymbol J=m[\boldsymbol v(t_2)-\boldsymbol v(t_1)]\)
+（若 \(k=m\omega^2\)，两者相同）。
+
+\paragraph{习题 3.2}
+匀速圆周运动的速率固定为 \(v\)，经历 \(1/4\)
+周期时速度方向转过 \(90^\circ\)。
+由动量定理，
+\[
+ |\boldsymbol J|=m|\boldsymbol v_f-\boldsymbol v_i|
+ =m\sqrt{v^2+v^2}
+ =\sqrt2(0.050)(20)
+ \approx\boxed{1.41\,\mathrm{N\,s}}.
+\]
+冲量的方向沿两动量矢量之差而非简单径向固定方向；
+向心力方向随时间变化，不能用初始向心力乘时间。
+
+\paragraph{习题 3.3}
+从最高点自由落下 \(h=5.0\,\mathrm m\)，
+忽略空气阻力，触水瞬间向下速率
+\(v=\sqrt{2gh}\approx9.90\,\mathrm{m/s}\)。
+以向上为正，触水后
+\(\Delta t=0.30\,\mathrm s\) 内速度由 \(-v\) 变为近零。
+若水对人的平均作用力为 \(F_{\rm water}\)，
+\[
+ (F_{\rm water}-mg)\Delta t
+ =m(0-(-v)).
+\]
+解得
+\[
+ \boxed{F_{\rm water}=m\left(g+\frac{\sqrt{2gh}}{\Delta t}\right)
+ \approx150(9.80+9.8995/0.30)
+ \approx6.42\times10^3\,\mathrm N}.
+\]
+该值是平均支持/阻力而非水击瞬时峰值，
+忽略人体部分浸入时的浮力单独分解。
+
+\paragraph{习题 3.4}
+子弹发射率
+\(\dot N=120/60=2\,\mathrm{s^{-1}}\)，
+单发质量 \(m=7.90\times10^{-3}\,\mathrm{kg}\)。
+忽略枪口气体动量，
+枪托对肩部的平均反冲力大小
+\[
+ \boxed{\bar F=\dot Nmv
+ =2(0.00790)(735)\approx11.6\,\mathrm N}.
+\]
+方向为枪射击方向的反向。
+原题提到“以分钟计”时，应将每分钟发射数换算成
+每秒数，否则会有60倍错误。
+
+\paragraph{习题 3.5}
+空气从风速 \(v=38\,\mathrm{m/s}\) 降为零，
+垂直车厢侧面的迎风面积
+\(A=(22.5)(2.62)=58.95\,\mathrm{m^2}\)。
+在流场全截面完全停下的简化假设下，
+每秒撞击空气质量为
+\(\dot m=\rho Av\)，
+平均动量流变化给出
+\[
+ \boxed{F=\dot mv=\rho Av^2
+ =(1.29)(22.5)(2.62)(38)^2
+ \approx1.10\times10^5\,\mathrm N}.
+\]
+力沿风吹向车厢的方向。
+若采用 \(F=\frac12C_D\rho Av^2\) 的
+空气动力阻力模型，必须另有 \(C_D\)；
+不能在原题“碰后停下”的动量模型中
+无依据地额外乘 \(1/2\)。
+
+\paragraph{习题 3.6}
+将弯管前的水速设为 \(v\boldsymbol i\)，
+转弯后为 \(v\boldsymbol j\)，
+\(\boldsymbol i,\boldsymbol j\) 互相垂直。
+稳态水流动量定律（仅动量通量的净改变）为
+\[
+ \boldsymbol F_{\rm pipe\to water}
+ =\dot m(\boldsymbol v_{\rm out}-\boldsymbol v_{\rm in})
+ =\dot mv(\boldsymbol j-\boldsymbol i).
+\]
+因此水对管的反作用力为
+\[
+ \boxed{\boldsymbol F_{\rm water\to pipe}
+ =\dot mv(\boldsymbol i-\boldsymbol j)},\qquad
+ \boxed{|F|=\sqrt2\,\dot mv
+ =\sqrt2(3\times10^3)(10)
+ \approx4.24\times10^4\,\mathrm N}.
+\]
+方向相对于入口流向偏向出口速度的反方向
+\(45^\circ\)。
+\textbf{模型限制：}真实管壁总载荷还包括
+进口、出口压力在各截面造成的作用；
+题中未给压力值，本答案是动量流转向所需的净力贡献，
+不能把它无条件认作实际全管压强载荷。
+
+\paragraph{习题 3.7}
+取已提起的链长为 \(l\)，单位长度质量
+\(\rho_l\)，速度恒定 \(v_0\)。
+运动链段重量为 \(\rho_l lg\)。
+在时间 \(dt\) 内有质量
+\(dm=\rho_lv_0dt\) 从桌面上的静止态
+进入竖直运动的链段，获得动量
+\(v_0dm\)，故单位时间的动量输入为
+\[
+ \frac{d p_{\rm entrained}}{dt}
+ =v_0\frac{dm}{dt}=\rho_lv_0^2.
+\]
+由随质量增长的系统动量平衡
+\(F-\rho_l lg=\rho_lv_0^2\)，得
+\[
+ \boxed{F=\rho_l lg+\rho_lv_0^2}.
+\]
+当 \(v_0\to0\) 时恢复准静态吊起质量
+\(\rho_l l\) 的重力。
+
+\paragraph{习题 3.8}
+设链的落下长度为 \(x\)，
+单位长度质量 \(\rho_l\)，从静止松开，
+其着地瞬间速度由
+\(v^2=2gx\) 给出。
+桌上已经静止堆积的部分重量为
+\(\rho_l gx\)，此外
+连续到达的质量流率
+\(\dot m=\rho_lv\) 由速度 \(v\)
+变为零，产生附加向下作用力
+\(\dot mv=\rho_lv^2=2\rho_lgx\)。
+故桌面的总受压为
+\[
+ \boxed{N=\rho_lgx+\rho_lv^2
+ =3\rho_lgx=3W_{\rm deposited}}.
+\]
+该结论适用于理想完全柔软链逐渐落地，
+不包括最后端点着地时的瞬态冲击。
+
+\paragraph{习题 3.9}
+原核初始静止，初动量为零。
+令电子动量 \(\boldsymbol p_e=p_1\boldsymbol i\)，
+中微子动量 \(\boldsymbol p_\nu=p_2\boldsymbol j\)，
+两者正交。
+则由动量守恒，反冲原子核动量为
+\[
+ \boldsymbol p_{\rm recoil}=-
+ (\boldsymbol p_e+\boldsymbol p_\nu).
+\]
+大小为
+\[
+ \boxed{p_{\rm recoil}
+ =\sqrt{p_1^2+p_2^2}
+ =\sqrt{(9.22)^2+(5.33)^2}\times10^{-21}
+ \approx1.065\times10^{-20}\,\mathrm{kg\,m/s}}.
+\]
+方向与电子动量方向反向偏向中微子反方向
+\(\beta=\arctan(p_2/p_1)\approx30.0^\circ\)。
+这里动量守恒不要求已知原子核的质量。
+
+\paragraph{习题 3.10}
+以火箭飞行方向为正。
+两部分分离瞬间相互作用内力的冲量相反，
+总动量不变：
+\[
+ m_1v_1+m_2v_2=(m_1+m_2)v_0.
+\]
+假定仪器舱相对火箭壳向前分离，
+\(v_2-v_1=u=910\,\mathrm{m/s}\)。
+联立得
+\[
+ \boxed{v_1=v_0-\frac{m_2}{m_1+m_2}u
+ \approx7289.8\,\mathrm{m/s}},
+\quad
+ \boxed{v_2=v_0+\frac{m_1}{m_1+m_2}u
+ \approx8199.8\,\mathrm{m/s}}.
+\]
+检查：两速度差恰为 \(910\,\mathrm{m/s}\)，
+且质量加权平均速度为 \(7600\,\mathrm{m/s}\)。
+如果分离方向与飞行方向相反，
+相应的速度符号需按真实几何调整。
+
+\paragraph{习题 3.11}
+设相撞后两车粘在一起（质量 \(2m\)），
+沿地面因摩擦减速 \(\mu_kg\)，
+滑行 \(s=25\,\mathrm m\) 后停止。
+由功和能，
+\[
+ V=\sqrt{2\mu_kgs}
+ =\sqrt{2(0.8)(9.8)(25)}
+ \approx19.80\,\mathrm{m/s}.
+\]
+相撞前两车速度互相垂直，
+记其速率为 \(u_1,u_2\)。
+动量守恒的矢量平方给出
+\[
+ (m u_1)^2+(m u_2)^2=(2mV)^2
+ \quad\Rightarrow\quad
+ \boxed{u_1^2+u_2^2=4V^2\approx1568}.
+\]
+若两车速度均不超过 \(14\,\mathrm{m/s}\)，
+左端至多 \(2(14)^2=392\)，显然矛盾。
+因此两个司机\emph{不可能同时}守速限；
+至少有一方超速。不能由此单独断言两人各自都超速。
+
+\paragraph{习题 3.12}
+设废气喷出前总质量 \(M=6090\,\mathrm{kg}\)，
+向前速度 \(v_0=105\,\mathrm{m/s}\)；
+喷出废气质量 \(\Delta m=80.0\,\mathrm{kg}\)，
+其相对于探测器的速度为 \(-u\)、
+\(u=253\,\mathrm{m/s}\)。
+喷出后探测器速度为 \(v\)，
+废气在同一惯性系中速度为 \(v-u\)。
+动量守恒
+\[
+ Mv_0=(M-\Delta m)v+\Delta m(v-u)
+ =Mv-\Delta m u.
+\]
+故
+\[
+ \boxed{v=v_0+\frac{\Delta m}{M}u
+ =105+\frac{80.0\times253}{6090}
+ \approx108.32\,\mathrm{m/s}}.
+\]
+若质量值或喷气相对速度的参考系不同，
+应重新从原题核验，不应沿用本式的分母。
+
+\paragraph{习题 3.13}
+设火箭无外力，初始静止，初质量 \(m_0\)，
+喷气相对于火箭速度大小恒为 \(u\)。
+齐奥尔科夫斯基火箭方程为
+\[
+ v=u\ln\frac{m_0}{m}.
+\]
+后喷气体在外部惯性系中静止需
+\(v-u=0\)，即
+\[
+ \ln\frac{m_0}{m}=1,\qquad
+ \frac{m}{m_0}=e^{-1}.
+\]
+故燃烧掉的质量占初质量的比例
+\[
+ \boxed{\frac{m_0-m}{m_0}=1-e^{-1}
+ \approx0.6321}.
+\]
+此处“喷气静止”是指相对初始静止惯性系的瞬时
+废气速度为零，并非所有已喷出的气体同时静止。
+
+\paragraph{习题 3.14}
+设初质量 \(m_0=2.72\times10^6\,\mathrm{kg}\)，
+质量燃烧率
+\(\dot m=1.29\times10^4\,\mathrm{kg/s}\)，
+喷气相对速率 \(u\)，常量重力
+\(g=9.80\,\mathrm{m/s^2}\)。
+瞬时推力 \(T=\dot m\,u\)。
+(1) 刚起飞临界条件 \(T=m_0g\)，故
+\[
+ \boxed{u_{\min}=\frac{m_0g}{\dot m}
+ \approx2.07\times10^3\,\mathrm{m/s}}.
+\]
+(2) 在竖直上升且忽略阻力时
+\(m(t)=m_0-\dot mt\)，
+\[
+ \frac{dv}{dt}=\frac{u\dot m}{m(t)}-g.
+\]
+以 \(v(0)=0\) 积分得
+\[
+ v(t)=u\ln\frac{m_0}{m_0-\dot mt}-gt.
+\]
+所给燃烧时间 \(t_b=155\,\mathrm s\) 后，
+剩余质量
+\(m_b=2.72\times10^6-(1.29\times10^4)(155)
+=7.205\times10^5\,\mathrm{kg}\)。
+因 \(u\dot m/m(t)>g\) 全程成立，
+速度最大值在刚燃尽时：
+\[
+ \boxed{v_{\max}
+ =(5.50\times10^4)\ln\frac{2.72\times10^6}{7.205\times10^5}
+ -(9.80)(155)
+ \approx7.15\times10^4\,\mathrm{m/s}}.
+\]
+(3) 继续对 \(v(t)\) 积分：
+\[
+ h(t)=u\left[t-\frac{m(t)}{\dot m}
+ \ln\frac{m_0}{m(t)}\right]
+ -\frac12gt^2.
+\]
+因此
+\[
+ \boxed{h(t_b)\approx4.33\times10^6\,\mathrm m}.
+\]
+\textbf{模型限定：}在这个高度重力不可能严格恒定，
+空气阻力也不能一直忽略；
+数值只是照原题理想化近似演算，不是实际火箭工程轨迹。
+
+\paragraph{习题 3.15}
+令飞机向前为正，进气空气相对于地面近似静止，
+其质量流率 \(\dot m_a=75\,\mathrm{kg/s}\)，
+燃料在飞机内初始随飞机以 \(v=210\,\mathrm{m/s}\) 运动，
+燃料质量流率 \(\dot m_f=3.0\,\mathrm{kg/s}\)。
+尾气以相对于飞机 \(-u=-490\,\mathrm{m/s}\)
+喷出，地面系的尾气速度是 \(v-u=-280\,\mathrm{m/s}\)。
+发动机向后输出的流体总动量变化，
+由反作用得飞机推力
+\[
+ F=\dot m_a(0)+\dot m_fv
+ -(\dot m_a+\dot m_f)(v-u)
+ =(\dot m_a+\dot m_f)u-\dot m_av.
+\]
+即
+\[
+ \boxed{F=78(490)-75(210)
+ =2.247\times10^4\,\mathrm N}.
+\]
+若把进气初动量误当成随飞机速度 \(v\)，
+会漏掉“冲压进气”造成的动量差。
+
+\paragraph{习题 3.16}
+两根 O--H 键等长
+\(l=0.0958\,\mathrm{nm}\)，夹角 \(105^\circ\)。
+水分子质心必在角平分线上。
+以氧原子核位置为原点、向两氢原子中间为正，
+氢原子到该轴的投影均为
+\(l\cos(105^\circ/2)\)。
+取相对原子质量 \(m_H:m_O\simeq1:16\)，有
+\[
+ x_{\rm CM}=
+ \frac{2m_Hl\cos52.5^\circ}{m_O+2m_H}
+ =\frac{2(0.0958)\cos52.5^\circ}{18}\,\mathrm{nm}
+ \approx\boxed{0.00648\,\mathrm{nm}}.
+\]
+因此质心在从 O 核指向两个 H 核夹角平分线
+的方向上，离 O 核约 \(6.48\times10^{-3}\,\mathrm{nm}\)。
+
+\paragraph{习题 3.17}
+均匀半圆形薄板半径记为 \(R\)，
+取直径沿 \(x\) 轴，材料在 \(y\ge0\)。
+由于左右镜像对称，\(x_{\rm CM}=0\)。
+用极坐标 \(y=r\sin\theta\)，
+区域 \(0\le r\le R,\ 0\le\theta\le\pi\)，
+质心纵坐标
+\[
+ y_{\rm CM}=
+ \frac{\int_0^\pi\int_0^R
+ r\sin\theta\cdot r\,dr\,d\theta}
+ {\int_0^\pi\int_0^Rr\,dr\,d\theta}
+ =\frac{(R^3/3)\cdot2}{(\pi R^2/2)}
+ =\boxed{\frac{4R}{3\pi}}.
+\]
+位置沿半圆对称轴朝向弧面。
+\textbf{注意：}这里是“半圆形薄板”，
+不是“半圆细线”；半圆细线的质心为 \(2R/\pi\)。
+
+\paragraph{习题 3.18}
+取边长 \(a\) 的均匀立方体，
+以底面为 \(z=0\)，顶面为 \(z=a\)。
+图3.38显示一根沿前后方向贯穿立方体的
+半径 \(a/4\) 圆柱形孔，孔在下半部中央，
+其截面与底面相切，故孔轴高度 \(z_h=a/4\)。
+原立方体质量
+\(M=\rho a^3\)，孔质量
+\(m_h=\rho\pi(a/4)^2a=\rho\pi a^3/16\)。
+利用“完整体减去挖空部分”的质心公式，
+\[
+ z_{\rm remain}
+ =\frac{M(a/2)-m_h(a/4)}{M-m_h}
+ =a\frac{1/2-\pi/64}{1-\pi/16}
+ \approx\boxed{0.5611a}.
+\]
+其平面位置仍在左右及前后中心线的交点。
+\textbf{复核依赖：}若图3.38实际孔轴高度
+不是 \(a/4\)（即孔不与底面相切），
+应把公式中的 \(a/4\) 换为真实孔轴高度 \(z_h\)；
+本数值需图示最终审定。
+
+\paragraph{习题 3.19}
+两石子从同一处相继释放，取向下为正，
+以第一石子释放时为 \(t=0\)，
+两质量分别
+\(m_1=0.020\,\mathrm{kg}\)、
+\(m_2=0.050\,\mathrm{kg}\)。
+当 \(t>1\,\mathrm s\) 且均未落地时，
+\[
+ v_1=gt,\qquad v_2=g(t-1).
+\]
+质心速度为
+\[
+ v_C=\frac{m_1v_1+m_2v_2}{m_1+m_2}
+ =g\left[t-\frac{m_2}{m_1+m_2}(1\,\mathrm s)\right]
+ =\boxed{9.80(t-5/7)\,\mathrm{m/s}},
+\]
+式中 \(t\) 以秒为数值单位。
+两石子都仅受重力，因此
+\[
+ \boxed{a_C=\frac{m_1g+m_2g}{m_1+m_2}
+ =9.80\,\mathrm{m/s^2}}
+\]
+方向向下。若任一石子已落地，
+动量系统的外力条件变化，不能继续套用。
+
+\paragraph{习题 3.20}
+太阳引力为中心力，
+对太阳参考点的力矩为零，
+所以彗星单位质量的角动量
+\(h=|\boldsymbol r\times\boldsymbol v|\)
+在各时刻守恒。
+近日点与远日点的径向速度分量均为零，
+即速度与径矢垂直：
+\[
+ r_1v_1=r_2v_2.
+\]
+故
+\[
+ \boxed{r_2=\frac{r_1v_1}{v_2}
+ =\frac{(8.75\times10^{10})(5.46\times10^4)}
+ {9.08\times10^2}
+ \approx5.26\times10^{12}\,\mathrm m}.
+\]
+检查：\(r_2>r_1\)，且远日点速率更低，
+符合中心力角动量守恒。
