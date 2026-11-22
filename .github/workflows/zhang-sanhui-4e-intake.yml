@@ -89,6 +89,8 @@ jobs:
         run: python3 external_sources/zhang_sanhui_4e/qa_physical_feasibility_v2.py
       - name: Lock academic review and source images for 159 figure-bound candidates
         run: python3 external_sources/zhang_sanhui_4e/qa_figure_and_risk_gate.py
+      - name: Electrostatic shell and electron binding energy correction checks
+        run: python3 external_sources/zhang_sanhui_4e/qa_thought_14_2_3_mass_and_potential.py
   xelatex-candidate-proof:
     runs-on: ubuntu-latest
     needs: structural-and-math-spotchecks
