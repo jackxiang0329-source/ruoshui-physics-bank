@@ -168,10 +168,13 @@
       "number": 11,
       "title": "热力学第二定律",
       "volume": "V1",
-      "status": "not_started",
-      "verified_exercise_count": 0,
-      "question_file": null,
-      "solution_file": null
+      "status": "all_chapter_end_exercises_candidate_transcribed_pending_independent_review",
+      "verified_exercise_count": 13,
+      "question_file": "chapters/11/questions.tex",
+      "solution_file": "chapters/11/solutions.tex",
+      "chapter_end_exercise_number": "11.13",
+      "all_printed_end_exercises_transcribed": true,
+      "thought_questions_checked": false
     },
     {
       "number": 12,
@@ -273,10 +276,13 @@
       "number": 20,
       "title": "电磁感应",
       "volume": "V2",
-      "status": "not_started",
-      "verified_exercise_count": 0,
-      "question_file": null,
-      "solution_file": null
+      "status": "all_chapter_end_exercises_candidate_transcribed_pending_independent_review",
+      "verified_exercise_count": 27,
+      "question_file": "chapters/20/questions.tex",
+      "solution_file": "chapters/20/solutions.tex",
+      "chapter_end_exercise_number": "20.27",
+      "all_printed_end_exercises_transcribed": true,
+      "thought_questions_checked": false
     },
     {
       "number": 21,
@@ -10542,10 +10548,924 @@
         "DC_power_assumption_from_voltage_and_power"
       ],
       "notes": null
+    },
+    {
+      "source_problem_number": "11.1",
+      "canonical_id": "ZS4-11-001",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        398
+      ],
+      "supplement_pdf_pages": [
+        177,
+        178
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": true,
+      "risk_flags": [
+        "source_corrected_one_mole_rigid_diatomic_oxygen_not_helium",
+        "companion_Q_2_79kJ_vs_graph_integer_2_80kJ",
+        "figure_dependency"
+      ],
+      "notes": "Main textbook V1 physical p398 says 1 mol rigid diatomic oxygen, not helium; companion S PDF p178 uses i=5, W=1300J, Q prints2.79kJ but exact graph gives ΔU1500J,Q2800J, ΔS23.54J/K. Misread first draft corrected before index."
+    },
+    {
+      "source_problem_number": "11.2",
+      "canonical_id": "ZS4-11-002",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        398
+      ],
+      "supplement_pdf_pages": [
+        178,
+        179
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "ice_heating_melting_steam_entropy_four_stages"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "11.3",
+      "canonical_id": "ZS4-11-003",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        398
+      ],
+      "supplement_pdf_pages": [
+        179
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "environment_entropy_not_person_entropy"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "11.4",
+      "canonical_id": "ZS4-11-004",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        398
+      ],
+      "supplement_pdf_pages": [
+        179
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "entropy_generation_finite_temperature_gradient"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "11.5",
+      "canonical_id": "ZS4-11-005",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        399
+      ],
+      "supplement_pdf_pages": [
+        179
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "irreversible_friction_entropy_rate"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "11.6",
+      "canonical_id": "ZS4-11-006",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        399
+      ],
+      "supplement_pdf_pages": [
+        179,
+        180
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "waterfall_width_irrelevant_given_flow_rate"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "11.7",
+      "canonical_id": "ZS4-11-007",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        399
+      ],
+      "supplement_pdf_pages": [
+        180
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "two_reservoir_staged_heating_decreases_entropy_generation"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "11.8",
+      "canonical_id": "ZS4-11-008",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        399
+      ],
+      "supplement_pdf_pages": [
+        180,
+        181
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "source_corrected_equal_mass_ice_water_0_9kg_freeze_then_melt",
+        "room_temp_slightly_below_zero_unspecified"
+      ],
+      "notes": "Main textbook V1 p399 final water and ice masses EQUAL at1.6kg each from initial 2.5kg water+0.7kg ice; 0.9kg water freezes with room slightly below0C, then 100C bath melts0.9kg returning original. Earlier erroneous all-ice/all-water paraphrase corrected."
+    },
+    {
+      "source_problem_number": "11.9",
+      "canonical_id": "ZS4-11-009",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        399
+      ],
+      "supplement_pdf_pages": [
+        181,
+        182
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "ideal_reversible_isothermal_isochoric_adiabatic_cycle"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "11.10",
+      "canonical_id": "ZS4-11-010",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        399
+      ],
+      "supplement_pdf_pages": [
+        182
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "equal_mass_equal_heat_capacity_adiabatic_mixing"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "11.11",
+      "canonical_id": "ZS4-11-011",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        399
+      ],
+      "supplement_pdf_pages": [
+        182,
+        183
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "identical_gas_no_extra_mixing_entropy"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "11.12",
+      "canonical_id": "ZS4-11-012",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        399
+      ],
+      "supplement_pdf_pages": [
+        183
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "entropy_maximum_under_fixed_total_energy"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "11.13",
+      "canonical_id": "ZS4-11-013",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        399,
+        400
+      ],
+      "supplement_pdf_pages": [
+        184
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": true,
+      "risk_flags": [
+        "figure_dependency",
+        "major_textbook_vs_companion_throttle_isenthalpic_vs_isentropic_mislabel",
+        "companion_95_65_20K_unverified_for_textbook_paths"
+      ],
+      "notes": "Main textbook V1 p399 labels(1)(2) throttle expansion (isenthalpic) and(3) reversible adiabatic (isentropic). Companion S PDF p184 text labels first two '等熵' and third '等焓', reversing physical mechanisms, and reports95K/65K/20K. Those temperatures not independently approved for textbook paths; keep unverified figure and phase coexistence risks."
+    },
+    {
+      "source_problem_number": "20.1",
+      "canonical_id": "ZS4-20-001",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        205
+      ],
+      "supplement_pdf_pages": [
+        288
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": true,
+      "risk_flags": [
+        "figure_dependency",
+        "motional_voltage_a_higher_upward_current_upward_rod"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "20.2",
+      "canonical_id": "ZS4-20-002",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        205
+      ],
+      "supplement_pdf_pages": [
+        288
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "original_N4000_not_4",
+        "coil_rotation_plane_parallel_B_for_peak"
+      ],
+      "notes": "Main textbook V2 physical p205 N=4×10^3 turns, avg radius12cm, 0.5Gauss Earth field f30 rev/s; maximum emf≈1.71V."
+    },
+    {
+      "source_problem_number": "20.3",
+      "canonical_id": "ZS4-20-003",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        205
+      ],
+      "supplement_pdf_pages": [
+        288,
+        289
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": true,
+      "risk_flags": [
+        "figure_dependency",
+        "moving_rectangular_coil_far_wire"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "20.4",
+      "canonical_id": "ZS4-20-004",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        205
+      ],
+      "supplement_pdf_pages": [
+        289
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": true,
+      "risk_flags": [
+        "figure_dependency",
+        "stationary_coil_time_varying_wire_current"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "20.5",
+      "canonical_id": "ZS4-20-005",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        205
+      ],
+      "supplement_pdf_pages": [
+        289,
+        290
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": true,
+      "risk_flags": [
+        "figure_dependency",
+        "induction_nonconservative_field_chord_electrostatic_potential"
+      ],
+      "notes": "Original fig20.24 chord a,b lies below centre; a→b induced field under increasing INTO-page B, b positive. Companion S PDF p290 gives magnitude (L/2) sqrt(R²-L²/4) dB/dt."
+    },
+    {
+      "source_problem_number": "20.6",
+      "canonical_id": "ZS4-20-006",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        205
+      ],
+      "supplement_pdf_pages": [
+        290
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "source_sound_speed330m_per_s_companion_B_below_westbound_southwing_high"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "20.7",
+      "canonical_id": "ZS4-20-007",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        206
+      ],
+      "supplement_pdf_pages": [
+        290
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "sea_water_flow_open_circuit_geophysics_approximation"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "20.8",
+      "canonical_id": "ZS4-20-008",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        206
+      ],
+      "supplement_pdf_pages": [
+        290
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "generator_rotation_rate_frequency_vs_rpm"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "20.9",
+      "canonical_id": "ZS4-20-009",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        206
+      ],
+      "supplement_pdf_pages": [
+        290,
+        291
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "charge_impulse_independent_motion_time"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "20.10",
+      "canonical_id": "ZS4-20-010",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        206
+      ],
+      "supplement_pdf_pages": [
+        291
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": true,
+      "risk_flags": [
+        "figure_dependency",
+        "source_companion_local_patch_eddy_approx_return_path"
+      ],
+      "notes": "Original metal disc area a² patch at distance r; companion S PDF p291 assumes return circuit resistance negligible and patch resistance ρ/b, braking torque≈B²a²r²bω/ρ. Must not infer exact distributed eddy-current boundary solution."
+    },
+    {
+      "source_problem_number": "20.11",
+      "canonical_id": "ZS4-20-011",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        206
+      ],
+      "supplement_pdf_pages": [
+        291
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "betatron_average_B_twice_orbit_B_requires_initial_condition"
+      ],
+      "notes": "Betatron rule orbit field=half enclosed-area average B relies on initial field relation/zero constants."
+    },
+    {
+      "source_problem_number": "20.12",
+      "canonical_id": "ZS4-20-012",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        206
+      ],
+      "supplement_pdf_pages": [
+        291,
+        292
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "betatron_first_order_nonrelativistic"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "20.13",
+      "canonical_id": "ZS4-20-013",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        206
+      ],
+      "supplement_pdf_pages": [
+        292
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "mutual_inductance_long_solenoid_ideal_no_leakage"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "20.14",
+      "canonical_id": "ZS4-20-014",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        206
+      ],
+      "supplement_pdf_pages": [
+        292,
+        293
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "small_coil_big_coil_uniform_field",
+        "flux_per_turn_vs_total_linkage"
+      ],
+      "notes": "Mutual L≈6.28µH, induced emf≈0.314mV for 50A/s. Flux per turn in b differs from total flux linkage by factor Nb100."
+    },
+    {
+      "source_problem_number": "20.15",
+      "canonical_id": "ZS4-20-015",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        206
+      ],
+      "supplement_pdf_pages": [
+        293
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "solenoid_self_inductance_end_effect_ignored"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "20.16",
+      "canonical_id": "ZS4-20-016",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        206
+      ],
+      "supplement_pdf_pages": [
+        293
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "self_induction_emf_flux_per_turn"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "20.17",
+      "canonical_id": "ZS4-20-017",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        206
+      ],
+      "supplement_pdf_pages": [
+        293,
+        294
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": true,
+      "risk_flags": [
+        "figure_dependency",
+        "central_straight_wire_return_path_needed_for_mutual_inductance"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "20.18",
+      "canonical_id": "ZS4-20-018",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        206
+      ],
+      "supplement_pdf_pages": [
+        294
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "parallel_wire_internal_B_neglected"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "20.19",
+      "canonical_id": "ZS4-20-019",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        207
+      ],
+      "supplement_pdf_pages": [
+        294,
+        295
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "orthogonal_coils_zero_mutual_assumed"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "20.20",
+      "canonical_id": "ZS4-20-020",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        207
+      ],
+      "supplement_pdf_pages": [
+        295
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": true,
+      "risk_flags": [
+        "figure_dependency",
+        "aiding_vs_opposing_mutual_sign"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "20.21",
+      "canonical_id": "ZS4-20-021",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        207
+      ],
+      "supplement_pdf_pages": [
+        295,
+        296
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "magnetic_field_equivalent_mass_not_neutron_star_matter_density"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "20.22",
+      "canonical_id": "ZS4-20-022",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        207
+      ],
+      "supplement_pdf_pages": [
+        296
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "vacuum_E_and_B_energy_density_compare"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "20.23",
+      "canonical_id": "ZS4-20-023",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        207
+      ],
+      "supplement_pdf_pages": [
+        296
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "ideal_uniform_1Tesla_volume_superconducting_store"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "20.24",
+      "canonical_id": "ZS4-20-024",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        207
+      ],
+      "supplement_pdf_pages": [
+        296
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "surface_tangential_E_and_B_poynting_energy_flow"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "20.25",
+      "canonical_id": "ZS4-20-025",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        207
+      ],
+      "supplement_pdf_pages": [
+        296,
+        297
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "coax_inner_conductor_uniform_current_included_internal_inductance"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "20.26",
+      "canonical_id": "ZS4-20-026",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        207,
+        208
+      ],
+      "supplement_pdf_pages": [
+        297,
+        298
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": true,
+      "risk_flags": [
+        "figure_dependency",
+        "constant_current_external_supply_energy_twice_mechanical_work"
+      ],
+      "notes": "At fixed current as parallel pipes separate, magnetic force does positive work while B-field energy INCREASES. Source must supply twice the amount, A_e=A_m+ΔU_B=2A_m."
+    },
+    {
+      "source_problem_number": "20.27",
+      "canonical_id": "ZS4-20-027",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        208
+      ],
+      "supplement_pdf_pages": [
+        298
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; explicit_figure_and_companion_differences_pending",
+      "exam_ready": false,
+      "requires_original_figure": true,
+      "risk_flags": [
+        "figure_dependency",
+        "nested_solenoid_overlap_length_mutual_energy_coenergy"
+      ],
+      "notes": null
     }
   ],
   "progress": {
-    "verified_questions": 466,
+    "verified_questions": 506,
     "volumes_started": [
       "V1",
       "V2"
@@ -10554,17 +11474,17 @@
     "complete": false,
     "total_exercise_count": "not_yet_counted_from_full_scans",
     "chapter_1_end_exercises_transcribed": true,
-    "note": "466 candidate pairs, 18 complete chapter-end exercise sets. Latest batch40: V1 ch10 26 from physical PDF371–375 and V2 ch19 14 from PDF187–189. All figures/rights/peer review pending.",
-    "last_completed_exercise_V1": "10.26",
-    "next_to_transcribe_V1": "11.1",
-    "next_to_transcribe_V2": "20.1",
-    "quality_summary": "Both original three-book scans reopened directly; ch10 and ch19 all numbered end exercises independently derived and source-indexed. Academic expert validation and exact figure vector redraw incomplete. Strict source correction10.12 printed p2.7atm,70kg gives speed36.1m/s when air resistance work deducted; companion p164 uses 2.6atm,75kg giving29m/s; discrepancy logged.",
+    "note": "506 candidate numbered chapter-end exercise and independently-derived solution pairs, across20 chapters (V1 ch1–11, V2 ch12–20). New ch11 13 from main PDF398–400, ch20 27 from main PDF205–208. All candidate only.",
+    "last_completed_exercise_V1": "11.13",
+    "next_to_transcribe_V1": "volume_1_chapter_end_exercises_complete",
+    "next_to_transcribe_V2": "21.1",
+    "quality_summary": "40 new source-scan-grounded chapter11/chapter20 pairs. Fixed source question11.1 gas rigid diatomic oxygen, question11.8 equal ice/water mass. Flagged chapter11.13 enthalpy/entropy reversal in companion. Preserve all exam_ready false, no expert approval.",
     "chapter_2_end_exercises_transcribed": true,
     "chapter_3_end_exercises_transcribed": true,
     "chapter_12_end_exercises_transcribed": true,
-    "last_completed_exercise_V2": "19.14",
+    "last_completed_exercise_V2": "20.27",
     "supplement_pdf_page_mappings_new_batch": 55,
-    "supplement_mapping_note": "Ch10 source numbers located in S PDF physical pp159–173; ch19 pp280–285, 40 narrow per-number page ranges supplied. Risky B-H graph and coercive current compared with companion: 19.9 p283,19.10–11 p284.",
+    "supplement_mapping_note": "Current40 exercise numbers linked to companion S physical PDF pages177–184 (V1 ch11) and288–298 (V2 ch20). Per-source page windows, source figure and expert audit still pending.",
     "chapter_4_end_exercises_transcribed": true,
     "chapter_13_end_exercises_transcribed": true,
     "supplement_pdf_page_mappings_current_batch": 40,
@@ -10579,7 +11499,9 @@
     "chapter_9_end_exercises_transcribed": true,
     "chapter_18_end_exercises_transcribed": true,
     "chapter_10_end_exercises_transcribed": true,
-    "chapter_19_end_exercises_transcribed": true
+    "chapter_19_end_exercises_transcribed": true,
+    "chapter_11_end_exercises_transcribed": true,
+    "chapter_20_end_exercises_transcribed": true
   },
   "editorial_policies": {
     "dedupe_key": "source edition + chapter + original problem number",
