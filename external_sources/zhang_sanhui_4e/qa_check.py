@@ -1394,7 +1394,115 @@ def check_numeric_spotmodels() -> int:
     require(close(h29*cc29/(140e-9*ee29),8.856014),
             "29.14 KCl 140nm photon energy above7.6eV gap")
 
-    return 571
+    # Chapter30 nuclear reaction source-model, careful isotope mass conventions.
+    Na30=6.02214076e23
+    unit30=931.494
+    er30=1.602176634e-19
+    year30=365.25*24*3600
+    massH30=1.007825
+    massN30=1.008665
+    require(close(2*79*1.439965/6*(1+4/197),38.693,rel=.002),
+            "30.1 gold alpha close approach WITH target recoil fm")
+    require(close(2*7*1.439965/6*(1+4/14),4.32),
+            "30.1 nitrogen alpha recoil 28.6percent")
+    require(close((7*massH30+9*massN30-16.006099)*unit30,117.984),
+            "30.2 16N nuclear binding from NEUTRAL atom mass")
+    require(close((8*massH30+8*massN30-15.994915)*unit30,127.619),
+            "30.2 16O binding energy atomic mass convention")
+    require(close((9*massH30+7*massN30-16.011465)*unit30,111.421),
+            "30.2 16F nuclear binding")
+    require(close(3*(2*6-1)*1.439965/(5*2.79),3.40637),
+            "30.4 mirror 11C/B Coulomb inferred radius")
+    require(close(3*(2*8-1)*1.439965/(5*3.48),3.72405),
+            "30.4 mirror 15O/N inferred radius")
+    require(close(3*(2*11-1)*1.439965/(5*4.30),4.21943),
+            "30.4 mirror 21Na/Ne inferred radius")
+    require(close(3*28.3+3*2.42,92.16),
+            "30.5 carbon12 alpha triangle pair interactions")
+    require(close(4*28.3+6*2.42,127.72),
+            "30.5 oxygen16 tetrahedron six pair bonds")
+    require(close(-17.804*232**(2/3)*(2**(1/3)-1)
+                  +.7103*90**2/232**(1/3)*(1-2**(-2/3)),
+                  171.7572),"30.6 Th232 equal-half liquid-drop fission model")
+    require(close(7.3458*12**(2/3)-.8345*36/12**(1/3),25.3808),
+            "30.7 two carbon12 fusion semi empirical Q")
+    require(close(math.sqrt(2-1),1),
+            "30.8 exponential half lifetime RMS is mean tau not mode")
+    NK30=.0037*70/.0391*Na30*1.2e-4
+    AK30=math.log(2)/(1.3e9*year30)*NK30
+    require(close(AK30,8077.94,rel=.005),
+            "30.9 natural potassium40 body activity about8.1kBq")
+    N238=1e4/(8*16+3*238)*3*Na30*.9927
+    N235=1e4/(8*16+3*238)*3*Na30*.0072
+    require(close(N238*1600/4.46e9/Na30*226*1e3,2.87,rel=.005),
+            "30.10 U238 to Ra226 secular equilibrium mg")
+    require(close(N235*3.27e4/7.04e8/Na30*231*1e3,2.75,rel=.02),
+            "30.10 U235 to Pa231 secular equilibrium mg")
+    require(close(4/30*2**(24/13.1),.4756,rel=.01),
+            "30.11 I123 uptake fraction near48percent")
+    require(close(300e3/30*2**(-10/14.97),6290,rel=.005),
+            "30.12 Na24 radiotracer blood volume milliliters")
+    tau30=8270*year30
+    age30=8270*math.log((.3*Na30*1.3e-12)/(.15*tau30))
+    require(close(age30,1.50e4,rel=.02),
+            "30.13 C14 wood dating count-per-minute converted to per-second")
+    require(close(4.46e9/math.log(2)*math.log(1+(.12/206)/(.30/238)),
+                  2.45e9,rel=.01),
+            "30.14 uranium to lead rock closed-system geological age")
+    require(close(4.7825*4/222,.08617117),
+            "30.15 Ra alpha decay daughter recoil")
+    require(close(4.7825*(1+4/222),4.86867),
+            "30.15 Ra total release includes recoil")
+    require(close((.66-.57)/unit30,9.661898e-5),
+            "30.16 difference of Zn64 vs Ni64 NUCLEAR masses")
+    require(close((.66-.57+1.022)/unit30,.0011937,rel=.001),
+            "30.16 neutral atom mass differs by 2 electron masses")
+    nCo30=8.858/59*Na30
+    depthCo30=nCo30*120e-24*2
+    require(depthCo30>20,"30.17 thick cobalt cube optical depth about21.7")
+    incoming30=2e12*(2*2)
+    thin30=nCo30*8*120e-24*2e12
+    require(thin30>incoming30*20,
+            "30.17 S textbook thin rate exceeds incident neutron number UNPHYSICAL")
+    decayCo30=math.log(2)/(5.27*year30)
+    require(close(decayCo30*thin30*(6*3600)/3.7e10,.4224),
+            "30.17 unphysical companion thin source activity0.42Ci")
+    require(close(decayCo30*incoming30*(1-math.exp(-depthCo30))*
+                  (6*3600)/3.7e10,.01946),
+            "30.17 physical one-sided shielded source limited ~.0195Ci")
+    nCd30=8.64/112.4*Na30
+    dCd30=-math.log(.05)/(nCd30*4000e-24)
+    require(close(dCd30*1e4,161.7874),
+            "30.18 exact 95percent Cd neutron attenuation 162micron")
+    require(close((1-math.exp(-.95)),.61326),
+            "30.18 companion thin .95 optical depth absorbs only61percent")
+    qC30=(13.003355+1.007825-4.002603-10.012937)*unit30
+    require(close(qC30,-4.06131),"30.19 13C(p,alpha)10B endothermic Q")
+    require(close((13.003355+1.007825-2.014102-12)*unit30,-2.72183),
+            "30.19 13C(p,d)12C Q negative")
+    require(close((13.003355+1.007825-14.003074)*unit30,7.55069),
+            "30.19 13C(p,gamma)14N Q positive")
+    require(close(-qC30*(1+1/13),4.37372),
+            "30.20 Coulomb barrier is not same as Q-only threshold")
+    require(close(1.5e30/(4*1.67e-27)*24.67e6*er30/
+                  3.9e26/year30,7.2115e10),
+            "30.21 Sun all-H ideal lifetime using 24.67 MeV no annihilation")
+    atomM30=[1.007825,13.005738,13.003355,14.003074,
+             15.003065,15.000109,4.002603]
+    mH,mN13,mC13,mN14,mO15,mN15,mHe4=atomM30
+    electron_u30=.0005485799
+    qs30=[(mH+12-mN13)*unit30,
+          (mN13-mC13-2*electron_u30)*unit30,
+          (mH+mC13-mN14)*unit30,
+          (mH+mN14-mO15)*unit30,
+          (mO15-mN15-2*electron_u30)*unit30,
+          (mH+mN15-12-mHe4)*unit30]
+    require(close(sum(qs30),24.68709),
+            "30.22 CNO six nuclear Q sum 24.69MeV")
+    require(close(sum(qs30)+4*electron_u30*unit30,26.73108),
+            "30.22 positron annihilation adds 2.044MeV to 26.73")
+
+    return 608
 
 
 def main() -> None:
@@ -1721,8 +1829,19 @@ def main() -> None:
             "29.7 classical vs Fermi free paths contrast")
     require("0.900" in s29 and "1.70" in s29,
             "29.6 potassium electronic heat capacity EF and crossing")
-    require("3d" not in q29 or True,
-            "29 source equations should not mix with Cu electron configuration")
+
+    q30=(ROOT/"chapters/30/questions.tex").read_text(encoding="utf-8")
+    s30=(ROOT/"chapters/30/solutions.tex").read_text(encoding="utf-8")
+    require("30.22" in q30 and "30.22" in s30,
+            "last original nuclear CNO cycle exercise30.22 missing")
+    require("0.42" in s30 and "0.0194" in s30 and "自屏蔽" in s30,
+            "30.17 companion thin cobalt source rate exceeds neutron supply")
+    require("162" in s30 and "51" in s30 and "指数式" in s30,
+            "30.18 Cd95percent neutron optical thickness source error guard")
+    require("9.66" in s30 and "中性原子" in s30 and "核质量" in s30,
+            "30.16 zinc vs nickel nuclear mass and atomic electron conventions")
+    require("24.69" in s30 and "26.73" in s30 and "湮灭" in s30,
+            "30.22 CNO energy without/with positron annihilation")
 
     computed = check_numeric_spotmodels()
     print(f"PASS: {len(ids)} candidate exercises have unique IDs, "
