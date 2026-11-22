@@ -1,0 +1,344 @@
+% 张三慧《大学物理学》第4版，第5章《刚体的转动》
+% 教材V1 PDF物理页185--189。独立推导候选，未经独立专家审查。
+\section*{第5章\quad 刚体的转动：独立解析}
+
+\paragraph{习题 5.1}
+圆周运动的切向速率 \(v=R\omega\)，
+因此离手角速度
+\(\boxed{\omega=25/1.0=25.0\,\mathrm{rad/s}}\)。
+若依题意采用\emph{从静止匀角加速}的模型，
+转过的角位移
+\(\Delta\varphi=1.25(2\pi)=2.5\pi\,\mathrm{rad}\)，
+满足 \(\omega^2=2\alpha\Delta\varphi\)，所以
+\[
+ \boxed{\alpha=\frac{25^2}{5\pi}
+ \approx39.79\,\mathrm{rad/s^2}},\qquad
+ \boxed{t=\frac{\omega}{\alpha}
+ \approx0.628\,\mathrm s}.
+\]
+原题未显式写 \(\omega_0=0\)；
+若允许非零初速，就只有
+\(\alpha=(\omega^2-\omega_0^2)/(2\Delta\varphi)\)，
+时间不能唯一确定。本题数值依上述起动假设。
+
+\paragraph{习题 5.2}
+初、末角速度由 \(n\ \mathrm{r/min}\)
+换算为 \(\omega=2\pi n/60\)：
+\[
+ \boxed{\omega_0=\frac{20\pi}{3}\approx20.94\,\mathrm{rad/s}},\quad
+ \boxed{\omega_f=100\pi\approx314.16\,\mathrm{rad/s}}.
+\]
+恒定角加速度
+\[
+ \boxed{\alpha=\frac{\omega_f-\omega_0}{7.0}
+ =\frac{40\pi}{3}\approx41.89\,\mathrm{rad/s^2}}.
+\]
+转过角度是平均角速度乘时间：
+\[
+ \boxed{\Delta\varphi=\frac{\omega_f+\omega_0}{2}t
+ =\frac{1120\pi}{3}\,\mathrm{rad}
+ \approx1.173\times10^3\,\mathrm{rad}},\quad
+ \boxed{N=\Delta\varphi/(2\pi)=560/3\approx186.7\text{ 圈}}.
+\]
+
+\paragraph{习题 5.3}
+设1900年自转一周周期为 \(T_0\)，
+1987年为 \(T_1=T_0+\Delta T\)。
+题面给365周累计多费 \(1.14\,\mathrm s\)，
+所以
+\(\Delta T=1.14/365\approx3.1233\times10^{-3}\,\mathrm s\)。
+自转角速度变化
+\[
+ \Delta\omega=2\pi\!\left(\frac1{T_1}-\frac1{T_0}\right)
+ \simeq-\frac{2\pi\Delta T}{T_0^2}.
+\]
+时间 \(\Delta t=87\times365.25\times86400\,\mathrm s\)，
+近似采用 \(T_0\simeq86400\,\mathrm s\)，得
+\[
+ \boxed{\overline\alpha\simeq
+ -\frac{2\pi(1.14/365)}
+ {(86400)^2(87\times365.25\times86400)}
+ \approx-9.58\times10^{-22}\,\mathrm{rad/s^2}}.
+\]
+取恒星日代替平太阳日会有很小的系统差异；
+此为根据题给平均变慢速率的近似，非实测瞬时角加速度。
+
+\paragraph{习题 5.4}
+设地球半径为 \(R_\oplus\)，自转角速度
+\(\omega_\oplus\simeq2\pi/(24\,\mathrm h)\)；
+纬度 \(\lambda=40^\circ\) 的地点距自转轴
+\(r_\perp=R_\oplus\cos\lambda\)。
+速率及向心加速度分别为
+\[
+ \boxed{v=\omega_\oplus R_\oplus\cos40^\circ
+ \approx3.55\times10^2\,\mathrm{m/s}},\quad
+ \boxed{a=\omega_\oplus^2R_\oplus\cos40^\circ
+ \approx2.59\times10^{-2}\,\mathrm{m/s^2}},
+\]
+其中采用 \(R_\oplus=6.37\times10^6\,\mathrm m\)。
+速度沿当地纬线\emph{指向东}；
+加速度在垂直自转轴的平面内\emph{指向自转轴}，
+不能直接说“指向地心”（两者在非赤道处不同）。
+
+\paragraph{习题 5.5}
+把氧原子视作坐标原点，
+两氢原子位于
+\((d\cos\theta,\pm d\sin\theta)\)。
+关于水平 \(AA'\) 轴、竖直 \(BB'\) 轴的转动惯量分别为
+\[
+ J_{AA'}=2m_Hd^2\sin^2\theta,\qquad
+ J_{BB'}=2m_Hd^2\cos^2\theta.
+\]
+故
+\[
+ \boxed{d=
+ \sqrt{\frac{J_{AA'}+J_{BB'}}{2m_H}}
+ \approx9.58\times10^{-11}\,\mathrm m},
+\qquad
+ \boxed{\theta=\arctan\sqrt{\frac{J_{AA'}}{J_{BB'}}}
+ \approx52.46^\circ}.
+\]
+若问两条OH键的总夹角，则为
+\(2\theta\approx104.91^\circ\)；
+原图 \(\theta\) 是单条OH键与水平对称轴的夹角。
+氧原子在双轴交点，其平动位置不贡献转动惯量。
+
+\paragraph{习题 5.6}
+均匀球壳质量等于60个碳原子之和，
+\(M\simeq60(12u)=720u
+ \approx1.196\times10^{-24}\,\mathrm{kg}\)。
+按半径 \(R=D/2\) 的均匀薄球面，
+绕任一直径的转动惯量
+\[
+ \boxed{J=\frac23MR^2=\frac16MD^2}.
+\]
+\textbf{必须保留扫描源疑点：}原题PDF物理页186
+印为 \(D=71\,\mathrm{nm}\)，
+由此严格按字面得到
+\[
+ \boxed{J_{\rm printed}\approx1.00\times10^{-39}
+ \,\mathrm{kg\,m^2}},\qquad
+ f_{\rm printed}=\frac1{2\pi}
+ \sqrt{\frac{2E_k}{J_{\rm printed}}}
+ \approx\boxed{5.60\times10^8\,\mathrm{Hz}}.
+\]
+但这明显大于常见富勒烯直径的两个数量级。
+若原意是 \(D=0.71\,\mathrm{nm}\)，则
+\[
+ \boxed{J_{\rm physical}\approx1.00\times10^{-43}
+ \,\mathrm{kg\,m^2}},\quad
+ \boxed{f_{\rm physical}\approx5.60\times10^{10}\,\mathrm{Hz}}.
+\]
+两组结果分别对应两个不同输入条件，
+不能直接改掉原题，也不能在题目未核验时
+只留下看起来合理的一组数值。
+
+\paragraph{习题 5.7}
+氧分子中两氧原子对质心的距离均为
+\(d/2\)，其中 \(d=1.21\times10^{-10}\,\mathrm m\)。
+把原子看成质点：
+\[
+ \boxed{J=2m_O(d/2)^2=\frac12m_Od^2
+ \approx1.947\times10^{-46}\,\mathrm{kg\,m^2}}.
+\]
+由 \(E_k=\tfrac12J\omega^2\) 求
+\(\omega=\sqrt{2E_k/J}\)，所以
+\[
+ \boxed{T=\frac{2\pi}{\omega}
+ =2\pi\sqrt{\frac{J}{2E_k}}
+ \approx1.37\times10^{-12}\,\mathrm s}.
+\]
+为经典刚性双原子模型，不包括量子转动能级。
+
+\paragraph{习题 5.8}
+两个铁球质量各为 \(m\)，半径各为 \(R\)；
+杆在球面间长 \(\ell\)，故球心离杆中心
+\(a=R+\ell/2\)。
+每个均匀实心球对过球心的直径
+转动惯量为 \(\tfrac25mR^2\)。
+平行轴定理给出垂直连杆并过中点的总转动惯量
+\[
+ \boxed{J_\perp
+ =2\left(\tfrac25mR^2+ma^2\right)
+ =\frac45mR^2+2m(R+\ell/2)^2}.
+\]
+对沿两球心连线的轴无平移轴项，
+\[
+ \boxed{J_\parallel=2(\tfrac25mR^2)=\frac45mR^2}.
+\]
+若把杆长 \(\ell\) 错当作球心距离，结果会偏小；
+这里依据原图5.33的杆段位置。
+
+\paragraph{习题 5.9}
+将两指针近似为以一端绕表盘中心转动的均匀细杆，
+\(J=\tfrac13mL^2\)。
+分针：
+\[
+ J_m=\tfrac13(100)(4.50)^2=675\,\mathrm{kg\,m^2},
+ \quad\omega_m=\frac{2\pi}{3600}\,\mathrm{rad/s}.
+\]
+时针：
+\[
+ J_h=\tfrac13(60.0)(2.70)^2=145.8\,\mathrm{kg\,m^2},
+ \quad\omega_h=\frac{2\pi}{12(3600)}\,\mathrm{rad/s}.
+\]
+因此各自角动量和转动动能为
+\[
+ \boxed{L_m=J_m\omega_m\approx1.18\,\mathrm{kg\,m^2/s}},
+ \quad \boxed{K_m=\tfrac12J_m\omega_m^2
+ \approx1.03\times10^{-3}\,\mathrm J},
+\]
+\[
+ \boxed{L_h=J_h\omega_h\approx2.12\times10^{-2}
+ \,\mathrm{kg\,m^2/s}},\quad
+ \boxed{K_h=\tfrac12J_h\omega_h^2
+ \approx1.54\times10^{-6}\,\mathrm J}.
+\]
+对表盘观察，其转向一致，矢量角动量同向。
+
+\paragraph{习题 5.10}
+设原薄圆盘质量为 \(M_0\)，
+挖去半径 \(R/2\) 的小盘质量
+\(M_h=M_0/4\)，余板质量
+\(m=3M_0/4\)。
+故 \(M_0=4m/3,\ M_h=m/3\)。
+由平行轴定理，原中心处挖去部分的转动惯量
+\[
+ J_h=\tfrac12M_h(R/2)^2+M_h(R/2)^2
+ =\tfrac18mR^2.
+\]
+原完整圆盘关于原中心
+\(J_0=\tfrac12M_0R^2=\tfrac23mR^2\)。
+余板惯量为
+\[
+ \boxed{J=J_0-J_h=\frac{13}{24}mR^2}.
+\]
+检查：小盘面积与原盘之比为 \(1/4\)，
+不是半径之比 \(1/2\)。
+
+\paragraph{习题 5.11}
+取悬挂物 \(m_1\) 向下为正，
+桌上物 \(m_2\) 向滑轮移动为正，
+若有滑动摩擦 \(f_k=\mu_km_2g\)，
+两物共用加速度 \(a\)。
+设悬挂侧张力 \(T_1\)、桌面侧张力 \(T_2\)，
+有
+\[
+ m_1g-T_1=m_1a,\qquad
+ T_2-\mu_km_2g=m_2a.
+\]
+滑轮为均匀圆盘 \(J=\tfrac12mr^2\)，
+且绳与轮不打滑：
+\((T_1-T_2)r=J(a/r)\)。
+联立得
+\[
+ \boxed{a=\frac{(m_1-\mu_km_2)g}
+ {m_1+m_2+m/2}},\quad
+ \boxed{T_1=m_1(g-a)},\quad
+ \boxed{T_2=m_2a+\mu_km_2g}.
+\]
+该式在 \(m_1>\mu_km_2\) 时
+对应题设的向下运动，且假定已进入滑动状态；
+静摩擦启动阈值不同，不能据此证明必会启动。
+
+\paragraph{习题 5.12}
+米尺长 \(L=1.00\,\mathrm m\)，
+均匀质心在 \(50\,\mathrm{cm}\) 处，
+墙上转轴在 \(60\,\mathrm{cm}\) 刻度，
+质心偏离轴 \(b=0.10\,\mathrm m\)。
+由平行轴定理
+\[
+ J_p=m(L^2/12+b^2).
+\]
+水平初态受重力矩大小 \(mgb\)，
+故
+\[
+ \boxed{\alpha_0=\frac{mgb}{J_p}
+ =\frac{gb}{L^2/12+b^2}
+ =10.5\,\mathrm{rad/s^2}}.
+\]
+竖直到最低点时质心下落 \(b\)，
+机械能守恒
+\(\tfrac12J_p\omega^2=mgb\)，得
+\[
+ \boxed{\omega=\sqrt{\frac{2gb}{L^2/12+b^2}}
+ \approx4.58\,\mathrm{rad/s}}.
+\]
+忽略轴摩擦与空气阻力。
+
+\paragraph{习题 5.13}
+定轴刚体角速度对全部质量微元相同为 \(\omega\)。
+距轴垂直距离为 \(r_i\) 的微元
+线速率 \(v_i=r_i\omega\)，
+总动能
+\[
+ K=\sum_i\frac12\Delta m_i v_i^2
+ =\frac12\omega^2\sum_i\Delta m_i r_i^2.
+\]
+根据转动惯量定义
+\(J=\sum_i\Delta m_i r_i^2\)，
+连续极限 \(J=\int r_\perp^2\,dm\)，
+故
+\[
+ \boxed{K=\frac12J\omega^2}.
+\]
+物体绕定轴转动时上述表达式成立；
+有质心平移的刚体一般还需加平动动能。
+
+\paragraph{习题 5.14}
+在唱片与转盘存在相对滑动时，
+法向压力可按均匀盘面分布。
+在半径 \(r\) 处的环带质量
+\(dm=(2mr/R^2)\,dr\)，
+该环带动摩擦力微元
+\(dF=\mu_kg\,dm\)，
+其力矩 \(d\tau=r\,dF\)。
+积分得总摩擦矩
+\[
+ \tau=\int_0^Rr\mu_kg\frac{2mr}{R^2}\,dr
+ =\frac23\mu_kmgR.
+\]
+唱片为均匀圆盘 \(J=\tfrac12mR^2\)，
+角加速度
+\[
+ \alpha=\tau/J=\frac{4\mu_kg}{3R}.
+\]
+由静止加速到转盘角速度 \(\omega\) 需
+\[
+ \boxed{t=\frac{3R\omega}{4\mu_kg}}.
+\]
+理想转盘维持 \(\omega\) 不变，
+电动机做功
+\[
+ W_{\rm motor}=\tau\,\omega\,t
+ =J\omega^2=\boxed{\frac12mR^2\omega^2}.
+\]
+唱片增加的转动动能为
+\[
+ \boxed{\Delta K=\frac12J\omega^2
+ =\frac14mR^2\omega^2}.
+\]
+其余 \(\Delta K\) 量级的电机功转变为
+两表面相对滑动的摩擦热；
+不能把电机功与唱片动能误认为全相等。
+
+\paragraph{习题 5.15}
+转椅轴上外力矩可忽略，
+因此收臂过程角动量守恒
+\(J_1\omega_1=J_2\omega_2\)。
+故
+\[
+ \boxed{n_2=n_1\frac{J_1}{J_2}
+ =15(2/0.80)=37.5\,\mathrm{r/min}}.
+\]
+机械能并不守恒，收臂的人必须克服
+由旋转惯性产生的拉力做正功：
+\[
+ W_{\rm person}=\Delta K
+ =\frac12J_2\omega_2^2-\frac12J_1\omega_1^2
+ =\frac{J_1\omega_1^2}{2}
+ \left(\frac{J_1}{J_2}-1\right)
+ \approx\boxed{3.70\,\mathrm J}.
+\]
+能量来自人体内部化学能；
+角动量守恒与机械能变化并不矛盾。
