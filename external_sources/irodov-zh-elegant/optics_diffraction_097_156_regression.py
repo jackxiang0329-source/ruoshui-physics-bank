@@ -32,21 +32,43 @@ eq(101,"half-aperture restores zero amplitude at disk shadow",
    abs(-1+1)**2,0)
 eq(102,"no-shade angular wedge phi=pi/2 P intensity relative",
    (1-pi/2/(2*pi))**2,9/16)
-# Complex first 1.5 zones F=(1+i)A0 and unaltered outer O=-i A0.
+# First one-and-a-half Fresnel zone and residual fields sum to free field.
 F=1+1j;O=-1j
 eq(105,"first 1.5 Fresnel-zone phasor recovers free field",abs(F+O)**2,1)
 lambda_um=.57;n=1.60
-hmin=5*lambda_um/(8*(n-1))
-eq(105,"FIRST constructive-phase minimum glass thickness um",hmin,.59375)
-delta=2*pi*(n-1)*hmin/lambda_um
-res=O+F*cmath.exp(1j*delta)
-eq(105,"first constructive phase equals analytic maximal intensity",
-   abs(res)**2,(1+sqrt(2))**2)
-for k in [1,2,3]:
-    old_h=hmin+k*lambda_um/(n-1)
-    higher=O+F*cmath.exp(2j*pi*(n-1)*old_h/lambda_um)
-    eq(105,"higher-order thickness same intensity but not minimum",abs(higher)**2,abs(res)**2)
-    truth(105,"first positive thickness smaller than higher branches",hmin<old_h)
+Rf=((n-1)/(n+1))**2
+def etalon_relative_transmission(h):
+    k0=2*pi/lambda_um
+    return (1-Rf)*cmath.exp(1j*(n-1)*k0*h)/(1-Rf*cmath.exp(2j*n*k0*h))
+def onaxis_intensity(h):
+    return abs(O+F*etalon_relative_transmission(h))**2
+# An exact intensity bound requires BOTH |t|=1 (Fabry-Perot resonance)
+# AND that t rotate the Fresnel-zone chord into phase with the open remainder.
+k_order=2
+m_order=(16*k_order+10)/3
+eq(105,"first mutually consistent optical interference orders m=14",m_order,14)
+hmin=m_order*lambda_um/(2*n)
+eq(105,"minimal globally maximizing transmitting disk thickness microns",hmin,2.49375)
+eq(105,"etalon roundtrip phase integer",2*n*hmin/lambda_um,14)
+eq(105,"lossless etalon transmits unit field amplitude at integer resonance",
+   abs(etalon_relative_transmission(hmin)),1)
+eq(105,"resonant etalon plus aligned Fresnel-zone phasors produce global bound",
+   onaxis_intensity(hmin),(1+sqrt(2))**2)
+thin_phase_only=5*lambda_um/(8*(n-1))
+eq(105,"shortest SINGLE-PASS phase-only thickness is not true global optimum",
+   thin_phase_only,.59375)
+eq(105,"phase-only disk has 10/3, not integer, etalon roundtrip order",
+   2*n*thin_phase_only/lambda_um,10/3)
+truth(105,"first phase-only disk has under-unit FP transmitted amplitude",
+      abs(etalon_relative_transmission(thin_phase_only))<1)
+truth(105,"phase-only disk intensity strictly smaller than fully resonant optimum",
+      onaxis_intensity(thin_phase_only)<onaxis_intensity(hmin))
+# Earlier k=0,1 fail m integrality and k=2 is the first joint solution.
+truth(105,"k=0 and 1 do not satisfy full-transmission resonance",
+      all(abs((16*k+10)/3-round((16*k+10)/3))>1e-8 for k in [0,1]))
+for j in [1,2,3,4]:
+    truth(105,"global optimum upper bound for nonresonant test thickness",
+          onaxis_intensity(.21*j) <= (1+sqrt(2))**2+1e-10)
 # Aperture diffraction with a focusing lens
 f,b=.5,.75
 eq(106,"lens-curvature Fresnel zone aperture first radius mm",
@@ -137,7 +159,7 @@ for n,tokens in {
   98:[r"b=2.0"], 99:[r"r_2^2-r_1^2"],
   100:[r"4I_0",r"2I_0"], 101:[r"I_a\simeq0"],
   103:[r"\delta_a"], 104:[r"I_{\max}"],
-  105:[r"h_{\min}=\frac{5\lambda}{8(n-1)}",r"I_{\max}=(1+\sqrt2)^2 I_0"],
+  105:[r"2nh=m\lambda",r"\frac{16k+10}{3}",r"2.49375",r"I_{\max}=(1+\sqrt2)^2I_0"],
   106:[r"r_j"], 107:[r"b'=\frac b"],
   123:[r"\cos\alpha_0-\cos\alpha"], 124:[r"\text{偶数级缺级}"],
   127:[r"\sqrt{5-4\cos"], 128:[r"\theta_{-5}"],
