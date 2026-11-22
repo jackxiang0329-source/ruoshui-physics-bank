@@ -1934,6 +1934,78 @@ def check_companion_ch1_crosscheck() -> int:
 
 
 
+
+def check_companion_ch2_crosscheck() -> int:
+    """Chapter2 S companion scanned source solutions: 8 value and 3 algebra tests."""
+    path=ROOT/"companion_crosscheck_ch02_01_11.json"
+    require(path.is_file(), "missing S original2.1-2.11 source audit")
+    d=json.loads(path.read_text(encoding="utf-8"))
+    rows=d["records"]
+    require(len(rows)==11 and d["summary"]["reviewed_distinct_existing_pairs"]==11,
+            "S original chapter2 audit entry count changed")
+    require(d["summary"]["reviewed_numeric_source_answers"]==8 and
+            d["summary"]["reviewed_symbolic_source_formulas"]==3,
+            "S original chapter2 value vs symbolic categories changed")
+    require(d["source"]["sha256"] ==
+            "54126dd75edd65eb9ead0a9d7acb96a37bfb25674cf595c76b94f2fb30bce5a7",
+            "S PDF fingerprint provenance changed")
+    g=9.8
+    th=math.pi/6
+    mu_red=2*1/(2+1)
+    slope=math.atan(.1)
+    models={
+        "2.1":.4*10*g/(math.cos(th)-.4*math.sin(th)),
+        "2.2":.5*(2*math.cos(th)+g*math.sin(th)),
+        "2.3":(5000+1500)*(g+.6),
+        "2.4":75*g/2,
+        "2.5":1.96,
+        "2.6":25**2/(25**2/35*math.cos(slope)-2*g*math.sin(slope)),
+        "2.7":2*.25*(1.5+2.45)*g,
+        "2.8":(25-mu_red*g)/(10+1+mu_red),
+        "2.9":math.sqrt(6.67e-11*7.35e22/(1.94e6)),
+        "2.10":100*200/(100+200),
+        "2.11":1200*(25**2/400*math.cos(math.radians(6))
+                      -g*math.sin(math.radians(6)))
+    }
+    require(len(models)==11, "chapter2 source models count wrong")
+    index={x["canonical_id"]:x for x in json.loads(
+        REGISTER.read_text(encoding="utf-8"))["entries"]}
+    seen=set()
+    for x in rows:
+        n=x["source_problem_number"]
+        require(n in models and n not in seen,
+                f"unknown or duplicated chapter2 original {n}")
+        seen.add(n)
+        cid=f"ZS4-02-{int(n.split('.')[1]):03d}"
+        require(x["canonical_id"]==cid and cid in index,
+                f"chapter2 original source link missing {n}")
+        a=index[cid].get("companion_numerical_source_audit",{})
+        require(a.get("audit_file")=="companion_crosscheck_ch02_01_11.json"
+                and a.get("status")=="key_answer_value_crosschecked_not_full_proof_verified",
+                f"ch2 source crosscheck index not bidirectional {n}")
+        require(a.get("scanned_companion_pdf_pages")==x["companion_pdf_physical_pages"]
+                and all(type(pg)==int and 1<=pg<=402
+                        for pg in x["companion_pdf_physical_pages"]),
+                f"invalid S PDF page or wrong ch2 provenance {n}")
+        require(math.isclose(models[n],x["independent_computed_value"],
+                             rel_tol=.01,abs_tol=1e-12),
+                f"physics S sourced ch2 model incorrectly calculated {n}")
+        require(x["exam_ready"] is False and
+                x["academic_review"]=="pending_independent_verification",
+                f"ch2 S source falsely marked admitted {n}")
+        if n in ["2.1","2.8","2.10"]:
+            require(x["companion_rounded_value"] is None and
+                    x["crosscheck"]==
+                        "source_symbolic_formula_checked_with_independent_test_parameters",
+                    f"ch2 original {n} reviewer-created numerical sample wrongly claimed as source")
+    require(set(models)==seen, "ch2 S source original numbers not exhaustive1-11")
+    flags={x["source_problem_number"]:x["discrepancy_note"] for x in rows}
+    require("small-angle" in flags["2.6"].lower(),
+            "ch2.6 source small-slope approximation not recorded")
+    return len(rows)
+
+
+
 def main() -> None:
     raw = json.loads(REGISTER.read_text(encoding="utf-8"))
     require(raw.get("schema") == "zhang-sanhui-4e-exercise-intake/v1",
@@ -2275,13 +2347,15 @@ def main() -> None:
     thought_count = check_thought_intake()
     S_selected_count = check_companion_selected_thought()
     checked_source_ch1 = check_companion_ch1_crosscheck()
+    checked_source_ch2 = check_companion_ch2_crosscheck()
     computed = check_numeric_spotmodels()
     print(f"PASS: {len(ids)} candidate exercises have unique IDs, "
           "paired TeX sections, source pages and no exam admission.")
     print(f"PASS: {thought_count} separately numbered and unapproved thought Q/A pairs. Original 705 exercises unchanged.")
     print(f"PASS: {S_selected_count} S-source selected V1 thought Q/A pairs, source V1 primary not verified.")
     print(f"PASS: {checked_source_ch1} existing original chapter1 exercises S-companion source-value checked; two documented risks.")
-    print(f"PASS: {computed+checked_source_ch1} total numerical/source-model spotchecks ({computed} prior + {checked_source_ch1} chapter1).")
+    print(f"PASS: {checked_source_ch2} chapter2 S-companion original model/source spotchecks; 8 printed results and 3 symbolic cases.")
+    print(f"PASS: {computed+checked_source_ch1+checked_source_ch2} combined numerical/source-model spotchecks ({computed}+{checked_source_ch1}+{checked_source_ch2}).")
     print("NOT VERIFIED: full source transcription accuracy, external expert "
           "review, source permissions and independent physical model sufficiency.")
 
