@@ -599,7 +599,136 @@ def check_numeric_spotmodels() -> int:
     require(close(2*math.pi*50*1e-12*1.74e5,5.466371217e-5),
             "17.20 50Hz capacitor displacement current peak")
 
-    return 218
+
+    # Chapter 9: thermometry, kinetic distribution and gas statistical checks.
+    kb=1.380649e-23
+    NA=6.02214076e23
+    RR=8.314462618
+    require(close(6650*373.15/273.16,9084.22719),"9.1 constant volume thermometer")
+    require(close(40*math.log(7/5)/math.log(7/6),87.309959),
+            "9.2 total time for room to cool to15 Celsius")
+    Vr=2*math.pi**2*((.7112-.03)/2)*(.015**2)
+    Vp=math.pi*.015**2*.30
+    require(close((280.15/270.15)*(1+20*Vp/Vr),3.9444674),
+            "9.3 tyre final ABSOLUTE pressure multiplier")
+    require(close(.18*.029/(3.2e-6*RR),196.194279),
+            "9.4 upper atmosphere temperature from density")
+    require(close(.18/(kb*196.194279),6.64512e19),
+            "9.4 atmospheric particle count per cubic metre")
+    rhoext=101325*.029/(RR*293.15)
+    require(close(293.15/(1-4500/(2.1e4*rhoext))-273.15,83.37051),
+            "9.5 hot air lift threshold degrees C")
+    require(close(101325*1e-18*1e-6/(kb*293.15),25.03476),
+            "9.6 extreme vacuum 1cm3 average particles")
+    require(close(1e10*kb*1e4,1.380649e-9),
+            "9.7 interstellar neutral hydrogen cloud pressure")
+    require(close(273-.006*8848,219.912),"9.8 Everest lapse model K")
+    require(close(101325*(219.912/273)**(.029*9.8/(.006*RR)),
+                  29559.6642),"9.8 variable lapse atmospheric pressure")
+    require(close(1/(math.sqrt(2)*math.pi*(3.8e-10)**2*
+                     (101325/(kb*273.15))),5.80144e-8),
+            "9.11 N2 mean free path at standard condition")
+    require(close(1.33e-3/(kb*300.15),3.20944554e17),
+            "9.12 molecule density vacuum tube")
+    nupper=1.5e-9/.029*NA
+    require(close(1/(math.sqrt(2)*math.pi*(3e-10)**2*nupper),
+                  80.2875964),"9.13 upper atmosphere molecule free path")
+    require(close(2/(3*1),2/3),"9.18 speed distribution normalization coefficient")
+    require(close(2*250*310/(250+310),276.785714),
+            "9.17 equal-pressure unequal-moles gas mixing")
+    require(close(math.sqrt(3*kb*300/1.6e-16),.0088125766),
+            "9.21 smoke particle Brownian rms")
+    require(close(3*RR*300.15/(6.2e-17*.014**2),
+                  6.1609265e23),"9.22 Brownian experimental Avogadro constant")
+    require(close((2/3)*(11/6),11/9),
+            "9.18 Maxwell-like piecewise mean speed relative v0")
+    require(close(RR*293.15*math.log(7160/860)/
+                  ((4/3)*math.pi*(.212e-6)**3*206.7*9.8*(90e-6)),
+                  7.09934046e23),"9.24 Perrin experiment first-to-fourth layer")
+    require(close(NA/3.01e4,2.0007112e19),
+            "9.25 saturated vapor molecules per cm3")
+    moles=1100/44
+    vdw=moles*(RR*1000)*286.15/(20-moles*.0427)-3.64e5*(moles/20)**2
+    require(close(vdw,2.57291576e6),
+            "9.26 van der Waals 20L CO2 pressure with liter units")
+    require(close(moles*(RR*1000)*286.15/20,2.97397935e6),
+            "9.26 ideal comparison pressure")
+    rhos=101325*.004/(RR*273.15)
+    heLam=3*1.89e-5/(rhos*1.2e3)
+    require(close(heLam,2.64765015e-7),"9.28 He mean free path viscosity model")
+    require(close(math.sqrt(1/(math.sqrt(2)*math.pi*
+                   (101325/(kb*273.15))*heLam)),1.77877576e-10),
+            "9.28 He effective molecular diameter")
+    require(close(kb*300.15/(math.sqrt(2)*math.pi*
+                  (3.7e-10)**2*.004),1.70330853),
+            "9.29 wall spacing Knudsen gas pressure transition")
+
+    # Chapter 18: magnetic Lorentz forces, Hall effect, field-momentum models.
+    echarge=1.602176634e-19
+    mel=9.1093837e-31
+    mpro=1.6726219e-27
+    MU=4*math.pi*1e-7
+    cc=299792458
+    require(close(.0005*g/(2.5e-8*6e4),3.26666667),
+            "18.1 B supports levitating charge against gravity")
+    require(close(mel*1e7/(echarge*.05),.001137126),
+            "18.2 clockwise electron half circle B")
+    require(close(math.pi*.05/1e7,1.5707963e-8),
+            "18.2 semicircular flight time")
+    vel=math.sqrt(2*(2000*echarge)/mpro)
+    require(close(2*math.pi*mpro/(echarge*.1),6.5594474e-7),
+            "18.3 proton cyclotron period")
+    require(close(mpro*vel*math.sin(math.radians(89))/
+                  (echarge*.1),.06461116),"18.3 proton helical radius")
+    vTV=math.sqrt(2*echarge*2e4/mel)
+    rTV=mel*vTV/(echarge*.5e-4)
+    require(close(.2**2/(2*rTV),.00209691),
+            "18.4 tube Earth magnetic deflection 2mm")
+    require(close(2*math.pi*1.49e-18/(echarge*240),.24346946),
+            "18.5 momentum-constrained collider field")
+    require(close(1e-16/(echarge*1e8),6.24150907e-6),
+            "18.6 magnetar electron micrometre gyroradius")
+    mom=echarge*20*3.5
+    require(close(math.sqrt((mom*cc)**2+(mpro*cc**2)**2)/
+                  echarge/1e9,21.0064369),
+            "18.7 relativistic proton TOTAL energy GeV")
+    require(close(echarge*1.5/(2*math.pi*3.34e-27),1.14518412e7),
+            "18.9 deuteron cyclotron frequency")
+    require(close((echarge*1.5*.375)**2/(2*3.34e-27)/
+                  echarge/1e6,7.58890270),
+            "18.9 maximal extracted deuteron energy MeV")
+    require(close(16*32.86/29.20,18.00548),
+            "18.10 16O/18O mass spectrometry")
+    require(close(200*1.5/(8.4e28*echarge*.001),2.22911e-5),
+            "18.11 Hall copper 22.3 microvolts")
+    require(close(.001*.3/(echarge*.001*.00655),
+                  2.85870645e20),"18.12 Hall carrier density")
+    require(close(.00105*2e21*echarge*5e-5/.00125,
+                  .01345828),"18.13 N-type silicon Hall B")
+    require(close(101325/(1.5*.02),3.3775e6),
+            "18.14 conductive liquid pressure gradient J")
+    require(close(.0001/(.08*.002),.625),"18.15 blood flow Hall sensor speed")
+    require(close(.00878*9.8/(2*5*.1*.1),.86044),
+            "18.16 reversed current gives 2 n I l B")
+    require(close(200*8*.15**2*4,144),"18.18 square loop maximum torque")
+    require(close(3*9.66e-27/(2*echarge*1.2e-15),
+                  7.5366222e7),"18.20 neutron quark model speed")
+    require(close(2*.928e-23/(echarge*cc),3.8640868e-13),
+            "18.21 classical spin loop contradicts small electron size")
+    require(close(MU*30**2/(2*math.pi*.05),.0036),
+            "18.25 parallel 30A wires force per unit length")
+    accel=4200**2/(2*5)
+    require(close(accel/9.8,180000),"18.27 rail gun acceleration times g")
+    force=.317*accel
+    loggeom=math.log((.012+.067)/.067)
+    Igun=math.sqrt(2*math.pi*force/(MU*loggeom))
+    require(close(Igun,4.1194982e6),"18.27 original rail-gun magnet current ~4.12MA")
+    require(close((.5*.317*4200**2)/(.4*(2*5/4200))/1000,
+                  2.935737e6),"18.27 railgun average electrical power kW")
+    require(close(-2*2.39e-23*math.cos(math.radians(39.2)),
+                  -3.7042347e-23),"18.30 sodium excited 39.2° energy")
+
+    return 269
 
 
 def main() -> None:
@@ -743,6 +872,28 @@ def main() -> None:
             "17.12 windings must use MINOR toroid radius for N")
     require("横向分量" in q17 and "B_\\perp" in s17,
             "17.6 semicircle transverse Biot-Savart component discarded")
+
+    # Chapter 9 and 18 source/model regression guards.
+    q9=(ROOT/"chapters/09/questions.tex").read_text(encoding="utf-8")
+    s9=(ROOT/"chapters/09/solutions.tex").read_text(encoding="utf-8")
+    q18=(ROOT/"chapters/18/questions.tex").read_text(encoding="utf-8")
+    s18=(ROOT/"chapters/18/solutions.tex").read_text(encoding="utf-8")
+    require("9.29" in q9 and "9.29" in s9,
+            "ch9 ending Knudsen wall heat-conduction exercise missing")
+    require("佩兰" in q9 and "7.10" in s9,
+            "9.24 Perrin experiment source counts/independent result absent")
+    require("冷却" in q9 and "87.3" in s9,
+            "9.2 Newton cooling correct total elapsed minutes regressed")
+    require("9.27" in q9 and "图值复核" in s9,
+            "9.27 graphite critical diagram has no expert figure QA; do not invent exact graph value")
+    require("18.30" in q18 and "18.30" in s18,
+            "ch18 sodium atom magnetic energy last exercise missing")
+    require("18.27" in q18 and "4.12" in s18,
+            "18.27 original railgun 1.2cm spacing 6.7cm radius/current source mismatch")
+    require("向心" in s18 or "圆周" in s18,
+            "Lorentz force directions and circular motion source formula dropped")
+    require("电磁场" in s18 and "动量守恒" in s18,
+            "18.29 missing field momentum conservation")
 
     computed = check_numeric_spotmodels()
     print(f"PASS: {len(ids)} candidate exercises have unique IDs, "
