@@ -1,0 +1,451 @@
+% 张三慧《大学物理学》第4版V2第25章《几何光学》章末习题25.1--25.21。
+% 独立解析候选；主教材PDF341--343，配套解答S338--348。
+% 所有光路图、眼球模型/镜组符号方向及源书印刷差异仍需专家审查。
+\section*{第25章\quad 几何光学：独立解析}
+\paragraph{习题 25.1}
+设路灯高度 \(H=8.0\,\mathrm m\)，人身高 \(h=1.70\,\mathrm m\)，
+人离灯水平距离 \(x\)，影端距离 \(y\)。
+由相似三角形
+\[
+\frac H y=\frac h{y-x}
+\quad\Longrightarrow\quad y=\frac H{H-h}x.
+\]
+故影端速率为
+\[
+\boxed{\frac{dy}{dt}
+=\frac{8.0}{8.0-1.70}(1.5)
+\simeq1.90\,\mathrm{m/s}}.
+\]
+灯为点光源、路面水平；实际人影长度的变化率
+为 \(dy/dt-dx/dt\simeq0.405\,\mathrm{m/s}\)，
+不能同影端速率混淆。
+
+\paragraph{习题 25.2}
+按源书水池剖面图，池岸小孔到水面的
+水平方向、竖直方向构成 \(45^\circ\) 出射方向，
+水面到小孔竖直高 \(1.6\,\mathrm m\)。
+空气和水界面折射满足
+\(\sin\theta_w=\sin45^\circ/1.33\)，故
+\[
+\boxed{\theta_w\simeq32.1^\circ}.
+\]
+在水中深度 \(2.0\,\mathrm m\) 贡献的水平位移
+\(2.0\tan\theta_w\simeq1.25\,\mathrm m\)。
+空气中从水面到小孔的水平距离为
+\(1.6\tan45^\circ=1.60\,\mathrm m\)，
+因此眼镜到池侧竖壁的水平位置
+\[
+\boxed{x\simeq1.60+1.25=2.85\,\mathrm m}.
+\]
+该图示角度由身体/小孔几何定义，
+若图的30cm水平/竖直标注基准发生变化，需原图复核。
+
+\paragraph{习题 25.3}
+主教材给出空气波长 \(\lambda_a=580\,\mathrm{nm}\)，
+入射角45°、折射角17°。由Snell定律
+\[
+\boxed{n=\frac{\sin45^\circ}{\sin17^\circ}\simeq2.42}.
+\]
+跨界面光的频率不变，
+\[
+\boxed{\nu=\frac c{\lambda_a}
+\simeq5.17\times10^{14}\,\mathrm{Hz}},\qquad
+\boxed{\lambda_d=\frac{\lambda_a}{n}\simeq240\,\mathrm{nm}},
+\]
+\[
+\boxed{v_d=\frac cn\simeq1.24\times10^8\,\mathrm{m/s}}.
+\]
+\textbf{源书差异：}配套辅导S PDF339的计算使用
+\(589\,\mathrm{nm}\)，而上传主教材题面明确是
+\(580\,\mathrm{nm}\)。本解以主教材为准，
+保留差异而不声称二者数值完全一致。
+
+\paragraph{习题 25.4}
+构造入射线与法线交点 \(O\)，
+在两侧按折射率比 \(n_1:n_2\) 画辅助圆，
+利用圆弧同一投影高度和几何正弦关系
+得到两法向夹角 \(\theta_1,\theta_2\)。
+入射与折射光在界面上的相位连续，
+其沿切线方向的波矢分量必须相等：
+\[
+k_1\sin\theta_1=k_2\sin\theta_2.
+\]
+而 \(k_j=2\pi n_j/\lambda_0\)，于是
+\[
+\boxed{n_1\sin\theta_1=n_2\sin\theta_2}.
+\]
+这亦是原作图法的三角形正弦定理结论。
+源图25.44比例尺及辅助圆具体线段仍待TikZ重绘。
+
+\paragraph{习题 25.5}
+发生全反射必须从高折射率玻璃射向
+低折射率介质。临界角定义
+\(n_g\sin\theta_c=n_{\rm out}\)：
+\[
+\boxed{\theta_{c,g\to a}=\arcsin\frac1{1.52}
+\simeq41.1^\circ},\quad
+\boxed{\theta_{c,g\to w}=\arcsin\frac{1.33}{1.52}
+\simeq61.0^\circ}.
+\]
+若从空气或水反向射入玻璃则不发生全反射。
+
+\paragraph{习题 25.6}
+正入射时菲涅耳光强反射率
+\[
+\mathcal R=\left(\frac{n_g-n_a}{n_g+n_a}\right)^2
+=\left(\frac{1.52-1}{1.52+1}\right)^2
+\simeq0.0426.
+\]
+故
+\[
+\boxed{\mathcal R\simeq4.26\%}.
+\]
+这是单个空气--玻璃平面的反射率，
+不含玻璃背面多次反射、镀膜和吸收。
+
+\paragraph{习题 25.7}
+棱镜折射几何给 \(r_1+r_2=A\)、
+偏向角 \(\delta=i_1+i_2-A\)。
+最小偏向时光路关于棱镜中分面对称，
+\(i_1=i_2=i,\ r_1=r_2=A/2\)，所以
+\(i=(A+\delta_{\min})/2\)。
+由Snell定律 \(n=\sin i/\sin r_1\)：
+\[
+\boxed{n=\frac{\sin[(A+\delta_{\min})/2]}{\sin(A/2)}}.
+\]
+对于各向同性透明棱镜、无全反射且沿可行折射路径，
+由光路可逆性及驻值可证明对称路径为最小偏向角，
+而非一任意光路均满足此式。
+
+\paragraph{习题 25.8}
+凹面镜曲率半径 \(R=30\,\mathrm{cm}\)，
+焦距 \(f=R/2=15\,\mathrm{cm}\)。
+采用实物在镜前 \(s>0\)、实像在镜前 \(s'>0\)
+的镜面符号约定，\(1/s+1/s'=1/f\)，
+放大率 \(m=-s'/s\)。
+\[
+\begin{array}{c|c|c|l}
+s/\mathrm{cm}&s'/\mathrm{cm}&m&\text{性质}\\\hline
+25&\frac{25\cdot15}{25-15}=37.5&-1.5&
+\text{镜前实像，倒立、放大1.5倍}\\
+10&\frac{10\cdot15}{10-15}=-30&+3&
+\text{镜后虚像，正立、放大3倍}
+\end{array}
+\]
+光路可用平行光经焦点、经过曲率中心反射沿原路返回
+两条主光线求交；精确原图仍待复核。
+
+\paragraph{习题 25.9}
+牙科镜位于牙齿前 \(s=2.0\,\mathrm{cm}\)，
+正立放大 \(m=+5\)。镜面 \(m=-s'/s\)，故
+\(s'=-10.0\,\mathrm{cm}\)（镜后虚像）。
+\[
+\frac1f=\frac1s+\frac1{s'}
+=\frac12-\frac1{10}=\frac25,
+\quad
+\boxed{f=2.5\,\mathrm{cm}},\quad
+\boxed{R=2f=5.0\,\mathrm{cm}}.
+\]
+\(f>0\)，为\emph{凹面镜}而非凸面镜。
+
+\paragraph{习题 25.10}
+凹镜曲率半径40cm，焦距20cm；
+小玉佛离凹镜30cm。因此凹镜单独形成的实像距
+凹镜
+\[
+s_1'=\frac{fs}{s-f}
+=\frac{20\cdot30}{30-20}=60\,\mathrm{cm},
+\qquad m_1=-\frac{60}{30}=-2.
+\]
+初始玉佛高3cm，因此第一像高6cm、倒立。
+依题图25.46，折叠光路上方的45°平面镜
+将凹镜会聚光束水平折转；按镜像对称得到
+最终实像位于平面镜前水平光路约10cm处，
+玉佛相对最终观察方向的正倒应结合折叠后的
+视线坐标表达：
+\[
+\boxed{h_{\rm final}=6\,\mathrm{cm}},\quad
+\boxed{\text{最终为实像，观察视线应沿水平折转光路}}.
+\]
+此题最终方位/朝向依赖原图25.46，
+不能仅凭凹镜一次成像的 \(m_1=-2\)
+断言人眼坐标中的最终朝向。
+图示折转方位和箱内位置须后续TikZ精确复核。
+
+\paragraph{习题 25.11}
+采用单球面角膜、近轴成像，
+从空气 \(n_1=1\) 折射到眼内 \(n_2=1.4\)，
+视网膜位于 \(s'=2.60\,\mathrm{cm}\)。
+球面折射公式
+\[
+\frac{n_1}{s}+\frac{n_2}{s'}
+=\frac{n_2-n_1}{R}.
+\]
+(1) 物体无穷远，\(1/s=0\)：
+\[
+\boxed{R_\infty=\frac{.4}{1.4/2.6}
+\simeq0.743\,\mathrm{cm}}.
+\]
+(2) 物在角膜前25.0cm：
+\[
+\boxed{R_{25}=
+\frac{.4}{1/25+1.4/2.6}
+\simeq0.691\,\mathrm{cm}}.
+\]
+\textbf{源书差异：}辅导书S PDF342第二问印出
+\(0.361\,\mathrm{cm}\)，但是按其写出的
+球面折射公式和题设代入，直接算得
+\(0.691\,\mathrm{cm}\)；保留为参考答案疑似算术/排印差异。
+模型没有模拟真实角膜厚度、晶状体或眼调节。
+
+\paragraph{习题 25.12}
+鱼缸半径20cm，鱼在半径中点，故
+鱼到靠近观察者的水--空气球面顶点距离
+\(s=10\,\mathrm{cm}\)。
+按从鱼到眼正向的球面折射符号约定，
+\(n_w=1.33,n_a=1\)，出射曲面曲率半径
+\(R=-20\,\mathrm{cm}\)，
+\[
+\frac{1.33}{10}+\frac1{s'}
+=\frac{1-1.33}{-20}=0.0165\,\mathrm{cm^{-1}},
+\]
+故
+\[
+\boxed{s'=-8.58\,\mathrm{cm}}
+\]
+即鱼的虚像位于鱼缸内、靠近观察者这一侧缸壁
+约8.58cm处。
+横向放大倍数
+\[
+\boxed{m=\frac{n_ws'}{n_a s}
+\simeq -1.14}
+\]
+此处代数 \(m\) 的负号依坐标选取；
+按\emph{虚像直立}的几何相对物体高度，
+其大小 \(|m|\simeq1.14\)。
+成像正倒应结合实际折射式横向放大率的
+符号约定复核，不将代数负号简单等同光路中倒立。
+
+\paragraph{习题 25.13}
+双凸薄透镜两表面曲率半径 \(R_1=+20\,\mathrm{cm}\)、
+\(R_2=-20\,\mathrm{cm}\)，透镜制造公式
+\[
+\frac1f=(n-1)\left(\frac1{R_1}-\frac1{R_2}\right)
+=\frac{2(n-1)}{20\,\mathrm{cm}}.
+\]
+紫光
+\[
+\boxed{f_{\rm violet}=\frac{20}{2(1.698-1)}
+\simeq14.33\,\mathrm{cm}},
+\]
+红光
+\[
+\boxed{f_{\rm red}=\frac{20}{2(1.662-1)}
+\simeq15.11\,\mathrm{cm}}.
+\]
+\[
+\boxed{\Delta f=f_{\rm red}-f_{\rm violet}
+\simeq0.78\,\mathrm{cm}},\quad
+\boxed{\text{紫光焦点更靠近透镜}}.
+\]
+这体现正常色散产生的纵向色差。
+
+\paragraph{习题 25.14}
+设主虹光线经过两次折射与一次内部镜面反射，
+入射角 \(\theta_1\)、水内折射角 \(\theta_2\)，
+角偏转在几何追迹后可写
+\[
+\boxed{\alpha=4\theta_2-2\theta_1}.
+\]
+Snell关系 \(\sin\theta_1=n\sin\theta_2\)，
+微分得到
+\(d\theta_2/d\theta_1
+=\cos\theta_1/(n\cos\theta_2)\)。
+令 \(d\alpha/d\theta_1=0\)，则
+\(2\cos\theta_1=n\cos\theta_2\)，消去
+\(\theta_2\) 有
+\[
+\boxed{\cos^2\theta_{1c}=\frac{n^2-1}{3}}.
+\]
+红光 \(n_r=1.333\)、
+紫光 \(n_v=1.342\)，分别给
+\[
+\theta_{1c,r}\simeq59.4^\circ,\quad
+\theta_{1c,v}\simeq58.9^\circ;
+\qquad
+\boxed{\alpha_r\simeq42.1^\circ,\quad
+\alpha_v\simeq40.8^\circ}.
+\]
+从背太阳方向观察主虹，红色位于外侧
+（相对反太阳点角半径更大），紫色位于内侧。
+这是球形水滴一次内反射的理想几何光学模型。
+
+\paragraph{习题 25.15}
+平凸透镜 \(n=1.60,R=24\,\mathrm{cm}\)，
+制造公式给
+\[
+\boxed{f=R/(n-1)=40\,\mathrm{cm}}.
+\]
+采用实物左侧 \(s>0\)，像在透镜右侧
+\(s'>0\)，满足 \(1/f=1/s+1/s'\)；
+放大率 \(m=-s'/s\)：
+\[
+\begin{array}{c|c|c|l}
+s/\mathrm{cm}&s'/\mathrm{cm}&m&\text{性质}\\\hline
+120&60&-1/2&\text{右侧实像，倒立缩小}\\
+80&80&-1&\text{右侧实像，倒立等大}\\
+60&120&-2&\text{右侧实像，倒立放大}\\
+20&-40&+2&\text{左侧虚像，正立放大}
+\end{array}
+\]
+用过光心不偏折与平行轴经焦点两条标准光线
+可构图；源书原图需重绘。
+
+\paragraph{习题 25.16}
+物屏相距 \(L=s+s'\)，透镜两个位置分离
+\(d=|s'-s|\)。
+两个物距是二次方程
+\(s^2-Ls+Lf=0\) 的根，因
+\(ss'=Lf\)，
+\[
+d^2=(s'-s)^2=L^2-4Lf
+\quad\Longrightarrow\quad
+\boxed{f=\frac{L^2-d^2}{4L}}.
+\]
+两处均为实像、倒立，
+放大率大小分别 \(|m_1|=s'/s\)、
+\(|m_2|=s/s'\)，所以
+\(\boxed{|m_1m_2|=1}\)，
+一幅放大、一幅缩小。
+存在两个\emph{不同}位置需判别式 \(L^2-4Lf>0\)，
+故 \(\boxed{L>4f}\)；
+\(L=4f\) 两位置合一。
+
+\paragraph{习题 25.17}
+透镜焦距 \(f=20.0\,\mathrm{cm}\)，
+像屏距 \(s'=5.00\,\mathrm m=500\,\mathrm{cm}\)。
+\[
+\boxed{s=\frac{fs'}{s'-f}
+=\frac{20\cdot500}{500-20}
+=\frac{125}{6}\,\mathrm{cm}
+\simeq20.83\,\mathrm{cm}}.
+\]
+因此像为实像、倒立，
+需将幻灯片倒放以获得正立投影。
+横向放大率
+\(m=-s'/s=-500/(125/6)=-24\)，
+\[
+\boxed{\frac{A_{\rm screen}}{A_{\rm slide}}
+=m^2=576}.
+\]
+\textbf{源书差异：}辅导S PDF346采用近似物距20.8cm
+再求面积放大而印约578，
+但保持原参数精度计算的结果为精确576。
+
+\paragraph{习题 25.18}
+第一透镜 \(f_1=10\,\mathrm{cm}\)，
+实物距 \(s_1=15\,\mathrm{cm}\)：
+\[
+s'_1=\frac{f_1s_1}{s_1-f_1}
+=\frac{10\cdot15}{5}=30\,\mathrm{cm},\quad
+m_1=-30/15=-2.
+\]
+第二透镜在第一透镜右侧10cm，
+所以若第一透镜单独成像，
+像会在第二透镜右方20cm；
+该像对第二透镜是\emph{虚物}：
+\(s_2=-20\,\mathrm{cm}\)。
+\[
+\frac1{s'_2}=\frac18-\frac1{-20}
+=\frac7{40}
+\quad\Longrightarrow\quad
+\boxed{s'_2=\frac{40}7\,\mathrm{cm}
+\simeq5.71\,\mathrm{cm}}
+\]
+即第二透镜右侧实像。
+二镜放大率相乘
+\(m_2=-s'_2/s_2=+2/7\)，
+\(\boxed{m_{\rm total}=-4/7}\)，
+\[
+\boxed{h_{\rm final}=1.5\times\frac47
+\simeq0.857\,\mathrm{cm}},\quad
+\boxed{\text{倒立实像}}.
+\]
+如果把第二镜前的虚物错写成 \(+20\,\mathrm{cm}\)，
+像位置和总放大率都会错。
+
+\paragraph{习题 25.19}
+薄透镜一次变换
+\(1/s'=1/f_1-1/s\)。
+两透镜贴合时第二透镜的物距
+等于第一透镜像距的相反数（取相同光传播轴）：
+\[
+\frac1{s''}=\frac1{f_2}+\frac1{s'}
+=\frac1{f_1}+\frac1{f_2}-\frac1s.
+\]
+与组合透镜定义
+\(1/s''=1/f-1/s\) 比较，得
+\[
+\boxed{\frac1f=\frac1{f_1}+\frac1{f_2}}.
+\]
+此推导假定两薄透镜紧贴，忽略间距和厚度；
+若有有限间隔则不能简单相加。
+
+\paragraph{习题 25.20}
+望远镜正常调焦，角放大率大小
+\(M=f_{\rm obj}/f_{\rm eye}\)。
+Yerkes折射镜
+\[
+\boxed{M_Y=19.5/.10=195},\qquad
+\boxed{\theta_Y=1.22\frac{550\times10^{-9}}{1.02}
+\simeq6.58\times10^{-7}\,\mathrm{rad}
+\simeq0.1357''}.
+\]
+Palomar反射镜
+\[
+\boxed{M_P=16.8/.0125=1344},\qquad
+\boxed{\theta_P=1.22\frac{550\times10^{-9}}{5.1}
+\simeq1.32\times10^{-7}\,\mathrm{rad}
+\simeq0.0271''}.
+\]
+\textbf{源书差异：}辅导S PDF347的Yerkes答案
+\(6.47\times10^{-7}\,\mathrm{rad}\)
+与题给 \(D=1.02\,\mathrm m\) 及550nm直接代入
+瑞利式不符；本解按原题参数给
+\(6.58\times10^{-7}\,\mathrm{rad}\)。
+角放大率不等同于衍射分辨率；
+视宁度等条件未计。
+
+\paragraph{习题 25.21}
+主凹面镜 \(M_1\) 焦距 \(f_1=20\,\mathrm m\)，
+副镜 \(M_2\) 位于其前方14m。
+若无副镜，无穷远平行光在主镜前
+20m处聚焦，即焦点在副镜\emph{外}6m处，
+所以对副镜构成距其后方6m的虚物，
+取副镜物距 \(s_2=-6\,\mathrm m\)。
+若最终星像位于主镜后方4m，
+与副镜相距 \(14+4=18\,\mathrm m\)
+（沿折返光路成实像）：
+\[
+\frac1{f_2}=\frac1{s_2}+\frac1{s'_2}
+=-\frac16+\frac1{18}=-\frac19,
+\quad
+\boxed{f_2=-9.0\,\mathrm m}
+\]
+故副镜为\emph{凸面镜}，形成卡塞格林式折返。
+由光束变换，等效组合物镜焦距按源书S PDF348
+理想近轴约 \(f_{\rm eff}=32\,\mathrm m\)。
+将 \(f_{\rm eye}=20\,\mathrm{cm}=.20\,\mathrm m\)
+的目镜放在最终中间实像后方约.20m，
+即主镜后方 \(4.20\,\mathrm m\) 处，组成正常调焦望远镜。
+\[
+\boxed{|M|\simeq f_{\rm eff}/f_{\rm eye}=32/.20=160}.
+\]
+主镜口径 \(D=10\,\mathrm m\)，
+按波长590nm的衍射限
+\[
+\boxed{\theta_R=1.22(590\times10^{-9})/10
+\simeq7.20\times10^{-8}\,\mathrm{rad}
+\simeq0.0149''}.
+\]
+该理想估计未扣副镜中央遮挡和系统实际衍射传递函数。
