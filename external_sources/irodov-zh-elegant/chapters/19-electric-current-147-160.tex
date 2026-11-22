@@ -53,11 +53,33 @@ $(\varepsilon-1)C'_0$，
 =\frac{2\pi\varepsilon_0(\varepsilon-1)rvV}{d}}.
 \]
 室温水取 $\varepsilon\simeq81$，
+代入原印速度 $v=5.0\,\mathrm{m/s}$，
 \[
-\boxed{I\simeq0.11\,\mathrm{\mu A}}.
+\begin{aligned}
+\frac{\mathrm dC}{\mathrm dt}
+&=\frac{2\pi(8.854\times10^{-12})(80)
+(0.050)(5.0)}{0.0020}
+\\
+&\simeq5.56\times10^{-7}\,\mathrm{F/s},
+\\
+I&=(200\,\mathrm V)(5.56\times10^{-7}\,\mathrm{F/s})
+\\
+&\simeq1.11\times10^{-4}\,\mathrm A.
+\end{aligned}
 \]
-\excheck 电流由介质进入时电容随时间变化引起，
-不是水在圆柱电极间形成的欧姆漏电流。
+故
+\[
+\boxed{I\simeq0.11\,\mathrm{mA}
+=110\,\mathrm{\mu A}}.
+\]
+\excheck 原版英文扫描本题确实印速度
+$v=5.0\,\mathrm{m/s}$；其书末简答却写
+$0.11\,\mathrm{\mu A}$，与原公式、单位换算相差
+$10^3$ 倍。若速度原拟为 $5.0\,\mathrm{mm/s}$
+才会得到该书末数值，但\emph{不能擅自把原印
+$\mathrm{m/s}$ 改写成 $\mathrm{mm/s}$}。
+所以本译稿保留题给速度，修正结果并在勘误记录说明。
+电流来自电容随浸水长度变化，不是水的欧姆漏电流。
 
 \electrocurrentproblem{149}{112--113}
 在 $0^\circ\mathrm C$ 时，两导体电阻
