@@ -78,3 +78,409 @@
 “若存在所设平衡，其角度必满足该关系”，
 而不能单凭角度关系断言任意 \(q,Q\) 均有可实现的平衡。
 这属于原题模型条件需要进一步说明的审校风险。
+
+
+% 习题12.4--12.23：由原题独立复算，配套辅导PDF约191--198页交叉参照。
+% 所有“图示依赖”与近似假设仍列在原题/台账，未作独立专家认证。
+\subsection*{习题12.4--12.23：独立解析}
+\paragraph{习题 12.4}
+按照题设，把两夸克近似视为相距
+\(r=1.0\times10^{-15}\,\mathrm m\) 的点电荷，
+\(q_u=2e/3\)、\(q_{\bar d}=e/3\)。
+库仑定律给出
+\[
+ F=\frac{1}{4\pi\varepsilon_0}\frac{2e^2}{9r^2}
+ =\frac{(8.9876\times10^9)\,2(1.6022\times10^{-19})^2}
+ {9(1.0\times10^{-15})^2}
+ \approx\boxed{51.3\,\mathrm N}.
+\]
+二者同号，静电力相斥；核内的真实强相互作用并未计入。
+
+\paragraph{习题 12.5}
+单个核子或电子的最大电荷误差按题意为
+\(\delta q=10^{-21}e\)，氧原子含8个质子、8个中子、
+8个电子，最坏同号偏差可叠加，故
+\[
+ |Q|_{\max}=24\times10^{-21}e
+ \approx3.845\times10^{-39}\,\mathrm C.
+\]
+两个氧原子按质点近似，质量
+\(m_{\rm O}\simeq16u\)、
+\(u=1.66054\times10^{-27}\,\mathrm{kg}\)。
+相距 \(r\) 时两种力的大小之比与 \(r\) 无关：
+\[
+ \frac{F_e}{F_g}
+ =\frac{|Q_1Q_2|}{4\pi\varepsilon_0 G m_{\rm O}^2}
+ \le\frac{(24\times10^{-21}e)^2}
+ {4\pi\varepsilon_0G(16u)^2}
+ \approx2.82\times10^{-6}.
+\]
+即使电荷为同号，静电斥力也远小于万有引力，
+所以在题设误差上界和质点模型下净力仍相吸。
+\textbf{注意：}这里的误差单位是 \(10^{-21}e\)，
+不是 \(10^{-21}\,\mathrm C\)，误读会颠倒结论。
+
+\paragraph{习题 12.6}
+设电偶极子正、负电荷为 \(\pm q\)，
+分别位于轴上 \(x=\pm l/2\)。
+在轴外 \(x=r>l/2\) 的场强沿偶极矩方向，
+\[
+ E_x=\frac{q}{4\pi\varepsilon_0}
+ \left[\frac1{(r-l/2)^2}-\frac1{(r+l/2)^2}\right]
+ =\frac{q}{4\pi\varepsilon_0}
+ \frac{2rl}{(r^2-l^2/4)^2}.
+\]
+当 \(r\gg l\)，分母近似 \(r^4\)，
+所以
+\[
+ \boxed{E_x\simeq\frac{2ql}{4\pi\varepsilon_0r^3}
+ =\frac{2p}{4\pi\varepsilon_0r^3}}.
+\]
+近似误差的相对量级为 \(O(l^2/r^2)\)。
+
+\paragraph{习题 12.7}
+在电偶极子远场近似中，电矩沿 \(x\) 轴，
+\(\boldsymbol p=p\boldsymbol i\)，
+\(\boldsymbol r=x\boldsymbol i+y\boldsymbol j\)。
+偶极场的向量表达式
+\[
+ \boldsymbol E=\frac1{4\pi\varepsilon_0r^3}
+ [3(\boldsymbol p\cdot\hat{\boldsymbol r})\hat{\boldsymbol r}
+ -\boldsymbol p],\quad r^2=x^2+y^2
+\]
+来自正负点电荷场的一阶展开。
+因 \(\boldsymbol p\cdot\hat{\boldsymbol r}=px/r\)，
+逐分量整理得
+\[
+ \boxed{E_x=
+ \frac{p(2x^2-y^2)}
+ {4\pi\varepsilon_0(x^2+y^2)^{5/2}},\qquad
+ E_y=\frac{3pxy}
+ {4\pi\varepsilon_0(x^2+y^2)^{5/2}}}.
+\]
+检查：轴上 \(y=0\) 给 \(E_x=2p/(4\pi\varepsilon_0|x|^3)\)；
+赤道 \(x=0\) 给 \(E_x=-p/(4\pi\varepsilon_0|y|^3)\)。
+
+\paragraph{习题 12.8}
+无限长线电荷 \(\lambda\) 在距离 \(r\) 处产生
+\(|E|=|\lambda|/(2\pi\varepsilon_0r)\)。
+另一根线相距 \(r=2a\)，其每单位长度受力大小
+\[
+ \boxed{\frac FL=\frac{\lambda^2}{4\pi\varepsilon_0a}}.
+\]
+两线带异号电荷，方向互相吸引。
+
+\paragraph{习题 12.9}
+把带电线段沿 \(x\) 轴取为
+\(-L/2\le x\le L/2\)，观察点位于 \(x=r>L/2\)。
+各元电荷产生同向轴向场，
+\[
+ E=\frac{\lambda}{4\pi\varepsilon_0}
+ \int_{-L/2}^{L/2}\frac{dx}{(r-x)^2}
+ =\frac{\lambda}{4\pi\varepsilon_0}
+ \left[\frac1{r-L/2}-\frac1{r+L/2}\right].
+\]
+因此
+\[
+ \boxed{E=\frac{\lambda L}
+ {4\pi\varepsilon_0[r^2-(L/2)^2]}}.
+\]
+正 \(\lambda\) 时沿正轴；远场 \(r\gg L\)
+退化为总电荷 \(Q=\lambda L\) 的点电荷场。
+
+\paragraph{习题 12.10}
+令圆环上角度为 \(\theta\) 的小电荷元
+\(dq=\lambda_0\sin\theta\,R\,d\theta\)。
+中心处的电场元
+\(d\boldsymbol E=
+-\frac{dq}{4\pi\varepsilon_0R^2}
+(\cos\theta\,\boldsymbol i+\sin\theta\,\boldsymbol j)\)。
+全周积分：
+\[
+ E_x=-\frac{\lambda_0}{4\pi\varepsilon_0R}
+ \int_0^{2\pi}\sin\theta\cos\theta\,d\theta=0,
+\]
+\[
+ E_y=-\frac{\lambda_0}{4\pi\varepsilon_0R}
+ \int_0^{2\pi}\sin^2\theta\,d\theta
+ =-\frac{\lambda_0}{4\varepsilon_0R}.
+\]
+故 \(\lambda_0>0\) 时沿负 \(y\) 方向，
+\(\boxed{\boldsymbol E=-\lambda_0\boldsymbol j/(4\varepsilon_0R)}\)。
+
+\paragraph{习题 12.11}
+以缺口的角平分线为 \(+x\) 轴。
+缺口弧长 \(s=0.020\,\mathrm m\)，
+圆半径 \(R=0.5\,\mathrm m\)，
+残余塑料杆线密度
+\(\lambda=Q/(2\pi R-s)\)。
+完整带电圆环在圆心处场为零；
+因此剩余圆弧的场等于缺失小圆弧
+同密度电荷产生场的相反数。
+设缺口张角 \(\Delta=s/R\)，
+\[
+ E_{\rm arc}=
+ \frac{1}{4\pi\varepsilon_0}
+ \frac{\lambda}{R}\int_{-\Delta/2}^{\Delta/2}
+ \cos\theta\,d\theta
+ =\frac{2\lambda}{4\pi\varepsilon_0R}
+ \sin\frac{\Delta}{2}.
+\]
+代入原题数值得
+\[
+ \boxed{E\approx0.719\,\mathrm{N/C}},
+\]
+方向沿缺口角平分线\emph{指向缺口}。
+若缺口长度被解释为端点直线距离，
+其张角应改为 \(2\arcsin[s/(2R)]\)，
+在此小角度下差异可忽略；此处明确采用弧长模型。
+
+\paragraph{习题 12.12}
+设线电荷密度为 \(\lambda\)，半圆半径 \(a\)。
+对圆心 \(O\)，半圆位于左侧，
+场的 \(x\) 分量为
+\[
+ E_{{\rm semi},x}
+ =-\frac{\lambda}{4\pi\varepsilon_0a}
+ \int_{\pi/2}^{3\pi/2}\cos\theta\,d\theta
+ =+\frac{2\lambda}{4\pi\varepsilon_0a}.
+\]
+上、下两条由 \(x=0\) 向右延伸的半无限直线
+的竖直分量相消，水平分量相加：
+\[
+ E_{{\rm lines},x}=
+ -2\frac{\lambda}{4\pi\varepsilon_0}
+ \int_0^\infty\frac{x\,dx}{(x^2+a^2)^{3/2}}
+ =-\frac{2\lambda}{4\pi\varepsilon_0a}.
+\]
+因此 \(\boxed{\boldsymbol E(O)=\boldsymbol0}\)。
+
+\paragraph{习题 12.13}
+在题设半球面的\emph{平面底面}的某一点
+\(P\) 作关于该底面的镜像，把均匀带电的另一半球面补上，
+便得到一个均匀带电完整球面。
+高斯定律与球对称性给出球面内任一点
+\(\boldsymbol E_{\rm full}=\boldsymbol0\)。
+在底面任一点，两半球面产生的场
+\(\boldsymbol E_+\) 与 \(\boldsymbol E_-\) 的
+平行于底面的分量因镜像而\emph{相等}，
+垂直底面的分量则互为相反数。
+因为总场为零且切向分量相等，
+必有 \(2\boldsymbol E_{\parallel}=0\)。
+故单个半球面在假想圆形底面上的场没有切向分量，
+即\(\boxed{\boldsymbol E\perp\text{假想圆面}}\)。
+本证明不能被误写成场必垂直于半球的\emph{曲面}。
+
+\paragraph{习题 12.14}
+(1) 点电荷位于立方体中心，按高斯定律，
+穿过六个面的总电通量 \(q/\varepsilon_0\)，
+由对称性各面相同：
+\[
+ \boxed{\Phi_{\rm face}=\frac{q}{6\varepsilon_0}}.
+\]
+(2) 把8个相同立方体沿点电荷所在的顶点拼成大立方体，
+该点电荷位于大立方体中心。
+大立方体每个外大面的通量 \(q/(6\varepsilon_0)\)，
+每个大面含4个小面，故原小立方体
+\emph{与点电荷不相邻的3个外面}各通量
+\[
+ \boxed{\Phi_{\rm outer}=\frac{q}{24\varepsilon_0}}.
+\]
+\emph{经过点电荷所在顶点的3个面}，
+电场在面内切向（除奇点自身），故其面通量为零。
+奇点不能直接用局部面元的普通积分处理；
+拼合构造避免了其边界歧义。
+
+\paragraph{习题 12.15}
+由导体地表外侧法向场的跳跃条件
+\(\sigma=\varepsilon_0E_n\)，
+外法线取向上，而晴天场向下，
+因此地表面电荷密度为负，
+\(\sigma=-\varepsilon_0(120\,\mathrm{V/m})\)。
+每平方米过剩电子数
+\[
+ \boxed{N=\frac{|\sigma|}{e}
+ =\frac{\varepsilon_0(120)}{1.60218\times10^{-19}}
+ \approx6.63\times10^9\ \mathrm{m^{-2}}}.
+\]
+所指的是负电荷过剩而非正电荷过剩。
+
+\paragraph{习题 12.16}
+把竖直向上取为 \(+z\)，
+\(E_z(100\,\mathrm m)=-150\,\mathrm{N/C}\)，
+\(E_z(300\,\mathrm m)=-100\,\mathrm{N/C}\)。
+对面积 \(A\)、高度 \(\Delta z=200\,\mathrm m\)
+的高斯柱，侧面通量为零，
+\[
+ \rho_{\rm avg}
+ =\varepsilon_0\frac{E_z(300)-E_z(100)}{200}
+ =\varepsilon_0\frac{50}{200}
+ \approx2.214\times10^{-12}\,\mathrm{C/m^3}.
+\]
+故是\emph{正}体电荷密度，即每立方米
+\[
+ \boxed{n_{\rm deficit}=\rho_{\rm avg}/e
+ \approx1.38\times10^7}
+\]
+个电子的净缺少量。
+单位检查：\(\varepsilon_0 E/\ell\) 是 \(\mathrm{C/m^3}\)。
+
+\paragraph{习题 12.17}
+对半径 \(r\)、长度 \(\ell\) 的同轴高斯柱面，
+圆柱面通量为 \(E(r)2\pi r\ell\)。
+若 \(r<a\)，包围净电荷为零；
+若 \(r>a\)，包围电荷为
+\(\sigma(2\pi a\ell)\)。
+因而
+\[
+ \boxed{E_r(r)=
+ \begin{cases}
+ 0,&0\le r<a,\\[2pt]
+ \displaystyle\frac{\sigma a}{\varepsilon_0r},&r>a.
+ \end{cases}}
+\]
+方向正 \(\sigma\) 时径向向外；在 \(r=a\)
+电场法向分量跨越表面有跳跃
+\(E_r(a^+)-E_r(a^-)=\sigma/\varepsilon_0\)。
+\(E-r\) 曲线为内部零、表面跃变、
+外部按 \(1/r\) 衰减。
+
+\paragraph{习题 12.18}
+两层同轴圆筒的线电荷密度分别为
+\(+\lambda,-\lambda\)，取 \(R_1<R_2\)。
+高斯柱面每单位长度所包围的电荷依次为
+\(0,\lambda,\lambda-\lambda=0\)，故
+\[
+ \boxed{E_r(r)=
+ \begin{cases}
+ 0,&r<R_1,\\
+ \displaystyle\frac{\lambda}{2\pi\varepsilon_0r},
+ &R_1<r<R_2,\\
+ 0,&r>R_2.
+ \end{cases}}
+\]
+在筒面上取两侧极限，不能把薄层表面的跃变
+误作内部连续值。
+
+\paragraph{习题 12.19}
+设第一平面位于 \(x=0\)，第二平面位于
+\(x=d>0\)，法向 \(+\boldsymbol i\) 从第一面指向第二面。
+无限带电平面两侧的场大小
+\(|\sigma|/(2\varepsilon_0)\)，
+符号由其朝向决定。
+叠加后
+\[
+ \boxed{E_x=
+ \begin{cases}
+ -(\sigma_1+\sigma_2)/(2\varepsilon_0),&x<0,\\
+ (\sigma_1-\sigma_2)/(2\varepsilon_0),&0<x<d,\\
+ (\sigma_1+\sigma_2)/(2\varepsilon_0),&x>d.
+ \end{cases}}
+\]
+代入 \(\sigma_1=4\times10^{-11}\),
+\(\sigma_2=-2\times10^{-11}\,\mathrm{C/m^2}\)：
+\[
+ E_x\simeq
+ \begin{cases}
+ -1.13\,\mathrm{N/C},&x<0,\\
+ +3.39\,\mathrm{N/C},&0<x<d,\\
+ +1.13\,\mathrm{N/C},&x>d.
+ \end{cases}
+\]
+这里第一面右侧正向，第二面左侧因带负电而指向第二面。
+
+\paragraph{习题 12.20}
+厚壁中心为 \(d=0\)，表面在 \(d=\pm D/2\)。
+在距中面 \(|d|<D/2\) 处取对称的高斯柱，
+通量 \(2E(d)A\)，包围电荷
+\(2\rho dA\)（取 \(d>0\)），
+所以 \(E(d)=\rho d/\varepsilon_0\)。
+超出厚壁后包围总电荷等效面密度
+\(\rho D\)：
+\[
+ \boxed{E_d(d)=
+ \begin{cases}
+ \rho d/\varepsilon_0,&|d|\le D/2,\\
+ \rho D\,\operatorname{sgn}(d)/(2\varepsilon_0),
+ &|d|>D/2.
+ \end{cases}}
+\]
+带正电时在上下两侧向外；
+\(E-d\) 曲线在厚壁内部是过原点的直线，
+壁外为正、负常值平台。
+
+\paragraph{习题 12.21}
+设开孔的无限平面位于 \(z=0\)，
+孔半径 \(R\)，面电荷密度 \(\sigma_0\)。
+用完整均匀无限平面\emph{减去}
+中心半径为 \(R\) 的带电圆盘。
+对 \(z>0\)，圆盘在轴上的场为
+\[
+ E_{\rm disk}(z)=\frac{\sigma_0}{2\varepsilon_0}
+ \left(1-\frac{z}{\sqrt{z^2+R^2}}\right),
+\]
+无限平面场为 \(\sigma_0/(2\varepsilon_0)\)，
+故孔轴上
+\[
+ \boxed{E_z(z)=\frac{\sigma_0z}
+ {2\varepsilon_0\sqrt{z^2+R^2}}}.
+\]
+对 \(z<0\) 通过奇对称性延拓，同一表达式仍成立。
+检查：\(E_z(0)=0\)，远轴 \(|z|\gg R\) 时
+趋向有孔无限面原来的 \(\pm\sigma_0/(2\varepsilon_0)\)。
+
+\paragraph{习题 12.22}
+原均匀大球球心为 \(O\)，空腔球心为 \(O'\)，
+其相对位移向量 \(\boldsymbol a=\overrightarrow{OO'}\)。
+把“挖空”看成叠加：
+原密度为 \(+\rho\) 的完整大球，及以
+\(O'\) 为中心密度为 \(-\rho\) 的小球。
+任何空腔内位置 \(P\) 的位矢分别为
+\(\boldsymbol R=\overrightarrow{OP}\) 与
+\(\boldsymbol r=\overrightarrow{O'P}\)，
+且 \(\boldsymbol R=\boldsymbol a+\boldsymbol r\)。
+均匀带电实心球内部电场为
+\(\rho\boldsymbol r/(3\varepsilon_0)\)，
+叠加得
+\[
+ \boldsymbol E_{\rm cavity}
+ =\frac{\rho}{3\varepsilon_0}
+ (\boldsymbol R-\boldsymbol r)
+ =\boxed{\frac{\rho\,\boldsymbol a}{3\varepsilon_0}}.
+\]
+与 \(P\) 的位置无关，因此空腔内均匀。
+若 \(\rho<0\)，方向与 \(\boldsymbol a\) 相反。
+
+\paragraph{习题 12.23}
+设电子云密度 \(\rho_e=-C e^{-2r/a_0}\)，
+总电子电荷必须是 \(-e\)：
+\[
+ -e=-4\pi C\int_0^\infty r^2e^{-2r/a_0}\,dr
+ =-\pi C a_0^3.
+\]
+故 \(\boxed{C=e/(\pi a_0^3)}\)。
+半径 \(r\) 内的电子云所包围电荷为
+\[
+ Q_e(r)=-e\left[1-e^{-2r/a_0}
+ \left(1+\frac{2r}{a_0}+\frac{2r^2}{a_0^2}\right)\right].
+\]
+再计入中心的质子电荷 \(+e\)，
+球内\emph{净}电荷是
+\[
+ Q_{\rm net}(r)=e\,e^{-2r/a_0}
+ \left(1+\frac{2r}{a_0}+\frac{2r^2}{a_0^2}\right).
+\]
+在 \(r=a_0=0.53\times10^{-10}\,\mathrm m\) 时
+\[
+ \boxed{Q_{\rm net}(a_0)=5e^{-2}e
+ \approx0.67668e\approx1.084\times10^{-19}\,\mathrm C}.
+\]
+按球对称高斯定律，
+\[
+ \boxed{E(a_0)=\frac{5e^{-2}e}
+ {4\pi\varepsilon_0a_0^2}
+ \approx3.47\times10^{11}\,\mathrm{N/C}},
+\]
+方向径向向外。
+若只计算电子云的场而漏掉质子，便不符合题目
+“半径内净电荷”的中性原子模型。
