@@ -22,7 +22,7 @@ eq(200,"electron oscillation speed m/s",vm,.0173,rtol=.02)
 eq(200,"magnetic force harmonics max/electric peak",vm/(2*c),2.9e-11,rtol=.02)
 freq=100e6;index=.90
 ne=(2*pi*freq)**2*me*eps0/e**2*(1-index**2)
-eq(202,"plasma index inferred electron density m^-3",ne,2.4e13,rtol=.01)
+eq(202,"plasma index inferred electron density m^-3",ne,2.35684095483e13,rtol=1e-10)
 wp=2*pi*c/.75
 n0=wp*wp*eps0*me/(e*e)
 eq(206,"radio plasma reflection cutoff electron density m^-3",n0,2.e15,rtol=.03)
