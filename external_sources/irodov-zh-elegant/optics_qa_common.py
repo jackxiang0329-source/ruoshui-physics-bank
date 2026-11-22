@@ -34,7 +34,7 @@ def load(files,macro,begin,end):
         anchor(n,body,r"\exsolution")
         anchor(n,body,r"\excheck")
         truth(n,"substantive statement/derivation/check content",len(body)>190)
-        truth(n,"has numerical/formula content",("$" in body or r"\[" in body))
+        truth(n,"contains an actual problem-specific solution",len(body.split(r"\exsolution",1)[1].split(r"\excheck",1)[0].strip())>70)
     return blocks
 def anchor(n,block,token):
     global count
