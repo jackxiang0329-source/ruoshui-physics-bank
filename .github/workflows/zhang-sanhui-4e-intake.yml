@@ -83,6 +83,8 @@ jobs:
         run: python3 external_sources/zhang_sanhui_4e/qa_thought_provenance_gate.py
       - name: Independently test 31 companion-selected thought-question physical models
         run: python3 external_sources/zhang_sanhui_4e/qa_supplement_thought_models.py
+      - name: Cross-method checks for 20 high-risk existing physics candidates
+        run: python3 external_sources/zhang_sanhui_4e/qa_high_risk_crossmethod.py
   xelatex-candidate-proof:
     runs-on: ubuntu-latest
     needs: structural-and-math-spotchecks
