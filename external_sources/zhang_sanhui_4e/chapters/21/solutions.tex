@@ -1,0 +1,403 @@
+% 第21章章末习题独立解析；主书V2 PDF235--237，配套辅导S PDF301--306。
+% 候选稿：原图、相干辐射物理与配套印刷差异仍待独立学术审查。
+\section*{第21章\quad 麦克斯韦方程组和电磁辐射：独立解析}
+
+\paragraph{习题 21.1}
+安培--麦克斯韦方程写为
+\(\nabla\times\boldsymbol B
+=\mu_0\boldsymbol J+\mu_0\varepsilon_0\partial_t\boldsymbol E\)。
+两边取散度并利用
+\(\nabla\cdot(\nabla\times\boldsymbol B)=0\)，得到
+\[
+0=\mu_0\nabla\cdot\boldsymbol J+
+\mu_0\varepsilon_0\partial_t(\nabla\cdot\boldsymbol E).
+\]
+再由高斯定律
+\(\nabla\cdot\boldsymbol E=\rho/\varepsilon_0\)，
+得到连续性方程
+\[
+\boxed{\partial_t\rho+\nabla\cdot\boldsymbol J=0}.
+\]
+对固定体积 \(V\) 积分：
+\[
+\frac{dQ_V}{dt}=-\oint_{\partial V}\boldsymbol J\cdot d\boldsymbol A.
+\]
+边界无净电流通过时右侧为零，故
+\(\boxed{Q_V=\mathrm{const}}\)。
+这比仅对某一规则曲面作图示论证更一般。
+
+\paragraph{习题 21.2}
+理想径向电流场在任意绕原点的旋转下保持不变；
+若存在磁场，旋转对称性迫使它只能沿径向
+\(\boldsymbol B=B_r(r,t)\hat{\boldsymbol r}\)。
+高斯磁定律给出
+\[
+0=\nabla\cdot\boldsymbol B
+=\frac1{r^2}\partial_r[r^2B_r(r,t)]
+\quad\Longrightarrow\quad
+B_r=C(t)/r^2.
+\]
+对包围原点的球面用
+\(\oint\boldsymbol B\cdot d\boldsymbol A=0\) 得
+\(4\pi C(t)=0\)，故
+\(\boxed{\boldsymbol B\equiv\boldsymbol0}\)。
+另一检验是径向对称下
+\(\nabla\times\boldsymbol B\equiv0\)，
+由安培--麦克斯韦方程
+\(\boldsymbol J+\varepsilon_0\partial_t\boldsymbol E=0\)
+（在给定球面电通量变化适当计入净电流时）。
+不能将径向电流误当作沿某固定轴的长直导线。
+
+\paragraph{习题 21.3}
+非相对论远区加速电荷的辐射电场幅值
+\[
+E_{\rm rad}=\frac{e a\sin\theta}
+{4\pi\varepsilon_0c^2r}.
+\]
+代入 \(e=1.602\times10^{-19}\,\mathrm C\)，
+\(a=2.0\times10^{24}\,\mathrm{m/s^2}\)，
+\(r=0.20\,\mathrm m\)，
+\(\theta=45^\circ\)，\(c=2.998\times10^8\,\mathrm{m/s}\)，
+\[
+\boxed{E_{\rm rad}\simeq1.13\times10^{-1}\,\mathrm{V/m}},
+\qquad
+\boxed{\Delta t=r/c\simeq6.67\times10^{-10}\,\mathrm s}.
+\]
+场方向垂直于观测方向；
+源电荷为负，方向需按带符号的加速度投影判断。
+
+\paragraph{习题 21.4}
+匀减速从初动能 \(K=2.0\times10^4\,\mathrm{eV}\)
+经过距离 \(d=5.0\times10^{-9}\,\mathrm m\) 停止，
+由功--能关系
+\(ma\,d=K\)，故
+\[
+a=\frac{K}{m_ed}
+=\frac{(2.0\times10^4)(1.602\times10^{-19})}
+{(9.109\times10^{-31})(5.0\times10^{-9})}
+\simeq7.04\times10^{23}\,\mathrm{m/s^2}.
+\]
+在 \(\theta=90^\circ,r=.30\,\mathrm m\) 处，
+\[
+\boxed{E_{\rm rad}=
+\frac{ea}{4\pi\varepsilon_0c^2r}
+\simeq3.77\times10^{-2}\,\mathrm{V/m}}.
+\]
+这是经典、恒定减速的近似；
+金属靶轫致辐射具有真实的时间和能谱分布。
+
+\paragraph{习题 21.5}
+速度 \(v=v_0\cos\omega t\)，
+加速度 \(a=-v_0\omega\sin\omega t\)。
+所以
+\[
+\boxed{a_{\max}=v_0\omega
+=(8.0\times10^{-3})(6.0\times10^6)
+=4.8\times10^4\,\mathrm{m/s^2}}.
+\]
+当 \(\theta=90^\circ,r=1.0\,\mathrm{km}\)：
+\[
+\boxed{E_{\max}=
+\frac{ea_{\max}}{4\pi\varepsilon_0c^2r}
+\simeq7.68\times10^{-25}\,\mathrm{V/m}},\quad
+\boxed{\Delta t=r/c\simeq3.34\times10^{-6}\,\mathrm s}.
+\]
+这是\emph{单电子}的辐射场，不是天线整体的发射场。
+
+\paragraph{习题 21.6}
+在 \(\theta=45^\circ\)、
+\(r=0.50\,\mathrm m\) 的非相对论远区，
+\[
+\boxed{E_{\rm rad}=
+\frac{ea\sin45^\circ}{4\pi\varepsilon_0c^2r}
+\simeq2.49\times10^{-12}\,\mathrm{V/m}},
+\qquad
+\boxed{B_{\rm rad}=\frac{E_{\rm rad}}c
+\simeq8.30\times10^{-21}\,\mathrm T}.
+\]
+取单位传播矢量 \(\hat{\boldsymbol n}\) 从质子指向观测点，
+\[
+\boldsymbol E_{\rm rad}\parallel
+\hat{\boldsymbol n}\times
+(\hat{\boldsymbol n}\times\boldsymbol a),
+\qquad
+\boldsymbol B_{\rm rad}=\hat{\boldsymbol n}\times
+\boldsymbol E_{\rm rad}/c.
+\]
+三者满足 \(\boldsymbol E\perp\boldsymbol B\perp\hat{\boldsymbol n}\)，
+且 \(\boldsymbol E\times\boldsymbol B\)
+指向传播方向。方向图可据此作TikZ重绘；
+原书补充图的具体箭头仍待复核。
+
+\paragraph{习题 21.7}
+(1) 单电子加速度的\emph{大小}为
+\[
+\boxed{a=\frac{eE_{\rm wire}}{m_e}
+=\frac{(1.602\times10^{-19})(3.9\times10^{-3})}
+{9.109\times10^{-31}}
+\simeq6.86\times10^8\,\mathrm{m/s^2}}.
+\]
+电子加速度方向与导线内部电场相反。
+(2) 在 \(r=4.0\,\mathrm m\)、\(\sin\theta=1\)：
+\[
+\boxed{E_{1}\simeq2.75\times10^{-18}\,\mathrm{V/m}},
+\qquad
+\boxed{B_{1}=E_1/c\simeq9.16\times10^{-27}\,\mathrm T}.
+\]
+(3) 若\emph{人为强制}所有电子的远区辐射同相且同向，
+自由电子数
+\(N=n\pi(d/2)^2l\)。
+按铜自由电子密度
+\(n\simeq8.5\times10^{28}\,\mathrm{m^{-3}}\)，
+\(d=.0026\,\mathrm m,l=.050\,\mathrm m\)，
+\[
+N\simeq2.26\times10^{22},\qquad
+\boxed{NE_1\simeq6.2\times10^4\,\mathrm{V/m}},
+\quad
+\boxed{NB_1\simeq2.1\times10^{-4}\,\mathrm T}.
+\]
+以上只是相干叠加模型的\emph{上界估计}，
+不是稳定通电铜线的可观测真实辐射。
+配套辅导扫描S PDF303对此处数值的数量级排印
+与按其所列 \(n,d,l\) 直接计算存在差异，
+\emph{尚待逐式复核，不能视为原书答案已校验}。
+(4) 当观测点距离远大于有限线段时，
+该线段的准静态磁场近似
+\[
+\boxed{B_{\mathrm{dc}}\simeq
+\frac{\mu_0Il}{4\pi r^2}
+\simeq3.75\times10^{-9}\,\mathrm T}.
+\]
+真实稳恒电流连续且宏观电荷/电流分布不随时间变化，
+导体内频繁散射及相位抵消使电荷的
+\emph{单粒子辐射场不能简单按 \(N\) 倍相干相加}。
+\(B_{\rm dc}\) 与假想 \(NB_1\) 的巨大差别不构成能量守恒矛盾。
+
+\textbf{功率守恒反证：}
+单电子按无碰撞自由加速的经典Larmor式
+\[
+ P_1=\frac{e^2(eE_{\rm wire}/m_e)^2}
+ {6\pi\varepsilon_0c^3}
+ \simeq2.69\times10^{-36}\,\mathrm W.
+\]
+若硬性假设全部 \(N\simeq2.26\times10^{22}\)
+个电子永远同相，形式上得到
+\(N^2P_1\simeq1.37\times10^9\,\mathrm W\)；
+但这段稳恒导线电源实际供能率
+\[
+ P_{\rm supplied}=IE_{\rm wire}l
+ =12(3.9\times10^{-3})(.050)
+ =2.34\times10^{-3}\,\mathrm W.
+\]
+两者相差约 \(5.8\times10^{11}\) 倍。
+这证明\emph{持续自由加速、全体相干辐射}
+与题设稳恒欧姆导线不能同时成立，
+并不意味着铜线真实发出千兆瓦电磁波。
+真实稳态宏观电荷和电流密度无时变远区集体辐射，
+散射和相位相关性不能忽略。
+
+
+\paragraph{习题 21.8}
+简谐平面波平均能流
+\(I=c\varepsilon_0E_{\rm rms}^2\)，
+\(B_{\rm rms}=E_{\rm rms}/c\)。
+所以
+\[
+\boxed{E_{\rm rms}=
+\sqrt{\frac{1.38\times10^3}{c\varepsilon_0}}
+\simeq7.21\times10^2\,\mathrm{V/m}},\qquad
+\boxed{B_{\rm rms}\simeq2.40\times10^{-6}\,\mathrm T}.
+\]
+题目问的是方均根值，并非峰值；
+峰值应再乘 \(\sqrt2\)。
+
+\paragraph{习题 21.9}
+半径 \(r=30\,\mathrm{\mu m}\)，
+束截面积 \(A=\pi r^2\)，
+故
+\[
+\boxed{\langle S\rangle=\frac PA
+=\frac{3.00\times10^5}
+{\pi(30\times10^{-6})^2}
+\simeq1.061\times10^{14}\,\mathrm{W/m^2}}.
+\]
+由
+\(\langle S\rangle
+=\frac12c\varepsilon_0E_0^2\)，得到
+\[
+\boxed{E_0=\sqrt{\frac{2\langle S\rangle}{c\varepsilon_0}}
+\simeq2.83\times10^8\,\mathrm{V/m}},\quad
+\boxed{B_0=E_0/c\simeq0.943\,\mathrm T}.
+\]
+配套辅导S PDF304所列
+\(E_m=\sqrt{S/(c\varepsilon_0)}\)
+若 \(S\) 表示\emph{平均}能流，则缺少因子 \(\sqrt2\)；
+其数值约 \(2.8\times10^8\) 却对应正确含因子2的式子。
+本稿明确峰值/平均值的区别。
+
+\paragraph{习题 21.10}
+全发散角 \(\Theta=0.880\,\mathrm{\mu rad}\)；
+半角 \(\Theta/2\)。
+远场束斑半径
+\[
+\boxed{r=L\tan(\Theta/2)
+\simeq(3.82\times10^8)\frac{0.880\times10^{-6}}2
+\simeq168\,\mathrm m}.
+\]
+假设均匀照射圆斑且无损耗，
+\[
+\boxed{I=\frac{P}{\pi r^2}
+\simeq\frac{3.8\times10^3}{\pi(168)^2}
+\simeq4.29\times10^{-2}\,\mathrm{W/m^2}}.
+\]
+若错误地用全发散角当半角，半径将翻倍、
+面积与强度分别偏差4倍。
+
+\paragraph{习题 21.11}
+导体内部纵向电场
+\(E_z=\rho J_z=\rho I/(\pi a^2)\)。
+导体外壁附近环向磁场
+\(B_\phi=\mu_0I/(2\pi a)\)。
+若电流沿 \(+z\) 方向，
+\(\hat{\boldsymbol z}\times\hat{\boldsymbol\phi}
+=-\hat{\boldsymbol r}\)，故
+\[
+\boldsymbol S=\frac{\boldsymbol E\times\boldsymbol B}{\mu_0}
+=-\frac{\rho I^2}{2\pi^2a^3}\hat{\boldsymbol r},
+\]
+方向\emph{向内}。侧壁面积 \(2\pi al\)，
+沿\emph{外法线}的通量为
+\[
+\boxed{\oint_{\rm side}\boldsymbol S\cdot d\boldsymbol A
+=-\frac{\rho I^2l}{\pi a^2}=-I^2R}.
+\]
+因此\emph{流入}导体的正功率
+\(\boxed{P_{\rm in}=I^2R}\)。
+配套辅导S PDF304的负通量公式与上述一致；
+题目中的正号仅能解释为流入功率的\emph{大小}，
+不可混用外法线符号约定。
+
+\paragraph{习题 21.12}
+电源电压 \(U=\mathcal E\)，
+理想负载电流 \(I=U/R\)。
+忽略漏电和边缘效应，在内外导体间
+\[
+\boldsymbol E(r)=\frac{U}
+{r\ln(r_2/r_1)}\hat{\boldsymbol r},\qquad
+\boldsymbol B(r)=\frac{\mu_0I}{2\pi r}
+\hat{\boldsymbol\phi}.
+\]
+因 \(\hat{\boldsymbol r}\times\hat{\boldsymbol\phi}
+=\hat{\boldsymbol z}\)，
+\[
+\boxed{\boldsymbol S(r)=
+\frac{UI}{2\pi r^2\ln(r_2/r_1)}\hat{\boldsymbol z}
+=\frac{\mathcal E^2}
+{2\pi Rr^2\ln(r_2/r_1)}\hat{\boldsymbol z}}.
+\]
+径向积分总输运功率
+\[
+\int_{r_1}^{r_2}S(r)\,2\pi r\,dr
+=\frac{\mathcal E^2}{R\ln(r_2/r_1)}
+\int_{r_1}^{r_2}\frac{dr}{r}
+=\boxed{\frac{\mathcal E^2}{R}},
+\]
+表明能量主要通过\emph{导体外电磁场}
+沿同轴线传送到负载，而非被电子机械搬运。
+
+\paragraph{习题 21.13}
+由 \(f=c/\lambda\)，
+\[
+\boxed{f=\frac{2.998\times10^8}{0.030}
+\simeq9.99\times10^9\,\mathrm{Hz}},\qquad
+\boxed{B_0=E_0/c\simeq1.00\times10^{-7}\,\mathrm T}.
+\]
+对完全吸收的正入射平面波，
+\[
+\langle p\rangle=\langle I\rangle/c
+=\frac12\varepsilon_0E_0^2
+\simeq3.98\times10^{-9}\,\mathrm{Pa}.
+\]
+面积 \(A=0.50\,\mathrm{m^2}\) 所受的力
+\[
+\boxed{\langle F\rangle=\langle p\rangle A
+\simeq1.99\times10^{-9}\,\mathrm N}.
+\]
+区分压强（Pa）与总力（N），
+以及电场\emph{振幅} \(E_0\) 与方均根值。
+
+\paragraph{习题 21.14}
+正入射能流 \(I=1.1\times10^3\,\mathrm{W/m^2}\)；
+反射率 \(\mathcal R=.50\)，透射率可忽略。
+动量通量中吸收贡献 \((1-\mathcal R)I/c\)，
+反射贡献 \(2\mathcal RI/c\)，合计
+\[
+\boxed{p=\frac{(1+\mathcal R)I}{c}
+\simeq5.50\times10^{-6}\,\mathrm{Pa}},\quad
+\boxed{F=pA
+\simeq2.75\times10^{-6}\,\mathrm N}.
+\]
+若把半数反射误作半数吸收而没有反向动量，
+会少算反射部分的压力。
+
+\paragraph{习题 21.15}
+完美镜面反射的动量通量加倍，
+峰值压强
+\[
+\boxed{p_{\rm max}=\frac{2P_{\rm max}}{cA}
+=\frac{2(1.5\times10^9)}
+{(2.998\times10^8)(1.3\times10^{-6})}
+\simeq7.70\times10^6\,\mathrm{Pa}}.
+\]
+此值是理想完全反射条件下的\emph{峰值}，
+并非平均等离子体压强。
+
+\paragraph{习题 21.16}
+朝远离太空舱的方向持续发光，
+对宇航员的反冲向着太空舱。
+光动量率 \(P/c\)，故
+\[
+F=P/c,\qquad a=P/(mc).
+\]
+从静止经过 \(l=10\,\mathrm m\)，
+\(l=\frac12at^2\)：
+\[
+\boxed{t=\sqrt{\frac{2lmc}{P}}
+=\sqrt{\frac{2(10)(100)(2.998\times10^8)}{1.0\times10^4}}
+\simeq7.74\times10^3\,\mathrm s
+\simeq2.15\,\mathrm h}.
+\]
+如果光打到或反射于其他物体，
+需要重新考虑整个系统的动量守恒与受力方向。
+
+\paragraph{习题 21.17}
+尘埃半径 \(r\)、密度 \(\rho\)，
+轨道距太阳 \(R\)，太阳半径 \(R_\odot\)。
+理想吸收光的入射能流
+\(I(R)=I_\odot(R_\odot/R)^2\)，
+辐射向外的力
+\(F_{\rm rad}=I(R)\pi r^2/c\)；
+太阳引力向内为
+\[
+F_g=\frac{GM_\odot}{R^2}\,\frac43\pi r^3\rho.
+\]
+令二者相等，消去 \(\pi r^2/R^2\) 得
+\[
+\boxed{r_*=
+\frac{3I_\odot R_\odot^2}
+{4GM_\odot\rho c}}.
+\]
+采用 \(I_\odot=6.9\times10^7\,\mathrm{W/m^2}\)，
+\(R_\odot=7.0\times10^8\,\mathrm m\)，
+\(M_\odot=2.0\times10^{30}\,\mathrm{kg}\)，
+\(\rho=10^3\,\mathrm{kg/m^3}\) 得
+\[
+\boxed{r_*\simeq6.3\times10^{-7}\,\mathrm m=0.63\,\mathrm{\mu m}}.
+\]
+二力均随 \(R^{-2}\) 变化，所以在这种简化模型中
+抵消条件与轨道半径无关；
+如果原粒子有非零切向轨道速度，
+一旦径向净力为零便不能保持原来的圆轨道，
+将在惯性近似下沿\emph{切线}运动。
+真实亚微米颗粒还受散射效率、吸收谱、
+Poynting--Robertson阻力、带电及太阳风等影响。

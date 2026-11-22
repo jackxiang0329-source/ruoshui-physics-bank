@@ -1,0 +1,608 @@
+% 张三慧《大学物理学》第4版，第1章习题 1.1--1.10 的独立复算解析
+% 参考《学习辅导与习题解答》PDF扫描页15--19；不直接照搬其推导。
+% 默认采用 g=9.80 m/s^2，除非题目另有给定。
+% 本文件是 LaTeX 片段，不含 documentclass；独立专家复核状态：待审。
+\section*{第1章\quad 质点运动学：独立解析}
+
+\paragraph{习题 1.1}
+设岩块竖直喷出速率为 \(v_0\)，最高点速率为零。
+忽略空气阻力，由运动学关系 \(0=v_0^2-2gh\) 得
+\[
+ v_0=\sqrt{2gh}
+ =\sqrt{2(1.80\,\mathrm{m/s^2})(200\times10^3\,\mathrm{m})}
+ \approx 8.49\times10^2\,\mathrm{m/s}.
+\]
+检查：\(v_0^2/(2g)=200\,\mathrm{km}\)，与题设相符。
+
+\paragraph{习题 1.2}
+由 \(1600\,\mathrm{km/h}=444.44\,\mathrm{m/s}\) 与初速为零，
+\[
+ a=\frac{444.44}{1.80}=246.91\,\mathrm{m/s^2}
+ \approx25.20g>25g.
+\]
+因此略超过题目给定的 \(25g\) 阈值。匀加速运动的位移
+\[
+ s=\frac12at^2
+ =\frac12(246.91)(1.80)^2=400\,\mathrm{m}.
+\]
+此结论只针对题目给定的加速度阈值，不代表真实人体耐受判定。
+
+\paragraph{习题 1.3}
+两车迎面运动，初速分别为
+\(u_1=90/3.6=25.00\,\mathrm{m/s}\) 与
+\(u_2=65/3.6=18.0556\,\mathrm{m/s}\)。
+在共同反应时间 \(\tau=0.70\,\mathrm{s}\) 内，
+车距减为
+\[
+ d=80-(u_1+u_2)\tau=49.8611\,\mathrm{m}.
+\]
+两车各以大小 \(a=7.5\,\mathrm{m/s^2}\) 的减速度制动，
+从制动起计时 \(t\)，闭合距离为
+\[
+ (u_1+u_2)t-\tfrac12(2a)t^2
+ =(u_1+u_2)t-at^2.
+\]
+相撞方程
+\[
+ 7.5t^2-(25+65/3.6)t+49.8611=0
+\]
+的较小正根为 \(t\approx1.6091\,\mathrm{s}\)。
+此时 \(t<u_2/a\approx2.41\,\mathrm{s}\)，
+两车尚未停住，所以根对应实际碰撞。
+卡车碰撞瞬间速率
+\[
+ v_1=u_1-at
+ \approx25-7.5(1.6091)
+ =12.93\,\mathrm{m/s}\approx46.4\,\mathrm{km/h}.
+\]
+校验：反应结束时的停车距离之和
+\(u_1^2/(2a)+u_2^2/(2a)\approx63.4\,\mathrm{m}>d\)，
+故相撞结论一致。
+\textbf{重新复算：}代入未经提前舍入的
+\(u_1=25\,\mathrm{m/s}\)、\(u_2=65/3.6\,\mathrm{m/s}\)
+与\(d=49.861111\ldots\,\mathrm m\)，求根得到
+\(t=1.60907028\ldots\,\mathrm s\)、
+\(v_1=12.93197289\ldots\,\mathrm{m/s}\)。
+辅导书扫描物理页15--16在题中先取\(u_2\simeq18\)和\(d\simeq50\)，
+因此印为\(1.62\,\mathrm s\)及\(12.9\,\mathrm{m/s}\)。
+
+\paragraph{习题 1.4}
+设前一段平均加速度按题设取 \(a=g/2\)，
+终极速率 \(v_1=200/3.6=55.5556\,\mathrm{m/s}\)，
+开伞后着地速率 \(v_2=18/3.6=5\,\mathrm{m/s}\)。
+三个阶段（第一段加速、第二段匀速、第三段开伞后匀速）的时间为
+\[
+ t_1=\frac{v_1}{g/2}=\frac{2v_1}{g}\approx11.34\,\mathrm{s},
+ \qquad
+ s_1=\frac{v_1^2}{2(g/2)}=\frac{v_1^2}{g}\approx314.94\,\mathrm{m},
+\]
+\[
+ t_2=\frac{1200-s_1-50}{v_1}\approx15.03\,\mathrm{s},
+ \qquad t_3=\frac{50}{v_2}=10.00\,\mathrm{s}.
+\]
+故总时间 \(t=t_1+t_2+t_3\approx36.37\,\mathrm{s}\)。
+本理想化模型按题意忽略开伞减速的过渡时间。
+
+\paragraph{习题 1.5}
+无空气阻力且喷水竖直向上，
+\[
+ h_{\max}=\frac{v^2}{2g}
+ =\frac{26^2}{2(9.8)}\approx34.49\,\mathrm{m}.
+\]
+稳定喷水时，每份水从喷口上升又回到喷口高度所需时间为
+\[
+ T=\frac{2v}{g}\approx5.306\,\mathrm{s}.
+\]
+因此喷口以上空间内瞬时水量等于体积流量乘驻留时间：
+\[
+ V=qT=(280\,\mathrm{L/min})
+ \frac{5.306\,\mathrm{s}}{60\,\mathrm{s/min}}
+ \approx24.76\,\mathrm{L}.
+\]
+这一体积结论假定水流连续、稳定，并忽略雾化与空气阻力。
+
+\paragraph{习题 1.6}
+第一块石头以抛出时刻为 \(t=0\)，高度函数为
+\(y_1(t)=15.0t-\frac12gt^2\)。
+在 \(y_1=11.0\,\mathrm{m}\) 时满足
+\[
+ 4.9t^2-15t+11=0,\qquad
+ t_\pm=\frac{15\pm\sqrt{15^2-2(9.8)(11)}}{9.8}.
+\]
+由此得到两个合法的相遇时刻：
+\(t_-=1.217761\,\mathrm{s}\)（第一块石头上升时），
+\(t_+=1.843463\,\mathrm{s}\)（第一块石头下降时）。
+若第二块石头在 \(\Delta\) 秒后上抛，要在高度
+\(11\,\mathrm{m}\) 相遇，其初速必须满足
+\[
+ 11=v_2(t-\Delta)-\tfrac12g(t-\Delta)^2,
+ \qquad
+ v_2=\frac{11}{t-\Delta}+\frac{g}{2}(t-\Delta),
+ \quad t>\Delta.
+\]
+\begin{enumerate}
+\item 当 \(\Delta=1.0\,\mathrm{s}\) 时，两个时间分支均符合
+ \(t>\Delta\)。取 \(t_-\) 得 \(v_2\approx51.58\,\mathrm{m/s}\)；
+ 取 \(t_+\) 得 \(v_2\approx17.17\,\mathrm{m/s}\)。
+ 因此本小题有两个初速解。
+\item 当 \(\Delta=1.3\,\mathrm{s}\) 时，
+ \(t_-<\Delta\)，上升分支不可能相遇；
+ 只能取 \(t_+\)，得到 \(v_2\approx22.90\,\mathrm{m/s}\)。
+\end{enumerate}
+\textbf{审校说明：}辅导书在第(1)问上升分支给出的约
+\(51.1\,\mathrm{m/s}\) 源于将碰撞时刻较早取整为
+\(1.22\,\mathrm{s}\) 后代入；由于分母
+\(t-\Delta\) 很小，舍入会明显影响结果。
+保留未提前舍入的时间可得约 \(51.6\,\mathrm{m/s}\)。
+对不同数值精度应以原始方程和单位检验为准。
+
+\paragraph{习题 1.7}
+消去参数 \(t=x/2\)，得到轨道方程
+\[
+ y=4(x/2)^2-8=x^2-8.
+\]
+该曲线是顶点 \((0,-8)\)、开口向 \(+y\) 的抛物线，
+运动方向随 \(t\) 增加沿 \(+x\) 方向前进。
+\[
+ \boldsymbol r(t)=(2t)\boldsymbol i+(4t^2-8)\boldsymbol j,\quad
+ \boldsymbol v(t)=2\boldsymbol i+8t\boldsymbol j,\quad
+ \boldsymbol a(t)=8\boldsymbol j.
+\]
+于是
+\[
+ \begin{array}{c|c|c|c}
+ t & \boldsymbol r\ (\mathrm m)
+ &\boldsymbol v\ (\mathrm{m/s})&\boldsymbol a\ (\mathrm{m/s^2})\\\hline
+ 1\,\mathrm s&2\boldsymbol i-4\boldsymbol j&
+ 2\boldsymbol i+8\boldsymbol j&8\boldsymbol j\\
+ 2\,\mathrm s&4\boldsymbol i+8\boldsymbol j&
+ 2\boldsymbol i+16\boldsymbol j&8\boldsymbol j
+ \end{array}
+\]
+
+\paragraph{习题 1.8}
+球从高 \(h=3.5\,\mathrm{m}\) 的位置水平飞出，
+落在距击球位置水平位移 \(d=8.5+9.0=17.5\,\mathrm{m}\)
+的对方后方边线上。飞行时间及初速为
+\[
+ T=\sqrt{\frac{2h}{g}}\approx0.84515\,\mathrm{s},\qquad
+ v_0=\frac{d}{T}\approx20.71\,\mathrm{m/s}.
+\]
+球到网所在竖直平面时的时间
+\(t_{\rm net}=8.5/v_0\approx0.4105\,\mathrm{s}\)，
+高度
+\[
+ y_{\rm net}=h-\tfrac12g t_{\rm net}^2\approx2.674\,\mathrm{m}.
+\]
+高于 \(2.43\,\mathrm{m}\) 球网的高度约
+\(\Delta h=2.674-2.43=0.244\,\mathrm{m}\)。
+落地瞬间水平、竖直分速度分别为 \(v_0\)、\(-gT\)，
+故速率
+\[
+ v_{\rm land}=\sqrt{v_0^2+(gT)^2}\approx22.3\,\mathrm{m/s}.
+\]
+
+\paragraph{习题 1.9}
+设起飞点为原点、\(x\) 轴水平向前、\(y\) 轴竖直向下。
+忽略空气阻力，质点运动方程为
+\(x=vt,\ y=\frac12gt^2\)。
+斜坡方程为 \(y=x\tan\theta\)；
+非零的落地时刻满足
+\[
+ \tfrac12gt^2=vt\tan\theta
+ \quad\Rightarrow\quad t=\frac{2v\tan\theta}{g}.
+\]
+沿斜坡距离为 \(L=x/\cos\theta\)，
+所以当 \(\theta=45^\circ\)、\(v=110/3.6\,\mathrm{m/s}\) 时
+\[
+ L=\frac{2v^2\tan\theta}{g\cos\theta}
+ =\frac{2(110/3.6)^2}{9.8\cos45^\circ}
+ \approx269\,\mathrm{m}.
+\]
+实测 \(165\,\mathrm{m}\) 与理想值不一致：
+主要可能由于题设忽略了空气阻力，
+真实运动员起跳姿态、风况与实际地形也不完全符合
+“水平出射、同一点起始的理想斜坡”模型；
+这些因素不能从给定数据中单独定量反演。
+
+\paragraph{习题 1.10}
+以出手位置为原点，抛射角为 \(\alpha\)，
+在水平距离 \(x=L\) 处的高度为
+\[
+ y(L)=L\tan\alpha-\frac{gL^2}{2v^2\cos^2\alpha}.
+\]
+令 \(u=\tan\alpha\)，并用 \(\sec^2\alpha=1+u^2\)，得
+\[
+ y(L)=Lu-\frac{gL^2}{2v^2}(1+u^2).
+\]
+这是关于 \(u\) 的严格凹二次函数，
+极大值出现在 \(u=v^2/(gL)\)，此时
+\[
+ y_{\max}(L)=\frac{v^2}{2g}-\frac{gL^2}{2v^2}
+ =\frac{25^2}{2(9.8)}-\frac{9.8(50)^2}{2(25)^2}
+ \approx12.29\,\mathrm{m}.
+\]
+因为 \(12.29<13\,\mathrm{m}\)，
+无论选取何种发射角，在题设水平距离处都无法越过墙顶。
+实现该最大高度的角度
+\(\alpha=\arctan(25^2/(9.8\times50))\approx51.9^\circ\)。
+
+
+% 第二批独立解析：第1章 1.11--1.26。
+% 用户提供的教材PDF物理页54--55，对照辅导书PDF约20--25页。
+% 数值计算统一优先以题设原始有效数字及 g=9.80 m/s^2 计算，
+% 中间步骤不先舍入；未有独立外审、正式XeLaTeX认证或出版授权认证。
+\subsection*{习题 1.11--1.26：独立复算}
+
+\paragraph{习题 1.11}
+汽车在东岸从静止以匀加速度行进 \(s=265\,\mathrm m\)，
+冲出时速率 \(v=150/3.6=41.6667\,\mathrm{m/s}\)，
+取 \(g=9.80\,\mathrm{m/s^2}\)。由
+\(v^2=2as\) 及 \(s=\frac12vt\)，得
+\[
+ a=\frac{(150/3.6)^2}{2(265)}
+ \approx3.276\,\mathrm{m/s^2},\qquad
+ t_{\rm run}=\frac{2(265)}{150/3.6}=12.72\,\mathrm s.
+\]
+把起飞点取作坐标原点，抛射方程
+\[
+ x(t)=v\cos(5^\circ)t,\qquad
+ y(t)=v\sin(5^\circ)t-\frac12gt^2.
+\]
+飞越水平跨度 \(L=57\,\mathrm m\) 所需
+\[
+ t_{\rm flight}=\frac{L}{v\cos5^\circ}
+ \approx1.373\,\mathrm s.
+\]
+距起飞点最高竖直升高
+\(\Delta H=(v\sin5^\circ)^2/(2g)
+\approx0.673\,\mathrm m\)，
+故距河面的最高高度约
+\(10.0+0.673=10.673\,\mathrm m\)。
+桥面相对起飞点的高度差为
+\[
+ \Delta y=y(t_{\rm flight})
+ =v\sin5^\circ\,t_{\rm flight}
+ -\frac12gt_{\rm flight}^2
+ \approx-4.25\,\mathrm m.
+\]
+负号表示桥面比起飞点低约 \(4.25\,\mathrm m\)；
+忽略空气阻力，题设中的匀加速只用于东岸跑道阶段。
+
+\paragraph{习题 1.12}
+把下炮设为 \((0,0)\)，上炮设为 \((s,h)\)，
+两炮初始均沿两点连线瞄准对方，发射速率同为 \(u\)。
+两弹受相同的竖直重力加速度，因此相对加速度为零；
+相对位置以速率 \(2u\) 沿炮口连线匀速缩短，
+故两弹若在自由飞行期间相遇，相遇时刻
+\[
+ t_*=\frac{\sqrt{s^2+h^2}}{2u}.
+\]
+相遇点的实际高度为
+\[
+ y_*=\frac h2-\frac12gt_*^2
+ =\frac h2-\frac{g(s^2+h^2)}{8u^2}.
+\]
+要在地面以上（含临界触地）相遇，必要且在题设
+无障碍理想条件下充分的是 \(y_*\ge0\)，
+即
+\[
+ u\ge u_{\min}
+ =\frac12\sqrt{\frac{g(s^2+h^2)}{h}}
+ =\frac12\sqrt{\frac{9.80(200^2+50^2)}{50}}
+ \approx45.63\,\mathrm{m/s}.
+\]
+注意山体或障碍物的实际几何形状未建模；“相遇”只针对两弹空中轨迹。
+
+\paragraph{习题 1.13}
+转速 \(n=6\times10^4\,\mathrm{r/min}
+=1000\,\mathrm{s^{-1}}\)。
+角速度 \(\omega=2\pi n\)，
+在 \(r=0.10\,\mathrm m\) 处的向心加速度为
+\[
+ a_c=\omega^2r=(2\pi\times1000)^2(0.10)
+ \approx3.948\times10^6\,\mathrm{m/s^2}.
+\]
+相对重力加速度
+\[
+ \frac{a_c}{g}\approx\frac{3.948\times10^6}{9.80}
+ =4.03\times10^5.
+\]
+加速度方向为水平指向转轴，题目所求是大小之比。
+
+\paragraph{习题 1.14}
+设地球半径 \(R_\oplus=6.37\times10^6\,\mathrm m\)，
+按 \(T=24\,\mathrm h\) 近似自转一周，
+纬度 \(\phi=39.9^\circ\)，自转轴到地表点的距离
+\(R_\perp=R_\oplus\cos\phi\)。
+天安门随自转运动的速率与向心加速度为
+\[
+ v=\frac{2\pi R_\oplus\cos\phi}{T}
+ \approx355\,\mathrm{m/s},\qquad
+ a_c=\left(\frac{2\pi}{T}\right)^2R_\oplus\cos\phi
+ \approx2.58\times10^{-2}\,\mathrm{m/s^2}.
+\]
+速率沿当地纬线向东，向心加速度指向地球自转轴。
+若使用恒星日 \(T=86164\,\mathrm s\) 将有轻微数值差别。
+
+\paragraph{习题 1.15}
+在玻尔圆轨道的题设理想模型下，
+周期 \(T_e=2\pi r/v\)，频率
+\[
+ f=\frac{v}{2\pi r}
+ =\frac{2.2\times10^6}{2\pi(0.53\times10^{-10})}
+ \approx6.61\times10^{15}\,\mathrm{Hz}.
+\]
+向心加速度
+\[
+ a_c=\frac{v^2}{r}
+ =\frac{(2.2\times10^6)^2}{0.53\times10^{-10}}
+ \approx9.13\times10^{22}\,\mathrm{m/s^2},
+\]
+指向原子核。这是原题采用的经典轨道模型结果，
+并不是现代量子力学对电子确定轨道的断言。
+
+\paragraph{习题 1.16}
+将储存环近似为圆环，周长 \(C=240\,\mathrm m\)，
+半径 \(R=C/(2\pi)\)。电子速率近似 \(c\)，
+\[
+ \frac{a_c}{g}=
+ \frac{c^2/R}{g}
+ =\frac{2\pi c^2}{Cg}
+ \approx2.40\times10^{14}
+ \quad
+ (c\approx2.998\times10^8\,\mathrm{m/s}).
+\]
+这是轨道曲率导致的坐标向心加速度；
+高速电子的受力与动力学仍需相对论处理，
+不能把 \(F=ma_c\) 当作相对论动力学定律。
+
+\paragraph{习题 1.17}
+法向加速度 \(a_n=v^2/R=10^2/400
+=0.250\,\mathrm{m/s^2}\)，方向指向弯道圆心。
+因为汽车正在减速，切向加速度大小为
+\(0.20\,\mathrm{m/s^2}\) 且方向与速度相反。
+二者正交，故总加速度
+\[
+ |\boldsymbol a|=\sqrt{a_n^2+a_t^2}
+ =\sqrt{0.250^2+0.200^2}
+ \approx0.320\,\mathrm{m/s^2}.
+\]
+相对于\emph{反向切线}向圆心偏转
+\[
+ \theta=\arctan\frac{a_n}{a_t}
+ =\arctan\frac{0.250}{0.200}
+ \approx51.3^\circ;
+\]
+若从向心方向量起，则偏向反向切线约
+\(38.7^\circ\)。
+
+\paragraph{习题 1.18}
+以径向音轨密度 \(N=650\,\mathrm{mm^{-1}}
+=6.50\times10^5\,\mathrm{m^{-1}}\) 计，
+半径增加 \(dr\) 时需要 \(d\mathcal N=Ndr\) 圈。
+在半径 \(r\) 处，线速固定 \(v\)，转一圈用时
+\(dt=(2\pi r/v)\,d\mathcal N\)。
+因而全部放音时间为
+\[
+ T=\int_{R_1}^{R_2}\frac{2\pi rN}{v}\,dr
+ =\frac{\pi N(R_2^2-R_1^2)}{v}
+ =\frac{\pi(6.5\times10^5)(0.056^2-0.022^2)}{1.3}
+ \approx4.166\times10^3\,\mathrm s
+ \approx69.43\,\mathrm{min}.
+\]
+激光头以 \(dr/dt=v/(2\pi Nr)>0\) 逐渐外移，
+光盘角速度 \(\omega=v/r\)，故
+\[
+ \alpha=\frac{d\omega}{dt}
+ =-\frac{v}{r^2}\frac{dr}{dt}
+ =-\frac{v^2}{r^2}\frac{v}{2\pi Nr}
+ =-\frac{v^3}{2\pi Nr^3}.
+\]
+在 \(r=0.050\,\mathrm m\) 时
+\[
+ \omega=26.0\,\mathrm{rad/s},\qquad
+ \alpha\approx-4.30\times10^{-3}\,\mathrm{rad/s^2}.
+\]
+负号表示为维持固定线速度，转速随外移而降低。
+检查：\(Ndr\) 无量纲为圈数，\(T\) 的量纲为时间。
+
+\paragraph{习题 1.19}
+取向前为正，右手相对躯干向后划动
+\(\Delta x_{\rm hb}=-1.20\,\mathrm m\)，
+躯干相对静水前进
+\(\Delta x_{\rm bw}=+0.90\,\mathrm m\)。
+位移的参考系加法为
+\[
+ \Delta x_{\rm hw}
+ =\Delta x_{\rm hb}+\Delta x_{\rm bw}
+ =-1.20+0.90=-0.30\,\mathrm m.
+\]
+所以手对水向后划过 \(0.30\,\mathrm m\)。
+假定这段时间内水相对泳池静止，未计局部水流。
+
+\paragraph{习题 1.20}
+西风表示空气相对地面以
+\(u=30\,\mathrm{m/s}\) 向东吹。
+空气中的声速 \(c_s=344\,\mathrm{m/s}\)。
+沿风向地面传播，速率 \(c_s+u=374\,\mathrm{m/s}\)；
+逆风向西传播，速率 \(c_s-u=314\,\mathrm{m/s}\)。
+若要求声波\emph{相对地面}沿正北方向传播，则
+声速相对空气的东向分量必须为 \(-u\) 以抵消风，
+其北向分量为
+\[
+ v_{\rm north}=\sqrt{c_s^2-u^2}
+ =\sqrt{344^2-30^2}
+ \approx342.69\,\mathrm{m/s}.
+\]
+这里区分了“传播的合速度严格向北”和
+“声波相对于空气正向北”的不同假设；后者地面合速度并不正北。
+
+\paragraph{习题 1.21}
+电梯自静止以 \(a_e=1.2\,\mathrm{m/s^2}\)
+向下加速，开始 \(t_0=0.5\,\mathrm s\) 后抛球。
+此时电梯速度向下大小 \(v_{e0}=a_et_0=0.6\,\mathrm{m/s}\)，
+球释放瞬间具有相同的地面速度。
+球相对于电梯地板的初速度为零，相对向下加速度
+\(g-a_e\)，高度 \(h=1.5\,\mathrm m\)：
+\[
+ h=\frac12(g-a_e)\tau^2,\quad
+ \tau=\sqrt{\frac{2h}{g-a_e}}
+ =\sqrt{\frac{3.0}{9.8-1.2}}
+ \approx0.5906\,\mathrm s.
+\]
+球释放后相对地面向下的位移为
+\[
+ s_g=v_{e0}\tau+\frac12g\tau^2
+ =0.6(0.5906)+4.9(0.5906)^2
+ \approx2.064\,\mathrm m.
+\]
+球相对于电梯只下降 \(1.5\,\mathrm m\)，
+相对地面下降更远，因为电梯底板也同时下移。
+
+\paragraph{习题 1.22}
+以骑行方向\emph{向西}为水平正向，
+令雨滴对地速度的水平分量为 \(v_x\)，
+竖直向下分量为 \(v_y>0\)。
+第一种骑行速率 \(u_1=18/3.6=5\,\mathrm{m/s}\) 时
+观察雨滴竖直下落，即雨滴相对于骑行者
+\(v_x-u_1=0\)，故 \(v_x=5\,\mathrm{m/s}\) 向西。
+第二种骑行速率 \(u_2=36/3.6=10\,\mathrm{m/s}\)，
+相对水平分速度 \(v_x-u_2=-5\,\mathrm{m/s}\)，向东。
+相对雨滴方向与骑行正西方向成 \(120^\circ\)，所以
+\[
+ \cos120^\circ=\frac{-5}{\sqrt{5^2+v_y^2}}
+ =-\frac12\quad\Longrightarrow\quad
+ v_y=5\sqrt3\approx8.66\,\mathrm{m/s}.
+\]
+雨滴对地速率为
+\[
+ |\boldsymbol v_{\rm rain}|=\sqrt{5^2+(5\sqrt3)^2}
+ =10.0\,\mathrm{m/s},
+\]
+方向为向西斜下 \(60^\circ\)
+（即与铅直向下成 \(30^\circ\) 向西）。
+仅凭第一种观察不能求竖直分量，需利用第二种角度。
+
+\paragraph{习题 1.23}
+取向东为 \(x\) 正方向、向北为 \(y\) 正方向。
+飞机 \(A\) 向南飞，飞机 \(B\) 从正东向南偏转
+\(30^\circ\)，所以地面速度为
+\[
+ \boldsymbol v_A=(0,-1000),\qquad
+ \boldsymbol v_B=(800\cos30^\circ,-800\sin30^\circ)
+ =(400\sqrt3,-400)
+ \quad (\mathrm{km/h}).
+\]
+由相对速度差
+\[
+ \boldsymbol v_{A/B}=\boldsymbol v_A-\boldsymbol v_B
+ =(-400\sqrt3,-600)\quad(\mathrm{km/h}),
+\]
+其大小
+\[
+ |\boldsymbol v_{A/B}|
+ =\sqrt{(400\sqrt3)^2+600^2}
+ =400\sqrt{\tfrac{21}{4}}
+ \approx916.5\,\mathrm{km/h}.
+\]
+方向向西偏南
+\[
+ \beta=\arctan\frac{600}{400\sqrt3}
+ \approx40.89^\circ.
+\]
+反向相对速度
+\(\boldsymbol v_{B/A}=-\boldsymbol v_{A/B}
+=(400\sqrt3,600)\,\mathrm{km/h}\)，
+大小相等，方向向东偏北 \(40.89^\circ\)。
+\textbf{风险复核：}“向东偏南30度”不等于“向南偏东30度”，
+这两种误读会给出不同速度，须严格保留原书方向措辞。
+\textbf{辅导书交叉校核（S PDF物理页24）：}辅导书数值计算为约 \(917\)，
+但该处印为 \(917\,\mathrm{m/s}\)，与题设全程使用 \(\mathrm{km/h}\) 的速度量纲不符。
+正确单位应是 \(\boxed{917\,\mathrm{km/h}}\)（约 \(254.6\,\mathrm{m/s}\)），
+且与上面以 \(\mathrm{km/h}\) 独立矢量计算出的 \(916.5\,\mathrm{km/h}\) 相容。
+这个单位印刷问题不能照搬到正式题库。
+
+\paragraph{习题 1.24}
+本题依赖原书图1.24对大楼日夜位置的画法。
+在图示通常采用的理想模型中，假定大楼位于赤道附近，
+地球公转速度 \(\boldsymbol v_{\rm orb}\) 的方向在
+被比较的日夜两位置近似不变，
+地球自转表面线速度大小
+\(v_{\rm rot}=2\pi R_\oplus/T\)。
+若两位置的自转切向速度分别与公转方向同向和反向，
+则
+\[
+ v_{\rm day}=v_{\rm orb}+v_{\rm rot},\quad
+ v_{\rm night}=v_{\rm orb}-v_{\rm rot},\quad
+ |\Delta v|=2v_{\rm rot}
+ =\frac{4\pi R_\oplus}{T}.
+\]
+取 \(R_\oplus=6.37\times10^6\,\mathrm m\)，
+\(T=86400\,\mathrm s\)，得
+\[
+ |\Delta v|\approx 0.926\,\mathrm{km/s}.
+\]
+若建筑物所在纬度为 \(\phi\) 而比较仍符合方向投影的假设，
+自转速率为 \(\Omega R_\oplus\cos\phi\)，
+速率差还取决于两点的投影几何。
+\textbf{审校风险：}未完整重绘图1.24前，不可把赤道模型的
+\(0.926\,\mathrm{km/s}\) 当作对所有纬度和日期无条件成立的数值。
+
+\paragraph{习题 1.25}
+设介子相对实验室向前运动速率
+\(u=0.99975c\)，实验室测得正、反向发出的光的速度
+分别为 \(+c\) 和 \(-c\)。
+如果\emph{错误地}套用伽利略速度变换
+\(v'=v-u\)，则相对介子
+\[
+ v'_{\rm forward}=c-u=(1-0.99975)c
+ =0.00025c\approx7.495\times10^4\,\mathrm{m/s},
+\]
+\[
+ v'_{\rm backward}=-c-u=-(1+0.99975)c
+ =-1.99975c,
+ \qquad
+ |v'_{\rm backward}|\approx5.995\times10^8\,\mathrm{m/s}.
+\]
+这两个只是伽利略变换的预言，而非实际光速。
+相对论速度变换
+\(v'=(v-u)/(1-vu/c^2)\) 对两束光仍给出
+\(+c\) 与 \(-c\)，验证了实际光速不变。
+注意要区分带方向的\emph{速度}与非负的\emph{速率}。
+
+\paragraph{习题 1.26}
+定义地面坐标系的 \(x\) 轴向东、\(y\) 轴向北。
+西风 \(150\,\mathrm{km/h}\) 表示空气吹向东，
+飞机相对空气以 \(750\,\mathrm{km/h}\) 向北飞行，
+故飞机对地速度矢量
+\[
+ \boldsymbol v_{P/G}=(150,750)\quad(\mathrm{km/h}).
+\]
+导弹相对于飞机以 \(5750\,\mathrm{km/h}\)
+“向西偏南 \(19.5^\circ\)”飞行，因此
+\[
+ \boldsymbol v_{M/P}
+ =(-5750\cos19.5^\circ,-5750\sin19.5^\circ).
+\]
+根据参考系速度的矢量加法，
+\[
+ \boldsymbol v_{M/G}
+ =\boldsymbol v_{M/P}+\boldsymbol v_{P/G}
+ =(150-5750\cos19.5^\circ,\;
+  750-5750\sin19.5^\circ)
+ \approx(-5270.19,-1169.39)\quad(\mathrm{km/h}).
+\]
+故地面观测的速率与方向为
+\[
+ |\boldsymbol v_{M/G}|
+ \approx5398.4\,\mathrm{km/h}\approx5.40\times10^3\,\mathrm{km/h},
+\]
+\[
+ \gamma=\arctan\frac{1169.39}{5270.19}
+ \approx12.51^\circ,
+\]
+即\emph{向西偏南约 \(12.5^\circ\)}。
+检查：由于飞机对地速度远小于导弹对飞机速度，
+所求大小接近 \(5750\,\mathrm{km/h}\) 且并不相等；
+必须使用矢量加法而非标量直接相加。

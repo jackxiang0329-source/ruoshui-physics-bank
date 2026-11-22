@@ -1,0 +1,809 @@
+% 第12章静电场：题 12.1--12.3 独立推导（辅导书扫描页190--191）
+% 公式采用 \(...\) 和 \[...\]；教材原图依赖已在题目中注明。
+\section*{第12章\quad 静电场：独立解析}
+\newcommand{\ke}{\frac{1}{4\pi\varepsilon_0}}
+
+\paragraph{习题 12.1}
+记中心试探电荷为 \(q_0=+1\)（单位正电荷），
+中心至任一顶点距离为 \(a/\sqrt 2\)。
+位于一条对角线两端的 \(2q\) 所产生的两个作用力大小相等、
+方向相反，恰好抵消。
+另一条对角线两端分别是 \(q\) 和 \(-4q\)。
+前者对中心正电荷斥力指向 \(-4q\) 角，
+后者对它的引力也指向该角，故
+\[
+ F=\ke\frac{q q_0}{a^2/2}
+   +\ke\frac{4q q_0}{a^2/2}
+ =\frac{10q q_0}{4\pi\varepsilon_0a^2}
+ =\frac{5q q_0}{2\pi\varepsilon_0a^2}.
+\]
+如果题中的 \(q>0\)，力指向电荷 \(-4q\) 所在顶点；
+若 \(q\) 被赋予其他符号，则须相应重定电荷符号与方向。
+
+\paragraph{习题 12.2}
+选取任一顶点处的负电荷。
+其他两个顶点处的两个负电荷各给出大小
+\(F_0=\ke q^2/r^2\) 的斥力，两力夹角为
+\(60^\circ\)，合力沿该顶点的角平分线向外，
+大小为 \(2F_0\cos30^\circ=\sqrt3 F_0\)。
+等边三角形的重心到顶点距离是 \(r/\sqrt3\)；
+中心正电荷对该负电荷的吸引力沿角平分线向内，大小
+\[
+ F_Q=\ke\frac{qQ}{(r/\sqrt3)^2}
+ =3\ke\frac{qQ}{r^2}.
+\]
+平衡条件 \(F_Q=\sqrt3F_0\) 给出
+\[
+ Q=\frac{q}{\sqrt3}=\frac{\sqrt3}{3}q.
+\]
+由对称性，满足一个顶点的平衡即可使三个顶点同时平衡；
+中央电荷受三个顶点电荷的合力也为零。
+
+\paragraph{习题 12.3}
+设四条等长的无质量细线长度都是 \(r\)，
+四球构成图示菱形，上下对角线长 \(2r\cos\alpha\)，
+左右对角线长 \(2r\sin\alpha\)，各边张力为 \(T\)
+（在平衡构型中四条边的张力由对称性相等）。
+对上端 \(-q\) 球写沿竖直对角线的力平衡：
+另一下端 \(-q\) 球的斥力向上，
+左右两个 \(Q\) 球的吸力与细线张力沿竖直向下，
+即
+\[
+ \ke\frac{q^2}{4r^2\cos^2\alpha}
+ =2\left(\ke\frac{qQ}{r^2}+T\right)\cos\alpha.
+\]
+对右端 \(Q\) 球沿水平对角线平衡，同理
+\[
+ \ke\frac{Q^2}{4r^2\sin^2\alpha}
+ =2\left(\ke\frac{qQ}{r^2}+T\right)\sin\alpha.
+\]
+消去共同因子 \(2(\ke qQ/r^2+T)\)，得到
+\[
+ \frac{q^2}{\cos^3\alpha}
+ =\frac{Q^2}{\sin^3\alpha}
+ \quad\Longrightarrow\quad
+ \boxed{\cot^3\alpha=\frac{q^2}{Q^2}}.
+\]
+核验：该角度关系是\textbf{静力平衡的必要条件}，
+且形式上在 \(q=Q\) 时得到
+\(\alpha=45^\circ\)。但若四根线只是不能承受压缩的柔性细线，
+还须满足张力 \(T\ge0\)：
+\[
+ T=\frac{1}{4\pi\varepsilon_0r^2}
+ \left(\frac{q^2}{8\cos^3\alpha}-qQ\right)\ge0.
+\]
+例如 \(q=Q\)、\(\alpha=45^\circ\) 时，
+上式给出 \(T<0\)，因此四根\emph{仅能受拉}的细线实际上无法
+维持那个对称静态构型。原习题的结论应理解为
+“若存在所设平衡，其角度必满足该关系”，
+而不能单凭角度关系断言任意 \(q,Q\) 均有可实现的平衡。
+这属于原题模型条件需要进一步说明的审校风险。
+
+
+% 习题12.4--12.23：由原题独立复算，配套辅导PDF约191--198页交叉参照。
+% 所有“图示依赖”与近似假设仍列在原题/台账，未作独立专家认证。
+\subsection*{习题12.4--12.23：独立解析}
+\paragraph{习题 12.4}
+按照题设，把两夸克近似视为相距
+\(r=1.0\times10^{-15}\,\mathrm m\) 的点电荷，
+\(q_u=2e/3\)、\(q_{\bar d}=e/3\)。
+库仑定律给出
+\[
+ F=\frac{1}{4\pi\varepsilon_0}\frac{2e^2}{9r^2}
+ =\frac{(8.9876\times10^9)\,2(1.6022\times10^{-19})^2}
+ {9(1.0\times10^{-15})^2}
+ \approx\boxed{51.3\,\mathrm N}.
+\]
+二者同号，静电力相斥；核内的真实强相互作用并未计入。
+
+\paragraph{习题 12.5}
+单个核子或电子的最大电荷误差按题意为
+\(\delta q=10^{-21}e\)，氧原子含8个质子、8个中子、
+8个电子，最坏同号偏差可叠加，故
+\[
+ |Q|_{\max}=24\times10^{-21}e
+ \approx3.845\times10^{-39}\,\mathrm C.
+\]
+两个氧原子按质点近似，质量
+\(m_{\rm O}\simeq16u\)、
+\(u=1.66054\times10^{-27}\,\mathrm{kg}\)。
+相距 \(r\) 时两种力的大小之比与 \(r\) 无关：
+\[
+ \frac{F_e}{F_g}
+ =\frac{|Q_1Q_2|}{4\pi\varepsilon_0 G m_{\rm O}^2}
+ \le\frac{(24\times10^{-21}e)^2}
+ {4\pi\varepsilon_0G(16u)^2}
+ \approx2.82\times10^{-6}.
+\]
+即使电荷为同号，静电斥力也远小于万有引力，
+所以在题设误差上界和质点模型下净力仍相吸。
+\textbf{注意：}这里的误差单位是 \(10^{-21}e\)，
+不是 \(10^{-21}\,\mathrm C\)，误读会颠倒结论。
+
+\paragraph{习题 12.6}
+设电偶极子正、负电荷为 \(\pm q\)，
+分别位于轴上 \(x=\pm l/2\)。
+在轴外 \(x=r>l/2\) 的场强沿偶极矩方向，
+\[
+ E_x=\frac{q}{4\pi\varepsilon_0}
+ \left[\frac1{(r-l/2)^2}-\frac1{(r+l/2)^2}\right]
+ =\frac{q}{4\pi\varepsilon_0}
+ \frac{2rl}{(r^2-l^2/4)^2}.
+\]
+当 \(r\gg l\)，分母近似 \(r^4\)，
+所以
+\[
+ \boxed{E_x\simeq\frac{2ql}{4\pi\varepsilon_0r^3}
+ =\frac{2p}{4\pi\varepsilon_0r^3}}.
+\]
+近似误差的相对量级为 \(O(l^2/r^2)\)。
+
+\paragraph{习题 12.7}
+在电偶极子远场近似中，电矩沿 \(x\) 轴，
+\(\boldsymbol p=p\boldsymbol i\)，
+\(\boldsymbol r=x\boldsymbol i+y\boldsymbol j\)。
+偶极场的向量表达式
+\[
+ \boldsymbol E=\frac1{4\pi\varepsilon_0r^3}
+ [3(\boldsymbol p\cdot\hat{\boldsymbol r})\hat{\boldsymbol r}
+ -\boldsymbol p],\quad r^2=x^2+y^2
+\]
+来自正负点电荷场的一阶展开。
+因 \(\boldsymbol p\cdot\hat{\boldsymbol r}=px/r\)，
+逐分量整理得
+\[
+ \boxed{E_x=
+ \frac{p(2x^2-y^2)}
+ {4\pi\varepsilon_0(x^2+y^2)^{5/2}},\qquad
+ E_y=\frac{3pxy}
+ {4\pi\varepsilon_0(x^2+y^2)^{5/2}}}.
+\]
+检查：轴上 \(y=0\) 给 \(E_x=2p/(4\pi\varepsilon_0|x|^3)\)；
+赤道 \(x=0\) 给 \(E_x=-p/(4\pi\varepsilon_0|y|^3)\)。
+
+\paragraph{习题 12.8}
+无限长线电荷 \(\lambda\) 在距离 \(r\) 处产生
+\(|E|=|\lambda|/(2\pi\varepsilon_0r)\)。
+另一根线相距 \(r=2a\)，其每单位长度受力大小
+\[
+ \boxed{\frac FL=\frac{\lambda^2}{4\pi\varepsilon_0a}}.
+\]
+两线带异号电荷，方向互相吸引。
+
+\paragraph{习题 12.9}
+把带电线段沿 \(x\) 轴取为
+\(-L/2\le x\le L/2\)，观察点位于 \(x=r>L/2\)。
+各元电荷产生同向轴向场，
+\[
+ E=\frac{\lambda}{4\pi\varepsilon_0}
+ \int_{-L/2}^{L/2}\frac{dx}{(r-x)^2}
+ =\frac{\lambda}{4\pi\varepsilon_0}
+ \left[\frac1{r-L/2}-\frac1{r+L/2}\right].
+\]
+因此
+\[
+ \boxed{E=\frac{\lambda L}
+ {4\pi\varepsilon_0[r^2-(L/2)^2]}}.
+\]
+正 \(\lambda\) 时沿正轴；远场 \(r\gg L\)
+退化为总电荷 \(Q=\lambda L\) 的点电荷场。
+
+\paragraph{习题 12.10}
+令圆环上角度为 \(\theta\) 的小电荷元
+\(dq=\lambda_0\sin\theta\,R\,d\theta\)。
+中心处的电场元
+\(d\boldsymbol E=
+-\frac{dq}{4\pi\varepsilon_0R^2}
+(\cos\theta\,\boldsymbol i+\sin\theta\,\boldsymbol j)\)。
+全周积分：
+\[
+ E_x=-\frac{\lambda_0}{4\pi\varepsilon_0R}
+ \int_0^{2\pi}\sin\theta\cos\theta\,d\theta=0,
+\]
+\[
+ E_y=-\frac{\lambda_0}{4\pi\varepsilon_0R}
+ \int_0^{2\pi}\sin^2\theta\,d\theta
+ =-\frac{\lambda_0}{4\varepsilon_0R}.
+\]
+故 \(\lambda_0>0\) 时沿负 \(y\) 方向，
+\(\boxed{\boldsymbol E=-\lambda_0\boldsymbol j/(4\varepsilon_0R)}\)。
+
+\paragraph{习题 12.11}
+以缺口的角平分线为 \(+x\) 轴。
+缺口弧长 \(s=0.020\,\mathrm m\)，
+圆半径 \(R=0.5\,\mathrm m\)，
+残余塑料杆线密度
+\(\lambda=Q/(2\pi R-s)\)。
+完整带电圆环在圆心处场为零；
+因此剩余圆弧的场等于缺失小圆弧
+同密度电荷产生场的相反数。
+设缺口张角 \(\Delta=s/R\)，
+\[
+ E_{\rm arc}=
+ \frac{1}{4\pi\varepsilon_0}
+ \frac{\lambda}{R}\int_{-\Delta/2}^{\Delta/2}
+ \cos\theta\,d\theta
+ =\frac{2\lambda}{4\pi\varepsilon_0R}
+ \sin\frac{\Delta}{2}.
+\]
+代入原题数值得
+\[
+ \boxed{E\approx0.719\,\mathrm{N/C}},
+\]
+方向沿缺口角平分线\emph{指向缺口}。
+若缺口长度被解释为端点直线距离，
+其张角应改为 \(2\arcsin[s/(2R)]\)，
+在此小角度下差异可忽略；此处明确采用弧长模型。
+
+\paragraph{习题 12.12}
+设线电荷密度为 \(\lambda\)，半圆半径 \(a\)。
+对圆心 \(O\)，半圆位于左侧，
+场的 \(x\) 分量为
+\[
+ E_{{\rm semi},x}
+ =-\frac{\lambda}{4\pi\varepsilon_0a}
+ \int_{\pi/2}^{3\pi/2}\cos\theta\,d\theta
+ =+\frac{2\lambda}{4\pi\varepsilon_0a}.
+\]
+上、下两条由 \(x=0\) 向右延伸的半无限直线
+的竖直分量相消，水平分量相加：
+\[
+ E_{{\rm lines},x}=
+ -2\frac{\lambda}{4\pi\varepsilon_0}
+ \int_0^\infty\frac{x\,dx}{(x^2+a^2)^{3/2}}
+ =-\frac{2\lambda}{4\pi\varepsilon_0a}.
+\]
+因此 \(\boxed{\boldsymbol E(O)=\boldsymbol0}\)。
+
+\paragraph{习题 12.13}
+在题设半球面的\emph{平面底面}的某一点
+\(P\) 作关于该底面的镜像，把均匀带电的另一半球面补上，
+便得到一个均匀带电完整球面。
+高斯定律与球对称性给出球面内任一点
+\(\boldsymbol E_{\rm full}=\boldsymbol0\)。
+在底面任一点，两半球面产生的场
+\(\boldsymbol E_+\) 与 \(\boldsymbol E_-\) 的
+平行于底面的分量因镜像而\emph{相等}，
+垂直底面的分量则互为相反数。
+因为总场为零且切向分量相等，
+必有 \(2\boldsymbol E_{\parallel}=0\)。
+故单个半球面在假想圆形底面上的场没有切向分量，
+即\(\boxed{\boldsymbol E\perp\text{假想圆面}}\)。
+本证明不能被误写成场必垂直于半球的\emph{曲面}。
+
+\paragraph{习题 12.14}
+(1) 点电荷位于立方体中心，按高斯定律，
+穿过六个面的总电通量 \(q/\varepsilon_0\)，
+由对称性各面相同：
+\[
+ \boxed{\Phi_{\rm face}=\frac{q}{6\varepsilon_0}}.
+\]
+(2) 把8个相同立方体沿点电荷所在的顶点拼成大立方体，
+该点电荷位于大立方体中心。
+大立方体每个外大面的通量 \(q/(6\varepsilon_0)\)，
+每个大面含4个小面，故原小立方体
+\emph{与点电荷不相邻的3个外面}各通量
+\[
+ \boxed{\Phi_{\rm outer}=\frac{q}{24\varepsilon_0}}.
+\]
+\emph{经过点电荷所在顶点的3个面}，
+电场在面内切向（除奇点自身），故其面通量为零。
+奇点不能直接用局部面元的普通积分处理；
+拼合构造避免了其边界歧义。
+
+\paragraph{习题 12.15}
+由导体地表外侧法向场的跳跃条件
+\(\sigma=\varepsilon_0E_n\)，
+外法线取向上，而晴天场向下，
+因此地表面电荷密度为负，
+\(\sigma=-\varepsilon_0(120\,\mathrm{V/m})\)。
+每平方米过剩电子数
+\[
+ \boxed{N=\frac{|\sigma|}{e}
+ =\frac{\varepsilon_0(120)}{1.60218\times10^{-19}}
+ \approx6.63\times10^9\ \mathrm{m^{-2}}}.
+\]
+所指的是负电荷过剩而非正电荷过剩。
+
+\paragraph{习题 12.16}
+把竖直向上取为 \(+z\)，
+\(E_z(100\,\mathrm m)=-150\,\mathrm{N/C}\)，
+\(E_z(300\,\mathrm m)=-100\,\mathrm{N/C}\)。
+对面积 \(A\)、高度 \(\Delta z=200\,\mathrm m\)
+的高斯柱，侧面通量为零，
+\[
+ \rho_{\rm avg}
+ =\varepsilon_0\frac{E_z(300)-E_z(100)}{200}
+ =\varepsilon_0\frac{50}{200}
+ \approx2.214\times10^{-12}\,\mathrm{C/m^3}.
+\]
+故是\emph{正}体电荷密度，即每立方米
+\[
+ \boxed{n_{\rm deficit}=\rho_{\rm avg}/e
+ \approx1.38\times10^7}
+\]
+个电子的净缺少量。
+单位检查：\(\varepsilon_0 E/\ell\) 是 \(\mathrm{C/m^3}\)。
+
+\paragraph{习题 12.17}
+对半径 \(r\)、长度 \(\ell\) 的同轴高斯柱面，
+圆柱面通量为 \(E(r)2\pi r\ell\)。
+若 \(r<a\)，包围净电荷为零；
+若 \(r>a\)，包围电荷为
+\(\sigma(2\pi a\ell)\)。
+因而
+\[
+ \boxed{E_r(r)=
+ \begin{cases}
+ 0,&0\le r<a,\\
+ \displaystyle\frac{\sigma a}{\varepsilon_0r},&r>a.
+ \end{cases}}
+\]
+方向正 \(\sigma\) 时径向向外；在 \(r=a\)
+电场法向分量跨越表面有跳跃
+\(E_r(a^+)-E_r(a^-)=\sigma/\varepsilon_0\)。
+\(E-r\) 曲线为内部零、表面跃变、
+外部按 \(1/r\) 衰减。
+
+\paragraph{习题 12.18}
+两层同轴圆筒的线电荷密度分别为
+\(+\lambda,-\lambda\)，取 \(R_1<R_2\)。
+高斯柱面每单位长度所包围的电荷依次为
+\(0,\lambda,\lambda-\lambda=0\)，故
+\[
+ \boxed{E_r(r)=
+ \begin{cases}
+ 0,&r<R_1,\\
+ \displaystyle\frac{\lambda}{2\pi\varepsilon_0r},
+ &R_1<r<R_2,\\
+ 0,&r>R_2.
+ \end{cases}}
+\]
+在筒面上取两侧极限，不能把薄层表面的跃变
+误作内部连续值。
+
+\paragraph{习题 12.19}
+设第一平面位于 \(x=0\)，第二平面位于
+\(x=d>0\)，法向 \(+\boldsymbol i\) 从第一面指向第二面。
+无限带电平面两侧的场大小
+\(|\sigma|/(2\varepsilon_0)\)，
+符号由其朝向决定。
+叠加后
+\[
+ \boxed{E_x=
+ \begin{cases}
+ -(\sigma_1+\sigma_2)/(2\varepsilon_0),&x<0,\\
+ (\sigma_1-\sigma_2)/(2\varepsilon_0),&0<x<d,\\
+ (\sigma_1+\sigma_2)/(2\varepsilon_0),&x>d.
+ \end{cases}}
+\]
+代入 \(\sigma_1=4\times10^{-11}\),
+\(\sigma_2=-2\times10^{-11}\,\mathrm{C/m^2}\)：
+\[
+ E_x\simeq
+ \begin{cases}
+ -1.13\,\mathrm{N/C},&x<0,\\
+ +3.39\,\mathrm{N/C},&0<x<d,\\
+ +1.13\,\mathrm{N/C},&x>d.
+ \end{cases}
+\]
+这里第一面右侧正向，第二面左侧因带负电而指向第二面。
+
+\paragraph{习题 12.20}
+厚壁中心为 \(d=0\)，表面在 \(d=\pm D/2\)。
+在距中面 \(|d|<D/2\) 处取对称的高斯柱，
+通量 \(2E(d)A\)，包围电荷
+\(2\rho dA\)（取 \(d>0\)），
+所以 \(E(d)=\rho d/\varepsilon_0\)。
+超出厚壁后包围总电荷等效面密度
+\(\rho D\)：
+\[
+ \boxed{E_d(d)=
+ \begin{cases}
+ \rho d/\varepsilon_0,&|d|\le D/2,\\
+ \rho D\,\operatorname{sgn}(d)/(2\varepsilon_0),
+ &|d|>D/2.
+ \end{cases}}
+\]
+带正电时在上下两侧向外；
+\(E-d\) 曲线在厚壁内部是过原点的直线，
+壁外为正、负常值平台。
+
+\paragraph{习题 12.21}
+设开孔的无限平面位于 \(z=0\)，
+孔半径 \(R\)，面电荷密度 \(\sigma_0\)。
+用完整均匀无限平面\emph{减去}
+中心半径为 \(R\) 的带电圆盘。
+对 \(z>0\)，圆盘在轴上的场为
+\[
+ E_{\rm disk}(z)=\frac{\sigma_0}{2\varepsilon_0}
+ \left(1-\frac{z}{\sqrt{z^2+R^2}}\right),
+\]
+无限平面场为 \(\sigma_0/(2\varepsilon_0)\)，
+故孔轴上
+\[
+ \boxed{E_z(z)=\frac{\sigma_0z}
+ {2\varepsilon_0\sqrt{z^2+R^2}}}.
+\]
+对 \(z<0\) 通过奇对称性延拓，同一表达式仍成立。
+检查：\(E_z(0)=0\)，远轴 \(|z|\gg R\) 时
+趋向有孔无限面原来的 \(\pm\sigma_0/(2\varepsilon_0)\)。
+
+\paragraph{习题 12.22}
+原均匀大球球心为 \(O\)，空腔球心为 \(O'\)，
+其相对位移向量 \(\boldsymbol a=\overrightarrow{OO'}\)。
+把“挖空”看成叠加：
+原密度为 \(+\rho\) 的完整大球，及以
+\(O'\) 为中心密度为 \(-\rho\) 的小球。
+任何空腔内位置 \(P\) 的位矢分别为
+\(\boldsymbol R=\overrightarrow{OP}\) 与
+\(\boldsymbol r=\overrightarrow{O'P}\)，
+且 \(\boldsymbol R=\boldsymbol a+\boldsymbol r\)。
+均匀带电实心球内部电场为
+\(\rho\boldsymbol r/(3\varepsilon_0)\)，
+叠加得
+\[
+ \boldsymbol E_{\rm cavity}
+ =\frac{\rho}{3\varepsilon_0}
+ (\boldsymbol R-\boldsymbol r)
+ =\boxed{\frac{\rho\,\boldsymbol a}{3\varepsilon_0}}.
+\]
+与 \(P\) 的位置无关，因此空腔内均匀。
+若 \(\rho<0\)，方向与 \(\boldsymbol a\) 相反。
+
+\paragraph{习题 12.23}
+设电子云密度 \(\rho_e=-C e^{-2r/a_0}\)，
+总电子电荷必须是 \(-e\)：
+\[
+ -e=-4\pi C\int_0^\infty r^2e^{-2r/a_0}\,dr
+ =-\pi C a_0^3.
+\]
+故 \(\boxed{C=e/(\pi a_0^3)}\)。
+半径 \(r\) 内的电子云所包围电荷为
+\[
+ Q_e(r)=-e\left[1-e^{-2r/a_0}
+ \left(1+\frac{2r}{a_0}+\frac{2r^2}{a_0^2}\right)\right].
+\]
+再计入中心的质子电荷 \(+e\)，
+球内\emph{净}电荷是
+\[
+ Q_{\rm net}(r)=e\,e^{-2r/a_0}
+ \left(1+\frac{2r}{a_0}+\frac{2r^2}{a_0^2}\right).
+\]
+在 \(r=a_0=0.53\times10^{-10}\,\mathrm m\) 时
+\[
+ \boxed{Q_{\rm net}(a_0)=5e^{-2}e
+ \approx0.67668e\approx1.084\times10^{-19}\,\mathrm C}.
+\]
+按球对称高斯定律，
+\[
+ \boxed{E(a_0)=\frac{5e^{-2}e}
+ {4\pi\varepsilon_0a_0^2}
+ \approx3.47\times10^{11}\,\mathrm{N/C}},
+\]
+方向径向向外。
+若只计算电子云的场而漏掉质子，便不符合题目
+“半径内净电荷”的中性原子模型。
+
+
+% 第12章最后11题12.24--12.34，独立核算。
+% 依据第二卷PDF物理页42--44；辅导书同编号答案作为交叉核对来源。
+\subsection*{习题12.24--12.34：独立解析}
+\paragraph{习题 12.24}
+质子体电荷密度给定
+\(\rho(r)=\frac{e}{8\pi b^3}e^{-r/b}\)，
+且具有球对称性。
+半径为 \(r\) 的高斯球包围电荷
+\[
+ Q(r)=4\pi\int_0^r \rho(s)s^2\,ds
+ =\frac{e}{2b^3}\int_0^rs^2e^{-s/b}\,ds.
+\]
+令 \(x=r/b\)，积分给出
+\[
+ \boxed{Q(r)=e\left[
+ 1-e^{-x}\left(1+x+\frac{x^2}{2}\right)\right]}.
+\]
+由球对称高斯定律，
+\[
+ \boxed{\boldsymbol E(r)=
+ \frac{e}{4\pi\varepsilon_0r^2}
+ \left[1-e^{-r/b}\left(1+\frac rb+\frac{r^2}{2b^2}\right)\right]
+ \hat{\boldsymbol r}}.
+\]
+取 \(r=1.0\times10^{-15}\,\mathrm m\)、
+\(b=0.23\times10^{-15}\,\mathrm m\)，
+得 \(r/b\approx4.348\)，
+括号内约为 \(0.80857\)，故
+\[
+ \boxed{E(r)\approx1.16\times10^{21}\,\mathrm{N/C}},
+\]
+方向径向向外。
+检查：\(r\to\infty\) 时总电荷趋于 \(+e\)，
+\(r\to0\) 时因密度有限，\(E(r)\sim r\to0\)，
+不是点电荷的发散场。
+
+\paragraph{习题 12.25}
+记内核半径
+\(a=0.50\times10^{-15}\,\mathrm m\)，
+外壳外半径 \(R=1.0\times10^{-15}\,\mathrm m\)。
+内核总电荷 \(+Q=+2e/3\)，
+外壳总电荷 \(-Q\)，分别均匀分布。
+球对称高斯定律给出
+\[
+ \boxed{Q_{\mathrm{enc}}(r)=
+ \begin{cases}
+ Q(r/a)^3,&0\le r\le a,\\
+ Q\left[1-\dfrac{r^3-a^3}{R^3-a^3}\right],
+ &a<r<R,\\
+ 0,&r\ge R,
+ \end{cases}}
+\quad
+ \boxed{\boldsymbol E(r)=
+ \frac{Q_{\mathrm{enc}}(r)}
+ {4\pi\varepsilon_0r^2}\hat{\boldsymbol r}}.
+\]
+具体四个位置：
+\[
+ \begin{array}{c|c|c}
+ r\ (10^{-15}\,\mathrm m)&Q_{\mathrm{enc}}/e&
+ E\ (\mathrm{N/C})\\\hline
+ 1.00&0&0\\
+ 0.75&0.440476&1.13\times10^{21}\\
+ 0.50&2/3&3.84\times10^{21}\\
+ 0.25&1/12&1.92\times10^{21}
+ \end{array}
+\]
+后三处场方向径向向外，
+外边界处为零。
+注意 \(\rho_{\rm shell}<0\) 但
+内核净电荷在壳层尚未完全抵消，
+壳内场仍可指向外。
+
+\paragraph{习题 12.26}
+用均匀带正电的铀核模型：
+总电荷 \(Q=92e\)，半径 \(R=7.4\times10^{-15}\,\mathrm m\)。
+核内 \(r=2.9\times10^{-15}\,\mathrm m<R\)，
+半径 \(r\) 内包围电荷 \(Q(r/R)^3\)，
+故电场大小
+\[
+ E(r)=\frac{1}{4\pi\varepsilon_0}
+ \frac{Qr}{R^3}.
+\]
+带 \(-e\) 的 \(\tau\) 子受向心库仑力，
+在非相对论圆轨道模型中
+\[
+ \frac{m_\tau v^2}{r}
+ =eE(r)=\frac{92e^2r}{4\pi\varepsilon_0R^3},
+\quad
+ \boxed{v=
+ \sqrt{\frac{92e^2r^2}{4\pi\varepsilon_0m_\tau R^3}}}
+ \approx1.18\times10^7\,\mathrm{m/s}.
+\]
+取 \(m_\tau=3.17\times10^{-27}\,\mathrm{kg}\)，
+其动能、角动量和绕核频率为
+\[
+ \boxed{K=\tfrac12m_\tau v^2
+ \approx2.20\times10^{-13}\,\mathrm J},
+\]
+\[
+ \boxed{L=m_\tau vr\approx1.08\times10^{-34}\,
+ \mathrm{kg\,m^2/s}},\qquad
+ \boxed{f=\frac{v}{2\pi r}
+ \approx6.47\times10^{20}\,\mathrm{Hz}}.
+\]
+量纲分别为速度、焦耳、角动量、赫兹；
+实际核结构并非连续均匀电荷介质，本题为经典近似。
+
+\paragraph{习题 12.27}
+电子云半径 \(r_0=0.53\times10^{-10}\,\mathrm m\)，
+总电荷 \(-e\) 在球内均匀分布。
+若质子与电子云中心相距 \(\delta<r_0\)，
+球内均匀带电体产生与位移成正比的电场：
+\[
+ E_{\rm cloud}(\delta)=
+ -\frac{e\delta}{4\pi\varepsilon_0r_0^3}
+\]
+（方向指向负电荷云中心，按质子位移方向取正）。
+质子在外加场 \(E_{\rm ext}\) 下的电力
+\(eE_{\rm ext}\)，与电子云恢复力相平衡：
+\[
+ eE_{\rm ext}-\frac{e^2\delta}
+ {4\pi\varepsilon_0r_0^3}=0.
+\]
+故
+\[
+ \boxed{\delta=
+ \frac{4\pi\varepsilon_0r_0^3E_{\rm ext}}{e}
+ \approx3.10\times10^{-16}\,\mathrm m}
+ \quad(E_{\rm ext}=3\times10^6\,\mathrm{V/m}).
+\]
+感生电矩大小
+\[
+ \boxed{p=e\delta\approx4.97\times10^{-35}\,\mathrm{C\,m}},
+\]
+沿外加场方向。检验
+\(\delta/r_0\approx5.85\times10^{-6}\ll1\)，
+不会违背云中心小位移的线性近似。
+
+\paragraph{习题 12.28}
+原模型球形正电云半径 \(R=0.05\,\mathrm{nm}\)，
+总电荷 \(+2e\) 均匀分布，两个电子各带
+\(-e\)，在球心两侧对称放在
+\(x=\pm r\)。
+正电云在球内的场强大小
+\(E_{\rm cloud}(r)=
+ (2e)r/(4\pi\varepsilon_0R^3)\)。
+在右侧电子处，
+正电云的吸引力大小
+\(2e^2r/(4\pi\varepsilon_0R^3)\)，
+另一电子的斥力大小
+\(e^2/[4\pi\varepsilon_0(2r)^2]\)。
+平衡条件
+\[
+ \frac{2e^2r}{4\pi\varepsilon_0R^3}
+ =\frac{e^2}{4\pi\varepsilon_0(2r)^2}
+ \Longrightarrow 8r^3=R^3
+ \Longrightarrow r=\frac R2.
+\]
+因此两电子平衡间距为
+\[
+ \boxed{d=2r=R=0.05\,\mathrm{nm}}.
+\]
+检查 \(r=R/2<R\)，符合均匀正电云内场公式适用条件。
+本静态模型不是现代量子氦原子的准确描述。
+
+\paragraph{习题 12.29}
+设立方体占据
+\(0\le x,y,z\le a\) 的一组平移坐标范围，
+电场 \(E_x=b\sqrt x\)，
+\(E_y=E_z=0\)。
+仅 \(x=0\) 与 \(x=a\) 的两个相对面
+可能有通量。
+前一面因 \(E_x(0)=0\) 通量为零；
+后一面通量
+\[
+ \boxed{\Phi_E=a^2E_x(a)
+ =ba^{5/2}}.
+\]
+由高斯定律
+\(Q_{\rm inside}=\varepsilon_0\Phi_E\)，
+故
+\[
+ \boxed{Q=\varepsilon_0ba^{5/2}
+ =(8.8542\times10^{-12})(800)(0.10)^{5/2}
+ \approx2.24\times10^{-11}\,\mathrm C}.
+\]
+核验：\(b\) 的量纲为
+\(\mathrm{N/(C\sqrt m)}\)，
+乘 \(a^{5/2}\) 后为电通量单位
+\(\mathrm{N\,m^2/C}\)。
+
+\paragraph{习题 12.30}
+两点电荷均为 \(+q\)，置于
+\(x=\pm a\)。在 \(-a<x<a\) 区间，
+沿 \(+\boldsymbol i\) 的电场分量为
+\[
+ E_x(x)=\frac{q}{4\pi\varepsilon_0}
+ \left[\frac1{(x+a)^2}-\frac1{(a-x)^2}\right].
+\]
+所以
+\[
+ \left.\frac{dE_x}{dx}\right|_{x=0}
+ =\frac{q}{4\pi\varepsilon_0}
+ \left(-\frac2{a^3}-\frac2{a^3}\right)
+ =\boxed{-\frac{q}{\pi\varepsilon_0a^3}}.
+\]
+若原点处放一沿 \(+\boldsymbol i\)
+的微小电偶极子，正负两电荷受力相加，
+以电矩 \(p=q_{\rm test}\ell\)
+并取 \(\ell\ll a\) 的点偶极极限，
+\[
+ F_x\simeq q_{\rm test}
+ [E_x(+\ell/2)-E_x(-\ell/2)]
+ =p\left.\frac{dE_x}{dx}\right|_0
+ =\boxed{-\frac{pq}{\pi\varepsilon_0a^3}}.
+\]
+力沿负 \(x\) 方向。
+
+\paragraph{习题 12.31}
+在均匀场中电矩与场夹角为
+\(\varphi\) 时，电偶极子所受力矩为
+\(\tau_\varphi=-pE\sin\varphi\)（以使角度增加为正）。
+从 \(\varphi_i=\pi/2\) 旋转到
+\(\varphi_f=\theta\) 的过程中，
+电场力所做的功
+\[
+ A=\int_{\pi/2}^{\theta}(-pE\sin\varphi)\,d\varphi
+ =pE[\cos\varphi]_{\pi/2}^{\theta}
+ =\boxed{pE\cos\theta=\boldsymbol p\cdot\boldsymbol E}.
+\]
+若 \(\theta<90^\circ\) 则电场做正功，
+势能变化 \(\Delta U=-A\)；
+这是场力做功而非外力准静态所做功。
+
+\paragraph{习题 12.32}
+取电量 \(+Q=+1.0\times10^{-6}\,\mathrm C\)
+置于 \(x=0\)，
+\(-4Q\) 置于 \(x=d=0.10\,\mathrm m\)。
+正负电荷之间二者电场同向，不可能相消；
+平衡点必须在较小电量 \(+Q\) 一侧 \(x<0\)。
+设距离该正电荷为 \(s=-x>0\)，
+\[
+ \frac{Q}{s^2}=\frac{4Q}{(d+s)^2}
+ \quad\Longrightarrow\quad d+s=2s,
+ \qquad \boxed{s=d=0.10\,\mathrm m}.
+\]
+所以 \(x_*=-0.10\,\mathrm m\)。
+沿两电荷连线方向，外场在平衡点的导数
+\[
+ \left.\frac{dE_x}{dx}\right|_*
+ =-\frac{kQ}{d^3}<0,\qquad
+ k=(4\pi\varepsilon_0)^{-1}.
+\]
+故微扰 \(x=x_*+\delta x\) 时
+\(F_x\simeq-q_0kQ\delta x/d^3\)，
+\(q_0>0\) 沿连线稳定，\(q_0<0\) 不稳定。
+垂直于连线方向的场导数在该无自由电荷点满足
+\(\partial E_y/\partial y
+ =-\frac12\,\partial E_x/\partial x>0\)
+（因轴对称且 \(\boldsymbol\nabla\cdot\boldsymbol E=0\)），
+故 \(q_0>0\) 的横向微扰不稳定，
+\(q_0<0\) 的横向微扰稳定。
+因此两种符号都无法在三个方向上同时稳定。
+
+\paragraph{习题 12.33}
+对试探电荷 \(q\ne0\)，
+若静电场中的某一点 \(P\) 是各方向的严格稳定平衡点，
+须有 \(\boldsymbol E(P)=\boldsymbol0\)，
+且任意小位移后受力 \(\boldsymbol F=q\boldsymbol E\)
+指回 \(P\)。
+对 \(q>0\)，以 \(P\) 为中心的足够小封闭球面上
+恢复力的径向分量应指向球内，
+这要求电通量严格为负：
+\(\oint\boldsymbol E\cdot d\boldsymbol S<0\)。
+但若包围区域没有额外源电荷，
+高斯定律给出
+\[
+ \oint\boldsymbol E\cdot d\boldsymbol S
+ =Q_{\rm enclosed}/\varepsilon_0=0,
+\]
+矛盾。
+对 \(q<0\)，恢复力要求电场径向向外，
+又与通量为零矛盾。
+等价地，在无电荷区域
+\(\nabla^2\varphi=0\)，
+静电势不可能在内部具有严格极大或极小值。
+这就是 Earnshaw 定理在静电情形的结论。
+本论证假定静止源电荷、真空静电场及无其他外加非电力约束。
+
+\paragraph{习题 12.34}
+墨滴的质量 \(m=1.5\times10^{-10}\,\mathrm{kg}\)，
+电荷 \(q=-1.4\times10^{-13}\,\mathrm C\)，
+进入长度为 \(L=0.016\,\mathrm m\) 的偏转板
+时水平速度 \(v_x=20\,\mathrm{m/s}\)。
+忽略边缘场和空气阻力，水平速度不变，
+在板间经历时间
+\[
+ t=\frac L{v_x}=\frac{0.016}{20}
+ =8.0\times10^{-4}\,\mathrm s.
+\]
+电场强度 \(E=1.6\times10^6\,\mathrm{N/C}\)，
+竖直加速度大小
+\[
+ a_y=\frac{|q|E}{m}
+ =\frac{(1.4\times10^{-13})(1.6\times10^6)}
+ {1.5\times10^{-10}}
+ \approx1.49\times10^3\,\mathrm{m/s^2}.
+\]
+初始竖直速度近似为零，
+离开偏转板时竖直偏转位移大小
+\[
+ \boxed{\Delta y=\frac12a_yt^2
+ =\frac{|q|EL^2}{2mv_x^2}
+ \approx4.78\times10^{-4}\,\mathrm m
+ \approx0.478\,\mathrm{mm}}.
+\]
+上极板正、下极板负，电场朝下，
+负电墨滴所受电力朝上，因此向上偏转。
+本结果只计算\emph{离开偏转板时}的位移，
+不包括从极板至纸面之间的继续飞行偏移。

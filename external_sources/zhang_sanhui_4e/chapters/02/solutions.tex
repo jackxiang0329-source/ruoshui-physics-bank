@@ -1,0 +1,799 @@
+% 第2章运动与力：章末习题2.1--2.12的独立推导
+% 原书 PDF 物理页82--84，对照《学习辅导与习题解答》第2章。
+% 按 g=9.80 m/s^2；模型近似和图示依赖均在题解内说明。
+% 未经独立专家审核，所有结果均不可声称已通过最终学术质检。
+\section*{第2章\quad 运动与力：独立解析}
+\subsection*{习题 2.1--2.12}
+
+\paragraph{习题 2.1}
+令推动力向右下方，与水平正向夹角
+\(0\le\theta<90^\circ\)，则法向支持力
+\(N=Mg+F\sin\theta\)；推动的水平分量是
+\(F\cos\theta\)。
+恰要克服最大静摩擦时
+\[
+ F\cos\theta=\mu_s(Mg+F\sin\theta),
+ \qquad
+ \boxed{F_{\min}=\frac{\mu_s Mg}
+ {\cos\theta-\mu_s\sin\theta}}.
+\]
+这个表达式只有在
+\(\cos\theta-\mu_s\sin\theta>0\) 时才有有限正解。
+匀速滑动时由滑动摩擦公式同理得
+\[
+ \boxed{F_{\rm uniform}=\frac{\mu_k Mg}
+ {\cos\theta-\mu_k\sin\theta}}.
+\]
+若 \(\mu_s>0\)，一旦
+\(\tan\theta\ge1/\mu_s\)，
+外力越大也同时压紧木箱，
+\(F\cos\theta\le\mu_sF\sin\theta\)
+而无法从静止推动，因此
+\[
+ \boxed{\theta_c=\arctan(1/\mu_s)}.
+\]
+在临界角本身不可能以有限力克服静摩擦；
+若外力方向改为斜向上拉，则法向力公式不同，
+不可套用上述结果。
+
+\paragraph{习题 2.2}
+假定小球相对于向右作水平加速运动的斜面静止，
+绳方向沿斜面向右上方（见原图2.33），
+加速度大小为 \(a\)。
+选斜面上行方向为切向正向，法向向斜面外侧。
+小球在地面惯性系有加速度 \((a,0)\)；
+绳张力 \(T\) 沿斜面向上、法向力 \(N\) 垂直斜面向外。
+牛顿第二定律分解为
+\[
+ T-mg\sin\theta=ma\cos\theta,\qquad
+ N-mg\cos\theta=-ma\sin\theta.
+\]
+故
+\[
+ \boxed{T=m(g\sin\theta+a\cos\theta)},\qquad
+ \boxed{N=m(g\cos\theta-a\sin\theta)}.
+\]
+代入 \(m=0.50\,\mathrm{kg}\)、\(a=2.0\,\mathrm{m/s^2}\)：
+\[
+ T=(4.90\sin\theta+1.00\cos\theta)\,\mathrm N,\quad
+ N=(4.90\cos\theta-1.00\sin\theta)\,\mathrm N.
+\]
+若法向力降为零，小球将与斜面失去接触，
+在 \(0<\theta<90^\circ\) 条件下
+\[
+ \boxed{a_{\rm critical}=g\cot\theta}.
+\]
+对原题 \(\theta=30^\circ\) 给定数值进一步计算：
+\[
+ T=0.50(9.8\sin30^\circ+2.0\cos30^\circ)
+ \approx3.32\,\mathrm N,
+\]
+\[
+ N=0.50(9.8\cos30^\circ-2.0\sin30^\circ)
+ \approx3.74\,\mathrm N,\qquad
+ a_{\rm critical}=\frac{9.8}{\tan30^\circ}
+ \approx17.0\,\mathrm{m/s^2}.
+\]
+
+当 \(a>a_{\rm critical}\) 时，
+上述有接触假设将给出负法向力，不再物理可行；
+这正是脱离斜面的判据。
+
+\paragraph{习题 2.3}
+直升机与被吊起汽车的加速度均为向上
+\(a=0.60\,\mathrm{m/s^2}\)。
+忽略空气阻力的其余分力，将飞机与汽车合看成整体，
+外界上举力 \(L\) 与总重力平衡到加速度：
+\[
+ L-(M+m)g=(M+m)a
+ \quad\Rightarrow\quad
+ \boxed{L=(5000+1500)(9.80+0.60)=6.76\times10^4\,\mathrm N}.
+\]
+对被吊汽车单独列式
+\(T-mg=ma\)，得
+\[
+ \boxed{T=m(g+a)=1500(10.4)
+ =1.56\times10^4\,\mathrm N}.
+\]
+交叉检验：飞机自身满足
+\(L-Mg-T=Ma\)，数值亦相符。
+
+\paragraph{习题 2.4}
+采用图2.34的简单理想滑轮模型，擦窗工人与吊桶
+总质量 \(m=75\,\mathrm{kg}\)；一条绳的两段分别
+向上拉吊桶和工人的手，故整体受两份同样张力 \(T\)。
+缓慢匀速下降时
+\[
+ mg-2T=0,\qquad
+ \boxed{F_{\rm hand}=T=\tfrac12mg
+ =367.5\,\mathrm N}.
+\]
+拉力减小 \(10\%\) 后
+\(T'=0.90T\)，向下净力
+\(mg-2T'=0.10mg\)，因此
+\[
+ \boxed{a=0.10g=0.980\,\mathrm{m/s^2}}
+\]
+方向向下。
+仅在绳端、吊桶都按图连接且滑轮无摩擦时适用；
+如果把绳误作只有一端拉人的情形，系数2会丢失。
+
+\paragraph{习题 2.5}
+取竖直向下为各物体的加速度正方向，
+固定上滑轮为 \(A\)，下动滑轮为 \(B\)。
+上绳张力为 \(T_1\)，下绳张力为 \(T_2\)。
+无质量的动滑轮要求
+\(T_1=2T_2\)。
+若下滑轮位移为 \(y_B\)，两根绳长约束分别是
+\[
+ y_1+y_B=\mathrm{const},\qquad
+ (y_2-y_B)+(y_3-y_B)=\mathrm{const},
+\]
+从而
+\[
+ a_B=-a_1,\qquad a_2+a_3=-2a_1.
+\]
+三物体分别满足
+\[
+ m_1g-T_1=m_1a_1,\quad
+ m_2g-T_2=m_2a_2,\quad
+ m_3g-T_2=m_3a_3.
+\]
+消去各加速度，得到
+\[
+ \boxed{T_2=\frac{4g}{4/m_1+1/m_2+1/m_3}},\quad
+ \boxed{T_1=2T_2}.
+\]
+代入 \((m_1,m_2,m_3)=(0.200,0.100,0.050)\,\mathrm{kg}\)，
+有 \(T_2=0.784\,\mathrm N,\ T_1=1.568\,\mathrm N\)，
+并且
+\[
+ \boxed{a_1=+1.96\,\mathrm{m/s^2},\quad
+ a_2=+1.96\,\mathrm{m/s^2},\quad
+ a_3=-5.88\,\mathrm{m/s^2}}.
+\]
+所以 \(m_1,m_2\) 向下加速，
+\(m_3\) 向上加速，下滑轮 \(B\) 向上加速
+\(1.96\,\mathrm{m/s^2}\)。
+验证：\(1.96-5.88=-2(1.96)\)，绳长约束成立。
+
+\paragraph{习题 2.6}
+假设同一路面上制动时的动摩擦等效减速度不变。
+在水平面上初速
+\(v_0=90/3.6=25\,\mathrm{m/s}\)，
+停车距离 \(s_0=35\,\mathrm m\)，
+因此有效摩擦系数为
+\[
+ \mu=\frac{v_0^2}{2gs_0}
+ =\frac{25^2}{2(9.80)(35)}
+ \approx0.9111.
+\]
+坡道下降斜度 \(1:10\) 取
+\(\tan\theta=1/10\)，车沿下坡行驶时
+沿车速反向的减速度是
+\[
+ a_{\rm down}
+ =\mu g\cos\theta-g\sin\theta
+ =\frac{25^2}{2s_0}\cos\theta-g\sin\theta
+ \approx7.909\,\mathrm{m/s^2}>0.
+\]
+故新的停车距离
+\[
+ \boxed{s_{\rm down}=\frac{v_0^2}{2a_{\rm down}}
+ \approx39.51\,\mathrm m}.
+\]
+下坡距离大于水平路面的 \(35\,\mathrm m\)；
+若 \(\mu\cos\theta\le\sin\theta\)，则理想模型将不能制动停车。
+
+\paragraph{习题 2.7}
+取板与上方物体、板与桌面间静摩擦与滑动摩擦
+均为题设的 \(\mu=0.25\)，
+假设受力水平、系统初始静止。
+设板与上方物体尚未发生相对滑动，
+两个物体共同加速时，桌面对板的摩擦力大小
+\(f_0=\mu(M+m)g\)；
+共同加速度
+\[
+ a=\frac{F-\mu(M+m)g}{M+m}.
+\]
+要保持上物体与板无相对滑动，所需界面摩擦
+\(ma\) 不得大于最大静摩擦
+\(\mu mg\)，即 \(a\le\mu g\)。
+发生相对滑动的临界条件
+\[
+ \frac{F-\mu(M+m)g}{M+m}=\mu g,
+ \qquad
+ \boxed{F_{\rm crit}=2\mu(M+m)g}.
+\]
+代入得
+\[
+ \boxed{F_{\rm crit}=2(0.25)(1.50+2.45)(9.8)
+ \approx19.36\,\mathrm N}.
+\]
+持续抽出须取略大于该值的水平力。
+\textbf{条件提醒：}这与单纯让板\emph{相对桌面}开始滑动
+的门槛不同；这里要求板最终相对上物体发生滑动。
+若静、动摩擦系数并不相等，必须分别重新计算。
+
+\paragraph{习题 2.8}
+令小车加速度 \(A>0\) 表示向右，
+\(m_1\) 相对小车的加速度 \(u\) 向右为正，
+绳长守恒使 \(m_2\) 相对小车向下的加速度亦为 \(u\)。
+\(m_2\) 贴靠小车竖直前壁，故在地面系的水平加速度为 \(A\)。
+质量可忽略的绳的张力 \(T\) 满足
+\[
+ T=m_1(A+u),\qquad m_2g-T=m_2u.
+\]
+消去 \(u\)，得到
+\[
+ T=\frac{m_1m_2}{m_1+m_2}(A+g)
+ =:\mu_{\rm red}(A+g),\quad
+ \mu_{\rm red}=\frac{m_1m_2}{m_1+m_2}.
+\]
+对小车和两物体的水平运动合并列式，
+\[
+ F=(M+m_2)A+T.
+\]
+因此
+\[
+ \boxed{A=\frac{F-\mu_{\rm red}g}
+ {M+m_2+\mu_{\rm red}}}.
+\]
+若想使 \(m_2\) 高度不变，
+须取 \(u=0\)，故由 \(m_2g-T=0\) 与
+\(T=m_1A\) 得
+\(A=m_2g/m_1\)，代入水平动力学方程
+\[
+ \boxed{F=(M+m_1+m_2)\frac{m_2g}{m_1}}.
+\]
+本解要求始终保持绳张紧且 \(m_2\) 贴住车壁。
+\(A<0\) 或张力非正的参数区间会改变接触模式，
+不能无条件外推。
+
+\paragraph{习题 2.9}
+绕月飞行器视作作半径
+\(r=R_{\rm Moon}+h\) 的圆形轨道运动，取教材数值表常用近似
+\(R_{\rm Moon}=1.74\times10^6\,\mathrm m\)、
+\(M_{\rm Moon}=7.35\times10^{22}\,\mathrm{kg}\)、
+\(h=2.00\times10^5\,\mathrm m\)、
+\(G=6.67\times10^{-11}\,\mathrm{N\,m^2/kg^2}\)。
+轨道向心加速度由引力提供：
+\[
+ \frac{mv^2}{r}=\frac{GM_{\rm Moon}m}{r^2}
+ \quad\Longrightarrow\quad
+ \boxed{v=\sqrt{\frac{GM_{\rm Moon}}r}}
+ \approx1.59\times10^3\,\mathrm{m/s}.
+\]
+周期为
+\[
+ \boxed{T=\frac{2\pi r}{v}
+ =2\pi\sqrt{\frac{r^3}{GM_{\rm Moon}}}
+ \approx7.67\times10^3\,\mathrm s
+ \approx2.13\,\mathrm h}.
+\]
+量纲检查：\(GM/r\) 为速度平方；
+若采用稍有不同的月球半径与引力参数，最后有效位会略有差异。
+
+\paragraph{习题 2.10}
+胡克定律 \(|F|=k\,\Delta x\)。
+串联时两弹簧中拉力大小相同 \(F\)，
+总伸长量是两个伸长量之和：
+\[
+ \Delta x=\Delta x_1+\Delta x_2
+ =\frac F{k_1}+\frac F{k_2}
+ =F\left(\frac1{k_1}+\frac1{k_2}\right).
+\]
+因此
+\[
+ \boxed{\frac1{k_{\rm series}}=\frac1{k_1}+\frac1{k_2}},
+ \qquad
+ \boxed{k_{\rm series}=\frac{k_1k_2}{k_1+k_2}}.
+\]
+并联时两弹簧伸长相同，力相加：
+\[
+ F=F_1+F_2=k_1\Delta x+k_2\Delta x
+ =(k_1+k_2)\Delta x,
+ \qquad
+ \boxed{k_{\rm parallel}=k_1+k_2}.
+\]
+均假定线性弹性范围，弹簧自重及端部连接形变忽略。
+
+\paragraph{习题 2.11}
+取水平方向指向圆心为正、竖直向上为正。
+汽车质量 \(m=1200\,\mathrm{kg}\)，
+平面曲率半径 \(R=400\,\mathrm m\)，
+速率 \(v=25\,\mathrm{m/s}\)，倾角
+\(\theta=6^\circ\)。
+设路面对轮胎的支持力 \(N\) 垂直路面，
+静摩擦 \(f\) 指向\emph{沿斜坡向内下方}，
+其分量满足
+\[
+ N\sin\theta+f\cos\theta=\frac{mv^2}{R},\qquad
+ N\cos\theta-f\sin\theta=mg.
+\]
+解得
+\[
+ \boxed{N=m\left(g\cos\theta+\frac{v^2}{R}\sin\theta\right)}
+ \approx1.1892\times10^4\,\mathrm N,
+\]
+\[
+ \boxed{f=m\left(\frac{v^2}{R}\cos\theta-g\sin\theta\right)}
+ \approx6.35\times10^2\,\mathrm N.
+\]
+汽车在水平面内的法向（向心）合力
+\(mv^2/R=1875\,\mathrm N\)；它是支持力与
+摩擦力\emph{水平分量的合力}，不是路面的垂直支持力。
+此时 \(f/N\approx0.0534<0.9\)，静摩擦足够。
+求最大允许速率时，沿坡向内下方的摩擦达到
+\(f=\mu_sN\)，于是
+\[
+ \frac{v_{\max}^2}{R}
+ =g\frac{\sin\theta+\mu_s\cos\theta}
+ {\cos\theta-\mu_s\sin\theta},
+ \qquad
+ \boxed{v_{\max}
+ =\sqrt{Rg\frac{\sin\theta+\mu_s\cos\theta}
+ {\cos\theta-\mu_s\sin\theta}}}
+ \approx65.97\,\mathrm{m/s}.
+\]
+取值前需检验分母正且轮胎未失去接触。
+上式是经典静摩擦的理想极限，不包含真实轮胎、
+转弯半径变化与车辆侧倾等车辆动力学问题。
+
+\paragraph{习题 2.12}
+设木卫三到木星距离近似为轨道半径
+\(r=1.07\times10^6\,\mathrm{km}
+=1.07\times10^9\,\mathrm m\)，
+公转周期
+\(T=7.16\,\mathrm d=7.16(86400)\,\mathrm s\)。
+忽略卫星质量及其他摄动，引力提供向心力：
+\[
+ \frac{GM_Jm}{r^2}
+ =m\frac{4\pi^2r}{T^2}
+ \quad\Longrightarrow\quad
+ \boxed{M_J=\frac{4\pi^2r^3}{GT^2}}.
+\]
+取 \(G=6.6743\times10^{-11}\,
+\mathrm{N\,m^2/kg^2}\) 时，
+\[
+ \boxed{M_J\approx1.89\times10^{27}\,\mathrm{kg}}.
+\]
+月卫距离的单位必须从 \(\mathrm{km}\) 转为
+\(\mathrm m\) 后立方；遗漏这一转换将造成
+\(10^9\) 倍量级错误。
+
+
+% 第二批追加的2.13--2.28：独立物理推导、量纲与边界校验。
+% 参照教材PDF物理页85--87与辅导书物理页35--42。
+\subsection*{习题 2.13--2.28：独立解析}
+
+\paragraph{习题 2.13}
+以环外缘的粒子作圆轨道运动近似，
+距离土星中心 \(r=136000\,\mathrm{km}
+=1.36\times10^8\,\mathrm m\)，
+公转周期 \(T=14.2\times3600\,\mathrm s\)。
+令土星质量为 \(M_S\)，粒子质量为 \(m\)，
+引力是向心力：
+\[
+ \frac{GM_Sm}{r^2}
+ =m\frac{4\pi^2r}{T^2}.
+\]
+消去粒子质量，得
+\[
+ \boxed{M_S=\frac{4\pi^2r^3}{GT^2}}
+ \approx5.70\times10^{26}\,\mathrm{kg}
+ \quad (G=6.67\times10^{-11}\,\mathrm{SI}).
+\]
+粒径不进入理想开普勒轨道结果；
+使用外缘周期时必须使用\emph{外缘}半径，
+不可误用环的内缘半径。
+
+\paragraph{习题 2.14}
+设自转星体近似为质量均匀分布的球，
+赤道半径 \(R\)、总质量 \(M=(4/3)\pi R^3\rho\)。
+赤道颗粒刚好不被甩离的临界条件为
+\[
+ \omega_{\max}^2R=\frac{GM}{R^2}
+ =\frac{4\pi}{3}G\rho R.
+\]
+因此
+\[
+ \boxed{T_{\min}=\frac{2\pi}{\omega_{\max}}
+ =\sqrt{\frac{3\pi}{G\rho}}}.
+\]
+取 \(\rho=3.0\times10^3\,\mathrm{kg/m^3}\)，
+可得 \(T_{\min}\approx6.86\times10^3\,\mathrm s
+\approx1.91\,\mathrm h\)。
+若已知中子星的周期 \(T=1.6\times10^{-3}\,\mathrm s\)
+与半径 \(R=10\,\mathrm{km}=10^4\,\mathrm m\)，
+由赤道颗粒不甩离的条件直接求星体最小质量：
+\[
+ \frac{GM_{\min}}{R^2}\ge
+ \left(\frac{2\pi}{T}\right)^2R
+ \quad\Longrightarrow\quad
+ \boxed{M_{\min}=\frac{4\pi^2R^3}{GT^2}}
+ \approx2.31\times10^{29}\,\mathrm{kg}
+ \approx0.116\,M_\odot.
+\]
+此为牛顿力学的质量下界，真实中子星应考虑
+非均匀密度、相对论和状态方程，
+并不能把该值视为精确中子星质量。
+
+\paragraph{习题 2.15}
+对一均匀球体，半径 \(r\) 内的质量为
+\(M_r=(4/3)\pi\rho r^3\)；
+球内局部重力场大小
+\(g(r)=GM_r/r^2=(4/3)\pi G\rho r\)。
+径向静力平衡
+\(dp/dr=-\rho g(r)\)。
+表面压强按题设模型取 \(p(R)=0\)，积分得
+\[
+ p(r)=\int_r^R\frac{4\pi}{3}G\rho^2s\,ds
+ =\frac{2\pi}{3}G\rho^2(R^2-r^2).
+\]
+于是中心压强
+\[
+ \boxed{p(0)=\frac23\pi G\rho^2R^2}.
+\]
+代入木星理想平均密度
+\(1.3\times10^3\,\mathrm{kg/m^3}\)
+及半径 \(7.0\times10^7\,\mathrm m\) 得
+\[
+ p(0)\approx1.16\times10^{12}\,\mathrm{Pa}
+ \approx\boxed{1.14\times10^7\,\mathrm{atm}}.
+\]
+量纲 \(G\rho^2R^2\) 是压强；
+真实木星可压缩并非均匀密度，本结果只是题设的数量级估算。
+
+\paragraph{习题 2.16}
+三个相同质量 \(M\) 的星体在圆轨道上等间距分布，
+构成边长 \(d=\sqrt3R\) 的等边三角形，
+其中 \(R\) 为各星体至系统质心的轨道半径。
+以其中一个星体为例，其余两星分别施加大小
+\(F_0=GM^2/d^2=GM^2/(3R^2)\) 的引力，
+两力夹角 \(60^\circ\)；
+合力沿指向系统质心的径向，大小
+\[
+ F_{\mathrm{net}}=2F_0\cos30^\circ
+ =\frac{GM^2}{\sqrt3R^2}.
+\]
+由 \(M\omega^2R=F_{\mathrm{net}}\)，得
+\[
+ \omega^2=\frac{GM}{\sqrt3R^3},\qquad
+ \boxed{T=2\pi\sqrt{\frac{\sqrt3R^3}{GM}}}.
+\]
+若其他星体不以这种对称等边三角形位置分布，
+这一单一周期公式未必成立。
+
+\paragraph{习题 2.17}
+设太阳质量为 \(M_\odot\)、地球质量为 \(M_\oplus\)，
+地球与太阳距离为 \(R\)，
+探测器位于地球内侧距离 \(r\)，满足
+\(r\ll R\) 且质量可忽略。
+探测器为保持与地球共转必须具有同一角速度，
+近似 \(\Omega^2=GM_\odot/R^3\)。
+在太阳—地球连线上，内侧的向心关系为
+\[
+ \frac{GM_\odot}{(R-r)^2}
+ -\frac{GM_\oplus}{r^2}
+ =\Omega^2(R-r).
+\]
+展开 \((R-r)^{-2}\simeq R^{-2}(1+2r/R)\)
+并忽略 \(O((r/R)^2)\) 项，可得
+\[
+ \frac{GM_\oplus}{r^2}
+ \simeq \frac{3GM_\odot}{R^3}r,
+ \qquad
+ \boxed{r_{L_1}\simeq
+ R\left(\frac{M_\oplus}{3M_\odot}\right)^{1/3}}.
+\]
+取 \(R=1.496\times10^{11}\,\mathrm m\)、
+\(M_\oplus=5.972\times10^{24}\,\mathrm{kg}\)、
+\(M_\odot=1.989\times10^{30}\,\mathrm{kg}\)，得
+\(r_{L_1}\approx1.50\times10^9\,\mathrm m
+=1.50\times10^6\,\mathrm{km}\)。
+地球轨道外侧也有共线拉格朗日点 \(L_2\)，
+同样在 \(r\ll R\) 的一阶近似下
+\[
+ \boxed{r_{L_2}\simeq
+ R\left(\frac{M_\oplus}{3M_\odot}\right)^{1/3}
+ \approx1.50\times10^6\,\mathrm{km}}.
+\]
+这些是共转平衡位置，不等于任意小扰动都稳定；
+实际航天器需轨道维持。
+
+\paragraph{习题 2.18}
+物体在无摩擦的水平桌面上沿环内侧运动，
+径向约束力提供向心加速度：
+\[
+ N=m\frac{v^2}{R}.
+\]
+环与物体间的动摩擦
+\(f_k=\mu_kN\)，沿圆环切线反向，
+故切向运动方程为
+\[
+ m\frac{dv}{dt}=-\mu_km\frac{v^2}{R}
+ \quad\Rightarrow\quad
+ \frac{dv}{v^2}=-\frac{\mu_k}{R}\,dt.
+\]
+使用 \(v(0)=v_0\) 积分：
+\[
+ \boxed{v(t)=\frac{v_0}{1+(\mu_kv_0/R)t}}.
+\]
+圆环上从 \(A\) 出发累计路程
+\(s(t)=\int_0^tv(\tau)\,d\tau\)，因此
+\[
+ \boxed{s(t)=\frac R{\mu_k}
+ \ln\left(1+\frac{\mu_kv_0t}{R}\right)}.
+\]
+当 \(\mu_k\to0\)，由
+\(\ln(1+x)/x\to1\) 得
+\(v(t)\to v_0,\ s(t)\to v_0t\)，
+符合无摩擦极限。
+本模型忽略圆环表面与液体等额外阻力。
+
+\paragraph{习题 2.19}
+将离心机角速度写为
+\[
+ \omega=2\pi\frac{5\times10^4}{60}
+ \approx5236\,\mathrm{rad/s}.
+\]
+试管口 \(r_1=0.0200\,\mathrm m\)，
+试管底 \(r_2=0.100\,\mathrm m\)，
+向心加速度分别为 \(\omega^2r_i\)，
+所以
+\[
+ \frac{a_1}{g}=\frac{\omega^2r_1}{g}
+ \approx5.60\times10^4,\qquad
+ \frac{a_2}{g}=\frac{\omega^2r_2}{g}
+ \approx2.80\times10^5.
+\]
+把液体视作密度均匀、沿半径充满细管，
+在旋转系里 \(dp/dr=\rho\omega^2r\)。
+若管口表压为零，管底对面积 \(A\) 的压强增量
+\(\Delta p=\frac12\rho\omega^2(r_2^2-r_1^2)\)。
+利用样品质量
+\(m=\rho A(r_2-r_1)=0.0120\,\mathrm{kg}\) 消去
+\(\rho A\)，得到管底表压力（力）
+\[
+ \boxed{F=\Delta p\,A
+ =\frac12m\omega^2(r_1+r_2)}
+ \approx1.97\times10^4\,\mathrm N.
+\]
+相当于约 \(F/g\approx2.01\times10^3\,\mathrm{kg}\)
+即约 \(\boxed{2.01\,\text{吨}}\) 的重力。
+若大分子质量
+\(m_{\rm mol}=10^5m_p\)、
+\(m_p\approx1.67\times10^{-27}\,\mathrm{kg}\)，
+在底部的惯性离心力大小是
+\[
+ \boxed{F_{\rm inertial}
+ =m_{\rm mol}\omega^2r_2
+ \approx4.58\times10^{-16}\,\mathrm N}.
+\]
+这里“离心力”仅作为旋转参考系中的惯性力，
+不与向心的实际相互作用力混淆。
+
+\paragraph{习题 2.20}
+令每片翼的线密度为常量 \(\lambda\)，
+长度 \(L=5.97\,\mathrm m\)，
+角速度 \(\omega=2\pi(400/60)\)。
+离旋转轴距离 \(r\) 的小元质量
+\(dm=\lambda dr\) 需向心力
+\(dF=\omega^2r\,dm\)。
+翼根承受所有外侧翼片向心需求之和：
+\[
+ F_{\rm root}
+ =\int_0^L\lambda\omega^2r\,dr
+ =\tfrac12\lambda\omega^2L^2
+ =\tfrac12M_{\rm blade}\omega^2L.
+\]
+与翼片重力 \(M_{\rm blade}g\) 的比值
+\[
+ \boxed{\frac{F_{\rm root}}{M_{\rm blade}g}
+ =\frac{\omega^2L}{2g}}
+ \approx5.34\times10^2.
+\]
+该巨大值属于简化的径向离心拉力，
+不包括气动力、弯曲力矩、旋翼形变与应力集中。
+
+\paragraph{习题 2.21}
+设漏斗以 \(\omega=2\pi n\) 绕竖直轴匀速旋转。
+在共转系中，小物体静止，重力向下，惯性离心力
+\(m\omega^2r\) 水平向外。
+沿漏斗壁向上且向外的切向方向分解，
+无滑动所需摩擦力大小为
+\[
+ |f|=m|g\sin\theta-\omega^2r\cos\theta|.
+\]
+垂直漏斗壁的法向支持力
+\[
+ N=m(g\cos\theta+\omega^2r\sin\theta).
+\]
+故可持续相对静止的充要摩擦条件（接触不断开）为
+\[
+ \boxed{|g\sin\theta-(2\pi n)^2r\cos\theta|
+ \le\mu_s[g\cos\theta+(2\pi n)^2r\sin\theta]}.
+\]
+这是对全部参数有效的隐式不等式。
+若 \(0<\theta<90^\circ\)、
+\(\cos\theta-\mu_s\sin\theta>0\)，
+可整理为
+\[
+ \max\left\{0,\frac{g(\sin\theta-\mu_s\cos\theta)}
+ {r(\cos\theta+\mu_s\sin\theta)}\right\}
+ \le(2\pi n)^2\le
+ \frac{g(\sin\theta+\mu_s\cos\theta)}
+ {r(\cos\theta-\mu_s\sin\theta)}.
+\]
+当分母非正时，上限约束应重新由原始绝对值不等式分析，
+不可机械沿用。
+
+\paragraph{习题 2.22}
+内、外两物体到固定钉子的圆轨道半径分别为
+\(r_1=L_1,\ r_2=L_1+L_2\)。
+对外侧 \(m_2\)，只有外绳的张力
+\(T_2\) 提供向心力，因此
+\[
+ \boxed{T_2=m_2\omega^2(L_1+L_2)}.
+\]
+对内侧 \(m_1\)，内绳向内拉力为 \(T_1\)，
+外绳向外拉力为 \(T_2\)，
+\[
+ T_1-T_2=m_1\omega^2L_1
+ \quad\Rightarrow\quad
+ \boxed{T_1=\omega^2[
+ m_1L_1+m_2(L_1+L_2)]}.
+\]
+检查：\(T_1>T_2>0\) 对正质量与正半径成立，
+且内绳负担两个物块的向心需求。
+
+\paragraph{习题 2.23}
+取向卡车原行驶前方为正。
+卡车刹车时在其非惯性参考系存在向前的惯性力
+\(ma\)，箱子滑动时底板摩擦向后，
+大小 \(\mu_kmg\)。
+因此箱子相对卡车的加速度
+\[
+ a_{\rm rel}=a-\mu_kg
+ =7.0-(0.50)(9.8)=2.10\,\mathrm{m/s^2}>0.
+\]
+箱子相对卡车从静止滑过 \(l=2\,\mathrm m\) 时
+\[
+ v_{\rm rel}^2=2a_{\rm rel}l
+ \quad\Rightarrow\quad
+ \boxed{v_{\rm rel}=\sqrt{2(2.10)(2)}
+ \approx2.90\,\mathrm{m/s}}.
+\]
+这是箱子\emph{相对卡车}的碰撞速率；
+绝对地面速率需另知卡车刹车起始速率。
+
+\paragraph{习题 2.24}
+环状空间站缓慢绕其轴转动时，
+与空间站共转的观察者感觉到径向向外的离心加速度
+\(a_{\rm fict}=\omega^2R\)。
+令其大小与地面重力 \(g\) 相同，
+\(R=1.8\,\mathrm{km}=1800\,\mathrm m\)，故
+\[
+ \boxed{\omega=\sqrt{\frac gR}
+ =\sqrt{\frac{9.80}{1800}}
+ \approx7.38\times10^{-2}\,\mathrm{rad/s}}.
+\]
+对应转速约 \(0.705\,\mathrm{r/min}\)。
+人造重力方向\emph{远离旋转轴，指向环的外侧内壁}，
+其大小在环的不同半径位置随 \(r\) 变化。
+忽略空间站公转、科里奥利效应和人体姿势影响。
+
+\paragraph{习题 2.25}
+圆环半径 \(R\)，从最低点向两侧量角 \(\theta\)
+（最低点 \(\theta=0\)，最高点 \(\theta=\pi\)）。
+珠子绕竖直直径与环共转，
+水平离轴距离 \(r_\perp=R\sin\theta\)，
+相对最低点的高度为 \(h=R(1-\cos\theta)\)。
+共转系内的有效势能为
+\[
+ U_{\rm eff}(\theta)=mgR(1-\cos\theta)
+ -\frac12m\omega^2R^2\sin^2\theta.
+\]
+平衡要求
+\[
+ \frac{dU_{\rm eff}}{d\theta}
+ =mR\sin\theta\,[g-\omega^2R\cos\theta]=0.
+\]
+因而始终存在底点 \(\theta=0\) 和顶点
+\(\theta=\pi\)；当
+\(\omega\ge\omega_c:=\sqrt{g/R}\) 时，
+还存在两个左右对称的非底点平衡
+\[
+ \boxed{\theta_\pm=\pm\arccos\left(\frac g{\omega^2R}\right)}.
+\]
+稳定性由 \(U_{\rm eff}''(\theta)\) 判定：
+底点在 \(\omega<\omega_c\) 时稳定、
+在 \(\omega>\omega_c\) 时不稳定；
+顶点对所有 \(\omega\) 均不稳定；
+当 \(\omega>\omega_c\) 时两侧的
+\(\pm\theta_0\) 平衡稳定。
+在临界 \(\omega=\omega_c\) 时，
+底点的二阶项为零，但四阶项为正：
+\[
+ U_{\rm eff}(\theta)
+ =\frac{mgR}{8}\theta^4+O(\theta^6)
+ \quad(\omega=\omega_c),
+\]
+故在题设无摩擦、光滑约束的理想模型中，该点仍是有效势的\textbf{严格局部极小值}，
+对应临界的\emph{非线性稳定平衡}（小振动线性固有频率恰为零，非谐回复由四阶势决定）；
+不能只凭二阶导数为零便判定其不稳定。
+\textbf{辅导书源结论差异（S PDF物理页41--42）：}
+该书在临界转速把底点归入“不稳定”，所用二阶判据在等号情形实际失效；
+这里按四阶有效势给出严格局部稳定性的数学修正。
+如有珠子-圆环摩擦、环的有限惯性或其他扰动，需另立动力模型，
+仍留待外部专家审核。
+
+\paragraph{习题 2.26}
+将飞艇近似为直径 \(D=50\,\mathrm m\) 的球形体，
+迎风投影面积为
+\(A=\pi(D/2)^2=\pi(25)^2\,\mathrm{m^2}\)。
+以题目给定阻力系数 \(C_D=0.016\)、
+空气密度 \(\rho=0.062\,\mathrm{kg/m^3}\)、
+风速 \(v=40\,\mathrm{m/s}\)，
+由阻力公式
+\[
+ F_D=\frac12C_D\rho Av^2
+ =\frac12(0.016)(0.062)\pi(25)^2(40)^2
+ \approx\boxed{1.56\times10^3\,\mathrm N}.
+\]
+推进器需要以反向大小相同的推力
+平衡风阻（忽略其他阻力）。
+推力效率
+\(\eta_F=10\,\mathrm{mN/W}=0.010\,\mathrm{N/W}\)，
+因而所需电功率
+\[
+ \boxed{P=\frac{F_D}{\eta_F}
+ \approx1.56\times10^5\,\mathrm W
+ =156\,\mathrm{kW}}.
+\]
+注意该功率是按题设推力效率而非理想空气动力效率计算。
+
+\paragraph{习题 2.27}
+从静止释放，取竖直向下为正，
+设 \(m\,dv/dt=mg-kv\) 且 \(m,k>0\)。
+对候选解
+\[
+ v(t)=\frac{mg}{k}(1-e^{-kt/m})
+\]
+直接求导得
+\[
+ \frac{dv}{dt}=g e^{-kt/m},\qquad
+ m\frac{dv}{dt}=mg e^{-kt/m}.
+\]
+右边同时满足
+\[
+ mg-kv=mg-mg(1-e^{-kt/m})
+ =mg e^{-kt/m},
+\]
+故左右完全相等，且 \(v(0)=0\)，
+因此题设解是所给初值问题的解。
+因为 \(e^{-kt/m}\to0\)（\(t\to\infty\)），
+\[
+ \boxed{v_{\rm terminal}=\frac{mg}{k}}.
+\]
+单位检查：\(k\) 的量纲为质量/时间，
+故 \(mg/k\) 为速度。
+
+\paragraph{习题 2.28}
+环形水膜内外各有一个表面，每个表面
+沿细圆环接触线向下作用的表面张力大小为
+\(\gamma\) 乘接触线周长 \(2\pi r\)。
+因此两面的总向下拉力是
+\(2\gamma(2\pi r)=4\pi r\gamma\)。
+缓慢提拉、忽略惯性与浮力增量时，
+弹簧秤向上拉力平衡细圆环重力与液膜拉力：
+\[
+ F=mg+4\pi r\gamma
+ \quad\Longrightarrow\quad
+ \boxed{\gamma=\frac{F-mg}{4\pi r}}.
+\]
+量纲：\([F-mg]/[r]=\mathrm{N/m}\)，
+正是表面张力系数单位。
+若液膜只有一个有效表面或接触角非理想，
+系数 \(4\pi r\) 不再直接适用。

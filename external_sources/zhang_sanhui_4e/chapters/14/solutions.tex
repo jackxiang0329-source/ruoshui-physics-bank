@@ -1,0 +1,442 @@
+% 张三慧《大学物理学》第4版《静电场中的导体》14.1--14.14
+% 原始教材V2 PDF74--75页；配套书精确页码待定位。
+% 独立推导候选。图示、非理想模型与版权许可仍待独立复核。
+\section*{第14章\quad 静电场中的导体：独立解析}
+
+\paragraph{习题 14.1}
+取导体外表面微小面元 \(\Delta S\)，
+局部面电荷密度为 \(\sigma\)，其自身无限大薄面近似
+对面两侧的场分别为
+\(\pm\sigma/(2\varepsilon_0)\boldsymbol n\)，
+其中 \(\boldsymbol n\) 是导体外法线。
+其他电荷源在面元两侧邻域产生连续的场
+\(\boldsymbol E_{\rm other}\)。
+导体内部静电平衡给出
+\[
+ \boldsymbol 0=\boldsymbol E_{\rm other}
+ -\frac{\sigma}{2\varepsilon_0}\boldsymbol n
+ \quad\Longrightarrow\quad
+ \boldsymbol E_{\rm other}
+ =\frac{\sigma}{2\varepsilon_0}\boldsymbol n.
+\]
+外侧两部分相加：
+\[
+ \boxed{\boldsymbol E_{\rm outside}
+ =\frac{\sigma}{\varepsilon_0}\boldsymbol n}.
+\]
+这是局部边界极限，适用于表面曲率半径远大于
+选取面元尺寸的邻域；符号随 \(\sigma\) 取正负。
+
+\paragraph{习题 14.2}
+内球半径 \(R_1\)，导体壳内外半径 \(R_2,R_3\)。
+设内球未知电荷 \(Q_1\)，外壳已知净电荷 \(Q_2\)。
+高斯定律与导体内部场为零，
+使壳内表面电荷必为 \(-Q_1\)，
+外表面电荷为 \(Q_1+Q_2\)。
+无穷远电势为零，则
+\[
+ \varphi_1=k_e\left[
+ Q_1\left(\frac1{R_1}-\frac1{R_2}+\frac1{R_3}\right)
+ +\frac{Q_2}{R_3}\right],\quad
+ k_e=\frac1{4\pi\varepsilon_0}.
+\]
+所以可由给定内球电势确定
+\[
+ \boxed{Q_1=
+ \frac{\varphi_1/k_e-Q_2/R_3}
+ {1/R_1-1/R_2+1/R_3}}.
+\]
+球对称场强分段为
+\[
+ \boxed{E_r(r)=
+ \begin{cases}
+ 0,&0<r<R_1,\\
+ k_eQ_1/r^2,&R_1<r<R_2,\\
+ 0,&R_2<r<R_3,\\
+ k_e(Q_1+Q_2)/r^2,&r>R_3.
+ \end{cases}}
+\]
+电势连续且由 \(E_r=-d\varphi/dr\) 给出
+\[
+ \boxed{\varphi(r)=
+ \begin{cases}
+ \varphi_1,&r\le R_1,\\
+ k_e[Q_1/r-Q_1/R_2+(Q_1+Q_2)/R_3],
+   &R_1<r<R_2,\\
+ k_e(Q_1+Q_2)/R_3,&R_2\le r\le R_3,\\
+ k_e(Q_1+Q_2)/r,&r>R_3.
+ \end{cases}}
+\]
+在各带电薄表面应理解电场为两侧极限，电势保持连续。
+
+\paragraph{习题 14.3}
+初态球 \(A\) 总电荷 \(Q_A=3\times10^{-8}\,\mathrm C\)，
+壳 \(B\) 总电荷 \(Q_B=2\times10^{-8}\,\mathrm C\)。
+同心导体屏蔽要求 \(B\) 内表面
+\(Q_{B,\mathrm{in}}=-Q_A=-3\times10^{-8}\,\mathrm C\)，
+外表面
+\(Q_{B,\mathrm{out}}=Q_A+Q_B=5\times10^{-8}\,\mathrm C\)。
+取 \(k_e=8.9876\times10^9\,\mathrm{SI}\)，
+内球、外壳电势
+\[
+ \boxed{\varphi_A=k_e
+ [Q_A(1/R_1-1/R_2)+(Q_A+Q_B)/R_3]
+ \approx5.62\times10^3\,\mathrm V},
+\]
+\[
+ \boxed{\varphi_B=k_e(Q_A+Q_B)/R_3
+ \approx4.49\times10^3\,\mathrm V}.
+\]
+(2) 首先 \(B\) 接地而 \(A\) 保持隔离带 \(Q_A\)，
+此时内表面仍为 \(-Q_A\)，
+外表面电荷流至地面为零；
+断开地线后 \(B\) 的总电荷固定为 \(-Q_A\)。
+随后仅 \(A\) 接地，令其剩余电荷为 \(Q'\)，
+则壳内表面 \(-Q'\)，壳外表面 \(Q'-Q_A\)。
+因 \(\varphi_A'=0\)，
+\[
+ 0=k_e\!\left[
+ Q'\left(\frac1{R_1}-\frac1{R_2}+\frac1{R_3}\right)
+ -\frac{Q_A}{R_3}\right].
+\]
+代入半径 \((0.06,0.08,0.10)\,\mathrm m\)，得
+\[
+ \boxed{Q'=\frac{Q_A/R_3}{1/R_1-1/R_2+1/R_3}
+ \approx2.118\times10^{-8}\,\mathrm C}.
+\]
+故
+\[
+ \boxed{Q_{B,\mathrm{in}}'\approx-2.118\times10^{-8}\,\mathrm C},
+ \quad
+ \boxed{Q_{B,\mathrm{out}}'=Q'-Q_A
+ \approx-0.8824\times10^{-8}\,\mathrm C},
+\]
+\[
+ \boxed{\varphi_A'=0,\qquad
+ \varphi_B'=k_e(Q'-Q_A)/R_3
+ \approx-7.93\times10^2\,\mathrm V}.
+\]
+先后接地顺序至关重要；若同时接地是不同边界问题。
+
+\paragraph{习题 14.4}
+半径为 \(R\) 的接地导体球，
+外部点电荷 \(q\) 距球心为 \(r>R\)。
+利用唯一性定理，可在球心连线处
+距球心 \(a=R^2/r\) 的球内放置
+\[
+ q_{\rm image}=-q\frac Rr
+\]
+作为外部电势的等效像电荷，
+使球面 \(\varphi(R)=0\)。
+把紧贴导体表面的高斯面包含的净感生电荷
+等效于球内像电荷总量，
+所以
+\[
+ \boxed{Q_{\rm induced}=-q\frac Rr}.
+\]
+这里的「像电荷」只是求解外部场的数学工具，
+不是导体内真正存在一个点电荷。
+若球不接地而保持总电荷为零，
+结果会与此不同。
+
+\paragraph{习题 14.5}
+三块极宽的平行导体板由上到下记A、B、C，
+A与C用导线连为一个等电势导体，
+B位于其间，总面电荷密度为
+\(\sigma=1.3\times10^{-5}\,\mathrm{C/m^2}\)。
+A—B间距 \(d_1=0.050\,\mathrm m\)，
+B—C间距 \(d_2=0.030\,\mathrm m\)。
+设B上、下两面分别带密度
+\(\sigma_{B,t},\sigma_{B,b}\)。
+夹层电场由接触面电荷决定，
+两夹层电势差的绝对值相同：
+\(\sigma_{B,t}d_1=\sigma_{B,b}d_2\)，
+并有
+\(\sigma_{B,t}+\sigma_{B,b}=\sigma\)。
+由此
+\[
+ \boxed{\sigma_{B,t}=\sigma\frac{d_2}{d_1+d_2}
+ =4.875\times10^{-6}\,\mathrm{C/m^2}},\quad
+ \boxed{\sigma_{B,b}=\sigma\frac{d_1}{d_1+d_2}
+ =8.125\times10^{-6}\,\mathrm{C/m^2}}.
+\]
+各夹层相邻面的电荷等量异号，
+故A的下表面带 \(-\sigma_{B,t}\)，
+C的上表面带 \(-\sigma_{B,b}\)。
+A、C原来净电荷合计为零，而B净带 \(+\sigma\)；
+无穷大、上下无偏置的外侧电场由总电荷确定，
+A上表面与C下表面各带 \(+\sigma/2\)。
+因此
+\[
+ \boxed{(\sigma_{A,\mathrm{upper}},\sigma_{A,\mathrm{lower}})
+ =(\sigma/2,-\sigma d_2/(d_1+d_2))},
+\]
+\[
+ \boxed{(\sigma_{C,\mathrm{upper}},\sigma_{C,\mathrm{lower}})
+ =(-\sigma d_1/(d_1+d_2),\sigma/2)}.
+\]
+外表面各为 \(6.50\times10^{-6}\,\mathrm{C/m^2}\)。
+这个结果基于原题「连接外板的总净电荷为零」
+与无限平板近似；有限板边缘电荷分布不均匀。
+
+\paragraph{习题 14.6}
+两个内部球形空腔各自中心放置
+\(q_b,q_c\)，导体整体本身净电荷为零。
+静电平衡时，两个空腔壁感生净电荷分别为
+\(-q_b\)、\(-q_c\)，
+导体外表面净电荷 \(q_b+q_c\)。
+由于空腔球形且点电荷恰在空腔中心，
+由唯一性定理各腔内电场
+（去除中心点电荷自身场）只有球对称的自感生场，
+其在腔中心的矢量合力为零：
+\[
+ \boxed{\boldsymbol F_b=\boldsymbol0,\quad
+ \boldsymbol F_c=\boldsymbol0}.
+\]
+两者对外部 \(q_d\) 和其他空腔均严格屏蔽，
+此结果不依赖 \(q_d\) 与球的距离。
+球外远处 \(r\gg R_A\) 的 \(q_d\)
+感受到导体外表面净电荷的单极远场，
+所以近似
+\[
+ \boxed{\boldsymbol F_d\simeq
+ \frac{q_d(q_b+q_c)}{4\pi\varepsilon_0r^2}
+ \hat{\boldsymbol r}},
+\]
+其中 \(\hat{\boldsymbol r}\) 从导体球心指向 \(q_d\)。
+仅最后一个公式是远场近似：外部 \(q_d\) 还会
+诱发导体表面极化；当 \(q_b+q_c=0\)
+时需保留更高阶极化力，不能宣称力严格为零。
+
+\paragraph{习题 14.7}
+在导体表面小面元 \(\Delta S\) 上，
+其表面电荷 \(dq=\sigma\Delta S\)。
+不能让该面元自己的电场对自身施力；
+除自身面元外的其他所有电荷在该处的平均场为
+\[
+ \boldsymbol E_{\rm other}
+ =\frac{\boldsymbol E_{\rm out}
+ +\boldsymbol E_{\rm in}}2
+ =\frac{\sigma}{2\varepsilon_0}\boldsymbol e_n,
+\]
+因为导体静电平衡
+\(\boldsymbol E_{\rm in}=0\)，
+外表面场
+\(\boldsymbol E_{\rm out}
+ =\sigma\boldsymbol e_n/\varepsilon_0\)。
+故每单位面积的力
+\[
+ \boxed{\boldsymbol f=\frac{dq\boldsymbol E_{\rm other}}
+ {\Delta S}
+ =\frac{\sigma^2}{2\varepsilon_0}\boldsymbol e_n}.
+\]
+与电荷符号无关，方向均向导体外部，
+单位为 \(\mathrm{N/m^2}\)。
+
+\paragraph{习题 14.8}
+金属球壳近似为半径 \(R\) 的孤立导体球，
+表面电场与电势关系
+\(E(R)=\varphi/R\)。
+若气体击穿场强不超过
+\(E_{\rm bd}=100\,\mathrm{MV/m}\)，
+球壳电势要求 \(\varphi=9.15\,\mathrm{MV}\)，则
+\[
+ \boxed{R\ge\frac{\varphi}{E_{\rm bd}}
+ =0.0915\,\mathrm m}.
+\]
+维持球面电势不变需以速率
+\(\dot Q=320\,\mu\mathrm{C/s}\) 补充电荷，
+理想最小输入电功率
+\[
+ \boxed{P_{\min}=\varphi\dot Q
+ =(9.15\times10^6)(320\times10^{-6})
+ =2.928\times10^3\,\mathrm W}.
+\]
+传送带宽 \(w=0.485\,\mathrm m\)，
+速率 \(u=33.0\,\mathrm{m/s}\)，
+假设只有一面有效输送净电荷，
+每秒输送面积为 \(wu\)，故
+\[
+ \boxed{\sigma_{\rm belt}=\frac{\dot Q}{wu}
+ \approx2.00\times10^{-5}\,\mathrm{C/m^2}}.
+\]
+题明确为「绝缘传送带」，
+按两面相对无限大的均匀带电绝缘薄面近似，
+每一侧的电场大小为
+\[
+ \boxed{E_{\rm belt}=\frac{|\sigma_{\rm belt}|}{2\varepsilon_0}
+ \approx1.13\times10^6\,\mathrm{V/m}}.
+\]
+配套辅导书PDF物理页224亦使用该 \(1/2\) 因子。
+如果实际带面紧邻有导体并且给定静电平衡边界条件，
+才应另外考虑 \(E=\sigma/\varepsilon_0\)
+的导体表面表达式；
+不能把两种边界条件混用。
+
+\paragraph{习题 14.9}
+将接地平面取为 \(z=0\)，
+点电荷 \(q\) 位于 \((0,0,h)\)。
+在上半空间采用镜像法，
+将镜像电荷 \(-q\) 放在
+\((0,0,-h)\)，使整个 \(z=0\) 平面等势零。
+取平面上距投影点的径向距离为 \(\rho\)，
+平面正上方场的垂直分量
+\[
+ E_z(0^+,\rho)=
+ -\frac{2qh}{4\pi\varepsilon_0(\rho^2+h^2)^{3/2}}.
+\]
+接地金属导体的边界
+\(\sigma(\rho)=\varepsilon_0E_z(0^+,\rho)\)，故
+\[
+ \boxed{\sigma(\rho)=
+ -\frac{qh}{2\pi(\rho^2+h^2)^{3/2}}}.
+\]
+对全平面积分
+\(\int_0^\infty\sigma(\rho)2\pi\rho\,d\rho=-q\)，
+验证感生总电荷为 \(-q\)。
+
+\paragraph{习题 14.10}
+平面接地、点电荷 \(q\) 位于高度 \(z>0\)。
+镜像电荷为 \(-q\)，与实际电荷距离 \(2z\)。
+真实电荷受到的吸引力大小
+\[
+ F(z)=\frac{q^2}{4\pi\varepsilon_0(2z)^2}
+ =\frac{q^2}{16\pi\varepsilon_0z^2}.
+\]
+要从 \(h\) 缓慢移到无穷远，
+外力必须克服吸引作用，做功
+\[
+ \boxed{W_{\rm ext}=\int_h^\infty F(z)\,dz
+ =\frac{q^2}{16\pi\varepsilon_0h}}.
+\]
+第一位学生误把像电荷当作
+独立固定的真实电荷，得到
+\(q^2/(8\pi\varepsilon_0h)\)，
+比正确结果大一倍。
+镜像电荷位置会随真实电荷移动，
+金属感生分布也在变化；
+物理系统的静电相互作用能
+\(U=\tfrac12 q\varphi_{\rm induced}
+ =-q^2/(16\pi\varepsilon_0h)\)
+正好验证第二位学生的积分。
+
+\paragraph{习题 14.11}
+依原图14.12，把接地平面记为 \(z=0\)，
+点电荷 \(q>0\) 位于 \(z=h\)。
+由镜像电荷可得距轴投影为 \(\rho\)
+处的感生面电荷密度
+\[
+ \sigma(\rho)=-\frac{qh}
+ {2\pi(\rho^2+h^2)^{3/2}}.
+\]
+从电荷 \(q\) 发出、初始沿\emph{水平方向}
+的电场线，把靠近点电荷的一小球面分成上下等
+立体角，所围初始通量为 \(q/(2\varepsilon_0)\)。
+此通量终止于导体平面内半径为
+\(\rho_0\) 的圆盘，故所围感生电荷为
+\(-q/2\)。
+用高斯定律配合直接积分
+\[
+ Q_{\rm disk}=\int_0^{\rho_0}
+ \sigma(\rho)2\pi\rho\,d\rho
+ =-q\left(1-\frac h{\sqrt{\rho_0^2+h^2}}\right)
+ =-\frac q2.
+\]
+因此
+\[
+ \frac h{\sqrt{\rho_0^2+h^2}}=\frac12,\qquad
+ \boxed{\rho_0=\sqrt3\,h}.
+\]
+电场线与导体交点在点电荷正下方的
+投影点向外 \(\sqrt3h\) 的圆周上。
+此推导假定图14.12是单个电荷对无限接地平面
+的轴对称镜像构型。
+
+\paragraph{习题 14.12}
+无限长线电荷 \(\lambda=10^{-8}\,\mathrm{C/m}\)
+位于无限大接地导体平面上方
+\(h=5.0\,\mathrm m\)，
+引入平面下方等距的镜像线电荷
+\(-\lambda\)。
+其正下方地表场
+\[
+ \boxed{E_z(0^+)=-\frac{\lambda}{\pi\varepsilon_0h}
+ \approx-71.9\,\mathrm{N/C}},
+\quad
+ \boxed{\sigma(0)=\varepsilon_0E_z(0^+)
+ =-\frac{\lambda}{\pi h}
+ \approx-6.37\times10^{-10}\,\mathrm{C/m^2}}.
+\]
+真实线电荷每单位长度受镜像线的吸引力
+（两线间距 \(2h\)）大小
+\[
+ \boxed{\frac FL=
+ \frac{\lambda^2}{2\pi\varepsilon_0(2h)}
+ =\frac{\lambda^2}{4\pi\varepsilon_0h}
+ \approx1.80\times10^{-7}\,\mathrm{N/m}},
+\]
+方向向地面。
+若地面不视作理想接地导体，这只是近似模型。
+
+\paragraph{习题 14.13}
+要核验「一滴水中的全部电子」数量，
+必须指定滴水质量。
+设一滴水的质量约为
+\(m_d=0.050\,\mathrm g\)（模型假定），
+每个水分子 \(\mathrm{H_2O}\) 含10个电子，
+摩尔质量 \(M_w=18.0\,\mathrm{g/mol}\)。
+电子总数
+\[
+ N_e=10\frac{m_d}{M_w}N_A
+ \approx1.67\times10^{22},
+\]
+取走这些电子后地球净增正电荷
+\[
+ Q=N_ee\approx2.68\times10^3\,\mathrm C.
+\]
+把地球近似为孤立半径
+\(R_\oplus=6.37\times10^6\,\mathrm m\) 的导体球，
+其电容
+\(C_\oplus=4\pi\varepsilon_0R_\oplus
+ \approx7.09\times10^{-4}\,\mathrm F\)。
+故电势升高
+\[
+ \boxed{\Delta V=\frac Q{C_\oplus}
+ \approx3.78\times10^6\,\mathrm V},
+\]
+确为「几百万伏」。
+该计算不意味实际能将水滴电子全部移走，
+并忽略了大气、离子与地球附近导体的电容修正。
+\textbf{与辅导书的源数据分歧：}
+配套《学习辅导与习题解答》PDF物理页226
+把「一滴水」近似成 \(1\,\mathrm{cm^3}=1\,\mathrm g\)，
+但按相同10电子/水分子及地球孤立导体球的标准公式
+\(\Delta V=k_eQ/R_\oplus\) 实算应约
+\(7.56\times10^7\,\mathrm V\)，不是该页印出的
+约 \(10^6\,\mathrm V\)。
+辅导书公式把库仑系数及半径并列在分母，存在公式或
+排版上的明显不一致。
+由于原题未指定液滴体积，此处保留本文
+\(0.050\,\mathrm g\) 的模型以及辅导书
+\(1\,\mathrm g\) 的条件，不将差异静默抹去。
+
+\paragraph{习题 14.14}
+总电量 \(q\) 均匀分布在导体球
+半径 \(R\) 的外表面，
+\(\sigma=q/(4\pi R^2)\)。
+静电压力向外、大小
+\(p=\sigma^2/(2\varepsilon_0)\)。
+取上半球，沿向上对称轴方向的合力为
+\[
+ F_z=\int_{\rm hemisphere}p\cos\theta\,dA
+ =pR^2\int_0^{2\pi}d\phi
+ \int_0^{\pi/2}\cos\theta\sin\theta\,d\theta
+ =p\pi R^2.
+\]
+所以
+\[
+ \boxed{F=\frac{\sigma^2\pi R^2}{2\varepsilon_0}
+ =\frac{q^2}{32\pi\varepsilon_0R^2}}.
+\]
+两半球彼此排斥，上半球向上、下半球向下；
+\(q\) 的正负不改变力的方向。

@@ -1,0 +1,340 @@
+% 张三慧V1第11章热力学第二定律候选独立解析。
+% 原题物理PDF398--400；配套书物理PDF178--184。
+% 热/功符号及第11.13题原书与辅导书的等熵、等焓疑点均需专家核查。
+\section*{第11章\quad 热力学第二定律：独立解析}
+
+\paragraph{习题 11.1}
+图11.14的折线 \(a\to b\to c\) 由
+\(a=(1\,\mathrm L,6\cdot10^5\,\mathrm{Pa})\)、
+\(b=(2\,\mathrm L,8\cdot10^5\,\mathrm{Pa})\)、
+\(c=(3\,\mathrm L,4\cdot10^5\,\mathrm{Pa})\) 构成。
+两段为直线，做功
+\[
+ W_{ab}=\frac{p_a+p_b}{2}(V_b-V_a)=700\,\mathrm J,
+ \qquad W_{bc}=\frac{p_b+p_c}{2}(V_c-V_b)=600\,\mathrm J.
+\]
+故 \(\boxed{W_{ac}=1300\,\mathrm J}\)。
+原书为\emph{1 mol刚性双原子氧气}，
+内能 \(U=\tfrac52pV\)，并非单原子氦气。
+因 \(p_aV_a=600\,\mathrm J\)、
+\(p_cV_c=1200\,\mathrm J\)，
+\[
+ \boxed{\Delta U=\frac52(1200-600)
+ =1500\,\mathrm J}.
+\]
+第一定律给
+\(\boxed{Q_{ac}=2800\,\mathrm J}\)；
+配套辅导书PDF物理页178印作
+约 \(2.79\times10^3\,\mathrm J\)，
+按题面准确的图示格点重算应为
+\(2.80\times10^3\,\mathrm J\)，
+差别系源书舍入或排印。
+熵为状态函数，沿任意可逆辅助路径积分：
+\[
+ \boxed{\Delta S
+ =\frac52R\ln\frac{T_c}{T_a}+R\ln\frac{V_c}{V_a}
+ =R\left(\frac52\ln2+\ln3\right)
+ \approx23.54\,\mathrm{J/K}}.
+\]
+不可用实际折线的 \(Q_{ac}/T_{\rm avg}\)
+来代替熵积分。
+
+\paragraph{习题 11.2}
+令冰起始 \(T_i=233.15\,\mathrm K\)，
+熔点 \(T_m=273.15\,\mathrm K\)，
+沸点 \(T_b=373.15\,\mathrm K\)。
+四阶段吸热是冰升温、冰熔化、水升温、
+水汽化：
+\[
+ \boxed{Q=m[c_i(T_m-T_i)+\lambda
+ +c_w(T_b-T_m)+L]}.
+\]
+使用 \(m=30\,\mathrm g\)，得到
+\[
+ Q=30[2.1(40)+334+4.2(100)+2260]
+ =\boxed{9.294\times10^4\,\mathrm J}.
+\]
+把不可逆的实际加热以微元平衡辅助过程计算熵，
+\[
+ \boxed{\Delta S
+ =m\left[c_i\ln\frac{T_m}{T_i}
+ +\frac{\lambda}{T_m}
+ +c_w\ln\frac{T_b}{T_m}
+ +\frac L{T_b}\right]}.
+\]
+这里的潜热比热单位为 \(\mathrm{J/g}\)，
+分别计算四段熵变并求和，
+\(\boxed{\Delta S\approx2.68\times10^2\,\mathrm{J/K}}\)。
+例如汽化一段为
+\(30(2260)/373.15\approx181.7\,\mathrm{J/K}\)，
+不能把总熵变误近似成316J/K。
+水蒸气被视为100℃刚汽化完成。
+
+\paragraph{习题 11.3}
+环境近似为温度
+\(T_{\rm amb}=273\,\mathrm K\) 的恒温库。
+人体每日传给环境热量
+\(Q=8\times10^5\,\mathrm J\)，
+故环境熵增加
+\[
+ \boxed{\Delta S_{\rm amb}=\frac Q{T_{\rm amb}}
+ \approx2.93\times10^3\,\mathrm{J/K\ per\ day}}.
+\]
+该值不是人体本身的熵变，也未计进食或呼吸。
+
+\paragraph{习题 11.4}
+由室内高温侧
+\(T_h=293.15\,\mathrm K\)
+向室外低温侧
+\(T_c=253.15\,\mathrm K\) 传热，
+热功率
+\(\dot Q=2\times10^8/3600\,\mathrm W\)。
+室内熵变化率 \(-\dot Q/T_h\)，
+室外为 \(+\dot Q/T_c\)，
+整个系统生成熵率
+\[
+ \boxed{\dot S_{\rm gen}=\dot Q
+ \left(\frac1{T_c}-\frac1{T_h}\right)
+ \approx30.0\,\mathrm{J/(K\,s)}>0}.
+\]
+
+\paragraph{习题 11.5}
+匀速车摩擦中机械功率不可逆转化为热
+\(\dot Q=20\,\mathrm{kJ/s}\)，
+环境温度 \(T=285.15\,\mathrm K\)：
+\[
+ \boxed{\dot S_{\rm gen}=\frac{\dot Q}{T}
+ =\frac{20000}{285.15}
+ \approx70.1\,\mathrm{J/(K\,s)}}.
+\]
+只看稳态外部摩擦热源的熵产生，
+不把机械有序能先算成热熵。
+
+\paragraph{习题 11.6}
+每秒水质量
+\(\dot m=\rho\dot V
+ =(1000)(1500)=1.5\times10^6\,\mathrm{kg/s}\)。
+落差 \(h=74\,\mathrm m\)，
+重力势能流率
+\[
+ \dot E_g=\dot m gh
+ \approx(1.5\times10^6)(9.80)(74)
+ =1.0878\times10^9\,\mathrm W.
+\]
+温度12℃近似285.15K，
+故
+\[
+ \boxed{\dot S_{\rm gen}=\frac{\dot E_g}{T}
+ \approx3.81\times10^6\,\mathrm{J/(K\,s)}}.
+\]
+瀑布宽度83m未进入计算，
+因为总流量已经给出。
+
+\paragraph{习题 11.7}
+设水比热容
+\(C=mc=4200\,\mathrm{J/K}\)，
+\(T_0=273.15\,\mathrm K\)，
+\(T_{50}=323.15\,\mathrm K\)，
+\(T_{100}=373.15\,\mathrm K\)。
+水升温的熵增始终是
+\[
+ \Delta S_w=C\ln(T_{100}/T_0).
+\]
+(1) 只有100℃热库时，热库放热
+\(Q=C(T_{100}-T_0)\)，
+系统总熵变
+\[
+ \boxed{\Delta S_{\rm tot,1}
+ =C\ln\frac{T_{100}}{T_0}
+ -C\frac{T_{100}-T_0}{T_{100}}>0}.
+\]
+(2) 两级热库先50℃再100℃，
+熵变
+\[
+ \boxed{\Delta S_{\rm tot,2}
+ =C\ln\frac{T_{100}}{T_0}
+ -C\frac{T_{50}-T_0}{T_{50}}
+ -C\frac{T_{100}-T_{50}}{T_{100}}>0}.
+\]
+由于加热过程分两级，温差缩小，
+\(\Delta S_{\rm tot,2}<\Delta S_{\rm tot,1}\)；
+两热库各损失的熵要分别算，
+不能将两热源视为同温。
+
+\paragraph{习题 11.8}
+初态2.5kg水、0.7kg冰，总质量3.2kg，
+目标第一次达到水、冰\emph{等质量}，
+即各1.6kg。
+因此\emph{有0.9kg水凝固}，
+而不是0.7kg冰全部熔化。
+取水熔化潜热
+\(\lambda=3.34\times10^5\,\mathrm{J/kg}\)，
+熔点 \(T_m=273.15\,\mathrm K\)。
+(1) 向略低于冰点的房间放热
+\(Q=0.9\lambda\)，
+\[
+ \boxed{\Delta S_{\rm mix,1}
+ =-\frac{0.9\lambda}{T_m}
+ \approx-1.10\times10^3\,\mathrm{J/K}},
+\]
+\[
+ \boxed{\Delta S_{\rm total,1}
+ =0.9\lambda\left(\frac1{T_{\rm room}}
+ -\frac1{T_m}\right)>0
+ \quad(T_{\rm room}<T_m)}.
+\]
+源书“比0℃稍有不同”未指定精确值，
+故总熵只可给含 \(T_{\rm room}\) 的表达式。
+(2) 放到100℃的恒温热库，
+熔解0.9kg冰恢复原始相态，
+\[
+ \boxed{\Delta S_{\rm mix,2}
+ =+\frac{0.9\lambda}{T_m}},
+\]
+\[
+ \boxed{\Delta S_{\rm total,2}
+ =0.9\lambda\left(\frac1{T_m}
+ -\frac1{373.15}\right)>0}.
+\]
+\emph{由热传递导致的相变是不可逆的}，
+但熵变计算可以借助熔点处的可逆辅助路径。
+
+\paragraph{习题 11.9}
+初态 \(p_1V_1=(3.039\times10^5)(4)
+ =1.2156\times10^6\,\mathrm J\)，
+\(T_1=300\,\mathrm K\)，
+设 \(C_V=nR/(\gamma-1)\) 为整份气体定容热容。
+第一段从4到16立方米等温：
+\[
+ \boxed{W_{12}=Q_{12}
+ =p_1V_1\ln4\approx1.685\times10^6\,\mathrm J},
+\quad
+ \boxed{\Delta S_{12}=\frac{p_1V_1}{T_1}\ln4}.
+\]
+第二段等容降温直到其末态3能够沿可逆绝热
+返回初态，故
+\[
+ T_3=T_1(4/16)^{\gamma-1}
+ =300\,4^{-0.4}\approx172.3\,\mathrm K,
+\]
+\[
+ p_3=p_1(4/16)^\gamma,\qquad
+ W_{23}=0,\quad Q_{23}=\Delta U_{23}
+ =C_V(T_3-T_1)<0,
+\]
+\[
+ \boxed{\Delta S_{23}
+ =C_V\ln(T_3/T_1)=-\Delta S_{12}}.
+\]
+第三段可逆绝热压缩从16到4立方米：
+\[
+ Q_{31}=\Delta S_{31}=0,\quad
+ \boxed{W_{31}=C_V(T_3-T_1)<0}.
+\]
+注意 \(\Delta U_{31}=C_V(T_1-T_3)>0\)。
+一周结束 \(\boxed{\Delta S_{\rm cycle}=0,
+ \Delta U_{\rm cycle}=0}\)，
+\[
+ \boxed{W_{\rm cycle}=Q_{\rm cycle}
+ =p_1V_1\ln4+C_V(T_3-T_1)}.
+\]
+路径是等温向右、等容向下、绝热向左上返回。
+
+\paragraph{习题 11.10}
+绝热容器内两份等质量同种液体，
+常数比热 \(c_p\)。
+由能量守恒
+\(mc_pT_1+mc_pT_2=2mc_pT_f\)，
+\[
+ \boxed{T_f=(T_1+T_2)/2}.
+\]
+熵变用可逆辅助升降温计算：
+\[
+ \boxed{\Delta S=mc_p\ln\frac{T_f}{T_1}
+ +mc_p\ln\frac{T_f}{T_2}
+ =mc_p\ln\frac{(T_1+T_2)^2}{4T_1T_2}}.
+\]
+由 \((T_1-T_2)^2\ge0\) 得
+\((T_1+T_2)^2\ge4T_1T_2\)，
+故 \(\Delta S\ge0\)；
+当 \(T_1\ne T_2\) 时严格大于零。
+
+\paragraph{习题 11.11}
+两份各 \(\nu\) mol同种理想气体，
+初温相同为 \(T\)，
+压强 \(p_1,p_2\)。
+各自容积 \(V_i=\nu RT/p_i\)，
+刚性绝热连通后，理想气体内能只由T决定，
+因此终温仍为T，
+总容积 \(V_1+V_2\)，
+终压
+\(p_f=2\nu RT/(V_1+V_2)
+ =2p_1p_2/(p_1+p_2)\)。
+可用各份初态到终态的等温可逆辅助过程算熵：
+\[
+ \Delta S=\nu R\ln(p_1/p_f)
+ +\nu R\ln(p_2/p_f),
+\]
+化简
+\[
+ \boxed{\Delta S=\nu R
+ \ln\frac{(p_1+p_2)^2}{4p_1p_2}\ge0}.
+\]
+由算术几何平均不等式得等号条件 \(p_1=p_2\)；
+两份气体相同不能另加虚假的“混合熵”。
+
+\paragraph{习题 11.12}
+金属与液体同处恒压绝热环境，
+忽略相变，比热视常数。
+令 \(C_1=mc_p,C_2=m'c'_p\)，
+能量守恒给
+\[
+ \boxed{T_f=\frac{C_1T_i+C_2T'_i}{C_1+C_2}}.
+\]
+系统熵变
+\[
+ \boxed{\Delta S=C_1\ln\frac{T_f}{T_i}
+ +C_2\ln\frac{T_f}{T'_i}\ge0}.
+\]
+证明最终态是\emph{固定总能量约束下的熵极大态}：
+对两部分末态温度 \(T,T'\) 与约束
+\(C_1T+C_2T'=E\)，
+总熵一阶变分为
+\(dS=C_1dT/T+C_2dT'/T'\)。
+用 \(C_1dT+C_2dT'=0\) 得
+\(dS=C_1(1/T-1/T')dT\)，
+极值必有 \(T=T'\)。
+沿约束变量的二阶导
+\(-C_1/T^2-C_1^2/(C_2T'^2)<0\)，
+故为最大值，不只是驻点。
+
+\paragraph{习题 11.13}
+本题\emph{必须以主教材对热力过程的定义为准}。
+主教材V1 PDF物理页399给定
+(1)(2)是节流膨胀，(3)是可逆绝热膨胀。
+理想稳流节流满足\emph{等焓}
+\(H_m=\mathrm{const}\)，
+准静态可逆绝热满足\emph{等熵}
+\(S_m=\mathrm{const}\)。
+应在图11.16氮气温熵图中
+分别沿相应\emph{等焓线}或
+\emph{竖直等熵线}到指定的终压等压线，
+然后读末温。
+配套辅导书S PDF物理页184
+列出近似温度
+\[
+ \boxed{T_1\simeq95\,\mathrm K,\quad
+ T_2\simeq65\,\mathrm K,\quad
+ T_3\simeq20\,\mathrm K}.
+\]
+\textbf{重大源书差异：}
+配套书对前两问的过程称为“等熵”，
+第三问称“等焓”，
+其文字与主教材给的
+“节流(1)(2)、可逆绝热(3)”\emph{反向}。
+故上列三个温度只能先登记为
+\emph{配套答案图读值}，
+不能声称已经通过主教材指定路径的独立核验。
+第三问的20K还处于图示氮气液汽共存区，
+不能把它简单代回理想气体绝热公式；
+本题待专门重绘图11.16、按正确路径逐点重读。

@@ -1,0 +1,647 @@
+% 张三慧V1第9章《温度和气体动理论》独立候选解。
+% 主教材PDF物理页335--337；原图9.18临界点精度仍待核验。
+\section*{第9章\quad 温度和气体动理论：独立解析}
+\paragraph{习题 9.1}
+定容气体温度计理想模型给出 \(p/T=\mathrm{const}\)，
+三相点温度 \(T_*=273.16\,\mathrm K\)。
+故
+\[
+ \boxed{p(373.15)=6650\frac{373.15}{273.16}
+ \approx9.08\times10^3\,\mathrm{Pa}},
+\quad
+ \boxed{t_C=273.16\frac{2200}{6650}-273.15
+ \approx-182.8^\circ\mathrm C}.
+\]
+低温真实气体偏离理想模型时必须外推压强至零密度。
+
+\paragraph{习题 9.2}
+设 \(u=T-T_s\)，则
+\(-du/dt=Au\)，变量分离
+\(du/u=-A\,dt\)，积分
+\(u(t)=(T_1-T_s)e^{-At}\)，所以
+\[
+ \boxed{T(t)=T_s+(T_1-T_s)e^{-At}}.
+\]
+冬日数据 \(T_s=-10,T_1=25,T(40)=20\)
+（温差单位均为摄氏度）满足
+\(e^{-40A}=30/35=6/7\)，
+\(A=(1/40)\ln(7/6)\,\mathrm{min^{-1}}\)。
+下降至 \(15^\circ\mathrm C\) 时
+\(e^{-At}=25/35=5/7\)，
+\[
+ \boxed{t=40\frac{\ln(7/5)}{\ln(7/6)}
+ \approx87.3\,\mathrm{min}}.
+\]
+即从停暖算起，而不是在前40min之后再过87.3min。
+
+\paragraph{习题 9.3}
+将轮胎视为圆环管，胎圈中心线半径
+\(R=(.7112-.030)/2=.3406\,\mathrm m\)，
+内胎截面半径 \(r=.015\,\mathrm m\)。
+胎内有效体积
+\(V_t=2\pi^2Rr^2\approx1.513\,\mathrm L\)。
+每次打气筒输送的环境压强、环境温度气体体积
+\(V_p=\pi r_p^2 L_p
+ =\pi(.015)^2(.30)\approx.2121\,\mathrm L\)。
+假定轮胎初态 \(p_0,T_0=270.15\,\mathrm K\)，
+泵每次从同一环境吸入理想气体且无回流，
+最后 \(T_f=280.15\,\mathrm K\)，
+粒子数守恒：
+\[
+ \boxed{p_f=p_0\frac{T_f}{T_0}
+ \left(1+\frac{20V_p}{V_t}\right)
+ \approx3.94\,p_0
+ \approx4.00\times10^5\,\mathrm{Pa}}.
+\]
+这是\emph{绝对压强}；表压约 \(2.94p_0\)。
+车胎内圈实际体积和活塞死腔会改变数值，
+需对原书图/建模口径作二次审核。
+
+\paragraph{习题 9.4}
+由理想气体
+\(p=\rho RT/M=nk_BT\) 得
+\[
+ \boxed{T=\frac{pM}{\rho R}
+ =\frac{(.18)(.029)}
+ {(3.2\times10^{-6})(8.314)}
+ \approx196\,\mathrm K},
+\]
+\[
+ \boxed{n=\frac p{k_BT}
+ \approx6.65\times10^{19}\,\mathrm{m^{-3}}}.
+\]
+密度取的是气体质量密度而不是分子数密度。
+
+\paragraph{习题 9.5}
+球内外压强相同，热空气在内
+密度 \(\rho_i=\rho_oT_o/T_i\)，
+外界密度
+\(\rho_o=pM/(RT_o)\approx1.205\,\mathrm{kg/m^3}\)。
+临界升力
+\((\rho_o-\rho_i)gV=mg\)，
+所以
+\[
+ \boxed{T_i=\frac{T_o}{1-m/(\rho_o V)}
+ \approx356.5\,\mathrm K\approx83.4^\circ\mathrm C}.
+\]
+这里 \(m=4500\,\mathrm{kg}\) 为\emph{气球壳和负载}
+而不是再加热空气自身的重量；
+热空气的重量已由浮力密度差计算。
+假设球壳体积不变、与外界等压。
+
+\paragraph{习题 9.6}
+分子数满足
+\(N=pV/(k_BT)\)，
+\(p=1.00\times10^{-18}\times101325\,\mathrm{Pa}\)，
+\(V=10^{-6}\,\mathrm{m^3}\)，
+\(T=293.15\,\mathrm K\)，
+\[
+ \boxed{\langle N\rangle\approx25.0}.
+\]
+这只是在热平衡统计模型中的\emph{平均分子数}，
+单次观察是整数且有涨落。
+
+\paragraph{习题 9.7}
+\[
+ \boxed{p=nk_BT
+ =(10^{10})(1.380649\times10^{-23})(10^4)
+ \approx1.38\times10^{-9}\,\mathrm{Pa}}.
+\]
+未计星际氢的离子化、辐射及磁压。
+
+\paragraph{习题 9.8}
+平衡微元气柱满足 \(dp/dy=-\rho g\)。
+用 \(\rho=Mp/(RT)\)、\(T(y)=T_0-\alpha y\)，得
+\[
+ \frac{dp}{p}=-\frac{Mg}{R(T_0-\alpha y)}\,dy.
+\]
+由地面 \(p_0\) 积分：
+\[
+ \boxed{p(y)=p_0
+ \left(1-\frac{\alpha y}{T_0}\right)^{Mg/(\alpha R)}},
+ \qquad 0<\alpha y<T_0.
+\]
+当 \(\alpha\to0\)，
+\(\lim_{\alpha\to0}\alpha^{-1}\ln(1-\alpha y/T_0)
+ =-y/T_0\)，故
+\(\boxed{p=p_0e^{-Mgy/(RT_0)}}\)。
+以峰高 \(h=8848\,\mathrm m\) 作约定近似，
+\(\alpha=.006\,\mathrm{K/m}\)：
+\[
+ \boxed{T(h)=273-.006(8848)
+ \approx219.9\,\mathrm K=-53.2^\circ\mathrm C},
+\]
+\[
+ \boxed{p(h)\approx2.96\times10^4\,\mathrm{Pa}
+ \approx0.292\,\mathrm{atm}}.
+\]
+这是源书的恒定温度直减率模型，
+不作为真实每日珠峰气象预报。
+
+\paragraph{习题 9.9}
+令 \(\boldsymbol w=\boldsymbol v_1-\boldsymbol v_2\)。
+两分子独立、各分量服从方差
+\(\sigma^2=k_BT/m\) 的正态分布，
+则 \(w_x,w_y,w_z\) 各自的方差为
+\(2\sigma^2\)，
+故相对速率 \(|\boldsymbol w|\)
+服从温度为 \(2T\) 所对应参数的麦克斯韦分布。
+单分子的平均速率
+\(\bar v=\sqrt{8k_BT/(\pi m)}\)，
+因此
+\[
+ \boxed{\bar u=\sqrt{\frac{8k_B(2T)}{\pi m}}
+ =\sqrt2\,\bar v}.
+\]
+注意本式是\emph{相对速率的平均值}，
+不是均方根之差。
+
+\paragraph{习题 9.10}
+令 \(f(v)\) 为任意归一化非负速率分布，
+定义 \(\bar v=\int vf(v)\,dv\)。
+由于
+\[
+ 0\le\int_0^\infty(v-\bar v)^2f(v)\,dv
+ =\overline{v^2}-(\bar v)^2,
+\]
+立即得
+\[
+ \boxed{\sqrt{\overline{v^2}}\ge\bar v}.
+\]
+只有速率不涨落、全部粒子速率相同时才取等号。
+
+\paragraph{习题 9.11}
+硬球气体的平均自由程
+\[
+ \lambda=\frac1{\sqrt2\pi d^2n},\qquad
+ n=p/(k_BT).
+\]
+取标准态 \(T=273.15\,\mathrm K,p=101325\,\mathrm{Pa}\)，
+\(d=3.8\times10^{-10}\,\mathrm m\)，
+\[
+ \boxed{\lambda\approx5.80\times10^{-8}\,\mathrm m}.
+\]
+氮气平均速率
+\(\bar v=\sqrt{8RT/(\pi M)}
+ \approx4.54\times10^2\,\mathrm{m/s}\)，
+故平均碰撞间隔
+\[
+ \boxed{\tau\simeq\lambda/\bar v
+ \approx1.28\times10^{-10}\,\mathrm s}.
+\]
+若采用碰撞频率的不同平均定义，
+须一致使用相对速度的 \(\sqrt2\) 因子。
+
+\paragraph{习题 9.12}
+\(T=300.15\,\mathrm K\)，
+\[
+ \boxed{n=\frac p{k_BT}
+ \approx3.21\times10^{17}\,\mathrm{m^{-3}}},
+\quad
+ \boxed{\lambda=\frac1{\sqrt2\pi d^2n}
+ \approx7.79\,\mathrm m}.
+\]
+在摩尔质量取空气约 \(29\,\mathrm{g/mol}\)
+时平均速率约 \(468\,\mathrm{m/s}\)，
+因此碰撞频率
+\[
+ \boxed{z=\bar v/\lambda\approx60\,\mathrm{s^{-1}}}.
+\]
+\(\lambda\gg10^{-2}\,\mathrm m\)：
+管壁碰撞将比气体分子间碰撞重要，
+上式的 \(z\) 仍只是\emph{分子间}碰撞频率。
+
+\paragraph{习题 9.13}
+质量密度 \(\rho\) 对应
+\(n=\rho N_A/M\)，
+\[
+ \boxed{n\approx3.11\times10^{16}\,\mathrm{m^{-3}}},
+\quad
+ \boxed{\lambda=\frac1{\sqrt2\pi d^2n}
+ \approx80.3\,\mathrm m}.
+\]
+以 \(T=500\,\mathrm K\) 估算
+\(\bar v=\sqrt{8RT/(\pi M)}
+ \approx604\,\mathrm{m/s}\)，
+\[
+ \boxed{\tau=\lambda/\bar v\approx0.133\,\mathrm s}.
+\]
+高空大气真实组分及平均分子直径随高度变化，
+题目只要求数量级。
+
+\paragraph{习题 9.14}
+电子远快于靶气体分子，
+碰撞的相对速率近似就是电子速率，
+不必引入两个\emph{同类}分子都在运动
+所产生的 \(\sqrt2\) 因子。
+靶分子有效碰撞截面
+\(\sigma=\pi d^2\)，
+单位路程碰撞次数均值 \(n\sigma\)，
+所以
+\[
+ \boxed{\lambda_e=\frac1{n\sigma}
+ =\frac1{\pi nd^2}}.
+\]
+若电子与靶分子都以可观速率移动，
+或考虑长程库仑散射，
+此简单硬球截面模型不再精确。
+
+\paragraph{习题 9.15}
+氮气在 \(T=290.15\,\mathrm K\)
+的单分子平均平动、转动、总热能分别为
+\[
+ \boxed{\bar\epsilon_t=\frac32k_BT
+ \approx6.01\times10^{-21}\,\mathrm J},\quad
+ \boxed{\bar\epsilon_r=k_BT
+ \approx4.01\times10^{-21}\,\mathrm J},
+\]
+\[
+ \boxed{\bar\epsilon_{\rm thermal}=\frac52k_BT
+ \approx1.00\times10^{-20}\,\mathrm J}.
+\]
+\(n=8.5/28\approx0.3036\,\mathrm{mol}\)，
+球内氮气内能
+\[
+ \boxed{U=\frac52nRT\approx1.83\times10^3\,\mathrm J}.
+\]
+整体平移速率 \(V=65/3.6\,\mathrm{m/s}\)
+对应质心\emph{轨道动能}
+\[
+ \boxed{K_{\rm cm}=\frac12MV^2
+ \approx1.39\,\mathrm J}.
+\]
+气体\emph{内能}不含质心平移动能。
+
+\paragraph{习题 9.16}
+三种气体都取常温双原子理想气体模型，
+均有 \(U=(5/2)nRT\)。
+在 \(T=300.15\,\mathrm K\)：
+\[
+ \boxed{U(1\,\mathrm{mol})\approx6.24\,\mathrm{kJ}}
+\]
+对 \(\mathrm{H_2},\mathrm{N_2},\mathrm{O_2}\) 均相同。
+各取 \(1\,\mathrm g\) 则
+\(n=1/2,1/28,1/32\,\mathrm{mol}\)，
+从而
+\[
+ \boxed{U_{\mathrm{H_2}}\approx3.12\,\mathrm{kJ}},\
+ \boxed{U_{\mathrm{N_2}}\approx223\,\mathrm J},\
+ \boxed{U_{\mathrm{O_2}}\approx195\,\mathrm J}.
+\]
+所用 \(M_{\rm H_2}=2\), \(M_{\rm N_2}=28\),
+\(M_{\rm O_2}=32\,\mathrm{g/mol}\)。
+
+\paragraph{习题 9.17}
+两边初体积相同 \(V\)、压强相同 \(p\)，
+初始物质的量
+\(n_1=pV/(RT_1),n_2=pV/(RT_2)\)。
+刚性绝热混合、无外功，两种双原子气体
+定容热容均近似 \(C_{V,m}=5R/2\)，
+由内能守恒
+\[
+ (n_1+n_2)C_{V,m}T_f
+ =n_1C_{V,m}T_1+n_2C_{V,m}T_2.
+\]
+代入 \(n_i\propto1/T_i\)，
+\[
+ \boxed{T_f=\frac{2T_1T_2}{T_1+T_2}
+ =\frac{2(250)(310)}{250+310}
+ \approx276.8\,\mathrm K}.
+\]
+这并非简单算术均温 \(280\,\mathrm K\)，
+因为初态相等体积、等压时两边分子数不同。
+
+\paragraph{习题 9.18}
+归一化要求
+\[
+ 1=\int_0^{v_0}\frac{av}{v_0}\,dv
+ +\int_{v_0}^{2v_0}a\,dv
+ =\frac12av_0+av_0=\frac32av_0,
+\]
+所以
+\(\boxed{a=2/(3v_0)}\)。
+曲线在 \([0,v_0]\) 从零线性增至 \(a\)，
+在 \([v_0,2v_0]\) 保持常数 \(a\)，
+之后降为零。
+\[
+ \boxed{N_{v<v_0}=N/3,\qquad N_{v>v_0}=2N/3}.
+\]
+平均速率
+\[
+ \bar v=\int vf(v)dv
+ =\frac{a}{v_0}\frac{v_0^3}{3}
+ +a\frac{(2v_0)^2-v_0^2}{2}
+ =\boxed{\frac{11}{9}v_0}.
+\]
+严格大于与小于的差别在连续分布
+\(v=v_0\) 单点上概率为零。
+
+\paragraph{习题 9.19}
+经典方均根速率
+\(v_{\rm rms}=\sqrt{3k_BT/m}\)。
+取 \(m_e=9.109\times10^{-31}\,\mathrm{kg}\)，
+\(m_H=1.6735\times10^{-27}\,\mathrm{kg}\)，
+\(m_{\rm Na}\simeq23u\)，
+得到
+\[
+ \boxed{v_{e,\mathrm{corona}}\approx9.54\times10^6\,\mathrm{m/s}},
+\quad
+ \boxed{v_{H,\mathrm{space}}\approx259\,\mathrm{m/s}},
+\]
+\[
+ \boxed{v_{\rm Na,cold}\approx1.61\times10^{-4}\,\mathrm{m/s}}.
+\]
+日冕电子虽很快，仍低于光速数个百分点；
+Na极低温时应注意量子气体和俘获势的适用界限。
+
+\paragraph{习题 9.20}
+逃逸速率随 \(M/R\) 的平方根变化：
+\(v_{\rm esc}=v_{\rm esc,E}
+ \sqrt{(M/M_E)/(R/R_E)}\)。
+取地球逃逸速率约 \(11.2\,\mathrm{km/s}\)。
+\[
+ \boxed{v_{\rm esc,Mars}\approx5.05\,\mathrm{km/s}},
+\quad
+ \boxed{v_{\rm esc,Jupiter}\approx59.7\,\mathrm{km/s}}.
+\]
+理想气体方均根速率
+\(\sqrt{3RT/M_g}\)：
+\[
+ \boxed{v_{\rm CO_2,Mars}\approx369\,\mathrm{m/s}},\
+ \boxed{v_{\rm H_2,Mars}\approx1.73\,\mathrm{km/s}},
+\]
+\[
+ \boxed{v_{\rm H_2,Jupiter}\approx1.27\,\mathrm{km/s}}.
+\]
+轻氢相对火星逃逸门槛更易受高能尾部分子逃逸；
+木星引力保持轻气体更有利。
+实际大气留存还依赖温度剖面、
+光化学与长时日照驱动，不能仅由
+\(v_{\rm rms}<v_{\rm esc}\) 推出永久稳定。
+
+
+\paragraph{习题 9.21}
+悬浮烟粒与周围气体达到平衡温度时，
+按能量均分原理，其质心随机热运动的平均动能
+\(\frac12m\overline{v^2}=\frac32k_BT\)。
+于是
+\[
+ \boxed{v_{\rm rms}=\sqrt{\frac{3k_BT}{m}}
+ =\sqrt{\frac{3(1.380649\times10^{-23})(300)}
+ {1.6\times10^{-16}}}
+ \approx8.81\times10^{-3}\,\mathrm{m/s}}.
+\]
+它主要由\emph{烟粒质量与温度}决定：
+若改放在温度同为300K的氢气中，
+粒子热平衡速度平方平均仍相同；
+气体种类影响阻力和布朗扩散的时间尺度，
+不改变经典平衡速度的这个均分结果。
+
+\paragraph{习题 9.22}
+质量转换
+\(m=6.2\times10^{-14}\,\mathrm g
+ =6.2\times10^{-17}\,\mathrm{kg}\)，
+\(v_{\rm rms}=1.4\,\mathrm{cm/s}
+ =0.014\,\mathrm{m/s}\)，
+\(T=300.15\,\mathrm K\)。
+\[
+ \frac12m\overline{v^2}
+ =\frac32k_BT
+ =\frac32\frac R{N_A}T,
+\quad
+ \boxed{N_A=\frac{3RT}{mv_{\rm rms}^2}
+ \approx6.16\times10^{23}\,\mathrm{mol^{-1}}}.
+\]
+实验颗粒质量、速度测定精度有限，
+这一布朗运动估计不应报告成精密基本常数测量。
+
+\paragraph{习题 9.23}
+麦克斯韦速率分布
+\[
+ f_v(v)=4\pi\left(\frac m{2\pi k_BT}\right)^{3/2}
+ v^2e^{-mv^2/(2k_BT)}
+\quad(v\ge0).
+\]
+做变量代换
+\(\epsilon=mv^2/2\)，
+\(dv=d\epsilon/\sqrt{2m\epsilon}\)，
+于是
+\[
+ f_\epsilon(\epsilon)=f_v(\sqrt{2\epsilon/m})
+ \left|\frac{dv}{d\epsilon}\right|
+ =\boxed{\frac2{\sqrt\pi}(k_BT)^{-3/2}
+ \epsilon^{1/2}e^{-\epsilon/(k_BT)}}.
+\]
+求最概然\emph{能量}：
+\(d\ln f_\epsilon/d\epsilon
+ =1/(2\epsilon)-1/(k_BT)=0\)，
+\[
+ \boxed{\epsilon_{\rm mode}=\frac12k_BT}.
+\]
+然而速率分布峰位置
+\(v_p=\sqrt{2k_BT/m}\)，
+它所对应的能量
+\[
+ \boxed{\frac12mv_p^2=k_BT}.
+\]
+两峰并不在同一能量处，因为非线性
+\(v\mapsto\epsilon\) 的雅可比因子改变了密度曲线。
+
+\paragraph{习题 9.24}
+单个半径 \(a\) 的藤黄球
+在水中受到有效重力
+\[
+ F_g=(\rho_p-\rho_w)\frac{4\pi a^3}{3}g,
+\]
+故在高差 \(h\) 上的能量差
+\(\Delta U=F_gh\)。
+布尔兹曼分布
+\(n/n_0=\exp[-\Delta U/(k_BT)]\)
+且 \(k_B=R/N_A\)，整理即
+\[
+ \boxed{\frac{RT}{N_A}\ln\frac{n_0}{n}
+ =\frac43\pi a^3(\rho_p-\rho_w)gh}.
+\]
+将原题密度差
+\(0.2067\,\mathrm{g/cm^3}=206.7\,\mathrm{kg/m^3}\)，
+半径 \(a=.212\,\mu\mathrm m\)、
+\(T=293.15\,\mathrm K\) 代入；
+第一层 \(n_0=7160\)，
+第二、第三、第四层相对第一层的高度
+分别为 \(h,2h,3h\)，
+\(h=30\,\mu\mathrm m\)。
+\[
+ \begin{array}{c|c}
+ \text{层数对比}&N_A\ (\mathrm{mol^{-1}})\\\hline
+ 1:2&7.60\times10^{23}\\
+ 1:3&7.47\times10^{23}\\
+ 1:4&7.10\times10^{23}
+ \end{array}
+\]
+因实验统计数量有限，
+三个估计略有差异。
+取首末层跨度较大的结果
+\(\sim7.1\times10^{23}\,\mathrm{mol^{-1}}\)，
+或者将三估计做适当拟合，均只是实验精度估计；
+\emph{不能无根据地把它改成标准值}
+\(6.02214076\times10^{23}\)。
+
+\paragraph{习题 9.25}
+水蒸气摩尔体积
+\(V_m=3.01\times10^4\,\mathrm{cm^3/mol}\)。
+单位立方厘米中的分子数
+\[
+ \boxed{n_{\rm cm^3}=\frac{N_A}{V_m}
+ \approx2.00\times10^{19}\,\mathrm{cm^{-3}}}.
+\]
+根据麦克斯韦分子速度各向同性，
+每单位面积每秒撞击平面的通量
+\(J=\tfrac14n\bar v\)。
+水分子
+\(M=0.018\,\mathrm{kg/mol}\)，
+\(T=373.15\,\mathrm K\)，
+\(\bar v=\sqrt{8RT/(\pi M)}\approx663\,\mathrm{m/s}\)。
+将分子数密度转换到 \(\mathrm{m^{-3}}\)，
+求得
+\[
+ \boxed{J(1\,\mathrm{cm^2})
+ \approx3.31\times10^{23}\,
+ \mathrm{molecules/s}}.
+\]
+蒸气与液体处于动态平衡时，
+每秒从液面\emph{蒸发}的水分子数
+恰等于撞击并被凝结的水分子数；
+若忽略不凝结的反射比例，
+第三问同为
+\(\boxed{3.31\times10^{23}\,\mathrm{s^{-1}\,cm^{-2}}}\)。
+\textbf{第四问的相态关键：}
+等温压缩同时有液态水存在，
+凝结部分水蒸气保持饱和，
+故
+\[
+ \boxed{p_{\rm after}=p_{\rm sat}(100^\circ\mathrm C)
+ =1.00\,\mathrm{atm}},
+\]
+而\emph{不是}将压强按玻意耳定律翻倍。
+若全部液态水已蒸发或不是汽液平衡，
+需要另给初态物质量才能判断。
+
+\paragraph{习题 9.26}
+\(m_{\mathrm{CO_2}}=1.1\,\mathrm{kg}\)，
+\(M=44\,\mathrm{g/mol}\)，
+故 \(n=25\,\mathrm{mol}\)，
+\(T=286.15\,\mathrm K\)，
+\(V=20\,\mathrm L\)。
+范德瓦耳斯方程
+\[
+ \left(p+\frac{an^2}{V^2}\right)(V-nb)=nRT,
+\]
+取 \(R=8.314\times10^3\,
+\mathrm{Pa\,L/(mol\,K)}\) 与题给 \(a,b\)，
+\[
+ \boxed{p_{\rm vdW}=
+ \frac{nRT}{V-nb}-\frac{an^2}{V^2}
+ \approx2.57\times10^6\,\mathrm{Pa}}.
+\]
+相同 \(n,V,T\) 的理想气体压强
+\[
+ \boxed{p_{\rm ideal}=\frac{nRT}{V}
+ \approx2.97\times10^6\,\mathrm{Pa}}.
+\]
+\(\mathrm{CO_2}\) 分子排斥体积 \(nb\)
+使排斥项升压，
+但吸引修正 \(an^2/V^2\) 对该状态
+更显著，故最终真实气体模型的压强较小。
+本题不能把 \(a\) 的 \(\mathrm{L^2}\)
+误当作 \(\mathrm{m^6}\) 而不作单位转换。
+
+\paragraph{习题 9.27}
+每摩尔的范德瓦耳斯方程
+\[
+ p=\frac{RT}{V_m-b}-\frac a{V_m^2}.
+\]
+临界等温线的水平拐点 \(V_m=V_c,T=T_c\) 满足
+\[
+ -\frac{RT_c}{(V_c-b)^2}+\frac{2a}{V_c^3}=0,
+\]
+\[
+ \frac{2RT_c}{(V_c-b)^3}-\frac{6a}{V_c^4}=0.
+\]
+二式相除得
+\(V_c=3b\)；
+再代入压强式及临界条件得到
+\[
+ \boxed{b=\frac{V_c}{3}},\qquad
+ \boxed{a=3p_cV_c^2},\qquad
+ \boxed{RT_c=\frac{8a}{27b}}.
+\]
+\textbf{配套辅导书中的原图读数已核对：}
+S PDF物理页153第9.27题明确列出
+主教材图9.18对应的
+\[
+ V_{m,c}=9.55\times10^{-5}\,\mathrm{m^3/mol},
+ \qquad
+ p_c=7.23\times10^6\,\mathrm{Pa}.
+\]
+故第（2）问可以使用这组\emph{明确标注的源书参数}
+求出
+\[
+ \boxed{a=3p_cV_{m,c}^2
+ =3(7.23\times10^6)(9.55\times10^{-5})^2
+ \approx0.198\,\mathrm{Pa\,m^6/mol^2}},
+\]
+\[
+ \boxed{b=V_{m,c}/3
+ \approx3.18\times10^{-5}\,\mathrm{m^3/mol}}.
+\]
+S PDF153页给出同值。
+此处使用的是辅导书对原图的\emph{精确读数记录}，
+并非外部百科的真实CO2临界参数；
+但仍应保留原图9.18的TikZ描摹核查任务。
+第9.26题所给范德瓦耳斯 \(a,b\)
+取自另一组拟合常数，
+不必强迫其与此处图解临界值完全一致。
+
+\paragraph{习题 9.28}
+从气体分子动理论
+\(\eta\approx\rho\bar v\lambda/3\)；
+标准状态 \(T=273.15\,\mathrm K\)，
+\(p=101325\,\mathrm{Pa}\)，
+氦气密度
+\(\rho=pM/(RT)\approx0.1785\,\mathrm{kg/m^3}\)。
+所以
+\[
+ \boxed{\lambda=\frac{3\eta}{\rho\bar v}
+ \approx2.65\times10^{-7}\,\mathrm m}.
+\]
+再由硬球平均自由程
+\[
+ \lambda=\frac1{\sqrt2\pi d^2n},\qquad
+ n=\frac p{k_BT},
+\]
+求得
+\[
+ \boxed{d=\sqrt{\frac1{\sqrt2\pi n\lambda}}
+ \approx1.78\times10^{-10}\,\mathrm m}.
+\]
+此处将经典黏滞输运公式的
+数值系数 \(1/3\) 及硬球碰撞截面都视为题定模型；
+更精密 Chapman--Enskog 系数不同。
+
+\paragraph{习题 9.29}
+判据是气体分子平均自由程
+\(\lambda=1/(\sqrt2\pi d^2n)\)
+增长到与瓶壁间距 \(l\) 相当。
+用 \(n=p/(k_BT)\)，
+令 \(\lambda=l=.004\,\mathrm m\)，
+\[
+ \boxed{p_{\rm threshold}
+ =\frac{k_BT}{\sqrt2\pi d^2 l}
+ =\frac{(1.380649\times10^{-23})(300.15)}
+ {\sqrt2\pi(3.7\times10^{-10})^2(0.004)}
+ \approx1.70\,\mathrm{Pa}}.
+\]
+实际导热系数进入稀薄气体
+Knudsen 区域是逐步变化的，
+因此 \(p\sim1.7\,\mathrm{Pa}\)
+是数量级阈值，并非突变点。

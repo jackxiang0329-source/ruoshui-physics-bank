@@ -1,0 +1,609 @@
+% 张三慧大学物理学第4版第二卷第30章《核物理》习题30.1--30.22
+% 主书扫描PDF物理页485--487；配套S392--399（含若干薄靶近似风险）。
+% 独立候选推导；所有结果未获第三方逐题学术审定，exam_ready=false。
+\section*{第30章\quad 核物理：独立解析}
+\paragraph{习题 30.1}
+两体正碰，实验室系靶核初静止，
+相对运动的质心动能为
+\(E_{\rm rel}=E_{\alpha}M/(M+m_\alpha)\)。
+在转折点相对动能转成库仑势
+\(U=2Z e^2/(4\pi\epsilon_0r_{\min})\)，故
+\[
+\boxed{r_{\min}=\frac{2Ze^2}{4\pi\epsilon_0E_\alpha}
+\left(1+\frac{m_\alpha}{M}\right)}.
+\]
+取 \(e^2/(4\pi\epsilon_0)=1.439965\,\mathrm{MeV\,fm}\)
+及 \(E_\alpha=6\,\mathrm{MeV}\)。
+金核 \(Z=79,A=197\)，近似
+\[
+\boxed{r_{\min}(\mathrm{Au})\simeq
+\frac{2(79)(1.439965)}6(1+4/197)
+\simeq38.7\,\mathrm{fm}}
+\]
+（忽略反冲时约37.9fm）。
+氮核 \(Z=7,A=14\)：
+\[
+\boxed{r_{\min}(\mathrm N)\simeq
+\frac{2(7)(1.439965)}6(1+4/14)
+\simeq4.32\,\mathrm{fm}}.
+\]
+氮靶反冲修正比例 \(4/14\approx28.6\%\)，
+不可忽略。核半径 \(R_N=1.2A^{1/3}\,\mathrm{fm}
+\simeq2.89\,\mathrm{fm}\)；
+上述最近距离大于核半径，
+且与\(\alpha\)自身半径相加的接触距离量级相近。
+按源书“氮核半径”单半径尺度，不进入核内；
+若把两核有限半径及短程核力尾部纳入，
+是否发生核作用还需量子散射/反应模型。
+
+\paragraph{习题 30.2}
+使用\emph{中性原子质量}时
+\[
+\boxed{B=[Z\,m({}^{1}\mathrm H)
++(A-Z)m_n-M_{\rm atom}(A,Z)]c^2}.
+\]
+中性氢质量已含电子质量，从而两侧电子数一致；
+不能再重复额外扣 \(Zm_e\)。
+取 \(m_H=1.007825\,\mathrm u\)、
+\(m_n=1.008665\,\mathrm u\)、
+\(1\,\mathrm u\,c^2=931.494\,\mathrm{MeV}\)：
+\[
+\boxed{B({}^{16}\mathrm N,Z=7)\simeq118.0\,\mathrm{MeV}},
+\quad\boxed{B({}^{16}\mathrm O,Z=8)\simeq127.7\,\mathrm{MeV}},
+\quad\boxed{B({}^{16}\mathrm F,Z=9)\simeq111.5\,\mathrm{MeV}}.
+\]
+核结合能可正而核对某特定衰变道不稳定。
+
+\paragraph{习题 30.3}
+视 \(Z\) 个核质子在体积
+\(V=4\pi r_0^3A/3\) 中为自旋1/2简并费米气，
+\(n_p=Z/V\)。非相对论费米能量
+\[
+E_{F,p}=\frac{\hbar^2}{2m_p}(3\pi^2n_p)^{2/3}
+=\frac{\hbar^2}{2m_pr_0^2}
+\left(\frac{9\pi Z}{4A}\right)^{2/3}.
+\]
+\(r_0=1.2\,\mathrm{fm}\) 给
+\[
+\boxed{E_{F,p}\simeq53\left(\frac ZA\right)^{2/3}
+\,\mathrm{MeV}},\qquad
+\boxed{\langle E_p\rangle=\frac35E_{F,p}
+\simeq32(Z/A)^{2/3}\,\mathrm{MeV}}.
+\]
+铁核 \({}^{56}\mathrm{Fe}\)：\(Z/A=26/56\)，
+\[
+\boxed{E_{F,p}\approx32\,\mathrm{MeV},\
+\langle E_p\rangle\approx19\,\mathrm{MeV}}.
+\]
+铀核 \({}^{238}\mathrm U\)：\(Z/A=92/238\)，
+\[
+\boxed{E_{F,p}\approx28\,\mathrm{MeV},\
+\langle E_p\rangle\approx17\,\mathrm{MeV}}.
+\]
+没有计入核子相互作用、有效质量和核壳效应。
+
+\paragraph{习题 30.4}
+均匀带电球总库仑自能
+\(U_C=3Z^2e^2/(5\,4\pi\epsilon_0r)\)。
+对质量数相同、质子数差1的镜像核，
+\[
+\Delta U_C=\frac{3e^2}{5\,4\pi\epsilon_0r}
+[Z^2-(Z-1)^2]
+=\frac{3(2Z-1)e^2}{5\,4\pi\epsilon_0r}.
+\]
+故
+\[
+\boxed{r=\frac{3(2Z-1)(1.439965)}
+{5\Delta U_C}\,\mathrm{fm}},
+\]
+\[
+\boxed{r_{11}\simeq3.41\,\mathrm{fm}},\
+\boxed{r_{15}\simeq3.72\,\mathrm{fm}},\
+\boxed{r_{21}\simeq4.22\,\mathrm{fm}}.
+\]
+对应 \(r/A^{1/3}\simeq1.53,1.51,1.53\,\mathrm{fm}\)，
+说明半径大致 \(\propto A^{1/3}\)，
+比例系数约 \(\boxed{1.52\,\mathrm{fm}}\)。
+这种用镜像能差估半径的模型忽略核强作用能差。
+
+\paragraph{习题 30.5}
+先用原子质量亏损求
+\[
+B_C=[6m_H+6m_n-M({}^{12}C)]c^2
+\simeq92.16\,\mathrm{MeV},
+\]
+\[
+B_O=[8m_H+8m_n-M({}^{16}O)]c^2
+\simeq127.7\,\mathrm{MeV}.
+\]
+每个\(\alpha\)自身结合能约28.3MeV。
+3颗\(\alpha\)三角团簇有3对键，
+4颗\(\alpha\)四面体团簇有6对键，
+故
+\[
+\boxed{B_C^{\rm cluster}=3(28.3)+3(2.42)
+\simeq92.16\,\mathrm{MeV}},
+\]
+\[
+\boxed{B_O^{\rm cluster}=4(28.3)+6(2.42)
+\simeq127.72\,\mathrm{MeV}}.
+\]
+和实验质量亏损算出的约92.16与127.7MeV相符。
+但这是\emph{给定每对束缚能的拟合模型}，
+并不证明真实核严格由空间刚性的\(\alpha\)团簇构成。
+
+\paragraph{习题 30.6}
+把 \({}^{232}\mathrm{Th}\) 核分成两块
+\(A'=116,Z'=45\)，总 \(A=232,Z=90\)。
+核反应放能
+\(Q=2B(A/2,Z/2)-B(A,Z)\)。
+在大核的液滴结合能模型中
+体积项、对称项在两边近似相消；
+表面项与库仑项给
+\[
+\boxed{Q
+=-a_sA^{2/3}(2^{1/3}-1)
++a_c\frac{Z^2}{A^{1/3}}(1-2^{-2/3})}.
+\]
+用教材近似 \(a_s\simeq17.8\mathrm{MeV}\),
+\(a_c\simeq.71\mathrm{MeV}\)，
+\[
+\boxed{Q\simeq1.7\times10^2\,\mathrm{MeV}
+\ (\text{约169MeV})}.
+\]
+正的表面面积增加\emph{耗}能，
+库仑排斥自能减少\emph{释}能；
+实际碎片质子/中子数、壳效应与中子放出不同，
+Q值将改变。
+
+\paragraph{习题 30.7}
+两个相同 \((A,Z)\) 的核融合，
+Q值
+\[
+Q=B(2A,2Z)-2B(A,Z).
+\]
+在半经验质量公式的体积项与对称项抵消后，
+表面项减少而释放能，库仑项增加而耗能：
+\[
+\boxed{Q=a_sA^{2/3}(2-2^{2/3})
+-a_c\frac{Z^2}{A^{1/3}}(2^{5/3}-2)}.
+\]
+若用教材所取常数
+\(a_s=17.804\mathrm{MeV}\)、
+\(a_c=.7103\mathrm{MeV}\)，化简得
+\[
+\boxed{Q\simeq7.3458 A^{2/3}
+-0.8345\frac{Z^2}{A^{1/3}}
+\ \mathrm{MeV}}.
+\]
+取 \(A=12,Z=6\)，
+\[
+\boxed{Q({}^{12}C+{}^{12}C\to{}^{24}Mg)
+\simeq25.4\,\mathrm{MeV}}
+\]
+（只按模型结合能差，不代表实际特定分支截面）。
+
+\paragraph{习题 30.8}
+生存函数 \(S(t)=e^{-t/\tau}\)，
+衰变概率密度
+\(f(t)=\tau^{-1}e^{-t/\tau}\) (\(t\ge0\))。
+\[
+\langle t\rangle=\tau,\qquad
+\langle t^2\rangle=2\tau^2,
+\]
+因此
+\[
+\boxed{\sigma_t=\sqrt{\langle(t-\tau)^2\rangle}
+=\tau}.
+\]
+因 \(f(t)\) 单调递减，最大概率\emph{密度}
+在起点，故
+\[
+\boxed{t_{\rm mode}=0}.
+\]
+这里最概然值是概率密度最大的位置，
+不是平均寿命 \(\tau\)；任一精确时点的概率均为0。
+
+\paragraph{习题 30.9}
+按题设体重70kg，体内钾质量
+\(m_K=.0037(70\,\mathrm{kg})=.259\,\mathrm{kg}\)。
+核素数近似
+\[
+N_{40}=\frac{.259}{.0391}N_A(1.2\times10^{-4})
+\simeq4.78\times10^{20}.
+\]
+\[
+\lambda=\frac{\ln2}{(1.3\times10^9)(365.25)(86400)}
+\simeq1.69\times10^{-17}\,\mathrm{s^{-1}}.
+\]
+所以
+\[
+\boxed{A=\lambda N_{40}
+\simeq8.1\times10^3\,\mathrm{Bq}=8.1\,\mathrm{kBq}}.
+\]
+此为天然钾同位素的内照射\emph{总衰变率}估计，
+不等于外部测得的光子计数率，也不等于剂量。
+
+\paragraph{习题 30.10}
+若铀矿封闭且衰变链达到长期放射性平衡，
+在过渡子核半衰期远小于母核半衰期的情况下，
+\(N_d\lambda_d=N_p\lambda_p\)。
+取 \({}^{238}\mathrm U\) 半衰期
+\(4.46\times10^9\)年，
+\({}^{235}\mathrm U\)半衰期
+\(7.04\times10^8\)年。
+10kg \(\mathrm U_3O_8\) 含
+\[
+N_{238}\simeq\frac{10^4}{3(238)+8(16)}
+(3N_A)(.9927)\simeq2.13\times10^{25},
+\]
+\[
+N_{235}\simeq\frac{10^4}{842}
+(3N_A)(.0072)\simeq1.54\times10^{23}.
+\]
+由平衡：
+\[
+N_{226}=N_{238}\frac{1600}{4.46\times10^9},
+\quad
+N_{231}=N_{235}\frac{3.27\times10^4}{7.04\times10^8}.
+\]
+因此
+\[
+\boxed{m({}^{226}\mathrm{Ra})\simeq2.87\,\mathrm{mg}},\qquad
+\boxed{m({}^{231}\mathrm{Pa})\simeq2.7\text{--}2.75\,\mathrm{mg}}.
+\]
+参考S PDF395用四舍五入后的
+\(N_{235}=1.52\times10^{23}\) 给约2.71mg。
+若矿物实际不处于世代平衡或中间核素迁移，
+此简单值不成立。
+
+\paragraph{习题 30.11}
+24h后检测剩余活度 \(A_{\rm thyroid}=4\mu\mathrm{Ci}\)，
+服入初始总活度30\(\mu\mathrm{Ci}\)。
+假设开始进入甲状腺的比例为 \(p\)，
+只经历核衰变而无额外生物清除，则
+\[
+4=30p\,2^{-24/13.1}
+\quad\Longrightarrow\quad
+\boxed{p=\frac4{30}\,2^{24/13.1}\simeq0.475
+\ (\text{约48\%})}.
+\]
+高于题示的正常人约15\%--40\%范围，
+但不能仅凭此简化计算下医学诊断；
+真实碘摄取还含生物转运、代谢与个体差异。
+
+\paragraph{习题 30.12}
+注入总活度 \(A_0=300\times10^3\,\mathrm{Bq}\)。
+10h后保留核活度 \(A(t)=A_0\,2^{-10/14.97}\)。
+若混合均匀，每立方厘米活度
+\(a=30\,\mathrm{Bq/cm^3}\)。
+\[
+\boxed{V=\frac{A(t)}a
+=\frac{300\times10^3}{30}\,2^{-10/14.97}
+\simeq6.29\times10^3\,\mathrm{cm^3}
+=6.29\,\mathrm L}.
+\]
+忽略排泄、非血液组织分布和注射计数效率差异。
+
+\paragraph{习题 30.13}
+燃烧获得 \(0.30\,\mathrm{mol}\) CO$_2$，
+碳原子数 \(N_C=.30N_A\)。
+自然活体每 \({}^{12}C\) 约有
+\(1.3\times10^{-12}\) 个\({}^{14}C\)，
+\[
+N_0=(.30N_A)(1.3\times10^{-12})
+\simeq2.35\times10^{11}.
+\]
+取平均寿命 \(\tau=8270\)年，
+测得活度 \(A=9/60\,\mathrm{s^{-1}}\)，
+由 \(A=(N_0/\tau)e^{-t/\tau}\) 得
+\[
+\boxed{t=\tau\ln\frac{N_0}{A\tau}
+\simeq1.5\times10^4\ \text{年}}.
+\]
+这里 \(\tau\) 换算秒后才能与Bq相除；
+假设所有计数均来自样本且探测效率100\%。
+真正放射性碳考古需扣背景、校正分馏并用校正曲线。
+
+\paragraph{习题 30.14}
+设现存铀核数 \(N_U=.30N_A/238\)，
+由纯 \({}^{238}U\) 衰变累积的
+\({}^{206}Pb\) 核数
+\(N_{\rm Pb}=.12N_A/206\)。
+原初铀核数
+\(N_{U,0}=N_U+N_{\rm Pb}\)，故
+\[
+t=\frac{T_{1/2}}{\ln2}
+\ln\left(1+\frac{N_{\rm Pb}}{N_U}\right)
+=\frac{4.46\times10^9}{\ln2}
+\ln\left(1+\frac{.12/206}{.30/238}\right).
+\]
+\[
+\boxed{t\simeq2.45\times10^9\ \text{年}}.
+\]
+此龄只有在\emph{无初始铅、完全封闭且Pb确系
+U衰变所致}条件下才成立，现实使用同位素校正。
+
+\paragraph{习题 30.15}
+由动量守恒 \(\boldsymbol p_{\rm Rn}
+=-\boldsymbol p_\alpha\)，
+非相对论动能比为
+\(K_{\rm Rn}/K_\alpha=m_\alpha/M_{\rm Rn}
+\simeq4/222\)。
+因此
+\[
+\boxed{K_{\rm recoil}
+=\frac4{222}(4.7825)\simeq0.08617\,\mathrm{MeV}},
+\]
+\[
+\boxed{Q=K_\alpha+K_{\rm recoil}
+\simeq4.8687\,\mathrm{MeV}}.
+\]
+衰变若同时产生额外\(\gamma\)或子核激发，
+总Q的分配就还需包括激发能。
+
+\paragraph{习题 30.16}
+\emph{核质量}约定时
+\[
+Q_{\beta^-}=(M_N({}^{64}Cu)
+-M_N({}^{64}Zn)-m_e)c^2,
+\]
+\[
+Q_{\beta^+}=(M_N({}^{64}Cu)
+-M_N({}^{64}Ni)-m_e)c^2.
+\]
+相减得到
+\[
+\boxed{[M_N({}^{64}Zn)-M_N({}^{64}Ni)]c^2
+=Q_{\beta^+}-Q_{\beta^-}=0.09\,\mathrm{MeV}},
+\]
+\[
+\boxed{\Delta M_N\simeq0.09/931.494
+=9.66\times10^{-5}\,\mathrm u}.
+\]
+这是\emph{核质量差}，
+若使用\emph{中性原子质量}
+\(Q_{\beta^-}=(M_A(Cu)-M_A(Zn))c^2\)，
+\(Q_{\beta^+}=(M_A(Cu)-M_A(Ni)-2m_e)c^2\)；
+则
+\[
+[M_A(Zn)-M_A(Ni)]c^2
+=(Q_+-Q_-)+2m_ec^2
+\simeq1.112\,\mathrm{MeV}.
+\]
+核质量差和中性原子质量差不同，
+不能混用两个体系。
+
+\paragraph{习题 30.17}
+\emph{本题的薄靶近似给出物理上不可能的值，
+必须检查中子通量守恒。}
+立方块体积8cm$^3$，
+钴59核数
+\[
+N_{59}=\frac{(8)(8.858)}{59}N_A
+\simeq7.23\times10^{23}.
+\]
+若不合理地把整个块内所有核都置于
+恒定不衰减通量
+\(I=2\times10^{12}\,\mathrm{cm^{-2}s^{-1}}\)，
+薄靶反应率 \(R_{\rm thin}=\sigma N_{59}I
+\simeq1.74\times10^{14}\,\mathrm{s^{-1}}\)；
+6h诱生 \({}^{60}Co\)，衰变常量
+\(\lambda=\ln2/(5.27\,\mathrm{yr})\)，
+\[
+\boxed{A_{\rm thin}\simeq
+\lambda R_{\rm thin}(6\,\mathrm h)
+\simeq0.42\,\mathrm{Ci}}
+\quad\text{（原S PDF397所用薄靶公式）}.
+\]
+\textbf{但这一结果违背中子数守恒：}
+\(\Sigma=n_{\rm Co}\sigma\)，
+钴核密度
+\(n_{\rm Co}=8.858N_A/59
+\simeq9.04\times10^{22}\,\mathrm{cm^{-3}}\)，
+中子光学厚度
+\[
+\boxed{\Sigma d=n_{\rm Co}(120\times10^{-24})(2)
+\simeq21.7\gg1}.
+\]
+对于正对2cm方形截面的一束单向中子，
+每秒最多只有
+\[
+\boxed{\dot N_{\rm in}=I(2\mathrm{cm})^2
+=8.0\times10^{12}\,\mathrm{s^{-1}}}
+\]
+颗中子穿过入射面，
+远少于S的 \(1.74\times10^{14}\,\mathrm{s^{-1}}\)。
+按一维纯吸收Beer--Lambert近似，
+\[
+R_{\rm physical}
+=\dot N_{\rm in}(1-e^{-\Sigma d})
+\simeq8.0\times10^{12}\,\mathrm{s^{-1}},
+\]
+\[
+\boxed{A_{\rm shielded}
+\simeq\lambda R_{\rm physical}(6\,\mathrm h)
+\simeq0.0194\,\mathrm{Ci}}.
+\]
+真实反应堆热中子是角分布通量，
+入射各面、散射和自屏蔽会修正结果；
+没有空间角通量与谱信息\emph{不能唯一给出真实值}。
+因此报告原书薄靶参考值0.42Ci的同时，
+明确它不可能用于所给\emph{单向照射厚靶}条件。
+
+\textbf{另一种角通量定义下的上界：}
+若给定 \(2\times10^{12}\,\mathrm{cm^{-2}s^{-1}}\)
+是\emph{边界各向同性}的标量中子通量 \(\phi\)，
+其向内的面电流密度为 \(\phi/4\)。
+立方体总表面积 \(S=6(2\,\mathrm{cm})^2
+=24\,\mathrm{cm^2}\)，
+故所有外表面的总入射速率为
+\[
+ \boxed{\dot N_{\rm iso,in}=\phi S/4
+ =1.20\times10^{13}\,\mathrm{s^{-1}}}.
+\]
+即使假设入射中子全部被钴俘获，
+照射 \(t=6\,\mathrm h\) 后也至多
+\[
+ \boxed{A_{\rm iso,upper}
+ =\dot N_{\rm iso,in}(1-e^{-\lambda t})
+ \simeq0.0292\,\mathrm{Ci}}.
+\]
+此 \(\phi/4\) 因子只适于\emph{外边界各向同性}
+分布；实际反应堆有多方向、多能谱及散射，
+不能把单束上界 \(0.0194\,\mathrm{Ci}\)
+视作一切辐照几何的普适上界。
+
+
+\paragraph{习题 30.18}
+钉片中Cd原子数密度
+\[
+n=\frac{\rho N_A}{M}
+=\frac{8.64(6.02214\times10^{23})}{112.4}
+\simeq4.63\times10^{22}\,\mathrm{cm^{-3}}.
+\]
+核素平均吸收截面
+\(\sigma=4000\,\mathrm b=4.0\times10^{-21}\,\mathrm{cm^2}\)。
+对单向光束Beer--Lambert定律：
+\[
+T=\frac{I(d)}{I(0)}=e^{-n\sigma d}.
+\]
+95\%被吸收即 \(T=.05\)，所以
+\[
+\boxed{d=-\frac{\ln .05}{n\sigma}
+\simeq.0162\,\mathrm{cm}
+=162\,\mathrm{\mu m}}.
+\]
+\textbf{源书S PDF397错误地使用薄靶线性截面}
+\(n\sigma d=.95\)，得 \(d\approx51\,\mathrm{\mu m}\)；
+但厚度对应的光学深度 .95，
+按正确指数式仅吸收
+\(1-e^{-.95}\simeq61.3\%\)，\emph{不能达到95\%}。
+因此需要\(-\ln(1-.95)=2.996\)而非.95；
+各向异性中子散射、多次碰撞和实际能谱仍可能修正。
+
+\paragraph{习题 30.19}
+中性原子质量计算核反应的Q值时，
+本题三反应两侧的电子总数对应相同，
+故能直接相减原子质量：
+\[
+Q_1=[M({}^{13}C)+M(H)-M({}^{4}He)-M({}^{10}B)]c^2
+\simeq\boxed{-4.06\,\mathrm{MeV}}\quad\text{吸热},
+\]
+\[
+Q_2=[M({}^{13}C)+M(H)-M({}^{2}H)-M({}^{12}C)]c^2
+\simeq\boxed{-2.72\,\mathrm{MeV}}\quad\text{吸热},
+\]
+\[
+Q_3=[M({}^{13}C)+M(H)-M({}^{14}N)]c^2
+\simeq\boxed{+7.55\,\mathrm{MeV}}\quad\text{放热}.
+\]
+负的Q不等于实验室阈能；
+反应产物还携带共同质心动能。
+
+\paragraph{习题 30.20}
+取习题30.19 \(Q\simeq-4.06\,\mathrm{MeV}\)，
+静止 \({}^{13}C\) 靶的经典阈能
+\[
+\boxed{E_{\rm thr,kin}
+=-Q\left(1+\frac{m_p}{M_C}\right)
+\simeq4.06(1+1/13)=4.37\,\mathrm{MeV}}.
+\]
+原书还要求质子靠近靶核\emph{核力范围}：
+取 \(r_0=1.2\,\mathrm{fm}\)，
+接触距
+\[
+r\simeq r_0(13^{1/3}+1)\simeq4.02\,\mathrm{fm},
+\]
+库仑势垒
+\(V_C\simeq6(1.439965)/r\simeq2.15\,\mathrm{MeV}\)。
+把实验室系质心换算因子
+\((1+1/13)\) 一并考虑，
+原S PDF398约为2.3MeV。
+题设采用把动能阈值和势垒作为独立预算
+相加的\emph{半经典教学近似}，
+\[
+\boxed{E_{\rm thr,model}\simeq4.37+2.3
+\simeq6.7\,\mathrm{MeV}}.
+\]
+严格量子反应没有一个绝对的库仑硬阈值，
+可发生隧穿，且实验截面随能量平滑变化；
+不能将6.7MeV误称为精确的运动学阈值。
+
+\paragraph{习题 30.21}
+将太阳中 \(M_H=1.5\times10^{30}\,\mathrm{kg}\)
+的氢全用于氦合成，
+一个聚变循环消耗4个氢核，数目
+\(N_{\rm cycles}=M_H/(4m_H)\)。
+CNO/pp总净核过程
+\(4p\to{}^{4}He+2e^++2\nu_e\)
+并在电子正电子湮灭前释放核反应Q约
+24.7MeV（参见30.22）。
+保持功率 \(L=3.9\times10^{26}\mathrm W\)，
+\[
+t=\frac{N_{\rm cycles}(24.67\,\mathrm{MeV})}{L}
+=\frac{(1.5\times10^{30})/(4(1.67\times10^{-27}))
+\cdot(24.67\times10^6)(1.602176634\times10^{-19})}
+{3.9\times10^{26}},
+\]
+\[
+\boxed{t\simeq7.2\times10^{10}\text{年}}
+\quad\text{（采用源书24.67MeV预算）}.
+\]
+若另外计入两次正电子湮灭的
+\(2(1.022)\mathrm{MeV}\)，总聚变质量亏损可达
+约26.73MeV，忽略逃逸中微子时给
+\(\sim7.8\times10^{10}\)年。
+现实太阳并非所有氢都能在主序阶段燃烧，
+亮度亦随年龄变化，故\emph{真实剩余主序寿命
+远小于此极限模型时间}；中微子逃逸能量不会给太阳供热。
+
+\paragraph{习题 30.22}
+六步反应相加后，\({}^{12}C\) 在首步耗掉、
+最后一步回到相同核素，中间的
+\({}^{13}N,{}^{13}C,{}^{14}N,{}^{15}O,{}^{15}N\)
+亦互相抵消，净过程
+\[
+\boxed{4{}^{1}H\to{}^{4}He+2e^++2\nu_e}
+\]
+（省去起始/终止外壳电子的记账），
+故碳在核反应网络中是\emph{催化循环}而非燃料。
+中性原子质量计算
+\(\beta^+\) 衰变Q时必须扣
+\(\boxed{2m_ec^2=1.022\,\mathrm{MeV}}\)，
+避免漏算正电子与原子壳层电子的质量。
+使用原题所给原子质量（u）和
+\(1\,\mathrm u\,c^2=931.494\mathrm{MeV}\)，
+\[
+\begin{aligned}
+Q_1&=[12+1.007825-13.005738]c^2
+\simeq1.944\,\mathrm{MeV},\\
+Q_2&=[13.005738-13.003355]c^2-1.022
+\simeq1.198\,\mathrm{MeV},\\
+Q_3&=[1.007825+13.003355-14.003074]c^2
+\simeq7.551\,\mathrm{MeV},\\
+Q_4&=[1.007825+14.003074-15.003065]c^2
+\simeq7.297\,\mathrm{MeV},\\
+Q_5&=[15.003065-15.000109]c^2-1.022
+\simeq1.732\,\mathrm{MeV},\\
+Q_6&=[1.007825+15.000109-12-4.002603]c^2
+\simeq4.966\,\mathrm{MeV}.
+\end{aligned}
+\]
+各步均放能。六步的\emph{裸核反应Q总和}
+\[
+\boxed{\sum_{i=1}^6Q_i\simeq24.69\,\mathrm{MeV}}
+\]
+符合配套S PDF399。
+若产生的两个正电子各与环境中一个电子湮灭，
+其湮灭释放
+\(2\cdot2m_ec^2\simeq2.044\mathrm{MeV}\)，
+故\emph{包含湮灭}的核聚变全能量预算
+\[
+\boxed{Q_{\rm total}\simeq24.69+2.044
+\simeq26.73\,\mathrm{MeV}}.
+\]
+在恒星实际环境中两次
+\(\nu_e\) 将携带随机的部分能量逃逸，
+光/热获得的能量低于这一完全质量亏损总值；
+题目给定的质量不能固定每个中微子的具体能谱。

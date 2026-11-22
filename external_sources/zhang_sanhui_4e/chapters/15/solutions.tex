@@ -1,0 +1,794 @@
+% 张三慧第四版第二卷第15章《静电场中的电介质》独立解答
+% 原教材扫描物理页99--102。全部是未经外部学术复核的候选稿。
+\section*{第15章\quad 静电场中的电介质：独立解析}
+
+\paragraph{习题 15.1}
+取氯核位置为 \(x=0\)，质子在 \(x=d=0.128\,\mathrm{nm}\)；
+氯核电荷 \(+17e\)，氢核 \(+e\)，整分子18个电子
+的总负电荷为 \(-18e\)。
+若全部负电荷球对称集中于氯核，则总电矩
+\[
+ \boxed{p_{\rm ion}=ed=(1.60218\times10^{-19})
+ (0.128\times10^{-9})
+ =2.05\times10^{-29}\,\mathrm{C\,m}}.
+\]
+设真实负电荷分布重心位于
+\(x_{\rm neg}\)，
+则沿键轴总电矩
+\(p=ed-18ex_{\rm neg}\)（按正向取符号）。
+取实测电矩正向与质子位置一致，得到
+\[
+ \boxed{x_{\rm neg}=
+ \frac{d-p_{\rm meas}/e}{18}
+ \approx5.93\times10^{-12}\,\mathrm m}
+\]
+即从氯核朝质子方向约 \(0.00593\,\mathrm{nm}\)。
+不要把整个负电荷云的电量误当作只有一个电子；
+若只求\emph{有效正负单元电荷}的分离量，
+\(p/e\approx0.0212\,\mathrm{nm}\)，
+但这不是18电子分布重心距氯核的距离。
+
+\paragraph{习题 15.2}
+金属球壳间 \(R_1<r<R_2\) 的球对称自由电荷
+只有内壳所带 \(Q\)。
+无论介质如何分层，高斯定律
+\(\oint\boldsymbol D\cdot d\boldsymbol S=Q\) 给出
+\[
+ \boxed{\boldsymbol D(r)=
+ \frac{Q}{4\pi r^2}\,\hat{\boldsymbol r}},\qquad
+ \boxed{\boldsymbol E(r)=
+ \begin{cases}
+ \dfrac{Q}{4\pi\varepsilon_0\varepsilon_{r1}r^2}
+ \hat{\boldsymbol r},&R_1<r<R,\\
+ \dfrac{Q}{4\pi\varepsilon_0\varepsilon_{r2}r^2}
+ \hat{\boldsymbol r},&R<r<R_2.
+ \end{cases}}
+\]
+在金属内部 \(E=D=0\)；两介质交界处
+\(D_r\) 连续，\(E_r\) 随介电常量跳变。
+取 \(U_{12}=\varphi(R_1)-\varphi(R_2)\)，
+\[
+ \boxed{U_{12}=\frac{Q}{4\pi\varepsilon_0}
+ \left[\frac1{\varepsilon_{r1}}
+ \left(\frac1{R_1}-\frac1R\right)
+ +\frac1{\varepsilon_{r2}}
+ \left(\frac1R-\frac1{R_2}\right)\right]}
+ \approx-3.75\times10^3\,\mathrm V.
+\]
+贴近内金属球壳的介质\emph{内侧}法线指向
+\(-\hat{\boldsymbol r}\)，
+故介质束缚面电荷密度
+\[
+ \boxed{\sigma_b(R_1^+)=
+ -\frac{\varepsilon_{r1}-1}{\varepsilon_{r1}}
+ \frac{Q}{4\pi R_1^2}
+ \approx+9.95\times10^{-6}\,\mathrm{C/m^2}}.
+\]
+因内壳为负电，其相邻介质表面的束缚电荷为正。
+
+\paragraph{习题 15.3}
+设内导体每单位长度带自由电量 \(\lambda\)，
+两介质分层交界半径 \(r_0\)，
+则在同轴电容器中
+\(D_r=\lambda/(2\pi r)\)，
+\[
+ E_1(r)=\frac{\lambda}{2\pi\varepsilon_0
+ \varepsilon_{r1}r},\quad
+ E_2(r)=\frac{\lambda}{2\pi\varepsilon_0
+ \varepsilon_{r2}r}.
+\]
+各层最大的场强分别发生在 \(R_1\) 及 \(r_0\)：
+\[
+ \frac{E_{2,\max}}{E_{1,\max}}
+ =\frac{\varepsilon_{r1}R_1}
+ {\varepsilon_{r2}r_0}
+ =\frac{2R_1}{r_0}>1
+\]
+因为 \(r_0<R_2<2R_1\)。
+所以\textbf{外层第二介质先击穿}。
+临界线电荷量
+\(\lambda_{\max}=2\pi\varepsilon_0
+ \varepsilon_{r2}r_0E_{\max}\)，
+\[
+ \boxed{U_{\max}=E_{\max}\,r_0
+ \left[\frac12\ln\frac{r_0}{R_1}
+ +\ln\frac{R_2}{r_0}\right]}.
+\]
+该式基于题设两介质具有相同击穿场强；
+若不同则应比较两者分别的临界电压。
+
+\textbf{击穿场强边界：}
+在 \(R_1<r_0<R_2<2R_1\) 及
+\(\varepsilon_{r2}=\varepsilon_{r1}/2\)
+的题设下，两介质最大场强之比为
+\(E_{2,\max}/E_{1,\max}=2R_1/r_0>1\)。
+第二层刚达到 \(E_{\max}\) 时，
+第一层只有
+\[
+ \boxed{E_{1,\max}=E_{\max}r_0/(2R_1)
+ <E_{\max}}.
+\]
+若两层介质击穿强度不同，
+必须分别比较峰值场强与各自阈值的比，
+不得照搬以上顺序。
+
+
+\paragraph{习题 15.4}
+无限大板近似下，
+金属板自由面电荷密度为
+\(\sigma_f=Q/S\)，
+介质电位移大小
+\(D=|\sigma_f|\)，
+介质电场大小
+\(E=|\sigma_f|/(\varepsilon_0\varepsilon_r)\)。
+极化强度为
+\[
+ P=\varepsilon_0(\varepsilon_r-1)E
+ =\left(1-\frac1{\varepsilon_r}\right)
+ |\sigma_f|.
+\]
+介质相邻金属板面上的束缚电荷
+与金属自由电荷异号，
+其大小积分为
+\[
+ \boxed{|Q_b|=PS
+ =\left(1-\frac1{\varepsilon_r}\right)|Q|}.
+\]
+若教材的 \(Q,Q'\) 均表示正的电量大小，
+即可写为题给 \(Q'=(1-1/\varepsilon_r)Q\)。
+
+\paragraph{习题 15.5}
+无限长细圆柱导线外近似有
+\(E(R)=|\lambda|/(2\pi\varepsilon_0R)\)。
+设空气击穿场强
+\(E_{\max}=3.0\times10^6\,\mathrm{V/m}\)，
+因此
+\[
+ \boxed{|\lambda|_{\max}
+ =2\pi\varepsilon_0R E_{\max}}.
+\]
+代入题给三个半径分别得
+\[
+ \boxed{\begin{aligned}
+ R=1.0\,\mathrm{cm}:&\quad1.67\times10^{-6}\,\mathrm{C/m},\\
+ R=1.0\,\mathrm{mm}:&\quad1.67\times10^{-7}\,\mathrm{C/m},\\
+ R=0.1\,\mathrm{mm}:&\quad1.67\times10^{-8}\,\mathrm{C/m}.
+ \end{aligned}}
+\]
+真实有限长导线端部曲率更大、表面电场集中，
+本结果仅针对忽略端部效应的模型。
+
+\paragraph{习题 15.6}
+细胞膜厚
+\(d=5.2\times10^{-9}\,\mathrm m\)，
+自由表面电荷密度大小
+\(\sigma_f=0.52\times10^{-3}\,\mathrm{C/m^2}\)，
+相对介电常量 \(\varepsilon_r=6.0\)。
+把膜近似为平行板结构，
+\[
+ \boxed{E=\frac{\sigma_f}
+ {\varepsilon_0\varepsilon_r}
+ \approx9.79\times10^6\,\mathrm{V/m}},
+\quad
+ \boxed{\Delta V=Ed\approx0.0509\,\mathrm V}.
+\]
+外表面为正，膜内电场从外表面指向内表面，
+外表面电势高于内表面 \(0.0509\,\mathrm V\)。
+忽略膜上离子通道、双电层与非均匀介质响应。
+\textbf{原书间的正负面分歧：}
+教材第二卷PDF物理页99写「\emph{外表面}为正电荷」，
+而配套辅导书PDF物理页232写「\emph{内表面}为正电荷」，
+两者恰好相反。
+本稿按\emph{主教材}的外表面正电荷取方向。
+场强大小、两面电势差的\emph{绝对值}均相同，
+但若按辅导书原句则方向及带符号的电势差反转。
+不能静默把两本书的电荷方向当作一致。
+
+\paragraph{习题 15.7}
+板与外加电场 \(E_0\) 的夹角为 \(\theta\)，
+故电场垂直于板面的法向分量
+\(E_{0,n}=E_0\sin\theta\)。
+假设无限大绝缘介质平板，
+板界面无自由面电荷，
+法向电位移连续
+\(\varepsilon_0E_{0,n}
+ =\varepsilon_0\varepsilon_r E_{{\rm in},n}\)，
+因此
+\(E_{{\rm in},n}=E_0\sin\theta/\varepsilon_r\)。
+极化法向量
+\(P_n=\varepsilon_0(\varepsilon_r-1)E_{{\rm in},n}\)。
+两表面束缚面电荷密度分别为
+\[
+ \boxed{\sigma_b=\pm\varepsilon_0
+ \left(1-\frac1{\varepsilon_r}\right)
+ E_0\sin\theta}.
+\]
+正负号由各面的外法线朝向决定；
+若把 \(\theta\) 误当成电场与板法线夹角，
+会误写成 \(\cos\theta\)。
+
+\paragraph{习题 15.8}
+两片空气电容器初距离
+\(d_0=0.600\,\mathrm{mm}\)，面积
+\(S=50.0\,\mathrm{mm^2}=5.0\times10^{-5}\,\mathrm{m^2}\)。
+初电容
+\[
+ C_0=\frac{\varepsilon_0S}{d_0}
+ \approx0.738\,\mathrm{pF}.
+\]
+触发阈值为增加
+\(\Delta C=0.250\,\mathrm{pF}\)。
+末距离
+\(d_f=\varepsilon_0S/(C_0+\Delta C)\)，
+故下压量
+\[
+ \boxed{\Delta d=d_0-d_f
+ =d_0-\frac{\varepsilon_0S}
+ {\varepsilon_0S/d_0+\Delta C}
+ \approx0.152\,\mathrm{mm}}.
+\]
+不允许把 \(0.250\,\mathrm{pF}\)
+误当作按下后的\emph{总电容}。
+
+\paragraph{习题 15.9}
+薄膜厚
+\(d=5.0\times10^{-5}\,\mathrm m\)，
+\(\varepsilon_r=2.3\)，电容要求
+\(C=3.0\times10^{-6}\,\mathrm F\)。
+由平行板电容
+\(C=\varepsilon_0\varepsilon_rS/d\)，
+所需单层有效相对电极面积
+\[
+ \boxed{S=\frac{Cd}{\varepsilon_0\varepsilon_r}
+ \approx7.37\,\mathrm{m^2}}.
+\]
+这是理想单层薄膜面积；若卷绕成多层电容器，
+需要说明叠层及电极连接方式。
+
+\paragraph{习题 15.10}
+击穿场强为
+\(E_{\rm bd}=3\times10^6\,\mathrm{V/m}\)，
+板间电压 \(U=50\,\mathrm{kV}\)。
+为不击穿必须有
+\(d\ge U/E_{\rm bd}=1/60\,\mathrm m\)。
+空气板的面积电容
+\(C/S=\varepsilon_0/d\)，
+最大值发生在最小允许间距：
+\[
+ \boxed{\left(\frac CS\right)_{\max}
+ =\frac{\varepsilon_0 E_{\rm bd}}{U}
+ \approx5.31\times10^{-10}\,\mathrm{F/m^2}}.
+\]
+
+\paragraph{习题 15.11}
+孤立导体球电容 \(C=4\pi\varepsilon_0R\)。
+取 \(R=0.18\,\mathrm m\)，
+\[
+ \boxed{C\approx2.00\times10^{-11}\,\mathrm F
+ =20.0\,\mathrm{pF}},
+\quad
+ \boxed{Q=CU
+ \approx4.00\times10^{-6}\,\mathrm C}.
+\]
+此结果未计加速器支撑件、相邻电极和环境导体的影响。
+
+\paragraph{习题 15.12}
+同轴真空导体构成长度为 \(L\) 的圆柱电容器，
+内丝半径
+\(a=1.25\times10^{-5}\,\mathrm m\)，
+圆筒内半径
+\(b=1.25\times10^{-2}\,\mathrm m\)，
+长度 \(L=0.100\,\mathrm m\)。
+由同轴场
+\(E_r=\lambda/(2\pi\varepsilon_0r)\)，
+电压为
+\(U=\lambda\ln(b/a)/(2\pi\varepsilon_0)\)，
+故
+\[
+ \boxed{C=\frac{2\pi\varepsilon_0 L}{\ln(b/a)}
+ =\frac{2\pi\varepsilon_0(0.100)}{\ln1000}
+ \approx8.05\times10^{-13}\,\mathrm F
+ =0.805\,\mathrm{pF}}.
+\]
+忽略两端边缘场。
+
+\paragraph{习题 15.13}
+当相邻极板交替归属两组电极时，
+\(n\) 块板之间共有 \(n-1\) 个相邻间隙。
+每个间隙在最大重叠时的电容为
+\(C_0=\varepsilon_0S/d\)。
+各间隙两端分别连接同一对电极端子，
+故电气上\emph{并联}，而不是串联：
+\[
+ \boxed{C_{\max}=(n-1)C_0
+ =\frac{(n-1)\varepsilon_0S}{d}}.
+\]
+假定所有极板面积与间距相同，并忽略边缘效应。
+
+\paragraph{习题 15.14}
+设内部上、下两极板为A、B，
+盒体为第三个等势导体C。
+除板间直接电容
+\(C_{AB}=\varepsilon_0S/d\) 之外，
+各板分别和盒体之间有
+\(C_{AC}=C_{BC}=\varepsilon_0S/s\)，
+其中
+\(d=0.50\,\mathrm{mm}\)，
+\(s=0.25\,\mathrm{mm}\)。
+当盒体\emph{悬浮且净电量为零}，
+A—C—B支路相当于两等值电容串联，
+与A—B直接电容并联：
+\[
+ \boxed{C_{\rm floating}
+ =\frac{\varepsilon_0S}{d}
+ +\frac12\frac{\varepsilon_0S}{s}
+ \approx7.08\times10^{-10}\,\mathrm F}.
+\]
+若A与盒体C短接，
+两者相同电势，B对A/C的两个电容并联：
+\[
+ \boxed{C_{\rm shorted}
+ =\varepsilon_0S\left(\frac1d+\frac1s\right)
+ \approx1.06\times10^{-9}\,\mathrm F}.
+\]
+若金属盒接地或有其他外部连接，
+有效两端网络的边界条件需重新确定。
+
+\paragraph{习题 15.15}
+令板长方向为 \(x\in[0,a]\)，
+宽 \(b\)，局部间距
+\(h(x)=d+(l/a)x\)；
+将板分割为并联的宽度为 \(dx\) 的窄条，
+\[
+ dC=\frac{\varepsilon_0 b\,dx}{h(x)}.
+\]
+积分得到
+\[
+ \boxed{C=\frac{\varepsilon_0ab}{l}
+ \ln\left(1+\frac ld\right)}.
+\]
+在 \(l\ll d\) 时，
+\[
+ C=\frac{\varepsilon_0ab}{d}
+ \left(1-\frac l{2d}+O(l^2/d^2)\right),
+\]
+恢复平行板近似。
+这需要板倾斜角很小且边缘场可忽略。
+
+
+\paragraph{习题 15.16}
+板间总间距
+\(d=2.0\,\mathrm{cm}\)，
+介质厚
+\(t=1.5\,\mathrm{cm}\)。
+插入时未覆盖介质的空气层厚度为 \(d-t\)，
+等效串联电容为
+\[
+ C=\frac{\varepsilon_0S}{(d-t)+t/\varepsilon_r}.
+\]
+保持电量 \(Q\) 不变，电压比为
+\[
+ \frac{U_f}{U_i}=\frac{(d-t)+t/\varepsilon_r}{d}
+ =0.60.
+\]
+因此
+\[
+ \boxed{\varepsilon_r=
+ \frac{t}{0.60d-(d-t)}
+ =\frac{1.5}{1.2-0.5}=\frac{15}{7}
+ \approx2.14}.
+\]
+若把 \(d=2.0\) cm 的总气隙
+误认为全部被1.5cm介质取代，会产生错误电容。
+
+\paragraph{习题 15.17}
+取两同心导体球半径 \(R_1<R_2\)，
+内壳自由电荷 \(+Q\)，外壳 \(-Q\)。
+在两壳间电场
+\(E_r=Q/(4\pi\varepsilon_0r^2)\)。
+电势差
+\[
+ U=\int_{R_1}^{R_2}E_r\,dr
+ =\frac{Q}{4\pi\varepsilon_0}
+ \left(\frac1{R_1}-\frac1{R_2}\right).
+\]
+故
+\[
+ \boxed{C=\frac QU
+ =4\pi\varepsilon_0\frac{R_1R_2}{R_2-R_1}}.
+\]
+薄层极限 \(d=R_2-R_1\ll R_1\) 时，
+\(C\simeq4\pi\varepsilon_0R_1^2/d\)，
+其中球面面积
+\(S=4\pi R_1^2\)，
+于是 \(C\simeq\varepsilon_0S/d\)，
+与平行板公式一致。
+
+\paragraph{习题 15.18}
+要用 \(12,2,2\,\mu\mathrm F\)
+得到 \(3\,\mu\mathrm F\)，
+可把两个 \(2\,\mu\mathrm F\) 并联得
+\(4\,\mu\mathrm F\)，再和
+\(12\,\mu\mathrm F\) 串联：
+\[
+ C_{\rm eq}=\frac{12\cdot4}{12+4}
+ =\boxed{3\,\mu\mathrm F}.
+\]
+设串联电量为 \(Q\)，
+两个并联的 \(2\,\mu\mathrm F\) 电容
+各承受 \(U_2=Q/(4\,\mu\mathrm F)\)，
+而 \(12\,\mu\mathrm F\) 承受
+\(U_{12}=Q/(12\,\mu\mathrm F)\)。
+各器件最大电压为 \(200\,\mathrm V\)；
+并联分支先达到极限，
+\(Q_{\max}=4\,\mu\mathrm F\cdot200\,\mathrm V
+ =800\,\mu\mathrm C\)。
+故电容器组最大总电压
+\[
+ \boxed{U_{\max}=200+
+ \frac{800\,\mu\mathrm C}{12\,\mu\mathrm F}
+ \approx267\,\mathrm V}.
+\]
+这里是满足题给电容并且相应器件不击穿的连接模型。
+\textbf{辅导书的中间步骤分歧：}
+配套辅导书PDF物理页235把「两个 \(2\,\mu\mathrm F\) 电容上
+电压为 \(U/4\)，\(12\,\mu\mathrm F\) 上电压为 \(3U/4\)」
+写反了；同页随后用 \(3U/4\le200\,\mathrm V\)
+算出正确总耐压 \(267\,\mathrm V\)。
+实际串联支路中两并联 \(2\,\mu\mathrm F\)
+合为 \(4\,\mu\mathrm F\)，应承受 \(3U/4\)，
+而 \(12\,\mu\mathrm F\) 承受 \(U/4\)。
+源书推导虽有文字错误，最终数值与本解一致。
+
+\paragraph{习题 15.19}
+两层电介质沿电场方向各占半间距 \(d/2\)，
+相对介电常量
+\(\varepsilon_{r1},\varepsilon_{r2}\)。
+由于两层中的自由电位移相同，
+\[
+ U=\frac Q{\varepsilon_0S}
+ \left(\frac{d/2}{\varepsilon_{r1}}
+ +\frac{d/2}{\varepsilon_{r2}}\right).
+\]
+由 \(C=Q/U\)，
+\[
+ \boxed{C=\frac{2\varepsilon_0S}{d}
+ \frac{\varepsilon_{r1}\varepsilon_{r2}}
+ {\varepsilon_{r1}+\varepsilon_{r2}}}.
+\]
+两层等效\emph{串联}，非并联；
+当两介电常量相等时恢复
+\(C=\varepsilon_0\varepsilon_rS/d\)。
+
+\paragraph{习题 15.20}
+电容极板高度 \(a\)，油面至底部高度 \(h\)，
+两极板宽度 \(b\)、间距 \(d\)（题未要求其值）。
+液面以上空气与以下油层沿电压相同方向，
+相当于两个\emph{并联}电容：
+\[
+ C=\frac{\varepsilon_0 b}{d}
+ [(a-h)+\varepsilon_r h]
+ =\frac{\varepsilon_0ab}{d}
+ \left[1+(\varepsilon_r-1)\frac ha\right].
+\]
+相对于完全为空气时的电容
+\(C_0=\varepsilon_0ab/d\)，
+\[
+ \boxed{\varepsilon_{r,\rm eff}
+ =\frac C{C_0}
+ =1+(\varepsilon_r-1)\frac ha},\quad 0\le h\le a.
+\]
+对液位的灵敏度
+\(d\varepsilon_{r,\rm eff}/dh
+ =(\varepsilon_r-1)/a\)。
+甲醇 \(\varepsilon_r=33\)
+的灵敏度显著高于
+汽油 \(\varepsilon_r=1.95\)，
+因此在本题模型下\emph{甲醇更适合}。
+
+\paragraph{习题 15.21}
+球形电容器内外金属壳同心，
+电场沿半径，油液仅填充\emph{下半球}；
+上下两半球在相同电压下电气上并联。
+原无油电容
+\(C_0=4\pi\varepsilon_0 R_1R_2/(R_2-R_1)\)。
+将上半球空气与下半球油分别积分电能或高斯通量，
+\[
+ C_{\rm upper}=\frac12C_0,\qquad
+ C_{\rm lower}=\frac12\varepsilon_r C_0.
+\]
+所以
+\[
+ \boxed{C_{\rm filled}=\frac{1+\varepsilon_r}{2}C_0},\qquad
+ \boxed{\Delta C=\frac{\varepsilon_r-1}{2}C_0}.
+\]
+若问相对变化率，为
+\(\Delta C/C_0=(\varepsilon_r-1)/2\)。
+忽略油面附近的微小边缘场。
+
+\paragraph{习题 15.22}
+初态 \(C_1=4\,\mu\mathrm F,C_2=6\,\mu\mathrm F\)
+串联，连接 \(200\,\mathrm V\) 电源，
+两者电荷大小相同：
+\[
+ Q=C_{\rm series}U,\quad
+ C_{\rm series}=\frac{4\cdot6}{4+6}=2.4\,\mu\mathrm F,\quad
+ Q=480\,\mu\mathrm C.
+\]
+因此初始两端电压分别为
+\(U_1=120\,\mathrm V,U_2=80\,\mathrm V\)。
+断电并分离后重新把两电容并成一个
+双节点网络：
+(1) 若正极接另一只负极，则两节点各有
+\(Q+(-Q)=0\) 的净电荷，
+故最终
+\[
+ \boxed{U_1'=U_2'=0}.
+\]
+(2) 若正接正、负接负，
+两节点的总电荷为
+\(2Q=960\,\mu\mathrm C\)，总电容
+\(C_1+C_2=10\,\mu\mathrm F\)，
+故
+\[
+ \boxed{U_1'=U_2'=\frac{960\,\mu\mathrm C}
+ {10\,\mu\mathrm F}=96\,\mathrm V}.
+\]
+两种连接都会在导线接通瞬间产生电流并可能耗散能量，
+不能强行要求静电能在瞬时并联过程中守恒。
+
+\paragraph{习题 15.23}
+初电容 \(C_1=100\,\mathrm{pF}\)，
+初电压 \(U_0=100\,\mathrm V\)；
+第二电容初无电，二者隔离电源后并联，
+终电压 \(U_f=30\,\mathrm V\)。
+电量守恒
+\(C_1U_0=(C_1+C_2)U_f\)，
+所以
+\[
+ \boxed{C_2=C_1(U_0/U_f-1)
+ \approx233\,\mathrm{pF}}.
+\]
+初末储能为
+\[
+ W_i=\frac12C_1U_0^2=5.00\times10^{-7}\,\mathrm J,
+\qquad
+ W_f=\frac12(C_1+C_2)U_f^2
+ =1.50\times10^{-7}\,\mathrm J.
+\]
+损失的静电场能
+\[
+ \boxed{W_i-W_f=3.50\times10^{-7}\,\mathrm J}.
+\]
+它通过瞬间均衡电流在导线电阻、介质损耗、
+火花和辐射等途径耗散，
+不能把仅靠电荷守恒的过程误称为机械能守恒。
+
+\paragraph{习题 15.24}
+无边缘效应时，插入厚度 \(b<d\)、
+不与电极接触的金属板，
+等效减少有场间距至 \(d-b\)：
+\[
+ C_0=\frac{\varepsilon_0S}{d},\qquad
+ C_1=\frac{\varepsilon_0S}{d-b}>C_0.
+\]
+(1) 电源断开，电量 \(Q\) 恒定，储能
+\(W_e=Q^2/(2C)\)，所以
+\[
+ \boxed{\Delta W_e=
+ \frac{Q^2}{2}(1/C_1-1/C_0)
+ =-\frac{Q^2b}{2\varepsilon_0S}}.
+\]
+储能\emph{降低}，不是增加；
+若题面用「增加」也需允许负增量。
+(2) 准静态插入时外力对金属板所做功
+\[
+ \boxed{W_{\rm ext}=\Delta W_e
+ =-\frac{Q^2b}{2\varepsilon_0S}<0},
+\]
+即电场会将它\emph{吸入}，
+外力需向外制动而非向内推入。
+(3) 若电源始终保持电压 \(U\)，则
+\(W_e=\tfrac12CU^2\)，电场储能增加
+\[
+ \boxed{\Delta W_e=
+ \frac12U^2(C_1-C_0)>0}.
+\]
+电源向电容器送入额外电量
+\(\Delta Q=U(C_1-C_0)\)，
+电源作功 \(W_{\rm bat}=U\Delta Q
+ =U^2(C_1-C_0)\)。
+由能量守恒得
+\[
+ \boxed{W_{\rm ext}=\Delta W_e-W_{\rm bat}
+ =-\frac12U^2(C_1-C_0)<0}.
+\]
+仍会吸入；不能仅看电场储能增大
+就错误推出金属板被排斥。
+
+\paragraph{习题 15.25}
+圆筒内外半径
+\(a=0.05\,\mathrm m,b=0.07\,\mathrm m\)。
+重叠长度 \(\ell\) 足够大而端部边缘场可忽略时，
+两同轴圆筒电容
+\[
+ C(\ell)=\frac{2\pi\varepsilon_0\ell}
+ {\ln(b/a)},\qquad
+ \frac{dC}{d\ell}
+ =\frac{2\pi\varepsilon_0}{\ln(b/a)}.
+\]
+先以 \(U=5000\,\mathrm V\) 充电后断开，
+此时 \(Q=C(\ell)U\) 保持恒定。
+电势能 \(W=Q^2/(2C)\) 随
+重叠长度 \(\ell\) 增加而减小，
+因此内筒受朝\emph{增大重叠长度}方向的力
+\[
+ \boxed{F=-\left.\frac{dW}{d\ell}\right|_Q
+ =\frac{Q^2}{2C^2}\frac{dC}{d\ell}
+ =\frac12U^2\frac{2\pi\varepsilon_0}{\ln(0.07/0.05)}
+ \approx2.07\times10^{-3}\,\mathrm N}.
+\]
+按题图内筒悬在外筒上方，
+重叠增长意味着内筒向下，故力向下。
+这是刚断开电源时电势差仍为5kV的初始力；
+随内筒下降 \(C\) 增大，电压下降，力随之变化。
+
+\paragraph{习题 15.26}
+板面积 \(ab\)，间距 \(\delta\)，
+按 \(x\in[0,a]\) 插入宽 \(b\)
+的介质板。忽略边缘场时，
+空气与介质覆盖区域是\emph{并联}：
+\[
+ \boxed{C(x)=\frac{\varepsilon_0b}{\delta}
+ [a+(\varepsilon_r-1)x]},\qquad
+ C'=\frac{\varepsilon_0b}{\delta}(\varepsilon_r-1)>0.
+\]
+断开电源电量 \(Q\) 不变时：
+\[
+ \boxed{W_Q(0)=\frac{Q^2\delta}{2\varepsilon_0ab}},
+\quad
+ \boxed{W_Q(x)=\frac{Q^2}{2C(x)}
+ =\frac{Q^2\delta}
+ {2\varepsilon_0b[a+(\varepsilon_r-1)x]}}.
+\]
+电力朝\emph{插入更多}的 \(+x\) 方向，大小
+\[
+ \boxed{F_Q(x)=
+ -\left.\frac{dW_Q}{dx}\right|_Q
+ =\frac{Q^2C'}{2C(x)^2}>0}.
+\]
+没有摩擦时能量
+\(W_Q(0)-W_Q(a)\) 转为介质板平动动能
+（或可由外部制动力回收）。
+若接恒电压电源 \(U\)，则
+\[
+ \boxed{W_U(x)=\tfrac12C(x)U^2},\quad
+ \boxed{F_U=\tfrac12U^2C'>0}.
+\]
+尽管电场储能在恒压下随 \(x\) 增长，
+电源仍在输送电量，作功
+\(W_{\rm bat}=U\Delta Q=U^2\Delta C\)；
+其中 \(\tfrac12U^2\Delta C\)
+增加场能，另一半进入介质板的机械能
+（理想条件）。两种约束不可混用。
+
+\paragraph{习题 15.27}
+同心球形电容器之间
+\(E(r)=Q/(4\pi\varepsilon_0r^2)\)，
+体积能量密度
+\(u=\tfrac12\varepsilon_0E^2\)。
+从 \(R_1\) 到 \(r\) 的总电场能
+\[
+ W(R_1,r)=\int_{R_1}^{r}
+ \frac{\varepsilon_0E(s)^2}{2}\,4\pi s^2\,ds
+ =\frac{Q^2}{8\pi\varepsilon_0}
+ \left(\frac1{R_1}-\frac1r\right).
+\]
+要使其等于全部储能
+\(W(R_1,R_2)\) 的一半，应满足
+\[
+ \frac1{R_1}-\frac1r
+ =\frac12\left(\frac1{R_1}-\frac1{R_2}\right).
+\]
+故
+\[
+ \boxed{r=\frac{2R_1R_2}{R_1+R_2}}.
+\]
+孤立导体球的外边界相当于
+\(R_2\to\infty\)，
+于是从 \(R\) 到 \(2R\) 的球壳
+正好储存整个外部静电能的一半。
+
+\paragraph{习题 15.28}
+以 \(+y\) 向上，
+上板带 \(+Q\)、下板带 \(-Q\)；
+两板间自由位移
+\(\boldsymbol D=-(Q/S)\hat{\boldsymbol y}\)，
+\[
+ \boldsymbol E(y)=
+ -\frac{Q}{\varepsilon_0S[1+3y/y_0]}
+ \hat{\boldsymbol y}.
+\]
+电压
+\[
+ U=\int_0^{y_0}\frac{Q\,dy}
+ {\varepsilon_0S[1+3y/y_0]}
+ =\frac{Qy_0\ln4}{3\varepsilon_0S};
+\quad
+ \boxed{C=\frac{3\varepsilon_0S}{y_0\ln4}}.
+\]
+介质极化矢量
+\[
+ \boldsymbol P(y)=\boldsymbol D-\varepsilon_0\boldsymbol E
+ =-\frac QS\left(1-\frac1{1+3y/y_0}\right)
+ \hat{\boldsymbol y}.
+\]
+在上表面 \(y=y_0\)，介质外法线 \(+\hat y\)，
+在下表面 \(y=0\) 外法线 \(-\hat y\)，
+所以
+\[
+ \boxed{\sigma_{b,\rm upper}=-\frac{3Q}{4S}},
+ \qquad
+ \boxed{\sigma_{b,\rm lower}=0}.
+\]
+由 \(\rho_b=-\boldsymbol\nabla\cdot\boldsymbol P\) 得
+\[
+ \boxed{\rho_b(y)=\frac{3Q}{Sy_0
+ (1+3y/y_0)^2}}.
+\]
+全部束缚体电荷
+\[
+ Q_{b,\rm bulk}=S\int_0^{y_0}\rho_b(y)\,dy
+ =\frac{3Q}{4},
+\]
+与两面束缚电荷
+\(-3Q/4+0\) 相加为零，
+严格满足题(4)。
+
+\paragraph{习题 15.29}
+把中空导体球视作球形等电势表面，
+上半球外为相对介电常量近似1的空气，
+下半球外为相对介电常量
+\(\varepsilon_r=3\) 的油。
+半球相当于两个共电势的
+外部静电场电容并联，
+通量/电荷分别与各自介质介电常量成正比：
+\[
+ Q_{\rm upper}:Q_{\rm lower}=1:\varepsilon_r.
+\]
+给总电量 \(Q=2.0\times10^{-6}\,\mathrm C\)，
+得
+\[
+ \boxed{Q_{\rm upper}=\frac{Q}{1+\varepsilon_r}
+ =5.0\times10^{-7}\,\mathrm C},\quad
+ \boxed{Q_{\rm lower}=\frac{\varepsilon_rQ}{1+\varepsilon_r}
+ =1.5\times10^{-6}\,\mathrm C}.
+\]
+假定油面恰好通过球心、油和空气均为均匀各向同性介质，
+忽略接触线、表面张力等效应。
+
+\paragraph{习题 15.30}
+习题13.34玻尔圆轨道模型
+在均匀各向同性介质中把
+\(\varepsilon_0\) 替换为
+\(\varepsilon=\varepsilon_0\varepsilon_r\)，
+离子（视作 \(+e\) 点电荷）吸引电子的力为
+\(F=e^2/(4\pi\varepsilon_0\varepsilon_r r^2)\)。
+由向心力及角动量量子化
+\(m_evr=n\hbar\)，可得能级
+\[
+ \boxed{E_n=-\frac{m_ee^4}
+ {2(4\pi\varepsilon_0)^2\hbar^2
+ \varepsilon_r^2 n^2}}.
+\]
+在 \(n=1\) 的基态
+\[
+ \boxed{E_1=-\frac{13.6}{15.8^2}\,\mathrm{eV}
+ \approx-0.0545\,\mathrm{eV}}.
+\]
+其束缚能的绝对值只有真空玻尔模型的
+\(1/15.8^2\approx0.00401\)，
+即约 \(0.401\%\)。
+题目使用简单氢样有效介电常量模型；
+半导体实际还涉及电子有效质量、能带和屏蔽长度，
+不能将上述值当成不依赖材料的精确施主束缚能。

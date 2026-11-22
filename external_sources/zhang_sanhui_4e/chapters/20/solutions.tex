@@ -1,0 +1,690 @@
+% 张三慧V2第二十章《电磁感应》章末习题独立解析（扫描PDF205--208）。
+% 公式统一LaTeX；几何方向和理想化边界需学术专家复核。
+\section*{第20章\quad 电磁感应：独立解析}
+
+\paragraph{习题 20.1}
+长直导线在距轴 \(x\) 处
+\(B(x)=\mu_0I/(2\pi x)\)；
+由图20.22电流向上，
+导线右边磁场\emph{入纸面}。
+横杆向上运动，
+\(\boldsymbol v\times\boldsymbol B\) 指向左端 \(a\)，
+正电荷在 \(a\) 聚集。
+杆沿 \(x\) 方向各处动生电势微元
+\(d\mathcal E=vB(x)\,dx\)，所以
+\[
+ \boxed{|\mathcal E|=\int_d^{d+l}vB(x)\,dx
+ =\frac{\mu_0Iv}{2\pi}\ln\frac{d+l}{d}}.
+\]
+代入 \(I=5\,\mathrm A,v=10\,\mathrm{m/s}\)、
+\(d=.10\,\mathrm m,l=.20\,\mathrm m\)：
+\[
+ \boxed{|\mathcal E|\approx1.10\times10^{-5}\,\mathrm V},
+ \qquad \boxed{\varphi_a>\varphi_b}.
+\]
+
+\paragraph{习题 20.2}
+线圈半径 \(R=.12\,\mathrm m\)，
+匝数 \(N=4000\)，
+\(B=.5\,\mathrm G=5\times10^{-5}\,\mathrm T\)，
+旋转频率 \(f=30\,\mathrm{s^{-1}}\)。
+线圈磁链 \(N\Phi=NBA\cos(\omega t+\phi)\)，
+\(\omega=2\pi f\)，
+\(\mathcal E=-d(N\Phi)/dt\)。
+因此
+\[
+ \boxed{\mathcal E_{\max}=NB\pi R^2(2\pi f)
+ \approx1.71\,\mathrm V}.
+\]
+要达到最大值，线圈旋转轴
+需与 \(\boldsymbol B\) 垂直，
+使线圈法向扫过磁场方向；
+在\emph{线圈平面平行于磁场}
+（法向与磁场垂直、磁通瞬时为零）
+时感应电动势的绝对值最大。
+不可把 \(4\times10^3\) 匝误录成4匝。
+
+\paragraph{习题 20.3}
+穿过矩形线圈每匝的磁通
+\[
+ \Phi=\int_d^{d+a}\frac{\mu_0I}{2\pi x}L\,dx
+ =\frac{\mu_0IL}{2\pi}\ln\frac{d+a}{d}.
+\]
+线圈以 \(v=dd/dt>0\) 远离直导线，
+磁通减少，电势幅值
+\[
+ \boxed{|\mathcal E|
+ =\frac{\mu_0NILv}{2\pi}
+ \left(\frac1d-\frac1{d+a}\right)}.
+\]
+\(N=10^3,I=5\,\mathrm A,L=.20\,\mathrm m\)，
+\(v=2\,\mathrm{m/s}\)，
+\(d=a=.10\,\mathrm m\)，
+\[
+ \boxed{|\mathcal E|=2.00\times10^{-3}\,\mathrm V}.
+\]
+线圈上下边的动生电动势相消，
+近侧与远侧竖直边的贡献不完全抵消。
+
+\paragraph{习题 20.4}
+图20.23中线圈固定，
+电流
+\(i(t)=5\sin(100\pi t)\,\mathrm A\)。
+磁链为
+\[
+ \Psi(t)=\frac{\mu_0NL}{2\pi}
+ \ln\frac{d+a}{d}\ i(t).
+\]
+故
+\[
+ \boxed{\mathcal E(t)
+ =-\frac{\mu_0NL}{2\pi}
+ \ln\frac{d+a}{d}\ \frac{di}{dt}}.
+\]
+由 \(di/dt=500\pi\cos(100\pi t)\)，
+\(N=1000,L=.20,d=a=.10\)：
+\[
+ \boxed{\mathcal E(t)\approx
+ -4.36\times10^{-2}\cos(100\pi t)\,\mathrm V}.
+\]
+负号依取的线圈环向正方向；
+感生电势幅度约43.6mV。
+
+\paragraph{习题 20.5}
+圆盘区域 \(r\le R\) 有均匀随时间变化的
+\(\boldsymbol B(t)\)，
+图20.24直杆 \(ab\) 为低于圆心的水平弦。
+圆心至弦垂距
+\(h=\sqrt{R^2-L^2/4}\)，
+三角区域 \(Oab\) 面积
+\(S=Lh/2\)。
+由法拉第定律对
+\(O\to a\to b\to O\) 的闭路积分，
+两径向边因为感生电场沿同心圆切向而
+没有线积分，只有弦段贡献：
+\[
+ \boxed{|\mathcal E_{ab}|=
+ \frac{L}{2}\sqrt{R^2-\frac{L^2}{4}}\,
+ \left|\frac{dB}{dt}\right|}.
+\]
+图中磁场\emph{指向纸内且增强}，
+按楞次定律感生电场逆时针，
+在位于圆心下方的弦段从 \(a\) 向 \(b\)。
+所以
+\(\boxed{\varphi_b>\varphi_a}\)。
+同半径两端即使径向距离相等，
+也不能错误认为沿非保守感生电场弦段
+的积分为零。
+
+\paragraph{习题 20.6}
+取题图竖直地磁场
+\(B_z=.42\times10^{-4}\,\mathrm T\)，
+两翼展长 \(l=12.705\,\mathrm m\)，
+飞行速率
+\(v\simeq1.70(330)=561\,\mathrm{m/s}\)
+（配套辅导书使用声速330m/s）。
+两翼尖横跨磁场动生电势
+\[
+ \boxed{|\mathcal E|=B_zlv
+ =.42\times10^{-4}(12.705)(561)
+ \approx0.30\,\mathrm V}.
+\]
+飞机从东向西飞、当地竖直磁场向下，
+\(\boldsymbol v\times\boldsymbol B\)
+由北指向南；
+正电荷向南端翼尖移动，
+故\(\boxed{\text{南翼尖电势高}}\)。
+当地声速若取340m/s，
+幅值约0.31V；需注明声速约定。
+
+\paragraph{习题 20.7}
+海水穿过垂直其速度方向的地磁竖直分量，
+电极间距 \(l=200\,\mathrm m\)，
+测得 \(|U|=7.0\times10^{-3}\,\mathrm V\)。
+在理想均匀流条件下
+\[
+ \boxed{v=\frac{|U|}{Bl}
+ =\frac{7.0\times10^{-3}}
+ {(.70\times10^{-4})(200)}
+ =0.50\,\mathrm{m/s}}.
+\]
+这一估算需电极间导电水流与磁场正交；
+不同流场剖面会影响测得平均速度。
+
+\paragraph{习题 20.8}
+线圈面积 \(S=.10(.20)=.0200\,\mathrm{m^2}\)，
+\(N=120,B=.020\,\mathrm T\)。
+转动发电机感应电势幅值
+\(\mathcal E_{\max}=NBS\,\omega\)。
+令幅值12.0V，
+\[
+ \boxed{\omega=\frac{12.0}{120(.020)(.020)}
+ =250\,\mathrm{rad/s}},
+\quad
+ \boxed{n_{\rm rpm}=\frac{60\omega}{2\pi}
+ \approx2.39\times10^3\,\mathrm{r/min}}.
+\]
+配套书有时写旋转频率
+\(f\approx40\,\mathrm{Hz}\)，与此一致。
+
+\paragraph{习题 20.9}
+线圈从磁通初值
+\(\Psi_i=NBS\) 离开磁场至
+\(\Psi_f=0\)，
+法拉第定律
+\(\mathcal E=-d\Psi/dt\)、
+电流 \(i=\mathcal E/R\)。
+总电量
+\[
+ q=\int i\,dt
+ =-\frac1R\int_{\Psi_i}^{\Psi_f}d\Psi
+ =\frac{NBS}{R}.
+\]
+因此
+\[
+ \boxed{B=\frac{qR}{NS}}.
+\]
+由于对\emph{磁链总变化}积分，
+只要电阻保持常数且磁通确实从 \(NSB\) 变零，
+最后的 \(q\) 不依赖移出运动是否匀速。
+
+\paragraph{习题 20.10}
+源图20.26中位于半径 \(r\) 的
+小正方形区域，边长 \(a\ll r\)，
+盘面厚度 \(b\)，电阻率 \(\rho\)。
+当地盘速率 \(v=\omega r\)，
+径向动生电动势
+\(\mathcal E\simeq Bva=B\omega r a\)。
+按配套辅导书图20.4使用近似：
+小方块径向长度 \(a\) 的内回路电阻
+\(R_{\rm patch}=\rho a/(ab)=\rho/b\)，
+其余圆盘作为低阻回路。
+故局部电流
+\(I=\mathcal E/R_{\rm patch}
+ =B\omega r ab/\rho\)。
+垂直场中的切向制动力
+\(F\simeq B I a\)，
+阻力矩
+\[
+ \boxed{|\tau|=
+ \frac{B^2a^2r^2b}{\rho}\,\omega}.
+\]
+阻力方向与 \(\omega\) 相反，
+维持恒速所需机械功率
+\[
+ \boxed{P_{\rm mech}=|\tau|\omega
+ =\frac{B^2a^2r^2b}{\rho}\omega^2}.
+\]
+磁制动功转成圆盘内欧姆热，
+该量是图示局部低阻回流简化模型，
+不是完整二维涡流边值问题的精确解。
+
+\paragraph{习题 20.11}
+轨道半径固定为 \(r\)，
+带电量大小 \(e\)，
+设轨道处的磁场 \(B_r(t)\)。
+电子径向平衡
+\(e vB_r=mv^2/r\)，即
+\(mv=e r B_r\)；
+保持 \(r\) 常数则
+\[
+ m\frac{dv}{dt}=er\frac{dB_r}{dt}.
+\]
+半径 \(r\) 圆周上的
+非保守感生电场，由麦克斯韦—法拉第定律
+\[
+ 2\pi r E_\theta
+ =-\frac{d}{dt}
+ \left(\pi r^2\overline B\right),
+\qquad
+ |E_\theta|=\frac r2
+ \left|\frac{d\overline B}{dt}\right|.
+\]
+电子切向加速要求
+\(m\,dv/dt=e|E_\theta|\)。
+组合得
+\[
+ \boxed{\frac{dB_r}{dt}
+ =\frac12\frac{d\overline B}{dt}}.
+\]
+若初始两场均零或
+\(B_r=\overline B/2\) 的初值已成立，
+积分得到
+\(\boxed{B_r=\overline B/2}\)。
+\emph{源条件限制：}
+如果起始有预置磁通，
+关系应含积分常数，
+不能只由导数关系无条件推断绝对场值。
+
+\paragraph{习题 20.12}
+固定半径 \(r\) 的电子轨道
+需向心力 \(F_c=mv^2/r\)。
+速度增加 \(\Delta v\ll v\) 时，
+\[
+ \Delta F_c=
+ \frac m r[(v+\Delta v)^2-v^2]
+ \simeq\frac{2mv}{r}\Delta v.
+\]
+原有磁场满足 \(eBv=mv^2/r\)，
+即 \(eB=mv/r\)。
+当场也增加 \(\Delta B\)，
+新的磁洛伦兹力的一级增量
+\[
+ \Delta F_B=e[(v+\Delta v)(B+\Delta B)-vB]
+ \simeq eB\Delta v+ev\Delta B.
+\]
+要求保持半径，令
+\(\Delta F_B=\Delta F_c\)，得
+\[
+ e v\Delta B=\frac{mv}{r}\Delta v
+ \Longrightarrow
+ \boxed{\Delta B=\frac{m}{er}\Delta v}.
+\]
+这正是习题20.11的加速器条件
+\(B=mv/(er)\) 的微分形式。
+速率接近光速时需改用相对论动量
+而非 \(mv\)。
+
+\paragraph{习题 20.13}
+无限长近似的同轴均匀线圈组，
+线圈1电流 \(I_1\) 在管内场
+\(B_1=\mu_0N_1I_1/l\)。
+每匝线圈2的磁通
+\(\Phi_{21}=B_1S\)，
+总磁链 \(N_2\Phi_{21}\)，
+互感
+\[
+ \boxed{M_{21}=\frac{N_2\Phi_{21}}{I_1}
+ =\frac{\mu_0N_1N_2S}{l}
+ =\frac{\mu_0N_1N_2\pi R^2}{l}}.
+\]
+反向交换电流源同理得
+\(\boxed{M_{12}=M_{21}}\)，
+由磁场能交叉项的对称性也可解释。
+
+\paragraph{习题 20.14}
+大圆线圈 \(b\) 中心的磁感应强度
+\(B_b=\mu_0N_bI_b/(2R_b)\)。
+小线圈 \(a\) 面积远小于大圈，
+磁场近似均匀，
+\[
+ \boxed{M=\frac{\mu_0N_aN_bS_a}{2R_b}}.
+\]
+代入
+\(N_a=50,N_b=100,
+S_a=4.0\times10^{-4}\,\mathrm{m^2},R_b=.20\,\mathrm m\)，
+得
+\[
+ \boxed{M\approx6.28\times10^{-6}\,\mathrm H}.
+\]
+当 \(a\) 中电流以
+\(dI_a/dt=-50\,\mathrm{A/s}\) 下降，
+穿过圈 \(b\) 的\emph{每匝}磁通变化率
+\[
+ \boxed{\left|\frac{d\Phi_b}{dt}\right|
+ =\frac{M}{N_b}\left|\frac{dI_a}{dt}\right|
+ \approx3.14\times10^{-6}\,\mathrm{Wb/s}},
+\]
+线圈 \(b\) 的感应电动势幅值
+\[
+ \boxed{|\mathcal E_b|=M|dI_a/dt|
+ \approx3.14\times10^{-4}\,\mathrm V}.
+\]
+\emph{磁链}变化率 \(N_b\,d\Phi_b/dt\)
+比单匝磁通变化率大 \(N_b\) 倍，不能混报。
+
+\paragraph{习题 20.15}
+长直螺线管自感
+\[
+ L_s=\frac{\mu_0N^2A}{l},
+\quad A=\pi r^2.
+\]
+取 \(r=.020\,\mathrm m,l=.300\,\mathrm m,N=1200\)，
+\[
+ \boxed{L_s=
+ \frac{(4\pi\times10^{-7})(1200)^2\pi(.020)^2}{.300}
+ \approx7.58\times10^{-3}\,\mathrm H}.
+\]
+电流变化率
+\(3.0\times10^2\,\mathrm{A/s}\)，
+\[
+ \boxed{|\mathcal E_L|=L_s|dI/dt|
+ \approx2.27\,\mathrm V}.
+\]
+方向总按楞次定律阻碍电流变化。
+
+
+\paragraph{习题 20.16}
+由自感定义
+\(\mathcal E_L=-L\,dI/dt\)，
+\(dI/dt=4.0\,\mathrm{A/s}\)、
+\(|\mathcal E_L|=3.2\,\mathrm{mV}\)，
+\[
+ \boxed{L=\frac{3.2\times10^{-3}}{4.0}
+ =8.0\times10^{-4}\,\mathrm H}.
+\]
+每匝磁通
+\(\Phi=20\,\mu\mathrm{Wb}\)，
+总磁链 \(N\Phi=LI\)，
+所以
+\[
+ \boxed{N=\frac{LI}{\Phi}
+ =\frac{(8.0\times10^{-4})(10)}
+ {20\times10^{-6}}=400\text{ 匝}}.
+\]
+这里 \(\Phi\) 是\emph{每一匝}的磁通，
+不是整个螺线管的总磁链。
+
+\paragraph{习题 20.17}
+矩形截面环形螺线管内半径 \(R_1\)、
+外半径 \(R_2\)、高度 \(h\)，
+共 \(N\) 匝。安培定律
+\(B_\varphi(r)=\mu_0NI/(2\pi r)\)
+（环管内部）。
+每匝的穿链磁通
+\[
+ \Phi=\int_{R_1}^{R_2}B_\varphi(r)h\,dr
+ =\frac{\mu_0NIh}{2\pi}\ln\frac{R_2}{R_1}.
+\]
+故
+\[
+ \boxed{L=\frac{N\Phi}{I}
+ =\frac{\mu_0N^2h}{2\pi}\ln\frac{R_2}{R_1}}.
+\]
+中心轴无限直导线通过电流 \(I_w\) 时，
+其磁场 \(B_w=\mu_0I_w/(2\pi r)\)；
+流过环管每匝面积的磁通为
+\(\Phi_w=(\mu_0I_wh/(2\pi))
+ \ln(R_2/R_1)\)。
+于是
+\[
+ \boxed{M_{\rm ring\leftarrow wire}
+ =\frac{\mu_0Nh}{2\pi}\ln\frac{R_2}{R_1}}.
+\]
+反过来，环管电流 \(I\) 经过
+中心直导线的回流闭合回路可取
+跨环管截面的面，磁链的交叉系数
+根据电磁能的互易性相同，
+所以
+\[
+ \boxed{M_{12}=M_{21}
+ =\frac{\mu_0Nh}{2\pi}\ln\frac{R_2}{R_1}}.
+\]
+\textbf{几何边界：}无限直导线本身不是闭合回路，
+在讨论其\emph{互感}前须指定遥远的返回路径；
+理想近场极限消去返回部分。
+
+\paragraph{习题 20.18}
+两条平行无限长导线轴间距 \(D\)、
+半径 \(a\)，电流大小 \(I\) 相反。
+选两圆柱面之间的径向—轴向平面
+作为穿磁通面，
+距第一根中心 \(x\in[a,D-a]\) 处
+两线的环向磁场在两线之间同向，
+\[
+ B(x)=\frac{\mu_0I}{2\pi}
+ \left(\frac1x+\frac1{D-x}\right).
+\]
+单位轴长磁通为
+\[
+ \Phi'=\frac{\mu_0I}{2\pi}
+ \int_a^{D-a}\left(\frac1x+\frac1{D-x}\right)dx
+ =\frac{\mu_0I}{\pi}\ln\frac{D-a}{a}.
+\]
+因此忽略导线内部磁场的
+单位长度电路自感
+\[
+ \boxed{L'=\frac{\Phi'}I
+ =\frac{\mu_0}{\pi}\ln\frac{D-a}{a}}.
+\]
+当 \(D\gg a\)，可近似为
+\(\mu_0\ln(D/a)/\pi\)。
+
+\paragraph{习题 20.19}
+图示两平面线圈的平面互相垂直，
+磁通互感在理想对称构型中为零，
+所以 \(\boxed{M\simeq0}\)。
+串联时同一电流 \(I\)
+的磁能
+\(W_m=\frac12(L_1+L_2)I^2\)，
+\[
+ \boxed{L_{\rm series}=L_1+L_2}.
+\]
+并联时两线圈端电压相同，
+\(V=L_1dI_1/dt=L_2dI_2/dt\)，
+总电流 \(I=I_1+I_2\)，
+因此
+\(dI/dt=V(1/L_1+1/L_2)\)，
+\[
+ \boxed{\frac1{L_{\rm parallel}}
+ =\frac1{L_1}+\frac1{L_2}}.
+\]
+若有非零互感，不能套并联反比加法。
+
+\paragraph{习题 20.20}
+两耦合线圈自感
+\(L_1,L_2\)，互感
+\(M\) 的磁能通式
+\[
+ W_m=\frac12L_1I_1^2+\frac12L_2I_2^2
+ +MI_1I_2.
+\]
+顺串联时 \(I_1=I_2=I\)
+（图20.28端子2、3相接），
+\[
+ W_m=\frac12(L_1+L_2+2M)I^2
+ \Longrightarrow
+ \boxed{L_{\rm aiding}=L_1+L_2+2M}.
+\]
+反串联时 \(I_1=I,I_2=-I\)
+（端子2、4相接），
+\[
+ \boxed{L_{\rm opposing}=L_1+L_2-2M}.
+\]
+被动磁能非负限制
+\(|M|\le\sqrt{L_1L_2}\)，
+这个约束可防止反串联算出负的
+理想等效自感。
+
+\paragraph{习题 20.21}
+题给中子星表面场
+\(B=10^8\,\mathrm T\)，
+\[
+ \boxed{u_B=\frac{B^2}{2\mu_0}
+ =\frac{10^{16}}{8\pi\times10^{-7}}
+ \approx3.98\times10^{21}\,\mathrm{J/m^3}}.
+\]
+磁场能量等效的质量密度
+\[
+ \boxed{\rho_{\rm eq}=\frac{u_B}{c^2}
+ \approx4.43\times10^4\,\mathrm{kg/m^3}}.
+\]
+这不是中子星物质的真实质量密度，
+而仅是题给磁场能量的质能等效量。
+
+\paragraph{习题 20.22}
+真空电场能量密度
+\(u_E=\tfrac12\varepsilon_0E^2\)，
+磁场能量密度
+\(u_B=B^2/(2\mu_0)\)。
+\(E=10^6\,\mathrm{V/m}\)、
+\(B=2.0\,\mathrm T\) 时
+\[
+ \boxed{u_E
+ =\frac12(8.8542\times10^{-12})(10^{12})
+ \approx4.43\,\mathrm{J/m^3}},
+\]
+\[
+ \boxed{u_B=\frac4{2(4\pi\times10^{-7})}
+ \approx1.59\times10^6\,\mathrm{J/m^3}}.
+\]
+在给定的\emph{典型可实现}场强下，
+磁场储能密度高约
+\(\boxed{3.59\times10^5}\) 倍。
+这不表示任意大小的电场能量密度
+都必低于任意磁场。
+
+\paragraph{习题 20.23}
+目标能量
+\(W=1\,\mathrm{kW\,h}
+ =3.6\times10^6\,\mathrm J\)。
+磁场 \(B=1\,\mathrm T\)
+对应 \(u_B=B^2/(2\mu_0)\)，
+因此所需储磁空间
+\[
+ \boxed{V=\frac{W}{u_B}
+ =\frac{2\mu_0W}{B^2}
+ \approx9.05\,\mathrm{m^3}}.
+\]
+若以500A线圈电流储存同一能量，
+\(W=\frac12LI^2\) 给
+\[
+ \boxed{L=\frac{2W}{I^2}
+ =\frac{7.2\times10^6}{500^2}
+ =28.8\,\mathrm H}.
+\]
+实际超导线圈还受支撑机械应力、
+临界电流和漏磁限制。
+
+\paragraph{习题 20.24}
+导线半径
+\(r=.0055\,\mathrm m\)，
+电流 \(I=20\,\mathrm A\)，
+电阻率
+\(\rho=1.69\times10^{-8}\,\Omega\mathrm m\)。
+导体内沿线方向匀强电场
+\(E=\rho j=\rho I/(\pi r^2)\)，
+表面附近切向电场连续：
+\[
+ \boxed{E\simeq3.56\times10^{-3}\,\mathrm{V/m}}.
+\]
+因此
+\[
+ \boxed{u_E=\frac12\varepsilon_0E^2
+ \approx5.61\times10^{-17}\,\mathrm{J/m^3}}.
+\]
+表面环向磁场
+\(B=\mu_0I/(2\pi r)\)，
+\[
+ \boxed{B\simeq7.27\times10^{-4}\,\mathrm T},\quad
+ \boxed{u_B=\frac{B^2}{2\mu_0}
+ \approx2.10\times10^{-1}\,\mathrm{J/m^3}}.
+\]
+\emph{外}场还有为传输焦耳热提供的
+坡印廷矢量，其方向朝向导线内部；
+单看电场能量密度不能描述输能机制。
+
+\paragraph{习题 20.25}
+同轴电缆中心实心芯半径 \(R_1\)，
+均匀体电流 \(+I\)；
+外薄筒半径 \(R_2\) 回流 \(-I\)。
+用安培环路定律得到
+\[
+ \boxed{B(r)=
+ \begin{cases}
+ \mu_0Ir/(2\pi R_1^2),&0\le r<R_1,\\
+ \mu_0I/(2\pi r),&R_1\le r<R_2,\\
+ 0,&r>R_2
+ \end{cases}}.
+\]
+单位长度磁能
+\(U'_B=\int B^2/(2\mu_0)\,2\pi r\,dr\)。
+芯内部：
+\[
+ U'_{\rm core}=\int_0^{R_1}
+ \frac{\mu_0I^2r^2}{8\pi^2R_1^4}2\pi r\,dr
+ =\frac{\mu_0I^2}{16\pi}.
+\]
+芯与外筒之间：
+\[
+ U'_{\rm gap}=\frac{\mu_0I^2}{4\pi}
+ \ln\frac{R_2}{R_1}.
+\]
+总计
+\[
+ \boxed{U'_B=\frac{\mu_0I^2}{16\pi}
+ +\frac{\mu_0I^2}{4\pi}\ln\frac{R_2}{R_1}}.
+\]
+用 \(U'_B=\tfrac12L'I^2\)，
+\[
+ \boxed{L'=\frac{\mu_0}{8\pi}
+ +\frac{\mu_0}{2\pi}\ln\frac{R_2}{R_1}}.
+\]
+若芯电流因趋肤效应集中于表面，
+第一项内部自感会减小，
+以上表达式只适于题定的均匀电流模型。
+
+\paragraph{习题 20.26}
+图20.29两根平行圆管半径 \(a\)，
+距离 \(D_1\gg a\)，反向电流 \(\pm I\)。
+忽略管内场，由习题20.18的远离近似
+\[
+ \boxed{L'(D)\simeq\frac{\mu_0}{\pi}\ln\frac Da}.
+\]
+定电流条件下两导线排斥力每单位长度
+\(F'=\mu_0I^2/(2\pi D)\)。
+导管从 \(D_1\) 到 \(D_2>D_1\)，
+磁力向外作正机械功
+\[
+ \boxed{A'_m=
+ \int_{D_1}^{D_2}F'\,dD
+ =\frac{\mu_0I^2}{2\pi}\ln\frac{D_2}{D_1}}.
+\]
+磁能每单位长度
+\(U'_B=\tfrac12L'I^2\)，
+\[
+ \boxed{\Delta U'_B=
+ \frac12I^2[L'(D_2)-L'(D_1)]
+ =\frac{\mu_0I^2}{2\pi}\ln\frac{D_2}{D_1}
+ =A'_m}.
+\]
+分开使磁通链增加，
+法拉第感应电势阻碍原电流继续增大，
+即其方向与原电源驱动电流方向相反。
+为了\emph{保持}恒定 \(I\)，
+电源必须提供额外功
+\[
+ \boxed{A'_e=I^2\Delta L'
+ =\frac{\mu_0I^2}{\pi}\ln\frac{D_2}{D_1}}.
+\]
+能量账目：
+\[
+ \boxed{A'_e=A'_m+\Delta U'_B
+ =2A'_m=2\Delta U'_B}.
+\]
+\textbf{反直觉之处：}
+两线因磁斥力分开、磁场却同时\emph{增能}，
+因为保持电流不变的电源输入双倍的能量；
+不能把恒定电流和固定磁通条件混为一谈。
+
+\paragraph{习题 20.27}
+源图20.30中同轴两螺线管截面积
+\(S\)，匝密度 \(n_1,n_2\)，
+电流 \(I_1,I_2\)，
+令轴向插入重叠长度为 \(x\)。
+忽略端部漏磁，
+重叠区中磁场分别为
+\(B_1=\mu_0n_1I_1\)、
+\(B_2=\mu_0n_2I_2\)。
+对重叠的一段长度 \(x\)，
+两个线圈的互感
+\[
+ M(x)=\mu_0n_1n_2Sx
+\]
+（按相互绕向选正号）。
+固定两电流时的磁\emph{共能}
+\(W'_m=\frac12L_1I_1^2+\frac12L_2I_2^2
+ +M(x)I_1I_2\)；
+电磁力取定电流共能对位置导数：
+\[
+ \boxed{F_m=\left.
+ \frac{\partial W'_m}{\partial x}
+ \right|_{I_1,I_2}
+ =\mu_0n_1n_2SI_1I_2}.
+\]
+若两电流使重叠区磁场同向，
+\(M I_1I_2>0\)，增大重叠长度降低
+定电流磁机械系统的广义势，
+故互相吸入；反向则排斥。
+与习题20.26一样，
+定电流机械功必须和电源提供的功分开核算。

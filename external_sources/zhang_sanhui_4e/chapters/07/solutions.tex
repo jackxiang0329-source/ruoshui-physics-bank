@@ -1,0 +1,889 @@
+% 张三慧第4版V1第7章《波动》独立计算候选解
+% 原教材PDF物理页248--253；配套辅导书对照/原图重绘尚未验收。
+\section*{第7章\quad 波动：独立解析}
+
+\paragraph{习题 7.1}
+频率等于行波速度除以波长。
+题给
+\(u=740\,\mathrm{km/h}\)，
+\(\lambda=300\,\mathrm{km}\)，所以
+\[
+ \boxed{f=\frac u\lambda
+ =\frac{740}{300\times3600}
+ \approx6.85\times10^{-4}\,\mathrm{Hz}}.
+\]
+对应周期约 \(24.3\,\mathrm{min}\)。
+横跨 \(L=8000\,\mathrm{km}\)
+所需时间
+\[
+ \boxed{t=\frac Lu=\frac{8000}{740}
+ \approx10.81\,\mathrm h}.
+\]
+按题给的恒速波传播模型，不计不同水深的色散。
+
+\paragraph{习题 7.2}
+在 \(x_0=0.10\,\mathrm m\) 处
+\(y(x_0,t)=0.05\sin(1.0-4.0t)\)。
+角频率 \(\omega=4\,\mathrm{rad/s}\)，
+波数大小 \(k=\omega/u=4/0.80=5.0\,\mathrm{rad/m}\)。
+\textbf{原题没有规定波的传播方向}，
+故沿 \(+x\) 传播时是
+\[
+ \boxed{y_+(x,t)=0.050\sin[
+ 1.0-4.0t+5.0(x-0.10)]\ \mathrm m
+ =0.050\sin(0.50+5x-4t)\,\mathrm m}.
+\]
+沿 \(-x\) 传播时为
+\[
+ \boxed{y_-(x,t)=0.050\sin[
+ 1.0-4.0t-5.0(x-0.10)]\ \mathrm m
+ =0.050\sin(1.50-5x-4t)\,\mathrm m}.
+\]
+两式在 \(x=0.10\,\mathrm m\)
+都严格化为源点的观测时间函数，
+同时各自的相位定向表示相反传播方向。
+配套辅导书PDF物理页112亦明确分别给出正、负
+\(x\) 方向的两种波函数，不能人为添加传播方向约束。
+
+\paragraph{习题 7.3}
+原波函数
+\(y=0.020\sin[2\pi(200t-2x)]\)，
+故
+\[
+ \boxed{f=200\,\mathrm{Hz},\quad
+ \lambda=1/2=0.50\,\mathrm m,\quad
+ u=f\lambda=100\,\mathrm{m/s}}.
+\]
+相位固定时 \(200t-2x=C\)，
+因此波沿 \(+x\) 传播。
+绳上质元最大振动速率
+\(v_{\max}=A\omega
+ =0.020(2\pi 200)\approx25.13\,\mathrm{m/s}\)，
+与波速之比
+\[
+ \boxed{v_{\max}/u\approx0.2513}.
+\]
+质点振动速度不能和波形传播速度混同。
+
+\paragraph{习题 7.4}
+简谐横波频率
+\(f=1\,\mathrm{Hz}\)，
+波速 \(u=3000\,\mathrm{m/s}\)，
+故波长
+\[
+ \boxed{\lambda=\frac uf=3.00\times10^3\,\mathrm m}.
+\]
+\textbf{题意关键：}原题的 \(2\,\mathrm m\) 是
+「居民\emph{被地面抛起}的高度」，
+\emph{不是}地震波振幅。
+假定离地后居民竖直自由上抛，
+最大上升高度 \(h=2\,\mathrm m\)
+所需的初始上抛速率
+\[
+ v_{\rm throw}=\sqrt{2gh}
+ =\sqrt{2(9.8)(2)}
+ \approx6.26\,\mathrm{m/s}.
+\]
+按题设将这个速率近似等同
+地面简谐振动的最大竖直速率
+\(v_{\max}=2\pi fA\)，
+得到
+\[
+ \boxed{A=\frac{\sqrt{2gh}}{2\pi f}
+ \approx0.997\,\mathrm m\approx1.0\,\mathrm m}.
+\]
+配套辅导书PDF物理页113亦按此建模；
+此前候选把抛高2m误认成地面振幅，
+得到12.57m/s及错误问题目标，现已纠正。
+「上抛2m」仅为教材定性史料与高度理想化模型，
+不等同于对地震实际地面峰值的可靠实测。
+
+\paragraph{习题 7.5}
+原图7.44可读振幅
+\(A=0.040\,\mathrm m\)、波长
+\(\lambda=0.40\,\mathrm m\)，
+沿 \(+x\) 传播速度
+\(u=0.080\,\mathrm{m/s}\)，
+故
+\[
+ k=\frac{2\pi}{\lambda}=5\pi\,\mathrm{rad/m},\quad
+ \omega=uk=0.40\pi\,\mathrm{rad/s},\quad
+ T=\frac{\lambda}{u}=5.00\,\mathrm s.
+\]
+由 \(t=0\) 原点向上过零的\emph{空间曲线}，
+取
+\[
+ \boxed{y(x,t)=0.040\sin(5\pi x-0.40\pi t)\ \mathrm m}.
+\]
+注意波形沿 \(+x\) 运动，
+而 \(x=0,t=0\) 处的介质质点速度
+\(\partial_ty=-A\omega<0\)，
+不能把波形空间上升斜率误当成质点向上速度。
+当 \(t=T/8=0.625\,\mathrm s\)，
+波形相当于初图右移
+\(uT/8=\lambda/8=0.050\,\mathrm m\)：
+\[
+ \boxed{y(x,T/8)=0.040
+ \sin(5\pi x-\pi/4)\ \mathrm m}.
+\]
+原图矢量重绘仍待复核。
+
+\paragraph{习题 7.6}
+给定
+\(y=A\cos[\pi(4t+2x)]\)，
+有 \(\omega=4\pi\)，
+\(k=2\pi\)；
+因为相位 \(4t+2x\) 恒定需
+\(dx/dt=-2\,\mathrm{m/s}\)，
+波向 \(-x\) 传播。
+在 \(t=4.2\,\mathrm s\) 时
+\[
+ \boxed{y(x,4.2)=A\cos(0.8\pi+2\pi x)},
+\]
+其中相位已约去整周。
+波峰满足 \(4t+2x=2n\)，
+所以
+\(x=n-8.4\,\mathrm m\)。
+离原点最近的一峰在
+\[
+ \boxed{x_{\rm near}=-0.40\,\mathrm m}
+\]
+（右侧相邻峰位于 \(+0.60\,\mathrm m\)）。
+但是原题指的是\emph{距原点最近的那一个波峰}
+\(x=-0.40\,\mathrm m\)，
+波沿负 \(x\) 方向以 \(2\,\mathrm{m/s}\) 传播，
+故它在\emph{观察时刻4.2s之前}
+\(0.40/2=0.20\,\mathrm s\)
+已经经过原点，准确经过时刻为
+\[
+ \boxed{t_{\rm nearest}=4.20-0.20
+ =4.00\,\mathrm s}.
+\]
+右侧的\emph{另一个}波峰
+在 \(x=+0.60\,\mathrm m\)，
+它将于 \(4.20+0.60/2=4.50\,\mathrm s\)
+经过原点，不能混同二者。
+辅导书PDF物理页114确认最近波峰经过原点是4s；
+先前候选只报4.5s属于错误，现已修正。
+此刻图形按上述余弦式直接绘出。
+
+\paragraph{习题 7.7}
+\(u=350\,\mathrm{m/s}\)，
+\(f=500\,\mathrm{Hz}\)，
+波长 \(\lambda=u/f=0.70\,\mathrm m\)。
+若两点相位差为
+\(60^\circ=\pi/3\)，
+取最近的正距离：
+\[
+ \boxed{\Delta x=\frac{\Delta\varphi}{2\pi}\lambda
+ =\frac{0.70}{6}\approx0.117\,\mathrm m}.
+\]
+同一质点相隔 \(10^{-3}\,\mathrm s\)：
+\[
+ \boxed{\Delta\varphi
+ =2\pi f\Delta t
+ =2\pi(500)(10^{-3})=\pi}.
+\]
+在相位差中可任选加整周 \(2n\pi\)，
+但物理状态由模 \(2\pi\) 决定。
+
+\paragraph{习题 7.8}
+均匀细杆的一维纵波速率为
+\(u=\sqrt{Y/\rho}\)，
+其中 \(Y\) 是杨氏模量。
+由题给参数
+\[
+ \boxed{Y=\rho u^2
+ =(7.8\times10^3)(5100)^2
+ \approx2.03\times10^{11}\,\mathrm{Pa}}.
+\]
+这是理想无限细均匀弹性杆的
+无色散纵波近似。
+
+\paragraph{习题 7.9}
+体积弹性模量定义
+\(K=-V\,dp/dV\)。
+若 \(|\Delta V|\ll V\)，
+则小形变的恢复压强增量大小
+\(\Delta p\simeq K|\Delta V|/V\)。
+从零应变到最终压缩量所作弹性储能功
+\[
+ W=\int_0^{|\Delta V|}
+ \frac{K\,\delta V}{V}\,d(\delta V)
+ =\frac{K(\Delta V)^2}{2V}.
+\]
+除以原体积 \(V\)，得
+\[
+ \boxed{u_{\rm elastic}
+ =W/V=\frac12K(\Delta V/V)^2}.
+\]
+压缩与膨胀的能量均为正，原因是
+它依赖形变的平方。
+
+\paragraph{习题 7.10}
+均匀一维简谐纵波平均强度
+\(I_{\rm wave}=\tfrac12\rho u\omega^2A^2\)，
+其中 \(\omega=2\pi f\)。
+代入
+\(\rho=7.9\times10^3\,\mathrm{kg/m^3}\)，
+\(u=5.1\times10^3\,\mathrm{m/s}\)，
+\(f=10^3\,\mathrm{Hz}\)，
+\(A=10^{-9}\,\mathrm m\)，有
+\[
+ \boxed{I_{\rm wave}
+ =\tfrac12(7900)(5100)(2\pi1000)^2(10^{-9})^2
+ \approx7.95\times10^{-4}\,\mathrm{W/m^2}}.
+\]
+钢轨截面积
+\(S=15\,\mathrm{cm^2}
+ =1.5\times10^{-3}\,\mathrm{m^2}\)，
+平均传输功率
+\[
+ \boxed{P=I_{\rm wave}S
+ \approx1.19\times10^{-6}\,\mathrm W}.
+\]
+注意声强单位为 \(\mathrm{W/m^2}\)，
+与声级的dB标度不同。
+
+\paragraph{习题 7.11}
+绳线密度 \(\mu\)，张力 \(F_T\)。
+小振幅右行波
+\(y=A\cos(kx-\omega t)\)。
+小斜率下从左侧传向右侧的瞬时弹性功率
+由横向张力分量与质元垂直速度的乘积给出：
+\[
+ P(x,t)=-F_T\frac{\partial y}{\partial x}
+ \frac{\partial y}{\partial t}.
+\]
+代入
+\(\partial_xy=-Ak\sin(kx-\omega t)\)，
+\(\partial_ty=A\omega\sin(kx-\omega t)\)，
+故
+\[
+ P=F_TA^2k\omega
+ \sin^2(kx-\omega t).
+\]
+用弦波波速
+\(u=\sqrt{F_T/\mu}\)，
+且 \(\omega=ku\)：
+\[
+ \boxed{\overline P=
+ \frac12F_TA^2k\omega
+ =\frac12\mu uA^2\omega^2}.
+\]
+若绳有效截面积为 \(S\)，
+平均强度 \(I=\overline P/S
+ =\tfrac12\rho u\omega^2A^2\)，
+与教材能流表达式一致。
+正号表示波能沿波传播方向传输。
+
+\paragraph{习题 7.12}
+频率100 Hz、波速400 m/s，
+波长
+\(\lambda=u/f=4.0\,\mathrm m\)。
+取直线AB长度30 m，
+坐标 \(x\) 从A指向B；
+两源原相差 \(\pi\)。
+两路波在点 \(x\) 的路径差
+\(\Delta r=(30-x)-x=30-2x\)。
+增强条件为
+\[
+ k\Delta r+\pi=2n\pi
+ \Longleftrightarrow
+ \Delta r=(n-\tfrac12)\lambda.
+\]
+故
+\(30-2x=(2n-1)2\)，
+解出
+\[
+ \boxed{x=2,4,6,\ldots,28\,\mathrm m}.
+\]
+即两源之间（不包括源本身）
+共有14个增强位置；
+而 \(x=15\,\mathrm m\) 两程相同，
+原初相相差 \(\pi\) 因而相消。
+\textbf{辅导书PDF物理页115存在相位条件笔误：}
+它虽然写出相差为
+\(\pi+\pi(30-2x)/2\)，
+却把增强条件设为\emph{奇数倍}\(\pi\)，
+于是得到 \(x=1,3,\ldots,29\,\mathrm m\)。
+实际上两个等幅波同相\emph{增强}要求
+相差为 \(2n\pi\)，
+相差为奇数倍 \(\pi\) 对应抵消。
+简单代入对照：中点 \(x=15\,\mathrm m\)
+到两个源的路径相等，
+但两源初相反相，必为\emph{相消}，
+因此辅导书把15m列为增强点不可能正确。
+本候选保留满足干涉相位判据的
+\(x=2,4,\ldots,28\,\mathrm m\)。
+此结论假定传播中两波振幅相等。
+
+\paragraph{习题 7.13}
+驻波
+\(y=0.020\cos(20x)\cos(750t)\)，
+与两反向等振幅波叠加式
+\(2a\cos(kx)\cos(\omega t)\) 比较：
+\[
+ \boxed{a=0.010\,\mathrm m,\quad
+ k=20\,\mathrm{rad/m},\
+ \omega=750\,\mathrm{rad/s}},\qquad
+ \boxed{u=\omega/k=37.5\,\mathrm{m/s}}.
+\]
+节点满足
+\(\cos(kx)=0\)，
+相邻节点间距
+\[
+ \boxed{\Delta x=\frac\pi k
+ =\frac\pi{20}\approx0.157\,\mathrm m}.
+\]
+质点速度
+\[
+ v_y=\frac{\partial y}{\partial t}
+ =-15\cos(20x)\sin(750t).
+\]
+于
+\(t=0.002\,\mathrm s,\ x=0.05\,\mathrm m\)
+代入
+\[
+ \boxed{v_y=-15\cos(1.0)\sin(1.5)
+ \approx-8.08\,\mathrm{m/s}}.
+\]
+符号表示此时质点向负 \(y\) 方向运动。
+
+\paragraph{习题 7.14}
+入射波沿 \(+x\) 传播，
+可选初相使
+\(y_i(0,0)=0\) 且
+\((\partial_ty_i)(0,0)>0\)：
+\[
+ \boxed{y_i=A\sin(\omega t-kx)},
+\quad
+ \omega=2\pi\nu,\ k=2\pi/\lambda.
+\]
+在距原点
+\(p=3\lambda/4\) 的反射面
+从波疏到波密，位移反射相位改变 \(\pi\)。
+从右向左的反射波为
+\[
+ y_r=-A\sin[\omega t+kx-2kp].
+\]
+因 \(2kp=3\pi\)，
+\[
+ \boxed{y_r=+A\sin(\omega t+kx)}.
+\]
+合振动
+\[
+ y_i+y_r
+ =2A\sin(\omega t)\cos(kx).
+\]
+故节点位置满足
+\(\cos(kx)=0\)，
+在原点与反射面之间
+\[
+ \boxed{x=\lambda/4,\quad
+ x=3\lambda/4=p},
+\]
+若继续考虑左侧空间，节点按
+\(x=(2n+1)\lambda/4\) 周期排列。
+反射面处的总位移确实为零，作为边界条件校验。
+
+\paragraph{习题 7.15}
+片厚
+\(d=2.00\times10^{-3}\,\mathrm m\)。
+厚度方向基频时
+\(d=\lambda/2\)，
+所以
+\[
+ \boxed{f=\frac{u}{2d}
+ =\frac{5.74\times10^3}{4.00\times10^{-3}}
+ =1.435\times10^6\,\mathrm{Hz}
+ =1.435\,\mathrm{MHz}}.
+\]
+这是理想厚度剪切/纵向驻波的
+几何估算，真实压电振动还受切型和电极负载影响。
+
+\paragraph{习题 7.16}
+采用声级定义
+\(\beta=10\log_{10}(I/I_0)\,\mathrm{dB}\)
+和题设
+\(I_0=10^{-12}\,\mathrm{W/m^2}\)。
+因此
+\[
+ \boxed{I_{115}=I_0\,10^{115/10}
+ \approx0.316\,\mathrm{W/m^2}},\qquad
+ \boxed{I_{141}=I_0\,10^{141/10}
+ \approx1.26\times10^2\,\mathrm{W/m^2}}.
+\]
+141 dB对应强度约为
+115 dB的 \(10^{(141-115)/10}\approx398\) 倍，
+并不是声级数值的简单比值。
+
+\paragraph{习题 7.17}
+从图7.47按分钟刻度估读
+两种地震波到时差
+\(\Delta t=t_S-t_P\approx5.1\,\mathrm{min}
+ =306\,\mathrm s\)。
+震源距离为 \(r\) 时
+\[
+ t_P=\frac r{u_P},\quad
+ t_S=\frac r{u_S},\quad
+ \Delta t=r\left(\frac1{u_S}-\frac1{u_P}\right).
+\]
+用 \(u_P=8\,\mathrm{km/s}\)、
+\(u_S=6\,\mathrm{km/s}\)，
+\[
+ \boxed{r=\frac{306}{1/6-1/8}
+ \approx7.34\times10^3\,\mathrm{km}}.
+\]
+\textbf{扫描精度：}辅导书PDF物理页117取
+\(\Delta t\simeq5.1\,\mathrm{min}\)，
+得到约 \(7.3\times10^3\,\mathrm{km}\)；
+此前候选将图初读为5.0 min、
+得到7200km，现按辅导书及原图作了修正。
+该估算对图上P与S起跳时刻的读数敏感，
+将分钟错认成秒会导致60倍差错。
+
+
+\paragraph{习题 7.18}
+原教材PDF物理页236的式(7.45)明确写成
+\[
+ \boxed{M=0.67\lg(E/\mathrm J)-2.9}.
+\]
+因此题给震级 \(M=9.2\) 应\emph{按本书公式}
+反解能量，而不是另用
+\(\log_{10}E=4.8+1.5M\) 的不同经验拟合：
+\[
+ \boxed{E=10^{(M+2.9)/0.67}\,\mathrm J
+ =10^{12.1/0.67}\,\mathrm J
+ \approx1.15\times10^{18}\,\mathrm J}.
+\]
+按题给每公斤TNT释放
+\(4.6\times10^6\,\mathrm J\)，
+一颗「百万吨级」TNT当量对应
+\(10^9\,\mathrm{kg}\times4.6\times10^6\,
+\mathrm{J/kg}=4.6\times10^{15}\,\mathrm J\)。
+所以保留本书公式计算值的当量颗数为
+\[
+ \boxed{N_{\rm million\,ton}=
+ \frac{1.15\times10^{18}}{4.6\times10^{15}}
+ \approx2.49\times10^2\text{ 个}}.
+\]
+辅导书PDF物理页117先将
+\(10^{12.1/0.67}\approx1.15\times10^{18}\)
+粗略舍为 \(10^{18}\,\mathrm J\)，
+据此又给约 \(217\) 个百万吨级当量；
+这与独立计算的约249个
+是\emph{前期只保留一位数量级造成的差异}，
+不能把两种精度结果当作完全相同。
+首次候选误用了另一套常见经验式而得
+\(3.98\times10^{18}\,\mathrm J\)，
+已纠正。
+题面震级9.2按源教材记录，
+不是对唐山地震现代历史震级的独立核验。
+
+\paragraph{习题 7.19}
+连续浪峰相距
+\(\lambda=25\,\mathrm m\)，
+周期 \(T=4.0\,\mathrm s\)，
+行波波速
+\[
+ \boxed{u=\lambda/T
+ =25/4.0=6.25\,\mathrm{m/s}}.
+\]
+船及近表层质元作周期性上下运动，
+若用图示的近圆形水粒子轨道近似，
+轨道半径可取垂直振幅
+\(A=0.60\,\mathrm m\)，
+粒子最大或等速轨道速率
+\[
+ \boxed{v_p=\omega A
+ =\frac{2\pi A}T
+ \approx0.942\,\mathrm{m/s}}.
+\]
+因此
+\(\boxed{v_p/u\approx0.151}\)。
+题目强调的是水粒子并不随浪峰
+以波速长距离平移。
+真实水粒子在有限水深和非线性波下
+轨道不必严格为圆。
+
+\paragraph{习题 7.20}
+警车为后方前行声源，
+朝摩托车方向传播的声音沿 \(+x\)；
+摩托车驾驶员同向运动远离入射声波，
+警车亦沿波方向接近前方观察者。
+多普勒公式
+\[
+ f_{\rm heard}=f_0
+ \frac{c-v_{\rm obs}}{c-v_{\rm src}}.
+\]
+将速度换成
+\(v_{\rm obs}=80/3.6=22.22\,\mathrm{m/s}\)，
+\(v_{\rm src}=120/3.6=33.33\,\mathrm{m/s}\)，
+\[
+ \boxed{f_{\rm heard}
+ =400\frac{330-22.22}{330-33.33}
+ \approx415\,\mathrm{Hz}}.
+\]
+因为警车追近摩托车，频率略升高；
+不能把同向运动套成正面相向公式。
+
+\paragraph{习题 7.21}
+海浪速度
+\(u=\lambda/T=120/10=12\,\mathrm{m/s}\)，
+波固有频率 \(f=u/\lambda=0.10\,\mathrm{Hz}\)。
+快艇速度 \(v_b=24\,\mathrm{m/s}\)。
+迎浪时相遇速率为 \(u+v_b\)，
+故
+\[
+ \boxed{f_{\rm head}=\frac{u+v_b}\lambda
+ =\frac{36}{120}=0.300\,\mathrm{Hz}},\quad
+ \boxed{T_{\rm head}=1/f_{\rm head}
+ =3.33\,\mathrm s}.
+\]
+顺浪时快艇速度高于波速，
+相对穿过浪峰的速率
+\(|v_b-u|=12\,\mathrm{m/s}\)，
+因此
+\[
+ \boxed{f_{\rm follow}=\frac{|v_b-u|}{\lambda}
+ =0.100\,\mathrm{Hz}},\quad
+ \boxed{T_{\rm follow}=10.0\,\mathrm s}.
+\]
+在顺浪且船速超过波速时，
+是船从后方\emph{追上}前面的浪峰，
+不是浪峰从后追上船。
+
+\paragraph{习题 7.22}
+海豚向静止潜艇游近，
+向潜艇传播的原声频率
+\(f_0=1.8\times10^4\,\mathrm{Hz}\)，
+海豚速度 \(v\)，
+水中声速 \(c=1540\,\mathrm{m/s}\)。
+静止潜艇接收的频率
+\(f_1=f_0c/(c-v)\)，
+又以静止反射界面把 \(f_1\) 原频率
+沿相反方向传回，海豚迎向反射波运动，
+最终
+\[
+ f_{\rm echo}=f_0\frac{c+v}{c-v}.
+\]
+题给
+\(\Delta f=f_{\rm echo}-f_0=220\,\mathrm{Hz}\)，
+则
+\[
+ \frac{\Delta f}{f_0}
+ =\frac{2v}{c-v}
+ \Longrightarrow
+ \boxed{v=\frac{c\Delta f}{2f_0+\Delta f}
+ =\frac{1540(220)}{36000+220}
+ \approx9.35\,\mathrm{m/s}}.
+\]
+只用一次单程多普勒公式会少算一个倍数效应。
+
+\paragraph{习题 7.23}
+红细胞作运动散射体，
+超声沿血液流动方向传播。
+在 \(v\ll c\) 下，
+运动散射往返两次多普勒效应给
+\[
+ \boxed{|\Delta f|\simeq
+ \frac{2v}{c}f_0}.
+\]
+代入 \(v=0.32\,\mathrm{m/s}\)，
+\(f_0=4.0\times10^6\,\mathrm{Hz}\)，
+\(c=1.54\times10^3\,\mathrm{m/s}\)，
+\[
+ \boxed{|\Delta f|\approx
+ \frac{2(0.32)}{1540}(4.0\times10^6)
+ \approx1.66\times10^3\,\mathrm{Hz}}.
+\]
+若红细胞沿发射声束方向\emph{远离}探头，
+回波频率降低，符号为
+\(-1.66\,\mathrm{kHz}\)；
+若逆向靠近探头则增加。
+题目若只问差的大小，取上述绝对值。
+
+\paragraph{习题 7.24}
+电磁测速雷达的发射频率
+\(f_0=5.0\times10^{10}\,\mathrm{Hz}\)，
+拍频
+\(|\Delta f|=1.1\times10^4\,\mathrm{Hz}\)。
+非相对论回波多普勒
+\[
+ |\Delta f|\simeq\frac{2v}{c}f_0.
+\]
+故
+\[
+ \boxed{v\simeq\frac{c|\Delta f|}{2f_0}
+ =\frac{3.00\times10^8(1.1\times10^4)}
+ {2(5.0\times10^{10})}
+ =33.0\,\mathrm{m/s}
+ \approx118.8\,\mathrm{km/h}}.
+\]
+因为 \(118.8>100\,\mathrm{km/h}\)，
+\[
+ \boxed{\text{汽车超速}}.
+\]
+假设波束沿车运动方向入射，
+否则必须乘以雷达视线与行驶方向夹角的
+余弦修正因子。
+
+\paragraph{习题 7.25}
+飞机速率 \(v=Mc=2.3(330)
+ =759\,\mathrm{m/s}\)。
+马赫锥半顶角 \(\mu\) 满足
+\(\sin\mu=c/v=1/M\)，所以
+\[
+ \boxed{\mu=\arcsin(1/2.3)
+ \approx25.8^\circ}.
+\]
+飞机高度
+\(h=5000\,\mathrm m\)。
+当飞机飞过观察者正上方之后，
+其后向马赫锥面首次与地面观察者重合
+所需的水平前进距离
+\(x=h\cot\mu=h\sqrt{M^2-1}\)。
+故延迟时间
+\[
+ \boxed{t=\frac{h\sqrt{M^2-1}}{Mc}
+ =\frac{5000\sqrt{2.3^2-1}}{759}
+ \approx13.6\,\mathrm s}.
+\]
+这是没有风和声速分层的几何声学模型；
+不能把 \(h/c\) 直接当作音爆到达延迟。
+
+\paragraph{习题 7.26}
+船速
+\(v_b=60/3.6\approx16.67\,\mathrm{m/s}\)。
+根据原书用语「船迹的张角10°」
+并结合配套辅导书PDF物理页119的图7.49解释，
+\(10^\circ\) 是\emph{两条尾迹边缘之间的全角}，
+因此波锥\emph{半顶角}
+\(\theta=5^\circ\)。
+在类马赫锥的理想非色散波模型中
+\[
+ \boxed{u=v_b\sin\theta
+ =\frac{60}{3.6}\sin5^\circ
+ \approx1.45\,\mathrm{m/s}\approx1.46\,\mathrm{m/s}}.
+\]
+\textbf{历史初稿订正：}
+若误把10°当半角会得到
+\(2.89\,\mathrm{m/s}\)，
+与源教材的「张角」及辅导书
+明确的 \(\theta=10^\circ/2\)
+不符。现选 \(1.46\,\mathrm{m/s}\) 为教材模型答案。
+实际湖面重力波具有色散，
+类声学波锥公式是题设的近似。
+
+\paragraph{习题 7.27}
+用和差化积公式：
+\[
+ \begin{aligned}
+ y&=A\sin(5x-10t)+A\sin(4x-9t)\\
+ &=\boxed{2A
+ \sin(4.5x-9.5t)
+ \cos(0.5x-0.5t)}.
+ \end{aligned}
+\]
+快速振动载波的相速度
+\(u_p=\bar\omega/\bar k=9.5/4.5
+ \approx2.11\,\mathrm{m/s}\)。
+包络项的波群速度取
+\[
+ \boxed{u_g=\frac{\Delta\omega}{\Delta k}
+ =\frac{10-9}{5-4}
+ =1.00\,\mathrm{m/s}}.
+\]
+相邻包络零点满足
+\(\Delta(0.5x)=\pi\)，
+一个主波包（两相邻零点之间）的空间宽度
+\[
+ \boxed{L_{\rm packet}=
+ \frac{2\pi}{|k_1-k_2|}
+ =2\pi\,\mathrm m\approx6.28\,\mathrm m}.
+\]
+若将正负两包络\emph{有向符号}都算一周期，
+余弦包络的周期是
+\(4\pi/|k_1-k_2|=4\pi\,\mathrm m\)；
+并非能量波包恰只有这一个长度，
+需说明「一个波包」采用相邻零点定义。
+
+\paragraph{习题 7.28}
+给
+\(\omega=ak^2\)，
+相速度
+\[
+ \boxed{u_p=\frac\omega k=ak}.
+\]
+群速度为频率—波数曲线斜率：
+\[
+ \boxed{u_g=\frac{d\omega}{dk}
+ =2ak=2u_p}.
+\]
+这表明弯曲波有明显色散，
+群速度不等于相速度。
+
+\paragraph{习题 7.29}
+等离子体色散关系
+\(\omega^2=\omega_p^2+c^2k^2\)。
+对传播模式 \(\omega>\omega_p\)，
+\[
+ \boxed{u_p=\frac{\omega}{k}
+ =\frac{c}{\sqrt{1-\omega_p^2/\omega^2}}}.
+\]
+两侧对 \(k\) 求导：
+\(2\omega\,d\omega/dk=2c^2k\)，
+故
+\[
+ \boxed{u_g=\frac{d\omega}{dk}
+ =\frac{c^2k}{\omega}
+ =c\sqrt{1-\omega_p^2/\omega^2}}.
+\]
+两者相乘
+\[
+ \boxed{u_pu_g=c^2}.
+\]
+当波不能传播
+\(\omega\le\omega_p\) 时，
+\(k\) 不再是实传播波数，
+不能套用上述实速度结论。
+
+\paragraph{习题 7.30}
+题述「波长增长 \(3/2\) 倍」
+即
+\(\lambda_{\rm obs}-\lambda_{\rm emit}
+ =\tfrac32\lambda_{\rm emit}\)，
+所以红移比
+\(r=\lambda_{\rm obs}/\lambda_{\rm emit}
+ =5/2=2.5\)。
+在单纯\emph{狭义相对论径向多普勒}
+解释下，
+\[
+ r=\sqrt{\frac{1+\beta}{1-\beta}},
+ \qquad \beta=v/c.
+\]
+故
+\[
+ \boxed{\beta=\frac{r^2-1}{r^2+1}
+ =\frac{6.25-1}{6.25+1}
+ =\frac{21}{29}\approx0.724},
+\]
+\[
+ \boxed{v\approx0.724c
+ \approx2.17\times10^8\,\mathrm{m/s}}.
+\]
+经典近似
+\(\Delta\lambda/\lambda\approx v/c\)
+会给 \(v\approx1.5c\)，
+已超出经典适用条件；
+真实远方星系的宇宙学红移还需膨胀模型，
+不能简单把该狭义相对论速度当作唯一宇宙学结果。
+
+\paragraph{习题 7.31}
+设波包由一束彼此相近的简谐分波构成，
+主要波数范围
+\(\Delta k\)。
+对近单色波
+\(k=2\pi/\lambda\)，小带宽极限
+\[
+ |\Delta k|\simeq
+ \left|\frac{dk}{d\lambda}\right|
+ |\Delta\lambda|
+ =\frac{2\pi}{\lambda^2}|\Delta\lambda|.
+\]
+若波包长度\emph{定义为}
+一个主包络波瓣（相邻包络节点所围长度）
+则
+\[
+ \boxed{\Delta x=\frac{2\pi}{\Delta k}
+ \simeq\frac{\lambda^2}{\Delta\lambda}},
+\quad
+ \boxed{\Delta x\,\Delta k\simeq2\pi}.
+\]
+群速度
+\(u_g=d\omega/dk=2\pi\,d\nu/dk\)，
+在窄谱近似
+\(\Delta\nu\simeq u_g\Delta k/(2\pi)\)。
+包络经过固定点的时间
+\(\Delta t=\Delta x/u_g\)，
+于是
+\[
+ \boxed{\Delta t\,\Delta\nu\simeq
+ \frac{\Delta x}{u_g}
+ \frac{u_g\Delta k}{2\pi}\simeq1}.
+\]
+严格傅里叶不确定性关系依赖
+波包宽度定义（方差、半高宽等），
+教材的等式是特定包络定义下的
+近似尺度关系，不能无条件当作所有脉冲的精确恒等式。
+
+\paragraph{习题 7.32}
+取平面界面为 \(y=0\)，
+入射点源 \(Q_1\) 到法线投影高度
+\(h_1\)，第二点 \(Q_2\) 的高度
+\(h_2\)；界面交点横坐标为 \(x\)，
+两点在横向投影相距 \(D\)。
+通过交点的总传播时间
+\[
+ t(x)=\frac{\sqrt{x^2+h_1^2}}{u_1}
+ +\frac{\sqrt{(D-x)^2+h_2^2}}{u_2}.
+\]
+对 \(x\) 微分要求驻时：
+\[
+ 0=\frac{dt}{dx}
+ =\frac{x}{u_1\sqrt{x^2+h_1^2}}
+ -\frac{D-x}{u_2\sqrt{(D-x)^2+h_2^2}}.
+\]
+两分式的分子/斜边正是
+相应光线与界面法线的正弦，
+因此
+\[
+ \boxed{\frac{\sin i}{u_1}
+ =\frac{\sin r}{u_2}},\qquad
+ \boxed{\frac{\sin i}{\sin r}
+ =\frac{u_1}{u_2}},
+\]
+这即折射定律的传播速度表述。
+反射时两段光都在同一介质中
+\(u_1=u_2\)，
+于是
+\(\sin i=\sin i'\)，
+两角均取 \([0,\pi/2]\)，得到
+\[
+ \boxed{i=i'}.
+\]
+反射的几何镜像法还可直接验证
+这条路径同时为行进时间的极小值。
+折射包含全反射、界面形态等边界条件时
+应依具体极值问题判断。
+
+\paragraph{习题 7.33}
+按源教材图7.51的金属片质元局部运动模型，
+令
+\(\psi=\omega t-kx\)，
+\(\xi_y=A_y\sin\psi\)，
+\(\xi_x=A_x\cos\psi\)。
+直接消去 \(\psi\)：
+\[
+ \frac{\xi_y^2}{A_y^2}+
+ \frac{\xi_x^2}{A_x^2}
+ =\sin^2\psi+\cos^2\psi
+ =\boxed{1}.
+\]
+故每个质元沿长短半轴各为
+\(A_x,A_y\) 的椭圆运动；
+同时接触滑块时，
+其水平方向的瞬时速度是
+\[
+ \boxed{v_x=\frac{\partial\xi_x}{\partial t}
+ =-\omega A_x\sin(\omega t-kx)}.
+\]
+当 \(\sin(\omega t-kx)>0\)，
+其速度沿负 \(x\) 方向，
+即题图所标的向左运动。
+这说明通过行波局部椭圆运动产生
+切向摩擦驱动的机制；
+实际滑块平均推进方向
+仍取决于接触时间、压力和摩擦作用，
+不能仅靠瞬时速度公式保证平均方向。

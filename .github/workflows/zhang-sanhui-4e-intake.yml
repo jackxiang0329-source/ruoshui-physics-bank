@@ -1,0 +1,111 @@
+name: Zhang Sanhui 4e intake structural and XeLaTeX QA
+
+on:
+  push:
+    branches:
+      - intake/zhang-sanhui-4e-20261122-batch01
+    paths:
+      - 'external_sources/zhang_sanhui_4e/**'
+      - '.github/workflows/zhang-sanhui-4e-intake.yml'
+  pull_request:
+    paths:
+      - 'external_sources/zhang_sanhui_4e/**'
+  workflow_dispatch:
+
+jobs:
+  structural-and-math-spotchecks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate canonical source register and independent numeric spotmodels
+        run: python3 external_sources/zhang_sanhui_4e/qa_check.py
+      - name: Independently validate the 28 previously transcribed chapter-5 candidates
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch05_independent.py
+      - name: Validate 27 chapter-6 oscillations candidate models
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch06_independent.py
+      - name: Validate 33 chapter-7 waves candidate models
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch07_independent.py
+      - name: Validate chapter 8 special relativity numerical models
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch08_independent.py
+      - name: Validate chapter 9 molecular thermodynamics numerical models
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch09_independent.py
+      - name: Validate chapter 10 thermodynamic first-law candidates
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch10_independent.py
+      - name: Validate chapter 11 thermodynamic second-law candidates
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch11_independent.py
+      - name: Independently validate 34 chapter 12 electrostatic models
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch12_independent.py
+      - name: Independently validate 34 chapter 13 electrostatic potential models
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch13_independent.py
+      - name: Independently check chapter 14 existing candidate physics models
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch14_independent.py
+      - name: Independently check chapter 15 existing candidate physics models
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch15_independent.py
+      - name: Independently check chapter 16 existing candidate physics models
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch16_independent.py
+      - name: Independently check chapter 17 existing candidate physics models
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch17_independent.py
+      - name: Verify chapter 18 previously transcribed physics candidate checkpoints
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch18_independent.py
+      - name: Verify chapter 19 previously transcribed physics candidate checkpoints
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch19_independent.py
+      - name: Verify chapter 20 previously transcribed physics candidate checkpoints
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch20_independent.py
+      - name: Verify chapter 21 previously transcribed physics candidate checkpoints
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch21_independent.py
+      - name: Check chapter 22 wave/geometric optics candidates
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch22_independent.py
+      - name: Check chapter 23 wave/geometric optics candidates
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch23_independent.py
+      - name: Check chapter 24 wave/geometric optics candidates
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch24_independent.py
+      - name: Check chapter 25 wave/geometric optics candidates
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch25_independent.py
+      - name: Independently check chapter 26 modern physics model candidates
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch26_independent.py
+      - name: Independently check chapter 27 modern physics model candidates
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch27_independent.py
+      - name: Independently check chapter 28 modern physics model candidates
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch28_independent.py
+      - name: Independently check chapter 29 modern physics model candidates
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch29_independent.py
+      - name: Independently check chapter 30 modern physics model candidates
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch30_independent.py
+      - name: Supplementary independent chapter 1 mechanics regression
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch01_independent.py
+      - name: Supplementary independent chapter 2 mechanics regression
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch02_independent.py
+      - name: Supplementary independent chapter 3 mechanics regression
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch03_independent.py
+      - name: Supplementary independent chapter 4 mechanics regression
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch04_independent.py
+      - name: Validate 238 thought-question candidate identities and unapproved source gates
+        run: python3 external_sources/zhang_sanhui_4e/qa_thought_provenance_gate.py
+      - name: Independently test 31 companion-selected thought-question physical models
+        run: python3 external_sources/zhang_sanhui_4e/qa_supplement_thought_models.py
+      - name: Cross-method checks for 20 high-risk existing physics candidates
+        run: python3 external_sources/zhang_sanhui_4e/qa_high_risk_crossmethod.py
+      - name: Seven physical-domain and feasibility audits
+        run: python3 external_sources/zhang_sanhui_4e/qa_physical_feasibility_v2.py
+      - name: Lock academic review and source images for 159 figure-bound candidates
+        run: python3 external_sources/zhang_sanhui_4e/qa_figure_and_risk_gate.py
+      - name: Electrostatic shell and electron binding energy correction checks
+        run: python3 external_sources/zhang_sanhui_4e/qa_thought_14_2_3_mass_and_potential.py
+  xelatex-candidate-proof:
+    runs-on: ubuntu-latest
+    needs: structural-and-math-spotchecks
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile candidate exercise and solution proof (NOT expert approval)
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: build_intake.tex
+          work_in_root_file_dir: true
+          latexmk_use_xelatex: true
+          working_directory: external_sources/zhang_sanhui_4e
+      - name: Save candidate PDF for review
+        uses: actions/upload-artifact@v4
+        with:
+          name: zhang-sanhui-4e-candidate-proof
+          path: external_sources/zhang_sanhui_4e/build_intake.pdf
+          if-no-files-found: error

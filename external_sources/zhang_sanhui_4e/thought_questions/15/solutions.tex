@@ -1,0 +1,43 @@
+% V2主教材扫描PDF98--99思考题15.1--15.14，原图15.17--15.19待重绘。
+\section*{第15章\quad 静电场中的电介质：思考题解析}
+\paragraph{思考题 15.1}
+孤立球体自电容 \(C=4\pi\epsilon_0 R\)，地球半径虽大仍仅约 \(700\,\mathrm{\mu F}\)。实验室电容器通过极小的极板间距 \(d\)、大有效表面积A及高介电常数材料实现 \(C\simeq\epsilon A/d\)，多个内部卷绕片可使A远超外观表面积。因此电容取决于\emph{几何间距、介电常数与相互屏蔽}，不只取决于装置的外部尺寸。
+
+\paragraph{思考题 15.2}
+理想公式 \(C=\epsilon A/d\) 假设 \(d\) 大于原子尺度、介质不击穿且电极不接触。在固定电压U下 \(E=U/d\)，\(d\to0\) 导致电场强度越过介电击穿阈值 \(E_{\rm bd}\)，造成漏电、穿隧和短路；真实表面粗糙也限制最小间距。因此不存在靠 \(d\to0\) 获得无限可用电容的真实器件。
+
+\paragraph{思考题 15.3}
+电荷在整个电极导体上重新分配，金属内部电场保持零。理想大平板且两板等量异号时大部分电荷分布在相向内表面；若单板额外加电荷，使两板净电荷不再相反，则部分新增电荷必出现在外表面，产生外部场。最终分布取决于是否接地、与外部电源连接及边缘几何，不能说额外电荷只能留在一面。
+
+\paragraph{思考题 15.4}
+静电场 \(\boldsymbol E=-\nabla\phi\)，在真空无无限奇异面荷的横向板边界邻域，电势连续且电场满足 Maxwell 边界条件。若将板内均匀场直接在板边缘跳成严格零，会违反邻近无自由面荷区域的 \(\oint\boldsymbol E\cdot d\boldsymbol l=0\) 或场解连续性。因此必有\emph{边缘渐变的弯曲电场}，需解Laplace方程。
+
+\paragraph{思考题 15.5}
+由于板缘出现延伸到板外的电场线，使对同一两板电压U所积累的总电荷Q略多于均匀场理想计算，通常 \(\boxed{C_{\rm actual}>C_{\rm ideal}=\epsilon A/d}\)。这是有限平行板、自由空间且同样几何约束下的边缘修正；实际邻近接地屏蔽物、寄生电容和介质也可能改变测得的总电容。
+
+\paragraph{思考题 15.6}
+线性介质插入后通常增大电容 \(C(x)\)。定电压时外部电源做功必须计入，机械广义力 \(\boxed{F_x=\tfrac12U^2\,dC/dx}\)，沿增加C的方向；定电荷时 \(W=Q^2/(2C)\)，\(\boxed{F_x=Q^2/(2C^2)\,dC/dx}\) 同样趋向\emph{吸入}介质。若只看定电压下储能 \(\tfrac12 CU^2\) 增加而断言推出，会漏掉电源功。
+
+\paragraph{思考题 15.7}
+原图保护环与各自中心极板电位相同，使靠近测量极板边缘的等势面形状更近于理想平板，削弱横向边缘场。实际测量时只量中心板的电荷与电压，保护环承担外侧畸变的电荷，于是有效场区更接近 \(E=U/d\)。关键是保护环\emph{独立但同电位}，不应把其面积一并当成测量电极面积。
+
+\paragraph{思考题 15.8}
+设介质1到介质2的界面单位法向 \(\hat n_{12}\)，两个介质极化矢量分别 \(\boldsymbol P_1,\boldsymbol P_2\)，界面净束缚面电荷为 \(\boxed{\sigma_b=(\boldsymbol P_1-\boldsymbol P_2)\cdot\hat n_{12}}\)。若反向定义法向，则各项符号同时变号；这来自两侧极化表面束缚电荷的相加，而非任意选择一个P。
+
+\paragraph{思考题 15.9}
+电位移满足 \(\oint_{\partial V}\boldsymbol D\cdot d\boldsymbol S=Q_{\rm free,enclosed}\)。移动介质时局部 \(D,E\) 一般都可重新分布，但若固定闭合面内\emph{自由电荷总量不变}，D的净通量仍不变；E的净通量 \(\oint\boldsymbol E\cdot dS=Q_{\rm total,enclosed}/\epsilon_0\) 会随介质\emph{束缚电荷}重排而变化。若闭面包住所有极化电荷并且总电荷不变，可出现额外特殊情况。
+
+\paragraph{思考题 15.10}
+极性分子有固定电偶极矩，在外场中取向有序程度与热无序竞争，弱场经典取向极化率 \(\alpha_{\rm orient}\simeq p^2/(3k_BT)\)。温度上升使取向极化下降，因而多数极性液体静态相对介电常数降低；但电子/离子极化、密度变化和氢键结构也有贡献，不能将 \(\epsilon_r(T)\) 一律严格写成 \(1/T\)。
+
+\paragraph{思考题 15.11}
+中性纸屑在非均匀带电胶木棒电场中发生极化，靠近棒的一端形成更强的异号束缚电荷，远端同号感应电荷所受反向力因场弱而较小，导致净吸引。简单各向同性近似 \(\boxed{\boldsymbol F\simeq\tfrac12\alpha\nabla E^2}\)，向场强区域。纸屑不需先带净负电。
+
+\paragraph{思考题 15.12}
+电场Gauss式 \(\nabla\cdot\boldsymbol E=(\rho_{\rm free}+\rho_{\rm bound})/\epsilon_0\)，定义 \(\boldsymbol D=\epsilon_0\boldsymbol E+\boldsymbol P\)，而 \(\rho_{\rm bound}=-\nabla\cdot\boldsymbol P\)，两式相加得到 \(\boxed{\nabla\cdot\boldsymbol D=\rho_{\rm free}}\)。积分形式 \(\oint\boldsymbol D\cdot d\boldsymbol S=Q_{\rm free}\)。D并非“完全不受极化影响”的真实新力场。
+
+\paragraph{思考题 15.13}
+同轴半径a、b（\(b>a\)）长圆柱电极，单位长度自由电荷 \(\lambda\)，介质介电常数 \(\epsilon\)。柱对称的电位移 \(D_r=\lambda/(2\pi r)\)，因此 \(E_r=\lambda/(2\pi\epsilon r)\) 与两极电压 \(U=\int_a^bE_rdr=\lambda\ln(b/a)/(2\pi\epsilon)\)。故 \(\boxed{C'=\lambda/U=2\pi\epsilon/\ln(b/a)}\)。能量密度积分同样给 \(W'/L=\lambda^2\ln(b/a)/(4\pi\epsilon)=\lambda^2/(2C')\)。
+
+\paragraph{思考题 15.14}
+理想均匀长导线稳态 \(\boldsymbol J=I\hat z/A\)，电阻率 \(\rho\) 时内部轴向场 \(\boldsymbol E_{\rm in}=\rho I\hat z/A\)。静态边界切向电场连续，所以紧贴外表面 \(\boxed{E_{t,\rm out}=\rho I/A}\) 且沿电流方向；其准确法向分量取决于维持电流所需的表面电荷分布。外部场与导线环向B形成指向金属的坡印亭通量，把电磁能输送至电阻耗散 \(I^2R\)。

@@ -1,0 +1,687 @@
+% 张三慧第4版V1第8章：狭义相对论基础；独立计算候选解。
+% 源教材物理页283--285，标准c=299792458m/s。
+\section*{第8章\quad 狭义相对论基础：独立解析}
+
+\paragraph{习题 8.1}
+记 \(\beta=u/c\)，
+\(\gamma=(1-\beta^2)^{-1/2}\)。
+杆在静止系 \(S\) 的端点坐标差为
+\(\Delta x=l\cos\theta,\quad\Delta y=l\sin\theta\)。
+必须在 \(S'\) 中选择\emph{同一 \(t'\)}
+的两个端点位置，才可测量运动长度；
+沿相对运动方向收缩，垂直方向不变：
+\[
+ \Delta x'=\frac{l\cos\theta}{\gamma},\qquad
+ \Delta y'=l\sin\theta.
+\]
+因此
+\[
+ \boxed{l'=l\sqrt{1-\beta^2\cos^2\theta}},\qquad
+ \boxed{\tan\theta'=\gamma\tan\theta}
+\]
+（角度象限按端点顺序确定）。
+只把总长度整体乘上 \(1/\gamma\)
+会错误压缩横向分量。
+
+\paragraph{习题 8.2}
+把立方体一条边取在 \(x\) 方向，
+静止时尺寸 \(a,a,a\)。
+在 \(S'\) 同时测量，
+运动方向边缩短至 \(a/\gamma\)，
+其他两条边仍为 \(a\)，所以
+\[
+ \boxed{V'=\frac{a^3}{\gamma}
+ =a^3\sqrt{1-u^2/c^2}}.
+\]
+它讨论同时空间截面的体积，
+不是四维时空体积。
+
+\paragraph{习题 8.3}
+两枪固定在 \(S\) 系，间距为 \(L\)；
+发射事件在 \(S\) 中同时
+\(\Delta t=0,\ \Delta x=L\)。
+在 \(S'\) 中它们的坐标差由
+洛伦兹变换给出
+\[
+ \Delta x'=\gamma(\Delta x-u\Delta t)=\gamma L,\qquad
+ \Delta t'=\gamma\left(\Delta t-
+ \frac{u\Delta x}{c^2}\right)
+ =-\frac{\gamma uL}{c^2}.
+\]
+两标记是刻在\emph{静止于 \(S'\)} 的尺上，
+其两个刻度位置相距
+\[
+ \boxed{\Delta \ell'=\gamma L}.
+\]
+相差的是两个\emph{不同时刻}的击中事件，
+而非 \(S'\) 中对运动的两枪作同时测长。
+\(S'\) 观察者不会错误地以「同时测长」
+要求两刻痕相距 \(L/\gamma\)。
+这正说明相对论同时性的必要性。
+
+\paragraph{习题 8.4}
+在 \(S\) 中两事件同地点，
+\(\Delta x=0,\Delta t=2\,\mathrm s\)；
+\(S'\) 中
+\(\Delta t'=\gamma\Delta t=3\,\mathrm s\)，
+故 \(\gamma=3/2\)，
+\(\beta=\sqrt{1-\gamma^{-2}}=\sqrt5/3\)。
+空间间隔
+\[
+ \Delta x'=\gamma(\Delta x-u\Delta t)
+ =-\gamma u(2\,\mathrm s)
+ =-\sqrt5\,c(1\,\mathrm s),
+\]
+因此
+\[
+ \boxed{|\Delta x'|=\sqrt5\,c\,\mathrm s
+ \approx6.70\times10^8\,\mathrm m}.
+\]
+符号依 \(S'\) 朝哪方向运动而定。
+
+\paragraph{习题 8.5}
+取两事件在 \(S\) 中同一时刻，
+\(\Delta t=0,\Delta x=1\,\mathrm m\)。
+若 \(S'\) 测得
+\(|\Delta x'|=2\,\mathrm m\)，
+由 \(|\Delta x'|=\gamma|\Delta x|\) 得
+\(\gamma=2\)，
+\(\beta=\sqrt3/2\)。
+时间间隔
+\[
+ \Delta t'=-\gamma\frac{u\Delta x}{c^2};
+\quad
+ \boxed{|\Delta t'|=\frac{\sqrt3}{c}
+ (1\,\mathrm m)\approx5.78\times10^{-9}\,\mathrm s}.
+\]
+该题给的 \(\Delta x'\)
+是事件坐标差，不是收缩杆长度。
+
+\paragraph{习题 8.6}
+选地球系 \(S\)，飞船从地球沿 \(+x\)
+以 \(\beta=4/5\)、\(\gamma=5/3\)
+匀速远离；发信瞬间在地球系距地球
+\(d_0\)，并取此刻 \(t=0\)。
+信号到地球的时间为
+\(t_1=d_0/c\)；
+反射后返回，追赶飞船。
+接收时刻 \(t_2\) 满足
+\[
+ c(t_2-t_1)=d_0+ut_2
+ \Longrightarrow t_2=\frac{2d_0}{c-u}.
+\]
+发、收事件均发生于飞船世界线，
+所以飞船钟的固有间隔
+\(\Delta\tau=t_2/\gamma=60\,\mathrm s\)，
+故 \(t_2=100\,\mathrm s\)。
+\textbf{第（1）问要特别注意参考系：}
+在飞船系 \(S'\) 中，
+发送和收到信号发生在同一位置，
+均为飞船原点，
+固有时间间隔为 \(60\,\mathrm s\)；
+因为光信号以速率 \(c\) 传播，
+从飞船到地球反射位置、再返回飞船
+的两段路程在这个系里都为
+\(c(60/2)\,\mathrm s\)。
+所以在\emph{地球反射时刻，飞船系}
+测得的距离是
+\[
+ \boxed{d_{\rm reflection}^{(S')}
+ =30c\,\mathrm s=9.00\times10^9\,\mathrm m}.
+\]
+作为中间校验，地球系在
+\emph{发送瞬间}的距离为
+\[
+ d_{\rm send}^{(S)}=\frac12(c-u)t_2
+ =10c\,\mathrm s=3.00\times10^9\,\mathrm m,
+\]
+但\textbf{这不是原题第（1）问所要求的距离}。
+收信瞬间在地球系测得
+\[
+ \boxed{d_{\rm receive}^{(S)}
+ =d_{\rm send}^{(S)}+ut_2
+ =90c\,\mathrm s
+ =2.70\times10^{10}\,\mathrm m}.
+\]
+配套辅导书PDF物理页127明确分别给出
+\(9\times10^9\,\mathrm m\) 和
+\(2.7\times10^{10}\,\mathrm m\)；
+首次候选误把第（1）问转写为
+发射时地球系距离，现已恢复题意。
+不能将60秒直接当作地球系往返时间。
+
+\paragraph{习题 8.7}
+约定地球 \(S\) 坐标系、飞船 \(S'\)
+沿 \(+x\) 匀速运动，
+\(\beta=0.8,\gamma=5/3\)。
+事件逆变换为
+\[
+ \boxed{t=\gamma\left(t'+\frac{ux'}{c^2}\right)},
+ \quad
+ \boxed{x=\gamma(x'+ut')},\quad
+ y=y',\ z=z'.
+\]
+代入题给数值，按 \(c\simeq3.00\times10^8\,\mathrm{m/s}\)：
+\[
+ \boxed{t=-2.00\times10^8\,\mathrm s},\quad
+ \boxed{x=6.00\times10^{16}\,\mathrm m},\quad
+ \boxed{y=1.20\times10^{17}\,\mathrm m,\ z=0}.
+\]
+爆发位置相对飞船航向（地球系 \(+x\)）
+的几何角：
+\[
+ \boxed{\alpha=\arctan(y/x)
+ =\arctan 2\approx63.4^\circ}.
+\]
+事件的 \(t<0\) 表示爆发早于
+飞船经过地球那一参考时刻，
+不意味着信号早于爆发被接收。
+
+\paragraph{习题 8.8}
+在飞船系 \(S'\) 中，爆发位置距原点
+\[
+ r'=\sqrt{x'^2+y'^2}
+ =\sqrt{1.8^2+1.2^2}\times10^{17}
+ \approx2.1633\times10^{17}\,\mathrm m.
+\]
+来自超新星的光在
+\(t'_{\rm arr}=t'_{\rm event}+r'/c\)
+到达飞船，故
+\[
+ \boxed{t'_{\rm arr}\approx
+ -6.0\times10^8+7.21\times10^8
+ =1.21\times10^8\,\mathrm s}.
+\]
+宇航员立即将报告从其当前飞船位置
+发向地球。
+发报告的事件在飞船系原点
+\(x'_{\rm arr}=0\)，
+逆变换到地球系：
+\(t_{\rm send}=\gamma t'_{\rm arr}\)，
+\(x_{\rm send}=u t_{\rm send}>0\)。
+地球接收报告还需时间
+\(x_{\rm send}/c\)，所以
+\[
+ \boxed{t_{\rm report}=
+ \gamma t'_{\rm arr}(1+\beta)
+ \approx3.65\times10^8\,\mathrm s}.
+\]
+地球直接见到超新星的时间为
+\[
+ t_{\rm direct}=t_{\rm event}
+ +\frac{\sqrt{x^2+y^2}}c,
+\quad
+ \boxed{t_{\rm direct}\approx2.47\times10^8\,\mathrm s}.
+\]
+为与源书的有效位数保持一致，以上用
+\(c\simeq3.00\times10^8\,\mathrm{m/s}\)；
+严格用定义值时报告到达时刻约
+\(3.65\times10^8\,\mathrm s\)。
+该题需要区别\emph{事件坐标时刻}、
+\emph{光的到达时刻}和\emph{回报接收时刻}。
+
+\paragraph{习题 8.9}
+令飞船地球系速度 \(v_s=+0.60c\)，
+彗星为 \(v_c=-0.80c\)。
+飞船系的彗星速度按相对论速度合成：
+\[
+ v_c'=\frac{v_c-v_s}{1-v_cv_s/c^2}
+ =\frac{-1.40c}{1+0.48}
+ =-\frac{35}{37}c.
+\]
+因此
+\[
+ \boxed{|v_c'|=\frac{35}{37}c\approx0.946c}.
+\]
+碰撞事件位于飞船世界线上，
+地球系现在至碰撞时间为5s；
+飞船固有时间缩短：
+\[
+ \boxed{\Delta\tau=5\sqrt{1-0.60^2}
+ =4.0\,\mathrm s}.
+\]
+不能把非相对论的接近速率 \(1.4c\)
+当作飞船本系可测速度。
+
+\paragraph{习题 8.10}
+在 \(S'\) 中光的速度分量
+\(v_x'=c\cos\theta'\)，
+\(v_y'=c\sin\theta'\)，
+变换到 \(S\)：
+\[
+ v_x=\frac{c\cos\theta'+u}
+ {1+(u/c)\cos\theta'},\qquad
+ v_y=\frac{c\sin\theta'}
+ {\gamma[1+(u/c)\cos\theta']}.
+\]
+故传播方向角可由
+\[
+ \boxed{\tan\theta=
+ \frac{\sin\theta'}{\gamma(\cos\theta'+u/c)}}
+\]
+确定，象限以 \(v_x,v_y\) 同时判定。
+令 \(\beta=u/c\)，直接计算：
+\[
+ \frac{v_x^2+v_y^2}{c^2}
+ =\frac{(\cos\theta'+\beta)^2
+ +(1-\beta^2)\sin^2\theta'}
+ {(1+\beta\cos\theta')^2}=1.
+\]
+所以 \(\boxed{|\boldsymbol v|=c}\)。
+
+\paragraph{习题 8.11}
+一维速度变换
+\(v'=(v-u)/(1-uv/c^2)\)，
+时间微分
+\(dt'=\gamma(1-uv/c^2)\,dt\)。
+先对 \(v\) 求导：
+\[
+ \frac{dv'}{dv}=
+ \frac{1-u^2/c^2}{(1-uv/c^2)^2}.
+\]
+由 \(a'=dv'/dt'\)：
+\[
+ \boxed{a'=
+ \frac{(1-u^2/c^2)^{3/2}}
+ {(1-uv/c^2)^3}\,a}.
+\]
+低速极限
+\(|u|/c,|v|/c\ll1\) 时
+\(a'\to a\)，与伽利略变换下
+惯性系加速度不变的结论一致。
+
+\paragraph{习题 8.12}
+沿力方向的相对论动量满足
+\(dp/dt=F\)，
+从静止出发给
+\(p(t)=Ft\)。
+由
+\(p=\gamma m_0v\)：
+\[
+ \boxed{v(t)=
+ \frac{Ft/m_0}{\sqrt{1+(Ft/(m_0c))^2}}}.
+\]
+位移从0积分：
+\[
+ \boxed{x(t)=\frac{m_0c^2}{F}
+ \left[\sqrt{1+\left(\frac{Ft}{m_0c}\right)^2}-1\right]}.
+\]
+短时 \(Ft/(m_0c)\ll1\)，
+\[
+ \boxed{v\simeq Ft/m_0,\quad
+ x\simeq Ft^2/(2m_0)}.
+\]
+长时 \(Ft/(m_0c)\gg1\)，
+\[
+ \boxed{v\to c^-,
+ \quad x\simeq ct-\frac{m_0c^2}{F}
+ +O(t^{-1})}.
+\]
+相对论动量可以无限增长，
+但速率严格小于光速。
+
+
+\paragraph{习题 8.13}
+给定同一静质量 \(m_0\) 与速率 \(v\)，
+非相对论动量 \(p_N=m_0v\)，
+相对论动量 \(p_R=\gamma m_0v\)。
+若 \(p_R=2p_N\)，则 \(\gamma=2\)：
+\[
+ \boxed{v=c\sqrt{1-\gamma^{-2}}
+ =\frac{\sqrt3}{2}c\approx0.866c}.
+\]
+动能分别为
+\(K_N=\tfrac12m_0v^2\)，
+\(K_R=(\gamma-1)m_0c^2\)。
+若 \(K_R=2K_N\)，则
+\[
+ \gamma-1=\beta^2
+ =1-\frac1{\gamma^2}
+ \Longrightarrow
+ \gamma^2=\gamma+1.
+\]
+取正根
+\(\gamma=(1+\sqrt5)/2\)，
+所以
+\[
+ \boxed{v=c\sqrt{1-\gamma^{-2}}
+ \approx0.786c}.
+\]
+两问不能混淆为同一个速度。
+
+\paragraph{习题 8.14}
+电子的静止能量
+\(m_ec^2\simeq0.511\,\mathrm{MeV}\)；
+给动能 \(K=2.8\times10^9\,\mathrm{eV}\)，
+有
+\[
+ \gamma=1+\frac K{m_ec^2}\approx5480.46.
+\]
+直接计算
+\(c-v=c[1-\sqrt{1-\gamma^{-2}}]\)
+存在严重浮点减法消去，
+应写稳定形式
+\[
+ \boxed{c-v=\frac{c\,\gamma^{-2}}
+ {1+\sqrt{1-\gamma^{-2}}}
+ \approx4.99\,\mathrm{m/s}}.
+\]
+能量—动量关系
+\(p^2c^2=K(K+2m_ec^2)\)，
+故
+\[
+ \boxed{p=\frac{\sqrt{K(K+2m_ec^2)}}c
+ \approx1.50\times10^{-18}\,\mathrm{kg\,m/s}}
+\]
+或 \(pc\simeq2.80051\,\mathrm{GeV}\)。
+储存环半径
+\(R=L/(2\pi)=240/(2\pi)\simeq38.2\,\mathrm m\)，
+横向所需向心力由动量转向率确定，
+不是简单以静质量套 \(mv^2/R\)：
+\[
+ \boxed{F=\frac{pv}{R}\approx
+ 1.17\times10^{-11}\,\mathrm N}.
+\]
+由垂直磁场洛伦兹力
+\(evB=pv/R\)，
+\[
+ \boxed{B=p/(eR)\approx0.245\,\mathrm T}.
+\]
+
+\paragraph{习题 8.15}
+对单个宇宙线质子，
+总能量按题给 \(E\simeq50\,\mathrm J\)
+（由于远大于静能，将50J视为动能也可忽略差别）。
+质子静能约
+\(m_pc^2=1.503\times10^{-10}\,\mathrm J\)，
+\(\gamma=E/(m_pc^2)\simeq3.33\times10^{11}\)。
+于是
+\[
+ \boxed{c-v=
+ \frac{c}{\gamma^2(1+\sqrt{1-\gamma^{-2}})}
+ \simeq\frac{c}{2\gamma^2}
+ \approx1.35\times10^{-15}\,\mathrm{m/s}}.
+\]
+它远低于普通双精度表示中
+\(c\) 附近的绝对间隔，
+必须采用上式而非直接数值相减。
+
+\paragraph{习题 8.16}
+氘核由自由质子与中子结合时，
+质量亏损
+\[
+ \Delta m=m_p+m_n-m_D
+ =(1.67265+1.67495-3.34365)\times10^{-27}
+ =3.95\times10^{-30}\,\mathrm{kg}.
+\]
+结合能
+\[
+ \boxed{B_D=\Delta mc^2
+ \approx2.216\,\mathrm{MeV}}.
+\]
+占氘核静能之比
+\[
+ \boxed{\frac{B_D}{m_Dc^2}\times100\%
+ =\frac{\Delta m}{m_D}\times100\%
+ \approx0.118\%}.
+\]
+氢原子的电子结合能为
+\(13.58\,\mathrm{eV}\)；
+氢原子静能用题给 \(m_H\)，
+故
+\[
+ \boxed{\frac{13.58\,\mathrm{eV}}
+ {m_Hc^2}\times100\%
+ \approx1.45\times10^{-6}\%}.
+\]
+核结合所占静能比例远高于
+电子与质子的原子结合比例。
+
+\paragraph{习题 8.17}
+本题用主教材给出的简化四质子聚变式，
+一次反应的初质量减去终产物质量：
+\[
+ \begin{aligned}
+ \Delta m&=4m_p-m_{\rm He}-2m_e\\
+ &=[4(1.6726)-6.6425-2(0.0009)]
+ \times10^{-27}\,\mathrm{kg}\\
+ &=\boxed{4.61\times10^{-29}\,\mathrm{kg}}.
+ \end{aligned}
+\]
+放出能量
+\[
+ \boxed{Q=\Delta mc^2\approx
+ 4.14\times10^{-12}\,\mathrm J
+ \approx25.86\,\mathrm{MeV}}.
+\]
+质量转换效率
+\[
+ \boxed{\eta=\frac{\Delta m}{4m_p}
+ \approx0.006890=0.6890\%}.
+\]
+每消耗 \(1\,\mathrm{kg}\) 质子的释放能
+\[
+ \boxed{q=\eta c^2\approx
+ 6.19\times10^{14}\,\mathrm{J/kg}}.
+\]
+按太阳辐射功率
+\(P=3.9\times10^{26}\,\mathrm W\)，
+\[
+ \boxed{\dot m_p=P/q
+ \approx6.30\times10^{11}\,\mathrm{kg/s}}.
+\]
+若太阳按题设有
+\(M_p=1.5\times10^{30}\,\mathrm{kg}\)
+可用质子，并持续此速率：
+\[
+ \boxed{T=M_p/\dot m_p
+ \approx2.38\times10^{18}\,\mathrm s
+ \approx7.55\times10^{10}\,\mathrm{yr}}.
+\]
+这是按源书反应式和固定太阳辐射功率
+建立的粗略上限，不是太阳真实
+主序寿命或氢燃烧区域的精确预测。
+
+\paragraph{习题 8.18}
+无穷远处静止的单位质量物质
+落到半径 \(R\)、质量 \(M\) 的球状天体表面，
+牛顿引力势能释放大小为
+\(\Delta E=GMm/R\)。
+取 \(m=1\,\mathrm{kg}\)，
+地球质量 \(M_E\simeq5.97\times10^{24}\,\mathrm{kg}\)、
+半径 \(R_E\simeq6.37\times10^6\,\mathrm m\)，
+\[
+ \boxed{\Delta E_E\simeq6.26\times10^7\,\mathrm J}.
+\]
+相对于质量静能 \(mc^2\)
+的百分比
+\[
+ \boxed{\eta_E=GM_E/(R_Ec^2)
+ \simeq6.96\times10^{-8}\%}.
+\]
+中子星取 \(M\simeq1.99\times10^{30}\,\mathrm{kg}\)、
+半径 \(R=1.0\times10^4\,\mathrm m\)，
+\[
+ \boxed{\Delta E_N\simeq1.33\times10^{16}\,\mathrm J},
+\qquad
+ \boxed{\eta_N=GM/(Rc^2)\approx14.8\%}.
+\]
+与习题8.17的简化核反应效率约0.689%比较，
+中子星引力释放效率高约21倍。
+\textbf{适用界限：}本题遵循教材的牛顿估算，
+但 \(GM/(Rc^2)\) 已不很小，
+严格的中子星引力红移、入射能量与发射辐射
+须用广义相对论，不能把14.8%当作精密值。
+
+\paragraph{习题 8.19}
+取两个质子各以 \(\pm0.5c\)
+在共同点静止系运动，静质量均为 \(m_p\)。
+\(\gamma=1/\sqrt{1-0.5^2}=2/\sqrt3\)，
+各自的动量和总能量
+\[
+ \boxed{\boldsymbol p_{1,2}
+ =\pm\frac{m_pc}{\sqrt3}\hat{\boldsymbol x}},
+ \qquad
+ \boxed{E_{1,2}=\frac2{\sqrt3}m_pc^2}.
+\]
+在质子1的静止系中，
+质子2的速度用相对论合成
+\[
+ v_{2|1}=\frac{-0.5c-0.5c}
+ {1+0.25}=-0.8c,\qquad
+ \gamma_{2|1}=5/3.
+\]
+于是
+\[
+ \boxed{\boldsymbol p_{2|1}=
+ -\frac43m_pc\,\hat{\boldsymbol x}},
+ \quad
+ \boxed{E_{2|1}=\frac53m_pc^2}.
+\]
+\emph{另一个}质子1在本系静止：
+\(p_{1|1}=0,E_{1|1}=m_pc^2\)。
+动能若需要，可从总能量中减去静能。
+
+\paragraph{习题 8.20}
+采用高能粒子惯用单位，
+初态是总能量为 \(E_e\) 的运动电子，
+与静止质子 \(m_pc^2\) 相撞。
+实验室系初四动量求质心不变量
+\[
+ s c^4=m_e^2c^4+m_p^2c^4
+ +2m_pc^2E_e.
+\]
+题给电子\emph{动能}22GeV，
+因此 \(E_e=22\,\mathrm{GeV}+m_ec^2\)。
+用
+\(m_pc^2\simeq0.938272\,\mathrm{GeV}\)，
+\(m_ec^2\simeq0.000511\,\mathrm{GeV}\)，
+得到
+\[
+ \boxed{\sqrt{s}\,c^2
+ \approx6.4935\,\mathrm{GeV}},
+\]
+即原教材本节所谓的
+\emph{「资用能」——质心系初始总能量}。
+辅导书PDF物理页134把质子静止能粗取为
+\(1.00\,\mathrm{GeV}\)、
+电子静止能约 \(0.0005\,\mathrm{GeV}\)，
+在此精度下得到
+\[
+ \boxed{E_{\rm av,companion}
+ \simeq\sqrt{2(1)(22)+(1+0.0005)^2}
+ \approx6.7\,\mathrm{GeV}}.
+\]
+本解使用更精确的质子静止能
+\(0.938272\,\mathrm{GeV}\)，得到
+\(6.4935\,\mathrm{GeV}\)，
+是\emph{源书近似质量与现代参数的差异}，
+不把二者当成互相矛盾的物理公式。
+若另想计算\emph{扣除初态静质量之后}
+可转成额外动能/新粒子质量的部分，
+那是不同于本书此处「资用能」定义的数量：
+\[
+ E_{\rm cm}-(m_p+m_e)c^2
+ \approx5.5547\,\mathrm{GeV}.
+\]
+这个次级量仅作概念区分，
+不能代替本题源书指定答案。
+
+\paragraph{习题 8.21}
+相向对撞的电子、正电子
+两者能量各约 \(2.8\,\mathrm{GeV}\)，
+初始动量相反，质心系即实验室系。
+故总质心能量
+\[
+ \boxed{E_{\rm cm}\approx5.6\,\mathrm{GeV}}.
+\]
+若「资用能」扣除两个电子静能，
+则约
+\(5.6-2(0.000511)=5.5990\,\mathrm{GeV}\)。
+对于同样电子射向\emph{静止电子}，
+要达到同一质心总能量，
+\[
+ E_{\rm cm}^2=2m_e^2c^4+2m_ec^2 E_{\rm beam},
+\]
+故实验室系\emph{入射电子总能量}
+\[
+ \boxed{E_{\rm beam}=
+ \frac{E_{\rm cm}^2-2m_e^2c^4}
+ {2m_ec^2}
+ \approx3.07\times10^4\,\mathrm{GeV}}.
+\]
+入射电子动能仅少
+\(0.000511\,\mathrm{GeV}\)，
+也约为 \(3.07\times10^4\,\mathrm{GeV}\)。
+与对撞机单束2.8GeV相比，
+固定靶所需束能约高
+\(\boxed{1.10\times10^4}\) 倍，
+说明同等束能时相向对撞更有效。
+
+\paragraph{习题 8.22}
+沿 \(x\) 的洛伦兹四动量变换：
+\[
+ E'=\gamma(E-up_x),\quad
+ p_x'=\gamma(p_x-uE/c^2),\quad
+ p_y'=p_y,\quad p_z'=p_z.
+\]
+直接展开：
+\[
+ \begin{aligned}
+ E'^2-c^2p_x'^2
+ &=\gamma^2[(E-up_x)^2
+ -c^2(p_x-uE/c^2)^2]\\
+ &=\gamma^2(1-u^2/c^2)
+ (E^2-c^2p_x^2)\\
+ &=E^2-c^2p_x^2.
+ \end{aligned}
+\]
+再减去未变的
+\(c^2p_y'^2+c^2p_z'^2\)，得到
+\[
+ \boxed{E'^2-c^2|\boldsymbol p'|^2
+ =E^2-c^2|\boldsymbol p|^2
+ =m_0^2c^4}.
+\]
+不变量不依赖所选惯性参考系。
+
+\paragraph{习题 8.23}
+静止质子的静能
+\(E_0=m_pc^2\)，
+\[
+ \boxed{E_0\simeq0.938\,\mathrm{GeV}}.
+\]
+代入牛顿引力形式：
+两个静止质子间
+\(F_g=G(E_0/c^2)^2/r^2
+ =GE_0^2/(c^4r^2)\)。
+题目\emph{两质子均具有相同高能 \(E\)}
+且粗略把 \(E/c^2\) 当各自的引力等效质量，
+则
+\[
+ \frac{F_g(E)}{F_g(E_0)}
+ =\left(\frac{E}{E_0}\right)^2.
+\]
+欲令原本比引力大约
+\(10^{36}\) 倍的电力被引力追平，
+需
+\[
+ \left(\frac{E}{E_0}\right)^2\simeq10^{36}
+ \Longrightarrow
+ \boxed{E\simeq10^{18}E_0
+ \approx9.38\times10^{17}\,\mathrm{GeV}}.
+\]
+比较教材给出的粒子加速器量级
+\(10^3\,\mathrm{GeV}\)：
+\[
+ \boxed{\frac{E}{10^3\,\mathrm{GeV}}
+ \approx9.38\times10^{14}}.
+\]
+\textbf{模型界限：}若只把\emph{一个}
+质子的能量提高、另一质子保持静止，
+比例会只与 \(E/E_0\) 成正比，
+结果不同；主教材题目默认讨论
+「两个质子」共同的典型能标。
+把动能与重力质量简单代入牛顿
+\(1/r^2\) 定律并非严格量子引力理论，
+这里只用于揭示约 \(10^{18}\) GeV 的极高能标。

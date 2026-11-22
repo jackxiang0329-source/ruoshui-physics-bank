@@ -1,0 +1,417 @@
+{
+  "schema": "zhang-sanhui-4e-companion-answer-crosscheck/v1",
+  "date": "2026-11-22",
+  "scope": "existing V1 third chapter original 3.1--3.24, core numeric or symbolic formula checked, no new unique user problems",
+  "source": {
+    "volume": "S",
+    "filename": "大学物理学（第4版）学习辅导与习题解答 (张三慧) .pdf",
+    "sha256": "54126dd75edd65eb9ead0a9d7acb96a37bfb25674cf595c76b94f2fb30bce5a7",
+    "pdf_physical_page_count": 402
+  },
+  "question_bundle": "chapters/03/questions.tex",
+  "solution_bundle": "chapters/03/solutions.tex",
+  "records": [
+    {
+      "canonical_id": "ZS4-03-001",
+      "source_problem_number": "3.1",
+      "companion_pdf_physical_pages": [
+        48
+      ],
+      "tested_quantity": "half-quadrant harmonic spring impulse test",
+      "independent_computed_value": -0.05,
+      "value_unit": "N s",
+      "companion_rounded_value": null,
+      "model_assumptions": "spring oscillator impulse; reviewer k2 N/m A0.1m omega4 rad/s",
+      "crosscheck": "source_symbolic_formula_checked_with_independent_test_parameters",
+      "discrepancy_note": "rounded or symbolic source-value agreement, not complete proof validation",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-03-002",
+      "source_problem_number": "3.2",
+      "companion_pdf_physical_pages": [
+        48
+      ],
+      "tested_quantity": "quarter-circle net impulse",
+      "independent_computed_value": 1.4142135623730954,
+      "value_unit": "N s",
+      "companion_rounded_value": 1.41,
+      "model_assumptions": "0.05kg at20m/s after quarter rotation",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "rounded or symbolic source-value agreement, not complete proof validation",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-03-003",
+      "source_problem_number": "3.3",
+      "companion_pdf_physical_pages": [
+        48,
+        49
+      ],
+      "tested_quantity": "water diver average supporting force",
+      "independent_computed_value": 6419.747468305833,
+      "value_unit": "N",
+      "companion_rounded_value": 6420,
+      "model_assumptions": "water-stopping averaged force 150kg fall from5m in0.30s",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "rounded or symbolic source-value agreement, not complete proof validation",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-03-004",
+      "source_problem_number": "3.4",
+      "companion_pdf_physical_pages": [
+        49
+      ],
+      "tested_quantity": "machine gun shoulder reaction average",
+      "independent_computed_value": 11.613000000000001,
+      "value_unit": "N",
+      "companion_rounded_value": 11.6,
+      "model_assumptions": "gun 120rounds/min mass7.90g and735m/s",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "rounded or symbolic source-value agreement, not complete proof validation",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-03-005",
+      "source_problem_number": "3.5",
+      "companion_pdf_physical_pages": [
+        49
+      ],
+      "tested_quantity": "wind momentum flux car overturn load",
+      "independent_computed_value": 109809.702,
+      "value_unit": "N",
+      "companion_rounded_value": 110000,
+      "model_assumptions": "stopped wind momentum flux rho1.29 A22.5x2.62 v38",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "rounded or symbolic source-value agreement, not complete proof validation",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-03-006",
+      "source_problem_number": "3.6",
+      "companion_pdf_physical_pages": [
+        49,
+        50
+      ],
+      "tested_quantity": "elbow flow momentum deflection",
+      "independent_computed_value": 42426.406871192856,
+      "value_unit": "N",
+      "companion_rounded_value": 42400,
+      "model_assumptions": "90° water bend mass flow3000kg/s speed10m/s ignoring pressure end forces",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "rounded or symbolic source-value agreement, not complete proof validation",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-03-007",
+      "source_problem_number": "3.7",
+      "companion_pdf_physical_pages": [
+        50
+      ],
+      "tested_quantity": "steady rising chain tension sample",
+      "independent_computed_value": 66.80000000000001,
+      "value_unit": "N",
+      "companion_rounded_value": null,
+      "model_assumptions": "symbolic upward chain F=rho*l*g+rho*v²; reviewer rho2kg/m length3m speed2m/s",
+      "crosscheck": "source_symbolic_formula_checked_with_independent_test_parameters",
+      "discrepancy_note": "rounded or symbolic source-value agreement, not complete proof validation",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-03-008",
+      "source_problem_number": "3.8",
+      "companion_pdf_physical_pages": [
+        50
+      ],
+      "tested_quantity": "falling chain support force sample",
+      "independent_computed_value": 47.04000000000001,
+      "value_unit": "N",
+      "companion_rounded_value": null,
+      "model_assumptions": "symbolic dropped chain support N=3rho*g*l; reviewer rho0.8kg/m length2m",
+      "crosscheck": "source_symbolic_formula_checked_with_independent_test_parameters",
+      "discrepancy_note": "rounded or symbolic source-value agreement, not complete proof validation",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-03-009",
+      "source_problem_number": "3.9",
+      "companion_pdf_physical_pages": [
+        50,
+        51
+      ],
+      "tested_quantity": "nuclear decay recoil momentum",
+      "independent_computed_value": 1.0649755865746405e-20,
+      "value_unit": "kg m/s",
+      "companion_rounded_value": 1.07e-20,
+      "model_assumptions": "perpendicular momenta 9.22e-21 and5.33e-21",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "rounded or symbolic source-value agreement, not complete proof validation",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-03-010",
+      "source_problem_number": "3.10",
+      "companion_pdf_physical_pages": [
+        51
+      ],
+      "tested_quantity": "detached rocket shell speed",
+      "independent_computed_value": 7289.772727272727,
+      "value_unit": "m/s",
+      "companion_rounded_value": 7290,
+      "model_assumptions": "rocket shell m1=290, instrument m2=150, v0=7600, separation speed910",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "rounded or symbolic source-value agreement, not complete proof validation",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-03-011",
+      "source_problem_number": "3.11",
+      "companion_pdf_physical_pages": [
+        51
+      ],
+      "tested_quantity": "locked-car slide speed after collision",
+      "independent_computed_value": 19.79898987322333,
+      "value_unit": "m/s",
+      "companion_rounded_value": 19.8,
+      "model_assumptions": "two identical cars perpendicular impact then slide25m with mu0.80",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "rounded or symbolic source-value agreement, not complete proof validation",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-03-012",
+      "source_problem_number": "3.12",
+      "companion_pdf_physical_pages": [
+        51
+      ],
+      "tested_quantity": "continuous-exhaust space probe final speed",
+      "independent_computed_value": 108.34550329319643,
+      "value_unit": "m/s",
+      "companion_rounded_value": 108,
+      "model_assumptions": "continuous exhaust rocket equation v=105+253ln(6090/6010), not finite one-shot impulse",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "FINITE_BATCH_VS_CONTINUOUS_EXHAUST: original answer uses logarithmic Tsiolkovsky rocket law, finite mass momentum alternative differs by0.022m/s; solution now gives both with source convention preferred",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-03-013",
+      "source_problem_number": "3.13",
+      "companion_pdf_physical_pages": [
+        52
+      ],
+      "tested_quantity": "rocket expelled mass fraction",
+      "independent_computed_value": 0.6321205588285577,
+      "value_unit": "dimensionless",
+      "companion_rounded_value": 0.632,
+      "model_assumptions": "rocket m/m0=1/e when outgoing instantaneous exhaust zero in inertial frame",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "rounded or symbolic source-value agreement, not complete proof validation",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-03-014",
+      "source_problem_number": "3.14",
+      "companion_pdf_physical_pages": [
+        52,
+        53
+      ],
+      "tested_quantity": "powered rocket altitude at propellant exhaustion",
+      "independent_computed_value": 203591.5636030566,
+      "value_unit": "m",
+      "companion_rounded_value": 172000,
+      "model_assumptions": "continuous rocket height integral, M0=2.72e6 kg md=1290kg/s u=55000m/s duration155s g9.8m/s²",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "SOURCE_NUMERIC_DISAGREEMENT: source reports h=172km, integration of identical printed formula and parameters gives h=203.59km; full external review pending",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-03-015",
+      "source_problem_number": "3.15",
+      "companion_pdf_physical_pages": [
+        53
+      ],
+      "tested_quantity": "turbofan thrust",
+      "independent_computed_value": 22470,
+      "value_unit": "N",
+      "companion_rounded_value": 22500,
+      "model_assumptions": "turbojet forward velocity210, air intake75kg/s, fuel3kg/s, exhaust backward490 relative plane",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "rounded or symbolic source-value agreement, not complete proof validation",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-03-016",
+      "source_problem_number": "3.16",
+      "companion_pdf_physical_pages": [
+        53
+      ],
+      "tested_quantity": "water molecule centroid distance from O nucleus",
+      "independent_computed_value": 0.006479927211003937,
+      "value_unit": "nm",
+      "companion_rounded_value": 0.00648,
+      "model_assumptions": "H2O center of mass along angle bisector r_OH=0.0958nm theta105°, 1:16 masses",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "rounded or symbolic source-value agreement, not complete proof validation",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-03-017",
+      "source_problem_number": "3.17",
+      "companion_pdf_physical_pages": [
+        54
+      ],
+      "tested_quantity": "uniform semicircular plate centroid",
+      "independent_computed_value": 0.4244131815783876,
+      "value_unit": "m / R",
+      "companion_rounded_value": null,
+      "model_assumptions": "uniform semicircular plate x_centroid=4R/(3pi); reviewer R1m",
+      "crosscheck": "source_symbolic_formula_checked_with_independent_test_parameters",
+      "discrepancy_note": "rounded or symbolic source-value agreement, not complete proof validation",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-03-018",
+      "source_problem_number": "3.18",
+      "companion_pdf_physical_pages": [
+        54
+      ],
+      "tested_quantity": "drilled-cube center-of-mass offset",
+      "independent_computed_value": 0.061080516601981404,
+      "value_unit": "a",
+      "companion_rounded_value": 0.061,
+      "model_assumptions": "uniform cubical metal with through-bore radius a/4 tangent to base, centroid shift from cube center",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "COORDINATE_REFERENCE: source 0.061a is upward shift from cube centroid whereas 0.561a is absolute height from base",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-03-019",
+      "source_problem_number": "3.19",
+      "companion_pdf_physical_pages": [
+        54
+      ],
+      "tested_quantity": "two falling stones center of mass speed at 2s",
+      "independent_computed_value": 12.6,
+      "value_unit": "m/s",
+      "companion_rounded_value": null,
+      "model_assumptions": "two stones launched1second apart g9.8, m1=20g m2=50g; selected time t2s",
+      "crosscheck": "source_symbolic_formula_checked_with_independent_test_parameters",
+      "discrepancy_note": "rounded or symbolic source-value agreement, not complete proof validation",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-03-020",
+      "source_problem_number": "3.20",
+      "companion_pdf_physical_pages": [
+        55
+      ],
+      "tested_quantity": "comet aphelion radius",
+      "independent_computed_value": 5261563876651.982,
+      "value_unit": "m",
+      "companion_rounded_value": 5260000000000,
+      "model_assumptions": "Halley perihelion-to-aphelion angular momentum conservation",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "rounded or symbolic source-value agreement, not complete proof validation",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-03-021",
+      "source_problem_number": "3.21",
+      "companion_pdf_physical_pages": [
+        55
+      ],
+      "tested_quantity": "Moon Earth-center angular momentum",
+      "independent_computed_value": 2.8570480454745893e+34,
+      "value_unit": "kg m²/s",
+      "companion_rounded_value": 2.86e+34,
+      "model_assumptions": "lunar angular momentum using radius3.82e8 mass7.35e22 orbit27.3d",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "rounded or symbolic source-value agreement, not complete proof validation",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-03-022",
+      "source_problem_number": "3.22",
+      "companion_pdf_physical_pages": [
+        55,
+        56
+      ],
+      "tested_quantity": "transfer orbit period",
+      "independent_computed_value": 38057.731116958035,
+      "value_unit": "s",
+      "companion_rounded_value": 38057,
+      "model_assumptions": "elliptical satellite period with near205.5km far35835.7km above Earth radius6378km vp10.2km/s",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "rounded or symbolic source-value agreement, not complete proof validation",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-03-023",
+      "source_problem_number": "3.23",
+      "companion_pdf_physical_pages": [
+        56
+      ],
+      "tested_quantity": "radial pull speed amplification sample",
+      "independent_computed_value": 2,
+      "value_unit": "speed ratio",
+      "companion_rounded_value": null,
+      "model_assumptions": "smooth radial pull angular momentum v/v0=r0/r; reviewer choose r0/r2",
+      "crosscheck": "source_symbolic_formula_checked_with_independent_test_parameters",
+      "discrepancy_note": "rounded or symbolic source-value agreement, not complete proof validation",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-03-024",
+      "source_problem_number": "3.24",
+      "companion_pdf_physical_pages": [
+        56,
+        57
+      ],
+      "tested_quantity": "three-point sticky impact final-to-initial spin ratio",
+      "independent_computed_value": 0.75,
+      "value_unit": "omega ratio",
+      "companion_rounded_value": 0.75,
+      "model_assumptions": "3 equal masses, third at end sticks to rotating two-mass bar; omega_f=3/4 omega_i",
+      "crosscheck": "source_scanned_numeric_result_and_independent_physics_computation",
+      "discrepancy_note": "rounded or symbolic source-value agreement, not complete proof validation",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    }
+  ],
+  "summary": {
+    "reviewed_distinct_existing_pairs": 24,
+    "reviewed_numeric_source_answers": 18,
+    "reviewed_symbolic_source_formulas": 6,
+    "new_unique_source_questions": 0,
+    "expert_signed_off": 0,
+    "notable_source_model_disagreements": [
+      "3.12",
+      "3.14"
+    ]
+  },
+  "notes": "Source physical PDF pages48–57 inspected; 3.14 source h172km versus independently integrated203.59km is documented; 3.12 original source uses continuous rocket logarithm while candidate formerly used one-shot model; file cannot increase unique question count943."
+}

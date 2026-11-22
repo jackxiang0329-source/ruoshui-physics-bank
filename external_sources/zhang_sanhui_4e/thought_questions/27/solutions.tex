@@ -1,0 +1,119 @@
+% 第27章思考题27.1--27.7的独立概念解析，候选稿，未获专家认证。
+\section*{第27章\quad 薛定谔方程：思考题解析}
+\paragraph{思考题 27.1}
+薛定谔方程并非从经典牛顿力学\emph{严格逻辑必然地}
+唯一推出，而是受能量—动量关系及德布罗意物质波
+启发提出、由实验支持的量子运动基本假设。
+非相对论单粒子经典Hamilton函数
+\(H=p^2/(2m)+V(\boldsymbol r,t)\)，
+对应算符替换
+\(E\mapsto i\hbar\partial_t\)、
+\(\boldsymbol p\mapsto-i\hbar\nabla\)，
+从而得到
+\[
+\boxed{i\hbar\partial_t\Psi=
+\left[-\frac{\hbar^2}{2m}\nabla^2+V\right]\Psi}.
+\]
+这只是启发式构造，数学上的自伴性、
+定义域和实验验证不可省略。
+
+\paragraph{思考题 27.2}
+若Hamilton算符 \(H=H^\dagger\)，
+按复共轭方程得
+\(\partial_t|\Psi|^2=
+-(\nabla\cdot\boldsymbol j)\)，其中
+\[
+\boxed{\rho=|\Psi|^2,\quad
+\boldsymbol j=\frac{\hbar}{2mi}
+(\Psi^*\nabla\Psi-\Psi\nabla\Psi^*)},
+\]
+\[
+\boxed{\partial_t\rho+\nabla\cdot\boldsymbol j=0}.
+\]
+对整个空间积分且无边界净流：
+\(d\int|\Psi|^2d^3r/dt=0\)。
+因此初始归一化为1的波函数保持归一化。
+若有非Hermitian有效Hamilton量或吸收性边界，
+单粒子概率范数可能变化，需另行解释。
+
+\paragraph{思考题 27.3}
+标准一维非奇异有限势情形，
+物理上可接受的定态波函数须单值、有限、
+平方可积、可归一化，并满足边界条件；
+通常 \(\psi,\psi'\) 连续。
+但是无限深势壁使有限侧波函数在壁处为零，
+\emph{一阶导数不必在无穷势阶跃处连续}；
+\(\delta\) 势会让导数存在规定跳跃，
+散射态的广义本征函数也可以不属于普通
+\(L^2(\mathbb R)\)。
+因此
+\[
+\boxed{\int|\psi|^2d^3r=1}
+\]
+是束缚概率态的归一化要求，不能机械施用于
+所有广义散射平面波。
+
+\paragraph{思考题 27.4}
+Born概率解释为
+\(P(\Omega)=\int_\Omega|\Psi|^2dV\)
+（若\(\|\Psi\|_2=1\)）。
+任意非零常数 \(C\) 乘以未归一化解
+不会改变归一化后的概率比：
+\[
+P(\Omega)=
+\frac{\int_\Omega|C\Psi|^2dV}
+{\int_{\mathbb R^3}|C\Psi|^2dV}
+=\frac{\int_\Omega|\Psi|^2dV}
+{\int_{\mathbb R^3}|\Psi|^2dV}.
+\]
+唯有确定范数后，才能把 \(|\Psi|^2dV\)
+直接当作概率，而不是相对概率密度。
+
+\paragraph{思考题 27.5}
+对\emph{一维、自伴、束缚、非简并}的
+Sturm--Liouville体系，按能量递增编号，
+基态内部无节点，第 \(n\) 个本征态有
+\(\boxed{n-1}\) 个\emph{内部节点}
+（约定基态编号 \(n=1\)）。
+因此基态密度在允许区域的内部一般不为零，
+激发态有零密度的节点 \(n-1\) 个；
+无限壁处零点不计作内部节点。
+这一规律并不能无条件推广到
+二维或三维\emph{简并}态，也不能直接用于
+任意叠加态。原图27.3/27.5/27.12
+需逐图核对势壁、节点位置及禁阻区尾部。
+
+\paragraph{思考题 27.6}
+按图27.13阶梯左区 \(V_L<V_R\)，
+同一能级 \(E_5>V_R\)。
+在局部近似下
+\[
+k_j=\frac{\sqrt{2m(E_5-V_j)}}{\hbar},
+\quad \lambda_j=\frac{2\pi}{k_j},\quad
+|\psi_j|_{\rm WKB}\propto k_j^{-1/2}.
+\]
+因为右区 \(V_R\) 较高，
+\(k_R<k_L\)，故
+\[
+\boxed{\lambda_R>\lambda_L},\qquad
+\boxed{A_R>A_L\quad\text{(WKB平均振幅)}}.
+\]
+严格常阶梯势阱中局部波为不同波数的正弦组合，
+需同时满足壁零值与阶梯处 \(\psi,\psi'\) 连续；
+振幅的确切大小由全局边界条件确定，
+上述振幅不等式不是任意薄小区间的严格定理。
+
+\paragraph{思考题 27.7}
+孤立、时间独立且自伴的Hamilton量
+对每个能量本征态
+\(\Psi_n(t)=\psi_ne^{-iE_nt/\hbar}\)，
+其概率密度不随时间变，
+\[
+\boxed{P_n(t)=|\Psi_n(t)|^2=|\psi_n|^2}.
+\]
+它\emph{不会}在孤立模型中自发跃迁至其他本征态，
+因此此模型的严格定态寿命可视为无限大。
+真实原子激发态与量子化电磁场耦合，
+完整体系中的原子子系统可通过自发辐射衰变；
+有限寿命和能级自然宽度因此来自\emph{开放子系统}，
+并不反驳孤立Hamilton定态方程。

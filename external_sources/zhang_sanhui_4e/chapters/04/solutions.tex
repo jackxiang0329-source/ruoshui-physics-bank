@@ -1,0 +1,791 @@
+% 张三慧大学物理学第4版第4章《功和能》独立解析
+% 来源V1 PDF物理页151--155，表4.1 PDF物理页131。
+% 解答模型、坐标和适用条件逐项说明，未经独立外审。
+\section*{第4章\quad 功和能：独立解析}
+\subsection*{习题4.1--4.16}
+
+\paragraph{习题 4.1}
+以起重间加速度向上为正，配重加速度向下为正，
+两侧质量 \(M=1200\,\mathrm{kg}\)，
+\(m=1000\,\mathrm{kg}\)，
+加速度大小 \(a=1.5\,\mathrm{m/s^2}\)。
+钢缆两侧张力 \(T_M,T_m\) 分别满足
+\[
+ T_M-Mg=Ma,\qquad mg-T_m=ma.
+\]
+故
+\[
+ \boxed{T_M=M(g+a)=13560\,\mathrm N},\qquad
+ \boxed{T_m=m(g-a)=8300\,\mathrm N}.
+\]
+加速时间 \(t=1.0\,\mathrm s\) 内位移
+\(s=at^2/2=0.75\,\mathrm m\)，
+电动机输出的功是两侧张力差对滑轮两边等长位移所做功：
+\[
+ \boxed{W_{\rm mot,1}=(T_M-T_m)s
+ =[ (M-m)g+(M+m)a]s
+ =3945\,\mathrm J}.
+\]
+交叉核验：
+\(\Delta U=(M-m)gs=1470\,\mathrm J\)，
+\(\Delta K=\frac12(M+m)(at)^2=2475\,\mathrm J\)，
+两者之和仍为 \(3945\,\mathrm J\)。
+之后匀速再升高 \(\Delta h=10\,\mathrm m\)，
+两侧张力各等于重力，故
+\[
+ \boxed{W_{\rm mot,2}=(M-m)g\Delta h
+ =1.96\times10^4\,\mathrm J}.
+\]
+假定滑轮无转动惯量、绳无质量且无摩擦损失。
+
+\paragraph{习题 4.2}
+设从圆弧底端起沿路面的圆心角为
+\(\alpha\in[0,\pi/4]\)。
+极缓慢匀速使法向运动加速度可忽略，
+路面支持力 \(N\simeq mg\cos\alpha\)。
+弧长微元 \(ds=R\,d\alpha\)，
+上升高度 \(h=R(1-\cos\alpha)\)。
+故重力做功
+\[
+ \boxed{W_g=-mgR(1-\cos\frac\pi4)}.
+\]
+滑动摩擦力大小 \(f_k=\mu_kmg\cos\alpha\)，
+所以
+\[
+ \boxed{W_f=-\int_0^{\pi/4}\mu_kmgR\cos\alpha\,d\alpha
+ =-\frac{\mu_kmgR}{\sqrt2}}.
+\]
+由动能变化近零得到马的拉力所做功
+\[
+ \boxed{W_{\rm horse}=mgR(1-\frac1{\sqrt2})
+ +\frac{\mu_kmgR}{\sqrt2}}.
+\]
+这使用题设“极缓慢”近似；若运动速率不可忽略，
+曲率法向加速度会改变 \(N\) 和摩擦功。
+
+\paragraph{习题 4.3}
+飞机质量 \(m=132000\,\mathrm{kg}\)，
+速度 \(v=942/3.6\approx261.67\,\mathrm{m/s}\)，
+所以撞击前的经典动能
+\[
+ \boxed{K=\frac12mv^2
+ \approx4.52\times10^9\,\mathrm J}.
+\]
+本书表4.1（V1 PDF物理页131）
+列出 \(1\,\mathrm{kg}\) TNT爆炸能约
+\(4.6\times10^6\,\mathrm J\)，
+依此\emph{教材内给定的当量标准}
+\[
+ \boxed{m_{\rm TNT,eq}
+ =\frac{4.52\times10^9}{4.6\times10^6}
+ \approx9.82\times10^2\,\mathrm{kg}}.
+\]
+这一对比仅是能量当量，
+不等同于实际撞击破坏机制的物理等效性。
+
+\paragraph{习题 4.4}
+落砂单位时间质量 \(q=50\,\mathrm{kg/s}\)，
+在传送带运动方向初速近似为零，
+被加速到 \(v=1.5\,\mathrm{m/s}\)。
+水平动量流增量为 \(qv\)，
+因此皮带对矿砂施力 \(F=qv\)，
+矿砂对皮带的反作用力大小相同、方向向后。
+为保持皮带匀速，电动机输入功率
+\[
+ \boxed{P_{\rm mot}=Fv=qv^2=112.5\,\mathrm W}.
+\]
+矿砂得到的动能流率仅
+\[
+ \boxed{\dot K=\frac12qv^2=56.25\,\mathrm W}.
+\]
+差值 \(\frac12qv^2\) 在矿砂与皮带达到
+共同速度的相对滑动过程中耗散为热等，
+因此二者不相等。若矿砂有初始水平速度，
+需替换动量变化和动能变化。
+
+\paragraph{习题 4.5}
+取A下落、B右移距离均为 \(h=1.0\,\mathrm m\)；
+两物体质量相等为 \(m\)，
+滑动摩擦只作用在桌面上的B，
+大小 \(\mu_kmg\)，其中 \(\mu_k=0.20\)。
+由功能关系
+\[
+ mgh-\mu_kmgh=\frac12mv^2+\frac12mv^2
+ =mv^2.
+\]
+于是
+\[
+ \boxed{v=\sqrt{(1-\mu_k)gh}
+ =\sqrt{0.8(9.8)(1.0)}=2.80\,\mathrm{m/s}}.
+\]
+假设绳张紧、两物体始终沿所设方向运动，
+且A未触地。
+
+\paragraph{习题 4.6}
+子弹质量 \(m\)，初始速度 \(v\)；
+木块质量 \(M\)，初始静止；桌面光滑。
+子弹最终嵌在木块中共同速度
+\[
+ \boxed{V=\frac{mv}{M+m}}
+\]
+由水平动量守恒给出。
+因此子弹、木块的动能增量分别为
+\[
+ \boxed{\Delta K_b=\frac12m(V^2-v^2)},\qquad
+ \boxed{\Delta K_M=\frac12MV^2}.
+\]
+设二者间相对摩擦力大小 \(f\) 在相互穿入
+的过程恒定（或理解下式为对应积分），
+木块对地前进距离 \(s_1\)；
+子弹对木块相对前进 \(s'\)，
+则子弹对地位移为 \(s_1+s'\)。
+因此作用在子弹上的摩擦功为
+\[
+ W_b=-f(s_1+s'),\qquad
+ W_M=+fs_1.
+\]
+两者求和即
+\[
+ \boxed{\Delta K_{\rm total}=W_b+W_M=-fs'<0}.
+\]
+若摩擦力不恒定，严格式为
+\(\Delta K_{\rm total}=-\int_0^{s'}f(s)\,ds\)。
+由最终与初始能量可验
+\[
+ \frac12(M+m)V^2-\frac12mv^2
+ =-\frac12\frac{mM}{M+m}v^2,
+\]
+因此损失的机械能等于内部摩擦
+作用于\emph{相对}位移所耗散的能量。
+
+\paragraph{习题 4.7}
+参考系 \(S'\) 相对惯性参考系 \(S\)
+以恒定速度 \(\boldsymbol u\) 平移，
+有 \(\boldsymbol v'=\boldsymbol v-\boldsymbol u\)，
+\(d\boldsymbol r'=d\boldsymbol r-\boldsymbol u\,dt\)。
+伽利略变换下 \(\boldsymbol F'=m\boldsymbol a'=
+m\boldsymbol a=\boldsymbol F\)，
+故沿同一段物理运动的功
+\[
+ A'_{AB}
+ =\int_A^B\boldsymbol F\cdot d\boldsymbol r'
+ =A_{AB}-\boldsymbol u\cdot
+ \int_{t_A}^{t_B}\boldsymbol F\,dt
+ =A_{AB}-m\boldsymbol u\cdot
+ (\boldsymbol v_B-\boldsymbol v_A).
+\]
+另一方面
+\[
+ \frac m2(v_B'^2-v_A'^2)
+ =\frac m2(v_B^2-v_A^2)
+ -m\boldsymbol u\cdot
+ (\boldsymbol v_B-\boldsymbol v_A).
+\]
+若 \(S\) 中 \(A_{AB}=\Delta K\)，
+两式比较即在 \(S'\) 中仍有
+\[
+ \boxed{A'_{AB}=\frac m2v_B'^2-\frac m2v_A'^2}.
+\]
+但两个系中的功、动能各自一般不相等。
+证明要求二者均为惯性参考系，
+不能把有加速度的观察系也直接套用。
+
+\paragraph{习题 4.8}
+设物体质量为 \(m\)，弹簧在没有负载时的原长
+\(l_0\)，平衡静伸长量为
+\(x_0=mg/k\)（因 \(kx_0=mg\)）。
+令 \(y\) 从平衡位置向下为正，
+则物体位移 \(y\) 时的弹簧总伸长
+\(x=x_0+y\)。
+按题设将弹性势能及重力势能各自在
+平衡位置定义为零：
+\[
+ \Delta U_{\rm spring}
+ =\frac12k[(x_0+y)^2-x_0^2]
+ =kx_0y+\frac12ky^2,
+\quad
+ \Delta U_g=-mgy.
+\]
+两者相加并利用平衡条件 \(kx_0=mg\)，
+一次项恰好抵消：
+\[
+ \boxed{U_{\rm spring}(y)+U_g(y)
+ =(kx_0-mg)y+\frac12ky^2
+ =\frac12ky^2}.
+\]
+这说明以竖直弹簧\emph{平衡位置}作为势能零点，
+合势能形式同水平弹簧，
+但并非说重力势能在任意位置都为零。
+
+\paragraph{习题 4.9}
+以下端伸长 \(x\) 向下为正，
+原长位置 \(x=0\) 处松手且初速零。
+物体重力势能相对原长位置
+\(-mgx\)，弹簧弹性势能
+\(\frac12kx^2\)。
+由机械能守恒
+\[
+ \frac12mv^2+\frac12kx^2-mgx=0.
+\]
+最低点 \(v=0\) 且 \(x>0\)，得到
+\[
+ \boxed{x_{\max}=\frac{2mg}{k}}.
+\]
+平衡位置 \(x_{\rm eq}=mg/k\) 处
+\[
+ \frac12mv_{\rm eq}^2
+ =mg\frac{mg}k-\frac12k\left(\frac{mg}k\right)^2
+ =\frac{m^2g^2}{2k},
+\quad
+ \boxed{v_{\rm eq}=g\sqrt{\frac m k}}.
+\]
+忽略弹簧自重、空气阻力与非线性弹性。
+
+\paragraph{习题 4.10}
+人质量 \(m=72\,\mathrm{kg}\)，
+原长 \(L=20\,\mathrm m\)，
+劲度系数 \(k=60\,\mathrm{N/m}\)。
+弹性带拉伸量设为 \(x\ge0\)，
+下降总距离 \(y=L+x\)。
+由机械能守恒，
+\[
+ \frac12mv^2+\frac12kx^2=mgy.
+\]
+在带已经拉长的阶段，下降加速度
+\(a=g-kx/m\)，速度最大时
+\[
+ x_*=\frac{mg}k=11.76\,\mathrm m,
+\quad
+ \boxed{y_*=L+x_*=31.76\,\mathrm m}.
+\]
+最大速度
+\[
+ \boxed{v_{\max}=
+ \sqrt{2g(L+x_*)-\frac{kx_*^2}{m}}
+ \approx22.52\,\mathrm{m/s}}.
+\]
+最低点速度为零，
+由 \(mg(L+x_{\max})=kx_{\max}^2/2\)，
+取正根
+\[
+ \boxed{x_{\max}=
+ \frac{mg+\sqrt{(mg)^2+2kmgL}}k
+ \approx36.43\,\mathrm m}.
+\]
+总下降 \(L+x_{\max}\approx56.43\,\mathrm m
+ <60\,\mathrm m\)，所以在理想模型中不会触水。
+\textbf{辅导书交叉校勘（扫描PDF物理页66--67）：}
+该书在题4.10的(2)给出二次方程
+\(x^2-27.4x-549=0\)，又报 \(x=38.1\,\mathrm m\)；
+但由原始数据 \(m=72\,\mathrm{kg}\)、\(g=9.8\)、
+\(k=60\,\mathrm{N/m}\)、\(L=20\,\mathrm m\) 可独立得到
+\[
+ x^2-\frac{2mg}{k}x-\frac{2mgL}{k}
+ =x^2-23.52x-470.4=0,
+ \qquad x=36.4318\ldots\,\mathrm m.
+\]
+即使把辅导书印出的 \(x^2-27.4x-549=0\) 单独求根，
+正根也约为 \(40.84\,\mathrm m\)，并不等于其所写 \(38.1\,\mathrm m\)。
+原书两处数字均不符合题面输入及相互之间的方程，
+不应照搬；正确的简化模型答案为总下降约 \(56.43\,\mathrm m\)，
+结果仍低于 \(60\,\mathrm m\)。此处保留待专家复核风险。
+若忽略绳的实际阻尼、人体姿势或水面波动，
+结论只是本题给定简化模型的判断。
+
+\paragraph{习题 4.11}
+子弹质量 \(m\)，速度 \(v_0\)，射入左端质量
+\(M\) 的块A并嵌住。碰撞时间短且
+弹簧在碰撞瞬间尚未显著变形，
+由A与子弹动量守恒
+\[
+ v_A=\frac{m}{M+m}v_0,
+\]
+而右块B质量 \(M\) 初速为零。
+其后由两个质量 \(m_A'=M+m\)、\(m_B=M\)
+之间弹簧的相对运动，
+约化质量
+\[
+ \mu=\frac{(M+m)M}{2M+m}.
+\]
+最大压缩时相对速度为零，
+原有\emph{相对}动能变为弹性势能：
+\[
+ \frac12\mu v_A^2=\frac12kx_{\max}^2.
+\]
+因而
+\[
+ \boxed{x_{\max}=\frac{mv_0}{M+m}
+ \sqrt{\frac{M(M+m)}{k(2M+m)}}}
+ =\boxed{mv_0
+ \sqrt{\frac{M}{k(M+m)(2M+m)}}}.
+\]
+碰撞本身的动能损失不能再当作弹簧能量；
+只有嵌入后剩余的相对动能参与压缩。
+
+\paragraph{习题 4.12}
+剪断前弹簧承受总质量
+\(m_1+m_2\) 的重力，平衡伸长量
+\(x_0=(m_1+m_2)g/k\)。
+剪断后仅悬 \(m_1\)，新的平衡伸长量
+\(x_1=m_1g/k\)，
+所以相对新平衡位置的初始振幅
+\(A=x_0-x_1=m_2g/k\)。
+其自由振动角频率
+\(\omega=\sqrt{k/m_1}\)，
+最大速率在新平衡位置，
+\[
+ \boxed{v_{\max}=\omega A
+ =\frac{m_2g}{\sqrt{km_1}}}.
+\]
+代入 \(m_1=0.500\,\mathrm{kg}\)，
+\(m_2=0.300\,\mathrm{kg}\)，
+\(k=8.9\,\mathrm{N/m}\)，
+得到
+\(\boxed{v_{\max}\approx1.39\,\mathrm{m/s}}\)。
+需要上端始终固定且弹簧遵从线性胡克定律。
+
+\paragraph{习题 4.13}
+质量为 \(M\) 的槽可在光滑桌面上水平移动，
+质量为 \(m\) 的物体相对槽从高度 \(R\) 的A点静止滑下。
+取物体到B时相对槽向右的水平速度为 \(w>0\)，
+槽对地速度为 \(V<0\)，物体对地速度
+\(v=w+V\)。
+由于水平无外力，总动量守恒：
+\[
+ mv+MV=0 \Longrightarrow
+ v=\frac{M}{M+m}w,\qquad
+ V=-\frac{m}{M+m}w.
+\]
+由重力势能转为两者动能：
+\[
+ mgR=\frac12mv^2+\frac12MV^2
+ =\frac12\frac{mM}{M+m}w^2.
+\]
+因此
+\[
+ \boxed{w=\sqrt{\frac{2gR(M+m)}M}},\quad
+ \boxed{v=\sqrt{\frac{2gRM}{M+m}}},
+\]
+\[
+ \boxed{V=-\frac{m}{M+m}
+ \sqrt{\frac{2gR(M+m)}M}}.
+\]
+槽所获得的动能完全由物体对槽的接触力做功，
+所以物体对槽做功为
+\[
+ \boxed{W_{m\to M}=\frac12MV^2
+ =mgR\frac{m}{M+m}}.
+\]
+B处圆弧曲率中心在上方，物体相对槽的法向
+向心加速度为 \(w^2/R\)。
+由于槽仅水平平移，物体竖直加速度正是
+\(w^2/R\)，故竖直法向受力
+\(N-mg=mw^2/R\)：
+\[
+ \boxed{N=mg\left(1+
+ \frac{2(M+m)}{M}\right)
+ =mg\left(3+\frac{2m}M\right)}.
+\]
+此 \(N\) 是物体对槽压力的\emph{大小}，
+槽所受反作用力竖直向下；
+假设B点之前仍保持接触。
+
+\paragraph{习题 4.14}
+质量相同均为 \(m\)，第一小球初速度
+\(\boldsymbol v_0\)，第二小球静止。
+弹性碰撞前后动量及动能守恒分别为
+\[
+ \boldsymbol v_0=\boldsymbol v_1+\boldsymbol v_2,
+ \qquad v_0^2=v_1^2+v_2^2.
+\]
+对第一式取模平方得到
+\(v_0^2=v_1^2+v_2^2+
+2\boldsymbol v_1\cdot\boldsymbol v_2\)。
+与能量式比较得
+\[
+ \boxed{\boldsymbol v_1\cdot\boldsymbol v_2=0}.
+\]
+故两非零末速度互相垂直。
+若为恰好对心碰撞，某一末速度为零时“方向垂直”
+退化为不适用，这与原题\emph{非对心}条件一致。
+
+\paragraph{习题 4.15}
+在同一直线弹性碰撞中，
+质量 \(m_1,m_2\)，初速度 \(u_1,u_2\)，
+末速度 \(v_1,v_2\)。
+动量守恒
+\(m_1(u_1-v_1)=m_2(v_2-u_2)\)。
+动能守恒整理为
+\[
+ m_1(u_1^2-v_1^2)=m_2(v_2^2-u_2^2).
+\]
+两式相除，排除全体速度不变的退化情形，
+得到
+\(u_1+v_1=v_2+u_2\)，
+故
+\[
+ \boxed{u_1-u_2=-(v_1-v_2)}.
+\]
+相对接近速率与相对远离速率相等，
+并不是两球各自的速度不变。
+
+\paragraph{习题 4.16}
+卫星质量 \(m\) 沿距地面高度 \(2R\)
+的圆形轨道运行，
+轨道到地心距离 \(r=R+2R=3R\)。
+引力提供向心力
+\(mv^2/r=GMm/r^2\)，
+因此
+\[
+ \boxed{K=\frac12mv^2
+ =\frac{GMm}{2r}=\frac{GMm}{6R}}.
+\]
+以无穷远为零，引力势能
+\[
+ \boxed{U=-\frac{GMm}{r}=-\frac{GMm}{3R}}.
+\]
+总机械能
+\[
+ \boxed{E=K+U=-\frac{GMm}{6R}}.
+\]
+负号说明卫星处于引力束缚轨道，
+不能把距地面高度 \(2R\) 误当作轨道半径。
+
+
+\subsection*{习题4.17--4.28}
+\paragraph{习题 4.17}
+太阳质量为 \(M\)，行星质量为 \(m\)，
+近日点、远日点距太阳分别为 \(r_1,r_2\)。
+引力是中心力，行星单位质量角动量
+\(h=r v_t\) 守恒。
+在两个拱点径向速度均为零，所以
+\[
+ r_1v_1=r_2v_2=h.
+\]
+引力场保守，因此
+\[
+ \frac12m\frac{h^2}{r_1^2}-\frac{GMm}{r_1}
+ =\frac12m\frac{h^2}{r_2^2}-\frac{GMm}{r_2}.
+\]
+整理可得
+\(h^2=2GM r_1r_2/(r_1+r_2)\)。
+代入任意一端的机械能：
+\[
+ E=\frac{m}{2r_1^2}
+ \frac{2GM r_1r_2}{r_1+r_2}-\frac{GMm}{r_1}
+ =\boxed{-\frac{GMm}{r_1+r_2}}.
+\]
+因椭圆长半轴 \(a=(r_1+r_2)/2\)，
+等价于通常的 \(E=-GMm/(2a)\)。
+验证圆轨道极限 \(r_1=r_2=r\)
+得 \(E=-GMm/(2r)\)。
+
+\paragraph{习题 4.18}
+设地球引力参数 \(\mu=GM_\oplus\)，
+地球半径为 \(R_\oplus\)。
+停泊轨道与最终同步高度圆轨道的地心半径分别为
+\[
+ r_1=R_\oplus+1.400\times10^6\,\mathrm m,\quad
+ r_2=R_\oplus+3.6000\times10^7\,\mathrm m,
+\]
+霍曼转移椭圆的半长轴
+\(a_t=(r_1+r_2)/2\)。
+圆轨道能量为 \(-\mu m/(2r)\)，
+转移椭圆能量为 \(-\mu m/(2a_t)\)；
+由于火箭推力脉冲不改变卫星所在位置的引力势能，
+两次脉冲所做的功就是对应轨道机械能之差：
+\[
+ \boxed{\Delta W_1=
+ -\frac{\mu m}{r_1+r_2}+\frac{\mu m}{2r_1}},
+\quad
+ \boxed{\Delta W_2=
+ -\frac{\mu m}{2r_2}+\frac{\mu m}{r_1+r_2}}.
+\]
+两次速率增量分别由活力公式
+\(v^2=\mu(2/r-1/a_t)\) 给出：
+\[
+ \boxed{\Delta v_1=
+ \sqrt{\mu(2/r_1-1/a_t)}-\sqrt{\mu/r_1}},
+\]
+\[
+ \boxed{\Delta v_2=
+ \sqrt{\mu/r_2}-\sqrt{\mu(2/r_2-1/a_t)}}.
+\]
+若取 \(R_\oplus=6.37\times10^6\,\mathrm m\)，
+\(\mu=3.986\times10^{14}\,\mathrm{m^3/s^2}\)，
+卫星质量 \(m=500\,\mathrm{kg}\)，
+可得
+\[
+ \boxed{\Delta W_1\approx8.85\times10^9\,\mathrm J,\quad
+ \Delta W_2\approx1.62\times10^9\,\mathrm J},
+\]
+\[
+ \boxed{\Delta v_1\approx2.15\,\mathrm{km/s},\quad
+ \Delta v_2\approx1.36\,\mathrm{km/s}}.
+\]
+这里是理想双脉冲转移，不计发射到停泊轨道的初始能耗、
+大气阻力、火箭发动机与轨道倾角调整。
+
+\paragraph{习题 4.19}
+两颗中子星质量相等，\(M=10^{30}\,\mathrm{kg}\)，
+各半径 \(R_\star=20\,\mathrm{km}\)，
+初始中心距 \(r_0=10^{10}\,\mathrm m\)，静止。
+由对称性，两颗星始终朝中点相向运动且速率相同 \(v\)，
+系统质心静止。
+万有引力势能从 \(-GM^2/r_0\)
+变为 \(-GM^2/r\)，减少的势能变成两颗星总动能：
+\[
+ 2\cdot\frac12 Mv^2
+ =GM^2\left(\frac1r-\frac1{r_0}\right).
+\]
+故单颗星的速率
+\[
+ \boxed{v(r)=\sqrt{GM\left(\frac1r-\frac1{r_0}\right)}}.
+\]
+当 \(r=r_0/2\)：
+\[
+ \boxed{v\approx8.17\times10^4\,\mathrm{m/s}}.
+\]
+将要接触时两球中心距
+\(r=2R_\star=4.0\times10^4\,\mathrm m\)，
+得到
+\[
+ \boxed{v\approx4.08\times10^7\,\mathrm{m/s}}.
+\]
+这个模型只用牛顿点质量引力及机械能守恒，
+忽略引力波辐射、潮汐变形、广义相对论修正等。
+因此接触速率是教材理想化预测。
+
+\paragraph{习题 4.20}
+设小行星为密度均匀的球，
+半径 \(r_a=10\,\mathrm{km}=10^4\,\mathrm m\)，
+密度 \(\rho=6.0\times10^3\,\mathrm{kg/m^3}\)。
+其质量为
+\[
+ m_a=\frac43\pi r_a^3\rho
+ \approx2.513\times10^{16}\,\mathrm{kg}.
+\]
+从远处（引力势能近似零）落至地球表面，
+其引力势能变化
+\[
+ \Delta U=-\frac{GM_\oplus m_a}{R_\oplus},
+\quad
+ \boxed{E_{\rm release}=\frac{GM_\oplus m_a}{R_\oplus}
+ \approx1.57\times10^{24}\,\mathrm J}
+\]
+（取 \(GM_\oplus=3.986\times10^{14}\,\mathrm{m^3/s^2}\)，
+\(R_\oplus=6.37\times10^6\,\mathrm m\)）。
+本书表4.1（PDF物理页131）列
+1976年唐山大地震能量约
+\(E_{\rm TS}=1\times10^{18}\,\mathrm J\)，
+故在本书标准下
+\[
+ \boxed{E_{\rm release}/E_{\rm TS}
+ \approx1.57\times10^6}.
+\]
+这只比较能量数量级，不代表物种灭绝的
+全部因果过程已经由该计算证明。
+
+\paragraph{习题 4.21}
+由题给逃逸速度关系 \(c=\sqrt{2GM/R_s}\)
+解得 Schwarzschild 半径形式
+\[
+ \boxed{R_s=\frac{2GM_\odot}{c^2}}.
+\]
+取太阳质量
+\(M_\odot\simeq1.989\times10^{30}\,\mathrm{kg}\)，
+得
+\[
+ \boxed{R_s\approx2.95\times10^3\,\mathrm m}.
+\]
+把太阳全部质量平均置于半径 \(R_s\) 的球中，
+平均密度
+\[
+ \boxed{\bar\rho=\frac{M_\odot}{4\pi R_s^3/3}
+ \approx1.84\times10^{19}\,\mathrm{kg/m^3}}.
+\]
+与题给核物质平均密度
+\(2.3\times10^{17}\,\mathrm{kg/m^3}\) 相比，
+约
+\[
+ \boxed{\bar\rho/(2.3\times10^{17})\approx80}.
+\]
+\textbf{物理限定：}“黑洞的平均密度”只是
+质量与 Schwarzschild 半径构造的几何平均，
+不是说存在普通物质充满视界内的一个均匀球体。
+
+\paragraph{习题 4.22}
+题给参考黑洞质量 \(M_0=2M_\odot\)，
+蒸发时间 \(t_0=10^{67}\,\mathrm{yr}\)；
+宇宙年龄按原题取
+\(t=2\times10^{10}\,\mathrm{yr}\)。
+若蒸发时间满足 \(t_{\rm evap}\propto M^3\)，
+则恰在宇宙年龄内蒸发完的\emph{最大}微型黑洞初质量
+\[
+ \boxed{M=M_0\left(\frac t{t_0}\right)^{1/3}
+ =2M_\odot(2\times10^{-57})^{1/3}
+ \approx5.01\times10^{11}\,\mathrm{kg}}.
+\]
+对照上一题所用关系，
+\[
+ \boxed{R_s=\frac{2GM}{c^2}
+ \approx7.44\times10^{-16}\,\mathrm m}.
+\]
+以上是完全按教材假定的质量三次方寿命规律
+与题给宇宙年龄进行的数量级估算，
+不代入现代宇宙学年龄值来静默改变原题。
+
+\paragraph{习题 4.23}
+静止的 \({}^{238}\mathrm U\) 核发生
+\(\alpha\) 衰变，释放总动能
+\(Q=4.27\,\mathrm{MeV}\)。
+设 \(\alpha\) 质量约为 \(4u\)，
+余核约为 \(234u\)。
+因初始动量为零，
+\(|\boldsymbol p_\alpha|
+ =|\boldsymbol p_D|=p\)。
+两碎片的动能分别为
+\(K_\alpha=p^2/(2m_\alpha)\)，
+\(K_D=p^2/(2m_D)\)，
+所以
+\[
+ \frac{K_\alpha}{K_D}=\frac{m_D}{m_\alpha}
+ \approx\frac{234}{4}.
+\]
+由 \(K_\alpha+K_D=Q\)，
+\[
+ \boxed{K_\alpha=Q\frac{m_D}{m_D+m_\alpha}
+ \approx4.27\frac{234}{238}
+ \approx4.20\,\mathrm{MeV}}.
+\]
+相应余核反冲能约 \(0.0718\,\mathrm{MeV}\)。
+不能把全部 \(Q\) 无条件都记作
+\(\alpha\) 粒子的动能。
+
+\paragraph{习题 4.24}
+质量分别为 \(m_1,m_2\) 的质点，
+速度 \(\boldsymbol v_1,\boldsymbol v_2\)。
+总质量 \(M=m_1+m_2\)，质心速度
+\[
+ \boldsymbol V=\frac{m_1\boldsymbol v_1+m_2\boldsymbol v_2}{M}.
+\]
+相对于质心的内部动能
+\[
+ K_{\rm int}=
+ \tfrac12m_1|\boldsymbol v_1-\boldsymbol V|^2
+ +\tfrac12m_2|\boldsymbol v_2-\boldsymbol V|^2.
+\]
+令相对速度
+\(\boldsymbol u=\boldsymbol v_1-\boldsymbol v_2\)，
+则
+\[
+ \boldsymbol v_1-\boldsymbol V=\frac{m_2}{M}\boldsymbol u,\quad
+ \boldsymbol v_2-\boldsymbol V=-\frac{m_1}{M}\boldsymbol u.
+\]
+代回并化简：
+\[
+ K_{\rm int}
+ =\frac12\frac{m_1m_2^2+m_2m_1^2}{M^2}u^2
+ =\boxed{\frac12\mu u^2},\quad
+ \mu=\frac{m_1m_2}{m_1+m_2}.
+\]
+所以两体内动能等于单个约化质量
+以相对速度运动时的动能。
+
+\paragraph{习题 4.25}
+水平面无摩擦，
+质量 \(m\) 的物体受到瞬时击打后
+沿另一物体（质量 \(M\)）方向运动，
+初始相对速率为 \(v_0\)。
+系统总水平动量守恒，
+质心运动与内部相对运动可分离；
+两体约化质量
+\(\mu=Mm/(M+m)\)。
+最大压缩瞬间两物体的相对速度为零，
+最初相对动能全部转换成弹簧势能：
+\[
+ \frac12\mu v_0^2=\frac12k x_{\max}^2,
+ \quad
+ \boxed{x_{\max}=v_0\sqrt{\frac{Mm}{k(M+m)}}}.
+\]
+该结果并不要求系统质心静止，
+但是不包括瞬时敲击过程的未知内部耗散。
+
+\paragraph{习题 4.26}
+质子质量 \(m_p\)、电荷 \(+e\)；
+氦核质量 \(4m_p\)、电荷 \(+2e\)；
+远距离时二者相向速率均为 \(v_0\)。
+若取相对速度大小
+\(v_{\rm rel}=2v_0\)，约化质量为
+\[
+ \mu=\frac{m_p(4m_p)}{m_p+4m_p}
+ =\frac45m_p.
+\]
+相对运动的初动能
+\(\frac12\mu(2v_0)^2
+ =\frac85m_pv_0^2\)。
+在最接近处相对速度降为零，
+这部分能量储存为库仑排斥势能
+\((4\pi\varepsilon_0)^{-1}(2e^2)/r_{\min}\)：
+\[
+ \boxed{r_{\min}=
+ \frac{k_e(2e^2)}{(8/5)m_pv_0^2}
+ =\frac{5k_ee^2}{4m_pv_0^2}},
+ \qquad k_e=\frac1{4\pi\varepsilon_0}.
+\]
+若把整个实验室系初动能全用于库仑势能，
+会错误地计入质心动能；
+质心动能不会在内部相互作用中消失。
+
+\paragraph{习题 4.27}
+虹吸管内水按不可压缩、稳定、无黏性流动，
+设河面及外侧出口都受大气压，
+管口与河面高度差
+\(h=5.0\,\mathrm m\)。
+若河面面积远大于管口面积，
+河面速率可近似忽略。
+伯努利方程给出
+\[
+ \frac{v^2}{2}=gh,\qquad
+ v=\sqrt{2gh}\approx9.90\,\mathrm{m/s}.
+\]
+吸管半径 \(r=0.20\,\mathrm m\)，
+单位时间体积流量
+\(Q_v=\pi r^2v\)，每小时流量
+\[
+ \boxed{V_{\rm hour}
+ =3600\pi(0.20)^2\sqrt{2(9.8)(5.0)}
+ \approx4.48\times10^3\,\mathrm{m^3}}.
+\]
+这一巨大理想值未计入弯管局部损失、
+沿程摩擦和可能的汽蚀/气锁；
+虹吸能否维持，还要检查最高点压强
+不降至水蒸气压以下。
+
+\paragraph{习题 4.28}
+假设罐内液面面积远大于喷口截面积，
+罐内液面流速近似为零，
+出口与液面等高、出口静压为
+\(p_{\rm atm}\)，流体密度按水取
+\(\rho=1000\,\mathrm{kg/m^3}\)。
+伯努利方程给出口速率
+\[
+ v=\sqrt{\frac{2(p_0-p_{\rm atm})}{\rho}}.
+\]
+若题中 \(p_0=21\,\mathrm{atm}\) 解释为
+\emph{绝对压强}，则
+\(\Delta p=20\,\mathrm{atm}=20(1.01325\times10^5)\,\mathrm{Pa}\)，
+喷口直径 \(d=0.008\,\mathrm m\)，
+半径 \(0.004\,\mathrm m\)，故
+\[
+ \boxed{V_{\rm minute}
+ =60\pi(0.004)^2
+ \sqrt{\frac{2(20)(1.01325\times10^5)}{1000}}
+ \approx0.192\,\mathrm{m^3/min}
+ =192\,\mathrm{L/min}}.
+\]
+\textbf{压强标定风险：}
+若 \(21\,\mathrm{atm}\) 是\emph{表压}而非绝对压强，
+应将压差改为 \(21\,\mathrm{atm}\)，结果相应稍大。
+未给出液体密度与黏性时，本解采用水的近似参数，
+并忽略管道局部与摩擦损失。

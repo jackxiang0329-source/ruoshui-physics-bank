@@ -1,0 +1,440 @@
+% 张三慧V2第26章《波粒二象性》原题26.1--26.22独立LaTeX解析。
+% 主教材扫描PDF368--369，配套辅导S PDF354--360。
+% 物理常量按CODATA常用精度；全部只作为未独立专家审查的候选稿。
+\section*{第26章\quad 波粒二象性：独立解析}
+\paragraph{习题 26.1}
+黑体每单位面积出射度
+\(M=\sigma T^4\)，气温 \(-5^\circ\mathrm C\)：
+\(T=268.15\,\mathrm K\)。
+\[
+\boxed{M=(5.670374419\times10^{-8})(268.15)^4
+\simeq2.93\times10^2\,\mathrm{W/m^2}}.
+\]
+题目问\emph{地面自身出射}，不是地面与天空间
+热辐射的净交换通量（后者还需天空逆辐射）。
+
+\paragraph{习题 26.2}
+频率谱 \(M_\nu\propto\nu^3/(\mathrm e^x-1)\)，
+\(x=h\nu/(k_BT)\)。
+极大值满足 \(3(1-\mathrm e^{-x})=x\)，
+非零解 \(x_\nu=2.821439\)。
+\[
+\boxed{T=\frac{h\nu_m}{x_\nu k_B}
+=\frac{6.62607015\times10^{-34}(3.4\times10^{14})}
+{2.821439(1.380649\times10^{-23})}
+\simeq5.78\times10^3\,\mathrm K}.
+\]
+\[
+\boxed{M_0=\sigma T^4\simeq6.34\times10^7\,\mathrm{W/m^2}}.
+\]
+注意\emph{频率谱}峰值 \(x_\nu=2.8214\)，
+不能套\emph{波长谱}峰值 \(x_\lambda=4.9651\)。
+二者峰值不经简单 \(\nu_m=c/\lambda_m\) 对应。
+
+\paragraph{习题 26.3}
+黑体吸收日照通量 \(I=1.0\times10^3\,\mathrm{W/m^2}\)，
+题设忽略其他面散热及与环境的交换，
+热平衡 \(I=\sigma T^4\)。
+\[
+\boxed{T=(I/\sigma)^{1/4}\simeq364.42\,\mathrm K},
+\qquad
+\boxed{t\simeq91.3^\circ\mathrm C}.
+\]
+模型假设水箱可与受光面等温，不考虑蒸发、
+风冷与对流；现实装置并非纯黑体封闭系统。
+
+\paragraph{习题 26.4}
+行星半径 \(R\)，轨道半径 \(r\)。
+吸收太阳能功率
+\(P_{\rm abs}=P_\odot/(4\pi r^2)\cdot\pi R^2\)；
+黑体向四面出射
+\(P_{\rm emit}=4\pi R^2\sigma T^4\)。
+令二者相等：
+\[
+\boxed{T^4=\frac{P_\odot}{16\pi\sigma r^2}}.
+\]
+代入 \(P_\odot=3.9\times10^{26}\,\mathrm W\)：
+\[
+\boxed{T_E\simeq279\,\mathrm K},\qquad
+\boxed{T_P\simeq44.5\,\mathrm K}
+\]
+分别取 \(r_E=1.5\times10^{11}\,\mathrm m\)、
+\(r_P=5.9\times10^{12}\,\mathrm m\)。
+这里忽略反照率、温室效应和自发内部热源。
+
+\paragraph{习题 26.5}
+恒星距地 \(d=11\,\mathrm{ly}\)，
+各向同性辐射使到地能流
+\(I=L/(4\pi d^2)\)，黑体恒星表面
+\(L=4\pi R^2\sigma T^4\)。
+所以
+\[
+\boxed{R=d\sqrt{\frac{I}{\sigma T^4}}}.
+\]
+取 \(d=11(9.460730472\times10^{15})\,\mathrm m\)，
+\(I=1.7\times10^{-12}\,\mathrm{W/m^2}\)，\(T=6600\,\mathrm K\)：
+\[
+\boxed{R\simeq1.31\times10^7\,\mathrm m
+\simeq1.31\times10^4\,\mathrm{km}}.
+\]
+题设相当于所有波段总辐射能流且无消光；
+若实际地面观测仅局部谱段则不能直接使用此式。
+
+\paragraph{习题 26.6}
+对3K黑体的\emph{频率谱}最大值有
+\[
+\boxed{\nu_m=\frac{x_\nu k_BT}{h}
+=\frac{2.821439(1.380649\times10^{-23})(3)}
+{6.62607015\times10^{-34}}
+\simeq1.76\times10^{11}\,\mathrm{Hz}}.
+\]
+对各向同性辐射场，地球面积
+\(4\pi R_E^2\) 各向内入射通量
+为 \(\sigma T^4\)；取 \(R_E=6.371\times10^6\,\mathrm m\)：
+\[
+\boxed{P_{\rm in}=4\pi R_E^2\sigma T^4
+\simeq2.34\times10^9\,\mathrm W}.
+\]
+这不代表地球从背景净吸收如此功率；
+温暖地球自身会辐射更多，净交换另算。
+
+\paragraph{习题 26.7}
+有 \(\nu=c/\lambda\)，
+同一波段能量满足
+\(M_\lambda\,d\lambda=M_\nu\,|d\nu|\)。
+由于 \(|d\nu/d\lambda|=c/\lambda^2\)，
+\[
+M_\lambda
+=M_\nu(c/\lambda)\frac c{\lambda^2}
+=\frac{2\pi h(c/\lambda)^3}{c^2}
+\frac{c}{\lambda^2}
+\frac1{\mathrm e^{hc/(\lambda k_BT)}-1}.
+\]
+因而
+\[
+\boxed{M_\lambda
+=\frac{2\pi hc^2}{\lambda^5}
+\left(\mathrm e^{hc/(\lambda k_BT)}-1\right)^{-1}}.
+\]
+必须包含谱变量变换的Jacobian；
+直接把 \(\nu=c/\lambda\) 代进公式而不乘
+\(c/\lambda^2\)，量纲错误。
+
+\paragraph{习题 26.8}
+空腔中各方向均匀、非偏振辐射，
+频率区间能量密度为 \(w_\nu\,d\nu\)。
+某方向余弦 \(\mu=\cos\theta>0\) 的出射
+单位时间单位面积通量权重为 \(c\mu\)。
+对出射半球平均：
+\[
+M_\nu=\frac{c w_\nu}{4\pi}
+\int_0^{2\pi}d\phi\int_0^{\pi/2}
+\cos\theta\sin\theta\,d\theta
+=\frac{c w_\nu}{4}.
+\]
+因此
+\[
+\boxed{M_\nu=\frac c4w_\nu}.
+\]
+因子 \(1/4\) 来自半球与法向投影，
+不是任意单向传播平面波的结论。
+
+\paragraph{习题 26.9}
+固定 \(T\) 时
+\(M_\nu=C\nu^3/(\mathrm e^x-1)\)，
+\(x=h\nu/(k_BT)\)。
+令对 \(\nu\) 的一阶导数为0，整理得
+\[
+3(\mathrm e^x-1)-x\mathrm e^x=0
+\ \Longleftrightarrow\
+\boxed{3(1-\mathrm e^{-x})=x}.
+\]
+非零最大值根 \(x=x_\nu\) 是不依赖 \(T\) 的常数，
+故
+\[
+\boxed{\nu_m=C_\nu T,\quad
+C_\nu=x_\nu k_B/h}.
+\]
+方程的零根对应频谱原点而不是非零峰值；
+求峰时应剔除该平凡根。
+
+\paragraph{习题 26.10}
+把谱出射度沿正频率积分：
+\[
+M(T)=\int_0^\infty
+\frac{2\pi h\nu^3}{c^2}
+\frac{d\nu}{\mathrm e^{h\nu/(k_BT)}-1}.
+\]
+令 \(x=h\nu/(k_BT)\)，则
+\[
+M(T)=\frac{2\pi k_B^4T^4}{h^3c^2}
+\int_0^\infty\frac{x^3dx}{\mathrm e^x-1}.
+\]
+积分值 \(\pi^4/15\)（可用级数展开
+\((\mathrm e^x-1)^{-1}=\sum_{n=1}^\infty\mathrm e^{-nx}\)
+并用 \(\sum n^{-4}=\pi^4/90\) 推出），所以
+\[
+\boxed{M=\sigma T^4,\quad
+\sigma=\frac{2\pi^5k_B^4}{15h^3c^2}}.
+\]
+此证明同时保留了Stefan常量的物理维度。
+
+\paragraph{习题 26.11}
+光子能量用常数
+\(hc/e\simeq1239.842\,\mathrm{eV\,nm}\)：
+\[
+E_\gamma=\frac{hc}{\lambda}
+\simeq\frac{1239.842}{200}\,\mathrm{eV}
+=6.199\,\mathrm{eV}.
+\]
+逸出功4.2eV，爱因斯坦光电方程
+\(K_{\max}=E_\gamma-A\)，所以
+\[
+\boxed{K_{\max}\simeq2.00\,\mathrm{eV}},\quad
+\boxed{U_{\rm stop}=K_{\max}/e\simeq2.00\,\mathrm V}.
+\]
+红限波长
+\[
+\boxed{\lambda_0=\frac{hc}{A}
+\simeq\frac{1239.842}{4.2}\,\mathrm{nm}
+\simeq295\,\mathrm{nm}}.
+\]
+若源材料表面化学状态改变，逸出功亦随之改变。
+
+\paragraph{习题 26.12}
+光子平均能量
+\(\langle E\rangle\simeq hc/\lambda\)。
+给出辐射总能量密度
+\(u=10^{-15}\,\mathrm{J/m^3}\)，
+\[
+\boxed{n_\gamma=\frac{u}{\langle E\rangle}
+=\frac{u\lambda}{hc}
+=\frac{10^{-15}(500\times10^{-9})}
+{6.62607015\times10^{-34}(2.99792458\times10^8)}
+\simeq2.52\times10^3\,\mathrm{m^{-3}}}.
+\]
+此为把全部光子按同一个平均波长替代的近似。
+
+\paragraph{习题 26.13}
+假想经典连续光能均匀向四周辐射，
+距灯 \(r=1.0\,\mathrm m\) 光强
+\(I=P/(4\pi r^2)\)；
+一个原子接收有效圆面积
+\(A_{\rm atom}=\pi a^2\)，\(a=1.3\times10^{-10}\,\mathrm m\)。
+若经典地必须累积至少
+\(W=2.25\,\mathrm{eV}=2.25e\,\mathrm J\)，
+\[
+t_{\rm classical}=\frac{W}{IA_{\rm atom}}
+=\frac{4r^2(2.25e)}{Pa^2}.
+\]
+代入 \(P=1.0\,\mathrm W\)：
+\[
+\boxed{t_{\rm classical}\simeq85.3\,\mathrm s}.
+\]
+但真实光电效应在适当频率下近乎即时，
+典型测得延迟可低于 \(10^{-9}\,\mathrm s\)。
+这说明一次光子吸收不是电子从微弱的
+连续波能量慢慢积累的过程。
+
+\paragraph{习题 26.14}
+在实验室中光子与质子同向，
+质子速度 \(\beta=v/c=1/2\)。
+Lorentz变换使光子在质子静止系能量
+\[
+E'_\gamma=\gamma(E_\gamma-vp_\gamma)
+=\gamma E_\gamma(1-\beta),\quad
+\gamma=(1-\beta^2)^{-1/2}=2/\sqrt3.
+\]
+故
+\[
+\boxed{E'_\gamma
+=5\frac{1-\frac12}{\sqrt{1-(1/2)^2}}
+=\frac5{\sqrt3}\,\mathrm{eV}
+\simeq2.89\,\mathrm{eV}}.
+\]
+同向高速远离光子观察者接收到红移，
+结果小于实验室的5eV。
+
+\paragraph{习题 26.15}
+散射前波长 \(\lambda\)，散射后
+\(\lambda'=1.20\lambda\)。
+相应光子能量反比于波长，
+\(E'_\gamma=E_\gamma/1.2=0.50\,\mathrm{MeV}\)。
+电子起初静止、无其他损失时能量守恒：
+\[
+\boxed{K_e=E_\gamma-E'_\gamma
+=0.60-0.50=0.10\,\mathrm{MeV}}.
+\]
+如果还需散射角才用Compton波长变化式；
+本题单求电子动能不必额外指定角度。
+
+\paragraph{习题 26.16}
+静止电子的Compton碰撞中光子后向散射
+\(\theta=\pi\) 时能量损失最大。
+\[
+E'_{\min}=
+\frac{E}{1+2E/(m_ec^2)},\qquad
+K_{e,\max}=E-E'_{\min}.
+\]
+\(E=4000\,\mathrm{eV}\)，
+\(m_ec^2\simeq511000\,\mathrm{eV}\)，
+得到
+\[
+\boxed{K_{e,\max}
+=\frac{2E^2/(m_ec^2)}{1+2E/(m_ec^2)}
+\simeq61.7\,\mathrm{eV}}.
+\]
+此处电子反冲动能不等于全部4000eV光子能量。
+
+\paragraph{习题 26.17}
+设自由电子起初静止，
+单光子能量 \(E_\gamma>0\)、动量大小
+\(p_\gamma=E_\gamma/c\)。
+若电子完全吸收光子，
+动量守恒使末态电子
+\(p_e=E_\gamma/c\)；
+能量守恒要求末态电子总能
+\(m_ec^2+E_\gamma\)。
+可是电子质壳方程要求
+\[
+(m_ec^2+E_\gamma)^2
+=m_e^2c^4+p_e^2c^2
+=m_e^2c^4+E_\gamma^2.
+\]
+消去共同项得到
+\(2m_ec^2E_\gamma=0\)，
+与 \(m_e>0,E_\gamma>0\) 矛盾。
+\[
+\boxed{\text{自由单电子不可能单独完全吸收一光子}}.
+\]
+真实材料吸收光子时晶格、原子核或其他粒子
+可以共同携带反冲动量。
+
+\paragraph{习题 26.18}
+以keV和keV/\(c\) 为单位；
+\(m_ec^2\simeq511\,\mathrm{keV}\)。
+光子初始沿 \(+x\)，能量50keV；
+电子向 \(-x\) 迎面运动，动能20keV，
+总能 \(E_{e,i}=531\,\mathrm{keV}\)，
+动量乘 \(c\) 为
+\[
+p_{e,i}c=-\sqrt{20(20+2\cdot511)}
+\simeq-144.36\,\mathrm{keV}.
+\]
+总系统能量
+\(E_{\rm tot}=581\,\mathrm{keV}\)；
+初始总动量
+\(P_ic=50-144.36=-94.36\,\mathrm{keV}\)。
+末态光子反向能量 \(\varepsilon\)，
+故电子能量为 \(581-\varepsilon\)，
+动量乘 \(c\) 为 \(P_ic+\varepsilon\)。
+代入电子质壳条件
+\[
+(581-\varepsilon)^2-
+(P_ic+\varepsilon)^2=511^2,
+\]
+得到
+\[
+\boxed{\varepsilon
+=\frac{581^2-(P_ic)^2-511^2}
+{2(581+P_ic)}
+\simeq69.39\,\mathrm{keV}}.
+\]
+末态电子总能
+\[
+\boxed{E_{e,f}=581-\varepsilon
+\simeq511.61\,\mathrm{keV}},
+\qquad
+\boxed{K_{e,f}\simeq0.61\,\mathrm{keV}}.
+\]
+出射光子可以超过入射50keV，
+因为逆康普顿过程从迎面电子转移了动能。
+若将531keV总能误作20keV，结果不守恒。
+
+\paragraph{习题 26.19}
+二者相同的德布罗意波长
+\(\lambda=0.20\,\mathrm{nm}\)，
+故\emph{动量大小相同}
+\[
+\boxed{p=h/\lambda
+\simeq3.31\times10^{-24}\,\mathrm{kg\,m/s}}.
+\]
+光子的能量
+\[
+\boxed{E_\gamma=pc=hc/\lambda
+\simeq6.20\times10^3\,\mathrm{eV}}.
+\]
+电子有非零静质量，故
+\[
+\boxed{E_{e,\rm total}
+=\sqrt{m_e^2c^4+p^2c^2}
+\simeq511.04\,\mathrm{keV}},
+\qquad
+\boxed{K_e=E_{e,\rm total}-m_ec^2
+\simeq37.6\,\mathrm{eV}}.
+\]
+两者\emph{动量相同不意味着能量相同}；
+应分开电子静能、总能与动能。
+
+\paragraph{习题 26.20}
+热中子的平动平均动能按三维
+Maxwell均分模型取
+\(\langle K\rangle=\frac32k_BT\)。
+非相对论动量
+\(p=\sqrt{2m_n\langle K\rangle}
+=\sqrt{3m_nk_BT}\)。
+于是
+\[
+\boxed{\lambda=\frac h{\sqrt{3m_nk_BT}}
+\simeq0.145\,\mathrm{nm}}
+\]
+取 \(T=300\,\mathrm K\)、
+\(m_n\simeq1.675\times10^{-27}\,\mathrm{kg}\)。
+也有惯例按能量 \(K=k_BT\) 定义标称热中子，
+其波长约0.178nm；
+这与本题使用的\emph{平均平动能}定义不同。
+
+\paragraph{习题 26.21}
+经40kV电压加速，电子动能
+\(K=eU=40\,\mathrm{keV}\)，
+不能在该能量下完全忽略相对论修正。
+由 \(E^2=m_e^2c^4+p^2c^2\)，
+\(E=m_ec^2+K\)，故
+\[
+pc=\sqrt{K(K+2m_ec^2)},\quad
+\boxed{\lambda=\frac{hc}{\sqrt{K(K+2m_ec^2)}}}.
+\]
+用 \(hc=1239.842\,\mathrm{eV\,nm}\)，
+\(m_ec^2\simeq511\,\mathrm{keV}\)：
+\[
+\boxed{\lambda\simeq0.00602\,\mathrm{nm}
+=6.02\,\mathrm{pm}}.
+\]
+若直接用非相对论 \(\lambda=h/\sqrt{2m_eK}\)
+会有一定系统偏差。
+
+\paragraph{习题 26.22}
+自由粒子的量子波满足
+\(\omega=E/\hbar\)、\(k=p/\hbar\)，
+所以
+\[
+v_g=\frac{d\omega}{dk}=\frac{dE}{dp}.
+\]
+相对论能量动量关系
+\(E^2=p^2c^2+m_0^2c^4\)
+沿正能分支微分，给出
+\(2E\,dE=2pc^2\,dp\)。
+因此
+\[
+\boxed{v_g=\frac{dE}{dp}=\frac{pc^2}{E}}.
+\]
+但相对论动量
+\(p=\gamma m_0v\)，总能
+\(E=\gamma m_0c^2\)，故
+\[
+\boxed{v_g=v}.
+\]
+此处指自由粒子波包的\emph{群速度}；
+单个平面波的相速度
+\(v_p=\omega/k=E/p=c^2/v\)
+可大于 \(c\)，不能传输信息。

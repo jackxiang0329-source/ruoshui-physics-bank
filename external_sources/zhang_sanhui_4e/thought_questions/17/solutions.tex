@@ -1,0 +1,37 @@
+% V2扫描PDF141--142原编号思考题17.1--17.12；需要图17.31--17.37独立审核。
+\section*{第17章\quad 磁场和它的源：思考题解析}
+\paragraph{思考题 17.1}
+两根引线载流方向相反，在距线对远大于线间距处的磁场近似抵消；同时回路面积较小，外部变化磁通引发的感应干扰更低。扭绞使残余磁偶极方向沿长度交替，进一步压低远场耦合。但对高频的共模电流和不平衡导线仍可能有辐射，不能说所有电磁干扰都完全消失。
+
+\paragraph{思考题 17.2}
+两根垂直导线各自产生绕导线的环形场。对处在导线平面内、交叉点外的点，两个磁场方向均垂直于此平面，合场为零须同时满足 \(\mu_0 I/(2\pi r_1)=\mu_0 I/(2\pi r_2)\) 且方向相反，即 \(\boxed{r_1=r_2}\) 与右手定则确定的\emph{互相抵消象限}。因此零场轨迹是相应的两条角平分线半射线，不是整个四象限。具体象限要与原图电流向上、向右的标注一并核验。
+
+\paragraph{思考题 17.3}
+菱形上、下两支在同种均匀导线且对称分流时通过相等电流，其关于菱形水平对角线的几何位置镜像对称。中心处上下两支的垂直纸面磁场大小相等、方向相反，故 \(\boxed{\boldsymbol B_{\rm center}=0}\)。若其中某段导线电阻不同、存在外部磁场或交点不在对称中心，则不能不经 Biot--Savart 积分沿用该结论。
+
+\paragraph{思考题 17.4}
+轴向等离子体电流密度 \(\boldsymbol J=J_z\hat{\boldsymbol z}\) 产生环向磁场 \(B_\varphi(r)\)。力密度 \(\boldsymbol f=\boldsymbol J\times\boldsymbol B\) 对正常电流几何为向内径向，\(\boxed{f_r=-J_z B_\varphi}\)，产生箍缩。平衡取决于磁压 \(B^2/(2\mu_0)\) 与等离子体压力，亦可能产生 MHD 不稳定性；不能把轴向电流理解为被自身磁场直接加速沿轴。
+
+\paragraph{思考题 17.5}
+外部环形（toroidal）线圈提供主导的环向场 \(B_\phi\)，等离子体中驱动的环向电流产生极向 \(B_\theta\)。两分量叠加让场线绕托卡马克环面呈螺旋，使带电粒子趋向沿封闭磁面绕行，减小直接接触壁的损失。真实约束还受磁漂移、等离子体压强、磁剪切及湍流影响。
+
+\paragraph{思考题 17.6}
+不存在孤立磁单极子时 \(\nabla\cdot\boldsymbol B=0\)，由磁 Gauss 定律 \(\boxed{\oint_{\partial V}\boldsymbol B\cdot d\boldsymbol S=0}\)。即使一个闭合面看似“只包着北极”，进入面与离开面的磁力线净通量仍严格抵消；不能只数从某一面逸出的方向而忽略其余区域。
+
+\paragraph{思考题 17.7}
+静磁场一般\emph{不是}全局无旋的势场，Ampère 定律 \(\nabla\times\boldsymbol B=\mu_0\boldsymbol J\)（真空）意味着围绕电流的闭合环流非零。另一方面 \(\nabla\cdot\boldsymbol B=0\) 表示没有磁单极源，不等于\(\nabla\times\boldsymbol B=0\)。在无电流的单连通区域可局部引入磁标势，但拓扑上绕导线的区域可能是多连通的。
+
+\paragraph{思考题 17.8}
+在\emph{静态、真空且无电流}区域 \(\nabla\times\boldsymbol B=0\)、\(\nabla\cdot\boldsymbol B=0\)。若磁力线确为处处平行、方向恒为 \(z\)，即 \(\boldsymbol B=B(x,y,z)\hat{\boldsymbol z}\)，无旋要求 \(\partial_xB=\partial_yB=0\)，无散要求 \(\partial_zB=0\)，故 \(\boxed{B=\mathrm{const}}\)。若存在电流、磁介质或随时间变化电场，结论未必成立。
+
+\paragraph{思考题 17.9}
+磁力线代表连续矢量场方向，因 \(\nabla\cdot\boldsymbol B=0\)，在任意足够小闭合曲面的净磁通为零。不可能在真空无磁单极处出现一束线突然“起源”或“终止”的几何图像；磁通必须沿其他方向返回或继续延伸。原图17.35需要明确示出磁通闭合路径。
+
+\paragraph{思考题 17.10}
+对静磁闭合曲线 \(L\)，\(\boxed{\oint_L\boldsymbol B\cdot d\boldsymbol l=\mu_0 I_{\rm linked}}\)。若曲线按原图17.36绕螺线管且张成的面与净穿链匝电流的代数和为 \(N_{\rm linked}I\)，结果为 \(\mu_0N_{\rm linked}I\)；若整个曲线实际并未穿链任意净电流，则为零。绕向影响符号，不能仅凭路径看似“绕线管外侧”推断具体数值；原图精确的穿链次数须重绘核验。
+
+\paragraph{思考题 17.11}
+长、密绕、单位轴向长度匝数 \(n\) 近似恒定且截面变化缓慢时，螺线管深处磁场可近似 \(\boldsymbol B\simeq\mu_0nI\,\hat{\boldsymbol z}\)。但原图17.37截面不规则，局部匝密度、端部或轴方向改变可使场不均匀；\(\boxed{B=\mu_0nI}\) 是理想无限长均匀绕组的近似，不可无条件用于任何截面或近端区域。
+
+\paragraph{思考题 17.12}
+平行板间位移电流 \(\boldsymbol J_d=\epsilon_0\partial_t\boldsymbol E\)，在理想电容的充电过程中与导线传导电流连续一致；放电时 \(dE/dt\) 反向，位移电流反向。磁场由 \(\oint\boldsymbol B\cdot d\boldsymbol l=\mu_0(I_c+\epsilon_0d\Phi_E/dt)\) 和右手定则判定绕向。精确“顺/逆时针”需采用原图17.29的板极性与观察面法向，不能脱离这些条件标注。

@@ -1,0 +1,278 @@
+% 张三慧第四版V2第29章《固体中的电子》原题29.1--29.14独立LaTeX解答
+% 主书PDF452--453，S PDF386--389；仅候选，科研/学术专家复核待办。
+\section*{第29章\quad 固体中的电子：独立解析}
+\paragraph{习题 29.1}
+三维自旋二分之一自由电子气零温费米能量
+\(E_F=\hbar^2(3\pi^2n)^{2/3}/(2m_e)\)。
+每个金原子一个自由电子，
+\(n=\rho N_A/M\)，故
+\[
+n=\frac{19.3\times10^3}{0.197}
+(6.02214076\times10^{23})
+\simeq5.90\times10^{28}\,\mathrm{m^{-3}}.
+\]
+于是
+\[
+\boxed{E_F\simeq5.53\,\mathrm{eV}},\
+\boxed{v_F=\sqrt{2E_F/m_e}\simeq1.39\times10^6\,\mathrm{m/s}},
+\]
+\[
+\boxed{T_F=E_F/k_B\simeq6.41\times10^4\,\mathrm K},\
+\boxed{\lambda_F=h/\sqrt{2m_eE_F}\simeq0.522\,\mathrm{nm}}.
+\]
+这属于各向同性抛物能带的简单金属电子气模型，
+金的真实能带、有效质量及多能带效应未计。
+
+\paragraph{习题 29.2}
+含两个自旋态的三维自由电子能态密度
+\(g(E)=C E^{1/2}\)（每单位体积，每能量单位），
+在零温所有 \(0<E<E_F\) 状态都被占据：
+\[
+n=\int_0^{E_F}g(E)\,dE
+=C\frac23E_F^{3/2},
+\]
+\[
+u=\int_0^{E_F}E\,g(E)\,dE
+=C\frac25E_F^{5/2}.
+\]
+两式相除：
+\[
+\boxed{u=\frac35nE_F},\qquad
+\boxed{\bar E=u/n=\frac35E_F}.
+\]
+不能把零温等同于电子完全没有动能；
+Pauli填充带来非零的费米动能。
+
+\paragraph{习题 29.3}
+对零温自旋填满的费米球，
+占据速度分布 \(dN\propto v^2dv\),
+\(0\le v\le v_F\)。
+所以
+\[
+\bar v=\frac{\int_0^{v_F}v(v^2dv)}
+{\int_0^{v_F}v^2dv}
+=\boxed{\frac34v_F},
+\]
+\[
+\langle v^2\rangle=
+\frac{\int_0^{v_F}v^2(v^2dv)}
+{\int_0^{v_F}v^2dv}
+=\frac35v_F^2
+\quad\Longrightarrow\quad
+\boxed{v_{\rm rms}=\sqrt{\frac35}\,v_F}.
+\]
+这是零温费米速率\emph{分布的均方根}，
+不是单个粒子在Fermi表面的速率。
+
+\paragraph{习题 29.4}
+非相对论中子气以质量密度
+\(\rho=5\times10^{16}\,\mathrm{kg/m^3}\) 对应
+\(n=\rho/m_n\)，中子质量
+\(m_n=1.675\times10^{-27}\,\mathrm{kg}\)。
+\[
+E_{F,n}=\frac{\hbar^2}{2m_n}(3\pi^2n)^{2/3},
+\quad
+v_{F,n}=\sqrt{2E_{F,n}/m_n}.
+\]
+代入：
+\[
+\boxed{E_{F,n}\simeq1.91\times10^7\,\mathrm{eV}
+=19.1\,\mathrm{MeV}},\qquad
+\boxed{v_{F,n}\simeq6.04\times10^7\,\mathrm{m/s}
+\simeq0.20c}.
+\]
+因为 \(v_F/c\simeq0.20\)，非相对论近似有
+百分之几修正，但更重要的是\emph{强核相互作用、
+引力场、物态方程}的复杂性；
+不能将此自由气模型当作中子星精密物态模型。
+
+\paragraph{习题 29.5}
+低温费米气电子摩尔热容
+\(C_{V,e}=\pi^2Nk_B(k_BT)/(2E_F)\)。
+与经典三维单原子气热容
+\(C_{V,\rm classical}=(3/2)Nk_B\) 之比为
+\[
+\frac{C_{V,e}}{C_{V,\rm classical}}
+=\frac{\pi^2k_BT}{3E_F}.
+\]
+设此比值为0.10且 \(E_F=5\,\mathrm{eV}\)：
+\[
+\boxed{T=\frac{.3 E_F}{\pi^2k_B}
+\simeq1.76\times10^3\,\mathrm K}.
+\]
+计算时 \(k_BT/E_F\simeq0.0304\)，
+仍在Sommerfeld低温相对费米温度的适用区间；
+若材料熔化或发生相变则模型可能失效。
+
+\paragraph{习题 29.6}
+写钾的摩尔热容为
+\(C_m=\gamma T+\beta T^3\)，其中
+\(\gamma=2.08\times10^{-3}\),
+\(\beta=2.57\times10^{-3}\)
+以相应SI摩尔热容单位计。
+Sommerfeld系数
+\(\gamma=\pi^2Rk_B/(2E_F)\)，故
+\[
+\boxed{E_F=\frac{\pi^2Rk_B}{2\gamma}
+\simeq1.70\,\mathrm{eV}}.
+\]
+电子热容与晶格热容贡献相等满足
+\(\gamma T=\beta T^3\)（\(T>0\)），所以
+\[
+\boxed{T_*=\sqrt{\gamma/\beta}
+\simeq0.900\,\mathrm K}.
+\]
+此模型按一摩尔钾一个传导电子假设，
+若载流电子数不同须相应调整。
+
+\paragraph{习题 29.7}
+银按每原子一个自由电子，
+\[
+n=\frac{(10.5\times10^3)N_A}
+{0.1078682}\simeq5.86\times10^{28}\,\mathrm{m^{-3}}.
+\]
+Drude电阻率
+\(\rho_{\rm el}=m_e/(ne^2\tau)\)，得
+\[
+\boxed{\tau=\frac{m_e}{ne^2\rho_{\rm el}}
+\simeq3.78\times10^{-14}\,\mathrm s}.
+\]
+(2) 300K Maxwell经典平均速率
+\(\bar v_{\rm cl}=\sqrt{8k_BT/(\pi m_e)}
+\simeq1.08\times10^5\,\mathrm{m/s}\)，
+\[
+\boxed{\ell_{\rm cl}=\bar v_{\rm cl}\tau
+\simeq4.07\,\mathrm{nm}}.
+\]
+(3) 费米速率
+\(v_F=\hbar(3\pi^2n)^{1/3}/m_e
+\simeq1.39\times10^6\,\mathrm{m/s}\)，
+\[
+\boxed{\ell_F=v_F\tau\simeq52.6\,\mathrm{nm}}.
+\]
+(4) 每离子体积约 \(1/n\)，
+平均间距
+\[
+\boxed{d\sim n^{-1/3}\simeq0.257\,\mathrm{nm}}.
+\]
+所以 \(\ell_{\rm cl}/d\simeq16\)，
+\(\ell_F/d\simeq205\)。经典和费米两种估算的
+不同来自真实金属的传导电子不是Maxwell气体；
+在简并气体应优先用费米表面速度。
+
+\paragraph{习题 29.8}
+费米--狄拉克占据概率
+\(f(E)=[\exp((E-E_F)/(k_BT))+1]^{-1}\)。
+\(T=1000\,\mathrm K\)，则
+\(k_BT\simeq0.08617\,\mathrm{eV}\)。
+\[
+\boxed{f(E_F+0.10\,\mathrm{eV})
+=\frac1{e^{0.10/(k_BT)}+1}\simeq0.239},
+\]
+\[
+\boxed{f(E_F-0.10\,\mathrm{eV})
+=\frac1{e^{-0.10/(k_BT)}+1}\simeq0.761}.
+\]
+两值之和为1，符合分布关于化学势的对称性。
+注意这是\emph{每单粒子态}的平均占据数，
+不是实际整个能量区间的电子绝对总数。
+
+\paragraph{习题 29.9}
+金刚石带隙
+\(E_g=5.5\,\mathrm{eV}\)，室温300K下，
+在不计态密度差和费米能级偏移的简化Boltzmann近似：
+\[
+\boxed{\frac{N_{\rm upper}}{N_{\rm lower}}
+\simeq e^{-E_g/(k_BT)}
+\simeq4.0\times10^{-93}}.
+\]
+跨越全带隙的阈值波长
+\[
+\boxed{\lambda_{\max}=\frac{hc}{E_g}
+\simeq225\,\mathrm{nm}},
+\]
+处于紫外光区。这并不表示晶体对所有低于带隙的光
+都无任何其他吸收：还可能有缺陷、激子等结构。
+
+\paragraph{习题 29.10}
+忽略补偿，每引入一个五价磷原子贡献一个电子。
+原本 \(n_0=10^{16}\,\mathrm{m^{-3}}\)，
+最终增加到 \(10^6n_0\)，
+掺杂电子密度
+\(\Delta n\simeq(10^6-1)n_0\simeq10^{22}\,\mathrm{m^{-3}}\)。
+硅原子密度
+\[
+n_{\rm Si}=\frac{2.33\times10^3}
+{28.085\times10^{-3}}N_A
+\simeq5.00\times10^{28}\,\mathrm{m^{-3}}.
+\]
+因此需要替换比例
+\[
+\boxed{x=\Delta n/n_{\rm Si}\simeq2.00\times10^{-7}}
+\]
+（约每五百万硅原子换一个磷原子）。
+对于1.0g硅，等效掺入磷质量
+\[
+\boxed{m_{\rm P}
+\simeq\frac{1.0\,\mathrm g}{28.085}
+(30.974)x\simeq2.21\times10^{-7}\,\mathrm g
+=0.221\,\mathrm{\mu g}}.
+\]
+计算是注入磷原子的质量，而不等于替换硅原子后
+样品净增加质量。
+
+\paragraph{习题 29.11}
+掺磷后的施主能级在导带底下
+\(\Delta E_D=0.045\,\mathrm{eV}\)。
+光电离施主电子进入导带的最小光子能量是
+\(\Delta E_D\)，不是硅的整段
+\(E_g=1.2\,\mathrm{eV}\)：
+\[
+\boxed{\lambda_{\max}=\frac{hc}{\Delta E_D}
+\simeq\frac{1239.842}{0.045}\,\mathrm{nm}
+=27.6\,\mathrm{\mu m}}.
+\]
+该红外阈值模型忽略施主束缚态和声子辅助跃迁。
+
+\paragraph{习题 29.12}
+光吸收激发跨越禁带需
+\(hc/\lambda\ge E_g\)：
+\[
+\boxed{\lambda_{\max}(\mathrm{CdS})
+=\frac{1239.842\,\mathrm{eV\,nm}}{2.42\,\mathrm{eV}}
+\simeq512\,\mathrm{nm}\quad\text{可见光}},
+\]
+\[
+\boxed{\lambda_{\max}(\mathrm{PbS})
+=\frac{1239.842}{0.30}\,\mathrm{nm}
+\simeq4.13\,\mathrm{\mu m}\quad\text{红外光}}.
+\]
+这里为直接使用带隙估算的本征光电导阈值，
+器件实际光谱响应还取决于吸收系数等。
+
+\paragraph{习题 29.13}
+Ga--As--P二极管带隙
+\(E_g=1.90\,\mathrm{eV}\)，故
+\[
+\boxed{\lambda_{\max}\simeq\frac{hc}{E_g}
+=\frac{1239.842}{1.90}\,\mathrm{nm}
+\simeq653\,\mathrm{nm}}.
+\]
+处于红色可见光区。
+真实发射光谱可能因材料组分、缺陷、
+温度和直接/间接禁带而变。
+
+\paragraph{习题 29.14}
+140nm光子能量
+\[
+\boxed{E_\gamma=\frac{hc}{140\,\mathrm{nm}}
+\simeq8.86\,\mathrm{eV}}.
+\]
+由于 \(8.86\,\mathrm{eV}>E_g=7.6\,\mathrm{eV}\)，
+光子能够激发价带电子跨禁带至导带，
+所以按单光子带间吸收模型
+\[
+\boxed{\text{KCl对140nm紫外光不透明（可强吸收）}}.
+\]
+有限厚度、选择定则和表面反射会影响具体透射率，
+本题只问带隙阈值判定。

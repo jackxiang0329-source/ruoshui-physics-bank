@@ -1,0 +1,667 @@
+% 张三慧第四版V2第17章《磁场和它的源》：独立候选解析
+% 依据教材PDF物理页142--144的题文和图17.38--17.46。
+% 尚待第三方物理审核、原图矢量描摹与辅导书逐题差异核对。
+\section*{第17章\quad 磁场和它的源：独立解析}
+
+\paragraph{习题 17.1}
+采用毕奥—萨伐尔定律
+\[
+ d\boldsymbol B=\frac{\mu_0 I}{4\pi}
+ \frac{d\boldsymbol\ell\times\boldsymbol r}{r^3}.
+\]
+约定图面外为 \(+\hat{\boldsymbol z}\)。
+(a) 水平段上所有电流元与
+\(P\) 的连线平行，故对 \(P\) 无贡献。
+竖直半无限段离 \(P\) 垂距 \(a\)，
+由半无限直导线
+\(B=\mu_0I/(4\pi a)\)；
+电流向下，\(P\) 在其右侧，
+方向按右手法则为\emph{出纸面}：
+\[
+ \boxed{\boldsymbol B_a=
+ \frac{\mu_0I}{4\pi a}\hat{\boldsymbol z}}.
+\]
+(b) 半圆弧半径 \(r\)，电流顺时针，
+弧在中心的贡献
+\(B_{\rm arc}=\mu_0I/(4r)\) 入纸面。
+两条半无限平行直导线
+各贡献 \(\mu_0I/(4\pi r)\)，
+在 \(P\) 处同样入纸面，所以
+\[
+ \boxed{\boldsymbol B_b=
+ -\left(\frac{\mu_0I}{4r}
+ +\frac{\mu_0I}{2\pi r}\right)
+ \hat{\boldsymbol z}
+ =-\frac{\mu_0I(\pi+2)}{4\pi r}
+ \hat{\boldsymbol z}}.
+\]
+(c) 等边三角形内心到边的垂距
+\(h=a\sqrt3/6\)。
+每边两端相对垂线的角均 \(60^\circ\)，
+有限直导线公式
+\(B_{\rm side}=\mu_0I(2\sin60^\circ)/(4\pi h)
+ =3\mu_0I/(2\pi a)\)；
+三边顺时针电流均入纸面：
+\[
+ \boxed{\boldsymbol B_c=
+ -\frac{9\mu_0I}{2\pi a}\hat{\boldsymbol z}}.
+\]
+三种方向均由图17.38的箭头决定，
+需保留图示版本以防方向倒置。
+
+\paragraph{习题 17.2}
+将输电线视为无限长直流导线，
+地面正下方到线的距离 \(r=25\,\mathrm m\)，
+\[
+ \boxed{B_{\rm line}=\frac{\mu_0I}{2\pi r}
+ =\frac{(4\pi\times10^{-7})(1.8\times10^3)}
+ {2\pi(25)}
+ =1.44\times10^{-5}\,\mathrm T}.
+\]
+当地地磁场
+\(B_E=0.6\times10^{-4}\,\mathrm T
+ =6.0\times10^{-5}\,\mathrm T\)，
+\[
+ \boxed{B_{\rm line}/B_E=0.240}.
+\]
+其大小是地磁场的约24%，但\emph{合磁场}
+取决于两矢量夹角，不能简单将两大小相加。
+
+\paragraph{习题 17.3}
+距电流 \(r=0.80\,\mathrm m\)，
+\(I=20\,\mathrm A\)，
+长直导线产生
+\[
+ \boxed{B_w=\frac{\mu_0I}{2\pi r}
+ =5.00\times10^{-6}\,\mathrm T}.
+\]
+地磁水平分量
+\(B_H=0.18\times10^{-4}
+ =1.80\times10^{-5}\,\mathrm T\) 指北。
+导线水平磁场若与 \(B_H\) 垂直，
+磁针偏角
+\[
+ \boxed{\tan\theta=\frac{B_w}{B_H}
+ =\frac5{18}},\qquad
+ \boxed{|\theta|=\arctan(5/18)\approx15.5^\circ}.
+\]
+为给定导线磁场\emph{大小}产生最大偏角，
+其水平磁场方向应尽可能与地磁水平分量
+夹成相应有利角度；若题目要求
+导线与地磁垂直，这是其特定几何值。
+严格优化\emph{自由方向}时，
+\(\sin\theta_{\max}=B_w/B_H\)（因 \(B_w<B_H\)），
+故
+\(\theta_{\max}\approx16.1^\circ\)；
+需区分「正交几何」与「最有利几何」两问。
+\textbf{源图审核风险：}本题原文的导线在船上的
+实际摆放可能约束方向，
+待与辅导书核对可达到哪个最大角。
+不应把随意定向的优化值当成源题直接事实。
+
+\paragraph{习题 17.4}
+设整环半径 \(R\)，
+从进线点A至出线点C分成两段，
+中心角分别为
+\(\theta_1,\theta_2\)，
+\(\theta_1+\theta_2=2\pi\)。
+同种均匀导线两段电阻正比于弧长，
+\(R_1/R_2=\theta_1/\theta_2\)。
+两条弧并联，故电流反比分流：
+\(I_1/I_2=\theta_2/\theta_1\)，
+即
+\(I_1\theta_1=I_2\theta_2\)。
+环中心一段载流圆弧的场
+\(B_{\rm arc}=\mu_0 I\theta/(4\pi R)\)，
+两弧从A到C绕向相反，方向相反：
+\[
+ \boxed{B_O=\frac{\mu_0}{4\pi R}
+ (I_1\theta_1-I_2\theta_2)=0}.
+\]
+径向引线对O处为零，
+因为 \(d\boldsymbol\ell\parallel\boldsymbol r\)。
+若环材料或截面两段不同，
+该抵消结论不再一般成立。
+
+\paragraph{习题 17.5}
+两个直线电流在两线之间的磁场方向相同
+（按图均出纸面）。
+两线距离 \(d=0.40\,\mathrm m\)，
+中点离两线 \(r=d/2=0.20\,\mathrm m\)：
+\[
+ \boxed{B_{\rm mid}
+ =2\frac{\mu_0I}{2\pi r}
+ =\frac{\mu_0I}{\pi r}
+ =4.00\times10^{-5}\,\mathrm T}
+\]
+向纸外。
+取 \(x\) 从左线到右线，
+灰色矩形覆盖
+\(x\in[r_1,d-r_3]=[0.10,0.30]\) m，
+长 \(l=0.25\,\mathrm m\)。
+其中
+\[
+ B(x)=\frac{\mu_0I}{2\pi}
+ \left(\frac1x+\frac1{d-x}\right).
+\]
+故穿过矩形的正向磁通量
+\[
+ \begin{aligned}
+ \Phi&=l\int_{r_1}^{d-r_3}B(x)\,dx\\
+ &=\frac{\mu_0Il}{2\pi}
+ \ln\frac{(d-r_1)(d-r_3)}{r_1r_3}.
+ \end{aligned}
+\]
+代入 \(r_1=r_3=0.10\,\mathrm m\)
+得到
+\[
+ \boxed{\Phi=\frac{\mu_0Il}{\pi}\ln3
+ \approx2.20\times10^{-6}\,\mathrm{Wb}}
+\]
+（面积法向取纸外）。
+跨越两线外侧时磁场方向与上式不同，
+故不可用同一加号代替所有区域。
+
+\paragraph{习题 17.6}
+图17.41的半圆半径 \(R\)，
+其轴取为 \(x\)，观察点
+\(P=(x,0,0)\)。
+令半圆位于 \(yz\) 平面，
+参数化为
+\(\boldsymbol r_{\rm wire}
+ =(0,R\cos\varphi,R\sin\varphi)\)，
+\(\varphi\in[0,\pi]\)；
+电流沿 \(\varphi\) 增大方向流动
+（反向电流时整个结果反号）。
+令
+\(D=\sqrt{x^2+R^2}\)，
+则对观察点
+\[
+ d\boldsymbol\ell\times
+ (\boldsymbol r_P-\boldsymbol r_{\rm wire})
+ =(R^2,Rx\cos\varphi,Rx\sin\varphi)d\varphi.
+\]
+积分得到
+\[
+ \boxed{\boldsymbol B(P)=
+ \frac{\mu_0I}{4\pi(R^2+x^2)^{3/2}}
+ \big(\pi R^2\hat{\boldsymbol x}
+ +2Rx\hat{\boldsymbol z}\big)}.
+\]
+故\emph{轴向分量}
+\[
+ \boxed{B_x=\frac{\mu_0IR^2}
+ {4(R^2+x^2)^{3/2}}},
+\]
+正好是整圆环轴向场的一半；
+但对于\emph{只有半圆弧}的未闭合电流路径，
+一般还存在横向分量
+\(\boxed{B_\perp=\mu_0IRx/
+ [2\pi(R^2+x^2)^{3/2}]}\)。
+源题若只要求轴向分量，可直接取 \(B_x\)；
+若要求磁场矢量，不可把横向项遗漏。
+实际半圆环须配接返回导线，
+返回路径的贡献取决于其几何形状。
+
+\paragraph{习题 17.7}
+半径单位统一成m：
+中央实心导体 \(a=0.025\)，
+外筒内外半径 \(b=0.035,c=0.045\)。
+进线电流 \(+I\) 匀布在内导体，
+回线电流 \(-I\) 匀布在外筒。
+轴向安培环路给
+\(\oint\boldsymbol B\cdot d\boldsymbol\ell
+ =\mu_0I_{\rm encl}(r)\)，
+因而
+\[
+ \boxed{B(r)=\frac{\mu_0I}{2\pi}
+ \begin{cases}
+ r/a^2,&0\le r<a,\\
+ 1/r,&a\le r<b,\\
+ \dfrac{1-(r^2-b^2)/(c^2-b^2)}r,
+   &b\le r<c,\\
+ 0,&r\ge c.
+ \end{cases}}
+\]
+磁场沿环向，
+方向按进线电流右手螺旋定则。
+在 \(r=a\) 处达到最大
+\(B_{\max}=\mu_0I/(2\pi a)
+ \approx0.040\,\mathrm T\)。
+内棒中从0线性增长，间隙中按 \(1/r\)
+衰减，回流筒内继续下降，
+筒外在理想等流量抵消模型中为零。
+绘图应在 \(a,b,c\) 各分界保持 \(B\) 连续。
+
+\paragraph{习题 17.8}
+(1) 无限长均匀实心圆柱
+半径 \(R\)，总电流 \(I\)
+的体电流密度为
+\(J=I/(\pi R^2)\)。
+对半径 \(r<R\) 的圆周，
+其包围电流
+\(I_{\rm enc}=J\pi r^2=Ir^2/R^2\)；
+结合轴对称磁场的环路积分得
+\[
+ \boxed{B(r)=
+ \begin{cases}
+ \dfrac{\mu_0Ir}{2\pi R^2},&r\le R,\\
+ \dfrac{\mu_0I}{2\pi r},&r\ge R.
+ \end{cases}}
+\]
+(2) 无穷大平面薄电流层，
+面电流密度大小为 \(j\)（A/m）。
+将它分成平行的无限直电流元
+\(dI=j\,dx\)，利用
+\(dB=\mu_0dI/(2\pi s)\)
+及在平面法线方向的投影，
+对面内位置 \(x\) 积分：
+\[
+ B_{\rm one\ side}
+ =\frac{\mu_0j}{2\pi}
+ \int_{-\infty}^{\infty}
+ \frac{h\,dx}{x^2+h^2}
+ =\boxed{\frac{\mu_0j}{2}}
+\]
+（\(h>0\)，且沿平面方向
+垂直于电流流向）。
+在平面的另一侧大小相同、方向相反。
+这个积分证明也与安培环路法相吻合。
+
+\paragraph{习题 17.9}
+取直电流沿 \(z\)，
+在导线垂距 \(r\) 的点观察。
+电流元位置 \(z\)，矢量距离
+\(s=\sqrt{r^2+z^2}\)，
+其毕奥—萨伐尔环向场
+\[
+ dB=\frac{\mu_0I}{4\pi}
+ \frac{r\,dz}{(r^2+z^2)^{3/2}}.
+\]
+对无限长导线积分：
+\[
+ \begin{aligned}
+ B&=\frac{\mu_0I}{4\pi}
+ \int_{-\infty}^{\infty}
+ \frac{r\,dz}{(r^2+z^2)^{3/2}}\\
+ &=\frac{\mu_0I}{4\pi}
+ \left[\frac{z}{r\sqrt{r^2+z^2}}\right]_{-\infty}^{+\infty}
+ =\boxed{\frac{\mu_0I}{2\pi r}}.
+ \end{aligned}
+\]
+一侧仅从0到+\(\infty\) 时则为
+\(\mu_0I/(4\pi r)\)，
+适用于习题17.1的半无限段。
+
+\paragraph{习题 17.10}
+设螺线管足够长、每单位轴长 \(n\) 匝，
+电流 \(I\)，绕组密集而均匀。
+图17.42选轴向长度为 \(a\) 的
+矩形安培回路，其中一边在管内，
+另一边远离管外。
+忽略长直螺线管的外场，
+垂直两边与局部 \(\boldsymbol B\) 垂直，
+故环路积分约为
+\(\oint\boldsymbol B\cdot d\boldsymbol\ell=Ba\)。
+回路与螺线管缠绕电流的穿链数
+\(N_{\rm link}=na\)，
+\[
+ Ba=\mu_0(na)I,
+ \qquad \boxed{B=\mu_0nI}.
+\]
+有限长螺线管近端部外场不为零，
+也存在端面场扩散；在这些区域
+不能把无限长公式当作精确场分布。
+
+
+\paragraph{习题 17.11}
+设无限长、单位长度绕组 \(n\)、电流 \(I\)
+的理想螺线管磁场为
+\(B_\infty=\mu_0nI\)（管内），
+管外近似为零。
+图17.43把整个无限长管看成左右两个
+完全镜像的半无限长螺线管叠加。
+(1) 在共同口平面，
+两半管贡献的轴向场相同；
+整个管轴线附近为 \(B_\infty\)，
+故单根半无限长管口内的轴向场为
+\(\tfrac12 B_\infty\)。
+在理想细密绕组且口部对称近似下，
+其管口磁通量
+\[
+ \boxed{\Phi_{\rm mouth}
+ =\frac12B_\infty(\pi R^2)
+ =\frac12\Phi_{\rm deep}}.
+\]
+严格地说口部磁场有边缘分布，
+「通量一半」由对称的磁通积分给出，
+不是断言口附近每一位置的场强恒等。
+
+(2) 在与管口齐平、但位于管\emph{外侧}
+的平面，镜像叠加时两段外部的
+轴向场互相抵消，而外部磁通须守恒并弯出；
+对\emph{单根}半无限管，
+图示的口沿磁力线 \(abc\) 的外侧切向
+平行口面，因此与管轴垂直。
+这种结论是对称界面处的场方向性质，
+并非所有外部磁力线都为直线。
+
+(3) 因
+\(\boldsymbol\nabla\cdot\boldsymbol B=0\)，
+磁场线不可能在管口无端起止；
+口部逐渐扩张的部分磁通必经
+圆柱侧面向外回转，形成图中
+\(def\) 的外弯磁力线。
+可对包住半管口的闭合柱面使用
+\(\oint\boldsymbol B\cdot d\boldsymbol S=0\)
+验证其流出侧面的磁通量与
+口部通量重分配平衡。
+
+(4) 在深管内以轴半径 \(r_0\) 围成的
+磁通管通量为 \(B_\infty\pi r_0^2\)。
+若它沿图示磁线穿出管口，
+且口面轴向磁场的积分等效为半值，
+磁通管扩大到口部半径 \(r\)，
+由磁通保持
+\[
+ B_\infty\pi r_0^2
+ =\frac12B_\infty\pi r^2
+ \Longrightarrow
+ \boxed{r=\sqrt2\,r_0}.
+\]
+这里用了图17.43的理想半无限管口
+几何和平均磁通表示；对真实离散绕组，
+需要数值求出 \(B(r,z)\) 后检验
+\(r(r_0)\) 的局部准确性。
+(1)—(4)不能仅由无限长管内
+\(B=\mu_0nI\) 不加边界假设地推出。
+
+\textbf{第(4)问的定义域限制。}
+把理想连续电流片的两个半无限长管镜像对接后，
+由对称性在口平面 \(r<R\) 有
+\(B_z=B_\infty/2\)，而 \(r>R\) 时 \(B_z=0\)。
+口面最大通量为 \(B_\infty\pi R^2/2\)；
+这只对应深管内半径 \(R/\sqrt2\) 以内的磁通。
+因此
+\[
+ \boxed{0\le r_0\le R/\sqrt2,\quad
+ r_{\rm mouth}=\sqrt2\,r_0\le R}.
+\]
+深管内 \(r_0>R/\sqrt2\) 的磁力线必须从\emph{侧面}
+漏出，不能把公式外推到口面外 \(r>R\)；
+该平面区域的法向磁场为零。
+
+
+\paragraph{习题 17.12}
+先确定线圈总匝数。
+环管\emph{轴线}大半径
+\(R_{\rm major}=2.0\,\mathrm m\)，
+但每匝铜线是\emph{围绕管截面}
+小半径 \(r_{\rm minor}=1.0\,\mathrm m\)
+缠绕，故理想每匝长度约
+\(2\pi r_{\rm minor}\)，
+而不是 \(2\pi R_{\rm major}\)。
+总长度 \(L_{\rm wire}=10^4\,\mathrm m\)，
+\[
+ \boxed{N\simeq\frac{L_{\rm wire}}
+ {2\pi r_{\rm minor}}
+ =\frac{10^4}{2\pi}\approx1.592\times10^3}.
+\]
+在托罗伊德环管轴线半径 \(R_{\rm major}\)
+处，由安培环路定律
+\[
+ B(2\pi R_{\rm major})=\mu_0NI.
+\]
+用 \(I_{\rm peak}=7.3\times10^4\,\mathrm A\)，
+得
+\[
+ \boxed{B_{\rm peak}=
+ \frac{\mu_0L_{\rm wire}I_{\rm peak}}
+ {4\pi^2r_{\rm minor}R_{\rm major}}
+ \approx11.6\,\mathrm T}.
+\]
+这是均匀理想匝数及管截面圆形绕线近似；
+真实线圈导线的布线斜率、绝缘包覆和
+等离子体本身的电流等因素
+会修改实际实验磁场。
+把2m大半径误当成单匝铜线周长
+会错误减少一半匝数，得到约5.81T。
+
+\paragraph{习题 17.13}
+环形螺线管内半径 \(R_1\)、
+外半径 \(R_2\)、截面高度 \(h\)，
+均匀绕 \(N\) 匝，
+电流 \(I\)。
+以环中心轴线为圆心的半径 \(r\)
+安培环路对环内部全部 \(N\) 匝电流
+求穿链：
+\[
+ B_\varphi(r)\,(2\pi r)=\mu_0NI,
+\quad R_1<r<R_2.
+\]
+故理想场分布
+\[
+ \boxed{\boldsymbol B(r)=
+ \begin{cases}
+ \dfrac{\mu_0NI}{2\pi r}\hat{\boldsymbol\varphi},
+ &R_1<r<R_2\quad\text{环心截面高度内},\\
+ \boldsymbol0,&\text{理想环外或中心孔内}.
+ \end{cases}}
+\]
+穿过环管\emph{矩形横截面}的磁通量
+\[
+ \boxed{\Phi=
+ \int_{R_1}^{R_2}B_\varphi(r)\,h\,dr
+ =\frac{\mu_0NIh}{2\pi}
+ \ln\frac{R_2}{R_1}}.
+\]
+每一匝的磁链为 \(N\Phi\)，
+不应把\emph{通过一次截面}的磁通误乘 \(N\)。
+由于木制绝缘非铁磁，
+取 \(\mu\simeq\mu_0\)。
+
+\paragraph{习题 17.14}
+每张无限大薄金属板上有
+均匀面电流 \(j\)（A/m），
+它在板两侧单独产生
+\(B=\mu_0j/2\)，两侧方向相反。
+当两板电流方向相反，
+两板\emph{之间}的磁场方向相同、
+\emph{之外}相反而抵消。
+设两板平行于 \(xy\) 平面，
+下板 \(+\hat x\) 电流、
+上板 \(-\hat x\) 电流：
+\[
+ \boxed{\boldsymbol B=
+ \begin{cases}
+ -\mu_0j\,\hat{\boldsymbol y},&
+ \text{两板之间（按此坐标约定）},\\
+ \boldsymbol0,&\text{两板之外}.
+ \end{cases}}
+\]
+反转两板电流时内场反向。
+这个方向由
+\(\boldsymbol B\propto
+\boldsymbol K\times\boldsymbol n\)
+的右手定则固定；
+无限平面边缘效应忽略。
+
+\paragraph{习题 17.15}
+截面半径 \(R\) 的圆柱中
+电流均匀，体电流密度
+\(J=I/(\pi R^2)\)，
+圆形安培回路内包围电流
+\(I_{\rm encl}(r)=I(r/R)^2\)
+（对于 \(r<R\)）。
+磁感应强度
+\[
+ \boxed{B_\varphi(r)=
+ \begin{cases}
+ \dfrac{\mu_0Ir}{2\pi R^2},&0\le r<R,\\
+ \dfrac{\mu_0I}{2\pi r},&r\ge R.
+ \end{cases}}
+\]
+若取从轴 \(r=0\) 沿半径延至
+柱面 \(r=R\)、沿柱轴方向长为 \(l\)
+的\emph{径向—轴向矩形面}，
+其法线沿磁场环向，
+故环绕中心轴线所定义的磁通量为
+\[
+ \boxed{\Phi=\int_0^R
+ B_\varphi(r)\,l\,dr
+ =\frac{\mu_0Il}{4\pi}}.
+\]
+磁通量须指定穿过\emph{哪一块开放曲面}；
+若取垂直圆柱轴的圆盘，
+磁场环向、穿盘法向通量为零。
+本题采用轴向—径向截面解释「环绕中心轴线」。
+
+\paragraph{习题 17.16}
+以长圆柱原轴 \(O\) 为原点，
+小孔轴 \(O'\) 对它的偏心矢量
+\(\boldsymbol d\)，
+电流密度
+\(\boldsymbol J=J\hat{\boldsymbol z}\)。
+把有孔导体叠加为两部分：
+半径 \(R\) 的\emph{完整}均匀通电圆柱
+\(+\boldsymbol J\)，以及孔位置
+一个半径 \(r\)、电流密度
+\(-\boldsymbol J\) 的虚拟圆柱。
+在两圆柱内部相对各自轴线的磁场
+\[
+ \boldsymbol B_1(\boldsymbol r)=
+ \frac{\mu_0}{2}\boldsymbol J\times\boldsymbol r,
+\qquad
+ \boldsymbol B_2(\boldsymbol r)=
+ -\frac{\mu_0}{2}\boldsymbol J\times
+ (\boldsymbol r-\boldsymbol d).
+\]
+在\emph{小孔内}相加后位置
+\(\boldsymbol r\) 完全抵消：
+\[
+ \boxed{\boldsymbol B_{\rm hole}
+ =\frac{\mu_0}{2}\boldsymbol J\times\boldsymbol d}.
+\]
+故
+\[
+ \boxed{B_{\rm hole}=\frac{\mu_0Jd}{2}}
+\]
+且方向在截面内垂直于
+\(\boldsymbol d\)，沿
+\(\boldsymbol J\times\boldsymbol d\)。
+这是著名的均匀偏心圆孔磁场；
+若洞与导体同轴 \(d=0\)，
+孔内场为零。
+
+\paragraph{习题 17.17}
+令两细圆线圈的中心位于共轴
+\(z=\pm R/2\)，半径均为 \(R\)，
+每环通同向电流 \(I\)。
+单个圆环轴向磁场
+\(B_{\rm loop}(z)=
+ \mu_0IR^2/[2(R^2+z^2)^{3/2}]\)。
+叠加：
+\[
+ \boxed{B(z)=\frac{\mu_0IR^2}{2}
+ \left[
+ \frac1{(R^2+(z-R/2)^2)^{3/2}}
+ +\frac1{(R^2+(z+R/2)^2)^{3/2}}
+ \right]}.
+\]
+\(B(z)\) 对 \(z\) 为偶函数，
+所以
+\(\boxed{B'(0)=0}\)。
+令
+\(f_a(z)=[R^2+(z-a)^2]^{-3/2}\)，
+有
+\[
+ f_a''(0)=
+ \frac{3(4a^2-R^2)}
+ {(R^2+a^2)^{7/2}}.
+\]
+取 \(a=R/2\) 时分子
+\(4(R/2)^2-R^2=0\)，
+两项均满足
+\[
+ \boxed{B''(0)=0}.
+\]
+中点场强
+\[
+ \boxed{B(0)=\frac{\mu_0I}{R}
+ \left(\frac45\right)^{3/2}}.
+\]
+这说明中点附近轴向场对位置
+的一阶和二阶变化均不敏感，
+是亥姆霍兹线圈产生较均匀磁场的依据。
+若线圈各有 \(N\) 匝，上式乘 \(N\)。
+
+\paragraph{习题 17.18}
+盘面均匀带电总量 \(q\)，
+面电荷密度
+\(\sigma=q/(\pi R^2)\)。
+把盘分成半径 \(r\)、
+厚 \(dr\) 的环：
+\(dq=2\pi r\sigma\,dr\)。
+旋转角速率 \(\omega\)
+对应一圈周期 \(T=2\pi/\omega\)，
+故环的等效电流为
+\(dI=dq/T=\omega\sigma r\,dr\)。
+该环在盘心磁场
+\(dB=\mu_0dI/(2r)\)，
+代入并从 \(0\) 积到 \(R\)：
+\[
+ \boxed{B=\frac{\mu_0\omega\sigma}{2}
+ \int_0^Rdr
+ =\frac{\mu_0\omega q}{2\pi R}}.
+\]
+正电荷沿旋转角速度方向按右手规则
+产生轴向磁场；负电荷方向相反。
+该式按非相对论稳恒旋转电流层近似。
+
+\paragraph{习题 17.19}
+圆形极板半径
+\(R=0.050\,\mathrm m\)，
+面间电场变化率
+\(\dot E=1.0\times10^{12}\,
+\mathrm{V/(m\,s)}\)。
+位移电流密度
+\(\boldsymbol j_d=\varepsilon_0\dot{\boldsymbol E}\)，
+合计板间位移电流
+\[
+ \boxed{I_d=\varepsilon_0\pi R^2\dot E
+ \approx6.95\times10^{-2}\,\mathrm A}.
+\]
+在两板之间围板边缘的圆形安培回路上，
+由安培—麦克斯韦定律
+\(B(2\pi R)=\mu_0I_d\)，故
+\[
+ \boxed{B(R)=\frac{\mu_0I_d}{2\pi R}
+ =\frac{\mu_0\varepsilon_0R\dot E}{2}
+ \approx2.78\times10^{-7}\,\mathrm T}.
+\]
+位移电流不是有电子穿过真空板间隙，
+而是随时间变化的电通量产生磁场。
+
+\paragraph{习题 17.20}
+理想线性电容器的瞬时电压
+\(U(t)=U_m\sin(\omega t)\)，
+其中
+\(\omega=2\pi f\)。
+电荷
+\(Q(t)=CU(t)\)，
+板间电通量变化产生的位移电流
+与引线电流相同：
+\[
+ I_d(t)=\frac{dQ}{dt}
+ =C\omega U_m\cos(\omega t).
+\]
+因此最大值
+\[
+ \boxed{I_{d,\max}=2\pi fCU_m
+ =2\pi(50)(1.0\times10^{-12})
+ (1.74\times10^5)
+ \approx5.47\times10^{-5}\,\mathrm A}.
+\]
+亦即约
+\(54.7\,\mu\mathrm A\)，
+忽略漏电、边缘效应和介质非线性。
