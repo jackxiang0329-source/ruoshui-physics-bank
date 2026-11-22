@@ -55,7 +55,7 @@ exact(6,"mean speed is path over exact interval",path/dt,path/dt)
 dt=2.8; vmax=.35
 dist=vmax/pi*(6-sin(.8*pi))
 test(8,"2.8sec of cos pi*t velocity traveled distance metres",
-     dist,.1895,.03)
+     dist,.6029,.01)
 a=.2;x=.1
 pdf=1/(pi*sqrt(a*a-x*x))
 test(9,"arcsine distribution density at half amplitude",pdf,
