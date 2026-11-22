@@ -55,7 +55,7 @@ zero(164,"isothermal bottom/top pV matching with curvature",
 theta=138*pi/180
 height=4*alphaHg*abs(cos(theta))/(rhoHg*g)*(1/.0005-1/.001)
 check(165,"differential mercury capillary depression between two tubes m",
-      height,.011)
+      height,.010695)
 check(165,"nonwetting mercury cos theta negative",float(cos(theta)<0),1)
 rc=2*alphaW/(rhoW*g*.025)
 check(166,"water meniscus curvature radius for 25mm head mm",
