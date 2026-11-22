@@ -484,7 +484,7 @@ def check_numeric_spotmodels() -> int:
             "16.14 transistor emitter bias R_e conditional image")
     require(close(1000e-6*.001,1.0e-6),
             "16.15 elementary RC model units")
-    require(close(.001*math.log(1e-4/e),.03406741329),
+    require(close(.001*math.log(1e-4/electron_q),.03406741329),
             "16.15 time until one electron charge in 1uF x 100V")
     require(close(.002*4000,8.0),"16.16 source current bounded charge tau")
     require(close(.002*.5,.001),"16.16 discharge lamp RC time")
