@@ -2195,6 +2195,112 @@ def check_companion_ch3_crosscheck() -> int:
     return len(rows)
 
 
+
+def check_companion_ch4_crosscheck() -> int:
+    """Companion S chapter4 28 original exercises: 14 printed values +14 formula cases."""
+    p=ROOT/"companion_crosscheck_ch04_01_28.json"
+    require(p.is_file(), "missing third-book ch4 source audit")
+    d=json.loads(p.read_text(encoding="utf-8"))
+    rows=d["records"]
+    require(len(rows)==28 and d["summary"]["reviewed_distinct_existing_pairs"]==28,
+            "fourth chapter original scan audit not complete")
+    require(d["summary"]["reviewed_numeric_source_answers"]==14
+            and d["summary"]["reviewed_symbolic_source_formulas"]==14,
+            "fourth chapter source printed data not separated from reviewer samples")
+    require(d["source"]["sha256"]==
+            "54126dd75edd65eb9ead0a9d7acb96a37bfb25674cf595c76b94f2fb30bce5a7",
+            "S-scan changed without source revalidation")
+    G=6.67e-11
+    g=9.8
+    pi=math.pi
+    m=72
+    k=60
+    L=20
+    models={
+      "4.1":(1200*(g+1.5)-1000*(g-1.5))*.5*1.5,
+      "4.2":1-1/math.sqrt(2)+.2/math.sqrt(2),
+      "4.3":.5*132000*(942/3.6)**2,
+      "4.4":50*1.5**2,
+      "4.5":math.sqrt((1-.2)*g),
+      "4.6":-.5*(1*3/(1+3))*10**2,
+      "4.7":2*(3-1),
+      "4.8":.5*2*3**2,
+      "4.9":2*1*g/10,
+      "4.10":(m*g+math.sqrt((m*g)**2+2*k*m*g*L))/k,
+      "4.11":.1*10*math.sqrt(1/(100*(1+.1)*(2*1+.1))),
+      "4.12":.3*g/math.sqrt(8.9*.5),
+      "4.13":math.sqrt(2*g*1*2/(2+1)),
+      "4.14":0.,
+      "4.15":-10.,
+      "4.16":1/6,
+      "4.17":-1/(2+6),
+      "4.18":G*5.98e24*500*((42300-7800)*1e3)/(
+          2*(7800e3)*((7800+42300)*1e3)),
+      "4.19":math.sqrt(G*1e30/1e10),
+      "4.20":G*5.98e24/(6400e3)*(4/3*pi*1e4**3*6e3),
+      "4.21":2*G*1.99e30/(3e8**2),
+      "4.22":2*1.99e30*(2e10/1e67)**(1/3),
+      "4.23":4.27*234/238,
+      "4.24":.5*(2*3/(2+3))*4**2,
+      "4.25":5*math.sqrt((1*2)/(10*(1+2))),
+      "4.26":5*8.9875517923e9*(1.602176634e-19)**2/(
+          4*1.67262192369e-27*1e6**2),
+      "4.27":3600*pi*.2**2*math.sqrt(2*g*5),
+      "4.28":60*pi*(.008/2)**2*math.sqrt(2*20*101325/1000)
+    }
+    require(len(models)==28, "ch4 model count not28")
+    symbolic={"4.2","4.6","4.7","4.8","4.9","4.11","4.13",
+              "4.14","4.15","4.16","4.17","4.24","4.25","4.26"}
+    require(len(symbolic)==14, "fourth chapter symbolic count not14")
+    reg={x["canonical_id"]:x for x in json.loads(
+          REGISTER.read_text(encoding="utf-8"))["entries"]}
+    require(len(reg)==705, "ch4 S source must not create new formal exercise IDs")
+    seen=set()
+    for row in rows:
+        n=row["source_problem_number"]
+        require(n in models and n not in seen,
+                f"original ch4 S scan missing/duplicated {n}")
+        seen.add(n)
+        cid=f"ZS4-04-{int(n.split('.')[1]):03d}"
+        require(row["canonical_id"]==cid and cid in reg,
+                f"S scanned original chapter4 ID incorrectly mapped {n}")
+        link=reg[cid].get("companion_numerical_source_audit",{})
+        require(link.get("audit_file")=="companion_crosscheck_ch04_01_28.json"
+                and link.get("status")=="key_answer_value_crosschecked_not_full_proof_verified"
+                and link.get("scanned_companion_pdf_pages")==
+                    row["companion_pdf_physical_pages"],
+                f"chapter4 S source page and main canonical link wrong {n}")
+        require(row["companion_pdf_physical_pages"]
+                and all(type(pg)==int and 1<=pg<=402
+                        for pg in row["companion_pdf_physical_pages"]),
+                f"chapter4 S scan page out of range {n}")
+        require(math.isclose(models[n],row["independent_computed_value"],
+                             rel_tol=.004,abs_tol=1e-18),
+                f"chapter4 independent calculation wrong {n}")
+        require(row["academic_review"]=="pending_independent_verification"
+                and row["exam_ready"] is False,
+                f"S source audit promoted original chapter4 exercise {n}")
+        if n in symbolic:
+            require(row["companion_rounded_value"] is None
+                    and row["crosscheck"]==
+                      "source_symbolic_formula_checked_with_independent_test_parameters",
+                    f"ch4 {n}: reviewer-created sample presented as printed source result")
+        else:
+            require(row["companion_rounded_value"] is not None,
+                    f"ch4 {n}: source result missing")
+    require(set(models)==seen,"S chapter4 originals not completely covered")
+    note=next(x["discrepancy_note"] for x in rows
+              if x["source_problem_number"]=="4.10")
+    require("SOURCE_INTERNAL_ARITHMETIC_CONFLICT" in note,
+            "bungee 4.10 source inconsistent quadratic not marked for review")
+    sol=(ROOT/"chapters/04/solutions.tex").read_text(encoding="utf-8")
+    require("36.4318" in sol and "38.1" in sol
+            and "23.52" in sol and "470.4" in sol
+            and "40.84" in sol,
+            "ch4.10 numeric bungee scan inconsistency and revised derivation lost")
+    return len(rows)
+
+
 def main() -> None:
     raw = json.loads(REGISTER.read_text(encoding="utf-8"))
     require(raw.get("schema") == "zhang-sanhui-4e-exercise-intake/v1",
@@ -2539,6 +2645,7 @@ def main() -> None:
     checked_source_ch2 = check_companion_ch2_crosscheck()
     checked_source_ch2_rest = check_companion_ch2_remaining_crosscheck()
     checked_source_ch3 = check_companion_ch3_crosscheck()
+    checked_source_ch4 = check_companion_ch4_crosscheck()
     computed = check_numeric_spotmodels()
     print(f"PASS: {len(ids)} candidate exercises have unique IDs, "
           "paired TeX sections, source pages and no exam admission.")
@@ -2548,7 +2655,8 @@ def main() -> None:
     print(f"PASS: {checked_source_ch2} chapter2 S-companion original model/source spotchecks; 8 printed results and 3 symbolic cases.")
     print(f"PASS: {checked_source_ch2_rest} remaining chapter2 original source checks; all28 now covered.")
     print(f"PASS: {checked_source_ch3} third-chapter original S-source spotchecks; 18 actual numeric+6 symbolic.")
-    print(f"PASS: {computed+checked_source_ch1+checked_source_ch2+checked_source_ch2_rest+checked_source_ch3} numerical/source-model checks (663+26+11+17+24).")
+    print(f"PASS: {checked_source_ch4} fourth-chapter original S-companion source model checks; 14 print and14 symbolic.")
+    print(f"PASS: {computed+checked_source_ch1+checked_source_ch2+checked_source_ch2_rest+checked_source_ch3+checked_source_ch4} numerical/source-model checks (663+26+11+17+24+28).")
     print("NOT VERIFIED: full source transcription accuracy, external expert "
           "review, source permissions and independent physical model sufficiency.")
 
