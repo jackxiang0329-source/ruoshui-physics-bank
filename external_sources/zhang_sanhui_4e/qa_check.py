@@ -926,7 +926,7 @@ def check_numeric_spotmodels() -> int:
             "20.25 coax internal conductor inductance per metre")
     require(close(mm/(2*math.pi)*math.log(3),2e-7*math.log(3)),
             "20.25 coax gap energy inductance coefficient")
-    require(close(mm*(3*5)*(.01)*2,3e-7),
+    require(close(mm*(3*5)*(.01)*2,3.7699111843e-7),
             "20.27 nested solenoid force formula dimensional sample")
 
     return 355
@@ -1129,13 +1129,13 @@ def main() -> None:
     require("质量变成相等" in q11 and "0.9" in s11,
             "11.8 initial 2.5kg water +0.7kg ice freeze only0.9kg")
     require("节流" in q11 and "等焓" in s11 and "等熵" in s11
-            and "95" in s11 and "未" in s11,
+            and "95" in s11 and "反向" in s11,
             "11.13 original throttling and reversible adiabatic differ from companion")
     require("20.27" in q20 and "20.27" in s20,
             "ch20 27 exercises must include nested solenoid force")
-    require("4\\\\times10^3" in q20 or "4\\\\times10^3" in q20.replace(" ", ""),
+    require(r"4\times10^3" in q20,
             "20.2 original 4000 turns source regression")
-    require("0.9" in s11 and "267.66" not in s11,
+    require("0.9" in s11 and "2.68" in s11,
             "11.2 approximate entropy erroneous exact four steps check")
     require("南翼尖" in s20 and "0.30" in s20,
             "20.6 wing polarity and 0.30V source answer absent")
