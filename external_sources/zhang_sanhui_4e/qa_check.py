@@ -420,7 +420,7 @@ def main() -> None:
     ch14s=(ROOT/"chapters/14/solutions.tex").read_text(encoding="utf-8")
     require("71\\,\\mathrm{nm}" in ch5q,
             "Source chapter 5.6 diameter must remain as printed (71 nm)")
-    require("104.91" in ch5s and "theta/2" not in ch5s,
+    require("104.91" in ch5s and "\\boxed{\\theta=2\\arctan" in ch5s,
             "5.5 full HOH bond angle must be recorded")
     require("7.3\\times10^{18}" in ch5s,
             "5.22 textbook companion 2004 energy source omitted")
