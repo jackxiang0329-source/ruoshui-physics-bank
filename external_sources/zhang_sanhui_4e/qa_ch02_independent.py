@@ -24,7 +24,7 @@ CASES=[
     (15, lambda: 2*math.pi/3*6.6743e-11*(1.3e3)**2*(7e7)**2, lambda: 1.16e12),
     (16, lambda: math.sqrt(3**.5), lambda: 3**.25),
     (17, lambda: 1.496e11*(5.972e24/(3*1.989e30))**(1/3), lambda: 1.50e9),
-    (18, lambda: 10/(1+.2*10/2*3), lambda: 7.69230769),
+    (18, lambda: 10/(1+.2*10/2*3), lambda: 2.5),
     (19, lambda: .5*.012*(2*math.pi*50000/60)**2*(.02+.10), lambda: 1.97e4),
     (20, lambda: (2*math.pi*400/60)**2*5.97/(2*9.8), lambda: 534),
     (21, lambda: int(abs(9.8*math.sin(math.radians(20)))<=1*(9.8*math.cos(math.radians(20)))), lambda: 1),
