@@ -16,6 +16,8 @@
 | **未审外部候选资源** | [分类导航](external_sources/catalog/中文分类导航.md) / [无损压缩归档](external_sources/_bundles/) | 19,837 份大型语料及另 318 份 UBC/IntroPhysics 原始候选无损打包；不进入正式题库 |
 | 技术质检与历史批次 | [QA 协议](docs/policies/qa_protocol.md) / [高难准入标准](docs/policies/high_difficulty_policy.md) / [历史记录](docs/history/project_history_2026.md) | 技术检查不等于第三方学术审定 |
 
+其他辅助技术文档统一按用途归类：[文档目录](docs/README.md) · [命名规范](docs/policies/repository_naming.md)。
+
 ## 目录结构（保留稳定接口）
 
 ```text
