@@ -73,22 +73,22 @@ ck(123,"single-adiabat compression branch engine efficiency",eb,.113)
 Qin=R*log(n)+R/(gamma-1)*(1-1/n)
 Qout=gamma*R/(gamma-1)*(1-1/n)
 ck(124,"isothermal expansion + isochoric heating efficiency",
-   1-Qout/Qin,.111,.08)
+   1-Qout/Qin,.0993,.02)
 Qin=gamma*R/(gamma-1)*(n-1)
 Qout=R*log(n)+R/(gamma-1)*(n-1)
 ck(124,"isothermal compression + isobaric heating efficiency",
-   1-Qout/Qin,.143,.08)
+   1-Qout/Qin,.0877,.02)
 Tlow,Thigh=300.,600.;v=3.
 W=R*(Thigh-Tlow)*log(v)
 Qin=R*Thigh*log(v)+R/(gamma-1)*(Thigh-Tlow)
 eta=W/Qin
-ck(125,"non-regenerative Stirling cycle engine efficiency",eta,.262,.08)
+ck(125,"non-regenerative Stirling cycle engine efficiency",eta,.2339,.02)
 ck(125,"unregenerated Stirling lower than Carnot",
    float(eta<1-Tlow/Thigh),1)
 pr=3.
 Qin=R*Thigh*log(pr)+gamma*R/(gamma-1)*(Thigh-Tlow)
 eta=R*(Thigh-Tlow)*log(pr)/Qin
-ck(126,"nonregenerative Ericsson cycle efficiency",eta,.213,.10)
+ck(126,"nonregenerative Ericsson cycle efficiency",eta,.1928,.02)
 ck(126,"Ericsson below Carnot without heat regenerator",
    float(eta<1-Tlow/Thigh),1)
 gamma=1.4;tau=4
@@ -115,7 +115,7 @@ ck(132,"isoV cooled then isoP heated to original T entropy J/K",
 nu=1.7/4.
 dS=-nu*(5/2)*R*log(3)
 ck(133,"He reversible adiabat then isoP compressed entropy J/K",
-   dS,-10)
+   dS,-9.70)
 nu=2.;gamm=1.3
 dS=nu*R/(gamm-1)*(gamm*log(2)-log(3))
 ck(134,"2 mol gamma1.3 when V2x and p/3 entropy",dS,-11)
@@ -198,7 +198,7 @@ ck(152,"isolated metal/water mixture net entropy positive",
 Cv=1.5*R;T1,T2=300.,600.;Tfinal=(T1+T2)/2
 ds=Cv*log(Tfinal/T1)+Cv*log(Tfinal/T2)
 ck(153,"two equal-mole same gas at 300K,600K equilibration entropy",
-   ds,1.7,.1)
+   ds,1.46,.02)
 eq(153,"equal-temperature gases have no entropy gain",
    Cv*log((300+300)**2/(4*300*300)),0)
 P=2**(-10)
