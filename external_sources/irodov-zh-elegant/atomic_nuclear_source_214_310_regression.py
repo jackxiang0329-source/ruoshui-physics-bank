@@ -175,8 +175,8 @@ species={
 def delta(left,right):
     return [sum(species[p][i] for p in right)-sum(species[p][i] for p in left) for i in range(5)]
 v308=[
- (['n'],['p','e-','nue'],(1,0)),
- (['pi+'],['mu+','e-','e+'],(0,1)),
+ (['n'],['p','e-','nue'],(2,0)),
+ (['pi+'],['mu+','e-','e+'],(0,-1)),
  (['pi-'],['mu-','numu'],(0,2)),
  (['p','e-'],['n','nue'],(0,0)),
  (['mu+'],['e+','nue','anumu'],(0,0)),
