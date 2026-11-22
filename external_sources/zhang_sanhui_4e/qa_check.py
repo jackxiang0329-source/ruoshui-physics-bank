@@ -284,7 +284,67 @@ def check_numeric_spotmodels() -> int:
                   (2*(4*math.pi*eps)**2*hbar**2)/electron_q,
                   -13.605693137318392),"13.34 Bohr energy in eV")
 
-    return 78
+
+    # Chapter 5: independent original-data numerical regression checks.
+    require(close(25**2/(2*1.25*2*math.pi),39.78873577),
+            "5.1 angular acceleration under start-from-rest model")
+    require(close(((200+3000)/2)*7/60, 186.6666667),
+            "5.2 revolutions over 7 s")
+    JA,JB,mH=1.93e-47,1.14e-47,1.6735575e-27
+    require(close(math.sqrt((JA+JB)/(2*mH)),9.57709666e-11),
+            "5.5 OH bond distance")
+    require(close(2*math.degrees(math.atan(math.sqrt(JA/JB))),
+                  104.9116327),
+            "5.5 theta is full HOH angle, not half-angle")
+    mC=720*1.6605390666e-27
+    I_C60=(1/6)*mC*(71e-9)**2
+    require(close(I_C60,1.004493292e-39),
+            "5.6 preserve 71nm printed diameter, flag anomaly separately")
+    require(close(math.sqrt(2*6.21e-21/I_C60)/(2*math.pi),
+                  5.59638274759e8),"5.6 frequency using TEXTBOOK 6.21e-21J")
+    require(close(.1*g/(1/12+.1**2),10.5),"5.12 pivot acceleration")
+    I_rod=1*.4**2/3+.008*.3**2
+    require(close(.008*200*.3/I_rod,8.8801184),
+            "5.16 bullet-rod angular velocity")
+    require(close(480000-0.5*2500*4.8**2,451200),
+            "5.18 two-car kinetic energy loss")
+    require(close(.033/(2*1.26e-5),1309.5238095),
+            "5.21 stopping year with constant energy-loss POWER")
+    require(close(7.834069878e19/7.3e18,10.73160257),
+            "5.22 annual tide loss / companion stated 2004 joules")
+    require(close(2000*(1-.6)/(300+1000),.61538461538),
+            "5.25 reel rolling acceleration")
+    require(close(5*g,49.0),"5.26 yo-yo hand acceleration at 2mg pull")
+    require(close(0.5*1e5*(800*2*math.pi/60)**2/7.46e4,
+                  4704.01163),"5.28 gyroscope spin-up time")
+    # Chapter 14: independent electrostatics model checks.
+    kC=1/(4*math.pi*eps)
+    QA,QB=3e-8,2e-8
+    R1,R2,R3=.06,.08,.10
+    require(close(kC*(QA*(1/R1-1/R2)+(QA+QB)/R3),
+                  5617.72099),"14.3 initial metal sphere potential")
+    Q_A2=QA/R3/(1/R1-1/R2+1/R3)
+    require(close(Q_A2,2.1176470588e-8),
+            "14.3 sequential grounding metal sphere final charge")
+    require(close(1.3e-5*.03/.08,4.875e-6),
+            "14.5 three parallel conductor inner-face sigma")
+    require(close(9.15e6/1e8,.0915),
+            "14.8 minimum conducting sphere radius")
+    sigma_belt=320e-6/(.485*33)
+    require(close(sigma_belt/(2*eps),1.129e6),
+            "14.8 INSULATING belt field sigma/(2 eps)")
+    require(close(math.sqrt(3)*2.5,4.330127019),
+            "14.11 horizontal field line terminates at sqrt(3) h")
+    require(close(1e-8/(math.pi*eps*5),71.91),
+            "14.12 field directly below charged line")
+    require(close((10*(.05/18)*6.02214076e23*electron_q)/
+                  (4*math.pi*eps*6.37e6),3.776e6),
+            "14.13 0.05g water-drop model is millions of volts")
+    require(close((1/(32*math.pi*eps)),
+                  (1/(4*math.pi*eps))/8),
+            "14.14 conducting sphere mutual-hemisphere force coefficient")
+
+    return 101
 
 
 def main() -> None:
@@ -353,6 +413,22 @@ def main() -> None:
             "13.22 alternating AC cylinder wiring missing")
     require("1\\,\\mathrm{kg}" not in sec4_8,
             "unexpected spurious content in spring exercise")
+
+    ch5q=(ROOT/"chapters/05/questions.tex").read_text(encoding="utf-8")
+    ch5s=(ROOT/"chapters/05/solutions.tex").read_text(encoding="utf-8")
+    ch14q=(ROOT/"chapters/14/questions.tex").read_text(encoding="utf-8")
+    ch14s=(ROOT/"chapters/14/solutions.tex").read_text(encoding="utf-8")
+    require("71\\,\\mathrm{nm}" in ch5q,
+            "Source chapter 5.6 diameter must remain as printed (71 nm)")
+    require("104.91" in ch5s and "theta/2" not in ch5s,
+            "5.5 full HOH bond angle must be recorded")
+    require("7.3\\times10^{18}" in ch5s,
+            "5.22 textbook companion 2004 energy source omitted")
+    require("绝缘传送带" in ch14q,
+            "14.8 belt is insulating, not conducting")
+    require("E_{\\rm belt}" in ch14s
+            and "\\frac{|\\sigma_{\\rm belt}|}{2\\varepsilon_0}" in ch14s,
+            "14.8 insulating sheet field factor 1/2 omitted")
 
     computed = check_numeric_spotmodels()
     print(f"PASS: {len(ids)} candidate exercises have unique IDs, "
