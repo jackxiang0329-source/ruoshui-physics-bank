@@ -50,6 +50,10 @@ jobs:
         run: python3 external_sources/irodov-zh-elegant/mechanics_fluids_regression.py
       - name: Independently recheck Part I special relativity and four-momentum
         run: python3 external_sources/irodov-zh-elegant/mechanics_relativity_regression.py
+      - name: Independently recheck Part II ideal and nonideal gas states
+        run: python3 external_sources/irodov-zh-elegant/thermo_state_regression.py
+      - name: Independently recheck Part II first law and thermodynamic paths
+        run: python3 external_sources/irodov-zh-elegant/thermo_firstlaw_regression.py
       - uses: xu-cheng/latex-action@v4
         with:
           working_directory: external_sources/irodov-zh-elegant
