@@ -227,15 +227,29 @@ $\delta=2\pi(n-1)h/\lambda$。
 \[
 \delta=2\pi\left(k+\frac58\right),\quad k=0,1,\ldots
 \]
-（源书以所需正厚度的最小有效周期计，取 $k=2$）。
-故
+最小正厚度必须选 $k=0$，因为题设未要求圆盘具有额外整数倍光程或最小机械厚度。
+由相量独立复核：将无玻璃时 $P$ 点的自由波复振幅取为 $A_0$，
+第一又半个菲涅耳带贡献为 $(1+i)A_0$，
+其余区域贡献为 $-iA_0$；玻璃片产生的相对相移为 $\delta$。
+于是
 \[
-\boxed{h_{\min}\simeq
-\frac{\lambda}{n-1}\left(2+\frac58\right)
-=\frac{0.57}{0.60}(2.625)\,\mathrm{\mu m}
-\simeq2.5\,\mathrm{\mu m}}.
+A_P=A_0\left[(1+i)e^{i\delta}-i\right].
 \]
-\excheck 第一个数学相位极大不一定满足源题规定的光程分支及透射圆盘条件；本稿保留书后对 $k=2$ 的标注作为应进一步核实的分支选择。
+要使两复振幅同向，相位条件为
+$\delta+\pi/4=-\pi/2+2\pi m$，
+取最小正相移 $\delta=5\pi/4$，即 $k=0$。
+因此
+\[
+\boxed{h_{\min}=\frac{5\lambda}{8(n-1)}
+=\frac{5(0.57)}{8(0.60)}\,\mathrm{\mu m}
+\simeq0.594\,\mathrm{\mu m}}.
+\]
+此时合振幅模为 $(1+\sqrt2)|A_0|$，即
+$\boxed{I_{\max}=(1+\sqrt2)^2 I_0}$。
+\excheck 先前稿取 $k=2$ 得 $2.5\,\mathrm{\mu m}$，虽然相位与极大条件相符，
+却不是题设无附加约束时的\emph{最小}厚度。
+若源书书末确实列 $2.5\,\mathrm{\mu m}$，应登记为简答分支选择疑点；
+不能凭该数值虚构题面没有写出的厚度下限。
 
 \diffractionproblem{106}{206}
 波长 $\lambda=0.54\,\mathrm{\mu m}$ 的平面波穿过薄会聚透镜
