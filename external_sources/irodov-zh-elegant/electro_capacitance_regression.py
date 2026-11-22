@@ -152,7 +152,7 @@ test(126,"symmetric arm capacitance independent of bridge C3",
      (2*2*2+3*(2+2))/(2+2+2*3),2)
 test(126,"bridge zero-C3 limit equals two series paths parallel",
      (2*C1*C2)/(C1+C2),4/3)
-k=K*q*q/.1
+q=1e-9  # test charge for the later pair-energy and image-energy anchors
 test(127,"all positive square pair energy units kq²/a",
      4+sqrt(2),4+2/sqrt(2))
 test(127,"alternating square pairs energy units kq²/a",
