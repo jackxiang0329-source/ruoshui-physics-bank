@@ -1,0 +1,361 @@
+% 张三慧第4版V2第19章《磁场中的磁介质》独立物理解答。
+% 原扫描PDF物理页187–189。图读数仅按教材图标近似，专家复核待办。
+\section*{第19章\quad 磁场中的磁介质：独立解析}
+
+\paragraph{习题 19.1}
+令 \(x=mB/(k_BT)\)。能量
+\(W_\uparrow=-mB\)、\(W_\downarrow=+mB\)，
+单原子配分函数 \(Z=e^x+e^{-x}\)。
+取向两态概率为
+\(P_\uparrow=e^x/Z\)、
+\(P_\downarrow=e^{-x}/Z\)，
+每原子沿磁场方向的平均磁矩
+\[
+ \langle m_z\rangle=m(P_\uparrow-P_\downarrow)
+ =m\tanh x.
+\]
+单位体积 \(N\) 个原子，所以
+\[
+ \boxed{M=Nm\tanh\!\left(\frac{mB}{k_BT}\right)
+ =Nm\frac{e^{x}-e^{-x}}{e^{x}+e^{-x}}}.
+\]
+若 \(x\ll1\)，\(\tanh x=x+O(x^3)\)，则
+\[
+ \boxed{M\simeq\frac{Nm^2B}{k_BT}\propto B/T}.
+\]
+若 \(x\gg1\)，\(\tanh x\to1\)，有
+\(\boxed{M\to Nm}\)（饱和）。
+\textbf{源模型边界：}
+这是只有两个方向的理想独立取向模型，
+不包含真实铁磁交换作用和饱和场自洽修正。
+
+\paragraph{习题 19.2}
+轨道电子的磁矩与角动量大小关系
+\(\mu=eL/(2m_e)\)，由于电子电量为负，
+\(\boldsymbol\mu=-e\boldsymbol L/(2m_e)\)。
+外场力矩
+\(\boldsymbol\tau=\boldsymbol\mu\times\boldsymbol B\)，
+大小
+\[
+ \boxed{\tau=\frac{eLB}{2m_e}\sin\theta}.
+\]
+由 \(d\boldsymbol L/dt=\boldsymbol\tau\)，
+若 \(\boldsymbol L\) 绕 \(\boldsymbol B\)
+以角速率 \(\Omega\) 进动，
+\(|d\boldsymbol L/dt|=\Omega L\sin\theta\)，
+故
+\[
+ \boxed{\Omega=\frac{eB}{2m_e}
+ \approx8.79\times10^{10}\,\mathrm{rad/s}
+ \quad (B=1\,\mathrm T)}.
+\]
+进动旋向依据带负电荷与图19.2定义判断，
+该值为角速度大小。
+
+\paragraph{习题 19.3}
+玻尔氢原子模型中
+\(r=.53\times10^{-10}\,\mathrm m\)、
+\(v=2.2\times10^6\,\mathrm{m/s}\)。
+运动电子构成的圆电流大小
+\(I=e/T=ev/(2\pi r)\)，
+在圆心的磁场
+\[
+ \boxed{B=\frac{\mu_0I}{2r}
+ =\frac{\mu_0ev}{4\pi r^2}
+ \approx12.55\,\mathrm T}.
+\]
+以题给自旋角动量
+\(S=0.53\times10^{-34}\,\mathrm{J\,s}\)
+及题给磁矩
+\(\mu_s=1.41\times10^{-26}\,\mathrm{A\,m^2}\)，
+磁场力矩导致进动
+\[
+ \boxed{\Omega_s=\frac{\mu_s B}{S}
+ \approx3.34\times10^9\,\mathrm{rad/s}}.
+\]
+本模型属于半经典轨道及自旋估算，
+真实氢原子结构需量子力学。
+
+\paragraph{习题 19.4}
+铁棒半径 \(r=.005\,\mathrm m\)、长
+\(L=.12\,\mathrm m\)，体积
+\[
+ V=\pi r^2L=9.4248\times10^{-6}\,\mathrm{m^3}.
+\]
+铁质量 \(m_{\rm Fe}=7800V\)，
+原子数
+\(N_{\rm Fe}=m_{\rm Fe}N_A/.05585\)。
+每原子两电子自旋参与且全部平行，
+电子数
+\[
+ \boxed{N_s=2N_{\rm Fe}
+ \approx1.59\times10^{24}}.
+\]
+以一电子一个玻尔磁子
+\(\mu_B=9.274\times10^{-24}\,\mathrm{A\,m^2}\)，
+总磁矩
+\[
+ \boxed{\mu_{\rm tot}=N_s\mu_B
+ \approx14.7\,\mathrm{A\,m^2}}.
+\]
+均匀磁化强度 \(M=\mu_{\rm tot}/V
+ \approx1.56\times10^6\,\mathrm{A/m}\)。
+长圆柱体等效环向面电流密度大小
+\(K_m=M\)，
+沿长度 \(L\) 的等效总面电流
+\[
+ \boxed{I_{\rm eq}=ML\approx1.87\times10^5\,\mathrm A}.
+\]
+理想长螺线管模型的内磁场
+\[
+ \boxed{B'=\mu_0M\approx1.96\,\mathrm T}.
+\]
+对有限长棒，上式是忽略端部退磁的估计，
+不能直接断言其端面附近场处处同值。
+
+\paragraph{习题 19.5}
+磁针体积
+\(V=(.085)(.010)(.00020)
+ =1.70\times10^{-7}\,\mathrm{m^3}\)。
+铁密度及摩尔质量同题，
+全部两电子自旋取向一致的
+总磁矩
+\[
+ \boxed{\mu=2\frac{7800V}{.05585}N_A\mu_B
+ \approx0.265\,\mathrm{A\,m^2}}.
+\]
+磁针磁矩与地磁场正交时，
+\[
+ \boxed{\tau_{\max}=\mu B_E
+ \approx1.38\times10^{-5}\,\mathrm{N\,m}}.
+\]
+磁矩与外场\emph{同向平行}时的势能
+\[
+ \boxed{U=-\mu B_E
+ \approx-1.38\times10^{-5}\,\mathrm J}.
+\]
+若反平行，势能变为正同样的绝对值。
+
+\paragraph{习题 19.6}
+均匀理想螺线环的安培环路给
+\[
+ \boxed{H=\frac{NI}l=\frac{20(.1)}{.10}
+ =20\,\mathrm{A/m}}.
+\]
+没有介质时
+\[
+ \boxed{B_0=\mu_0H
+ \approx2.51\times10^{-5}\,\mathrm T}.
+\]
+加入线性相对磁导率
+\(\mu_r=4200\) 的介质，
+\[
+ \boxed{H=20\,\mathrm{A/m}},\quad
+ \boxed{B=\mu_0\mu_rH
+ \approx1.056\times10^{-1}\,\mathrm T}.
+\]
+自由电流分量仍
+\(B_0=\mu_0H\)，
+磁化（束缚）电流贡献
+\[
+ \boxed{B'=B-B_0
+ =\mu_0(\mu_r-1)H
+ \approx0.1055\,\mathrm T}.
+\]
+对真实非线性铁磁体，常数 \(\mu_r\)
+只适用于给定工作点的近似。
+
+\paragraph{习题 19.7}
+\(S=1\,\mathrm{cm^2}=10^{-4}\,\mathrm{m^2}\)，
+磁通 \(\Phi=2\times10^{-6}\,\mathrm{Wb}\)，故
+\[
+ \boxed{B=\Phi/S=0.0200\,\mathrm T}.
+\]
+\[
+ \boxed{H=\frac{NI}{l}
+ =\frac{300(.032)}{.30}=32.0\,\mathrm{A/m}}.
+\]
+总磁导率与相对磁导率
+\[
+ \boxed{\mu=\frac BH
+ =6.25\times10^{-4}\,\mathrm{H/m}},
+\quad
+ \boxed{\mu_r=\frac B{\mu_0H}
+ \approx497}.
+\]
+在 \(B=\mu_0(H+M)\) 下
+\[
+ \boxed{M=\frac B{\mu_0}-H
+ \approx1.588\times10^4\,\mathrm{A/m}}.
+\]
+均匀环向磁化的等效面电流密度
+\(\boxed{K_m=M}\)，
+单位为 A/m；不是直接把 \(M\) 写成安培。
+
+\paragraph{习题 19.8}
+环形线圈1000匝，平均半径 \(r=.15\,\mathrm m\)、
+电流 \(2.0\,\mathrm A\)：
+\[
+ \boxed{H=\frac{NI}{2\pi r}
+ =\frac{2000}{.30\pi}
+ \approx2.12\times10^3\,\mathrm{A/m}}.
+\]
+\[
+ \boxed{\mu=\frac BH
+ \approx4.71\times10^{-4}\,\mathrm{H/m}},\quad
+ \boxed{\mu_r=\frac B{\mu_0H}=375}.
+\]
+材料磁化强度
+\[
+ \boxed{M=\frac B{\mu_0}-H
+ \approx7.94\times10^5\,\mathrm{A/m}}.
+\]
+磁化面电流密度的大小
+\(\boxed{K_m=M}\)。
+
+\paragraph{习题 19.9}
+图19.25的纵轴为
+\(B/\mathrm T\)，横轴为
+\(H/(\mathrm{A\,m^{-1}})\)。
+按图估读 \(B=1.2\,\mathrm T\)
+时铁芯原来的
+\(H_{\rm core}\) 约
+\(1.7\times10^2\,\mathrm{A/m}\)
+（因线宽和曲线陡升，误差需保留）。
+长螺线管匝密度 \(n\) 不变，
+原有 \(nI=H_{\rm core}\)；
+抽去铁芯后保持相同磁场
+\(B=\mu_0nI_{\rm air}\)，所以
+\[
+ \boxed{\frac{I_{\rm air}}{I_{\rm core}}
+ =\frac{B}{\mu_0H_{\rm core}}
+ \approx5.6\times10^3}.
+\]
+若原来 \(I_{\rm core}=6.0\,\mathrm A\)，
+\[
+ \boxed{I_{\rm air}\approx3.37\times10^4\,\mathrm A}.
+\]
+\textbf{图读风险：}需按辅导书对应题号
+检查 \(H_{\rm core}\) 的准确读数；
+这是依图19.25的近似量，不可视为铁芯
+始终有固定相对磁导率。
+
+\paragraph{习题 19.10}
+长螺线管每米 \(n=800\) 匝，
+目标场强 \(B=1.0\,\mathrm T\)。
+由教材图19.25初始曲线约读
+\(H\sim1.5\times10^2\,\mathrm{A/m}\)。
+安培环路给 \(H=nI\)，所以
+\[
+ \boxed{I\approx\frac{150}{800}
+ \approx0.19\,\mathrm A}.
+\]
+\textbf{精度声明：}
+磁化曲线不能仅由
+\(B\) 和未知铁芯的常数 \(\mu_r\)
+得到 \(H\)；必须从原图读取。
+\(0.19\,\mathrm A\) 作为图读近似，
+随后要核对配套辅导书的选择与坐标精度。
+
+\paragraph{习题 19.11}
+矩形磁滞回线的矫顽力
+\(H_c=2\,\mathrm{A/m}\)，
+为令磁化翻转，脉冲环向励磁场
+至少达到反向矫顽强度（临界意义）。
+环外径 \(d_o=.8\,\mathrm{mm}\)、
+内径 \(d_i=.5\,\mathrm{mm}\)，
+平均直径
+\(d_m=(d_o+d_i)/2=.65\,\mathrm{mm}\)，
+平均磁路长度
+\(l_m=\pi d_m\)。
+由环路定理
+\[
+ \boxed{NI_{\min}\simeq H_cl_m
+ =2\pi(.65\times10^{-3})
+ \approx4.08\times10^{-3}\,\mathrm{A\,turn}}.
+\]
+若题图是一匝穿芯导线 \(N=1\)，
+\(\boxed{I_{\rm peak,min}\approx4.08\,\mathrm{mA}}\)。
+磁滞翻转恰在矫顽力附近，
+真实开关为可靠翻转还需裕量；
+方向应与原磁化方向反向。
+
+\paragraph{习题 19.12}
+环总平均长 \(l=.61\,\mathrm m\)，
+空气隙 \(l_g=.01\,\mathrm m\)，
+铁芯磁路 \(l_f=.60\,\mathrm m\)，
+\(N=1000,I=1.5\,\mathrm A\)，
+气隙 \(B=.18\,\mathrm T\)。
+假定截面均匀，铁芯内同样的
+磁感应强度大小 \(B\)。
+安培环路：
+\[
+ NI=H_fl_f+H_gl_g
+ =\frac B{\mu_0\mu_r}l_f+
+ \frac B{\mu_0}l_g.
+\]
+因此
+\[
+ \boxed{\mu_r=
+ \frac{Bl_f}{\mu_0NI-Bl_g}
+ \approx1.27\times10^3}.
+\]
+分母必须为正，否则这个线性均匀磁路
+假设或输入数据不自洽。
+
+\paragraph{习题 19.13}
+图19.27的铁芯主磁路长
+\(l_f=.500\,\mathrm m\)，
+气隙长 \(l_g=.020\,\mathrm m\)，
+\(\mu_r=5000\)。
+假设气隙内与铁芯中
+近似有相同 \(B=3\,\mathrm T\)，
+安培环路积分为
+\[
+ NI=H_fl_f+H_gl_g
+ =\frac B{\mu_0}
+ \left(\frac{l_f}{\mu_r}+l_g\right).
+\]
+代入：
+\[
+ \boxed{NI=\frac3{4\pi\times10^{-7}}
+ \left(\frac{.500}{5000}+.020\right)
+ \approx4.80\times10^4\,\mathrm{A\,turn}}.
+\]
+气隙提供主要磁阻。
+\(3\,\mathrm T\) 可能超过常规铁芯
+实际饱和场，题目仍按给定线性
+\(\mu_r\) 理想模型计算。
+
+\paragraph{习题 19.14}
+电铃铁芯磁路 \(l_f=.144\,\mathrm m\)，
+气隙 \(l_g=.002\,\mathrm m\)，
+截面积 \(S=.60\,\mathrm{cm^2}
+ =6.0\times10^{-5}\,\mathrm{m^2}\)，
+磁通 \(\Phi=4.8\times10^{-6}\,\mathrm{Wb}\)，
+\[
+ \boxed{B=\Phi/S=.0800\,\mathrm T}.
+\]
+安培环路给
+\[
+ \boxed{NI=\frac B{\mu_0}
+ \left(l_g+\frac{l_f}{\mu_r}\right)
+ =\frac{.08}{4\pi\times10^{-7}}
+ \left(.002+\frac{.144}{1600}\right)
+ \approx1.33\times10^2\,\mathrm{A\,turn}}.
+\]
+题给电压 \(U=220\,\mathrm V\)、
+功率 \(P=20\,\mathrm W\)，
+若视作直流稳态线圈输入且忽略铁损，
+电流
+\(I=P/U\approx.0909\,\mathrm A\)。
+故
+\[
+ \boxed{N=\frac{NI}{I}
+ \approx\frac{133.1}{.0909}
+ \approx1.46\times10^3\text{ 匝}}.
+\]
+若电铃用交流电，
+功率因数和电感电流不能由
+\(P/U\) 唯一确定；
+源题采用的定常平均电流模型需明确。
