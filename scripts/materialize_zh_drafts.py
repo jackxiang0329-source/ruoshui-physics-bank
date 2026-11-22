@@ -133,7 +133,7 @@ def create(root=ROOT):
         (root/rel_book).write_text("\n".join(sections)+"\n",encoding="utf-8")
         books.append(rel_book)
     if len(book_index)!=len(paths) or len(books)!=len(grouped):
-        raise ValueError("collection lost source-bound translations")
+        raise ValueError(f"collection mismatch: source_files={len(paths)} indexed={len(book_index)} books={len(books)} grouped={dict((k,len(v)) for k,v in grouped.items())} sample={paths[:2]}")
     # Include stale generated IDs from earlier runs, not just the current manifest.
     # Source files and the canonical translations.json are strictly out of scope.
     for old in (root/"localized/zh_CN").rglob("*.md"):
