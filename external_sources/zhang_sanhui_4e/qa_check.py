@@ -1598,7 +1598,32 @@ def check_numeric_spotmodels() -> int:
     require(close(h_th*5e14/c_th,1.10510955e-27),
             "thought21.7 individual 500THz photon momentum")
 
-    return 651
+    # Companion S-verified V1 selected thought conceptual numerical testmodels.
+    require(close(20**2 / 9.8,40.816326530612244),
+            "S thought1.8 parabolic apex curvature radius v²/g")
+    require(close(1/(2*math.pi)*math.sqrt(9.8/.50),.704444),
+            "S thought2.7 not used? sanity mathematical oscillator")
+    require(close(.05*1**2*20,1.0),
+            "S thought3.9 circular L=m r² omega")
+    require(close(20/(10),2),"S thought4.9 two frame velocity translation relation")
+    require(close(2/1,2),"S thought5.6 angular frequency doubles when I halves")
+    require(close(math.sqrt(1+.6/3),1.095445115),
+            "S thought6.8 uniform spring effective mass m_s/3 increases period")
+    require(close(1/(2*.5)*math.sqrt(40/.004),100),
+            "S thought7.7 monochord fundamental frequency 100 Hz")
+    require(close(1.25*.6*300/299792458,7.505192e-7),
+            "S thought8.3 relativity of simultaneity 300m train 0.6c")
+    require(close(math.exp(4*1.66053906660e-27*9.8*10000/
+                           (1.380649e-23*300)),1.1706,rel=.01),
+            "S thought9.8 diffusive equilibrium N2/O2 ratio rises with height")
+    require(close(1-200/500,.6),"S thought10.8 Carnot efficiency not output work")
+    require(200*(1/300-1/400)>0,
+            "S thought11.6 environmental entropy gain exceeds hot object loss")
+    require(close(1/((2*math.pi)*math.sqrt(1+.6/3)),
+                  1/(2*math.pi*math.sqrt(1.2))),
+            "S thought6.8 period/frequency reciprocal consistency")
+
+    return 663
 
 
 
@@ -1724,6 +1749,96 @@ def check_thought_intake() -> int:
     require("向西" in s29 and "向东" in s29 and "迁移率" in s29,
             "thought29 Hall sign electron/hole and mobility model missing")
     return len(rows)
+
+
+
+def check_companion_selected_thought() -> int:
+    """Check S-scan selected V1 thought questions without claiming V1 whole-book coverage."""
+    registry = ROOT / "supplement_selected_thought_register.json"
+    require(registry.is_file(), "missing S-only selected-thought provenance register")
+    source = json.loads(registry.read_text(encoding="utf-8"))
+    require(source.get("schema") ==
+            "zhang-sanhui-4e-companion-selected-V1-thought/v1",
+            "wrong S companion thought registry schema")
+    require(source["previous_main_end_chapter_count_unchanged"] == 705
+            and source["previous_V2_thought_count_unchanged"] == 207,
+            "S selected thoughts must not modify existing 705+207 entries")
+    entries = source["entries"]
+    counts = {1:3, 2:3, 3:3, 4:3, 5:3, 6:2, 7:4, 8:3, 9:2, 10:2, 11:3}
+    expected_numbers = {
+        1:[7,8,11], 2:[6,7,11], 3:[3,9,10],
+        4:[5,9,12], 5:[3,6,10], 6:[7,8],
+        7:[6,7,14,17], 8:[3,5,7],
+        9:[6,8], 10:[4,8], 11:[4,6,8]
+    }
+    require(sum(counts.values()) == 31 and len(entries) == 31,
+            "S-sourced first-volume selected thought count31 failed")
+    require(source["companion_selected_thought_count"] ==
+            source["companion_selected_solution_count"] == 31,
+            "S-source selected-thought Q/A count mismatch")
+    require(source["do_not_duplicate_with_future_V1_full_intake"] is True,
+            "future primary-V1 original duplicate protection removed")
+    ids = [e["canonical_id"] for e in entries]
+    keys = [e["main_book_source_identity"] for e in entries]
+    nums = [e["source_thought_number"] for e in entries]
+    require(len(set(ids)) == len(set(keys)) == len(set(nums)) == 31,
+            "S selected thought duplicate source numbers or identifiers")
+    require(all(e["exam_ready"] is False and
+                e["academic_review"] == "pending_independent_verification" and
+                e["main_book_original_thought_status"] ==
+                    "not_checked_unavailable_V1_scan"
+                for e in entries),
+            "S-only selected thoughts falsely claimed original V1 verification")
+    parent = (ROOT/"build_intake.tex").read_text(encoding="utf-8")
+    standalone = (ROOT/"build_supplement_selected_thought.tex").read_text(encoding="utf-8")
+    pat = re.compile(r"\\paragraph\{思考题\s+(\d+\.\d+)\}")
+    for chapter, count in counts.items():
+        nums_expected = [f"{chapter}.{i}" for i in expected_numbers[chapter]]
+        pref = f"supplement_selected_thought/{chapter:02d}"
+        qfile = f"{pref}/questions.tex"
+        sfile = f"{pref}/solutions.tex"
+        qs = (ROOT / qfile).read_text(encoding="utf-8")
+        ss = (ROOT / sfile).read_text(encoding="utf-8")
+        require(pat.findall(qs) == pat.findall(ss) == nums_expected,
+                f"S selected V1 ch{chapter} original order not matched")
+        for source_text in (qs, ss):
+            require("\r" not in source_text and "\x08" not in source_text
+                    and "\x0b" not in source_text and "\x0c" not in source_text,
+                    f"S-source ch{chapter}: hidden JS TeX control-character corruption")
+            require(source_text.count(r"\(") == source_text.count(r"\)")
+                    and source_text.count(r"\[") == source_text.count(r"\]"),
+                    f"S-source ch{chapter}: unbalanced mathematical TeX delimiters")
+        for filename in (qfile, sfile):
+            tex_input = r"\input{" + filename + "}"
+            require(tex_input in parent and tex_input in standalone,
+                    f"S source missing XeLaTeX proof include {filename}")
+        chapter_items = [row for row in entries
+                         if int(row["source_thought_number"].split(".")[0])
+                         == chapter]
+        require(len(chapter_items) == count,
+                f"S source register ch{chapter} size mismatch")
+        for row in chapter_items:
+            number = row["source_thought_number"]
+            ch, i = map(int, number.split("."))
+            require(row["canonical_id"] == f"ZS4-V1-T{ch:02d}-{i:03d}",
+                    f"S companion thought wrong stable ID {number}")
+            require(row["main_book_source_identity"] == f"V1:thought:{number}",
+                    f"S companion thought source identity wrong {number}")
+            require(row["question_file"] == qfile
+                    and row["solution_file"] == sfile
+                    and row["source_volume"] == "S",
+                    f"S companion thought path/source mismatch {number}")
+            require(row["source_companion_pdf_pages"] and
+                    all(type(pg) is int and 1 <= pg <= 402
+                        for pg in row["source_companion_pdf_pages"])
+                    and row["main_textbook_pdf_pages"] == [],
+                    f"S companion thought source page / unavailable V1 violation {number}")
+    require(len(json.loads(REGISTER.read_text(encoding="utf-8"))["entries"]) == 705
+            and len(json.loads((ROOT/"thought_register.json").read_text(
+                encoding="utf-8"))["entries"]) == 207,
+            "canonical original 705 + V2 thought207 counts unexpectedly mutated")
+    return len(entries)
+
 
 
 def main() -> None:
@@ -2065,10 +2180,12 @@ def main() -> None:
             "30.22 CNO energy without/with positron annihilation")
 
     thought_count = check_thought_intake()
+    S_selected_count = check_companion_selected_thought()
     computed = check_numeric_spotmodels()
     print(f"PASS: {len(ids)} candidate exercises have unique IDs, "
           "paired TeX sections, source pages and no exam admission.")
     print(f"PASS: {thought_count} separately numbered and unapproved thought Q/A pairs. Original 705 exercises unchanged.")
+    print(f"PASS: {S_selected_count} S-source selected V1 thought Q/A pairs, source V1 primary not verified.")
     print(f"PASS: {computed} independent numerical spotmodel checks.")
     print("NOT VERIFIED: full source transcription accuracy, external expert "
           "review, source permissions and independent physical model sufficiency.")
