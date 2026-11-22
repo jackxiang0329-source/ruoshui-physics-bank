@@ -137,7 +137,7 @@ def generate(root=ROOT):
             lines.append("- " + name + "（" + str(count) +
                          "）：[补充题源索引](按知识点/" + meta["folder"] +
                          "/补充题源.csv)")
-    lines+=["","[全量题目索引](题目总索引.csv) · [翻译与目录规范](../../docs/大学物理目录与翻译规范.md) · [中英术语表](../../localization/zh_CN/术语表.md)",
+    lines+=["","[全量题目索引](题目总索引.csv) · [翻译与目录规范](../../docs/policies/translation_catalog_policy.md) · [中英术语表](../../localization/zh_CN/术语表.md)",
             "","注：知识点来源于固定章节才细分；其他候选只沿用现有学科、细分类保留待核验。译稿不代表答案已验证。",""]
     (out/"中文分类导航.md").write_text("\n".join(lines),encoding="utf-8")
     print(json.dumps(report,ensure_ascii=False))
