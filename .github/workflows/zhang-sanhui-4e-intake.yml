@@ -53,6 +53,14 @@ jobs:
         run: python3 external_sources/zhang_sanhui_4e/qa_ch20_independent.py
       - name: Verify chapter 21 previously transcribed physics candidate checkpoints
         run: python3 external_sources/zhang_sanhui_4e/qa_ch21_independent.py
+      - name: Check chapter 22 wave/geometric optics candidates
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch22_independent.py
+      - name: Check chapter 23 wave/geometric optics candidates
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch23_independent.py
+      - name: Check chapter 24 wave/geometric optics candidates
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch24_independent.py
+      - name: Check chapter 25 wave/geometric optics candidates
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch25_independent.py
   xelatex-candidate-proof:
     runs-on: ubuntu-latest
     needs: structural-and-math-spotchecks
