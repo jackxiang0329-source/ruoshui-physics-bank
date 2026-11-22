@@ -139,11 +139,16 @@ steady0=current.real
 init0=(Vm-0)/R
 eq(119,"series RC uncharged switch current",steady0+(init0-steady0),Vm/R)
 eq(119,"series RC initial capacitor at source voltage",steady0+(0-steady0),0)
-rho,n,a,nu=1.7e-8,100.,.015,1e5
-# Single-layer solenoid: L/R=mu0*n*a/(2rho) for closely wound round wire.
+rho,n,a,nu=1.7e-8,1000.,.015,1e5
+# Tight single-layer coil: wire diameter d=1/n, A=pi d²/4.
+wire_cross_section=pi/(4*n*n)
+wire_length_per_axial_m=2*pi*a*n
+R_per_axial_m=rho*wire_length_per_axial_m/wire_cross_section
 mu0=4*pi*1e-7
-eq(120,"solenoid phase tan omega L/R",
-  2*pi*nu*mu0*n*a/(2*rho),mu0*pi*pi*nu*n*a/rho)
+L_per_axial_m=mu0*n*n*pi*a*a
+phase_tan=(2*pi*nu)*L_per_axial_m/R_per_axial_m
+eq(120,"wire-geometry independent solenoid tan(phi)",
+   phase_tan,mu0*pi*pi*nu*a/(4*rho*n))
 eq(121,"RC lead angle degrees",180/pi*__import__("math").acos(.5),60)
 RC=sqrt(7**2-1)/314
 eq(122,"RC lowpass suppression 1/7",1/sqrt(1+(314*RC)**2),1/7)
@@ -248,7 +253,7 @@ for n, anchors in {
    109:[r"W_0",r"e^{-Rt/L}"],
    111:[r"\beta=",r"4R^2C>L"], 115:[r"R>\frac12"],
    116:[r"R_1+sL_1",r"R_i/L_i"],
-   119:[r"V_{C0}",r"\mathrm{cos"],
+   119:[r"V_{C0}",r"I_m\cos"],
    125:[r"\omega_0^2>2\beta^2"],
    129:[r"\sqrt{n^2-\frac14}"],
    130:[r"n\ne1"], 131:[r"\omega_1\omega_2"],
