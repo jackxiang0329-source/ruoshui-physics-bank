@@ -733,7 +733,95 @@ def check_numeric_spotmodels() -> int:
     require(close(-2*2.39e-23*math.cos(math.radians(39.2)),
                   -3.7042347e-23),"18.30 sodium excited 39.2° energy")
 
-    return 271
+
+    # Chapter 10: First Law source numbers, reversible cycles and signed work.
+    RG=8.314462618
+    muv=4*math.pi*1e-7
+    require(close(40*101.325*math.log(2),2809.32552281),
+            "10.1 path A->B->C->D signed gas expansion work")
+    require(close(560-356+220,424),"10.2 ad-b heat based on state U")
+    require(close(560-356-282, -78) is False,
+            "10.2 b->a heat not naive path-work addition")
+    require(close(2*(5/2)*RG*50,2078.6156545),
+            "10.3 oxygen internal energy both paths")
+    require(close(2*(7/2)*RG*50,2910.0619163),
+            "10.3 oxygen constant-pressure input heat")
+    require(close(300+1000/((10/28)*(7/2)*RG),396.2178840),
+            "10.4 nitrogen isobaric final temperature")
+    require(close(60000*5/7,42857.1428571),
+            "10.5 diatomic hydrogen internal energy")
+    require(close(300*3**(-.4),193.318204493),
+            "10.7 adiabatic oxygen final temperature")
+    require(close(2*2**1.4,5.278031643),
+            "10.8 maximum pressure atmospheres")
+    require(close(2*101325*(20/30)*(.6**1.4),66079.553465),
+            "10.9 free expansion 20to30L then adiabatic 30to50L")
+    require(close(317.2**2*.032/(RG*273.15),1.417688922),
+            "10.10 gamma from O2 standard sound speed")
+    Vi=2.0
+    Vf=Vi+math.pi*.4**2*4
+    P0=2.7*101325
+    Pf=P0*(Vi/Vf)**1.4
+    gasW=(P0*Vi-Pf*Vf)/.4
+    require(close(math.sqrt(2*.75*gasW/70),84.38704853),
+            "10.12 human cannon exit speed using source volume geometry")
+    require(close(101300*.02/RG*2**.4,321.5268563),
+            "10.16 two chamber final compressed A temperature")
+    require(close(1-10**(-2/7),.4820525321),
+            "10.17 Brayton rp10 gamma1.4 efficiency")
+    require(close(1e6/(20/298.15)-1e6,13907500),
+            "10.21 ocean thermal reject heat 13.9075MW")
+    require(close(1e6/(20/298.15)/(1000*4180*20),
+                  .1783193780),"10.21 source ocean water volume rate")
+    require(close(263.15/(288.15-263.15)*1000,10526),
+            "10.22 refrigerator extracted heat for1000J")
+    require(close((3.8e7/3600)*11/294.15,394.7343570),
+            "10.23 Carnot least air conditioning power")
+    require(close(3.34e7*(1-288.15/483.15)*(333.15/45),
+                  9.97990479e7),"10.24 Carnot engine plus heat pump water")
+    require(close(626+363*(.4513-.2202),709.8893),
+            "10.25 measured refrigerant cold absorption kJ")
+    require(close(933.3957-709.8893,223.5064),
+            "10.25 compressor cycle work kJ")
+    require(close(709.8893/223.5064,3.17614753),
+            "10.25 measured refrigerator COP")
+    require(close(278.15/(353.15-278.15),3.70866667),
+            "10.25 Carnot comparison COP")
+    # Chapter 19: Boltzmann magnetization, iron cores, and B-H figures.
+    qe=1.602176634e-19
+    m_e=9.1093837139e-31
+    na=6.02214076e23
+    mub=9.274e-24
+    require(close(qe/(2*m_e),8.79410004e10),
+            "19.2 orbital electron Larmor precession B1T")
+    require(close(muv*qe*2.2e6/(4*math.pi*(.53e-10)**2),
+                  12.5481972),"19.3 Bohr electron orbit central magnetic field")
+    require(close(2*7800*math.pi*.005**2*.12/.05585*na*mub,
+                  14.70247814),"19.4 two iron spins per atom needle moment")
+    require(close(2*7800*(.085*.01*.0002)/.05585*na*mub,
+                  .265196835),"19.5 magnetized compass moment")
+    require(close(muv*4200*20*.1/.1,.1055575132),
+            "19.6 high permeability toroid B")
+    require(close(.02/(muv*32),497.359197),
+            "19.7 300-turn iron ring relative permeability")
+    require(close(1/(muv*(1000*2/(2*math.pi*.15))),375),
+            "19.8 iron toroid relative mu")
+    require(close(1.2*6/(muv*220),26043.5361),
+            "19.9 companion magnetic curve B1.2T H220 => 26kA")
+    require(close(170/800,.2125),
+            "19.10 companion curve B1T H170 =>0.21A")
+    require(close(2*math.pi*.00025*2,.00314159265),
+            "19.11 companion onset magnetic flip INNER radius")
+    require(close(2*math.pi*.0004*2,.00502654825),
+            "19.11 full cross-section coercive field OUTER radius")
+    require(close(.18*.60/(muv*1500-.18*.01),1271.252395),
+            "19.12 iron toroid one cm air gap permeability")
+    require(close(3/muv*(.5/5000+.02),47985.21534),
+            "19.13 strong electromagnet NI air gap")
+    require(close(.08/muv*(.144/1600+.002),133.0535324),
+            "19.14 electric bell iron gap NI")
+
+    return 308
 
 
 def main() -> None:
@@ -900,6 +988,27 @@ def main() -> None:
             "Lorentz force directions and circular motion source formula dropped")
     require("电磁场" in s18 and "动量守恒" in s18,
             "18.29 missing field momentum conservation")
+
+    # New original-source chapter 10/19 candidate safeguards.
+    q10=(ROOT/"chapters/10/questions.tex").read_text(encoding="utf-8")
+    s10=(ROOT/"chapters/10/solutions.tex").read_text(encoding="utf-8")
+    q19=(ROOT/"chapters/19/questions.tex").read_text(encoding="utf-8")
+    s19=(ROOT/"chapters/19/solutions.tex").read_text(encoding="utf-8")
+    require("10.26" in q10 and "10.26" in s10,
+            "ch10 ending reversed Stirling question/solution missing")
+    require("10.9" in q10 and "10.9" in s10
+            and "10" in q10 and "30" in q10,
+            "10.9 cylinder free expansion original 20-to-30L model missing")
+    require("理想再生器" in s10 and "no" in s10,
+            "10.26 refrigerator regenerative and unregenerated regimes missing")
+    require("19.14" in q19 and "19.14" in s19,
+            "ch19 final 14 numbered end exercises incomplete")
+    require("2.60" in s19 and "220" in s19,
+            "19.9 exact companion H220 B-H source check regressed")
+    require("0.213" in s19 and "170" in s19,
+            "19.10 exact companion H170 source check regressed")
+    require("3.14" in s19 and "5.03" in s19,
+            "19.11 coercive inner-edge onset vs full cross-section caveat missing")
 
     computed = check_numeric_spotmodels()
     print(f"PASS: {len(ids)} candidate exercises have unique IDs, "
