@@ -54,6 +54,16 @@ jobs:
         run: python3 external_sources/irodov-zh-elegant/thermo_state_regression.py
       - name: Independently recheck Part II first law and thermodynamic paths
         run: python3 external_sources/irodov-zh-elegant/thermo_firstlaw_regression.py
+      - name: Independently recheck Part II molecular kinetic theory and Maxwell distribution
+        run: python3 external_sources/irodov-zh-elegant/thermo_kinetic_regression.py
+      - name: Independently recheck Part II Carnot cycles and entropy statistics
+        run: python3 external_sources/irodov-zh-elegant/thermo_entropy_regression.py
+      - name: Independently recheck Part II capillarity and interface thermodynamics
+        run: python3 external_sources/irodov-zh-elegant/thermo_capillarity_regression.py
+      - name: Independently recheck Part II phase equilibria and latent heats
+        run: python3 external_sources/irodov-zh-elegant/thermo_phase_regression.py
+      - name: Independently recheck Part II molecular transport and heat conduction
+        run: python3 external_sources/irodov-zh-elegant/thermo_transport_regression.py
       - uses: xu-cheng/latex-action@v4
         with:
           working_directory: external_sources/irodov-zh-elegant
