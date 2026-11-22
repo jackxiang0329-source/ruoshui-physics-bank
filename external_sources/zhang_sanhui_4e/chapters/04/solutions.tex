@@ -435,3 +435,342 @@ B处圆弧曲率中心在上方，物体相对槽的法向
 \]
 负号说明卫星处于引力束缚轨道，
 不能把距地面高度 \(2R\) 误当作轨道半径。
+
+
+\subsection*{习题4.17--4.28}
+\paragraph{习题 4.17}
+太阳质量为 \(M\)，行星质量为 \(m\)，
+近日点、远日点距太阳分别为 \(r_1,r_2\)。
+引力是中心力，行星单位质量角动量
+\(h=r v_t\) 守恒。
+在两个拱点径向速度均为零，所以
+\[
+ r_1v_1=r_2v_2=h.
+\]
+引力场保守，因此
+\[
+ \frac12m\frac{h^2}{r_1^2}-\frac{GMm}{r_1}
+ =\frac12m\frac{h^2}{r_2^2}-\frac{GMm}{r_2}.
+\]
+整理可得
+\(h^2=2GM r_1r_2/(r_1+r_2)\)。
+代入任意一端的机械能：
+\[
+ E=\frac{m}{2r_1^2}
+ \frac{2GM r_1r_2}{r_1+r_2}-\frac{GMm}{r_1}
+ =\boxed{-\frac{GMm}{r_1+r_2}}.
+\]
+因椭圆长半轴 \(a=(r_1+r_2)/2\)，
+等价于通常的 \(E=-GMm/(2a)\)。
+验证圆轨道极限 \(r_1=r_2=r\)
+得 \(E=-GMm/(2r)\)。
+
+\paragraph{习题 4.18}
+设地球引力参数 \(\mu=GM_\oplus\)，
+地球半径为 \(R_\oplus\)。
+停泊轨道与最终同步高度圆轨道的地心半径分别为
+\[
+ r_1=R_\oplus+1.400\times10^6\,\mathrm m,\quad
+ r_2=R_\oplus+3.6000\times10^7\,\mathrm m,
+\]
+霍曼转移椭圆的半长轴
+\(a_t=(r_1+r_2)/2\)。
+圆轨道能量为 \(-\mu m/(2r)\)，
+转移椭圆能量为 \(-\mu m/(2a_t)\)；
+由于火箭推力脉冲不改变卫星所在位置的引力势能，
+两次脉冲所做的功就是对应轨道机械能之差：
+\[
+ \boxed{\Delta W_1=
+ -\frac{\mu m}{r_1+r_2}+\frac{\mu m}{2r_1}},
+\quad
+ \boxed{\Delta W_2=
+ -\frac{\mu m}{2r_2}+\frac{\mu m}{r_1+r_2}}.
+\]
+两次速率增量分别由活力公式
+\(v^2=\mu(2/r-1/a_t)\) 给出：
+\[
+ \boxed{\Delta v_1=
+ \sqrt{\mu(2/r_1-1/a_t)}-\sqrt{\mu/r_1}},
+\]
+\[
+ \boxed{\Delta v_2=
+ \sqrt{\mu/r_2}-\sqrt{\mu(2/r_2-1/a_t)}}.
+\]
+若取 \(R_\oplus=6.37\times10^6\,\mathrm m\)，
+\(\mu=3.986\times10^{14}\,\mathrm{m^3/s^2}\)，
+卫星质量 \(m=500\,\mathrm{kg}\)，
+可得
+\[
+ \boxed{\Delta W_1\approx8.85\times10^9\,\mathrm J,\quad
+ \Delta W_2\approx1.62\times10^9\,\mathrm J},
+\]
+\[
+ \boxed{\Delta v_1\approx2.15\,\mathrm{km/s},\quad
+ \Delta v_2\approx1.36\,\mathrm{km/s}}.
+\]
+这里是理想双脉冲转移，不计发射到停泊轨道的初始能耗、
+大气阻力、火箭发动机与轨道倾角调整。
+
+\paragraph{习题 4.19}
+两颗中子星质量相等，\(M=10^{30}\,\mathrm{kg}\)，
+各半径 \(R_\star=20\,\mathrm{km}\)，
+初始中心距 \(r_0=10^{10}\,\mathrm m\)，静止。
+由对称性，两颗星始终朝中点相向运动且速率相同 \(v\)，
+系统质心静止。
+万有引力势能从 \(-GM^2/r_0\)
+变为 \(-GM^2/r\)，减少的势能变成两颗星总动能：
+\[
+ 2\cdot\frac12 Mv^2
+ =GM^2\left(\frac1r-\frac1{r_0}\right).
+\]
+故单颗星的速率
+\[
+ \boxed{v(r)=\sqrt{GM\left(\frac1r-\frac1{r_0}\right)}}.
+\]
+当 \(r=r_0/2\)：
+\[
+ \boxed{v\approx8.17\times10^4\,\mathrm{m/s}}.
+\]
+将要接触时两球中心距
+\(r=2R_\star=4.0\times10^4\,\mathrm m\)，
+得到
+\[
+ \boxed{v\approx4.08\times10^7\,\mathrm{m/s}}.
+\]
+这个模型只用牛顿点质量引力及机械能守恒，
+忽略引力波辐射、潮汐变形、广义相对论修正等。
+因此接触速率是教材理想化预测。
+
+\paragraph{习题 4.20}
+设小行星为密度均匀的球，
+半径 \(r_a=10\,\mathrm{km}=10^4\,\mathrm m\)，
+密度 \(\rho=6.0\times10^3\,\mathrm{kg/m^3}\)。
+其质量为
+\[
+ m_a=\frac43\pi r_a^3\rho
+ \approx2.513\times10^{16}\,\mathrm{kg}.
+\]
+从远处（引力势能近似零）落至地球表面，
+其引力势能变化
+\[
+ \Delta U=-\frac{GM_\oplus m_a}{R_\oplus},
+\quad
+ \boxed{E_{\rm release}=\frac{GM_\oplus m_a}{R_\oplus}
+ \approx1.57\times10^{24}\,\mathrm J}
+\]
+（取 \(GM_\oplus=3.986\times10^{14}\,\mathrm{m^3/s^2}\)，
+\(R_\oplus=6.37\times10^6\,\mathrm m\)）。
+本书表4.1（PDF物理页131）列
+1976年唐山大地震能量约
+\(E_{\rm TS}=1\times10^{18}\,\mathrm J\)，
+故在本书标准下
+\[
+ \boxed{E_{\rm release}/E_{\rm TS}
+ \approx1.57\times10^6}.
+\]
+这只比较能量数量级，不代表物种灭绝的
+全部因果过程已经由该计算证明。
+
+\paragraph{习题 4.21}
+由题给逃逸速度关系 \(c=\sqrt{2GM/R_s}\)
+解得 Schwarzschild 半径形式
+\[
+ \boxed{R_s=\frac{2GM_\odot}{c^2}}.
+\]
+取太阳质量
+\(M_\odot\simeq1.989\times10^{30}\,\mathrm{kg}\)，
+得
+\[
+ \boxed{R_s\approx2.95\times10^3\,\mathrm m}.
+\]
+把太阳全部质量平均置于半径 \(R_s\) 的球中，
+平均密度
+\[
+ \boxed{\bar\rho=\frac{M_\odot}{4\pi R_s^3/3}
+ \approx1.84\times10^{19}\,\mathrm{kg/m^3}}.
+\]
+与题给核物质平均密度
+\(2.3\times10^{17}\,\mathrm{kg/m^3}\) 相比，
+约
+\[
+ \boxed{\bar\rho/(2.3\times10^{17})\approx80}.
+\]
+\textbf{物理限定：}“黑洞的平均密度”只是
+质量与 Schwarzschild 半径构造的几何平均，
+不是说存在普通物质充满视界内的一个均匀球体。
+
+\paragraph{习题 4.22}
+题给参考黑洞质量 \(M_0=2M_\odot\)，
+蒸发时间 \(t_0=10^{67}\,\mathrm{yr}\)；
+宇宙年龄按原题取
+\(t=2\times10^{10}\,\mathrm{yr}\)。
+若蒸发时间满足 \(t_{\rm evap}\propto M^3\)，
+则恰在宇宙年龄内蒸发完的\emph{最大}微型黑洞初质量
+\[
+ \boxed{M=M_0\left(\frac t{t_0}\right)^{1/3}
+ =2M_\odot(2\times10^{-57})^{1/3}
+ \approx5.01\times10^{11}\,\mathrm{kg}}.
+\]
+对照上一题所用关系，
+\[
+ \boxed{R_s=\frac{2GM}{c^2}
+ \approx7.44\times10^{-16}\,\mathrm m}.
+\]
+以上是完全按教材假定的质量三次方寿命规律
+与题给宇宙年龄进行的数量级估算，
+不代入现代宇宙学年龄值来静默改变原题。
+
+\paragraph{习题 4.23}
+静止的 \({}^{238}\mathrm U\) 核发生
+\(\alpha\) 衰变，释放总动能
+\(Q=4.27\,\mathrm{MeV}\)。
+设 \(\alpha\) 质量约为 \(4u\)，
+余核约为 \(234u\)。
+因初始动量为零，
+\(|\boldsymbol p_\alpha|
+ =|\boldsymbol p_D|=p\)。
+两碎片的动能分别为
+\(K_\alpha=p^2/(2m_\alpha)\)，
+\(K_D=p^2/(2m_D)\)，
+所以
+\[
+ \frac{K_\alpha}{K_D}=\frac{m_D}{m_\alpha}
+ \approx\frac{234}{4}.
+\]
+由 \(K_\alpha+K_D=Q\)，
+\[
+ \boxed{K_\alpha=Q\frac{m_D}{m_D+m_\alpha}
+ \approx4.27\frac{234}{238}
+ \approx4.20\,\mathrm{MeV}}.
+\]
+相应余核反冲能约 \(0.0718\,\mathrm{MeV}\)。
+不能把全部 \(Q\) 无条件都记作
+\(\alpha\) 粒子的动能。
+
+\paragraph{习题 4.24}
+质量分别为 \(m_1,m_2\) 的质点，
+速度 \(\boldsymbol v_1,\boldsymbol v_2\)。
+总质量 \(M=m_1+m_2\)，质心速度
+\[
+ \boldsymbol V=\frac{m_1\boldsymbol v_1+m_2\boldsymbol v_2}{M}.
+\]
+相对于质心的内部动能
+\[
+ K_{\rm int}=
+ \tfrac12m_1|\boldsymbol v_1-\boldsymbol V|^2
+ +\tfrac12m_2|\boldsymbol v_2-\boldsymbol V|^2.
+\]
+令相对速度
+\(\boldsymbol u=\boldsymbol v_1-\boldsymbol v_2\)，
+则
+\[
+ \boldsymbol v_1-\boldsymbol V=\frac{m_2}{M}\boldsymbol u,\quad
+ \boldsymbol v_2-\boldsymbol V=-\frac{m_1}{M}\boldsymbol u.
+\]
+代回并化简：
+\[
+ K_{\rm int}
+ =\frac12\frac{m_1m_2^2+m_2m_1^2}{M^2}u^2
+ =\boxed{\frac12\mu u^2},\quad
+ \mu=\frac{m_1m_2}{m_1+m_2}.
+\]
+所以两体内动能等于单个约化质量
+以相对速度运动时的动能。
+
+\paragraph{习题 4.25}
+水平面无摩擦，
+质量 \(m\) 的物体受到瞬时击打后
+沿另一物体（质量 \(M\)）方向运动，
+初始相对速率为 \(v_0\)。
+系统总水平动量守恒，
+质心运动与内部相对运动可分离；
+两体约化质量
+\(\mu=Mm/(M+m)\)。
+最大压缩瞬间两物体的相对速度为零，
+最初相对动能全部转换成弹簧势能：
+\[
+ \frac12\mu v_0^2=\frac12k x_{\max}^2,
+ \quad
+ \boxed{x_{\max}=v_0\sqrt{\frac{Mm}{k(M+m)}}}.
+\]
+该结果并不要求系统质心静止，
+但是不包括瞬时敲击过程的未知内部耗散。
+
+\paragraph{习题 4.26}
+质子质量 \(m_p\)、电荷 \(+e\)；
+氦核质量 \(4m_p\)、电荷 \(+2e\)；
+远距离时二者相向速率均为 \(v_0\)。
+若取相对速度大小
+\(v_{\rm rel}=2v_0\)，约化质量为
+\[
+ \mu=\frac{m_p(4m_p)}{m_p+4m_p}
+ =\frac45m_p.
+\]
+相对运动的初动能
+\(\frac12\mu(2v_0)^2
+ =\frac85m_pv_0^2\)。
+在最接近处相对速度降为零，
+这部分能量储存为库仑排斥势能
+\((4\pi\varepsilon_0)^{-1}(2e^2)/r_{\min}\)：
+\[
+ \boxed{r_{\min}=
+ \frac{k_e(2e^2)}{(8/5)m_pv_0^2}
+ =\frac{5k_ee^2}{4m_pv_0^2}},
+ \qquad k_e=\frac1{4\pi\varepsilon_0}.
+\]
+若把整个实验室系初动能全用于库仑势能，
+会错误地计入质心动能；
+质心动能不会在内部相互作用中消失。
+
+\paragraph{习题 4.27}
+虹吸管内水按不可压缩、稳定、无黏性流动，
+设河面及外侧出口都受大气压，
+管口与河面高度差
+\(h=5.0\,\mathrm m\)。
+若河面面积远大于管口面积，
+河面速率可近似忽略。
+伯努利方程给出
+\[
+ \frac{v^2}{2}=gh,\qquad
+ v=\sqrt{2gh}\approx9.90\,\mathrm{m/s}.
+\]
+吸管半径 \(r=0.20\,\mathrm m\)，
+单位时间体积流量
+\(Q_v=\pi r^2v\)，每小时流量
+\[
+ \boxed{V_{\rm hour}
+ =3600\pi(0.20)^2\sqrt{2(9.8)(5.0)}
+ \approx4.48\times10^3\,\mathrm{m^3}}.
+\]
+这一巨大理想值未计入弯管局部损失、
+沿程摩擦和可能的汽蚀/气锁；
+虹吸能否维持，还要检查最高点压强
+不降至水蒸气压以下。
+
+\paragraph{习题 4.28}
+假设罐内液面面积远大于喷口截面积，
+罐内液面流速近似为零，
+出口与液面等高、出口静压为
+\(p_{\rm atm}\)，流体密度按水取
+\(\rho=1000\,\mathrm{kg/m^3}\)。
+伯努利方程给出口速率
+\[
+ v=\sqrt{\frac{2(p_0-p_{\rm atm})}{\rho}}.
+\]
+若题中 \(p_0=21\,\mathrm{atm}\) 解释为
+\emph{绝对压强}，则
+\(\Delta p=20\,\mathrm{atm}=20(1.01325\times10^5)\,\mathrm{Pa}\)，
+喷口直径 \(d=0.008\,\mathrm m\)，
+半径 \(0.004\,\mathrm m\)，故
+\[
+ \boxed{V_{\rm minute}
+ =60\pi(0.004)^2
+ \sqrt{\frac{2(20)(1.01325\times10^5)}{1000}}
+ \approx0.192\,\mathrm{m^3/min}
+ =192\,\mathrm{L/min}}.
+\]
+\textbf{压强标定风险：}
+若 \(21\,\mathrm{atm}\) 是\emph{表压}而非绝对压强，
+应将压差改为 \(21\,\mathrm{atm}\)，结果相应稍大。
+未给出液体密度与黏性时，本解采用水的近似参数，
+并忽略管道局部与摩擦损失。
