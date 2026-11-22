@@ -333,3 +333,373 @@
 则储能为 \(\frac12 QU\)，对应约 \(208\,\mathrm d\)。
 原题未交代放电电压随时间的曲线，
 故必须标注所用近似，不能在两个模型间静默切换。
+
+
+\subsection*{习题13.19--13.34}
+\paragraph{习题 13.19}
+电子带电 \(-e\)，从阴极K静止发射，
+向更高电势阳极A运动，电场对它做功
+\(W=-q(\varphi_A-\varphi_K)=eU\)，
+所以到达阳极和金属时（忽略额外电场、碰撞）
+的动能
+\[
+ \boxed{K=e(2.5\times10^4\,\mathrm V)
+ =2.5\times10^4\,\mathrm{eV}=25\,\mathrm{keV}}.
+\]
+按牛顿力学 \(\frac12m_ev^2=eU\)：
+\[
+ \boxed{v_{\mathrm{class}}=\sqrt{\frac{2eU}{m_e}}
+ \approx9.38\times10^7\,\mathrm{m/s}}.
+\]
+该速度约为 \(0.313c\)，相对论修正并非严格可忽略。
+采用 \((\gamma-1)m_ec^2=eU\) 时得
+\(\gamma=1+25/511\)，
+\(v_{\mathrm{rel}}\approx9.23\times10^7\,\mathrm{m/s}\)。
+教材如要求普通牛顿近似，应以前一数值为教材解，
+但不得把它写成相对论精确结果。
+
+\paragraph{习题 13.20}
+正三角形边长 \(a\)，重心到每一顶点距离
+\(r=a/\sqrt3\)。
+三电量 \(q,-q,-2q\) 的电势是标量叠加：
+\[
+ \boxed{\varphi_C=k_e\frac{q-q-2q}{a/\sqrt3}
+ =-\frac{2\sqrt3\,k_eq}{a}}.
+\]
+将 \(+Q\) 从无穷远缓慢移入时
+外力对电荷做功等于势能增量，
+\[
+ \boxed{W_{\rm ext}=Q[\varphi_C-\varphi(\infty)]
+ =-\frac{2\sqrt3\,k_eqQ}{a}}.
+\]
+当 \(q,Q>0\) 时为负，表示电场做正功；
+若实际有加速或摩擦耗散，应另列动能等项。
+
+\paragraph{习题 13.21}
+取向右为 \(x\) 正方向，三平面均带正面电荷，
+由单个无限带电面的两侧场分别为
+\(\pm\sigma_i/(2\varepsilon_0)\) 叠加：
+A点处（I与II之间）
+\[
+ E_A=\frac{\sigma_1-\sigma_2-\sigma_3}{2\varepsilon_0}
+ =\frac{-1.0\times10^{-5}}{2\varepsilon_0}
+ \approx-5.65\times10^5\,\mathrm{V/m},
+\]
+B点处（II与III之间）
+\[
+ E_B=\frac{\sigma_1+\sigma_2-\sigma_3}{2\varepsilon_0}
+ =\frac{3.0\times10^{-5}}{2\varepsilon_0}
+ \approx+1.69\times10^6\,\mathrm{V/m}.
+\]
+越过薄带电面时电势连续，A到B的电势差为
+\[
+ \varphi_A-\varphi_B
+ =\int_A^BE_x\,dx
+ =E_A(0.050)+E_B(0.070)
+ \approx\boxed{9.04\times10^4\,\mathrm V}.
+\]
+把 \(q_0=-10^{-8}\,\mathrm C\) 从A缓慢移动到B，
+外力克服电场力所做功
+\[
+ \boxed{W_{\rm ext}=q_0(\varphi_B-\varphi_A)
+ \approx9.04\times10^{-4}\,\mathrm J}.
+\]
+检查：\(q_0<0\)，B势更低，
+故电荷由A到B的电势能增加，
+外力做正功。
+
+\paragraph{习题 13.22}
+设电子初速忽略，每通过一个加速间隙获得
+能量 \(eU_0\)（非相对论近似），
+经过第 \(n\) 个间隙后的动能
+\(K_n=neU_0\)，速率为
+\[
+ v_n=\sqrt{\frac{2neU_0}{m_e}}=\sqrt n\,v_1.
+\]
+为使下一间隙的交流电压每次恰为反转后
+同样有利的峰值，电子在第 \(n\) 个
+无电场圆筒内的飞行时间应等于半个周期
+\(1/(2\nu)\)，所以
+\[
+ \boxed{L_n=\frac{v_n}{2\nu}
+ =L_1\sqrt n},\qquad
+ \boxed{L_1=\frac1{2\nu}\sqrt{\frac{2eU_0}{m_e}}}.
+\]
+从第 \(n\) 筒出来时
+\(\boxed{K_n=neU_0}\)
+（若问由电压乘电量，单位为焦耳；
+用电子伏特计时数值为 \(nU_0\)，\(U_0\) 以伏特计）。
+题设理想化忽略间隙飞行时间、空间电荷力及相对论修正。
+
+\paragraph{习题 13.23}
+牛顿力学把电子加速到 \(c\) 所需
+\[
+ eU_{\mathrm{Newton}}=\frac12m_ec^2,
+ \qquad
+ \boxed{U_{\mathrm{Newton}}=\frac{m_ec^2}{2e}
+ \approx2.55\times10^5\,\mathrm V}.
+\]
+改用相对论能量，
+\((\gamma-1)m_ec^2=eU_{\mathrm{Newton}}
+ =\frac12m_ec^2\)，故 \(\gamma=3/2\)。
+由 \(\gamma=[1-(v/c)^2]^{-1/2}\) 得
+\[
+ \boxed{\frac vc=\sqrt{1-\frac1{(3/2)^2}}
+ =\frac{\sqrt5}{3}\approx0.74536}.
+\]
+因此该电压只能使电子达到约
+\(\boxed{74.5\%c}\)，
+绝不可能在有限电压下把有静质量电子加速到光速。
+
+\paragraph{习题 13.24}
+两个电子 \(-e\) 分别位于
+中心带 \(+2e\) 的氦核两侧，
+核—电子距离均为
+\(r=0.20\times10^{-10}\,\mathrm m\)，
+电子—电子相距 \(2r\)。
+静电势能是三个电荷对的势能之和：
+\[
+ U=2\left(-\frac{2k_ee^2}{r}\right)
+ +\frac{k_ee^2}{2r}
+ =-\frac{7k_ee^2}{2r}.
+\]
+数值
+\[
+ \boxed{U\approx-4.04\times10^{-17}\,\mathrm J
+ \approx-252\,\mathrm{eV}}.
+\]
+这是固定几何瞬态的经典静电模型，
+不等同于氦原子的量子束缚能。
+
+\paragraph{习题 13.25}
+每个 \(\alpha\) 粒子为 \(+2e\)，
+三个粒子占等边三角形顶点，
+边长 \(a=3.0\times10^{-15}\,\mathrm m\)。
+有 \(\binom32=3\) 对粒子，
+每对电势能为
+\(k_e(2e)(2e)/a=4k_ee^2/a\)。
+因此
+\[
+ \boxed{U=3\frac{4k_ee^2}{a}
+ =\frac{12k_ee^2}{a}\approx5.76\,\mathrm{MeV}}.
+\]
+此结果只计静电排斥势能，未计短程核力。
+
+\paragraph{习题 13.26}
+取一正离子在原点，相邻位置
+\(x=\pm na\ (n=1,2,\ldots)\)
+的离子电荷为 \((-1)^ne\)。
+其他离子在原点产生的电势为
+\[
+ \varphi_+
+ =2\frac{k_ee}{a}\sum_{n=1}^\infty\frac{(-1)^n}{n}
+ =-\frac{2k_ee}{a}\ln2
+ =\boxed{-\frac{e}{2\pi\varepsilon_0a}\ln2}.
+\]
+单个离子与全部\emph{其他}离子的作用能
+\(q\varphi_+\) 会把每对电荷的相互作用
+在总能量求和中算两遍；
+将电荷系总静电能平均分给每个离子时，
+每离子贡献
+\[
+ \boxed{U_{\rm per\,ion}=\frac12e\varphi_+
+ =-\frac{k_ee^2}{a}\ln2
+ =-\frac{e^2}{4\pi\varepsilon_0a}\ln2}.
+\]
+对负离子电势符号与它的电荷符号同时反转，
+因此分摊的每离子能量相同。
+该无限交错级数需按左右对称的物理求和顺序取值。
+
+\paragraph{习题 13.27}
+假设电子为半径 \(R\)、总电量大小 \(e\)
+的均匀带电\emph{薄球壳}，
+将电荷从无穷远逐渐组装到球面，
+其静电自能为
+\[
+ U_{\rm self}=\frac12Q\varphi(R)
+ =\frac{k_ee^2}{2R}.
+\]
+令 \(U_{\rm self}=m_ec^2\)，得
+\[
+ \boxed{R=\frac{k_ee^2}{2m_ec^2}
+ =\frac{e^2}{8\pi\varepsilon_0m_ec^2}
+ \approx1.41\times10^{-15}\,\mathrm m}.
+\]
+注意这里得到的是薄球壳自能模型对应的半径，
+是通常按 \(r_e=k_ee^2/(m_ec^2)\)
+定义的“经典电子半径”的二分之一。
+“经典半径”的数值取决于所采用的经典电荷分布
+与定义约定；不等同于现代实验测得的电子几何半径。
+
+\paragraph{习题 13.28}
+均匀带电\emph{实心球}的静电自能
+\[
+ U_{\rm sphere}=\frac{3k_eQ^2}{5R}.
+\]
+质子电荷 \(Q=e\)，半径
+\(R=1.0\times10^{-15}\,\mathrm m\)，
+所以
+\[
+ \boxed{U_p\approx1.38\times10^{-13}\,\mathrm J
+ \approx0.864\,\mathrm{MeV}}.
+\]
+以质子静止能量约 \(938\,\mathrm{MeV}\) 计，
+比例
+\[
+ \boxed{\frac{U_p}{m_pc^2}\times100\%
+ \approx0.0921\%}.
+\]
+这是均匀球的电磁自能分量，不是全部质子质量的来源。
+
+\paragraph{习题 13.29}
+铀核初始电荷 \(Q=92e\)，
+均匀分布在半径 \(R=7.4\,\mathrm{fm}\)
+的球内，静电自能
+\[
+ U_0=\frac{3k_eQ^2}{5R}
+ \approx\boxed{988\,\mathrm{MeV}}.
+\]
+对称裂变为两个相同的\emph{钯核}
+（每个带 \(46e\)），总体积保持不变，
+故每个新球半径 \(R'=R/2^{1/3}\)。
+当两个新球相距很远可忽略彼此作用能，
+总自能
+\[
+ U_1=2\frac{3k_e(Q/2)^2}{5(R/2^{1/3})}
+ =2^{-2/3}U_0
+ \approx\boxed{622\,\mathrm{MeV}}.
+\]
+放出的静电能量为
+\[
+ \boxed{\Delta U=U_0-U_1
+ =(1-2^{-2/3})U_0\approx366\,\mathrm{MeV}}.
+\]
+每千克 \({}^{238}\mathrm U\) 的核数近似
+\(N=(1\,\mathrm{kg}/0.238\,\mathrm{kg\,mol^{-1}})N_A\)，
+因此
+\[
+ \boxed{E_{1\mathrm{kg}}=N\Delta U
+ \approx1.48\times10^{14}\,\mathrm J}.
+\]
+这里是假设所有核都能按所设方式对称裂变，
+且释放的静电自能全部可用；
+真实裂变产物、核力、质量亏损与中微子能量
+均不能简单用这个模型代替。
+
+\paragraph{习题 13.30}
+正电的 \(\alpha\) 粒子 \(+2e\)
+正面靠近金核 \(+79e\)。
+忽略反冲及非电力，最接近处的径向速度为零，
+将初动能 \(K=4.0\,\mathrm{MeV}\)
+全部转为库仑势能：
+\[
+ K=\frac{k_e(2e)(79e)}{r_{\min}},
+ \quad
+ \boxed{r_{\min}=\frac{158k_ee^2}{K}
+ \approx5.69\times10^{-14}\,\mathrm m}.
+\]
+此距离大于核半径（约 \(7\,\mathrm{fm}\)），
+所以把金核外场视作中心点电荷是自洽的。
+在此距离，两粒子的万有引力势能
+\[
+ \boxed{U_g=-\frac{Gm_\alpha M_{\rm Au}}{r_{\min}}
+ \approx-2.58\times10^{-48}\,\mathrm J},
+\]
+与库仑势能相比极小。
+注意这里算的是\emph{万有引力势能}，
+而非万有引力大小。
+
+\paragraph{习题 13.31}
+铀核带总电量 \(Q=92e\)，
+设它为半径 \(R=7.4\times10^{-15}\,\mathrm m\)
+的均匀带电实心球。
+负 \(\tau\) 子从无限远静止释放，
+它在核外表面电势
+\(\varphi_R=k_eQ/R\)，
+核中心电势
+\(\varphi_0=3k_eQ/(2R)\)。
+静电势能减少转为动能，
+\[
+ \frac12m_\tau v_R^2=e\varphi_R,
+ \qquad
+ \frac12m_\tau v_0^2=e\varphi_0.
+\]
+所以
+\[
+ \boxed{v_R=\sqrt{\frac{2k_e(92e^2)}{m_\tau R}}
+ \approx4.25\times10^7\,\mathrm{m/s}},
+\]
+\[
+ \boxed{v_0=\sqrt{\frac{3k_e(92e^2)}{m_\tau R}}
+ \approx5.21\times10^7\,\mathrm{m/s}}.
+\]
+两者皆小于 \(c\)，但均达光速的约
+\(0.14\) 与 \(0.17\)，若做精密预测需改用相对论能量公式。
+这里“铀核中心”是带电均匀球内部，
+不可错误延拓点电荷的 \(1/r\) 发散势。
+
+\paragraph{习题 13.32}
+取两个电偶极子的电矩均沿
+两者连线同方向，
+\(p_1,p_2>0\)，间距 \(r\) 远大于两偶极子的尺度。
+第一个偶极子在第二个位置产生的轴上场为
+\[
+ E_1=\frac{2k_ep_1}{r^3}.
+\]
+第二偶极子在该电场中的势能
+\(U=-\boldsymbol p_2\cdot\boldsymbol E_1=-p_2E_1\)，
+得
+\[
+ \boxed{U=-\frac{2k_ep_1p_2}{r^3}
+ =-\frac{p_1p_2}{2\pi\varepsilon_0r^3}}.
+\]
+这已经是整个两偶极子系统的相互作用能，
+不应再无理由地额外乘二。
+
+\paragraph{习题 13.33}
+真空中电场能量密度
+\(u_E=\frac12\varepsilon_0E^2\)。
+取 \(E=100\,\mathrm{V/m}\)，得
+\[
+ \boxed{u_E=\tfrac12(8.8542\times10^{-12})(100)^2
+ \approx4.43\times10^{-8}\,\mathrm{J/m^3}}.
+\]
+以地球半径 \(R_\oplus\approx6.37\times10^6\,\mathrm m\)，
+场存在于表面上空高度 \(h=10^4\,\mathrm m\) 的薄壳，
+\(h\ll R_\oplus\)，则体积
+\(V\simeq4\pi R_\oplus^2h\)，
+总能量
+\[
+ E_{\rm tot}=u_EV\simeq2.26\times10^{11}\,\mathrm J
+ \simeq\boxed{6.27\times10^4\,\mathrm{kW\,h}}.
+\]
+忽略高度变化、地表山地形状和大气介电效应；
+精确薄壳体积可用
+\(\frac43\pi[(R_\oplus+h)^3-R_\oplus^3]\) 替代。
+
+\paragraph{习题 13.34}
+在玻尔的经典圆轨道模型中，
+库仑力提供向心力：
+\(m_ev^2/r=k_ee^2/r^2\)。
+角动量量子化
+\(m_evr=n\hbar\)。
+联立消去 \(v\) 可得
+\[
+ \boxed{r_n=\frac{n^2\hbar^2}{m_ek_ee^2}
+ =\frac{4\pi\varepsilon_0 n^2\hbar^2}{m_ee^2}}.
+\]
+因 \(m_ev^2=k_ee^2/r_n\)，
+总机械能
+\[
+ W_n=\frac12m_ev^2-\frac{k_ee^2}{r_n}
+ =-\frac{k_ee^2}{2r_n}
+ =\boxed{-\frac{m_ee^4}
+ {2(4\pi\varepsilon_0)^2\hbar^2n^2}}.
+\]
+\(n=1\) 时采用 \(\hbar\simeq1.05457\times10^{-34}\,\mathrm{J\,s}\)
+得到
+\[
+ \boxed{W_1\approx-13.6\,\mathrm{eV}}.
+\]
+此为单电子氢原子玻尔模型的基态能量，
+不应直接外推至多电子原子。
