@@ -79,7 +79,7 @@ test(233,"cylindrical wire enclosed current fraction r=R/2",
 j=6e6;offset=.004
 Bhole=MU*j*offset/2
 test(234,"off-axis cavity uniform magnetic field microtesla",
-     Bhole*1e6,15.08,tol=.01)
+     Bhole*1e6,15079.64,tol=.0001)
 test(234,"concentric hole B=0 independent j",0,0)
 alpha=.5;bconst=.002;r=.03
 B=bconst*r**alpha
@@ -134,7 +134,7 @@ test(246,"spinning uniformly charged disc magnetic moment",
 sigma=10e-6;omega=70;R=.05
 Bball=2*MU*sigma*omega*R/3
 test(247,"charged spherical shell central induction nanotesla",
-     Bball*1e9,29.32,.015)
+     Bball*1e9,.0293215,.0001)
 q=.1;m=.5;R=.2;omega=2
 p= q*R*R*omega/5
 L=2*m*R*R*omega/5
