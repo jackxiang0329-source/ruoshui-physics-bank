@@ -352,3 +352,339 @@ S_a=4.0\times10^{-4}\,\mathrm{m^2},R_b=.20\,\mathrm m\)，
  \approx2.27\,\mathrm V}.
 \]
 方向总按楞次定律阻碍电流变化。
+
+
+\paragraph{习题 20.16}
+由自感定义
+\(\mathcal E_L=-L\,dI/dt\)，
+\(dI/dt=4.0\,\mathrm{A/s}\)、
+\(|\mathcal E_L|=3.2\,\mathrm{mV}\)，
+\[
+ \boxed{L=\frac{3.2\times10^{-3}}{4.0}
+ =8.0\times10^{-4}\,\mathrm H}.
+\]
+每匝磁通
+\(\Phi=20\,\mu\mathrm{Wb}\)，
+总磁链 \(N\Phi=LI\)，
+所以
+\[
+ \boxed{N=\frac{LI}{\Phi}
+ =\frac{(8.0\times10^{-4})(10)}
+ {20\times10^{-6}}=400\text{ 匝}}.
+\]
+这里 \(\Phi\) 是\emph{每一匝}的磁通，
+不是整个螺线管的总磁链。
+
+\paragraph{习题 20.17}
+矩形截面环形螺线管内半径 \(R_1\)、
+外半径 \(R_2\)、高度 \(h\)，
+共 \(N\) 匝。安培定律
+\(B_\varphi(r)=\mu_0NI/(2\pi r)\)
+（环管内部）。
+每匝的穿链磁通
+\[
+ \Phi=\int_{R_1}^{R_2}B_\varphi(r)h\,dr
+ =\frac{\mu_0NIh}{2\pi}\ln\frac{R_2}{R_1}.
+\]
+故
+\[
+ \boxed{L=\frac{N\Phi}{I}
+ =\frac{\mu_0N^2h}{2\pi}\ln\frac{R_2}{R_1}}.
+\]
+中心轴无限直导线通过电流 \(I_w\) 时，
+其磁场 \(B_w=\mu_0I_w/(2\pi r)\)；
+流过环管每匝面积的磁通为
+\(\Phi_w=(\mu_0I_wh/(2\pi))
+ \ln(R_2/R_1)\)。
+于是
+\[
+ \boxed{M_{\rm ring\leftarrow wire}
+ =\frac{\mu_0Nh}{2\pi}\ln\frac{R_2}{R_1}}.
+\]
+反过来，环管电流 \(I\) 经过
+中心直导线的回流闭合回路可取
+跨环管截面的面，磁链的交叉系数
+根据电磁能的互易性相同，
+所以
+\[
+ \boxed{M_{12}=M_{21}
+ =\frac{\mu_0Nh}{2\pi}\ln\frac{R_2}{R_1}}.
+\]
+\textbf{几何边界：}无限直导线本身不是闭合回路，
+在讨论其\emph{互感}前须指定遥远的返回路径；
+理想近场极限消去返回部分。
+
+\paragraph{习题 20.18}
+两条平行无限长导线轴间距 \(D\)、
+半径 \(a\)，电流大小 \(I\) 相反。
+选两圆柱面之间的径向—轴向平面
+作为穿磁通面，
+距第一根中心 \(x\in[a,D-a]\) 处
+两线的环向磁场在两线之间同向，
+\[
+ B(x)=\frac{\mu_0I}{2\pi}
+ \left(\frac1x+\frac1{D-x}\right).
+\]
+单位轴长磁通为
+\[
+ \Phi'=\frac{\mu_0I}{2\pi}
+ \int_a^{D-a}\left(\frac1x+\frac1{D-x}\right)dx
+ =\frac{\mu_0I}{\pi}\ln\frac{D-a}{a}.
+\]
+因此忽略导线内部磁场的
+单位长度电路自感
+\[
+ \boxed{L'=\frac{\Phi'}I
+ =\frac{\mu_0}{\pi}\ln\frac{D-a}{a}}.
+\]
+当 \(D\gg a\)，可近似为
+\(\mu_0\ln(D/a)/\pi\)。
+
+\paragraph{习题 20.19}
+图示两平面线圈的平面互相垂直，
+磁通互感在理想对称构型中为零，
+所以 \(\boxed{M\simeq0}\)。
+串联时同一电流 \(I\)
+的磁能
+\(W_m=\frac12(L_1+L_2)I^2\)，
+\[
+ \boxed{L_{\rm series}=L_1+L_2}.
+\]
+并联时两线圈端电压相同，
+\(V=L_1dI_1/dt=L_2dI_2/dt\)，
+总电流 \(I=I_1+I_2\)，
+因此
+\(dI/dt=V(1/L_1+1/L_2)\)，
+\[
+ \boxed{\frac1{L_{\rm parallel}}
+ =\frac1{L_1}+\frac1{L_2}}.
+\]
+若有非零互感，不能套并联反比加法。
+
+\paragraph{习题 20.20}
+两耦合线圈自感
+\(L_1,L_2\)，互感
+\(M\) 的磁能通式
+\[
+ W_m=\frac12L_1I_1^2+\frac12L_2I_2^2
+ +MI_1I_2.
+\]
+顺串联时 \(I_1=I_2=I\)
+（图20.28端子2、3相接），
+\[
+ W_m=\frac12(L_1+L_2+2M)I^2
+ \Longrightarrow
+ \boxed{L_{\rm aiding}=L_1+L_2+2M}.
+\]
+反串联时 \(I_1=I,I_2=-I\)
+（端子2、4相接），
+\[
+ \boxed{L_{\rm opposing}=L_1+L_2-2M}.
+\]
+被动磁能非负限制
+\(|M|\le\sqrt{L_1L_2}\)，
+这个约束可防止反串联算出负的
+理想等效自感。
+
+\paragraph{习题 20.21}
+题给中子星表面场
+\(B=10^8\,\mathrm T\)，
+\[
+ \boxed{u_B=\frac{B^2}{2\mu_0}
+ =\frac{10^{16}}{8\pi\times10^{-7}}
+ \approx3.98\times10^{21}\,\mathrm{J/m^3}}.
+\]
+磁场能量等效的质量密度
+\[
+ \boxed{\rho_{\rm eq}=\frac{u_B}{c^2}
+ \approx4.43\times10^4\,\mathrm{kg/m^3}}.
+\]
+这不是中子星物质的真实质量密度，
+而仅是题给磁场能量的质能等效量。
+
+\paragraph{习题 20.22}
+真空电场能量密度
+\(u_E=\tfrac12\varepsilon_0E^2\)，
+磁场能量密度
+\(u_B=B^2/(2\mu_0)\)。
+\(E=10^6\,\mathrm{V/m}\)、
+\(B=2.0\,\mathrm T\) 时
+\[
+ \boxed{u_E
+ =\frac12(8.8542\times10^{-12})(10^{12})
+ \approx4.43\,\mathrm{J/m^3}},
+\]
+\[
+ \boxed{u_B=\frac4{2(4\pi\times10^{-7})}
+ \approx1.59\times10^6\,\mathrm{J/m^3}}.
+\]
+在给定的\emph{典型可实现}场强下，
+磁场储能密度高约
+\(\boxed{3.59\times10^5}\) 倍。
+这不表示任意大小的电场能量密度
+都必低于任意磁场。
+
+\paragraph{习题 20.23}
+目标能量
+\(W=1\,\mathrm{kW\,h}
+ =3.6\times10^6\,\mathrm J\)。
+磁场 \(B=1\,\mathrm T\)
+对应 \(u_B=B^2/(2\mu_0)\)，
+因此所需储磁空间
+\[
+ \boxed{V=\frac{W}{u_B}
+ =\frac{2\mu_0W}{B^2}
+ \approx9.05\,\mathrm{m^3}}.
+\]
+若以500A线圈电流储存同一能量，
+\(W=\frac12LI^2\) 给
+\[
+ \boxed{L=\frac{2W}{I^2}
+ =\frac{7.2\times10^6}{500^2}
+ =28.8\,\mathrm H}.
+\]
+实际超导线圈还受支撑机械应力、
+临界电流和漏磁限制。
+
+\paragraph{习题 20.24}
+导线半径
+\(r=.0055\,\mathrm m\)，
+电流 \(I=20\,\mathrm A\)，
+电阻率
+\(\rho=1.69\times10^{-8}\,\Omega\mathrm m\)。
+导体内沿线方向匀强电场
+\(E=\rho j=\rho I/(\pi r^2)\)，
+表面附近切向电场连续：
+\[
+ \boxed{E\simeq3.56\times10^{-3}\,\mathrm{V/m}}.
+\]
+因此
+\[
+ \boxed{u_E=\frac12\varepsilon_0E^2
+ \approx5.61\times10^{-17}\,\mathrm{J/m^3}}.
+\]
+表面环向磁场
+\(B=\mu_0I/(2\pi r)\)，
+\[
+ \boxed{B\simeq7.27\times10^{-4}\,\mathrm T},\quad
+ \boxed{u_B=\frac{B^2}{2\mu_0}
+ \approx2.10\times10^{-1}\,\mathrm{J/m^3}}.
+\]
+\emph{外}场还有为传输焦耳热提供的
+坡印廷矢量，其方向朝向导线内部；
+单看电场能量密度不能描述输能机制。
+
+\paragraph{习题 20.25}
+同轴电缆中心实心芯半径 \(R_1\)，
+均匀体电流 \(+I\)；
+外薄筒半径 \(R_2\) 回流 \(-I\)。
+用安培环路定律得到
+\[
+ \boxed{B(r)=
+ \begin{cases}
+ \mu_0Ir/(2\pi R_1^2),&0\le r<R_1,\\
+ \mu_0I/(2\pi r),&R_1\le r<R_2,\\
+ 0,&r>R_2
+ \end{cases}}.
+\]
+单位长度磁能
+\(U'_B=\int B^2/(2\mu_0)\,2\pi r\,dr\)。
+芯内部：
+\[
+ U'_{\rm core}=\int_0^{R_1}
+ \frac{\mu_0I^2r^2}{8\pi^2R_1^4}2\pi r\,dr
+ =\frac{\mu_0I^2}{16\pi}.
+\]
+芯与外筒之间：
+\[
+ U'_{\rm gap}=\frac{\mu_0I^2}{4\pi}
+ \ln\frac{R_2}{R_1}.
+\]
+总计
+\[
+ \boxed{U'_B=\frac{\mu_0I^2}{16\pi}
+ +\frac{\mu_0I^2}{4\pi}\ln\frac{R_2}{R_1}}.
+\]
+用 \(U'_B=\tfrac12L'I^2\)，
+\[
+ \boxed{L'=\frac{\mu_0}{8\pi}
+ +\frac{\mu_0}{2\pi}\ln\frac{R_2}{R_1}}.
+\]
+若芯电流因趋肤效应集中于表面，
+第一项内部自感会减小，
+以上表达式只适于题定的均匀电流模型。
+
+\paragraph{习题 20.26}
+图20.29两根平行圆管半径 \(a\)，
+距离 \(D_1\gg a\)，反向电流 \(\pm I\)。
+忽略管内场，由习题20.18的远离近似
+\[
+ \boxed{L'(D)\simeq\frac{\mu_0}{\pi}\ln\frac Da}.
+\]
+定电流条件下两导线排斥力每单位长度
+\(F'=\mu_0I^2/(2\pi D)\)。
+导管从 \(D_1\) 到 \(D_2>D_1\)，
+磁力向外作正机械功
+\[
+ \boxed{A'_m=
+ \int_{D_1}^{D_2}F'\,dD
+ =\frac{\mu_0I^2}{2\pi}\ln\frac{D_2}{D_1}}.
+\]
+磁能每单位长度
+\(U'_B=\tfrac12L'I^2\)，
+\[
+ \boxed{\Delta U'_B=
+ \frac12I^2[L'(D_2)-L'(D_1)]
+ =\frac{\mu_0I^2}{2\pi}\ln\frac{D_2}{D_1}
+ =A'_m}.
+\]
+分开使磁通链增加，
+法拉第感应电势阻碍原电流继续增大，
+即其方向与原电源驱动电流方向相反。
+为了\emph{保持}恒定 \(I\)，
+电源必须提供额外功
+\[
+ \boxed{A'_e=I^2\Delta L'
+ =\frac{\mu_0I^2}{\pi}\ln\frac{D_2}{D_1}}.
+\]
+能量账目：
+\[
+ \boxed{A'_e=A'_m+\Delta U'_B
+ =2A'_m=2\Delta U'_B}.
+\]
+\textbf{反直觉之处：}
+两线因磁斥力分开、磁场却同时\emph{增能}，
+因为保持电流不变的电源输入双倍的能量；
+不能把恒定电流和固定磁通条件混为一谈。
+
+\paragraph{习题 20.27}
+源图20.30中同轴两螺线管截面积
+\(S\)，匝密度 \(n_1,n_2\)，
+电流 \(I_1,I_2\)，
+令轴向插入重叠长度为 \(x\)。
+忽略端部漏磁，
+重叠区中磁场分别为
+\(B_1=\mu_0n_1I_1\)、
+\(B_2=\mu_0n_2I_2\)。
+对重叠的一段长度 \(x\)，
+两个线圈的互感
+\[
+ M(x)=\mu_0n_1n_2Sx
+\]
+（按相互绕向选正号）。
+固定两电流时的磁\emph{共能}
+\(W'_m=\frac12L_1I_1^2+\frac12L_2I_2^2
+ +M(x)I_1I_2\)；
+电磁力取定电流共能对位置导数：
+\[
+ \boxed{F_m=\left.
+ \frac{\partial W'_m}{\partial x}
+ \right|_{I_1,I_2}
+ =\mu_0n_1n_2SI_1I_2}.
+\]
+若两电流使重叠区磁场同向，
+\(M I_1I_2>0\)，增大重叠长度降低
+定电流磁机械系统的广义势，
+故互相吸入；反向则排斥。
+与习题20.26一样，
+定电流机械功必须和电源提供的功分开核算。
