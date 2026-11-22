@@ -66,6 +66,10 @@ jobs:
         run: python3 external_sources/irodov-zh-elegant/thermo_transport_regression.py
       - name: Independently recheck Part III electrostatics and Gauss-Poisson laws
         run: python3 external_sources/irodov-zh-elegant/electrostatics_vacuum_regression.py
+      - name: Independently recheck Part III conductors and dielectric polarization
+        run: python3 external_sources/irodov-zh-elegant/electro_conductors_regression.py
+      - name: Independently recheck Part III capacitor networks and electrostatic work
+        run: python3 external_sources/irodov-zh-elegant/electro_capacitance_regression.py
       - uses: xu-cheng/latex-action@v4
         with:
           working_directory: external_sources/irodov-zh-elegant
