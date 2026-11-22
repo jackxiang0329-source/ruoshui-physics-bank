@@ -70,6 +70,8 @@ jobs:
         run: python3 external_sources/irodov-zh-elegant/electro_conductors_regression.py
       - name: Independently recheck Part III capacitor networks and electrostatic work
         run: python3 external_sources/irodov-zh-elegant/electro_capacitance_regression.py
+      - name: Independently recheck Part III resistor circuits and electric transport
+        run: python3 external_sources/irodov-zh-elegant/electro_current_regression.py
       - uses: xu-cheng/latex-action@v4
         with:
           working_directory: external_sources/irodov-zh-elegant
