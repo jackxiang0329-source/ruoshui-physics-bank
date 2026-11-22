@@ -39,13 +39,13 @@ def validate(root=ROOT):
         if status not in ALLOWED:
             errors.append(f'{pid}: quality_status invalid: {status!r}')
             continue
-        review_path=root/'qa'/(pid+'.json')
+        review_path=root/'data'/'qa'/(pid+'.json')
         if status=='待独立复核':
             # Pending questions are never silently authorized by an old record.
             continue
         approved+=1
         if not review_path.is_file():
-            errors.append(f'{pid}: approved without qa/{pid}.json')
+            errors.append(f'{pid}: approved without data/qa/{pid}.json')
             continue
         try:
             review=json.loads(review_path.read_text(encoding='utf-8'))
