@@ -1245,7 +1245,7 @@ def main() -> None:
             "ch22 gas interferometer last exercise missing")
     require("镜面反射" in s22 and "45" in s22,
             "22.3 Lloyd mirror half-wave first bright missing")
-    require("第7条暗纹" in q22 and "1.28" in s22,
+    require("第7条" in q22 and "反射暗纹" in q22 and "1.28" in s22,
             "22.14 SiO2 wedge seventh dark with BOTH phase shifts missing")
     require("再次" in q22 and "643" in s22,
             "22.17 consecutive oil-film destructive orders missing")
