@@ -11,6 +11,8 @@
 
 原始文件**并非删除题目内容**，而是转为每文件可逆的 `tar.gz`，其中仍以原 `ID.md` 路径保存每一个文件的原始 UTF-8 字节；`manifest.json` 记录原文件数、总字节数、每个来源索引 SHA-256、解压内容聚合 SHA-256 和压缩包 SHA-256。归档前必须逐项与源文件比对，归档后可独立校验。
 
+**第二轮补充：** UBC OPBP（265 份）和 IntroPhysics（53 份）已经进一步无损归档为 `ubc_opbp-raw.tar.gz` 与 `intro_physics-raw.tar.gz`；另有独立完整性清单 `small_sources_manifest.json`。详见 [第二轮整理与恢复说明](SECOND_ROUND.md)。本页下方的三组恢复命令仍仅适用于第一轮 19,837 份大型候选。两轮累计归档 **20,155 份**原始候选，未删除任何正式题目或解析。
+
 ## 检验与恢复
 
 ```bash
