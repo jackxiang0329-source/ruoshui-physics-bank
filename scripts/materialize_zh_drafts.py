@@ -105,7 +105,7 @@ def create(root=ROOT):
     # per-question views. Never touch the pinned English raw/ source tree.
     grouped=defaultdict(list)
     for rel in paths:
-        grouped[Path(rel).parts[2]].append(rel)
+        grouped[Path(rel).parts[3]].append(rel)
     books=[]
     book_index={}
     collection=root/"localized/zh_CN/合订"
