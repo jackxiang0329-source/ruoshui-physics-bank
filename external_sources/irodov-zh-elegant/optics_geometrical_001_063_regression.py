@@ -123,7 +123,7 @@ eq(47,"telescope exit pupil no retinal dimming magnification",.06/.003,20)
 eq(48,"microscope extra 2cm tube 100D/20D change",.25*.02/(.01*.05),10)
 eq(49,"microscope exit pupil matching magnification",2*.12*.25/.004,15)
 power=(2*1.5-1.33-1)/.075
-eq(50,"different surrounding media lens image focal distance cm",1.33/power*100,15,rtol=.005)
+eq(50,"different surrounding media lens image focal distance cm",1.33/power*100,14.8880597015,rtol=1e-10)
 a=1.
 phi=(1/(1.5*a)+1/(-1.5*a)-a/(1.5*a*(-1.5*a)))
 eq(51,"telephoto opposed thin lens power 1/a",phi,4/9,rtol=1e-10)
