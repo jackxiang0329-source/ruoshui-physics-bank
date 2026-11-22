@@ -343,8 +343,8 @@ def main() -> None:
     ch4q = (ROOT / "chapters/04/questions.tex").read_text(encoding="utf-8")
     ch13q = (ROOT / "chapters/13/questions.tex").read_text(encoding="utf-8")
     # End-of-chapter exercise 4.8 is NOT the separate thought-question 4.8.
-    sec4_8 = ch4q.split(r"\\paragraph{习题 4.8}", 1)[1].split(
-        r"\\paragraph{习题 4.9}", 1)[0]
+    sec4_8 = ch4q.split(r"\paragraph{习题 4.8}", 1)[1].split(
+        r"\paragraph{习题 4.9}", 1)[0]
     require("一竖直悬挂的弹簧" in sec4_8,
             "4.8 chapter exercise confused with thought question")
     require("两个相同的钯核" in ch13q and "两个相同的铯核" not in ch13q,
