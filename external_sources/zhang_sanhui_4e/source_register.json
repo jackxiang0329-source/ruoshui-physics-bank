@@ -324,10 +324,13 @@
       "number": 24,
       "title": "光的偏振",
       "volume": "V2",
-      "status": "not_started",
-      "verified_exercise_count": 0,
-      "question_file": null,
-      "solution_file": null
+      "status": "all_chapter_end_exercises_candidate_transcribed_pending_independent_review",
+      "verified_exercise_count": 16,
+      "question_file": "chapters/24/questions.tex",
+      "solution_file": "chapters/24/solutions.tex",
+      "chapter_end_exercise_number": "24.16",
+      "all_printed_end_exercises_transcribed": true,
+      "thought_questions_checked": false
     },
     {
       "number": 25,
@@ -12807,10 +12810,376 @@
         "davisson_germer_surface_scattering_geometry"
       ],
       "notes": "Davisson-Germer geometry surface in-plane adjacent atoms gives λ=d sin50°≈0.165nm, not naive bulk Bragg 2d sinθ."
+    },
+    {
+      "source_problem_number": "24.1",
+      "canonical_id": "ZS4-24-001",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        313
+      ],
+      "supplement_pdf_pages": [
+        328
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; figure_review_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "three_polarizer_increases_intensity_when_axes_60_degrees"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "24.2",
+      "canonical_id": "ZS4-24-002",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        313
+      ],
+      "supplement_pdf_pages": [
+        328
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; figure_review_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "one_third_of_maximum_vs_one_third_of_incident"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "24.3",
+      "canonical_id": "ZS4-24-003",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        313
+      ],
+      "supplement_pdf_pages": [
+        328,
+        329
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; figure_review_pending",
+      "exam_ready": false,
+      "requires_original_figure": true,
+      "risk_flags": [
+        "figure_dependency",
+        "polarizer_tilt_about_two_axes_effective_transverse_projection"
+      ],
+      "notes": "Companion S329 uses effective projected polarization angle cosα=cosθ/sqrt(cos²θ+sin²θ cos²φ), not product of separate cosines."
+    },
+    {
+      "source_problem_number": "24.4",
+      "canonical_id": "ZS4-24-004",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        314
+      ],
+      "supplement_pdf_pages": [
+        329
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; figure_review_pending",
+      "exam_ready": false,
+      "requires_original_figure": true,
+      "risk_flags": [
+        "figure_dependency",
+        "s_p_Fresnel_Brewster_reflected_parallel_component_zero"
+      ],
+      "notes": "Source figure24.39(a)-(e) dot/line s/p notation awaits exact vector redraw; at Brewster rp=0, reflected only s."
+    },
+    {
+      "source_problem_number": "24.5",
+      "canonical_id": "ZS4-24-005",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        314
+      ],
+      "supplement_pdf_pages": [
+        329,
+        330
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; figure_review_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "Brewster_angles_reciprocal_index_complementarity"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "24.6",
+      "canonical_id": "ZS4-24-006",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        314
+      ],
+      "supplement_pdf_pages": [
+        330
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; figure_review_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "TOTAL_INTERNAL_REFLECTION_CRITICAL_angle_is_NOT_Brewster_angle"
+      ],
+      "notes": "Given angle45° is TOTAL INTERNAL REFLECTION CRITICAL β, Brewster from same high-index side iB=atan(sin45°)=35.26°. Do not copy45°."
+    },
+    {
+      "source_problem_number": "24.7",
+      "canonical_id": "ZS4-24-007",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        314
+      ],
+      "supplement_pdf_pages": [
+        330
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; figure_review_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "Brewster_angle_air_to_medium"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "24.8",
+      "canonical_id": "ZS4-24-008",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        314
+      ],
+      "supplement_pdf_pages": [
+        330
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; figure_review_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "water_Brewster_angle_to_solar_elevation"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "24.9",
+      "canonical_id": "ZS4-24-009",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        314
+      ],
+      "supplement_pdf_pages": [
+        330
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; figure_review_pending",
+      "exam_ready": false,
+      "requires_original_figure": true,
+      "risk_flags": [
+        "figure_dependency",
+        "calcite_prism_ordinary_extraordinary_indices_and_axes"
+      ],
+      "notes": "Companion S330 uses n_e=1.4864, n_o=1.6584; e ray inside prism parallel base at r_e=30°, incident i≈48°."
+    },
+    {
+      "source_problem_number": "24.10",
+      "canonical_id": "ZS4-24-010",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        314
+      ],
+      "supplement_pdf_pages": [
+        330,
+        331
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; figure_review_pending",
+      "exam_ready": false,
+      "requires_original_figure": true,
+      "risk_flags": [
+        "figure_dependency",
+        "two_calcite_prisms_axis_rotated_o_e_split"
+      ],
+      "notes": "Needs exact TikZ direction/polarization markings for pair of 45° calcite prisms, companion S330-331."
+    },
+    {
+      "source_problem_number": "24.11",
+      "canonical_id": "ZS4-24-011",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        314
+      ],
+      "supplement_pdf_pages": [
+        331
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; figure_review_pending",
+      "exam_ready": false,
+      "requires_original_figure": true,
+      "risk_flags": [
+        "figure_dependency",
+        "two_polarizers_CROSSED_not_parallel",
+        "quarter_wave_ellipse_three_sixteenths"
+      ],
+      "notes": "Original P1 and P2 are CROSSED, not parallel; independent Jones/Stokes yields I1=Ii/2, I2=Ii/2 elliptical, I3=3Ii/16 linear. Parallel-polarizer result 5Ii/16 would be wrong."
+    },
+    {
+      "source_problem_number": "24.12",
+      "canonical_id": "ZS4-24-012",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        [
+          314,
+          315
+        ]
+      ],
+      "supplement_pdf_pages": [
+        331
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; figure_review_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "optic_axis_parallel_to_waveplate_surface"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "24.13",
+      "canonical_id": "ZS4-24-013",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        315
+      ],
+      "supplement_pdf_pages": [
+        332
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; figure_review_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "quarter_wave_800nm_becomes_half_wave_400nm"
+      ],
+      "notes": "800nm quarter-wave retards 400nm by π, hence half-wave plate with orthogonally rotated linear polarization."
+    },
+    {
+      "source_problem_number": "24.14",
+      "canonical_id": "ZS4-24-014",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        315
+      ],
+      "supplement_pdf_pages": [
+        332
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; figure_review_pending",
+      "exam_ready": false,
+      "requires_original_figure": true,
+      "risk_flags": [
+        "figure_dependency",
+        "Nicol_calcite_ordinary_total_internal_reflection_e_transmission"
+      ],
+      "notes": "At glue interface ordinary ray i≈76.9° > asin(1.55/1.658)=69.2°, total internal reflection; extraordinary ray transmits."
+    },
+    {
+      "source_problem_number": "24.15",
+      "canonical_id": "ZS4-24-015",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        315
+      ],
+      "supplement_pdf_pages": [
+        332
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; figure_review_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "optical_rotation_sign_viewing_convention"
+      ],
+      "notes": "Source S332 computes abs optical rotation≈49.9 degrees/mm, sign needs observation-direction convention."
+    },
+    {
+      "source_problem_number": "24.16",
+      "canonical_id": "ZS4-24-016",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        315
+      ],
+      "supplement_pdf_pages": [
+        332,
+        333
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; figure_review_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "counterpropagating_orthogonal_waves_polarization_gradient_handedness"
+      ],
+      "notes": "At λ/8 relative phase π/2 circular, λ/4 linear orthogonal, 3λ/8 opposite circular, λ/2 initial linear; handedness depends viewer direction."
     }
   ],
   "progress": {
-    "verified_questions": 565,
+    "verified_questions": 581,
     "volumes_started": [
       "V1",
       "V2"
@@ -12819,20 +13188,20 @@
     "complete": false,
     "total_exercise_count": "not_yet_counted_from_full_scans",
     "chapter_1_end_exercises_transcribed": true,
-    "note": "565 candidate original numbered chapter-end exercises with independent LaTeX solutions (23 chapters V1 285 and V2 280); no formal bank admission.",
+    "note": "581 candidate textbook-numbered exercises with independent LaTeX solutions across 24 chapters (V1 1-11 285, V2 12-24 296); ch23+ch24 added 35 this round. All exam_ready=false.",
     "last_completed_exercise_V1": "11.13",
     "next_to_transcribe_V1": "volume_1_chapter_end_exercises_complete",
-    "next_to_transcribe_V2": "24.1",
-    "quality_summary": "New V2 chapter23 19 source-scanned pairs, textbook and companion pages indexed. Original/correction risks: 23.3 λ~429nm half-order approximation; 23.4 single slit 47.16°; 23.6 ground footprint definition; 23.16 companion integer truncation vs ceil3647; 23.17 principal grating lobe vs local side lobe; figure geometry under review. Candidate only.",
+    "next_to_transcribe_V2": "25.1",
+    "quality_summary": "V2 chapter23 diffraction and ch24 polarization 35 new candidate pairs. Ch23 companion issues: 23.16 ceil3647 vs 3646, 23.17 antenna sidelobes vs principal maxima. Ch24 source risks: 24.6 45° is TIR critical not Brewster; 24.11 crossed polarizers yield3Ii/16; 24.13 800nm QWP becomes400nm HWP; 24.14 Nicol prism TIR. Source diagrams, publication permission and independent expert review pending.",
     "chapter_2_end_exercises_transcribed": true,
     "chapter_3_end_exercises_transcribed": true,
     "chapter_12_end_exercises_transcribed": true,
-    "last_completed_exercise_V2": "23.19",
+    "last_completed_exercise_V2": "24.16",
     "supplement_pdf_page_mappings_new_batch": 55,
     "supplement_mapping_note": "Current40 exercise numbers linked to companion S physical PDF pages177–184 (V1 ch11) and288–298 (V2 ch20). Per-source page windows, source figure and expert audit still pending.",
     "chapter_4_end_exercises_transcribed": true,
     "chapter_13_end_exercises_transcribed": true,
-    "supplement_pdf_page_mappings_current_batch": 19,
+    "supplement_pdf_page_mappings_current_batch": 16,
     "chapter_5_end_exercises_transcribed": true,
     "chapter_14_end_exercises_transcribed": true,
     "chapter_6_end_exercises_transcribed": true,
@@ -12848,9 +13217,10 @@
     "chapter_11_end_exercises_transcribed": true,
     "chapter_20_end_exercises_transcribed": true,
     "chapter_21_end_exercises_transcribed": true,
-    "last_batch_scope": "V2 chapter23 diffraction 19 source-numbered exercises V2 PDF287-289 S321-325",
+    "last_batch_scope": "V2 chapter24 polarization 16 source-numbered exercises V2 PDF313-315 S328-333",
     "chapter_22_end_exercises_transcribed": true,
-    "chapter_23_end_exercises_transcribed": true
+    "chapter_23_end_exercises_transcribed": true,
+    "chapter_24_end_exercises_transcribed": true
   },
   "editorial_policies": {
     "dedupe_key": "source edition + chapter + original problem number",
