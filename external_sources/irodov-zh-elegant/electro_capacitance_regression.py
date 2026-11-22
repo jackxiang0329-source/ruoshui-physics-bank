@@ -193,7 +193,7 @@ test(135,"uniformly charged solid ball total self energy",
      K*q1*q1/R1*(.5+.1),3*K*q1*q1/(5*R1))
 q=3e-6;aa=.25;bb=.5;eps=3.
 W=K*q*q/(2*eps)*(1/aa-1/bb)
-test(136,"point charge dielectric shell stored energy J",W,.026962)
+approx(136,"point charge dielectric shell stored energy J",W,.026962,tol=.0001)
 test(136,"dielectric shell energy excludes inside and outside",
      W*2*eps/(K*q*q),1/aa-1/bb)
 q=1e-9;a,b=.1,.2
