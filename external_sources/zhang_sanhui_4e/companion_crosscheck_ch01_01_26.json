@@ -1,0 +1,451 @@
+{
+  "schema": "zhang-sanhui-4e-companion-answer-crosscheck/v1",
+  "date": "2026-11-22",
+  "scope": "source-book-independent-recalculation-spots-not-full-705-academic-approval",
+  "source": {
+    "volume": "S",
+    "filename": "大学物理学（第4版）学习辅导与习题解答 (张三慧) .pdf",
+    "sha256": "54126dd75edd65eb9ead0a9d7acb96a37bfb25674cf595c76b94f2fb30bce5a7",
+    "pdf_physical_page_count": 402
+  },
+  "question_source": "V1 main textbook question/solution TeX; original chapter 1 exercises",
+  "question_bundle": "chapters/01/questions.tex",
+  "solution_bundle": "chapters/01/solutions.tex",
+  "records": [
+    {
+      "canonical_id": "ZS4-01-001",
+      "source_problem_number": "1.1",
+      "companion_pdf_physical_pages": [
+        15
+      ],
+      "tested_quantity": "Io volcanic ejecta speed",
+      "independent_computed_value": 849,
+      "value_unit": "m/s",
+      "companion_rounded_value": 849,
+      "model_assumptions": "exact model sqrt(2gh), g=1.80 m/s² and h=200 km",
+      "crosscheck": "checked_against_companion_scanned_answer_and_independently_derived_model",
+      "discrepancy_note": "rounded agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-01-002",
+      "source_problem_number": "1.2",
+      "companion_pdf_physical_pages": [
+        15
+      ],
+      "tested_quantity": "rocket car acceleration",
+      "independent_computed_value": 246.91,
+      "value_unit": "m/s²",
+      "companion_rounded_value": 247,
+      "model_assumptions": "1600 km/h in1.80 s, distance 400m, ≈25.20g",
+      "crosscheck": "checked_against_companion_scanned_answer_and_independently_derived_model",
+      "discrepancy_note": "rounded agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-01-003",
+      "source_problem_number": "1.3",
+      "companion_pdf_physical_pages": [
+        15,
+        16
+      ],
+      "tested_quantity": "head-on collision truck speed",
+      "independent_computed_value": 12.88,
+      "value_unit": "m/s",
+      "companion_rounded_value": 12.9,
+      "model_assumptions": "reactions .70s, both braking7.5m/s², early root only",
+      "crosscheck": "checked_against_companion_scanned_answer_and_independently_derived_model",
+      "discrepancy_note": "rounded agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-01-004",
+      "source_problem_number": "1.4",
+      "companion_pdf_physical_pages": [
+        16
+      ],
+      "tested_quantity": "parachutist total descent time",
+      "independent_computed_value": 36.37,
+      "value_unit": "s",
+      "companion_rounded_value": 36.3,
+      "model_assumptions": "g/2 average first acceleration, canopy transition neglected",
+      "crosscheck": "checked_against_companion_scanned_answer_and_independently_derived_model",
+      "discrepancy_note": "rounded agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-01-005",
+      "source_problem_number": "1.5",
+      "companion_pdf_physical_pages": [
+        16,
+        17
+      ],
+      "tested_quantity": "instant water volume in air",
+      "independent_computed_value": 24.76,
+      "value_unit": "L",
+      "companion_rounded_value": 24.7,
+      "model_assumptions": "continuous flow 280 L/min; in-air residence 2v/g",
+      "crosscheck": "checked_against_companion_scanned_answer_and_independently_derived_model",
+      "discrepancy_note": "rounded agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-01-006",
+      "source_problem_number": "1.6",
+      "companion_pdf_physical_pages": [
+        17
+      ],
+      "tested_quantity": "second stone first-branch initial speed",
+      "independent_computed_value": 51.58,
+      "value_unit": "m/s",
+      "companion_rounded_value": 51.1,
+      "model_assumptions": "sensitive to rounded first-stone impact time t-=1.22 s; raw unrounded formula",
+      "crosscheck": "checked_against_companion_scanned_answer_and_independently_derived_model",
+      "discrepancy_note": "source intermediate-time rounding discrepancy documented",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-01-007",
+      "source_problem_number": "1.7",
+      "companion_pdf_physical_pages": [
+        17,
+        18
+      ],
+      "tested_quantity": "y-coordinate at t=2s for x=2t, y=4t²−8",
+      "independent_computed_value": 8,
+      "value_unit": "m",
+      "companion_rounded_value": 8,
+      "model_assumptions": "positions at1s(2,-4), at2s(4,8); accelerations(0,8) m/s²",
+      "crosscheck": "checked_against_companion_scanned_answer_and_independently_derived_model",
+      "discrepancy_note": "symbolic agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-01-008",
+      "source_problem_number": "1.8",
+      "companion_pdf_physical_pages": [
+        18
+      ],
+      "tested_quantity": "volleyball initial horizontal launch speed",
+      "independent_computed_value": 20.71,
+      "value_unit": "m/s",
+      "companion_rounded_value": 20.7,
+      "model_assumptions": "net clearance≈0.244m, landing speed≈22.3m/s",
+      "crosscheck": "checked_against_companion_scanned_answer_and_independently_derived_model",
+      "discrepancy_note": "rounded agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-01-009",
+      "source_problem_number": "1.9",
+      "companion_pdf_physical_pages": [
+        18,
+        19
+      ],
+      "tested_quantity": "skier slope displacement",
+      "independent_computed_value": 269,
+      "value_unit": "m",
+      "companion_rounded_value": 269,
+      "model_assumptions": "45° downhill slope, 110km/h initial speed, drag neglected",
+      "crosscheck": "checked_against_companion_scanned_answer_and_independently_derived_model",
+      "discrepancy_note": "rounded agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-01-010",
+      "source_problem_number": "1.10",
+      "companion_pdf_physical_pages": [
+        19
+      ],
+      "tested_quantity": "maximum projectile height at50m",
+      "independent_computed_value": 12.29,
+      "value_unit": "m",
+      "companion_rounded_value": 12.3,
+      "model_assumptions": "wall13m impossible, optimum angle≈51.9°",
+      "crosscheck": "checked_against_companion_scanned_answer_and_independently_derived_model",
+      "discrepancy_note": "rounded agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-01-011",
+      "source_problem_number": "1.11",
+      "companion_pdf_physical_pages": [
+        19,
+        20
+      ],
+      "tested_quantity": "takeoff acceleration",
+      "independent_computed_value": 3.276,
+      "value_unit": "m/s²",
+      "companion_rounded_value": 3.28,
+      "model_assumptions": "S source flight peak10.67m, flight1.37s; bridge -4.22m after rounding",
+      "crosscheck": "checked_against_companion_scanned_answer_and_independently_derived_model",
+      "discrepancy_note": "rounded agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-01-012",
+      "source_problem_number": "1.12",
+      "companion_pdf_physical_pages": [
+        20,
+        21
+      ],
+      "tested_quantity": "two-shell collision minimum launch speed",
+      "independent_computed_value": 45.634,
+      "value_unit": "m/s",
+      "companion_rounded_value": 45.6,
+      "model_assumptions": "h=50m, s=200m; flight time must be positive before ground contact",
+      "crosscheck": "checked_against_companion_scanned_answer_and_independently_derived_model",
+      "discrepancy_note": "rounded agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-01-013",
+      "source_problem_number": "1.13",
+      "companion_pdf_physical_pages": [
+        21
+      ],
+      "tested_quantity": "centrifuge acceleration ratio a/g",
+      "independent_computed_value": 402840,
+      "value_unit": "1",
+      "companion_rounded_value": 400000,
+      "model_assumptions": "60000rpm and radius0.10m, centrifuge lab frame",
+      "crosscheck": "checked_against_companion_scanned_answer_and_independently_derived_model",
+      "discrepancy_note": "rounded agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-01-014",
+      "source_problem_number": "1.14",
+      "companion_pdf_physical_pages": [
+        21
+      ],
+      "tested_quantity": "Beijing tangential Earth-rotation speed",
+      "independent_computed_value": 355.9,
+      "value_unit": "m/s",
+      "companion_rounded_value": 356,
+      "model_assumptions": "latitude39.9° earth radius6378km, sidereal/day approximation",
+      "crosscheck": "checked_against_companion_scanned_answer_and_independently_derived_model",
+      "discrepancy_note": "rounded agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-01-015",
+      "source_problem_number": "1.15",
+      "companion_pdf_physical_pages": [
+        21
+      ],
+      "tested_quantity": "Bohr orbit angular revolution frequency",
+      "independent_computed_value": 6605800000000000,
+      "value_unit": "Hz",
+      "companion_rounded_value": 6600000000000000,
+      "model_assumptions": "speed2.2e6m/s radius0.53e-10m; classical Bohr proxy",
+      "crosscheck": "checked_against_companion_scanned_answer_and_independently_derived_model",
+      "discrepancy_note": "rounded agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-01-016",
+      "source_problem_number": "1.16",
+      "companion_pdf_physical_pages": [
+        21
+      ],
+      "tested_quantity": "storage ring a/g",
+      "independent_computed_value": 240200000000000,
+      "value_unit": "1",
+      "companion_rounded_value": 240000000000000,
+      "model_assumptions": "speed taken c, circumference240m",
+      "crosscheck": "checked_against_companion_scanned_answer_and_independently_derived_model",
+      "discrepancy_note": "rounded agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-01-017",
+      "source_problem_number": "1.17",
+      "companion_pdf_physical_pages": [
+        21,
+        22
+      ],
+      "tested_quantity": "decelerating car total acceleration",
+      "independent_computed_value": 0.32016,
+      "value_unit": "m/s²",
+      "companion_rounded_value": 0.32,
+      "model_assumptions": "radius400m speed10m/s tangential deceleration0.2m/s²",
+      "crosscheck": "checked_against_companion_scanned_answer_and_independently_derived_model",
+      "discrepancy_note": "rounded agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-01-018",
+      "source_problem_number": "1.18",
+      "companion_pdf_physical_pages": [
+        22
+      ],
+      "tested_quantity": "CD full playback time",
+      "independent_computed_value": 69.42,
+      "value_unit": "min",
+      "companion_rounded_value": 69.4,
+      "model_assumptions": "radial track density650/mm, radii2.2cm and5.6cm, scan speed1.3m/s",
+      "crosscheck": "checked_against_companion_scanned_answer_and_independently_derived_model",
+      "discrepancy_note": "rounded agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-01-019",
+      "source_problem_number": "1.19",
+      "companion_pdf_physical_pages": [
+        22
+      ],
+      "tested_quantity": "swimmer hand relative water signed displacement",
+      "independent_computed_value": -0.3,
+      "value_unit": "m",
+      "companion_rounded_value": -0.3,
+      "model_assumptions": "hand relative body -1.2m, body relative water+0.9m",
+      "crosscheck": "checked_against_companion_scanned_answer_and_independently_derived_model",
+      "discrepancy_note": "exact agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-01-020",
+      "source_problem_number": "1.20",
+      "companion_pdf_physical_pages": [
+        22,
+        23
+      ],
+      "tested_quantity": "ground north-directed sound speed",
+      "independent_computed_value": 342.69,
+      "value_unit": "m/s",
+      "companion_rounded_value": 343,
+      "model_assumptions": "wind east30m/s, sound speed344m/s relative air",
+      "crosscheck": "checked_against_companion_scanned_answer_and_independently_derived_model",
+      "discrepancy_note": "rounded agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-01-021",
+      "source_problem_number": "1.21",
+      "companion_pdf_physical_pages": [
+        23
+      ],
+      "tested_quantity": "ball impact time relative accelerating elevator",
+      "independent_computed_value": 0.5906,
+      "value_unit": "s",
+      "companion_rounded_value": 0.59,
+      "model_assumptions": "initial relative vertical speed0, g-a=8.6 m/s² height1.5m",
+      "crosscheck": "checked_against_companion_scanned_answer_and_independently_derived_model",
+      "discrepancy_note": "rounded agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-01-022",
+      "source_problem_number": "1.22",
+      "companion_pdf_physical_pages": [
+        23,
+        24
+      ],
+      "tested_quantity": "raindrop ground speed",
+      "independent_computed_value": 36,
+      "value_unit": "km/h",
+      "companion_rounded_value": 36,
+      "model_assumptions": "observed vertical at cyclist18km/h and angle120° at36km/h",
+      "crosscheck": "checked_against_companion_scanned_answer_and_independently_derived_model",
+      "discrepancy_note": "exact agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-01-023",
+      "source_problem_number": "1.23",
+      "companion_pdf_physical_pages": [
+        24
+      ],
+      "tested_quantity": "plane A relative B ground speed magnitude",
+      "independent_computed_value": 916.515,
+      "value_unit": "km/h",
+      "companion_rounded_value": 917,
+      "model_assumptions": "both aircraft initial data are km/h; companion typesets 917(m/s) erroneously",
+      "crosscheck": "checked_against_companion_scanned_answer_and_independently_derived_model",
+      "discrepancy_note": "SOURCE_UNIT_MISPRINT: companion's 917 m/s must be 917 km/h",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-01-024",
+      "source_problem_number": "1.24",
+      "companion_pdf_physical_pages": [
+        24
+      ],
+      "tested_quantity": "building day-night speed difference Earth vs Sun",
+      "independent_computed_value": 0.927,
+      "value_unit": "km/s",
+      "companion_rounded_value": 0.93,
+      "model_assumptions": "idealized opposite earth-rotation projections at equator; chapter figure dependent",
+      "crosscheck": "checked_against_companion_scanned_answer_and_independently_derived_model",
+      "discrepancy_note": "rounded agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-01-025",
+      "source_problem_number": "1.25",
+      "companion_pdf_physical_pages": [
+        24,
+        25
+      ],
+      "tested_quantity": "incorrect Galilean forward-light speed",
+      "independent_computed_value": 74947.5,
+      "value_unit": "m/s",
+      "companion_rounded_value": 75000,
+      "model_assumptions": "0.99975c pion, incorrect Galilean hypothesis contrasted with Lorentz invariant c",
+      "crosscheck": "checked_against_companion_scanned_answer_and_independently_derived_model",
+      "discrepancy_note": "rounded agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    },
+    {
+      "canonical_id": "ZS4-01-026",
+      "source_problem_number": "1.26",
+      "companion_pdf_physical_pages": [
+        25
+      ],
+      "tested_quantity": "missile ground speed",
+      "independent_computed_value": 5398.4,
+      "value_unit": "km/h",
+      "companion_rounded_value": 5400,
+      "model_assumptions": "relative aircraft vector 5750km/h west19.5°south, aircraft ground 150east750north",
+      "crosscheck": "checked_against_companion_scanned_answer_and_independently_derived_model",
+      "discrepancy_note": "rounded agreement",
+      "academic_review": "pending_independent_verification",
+      "exam_ready": false
+    }
+  ],
+  "summary": {
+    "reviewed_distinct_existing_pairs": 26,
+    "new_unique_source_questions": 0,
+    "companion_number_agreement": 26,
+    "source_rounding_sensitive_cases": 1,
+    "expert_signed_off": 0,
+    "source_unit_misprint_cases": 1
+  },
+  "notes": "Full chapter-1 exercises 1.1--1.26 source answer value spotcomparison (not entire mathematical proof verification). Original scanned third companion S PDF physical pages 15--25. For 1.6 source difference is premature rounding, for 1.23 source text has incorrect speed unit m/s although numerical input is km/h. Distinct problem count unchanged 943; academic/expert review remains pending."
+}
