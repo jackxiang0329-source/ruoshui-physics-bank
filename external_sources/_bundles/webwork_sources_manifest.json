@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "scope": "noncanonical-unreviewed-candidates-only",
+  "not_included": [
+    "bank/",
+    "tex/",
+    "data/",
+    "external_sources/irodov-zh-elegant/",
+    "external_sources/ubc_opbp/",
+    "external_sources/intro_physics/"
+  ],
+  "sources": {
+    "webwork_opl": {
+      "count": 59,
+      "raw_bytes": 68647,
+      "archive_sha256": "bd90668f51b6cd2bf165eb95fe800bf5ce06f79efae4de9048e2d351bdbc2ee3",
+      "logical_sha256": "5a522461c7c6a3e111a94f63930da47d5d0d037c5d50f38d941213f2d9d7f912",
+      "index_sha256": "c8abe460188bba25221c32b9a4be9490ff16ec234b208d69d410c2638d47025b",
+      "archive_path": "external_sources/_bundles/webwork_opl-raw.tar.gz",
+      "format": "tar.gz/ID.pg; gzip-mtime=0"
+    },
+    "webwork_thermal": {
+      "count": 21,
+      "raw_bytes": 34601,
+      "archive_sha256": "d2a63f60c499d7b8b993f7e2e31cc89e04b35e44a8923eeceb9138a7a9ccacbe",
+      "logical_sha256": "d2a453c5fc1233fb2657328e1c1dd30ee258f529c17d4075348a03d9260b6f9d",
+      "index_sha256": "6315df09962087088f4235a5b09803b7c54e216daeca78c40676c3f8d44b0d8c",
+      "archive_path": "external_sources/_bundles/webwork_thermal-raw.tar.gz",
+      "format": "tar.gz/ID.pg; gzip-mtime=0"
+    }
+  }
+}
