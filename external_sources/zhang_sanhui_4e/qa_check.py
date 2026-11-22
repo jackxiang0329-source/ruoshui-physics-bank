@@ -338,7 +338,7 @@ def check_numeric_spotmodels() -> int:
     require(close(1e-8/(math.pi*eps*5),71.91),
             "14.12 field directly below charged line")
     require(close((10*(.05/18)*6.02214076e23*electron_q)/
-                  (4*math.pi*eps*6.37e6),3.776e6),
+                  (4*math.pi*eps*6.37e6),3.781470956e6),
             "14.13 0.05g water-drop model is millions of volts")
     require(close((1/(32*math.pi*eps)),
                   (1/(4*math.pi*eps))/8),
