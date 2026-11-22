@@ -7,7 +7,7 @@
 | 类型 | 标准目录/命名 | 示例 |
 |---|---|---|
 | 正式题目 | `bank/<ID>/meta.json`, `question.tex`, `solution.tex` | `bank/M001/solution.tex` |
-| 整书合订主文件 | `tex/<role>.tex` | `tex/questions.tex`, `tex/solutions.tex` |
+| 整书合订（生成物，不入库） | `tex/<role>.tex` | `tex/questions.tex`, `tex/solutions.tex`，由 `scripts/build.py` 生成 |
 | 数据索引与执行报告 | `data/*.json`，批次在 `data/rounds/` | `data/round14_validation_report.json` |
 | 审校脚本 | `scripts/check_<scope>.py`；测试 `tests/test_<scope>.py` | `scripts/check_future_rounds.py` |
 | 导入与打包工具 | `scripts/import_<source>.py`, `scripts/compact_<scope>.py` | `scripts/compact_webwork_sources.py` |

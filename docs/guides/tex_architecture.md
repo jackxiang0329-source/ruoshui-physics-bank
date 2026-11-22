@@ -8,7 +8,7 @@
 
 ## 二、使用 ElegantBook
 
-选用 ElegantBook v4.7（CTAN于2026年5月更新），XeLaTeX；正式书籍使用 tex/questions.tex 和 tex/solutions.tex。
+选用 ElegantBook v4.7 与 XeLaTeX。先运行 `python3 scripts/build.py`，会生成工作区的 `tex/questions.tex` 和 `tex/solutions.tex`；两册不纳入 Git 跟踪，PDF 由 GitHub Actions 编译。参见 [TeX 目录说明](../../tex/README.md)。
 
 示例主文档片段：
 
@@ -30,7 +30,7 @@
 
 ## 五、构建及质检边界
 
-scripts/build.py --check 用于检查单题源合法性、ID/字段、题目精确去重，以及版本库中的总册和索引是否同步；不能代替独立物理审核。scripts/check_physics.py 现为48道题分别设置了至少一项代数或数值一致性检查；前36题的既有检验有历史结果，新12题的公式表达式已单独核算，但完整CI执行尚待成功。此类核对不能取代专家对题干与物理假设的独立审阅。
+scripts/build.py --check 用于检查单题源合法性、ID/字段、题目精确去重以及工作区已生成的总册与索引是否同步（首次运行先执行 `scripts/build.py`）；不能代替独立物理审核。scripts/check_physics.py 现为48道题分别设置了至少一项代数或数值一致性检查；前36题的既有检验有历史结果，新12题的公式表达式已单独核算，但完整CI执行尚待成功。此类核对不能取代专家对题干与物理假设的独立审阅。
 
 最新PDF由 GitHub Actions 构建；旧 pdf/ 目录仍是改模板之前的历史PDF。仓库Actions若失败，应据具体步骤日志定位；若作业在运行任何步骤前即失败，则不能归咎于具体 LaTeX 源码。
 

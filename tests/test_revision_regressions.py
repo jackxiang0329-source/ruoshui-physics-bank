@@ -8,7 +8,7 @@ import sympy as sp
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / 'scripts'))
-from build import load_bank, check
+from build import load_bank, check, render
 from check_review import validate as validate_reviews
 
 
@@ -65,8 +65,8 @@ class ReplacementRegressionTests(unittest.TestCase):
         self.assertEqual((sp.Rational(1,4))/(sp.Rational(1,2)), sp.Rational(1,2))
 
     def test_answer_master_and_index_include_revised_titles(self):
-        qbook = (ROOT / 'tex' / 'questions.tex').read_text(encoding='utf-8')
-        sbook = (ROOT / 'tex' / 'solutions.tex').read_text(encoding='utf-8')
+        qbook = render(list(self.data.values()), False, ROOT / 'tex', ROOT)
+        sbook = render(list(self.data.values()), True, ROOT / 'tex', ROOT)
         import csv
         with (ROOT / 'data' / 'index.csv').open(encoding='utf-8-sig', newline='') as f:
             index = {r['id']: r for r in csv.DictReader(f)}

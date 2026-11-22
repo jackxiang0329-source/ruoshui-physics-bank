@@ -128,8 +128,8 @@ class BankTests(unittest.TestCase):
             self.assertTrue(errors,msg='Audit missed '+changed)
 
     def test_master_metadata_and_answer_drift_is_detected(self):
-        qbook=(ROOT/'tex'/'questions.tex').read_text(encoding='utf-8')
-        sbook=(ROOT/'tex'/'solutions.tex').read_text(encoding='utf-8')
+        qbook=render(self.items,False,ROOT/'tex',ROOT)
+        sbook=render(self.items,True,ROOT/'tex',ROOT)
         self.assertEqual([], verify_master_metadata(self.items,qbook,sbook))
         item=self.items[0]
         broken_question=qbook.replace(item['title'],'题名意外改动',1)

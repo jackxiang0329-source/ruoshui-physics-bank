@@ -12,7 +12,7 @@ import re
 import sys
 from pathlib import Path
 
-from build import ROOT, TOPICS, load_bank, check, escape
+from build import ROOT, TOPICS, load_bank, check, escape, render
 
 
 def verify_index_metadata(rows, problems):
@@ -78,10 +78,8 @@ def audit(root=ROOT, minimum=100):
 
     for filename,fragment in [('questions.tex','question'),('solutions.tex','solution')]:
         path=root/'tex'/filename
-        if not path.is_file():
-            errors.append('缺失总册: '+filename)
-            continue
-        text=path.read_text(encoding='utf-8')
+        text=(path.read_text(encoding='utf-8') if path.is_file() else
+              render(problems, fragment=='solution', root/'tex', root))
         refs=re.findall(
             r'\\input\{\.\./bank/([METWOQ]\d{3,5})/'+fragment+r'\.tex\}',text)
         if len(refs)!=len(known) or set(refs)!=known:
@@ -109,9 +107,10 @@ def audit(root=ROOT, minimum=100):
 
     qbook=root/'tex'/'questions.tex'
     sbook=root/'tex'/'solutions.tex'
-    if qbook.exists() and sbook.exists():
-        errors.extend(verify_master_metadata(
-            problems,qbook.read_text(encoding='utf-8'),sbook.read_text(encoding='utf-8')))
+    errors.extend(verify_master_metadata(
+        problems,
+        qbook.read_text(encoding='utf-8') if qbook.exists() else render(problems,False,root/'tex',root),
+        sbook.read_text(encoding='utf-8') if sbook.exists() else render(problems,True,root/'tex',root)))
 
     source=(root/'scripts'/'check_physics.py').read_text(encoding='utf-8')
     checked=re.findall(r"verify\('([METWOQ]\d{3,5})'",source)

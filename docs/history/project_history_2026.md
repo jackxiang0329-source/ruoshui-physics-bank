@@ -6,13 +6,13 @@
 
 # 三千弱水 · 大学物理高难度综合压轴题库
 
-**主要入口** · [题目源文件](../../bank/) · [题目索引](../../data/index.csv) · [题目合订 TeX](../../tex/questions.tex) · [解答合订 TeX](../../tex/solutions.tex)
+**主要入口** · [题目源文件](../../bank/) · [题目索引](../../data/index.csv) · [TeX 合订生成说明](../../tex/README.md) · [PDF 工作流](https://github.com/jackxiang0329-source/ruoshui-physics-bank/actions)
 
 主库收录高难度综合压轴题。当前题目索引与第 14 批记录均为 **452 道**。第 14 批新增 50 道，技术校验和两册 XeLaTeX 构建通过，仍待独立专家复核。详见 [第 14 批记录](../../data/rounds/2026-10-29-14.json)。
 
 ## 当前唯一正式题库
 - `bank/ID/meta.json`、`question.tex`、`solution.tex` 为权威源；`data/problems.json` 是可读镜像。
-- `tex/questions.tex`、`tex/solutions.tex` 和 `data/index.csv` 由主库生成。
+- `tex/questions.tex`、`tex/solutions.tex` 在工作区由 `python3 scripts/build.py` 按需生成，不再存入 Git；`data/index.csv` 仍为派生索引。
 - `scripts/check_difficulty_gate.py` 检查准入；`scripts/build.py --check` 检查结构与生成内容。
 - 新增题必须达到 4/5 或 5/5、至少40分钟、至少四个递进小问和三个交叉知识标签，并有完整推导。详见 [标准](../policies/high_difficulty_policy.md)。
 
