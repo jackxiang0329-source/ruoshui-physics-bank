@@ -96,10 +96,13 @@
       "number": 5,
       "title": "刚体的转动",
       "volume": "V1",
-      "status": "not_started",
-      "verified_exercise_count": 0,
-      "question_file": null,
-      "solution_file": null
+      "status": "all_chapter_end_exercises_transcribed_pending_figure_and_expert_review",
+      "verified_exercise_count": 28,
+      "question_file": "chapters/05/questions.tex",
+      "solution_file": "chapters/05/solutions.tex",
+      "chapter_end_exercise_number": "5.28",
+      "all_printed_end_exercises_transcribed": true,
+      "thought_questions_checked": false
     },
     {
       "number": 6,
@@ -183,10 +186,13 @@
       "number": 14,
       "title": "静电场中的导体",
       "volume": "V2",
-      "status": "not_started",
-      "verified_exercise_count": 0,
-      "question_file": null,
-      "solution_file": null
+      "status": "all_chapter_end_exercises_transcribed_pending_figure_and_expert_review",
+      "verified_exercise_count": 14,
+      "question_file": "chapters/14/questions.tex",
+      "solution_file": "chapters/14/solutions.tex",
+      "chapter_end_exercise_number": "14.14",
+      "all_printed_end_exercises_transcribed": true,
+      "thought_questions_checked": false
     },
     {
       "number": 15,
@@ -3999,10 +4005,903 @@
         "Bohr_classical_quantum_model"
       ],
       "notes": null
+    },
+    {
+      "source_problem_number": "5.1",
+      "canonical_id": "ZS4-05-001",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        185
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_mapping_status": "pending_exact_page_verification",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "initial_angular_velocity_not_explicitly_zero"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "5.2",
+      "canonical_id": "ZS4-05-002",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        185,
+        186
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_mapping_status": "pending_exact_page_verification",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [],
+      "notes": null
+    },
+    {
+      "source_problem_number": "5.3",
+      "canonical_id": "ZS4-05-003",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        186
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_mapping_status": "pending_exact_page_verification",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "use_day_and_year_conversion"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "5.4",
+      "canonical_id": "ZS4-05-004",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        186
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_mapping_status": "pending_exact_page_verification",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": true,
+      "risk_flags": [
+        "figure_dependency",
+        "earth_rotation_axis_vs_center"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "5.5",
+      "canonical_id": "ZS4-05-005",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        186
+      ],
+      "supplement_pdf_pages": [
+        81
+      ],
+      "supplement_mapping_status": "located_by_original_number_in_companion_scan; not_expert_reviewed",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": true,
+      "risk_flags": [
+        "figure_dependency",
+        "full_HOH_angle_theta_not_half_angle"
+      ],
+      "notes": "Original theta is full HOH bond angle 104.91 deg, not 52.46 deg single semi-angle, corroborated by companion p81."
+    },
+    {
+      "source_problem_number": "5.6",
+      "canonical_id": "ZS4-05-006",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        186
+      ],
+      "supplement_pdf_pages": [
+        81
+      ],
+      "supplement_mapping_status": "located_by_original_number_in_companion_scan; not_expert_reviewed",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "printed_C60_diameter_71nm_physically_suspect",
+        "companion_6_12e_minus21_vs_textbook_6_21e_minus21_J"
+      ],
+      "notes": "Textbook and companion printed 71 nm although C60 molecular diameter physically near 0.71 nm. Textbook Ek=6.21e-21 J; companion p81 Ek=6.12e-21J; both are preserved in solution."
+    },
+    {
+      "source_problem_number": "5.7",
+      "canonical_id": "ZS4-05-007",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        186
+      ],
+      "supplement_pdf_pages": [
+        81
+      ],
+      "supplement_mapping_status": "located_by_original_number_in_companion_scan; not_expert_reviewed",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [],
+      "notes": null
+    },
+    {
+      "source_problem_number": "5.8",
+      "canonical_id": "ZS4-05-008",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        186
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_mapping_status": "pending_exact_page_verification",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": true,
+      "risk_flags": [
+        "figure_dependency",
+        "rod_length_between_sphere_surfaces"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "5.9",
+      "canonical_id": "ZS4-05-009",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        187
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_mapping_status": "pending_exact_page_verification",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [],
+      "notes": null
+    },
+    {
+      "source_problem_number": "5.10",
+      "canonical_id": "ZS4-05-010",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        187
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_mapping_status": "pending_exact_page_verification",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": true,
+      "risk_flags": [
+        "figure_dependency",
+        "eccentric_hole_parallel_axis"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "5.11",
+      "canonical_id": "ZS4-05-011",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        187
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_mapping_status": "pending_exact_page_verification",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": true,
+      "risk_flags": [
+        "figure_dependency",
+        "kinetic_vs_static_friction_start"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "5.12",
+      "canonical_id": "ZS4-05-012",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        187
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_mapping_status": "pending_exact_page_verification",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [],
+      "notes": null
+    },
+    {
+      "source_problem_number": "5.13",
+      "canonical_id": "ZS4-05-013",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        187
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_mapping_status": "pending_exact_page_verification",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [],
+      "notes": null
+    },
+    {
+      "source_problem_number": "5.14",
+      "canonical_id": "ZS4-05-014",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        187
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_mapping_status": "pending_exact_page_verification",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": true,
+      "risk_flags": [
+        "figure_dependency",
+        "motor_work_twice_disc_kinetic"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "5.15",
+      "canonical_id": "ZS4-05-015",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        187
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_mapping_status": "pending_exact_page_verification",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "mechanical_energy_not_conserved"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "5.16",
+      "canonical_id": "ZS4-05-016",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        187
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_mapping_status": "pending_exact_page_verification",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": true,
+      "risk_flags": [
+        "figure_dependency",
+        "bullet_inelastic_collision_before_swing"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "5.17",
+      "canonical_id": "ZS4-05-017",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        187
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_mapping_status": "pending_exact_page_verification",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [],
+      "notes": null
+    },
+    {
+      "source_problem_number": "5.18",
+      "canonical_id": "ZS4-05-018",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        188
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_mapping_status": "pending_exact_page_verification",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "inelastic_collision_rotational_angular_momentum"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "5.19",
+      "canonical_id": "ZS4-05-019",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        188
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_mapping_status": "pending_exact_page_verification",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "relative_vs_inertial_astronaut_speed"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "5.20",
+      "canonical_id": "ZS4-05-020",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        188
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_mapping_status": "pending_exact_page_verification",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "uniform_sun_and_period_assumptions"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "5.21",
+      "canonical_id": "ZS4-05-021",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        188
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_mapping_status": "pending_exact_page_verification",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "constant_energy_loss_not_constant_angular_deceleration"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "5.22",
+      "canonical_id": "ZS4-05-022",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        188
+      ],
+      "supplement_pdf_pages": [
+        88
+      ],
+      "supplement_mapping_status": "located_by_original_number_in_companion_scan; not_expert_reviewed",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "companion_2004_electricity_7_3e18J_labeled_kW",
+        "historical_generation_reference"
+      ],
+      "notes": "Companion p88 uses China 2004 electricity 7.3e18 energy units in numerical ratio ≈11, but printed text incorrectly marks kW; model uses joules."
+    },
+    {
+      "source_problem_number": "5.23",
+      "canonical_id": "ZS4-05-023",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        188,
+        189
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_mapping_status": "pending_exact_page_verification",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "white_dwarf_no_mass_loss"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "5.24",
+      "canonical_id": "ZS4-05-024",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        189
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_mapping_status": "pending_exact_page_verification",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [],
+      "notes": null
+    },
+    {
+      "source_problem_number": "5.25",
+      "canonical_id": "ZS4-05-025",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        189
+      ],
+      "supplement_pdf_pages": [
+        90
+      ],
+      "supplement_mapping_status": "located_by_original_number_in_companion_scan; not_expert_reviewed",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": true,
+      "risk_flags": [
+        "figure_dependency",
+        "rolling_without_slip_required_static_friction"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "5.26",
+      "canonical_id": "ZS4-05-026",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        189
+      ],
+      "supplement_pdf_pages": [
+        90,
+        91
+      ],
+      "supplement_mapping_status": "located_by_original_number_in_companion_scan; not_expert_reviewed",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": true,
+      "risk_flags": [
+        "figure_dependency",
+        "string_roll_constraint_and_hand_acceleration"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "5.27",
+      "canonical_id": "ZS4-05-027",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        189
+      ],
+      "supplement_pdf_pages": [
+        91
+      ],
+      "supplement_mapping_status": "located_by_original_number_in_companion_scan; not_expert_reviewed",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": true,
+      "risk_flags": [
+        "figure_dependency",
+        "precession_sin23_5"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "5.28",
+      "canonical_id": "ZS4-05-028",
+      "volume": "V1",
+      "textbook_pdf_pages": [
+        189
+      ],
+      "supplement_pdf_pages": [
+        91,
+        92
+      ],
+      "supplement_mapping_status": "located_by_original_number_in_companion_scan; not_expert_reviewed",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "right_left_torque_sign_requires_spin_orientation"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "14.1",
+      "canonical_id": "ZS4-14-001",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        74
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_mapping_status": "pending_exact_page_verification",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "local_plane_charge_decomposition"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "14.2",
+      "canonical_id": "ZS4-14-002",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        74
+      ],
+      "supplement_pdf_pages": [],
+      "supplement_mapping_status": "pending_exact_page_verification",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "grounding_reference_and_outer_shell_total_charge"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "14.3",
+      "canonical_id": "ZS4-14-003",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        74
+      ],
+      "supplement_pdf_pages": [
+        221,
+        222
+      ],
+      "supplement_mapping_status": "located_by_original_number_in_companion_scan; not_expert_reviewed",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "sequential_grounding_order"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "14.4",
+      "canonical_id": "ZS4-14-004",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        74
+      ],
+      "supplement_pdf_pages": [
+        222
+      ],
+      "supplement_mapping_status": "located_by_original_number_in_companion_scan; not_expert_reviewed",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "image_charge_only_for_grounded_sphere"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "14.5",
+      "canonical_id": "ZS4-14-005",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        74
+      ],
+      "supplement_pdf_pages": [
+        222,
+        223
+      ],
+      "supplement_mapping_status": "located_by_original_number_in_companion_scan; not_expert_reviewed",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": true,
+      "risk_flags": [
+        "figure_dependency",
+        "parallel_plate_three_layers_5cm_3cm"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "14.6",
+      "canonical_id": "ZS4-14-006",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        74
+      ],
+      "supplement_pdf_pages": [
+        223
+      ],
+      "supplement_mapping_status": "located_by_original_number_in_companion_scan; not_expert_reviewed",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": true,
+      "risk_flags": [
+        "figure_dependency",
+        "cavity_centering_and_far_field"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "14.7",
+      "canonical_id": "ZS4-14-007",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        74
+      ],
+      "supplement_pdf_pages": [
+        223,
+        224
+      ],
+      "supplement_mapping_status": "located_by_original_number_in_companion_scan; not_expert_reviewed",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "self_field_exclusion_for_surface_pressure"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "14.8",
+      "canonical_id": "ZS4-14-008",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        74,
+        75
+      ],
+      "supplement_pdf_pages": [
+        224
+      ],
+      "supplement_mapping_status": "located_by_original_number_in_companion_scan; not_expert_reviewed",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "insulating_belt_field_sigma_over_2epsilon",
+        "width_speed_single_face"
+      ],
+      "notes": "Insulating belt E=sigma/(2 eps), as derived companion p224, NOT conductor E=sigma/eps."
+    },
+    {
+      "source_problem_number": "14.9",
+      "canonical_id": "ZS4-14-009",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        75
+      ],
+      "supplement_pdf_pages": [
+        224,
+        225
+      ],
+      "supplement_mapping_status": "located_by_original_number_in_companion_scan; not_expert_reviewed",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "infinite_grounded_plane_image_charge"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "14.10",
+      "canonical_id": "ZS4-14-010",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        75
+      ],
+      "supplement_pdf_pages": [
+        225
+      ],
+      "supplement_mapping_status": "located_by_original_number_in_companion_scan; not_expert_reviewed",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "factor_two_image_work_energy"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "14.11",
+      "canonical_id": "ZS4-14-011",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        75
+      ],
+      "supplement_pdf_pages": [
+        225
+      ],
+      "supplement_mapping_status": "located_by_original_number_in_companion_scan; not_expert_reviewed",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": true,
+      "risk_flags": [
+        "figure_dependency",
+        "surface_flux_disk_half_charge"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "14.12",
+      "canonical_id": "ZS4-14-012",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        75
+      ],
+      "supplement_pdf_pages": [
+        226
+      ],
+      "supplement_mapping_status": "located_by_original_number_in_companion_scan; not_expert_reviewed",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "line_charge_image_infinite_plane"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "14.13",
+      "canonical_id": "ZS4-14-013",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        75
+      ],
+      "supplement_pdf_pages": [
+        226
+      ],
+      "supplement_mapping_status": "located_by_original_number_in_companion_scan; not_expert_reviewed",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "drop_mass_not_specified",
+        "companion_one_gram_drop_inconsistent_units",
+        "number_density_model"
+      ],
+      "notes": "Original specifies no water-drop mass; independent calculation assumes 0.05 g. Companion p226 assumes 1cm³ (1g) and displays inconsistent potential calculation; under audit."
+    },
+    {
+      "source_problem_number": "14.14",
+      "canonical_id": "ZS4-14-014",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        75
+      ],
+      "supplement_pdf_pages": [
+        226
+      ],
+      "supplement_mapping_status": "located_by_original_number_in_companion_scan; not_expert_reviewed",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "independent_derivation_with_specific_source_model_caveats; not_peer_reviewed",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "surface_pressure_hemisphere_integration"
+      ],
+      "notes": null
     }
   ],
   "progress": {
-    "verified_questions": 174,
+    "verified_questions": 216,
     "volumes_started": [
       "V1",
       "V2"
@@ -4011,20 +4910,22 @@
     "complete": false,
     "total_exercise_count": "not_yet_counted_from_full_scans",
     "chapter_1_end_exercises_transcribed": true,
-    "note": "174 candidate exercises and 174 independently authored solutions across six complete chapter-end sets: 1(26),2(28),3(24),4(28),12(34),13(34). Figure redrawing, precise new companion pages, thought questions, expert review and copyright permissions outstanding.",
-    "last_completed_exercise_V1": "4.28",
-    "next_to_transcribe_V1": "5.1",
-    "next_to_transcribe_V2": "14.1",
-    "quality_summary": "Source scans re-opened and TeX solutions independently derived; no claim of professional peer review. GitHub Actions XeLaTeX and check status depends on latest head.",
+    "note": "216 candidate exercise/solution pairs across eight chapter-end sets: 1(26),2(28),3(24),4(28),5(28),12(34),13(34),14(14). Remaining textbook chapters and thought questions incomplete; all review statuses pending.",
+    "last_completed_exercise_V1": "5.28",
+    "next_to_transcribe_V1": "6.1",
+    "next_to_transcribe_V2": "15.1",
+    "quality_summary": "Source scans verified for original question numbering; 42 new independent derivations written but none peer reviewed. Figure redraw, precise companion mapping, licensing and physics review still pending.",
     "chapter_2_end_exercises_transcribed": true,
     "chapter_3_end_exercises_transcribed": true,
     "chapter_12_end_exercises_transcribed": true,
-    "last_completed_exercise_V2": "13.34",
+    "last_completed_exercise_V2": "14.14",
     "supplement_pdf_page_mappings_new_batch": 55,
-    "supplement_mapping_note": "Of 62 new exercises, 24 were individually mapped to companion PDF pages from scanned exercise numbers (chapter 4: 4.9,4.10,4.12–4.16; chapter 13: 13.18–13.34). Other 38 remain pending exact mapping. Mapping not equivalent to academic review.",
+    "supplement_mapping_note": "Of 42 new entries, 20 have exact scanned companion PDF page locators, 22 pending. Page mapping does not equal completed line-by-line answer review.",
     "chapter_4_end_exercises_transcribed": true,
     "chapter_13_end_exercises_transcribed": true,
-    "supplement_pdf_page_mappings_current_batch": 24
+    "supplement_pdf_page_mappings_current_batch": 20,
+    "chapter_5_end_exercises_transcribed": true,
+    "chapter_14_end_exercises_transcribed": true
   },
   "editorial_policies": {
     "dedupe_key": "source edition + chapter + original problem number",
