@@ -15,7 +15,7 @@ class OrganizationTests(unittest.TestCase):
         self.assertEqual(localize.original("# PREF-00001 · conceptual\n\nQuestion.\n\n---\nSource: X"),"Question.")
 
     def test_chapter_map(self):
-        t=json.loads((ROOT/"taxonomy/physics_taxonomy.json").read_text(encoding="utf-8"))
+        t=json.loads((ROOT/"data/taxonomy/physics_taxonomy.json").read_text(encoding="utf-8"))
         self.assertEqual(28,len(t["refresher_lessons"]))
         self.assertEqual(28,len({x["source_path"] for x in t["refresher_lessons"]}))
 
@@ -31,13 +31,13 @@ class OrganizationTests(unittest.TestCase):
     def test_drafts_and_full_index(self):
         a=localize.create(ROOT)
         self.assertGreaterEqual(a["translated_drafts"],88)
-        self.assertEqual(a["translated_drafts"],len(json.loads((ROOT/"localization/zh_CN/translations.json").read_text(encoding="utf-8"))["entries"])+len(json.loads((ROOT/"localization/zh_CN/translations.json").read_text(encoding="utf-8"))["additional_entries"]))
+        self.assertEqual(a["translated_drafts"],len(json.loads((ROOT/"data/localization/zh_CN/translations.json").read_text(encoding="utf-8"))["entries"])+len(json.loads((ROOT/"data/localization/zh_CN/translations.json").read_text(encoding="utf-8"))["additional_entries"]))
         self.assertGreaterEqual(a["translated_drafts"],120)
         self.assertEqual(a["per_question_files"],0)
         self.assertEqual(a["consolidated_books"],len(a["files"]))
-        self.assertIn("CP-00898",(ROOT/"localized/zh_CN/合订/thermodynamics.md").read_text(encoding="utf-8"))
-        self.assertIn("IP-0021",(ROOT/"localized/zh_CN/合订/mechanics.md").read_text(encoding="utf-8"))
-        self.assertFalse((ROOT/"localized/zh_CN/mechanics/supplementary/IP-0021.md").exists())
+        self.assertIn("CP-00898",(ROOT/"data/localized/zh_CN/合订/thermodynamics.md").read_text(encoding="utf-8"))
+        self.assertIn("IP-0021",(ROOT/"data/localized/zh_CN/合订/mechanics.md").read_text(encoding="utf-8"))
+        self.assertFalse((ROOT/"data/localized/zh_CN/mechanics/supplementary/IP-0021.md").exists())
         b=catalog.generate(ROOT)
         self.assertGreaterEqual(b["candidate_total"],17000)
         self.assertEqual(a["translated_drafts"],b["translated_drafts"])

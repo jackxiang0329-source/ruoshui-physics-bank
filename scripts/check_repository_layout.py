@@ -46,6 +46,38 @@ def main() -> None:
             if len(parts) != 3 or (parts[2] not in EXCEPTIONS and not ARCHIVE.fullmatch(parts[2])):
                 errors.append("bundle naming: " + path)
 
+    # Keep the repository homepage focused on eight stable functional folders.
+    allowed_top_folders = {".github", "bank", "data", "docs", "external_sources",
+                           "scripts", "tests", "tex"}
+    actual_top_folders = {p.split("/", 1)[0] for p in tracked if "/" in p}
+    if actual_top_folders != allowed_top_folders:
+        errors.append(f"unexpected repository root folders: {sorted(actual_top_folders ^ allowed_top_folders)}")
+
+    moved_required = (
+        "data/localization/zh_CN/translations.json",
+        "data/localization/zh_CN/术语表.md",
+        "data/localized/zh_CN/合订/README.md",
+        "data/localized/zh_CN/中文译稿报告.json",
+        "data/taxonomy/physics_taxonomy.json",
+        "data/qa/README.md",
+    )
+    for path in moved_required:
+        if path not in tracked or not (ROOT / path).is_file():
+            errors.append("missing consolidated data file: " + path)
+    report_path = ROOT / "data/localized/zh_CN/中文译稿报告.json"
+    if report_path.is_file():
+        report = json.loads(report_path.read_text(encoding="utf-8"))
+        refs = report.get("book_index", {})
+        if report.get("translated_drafts") != len(refs):
+            errors.append("bilingual index count differs from unique translated IDs")
+        for uid, ref in refs.items():
+            text_path, sep, anchor = ref.partition("#")
+            if not sep or anchor != uid.lower() or not text_path.startswith("data/localized/zh_CN/合订/"):
+                errors.append(f"incorrect new bilingual source path: {uid}")
+                continue
+            if not (ROOT / text_path).is_file():
+                errors.append(f"missing consolidated bilingual book for {uid}")
+
     # This is intentionally an audit of names, not a quota or evidence of academic approval.
     b = {}
     for p in tracked:
@@ -76,6 +108,7 @@ def main() -> None:
     for p in tracked:
         if not (p == "README.md" or p == "external_sources/README.md"
                 or p == "external_sources/catalog_index.md"
+                or p in ("data/README.md", "data/qa/README.md", "data/localized/zh_CN/合订/README.md")
                 or p.startswith("docs/") and p.endswith(".md")
                 or p.startswith("external_sources/_bundles/") and p.endswith(".md")):
             continue
