@@ -7,7 +7,7 @@
 | 规范与质量门禁 | [`policies/`](policies/) | [命名规则](policies/repository_naming.md)、[高难准入](policies/high_difficulty_policy.md)、[六轮质检](policies/qa_protocol.md)、[翻译规范](policies/translation_catalog_policy.md) |
 | 使用与操作 | [`guides/`](guides/) | [LaTeX 架构](guides/tex_architecture.md)、[组卷](guides/exam_assembly.md)、[外部导入](guides/college_physics_import.md) |
 | 审核和统计 | [`reports/`](reports/) | [覆盖情况](reports/coverage_report.md)、[来源审计](reports/college_corpus_audit.md)、[历史过滤报告](reports/legacy_filter_report.json) |
-| 批次及项目历史 | [`history/`](history/) | [2026 历史记录](history/project_history_2026.md)、[第 12 轮工作记录](history/round_12_worklog.md) |
+| 批次及项目历史 | [`history/`](history/) | [2026 历史记录与早期批次工作原稿](history/project_history_2026.md) |
 | 逐题复核记录 | [`reviews/`](reviews/) | [第一轮初筛](reviews/round_01_triage.md)、[独立复算](reviews/round_01_independent_derivations.md) |
 | 外部参考书目 | [`references/`](references/) | [教材来源清单](references/textbook_references.md) |
 
