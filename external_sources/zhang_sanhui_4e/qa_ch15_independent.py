@@ -46,14 +46,14 @@ def main():
     assert len(CASES) == 30
     assert [n for n, _, _ in CASES] == list(range(1, 31))
     for number, compute, reference in CASES:
-        tag = rf"\paragraph{{习题 {ch}.{number}}}"
+        tag = rf"\paragraph{{习题 {CHAPTER}.{number}}}"
         if tag not in q or tag not in s:
-            raise AssertionError(f"Missing previously transcribed candidate {ch}.{number}")
+            raise AssertionError(f"Missing previously transcribed candidate {CHAPTER}.{number}")
         obtained, expected = compute(), reference()
         if not (math.isfinite(obtained) and math.isfinite(expected) and
                 math.isclose(obtained, expected, rel_tol=0.025,
                              abs_tol=1e-12 if expected == 0 else 0)):
-            raise AssertionError(f"{ch}.{number}: {obtained!r} vs {expected!r}")
+            raise AssertionError(f"{CHAPTER}.{number}: {obtained!r} vs {expected!r}")
     print("PASS chapter 15: 30 candidate model/physical-identity checks")
     print("Source PDF revalidation: NOT DONE; new original exercises: 0")
 
