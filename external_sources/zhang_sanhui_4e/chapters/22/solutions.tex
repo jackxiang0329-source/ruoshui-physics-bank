@@ -1,0 +1,338 @@
+% 第22章《光的干涉》23道原书编号章末习题，独立推导候选解析。
+% V2主PDF262--264，S辅导PDF312--318。原图、专家物理审核仍待办理。
+\section*{第22章\quad 光的干涉：独立解析}
+
+\paragraph{习题 22.1}
+波列长度 \(L=c\tau\)，周期数 \(N=L/\lambda\)，故
+\[
+\boxed{N=\frac{c\tau}{\lambda}
+=\frac{(2.998\times10^8)(10^{-8})}{589.3\times10^{-9}}
+\simeq5.09\times10^6}.
+\]
+这里的波数指波列中完整周期个数，而非角波数 \(2\pi/\lambda\)。
+
+\paragraph{习题 22.2}
+傍轴双缝的相邻明纹间距
+\(\Delta x=D\lambda/d\)，故
+\[
+\boxed{\lambda=\frac{d\Delta x}{D}
+=\frac{(.60\times10^{-3})(2.27\times10^{-3})}{2.5}
+=5.448\times10^{-7}\,\mathrm m\simeq545\,\mathrm{nm}}.
+\]
+这是绿色光，与汞灯546.1\,nm绿色谱线吻合到测量精度。
+
+\paragraph{习题 22.3}
+镜面虚像源 \(S'\) 位于镜下2\,mm，与实源相隔
+\(d=2h=4\,\mathrm{mm}\)。屏到源投影距离
+\(D=20+30=50\,\mathrm{cm}\)，不是仅镜长30\,cm。
+镜面反射多出相对相位 \(\pi\)，所以镜面延长线
+为\emph{暗纹}；第一明纹的垂直位移是普通明纹间距的一半：
+\[
+\boxed{x_1=\frac{D\lambda}{2d}
+=\frac{(.50)(7.2\times10^{-7})}{2(.004)}
+=4.5\times10^{-5}\,\mathrm m=45\,\mathrm{\mu m}}.
+\]
+图22.33的镜面有限长度会限制条纹可见范围，
+本推导取傍轴虚光源近似。
+
+\paragraph{习题 22.4}
+第1到第10级明纹之间有 \(10-1=9\) 个间距：
+\(\Delta x=36\,\mathrm{mm}/9=4.0\,\mathrm{mm}\)，
+\[
+\boxed{\lambda=\frac{d\Delta x}D
+=\frac{(.15\times10^{-3})(4.0\times10^{-3})}{1}
+=6.0\times10^{-7}\,\mathrm m=600\,\mathrm{nm}}.
+\]
+
+\paragraph{习题 22.5}
+令从东方向向北偏的夹角为 \(\theta\)，
+两发射台间距 \(d=3000\,\mathrm m\)，波长
+\(\lambda=c/f\simeq1500\,\mathrm m\)。
+按图中南台相位落后北台 \(\pi/2\)，
+远场的相位差（取原书方位约定）
+\[
+\Delta\phi=2\pi\frac{d\sin\theta}{\lambda}+\frac\pi2.
+\]
+相长干涉要求 \(2\pi m\)，故
+\[
+\sin\theta=\frac{\lambda}{d}(m-\tfrac14)
+=\tfrac12m-\tfrac18.
+\]
+由 \(|\sin\theta|\le1\)，整数
+\(m=-1,0,1,2\)，得到
+\[
+\boxed{\theta=-38.7^\circ,\ -7.18^\circ,\
+22.0^\circ,\ 61.0^\circ\ \text{(约)}}.
+\]
+这是向东半平面的四支；向西半平面对应镜像射线。
+反转初始相位差的符号会反转有向角，故必须记载台站相位先后。
+
+\paragraph{习题 22.6}
+相邻静区中心对应两源路程差改变一波长。
+在傍轴近似下 \(\lambda=d\Delta x/D\)：
+\[
+\lambda=\frac{12\times4.5}{50}\,\mathrm{cm}=1.08\,\mathrm{cm},
+\qquad
+\boxed{f=\frac{u}{\lambda}
+=\frac{25}{1.08}\,\mathrm{Hz}
+\simeq23.1\,\mathrm{Hz}}.
+\]
+
+\paragraph{习题 22.7}
+入射斜光先给两缝引入 \(d\sin\varphi\)
+的初始光程差；向 \(\theta\) 方向出射再引入
+\(d\sin\theta\)。相对净光程差
+\(\Delta=d(\sin\theta-\sin\varphi)\)，
+因此
+\[
+\boxed{d\sin\theta-d\sin\varphi=m\lambda,\ m\in\mathbb Z}.
+\]
+小角度 \(\sin\theta\simeq\theta\) 时，
+\(\theta_m\simeq\sin\varphi+m\lambda/d\)，
+故
+\[
+\boxed{\Delta\theta=\theta_{m+1}-\theta_m\simeq\lambda/d},
+\]
+与 \(\varphi\) 无关。严格局部微分近似应为
+\(\lambda/(d\cos\theta)\)，仅小 \(\theta\) 可忽略该因子。
+
+\paragraph{习题 22.8}
+直接波与海面镜面反射波的几何光程差为
+\(\Delta l\simeq2h\sin\theta\)，
+理想海面反射产生额外相位 \(\pi\)。
+相消时
+\[
+\frac{2\pi}{\lambda}(2h\sin\theta)+\pi
+=(2m+1)\pi
+\quad\Longrightarrow\quad
+2h\sin\theta=m\lambda.
+\]
+排除 \(m=0\) 的零掠射角后，最小正解取 \(m=1\)：
+\[
+\boxed{\theta_{\min}=\arcsin\frac{c}{2hf}
+=\arcsin\frac{2.998\times10^8}{2(25)(6.0\times10^7)}
+\simeq5.74^\circ}.
+\]
+海水非理想反射系数依偏振和入射角变化；
+该结果限原图所用镜面模型。
+
+\paragraph{习题 22.9}
+两缝等振幅时
+\(I(\theta)=I_{\max}\cos^2(\delta/2)\)，
+\(\delta=2\pi d\sin\theta/\lambda\)。
+半峰值处 \(\cos^2(\delta/2)=1/2\)，
+在中心两侧 \(\delta=\pm\pi/2\)，
+即 \(\theta_{\pm}\simeq\pm\lambda/(4d)\)。
+于是两侧\emph{半峰值之间的全宽}
+\[
+\boxed{\Delta\theta_{\rm FWHM}
+=\theta_+-\theta_-\simeq\frac{\lambda}{2d}}.
+\]
+若把单侧偏移称半宽，则应为 \(\lambda/(4d)\)；
+本题按原书给出的两个半峰值角间隔解释。
+
+\paragraph{习题 22.10}
+图22.35两叠加平面波的相邻等相位线
+在屏上的投影距离 \(\Delta x\)
+满足 \(\Delta x\cos45^\circ=\lambda\)：
+\[
+\boxed{\Delta x=\frac{632.8\,\mathrm{nm}}{\cos45^\circ}
+\simeq895\,\mathrm{nm}}.
+\]
+叠加振幅 \(A_1:A_2=2:1\)，亮暗峰值强度
+分别 \(\propto(A_1+A_2)^2\)、\(\propto(A_1-A_2)^2\)。
+因此
+\[
+\boxed{V=\frac{I_{\max}-I_{\min}}{I_{\max}+I_{\min}}
+=\frac{2A_1A_2}{A_1^2+A_2^2}
+=\frac45=0.80}.
+\]
+图示是特殊倾角平面波，不可误用普通双缝纹距公式。
+
+\paragraph{习题 22.11}
+用谱宽反比的数量级定义
+\[
+\boxed{\tau_c\simeq(\Delta\nu)^{-1}
+=\frac1{1.3\times10^9}
+\simeq7.69\times10^{-10}\,\mathrm s},
+\quad
+\boxed{L_c\simeq c\tau_c\simeq0.231\,\mathrm m}.
+\]
+具体线型与谱宽定义可影响系数；此处与教材取法一致，
+不代表所有激光器精确相干函数均满足等号。
+
+\paragraph{习题 22.12}
+太阳作为角宽约 \(\alpha=10^{-2}\,\mathrm{rad}\)
+的扩展非相干光源，各方向入射角跨过 \(\alpha\)
+引起双缝相差量级 \(d\alpha\)。
+干涉仍有可见度需 \(d\alpha\lesssim\lambda\)：
+\[
+\boxed{d_{\max}\sim\frac{\lambda}{\alpha}
+=\frac{550\times10^{-9}}{10^{-2}}
+=5.5\times10^{-5}\,\mathrm m=55\,\mathrm{\mu m}}.
+\]
+这是空间相干宽度估算，不是严格绝对截止阈值。
+
+\paragraph{习题 22.13}
+玻璃替代原来等长的空气，在一条缝增加
+\((n-1)h\) 光程。第7级原亮纹移至原零级，
+光程差对应七个波长：
+\[
+(n-1)h=7\lambda,\qquad
+\boxed{h=\frac{7(550\,\mathrm{nm})}{1.58-1}
+\simeq6.64\,\mathrm{\mu m}}.
+\]
+
+\paragraph{习题 22.14}
+空气--SiO\(_2\) 与SiO\(_2\)--Si
+两界面均为从低折射率向高折射率反射，
+两个反射场\emph{均}有 \(\pi\) 相位反转；
+相对反射相位差为零。
+反射暗纹要求
+\[
+2nh=(k+\tfrac12)\lambda,\quad k=0,1,2,\ldots
+\]
+零厚楔尖为亮纹；从此起第7条暗纹 \(k=6\)，
+故
+\[
+\boxed{h=\frac{13\lambda}{4n}
+=\frac{13(589.3\,\mathrm{nm})}{4(1.50)}
+\simeq1.28\,\mathrm{\mu m}}.
+\]
+因上、下反射均有半波损失，
+不能误套空气--玻璃--空气薄膜的暗纹序号。
+
+\paragraph{习题 22.15}
+空气--玻璃--空气上界面反射有半波损失，
+下界面反射无半波损失。
+正入射反射加强
+\(2nh=(k+\frac12)\lambda_{\rm R}\)，
+透射加强 \(2nh=m\lambda_{\rm T}\)。
+由 \(2nh=2(1.50)(0.4)=1.2\,\mathrm{\mu m}\)，
+\[
+\lambda_{\rm R}=\frac{4nh}{2k+1}
+=\frac{2400\,\mathrm{nm}}{2k+1}
+\Longrightarrow\boxed{\lambda_{\rm R}=480\,\mathrm{nm}\ (k=2)}.
+\]
+\[
+\lambda_{\rm T}=\frac{2nh}{m}
+=\frac{1200\,\mathrm{nm}}m
+\Longrightarrow
+\boxed{\lambda_{\rm T}=600\,\mathrm{nm}\ (m=2),\
+400\,\mathrm{nm}\ (m=3)}.
+\]
+采用 \(400\,\mathrm{nm}\) 为可见下限时将其纳入；
+更严格视觉阈值可能归为近紫外边界。忽略色散。
+
+\paragraph{习题 22.16}
+空气--SiO薄膜反射相位变 \(\pi\)，
+SiO--水晶反射无相位反转；
+反射增强最小膜厚是四分之一波厚：
+\[
+\boxed{h_{\min}=\frac{\lambda}{4n_f}
+=\frac{560\,\mathrm{nm}}{4(2.0)}
+=70\,\mathrm{nm}}.
+\]
+真实多层膜的反射率还受界面振幅比影响。
+
+\paragraph{习题 22.17}
+空气--油膜--玻璃的两次反射均在低到高
+折射率界面，\emph{相对}反射相变为零。
+反射消光级次满足
+\[
+2n_oh=(k+\tfrac12)\lambda.
+\]
+相邻两个消光波长 \(\lambda_1=485\,\mathrm{nm}\)
+和 \(\lambda_2=679\,\mathrm{nm}\) 满足
+\((k+\frac12)\lambda_1=(k-\frac12)\lambda_2\)。
+两式消元：
+\[
+\boxed{h=\frac{\lambda_1\lambda_2}
+{2n_o(\lambda_2-\lambda_1)}
+=\frac{(485)(679)}
+{2(1.32)(679-485)}\,\mathrm{nm}
+\simeq643\,\mathrm{nm}}.
+\]
+“再次相消”必须指相邻消光级次；
+否则存在整数倍厚度。
+
+\paragraph{习题 22.18}
+皂膜两侧均为空气，仅在第一次反射有半波
+相位变化。入射角 \(45^\circ\)，
+由Snell定律
+\(n\sin r=\sin45^\circ\)。
+第一个反射亮纹满足
+\(2nh\cos r=\lambda/2\)，因此
+\[
+\boxed{h_{\min}=\frac{500\,\mathrm{nm}}
+{4\sqrt{1.33^2-\sin^245^\circ}}
+\simeq111\,\mathrm{nm}}.
+\]
+法线方向同一膜的增强波长
+\[
+\boxed{\lambda_\perp=4nh
+\simeq4(1.33)(111\,\mathrm{nm})
+\simeq590\,\mathrm{nm}},
+\]
+故约为黄色，而非原斜视方向的绿色。
+
+\paragraph{习题 22.19}
+空气--MgF\(_2\)--玻璃两界面反射
+均有相位变化 \(\pi\)，故使两反射光
+传播相位差为 \(\pi\) 即得到减反条件：
+\[
+\boxed{h_{\min}=\frac{\lambda}{4n_2}
+=\frac{550\,\mathrm{nm}}{4(1.38)}
+\simeq99.6\,\mathrm{nm}}.
+\]
+本膜折射率 \(1.38\) 与理想零反射幅值匹配
+\(\sqrt{1.52}\simeq1.23\) 不同，
+因此此厚度表示尽量相消，并不保证反射率严格为零。
+
+\paragraph{习题 22.20}
+牛顿环相邻明环的平方半径差为 \(R\lambda\)，
+相隔五个级次有
+\(r_{m+5}^2-r_m^2=5R\lambda\)。
+直径 \(d=2r\)，得
+\[
+\boxed{\lambda=\frac{d_{m+5}^2-d_m^2}{20R}
+=\frac{(4.60\times10^{-3})^2-(3.00\times10^{-3})^2}
+{20(1.03)}
+\simeq5.90\times10^{-7}\,\mathrm m
+=590\,\mathrm{nm}}.
+\]
+平方差可消去未知起始级次，故不需判定第几环。
+
+\paragraph{习题 22.21}
+单程玻璃替换空气增加光程
+\((n-1)h\)。迈克耳孙仪同一臂往返各穿一次，
+所以两臂光程差变化为
+\[
+\boxed{\Delta(\mathrm{OPD})=2(n-1)h}.
+\]
+若两臂同时插相同薄片，
+公共增加量不产生相对光程差。
+
+\paragraph{习题 22.22}
+平面反射镜移动 \(\Delta L\) 使往返光程差
+改变 \(2\Delta L\)。每过一条中心干涉纹改变一个波长，
+\[
+N\lambda=2\Delta L,\quad
+\boxed{\lambda=\frac{2(0.3220\times10^{-3})}{1204}
+=5.349\times10^{-7}\,\mathrm m
+=534.9\,\mathrm{nm}}.
+\]
+
+\paragraph{习题 22.23}
+按原书图22.37，两路径分别\emph{单程}穿过两个等长
+气室；充入一室的气体取代真空引入
+\(\Delta(\mathrm{OPD})=(n-1)d\) 的路差。
+当 \(N=98\) 条干涉纹移动，
+\[
+N\lambda=(n-1)d,\qquad
+\boxed{n=1+\frac{N\lambda}{d}
+=1+\frac{98(589.3\times10^{-9})}{.20}
+\simeq1.000289}.
+\]
+若误用22.21那种同一臂往返通过玻璃的系数2，
+会把气体的折射率增量少算一半。
