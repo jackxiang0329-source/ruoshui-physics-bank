@@ -6515,9 +6515,19 @@
       "exam_ready": false,
       "requires_original_figure": false,
       "risk_flags": [
-        "outer_dielectric_first_breakdown"
+        "outer_dielectric_first_breakdown",
+        "same_breakdown_threshold_and_radial_field_domain"
       ],
-      "notes": null
+      "notes": null,
+      "feasibility_deep_review": {
+        "date": "2026-11-22",
+        "status": "conditional_internal_physics_only",
+        "review_type": "independent_candidate_model_only",
+        "original_scan_reopened": false,
+        "expert_review_completed": false,
+        "report": "candidate_audit_feasibility_7.md",
+        "ci_check": "qa_physical_feasibility_v2.py"
+      }
     },
     {
       "source_problem_number": "15.4",
@@ -9043,9 +9053,19 @@
       "requires_original_figure": true,
       "risk_flags": [
         "figure_dependency",
-        "half_infinite_solenoid_mouth_flux_integral_and_r_sqrt2_approximation"
+        "half_infinite_solenoid_mouth_flux_integral_and_r_sqrt2_approximation",
+        "mouth_flux_r0_le_R_div_sqrt2"
       ],
-      "notes": "Half-infinite solenoid mouth flux half/full symmetry; r=sqrt(2)r0 interpretation requires flux tube approximation and independent figure review."
+      "notes": "Half-infinite solenoid mouth flux half/full symmetry; r=sqrt(2)r0 interpretation requires flux tube approximation and independent figure review.",
+      "feasibility_deep_review": {
+        "date": "2026-11-22",
+        "status": "blocked_original_figure_domain_recheck",
+        "review_type": "independent_candidate_model_only",
+        "original_scan_reopened": false,
+        "expert_review_completed": false,
+        "report": "candidate_audit_feasibility_7.md",
+        "ci_check": "qa_physical_feasibility_v2.py"
+      }
     },
     {
       "source_problem_number": "17.12",
@@ -10503,9 +10523,19 @@
       "risk_flags": [
         "figure_dependency",
         "railgun_a_smaller_than_r_source_geometry_check",
-        "railgun_pulse_power_model"
+        "railgun_pulse_power_model",
+        "BLOCKER_cylindrical_rail_radius_exceeds_half_axis_spacing"
       ],
-      "notes": "Original V2 p160-161 quotes F=(mu0 I²/(2pi))ln((a+r)/r), a=1.2cm r=6.7cm, L5m m317g v4.2km/s; candidate I≈4.12MA and average input~2.94e9W @40%. Check original geometrical labeling because a<r."
+      "notes": "Original V2 p160-161 quotes F=(mu0 I²/(2pi))ln((a+r)/r), a=1.2cm r=6.7cm, L5m m317g v4.2km/s; candidate I≈4.12MA and average input~2.94e9W @40%. Check original geometrical labeling because a<r.",
+      "feasibility_deep_review": {
+        "date": "2026-11-22",
+        "status": "blocked_geometrically_impossible_under_axis_spacing_interpretation",
+        "review_type": "independent_candidate_model_only",
+        "original_scan_reopened": false,
+        "expert_review_completed": false,
+        "report": "candidate_audit_feasibility_7.md",
+        "ci_check": "qa_physical_feasibility_v2.py"
+      }
     },
     {
       "source_problem_number": "18.28",
@@ -11396,9 +11426,19 @@
       "requires_original_figure": true,
       "risk_flags": [
         "figure_dependency",
-        "coercive_inner_edge_onset_3_1mA_vs_all_radius_5_0mA"
+        "coercive_inner_edge_onset_3_1mA_vs_all_radius_5_0mA",
+        "coercivity_not_sufficient_for_full_magnetization_reversal"
       ],
-      "notes": "Companion S PDF284 gives 3.1mA by magnetic reversal onset at INNER radius0.25mm, while criterion H>=Hc at entire cross section outer radius0.4mm needs5.03mA. Both physical assumptions explicitly recorded."
+      "notes": "Companion S PDF284 gives 3.1mA by magnetic reversal onset at INNER radius0.25mm, while criterion H>=Hc at entire cross section outer radius0.4mm needs5.03mA. Both physical assumptions explicitly recorded.",
+      "feasibility_deep_review": {
+        "date": "2026-11-22",
+        "status": "conditional_internal_physics_only",
+        "review_type": "independent_candidate_model_only",
+        "original_scan_reopened": false,
+        "expert_review_completed": false,
+        "report": "candidate_audit_feasibility_7.md",
+        "ci_check": "qa_physical_feasibility_v2.py"
+      }
     },
     {
       "source_problem_number": "19.12",
@@ -12540,9 +12580,19 @@
         "single_electron_vs_coherent_bunch",
         "source_companion_arithmetic_21_7_mismatch",
         "steady_current_no_macroscopic_radiation",
-        "figureless_finite_wire_far_field"
+        "figureless_finite_wire_far_field",
+        "BLOCKER_perpetual_coherent_free_electrons_exceed_dc_power_budget"
       ],
-      "notes": "Source companion S PDF303 writes a numerical coherent-sum field not matching straightforward n*pi*(0.0026/2)^2*0.05 * E_single by about two decimal orders. Independent arithmetic gives upper bound E≈6.2e4 V/m, B≈2.1e-4 T (coherent hypothetical), NOT actual DC wire radiation. Need expert reconciliation."
+      "notes": "Source companion S PDF303 writes a numerical coherent-sum field not matching straightforward n*pi*(0.0026/2)^2*0.05 * E_single by about two decimal orders. Independent arithmetic gives upper bound E≈6.2e4 V/m, B≈2.1e-4 T (coherent hypothetical), NOT actual DC wire radiation. Need expert reconciliation.",
+      "feasibility_deep_review": {
+        "date": "2026-11-22",
+        "status": "blocked_unphysical_coherent_steady_current_assumption",
+        "review_type": "independent_candidate_model_only",
+        "original_scan_reopened": false,
+        "expert_review_completed": false,
+        "report": "candidate_audit_feasibility_7.md",
+        "ci_check": "qa_physical_feasibility_v2.py"
+      }
     },
     {
       "source_problem_number": "21.8",
@@ -14554,9 +14604,19 @@
       "risk_flags": [
         "figure_dependency",
         "source_companion_Cassegrain_effective_focal_length_32_vs_60_m",
-        "angular_magnification_160_vs_300_pending_ray_matrix_expert_review"
+        "angular_magnification_160_vs_300_pending_ray_matrix_expert_review",
+        "effective_focal_60m_vs_companion_32m_requires_figures"
       ],
-      "notes": "Companion S348 labels path 14+14+4=32m effective objective focal length and M=160. Paraxial secondary has magnification +3 (virtual object s=-6m, s'=+18m), so true effective angular-to-image focal length f_eff=3*20=60m, M=300 for eye f=.2m. Needs independent ray-transfer-matrix and source figure review."
+      "notes": "Companion S348 labels path 14+14+4=32m effective objective focal length and M=160. Paraxial secondary has magnification +3 (virtual object s=-6m, s'=+18m), so true effective angular-to-image focal length f_eff=3*20=60m, M=300 for eye f=.2m. Needs independent ray-transfer-matrix and source figure review.",
+      "feasibility_deep_review": {
+        "date": "2026-11-22",
+        "status": "blocked_original_figure_and_source_answer_recheck",
+        "review_type": "independent_candidate_model_only",
+        "original_scan_reopened": false,
+        "expert_review_completed": false,
+        "report": "candidate_audit_feasibility_7.md",
+        "ci_check": "qa_physical_feasibility_v2.py"
+      }
     },
     {
       "source_problem_number": "26.1",
@@ -16729,9 +16789,19 @@
       "exam_ready": false,
       "requires_original_figure": false,
       "risk_flags": [
-        "COMPANION_0p42Ci_THIN_TARGET_UNPHYSICAL_EXCEEDS_INCIDENT_FLUX_SELF_SHIELDING"
+        "COMPANION_0p42Ci_THIN_TARGET_UNPHYSICAL_EXCEEDS_INCIDENT_FLUX_SELF_SHIELDING",
+        "scalar_angular_flux_phiS_over4_bound_vs_thin_target"
       ],
-      "notes": "S PDF397 thin-target A~0.42Ci implies reaction rate1.74e14/s but incident directed beam onto area4cm² supplies only8e12 neutrons/s. Optical depth~21.7; selfshielded one-sided pure absorption yields upper~0.0194Ci. Actual isotropic angular flux changes geometry; source result unphysical for directed thick target."
+      "notes": "S PDF397 thin-target A~0.42Ci implies reaction rate1.74e14/s but incident directed beam onto area4cm² supplies only8e12 neutrons/s. Optical depth~21.7; selfshielded one-sided pure absorption yields upper~0.0194Ci. Actual isotropic angular flux changes geometry; source result unphysical for directed thick target.",
+      "feasibility_deep_review": {
+        "date": "2026-11-22",
+        "status": "conditional_internal_physics_only",
+        "review_type": "independent_candidate_model_only",
+        "original_scan_reopened": false,
+        "expert_review_completed": false,
+        "report": "candidate_audit_feasibility_7.md",
+        "ci_check": "qa_physical_feasibility_v2.py"
+      }
     },
     {
       "source_problem_number": "30.18",

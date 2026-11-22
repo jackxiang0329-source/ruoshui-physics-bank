@@ -87,6 +87,8 @@ jobs:
         run: python3 external_sources/zhang_sanhui_4e/qa_high_risk_crossmethod.py
       - name: Seven physical-domain and feasibility audits
         run: python3 external_sources/zhang_sanhui_4e/qa_physical_feasibility_v2.py
+      - name: Lock academic review and source images for 159 figure-bound candidates
+        run: python3 external_sources/zhang_sanhui_4e/qa_figure_and_risk_gate.py
   xelatex-candidate-proof:
     runs-on: ubuntu-latest
     needs: structural-and-math-spotchecks
