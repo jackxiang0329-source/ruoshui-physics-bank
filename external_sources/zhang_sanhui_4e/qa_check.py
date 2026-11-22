@@ -1013,7 +1013,56 @@ def check_numeric_spotmodels() -> int:
     require(close(1+98*589.3e-9/.20,1.000288757),
             "22.23 gas index from SINGLE PASS two-tube setup")
 
-    return 399
+    # V2 chapter 23 diffraction independent numeric/geometry models.
+    c23=299792458.0
+    require(close(2*.5*546.1e-9/.10e-3,.005461),"23.1 central fringe FULL width")
+    require(close(632.8e-9/math.sin(math.radians(5)),7.2605657419e-6),
+            "23.2 first single slit minimum")
+    require(close(600*5/7,428.57142857),"23.3 unknown lambda ~429nm")
+    require(close(2*math.degrees(math.asin(20/50)),47.15635696),
+            "23.4 harbor is SINGLE slit not circular aperture")
+    airy=2*1.22*550e-9/.007
+    require(close(airy,1.91714285714e-4),"23.5 airy full angular width")
+    require(close(.023*airy*1000,.0044094285714),
+            "23.5 retinal spot DIAMETER mm")
+    require(close(math.pi*(.023*airy*1000)**2/4*1.5e5,2.290581581),
+            "23.5 retinal cell count not divided by four")
+    require(close(1500+2*3.5e7*1.22*.1/1500,7193.333333),
+            "23.6 source includes emitter dish diameter")
+    require(close(1.2*.005/(1.22*550e-9),8941.87779),
+            "23.7 headlight Rayleigh distance")
+    require(close(1.22*500e-9/(.05/160000),1.952),
+            "23.8 low orbit camera ideal minimum aperture")
+    require(close(1.22*.2/300,.0008133333333),
+            "23.9 FAST working 300m aperture, NOT500m")
+    require(close(.05/1e7,5e-9),
+            "23.10 explicit 5cm example with 10e3km baseline")
+    require(close(1.22*550e-9/(14*math.pi/(180*3600)),.0098859775),
+            "23.11 zeta Ursae double star aperture")
+    require(close(.5*480e-9/.1e-3,.0024),
+            "23.12 double slit 2.4mm fine fringes")
+    require(close(2*.5*480e-9/.02e-3,.024),
+            "23.12 diffraction envelope central 24mm")
+    require(close(.02/6000,3.33333333e-6),
+            "23.13 grating 6000 grooves across 2cm")
+    require(close(.01/6000*math.sin(math.radians(20)),5.70033556e-7),
+            "23.14 first order 20 degree wavelength")
+    require(close(2*656.3e-9/math.sin(math.radians(41)),2.0003e-6,rel=.005),
+            "23.15 figure read Halpha second order 41degree")
+    require(math.ceil(656.3/.18)==3647,
+            "23.16 strict integer ceiling not companion truncation 3646")
+    require(close((c23/232e6)/(192*6),.00112170908914),
+            "23.17 first antenna array null")
+    require(close(math.asin((c23/232e6)/6),.217068806193),
+            "23.17 first NONZERO PRINCIPAL max not local sidelobe")
+    require(close(.55*math.sin(math.pi/4)/3,.1296362432),
+            "23.18 third Bragg order within source band")
+    require(close(.55*math.sin(math.pi/4)/4,.0972271824),
+            "23.18 fourth Bragg order within source band")
+    require(close(.215*math.sin(math.radians(50)),.16469955527),
+            "23.19 Davisson-Germer in-plane scattering lambda")
+
+    return 423
 
 
 def main() -> None:
@@ -1251,6 +1300,19 @@ def main() -> None:
             "22.17 consecutive oil-film destructive orders missing")
     require("单程" in s22 and "1.000289" in s22,
             "22.23 single-pass gas-cell index correction missing")
+
+    q23=(ROOT/"chapters/23/questions.tex").read_text(encoding="utf-8")
+    s23=(ROOT/"chapters/23/solutions.tex").read_text(encoding="utf-8")
+    require("23.19" in q23 and "23.19" in s23,
+            "chapter23 final electron diffraction exercise missing")
+    require("第3级" in q23 and "429" in s23,
+            "23.3 third vs second bright ~429nm source regression")
+    require("47.16" in s23 and "单缝" in s23,
+            "23.4 harbor single slit not circular rayleigh factor")
+    require("3647" in s23 and "3646" in s23,
+            "23.16 mandatory integer ceiling and companion discrepancy")
+    require("旁瓣" in s23 and "主极大" in s23,
+            "23.17 sidelobe vs grating principal maximum distinction")
 
     computed = check_numeric_spotmodels()
     print(f"PASS: {len(ids)} candidate exercises have unique IDs, "
