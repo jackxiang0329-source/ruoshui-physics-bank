@@ -107,7 +107,6 @@ for token in ["670.8",r"\mathrm{nm}",r"670.8\,\mathrm{mm}",
 # V.142: plane-focus x=f tanθ differs from paraxial f sinθ.
 f=.8;wl1=310.154e-9;wl2=310.184e-9
 for m,exp_um in [(1,6.05452480738),(2,12.44631235375)]:
-    x=lambda w:f*tan(asin(m*w/pitch*.8)) # pitch=5um above; must reset below
     # Grating 250 lines/mm instead of V140's 200:
     d=.001/250.
     actual=(f*tan(asin(m*wl2/d))-f*tan(asin(m*wl1/d)))*1e6
@@ -168,7 +167,7 @@ for power in [2,3]:
               +2*sum(fun(lo+2*j*step) for j in range(1,N//2)))
     freq_area=simpson(lambda x:x**power*exp(-x),1.,8.)
     wavelength_area=simpson(
-        lambda y:(1/y**2)*(1/y)**(-power-2)*exp(-1/y),
+        lambda y:(1/y)**power*exp(-1/y)/(y*y),
         1/8,1.,N=9600)
     check("V.254",f"ω and λ integrated spectral energy invariant power{power}",
           wavelength_area,freq_area,rel=3e-6)
