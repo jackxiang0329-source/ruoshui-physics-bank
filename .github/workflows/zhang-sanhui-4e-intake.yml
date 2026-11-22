@@ -37,6 +37,14 @@ jobs:
         run: python3 external_sources/zhang_sanhui_4e/qa_ch12_independent.py
       - name: Independently validate 34 chapter 13 electrostatic potential models
         run: python3 external_sources/zhang_sanhui_4e/qa_ch13_independent.py
+      - name: Independently check chapter 14 existing candidate physics models
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch14_independent.py
+      - name: Independently check chapter 15 existing candidate physics models
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch15_independent.py
+      - name: Independently check chapter 16 existing candidate physics models
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch16_independent.py
+      - name: Independently check chapter 17 existing candidate physics models
+        run: python3 external_sources/zhang_sanhui_4e/qa_ch17_independent.py
   xelatex-candidate-proof:
     runs-on: ubuntu-latest
     needs: structural-and-math-spotchecks
