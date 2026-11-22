@@ -38,7 +38,7 @@ R=.25;omega=130.;B=.005
 Urot=.5*B*omega*R*R
 Uinert=.5*ME*omega*omega*R*R/QE
 check(290,"rotating disk magnetic Faraday voltage mV",Urot*1000,20.3125)
-check(290,"electron centrifugal induced voltage microV",Uinert*1e6,3.,.15)
+check(290,"electron centrifugal induced voltage microV",Uinert*1e6,.0030027,.001)
 check(290,"magnetic over centrifugal ratio positive",float(Urot>Uinert),1)
 omega=100.;d=.2;B=.005
 check(291,"rotating chord endpoint radial emf",
