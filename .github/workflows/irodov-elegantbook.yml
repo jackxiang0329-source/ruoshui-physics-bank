@@ -78,6 +78,8 @@ jobs:
         run: python3 external_sources/irodov-zh-elegant/electro_induction_regression.py
       - name: Independently recheck Part III charged-particle cyclotron and betatron
         run: python3 external_sources/irodov-zh-elegant/electro_charged_regression.py
+      - name: Independently recheck Part IV initial mechanical oscillations
+        run: python3 external_sources/irodov-zh-elegant/oscillations_mechanical_regression.py
       - uses: xu-cheng/latex-action@v4
         with:
           working_directory: external_sources/irodov-zh-elegant
