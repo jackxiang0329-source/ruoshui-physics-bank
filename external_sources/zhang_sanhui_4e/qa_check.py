@@ -735,7 +735,7 @@ def main() -> None:
             "8.6 source first subquestion must use ship-frame reflection range")
     require("两个" in q8 and "10^{18}" in s8 and "8.23" in s8,
             "8.23 two-proton energy squared gravitational scaling missing")
-    require("资用" in q8 and "质心" in s8,
+    require("可资利用能" in q8 and "质心" in s8,
             "8.20–8.21 source available-energy COM model absent")
     require("17.20" in q17 and "17.20" in s17,
             "17.20 displacement current last numbered exercise missing")
