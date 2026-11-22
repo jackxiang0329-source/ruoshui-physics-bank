@@ -22,7 +22,7 @@
 
 ## 已发布稳定路径例外
 
-`bank/`、`tex/`、`data/`、`qa/`、`localization/zh_CN/`、`localized/zh_CN/` 是脚本与外部链接已依赖的接口；`external_sources/irodov-zh-elegant/` 为独立教材工程目录；`external_sources/catalog/按学科/` 与 `按知识点/` 由分类导出器生成，暂保留中文分类路径。其余归档来源索引、文件 SHA 与原上游题号不改写。将来若改名，必须同步更新所有读写脚本、索引字段、相对链接，并通过回归测试。
+`bank/`、`tex/`、`data/`、`qa/`、`data/localization/zh_CN/`、`data/localized/zh_CN/` 是脚本与外部链接已依赖的接口；`external_sources/irodov-zh-elegant/` 为独立教材工程目录；`external_sources/catalog/按学科/` 与 `按知识点/` 由分类导出器生成，暂保留中文分类路径。其余归档来源索引、文件 SHA 与原上游题号不改写。将来若改名，必须同步更新所有读写脚本、索引字段、相对链接，并通过回归测试。
 
 ## 防止今后重新散乱
 

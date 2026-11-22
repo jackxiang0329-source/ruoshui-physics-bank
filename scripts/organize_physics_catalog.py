@@ -8,12 +8,12 @@ ROOT=Path(__file__).resolve().parent.parent
 HEADER=("id","学科","知识点","题型","题型证据","知识点分类依据","原始来源","英文原件","中文译稿","中文状态","答案复核","版权复核","组卷资格")
 
 def configs(root=ROOT):
-    taxonomy=json.loads((root/"taxonomy/physics_taxonomy.json").read_text(encoding="utf-8"))
+    taxonomy=json.loads((root/"data/taxonomy/physics_taxonomy.json").read_text(encoding="utf-8"))
     docs={x["source_path"]:x for x in taxonomy["refresher_lessons"]}
     modules={x["name"]:x for x in taxonomy["modules"]}
     src=json.loads((root/"external_sources/physics_refresher/index.json").read_text(encoding="utf-8"))
     by_id={x["id"]:x for x in src["records"]}
-    translations_file=root/"localization/zh_CN/translations.json"
+    translations_file=root/"data/localization/zh_CN/translations.json"
     trans=json.loads(translations_file.read_text(encoding="utf-8"))["entries"] if translations_file.exists() else []
     translation_map={x["id"]:x for x in trans}
     if len(translation_map)!=len(trans):
@@ -55,7 +55,7 @@ def classify(row,configs,root=ROOT):
             entry=translations[pid]
             if entry["source_sha256"]!=rec["question_sha256"]:
                 raise ValueError("stale translated source: "+pid)
-            zh_path=f'localized/zh_CN/合订/{lesson["module"]}.md#{pid.lower()}'
+            zh_path=f'data/localized/zh_CN/合订/{lesson["module"]}.md#{pid.lower()}'
             if not (root/zh_path.split("#",1)[0]).is_file():
                 raise ValueError("translation manifest has no bilingual file: "+pid)
             status="中英对照初校；待独立复核"
@@ -69,7 +69,7 @@ def classify(row,configs,root=ROOT):
         ptype="未核验"
         type_basis="题型尚未独立确认"
         code=modules[module]["code"]
-        zh_path=f"localized/zh_CN/合订/{code}.md#{pid.lower()}"
+        zh_path=f"data/localized/zh_CN/合订/{code}.md#{pid.lower()}"
         if not (root/zh_path.split("#",1)[0]).is_file():
             raise ValueError("missing supplementary bilingual file: "+pid)
         status="中英对照初校；待独立复核"
@@ -137,7 +137,7 @@ def generate(root=ROOT):
             lines.append("- " + name + "（" + str(count) +
                          "）：[补充题源索引](按知识点/" + meta["folder"] +
                          "/补充题源.csv)")
-    lines+=["","[全量题目索引](题目总索引.csv) · [翻译与目录规范](../../docs/policies/translation_catalog_policy.md) · [中英术语表](../../localization/zh_CN/术语表.md)",
+    lines+=["","[全量题目索引](题目总索引.csv) · [翻译与目录规范](../../docs/policies/translation_catalog_policy.md) · [中英术语表](../../data/localization/zh_CN/术语表.md)",
             "","注：知识点来源于固定章节才细分；其他候选只沿用现有学科、细分类保留待核验。译稿不代表答案已验证。",""]
     (out/"中文分类导航.md").write_text("\n".join(lines),encoding="utf-8")
     print(json.dumps(report,ensure_ascii=False))

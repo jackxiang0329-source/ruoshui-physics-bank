@@ -2,7 +2,7 @@
 
 仅供审校；所有外部题尚未获正式组卷资格。
 
-译文的唯一可编辑主档：`../../../localization/zh_CN/translations.json`；原始英文文件不移动。
+译文的唯一可编辑主档：`../../../data/localization/zh_CN/translations.json`；原始英文文件不移动。
 
 - [物理基础](fundamentals.md)（117 道）
 - [力学](mechanics.md)（432 道）

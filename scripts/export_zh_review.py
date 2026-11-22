@@ -10,7 +10,7 @@ from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-REGISTER = "localization/zh_CN/translations.json"
+REGISTER = "data/localization/zh_CN/translations.json"
 MODULES = {"物理基础", "力学", "热学", "电磁学", "振动与波动", "光学", "近代物理"}
 REVIEW_STATE = "中文初译待双语复核"
 

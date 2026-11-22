@@ -30,9 +30,9 @@ def original(raw):
         raise ValueError("unexpected upstream format")
     return "\n".join(lines[2:]).strip()
 def create(root=ROOT):
-    t=json.loads((root/"taxonomy/physics_taxonomy.json").read_text(encoding="utf-8"))
+    t=json.loads((root/"data/taxonomy/physics_taxonomy.json").read_text(encoding="utf-8"))
     lessons={x["source_path"]:x for x in t["refresher_lessons"]}
-    items=json.loads((root/"localization/zh_CN/translations.json").read_text(encoding="utf-8"))["entries"]
+    items=json.loads((root/"data/localization/zh_CN/translations.json").read_text(encoding="utf-8"))["entries"]
     idx=json.loads((root/"external_sources/physics_refresher/index.json").read_text(encoding="utf-8"))
     records={x["id"]:x for x in idx["records"]}
     if len({x["id"] for x in items})!=len(items):raise ValueError("duplicate translations")
@@ -56,7 +56,7 @@ def create(root=ROOT):
         module=next(x["name"] for x in t["modules"] if x["code"]==lesson["module"])
         correction=t["verified_type_overrides"].get(pid)
         ptype=t["problem_types"].get(correction["type"] if correction else rec["section"],"未核验")
-        dest=root/"localized/zh_CN"/lesson["module"]/lesson["topic"]/(pid+".md")
+        dest=root/"data/localized/zh_CN"/lesson["module"]/lesson["topic"]/(pid+".md")
         dest.parent.mkdir(parents=True,exist_ok=True)
         body=("# "+pid+"｜"+lesson["label"]+"\n\n"+
           "**学科：** "+module+"　**知识点：** "+lesson["label"]+"　**题型：** "+ptype+"\n\n"+
@@ -78,7 +78,7 @@ def create(root=ROOT):
     module_codes = {m["name"]: m["code"] for m in t["modules"]}
     for item in extra:
         pid = item["id"]
-        rel = ("localized/zh_CN/" + module_codes[item["module"]]
+        rel = ("data/localized/zh_CN/" + module_codes[item["module"]]
                + "/supplementary/" + pid + ".md")
         dest = root / rel
         dest.parent.mkdir(parents=True, exist_ok=True)
@@ -108,13 +108,13 @@ def create(root=ROOT):
         grouped[Path(rel).parts[3]].append(rel)
     books=[]
     book_index={}
-    collection=root/"localized/zh_CN/合订"
+    collection=root/"data/localized/zh_CN/合订"
     collection.mkdir(parents=True,exist_ok=True)
     for module in t["modules"]:
         code=module["code"]
         if not grouped.get(code):
             continue
-        rel_book=f"localized/zh_CN/合订/{code}.md"
+        rel_book=f"data/localized/zh_CN/合订/{code}.md"
         sections=[f"# 大学物理中英对照初译｜{module['name']}","",
                   "> 仅供编辑复核：尚未通过独立双语、答案或版权审核；不可正式组卷。","",
                   f"共 {len(grouped[code])} 道。英文原文均以保留源指纹的上游快照为依据。",""]
@@ -136,14 +136,14 @@ def create(root=ROOT):
         raise ValueError(f"collection mismatch: source_files={len(paths)} indexed={len(book_index)} books={len(books)} grouped={dict((k,len(v)) for k,v in grouped.items())} sample={paths[:2]}")
     # Include stale generated IDs from earlier runs, not just the current manifest.
     # Source files and the canonical translations.json are strictly out of scope.
-    for old in (root/"localized/zh_CN").rglob("*.md"):
+    for old in (root/"data/localized/zh_CN").rglob("*.md"):
         if re.fullmatch(r"(?:PREF-\d{5}|CP-\d{5}|IP-\d{4})\.md",old.name):
             old.unlink()
     links=["# 大学物理中英对照｜按学科合订","",
            "仅供审校；所有外部题尚未获正式组卷资格。","",
-           "译文的唯一可编辑主档：`../../../localization/zh_CN/translations.json`；原始英文文件不移动。",""]
+           "译文的唯一可编辑主档：`../../../data/localization/zh_CN/translations.json`；原始英文文件不移动。",""]
     for module in t["modules"]:
-        book=f"localized/zh_CN/合订/{module['code']}.md"
+        book=f"data/localized/zh_CN/合订/{module['code']}.md"
         if book in books:
             links.append(f"- [{module['name']}]({module['code']}.md)（{len(grouped[module['code']])} 道）")
     (collection/"README.md").write_text("\n".join(links)+"\n",encoding="utf-8")
@@ -151,7 +151,7 @@ def create(root=ROOT):
             "independently_bilingual_approved":0,"exam_ready":0,
             "consolidated_books":len(books),"per_question_files":0,
             "files":books,"book_index":book_index}
-    output=root/"localized/zh_CN/中文译稿报告.json"
+    output=root/"data/localized/zh_CN/中文译稿报告.json"
     output.parent.mkdir(parents=True,exist_ok=True)
     output.write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(json.dumps({"translated_drafts":len(paths),"approved":0},ensure_ascii=False))
