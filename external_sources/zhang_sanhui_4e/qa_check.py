@@ -1502,7 +1502,125 @@ def check_numeric_spotmodels() -> int:
     require(close(sum(qs30)+4*electron_u30*unit30,26.73108),
             "30.22 positron annihilation adds 2.044MeV to 26.73")
 
-    return 608
+    # Independent conceptual physics spotmodels for thought questions (distinct from705).
+    require(close((math.cos(math.pi/4)*math.sin(math.pi/4))**2,.25),
+            "thought24.5 inserting 45deg polarizer between crossed P gives Iout/I1=.25")
+    require(close(1.75/2,.875),"thought25.3 full-length plane mirror half height")
+    require(close(1/((1/1.33-1)*(2/.30)),-.604545454545),
+            "thought25.8 convex air blister under water is DIVERGING f~-.605m")
+    require(close(2.897771955e-3/310*1e6,9.34765147),
+            "thought26.2 warm human blackbody peak midinfrared in micrometers")
+    require(close(2*6.62607015e-34/(9.1093837139e-31*299792458)*1e12,
+                  4.85262047),
+            "thought26.9 visible Compton maximum shift~4.85pm")
+    require(close(math.sqrt(1.67262192369e-27/9.1093837139e-31),
+                  42.85035205),
+            "thought26.11 same kinetic energy electron wavelength 42.85x proton")
+    require(5-1==4,"thought27.5 5th one-dimensional bound eigenstate four nodes")
+    require(close(math.sqrt(5/3),1.290994449),
+            "thought27.6 higher step lower kinetic means longer wavelength")
+    require(sum(2*l+1 for l in range(3))==9,
+            "thought28.2 hydrogen level n3 orbital degeneracy9 no spin")
+    require(sum(2*(2*l+1) for l in range(3))==18,
+            "thought28.5 third electron shell Pauli capacity18")
+    require((1*2**2-1*2**2)==0,
+            "thought29.11 intrinsic electron-hole equal mobilities Hall cancellation")
+    require(close((64/8)**(1/3),2),
+            "thought30.2 saturated nuclear radius R scales as A^(1/3)")
+    require(close((3/5)*1.439965/1.2,.7199825),
+            "thought30.5 uniform charged sphere nuclear Coulomb coefficient")
+    require((235-207)//4==7,"thought30.7 U235 to Pb207 seven alpha decays")
+    require(82-(92-2*7)==4,"thought30.7 four beta minus conversions")
+    require(close((14.4e3)**2/(2*57*931.494e6),.001952720435),
+            "thought30.8 free Fe nucleus 14.4keV gamma recoil~2meV")
+
+    return 624
+
+
+
+def check_thought_intake() -> int:
+    """Separate original 思考题 register; never count as 章末习题.
+    Validates scan provenance and paired conceptual LaTeX, not physics correctness.
+    """
+    thought_path = ROOT / "thought_register.json"
+    require(thought_path.is_file(), "missing distinct 思考题 register")
+    reg = json.loads(thought_path.read_text(encoding="utf-8"))
+    require(reg.get("section") is None or reg.get("scope", "").startswith("original separately"),
+            "wrong conceptual section")
+    require(reg.get("main_chapter_end_count_unchanged") == 705,
+            "thought registry changed main705 count")
+    rows = reg["entries"]
+    expected_counts = {24: 11, 25: 12, 26: 13, 27: 7,
+                       28: 14, 29: 13, 30: 10}
+    require(reg["thought_question_count"] ==
+            reg["thought_solution_count"] == len(rows) == 80,
+            "thought count should be exactly 80, separate from705")
+    require(len({e["canonical_id"] for e in rows}) == 80,
+            "duplicate thought stable IDs")
+    require(len({e["source_thought_number"] for e in rows}) == 80,
+            "duplicate original 思考题 numbers")
+    require(all(e["academic_review"] == "pending_independent_verification"
+                and e["exam_ready"] is False for e in rows),
+            "conceptual questions falsely marked expert verified")
+    require(sum(bool(e.get("answer_unresolved")) for e in rows) == 1,
+            "30.6 source isotope notation ambiguity must remain unresolved")
+    bundle = (ROOT / "build_intake.tex").read_text(encoding="utf-8")
+    standalone = (ROOT / "build_thought_intake.tex").read_text(encoding="utf-8")
+    regex = re.compile(r"\\paragraph\{思考题\s+(\d+\.\d+)\}")
+    chapter_entries = Counter(int(x["source_thought_number"].split(".")[0])
+                              for x in rows)
+    require(chapter_entries == expected_counts,
+            f"unexpected chapter thought counts: {chapter_entries}")
+    for chapter in expected_counts:
+        part = [e for e in rows
+                if int(e["source_thought_number"].split(".")[0]) == chapter]
+        expected = [f"{chapter}.{i}"
+                    for i in range(1, expected_counts[chapter] + 1)]
+        qrel = f"thought_questions/{chapter}/questions.tex"
+        srel = f"thought_questions/{chapter}/solutions.tex"
+        qfile, sfile = ROOT / qrel, ROOT / srel
+        require(qfile.is_file() and sfile.is_file(),
+                f"thought chapter{chapter}: missing TeX fragments")
+        qt, st = qfile.read_text(encoding="utf-8"), sfile.read_text(encoding="utf-8")
+        require(regex.findall(qt) == regex.findall(st) == expected,
+                f"thought chapter{chapter} source/answer/count mismatch")
+        for tex in (qt, st):
+            require(tex.count(r"\[") == tex.count(r"\]") and
+                    tex.count(r"\(") == tex.count(r"\)"),
+                    f"unbalanced LaTeX inline/display math in thought chapter{chapter}")
+        for path in (qrel, srel):
+            command = r"\input{" + path + "}"
+            require(command in bundle and command in standalone,
+                    f"missing thought TeX input in proof: {path}")
+        for item in part:
+            require(item["canonical_id"] ==
+                    f"ZS4-T{chapter}-{int(item['source_thought_number'].split('.')[1]):03d}",
+                    "unstable canonical thought ID")
+            require(item["source_review"].startswith("paraphrased_from_uploaded_scan"),
+                    "no original source scan annotation")
+            require(item["textbook_pdf_pages"] and
+                    all(type(p) is int and 1 <= p <= 515
+                        for p in item["textbook_pdf_pages"]),
+                    "invalid original V2 physical scan source page")
+            require(item["question_file"] == qrel and
+                    item["solution_file"] == srel,
+                    "thought source register wrong file paths")
+    main_count = len(json.loads(REGISTER.read_text(encoding="utf-8"))["entries"])
+    require(main_count == 705, "main chapter-end original count changed from705")
+    s30 = (ROOT/"thought_questions/30/solutions.tex").read_text(encoding="utf-8")
+    q30 = (ROOT/"thought_questions/30/questions.tex").read_text(encoding="utf-8")
+    require("unresolved" in s30 and "Cu" in s30 and "Zn" in q30,
+            "thought30.6 unresolved Cu-to-Zn isotope source typography lost")
+    s25 = (ROOT/"thought_questions/25/solutions.tex").read_text(encoding="utf-8")
+    require("-0.605" in s25 and "发散" in s25,
+            "thought25.8 AIR lens in water must DIVERGE")
+    s26 = (ROOT/"thought_questions/26/solutions.tex").read_text(encoding="utf-8")
+    require("量子效率" in s26 and "I/(h\\nu)" in s26,
+            "thought26.7 photon flux at FIXED light intensity confused")
+    s29 = (ROOT/"thought_questions/29/solutions.tex").read_text(encoding="utf-8")
+    require("向西" in s29 and "向东" in s29 and "迁移率" in s29,
+            "thought29 Hall sign electron/hole and mobility model missing")
+    return len(rows)
 
 
 def main() -> None:
@@ -1843,9 +1961,11 @@ def main() -> None:
     require("24.69" in s30 and "26.73" in s30 and "湮灭" in s30,
             "30.22 CNO energy without/with positron annihilation")
 
+    thought_count = check_thought_intake()
     computed = check_numeric_spotmodels()
     print(f"PASS: {len(ids)} candidate exercises have unique IDs, "
           "paired TeX sections, source pages and no exam admission.")
+    print(f"PASS: {thought_count} separately numbered and unapproved thought Q/A pairs. Original 705 exercises unchanged.")
     print(f"PASS: {computed} independent numerical spotmodel checks.")
     print("NOT VERIFIED: full source transcription accuracy, external expert "
           "review, source permissions and independent physical model sufficiency.")
