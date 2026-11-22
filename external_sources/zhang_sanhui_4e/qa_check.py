@@ -976,7 +976,44 @@ def check_numeric_spotmodels() -> int:
                   (4*6.6743e-11*2e30*1000*light),6.33650835592e-7),
             "21.17 gravity radiation balance size")
 
-    return 375
+    # Chapter 22 geometrical interference, thin film, Michelson and source-page regression.
+    require(close(c0*1e-8/(589.3e-9),5.08726384e6),"22.1 source sodium wave train")
+    require(close(.60e-3*2.27e-3/2.5,5.448e-7),"22.2 mercury filtered green light")
+    require(close(.5*7.2e-7/(4*.002),4.5e-5),"22.3 Lloyd mirror first bright half fringe")
+    require(close(.15e-3*(.036/9)/1,6e-7),"22.4 fringe order 1 to 10 NINE gaps")
+    require(close(math.asin(-.625)*180/math.pi,-38.68218745),
+            "22.5 south/north antenna lag azimuth branch 1")
+    require(close(math.asin(.875)*180/math.pi,61.04497563),
+            "22.5 south/north antenna lag azimuth branch 4")
+    require(close(25*50/(12*4.5),23.14814815),"22.6 water waves")
+    require(close(.000000550/(.0005),.0011),"22.7 oblique incidence small angle")
+    require(close(math.asin(c0/(2*25*6e7))*180/math.pi,5.73518676),
+            "22.8 minimal NONZERO grazing angle with reflection phase")
+    require(close((.0000006328)/math.cos(math.pi/4),8.94914342e-7),
+            "22.10 inclined screen projected fringe spacing")
+    require(close(2*2*1/(2**2+1**2),.8),"22.10 amplitude ratio visibility")
+    require(close(c0/1.3e9,.230609583),"22.11 finite linewidth coherence")
+    require(close(550e-9/.01,5.5e-5),"22.12 solar extended source coherence")
+    require(close(7*550e-9/.58,6.63793103e-6),"22.13 glass shift seven orders")
+    require(close(13*589.3e-9/(4*1.5),1.27681667e-6),
+            "22.14 double pi reflection seventh DARK SiO2 order")
+    require(close(2400/5,480),"22.15 white light reflected blue 480nm")
+    require(close(1200/2,600),"22.15 white light transmission 600nm")
+    require(close(560/(4*2.0),70),"22.16 sapphire SiO quarter wave 70nm")
+    require(close(485*679/(2*1.32*(679-485)),642.9924242),
+            "22.17 oil film adjacent extinction wavelengths")
+    require(close(500/(4*math.sqrt(1.33**2-.5)),110.96763094),
+            "22.18 green oblique incidence soap film thickness")
+    require(close(550/(4*1.38),99.63768116),
+            "22.19 MgF2 quarter-wave coating")
+    require(close(((4.60e-3)**2-(3e-3)**2)/(20*1.03),5.902912621e-7),
+            "22.20 Newton rings FIVE order diameter square spacing")
+    require(close(2*.3220e-3/1204,5.348837209e-7),
+            "22.22 Michelson mirror translation double optical path")
+    require(close(1+98*589.3e-9/.20,1.000288757),
+            "22.23 gas index from SINGLE PASS two-tube setup")
+
+    return 399
 
 
 def main() -> None:
@@ -1201,6 +1238,19 @@ def main() -> None:
             "21.9 amplitude versus averaged intensity missing factor two")
     require("-I^2R" in s21 and "向内" in s21,
             "21.11 negative outward Poynting flux missing")
+
+    q22=(ROOT/"chapters/22/questions.tex").read_text(encoding="utf-8")
+    s22=(ROOT/"chapters/22/solutions.tex").read_text(encoding="utf-8")
+    require("22.23" in q22 and "22.23" in s22,
+            "ch22 gas interferometer last exercise missing")
+    require("镜面反射" in s22 and "45" in s22,
+            "22.3 Lloyd mirror half-wave first bright missing")
+    require("第7条暗纹" in q22 and "1.28" in s22,
+            "22.14 SiO2 wedge seventh dark with BOTH phase shifts missing")
+    require("再次" in q22 and "643" in s22,
+            "22.17 consecutive oil-film destructive orders missing")
+    require("单程" in s22 and "1.000289" in s22,
+            "22.23 single-pass gas-cell index correction missing")
 
     computed = check_numeric_spotmodels()
     print(f"PASS: {len(ids)} candidate exercises have unique IDs, "
