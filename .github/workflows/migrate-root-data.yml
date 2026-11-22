@@ -42,23 +42,25 @@ jobs:
           SKIP = {
               "data/README.md",
               "data/localized/zh_CN/合订/README.md",
+              ".github/workflows/migrate-root-data.yml",
           }
           EXTS = {".md", ".json", ".csv", ".py", ".tex", ".sh", ".ps1", ".yml", ".yaml", ".txt", ".jsonl"}
           rules = (
               (b"localization/zh_CN/", b"data/localization/zh_CN/"),
               (b"localized/zh_CN/", b"data/localized/zh_CN/"),
               (b"taxonomy/physics_taxonomy.json", b"data/taxonomy/physics_taxonomy.json"),
-              (b"qa/", b"data/qa/"),
           )
           changed = {}
           for name in tracked:
               path = ROOT / name
-              if name in SKIP or path.suffix not in EXTS or not path.is_file():
+              if (name in SKIP or name.startswith(("bank/", "tex/")) or name == "data/problems.json"
+                      or path.suffix not in EXTS or not path.is_file()):
                   continue
               original = path.read_bytes()
               modified = original
               for old, new in rules:
                   modified = re.sub(rb"(?<!data/)" + re.escape(old), lambda _m, n=new: n, modified)
+              modified = re.sub(rb"(?<!data/)qa/(?=(?:README\.md|ID\.json|[A-Z]\d{3,5}\.json))", b"data/qa/", modified)
               if modified != original:
                   path.write_bytes(modified)
                   changed[name] = len(modified) - len(original)
