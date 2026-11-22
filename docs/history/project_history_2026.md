@@ -6,15 +6,15 @@
 
 # 三千弱水 · 大学物理高难度综合压轴题库
 
-**主要入口** · [题目源文件](bank/) · [题目索引](data/index.csv) · [题目合订 TeX](tex/questions.tex) · [解答合订 TeX](tex/solutions.tex)
+**主要入口** · [题目源文件](../../bank/) · [题目索引](../../data/index.csv) · [题目合订 TeX](../../tex/questions.tex) · [解答合订 TeX](../../tex/solutions.tex)
 
-主库收录高难度综合压轴题。当前题目索引与第 14 批记录均为 **452 道**。第 14 批新增 50 道，技术校验和两册 XeLaTeX 构建通过，仍待独立专家复核。详见 [第 14 批记录](data/rounds/2026-10-29-14.json)。
+主库收录高难度综合压轴题。当前题目索引与第 14 批记录均为 **452 道**。第 14 批新增 50 道，技术校验和两册 XeLaTeX 构建通过，仍待独立专家复核。详见 [第 14 批记录](../../data/rounds/2026-10-29-14.json)。
 
 ## 当前唯一正式题库
 - `bank/ID/meta.json`、`question.tex`、`solution.tex` 为权威源；`data/problems.json` 是可读镜像。
 - `tex/questions.tex`、`tex/solutions.tex` 和 `data/index.csv` 由主库生成。
 - `scripts/check_difficulty_gate.py` 检查准入；`scripts/build.py --check` 检查结构与生成内容。
-- 新增题必须达到 4/5 或 5/5、至少40分钟、至少四个递进小问和三个交叉知识标签，并有完整推导。详见 [标准](docs/HIGH_DIFFICULTY_POLICY.md)。
+- 新增题必须达到 4/5 或 5/5、至少40分钟、至少四个递进小问和三个交叉知识标签，并有完整推导。详见 [标准](../policies/high_difficulty_policy.md)。
 
 旧版 100 道普通题已逐题审查并从活跃的 `bank/` 移除或以新版综合题替换，同编号不表示旧题保留。原稿可在 Git 历史中追溯。
 
