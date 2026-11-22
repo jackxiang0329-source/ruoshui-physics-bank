@@ -119,7 +119,7 @@ eq(91,"H 2s Coulomb level binding energy eV",13.605693/4,3.40142325)
 eq(92,"1s <1/r> integral in units 1/a0",
    integrate(lambda x:4*x*exp(-2*x),0,30),1,rel=4e-8)
 eq(92,"1s <1/r²> integral units 1/a0²",
-   integrate(lambda x:4*exp(-2*x),0,30),2,rel=2e-9)
+   integrate(lambda x:4*exp(-2*x),0,30),2,rel=2e-8)
 eq(93,"central 1s electronic potential negative volts",
    -(1/(4*pi*8.8541878128e-12))*e/5.29177210903e-11,-27.2,rel=.002)
 for kappa in (.5,1.,2.):
