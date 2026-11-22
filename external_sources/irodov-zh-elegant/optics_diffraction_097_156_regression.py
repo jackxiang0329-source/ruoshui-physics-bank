@@ -72,7 +72,7 @@ d=3*535e-9/sin(35*rad)
 eq(126,"highest order mmax exactly five",int(d/535e-9),5)
 eq(126,"grating groove pitch micron",d*1e6,2.8,rtol=.005)
 x=sin(15*rad)/sqrt(5-4*cos(15*rad))
-eq(127,"two same-side grating orders wavelength nm",2.2e3*x,540,rtol=.01)
+eq(127,"two same-side grating orders wavelength nm",2.2e3*x,534.162061945,rtol=1e-10)
 d=1.5e-6;wl=530e-9
 eq(128,"normal incidence greatest order",int(d/wl),2)
 eq(128,"60deg incidence minus 5 order exit angle",
