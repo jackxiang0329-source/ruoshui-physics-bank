@@ -442,9 +442,9 @@ def check_numeric_spotmodels() -> int:
     require(close(5740/(2*.002),1.435e6),"7.15 quartz thickness resonance")
     require(close(1e-12*10**(115/10),.316227766),"7.16 115 dB intensity")
     require(close(1e-12*10**(141/10),125.8925412),"7.16 141 dB intensity")
-    require(close(5*60/(1/6-1/8),7200),"7.17 earthquake graph minutes to km")
-    require(close(10**(4.8+1.5*9.2),3.98107170553e18),
-            "7.18 textbook magnitude energy empirical model")
+    require(close(5.1*60/(1/6-1/8),7344),"7.17 earthquake P/S delay 5.1 minutes (companion p117)")
+    require(close(10**((9.2+2.9)/.67),1.14736472208e18),
+            "7.18 actual textbook formula M=0.67 lgE-2.9")
     require(close(400*(330-80/3.6)/(330-120/3.6),
                   414.981273408),"7.20 pursuit siren Doppler")
     require(close(1540*220/(2*18000+220),9.353948095),
@@ -462,6 +462,15 @@ def check_numeric_spotmodels() -> int:
             "7.27 packet lobe width")
     require(close((2.5**2-1)/(2.5**2+1),21/29),
             "7.30 conditional relativistic Doppler speed")
+    require(close(math.sqrt(2*g*2)/(2*math.pi),.9965867),
+            "7.4 thrown person's 2m HEIGHT not seismic AMPLITUDE")
+    require(close(4.2-.4/2,4.0),
+            "7.6 NEAREST crest x=-0.4 passed origin at t4.0s")
+    require((15-2)%2==1 and (14%2)==0,
+            "7.12 anti-phase coherent waves: midpoint cancels, even x enhance")
+    require(close(10**((9.2+2.9)/.67)/4.6e15,249.4271135),
+            "7.18 TNT 1Mt-equivalent without early one-digit rounding")
+
     # Chapter 16: independently recomputed current, leakage, cooling and RC quantities.
     require(close(.008*240/(3e8*electron_q),3.9945658e10),
             "16.1 electron storage-ring number")
@@ -474,6 +483,10 @@ def check_numeric_spotmodels() -> int:
             "16.4 bulk copper resistor")
     require(close(.05/(1.75e-8*2/(.02*.08)),2285.7142857),
             "16.4 electric current through copper rod")
+    require(close(20*((.020**2)*8.7e-8)/
+                 (((.025**2-.020**2)*.01)+((.020**2)*8.7e-8)),
+                  3.0932854905e-4),
+            "16.5 source IRON PIPE inner diameter2.0 outer2.5cm")
     require(close(5*30/(30+70),1.5),"16.6 uniform wire short circuit")
     require(close(120/(4e-12),3e13),"16.7 fair weather air resistivity")
     require(close(1e12*math.log(.02/.005)/(2*math.pi*1000),
@@ -492,7 +505,7 @@ def check_numeric_spotmodels() -> int:
     require(close(400*200/(4180*60)*60,19.13875598),
             "16.17 electromagnet minimum cooling liters/min")
 
-    return 176
+    return 180
 
 
 def main() -> None:
@@ -601,7 +614,16 @@ def main() -> None:
     a7=(ROOT/"chapters/07/solutions.tex").read_text(encoding="utf-8")
     q16=(ROOT/"chapters/16/questions.tex").read_text(encoding="utf-8")
     a16=(ROOT/"chapters/16/solutions.tex").read_text(encoding="utf-8")
-    require("7.33" in q7 and "7.33" in a7,
+    require("两个分支都应讨论" in q7 and "y_-(x,t)" in a7,
+            "7.2 source did not specify wave propagation direction")
+    require("被猛烈地向上抛起" in q7 and "0.997" in a7,
+            "7.4 thrown person height, NOT source wave amplitude")
+    require("M=0.67" in a7 and "1.15\\times10^{18}" in a7,
+            "7.18 source magnitude-energy formula changed")
+    require("外直径" in q16 and "2.5" in q16
+            and "3.09\\times10^{-4}" in a16,
+            "16.5 original pipe diameters or flow split regressed")
+        require("7.33" in q7 and "7.33" in a7,
             "7.33 ultrasonic motor end exercise missing")
     require("张角" in q7 and "半张角" in a7,
             "7.26 printed ship wake opening-angle risk must be disclosed")
