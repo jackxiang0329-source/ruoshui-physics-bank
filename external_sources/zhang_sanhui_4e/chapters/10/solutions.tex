@@ -580,3 +580,135 @@ B室变为30L，
  =\dot Q_c\frac{T_h-T_c}{T_c}
  \approx3.95\times10^2\,\mathrm W}.
 \]
+
+
+\paragraph{习题 10.24}
+热机两热库温度
+\(T_1=483.15\,\mathrm K\)（210℃）、
+\(T_2=288.15\,\mathrm K\)（15℃），
+卡诺热效率
+\[
+ \eta_{\rm eng}=1-\frac{T_2}{T_1}
+ \approx0.4036.
+\]
+每公斤燃煤释放
+\(q=3.34\times10^7\,\mathrm J\)，
+输出功
+\(W=q\eta_{\rm eng}\approx1.348\times10^7\,\mathrm J\)。
+热泵将低温河水热量送入温度
+\(T_3=333.15\,\mathrm K\)（60℃）的供暖水，
+理想制热系数
+\[
+ \varepsilon_h=\frac{T_3}{T_3-T_2}
+ =\frac{333.15}{45}\approx7.403.
+\]
+所以
+\[
+ \boxed{Q_{\rm heat}=\varepsilon_hW
+ \approx9.98\times10^7\,\mathrm J},
+ \qquad
+ \boxed{Q_{\rm heat}/q\approx2.99}.
+\]
+额外热量来自河水，
+不违反能量守恒。
+
+\paragraph{习题 10.25}
+在图10.31冷冻循环
+\(d\to a\to b\to c\to d\) 中，
+\(a\to b\) 是80℃定压凝结，
+\(c\to d\) 是5℃定压蒸发，
+另外两段绝热。
+气体对外功为正，
+\(\mathrm{kPa\,m^3=kJ}\)。
+高温段：
+\[
+ A_{ab}=2305(.00946-.0682)
+ =-135.396\,\mathrm{kJ},
+\quad
+ \Delta U_{ab}=1171-1969=-798\,\mathrm{kJ}.
+\]
+所以
+\[
+ \boxed{Q_{ab}=\Delta U_{ab}+A_{ab}
+ =-933.396\,\mathrm{kJ}}.
+\]
+向环境排热
+\(\boxed{Q_h=933.4\,\mathrm{kJ}}\)。
+低温段：
+\[
+ A_{cd}=363(.4513-.2202)
+ =83.889\,\mathrm{kJ},\quad
+ \Delta U_{cd}=1641-1015=626\,\mathrm{kJ},
+\]
+因此
+\[
+ \boxed{Q_c=Q_{cd}=709.889\,\mathrm{kJ}}.
+\]
+一个完整循环内能恢复原值，
+压缩机输入功
+\[
+ \boxed{W_{\rm in}=Q_h-Q_c
+ =223.506\,\mathrm{kJ}}.
+\]
+制冷系数
+\[
+ \boxed{\varepsilon=\frac{Q_c}{W_{\rm in}}
+ \approx3.176}.
+\]
+高、低温热库温度
+\(T_h=353.15\,\mathrm K,\ T_c=278.15\,\mathrm K\)，
+逆卡诺上界
+\[
+ \boxed{\varepsilon_C=\frac{T_c}{T_h-T_c}
+ =\frac{278.15}{75}\approx3.709}.
+\]
+实际值低于可逆上界。
+本题是制冷系数，不是热机热效率。
+
+\paragraph{习题 10.26}
+设高温 \(T_1>T_2\)（低温），
+容积比 \(r=V_1/V_2>1\)。
+高温等温压缩 \(1\to2\) 输入功
+\(W_{12}=\nu RT_1\ln r\)；
+低温等温膨胀 \(3\to4\) 输出功
+\(W_{34}=\nu RT_2\ln r\)。
+两段等容过程不作体积功，
+净输入
+\[
+ \boxed{W_{\rm in}=\nu R(T_1-T_2)\ln r}.
+\]
+若配备\emph{理想再生器}，
+\(2\to3\) 冷却释放的
+\(\nu C_V(T_1-T_2)\) 全部储存，
+在 \(4\to1\) 升温时返还，
+不与外界冷热库交换该部分显热。
+低温库只在等温膨胀段
+供给 \(Q_c=\nu RT_2\ln r\)，故
+\[
+ \boxed{\varepsilon_{\rm reg}
+ =\frac{Q_c}{W_{\rm in}}
+ =\frac{T_2}{T_1-T_2}},
+\]
+与逆卡诺循环相同。
+
+若\emph{没有再生器}，
+题设的 \(2\to3\) 等容冷却热量
+\(\nu C_V(T_1-T_2)\)
+排进\emph{低温库}，
+而 \(4\to1\) 等容升温热量
+由\emph{高温库}供给，
+低温库的净放热必须减去
+\(2\to3\) 收到的热量：
+\[
+ Q_{c,\rm net}=
+ \nu RT_2\ln r-\nu C_V(T_1-T_2).
+\]
+有效制冷系数
+\[
+ \boxed{\varepsilon_{\rm no\,reg}
+ =\frac{T_2}{T_1-T_2}
+ -\frac{C_V}{R\ln r}
+ <\varepsilon_{\rm reg}}.
+\]
+若这一净吸热非正，
+无再生的外库接法不能有效制冷。
