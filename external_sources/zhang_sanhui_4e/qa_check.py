@@ -1127,7 +1127,7 @@ def check_numeric_spotmodels() -> int:
                   59.4104730269),"25.14 red rainbow critical incidence")
     require(close(math.degrees(math.acos(math.sqrt((1.342**2-1)/3))),
                   58.88825686),"25.14 violet rainbow critical incidence")
-    require(close(20/(1.6-1),40),"25.15 plano convex lens 40cm focal")
+    require(close(24/(1.6-1),40),"25.15 plano convex lens 40cm focal")
     require(close(((100**2-60**2)/(4*100)),16),
             "25.16 two positions Bessel lens L100 d60 f16")
     require(close(20*500/(500-20),125/6),
