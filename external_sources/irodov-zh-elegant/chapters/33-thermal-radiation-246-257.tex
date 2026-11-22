@@ -258,59 +258,84 @@ $TS=U+pV=4U/3$（化学势为0），所以
 $T^3$ 增长，且 $S=C_V/3$。
 
 \thermalopticsproblem{254}{228}
-原书给出如下所谓“维恩谱分布”：
+已知热辐射维恩角频率谱
 \[
- u_\omega(\omega,T)=A\omega^2e^{-a\omega/T},
- \qquad a=7.64\,\mathrm{ps\,K},
+ \boxed{u_\omega(\omega,T)=A\omega^3e^{-a\omega/T}},
+ \quad a=7.64\,\mathrm{ps\,K},\quad T=2000\,\mathrm K.
 \]
-求 $T=2000\,\mathrm K$ 时
-(a) 频率谱的最概然\emph{角频率}；
-(b) 波长谱的最概然波长。
-注意本版题面印出的幂为2，但书末答案按幂为3计算。
+分别求(a) 单位角频率谱密度的峰值位置
+$\omega_{\max,\omega}$；
+(b) 单位波长谱密度的峰值位置
+$\lambda_{\max,\lambda}$。
+\textbf{版本说明：}这一 $\omega^3$ 形式与标准
+Planck 公式的高频极限及可查 Mir 1988 英文题面一致；
+但本项目此前记录的 Arihant 扫描底本
+印成 $\omega^2$，故另列其字面解，保留来源差异。
 \exsolution
-\textbf{严格按印刷题面 $\omega^2$ 解。}
-设 $D=a/T$，频率谱的极大条件为
+设 $D=a/T$。
+对标准物理版本，
 \[
  \frac{d}{d\omega}
- (\omega^2e^{-D\omega})=0
- \iff\omega(2-D\omega)=0,
+ \bigl(\omega^3e^{-D\omega}\bigr)
+ =\omega^2e^{-D\omega}(3-D\omega).
 \]
-其中 $\omega>0$，故
+频率谱峰值因此为
 \[
- \boxed{\omega_{\max,\omega}=\frac{2T}{a}
- \simeq5.24\times10^{14}\,\mathrm{s^{-1}}}.
+ \boxed{\omega_{\max,\omega}=\frac{3T}{a}
+  \simeq7.85\times10^{14}\,\mathrm{rad/s}}.
 \]
-转换波长谱必须保留雅可比因子：
-$\omega=2\pi c/\lambda$、
-$|d\omega/d\lambda|=2\pi c/\lambda^2$，
-故
+波长谱极大不能直接将该峰值用
+$\lambda=2\pi c/\omega_{\max,\omega}$ 代换：
+谱密度变换必须使用变量雅可比。
+由 $\omega=2\pi c/\lambda$，
+$\left|d\omega/d\lambda\right|=2\pi c/\lambda^2$，
 \[
- u_\lambda\propto\lambda^{-4}
- e^{-2\pi ca/(T\lambda)}.
+ u_\lambda(\lambda,T)=
+ u_\omega(2\pi c/\lambda,T)
+ \left|\frac{d\omega}{d\lambda}\right|
+ \propto\lambda^{-5}
+ \exp\!\left(-\frac{2\pi ca}{T\lambda}\right).
 \]
-对 $\lambda$ 求导，得到
+极值条件
 \[
- \boxed{\lambda_{\max,\lambda}=\frac{\pi ca}{2T}
- \simeq1.80\,\mu\mathrm m}.
+ \frac{d}{d\lambda}\ln u_\lambda
+ =-\frac5\lambda+\frac{2\pi ca}{T\lambda^2}=0
 \]
-\textbf{若采用物理上常见的维恩谱
-$u_\omega=A\omega^3e^{-a\omega/T}$（与原书答案一致），}
-则频率谱与波长谱峰值分别为
+给出
 \[
- \boxed{\omega_{\max,\omega}^{(3)}
- =\frac{3T}{a}
- \simeq7.85\times10^{14}\,\mathrm{s^{-1}}},
+ \boxed{\lambda_{\max,\lambda}
+  =\frac{2\pi ca}{5T}
+  \simeq1.44\,\mathrm{\mu m}}.
 \]
+\textbf{按此前记录扫描底本 $\omega^2$
+的独立字面分支：}
+若题设实际是
+$u_\omega=A\omega^2e^{-a\omega/T}$，
+则角频率峰在
+$\boxed{\omega_{\max,\omega}^{(2)}=2T/a
+ \simeq5.24\times10^{14}\,\mathrm{rad/s}}$；
+且由于对应
+$u_\lambda\propto\lambda^{-4}
+ \exp[-2\pi ca/(T\lambda)]$，
 \[
- \boxed{\lambda_{\max,\lambda}^{(3)}
- =\frac{2\pi ca}{5T}
- \simeq1.44\,\mu\mathrm m}.
+ \boxed{\lambda_{\max,\lambda}^{(2)}
+ =\frac{2\pi ca}{4T}
+ =\frac{\pi ca}{2T}
+ \simeq1.80\,\mathrm{\mu m}}.
 \]
-\excheck \emph{不能}既照印刷题面使用 $\omega^2$，
-又照书末抄 $\omega^3$ 的数值。
-而且在两种模型中，频率谱峰值和波长谱峰值
-不能靠简单的 $\lambda=2\pi c/\omega_{\max}$ 相互转化，
-因为谱密度变换引入了雅可比因子。
+\excheck
+两谱的峰位不是同一个光子、也非互为
+$\lambda=2\pi c/\omega$ 的简单倒数；
+标准形式的峰位满足
+$\lambda_{\max,\lambda}\omega_{\max,\omega}
+ =\frac35(2\pi c)$，
+打印为 $\omega^2$ 时则为
+$\frac12(2\pi c)$。
+标准维恩系数 $a=\hbar/k_B$，
+因此从 Planck 高频近似必须得到 $\omega^3$。
+不同版本对照见
+\texttt{sinhafoundation.org/physics/problems/5-254/}，
+不能把两个谱模型的频率/波长极值混用。
 
 \thermalopticsproblem{255}{228}
 从普朗克黑体辐射公式推导角频率谱能量密度
