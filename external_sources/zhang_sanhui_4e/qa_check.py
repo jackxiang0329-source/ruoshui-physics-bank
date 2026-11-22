@@ -740,8 +740,8 @@ def check_numeric_spotmodels() -> int:
     require(close(40*101.325*math.log(2),2809.32552281),
             "10.1 path A->B->C->D signed gas expansion work")
     require(close(560-356+220,424),"10.2 ad-b heat based on state U")
-    require(close(560-356-282, -78) is False,
-            "10.2 b->a heat not naive path-work addition")
+    require(close(-(560-356)-282, -486),
+            "10.2 b->a releases 486J using reversed internal energy")
     require(close(2*(5/2)*RG*50,2078.6156545),
             "10.3 oxygen internal energy both paths")
     require(close(2*(7/2)*RG*50,2910.0619163),
