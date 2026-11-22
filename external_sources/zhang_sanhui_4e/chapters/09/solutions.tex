@@ -378,3 +378,257 @@ Na极低温时应注意量子气体和俘获势的适用界限。
 实际大气留存还依赖温度剖面、
 光化学与长时日照驱动，不能仅由
 \(v_{\rm rms}<v_{\rm esc}\) 推出永久稳定。
+
+
+\paragraph{习题 9.21}
+悬浮烟粒与周围气体达到平衡温度时，
+按能量均分原理，其质心随机热运动的平均动能
+\(\frac12m\overline{v^2}=\frac32k_BT\)。
+于是
+\[
+ \boxed{v_{\rm rms}=\sqrt{\frac{3k_BT}{m}}
+ =\sqrt{\frac{3(1.380649\times10^{-23})(300)}
+ {1.6\times10^{-16}}}
+ \approx8.81\times10^{-3}\,\mathrm{m/s}}.
+\]
+它主要由\emph{烟粒质量与温度}决定：
+若改放在温度同为300K的氢气中，
+粒子热平衡速度平方平均仍相同；
+气体种类影响阻力和布朗扩散的时间尺度，
+不改变经典平衡速度的这个均分结果。
+
+\paragraph{习题 9.22}
+质量转换
+\(m=6.2\times10^{-14}\,\mathrm g
+ =6.2\times10^{-17}\,\mathrm{kg}\)，
+\(v_{\rm rms}=1.4\,\mathrm{cm/s}
+ =0.014\,\mathrm{m/s}\)，
+\(T=300.15\,\mathrm K\)。
+\[
+ \frac12m\overline{v^2}
+ =\frac32k_BT
+ =\frac32\frac R{N_A}T,
+\quad
+ \boxed{N_A=\frac{3RT}{mv_{\rm rms}^2}
+ \approx6.16\times10^{23}\,\mathrm{mol^{-1}}}.
+\]
+实验颗粒质量、速度测定精度有限，
+这一布朗运动估计不应报告成精密基本常数测量。
+
+\paragraph{习题 9.23}
+麦克斯韦速率分布
+\[
+ f_v(v)=4\pi\left(\frac m{2\pi k_BT}\right)^{3/2}
+ v^2e^{-mv^2/(2k_BT)}
+\quad(v\ge0).
+\]
+做变量代换
+\(\epsilon=mv^2/2\)，
+\(dv=d\epsilon/\sqrt{2m\epsilon}\)，
+于是
+\[
+ f_\epsilon(\epsilon)=f_v(\sqrt{2\epsilon/m})
+ \left|\frac{dv}{d\epsilon}\right|
+ =\boxed{\frac2{\sqrt\pi}(k_BT)^{-3/2}
+ \epsilon^{1/2}e^{-\epsilon/(k_BT)}}.
+\]
+求最概然\emph{能量}：
+\(d\ln f_\epsilon/d\epsilon
+ =1/(2\epsilon)-1/(k_BT)=0\)，
+\[
+ \boxed{\epsilon_{\rm mode}=\frac12k_BT}.
+\]
+然而速率分布峰位置
+\(v_p=\sqrt{2k_BT/m}\)，
+它所对应的能量
+\[
+ \boxed{\frac12mv_p^2=k_BT}.
+\]
+两峰并不在同一能量处，因为非线性
+\(v\mapsto\epsilon\) 的雅可比因子改变了密度曲线。
+
+\paragraph{习题 9.24}
+单个半径 \(a\) 的藤黄球
+在水中受到有效重力
+\[
+ F_g=(\rho_p-\rho_w)\frac{4\pi a^3}{3}g,
+\]
+故在高差 \(h\) 上的能量差
+\(\Delta U=F_gh\)。
+布尔兹曼分布
+\(n/n_0=\exp[-\Delta U/(k_BT)]\)
+且 \(k_B=R/N_A\)，整理即
+\[
+ \boxed{\frac{RT}{N_A}\ln\frac{n_0}{n}
+ =\frac43\pi a^3(\rho_p-\rho_w)gh}.
+\]
+将原题密度差
+\(0.2067\,\mathrm{g/cm^3}=206.7\,\mathrm{kg/m^3}\)，
+半径 \(a=.212\,\mu\mathrm m\)、
+\(T=293.15\,\mathrm K\) 代入；
+第一层 \(n_0=7160\)，
+第二、第三、第四层相对第一层的高度
+分别为 \(h,2h,3h\)，
+\(h=30\,\mu\mathrm m\)。
+\[
+ \begin{array}{c|c}
+ \text{层数对比}&N_A\ (\mathrm{mol^{-1}})\\\hline
+ 1:2&7.60\times10^{23}\\
+ 1:3&7.47\times10^{23}\\
+ 1:4&7.10\times10^{23}
+ \end{array}
+\]
+因实验统计数量有限，
+三个估计略有差异。
+取首末层跨度较大的结果
+\(\sim7.1\times10^{23}\,\mathrm{mol^{-1}}\)，
+或者将三估计做适当拟合，均只是实验精度估计；
+\emph{不能无根据地把它改成标准值}
+\(6.02214076\times10^{23}\)。
+
+\paragraph{习题 9.25}
+水蒸气摩尔体积
+\(V_m=3.01\times10^4\,\mathrm{cm^3/mol}\)。
+单位立方厘米中的分子数
+\[
+ \boxed{n_{\rm cm^3}=\frac{N_A}{V_m}
+ \approx2.00\times10^{19}\,\mathrm{cm^{-3}}}.
+\]
+根据麦克斯韦分子速度各向同性，
+每单位面积每秒撞击平面的通量
+\(J=\tfrac14n\bar v\)。
+水分子
+\(M=0.018\,\mathrm{kg/mol}\)，
+\(T=373.15\,\mathrm K\)，
+\(\bar v=\sqrt{8RT/(\pi M)}\approx663\,\mathrm{m/s}\)。
+将分子数密度转换到 \(\mathrm{m^{-3}}\)，
+求得
+\[
+ \boxed{J(1\,\mathrm{cm^2})
+ \approx3.31\times10^{23}\,
+ \mathrm{molecules/s}}.
+\]
+蒸气与液体处于动态平衡时，
+每秒从液面\emph{蒸发}的水分子数
+恰等于撞击并被凝结的水分子数；
+若忽略不凝结的反射比例，
+第三问同为
+\(\boxed{3.31\times10^{23}\,\mathrm{s^{-1}\,cm^{-2}}}\)。
+\textbf{第四问的相态关键：}
+等温压缩同时有液态水存在，
+凝结部分水蒸气保持饱和，
+故
+\[
+ \boxed{p_{\rm after}=p_{\rm sat}(100^\circ\mathrm C)
+ =1.00\,\mathrm{atm}},
+\]
+而\emph{不是}将压强按玻意耳定律翻倍。
+若全部液态水已蒸发或不是汽液平衡，
+需要另给初态物质量才能判断。
+
+\paragraph{习题 9.26}
+\(m_{\mathrm{CO_2}}=1.1\,\mathrm{kg}\)，
+\(M=44\,\mathrm{g/mol}\)，
+故 \(n=25\,\mathrm{mol}\)，
+\(T=286.15\,\mathrm K\)，
+\(V=20\,\mathrm L\)。
+范德瓦耳斯方程
+\[
+ \left(p+\frac{an^2}{V^2}\right)(V-nb)=nRT,
+\]
+取 \(R=8.314\times10^3\,
+\mathrm{Pa\,L/(mol\,K)}\) 与题给 \(a,b\)，
+\[
+ \boxed{p_{\rm vdW}=
+ \frac{nRT}{V-nb}-\frac{an^2}{V^2}
+ \approx2.57\times10^6\,\mathrm{Pa}}.
+\]
+相同 \(n,V,T\) 的理想气体压强
+\[
+ \boxed{p_{\rm ideal}=\frac{nRT}{V}
+ \approx2.97\times10^6\,\mathrm{Pa}}.
+\]
+\(\mathrm{CO_2}\) 分子排斥体积 \(nb\)
+使排斥项升压，
+但吸引修正 \(an^2/V^2\) 对该状态
+更显著，故最终真实气体模型的压强较小。
+本题不能把 \(a\) 的 \(\mathrm{L^2}\)
+误当作 \(\mathrm{m^6}\) 而不作单位转换。
+
+\paragraph{习题 9.27}
+每摩尔的范德瓦耳斯方程
+\[
+ p=\frac{RT}{V_m-b}-\frac a{V_m^2}.
+\]
+临界等温线的水平拐点 \(V_m=V_c,T=T_c\) 满足
+\[
+ -\frac{RT_c}{(V_c-b)^2}+\frac{2a}{V_c^3}=0,
+\]
+\[
+ \frac{2RT_c}{(V_c-b)^3}-\frac{6a}{V_c^4}=0.
+\]
+二式相除得
+\(V_c=3b\)；
+再代入压强式及临界条件得到
+\[
+ \boxed{b=\frac{V_c}{3}},\qquad
+ \boxed{a=3p_cV_c^2},\qquad
+ \boxed{RT_c=\frac{8a}{27b}}.
+\]
+\textbf{原书图值审查：}
+需要严格依教材图9.18的坐标刻度，
+取得 \(p_c,V_c\) 数值再代入，
+不能仅凭另一本资料的临界参数
+冒充这幅图的读数。
+举\emph{非源图定值、仅作量级校验}：
+若 \(p_c\approx7.4\,\mathrm{MPa}\)，
+\(V_c\approx9.4\times10^{-5}\,\mathrm{m^3/mol}\)，
+则 \(b\approx3.13\times10^{-5}\,\mathrm{m^3/mol}\)，
+\(a\approx0.196\,\mathrm{Pa\,m^6/mol^2}\)。
+这与原书第9.26题的既定 \(a\) 参数
+未必完全一致，因输入来自不同拟合或图上读数。
+\textbf{第（2）问保留人工图值复核标记。}
+
+\paragraph{习题 9.28}
+从气体分子动理论
+\(\eta\approx\rho\bar v\lambda/3\)；
+标准状态 \(T=273.15\,\mathrm K\)，
+\(p=101325\,\mathrm{Pa}\)，
+氦气密度
+\(\rho=pM/(RT)\approx0.1785\,\mathrm{kg/m^3}\)。
+所以
+\[
+ \boxed{\lambda=\frac{3\eta}{\rho\bar v}
+ \approx2.65\times10^{-7}\,\mathrm m}.
+\]
+再由硬球平均自由程
+\[
+ \lambda=\frac1{\sqrt2\pi d^2n},\qquad
+ n=\frac p{k_BT},
+\]
+求得
+\[
+ \boxed{d=\sqrt{\frac1{\sqrt2\pi n\lambda}}
+ \approx1.78\times10^{-10}\,\mathrm m}.
+\]
+此处将经典黏滞输运公式的
+数值系数 \(1/3\) 及硬球碰撞截面都视为题定模型；
+更精密 Chapman--Enskog 系数不同。
+
+\paragraph{习题 9.29}
+判据是气体分子平均自由程
+\(\lambda=1/(\sqrt2\pi d^2n)\)
+增长到与瓶壁间距 \(l\) 相当。
+用 \(n=p/(k_BT)\)，
+令 \(\lambda=l=.004\,\mathrm m\)，
+\[
+ \boxed{p_{\rm threshold}
+ =\frac{k_BT}{\sqrt2\pi d^2 l}
+ =\frac{(1.380649\times10^{-23})(300.15)}
+ {\sqrt2\pi(3.7\times10^{-10})^2(0.004)}
+ \approx1.70\,\mathrm{Pa}}.
+\]
+实际导热系数进入稀薄气体
+Knudsen 区域是逐步变化的，
+因此 \(p\sim1.7\,\mathrm{Pa}\)
+是数量级阈值，并非突变点。
