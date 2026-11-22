@@ -295,3 +295,356 @@
 \]
 相对论动量可以无限增长，
 但速率严格小于光速。
+
+
+\paragraph{习题 8.13}
+给定同一静质量 \(m_0\) 与速率 \(v\)，
+非相对论动量 \(p_N=m_0v\)，
+相对论动量 \(p_R=\gamma m_0v\)。
+若 \(p_R=2p_N\)，则 \(\gamma=2\)：
+\[
+ \boxed{v=c\sqrt{1-\gamma^{-2}}
+ =\frac{\sqrt3}{2}c\approx0.866c}.
+\]
+动能分别为
+\(K_N=\tfrac12m_0v^2\)，
+\(K_R=(\gamma-1)m_0c^2\)。
+若 \(K_R=2K_N\)，则
+\[
+ \gamma-1=\beta^2
+ =1-\frac1{\gamma^2}
+ \Longrightarrow
+ \gamma^2=\gamma+1.
+\]
+取正根
+\(\gamma=(1+\sqrt5)/2\)，
+所以
+\[
+ \boxed{v=c\sqrt{1-\gamma^{-2}}
+ \approx0.786c}.
+\]
+两问不能混淆为同一个速度。
+
+\paragraph{习题 8.14}
+电子的静止能量
+\(m_ec^2\simeq0.511\,\mathrm{MeV}\)；
+给动能 \(K=2.8\times10^9\,\mathrm{eV}\)，
+有
+\[
+ \gamma=1+\frac K{m_ec^2}\approx5480.46.
+\]
+直接计算
+\(c-v=c[1-\sqrt{1-\gamma^{-2}}]\)
+存在严重浮点减法消去，
+应写稳定形式
+\[
+ \boxed{c-v=\frac{c\,\gamma^{-2}}
+ {1+\sqrt{1-\gamma^{-2}}}
+ \approx4.99\,\mathrm{m/s}}.
+\]
+能量—动量关系
+\(p^2c^2=K(K+2m_ec^2)\)，
+故
+\[
+ \boxed{p=\frac{\sqrt{K(K+2m_ec^2)}}c
+ \approx1.50\times10^{-18}\,\mathrm{kg\,m/s}}
+\]
+或 \(pc\simeq2.80051\,\mathrm{GeV}\)。
+储存环半径
+\(R=L/(2\pi)=240/(2\pi)\simeq38.2\,\mathrm m\)，
+横向所需向心力由动量转向率确定，
+不是简单以静质量套 \(mv^2/R\)：
+\[
+ \boxed{F=\frac{pv}{R}\approx
+ 1.17\times10^{-11}\,\mathrm N}.
+\]
+由垂直磁场洛伦兹力
+\(evB=pv/R\)，
+\[
+ \boxed{B=p/(eR)\approx0.245\,\mathrm T}.
+\]
+
+\paragraph{习题 8.15}
+对单个宇宙线质子，
+总能量按题给 \(E\simeq50\,\mathrm J\)
+（由于远大于静能，将50J视为动能也可忽略差别）。
+质子静能约
+\(m_pc^2=1.503\times10^{-10}\,\mathrm J\)，
+\(\gamma=E/(m_pc^2)\simeq3.33\times10^{11}\)。
+于是
+\[
+ \boxed{c-v=
+ \frac{c}{\gamma^2(1+\sqrt{1-\gamma^{-2}})}
+ \simeq\frac{c}{2\gamma^2}
+ \approx1.35\times10^{-15}\,\mathrm{m/s}}.
+\]
+它远低于普通双精度表示中
+\(c\) 附近的绝对间隔，
+必须采用上式而非直接数值相减。
+
+\paragraph{习题 8.16}
+氘核由自由质子与中子结合时，
+质量亏损
+\[
+ \Delta m=m_p+m_n-m_D
+ =(1.67265+1.67495-3.34365)\times10^{-27}
+ =3.95\times10^{-30}\,\mathrm{kg}.
+\]
+结合能
+\[
+ \boxed{B_D=\Delta mc^2
+ \approx2.216\,\mathrm{MeV}}.
+\]
+占氘核静能之比
+\[
+ \boxed{\frac{B_D}{m_Dc^2}\times100\%
+ =\frac{\Delta m}{m_D}\times100\%
+ \approx0.118\%}.
+\]
+氢原子的电子结合能为
+\(13.58\,\mathrm{eV}\)；
+氢原子静能用题给 \(m_H\)，
+故
+\[
+ \boxed{\frac{13.58\,\mathrm{eV}}
+ {m_Hc^2}\times100\%
+ \approx1.45\times10^{-6}\%}.
+\]
+核结合所占静能比例远高于
+电子与质子的原子结合比例。
+
+\paragraph{习题 8.17}
+本题用主教材给出的简化四质子聚变式，
+一次反应的初质量减去终产物质量：
+\[
+ \begin{aligned}
+ \Delta m&=4m_p-m_{\rm He}-2m_e\\
+ &=[4(1.6726)-6.6425-2(0.0009)]
+ \times10^{-27}\,\mathrm{kg}\\
+ &=\boxed{4.61\times10^{-29}\,\mathrm{kg}}.
+ \end{aligned}
+\]
+放出能量
+\[
+ \boxed{Q=\Delta mc^2\approx
+ 4.14\times10^{-12}\,\mathrm J
+ \approx25.86\,\mathrm{MeV}}.
+\]
+质量转换效率
+\[
+ \boxed{\eta=\frac{\Delta m}{4m_p}
+ \approx0.006890=0.6890\%}.
+\]
+每消耗 \(1\,\mathrm{kg}\) 质子的释放能
+\[
+ \boxed{q=\eta c^2\approx
+ 6.19\times10^{14}\,\mathrm{J/kg}}.
+\]
+按太阳辐射功率
+\(P=3.9\times10^{26}\,\mathrm W\)，
+\[
+ \boxed{\dot m_p=P/q
+ \approx6.30\times10^{11}\,\mathrm{kg/s}}.
+\]
+若太阳按题设有
+\(M_p=1.5\times10^{30}\,\mathrm{kg}\)
+可用质子，并持续此速率：
+\[
+ \boxed{T=M_p/\dot m_p
+ \approx2.38\times10^{18}\,\mathrm s
+ \approx7.55\times10^{10}\,\mathrm{yr}}.
+\]
+这是按源书反应式和固定太阳辐射功率
+建立的粗略上限，不是太阳真实
+主序寿命或氢燃烧区域的精确预测。
+
+\paragraph{习题 8.18}
+无穷远处静止的单位质量物质
+落到半径 \(R\)、质量 \(M\) 的球状天体表面，
+牛顿引力势能释放大小为
+\(\Delta E=GMm/R\)。
+取 \(m=1\,\mathrm{kg}\)，
+地球质量 \(M_E\simeq5.97\times10^{24}\,\mathrm{kg}\)、
+半径 \(R_E\simeq6.37\times10^6\,\mathrm m\)，
+\[
+ \boxed{\Delta E_E\simeq6.26\times10^7\,\mathrm J}.
+\]
+相对于质量静能 \(mc^2\)
+的百分比
+\[
+ \boxed{\eta_E=GM_E/(R_Ec^2)
+ \simeq6.96\times10^{-8}\%}.
+\]
+中子星取 \(M\simeq1.99\times10^{30}\,\mathrm{kg}\)、
+半径 \(R=1.0\times10^4\,\mathrm m\)，
+\[
+ \boxed{\Delta E_N\simeq1.33\times10^{16}\,\mathrm J},
+\qquad
+ \boxed{\eta_N=GM/(Rc^2)\approx14.8\%}.
+\]
+与习题8.17的简化核反应效率约0.689%比较，
+中子星引力释放效率高约21倍。
+\textbf{适用界限：}本题遵循教材的牛顿估算，
+但 \(GM/(Rc^2)\) 已不很小，
+严格的中子星引力红移、入射能量与发射辐射
+须用广义相对论，不能把14.8%当作精密值。
+
+\paragraph{习题 8.19}
+取两个质子各以 \(\pm0.5c\)
+在共同点静止系运动，静质量均为 \(m_p\)。
+\(\gamma=1/\sqrt{1-0.5^2}=2/\sqrt3\)，
+各自的动量和总能量
+\[
+ \boxed{\boldsymbol p_{1,2}
+ =\pm\frac{m_pc}{\sqrt3}\hat{\boldsymbol x}},
+ \qquad
+ \boxed{E_{1,2}=\frac2{\sqrt3}m_pc^2}.
+\]
+在质子1的静止系中，
+质子2的速度用相对论合成
+\[
+ v_{2|1}=\frac{-0.5c-0.5c}
+ {1+0.25}=-0.8c,\qquad
+ \gamma_{2|1}=5/3.
+\]
+于是
+\[
+ \boxed{\boldsymbol p_{2|1}=
+ -\frac43m_pc\,\hat{\boldsymbol x}},
+ \quad
+ \boxed{E_{2|1}=\frac53m_pc^2}.
+\]
+\emph{另一个}质子1在本系静止：
+\(p_{1|1}=0,E_{1|1}=m_pc^2\)。
+动能若需要，可从总能量中减去静能。
+
+\paragraph{习题 8.20}
+采用高能粒子惯用单位，
+初态是总能量为 \(E_e\) 的运动电子，
+与静止质子 \(m_pc^2\) 相撞。
+实验室系初四动量求质心不变量
+\[
+ s c^4=m_e^2c^4+m_p^2c^4
+ +2m_pc^2E_e.
+\]
+题给电子\emph{动能}22GeV，
+因此 \(E_e=22\,\mathrm{GeV}+m_ec^2\)。
+用
+\(m_pc^2\simeq0.938272\,\mathrm{GeV}\)，
+\(m_ec^2\simeq0.000511\,\mathrm{GeV}\)，
+得到
+\[
+ \boxed{\sqrt{s}\,c^2
+ \approx6.4935\,\mathrm{GeV}},
+\]
+即质心系全部可利用总能量。
+若「资用能」专指\emph{扣除初态两粒子静能}
+之后可转成新粒子静能/动能的部分，
+则
+\[
+ \boxed{E_{\rm available,kin}
+ =\sqrt{s}\,c^2-(m_p+m_e)c^2
+ \approx5.5547\,\mathrm{GeV}}.
+\]
+两种定义在教材不同术语体系中可能有区别，
+须与原第8章「资用能」的定义逐式校对，
+不可只报一个数又不说明是否扣除静能。
+
+\paragraph{习题 8.21}
+相向对撞的电子、正电子
+两者能量各约 \(2.8\,\mathrm{GeV}\)，
+初始动量相反，质心系即实验室系。
+故总质心能量
+\[
+ \boxed{E_{\rm cm}\approx5.6\,\mathrm{GeV}}.
+\]
+若「资用能」扣除两个电子静能，
+则约
+\(5.6-2(0.000511)=5.5990\,\mathrm{GeV}\)。
+对于同样电子射向\emph{静止电子}，
+要达到同一质心总能量，
+\[
+ E_{\rm cm}^2=2m_e^2c^4+2m_ec^2 E_{\rm beam},
+\]
+故实验室系\emph{入射电子总能量}
+\[
+ \boxed{E_{\rm beam}=
+ \frac{E_{\rm cm}^2-2m_e^2c^4}
+ {2m_ec^2}
+ \approx3.07\times10^4\,\mathrm{GeV}}.
+\]
+入射电子动能仅少
+\(0.000511\,\mathrm{GeV}\)，
+也约为 \(3.07\times10^4\,\mathrm{GeV}\)。
+与对撞机单束2.8GeV相比，
+固定靶所需束能约高
+\(\boxed{1.10\times10^4}\) 倍，
+说明同等束能时相向对撞更有效。
+
+\paragraph{习题 8.22}
+沿 \(x\) 的洛伦兹四动量变换：
+\[
+ E'=\gamma(E-up_x),\quad
+ p_x'=\gamma(p_x-uE/c^2),\quad
+ p_y'=p_y,\quad p_z'=p_z.
+\]
+直接展开：
+\[
+ \begin{aligned}
+ E'^2-c^2p_x'^2
+ &=\gamma^2[(E-up_x)^2
+ -c^2(p_x-uE/c^2)^2]\\
+ &=\gamma^2(1-u^2/c^2)
+ (E^2-c^2p_x^2)\\
+ &=E^2-c^2p_x^2.
+ \end{aligned}
+\]
+再减去未变的
+\(c^2p_y'^2+c^2p_z'^2\)，得到
+\[
+ \boxed{E'^2-c^2|\boldsymbol p'|^2
+ =E^2-c^2|\boldsymbol p|^2
+ =m_0^2c^4}.
+\]
+不变量不依赖所选惯性参考系。
+
+\paragraph{习题 8.23}
+静止质子的静能
+\(E_0=m_pc^2\)，
+\[
+ \boxed{E_0\simeq0.938\,\mathrm{GeV}}.
+\]
+代入牛顿引力形式：
+两个静止质子间
+\(F_g=G(E_0/c^2)^2/r^2
+ =GE_0^2/(c^4r^2)\)。
+题目\emph{两质子均具有相同高能 \(E\)}
+且粗略把 \(E/c^2\) 当各自的引力等效质量，
+则
+\[
+ \frac{F_g(E)}{F_g(E_0)}
+ =\left(\frac{E}{E_0}\right)^2.
+\]
+欲令原本比引力大约
+\(10^{36}\) 倍的电力被引力追平，
+需
+\[
+ \left(\frac{E}{E_0}\right)^2\simeq10^{36}
+ \Longrightarrow
+ \boxed{E\simeq10^{18}E_0
+ \approx9.38\times10^{17}\,\mathrm{GeV}}.
+\]
+比较教材给出的粒子加速器量级
+\(10^3\,\mathrm{GeV}\)：
+\[
+ \boxed{\frac{E}{10^3\,\mathrm{GeV}}
+ \approx9.38\times10^{14}}.
+\]
+\textbf{模型界限：}若只把\emph{一个}
+质子的能量提高、另一质子保持静止，
+比例会只与 \(E/E_0\) 成正比，
+结果不同；主教材题目默认讨论
+「两个质子」共同的典型能标。
+把动能与重力质量简单代入牛顿
+\(1/r^2\) 定律并非严格量子引力理论，
+这里只用于揭示约 \(10^{18}\) GeV 的极高能标。
