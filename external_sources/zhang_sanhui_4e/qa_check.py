@@ -366,9 +366,9 @@ def check_numeric_spotmodels() -> int:
     omega_HCL=math.sqrt(kp/mp)
     require(close(omega_HCL/(2*math.pi),1.1279303975519956e14),
             "6.21 HCl small-oscillation frequency")
-    require(close(math.sqrt(1.054571817e-34/(mp*omega_HCL)),
-                  9.432093630413656e-12),
-            "6.21 HCl ground vibration amplitude model")
+    require(close(math.sqrt(3*1.054571817e-34/(mp*omega_HCL)),
+                  1.6336865389623234e-11),
+            "6.21 HCl companion n=1 uses 3/2 hν, NOT 1/2 hν")
     beta=math.log(5/4)/100
     require(close(beta,.002231435513142098),
             "6.22 exponential damping coefficient")
@@ -517,6 +517,8 @@ def main() -> None:
     s15=(ROOT/"chapters/15/solutions.tex").read_text(encoding="utf-8")
     require("零点且上升" in q6 and "两均匀长木板" not in q6,
             "6.3 zero-crossing or 6.16 one-board source wording regressed")
+    require("\\frac32 h\\nu" in s6 and "1.63\\times10^{-11}" in s6,
+            "6.21 original companion energy 3/2 hnu missing")
     require("310.6" in s6 and "1.80\\times10^4" in s6,
             "6.22 damping and 6.27 Lissajous analyses omitted")
     require("15.30" in q15 and "15.30" in s15,
