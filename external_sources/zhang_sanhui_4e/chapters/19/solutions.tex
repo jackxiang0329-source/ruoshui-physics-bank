@@ -214,71 +214,72 @@
 \(\boxed{K_m=M}\)。
 
 \paragraph{习题 19.9}
-图19.25的纵轴为
-\(B/\mathrm T\)，横轴为
-\(H/(\mathrm{A\,m^{-1}})\)。
-按图估读 \(B=1.2\,\mathrm T\)
-时铁芯原来的
-\(H_{\rm core}\) 约
-\(1.7\times10^2\,\mathrm{A/m}\)
-（因线宽和曲线陡升，误差需保留）。
-长螺线管匝密度 \(n\) 不变，
-原有 \(nI=H_{\rm core}\)；
-抽去铁芯后保持相同磁场
-\(B=\mu_0nI_{\rm air}\)，所以
+教材图19.25为铁芯初始磁化曲线；
+配套辅导书S PDF物理页283将
+\(B=1.2\,\mathrm T\) 的图值读为
+\(H_0=2.2\times10^2\,\mathrm{A/m}\)。
+由原线圈电流 \(I_0=6.0\,\mathrm A\)
+和 \(H_0=nI_0\)，
+匝密度 \(n=H_0/I_0\)。
+抽走铁芯保持相同磁感应强度，
+需
 \[
- \boxed{\frac{I_{\rm air}}{I_{\rm core}}
- =\frac{B}{\mu_0H_{\rm core}}
- \approx5.6\times10^3}.
+ \boxed{I=\frac{B}{\mu_0 n}
+ =\frac{BI_0}{\mu_0H_0}
+ =\frac{(1.2)(6.0)}
+ {(4\pi\times10^{-7})(220)}
+ \approx2.60\times10^4\,\mathrm A}.
 \]
-若原来 \(I_{\rm core}=6.0\,\mathrm A\)，
-\[
- \boxed{I_{\rm air}\approx3.37\times10^4\,\mathrm A}.
-\]
-\textbf{图读风险：}需按辅导书对应题号
-检查 \(H_{\rm core}\) 的准确读数；
-这是依图19.25的近似量，不可视为铁芯
-始终有固定相对磁导率。
+这与辅导书S PDF283值一致。
+不能简单用固定铁芯相对磁导率
+替代本题原图的初始磁化曲线。
 
 \paragraph{习题 19.10}
-长螺线管每米 \(n=800\) 匝，
-目标场强 \(B=1.0\,\mathrm T\)。
-由教材图19.25初始曲线约读
-\(H\sim1.5\times10^2\,\mathrm{A/m}\)。
-安培环路给 \(H=nI\)，所以
+目标 \(B=1.0\,\mathrm T\)，
+每米匝数 \(n=800\,\mathrm{m^{-1}}\)。
+配套辅导书S PDF物理页284从原图19.25
+读出 \(H=1.7\times10^2\,\mathrm{A/m}\)。
+由安培环路式
+\(H=nI\)，得到
 \[
- \boxed{I\approx\frac{150}{800}
- \approx0.19\,\mathrm A}.
+ \boxed{I=\frac Hn
+ =\frac{170}{800}
+ \approx0.213\,\mathrm A\approx0.21\,\mathrm A}.
 \]
-\textbf{精度声明：}
-磁化曲线不能仅由
-\(B\) 和未知铁芯的常数 \(\mu_r\)
-得到 \(H\)；必须从原图读取。
-\(0.19\,\mathrm A\) 作为图读近似，
-随后要核对配套辅导书的选择与坐标精度。
+此 \(H\) 是源书的\emph{曲线估读值}，
+不声称是铁芯对任何外加场都固定的材料常数。
 
 \paragraph{习题 19.11}
-矩形磁滞回线的矫顽力
-\(H_c=2\,\mathrm{A/m}\)，
-为令磁化翻转，脉冲环向励磁场
-至少达到反向矫顽强度（临界意义）。
-环外径 \(d_o=.8\,\mathrm{mm}\)、
+图19.26矩形磁滞材料矫顽力
+\(H_c=2\,\mathrm{A/m}\)。
+环外径 \(d_o=.8\,\mathrm{mm}\)，
 内径 \(d_i=.5\,\mathrm{mm}\)，
-平均直径
-\(d_m=(d_o+d_i)/2=.65\,\mathrm{mm}\)，
-平均磁路长度
-\(l_m=\pi d_m\)。
-由环路定理
+中孔一根穿芯导线（单匝）。
+安培环路给环内任一点
 \[
- \boxed{NI_{\min}\simeq H_cl_m
- =2\pi(.65\times10^{-3})
- \approx4.08\times10^{-3}\,\mathrm{A\,turn}}.
+ H(r)=\frac{I}{2\pi r}.
 \]
-若题图是一匝穿芯导线 \(N=1\)，
-\(\boxed{I_{\rm peak,min}\approx4.08\,\mathrm{mA}}\)。
-磁滞翻转恰在矫顽力附近，
-真实开关为可靠翻转还需裕量；
-方向应与原磁化方向反向。
+按配套辅导书S PDF284采用的
+\emph{内缘最先跨越矫顽力并开启反转}
+的模型，\(r_{\rm in}=d_i/2=.25\,\mathrm{mm}\)：
+\[
+ \boxed{I_{\rm onset}=2\pi r_{\rm in}H_c
+ =2\pi(.25\times10^{-3})(2)
+ \approx3.14\,\mathrm{mA}}.
+\]
+\textbf{全截面同时达到矫顽场的歧义：}
+若题意要求从内到外\emph{各处均}
+满足 \(|H(r)|\ge H_c\)，
+最弱的外缘 \(r_{\rm out}=.40\,\mathrm{mm}\)
+需
+\[
+ \boxed{I_{\rm all}\ge2\pi r_{\rm out}H_c
+ \approx5.03\,\mathrm{mA}}.
+\]
+源书答案3.1mA对应\emph{开始发生磁畴反转}
+并假设反转能传播至全环；
+不是给所有位置均同时达到阈值的数学证明。
+需在原图/材料磁滞模型的独立审查中区分。
 
 \paragraph{习题 19.12}
 环总平均长 \(l=.61\,\mathrm m\)，
