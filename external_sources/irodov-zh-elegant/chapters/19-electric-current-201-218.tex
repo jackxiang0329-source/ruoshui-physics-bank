@@ -325,12 +325,39 @@ $\lambda=I/v$。
 =\frac I{4\pi\varepsilon_0}
 \sqrt{\frac{m_p}{2|e|V}}}.
 \]
-代入得
-$\boxed{E(R)\simeq32\,\mathrm{V/m},
-\quad|\Delta\varphi|\simeq0.80\,\mathrm V}$。
-\excheck 这里的 $R$ 是束半径；
-质子速度约 $0.036c$，
-非相对论近似合理。
+严格代入原印数据
+$V=600\,\mathrm{kV}$、$I=50\,\mathrm{mA}$、
+$R=5.0\,\mathrm{mm}$，得
+\[
+\begin{aligned}
+v&=\sqrt{\frac{2(1.60218\times10^{-19})
+(6.00\times10^5)}
+{1.67262\times10^{-27}}}
+\simeq1.0721\times10^7\,\mathrm{m/s},\\
+\lambda&=\frac{0.050}{v}
+\simeq4.664\times10^{-9}\,\mathrm{C/m},\\
+E(R)&=\frac{\lambda}{2\pi\varepsilon_0R}
+\simeq1.677\times10^4\,\mathrm{V/m},\\
+|\Delta\varphi|&=\frac{\lambda}{4\pi\varepsilon_0}
+\simeq41.9\,\mathrm V.
+\end{aligned}
+\]
+故
+\[
+\boxed{E(R)\simeq16.8\,\mathrm{kV/m},\qquad
+|\Delta\varphi|\simeq41.9\,\mathrm V}.
+\]
+\excheck \textbf{原版书末答案与原印题目严重不符：}
+书末印$32\,\mathrm{V/m}$及$0.80\,\mathrm V$，
+但对均匀圆柱形束严格有
+$|\Delta\varphi|=\tfrac12 E(R)R$；
+该两印刷数值本身也不满足此必要恒等式。
+本译稿以原文$50\,\mathrm{mA}$、
+$5.0\,\mathrm{mm}$及$600\,\mathrm{kV}$为准，
+不擅自把电流改为微安以迁就答案。
+质子速度约$0.0358c$，
+非相对论计算误差不足$0.1\%$，无法解释
+上述约$500$倍至$50$倍的差异。
 
 \electrocurrentproblem{211}{122}
 电子由大平行板阴极以几乎零初速度发射，
