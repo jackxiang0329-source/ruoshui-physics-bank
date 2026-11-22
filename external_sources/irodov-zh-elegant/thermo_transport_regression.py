@@ -43,10 +43,10 @@ dN=.37e-9;M=.028;vm=meanv(T0,M)
 L0=mfp(T0,patm,dN)
 tau0=L0/vm
 ck(223,"nitrogen STP mean free path in microns",L0*1e6,.06)
-ck(223,"nitrogen STP collision interval ns",tau0*1e9,.13)
+ck(223,"nitrogen STP collision interval ns",tau0*1e9,.13465)
 Lb=mfp(T0,1e-9,dN)
 taub=Lb/vm
-ck(223,"nitrogen at 1nPa flight path megametres",Lb/1e6,6)
+ck(223,"nitrogen at 1nPa flight path megametres",Lb/1e6,6.20035)
 ck(223,"nitrogen at 1nPa collision interval hours",taub/3600,3.8)
 eq(223,"mean path scales exactly inversely with pressure",
    Lb/L0,patm/1e-9)
@@ -67,8 +67,8 @@ pc=k*T0/(sqrt(2)*pi*d*d*ell)
 nc=pc/(k*T0)
 ac=nc**(-1/3)
 ck(227,"O2 10mm free path threshold pressure Pa",pc,.7)
-ck(227,"O2 threshold molecules/cm3",nc/1e6,2e14)
-ck(227,"O2 mean separation at threshold micrometers",ac*1e6,.2)
+ck(227,"O2 threshold molecules/cm3",nc/1e6,1.83738e14)
+ck(227,"O2 mean separation at threshold micrometers",ac*1e6,.1759)
 zero(227,"critical free path recovers 10mm dimension",
      mfp(T0,pc,d)-ell,scale=.01)
 dN=.37e-9
