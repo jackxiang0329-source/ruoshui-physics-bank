@@ -116,9 +116,14 @@ eq(170,"one closed one open modes below 1.25kHz",
     sum(x<1250 for x in openclosed),6)
 eq(170,"both open modes below 1.25kHz",
     sum(x<1250 for x in openopen),6)
-v=sqrt(1.1e11/8.9e3);L=.5
+v=sqrt(1.28e11/8.9e3);L=.5
 modes=[(2*n+1)*v/(2*L) for n in range(100) if 20e3<=(2*n+1)*v/(2*L)<=50e3]
+eq(171,"copper rod physical longitudinal velocity km/s",v/1000,3.8,rtol=.003)
 eq(171,"copper rod eigenmode count 20--50 kHz",len(modes),4)
+for measured,rounded in zip(modes,[26.6e3,34.2e3,41.8e3,49.4e3]):
+    eq(171,"mode frequencies consistent with wave speed",measured,rounded,rtol=.003)
+truth(171,"old 110 GPa benchmark cannot yield the printed speed",
+      abs(sqrt(1.1e11/8.9e3)/1000-3.8)>.2)
 eq(172,"fixed string maximum-to-time-average kinetic energy ratio",(.25)/(.125),2)
 rho,S,omega,k,amp=2.,.1,4.,3.,.04
 energy=pi*S*rho*omega*omega*amp*amp/(4*k)
