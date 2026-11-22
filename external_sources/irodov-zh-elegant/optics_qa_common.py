@@ -11,11 +11,12 @@ from math import isclose
 
 ROOT=Path(__file__).resolve().parent/"chapters"
 count=0
+failures=[]
 def eq(number,title,calculated,reference,rtol=1e-6,atol=1e-11):
     global count
     count+=1
-    assert isclose(calculated,reference,rel_tol=rtol,abs_tol=atol), (
-        f"V.{number} {title}: value {calculated:.12g}, reference {reference:.12g}")
+    if not isclose(calculated,reference,rel_tol=rtol,abs_tol=atol):
+        failures.append(f"V.{number} {title}: value {calculated:.12g}, reference {reference:.12g}, rel_tol={rtol}")
 def truth(number,title,predicate):
     eq(number,title,float(bool(predicate)),1.)
 def load(files,macro,begin,end):
@@ -39,6 +40,11 @@ def load(files,macro,begin,end):
 def anchor(n,block,token):
     global count
     count+=1
-    assert token in block, f"V.{n} source invariant absent: {token}"
+    if token not in block:
+        failures.append(f"V.{n} source invariant absent: {token}")
 def finish(tag,nblocks):
+    if failures:
+        for failure in failures:
+            print("FAIL:",failure)
+        raise AssertionError(f"{len(failures)} of {count} assertions failed in {tag}")
     print(f"PASS: {count} independent optics/source assertions for {tag}, {nblocks} original numbered blocks.")
