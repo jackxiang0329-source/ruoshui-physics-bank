@@ -424,7 +424,75 @@ def check_numeric_spotmodels() -> int:
     require(close(-13.6/(15.8**2),-.0544784489665),
             "15.30 hydrogenic dielectric-shielded Bohr binding")
 
-    return 136
+
+    # Chapter 7: numerical wave, dispersion and signal transport references.
+    require(close(740/(300*3600),6.85185185185e-4),"7.1 transoceanic wave frequency")
+    require(close(8000/740,10.81081081081),"7.1 8000km propagation hours")
+    require(close(4/.8,5.0),"7.2 traveling sine-wave wavenumber")
+    require(close(.02*2*math.pi*200/100,.2513274123),
+            "7.3 maximum strand speed divided by wave speed")
+    require(close(.08/.4,.2),"7.5 illustrated wave frequency")
+    require(close(7800*5100**2,2.02878e11),"7.8 steel Young modulus")
+    require(close(.5*7900*5100*(2*math.pi*1000)**2*(1e-9)**2,
+                  7.95292722640e-4),"7.10 harmonic wave intensity")
+    require(close(.5*7900*5100*(2*math.pi*1000)**2*(1e-9)**2*.0015,
+                  1.19293908396e-6),"7.10 energy power through track")
+    require(close(-15*math.cos(1)*math.sin(1.5),-8.08423262031),
+            "7.13 standing wave point velocity")
+    require(close(5740/(2*.002),1.435e6),"7.15 quartz thickness resonance")
+    require(close(1e-12*10**(115/10),.316227766),"7.16 115 dB intensity")
+    require(close(1e-12*10**(141/10),125.8925412),"7.16 141 dB intensity")
+    require(close(5*60/(1/6-1/8),7200),"7.17 earthquake graph minutes to km")
+    require(close(10**(4.8+1.5*9.2),3.98107170553e18),
+            "7.18 textbook magnitude energy empirical model")
+    require(close(400*(330-80/3.6)/(330-120/3.6),
+                  414.981273408),"7.20 pursuit siren Doppler")
+    require(close(1540*220/(2*18000+220),9.353948095),
+            "7.22 two-way Doppler dolphin speed")
+    require(close(2*.32*4e6/1540,1662.3376623),"7.23 blood cell echo shift")
+    require(close(3e8*1.1e4/(2*5e10)*3.6,118.8),"7.24 radar speeding km/h")
+    require(close(math.degrees(math.asin(1/2.3)),25.77146174),
+            "7.25 sonic boom half angle")
+    require(close(5000*math.sqrt(2.3**2-1)/(2.3*330),13.6444764),
+            "7.25 supersonic delay")
+    require(close((60/3.6)*math.sin(math.radians(10)),
+                  2.894136294),"7.26 conditional wake half-angle speed")
+    require(close((9.5/4.5),2.111111111),"7.27 carrier phase speed")
+    require(close(2*math.pi/(5-4),2*math.pi),
+            "7.27 packet lobe width")
+    require(close((2.5**2-1)/(2.5**2+1),21/29),
+            "7.30 conditional relativistic Doppler speed")
+    # Chapter 16: independently recomputed current, leakage, cooling and RC quantities.
+    require(close(.008*240/(3e8*electron_q),3.9945658e10),
+            "16.1 electron storage-ring number")
+    require(close(2*eps*1.2e6*.30*.20,1.275003e-6),
+            "16.2 insulator belt current")
+    require(close(30/((10500/.1079*6.02214076e23)*electron_q*
+                    math.pi*(.001/2)**2),.00406819932),
+            "16.3 estimated silver drift speed")
+    require(close(1.75e-8*2/(.02*.08),2.1875e-5),
+            "16.4 bulk copper resistor")
+    require(close(.05/(1.75e-8*2/(.02*.08)),2285.7142857),
+            "16.4 electric current through copper rod")
+    require(close(5*30/(30+70),1.5),"16.6 uniform wire short circuit")
+    require(close(120/(4e-12),3e13),"16.7 fair weather air resistivity")
+    require(close(1e12*math.log(.02/.005)/(2*math.pi*1000),
+                  2.2063560015e8),"16.8 radial cable insulation leak R")
+    require(close(10*200/(2*math.pi)*(1-1/1.3),73.45612758),
+            "16.10 earth step potential not safety rating")
+    require(close((6-3.96)/.00202,1009.9009901),
+            "16.14 transistor emitter bias R_e conditional image")
+    require(close(1000e-6*.001,1.0e-6),
+            "16.15 elementary RC model units")
+    require(close(.001*math.log(1e-4/e),.03406741329),
+            "16.15 time until one electron charge in 1uF x 100V")
+    require(close(.002*4000,8.0),"16.16 source current bounded charge tau")
+    require(close(.002*.5,.001),"16.16 discharge lamp RC time")
+    require(close(4000/.5,8000),"16.16 discharge initial current")
+    require(close(400*200/(4180*60)*60,19.13875598),
+            "16.17 electromagnet minimum cooling liters/min")
+
+    return 176
 
 
 def main() -> None:
@@ -527,6 +595,20 @@ def main() -> None:
             "15.2 layered dielectric voltage source regression")
     require("2.33333333333e-10" not in q15,
             "chapter15 questions accidentally contaminated by QA numerics")
+
+    # Source-number and risk regression checks for the new wave/current chapters.
+    q7=(ROOT/"chapters/07/questions.tex").read_text(encoding="utf-8")
+    a7=(ROOT/"chapters/07/solutions.tex").read_text(encoding="utf-8")
+    q16=(ROOT/"chapters/16/questions.tex").read_text(encoding="utf-8")
+    a16=(ROOT/"chapters/16/solutions.tex").read_text(encoding="utf-8")
+    require("7.33" in q7 and "7.33" in a7,
+            "7.33 ultrasonic motor end exercise missing")
+    require("张角" in q7 and "半张角" in a7,
+            "7.26 printed ship wake opening-angle risk must be disclosed")
+    require("16.18" in q16 and "16.18" in a16,
+            "16.18 homogeneous conductor end exercise missing")
+    require("电源正端" in a16 or "电动势正端" in a16,
+            "16.11–16.12 image polarity assumption not documented")
 
     computed = check_numeric_spotmodels()
     print(f"PASS: {len(ids)} candidate exercises have unique IDs, "
