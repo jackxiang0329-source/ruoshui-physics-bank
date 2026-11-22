@@ -106,8 +106,11 @@ eq(137,"grating resolving power upper bound",
 N=13000;d=1e-3/200;wl=670.8e-9
 eq(140,"200 grooves per mm, length6.5cm groove count",N,13000)
 eq(140,"minimum line separation in 7th order pm",wl/(7*N)*1e12,7.4,rtol=.01)
-d=.01/(5*589/(.6))
-eq(141,"minimum order 5 resolving 589nm pair pitch micron",d*1e6,50.93,rtol=.03)
+# Resolves at m=5, fails at m=4, so N=200 is an admissible integer.
+N=200; d=.01/N
+truth(141,"m=4 fails Rayleigh separation",4*N < 589/.6)
+truth(141,"m=5 passes Rayleigh separation",5*N >= 589/.6)
+eq(141,"admissible fifth-order grating pitch micron",d*1e6,50.)
 eq(142,"250 grooves/mm on 25mm window total grooves",250*25,6250)
 eq(142,"grating Rayleigh first order cannot separate 0.030nm",
    float(.030<310.169/6250),1)
