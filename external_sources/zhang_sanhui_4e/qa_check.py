@@ -1534,7 +1534,22 @@ def check_numeric_spotmodels() -> int:
     require(close((14.4e3)**2/(2*57*931.494e6),.001952720435),
             "thought30.8 free Fe nucleus 14.4keV gamma recoil~2meV")
 
-    return 624
+    # Ch22/23 source thought concepts: coherence, phase, Fresnel zones and gratings.
+    require(close(1+1+2*math.sqrt(1*1)*math.cos(0),4),
+            "thought22.5 equal coherent beams add amplitude and give intensity4")
+    require(close(1+1+2*math.cos(math.pi),0,rel=.001),
+            "thought22.5 equal coherent beams destructive intensity zero")
+    require(close(500e-9*2/.5e-3,.002),
+            "thought22.6 double slit pitch 2mm for example geometry")
+    require(close((1.5-1)*1e-6*2/.5e-3,.002),
+            "thought22.12 mica 1um changes center by 2mm but NOT pitch")
+    require(1-1+1-1==0,"thought23.3 four half-wave zones cancel not maximum")
+    require(close(2*500e-9/.1e-3,.01),
+            "thought23.5 increasing slit width narrows central angular width")
+    require(close(math.degrees(math.asin(500e-9/2e-6)),14.477512186),
+            "thought23.7 grating maxima positions determined by d not N")
+
+    return 631
 
 
 
@@ -1550,12 +1565,12 @@ def check_thought_intake() -> int:
     require(reg.get("main_chapter_end_count_unchanged") == 705,
             "thought registry changed main705 count")
     rows = reg["entries"]
-    expected_counts = {24: 11, 25: 12, 26: 13, 27: 7,
+    expected_counts = {22: 12, 23: 9, 24: 11, 25: 12, 26: 13, 27: 7,
                        28: 14, 29: 13, 30: 10}
     require(reg["thought_question_count"] ==
-            reg["thought_solution_count"] == len(rows) == 80,
-            "thought count should be exactly 80, separate from705")
-    require(len({e["canonical_id"] for e in rows}) == 80,
+            reg["thought_solution_count"] == len(rows) == 101,
+            "thought count should be exactly 101, separate from705")
+    require(len({e["canonical_id"] for e in rows}) == 101,
             "duplicate thought stable IDs")
     require(len({e["source_thought_number"] for e in rows}) == 80,
             "duplicate original 思考题 numbers")
@@ -1605,6 +1620,17 @@ def check_thought_intake() -> int:
             require(item["question_file"] == qrel and
                     item["solution_file"] == srel,
                     "thought source register wrong file paths")
+    s22t = (ROOT/"thought_questions/22/solutions.tex").read_text(encoding="utf-8")
+    s23t = (ROOT/"thought_questions/23/solutions.tex").read_text(encoding="utf-8")
+    require("不相干" in s22t and "I_1+I_2" in s22t,
+            "thought22.5 incoherent intensities not simple coherent sum")
+    require("云母片" in s22t and "零级" in s22t and "上" in s22t,
+            "thought22.12 mica upper slit optical path shifts center upper")
+    require("半波带" in s23t and "A-A+A-A" in s23t,
+            "thought23.3 four half-wave zones source cancellation lost")
+    require("随机" in s23t and "N^2" in s23t,
+            "thought23.9 random slit grating lacks nonzero regular orders but center coherent")
+
     main_count = len(json.loads(REGISTER.read_text(encoding="utf-8"))["entries"])
     require(main_count == 705, "main chapter-end original count changed from705")
     s30 = (ROOT/"thought_questions/30/solutions.tex").read_text(encoding="utf-8")
