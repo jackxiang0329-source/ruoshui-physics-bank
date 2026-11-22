@@ -1,0 +1,425 @@
+% 张三慧大学物理学第4版第4章《功和能》独立解析
+% 来源V1 PDF物理页151--155，表4.1 PDF物理页131。
+% 解答模型、坐标和适用条件逐项说明，未经独立外审。
+\section*{第4章\quad 功和能：独立解析}
+\subsection*{习题4.1--4.16}
+
+\paragraph{习题 4.1}
+以起重间加速度向上为正，配重加速度向下为正，
+两侧质量 \(M=1200\,\mathrm{kg}\)，
+\(m=1000\,\mathrm{kg}\)，
+加速度大小 \(a=1.5\,\mathrm{m/s^2}\)。
+钢缆两侧张力 \(T_M,T_m\) 分别满足
+\[
+ T_M-Mg=Ma,\qquad mg-T_m=ma.
+\]
+故
+\[
+ \boxed{T_M=M(g+a)=13560\,\mathrm N},\qquad
+ \boxed{T_m=m(g-a)=8300\,\mathrm N}.
+\]
+加速时间 \(t=1.0\,\mathrm s\) 内位移
+\(s=at^2/2=0.75\,\mathrm m\)，
+电动机输出的功是两侧张力差对滑轮两边等长位移所做功：
+\[
+ \boxed{W_{\rm mot,1}=(T_M-T_m)s
+ =[ (M-m)g+(M+m)a]s
+ =3945\,\mathrm J}.
+\]
+交叉核验：
+\(\Delta U=(M-m)gs=1470\,\mathrm J\)，
+\(\Delta K=\frac12(M+m)(at)^2=2475\,\mathrm J\)，
+两者之和仍为 \(3945\,\mathrm J\)。
+之后匀速再升高 \(\Delta h=10\,\mathrm m\)，
+两侧张力各等于重力，故
+\[
+ \boxed{W_{\rm mot,2}=(M-m)g\Delta h
+ =1.96\times10^4\,\mathrm J}.
+\]
+假定滑轮无转动惯量、绳无质量且无摩擦损失。
+
+\paragraph{习题 4.2}
+设从圆弧底端起沿路面的圆心角为
+\(\alpha\in[0,\pi/4]\)。
+极缓慢匀速使法向运动加速度可忽略，
+路面支持力 \(N\simeq mg\cos\alpha\)。
+弧长微元 \(ds=R\,d\alpha\)，
+上升高度 \(h=R(1-\cos\alpha)\)。
+故重力做功
+\[
+ \boxed{W_g=-mgR(1-\cos\frac\pi4)}.
+\]
+滑动摩擦力大小 \(f_k=\mu_kmg\cos\alpha\)，
+所以
+\[
+ \boxed{W_f=-\int_0^{\pi/4}\mu_kmgR\cos\alpha\,d\alpha
+ =-\frac{\mu_kmgR}{\sqrt2}}.
+\]
+由动能变化近零得到马的拉力所做功
+\[
+ \boxed{W_{\rm horse}=mgR(1-\frac1{\sqrt2})
+ +\frac{\mu_kmgR}{\sqrt2}}.
+\]
+这使用题设“极缓慢”近似；若运动速率不可忽略，
+曲率法向加速度会改变 \(N\) 和摩擦功。
+
+\paragraph{习题 4.3}
+飞机质量 \(m=132000\,\mathrm{kg}\)，
+速度 \(v=942/3.6\approx261.67\,\mathrm{m/s}\)，
+所以撞击前的经典动能
+\[
+ \boxed{K=\frac12mv^2
+ \approx4.52\times10^9\,\mathrm J}.
+\]
+本书表4.1（V1 PDF物理页131）
+列出 \(1\,\mathrm{kg}\) TNT爆炸能约
+\(4.6\times10^6\,\mathrm J\)，
+依此\emph{教材内给定的当量标准}
+\[
+ \boxed{m_{\rm TNT,eq}
+ =\frac{4.52\times10^9}{4.6\times10^6}
+ \approx9.82\times10^2\,\mathrm{kg}}.
+\]
+这一对比仅是能量当量，
+不等同于实际撞击破坏机制的物理等效性。
+
+\paragraph{习题 4.4}
+落砂单位时间质量 \(q=50\,\mathrm{kg/s}\)，
+在传送带运动方向初速近似为零，
+被加速到 \(v=1.5\,\mathrm{m/s}\)。
+水平动量流增量为 \(qv\)，
+因此皮带对矿砂施力 \(F=qv\)，
+矿砂对皮带的反作用力大小相同、方向向后。
+为保持皮带匀速，电动机输入功率
+\[
+ \boxed{P_{\rm mot}=Fv=qv^2=112.5\,\mathrm W}.
+\]
+矿砂得到的动能流率仅
+\[
+ \boxed{\dot K=\frac12qv^2=56.25\,\mathrm W}.
+\]
+差值 \(\frac12qv^2\) 在矿砂与皮带达到
+共同速度的相对滑动过程中耗散为热等，
+因此二者不相等。若矿砂有初始水平速度，
+需替换动量变化和动能变化。
+
+\paragraph{习题 4.5}
+取A下落、B右移距离均为 \(h=1.0\,\mathrm m\)；
+两物体质量相等为 \(m\)，
+滑动摩擦只作用在桌面上的B，
+大小 \(\mu_kmg\)，其中 \(\mu_k=0.20\)。
+由功能关系
+\[
+ mgh-\mu_kmgh=\frac12mv^2+\frac12mv^2
+ =mv^2.
+\]
+于是
+\[
+ \boxed{v=\sqrt{(1-\mu_k)gh}
+ =\sqrt{0.8(9.8)(1.0)}=2.80\,\mathrm{m/s}}.
+\]
+假设绳张紧、两物体始终沿所设方向运动，
+且A未触地。
+
+\paragraph{习题 4.6}
+子弹质量 \(m\)，初始速度 \(v\)；
+木块质量 \(M\)，初始静止；桌面光滑。
+子弹最终嵌在木块中共同速度
+\[
+ \boxed{V=\frac{mv}{M+m}}
+\]
+由水平动量守恒给出。
+因此子弹、木块的动能增量分别为
+\[
+ \boxed{\Delta K_b=\frac12m(V^2-v^2)},\qquad
+ \boxed{\Delta K_M=\frac12MV^2}.
+\]
+设二者间相对摩擦力大小 \(f\) 在相互穿入
+的过程恒定（或理解下式为对应积分），
+木块对地前进距离 \(s_1\)；
+子弹对木块相对前进 \(s'\)，
+则子弹对地位移为 \(s_1+s'\)。
+因此作用在子弹上的摩擦功为
+\[
+ W_b=-f(s_1+s'),\qquad
+ W_M=+fs_1.
+\]
+两者求和即
+\[
+ \boxed{\Delta K_{\rm total}=W_b+W_M=-fs'<0}.
+\]
+若摩擦力不恒定，严格式为
+\(\Delta K_{\rm total}=-\int_0^{s'}f(s)\,ds\)。
+由最终与初始能量可验
+\[
+ \frac12(M+m)V^2-\frac12mv^2
+ =-\frac12\frac{mM}{M+m}v^2,
+\]
+因此损失的机械能等于内部摩擦
+作用于\emph{相对}位移所耗散的能量。
+
+\paragraph{习题 4.7}
+参考系 \(S'\) 相对惯性参考系 \(S\)
+以恒定速度 \(\boldsymbol u\) 平移，
+有 \(\boldsymbol v'=\boldsymbol v-\boldsymbol u\)，
+\(d\boldsymbol r'=d\boldsymbol r-\boldsymbol u\,dt\)。
+伽利略变换下 \(\boldsymbol F'=m\boldsymbol a'=
+m\boldsymbol a=\boldsymbol F\)，
+故沿同一段物理运动的功
+\[
+ A'_{AB}
+ =\int_A^B\boldsymbol F\cdot d\boldsymbol r'
+ =A_{AB}-\boldsymbol u\cdot
+ \int_{t_A}^{t_B}\boldsymbol F\,dt
+ =A_{AB}-m\boldsymbol u\cdot
+ (\boldsymbol v_B-\boldsymbol v_A).
+\]
+另一方面
+\[
+ \frac m2(v_B'^2-v_A'^2)
+ =\frac m2(v_B^2-v_A^2)
+ -m\boldsymbol u\cdot
+ (\boldsymbol v_B-\boldsymbol v_A).
+\]
+若 \(S\) 中 \(A_{AB}=\Delta K\)，
+两式比较即在 \(S'\) 中仍有
+\[
+ \boxed{A'_{AB}=\frac m2v_B'^2-\frac m2v_A'^2}.
+\]
+但两个系中的功、动能各自一般不相等。
+证明要求二者均为惯性参考系，
+不能把有加速度的观察系也直接套用。
+
+\paragraph{习题 4.8}
+在无摩擦水平面上，若弹簧一端固定于外界，
+单球—弹簧系统会受到支座给予的水平外力，
+故其水平总动量一般随时间改变；
+如果系统包括两球及两球间弹簧而无水平外力，
+则它的总动量守恒。
+两种理想弹簧系统中，弹性势能与动能之间互相转换，
+所以通常\emph{动能随时间变化}，
+但忽略耗散时完整机械能
+\[
+ E=K+\tfrac12kx^2
+\]
+均保持不变。
+不应因为系统总动量守恒就错误推出其总动能也不变。
+
+\paragraph{习题 4.9}
+以下端伸长 \(x\) 向下为正，
+原长位置 \(x=0\) 处松手且初速零。
+物体重力势能相对原长位置
+\(-mgx\)，弹簧弹性势能
+\(\frac12kx^2\)。
+由机械能守恒
+\[
+ \frac12mv^2+\frac12kx^2-mgx=0.
+\]
+最低点 \(v=0\) 且 \(x>0\)，得到
+\[
+ \boxed{x_{\max}=\frac{2mg}{k}}.
+\]
+平衡位置 \(x_{\rm eq}=mg/k\) 处
+\[
+ \frac12mv_{\rm eq}^2
+ =mg\frac{mg}k-\frac12k\left(\frac{mg}k\right)^2
+ =\frac{m^2g^2}{2k},
+\quad
+ \boxed{v_{\rm eq}=g\sqrt{\frac m k}}.
+\]
+忽略弹簧自重、空气阻力与非线性弹性。
+
+\paragraph{习题 4.10}
+人质量 \(m=72\,\mathrm{kg}\)，
+原长 \(L=20\,\mathrm m\)，
+劲度系数 \(k=60\,\mathrm{N/m}\)。
+弹性带拉伸量设为 \(x\ge0\)，
+下降总距离 \(y=L+x\)。
+由机械能守恒，
+\[
+ \frac12mv^2+\frac12kx^2=mgy.
+\]
+在带已经拉长的阶段，下降加速度
+\(a=g-kx/m\)，速度最大时
+\[
+ x_*=\frac{mg}k=11.76\,\mathrm m,
+\quad
+ \boxed{y_*=L+x_*=31.76\,\mathrm m}.
+\]
+最大速度
+\[
+ \boxed{v_{\max}=
+ \sqrt{2g(L+x_*)-\frac{kx_*^2}{m}}
+ \approx22.52\,\mathrm{m/s}}.
+\]
+最低点速度为零，
+由 \(mg(L+x_{\max})=kx_{\max}^2/2\)，
+取正根
+\[
+ \boxed{x_{\max}=
+ \frac{mg+\sqrt{(mg)^2+2kmgL}}k
+ \approx36.43\,\mathrm m}.
+\]
+总下降 \(L+x_{\max}\approx56.43\,\mathrm m
+ <60\,\mathrm m\)，所以在理想模型中不会触水。
+若忽略绳的实际阻尼、人体姿势或水面波动，
+结论只是本题给定简化模型的判断。
+
+\paragraph{习题 4.11}
+子弹质量 \(m\)，速度 \(v_0\)，射入左端质量
+\(M\) 的块A并嵌住。碰撞时间短且
+弹簧在碰撞瞬间尚未显著变形，
+由A与子弹动量守恒
+\[
+ v_A=\frac{m}{M+m}v_0,
+\]
+而右块B质量 \(M\) 初速为零。
+其后由两个质量 \(m_A'=M+m\)、\(m_B=M\)
+之间弹簧的相对运动，
+约化质量
+\[
+ \mu=\frac{(M+m)M}{2M+m}.
+\]
+最大压缩时相对速度为零，
+原有\emph{相对}动能变为弹性势能：
+\[
+ \frac12\mu v_A^2=\frac12kx_{\max}^2.
+\]
+因而
+\[
+ \boxed{x_{\max}=\frac{mv_0}{M+m}
+ \sqrt{\frac{M(M+m)}{k(2M+m)}}}
+ =\boxed{mv_0
+ \sqrt{\frac{M}{k(M+m)(2M+m)}}}.
+\]
+碰撞本身的动能损失不能再当作弹簧能量；
+只有嵌入后剩余的相对动能参与压缩。
+
+\paragraph{习题 4.12}
+剪断前弹簧承受总质量
+\(m_1+m_2\) 的重力，平衡伸长量
+\(x_0=(m_1+m_2)g/k\)。
+剪断后仅悬 \(m_1\)，新的平衡伸长量
+\(x_1=m_1g/k\)，
+所以相对新平衡位置的初始振幅
+\(A=x_0-x_1=m_2g/k\)。
+其自由振动角频率
+\(\omega=\sqrt{k/m_1}\)，
+最大速率在新平衡位置，
+\[
+ \boxed{v_{\max}=\omega A
+ =\frac{m_2g}{\sqrt{km_1}}}.
+\]
+代入 \(m_1=0.500\,\mathrm{kg}\)，
+\(m_2=0.300\,\mathrm{kg}\)，
+\(k=8.9\,\mathrm{N/m}\)，
+得到
+\(\boxed{v_{\max}\approx1.39\,\mathrm{m/s}}\)。
+需要上端始终固定且弹簧遵从线性胡克定律。
+
+\paragraph{习题 4.13}
+质量为 \(M\) 的槽可在光滑桌面上水平移动，
+质量为 \(m\) 的物体相对槽从高度 \(R\) 的A点静止滑下。
+取物体到B时相对槽向右的水平速度为 \(w>0\)，
+槽对地速度为 \(V<0\)，物体对地速度
+\(v=w+V\)。
+由于水平无外力，总动量守恒：
+\[
+ mv+MV=0 \Longrightarrow
+ v=\frac{M}{M+m}w,\qquad
+ V=-\frac{m}{M+m}w.
+\]
+由重力势能转为两者动能：
+\[
+ mgR=\frac12mv^2+\frac12MV^2
+ =\frac12\frac{mM}{M+m}w^2.
+\]
+因此
+\[
+ \boxed{w=\sqrt{\frac{2gR(M+m)}M}},\quad
+ \boxed{v=\sqrt{\frac{2gRM}{M+m}}},
+\]
+\[
+ \boxed{V=-\frac{m}{M+m}
+ \sqrt{\frac{2gR(M+m)}M}}.
+\]
+槽所获得的动能完全由物体对槽的接触力做功，
+所以物体对槽做功为
+\[
+ \boxed{W_{m\to M}=\frac12MV^2
+ =mgR\frac{m}{M+m}}.
+\]
+B处圆弧曲率中心在上方，物体相对槽的法向
+向心加速度为 \(w^2/R\)。
+由于槽仅水平平移，物体竖直加速度正是
+\(w^2/R\)，故竖直法向受力
+\(N-mg=mw^2/R\)：
+\[
+ \boxed{N=mg\left(1+
+ \frac{2(M+m)}{M}\right)
+ =mg\left(3+\frac{2m}M\right)}.
+\]
+此 \(N\) 是物体对槽压力的\emph{大小}，
+槽所受反作用力竖直向下；
+假设B点之前仍保持接触。
+
+\paragraph{习题 4.14}
+质量相同均为 \(m\)，第一小球初速度
+\(\boldsymbol v_0\)，第二小球静止。
+弹性碰撞前后动量及动能守恒分别为
+\[
+ \boldsymbol v_0=\boldsymbol v_1+\boldsymbol v_2,
+ \qquad v_0^2=v_1^2+v_2^2.
+\]
+对第一式取模平方得到
+\(v_0^2=v_1^2+v_2^2+
+2\boldsymbol v_1\cdot\boldsymbol v_2\)。
+与能量式比较得
+\[
+ \boxed{\boldsymbol v_1\cdot\boldsymbol v_2=0}.
+\]
+故两非零末速度互相垂直。
+若为恰好对心碰撞，某一末速度为零时“方向垂直”
+退化为不适用，这与原题\emph{非对心}条件一致。
+
+\paragraph{习题 4.15}
+在同一直线弹性碰撞中，
+质量 \(m_1,m_2\)，初速度 \(u_1,u_2\)，
+末速度 \(v_1,v_2\)。
+动量守恒
+\(m_1(u_1-v_1)=m_2(v_2-u_2)\)。
+动能守恒整理为
+\[
+ m_1(u_1^2-v_1^2)=m_2(v_2^2-u_2^2).
+\]
+两式相除，排除全体速度不变的退化情形，
+得到
+\(u_1+v_1=v_2+u_2\)，
+故
+\[
+ \boxed{u_1-u_2=-(v_1-v_2)}.
+\]
+相对接近速率与相对远离速率相等，
+并不是两球各自的速度不变。
+
+\paragraph{习题 4.16}
+卫星质量 \(m\) 沿距地面高度 \(2R\)
+的圆形轨道运行，
+轨道到地心距离 \(r=R+2R=3R\)。
+引力提供向心力
+\(mv^2/r=GMm/r^2\)，
+因此
+\[
+ \boxed{K=\frac12mv^2
+ =\frac{GMm}{2r}=\frac{GMm}{6R}}.
+\]
+以无穷远为零，引力势能
+\[
+ \boxed{U=-\frac{GMm}{r}=-\frac{GMm}{3R}}.
+\]
+总机械能
+\[
+ \boxed{E=K+U=-\frac{GMm}{6R}}.
+\]
+负号说明卫星处于引力束缚轨道，
+不能把距地面高度 \(2R\) 误当作轨道半径。
