@@ -484,3 +484,326 @@
 方向径向向外。
 若只计算电子云的场而漏掉质子，便不符合题目
 “半径内净电荷”的中性原子模型。
+
+
+% 第12章最后11题12.24--12.34，独立核算。
+% 依据第二卷PDF物理页42--44；辅导书同编号答案作为交叉核对来源。
+\subsection*{习题12.24--12.34：独立解析}
+\paragraph{习题 12.24}
+质子体电荷密度给定
+\(\rho(r)=\frac{e}{8\pi b^3}e^{-r/b}\)，
+且具有球对称性。
+半径为 \(r\) 的高斯球包围电荷
+\[
+ Q(r)=4\pi\int_0^r \rho(s)s^2\,ds
+ =\frac{e}{2b^3}\int_0^rs^2e^{-s/b}\,ds.
+\]
+令 \(x=r/b\)，积分给出
+\[
+ \boxed{Q(r)=e\left[
+ 1-e^{-x}\left(1+x+\frac{x^2}{2}\right)\right]}.
+\]
+由球对称高斯定律，
+\[
+ \boxed{\boldsymbol E(r)=
+ \frac{e}{4\pi\varepsilon_0r^2}
+ \left[1-e^{-r/b}\left(1+\frac rb+\frac{r^2}{2b^2}\right)\right]
+ \hat{\boldsymbol r}}.
+\]
+取 \(r=1.0\times10^{-15}\,\mathrm m\)、
+\(b=0.23\times10^{-15}\,\mathrm m\)，
+得 \(r/b\approx4.348\)，
+括号内约为 \(0.80857\)，故
+\[
+ \boxed{E(r)\approx1.16\times10^{21}\,\mathrm{N/C}},
+\]
+方向径向向外。
+检查：\(r\to\infty\) 时总电荷趋于 \(+e\)，
+\(r\to0\) 时因密度有限，\(E(r)\sim r\to0\)，
+不是点电荷的发散场。
+
+\paragraph{习题 12.25}
+记内核半径
+\(a=0.50\times10^{-15}\,\mathrm m\)，
+外壳外半径 \(R=1.0\times10^{-15}\,\mathrm m\)。
+内核总电荷 \(+Q=+2e/3\)，
+外壳总电荷 \(-Q\)，分别均匀分布。
+球对称高斯定律给出
+\[
+ \boxed{Q_{\mathrm{enc}}(r)=
+ \begin{cases}
+ Q(r/a)^3,&0\le r\le a,\\[2pt]
+ Q\left[1-\dfrac{r^3-a^3}{R^3-a^3}\right],
+ &a<r<R,\\[4pt]
+ 0,&r\ge R,
+ \end{cases}}
+\quad
+ \boxed{\boldsymbol E(r)=
+ \frac{Q_{\mathrm{enc}}(r)}
+ {4\pi\varepsilon_0r^2}\hat{\boldsymbol r}}.
+\]
+具体四个位置：
+\[
+ \begin{array}{c|c|c}
+ r\ (10^{-15}\,\mathrm m)&Q_{\mathrm{enc}}/e&
+ E\ (\mathrm{N/C})\\\hline
+ 1.00&0&0\\
+ 0.75&0.440476&1.13\times10^{21}\\
+ 0.50&2/3&3.84\times10^{21}\\
+ 0.25&1/12&1.92\times10^{21}
+ \end{array}
+\]
+后三处场方向径向向外，
+外边界处为零。
+注意 \(\rho_{\rm shell}<0\) 但
+内核净电荷在壳层尚未完全抵消，
+壳内场仍可指向外。
+
+\paragraph{习题 12.26}
+用均匀带正电的铀核模型：
+总电荷 \(Q=92e\)，半径 \(R=7.4\times10^{-15}\,\mathrm m\)。
+核内 \(r=2.9\times10^{-15}\,\mathrm m<R\)，
+半径 \(r\) 内包围电荷 \(Q(r/R)^3\)，
+故电场大小
+\[
+ E(r)=\frac{1}{4\pi\varepsilon_0}
+ \frac{Qr}{R^3}.
+\]
+带 \(-e\) 的 \(\tau\) 子受向心库仑力，
+在非相对论圆轨道模型中
+\[
+ \frac{m_\tau v^2}{r}
+ =eE(r)=\frac{92e^2r}{4\pi\varepsilon_0R^3},
+\quad
+ \boxed{v=
+ \sqrt{\frac{92e^2r^2}{4\pi\varepsilon_0m_\tau R^3}}}
+ \approx1.18\times10^7\,\mathrm{m/s}.
+\]
+取 \(m_\tau=3.17\times10^{-27}\,\mathrm{kg}\)，
+其动能、角动量和绕核频率为
+\[
+ \boxed{K=\tfrac12m_\tau v^2
+ \approx2.20\times10^{-13}\,\mathrm J},
+\]
+\[
+ \boxed{L=m_\tau vr\approx1.08\times10^{-34}\,
+ \mathrm{kg\,m^2/s}},\qquad
+ \boxed{f=\frac{v}{2\pi r}
+ \approx6.47\times10^{20}\,\mathrm{Hz}}.
+\]
+量纲分别为速度、焦耳、角动量、赫兹；
+实际核结构并非连续均匀电荷介质，本题为经典近似。
+
+\paragraph{习题 12.27}
+电子云半径 \(r_0=0.53\times10^{-10}\,\mathrm m\)，
+总电荷 \(-e\) 在球内均匀分布。
+若质子与电子云中心相距 \(\delta<r_0\)，
+球内均匀带电体产生与位移成正比的电场：
+\[
+ E_{\rm cloud}(\delta)=
+ -\frac{e\delta}{4\pi\varepsilon_0r_0^3}
+\]
+（方向指向负电荷云中心，按质子位移方向取正）。
+质子在外加场 \(E_{\rm ext}\) 下的电力
+\(eE_{\rm ext}\)，与电子云恢复力相平衡：
+\[
+ eE_{\rm ext}-\frac{e^2\delta}
+ {4\pi\varepsilon_0r_0^3}=0.
+\]
+故
+\[
+ \boxed{\delta=
+ \frac{4\pi\varepsilon_0r_0^3E_{\rm ext}}{e}
+ \approx3.10\times10^{-16}\,\mathrm m}
+ \quad(E_{\rm ext}=3\times10^6\,\mathrm{V/m}).
+\]
+感生电矩大小
+\[
+ \boxed{p=e\delta\approx4.97\times10^{-35}\,\mathrm{C\,m}},
+\]
+沿外加场方向。检验
+\(\delta/r_0\approx5.85\times10^{-6}\ll1\)，
+不会违背云中心小位移的线性近似。
+
+\paragraph{习题 12.28}
+原模型球形正电云半径 \(R=0.05\,\mathrm{nm}\)，
+总电荷 \(+2e\) 均匀分布，两个电子各带
+\(-e\)，在球心两侧对称放在
+\(x=\pm r\)。
+正电云在球内的场强大小
+\(E_{\rm cloud}(r)=
+ (2e)r/(4\pi\varepsilon_0R^3)\)。
+在右侧电子处，
+正电云的吸引力大小
+\(2e^2r/(4\pi\varepsilon_0R^3)\)，
+另一电子的斥力大小
+\(e^2/[4\pi\varepsilon_0(2r)^2]\)。
+平衡条件
+\[
+ \frac{2e^2r}{4\pi\varepsilon_0R^3}
+ =\frac{e^2}{4\pi\varepsilon_0(2r)^2}
+ \Longrightarrow 8r^3=R^3
+ \Longrightarrow r=\frac R2.
+\]
+因此两电子平衡间距为
+\[
+ \boxed{d=2r=R=0.05\,\mathrm{nm}}.
+\]
+检查 \(r=R/2<R\)，符合均匀正电云内场公式适用条件。
+本静态模型不是现代量子氦原子的准确描述。
+
+\paragraph{习题 12.29}
+设立方体占据
+\(0\le x,y,z\le a\) 的一组平移坐标范围，
+电场 \(E_x=b\sqrt x\)，
+\(E_y=E_z=0\)。
+仅 \(x=0\) 与 \(x=a\) 的两个相对面
+可能有通量。
+前一面因 \(E_x(0)=0\) 通量为零；
+后一面通量
+\[
+ \boxed{\Phi_E=a^2E_x(a)
+ =ba^{5/2}}.
+\]
+由高斯定律
+\(Q_{\rm inside}=\varepsilon_0\Phi_E\)，
+故
+\[
+ \boxed{Q=\varepsilon_0ba^{5/2}
+ =(8.8542\times10^{-12})(800)(0.10)^{5/2}
+ \approx2.24\times10^{-11}\,\mathrm C}.
+\]
+核验：\(b\) 的量纲为
+\(\mathrm{N/(C\sqrt m)}\)，
+乘 \(a^{5/2}\) 后为电通量单位
+\(\mathrm{N\,m^2/C}\)。
+
+\paragraph{习题 12.30}
+两点电荷均为 \(+q\)，置于
+\(x=\pm a\)。在 \(-a<x<a\) 区间，
+沿 \(+\boldsymbol i\) 的电场分量为
+\[
+ E_x(x)=\frac{q}{4\pi\varepsilon_0}
+ \left[\frac1{(x+a)^2}-\frac1{(a-x)^2}\right].
+\]
+所以
+\[
+ \left.\frac{dE_x}{dx}\right|_{x=0}
+ =\frac{q}{4\pi\varepsilon_0}
+ \left(-\frac2{a^3}-\frac2{a^3}\right)
+ =\boxed{-\frac{q}{\pi\varepsilon_0a^3}}.
+\]
+若原点处放一沿 \(+\boldsymbol i\)
+的微小电偶极子，正负两电荷受力相加，
+以电矩 \(p=q_{\rm test}\ell\)
+并取 \(\ell\ll a\) 的点偶极极限，
+\[
+ F_x\simeq q_{\rm test}
+ [E_x(+\ell/2)-E_x(-\ell/2)]
+ =p\left.\frac{dE_x}{dx}\right|_0
+ =\boxed{-\frac{pq}{\pi\varepsilon_0a^3}}.
+\]
+力沿负 \(x\) 方向。
+
+\paragraph{习题 12.31}
+在均匀场中电矩与场夹角为
+\(\varphi\) 时，电偶极子所受力矩为
+\(\tau_\varphi=-pE\sin\varphi\)（以使角度增加为正）。
+从 \(\varphi_i=\pi/2\) 旋转到
+\(\varphi_f=\theta\) 的过程中，
+电场力所做的功
+\[
+ A=\int_{\pi/2}^{\theta}(-pE\sin\varphi)\,d\varphi
+ =pE[\cos\varphi]_{\pi/2}^{\theta}
+ =\boxed{pE\cos\theta=\boldsymbol p\cdot\boldsymbol E}.
+\]
+若 \(\theta<90^\circ\) 则电场做正功，
+势能变化 \(\Delta U=-A\)；
+这是场力做功而非外力准静态所做功。
+
+\paragraph{习题 12.32}
+取电量 \(+Q=+1.0\times10^{-6}\,\mathrm C\)
+置于 \(x=0\)，
+\(-4Q\) 置于 \(x=d=0.10\,\mathrm m\)。
+正负电荷之间二者电场同向，不可能相消；
+平衡点必须在较小电量 \(+Q\) 一侧 \(x<0\)。
+设距离该正电荷为 \(s=-x>0\)，
+\[
+ \frac{Q}{s^2}=\frac{4Q}{(d+s)^2}
+ \quad\Longrightarrow\quad d+s=2s,
+ \qquad \boxed{s=d=0.10\,\mathrm m}.
+\]
+所以 \(x_*=-0.10\,\mathrm m\)。
+沿两电荷连线方向，外场在平衡点的导数
+\[
+ \left.\frac{dE_x}{dx}\right|_*
+ =-\frac{kQ}{d^3}<0,\qquad
+ k=(4\pi\varepsilon_0)^{-1}.
+\]
+故微扰 \(x=x_*+\delta x\) 时
+\(F_x\simeq-q_0kQ\delta x/d^3\)，
+\(q_0>0\) 沿连线稳定，\(q_0<0\) 不稳定。
+垂直于连线方向的场导数在该无自由电荷点满足
+\(\partial E_y/\partial y
+ =-\frac12\,\partial E_x/\partial x>0\)
+（因轴对称且 \(\boldsymbol\nabla\cdot\boldsymbol E=0\)），
+故 \(q_0>0\) 的横向微扰不稳定，
+\(q_0<0\) 的横向微扰稳定。
+因此两种符号都无法在三个方向上同时稳定。
+
+\paragraph{习题 12.33}
+对试探电荷 \(q\ne0\)，
+若静电场中的某一点 \(P\) 是各方向的严格稳定平衡点，
+须有 \(\boldsymbol E(P)=\boldsymbol0\)，
+且任意小位移后受力 \(\boldsymbol F=q\boldsymbol E\)
+指回 \(P\)。
+对 \(q>0\)，以 \(P\) 为中心的足够小封闭球面上
+恢复力的径向分量应指向球内，
+这要求电通量严格为负：
+\(\oiint\boldsymbol E\cdot d\boldsymbol S<0\)。
+但若包围区域没有额外源电荷，
+高斯定律给出
+\[
+ \oiint\boldsymbol E\cdot d\boldsymbol S
+ =Q_{\rm enclosed}/\varepsilon_0=0,
+\]
+矛盾。
+对 \(q<0\)，恢复力要求电场径向向外，
+又与通量为零矛盾。
+等价地，在无电荷区域
+\(\nabla^2\varphi=0\)，
+静电势不可能在内部具有严格极大或极小值。
+这就是 Earnshaw 定理在静电情形的结论。
+本论证假定静止源电荷、真空静电场及无其他外加非电力约束。
+
+\paragraph{习题 12.34}
+墨滴的质量 \(m=1.5\times10^{-10}\,\mathrm{kg}\)，
+电荷 \(q=-1.4\times10^{-13}\,\mathrm C\)，
+进入长度为 \(L=0.016\,\mathrm m\) 的偏转板
+时水平速度 \(v_x=20\,\mathrm{m/s}\)。
+忽略边缘场和空气阻力，水平速度不变，
+在板间经历时间
+\[
+ t=\frac L{v_x}=\frac{0.016}{20}
+ =8.0\times10^{-4}\,\mathrm s.
+\]
+电场强度 \(E=1.6\times10^6\,\mathrm{N/C}\)，
+竖直加速度大小
+\[
+ a_y=\frac{|q|E}{m}
+ =\frac{(1.4\times10^{-13})(1.6\times10^6)}
+ {1.5\times10^{-10}}
+ \approx1.49\times10^3\,\mathrm{m/s^2}.
+\]
+初始竖直速度近似为零，
+离开偏转板时竖直偏转位移大小
+\[
+ \boxed{\Delta y=\frac12a_yt^2
+ =\frac{|q|EL^2}{2mv_x^2}
+ \approx4.78\times10^{-4}\,\mathrm m
+ \approx0.478\,\mathrm{mm}}.
+\]
+上极板正、下极板负，电场朝下，
+负电墨滴所受电力朝上，因此向上偏转。
+本结果只计算\emph{离开偏转板时}的位移，
+不包括从极板至纸面之间的继续飞行偏移。
