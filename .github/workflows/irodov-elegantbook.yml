@@ -121,6 +121,9 @@ jobs:
       - name: Deep-audit original VI.214-310 nuclear and particle conservation
         if: ${{ success() || failure() }}
         run: python3 external_sources/irodov-zh-elegant/atomic_nuclear_source_214_310_regression.py
+      - name: Cross-edition audit physical positivity, grating units and Wien Jacobians
+        if: ${{ success() || failure() }}
+        run: python3 external_sources/irodov-zh-elegant/cross_edition_physics_regression.py
       - uses: xu-cheng/latex-action@v4
         with:
           working_directory: external_sources/irodov-zh-elegant
