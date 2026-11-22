@@ -38,6 +38,10 @@ jobs:
         run: python3 scripts/compact_small_external_sources.py --verify
       - name: Verify all 80 archived WeBWorK PG originals
         run: python3 scripts/compact_webwork_sources.py --verify
+      - name: Syntax-check streamlined scripts and validate combined coverage audit
+        run: |
+          python3 -m py_compile scripts/discover_sources.py scripts/external_audit.py scripts/qa_archive.py
+          python3 -m unittest discover -s tests -p 'test_report_external_coverage.py'
       - name: Enforce advanced-only admission
         run: python scripts/check_difficulty_gate.py
       - name: Perform independent formula and numerical spotchecks
