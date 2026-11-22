@@ -396,10 +396,13 @@
       "number": 30,
       "title": "核物理",
       "volume": "V2",
-      "status": "not_started",
-      "verified_exercise_count": 0,
-      "question_file": null,
-      "solution_file": null
+      "status": "all_chapter_end_exercises_candidate_transcribed_pending_independent_review",
+      "verified_exercise_count": 22,
+      "question_file": "chapters/30/questions.tex",
+      "solution_file": "chapters/30/solutions.tex",
+      "chapter_end_exercise_number": "30.22",
+      "all_printed_end_exercises_transcribed": true,
+      "thought_questions_checked": false
     }
   ],
   "entries": [
@@ -15464,10 +15467,498 @@
         "KCl_uv_above_bandgap_absorbed"
       ],
       "notes": "UV 140nm photon energy8.86eV exceeds KCl 7.6eV band gap so single-photon interband absorption allowed."
+    },
+    {
+      "source_problem_number": "30.1",
+      "canonical_id": "ZS4-30-001",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        485
+      ],
+      "supplement_pdf_pages": [
+        392
+      ],
+      "supplement_mapping_status": "original_exercise_companion_scan_window_located; independent_exact_physics_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_source_scan_and_companion_crosscheck; several serious_invalid_thin_target_models_flagged",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "alpha_particle_headon_Coulomb_recoil_target_mass_and_nuclear_range"
+      ],
+      "notes": "Au alpha6MeV closest~38.7fm incl recoil; N~4.32fm, N recoil28.6%, N nuclear radius~2.89fm."
+    },
+    {
+      "source_problem_number": "30.2",
+      "canonical_id": "ZS4-30-002",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        485
+      ],
+      "supplement_pdf_pages": [
+        392
+      ],
+      "supplement_mapping_status": "original_exercise_companion_scan_window_located; independent_exact_physics_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_source_scan_and_companion_crosscheck; several serious_invalid_thin_target_models_flagged",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "atomic_mass_not_nuclear_mass_binding_energy"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "30.3",
+      "canonical_id": "ZS4-30-003",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        485
+      ],
+      "supplement_pdf_pages": [
+        393
+      ],
+      "supplement_mapping_status": "original_exercise_companion_scan_window_located; independent_exact_physics_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_source_scan_and_companion_crosscheck; several serious_invalid_thin_target_models_flagged",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "nuclear_proton_nonrelativistic_Fermi_gas"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "30.4",
+      "canonical_id": "ZS4-30-004",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        486
+      ],
+      "supplement_pdf_pages": [
+        393
+      ],
+      "supplement_mapping_status": "original_exercise_companion_scan_window_located; independent_exact_physics_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_source_scan_and_companion_crosscheck; several serious_invalid_thin_target_models_flagged",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "mirror_isobar_uniform_charged_sphere_radius"
+      ],
+      "notes": "Mirror nuclei 11C/B 15O/N 21Na/Ne electrostatic energies yield radii3.41,3.72,4.22fm, r0~1.52fm."
+    },
+    {
+      "source_problem_number": "30.5",
+      "canonical_id": "ZS4-30-005",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        486
+      ],
+      "supplement_pdf_pages": [
+        393,
+        394
+      ],
+      "supplement_mapping_status": "original_exercise_companion_scan_window_located; independent_exact_physics_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_source_scan_and_companion_crosscheck; several serious_invalid_thin_target_models_flagged",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "alpha_cluster_model_not_derived_nuclear_structure"
+      ],
+      "notes": "Alpha clustering C:3 alpha binding +3 pair bonds 2.42 each =>92.16MeV; O:4 alpha +6 bonds=>127.72MeV. Model fit not nuclear structural proof."
+    },
+    {
+      "source_problem_number": "30.6",
+      "canonical_id": "ZS4-30-006",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        486
+      ],
+      "supplement_pdf_pages": [
+        394
+      ],
+      "supplement_mapping_status": "original_exercise_companion_scan_window_located; independent_exact_physics_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_source_scan_and_companion_crosscheck; several serious_invalid_thin_target_models_flagged",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "liquid_drop_SEMF_equal_Th232_fission_energy"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "30.7",
+      "canonical_id": "ZS4-30-007",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        486
+      ],
+      "supplement_pdf_pages": [
+        394
+      ],
+      "supplement_mapping_status": "original_exercise_companion_scan_window_located; independent_exact_physics_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_source_scan_and_companion_crosscheck; several serious_invalid_thin_target_models_flagged",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "liquid_drop_SEMF_two_C12_to_Mg24"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "30.8",
+      "canonical_id": "ZS4-30-008",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        486
+      ],
+      "supplement_pdf_pages": [
+        394
+      ],
+      "supplement_mapping_status": "original_exercise_companion_scan_window_located; independent_exact_physics_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_source_scan_and_companion_crosscheck; several serious_invalid_thin_target_models_flagged",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "exponential_decay_lifetime_mode_at_zero_not_mean"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "30.9",
+      "canonical_id": "ZS4-30-009",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        486
+      ],
+      "supplement_pdf_pages": [
+        395
+      ],
+      "supplement_mapping_status": "original_exercise_companion_scan_window_located; independent_exact_physics_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_source_scan_and_companion_crosscheck; several serious_invalid_thin_target_models_flagged",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "human_K40_activity_for_assumed_70kg_bodyweight"
+      ],
+      "notes": "K40 activity example assumes 70kg bodymass (not supplied in source), potassium0.37%, K40 abundance1.2e-4; A~8.1kBq."
+    },
+    {
+      "source_problem_number": "30.10",
+      "canonical_id": "ZS4-30-010",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        486
+      ],
+      "supplement_pdf_pages": [
+        395
+      ],
+      "supplement_mapping_status": "original_exercise_companion_scan_window_located; independent_exact_physics_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_source_scan_and_companion_crosscheck; several serious_invalid_thin_target_models_flagged",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "secular_equilibrium_U238_to_Ra226_U235_to_Pa231_with_ancestors"
+      ],
+      "notes": "Chain equilibrium assumption long-lived source nuclides U238 half4.46e9yr and U235 half7.04e8yr yields Ra226~2.87mg, Pa231~2.71mg per10kg U3O8."
+    },
+    {
+      "source_problem_number": "30.11",
+      "canonical_id": "ZS4-30-011",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        486
+      ],
+      "supplement_pdf_pages": [
+        395
+      ],
+      "supplement_mapping_status": "original_exercise_companion_scan_window_located; independent_exact_physics_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_source_scan_and_companion_crosscheck; several serious_invalid_thin_target_models_flagged",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "I123_thyroid_tracer_assumes_no_biological_clearance"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "30.12",
+      "canonical_id": "ZS4-30-012",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        486
+      ],
+      "supplement_pdf_pages": [
+        396
+      ],
+      "supplement_mapping_status": "original_exercise_companion_scan_window_located; independent_exact_physics_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_source_scan_and_companion_crosscheck; several serious_invalid_thin_target_models_flagged",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "Na24_blood_volume_uniform_dilution_and_decay"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "30.13",
+      "canonical_id": "ZS4-30-013",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        486
+      ],
+      "supplement_pdf_pages": [
+        396
+      ],
+      "supplement_mapping_status": "original_exercise_companion_scan_window_located; independent_exact_physics_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_source_scan_and_companion_crosscheck; several serious_invalid_thin_target_models_flagged",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "C14_wood_age_efficiency_and_calendar_calibration"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "30.14",
+      "canonical_id": "ZS4-30-014",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        486
+      ],
+      "supplement_pdf_pages": [
+        396
+      ],
+      "supplement_mapping_status": "original_exercise_companion_scan_window_located; independent_exact_physics_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_source_scan_and_companion_crosscheck; several serious_invalid_thin_target_models_flagged",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "U238_Pb206_closed_system_no_initial_lead"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "30.15",
+      "canonical_id": "ZS4-30-015",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        486
+      ],
+      "supplement_pdf_pages": [
+        396,
+        397
+      ],
+      "supplement_mapping_status": "original_exercise_companion_scan_window_located; independent_exact_physics_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_source_scan_and_companion_crosscheck; several serious_invalid_thin_target_models_flagged",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "Ra226_alpha_Rn222_recoil_energy"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "30.16",
+      "canonical_id": "ZS4-30-016",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        486
+      ],
+      "supplement_pdf_pages": [
+        397
+      ],
+      "supplement_mapping_status": "original_exercise_companion_scan_window_located; independent_exact_physics_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_source_scan_and_companion_crosscheck; several serious_invalid_thin_target_models_flagged",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "Cu64_Zn64_Ni64_NUCLEAR_mass_difference_vs_neutral_ATOMIC"
+      ],
+      "notes": "Given Qbeta−=.57 and Qbeta+=.66MeV, difference of NUCLEAR Zn64−Ni64 masses=.09MeV/c²~9.66e−5u; neutral ATOMIC difference has extra2me~1.112MeV."
+    },
+    {
+      "source_problem_number": "30.17",
+      "canonical_id": "ZS4-30-017",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        486
+      ],
+      "supplement_pdf_pages": [
+        397
+      ],
+      "supplement_mapping_status": "original_exercise_companion_scan_window_located; independent_exact_physics_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_source_scan_and_companion_crosscheck; several serious_invalid_thin_target_models_flagged",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "COMPANION_0p42Ci_THIN_TARGET_UNPHYSICAL_EXCEEDS_INCIDENT_FLUX_SELF_SHIELDING"
+      ],
+      "notes": "S PDF397 thin-target A~0.42Ci implies reaction rate1.74e14/s but incident directed beam onto area4cm² supplies only8e12 neutrons/s. Optical depth~21.7; selfshielded one-sided pure absorption yields upper~0.0194Ci. Actual isotropic angular flux changes geometry; source result unphysical for directed thick target."
+    },
+    {
+      "source_problem_number": "30.18",
+      "canonical_id": "ZS4-30-018",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        486
+      ],
+      "supplement_pdf_pages": [
+        397
+      ],
+      "supplement_mapping_status": "original_exercise_companion_scan_window_located; independent_exact_physics_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_source_scan_and_companion_crosscheck; several serious_invalid_thin_target_models_flagged",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "COMPANION_CD_51MICRON_THIN_TARGET_ONLY_61PERCENT_VS_EXACT_162MICRON_95PERCENT"
+      ],
+      "notes": "S PDF397 linearized d=.95/(nσ)~51µm gives actual attenuation1−e−.95~61%, not95%; exact Beer-Lambert depth−ln(.05)/(nσ)~162µm; source model inadequate."
+    },
+    {
+      "source_problem_number": "30.19",
+      "canonical_id": "ZS4-30-019",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        486
+      ],
+      "supplement_pdf_pages": [
+        397,
+        398
+      ],
+      "supplement_mapping_status": "original_exercise_companion_scan_window_located; independent_exact_physics_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_source_scan_and_companion_crosscheck; several serious_invalid_thin_target_models_flagged",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "reaction_Q_values_atomic_mass_electron_bookkeeping"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "30.20",
+      "canonical_id": "ZS4-30-020",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        487
+      ],
+      "supplement_pdf_pages": [
+        398
+      ],
+      "supplement_mapping_status": "original_exercise_companion_scan_window_located; independent_exact_physics_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_source_scan_and_companion_crosscheck; several serious_invalid_thin_target_models_flagged",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "charged_projectile_lab_kinematic_threshold_vs_Coulomb_barrier_quantum_tunneling"
+      ],
+      "notes": "13C(p,alpha)10B Q−4.06MeV, recoil kinematic threshold~4.37MeV, Coulomb barrier source~2.3MeV, textbook additive semi-classical estimate~6.7MeV not a strict quantum threshold."
+    },
+    {
+      "source_problem_number": "30.21",
+      "canonical_id": "ZS4-30-021",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        487
+      ],
+      "supplement_pdf_pages": [
+        398
+      ],
+      "supplement_mapping_status": "original_exercise_companion_scan_window_located; independent_exact_physics_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_source_scan_and_companion_crosscheck; several serious_invalid_thin_target_models_flagged",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "solar_fusion_24p67_vs_26p73_MeV_annihilation_neutrino_losses"
+      ],
+      "notes": "Source S398 solar H lifetime~7.2e10 years with24.67MeV/cycle excludes e+ annihilation; 26.73MeV including annihilation gives~7.8e10yrs ideal all-H burn. Real Sun cannot burn all H, neutrino losses."
+    },
+    {
+      "source_problem_number": "30.22",
+      "canonical_id": "ZS4-30-022",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        487
+      ],
+      "supplement_pdf_pages": [
+        398,
+        399
+      ],
+      "supplement_mapping_status": "original_exercise_companion_scan_window_located; independent_exact_physics_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_source_scan_and_companion_crosscheck; several serious_invalid_thin_target_models_flagged",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "CNO_positive_beta_twice_electron_rest_mass_and_annihilation_two_neutrinos"
+      ],
+      "notes": "CNO cycle six nuclear Q sum~24.69MeV; two emitted positrons annihilate with e− give extra2.044MeV total mass-energy budget~26.73MeV; neutrinos escape; carbon recycled."
     }
   ],
   "progress": {
-    "verified_questions": 683,
+    "verified_questions": 705,
     "volumes_started": [
       "V1",
       "V2"
@@ -15476,20 +15967,20 @@
     "complete": false,
     "total_exercise_count": "not_yet_counted_from_full_scans",
     "chapter_1_end_exercises_transcribed": true,
-    "note": "683 candidate original textbook-numbered exercises and independent LaTeX solutions across29 chapters (V1 285, V2 398), ALL exam_ready=false.",
+    "note": "705 unique candidate source-numbered exercise pairs across all30 chapters: V1 285 ch1-11 and V2 420 ch12-30. Chapter-end exercise transcription stage complete for two main textbook volumes; companion supplementary non-chapter-end problems, thought questions, original diagrams, rights and expert QC not complete.",
     "last_completed_exercise_V1": "11.13",
     "next_to_transcribe_V1": "volume_1_chapter_end_exercises_complete",
-    "next_to_transcribe_V2": "30.1",
-    "quality_summary": "Ch29 Fermi models assume one free electron/metal atom, Sommerfeld approximation and simple parabolic bands. Donor level in29.11 0.045eV not 1.2eV gap, lambda max27.6um. Ag Fermi vs classical mfp differ. Ch28 S pulse3.6mm vs0.36mm typo noted. Full independent figure audit and source permissions remain pending.",
+    "next_to_transcribe_V2": null,
+    "quality_summary": "New V2 ch27-30 81 candidate pairs, all exam_ready=false. Critical source S ch30.17 unphysical thick-Co block thin-target production A=.42Ci > one-sided neutron supply, shielded upper~.0194Ci; ch30.18 95% Cd transmission exponential requires162μm not S linear51μm. Ch30.16 nuclear mass vs neutral atom beta masses, ch30.22 bare Q24.69 vs positron annihilation total26.73MeV. Earlier ch28.29 3.6mm vs S0.36mm.",
     "chapter_2_end_exercises_transcribed": true,
     "chapter_3_end_exercises_transcribed": true,
     "chapter_12_end_exercises_transcribed": true,
-    "last_completed_exercise_V2": "29.14",
+    "last_completed_exercise_V2": "30.22",
     "supplement_pdf_page_mappings_new_batch": 55,
     "supplement_mapping_note": "Current40 exercise numbers linked to companion S physical PDF pages177–184 (V1 ch11) and288–298 (V2 ch20). Per-source page windows, source figure and expert audit still pending.",
     "chapter_4_end_exercises_transcribed": true,
     "chapter_13_end_exercises_transcribed": true,
-    "supplement_pdf_page_mappings_current_batch": 14,
+    "supplement_pdf_page_mappings_current_batch": 22,
     "chapter_5_end_exercises_transcribed": true,
     "chapter_14_end_exercises_transcribed": true,
     "chapter_6_end_exercises_transcribed": true,
@@ -15505,14 +15996,15 @@
     "chapter_11_end_exercises_transcribed": true,
     "chapter_20_end_exercises_transcribed": true,
     "chapter_21_end_exercises_transcribed": true,
-    "last_batch_scope": "V2 chapter27 quantum11 + chapter28 atomic34 + chapter29 solid-state14 =59 newly transcribed original textbook numbered exercises; S pages365-369,373-383,386-389",
+    "last_batch_scope": "V2 ch27 Schroedinger11 + ch28 atomic34 + ch29 Fermi14 + ch30 nuclear22 =81 new original-numbered candidate question/solution pairs V2 chapter-end full coverage.",
     "chapter_22_end_exercises_transcribed": true,
     "chapter_23_end_exercises_transcribed": true,
     "chapter_24_end_exercises_transcribed": true,
     "chapter_25_end_exercises_transcribed": true,
     "chapter_26_end_exercises_transcribed": true,
     "chapter_28_end_exercises_transcribed": true,
-    "chapter_29_end_exercises_transcribed": true
+    "chapter_29_end_exercises_transcribed": true,
+    "chapter_30_end_exercises_transcribed": true
   },
   "editorial_policies": {
     "dedupe_key": "source edition + chapter + original problem number",
