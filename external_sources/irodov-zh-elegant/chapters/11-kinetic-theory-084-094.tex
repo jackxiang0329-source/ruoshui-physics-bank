@@ -138,13 +138,30 @@ $v_p=\sqrt{2k_BT/m}$。
 {2k_B(1/\sqrt{m_N}-1/\sqrt{m_O})^2}}.
 \]
 取 $m_N\simeq28u$、$m_O\simeq32u$，
+或直接以摩尔质量 $M_N=0.028\,\mathrm{kg/mol}$、
+$M_O=0.032\,\mathrm{kg/mol}$ 与摩尔气体常数 $R$
+计算，得
 \[
-\boxed{T\simeq0.37\,\mathrm K}.
+T=\frac{(30\,\mathrm{m/s})^2}{
+2R\left(M_N^{-1/2}-M_O^{-1/2}\right)^2}
+\simeq\boxed{3.63\times10^2\,\mathrm K}.
 \]
-\excheck 这一数值仅是\emph{经典理想气体
-麦克斯韦模型的形式外推}；
-实际氮氧混合物在如此低温下不会保持常规气态，
-不应把它当作可直接实现的实验气体状态。
+在此温度，
+\[
+v_{p,N}=\sqrt{\frac{2RT}{M_N}}
+\simeq464.50\,\mathrm{m/s},\qquad
+v_{p,O}=\sqrt{\frac{2RT}{M_O}}
+\simeq434.50\,\mathrm{m/s},
+\]
+故 $v_{p,N}-v_{p,O}=30.00\,\mathrm{m/s}$，完成独立反代验证。
+\excheck \textbf{原书答案有三个数量级的数值错误：}
+底本印刷答案页第289页（PDF第298页）给出
+$T=0.37\,\mathrm K$，但同时列出的符号公式
+正确代入 $m_N\simeq28u$、$m_O\simeq32u$
+应得约 $363\,\mathrm K$（通常可粗略写成 $0.37\,\mathrm{kK}$）。
+$0.37\,\mathrm K$ 下的两种最概然速率仅相差
+约 $0.96\,\mathrm{m/s}$，与题给 $30\,\mathrm{m/s}$
+矛盾。已按物理方程与原始单位修正，不沿用书末错误数值。
 
 \thermokineticproblem{88}{72}
 氢气与氦气的混合物温度为
