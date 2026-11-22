@@ -348,10 +348,13 @@
       "number": 26,
       "title": "波粒二象性",
       "volume": "V2",
-      "status": "not_started",
-      "verified_exercise_count": 0,
-      "question_file": null,
-      "solution_file": null
+      "status": "all_chapter_end_exercises_candidate_transcribed_pending_independent_review",
+      "verified_exercise_count": 22,
+      "question_file": "chapters/26/questions.tex",
+      "solution_file": "chapters/26/solutions.tex",
+      "chapter_end_exercise_number": "26.22",
+      "all_printed_end_exercises_transcribed": true,
+      "thought_questions_checked": false
     },
     {
       "number": 27,
@@ -13653,10 +13656,500 @@
         "angular_magnification_160_vs_300_pending_ray_matrix_expert_review"
       ],
       "notes": "Companion S348 labels path 14+14+4=32m effective objective focal length and M=160. Paraxial secondary has magnification +3 (virtual object s=-6m, s'=+18m), so true effective angular-to-image focal length f_eff=3*20=60m, M=300 for eye f=.2m. Needs independent ray-transfer-matrix and source figure review."
+    },
+    {
+      "source_problem_number": "26.1",
+      "canonical_id": "ZS4-26-001",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        368
+      ],
+      "supplement_pdf_pages": [
+        354
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; expert_and_companion_exact_formula_audit_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "total_blackbody_emission_not_net_heat_exchange"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "26.2",
+      "canonical_id": "ZS4-26-002",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        368
+      ],
+      "supplement_pdf_pages": [
+        354
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; expert_and_companion_exact_formula_audit_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "frequency_spectral_peak_x_2_821_not_wavelength_peak_x_4_965"
+      ],
+      "notes": "Blackbody frequency spectrum max x_nu≈2.821439 not spectral wavelength peak x_lambda≈4.965; derived Sun T≈5783K."
+    },
+    {
+      "source_problem_number": "26.3",
+      "canonical_id": "ZS4-26-003",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        368
+      ],
+      "supplement_pdf_pages": [
+        354
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; expert_and_companion_exact_formula_audit_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "one_face_blackbody_ideal_heat_equilibrium"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "26.4",
+      "canonical_id": "ZS4-26-004",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        368
+      ],
+      "supplement_pdf_pages": [
+        354,
+        355
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; expert_and_companion_exact_formula_audit_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "planet_cross_section_absorption_vs_full_surface_emission"
+      ],
+      "notes": "For black planet isotropic emission, absorbed disk πR² vs radiating sphere4πR²; Earth279K Pluto44.5K under no albedo/greenhouse."
+    },
+    {
+      "source_problem_number": "26.5",
+      "canonical_id": "ZS4-26-005",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        369
+      ],
+      "supplement_pdf_pages": [
+        355
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; expert_and_companion_exact_formula_audit_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "bolometric_flux_and_11_lightyear_distance"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "26.6",
+      "canonical_id": "ZS4-26-006",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        369
+      ],
+      "supplement_pdf_pages": [
+        355
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; expert_and_companion_exact_formula_audit_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "isotropic_CMB_3K_incident_power_not_net_absorbed"
+      ],
+      "notes": "For 3K isotropic background, incoming power over entire Earth surface4πR² σT⁴≈2.34GW; not Earth net radiative balance."
+    },
+    {
+      "source_problem_number": "26.7",
+      "canonical_id": "ZS4-26-007",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        369
+      ],
+      "supplement_pdf_pages": [
+        355,
+        356
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; expert_and_companion_exact_formula_audit_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "spectral_change_of_variables_Jacobian_dnu_dlambda"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "26.8",
+      "canonical_id": "ZS4-26-008",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        369
+      ],
+      "supplement_pdf_pages": [
+        356
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; expert_and_companion_exact_formula_audit_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "isotropic_radiance_c_over_four_not_plane_wave"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "26.9",
+      "canonical_id": "ZS4-26-009",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        369
+      ],
+      "supplement_pdf_pages": [
+        356
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; expert_and_companion_exact_formula_audit_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "nonzero_frequency_peak_root_Wien_displacement"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "26.10",
+      "canonical_id": "ZS4-26-010",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        369
+      ],
+      "supplement_pdf_pages": [
+        356,
+        357
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; expert_and_companion_exact_formula_audit_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "blackbody_Planck_integral_zeta4"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "26.11",
+      "canonical_id": "ZS4-26-011",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        369
+      ],
+      "supplement_pdf_pages": [
+        357
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; expert_and_companion_exact_formula_audit_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "photoelectric_max_kinetic_vs_stopping_voltage"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "26.12",
+      "canonical_id": "ZS4-26-012",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        369
+      ],
+      "supplement_pdf_pages": [
+        357
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; expert_and_companion_exact_formula_audit_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "mean_wavelength_vs_photon_number_density"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "26.13",
+      "canonical_id": "ZS4-26-013",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        369
+      ],
+      "supplement_pdf_pages": [
+        357
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; expert_and_companion_exact_formula_audit_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "classical_continuous_light_energy_delay_vs_quantum_immediate_photoelectric"
+      ],
+      "notes": "Classical 1W isotropic lamp photoelectric continuous accumulation gives≈85s, unlike observed immediate photoelectric emission; crude cross-section assumption."
+    },
+    {
+      "source_problem_number": "26.14",
+      "canonical_id": "ZS4-26-014",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        369
+      ],
+      "supplement_pdf_pages": [
+        357,
+        358
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; expert_and_companion_exact_formula_audit_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "photon_Lorentz_Doppler_same_direction_with_proton"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "26.15",
+      "canonical_id": "ZS4-26-015",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        369
+      ],
+      "supplement_pdf_pages": [
+        358
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; expert_and_companion_exact_formula_audit_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "Compton_scattered_wavelength_ratio_and_energy_conservation"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "26.16",
+      "canonical_id": "ZS4-26-016",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        369
+      ],
+      "supplement_pdf_pages": [
+        358
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; expert_and_companion_exact_formula_audit_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "Compton_180_backscatter_max_electron_energy"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "26.17",
+      "canonical_id": "ZS4-26-017",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        369
+      ],
+      "supplement_pdf_pages": [
+        358
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; expert_and_companion_exact_formula_audit_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "single_free_electron_total_photon_absorption_impossible"
+      ],
+      "notes": null
+    },
+    {
+      "source_problem_number": "26.18",
+      "canonical_id": "ZS4-26-018",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        369
+      ],
+      "supplement_pdf_pages": [
+        358,
+        359
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; expert_and_companion_exact_formula_audit_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "head_on_moving_electron_inverse_Compton_energy_momentum_conservation"
+      ],
+      "notes": "Initial 50keV photon vs moving electron K20keV; head-on backscatter can yield photon~69.39keV and electron final kinetic~0.61keV. Distinguish 511keV electron rest energy."
+    },
+    {
+      "source_problem_number": "26.19",
+      "canonical_id": "ZS4-26-019",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        369
+      ],
+      "supplement_pdf_pages": [
+        359
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; expert_and_companion_exact_formula_audit_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "electron_total_vs_kinetic_energy_for_equal_deBroglie_wavelength"
+      ],
+      "notes": "For lambda0.20nm momentum equal, photon E~6.2keV while electron kinetic ~37.6eV with total ~511.04keV."
+    },
+    {
+      "source_problem_number": "26.20",
+      "canonical_id": "ZS4-26-020",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        369
+      ],
+      "supplement_pdf_pages": [
+        359
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; expert_and_companion_exact_formula_audit_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "thermal_neutron_mean_energy_3_over_2kT_vs_kT_convention"
+      ],
+      "notes": "Thermal neutron convention: mean K=(3/2)kT gives lambda≈0.145nm; K=kT instead gives~0.178nm."
+    },
+    {
+      "source_problem_number": "26.21",
+      "canonical_id": "ZS4-26-021",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        369
+      ],
+      "supplement_pdf_pages": [
+        359,
+        360
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; expert_and_companion_exact_formula_audit_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "relativistic_electron_deBroglie_40kV"
+      ],
+      "notes": "40kV electron yields relativistic deBroglie lambda≈6.02pm, naive nonrelativistic model differs."
+    },
+    {
+      "source_problem_number": "26.22",
+      "canonical_id": "ZS4-26-022",
+      "volume": "V2",
+      "textbook_pdf_pages": [
+        369
+      ],
+      "supplement_pdf_pages": [
+        360
+      ],
+      "supplement_mapping_status": "numbered_companion_scan_page_window_located; detailed_formula_expert_review_pending",
+      "question_status": "transcribed_from_pdf_scan",
+      "solution_status": "independent_derivation_written",
+      "academic_review": "pending_independent_verification",
+      "physics_review": "first_pass_independent_source_derivation; expert_and_companion_exact_formula_audit_pending",
+      "exam_ready": false,
+      "requires_original_figure": false,
+      "risk_flags": [
+        "free_particle_group_velocity_vs_phase_velocity"
+      ],
+      "notes": "Massive free particle wave group velocity dE/dp=pc²/E=v; phase velocity E/p=c²/v and not causal signal speed."
     }
   ],
   "progress": {
-    "verified_questions": 602,
+    "verified_questions": 624,
     "volumes_started": [
       "V1",
       "V2"
@@ -13665,20 +14158,20 @@
     "complete": false,
     "total_exercise_count": "not_yet_counted_from_full_scans",
     "chapter_1_end_exercises_transcribed": true,
-    "note": "602 candidate numbered exercise and independent LaTeX solution pairs across25 chapters: V1 1-11=285, V2 12-25=317; current round chapters23-25=56 pairs. Every item unapproved exam_ready=false.",
+    "note": "624 candidate original textbook-numbered chapter-end exercises with independent LaTeX solutions, 26 chapters; this session ch23+24+25+26=78 new. V1=285, V2=339. Not formal verified.",
     "last_completed_exercise_V1": "11.13",
     "next_to_transcribe_V1": "volume_1_chapter_end_exercises_complete",
-    "next_to_transcribe_V2": "26.1",
-    "quality_summary": "V2 ch23 diffraction19 + ch24 polarization16 + ch25 geometrical optics21; all source/companion page index and physics discrepancies flagged. Critical ch25.3 main λ580nm vs S589nm; ch25.11 eye radius correct .691 vs S .361cm; ch25.17 exact area 576 vs S 578; ch25.20 Yerkes Rayleigh arithmetic difference; ch25.21 Cassegrain 32m path vs 60m EFL and 160 vs 300 magnification unresolved pending independent ray matrix review.",
+    "next_to_transcribe_V2": "27.1",
+    "quality_summary": "Session new ch23 diffraction19, ch24 polarization16, ch25 optics21, ch26 wave-particle22 =78 candidate problem-solution pairs. Ch26 distinctions: frequency vs wavelength peak, planetary area factors, 85s classical photoelectric accumulation, Compton moving electron relativistic energy, 300K neutron mean kinetic definition, and 40kV electron relativistic deBroglie. Earlier ch25 Cassegrain EFL companion discrepancy remains unresolved academic audit.",
     "chapter_2_end_exercises_transcribed": true,
     "chapter_3_end_exercises_transcribed": true,
     "chapter_12_end_exercises_transcribed": true,
-    "last_completed_exercise_V2": "25.21",
+    "last_completed_exercise_V2": "26.22",
     "supplement_pdf_page_mappings_new_batch": 55,
     "supplement_mapping_note": "Current40 exercise numbers linked to companion S physical PDF pages177–184 (V1 ch11) and288–298 (V2 ch20). Per-source page windows, source figure and expert audit still pending.",
     "chapter_4_end_exercises_transcribed": true,
     "chapter_13_end_exercises_transcribed": true,
-    "supplement_pdf_page_mappings_current_batch": 21,
+    "supplement_pdf_page_mappings_current_batch": 22,
     "chapter_5_end_exercises_transcribed": true,
     "chapter_14_end_exercises_transcribed": true,
     "chapter_6_end_exercises_transcribed": true,
@@ -13694,11 +14187,12 @@
     "chapter_11_end_exercises_transcribed": true,
     "chapter_20_end_exercises_transcribed": true,
     "chapter_21_end_exercises_transcribed": true,
-    "last_batch_scope": "V2 chapter25 geometrical optics main PDF341-343, companion S338-348, source-numbered 25.1-25.21",
+    "last_batch_scope": "V2 chapter26 wave-particle duality 22 original-numbered exercises V2 PDF368-369 S354-360",
     "chapter_22_end_exercises_transcribed": true,
     "chapter_23_end_exercises_transcribed": true,
     "chapter_24_end_exercises_transcribed": true,
-    "chapter_25_end_exercises_transcribed": true
+    "chapter_25_end_exercises_transcribed": true,
+    "chapter_26_end_exercises_transcribed": true
   },
   "editorial_policies": {
     "dedupe_key": "source edition + chapter + original problem number",
