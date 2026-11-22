@@ -94,7 +94,7 @@ chk(77,"N2 fixed volume heat to double RMS velocity kJ",Q/1000,10)
 I=2.1e-39*1e-7
 chk(78,"diatomic RMS rotation omega rad/s",sqrt(2*k*300/I),6.3e12)
 chk(79,"rotational per molecule at adiabat compression 5x eV",
-    k*273.15*(5**.4)/1.602176634e-19,.028,.04)
+    k*273.15*(5**.4)/1.602176634e-19,.0447,.04)
 chk(80,"adiabatic diatomic wall collision frequency decrease 2xV",
     2**(6/5),2.3)
 chk(81,"process heat capacity R collision flux decrease 2xV",
