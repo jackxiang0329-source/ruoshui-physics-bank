@@ -83,11 +83,11 @@
 \paragraph{习题 5.5}
 把氧原子视作坐标原点，
 两氢原子位于
-\((d\cos\theta,\pm d\sin\theta)\)。
+\((d\cos(\theta/2),\pm d\sin(\theta/2))\)。
 关于水平 \(AA'\) 轴、竖直 \(BB'\) 轴的转动惯量分别为
 \[
- J_{AA'}=2m_Hd^2\sin^2\theta,\qquad
- J_{BB'}=2m_Hd^2\cos^2\theta.
+ J_{AA'}=2m_Hd^2\sin^2(\theta/2),\qquad
+ J_{BB'}=2m_Hd^2\cos^2(\theta/2).
 \]
 故
 \[
@@ -95,12 +95,14 @@
  \sqrt{\frac{J_{AA'}+J_{BB'}}{2m_H}}
  \approx9.58\times10^{-11}\,\mathrm m},
 \qquad
- \boxed{\theta=\arctan\sqrt{\frac{J_{AA'}}{J_{BB'}}}
- \approx52.46^\circ}.
+ \boxed{\theta=2\arctan\sqrt{\frac{J_{AA'}}{J_{BB'}}}
+ \approx104.91^\circ}.
 \]
-若问两条OH键的总夹角，则为
-\(2\theta\approx104.91^\circ\)；
-原图 \(\theta\) 是单条OH键与水平对称轴的夹角。
+原图 \(\theta\) 是两条OH键的完整夹角，
+单条OH键与水平 \(AA'\) 正轴的夹角为
+\(\theta/2\approx52.46^\circ\)。
+辅导书PDF物理页81也以 \(\sin^2(\theta/2)\)
+及 \(\cos^2(\theta/2)\) 计算，二者一致。
 氧原子在双轴交点，其平动位置不贡献转动惯量。
 
 \paragraph{习题 5.6}
@@ -123,7 +125,16 @@
  \approx\boxed{5.60\times10^8\,\mathrm{Hz}}.
 \]
 但这明显大于常见富勒烯直径的两个数量级。
-若原意是 \(D=0.71\,\mathrm{nm}\)，则
+辅导书PDF物理页81同样将直径印为
+\(71\,\mathrm{nm}\)，且采用
+\(E_k=6.12\times10^{-21}\,\mathrm J\)，
+与教材本卷第186页给出的
+\(6.21\times10^{-21}\,\mathrm J\) 有数值分歧。
+辅导书据此得到约 \(5.54\times10^8\,\mathrm{Hz}\)；
+按照教材的 \(6.21\times10^{-21}\,\mathrm J\)
+计算得到上面的 \(5.60\times10^8\,\mathrm{Hz}\)。
+如果出于物理尺寸考虑猜测原意是
+\(D=0.71\,\mathrm{nm}\)，则
 \[
  \boxed{J_{\rm physical}\approx1.00\times10^{-43}
  \,\mathrm{kg\,m^2}},\quad
@@ -557,10 +568,20 @@
  \approx7.83\times10^{19}\,\mathrm J
  \approx2.18\times10^{13}\,\mathrm{kW\,h}}.
 \]
-与我国2004年发电量 \(E_{2004}\) 的比值严格应写为
-\(\boxed{E_{\rm year}/E_{2004}}\)；
-本次尚未从原书或其配套资料确认题中采用的
-2004年发电量数据，不能擅自填写「多少倍」。
+与我国2004年发电量的比较，
+配套辅导书PDF物理页88采用能量
+\(E_{2004}=7.3\times10^{18}\,\mathrm J\)
+（该页题面括号把单位印为「kW」，
+但其计算使用的是能量单位 \(\mathrm J\)，
+为源书量纲疑点）。
+据此
+\[
+ \boxed{\frac{E_{\rm year}}{E_{2004}}
+ =\frac{7.83\times10^{19}}{7.3\times10^{18}}
+ \approx10.7\text{ 倍}\approx11\text{ 倍}}.
+\]
+采用其他实际2004年统计口径应相应调整比值，
+不能把印刷的 \(\mathrm{kW}\) 当作发电能量。
 作用在地球上的平均摩擦力矩大小
 \[
  \boxed{|\tau|=J|\dot\omega|
