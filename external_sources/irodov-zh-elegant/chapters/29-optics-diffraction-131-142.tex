@@ -196,70 +196,95 @@ $\delta\nu/\nu\simeq1/(mN)$，
 书中公式为刻线多时 $N\gg1$ 的近似。
 
 \diffractionproblem{139}{210}
-原书题面印有宽 $\ell=10.0\,\mathrm m$ 的透射光栅，
-光垂直入射，两条谱线分别为
-$600.000$nm 与 $600.050$nm。
-在某衍射角 $\theta$ 下按瑞利判据刚好可分辨，求 $\theta$。
+两条相近的单色谱线波长分别为
+$600.000\,\mathrm{nm}$ 与 $600.050\,\mathrm{nm}$，
+垂直入射透射光栅。问在怎样的衍射角
+$\theta$ 下恰好达到瑞利分辨判据？
+\textbf{宽度版本差异：}多个可查的 Mir 等英文题面记光栅总宽
+$\ell=10.0\,\mathrm{mm}$；
+本项目此前记录的上传扫描底本题面记为
+$\ell=10.0\,\mathrm m$。
+两者相差1000倍，必须分别计算。
 \exsolution
-按瑞利条件
-$\delta\lambda=\lambda/(mN)$，
-而 $m\lambda=d\sin\theta$、
-$N=\ell/d$，故
+瑞利判据为 $\lambda/\delta\lambda=mN$。
+另一方面正入射时 $d\sin\theta=m\lambda$，
+刻线数 $N=\ell/d$。
+将级次与刻线间距消去，得到
 \[
-\boxed{\sin\theta\simeq
-\frac{\lambda^2}{\ell\,\delta\lambda}}.
+ \boxed{\sin\theta
+ =\frac{\lambda^2}{\ell\,\delta\lambda}},
+ \qquad
+ \lambda\simeq600.0\,\mathrm{nm},\quad
+ \delta\lambda=0.050\,\mathrm{nm}.
 \]
-\textbf{按原书题面字面 $\ell=10.0\,\mathrm m$：}
-$\lambda=600$nm、
-$\delta\lambda=0.050$nm，得
+\textbf{标准英文版本 $\ell=10.0\,\mathrm{mm}$：}
 \[
-\boxed{\theta\simeq
-\arcsin(7.2\times10^{-4})\simeq0.041^\circ}.
+ \sin\theta=\frac{(600.0\times10^{-9})^2}
+ {(10.0\times10^{-3})(0.050\times10^{-9})}
+ =0.720,
+ \qquad
+ \boxed{\theta\simeq46.05^\circ\approx46^\circ}.
 \]
-\textbf{若宽度本意是 $\ell=10.0\,\mathrm{mm}$：}
-则
-$\sin\theta=0.72$，
+\textbf{若严格按已记录扫描题面
+$\ell=10.0\,\mathrm m$：}
 \[
-\boxed{\theta\simeq46^\circ},
+ \sin\theta=7.20\times10^{-4},\qquad
+ \boxed{\theta\simeq0.0413^\circ}.
 \]
-这与\emph{原书书末}结果相符。
-\excheck 已直接查看原版印刷页210：题面\emph{确实印“10.0 m wide”}。
-因此书末46°与题面相差1000倍的宽度设定，二者必须分开报告，不能悄悄把题面改成毫米。
+\excheck
+维数检查：$\lambda^2/(\ell\,\delta\lambda)$ 无量纲。
+按标准英文版 $\ell=10.0\,\mathrm{mm}$ 可复现书末
+$46^\circ$；按扫描底本记录 $10.0\,\mathrm m$ 不能。
+公开对照可见
+\texttt{studiestoday.com/ie-irodov-solutions-chapter-29-diffraction-of-light-part-2}。
+这一修订只明确排定两种版本的主次，
+不声称在本次重看了用户扫描页。
 
 \diffractionproblem{140}{210}
-原版书印：光栅宽
-$\ell=6.5$cm、每毫米200条线，
-研究谱线 $\lambda=670.8\,\mathrm{mm}$，双线间隔
-$\delta\lambda=0.015$nm。
-求：(a) 能分辨双线的最低级次；
-(b) 波长约670nm时此光栅的最小可分辨谱间隔。
+正入射的透射光栅宽 $\ell=6.5\,\mathrm{cm}$，
+每毫米刻有200条线。研究波长
+$\lambda=670.8\,\mathrm{nm}$、
+双线差 $\delta\lambda=0.015\,\mathrm{nm}$ 的谱线。
+求：(a) 第几级起可分辨双线；
+(b) 在波长约 $670\,\mathrm{nm}$ 处，
+该光栅的最小理论可分辨波长差。
+\textbf{单位版本差异：}本项目先前记录的扫描底本
+第一处记成“$670.8\,\mathrm{mm}$”，
+但其后文又明确要求在 $670\,\mathrm{nm}$ 附近讨论；
+另有英文原题转录写作 $670.8\,\mathrm{nm}$。
 \exsolution
-\textbf{单位疑点：}题面确实印“670.8 mm”，
-但后文明确要在 $\lambda\approx670\,\mathrm{nm}$ 下分析，
-并且周期 $d=5\,\mathrm{\mu m}$ 根本不可能衍射
-$670.8\,\mathrm{mm}$ 的光。
-因此分别保留原文并按明确的670nm语境计算。
-刻线数
-$N=(6.5\,\mathrm{cm})(200\,\mathrm{mm^{-1}})
-=13000$。
-瑞利判据
-$mN\ge\lambda/\delta\lambda$，
-需要
-$m\ge670.8/(0.015\cdot13000)=3.44$，
-所以
+刻线总数
 \[
-\boxed{m_{\min}=4}.
+ N=\ell\frac{200}{\mathrm{mm}}
+ =(65\,\mathrm{mm})(200/\mathrm{mm})
+ =13000,
+ \quad
+ d=\frac{1}{200}\,\mathrm{mm}=5.0\,\mathrm{\mu m}.
 \]
-最高级次
-$m_{\max}=\lfloor d/\lambda\rfloor=7$，
-最小可分辨波长差
+在第 $m$ 级满足 $\mathcal R=mN$，由
+$mN\ge\lambda/\delta\lambda$ 得
 \[
-\boxed{\delta\lambda_{\min}\simeq
-\frac{\lambda}{m_{\max}N}
-\simeq\frac{670\,\mathrm{nm}}{7(13000)}
-\simeq7.4\,\mathrm{pm}\approx7\,\mathrm{pm}}.
+ m\ge\frac{670.8}{0.015(13000)}
+ \simeq3.440,
+ \quad\boxed{m_{\min}=4}.
 \]
-\excheck 原书印刷“670.8 mm”和书末7pm、第四级无法同时成立；订正单位应留在勘误中明确标识。
+正入射真实传播级次满足
+$m\lambda/d\le1$，
+故 $m_{\max}=\lfloor d/\lambda\rfloor=7$。
+最小可分辨谱线差
+\[
+ \boxed{\delta\lambda_{\min}
+ =\frac{\lambda}{m_{\max}N}
+ \simeq\frac{670\,\mathrm{nm}}{7(13000)}
+ =0.00736\,\mathrm{nm}
+ \simeq7.4\,\mathrm{pm}}.
+\]
+\excheck
+若按“$670.8\,\mathrm{mm}$”字面处理，
+单线波长大于 $5.0\,\mathrm{\mu m}$ 的光栅周期约
+$1.34\times10^5$ 倍，不可能形成第一级光谱，
+更不可能得到第四级；故记录为扫描版本单位冲突，
+不能把毫米和纳米分支的条件混入同一推导。
 
 \diffractionproblem{141}{210}
 一片宽
