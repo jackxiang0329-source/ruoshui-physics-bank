@@ -10,7 +10,7 @@
 | **正式高难综合题** | [`bank/`](bank/) | **452 道**，每道含 `meta.json`、`question.tex`、`solution.tex` 三份权威源 |
 | 题目与解析的合订 LaTeX | [题目](tex/questions.tex) / [解答](tex/solutions.tex) | 从 `bank/` 构建；数学公式统一按 LaTeX 排版 |
 | 查询题号、模块、质量信息 | [CSV 题目索引](data/index.csv) / [JSON 目录](data/problems.json) | 自动派生数据，不是新的独立题源 |
-| **赵近芳、王登龙第五版两书习题** | [ElegantBook 教材专区](external_sources/zhao-wang-physics-5e-elegant/) | **累计822题（第16批新增51）**，覆盖《简明教程》第1—12章、《学习指导》第1—16章解题示例及自测题1—5、9—11；保留疑点标记，不计入正式高难题库 |
+| **赵近芳、王登龙第五版两书习题** | [ElegantBook 教材专区](external_sources/zhao-wang-physics-5e-elegant/) | **累计846题（第17批新增24）**，覆盖《简明教程》第1—12章、《学习指导》第1—16章解题示例及自测题1—6、9—11；保留疑点标记，不计入正式高难题库 |
 | **《普通物理学习题》中文整理** | [Irodov ElegantBook 专区](external_sources/irodov-zh-elegant/) | **原书 1,878 题**，分篇章节、中文推导、勘误与独立回归 |
 | 《普通物理学习题》合订 PDF | [直接查看 `main.pdf`](external_sources/irodov-zh-elegant/main.pdf) | 已编译的仓库内成品 |
 | **张三慧《大学物理学（第4版）》三书** | [进行中的 Draft PR #45](https://github.com/jackxiang0329-source/ruoshui-physics-bank/pull/45) | 分支持续录入与质检；未合并前不计入正式主库 |
