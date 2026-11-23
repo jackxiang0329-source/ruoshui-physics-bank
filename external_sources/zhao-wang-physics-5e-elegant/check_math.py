@@ -180,6 +180,12 @@ CHAPTERS = (
      [f"5.2.{n}" for n in range(1, 10)]),
     ("chapters/guide-selftest05-solutions.tex", "sourcetest",
      [f"5.3.{n}" for n in range(1, 6)] + ["5.4.1"]),
+    ("chapters/guide-selftest06-choices.tex", "sourcetest",
+     [f"6.1.{n}" for n in range(1, 11)]),
+    ("chapters/guide-selftest06-blanks.tex", "sourcetest",
+     [f"6.2.{n}" for n in range(1, 10)]),
+    ("chapters/guide-selftest06-solutions.tex", "sourcetest",
+     [f"6.3.{n}" for n in range(1, 4)] + [f"6.4.{n}" for n in range(1, 3)]),
     ("chapters/guide-selftest09-choices.tex", "sourcetest",
      [f"9.1.{n}" for n in range(1, 12)]),
     ("chapters/guide-selftest09-blanks.tex", "sourcetest",
@@ -219,7 +225,7 @@ def structural_check():
             for label in (r"\problemtext", r"\workings", r"\crosscheck"):
                 assert label in block, (number, label)
         total += len(ids)
-    assert total == 822, total
+    assert total == 846, total
     main_source = (ROOT / "main.tex").read_text(encoding="utf-8")
     for relative, _macro, _expected in CHAPTERS:
         stub = relative.removesuffix(".tex")
@@ -1306,6 +1312,58 @@ def sixteenth_round_regressions():
     near(32**(2/7),2**(10/7))
     assert 10+10+6+10+9+6 == 51
 
+
+def seventeenth_round_regressions():
+    """Scanned selftest 6: 24 source-located electromagnetism items."""
+    pi=math.pi
+    eps0=8.85e-12
+    mu0=4*pi*1e-7
+    # 6.1.1, 6.1.2: half-line Coulomb field and potential reference.
+    a=2.; lam=1e-9; q=2e-9
+    near((lam/(4*pi*eps0*a))*2,lam/(2*pi*eps0*a))
+    near(q/(4*pi*eps0)*(1/(2*a)-1/a),-q/(8*pi*eps0*a))
+    # 6.1.4 triangular vertex-to-centroid distances.
+    near(6*math.sqrt(3)*q/a,6*q/(a/math.sqrt(3)))
+    # 6.1.5 proton non-relativistic cyclotron energy in MeV.
+    K=(1.6e-19)**2*.3**2*.1**2/(2*1.67e-27)
+    near(K/(1.6e-13),.043113772455089824)
+    # 6.1.7 sheet-current integral.
+    near(math.log((2+3)/3),math.log(5/3))
+    # 6.1.8 two-turn fixed-length loop, magnetic moment.
+    near(2*(.5)**2,.5)
+    near(2/.5,4.)
+    # 6.1.9 rotating conducting rod relative radii.
+    near((2/3)**2-(1/3)**2,1/3)
+    # 6.2.1 uniform line vs point-charge field.
+    R=2.;d=.5
+    near(1/(R-d/2)-1/(R+d/2),d/(R*R-d*d/4))
+    # 6.2.2 normal field jumps.
+    near(-1+1/3,-2/3)
+    near(1/3+1,4/3)
+    # 6.2.5 toroid H and B.
+    H=500*.3/.5
+    near(H,300)
+    near(mu0*600*H,0.2261946710584651)
+    # 6.2.6 charge-flux relation.
+    near(25*(2e-5),5e-4)
+    # 6.2.8 magnetic field energy density.
+    I=1.;rad=.5
+    near((mu0*I/(2*pi*rad))**2/(2*mu0),
+         mu0*I*I/(8*pi*pi*rad*rad))
+    # 6.3.1 charged half-cylinder angular projection.
+    near(2/(2*pi*pi),1/(pi*pi))
+    # 6.3.2 sphere surface density & excess removal.
+    sigma=eps0*300/(.1+.2)
+    near(sigma/eps0*(.1+.2),300)
+    near(4*pi*eps0*.2*300,6.672477309269389e-9)
+    # 6.3.3 moving half-ring with varying B.
+    a=2.;b=.2
+    near(math.log((a+b)/(a-b)),
+         math.log(1+b/a)-math.log(1-b/a))
+    # 6.4.2 internal magnetic energy per axial meter.
+    near(mu0*I**2/(4*pi)*(.25),mu0*I**2/(16*pi))
+    assert 10+9+3+2 == 24
+
 if __name__ == "__main__":
     n = structural_check()
     numerical_check()
@@ -1325,6 +1383,7 @@ if __name__ == "__main__":
     fourteenth_round_regressions()
     fifteenth_round_regressions()
     sixteenth_round_regressions()
+    seventeenth_round_regressions()
     print(f"Structure: {n} referenced worked items; all checked blocks present.")
     print("Selected numeric invariants: passed.")
     print("Not a replacement for full independent physics or copyright review.")
