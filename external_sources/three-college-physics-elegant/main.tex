@@ -1,0 +1,29 @@
+% !TeX program = xelatex
+% 复用同仓库 Irodov 专区 ElegantBook 类；原书版权归权利人。
+\documentclass[lang=cn,color=blue,11pt]{elegantbook}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc}
+\newcommand{\sourceproblem}[3]{\par\medskip\noindent\textbf{\large 教材习题 #1}\hfill{\small 书内第 #2 页，PDF第 #3 页}\par\nobreak\smallskip}
+\newcommand{\problemtext}{\par\noindent\textbf{【题意整理】}\quad}
+\newcommand{\workings}{\par\smallskip\noindent\textbf{【推导与解析】}\quad}
+\newcommand{\crosscheck}{\par\smallskip\noindent\textbf{【核验】}\quad}
+\title{大学物理三校习题研究性详解}
+\subtitle{天津理工大学、华中科技大学、常州工学院}
+\author{独立题解与 LaTeX 排版：三千弱水}
+\date{2026年11月24日}
+\version{0.1}
+\begin{document}
+\maketitle
+\frontmatter
+\chapter*{编辑说明}
+按原书编号与双页码记录。题意独立概述，推导及核验独立撰写；不上传底本、原书扫描图或整页复制。三册独立统计，本批为18题，尚未完成全书覆盖，所有题目待独立二校。公开再版前须核验授权。
+\tableofcontents
+\mainmatter
+\chapter{天津理工大学《大学物理同步训练》（第3版）}
+\input{chapters/tjut-ch01}
+\chapter{华中科技大学《大学物理习题册》}
+\input{chapters/hust-ch01}
+\chapter{常州工学院《大学物理学习指导》}
+\input{chapters/czu-ch01}
+\end{document}
