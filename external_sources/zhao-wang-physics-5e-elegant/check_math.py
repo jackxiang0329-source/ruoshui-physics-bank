@@ -1230,7 +1230,7 @@ def fifteenth_round_regressions():
     near(math.tan(pi/6),1/sqrt(3))
     near((1/(1))/(1/(2)),2)
     assert 0==0 and 2*9.8==19.6  # instant A=0, B=2g for compressed spring
-    near(math.sqrt(25+(25/7)**2),6.144684115166046)
+    near(math.sqrt(25+(25/7)**2),6.1445180478875905)
     near(math.degrees(math.atan(5/7)),35.53767779197438)
     near(1-1/(1.25),.2)
     near((30*pi)**2-(20*pi)**2,2*(25*pi/12)*(120*pi))
@@ -1238,7 +1238,7 @@ def fifteenth_round_regressions():
     # 2.3.1 non-Hooke work, 2.3.3 cart and slider, 2.3.5 sphere.
     F=lambda x:26.4*x*x+12.8*x**3
     near(F(1)-F(.5),31)
-    near(sqrt(62/2.17),5.3457752394)
+    near(sqrt(62/2.17),5.3452248382484875)
     near(.05*sqrt(110/(10/11)),.55)
     near(.55*10/11,.5)
     near(.55/11,.05)
@@ -1255,13 +1255,13 @@ def fifteenth_round_regressions():
     near(2*gamma(.8),10/3)
     near(2.6e-8*gamma(.8),4.3333333333e-8)
     near(20/(.6*c)/gamma(.6),8.8888888889e-8)
-    near(.5*.99**2/(gamma(.99)-1),.080486479125)
+    near(.5*.99**2/(gamma(.99)-1),.08048367989832948)
     near(54/(.8*c),2.25e-7)
     near(90/(.8*c),3.75e-7)
     near(c*c*(2e-7)/500,.12*c)
     near(2*(5/3)*(.8*c)*1/(c*c),2*(5/3)*.8/c)
     near(8-1,7)
-    near((gamma(.8)-gamma(.4))*(9.11e-31)*c*c,4.719e-14,tol=.001)
+    near((gamma(.8)-gamma(.4))*(9.11e-31)*c*c*1e14,4.7191575897754955)
 
 if __name__ == "__main__":
     n = structural_check()
