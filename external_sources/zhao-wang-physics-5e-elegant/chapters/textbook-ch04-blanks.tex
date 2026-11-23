@@ -131,10 +131,17 @@ $y=0.02\sin[2\pi(100t-0.4x)]$（SI），求振幅、波长、频率和传播速�
 \sourceproblem{4.2.12}{103}{103}
 \problemtext 波沿$x$轴正向传播，$u=0.08\,\mathrm{m/s}$，$\lambda=0.20\,\mathrm m$。$t=0$的波形如图4.2.12：原点位移为零且沿$x$增大时位移先为正，振幅为$0.04\,\mathrm m$。求波函数。
 \workings
-$k=2\pi/\lambda=10\pi\,\mathrm{rad/m}$，
-$\omega=uk=0.8\pi\,\mathrm{rad/s}$。
-初始空间图满足$y(x,0)=0.04\sin(10\pi x)$；
-沿正$x$传播必须以$x-ut$代替$x$：
+由波速与波长求得波数、角频率：
+\[
+k=\frac{2\pi}{\lambda}=10\pi\,\mathrm{rad/m},
+\qquad
+\omega=uk=0.8\pi\,\mathrm{rad/s}.
+\]
+$t=0$时空间函数为
+\[
+y(x,0)=0.04\sin(10\pi x).
+\]
+沿正$x$传播，将初始函数中的$x$替换成$x-ut$：
 \[
 \boxed{y(x,t)=0.04\sin(10\pi x-0.8\pi t)\ \mathrm m}.
 \]
