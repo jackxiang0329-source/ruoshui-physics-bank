@@ -1,0 +1,293 @@
+% 用户所提供《大学物理学学习指导》第5版，第9章“静电场”例9.1—9.11
+% 书内页127—133，对应PDF第135—141页。依据扫描原文的短题意转述与独立推导。
+% 学术初校稿，所有题待独立人工二校；例9.5存在原印刷文字与公式的符号矛盾。
+
+\sourceexample{9.1}{127}{135}
+\problemtext 两点电荷$q_1,q_2$相隔$r_0$，以相同的速度$\bm v$运动，
+速度与两者的连线垂直。在低速近似下，求库仑作用力与运动电荷间磁力的大小之比。
+\workings
+电作用力大小为
+\[
+F_{\mathrm e}=\frac{|q_1q_2|}{4\pi\varepsilon_0r_0^2}.
+\]
+按低速运动点电荷的磁场公式，
+$q_1$在$q_2$位置产生
+$B_1=\mu_0|q_1|v/(4\pi r_0^2)$，
+由于$\bm v\perp\bm B_1$，
+\[
+F_{\mathrm m}=|q_2|v B_1
+=\frac{\mu_0|q_1q_2|v^2}{4\pi r_0^2}.
+\]
+故
+\[
+\boxed{\frac{F_{\mathrm e}}{F_{\mathrm m}}
+=\frac{1}{\mu_0\varepsilon_0v^2}
+=\frac{c^2}{v^2}}.
+\]
+\crosscheck 这是同一参考系中采用低速运动电荷磁场的模型；
+当$v$接近$c$，必须使用相对论电磁场变换，
+不得把低速近似直接当成精确相对论结论。
+
+\sourceexample{9.2}{127}{135}
+\problemtext 真空中面积为$S$的平行板分别带电$+q$、$-q$，
+间距$d$且可忽略边缘效应。辨析两种错误估算
+$F=k_{\mathrm e}q^2/d^2$及$F=q^2/(\varepsilon_0S)$，
+并求两板的相互吸引力大小。
+\workings
+库仑点电荷公式不适用于面积很大的均匀带电板。
+两极板共同产生的板间场
+$E_{\mathrm{total}}=q/(\varepsilon_0S)$
+包含被研究板自身产生的场，不能用它计算本板对自身的力。
+另一张平板单独在该板附近产生
+$E_{\mathrm{other}}=q/(2\varepsilon_0S)$，
+因此
+\[
+\boxed{F=qE_{\mathrm{other}}
+=\frac{q^2}{2\varepsilon_0S}},
+\]
+方向为相互吸引。
+\crosscheck 同一结果可由真空静电场压力
+$p=\sigma^2/(2\varepsilon_0)$乘以面积$S$求得。
+
+\sourceexample{9.3}{128}{136}
+\problemtext 半径$R$、位于上半平面的带电细半圆弧，
+其线电荷密度沿极角$\phi\in[0,\pi]$变化为
+$\lambda(\phi)=\lambda_0\sin\phi$。
+求圆心$O$的电场矢量。
+\workings
+弧元电荷$dq=\lambda_0R\sin\phi\,d\phi$，
+圆心距弧元为$R$，
+指向圆心的电场
+\[
+d\bm E=-\frac{1}{4\pi\varepsilon_0}
+\frac{\lambda_0}{R}\sin\phi
+(\cos\phi\,\bm e_x+\sin\phi\,\bm e_y)\,d\phi.
+\]
+由于
+$\int_0^\pi\sin\phi\cos\phi\,d\phi=0$、
+$\int_0^\pi\sin^2\phi\,d\phi=\pi/2$，
+所以
+\[
+\boxed{E_x=0,\qquad
+\bm E_O=-\frac{\lambda_0}{8\varepsilon_0R}\bm e_y}.
+\]
+\crosscheck $\lambda_0>0$时场指向下方；
+原弧上的电荷密度在两端为零、顶部最大，结果体现左右对称性。
+
+\sourceexample{9.4}{128}{136}
+\problemtext 两条无限长平行带电直线相距$2a$，
+单位长度分别带电$+\lambda,-\lambda$。
+在距它们的中点$r\gg2a$处，求电场的主要远场项。
+\workings
+沿截面取正线在$x=+a$、负线在$x=-a$，
+观察点极坐标$\bm r=r\bm e_r$，
+有
+\[
+\bm E=\frac{\lambda}{2\pi\varepsilon_0}
+\left(\frac{\bm r-a\bm e_x}{|\bm r-a\bm e_x|^2}
+-\frac{\bm r+a\bm e_x}{|\bm r+a\bm e_x|^2}\right).
+\]
+对小参数$a/r$保留一阶，
+\[
+\boxed{\bm E\simeq\frac{\lambda a}{\pi\varepsilon_0r^2}
+\bigl(\cos\theta\,\bm e_r+\sin\theta\,\bm e_\theta\bigr)}.
+\]
+即
+\[
+\boxed{E_r\simeq\frac{\lambda a\cos\theta}{\pi\varepsilon_0r^2},
+\qquad E_\theta\simeq\frac{\lambda a\sin\theta}{\pi\varepsilon_0r^2}}.
+\]
+\crosscheck 两线总线电荷为零，因此远场的$1/r$单极项抵消，
+主导场衰减如$1/r^2$；不能用只包住两线的高斯面直接求非对称局域场。
+
+\sourceexample{9.5}{129}{137}
+\problemtext 无限大均匀带电平面面密度$\sigma$，
+挖去半径$R$的圆孔。以孔中心$O$为电势零点，
+求过孔中心的法线上、距$O$为$x$处的电势。
+\workings
+把带孔平面视为\emph{完整无限带电平面减去同密度带电圆盘}。
+在$x>0$侧，完整平面的场为$\sigma/(2\varepsilon_0)$，
+圆盘的轴向场为
+$\sigma[1-x/\sqrt{R^2+x^2}]/(2\varepsilon_0)$，
+故
+\[
+\boxed{E_x(x)=\frac{\sigma x}{2\varepsilon_0\sqrt{R^2+x^2}}}.
+\]
+以$U(0)=0$固定电势规范，
+\[
+\boxed{U(x)-U(0)
+=-\int_0^x E_x(s)\,ds
+=\frac{\sigma}{2\varepsilon_0}
+\left(R-\sqrt{R^2+x^2}\right)}.
+\]
+\crosscheck 对$\sigma>0$且$x\ne0$，上式\emph{严格为负}。
+原扫描参考解给出相同的电势公式，但后面又印有
+“$\sigma>0$时$U>0$”的相反文字；二者不一致。
+本稿保持原公式与电势零点，并明确将文字符号矛盾列入二校，
+而不将其伪装成两个同样正确的结论。
+由于无限平面电势在无穷远发散，不能设$U(\infty)=0$。
+
+\sourceexample{9.6}{129--130}{137--138}
+\problemtext 面积为$S$、板距$d$的真空平行板电容器，
+上下板$A,B$始终保持$U_A=V,U_B=0$。
+在正中间插入一块面积同为$S$、净电荷$q$的薄导体片$C$，
+求其电势。
+\workings
+设上间隙与下间隙的电压分别为$V-U_C$、$U_C$，
+两间隙均为$d/2$。
+薄片两面的自由电荷面密度分别为
+$-\varepsilon_0(V-U_C)/(d/2)$与
+$+\varepsilon_0U_C/(d/2)$。
+净自由电荷为$q$，故
+\[
+\frac qS=-\frac{2\varepsilon_0}{d}(V-U_C)
++\frac{2\varepsilon_0}{d}U_C
+=\frac{4\varepsilon_0}{d}\left(U_C-\frac V2\right).
+\]
+因此
+\[
+\boxed{U_C=\frac V2+\frac{qd}{4\varepsilon_0S}}.
+\]
+\crosscheck 当$q=0$时$U_C=V/2$；
+若$C$带正电，则其电势相对于两板的算术平均值上升。
+
+\sourceexample{9.7}{130}{138}
+\problemtext 真空中的静电平衡导体某表面自由电荷面密度为$\sigma$，
+证明该处导体表面的单位面积所受电磁力为
+$(\sigma^2/2\varepsilon_0)\bm n$，其中$\bm n$指向导体外法线。
+\workings
+在导体表面取一微小面元$\Delta S$，
+将该面元的\emph{自身}电场与其余全部电荷产生的场分离。
+局域平面近似下，面元自身在两侧分别产生
+$\pm \sigma\bm n/(2\varepsilon_0)$。
+导体内部总场为零、外部总场为
+$\sigma\bm n/\varepsilon_0$，因此其余电荷在面元处的场为
+$\bm E_{\rm other}=\sigma\bm n/(2\varepsilon_0)$。
+由于$dq=\sigma\,\Delta S$，
+\[
+\boxed{\frac{\Delta\bm F}{\Delta S}
+=\sigma\bm E_{\rm other}
+=\frac{\sigma^2}{2\varepsilon_0}\bm n}.
+\]
+\crosscheck 力密度沿外法线为正，
+无论$\sigma$是正还是负，其平方均为非负；
+不能用包含面元自身贡献的总场计算自身受力。
+
+\sourceexample{9.8}{130--131}{138--139}
+\problemtext 两个半径$R_1<R_2$的同心薄金属球壳，
+内壳带正电$+q$、外壳起初不带电。
+先求外壳电荷分布及电势；再将外壳接地、断开地线；
+最后把内壳接地，求内壳新的电荷及外壳电势变化。
+\workings
+起初外壳内表面由静电平衡感应$-q$，外表面为$+q$，
+外壳电势为
+\[
+\boxed{U_{2,i}=\frac{q}{4\pi\varepsilon_0R_2}}.
+\]
+外壳接地后内表面仍为$-q$，外表面失去正电荷而变为0，
+于是外壳此时电势为零。
+断开地线后，外壳总电荷保持$-q$。
+随后内壳接地，其电荷变为$q'$；
+外壳内表面电荷随之为$-q'$，
+外表面仍由总电荷守恒为$q'-q$。
+内壳零电势条件为
+\[
+\frac{q'}{4\pi\varepsilon_0R_1}
+-\frac{q}{4\pi\varepsilon_0R_2}=0
+\quad\Longrightarrow\quad
+\boxed{q'=\frac{R_1}{R_2}q}.
+\]
+外壳末电势
+\[
+\boxed{U_{2,f}=
+\frac{q'-q}{4\pi\varepsilon_0R_2}
+=\frac{(R_1-R_2)q}{4\pi\varepsilon_0R_2^2}}.
+\]
+\crosscheck $R_1<R_2$使外壳最终电势为负，
+而此时内壳接地为零电势；外壳净电荷保持先前断地线时的$-q$。
+
+\sourceexample{9.9}{131--132}{139--140}
+\problemtext 一中性金属球体$A$内部有两个独立空腔，
+腔心$O_1,O_2$相距$a$，其中分别固定点电荷$q_1,q_2$；
+球外沿两腔心连线方向再放电荷$q_3$，
+它距$q_2$为$b$。求静电平衡时金属$A$对$q_1$的净力。
+\workings
+金属在静电平衡时内部总场为零。
+利用全电场的线性叠加，可以把导体表面感应电荷在$q_1$处的电场
+写成其余\emph{所有}直接点电荷场的负值，
+但还须考虑$q_1$在自己球形同心腔内诱导电荷的作用。
+原图$q_1$恰在球形腔中心，故自身诱导表面电荷均匀，
+在腔心所产生的场为零。
+于是
+\[
+\boxed{\bm F_{A\to1}
+=-(\bm F_{2\to1}+\bm F_{3\to1})}.
+\]
+取$\bm e_x$从$O_1$指向$O_2$且$q_1,q_2,q_3>0$，
+\[
+\boxed{\bm F_{A\to1}
+=\frac{q_1}{4\pi\varepsilon_0}
+\left(\frac{q_2}{a^2}+
+\frac{q_3}{(a+b)^2}\right)\bm e_x}.
+\]
+\crosscheck 由导体屏蔽，$q_2,q_3$及远处的金属感应场
+合计后不能在\emph{第一空腔}产生净外加场；
+但“金属对$q_1$的力”作为来源分解仍可包含上述抵消项。
+若$q_1$偏离腔中心，其自身诱导表面的反作用一般不再为零，
+不能直接照搬本式。
+
+\sourceexample{9.10}{132}{140}
+\problemtext 真空平行板电容器两极板$A,B$之间接入一个\emph{接地金属屏蔽片}$S$，
+假设仍存在不受屏蔽片覆盖的直接边缘电容$C_1$。
+比较加入屏蔽片前后的两板等效电容。
+\workings
+按原图等效电路，
+$A,S$间为$C_{AS}$，$S,B$间为$C_{BS}$，
+沿$A\to S\to B$串联，等效值为
+\[
+C_{\rm series}=\left(\frac1{C_{AS}}+\frac1{C_{BS}}\right)^{-1}
+=\frac{C_{AS}C_{BS}}{C_{AS}+C_{BS}}.
+\]
+与不受金属片覆盖的直接电容$C_1$并联，
+\[
+\boxed{C_{\rm equiv}=C_1+\frac{C_{AS}C_{BS}}{C_{AS}+C_{BS}}>C_1}.
+\]
+\crosscheck 该公式依赖原图指定的屏蔽片几何与等效电路；
+不能把其误写为单纯“两大极板间插入不带电、悬空、等面积金属板”的另一模型。
+
+\sourceexample{9.11}{132--133}{140--141}
+\problemtext 面积$S$、极板间距$d$的真空平行板电容器，
+初接电压$U_0$电源，忽略边缘效应。现全部插入厚度$d$、
+介电常数比为$\varepsilon_r$的介质板。
+分别分析(1)初始储能、(2)充电后切断电源、(3)保持连接电源
+时的末储能和\emph{外力做功}。
+\workings
+初始电容$C_0=\varepsilon_0S/d$，初始储能
+\[
+\boxed{W_1=\frac12C_0U_0^2=\frac{\varepsilon_0SU_0^2}{2d}}.
+\]
+(2) 电源断开，电量$Q=C_0U_0$保持不变，
+插介质后电容$C'=\varepsilon_rC_0$，故
+\[
+\boxed{W_2=\frac{Q^2}{2C'}=\frac{W_1}{\varepsilon_r}},
+\qquad
+\boxed{W_{\rm ext,off}=W_2-W_1
+=W_1\left(\frac1{\varepsilon_r}-1\right)<0}.
+\]
+(3) 接电源时$U=U_0$保持不变，
+\[
+\boxed{W_3=\frac12C'U_0^2=\varepsilon_r W_1}.
+\]
+电源流入的附加电荷
+$\Delta Q=(C'-C_0)U_0$，
+电源做功$W_{\rm bat}=U_0\Delta Q
+=2W_1(\varepsilon_r-1)$。
+能量守恒给外力做功
+\[
+\boxed{W_{\rm ext,on}=(W_3-W_1)-W_{\rm bat}
+=-W_1(\varepsilon_r-1)<0}.
+\]
+\crosscheck 两种插入方式都表现出介质被电容器\emph{吸入}，
+外力若以准静态速度控制则做负功；
+接电源时不能只看储能增加就断言外力做正功，
+必须计入电源传输的能量。
