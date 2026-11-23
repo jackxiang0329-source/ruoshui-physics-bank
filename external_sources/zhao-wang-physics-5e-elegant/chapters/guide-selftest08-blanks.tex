@@ -24,7 +24,15 @@
 \boxed{v=\sqrt{2gR+\frac{2qQ}{4\pi\varepsilon_0mR}
 \left(\frac1{\sqrt2}-1\right)}}.
 \]
-\crosscheck 若 $qQ>0$，向圆心运动受到静电排斥，题设能够落到圆心要求根号内非负、并检查沿路无不可越过的势垒；$qQ<0$ 时静电吸引有助下落。
+\crosscheck 上式是\emph{假设小球实际能到达圆心}时的速率，单凭根号内非负不够。
+记 $K=qQ/(4\pi\varepsilon_0)$。若 $K>0$，从 $z=R$ 静止释放后能到达中心的必要条件且（无其他阻碍时）充分条件为
+\[
+U(z)=mgz+\frac{K}{\sqrt{R^2+z^2}}\le
+U(R)=mgR+\frac{K}{\sqrt2R},\quad 0\le z<R.
+\]
+例如令无量纲参数 $\eta=K/(mgR^2)=2.8$，
+则末点表达式的 $v^2=2gR[1-\eta(1-1/\sqrt2)]>0$，但在 $z=0.58R$ 处 $U(z)>U(R)$，实际从静止出发无法越过势垒，\textbf{不能将虚构的末点速度当成物理可达结果}。
+若 $K\le0$，静电力在向下路径上不构成排斥势垒，通常可达圆心。
 
 \sourcetest{8.2.3}{173}{181}
 \problemtext 空气平行板电容器原电容 $C_0$、电场能 $W_{e0}$，保持与恒压电源连接后，板间充满相对介电常数 $\varepsilon_r$ 的均匀电介质。求新的电容与电场能。
