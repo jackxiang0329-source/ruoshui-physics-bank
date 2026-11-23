@@ -779,6 +779,17 @@ def eighth_round_regressions():
          I*(1-(rout*rout-b*b)/(c*c-b*b)))
     # 8.3.12 Hall flow speed, 8.3.16 copper Hall emf.
     near(150e-6/(.05*.003),1)
+    # QA 3/8: q cancels from transverse equilibrium in a moving fluid.
+    for charge in (e, -e):
+        assert abs(charge*(.05-1*.05)) == 0
+    # Electron at rightmost orbit point: v=+y, B=+z, a=-x, Omega=+z.
+    Bz=.007
+    omega_z=-(-e)*Bz/me
+    assert omega_z>0
+    near(-omega_z*1.0,(-e)*Bz/me)
+    # 9.2.10: constant area loss stops when initial area is exhausted.
+    near(pi*.2**2/(.2*pi),.2)
+
     near(1.5*200/(8.4e28*e*.001),2.2291103837359867e-5)
     # 8.3.15 and 8.3.17: force cancellation and force/moment integral.
     near(mu0/(2*pi)*20*10*.2/.01,8e-4)
