@@ -1,0 +1,76 @@
+% 第17批：自测题6计算6.3.1—6.3.3与证明6.4.1—6.4.2；印刷166/PDF174。
+\subsection{自测题6：电场积分、动生电动势与安培力证明}
+
+\sourcetest{6.3.1}{166}{174}
+\problemtext 半径为 $R$ 的无限长均匀带电半圆柱面，沿轴线每单位长度上的总电荷为 $\lambda$，求轴线上场强。
+\workings 设带电半圆柱的弧角 $\theta\in[-\pi/2,\pi/2]$，单位轴向长度、弧角宽 $d\theta$ 内线电荷 $d\lambda=(\lambda/\pi)d\theta$。在轴线上视各窄带为无限长线电荷，其场强大小为 $dE=d\lambda/(2\pi\varepsilon_0 R)$，方向背离该带，关于半圆对称轴的横向分量相加、垂直分量抵消。因此
+\[
+E=\frac{\lambda}{2\pi^2\varepsilon_0R}
+\int_{-\pi/2}^{\pi/2}\cos\theta\,d\theta
+=\boxed{\frac{\lambda}{\pi^2\varepsilon_0R}}
+\]
+（取 $\lambda>0$ 时为朝向没有带电柱面的一侧）。
+\crosscheck 不能直接套用完整均匀圆柱面轴线场强为零的结论；半圆对称性只会消掉垂直于对称轴的分量。
+
+\sourcetest{6.3.2}{166}{174}
+\problemtext 半径 $r_1=10$cm、$r_2=20$cm 的两同心球面具有相同面电荷密度 $\sigma$，取无穷远电势零，球心电势为300V。求 $\sigma$；再求使球心电势降为零须从外球面去掉多少净电荷。
+\workings 各均匀带电薄球壳内部电势恒为壳表面值。故
+\[
+U_O=\frac{1}{4\pi\varepsilon_0}
+\left(\frac{4\pi r_1^2\sigma}{r_1}+
+\frac{4\pi r_2^2\sigma}{r_2}\right)
+=\frac{\sigma(r_1+r_2)}{\varepsilon_0}.
+\]
+代入数据
+\[\boxed{\sigma=\frac{\varepsilon_0(300)}{0.30}
+=8.85\times10^{-9}\ {\rm C/m^2}}.\]
+外球面若改变 $\Delta Q_2$，球心电势变 $\Delta U=\Delta Q_2/(4\pi\varepsilon_0r_2)$。要求 $\Delta U=-300$V，所以需去掉\emph{有符号的正电荷量}
+\[
+\boxed{Q_{\rm removed}=4\pi\varepsilon_0r_2(300)
+\simeq6.67\times10^{-9}\ {\rm C}}.
+\]
+\crosscheck 所去正电荷量大于原外球面初始正电量，因此最后外壳需带净负电（相当于继续向外壳补入电子）；“放掉原有正电荷而不允许变负”则不能实现零电势，须交代此物理限制。
+
+\sourcetest{6.3.3}{166}{174}
+\problemtext 竖直无限长直导线载上行电流 $I$；其右侧同平面内半径为 $b$ 的半圆形导电弧 $MN$，圆心距直导线 $a>b$，整段弧以速度 $v$ 向上移动。求电动势及端点电压 $V_M-V_N$。
+\workings 右侧磁场向纸面内且随离导线距离 $x$ 变化：$B(x)=\mu_0I/(2\pi x)$。移动导体的洛伦兹动生电场 $\bm v\times\bm B$ 向左，沿弧从左端 $M$ 到右端 $N$ 的电动势
+\[
+\mathcal E_{M\to N}=\int_M^N(\bm v\times\bm B)\cdot d\bm l
+=-\int_{a-b}^{a+b}\frac{\mu_0Iv}{2\pi x}\,dx
+=\boxed{-\frac{\mu_0Iv}{2\pi}\ln\frac{a+b}{a-b}}.
+\]
+开路时左端积累正电荷，
+\[
+\boxed{V_M-V_N=\frac{\mu_0Iv}{2\pi}\ln\frac{a+b}{a-b}>0}.
+\]
+\crosscheck 电动势对有向路径的符号与开路静电电势差的定义不同。$a>b$ 防止导体弧跨越无限长载流直线的奇点；结果只取决于端点横坐标，不依弧的具体形状。
+
+\sourcetest{6.4.1}{166}{174}
+\problemtext 证明：任意形状的定常载流导线段 $ab$ 置于空间均匀磁场中时，它所受总安培力等于把同电流沿端点间直线 $ab$ 放置所受的安培力。
+\workings 将曲线按有向电流方向由点 $a$ 积到点 $b$，任一微小线元上
+$d\bm F=I\,d\bm l\times\bm B$。因为 $\bm B$ 不随位置改变，可以提出积分号：
+\[
+\bm F=I\int_a^b d\bm l\times\bm B
+=I\left(\int_a^b d\bm l\right)\times\bm B
+=\boxed{I(\bm r_b-\bm r_a)\times\bm B}.
+\]
+而从 $a$ 到 $b$ 的直导线所受安培力恰为此式，证毕。
+\crosscheck 此结论要求磁场\emph{空间均匀}且曲线各处电流相同；磁场不均匀时通常不能提出积分。闭合回路可取 $a=b$，故匀强场中总平动力为零，但力矩仍可能不为零。
+
+\sourcetest{6.4.2}{166}{174}
+\problemtext 半径为 $R$、磁导率近似真空的均匀圆柱长直导线中，总电流 $I$ 在截面上均匀分布。证明导线内部磁场能量每单位轴向长度为 $W_m=\mu_0 I^2/(16\pi)$。
+\workings 半径 $r\le R$ 内包围电流 $I(r)=I r^2/R^2$，安培环路定律给出
+\[
+B(r)=\frac{\mu_0 I(r)}{2\pi r}
+=\frac{\mu_0I r}{2\pi R^2}.
+\]
+真空或 $\mu_r\simeq1$ 时局部磁能密度 $w=B^2/(2\mu_0)$。单位长度圆柱内部的磁能为
+\[
+\begin{aligned}
+W_m&=\int_0^R\frac{B(r)^2}{2\mu_0}(2\pi r)\,dr
+=\frac{\mu_0 I^2}{4\pi R^4}\int_0^R r^3\,dr\\
+&=\boxed{\frac{\mu_0 I^2}{16\pi}}.
+\end{aligned}
+\]
+
+\crosscheck 积分仅包含\emph{导体内部}磁场能量；无限长导体外部磁场的径向能量积分若无外边界会出现对数发散。
