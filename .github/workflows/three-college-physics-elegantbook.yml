@@ -1,0 +1,55 @@
+name: Three College Physics ElegantBook PDF
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'external_sources/three-college-physics-elegant/**'
+      - '.github/workflows/three-college-physics-elegantbook.yml'
+  workflow_dispatch:
+concurrency:
+  group: three-college-physics-main
+  cancel-in-progress: true
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 external_sources/three-college-physics-elegant/check_math.py
+      - run: cp external_sources/irodov-zh-elegant/elegantbook.cls external_sources/three-college-physics-elegant/elegantbook.cls
+      - uses: xu-cheng/latex-action@v4
+        with:
+          working_directory: external_sources/three-college-physics-elegant
+          root_file: main.tex
+          texlive_version: '2026'
+          args: -xelatex -file-line-error -halt-on-error -interaction=nonstopmode
+      - uses: actions/upload-artifact@v4
+        with:
+          name: three-college-physics-elegantbook
+          path: external_sources/three-college-physics-elegant/main.pdf
+          if-no-files-found: error
+      - name: Publish PDF if source unchanged
+        if: github.ref == 'refs/heads/main'
+        run: |
+          set -euo pipefail
+          root=external_sources/three-college-physics-elegant
+          cp "$root/main.pdf" "$RUNNER_TEMP/three-college-physics.pdf"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if ! git diff --quiet "$GITHUB_SHA" FETCH_HEAD -- "$root/main.tex" "$root/chapters"; then
+              echo "Newer source exists; not publishing stale PDF."
+              exit 0
+            fi
+            git reset --hard FETCH_HEAD
+            sudo rm -f "$root/main.pdf"
+            cp "$RUNNER_TEMP/three-college-physics.pdf" "$root/main.pdf"
+            git add -f "$root/main.pdf"
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m "docs: publish three-college physics PDF [skip ci]"
+            if git push origin HEAD:main; then exit 0; fi
+          done
+          exit 1
