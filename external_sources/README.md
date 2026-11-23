@@ -12,6 +12,7 @@
 | UBC OPBP（原题可依赖图片、许可注意 NC/SA） | 265 | [无损归档](./_bundles/ubc_opbp-raw.tar.gz) | [index.json](./ubc_opbp/index.json) |
 | IntroPhysics（提取题干，学术/许可待审） | 53 | [无损归档](./_bundles/intro_physics-raw.tar.gz) | [index.json](./intro_physics/index.json) |
 | WeBWorK OPL / Thermal | 59 + 21 | [OPL 无损 PG](./_bundles/webwork_opl-raw.tar.gz) / [热学无损 PG](./_bundles/webwork_thermal-raw.tar.gz) | [OPL 索引](./webwork_opl/index.json) / [热学索引](./webwork_thermal/index.json) |
+| 赵近芳、王登龙第五版两书题解 | 首批20题 | [独立 ElegantBook 项目](./zhao-wang-physics-5e-elegant/) | [勘误与复核](./zhao-wang-physics-5e-elegant/quality-check.md) |
 | 《普通物理学习题》中文 ElegantBook | 原书 1,878 题 | [独立正式教材整理工程](./irodov-zh-elegant/) | [质检与勘误](./irodov-zh-elegant/errata.md) |
 
 **三轮合计无损归档 20,235 份待审原文（19,837 + 318 + 80）。** 压缩包内保留每个 `ID.md` 或 `ID.pg` 文件的原文字节、来源说明与许可提示；校验清单分为 [第一轮](./_bundles/manifest.json)、[第二轮](./_bundles/small_sources_manifest.json)、[第三轮](./_bundles/webwork_sources_manifest.json)。所有候选仅作为待审资源，不计入主库的正式题数。
