@@ -697,8 +697,7 @@ def ninth_round_regressions():
     ell=.8; B=.6; omega=5
     near(.5*B*omega*((2*ell/3)**2-(ell/3)**2),
          B*omega*ell**2/6)
-    near(4e-5*1*9.8*3*sqrt(3)/2,
-         4e-5*1*9.8*3*math.sin(pi/3))
+    near(4e-5*1*9.8*3*math.cos(pi/3),5.88e-4)
     inner=sqrt(3)/4
     outer=pi/12
     near(inner+outer,(3*sqrt(3)+pi)/12)
