@@ -1,0 +1,113 @@
+% 第19批：学习指导自测题8填空题8.2.1--8.2.10；印刷172--173／PDF180--181。
+\subsection{自测题8：电场能、磁偶极与感应电动势填空}
+
+\sourcetest{8.2.1}{172}{180}
+\problemtext 点电荷 $+q$ 放在 $A$，点电荷 $-q$ 放在 $O$；$B,C,D$ 位于以 $O$ 为圆心半径 $R$ 的上半圆弧，$A$ 位于 $B$ 左侧且 $AB=R$。一单位正试探电荷从 $B$ 沿弧到 $D$，求电场力做功。
+\workings 取 $O$ 为原点，$B=-R$、$D=+R$、$A=-2R$。两定点电荷对试探电荷的电势分别为
+\[V_B=\frac q{4\pi\varepsilon_0}\left(\frac1R-\frac1R\right)=0,\]
+\[V_D=\frac q{4\pi\varepsilon_0}\left(\frac1{3R}-\frac1R\right)
+=-\frac{2q}{3(4\pi\varepsilon_0)R}.\]
+单位正电荷所受电场力做功为
+\[\boxed{W=V_B-V_D=\frac{2q}{3(4\pi\varepsilon_0)R}}.\]
+\crosscheck 静电力保守，做功只由始末电势决定，沿上半圆还是其他路径均相同；这里“单位正电荷”指 $q_0=1$C。
+
+\sourcetest{8.2.2}{172}{180}
+\problemtext 半径 $R$ 的均匀带电细圆环总电荷 $Q$，水平放置；质量 $m$、电荷 $q$ 的小球从环中心正上方距离 $R$ 处由静止落至圆心。求其通过圆心时速率。
+\workings 均匀带电圆环轴线上距圆心 $z$ 的电势 $V(z)=Q/[4\pi\varepsilon_0\sqrt{R^2+z^2}]$。忽略空气阻力，机械能与电势能守恒：
+\[
+\frac12 mv^2=mgR+q[V(R)-V(0)]
+=mgR+\frac{qQ}{4\pi\varepsilon_0R}
+\left(\frac1{\sqrt2}-1\right).
+\]
+所以
+\[
+\boxed{v=\sqrt{2gR+\frac{2qQ}{4\pi\varepsilon_0mR}
+\left(\frac1{\sqrt2}-1\right)}}.
+\]
+\crosscheck 若 $qQ>0$，向圆心运动受到静电排斥，题设能够落到圆心要求根号内非负、并检查沿路无不可越过的势垒；$qQ<0$ 时静电吸引有助下落。
+
+\sourcetest{8.2.3}{173}{181}
+\problemtext 空气平行板电容器原电容 $C_0$、电场能 $W_{e0}$，保持与恒压电源连接后，板间充满相对介电常数 $\varepsilon_r$ 的均匀电介质。求新的电容与电场能。
+\workings 电容变化 $C=\varepsilon_r C_0$。电源使电压不变，电场能 $W_e=\tfrac12 C U^2$，所以
+\[\boxed{C=\varepsilon_r C_0},\qquad
+\boxed{W_e=\varepsilon_r W_{e0}}.
+\]
+\crosscheck 若断开电源保持自由电荷不变，则结果为 $W_e=W_{e0}/\varepsilon_r$；两类边界条件不可混淆。
+
+\sourcetest{8.2.4}{173}{181}
+\problemtext 一半径为 $r$ 的圆位于与匀强磁场 $\bm B$ 垂直的平面内；以该圆为边界作一个半球面 $S$，求穿过半球面的磁通量的大小。
+\workings 将半球面与底圆盘围成闭合曲面，磁场高斯定律
+\[\oint\bm B\cdot d\bm S=0.\]
+底盘通量大小为 $B\pi r^2$，因此半球曲面通量大小相同：
+\[\boxed{|\Phi_S|=B\pi r^2}.\]
+\crosscheck 半球表面积是 $2\pi r^2$，但磁通量计算需取投影面积，不能直接写 $2\pi r^2B$。
+
+\sourcetest{8.2.5}{173}{181}
+\problemtext 直载流导线沿空间直角坐标系的 $+y$ 轴，取原点上的电流元 $I\,d\ell$，求它在 $(a,0,0)$ 点产生的微元磁场大小与方向。
+\workings 毕奥--萨伐尔定律
+\[d\bm B=\frac{\mu_0I}{4\pi}
+\frac{d\bm\ell\times\hat{\bm r}}{r^2}.\]
+这里 $d\bm\ell=d\ell\,\hat{\bm y}$、$\hat{\bm r}=\hat{\bm x}$，所以 $d\bm\ell\times\hat{\bm r}=-d\ell\,\hat{\bm z}$。故
+\[
+\boxed{|d\bm B|=\frac{\mu_0 I\,d\ell}{4\pi a^2}},\qquad
+\boxed{\text{方向沿 }-\hat{\bm z}}.
+\]
+\crosscheck 要求的是一个\emph{电流元}的磁场，而非把整条无限导线积分后的 $B=\mu_0I/(2\pi a)$。
+
+\sourcetest{8.2.6}{173}{181}
+\problemtext 带电质点电荷量 $q=8.0\times10^{-19}$C，以速率 $v=3.0\times10^5$m/s 在半径 $R=6.00\times10^{-8}$m 的圆周上匀速运动。求轨道中心的磁感应强度和轨道磁矩大小。
+\workings 等效环电流 $I=q/T=qv/(2\pi R)$，轨道中心
+\[
+B=\frac{\mu_0I}{2R}=\frac{\mu_0qv}{4\pi R^2}
+=\boxed{6.67\times10^{-6}\ {\rm T}}.
+\]
+电流环磁矩大小
+\[
+\boxed{P_m=I\pi R^2=\frac{|q|vR}{2}
+=7.20\times10^{-21}\ {\rm A\,m^2}}.
+\]
+\crosscheck 磁矩向量由带电质点运动方向与电荷符号共同决定，题目只要求大小；式中的 $q$ 数值按正的电荷量绝对值使用。
+
+\sourcetest{8.2.7}{173}{181}
+\problemtext 电子以 $v=2.20\times10^6$m/s 垂直于 $B=2.36$T 的均匀磁场射入，作匀速圆周运动。求轨道磁矩的大小和方向（$m_e=9.11\times10^{-31}$kg）。
+\workings 回旋半径 $r=m_ev/(eB)$。轨道电流的磁矩大小
+\[
+P_m=\frac{evr}{2}=\frac{m_ev^2}{2B}
+=\frac{(9.11\times10^{-31})(2.20\times10^6)^2}{2(2.36)}
+=\boxed{9.34\times10^{-19}\ {\rm A\,m^2}}.
+\]
+由电子实际回旋方向与负电荷电流的相反方向，磁矩方向\textbf{与外磁场 $\bm B$ 相反}。
+\crosscheck 电子的角动量与其磁矩因负电荷而反向；不能用电子运动切向直接作为约定电流方向。
+
+\sourcetest{8.2.8}{173}{181}
+\problemtext 等边三角形导体线框边长 $\ell$，在平行边 $ab$ 的匀强磁场 $B$ 中绕 $ab$ 轴以 $\omega$ 转动；规定 $a\to b\to c\to a$ 为电动势正向。求 $bc$、$ca$ 及整环电动势。
+\workings 令 $\bm\omega\parallel\bm B$，轴上 $a,b$ 到轴距离零，顶点 $c$ 到轴距离 $h=\sqrt3\ell/2$。运动电动势的切向积分满足
+\[\int_{r_1}^{r_2}(\bm v\times\bm B)\cdot d\bm l
+=\frac12B\omega(r_2^2-r_1^2).\]
+因此
+\[
+\boxed{\mathcal E_{bc}=+\frac12B\omega h^2
+=+\frac38B\omega\ell^2},
+\]
+\[
+\boxed{\mathcal E_{ca}=-\frac12B\omega h^2
+=-\frac38B\omega\ell^2},
+\qquad\boxed{\mathcal E_{abca}=0}.
+\]
+\crosscheck 若 $\bm\omega$ 与 $\bm B$ 反向，两段电动势同时变号，但整环仍为零；不能因边长相等推断各边动生电动势相等。
+
+\sourcetest{8.2.9}{173}{181}
+\problemtext 一根绝缘无限长直导线沿矩形线圈平面内的中心轴 $OO'$ 紧贴放置，求两者之间的互感系数。
+\workings 直导线磁场在其两侧大小相同、穿过矩形线圈平面的方向相反。由于线圈左右两半关于直导线对称，磁通量逐条镜像抵消：
+\[\Phi_{\rm left}+\Phi_{\rm right}=0.\]
+所以
+\[\boxed{M=\Phi/I=0}.\]
+\crosscheck 理想零半径直线场在中心轴有奇异性，需采用对称小半径正则化后计算；若导线偏离中心轴，通常会有非零互感。
+
+\sourcetest{8.2.10}{173}{181}
+\problemtext 理想细长无铁芯螺线管保持总匝数 $N$、截面半径与面积 $S$ 不变，但沿轴向被拉长；问自感系数如何改变。
+\workings 忽略端部漏磁，长螺线管的自感
+\[L=\frac{\mu_0N^2S}{\ell}.\]
+拉长使总长度 $\ell$ 增大，其余量不变，故
+\[\boxed{L\ \text{减小，且}\ L\propto\ell^{-1}}.\]
+\crosscheck 若保持的是单位长度匝数 $n$ 而非总匝数 $N$，比较方式不同；本题明确总匝数不变。
