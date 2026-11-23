@@ -1,0 +1,165 @@
+% 《大学物理简明教程（第5版）》第10章计算题10.3.1—10.3.8；
+% 原书/PDF第273页。原题条件及单位来自上传扫描件，解析独立撰写。
+\subsection{解答题：双缝、薄膜、牛顿环和劈尖}
+
+\sourceproblem{10.3.1}{273}{273}
+\problemtext 杨氏双缝间距$d=0.20$ mm、缝屏距$D=1.0$ m，
+第2级明纹离中心$6.0$ mm。(1)求单色光波长；(2)求相邻两明纹间距。
+\workings
+明纹坐标$x_m=m\lambda D/d$，故
+\[
+\boxed{\lambda=\frac{x_2d}{2D}
+=\frac{0.006(0.20\times10^{-3})}{2(1.0)}
+=6.0\times10^{-7}\,\mathrm m=600\,\mathrm{nm}}.
+\]
+相邻明纹间距
+\[
+\boxed{\Delta x=\frac{\lambda D}{d}
+=\frac{600\times10^{-9}(1.0)}{0.20\times10^{-3}}
+=3.0\,\mathrm{mm}}.
+\]
+\crosscheck 第2级明纹的坐标是两个条纹间距，$2(3.0)=6.0$ mm，与已知条件回代一致。
+
+\sourceproblem{10.3.2}{273}{273}
+\problemtext 波长$550$ nm的双缝干涉实验中，在一条狭缝上覆盖薄云母片，
+折射率$n=1.58$，原第7级明纹恰移到屏中央原零级明纹位置。求云母片厚度。
+\workings
+插片相对空气增加光程$\delta=(n-1)t$。
+使第7级条纹移到零级位置，需光程变化绝对值等于$7\lambda$，
+\[
+\boxed{t=\frac{7\lambda}{n-1}
+=\frac{7(550\times10^{-9})}{1.58-1}
+\approx6.64\times10^{-6}\,\mathrm m=6.64\,\mu\mathrm m}.
+\]
+\crosscheck 单程穿过云母片，不能误乘迈克耳孙仪的往返因子2；
+云母片在两路中只加入一路。
+
+\sourceproblem{10.3.3}{273}{273}
+\problemtext 折射率$n_s=1.52$的透镜表面镀折射率$n_f=1.38$的MgF$_2$薄膜，
+使真空波长$550$ nm的垂直入射光反射尽可能弱。求可行最小正膜厚。
+\workings
+空气$\to$薄膜、薄膜$\to$透镜都由低折射率向高折射率反射，
+两束主要反射光都产生$\pi$相变，故无\emph{相对}半波损失。
+要相消，膜内双程光程差满足
+$2n_ft=\lambda/2$（取最小正值），所以
+\[
+\boxed{t_{\min}=\frac{\lambda}{4n_f}
+=\frac{550}{4(1.38)}\,\mathrm{nm}
+\approx99.6\,\mathrm{nm}}.
+\]
+\crosscheck 减反膜的\emph{相位条件}在这里给四分之一波厚；
+若要求两反射振幅严格相等还需$n_f\simeq\sqrt{n_{\rm air}n_s}$，
+而$1.38$不等于$\sqrt{1.52}$，所以实际仅能\emph{尽可能弱}而未必完全为零。
+
+\sourceproblem{10.3.4}{273}{273}
+\problemtext 两玻璃板构成空气劈尖，一端接触，
+另一端由直径$d=0.048$ mm的钢丝撑开，劈尖长$L=0.12$ m。
+以波长$680$ nm的平行光正入射观察反射干涉。
+求夹角、相邻暗纹厚度差、条纹间距以及全长大致可见的暗纹数。
+\workings
+小角度时
+\[
+\boxed{\theta\simeq\frac{d}{L}
+=\frac{0.048\times10^{-3}}{0.12}
+=4.00\times10^{-4}\,\mathrm{rad}}.
+\]
+空气劈尖反射两路有一次相对半波损失，
+暗纹条件$2t=m\lambda$，故相邻暗纹厚度差
+\[
+\boxed{\Delta t=\lambda/2=340\,\mathrm{nm}}.
+\]
+$t(x)\simeq x\theta$，所以
+\[
+\boxed{\Delta x=\frac{\lambda}{2\theta}
+=\frac{680\times10^{-9}}{8.0\times10^{-4}}
+=0.850\,\mathrm{mm}}.
+\]
+全长跨越约$L/\Delta x=141.2$个明暗周期，
+即大致可见$141$个完整间隔（暗纹条数按是否计两端为141或142）。
+\crosscheck 必须说明条数的端点计数约定；
+一端接触处本身是零级暗纹，非高亮纹。
+
+\sourceproblem{10.3.5}{273}{273}
+\problemtext 波长$500$ nm的光垂直照射折射率$n=1.5$的劈形薄膜，
+反射中劈尖棱边为暗纹，且劈尖上方材料折射率$n_1>n$。
+(1) 求膜下材料$n_2$与$n$关系；
+(2) 求从棱边起第10条暗纹处膜厚；
+(3) 下表面整体向下移$\Delta e=2.0\,\mu$m，对暗纹位置和同一点的级次有何影响？
+\workings
+要使$t=0$处反射相消，上下反射须相对有一次$\pi$反射相变。
+已知上界面从$n_1$进入较低$n$，反射无半波相变，
+故下界面须从膜$n$反射到更高$n_2$，
+\[
+\boxed{n_2>n=1.5}.
+\]
+此时暗纹满足$2nt=m\lambda$，且棱边本身对应$m=0$，
+从棱边起\emph{第1条}暗纹取$m=0$，
+第10条取$m=9$，于是
+\[
+\boxed{t_{10}=\frac{9\lambda}{2n}
+=\frac{9(500)}{3}\,\mathrm{nm}=1.50\,\mu\mathrm m}.
+\]
+下板向下移使膜在各位置增厚$\Delta e$，
+相同$m$的暗纹应向\emph{原薄端}移动。
+固定观察点相位级次增加
+\[
+\boxed{\Delta m=\frac{2n\Delta e}{\lambda}
+=\frac{2(1.5)(2000)}{500}=12}.
+\]
+故原第10条暗纹的\emph{原位置}对应第22条暗纹。
+\crosscheck 对“第10条”是否把接触暗纹算为第一条，
+有$m=9$与$m=10$两种教材级次约定，须将计数起点显式记录。
+
+\sourceproblem{10.3.6}{273}{273}
+\problemtext 空气中透明劈形膜楔角$\theta=1.0\times10^{-4}$ rad，
+用波长$700$ nm单色光正入射，邻暗纹间距$0.25$ cm，
+求膜折射率。
+\workings
+等厚干涉邻级膜厚差$\lambda/(2n)$，
+而$\Delta t=\theta\Delta x$，故
+\[
+\boxed{n=\frac{\lambda}{2\theta\Delta x}
+=\frac{700\times10^{-9}}{2(1.0\times10^{-4})(0.25\times10^{-2})}
+=1.40}.
+\]
+\crosscheck 条纹间距给的是$0.25$ cm不是mm；
+代回有$\lambda/(2n\theta)=2.5$ mm。
+
+\sourceproblem{10.3.7}{273}{273}
+\problemtext 牛顿环两道暗环重合：(1)用波长$\lambda_1=600$ nm的第$k$条暗环与波长$\lambda_2=450$ nm的第$k+1$条暗环重合，透镜曲率半径$R=190$ cm，求$k$及对应半径；
+(2)用500 nm光的第5条明环与另一波长光的第6条明环重合，求另一波长。
+\workings
+反射暗环半径平方满足$r_m^2=m\lambda R$，
+\[
+k\lambda_1=(k+1)\lambda_2
+\quad\Longrightarrow\quad
+\boxed{k=\frac{450}{600-450}=3}.
+\]
+半径
+\[
+\boxed{r=\sqrt{k\lambda_1R}
+=\sqrt{3(600\times10^{-9})(1.90)}
+\approx1.85\,\mathrm{mm}}.
+\]
+反射\emph{明}环按首条明环$m=1$，半径
+$r_m^2=(m-\tfrac12)\lambda R$。故
+\[
+\boxed{\lambda_3=\frac{5-\tfrac12}{6-\tfrac12}\,500\,\mathrm{nm}
+\approx409\,\mathrm{nm}}.
+\]
+\crosscheck 两问暗环和明环级次的半整数偏移不同；
+第2问不可直接套暗环的$m\lambda R$公式。
+
+\sourceproblem{10.3.8}{273}{273}
+\problemtext 牛顿环透镜与玻璃之间先为空气，第10条亮环直径
+$d_1=1.40\times10^{-2}$ m；充入液体后同一亮环直径
+$d_2=1.27\times10^{-2}$ m。求液体折射率。
+\workings
+同一环级数、同一真空波长与曲率半径下，
+$D_m^2\propto1/n$，因此
+\[
+\boxed{n=\left(\frac{d_1}{d_2}\right)^2
+=\left(\frac{1.40}{1.27}\right)^2\approx1.215}.
+\]
+\crosscheck 直径减小意味着液体$n>1$，
+符合增大介质光程的物理预期。
