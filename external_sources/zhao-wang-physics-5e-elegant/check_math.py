@@ -58,6 +58,16 @@ CHAPTERS = (
      [f"6.3.{n}" for n in range(1, 10)]),
     ("chapters/textbook-ch06-solutions-010-018.tex", "sourceproblem",
      [f"6.3.{n}" for n in range(10, 19)]),
+    ("chapters/textbook-ch07-choices.tex", "sourceproblem",
+     [f"7.1.{n}" for n in range(1, 12)]),
+    ("chapters/textbook-ch07-blanks.tex", "sourceproblem",
+     [f"7.2.{n}" for n in range(1, 13)]),
+    ("chapters/textbook-ch07-solutions-001-008.tex", "sourceproblem",
+     [f"7.3.{n}" for n in range(1, 9)]),
+    ("chapters/textbook-ch07-solutions-009-014.tex", "sourceproblem",
+     [f"7.3.{n}" for n in range(9, 15)]),
+    ("chapters/textbook-ch07-solutions-015-020.tex", "sourceproblem",
+     [f"7.3.{n}" for n in range(15, 21)]),
     ("chapters/guide-ch01-examples.tex", "sourceexample",
      [f"1.{n}" for n in range(1, 6)]),
     ("chapters/guide-ch02-examples.tex", "sourceexample",
@@ -70,6 +80,8 @@ CHAPTERS = (
      [f"5.{n}" for n in range(1, 7)]),
     ("chapters/guide-ch06-examples.tex", "sourceexample",
      [f"6.{n}" for n in range(1, 8)]),
+    ("chapters/guide-ch07-examples.tex", "sourceexample",
+     [f"7.{n}" for n in range(1, 7)]),
 )
 
 
@@ -91,7 +103,13 @@ def structural_check():
             for label in (r"\problemtext", r"\workings", r"\crosscheck"):
                 assert label in block, (number, label)
         total += len(ids)
-    assert total == 275, total
+    assert total == 324, total
+    main_source = (ROOT / "main.tex").read_text(encoding="utf-8")
+    for relative, _macro, _expected in CHAPTERS:
+        stub = relative.removesuffix(".tex")
+        assert r"\input{" + stub + "}" in main_source, (
+            "unlinked from main.tex", relative
+        )
     return total
 
 
@@ -468,6 +486,88 @@ def sixth_round_regressions():
     near((.060/3)*(60*(2*3/4))**2,162)
 
 
+
+def seventh_round_regressions():
+    """Independent physical spot checks for 49 chapter-seven source items."""
+    eps0=8.8541878128e-12
+    k=1/(4*math.pi*eps0)
+    e=1.602176634e-19
+    sqrt=math.sqrt
+    pi=math.pi
+    log=math.log
+    # Source 7.1: Gauss law, charge density, electrostatic energy and work.
+    q=2e-8; R=.25; r=.10
+    near(k*q*(1/r-1/R),k*q/r-k*q/R)
+    near(4*(.5*eps0*3**2),.5*eps0*6**2)
+    near((-2*sqrt(2)), -2**(3/2))
+    near(.5*eps0*20**2,4*(.5*eps0*10**2))
+    near((e*200),(-e)*(0-200))
+    # Source 7.2: cube flux, proton potential work, spherical conductor induction.
+    near((1/6)*6,1)
+    near(3*(1/24),1/8)
+    near(-8e-15/e,-49932.075542967,1e-5)
+    q_inner=3e-8; q_outer=-6e-8; r2=.2
+    zero_r=-(q_inner/q_outer)*r2
+    near(zero_r,.1)
+    near(q_inner/zero_r + q_outer/r2,0)
+    near(-q_inner+(-q_inner),-2*q_inner)
+    # Source 7.3.1--7.3.8: Coulomb, capacitor force, wire and spherical flux.
+    side=.5; qv=1e-8; Qcenter=-qv/sqrt(3)
+    near(3*k*abs(qv*Qcenter)/side**2,sqrt(3)*k*qv*qv/side**2)
+    S=.04; Qplate=1e-8
+    near((Qplate/S)**2 * S /(2*eps0),Qplate**2/(2*eps0*S))
+    lam=5e-9; L=.15; d=.05
+    Ep=k*lam*(1/d-1/(d+L))
+    Eq=k*lam*L/(d*sqrt(d*d+(L/2)**2))
+    near(Ep,674.0663844224999,1e-7)
+    near(Eq,1495.6190228319656,1e-7)
+    rho=2e-5; a=.06; b=.10
+    E8=rho*(.08**3-a**3)/(3*eps0*.08**2)
+    E12=rho*(b**3-a**3)/(3*eps0*.12**2)
+    near(E8,34823.44624400144,1e-7)
+    near(E12,40993.36614909479,1e-7)
+    # Source 7.3.9--14: potentials, work, arc plus straight sections.
+    near(log((.2+.05)/.05),log(5))
+    potential_square=4*k*1.25e-8/.05
+    near(potential_square,8987.551792299997,1e-7)
+    near(-1e-9*potential_square,-8.9875517923e-6,1e-7)
+    R=.25
+    near(k*(1/(3*R)-1/R),-2*k/(3*R))
+    near((pi+2*log(2))-(pi),2*log(2))
+    near(7.08e-7/(eps0*.02/.02),79962.16197000975,1e-7)
+    # Source 7.3.15--20: charges, potential continuity, electrostatic self-energy.
+    R1=.04; R2=.11; e_rel=4
+    phi_dielectric=k*q*(1/R2+(1/e_rel)*(1/R1-1/R2))
+    phi_metal=k*q*(1/(e_rel*R1)+(1-1/e_rel)/R2)
+    near(phi_dielectric,phi_metal)
+    near(k*q*(1/R2),k*q/R2)
+    U_uniform=3*k*q*q/(5*R)
+    U_inside=k*q*q/(10*R)
+    U_outside=k*q*q/(2*R)
+    near(U_uniform,U_inside+U_outside)
+    near(.5*(eps0*.002/.002)*400**2,7.08335025024e-7,1e-8)
+    c_spherical=4*pi*eps0*R1*R2/(R2-R1)
+    near(q*q/(2*c_spherical),k*q*q/2*(1/R1-1/R2))
+    # Guide 7.1--7.6: thermal and Maxwell source data.
+    kB=1.380649e-23; Rgas=8.314462618
+    T=2*6.21e-21/(3*kB)
+    near(T,299.8589793640527,1e-7)
+    near(sqrt(3*Rgas*T/.032),483.4607928707272,1e-7)
+    near(1.5*1.5e5*.002,450)
+    near(2.5*1.5e5*.002,750)
+    near(sqrt(2)*1000,1414.213562373095)
+    near(sqrt(3)*1000,1732.0508075688772)
+    air_n=(1e-5/760*1.013e5)/(kB*300)
+    air_lam=1/(sqrt(2)*pi*(3e-10)**2*air_n)
+    air_vbar=sqrt(8*Rgas*300/(pi*.0289))
+    near(air_n,3.2180390933107194e17,1e-7)
+    near(air_lam,7.771436528507355,1e-7)
+    near(air_vbar/air_lam,60.32503065938106,1e-7)
+    y=1000; mass=.0289/6.02214076e23; grav=9.8
+    scale=math.exp(-mass*grav*y/(kB*300))
+    near(scale,math.exp(-.0289*grav*y/(Rgas*300)))
+
+
 if __name__ == "__main__":
     n = structural_check()
     numerical_check()
@@ -476,6 +576,7 @@ if __name__ == "__main__":
     fourth_round_regressions()
     fifth_round_regressions()
     sixth_round_regressions()
+    seventh_round_regressions()
     print(f"Structure: {n} referenced worked items; all checked blocks present.")
     print("Selected numeric invariants: passed.")
     print("Not a replacement for full independent physics or copyright review.")
