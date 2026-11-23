@@ -1,0 +1,877 @@
+% Consolidated 04-gravitation from b597304e78a782cd65c7976ce94a1a744dfe8067; original TeX fragments preserved.
+
+% === BEGIN 04-gravitation-200-210.tex blob 2da899b248aae0ce591c8623c2a38917bcb329b7 ===
+% Irodov, user-supplied Problems in General Physics, printed pp.33--34
+% and continuations on printed pp.34--35, source PDF pp.42--44.
+% In this chapter G is the gravitational constant and M_s is the solar mass.
+\exproblem{200}{33}
+一颗行星在太阳引力作用下作圆周运动，日心系速率为
+$v=34.9\,\mathrm{km/s}$。求该行星的公转周期。
+\exsolution
+记太阳质量 $M_\odot$，引力参数
+$\mu=GM_\odot$。圆轨道上的引力提供向心加速度：
+\[
+\frac{v^2}{r}=\frac{\mu}{r^2}
+\Longrightarrow r=\frac{\mu}{v^2}.
+\]
+公转周期 $T=2\pi r/v$，故
+\[
+\boxed{T=\frac{2\pi GM_\odot}{v^3}}.
+\]
+取 $\mu\simeq1.3271\times10^{20}\,\mathrm{m^3/s^2}$、
+$v=3.49\times10^4\,\mathrm{m/s}$，
+算得 $T\simeq2.27\times10^2\,\mathrm d$（约 $227$ 天）。
+\excheck 原书简答给出约 $225$ 天，属于所取太阳常数与
+有效数字的近似差别；周期计算必须有 $v^3$ 在分母，
+否则量纲不为时间。
+
+\exproblem{201}{33}
+木星绕太阳的周期是地球的 $12$ 倍，视二者轨道为圆。
+求：（a）木星日心距离是地球的几倍；
+（b）木星在日心系中的速率、向心加速度。
+\exsolution
+开普勒第三定律 $T^2\propto r^3$，
+故
+\[
+\boxed{\frac{r_J}{r_E}=12^{2/3}\simeq5.24}.
+\]
+由圆轨道速率 $v=2\pi r/T$ 与
+$a=v^2/r$，
+\[
+\frac{v_J}{v_E}=12^{-1/3},\qquad
+\frac{a_J}{a_E}=12^{-4/3}.
+\]
+取地球公转速率 $v_E\simeq29.8\,\mathrm{km/s}$、
+向心加速度 $a_E\simeq5.93\times10^{-3}\,\mathrm{m/s^2}$：
+\[
+\boxed{v_J\simeq13.0\,\mathrm{km/s},\qquad
+a_J\simeq2.16\times10^{-4}\,\mathrm{m/s^2}}.
+\]
+\excheck 木星轨道半径较大、速率和向心加速度均较小；
+这里用的是日心近圆轨道近似，不是木星相对地球的速度。
+
+\exproblem{202}{33}
+行星绕太阳沿椭圆轨道运动，
+其最近、最远日心距离分别为 $r$ 和 $R$。
+利用开普勒定律求公转周期。
+\exsolution
+椭圆的半长轴
+$a=(r+R)/2$。
+按开普勒第三定律，与同一太阳引力参数下
+半径为 $a$ 的圆轨道具有同样的周期：
+\[
+T^2=\frac{4\pi^2a^3}{GM_\odot}.
+\]
+因此
+\[
+\boxed{T=2\pi\sqrt{\frac{[(r+R)/2]^3}{GM_\odot}}
+=\pi\sqrt{\frac{(r+R)^3}{2GM_\odot}}}.
+\]
+\excheck 当 $R=r$，表达式退化为
+$T=2\pi\sqrt{r^3/(GM_\odot)}$，
+恰为圆轨道公式。
+
+\exproblem{203}{33--34}
+一小天体在日心参考系内，从与地球公转轨道半径相等
+的距离 $R_E$ 处由静止开始落向太阳。
+利用开普勒定律估算下落时间，忽略太阳表面半径。
+\exsolution
+径直下落可看作离心率趋近 $1$ 的退化椭圆轨道的半程：
+远日点为 $R_E$，近日点趋于 $0$，半长轴为 $R_E/2$。
+其完整退化椭圆的形式周期与同半长轴的圆轨道相同：
+\[
+T_*=\frac{T_E}{2^{3/2}},
+\]
+其中 $T_E$ 是地球一年公转周期。
+从远日点落到近日点只经过半个周期，故
+\[
+\boxed{t_{\rm fall}=\frac{T_E}{4\sqrt2}
+\simeq64.6\,\mathrm d\approx65\,\mathrm d}.
+\]
+\excheck 忽略了太阳有限半径；若以太阳表面为终点，
+实际下落时间会略短于该中心点极限。
+
+\exproblem{204}{34}
+把太阳系所有线性尺寸按同一比例 $\eta$ 缩小，
+所用材料的平均密度仍与原恒星、行星各自的平均密度相同。
+问行星模型公转周期相对原系统如何变化？
+\exsolution
+设所有长度缩小为原来的 $1/\eta$
+（若 $\eta>1$）。平均密度不变意味着各质量按
+体积缩放，故中心天体质量
+$M'_\odot=M_\odot/\eta^3$。
+行星轨道半长轴 $a'=a/\eta$，
+开普勒第三定律给出
+\[
+\frac{{T'}^2}{T^2}
+=\frac{(a')^3/M'_\odot}{a^3/M_\odot}
+=\frac{(a^3/\eta^3)/(M_\odot/\eta^3)}
+{a^3/M_\odot}=1.
+\]
+因此
+\[
+\boxed{T'=T}.
+\]
+\excheck 系统公转速率按线性尺寸同比缩小，
+但周期在相同平均密度的相似模型中保持不变。
+
+\exproblem{205}{34}
+一对双星在万有引力下彼此绕共同质心作圆周运动。
+已知两星总质量为 $M$、公转周期为 $T$，
+求两星之间的距离 $\ell$。
+\exsolution
+设两星质量为 $m_1,m_2$，间距为 $\ell$，
+共同角速度 $\omega=2\pi/T$。
+关于质心的轨道半径分别为
+$r_1=m_2\ell/M$、$r_2=m_1\ell/M$。
+对第一星列向心力方程：
+\[
+\frac{Gm_1m_2}{\ell^2}
+=m_1\omega^2\frac{m_2}{M}\ell.
+\]
+约去质量因子得
+$\omega^2=GM/\ell^3$，所以
+\[
+\boxed{\ell=\left(\frac{GMT^2}{4\pi^2}\right)^{1/3}}.
+\]
+\excheck $M=m_1+m_2$ 是两星\emph{总质量}，
+并非任意一颗星的质量；结论与质量比无关。
+
+\exproblem{206}{34}
+求引力相互作用势能：（a）两个质量分别为 $m_1,m_2$、
+间距 $r$ 的质点；（b）质量为 $m$ 的质点位于
+一均匀细杆轴线的延长线上，距杆近端为 $a$，
+细杆质量 $M$、长度 $\ell$。
+再求（b）的引力大小。
+\exsolution
+取无穷远相互作用势能为零。
+（a）按牛顿万有引力积分：
+\[
+\boxed{U_a(r)=-\frac{Gm_1m_2}{r}}.
+\]
+（b）均匀细杆线密度 $\lambda=M/\ell$，
+从杆近端起坐标 $x\in[0,\ell]$，
+微元质量为 $\mathrm dm=\lambda\,\mathrm dx$。
+质点与微元距离为 $a+x$，故
+\[
+U_b=-Gm\int_0^\ell\frac{\lambda\,\mathrm dx}{a+x}
+=\boxed{-\frac{GmM}{\ell}
+\ln\left(1+\frac{\ell}{a}\right)}.
+\]
+朝向细杆的引力大小由势能对间隔的导数得到：
+\[
+\boxed{F=Gm\int_0^\ell
+\frac{\lambda\,\mathrm dx}{(a+x)^2}
+=\frac{GmM}{a(a+\ell)}}.
+\]
+\excheck $\ell\to0$ 而总质量 $M$ 不变时，
+$U_b\to-GmM/a$，$F\to GmM/a^2$，
+退化为两个质点。
+
+\exproblem{207}{34}
+一质量为 $m$ 的行星绕太阳作椭圆轨道，
+最远、最近日心距离分别为 $r_1,r_2$。
+求相对太阳中心的轨道角动量大小。
+\exsolution
+记太阳引力参数 $\mu=GM_\odot$，
+近、远日点切向速率分别为 $v_2,v_1$。
+角动量守恒：
+$L=mr_1v_1=mr_2v_2$。
+机械能守恒：
+\[
+\frac{L^2}{2mr_1^2}-\frac{GmM_\odot}{r_1}
+=\frac{L^2}{2mr_2^2}-\frac{GmM_\odot}{r_2}.
+\]
+移项并约分可得
+$L^2/(2m)=GmM_\odot r_1r_2/(r_1+r_2)$，
+因此
+\[
+\boxed{L=m\sqrt{\frac{2GM_\odot r_1r_2}{r_1+r_2}}}.
+\]
+\excheck 若 $r_1=r_2=r$，公式化为
+$L=m\sqrt{GM_\odot r}$，正是圆轨道角动量。
+
+\exproblem{208}{34}
+利用守恒定律证明：质量为 $m$ 的行星绕太阳作椭圆轨道时，
+其总机械能仅由椭圆半长轴 $a$ 决定；求 $E(a)$。
+\exsolution
+仍记 $\mu=GM_\odot$，最近、最远距离
+分别为 $r_p,r_a$，所以 $a=(r_p+r_a)/2$。
+在两个拱点径向速度均为零，角动量 $L$
+及总机械能相同：
+\[
+E=\frac{L^2}{2mr_p^2}-\frac{\mu m}{r_p}
+=\frac{L^2}{2mr_a^2}-\frac{\mu m}{r_a}.
+\]
+先消去 $E$ 可得
+$L^2/(2m)=\mu m r_pr_a/(r_p+r_a)$；
+代入任一拱点：
+\[
+E=\frac{\mu m r_a}{r_p(r_p+r_a)}
+-\frac{\mu m}{r_p}
+=-\frac{\mu m}{r_p+r_a}.
+\]
+故
+\[
+\boxed{E=-\frac{GM_\odot m}{2a}}.
+\]
+\excheck $E$ 为负表示引力束缚轨道，
+且只依赖半长轴、不单独依赖偏心率。
+
+\exproblem{209}{34}
+行星在椭圆轨道上的某一时刻距离太阳为 $r_0$、
+速率为 $v_0$，速度与日心径矢夹角为 $\alpha$。
+求这一轨道的最近和最远日心距离。
+\exsolution
+记 $\mu=GM_\odot$，单位质量的守恒能量
+$\varepsilon=v_0^2/2-\mu/r_0<0$，
+比角动量 $h=r_0v_0\sin\alpha$。
+定义无量纲参数
+$q=r_0v_0^2/\mu$，椭圆条件 $0<q<2$。
+半长轴由 $\varepsilon=-\mu/(2a)$ 得
+$a=r_0/(2-q)$。
+偏心率由能量—角动量关系
+\[
+e^2=1+\frac{2\varepsilon h^2}{\mu^2}
+=1-q(2-q)\sin^2\alpha.
+\]
+所以两个拱点距离为
+\[
+\boxed{r_{\min,\max}=
+\frac{r_0}{2-q}
+\left[1\mp\sqrt{1-q(2-q)\sin^2\alpha}\right]}.
+\]
+\excheck 负号对应近日点，正号对应远日点；
+若输入参数不满足束缚轨道条件，不可称远日点有限。
+
+\exproblem{210}{34}
+一宇宙天体在距太阳很远处以速率 $v_0$
+向太阳接近，其入射渐近直线距太阳中心的冲量参数
+（瞄准距离）为 $\ell$（图1.51）。求最近日心距离。
+\exsolution
+记 $\mu=GM_\odot$，质点质量在比能量与比角动量中相消。
+在无穷远处有
+$\varepsilon=v_0^2/2$、$h=\ell v_0$。
+最近点处径向速度为零，令该距离为 $r_{\min}$。
+由能量守恒
+\[
+\frac{v_0^2}{2}
+=\frac{h^2}{2r_{\min}^2}-\frac{\mu}{r_{\min}},
+\]
+于是
+$v_0^2r_{\min}^2+2\mu r_{\min}-\ell^2v_0^2=0$。
+取正根：
+\[
+\boxed{r_{\min}=\frac{\mu}{v_0^2}
+\left[\sqrt{1+\left(\frac{\ell v_0^2}{\mu}\right)^2}-1\right]}.
+\]
+\excheck 当 $\ell=0$，理想质点可直冲中心；
+当 $\mu\to0$ 时应以有理化形式取极限，
+可得 $r_{\min}\to\ell$，符合自由直线运动。
+% === END 04-gravitation-200-210.tex ===
+
+% === BEGIN 04-gravitation-211-220.tex blob ca689eeb2d48306d1df29d8df9a7ad23e773f605 ===
+% Irodov supplied PDF pp.43--44, printed pp.34--35.
+% Gravitational shell theorem, self-energy, pressure, satellite phase recurrence.
+\exproblem{211}{34}
+质量为 $m$ 的质点位于均匀球体外，
+球体总质量 $M$、半径 $R$，
+质点距球心为 $r>R$。
+求：（a）引力相互作用势能；（b）球体施加于质点的引力。
+\exsolution
+先将球体分解为许多同心薄球壳。由球壳定理，
+壳外的引力势与把该壳全部质量集中在球心时相同。
+将所有壳的质量积分，球外的总引力势
+$\Phi(r)=-GM/r$（取无穷远为零）。
+因此
+\[
+\boxed{U(r)=m\Phi(r)=-\frac{GMm}{r}},
+\]
+而引力矢量由 $-\nabla U$ 给出：
+\[
+\boxed{\bm F(r)=-\frac{GMm}{r^3}\bm r},
+\qquad |\bm F|=\frac{GMm}{r^2}.
+\]
+\excheck 球体必须具有球对称密度分布；
+“球外等效质点”并不适用于任意非球形物体。
+
+\exproblem{212}{34}
+证明均匀薄球壳内部任意一点 $A$ 处的引力矢量为零。
+\exsolution
+设球壳半径 $R$、总质量 $M$，
+内部考察点距壳心为 $r<R$。
+壳面质量密度为 $\sigma=M/(4\pi R^2)$。
+按以球心为极点的极角 $\theta$ 分环，
+环质量
+$\mathrm dM=2\pi R^2\sigma\sin\theta\,\mathrm d\theta$，
+该环上每个质量元到 $A$ 的距离
+$d=\sqrt{R^2+r^2-2Rr\cos\theta}$。
+引力势直接积分为
+\[
+\Phi(r)=-G\int\frac{\mathrm dM}{d}
+=-\frac{GM}{2}\int_0^\pi
+\frac{\sin\theta\,\mathrm d\theta}
+{\sqrt{R^2+r^2-2Rr\cos\theta}}.
+\]
+令 $u=R^2+r^2-2Rr\cos\theta$，积分得
+\[
+\Phi(r)=-\frac{GM}{2Rr}
+\bigl[(R+r)-|R-r|\bigr].
+\]
+因 $r<R$，有 $|R-r|=R-r$，
+所以 $\Phi(r)=-GM/R$ 为常数，
+\[
+\boxed{\bm g=-\nabla\Phi=\bm0\qquad(r<R)}.
+\]
+\excheck 球壳内势不等于零，而是常数；
+“力为零”来自势的空间梯度为零。
+
+\exproblem{213}{34--35}
+质量为 $m$ 的粒子从一个均匀实心半球
+平底面的圆心处被移到无穷远。
+半球质量为 $M$、半径 $R$。
+求\emph{半球引力}在此过程中做的功。
+\exsolution
+将同样密度的两个半球拼成质量 $2M$ 的均匀完整球，
+原位置正好处于该球的中心。
+完整球在中心的引力势为
+$\Phi_{\rm full}(0)=-3G(2M)/(2R)=-3GM/R$。
+上下两个相同半球对该点势的贡献相等，
+因此半球在平底面圆心处产生的势为
+$\Phi_{\rm hemi}=-3GM/(2R)$。
+初始势能 $U_i=m\Phi_{\rm hemi}$，无穷远 $U_f=0$。
+保守引力做功为势能减少：
+\[
+\boxed{W_g=U_i-U_f=-\frac{3GMm}{2R}}.
+\]
+\excheck 将粒子搬到无穷远时外力须做正功，
+但题目所问的是\emph{引力本身做功}，故答案为负。
+
+\exproblem{214}{35}
+质量为 $M$、半径为 $R$ 的均匀实心球，
+求球心距离 $r$ 处引力场强矢量 $\bm g(r)$
+及以无穷远为零点的引力势 $\Phi(r)$，
+分球内、球外给出，并说明随 $r$ 的图形变化。
+\exsolution
+由球壳定理，半径 $r<R$ 内部包含的质量
+$M(r)=M r^3/R^3$，
+故球内场强
+$\bm g=-GM\bm r/R^3$。
+球外等效为中心质点，得到
+\[
+\boxed{\bm g(\bm r)=
+\begin{cases}
+-\dfrac{GM}{R^3}\bm r,&0\le r\le R,\\[4pt]
+-\dfrac{GM}{r^3}\bm r,&r\ge R .
+\end{cases}}
+\]
+球外势为 $\Phi=-GM/r$。
+球内利用
+$\Phi(r)=\Phi(R)-\int_R^r g_s(s)\,\mathrm ds$，
+其中带符号径向场强 $g_s(s)=-GMs/R^3$，可得
+\[
+\boxed{\Phi(r)=
+\begin{cases}
+-\dfrac{GM}{2R}\left(3-\dfrac{r^2}{R^2}\right),
+ &0\le r\le R,\\[4pt]
+-\dfrac{GM}{r},&r\ge R .
+\end{cases}}
+\]
+\excheck $r=R$ 时场强、势均连续；
+场强模从球心零线性增长到表面 $GM/R^2$，随后
+按 $r^{-2}$ 减小；势从中心 $-3GM/(2R)$ 单调升至零。
+
+\exproblem{215}{35}
+均匀大球密度为 $\rho$，
+其中挖去一个球形空腔，空腔球心
+相对原大球球心的矢量为 $\bm \ell$。
+求空腔内部任一点的引力场强。
+\exsolution
+使用叠加法：有空腔的球等于完整的密度为 $\rho$
+的大球加上一个空腔位置处密度为 $-\rho$ 的虚拟小球。
+选原大球球心为坐标原点，空腔内一点位置为 $\bm r$。
+完整球在该点的场强为
+$-(4\pi G\rho/3)\bm r$。
+虚拟小球在该点的场强为
+$+(4\pi G\rho/3)(\bm r-\bm\ell)$。
+相加得
+\[
+\boxed{\bm g_{\rm cavity}=-\frac{4\pi G\rho}{3}\bm\ell}.
+\]
+\excheck 场强与空腔内考察点的具体位置无关，是均匀场；
+若空腔与大球同心（$\bm\ell=\bm0$），场强为零。
+
+\exproblem{216}{35}
+质量 $M$、半径 $R$ 的均匀自引力球体，
+求自引力压缩造成的内部压强 $p(r)$，
+并把地球理想化成均匀球估算地心压强。
+\exsolution
+设密度 $\rho=3M/(4\pi R^3)$。
+球内引力场强模为
+$g(r)=GM r/R^3=(4\pi/3)G\rho r$。
+静力学平衡微分方程
+$\mathrm dp/\mathrm dr=-\rho g(r)$，
+表面边界条件 $p(R)=0$。积分得
+\[
+p(r)=\int_r^R\frac{4\pi}{3}G\rho^2s\,\mathrm ds
+=\frac{2\pi}{3}G\rho^2(R^2-r^2),
+\]
+亦即
+\[
+\boxed{p(r)=\frac{3GM^2}{8\pi R^4}
+\left(1-\frac{r^2}{R^2}\right)}.
+\]
+地心 $p(0)=3GM^2/(8\pi R^4)$。
+用地球 $M\simeq5.97\times10^{24}\,\mathrm{kg}$、
+$R\simeq6.37\times10^6\,\mathrm m$，
+得约 $1.7\times10^{11}\,\mathrm{Pa}$
+（约 $1.7\times10^6$ 个标准大气压）。
+\excheck 这只是\emph{均匀密度}地球的估值；
+实际地球密度随深度变化，不应将此直接称为真实地心压强。
+
+\exproblem{217}{35}
+求构成以下物体的全部质量之间的\emph{自身引力势能}：
+（a）质量 $m$、半径 $R$ 的均匀薄球壳；
+（b）质量 $m$、半径 $R$ 的均匀实心球。
+\exsolution
+（a）均匀球壳面上的引力势为
+$\Phi_{\rm shell}=-Gm/R$。
+将球壳微元逐一相互作用的势能总和写为
+$U=\tfrac12\int\Phi\,\mathrm dm$，
+系数 $1/2$ 避免每一对质量元重复计算：
+\[
+\boxed{U_{\rm shell}=-\frac{Gm^2}{2R}}.
+\]
+（b）把均匀实心球由半径 $r$ 的内球逐层组装。
+密度 $\rho=3m/(4\pi R^3)$，
+已装好的内球质量 $M(r)=(4\pi/3)\rho r^3$，
+新外壳质量 $\mathrm dm=4\pi\rho r^2\,\mathrm dr$。
+装配微元势能
+\[
+\mathrm dU=-\frac{GM(r)\,\mathrm dm}{r}
+=-\frac{16\pi^2G\rho^2}{3}r^4\,\mathrm dr.
+\]
+积分至 $R$ 并代入密度得
+\[
+\boxed{U_{\rm solid}=-\frac{3Gm^2}{5R}}.
+\]
+\excheck 两项都为负；均匀实心球相对相同质量和外半径
+的薄壳更紧密，因此自身引力势能更负。
+
+\exproblem{218}{35}
+两颗地球卫星在同一平面内分别沿半径
+$r_1=7000\,\mathrm{km}$ 和
+$r_2=6930\,\mathrm{km}$ 的圆轨道运动。
+求它们周期性达到\emph{最小相互距离}的相邻时间间隔，
+讨论同向和逆向运行。
+\exsolution
+取地球引力参数 $\mu=GM_E$。
+两颗卫星的角速度大小分别为
+$\omega_1=\sqrt{\mu/r_1^3}$、
+$\omega_2=\sqrt{\mu/r_2^3}$，且 $\omega_2>\omega_1$。
+当两卫星从地心看角位置相同时，二者相距
+$|r_1-r_2|$，即最小距离。
+若同向运行，角位置之差的增长速率为
+$\omega_2-\omega_1$，故
+\[
+\boxed{\Delta t_{\rm same}=
+\frac{2\pi}{\omega_2-\omega_1}
+\simeq4.44\,\mathrm d}.
+\]
+若两卫星逆向运行，相对角速度为
+$\omega_1+\omega_2$，故
+\[
+\boxed{\Delta t_{\rm opposite}=
+\frac{2\pi}{\omega_1+\omega_2}
+\simeq0.803\,\mathrm h}.
+\]
+\excheck 原题未指定两卫星旋转方向，因此必须报告两种情况。
+数值取 $\mu\simeq3.986\times10^{14}\,\mathrm{m^3/s^2}$；
+均为最小距离事件的\emph{重复间隔}，并非各自公转周期。
+
+\exproblem{219}{35}
+比较三种加速度的大小之比：
+$g_1$ 为地球表面地球重力所致加速度，
+$g_2$ 为地球赤道自转的离心惯性加速度，
+$g_3$ 为太阳\emph{直接}对地面物体的万有引力加速度。
+\exsolution
+取地球表面重力
+$g_1\simeq9.81\,\mathrm{m/s^2}$；
+赤道处自转离心加速度
+$g_2=\Omega_E^2R_E$，
+其中 $\Omega_E\simeq7.292\times10^{-5}\,\mathrm{s^{-1}}$、
+$R_E\simeq6.37\times10^6\,\mathrm m$，
+得到 $g_2\simeq0.0339\,\mathrm{m/s^2}$。
+太阳直接引力加速度为
+\[
+g_3=\frac{GM_\odot}{D^2}
+\simeq\frac{1.327\times10^{20}}
+{(1.496\times10^{11})^2}
+\simeq5.93\times10^{-3}\,\mathrm{m/s^2},
+\]
+其中 $D$ 为日地距离。因此
+\[
+\boxed{g_1:g_2:g_3
+\simeq1:0.00345:0.000605}.
+\]
+\excheck $g_3$ 是\emph{太阳的直接引力加速度}，
+并非潮汐差分加速度；若误用
+$GM_\odot R_E/D^3$ 会低估约 $D/R_E$ 倍。
+
+\exproblem{220}{35}
+沿地球极点上空（忽略地球自转影响），
+求自由落体加速度比地面值分别减少
+$1\%$ 和减少一半时的高度。
+\exsolution
+设地球半径为 $R_E$，极点地面附近
+$g_0=GM_E/R_E^2$。离地高度为 $h$ 时
+\[
+\frac{g(h)}{g_0}
+=\left(\frac{R_E}{R_E+h}\right)^2.
+\]
+若加速度降为原来的比例 $q$，
+解出高度的通式
+\[
+\boxed{h(q)=R_E(q^{-1/2}-1)}.
+\]
+对 $q=0.99$ 与 $q=0.50$，分别有
+\[
+\boxed{h_{1\%}=R_E(1/\sqrt{0.99}-1)
+\simeq32\,\mathrm{km}},
+\]
+\[
+\boxed{h_{1/2}=R_E(\sqrt2-1)
+\simeq2.64\times10^3\,\mathrm{km}}.
+\]
+\excheck 题目所给“减少一半”指剩余加速度为 $g_0/2$，
+而不是减少 $50\%$ 的高度；地球应近似为球对称。
+% === END 04-gravitation-211-220.tex ===
+
+% === BEGIN 04-gravitation-221-233.tex blob ce8518af7cc365d8517fd438f3f4e5b4b15bf892 ===
+% Irodov user-supplied Arihant PDF, printed pp.35--36, PDF pp.44--45.
+% Final subsection 1.4: terrestrial and lunar satellites and cosmic velocities.
+\exproblem{221}{35}
+在地球极点使一物体获得竖直向上的初速 $v_0$，
+忽略空气阻力。若已知地球半径 $R$ 与地表重力加速度
+$g$，求物体可上升的最大高度 $h$。
+\exsolution
+取地球为球对称天体，记引力参数
+$\mu=GM_E=gR^2$。
+地表初态的单位质量机械能为
+$\varepsilon_i=v_0^2/2-\mu/R$。
+如果初速小于逃逸速度，最高点速率为零、半径为 $R+h$，
+故机械能守恒：
+\[
+\frac{v_0^2}{2}-\frac{\mu}{R}
+=-\frac{\mu}{R+h}.
+\]
+移项可得
+\[
+\boxed{h=\frac{Rv_0^2}{2gR-v_0^2}}.
+\]
+\excheck 当 $v_0\to0$，$h\simeq v_0^2/(2g)$；
+当 $v_0\to\sqrt{2gR}^{\,-}$，$h\to\infty$。
+若 $v_0\ge\sqrt{2gR}$，物体在此理想模型中不再有有限最高点。
+
+\exproblem{222}{35}
+一颗人造卫星绕地球作圆周运动。
+相对不随地球自转的惯性参考系，它的圆轨道速率为 $v$。
+给定地球半径 $R$ 和地表重力加速度 $g$，
+求卫星离地高度 $h$。
+\exsolution
+卫星轨道半径为 $r=R+h$，
+由向心运动所需加速度等于引力加速度：
+\[
+\frac{v^2}{r}=\frac{GM_E}{r^2}
+=\frac{gR^2}{r^2}.
+\]
+所以 $r=gR^2/v^2$，从而
+\[
+\boxed{h=R\left(\frac{gR}{v^2}-1\right)}.
+\]
+\excheck 近地表圆轨道对应 $v=\sqrt{gR}$、$h=0$；
+高空卫星速率较小。这里的 $v$ 不是相对自转地面的速率。
+
+\exproblem{223}{35}
+求在地球赤道上空相对地面静止的
+\emph{地球同步静止卫星}轨道半径，
+以及它相对于地心惯性系的速率和向心加速度。
+\exsolution
+卫星必须在赤道平面内与地球同向转动，
+其角速度等于地球自转角速度
+$\Omega_E=2\pi/T_{\rm sidereal}$，
+其中恒星日 $T_{\rm sidereal}\simeq86164\,\mathrm s$。
+圆轨道条件
+\[
+\Omega_E^2r=\frac{GM_E}{r^2},
+\]
+因此
+\[
+\boxed{r=\left(\frac{GM_E}{\Omega_E^2}\right)^{1/3}
+\simeq4.2164\times10^4\,\mathrm{km}},
+\]
+\[
+\boxed{v=\Omega_Er\simeq3.07\,\mathrm{km/s}},\qquad
+\boxed{a=\Omega_E^2r\simeq0.224\,\mathrm{m/s^2}}.
+\]
+\excheck 给出的 $r$ 是从\emph{地心}量起的半径，
+不是离地高度（离地高度约 $3.58\times10^4$ km）；
+使用的是恒星日而非恰好24小时的太阳日。
+
+\exproblem{224}{35--36}
+一颗卫星在赤道平面内沿半径
+$r=2.00\times10^4\,\mathrm{km}$ 的圆轨道自西向东运动。
+地面赤道某点每隔 $\tau=11.6\,\mathrm h$
+看到卫星再次从头顶经过。
+已知引力常数 $G$，求地球质量 $M_E$。
+\exsolution
+卫星自西向东的角速度 $\omega_s$ 快于地球角速度
+$\Omega_E=2\pi/T_E$，因此重复过顶的相对角速度
+$\omega_s-\Omega_E=2\pi/\tau$。
+故
+\[
+\omega_s=2\pi\left(\frac1{T_E}+\frac1\tau\right).
+\]
+根据圆轨道引力与向心条件
+$GM_E/r^2=r\omega_s^2$，
+\[
+\boxed{M_E=\frac{4\pi^2r^3}{G}
+\left(\frac1{T_E}+\frac1\tau\right)^2}.
+\]
+代入 $r=2.00\times10^7\,\mathrm m$、
+$\tau=11.6\times3600\,\mathrm s$、
+$T_E\simeq86164\,\mathrm s$，
+得到 $\boxed{M_E\simeq6.0\times10^{24}\,\mathrm{kg}}$。
+\excheck 过顶间隔不是卫星本身的公转周期，
+必须减去地球自转角速度后再处理。
+
+\exproblem{225}{36}
+一颗卫星沿赤道圆轨道从东向西绕地球运动，
+轨道半径 $r=1.00\times10^4\,\mathrm{km}$。
+求其在\emph{随地球自转的参考系}中的速率与
+加速度大小。
+\exsolution
+记地心惯性系中的西向圆轨道角速度大小为
+$\omega_s=\sqrt{GM_E/r^3}$，
+地球自转角速度为 $\Omega_E$（东向）。
+在地球旋转参考系中，两者角速度方向相反，
+相对西向角速度大小为
+$\omega_{\rm rel}=\omega_s+\Omega_E$。
+故
+\[
+\boxed{v_{\rm rel}=r(\omega_s+\Omega_E)
+=\sqrt{\frac{GM_E}{r}}+\Omega_Er},
+\]
+\[
+\boxed{a_{\rm rel}=r(\omega_s+\Omega_E)^2}.
+\]
+取 $GM_E=3.986\times10^{14}\,\mathrm{m^3/s^2}$、
+$\Omega_E=7.292\times10^{-5}\,\mathrm s^{-1}$，
+得 $v_{\rm rel}\simeq7.04\,\mathrm{km/s}$、
+$a_{\rm rel}\simeq4.96\,\mathrm{m/s^2}$。
+\excheck 这是旋转坐标系中的\emph{运动学相对加速度}，
+并非只有地球引力造成的地心惯性系向心加速度。
+
+\exproblem{226}{36}
+两颗卫星在地球赤道附近、紧贴地表的理想圆轨道上运动：
+一颗顺地球自转方向，另一颗逆向。
+求在\emph{地面旋转参考系}中，
+逆向卫星动能是顺向卫星动能的多少倍。
+\exsolution
+记近地圆轨道地心惯性系速率
+$v_c=\sqrt{gR}$、地面赤道线速度
+$u_E=\Omega_E R$。
+相对地面，顺向与逆向卫星的速率分别为
+$v_+=v_c-u_E$、$v_-=v_c+u_E$。
+相同卫星质量的动能比即速率平方比：
+\[
+\boxed{\frac{K_-}{K_+}
+=\left(\frac{\sqrt{gR}+\Omega_E R}
+{\sqrt{gR}-\Omega_E R}\right)^2
+\simeq1.27}.
+\]
+\excheck 若在地心惯性系，两颗相同半径圆轨道卫星的
+动能相等；题目特意要求在地面旋转系比较，
+因此出现不同的动能数值。
+
+\exproblem{227}{36}
+一颗质量为 $m$ 的月球人造卫星沿接近圆形轨道运动，
+初始轨道半径是月球半径 $R_M$ 的 $\eta$ 倍。
+卫星受宇宙尘埃的微弱阻力，大小为
+$F_d=\alpha v^2$，与速度反向。
+若下降非常缓慢、轨道始终可近似视为圆，
+求卫星从初始轨道降到月球表面的时间。
+\exsolution
+记月球引力参数 $\mu=GM_M=g_MR_M^2$。
+瞬时圆轨道速率 $v=\sqrt{\mu/r}$，
+总机械能为 $E=-\mu m/(2r)$。
+阻力耗散功率
+\[
+-\frac{\mathrm dE}{\mathrm dt}
+=F_dv=\alpha v^3=\alpha(\mu/r)^{3/2}.
+\]
+由 $\mathrm dE/\mathrm dr=\mu m/(2r^2)$，
+得到
+\[
+\frac{\mu m}{2r^2}\frac{\mathrm dr}{\mathrm dt}
+=-\alpha\frac{\mu^{3/2}}{r^{3/2}},
+\quad
+\frac{\mathrm dr}{\mathrm dt}
+=-\frac{2\alpha\sqrt\mu}{m}\sqrt r.
+\]
+从 $r(0)=\eta R_M$ 积分到 $R_M$：
+\[
+\boxed{t\simeq
+\frac{m(\sqrt\eta-1)}{\alpha}
+\sqrt{\frac{R_M}{\mu}}
+=\frac{m(\sqrt\eta-1)}{\alpha\sqrt{g_MR_M}}}.
+\]
+\excheck 这是绝热缓慢圆轨道衰减的近似式；
+若阻力大到单圈内轨道已明显非圆，需解完整运动方程。
+
+\exproblem{228}{36}
+计算月球表面附近的第一宇宙速度（圆轨道速率）
+和第二宇宙速度（逃逸速率），并与地球对应数值比较。
+\exsolution
+对于质量 $M$、半径 $R$ 的球对称天体，
+第一宇宙速度来自圆轨道条件
+$v_1^2/R=GM/R^2$，故
+$v_1=\sqrt{GM/R}=\sqrt{gR}$。
+第二宇宙速度来自逃逸总机械能为零：
+$v_2=\sqrt{2GM/R}=\sqrt2\,v_1$。
+月球取 $g_M\simeq1.62\,\mathrm{m/s^2}$、
+$R_M\simeq1.737\times10^6\,\mathrm m$，得
+\[
+\boxed{v_{1,M}\simeq1.68\,\mathrm{km/s},\qquad
+v_{2,M}\simeq2.37\,\mathrm{km/s}}.
+\]
+相应地球理想值约为
+$7.9\,\mathrm{km/s}$ 和 $11.2\,\mathrm{km/s}$。
+\excheck 两组速度均满足 $v_2/v_1=\sqrt2$；
+这里忽略了大气与天体自转。
+
+\exproblem{229}{36}
+一飞船沿近似掠过月球表面的抛物线轨道接近月球。
+在最近点瞬时开启制动发动机，使轨道转为掠月球表面的
+圆轨道。求制动造成的飞船速率\emph{有符号变化}。
+\exsolution
+抛物线轨道在无穷远处比机械能为零，
+最近点 $r\simeq R_M$ 的速率为
+$v_p=\sqrt{2GM_M/R_M}$。
+圆轨道所需速率为
+$v_c=\sqrt{GM_M/R_M}$。
+因此发动机制动造成的速率变化
+\[
+\boxed{\Delta v=v_c-v_p
+=(1-\sqrt2)\sqrt{\frac{GM_M}{R_M}}
+\simeq-0.69\,\mathrm{km/s}}.
+\]
+\excheck 负号表示减速；若题目问制动速度增量的大小，
+应报告 $|\Delta v|\simeq0.69\,\mathrm{km/s}$。
+不是飞船速率“增加”。
+
+\exproblem{230}{36}
+飞船已在地球表面附近的理想圆轨道上运行。
+要摆脱地球引力束缚，沿原速度方向最少还需给予多大的
+瞬时速率增量？
+\exsolution
+近地圆轨道速率为
+$v_c=\sqrt{GM_E/R_E}=\sqrt{gR_E}$。
+在相同高度达到逃逸抛物线轨道需要速率
+$v_e=\sqrt{2GM_E/R_E}=\sqrt2\,v_c$。
+因此同向瞬时加速的最小速度增量为
+\[
+\boxed{\Delta v=(\sqrt2-1)\sqrt{gR_E}
+\simeq3.27\,\mathrm{km/s}}.
+\]
+\excheck 这里未包括发动机损耗、轨道变轨时间、
+空气阻力及其他天体引力；理想情况下同向脉冲最节省增量。
+
+\exproblem{231}{36}
+已知地球质量是月球质量的 $\eta=81$ 倍，
+地月中心距离是地球半径 $R_E$ 的 $n=60$ 倍。
+求地月连线上两者引力场强合成为零的点距月球中心多远。
+\exsolution
+记地月中心距 $D=nR_E$，
+零场点距月球为 $x$，则距地球为 $D-x$。
+两引力方向相反，大小相等：
+\[
+\frac{GM_M}{x^2}=\frac{GM_E}{(D-x)^2}
+=\frac{G\eta M_M}{(D-x)^2}.
+\]
+取正平方根：
+$(D-x)/x=\sqrt\eta$，解得
+\[
+\boxed{x=\frac{D}{1+\sqrt\eta}
+=\frac{nR_E}{1+\sqrt\eta}
+=6R_E\simeq3.82\times10^4\,\mathrm{km}}.
+\]
+\excheck 这是静止牛顿引力场\emph{零场点}，
+不是地月旋转参考系中的完整拉格朗日 $L_1$ 点；
+后者还需考虑离心惯性项。
+
+\exproblem{232}{36}
+一质量为 $m=2.0\times10^3\,\mathrm{kg}$ 的飞船
+从地球表面被运至月球表面。
+忽略大气、太阳作用和能量损耗，估计所需的最小外力功。
+\exsolution
+为估算下限，令飞船始末两端相对各自行星静止，
+采用地月近似不动、距离 $D$ 固定的保守引力模型。
+初态与末态引力势能近似为
+\[
+U_i\simeq-\frac{GM_E m}{R_E}
+-\frac{GM_Mm}{D-R_E},\quad
+U_f\simeq-\frac{GM_E m}{D-R_M}
+-\frac{GM_Mm}{R_M}.
+\]
+理想可逆慢速运输时外力净功等于势能差
+$W_{\rm ext,min}=U_f-U_i$。
+因为 $D\gg R_E,R_M$，忽略远端引力修正得到
+\[
+W_{\rm ext,min}\simeq
+m\left(\frac{GM_E}{R_E}-\frac{GM_M}{R_M}\right)
+=m(g_ER_E-g_MR_M).
+\]
+用 $g_E\simeq9.81\,\mathrm{m/s^2}$、
+$R_E\simeq6.37\times10^6\,\mathrm m$、
+$g_M\simeq1.62\,\mathrm{m/s^2}$、
+$R_M\simeq1.737\times10^6\,\mathrm m$，
+\[
+\boxed{W_{\rm ext,min}\sim1.2\times10^{11}\,\mathrm J
+\approx1.2\times10^8\,\mathrm{kJ}}.
+\]
+\excheck 这是一种准静态理想势能预算；
+不能将其视为有时间限制、必须安全着陆的真实任务
+的发动机燃料能量最小值。原书简答数量级约为
+$1.3\times10^8\,\mathrm{kJ}$。
+
+\exproblem{233}{36}
+忽略地球自转，估算从地球表面发射物体，
+使它最终能逃出\emph{整个太阳系}所需的最小初速，
+即第三宇宙速度。
+\exsolution
+记地表第一宇宙速度
+$v_{1,E}=\sqrt{GM_E/R_E}\simeq7.9\,\mathrm{km/s}$，
+地球绕太阳的圆轨道速率
+$V_E=\sqrt{GM_\odot/D}\simeq29.8\,\mathrm{km/s}$。
+日地轨道半径处太阳逃逸速率为 $\sqrt2V_E$。
+为使从地球引力井出来的物体在日心系中达到这一速度，
+应沿地球公转方向发射，使地球外的双曲线余速
+\[
+u_\infty=(\sqrt2-1)V_E.
+\]
+地表初速 $v_3$ 的单位质量地球中心机械能为
+$v_3^2/2-GM_E/R_E$，
+在地球引力范围外为 $u_\infty^2/2$，
+故
+\[
+\boxed{v_3=
+\sqrt{\frac{2GM_E}{R_E}
++(\sqrt2-1)^2V_E^2}
+=\sqrt{2v_{1,E}^2+(\sqrt2-1)^2V_E^2}
+\simeq16.7\,\mathrm{km/s}}.
+\]
+\excheck 最优方向为地球公转切向前进方向；
+忽略了地球自转、月球引力、其他行星摄动及真实轨道
+交接处的细节，属于经典近似估算。
+% === END 04-gravitation-221-233.tex ===

@@ -1,0 +1,2453 @@
+% Consolidated 03-mechanics-conservation from b597304e78a782cd65c7976ce94a1a744dfe8067; original TeX fragments preserved.
+
+% === BEGIN 03-mechanics-conservation-118-120.tex blob 6179ca54abd2a587118ffd6f9231a9151ab35983 ===
+% Irodov, Arihant PDF p. 30, printed p. 21.
+% Start of section 1.3: work, kinetic energy, momentum.
+\exproblem{118}{21}
+质点沿 $xy$ 平面中的任意轨迹从
+$\bm r_1=\bm i+2\bm j$ 移动到
+$\bm r_2=2\bm i-3\bm j$，
+其间受一恒力 $\bm F=3\bm i+4\bm j$。
+上述各量均采用 SI 单位。求该恒力做的功。
+\exsolution
+恒力的功不依赖所走轨迹，仅由始末位移决定：
+\[
+\Delta\bm r=\bm r_2-\bm r_1
+=(2-1)\bm i+(-3-2)\bm j
+=\bm i-5\bm j.
+\]
+故
+\[
+\boxed{W=\int_1^2\bm F\cdot\mathrm d\bm r
+=\bm F\cdot(\bm r_2-\bm r_1)
+=3\times1+4\times(-5)=-17\,\mathrm J}.
+\]
+\excheck 负功表示该外力沿净位移方向的投影为负，
+并不意味着质点不能按所给轨迹运动；题目还允许其他力同时作用。
+
+\exproblem{119}{21}
+一辆质量为 $m$ 的机车从静止开始运动，
+其速率满足 $v=a\sqrt s$，
+$s$ 为从起点起已经走过的路程，$a$ 为常数。
+求开始运动后前 $t$ 秒内全部作用力做的总功。
+\exsolution
+注意本版 PDF 的文本提取可能漏掉 $\sqrt s$ 的根号；
+原书第21印刷页的公式经图像核验确为 $v=a\sqrt s$。
+沿单向运动有
+\[
+\frac{\mathrm ds}{\mathrm dt}=a\sqrt s.
+\]
+取“自 $t=0$ 即开始运动”的非静止解，
+分离变量得
+$2\sqrt s=at$，于是
+\[
+s(t)=\frac{a^2t^2}{4},\qquad
+v(t)=a\sqrt{s(t)}=\frac{a^2t}{2}.
+\]
+由动能定理，所有力做功之和为动能增量：
+\[
+\boxed{W_{\rm total}(0,t)=\frac12mv(t)^2
+=\frac{ma^4t^2}{8}}.
+\]
+\excheck $v=a\sqrt{s}$ 与 $v(0)=0$ 单独作为微分方程
+仍有“先静止、再启动”的非唯一数学解；
+物理上题目“开始运动后前 $t$ 秒”已选取立即起动的分支。
+
+\exproblem{120}{21}
+质量为 $m$ 的质点沿半径为 $R$ 的圆周运动，
+其动能与走过的路程 $s$ 的关系为
+$K(s)=as^2$，其中 $a>0$。
+求合外力的大小作为 $s$ 的函数。
+\exsolution
+沿运动切线，合力切向分量由功—能关系确定：
+\[
+F_\tau=\frac{\mathrm dK}{\mathrm ds}=2as.
+\]
+又 $K=\frac12mv^2$，得 $mv^2=2as^2$，
+故沿圆周法线方向的合力为
+\[
+F_n=\frac{mv^2}{R}=\frac{2as^2}{R}.
+\]
+两个分量互相垂直，因而合力大小
+\[
+\boxed{F(s)=\sqrt{F_\tau^2+F_n^2}
+=2as\sqrt{1+\frac{s^2}{R^2}}}.
+\]
+\excheck 不能仅把 $F_\tau=\mathrm dK/\mathrm ds$ 当作合力；
+曲线运动存在向心力分量。$a$ 的量纲为
+$\mathrm{J/m^2}$，所以 $2as$ 是力。
+% === END 03-mechanics-conservation-118-120.tex ===
+
+% === BEGIN 03-mechanics-conservation-121-130.tex blob e4f09d6d5a5ca4a9b43712aad51ed676c6fc6c21 ===
+% Irodov, Arihant PDF pp. 30--31, printed pp. 21--22.
+% The source's problem 130 has an apparent sign inconsistency;
+% report both the printed relation and the physics-consistent form.
+\exproblem{121}{21}
+一物体质量为 $m$，被一沿路径切线方向的外力
+缓慢拉上小山，始末高差为 $h$，山坡水平投影长为 $\ell$
+（图1.29）。物体与山坡之间摩擦系数为 $k$。
+求外力所做的功。
+\exsolution
+缓慢移动意味着忽略动能变化和沿切向的加速度。
+在局部坡角 $\theta(s)$ 处，
+支持力 $N=mg\cos\theta$，
+外力切向大小为
+$F=mg\sin\theta+kmg\cos\theta$。
+沿轨迹积分：
+\[
+W=\int F\,\mathrm ds
+=mg\int\sin\theta\,\mathrm ds
++kmg\int\cos\theta\,\mathrm ds.
+\]
+由于 $\mathrm dy=\sin\theta\,\mathrm ds$、
+$\mathrm dx=\cos\theta\,\mathrm ds$，
+两项积分分别为高差 $h$ 与水平投影 $\ell$，所以
+\[
+\boxed{W=mg(h+k\ell)}.
+\]
+\excheck 与山坡的具体曲线形状无关，
+前提是坡面始终单调向上、摩擦阻力始终与移动反向。
+
+\exproblem{122}{21}
+质量为 $m=50\,\mathrm g$ 的圆片从静止开始
+沿倾角 $\alpha=30^\circ$ 的粗糙斜面滑下，
+到达水平粗糙面后再滑行 $\ell=50\,\mathrm{cm}$ 停止。
+两段面的摩擦系数均为 $k=0.15$。
+求整段运动中摩擦力所做的总功。
+\exsolution
+设斜面段走过距离为 $L$。
+滑至坡底时由功—能定理
+\[
+K_{\rm bottom}=mgL\sin\alpha-kmgL\cos\alpha.
+\]
+在水平段，摩擦力做功 $-kmg\ell$，最终停止，所以
+\[
+mgL(\sin\alpha-k\cos\alpha)=kmg\ell
+\quad\Longrightarrow\quad
+L=\frac{k\ell}{\sin\alpha-k\cos\alpha}.
+\]
+总摩擦功为
+\[
+W_f=-kmg(L\cos\alpha+\ell)
+=-\frac{kmg\ell}{1-k\cot\alpha}.
+\]
+代入数值得
+\[
+\boxed{W_f\simeq-4.96\times10^{-2}\,\mathrm J
+\approx-0.050\,\mathrm J}.
+\]
+\excheck 要能顺利下滑，必须
+$\tan\alpha>k$；本题满足。
+负号表明摩擦耗散动能，而非创造能量。
+
+\exproblem{123}{21}
+两物块质量分别为 $m_1,m_2$，
+由一根初始未形变的轻弹簧连接，置于水平粗糙面，
+摩擦系数同为 $k$。
+对 $m_1$ 水平施加一个恒力 $F$，
+求使另一物块 $m_2$ 开始移动所需的最小 $F$。
+\exsolution
+设弹簧劲度系数为 $\kappa$。
+在 $m_2$ 尚未运动而 $m_1$ 已向前滑动的阶段，
+作用于 $m_1$ 的外力净做功为
+$(F-km_1g)x$，能量分配给 $m_1$ 的动能
+和弹簧弹性势能：
+\[
+(F-km_1g)x=\frac12m_1v_1^2+\frac12\kappa x^2.
+\]
+对于给定 $F$，最大弹簧形变出现在 $v_1=0$ 的转折点，
+故 $\kappa x_{\max}=2(F-km_1g)$。
+第二物块刚将克服静摩擦时，
+弹簧拉力需达 $km_2g$。临界条件
+$2(F-km_1g)=km_2g$，得到
+\[
+\boxed{F_{\min}=kg\left(m_1+\frac{m_2}{2}\right)}.
+\]
+\excheck 本题采用两块的动、静摩擦均以同一系数 $k$
+描述的理想模型，且力从静止起恒定施加；
+若缓慢准静态增加 $F$，阈值可能不同。
+
+\exproblem{124}{21}
+总质量 $m=0.80\,\mathrm{kg}$、
+长度 $\ell=1.50\,\mathrm m$ 的均匀链条搭在粗糙桌面上，
+一端悬垂。悬垂部分长度达到总长的
+$\eta=1/3$ 时，链条刚可自行滑下。
+求从此时起直到完全滑离桌面，
+桌面对链条的摩擦力所做总功。
+\exsolution
+设桌面与链条之间摩擦系数为 $k$。
+在临界滑动时悬垂部分重力与桌面最大摩擦力平衡：
+\[
+\eta mg=k(1-\eta)mg
+\quad\Longrightarrow\quad
+k=\frac{\eta}{1-\eta}.
+\]
+当悬垂长度为 $x$ 时，桌面上剩余链长为 $\ell-x$，
+摩擦力大小为
+$F_f(x)=k(m/\ell)(\ell-x)g$。
+链条增量滑移 $\mathrm dx$ 时，桌上各微元移动
+同样距离，因此摩擦力总功为
+\[
+W_f=-\int_{\eta\ell}^{\ell}
+ k\frac m\ell(\ell-x)g\,\mathrm dx
+=-\frac12kmg\ell(1-\eta)^2
+=-\frac12\eta(1-\eta)mg\ell .
+\]
+代入得
+\[
+\boxed{W_f\simeq-1.31\,\mathrm J}.
+\]
+\excheck 积分终点时桌面上的链长为零，
+摩擦力也降为零；不可假定摩擦力在整个过程中恒定。
+
+\exproblem{125}{21}
+质量为 $m$ 的物体以初速 $v_0$、
+与水平夹角 $\alpha$ 斜抛，忽略空气阻力。
+求：（a）重力在全飞行时间内的平均功率；
+（b）重力瞬时功率随时间的变化。
+\exsolution
+取竖直向上为正，$v_y(t)=v_0\sin\alpha-gt$。
+重力为 $\bm F_g=-mg\bm j$，故功率
+\[
+\boxed{P_g(t)=\bm F_g\cdot\bm v(t)
+=-mgv_y(t)=mg(gt-v_0\sin\alpha)}.
+\]
+如果落回发射高度，飞行全程重力的总功
+$W_g=-mg(y_{\rm final}-y_{\rm initial})=0$，
+因此
+\[
+\boxed{\overline{P}_g=\frac{W_g}{T}=0}.
+\]
+\excheck 上升阶段 $P_g<0$，下降阶段 $P_g>0$；
+全程平均值零并非瞬时功率始终为零。
+
+\exproblem{126}{21--22}
+质量为 $m$ 的质点沿半径 $R$ 的圆周运动，
+其法向加速度随时间变化为 $a_n=at^2$，$a>0$。
+求合外力的瞬时功率及其在最初 $t$ 秒的平均值。
+\exsolution
+法向加速度等于 $v^2/R$，因此在 $t\ge0$：
+\[
+v(t)=\sqrt{aR}\,t.
+\]
+运动的动能为
+$K=\frac12mv^2=\frac12maRt^2$。
+所有力的合功率等于动能变化率，而法向力与速度垂直不做功：
+\[
+\boxed{P(t)=\frac{\mathrm dK}{\mathrm dt}=maRt}.
+\]
+区间 $[0,t]$ 内的平均功率
+\[
+\boxed{\overline P(0,t)=\frac{K(t)-K(0)}t
+=\frac12maRt}.
+\]
+\excheck 两个结果分别有比例 $t$ 与 $t/2$，
+符合匀速增长功率在区间中的平均值。
+
+\exproblem{127}{22}
+一质量为 $m$ 的物块在水平地面上获得初速 $v_0$，
+随后仅受滑动摩擦。
+(a) 当 $k=0.27,m=1.0\,\mathrm{kg},v_0=1.5\,\mathrm{m/s}$
+时，求停止前摩擦力的平均功率；
+(b) 若摩擦系数随离起点距离 $x$ 变化为 $k(x)=\alpha x$，
+求运动期间摩擦力瞬时功率的最大绝对值。
+\exsolution
+(a) 减速度大小为 $kg$，
+停下用时 $t_*=v_0/(kg)$，
+摩擦力总功 $W_f=-mv_0^2/2$，所以
+\[
+\boxed{\overline P_f=
+\frac{W_f}{t_*}=-\frac12kmgv_0
+\simeq-1.98\,\mathrm W}.
+\]
+(b) 在 $x$ 处，摩擦力 $F_f=-m\alpha gx$。
+动能定理给出
+\[
+\frac12mv(x)^2-\frac12mv_0^2
+=-\int_0^x m\alpha gu\,\mathrm du,
+\quad
+v(x)=\sqrt{v_0^2-\alpha gx^2}.
+\]
+因此瞬时功率
+$P_f(x)=-m\alpha gx\sqrt{v_0^2-\alpha gx^2}$。
+为使 $|P_f|$ 最大，对
+$x^2(v_0^2-\alpha gx^2)$ 求极值，
+可得 $x_m^2=v_0^2/(2\alpha g)$，进而
+\[
+\boxed{P_{f,\rm most\,negative}
+=-\frac12m v_0^2\sqrt{\alpha g}},
+\quad
+\boxed{|P_f|_{\max}=\frac12m v_0^2\sqrt{\alpha g}}.
+\]
+\excheck 初始 $x=0$ 时摩擦力为零；
+终点速度为零时功率也为零，
+最大耗散功率发生在中间位置。
+
+\exproblem{128}{22}
+质量为 $m=0.10\,\mathrm{kg}$ 的物体位于以恒角速度
+$\omega=5.0\,\mathrm{rad/s}$ 绕固定轴旋转的参考系中。
+将它沿任意路径从离轴距离 $r_1=0.30\,\mathrm m$
+移至 $r_2=0.50\,\mathrm m$，
+求离心惯性力做的功。
+\exsolution
+旋转系内离心力大小为 $F_{\rm cf}=m\omega^2r$，
+沿远离转轴的径向。
+由于 $\bm F_{\rm cf}=m\omega^2r\,\bm e_r$，
+其做功微元为
+$\mathrm dW=m\omega^2r\,\mathrm dr$，
+角向运动不做功。所以
+\[
+\boxed{W_{\rm cf}=\int_{r_1}^{r_2}
+m\omega^2r\,\mathrm dr
+=\frac12m\omega^2(r_2^2-r_1^2)
+=0.200\,\mathrm J}.
+\]
+\excheck 此力在角速度恒定时可由径向有效势
+$U_{\rm cf}=-m\omega^2r^2/2$ 导出，因此与路径无关。
+
+\exproblem{129}{22}
+两根轻弹簧串联，弹性系数分别为
+$\kappa_1,\kappa_2$。若缓慢将其总长度拉长
+$\Delta\ell$，求外力至少须做多少功。
+\exsolution
+串联弹簧中的拉力相同，记为 $F$，
+两者伸长分别为 $x_1=F/\kappa_1$、
+$x_2=F/\kappa_2$，故
+\[
+\Delta\ell=F\left(\frac1{\kappa_1}+\frac1{\kappa_2}\right),
+\quad
+\kappa_{\rm eq}=\frac{\kappa_1\kappa_2}{\kappa_1+\kappa_2}.
+\]
+缓慢拉伸可使末态无多余动能，
+外力所做最小功即弹簧能量增量：
+\[
+\boxed{W_{\min}=
+\frac12\kappa_{\rm eq}(\Delta\ell)^2
+=\frac{\kappa_1\kappa_2}{2(\kappa_1+\kappa_2)}
+(\Delta\ell)^2}.
+\]
+\excheck 相对较软的弹簧伸长量更大，
+且等效劲度系数小于任一单根弹簧的劲度系数。
+
+\exproblem{130}{22}
+质量为 $m$ 的物体从地面被向上提升，
+外力随高度 $y$ 变化。本版题面\emph{印为}
+$F(y)=2(ay-1)mg$，$a>0$。
+求上升过程前半段外力的功及重力势能增加量。
+\exsolution
+\textbf{先作源书一致性核查。}
+若把印刷表达式中的 $F(y)$ 严格理解为沿\emph{向上}
+的有符号外力，则在地面 $F(0)=-2mg$，合力向下，
+物体从静止根本不能自发上升；而本版书末答案
+$W=3mg/(4a)$、$\Delta U=mg/(2a)$ 与此符号不符。
+这说明题面需要澄清外力方向或印刷符号。
+为得到与书末答案一致的上升模型，明确采用
+\emph{向上拉力大小}
+\[
+F_{\uparrow}(y)=2(1-ay)mg
+\quad(0\le y\le 1/a).
+\]
+它与印刷式在所讨论高度范围内符号相反，
+此处并未暗中改动题面，而是作为\emph{勘误后的条件分支}。
+物体若由静止开始，由净力
+$F_\uparrow-mg=mg(1-2ay)$ 得动能
+\[
+K(y)=\int_0^y mg(1-2au)\,\mathrm du
+=mg(y-ay^2).
+\]
+它再次归零的高度是 $H=1/a$，
+前半段上升对应 $0\le y\le H/2=1/(2a)$。
+故该条件分支下
+\[
+\boxed{W_\uparrow=\int_0^{1/(2a)}2(1-ay)mg\,\mathrm dy
+=\frac{3mg}{4a}},
+\]
+\[
+\boxed{\Delta U_g=mg\frac{H}{2}=\frac{mg}{2a}}.
+\]
+\excheck 若\emph{完全保留题面有符号力}
+$F=2(ay-1)mg$，对同样人为指定的位移区间，
+积分所算外力功会是 $-3mg/(4a)$，
+但这不是从静止上升到 $H$ 的自洽物理过程；
+该争议须在独立审校时回查其他版本，不得标注为已解决。
+% === END 03-mechanics-conservation-121-130.tex ===
+
+% === BEGIN 03-mechanics-conservation-131-140.tex blob 5c4ab3e4b82db5456a951c30039dc95ccb33fcfa ===
+% Irodov, Arihant PDF pp. 31--33, printed pp. 22--24.
+\exproblem{131}{22}
+某球对称力场中的势能为
+$U(r)=a/r^2-b/r$，其中 $a,b>0$。
+求：（a）平衡半径及其稳定性；
+（b）最大吸引力，并说明 $U(r)$、径向力 $F_r(r)$ 的图像特点。
+\exsolution
+径向力为
+\[
+F_r(r)=-\frac{\mathrm dU}{\mathrm dr}
+=\frac{2a}{r^3}-\frac{b}{r^2}.
+\]
+平衡需 $F_r=0$，故
+$\boxed{r_0=2a/b}$。
+在此点
+\[
+U''(r_0)=\left(\frac{6a}{r^4}
+-\frac{2b}{r^3}\right)_{r=r_0}
+=\frac{2a}{r_0^4}>0,
+\]
+势能极小，平衡稳定。
+当 $r>r_0$ 时 $F_r<0$，吸引力大小
+$f(r)=b/r^2-2a/r^3$。
+求导 $f'=-2b/r^3+6a/r^4$，
+最大值出现在 $r_m=3a/b$，有
+\[
+\boxed{f_{\max}=\frac{b^3}{27a^2}}.
+\]
+\excheck $r\to0^+$ 时 $U\to+\infty,F_r\to+\infty$
+（强斥力）；$r\to\infty$ 时 $U\to0^-$、$F_r\to0^-$。
+$U$ 在 $r_0$ 取负极小，$F_r$ 在 $r_0$ 过零，
+在 $r_m$ 取最小负值。
+
+\exproblem{132}{22}
+二维势场的势能为
+$U(x,y)=\alpha x^2+\beta y^2$，
+其中 $\alpha,\beta>0$ 且 $\alpha\ne\beta$。
+求：（a）是否为中心力场；
+（b）等势线和力大小相同的点构成什么曲线，
+它们的半轴比各是多少。
+\exsolution
+力矢量
+\[
+\bm F=-\nabla U=(-2\alpha x,-2\beta y).
+\]
+若是以原点为中心的中心力，任一点的 $\bm F$
+必须与 $\bm r=(x,y)$ 平行。
+但 $\bm r\times\bm F$
+的平面垂直分量为 $2(\alpha-\beta)xy$，
+一般不为零，因此
+$\boxed{\text{非中心力场}}$。
+对于给定势能 $U_0>0$，等势线
+$\alpha x^2+\beta y^2=U_0$ 是椭圆；
+其 $x,y$ 轴半径分别为
+$\sqrt{U_0/\alpha},\sqrt{U_0/\beta}$，故
+$\boxed{a_x/a_y=\sqrt{\beta/\alpha}}$。
+力大小相同 $|\bm F|=F_0$ 则
+\[
+\alpha^2x^2+\beta^2y^2=\frac{F_0^2}{4},
+\quad\boxed{a_x/a_y=\frac{\beta}{\alpha}}.
+\]
+\excheck 两族曲线都是同轴椭圆，但长短轴比不同；
+仅 $\alpha=\beta$ 时力才处处径向。
+
+\exproblem{133}{22}
+考察两种与时间无关的平面力场：
+$\bm F_1=ay\,\bm i$ 和
+$\bm F_2=ax\,\bm i+by\,\bm j$，
+其中 $a,b$ 均为常数。
+求两力场分别是否存在势能函数。
+\exsolution
+在单连通平面上，足够光滑力场存在势函数的必要充分条件是
+$\partial F_y/\partial x=\partial F_x/\partial y$。
+对 $\bm F_1$，
+\[
+\frac{\partial F_{1y}}{\partial x}=0,\qquad
+\frac{\partial F_{1x}}{\partial y}=a.
+\]
+因此当 $a\ne0$ 时不满足条件，
+$\boxed{\bm F_1\text{ 非保守}}$；
+$a=0$ 时它为零场，当然保守。
+对 $\bm F_2$，两偏导均为零，故保守，
+相应势能可取
+\[
+\boxed{U_2(x,y)=-\frac12ax^2-\frac12by^2+C},
+\]
+因为 $-\nabla U_2=\bm F_2$。
+\excheck 即使力与时间无关也未必是保守力；
+判断标准是旋度而不是“定常”。
+
+\exproblem{134}{23}
+质量为 $m$ 的物块以初速 $v_0$
+沿倾角 $\alpha$ 的粗糙斜面向上滑动，
+摩擦系数为 $k$。
+求停下以前的路程及摩擦力在此过程中所做的功。
+\exsolution
+沿斜面向上运动时，重力切向分量及摩擦力均指向下方，
+减速度大小
+$a=g(\sin\alpha+k\cos\alpha)$。
+由 $0=v_0^2-2as$：
+\[
+\boxed{s_{\rm stop}=
+\frac{v_0^2}{2g(\sin\alpha+k\cos\alpha)}}.
+\]
+摩擦力大小 $kmg\cos\alpha$，恒反向于位移，
+所以
+\[
+W_f=-kmg\cos\alpha\,s_{\rm stop}
+=\boxed{-\frac{mv_0^2 k}
+ {2(\tan\alpha+k)}}.
+\]
+\excheck $k=0$ 时停下距离为 $v_0^2/(2g\sin\alpha)$
+且摩擦功为零；$k>0$ 时摩擦功为负。
+
+\exproblem{135}{23}
+图1.30中，小圆片从高度 $H$ 的光滑坡顶由静止滑下，
+坡道末端有一个高于地面 $h$ 的水平段，
+圆片从该段末端水平飞出。
+求使落地点与平台边缘的水平距离 $s$ 最大的 $h$
+及相应最大射程。
+\exsolution
+能量守恒给出水平飞出速度
+$v=\sqrt{2g(H-h)}$。
+从高 $h$ 的平台水平抛出，落地用时
+$t=\sqrt{2h/g}$，故
+\[
+s(h)=vt=2\sqrt{h(H-h)}.
+\]
+平方为
+$s^2=4[hH-h^2]=H^2-4(h-H/2)^2$，
+所以在 $0<h<H$ 中，唯一最大点为
+\[
+\boxed{h_{\rm opt}=\frac H2,\qquad
+s_{\max}=H}.
+\]
+\excheck $h\to0$ 或 $h\to H$ 时射程均趋零，
+验证内部极大值合理。
+
+\exproblem{136}{23}
+图1.31中，小物体从高度 $h$ 由静止出发，
+沿光滑槽道下滑，槽道随后变为
+半径 $R=h/2$ 的竖直半圆弧。
+物体在接近顶部前离开槽道，之后作抛体运动。
+求离槽后自由飞行过程中到达\emph{最高点}时的速率。
+\exsolution
+取半圆弧的圆心距地面高度为 $R=h/2$，
+用 $\theta$ 表示圆弧上质点半径与竖直向上的夹角。
+其高度 $y=R(1+\cos\theta)$。
+由能量守恒
+\[
+v^2=2g(h-y)=2gR(1-\cos\theta).
+\]
+在槽内向心方向列力学方程
+$N+mg\cos\theta=mv^2/R$；
+当 $N=0$ 时离开槽道，所以
+$g\cos\theta=2g(1-\cos\theta)$，
+即 $\cos\theta=2/3$、$v^2=2gR/3=gh/3$。
+离开时速度沿圆弧切线，其水平方向分量为
+$v_x=v\cos\theta$；之后忽略阻力，
+到抛体最高点的速率即 $|v_x|$，故
+\[
+\boxed{v_{\rm apex}=\frac23\sqrt{\frac{gh}{3}}}.
+\]
+\excheck 此“最高点”是离槽后的\emph{自由抛物线顶点}，
+不是圆槽最上端；二者不能混淆。
+
+\exproblem{137}{23}
+摆长 $\ell$ 的单摆起初竖直静止。
+将悬点突然以某水平方向的恒速移动，
+使小球相对悬点获得初速。
+求让小球能够在整个竖直圆周内绳始终绷紧所需的
+悬点最小速率，以及小球运动至水平位置时的绳张力。
+\exsolution
+设悬点移动速率为 $u$；
+悬点突然运动时小球速度尚未来得及变化，
+故小球相对悬点的初速大小为 $u$，
+初始位置在圆周最低点。
+从最低点到最高点的重力势能增量为 $2mg\ell$，
+能量守恒给出
+$v_{\rm top}^2=u^2-4g\ell$。
+为了在圆顶保持绳绷紧，
+由向心方程 $T_{\rm top}+mg=mv_{\rm top}^2/\ell$
+要求 $v_{\rm top}^2\ge g\ell$。
+故
+\[
+\boxed{u_{\min}=\sqrt{5g\ell}}.
+\]
+在水平位置高度较起点上升 $\ell$，
+此刻速度平方
+$v_{\rm side}^2=u_{\min}^2-2g\ell=3g\ell$。
+重力沿指向悬点的径向分量为零，
+于是
+\[
+\boxed{T_{\rm side}=\frac{mv_{\rm side}^2}{\ell}=3mg}.
+\]
+\excheck 临界最小初速对应最高点张力恰为零，
+再小便会在到达最高点之前绳子松弛。
+
+\exproblem{138}{23}
+如图1.32，从上方看，一质量很小的圆片 $A$
+用长为 $\ell_0$ 的水平细绳系于静止圆柱
+表面切点 $B$，圆柱半径为 $R$。
+初始圆片获得垂直于细绳的速度 $v_0$，
+随运动细绳不断绕圆柱缠绕。
+忽略摩擦，求圆片最终撞上圆柱的时间。
+\exsolution
+细绳张力始终垂直于圆片的瞬时速度，不做功，
+所以圆片速率保持 $v_0$。
+令绳子在柱面上新缠绕的圆心角为 $\varphi$，
+则自由绳长
+$\ell(\varphi)=\ell_0-R\varphi$。
+圆片轨迹是圆柱横截面的渐开线，其弧长微元
+\[
+\mathrm ds=\ell(\varphi)\,\mathrm d\varphi
+=(\ell_0-R\varphi)\,\mathrm d\varphi.
+\]
+从 $\varphi=0$ 到绳全绕完
+$\varphi_*=\ell_0/R$，总路程为
+\[
+s=\int_0^{\ell_0/R}
+(\ell_0-R\varphi)\,\mathrm d\varphi
+=\frac{\ell_0^2}{2R}.
+\]
+故
+\[
+\boxed{t=\frac{s}{v_0}=\frac{\ell_0^2}{2Rv_0}}.
+\]
+\excheck 绳长变短时圆片的瞬时曲率半径也逐渐变小；
+不能把它的运动当作以固定半径 $\ell_0$ 的圆周运动。
+
+\exproblem{139}{23}
+图1.33中，长为 $\ell$、劲度系数为 $k$ 的轻弹性绳
+上端固定在 $O$，下端带轻挡块 $B$。
+质量为 $m$ 的小环 $A$ 从 $O$ 处静止开始下落，
+先自由落下距离 $\ell$，随后挡块受力使弹性绳伸长。
+求绳子的最大伸长量 $\Delta\ell$。
+\exsolution
+从初始位置到最大伸长点，
+小环总下降距离为 $\ell+\Delta\ell$，
+初末速率均为零。
+忽略绳和挡块的质量以及耗散，
+重力势能损失全部转为弹性势能：
+\[
+mg(\ell+\Delta\ell)=\frac12 k(\Delta\ell)^2.
+\]
+这是关于 $\Delta\ell$ 的一元二次方程，
+取正根得
+\[
+\boxed{\Delta\ell=
+\frac{mg}{k}\left(1+
+\sqrt{1+\frac{2k\ell}{mg}}\right)}.
+\]
+\excheck $\ell\to0$ 时退化为从自然长位置
+自由下落的竖直弹簧最大伸长 $2mg/k$；
+另一负根没有物理意义。
+
+\exproblem{140}{24}
+图1.34中，质量为 $m$ 的物块 $A$
+在光滑水平面上，初始由左侧绳 $PA$ 固定，
+向右的绳跨过轻滑轮连接等质量重物 $B$。
+另有弹簧竖直连接 $A$ 与其正上方固定点 $O$，
+弹簧自然长 $\ell_0=0.50\,\mathrm m$，
+劲度系数 $k=5mg/\ell_0$。
+烧断左绳后，求 $A$ 刚开始离开水平面时的速度。
+\exsolution
+设 $A$ 向右滑过 $x$，由右绳长度守恒，
+$B$ 下降同样距离 $x$，两物块速率相同为 $v$。
+弹簧长度变为
+$L=\sqrt{\ell_0^2+x^2}$。
+弹簧向上的作用力分量为
+$k(L-\ell_0)\ell_0/L$；
+离面临界时地面支持力 $N=0$，故
+\[
+k(L-\ell_0)\frac{\ell_0}{L}=mg.
+\]
+代入 $k=5mg/\ell_0$ 得
+$5(1-\ell_0/L)=1$，
+所以 $L=5\ell_0/4$，进而
+$x=3\ell_0/4$。
+系统重物的势能损失为 $mgx$，
+弹簧势能增加为
+$\tfrac12 k(L-\ell_0)^2=5mg\ell_0/32$。
+两等质量物块总动能为
+$2(\tfrac12 mv^2)=mv^2$，故
+\[
+mv^2=mg\frac{3\ell_0}{4}
+-\frac{5mg\ell_0}{32}
+=\frac{19mg\ell_0}{32}.
+\]
+因此
+\[
+\boxed{v=\sqrt{\frac{19g\ell_0}{32}}
+\simeq1.70\,\mathrm{m/s}}.
+\]
+\excheck 此刻弹簧竖直分力恰好抵消重力，
+而非弹簧长度刚超过自然长时立刻离面。
+% === END 03-mechanics-conservation-131-140.tex ===
+
+% === BEGIN 03-mechanics-conservation-141-150.tex blob 4b5af215b426aa313c19b62747f95c373eee6247 ===
+% Irodov Arihant PDF pp. 33--35, printed pp. 24--26.
+\exproblem{141}{24}
+如图1.35，质量 $m=1.0\,\mathrm{kg}$ 的小块置于一块
+可水平缓慢移动的木板上，借一根初长
+$\ell_0=0.40\,\mathrm m$ 的轻弹性绳连接到固定点 $O$。
+绳初始竖直。小块与木板摩擦系数 $k=0.20$。
+缓慢向右移动木板，直至弹性绳与竖直夹角
+$\theta=30^\circ$、小块即将相对木板滑动。
+求截至此时摩擦力对小块在地面系中所做的功。
+\exsolution
+设弹性绳劲度系数为 $\kappa$，
+小块水平移动 $x$，绳长
+$L=\sqrt{\ell_0^2+x^2}$，
+伸长 $\Delta L=L-\ell_0$。
+在每个准静态位置，木板摩擦力大小等于
+弹性绳水平分力，
+$f=\kappa(L-\ell_0)x/L$。
+因 $\mathrm dL=(x/L)\mathrm dx$，
+摩擦力累计做功
+\[
+W_f=\int_0^{x_*}f\,\mathrm dx
+=\int_{\ell_0}^{L_*}\kappa(L-\ell_0)\,\mathrm dL
+=\frac12\kappa(\Delta L_*)^2.
+\]
+到将滑动的临界位置，支持力
+$N=mg-\kappa\Delta L_*\cos\theta$，而
+$f=kN$，所以
+\[
+\kappa\Delta L_*(\sin\theta+k\cos\theta)=kmg.
+\]
+又 $\Delta L_*=\ell_0(\sec\theta-1)$，
+故
+\[
+\boxed{W_f=
+\frac{kmg\ell_0(1-\cos\theta)}
+ {2\cos\theta(\sin\theta+k\cos\theta)}
+\simeq0.090\,\mathrm J}.
+\]
+\excheck 此功为正，因为地面系中木板摩擦力推动小块向右；
+绳储存的弹性能恰好是该做功。
+板—块间接近静止的相对位移并不等于地面系的位移。
+
+\exproblem{142}{24}
+光滑轻水平杆 $AB$ 能绕端点 $A$ 的竖直轴旋转。
+一小滑套质量为 $m$，以一根自然长 $\ell_0$、
+劲度系数 $\kappa$ 的轻弹簧与点 $A$ 相连。
+问为使系统缓慢加速到角速度 $\omega$，
+外界至少应做多少功。
+\exsolution
+设最终稳定径向位置为 $r$。
+在旋转参考系中径向力平衡：
+\[
+\kappa(r-\ell_0)=m\omega^2 r.
+\]
+令 $\eta=m\omega^2/\kappa$。
+当 $0\le\eta<1$ 时
+$r=\ell_0/(1-\eta)$，
+弹簧伸长
+$\Delta r=\ell_0\eta/(1-\eta)$。
+缓慢加速可使径向振动动能趋零，
+外力至少须提供最终旋转动能和弹簧弹性势能：
+\[
+W_{\min}
+=\frac12m\omega^2r^2
++\frac12\kappa(\Delta r)^2.
+\]
+代入化简
+\[
+\boxed{W_{\min}=
+\frac{\kappa\ell_0^2}{2}
+\frac{\eta(1+\eta)}{(1-\eta)^2}},
+\qquad
+\eta=\frac{m\omega^2}{\kappa}<1.
+\]
+\excheck $\eta\to0$ 时
+$W_{\min}\sim \tfrac12m\omega^2\ell_0^2$；
+$\eta\to1^-$ 时位移与所需功发散，
+意味着理想弹簧模型没有有限稳定平衡。
+
+\exproblem{143}{24}
+轻绳跨过固定的无摩擦轻滑轮，两端挂质量
+$m_1,m_2$ 的重物。求两物体构成的系统质心加速度。
+\exsolution
+取竖直向下为正，两端加速度大小相等、方向相反。
+阿特伍德机中 $m_1$ 的加速度为
+\[
+a_1=g\frac{m_1-m_2}{m_1+m_2},
+\quad a_2=-a_1.
+\]
+系统总质量 $M=m_1+m_2$，
+质心加速度按定义为
+\[
+a_C=\frac{m_1a_1+m_2a_2}{M}
+=\frac{m_1-m_2}{m_1+m_2}a_1.
+\]
+故
+\[
+\boxed{a_C=g\frac{(m_1-m_2)^2}{(m_1+m_2)^2}},
+\]
+沿竖直向下方向（相等质量时为零）。
+\excheck 虽然一个重物向上运动，另一重物向下运动，
+质心仍可能向下加速；不可把两物体的加速度简单平均。
+
+\exproblem{144}{25}
+两个相互作用的质点构成孤立系统，质心始终静止。
+图1.36给出了某时刻两质点的位置，
+以及质量为 $m_1$ 的质点的轨迹。
+另有 $m_2=m_1/2$。求画出另一个质点的轨迹。
+\exsolution
+由于质心静止，它的位置矢量 $\bm R_C$ 不随时间变化：
+\[
+m_1(\bm r_1-\bm R_C)+
+m_2(\bm r_2-\bm R_C)=\bm0.
+\]
+利用 $m_2=m_1/2$，得到逐时刻的位置映射
+\[
+\boxed{\bm r_2(t)-\bm R_C
+=-2[\bm r_1(t)-\bm R_C]}.
+\]
+因此，以固定质心为中心将图中质点1的整条轨迹
+进行\emph{中心反演}，再将相对质心的距离扩大 $2$ 倍，
+即得到质点2的轨迹。任意相应时刻两质点与质心共线、
+位于质心的两侧。
+\excheck 本版题面英文末句重复称“画 $m_1$ 的轨迹”，
+而图中已给出 $m_1$ 的轨迹；
+本稿按显然的物理意图给出 $m_2$ 的轨迹，
+并将这一题面指代问题列为待校勘事项。
+
+\exproblem{145}{25}
+一闭合链条质量为 $m=0.36\,\mathrm{kg}$，
+由一根细绳系在竖直旋转轴上，
+以恒角速度 $\omega=35\,\mathrm{rad/s}$ 绕轴转动。
+细绳与竖直方向夹角为 $\theta=45^\circ$（图1.37）。
+求链条质心到旋转轴的距离 $r$ 及绳张力 $T$。
+\exsolution
+把整个闭合链条视为整体，内部约束力合力为零。
+质心受力仅有向下重力 $mg$ 和沿绳向上、向轴的张力。
+竖直平衡与水平向心运动分别满足
+\[
+T\cos\theta=mg,\qquad
+T\sin\theta=m\omega^2r.
+\]
+两式相除消去 $T$：
+\[
+\boxed{r=\frac{g\tan\theta}{\omega^2}
+\simeq0.00800\,\mathrm m=0.80\,\mathrm{cm}},
+\]
+再由竖直平衡得
+\[
+\boxed{T=\frac{mg}{\cos\theta}
+\simeq4.99\,\mathrm N}.
+\]
+\excheck 只用整个链条的质心动力学便可求此二量，
+不必知道链条实际受旋转影响形成的空间形状。
+
+\exproblem{146}{25}
+一均匀圆锥 $A$ 的质量
+$m=3.2\,\mathrm{kg}$、半顶角 $\alpha=10^\circ$，
+沿另一圆锥面 $B$ 匀速纯滚动，锥顶 $O$ 固定（图1.38）。
+$A$ 的质心与 $O$ 等高，距 $O$ 的距离
+$\ell=0.17\,\mathrm m$，其轴以角速度 $\omega$ 转动。
+求：（a）$\omega=1.0\,\mathrm{rad/s}$ 时静摩擦力；
+（b）当摩擦系数 $k=0.25$ 时保持纯滚动的角速度范围。
+\exsolution
+质心绕竖直轴作水平圆周运动，加速度大小为
+$\omega^2\ell$，方向指向 $O$。
+把接触处作用力分解成法向支持力 $N$ 与沿接触母线的
+静摩擦力 $f$。在过 $O$ 和质心的竖直剖面内，
+将重力与质心的水平向心加速度分别投影到接触母线
+及其法线，得
+\[
+\boxed{f=m(g\sin\alpha+\omega^2\ell\cos\alpha)},\qquad
+\boxed{N=m(g\cos\alpha-\omega^2\ell\sin\alpha)}.
+\]
+当 $\omega=1.0\,\mathrm{rad/s}$，
+\[
+\boxed{f\simeq
+3.2[9.8\sin10^\circ+0.17\cos10^\circ]
+\simeq5.98\,\mathrm N}.
+\]
+纯滚动要求 $f\le kN$，所以
+\[
+g\sin\alpha+\omega^2\ell\cos\alpha
+\le k(g\cos\alpha-\omega^2\ell\sin\alpha).
+\]
+若 $k>\tan\alpha$，其角速度上限为
+\[
+\boxed{0\le\omega\le
+\sqrt{\frac{g(k-\tan\alpha)}
+{\ell(1+k\tan\alpha)}}\simeq2.02\,\mathrm{rad/s}}.
+\]
+\excheck 题设 $k=0.25>\tan10^\circ$，
+故静止或缓慢滚动时有足够摩擦；
+该上限同时保证 $N>0$。
+书末给出的“$\omega\ll2$”应理解为不超过静摩擦临界值，
+而非要求速度必须远小于某数值的渐近条件。
+
+\exproblem{147}{25}
+在惯性系 $K$ 中，两质点质量分别为 $m_1,m_2$，
+沿同一 $x$ 轴以速率的有符号值 $v_1,v_2$ 运动。
+求：（a）使两质点总动能最小的匀速平移参考系 $K'$
+相对 $K$ 的速度 $V$；
+（b）该最小总动能。
+\exsolution
+在以 $V$ 平移的惯性系中两物体的速度为
+$v_1-V$ 和 $v_2-V$，总动能
+\[
+K(V)=\frac12m_1(v_1-V)^2+
+\frac12m_2(v_2-V)^2.
+\]
+对 $V$ 微分求极小值：
+\[
+\frac{\mathrm dK}{\mathrm dV}
+=-m_1(v_1-V)-m_2(v_2-V)=0.
+\]
+因此
+\[
+\boxed{V=\frac{m_1v_1+m_2v_2}{m_1+m_2}},
+\]
+即质心速度。代回得
+\[
+\boxed{K_{\min}=
+\frac12\mu(v_1-v_2)^2},\quad
+\mu=\frac{m_1m_2}{m_1+m_2}.
+\]
+\excheck 二阶导数
+$\mathrm d^2K/\mathrm dV^2=m_1+m_2>0$，
+故这确实是全局最小值。
+
+\exproblem{148}{25}
+某粒子系统总质量为 $M$，
+其质心静止系相对惯性系 $K$ 以速度 $\bm V$ 匀速平移。
+系统在质心系中的总机械能为 $\widetilde E$，
+求在 $K$ 系中的总机械能 $E$。
+\exsolution
+质点 $i$ 的速度写为
+$\bm v_i=\bm V+\widetilde{\bm v}_i$，
+且质心系满足
+$\sum_i m_i\widetilde{\bm v}_i=\bm0$。
+因此
+\[
+\sum_i\frac12m_i v_i^2
+=\frac12M V^2+
+\sum_i\frac12m_i\widetilde v_i^2,
+\]
+因为动能展开后的交叉项为零。
+系统内部势能与整体平移速度无关，
+故总机械能关系为
+\[
+\boxed{E=\widetilde E+\frac12M V^2}.
+\]
+\excheck 这就是柯尼希动能定理；
+若“总能量”包含狭义相对论静能，则不能直接将此
+非相对论经典式作为严格关系。
+
+\exproblem{149}{25--26}
+两个小圆片质量分别为 $m_1,m_2$，
+通过轻弹簧相连并置于光滑水平面上，
+随后分别给予互相垂直的初速度矢量
+$\bm v_1,\bm v_2$。
+求系统在质心系中的总能量（取弹簧初始未形变）。
+\exsolution
+在初始时刻，系统的质心系动能为
+\[
+K_{\rm rel}
+=\frac12\mu|\bm v_1-\bm v_2|^2,\qquad
+\mu=\frac{m_1m_2}{m_1+m_2}.
+\]
+由于 $\bm v_1\cdot\bm v_2=0$，
+\[
+|\bm v_1-\bm v_2|^2=v_1^2+v_2^2.
+\]
+若弹簧初始处于自然长度，
+则初始弹性势能为零，总能量守恒给出
+\[
+\boxed{\widetilde E=
+\frac12\frac{m_1m_2}{m_1+m_2}(v_1^2+v_2^2)}.
+\]
+\excheck 若初始弹簧已发生形变，题目需要额外给出初始弹性能，
+此结果应再加该项；不能由速度数据单独决定全部机械能。
+
+\exproblem{150}{26}
+两个小球质量为 $m_1,m_2$，通过轻弹簧连接。
+$t=0$ 时其初速度分别为矢量
+$\bm v_1,\bm v_2$，随后在地球近地面均匀重力场中运动，
+忽略空气阻力。求系统总动量 $\bm p(t)$
+和质心相对初始位置的位矢 $\Delta\bm r_C(t)$。
+\exsolution
+系统内部弹簧力总和为零，唯一外力合力是
+$(m_1+m_2)\bm g$，
+因此由总动量定理
+\[
+\frac{\mathrm d\bm p}{\mathrm dt}=(m_1+m_2)\bm g,
+\]
+积分得到
+\[
+\boxed{\bm p(t)=m_1\bm v_1+m_2\bm v_2
+ +(m_1+m_2)\bm g\,t}.
+\]
+质心速度为
+$\bm v_C(t)=\bm p(t)/(m_1+m_2)$，
+所以
+\[
+\boxed{\Delta\bm r_C(t)=
+\frac{m_1\bm v_1+m_2\bm v_2}{m_1+m_2}\,t
++\frac12\bm g\,t^2}.
+\]
+\excheck 无论弹簧是否振动、两球间距如何变化，
+只要外力只含均匀重力，质心仍作标准匀加速抛体运动。
+% === END 03-mechanics-conservation-141-150.tex ===
+
+% === BEGIN 03-mechanics-conservation-151-160.tex blob 9ad315095f71303d0ef6106c0b2bcff463c5f18f ===
+% Irodov, Arihant PDF pp. 35--36, printed pp. 26--27.
+\exproblem{151}{26}
+图1.39中，两个物块质量为 $m_1,m_2$，以劲度系数
+$\kappa$ 的轻弹簧相连，置于光滑水平面上。
+物块1起初靠着墙，物块2将弹簧向左压缩一小段
+$x$ 后由静止释放。求物块1刚离墙后系统质心的速度。
+\exsolution
+在弹簧尚未恢复原长之前，弹簧对物块1的压力向左，
+墙的支持力使物块1始终静止。物块2单独作弹簧振动，
+弹簧恢复自然长度瞬间，物块1刚要离开墙。
+在此前阶段，初始弹性能
+$\tfrac12\kappa x^2$ 全部变成物块2的动能：
+\[
+\frac12\kappa x^2=\frac12m_2v_2^2
+\quad\Longrightarrow\quad
+v_2=x\sqrt{\frac{\kappa}{m_2}}.
+\]
+此瞬间 $v_1=0$，系统质心速度为
+\[
+\boxed{v_C=\frac{m_2v_2}{m_1+m_2}
+=\frac{x\sqrt{\kappa m_2}}{m_1+m_2}},
+\]
+方向远离墙。
+\excheck 不能从 $t=0$ 起应用\emph{两物块}的总水平
+动量守恒，因为在离墙前墙对物块1有外力。
+
+\exproblem{152}{26}
+两个物块以自然长 $\ell_0$ 的轻弹簧连接，
+弹簧劲度系数 $\kappa$，放在光滑水平面上。
+从 $t=0$ 起对右侧物块 $m_2$ 施加恒定水平向右力 $F$。
+求两物块距离的最大值与最小值：
+（a）当两物块质量相等；
+（b）任意质量 $m_1,m_2$。
+\exsolution
+设两块坐标 $x_1,x_2$，相对距离
+$\ell=x_2-x_1$，则
+\[
+m_1\ddot x_1=\kappa(\ell-\ell_0),\qquad
+m_2\ddot x_2=F-\kappa(\ell-\ell_0).
+\]
+相减得到
+\[
+\ddot\ell+\kappa\left(\frac1{m_1}+\frac1{m_2}\right)
+(\ell-\ell_0)=\frac F{m_2}.
+\]
+令 $\mu=m_1m_2/(m_1+m_2)$，
+$\Omega^2=\kappa/\mu$，
+$\delta=Fm_1/[\kappa(m_1+m_2)]$。
+用初值 $\ell(0)=\ell_0,\ \dot\ell(0)=0$ 解得
+\[
+\ell(t)=\ell_0+\delta(1-\cos\Omega t).
+\]
+因此
+\[
+\boxed{\ell_{\min}=\ell_0,\qquad
+\ell_{\max}=\ell_0+\frac{2m_1F}{\kappa(m_1+m_2)}}.
+\]
+当 $m_1=m_2$ 时，
+$\boxed{\ell_{\max}=\ell_0+F/\kappa}$。
+\excheck 任意时间 $1-\cos\Omega t\in[0,2]$，
+所以给出的最大、最小距离均可以实际达到。
+
+\exproblem{153}{26}
+图1.41中两个质量均为 $m$ 的小立方体上下排列，
+以劲度系数 $\kappa$ 的竖直轻弹簧相连，
+弹簧初始压缩 $\Delta\ell$，两物块又用绳固定。
+烧断绳后，求：（a）下方立方体最终会离地的条件；
+（b）若 $\Delta\ell=7mg/\kappa$，
+系统质心能上升的最大高度。
+\exsolution
+定义 $q=mg/\kappa$，取弹簧形变
+$x$（拉伸为正）。下方立方体未离地时，上方物块
+从 $x=-\Delta\ell$ 由静止运动。
+其机械能守恒：
+\[
+\tfrac12mv^2+\tfrac12\kappa x^2+mgx
+=\tfrac12\kappa(\Delta\ell)^2-mg\Delta\ell.
+\]
+若下块一直贴地，上块最高时 $v=0$，
+非平凡转折形变为
+$x_{\max}=\Delta\ell-2q$。
+下块受弹簧上拉力 $\kappa x$，
+只有当 $x>q$ 才可能离地，因此
+\[
+\boxed{\Delta\ell>3q=\frac{3mg}{\kappa}}.
+\]
+在刚离地时 $x=q$，上块动能由上述能量式给出
+\[
+v^2=\frac{\kappa}{m}(\Delta\ell+q)(\Delta\ell-3q).
+\]
+此刻下块速度仍为零，因此系统质心速度为 $v/2$。
+从初始到下块刚离地，质心已升高
+$(\Delta\ell+q)/2$；之后系统只受重力，
+质心再升高 $v^2/(8g)$，故
+\[
+\boxed{h_C^{\max}=
+\frac{(\Delta\ell+q)^2}{8q}
+=\frac{mg}{8\kappa}
+\left(1+\frac{\kappa\Delta\ell}{mg}\right)^2}.
+\]
+代入 $\Delta\ell=7q$：
+$\boxed{h_C^{\max}=8mg/\kappa}$。
+\excheck 判断下块离地必须比较弹簧\emph{最大拉伸}
+而非初始压缩时的弹簧力。
+质心在两块离地以后受的加速度始终是 $-\bm g$。
+
+\exproblem{154}{26}
+两辆相同小车1、2在平行无摩擦轨道上相向运动，
+每辆空车质量为 $M$，各载一名质量 $m$ 的人。
+小车相遇时两人沿垂直轨道方向跳到对方车上。
+最终车1静止，车2保持原来的运动方向、
+速度为 $v$。求两车原来沿轨道的有符号速度 $v_1,v_2$。
+\exsolution
+跳跃沿横向进行，对运动方向的碰撞可以看作
+“外来乘客与车体”之间的非弹性结合，
+各乘客在跳出时保留原车的纵向速度。
+故最终纵向速度为
+\[
+V_1=\frac{Mv_1+mv_2}{M+m}=0,\quad
+V_2=\frac{Mv_2+mv_1}{M+m}=v.
+\]
+第一式给出 $v_1=-(m/M)v_2$，
+代入第二式后得
+\[
+\boxed{v_1=-\frac{mv}{M-m},\qquad
+v_2=\frac{Mv}{M-m}}.
+\]
+\excheck 要让车2继续沿初始方向运动且该速度为正，
+必须有 $M>m$。两车最初相向：
+$v_1$ 与 $v_2$ 确为相反符号。
+
+\exproblem{155}{27}
+两辆相同空车质量为 $M$，
+沿同一直线无摩擦轨道同向以速率 $v_0$ 行驶。
+后车载一名质量 $m$ 的乘客，乘客以相对后车的
+向前速度 $u$ 跳到前车。
+求两车最终速度。
+\exsolution
+设乘客起跳后后车速度为 $V_r$。
+乘客离后车时，其纵向速度为 $V_r+u$。
+对起跳过程的后车—乘客体系守恒纵向动量：
+\[
+(M+m)v_0=MV_r+m(V_r+u),
+\]
+故
+\[
+\boxed{V_r=v_0-\frac{m}{M+m}u}.
+\]
+乘客随后落到前车上，为完全非弹性纵向结合，
+落地前乘客速度为
+$v_p=V_r+u=v_0+Mu/(M+m)$。
+对前车及乘客守恒纵向动量：
+\[
+(M+m)V_f=Mv_0+mv_p,
+\]
+所以
+\[
+\boxed{V_f=v_0+\frac{mM}{(M+m)^2}u}.
+\]
+\excheck 后车减速、前车加速；整体纵向动量
+在两次相互作用全过程仍然守恒。
+
+\exproblem{156}{27}
+一辆质量为 $M$ 的无摩擦小车上静止站着两个人，
+每人质量均为 $m$。
+两人分别以相对小车的水平速度 $u$
+向同一方向跳下。求小车最终速度：
+（1）两人同时跳；
+（2）两人先后跳；
+并比较两种情况下的小车速度大小。
+\exsolution
+取乘客跳出方向为正。
+（1）同时跳出时，小车末速 $V_{\rm sim}$，
+两人末速均为 $V_{\rm sim}+u$，动量守恒：
+\[
+0=MV_{\rm sim}+2m(V_{\rm sim}+u),
+\quad
+\boxed{V_{\rm sim}=-\frac{2m}{M+2m}u}.
+\]
+（2）先跳者离车时，仍留在车上的人
+与空车总质量 $M+m$，末速为 $V_1$。
+第一跳：
+$0=(M+m)V_1+m(V_1+u)$，
+故 $V_1=-mu/(M+2m)$。
+第二跳时，由相对于第一跳前的运动系守恒动量，
+空车最终速度再减少 $mu/(M+m)$，于是
+\[
+\boxed{V_{\rm seq}=
+-\frac{m(2M+3m)}{(M+m)(M+2m)}u}.
+\]
+二者速度大小之比为
+\[
+\boxed{\frac{|V_{\rm seq}|}{|V_{\rm sim}|}
+=1+\frac{m}{2(M+m)}>1}.
+\]
+\excheck 先后跳下时第二人面对的可反冲剩余总质量更小，
+故同样相对跳速产生更大最终反冲。
+
+\exproblem{157}{27}
+一条均匀柔软链条竖直悬挂，下端恰触到桌面。
+烧断上端支承绳后，链条开始自由落下并逐渐堆积在桌上。
+证明在任意时刻，\emph{仍在下落的链段}对桌面的冲击力
+是\emph{已经静置在桌上链段}重力的两倍。
+\exsolution
+设链条线密度为 $\lambda$，
+在时刻 $t$ 已经到达桌面的链长为 $x$。
+由于烧断后各链元由静止开始自由落体，
+达到桌面的链元速率为 $v=\sqrt{2gx}$。
+单位时间内到达桌面的链条质量
+$\dot m=\lambda v$。
+下落链元被桌面制止，需要动量变化率
+\[
+F_{\rm impact}=\dot m\,v=\lambda v^2=2\lambda gx.
+\]
+已经堆积在桌面上的链条质量为 $\lambda x$，
+其静重力为
+$W_{\rm rested}=\lambda gx$，因此
+\[
+\boxed{F_{\rm impact}=2W_{\rm rested}}.
+\]
+\excheck 全部对桌面的瞬时压力实际上为
+$F_{\rm impact}+W_{\rm rested}=3\lambda gx$，
+但题目只把\emph{下落部分的冲击力}与静置部分重量相比。
+假定链元落桌后立即静止且无弹跳。
+
+\exproblem{158}{27}
+一颗钢球质量 $m=50\,\mathrm g$，
+由高度 $h=1.0\,\mathrm m$ 落向很重的水平板。
+钢球每次碰撞后的反弹速率
+是碰撞前速率的 $1/\eta$，
+其中 $\eta=1.25$。
+求经无数次弹跳，钢球传给平板的总冲量。
+\exsolution
+第一次碰撞前的下降速率
+$v_0=\sqrt{2gh}$。
+第 $n$ 次（从 $n=0$ 编号）碰撞前速率
+$v_n=v_0/\eta^n$，碰后向上速率 $v_n/\eta$。
+按向下为正，钢球碰撞动量变化为
+$-m v_n/\eta-(+m v_n)$，
+所以钢球传给平板的向下冲量大小为
+$m v_n(1+1/\eta)$。
+总冲量是收敛几何级数：
+\[
+J=\sum_{n=0}^\infty m v_0
+\left(1+\frac1\eta\right)\eta^{-n}
+=mv_0\frac{\eta+1}{\eta-1}.
+\]
+代入数值：
+\[
+\boxed{J=
+0.050\sqrt{2(9.81)(1.0)}
+\frac{2.25}{0.25}
+\simeq1.99\,\mathrm{N\,s}},
+\]
+方向向下。
+\excheck 第一次碰撞的冲量约 $0.399\,\mathrm{N\,s}$，
+后续总和约 $1.60\,\mathrm{N\,s}$，符合几何级数。
+原书印刷答案页确实写有 $0.2\,\mathrm{kg\,m/s}$，但将题面参数代入同页公式应得约 $2.0\,\mathrm{kg\,m/s}$；因此这是印刷数值勘误，并非 PDF 文字提取错误。
+
+\exproblem{159}{27}
+质量为 $M$ 的木筏与质量为 $m$ 的人一起静止浮在湖面，
+忽略水的水平阻力。
+人在筏上相对木筏移动总距离 $\ell'$，
+相对速度随时间变化为 $v'(t)$，最后停住。
+求：（a）木筏相对湖岸的位移；
+（b）人对木筏的水平作用力。
+\exsolution
+取人的移动方向为正，筏岸位移记 $X$，
+人岸位移为 $X+\ell'(t)$。
+系统初始总水平动量为零，始终没有外部水平合力：
+\[
+M\dot X+m(\dot X+v')=0
+\Longrightarrow
+\dot X=-\frac{m}{M+m}v'.
+\]
+积分得木筏的最终位移
+\[
+\boxed{\Delta X=-\frac{m}{M+m}\ell'}.
+\]
+对木筏单独应用牛顿第二定律，
+人施加的水平作用力为
+\[
+\boxed{F_{\rm man\to raft}=M\ddot X
+=-\frac{mM}{M+m}\frac{\mathrm dv'}{\mathrm dt}}.
+\]
+\excheck 人在木筏上加速前行时筏向后受力，
+人在末段减速时木筏可能受向前的力；
+人停下后系统质心仍保持原水平位置。
+
+\exproblem{160}{27}
+一固定滑轮上跨轻绳，一端悬挂梯子和攀登者，
+另一端悬挂质量为 $M$ 的配重。
+攀登者质量为 $m$，在梯子上相对梯子向上爬
+$\ell'$ 后停住，忽略滑轮摩擦与绳质量。
+求这个系统质心的竖直位移。
+\exsolution
+为了使题目无需给梯子的质量还能得到唯一结果，
+应采用原书常见的\emph{初始平衡配重}模型：
+梯子与人的总质量等于配重 $M$，
+即梯子质量为 $M-m$。
+设梯子相对地面竖直位移为 $y$（向上为正），
+则另一端配重因绳长约束位移为 $-y$；
+人相对梯子额外上升 $\ell'$，
+故其总位移为 $y+\ell'$。
+总质量为 $2M$，于是质心位移
+\[
+\Delta y_C=
+\frac{(M-m)y+m(y+\ell')+M(-y)}{2M}
+=\boxed{\frac{m\ell'}{2M}}.
+\]
+更一般地，若梯子的实际质量为$M_L$
+而非必然等于$M-m$，并令其地面位移为$y$，
+则严格质心位移是
+\[
+ \boxed{\Delta y_C=
+ \frac{(M_L+m-M)y+m\ell'}{M_L+m+M}}.
+\]
+它在$M_L+m=M$的初始平衡条件下，
+才\emph{独立于}未知的梯子位移$y$，
+并化为上面的$m\ell'/(2M)$。
+\excheck 已用用户提供的原版PDF第27印刷页
+复核英文原题：确实\emph{没有单独给出梯子质量}，
+也没有明确写“梯子加上攀登者与配重等重”。
+因此该题\emph{原印条件不足以唯一确定数值}，
+书末结果只能作为附加平衡假设下的分支解，
+不得标记为无附加条件的严格唯一结论。
+% === END 03-mechanics-conservation-151-160.tex ===
+
+% === BEGIN 03-mechanics-conservation-161-170.tex blob 706931fc88458fc684a8301d0a7419b3ecc7024e ===
+% Irodov, Arihant PDF pp. 36--38, printed pp. 27--29.
+% Momentum conservation, ballistic pendulum, elastic/inelastic collisions.
+\exproblem{161}{27}
+质量为 $M$ 的火炮从静止开始沿倾角为 $\alpha$ 的
+光滑斜面自由滑下，沿斜面移动距离 $\ell$ 后射出一枚
+水平方向动量大小为 $p$ 的炮弹（相对于地面）。
+因反冲，火炮在发射后停止。
+炮弹质量相对火炮可忽略。求发射持续时间 $\tau$。
+\exsolution
+设火炮沿斜面向下的速度刚开始发射时为 $u$，
+由发射前机械能守恒
+\[
+\frac12Mu^2=Mg\ell\sin\alpha
+\quad\Longrightarrow\quad
+u=\sqrt{2g\ell\sin\alpha}.
+\]
+取沿斜面向下为正。
+在发射持续时间 $\tau$ 内，
+重力沿斜面的冲量为 $Mg\sin\alpha\,\tau$。
+为使火炮停下，炮弹水平方向发射须在斜面向下方向
+具有正投影 $p\cos\alpha$，
+则火炮受到反向的沿斜面冲量 $-p\cos\alpha$。
+忽略炮弹相对火炮质量造成的质量修正，沿斜面动量定理：
+\[
+0-Mu=Mg\sin\alpha\,\tau-p\cos\alpha .
+\]
+所以
+\[
+\boxed{\tau=
+\frac{p\cos\alpha-M\sqrt{2g\ell\sin\alpha}}
+ {Mg\sin\alpha}}.
+\]
+\excheck 物理上要求 $\tau\ge0$，即
+$p\cos\alpha\ge M\sqrt{2g\ell\sin\alpha}$；
+若不满足，不可能以给定脉冲停止炮身。
+结果在理想脉冲模型下成立，未考虑实际炮身运动时滑轮或轮轨阻力。
+
+\exproblem{162}{27--28}
+质量为 $m$ 的子弹水平射入悬挂于两根等长细绳上的
+质量 $M$ 的物体中并嵌入（图1.42），随后
+悬挂系统向上摆至细绳偏离竖直 $\theta$。
+设 $m\ll M$、绳长为 $\ell$。
+求：（a）碰前子弹速率；
+（b）子弹初始动能中转化为热的比例。
+\exsolution
+碰撞时间很短，沿水平方向动量守恒。
+碰撞后子弹与物体组成整体，瞬时速度为 $V$：
+\[
+mv=(M+m)V.
+\]
+碰撞结束到摆至最高点，机械能守恒：
+\[
+\frac12(M+m)V^2=(M+m)g\ell(1-\cos\theta),
+\]
+故
+\[
+V=\sqrt{2g\ell(1-\cos\theta)}
+=2\sqrt{g\ell}\sin\frac\theta2.
+\]
+因此
+\[
+\boxed{v=\frac{2(M+m)}m\sqrt{g\ell}
+\sin\frac\theta2
+\simeq\frac{2M}{m}\sqrt{g\ell}\sin\frac\theta2}.
+\]
+碰撞中的机械能损失比例为
+\[
+\eta_{\rm heat}=
+1-\frac{\tfrac12(M+m)V^2}{\tfrac12mv^2}
+=1-\frac{m}{M+m}
+=\boxed{\frac{M}{M+m}\simeq1-\frac mM}.
+\]
+\excheck 短时碰撞\emph{只守恒水平动量}，不守恒动能；
+碰后摆起阶段才使用机械能守恒。
+
+\exproblem{163}{28}
+质量为 $M$ 的可水平滑动大物块置于光滑水平面，
+其上放一质量为 $m$ 的小圆片，
+圆片获得初始水平速率 $v$，并沿大物块的
+光滑弧形表面上爬（图1.43）。
+求圆片能够达到的最大高度（相对初始高度）。
+\exsolution
+水平外力为零，因此系统水平动量
+$P_x=mv$ 守恒。初始总动能为
+$K_0=\tfrac12mv^2$。
+在圆片达到最大可能高度时，系统动能不能小于
+同一水平动量对应的质心整体平移动能
+$K_{\rm CM}=P_x^2/[2(M+m)]$。
+若在上升最高位置的相对速度瞬时为零，
+该下界可以达到，因而
+\[
+mgh_{\max}=
+\frac12mv^2-\frac{m^2v^2}{2(M+m)}
+=\frac{mMv^2}{2(M+m)}.
+\]
+于是
+\[
+\boxed{h_{\max}=\frac{Mv^2}{2g(M+m)}}.
+\]
+\excheck 这是原书理想光滑导轨装置可达到的极限高度；
+$M\to\infty$ 时回到固定斜面上的 $v^2/(2g)$，
+$m\gg M$ 时可达到的高度趋小。
+
+\exproblem{164}{28}
+质量为 $m$ 的小圆片从高度 $h$ 的光滑小山
+由静止滑下，到达底部后进入质量为 $M$、
+初始静止的水平木板（地面光滑），
+圆片与木板之间存在摩擦，最终两者共同运动（图1.44）。
+求：（1）此过程中摩擦力所做总功；
+（2）这一结果是否依赖惯性参考系的选择。
+\exsolution
+圆片到山脚时速率
+$u=\sqrt{2gh}$，木板静止。
+进入木板后系统水平方向没有外力，
+因此最终共同速度由动量守恒给出
+\[
+V=\frac{mu}{m+M}.
+\]
+摩擦耗散的总机械能等于最终与初始动能之差：
+\[
+W_f=\frac12(M+m)V^2-\frac12mu^2
+=-\frac12\frac{mM}{m+M}u^2.
+\]
+用 $u^2=2gh$，得到
+\[
+\boxed{W_f=-\frac{mM}{m+M}gh=-\mu gh},
+\qquad \mu=\frac{mM}{m+M}.
+\]
+（2）两物体的摩擦力大小相等、方向相反，故它们做功的
+总和可以写为
+$W_f=-\int f\,\mathrm d(x_{\rm disc}-x_{\rm plank})$。
+两物体的相对位移在所有伽利略惯性系中相同，
+所以 $\boxed{W_f\text{ 不依赖惯性系选择}}$。
+\excheck 这里不变的是\emph{摩擦力的合计总功}，
+并非摩擦力分别对两物体所做的单独功。
+
+\exproblem{165}{28}
+一颗石子从地面上方高度 $h$ 的地方相对地面静止释放，
+忽略空气阻力。试改用一个相对地面以恒速
+$v_0$ 向下运动的惯性参考系，重新得到
+石子撞地速率 $v_0=\sqrt{2gh}$。
+\exsolution
+设所选参考系向下匀速平移，速率等于石子
+\emph{最终}撞地时相对地面的速率 $v_0$。
+在该系中，石子起始速度竖直向上，大小为 $v_0$；
+由于重力向下，石子作加速度 $-g$ 的运动，
+恰在撞地时相对该系速度为零。
+这段时间 $T=v_0/g$，石子在移动系中向上位移
+\[
+\Delta y' =v_0T-\frac12gT^2=\frac{v_0^2}{2g}.
+\]
+地面在该移动系中向上走过距离
+$v_0T=v_0^2/g$。
+初始石子与地面相隔 $h$，撞地时位置重合，
+故地面比石子多向上走过的距离恰为 $h$：
+\[
+h=\frac{v_0^2}{g}-\frac{v_0^2}{2g}
+=\frac{v_0^2}{2g}
+\quad\Longrightarrow\quad
+\boxed{v_0=\sqrt{2gh}}.
+\]
+\excheck 这个参考系虽向下运动，却仍是\emph{惯性系}；
+不能把地面在该系中的运动误当成零。
+
+\exproblem{166}{28}
+一质量为 $m_1=1.0\,\mathrm g$ 的质点
+初速度 $\bm v_1=3.0\bm i-2.0\bm j\,(\mathrm{m/s})$，
+与质量为 $m_2=2.0\,\mathrm g$、
+初速度 $\bm v_2=4.0\bm j-6.0\bm k\,(\mathrm{m/s})$
+的质点发生完全非弹性碰撞并结合。
+求结合体的速度矢量及速率。
+\exsolution
+忽略外界冲量，总动量守恒：
+\[
+(m_1+m_2)\bm v=m_1\bm v_1+m_2\bm v_2.
+\]
+按各坐标分量计算
+\[
+\bm v=
+\frac{1(3,-2,0)+2(0,4,-6)}{1+2}
+=(1,2,-4)\,\mathrm{m/s}.
+\]
+因此
+\[
+\boxed{\bm v=(1.0\bm i+2.0\bm j-4.0\bm k)\,\mathrm{m/s}},
+\qquad
+\boxed{|\bm v|=\sqrt{1+4+16}=\sqrt{21}
+\simeq4.58\,\mathrm{m/s}}.
+\]
+\excheck 分量计算使用相同质量单位 g，
+故分子和分母的单位约去；碰撞后两球必有同一速度。
+
+\exproblem{167}{28}
+由质量 $m_1,m_2$ 的两球构成的孤立系统
+发生完全非弹性碰撞，碰前速度分别为
+$\bm v_1,\bm v_2$。求系统总动能增量。
+\exsolution
+碰后结合体速度由动量守恒确定：
+\[
+\bm V=\frac{m_1\bm v_1+m_2\bm v_2}{m_1+m_2}.
+\]
+动能变化为
+\[
+\Delta K=\frac12(m_1+m_2)V^2-
+\frac12m_1v_1^2-\frac12m_2v_2^2.
+\]
+展开平方并合并同类项，得到
+\[
+\boxed{\Delta K=
+-\frac12\mu|\bm v_1-\bm v_2|^2},
+\qquad
+\mu=\frac{m_1m_2}{m_1+m_2}.
+\]
+\excheck 动能变化非正，仅当两球碰前速度矢量完全相同
+时为零。动量守恒不意味着动能守恒。
+
+\exproblem{168}{28}
+质量 $m_1$ 的粒子与静止质量 $m_2$ 的粒子
+发生完全弹性碰撞。求入射粒子损失的初始动能比例：
+（a）碰后入射粒子速度与原方向垂直；
+（b）正碰。
+\exsolution
+设入射初速为 $v$，碰后入射速率为 $u$，
+目标粒子碰后速度由动量守恒
+$\bm w=(m_1/m_2)(\bm v-\bm u)$ 确定。
+（a）若 $\bm v\cdot\bm u=0$，则
+$w^2=(m_1/m_2)^2(v^2+u^2)$。
+代入弹性碰撞动能守恒并整理：
+\[
+m_1v^2=m_1u^2+
+\frac{m_1^2}{m_2}(v^2+u^2)
+\Longrightarrow
+\frac{u^2}{v^2}=\frac{m_2-m_1}{m_1+m_2}.
+\]
+故
+\[
+\boxed{\eta_a=1-\frac{u^2}{v^2}
+=\frac{2m_1}{m_1+m_2}}.
+\]
+（b）一维正碰后入射粒子速度
+$u=(m_1-m_2)v/(m_1+m_2)$，所以
+\[
+\boxed{\eta_b=
+1-\left(\frac{m_1-m_2}{m_1+m_2}\right)^2
+=\frac{4m_1m_2}{(m_1+m_2)^2}}.
+\]
+\excheck （a）要求 $m_2>m_1$ 才有非零速率的严格
+$90^\circ$ 散射；$m_2=m_1$ 的极限入射粒子停下，
+其“速度方向”不再有定义。不能让能量损失比例超过 $1$。
+
+\exproblem{169}{28--29}
+粒子1与静止粒子2发生完全弹性碰撞。求质量比 $m_1/m_2$：
+（a）正碰后两粒子反向飞开且速率相等；
+（b）碰后两粒子的飞行方向相对入射方向对称，
+两方向夹角为 $\theta=60^\circ$。
+\exsolution
+（a）设碰前粒子1速度 $v$，
+碰后两者速度为 $-u,+u$，其中 $u>0$。
+动量与动能守恒分别给出
+\[
+m_1v=(m_2-m_1)u,\qquad
+m_1v^2=(m_1+m_2)u^2.
+\]
+消去 $u,v$，得到
+$(m_2-m_1)^2=m_1(m_1+m_2)$，
+物理允许解
+$\boxed{m_1/m_2=1/3}$。
+（b）两射出方向分别相对初始方向倾斜
+$+\theta/2$ 与 $-\theta/2$。
+由横向动量守恒，
+$m_1u_1=m_2u_2$；
+由纵向动量守恒，
+$m_1v=(m_1u_1+m_2u_2)\cos(\theta/2)
+=2m_1u_1\cos(\theta/2)$。
+因此 $u_1=v/[2\cos(\theta/2)]$。
+动能守恒
+$m_1v^2=m_1u_1^2+m_2u_2^2
+=m_1u_1^2(1+m_1/m_2)$，
+故
+\[
+\boxed{\frac{m_1}{m_2}=4\cos^2(\theta/2)-1
+=1+2\cos\theta=2.0}.
+\]
+\excheck （b）要求两侧角度对称而非两粒子碰后速率相等；
+横向动量守恒决定了两速率的质量加权关系。
+
+\exproblem{170}{29}
+质量相等的两光滑小球发生弹性碰撞，
+其中一个小球以速率 $v$ 平动，另一个原先静止。
+碰撞瞬间球心连线与入射速度成
+$\alpha=45^\circ$ 角。
+求两球压缩达到最大形变瞬间，
+初始动能中暂时转为弹性势能的比例。
+\exsolution
+把入射速度分解为沿碰撞法线（球心连线）
+的分量 $v_n=v\cos\alpha$，
+及切向分量 $v_\tau=v\sin\alpha$。
+光滑球无切向冲量，因此只在法向发生压缩。
+在最大压缩瞬间，两球法向速度相等；
+由法向动量守恒，两球共同法向速度为 $v_n/2$。
+初始法向动能为 $\tfrac12mv_n^2$，
+最大压缩时法向平动动能为
+$2(\tfrac12 m(v_n/2)^2)=\tfrac14mv_n^2$，
+故暂存弹性势能为
+\[
+U_{\rm elastic,max}=\frac14mv_n^2
+=\frac14mv^2\cos^2\alpha .
+\]
+与初始总动能 $\tfrac12 mv^2$ 相比：
+\[
+\boxed{\eta=
+\frac{U_{\rm elastic,max}}{\tfrac12 mv^2}
+=\frac12\cos^2\alpha
+=\frac14=25\%}.
+\]
+\excheck 完全弹性碰撞后的最终势能又恢复为零；
+这里所问的是\emph{最大压缩瞬间}，不是碰后耗散热的比例。
+% === END 03-mechanics-conservation-161-170.tex ===
+
+% === BEGIN 03-mechanics-conservation-171-180.tex blob 967d489476b44c7221c8cefc22b62b016f26a4b0 ===
+% Irodov (user-provided Arihant PDF), printed pp.29--30, PDF pp.38--39.
+% Original problem numbers are preserved. Calculations independently expanded.
+\exproblem{171}{29}
+一炮弹以 $v=500\,\mathrm{m/s}$ 飞行，突然炸成质量相等的三块。
+爆炸后三块的总动能是爆炸前的 $\eta=1.5$ 倍。
+忽略爆炸瞬间外力冲量，问其中一块的最大可能速率。
+\exsolution
+设原总质量为 $M$，其中一块速度为 $\bm u$，
+另两块速度为 $\bm v_2,\bm v_3$，爆炸前速度为 $\bm v$。
+动量守恒给出
+$\bm u+\bm v_2+\bm v_3=3\bm v$。
+对于固定的 $\bm u$，另外两块的动能和在
+$\bm v_2=\bm v_3=(3\bm v-\bm u)/2$ 时最小，
+因为平方和不小于两倍平均矢量模平方。于是
+\[
+ K_f\ge\frac M6\left[
+ u^2+\frac12|3\bm v-\bm u|^2\right]
+ =\frac M2v^2+\frac M4|\bm u-\bm v|^2 .
+\]
+结合 $K_f=\eta Mv^2/2$ 得
+$|\bm u-\bm v|^2\le2(\eta-1)v^2$。
+三角不等式及其可取等条件给出
+\[
+\boxed{u_{\max}=v\bigl[1+\sqrt{2(\eta-1)}\bigr]
+=1000\,\mathrm{m/s}}.
+\]
+最大值在该碎片与原速度同向、另两碎片同速时取得。
+\excheck 对 $\eta=1$，没有额外爆炸动能时上界回到 $v$；
+速度是矢量，单用一维能量守恒而不考虑动量约束会高估结果。
+
+\exproblem{172}{29}
+质量相等的两质点发生一维正碰。质点1碰前速率
+$v=10\,\mathrm{m/s}$，质点2静止；碰后总动能损失
+初始动能的 $\eta=1.0\%$。求碰后质点1的速度（含方向）。
+\exsolution
+取入射方向为正，碰后速度为 $u_1,u_2$。
+动量守恒给出 $u_1+u_2=v$；碰后总动能为
+$(1-\eta)mv^2/2$，因此
+\[
+u_1^2+(v-u_1)^2=(1-\eta)v^2,
+\]
+\[
+u_1=\frac v2\left[1\pm\sqrt{1-2\eta}\right].
+\]
+碰后两球必须分离，因而 $u_2\ge u_1$；
+选用减号分支，得到
+\[
+\boxed{u_1=\frac v2(1-\sqrt{1-2\eta})
+\simeq0.0503\,\mathrm{m/s}},
+\]
+方向仍与原入射方向相同；$u_2\simeq9.9497\,\mathrm{m/s}$。
+\excheck 加号分支意味着后一球比前一球慢，碰后仍会相互接近，
+不代表一次完成的分离碰撞；题设要求 $0\le\eta\le1/2$。
+
+\exproblem{173}{29}
+质量 $m$ 的入射粒子碰前速率为 $v$，与静止质量
+$M$ 的粒子碰撞后偏转 $90^\circ$；靶粒子的反冲方向与原
+入射方向成 $\theta=30^\circ$，且 $M/m=5.0$。
+求系统总动能的百分变化。
+\exsolution
+取原入射速度沿 $x$ 轴，入射粒子末速度沿 $+y$，
+靶粒子反冲必在 $-y$ 一侧。设末速分别为 $u,V$，
+两个方向的动量守恒为
+\[
+mv=MV\cos\theta,\qquad mu=MV\sin\theta.
+\]
+因此 $V=mv/(M\cos\theta)$、
+$u=v\tan\theta$。末初动能比
+\[
+\frac{K_f}{K_i}
+=\frac{mu^2+MV^2}{mv^2}
+=\tan^2\theta+\frac mM\sec^2\theta.
+\]
+所以
+\[
+\boxed{\frac{\Delta K}{K_i}
+=\left(1+\frac mM\right)\tan^2\theta+
+\frac mM-1=-0.40}.
+\]
+\excheck 系统总动能减少 $40\%$，不是增加；此推导只要求
+碰撞期间总动量守恒，不需要假定弹性碰撞。
+
+\exproblem{174}{29}
+孤立系统内两个质点质量为 $m_1,m_2$，
+原参考系中的速度 $\bm v_1,\bm v_2$ 互相垂直。
+求两质点在质心参考系中的动量及该系总动能。
+\exsolution
+质心速度
+$\bm V=(m_1\bm v_1+m_2\bm v_2)/(m_1+m_2)$。
+定义约化质量 $\mu=m_1m_2/(m_1+m_2)$，则
+\[
+\widetilde{\bm p}_1
+=m_1(\bm v_1-\bm V)=\mu(\bm v_1-\bm v_2),
+\quad
+\widetilde{\bm p}_2=-\widetilde{\bm p}_1.
+\]
+由 $\bm v_1\cdot\bm v_2=0$，
+\[
+\boxed{|\widetilde{\bm p}_1|
+=|\widetilde{\bm p}_2|=\mu\sqrt{v_1^2+v_2^2}},
+\qquad
+\boxed{\widetilde K
+=\frac{\mu}{2}|\bm v_1-\bm v_2|^2
+=\frac{\mu}{2}(v_1^2+v_2^2)}.
+\]
+\excheck 质心系总动量为零，但总动能通常不为零；
+这里没有把两个粒子的\emph{原}动量当作质心系动量。
+
+\exproblem{175}{29}
+质量 $m_1>m_2$ 的粒子撞击静止质量 $m_2$ 的粒子，
+碰撞完全弹性。求入射粒子在碰后相对原入射方向的
+最大偏转角。
+\exsolution
+设入射速率 $v$，碰后入射粒子速度矢量 $\bm u$。
+消去靶粒子的末速度
+$\bm w=(m_1/m_2)(\bm v-\bm u)$，
+由动能守恒得
+\[
+(m_1+m_2)u^2-2m_1vu\cos\theta+(m_1-m_2)v^2=0.
+\]
+把它视为关于 $u$ 的二次方程，要求存在实正根，
+判别式非负：
+\[
+m_1^2\cos^2\theta-(m_1+m_2)(m_1-m_2)\ge0,
+\quad \sin^2\theta\le\frac{m_2^2}{m_1^2}.
+\]
+所以
+\[
+\boxed{\theta_{\max}=\arcsin\frac{m_2}{m_1}}.
+\]
+\excheck $m_1\gg m_2$ 时偏转角很小；
+当 $m_1\downarrow m_2$ 时最大偏转趋于 $90^\circ$。
+
+\exproblem{176}{29}
+三块质量相同的光滑圆盘 $A,B,C$ 在光滑水平面上。
+$B,C$ 静止、两盘心间距等于盘直径的 $\eta$ 倍；
+$A$ 沿两盘心连线的垂直平分线前进，速率 $v$，
+同时与 $B,C$ 完全弹性碰撞（原图1.45）。
+求 $A$ 碰后速度与反弹、停止、继续前进的判据。
+\exsolution
+盘半径设为 $R$，同时接触要求 $1\le\eta<2$。
+碰撞时 $\overline{AB},\overline{AC}$ 与入射方向
+的夹角为 $\phi$，几何给出
+$\sin\phi=(2R\eta/2)/(2R)=\eta/2$，所以
+$\cos^2\phi=1-\eta^2/4$。
+设对 $B,C$ 的法向冲量大小均为 $J$，对称性使
+$A$ 碰后仍仅沿原直线，速度有符号值 $u$：
+\[
+m(v-u)=2J\cos\phi.
+\]
+两目标盘碰后速度大小都为 $J/m$；
+由于碰撞弹性，
+\[
+mv^2=mu^2+2J^2/m.
+\]
+解以上两式、舍去无碰撞的零冲量分支，得到
+\[
+\boxed{u=v\frac{\eta^2-2}{6-\eta^2}}.
+\]
+因此 $1\le\eta<\sqrt2$ 时 $A$ 反弹；
+$\eta=\sqrt2$ 时停止；
+$\sqrt2<\eta<2$ 时继续向前。
+\excheck 这里的 $u$ 是\emph{有符号速度}；图形的双接触
+只在指定中心距区间有意义，不能延伸到 $\eta>2$。
+
+\exproblem{177}{29--30}
+一个分子与另一个同质量、碰前静止的分子碰撞。
+证明：（a）碰撞理想弹性时，两粒子的末速度方向夹角
+为 $90^\circ$；（b）若动能损失为正，夹角不再是 $90^\circ$。
+\exsolution
+两粒子质量均为 $m$，碰前入射速度为 $\bm v$，
+末速度为 $\bm u,\bm w$。动量守恒
+$\bm v=\bm u+\bm w$，故
+\[
+v^2=u^2+w^2+2\bm u\cdot\bm w.
+\]
+若完全弹性，动能守恒
+$v^2=u^2+w^2$，所以
+$2\bm u\cdot\bm w=0$；当二者末速都非零时，
+\[
+\boxed{\angle(\bm u,\bm w)=90^\circ}.
+\]
+若发生非弹性碰撞且动能损失 $\Delta E>0$，
+则 $v^2>u^2+w^2$，故
+\[
+2\bm u\cdot\bm w
+=v^2-u^2-w^2=2\Delta E/m>0,
+\]
+夹角为锐角。
+\excheck 如有一粒子恰停下，其速度方向未定义；
+“夹角为 $90^\circ$”指两末速度非零的通常散射情形。
+
+\exproblem{178}{30}
+火箭在某时刻质量为 $m$、加速度为 $\bm a$，
+外力合力为 $\bm F$。火箭以恒定质量流率
+$\mu>0$（$\mathrm{kg/s}$）喷出气体，
+气体相对火箭的速度矢量为 $\bm u$。
+证明火箭方程 $m\bm a=\bm F-\mu\bm u$。
+\exsolution
+取时间间隔 $\mathrm dt$，火箭初始速度 $\bm v$，
+其质量减少 $\mu\,\mathrm dt$；
+喷出的气体质量为 $\mu\,\mathrm dt$，
+在惯性系中速度为 $\bm v+\bm u$。
+动量变化保留到 $\mathrm dt$ 一阶：
+\[
+\begin{aligned}
+\Delta\bm P
+&=(m-\mu\mathrm dt)(\bm v+\mathrm d\bm v)
+ +\mu\mathrm dt(\bm v+\bm u)-m\bm v\\
+&=m\,\mathrm d\bm v+\mu\bm u\,\mathrm dt
++O(\mathrm dt^2).
+\end{aligned}
+\]
+由外力冲量 $\bm F\,\mathrm dt=\Delta\bm P$，
+\[
+\boxed{m\bm a=\bm F-\mu\bm u}.
+\]
+\excheck 此处 $\bm u$ 是\emph{喷气相对火箭的矢量速度}，
+通常指向火箭后方；反冲推力方向为 $-\mu\bm u$。
+
+\exproblem{179}{30}
+火箭初始静止、质量 $m_0$，在无外力情况下
+以相对火箭不变的喷气速度 $\bm u$ 排气。
+求火箭质量变为 $m$ 时的速度。
+\exsolution
+令 $\mu=-\mathrm dm/\mathrm dt>0$，
+用上一题方程且 $\bm F=\bm0$：
+\[
+m\frac{\mathrm d\bm v}{\mathrm dt}
+=-\mu\bm u=\bm u\,\frac{\mathrm dm}{\mathrm dt}.
+\]
+两端分离变量并由初态积分：
+\[
+\int_{\bm0}^{\bm v}\mathrm d\bm v
+=\bm u\int_{m_0}^{m}\frac{\mathrm dm'}{m'},
+\]
+所以
+\[
+\boxed{\bm v=\bm u\ln\frac m{m_0}
+=-\bm u\ln\frac{m_0}{m}}.
+\]
+\excheck $m<m_0$，若 $\bm u$ 指向火箭后方，
+速度 $\bm v$ 指向前方；其大小是
+$|\bm u|\ln(m_0/m)$，与喷气质量流率无关。
+
+\exproblem{180}{30}
+在无外力作用下，火箭保持大小为 $a>0$ 的恒加速度，
+喷气相对火箭的反向速率固定为 $u>0$，
+初质量为 $m_0$。求质量 $m(t)$。
+\exsolution
+设推进方向为正，气体相对火箭速度为 $-u$。
+火箭方程 $ma=-\mu(-u)=\mu u$，
+其中 $\mu=-\dot m$，故
+\[
+ma=-u\frac{\mathrm dm}{\mathrm dt},
+\qquad\frac{\mathrm dm}{m}=-\frac au\,\mathrm dt.
+\]
+由 $m(0)=m_0$ 得
+\[
+\boxed{m(t)=m_0e^{-at/u}}.
+\]
+\excheck 指数 $at/u$ 无量纲；质量单调减少且始终为正。
+恒加速度要求质量流率按 $\mu(t)=am(t)/u$
+随时间衰减，并非恒定流率。
+% === END 03-mechanics-conservation-171-180.tex ===
+
+% === BEGIN 03-mechanics-conservation-181-190.tex blob 2d2d8b0d7584e3958757c123f26f665f29005264 ===
+% Irodov user-provided PDF, original problems 181--190, printed pp.30--32.
+\exproblem{181}{30}
+一飞船在无外力下最初以恒速 $v_0$ 飞行。为改变方向，
+开启喷气发动机，始终使喷气相对飞船的速度大小为 $u$、
+方向垂直于\emph{当时}飞船速度。飞船质量由 $m_0$ 减到 $m$
+即停止喷气。求飞行方向的总偏转角。
+\exsolution
+喷气推力大小 $u\mu$，与飞船瞬时速度垂直，
+故 $m\dot v=0$，飞船速率始终为 $v_0$。
+推力在速度法线方向产生
+\[
+m v_0\frac{\mathrm d\alpha}{\mathrm dt}=u\mu,
+\qquad \mu=-\frac{\mathrm dm}{\mathrm dt}>0.
+\]
+于是 $\mathrm d\alpha=-(u/v_0)\,\mathrm dm/m$，
+从质量 $m_0$ 积分到 $m$，得到
+\[
+\boxed{\alpha=\frac{u}{v_0}\ln\frac{m_0}{m}}.
+\]
+\excheck 角度采用弧度；此结果要求喷气方向始终跟随飞船
+当前运动方向转动，不是固定与最初速度垂直。
+
+\exproblem{182}{30}
+一辆装沙的小车在光滑水平面上，受与前进方向相同的恒力
+$F$。沙从车底孔以恒定质量流率 $\mu>0$ 漏出；
+漏出时相对车没有水平速度。最初小车与沙总质量
+$m_0$、初速零。求任意 $0\le t<m_0/\mu$ 时的加速度、速度。
+\exsolution
+漏出的沙在离车一刻具有与车相同的水平速度，
+因此没有相对水平喷流推力。车与剩余沙总质量
+$m(t)=m_0-\mu t$，水平运动方程
+\[
+m(t)\frac{\mathrm dv}{\mathrm dt}=F.
+\]
+直接可得
+\[
+\boxed{a(t)=\frac{F}{m_0-\mu t}},\qquad
+\boxed{v(t)=\int_0^t\frac{F\,\mathrm ds}{m_0-\mu s}
+=\frac F\mu\ln\frac{m_0}{m_0-\mu t}}.
+\]
+\excheck 结果仅在沙尚未漏完的阶段成立；当剩余质量趋零的
+数学发散不代表真实小车质量会趋零，应在实际空车质量处终止模型。
+
+\exproblem{183}{30}
+一质量为 $m_0$ 的空平板车最初静止，
+受沿水平方向的恒力 $F$。静止料斗以恒质量流率
+$\mu>0$ 向车中注入沙子（图1.46），沙子落入前
+水平速度为零，摩擦忽略。求装料阶段速度与加速度的时间规律。
+\exsolution
+在固定惯性系中，车与已装入沙的质量为
+$m(t)=m_0+\mu t$。
+进入系统的沙子带入的水平动量通量为零，
+故变质量系统的水平动量平衡为
+\[
+\frac{\mathrm d}{\mathrm dt}[m(t)v(t)]=F.
+\]
+由初始总水平动量零，积分得到
+$m(t)v(t)=Ft$，于是
+\[
+\boxed{v(t)=\frac{Ft}{m_0+\mu t}},\qquad
+\boxed{a(t)=\frac{\mathrm dv}{\mathrm dt}
+=\frac{Fm_0}{(m_0+\mu t)^2}}.
+\]
+\excheck 此题与上一题不同：正在装入的沙子在地面系
+水平静止，必须由车加速，不能错误地套用 $m\dot v=F$。
+
+\exproblem{184}{31}
+图1.47中，一根长度为 $\ell$ 的均匀柔软链条置于光滑
+水平管内，一段竖直下垂长度为 $h$，其末端恰触桌面。
+释放管中另一端 $A$，链条开始从管中滑出，
+下垂的链条逐渐在桌面堆积。求 $A$ 刚滑出管口的速率。
+\exsolution
+设 $x$ 是从管内滑出的累计长度。
+因竖直管口至桌面高度固定为 $h$，
+已经堆积在桌面上的链长为 $x$，
+仍在运动的链长为 $\ell-x$。
+设线密度为 $\lambda$，运动链条的重力驱动力
+始终为 $\lambda gh$。
+在桌面上终止运动的链元携走与当前链条相同的动量，
+对运动链段应用含质量流出的动量平衡，通量项抵消
+质量随时间变化的相应项，得到
+\[
+\lambda(\ell-x)\frac{\mathrm dv}{\mathrm dt}
+=\lambda gh .
+\]
+再用 $\dot x=v$，得
+\[
+v\frac{\mathrm dv}{\mathrm dx}=\frac{gh}{\ell-x}.
+\]
+从 $v(0)=0$ 积分到 $x=\ell-h$（此时 $A$ 恰到管口）：
+\[
+\frac{v^2}{2}
+=gh\int_0^{\ell-h}\frac{\mathrm dx}{\ell-x}
+=gh\ln\frac{\ell}{h}.
+\]
+所以
+\[
+\boxed{v=\sqrt{2gh\ln\frac{\ell}{h}}}.
+\]
+\excheck 不能直接把重力势能损失全部算成末态动能；
+链元落桌后非弹性地停住，存在相应动能损失。
+需有 $0<h<\ell$，当 $h\to\ell$ 时结果趋零。
+
+\exproblem{185}{31}
+某质点相对固定点 $O$ 的角动量矢量随时间变化为
+$\bm L(t)=\bm a+\bm b\,t^2$，其中恒定矢量
+$\bm a\perp\bm b$。当关于 $O$ 的力矩
+$\bm N$ 与角动量夹角为 $45^\circ$ 时，
+求力矩大小。
+\exsolution
+由角动量定理
+\[
+\bm N=\frac{\mathrm d\bm L}{\mathrm dt}=2t\,\bm b.
+\]
+设 $a=|\bm a|,\ b=|\bm b|$。
+由于 $\bm a\perp\bm b$，
+力矩方向沿 $\bm b$（取 $t>0$）；
+$\bm L$ 沿 $\bm b$ 的分量大小为 $bt^2$，
+垂直分量大小为 $a$。两矢量夹角为 $45^\circ$ 意味着
+$bt^2=a$，故
+\[
+\boxed{|\bm N|=2bt=2\sqrt{ab}}.
+\]
+\excheck $[\bm b]=[\bm L]/\mathrm s^2$，
+所以 $\sqrt{ab}$ 具有力矩量纲；
+$t<0$ 时只需用 $|t|$，大小结论不变。
+
+\exproblem{186}{31}
+质量为 $m$ 的球以初速度 $v_0$、仰角 $\alpha$
+从地面某点抛出，忽略空气阻力。求球对抛出点的
+角动量大小随时间变化的规律；并求
+$m=0.130\,\mathrm{kg}$、$\alpha=45^\circ$、
+$v_0=25\,\mathrm{m/s}$ 时在轨迹顶点的角动量大小。
+\exsolution
+取抛出点为原点，$x$ 轴水平、$y$ 轴向上：
+\[
+\bm r=(v_0\cos\alpha\,t,\,
+v_0\sin\alpha\,t-\tfrac12gt^2),\quad
+\bm v=(v_0\cos\alpha,\,v_0\sin\alpha-gt).
+\]
+角动量只有垂直于运动平面的分量：
+\[
+L_z=m(xv_y-yv_x)=-\frac12mgv_0t^2\cos\alpha.
+\]
+因此
+\[
+\boxed{|\bm L(t)|=\frac12mgv_0t^2\cos\alpha}.
+\]
+顶点时间 $t_h=v_0\sin\alpha/g$，
+\[
+\boxed{L_h=\frac{mv_0^3}{2g}\sin^2\alpha\cos\alpha
+\simeq36.6\,\mathrm{kg\,m^2/s}}.
+\]
+\excheck 取 $g=9.81\,\mathrm{m/s^2}$ 时约 $37$，
+与底本答案的两位有效数字相符。角动量矢量方向按
+所选坐标为负 $z$ 方向，题目只要求模。
+
+\exproblem{187}{31}
+光滑圆片以速率 $v$ 沿光滑水平面滑向固定光滑墙，
+碰撞为理想弹性；入射方向与墙面法线夹角为 $\alpha$，
+碰撞点为 $O$（图1.48）。
+求：（a）相对哪些点碰撞前后角动量守恒；
+（b）墙面内、在运动平面上距 $O$ 为 $\ell$ 的点 $O'$
+处，圆片角动量变化的模。
+\exsolution
+碰撞中墙对圆片的冲量仅沿墙面法线。
+弹性反射使法线速度分量反号，切线速度分量不变，
+故动量增量大小为
+\[
+|\Delta\bm p|=2mv\cos\alpha,
+\]
+方向沿墙面法线。关于任意固定点 $Q$ 的角动量变化
+是冲量矩
+$\Delta\bm L_Q=(\bm r_O-\bm r_Q)\times\Delta\bm p$。
+因此当 $Q$ 位于\emph{过 $O$ 的墙面法线直线}上，
+力臂与冲量平行，角动量保持不变。
+对于题给的 $O'$，其与 $O$ 之间的线段沿墙，
+垂直于冲量，于是
+\[
+\boxed{|\Delta\bm L_{O'}|
+=\ell|\Delta\bm p|=2mv\ell\cos\alpha}.
+\]
+\excheck 虽然关于撞击点 $O$ 的角动量不变，
+关于墙上另一点 $O'$ 一般并不不变；
+角动量守恒必须说明参考点。
+
+\exproblem{188}{31}
+小球质量 $m$，用长为 $\ell$ 的轻绳悬挂于固定点 $O$，
+绕竖直轴以恒角速度 $\omega$ 作水平圆周运动（圆锥摆）。
+问关于哪个点角动量矢量守恒；
+再求关于绳悬点 $O$ 的角动量矢量在半周内的变化量大小。
+\exsolution
+记小球运动圆半径为 $\rho=\ell\sin\theta$，
+圆平面低于 $O$ 的距离为 $h=\ell\cos\theta$。
+关于圆心 $C$ 的位置与动量都在水平面内，
+角动量始终为沿竖直轴的恒矢量
+$\bm L_C=m\omega\rho^2\bm e_z$。
+关于 $O$，将位置矢量写为
+$\bm r_{O}=\rho\bm e_r-h\bm e_z$，速度为
+$\bm v=\omega\rho\bm e_\varphi$，
+所以
+\[
+\bm L_O
+=m\omega\rho^2\bm e_z+
+m\omega\rho h\,\bm e_r .
+\]
+一段半周后 $\bm e_r\mapsto-\bm e_r$，
+竖直分量不变，故
+\[
+|\Delta\bm L_O|=2m\omega\rho h.
+\]
+圆锥摆的动力学关系为
+$\omega^2\ell\cos\theta=g$，
+最终
+\[
+\boxed{|\Delta\bm L_O|
+=\frac{2mg\ell}{\omega}
+\sqrt{1-\left(\frac g{\omega^2\ell}\right)^2}}.
+\]
+\excheck 只要 $\omega^2\ell\ge g$ 才有非退化圆锥摆；
+题目所求“守恒的参考点”为\emph{运动圆的圆心} $C$。
+
+\exproblem{189}{31}
+质量 $m$ 的球从高度 $h$、地面系静止释放，
+忽略空气阻力。考察以恒定水平速度
+$\bm V$ 平移的惯性系，取球的释放点在该系初始为 $O$。
+求自由落体期间关于 $O$ 的角动量矢量增量的模。
+\exsolution
+设地面系竖直向下为 $y$ 轴，
+平移系水平方向为 $x$ 轴。
+在平移系中球的速度与位置为
+\[
+\bm v'=(-V,\,gt),\qquad
+\bm r'=(-Vt,\,\tfrac12gt^2).
+\]
+垂直于运动平面的角动量分量：
+\[
+L_z'=m(x'v_y'-y'v_x')
+=m(-Vgt^2+\tfrac12Vgt^2)
+=-\tfrac12mVgt^2.
+\]
+初始为零，落地时间 $t_f=\sqrt{2h/g}$，
+从而
+\[
+\boxed{|\Delta\bm L|=\frac12mVg\,t_f^2=mVh}.
+\]
+\excheck 使用运动参考系中\emph{固定}于该系的点 $O$；
+关于地面系中的释放点，球垂直下落时角动量始终为零，
+两者并不矛盾。
+
+\exproblem{190}{31--32}
+水平光滑圆盘绕中心固定竖轴以角速度 $\omega$ 匀速转动，
+$t=0$ 时，一小圆片从盘中心以相对盘初速
+$v_0$ 向外滑行，盘面不施加水平力。
+求在转盘参考系中关于盘心的角动量 $L_z(t)$，
+并证明其变化由科里奥利力矩引起。
+\exsolution
+地面惯性系中圆片从原点沿直线以恒速 $v_0$ 运动，
+所以 $r(t)=v_0t$。在转盘系中相对速度
+$\bm v'=\bm v-\bm\omega\times\bm r$，
+其切向分量为 $v_\varphi'=-\omega r$。
+关于盘心的相对角动量为
+\[
+\boxed{L_z'(t)=mr v_\varphi'
+=-m\omega v_0^2t^2},
+\qquad |L_z'|=m|\omega|v_0^2t^2.
+\]
+旋转系中离心惯性力沿径向，关于盘心力矩为零；
+科里奥利力 $\bm F_{\rm Cor}=-2m\bm\omega\times\bm v'$
+沿竖直轴的力矩为
+$N_z^{\rm Cor}=-2m\omega r\dot r
+=-2m\omega v_0^2t$。
+故
+\[
+\frac{\mathrm dL_z'}{\mathrm dt}
+=-2m\omega v_0^2t=N_z^{\rm Cor}.
+\]
+\excheck 本版书末只写角动量\emph{模}，
+而按 $\omega>0$（逆时针）约定的有符号结果为负；
+二者一致。
+% === END 03-mechanics-conservation-181-190.tex ===
+
+% === BEGIN 03-mechanics-conservation-191-199.tex blob 7fe44718a6530d5ff8e03ba738d3644db562ca13 ===
+% Irodov, source PDF pp.41--42; original printed pp.32--33.
+\exproblem{191}{32}
+质量 $m$ 的粒子在中心势场 $U(r)=kr^2$ 中作闭合轨道运动，
+$k>0$。已知粒子与中心 $O$ 的最近距离为 $r_1$，
+最远点处速率为 $v_2$，求 $m$。
+\exsolution
+在最近点和最远点，径向速度均为零，速率完全切向。
+记最远半径为 $r_2$、守恒角动量为 $L$，则
+$L=mr_1v_1=mr_2v_2$。
+能量守恒可写成两端同一有效势：
+\[
+kr_1^2+\frac{L^2}{2mr_1^2}
+=kr_2^2+\frac{L^2}{2mr_2^2}.
+\]
+对非圆形轨道 $r_2\ne r_1$，两边移项并约去
+$r_2^2-r_1^2$，得到
+$L^2/(2m)=kr_1^2r_2^2$。再由
+$L=mr_2v_2$ 消去 $L,r_2$：
+\[
+\boxed{m=\frac{2kr_1^2}{v_2^2}}.
+\]
+\excheck 此结论来自中心力场的角动量与总能量同时守恒；
+若轨道恰为圆，$r_2=r_1$ 时不能采用上述约因子步骤，
+但圆轨道向心条件同样给出此式。
+
+\exproblem{192}{32}
+长为 $\ell$ 的轻绳悬挂一小球，
+初始与竖直方向夹角为 $\theta$。在这一位置使小球
+获得与其所在竖直平面垂直的水平初速 $v_0$。
+求使小球运动中能达到最大偏角 $90^\circ$ 的临界初速。
+\exsolution
+绕竖直轴的外力矩为零，轴向角动量守恒。
+初始绕轴半径为 $\ell\sin\theta$，所以
+$L_z=m\ell v_0\sin\theta$。
+当偏角达到 $\pi/2$ 的转折点时，
+沿经线方向的速度瞬时为零，只有绕竖轴的方位速率 $u$，
+此时半径为 $\ell$，故
+$u=v_0\sin\theta$。
+以初始点为势能零点，机械能守恒：
+\[
+\frac12mv_0^2
+=\frac12m v_0^2\sin^2\theta+mg\ell\cos\theta.
+\]
+由此
+\[
+\boxed{v_{0,\mathrm{crit}}=
+\sqrt{\frac{2g\ell}{\cos\theta}}}.
+\]
+\excheck 需 $0\le\theta<\pi/2$。
+该临界速度对应“恰好到达 $90^\circ$”的转折状态，
+初速更大将越过此角度。
+
+\exproblem{193}{32}
+质量为 $m$ 的小物体被不可伸长细绳系住，
+在光滑水平面上绕固定孔 $O$ 转动。
+有人以恒速将细绳向下拉入孔中，故物体到孔距离
+$r$ 以恒定速率减小；在 $r=r_0$ 时角速度为 $\omega_0$。
+求拉线张力 $T(r)$。
+\exsolution
+由于细绳张力始终径向指向孔，
+关于孔 $O$ 的外力矩为零，所以
+\[
+mr^2\dot\varphi=mr_0^2\omega_0,\qquad
+\dot\varphi=\frac{r_0^2\omega_0}{r^2}.
+\]
+在极坐标中径向加速度为
+$a_r=\ddot r-r\dot\varphi^2$。
+拉入速度恒定意味着 $\ddot r=0$，
+径向牛顿第二定律 $-T=ma_r$ 得
+\[
+\boxed{T(r)=mr\dot\varphi^2
+=\frac{m\omega_0^2r_0^4}{r^3}}.
+\]
+\excheck 张力随半径减小迅速增大。
+若拉线速度并非常数，还必须保留 $-m\ddot r$ 项。
+
+\exproblem{194}{32}
+一根不可伸长轻绳绕在半径为 $R$ 的有质量定轴滑轮上，
+自由端系一小物体质量为 $m$。从静止开始释放，
+求\emph{滑轮和重物组成的整个系统}相对滑轮固定轴的
+总角动量随时间的变化。
+\exsolution
+以滑轮固定转轴为矩心，支承轴反力对该轴不产生力矩；
+绳张力是系统内部相互作用，其作用力矩在滑轮与重物的
+总角动量平衡中抵消。
+重物始终在距轴水平距离 $R$ 的铅垂线上运动，
+其重力关于轴的力矩大小为 $mgR$，方向恒定。
+对整个系统应用角动量定理：
+\[
+\frac{\mathrm dL_{\rm total}}{\mathrm dt}=mgR,
+\qquad L_{\rm total}(0)=0,
+\]
+因此
+\[
+\boxed{|L_{\rm total}(t)|=mgRt}.
+\]
+\excheck 结果与滑轮转动惯量无关，因为求的是\emph{整个}
+滑轮—重物系统的角动量。单独求重物的角动量不能在
+未知滑轮转动惯量时直接写成 $mgRt$。
+
+\exproblem{195}{32}
+均匀实心球质量 $m$、半径 $R$，从静止开始沿
+倾角为 $\alpha$ 的斜面无滑动滚下。
+求相对于\emph{最初接触点} $O$ 的角动量大小 $L(t)$；
+若斜面完全光滑，结果如何变化？
+\exsolution
+对于纯滚动均匀实心球，
+$I_C=2mR^2/5$，质心沿斜面加速度
+$a_C=(5/7)g\sin\alpha$，
+速率为 $v=a_Ct$，角速度 $\omega=v/R$。
+关于初始接触点分解：
+\[
+\bm L_O=(\bm r_C-\bm r_O)\times m\bm v_C
++I_C\bm\omega.
+\]
+球心相对初始接触点的沿斜面位移与 $\bm v_C$ 平行，
+故其叉积贡献为零；垂直斜面的距离始终为 $R$，
+于是两部分角动量同向，大小相加为
+\[
+L_O=Rm v+I_C\frac vR
+=\frac75mRv=mgR\sin\alpha\,t.
+\]
+若斜面完全光滑，球只平动不自转，
+$a_C=g\sin\alpha$，则
+$L_O=Rm(g\sin\alpha\,t)$，因此
+\[
+\boxed{L_O(t)=mgR\sin\alpha\,t}
+\]
+在两种情况下相同。
+\excheck 本题需要区分\emph{重力力矩}与
+\emph{合外力矩}：选最初接触点$O$为固定参考点，
+球心沿斜面已移动$s$，则重力相对$O$
+的力臂并非一直等于$R\sin\alpha$。
+取沿斜面下行为$\bm e_t$、离开斜面为$\bm e_n$，
+球心位置$\bm r_C=s\bm e_t+R\bm e_n$。
+重力和接触支持力（$N=mg\cos\alpha$）的
+关于$O$力矩中，分别有正负
+$s mg\cos\alpha$项，恰好抵消；
+接触静摩擦力与$\bm r_{\rm contact}=s\bm e_t$
+共线，不产生关于$O$的力矩。
+因此\emph{总外力矩}的大小才恒为
+$mgR\sin\alpha$，对有无摩擦均成立。
+不能把“总外力矩恒定”误写为“重力力矩恒定”。
+
+\exproblem{196}{32}
+一个粒子系统相对于固定点 $O$ 的总动量为 $\bm p$，
+总角动量为 $\bm L_O$。另一固定点 $O'$ 的位置矢量
+相对 $O$ 为 $\bm r_0$。求系统相对 $O'$ 的角动量，
+并问在何种情形下该量与参考点选取无关。
+\exsolution
+对第 $i$ 粒子，相对 $O'$ 的位置矢量为
+$\bm r_i'=\bm r_i-\bm r_0$。因此
+\[
+\begin{aligned}
+\bm L_{O'}
+&=\sum_i(\bm r_i-\bm r_0)\times\bm p_i\\
+&=\sum_i\bm r_i\times\bm p_i
+-\bm r_0\times\sum_i\bm p_i.
+\end{aligned}
+\]
+故
+\[
+\boxed{\bm L_{O'}=\bm L_O-\bm r_0\times\bm p}.
+\]
+任意点的改变都不影响角动量，当且仅当
+$\boxed{\bm p=\bm0}$。
+\excheck 对某一特定参考点改变，若 $\bm r_0\parallel\bm p$
+也可能有相同角动量；但要求\emph{任意}选点均不变则必须 $\bm p=0$。
+
+\exproblem{197}{32}
+证明柯尼希角动量分解：系统相对于固定点 $O$ 的角动量为
+$\bm L_O=\widetilde{\bm L}+\bm r_C\times\bm p$，
+其中 $\widetilde{\bm L}$ 是质心平动参考系中的内禀角动量，
+$\bm r_C$ 是质心相对 $O$ 的位置矢量，
+$\bm p$ 为总动量。
+\exsolution
+写出每个质点的位置和速度相对质心的分解：
+\[
+\bm r_i=\bm r_C+\bm\rho_i,\qquad
+\bm v_i=\bm V_C+\dot{\bm\rho}_i.
+\]
+质心定义保证
+$\sum_i m_i\bm\rho_i=\bm0$ 和
+$\sum_i m_i\dot{\bm\rho}_i=\bm0$。
+展开角动量总和：
+\[
+\begin{aligned}
+\bm L_O
+&=\sum_i m_i(\bm r_C+\bm\rho_i)
+\times(\bm V_C+\dot{\bm\rho}_i)\\
+&=M\bm r_C\times\bm V_C+
+\sum_i m_i\bm\rho_i\times\dot{\bm\rho}_i,
+\end{aligned}
+\]
+因为两个交叉项均为零。
+令 $\bm p=M\bm V_C$、
+$\widetilde{\bm L}=
+\sum_i m_i\bm\rho_i\times\dot{\bm\rho}_i$，得
+\[
+\boxed{\bm L_O=\widetilde{\bm L}+\bm r_C\times\bm p}.
+\]
+\excheck 此分解是恒等式，并不要求系统孤立，也不要求
+内禀角动量本身守恒。
+
+\exproblem{198}{33}
+质量 $m$ 的小球以速率 $v_0$ 水平正碰一个初始静止的
+刚性哑铃的一端（图1.50）。哑铃两端小球质量各为 $m/2$，
+端点相距 $\ell$，忽略端球尺寸，
+碰撞完全弹性。求碰后哑铃\emph{质心系}角动量大小。
+\exsolution
+哑铃总质量为 $m$，绕自身质心转动惯量
+$I=(m/2)(\ell/2)^2+(m/2)(\ell/2)^2=m\ell^2/4$。
+设水平碰撞冲量为 $J$；则哑铃质心平动速度
+$V=J/m$，角速度满足
+$I\omega=J\ell/2$，故
+$\omega=2J/(m\ell)$。
+受撞端点沿碰撞方向的速度为
+$V+\omega\ell/2=2J/m$；
+入射小球碰后速度为 $v_0-J/m$。
+完全弹性意味着两接触点分离的相对速度等于
+碰前接近速率：
+\[
+\frac{2J}{m}-\left(v_0-\frac Jm\right)=v_0,
+\]
+所以 $J=(2/3)mv_0$。
+哑铃质心系角动量是该冲量对质心的矩：
+\[
+\boxed{\widetilde L=I\omega=\frac{J\ell}{2}
+=\frac13m\ell v_0}.
+\]
+\excheck 这里哑铃的质心平动动能和转动动能都参与了
+碰撞能量分配；不能把哑铃当作固定转轴的转子。
+
+\exproblem{199}{33}
+两块相同质量 $m$ 的小圆盘位于光滑水平面上，
+用初始自然长 $\ell_0$、劲度系数 $\kappa$ 的轻弹簧连接。
+使其中一块沿垂直于弹簧的方向获得速率 $v_0$。
+若最大相对伸长 $\varepsilon_{\max}=
+(\ell_{\max}-\ell_0)/\ell_0$ 很小，
+求其近似值。
+\exsolution
+在质心系用相对坐标分析，约化质量
+$\mu=m/2$。初始相对速度大小为 $v_0$，且与
+连线垂直，所以相对角动量为
+$L=\mu\ell_0v_0$。
+初始能量为 $\mu v_0^2/2$。
+当弹簧伸长到最大时径向速度为零，设
+$r=\ell_0(1+\varepsilon)$，能量守恒：
+\[
+\frac12\mu v_0^2
+=\frac{L^2}{2\mu r^2}
++\frac12\kappa\ell_0^2\varepsilon^2.
+\]
+代入 $L$ 并移项：
+\[
+\mu v_0^2\left[1-\frac1{(1+\varepsilon)^2}\right]
+=\kappa\ell_0^2\varepsilon^2.
+\]
+若 $\varepsilon\ll1$，
+$1-(1+\varepsilon)^{-2}=2\varepsilon+O(\varepsilon^2)$，
+解得非零的首阶结果
+\[
+\boxed{\varepsilon_{\max}\simeq
+\frac{m v_0^2}{\kappa\ell_0^2}}.
+\]
+\excheck 右端无量纲，且须自身远小于 $1$
+才符合题目的小伸长近似条件。
+% === END 03-mechanics-conservation-191-199.tex ===
