@@ -1,0 +1,187 @@
+% 《大学物理简明教程》(第5版)第5章“气体动理论”
+% 选择题5.1.1—5.1.14，原书/扫描PDF第123—125页。
+% 题意为研究性转述，保持原题模型；所有条目待独立二校。
+\subsection{选择题：平衡态与分子运动}
+
+\sourceproblem{5.1.1}{123}{123}
+\problemtext 金属杆两端分别与恒温沸水、冰接触，杆内温度分布已经稳定，
+但不同位置温度不同。判断金属杆是否处于热力学平衡态。
+\workings
+热力学平衡态要求宏观上没有持续热流且各位置温度相同。
+稳态导热满足$\partial T/\partial t=0$，但温差导致傅里叶热流
+\[
+\bm q=-\kappa\nabla T\ne\bm 0.
+\]
+故它是\emph{非平衡定常态}，不是热力学平衡，原题选\textbf{B}。
+\crosscheck 时间上温度不变并不意味着空间温度均匀；不能把“稳定”和“平衡”混用。
+
+\sourceproblem{5.1.2}{123}{123}
+\problemtext 分子质量$m$的理想气体处于温度$T$，求分子速度在$x$方向分量的均方值$\langle v_x^2\rangle$。
+\workings
+平衡态各平动方向分配相同平均能量，
+$\frac12m\langle v_x^2\rangle=\frac12k_{\mathrm B}T$。
+\[
+\boxed{\langle v_x^2\rangle=\frac{k_{\mathrm B}T}{m}}\quad(\text{原题D}).
+\]
+\crosscheck 总均方速率$\langle v^2\rangle=3k_{\mathrm B}T/m$，
+与一个方向的均方速度有因子3的差异。
+
+\sourceproblem{5.1.3}{123}{123}
+\problemtext 同一容器内有1 mol氧气与1 mol氢气，
+两气体在同一体积$V$及温度$T$下比较各自分压。
+\workings
+理想气体分压定律：$p_iV=n_iRT$。因为$n_1=n_2=1$，
+\[
+\boxed{p_{\mathrm{O_2}}=p_{\mathrm{H_2}}=\frac{RT}{V}}
+\]
+（选\textbf{C}）。
+\crosscheck 分压取决于粒子数而非分子质量；不同摩尔质量不影响同温同容同摩尔数的分压。
+
+\sourceproblem{5.1.4}{124}{124}
+\problemtext 判断关于气体温度的四种描述：温度表征平均平动动能、
+是分子热运动的集体统计表现、反映热运动激烈程度、可以代表每一个分子的“冷热”。
+\workings
+由
+\[
+\left\langle \varepsilon_{\mathrm{trans}}\right\rangle
+=\frac32k_{\mathrm B}T
+\]
+可知前三种宏观统计表述正确，但单个分子并无与宏观温度一一对应的确定动能。
+所以正确为①②③，原题选\textbf{B}。
+\crosscheck 同一温度下速率遵从分布，单个分子的速率、动能不断变化。
+
+\sourceproblem{5.1.5}{124}{124}
+\problemtext 温度、压强相同的氢气与氧气，比较分子平均\emph{总动能}
+$\overline\varepsilon_k$和平均\emph{平动动能}$\overline w$（理想刚性双原子分子模型）。
+\workings
+两气体都是常温下可按刚性双原子分子处理，自由度$i=5$。
+因此
+\[
+\overline\varepsilon_k=\frac52k_{\mathrm B}T,\qquad
+\overline w=\frac32k_{\mathrm B}T
+\]
+对两种气体均相同，故\textbf{两者均相等（A）}。
+\crosscheck 不能将氢气误当单原子气体；在常温刚性双原子近似下氢气和氧气具有相同自由度。
+
+\sourceproblem{5.1.6}{124}{124}
+\problemtext 1 mol刚性双原子分子理想气体温度为$T$，求其内能。
+\workings
+在转动自由度充分激发而振动自由度冻结的温度区域，
+$i=3+2=5$，有
+\[
+\boxed{U=\frac{i}{2}RT=\frac52RT}\quad(\text{选C}).
+\]
+\crosscheck 这里是1 mol而非1个分子；若是每分子平均能量应使用$k_{\mathrm B}$而不是$R$。
+
+\sourceproblem{5.1.7}{124}{124}
+\problemtext 判断理想气体单位时间内分子对单位面积器壁施加的总冲量随
+体积、压强、温度、密度变化的关系，选择必然成立者。
+\workings
+该冲量大小除以时间、面积即为压强$p$：
+\[
+\boxed{\frac{\mathrm dJ}{\mathrm dt\,\mathrm dS}=p}.
+\]
+因此压强增大时单位时间单位面积的总冲量一定增大，选\textbf{B}。
+体积减小、温度不变、密度不变若缺少对其他状态变量的约束，
+均不足以保证该冲量单调或保持不变。
+\crosscheck 由$p=nk_{\mathrm B}T$可构造反例：
+若$n$不变而$T$升高，压强仍可升高。
+
+\sourceproblem{5.1.8}{124}{124}
+\problemtext 一定体积内的理想气体温度升为原来的2倍，
+比较分子平均平动动能与容器内压强。
+\workings
+温度以开尔文计，$\langle\varepsilon_{\mathrm{trans}}\rangle=\tfrac32 k_{\mathrm B}T$，
+而$n=N/V$不变，$p=nk_{\mathrm B}T$。
+故两者均变为原来的2倍，原题选\textbf{A}。
+\crosscheck 若改为摄氏温度数值“加倍”则不成立；
+原题中的温度倍数必须指绝对热力学温度。
+
+\sourceproblem{5.1.9}{124}{124}
+\problemtext 氢气、氧气温度相同，原题给出关于两气体压强、密度、
+单个分子速率及方均根速率的四个“氧气一定更大”的判断。
+\workings
+仅知$T$相同而没有体积、总质量、分子数或压强条件，
+不能推出哪种气体压强大或密度大。单个分子速度有分布，
+不可能由温度保证每个氧分子速度都更大。
+方均根速率实际上
+\[
+v_{\mathrm{rms}}=\sqrt{\frac{3RT}{M_{\mathrm{mol}}}},
+\quad
+\frac{v_{\mathrm{rms,O_2}}}{v_{\mathrm{rms,H_2}}}
+=\sqrt{\frac{2}{32}}=\frac14<1.
+\]
+故按原题扫描中的A—D四个断言逐字解释，\textbf{均不能成立}。
+\crosscheck 原题没有“都不正确”选项；保留\textbf{题面或选项待核实}标记，
+不编造某个字母为正确答案。
+
+\sourceproblem{5.1.10}{124}{124}
+\problemtext 理想气体放在恒温容器中并缓慢漏气，判断压强、
+每个分子平均平动动能和剩余气体总内能的变化。
+\workings
+恒温即$T$不变，所以
+\[
+\boxed{\langle\varepsilon_{\mathrm{trans}}\rangle
+=\frac32k_{\mathrm B}T=\text{常量}}.
+\]
+但容器内分子数$N$减少，$p=Nk_{\mathrm B}T/V$减少，
+剩余气体的总内能$U=(i/2)Nk_{\mathrm B}T$也减少。
+因此只有平均平动动能不变的描述正确，选\textbf{B}。
+\crosscheck 单分子的平均能量与整个容器的内能是不同物理量。
+
+\sourceproblem{5.1.11}{124}{124}
+\problemtext 经典平衡理想气体中，比较最概然速率$v_p$、
+平均速率$\overline v$和方均根速率$v_{\mathrm{rms}}$。
+\workings
+麦克斯韦分布给出
+\[
+v_p=\sqrt{\frac{2k_{\mathrm B}T}{m}},\quad
+\overline v=\sqrt{\frac{8k_{\mathrm B}T}{\pi m}},\quad
+v_{\mathrm{rms}}=\sqrt{\frac{3k_{\mathrm B}T}{m}}.
+\]
+因$2<8/\pi<3$，
+\[
+\boxed{v_p<\overline v<v_{\mathrm{rms}}}\quad(\text{选C}).
+\]
+\crosscheck 三者均有速率量纲，且随温度升高按$\sqrt T$增长。
+
+\sourceproblem{5.1.12}{124--125}{124--125}
+\problemtext 麦克斯韦速率分布图$f(v)$在$v_0$处达到峰值，
+图中峰两侧区域$A,B$的面积标为相等。判断$v_0$的物理意义。
+\workings
+曲线在$v_0$处取最大值，即$f'(v_0)=0$且为峰点，
+故$v_0$是\textbf{最概然速率}，选\textbf{A}。
+\[
+\boxed{v_0=v_p=\sqrt{\frac{2k_{\mathrm B}T}{m}}}
+\]
+（经典三维麦克斯韦速率分布）。
+\crosscheck 实际严格麦克斯韦速率密度通常并非以众数为中心左右面积相等；
+图中“$A,B$面积相等”若为严格条件，与标准分布峰点有潜在不一致。
+因此保留图示\textbf{待二校}，不将众数误认为中位数。
+
+\sourceproblem{5.1.13}{125}{125}
+\problemtext 速率概率密度$f(v)$的物理意义为何？
+\workings
+$f(v)\mathrm dv$表示分子速率处于$[v,v+\mathrm dv]$区间的概率或分子数比例，
+而$f(v)$本身是\emph{单位速率区间的概率密度}，故选\textbf{B}。
+\[
+\boxed{\frac{\mathrm dP}{\mathrm dv}=f(v),\qquad
+P(v<v_i<v+\mathrm dv)=f(v)\mathrm dv}.
+\]
+\crosscheck $[f(v)]=(\mathrm{m/s})^{-1}$，不是无量纲百分率，也不是分子数。
+
+\sourceproblem{5.1.14}{125}{125}
+\problemtext 一定量理想气体在温度固定时降低压强，判断
+平均碰撞频率$\overline Z$与平均自由程$\overline\lambda$的变化。
+\workings
+硬球气体近似下
+\[
+\overline\lambda=\frac{k_{\mathrm B}T}
+ {\sqrt2\pi d^2p},\qquad
+\overline Z=\frac{\overline v}{\overline\lambda}.
+\]
+$T$不变使$\overline v$不变；压强$p$减小时
+$\overline\lambda$增大，而$\overline Z$减小。
+故\textbf{碰撞频率减小、自由程增大（D）}。
+\crosscheck 压强与自由程反比仅适用经典稀薄硬球模型；
+稠密气体的多体关联需额外修正。
