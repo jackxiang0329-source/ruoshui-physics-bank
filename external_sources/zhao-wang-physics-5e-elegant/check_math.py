@@ -957,8 +957,13 @@ def tenth_round_regressions():
     near(2*600,3*400)
     near(2*600e-9/math.sin(math.atan(.05/.5))*1e6,12.059850745345069)
     near(2*600/.2,6000)
-    near(6000/4,1500)
-    assert [k for k in range(1, 10) if k % 4 != 0] == [1,2,3,5,6,7,9]
+    # QA 4/8: all candidate slit widths consistent with visible orders 2, 3 and absent 4.
+    candidates = [m for m in (1,2,3) if (2*m)%4 and (3*m)%4]
+    assert candidates == [1,3]
+    assert [6000*m/4 for m in candidates] == [1500,4500]
+    for m in candidates:
+        assert [k for k in range(1,10) if (k*m)%4] == [1,2,3,5,6,7,9]
+    assert math.floor(.048e-3/(680e-9/2))+1 == 142
     near(2*.5*480e-9/(.02e-3)*1e3,24)
     near(.5*480e-9/(.10e-3)*1e3,2.4)
     near(.5*math.cos(pi/6)**2,3/8)
@@ -998,6 +1003,13 @@ def eleventh_round_regressions():
     # Textbook 11.1: proper time, contraction, frame-invariant rest mass.
     near(5/sqrt(34),.8574929257125442)
     near(10*sqrt(1-.8**2),6)
+    near(10/( (1+.8)/sqrt(1-.8**2) ),10/3)
+    # Simultaneous spatially separated events: perpendicular vs parallel boost.
+    v=.6*c; gamma=1/sqrt(1-.6**2); dx=30.
+    near(gamma*(0-v*0/c**2),0)
+    assert gamma*(0-v*dx/c**2)<0
+    # Same-place distinct-time events: nonzero boost implies distinct places.
+    assert abs(-gamma*v*1.0)>0
     near(4.59*sqrt(1-.991**2),.6144259791870786)
     near(400*sqrt(1-.99**2),56.426943918663575)
     near(2*1,2)
@@ -1090,6 +1102,14 @@ def twelfth_round_regressions():
     near(hc_eVnm/4.2,295.2004724600006)
     near(hc_eVnm/(hc_eVnm/300-.5*me*5e5**2/e),362.3041265814437)
     near(e*(2.13-.47)/((9.6-5.5)*1e14)*1e34,6.486861493756098)
+    slope=(2.13-.47)/((9.6-5.5)*1e14)
+    intercept=5.5e14-.47/slope
+    near(intercept,4.339156626506024e14)
+    near(e*slope*intercept*1e19,2.8147508035858544)
+    # Vacuum Balmer wavelengths, not air wavelengths.
+    RH=1.0967758e7
+    near(1e9/(RH*(1/4-1/9)),656.4696267003703)
+    near(1e9/(RH*(1/4-1/16)),486.27379755582984)
     near(5*h*c/(500e-9)*1e18,1.9864458571489288)
     near(h/(me*c)*1e12,2.426310238916983)
     near((.0708+h/(me*c)*1e9),.07322631023891698)
