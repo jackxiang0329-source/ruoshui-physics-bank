@@ -1,0 +1,114 @@
+% 《大学物理简明教程》第5章填空题5.2.1—5.2.8。
+% 书内及用户扫描PDF第125页。非官方独立推导；待二校。
+\subsection{填空题：气体状态、能量与速率分布}
+
+\sourceproblem{5.2.1}{125}{125}
+\problemtext 一只电子管的真空度（管内气体压强）为
+$1.0\times10^{-5}\,\mathrm{mmHg}$，温度为$27^\circ\mathrm C$。
+求单位体积的气体分子数。
+\workings
+将压强换为SI单位：
+$p=(10^{-5})(133.322)\,\mathrm{Pa}=1.33322\times10^{-3}\,\mathrm{Pa}$，
+$T=300.15\,\mathrm K$。
+使用$p=nk_{\mathrm B}T$与$k_{\mathrm B}=1.380649\times10^{-23}\,\mathrm{J/K}$，
+\[
+\boxed{n=\frac p{k_{\mathrm B}T}
+\approx3.22\times10^{17}\,\mathrm{m^{-3}}}.
+\]
+\crosscheck 单位$\mathrm{Pa}/(\mathrm{J/K}\cdot\mathrm K)=\mathrm{m^{-3}}$。
+
+\sourceproblem{5.2.2}{125}{125}
+\problemtext 容器体积$10^{-2}\,\mathrm{m^3}$，其中气体质量为$100$ g，
+分子的方均根速率为$200\,\mathrm{m/s}$；求压强。
+\workings
+密度$\rho=M/V=0.1/0.01=10\,\mathrm{kg/m^3}$，
+由分子动理论压强公式
+\[
+\boxed{p=\frac13\rho\langle v^2\rangle
+=\frac13(10)(200)^2
+\approx1.33\times10^5\,\mathrm{Pa}}.
+\]
+\crosscheck $\rho v^2$量纲为$\mathrm{kg/(m\,s^2)}=\mathrm{Pa}$。
+
+\sourceproblem{5.2.3}{125}{125}
+\problemtext 温度$127^\circ\mathrm C$、1 mol氧气，
+氧分子按刚性双原子分子处理。求气体内能与分子转动总动能。
+\workings
+$T=400.15$ K，氧分子有3平动与2转动自由度，所以
+\[
+\boxed{U=\frac52RT
+\approx8.32\times10^3\,\mathrm J},\qquad
+\boxed{E_{\mathrm{rot}}=RT\approx3.33\times10^3\,\mathrm J}.
+\]
+\crosscheck 总内能应大于纯转动能量；振动自由度在本题的刚性分子模型中未计入。
+
+\sourceproblem{5.2.4}{125}{125}
+\problemtext 标准状态下1立方米任意理想气体所含分子数。
+\workings
+标准状态取$p_0=1.01325\times10^5\,\mathrm{Pa}$、
+$T_0=273.15\,\mathrm K$，由$pV=Nk_{\mathrm B}T$，
+\[
+\boxed{N=\frac{p_0(1\,\mathrm{m^3})}{k_{\mathrm B}T_0}
+\approx2.69\times10^{25}}.
+\]
+\crosscheck 阿伏加德罗常量与摩尔体积之比
+$N_A/(22.4\times10^{-3}\,\mathrm{m^3})$给近似同一数量级。
+
+\sourceproblem{5.2.5}{125}{125}
+\problemtext 三种容器分别装1 mol氮气、1 mol氢气与1 mol氦气，
+绝对温度都升高1 K；求三种气体内能增量（刚性理想气体）。
+\workings
+氮气与氢气为双原子，$i=5$；氦气为单原子，$i=3$。
+固定摩尔数时$\Delta U=(i/2)nR\Delta T$，故
+\[
+\boxed{\Delta U_{\mathrm{N_2}}=\frac52R
+\approx20.79\,\mathrm J},\quad
+\boxed{\Delta U_{\mathrm{H_2}}=\frac52R
+\approx20.79\,\mathrm J},
+\]
+\[
+\boxed{\Delta U_{\mathrm{He}}=\frac32R\approx12.47\,\mathrm J}.
+\]
+\crosscheck 刚性双原子比单原子每摩尔多两个转动自由度，故增量比为$5:3$。
+
+\sourceproblem{5.2.6}{125}{125}
+\problemtext 温度300 K时1 mol氢气分子的总平均平动动能、总平均转动动能与气体内能。
+\workings
+在刚性双原子近似下
+\[
+\boxed{E_{\mathrm{trans}}=\frac32RT\approx3.74\times10^3\,\mathrm J},\quad
+\boxed{E_{\mathrm{rot}}=RT\approx2.49\times10^3\,\mathrm J},
+\]
+\[
+\boxed{U=\frac52RT\approx6.24\times10^3\,\mathrm J}.
+\]
+\crosscheck 两类总动能之和等于气体内能；这里“总平均”是将分子的平均能量对1 mol求和。
+
+\sourceproblem{5.2.7}{125}{125}
+\problemtext 图5.2.7给出两条麦克斯韦速率分布：(1)峰值高、靠左、窄，
+(2)峰值低、靠右、宽。判断同一种气体何者温度高，
+以及同温氢气与氧气何者对应哪条曲线。
+\workings
+麦克斯韦分布速率尺度满足$v\propto\sqrt{T/m}$。
+对同一种气体，温度高时曲线右移并展宽，故
+\[
+\boxed{\text{温度较高：曲线(2)}}.
+\]
+对同温不同气体，氢气分子质量小、速度尺度高，
+因此$\boxed{\mathrm{H_2}:\text{曲线(2)},\quad
+\mathrm{O_2}:\text{曲线(1)}}$。
+\crosscheck 两条曲线都应归一化为1，峰高变化不能单独视为“分子总数变化”。
+
+\sourceproblem{5.2.8}{125}{125}
+\problemtext 一定量理想气体先等容加热至温度的2倍，
+再等压膨胀至体积的2倍。求最终分子平均自由程与初始值之比
+（温度变化不影响有效碰撞直径）。
+\workings
+分子数$N$不变，硬球模型下
+$\overline\lambda=1/(\sqrt2\pi d^2n)$，
+$n=N/V$。第一次体积不变，$\lambda$不变；
+第二次体积变为$2V_0$，数密度减半，故
+\[
+\boxed{\overline\lambda_f/\overline\lambda_0=2}.
+\]
+\crosscheck 等压使二次温度再加倍，但自由程由数密度决定；不应把温度的总4倍直接当作自由程4倍。
