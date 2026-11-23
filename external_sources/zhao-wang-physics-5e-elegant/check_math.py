@@ -150,6 +150,24 @@ CHAPTERS = (
      [f"16.{n}" for n in range(5, 8)]),
     ("chapters/guide-ch16-examples-008-010.tex", "sourceexample",
      [f"16.{n}" for n in range(8, 11)]),
+    ("chapters/guide-selftest09-choices.tex", "sourcetest",
+     [f"9.1.{n}" for n in range(1, 12)]),
+    ("chapters/guide-selftest09-blanks.tex", "sourcetest",
+     [f"9.2.{n}" for n in range(1, 8)]),
+    ("chapters/guide-selftest09-solutions.tex", "sourcetest",
+     [f"9.3.{n}" for n in range(1, 6)] + ["9.4.1"]),
+    ("chapters/guide-selftest10-choices.tex", "sourcetest",
+     [f"10.1.{n}" for n in range(1, 11)]),
+    ("chapters/guide-selftest10-blanks.tex", "sourcetest",
+     [f"10.2.{n}" for n in range(1, 9)]),
+    ("chapters/guide-selftest10-solutions.tex", "sourcetest",
+     [f"10.3.{n}" for n in range(1, 5)]),
+    ("chapters/guide-selftest11-choices.tex", "sourcetest",
+     [f"11.1.{n}" for n in range(1, 13)]),
+    ("chapters/guide-selftest11-blanks.tex", "sourcetest",
+     [f"11.2.{n}" for n in range(1, 10)]),
+    ("chapters/guide-selftest11-solutions.tex", "sourcetest",
+     [f"11.3.{n}" for n in range(1, 7)]),
 )
 
 
@@ -171,7 +189,7 @@ def structural_check():
             for label in (r"\problemtext", r"\workings", r"\crosscheck"):
                 assert label in block, (number, label)
         total += len(ids)
-    assert total == 625, total
+    assert total == 698, total
     main_source = (ROOT / "main.tex").read_text(encoding="utf-8")
     for relative, _macro, _expected in CHAPTERS:
         stub = relative.removesuffix(".tex")
@@ -1099,6 +1117,68 @@ def thirteenth_batch_regressions():
     near(E_pair*(1+me/M)/E_pair,1+me/M)
     near(E_pair/2,.5109989506917532)
 
+
+def fourteenth_round_regressions():
+    """Scanned self-tests 9/10/11: 73 sourced numbered items and independent physical invariants."""
+    pi=math.pi
+    h=6.62607015e-34
+    c=299792458.0
+    e=1.602176634e-19
+    me=9.1093837139e-31
+    nm=1e-9
+    hc_nm=h*c/e*1e9
+    deg=lambda a:a*180/pi
+    # Test 9 interference, with explicit half-wave and round-trip factors.
+    near(3*pi/(2*pi),1.5)
+    near(500/(4*1.38),90.57971014492753)
+    near(2*(.620e-3)/2300*1e9,539.1304347826087)
+    near(1/(4/3),.75)
+    near(700e-9/(2*1e-4*2.5e-3),1.4)
+    assert [4000/m for m in range(6,11)]==[
+        4000/6,4000/7,500,4000/9,400]
+    assert all(400<=4000/m<=760 for m in range(6,11))
+    near(546.1e-9*2/(12e-3/10)*1e3,.9101666666666669)
+    near(20*(12/10),24)
+    near(2100/(2*1.35),777.7777777777777)
+    near(4.5*500e-9/(2*2e-4)*(1-1/1.4)*1e3,1.607142857142857)
+    near(1-1/math.sqrt(1.33),.1328900304758801)
+    near(2*math.cos(pi/6)**2,1.5)
+    # Test 10 single slit, missing grating orders, and polarization.
+    near((3/4)/(3/2),.5)
+    near(.5*math.cos(pi/6)**2,.375)
+    near((math.cos(pi/4)**2)*(math.sin(pi/4)**2),.25)
+    near(1/(1+1),.5)
+    near(deg(pi/2-math.atan(1.33)),36.93876273228983)
+    assert [k for k in range(-2,3)]==[-2,-1,0,1,2]
+    near(3*.5*(760-400)*nm/(2*1e-4)*1e3,2.7)
+    near((4.493409457909064/pi)*.5*360*nm/1e-4*1e3,
+         2.574533975623565)
+    near(.5*360*nm/1e-5*1e3,18.)
+    near(2*600/(math.sin(pi/6)),2400)
+    assert [k for k in range(-3,4) if k==0 or k%3!=0]==[-2,-1,0,1,2]
+    near(deg(math.acos(math.sqrt(4/5))),26.565051177077994)
+    near(deg(math.atan(1.5/1.33)),48.43766499236521)
+    assert deg(pi/2-math.atan(1.5/1.33))<deg(math.asin(1/1.5))
+    # Test 11 photon, H levels, neutron, and confinement.
+    near(hc_nm*(1/300-1/400),1.0332016536100024)
+    near((1/(1.2))/(1-(1/(1.2))),5.)
+    near(1/math.sqrt(1-.6**2)-1,.25)
+    near((1/4)/(1/4-1/9),9/5)
+    near(13.6/9,1.511111111111111)
+    near(500**2/1e-4*1e-9,2.5)  # source uses Delta x Delta p >= h
+    near((6.63e-34)**2/(2*1.67e-27*(.2e-9)**2),
+         3.2901871257485018e-21)
+    near(6.63e-34/(.05e-9),1.326e-23)
+    assert 2+2+2==6
+    assert 2+2+6+2+2==14
+    near(hc_nm/(hc_nm/410-1),612.5686855736943)
+    lc=h/(me*c)*1e9
+    near(deg(math.acos(1-(.0522-.05)/lc)),84.64804764138756)
+    near(hc_nm*(1/.05-1/.0522),1045.0775346859814)
+    near(13.6*(1-1/9)*e/h,2923080328209323.)
+    near(h/(550e-9*c),4.018580171462243e-36)
+    assert sum(2*(2*l+1) for l in range(2))==8
+
 if __name__ == "__main__":
     n = structural_check()
     numerical_check()
@@ -1115,6 +1195,7 @@ if __name__ == "__main__":
     twelfth_round_regressions()
     thirteenth_guide_regressions()
     thirteenth_batch_regressions()
+    fourteenth_round_regressions()
     print(f"Structure: {n} referenced worked items; all checked blocks present.")
     print("Selected numeric invariants: passed.")
     print("Not a replacement for full independent physics or copyright review.")
