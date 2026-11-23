@@ -1,0 +1,1332 @@
+% Consolidated 14-phase-transformations from 350eef03dcd4ca0e99eacbc61d97caa887d8c65a; original TeX fragments preserved.
+
+% === BEGIN 14-phase-transformations-185-194.tex blob c052a91ec36ef4989c783b3541d2f15b7bab88ca ===
+% Irodov 用户底本 PDF 页92--94，原书印刷页83--85，原题185--194。
+% 第185题底本印Δm=0.70g却简答1.2J；第189题简答mJ应为MJ。
+\thermophaseproblem{185}{83}
+在温度 $t=100^\circ\mathrm C$ 时，
+无质量活塞下的圆筒内装有饱和水蒸气。
+缓慢推动活塞使
+$\Delta m=0.70\,\mathrm g$ 的蒸汽冷凝。
+假设水蒸气是理想气体，
+忽略水的液态体积，求对气体所做的功。
+\exsolution
+温度为 $T=373.15\,\mathrm K$；
+饱和冷凝过程等温且近似等压
+$p_{\rm sat}=p_0$。
+冷凝物的气相物质的量
+$\Delta\nu=\Delta m/M$，
+其原先占据的气相体积为
+$\Delta V_{\rm vap}=\Delta\nu RT/p_0$。
+忽略液态体积，活塞压缩体积
+$|\Delta V|=\Delta\nu RT/p_0$，
+所以外界对气体所做的正功
+\[
+\boxed{A_{\rm on}=p_0|\Delta V|
+=\frac{\Delta m RT}{M}}.
+\]
+取水摩尔质量
+$M=18\times10^{-3}\,\mathrm{kg/mol}$，
+题面质量 $\Delta m=7.0\times10^{-4}\,\mathrm{kg}$，
+得
+\[
+\boxed{A_{\rm on}\simeq1.21\times10^2\,\mathrm J=120\,\mathrm J}.
+\]
+\excheck \textbf{底本数值冲突：}
+书后简答印同一公式但给“$1.2\,\mathrm J$”。
+使用题面清楚印出的 $0.70\,\mathrm g$，
+由气体定律得到约 $120\,\mathrm J$，
+相差100倍。未擅自把冷凝质量改为 $0.007\,\mathrm g$。
+
+\thermophaseproblem{186}{84}
+体积 $V=6.0\,\mathrm L$ 的容器里装有水和
+饱和水蒸气，压强 $40\,\mathrm{atm}$、
+温度 $250^\circ\mathrm C$。
+气相比体积
+$v_v'=50\,\mathrm{L/kg}$，
+整个气液系统质量
+$m=5.0\,\mathrm{kg}$。
+求气相的质量及体积。
+\exsolution
+设气相质量 $m_v$，液相质量
+$m_l=m-m_v$，
+液态水的比体积记为
+$v_l'\simeq1.0\,\mathrm{L/kg}$。
+总容积为
+\[
+V=m_vv_v'+(m-m_v)v_l'
+=m v_l'+m_v(v_v'-v_l').
+\]
+解得
+\[
+\boxed{m_v=\frac{V-mv_l'}{v_v'-v_l'}}.
+\]
+代入以升、千克计的数值：
+\[
+m_v=\frac{6.0-5.0(1.0)}{50-1.0}
+\,\mathrm{kg}
+\simeq\boxed{0.020\,\mathrm{kg}=20\,\mathrm g}.
+\]
+气相体积
+\[
+\boxed{V_v=m_vv_v'\simeq(0.0204)(50)
+\,\mathrm L\simeq1.0\,\mathrm L}.
+\]
+\excheck 不能把全部 $6\,\mathrm L$
+都当作气相容积；液相虽比体积小，
+但总液体质量约5 kg，仍占约5 L。
+
+\thermophaseproblem{187}{84}
+温度 $100^\circ\mathrm C$ 时，
+圆筒活塞下的饱和水蒸气初体积
+$V_0=5.0\,\mathrm L$。
+在等温条件下压缩至
+$V=1.6\,\mathrm L$，
+假设饱和蒸汽为理想气体，
+求凝结成液体的质量。
+\exsolution
+饱和蒸汽在相变过程维持同温饱和压
+$p_0\simeq1\,\mathrm{atm}$。
+压缩减少的气相体积为
+$\Delta V=V_0-V$；
+忽略液相体积，凝结的摩尔数满足
+$p_0\Delta V=\Delta\nu RT$。
+因此
+\[
+\boxed{m_{\rm cond}=
+\frac{Mp_0(V_0-V)}{RT}}.
+\]
+用 $M=0.018\,\mathrm{kg/mol}$、
+$\Delta V=3.4\times10^{-3}\,\mathrm{m^3}$、
+$T=373.15\,\mathrm K$：
+\[
+\boxed{m_{\rm cond}\simeq2.0\,\mathrm g}.
+\]
+\excheck 等温饱和压缩不是一团不凝结气体的
+$pV=\text{常数}$ 过程；气相摩尔数随冷凝而减少。
+
+\thermophaseproblem{188}{84}
+一批饱和蒸汽最初只处于气相，
+现等温将其所占总容积压缩 $n$ 倍。
+假设饱和蒸汽比体积是液相比体积的
+$N$ 倍，其中 $N>n$。
+求末态液相占总容积的比例 $\eta$。
+另若末态体积恰在
+$p$--$V$ 等温相变平台的中点，求 $\eta$。
+\exsolution
+设液相比体积为 $v_l$，
+气相比体积为 $v_v=Nv_l$，
+物质总质量为 $m$。
+最初全为饱和气相，
+$V_0=mv_v$，
+压缩后 $V_f=V_0/n$。
+设末态液相质量 $m_l$，
+气相质量 $m-m_l$：
+\[
+V_f=m_lv_l+(m-m_l)v_v
+=mv_v-m_l(v_v-v_l).
+\]
+因此
+$m_l=(V_0-V_f)/(v_v-v_l)$。
+液相\emph{体积}占比
+\[
+\eta=\frac{m_lv_l}{V_f}
+=\frac{(V_0-V_f)v_l}{V_f(v_v-v_l)}
+=\boxed{\frac{n-1}{N-1}}.
+\]
+若末态体积在相变平台两端
+$mv_l$ 与 $mv_v$ 的中点，
+$V_f=m(v_l+v_v)/2$，
+于是
+\[
+\boxed{\eta=\frac{mv_l}{2V_f}
+=\frac1{N+1}}.
+\]
+\excheck 本题问的是\emph{液相体积占比}，
+不是液态水的质量占比；
+两者相差可很大。
+
+\thermophaseproblem{189}{84}
+质量 $m=1.00\,\mathrm{kg}$ 的水，
+在标准大气压下已沸腾，
+随后全部变为饱和水蒸气。
+视饱和蒸汽为理想气体，
+求系统的熵增与内能增量。
+\exsolution
+取沸点
+$T=373.15\,\mathrm K$、
+水的汽化潜热
+$q\simeq2.26\times10^6\,\mathrm{J/kg}$。
+等温定压相变吸热为
+$Q=mq$，因此可逆相变的熵增
+\[
+\boxed{\Delta S=\frac{mq}{T}
+\simeq\frac{2.26\times10^6}{373.15}
+\simeq6.1\times10^3\,\mathrm{J/K}
+=6.1\,\mathrm{kJ/K}}.
+\]
+由第一定律，
+$\Delta U=Q-A$。
+液相体积可忽略，
+蒸汽的气体功
+$A=p\Delta V\simeq\nu RT=mRT/M$。
+于是
+\[
+\boxed{\Delta U=m\left(q-\frac{RT}{M}\right)}.
+\]
+以 $M=0.018\,\mathrm{kg/mol}$，
+得
+\[
+\boxed{\Delta U\simeq2.1\times10^6\,\mathrm J
+=2.1\,\mathrm{MJ}}.
+\]
+\excheck \textbf{底本单位勘误：}
+本版书后印成“$2.1\,\mathrm{mJ}$”；
+按题面1 kg水的汽化潜热和印出的内能公式，
+必须是 $2.1\,\mathrm{MJ}$，与小写m的毫焦差 $10^9$ 倍。
+
+\thermophaseproblem{190}{84}
+质量 $m=20\,\mathrm g$、
+初温 $0^\circ\mathrm C$ 的水，
+装在绝热圆筒中，活塞无质量，
+活塞面积
+$S=410\,\mathrm{cm^2}$，
+外界压强为标准大气压。
+向水传入热量
+$Q=20.0\,\mathrm{kJ}$，
+求活塞上升高度。
+\exsolution
+活塞维持近似等压
+$p_0=1\,\mathrm{atm}$。
+先将水从 $0^\circ\mathrm C$
+加热至 $100^\circ\mathrm C$，
+需热
+$Q_1=mc\Delta T$，
+其中 $c\simeq4.18\times10^3\,\mathrm{J/(kg\,K)}$、
+$\Delta T=100\,\mathrm K$。
+\[
+Q_1=(0.020)(4180)(100)\simeq8.36\,\mathrm{kJ}.
+\]
+余热
+$Q_v=Q-Q_1\simeq11.64\,\mathrm{kJ}$
+用于部分汽化。
+取汽化潜热
+$q\simeq2.26\,\mathrm{MJ/kg}$，
+气相质量
+$m_v=Q_v/q$。
+在沸点 $T_b\simeq373\,\mathrm K$，
+蒸汽近似理想气体且液相体积很小，
+活塞体积增加
+$\Delta V\simeq m_vRT_b/(Mp_0)$。
+故
+\[
+\boxed{h\simeq
+\frac{(Q-mc\Delta T)RT_b}{qMp_0S}}
+\simeq\boxed{0.21\,\mathrm m\approx0.20\,\mathrm m}.
+\]
+\excheck 原书书后给约 $20\,\mathrm{cm}$；
+采用常用表中汽化潜热为定压焓变时，
+得到约21 cm。若把 $q$ 定义为内能汽化差，
+还须计入气体膨胀功，
+本稿明确了所用潜热约定。
+
+\thermophaseproblem{191}{84}
+无质量活塞下的绝热圆筒里有
+$m_v=1.0\,\mathrm g$ 饱和水蒸气，
+外界标准大气压。
+往其中注入温度
+$t_0=22^\circ\mathrm C$ 的
+$m=1.0\,\mathrm g$ 冷水。
+忽略活塞摩擦和筒热容，
+求活塞下降时大气压所做的功。
+\exsolution
+初态蒸汽为 $100^\circ\mathrm C$，
+系统仍在外压约1 atm下变化。
+需要把新注入的水从
+$T_0\simeq295\,\mathrm K$
+加热到沸点
+$T_b\simeq373\,\mathrm K$，
+需热量
+$Q_{\rm warm}=mc(T_b-T_0)$。
+这部分热由一部分蒸汽冷凝释放，
+故冷凝质量
+\[
+m_{\rm cond}=\frac{mc(T_b-T_0)}q.
+\]
+忽略液态体积，蒸汽体积减少
+$\Delta V\simeq
+(m_{\rm cond}/M)RT_b/p_0$。
+大气压力在活塞下降过程中做正功
+\[
+\boxed{A=p_0\Delta V=
+\frac{mc(T_b-T_0)RT_b}{qM}}.
+\]
+代入
+$m=0.001\,\mathrm{kg}$、
+$c=4180\,\mathrm{J/(kg\,K)}$、
+$q\simeq2.26\times10^6\,\mathrm{J/kg}$，
+\[
+\boxed{A\simeq25\,\mathrm J}.
+\]
+\excheck 需要把冷水加热到与饱和蒸汽相同温度；
+不能误认为整个原有1g蒸汽都冷凝。
+
+\thermophaseproblem{192}{84}
+已知球形凸液面上的饱和蒸汽压
+比平面液面的饱和蒸汽压高
+$\Delta p\ll p$，
+并满足 Kelvin 近似公式
+$\Delta p\simeq(\rho_v/\rho_l)(2\alpha/r)$。
+在温度 $t=27^\circ\mathrm C$ 时，
+求水滴直径 $d$，使
+$\Delta p/p=\eta=1.0\%$；
+假设蒸汽为理想气体。
+\exsolution
+用饱和蒸汽理想气体关系
+$p=\rho_vRT/M$，
+将 $\rho_v/p=M/(RT)$ 代入：
+\[
+\eta=\frac{\Delta p}{p}
+\simeq\frac{\rho_v}{\rho_l}
+\frac{2\alpha}{rp}
+=\frac{2\alpha M}{r\rho_lRT}.
+\]
+水滴直径 $d=2r$，故
+\[
+\boxed{d\simeq
+\frac{4\alpha M}{\eta\rho_lRT}}.
+\]
+取 $T=300.15\,\mathrm K$、
+$\alpha\simeq0.072\,\mathrm{N/m}$、
+$M=0.018\,\mathrm{kg/mol}$、
+$\rho_l=1000\,\mathrm{kg/m^3}$，
+\[
+\boxed{d\simeq2.1\times10^{-7}\,\mathrm m
+\simeq0.2\,\mathrm{\mu m}}.
+\]
+\excheck 公式只在蒸汽压相对增量很小的范围内适用；
+更小水滴通常需使用非线性的 Kelvin 方程。
+
+\thermophaseproblem{193}{84}
+在 $t=100^\circ\mathrm C$ 的饱和水蒸汽下，
+求每秒从 $1\,\mathrm{cm^2}$ 水面
+离开的蒸汽分子总质量。
+假设撞向水面的气相分子中，
+仅有 $\eta=3.6\%$ 被液相留住。
+\exsolution
+饱和状态净蒸发质量通量为零，
+因此离开液面的质量通量等于
+气相分子被液体\emph{实际吸收}的通量。
+饱和汽的撞击壁面质量通量为
+\[
+j_{\rm in}=\frac14\rho_v\bar v
+=p\sqrt{\frac{M}{2\pi RT}},
+\]
+这是由 Maxwell 分布对法向速度积分得到的。
+只保留其中比例 $\eta$，
+净被吸收的质量通量为 $\eta j_{\rm in}$，
+在动态平衡下同样等于离开液面的质量通量：
+\[
+\boxed{j_{\rm out}=
+\eta p_0\sqrt{\frac{M}{2\pi RT}}}.
+\]
+用
+$p_0=101325\,\mathrm{Pa}$、
+$T=373.15\,\mathrm K$、
+$M=0.018\,\mathrm{kg/mol}$，
+计算
+$j_{\rm out}\simeq3.5\,\mathrm{kg/(m^2\,s)}$。
+换算 $1\,\mathrm{cm^2}=10^{-4}\,\mathrm{m^2}$：
+\[
+\boxed{\dot m\simeq3.5\times10^{-4}\,\mathrm{kg/s}
+=0.35\,\mathrm{g/s}}
+\quad\text{（每平方厘米水面）}.
+\]
+\excheck 这是饱和平衡下\emph{双向交换}
+中的单向蒸发通量，不代表有同样大小的
+净蒸发质量损失。
+
+\thermophaseproblem{194}{85}
+在温度 $T=2000\,\mathrm K$ 下，
+钨丝在高真空中蒸发，
+测得单位面积质量损失率
+$\mu=1.2\times10^{-13}\,
+\mathrm{g/(s\,cm^2)}$。
+求该温度下钨的饱和蒸汽压强。
+\exsolution
+真空中的分子逸出通量
+与饱和蒸汽压强之间的 Hertz--Knudsen
+理想动力学近似为
+\[
+\mu=p_{\rm sat}\sqrt{\frac{M}{2\pi RT}}.
+\]
+故
+\[
+\boxed{p_{\rm sat}=
+\mu\sqrt{\frac{2\pi RT}{M}}}.
+\]
+换算质量通量：
+\[
+1\,\mathrm{g/(cm^2\,s)}
+=10\,\mathrm{kg/(m^2\,s)},
+\quad
+\mu=1.2\times10^{-12}\,\mathrm{kg/(m^2\,s)}.
+\]
+钨摩尔质量
+$M\simeq0.184\,\mathrm{kg/mol}$，
+因此
+\[
+\boxed{p_{\rm sat}\simeq
+1.2\times10^{-12}
+\sqrt{\frac{2\pi(8.314)(2000)}{0.184}}
+\simeq9.0\times10^{-10}\,\mathrm{Pa}
+=0.90\,\mathrm{nPa}}.
+\]
+\excheck 采用理想蒸发系数近似为1；
+实际蒸发表面的凝结系数可能带来修正。
+% === END 14-phase-transformations-185-194.tex ===
+
+% === BEGIN 14-phase-transformations-195-204.tex blob 2e5750747e354960b16afdf86438eccfdee1f7da ===
+% Irodov 第2.6节原题195--204，底本PDF页94--95，印刷页85--86。
+\thermophaseproblem{195}{85}
+假设水分子间的相互吸引作用突然消失，
+其余宏观状态变量保持不变，
+那么水施加到容器壁上的压强会增加多少？
+\exsolution
+范德瓦耳斯形式的状态方程可写为
+\[
+p=p_{\rm rep}-\frac{a}{V_m^2},
+\]
+其中 $V_m$ 为摩尔体积，
+$p_{\rm rep}=RT/(V_m-b)$ 为排除体积修正的
+有效斥力压强，
+$a/V_m^2$ 代表分子间吸引的压强修正。
+若吸引项消失而体积、温度瞬时保持不变，
+墙压增加
+\[
+\boxed{\Delta p=\frac a{V_m^2}
+=a\left(\frac{\rho}{M}\right)^2}.
+\]
+对密度约
+$\rho\simeq1.0\,\mathrm{kg/L}$ 的水，
+摩尔质量 $M\simeq18\,\mathrm{g/mol}$，
+取水的范德瓦耳斯参数
+$a\simeq5.5\,\mathrm{atm\,L^2/mol^2}$，
+则
+$V_m\simeq0.018\,\mathrm{L/mol}$，
+\[
+\boxed{\Delta p\simeq1.7\times10^4\,\mathrm{atm}}.
+\]
+\excheck 这是范德瓦耳斯模型的瞬态分子作用
+\emph{形式估算}；
+现实水移除吸引作用后通常不可能维持原有液态结构。
+
+\thermophaseproblem{196}{85}
+液体密度为 $\rho$，
+单位质量汽化潜热为 $q$。
+假设汽化所需潜热主要用于克服液体的
+内聚压强 $p_i$，
+且液体服从范德瓦耳斯模型，
+求 $p_i$ 的近似值，并估算水的数值。
+\exsolution
+取质量为 $m$ 的液体，
+汽化到密度远小于液体的蒸汽时，
+克服内聚压力的机械能约为
+$p_i$ 乘初始液体的相应有效体积
+$m/\rho$。
+按题设将潜热近似视为内聚作用功，
+\[
+mq\simeq p_i\frac m\rho.
+\]
+消去质量：
+\[
+\boxed{p_i\simeq\rho q}.
+\]
+对于水，
+$\rho\simeq10^3\,\mathrm{kg/m^3}$、
+$q\simeq2.26\times10^6\,\mathrm{J/kg}$，
+故
+\[
+\boxed{p_i\simeq2.3\times10^9\,\mathrm{Pa}
+\simeq2.2\times10^4\,\mathrm{atm}}.
+\]
+\excheck 题给将潜热全归于内聚功属于近似假定，
+真实汽化焓还包含对外做功和分子内能等贡献。
+
+\thermophaseproblem{197}{85}
+证明：一摩尔范德瓦耳斯气体在临界状态满足
+\[
+V_{m,c}=3b,\qquad
+p_c=\frac{a}{27b^2},\qquad
+T_c=\frac{8a}{27Rb},
+\qquad
+p_cV_{m,c}=\frac38RT_c.
+\]
+\exsolution
+一摩尔范德瓦耳斯状态方程：
+\[
+p(V_m,T)=\frac{RT}{V_m-b}-\frac{a}{V_m^2}.
+\]
+临界等温线出现水平拐点，故
+\[
+\left(\frac{\partial p}{\partial V_m}\right)_{T_c}
+=-\frac{RT_c}{(V_m-b)^2}+\frac{2a}{V_m^3}=0,
+\]
+\[
+\left(\frac{\partial^2p}{\partial V_m^2}\right)_{T_c}
+=\frac{2RT_c}{(V_m-b)^3}-\frac{6a}{V_m^4}=0.
+\]
+由第一式
+$RT_c=2a(V_m-b)^2/V_m^3$，
+由第二式
+$RT_c=3a(V_m-b)^3/V_m^4$。
+两式相等，约去公共因子：
+$2V_m=3(V_m-b)$，
+所以
+\[
+\boxed{V_{m,c}=3b}.
+\]
+代入第一式得
+$RT_c=8a/(27b)$，
+再代入状态方程得
+$p_c=a/(27b^2)$。
+于是
+\[
+\boxed{p_cV_{m,c}
+=\frac a{27b^2}(3b)
+=\frac a{9b}
+=\frac38RT_c}.
+\]
+\excheck 临界点是等温线的\emph{水平拐点}，
+因此必须同时使用一阶、二阶导数为零，
+不能仅仅令斜率为零。
+
+\thermophaseproblem{198}{85}
+已知二氧化碳的临界温度
+$T_c=304\,\mathrm K$、
+临界压强 $p_c=73\,\mathrm{atm}$。
+求范德瓦耳斯常数 $a,b$。
+\exsolution
+由上一题临界关系，
+$p_c=a/(27b^2)$、
+$RT_c=8a/(27b)$。
+先由两式联立消去 $a$：
+\[
+\boxed{b=\frac{RT_c}{8p_c}},
+\]
+再由 $a=27p_cb^2$：
+\[
+\boxed{a=\frac{27R^2T_c^2}{64p_c}}.
+\]
+以
+$R=0.082057\,\mathrm{L\,atm/(mol\,K)}$
+计算：
+\[
+\boxed{b\simeq0.0427\,\mathrm{L/mol}},
+\qquad
+\boxed{a\simeq3.6\,\mathrm{atm\,L^2/mol^2}}.
+\]
+\excheck $a$ 的量纲为压强乘摩尔体积的平方；
+$b$ 的量纲为摩尔体积。
+
+\thermophaseproblem{199}{85}
+苯 $\mathrm{C_6H_6}$ 的临界温度
+$T_c=562\,\mathrm K$、
+临界压强 $p_c=47\,\mathrm{atm}$。
+若按范德瓦耳斯模型，
+求苯临界态的质量比体积 $v_c$。
+\exsolution
+由临界恒等式
+$p_cV_{m,c}=(3/8)RT_c$，
+临界摩尔体积为
+$V_{m,c}=3RT_c/(8p_c)$。
+质量比体积是单位质量物质的体积，
+\[
+v_c=\frac{V_{m,c}}M
+=\boxed{\frac{3RT_c}{8Mp_c}}.
+\]
+取苯摩尔质量
+$M\simeq78\,\mathrm{g/mol}$、
+$R=0.082057\,\mathrm{L\,atm/(mol\,K)}$，
+得到
+\[
+\boxed{v_c\simeq4.7\times10^{-3}\,\mathrm{L/g}
+=4.7\,\mathrm{cm^3/g}}.
+\]
+\excheck 临界\emph{质量比体积}
+与摩尔体积不同，必须除以摩尔质量 $M$。
+
+\thermophaseproblem{200}{85}
+将范德瓦耳斯状态方程改写为约化变量形式，
+其中
+$\pi=p/p_c$、
+$\upsilon=V_m/V_{m,c}$、
+$\tau=T/T_c$。
+如果气体压强达到临界压强的12倍，
+而体积是临界体积的一半，
+求温度与临界温度之比。
+\exsolution
+原方程
+$(p+a/V_m^2)(V_m-b)=RT$。
+代入临界关系
+$V_{m,c}=3b$、
+$p_c=a/(27b^2)$、
+$RT_c=8a/(27b)$：
+\[
+p=p_c\pi,\quad V_m=3b\upsilon,\quad T=T_c\tau.
+\]
+得
+\[
+\left[p_c\pi+\frac a{9b^2\upsilon^2}\right]
+(3b\upsilon-b)=RT_c\tau.
+\]
+用 $a/(9b^2)=3p_c$、
+$RT_c=8p_cb$，化为
+\[
+\boxed{\left(\pi+\frac3{\upsilon^2}\right)
+(3\upsilon-1)=8\tau}.
+\]
+给定 $\pi=12$、$\upsilon=1/2$，
+\[
+8\tau=(12+3/(1/2)^2)(3/2-1)
+=(12+12)\frac12=12,
+\]
+故
+\[
+\boxed{\tau=\frac32=1.5}.
+\]
+\excheck $\upsilon=1/2>1/3$，
+满足范德瓦耳斯方程 $V_m>b$ 的必要体积约束。
+
+\thermophaseproblem{201}{85}
+已知水的范德瓦耳斯常数 $a,b$。
+求：(a) 质量
+$m=1.00\,\mathrm{kg}$ 的水在仍作为液体时
+可占据的最大体积；
+(b) 饱和水蒸气压强的最大可能值
+（范德瓦耳斯模型临界上界）。
+\exsolution
+范德瓦耳斯模型的液气共存支路在临界点终止。
+气、液态临界摩尔体积为
+$V_{m,c}=3b$。
+对总物质的量
+$\nu=m/M$，临界总体积
+\[
+\boxed{V_{\max,\ell}=\nu(3b)=\frac{3bm}{M}}.
+\]
+当温度达到临界值时，
+饱和蒸汽压强达到临界压强：
+\[
+\boxed{p_{\rm sat,max}=p_c=\frac a{27b^2}}.
+\]
+以水在模型中的常用近似参数
+$b\simeq0.030\,\mathrm{L/mol}$、
+$a\simeq5.5\,\mathrm{atm\,L^2/mol^2}$，
+$M=0.018\,\mathrm{kg/mol}$，
+\[
+\boxed{V_{\max,\ell}\simeq5.0\,\mathrm L},\qquad
+\boxed{p_{\rm sat,max}\simeq2.3\times10^2\,\mathrm{atm}}.
+\]
+\excheck 这里的“最大液体体积”指
+范德瓦耳斯\emph{液相支路延至临界点}，
+不是任意温度或压力下液态水体积上限。
+
+\thermophaseproblem{202}{85}
+把二氧化碳视为范德瓦耳斯气体，
+利用其参数 $a,b$ 求临界温度和临界质量密度。
+\exsolution
+对每摩尔范德瓦耳斯气体，
+\[
+T_c=\frac{8a}{27Rb},\qquad V_{m,c}=3b.
+\]
+临界质量密度为
+\[
+\boxed{\rho_c=\frac M{V_{m,c}}=\frac M{3b}}.
+\]
+取二氧化碳
+$a\simeq3.59\,\mathrm{atm\,L^2/mol^2}$、
+$b\simeq0.0427\,\mathrm{L/mol}$、
+$M\simeq44.0\,\mathrm{g/mol}$，
+以适配的 $R=0.082057$，
+\[
+\boxed{T_c\simeq3.0\times10^2\,\mathrm K
+=0.30\,\mathrm{kK}},
+\]
+\[
+\boxed{\rho_c\simeq\frac{44}{3(0.0427)}
+\,\mathrm{g/L}\simeq0.34\,\mathrm{g/cm^3}}.
+\]
+\excheck 摩尔质量与 $b$ 均须使用同一物质，
+单位换算
+$1000\,\mathrm{g/L}=1\,\mathrm{g/cm^3}$。
+
+\thermophaseproblem{203}{85}
+室温下盛有一部分液态乙醚的密闭容器，
+准备将其加热至临界状态。
+乙醚临界温度
+$T_c=467\,\mathrm K$、
+临界压强
+$p_c=35.5\,\mathrm{atm}$、
+摩尔质量
+$M=74\,\mathrm{g/mol}$。
+求室温时液态乙醚所占容器体积的比例。
+\exsolution
+设容器总体积为 $V_{\rm vessel}$，
+乙醚质量为 $m$，
+若总平均比容需要等于临界比容，
+则
+$V_{\rm vessel}=mV_{m,c}/M$。
+而室温液态乙醚自身占据体积
+$V_\ell=m/\rho_\ell$。
+所以所求体积分数
+\[
+f=\frac{V_\ell}{V_{\rm vessel}}
+=\frac M{\rho_\ell V_{m,c}}.
+\]
+范德瓦耳斯临界关系
+$V_{m,c}=3RT_c/(8p_c)$，
+所以
+\[
+\boxed{f=\frac{8Mp_c}{3\rho_\ell RT_c}}.
+\]
+以室温乙醚密度
+$\rho_\ell\simeq0.71\,\mathrm{g/cm^3}
+=710\,\mathrm{g/L}$ 计算，
+\[
+\boxed{f\simeq0.25}.
+\]
+\excheck 乙醚室温密度\emph{并未在题面中给出}，
+因此数值需要外部物性表或教材常用近似；
+公式本身只依赖临界关系和 $\rho_\ell$。
+
+\thermophaseproblem{204}{85}
+证明：图2.5中连接气液两相共存态1与5的
+等温等压水平线，
+会把范德瓦耳斯等温曲线夹出的
+区域 I 与 II 分为相同面积
+（Maxwell 等面积构造）。
+\exsolution
+设共存温度为 $T$、
+共存压强为 $p_s$，
+液相端摩尔体积为 $V_\ell$，
+气相端摩尔体积为 $V_g$。
+对于沿平衡态、可逆等温路径的
+Helmholtz 自由能有
+\[
+\mathrm dF=-p\,\mathrm dV
+\quad(T=\text{常数}).
+\]
+共存两相在相同 $T,p_s$ 下，
+其摩尔 Gibbs 自由能相同：
+\[
+F(V_g)+p_sV_g=F(V_\ell)+p_sV_\ell.
+\]
+故
+\[
+F(V_g)-F(V_\ell)
+=-p_s(V_g-V_\ell).
+\]
+另一方面沿范德瓦耳斯等温曲线
+形式积分：
+\[
+F(V_g)-F(V_\ell)
+=-\int_{V_\ell}^{V_g}p_{\rm vdW}(V,T)\,\mathrm dV.
+\]
+将两式相等：
+\[
+\boxed{\int_{V_\ell}^{V_g}
+[p_{\rm vdW}(V,T)-p_s]\,\mathrm dV=0}.
+\]
+这意味着等温曲线位于水平线之上的
+有符号面积与位于其下方的面积模相等，
+即图示区域 I 与 II 面积相等。
+\excheck 等面积规则是由\emph{共存端点的
+自由能相等}导出；
+不能把范德瓦耳斯中间不稳定分支
+误当作真实液气共存时可以稳定走过的物理过程。
+% === END 14-phase-transformations-195-204.tex ===
+
+% === BEGIN 14-phase-transformations-205-214.tex blob cbac23af0e7d509bd0462a5cb3bddc435a9d215b ===
+% 原书印刷页85--86；本版PDF页94--95。
+% 注意底本在第213题后将第214题误排为“224”，后文又继续215。
+\thermophaseproblem{205}{85--86}
+标准大气压下，
+把水过冷到 $t=-20^\circ\mathrm C$。
+随后体系自发转变到相平衡态时，
+有多大质量分数 $\eta$ 的水结冰？
+若希望过冷水全部结冰，
+需要初始过冷至多少温度？
+\exsolution
+设液态过冷水质量为 $m$，
+初温 $t<0^\circ\mathrm C$。
+按绝热转变模型，结冰放出潜热
+$\eta m q_m$，使尚未冻结的物质
+从 $t$ 升至平衡凝固点 $0^\circ\mathrm C$。
+以液态水比热 $c\simeq4.18\,\mathrm{kJ/(kg\,K)}$
+近似，
+热平衡为
+\[
+\eta m q_m\simeq mc|t|,
+\]
+故
+\[
+\boxed{\eta\simeq\frac{c|t|}{q_m}}.
+\]
+取冰融化潜热
+$q_m\simeq334\,\mathrm{kJ/kg}$、
+$|t|=20\,\mathrm K$：
+\[
+\boxed{\eta\simeq\frac{4.18\times20}{334}
+\simeq0.25=25\%}.
+\]
+若过冷足以使全部质量结冰，
+临界条件 $\eta=1$ 给
+\[
+\boxed{t_{\rm full}\simeq-\frac{q_m}{c}
+\simeq-80^\circ\mathrm C}.
+\]
+\excheck $-80^\circ\mathrm C$ 是常比热、
+无外部换热模型的\emph{形式阈值}，
+不声称现实纯水在常压下
+能稳定维持到该过冷程度。
+
+\thermophaseproblem{206}{86}
+在 $0^\circ\mathrm C$ 附近，
+压强升高 $\Delta p=1.00\,\mathrm{atm}$。
+冰的质量比体积比液态水大
+$\Delta v=0.091\,\mathrm{cm^3/g}$。
+求冰的熔点变化。
+\exsolution
+沿固液共存线，
+Clapeyron 方程
+\[
+\frac{\mathrm dp}{\mathrm dT}
+=\frac{q_m}{T(v_{\rm water}-v_{\rm ice})}
+=-\frac{q_m}{T\Delta v}.
+\]
+在压强变化较小时
+\[
+\boxed{\Delta T\simeq
+-\frac{T\Delta v}{q_m}\Delta p}.
+\]
+将 $\Delta v=0.091\,\mathrm{cm^3/g}
+=9.1\times10^{-5}\,\mathrm{m^3/kg}$、
+$T\simeq273.15\,\mathrm K$、
+$q_m\simeq3.34\times10^5\,\mathrm{J/kg}$ 代入，
+\[
+\boxed{\Delta T\simeq-7.5\times10^{-3}\,\mathrm K
+=-7.5\,\mathrm{mK}}.
+\]
+\excheck 因液态水比冰密，压强升高利于液态，
+熔点降低。本版纯文本提取将体积单位
+$\mathrm{cm^3/g}$ 误作 $\mathrm{cm^2/g}$，
+已按物理量纲澄清。
+
+\thermophaseproblem{207}{86}
+在标准气压下，
+如果压强降低 $\Delta p=3.2\,\mathrm{kPa}$
+会使水的沸点降低 $\Delta T=0.9\,\mathrm K$，
+求原来饱和水蒸汽的质量比体积。
+\exsolution
+Clapeyron 方程
+$\mathrm dp/\mathrm dT=
+q_v/[T(v_v-v_\ell)]$。
+在沸点附近
+$v_v\gg v_\ell$，
+故
+$\Delta p/\Delta T
+\simeq q_v/(T v_v)$。
+取压强、温度变化的模：
+\[
+\boxed{v_v\simeq\frac{q_v\Delta T}{T\Delta p}}.
+\]
+用
+$q_v\simeq2.26\times10^6\,\mathrm{J/kg}$、
+$T\simeq373\,\mathrm K$：
+\[
+\boxed{v_v\simeq
+\frac{2.26\times10^6(0.9)}{373(3.2\times10^3)}
+\simeq1.7\,\mathrm{m^3/kg}}.
+\]
+\excheck 这是单位\emph{质量}蒸汽的体积，
+而非一摩尔蒸汽的体积；
+结果与 $100^\circ\mathrm C$ 附近饱和蒸汽量级一致。
+
+\thermophaseproblem{208}{86}
+假设饱和水蒸气为理想气体，
+求温度
+$101.1^\circ\mathrm C$ 时的饱和蒸气压。
+\exsolution
+以 $T_0=373.15\,\mathrm K$
+处 $p_0=1\,\mathrm{atm}$ 为参考，
+温度增量
+$\Delta T=1.1\,\mathrm K$。
+在忽略液态比体积和汽化潜热温度依赖的近似下，
+\[
+\frac{\mathrm d\ln p}{\mathrm dT}
+=\frac{q_vM}{RT^2}.
+\]
+对小 $\Delta T$，用一阶展开：
+\[
+p(T_0+\Delta T)
+\simeq p_0\left[
+1+\frac{q_vM}{RT_0^2}\Delta T\right].
+\]
+代入
+$q_v\simeq2.26\times10^6\,\mathrm{J/kg}$、
+$M=0.018\,\mathrm{kg/mol}$：
+\[
+\boxed{p\simeq1.04\,\mathrm{atm}}.
+\]
+\excheck 本题温差仅1.1 K，
+可以用线性近似；
+若温差较大，则应对 $T^{-2}$ 积分。
+
+\thermophaseproblem{209}{86}
+在 $100^\circ\mathrm C$ 时，
+少量水与其饱和蒸汽共存于密闭容器。
+温度升高 $\Delta T=1.5\,\mathrm K$，
+在水的液相比体积可以忽略、
+饱和蒸汽为理想气体的条件下，
+求饱和蒸汽质量增加的百分比。
+\exsolution
+容器总体积固定，液相占容积很小。
+饱和蒸汽质量为
+$m_v=p_{\rm sat}VM/(RT)$，所以
+\[
+\frac{\mathrm dm_v}{m_v}
+=\frac{\mathrm dp_{\rm sat}}{p_{\rm sat}}
+-\frac{\mathrm dT}{T}.
+\]
+Clausius--Clapeyron 近似给
+$\mathrm d\ln p_{\rm sat}/\mathrm dT
+=q_vM/(RT^2)$。
+因此
+\[
+\frac{\Delta m_v}{m_v}
+\simeq
+\left(\frac{q_vM}{RT}-1\right)\frac{\Delta T}{T}.
+\]
+代入 $T=373.15\,\mathrm K$、
+$\Delta T=1.5\,\mathrm K$：
+\[
+\boxed{\frac{\Delta m_v}{m_v}\simeq0.05
+\approx5\%}.
+\]
+\excheck 必须同时计入
+饱和蒸汽压随温度上升和
+理想气体密度中 $1/T$ 的减小因子。
+
+\thermophaseproblem{210}{86}
+已知饱和蒸汽压强在温度 $T_0$ 时为 $p_0$。
+假设汽化比潜热 $q_v$ 与温度无关、
+液相比体积远小于蒸汽比体积、
+饱和蒸汽为理想气体，
+求饱和蒸汽压强函数 $p(T)$，
+并说明这些近似的适用范围。
+\exsolution
+Clapeyron 方程
+$\mathrm dp/\mathrm dT
+=q_v/[T(v_v-v_\ell)]$。
+取 $v_v\gg v_\ell$ 且
+$v_v=RT/(Mp)$：
+\[
+\frac1p\frac{\mathrm dp}{\mathrm dT}
+=\frac{q_vM}{RT^2}.
+\]
+在 $T_0$ 到 $T$ 上积分：
+\[
+\ln\frac{p(T)}{p_0}
+=\frac{q_vM}{R}
+\int_{T_0}^{T}\frac{\mathrm dT'}{T'^2}
+=\frac{q_vM}{R}
+\left(\frac1{T_0}-\frac1T\right).
+\]
+故
+\[
+\boxed{p(T)=p_0
+\exp\left[\frac{q_vM}{R}
+\left(\frac1{T_0}-\frac1T\right)\right]}.
+\]
+\excheck 近似适用于远低于临界温度的
+\emph{较窄温区}；
+靠近临界点时蒸汽与液态比体积接近，
+潜热随温度显著变动，上式失效。
+
+\thermophaseproblem{211}{86}
+处于初始标准状况的冰，
+被压缩到 $p=640\,\mathrm{atm}$。
+假设冰的熔点下降与压强升高成正比，
+水与冰的质量比体积差
+$\Delta v=0.09\,\mathrm{cm^3/g}$
+（液水比冰小）。
+求有多少质量分数的冰熔化。
+\exsolution
+由于压强升高降低熔点，
+在绝热压缩与相平衡近似下，
+冰体温度需随新的融化温度降低，
+一部分冰熔化并吸收潜热。
+由 Clapeyron 近似
+\[
+|\Delta T|\simeq
+\frac{T\Delta v}{q_m}\,\Delta p.
+\]
+降温释放的冰显热约为
+$mc_{\rm ice}|\Delta T|$，
+用于熔化质量 $\eta m$ 的潜热：
+$\eta m q_m\simeq mc_{\rm ice}|\Delta T|$。
+因此
+\[
+\boxed{\eta\simeq
+\frac{c_{\rm ice}T\Delta v\,\Delta p}{q_m^2}}.
+\]
+取
+$c_{\rm ice}\simeq2.1\times10^3\,\mathrm{J/(kg\,K)}$、
+$T\simeq273\,\mathrm K$、
+$\Delta p\simeq639\,\mathrm{atm}$、
+$q_m\simeq3.34\times10^5\,\mathrm{J/kg}$，
+\[
+\boxed{\eta\simeq0.03=3\%}.
+\]
+\excheck 这里使用了\emph{压缩近似绝热}
+与熔点线性下降假设；
+若大量压缩功以热形式内化，需进一步修正能量平衡。
+
+\thermophaseproblem{212}{86}
+二氧化碳三相点附近的饱和蒸汽压
+满足以10为底的经验关系
+$\log_{10}p=a-b/T$，
+其中 $p$ 以 atm 为单位。
+升华支路：
+$a_s=9.05,\ b_s=1.80\,\mathrm{kK}$；
+汽化支路：
+$a_v=6.78,\ b_v=1.31\,\mathrm{kK}$。
+求：(a) 三相点温度和压强；
+(b) 三相点附近的升华、汽化、熔化质量潜热。
+\exsolution
+三相点两支路压强相等：
+\[
+a_s-\frac{b_s}{T_t}
+=a_v-\frac{b_v}{T_t}.
+\]
+解得
+\[
+\boxed{T_t=\frac{b_s-b_v}{a_s-a_v}
+=\frac{1800-1310}{9.05-6.78}
+\simeq216\,\mathrm K}.
+\]
+任一支路回代：
+\[
+\boxed{p_t=10^{\,a_s-b_s/T_t}
+\simeq5.1\,\mathrm{atm}}.
+\]
+由理想蒸汽和 Clausius--Clapeyron 近似
+$\mathrm d\ln p/\mathrm dT
+=L_{\rm mol}/(RT^2)$。
+题给为\emph{十进制对数}：
+\[
+\frac{\mathrm d\ln p}{\mathrm dT}
+=(\ln10)\frac b{T^2},
+\quad L_{\rm mol}=R(\ln10)b.
+\]
+故每单位质量潜热
+$q=R(\ln10)b/M$，
+二氧化碳 $M\simeq0.044\,\mathrm{kg/mol}$：
+\[
+\boxed{q_s\simeq0.78\,\mathrm{kJ/g}},\qquad
+\boxed{q_v\simeq0.57\,\mathrm{kJ/g}}.
+\]
+由三相点焓变相加，
+$q_s=q_m+q_v$，所以
+\[
+\boxed{q_m=q_s-q_v\simeq0.21\,\mathrm{kJ/g}}.
+\]
+\excheck 必须把 $\log_{10}$ 转为自然对数，
+带上 $\ln10$，否则潜热会被低估约2.3倍。
+
+\thermophaseproblem{213}{86}
+质量 $m=1.00\,\mathrm{kg}$ 的水，
+由 $t_1=10^\circ\mathrm C$ 加热至
+$t_2=100^\circ\mathrm C$，
+再于沸点全部汽化。
+求系统的熵增。
+\exsolution
+先将液态水由
+$T_1=283.15\,\mathrm K$
+加热至
+$T_2=373.15\,\mathrm K$，
+视比热 $c$ 为常数，
+熵增为
+$m c\ln(T_2/T_1)$。
+随后在温度 $T_2$ 等温汽化，
+熵增为
+$m q_v/T_2$。
+两段相加：
+\[
+\boxed{\Delta S=
+m\left[c\ln\frac{T_2}{T_1}+\frac{q_v}{T_2}\right]}.
+\]
+取水 $c\simeq4.18\,\mathrm{kJ/(kg\,K)}$、
+$q_v\simeq2.26\,\mathrm{MJ/kg}$，
+\[
+\boxed{\Delta S\simeq7.2\,\mathrm{kJ/K}}.
+\]
+\excheck 绝对温度必须用 K；
+先升温后相变的两段熵贡献不能遗漏其中一项。
+
+\thermophaseproblem{214}{86}
+冰初温为 $t_1=0^\circ\mathrm C$，
+先全部融化，再把水加热至
+$t_2=100^\circ\mathrm C$，最后完全汽化。
+求系统\emph{单位质量}的熵增。
+\exsolution
+熔化发生在
+$T_m\simeq273.15\,\mathrm K$，
+其单位质量熵增
+$q_m/T_m$。
+液态水升温至
+$T_b\simeq373.15\,\mathrm K$，
+熵增
+$c\ln(T_b/T_m)$。
+在沸点汽化，
+熵增
+$q_v/T_b$。
+总单位质量熵增：
+\[
+\boxed{\Delta s=
+\frac{q_m}{T_m}
++c\ln\frac{T_b}{T_m}
++\frac{q_v}{T_b}}.
+\]
+用
+$q_m\simeq334\,\mathrm{J/g}$、
+$c\simeq4.18\,\mathrm{J/(g\,K)}$、
+$q_v\simeq2257\,\mathrm{J/g}$，
+\[
+\boxed{\Delta s\simeq8.6\,\mathrm{J/(g\,K)}}.
+\]
+\excheck \textbf{原书题号排印：}
+在本版正文 PDF 印刷页86，
+第213题之后此题被误印为“224”，
+下题紧接着却是“215”；书后答案亦对应第214题。
+为使题库和第213、215题连续，
+本稿按\emph{第214题}录入并保留此处勘误。
+% === END 14-phase-transformations-205-214.tex ===
+
+% === BEGIN 14-phase-transformations-215-219.tex blob 4db7dcfc8346ca21209b16f557e4917a5dddc345 ===
+% 第2.6节最后五题，原书印刷页86--87，PDF页95--96。
+\thermophaseproblem{215}{86}
+把一块质量 $m=90\,\mathrm g$、
+初温 $t_1=90^\circ\mathrm C$ 的铜块，
+放进含有 $50\,\mathrm g$、
+温度 $-3^\circ\mathrm C$ 冰的量热器中。
+求达到热平衡时\emph{铜块自身}的熵变。
+\exsolution
+铜块从 $90^\circ\mathrm C$ 冷却释放热量。
+其最多冷却至 $0^\circ\mathrm C$ 可放出
+$m c_{\rm Cu}(90\,\mathrm K)
+\simeq(90)(0.39)(90)\,\mathrm J
+\simeq3.2\,\mathrm{kJ}$。
+这些热量先把冰从 $-3^\circ\mathrm C$
+加热到 $0^\circ\mathrm C$，
+耗热约
+$(50)(2.1)(3)\simeq315\,\mathrm J$；
+余热只能熔化约
+$(3200-315)/(334\,\mathrm{J/g})
+\simeq8.6\,\mathrm g$ 冰，
+少于原有50g，故末态仍有冰，
+平衡温度恰为 $T_f=273.15\,\mathrm K$。
+铜块的熵差
+\[
+\boxed{\Delta S_{\rm Cu}=
+m c_{\rm Cu}\ln\frac{T_f}{T_1}}.
+\]
+取 $T_1=363.15\,\mathrm K$：
+\[
+\boxed{\Delta S_{\rm Cu}\simeq
+(90)(0.39)\ln\frac{273.15}{363.15}
+\simeq-10\,\mathrm{J/K}}.
+\]
+\excheck 本题只问铜块熵变，可为负；
+铜块放热与冰吸热后的\emph{整个隔热体系}
+熵增仍应非负。
+
+\thermophaseproblem{216}{87}
+初温 $0^\circ\mathrm C$ 的冰质量
+$m_1=100\,\mathrm g$，
+投入含质量
+$m_2=100\,\mathrm g$ 水的绝热量热器。
+水的初温分别为
+(a) $t_2=60^\circ\mathrm C$；
+(b) $t_2=94^\circ\mathrm C$。
+忽略量热器热容，求平衡时系统总熵增。
+\exsolution
+记冰融点 $T_m=273.15\,\mathrm K$，
+融化潜热 $q_m$，水比热 $c_w$。
+(a) 热水冷至 $T_m$ 释放
+$Q_h=m_2c_w(T_2-T_m)$，
+若
+$Q_h<m_1q_m$，
+则只融化一部分冰，
+末温是 $T_m$，
+融冰量 $m_{\rm melt}=Q_h/q_m$。
+熵增
+\[
+\boxed{\Delta S_a=
+m_2c_w\ln\frac{T_m}{T_2}
++\frac{m_2c_w(T_2-T_m)}{T_m}}.
+\]
+用常用物性数值算得
+$\Delta S_a\simeq9\,\mathrm{J/K}$，
+与原书约 $9.2\,\mathrm{J/K}$ 相符。
+(b) 若
+$m_2c_w(T_2-T_m)>m_1q_m$，
+全部冰先融化，剩余热量使混合水升温。
+能量守恒：
+\[
+m_2c_w(T_2-T_f)=m_1q_m+
+m_1c_w(T_f-T_m).
+\]
+所以
+\[
+\boxed{T_f=\frac{m_1T_m+m_2T_2-m_1q_m/c_w}
+{m_1+m_2}}.
+\]
+总熵增
+\[
+\boxed{\Delta S_b=
+\frac{m_1q_m}{T_m}
++m_1c_w\ln\frac{T_f}{T_m}
++m_2c_w\ln\frac{T_f}{T_2}}.
+\]
+用 $c_w\simeq4.18\,\mathrm{J/(g\,K)}$、
+$q_m\simeq334\,\mathrm{J/g}$，
+得到 $T_f\simeq280\,\mathrm K$，
+$\Delta S_b\simeq20\,\mathrm{J/K}$。
+\excheck 原书简答给约 $18\,\mathrm{J/K}$，
+取不同的冰潜热和比热可影响取整；
+本稿保留精确方程和所采用的物性常数，
+避免在数值上强行匹配。
+
+\thermophaseproblem{217}{87}
+质量 $m=5.0\,\mathrm g$ 的熔融铅，
+初温正好是铅熔点
+$t_2=327^\circ\mathrm C$。
+将其倒入装有大量
+$0^\circ\mathrm C$ 冰的量热器中。
+铅凝固潜热为
+$q_l=22.5\,\mathrm{J/g}$，
+铅比热
+$c_l=0.125\,\mathrm{J/(g\,K)}$。
+求达到热平衡时铅—冰系统总熵增。
+\exsolution
+冰量很大，平衡温度维持
+$T_1=273.15\,\mathrm K$。
+铅在熔点
+$T_2\simeq600.15\,\mathrm K$ 凝固，
+随后固态铅冷却至 $T_1$。
+释放热量为
+\[
+Q=m q_l+mc_l(T_2-T_1),
+\]
+这些热量使一部分冰在 $T_1$ 融化，
+冰的熵增是 $Q/T_1$。
+铅的熵变含两段：
+\[
+\Delta S_{\rm Pb}
+=-\frac{mq_l}{T_2}
++mc_l\ln\frac{T_1}{T_2}.
+\]
+故系统总熵增
+\[
+\boxed{\Delta S=
+mq_l\left(\frac1{T_1}-\frac1{T_2}\right)
++mc_l\left(\frac{T_2}{T_1}-1
+-\ln\frac{T_2}{T_1}\right)}.
+\]
+代入给定参数：
+\[
+\boxed{\Delta S\simeq0.48\,\mathrm{J/K}>0}.
+\]
+\excheck 使用的是铅的凝固潜热，
+与冰的熔化潜热\emph{不同}；
+大冰库只起温度 $T_1$ 的热库作用。
+
+\thermophaseproblem{218}{87}
+活塞下有水的饱和蒸汽，
+通过压缩或膨胀使蒸汽始终保持饱和、
+恰好处在凝结临界状态。
+假设蒸汽为理想气体且液相比体积可忽略。
+求沿此过程水蒸汽的摩尔热容 $C(T)$，
+并计算 $t=100^\circ\mathrm C$ 的数值。
+\exsolution
+对一摩尔水蒸汽，
+状态方程
+$p_{\rm sat}V=RT$。
+沿饱和曲线微分：
+\[
+p_{\rm sat}\frac{\mathrm dV}{\mathrm dT}
+=R-\frac{RT}{p_{\rm sat}}
+\frac{\mathrm dp_{\rm sat}}{\mathrm dT}.
+\]
+Clausius--Clapeyron 近似：
+\[
+\frac1{p_{\rm sat}}
+\frac{\mathrm dp_{\rm sat}}{\mathrm dT}
+\simeq\frac{q_vM}{RT^2}.
+\]
+代入：
+\[
+p_{\rm sat}\frac{\mathrm dV}{\mathrm dT}
+=R-\frac{q_vM}{T}.
+\]
+由热力学第一定律
+$C=C_V+p_{\rm sat}\mathrm dV/\mathrm dT$，
+\[
+\boxed{C=C_p-\frac{q_vM}{T}}.
+\]
+取 $T=373.15\,\mathrm K$、
+$q_v\simeq2.26\,\mathrm{MJ/kg}$、
+$M=0.018\,\mathrm{kg/mol}$、
+水蒸汽 $C_p\simeq35\,\mathrm{J/(mol\,K)}$，
+\[
+\boxed{C\simeq-74\,\mathrm{J/(mol\,K)}}.
+\]
+\excheck 负值是\emph{饱和蒸汽沿特定相变边界}
+的过程热容，不表示气体稳定态的 $C_p$ 为负。
+
+\thermophaseproblem{219}{87}
+一摩尔水起初在温度 $T_1$ 下与极微量
+饱和蒸汽平衡，随后全部转变为温度
+$T_2$ 下的饱和水蒸气。
+忽略水的液相比体积，把蒸汽当作理想气体。
+求系统熵增。
+\exsolution
+熵是状态函数。
+构造一条假想可逆路径：
+先把一摩尔液态水由 $T_1$
+加热至 $T_2$，然后在 $T_2$ 下汽化。
+若液态水的定压摩尔热容
+$C_{p,\ell}$ 在温区内近似为常数，
+升温熵增为
+\[
+\Delta S_{\rm warm}
+=C_{p,\ell}\ln\frac{T_2}{T_1}.
+\]
+在 $T_2$ 时汽化，
+一摩尔汽化吸热为 $Mq_v$，
+对应熵增
+$\Delta S_{\rm vap}=Mq_v/T_2$。
+故
+\[
+\boxed{\Delta S=
+C_{p,\ell}\ln\frac{T_2}{T_1}
++\frac{Mq_v}{T_2}}.
+\]
+\excheck 原书简答写 $C_p$，
+本稿明确它在所选路径中是
+\emph{液态水的定压摩尔热容}，
+而不是第218题的水蒸汽摩尔热容；
+如热容随温度变化，则应用
+$\int_{T_1}^{T_2}C_{p,\ell}(T)\mathrm dT/T$。
+% === END 14-phase-transformations-215-219.tex ===
