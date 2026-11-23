@@ -1,0 +1,698 @@
+% Consolidated textbook-ch02 from commit ace330777e37fc85a6170f63723b6255c77c8f30; original fragments preserved below.
+
+% --- BEGIN textbook-ch02-choices.tex SHA a37e842a30f1a40fbdcc8a2b4fe624427c973457 ---
+% 《大学物理简明教程》（第5版），第2章选择题2.1.1--2.1.12
+% 来源：书内及扫描PDF第49--51页。研究性题意改述，独立推导，待二校。
+
+\subsection{选择题：2.1.1--2.1.12}
+\sourceproblem{2.1.1}{49}{49}
+\problemtext 质点做匀速圆周运动，其动量矢量及相对于圆心的角动量矢量如何变化？
+\workings 线动量$\bm p=m\bm v$的大小固定，方向持续转动；
+相对圆心的角动量$\bm L=\bm r\times m\bm v$，其大小$mRv$、方向按右手规则固定。
+所以动量变化而角动量不变，原题选\textbf{C}。
+\crosscheck 选圆心为参考点时向心力矩为零，故$d\bm L/dt=0$；参考点换到别处则不一定。
+
+\sourceproblem{2.1.2}{50}{50}
+\problemtext 质点系的内力在系统内能够改变总质量、总动量、总动能或总角动量中的哪一项？
+\workings
+牛顿第三定律保证成对内力在总动量方程中相互抵消；满足中心力条件时内力对整体的总力矩也抵消。
+但内力能做功，物体间弹簧势能可转化成动能或非弹性损失，所以\textbf{总动能可变}，原题选\textbf{C}。
+\crosscheck 两球从压缩弹簧释放时，即使无外力，系统总动量为零但总动能增大。
+
+\sourceproblem{2.1.3}{50}{50}
+\problemtext 判断“保守力做正功使势能增加”“闭合回路保守力净功为零”“作用力和反作用力做功代数和必为零”三种说法。
+\workings
+保守力做功$W_c=-\Delta U$，故正功使势能\emph{减少}，①错误；
+闭合路径$\Delta U=0$，故保守力总功为零，②正确。
+一对相互作用力在不同物体上的位移不相同，
+$dW_{12}+dW_{21}=\bm F_{12}\cdot(d\bm r_1-d\bm r_2)$，
+一般不为零，③错误。原题选\textbf{C}。
+\crosscheck 内力总冲量抵消不代表内力总做功抵消。
+
+\sourceproblem{2.1.4}{50}{50}
+\problemtext 斜面体$M$最初静置于光滑水平面，上有木块$m$从斜面高处释放，若木块此后不再能静止在斜面上，斜面向哪边运动？
+\workings
+以原图斜面向\emph{右上方}升高为准，木块下滑相对斜面向左运动。
+系统水平方向无外力，初始总水平动量为零，
+\[
+M v_M+m v_{m,x}=0.
+\]
+木块向左的运动导致斜面整体向右；起始阶段斜面向右加速，故原题选\textbf{B}。
+\crosscheck 若把斜面镜像翻转，方向也随之反转；答案依原图朝向而定。
+
+\sourceproblem{2.1.5}{50}{50}
+\problemtext 光滑块$A,B$以弹簧连接，置于粗糙水平面，施加水平拉力$F$使两者匀速向右运动，忽然撤去$F$。比较撤力瞬间两块的加速度方向。
+\workings
+撤力前，$B$受向右弹簧拉力抵消摩擦；$A$则靠$F$平衡摩擦和向左的弹簧拉力。
+撤去$F$的\emph{瞬间}弹簧形变量不突变，$A$受力由零变为$-F$，故$a_A<0$；
+$B$受力在这一瞬间仍为零，即$a_B=0$。
+因此按书面所写\emph{撤去拉力后的一瞬间}应取\textbf{D}：$a_A<0,\ a_B=0$。
+\crosscheck 不能把弹簧拉力的后续变化提前到撤力瞬间；在$t>0$的稍后时刻，$B$才可能出现非零加速度。
+
+\sourceproblem{2.1.6}{50}{50}
+\problemtext 质量$m$的炮弹以速度$v_0$水平飞行，动能为$E_k$，突然分裂为两个等质量碎块。一块向后飞，其动能为$E_k/2$；求另一块动能。
+\workings
+后向碎块质量$m/2$，其动能$\frac12(m/2)u_1^2=\frac12 E_k=\frac14 m v_0^2$，
+故$u_1=-v_0$。
+动量守恒
+\[
+m v_0=\frac m2(-v_0)+\frac m2u_2
+\Longrightarrow u_2=3v_0.
+\]
+另一块的动能$\frac12(m/2)(3v_0)^2=\frac92E_k$，选\textbf{B}。
+\crosscheck 爆炸使总动能从$E_k$增至$5E_k$，多出的能量由内能提供。
+
+\sourceproblem{2.1.7}{50}{50}
+\problemtext 质量$20\,\mathrm g$的子弹以$400\,\mathrm{m/s}$、与摆线成$30^\circ$的方向射入质量$980\,\mathrm g$的静止摆球，子弹留在球内。求刚击中后摆球与子弹整体的速率。
+\workings
+碰撞极短，沿\emph{水平方向}的摆线张力冲量可忽略，
+\[
+(m+M)V=m v\sin30^\circ
+\Longrightarrow
+\boxed{V=\frac{0.020\times400\times0.5}{1.000}
+=4\,\mathrm{m/s}}.
+\]
+原题选\textbf{B}。
+\crosscheck 竖直方向受摆线外部冲量，故不能在竖直方向直接使用两物体动量守恒。
+
+\sourceproblem{2.1.8}{50}{50}
+\problemtext 判断质点系的动量守恒及机械能守恒所需条件，特别考察系统不受外力、内部作用均为保守力的情形。
+\workings
+若合外力为零则$\dot{\bm P}=0$，总动量守恒；
+若无外力做功而内力均为保守力，则$\Delta(E_k+U)=0$，机械能也守恒。
+两者同时成立的是原题选\textbf{C}。
+\crosscheck “外力总功为零”不保证外部合冲量为零，反之“合外力为零”不保证系统中存在摩擦耗散时机械能守恒。
+
+\sourceproblem{2.1.9}{50--51}{50--51}
+\problemtext 半径$R$的竖直圆筒以角速度$\omega$绕竖直轴转，物块贴在内壁静止不下滑，静摩擦系数为$\mu$，求$\omega_{\min}$。
+\workings
+圆筒壁法向支持力提供向心力$N=m\omega^2R$；
+竖直平衡要求静摩擦$f=mg\le\mu N$。因此
+\[
+mg\le\mu m\omega^2R
+\Longrightarrow
+\boxed{\omega_{\min}=\sqrt{\frac{g}{\mu R}}}.
+\]
+原题选\textbf{C}。
+\crosscheck 量纲$\sqrt{g/R}=\mathrm{s^{-1}}$，且增大$\mu$允许减小转速。
+
+\sourceproblem{2.1.10}{51}{51}
+\problemtext 地球质量$m$，太阳质量$M$，近圆轨道半径$R$，引力常量$G$。求地球对日心的轨道角动量大小。
+\workings
+万有引力提供向心力：$GMm/R^2=mv^2/R$，
+故$v=\sqrt{GM/R}$，角动量
+\[
+\boxed{L=mRv=m\sqrt{GMR}}.
+\]
+选原题\textbf{A}。
+\crosscheck $GMR$的量纲为$\mathrm{m^4/s^2}$，开方乘$m$后为$\mathrm{kg\,m^2/s}$。
+
+\sourceproblem{2.1.11}{51}{51}
+\problemtext 卫星沿椭圆轨道运动，距地心最远点$A$半径$R_A$，最近点$B$半径$R_B$。比较对地心的角动量大小和两点动能大小。
+\workings
+引力为中心力，故$L_A=L_B$；拱点处速度与半径垂直，
+\[
+mR_Av_A=mR_Bv_B,\quad R_A>R_B
+\Longrightarrow v_A<v_B.
+\]
+所以$E_{kA}<E_{kB}$，原题选\textbf{E}。
+\crosscheck 近地点速度较大，符合开普勒面积定律。
+
+\sourceproblem{2.1.12}{51}{51}
+\problemtext 光滑水平面上小球由绳维持半径$R_0$、角速度$\omega_0$的圆周运动；经绳孔缓慢拉绳使半径变成$R_0/2$。求新角速度及动能比值。
+\workings
+以孔为轴的力矩为零，故角动量守恒：
+\[
+mR_0^2\omega_0=m\left(\frac{R_0}{2}\right)^2\omega_1,
+\qquad
+\boxed{\omega_1=4\omega_0}.
+\]
+初末速率满足
+\[
+v_0=R_0\omega_0,\qquad
+v_1=\frac{R_0}{2}(4\omega_0)=2v_0.
+\]
+因此$E_{k1}/E_{k0}=4$，原题选\textbf{A}。
+\crosscheck 拉绳者对小球做正功，动能不守恒；守恒量是相对于绳孔的角动量。
+% --- END textbook-ch02-choices.tex ---
+
+% --- BEGIN textbook-ch02-blanks.tex SHA ab33ec5c5a7d5a9dcf981315e9a3ae0c187a29dd ---
+% 《大学物理简明教程》第5版，第2章填空题 2.2.1--2.2.9。
+% 书内/PDF第51--52页。原书扫描逐题核对；待独立二校。
+
+\subsection{填空题：2.2.1--2.2.9}
+\sourceproblem{2.2.1}{51}{51}
+\problemtext 质量$m$的小球由水平绳$AB$和与竖直方向成$\theta$角的斜绳$BC$悬挂，静止时求斜绳张力$T$与水平绳张力$T'$之比。
+\workings
+按图，斜绳的竖直分量平衡重力$T\cos\theta=mg$，
+水平分量与水平绳平衡$T'=T\sin\theta$。因此
+\[
+\boxed{\frac{T}{T'}=\frac1{\sin\theta}}.
+\]
+\crosscheck 当$\theta\to0^+$时水平绳张力趋零，故比值发散；若$\theta=0$，$T'=0$，比值无定义。
+
+\sourceproblem{2.2.2}{51}{51}
+\problemtext 质量$10\,\mathrm{kg}$物体受方向固定的力$F(t)=30+40t$（N）作用，初速度大小$10\,\mathrm{m/s}$且与力同向。求前$2$秒冲量与末速率。
+\workings
+\[
+J=\int_0^2(30+40t)\,dt=[30t+20t^2]_0^2
+=\boxed{140\,\mathrm{N\,s}}.
+\]
+由$J=m(v_2-v_0)$可得
+\[
+\boxed{v_2=10+\frac{140}{10}=24\,\mathrm{m/s}}.
+\]
+\crosscheck 冲量与动量改变量均为$140\,\mathrm{kg\,m/s}$。
+
+\sourceproblem{2.2.3}{51}{51}
+\problemtext 沿$x$正向运动的质点受力$\bm F=(4+5x)\bm i$（SI），从$x=0$移至$x=10\,\mathrm m$，求该力做功。
+\workings
+\[
+W=\int_0^{10}\bm F\cdot d\bm r
+=\int_0^{10}(4+5x)\,dx
+=\left[4x+\frac52x^2\right]_0^{10}
+=\boxed{290\,\mathrm J}.
+\]
+\crosscheck 位移沿力的方向，功应为正。
+
+\sourceproblem{2.2.4}{51}{51}
+\problemtext 质量$m$物体沿水平面以初速率$v$滑动，仅在滑动摩擦作用下经距离$s$停止。求加速度大小和动摩擦系数。
+\workings
+匀减速满足$0=v^2-2as$，故
+\[
+\boxed{|a|=\frac{v^2}{2s}},\qquad
+\mu=\frac{|a|}{g}=\boxed{\frac{v^2}{2gs}}.
+\]
+\crosscheck $s>0$，且速度减小；动摩擦力$-\mu mg$的功$-\mu mgs=-mv^2/2$。
+
+\sourceproblem{2.2.5}{51}{51}
+\problemtext 光滑水平面上$m_A=2m_B$，物体$A$带初始动能$E_k$撞击静止的$B$，分别发生完全弹性碰撞与完全非弹性（黏连）碰撞，求碰后两者总动能。
+\workings
+完全弹性：系统动量、动能均守恒，所以
+$\boxed{E_{k,\mathrm{elastic}}=E_k}$。
+完全非弹性：设碰前$A$速率$u$，由动量守恒
+$V=\frac{2m_B}{3m_B}u=\frac23u$，故
+\[
+E_{k,\mathrm{stick}}=\frac12(3m_B)\left(\frac23u\right)^2
+=\frac23\left(\frac12 2m_Bu^2\right)
+=\boxed{\frac23E_k}.
+\]
+\crosscheck 非弹性损失$E_k/3>0$，其余转化为热、形变等内能。
+
+\sourceproblem{2.2.6}{52}{52}
+\problemtext 人造地球卫星椭圆运动，近地点$A$、远地点$B$距地心$r_1,r_2$，地球质量$M$，卫星质量$m$。求从$A$到$B$的引力势能改变量及动能改变量。
+\workings
+以无穷远引力势能为零，有$U(r)=-GMm/r$。故
+\[
+\boxed{U_B-U_A=GMm\left(\frac1{r_1}-\frac1{r_2}\right)}.
+\]
+机械能守恒，$\Delta K=-\Delta U$，
+\[
+\boxed{K_B-K_A=GMm\left(\frac1{r_2}-\frac1{r_1}\right)}.
+\]
+\crosscheck $r_2>r_1$，势能增大、动能减小；两式之和为零。
+
+\sourceproblem{2.2.7}{52}{52}
+\problemtext 质量$m=0.1\,\mathrm{kg}$的物块在水平面上压缩弹簧$k=100\,\mathrm{N/m}$至距自然长$x_1=0.02\,\mathrm m$的位置，释放后运动，原书表述物块移动$x_2=0.1\,\mathrm m$后停止。求滑动摩擦系数。
+\workings
+\textbf{原书数值与“由静止释放、无外界再输入功”的模型不相容，暂不提供伪精确正摩擦系数。}
+如按图取初始压缩量$x_1=0.02$，若“移动距离$x_2=0.1$”指从压缩位置向右移动，
+则终态相对原长伸长$x_2-x_1=0.08$。
+初始弹性势能
+\[
+U_i=\frac12kx_1^2=\frac12(100)(0.02)^2=0.02\,\mathrm J,
+\]
+终态弹性势能
+$U_f=\frac12k(x_2-x_1)^2=0.32\,\mathrm J$，
+即使$\mu=0$亦不能抵达终态。若把$x_2$直接解释为最终伸长量，能量差更大。
+\[
+\boxed{\text{按当前扫描数字与无额外供能条件，物理解不存在。}}
+\]
+\crosscheck 由能量不增原理，物块从$x_1$出发在任何正摩擦下的最远到达位置须满足$|x_f|\le x_1$；疑原书数字或位移定义有误，已列入待核实勘误。
+
+\sourceproblem{2.2.8}{52}{52}
+\problemtext 地下室水平底面积$A=50\,\mathrm{m^2}$，积水深$h=1.5\,\mathrm m$，将水全部抽升至高于原水面的街面$H=5.0\,\mathrm m$，求最低抽水功（忽略泵损耗）。
+\workings
+取原水面向下深度$y\in[0,h]$。深度$dy$的薄水层重力
+$dF=\rho gA\,dy$，提升高度$H+y$，所以
+\[
+W_{\min}=\rho gA\int_0^h(H+y)\,dy
+=\rho gA\left(Hh+\frac{h^2}{2}\right).
+\]
+以$\rho=1000\,\mathrm{kg/m^3},g=9.8\,\mathrm{m/s^2}$，
+\[
+\boxed{W_{\min}
+=1000\cdot9.8\cdot50\left(5\cdot1.5+\frac{1.5^2}{2}\right)
+=4.22625\times10^6\,\mathrm J}.
+\]
+\crosscheck 积水总体积$75\,\mathrm{m^3}$，平均提升高度$5.75\,\mathrm m$，相乘同值。
+
+\sourceproblem{2.2.9}{52}{52}
+\problemtext 不可压缩流体在管中稳定流动，管径从$0.2\,\mathrm m$缩小到$0.1\,\mathrm m$，若粗管处流速为$1\,\mathrm{m/s}$，求细管流速。
+\workings
+连续性方程$A_1v_1=A_2v_2$，
+\[
+\boxed{v_2=v_1\left(\frac{d_1}{d_2}\right)^2
+=1\left(\frac{0.2}{0.1}\right)^2
+=4\,\mathrm{m/s}}.
+\]
+\crosscheck 管径减半、面积减为四分之一、流速增为四倍，体积流率守恒。
+% --- END textbook-ch02-blanks.tex ---
+
+% --- BEGIN textbook-ch02-solutions-001-012.tex SHA 6c9db52e0d1064c3e479ad0271db4b1aec9a227c ---
+% 《大学物理简明教程》（第5版）2.3.1--2.3.12
+% 原书/PDF第52--53页，部分图题条件转述。待独立二校。
+
+\subsection{解答题：2.3.1--2.3.12}
+
+\sourceproblem{2.3.1}{52}{52}
+\problemtext 质量$m$的子弹以$v_0$水平进入沙土，阻力大小正比速率$kv$，方向相反，忽略重力。求子弹进入后$v(t)$及最大深入距离。
+\workings
+沿射入方向：$m\,dv/dt=-kv$，
+\[
+\boxed{v(t)=v_0e^{-kt/m}}.
+\]
+对无限长的减速过程积分，
+\[
+\boxed{x_{\max}=\int_0^\infty v(t)\,dt=\frac{mv_0}{k}}.
+\]
+\crosscheck $t\to\infty$时$v\to0$；严格指数阻力模型在有限时间速度不恰好为零，最大深入距离是极限。
+
+\sourceproblem{2.3.2}{52}{52}
+\problemtext 质点在无摩擦固定斜面上以沿斜面底边$AB$方向的初速度$v_0$运动；斜面与水平夹角$\alpha$，求质点在斜面内的轨迹。
+\workings
+取斜面内$x$轴沿底边$AB$，$y$轴沿最大下降坡度方向，初始坐标取原点。
+沿$x$无加速度，沿$y$有$g\sin\alpha$，故
+\[
+x=v_0t,\qquad y=\tfrac12g\sin\alpha\,t^2.
+\]
+消去$t$得
+\[
+\boxed{y=\frac{g\sin\alpha}{2v_0^2}\,x^2}.
+\]
+\crosscheck $\alpha=0$时成为直线$y=0$；轨迹为斜面坐标中的抛物线。
+
+\sourceproblem{2.3.3}{52}{52}
+\problemtext 质量$16\,\mathrm{kg}$质点在$Oxy$面内受恒力$\bm F=6\bm i-7\bm j$（N），初位置为原点，初速度$v_x=-2\,\mathrm{m/s},v_y=0$。求$t=2\,\mathrm s$的速度和位矢。
+\workings
+牛顿第二定律：
+$\bm a=(3/8)\bm i-(7/16)\bm j\ \mathrm{m/s^2}$，
+\[
+\bm v(t)=\left(-2+\frac38t\right)\bm i-\frac7{16}t\bm j,
+\quad
+\bm r(t)=\left(-2t+\frac3{16}t^2\right)\bm i-\frac7{32}t^2\bm j.
+\]
+$t=2$时
+\[
+\boxed{\bm v(2)=-\tfrac54\bm i-\tfrac78\bm j\ \mathrm{m/s}},
+\quad
+\boxed{\bm r(2)=-\tfrac{13}{4}\bm i-\tfrac78\bm j\ \mathrm m}.
+\]
+\crosscheck $\bm r'(t)=\bm v(t)$、$m\bm v'(t)=\bm F$，初值满足。
+
+\sourceproblem{2.3.4}{52}{52}
+\problemtext 原图为一根轻绳绕定滑轮，一侧悬挂质量$m_1$，另一侧穿过质量$m_2$的可沿绳滑动的圆筒。观察到圆筒沿绳向下相对加速度为$a'$。求两物体对地加速度、绳张力及圆筒摩擦力。
+\workings
+\textbf{按图下端为自由绳端、下端张力忽略的模型推导，需图形二校。}
+令$m_1$向下、另一侧绳向上共同加速度为$a$；圆筒相对该侧绳\emph{向下}加速度$a'$，
+故圆筒\emph{对地向下}的加速度为$a_2=a'-a$。
+设筒与绳间作用力大小$f=T$，由牛顿第二定律
+\[
+m_1g-T=m_1a,\qquad m_2g-f=m_2(a'-a).
+\]
+解得
+\[
+\boxed{a=\frac{(m_1-m_2)g+m_2a'}{m_1+m_2}},\quad
+\boxed{a_2=\frac{m_1a'-(m_1-m_2)g}{m_1+m_2}},
+\]
+\[
+\boxed{T=f=\frac{m_1m_2(2g-a')}{m_1+m_2}}.
+\]
+\crosscheck $a+a_2=a'$；式量纲正确。若原图的绳端有非零下端张力、圆筒摩擦方向不同或$a'$是相对有向量，则该模型须重新列方程，\textbf{目前标记“条件依赖，待图形独立复核”}。
+
+\sourceproblem{2.3.5}{52}{52}
+\problemtext 质量$m$的质点从水平地面以仰角$30^\circ$、速率$v_0$抛出，忽略阻力，求落回发射高度时动量改变量。
+\workings
+始末水平速度相同，竖直速度由$v_0\sin30^\circ$变为$-v_0\sin30^\circ$，
+\[
+\Delta\bm p=m(\bm v_f-\bm v_i)
+=-2mv_0\sin30^\circ\,\bm j
+=\boxed{-mv_0\,\bm j}.
+\]
+故大小为$mv_0$，方向竖直向下。
+\crosscheck 总外力冲量$\bm J_g=-mgT\,\bm j$，飞行时间$T=2v_0\sin30^\circ/g$，代入一致。
+
+\sourceproblem{2.3.6}{52--53}{52--53}
+\problemtext 质量$10\,\mathrm{kg}$物体受时变水平力$\bm F=(10+2t)\bm i$（N，$t$单位s），求前$4$秒动量、速度变化及冲量，并求累计冲量大小为$200\,\mathrm{N\,s}$时所需时间。
+\workings
+\[
+\bm J(t)=\int_0^t(10+2u)\,du\,\bm i
+=(10t+t^2)\bm i\ \mathrm{N\,s}.
+\]
+$t=4$时
+\[
+\boxed{\Delta\bm p=\bm J=56\bm i\ \mathrm{N\,s}},
+\qquad
+\boxed{\Delta\bm v=5.6\bm i\ \mathrm{m/s}}.
+\]
+令$10t+t^2=200$，有$t^2+10t-200=0$，取正根
+\[
+\boxed{t=10\,\mathrm s}.
+\]
+\crosscheck $10(10)+10^2=200$，负时间根$-20\,\mathrm s$不在题设时间域。
+
+\sourceproblem{2.3.7}{53}{53}
+\problemtext 质量$m$的圆锥摆以速率$v$沿水平半径$R$圆周运动，$A,B$是圆周直径的端点；求从$A$到$B$期间的动量增量、重力冲量和绳张力总冲量。
+\workings
+匀速圆周运动半圈时间$\Delta t=\pi R/v$。两端切向速度相反，
+\[
+\Delta\bm p=m(\bm v_B-\bm v_A)=-2m\bm v_A,
+\quad |\Delta\bm p|=2mv.
+\]
+重力冲量竖直向下，
+$\boxed{\bm J_g=-mg(\pi R/v)\bm j}$，这里$\bm j$取竖直向上。
+绳张力总冲量由冲量定理
+\[
+\bm J_T=\Delta\bm p-\bm J_g.
+\]
+由于$\Delta\bm p$水平而$\bm J_g$竖直，
+\[
+\boxed{|\bm J_T|
+=m\sqrt{4v^2+\left(\frac{\pi gR}{v}\right)^2}}.
+\]
+\crosscheck 竖直总动量改变量为零，故张力冲量的竖直分量必抵消重力冲量；水平方向由向心分量提供。
+
+\sourceproblem{2.3.8}{53}{53}
+\problemtext 平面运动位矢$\bm r=a\cos\omega t\,\bm i+b\sin\omega t\,\bm j$（SI），求$t=0$至$t=\pi/(2\omega)$合力对质点的总冲量。
+\workings
+速度
+$\bm v(t)=-a\omega\sin\omega t\,\bm i+
+b\omega\cos\omega t\,\bm j$。
+于是$\bm v(0)=b\omega\bm j$，$\bm v(\pi/2\omega)=-a\omega\bm i$。
+\[
+\boxed{\bm J=m\Delta\bm v=-m\omega(a\bm i+b\bm j)},
+\qquad
+\boxed{|\bm J|=m\omega\sqrt{a^2+b^2}}.
+\]
+\crosscheck $m\ddot{\bm r}=-m\omega^2\bm r$积分同样得到该结果。
+
+\sourceproblem{2.3.9}{53}{53}
+\problemtext 子弹出枪口速率$v_0$，在枪筒内的合力$F(t)=a-bt$（N，$a,b>0$），刚到枪口时合力变为零；设在枪筒初始时速率为零，求在枪筒内的时间、合力冲量及子弹质量。
+\workings
+出口条件$F(t_*)=0$给
+$\boxed{t_*=a/b}$。冲量为
+\[
+J=\int_0^{a/b}(a-bt)\,dt
+=\boxed{\frac{a^2}{2b}}.
+\]
+由$mv_0-0=J$，可得
+\[
+\boxed{m=\frac{a^2}{2bv_0}}.
+\]
+\crosscheck $[a^2/b]=\mathrm{N\,s}$，除以速度得质量；若入膛初速并非零，第三式应改为$m=J/(v_0-v_{\mathrm{in}})$。
+
+\sourceproblem{2.3.10}{53}{53}
+\problemtext 质量$M=1.5\,\mathrm{kg}$的物块由长$l=1.25\,\mathrm m$细绳悬挂；质量$m=0.01\,\mathrm{kg}$子弹水平穿过物块，入射速率$500\,\mathrm{m/s}$、出射速率$30\,\mathrm{m/s}$，穿透时间可忽略。求子弹刚射出时绳张力及子弹穿透过程中所受冲量。
+\workings
+短时水平冲量近似守恒，物块刚射出后速率
+\[
+V=\frac{m(v_0-v)}{M}
+=\frac{0.01(500-30)}{1.5}=\frac{47}{15}\,\mathrm{m/s}.
+\]
+在最低点径向牛顿方程$T-Mg=MV^2/l$，因此
+\[
+\boxed{T=Mg+\frac{MV^2}{l}\approx26.48\,\mathrm N}
+\]
+（取$g=9.8\,\mathrm{m/s^2}$）。
+子弹的动量改变量（即子弹所受冲量）为
+\[
+\boxed{\bm J_{\mathrm{bullet}}=m(v-v_0)\bm i=-4.7\bm i\ \mathrm{N\,s}}.
+\]
+\crosscheck 物块受到的水平冲量为$+4.7\,\mathrm{N\,s}$，与子弹相反；张力应大于静态$Mg=14.7\,\mathrm N$。
+
+\sourceproblem{2.3.11}{53}{53}
+\problemtext 质量$m$的狗站在一艘质量$M$、静置于无水平方向外力作用的船上，最初狗离岸距离$s_0$。狗沿船向岸方向相对船行走距离$l$后停下，求狗此时离岸距离。
+\workings
+设狗相对地面向岸位移为$d$，船背岸位移为$D$。水平质心不变：
+$md-MD=0$；相对位移$l=d+D$。
+联立得
+\[
+d=\frac{M}{M+m}l,\qquad D=\frac{m}{M+m}l.
+\]
+故
+\[
+\boxed{s=s_0-\frac{M}{M+m}l}.
+\]
+\crosscheck $M\to\infty$时船不动，$s\to s_0-l$；$M\to0$时狗难以相对岸显著位移。
+
+\sourceproblem{2.3.12}{53}{53}
+\problemtext 水面质量为$M$的静止木船，岸上将质量$m$的沙袋以水平速度$v_0$投入船上，短暂碰撞后共同运动。运动中水的阻力大小与共同速度成正比$kv$，求碰后初速和至停止所行路程。
+\workings
+碰撞极短，水平动量守恒，
+\[
+\boxed{V=\frac{mv_0}{M+m}}.
+\]
+碰后总质量$M+m$受阻力$-(kv)$，$\dot v=-\frac{k}{M+m}v$，
+$v(t)=Ve^{-kt/(M+m)}$，因此
+\[
+\boxed{s_\infty=\int_0^\infty v(t)\,dt
+=\frac{(M+m)V}{k}=\frac{mv_0}{k}}.
+\]
+\crosscheck 质量$M$在第二式中消去；指数阻力模型是渐近停止，在严格有限时间没有$v=0$。
+% --- END textbook-ch02-solutions-001-012.tex ---
+
+% --- BEGIN textbook-ch02-solutions-013-025.tex SHA 7e335d1c5e3d248bd7daef4e316cc3ebb0443031 ---
+% 《大学物理简明教程》（第5版）2.3.13--2.3.25
+% 来源第53--54页（印刷页与PDF页一致），逐题研究整理。待独立复核。
+
+\subsection{解答题：2.3.13--2.3.25}
+
+\sourceproblem{2.3.13}{53}{53}
+\problemtext 质点在$Oxy$面上运动，$\bm r=a\cos\omega t\,\bm i+b\sin\omega t\,\bm j$，$a>b>0$，求作用力、在$A(a,0)$与$B(0,b)$的动能、$A\to B$时作用力做功及该力是否保守。
+\workings
+逐次微分
+\[
+\bm v=-a\omega\sin\omega t\,\bm i+b\omega\cos\omega t\,\bm j,
+\quad
+\bm F=m\ddot{\bm r}=-m\omega^2\bm r.
+\]
+设$t=0$为$A$，$t=\pi/(2\omega)$为$B$，
+\[
+\boxed{K_A=\frac12m b^2\omega^2},\qquad
+\boxed{K_B=\frac12m a^2\omega^2}.
+\]
+由动能定理
+\[
+\boxed{W_{A\to B}=K_B-K_A
+=\tfrac12m\omega^2(a^2-b^2)>0}.
+\]
+因$\bm F=-\nabla U$，其中
+$U=\frac12m\omega^2(x^2+y^2)$，
+故是\textbf{保守力}。
+\crosscheck 力的旋度为零；对$A,B$直接计算$U_A-U_B$与$W$一致。
+
+\sourceproblem{2.3.14}{53}{53}
+\problemtext 质点受恒力$\bm F=(7\bm i-6\bm j)\,\mathrm N$，从原点运动到$\bm r=(-3\bm i+4\bm j+16\bm k)\,\mathrm m$。求该力做功、用时$0.6\,\mathrm s$时平均功率、质量$1\,\mathrm{kg}$时动能改变量。
+\workings
+\[
+W=\bm F\cdot\Delta\bm r=7(-3)+(-6)4+0(16)
+=\boxed{-45\,\mathrm J}.
+\]
+平均功率$\boxed{\bar P=W/\Delta t=-75\,\mathrm W}$，
+动能定理给$\boxed{\Delta K=-45\,\mathrm J}$。
+\crosscheck 动能变化可以为负，但需要初动能至少$45\,\mathrm J$才能到达题设终点；力在$z$方向不做功。
+
+\sourceproblem{2.3.15}{53}{53}
+\problemtext 锤击铁钉入木板，木板对铁钉阻力与已进入深度$x$成正比：$F=kx$。相同速度、相同质量的锤两次撞击，第一次打入$1\,\mathrm{cm}$。求第二次还能打入多深。
+\workings
+设每次传给铁钉的相同有效动能为$E$。第一次从$x=0$进入$x_1$，
+$E=\int_0^{x_1}kx\,dx=\frac12kx_1^2$。
+第二次从$x_1$推进到$x_2$，
+\[
+E=\frac12k(x_2^2-x_1^2)
+\Longrightarrow x_2^2=2x_1^2.
+\]
+所以总深度$x_2=\sqrt2 x_1$，
+\[
+\boxed{\Delta x_2=(\sqrt2-1)x_1
+=(\sqrt2-1)\,\mathrm{cm}\approx0.414\,\mathrm{cm}}.
+\]
+\crosscheck 第一次进入的阻力起点为零，第二次阻力起点为$kx_1$，故第二次打入深度更短。
+
+\sourceproblem{2.3.16}{53}{53}
+\problemtext 两个质量可忽略的弹簧$A,B$竖直串联，劲度系数分别为$k_1,k_2$，下端悬质量$M$重物，系统静止时求两弹簧伸长量之和与弹性势能之比。
+\workings
+串联平衡时两弹簧拉力均为$Mg$，
+\[
+x_1=\frac{Mg}{k_1},\quad x_2=\frac{Mg}{k_2},\quad
+x=x_1+x_2=Mg\left(\frac1{k_1}+\frac1{k_2}\right).
+\]
+弹性势能
+$U=\frac12 k_1x_1^2+\frac12k_2x_2^2
+=\frac12(Mg)^2(1/k_1+1/k_2)$，故
+\[
+\boxed{\frac{x}{U}=\frac{2}{Mg}}.
+\]
+\crosscheck $x/U$量纲为$\mathrm{m/J=1/N}$，与$2/(Mg)$一致。
+
+\sourceproblem{2.3.17}{54}{54}
+\problemtext 太阳系以外的月地引力模型：地球质量$M_E=5.98\times10^{24}\,\mathrm{kg}$，月球质量$M_M=7.35\times10^{22}\,\mathrm{kg}$，地月中心距$D=3.84\times10^8\,\mathrm m$，月半径$R_M=1.74\times10^6\,\mathrm m$。
+求地月连线上引力相互抵消点$P$到月球表面的距离，并以无穷远为势能零点求该处$1\,\mathrm{kg}$质点势能。
+\workings
+设$P$到\emph{月心}距离为$d$，则到地心距离为$D-d$。
+相反方向的引力大小相等：
+\[
+\frac{GM_E}{(D-d)^2}=\frac{GM_M}{d^2}
+\Longrightarrow d=\frac{D}{1+\sqrt{M_E/M_M}}.
+\]
+因此月表至$P$距离
+\[
+\boxed{h=d-R_M\approx3.6583\times10^7\,\mathrm m}.
+\]
+以无穷远为引力势能零点，$m=1\,\mathrm{kg}$，
+\[
+\boxed{U(P)=-Gm\left(\frac{M_E}{D-d}+\frac{M_M}{d}\right)
+\approx-1.283\times10^6\,\mathrm J}
+\]
+（取$G=6.6743\times10^{-11}$ SI）。
+\crosscheck 该点处\emph{力}为零，但引力势能不为零；月心到$P$的距离仍远大于月半径。
+
+\sourceproblem{2.3.18}{54}{54}
+\problemtext 质量$m$物体在与水平面成$\theta$角的光滑斜面上，由斜面上端弹簧$k$连接，沿斜面向下为$x$正向，原点在弹簧自然长处。物体在平衡点的动能为$E_{k0}$，求平衡点坐标$x_0$及任意弹簧伸长$x$时动能。
+\workings
+沿斜面合力$mg\sin\theta-kx$，平衡时
+\[
+\boxed{x_0=\frac{mg\sin\theta}{k}}.
+\]
+总势能$U(x)=\frac12kx^2-mgx\sin\theta$，
+配方得
+\[
+U(x)=\frac12k(x-x_0)^2-\frac12kx_0^2.
+\]
+机械能守恒，利用在$x_0$处动能$E_{k0}$，
+\[
+\boxed{E_k(x)=E_{k0}-\frac12k(x-x_0)^2}.
+\]
+\crosscheck 可达区域必须满足$E_k(x)\ge0$，故
+$|x-x_0|\le\sqrt{2E_{k0}/k}$。
+
+\sourceproblem{2.3.19}{54}{54}
+\problemtext 质量$M$的弧形槽在光滑水平面上自由移动，其内轨道为半径$R$的四分之一圆弧。质量$m$小球从槽顶静止释放，沿无摩擦轨道滑到最低端并脱离，求小球相对于槽的速率。
+\workings
+小球下降高度$R$，系统无水平外力，水平总动量守恒。槽底切线水平，设小球、槽对地速度分别为$v,V$，取同一直线有
+\[
+mv+MV=0,\qquad
+mgR=\frac12mv^2+\frac12MV^2.
+\]
+令相对速率$u=|v-V|$，由动量守恒$v=\frac{M}{M+m}u$、
+$V=-\frac{m}{M+m}u$，代入能量得
+\[
+mgR=\frac12\frac{mM}{M+m}u^2
+\quad\Longrightarrow\quad
+\boxed{u=\sqrt{\frac{2gR(M+m)}{M}}}.
+\]
+\crosscheck $M\to\infty$时槽固定，$u\to\sqrt{2gR}$；有限$M$时槽反冲使相对速率增大。
+
+\sourceproblem{2.3.20}{54}{54}
+\problemtext 质量$m$质点在$Oxy$面上的位置为$(x_1,y_1)$，瞬时速度$\bm v=v_x\bm i+v_y\bm j$。受到沿$x$轴负方向、大小为$f$的力，求相对原点的角动量及该力的力矩。
+\workings
+$\bm r=x_1\bm i+y_1\bm j$，$\bm p=m(v_x\bm i+v_y\bm j)$，所以
+\[
+\boxed{\bm L_O=\bm r\times\bm p
+=m(x_1v_y-y_1v_x)\bm k}.
+\]
+$\bm F=-f\bm i$，
+\[
+\boxed{\bm\tau_O=\bm r\times\bm F=f y_1\bm k}.
+\]
+\crosscheck 由$dL_z/dt=xF_y-yF_x=f y$，与力矩公式一致。
+
+\sourceproblem{2.3.21}{54}{54}
+\problemtext 质量$3\,\mathrm{kg}$的质点在$t=0$处$\bm r_0=4\bm i$（m），
+$\bm v_0=\bm i+6\bm j$（m/s），之后恒力$\bm F=5\bm j$（N）作用$3$秒。
+求动量改变量与对原点角动量改变量。
+\workings
+\[
+\boxed{\Delta\bm p=\bm F\,\Delta t=15\bm j\ \mathrm{kg\,m/s}}.
+\]
+由于$x(t)=4+t$（m），力矩$\tau_z=5x(t)=5(4+t)$（N\,m），
+\[
+\boxed{\Delta\bm L=\int_0^3\bm\tau\,dt
+=5\left[4t+\tfrac12 t^2\right]_{0}^{3}\bm k
+=82.5\bm k\ \mathrm{kg\,m^2/s}}.
+\]
+\crosscheck 计算初末角动量$\bm r\times m\bm v$也得到$82.5\bm k$的增量。
+
+\sourceproblem{2.3.22}{54}{54}
+\problemtext 哈雷彗星绕太阳运行椭圆轨道；近日点距太阳$r_1=8.75\times10^{10}\,\mathrm m$、速率$v_1=5.46\times10^4\,\mathrm{m/s}$，远日点速率$v_2=9.08\times10^2\,\mathrm{m/s}$。求远日点距离$r_2$。
+\workings
+引力为中心力，两个拱点的速度与径向垂直，故
+\[
+mr_1v_1=mr_2v_2
+\Longrightarrow
+\boxed{r_2=r_1\frac{v_1}{v_2}
+\approx5.2616\times10^{12}\,\mathrm m}.
+\]
+\crosscheck 近日点速率较大，远日点距离也较大，$r_2/r_1=v_1/v_2\approx60.13$。
+
+\sourceproblem{2.3.23}{54}{54}
+\problemtext 光滑水平桌面中心有小孔，质量$m$的小球以半径$r_0$、角速度$\omega_0$做圆周运动；绳穿孔下挂质量$M_1$的重物时恰可维持平衡。再加挂质量$M_2$且慢慢重新达到平衡时，求小球新的角速度与轨道半径。
+\workings
+初始绳张力提供向心力：$M_1g=m\omega_0^2 r_0$。
+缓慢调整至新平衡时
+$(M_1+M_2)g=m\omega^2r$。
+关于孔的总外力矩为零，故
+\[
+mr^2\omega=mr_0^2\omega_0
+\quad\Longrightarrow\quad
+\omega=\omega_0(r_0/r)^2.
+\]
+代回平衡式并与初始式相除：
+\[
+\frac{M_1+M_2}{M_1}=\left(\frac{r_0}{r}\right)^3.
+\]
+所以
+\[
+\boxed{r=r_0\left(\frac{M_1}{M_1+M_2}\right)^{1/3}},\qquad
+\boxed{\omega=\omega_0\left(\frac{M_1+M_2}{M_1}\right)^{2/3}}.
+\]
+\crosscheck $M_2\to0$时两式还原；加重物后$r$减小、$\omega$增大。假设准静态、拉力始终径向。
+
+\sourceproblem{2.3.24}{54}{54}
+\problemtext 水流水平管中的体积流量$Q=4.0\times10^3\,\mathrm{cm^3/s}$，
+粗、细管面积$S_1=40\,\mathrm{cm^2}$、$S_2=10\,\mathrm{cm^2}$。
+(1)求两处流速；(2)以水银--水差压计测压，求两处水银面高度差，忽略粘性损失。
+\workings
+换算$Q=4.0\times10^{-3}\,\mathrm{m^3/s}$，
+$S_1=4.0\times10^{-3}\,\mathrm{m^2}$，$S_2=10^{-3}\,\mathrm{m^2}$，由连续性有
+\[
+\boxed{v_1=Q/S_1=1\,\mathrm{m/s}},\quad
+\boxed{v_2=Q/S_2=4\,\mathrm{m/s}}.
+\]
+同高水平管伯努利方程给
+$p_1-p_2=\frac12\rho_w(v_2^2-v_1^2)=7500\,\mathrm{Pa}$。
+差压计关系
+$\Delta p=(\rho_{\rm Hg}-\rho_w)g\,\Delta h$，
+取$\rho_w=1000,\rho_{\rm Hg}=13600\,\mathrm{kg/m^3}$，
+\[
+\boxed{\Delta h=\frac{7500}{(13600-1000)9.8}
+\approx0.0607\,\mathrm m=6.07\,\mathrm{cm}}.
+\]
+\crosscheck 粗管速度较小、压力较高；差压计结果是正的液面高度差。
+
+\sourceproblem{2.3.25}{54}{54}
+\problemtext $20^\circ\mathrm C$时油密度$\rho=0.90\times10^3\,\mathrm{kg/m^3}$；
+粗细均匀供油管1处比2处高$5.0\,\mathrm m$，且$p_1$比$p_2$\emph{低}$1.2\times10^3\,\mathrm{Pa}$。
+求体积$V=5.0\,\mathrm{m^3}$油从1到2的机械能损耗。
+\workings
+管径不变且密度固定，设截面平均速度近似相同，动能差抵消。机械能耗散
+\[
+E_{\rm loss}=V[(p_1-p_2)+\rho g(z_1-z_2)].
+\]
+代入$p_1-p_2=-1200\,\mathrm{Pa}$、$z_1-z_2=5.0\,\mathrm m$，
+\[
+\boxed{E_{\rm loss}=5[-1200+900(9.8)(5)]
+=2.145\times10^5\,\mathrm J}.
+\]
+\crosscheck 若将$p_1$“低”误当“高”，将产生数值偏差$2(1200)(5)=12000\,\mathrm J$；这里保持原书差压符号。
+% --- END textbook-ch02-solutions-013-025.tex ---
