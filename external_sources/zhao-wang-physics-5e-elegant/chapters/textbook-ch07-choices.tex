@@ -1,0 +1,182 @@
+% 第7批：《大学物理简明教程》第5版，第7章静电场选择题7.1.1—7.1.11。
+% 逐页核对原书/PDF第185—186页。题意作研究性转述，解析独立书写。
+
+\subsection{选择题：高斯定理、导体、势能与电容}
+
+\sourceproblem{7.1.1}{185}{185}
+\problemtext 判断以下关于高斯定理的推论何者成立：
+高斯面上场强处处为零是否意味着面内无电荷；
+面内电荷为零是否意味着场强处处为零；
+高斯面场强非零是否意味着面内必有电荷；
+面内有净电荷是否意味着总电通量非零。
+\workings
+高斯定理为
+\[
+\oint_S\bm E\cdot d\bm S=\frac{Q_{\mathrm{enc}}}{\varepsilon_0}.
+\]
+即使面上每点$\bm E=0$也只能推出$Q_{\mathrm{enc}}=0$，并不排除内部存在等量异号电荷；
+即使面内无电荷仍可有外部电荷产生电场；
+高斯面上场强非零也可全部源于外部电荷。
+只有面内净电荷非零必然意味着电通量非零，原题选\textbf{D}。
+\crosscheck 通量取决于电场\emph{法向分量的面积积分}，并非取决于场强模的积分。
+
+\sourceproblem{7.1.2}{185}{185}
+\problemtext 封闭曲面$S$包住点电荷$Q$，将外部点电荷$q$从无穷远移到$S$附近；
+判断穿过$S$的电通量和面上各点的场强是否改变。
+\workings
+外电荷$q$没有穿越$S$，所以$S$所包住的电荷仍为$Q$，
+\[
+\boxed{\Phi_E=\oint_S\bm E\cdot d\bm S
+=\frac{Q}{\varepsilon_0}}
+\]
+保持不变。
+但各点电场是$Q$与外部$q$的场叠加，
+$\bm E=\bm E_Q+\bm E_q$，通常随$q$位置而变化，
+故选\textbf{D：通量不变、场强分布改变}。
+\crosscheck 外部点电荷的总封闭面通量为零，
+不等于其在高斯面\emph{每一点}产生的场强为零。
+
+\sourceproblem{7.1.3}{185}{185}
+\problemtext 静电平衡的导体内部，判断电场强度、电势和导体表面电势关系。
+\workings
+若导体内部$\bm E\ne0$，自由载流子就会继续运动，
+不可能达到静电平衡，所以
+\[
+\boxed{\bm E_{\mathrm{inside}}=\bm0,\qquad
+\varphi_{\mathrm{inside}}=\varphi_{\mathrm{surface}}}.
+\]
+内部电势常数，但一般不为零，原题选\textbf{C}。
+\crosscheck 电势零点可任意设定；“内部场强零”不能推出“内部电势零”。
+
+\sourceproblem{7.1.4}{185}{185}
+\problemtext 半径$R_a<R_b$的两同心均匀带电球面分别带电$Q_a,Q_b$。
+在两球面之间距球心$r$处（$R_a<r<R_b$）求电场强度大小。
+\workings
+以半径$r$的同心球面为高斯面，仅包住内球面电荷$Q_a$。
+外球面因球对称性在其内部场强为零，所以
+\[
+\boxed{E(r)=\frac{|Q_a|}{4\pi\varepsilon_0r^2}},\qquad
+R_a<r<R_b.
+\]
+原题选\textbf{D}（选择项按正电荷方向写为$Q_a/(4\pi\varepsilon_0r^2)$）。
+\crosscheck 如果题设讨论代数径向分量则保留$Q_a$的符号，
+若讨论\emph{大小}必须取绝对值。
+
+\sourceproblem{7.1.5}{185--186}{185--186}
+\problemtext 导电材料或静电场所在区域的体电荷密度增加至原来的2倍，
+在相应电场也按比例增加且介电常数不变时，判断静电能量如何变化。
+\workings
+由静电学的线性性，在几何、边界和介电性质不变时，
+$\rho\mapsto2\rho$导致$\bm E\mapsto2\bm E$。
+局部能量密度
+\[
+w_e=\frac12\varepsilon E^2
+\quad\Longrightarrow\quad
+\boxed{w'_e=4w_e}.
+\]
+相同体积上的总电场能亦变为4倍，原题选\textbf{C}。
+\crosscheck 这里“电荷密度加倍、几何不变”的限定不可丢；若物体尺寸也变化则不能直接断言能量加倍关系。
+
+\sourceproblem{7.1.6}{186}{186}
+\problemtext 一半径$R$的带电导体球，其表面自由电荷面密度为$\sigma$，
+求球外紧贴表面处的电场强度。
+\workings
+取跨越导体表面的薄柱形高斯面，
+\[
+(\bm E_{\mathrm{out}}-\bm E_{\mathrm{in}})\cdot\bm n
+=\frac{\sigma}{\varepsilon_0}.
+\]
+静电平衡时导体内$\bm E_{\mathrm{in}}=0$，因此
+\[
+\boxed{E(R^+)=\frac{|\sigma|}{\varepsilon_0}}
+\]
+（带符号的法向分量为$\sigma/\varepsilon_0$），原题选\textbf{A}。
+\crosscheck 此题是\emph{导体球}而非均匀带电的非导体实体球；边界条件跨表面存在跃变。
+
+\sourceproblem{7.1.7}{186}{186}
+\problemtext 正方形两个对角顶点各放电荷$Q$，另两个对角顶点各放电荷$q$。
+若电荷$Q$所受其他三个电荷的合静电力为零，求$Q$和$q$的关系。
+\workings
+设正方形边长$a$。对一个顶点的$Q$，
+来自对角$Q$的库仑力大小
+$F_{QQ}=k_eQ^2/(2a^2)$，沿对角线向外。
+来自相邻两个$q$的合力沿同一对角线，大小
+$F_{Qq}=\sqrt2\,k_e|Qq|/a^2$。
+要平衡必须$Q$与$q$异号，再令大小相等，
+\[
+\frac{Q^2}{2a^2}=\frac{\sqrt2|Qq|}{a^2}
+\quad\Longrightarrow\quad
+\boxed{Q=-2\sqrt2\,q}.
+\]
+原题选\textbf{A}。
+\crosscheck 对于$Q\ne0$可约去$|Q|$；当所有电荷为零是平凡解，
+题意默认非零。关系与正方形边长无关。
+
+\sourceproblem{7.1.8}{186}{186}
+\problemtext 半径$R$、总电荷均匀分布在球体内部的实心绝缘球，
+判断电场强度大小$E(r)$从球心到无穷远的函数图像。
+\workings
+高斯定理给
+\[
+E(r)=
+\begin{cases}
+\dfrac{|Q|r}{4\pi\varepsilon_0 R^3},&0\le r<R,\\[3pt]
+\dfrac{|Q|}{4\pi\varepsilon_0r^2},&r\ge R.
+\end{cases}
+\]
+从球心$E(0)=0$线性增加至表面最大值，再按$r^{-2}$衰减，
+因此选\textbf{B}。
+\crosscheck 一定分清\emph{均匀带电实体球}与\emph{均匀带电球面}：
+后者在球内场强为零，不是本题模型。
+
+\sourceproblem{7.1.9}{186}{186}
+\problemtext 判断平行板电容器两极板分别带$+Q$与$-Q$时是否不带电；
+公式$C=Q/U$是否意味着$C$随$Q$而变；
+保持带电量不变而增大板距时端电压是否减小；
+以及固定电容条件下带电量与电压是否成正比。
+\workings
+净电荷为零不等于两极板不带电；
+理想线性电容$C$由几何与介质决定，不因充电量改变；
+保持$Q$时增大板距$d$使$C=\varepsilon S/d$减小，
+故$U=Q/C$反而增大。
+只有
+\[
+\boxed{Q=CU}
+\]
+在固定电容条件下表示带电量与电压成正比，
+原题选\textbf{D}。
+\crosscheck 电容是元件参数，不应从$C=Q/U$误推因果关系。
+
+\sourceproblem{7.1.10}{186}{186}
+\problemtext 半径为$R$的中性空心导体球壳，其空腔内距球心$d$处放一点电荷$q$（$d<R$）。
+把导体球壳暂时接地再断开接地线，取无穷远电势为零，求球心$O$的电势。
+\workings
+在接地导体球形腔中，对内部点电荷可用镜像法使球面电势为零：
+在相同径向的$r'=R^2/d$处设镜像电荷$q'=-qR/d$。
+于球心的电势
+\[
+\varphi(O)=\frac{1}{4\pi\varepsilon_0}
+\left(\frac qd+\frac{q'}{r'}\right)
+=\boxed{\frac{q}{4\pi\varepsilon_0}
+\left(\frac1d-\frac1R\right)}.
+\]
+原题选\textbf{D}。
+\crosscheck 地线撤去后导体的已感应电荷保持不变，
+外部不再引入净自由电荷时，球壳仍取零电势；
+镜像电荷位于腔外，不是真实的自由电荷。
+
+\sourceproblem{7.1.11}{186}{186}
+\problemtext 带负电的质点电荷$-q$（$q>0$）从两带电平行板之间的电势零位置穿过小孔到达电势$U>0$的板附近，
+求静电场对其所做功与动能增量。
+\workings
+从初态$\varphi_i=0$到末态$\varphi_f=U$，
+场力功
+\[
+W=q_{\mathrm{particle}}(\varphi_i-\varphi_f)
+=(-q)(0-U)=\boxed{qU}.
+\]
+忽略碰撞、阻力或其他非保守力时，
+动能定理给$\boxed{\Delta K=qU}$，
+原题选\textbf{B}。
+\crosscheck 电荷量为负、电势升高，所以电势能减小，
+$\Delta U=(-q)U=-qU$，动能增量相反为正。
