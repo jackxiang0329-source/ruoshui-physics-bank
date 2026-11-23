@@ -986,7 +986,7 @@ def twelfth_round_regressions():
     near((1.9)*(600e-9)*3,3.42e-6)
     near((5-.5)/(6-.5)*500,409.09090909090907)
     near(2*1.4*1e-4*.25e-2*1e9,700)
-    assert .035/.0025==14
+    near(.035/.0025,14)
 
 if __name__ == "__main__":
     n = structural_check()
