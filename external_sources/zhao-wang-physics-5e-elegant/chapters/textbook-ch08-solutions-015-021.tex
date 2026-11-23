@@ -1,0 +1,205 @@
+% 《大学物理简明教程》第5版第8章解答题8.3.15—8.3.21，
+% 原书与扫描PDF第221—222页。源条件逐页校对，原创推导，保留图示疑点。
+\subsection{解答题：磁力、回旋粒子与磁性材料}
+
+\sourceproblem{8.3.15}{221}{221}
+\problemtext 长直导线$AB$沿竖直方向通过电流$I_1=20$ A，
+右侧与其共面的矩形线圈$CDEF$通电$I_2=10$ A。
+线圈高$b=20.0$ cm、宽$a=9.0$ cm，
+最近边$CD$与长直线距离$d=1.0$ cm。
+按原图线圈电流顺时针，求四边受力、总合力和合力矩。
+\workings
+导线右侧磁场大小$B(r)=\mu_0I_1/(2\pi r)$，
+方向指向纸内。
+与长直线平行的近边$CD$电流向上，
+磁力朝长直线，大小
+\[
+\boxed{F_{CD}=\frac{\mu_0I_1I_2b}{2\pi d}
+=8.00\times10^{-4}\,\mathrm N}.
+\]
+远边$EF$电流向下，受力背离长直线，大小
+\[
+\boxed{F_{EF}=\frac{\mu_0I_1I_2b}{2\pi(d+a)}
+=8.00\times10^{-5}\,\mathrm N}.
+\]
+上边$CF$和下边$DE$分别受向上或向下的力，
+其大小同为
+\[
+\boxed{|F_{CF}|=|F_{DE}|=
+\frac{\mu_0I_1I_2}{2\pi}
+\ln\frac{d+a}{d}
+\approx9.21\times10^{-5}\,\mathrm N},
+\]
+方向相反而相互抵消。
+因此线圈合力
+\[
+\boxed{F_{\mathrm{net}}=F_{CD}-F_{EF}
+=7.20\times10^{-4}\,\mathrm N}
+\]
+指向长直导线。对线圈中心求各力矩，平行边受力作用线经过
+对应边的中心高度，水平边力矩彼此抵消，故
+$\boxed{M_{\mathrm{net}}=0}$。
+\crosscheck 平面内该回路磁矩与长直导线所产生的$\bm B$
+平行或反平行，不存在使其绕平面内轴转动的净力偶；
+但仍有朝向长直线的非零合力。
+
+\sourceproblem{8.3.16}{221}{221}
+\problemtext 一片厚度$d=1.0\,\mathrm{mm}$的铜片，
+磁场$B=1.5\,\mathrm T$垂直于片面。
+铜片每立方厘米有$8.4\times10^{22}$个自由电子，
+通过垂直于磁场方向的电流$I=200$ A，
+求铜片两侧霍尔电势差的大小。
+\workings
+电子数密度换算
+$n=8.4\times10^{22}\,\mathrm{cm^{-3}}
+=8.4\times10^{28}\,\mathrm{m^{-3}}$。
+在简单单载流子霍尔模型中
+\[
+|U_H|=\frac{BI}{n e d},
+\]
+代入$e=1.602176634\times10^{-19}$ C得
+\[
+\boxed{|U_H|=\frac{(1.5)(200)}
+ {(8.4\times10^{28})(1.602176634\times10^{-19})(10^{-3})}
+\approx2.23\times10^{-5}\,\mathrm V}
+\]
+即约$22.3\,\mu\mathrm V$。
+\crosscheck 铜以电子为主要导电载流子，霍尔系数为负；
+题只问霍尔电势差大小，故不凭缺少电极标记的图去猜电压符号。
+
+\sourceproblem{8.3.17}{222}{222}
+\problemtext 无限长竖直导线载有向上的电流$I_1=20$ A。
+右侧与其共面的水平直导线段$ab$载流$I_2=10$ A，由近端$a$
+距竖线$0.01$ m延伸至远端$b$距竖线$0.10$ m，
+电流从$a$向$b$。求$ab$所受总安培力以及它对图中$O$点的磁力矩。
+\workings
+竖直向上的长直电流在其右侧产生指向纸内的磁场
+$B(r)=\mu_0I_1/(2\pi r)$。
+水平电流段元$d\bm l=dr\,\bm e_x$，
+故$d\bm F=I_2d\bm l\times\bm B$
+沿纸面\emph{向上}，大小
+\[
+\boxed{F_{ab}=\frac{\mu_0I_1I_2}{2\pi}
+\int_{0.01}^{0.10}\frac{dr}{r}
+=\frac{\mu_0I_1I_2}{2\pi}\ln10
+\approx9.21\times10^{-5}\,\mathrm N}.
+\]
+对位于竖直线上的$O$求$z$向力矩，
+$dM_O=r\,dF$，所以
+\[
+\boxed{M_O=\frac{\mu_0I_1I_2}{2\pi}
+\int_{0.01}^{0.10}dr
+=3.60\times10^{-6}\,\mathrm{N\,m}}.
+\]
+方向绕$O$逆时针，力矩向纸外。
+\crosscheck 力的积分随距离呈对数关系，
+力矩积分因力臂乘上$1/r$恰消去距离依赖。
+
+\sourceproblem{8.3.18}{222}{222}
+\problemtext 电子在磁感应强度$B=70\times10^{-4}$ T
+的均匀磁场中做半径$r=3.0$ cm的圆周运动，
+磁场垂直纸面向外。图中电子在$A$点的速度方向向上。
+求回旋方向、速率和动能。
+\workings
+电子电荷为$-e$。在$A$点，
+$\bm v=+v\bm e_y$，$\bm B=+B\bm e_z$，
+$\bm v\times\bm B$指向$+x$，再乘$-e$则力指向$-x$，
+所以圆心位于$A$的左侧、轨迹在纸面内\textbf{逆时针}。
+洛伦兹力提供向心力：
+\[
+evB=\frac{m_ev^2}{r}
+\quad\Longrightarrow\quad
+\boxed{v=\frac{eBr}{m_e}
+\approx3.69\times10^7\,\mathrm{m/s}}.
+\]
+动能
+\[
+\boxed{E_k=\frac12m_ev^2
+=\frac{e^2B^2r^2}{2m_e}
+\approx6.20\times10^{-16}\,\mathrm J
+\approx3.87\,\mathrm{keV}}.
+\]
+\crosscheck $v/c\approx0.12$，教材使用的非相对论公式为近似；
+若要求高精度，应按相对论动量$p=\gamma m_ev$修正。
+
+\sourceproblem{8.3.19}{222}{222}
+\problemtext 电子在$B=20\times10^{-4}$ T的均匀磁场中沿螺旋线运动，
+回旋半径$R=2.0$ cm，螺距$h=5.0$ cm。
+(1) 求总速率；(2) 依据图示回旋方向解释磁场轴向的正反判断。
+\workings
+圆周运动的垂直速率与回旋周期为
+\[
+v_\perp=\frac{eBR}{m_e}
+\approx7.04\times10^6\,\mathrm{m/s},
+\qquad
+T=\frac{2\pi m_e}{eB}
+\approx1.79\times10^{-8}\,\mathrm s.
+\]
+沿场方向的速率大小满足
+$v_\parallel=|h|/T$，所以
+\[
+v_\parallel\approx2.80\times10^6\,\mathrm{m/s},
+\qquad
+\boxed{v=\sqrt{v_\perp^2+v_\parallel^2}
+\approx7.58\times10^6\,\mathrm{m/s}}.
+\]
+电子带负电，回旋角速度矢量与$\bm B$的方向反向；
+观察原图绕轴旋转的朝向，使用右手定则判出角速度矢量，
+磁场再取其反方向。
+\crosscheck \textbf{图示轴向二校：}速率和周期不依赖磁场的正负方向；
+但确定$\bm B$向上还是向下必须区分从哪一端观察螺旋旋向，
+不能仅据“螺旋向上”推断磁场向上。
+
+\sourceproblem{8.3.20}{222}{222}
+\problemtext 螺线管平均中心周长$L=0.10$ m，总匝数$N=200$，
+通电$I=0.100$ A。
+(1) 空气芯求$H,B_0$；
+(2) 改为相对磁导率$\mu_r=4200$的均匀线性磁芯求$H,B$。
+\workings
+使用题设\emph{平均磁路长度}$L$，
+\[
+\boxed{H=\frac{NI}{L}
+=\frac{200(0.100)}{0.10}
+=200\,\mathrm{A/m}}.
+\]
+空气芯近似$\mu_r=1$，
+\[
+\boxed{B_0=\mu_0H\approx2.51\times10^{-4}\,\mathrm T}.
+\]
+对线性磁性材料
+\[
+\boxed{B=\mu_0\mu_rH
+=4200B_0\approx1.06\,\mathrm T},\qquad
+\boxed{H=200\,\mathrm{A/m}}.
+\]
+\crosscheck 磁芯改变了$B$，但在理想环形磁路、固定自由电流下
+$H$由安培定理保持不变；
+铁芯接近饱和时常数$\mu_r=4200$不再适用。
+
+\sourceproblem{8.3.21}{222}{222}
+\problemtext 为测环形铁芯的相对磁导率$\mu_r$，
+将横截面积$S=0.50\times10^{-4}\,\mathrm{m^2}$的铁芯绕成
+平均周长$L=0.10$ m、总匝数$N=200$的环形螺线管。
+电流$I=0.10$ A时穿过环芯截面的磁通量为
+$\Phi=6.0\times10^{-5}$ Wb，求$\mu_r$。
+\workings
+磁感应强度近似均匀，
+\[
+\boxed{B=\frac{\Phi}{S}
+=\frac{6.0\times10^{-5}}{0.50\times10^{-4}}
+=1.20\,\mathrm T}.
+\]
+由安培环路定理
+\[
+\boxed{H=\frac{NI}{L}
+=\frac{200(0.10)}{0.10}
+=200\,\mathrm{A/m}}.
+\]
+故有效相对磁导率
+\[
+\boxed{\mu_r=\frac{B}{\mu_0H}
+\approx\frac{1.20}{(4\pi\times10^{-7})(200)}
+\approx4.77\times10^3}.
+\]
+\crosscheck 此为在指定$B,H$工作点测得的\emph{有效割线磁导率}，
+铁磁体通常非线性且有磁滞，不能断言在任意$H$下$\mu_r$都相同。
