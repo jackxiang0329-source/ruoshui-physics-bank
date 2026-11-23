@@ -1,0 +1,142 @@
+% 《大学物理学学习指导》自测题11计算11.3.1—11.3.6
+% 原书印刷232，PDF物理240页。源题数据、单位与边界逐项核对。
+\subsection{自测题11：光电、康普顿、氢谱和势阱计算题}
+
+\sourcetest{11.3.1}{232}{240}
+\problemtext 410nm单色光照射金属，最大光电子动能为1.0eV，
+求能使该金属发生光电效应的单色光最大波长。
+\workings
+由爱因斯坦光电方程
+$W=hc/\lambda-K_{\max}$，采用
+$hc\simeq1239.842\,\mathrm{eV\,nm}$，
+\[
+ W=\frac{1239.842}{410}-1.0
+ \simeq2.024\,\mathrm{eV}.
+\]
+红限波长由$hc/\lambda_0=W$给出，
+\[
+\boxed{\lambda_{\max}=\lambda_0
+=\frac{1239.842}{1239.842/410-1}\,\mathrm{nm}
+\simeq612.6\,\mathrm{nm}}.
+\]
+\crosscheck 红限波长应\emph{长于}410nm，
+因为原入射光子有1eV的多余动能可供电子带走。
+
+\sourcetest{11.3.2}{232}{240}
+\problemtext 0.0500nm的X射线在自由静止电子上发生康普顿散射；
+散射后波长0.0522nm。
+求光子的散射角及电子得到的动能。
+\workings
+康普顿波长
+$\lambda_C=h/(m_ec)=0.00242631$nm。
+波长增加
+$\Delta\lambda=0.0522-0.0500=0.0022$nm，
+\[
+\cos\theta=1-\frac{\Delta\lambda}{\lambda_C}
+=1-\frac{0.0022}{0.00242631}
+\simeq0.09328,
+\]
+因此
+\[
+\boxed{\theta\simeq84.65^\circ}.
+\]
+电子初始静止，反冲动能为光子损失的能量：
+\[
+\begin{aligned}
+K_e&=hc\left(\frac1{\lambda_0}-\frac1{\lambda'}\right)\\
+&\simeq(1239.842\,\mathrm{eV\,nm})
+\left(\frac1{0.0500}-\frac1{0.0522}\right).
+\end{aligned}
+\]
+从而
+\[
+\boxed{K_e\simeq1.045\times10^3\,\mathrm{eV}
+=1.045\,\mathrm{keV}}.
+\]
+\crosscheck $\lambda'>\lambda_0$，故电子得到正动能；
+将$\lambda,\lambda'$倒置会产生负能量，违反题设。
+
+\sourcetest{11.3.3}{232}{240}
+\problemtext 氢原子电子从基态跃迁至主量子数$n$的激发态，
+这时玻尔轨道半径变为原来9倍，求原子从该态
+直接返回基态时发射光子的频率。
+\workings
+玻尔轨道半径$r_n=n^2a_0$，
+$r_n/r_1=9$给$n=3$。
+氢能级$E_n=-13.6/n^2$eV，
+$n=3\to1$光子能量
+\[
+\Delta E=13.6\left(1-\frac1{9}\right)
+\simeq12.0889\,\mathrm{eV}.
+\]
+因此
+\[
+\boxed{\nu=\frac{\Delta E}{h}
+=\frac{12.0889\,e}{h}
+\simeq2.923\times10^{15}\,\mathrm{Hz}}.
+\]
+\crosscheck 题中“基态跃迁到激发态”本身是\emph{吸收}能量；
+要谈\emph{发射}光子需明确从$n=3$返回较低能级，
+此处按源题的直接返回基态模型给出频率。
+
+\sourcetest{11.3.4}{232}{240}
+\problemtext 氢原子从某个初始态跃迁到
+\emph{从基态激发需10.19eV的能级}时
+发射波长486nm的光子，
+求初始态的能量与主量子数。
+\workings
+从基态$E_1=-13.6$eV激发10.19eV，
+终态能量约$E_f=-3.41$eV，
+即按玻尔能级取$n_f=2$、$E_f\simeq-3.4$eV。
+光子能量
+$E_\gamma=hc/(486\,\mathrm{nm})\simeq2.551$eV。
+于是初始电子能量
+\[
+E_i=E_f+E_\gamma\simeq-3.4+2.55
+=-0.85\,\mathrm{eV}.
+\]
+解$E_i=-13.6/n_i^2$，
+\[
+\boxed{n_i=4},\qquad
+\boxed{E_i=-0.85\,\mathrm{eV}}.
+\]
+\crosscheck 巴耳末线486nm对应$4\to2$；
+不能因为题干出现“从基态激发能10.19eV”
+就错把486nm理解成$1\to2$发射。
+
+\sourcetest{11.3.5}{232}{240}
+\problemtext 若采用能量等效质量$m_{\rm eq}=E/c^2$的旧教材表述，
+求波长550nm光子的等效质量（kg）。
+\workings
+光子能量$E=hc/\lambda$，所以
+\[
+\boxed{m_{\rm eq}=\frac{E}{c^2}
+=\frac{h}{\lambda c}
+=\frac{6.62607015\times10^{-34}}
+{(550\times10^{-9})(299792458)}
+\simeq4.02\times10^{-36}\,\mathrm{kg}}.
+\]
+\crosscheck 这不是光子的\emph{静质量}；
+现代相对论表述中光子静质量为零，
+这里的$m_{\rm eq}$仅是光子能量除以$c^2$。
+
+\sourcetest{11.3.6}{232}{240}
+\problemtext 一维无限深势阱$0\le x\le a$内，
+已归一化波函数为
+$\psi(x)=\sqrt{2/a}\sin(\pi x/a)$，
+求找到粒子概率密度最大的位置。
+\workings
+概率密度
+\[
+\rho(x)=|\psi(x)|^2
+=\frac2a\sin^2\left(\frac{\pi x}{a}\right).
+\]
+在$[0,a]$范围内，
+$\sin^2(\pi x/a)$于$\pi x/a=\pi/2$处达到最大1，
+故
+\[
+\boxed{x=\frac a2},\qquad
+\boxed{\rho_{\max}=\frac2a}.
+\]
+\crosscheck 势阱两端$x=0,a$的波函数为零，
+故概率密度最大的位置在阱的正中心，而不是两端。
