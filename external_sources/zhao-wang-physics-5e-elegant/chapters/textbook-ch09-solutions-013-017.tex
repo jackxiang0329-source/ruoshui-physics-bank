@@ -1,0 +1,143 @@
+% 《大学物理简明教程》第5版第9章解答题9.3.13—9.3.17
+% 原书/PDF第240—241页；依据扫描图示，独立求解磁场自能和位移电流。
+
+\subsection{解答题：螺绕环、自感磁能与位移电流}
+
+\sourceproblem{9.3.13}{240--241}{240--241}
+\problemtext 一矩形截面的空心螺绕环共$N$匝，
+横截面高度$h$、内径向半径$a$、外径向半径$b>a$，
+空气芯，线圈电流$I$。求该线圈的自感和储存的磁能。
+\workings
+理想均匀密绕的环形线圈内部，
+由安培定理
+\[
+\bm B(r)=\frac{\mu_0NI}{2\pi r}\bm e_\theta,
+\qquad a<r<b.
+\]
+一匝所链接的截面磁通为
+\[
+\Phi_{\mathrm{one}}=\int_a^b B(r)h\,dr
+=\frac{\mu_0NIh}{2\pi}\ln\frac ba.
+\]
+总磁链$\Psi=N\Phi_{\mathrm{one}}$，故
+\[
+\boxed{L=\frac{\Psi}{I}
+=\frac{\mu_0N^2h}{2\pi}\ln\frac ba},
+\]
+\[
+\boxed{W_m=\frac12 LI^2
+=\frac{\mu_0N^2hI^2}{4\pi}\ln\frac ba}.
+\]
+\crosscheck $L$与匝数平方成正比、与电流无关；
+当$b\to a^+$时截面趋零，自感趋于零，
+符合理想环形线圈模型。
+
+\sourceproblem{9.3.14}{241}{241}
+\problemtext 无限长实心圆柱导体半径$R$，总电流$I$
+均匀分布于横截面，求\emph{导体内部}每单位长度存储的磁场能。
+\workings
+半径$r<R$的同轴圆形安培环路包围
+$I_{\mathrm{enc}}=I r^2/R^2$，
+所以
+$B(r)=\mu_0Ir/(2\pi R^2)$。
+真空磁能密度为$w_m=B^2/(2\mu_0)$。
+取单位轴向长度，体积元$dV=2\pi r\,dr$，
+\[
+\frac{W_{\mathrm{inside}}}{\ell}
+=\int_0^R\frac{B(r)^2}{2\mu_0}\,2\pi r\,dr
+=\frac{\mu_0I^2}{4\pi R^4}\int_0^Rr^3\,dr.
+\]
+故
+\[
+\boxed{\frac{W_{\mathrm{inside}}}{\ell}
+=\frac{\mu_0I^2}{16\pi}}.
+\]
+\crosscheck 在电流固定且均匀分布下，结果不依赖半径$R$；
+若把\emph{导体外部}也算入无限长孤立导线的全部空间，
+还会有发散的对数外场能，所以本题特别限于导体内部。
+
+\sourceproblem{9.3.15}{241}{241}
+\problemtext 长圆柱形电容器内外圆柱电极半径为
+$R_1<R_2$，中间填充介电常数$\varepsilon$
+（SI绝对介电常数）的均匀线性介质。
+施加的两板电压随时间满足$dU/dt=k$（常数）。
+求距轴线$r$、$R_1<r<R_2$处的位移电流密度。
+\workings
+圆柱轴对称静电近似下，
+径向电场大小为
+\[
+E_r(r,t)=\frac{U(t)}{r\ln(R_2/R_1)}.
+\]
+介电位移场$\bm D=\varepsilon\bm E$，
+其时间导数给出位移电流密度：
+\[
+\boxed{\bm J_D(r)=\frac{\partial\bm D}{\partial t}
+=\frac{\varepsilon k}{r\ln(R_2/R_1)}\bm e_r},
+\quad R_1<r<R_2,
+\]
+其中径向正向定义为内极板指向外极板。
+\crosscheck 对同轴圆柱面面积$2\pi r\ell$积分，
+$I_D=2\pi\ell\varepsilon k/\ln(R_2/R_1)$，
+不随$r$改变，符合同一电容器电流连续性。
+
+\sourceproblem{9.3.16}{241}{241}
+\problemtext 证明平行板电容器在板距、面积和介质不随时间改变时，
+位移电流满足$I_D=C\,dU/dt$；
+讨论这一关系能否推广到非平行板电容器。
+\workings
+平行板电容器忽略边缘效应，
+$C=\varepsilon S/d$、
+$E=U/d$、$D=\varepsilon E$，因此
+\[
+I_D=\frac d{dt}\int_S\bm D\cdot d\bm S
+=\varepsilon S\frac{d}{dt}\frac Ud
+=\boxed{C\frac{dU}{dt}}.
+\]
+对于\emph{几何固定、线性且介电参数不随时间改变}
+的其他二端电容器，也有端电荷$Q=CU$，因而
+\[
+\boxed{I_D=\frac{dQ}{dt}=C\,\frac{dU}{dt}}
+\]
+适用于端口电流连续意义下的相应截面。
+\crosscheck 不能无限制推广：
+若几何或介电性质随时间改变使$C=C(t)$，
+应写$I=\frac{d(CU)}{dt}=C\dot U+U\dot C$；
+非线性介质还须按真实$Q(U)$微分。
+
+\sourceproblem{9.3.17}{241}{241}
+\problemtext 真空中半径$R=0.10$ m的圆形平行板电容器
+均匀充电，板间电场增长率为
+$dE/dt=1.0\times10^{13}\,\mathrm{V/(m\,s)}$。
+求板间位移电流大小、板中心轴线距离$r<R$处的磁感应强度
+$B_r$，以及$r=R$处的磁感应强度$B_R$。
+\workings
+忽略边缘效应，位移电流为
+\[
+I_D=\varepsilon_0\,\frac{dE}{dt}\,\pi R^2.
+\]
+取$\varepsilon_0=8.8541878128\times10^{-12}\,\mathrm{F/m}$，
+得到
+\[
+\boxed{I_D=
+\varepsilon_0\pi(0.10)^2(10^{13})
+\approx2.78\,\mathrm A}.
+\]
+在两板间取半径$r<R$的圆形安培环路，
+包围位移电流
+$I_D(r)=\varepsilon_0\pi r^2\,dE/dt$，
+由安培--麦克斯韦方程
+$B(r)(2\pi r)=\mu_0I_D(r)$，故
+\[
+\boxed{B_r=\frac{\mu_0\varepsilon_0r}{2}
+\frac{dE}{dt}},\qquad 0\le r<R.
+\]
+在板边缘
+\[
+\boxed{B_R=\frac{\mu_0\varepsilon_0R}{2}
+\frac{dE}{dt}
+\approx5.56\times10^{-6}\,\mathrm T}.
+\]
+\crosscheck 对$r>R$，
+若忽略边缘漏场，环路所包的位移电流不再随$r$增加，
+有$B(r)\propto1/r$；
+内外解在$r=R$处连续。
