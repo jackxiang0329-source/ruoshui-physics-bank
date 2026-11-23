@@ -57,6 +57,7 @@ jobs:
               exit 0
             fi
             git reset --hard FETCH_HEAD
+            sudo rm -f "$root/main.pdf"
             cp "$RUNNER_TEMP/zhao-wang-main.pdf" "$root/main.pdf"
             git add -f "$root/main.pdf"
             if git diff --cached --quiet; then
