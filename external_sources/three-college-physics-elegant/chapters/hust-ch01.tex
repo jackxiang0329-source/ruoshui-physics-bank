@@ -1,0 +1,44 @@
+\section{第1组：质点运动学}
+\sourceproblem{1-T1}{1}{5}
+\problemtext 平面运动 $x=3t+5,\ y=\tfrac12t^2+3t-4$（SI），求轨迹、位矢、$1$ 至 $2\,\mathrm s$ 位移、速度与加速度。
+\workings 消去参数 $t=(x-5)/3$，
+\[
+y=\frac{(x-5)^2}{18}+x-9,\quad
+\bm r=(3t+5)\bm i+(\tfrac12t^2+3t-4)\bm j.
+\]
+\[
+\Delta\bm r=3\bm i+\tfrac92\bm j\ \mathrm m,\quad
+\bm v=3\bm i+(t+3)\bm j,\quad\bm a=\bm j.
+\]
+速度和加速度分别采用 $\mathrm{m/s}$、$\mathrm{m/s^2}$。
+\crosscheck $\bm r(1)=(8,-0.5)\,\mathrm m$，$\bm r(2)=(11,4)\,\mathrm m$；积分速度亦得相同位移。
+\sourceproblem{1-T2}{1}{5}
+\problemtext 初始静止于原点，$\bm a=5t^2\bm i+3\bm j$（SI）。
+\workings 由两次积分并代入初值，
+\[
+\bm v=\tfrac53t^3\bm i+3t\bm j,\quad
+\bm r=\tfrac5{12}t^4\bm i+\tfrac32t^2\bm j.
+\]
+运动方程即 $x=5t^4/12,\ y=3t^2/2$，轨迹为 $x=5y^2/27$（SI 数值式），$y\ge0$。
+\crosscheck 对位矢连续求导两次还原题设；原点初始速度为零。
+\sourceproblem{1-T3}{1}{5}
+\problemtext 一维运动满足 $a=-kv^2$（$k>0$），初始 $x=0,v=v_0$，求速率关于坐标的关系。
+\workings 在 $v\ne0$ 的分支上，$v\,\mathrm dv/\mathrm dx=-kv^2$，所以 $\mathrm dv/v=-k\,\mathrm dx$，得 $v=v_0e^{-kx}$，速率 $|v_0|e^{-kx}$。$v_0=0$ 时为静止解。
+\crosscheck $k$ 的量纲为长度的倒数；代回得到 $v\,\mathrm dv/\mathrm dx=-kv^2$。此处是题给有向加速度，不擅自改成双向阻力模型；负初速度分支仅在解存在的时间域内成立。
+\sourceproblem{1-T4}{2}{6}
+\problemtext 半径 $R=2\,\mathrm m$，速率 $v=KRt^2$；$v(2\,\mathrm s)=32\,\mathrm{m/s}$。求 $t=0.5\,\mathrm s$ 时速度大小和加速度大小。
+\workings $K=4\,\mathrm{s^{-3}}$，故 $v=2\,\mathrm{m/s}$。
+\[
+a_\tau=2KRt=8\,\mathrm{m/s^2},\qquad
+a_n=v^2/R=2\,\mathrm{m/s^2},
+\quad a=2\sqrt{17}\,\mathrm{m/s^2}.
+\]
+\crosscheck 切向与法向正交；速度沿轨迹切线，题目未给绝对方位，不能指定固定坐标方向。
+\sourceproblem{1-T5}{2}{6}
+\problemtext 空速和正北地速均为 $135\,\mathrm{km/h}$，机头北偏东 $30^\circ$，求风速风向。
+\workings 取东、北为正轴，令 $V=135\,\mathrm{km/h}$。
+\[
+\bm v_{\rm wind}=(-V\sin30^\circ,V(1-\cos30^\circ)).
+\]
+风速为 $2V\sin15^\circ\approx69.9\,\mathrm{km/h}$，风吹向西偏北 $15^\circ$，按来向命名为东偏南 $15^\circ$ 的风。
+\crosscheck 风的东向分量为负，恰抵消飞机空速的东向分量；两种风向口径均已注明。
