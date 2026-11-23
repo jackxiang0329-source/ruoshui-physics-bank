@@ -1006,9 +1006,8 @@ def thirteenth_guide_regressions():
     d=2*600e-9/.2
     near(d*1e6,6)
     near(d/4*1e6,1.5)
-    assert [k for k in range(-9,10) if k%4]!=[]
-    assert [k for k in range(-9,10) if k%4]!=[0,-4,4,8,-8] is False if False else True
-    assert len([k for k in range(-9,10) if k%4!=0])+1==15
+    assert [k for k in range(-9,10) if k%4==0]==[-8,-4,0,4,8]
+    assert len([k for k in range(-9,10) if k==0 or k%4!=0])==15
     # 13.5--13.6 grating density: source printed text contradicts worked example.
     d_cm=1e-2/590  # literal 590 lines / cm
     d_mm=1e-3/590  # implied by printed worked solution
