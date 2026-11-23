@@ -1,0 +1,1428 @@
+% Consolidated 18-capacitance-energy from 309dbbd2c1c3ab17ea53128b49313f224ecea5a5; original TeX fragments preserved.
+
+% === BEGIN 18-capacitance-energy-101-112.tex blob cf69b9dd7b76ad8ce162c156eaeeee97baa36b84 ===
+% Irodov Part III §3.3 problems 101--112, user PDF pp.114--116,
+% printed pp.105--107. Capacitor figure 3.16--3.17 inspected.
+\electrocapproblem{101}{105}
+半径为 $R_1$ 的孤立金属球外表紧贴同心介质壳，
+介质相对介电常数为 $\varepsilon$，外半径 $R_2$；
+其外部真空。求金属球相对于无穷远的电容。
+\exsolution
+设球总自由电荷为 $q$。高斯定律给
+$D_r=q/(4\pi r^2)$，故
+$R_1<r<R_2$ 时
+$E_r=q/(4\pi\varepsilon_0\varepsilon r^2)$，
+$r>R_2$ 时
+$E_r=q/(4\pi\varepsilon_0r^2)$。
+球电势
+\[
+\varphi(R_1)=\frac{q}{4\pi\varepsilon_0}
+\left[\frac1\varepsilon
+\left(\frac1{R_1}-\frac1{R_2}\right)
++\frac1{R_2}\right].
+\]
+由 $C=q/\varphi(R_1)$：
+\[
+\boxed{C=
+\frac{4\pi\varepsilon_0\varepsilon R_1}
+{1+(\varepsilon-1)R_1/R_2}}.
+\]
+\excheck $R_2=R_1$ 时退化为真空导体球电容
+$4\pi\varepsilon_0R_1$；
+$R_2\to\infty$ 时得到
+$4\pi\varepsilon_0\varepsilon R_1$。
+
+\electrocapproblem{102}{105}
+两个空气平板电容器电容均为 $C$，
+串联接在电动势 $\mathcal E$ 不变的电池两端。
+随后将其中一个电容器完全填充
+相对介电常数为 $\varepsilon$ 的介质。
+问该电容器的电场减小多少倍，
+并求经电池流过的电荷量。
+\exsolution
+原串联等效电容 $C_{\rm eq,0}=C/2$，
+串联电荷 $Q_0=C\mathcal E/2$，
+每个电容器各承压 $\mathcal E/2$。
+填充后该电容器电容为 $\varepsilon C$，
+新串联电容为
+$C_{\rm eq}=\varepsilon C/(1+\varepsilon)$。
+故它的新电压
+$V_{\rm diel}=Q/(\varepsilon C)
+=\mathcal E/(1+\varepsilon)$。
+同一板距下 $E\propto V$，因此
+\[
+\boxed{\frac{E_{\rm new}}{E_{\rm old}}
+=\frac2{\varepsilon+1}},
+\quad
+\text{原电场减小 }(\varepsilon+1)/2\text{ 倍}.
+\]
+通过电池的电荷量等于两次串联电荷差：
+\[
+\boxed{\Delta Q=
+C\mathcal E\left[\frac{\varepsilon}{1+\varepsilon}
+-\frac12\right]
+=\frac{C\mathcal E(\varepsilon-1)}
+{2(\varepsilon+1)}}.
+\]
+\excheck 电源连接未断开，必须保持
+$\mathcal E$ 不变，而不能错误地保持串联电荷不变。
+
+\electrocapproblem{103}{105--106}
+平板电容器板面积为 $S$，间距由相邻
+两层介质填满；厚度 $d_1,d_2$，
+相对介电常数 $\varepsilon_1,\varepsilon_2$。
+求电容及两层界面处束缚面电荷密度
+（场从1层指向2层，外加电压 $V$）。
+\exsolution
+无自由界面电荷，法向位移量恒定 $D$，
+两层 $E_i=D/(\varepsilon_0\varepsilon_i)$。
+电压
+$V=D[d_1/\varepsilon_1+d_2/\varepsilon_2]/\varepsilon_0$。
+因此
+\[
+\boxed{C=
+\frac{\varepsilon_0S}{d_1/\varepsilon_1+d_2/\varepsilon_2}}.
+\]
+两层极化分别为
+$P_i=D(1-1/\varepsilon_i)$。
+在界面上定义沿1层指向2层为正法向，
+来自介质1的束缚面电荷为 $+P_1$，
+来自介质2的为 $-P_2$，
+相加得
+\[
+\sigma_b=P_1-P_2
+=D\left(\frac1{\varepsilon_2}-\frac1{\varepsilon_1}\right).
+\]
+代入
+$D=\varepsilon_0V/(d_1/\varepsilon_1+d_2/\varepsilon_2)$：
+\[
+\boxed{\sigma_b=
+\frac{\varepsilon_0V(\varepsilon_1-\varepsilon_2)}
+{\varepsilon_1d_2+\varepsilon_2d_1}}.
+\]
+\excheck 这是\emph{同一界面两侧束缚电荷之和}，
+不是单取其中一层的表面极化电荷。
+
+\electrocapproblem{104}{106}
+平板电容器面积 $S$，板距 $d$，
+介质相对介电常数沿电场方向线性地
+由 $\varepsilon_1$ 增至 $\varepsilon_2>\varepsilon_1$。
+求电容及带电 $q$ 时束缚体电荷密度
+关于局部 $\varepsilon$ 的关系。
+\exsolution
+没有自由体电荷，$D=q/S$ 恒定，
+$E(x)=D/[\varepsilon_0\varepsilon(x)]$。
+令
+$\varepsilon(x)=\varepsilon_1+
+(\varepsilon_2-\varepsilon_1)x/d$，
+则
+\[
+V=\frac{q}{\varepsilon_0S}
+\int_0^d\frac{\mathrm dx}{\varepsilon(x)}
+=\frac{qd}{\varepsilon_0S(\varepsilon_2-\varepsilon_1)}
+\ln\frac{\varepsilon_2}{\varepsilon_1}.
+\]
+因此
+\[
+\boxed{C=
+\frac{\varepsilon_0S(\varepsilon_2-\varepsilon_1)}
+{d\ln(\varepsilon_2/\varepsilon_1)}}.
+\]
+$P=D(1-1/\varepsilon)$，
+$\rho_b=-\mathrm dP/\mathrm dx$，故
+\[
+\boxed{\rho_b(x)=
+-\frac{q}{S}\frac{\varepsilon_2-\varepsilon_1}
+{d\,\varepsilon(x)^2}}.
+\]
+\excheck 若 $\varepsilon_2\to\varepsilon_1=\varepsilon$，
+洛必达法则给 $C\to\varepsilon\varepsilon_0S/d$、
+$\rho_b\to0$。
+
+\electrocapproblem{105}{106}
+半径为 $R_1,R_2$ 的同心球形电容器，
+$R_2>R_1$。填充介质相对介电常数随半径
+变化为 $\varepsilon(r)=a/r$，
+其中 $a$ 为具有长度量纲的常数。
+求电容。
+\exsolution
+径向位移
+$D_r=q/(4\pi r^2)$，
+电场
+$E_r=D_r/[\varepsilon_0(a/r)]
+=q/(4\pi\varepsilon_0 a r)$。
+电压
+\[
+V=\int_{R_1}^{R_2}E_r\,\mathrm dr
+=\frac{q}{4\pi\varepsilon_0a}
+\ln\frac{R_2}{R_1}.
+\]
+因此
+\[
+\boxed{C=\frac{4\pi\varepsilon_0a}
+{\ln(R_2/R_1)}}.
+\]
+\excheck 因 $\varepsilon=a/r$ 为无量纲，
+$a$ 必须具有长度量纲。
+
+\electrocapproblem{106}{106}
+同轴圆柱电容器两层介质分别占
+$R_1<r<R_2$ 与 $R_2<r<R_3$，
+介电常数为 $\varepsilon_1,\varepsilon_2$，
+击穿场强为 $E_{1m},E_{2m}$。
+求增大电压时两层同时达到各自击穿场的条件。
+\exsolution
+每单位轴向长度自由电荷量记为 $\lambda$。
+由柱面高斯定律
+$D_r=\lambda/(2\pi r)$，
+因此第 $i$ 层
+$E_i(r)=|\lambda|/(2\pi\varepsilon_0\varepsilon_i r)$。
+场强随半径增大而减小，
+所以第1层最大场在 $R_1$，
+第2层最大场在 $R_2$。
+若两层同步击穿：
+\[
+\frac{|\lambda|}{2\pi\varepsilon_0\varepsilon_1R_1}
+=E_{1m},\quad
+\frac{|\lambda|}{2\pi\varepsilon_0\varepsilon_2R_2}
+=E_{2m}.
+\]
+消去 $\lambda$：
+\[
+\boxed{\varepsilon_1R_1E_{1m}
+=\varepsilon_2R_2E_{2m}}.
+\]
+\excheck 不能用相同的径向位置比较不同层击穿，
+每层的危险位置是其各自内表面。
+
+\electrocapproblem{107}{106}
+图3.16的双层同轴圆柱电容器，
+半径依次为 $R_1<R_2<R_3$，
+介质参数同上。
+若
+$\varepsilon_1R_1E_{1m}<
+\varepsilon_2R_2E_{2m}$，
+求整体击穿电压。
+\exsolution
+由于第1层允许的线电荷阈值更小，
+先在 $r=R_1$ 达到 $E_{1m}$，
+此时
+$|\lambda|=2\pi\varepsilon_0\varepsilon_1R_1E_{1m}$。
+电压由两层径向积分：
+\[
+V=\frac{|\lambda|}{2\pi\varepsilon_0}
+\left[\frac1{\varepsilon_1}\ln\frac{R_2}{R_1}
++\frac1{\varepsilon_2}\ln\frac{R_3}{R_2}\right].
+\]
+代入阈值：
+\[
+\boxed{V_{\rm breakdown}=
+R_1E_{1m}
+\left[\ln\frac{R_2}{R_1}
++\frac{\varepsilon_1}{\varepsilon_2}\ln\frac{R_3}{R_2}\right]}.
+\]
+\excheck 条件为严格小于，因此先击穿第1层；
+同号等号时两层同时击穿。
+
+\electrocapproblem{108}{106}
+空气中两根等长平行细金属导线，
+截面半径均为 $a$，轴间距 $b\gg a$。
+求两导线\emph{每单位长度的互电容}。
+\exsolution
+设两线单位长度带自由电荷
+$+\lambda,-\lambda$。
+二维线电荷势
+$\varphi\propto\ln r$。
+以 $a\ll b$ 的近似在正线表面取
+距正线 $a$、负线 $b$，
+同理负线反向，得到电压
+\[
+V\simeq\frac{\lambda}{\pi\varepsilon_0}\ln\frac ba.
+\]
+故单位长度电容
+\[
+\boxed{C'=\frac{\lambda}{V}
+\simeq\frac{\pi\varepsilon_0}{\ln(b/a)}}.
+\]
+\excheck 更精确的两圆柱公式
+$C'=\pi\varepsilon_0/
+\operatorname{arcosh}(b/(2a))$，
+在 $b\gg a$ 化成上述结果。
+
+\electrocapproblem{109}{106}
+一根半径 $a$ 的长金属导线，
+平行于无限金属导体平面，
+轴线距平面 $b\gg a$。
+求两者的每单位长度互电容。
+\exsolution
+用导体平面镜像法，
+真实导线带线电荷 $+\lambda$，
+其镜像为距真线 $2b$ 的 $-\lambda$。
+真线与镜像的电势差约为
+$(\lambda/\pi\varepsilon_0)\ln(2b/a)$，
+但平面为对称零电势位置，
+真线到平面的电压为其中一半：
+\[
+V\simeq\frac{\lambda}{2\pi\varepsilon_0}\ln\frac{2b}{a}.
+\]
+故
+\[
+\boxed{C'=\frac{\lambda}{V}
+\simeq\frac{2\pi\varepsilon_0}{\ln(2b/a)}}.
+\]
+\excheck 对无限导体平面并未采用孤立双线的
+完整电压，否则会误少一倍。
+
+\electrocapproblem{110}{106}
+两个半径同为 $a$ 的导体球，
+球心距 $b\gg a$，
+均浸于相对介电常数为 $\varepsilon$ 的均匀介质中。
+求双球系统的互电容。
+\exsolution
+设两球带电 $+q,-q$，
+在 $b\gg a$ 下近似各自球面电荷均匀。
+正球电势约
+$\varphi_+=kq/(\varepsilon a)-kq/(\varepsilon b)$，
+负球电势相反。
+因此
+\[
+V=\varphi_+-\varphi_-=
+\frac{q}{2\pi\varepsilon_0\varepsilon}
+\left(\frac1a-\frac1b\right).
+\]
+电容
+\[
+C=\frac qV=
+\frac{2\pi\varepsilon_0\varepsilon}
+{1/a-1/b}
+\simeq\boxed{2\pi\varepsilon_0\varepsilon a}
+\quad(b\gg a).
+\]
+\excheck $b$ 有限时球面电荷并非严格均匀；
+上述 $1/b$ 项仅用于说明首阶近似。
+
+\electrocapproblem{111}{106}
+半径为 $a$ 的金属球，
+球心距无限导体平面为 $\ell\gg a$。
+求球—平面的互电容。
+\exsolution
+镜像法使金属球附近的电势
+近似为球自身带电 $q$ 的电势
+减去镜像 $-q$ 在距 $2\ell$ 处的电势：
+\[
+V\simeq\frac{q}{4\pi\varepsilon_0}
+\left(\frac1a-\frac1{2\ell}\right).
+\]
+因此
+\[
+C\simeq\frac{4\pi\varepsilon_0}
+{1/a-1/(2\ell)}
+\longrightarrow
+\boxed{4\pi\varepsilon_0a}\quad(\ell/a\to\infty).
+\]
+\excheck 球面电荷的畸变为更高阶修正，
+本题只要求 $\ell\gg a$ 的主阶。
+
+\electrocapproblem{112}{106--107}
+原书图3.17(a)、(b)为两种电容器连接网络，
+求 A、B 端等效电容，按图中标号
+(a) $C_1,C_2,C_3$，(b) 每只电容均为 $C$。
+\exsolution
+(a) 图3.17(a) 中三只电容器各连接同一对
+等势节点 A、B；它们两端的电势差相等，
+故各自电荷 $Q_i=C_iV$，
+总电荷 $Q=\sum_iQ_i$，
+因此
+\[
+\boxed{C_{AB}^{(a)}=C_1+C_2+C_3}.
+\]
+(b) 图3.17(b) 的四个边电容构成
+对称桥式结构；沿对称中心线的节点电势相等，
+可将桥的中间电容视为无压差。
+剩余两条支路各有两个相等电容串联，
+每支电容 $C/2$，两支并联：
+\[
+\boxed{C_{AB}^{(b)}
+=\frac C2+\frac C2=C}.
+\]
+\excheck 基于原书图3.17网络连线，
+不是将四只电容全串联或全并联；
+按 $C_i$ 同等电容极限可复核。
+% === END 18-capacitance-energy-101-112.tex ===
+
+% === BEGIN 18-capacitance-energy-113-121.tex blob 5808fb25bcc201507ed321b39eae11738067cb6c ===
+% Irodov Part III §3.3 113--121; source Fig 3.18--3.23 inspected,
+% user PDF pp.116--117 (printed pp.107--108).
+\electrocapproblem{113}{107}
+图3.18中四块面积相同为 $S$ 的平行导体板，
+自上至下相邻间距都是 $d$。按图(a)、(b)
+所示导线连接后，求 A、B 间电容。
+\exsolution
+记每个相邻间隙的平板电容
+$C_0=\varepsilon_0S/d$。
+(a) 图(a)把第1、3板通过左端导线短接，
+第2板接 A，第4板接 B。
+第1—2和第2—3间两个 $C_0$
+并联成 $2C_0$，它再与第3—4间的
+$C_0$ 串联，故
+\[
+\boxed{C_a=
+\frac{(2C_0)C_0}{2C_0+C_0}
+=\frac{2\varepsilon_0S}{3d}}.
+\]
+(b) 图(b)把第1、4板通过左端导线短接，
+第2板接 A，第3板接 B。
+第1—2间 $C_0$ 和第3—4间 $C_0$
+以中间浮置导体节点形成串联支路，
+等效 $C_0/2$；同时第2—3间
+$C_0$ 直接跨 A、B 并联，故
+\[
+\boxed{C_b=C_0+\frac{C_0}{2}
+=\frac{3\varepsilon_0S}{2d}}.
+\]
+\excheck 本题需要先按图识别短接的
+\emph{同势金属板}，才能进行串并联化简；
+不能把四块板按几何顺序简单串联。
+
+\electrocapproblem{114}{107}
+两电容器 $C_1=1.0\,\mathrm{\mu F}$，
+最大耐压 $V_1=6.0\,\mathrm{kV}$；
+$C_2=2.0\,\mathrm{\mu F}$，
+最大耐压 $V_2=4.0\,\mathrm{kV}$。
+串联后的最大安全总电压是多少？
+\exsolution
+串联时两电容器携带相同电荷 $Q$，
+各自电压 $U_i=Q/C_i$。
+安全条件为
+$Q\le C_1V_1$ 与 $Q\le C_2V_2$，
+所以
+\[
+Q_{\max}=\min(1.0\times6.0,\,
+2.0\times4.0)\,\mathrm{mC}
+=6.0\,\mathrm{mC}.
+\]
+总电压为
+\[
+V_{\max}=Q_{\max}
+\left(\frac1{C_1}+\frac1{C_2}\right)
+=V_1\left(1+\frac{C_1}{C_2}\right).
+\]
+因此
+\[
+\boxed{V_{\max}=9.0\,\mathrm{kV}}.
+\]
+\excheck 先到耐压极限的是 $C_1$；
+此时 $C_2$ 电压为3 kV，低于4 kV。
+
+\electrocapproblem{115}{107}
+原书图3.19：一个电动势
+$\mathcal E=110\,\mathrm V$ 的电源，
+上支路两个相同电容 $C_1$ 串联，
+各串联节点到下导线 B 另接电容 $C_2$；
+末端节点为 A。
+已知 $C_2/C_1=\eta=2.0$。
+求 $\varphi_A-\varphi_B$。
+\exsolution
+取下端 B 电势为零，
+电源上端电势 $\mathcal E$。
+把中间节点电势记为 $x$，
+末端 A 电势为 $y$。
+未由外部注入自由电荷的浮置节点需净电荷为零：
+\[
+C_1(x-\mathcal E)+C_1(x-y)+C_2x=0,
+\]
+\[
+C_1(y-x)+C_2y=0.
+\]
+用 $\eta=C_2/C_1$ 化简：
+$(2+\eta)x-y=\mathcal E$、
+$x=(1+\eta)y$。
+相消得到
+\[
+\boxed{y=\varphi_A-\varphi_B=
+\frac{\mathcal E}{1+3\eta+\eta^2}}.
+\]
+代入 $\eta=2$：
+\[
+\boxed{\varphi_A-\varphi_B=
+\frac{110}{11}\,\mathrm V=10\,\mathrm V}.
+\]
+\excheck 若误把两个 $C_2$ 直接并联，
+会破坏中间节点电荷守恒，
+无法得到该分母。
+
+\electrocapproblem{116}{107}
+图3.20：一个从左向右无限重复的电容梯形网络，
+每节沿上支路有电容 $C$，
+节点到公共下支路又有电容 $C$。
+求左端与下公共导线之间的总等效电容。
+\exsolution
+设整个无穷网络的等效电容为 $X$。
+第一只上支路电容 $C$ 后，
+从新节点向下有一个电容 $C$，
+并联上与原网络形状完全相同的后续部分，
+其电容亦为 $X$，故节点到地等效为 $C+X$。
+因此
+\[
+\frac1X=\frac1C+\frac1{C+X}.
+\]
+令 $x=X/C$，整理：
+$x=(1+x)/(2+x)$，
+即
+$x^2+x-1=0$。
+正的物理解为
+\[
+\boxed{X=\frac{\sqrt5-1}{2}C\simeq0.618C}.
+\]
+\excheck 必须取正根；
+另一个根 $-(1+\sqrt5)/2$ 不能为被动电容的等效值。
+
+\electrocapproblem{117}{107--108}
+图3.21的 A、B 间依次串接
+电容器 $C_1=1.0\,\mathrm{\mu F}$、
+电源 $\mathcal E=10\,\mathrm V$、
+电容器 $C_2=2.0\,\mathrm{\mu F}$。
+已知 $\varphi_A-\varphi_B=5.0\,\mathrm V$。
+求两只电容器各自的电压大小。
+\exsolution
+两只电容器串联而中间电源可施加电势跃变，
+两只电容器的电荷模相同，设为 $Q$。
+按原书图3.21的电源极性，
+两电容器两端电压和
+$U_1+U_2=(\varphi_A-\varphi_B)+\mathcal E$。
+因此
+\[
+Q\left(\frac1{C_1}+\frac1{C_2}\right)
+=5.0+10.0=15.0\,\mathrm V,
+\]
+\[
+Q=\frac{(15.0)C_1C_2}{C_1+C_2}
+=10\,\mathrm{\mu C}.
+\]
+所以
+\[
+\boxed{U_1=\frac Q{C_1}=10\,\mathrm V},
+\qquad
+\boxed{U_2=\frac Q{C_2}=5.0\,\mathrm V}.
+\]
+\excheck 带电状态与电源极性相关；
+电压\emph{模}为正，代数电压沿回路应保留方向。
+
+\electrocapproblem{118}{108}
+图3.22：一个闭合环路中两只电容器
+$C_1,C_2$ 与两个电动势
+$\mathcal E_1,\mathcal E_2$ 按图中方向连接。
+求每只电容器左极板相对于右极板的电势差。
+\exsolution
+设电容器极板代数电荷模为 $Q$，
+在无旁路充电的串联闭环中各自绝对值相同。
+沿图3.22所取的电动势方向，
+两个电源的代数贡献为
+$\mathcal E_2-\mathcal E_1$，
+所以
+\[
+Q\left(\frac1{C_1}+\frac1{C_2}\right)
+=\mathcal E_2-\mathcal E_1.
+\]
+对两个电容器左至右的电压，
+依图中板极性设定：
+\[
+\boxed{V_1=\frac{\mathcal E_2-\mathcal E_1}
+{1+C_1/C_2}},\qquad
+\boxed{V_2=\frac{\mathcal E_1-\mathcal E_2}
+{1+C_2/C_1}}.
+\]
+\excheck 两只电容器的左—右电压并非
+同时同号；若交换源的正负端，
+上述两个式子的代数符号须相应改变。
+
+\electrocapproblem{119}{108}
+仍在图3.22的电源与电容串联闭环中，
+求每只电容器上的电荷\emph{模}。
+\exsolution
+由图中两个电源的代数电动势差
+$\Delta\mathcal E=\mathcal E_2-\mathcal E_1$，
+稳态的电容回路平衡为
+$Q/C_1+Q/C_2=|\Delta\mathcal E|$。
+于是
+\[
+\boxed{Q_1=Q_2=
+\frac{C_1C_2}{C_1+C_2}
+|\mathcal E_2-\mathcal E_1|}.
+\]
+\excheck 两只电容器带电量大小相等，
+且 $\mathcal E_1=\mathcal E_2$ 时为零；
+这是在未预充电、无其它净节点电荷条件下的结果。
+
+\electrocapproblem{120}{108}
+图3.23的四臂电容桥，
+各臂电容为 $C_1,C_2,C_3,C_4$，
+上下接电动势 $\mathcal E$，
+取两个中间节点为 A、B。
+求 $\varphi_A-\varphi_B$，以及零电势差条件。
+\exsolution
+电容桥两条并联支路分别为
+$C_1$ 与 $C_3$ 串联、
+$C_2$ 与 $C_4$ 串联；
+选图中上下源极性，
+在支路的电压分配公式中
+\[
+\varphi_A=\frac{C_2}{C_1+C_2}\mathcal E
+\quad\text{与}\quad
+\varphi_B=\frac{C_4}{C_3+C_4}\mathcal E
+\]
+在原书节点标号约定下，
+对应两段电势差整理为
+\[
+\boxed{\varphi_A-\varphi_B=
+\mathcal E\frac{C_2C_3-C_1C_4}
+{(C_1+C_2)(C_3+C_4)}}.
+\]
+桥平衡条件是分子为零：
+\[
+\boxed{C_1/C_2=C_3/C_4}.
+\]
+\excheck 图中四个电容的编号不是
+顺序围绕一个矩形而不变；
+应按每一串联支路中
+浮动节点的电荷守恒确定电压。
+
+\electrocapproblem{121}{108}
+一只已充至 $V=110\,\mathrm V$ 的
+电容器 $C_1=1.0\,\mathrm{\mu F}$，
+并联接到另外两只原先不带电、串联的
+电容器 $C_2=2.0\,\mathrm{\mu F}$、
+$C_3=3.0\,\mathrm{\mu F}$ 的两端。
+求通过连接导线的电荷量。
+\exsolution
+设两只原先未带电的串联电容器最终带电荷模
+$q$，其所分配电压为
+$V_f=q(1/C_2+1/C_3)$。
+$C_1$ 最终带电量为 $C_1V_f$，
+而整个外部节点总电荷守恒：
+$C_1V=C_1V_f+q$。
+联立可得
+\[
+C_1V=q\left[1+C_1
+\left(\frac1{C_2}+\frac1{C_3}\right)\right],
+\]
+即
+\[
+\boxed{q=\frac{V}
+{1/C_1+1/C_2+1/C_3}}.
+\]
+代入数值：
+\[
+\boxed{q=\frac{110}{1+1/2+1/3}\,\mathrm{\mu C}
+=60\,\mathrm{\mu C}=0.060\,\mathrm{mC}}.
+\]
+\excheck 电容值以 $\mu$F 计时，
+式中 $V/(\mu\mathrm F^{-1})$ 为 $\mu$C；
+通过任一串联连接导线的累计电荷量相同。
+% === END 18-capacitance-energy-113-121.tex ===
+
+% === BEGIN 18-capacitance-energy-122-130.tex blob 4f2af64594b5935c9b1ae26c09f9b17b0fc30101 ===
+% Irodov Part III §3.3 122--130; PDF pp.117--119,
+% printed pp.108--110. Fig.3.24--3.29 checked.
+\electrocapproblem{122}{108}
+图3.24：左、右两个电源电动势都为
+$\mathcal E$，电容器 $C_1$ 接在右上分支，
+$C_2$ 接在中间竖支路。原先开关 Sw 断开，
+闭合后求沿图中箭头方向流过截面1、2的电荷量。
+\exsolution
+取底部左侧公共点为零电势。
+闭合前，左侧电源未接入，
+$C_1,C_2$ 串联接右侧电源，
+初始串联电荷
+$Q_0=\mathcal E C_1C_2/(C_1+C_2)$。
+闭合后左电源将中间上节点钳在
+$+\mathcal E$，右电源上端同样为
+$+\mathcal E$，故 $C_1$ 两端电压归零，
+$C_2$ 两端电压为 $\mathcal E$。
+截面1按左箭头的累计电荷
+等于 $C_2$ 的最终电荷：
+\[
+\boxed{q_1=\mathcal E C_2}.
+\]
+截面2按图中右箭头，$C_1$ 的
+初有电荷 $Q_0$ 被消去，对该方向贡献为负：
+\[
+\boxed{q_2=-\frac{\mathcal E C_1C_2}{C_1+C_2}}.
+\]
+\excheck 截面电荷是开关动作前后的\emph{累计通过量}，
+不等于最后流动的稳态电流（稳态电流为零）。
+
+\electrocapproblem{123}{108}
+图3.25：左侧两电源均为
+$\mathcal E=60\,\mathrm V$，右侧两只电容器
+$C_1=2.0\,\mathrm{\mu F}$、
+$C_2=3.0\,\mathrm{\mu F}$。
+闭合中间 Sw 后，求沿箭头1、2、3
+的累计电荷量。
+\exsolution
+闭合前，右侧串联电容器跨越两个电源
+给出的总电压 $2\mathcal E$，
+故每只电容器的电荷模
+$Q_0=2\mathcal E C_1C_2/(C_1+C_2)$。
+闭合后两只电容器各跨一只电动势
+$\mathcal E$，分别带电
+$Q_{1f}=\mathcal E C_1$、
+$Q_{2f}=\mathcal E C_2$。
+由各导线截面的电荷连续性，依原书箭头：
+\[
+\boxed{q_1=\mathcal E C_1-Q_0
+=\mathcal E C_1\frac{C_1-C_2}{C_1+C_2}},
+\]
+\[
+\boxed{q_2=-\mathcal E C_2
+\frac{C_2-C_1}{C_1+C_2}
+=\mathcal E C_2\frac{C_1-C_2}{C_1+C_2}},
+\]
+\[
+\boxed{q_3=\mathcal E(C_2-C_1)}.
+\]
+代入数据：
+\[
+\boxed{q_1=-24\,\mathrm{\mu C},\qquad
+q_2=-36\,\mathrm{\mu C},\qquad
+q_3=+60\,\mathrm{\mu C}}.
+\]
+\excheck 两个负号说明实际电荷流过截面1、2时
+与图中所指箭头相反；第3截面为正。
+
+\electrocapproblem{124}{108--109}
+原书图3.26：上支路为
+$C_1,C_2$ 两只串联电容器，
+中点 A 通过电容器 $C_3$ 连接下方 B，
+底部分别有电动势 $\mathcal E_1,\mathcal E_2$。
+求 $\varphi_A-\varphi_B$。
+\exsolution
+取 $\varphi_B=0$。
+按图中电源极性，
+$C_1$ 左端电势为 $-\mathcal E_1$，
+$C_2$ 右端电势为 $+\mathcal E_2$。
+A 是孤立浮置金属节点，初始无净自由电荷，
+其三个电容器极板电荷代数和为零：
+\[
+C_1(\varphi_A+\mathcal E_1)
++C_2(\varphi_A-\mathcal E_2)
++C_3\varphi_A=0.
+\]
+于是
+\[
+\boxed{\varphi_A-\varphi_B=
+\frac{C_2\mathcal E_2-C_1\mathcal E_1}
+{C_1+C_2+C_3}}.
+\]
+\excheck $C_3$ 越大，中间节点相对于 B
+的电势差越小，符合把 A 拉向 B 电势的直觉。
+
+\electrocapproblem{125}{109}
+原书图3.27：三个电源
+$\mathcal E_1,\mathcal E_2,\mathcal E_3$
+沿一竖支路串接，三只电容器
+$C_1,C_2,C_3$ 分别把各层节点
+1、2、3 接到公共点 O。
+规定 $\varphi_O=0$，求
+$\varphi_1,\varphi_2,\varphi_3$。
+\exsolution
+按图中各电动势极性设定，
+三个左侧节点之间满足
+$\varphi_i=\Phi-\mathcal E_i$，
+其中 $\Phi$ 为共同参考偏移。
+整个左侧电源组与外界通过电容耦合，
+总净电荷守恒：
+\[
+C_1\varphi_1+C_2\varphi_2+C_3\varphi_3=0.
+\]
+故
+$\Phi=(C_1\mathcal E_1+C_2\mathcal E_2+
+C_3\mathcal E_3)/(C_1+C_2+C_3)$。
+定义 $C_\Sigma=C_1+C_2+C_3$，得到
+\[
+\boxed{\varphi_1=
+\frac{C_2\mathcal E_2+C_3\mathcal E_3-
+(C_2+C_3)\mathcal E_1}{C_\Sigma}},
+\]
+\[
+\boxed{\varphi_2=
+\frac{C_1\mathcal E_1+C_3\mathcal E_3-
+(C_1+C_3)\mathcal E_2}{C_\Sigma}},
+\]
+\[
+\boxed{\varphi_3=
+\frac{C_1\mathcal E_1+C_2\mathcal E_2-
+(C_1+C_2)\mathcal E_3}{C_\Sigma}}.
+\]
+\excheck 将三式分别乘 $C_1,C_2,C_3$ 再相加，
+应得零，满足浮置导体组的总电荷守恒。
+
+\electrocapproblem{126}{109}
+原书图3.28电容桥：
+A—B 之间上支路依次为 $C_1,C_2$，
+下支路依次为 $C_2,C_1$；
+两串联支路中点通过一只 $C_3$ 桥接。
+求总等效电容。
+\exsolution
+设 A 电势为 $V$，B 为零。
+上下支路的中点电势分别为 $x,y$。
+电荷守恒：
+\[
+C_1(x-V)+C_2x+C_3(x-y)=0,
+\]
+\[
+C_2(y-V)+C_1y+C_3(y-x)=0.
+\]
+两式相加得 $x+y=V$；
+相减得到
+\[
+x-y=\frac{(C_1-C_2)V}{C_1+C_2+2C_3}.
+\]
+A 端净电荷为
+$Q=C_1(V-x)+C_2(V-y)$，
+代入得
+\[
+C_{AB}=\frac QV
+=\frac{2C_1C_2+C_3(C_1+C_2)}
+{C_1+C_2+2C_3}.
+\]
+因此
+\[
+\boxed{C_{AB}=
+\frac{2C_1C_2+C_3(C_1+C_2)}
+{C_1+C_2+2C_3}}.
+\]
+\excheck $C_3\to0$ 时恢复
+两条串联支路并联
+$2C_1C_2/(C_1+C_2)$；
+$C_1=C_2$ 时桥中点同势，结果为 $C_1$，
+不依赖 $C_3$。
+
+\electrocapproblem{127}{109}
+图3.29(a)、(b)、(c)：
+边长 $a$ 的正方形四顶点分别放置
+大小均为 $q$ 的点电荷；(a) 全为正，
+(b) 相邻顶点正负交错，
+(c) 上两顶点正、下两顶点负。
+求每种构型四电荷的相互作用总能。
+\exsolution
+离散点电荷的相互作用能
+$W=k\sum_{i<j}q_iq_j/r_{ij}$，
+正方形有4条边（距离 $a$）
+及2条对角线（距离 $\sqrt2a$）。
+(a) 全部相同，4条边贡献
+$4kq^2/a$、对角线贡献
+$\sqrt2kq^2/a$，所以
+\[
+\boxed{W_a=(4+\sqrt2)\frac{q^2}
+{4\pi\varepsilon_0a}}.
+\]
+(b) 四条边均为异号，贡献
+$-4kq^2/a$；两条对角线同号，
+贡献 $+\sqrt2kq^2/a$：
+\[
+\boxed{W_b=(\sqrt2-4)\frac{q^2}
+{4\pi\varepsilon_0a}}.
+\]
+(c) 两条水平边同号、两条竖直边异号，
+边贡献抵消；两条对角线异号：
+\[
+\boxed{W_c=-\sqrt2\frac{q^2}
+{4\pi\varepsilon_0a}}.
+\]
+\excheck 相互作用能只对每一\emph{无序电荷对}
+计数一次，不加点电荷本身的无穷自能。
+
+\electrocapproblem{128}{109}
+无限直线链由 $q,-q,q,-q,\ldots$
+交替排列，相邻距离为 $a$。
+求链中任意一个电荷与其余电荷的相互作用能。
+\exsolution
+取其中一个 $+q$ 位于原点。
+距离原点左右两侧各有
+$n a$ 处电荷 $(-1)^nq$，$n\ge1$。
+原点电荷的\emph{与其余所有电荷作用能}
+为 $q$ 乘外部电势：
+\[
+W=2k\frac{q^2}{a}
+\sum_{n=1}^\infty\frac{(-1)^n}{n}.
+\]
+利用
+$\ln(1+x)=\sum_{n\ge1}(-1)^{n-1}x^n/n$
+在 $x=1$ 的极限，
+$\sum_{n\ge1}(-1)^n/n=-\ln2$，
+得
+\[
+\boxed{W=-\frac{2q^2\ln2}
+{4\pi\varepsilon_0a}}.
+\]
+\excheck 本题问\emph{指定一个电荷与其余电荷}
+的能量。如果要求无限链的平均总能
+按每个电荷分摊，应再除以2以避免成对重复计数。
+
+\electrocapproblem{129}{109}
+点电荷 $q$ 距无限接地金属导体平面为
+$\ell$。求该电荷与导体表面
+\emph{感应电荷的相互作用能}。
+\exsolution
+导体的感应电荷在真电荷位置所产生的电势
+等于镜像电荷 $-q$ 在距离 $2\ell$ 处的电势：
+\[
+\varphi_{\rm ind}=
+-\frac{q}{4\pi\varepsilon_0(2\ell)}
+=-\frac{q}{8\pi\varepsilon_0\ell}.
+\]
+本题直接求\emph{真电荷与给定感应分布}
+之间的双体相互作用项
+$W_{\rm int}=q\varphi_{\rm ind}$，所以
+\[
+\boxed{W_{\rm int}=
+-\frac{q^2}{8\pi\varepsilon_0\ell}}.
+\]
+\excheck 这与从无限远\emph{组装}
+真电荷—导体完整体系所需的
+$-\frac{q^2}{16\pi\varepsilon_0\ell}$
+不相同：后者包含诱导分布随运动改变的
+$1/2$ 能量因子。原书本题明确问相互作用项。
+
+\electrocapproblem{130}{109--110}
+两颗球形对称带电小球，净电荷为
+$q_1,q_2$，两球中心距离为
+$\ell$，彼此不重叠。
+求两球间相互作用能。
+\exsolution
+对球外点，球对称电荷分布产生的静电势
+与中心点电荷相同：
+$\varphi_1(r)=kq_1/r$。
+如果第二球完整位于第一球之外，
+第一球的势在第二球的各球壳上按球对称平均，
+等于其中心位置的势
+$kq_1/\ell$（平均值定理）。
+因此
+\[
+W_{12}=\int_{\text{球2}}\varphi_1(\bm r)
+\,\mathrm dq_2(\bm r)
+=q_2\frac{kq_1}{\ell},
+\]
+故
+\[
+\boxed{W_{12}=
+\frac{q_1q_2}{4\pi\varepsilon_0\ell}}.
+\]
+\excheck 需两颗球的电荷分布均保持球对称；
+若球是相互极化的导体，近距离时分布可能改变，
+不能直接套此简式。
+% === END 18-capacitance-energy-122-130.tex ===
+
+% === BEGIN 18-capacitance-energy-131-140.tex blob 8bc587856a5bc21541ab3a279ce0045f1ecdf039 ===
+% Irodov Part III §3.3 131--140; source PDF pp.119--120.
+% The PDF printed page 110 repeats the title of problem 130 as an extra "131";
+% the second "131" is the capacitor problem matched by the original answer 131.
+\electrocapproblem{131}{110}
+电容为 $C_1=1.0\,\mathrm{\mu F}$、
+初始电压 $V=300\,\mathrm V$ 的电容器，
+与一只未充电的电容器
+$C_2=2.0\,\mathrm{\mu F}$ 并联相接。
+求系统达到平衡后的电场能增量，并解释能量去向。
+\exsolution
+连接前总电荷
+$Q_0=C_1V$，总电场能
+$W_0=\frac12C_1V^2$。
+并联后两只电容器电势相等且总电荷守恒：
+\[
+V_f=\frac{Q_0}{C_1+C_2}=\frac{C_1V}{C_1+C_2}.
+\]
+末态电场能
+$W_f=\frac12(C_1+C_2)V_f^2
+=\frac12 C_1^2V^2/(C_1+C_2)$，
+所以
+\[
+\boxed{\Delta W=W_f-W_0
+=-\frac12V^2\frac{C_1C_2}{C_1+C_2}}.
+\]
+数值：
+\[
+\boxed{\Delta W=-0.030\,\mathrm J=-30\,\mathrm{mJ}}.
+\]
+消失的电场能在实际连接导线中
+变为焦耳热、电磁辐射等，
+不会凭空消失。
+\excheck 原版 PDF 的正文将第130题重复印成额外
+“131”，此题是第二次出现的“131”且与答案131对应。
+书后数值若显示“$0.03\,\mathrm{mJ}$”
+则与 $1\mu\mathrm F$、300V 的计算相差1000倍；
+本稿保留正确 SI 算值并标勘误。
+
+\electrocapproblem{132}{110}
+图3.30：两只电容 $C$、
+中间电容 $C_0$ 与电池 $\mathcal E$
+构成电路。开关 Sw 从位置1拨到2。
+求开关过程中产生的焦耳热。
+\exsolution
+把开关前后相应节点看作
+两个通过电容器耦合的等势导体，
+对于固定电源电动势，
+电容电路的\emph{电势跳变}激发一次电荷再分配。
+图3.30左右两个相等电容 $C$
+从公共上导体接到由电池保持电压差
+$\mathcal E$ 的下方两节点。
+设开关连接的中间电容 $C_0$
+下端初连左节点、末连右节点。
+切换引起的中间支路电位跃变为 $\mathcal E$；
+消除其公共模式后，
+参与再分配的等效电容
+\[
+C_{\rm tr}=\frac{2CC_0}{2C+C_0}.
+\]
+一次从静态到静态的切换
+消耗的电场—电源可用能
+$\frac12C_{\rm tr}(\Delta V)^2$，
+于是
+\[
+\boxed{Q=\frac{CC_0}{2C+C_0}\,\mathcal E^2}.
+\]
+\excheck 本题求的是有微小实际电阻时最终释放的
+总焦耳热，理想零电阻模型只提供初末静态电荷；
+若开关瞬时切换，过程可含瞬态电磁辐射。
+
+\electrocapproblem{133}{110}
+图3.31：一只电容 $C$ 通过换向开关
+先接与电动势 $\mathcal E_1$ 对应的节点，
+再从位置1切至位置2，
+后者改变电容两端的电位差，
+求电路释放的热量。
+\exsolution
+设切换前电容器电压为 $U_i$，
+切换后电压为 $U_f$。
+对于理想电源维持的最终电压状态，
+通过微弱电阻缓慢耗散的电荷再分配过程，
+其热量满足普适恒等式
+\[
+Q=\frac12C(U_f-U_i)^2.
+\]
+由原书图3.31两个源的串联位置及开关端点，
+开关从1切到2时电容器电压\emph{净改变}
+$U_f-U_i=\mathcal E_2$，
+所以
+\[
+\boxed{Q=\frac12C\mathcal E_2^2}.
+\]
+\excheck 结果与 $\mathcal E_1$ 无关，
+因为焦耳热只由切换产生的电压差平方决定；
+本结论使用图中电源的具体极性与接线。
+
+\electrocapproblem{134}{110}
+两层同心薄金属球壳半径
+$R_1<R_2$，电荷分别为 $q_1,q_2$。
+求各球壳静电自能 $W_1,W_2$，
+两球壳相互作用能 $W_{12}$，
+以及总电场能。
+\exsolution
+单个薄球壳电场能为
+$W_{\rm self}=q^2/(8\pi\varepsilon_0R)$，
+所以
+\[
+\boxed{W_1=\frac{q_1^2}{8\pi\varepsilon_0R_1}},
+\qquad
+\boxed{W_2=\frac{q_2^2}{8\pi\varepsilon_0R_2}}.
+\]
+外球壳在内球壳位置的电势恒为
+$kq_2/R_2$，故交互能
+\[
+\boxed{W_{12}=\frac{q_1q_2}{4\pi\varepsilon_0R_2}}.
+\]
+相加：
+\[
+\boxed{W=
+\frac1{8\pi\varepsilon_0}
+\left(\frac{q_1^2}{R_1}+
+\frac{q_2^2+2q_1q_2}{R_2}\right)}.
+\]
+\excheck 交互能只计入一次，
+不应在 $W_1,W_2$ 内重复算交互项。
+
+\electrocapproblem{135}{110}
+半径为 $R$ 的实心绝缘球，
+体电荷均匀且总电荷为 $q$，
+周围真空。求总静电自能
+及球内储能 $W_{\rm in}$ 与球外储能
+$W_{\rm out}$ 的比值。
+\exsolution
+高斯定律给球内
+$E(r)=qr/(4\pi\varepsilon_0R^3)$，
+球外
+$E(r)=q/(4\pi\varepsilon_0r^2)$。
+场能密度
+$w=\varepsilon_0E^2/2$。
+球内积分：
+\[
+W_{\rm in}=\int_0^R
+\frac{\varepsilon_0}{2}
+\frac{q^2r^2}{16\pi^2\varepsilon_0^2R^6}
+4\pi r^2\,\mathrm dr
+=\frac{q^2}{40\pi\varepsilon_0R}.
+\]
+球外积分：
+\[
+W_{\rm out}=\int_R^\infty
+\frac{\varepsilon_0}{2}
+\frac{q^2}{16\pi^2\varepsilon_0^2r^4}
+4\pi r^2\,\mathrm dr
+=\frac{q^2}{8\pi\varepsilon_0R}.
+\]
+于是
+\[
+\boxed{W=W_{\rm in}+W_{\rm out}
+=\frac{3q^2}{20\pi\varepsilon_0R}},
+\qquad
+\boxed{\frac{W_{\rm in}}{W_{\rm out}}=\frac15}.
+\]
+\excheck 球体内能只占总场能 $1/6$；
+若把实心球按金属球壳处理将漏掉球内能。
+
+\electrocapproblem{136}{110}
+点电荷 $q=3.0\,\mathrm{\mu C}$
+位于球心，
+$R_1=a=250\,\mathrm{mm}$ 至
+$R_2=b=500\,\mathrm{mm}$ 的球壳空间
+填满相对介电常数 $\varepsilon=3.0$
+的均匀介质。
+求仅存储在这层\emph{介质体积}内的静电场能。
+\exsolution
+介质中的径向位移
+$D=q/(4\pi r^2)$，
+电场
+$E=q/(4\pi\varepsilon_0\varepsilon r^2)$。
+场能密度
+$w=\frac12\bm E\cdot\bm D$，
+故
+\[
+W=\int_a^b \frac{q^2}
+{32\pi^2\varepsilon_0\varepsilon r^4}
+4\pi r^2\,\mathrm dr
+=\frac{q^2}{8\pi\varepsilon_0\varepsilon}
+\left(\frac1a-\frac1b\right).
+\]
+数值
+\[
+\boxed{W\simeq2.7\times10^{-2}\,\mathrm J
+=27\,\mathrm{mJ}}.
+\]
+\excheck 本题只求介质\emph{球壳内}场能，
+不包括 $r<a$ 与 $r>b$ 空间的能量。
+
+\electrocapproblem{137}{110}
+均匀带电薄球壳总电荷固定为 $q$，
+半径从 $R_1$ 缓慢扩大为 $R_2>R_1$。
+求静电斥力做功。
+\exsolution
+均匀带电薄球壳自能为
+$W(R)=q^2/(8\pi\varepsilon_0R)$。
+自由电荷守恒，静电力做的功
+$A=W(R_1)-W(R_2)$，故
+\[
+\boxed{A=\frac{q^2}{8\pi\varepsilon_0}
+\left(\frac1{R_1}-\frac1{R_2}\right)}.
+\]
+\excheck 扩张时场能下降，电力做正功；
+这里忽略机械表面张力和其它非电作用。
+
+\electrocapproblem{138}{111}
+总电荷固定为 $q$ 的均匀薄球壳
+半径从 $R_1$ 增至 $R_2$，
+球心另外放有点电荷 $q_0$。
+求电场力对球壳扩张所做功。
+\exsolution
+壳自身能量
+$W_{\rm shell}=q^2/(8\pi\varepsilon_0R)$。
+球心点电荷与壳的相互作用能为
+$W_{\rm int}=q_0\varphi_{\rm shell}(0)
+=q_0q/(4\pi\varepsilon_0R)$。
+点电荷自能独立于 $R$，在能量差中相消。
+因此
+\[
+A=[W_{\rm shell}(R_1)+W_{\rm int}(R_1)]
+-[W_{\rm shell}(R_2)+W_{\rm int}(R_2)].
+\]
+整理：
+\[
+\boxed{A=
+\frac{q(q+2q_0)}{8\pi\varepsilon_0}
+\left(\frac1{R_1}-\frac1{R_2}\right)}.
+\]
+\excheck 若 $q_0$ 与 $q$ 异号且足够大，
+作用力可能反而阻碍扩张，此时 $A<0$。
+
+\electrocapproblem{139}{111}
+均匀带电薄球壳的面电荷密度为 $\sigma$。
+利用能量守恒求其表面每单位面积所受
+向外静电压力（法向力模）。
+\exsolution
+半径为 $R$ 的球壳总电荷
+$q=4\pi R^2\sigma$。
+以总电荷 $q$ 固定为前提，
+球壳自能
+$W=q^2/(8\pi\varepsilon_0R)$。
+若半径增大 $\mathrm dR$，
+体积增量
+$\mathrm dV=4\pi R^2\mathrm dR$。
+向外压力 $p_e$ 做功
+$p_e\mathrm dV=-\mathrm dW$，所以
+\[
+p_e=-\frac1{4\pi R^2}\frac{\mathrm dW}{\mathrm dR}
+=\frac{q^2}{32\pi^2\varepsilon_0R^4}.
+\]
+利用
+$\sigma=q/(4\pi R^2)$：
+\[
+\boxed{p_e=\frac{\sigma^2}{2\varepsilon_0}}.
+\]
+\excheck 变形求导时应保持总电荷 $q$
+不变，不能误保持面电荷密度 $\sigma$ 不变。
+
+\electrocapproblem{140}{111}
+球心 O 放有点电荷 $q$，
+其外有一层整体不带净电荷的球形导体壳，
+内外半径为 $a<b$，并有小孔（图3.32）。
+求通过小孔把电荷从中心缓慢移至无穷远
+需要的外功。
+\exsolution
+以导体壳的感应电荷解为基础：
+中心点电荷使内球面感应 $-q$，
+外球面感应 $+q$。
+初态电场在 $0<r<a$ 和 $r>b$
+分别存在，中间导体内部为零。
+若将点电荷移至无穷远，
+球壳总电荷仍为零，极限态无电场。
+两态与点电荷自身发散自能无关的
+\emph{可变有限场能}差，
+可由空心球壳在两个半径之间的
+缺失场能计算：
+\[
+A=\frac12\int_a^b
+\frac{q^2}{(4\pi\varepsilon_0r^2)^2}
+\varepsilon_0(4\pi r^2)\,\mathrm dr.
+\]
+故
+\[
+\boxed{A=\frac{q^2}{8\pi\varepsilon_0}
+\left(\frac1a-\frac1b\right)}.
+\]
+\excheck 假设小孔足够小，不改变球对称场近似；
+真实经过孔口时局部场会畸变，
+但端点能量差在该理想极限不变。
+% === END 18-capacitance-energy-131-140.tex ===
+
+% === BEGIN 18-capacitance-energy-141-146.tex blob 3858577a02e7c085fc4bf32b83b7fd02cf63533f ===
+% Irodov Part III §3.3 final problems 141--146;
+% source PDF pp.120--121 (printed 111--112); figures 3.33, 3.34.
+\electrocapproblem{141}{111}
+空气平板电容器的极板面积均为 $S$，
+缓慢把板间距从 $x_1$ 增至 $x_2>x_1$。
+求所需的外界机械功：
+(a) 极板自由电荷 $q$ 保持不变；
+(b) 两极板电压 $V$ 保持不变。
+\exsolution
+忽略边缘场，
+$C(x)=\varepsilon_0S/x$。
+(a) 固定自由电荷时
+$U(q,x)=q^2/(2C)=q^2x/(2\varepsilon_0S)$。
+外界准静态功等于场能增加量：
+\[
+\boxed{A_q=\frac{q^2(x_2-x_1)}{2\varepsilon_0S}}.
+\]
+(b) 固定电压时电源会交换电荷，
+不能简单取储能差作外功。
+极板间吸引压力为
+$p_e=\varepsilon_0V^2/(2x^2)$，
+力 $F=p_eS$，
+因此
+\[
+A_V=\int_{x_1}^{x_2}\frac{\varepsilon_0SV^2}{2x^2}
+\,\mathrm dx
+=\boxed{\frac{\varepsilon_0SV^2}{2}
+\left(\frac1{x_1}-\frac1{x_2}\right)}.
+\]
+\excheck 原书(a)英文正文有
+“capacitance ... equal to q”的明显笔误，
+$q$ 量纲为电荷，依物理意义必须是
+“charge $q$ remains constant”；
+与原书答案的 $q^2$ 表达式一致。
+
+\electrocapproblem{142}{111}
+平板电容器原电容 $C_0=20\,\mathrm{nF}$，
+极板间隙为 $d$。
+先插入厚度为 $h=\eta d$ 的平行板
+（$\eta=0.60$），接电压
+$V=200\,\mathrm V$ 充电，随后切断电源，
+再缓慢抽出该插板。
+求抽出所需机械功：
+(a) 金属板；(b) 玻璃介质板。
+\exsolution
+设充电时插板在位的电容为 $C_i$。
+电源断开后自由电荷
+$Q=C_iV$ 保持不变；
+抽出后电容回到 $C_0$。
+因此机械功
+\[
+A=\Delta U=
+\frac{Q^2}{2}\left(\frac1{C_0}-\frac1{C_i}\right)
+=\frac{C_i^2V^2}{2}
+\left(\frac1{C_0}-\frac1{C_i}\right).
+\]
+(a) 金属板内部电场为零，
+只剩有效气隙厚度
+$d-h=d(1-\eta)$，
+故 $C_i=C_0/(1-\eta)$，得到
+\[
+\boxed{A_{\rm metal}=
+\frac12C_0V^2\frac{\eta}{(1-\eta)^2}
+=1.5\,\mathrm{mJ}}.
+\]
+(b) 玻璃相对介电常数为 $\varepsilon$，
+与两侧空气为法向串联。
+设
+$f=1-\eta+\eta/\varepsilon$，
+则 $C_i=C_0/f$，所以
+\[
+\boxed{A_{\rm glass}=
+\frac12C_0V^2
+\frac{\eta(1-\varepsilon^{-1})}
+{(1-\eta+\eta/\varepsilon)^2}}.
+\]
+\excheck 第(b)问题面未给玻璃 $\varepsilon$ 数值，
+应保留参数表达式，
+不可擅自代入某种玻璃的介电常数。
+
+\electrocapproblem{143}{111}
+将水平放置的平板电容器浸没在水中，
+极板间距 $d=1.0\,\mathrm{mm}$，
+水完全填满间隙。
+两极板电压保持为 $V=500\,\mathrm V$。
+求水在间隙中的电压力增量。
+\exsolution
+取水的相对介电常数为
+$\varepsilon$，忽略边缘效应。
+水中电场 $E=V/d$。
+界面电场能和介质极化在固定外加电势的
+电机械耦合关系给水中附加的电压力
+\[
+\Delta p=\frac12\varepsilon_0
+\varepsilon(\varepsilon-1)E^2.
+\]
+代入 $E=V/d$：
+\[
+\boxed{\Delta p=
+\frac{\varepsilon_0\varepsilon(\varepsilon-1)V^2}{2d^2}}.
+\]
+室温水取 $\varepsilon\simeq81$：
+\[
+\boxed{\Delta p\simeq7.2\times10^3\,\mathrm{Pa}
+\approx7\,\mathrm{kPa}\approx0.07\,\mathrm{atm}}.
+\]
+\excheck 该式是本题所采用的水介电响应
+电压与压力模型，
+与只计算真空 Maxwell 电压力
+$\varepsilon_0E^2/2$ 不同。
+
+\electrocapproblem{144}{111}
+水平平板电容器的一块极板浸在液体内，
+另一块位于液面上方（图3.33）。
+液体密度 $\rho$，相对介电常数
+$\varepsilon$。
+极板表面自由电荷密度模为 $\sigma$，
+求液体在两极板之间升高的高度 $h$。
+\exsolution
+两板间浸入介质的部分增加时，
+其单位体积静电储能由
+$u_{\rm vac}=\sigma^2/(2\varepsilon_0)$
+变为
+$u_{\rm diel}=\sigma^2/(2\varepsilon_0\varepsilon)$。
+在保持自由电荷密度的准静态近似下，
+每单位上升体积可释放的电场能为
+\[
+\Delta u=\frac{\sigma^2}{2\varepsilon_0}
+\left(1-\frac1\varepsilon\right).
+\]
+与上升液柱静水压头 $\rho gh$ 平衡，
+\[
+\rho gh=\Delta u.
+\]
+因此
+\[
+\boxed{h=\frac{(\varepsilon-1)\sigma^2}
+{2\varepsilon_0\varepsilon\rho g}}.
+\]
+\excheck 如果改为固定\emph{极板电压}，
+电荷密度会随介质分布改变，
+必须使用相应不同的热力学约束。
+
+\electrocapproblem{145}{111}
+同轴圆柱电容器，
+两电极平均半径为 $R$，
+径向间隙 $d\ll R$。
+向间隙沿轴向插入相对介电常数
+$\varepsilon$ 的圆柱形介质层，
+两电极保持恒定电压 $V$。
+求把介质进一步吸入的电力。
+\exsolution
+忽略端部效应，插入轴向长度为 $x$
+时增加的介质体积为
+$2\pi Rd\,x$。
+这相当于单位插入长度新增并联电容
+\[
+\frac{\mathrm dC}{\mathrm dx}
+\simeq\frac{\varepsilon_0(\varepsilon-1)}d
+(2\pi R).
+\]
+在固定电压下，
+电源—电场系统的有效势为
+$-\frac12CV^2$，
+故吸入力
+\[
+F=\frac12V^2\frac{\mathrm dC}{\mathrm dx}.
+\]
+于是
+\[
+\boxed{F=\frac{\pi R\varepsilon_0
+(\varepsilon-1)V^2}{d}}.
+\]
+\excheck 这是介质已部分插入时
+接近轴向端缘的电力，
+不表示介质无限延伸后的
+横向均匀区域仍有非零吸入力。
+
+\electrocapproblem{146}{112}
+图3.34：固定电极由两片半径为 $R$
+的半圆形金属极板组成，
+板间距 $d$。薄可转动介质板绕
+半圆中心 O 转动，
+相对介电常数为 $\varepsilon$，
+转角为 $\phi$，固定电压 $V$。
+求绕 O 的电力矩模。
+\exsolution
+忽略边缘场，
+介质覆盖的两极板重叠面积随转角改变。
+半径 $R$ 的圆扇形面积为
+$A(\phi)=\frac12R^2\phi$，
+所以
+$\mathrm dA/\mathrm d\phi=R^2/2$。
+被介质覆盖区域相对于真空的
+增量电容为
+$\Delta C=(\varepsilon-1)\varepsilon_0A/d$，
+因此
+\[
+\frac{\mathrm dC}{\mathrm d\phi}
+=\frac{\varepsilon_0(\varepsilon-1)R^2}{2d}.
+\]
+固定电压的电力矩
+$\mathcal N=\frac12V^2\mathrm dC/\mathrm d\phi$，
+故
+\[
+\boxed{|\mathcal N|=
+\frac{\varepsilon_0(\varepsilon-1)R^2V^2}{4d}}.
+\]
+\excheck 在原图允许的旋转角度范围内，
+扇形覆盖面积随 $\phi$ 线性变化，
+故电力矩大小不依赖 $\phi$。
+% === END 18-capacitance-energy-141-146.tex ===
