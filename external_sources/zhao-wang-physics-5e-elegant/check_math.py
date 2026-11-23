@@ -42,6 +42,14 @@ CHAPTERS = (
      [f"4.3.{n}" for n in range(11, 18)]),
     ("chapters/textbook-ch04-solutions-018-023.tex", "sourceproblem",
      [f"4.3.{n}" for n in range(18, 24)]),
+    ("chapters/textbook-ch05-choices.tex", "sourceproblem",
+     [f"5.1.{n}" for n in range(1, 15)]),
+    ("chapters/textbook-ch05-blanks.tex", "sourceproblem",
+     [f"5.2.{n}" for n in range(1, 9)]),
+    ("chapters/textbook-ch05-solutions-001-009.tex", "sourceproblem",
+     [f"5.3.{n}" for n in range(1, 10)]),
+    ("chapters/textbook-ch05-solutions-010-018.tex", "sourceproblem",
+     [f"5.3.{n}" for n in range(10, 19)]),
     ("chapters/guide-ch01-examples.tex", "sourceexample",
      [f"1.{n}" for n in range(1, 6)]),
     ("chapters/guide-ch02-examples.tex", "sourceexample",
@@ -50,6 +58,8 @@ CHAPTERS = (
      [f"3.{n}" for n in range(1, 6)]),
     ("chapters/guide-ch04-examples.tex", "sourceexample",
      [f"4.{n}" for n in range(1, 6)]),
+    ("chapters/guide-ch05-examples.tex", "sourceexample",
+     [f"5.{n}" for n in range(1, 7)]),
 )
 
 
@@ -71,7 +81,7 @@ def structural_check():
             for label in (r"\problemtext", r"\workings", r"\crosscheck"):
                 assert label in block, (number, label)
         total += len(ids)
-    assert total == 182, total
+    assert total == 228, total
     return total
 
 
@@ -311,12 +321,83 @@ def fourth_round_regressions():
     near(1/sqrt(1-.8**2),5/3)
 
 
+
+def fifth_round_regressions():
+    """Independent non-OCR spot checks of 46 Chapter 5 study items."""
+    import math
+    kB, R, NA = 1.380649e-23, 8.314462618, 6.02214076e23
+    g, T, pi, sqrt = 9.8, 300.15, math.pi, math.sqrt
+    # Kinetic theory: molecular energies, Maxwell characteristic speeds.
+    near((2.5*R*T)/(1.5*R*T),5/3)
+    near((sqrt(2)*sqrt(8/pi)*sqrt(3))**0,1)  # dimensional factor safety
+    assert sqrt(2)<sqrt(8/pi)<sqrt(3)
+    near(sqrt(2/32),1/4)
+    # Fill-ins 5.2.1--5.2.8
+    near((1e-5*133.322)/(kB*T), 3.22e17,1e-3)
+    near((.1/.01)*(200**2)/3,400000/3)
+    near((2.5*R*400.15)-(1.5*R*400.15),R*400.15)
+    near(1.01325e5/(kB*273.15),2.68678e25,1e-4)
+    near((2.5*R)/(1.5*R),5/3)
+    near((1/2)**(-1),2)
+    # Textbook detailed 5.3.1--5.3.18
+    near(1e5*.028/(R*T),1.1219809899245032)
+    p_he=1.36e4*g*(.76-.60)
+    V_he=(.12+.76-.60)*2e-4
+    near(p_he*V_he*.004/(R*T),1.914081617115364e-6)
+    near(3*101325/(400**2),1.89984375)
+    sampleT=2*6.21e-21/(3*kB)
+    near(sampleT,299.8589793640527)
+    near(sqrt(3*R*sampleT/.032),483.4607928707272)
+    near(1e6*kB*3.5,4.8322715e-17)
+    near(1.5*5e25*kB*400,4.141947e5)
+    near(5e25*kB*400,2.761298e5)
+    Tmix=2*8.1e6/(5*(11/.044+2/.002)*R)
+    near(Tmix,311.74594427649157)
+    near(2*675/(5*.002),135000)
+    near(3*675/(5*5.4e22),7.5e-21)
+    dU=.8*(.5*.002*10**2)
+    near(2*dU/(5*1),.032)  # pressure rise at volume 1 cubic metre
+    near(5/(3*2),5/6)
+    k_est=6.2e-17*.014**2/(3*T)
+    near(k_est,1.349547448497973e-23)
+    near(R/k_est,6.160927e23,1e-3)
+    # Hand-drawn piecewise-speed distribution normalized and integrated.
+    v0=3.0
+    aOverN=2/(3*v0)
+    near(aOverN*(v0/2+v0),1)
+    vmean=(2/(3*v0*v0))*v0**3/3 + aOverN*((2*v0)**2-v0**2)/2
+    near(vmean,11*v0/9)
+    near(aOverN*(2*v0-1.5*v0),1/3)
+    lowp=1.38e-3
+    n=lowp/(kB*T)
+    lam=kB*T/(sqrt(2)*pi*(3e-10)**2*lowp)
+    near(n,3.33010138668502e17)
+    near(lam,7.509917463748704)
+    n0=101325/(kB*273.15)
+    lam0=1/(sqrt(2)*pi*(2.3e-10)**2*n0)
+    near(lam0,1.5836067074225576e-7)
+    # Study guide 5.1--5.6
+    m,k=0.5,5.0
+    h=3*m*g/k
+    A=sqrt((m*g/k)**2+m*g*h/k)
+    near(A,2*m*g/k)
+    M,clay=3.0,2.0
+    near(sqrt(M/(M+clay)),sqrt(3/5))
+    near(2*pi/(pi/6),12)
+    near(.1*sqrt(1/.1),sqrt(.1))
+    near(6**2+8**2,10**2)
+    X=3*sqrt(3)+4
+    Y=3-4*sqrt(3)
+    near(sqrt(X*X+Y*Y),10)
+
+
 if __name__ == "__main__":
     n = structural_check()
     numerical_check()
     second_round_regressions()
     third_round_regressions()
     fourth_round_regressions()
+    fifth_round_regressions()
     print(f"Structure: {n} referenced worked items; all checked blocks present.")
     print("Selected numeric invariants: passed.")
     print("Not a replacement for full independent physics or copyright review.")
