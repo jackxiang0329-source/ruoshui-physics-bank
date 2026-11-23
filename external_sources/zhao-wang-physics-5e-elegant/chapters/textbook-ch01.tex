@@ -1,4 +1,5 @@
 % Consolidated textbook-ch01 from commit ace330777e37fc85a6170f63723b6255c77c8f30; original fragments preserved below.
+% 2026-11-24 八批严格复核第1批：以下历史片段已局部修订；旧SHA仍指精简前历史版本，不能当作当前片段校验值。
 
 % --- BEGIN textbook-ch01-foundations-001-003.tex SHA b8419ea28fbabac5c854d07f911855f0981c7b1e ---
 % 《大学物理简明教程》（第五版）第1章习题：
@@ -22,7 +23,7 @@
 \problemtext 一质点沿直线运动，某时刻\emph{速率}为$2\,\mathrm{m/s}$，有符号加速度$a=-2\,\mathrm{m/s^2}$，询问$1$秒后的速率。
 \workings
 若初始速度为$+2\,\mathrm{m/s}$，则$v(1)=2-2=0$；若初始速度为$-2\,\mathrm{m/s}$，则$v(1)=-2-2=-4\,\mathrm{m/s}$，速率为$4\,\mathrm{m/s}$。
-仅给\emph{速率}，未给初始运动方向，不能确定唯一结果；原题选\textbf{D}。
+上述两种数值均以这一秒内加速度恒为$-2\,\mathrm{m/s^2}$为条件；若只给某时刻加速度，连后续速度变化量也无法确定。仅给\emph{速率}，未给初始运动方向，不能确定唯一结果；原题选\textbf{D}。
 \crosscheck 速率非负，不能将带符号加速度直接从速率中代数相减而忽略初始速度符号。
 
 \sourceproblem{1.1.3}{16}{16}
@@ -48,7 +49,7 @@ $|\bar{\bm v}|=|\Delta\bm r|/(2t)=0$。
  a_\tau=\frac{d|\bm v|}{dt}.}
 \]
 因此$\left|\frac{d\bm v}{dt}\right|=|\bm a|$，一般不等于$|a_\tau|$；
-只有法向加速度为零的情形才可能相等。
+在速率非零且切向加速度有定义的时刻，只有法向加速度为零才相等；静止瞬间须另查速率是否可微。
 \crosscheck 原书四种写法的标量$v$、矢量$\bm v$在扫描字体中较接近，
 若不辨明粗体，就无法严谨判定题面的①、③、④及给定选项；本题\textbf{暂不强行判定唯一选项}，待逐字二校。
 
@@ -101,7 +102,7 @@ $v(t)=v_0+\int_0^t(3+2u)\,du=5+3t+t^2$，故
 \[
 \boxed{v(3)=23\,\mathrm{m/s}}.
 \]
-\crosscheck $a(t)>0$且$v_0>0$，全程不转向，速度和速率一致。
+\crosscheck $a(t)>0$且$v_0>0$，全程不转向，速度和速率一致。若原题只给初速率而未明确方向，另有$v_0=-5\,\mathrm{m/s}$的分支，$v(3)=-5+9+9=13\,\mathrm{m/s}$，需核对扫描题干。
 
 \sourceproblem{1.2.3}{16}{16}
 \problemtext 质点从静止开始做$R=1\,\mathrm m$圆周运动，角加速度$\alpha=12t^2-6t$（SI），求$\omega(t)$及切向加速度大小。
@@ -207,7 +208,7 @@ a=\sqrt{\ddot x^2+\ddot y^2}.
 =\bm v\cdot\hat{\bm r}
 \]
 只是速度的\emph{径向分量}，且
-$\ddot r$还包含曲率相关项，通常不等于加速度的模。
+当$r>0$时，$\ddot r=\bm a\cdot\hat{\bm r}+(|\bm v|^2-\dot r^2)/r$，通常不等于加速度的模；$r=0$时该径向表达式须另行分析。
 正确方法为先微分\emph{位置矢量}的各分量，再取模；
 将\emph{位置矢量}微分本身当然也正确，但不是先微分其模。
 \crosscheck 匀速圆周运动$r=R$使$\dot r=\ddot r=0$，而$v=R\omega$和$a=R\omega^2$均可非零。
