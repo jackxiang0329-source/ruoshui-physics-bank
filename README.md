@@ -3,6 +3,22 @@
 **高难综合题 / 原版书习题 / 严格质检 / LaTeX + PDF**  
 本仓库已经整理为**正式题库优先、教材译解独立、未审外部材料归档**的布局；优先从下方入口访问，避免在几万个零散候选文件中查找。
 
+## 2026-11-24 全仓库文件精简合并
+
+本轮按原有功能和题库数据模型检查全仓库，采用**原文无损合并、目录结构稳定、Git历史可恢复、自动测试验证**的方式精简。
+
+| 范围 | 合并前 | 合并后 | 减少 |
+|---|---:|---:|---:|
+| 《大学物理简明教程》及《大学物理学学习指导》LaTeX章节片段 | 102份 | **39份** | 63份 |
+| Irodov《普通物理学习题》LaTeX章节片段 | 164份 | **40份** | 124份 |
+| 全仓库Git跟踪文件（包括补充的映射、兼容脚本等） | **1,988** | **1,805** | **183份** |
+
+保留原有 **8个顶层功能目录** 与各题独立来源：正式高难题库452题的`bank/ID/{meta.json,question.tex,solution.tex}`、两书890题、Irodov 1,878题、候选归档及现有索引均不减少。Git目前仍有501个目录节点，其中大部分是正式题库按题号组织的452个目录；为避免破坏组卷、引用、逐题编辑与质检接口，这些**必要目录不强行压成一个巨型文件**。
+
+教材分段源文件的完整旧文本及Git blob SHA保存在新章节注释中，同时提供 [两书对照表](external_sources/zhao-wang-physics-5e-elegant/chapters/COMPACTION-MAP.md) 和 [Irodov对照表](external_sources/irodov-zh-elegant/chapters/COMPACTION-MAP.md)。Irodov历史质检通过 [校验后临时恢复](external_sources/irodov-zh-elegant/expand_legacy_fragments.py) 继续兼容，无需在仓库重新跟踪旧文件。
+
+已通过 [两书校验及XeLaTeX构建](https://github.com/jackxiang0329-source/ruoshui-physics-bank/actions/runs/45214069462) 与 [Irodov完整专项质检及PDF构建](https://github.com/jackxiang0329-source/ruoshui-physics-bank/actions/runs/45216150513)。技术检查成功不代表逐题独立学术终审。
+
 ## 快速入口
 
 | 我要查看 | GitHub 路径 | 内容与状态 |

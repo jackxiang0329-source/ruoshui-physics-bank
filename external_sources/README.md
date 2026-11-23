@@ -1,5 +1,13 @@
 # 外部物理习题资源区（独立候选，不属于正式题库）
 
+## 教材解析专区合并入口（2026-11-24）
+
+- [赵近芳、王登龙第五版两书：890题，39份合并LaTeX章节](./zhao-wang-physics-5e-elegant/README.md)；[原文件映射](./zhao-wang-physics-5e-elegant/chapters/COMPACTION-MAP.md)。
+- [Irodov《普通物理学习题》：1,878题，40份合并章节](./irodov-zh-elegant/README.md)；[原文件映射](./irodov-zh-elegant/chapters/COMPACTION-MAP.md)。
+- 两套教材仍是研究性解题稿，不计入452道正式高难综合题库；旧片段可由Git历史无损恢复。历史回归工作流只在临时工作区恢复旧文件名，不会新增仓库跟踪文件。
+
+
+
 这里汇集待版权、题面、解答、去重及物理模型审核的外部材料；不自动进入 [正式高难综合题库](../bank/)，亦不计入《普通物理学习题》原书题号。外部内容即使技术校验通过，也不等于适合组卷。
 
 ## 整理后的入口
