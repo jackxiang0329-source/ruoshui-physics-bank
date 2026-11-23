@@ -1,4 +1,5 @@
 % Consolidated textbook-ch08 from f43cd09215a13d29f88baa670fa48441ec2a44e8; source fragments preserved.
+% 2026-11-24 八批严格复核第3批：旧片段哈希对应历史版，当前文件含二校修订。
 
 % === BEGIN textbook-ch08-choices.tex blob 342dc34e310b0fa53df74b7e36c3081e8b551389 ===
 % 《大学物理简明教程》第5版，第8章稳恒磁场；选择题8.1.1—8.1.13。
@@ -159,13 +160,13 @@ $\boxed{W_{\mathrm{ext}}=+0.236\,\mathrm J}$。
 \workings
 垂直分速度$v_\perp=v\sin\theta$给圆周运动，
 平行分速度$v_\parallel=v\cos\theta$保持恒定。
-回旋周期$T=2\pi m/(|q|B)$，
+非相对论、无其他力且$B>0,q\ne0$时，回旋周期$T=2\pi m/(|q|B)$，
 因此
 \[
 \boxed{h=v_\parallel T
 =\frac{2\pi mv\cos\theta}{|q|B}}.
 \]
-保持其他量不变，减小$B$使螺距增大，原题选\textbf{B}。
+螺距大小为$|h|$。保持其他量不变且$v_\parallel\ne0$，减小$B$使螺距大小增大，原题选\textbf{B}。
 \crosscheck 在$0<\theta<90^\circ$中增大$\theta$会减小$\cos\theta$；
 增大$B$或减小$v$也会减小螺距。
 
@@ -247,8 +248,7 @@ $\mu_r$应进入$B=\mu H$而不应凭空进入安培环路定理右端。
 =\mu_0I_{\mathrm{link}}^{\mathrm{alg}}},\qquad
 I_{\mathrm{link}}^{\mathrm{alg}}=\sum_j\epsilon_j I_j.
 \]
-$\epsilon_j\in\{-1,0,1\}$为每根导线和定向曲面
-相交的带符号链接数，正向由右手法则确定。
+$\epsilon_j\in\mathbb Z$为每根导线和定向曲面相交次数的带符号代数和（单次穿越才限于$0,\pm1$），正向由右手法则确定。
 对于原图曲面须明确$I_1$的各次穿越是否相互抵消、
 $I_2$是否穿越，才能将此式化为具体$I_1,I_2$组合。
 \crosscheck \textbf{待高清空间图独立二校：}本稿不猜测三维示意图中的遮挡穿越方向，
@@ -350,10 +350,10 @@ B_{\mathrm{straight}}=\frac{\mu_0I}{2\pi R}.
 =\frac{eL}{2m_e}B},
 \qquad L=m_evr.
 \]
-若另加\emph{玻尔最小角动量轨道}条件$L=\hbar$，
+若再采用固定质子、经典库仑力提供圆周向心力的模型，则$m_ev^2/r=k_e e^2/r^2$，$M=(eB/2)\sqrt{k_e e^2r/m_e}$。若另加\emph{玻尔最小角动量轨道}条件$L=\hbar$，
 才可简化为$\boxed{M=e\hbar B/(2m_e)}$。
 \crosscheck 原文未给电子速率和角动量量子数，
-因此仅由$m_e,e,r,B$并不能决定唯一数值；
+因此若不额外规定轨道动力学模型，仅由$m_e,e,r,B$并不能决定唯一数值；
 假定玻尔基态须明确为附加模型，不可从题面凭空推出。
 
 \sourceproblem{8.2.9}{219}{219}
@@ -367,7 +367,7 @@ B_{\mathrm{straight}}=\frac{\mu_0I}{2\pi R}.
 \boxed{M=NIa^2B\sin\theta},\qquad
 \bm M=\bm\mu\times\bm B.
 \]
-动力学角加速度可再由$J\ddot\phi=M$求得，
+若要求动力学角加速度，则必须取力矩在允许的转轴上的有向投影$J\ddot\phi=\bm M\cdot\hat{\bm n}_{\rm axis}$，
 但题目只问\emph{转矩}，无需使用$J$。
 \crosscheck 如果所给$\theta$为\emph{线圈平面}与磁场夹角，
 应改写为$M=NIa^2B|\cos\theta|$；
@@ -402,7 +402,7 @@ $v_\parallel=v\cos\theta$。
 \boxed{h=v_\parallel T=
 \frac{2\pi mv\cos\theta}{|q|B}}.
 \]
-\crosscheck 带电粒子运动方向与磁场平行时$r=0$，
+\crosscheck 以上为非相对论结果，$h$是沿磁场方向的有向位移，几何螺距为$|h|$。带电粒子运动方向与磁场平行时$r=0$，
 不发生回旋；周期表达式是其垂直扰动的特征回旋周期。
 
 \sourceproblem{8.2.12}{219}{219}
@@ -452,7 +452,7 @@ $E\simeq UQ$，不能把mAh本身直接说成焦耳。
 \boxed{\bm F_{\mathrm B}=q\bm v\times\bm B}.
 \]
 因此$\bm F_{\mathrm B}$同时垂直于$\bm v,\bm B$，
-在任意非零速度情况下都不平行于$\bm B$。
+只要磁力非零，它就与$\bm B$垂直；零磁力无确定方向。
 更重要的是$\bm F$还取决于$\bm v$与$q$的符号，
 不能用某一次受力方向定义$\bm B$。
 \crosscheck $\bm v\parallel\bm B$时磁力为零，
@@ -475,8 +475,7 @@ $E\simeq UQ$，不能把mAh本身直接说成焦耳。
 \boxed{B=\frac{\mu_0I}{4\pi r}
 (\sin\alpha_1+\sin\alpha_2)}
 \]
-（$\alpha_i$为两端点从垂足方向量得的对应角，
-且观察点到导线延长线的垂距为$r$）。
+（$r>0$为观察点到导线延长线的垂距；垂足位于线段内部时两端角取正。一般取沿电流方向的坐标$s_1<s_2$，$B=\mu_0I[\sin(\arctan(s_2/r))-\sin(\arctan(s_1/r))]/(4\pi r)$，可涵盖垂足在线段外的情况）。
 \crosscheck 有限孤立直线段不能单独构成完整稳恒闭合电路，
 实际回路中的返流也可能影响外部磁场；上述公式仅是该导线段的贡献。
 
@@ -725,10 +724,9 @@ $|q|E=|q|vB$，$E=U_H/d$，因此
 取$x$向右、$y$向上、$z$向纸外，
 $\bm v=-v\bm e_z,\bm B=B\bm e_x$，
 则$\bm v\times\bm B=-vB\bm e_y$，即对正电荷作用力朝下。
-下电极为正、上电极为负，故按图示的简单单载流子模型，
-迁移电荷为\textbf{正电荷}。
+下电极为正、上电极为负，与$\bm E=-\bm v\times\bm B$相符。但横向平衡方程$q(\bm E+\bm v\times\bm B)=0$中$q$被约去。正离子受磁力向下、负离子受磁力向上，两者均可形成下正上负的极性，故\textbf{仅凭流速和电压极性不能判定载流子电荷符号}。
 \crosscheck 血液是多离子电解质，真实电极的电化学条件复杂；
-本题按均匀体电磁流量计的简化霍尔模型处理。
+本题按均匀体电磁流量计模型处理；它不同于以给定常规电流方向推断载流子漂移方向的固体霍尔实验。
 
 \sourceproblem{8.3.13}{221}{221}
 \problemtext 图8.3.13两条平行金属导轨长$L$、间距$d$、
@@ -827,7 +825,7 @@ $\boxed{F=IB\ell_{ab}}$，方向由右手法则判定。
 \]
 指向长直导线。对线圈中心求各力矩，平行边受力作用线经过
 对应边的中心高度，水平边力矩彼此抵消，故
-$\boxed{M_{\mathrm{net}}=0}$。
+$\boxed{M_{\mathrm{net,center}}=0}$。因合力非零，换参考点后的力矩一般不为零。
 \crosscheck 平面内该回路磁矩与长直导线所产生的$\bm B$
 平行或反平行，不存在使其绕平面内轴转动的净力偶；
 但仍有朝向长直线的非零合力。
@@ -853,7 +851,7 @@ $n=8.4\times10^{22}\,\mathrm{cm^{-3}}
 \approx2.23\times10^{-5}\,\mathrm V}
 \]
 即约$22.3\,\mu\mathrm V$。
-\crosscheck 铜以电子为主要导电载流子，霍尔系数为负；
+\crosscheck 简单自由电子单载流子模型给负霍尔系数；实际铜的霍尔系数与能带结构有关，不能从电子电荷直接断言实测符号；
 题只问霍尔电势差大小，故不凭缺少电极标记的图去猜电压符号。
 
 \sourceproblem{8.3.17}{222}{222}
@@ -909,7 +907,7 @@ evB=\frac{m_ev^2}{r}
 \approx3.87\,\mathrm{keV}}.
 \]
 \crosscheck $v/c\approx0.12$，教材使用的非相对论公式为近似；
-若要求高精度，应按相对论动量$p=\gamma m_ev$修正。
+若要求高精度，应令$p=eBr$，再用$v=pc^2/\sqrt{m_e^2c^4+p^2c^2}$、$K=\sqrt{m_e^2c^4+p^2c^2}-m_ec^2$修正。
 
 \sourceproblem{8.3.19}{222}{222}
 \problemtext 电子在$B=20\times10^{-4}$ T的均匀磁场中沿螺旋线运动，
@@ -932,9 +930,7 @@ v_\parallel\approx2.80\times10^6\,\mathrm{m/s},
 \boxed{v=\sqrt{v_\perp^2+v_\parallel^2}
 \approx7.58\times10^6\,\mathrm{m/s}}.
 \]
-电子带负电，回旋角速度矢量与$\bm B$的方向反向；
-观察原图绕轴旋转的朝向，使用右手定则判出角速度矢量，
-磁场再取其反方向。
+由$\dot{\bm v}=(q/m_e)\bm v\times\bm B=\bm\Omega\times\bm v$知$\bm\Omega=-q\bm B/m_e$。电子$q=-e$，故$\bm\Omega=e\bm B/m_e$，\textbf{与磁场同向}。观察原图绕轴旋转的朝向，用右手定则判出角速度矢量，即得到磁场方向。
 \crosscheck \textbf{图示轴向二校：}速率和周期不依赖磁场的正负方向；
 但确定$\bm B$向上还是向下必须区分从哪一端观察螺旋旋向，
 不能仅据“螺旋向上”推断磁场向上。
