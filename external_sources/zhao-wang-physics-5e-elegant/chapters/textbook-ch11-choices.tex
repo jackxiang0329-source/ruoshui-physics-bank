@@ -3,16 +3,32 @@
 \subsection{选择题：时空变换、速度合成与相对论能量}
 
 \sourceproblem{11.1.1}{288}{288}
-\problemtext 某系中两个事件同时但位置不同，换到另一惯性系后，两事件可能有何时空关系？
+\problemtext 某惯性系内两个事件同时发生于不同地点。
+换到另一个惯性系后，判断它们是否可能仍同时、
+是否可能变成同地事件。
 \workings
-对沿两事件连线运动的惯性系有
-$\Delta t'=\gamma(\Delta t-v\Delta x/c^2)$。
-$\Delta t=0$而$\Delta x\ne0$时，若$v\ne0$，
-$\Delta t'\ne0$，故\textbf{不一定同时}。
-由于$\Delta x'=\gamma\Delta x\ne0$，也不能使其同地发生。
-选\textbf{D}（不可能同时，也不可能同地，指有非零相对速度且沿连线方向的系）。
-\crosscheck 特例$v=0$或速度垂直于事件空间间隔时仍可同时；
-因此原书“另一惯性系”若无相对速度方向限定，选项D字面上并非无条件成立，待原题表述二校。
+对于三维位置差$\Delta\bm r\ne\bm0$及惯性系相对速度$\bm v$，
+洛伦兹时间差为
+\[
+\Delta t'=\gamma\left(\Delta t-\frac{\bm v\cdot\Delta\bm r}{c^2}\right).
+\]
+给定$\Delta t=0$，若相对速度垂直于事件空间差
+（$\bm v\cdot\Delta\bm r=0$），仍有$\Delta t'=0$；
+若速度在分离方向有非零分量，则$\Delta t'\ne0$。
+但不变量
+$c^2\Delta t'^2-|\Delta\bm r'|^2
+=-|\Delta\bm r|^2<0$，意味着这种类空间隔的两事件
+在任何惯性系都\emph{不能变成同地事件}。
+\[
+\boxed{\Delta t'=0\text{ 可以成立},\qquad
+\Delta\bm r'\ne\bm0}.
+\]
+因此原题四项中按未限定运动方向的\emph{严格三维解释}，
+应选\textbf{B：可能同时}。
+\crosscheck \textbf{原题隐含一维约定待核：}
+若教材默认另一个系\emph{一定沿事件连线方向}
+以非零速度运动，则时间差必非零，对应D；
+原题字面并未给这一额外条件，故不能无条件选D。
 
 \sourceproblem{11.1.2}{288}{288}
 \problemtext 某惯性系中两事件同地不同时，另一惯性系中可否同地或同时？
