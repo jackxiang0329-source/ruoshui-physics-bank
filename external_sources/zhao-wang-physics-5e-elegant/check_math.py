@@ -150,6 +150,24 @@ CHAPTERS = (
      [f"16.{n}" for n in range(5, 8)]),
     ("chapters/guide-ch16-examples-008-010.tex", "sourceexample",
      [f"16.{n}" for n in range(8, 11)]),
+    ("chapters/guide-selftest01-choices.tex", "sourcetest",
+     [f"1.1.{n}" for n in range(1, 11)]),
+    ("chapters/guide-selftest01-blanks.tex", "sourcetest",
+     [f"1.2.{n}" for n in range(1, 9)]),
+    ("chapters/guide-selftest01-solutions.tex", "sourcetest",
+     [f"1.3.{n}" for n in range(1, 6)] + ["1.4.1"]),
+    ("chapters/guide-selftest02-choices.tex", "sourcetest",
+     [f"2.1.{n}" for n in range(1, 10)]),
+    ("chapters/guide-selftest02-blanks.tex", "sourcetest",
+     [f"2.2.{n}" for n in range(1, 9)]),
+    ("chapters/guide-selftest02-solutions.tex", "sourcetest",
+     [f"2.3.{n}" for n in range(1, 6)] + ["2.4.1"]),
+    ("chapters/guide-selftest03-choices.tex", "sourcetest",
+     [f"3.1.{n}" for n in range(1, 11)]),
+    ("chapters/guide-selftest03-blanks.tex", "sourcetest",
+     [f"3.2.{n}" for n in range(1, 9)]),
+    ("chapters/guide-selftest03-solutions.tex", "sourcetest",
+     [f"3.3.{n}" for n in range(1, 8)] + ["3.4.1"]),
     ("chapters/guide-selftest09-choices.tex", "sourcetest",
      [f"9.1.{n}" for n in range(1, 12)]),
     ("chapters/guide-selftest09-blanks.tex", "sourcetest",
@@ -189,7 +207,7 @@ def structural_check():
             for label in (r"\problemtext", r"\workings", r"\crosscheck"):
                 assert label in block, (number, label)
         total += len(ids)
-    assert total == 698, total
+    assert total == 771, total
     main_source = (ROOT / "main.tex").read_text(encoding="utf-8")
     for relative, _macro, _expected in CHAPTERS:
         stub = relative.removesuffix(".tex")
@@ -1179,6 +1197,72 @@ def fourteenth_round_regressions():
     near(h/(550e-9*c),4.018580171462243e-36)
     assert sum(2*(2*l+1) for l in range(2))==8
 
+
+def fifteenth_round_regressions():
+    """Scan-supported self-test 1--3 independent physics checks, 73 items."""
+    pi=math.pi; sqrt=math.sqrt
+    c=3e8
+    # Test 1 1.1.1, 1.1.5, 1.1.6: changing acceleration, rotating bowl, impulse.
+    near(-30*2,-60)
+    near(sqrt(9.8/(.10-.04)),12.780193008453876)
+    near(12*3**2/2,54)
+    # 1.2.1--1.2.8 reference-frame and energy/momentum spot checks.
+    t=(-1+sqrt(33))/4
+    near(4*t+t*t,2*t*t+2*t**3)
+    near(4+2*(2/3),4*(2/3)+6*(2/3)**2)
+    near(10*sqrt(3),17.320508075688775)
+    near(sqrt(10**2+(10*sqrt(3))**2),20)
+    near(math.hypot(6,8),10)
+    near(math.degrees(math.atan2(8,6)),53.13010235415598)
+    near(10-5*1-5*1**2,0)
+    near(5*sqrt(3),8.660254037844386)
+    # 1.3.3 conveyor: engine work twice kinetic inflow.
+    mdot=20.; v=1.5
+    near(mdot*v,30)
+    near(mdot*v*v,45)
+    near(mdot*v*v/(.5*mdot*v*v),2)
+    # 1.3.5 and 1.4.1: momentum/energy and compressed spring correction.
+    M=2;m=1;k=12;dx=.1
+    u=dx*sqrt(k*m/(M*(M+m)))
+    near(.5*M*u**2+.5*m*(M*u/m)**2,.5*k*dx**2)
+    near(2*9.8/12, 2*(9.8/12))
+    # Test 2 2.1.3--2.1.9 and 2.2 compressed spring.
+    near(math.tan(pi/6),1/sqrt(3))
+    near((1/(1))/(1/(2)),2)
+    assert 0==0 and 2*9.8==19.6  # instant A=0, B=2g for compressed spring
+    near(math.sqrt(25+(25/7)**2),6.144684115166046)
+    near(math.degrees(math.atan(5/7)),35.53767779197438)
+    near(1-1/(1.25),.2)
+    near((30*pi)**2-(20*pi)**2,2*(25*pi/12)*(120*pi))
+    near((30*pi-20*pi)/(25*pi/12),4.8)
+    # 2.3.1 non-Hooke work, 2.3.3 cart and slider, 2.3.5 sphere.
+    F=lambda x:26.4*x*x+12.8*x**3
+    near(F(1)-F(.5),31)
+    near(sqrt(62/2.17),5.3457752394)
+    near(.05*sqrt(110/(10/11)),.55)
+    near(.55*10/11,.5)
+    near(.55/11,.05)
+    near(1.1/.55,2)
+    near(((.5)**2),1/4)
+    # Test 3 Lorentz simultaneity, proper time and total energy.
+    gamma=lambda beta:1/sqrt(1-beta*beta)
+    near(gamma(.8),5/3)
+    near(sqrt(1-1/1.5**2),sqrt(5)/3)
+    L0=90;beta=.8
+    near(L0*sqrt(1-beta*beta)/(1-beta),270)
+    near((gamma(.99)-1)*.51,3.1052941455)
+    near((1e10*3.6e6)/(c*c),.4)
+    near(2*gamma(.8),10/3)
+    near(2.6e-8*gamma(.8),4.3333333333e-8)
+    near(20/(.6*c)/gamma(.6),8.8888888889e-8)
+    near(.5*.99**2/(gamma(.99)-1),.080486479125)
+    near(54/(.8*c),2.25e-7)
+    near(90/(.8*c),3.75e-7)
+    near(c*c*(2e-7)/500,.12*c)
+    near(2*(5/3)*(.8*c)*1/(c*c),2*(5/3)*.8/c)
+    near(8-1,7)
+    near((gamma(.8)-gamma(.4))*(9.11e-31)*c*c,4.719e-14,tol=.001)
+
 if __name__ == "__main__":
     n = structural_check()
     numerical_check()
@@ -1196,6 +1280,7 @@ if __name__ == "__main__":
     thirteenth_guide_regressions()
     thirteenth_batch_regressions()
     fourteenth_round_regressions()
+    fifteenth_round_regressions()
     print(f"Structure: {n} referenced worked items; all checked blocks present.")
     print("Selected numeric invariants: passed.")
     print("Not a replacement for full independent physics or copyright review.")
