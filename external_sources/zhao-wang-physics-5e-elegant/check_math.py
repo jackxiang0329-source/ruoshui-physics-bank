@@ -10,11 +10,24 @@ import re
 
 ROOT = Path(__file__).resolve().parent
 CHAPTERS = (
+    ("chapters/textbook-ch01-foundations-001-003.tex", "sourceproblem",
+     [f"1.1.{n}" for n in range(1, 8)] +
+     [f"1.2.{n}" for n in range(1, 8)] +
+     [f"1.3.{n}" for n in range(1, 4)]),
     ("chapters/textbook-ch01-exercises.tex", "sourceproblem",
      [f"1.3.{n}" for n in range(4, 18)]),
+    ("chapters/textbook-ch02-choices.tex", "sourceproblem",
+     [f"2.1.{n}" for n in range(1, 13)]),
+    ("chapters/textbook-ch02-blanks.tex", "sourceproblem",
+     [f"2.2.{n}" for n in range(1, 10)]),
+    ("chapters/textbook-ch02-solutions-001-012.tex", "sourceproblem",
+     [f"2.3.{n}" for n in range(1, 13)]),
+    ("chapters/textbook-ch02-solutions-013-025.tex", "sourceproblem",
+     [f"2.3.{n}" for n in range(13, 26)]),
     ("chapters/guide-ch01-examples.tex", "sourceexample",
      [f"1.{n}" for n in range(1, 6)]),
-    ("chapters/guide-ch02-examples.tex", "sourceexample", ["2.1"]),
+    ("chapters/guide-ch02-examples.tex", "sourceexample",
+     [f"2.{n}" for n in range(1, 8)]),
 )
 
 
@@ -36,7 +49,7 @@ def structural_check():
             for label in (r"\problemtext", r"\workings", r"\crosscheck"):
                 assert label in block, (number, label)
         total += len(ids)
-    assert total == 20, total
+    assert total == 89, total
     return total
 
 
@@ -97,9 +110,52 @@ def numerical_check():
     near(m1*aA,m2*aB)
 
 
+
+
+def second_round_regressions():
+    """Independent spot checks for the 69 newly covered references."""
+    # First-chapter foundations: circular arc, quadratic velocity, resistance law.
+    near(5*math.pi, math.pi*5)
+    near(5+3*3+3**2, 23)
+    near(math.log(10)/.4, 5.756462732485114)
+    near(2.5*math.log(10), math.log(10)/.4)
+    # Second-chapter: momentum/energy/fluids.
+    near(.5*(.02/2)*(-23.6)**2, .25*.02*23.6**2)
+    near(.5 * 100 * .02**2, .02)
+    assert .5 * 100 * (.1 - .02)**2 > .5 * 100 * .02**2, (
+        "textbook 2.2.7 data should be flagged, not assigned a positive friction coefficient"
+    )
+    near(40+2.5*100,290)
+    near(1000*9.8*50*(5*1.5+1.5**2/2), 4_226_250)
+    near(4e-3/(40e-4),1.0)
+    near(4e-3/(10e-4),4.0)
+    near(10*4+4**2,56)
+    near(10*10+10**2,200)
+    near((math.sqrt(2)-1)*.01,.004142135623730951)
+    near(5*(-1200+900*9.8*5),214_500)
+    near(.5*1.5*((.01*(500-30)/1.5)**2)/1.25+1.5*9.8,
+         1.5*9.8+1.5*(4.7/1.5)**2/1.25)  # same string-tension model
+    near(4.7/1.5, 47/15)
+    # Orbit angular momentum and Earth-Moon collinear balance.
+    G, ME, MM, D, RM = 6.6743e-11, 5.98e24, 7.35e22, 3.84e8, 1.74e6
+    d = D/(1+math.sqrt(ME/MM))
+    near(ME/(D-d)**2, MM/d**2)
+    near(d-RM, 36_583_322.717654966, 1e-9)
+    U = -G*(ME/(D-d)+MM/d)
+    near(U,-1_282_619.9019637743,1e-9)
+    near(8.75e10*5.46e4/9.08e2, 5.261563876651982e12)
+    # Independent check of study-guide example 2.2 (source's "182 m" is suspect).
+    m,k,v0,g=45,.03,60,9.8
+    t = m/k*math.log1p(k*v0/(m*g))
+    H = m*v0/k -m*m*g/(k*k)*math.log1p(k*v0/(m*g))
+    near(t, 6.109988081453803)
+    near(H,183.17520262909238)
+    assert H > 183 and H < 183.2
+
 if __name__ == "__main__":
     n = structural_check()
     numerical_check()
+    second_round_regressions()
     print(f"Structure: {n} referenced worked items; all checked blocks present.")
     print("Selected numeric invariants: passed.")
     print("Not a replacement for full independent physics or copyright review.")
