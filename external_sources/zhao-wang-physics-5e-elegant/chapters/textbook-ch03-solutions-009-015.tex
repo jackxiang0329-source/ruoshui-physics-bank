@@ -1,0 +1,138 @@
+% 第三批：《大学物理简明教程》第5版，解答题3.3.9--3.3.15。
+% 来源：书内及用户PDF第72--73页；待独立学术二校。
+\subsection{解答题：3.3.9--3.3.15}
+
+\sourceproblem{3.3.9}{72}{72}
+\problemtext 均匀细杆质量$m_1$、长度$l$，上端绕水平轴$O$，初始竖直静止。质量$m_2$的小球水平以速率$v_0$击中距轴$d=\frac34l$处，碰后黏附在杆上。求碰撞刚结束时的角速度。
+\workings
+短时碰撞中，支点冲量对$O$无力矩，重力冲量矩忽略，故
+\[
+m_2v_0d=(J_{\rm rod}+m_2d^2)\omega,\qquad
+J_{\rm rod}=\frac13m_1l^2.
+\]
+代入$d=3l/4$得到
+\[
+\boxed{\omega=
+\frac{\frac34m_2lv_0}
+{\frac13m_1l^2+\frac9{16}m_2l^2}
+=\frac{36m_2v_0}{l(16m_1+27m_2)}}.
+\]
+\crosscheck $m_2\to0$时$\omega\to0$；该非弹性碰撞不能用机械能守恒计算瞬间角速度。
+
+\sourceproblem{3.3.10}{72}{72}
+\problemtext 光滑桌面上的$m_1=5\,\mathrm{kg}$物块通过轻绳连接垂挂的$m_2=20\,\mathrm{kg}$物块，绳跨过半径$r=0.10\,\mathrm m$、质量$M=1.5\,\mathrm{kg}$的均匀圆盘定滑轮，不打滑。求两物体共同的加速度。
+\workings
+设两侧绳张力为$T_1,T_2$，沿运动方向有
+$T_1=m_1a,\ m_2g-T_2=m_2a$。
+轮转动方程
+\[
+(T_2-T_1)r=J\frac ar,\qquad J=\tfrac12Mr^2.
+\]
+相加得
+\[
+m_2g=\left(m_1+m_2+\frac J{r^2}\right)a,
+\quad\boxed{
+a=\frac{m_2g}{m_1+m_2+M/2}
+=\frac{20(9.8)}{5+20+0.75}
+\approx7.612\,\mathrm{m/s^2}}.
+\]
+\crosscheck $M\to0$恢复理想无惯量滑轮加速度$20g/25$；$r$因$J\propto r^2$消去。
+
+\sourceproblem{3.3.11}{72}{72}
+\problemtext 一根长$l$、质量$m$的均匀细杆绕左端水平光滑轴$O$在竖直面内自由转动；杆从\emph{水平位置}静止释放。求初始角加速度及杆从水平位置向下转过$\theta$时的角速度。
+\workings
+取向下转动为正。初始重力矩为$mg(l/2)$，杆对端轴惯量$J=ml^2/3$，所以
+\[
+\boxed{\alpha_0=\frac{mg(l/2)}{ml^2/3}=\frac{3g}{2l}}.
+\]
+转角$\theta$后杆的质心下降$(l/2)\sin\theta$，重力势能损失转为转动动能：
+\[
+mg\frac l2\sin\theta=\frac12\frac{ml^2}{3}\omega^2.
+\]
+故
+\[
+\boxed{\omega(\theta)=\sqrt{\frac{3g\sin\theta}{l}}}
+\quad(0\le\theta\le\pi/2).
+\]
+\crosscheck $\theta=0$时$\omega=0$；当$\theta=\pi/2$速率最大，且$\alpha$此时为零。
+
+\sourceproblem{3.3.12}{72--73}{72--73}
+\problemtext 质量$m$的质点悬挂于天花板固定点$B$，绳长$l$，以水平圆轨道半径$r<l$、角速度$\omega$做匀速圆周运动，水平圆心为$O$。求对$O$与$B$的角动量、重力及张力对两点的力矩，并判断角动量守恒。
+\workings
+令圆轨道位于$z=0$平面，$B$在$O$上方
+$h=\sqrt{l^2-r^2}$。取质点瞬时位置$\bm r_O=r\bm e_r$、速度$\bm v=\omega r\bm e_\varphi$。
+则
+\[
+\boxed{\bm L_O=mr^2\omega\bm e_z},\qquad
+\bm r_B=r\bm e_r-h\bm e_z,
+\quad
+\boxed{\bm L_B=m\omega r(h\bm e_r+r\bm e_z)}.
+\]
+因此$|\bm L_O|=mr^2\omega$、$|\bm L_B|=m\omega rl$。
+张力$T$指向$B$，竖直平衡$Th/l=mg$。相对$O$，重力力矩
+\[
+\bm M_{g,O}=mgr\,\bm e_\varphi,
+\]
+张力关于$O$的力矩
+$\bm M_{T,O}=-Tr(h/l)\bm e_\varphi=-mgr\,\bm e_\varphi$，两者相互抵消。
+故$\boxed{\dot{\bm L}_O=0}$。
+相对$B$，张力力矩为零，而重力力矩
+$\boxed{\bm M_{g,B}=mgr\,\bm e_\varphi}$；因$\bm e_r$随时间转动，
+$\dot{\bm L}_B=m\omega^2rh\,\bm e_\varphi$，利用$\omega^2h=g$与力矩一致，故
+$\bm L_B$一般\emph{不守恒}。
+\crosscheck 注意$\bm L_B$的\emph{模}虽恒定，\emph{矢量}的方向在变；“模不变”不能代替“角动量守恒”。
+
+\sourceproblem{3.3.13}{72--73}{72--73}
+\problemtext 质量$M$、半径$R$的均匀飞轮以$\omega$转动，一块质量$m$、相对飞轮可视为边缘点质量的小碎片瞬时脱离，离开时速度恰竖直向上。求碎片最高上升高度与余下飞轮刚脱离后的角速度、角动量和转动动能。
+\workings
+碎片初始速率$v=\omega R$，忽略空气阻力，
+\[
+\boxed{h_{\max}=\frac{\omega^2R^2}{2g}}.
+\]
+假定碎裂过程没有施加额外的切向冲量矩，剩余各材料点速度瞬时连续，因此飞轮余部刚脱离后仍有
+$\boxed{\omega_{\rm rem}=\omega}$。
+以碎片为位于轮缘的点质量近似，原惯量$J_0=\frac12MR^2$，
+余部惯量$J_{\rm rem}=J_0-mR^2$，从而
+\[
+\boxed{L_{\rm rem}=\left(\tfrac12M-m\right)R^2\omega},
+\qquad
+\boxed{K_{\rm rem}=\frac12\left(\tfrac12M-m\right)R^2\omega^2}.
+\]
+\crosscheck 上式是“飞轮剩余部分”的量，而非加上已脱离碎片的总角动量；点碎片近似要求$m<M/2$且碎片脱离不改变余部其他质量点瞬时速度。
+
+\sourceproblem{3.3.14}{73}{73}
+\problemtext 质量$m$、半径$R$、质量集中于轮缘的车轮起初静止，可绕轴$O$自由转动。质量$m_0$的子弹以水平速率$v_0$射入轮缘并留在轮中，入射高度与入射处径向满足图中的角$\theta$。求碰后角速度，并求最终系统转动动能占子弹初动能的比例。
+\workings
+初始车轮静止，子弹对轴的角动量大小
+$L_i=m_0v_0R|\sin\theta|$，轮缘惯量$J_w=mR^2$；
+子弹射入后系统惯量$J_f=(m+m_0)R^2$。
+\[
+\boxed{|\omega|=\frac{m_0v_0|\sin\theta|}{(m+m_0)R}}.
+\]
+相应最终转动动能
+\[
+K_f=\frac12J_f\omega^2
+=\frac{m_0^2v_0^2\sin^2\theta}{2(m+m_0)},
+\]
+因此
+\[
+\boxed{\frac{K_f}{K_i}=\frac{m_0}{m+m_0}\sin^2\theta},
+\qquad K_i=\frac12m_0v_0^2.
+\]
+\crosscheck 完全非弹性碰撞中该比值不大于$1$；$\theta=0$（沿径向射入）时对子弹角动量的贡献为零。
+
+\sourceproblem{3.3.15}{73}{73}
+\problemtext 弹簧$k=2.0\,\mathrm{N/m}$经一均匀定滑轮与质量$M=6.0\,\mathrm{kg}$的悬挂物体连接；滑轮转动惯量$J=0.5\,\mathrm{kg\,m^2}$、半径$R=0.30\,\mathrm m$，开始弹簧未伸长且物体静止。物体下落$h=0.40\,\mathrm m$时求其速率，忽略摩擦和绳滑动。
+\workings
+下落时弹簧同样伸长$h$，绳速率$v=R\omega$。
+以物体、滑轮与弹簧为系统，机械能守恒：
+\[
+Mgh=\tfrac12Mv^2+\tfrac12J\frac{v^2}{R^2}+\tfrac12kh^2.
+\]
+整理得到
+\[
+\boxed{v=\sqrt{\frac{2Mgh-kh^2}{M+J/R^2}}}
+=\sqrt{\frac{2(6)(9.8)(0.4)-2(0.4)^2}{6+0.5/(0.3)^2}}
+\approx2.011\,\mathrm{m/s}.
+\]
+\crosscheck $2Mgh-kh^2>0$使下落可达；转动惯量增大使速率降低，量纲为$\mathrm{m/s}$。
