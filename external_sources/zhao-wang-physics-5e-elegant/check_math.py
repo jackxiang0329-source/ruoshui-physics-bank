@@ -140,6 +140,16 @@ CHAPTERS = (
      [f"12.{n}" for n in range(1, 9)]),
     ("chapters/guide-ch13-examples.tex", "sourceexample",
      [f"13.{n}" for n in range(1, 9)]),
+    ("chapters/guide-ch14-examples.tex", "sourceexample",
+     [f"14.{n}" for n in range(1, 5)]),
+    ("chapters/guide-ch15-examples.tex", "sourceexample",
+     [f"15.{n}" for n in range(1, 9)]),
+    ("chapters/guide-ch16-examples-001-004.tex", "sourceexample",
+     [f"16.{n}" for n in range(1, 5)]),
+    ("chapters/guide-ch16-examples-005-007.tex", "sourceexample",
+     [f"16.{n}" for n in range(5, 8)]),
+    ("chapters/guide-ch16-examples-008-010.tex", "sourceexample",
+     [f"16.{n}" for n in range(8, 11)]),
 )
 
 
@@ -161,7 +171,7 @@ def structural_check():
             for label in (r"\problemtext", r"\workings", r"\crosscheck"):
                 assert label in block, (number, label)
         total += len(ids)
-    assert total == 603, total
+    assert total == 625, total
     main_source = (ROOT / "main.tex").read_text(encoding="utf-8")
     for relative, _macro, _expected in CHAPTERS:
         stub = relative.removesuffix(".tex")
@@ -1022,6 +1032,73 @@ def thirteenth_guide_regressions():
     near(2*.275*sin(pi/4)/3,.12963624321753373)
     near(2*.275*sin(pi/4)/4,.0972271824131503)
 
+
+def thirteenth_batch_regressions():
+    """Checks for guide Chapters 14--16, including 15.2 original exponent conflict."""
+    pi=math.pi
+    h=6.62607015e-34
+    c=299792458.0
+    e=1.602176634e-19
+    me=9.1093837139e-31
+    hc_nm=h*c/e*1e9
+    deg=lambda x:180*x/pi
+    # 14.1: three polarizers, natural-light first factor one half.
+    near((.5*math.cos(pi/6)**4)/(.5*math.cos(pi/3)**2),2.25)
+    # 14.2: equal natural and linearly polarized components.
+    near(deg(math.acos(math.sqrt(1/.95-.5))),41.97883579047295)
+    near(deg(math.acos(math.sqrt(.5/.95))),43.49151934509201)
+    # 14.3--14.4 Brewster incidence at two interfaces.
+    near(deg(math.atan(1.43)),55.034879226466444)
+    near(1.43/math.tan(math.atan(1.43)),1.)
+    near(deg(math.atan(1.333))+deg(math.atan(1.517/1.333))-90,
+         11.817195023268965)
+    # 15.1: work-function cancels in photoelectric stopping-voltage change.
+    near(hc_nm*(1/360-1/400),.3444005512033341)
+    # 15.2: source page prints 4.3e-4 nm; energy conservation yields 4.34e-3 nm.
+    E0_eV=hc_nm/.003
+    K_eV=.25*me*c*c/e
+    lam=hc_nm/(E0_eV-K_eV)
+    near(lam,.004342233646559777)
+    assert lam>.003, "Compton wavelength must increase for initially resting electron"
+    lamc=h/(me*c)*1e9
+    theta=deg(math.acos(1-(lam-.003)/lamc))
+    near(theta,63.46140909036416)
+    # 15.3: Balmer lines from n=5,4,3 to n=2, not pump from n=1.
+    R=1.097e7
+    near(1/(R*(1/4-1/25))*1e9,434.084299170899)
+    near(1/(R*(1/4-1/16))*1e9,486.1744150714068)
+    near(1/(R*(1/4-1/9))*1e9,656.3354603463993)
+    # 15.6 standard uncertainty constant vs source's width estimate.
+    p=math.sqrt(2*me*1000*e)
+    near(h/(1e-10)/p,.38782994319927)
+    near((h/(4*pi*1e-10)/p)/(.38782994319927),1/(4*pi))
+    # 15.7: box probabilities and classical comparison.
+    near(1/3-math.sqrt(3)/(4*pi),.1955011094778853)
+    near(1/3+math.sqrt(3)/(8*pi),.4022494452610573)
+    near(1/3-math.sin(2*3*pi/3)/(6*pi),1/3)
+    assert 2*(2*2+1)==10
+    # 16.4: atom-mass cancellation, binding energy and per nucleon.
+    binding=(6*1.007825+6*1.008665-12.000000)*931.5
+    near(binding,92.16260999999899)
+    near(binding/12,7.680217499999916)
+    # 16.5--16.8: first-order law and activity time scales.
+    half_life=25.0
+    near((1-2**(-1/half_life))*100,2.734505258771447)
+    near(math.log(4.)/math.log(2.),2.)
+    A=3.7e10
+    NA=6.022e23
+    decay=A/(NA/226.)
+    years=math.log(2)/decay/(365.25*86400)
+    near(years,1581.8018601500194)
+    near(1/decay/(365.25*86400),years/math.log(2))
+    # 16.9 and 16.10: energy conservation and finite recoil.
+    E_pair=2*me*c*c/e/1e6
+    near(E_pair,1.0219979013835063)
+    M=226*1.66053906892e-27
+    assert E_pair*(1+me/M)>E_pair
+    near(E_pair*(1+me/M)/E_pair,1+me/M)
+    near(E_pair/2,.5109989506917532)
+
 if __name__ == "__main__":
     n = structural_check()
     numerical_check()
@@ -1037,6 +1114,7 @@ if __name__ == "__main__":
     eleventh_round_regressions()
     twelfth_round_regressions()
     thirteenth_guide_regressions()
+    thirteenth_batch_regressions()
     print(f"Structure: {n} referenced worked items; all checked blocks present.")
     print("Selected numeric invariants: passed.")
     print("Not a replacement for full independent physics or copyright review.")
