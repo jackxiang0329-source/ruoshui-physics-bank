@@ -1,0 +1,169 @@
+% 《大学物理简明教程》第5版第8章，解答题8.3.1—8.3.7。
+% 源扫描PDF及印刷第219—220页；保留原题号/模型，独立LaTeX推导、必要时标注条件。
+
+\subsection{解答题：电流单位、磁通量与有限导体场}
+
+\sourceproblem{8.3.1}{219}{219}
+\problemtext 手机电池容量常以毫安时（mAh）表示，
+解释该单位的物理意义并将其换算为国际单位制。
+\workings
+电池容量的$mAh$是\emph{电荷量}而不是能量或功率。
+若输出电流恒定，所通过的总电量
+$Q=It$，因$1\,\mathrm{h}=3600\,\mathrm s$，
+\[
+\boxed{1\,\mathrm{mAh}=10^{-3}\,\mathrm A\cdot3600\,\mathrm s
+=3.6\,\mathrm C}.
+\]
+例如标称$3000\,\mathrm{mAh}$对应约$1.08\times10^4$ C的标称电荷量。
+\crosscheck 若需要电池能量还须给电压：
+$E\simeq UQ$，不能把mAh本身直接说成焦耳。
+
+\sourceproblem{8.3.2}{219}{219}
+\problemtext 磁感线上各点$B$的\emph{数值}是否相同？
+为何不能把对运动电荷的磁场力方向定义为磁感应强度的方向？
+\workings
+磁感线的切线表示局部$\bm B$的\emph{方向}，
+但磁感线不同位置疏密可变，所以$B$的\emph{大小}一般不恒定。
+对带电粒子，洛伦兹磁力为
+\[
+\boxed{\bm F_{\mathrm B}=q\bm v\times\bm B}.
+\]
+因此$\bm F_{\mathrm B}$同时垂直于$\bm v,\bm B$，
+在任意非零速度情况下都不平行于$\bm B$。
+更重要的是$\bm F$还取决于$\bm v$与$q$的符号，
+不能用某一次受力方向定义$\bm B$。
+\crosscheck $\bm v\parallel\bm B$时磁力为零，
+但所在点可以存在非零磁场。
+
+\sourceproblem{8.3.3}{219}{219}
+\problemtext 对一段\emph{有限长}稳恒载流直导线，
+能否只凭安培环路定理求出其周围各点的磁场？
+\workings
+一般的安培环路定理为
+\[
+\oint_L\bm B\cdot d\bm l=\mu_0I_{\mathrm{enc}}^{\mathrm{alg}}
+\quad(\text{真空稳恒电流}).
+\]
+有限导线缺乏无限长直导线的平移及圆柱对称性，
+即使知道环路上的积分值，也不能因此令$B$在整条环路上大小相同。
+故\textbf{不能仅依此定理直接求场强分布}。
+相应有限直线段的场可利用毕奥--萨伐尔定律积分：
+\[
+\boxed{B=\frac{\mu_0I}{4\pi r}
+(\sin\alpha_1+\sin\alpha_2)}
+\]
+（$\alpha_i$为两端点从垂足方向量得的对应角，
+且观察点到导线延长线的垂距为$r$）。
+\crosscheck 有限孤立直线段不能单独构成完整稳恒闭合电路，
+实际回路中的返流也可能影响外部磁场；上述公式仅是该导线段的贡献。
+
+\sourceproblem{8.3.4}{219}{219}
+\problemtext 原图8.3.4给出三维框架$abcdef$，均匀磁场
+$\bm B=2.0\,\mathrm T\,\bm e_x$，有两段长30 cm及沿$x$方向长50 cm。
+比较穿过$abcd$、$bcfe$、$aefd$三个面的磁通量。
+\workings
+磁通量只取决于面积矢量沿磁场方向的投影：
+\[
+\boxed{\Phi_S=\int_S\bm B\cdot d\bm S
+=B\,A_{S,\perp x}}.
+\]
+按照原图三个顶点坐标的几何关系，
+$abcd$处于$yz$平面，垂直磁场，其两边投影长均为$0.30$ m，
+故磁通量大小
+\[
+\boxed{|\Phi_{abcd}|=2.0(0.30)^2=0.180\,\mathrm{Wb}}.
+\]
+$bcfe$平行$x$轴，面法向与$\bm B$垂直，
+所以$\boxed{\Phi_{bcfe}=0}$。
+斜面$aefd$在$yz$平面的正交投影与$abcd$相同，
+故
+\[
+\boxed{|\Phi_{aefd}|=0.180\,\mathrm{Wb}}.
+\]
+\crosscheck \textbf{立体图的法向取向需二校}：
+两个非零通量的\emph{代数正负}取决于曲面定向，
+本稿只给无歧义的大小；闭合曲面的有向通量总和必须为零。
+
+\sourceproblem{8.3.5}{219}{219}
+\problemtext 长直导线经过半径$R$的四分之一圆弧后，
+连接两端的半无限长直线，通电$I$，图中圆心为$O$。
+求该点磁感应强度。
+\workings
+按图，左边水平直线与$O$共线，其电流元$d\bm l$
+与指向$O$的位矢平行，故贡献为零。
+四分之一圆弧张角$\pi/2$，
+\[
+B_{\mathrm{arc}}=\frac{\mu_0I}{4\pi R}\frac{\pi}{2}
+=\frac{\mu_0I}{8R}.
+\]
+右侧半无限长水平直线距$O$为$R$，
+由毕奥--萨伐尔定律
+\[
+B_{\mathrm{half}}=\frac{\mu_0I}{4\pi R}.
+\]
+依原图电流方向，圆弧和右侧直线在$O$处都指向纸内，故
+\[
+\boxed{B_O=\frac{\mu_0I}{8R}
++\frac{\mu_0I}{4\pi R}
+=\frac{\mu_0I}{8\pi R}(\pi+2)}
+\]
+方向垂直纸面向里。
+\crosscheck 若把右边的\emph{半无限长}导线按无限长计算，
+会把它的贡献误算为两倍。
+
+\sourceproblem{8.3.6}{219--220}{219--220}
+\problemtext 相互平行的无限长导线$L_1,L_2$相距$0.10$ m，
+载流分别为$I_1=20$ A向右、$I_2=10$ A向左。
+点$A$位于两线之间距$L_2$为$0.05$ m，
+点$B$位于$L_2$下方$0.05$ m。
+求$A,B$处磁场、以及外部磁场为零的位置。
+\workings
+单根无限长直线在距线$r$处
+$B=\mu_0I/(2\pi r)$。
+在$A$处，距两导线分别为$0.05$ m，磁场均向纸内，
+\[
+\boxed{B_A=\frac{\mu_0}{2\pi}
+\left(\frac{20}{0.05}+\frac{10}{0.05}\right)
+=1.20\times10^{-4}\,\mathrm T}
+\]
+方向向纸内。
+在$B$处距上导线为$0.15$ m、距下导线为$0.05$ m，
+下线磁场向外，上线磁场向里，故
+\[
+\boxed{B_B=\frac{\mu_0}{2\pi}
+\left(\frac{10}{0.05}-\frac{20}{0.15}\right)
+\approx1.33\times10^{-5}\,\mathrm T}
+\]
+方向向纸外。
+令$L_2$下方距其$r$的磁场合成零，
+\[
+\frac{10}{r}=\frac{20}{r+0.10}
+\quad\Longrightarrow\quad
+\boxed{r=0.10\,\mathrm m}.
+\]
+\crosscheck 两线之间电流相反导致磁场同向相加，
+零场点只能在电流较小的$L_2$一侧外部。
+
+\sourceproblem{8.3.7}{219--220}{219--220}
+\problemtext 粗细均匀、各段电阻与弧长成正比的导电圆环，
+在$A,B$两点接上两条沿过圆心直线方向延伸的导线，电流从$A$流入、从$B$流出。
+求圆心$O$处磁感应强度。
+\workings
+从$A$到$B$有两条圆弧支路，其圆心角分别$\theta$与$2\pi-\theta$。
+电阻比与弧长比相同：
+$R_1/R_2=\theta/(2\pi-\theta)$，
+分流电流满足$I_1/I_2=R_2/R_1$，
+故$I_1\theta=I_2(2\pi-\theta)$。
+弧长产生圆心场
+$B_1=\mu_0I_1\theta/(4\pi R)$、
+$B_2=\mu_0I_2(2\pi-\theta)/(4\pi R)$，
+两支路绕向相反，恰好抵消。
+两根直线连接线沿$O$的径向，
+其每个电流元和指向$O$的矢量平行，不产生圆心磁场。
+因此
+\[
+\boxed{\bm B_O=\bm0}.
+\]
+\crosscheck 平衡所需的不是两支路电流相等，
+而是$I_1\theta=I_2(2\pi-\theta)$，
+对应中心场等大反向。
