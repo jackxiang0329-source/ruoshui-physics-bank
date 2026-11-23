@@ -268,7 +268,7 @@ def fourth_round_regressions():
     near(cos(phase),-.5)
     assert -sin(phase)>0
     near((pi/3)/(2*pi)*2,1/3)
-    near((pi/3)/(2*pi/2),2/3)  # from A/2 to A, T=4 s
+    near((pi/3)/(pi/2),2/3)  # from +A/2 to +A when T=4 s
     near(2*pi/(6*pi),1/3)
     near((6*pi)/(.06*pi),100)
     near((2*pi)/(.06*pi),100/3)
