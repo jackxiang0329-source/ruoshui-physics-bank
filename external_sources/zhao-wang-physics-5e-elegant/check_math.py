@@ -1446,7 +1446,7 @@ def nineteenth_round_regressions():
     # 8.2.1 semicircle transit independent of path.
     near(1.-1/3,2/3)
     # 8.2.2 potential increases approaching charged ring.
-    assert 1/sqrt(2)-1<0
+    assert 1/math.sqrt(2)-1<0
     # 8.2.3 dielectrics under voltage clamp.
     er=4
     near(.5*er*2*5**2/ (.5*2*5**2),er)
