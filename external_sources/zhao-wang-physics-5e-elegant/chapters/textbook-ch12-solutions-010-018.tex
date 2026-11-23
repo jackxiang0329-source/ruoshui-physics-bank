@@ -1,0 +1,189 @@
+% 《大学物理简明教程》第5版量子物理基础计算12.3.10—12.3.18
+% 原书/PDF第319页，独立推导；自然线宽与光子位置问题说明模型定义。
+\subsection{解答题：氢谱、物质波、线宽和量子态计数}
+
+\sourceproblem{12.3.10}{319}{319}
+\problemtext 基态氢原子吸收能量为$12.75$ eV的光子。
+求激发后的能级及返回低能级过程中可能发出的谱线。
+\workings
+氢原子$E_n=-13.6/n^2$ eV，吸收后
+$E_f=-13.6+12.75=-0.85$ eV，对应
+\[
+\boxed{n=4}.
+\]
+不考虑额外选择定则限制、只按能级能差枚举的可能发射跃迁有
+\[
+\boxed{4\to3,\quad4\to2,\quad4\to1,\quad
+3\to2,\quad3\to1,\quad2\to1}.
+\]
+共有$4(4-1)/2=6$种不同能量差。
+\crosscheck \emph{严格原子跃迁}还要求电偶极选择定则（如$\Delta l=\pm1$），
+源题未提供初态亚能级，故上述是仅依据主量子数能级的\emph{可选谱线集合}，
+不是断言同一个原子一次退激发同时发出六个光子。
+
+\sourceproblem{12.3.11}{319}{319}
+\problemtext 基态氢原子受单色光激发后，
+其辐射谱中仅出现两条不同的巴耳末谱线。
+求这两条谱线波长及激发光频率。
+\workings
+巴耳末系终态为$n=2$。
+只有$n=3\to2$和$n=4\to2$两条，
+说明激发的最高主量子数按题目能级模型取$n_{\max}=4$。
+\[
+\boxed{\lambda_{3\to2}
+=\frac1{R_H(1/2^2-1/3^2)}
+\simeq656.3\,\mathrm{nm}},
+\]
+\[
+\boxed{\lambda_{4\to2}
+=\frac1{R_H(1/2^2-1/4^2)}
+\simeq486.2\,\mathrm{nm}}.
+\]
+由$1\to4$的激发能$\Delta E=12.75$ eV，
+\[
+\boxed{\nu_{\rm exc}=\frac{12.75\,e}{h}
+\simeq3.08\times10^{15}\,\mathrm{Hz}}.
+\]
+\crosscheck 两条谱线的数目依赖激发后的级联通道可能遍历；
+采用玻尔/黎德伯主能级理想模型，忽略细结构、选择定则和实际跃迁概率。
+
+\sourceproblem{12.3.12}{319}{319}
+\problemtext 基态氢原子吸收$12.09$ eV光子后，
+电子玻尔轨道半径增加了多少倍？
+\workings
+$13.6(1-1/n^2)\simeq12.09$ eV，解得$n=3$。
+玻尔半径$r_n=n^2a_0$，
+\[
+\boxed{r_{\rm after}=9r_{\rm before}}.
+\]
+若“增加多少倍”指增量与原值之比，
+\[
+\boxed{\frac{\Delta r}{r_1}=9-1=8}.
+\]
+\crosscheck 原半径变为\emph{9倍}、增加了原半径的\emph{8倍}，
+两种中文表述不能混用。
+
+\sourceproblem{12.3.13}{319}{319}
+\problemtext 一光子和一个电子的波长都为$0.20$ nm，
+求它们各自的动量大小与总能量。
+\workings
+两者按德布罗意关系动量大小相同：
+\[
+\boxed{p_\gamma=p_e=\frac{h}{\lambda}
+=\frac{6.62607015\times10^{-34}}{0.20\times10^{-9}}
+\simeq3.313\times10^{-24}\,\mathrm{kg\,m/s}}.
+\]
+光子的能量
+\[
+\boxed{E_\gamma=pc=\frac{hc}{\lambda}
+\simeq9.93\times10^{-16}\,\mathrm J
+\simeq6.20\,\mathrm{keV}}.
+\]
+电子\emph{总能量}必须包含静能：
+\[
+\boxed{E_{e,\rm total}=\sqrt{p^2c^2+m_e^2c^4}
+\simeq8.19\times10^{-14}\,\mathrm J
+\simeq511.0\,\mathrm{keV}}.
+\]
+\crosscheck 与电子总能量不同，其动能仅约
+$p^2/(2m_e)\simeq37.6$ eV。源题特别问\emph{总能量}，
+不能把37.6 eV误当总能量。
+
+\sourceproblem{12.3.14}{319}{319}
+\problemtext 自由电子动能$200$ eV，求德布罗意波长；
+再判断它与直径为1nm的孔或障碍物相遇时波性是否值得考虑。
+\workings
+因为$K\ll m_ec^2=511$ keV，
+\[
+\boxed{\lambda=\frac{h}{\sqrt{2m_eK}}
+\simeq0.0867\,\mathrm{nm}}.
+\]
+与尺寸$d=1.0$ nm的孔或障碍物相比，
+$\lambda/d\simeq0.087$，
+衍射的典型特征角数量级
+$\theta\sim\lambda/d\simeq0.087$ rad。
+所以该电子\textbf{既具有粒子性也具有波动性}，
+若观测角分辨足够精细，波动衍射效应不能先验忽略。
+\crosscheck 不能只因$\lambda<d$就断定“没有波动性”；
+实际可否测出衍射需考虑相干性、几何与探测分辨率。
+
+\sourceproblem{12.3.15}{319}{319}
+\problemtext 某激发态回到基态辐射谱线中心波长约400nm，
+观察到线宽$\Delta\lambda=10^{-5}$nm，
+估算原子激发态的平均寿命。
+\workings
+窄谱线近似下
+\[
+\Delta\nu\simeq\frac{c\,\Delta\lambda}{\lambda^2}
+=\frac{(3.00\times10^8)(10^{-14})}{(4.00\times10^{-7})^2}
+\simeq1.875\times10^7\,\mathrm{Hz}.
+\]
+若线宽指\emph{自然洛伦兹线型的频率全高半宽}，
+量子态概率寿命$\tau$与线宽满足
+$\Delta\nu_{\rm FWHM}=1/(2\pi\tau)$，因此
+\[
+\boxed{\tau\simeq\frac1{2\pi\Delta\nu}
+\simeq8.49\times10^{-9}\,\mathrm s}.
+\]
+\crosscheck \textbf{宽度定义影响常数系数}：
+若教材采用粗略能时估计$\Delta E\,\Delta t\sim h$
+则得到约$5.33\times10^{-8}$s；
+两者的差异来自$2\pi$以及谱宽/寿命的定义，
+不可称为同一个严格数值。
+
+\sourceproblem{12.3.16}{319}{319}
+\problemtext 一光子的波长为300nm，波长测量相对精度为百万分之一，
+估算其纵向位置的不确定尺度。
+\workings
+波长误差
+$\Delta\lambda/\lambda=10^{-6}$，故
+$\Delta p\simeq(h/\lambda)(\Delta\lambda/\lambda)$。
+若用标准位置--动量不确定性下界作数量级估计，
+\[
+\Delta x\gtrsim\frac{\hbar}{2\Delta p}
+=\frac{\lambda}{4\pi(\Delta\lambda/\lambda)}
+=\boxed{2.39\times10^{-2}\,\mathrm m}.
+\]
+\crosscheck \textbf{光子位置算符有理论细节}，
+本式是沿传播方向的单光子波包长度的启发性估计，
+不是任何光子位置测量的普适严格算符下界。
+按其他教材宽度约定（如$\Delta x\sim\lambda/\delta$）
+结果可在数倍或$4\pi$因子上不同。
+
+\sourceproblem{12.3.17}{319}{319}
+\problemtext 一维无限深势阱$0\le x\le a$内粒子波函数为
+$\psi(x)=\sqrt{2/a}\sin(3\pi x/a)$；
+求概率密度达到最大的位置。
+\workings
+\[
+\rho(x)=|\psi(x)|^2=\frac2a\sin^2\frac{3\pi x}{a}.
+\]
+最大值$2/a$要求
+$3\pi x/a=(k+\tfrac12)\pi$，
+即$x=(2k+1)a/6$。
+在$[0,a]$内取$k=0,1,2$，
+\[
+\boxed{x=a/6,\quad a/2,\quad 5a/6}.
+\]
+\crosscheck 端点$x=0,a$概率密度为零，正好满足无限深势阱边界条件。
+
+\sourceproblem{12.3.18}{319}{319}
+\problemtext 原子电子以$n,l,m_l,m_s$四量子数表征，
+分别在(1)固定$n,l,m_l$，
+(2)固定$n,l$，(3)仅固定$n$时，求可有的不同量子态数。
+\workings
+固定$n,l,m_l$时电子自旋投影$\pm1/2$，
+\[
+\boxed{N_1=2}.
+\]
+固定$n,l$时$m_l=-l,\ldots,l$共$2l+1$种，
+各有两种自旋，故
+\[
+\boxed{N_2=2(2l+1)}.
+\]
+固定$n$时对$l=0,\ldots,n-1$求和，
+\[
+\boxed{N_3=2\sum_{l=0}^{n-1}(2l+1)=2n^2}.
+\]
+\crosscheck 这些是\emph{不同单电子态}的最大计数；
+若是\emph{同一原子实际电子占据数}还须遵守泡利不相容原理。
