@@ -1,0 +1,168 @@
+% 自测题2：计算题2.3.1—2.3.5、问答2.4.1；
+% 《大学物理学学习指导》第5版印刷51—53／PDF59—61页。
+\subsection{自测题2：变力功、楔块碰撞、滑块小车与旋转}
+
+\sourcetest{2.3.1}{51--52}{59--60}
+\problemtext 非胡克弹簧被外力拉伸$x$所需的力
+$F(x)=52.8x+38.4x^2$（SI）。
+求从$x_1=0.50$m拉至$x_2=1.00$m外力所做的功；
+若弹簧置于光滑水平桌面，一端固定、另一端系2.17kg物块，
+从$x_2$静止释放，回到$x_1$时的速度；判断是否保守力。
+\workings
+外力功为
+\[
+\begin{aligned}
+W&=\int_{0.50}^{1.00}(52.8x+38.4x^2)\,dx\\
+&=\left[26.4x^2+12.8x^3\right]_{0.50}^{1.00}\\
+&=(26.4+12.8)-(6.6+1.6)
+=\boxed{31.0\,\mathrm J}.
+\end{aligned}
+\]
+若忽略摩擦且弹簧静能转为物块动能，
+$\tfrac12(2.17)v^2=W$，故
+\[
+\boxed{v=\sqrt{\frac{62}{2.17}}\simeq5.35\,\mathrm{m/s}}.
+\]
+由于弹力只依形变量$x$，可定义
+$U(x)=\int_0^xF(s)\,ds$，
+弹簧回复力为$-\partial U/\partial x$，
+因此该理想弹簧力是\textbf{保守力}，
+虽不遵守线性胡克定律。
+\crosscheck “不满足胡克定律”不等于“不保守”；
+若真实弹簧有迟滞及摩擦则另当别论。
+
+\sourcetest{2.3.2}{52}{60}
+\problemtext 光滑斜面上质量$m$物块从高$h$静止滑下，
+落入与地面有摩擦的沙箱，物块与沙箱合质量$M+m$。
+沙箱后方弹簧劲度$k$、初始原长，
+碰后最大压缩$l$。
+推导地面动摩擦系数$\mu$。
+\workings
+物块滑至底部前忽略耗散，$v=\sqrt{2gh}$。
+水平碰合时动量守恒，沙箱和物块共同速率
+\[
+V=\frac{m}{M+m}\sqrt{2gh}.
+\]
+碰后动能为
+\[
+K=\frac12(M+m)V^2=\frac{m^2gh}{M+m}.
+\]
+在压缩弹簧的距离$l$内，
+机械能消耗于弹簧储能与滑动摩擦：
+\[
+\frac{m^2gh}{M+m}=\frac12kl^2+\mu(M+m)gl.
+\]
+解得
+\[
+\boxed{\mu=
+\frac{m^2gh/(M+m)-\tfrac12kl^2}{(M+m)gl}}.
+\]
+\crosscheck 本式要求右端非负；
+如果由给定数据计算为负，则源模型条件
+（例如弹簧初态、碰撞过程中的其他功）不自洽。
+
+\sourcetest{2.3.3}{52}{60}
+\problemtext 质量$M=10$kg水平小车上有质量$m=1$kg的滑块，
+弹簧劲度$k=110\,\mathrm{N/m}$。
+初始弹簧压缩$\Delta l=0.05$m、
+滑块到右端挡板距离$L=1.1$m；
+同时释放且没有摩擦。
+求滑块与弹簧刚分离后两物体对地速度及滑块碰上车端的时间。
+\workings
+总水平动量为零。记滑块向右速度$v$、小车向左速度$-u$，
+则$mv=Mu$。
+释放的弹簧势能为
+\[
+\frac12k(\Delta l)^2
+=\frac12mv^2+\frac12Mu^2.
+\]
+代入质量数据，或直接用相对速率
+$v_{\rm rel}=v+u$和约化质量
+$\mu_r=Mm/(M+m)=10/11$kg，可得
+\[
+v_{\rm rel}=\Delta l\sqrt{k/\mu_r}
+=0.05\sqrt{110(11/10)}=0.55\,\mathrm{m/s}.
+\]
+两速度由动量守恒确定：
+\[
+\boxed{v=\frac{M}{M+m}v_{\rm rel}=0.50\,\mathrm{m/s}},
+\quad
+\boxed{u=\frac{m}{M+m}v_{\rm rel}=0.050\,\mathrm{m/s}}.
+\]
+分离后在车内的相对速度不变，
+到右端挡板所需
+\[
+\boxed{t=\frac L{v+u}=\frac{1.10}{0.55}=2.00\,\mathrm s}.
+\]
+\crosscheck 挡板与滑块在同一辆运动小车内，
+相遇应除以\emph{相对速率}0.55m/s，
+不能只除以对地的滑块速度0.50m/s。
+
+\sourcetest{2.3.4}{52}{60}
+\problemtext 可绕同一轴独立转动的圆轮A、B质量分别
+$m_A=10$kg、$m_B=20$kg，半径$r_A,r_B$。
+从边缘切向拉细绳，直到两轮边缘的切向加速度大小相同，
+已知$J_A=m_Ar_A^2/2$、$J_B=m_Br_B^2/2$，
+求对应拉力$f_A/f_B$。
+\workings
+对每个轮子，$f_ir_i=J_i\alpha_i$，
+切向加速度$a_t=\alpha_ir_i$相同，
+于是
+\[
+f_i=\frac{J_i}{r_i^2}a_t=\frac12m_i a_t.
+\]
+因此
+\[
+\boxed{\frac{f_A}{f_B}=\frac{m_A}{m_B}=\frac12}.
+\]
+\crosscheck 半径消去是由于题目给定
+\emph{同样的边缘切向加速度}，
+并且转动惯量按薄圆盘$J=mr^2/2$计算。
+
+\sourcetest{2.3.5}{52--53}{60--61}
+\problemtext 均匀球体绕直径经光滑轴匀速旋转，
+其半径由$R$对称收缩到$R/2$。
+绕该轴的转动惯量$J=2mR^2/5$，
+求旋转周期的变化。
+\workings
+外力对轴净力矩为零，
+$J\omega$守恒。质量不变，$J'\!/J=(R/2)^2/R^2=1/4$，
+因此$\omega'=4\omega$。
+周期$T=2\pi/\omega$，故
+\[
+\boxed{T'=\frac T4}.
+\]
+\crosscheck 半径减半后角速度增至4倍，
+而不是2倍；能量可由球体收缩的内部做功增加，
+不要求转动动能守恒。
+
+\subsection{自测题2：摩擦力—倾角曲线问答}
+
+\sourcetest{2.4.1}{53}{61}
+\problemtext 质量$m$木块置于粗糙木板上，
+木板与水平面的夹角$\theta$从0连续增至90°，
+动、静摩擦系数按题意均取$\mu$。
+画出摩擦力大小$f$随$\theta$的变化，
+并指出开始滑动时的临界倾角$\theta_0$。
+\workings
+在未滑动的静止阶段，沿斜面重力分量由静摩擦平衡，
+$f=mg\sin\theta$，逐渐增大。
+恰开始滑动时
+$mg\sin\theta_0=\mu mg\cos\theta_0$，所以
+\[
+\boxed{\theta_0=\arctan\mu}.
+\]
+开始滑动后，动摩擦力大小为
+$f_k=\mu N=\mu mg\cos\theta$，逐渐下降。
+因此所画曲线由以下分段式决定：
+\[
+\boxed{
+f(\theta)=
+\begin{cases}
+mg\sin\theta,&0\le\theta\le\arctan\mu,\\
+\mu mg\cos\theta,&\arctan\mu<\theta\le\pi/2.
+\end{cases}}
+\]
+\crosscheck 若实际静摩擦最大系数$\mu_s$
+与动摩擦系数$\mu_k$不同，曲线在临界角会出现向下跳变；
+这里严格遵守题设给出的单一$\mu$简化模型。
