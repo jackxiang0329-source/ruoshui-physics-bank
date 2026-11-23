@@ -1,0 +1,765 @@
+% Consolidated textbook-ch06 from a4681eacb57a1f9fed79c1da26e5c6d0418a7d1c; source fragments preserved.
+
+% === BEGIN textbook-ch06-choices.tex blob 70e65c77e27b981734b9f625b09b0cf9eac8d79f ===
+% 《大学物理简明教程》（第五版）第6章“热力学基础”选择题6.1.1--6.1.13。
+% 原书印刷/PDF第153--155页。基于用户上传扫描本独立推导；本章处于待人工二校状态。
+\subsection{选择题：平衡、热力学定律与热机}
+
+\sourceproblem{6.1.1}{153}{153}
+\problemtext 容器内各处压强相同，或者各处温度相同。这两种单独的条件能否必然说明气体整体处于热力学平衡？
+\workings
+热力学平衡需要热、力、化学等宏观平衡；单独有$p(\bm r)=\mathrm{const}$并不排除温度梯度与热流，单独有$T(\bm r)=\mathrm{const}$也不保证不存在压强梯度及宏观流动。因此两者均\emph{不必然}是平衡态，原题选\textbf{B}。
+\crosscheck 热平衡与力学平衡属于不同条件；不能由一个标量场的均匀性推出整个系统的热力学平衡。
+
+\sourceproblem{6.1.2}{153--154}{153--154}
+\problemtext 理想气体内能变化计算式$\Delta U=\nu C_{V,m}\Delta T$在何种过程中适用？其中$\nu$为物质的量、$C_{V,m}$视为常数。
+\workings
+理想气体的内能是温度的函数，$\mathrm dU=\nu C_{V,m}\mathrm dT$，此关系与经历的路径无关。因此只要气体成分与有效自由度不变，
+\[
+\boxed{\Delta U=\nu C_{V,m}(T_f-T_i)}
+\]
+在任意连接两平衡态的过程中均成立，选\textbf{D}（准静态和非准静态均可）。
+\crosscheck 这里$\Delta U$为状态函数差而非“热量”；只有等容过程中才另有$Q_V=\Delta U$。
+
+\sourceproblem{6.1.3}{154}{154}
+\problemtext 一定量理想气体经历某过程后温度升高，判断系统必定吸热、外界必定对其做正功、内能必定增加，以及“既吸热又对外做正功”是否必然。
+\workings
+理想气体$U=\nu C_{V,m}T+\mathrm{const}$（热容为正常数），温度升高必有
+\[
+\boxed{\Delta U>0}.
+\]
+第一定律$\Delta U=Q-W$并不能确定$Q$或$W$的符号：压缩可以令$W<0$，过程可绝热$Q=0$；加热膨胀则可令$W>0$。只有断言③必然正确，选\textbf{C}。
+\crosscheck 对同一内能增量，$Q=\Delta U+W$，只需选取不同的$W$即可构造热流方向不同的过程。
+
+\sourceproblem{6.1.4}{154}{154}
+\problemtext 如原图6.1.4，理想气体由同一状态$A(V_1,p_A)$膨胀至同一体积$V_2$，分别经历等压$A\to B$、等温$A\to C$、绝热$A\to D$。问哪一过程吸热最多。
+\workings
+绝热过程$Q_{AD}=0$。等温过程$\Delta U=0$，故
+$Q_{AC}=W_{AC}=\nu RT_A\ln(V_2/V_1)>0$。
+等压膨胀过程温度升高，$\Delta U_{AB}>0$且
+$W_{AB}=p_A(V_2-V_1)>W_{AC}$，所以
+\[
+\boxed{Q_{AB}>Q_{AC}>Q_{AD}=0}.
+\]
+原题选\textbf{A}。
+\crosscheck 等压过程的$p(V)$曲线在等温曲线上方；比较同体积区间曲线下面积即可先比较功。
+
+\sourceproblem{6.1.5}{154}{154}
+\problemtext 图6.1.5中理想气体从$a$经$b$到$c$，先等容升压再等压膨胀。设气体对外做功为$W$，自外界吸热为$Q$，求$\Delta U,Q,W$符号。
+\workings
+$a\to b$：$V$不变而$p$升高，故$T$上升、$\Delta U>0$，$W_{ab}=0$。
+$b\to c$：$p$不变而$V$增大，故$T$继续上升、$\Delta U>0$，$W_{bc}=p_b(V_c-V_b)>0$。
+全程
+\[
+\boxed{\Delta U>0,\quad W>0,\quad Q=\Delta U+W>0}.
+\]
+原题选\textbf{B}。
+\crosscheck 注意本题$W$特指\emph{气体对外做的功}，不是外界对气体的功。
+
+\sourceproblem{6.1.6}{154}{154}
+\problemtext 一台循环热机每循环从$400\,\mathrm K$热源吸收$1800$ J，向$300\,\mathrm K$热源释放$800$ J，对外作功$1000$ J。判断设计能否实现及理由。
+\workings
+循环的第一定律要求$W=Q_h-Q_c=1000$ J，数字满足能量守恒。
+但其热效率
+$\eta=W/Q_h=1000/1800=5/9\approx0.5556$；
+同温热源间的卡诺效率为
+$\eta_{\mathrm C}=1-300/400=0.25$。
+\[
+\boxed{\eta>\eta_{\mathrm C}},
+\]
+违反热力学第二定律，所以设计不可实现，选\textbf{D}。
+\crosscheck 第一律满足是必要但非充分条件；不能据$W=Q_h-Q_c$就断定热机可行。
+
+\sourceproblem{6.1.7}{154}{154}
+\problemtext 理想气体初态温度$T$、体积$V$，依次经历
+$(1)$可逆绝热膨胀至$2V$；
+$(2)$\emph{等容}升温恢复到$T$；
+$(3)$等温压缩回原体积$V$。
+判断全循环的净热量、净功和内能改变。
+\workings
+设气体摩尔数$\nu$、摩尔定容热容$C_{V,m}$、
+热容比$\gamma>1$。绝热膨胀末温
+$T_2=T\,2^{1-\gamma}<T$，
+气体对外作功
+\[
+W_{12}=\nu C_{V,m}(T-T_2)>0.
+\]
+第二段\emph{等容}升温，$W_{23}=0$，
+$Q_{23}=\nu C_{V,m}(T-T_2)>0$。
+第三段在温度$T$下从$2V$等温压缩到$V$，
+\[
+W_{31}=\nu RT\ln\frac{V}{2V}=-\nu RT\ln2.
+\]
+总功为
+\[
+W_{\rm net}=\nu RT\left[
+\frac{1-2^{1-\gamma}}{\gamma-1}-\ln2
+\right]<0,
+\]
+这里利用$1-e^{-z}<z$（$z=(\gamma-1)\ln2>0$）。
+完整循环状态回到起点，$\Delta U_{\rm cycle}=0$，
+由热力学第一定律$Q_{\rm net}=W_{\rm net}<0$。
+\[
+\boxed{W_{\rm net}<0,\qquad Q_{\rm net}<0,\qquad \Delta U=0}.
+\]
+气体净向外界放热，原题选\textbf{A}。
+\crosscheck 原书第二段确为\textbf{等容变化}而非等压；
+故其体积始终为$2V$，没有额外的等压体积功。
+该过程的闭合循环$p$--$V$图净面积为负。
+
+\sourceproblem{6.1.8}{154--155}{154--155}
+\problemtext 两台可逆卡诺热机的循环面积（$p$--$V$图中包围的面积）相等；第一台工作于温度$T_1$和$T_3$之间，第二台工作于$T_2$与$T_3$之间，$T_1>T_2>T_3$。比较它们的效率、吸热、放热与做功。
+\workings
+闭合循环对外净功是$p$--$V$闭合曲线面积，
+图示面积相等给$W_1=W_2$。
+但卡诺效率不同：
+\[
+\eta_1=1-\frac{T_3}{T_1}>
+1-\frac{T_3}{T_2}=\eta_2.
+\]
+所以$Q_{h,1}=W_1/\eta_1<Q_{h,2}$；两台热机放热也不相等。
+唯有
+\[
+\boxed{Q_{h,1}-Q_{c,1}=Q_{h,2}-Q_{c,2}}
+\]
+必然成立，选\textbf{D}。
+\crosscheck 相等的循环\emph{面积}是相等的净功，而非相等的效率。
+
+\sourceproblem{6.1.9}{155}{155}
+\problemtext 关于可逆与准静态过程，判断：①可逆过程必准静态；②准静态过程必可逆；③不可逆过程不能朝相反方向进行；④有摩擦过程必不可逆。
+\workings
+①真：宏观可逆要求无穷小驱动力且各阶段可视为平衡态；
+②假：带有摩擦的缓慢过程也可准静态，却会产生熵；
+③假：“不可逆”是不能让系统\emph{连同环境}完全恢复，并非禁止反向变化；
+④真：有限摩擦耗散造成不可逆熵产生。
+故正确的仅①、④，选\textbf{D}。
+\crosscheck 系统可以在外部做功后逆向移动；恢复系统不等于恢复系统与环境的整体。
+
+\sourceproblem{6.1.10}{155}{155}
+\problemtext 下面哪个说法严格体现热力学第二定律：从单一热源吸热绝对不可能全部做功、任意可逆过程净吸热等于功、摩擦生热不可逆、热量绝不能从低温传到高温？
+\workings
+热力学第二定律的开尔文表述禁止\emph{循环工作的装置}只从单一热源吸热且全部转为功，并不排斥非循环的等温膨胀等过程；
+任意可逆非循环过程可有$\Delta U\ne0$；
+借助外部做功的冰箱可令热从低温流向高温。
+摩擦生热会产生熵，无法不留环境改变地完全逆转，故选\textbf{C}。
+\crosscheck 断言必须带上“循环”“唯一结果”或“自发”等限定，不能无限推广。
+
+\sourceproblem{6.1.11}{155}{155}
+\problemtext 绝热、刚性容器一半为理想气体，另一半为真空，抽去隔板自由膨胀至整个容器，问温度与熵的变化。
+\workings
+容器绝热且不对外做体积功，$Q=W=0$，故$\Delta U=0$；
+理想气体$U=U(T)$，所以
+$\boxed{T_f=T_i}$。
+自由膨胀不可逆，但可沿同温可逆路径计算熵差：
+\[
+\boxed{\Delta S=\nu R\ln\frac{V_f}{V_i}
+=\nu R\ln2>0}.
+\]
+温度不变、熵增加，选\textbf{A}。
+\crosscheck 不可逆真实路径$Q=0$，\emph{不可}直接沿该路径用$\Delta S=\int\delta Q/T$计算；需任选相同端点间的可逆路径。
+
+\sourceproblem{6.1.12}{155}{155}
+\problemtext 对一定量理想气体，哪些组合可能出现：(A)等容加热而内能减少、压强升高；(B)等温压缩同时放热、压强升高；(C)等压压缩时吸热、内能增加；(D)绝热压缩同时内能减少、压强升高。
+\workings
+等容加热使$T$上升、$U$上升，所以(A)不可能；
+等温压缩理想气体$\Delta U=0$，气体对外做负功，$Q=W<0$，而$p\propto1/V$增大，所以(B)可实现。
+等压压缩使$T$下降、$\Delta U<0$，故(C)不可能；
+绝热压缩时$W<0$、$\Delta U=-W>0$，故(D)不可能。
+原题选\textbf{B}。
+\crosscheck 所有“加热/放热”与功正负号均以系统\emph{气体}为参考。
+
+\sourceproblem{6.1.13}{155}{155}
+\problemtext 图6.1.13中理想气体从$b$压缩到$a$，中间曲线$bca$为绝热路径，
+其下方路径为$b1a$，上方路径为$b2a$。
+问两条非绝热压缩路径中气体吸放热及做功的符号。
+\workings
+两路径均由大体积向小体积进行，故
+\[
+W_{b1a}<0,\qquad W_{b2a}<0.
+\]
+固定相同端点，$\Delta U=U_a-U_b$相同。
+绝热路径$Q_{bca}=0$，且$W_{bca}=-\Delta U$。
+下方路径压缩时压力较低，故$|W_{b1a}|<|W_{bca}|$，
+$Q_{b1a}=\Delta U+W_{b1a}>0$；
+上方路径则$|W_{b2a}|>|W_{bca}|$，故$Q_{b2a}<0$。
+\[
+\boxed{b1a:\ Q>0,\ W<0;\qquad b2a:\ Q<0,\ W<0}.
+\]
+原题选\textbf{B}。
+\crosscheck 此比较以原图中两条曲线始终分处绝热线两侧为条件；压缩方向会改变路径功符号。
+% === END textbook-ch06-choices.tex ===
+
+% === BEGIN textbook-ch06-blanks.tex blob cada3001e7daef0f5c032296b701010f62e04a1a ===
+% 《大学物理简明教程》第6章填空题6.2.1--6.2.9；
+% 印刷/PDF第156页，来源用户上传扫描页。待独立二校。
+\subsection{填空题：热容、状态变化与循环功}
+
+\sourceproblem{6.2.1}{156}{156}
+\problemtext 理想气体先等温压缩到某体积，外界对它做功$|W_1|$；
+随后绝热膨胀回原体积，气体对外做功$|W_2|$。
+求全过程从外界吸收的净热量$Q$与内能改变$\Delta U$。
+\workings
+以气体对外做功为正，等温压缩有$\Delta U_1=0$，
+$W_1=-|W_1|$，故$Q_1=W_1=-|W_1|$。
+随后绝热膨胀$Q_2=0$、$W_2=+|W_2|$，
+$\Delta U_2=-W_2=-|W_2|$。
+因此
+\[
+\boxed{Q=-|W_1|},\qquad
+\boxed{\Delta U=-|W_2|}.
+\]
+\crosscheck 两段合成$W=-|W_1|+|W_2|$，由$Q-W$仍得$-|W_2|$。净热量负号表示气体向外界放热。
+
+\sourceproblem{6.2.2}{156}{156}
+\problemtext 一定量理想气体由图6.2.2的$A(2p_1,V_1)$沿$p$--$V$直线变化到$B(p_1,2V_1)$。求气体对外做功$W$及内能变化$\Delta U$。
+\workings
+直线段压力平均值为$(2p_1+p_1)/2=\tfrac32p_1$，
+体积增量为$V_1$，故
+\[
+\boxed{W=\int_{V_1}^{2V_1}p\,dV=\frac32p_1V_1}.
+\]
+理想气体$U=U(T)$，且
+$p_AV_A=2p_1V_1=p_BV_B$，故$T_A=T_B$，
+\[
+\boxed{\Delta U=0}.
+\]
+\crosscheck 路径不是等温线，尽管两端温度相同，中间温度可以不同；$Q=W$仅对整个过程成立。
+
+\sourceproblem{6.2.3}{156}{156}
+\problemtext 10 mol单原子理想气体压缩时，外界对气体做功209 J，气体温度升高1 K。求内能增加量与外界向气体传递的净热量。
+\workings
+\[
+\boxed{\Delta U=\nu C_{V,m}\Delta T
+=10\cdot\frac32R\cdot1\approx124.7\,\mathrm J}.
+\]
+外界对气体功$W_{\mathrm{on}}=+209$ J，
+以热入系统为正，$\Delta U=Q+W_{\mathrm{on}}$，所以
+\[
+\boxed{Q\approx124.7-209=-84.3\,\mathrm J}.
+\]
+\crosscheck 压缩期间虽升温，但由于机械压缩能输入209 J超过内能增量，剩余能量必须以热的形式放出。
+
+\sourceproblem{6.2.4}{156}{156}
+\problemtext 一定量理想气体在等压膨胀过程中对外做功200 J，分别求单原子分子气体和刚性双原子分子气体从外界吸收的热量。
+\workings
+等压功$W=\nu R\Delta T=200$ J。
+按气体分子自由度$i$，$\Delta U=(i/2)\nu R\Delta T$，
+故$Q=\Delta U+W=(i/2+1)W$。于是
+\[
+\boxed{Q_{\mathrm{mono}}=\frac52(200)=500\,\mathrm J},
+\qquad
+\boxed{Q_{\mathrm{diatom}}=\frac72(200)=700\,\mathrm J}.
+\]
+\crosscheck 等压膨胀温度上升，内能增量应为正；
+若误把$Q$等同于做功则会遗漏气体内能改变。
+
+\sourceproblem{6.2.5}{156}{156}
+\problemtext 摩尔热容比为$\gamma$的理想气体自标准状态$(p_0,V_0,T_0)$绝热膨胀至$3V_0$，求终态温度和压强。
+\workings
+准静态可逆绝热过程满足
+$TV^{\gamma-1}=\mathrm{const}$及$pV^\gamma=\mathrm{const}$，
+因此
+\[
+\boxed{T_f=T_0\,3^{1-\gamma}},\qquad
+\boxed{p_f=p_0\,3^{-\gamma}}.
+\]
+\crosscheck 当$\gamma>1$时膨胀降温且压强下降；如果绝热过程不可逆，以上泊松绝热关系未必成立。
+
+\sourceproblem{6.2.6}{156}{156}
+\problemtext 一卡诺热机以质量290 g的空气为工作物质，工作于$27^\circ\mathrm C$热源和$-73^\circ\mathrm C$冷源之间。高温等温膨胀体积放大约$e=2.718$倍，求循环效率及每循环净功。空气摩尔质量$29\times10^{-3}\,\mathrm{kg/mol}$。
+\workings
+工作物质摩尔数$\nu=0.290/0.029=10$ mol，
+$T_h=300.15$ K、$T_c=200.15$ K。
+卡诺效率
+\[
+\boxed{\eta=1-\frac{T_c}{T_h}
+\approx0.3332}.
+\]
+高温等温膨胀吸热
+$Q_h=\nu RT_h\ln(V_f/V_i)\approx10RT_h\ln e=10RT_h$。
+每循环净功
+\[
+\boxed{W=\eta Q_h=\nu R(T_h-T_c)\ln e
+\approx8.314\times10^3\,\mathrm J}.
+\]
+\crosscheck 使用绝对温度（K），而不是摄氏数值直接计算效率；
+若教材按300 K和200 K处理，则$\eta=1/3$。
+
+\sourceproblem{6.2.7}{156}{156}
+\problemtext 一定量理想气体的定容摩尔热容$C_{V,m}=2.5R$。
+在等压膨胀时，气体对外做功$W$与从外界吸收热量$Q$的比为多少？
+\workings
+等压过程中
+$W=\nu R\Delta T$，
+$Q=\nu C_{P,m}\Delta T=\nu(C_{V,m}+R)\Delta T
+=3.5\nu R\Delta T$，故
+\[
+\boxed{\frac WQ=\frac{R}{3.5R}=\frac27}.
+\]
+\crosscheck 这类理想气体的$\gamma=C_P/C_V=3.5/2.5=7/5$，等压功比例也等于$(\gamma-1)/\gamma=2/7$。
+
+\sourceproblem{6.2.8}{156}{156}
+\problemtext 1 mol理想气体沿图6.2.8中$A\to B\to C\to D\to A$顺时针循环：
+$V_A=V_B=22.4$ L，$V_C=V_D=33.6$ L，
+$p_A=p_D=1$ atm、$p_B=p_C=2$ atm。求每循环的净对外功。
+\workings
+$\Delta V=(33.6-22.4)\,\mathrm L=0.0112\,\mathrm{m^3}$，
+$\Delta p=(2-1)\,\mathrm{atm}=101325\,\mathrm{Pa}$。
+顺时针闭合曲线的净功等于矩形面积，
+\[
+\boxed{W_{\mathrm{net}}
+=\Delta p\,\Delta V
+=101325(0.0112)\approx1.135\times10^3\,\mathrm J}.
+\]
+\crosscheck 等容两段功为零，等压上边对外功$2p_0\Delta V$，
+等压下边压缩功$-p_0\Delta V$，相加为$p_0\Delta V$。
+
+\sourceproblem{6.2.9}{156}{156}
+\problemtext 热机每秒从$T_h=600$ K热源吸收$Q_h=3.34\times10^4$ J，
+向$T_c=300$ K冷源排出$Q_c=2.09\times10^4$ J。
+求实际效率、是否可逆、以及固定每秒吸热量时理论最大功率。
+\workings
+实际净功率$W=Q_h-Q_c=1.25\times10^4\,\mathrm{W}$，
+\[
+\boxed{\eta=\frac{1.25\times10^4}{3.34\times10^4}
+\approx0.3743}.
+\]
+卡诺效率$\eta_C=1-T_c/T_h=0.5$。
+因为$\eta<\eta_C$，这台热机\textbf{不是可逆卡诺热机}。
+保持$Q_h$不变时最大可能净功率
+\[
+\boxed{W_{\max}=\eta_C Q_h
+=1.67\times10^4\,\mathrm W}.
+\]
+\crosscheck 不能将实际输出功率$1.25\times10^4$ W误认为卡诺上限；热机循环每秒运行时功率数值等于每秒功的焦耳数。
+% === END textbook-ch06-blanks.tex ===
+
+% === BEGIN textbook-ch06-solutions-001-009.tex blob 4f4dbb81c3d8d418c23f1d41181323e746787526 ===
+% 《大学物理简明教程》第6章解答题6.3.1--6.3.9。
+% 用户扫描印刷/PDF第156--157页；题意转述与独立解析，待图示和学术二校。
+\subsection{解答题：第一定律、热容和实际热机}
+
+\sourceproblem{6.3.1}{156}{156}
+\problemtext 图6.3.1中系统从$a$沿曲线$acb$到$b$，从外界吸热350 J、对外做功126 J。
+(1) 若改沿折线路径$adb$从$a$到$b$，气体对外做功42 J，求传入系统的热量。
+(2) 从$b$沿曲线$ba$返回$a$，外界对系统做功84 J，判断吸放热并计算。
+\workings
+以系统对外做功$W>0$、系统吸热$Q>0$。
+第一条路径由$\Delta U=Q-W$给
+\[
+U_b-U_a=350-126=\boxed{224\,\mathrm J}.
+\]
+(1) 状态函数内能差不随路径变，
+\[
+\boxed{Q_{adb}=\Delta U+W_{adb}=224+42=266\,\mathrm J}.
+\]
+(2) 反方向内能改变量$\Delta U_{ba}=-224$ J，外界对系统做功84 J意味着$W_{ba}=-84$ J，
+\[
+\boxed{Q_{ba}=\Delta U_{ba}+W_{ba}
+=-224-84=-308\,\mathrm J}.
+\]
+故系统向外放热308 J。
+\crosscheck 循环$acb+ba$的净功为$126-84=42$ J，净热也为$350-308=42$ J，满足完整循环$\Delta U=0$。
+
+\sourceproblem{6.3.2}{156}{156}
+\problemtext 用桨叶搅拌密闭容器内的液体，桨叶向系统输入功率2.24 kW，同时容器以0.586 kW的速率向环境散热。求系统每秒内能改变多少。
+\workings
+液体与容器为系统；桨叶输入的机械功率为正$P_{\mathrm{on}}=2.24$ kW，
+系统放热$P_Q=-0.586$ kW。第一定律的功输入形式：
+\[
+\frac{dU}{dt}=\dot Q+\dot W_{\mathrm{on}}
+=-0.586+2.24
+=\boxed{1.654\,\mathrm{kW}}.
+\]
+若过程持续1 s，则$\boxed{\Delta U=1.654\times10^3\,\mathrm J}$。
+\crosscheck 不可将桨叶输入机械功作为由系统\emph{对外}做功而用错符号；内能应增加。
+
+\sourceproblem{6.3.3}{156--157}{156--157}
+\problemtext 1 mol单原子理想气体由$300$ K升至$350$ K，分别经等容和等压过程，求吸热量、内能增加量与对外做功。
+\workings
+$\nu=1$ mol、$\Delta T=50$ K，单原子理想气体
+$C_{V,m}=\frac32R$，$C_{P,m}=\frac52R$。
+共通的内能改变：
+\[
+\boxed{\Delta U=\frac32R\Delta T
+=\frac32(8.31446)(50)\approx623.6\,\mathrm J}.
+\]
+等容时$W_V=0$，$Q_V=\Delta U$，故
+$\boxed{Q_V\approx623.6\,\mathrm J,\ W_V=0}$。
+等压时$W_P=R\Delta T\approx415.7$ J，
+\[
+\boxed{Q_P=\frac52R\Delta T\approx1039.3\,\mathrm J}.
+\]
+\crosscheck 等压吸热多于等容过程，是因为额外的$R\Delta T$转为外界体积功；
+两过程$\Delta U$相同。
+
+\sourceproblem{6.3.4}{157}{157}
+\problemtext 1 mol理想气体等压加热，温度升高$72$ K，吸热
+$Q=1.60\times10^3$ J。求气体对外做功、内能增量和摩尔热容比$\gamma$。
+\workings
+等压功
+\[
+\boxed{W=\nu R\Delta T=R(72)\approx598.6\,\mathrm J}.
+\]
+根据第一定律
+\[
+\boxed{\Delta U=Q-W\approx1001.4\,\mathrm J}.
+\]
+由$C_{P,m}=Q/\Delta T=1600/72\,\mathrm{J/(mol\,K)}$，
+$C_{V,m}=C_{P,m}-R$，故
+\[
+\boxed{\gamma=\frac{C_P}{C_V}
+=\frac{1600/72}{1600/72-R}
+\approx1.598}.
+\]
+\crosscheck $\gamma>1$；气体的题设等效自由度不必恰好是单原子或刚性双原子的整数模型。
+
+\sourceproblem{6.3.5}{157}{157}
+\problemtext 1 mol刚性多原子分子理想气体，初态$p_1=1$ atm、$T_1=27^\circ\mathrm C$；
+准静态绝热压缩至$p_2=16$ atm。按刚性非线性多原子分子取$i=6$，求内能增量、对外做功及末态分子数密度。
+\workings
+刚性非线性多原子分子有3个平动和3个转动自由度，
+$C_{V,m}=3R$、$\gamma=C_P/C_V=4/3$。
+可逆绝热关系给
+\[
+T_2=T_1\left(\frac{p_2}{p_1}\right)^{(\gamma-1)/\gamma}
+=(300.15\,\mathrm K)\,16^{1/4}
+\approx600.3\,\mathrm K.
+\]
+所以
+\[
+\boxed{\Delta U=3R(T_2-T_1)\approx7.49\times10^3\,\mathrm J},
+\]
+$Q=0$意味着
+$\boxed{W_{\mathrm{gas}}=-\Delta U\approx-7.49\times10^3\,\mathrm J}$。
+末态分子数密度
+\[
+\boxed{n_2=\frac{p_2}{k_{\mathrm B}T_2}
+\approx1.96\times10^{26}\,\mathrm{m^{-3}}}.
+\]
+\crosscheck 原书明确是“刚性多原子分子气体”而不是刚性双原子；$i=6,\gamma=4/3$。
+若将多原子误读为双原子（$\gamma=7/5$），则末温度和内能结论会不同。
+
+\sourceproblem{6.3.6}{157}{157}
+\problemtext 向标准状态下2 mol氢气（刚性双原子）传热500 J，
+分别求等容、等温、等压过程中终态的温度、压强和体积相对初态的变化。
+\workings
+取初始$T_0=273.15$ K、$p_0=1$ atm、$\nu=2$ mol，
+$C_{V,m}=\frac52R$、$C_{P,m}=\frac72R$。
+\emph{等容：}
+\[
+\Delta T_V=\frac{Q}{\nu C_V}=\frac{500}{5R}\approx12.03\,\mathrm K,
+\]
+\[
+\boxed{T_V\approx285.18\,\mathrm K,\quad
+\frac{p_V}{p_0}=\frac{T_V}{T_0}\approx1.0440,\quad
+V_V=V_0}.
+\]
+\emph{等温：} $\Delta U=0$，$W=Q=500$ J，
+\[
+\nu RT_0\ln(V_T/V_0)=500
+\quad\Longrightarrow\quad
+\boxed{T_T=T_0,\quad
+\frac{V_T}{V_0}=
+\exp\left(\frac{500}{2RT_0}\right)\approx1.1164,
+\quad\frac{p_T}{p_0}\approx0.8958}.
+\]
+\emph{等压：}
+\[
+\Delta T_P=\frac{500}{7R}\approx8.591\,\mathrm K,
+\]
+\[
+\boxed{T_P\approx281.74\,\mathrm K,\quad
+p_P=p_0,\quad
+\frac{V_P}{V_0}=\frac{T_P}{T_0}\approx1.0315}.
+\]
+\crosscheck 所有过程吸热$Q>0$，等容无体积功、等温全部吸热转为功、
+等压则同时升温并对外做功。
+
+\sourceproblem{6.3.7}{157}{157}
+\problemtext 一定量理想气体沿等压过程对外做功200 J。分别按单原子和刚性双原子气体模型，求过程所需的吸热量。
+\workings
+等压过程$W=\nu R\Delta T=200$ J，
+单原子$C_P=\frac52R$，双原子$C_P=\frac72R$，
+所以
+\[
+\boxed{Q_{\mathrm{mono}}=\frac52W=500\,\mathrm J},\qquad
+\boxed{Q_{\mathrm{diatom}}=\frac72W=700\,\mathrm J}.
+\]
+\crosscheck 与同章填空题6.2.4的数值一致，但因原书分别给定题号，仍独立保留两份研究性解析。
+
+\sourceproblem{6.3.8}{157}{157}
+\problemtext 某理想气体的准静态过程方程为$Vp^{1/2}=a$，
+$a$为正常量。若体积从$V_1$膨胀到$V_2$，求气体对外做的功。
+\workings
+由$Vp^{1/2}=a$得$p=a^2/V^2$，因此
+\[
+W=\int_{V_1}^{V_2}p\,dV
+=a^2\int_{V_1}^{V_2}V^{-2}\,dV
+=\boxed{a^2\left(\frac1{V_1}-\frac1{V_2}\right)}.
+\]
+也可按初态$p_1=a^2/V_1^2$改写为
+$\boxed{W=p_1V_1(1-V_1/V_2)}$。
+\crosscheck $V_2>V_1$时$W>0$；式中$a^2/V$的单位为能量。
+
+\sourceproblem{6.3.9}{157}{157}
+\problemtext 一台卡诺热机工作于$T_h=480$ K、$T_c=300$ K之间。
+实际每从高温热源吸收1 kcal热量仅产生1.2 kJ机械能，比较实际效率与可逆卡诺效率上限。
+\workings
+取$1\,\mathrm{kcal}=4184\,\mathrm J$，则
+\[
+\boxed{\eta_{\mathrm{act}}=\frac{1200}{4184}
+\approx0.2868}.
+\]
+同温热源的卡诺上限
+\[
+\boxed{\eta_C=1-\frac{300}{480}=0.375}.
+\]
+两者比值
+\[
+\boxed{\eta_{\mathrm{act}}/\eta_C\approx0.765}.
+\]
+\crosscheck 严格说题干的“卡诺热机”若指\emph{可逆卡诺循环}，
+其效率必须等于$0.375$；现给出的实际输出仅约为上限的76.5\%，
+因此该装置是\emph{在相同温度热源间工作的实际非可逆热机}，
+原题措辞需要二校。
+% === END textbook-ch06-solutions-001-009.tex ===
+
+% === BEGIN textbook-ch06-solutions-010-018.tex blob cb8ba6aad2a74ac31878533583863c57c893bf3f ===
+% 《大学物理简明教程》（第五版）第6章综合题6.3.10--6.3.18。
+% 用户提供扫描印刷/PDF第157--158页，保留原题约束与数值，独立分析、待二校。
+\subsection{解答题：热机、布雷顿循环和熵增}
+
+\sourceproblem{6.3.10}{157}{157}
+\problemtext 制冷系数$\varepsilon=5$的冰箱，外界向其输入3.6 MJ机械功（即1 kW$\cdot$h），能把多少千克$0^\circ$C的水冻成同温冰？
+水的熔化热为$80\,\mathrm{cal/g}$。
+\workings
+制冷系数定义为从低温侧抽走的热量与输入功之比：
+\[
+\varepsilon=\frac{Q_c}{W_{\mathrm{in}}}=5
+\quad\Longrightarrow\quad
+Q_c=5(3.6\times10^6)=1.8\times10^7\,\mathrm J.
+\]
+用$1\,\mathrm{cal}=4.184\,\mathrm J$，水的凝固潜热
+$L=80(4.184)\times10^3=3.3472\times10^5\,\mathrm{J/kg}$，
+故
+\[
+\boxed{m=\frac{Q_c}{L}
+=\frac{1.8\times10^7}{3.3472\times10^5}
+\approx53.8\,\mathrm{kg}}.
+\]
+\crosscheck 只计算$0^\circ$C水凝固为$0^\circ$C冰的相变潜热，
+不附加水从室温冷却至零摄氏度的显热。理想实际效率取题设$\varepsilon=5$。
+
+\sourceproblem{6.3.11}{157}{157}
+\problemtext 一假设的地下热源热机高温端为地下$300^\circ$C，
+冷端为地表$25^\circ$C。若每小时从地下取得
+$Q_h=2.0\times10^{11}$ J热量，求相应可逆卡诺循环效率和每小时最多产生的对外机械功。
+\workings
+换成开尔文：
+$T_h=573.15$ K、$T_c=298.15$ K。
+\[
+\boxed{\eta_C=1-\frac{T_c}{T_h}
+=1-\frac{298.15}{573.15}
+\approx0.4798}.
+\]
+理论每小时最大对外功
+\[
+\boxed{W_{\max}=\eta_CQ_h
+\approx9.60\times10^{10}\,\mathrm J}.
+\]
+若换算平均输出功率则
+$\overline P=W_{\max}/3600\approx2.67\times10^7\,\mathrm W$。
+\crosscheck 上述仅为第二定律给出的热机效率上限，
+未计入实际换热温差、泵机及发电机损失；不保证工程装置能够达到。
+
+\sourceproblem{6.3.12}{157}{157}
+\problemtext 某燃气涡轮过程可用布雷顿循环近似：
+$1\to2$可逆绝热压缩，$2\to3$等压吸热，
+$3\to4$可逆绝热膨胀，$4\to1$等压放热。
+证明以四点温度$T_1,T_2,T_3,T_4$表示的循环效率
+$\eta=1-(T_4-T_1)/(T_3-T_2)$。
+\workings
+循环工作物质为定比热理想气体，等压段的吸热与放热为
+\[
+Q_h=\nu C_{P,m}(T_3-T_2),\qquad
+Q_c=\nu C_{P,m}(T_4-T_1),
+\]
+其中$Q_c$指放热量的正大小。
+每循环净功$W=Q_h-Q_c$，所以
+\[
+\boxed{\eta=\frac{W}{Q_h}
+=1-\frac{Q_c}{Q_h}
+=1-\frac{T_4-T_1}{T_3-T_2}}.
+\]
+两绝热段还满足
+\[
+\frac{T_2}{T_1}=
+\frac{T_3}{T_4}=
+\left(\frac{p_{\mathrm{high}}}{p_{\mathrm{low}}}
+\right)^{(\gamma-1)/\gamma},
+\]
+因而$\eta=1-T_1/T_2$，与给定表达式等价。
+\crosscheck 推导依赖$C_{P,m}$在温度范围内近似常量、
+压缩/膨胀过程准静态可逆。真实燃气轮机可能有压损与不可逆熵产生。
+
+\sourceproblem{6.3.13}{158}{158}
+\problemtext 图6.3.13示意理想气体热机循环$A\to B\to C\to D\to A$；
+$AB$、$CD$为等压过程，$BC$、$DA$为可逆绝热过程。
+$B,C$点温度依次为$T_2,T_3$。求循环效率，判断是否为卡诺循环。
+\workings
+上等压段$AB$吸热，
+$Q_h=\nu C_{P,m}(T_B-T_A)$；
+下等压段$CD$放热，$Q_c=\nu C_{P,m}(T_C-T_D)$。
+绝热段跨越相同的两等压线，满足
+\[
+\frac{T_B}{T_C}=\frac{T_A}{T_D}=r,
+\qquad r=
+\left(\frac{p_{\mathrm{high}}}{p_{\mathrm{low}}}
+\right)^{(\gamma-1)/\gamma}>1.
+\]
+故
+$T_C-T_D=(T_B-T_A)/r$，
+从而
+\[
+\boxed{\eta=1-\frac{Q_c}{Q_h}
+=1-\frac1r=1-\frac{T_3}{T_2}}.
+\]
+\emph{这不是卡诺循环：}卡诺循环要求两等温、两绝热，
+而本循环有两\emph{等压}过程。
+\crosscheck 虽有$\eta=1-T_3/T_2$的外观，
+这里$T_3$不是整个循环的最低温度（最低温点为$D$），
+不能把它误认成在最高和最低温度间工作的卡诺效率。
+
+\sourceproblem{6.3.14}{158}{158}
+\problemtext 一理想可逆卡诺制冷机从$7^\circ$C低温热源抽取1000 J热量，
+排向$27^\circ$C环境。求需做功多少；若低温热源改成$-173^\circ$C，
+仍排向$27^\circ$C且每次抽走1000 J，所需功多少。
+说明热源温差增大对制冷的影响。
+\workings
+可逆制冷机的制冷系数
+\[
+\varepsilon_C=\frac{Q_c}{W}
+=\frac{T_c}{T_h-T_c},
+\quad
+\boxed{W=Q_c\frac{T_h-T_c}{T_c}}.
+\]
+第一种温度为$T_c=280.15$ K、$T_h=300.15$ K，
+\[
+\boxed{W_1=1000\frac{20}{280.15}\approx71.4\,\mathrm J}.
+\]
+第二种$T_c=100.15$ K、$T_h=300.15$ K，
+\[
+\boxed{W_2=1000\frac{200}{100.15}
+\approx2.00\times10^3\,\mathrm J}.
+\]
+若$T_h$保持不变，低温热源温度降低、温差增大，
+则$\varepsilon_C=T_c/(T_h-T_c)$减小；
+抽走相同的热量需要更多的输入功，制冷\emph{更困难}。
+\crosscheck 制冷机的最佳性能对应较小温差；
+不能照搬热机效率随温差增加而增加的结论。
+
+\sourceproblem{6.3.15}{158}{158}
+\problemtext 分别用热力学第一定律和第二定律证明：
+在理想气体的$p$--$V$图上，同一条可逆绝热线与同一条等温线不可能有两个不同交点。
+\workings
+\emph{第一种证明（状态方程与绝热关系）。}
+等温线满足$pV=C_1$，可逆绝热线满足$pV^\gamma=C_2$，
+其中$\gamma>1$。若两曲线在不同点$A,B$相交，则
+\[
+p_AV_A=p_BV_B,\qquad
+p_AV_A^\gamma=p_BV_B^\gamma.
+\]
+两式相除得$V_A^{\gamma-1}=V_B^{\gamma-1}$，
+从而$V_A=V_B$及$p_A=p_B$，与两点不同矛盾。
+\emph{第二种证明（第二定律）。}
+若存在两交点，沿等温线从$A$至$B$并沿绝热线从$B$返回$A$，
+即可构成仅与\emph{一个热源}交换热量的封闭循环；
+若路径围成非零面积，则其净功
+$W=\oint p\,dV\ne0$。
+取能产生正净功的循环方向，就会使从单一热源吸收的热量
+完全变为机械功，与热力学第二定律的开尔文表述矛盾。
+\[
+\boxed{A=B}
+\]
+即所谓的两个交点只能退化为同一状态点。
+\crosscheck 此结论关于\emph{同一种理想气体、固定$\gamma>1$、
+同一条可逆绝热线}成立；实际非平衡或不可逆绝热路径不能直接写$pV^\gamma=\mathrm{const}$。
+
+\sourceproblem{6.3.16}{158}{158}
+\problemtext 1 mol单原子理想气体在\emph{恒定压强}下准静态地由$0^\circ$C升至$100^\circ$C。求熵的变化。
+\workings
+定压过程的熵变
+\[
+\Delta S=\int_{T_1}^{T_2}\frac{\nu C_{P,m}}T\,dT
+=\nu C_{P,m}\ln\frac{T_2}{T_1}.
+\]
+对1 mol单原子气体，
+$C_{P,m}=5R/2$，$T_1=273.15$ K、$T_2=373.15$ K，
+因此
+\[
+\boxed{\Delta S=\frac52R\ln\frac{373.15}{273.15}
+\approx6.48\,\mathrm{J/K}}.
+\]
+\crosscheck 气体升温故熵增；若误用定容热容$3R/2$，将低估该定压过程的熵变。
+
+\sourceproblem{6.3.17}{158}{158}
+\problemtext 将$0^\circ$C的$0.5$ kg冰完全融化为同温水，
+熔化潜热$L=334\,\mathrm{J/g}$。
+求冰/水系统熵变；若由温度$20^\circ$C的巨大恒温热源供热，
+求热源熵变及二者构成的孤立系统总熵变。
+\workings
+相变热量为
+$Q=mL=(0.5)(334000)=167000$ J。
+相变在平衡融点$T_m=273.15$ K下进行，故
+\[
+\boxed{\Delta S_{\mathrm{ice/water}}
+=\frac{Q}{T_m}=\frac{167000}{273.15}
+\approx611.4\,\mathrm{J/K}}.
+\]
+大热源温度$T_h=293.15$ K，放出热量$Q$，故
+\[
+\boxed{\Delta S_{\mathrm{source}}=-\frac{Q}{T_h}
+\approx-569.7\,\mathrm{J/K}}.
+\]
+合计
+\[
+\boxed{\Delta S_{\mathrm{total}}
+=Q\left(\frac1{T_m}-\frac1{T_h}\right)
+\approx41.7\,\mathrm{J/K}>0}.
+\]
+\crosscheck 热从20°C物体传至0°C冰，过程不可逆，
+总熵必须增加；热源放热的熵变为负，冰水吸热的熵变为正。
+
+\sourceproblem{6.3.18}{158}{158}
+\problemtext 1 kg初温$20^\circ$C的水接触$100^\circ$C的大恒温热源，
+逐渐升至$100^\circ$C。水比热容
+$c=4.18\times10^3\,\mathrm{J/(kg\,K)}$。
+求水、热源及其组成的孤立系统各自熵变。
+\workings
+水升温过程的熵变与实际加热是否可逆无关，可沿假想可逆路径积分：
+\[
+\Delta S_w=\int_{T_i}^{T_f}\frac{mc\,dT}{T}
+=mc\ln\frac{T_f}{T_i}.
+\]
+取$T_i=293.15$ K、$T_f=T_h=373.15$ K，
+\[
+\boxed{\Delta S_w
+=4180\ln\frac{373.15}{293.15}
+\approx1008.6\,\mathrm{J/K}}.
+\]
+大热源损失热量为
+$Q=mc(T_f-T_i)=4180(80)=334400$ J，故
+\[
+\boxed{\Delta S_h=-\frac{334400}{373.15}
+\approx-896.2\,\mathrm{J/K}}.
+\]
+二者总熵变
+\[
+\boxed{\Delta S_{\mathrm{total}}
+=\Delta S_w+\Delta S_h
+\approx112.5\,\mathrm{J/K}>0}.
+\]
+\crosscheck 以有限温差直接接触传热是不可逆的，总熵应增加；
+熵变积分中的温度必须换为绝对开尔文温度。
+% === END textbook-ch06-solutions-010-018.tex ===
