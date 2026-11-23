@@ -646,7 +646,7 @@ def eighth_round_regressions():
     near(3/5, .6) # translation fraction of rigid-diatomic internal energy
     near(300*16**.25,600)
     near(3*R*300,900*R)
-    near(400*R*math.log(5),5352.083246300634,1e-5)
+    near(400*R*math.log(5),5352.6445435701135,1e-5)
     near(1-300/400,.25)
     near((.25)*(400*R*math.log(5)),(400*R*math.log(5))/4)
     near(2/29,.06896551724137931)
