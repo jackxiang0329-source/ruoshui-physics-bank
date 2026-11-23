@@ -31,14 +31,18 @@ jobs:
         uses: xu-cheng/latex-action@v4
         with:
           working_directory: external_sources/zhao-wang-physics-5e-elegant
-          root_file: main.tex
+          root_file: |
+            cover.tex
+            main.tex
           texlive_version: '2026'
           args: -xelatex -file-line-error -halt-on-error -interaction=nonstopmode
       - name: Upload compiled PDF for review
         uses: actions/upload-artifact@v4
         with:
           name: zhao-wang-physics-5e-elegantbook
-          path: external_sources/zhao-wang-physics-5e-elegant/main.pdf
+          path: |
+            external_sources/zhao-wang-physics-5e-elegant/main.pdf
+            external_sources/zhao-wang-physics-5e-elegant/cover.pdf
           if-no-files-found: error
           retention-days: 30
       - name: Publish successfully compiled PDF back to repository
@@ -50,6 +54,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           root=external_sources/zhao-wang-physics-5e-elegant
           cp "$root/main.pdf" "$RUNNER_TEMP/zhao-wang-main.pdf"
+          cp "$root/cover.pdf" "$RUNNER_TEMP/zhao-wang-cover.pdf"
           for attempt in 1 2 3; do
             git fetch origin main
             if ! git diff --quiet "$GITHUB_SHA" FETCH_HEAD -- "$root/main.tex" "$root/chapters"; then
@@ -57,9 +62,10 @@ jobs:
               exit 0
             fi
             git reset --hard FETCH_HEAD
-            sudo rm -f "$root/main.pdf"
+            sudo rm -f "$root/main.pdf" "$root/cover.pdf"
             cp "$RUNNER_TEMP/zhao-wang-main.pdf" "$root/main.pdf"
-            git add -f "$root/main.pdf"
+            cp "$RUNNER_TEMP/zhao-wang-cover.pdf" "$root/cover.pdf"
+            git add -f "$root/main.pdf" "$root/cover.pdf"
             if git diff --cached --quiet; then
               echo "PDF already current."
               exit 0
