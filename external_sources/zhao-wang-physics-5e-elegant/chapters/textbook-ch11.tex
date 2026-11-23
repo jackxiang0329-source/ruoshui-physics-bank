@@ -1,4 +1,5 @@
 % Consolidated textbook-ch11 from 1699b8435d575b3f9a89b4f32b3cd9072025e92c; source fragments preserved.
+% 2026-11-24 八批严格复核第4批：旧片段哈希对应历史版本，当前含二校修订。
 
 % === BEGIN textbook-ch11-choices.tex blob ee645a394d159bb655620f9ad876ccdc258612c5 ===
 % 赵近芳、王登龙《大学物理简明教程》第5版，第11章“狭义相对论”
@@ -23,7 +24,7 @@ $c^2\Delta t'^2-|\Delta\bm r'|^2
 =-|\Delta\bm r|^2<0$，意味着这种类空间隔的两事件
 在任何惯性系都\emph{不能变成同地事件}。
 \[
-\boxed{\Delta t'=0},\qquad\boxed{\Delta\bm r'\ne\bm0}.
+\boxed{\Delta t'=0\ \Longleftrightarrow\ \bm v\cdot\Delta\bm r=0},\qquad\boxed{\Delta\bm r'\ne\bm0}.
 \]
 因此原题四项中按未限定运动方向的\emph{严格三维解释}，
 应选\textbf{B：可能同时}。
@@ -35,11 +36,7 @@ $c^2\Delta t'^2-|\Delta\bm r'|^2
 \sourceproblem{11.1.2}{288}{288}
 \problemtext 某惯性系中两事件同地不同时，另一惯性系中可否同地或同时？
 \workings
-设$\Delta x=0$、$\Delta t\ne0$，
-则$\Delta t'=\gamma\Delta t\ne0$，
-而$\Delta x'=-\gamma v\Delta t$。
-非零相对速度沿$x$方向时两事件不同地，
-\textbf{可能同地只在两系相对速度零或有关投影零时}，
+设$\Delta\bm r=\bm0$、$\Delta t\ne0$，则$\Delta t'=\gamma\Delta t\ne0$，而$\Delta\bm r'=-\gamma\bm v\Delta t$。只要两系相对速度矢量非零，两事件就不同地；\textbf{只有零相对速度才仍同地}，某个坐标投影为零不足以说明同地，
 故源书选择表达为\textbf{D}（非零运动系不同时且不同地）。
 \crosscheck 同地发生的时间间隔是固有时，
 另一运动系测到的时间间隔更长，绝不变成同时。
@@ -85,7 +82,7 @@ $c^2\Delta t'^2-|\Delta\bm r'|^2
 \]
 原题选\textbf{A}。
 \crosscheck “地球测得信号间隔”须指地球坐标系对\emph{发射事件}的间隔；
-若是地球同一接收器收到的时差，还需考虑多普勒传播延迟，不能直接用本式。
+若是地球同一接收器收到的时差，还需考虑多普勒传播延迟，不能直接用本式；若10秒指远离地球的船上同一点两次发射被同一地球接收器收到的间隔，则纵向多普勒关系$\Delta t_{\rm recv}=\gamma(1+\beta)\Delta\tau$给$\Delta\tau=10/3$ s。
 
 \sourceproblem{11.1.6}{289}{289}
 \problemtext 静止系中边长$a$的正方形薄板，两边沿$x,y$轴，
@@ -106,10 +103,10 @@ $a_x'=a\sqrt{1-\beta^2}=0.6a$，$a_y'=a$，
 相对运动时钟的运动延缓效应。
 \workings
 有静质量的物体不能加速至光速，①为真。
-长度和时间随参考系变化，②真。
+同步测得的长度及事件坐标时间间隔随参考系变化；静质量$m_0$不变，只有旧教材定义的运动质量$E/c^2=\gamma m_0$随参考系变。②仅在其“质量”指运动质量的旧术语下成立；若指静质量则②为假，须核原选项。
 分处不同地点事件的同时性通常不具有绝对性，③假。
 相对运动时钟的固有时与观察系坐标时满足时间延缓，④真。
-故选\textbf{B（命题1、2、4）}。
+故按旧教材的运动质量约定选\textbf{B（命题1、2、4）}；按现代不变质量术语则不能无条件选B。
 \crosscheck 时间延缓需比较同一对钟事件间的固有时间与坐标时间，
 不能用单一钟在“自身看来也变慢”的说法描述。
 
@@ -141,7 +138,7 @@ $\Delta x=\Delta x'/\gamma$、$\Delta y=\Delta y'$，
 \boxed{\theta>45^\circ}.
 \]
 原题选\textbf{A}。
-\crosscheck 与运动方向垂直的尺寸不收缩，杆看起来更接近竖直。
+\crosscheck 与运动方向垂直的尺寸不收缩，同步坐标测量的杆方向更接近竖直；真实摄影成像还需考虑各点光传播时延，不能直接等同于视觉外观。
 
 \sourceproblem{11.1.10}{289}{289}
 \problemtext 两个静质量均为$m_0$的粒子在同一系中以相同速度$\bm v$
@@ -161,7 +158,7 @@ M_0^2c^4=E^2-p^2c^2
 \]
 原题选\textbf{A}。
 \crosscheck 两粒子\emph{同速同向}，整体质心静止系中没有相对动能，
-完全合并不会无故增加系统静质量。
+若两粒子同速同向且起初有空间间隔，单凭这种运动并不会相撞；本题按外力净四动量输入为零、无辐射的理想合并过程作答。若存在外界作用或结合能释放，则需计入相应四动量。
 
 \sourceproblem{11.1.11}{289}{289}
 \problemtext 粒子总能量为静能的$K$倍（$K\ge1$），求速率。
@@ -225,7 +222,7 @@ $v\Delta t'=120$ m，$v\Delta x'/c^2=-3.2\times10^{-7}$ s，
 \boxed{\Delta x=0},\qquad
 \boxed{\Delta t=3.0\times10^{-7}\,\mathrm s}.
 \]
-\crosscheck 两事件在$S$中同地发生，所以$3.0\times10^{-7}$ s是本题事件对的固有时间；$S'$中间隔$5\times10^{-7}$ s较长。
+\crosscheck 两事件在$S$中同地发生，所以$3.0\times10^{-7}$ s是本题事件对的固有时间；$S'$中间隔$5\times10^{-7}$ s较长。上述严格为零是采用教材$c=3.0\times10^8$ m/s和给定舍入数据的结果；若将精确$c$与舍入数据混用会得到很小的非零坐标差。
 
 \sourceproblem{11.2.4}{290}{290}
 \problemtext $\mu$子在自身静止系寿命$\tau_0=2.0\times10^{-6}$ s；
@@ -384,7 +381,7 @@ $v\tau_{\rm Earth}\approx9.47\times10^3$ m，
 小于$\tau_0=2.0\times10^{-6}$s。
 \crosscheck \textbf{寿命是指数分布的平均值，不是“必定存活”的硬上限}；
 到地面存活概率近似$\exp[-h/(v\gamma\tau_0)]\approx0.53$，
-本题“能否到达”应理解为相当比例可以存活到达。
+本题“能否到达”应理解为相当比例可以存活到达。这里严格按题设给出的寿命计算；粒子种类及寿命数值应另核原书，不能把题设值作为任何介子的通用物理常数。
 
 \sourceproblem{11.3.7}{290}{290}
 \problemtext 物体在$S'$中沿$x'$正方向以$0.8c$运动，
