@@ -1,0 +1,158 @@
+% 《大学物理简明教程》第5版量子物理基础：解答12.3.1—12.3.9。
+% 原书/PDF第318—319页；题意独立摘要，带核验的定量推导。
+\subsection{解答题：黑体、光电效应与康普顿散射}
+
+\sourceproblem{12.3.1}{318}{318}
+\problemtext 把三颗恒星当理想黑体，辐射谱的峰值波长分别为
+$0.55,0.35,0.29\,\mu$m，求对应表面温度。
+\workings
+维恩位移定律$\lambda_mT=b$，
+$b=2.89777\times10^{-3}\,\mathrm{m\,K}$，得
+\[
+\boxed{\begin{aligned}
+T_1&=b/(0.55\,\mu\mathrm m)\simeq5.27\times10^3\,\mathrm K,\\
+T_2&=b/(0.35\,\mu\mathrm m)\simeq8.28\times10^3\,\mathrm K,\\
+T_3&=b/(0.29\,\mu\mathrm m)\simeq9.99\times10^3\,\mathrm K.
+\end{aligned}}
+\]
+\crosscheck 峰值波长越短，黑体温度越高；此处是黑体\emph{色温}近似而非真实恒星大气模型。
+
+\sourceproblem{12.3.2}{318}{318}
+\problemtext 炉壁小孔的总辐射出射度为$22.8\,\mathrm{W/cm^2}$，
+视作黑体辐射，求炉内温度。
+\workings
+$M=22.8\times10^4\,\mathrm{W/m^2}$。
+由$M=\sigma T^4$，
+$\sigma=5.670374419\times10^{-8}\,\mathrm{W/(m^2K^4)}$，
+\[
+\boxed{T=\left(\frac{22.8\times10^4}{\sigma}\right)^{1/4}
+\simeq1.416\times10^3\,\mathrm K}.
+\]
+\crosscheck 注意$1\,\mathrm{W/cm^2}=10^4\,\mathrm{W/m^2}$。
+
+\sourceproblem{12.3.3}{318}{318}
+\problemtext 铝金属逸出功$4.2$ eV，以波长$200$ nm光照射，
+求最大动能、遏止电压和红限波长。
+\workings
+光子能量$E=hc/\lambda\simeq1240/200=6.20$ eV，
+光电效应给
+\[
+\boxed{K_{\max}=E-W=2.00\,\mathrm{eV}},\qquad
+\boxed{U_a=K_{\max}/e=2.00\,\mathrm V}.
+\]
+红限
+\[
+\boxed{\lambda_0=hc/W\simeq(1240/4.2)\,\mathrm{nm}
+\simeq295\,\mathrm{nm}}.
+\]
+\crosscheck 入射光波长200nm小于红限295nm，能发生外光电效应。
+
+\sourceproblem{12.3.4}{318}{318}
+\problemtext 波长$300$ nm紫外光照射某金属，
+最大光电子速度$5.0\times10^5$ m/s，求金属红限波长。
+\workings
+非相对论电子动能
+$K_{\max}=\tfrac12m_ev^2\simeq1.14\times10^{-19}$ J
+$\simeq0.711$ eV。
+入射光子能量约$1240/300=4.133$ eV，
+则逸出功$W\simeq3.422$ eV，故
+\[
+\boxed{\lambda_0\simeq\frac{1240}{3.422}\,\mathrm{nm}
+\simeq362\,\mathrm{nm}}.
+\]
+\crosscheck $\lambda_0>300$ nm是光电逸出发生的必要条件。
+
+\sourceproblem{12.3.5}{318}{318}
+\problemtext 原图12.3.5给钠金属遏止电压随入射频率的拟合直线：
+$\nu_0\simeq4.39\times10^{14}$ Hz，且$(\nu,U_a)$约有
+$(5.5\times10^{14}\,\mathrm{Hz},0.47\,\mathrm V)$及
+$(9.6\times10^{14}\,\mathrm{Hz},2.13\,\mathrm V)$。
+由图估计截止频率、普朗克常量及逸出功。
+\workings
+截止频率是图的横轴截距，
+\[
+\boxed{\nu_0\simeq4.39\times10^{14}\,\mathrm{Hz}}.
+\]
+从光电方程$eU_a=h\nu-W$知斜率为$h/e$。
+按图上两个数值点估算
+\[
+\boxed{h_{\rm graph}
+=e\frac{2.13-0.47}{(9.6-5.5)\times10^{14}}
+\simeq6.49\times10^{-34}\,\mathrm{J\,s}}.
+\]
+逸出功约为
+\[
+\boxed{W\simeq h_{\rm graph}\nu_0
+\simeq2.85\times10^{-19}\,\mathrm J
+\simeq1.78\,\mathrm{eV}}.
+\]
+\crosscheck 这些是\emph{图读估算值}，
+不能把由粗线和圆点读出的$h$当成精确定义的$6.62607015\times10^{-34}$；
+不同两点选取可能略有偏差。
+
+\sourceproblem{12.3.6}{319}{319}
+\problemtext 人眼在理想暗适应条件下每秒吸收5个波长500nm的蓝绿色光子
+刚能形成可见刺激，求每秒光子携带的能量及对应入眼功率。
+\workings
+单光子能量$\varepsilon=hc/\lambda$，
+每秒5光子所携能量
+\[
+\boxed{E_{\rm 1s}=5\frac{hc}{500\,\mathrm{nm}}
+\simeq1.99\times10^{-18}\,\mathrm J}.
+\]
+相应入眼光功率
+\[
+\boxed{P=E_{\rm 1s}/(1\,\mathrm s)
+\simeq1.99\times10^{-18}\,\mathrm W}.
+\]
+\crosscheck 辐射实际感知阈值依观察时间、视网膜吸收效率和刺激部位而变；
+本题只是在理想吸收的光子计数模型下换算能量。
+
+\sourceproblem{12.3.7}{319}{319}
+\problemtext 设一光子的能量等于电子静止能量，
+求光子的频率、波长与动量。
+\workings
+由$\varepsilon=m_ec^2$，
+\[
+\boxed{\nu=\frac{m_ec^2}{h}
+\simeq1.236\times10^{20}\,\mathrm{Hz}},
+\]
+\[
+\boxed{\lambda=\frac{h}{m_ec}
+\simeq2.426\times10^{-12}\,\mathrm m},\qquad
+\boxed{p=\frac{\varepsilon}{c}=m_ec
+\simeq2.731\times10^{-22}\,\mathrm{kg\,m/s}}.
+\]
+\crosscheck 此波长等于\emph{电子康普顿波长}（非约化），不是电子本身的静止德布罗意波长。
+
+\sourceproblem{12.3.8}{319}{319}
+\problemtext 波长$0.0708$ nm的X射线在石蜡中发生康普顿散射，
+求散射角$90^\circ$和$180^\circ$时的散射波长。
+\workings
+$\lambda'=\lambda_0+\lambda_C(1-\cos\theta)$，
+电子康普顿波长$\lambda_C=h/(m_ec)=0.00242631$ nm。
+故
+\[
+\boxed{\lambda'_{90^\circ}\simeq0.073226\,\mathrm{nm}},
+\qquad
+\boxed{\lambda'_{180^\circ}\simeq0.075653\,\mathrm{nm}}.
+\]
+\crosscheck 后向散射产生最大波长增加$2\lambda_C$。
+
+\sourceproblem{12.3.9}{319}{319}
+\problemtext 康普顿实验中波长$0.015$ nm的光子被原先静止的自由电子散射，
+在$120^\circ$方向求散射波长相对增量。
+\workings
+\[
+\Delta\lambda=\lambda_C(1-\cos120^\circ)
+=\frac32\lambda_C\simeq0.0036395\,\mathrm{nm}.
+\]
+故
+\[
+\boxed{\frac{\Delta\lambda}{\lambda_0}
+=\frac{0.0036395}{0.015}\simeq0.2426},
+\qquad
+\boxed{\lambda'\simeq0.01864\,\mathrm{nm}}.
+\]
+\crosscheck 题问\emph{波长变化量与原波长之比}，
+不是$\lambda'/\lambda_0\simeq1.2426$，也不是光子能量比。
