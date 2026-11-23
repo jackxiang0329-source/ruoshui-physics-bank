@@ -1,0 +1,52 @@
+% 第16批：扫描原书自测题4选择，共10题；题意独立转述。
+\subsection{自测题4：简谐振动、行波与干涉选择题}
+
+\sourcetest{4.1.1}{93}{101}
+\problemtext 简谐振动 $x=A\cos(\omega t+\pi/4)$；求 $t=T/4$ 时的加速度（原题选项）。
+\workings 由 $a=-\omega^2x$，此时相位 $3\pi/4$，故 $\boxed{a=+\sqrt2 A\omega^2/2}$，选 \textbf{B}。
+\crosscheck 加速度永远指向平衡位置，不能把速度公式误作加速度。
+
+\sourcetest{4.1.2}{93}{101}
+\problemtext 在简谐振动端点和平衡位置判断速度、加速度的性质。
+\workings 平衡点有 $|v|=A\omega$ 与 $a=0$；端点有 $v=0$ 与 $|a|=A\omega^2$。因此题中只有“平衡位置正向运动，速度最大、加速度为零”成立，选 \textbf{C}。
+\crosscheck “速度最大”指有向速度取得正最大值，若逆向经过则为负最大绝对值。
+
+\sourcetest{4.1.3}{93}{101}
+\problemtext 题4.1.1图中 $v(0)=v_{\max}/2$ 且曲线初始上升，求余弦位移式的初相。
+\workings 若 $x=A\cos(\omega t+\varphi)$，则 $v=-A\omega\sin(\omega t+\varphi)$。$\sin\varphi=-1/2$ 且 $dv/dt=a(0)>0$，故 $\cos\varphi<0$，得到 $\boxed{\varphi=-5\pi/6\pmod{2\pi}}$，选 \textbf{C}。
+\crosscheck 图中纵坐标为速度而非位移，初相判定必须兼顾速度图的斜率。
+
+\sourcetest{4.1.4}{93}{101}
+\problemtext 已知 $x=0.04\cos(2\pi t+\pi/3)$（SI），从 $t=0$ 起首次到达 $x=-2$ cm 且朝 $+x$ 方向运动的时间。
+\workings 目标相位需满足 $\cos\theta=-1/2$、$\sin\theta<0$，故 $\theta=4\pi/3$；从 $\pi/3$ 走过 $\pi$，$\Delta t=\pi/(2\pi)=\boxed{1/2\ {\rm s}}$，选 \textbf{C}。
+\crosscheck 必须同时利用位移和运动方向，另一个根 $2\pi/3$ 对应反向。
+
+\sourcetest{4.1.5}{93--94}{NaN}
+\problemtext 振幅 $4$ cm、周期 $2$ s；$t=0$ 第一次经过 $x=-2$ cm 时沿负向，求第二次经过该位置的时刻。
+\workings 首经过可取相位 $2\pi/3$（$\sin\varphi>0$），第二次对应 $4\pi/3$，故 $\Delta t=(2\pi/3)/\omega=(2\pi/3)/\pi=\boxed{2/3\ {\rm s}}$，选 \textbf{B}。
+\crosscheck “第二次”指下一次经过同一位置，方向变为正向，不是一整个周期。
+
+\sourcetest{4.1.6}{94}{102}
+\problemtext 波动式 $y=0.1\cos(3\pi t-\pi x+\pi)$（SI）；根据题4.1.2图辨别振幅、波长、两点相位差和波速的正确表述。
+\workings 振幅 $A=0.1$ m、波长 $\lambda=2\pi/\pi=2$ m，传播速率 $u=3$ m/s。图中 $a,b$ 相隔波长四分之一，故相位差的大小 $\pi/2$，选 \textbf{C}。
+\crosscheck 振幅不取负值；相位差绝对值与有向相位差分开说明。
+
+\sourcetest{4.1.7}{94}{102}
+\problemtext 题4.1.3图给出向 $-x$ 传播的横波某瞬时波形，判断 A、B、C、D 点的横向振动速度符号。
+\workings 对左行波 $y=f(x+ut)$，有 $\partial y/\partial t=u\,\partial y/\partial x$。图中 D 点波形斜率小于零，故 $v_{y,D}<0$；其余陈述不符，选 \textbf{D}。
+\crosscheck 横向振动速度不同于沿 $x$ 方向的波速，方向由传播方向与局部斜率共同决定。
+
+\sourcetest{4.1.8}{94}{102}
+\problemtext 行进的简谐弹性波中某质点恰处于平衡位置，比较该处动能和势能。
+\workings 行波位移 $y=A\cos(\omega t-kx)$；质点速度 $y_t=-A\omega\sin\theta$，局部应变 $y_x=Ak\sin\theta$。两种能量密度均与 $\sin^2\theta$ 成正比；$y=0$ 时二者同时最大，选 \textbf{C}。
+\crosscheck 不能机械套用单个弹簧振子的“平衡点势能零”，行波弹性势能由空间梯度决定。
+
+\sourcetest{4.1.9}{94}{102}
+\problemtext 两相干源到点 $P$ 的距离分别为 $r_1,r_2$，初相 $\varphi_1,\varphi_2$；求 $P$ 的干涉极大相位条件。
+\workings 到达 $P$ 的两相位为 $\varphi_j-2\pi r_j/\lambda$，所以 $\boxed{\varphi_2-\varphi_1+2\pi(r_1-r_2)/\lambda=2k\pi}$；选 \textbf{D}。
+\crosscheck 此式允许两源初相不相等；单靠路程差为整数波长并不足够。
+
+\sourcetest{4.1.10}{94}{102}
+\problemtext 等振幅、同频率的两列反向传播简谐波 $y_{1,2}=A\cos[2\pi(\nu t\mp x/\lambda)]$ 叠加，求驻波的波节。
+\workings 由和差化积 $y=2A\cos(2\pi\nu t)\cos(2\pi x/\lambda)$。波节满足 $\cos(2\pi x/\lambda)=0$，故 $\boxed{x=(2k+1)\lambda/4,\ k\in\mathbb Z}$，选 \textbf{D}。
+\crosscheck 波节与波腹相隔 $\lambda/4$，相邻波节相隔 $\lambda/2$。
