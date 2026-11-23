@@ -1,0 +1,1721 @@
+% Consolidated 11-kinetic-theory from df0f579b9265792e2eecacd1f44bac71db6664c5; original TeX fragments preserved.
+
+% === BEGIN 11-kinetic-theory-062-072.tex blob 23c33ecee21d279e2a3c90755e891e431c6c703c ===
+% Irodov, Part II, original problems 62--72, printed pp.70--71, PDF pp.79--80.
+% k_B Boltzmann constant, R universal gas constant, N_A Avogadro constant.
+\thermokineticproblem{62}{70}
+现代真空泵可在室温下将压强降至
+$p=4\times10^{-15}\,\mathrm{atm}$。
+若剩余气体是氮气，求每立方厘米内的分子数
+以及分子间平均间距。
+\exsolution
+对理想稀薄气体，
+数密度 $n=p/(k_BT)$。
+取室温 $T\simeq300\,\mathrm K$、
+玻尔兹曼常数 $k_B=1.380649\times10^{-23}\,\mathrm{J/K}$，
+换算
+$p=4\times10^{-15}(101325)
+\simeq4.05\times10^{-10}\,\mathrm{Pa}$，
+所以
+\[
+n\simeq\frac{4.05\times10^{-10}}
+{(1.38\times10^{-23})(300)}
+\simeq9.8\times10^{10}\,\mathrm{m^{-3}}
+=\boxed{9.8\times10^4\,\mathrm{cm^{-3}}}.
+\]
+若以每个分子占据的平均体积 $1/n$
+定义典型间距，则
+\[
+\boxed{\ell\simeq n^{-1/3}
+\simeq2.2\times10^{-4}\,\mathrm m=0.22\,\mathrm{mm}}.
+\]
+\excheck $\ell$ 是估计的平均空间尺度，
+不是分子硬球直径或气体分子平均自由程。
+
+\thermokineticproblem{63}{70}
+体积 $V=5.0\,\mathrm L$ 的密闭容器
+含 $m=1.4\,\mathrm g$ 氮气，
+温度 $T=1800\,\mathrm K$。
+其中原有氮分子的 $\eta=30\%$
+已分解成两个氮原子。
+求气体压强。
+\exsolution
+分解前氮分子总摩尔数
+$n_0=m/M_{\mathrm{N_2}}$，
+$M_{\mathrm{N_2}}=28\,\mathrm{g/mol}$，
+故 $n_0=1.4/28=0.050\,\mathrm{mol}$。
+若有分数 $\eta$ 的原分子解离，
+剩余分子摩尔数 $(1-\eta)n_0$，
+产生氮原子摩尔数 $2\eta n_0$。
+总粒子摩尔数为
+$n_{\rm particles}=(1+\eta)n_0$。
+按理想气体分压相加，
+\[
+\boxed{p=\frac{(1+\eta)mRT}{M_{\mathrm{N_2}}V}}.
+\]
+代入
+$V=5.0\times10^{-3}\,\mathrm{m^3}$、
+$R=8.314$，得到
+$\boxed{p\simeq1.9\,\mathrm{atm}}$。
+\excheck 解离后粒子总数增加，
+但是氮元素总质量保持不变，
+不能直接只计算剩余的双原子分子。
+
+\thermokineticproblem{64}{70}
+氦和氮气的混合物在标准状况下，
+总质量密度为
+$\rho=0.60\,\mathrm{g/L}$。
+求氦原子数密度 $n_{\rm He}$。
+\exsolution
+设混合物中氦原子和氮分子数密度
+为 $n_{\rm He},n_{\mathrm N_2}$。
+标准状况下总粒子数密度
+\[
+n_{\rm tot}=n_{\rm He}+n_{\mathrm N_2}
+=\frac{p_0}{k_BT_0}.
+\]
+设每个氦原子质量 $m_{\rm He}$
+和每个氮分子质量 $m_{\rm N_2}$，则
+\[
+\rho=m_{\rm He}n_{\rm He}
++m_{\rm N_2}n_{\mathrm N_2}
+=m_{\rm N_2}n_{\rm tot}
+-(m_{\rm N_2}-m_{\rm He})n_{\rm He}.
+\]
+解出
+\[
+\boxed{n_{\rm He}=
+\frac{m_{\rm N_2}p_0/(k_BT_0)-\rho}
+{m_{\rm N_2}-m_{\rm He}}}.
+\]
+也可用混合物平均摩尔质量
+$M_{\rm av}=\rho RT_0/p_0$，
+求氦摩尔分数
+$x_{\rm He}=(28-M_{\rm av})/24$。
+取标准 $T_0=273.15\,\mathrm K$、$p_0=1\,\mathrm{atm}$，
+得到
+\[
+\boxed{n_{\rm He}\simeq1.6\times10^{19}\,\mathrm{cm^{-3}}}.
+\]
+\excheck 标准总分子数密度约为
+$2.7\times10^{19}\,\mathrm{cm^{-3}}$；
+氦原子只是其中一部分。
+
+\thermokineticproblem{65}{70}
+一束平行氮分子以
+$v=400\,\mathrm{m/s}$ 撞击平面墙，
+入射方向与墙法线夹角为
+$\theta=30^\circ$；
+束内分子数密度
+$n=0.9\times10^{19}\,\mathrm{cm^{-3}}$。
+假设镜面完全弹性反射，求墙所受压强。
+\exsolution
+单位墙面积每秒碰撞的粒子数为
+$\Phi=nv\cos\theta$，
+因为只有速度的法向分量决定通量。
+设单个氮分子质量为 $m$。
+理想弹性镜面反射使法向动量从
+$mv\cos\theta$ 变为其相反数，
+因此单粒子给墙冲量模为
+$2mv\cos\theta$。
+由动量通量得
+\[
+\boxed{p=2nmv^2\cos^2\theta}.
+\]
+氮分子质量约
+$m=28u=4.65\times10^{-26}\,\mathrm{kg}$，
+且 $n=9.0\times10^{24}\,\mathrm{m^{-3}}$，
+代入可得
+\[
+\boxed{p\simeq1.0\times10^5\,\mathrm{Pa}\approx1\,\mathrm{atm}}.
+\]
+\excheck 若散射不再是镜面弹性反射，
+法向动量变化量可能不同，
+不能沿用冲量 $2mv\cos\theta$。
+
+\thermokineticproblem{66}{70}
+一种气体在标准状况下密度为
+$\rho=1.3\,\mathrm{mg/cm^3}$，
+其中声速为 $v=330\,\mathrm{m/s}$。
+求其分子的有效自由度数 $i$。
+\exsolution
+在理想气体中，声速满足
+\[
+v^2=\gamma\frac p\rho,\qquad
+\gamma=\frac{C_p}{C_V}=\frac{i+2}{i}.
+\]
+所以
+$\gamma=\rho v^2/p$，
+再由 $\gamma=1+2/i$：
+\[
+\boxed{i=\frac2{\rho v^2/p-1}}.
+\]
+密度换算为
+$\rho=1.3\,\mathrm{kg/m^3}$，
+取标准气压
+$p=1.013\times10^5\,\mathrm{Pa}$，
+代入有
+$\gamma\simeq1.40$，
+所以
+\[
+\boxed{i\simeq5}.
+\]
+\excheck 该结果符合振动模尚未显著激发的
+刚性双原子分子（3平移+2转动自由度）。
+
+\thermokineticproblem{67}{71}
+气体的声速 $v_s$ 与气体分子均方根速率
+$v_{\rm rms}$ 之比是多少？
+分别求：(a) 单原子气体；(b) 刚性双原子气体。
+\exsolution
+理想气体声速
+$v_s=\sqrt{\gamma k_BT/m}$，
+分子均方根速率
+$v_{\rm rms}=\sqrt{3k_BT/m}$，
+两式相除得到
+\[
+\boxed{\frac{v_s}{v_{\rm rms}}=\sqrt{\frac\gamma3}}.
+\]
+对单原子气体，$\gamma=5/3$，
+\[
+\boxed{(v_s/v_{\rm rms})_{\rm mono}
+=\frac{\sqrt5}{3}\simeq0.75}.
+\]
+对刚性双原子气体，$\gamma=7/5$，
+\[
+\boxed{(v_s/v_{\rm rms})_{\rm di}
+=\sqrt{\frac7{15}}\simeq0.68}.
+\]
+\excheck 分子热运动速率并不是声波传播速率；
+二者受同一热量纲控制，却有不同系数。
+
+\thermokineticproblem{68}{71}
+由 $N$ 个原子构成的理想气体分子，
+在所有平移、转动与振动自由度均被热激发的温区，
+求分子的平均能量及其中平动动能所占比例。
+分别讨论空间（非线性）分子与线性分子。
+\exsolution
+能量均分定理规定每个\emph{二次型能量项}
+平均贡献 $k_BT/2$。
+对非线性分子有3平移、3转动及
+$3N-6$ 个振动模；每个谐振动有动、势
+各一个二次项，所以
+\[
+i=3+3+2(3N-6)=6N-6.
+\]
+因此
+\[
+\boxed{\overline\varepsilon_{\rm nonlinear}
+=\tfrac i2k_BT=3(N-1)k_BT},
+\quad
+\boxed{f_{\rm trans}=\frac{3k_BT/2}{3(N-1)k_BT}
+=\frac1{2(N-1)}}.
+\]
+线性分子有3平移、2转动及
+$3N-5$ 个振动模，故
+\[
+i=3+2+2(3N-5)=6N-5,
+\]
+\[
+\boxed{\overline\varepsilon_{\rm linear}
+=\left(3N-\frac52\right)k_BT},\quad
+\boxed{f_{\rm trans}=\frac3{6N-5}}.
+\]
+\excheck 对非线性分子要求 $N\ge3$；
+线性分子可取 $N\ge2$，
+两种分子不能套用同一转动自由度计数。
+
+\thermokineticproblem{69}{71}
+在所有平动、转动、振动自由度均已热激发的
+经典理想气体中，求定容摩尔热容 $C_V$ 与
+绝热指数 $\gamma$：
+(a) 双原子分子；
+(b) 线性 $N$ 原子分子；
+(c) 空间非线性 $N$ 原子分子。
+\exsolution
+能量均分给每摩尔内能
+$U_{\rm mol}=\frac i2RT$，
+故
+$C_V=iR/2$、$C_p=C_V+R$，
+$\gamma=1+2/i$。
+(a) 双原子分子 $i=3+2+2=7$：
+\[
+\boxed{C_V=\frac72R,\qquad\gamma=\frac97}.
+\]
+(b) 线性 $N$ 原子分子
+$i=6N-5$：
+\[
+\boxed{C_V=\left(3N-\frac52\right)R,\qquad
+\gamma=\frac{6N-3}{6N-5}}.
+\]
+(c) 空间非线性分子
+$i=6N-6$：
+\[
+\boxed{C_V=3(N-1)R,\qquad
+\gamma=\frac{3N-2}{3N-3}}.
+\]
+\excheck 该经典高温极限已计入全部振动模；
+常温氧、氮气通常振动模冻结，不能把
+高温双原子结果 $7R/2$ 直接用于常温。
+
+\thermokineticproblem{70}{71}
+由 $N$ 原子分子组成的理想气体在
+所有自由度均激发的条件下等压膨胀。
+求所吸热量中用于气体膨胀功的比例，
+并给出单原子气体的这一比例。
+\exsolution
+等压理想气体过程中
+$A=\nu R\Delta T$，
+$Q=\nu C_p\Delta T$，
+因此
+\[
+\frac AQ=\frac R{C_p}
+=\frac R{(i/2+1)R}=\frac2{i+2}.
+\]
+非线性 $N$ 原子分子 $i=6N-6$，
+故
+\[
+\boxed{(A/Q)_{\rm nonlinear}=\frac1{3N-2}}.
+\]
+线性分子 $i=6N-5$，
+故
+\[
+\boxed{(A/Q)_{\rm linear}=\frac1{3N-3/2}}.
+\]
+对于单原子气体 $i=3$，
+\[
+\boxed{(A/Q)_{\rm mono}=\frac25}.
+\]
+\excheck 一般不能把单原子 $N=1$
+代入“非线性分子具有3个转动自由度”
+的推导；单原子需单独用 $i=3$。
+
+\thermokineticproblem{71}{71}
+某气体的质量定容和定压比热容已知：
+$c_V=0.65\,\mathrm{J/(g\,K)}$、
+$c_p=0.91\,\mathrm{J/(g\,K)}$。
+求气体的摩尔质量 $M$ 与分子的有效自由度数 $i$。
+\exsolution
+由摩尔 Mayer 关系 $C_p-C_V=R$，
+而质量比热与摩尔热容满足
+$C_p=Mc_p,C_V=Mc_V$，
+所以
+\[
+M(c_p-c_V)=R,
+\qquad
+\boxed{M=\frac R{c_p-c_V}
+=\frac{8.314}{0.91-0.65}\,\mathrm{g/mol}
+\simeq32\,\mathrm{g/mol}}.
+\]
+又
+$c_p/c_V=C_p/C_V=\gamma=(i+2)/i$，
+于是
+\[
+\boxed{i=\frac2{\gamma-1}
+=\frac2{c_p/c_V-1}
+=\frac{2c_V}{c_p-c_V}=5}.
+\]
+\excheck 摩尔质量约32 g/mol，
+有效自由度5符合常温刚性双原子气体。
+
+\thermokineticproblem{72}{71}
+求气体分子的有效自由度数 $i$：
+(a) 已知定压摩尔热容
+$C_p=29\,\mathrm{J/(mol\,K)}$；
+(b) 已知沿 $pT=\text{常数}$ 路径
+的摩尔热容为
+$C=29\,\mathrm{J/(mol\,K)}$。
+\exsolution
+(a) 理想气体
+$C_p=(i/2+1)R$，所以
+\[
+\boxed{i=2\left(\frac{C_p}{R}-1\right)
+\simeq5}.
+\]
+(b) 一摩尔理想气体
+$V=RT/p$。沿 $pT=\text{常数}$，
+$p\propto1/T$，故 $V\propto T^2$，
+于是
+$p\,\mathrm dV=2R\,\mathrm dT$。
+第一定律
+$\delta Q=C_V\,\mathrm dT+p\,\mathrm dV$
+给
+\[
+C=C_V+2R=\left(\frac i2+2\right)R.
+\]
+所以
+\[
+\boxed{i=2\left(\frac{C}{R}-2\right)
+\simeq3}.
+\]
+\excheck (b) 不能误把 $pT=\text{常数}$
+当作等压或等温过程；该路径的
+多方指数为 $n=1/2$。
+% === END 11-kinetic-theory-062-072.tex ===
+
+% === BEGIN 11-kinetic-theory-073-083.tex blob 8fb89413160090d8835b481edfabe6dfa18044c4 ===
+% Irodov 2.3, source PDF pp.80--81, printed pp.71--72.
+% Problem 74 source answer appears to have a factor-of-ten numeric error.
+\thermokineticproblem{73}{71}
+一混合气由 $\nu_1$ mol 单原子理想气体和
+$\nu_2$ mol 刚性双原子理想气体组成。
+求混合物的热容比 $\gamma$。
+\exsolution
+单原子分子的定容、定压摩尔热容为
+$3R/2$、$5R/2$；刚性双原子分子对应
+$5R/2$、$7R/2$。
+混合气总热容为
+\[
+C_{V,\Sigma}=\frac R2(3\nu_1+5\nu_2),\qquad
+C_{p,\Sigma}=\frac R2(5\nu_1+7\nu_2).
+\]
+因此
+\[
+\boxed{\gamma=
+\frac{C_{p,\Sigma}}{C_{V,\Sigma}}
+=\frac{5\nu_1+7\nu_2}{3\nu_1+5\nu_2}}.
+\]
+\excheck 仅剩单原子气体时 $\gamma=5/3$，
+仅剩刚性双原子气体时 $\gamma=7/5$，
+与独立组分一致。
+
+\thermokineticproblem{74}{71}
+一个装有氮气的绝热密闭容器
+最初温度为 $t=27^\circ\mathrm C$，
+整体以速率 $v=100\,\mathrm{m/s}$ 平动。
+若容器突然停止，且气体的整体平动动能
+转化为内能，求压强变化的方向及百分比。
+\exsolution
+设氮气质量 $m$、摩尔质量
+$M=28\times10^{-3}\,\mathrm{kg/mol}$。
+在刚性双原子气体近似中
+$C_V=5R/2$，所以
+\[
+\frac12mv^2=\frac mM C_V\Delta T
+\quad\Longrightarrow\quad
+\Delta T=\frac{Mv^2}{5R}.
+\]
+因为容器体积及气体摩尔数不变，
+$p\propto T$，故
+\[
+\boxed{\frac{\Delta p}{p}
+=\frac{\Delta T}{T}
+=\frac{Mv^2}{5RT}>0}.
+\]
+代入 $T\simeq300\,\mathrm K$：
+\[
+\boxed{100\frac{\Delta p}{p}
+=\frac{100(0.028)(100)^2}{5(8.314)(300)}
+\simeq2.24\%}.
+\]
+\excheck 复核量纲与算术：
+$\Delta T=Mv^2/(5R)\simeq6.74\,\mathrm K$，
+故 $100\Delta T/T\simeq2.24\%$，
+与本版书末给出的约 $2.2\%$ 一致。
+此前译稿误将百分比算小10倍，
+现已更正；\emph{原书这一项无数值勘误}。
+
+\thermokineticproblem{75}{71}
+在温度 $t=17^\circ\mathrm C$ 下，求
+(a) 氧气分子的均方根速率
+与单分子的平均平动动能；
+(b) 空气中悬浮的水滴
+（直径 $d=0.10\,\mathrm{\mu m}$）
+的布朗平动均方根速率。
+\exsolution
+(a) 温度为 $T=290.15\,\mathrm K$，
+氧气摩尔质量
+$M_{\mathrm O_2}\simeq0.0320\,\mathrm{kg/mol}$。
+由能量均分：
+\[
+\boxed{v_{\rm rms}=\sqrt{\frac{3RT}{M_{\mathrm O_2}}}
+\simeq0.47\,\mathrm{km/s}},\qquad
+\boxed{\bar\varepsilon_{\rm trans}=\frac32k_BT
+\simeq6.0\times10^{-21}\,\mathrm J}.
+\]
+(b) 将水滴视为密度
+$\rho_w\simeq10^3\,\mathrm{kg/m^3}$
+的刚性球体，
+其质量
+$m_d=(\pi/6)\rho_wd^3$。
+悬浮平动的三个速度自由度平均动能为
+$3k_BT/2$，因此
+\[
+\boxed{v_{d,\rm rms}=
+\sqrt{\frac{3k_BT}{m_d}}
+=\sqrt{\frac{18k_BT}{\pi\rho_wd^3}}
+\simeq0.15\,\mathrm{m/s}}.
+\]
+\excheck 水滴的平动热运动能量和单个氧分子的平均平动能
+同为 $3k_BT/2$，
+但两者质量相差巨大，因此速率不同。
+
+\thermokineticproblem{76}{71}
+由刚性双原子分子构成的理想气体
+发生可逆绝热膨胀。
+若分子均方根速率下降
+$\eta=1.50$ 倍，求气体体积增大多少倍。
+\exsolution
+分子均方根速率
+$v_{\rm rms}\propto\sqrt T$，
+所以末温
+$T_2/T_1=\eta^{-2}$。
+刚性双原子气体
+$i=5$、$\gamma=1+2/i=7/5$。
+可逆绝热关系
+$TV^{\gamma-1}=\text{常数}$，故
+\[
+\left(\frac{V_2}{V_1}\right)^{\gamma-1}
+=\frac{T_1}{T_2}=\eta^2.
+\]
+因此
+\[
+\boxed{\frac{V_2}{V_1}
+=\eta^{2/(\gamma-1)}
+=\eta^5
+=(1.50)^5\simeq7.6}.
+\]
+\excheck 温度和均方根速率在绝热膨胀中都降低，
+体积增大，符合物理方向。
+
+\thermokineticproblem{77}{71}
+容器中有 $m=15\,\mathrm g$ 的氮气，
+初温 $T_1=300\,\mathrm K$。
+为使分子均方根速率增大到原来的
+$\eta=2.0$ 倍，在\emph{等容}条件下
+需向气体传递多少热？
+\exsolution
+分子均方根速率与温度平方根成正比，
+因此
+$T_2/T_1=\eta^2=4$、
+$\Delta T=(\eta^2-1)T_1=900\,\mathrm K$。
+刚性双原子氮气的定容摩尔热容
+$C_V=5R/2$，
+摩尔数
+$\nu=m/M=15/28\,\mathrm{mol}$。
+等容无气体外功，第一定律给
+\[
+Q=\nu C_V\Delta T
+=\frac mM\frac{5R}{2}T_1(\eta^2-1).
+\]
+故
+\[
+\boxed{Q\simeq
+\frac{15}{28}\frac{5(8.314)}{2}(300)(3)
+\simeq1.0\times10^4\,\mathrm J=10\,\mathrm{kJ}}.
+\]
+\excheck 题面未写升温过程的具体热容模型，
+本稿采用\emph{刚性双原子近似}。
+若高温显著激发振动，自由度与热容会改变。
+
+\thermokineticproblem{78}{72}
+由刚性双原子分子组成的气体
+温度为 $T=300\,\mathrm K$。
+单个分子的转动惯量为
+$I=2.1\times10^{-39}\,\mathrm{g\,cm^2}$。
+求分子旋转的角均方根速率。
+\exsolution
+刚性线性双原子分子有两项独立转动动能，
+因此平均转动动能为 $k_BT$。
+若转动角速度模为 $\omega$，
+旋转动能 $\varepsilon_{\rm rot}=I\omega^2/2$，
+故
+\[
+\frac12I\overline{\omega^2}=k_BT,\qquad
+\boxed{\omega_{\rm rms}=\sqrt{\frac{2k_BT}{I}}}.
+\]
+转换惯量单位：
+$1\,\mathrm{g\,cm^2}=10^{-7}\,\mathrm{kg\,m^2}$，
+因此
+$I=2.1\times10^{-46}\,\mathrm{kg\,m^2}$。
+代入
+\[
+\boxed{\omega_{\rm rms}\simeq
+6.3\times10^{12}\,\mathrm{rad/s}}.
+\]
+\excheck 不能把两转动自由度漏成一项，
+否则根号内系数将差一倍。
+
+\thermokineticproblem{79}{72}
+刚性双原子气体最初处于标准状况，
+然后体积被可逆绝热压缩
+$\eta=5.0$ 倍。
+求末态单个分子的平均转动动能。
+\exsolution
+刚性双原子气体
+$\gamma=7/5$。
+绝热压缩至 $V_f=V_0/\eta$，
+温度为
+\[
+T_f=T_0\left(\frac{V_0}{V_f}\right)^{\gamma-1}
+=T_0\eta^{2/5}.
+\]
+单分子的两转动自由度
+共贡献平均动能 $k_BT_f$，
+所以
+\[
+\boxed{\overline\varepsilon_{\rm rot}
+=k_BT_0\eta^{2/5}}.
+\]
+取 $T_0=273.15\,\mathrm K$、$\eta=5$：
+\[
+\boxed{\overline\varepsilon_{\rm rot}
+\simeq7.2\times10^{-21}\,\mathrm J
+\approx0.7\times10^{-20}\,\mathrm J}.
+\]
+\excheck 旋转动能为 $k_BT$，
+而非平动能 $3k_BT/2$。
+
+\thermokineticproblem{80}{72}
+由刚性双原子分子组成的气体，
+可逆绝热膨胀到初体积的 $\eta$ 倍。
+问单位壁面积每单位时间受到分子碰撞的频率
+减小多少倍？
+\exsolution
+分子对平面壁的碰撞通量
+$\Phi=\frac14 n\bar v$，
+其中数密度 $n\propto1/V$，
+平均速率 $\bar v\propto\sqrt T$。
+可逆绝热过程
+$T\propto V^{-(\gamma-1)}$，
+因此
+\[
+\Phi\propto
+V^{-1}V^{-(\gamma-1)/2}
+=V^{-(\gamma+1)/2}.
+\]
+刚性双原子气体
+$\gamma=7/5$，
+\[
+\boxed{\frac{\Phi_1}{\Phi_2}
+=\eta^{(\gamma+1)/2}
+=\eta^{6/5}}.
+\]
+\excheck 既考虑了膨胀导致的分子数密度降低，
+也考虑了温度下降使平均分子速率降低。
+
+\thermokineticproblem{81}{72}
+刚性双原子气体沿摩尔过程热容
+$C=R$ 的多方路径，体积增大
+$\eta=2.0$ 倍。
+问单位面积壁面碰撞频率减少多少倍？
+\exsolution
+对每摩尔理想气体有
+$\delta Q=C\,\mathrm dT=
+C_V\,\mathrm dT+p\,\mathrm dV$。
+刚性双原子气体
+$C_V=5R/2$，所以
+\[
+p\,\mathrm dV=(C-C_V)\mathrm dT
+=-\frac{3R}{2}\mathrm dT.
+\]
+用 $pV=RT$，
+$\mathrm dT/T=-(2/3)\mathrm dV/V$，
+从而 $T\propto V^{-2/3}$。
+碰撞频率
+$\Phi\propto n\bar v\propto V^{-1}T^{1/2}
+\propto V^{-4/3}$，故
+\[
+\boxed{\frac{\Phi_1}{\Phi_2}
+=\eta^{4/3}=2^{4/3}\simeq2.52}.
+\]
+\excheck 相同体积变化的不同多方路径
+不一定具有与绝热过程相同的碰撞频率比。
+
+\thermokineticproblem{82}{72}
+刚性双原子气体沿某多方过程膨胀，
+但分子撞击容器壁的单位面积频率
+保持不变。求该过程的摩尔热容。
+\exsolution
+碰撞通量
+$\Phi=\tfrac14n\bar v\propto V^{-1}\sqrt T$。
+由于 $\Phi$ 不变，
+$\sqrt T/V=\text{常数}$，
+即
+\[
+T\propto V^2,\qquad
+\frac{\mathrm dT}{T}
+=2\frac{\mathrm dV}{V}.
+\]
+对一摩尔气体
+$p=RT/V$，所以
+\[
+p\,\mathrm dV=\frac R2\,\mathrm dT.
+\]
+根据第一定律，
+\[
+C=C_V+\frac{p\,\mathrm dV}{\mathrm dT}
+=\frac{5R}{2}+\frac R2,
+\quad
+\boxed{C=3R}.
+\]
+\excheck 频率不变并不等价于温度不变；
+膨胀使数密度下降，必须提高温度以补偿碰撞速率。
+
+\thermokineticproblem{83}{72}
+在标准大气压强 $p_0$ 下，
+气体质量密度为
+$\rho=1.00\,\mathrm{g/L}$。
+求单分子速率分布的
+最概然速率、平均速率和均方根速率。
+\exsolution
+理想气体给
+$p_0=nk_BT$、$\rho=nm$，
+故
+$k_BT/m=p_0/\rho$。
+麦克斯韦分布的三个特征速率为
+\[
+\boxed{v_p=\sqrt{\frac{2p_0}{\rho}}},\qquad
+\boxed{\bar v=\sqrt{\frac{8p_0}{\pi\rho}}},\qquad
+\boxed{v_{\rm rms}=\sqrt{\frac{3p_0}{\rho}}}.
+\]
+将
+$p_0=1.01325\times10^5\,\mathrm{Pa}$、
+$\rho=1.00\,\mathrm{kg/m^3}$ 代入：
+\[
+\boxed{v_p\simeq0.45\,\mathrm{km/s}},\quad
+\boxed{\bar v\simeq0.51\,\mathrm{km/s}},\quad
+\boxed{v_{\rm rms}\simeq0.55\,\mathrm{km/s}}.
+\]
+\excheck 三者次序
+$v_p<\bar v<v_{\rm rms}$，
+并不需要预先知道该气体的摩尔质量。
+% === END 11-kinetic-theory-073-083.tex ===
+
+% === BEGIN 11-kinetic-theory-084-094.tex blob 36dbc359c689d8c78c1c0bdf08e7bbf91c74c41f ===
+% Irodov, original numbered Part II problems 84--94, printed pp.72--73.
+% Maxwell speed density F(v)=4/sqrt(pi) v^2/vp^3 exp[-(v/vp)^2],
+% vp=sqrt(2kBT/m), exact normalization.
+\thermokineticproblem{84}{72}
+在麦克斯韦分布下，
+求分子速率与下列特征速率相差不超过
+$\delta=1.00\%$ 的分子所占比例：
+(a) 最概然速率 $v_p$；
+(b) 均方根速率 $v_{\rm rms}$。
+\exsolution
+令无量纲速率 $u=v/v_p$，
+其归一化分布为
+$f(u)=\frac4{\sqrt\pi}u^2e^{-u^2}$。
+若速率容许偏差是特征速率 $v_*$ 的
+$\delta$ 倍，则区间
+$u\in[u_*(1-\delta),u_*(1+\delta)]$，
+小 $\delta$ 下比例近似为
+\[
+P\simeq f(u_*)\,2\delta u_*
+=\frac8{\sqrt\pi}\delta u_*^3e^{-u_*^2}.
+\]
+(a) $u_*=1$，故
+\[
+\boxed{P_p\simeq\frac8{e\sqrt\pi}\delta
+\simeq1.66\%}.
+\]
+(b) 均方根速率
+$v_{\rm rms}=\sqrt{3k_BT/m}$，
+$u_*=\sqrt{3/2}$，
+因此
+\[
+\boxed{P_{\rm rms}\simeq
+\frac8{\sqrt\pi}\left(\frac32\right)^{3/2}
+e^{-3/2}\delta\simeq1.85\%}.
+\]
+\excheck 用的是速率区间而非某一固定精确速率；
+连续分布在单个点的概率为零，
+须对小但非零宽度的区间积分。
+
+\thermokineticproblem{85}{72}
+求气体温度：
+(a) 氢分子的均方根速率
+比最概然速率大
+$\Delta v=400\,\mathrm{m/s}$；
+(b) 氧分子的速率分布函数
+在 $v=420\,\mathrm{m/s}$ 处取最大值。
+\exsolution
+(a) 由麦克斯韦分布，
+\[
+v_{\rm rms}-v_p
+=(\sqrt3-\sqrt2)\sqrt{\frac{k_BT}{m_H}}
+=\Delta v.
+\]
+所以
+\[
+\boxed{T_a=\frac{m_H(\Delta v)^2}
+{k_B(\sqrt3-\sqrt2)^2}}.
+\]
+用分子氢质量 $m_H\simeq2u$
+可得
+$\boxed{T_a\simeq380\,\mathrm K}$。
+(b) 最大值出现在
+$v_p=\sqrt{2k_BT/m_O}$，
+故
+\[
+\boxed{T_b=\frac{m_Ov^2}{2k_B}
+\simeq340\,\mathrm K},
+\]
+其中氧分子质量 $m_O\simeq32u$。
+\excheck 这两问的气体摩尔质量不同；
+不能把氢分子的质量用于氧分子计算。
+
+\thermokineticproblem{86}{72}
+对于氮气，求：
+(a) 麦克斯韦速率密度函数
+在 $v_1=300\,\mathrm{m/s}$ 和
+$v_2=600\,\mathrm{m/s}$ 处数值相等的温度；
+(b) 在给定速率 $v$ 处，
+温度为 $T_0$ 与 $\eta T_0$ 的两个
+麦克斯韦速率密度函数数值相等时的 $v$。
+\exsolution
+在某一温度下，
+麦克斯韦速率概率密度为
+\[
+F_T(v)=4\pi\left(\frac m{2\pi k_BT}\right)^{3/2}
+v^2e^{-mv^2/(2k_BT)}.
+\]
+(a) 令 $F_T(v_1)=F_T(v_2)$，
+约掉温度的共同归一化系数，
+得
+\[
+v_1^2e^{-mv_1^2/(2k_BT)}
+=v_2^2e^{-mv_2^2/(2k_BT)}.
+\]
+取对数化简为
+\[
+\boxed{T=
+\frac{m(v_2^2-v_1^2)}
+{4k_B\ln(v_2/v_1)}}.
+\]
+取 $m\simeq28u$，得
+$\boxed{T\simeq330\,\mathrm K}$。
+(b) 比较同一个速率的两温度概率密度，
+\[
+T_0^{-3/2}e^{-mv^2/(2k_BT_0)}
+=(\eta T_0)^{-3/2}
+e^{-mv^2/(2k_B\eta T_0)}.
+\]
+两边取对数，得
+\[
+\boxed{v=
+\sqrt{\frac{3k_BT_0\eta\ln\eta}
+{m(\eta-1)}}}.
+\]
+\excheck 当 $\eta\to1$ 时，
+$\eta\ln\eta/(\eta-1)\to1$，
+两分布趋于相同，此式的极限只对应
+由非平凡交点连续延伸到的特征速率。
+
+\thermokineticproblem{87}{72}
+在含氮分子与氧分子的混合气中，
+温度为何值时氮、氧分子的最概然速率
+相差 $\Delta v=30\,\mathrm{m/s}$？
+\exsolution
+同温混合气中，
+分子量为 $m$ 的组分最概然速率为
+$v_p=\sqrt{2k_BT/m}$。
+氮分子比氧分子轻，
+故氮的最概然速率较大。
+因此
+\[
+\Delta v=\sqrt{2k_BT}
+\left(\frac1{\sqrt{m_N}}-\frac1{\sqrt{m_O}}\right).
+\]
+平方求温度：
+\[
+\boxed{T=\frac{(\Delta v)^2}
+{2k_B(1/\sqrt{m_N}-1/\sqrt{m_O})^2}}.
+\]
+取 $m_N\simeq28u$、$m_O\simeq32u$，
+或直接以摩尔质量 $M_N=0.028\,\mathrm{kg/mol}$、
+$M_O=0.032\,\mathrm{kg/mol}$ 与摩尔气体常数 $R$
+计算，得
+\[
+T=\frac{(30\,\mathrm{m/s})^2}{
+2R\left(M_N^{-1/2}-M_O^{-1/2}\right)^2}
+\simeq\boxed{3.63\times10^2\,\mathrm K}.
+\]
+在此温度，
+\[
+v_{p,N}=\sqrt{\frac{2RT}{M_N}}
+\simeq464.50\,\mathrm{m/s},\qquad
+v_{p,O}=\sqrt{\frac{2RT}{M_O}}
+\simeq434.50\,\mathrm{m/s},
+\]
+故 $v_{p,N}-v_{p,O}=30.00\,\mathrm{m/s}$，完成独立反代验证。
+\excheck \textbf{原书答案有三个数量级的数值错误：}
+底本印刷答案页第289页（PDF第298页）给出
+$T=0.37\,\mathrm K$，但同时列出的符号公式
+正确代入 $m_N\simeq28u$、$m_O\simeq32u$
+应得约 $363\,\mathrm K$（通常可粗略写成 $0.37\,\mathrm{kK}$）。
+$0.37\,\mathrm K$ 下的两种最概然速率仅相差
+约 $0.96\,\mathrm{m/s}$，与题给 $30\,\mathrm{m/s}$
+矛盾。已按物理方程与原始单位修正，不沿用书末错误数值。
+
+\thermokineticproblem{88}{72}
+氢气与氦气的混合物温度为
+$T=300\,\mathrm K$。
+在什么速率 $v$ 处，
+两组分各自归一化的麦克斯韦速率分布密度
+取相同值？
+\exsolution
+氢分子质量为 $m_H\simeq2u$，
+氦原子质量为 $m_{\rm He}\simeq4u$。
+两个归一化速率概率密度相等意味着
+\[
+m_H^{3/2}v^2e^{-m_Hv^2/(2k_BT)}
+=m_{\rm He}^{3/2}v^2e^{-m_{\rm He}v^2/(2k_BT)}.
+\]
+除去共同的 $v^2$（取 $v>0$），
+两边取自然对数：
+\[
+\frac{(m_{\rm He}-m_H)v^2}{2k_BT}
+=\frac32\ln\frac{m_{\rm He}}{m_H}.
+\]
+所以
+\[
+\boxed{v=
+\sqrt{\frac{3k_BT\ln(m_{\rm He}/m_H)}
+{m_{\rm He}-m_H}}}.
+\]
+代入后
+$\boxed{v\simeq1.6\,\mathrm{km/s}}$。
+\excheck 这里比较的是\emph{各自归一化的函数}
+$F(v)$，不包含混合气未知的组分浓度权重。
+
+\thermokineticproblem{89}{72}
+分子质量为 $m$ 的理想气体中，
+对于固定速率区间 $[v,v+\mathrm dv]$，
+在何种温度 $T$ 下，
+速率处于该区间的分子数量最多？
+\exsolution
+归一化麦克斯韦速率密度
+\[
+F_T(v)=
+4\pi\left(\frac m{2\pi k_BT}\right)^{3/2}
+v^2e^{-mv^2/(2k_BT)}.
+\]
+当 $v$、$\mathrm dv$ 固定时，
+需最大化温度函数
+$T^{-3/2}\exp[-mv^2/(2k_BT)]$。
+取对数并求导：
+\[
+\frac{\mathrm d}{\mathrm dT}\ln F_T(v)
+=-\frac3{2T}+\frac{mv^2}{2k_BT^2}=0.
+\]
+得到唯一极大值
+\[
+\boxed{T=\frac{mv^2}{3k_B}}.
+\]
+\excheck 这是固定某一速率窗口对温度求最大；
+不同于固定温度下对速率求最概然值
+$v_p=\sqrt{2k_BT/m}$。
+
+\thermokineticproblem{90}{73}
+求气体中分子速度满足以下条件的概率：
+$x$ 方向速度分量属于
+$[v_x,v_x+\mathrm dv_x]$，
+同时垂直 $x$ 方向的速度分量模
+$v_\perp=\sqrt{v_y^2+v_z^2}$
+属于 $[v_\perp,v_\perp+\mathrm dv_\perp]$。
+分子质量 $m$，温度 $T$。
+\exsolution
+三维麦克斯韦速度密度为
+\[
+f(\bm v)=
+\left(\frac m{2\pi k_BT}\right)^{3/2}
+e^{-m(v_x^2+v_y^2+v_z^2)/(2k_BT)}.
+\]
+在垂直的 $(v_y,v_z)$ 平面上引入极坐标，
+$\mathrm dv_y\mathrm dv_z
+=v_\perp\,\mathrm dv_\perp\,\mathrm d\varphi$。
+把极角 $\varphi\in[0,2\pi)$ 积分掉：
+\[
+\boxed{\frac{\mathrm dN}{N}
+=2\pi\left(\frac m{2\pi k_BT}\right)^{3/2}
+v_\perp e^{-m(v_x^2+v_\perp^2)/(2k_BT)}
+\,\mathrm dv_x\,\mathrm dv_\perp}.
+\]
+\excheck 变量 $v_\perp$ 是二维分量\emph{模}，
+须包含极坐标雅可比因子 $2\pi v_\perp$。
+
+\thermokineticproblem{91}{73}
+从麦克斯韦分布直接计算
+理想气体分子速度 $x$ 分量的平均值
+$\overline{v_x}$，
+以及其绝对值的平均值
+$\overline{|v_x|}$。
+\exsolution
+一维速度分布为
+\[
+f_x(v_x)=\sqrt{\frac m{2\pi k_BT}}
+e^{-mv_x^2/(2k_BT)}.
+\]
+因为该函数为偶函数，
+$v_xf_x(v_x)$ 为奇函数，
+所以
+\[
+\boxed{\overline{v_x}
+=\int_{-\infty}^{\infty}v_xf_x(v_x)\,\mathrm dv_x=0}.
+\]
+绝对值平均为
+\[
+\overline{|v_x|}
+=2\sqrt{\frac m{2\pi k_BT}}
+\int_0^\infty
+v_xe^{-mv_x^2/(2k_BT)}\,\mathrm dv_x.
+\]
+令
+$u=mv_x^2/(2k_BT)$，
+$v_x\mathrm dv_x=(k_BT/m)\mathrm du$，
+得
+\[
+\boxed{\overline{|v_x|}
+=\sqrt{\frac{2k_BT}{\pi m}}}.
+\]
+\excheck 平均的有符号分量为零，
+但其绝对值平均严格为正；
+不能将两种平均混淆。
+
+\thermokineticproblem{92}{73}
+利用麦克斯韦分布求
+气体分子 $x$ 方向速度分量平方的平均值
+$\overline{v_x^2}$，气体温度 $T$、分子质量 $m$。
+\exsolution
+代入归一化一维高斯分布：
+\[
+\overline{v_x^2}
+=\sqrt{\frac m{2\pi k_BT}}
+\int_{-\infty}^{\infty}
+v_x^2e^{-mv_x^2/(2k_BT)}\,\mathrm dv_x.
+\]
+利用高斯积分恒等式
+\[
+\int_{-\infty}^{\infty}x^2e^{-ax^2}\,\mathrm dx
+=\frac{\sqrt\pi}{2a^{3/2}},\qquad a>0,
+\]
+取 $a=m/(2k_BT)$，化简为
+\[
+\boxed{\overline{v_x^2}=\frac{k_BT}{m}}.
+\]
+\excheck 三个正交速度分量独立且等方差，
+所以 $\overline{v^2}=3k_BT/m$，与均分定理一致。
+
+\thermokineticproblem{93}{73}
+在温度为 $T$、数密度为 $n$、
+分子质量为 $m$ 的理想气体中，
+根据麦克斯韦分布求
+单位墙面积每单位时间受到分子撞击的次数
+$\Phi$。
+\exsolution
+取墙法线为 $x$ 轴，
+只有朝墙运动、满足 $v_x>0$ 的分子
+能撞击墙。
+单位面积每秒碰撞数是正向粒子通量
+\[
+\Phi=n\int_0^\infty v_x f_x(v_x)\,\mathrm dv_x,
+\quad
+f_x(v_x)=\sqrt{\frac m{2\pi k_BT}}
+e^{-mv_x^2/(2k_BT)}.
+\]
+计算积分：
+\[
+\int_0^\infty v_x f_x(v_x)\,\mathrm dv_x
+=\sqrt{\frac{k_BT}{2\pi m}},
+\]
+所以
+\[
+\boxed{\Phi=n\sqrt{\frac{k_BT}{2\pi m}}
+=\frac14n\sqrt{\frac{8k_BT}{\pi m}}
+=\frac14n\bar v}.
+\]
+\excheck 因为正、负法向速度各占一半，
+而撞击通量还按速率加权，
+不能只用 $n\bar v/2$。
+
+\thermokineticproblem{94}{73}
+从麦克斯韦分布直接求
+数密度为 $n$、温度为 $T$ 的气体
+对静止平壁产生的压强 $p$，
+单分子质量为 $m$。
+\exsolution
+每个以正法向分量 $v_x>0$ 撞墙的
+分子在弹性反射中传给墙
+法向冲量 $2mv_x$；
+相应撞击通量微元为
+$n v_x f_x(v_x)\,\mathrm dv_x$。
+所以
+\[
+p=2mn\int_0^\infty v_x^2 f_x(v_x)\,\mathrm dv_x.
+\]
+由于高斯分布为偶函数，
+\[
+2\int_0^\infty v_x^2 f_x(v_x)\,\mathrm dv_x
+=\int_{-\infty}^\infty v_x^2 f_x(v_x)\,\mathrm dv_x
+=\overline{v_x^2}.
+\]
+上一题得到
+$\overline{v_x^2}=k_BT/m$，
+因此
+\[
+\boxed{p=mn\overline{v_x^2}=nk_BT}.
+\]
+\excheck 这是理想气体状态方程的动理论形式；
+压强取决于法向动量通量，而不是
+墙上单次碰撞冲量大小。
+% === END 11-kinetic-theory-084-094.tex ===
+
+% === BEGIN 11-kinetic-theory-095-103.tex blob 200471aee5f24252cd5fad3500b7774001d54341 ===
+% Original problems 95--103 in section 2.3 of user PDF; printed pp.73--74.
+\thermokineticproblem{95}{73}
+利用麦克斯韦分布计算气体分子
+速率倒数的平均值
+$\overline{1/v}$，温度为 $T$、分子质量为 $m$。
+将其与平均速率的倒数 $1/\bar v$ 比较。
+\exsolution
+速率概率密度为
+\[
+F(v)=4\pi\left(\frac{m}{2\pi k_BT}\right)^{3/2}
+v^2e^{-mv^2/(2k_BT)},\qquad v\ge0.
+\]
+因此
+\[
+\overline{\frac1v}=\int_0^\infty
+\frac1vF(v)\,\mathrm dv
+=4\pi\left(\frac m{2\pi k_BT}\right)^{3/2}
+\int_0^\infty ve^{-mv^2/(2k_BT)}\,\mathrm dv.
+\]
+用
+$\int_0^\infty ve^{-av^2}\mathrm dv=1/(2a)$，
+得到
+\[
+\boxed{\overline{\frac1v}=
+\sqrt{\frac{2m}{\pi k_BT}}}.
+\]
+又
+$\bar v=\sqrt{8k_BT/(\pi m)}$，
+所以
+\[
+\boxed{\overline{\frac1v}
+=\frac4\pi\,\frac1{\bar v}}.
+\]
+\excheck 由于函数 $1/v$ 是凸函数，
+Jensen 不等式要求
+$\overline{1/v}\ge1/\bar v$，
+而 $4/\pi>1$，方向正确。
+
+\thermokineticproblem{96}{73}
+单分子质量为 $m$、温度为 $T$ 的理想气体
+服从麦克斯韦速率分布。
+求平动动能 $\varepsilon=mv^2/2$ 的概率分布密度；
+求最概然动能 $\varepsilon_p$，
+并判断它是否等于最概然速率对应的动能。
+\exsolution
+速率概率密度为
+$F(v)=4\pi(m/(2\pi k_BT))^{3/2}v^2
+e^{-mv^2/(2k_BT)}$。
+变量变换
+$\varepsilon=mv^2/2$，
+$v=\sqrt{2\varepsilon/m}$，
+$\mathrm dv/\mathrm d\varepsilon=1/(mv)$，
+所以
+\[
+f_\varepsilon(\varepsilon)=
+F(v)\left|\frac{\mathrm dv}{\mathrm d\varepsilon}\right|
+=\boxed{\frac2{\sqrt\pi}
+\frac{\sqrt\varepsilon}{(k_BT)^{3/2}}
+e^{-\varepsilon/(k_BT)}},
+\qquad\varepsilon\ge0.
+\]
+对其对数求导：
+\[
+\frac{\mathrm d}{\mathrm d\varepsilon}\ln f_\varepsilon
+=\frac1{2\varepsilon}-\frac1{k_BT}=0,
+\]
+因此
+\[
+\boxed{\varepsilon_p=\frac12k_BT}.
+\]
+而速率分布的众数为
+$v_p=\sqrt{2k_BT/m}$，
+对应动能
+$mv_p^2/2=k_BT$，并不等于 $\varepsilon_p$。
+\excheck 众数在非线性变量变换下不保持不变；
+原因是概率密度还要乘雅可比因子。
+
+\thermokineticproblem{97}{73}
+求热平衡理想单原子气体中，
+单分子平动动能与平均动能之差
+不超过 $\delta=1.0\%$
+平均动能的分子比例。
+\exsolution
+三维平动平均动能为
+$\bar\varepsilon=3k_BT/2$，
+动能分布为第96题的
+\[
+f_\varepsilon(\varepsilon)
+=\frac{2\sqrt\varepsilon}{\sqrt\pi(k_BT)^{3/2}}
+e^{-\varepsilon/(k_BT)}.
+\]
+目标区间
+$[(1-\delta)\bar\varepsilon,
+(1+\delta)\bar\varepsilon]$。
+因 $\delta\ll1$，
+把概率密度视作区间中央的常值，
+得到
+\[
+P\simeq2\delta\bar\varepsilon\,
+f_\varepsilon(\bar\varepsilon).
+\]
+代入
+$\bar\varepsilon=3k_BT/2$：
+\[
+\boxed{P\simeq
+\frac{6\delta}{\sqrt\pi}
+\sqrt{\frac32}e^{-3/2}
+\simeq0.0092\simeq0.9\%}.
+\]
+\excheck 概率小于约2%的相对能量窗口，
+因为单分子能量分布较宽，
+不能把分子全都视为接近平均动能。
+
+\thermokineticproblem{98}{73}
+在温度为 $T$ 的理想气体中，
+求单分子平动动能
+$\varepsilon>\varepsilon_0$ 的比例，
+特别研究 $\varepsilon_0\gg k_BT$ 的情形。
+\exsolution
+由麦克斯韦能量分布
+\[
+f_\varepsilon(\varepsilon)
+=\frac{2\sqrt\varepsilon}{\sqrt\pi(k_BT)^{3/2}}
+e^{-\varepsilon/(k_BT)},
+\]
+所求尾部概率
+\[
+P=\frac2{\sqrt\pi}\int_{z_0}^\infty
+z^{1/2}e^{-z}\,\mathrm dz,\qquad
+z_0=\frac{\varepsilon_0}{k_BT}.
+\]
+利用不完全伽马函数恒等式，
+精确写成
+\[
+P=\operatorname{erfc}\sqrt{z_0}
++\frac2{\sqrt\pi}\sqrt{z_0}e^{-z_0}.
+\]
+当 $z_0\gg1$，主导项为
+\[
+\boxed{P\simeq\frac2{\sqrt\pi}
+\sqrt{\frac{\varepsilon_0}{k_BT}}
+e^{-\varepsilon_0/(k_BT)}}.
+\]
+\excheck 高能尾部虽有
+$\sqrt{\varepsilon_0/(k_BT)}$ 因子，
+但最终由指数衰减主导。
+
+\thermokineticproblem{99}{73}
+分子从容器小孔形成的射流，
+其速率密度满足
+$F(v)=A v^3e^{-mv^2/(2k_BT)}$，
+其中 $A$ 为归一化常数。
+求射流分子的
+(a) 最概然速率及其与容器内最概然速率之比；
+(b) 最概然平动动能。
+\exsolution
+(a) 在 $v>0$ 时
+\[
+\frac{\mathrm d}{\mathrm dv}\ln F(v)
+=\frac3v-\frac{mv}{k_BT}.
+\]
+令其为零：
+\[
+v_{p,\rm beam}^2=\frac{3k_BT}{m},
+\quad
+\boxed{v_{p,\rm beam}=\sqrt{\frac{3k_BT}{m}}}.
+\]
+容器内气体分子的最概然速率为
+$v_{p,\rm gas}=\sqrt{2k_BT/m}$，
+故
+\[
+\boxed{\frac{v_{p,\rm beam}}{v_{p,\rm gas}}
+=\sqrt{\frac32}}.
+\]
+(b) 令 $\varepsilon=mv^2/2$，
+概率密度变量变换含
+$\mathrm dv/\mathrm d\varepsilon=1/(mv)$，
+所以
+$f_\varepsilon(\varepsilon)\propto
+v^2e^{-\varepsilon/(k_BT)}
+\propto\varepsilon e^{-\varepsilon/(k_BT)}$。
+取对数求导，
+$1/\varepsilon-1/(k_BT)=0$，得
+\[
+\boxed{\varepsilon_{p,\rm beam}=k_BT}.
+\]
+\excheck 射流速率分布额外包含入射速率
+通量加权，故比容器内的 Maxwell 速率分布
+多一因子 $v$。
+
+\thermokineticproblem{100}{73}
+温度为 $T$、分子质量为 $m$、
+数密度为 $n$ 的理想气体，
+求单位墙面积每单位时间以
+与墙法线夹角在
+$[\theta,\theta+\mathrm d\theta]$
+之间的方向撞击墙的分子数。
+\exsolution
+在气体平衡状态，
+速度方向均匀分布在立体角上，
+其密度为 $\mathrm d\Omega/(4\pi)$。
+取墙法线为极轴，入射仅来自朝向墙的半球，
+方向立体角
+$\mathrm d\Omega=2\pi\sin\theta\,\mathrm d\theta$。
+碰撞通量再乘法向速率
+$v\cos\theta$，对速率平均后得
+\[
+\mathrm d\Phi=
+n\bar v\cos\theta\,
+\frac{2\pi\sin\theta\,\mathrm d\theta}{4\pi}
+=\frac12n\bar v\sin\theta\cos\theta\,\mathrm d\theta.
+\]
+因为
+$\bar v=\sqrt{8k_BT/(\pi m)}$，
+\[
+\boxed{\mathrm d\Phi=
+n\sqrt{\frac{2k_BT}{\pi m}}\,
+\sin\theta\cos\theta\,\mathrm d\theta},
+\quad 0\le\theta\le\frac\pi2.
+\]
+\excheck 对半球入射角区间积分，
+$\int_0^{\pi/2}\sin\theta\cos\theta\,\mathrm d\theta=1/2$，
+恢复总通量 $n\bar v/4$。
+
+\thermokineticproblem{101}{74}
+沿用第100题的理想气体与壁面模型，
+求单位墙面积每单位时间
+以速率在 $[v,v+\mathrm dv]$ 的区间内
+撞击墙的分子数。
+\exsolution
+气体分子速率密度
+\[
+F(v)=4\pi\left(\frac m{2\pi k_BT}\right)^{3/2}
+v^2e^{-mv^2/(2k_BT)}.
+\]
+对于固定速率 $v$，
+入射半球方向的法向速度加权平均为
+$v/4$；因此对应碰撞通量
+\[
+\mathrm d\Phi=
+n\frac v4F(v)\,\mathrm dv.
+\]
+代入分布函数：
+\[
+\boxed{\mathrm d\Phi=
+n\pi\left(\frac m{2\pi k_BT}\right)^{3/2}
+v^3e^{-mv^2/(2k_BT)}\,\mathrm dv}.
+\]
+\excheck 必须有额外通量权重 $v$；
+其速率分布与第99题的射流分布同型，
+而非容器内部的 $v^2$ 型。
+
+\thermokineticproblem{102}{74}
+一种粒子在均匀保守力场中，
+沿力的反方向相隔
+$\Delta h=3.0\,\mathrm{cm}$ 的两位置，
+粒子浓度相差
+$\eta=2.0$ 倍。
+体系温度 $T=280\,\mathrm K$，
+求每个粒子所受外力大小。
+\exsolution
+玻尔兹曼分布
+$n(h)\propto e^{-U(h)/(k_BT)}$。
+如果均匀力大小为 $F$，
+沿反力方向升高 $\Delta h$
+会使势能增加
+$\Delta U=F\Delta h$。
+故浓度比
+\[
+\eta=\frac{n_{\rm low}}{n_{\rm high}}
+=e^{F\Delta h/(k_BT)}.
+\]
+取对数：
+\[
+\boxed{F=\frac{k_BT\ln\eta}{\Delta h}}.
+\]
+代入
+$k_B=1.380649\times10^{-23}\,\mathrm{J/K}$、
+$T=280\,\mathrm K$、$\Delta h=0.030\,\mathrm m$，
+\[
+\boxed{F\simeq8.9\times10^{-20}\,\mathrm N}.
+\]
+\excheck 由浓度\emph{比值}求力，
+不必知道浓度的绝对归一化值。
+
+\thermokineticproblem{103}{74}
+显微镜观察悬浮的藤黄胶体微滴，
+在相隔 $h=40\,\mathrm{\mu m}$
+的两水平层中，
+平均微滴数密度相差 $\eta=2.0$ 倍。
+环境温度 $T=290\,\mathrm K$。
+微滴直径 $d=0.40\,\mathrm{\mu m}$，
+其密度比周围液体大
+$\Delta\rho=0.20\,\mathrm{g/cm^3}$。
+由这些数据求阿伏伽德罗常数 $N_A$。
+\exsolution
+一个球形微滴的体积
+$V_d=\pi d^3/6$。
+考虑浮力后的\emph{有效重力}
+\[
+F_{\rm eff}=\Delta\rho\,V_d g
+=\frac{\pi d^3}{6}\Delta\rho\,g.
+\]
+根据玻尔兹曼分布，
+\[
+\ln\eta=\frac{F_{\rm eff}h}{k_BT}
+=\frac{\pi d^3\Delta\rho gh}
+{6k_BT}.
+\]
+由 $R=N_Ak_B$，
+\[
+\boxed{N_A=\frac{6RT\ln\eta}
+{\pi d^3\Delta\rho gh}}.
+\]
+代入
+$d=4.0\times10^{-7}\,\mathrm m$、
+$\Delta\rho=200\,\mathrm{kg/m^3}$、
+$h=4.0\times10^{-5}\,\mathrm m$，
+计算得
+\[
+\boxed{N_A\simeq6.4\times10^{23}\,\mathrm{mol^{-1}}}.
+\]
+\excheck 这是经典佩兰胶体沉降方法的思路；
+若漏掉浮力所对应的液体密度，
+结果将系统性偏离。
+% === END 11-kinetic-theory-095-103.tex ===
+
+% === BEGIN 11-kinetic-theory-104-112.tex blob e0101c749eeb9c5627e21df5901aa2625e9583ff ===
+% Irodov, Part II section 2.3 final problems 104--112, printed pp.74--75
+% (PDF pp.83--84). All formulas use classical Boltzmann distributions.
+\thermokineticproblem{104}{74}
+在地表，氢分子与氮分子的数密度比值为
+$\eta_0=n_{\mathrm H_2}(0)/n_{\mathrm N_2}(0)$。
+若温度 $T=280\,\mathrm K$、
+自由落体加速度 $g$ 在高度范围内均恒定，
+求高度 $h=3000\,\mathrm m$ 处的相同比值
+$\eta$ 与 $\eta_0$ 的比。
+\exsolution
+等温玻尔兹曼分布给
+\[
+n_i(h)=n_i(0)
+\exp\left(-\frac{M_i gh}{RT}\right),
+\]
+其中 $M_i$ 是气体组分摩尔质量。
+因此
+\[
+\eta(h)=\frac{n_{\mathrm H_2}(h)}
+{n_{\mathrm N_2}(h)}
+=\eta_0\exp\left[
+\frac{(M_{\mathrm N_2}-M_{\mathrm H_2})gh}{RT}
+\right].
+\]
+所以
+\[
+\boxed{\frac{\eta}{\eta_0}=
+\exp\left[
+\frac{(M_{\mathrm N_2}-M_{\mathrm H_2})gh}{RT}
+\right]}.
+\]
+取 $M_{\mathrm N_2}=0.028\,\mathrm{kg/mol}$、
+$M_{\mathrm H_2}=0.002\,\mathrm{kg/mol}$，
+\[
+\boxed{\eta/\eta_0\simeq1.39}.
+\]
+\excheck 较轻的氢分子随高度衰减得慢，
+因此高处氢/氮数密度比上升。
+
+\thermokineticproblem{105}{74}
+一根很高的竖直容器里充有两类分子，
+质量分别为 $m_1<m_2$。
+底部数密度分别为 $n_1<n_2$。
+假设温度 $T$、重力加速度 $g$ 都与高度无关，
+求两类分子数密度相等的高度 $h$。
+\exsolution
+对每种粒子应用玻尔兹曼分布：
+\[
+n_1(h)=n_1e^{-m_1gh/(k_BT)},\qquad
+n_2(h)=n_2e^{-m_2gh/(k_BT)}.
+\]
+令二者相等，
+\[
+\ln(n_2/n_1)=
+\frac{(m_2-m_1)gh}{k_BT}.
+\]
+所以
+\[
+\boxed{h=\frac{k_BT\ln(n_2/n_1)}
+{(m_2-m_1)g}}.
+\]
+\excheck 由于分子质量与底部浓度都满足严格大小关系，
+得到 $h>0$；较重组分浓度随高度下降更快，
+所以存在唯一相等的高度。
+
+\thermokineticproblem{106}{74}
+一个\emph{足够高}的竖直圆柱容器
+内装一定质量的二氧化碳，
+温度原为 $T$。
+假设气体等温分布、
+重力场均匀，
+若气体升温至 $\eta T$，
+底部压强将怎样变化？
+\exsolution
+取容器底面积为 $S$、
+顶部高度可近似取无穷远，且顶部压强趋于零。
+竖直静力平衡为
+$\mathrm dp/\mathrm dh=-\rho(h)g$。
+两边从底部 $h=0$ 积分到无穷：
+\[
+p(\infty)-p(0)
+=-g\int_0^\infty\rho(h)\,\mathrm dh.
+\]
+因为 $p(\infty)=0$，
+总气体质量为
+$m_{\rm gas}=S\int_0^\infty\rho(h)\,\mathrm dh$，
+故
+\[
+\boxed{p(0)=\frac{m_{\rm gas}g}{S}}.
+\]
+加热会让气体重新分布到更高位置，
+但总质量和底面积不变，所以
+\[
+\boxed{p_{\rm bottom,new}=p_{\rm bottom,old}}.
+\]
+\excheck 高度必须足以使顶面压强可忽略；
+若容器不够高、顶部有非零外压，
+结论需要重新考虑边界条件。
+
+\thermokineticproblem{107}{74}
+一个足够高的竖直圆柱容器
+装有温度为 $T$ 的理想气体。
+在均匀重力场中，
+求每个气体分子的平均重力势能；
+这一平均值是否取决于气体是否由不同种类分子组成？
+\exsolution
+对单一分子质量 $m$ 的组分，
+玻尔兹曼分布沿高度为
+$n(h)\propto e^{-mgh/(k_BT)}$。
+平均高度：
+\[
+\bar h=\frac{\int_0^\infty h e^{-h/H}\,\mathrm dh}
+{\int_0^\infty e^{-h/H}\,\mathrm dh}
+=H=\frac{k_BT}{mg}.
+\]
+因此单分子的平均重力势能
+\[
+\boxed{\overline U=mg\bar h=k_BT}.
+\]
+若混合气含多种分子，每种组分 $i$ 的
+平均高度虽为
+$H_i=k_BT/(m_i g)$，
+但其平均势能均满足
+$m_i gH_i=k_BT$。
+故任意组分数目加权平均仍为
+\[
+\boxed{\overline U_{\rm mixture}=k_BT}.
+\]
+\excheck 混合气不同分子在高度上的分布不同，
+但在这种理想化的无限高等温重力场中，
+各组分平均重力势能相同。
+
+\thermokineticproblem{108}{74}
+一根长 $\ell=100\,\mathrm{cm}$、
+两端密封的水平管道，
+沿自身轴向做恒定加速度 $a$。
+管内装有温度为 $T=330\,\mathrm K$ 的氩气，
+在管随动参考系中达到平衡。
+求使两端氩气数密度相差
+$\eta=1.0\%$ 的加速度大小。
+\exsolution
+在管的加速参考系中，
+气体分子受到恒定惯性力，
+其沿管道的势能差为
+$\Delta U=ma\ell$。
+两端数密度的玻尔兹曼比值
+\[
+\frac{n_{\max}}{n_{\min}}
+=e^{ma\ell/(k_BT)}.
+\]
+题目说差异为 $\eta=1\%$，
+可取该比值为 $1+\eta$，
+于是
+\[
+\ln(1+\eta)=\frac{ma\ell}{k_BT}
+=\frac{Ma\ell}{RT}.
+\]
+解得
+\[
+\boxed{a=\frac{RT}{M\ell}\ln(1+\eta)}.
+\]
+用氩气 $M=0.040\,\mathrm{kg/mol}$、
+$\eta=0.010$：
+\[
+\boxed{a\simeq6.8\times10^2\,\mathrm{m/s^2}
+\simeq70g}.
+\]
+\excheck 以 $\ln(1.01)\simeq0.01$
+只是小百分比近似；精确公式使用自然对数。
+
+\thermokineticproblem{109}{74}
+胶体粒子密度为 $\rho$，
+溶剂密度为 $\rho_0$。
+以恒角速度 $\omega$ 绕竖直轴离心，
+同一水平面上两个半径 $r_1,r_2$ 处的
+胶体粒子数密度之比为
+$n(r_2)/n(r_1)=\eta$。
+求胶体粒子每摩尔的质量 $M$。
+\exsolution
+设单个胶体粒子质量为 $m$、
+体积为 $V_p=m/\rho$。
+考虑溶剂的浮力类比，
+单粒子的有效离心力为
+\[
+F_{\rm eff}(r)=(m-\rho_0V_p)\omega^2r
+=m\left(1-\frac{\rho_0}{\rho}\right)\omega^2r.
+\]
+有效势能由
+$-\mathrm dU/\mathrm dr=F_{\rm eff}$ 得
+\[
+U(r)=-\frac12m\left(1-\frac{\rho_0}{\rho}\right)
+\omega^2r^2+\text{常数}.
+\]
+用玻尔兹曼分布，
+\[
+\ln\eta=\frac{m(1-\rho_0/\rho)\omega^2
+(r_2^2-r_1^2)}{2k_BT}.
+\]
+因为 $M=N_Am$、$R=N_Ak_B$，
+\[
+\boxed{M=\frac{2RT\,\rho\ln\eta}
+{(\rho-\rho_0)\omega^2(r_2^2-r_1^2)}}.
+\]
+\excheck 需要 $(\rho-\rho_0)(r_2^2-r_1^2)\ne0$。
+若粒子比溶剂更轻，
+其浓度可能向轴心方向增大，
+须保留差值符号。
+
+\thermokineticproblem{110}{74--75}
+一个两端封闭的水平管道长
+$\ell=100\,\mathrm{cm}$，
+绕穿过一端的竖直轴以恒角速度 $\omega$ 旋转。
+管内装有温度
+$T=300\,\mathrm K$ 的二氧化碳，
+求使管两端数密度比值为 $\eta=2.0$
+的角速度。
+\exsolution
+在随管旋转的参考系中，
+分子的径向离心势为
+$U(r)=-m\omega^2r^2/2$。
+由玻尔兹曼分布，
+\[
+n(r)=n(0)\exp\left(\frac{m\omega^2r^2}{2k_BT}\right).
+\]
+因此
+$\eta=n(\ell)/n(0)
+=\exp[m\omega^2\ell^2/(2k_BT)]$。
+取对数求角速度：
+\[
+\boxed{\omega=\sqrt{\frac{2k_BT\ln\eta}{m\ell^2}}
+=\sqrt{\frac{2RT\ln\eta}{M\ell^2}}}.
+\]
+用 $M_{\mathrm{CO_2}}\simeq0.044\,\mathrm{kg/mol}$、
+$\ell=1.00\,\mathrm m$、$T=300\,\mathrm K$：
+\[
+\boxed{\omega\simeq2.8\times10^2\,\mathrm{rad/s}}.
+\]
+\excheck 本版 PDF 的数学抽取可能丢失根号；
+$\omega$ 必须由 $\omega^2$ 开平方，
+否则不能保证角速度量纲。
+
+\thermokineticproblem{111}{75}
+理想气体分子处于某中心场，
+单分子势能为 $U(r)=ar^2$，
+其中 $a>0$。
+温度为 $T$，
+场中心数密度为 $n_0$。
+求：(a) 位于半径 $[r,r+\mathrm dr]$ 的分子数；
+(b) 最概然距场心半径；
+(c) 一分子落入该球壳的概率；
+(d) 温度降低 $\eta$ 倍且粒子总数固定时，
+场心浓度变成原来的多少倍？
+\exsolution
+玻尔兹曼空间数密度为
+$n(r)=n_0e^{-ar^2/(k_BT)}$。
+(a) 球壳体积 $4\pi r^2\mathrm dr$，因此
+\[
+\boxed{\mathrm dN=4\pi n_0r^2
+e^{-ar^2/(k_BT)}\,\mathrm dr}.
+\]
+(b) 径向概率密度正比
+$r^2e^{-ar^2/(k_BT)}$。
+令其对数导数为零：
+$2/r-2ar/(k_BT)=0$，得
+\[
+\boxed{r_p=\sqrt{\frac{k_BT}{a}}}.
+\]
+(c) 归一化总数
+\[
+N=4\pi n_0\int_0^\infty
+r^2e^{-ar^2/(k_BT)}\,\mathrm dr
+=n_0\pi^{3/2}\left(\frac{k_BT}{a}\right)^{3/2}.
+\]
+故归一化球壳概率为
+\[
+\boxed{\frac{\mathrm dN}{N}=
+4\pi\left(\frac{a}{\pi k_BT}\right)^{3/2}
+r^2e^{-ar^2/(k_BT)}\,\mathrm dr}.
+\]
+(d) $N$ 固定时 $n_0\propto T^{-3/2}$，
+所以 $T\to T/\eta$ 后
+\[
+\boxed{n_0'/n_0=\eta^{3/2}}.
+\]
+\excheck 此中心场是三维谐势，
+要找\emph{半径}的众数必须包括球壳体积
+的 $r^2$ 因子；中心的体积数密度最大
+不表示最概然半径为零。
+
+\thermokineticproblem{112}{75}
+承接第111题，
+分子处于中心势
+$U(r)=ar^2$、温度为 $T$。
+求：(a) 分子势能位于
+$[U,U+\mathrm dU]$ 之间的数目；
+(b) 最概然势能 $U_p$，
+并与最概然半径 $r_p$ 对应的势能比较。
+\exsolution
+第111题得到半径球壳分子数
+\[
+\mathrm dN=4\pi n_0r^2
+e^{-ar^2/(k_BT)}\,\mathrm dr.
+\]
+用变量变换
+$U=ar^2$，所以
+$r=\sqrt{U/a}$、
+$\mathrm dr=\mathrm dU/(2\sqrt{aU})$，
+于是
+\[
+\boxed{\mathrm dN=
+\frac{2\pi n_0}{a^{3/2}}
+\sqrt U\,e^{-U/(k_BT)}\,\mathrm dU}.
+\]
+为了找 $U$ 的众数，
+对 $\sqrt Ue^{-U/(k_BT)}$ 取对数求导：
+\[
+\frac1{2U}-\frac1{k_BT}=0
+\quad\Longrightarrow\quad
+\boxed{U_p=\frac12k_BT}.
+\]
+而最概然半径
+$r_p=\sqrt{k_BT/a}$，
+它对应的势能为
+\[
+\boxed{U(r_p)=ar_p^2=k_BT=2U_p}.
+\]
+\excheck 半径分布与势能分布各自存在不同的雅可比，
+其众数不要求在非线性变换下相互对应。
+% === END 11-kinetic-theory-104-112.tex ===

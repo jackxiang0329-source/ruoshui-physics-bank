@@ -1,0 +1,875 @@
+% Consolidated 13-capillarity from df0f579b9265792e2eecacd1f44bac71db6664c5; original TeX fragments preserved.
+
+% === BEGIN 13-capillarity-160-169.tex blob b7d7bcc2de1c0e59e7b3d811c0f6321d4be04af0 ===
+% 底本 PDF pp.90--91，原书第二篇第2.5节，原题160--169。
+% 记表面张力为 \alpha；普通液滴一界面，肥皂泡两界面。
+\thermocapillaryproblem{160}{81}
+求毛细压差：(a) 直径 $d=1.5\,\mathrm{\mu m}$
+的水银液滴；(b) 直径 $d=3.0\,\mathrm{mm}$
+的肥皂泡，肥皂水溶液表面张力
+$\alpha=45\,\mathrm{mN/m}$。
+\exsolution
+球形单界面液滴的 Laplace 压差为
+$\Delta p=2\alpha/R=4\alpha/d$。
+(a) 取室温水银表面张力
+$\alpha_{\rm Hg}\simeq0.48\,\mathrm{N/m}$，
+\[
+\boxed{\Delta p_{\rm Hg}=\frac{4\alpha_{\rm Hg}}d
+=\frac{4(0.48)}{1.5\times10^{-6}}
+\simeq1.28\times10^6\,\mathrm{Pa}
+\simeq13\,\mathrm{atm}}.
+\]
+(b) 肥皂泡有内外\emph{两层}气液界面，
+所以压差为 $4\alpha/R=8\alpha/d$：
+\[
+\boxed{\Delta p_{\rm soap}=\frac{8(0.045)}{0.003}
+=120\,\mathrm{Pa}\simeq1.2\times10^{-3}\,\mathrm{atm}}.
+\]
+\excheck 单层液滴与双层肥皂泡的系数相差2倍；
+这是本题最容易遗漏的边界计数。
+
+\thermocapillaryproblem{161}{81}
+水银容器底部有直径
+$d=70\,\mathrm{\mu m}$ 的圆孔。
+水银层的最大厚度是多少，才不会从孔中漏出？
+\exsolution
+水银对孔壁不润湿。
+在临界状态下，孔内下凸液面
+可提供最大量级毛细压差
+$\Delta p_{\max}=4\alpha_{\rm Hg}/d$，
+用于抵消液柱静压 $\rho_{\rm Hg}gh$：
+\[
+\rho_{\rm Hg}gh_{\max}=\frac{4\alpha_{\rm Hg}}d.
+\]
+因此
+\[
+\boxed{h_{\max}=\frac{4\alpha_{\rm Hg}}
+{\rho_{\rm Hg}gd}}.
+\]
+取 $\alpha_{\rm Hg}\simeq0.48\,\mathrm{N/m}$、
+$\rho_{\rm Hg}\simeq1.36\times10^4\,\mathrm{kg/m^3}$，
+\[
+\boxed{h_{\max}\simeq0.21\,\mathrm m=21\,\mathrm{cm}}.
+\]
+\excheck 采用理想的最大曲率阻挡模型；
+真实孔缘粗糙程度与接触角滞后
+会影响临界漏液厚度。
+
+\thermocapillaryproblem{162}{81}
+容器内空气压强原为 $p_0$，有一直径 $d$ 的肥皂泡。
+在等温条件下将容器外压降为 $p_0/n$，
+同时泡径增至原来的 $\eta$ 倍，求肥皂水表面张力 $\alpha$。
+\textbf{版本核对：}本项目采用的扫描底本在第二个倍数处
+记录为 $n$，即与外压倍数重名；
+另据可核查的 Mir 原书英文转录和不同版本，
+此处明确用独立参数 $\eta$。
+下文优先给出不混淆物理参数的标准双参数通解，
+并另外分析底本字面同一倍数条件。
+\exsolution
+泡膜有内外两层气液表面，
+薄膜近似下泡内压强比外部高 $8\alpha/d$。
+初、末泡内压分别为
+\[
+ p_1=p_0+\frac{8\alpha}{d},\qquad
+ p_2=\frac{p_0}{n}+\frac{8\alpha}{\eta d}.
+\]
+假定泡内空气物质的量保持不变，
+等温状态方程 $p_1V_1=p_2V_2$，
+又因 $V_2/V_1=\eta^3$，得到
+\[
+ p_0+\frac{8\alpha}{d}
+ =\frac{p_0\eta^3}{n}
+   +\frac{8\alpha\eta^2}{d}.
+\]
+整理得
+\[
+ \boxed{\alpha=\frac{p_0d}{8}
+       \frac{n-\eta^3}{n(\eta^2-1)}}.
+\]
+在外压降低且泡径确实增长 ($n>1,\eta>1$)
+的正常肥皂泡情况下，正表面张力的必要条件为
+\[
+ \boxed{1<\eta<n^{1/3}}.
+\]
+当 $\eta=n^{1/3}$ 时得到 $\alpha=0$，
+恰为忽略界面压差后普通气体的等温体积变化。
+当 $\eta\to1^+$ 而 $n>1$ 固定时，
+维持几乎不膨胀所需表面张力趋于无穷大。
+\textbf{扫描底本两处都写 $n$ 的字面分支：}
+若强令 $\eta=n>1$，则
+\[
+ \boxed{\alpha=-\frac{p_0d}{8}<0},
+\]
+与普通肥皂水的正表面张力不符；
+它是题面两个参数重名所导致的物理冲突，
+不能视作肥皂水的数值答案。
+\excheck
+按独立参数的原英文对照见
+\texttt{sinhafoundation.org/physics/problems/2-162/}
+（Mir 1988 版参考）；
+其他公开英文转录也分别使用 $n$ 和 $\eta$。
+这只能证明\emph{不同版本存在文字差异}，
+未在本次重新检查用户所上传扫描图像前，
+不删除该扫描底本的字面记录。
+将结果代回 $p_1d^3=p_2(\eta d)^3$
+应严格相等；$[\alpha]=[p_0d]=\mathrm{N/m}$。
+
+\thermocapillaryproblem{163}{81}
+水中深度 $h=5.0\,\mathrm m$ 处，
+有一个直径 $d=4.0\,\mathrm{\mu m}$
+的空气泡。外界大气压为标准值 $p_0$。
+求泡内空气的压强。
+\exsolution
+泡外的水静压为
+$p_{\rm out}=p_0+\rho gh$。
+空气泡在水中只有一层气液界面，
+气泡内压比水侧高
+$\Delta p=2\alpha/R=4\alpha/d$。
+因此
+\[
+\boxed{p_{\rm in}=p_0+\rho gh+\frac{4\alpha}{d}}.
+\]
+取水表面张力
+$\alpha\simeq0.073\,\mathrm{N/m}$、
+$\rho=1000\,\mathrm{kg/m^3}$，
+\[
+p_{\rm in}\simeq1.013\times10^5+
+(1000)(9.81)(5)+\frac{4(0.073)}{4\times10^{-6}}
+\simeq2.23\times10^5\,\mathrm{Pa},
+\]
+\[
+\boxed{p_{\rm in}\simeq2.2\,\mathrm{atm}}.
+\]
+\excheck 水中气泡是\emph{单界面}，
+不能照搬肥皂泡两层界面的 $8\alpha/d$。
+
+\thermocapillaryproblem{164}{81}
+池塘底部形成直径 $d=4.0\,\mathrm{\mu m}$
+的气泡。当它等温上升至水面时，
+直径扩大 $\eta=1.1$ 倍。
+标准大气压为 $p_0$，求池塘深度 $h$。
+\exsolution
+底部水深 $h$ 处泡内压强
+$p_b=p_0+\rho gh+4\alpha/d$。
+水面处泡直径 $\eta d$，
+泡内压强
+$p_t=p_0+4\alpha/(\eta d)$。
+泡内气体物质的量和温度不变，
+满足
+$p_bV_b=p_tV_t$，
+且 $V_t/V_b=\eta^3$。
+故
+\[
+p_0+\rho gh+\frac{4\alpha}{d}
+=\eta^3p_0+\eta^2\frac{4\alpha}{d}.
+\]
+整理：
+\[
+\boxed{h=\frac{
+p_0(\eta^3-1)+(4\alpha/d)(\eta^2-1)
+}{\rho g}}.
+\]
+代入 $\eta=1.1$、水表面张力约
+$0.073\,\mathrm{N/m}$ 得
+\[
+\boxed{h\simeq5.0\,\mathrm m}.
+\]
+\excheck 同时保留了水静压和曲面附加压差；
+若把气泡看成无表面张力的大气泡，
+将得到不同的深度。
+
+\thermocapillaryproblem{165}{81}
+两根相互连通的竖直毛细管中装有水银，
+内径分别为
+$d_1=0.50\,\mathrm{mm}$、
+$d_2=1.00\,\mathrm{mm}$，
+水银与管壁的接触角为
+$\theta=138^\circ$。
+求两管水银柱液面的高度差。
+\exsolution
+圆毛细管的毛细升降量为
+$h(d)=4\alpha\cos\theta/(\rho gd)$，
+水银不润湿玻璃，$\cos138^\circ<0$，
+因此两液面均低于外部参考水面。
+高度差的模为
+\[
+\boxed{\Delta h=
+\frac{4\alpha|\cos\theta|}{\rho g}
+\left|\frac1{d_1}-\frac1{d_2}\right|
+=\frac{4\alpha|\cos\theta|(d_2-d_1)}
+{\rho gd_1d_2}}.
+\]
+取 $\alpha_{\rm Hg}\simeq0.48\,\mathrm{N/m}$、
+$\rho_{\rm Hg}\simeq1.36\times10^4\,\mathrm{kg/m^3}$，
+得
+\[
+\boxed{\Delta h\simeq1.1\times10^{-2}\,\mathrm m
+=11\,\mathrm{mm}}.
+\]
+\excheck 水银\emph{下降}而非上升；
+题目求的是两管液面差，取绝对值。
+
+\thermocapillaryproblem{166}{81}
+一根内径为 $0.50\,\mathrm{mm}$ 的竖直毛细管
+插入水中，其高出外水面的部分长
+$h=25\,\mathrm{mm}$。
+求顶部水面弯月面的曲率半径。
+\exsolution
+对润湿玻璃的水，上升水柱高度为 $h$。
+在顶部弯月面，
+Laplace 压差平衡重力压头：
+\[
+\frac{2\alpha}{R_c}=\rho gh.
+\]
+因此
+\[
+\boxed{R_c=\frac{2\alpha}{\rho gh}}.
+\]
+用 $\alpha\simeq0.073\,\mathrm{N/m}$、
+$\rho\simeq1000\,\mathrm{kg/m^3}$、
+$h=0.025\,\mathrm m$：
+\[
+\boxed{R_c\simeq5.95\times10^{-4}\,\mathrm m
+=0.60\,\mathrm{mm}}.
+\]
+\excheck $R_c>d/2$，说明实际弯月面无需
+达到理想完全润湿的最大曲率就能支撑
+$25\,\mathrm{mm}$ 的水柱。
+
+\thermocapillaryproblem{167}{81}
+一根长度 $\ell=110\,\mathrm{mm}$、
+内径 $d=20\,\mathrm{\mu m}$ 的玻璃毛细管，
+上端密封，下端竖直插入水中。
+外界压强为标准大气压。
+问毛细管应浸入水中多长 $x$，
+才能使管内外水面高度相同？
+\exsolution
+设密封端最初管内的空气占据长度 $\ell$、
+压强为 $p_0$。管内水面最终与外水面齐平时，
+进入管内的水柱长度等于浸入深度 $x$，
+剩余空气长度为 $\ell-x$。
+按等温玻意耳定律，
+\[
+p_{\rm air}(\ell-x)=p_0\ell,
+\quad p_{\rm air}=\frac{p_0\ell}{\ell-x}.
+\]
+在同一液面高度，管内水侧为 $p_0$；
+润湿弯月面使管内空气压强比其高
+$4\alpha/d$，所以
+\[
+\frac{p_0\ell}{\ell-x}-p_0=\frac{4\alpha}{d}.
+\]
+整理：
+\[
+\boxed{x=\frac{\ell}{1+p_0d/(4\alpha)}}.
+\]
+取 $\alpha_{\rm water}=0.073\,\mathrm{N/m}$，
+\[
+\boxed{x\simeq0.014\,\mathrm m=1.4\,\mathrm{cm}}.
+\]
+\excheck 气体压缩需满足 $0<x<\ell$；
+原书一处排版将“110 mm and”连在一起，
+本稿已按图像分词恢复。
+
+\thermocapillaryproblem{168}{82}
+一根长度为 $\ell$、上端密封的竖直毛细管
+下口刚接触液面，液体上升高度为 $h$。
+液体密度为 $\rho$、管内径 $d$、
+接触角为 $\theta$，外界压强为 $p_0$。
+求液体表面张力 $\alpha$。
+\exsolution
+设管内空气保持等温且初始充满全长 $\ell$，
+液体上升 $h$ 后，空气长度为 $\ell-h$，
+所以
+$p_{\rm air}=p_0\ell/(\ell-h)$。
+管内弯月面下方的液体压强
+$p_{\rm liq}=p_0-\rho gh$。
+圆管弯月面的 Laplace 压差为
+\[
+p_{\rm air}-p_{\rm liq}
+=\frac{4\alpha\cos\theta}{d}.
+\]
+将上述两压强代入：
+\[
+\frac{4\alpha\cos\theta}{d}
+=\frac{p_0\ell}{\ell-h}-p_0+\rho gh
+=\frac{p_0h}{\ell-h}+\rho gh.
+\]
+因此
+\[
+\boxed{\alpha=
+\frac d{4\cos\theta}
+\left(\rho gh+\frac{p_0h}{\ell-h}\right)}.
+\]
+\excheck 这一式在 $h\to0$ 时趋于零，
+符合无液柱上升的极限。原版书末抽取结果似乎
+遗漏了“$-p_0$”一项，需以清晰原图复核；
+本稿根据压强平衡逐项列出推导，不直接抄录可疑公式。
+
+\thermocapillaryproblem{169}{82}
+一根直径 $d_1=1.5\,\mathrm{mm}$ 的玻璃棒，
+同轴插入内径 $d_2=2.0\,\mathrm{mm}$
+的玻璃毛细管中。
+将装置竖直插入水面，问水在环形间隙中
+上升多高？
+\exsolution
+取完全润湿玻璃 $\theta\simeq0$。
+液柱截面积为
+$A=\pi(d_2^2-d_1^2)/4$。
+两个接触周线的总长度为
+$L=\pi(d_1+d_2)$，
+表面张力竖直向上的合力
+$F_\alpha=\alpha L$。
+与上升液柱重力
+$\rho gh A$ 平衡：
+\[
+\alpha\pi(d_1+d_2)
+=\rho gh\frac{\pi}{4}(d_2^2-d_1^2).
+\]
+约去 $d_1+d_2$：
+\[
+\boxed{h=\frac{4\alpha}{\rho g(d_2-d_1)}}.
+\]
+代入水的表面张力
+$\alpha\simeq0.073\,\mathrm{N/m}$，
+\[
+\boxed{h\simeq0.060\,\mathrm m=6.0\,\mathrm{cm}}.
+\]
+\excheck 关键间隙宽度为 $d_2-d_1$；
+不能把整个外管直径 $d_2$ 直接代进单管公式。
+% === END 13-capillarity-160-169.tex ===
+
+% === BEGIN 13-capillarity-170-179.tex blob a3f985c67acf7cc7909fb2fa4c637365241c4913 ===
+% 原书第二篇2.5节170--179题；用户PDF页91--92，印刷页82--83。
+\thermocapillaryproblem{170}{82}
+两块竖直平板在润湿液体中部分浸没，
+板间形成极小楔角 $\delta\varphi$，
+楔棱保持竖直。
+液体密度 $\rho$、表面张力 $\alpha$、
+接触角 $\theta$。
+求距楔棱水平距离为 $x$ 处液体上升高度 $h(x)$。
+\exsolution
+当楔角很小时，两板在距楔棱 $x$ 处的局部间距
+$s(x)\simeq x\delta\varphi$（角度以弧度计）。
+在薄狭缝中的弯月面，
+沿板间截面的主曲率半径近似为
+$R_c=s/(2\cos\theta)$，
+另一方向曲率因楔角小而忽略。
+Laplace 压差为
+\[
+\Delta p\simeq\frac{\alpha}{R_c}
+=\frac{2\alpha\cos\theta}{x\delta\varphi}.
+\]
+这与静水柱压头 $\rho gh$ 平衡，故
+\[
+\boxed{h(x)=\frac{2\alpha\cos\theta}
+{\rho g\,x\,\delta\varphi}}.
+\]
+\excheck 公式只适用于距离楔棱并非无限小、
+板间距远大于分子尺度且弯月面可视为局部准静态的区域；
+$x\to0$ 的形式发散不能当作真实无穷高度。
+
+\thermocapillaryproblem{171}{82}
+竖直向下的水射流从圆孔喷出。
+在某水平截面处水柱直径为
+$d=2.0\,\mathrm{mm}$；
+向下相隔
+$\ell=20\,\mathrm{mm}$ 的另一截面处，
+直径变为前者的 $1/n$，
+$n=1.5$。
+求每秒流出的水体积 $Q$。
+\exsolution
+稳态不可压缩流满足
+$A_1v_1=A_2v_2=Q$，
+其中
+$A_1=\pi d^2/4$、
+$A_2=A_1/n^2$，故
+$v_2=n^2v_1$。
+沿自由射流的伯努利方程（两截面均大气压）：
+\[
+\frac12v_2^2=\frac12v_1^2+g\ell.
+\]
+代入速度比：
+\[
+(n^4-1)v_1^2=2g\ell
+\quad\Longrightarrow\quad
+v_1=\sqrt{\frac{2g\ell}{n^4-1}}.
+\]
+流量：
+\[
+\boxed{Q=\frac{\pi d^2}{4}
+\sqrt{\frac{2g\ell}{n^4-1}}}.
+\]
+代入数值，
+$\boxed{Q\simeq9.8\times10^{-7}\,\mathrm{m^3/s}
+\approx1.0\,\mathrm{cm^3/s}}$。
+\excheck $v_2/v_1=n^2$，
+不是 $n$，因为截面积正比于直径的平方；
+据此必须在能量式中出现 $n^4-1$。
+
+\thermocapillaryproblem{172}{82}
+一个水滴在空气中以恒定终端速度下落。
+沿水滴竖直方向两极点相距
+$h=2.3\,\mathrm{mm}$。
+求上、下极点液面曲率半径的差，
+假设表面张力为 $\alpha$。
+\exsolution
+水滴以恒速运动时，
+在随水滴平动的理想近似中，
+液滴内部水静压沿向下方向增加
+$\rho gh$，即
+$p_{\rm bottom}-p_{\rm top}=\rho gh$。
+极点处外界空气压强近似相等，
+由 Laplace 方程
+$p_{\rm in}-p_{\rm out}=2\alpha/R_c$，
+\[
+2\alpha\left(\frac1{R_{\rm bottom}}
+-\frac1{R_{\rm top}}\right)=\rho gh.
+\]
+由于水滴近似球形，
+两端曲率半径均接近 $h/2$，
+可在微小变形时作一阶线性化：
+\[
+\frac1{R_b}-\frac1{R_t}
+\simeq\frac{R_t-R_b}{(h/2)^2}.
+\]
+故曲率半径差的模为
+\[
+\boxed{|R_t-R_b|\simeq\frac{\rho gh^3}{8\alpha}}.
+\]
+取水 $\rho\simeq1000\,\mathrm{kg/m^3}$、
+$\alpha\simeq0.073\,\mathrm{N/m}$，
+得到
+\[
+\boxed{|R_t-R_b|\simeq0.20\,\mathrm{mm}}.
+\]
+\excheck 这一估计要求变形较小；
+恒速仅意味着水滴中心无加速度，
+不等于忽略水滴内部的重力静压梯度。
+
+\thermocapillaryproblem{173}{82}
+一颗水银液滴被两块水平玻璃板夹成
+近似圆片，初半径 $R$、厚度 $h\ll R$。
+若在上板放置砝码使板间距减为原来的 $1/n$，
+求所需砝码质量 $m$。
+水银接触角为 $\theta$。
+以 $R=2.0\,\mathrm{cm}$、
+$h=0.38\,\mathrm{mm}$、
+$n=2.0$、
+$\theta=135^\circ$ 计算。
+\exsolution
+水银不润湿玻璃，
+$\cos\theta<0$。
+在薄片近似下，弯月面压力修正主导项
+$|\Delta p|\simeq2\alpha|\cos\theta|/h$，
+压力在圆片面积 $\pi R^2$ 上施加分离板的作用。
+因为水银不可压缩，初体积
+$\pi R^2h$ 为常数，
+板间距变为 $h/n$ 后新半径
+$R'=R\sqrt n$。
+给定初末状态，外加砝码须提供的
+\emph{附加压力负荷}为
+\[
+mg\simeq 2\pi\alpha|\cos\theta|
+\left(\frac{R'^2}{h/n}-\frac{R^2}{h}\right)
+=\frac{2\pi\alpha R^2|\cos\theta|}{h}(n^2-1).
+\]
+所以
+\[
+\boxed{m\simeq
+\frac{2\pi\alpha R^2|\cos\theta|}{gh}(n^2-1)}.
+\]
+取水银 $\alpha\simeq0.48\,\mathrm{N/m}$，
+得
+\[
+\boxed{m\simeq0.69\,\mathrm{kg}\approx0.7\,\mathrm{kg}}.
+\]
+\excheck 计算的是从初平衡状态额外加载的砝码质量；
+必须同时考虑厚度变化引起的水银圆片半径变化。
+
+\thermocapillaryproblem{174}{82}
+两块平行玻璃板间距
+$h=0.10\,\mathrm{mm}$。
+在板间放入质量 $m=70\,\mathrm{mg}$
+的水滴，并认为完全润湿。
+求玻璃板之间的相互吸引力。
+\exsolution
+水在两板间形成很薄的液桥，
+其主曲率造成的液内负压近似为
+$|\Delta p|\simeq2\alpha/h$。
+水滴体积为 $V=m/\rho$，
+夹在板间形成面积
+$A\simeq V/h=m/(\rho h)$。
+因此负压对板的吸引力为
+\[
+F\simeq|\Delta p|A
+=\frac{2\alpha}{h}\frac{m}{\rho h}
+=\boxed{\frac{2\alpha m}{\rho h^2}}.
+\]
+以水 $\alpha\simeq0.073\,\mathrm{N/m}$、
+$\rho=1000\,\mathrm{kg/m^3}$，
+\[
+\boxed{F\simeq1.0\,\mathrm N}.
+\]
+\excheck 需有液桥厚度远小于其横向尺寸，
+使边缘表面张力的其他小修正可忽略。
+
+\thermocapillaryproblem{175}{82}
+两块半径
+$R=5.0\,\mathrm{cm}$ 的玻璃圆盘被水润湿
+后合拢，水层厚度为
+$h=1.9\,\mathrm{\mu m}$，
+假定完全润湿。
+求沿圆盘法线把两盘拉开的力。
+\exsolution
+水层很薄，边界弯月面的主曲率
+产生近似负压
+$\Delta p\simeq-2\alpha/h$。
+相对于外大气，水层使每个圆盘承受
+朝向另一盘的净压强 $2\alpha/h$。
+乘以整个圆盘面积 $\pi R^2$：
+\[
+\boxed{F=\frac{2\pi R^2\alpha}{h}}.
+\]
+使用水表面张力
+$\alpha\simeq0.073\,\mathrm{N/m}$，
+\[
+\boxed{F\simeq
+\frac{2\pi(0.05)^2(0.073)}{1.9\times10^{-6}}
+\simeq6.0\times10^2\,\mathrm N=0.60\,\mathrm{kN}}.
+\]
+\excheck 尽管水层质量可以很小，
+但压差乘较大的接触面积仍会产生显著吸附力。
+
+\thermocapillaryproblem{176}{82}
+两块部分浸入水中的竖直平行玻璃板，
+板间距
+$d=0.10\,\mathrm{mm}$、
+板宽 $\ell=12\,\mathrm{cm}$。
+假定完全润湿，且板间水面
+不会达到板的上缘，求它们的相互吸引力。
+\exsolution
+板间的毛细上升高度为
+\[
+H=\frac{2\alpha}{\rho gd}
+\]
+（润湿、板间间距 $d$ 很小）。
+相对外侧大气与水面，板间水柱内
+高出外水面 $z$ 处的压差大小约为
+$\rho g(H-z)$。
+每块板受内侧压差作用的面积微元
+$\ell\,\mathrm dz$，
+故两板间吸引力大小为
+\[
+F=\ell\int_0^H\rho g(H-z)\,\mathrm dz
+=\frac12\rho g\ell H^2.
+\]
+代入 $H$：
+\[
+\boxed{F=\frac{2\alpha^2\ell}{\rho gd^2}}.
+\]
+以 $\alpha\simeq0.073\,\mathrm{N/m}$
+代入题目数据，
+\[
+\boxed{F\simeq13\,\mathrm N}.
+\]
+\excheck 需有足够高的板面容纳毛细上升高度；
+本题特别给出这一几何条件。
+
+\thermocapillaryproblem{177}{82}
+半径为 $R$ 的肥皂泡
+通过长为 $\ell$、内半径为 $r$ 的细管
+与大气连通。
+肥皂水表面张力为 $\alpha$，
+气体动力黏度为 $\eta$。
+求肥皂泡排尽气体而消失的时间。
+\exsolution
+肥皂泡有内外两层膜，
+其内部超压为
+$\Delta p=4\alpha/R_b$，
+其中 $R_b(t)$ 为泡的瞬时半径。
+按泊肃叶定律，细管气体的体积流量
+\[
+Q=\frac{\pi r^4\Delta p}{8\eta\ell}
+=\frac{\pi\alpha r^4}{2\eta\ell R_b}.
+\]
+在近似不可压缩的低超压流量模型中，
+泡体积
+$V_b=4\pi R_b^3/3$，
+且 $-\mathrm dV_b/\mathrm dt=Q$。
+因此
+\[
+-4\pi R_b^2\frac{\mathrm dR_b}{\mathrm dt}
+=\frac{\pi\alpha r^4}{2\eta\ell R_b},
+\quad
+\mathrm dt=-\frac{8\eta\ell}{\alpha r^4}R_b^3\,\mathrm dR_b.
+\]
+从初始 $R_b=R$ 积分至0：
+\[
+\boxed{\tau=\frac{8\eta\ell}{\alpha r^4}
+\int_0^R R_b^3\,\mathrm dR_b
+=\frac{2\eta\ell R^4}{\alpha r^4}}.
+\]
+\excheck 忽略气体可压缩性和泡膜的破裂机制；
+真实泡在到达数学上的零半径前可能失稳破裂。
+
+\thermocapillaryproblem{178}{82}
+把竖直毛细管下端接触水面，
+水在管内自发上升。
+假定完全润湿，水表面张力为 $\alpha$。
+求上升过程放出的热量 $Q_{\rm out}$。
+\exsolution
+设毛细管内半径为 $r$，
+平衡上升高度
+$H=2\alpha/(\rho gr)$。
+毛细上升时毛细力可做的总功为
+$W_\alpha=2\pi r\alpha H$。
+最终液柱重力势能为
+\[
+U_g=\int_0^H\rho g(\pi r^2)z\,\mathrm dz
+=\frac12\rho g\pi r^2H^2.
+\]
+由平衡条件
+$\rho g\pi r^2H=2\pi r\alpha$，
+所以
+$U_g=\tfrac12W_\alpha$。
+忽略动能耗散后的最终储能，
+其余一半功以热释放：
+\[
+Q_{\rm out}=W_\alpha-U_g
+=\frac12\rho g\pi r^2H^2.
+\]
+代入 $H$：
+\[
+\boxed{Q_{\rm out}=\frac{2\pi\alpha^2}{\rho g}}.
+\]
+\excheck 在该理想模型中结果与毛细管半径无关；
+这反映更细的管上升更高，
+两种半径依赖恰好抵消。
+
+\thermocapillaryproblem{179}{83}
+求液体表面层的自由能：
+(a) 直径 $d=1.4\,\mathrm{mm}$ 的水银滴；
+(b) 直径 $d=6.0\,\mathrm{mm}$ 的肥皂泡，
+其肥皂液表面张力为
+$\alpha=45\,\mathrm{mN/m}$。
+\exsolution
+自由表面面积为 $S$，
+表面层自由能在给定温度下为
+$F=\alpha S$。
+(a) 一颗球形水银滴只有一个外表面，
+$S=4\pi R^2=\pi d^2$，所以
+\[
+\boxed{F_{\rm Hg}=\pi\alpha_{\rm Hg}d^2}.
+\]
+取水银
+$\alpha_{\rm Hg}\simeq0.48\,\mathrm{N/m}$，
+得
+$\boxed{F_{\rm Hg}\simeq3.0\,\mathrm{\mu J}}$。
+(b) 肥皂泡有两个气液表面，
+面积总和 $2\pi d^2$，故
+\[
+\boxed{F_{\rm soap}=2\pi\alpha d^2}.
+\]
+取 $d=0.006\,\mathrm m$ 与
+$\alpha=0.045\,\mathrm{N/m}$，
+得
+$\boxed{F_{\rm soap}\simeq10\,\mathrm{\mu J}}$。
+\excheck 肥皂泡的两层膜面须乘2，
+但水银滴只乘一个表面面积。
+% === END 13-capillarity-170-179.tex ===
+
+% === BEGIN 13-capillarity-180-184.tex blob b9a45deff3bb6664e62718c25eb963766f0b6efb ===
+% 原书第二篇第2.5节最后五题，用户上传底本印刷页83、PDF页92。
+\thermocapillaryproblem{180}{83}
+两颗相同的水银小液滴，
+每颗直径为 $d=1.5\,\mathrm{mm}$，
+在温度不变的条件下合并为一颗液滴。
+求表面层自由能变化 $\Delta F$。
+\exsolution
+设两小液滴直径均为 $d$，
+单滴球体积为
+$\pi d^3/6$，
+合并后体积为两倍，
+故新液滴直径
+$d_f=2^{1/3}d$。
+单球的表面自由能为
+$F=\alpha\pi d^2$。
+因此初、末自由能分别为
+\[
+F_i=2\pi\alpha d^2,\qquad
+F_f=\pi\alpha d_f^2
+=\pi\alpha d^2\,2^{2/3}.
+\]
+自由能变化
+\[
+\boxed{\Delta F=\pi\alpha d^2(2^{2/3}-2)
+=2\pi\alpha d^2(2^{-1/3}-1)<0}.
+\]
+取水银表面张力
+$\alpha\simeq0.48\,\mathrm{N/m}$，
+得
+\[
+\boxed{\Delta F\simeq-1.4\times10^{-6}\,\mathrm J
+\approx-1.5\,\mathrm{\mu J}}.
+\]
+\excheck 合并后体积守恒而表面积减小，
+所以自由能降低；
+不能错误地让新液滴直径直接变为 $2d$。
+
+\thermocapillaryproblem{181}{83}
+肥皂水溶液表面张力为 $\alpha$，
+外界气压为 $p_0$。
+若鼓起半径为 $R$ 的肥皂泡，
+求需要做的功；
+注意气泡气体按可逆等温方式由外界压强
+$p_0$ 的气源压入。
+\exsolution
+肥皂泡有两层表面，
+半径从零增至 $R$ 后新增界面自由能为
+\[
+F_{\rm surf}=2\alpha(4\pi R^2)
+=\boxed{8\pi\alpha R^2}.
+\]
+终态气泡内部超压为
+$4\alpha/R$，
+内部气体压强
+$p=p_0+4\alpha/R$，
+气体体积
+$V=4\pi R^3/3$。
+若补充考虑从外部压强 $p_0$ 的气源
+把终态泡内的气体在等温方式下压至 $p$，
+这批气体（其终态体积 $V$）的
+可逆等温压缩功为
+\[
+A_{\rm gas}=pV\ln(p/p_0).
+\]
+因此原书所采用的全系统做功表达式为
+\[
+\boxed{A=8\pi\alpha R^2+
+pV\ln\frac{p}{p_0}},\qquad
+p=p_0+\frac{4\alpha}{R},\quad
+V=\frac{4\pi R^3}{3}.
+\]
+\excheck 若只问膜本身增加的\emph{表面自由能}，
+答案为第一项 $8\pi\alpha R^2$；
+原书把从气源压缩泡内气体的功也算入，
+须清楚说明所采用的功的边界定义。
+
+\thermocapillaryproblem{182}{83}
+半径为 $r$ 的肥皂泡内充有一摩尔理想气体，
+外界气压为 $p_0$，
+肥皂液表面张力为 $\alpha$。
+求气体在泡内加热过程的摩尔热容 $C$
+与定压热容 $C_p$ 的差。
+\exsolution
+泡内外压强差为
+$4\alpha/r$，
+故气体压强
+$p(r)=p_0+4\alpha/r$，
+体积
+$V(r)=4\pi r^3/3$。
+一摩尔理想气体：
+\[
+RT=pV=\frac{4\pi}{3}(p_0r^3+4\alpha r^2).
+\]
+假设表面张力在这一温区近似恒定，
+对 $r$ 微分：
+\[
+R\frac{\mathrm dT}{\mathrm dr}
+=\frac{4\pi}{3}(3p_0r^2+8\alpha r),
+\qquad
+\frac{\mathrm dV}{\mathrm dr}=4\pi r^2.
+\]
+过程热容
+$C=C_V+p\,\mathrm dV/\mathrm dT$，
+而 $C_p=C_V+R$，所以
+\[
+C-C_p
+=\frac{p(4\pi r^2)}
+{(4\pi/(3R))(3p_0r^2+8\alpha r)}-R.
+\]
+化简：
+\[
+\boxed{C-C_p=
+\frac{4R\alpha}{3p_0r+8\alpha}
+=\frac{R/2}{1+3p_0r/(8\alpha)}}.
+\]
+\excheck 当 $r$ 很大、毛细压差相对大气压极小时，
+$C\to C_p$，符合等压过程极限。
+
+\thermocapillaryproblem{183}{83}
+把卡诺循环的思想用于一张液体薄膜，
+证明在温度 $T$ 下等温地
+增加单位液膜\emph{单界面面积}时，
+必须交换的热量
+$q=-T\,\mathrm d\alpha/\mathrm dT$，
+其中 $\alpha(T)$ 是表面张力。
+\exsolution
+先把一层气液界面的面积记为 $S$。
+液膜做可逆形变时，面积广义力为
+$\alpha$，内能微分满足
+$\mathrm dU=T\,\mathrm d\mathcal S+\alpha\,\mathrm dS$，
+其中 $\mathcal S$ 是热力学熵。
+定义自由能
+$F=U-T\mathcal S$，得
+\[
+\mathrm dF=-\mathcal S\,\mathrm dT+\alpha\,\mathrm dS.
+\]
+混合二阶偏导交换：
+\[
+\left(\frac{\partial\mathcal S}{\partial S}\right)_T
+=-\left(\frac{\partial\alpha}{\partial T}\right)_S.
+\]
+因此等温面积增量 $\mathrm dS>0$ 的
+可逆吸热
+\[
+\delta Q_{\rm rev}=T\,\mathrm d\mathcal S
+=-T\frac{\mathrm d\alpha}{\mathrm dT}\,\mathrm dS.
+\]
+单位\emph{单界面}新增面积所需热量：
+\[
+\boxed{q=\frac{\delta Q_{\rm rev}}{\mathrm dS}
+=-T\frac{\mathrm d\alpha}{\mathrm dT}}.
+\]
+这一 Maxwell 推导等价于取温差
+$\mathrm dT$、面积差 $\mathrm dS$ 的
+无穷小可逆卡诺循环：
+循环功 $\simeq-\alpha'(T)\mathrm dT\,\mathrm dS$，
+由效率 $\mathrm dT/T$ 即得到同式。
+\excheck 若对象为一整张肥皂薄膜，存在\emph{两个表面}，
+同一投影面积增量对应的吸热应再乘2；
+本题公式按单个界面定义。
+
+\thermocapillaryproblem{184}{83}
+一张肥皂薄膜在温度 $T$ 下等温地
+把其投影表面积增大 $\Delta\sigma$。
+肥皂水表面张力为 $\alpha(T)$，
+其温度导数为 $\mathrm d\alpha/\mathrm dT$。
+求表面层的：(a) 熵增 $\Delta\mathcal S$；
+(b) 内能增量 $\Delta U$。
+\exsolution
+肥皂薄膜两侧均有气液界面，
+因此总新增界面面积是 $2\Delta\sigma$。
+自由能的表面增量为
+$\Delta F=2\alpha\Delta\sigma$。
+由
+$\mathcal S=-(\partial F/\partial T)_\sigma$，
+在温度固定而面积变化时，
+\[
+\boxed{\Delta\mathcal S
+=-2\frac{\mathrm d\alpha}{\mathrm dT}
+\,\Delta\sigma}.
+\]
+用热力学关系
+$U=F+T\mathcal S$，
+求同温表面层内能增量：
+\[
+\boxed{\Delta U
+=2\left(\alpha-
+T\frac{\mathrm d\alpha}{\mathrm dT}\right)
+\Delta\sigma}.
+\]
+\excheck 面积 $\Delta\sigma$ 是薄膜的一面\emph{投影面积}，
+内外两界面贡献须乘2；熵单位应为 $\mathrm{J/K}$。
+% === END 13-capillarity-180-184.tex ===
