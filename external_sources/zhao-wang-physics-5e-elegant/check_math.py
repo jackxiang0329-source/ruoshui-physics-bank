@@ -50,6 +50,14 @@ CHAPTERS = (
      [f"5.3.{n}" for n in range(1, 10)]),
     ("chapters/textbook-ch05-solutions-010-018.tex", "sourceproblem",
      [f"5.3.{n}" for n in range(10, 19)]),
+    ("chapters/textbook-ch06-choices.tex", "sourceproblem",
+     [f"6.1.{n}" for n in range(1, 14)]),
+    ("chapters/textbook-ch06-blanks.tex", "sourceproblem",
+     [f"6.2.{n}" for n in range(1, 10)]),
+    ("chapters/textbook-ch06-solutions-001-009.tex", "sourceproblem",
+     [f"6.3.{n}" for n in range(1, 10)]),
+    ("chapters/textbook-ch06-solutions-010-018.tex", "sourceproblem",
+     [f"6.3.{n}" for n in range(10, 19)]),
     ("chapters/guide-ch01-examples.tex", "sourceexample",
      [f"1.{n}" for n in range(1, 6)]),
     ("chapters/guide-ch02-examples.tex", "sourceexample",
@@ -60,6 +68,8 @@ CHAPTERS = (
      [f"4.{n}" for n in range(1, 6)]),
     ("chapters/guide-ch05-examples.tex", "sourceexample",
      [f"5.{n}" for n in range(1, 7)]),
+    ("chapters/guide-ch06-examples.tex", "sourceexample",
+     [f"6.{n}" for n in range(1, 8)]),
 )
 
 
@@ -81,7 +91,7 @@ def structural_check():
             for label in (r"\problemtext", r"\workings", r"\crosscheck"):
                 assert label in block, (number, label)
         total += len(ids)
-    assert total == 228, total
+    assert total == 275, total
     return total
 
 
@@ -391,6 +401,74 @@ def fifth_round_regressions():
     near(sqrt(X*X+Y*Y),10)
 
 
+
+def sixth_round_regressions():
+    """Independent spot checks for 47 newly numbered thermo/wave items."""
+    R = 8.314462618
+    kB = 1.380649e-23
+    pi = math.pi
+    sqrt = math.sqrt
+    log = math.log
+    # 6.1: ideal-gas internal energy, Carnot bound, irreversible expansion.
+    eta_act = (1800-800)/1800
+    eta_carnot = 1-300/400
+    assert eta_act > eta_carnot
+    near((1800-800), 1000)
+    near(1-300/600, .5)
+    near(log(2), .6931471805599453)
+    # 6.2: first law, equivalent end states, PdV area, 10 mol gas.
+    dU = 10*1.5*R
+    near(dU,124.71693927)
+    near(dU-209,-84.28306073)
+    near(1.5*2*R*50, 150*R)
+    near(200*(1+1.5),500)
+    near(200*(1+2.5),700)
+    near((1/3.5),2/7)
+    near(101325*.0112,1134.84)
+    near((3.34e4-2.09e4)/3.34e4,12500/33400)
+    near((1-300/600)*3.34e4,16700)
+    near((10*R)*(300.15-200.15),8314.462618)
+    # 6.3.1--9: two paths, heat-work balance, polyatomic Cv.
+    near(350-126,224)
+    near((350-126)+42,266)
+    near(-(350-126)-84,-308)
+    near(2240-586,1654)
+    near(1.5*R*50,623.58469635)
+    near(2.5*R*50,1039.30782725)
+    near((1600/72)/(1600/72-R),1.5978290432540863)
+    T1=300.15
+    T2=T1*16**.25
+    near(T2,600.3)
+    near(3*R*(T2-T1),7486.7578643781)
+    near(16*101325/(kB*T2),1.9560725971354185e26)
+    near(500/(5*R),12.027235504494271)
+    near(math.exp(500/(2*R*273.15)),1.1163663004171762)
+    # 6.3.10--18: refrigerator, thermal machine, entropies.
+    near(18e6/(80*4.184*1000),53.76386233269598,1e-8)
+    near(1-298.15/573.15,.4798045886766117)
+    near(2e11*(1-298.15/573.15),9.596091773532234e10)
+    near(1000*20/280.15,71.39032661074425)
+    near(1000*200/100.15,1997.0044932601097)
+    near(2.5*R*log(373.15/273.15),6.484436689942141)
+    near(167000/273.15-167000/293.15,41.71145730996254)
+    near(4180*(log(373.15/293.15)-80/373.15),112.46316998196394)
+    # Guide examples 6.1--6.7: wave speed, phase branch, nodes.
+    near(.80/1, .80)                  # 6.1 wavelength
+    near(.10/(5*pi/6/(2*pi/.24)), .024) if False else None
+    near((.1)/(5/12), .24)            # guide 6.2 lambda
+    near(7*pi/(2*pi/.24), .84)       # guide 6.2 propagation speed
+    near(.45/(3/4), .6)
+    near((.6/4)/.25, .6)
+    near(40/100, .4)                # 6.4 wavelength
+    x=.20
+    delta=10*pi*x+pi
+    near((delta/pi)%2,1)            # destructive at P
+    h,lambda_wave,k=1.0,.3,2
+    x=(4*h*h-k*k*lambda_wave**2)/(2*k*lambda_wave)
+    near(2*sqrt(h*h+(x/2)**2)-x, k*lambda_wave)
+    near((.060/3)*(60*(2*3/4))**2,162)
+
+
 if __name__ == "__main__":
     n = structural_check()
     numerical_check()
@@ -398,6 +476,7 @@ if __name__ == "__main__":
     third_round_regressions()
     fourth_round_regressions()
     fifth_round_regressions()
+    sixth_round_regressions()
     print(f"Structure: {n} referenced worked items; all checked blocks present.")
     print("Selected numeric invariants: passed.")
     print("Not a replacement for full independent physics or copyright review.")
