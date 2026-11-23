@@ -1,0 +1,139 @@
+% 第15批：《大学物理学学习指导》第5版自测题3填空3.2.1—3.2.8
+% 印刷56／PDF物理64页。
+\subsection{自测题3：光速、时间延缓和相对论密度填空}
+
+\sourcetest{3.2.1}{56}{64}
+\problemtext 恒星相对地球以速率$v$匀速运动；
+恒星辐射的光子相对地球的速率大小是多少？
+\workings
+狭义相对论的真空光速不变，
+\[
+\boxed{u_\gamma=c}.
+\]
+\crosscheck 不能用伽利略相加写成$c+v$或$c-v$。
+
+\sourcetest{3.2.2}{56}{64}
+\problemtext $S'$沿$S$系$x$轴\emph{负方向}
+以$0.5c$运动；$S'$原点O'沿$x'$正向发出光波。
+$S$测量该光速大小。
+\workings
+相对运动速度$v=-0.5c$，
+速度合成
+\[
+u=\frac{c-0.5c}{1-(0.5)}=c,
+\]
+故$\boxed{u=c}$。
+\crosscheck 对光速使用洛伦兹速度合成；
+不能得到经典的$0.5c$。
+
+\sourcetest{3.2.3}{56}{64}
+\problemtext 不稳定$\pi^+$介子的自身平均寿命为
+$2.6\times10^{-8}$s，以$0.8c$相对实验室运动，
+求实验室平均寿命。
+\workings
+运动钟时间延缓
+\[
+\boxed{\tau_{\rm lab}
+=\frac{\tau_0}{\sqrt{1-0.8^2}}
+=\frac{2.6\times10^{-8}}{0.6}
+\simeq4.33\times10^{-8}\,\mathrm s}.
+\]
+\crosscheck 这是\emph{平均寿命}的参考系变换，
+不是每个粒子实际存活时间都等于该值。
+
+\sourcetest{3.2.4}{56}{64}
+\problemtext 两位观察者相向接近的相对速度为$0.6c$，
+其中O测得初始距离20m。
+求O'自己的时钟从该初始时刻到相遇所历时间。
+\workings
+在O静止系，两者相遇需
+$t_O=20/(0.6c)$。
+O'时钟测量自身世界线上两个事件的固有时间，
+\[
+\boxed{\Delta\tau_{O'}=
+t_O\sqrt{1-0.6^2}
+=\frac{20(0.8)}{0.6c}
+\simeq8.89\times10^{-8}\,\mathrm s}.
+\]
+\crosscheck 20m距离是由O系同时量得的初始距离；
+不能直接套O'系长度20m而不考虑收缩。
+
+\sourcetest{3.2.5}{56}{64}
+\problemtext (1) 粒子的相对论动量大小何时等于相同速率下的
+经典动量大小的2倍？
+(2) 相对论动能何时等于自身静能？
+\workings
+(1) $p_{\rm rel}=\gamma m_0v$，
+$p_{\rm classical}=m_0v$，要求$\gamma=2$。
+(2) $K=(\gamma-1)m_0c^2=m_0c^2$，
+也要求$\gamma=2$，所以两问速度相同：
+\[
+\boxed{v=c\sqrt{1-\tfrac1{2^2}}
+=\frac{\sqrt3}{2}c}.
+\]
+\crosscheck 这里按静质量$m_0$定义经典动量，
+不是沿用运动质量$m_{\rm rel}=\gamma m_0$后又多乘一个$\gamma$。
+
+\sourcetest{3.2.6}{56}{64}
+\problemtext 电子由静止加速到$0.6c$，求外力所做功，
+以电子静质量$m_0$表达。
+\workings
+$\gamma=(1-0.6^2)^{-1/2}=1.25$，
+\[
+\boxed{W=\Delta K=(\gamma-1)m_0c^2
+=\tfrac14m_0c^2}.
+\]
+\crosscheck 经典值$\tfrac12 m_0(0.6c)^2=0.18m_0c^2$，
+与所求相对论值$0.25m_0c^2$不同。
+
+\sourcetest{3.2.7}{56}{64}
+\problemtext 观察者甲相对乙以$4c/5$运动，
+甲携带静止长度$l$、截面积$S$、静止质量$m$的细棒，
+细棒长度沿运动方向。
+求甲、乙各自记录的棒的密度。
+\workings
+甲在棒自身静止系中测得
+\[
+\boxed{\rho_{\rm rest}=\frac{m}{Sl}}.
+\]
+乙测量的同时长度为
+$l_B=l\sqrt{1-(4/5)^2}=3l/5$。
+若使用\emph{现代静质量密度}的定义，
+质量仍为$m$，故
+\[
+\boxed{\rho_{B,\rm restmass}=\frac{5m}{3Sl}}.
+\]
+但源书时代部分章节将“运动质量”
+定义为$m_{\rm rel}=\gamma m=(5/3)m$；
+若题中“密度”意为\emph{运动质量除同时体积}，
+则乙得到
+\[
+\boxed{\rho_{B,\rm relativisticmass}
+=\frac{(5/3)m}{(3/5)Sl}=\frac{25m}{9Sl}}.
+\]
+\crosscheck \textbf{源题术语约定必须独立二校：}
+两种密度的数值不同，并非同一物理定义的两个解。
+现代连续介质密度和相对论能动张量的定义又需考虑参考系切片；
+本题只登记两种明确的教材简化约定，不虚称唯一无条件值。
+
+\sourcetest{3.2.8}{56}{64}
+\problemtext 速率为$0.99c$的电子静质量为
+$9.11\times10^{-31}$kg。求相对论总能量（J）
+及经典动能与相对论动能之比。
+\workings
+设$\gamma=1/\sqrt{1-0.99^2}\simeq7.0888$，
+则
+\[
+\boxed{E=\gamma m_0c^2
+\simeq(7.0888)(9.11\times10^{-31})(3.0\times10^8)^2
+\simeq5.81\times10^{-13}\,\mathrm J}.
+\]
+经典动能与相对论动能分别是
+$K_{\rm cl}=\tfrac12m_0v^2$、
+$K_{\rm rel}=(\gamma-1)m_0c^2$，所以
+\[
+\boxed{\frac{K_{\rm cl}}{K_{\rm rel}}
+=\frac{0.5(0.99)^2}{\gamma-1}
+\simeq0.0805}.
+\]
+\crosscheck “总能量”包括静能，不是相对论动能本身。
