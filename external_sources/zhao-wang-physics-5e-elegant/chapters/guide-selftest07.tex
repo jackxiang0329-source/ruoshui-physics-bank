@@ -1,0 +1,234 @@
+% Consolidated guide-selftest07 from 283f4ad03ab2102bd6bfdf75a06052da75ec7dbf; source fragments preserved.
+
+% === BEGIN guide-selftest07-choices.tex blob 1769b38198b25e996e11827ed8f83d553891f279 ===
+% 第18批：学习指导自测题7选择题7.1.1--7.1.8；源印刷167--168／PDF175--176。
+\subsection{自测题7：静电、电容、载流导线和位移电流选择题}
+
+\sourcetest{7.1.1}{167}{175}
+\problemtext 两块面积均为 $S$、相距 $d$ 的大型平行金属板，带总电量 $q_1,q_2$；求两板电势差 $U_{AB}$。
+\workings 忽略边缘效应。平行板间的合场强沿 $A\to B$ 的有向分量为
+\[E_x=\frac{q_1-q_2}{2\varepsilon_0 S}.\]
+所以
+\[\boxed{U_{AB}=V_A-V_B=\frac{(q_1-q_2)d}{2\varepsilon_0 S}}.\]
+按原选项为 \textbf{C}。
+\crosscheck 不能将两板的总电荷都当成同一侧的高斯面电荷，亦不能将电势差错误写成与 $q_1+q_2$ 成正比。
+
+\sourcetest{7.1.2}{167}{175}
+\problemtext 题7.1.2示意均匀正带电圆盘的电场线；比较圆盘边缘外 $P$ 与圆盘中心 $O$ 的电势。
+\workings 静电场线从正电荷出发并指向低电势方向。图示由 $O$ 附近向外经过 $P$ 的场线表明
+\[\boxed{V_P<V_O}.\]
+按选项为 \textbf{B}。
+\crosscheck 只需沿电场线的电势下降性质，不需要先知道圆盘轴外任意点的精确场强解析式。
+
+\sourcetest{7.1.3}{167}{175}
+\problemtext 空气平行板电容器两极板面积均为 $S$，分别带 $\pm q$；忽略边缘效应，求极板间吸引力。
+\workings 一个极板仅受\emph{另一}极板所产生的场 $E_{\rm other}=\sigma/(2\varepsilon_0)$。故
+\[\boxed{F=qE_{\rm other}=\frac{q^2}{2\varepsilon_0 S}},\qquad \sigma=q/S.\]
+选 \textbf{B}。
+\crosscheck 电容器板间总场为 $\sigma/\varepsilon_0$，但不能把板自身场也计入自身受力，否则多出因子2。
+
+\sourcetest{7.1.4}{167}{175}
+\problemtext 相同电流 $I$ 分别流过直径为 $a$ 的圆线圈与边长为 $a$ 的正方形线圈，求中心磁场大小比 $B_{\rm circ}/B_{\rm square}$。
+\workings 单匝圆线圈中心 $B_{\rm circ}=\mu_0I/a$。正方形的每条边到中心垂距为 $a/2$，两端夹角均为 $45^\circ$；按有限直导线公式四边叠加，
+\[B_{\rm square}=\frac{2\sqrt2\,\mu_0I}{\pi a}.\]
+因此
+\[\boxed{\frac{B_{\rm circ}}{B_{\rm square}}=\frac{\pi}{2\sqrt2}\simeq1.11}.\]
+选 \textbf{C}。
+\crosscheck 题设圆的\emph{直径}等于方形\emph{边长}，不是圆半径等于边长。
+
+\sourcetest{7.1.5}{167}{175}
+\problemtext 题7.1.3图中四个相同质量、等电荷绝对值的粒子从 $O$ 点以不同速率射入匀强磁场，$B$ 垂直纸面向外；辨认动能最大的负电粒子轨迹。
+\workings 同质量、同 $|q|$ 时，轨道曲率半径为
+\[r=\frac{mv}{|q|B},\qquad K=\frac{q^2 B^2r^2}{2m}.\]
+粒子初速度向左，带负电者受力初始指向纸面下方，对应图中 $Oc,Od$；其中 $Od$ 偏折较小，半径更大，因此动能最大者为 \textbf{轨迹 $Od$（D）}。
+\crosscheck 轨道向上/向下辨认电荷正负，曲率半径辨认动能；单凭轨迹长度不可判定动能。
+
+\sourcetest{7.1.6}{168}{176}
+\problemtext 题7.1.4图：固定载流大平板附近放置一小线框，线框平面与平板垂直；判断框受磁场作用后的运动趋势。
+\workings 大平板近似匀强磁场时，闭合小线圈的磁偶极矩为 $\bm m=I_2S\,\hat{\bm n}$，受力矩
+\[\boxed{\bm \tau=\bm m\times\bm B}.\]
+磁场近似空间均匀时总平动力为零，而力矩使磁矩趋向沿磁场方向排列，故\emph{应以转动为主而非平移}。源图绕行箭头方向的透视存在辨识风险，\textbf{顺时针/逆时针选项暂不定稿}。
+\crosscheck 待放大原图确定大平板正面、线框电流环向和从板向外的观察方向，再确定转动的有向手性；不能只由受力矩公式猜 A/B/C/D。
+
+\sourcetest{7.1.7}{168}{176}
+\problemtext 理想环形螺线管电感系数为 $L$，从对称位置分切为两个半环，各自电感与 $L$ 的关系。
+\workings 取截面积、磁导率不变，理想环形线圈自感 $L\propto N^2/\ell$。各半环有 $N/2$ 匝、磁路长度 $\ell/2$，
+\[\boxed{L_{\rm half}=L\,\frac{(1/2)^2}{1/2}=\frac L2}.\]
+故两半环各为 $L/2$，选 \textbf{A}。
+\crosscheck 半环的匝数减半同时磁路长度也减半；单纯按 $N^2$ 缩放为 $L/4$ 忽略磁路长度变化。开口边缘漏磁不属于理想近似。
+
+\sourcetest{7.1.8}{168}{176}
+\problemtext 判断关于位移电流的起因、发热效应与安培环路定理的四种表述。
+\workings 麦克斯韦位移电流密度定义为 $\bm J_d=\partial\bm D/\partial t$，由变化的电位移通量产生，故对应“变化电场产生位移电流”的 \textbf{A}。
+\[\boxed{I_d=\frac{d\Phi_D}{dt}}.\]
+\crosscheck 位移电流不是材料中载流子定向运动，不能照搬导电电流的焦耳热公式；安培--麦克斯韦环路定律明确包含位移电流。
+% === END guide-selftest07-choices.tex ===
+
+% === BEGIN guide-selftest07-blanks.tex blob d12db8ebcb6d2b2af2e5ae5d1dee5d3a0683c513 ===
+% 第18批：学习指导自测题7填空题7.2.1--7.2.8；印刷168--169／PDF176--177。
+\subsection{自测题7：电势、感应电流与法拉第定律填空}
+
+\sourcetest{7.2.1}{168}{176}
+\problemtext 长 $2\ell$ 的带电直棒左右两半分别带线电荷密度 $-\lambda,+\lambda$；$O$ 位于左端外距 $\ell$，$P$ 位于棒中点法线距 $\ell$。取中点 $B$ 为零势点，求 $V_O,V_P$。
+\workings 令棒中点 $B$ 在 $x=0$，带电段为 $[-\ell,0]$ 和 $[0,\ell]$，$O=(-2\ell,0)$。线电荷在 $B$ 的两半势贡献互相抵消。于是
+\[
+V_O=\frac{\lambda}{4\pi\varepsilon_0}\left(
+\int_0^\ell\frac{dx}{x+2\ell}-
+\int_{-\ell}^0\frac{dx}{x+2\ell}\right)
+=\boxed{\frac{\lambda}{4\pi\varepsilon_0}\ln\frac34}.
+\]
+在 $P=(0,\ell)$，每对对称线元距离相同、符号相反，
+\[\boxed{V_P=0}.\]
+\crosscheck 零电势点设在 $B$，两段在 $B$ 的形式奇异项相消；用先对称截断再取极限的方式理解。
+
+\sourcetest{7.2.2}{168}{176}
+\problemtext 两块大面积 $S$、间距 $d$ 的金属板平行放置，$A$ 原带正电 $Q$、$B$ 起初中性；求 $B$ 绝缘与 $B$ 接地两种情况下 $U_{AB}$。
+\workings 忽略边缘效应。$B$ 不接地时，极板上感应电荷与剩余外表面电荷的分布使间隙场为 $E=Q/(2\varepsilon_0S)$；接地后，近似无限大极板的远侧外场消失，间隙为 $E'=Q/(\varepsilon_0S)$。所以
+\[
+\boxed{U_{AB}=\frac{Qd}{2\varepsilon_0S}},\qquad
+\boxed{U'_{AB}=\frac{Qd}{\varepsilon_0S}}.
+\]
+\crosscheck 接地允许 $B$ 与大地交换电荷；若将“$B$ 接地”误当成“$B$ 依旧保持总电量零”，会少一个因子2。
+
+\sourcetest{7.2.3}{168}{176}
+\problemtext 无限长薄圆柱面半径 $R$，表面电流密度为 $i$、沿轴线方向；割去一条宽 $h\ll R$ 的纵向狭缝，求轴线处磁场大小。
+\workings 完整圆柱电流面在轴线上磁场为零。割去的窄带相当于从完整电流面减去电流 $I_{\rm slit}\simeq ih$、与轴线相距 $R$ 的长直细导线。因此
+\[\boxed{B_{\rm axis}\simeq \frac{\mu_0 i h}{2\pi R}}.\]
+\crosscheck 该表达式保留 $h/R$ 的最低阶，狭缝宽度不再可忽略时必须对圆弧电流分布积分。
+
+\sourcetest{7.2.4}{168}{176}
+\problemtext 直径12cm的圆形单匝线圈载电流10A，在磁感应强度 $B=0.015$T 的匀强磁场中从稳定平衡位置绕直径旋转角 $\alpha=\pi/2$ 或 $2\pi$，求外力的准静态功。
+\workings 磁矩 $m=I\pi(d/2)^2$，平衡位置 $\bm m\parallel\bm B$。磁势能 $U=-mB\cos\alpha$，故
+\[W_{\rm ext}=mB(1-\cos\alpha).\]
+代入 $I=10$A、$d=0.12$m、$B=0.015$T，得
+\[
+\boxed{W_{\pi/2}=10\pi(0.06)^2(0.015)\simeq1.70\times10^{-3}\ {\rm J}},
+\qquad\boxed{W_{2\pi}=0}.
+\]
+\crosscheck 绕完整一圈后回到原稳定方向，保守磁势能的净变化为零；这里功为对抗磁力矩的\emph{可逆外力功}。
+
+\sourcetest{7.2.5}{169}{177}
+\problemtext 圆环半径初始 $r_0=0.10$m，匀强磁场 $B=0.80$T 垂直环面，初始半径收缩速率 $dr/dt=-0.80$ m/s。求初始感应电动势及保持该大小时所需面积变化率。
+\workings 磁通量 $\Phi=B\pi r^2$，感应电动势大小
+\[|\mathcal E|=2\pi Br\left|\frac{dr}{dt}\right|.\]
+$t=0$ 时
+\[\boxed{|\mathcal E_0|=2\pi(0.8)(0.1)(0.8)\simeq0.402\ {\rm V}}.\]
+若维持该电动势，面积 $S=\pi r^2$ 必须以常量
+\[\boxed{\frac{dS}{dt}=-\frac{|\mathcal E_0|}{B}=-0.16\pi\ {\rm m^2/s}}\]
+收缩。
+\crosscheck 恒定 $dr/dt$ 不会产生恒定电动势；保持恒电动势应使 $dS/dt$ 恒定，且只到面积缩减为零之前有效。
+
+\sourcetest{7.2.6}{169}{177}
+\problemtext 四根导电辐条构成半径 $R$ 的旋转轮，在垂直轮面的均匀磁场 $B$ 中以转频 $n$ 旋转，求轴心 $a$ 到轮缘 $b$ 的动生电动势及高电势端。
+\workings $\omega=2\pi n$，每条辐条有
+\[\mathcal E_{a\to b}=\int_0^R(\bm v\times\bm B)\cdot d\bm l
+=\frac12(\bm\omega\cdot\hat{\bm B})\,BR^2.\]
+因此
+\[\boxed{|\mathcal E_{ab}|=\tfrac12 B\omega R^2=\pi BnR^2}.\]
+原图的弧形箭头在轮的上方指向左，表示\textbf{从纸面外观察为逆时针}，故 $\bm\omega$ 指向纸面外；图中叉号表示 $\bm B$ 指向纸面内。两矢量反向，$\bm v\times\bm B$ 径向向内，正电荷积聚在轴心，
+\[
+\boxed{V_a-V_b=\pi BnR^2>0},
+\]
+所以\textbf{轴心 $a$ 电势高于轮缘 $b$}。
+\crosscheck 高电势端由真实图示旋转箭头和磁场叉号共同判定，已完成源图二校。若旋转方向或磁场方向只反转一个，则极性反号；四条并联辐条不把端电压放大为4倍。
+
+\sourcetest{7.2.7}{169}{177}
+\problemtext 面积 $S$ 的平面线圈绕面内轴以角速度 $\omega$ 在匀强磁场 $B$ 中转动，$t=0$ 线圈平面垂直于 $\bm B$。求任意时刻磁通量、感应电动势；若 $B=kI$ 由另一线圈电流产生，求最大互感系数。
+\workings 取初始磁通为正，
+\[\boxed{\Phi(t)=BS\cos\omega t},\qquad
+\boxed{\mathcal E(t)=-\frac{d\Phi}{dt}=BS\omega\sin\omega t}.\]
+若原磁场由 $I$ 产生且 $B=kI$，在两线圈法线平行的最大耦合位置
+\[\boxed{M_{\max}=\frac{\Phi_{\max}}I=kS}.\]
+\crosscheck 按单匝求解；若旋转线圈有 $N$ 匝，应将磁链和互感各乘 $N$。感应电动势正负取决于选取线圈正向。
+
+\sourcetest{7.2.8}{169}{177}
+\problemtext 圆柱形区域内匀强磁场垂直纸面向里、并以 $|dB/dt|=1.0\times10^{-2}$T/s 减弱；$P$ 在轴外 $r=5.0\times10^{-2}$m（仍在磁场区域内）。求 $P$ 点电子的感应电场加速度及方向。
+\workings 圆形对称性与法拉第定律给出 $E_\varphi(2\pi r)=\pi r^2|dB/dt|$，故 $E_\varphi=r|dB/dt|/2$。电子受力大小 $eE_\varphi$，所以
+\[
+\boxed{a=\frac{er}{2m_e}\left|\frac{dB}{dt}\right|
+=\frac{(1.6\times10^{-19})(0.05)(0.01)}{2(9.1\times10^{-31})}
+\simeq4.40\times10^7\,{\rm m/s^2}}.
+\]
+磁场向里且减弱，感应电场环向\emph{顺时针}以阻止磁通减小；电子加速度方向与电场相反，为\textbf{逆时针切向}。
+\crosscheck 只计算旋涡电场造成的瞬时电力加速度，题目未给电子初速度，不可额外计入 $-e\bm v\times\bm B$ 磁力项。
+% === END guide-selftest07-blanks.tex ===
+
+% === BEGIN guide-selftest07-solutions.tex blob 5ffdf705fa14d49c8d8dd15dddd4c81322c074a8 ===
+% 第18批：学习指导自测题7计算题7.3.1--7.3.5；印刷169--170／PDF177--178。
+\subsection{自测题7：静电积分、磁场能量与法拉第感应计算}
+
+\sourcetest{7.3.1}{169}{177}
+\problemtext 带电实心球的体电荷密度为 $\rho(r)=Ar$（$0\le r\le R$），球外电荷密度为零。求球内外电场强度分布。
+\workings 球对称性使电场径向。对半径 $r\le R$ 的高斯球，
+\[Q(r)=\int_0^r 4\pi r'^2(Ar')\,dr'=\pi A r^4.\]
+由 $E4\pi r^2=Q/\varepsilon_0$，
+\[
+\boxed{\bm E(r)=
+\begin{cases}
+\dfrac{A r^2}{4\varepsilon_0}\,\hat{\bm r},&0\le r\le R,\\[4pt]
+\dfrac{A R^4}{4\varepsilon_0r^2}\,\hat{\bm r},&r\ge R.
+\end{cases}}
+\]
+球外总电荷 $Q_{\rm tot}=\pi AR^4$。
+\crosscheck $A$ 为带符号常数，$A<0$ 时电场径向向内；两段在 $r=R$ 连续，$r\to\infty$ 按 $r^{-2}$ 衰减。
+
+\sourcetest{7.3.2}{169}{177}
+\problemtext 均匀体电荷密度 $\rho$ 的球体中心为 $O$，挖去半径 $r$、中心为 $O'$ 的偏心小球形空腔，中心距 $OO'=d$。图中 $P,O,O'$ 共线且 $OP=d$，$P$ 在 $O'$ 的反侧；求空腔中心 $O'$ 与 $P$ 的电场。
+\workings 按叠加法：完整密度 $\rho$ 的球体减去中心为 $O'$、密度同为 $\rho$ 的小球。取 $\hat{\bm x}$ 自 $O$ 指向 $O'$；完整均匀球内 $\bm E_{\rm full}=\rho\bm r/(3\varepsilon_0)$。
+在空腔中心 $O'$，负小球的场为零，故
+\[\boxed{\bm E(O')=\frac{\rho d}{3\varepsilon_0}\hat{\bm x}}.\]
+在 $P=-d\,\hat{\bm x}$ 处，若 $P$ 在腔外（图示 $2d>r$），负小球的外场贡献为
+\[\bm E_{\rm cut}(P)=+\frac{\rho r^3}{3\varepsilon_0(2d)^2}\hat{\bm x}.\]
+因此
+\[\boxed{\bm E(P)=-\frac{\rho}{3\varepsilon_0}
+\left(d-\frac{r^3}{4d^2}\right)\hat{\bm x}}.\]
+\crosscheck 同样可用空腔内均匀场公式 $\bm E=\rho\overrightarrow{OO'}/(3\varepsilon_0)$ 复核第一问。第二问必须确定 $P$ 与腔的相对位置，不能把腔外贡献套腔内公式。
+
+\sourcetest{7.3.3}{170}{178}
+\problemtext 半径 $R=0.20$m 的四分之一圆弧与两条半径组成平面闭合载流线圈，电流 $I=2$A，置于 $B=0.50$T 的匀强磁场中。(1) 线圈平面垂直于 $\bm B$ 时，求圆弧部分所受磁力大小；(2) 线圈平面与磁场方向成 $60^\circ$ 时，求线圈受磁力矩大小。
+\workings (1) 匀强磁场中导线任意弯曲段的合安培力
+\[\bm F_{AB}=I(\bm r_B-\bm r_A)\times\bm B.\]
+圆弧两端所连弦长为 $\sqrt2R$，而弦在平面内、$\bm B$ 垂直平面，故
+\[\boxed{F_{\rm arc}=IB\sqrt2R=2(0.5)(0.2)\sqrt2\simeq0.283\,{\rm N}}.\]
+(2) 线圈所围扇形面积 $S=\pi R^2/4$，磁矩 $m=IS$。线圈\emph{平面}与 $\bm B$ 夹角 $60^\circ$，故法线与 $\bm B$ 夹角 $30^\circ$，
+\[\boxed{\tau=ISB\sin30^\circ=\frac{\pi IBR^2}{8}
+\simeq1.57\times10^{-2}\ {\rm N\,m}}.\]
+\crosscheck 不得将平面与 $\bm B$ 的夹角误当成磁矩与 $\bm B$ 的夹角；总线圈在均匀场中净受力为零，但圆弧段受力不为零。
+
+\sourcetest{7.3.4}{170}{178}
+\problemtext 无限长直导线电流向上，且以 $dI/dt=2$A/s 匀速增加；旁边同平面直角三角形线圈竖边高 $H=20$cm，与长导线最近距 $a=5$cm，底边宽 $b=10$cm。求线圈中的感应电动势大小和方向。
+\workings 取与直导线距离为 $x$ 的竖向切片。图中三角形厚度 $h(x)=H(a+b-x)/b$，$a\le x\le a+b$。直导线磁场在三角形区域内指向纸面内，大小
+\[B(x)=\frac{\mu_0I}{2\pi x}.\]
+因此磁通大小
+\[
+\Phi=\frac{\mu_0 I H}{2\pi b}
+\int_a^{a+b}\frac{a+b-x}{x}\,dx
+=\frac{\mu_0 I H}{2\pi b}
+\left[(a+b)\ln\frac{a+b}{a}-b\right].
+\]
+求导并代入 $H=0.20$, $a=0.05$, $b=0.10$m，
+\[
+\boxed{|\mathcal E|=\frac{\mu_0 H}{2\pi b}
+\left[(a+b)\ln\frac{a+b}{a}-b\right]\frac{dI}{dt}
+\simeq5.18\times10^{-8}\ {\rm V}}.
+\]
+由于原磁场向纸面内且增强，感应磁场向纸面外，故线圈电流为\textbf{逆时针}。
+\crosscheck 右边界处三角形高度为零，不能把三角形误作矩形面积代入；最终方向由楞次定律而非任意设定的通量符号决定。
+
+\sourcetest{7.3.5}{170}{178}
+\problemtext 长螺线管单位长度匝数为 $n$，电流随时间均匀变化 $I(t)=-kt$，$k>0$。求管内磁感应强度和管内外环向感应电场。
+\workings 取螺线管轴向为有向正方向，设半径为 $R$，理想长螺线管磁场在管内
+\[\boxed{\bm B(t)=-\mu_0nkt\,\hat{\bm z}},\]
+管外磁场近似零。对半径 $r$ 的同轴环路，法拉第定律
+\[\oint\bm E\cdot d\bm l=-\frac{d\Phi_B}{dt}.\]
+由于 $dB/dt=-\mu_0nk$，
+\[
+\boxed{E_\varphi(r)=
+\begin{cases}
+\dfrac{\mu_0nkr}{2},&r\le R,\\[4pt]
+\dfrac{\mu_0nkR^2}{2r},&r\ge R.
+\end{cases}}
+\]
+这里 $E_\varphi>0$ 以从 $+\hat{\bm z}$ 方向观察的逆时针为正。
+\crosscheck 螺线管外磁感应强度虽近似零，因穿过环路的磁通随时变化，外部仍可有非保守环向电场；若题只求管内，取第一段即可。
+% === END guide-selftest07-solutions.tex ===

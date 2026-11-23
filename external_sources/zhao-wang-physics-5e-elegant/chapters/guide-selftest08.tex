@@ -1,0 +1,283 @@
+% Consolidated guide-selftest08 from 283f4ad03ab2102bd6bfdf75a06052da75ec7dbf; source fragments preserved.
+
+% === BEGIN guide-selftest08-choices.tex blob e76b5624ee94a8d8d8d461cb07af3c81608af061 ===
+% 第19批：学习指导自测题8选择题8.1.1--8.1.8；印刷171--172／PDF179--180。
+\subsection{自测题8：电容、磁场叠加和位移电流选择题}
+
+\sourcetest{8.1.1}{171}{179}
+\problemtext 三只大小相同的金属小球，球1和2各带等量同号电荷 $q$，相距远于球径，库仑斥力为 $F$。中性球3先与1接触、再与2接触后移走，求球1与球2间的斥力。
+\workings 首次接触后，球1和3各带 $q/2$。球3再与球2接触时总电量为 $3q/2$，两球各得 $3q/4$。最终
+\[\boxed{F'=\frac{k(q/2)(3q/4)}{r^2}=\frac38F}.\]
+选 \textbf{D}。
+\crosscheck 第二次接触时球3的电荷不是零，而是第一次接触后的 $q/2$；不能误作 $F/4$。
+
+\sourcetest{8.1.2}{171}{179}
+\problemtext 半径为 $R_1,R_2$（$R_2>R_1$）的两同心金属薄球壳最初分别带电 $q_1,q_2$，外壳初始电势记 $U_2$（无穷远为零）。接导线使两壳等势后，求共同电势。
+\workings 两壳导通后构成一个整体导体，无电荷保留在无内部电荷的腔内表面，所有净电荷 $q_1+q_2$ 分布在半径 $R_2$ 的最外表面。因此
+\[U_{\rm common}=\frac{q_1+q_2}{4\pi\varepsilon_0R_2}.\]
+而外壳导通前已满足 $U_2=(q_1+q_2)/(4\pi\varepsilon_0R_2)$，故
+\[\boxed{U_{\rm common}=U_2}.\]
+选 \textbf{B}。
+\crosscheck 内壳初始电势 $U_1$ 不一定等于 $U_2$；导线相连使电荷流动，不能把两壳视为始终保持原始各自电荷。
+
+\sourcetest{8.1.3}{171}{179}
+\problemtext 电容器 $C_1=8\,\mu{\rm F}$、$C_2=2\,\mu{\rm F}$ 分别充至1000V，然后按题8.1.1图反极性并联，求两电容器最终两接点的电势差大小。
+\workings 并联共用的正向节点原净自由电荷为 $Q_0=C_1U_0-C_2U_0$，总电容量为 $C_1+C_2$。电荷守恒得
+\[
+\boxed{U=\frac{C_1-C_2}{C_1+C_2}U_0
+=\frac{8-2}{8+2}(1000)=600\,{\rm V}}.
+\]
+选 \textbf{C}。
+\crosscheck 两电容器接线的原极性相反，电荷应相减而非相加；实际再分配过程中的能量损失不影响最终电荷平衡式。
+
+\sourcetest{8.1.4}{171}{179}
+\problemtext 题8.1.2图中电流从无穷长竖直引线1在顶点 $a$ 流入由四条等阻边组成的正方形框，再从对角顶点 $c$ 经引线2流出；比较框中心 $O$ 处引线场与方框场。
+\workings 两条从 $a$ 到 $c$ 的边路径电阻相同，电流各为 $I/2$。正方形四边中相对的两支路对 $O$ 的场大小相等、方向相反，故 $\boxed{B_3=0}$。引线1接在顶点 $a$ 的上方，引线2接在对角顶点 $c$ 的下方，\textbf{二者是相互平行、位于不同直线上的半无限长引线，不是共线引线}。由原图的中心对称性，两条引线到 $O$ 的垂直距离、端点位置所给的截角及电流大小相同；在 $O$ 产生的场大小相同、方向相反，故 $\boxed{\bm B_1+\bm B_2=0}$，但 $\bm B_1,\bm B_2$ 各不为零。总场
+\[\boxed{\bm B_O=\bm0}.\]
+选 \textbf{B}。
+\crosscheck 总磁场为零不意味着每根引线贡献都为零；须把相互抵消与单独为零区分。图8.1.2中两引线的空间位置为\emph{平行错位}，并非同一直线的延伸；本题采用源图中心对称、支路电阻均分的条件。
+
+\sourcetest{8.1.5}{171}{179}
+\problemtext 在 $x=1$ 和 $x=3$ 的两条无限长平行导线均沿 $+y$ 方向载同一电流 $I$。问磁场大小为零的点位于何处。
+\workings 两根直导线在 $x$--$y$ 平面内、位于两线之间的场方向相反；其大小为
+\[B_1=\frac{\mu_0I}{2\pi|x-1|},\quad
+B_2=\frac{\mu_0I}{2\pi|x-3|}.\]
+相等须 $|x-1|=|x-3|$，故
+\[\boxed{x=2}\]
+的平面内中线处磁场相消，选 \textbf{A}。
+\crosscheck 严格地说只有位于两根导线共同张成的平面、且两线等距的那条直线 $x=2,z=0$ 上场为零；不能说整个三维平面 $x=2$ 的所有点均为零。
+
+\sourcetest{8.1.6}{172}{180}
+\problemtext 题8.1.4图：直角三角形金属框 $abc$ 绕竖直边 $ab$ 转动，边 $bc=\ell$ 且 $ab\parallel\bm B$。求整闭合回路动生电动势与 $U_a-U_c$。
+\workings 由于转轴与均匀磁场平行，线框转动时始终有 $\bm B$ 位于线框平面中，磁通量恒为零，故
+\[\boxed{\mathcal E_{\rm loop}=0}.\]
+若角速度矢量与 $\bm B$ 同向，则正电荷受 $\bm v\times\bm B$ 的径向力，距轴 $\ell$ 的 $c$ 电势高于轴上 $a$：
+\[\boxed{U_a-U_c=-\int_0^\ell B\omega r\,dr=-\tfrac12B\omega\ell^2}.\]
+选 \textbf{B}（按原图角速度方向）。
+\crosscheck 闭合回路电动势为零不代表两端点无电势差；若角速度方向反向，端点电势差符号也反向。
+
+\sourcetest{8.1.7}{172}{180}
+\problemtext 相距 $2a$ 的两无限长平行直导线组成闭合回路，中间电流方向相反，电流大小均为 $I$。求中点 $P$ 的磁能密度。
+\workings 两导线在中点产生的磁场方向相同，故
+\[B_P=2\frac{\mu_0I}{2\pi a}=\frac{\mu_0I}{\pi a}.\]
+真空磁场能量密度为
+\[\boxed{w_B=\frac{B_P^2}{2\mu_0}
+=\frac1{2\mu_0}\left(\frac{\mu_0I}{\pi a}\right)^2}.\]
+选 \textbf{C}。
+\crosscheck 电流沿两线方向相反，线间的磁场叠加而非抵消；不可把能量密度先算两个单独项再相加以忽略交叉项。
+
+\sourcetest{8.1.8}{172}{180}
+\problemtext 空气平行板电容器两板电势差随时间按 $U_{ab}=Kt$（$K>0$）增长。两板间有点1和点2，其中2更靠近板的外缘，比较两点感生磁场大小 $B_1,B_2$。
+\workings 忽略边缘效应，板间 $E=Kt/d$、位移电流密度 $J_d=\varepsilon_0K/d$ 均匀。对距极板中心轴 $r$ 的圆形安培环路，
+\[B_\varphi(r)2\pi r=\mu_0J_d\pi r^2
+\Longrightarrow\boxed{B_\varphi(r)=\frac{\mu_0\varepsilon_0 K}{2d}\,r}.\]
+故 $r_2>r_1$ 时
+\[\boxed{B_1<B_2},\]
+选 \textbf{B}。
+\crosscheck 比较的是随时间变化的电场产生的磁场，极板间无须真实导电流穿过介质；近板缘时边缘场会修正该线性关系。
+% === END guide-selftest08-choices.tex ===
+
+% === BEGIN guide-selftest08-blanks.tex blob 0096f4024c0b36b8ac7f7afb3ad4af7b753d71b4 ===
+% 第19批：学习指导自测题8填空题8.2.1--8.2.10；印刷172--173／PDF180--181。
+\subsection{自测题8：电场能、磁偶极与感应电动势填空}
+
+\sourcetest{8.2.1}{172}{180}
+\problemtext 点电荷 $+q$ 放在 $A$，点电荷 $-q$ 放在 $O$；$B,C,D$ 位于以 $O$ 为圆心半径 $R$ 的上半圆弧，$A$ 位于 $B$ 左侧且 $AB=R$。一单位正试探电荷从 $B$ 沿弧到 $D$，求电场力做功。
+\workings 取 $O$ 为原点，$B=-R$、$D=+R$、$A=-2R$。两定点电荷对试探电荷的电势分别为
+\[V_B=\frac q{4\pi\varepsilon_0}\left(\frac1R-\frac1R\right)=0,\]
+\[V_D=\frac q{4\pi\varepsilon_0}\left(\frac1{3R}-\frac1R\right)
+=-\frac{2q}{3(4\pi\varepsilon_0)R}.\]
+单位正电荷所受电场力做功为
+\[\boxed{W=V_B-V_D=\frac{2q}{3(4\pi\varepsilon_0)R}}.\]
+\crosscheck 静电力保守，做功只由始末电势决定，沿上半圆还是其他路径均相同；这里“单位正电荷”指 $q_0=1$C。
+
+\sourcetest{8.2.2}{172}{180}
+\problemtext 半径 $R$ 的均匀带电细圆环总电荷 $Q$，水平放置；质量 $m$、电荷 $q$ 的小球从环中心正上方距离 $R$ 处由静止落至圆心。求其通过圆心时速率。
+\workings 均匀带电圆环轴线上距圆心 $z$ 的电势 $V(z)=Q/[4\pi\varepsilon_0\sqrt{R^2+z^2}]$。忽略空气阻力，机械能与电势能守恒：
+\[
+\frac12 mv^2=mgR+q[V(R)-V(0)]
+=mgR+\frac{qQ}{4\pi\varepsilon_0R}
+\left(\frac1{\sqrt2}-1\right).
+\]
+所以
+\[
+\boxed{v=\sqrt{2gR+\frac{2qQ}{4\pi\varepsilon_0mR}
+\left(\frac1{\sqrt2}-1\right)}}.
+\]
+\crosscheck 上式是\emph{假设小球实际能到达圆心}时的速率，单凭根号内非负不够。
+记 $K=qQ/(4\pi\varepsilon_0)$。若 $K>0$，从 $z=R$ 静止释放后能到达中心的必要条件且（无其他阻碍时）充分条件为
+\[
+U(z)=mgz+\frac{K}{\sqrt{R^2+z^2}}\le
+U(R)=mgR+\frac{K}{\sqrt2R},\quad 0\le z<R.
+\]
+例如令无量纲参数 $\eta=K/(mgR^2)=2.8$，
+则末点表达式的 $v^2=2gR[1-\eta(1-1/\sqrt2)]>0$，但在 $z=0.58R$ 处 $U(z)>U(R)$，实际从静止出发无法越过势垒，\textbf{不能将虚构的末点速度当成物理可达结果}。
+若 $K\le0$，静电力在向下路径上不构成排斥势垒，通常可达圆心。
+
+\sourcetest{8.2.3}{173}{181}
+\problemtext 空气平行板电容器原电容 $C_0$、电场能 $W_{e0}$，保持与恒压电源连接后，板间充满相对介电常数 $\varepsilon_r$ 的均匀电介质。求新的电容与电场能。
+\workings 电容变化 $C=\varepsilon_r C_0$。电源使电压不变，电场能 $W_e=\tfrac12 C U^2$，所以
+\[\boxed{C=\varepsilon_r C_0},\qquad
+\boxed{W_e=\varepsilon_r W_{e0}}.
+\]
+\crosscheck 若断开电源保持自由电荷不变，则结果为 $W_e=W_{e0}/\varepsilon_r$；两类边界条件不可混淆。
+
+\sourcetest{8.2.4}{173}{181}
+\problemtext 一半径为 $r$ 的圆位于与匀强磁场 $\bm B$ 垂直的平面内；以该圆为边界作一个半球面 $S$，求穿过半球面的磁通量的大小。
+\workings 将半球面与底圆盘围成闭合曲面，磁场高斯定律
+\[\oint\bm B\cdot d\bm S=0.\]
+底盘通量大小为 $B\pi r^2$，因此半球曲面通量大小相同：
+\[\boxed{|\Phi_S|=B\pi r^2}.\]
+\crosscheck 半球表面积是 $2\pi r^2$，但磁通量计算需取投影面积，不能直接写 $2\pi r^2B$。
+
+\sourcetest{8.2.5}{173}{181}
+\problemtext 直载流导线沿空间直角坐标系的 $+y$ 轴，取原点上的电流元 $I\,d\ell$，求它在 $(a,0,0)$ 点产生的微元磁场大小与方向。
+\workings 毕奥--萨伐尔定律
+\[d\bm B=\frac{\mu_0I}{4\pi}
+\frac{d\bm\ell\times\hat{\bm r}}{r^2}.\]
+这里 $d\bm\ell=d\ell\,\hat{\bm y}$、$\hat{\bm r}=\hat{\bm x}$，所以 $d\bm\ell\times\hat{\bm r}=-d\ell\,\hat{\bm z}$。故
+\[
+\boxed{|d\bm B|=\frac{\mu_0 I\,d\ell}{4\pi a^2}},\qquad
+\boxed{\text{方向沿 }-\hat{\bm z}}.
+\]
+\crosscheck 要求的是一个\emph{电流元}的磁场，而非把整条无限导线积分后的 $B=\mu_0I/(2\pi a)$。
+
+\sourcetest{8.2.6}{173}{181}
+\problemtext 带电质点电荷量 $q=8.0\times10^{-19}$C，以速率 $v=3.0\times10^5$m/s 在半径 $R=6.00\times10^{-8}$m 的圆周上匀速运动。求轨道中心的磁感应强度和轨道磁矩大小。
+\workings 等效环电流 $I=q/T=qv/(2\pi R)$，轨道中心
+\[
+B=\frac{\mu_0I}{2R}=\frac{\mu_0qv}{4\pi R^2}
+=\boxed{6.67\times10^{-6}\ {\rm T}}.
+\]
+电流环磁矩大小
+\[
+\boxed{P_m=I\pi R^2=\frac{|q|vR}{2}
+=7.20\times10^{-21}\ {\rm A\,m^2}}.
+\]
+\crosscheck 磁矩向量由带电质点运动方向与电荷符号共同决定，题目只要求大小；式中的 $q$ 数值按正的电荷量绝对值使用。
+
+\sourcetest{8.2.7}{173}{181}
+\problemtext 电子以 $v=2.20\times10^6$m/s 垂直于 $B=2.36$T 的均匀磁场射入，作匀速圆周运动。求轨道磁矩的大小和方向（$m_e=9.11\times10^{-31}$kg）。
+\workings 回旋半径 $r=m_ev/(eB)$。轨道电流的磁矩大小
+\[
+P_m=\frac{evr}{2}=\frac{m_ev^2}{2B}
+=\frac{(9.11\times10^{-31})(2.20\times10^6)^2}{2(2.36)}
+=\boxed{9.34\times10^{-19}\ {\rm A\,m^2}}.
+\]
+由电子实际回旋方向与负电荷电流的相反方向，磁矩方向\textbf{与外磁场 $\bm B$ 相反}。
+\crosscheck 电子的角动量与其磁矩因负电荷而反向；不能用电子运动切向直接作为约定电流方向。
+
+\sourcetest{8.2.8}{173}{181}
+\problemtext 等边三角形导体线框边长 $\ell$，在平行边 $ab$ 的匀强磁场 $B$ 中绕 $ab$ 轴以 $\omega$ 转动；规定 $a\to b\to c\to a$ 为电动势正向。求 $bc$、$ca$ 及整环电动势。
+\workings 令 $\bm\omega\parallel\bm B$，轴上 $a,b$ 到轴距离零，顶点 $c$ 到轴距离 $h=\sqrt3\ell/2$。运动电动势的切向积分满足
+\[\int_{r_1}^{r_2}(\bm v\times\bm B)\cdot d\bm l
+=\frac12B\omega(r_2^2-r_1^2).\]
+因此
+\[
+\boxed{\mathcal E_{bc}=+\frac12B\omega h^2
+=+\frac38B\omega\ell^2},
+\]
+\[
+\boxed{\mathcal E_{ca}=-\frac12B\omega h^2
+=-\frac38B\omega\ell^2},
+\qquad\boxed{\mathcal E_{abca}=0}.
+\]
+\crosscheck 若 $\bm\omega$ 与 $\bm B$ 反向，两段电动势同时变号，但整环仍为零；不能因边长相等推断各边动生电动势相等。
+
+\sourcetest{8.2.9}{173}{181}
+\problemtext 一根绝缘无限长直导线沿矩形线圈平面内的中心轴 $OO'$ 紧贴放置，求两者之间的互感系数。
+\workings 直导线磁场在其两侧大小相同、穿过矩形线圈平面的方向相反。由于线圈左右两半关于直导线对称，磁通量逐条镜像抵消：
+\[\Phi_{\rm left}+\Phi_{\rm right}=0.\]
+所以
+\[\boxed{M=\Phi/I=0}.\]
+\crosscheck 理想零半径直线场在中心轴有奇异性，需采用对称小半径正则化后计算；若导线偏离中心轴，通常会有非零互感。
+
+\sourcetest{8.2.10}{173}{181}
+\problemtext 理想细长无铁芯螺线管保持总匝数 $N$、截面半径与面积 $S$ 不变，但沿轴向被拉长；问自感系数如何改变。
+\workings 忽略端部漏磁，长螺线管的自感
+\[L=\frac{\mu_0N^2S}{\ell}.\]
+拉长使总长度 $\ell$ 增大，其余量不变，故
+\[\boxed{L\ \text{减小，且}\ L\propto\ell^{-1}}.\]
+\crosscheck 若保持的是单位长度匝数 $n$ 而非总匝数 $N$，比较方式不同；本题明确总匝数不变。
+% === END guide-selftest08-blanks.tex ===
+
+% === BEGIN guide-selftest08-solutions.tex blob 53afd6969f47d93553f31fe4f6c4c053b82ab4ab ===
+% 第19批：学习指导自测题8计算题8.3.1--8.3.5；印刷173--174／PDF181--182。
+\subsection{自测题8：静电能、旋转带电半环与电磁感应计算}
+
+\sourcetest{8.3.1}{173}{181}
+\problemtext 两金属导体球相距很远，半径均为10cm，分别带至电势200V和400V。随后用细导线相连并达到等势，求静电场力在电荷重新分配过程中所做的功。
+\workings 远离的球近似各为对地独立电容 $C=4\pi\varepsilon_0 R$。接线后总电荷守恒，同半径故最终等势
+\[V_f=\frac{CV_1+CV_2}{2C}=\frac{200+400}{2}=300\,{\rm V}.\]
+原电场能为 $W_i=\tfrac12 C(V_1^2+V_2^2)$，终电场能为 $W_f=2(\tfrac12CV_f^2)=CV_f^2$。差额即电场释放的能量：
+\[
+\begin{aligned}
+W_{\rm field}&=W_i-W_f=\frac C4(V_2-V_1)^2\\
+&=\pi\varepsilon_0 R(200\,{\rm V})^2
+=\boxed{1.11\times10^{-7}\ {\rm J}},
+\end{aligned}
+\]
+取 $\varepsilon_0=8.85\times10^{-12}$SI。
+\crosscheck 两球半径相同但初始电势不同，最终各为300V；真实连接电路中场能可以转化为焦耳热和电磁辐射，不应声称静电总能量守恒不变。
+
+\sourcetest{8.3.2}{173}{181}
+\problemtext 半径 $a$、线电荷密度为常数 $\lambda>0$ 的均匀带电细半圆环，以角速度 $\omega$ 绕它所在平面内、经过半圆两端点的直径轴匀速转动。求半圆圆心的磁感应强度以及整体磁矩大小。
+\workings 设半圆上微元的极角为 $\theta\in[0,\pi]$，轴到微元距离 $\rho=a\sin\theta$，轴向偏移 $z=a\cos\theta$，电量 $dq=\lambda a\,d\theta$。旋转微元形成频率 $\omega/(2\pi)$ 的小电流环
+\[dI=\frac{\omega\,dq}{2\pi}.\]
+圆心磁场的轴向贡献为
+\[dB=\frac{\mu_0dI\,\rho^2}{2(\rho^2+z^2)^{3/2}}
+=\frac{\mu_0\lambda\omega}{4\pi}\sin^2\theta\,d\theta.\]
+利用 $\int_0^\pi\sin^2\theta\,d\theta=\pi/2$，
+\[\boxed{B_O=\frac{\mu_0\lambda\omega}{8}}.\]
+每一小电流环的磁矩 $dP_m=dI\pi\rho^2=(\omega/2)\,dq\,\rho^2$，故
+\[
+\boxed{P_m=\frac{\omega\lambda a^3}{2}
+\int_0^\pi\sin^2\theta\,d\theta
+=\frac{\pi\lambda\omega a^3}{4}}.
+\]
+两向量对正电荷均沿角速度轴向。
+\crosscheck 这不是将整根半圆弧当成一个固定平面圆电流环；它绕\emph{自身直径}转动，各微元扫过的圆半径不同，需按 $\sin^2\theta$ 积分。
+
+\sourcetest{8.3.3}{174}{182}
+\problemtext 空间存在平行同向的均匀电场 $\bm E$ 与磁场 $\bm B$；电子电量 $-e$、质量 $m$，初速 $v$ 与 $\bm E$ 夹角 $\alpha$。求加速度大小，并描述运动轨迹。
+\workings 取 $\hat{\bm z}$ 沿 $\bm E,\bm B$，洛伦兹力为
+\[m\dot{\bm v}=-e(\bm E+\bm v\times\bm B).\]
+磁场只作用在垂直分量，保持 $v_\perp=v\sin\alpha$ 的大小；电场只改变平行速度，$v_z(t)=v\cos\alpha-(eE/m)t$。因两力互相正交，
+\[
+\boxed{|\bm a|=\frac e m\sqrt{E^2+B^2v^2\sin^2\alpha}},
+\]
+大小与时间无关。垂直方向以角速度 $\omega_c=eB/m$ 作圆周运动，半径 $\rho=mv\sin\alpha/(eB)$；轴向位置
+\[\boxed{z(t)=v\cos\alpha\,t-\frac{eE}{2m}t^2}.\]
+因此轨迹是\textbf{沿磁力线方向受匀加速运动调制的螺旋线}，螺距随时间变化。
+\crosscheck 若 $E=0$ 为等螺距匀速螺旋；若 $\alpha=0$ 为沿场的直线变速运动。电子带负电，轴向电加速度与 $\bm E$ 方向相反。
+
+\sourcetest{8.3.4}{174}{182}
+\problemtext 无限长直导线沿竖直向上载恒定电流 $I$；其右侧同平面有直角三角形线圈 $ABC$：$BC=a$ 与导线垂直，$AC=b$ 与导线平行，最近顶点 $B$ 离导线 $d$。三角形线圈以水平速度 $v$ 向右远离导线。求总感应电动势大小及感应电流方向。
+\workings 取距导线水平坐标 $x$，三角形竖向截面长度 $h(x)=b(x-d)/a$，$d\le x\le d+a$。直导线场为 $B(x)=\mu_0I/(2\pi x)$，垂直纸面向内。磁通绝对值
+\[
+\Phi(d)=\frac{\mu_0Ib}{2\pi a}
+\int_d^{d+a}\frac{x-d}{x}\,dx
+=\frac{\mu_0Ib}{2\pi a}
+\left[a-d\ln\left(1+\frac ad\right)\right].
+\]
+远离过程中 $\dot d=v$，于是
+\[
+\boxed{|\mathcal E|=
+\frac{\mu_0Ibv}{2\pi a}
+\left[\ln\left(1+\frac ad\right)-\frac a{d+a}\right]}.
+\]
+原向里磁通减少，所以感应电流产生向里的磁场，方向为\textbf{顺时针}（沿 $A\to C\to B\to A$）。
+\crosscheck 对数项必须减去 $a/(a+d)$；在远场 $d\gg a$，方括号近似 $a^2/(2d^2)>0$，电动势按 $d^{-2}$ 衰减。
+
+\sourcetest{8.3.5}{174}{182}
+\problemtext 无限长直导线载恒定电流 $I$，一根长度 $b$、与该导线平行的短金属棒初始距导线 $a$。金属棒以速率 $v$ 沿垂直于导线与棒初始所在平面的方向平移。求时刻 $t\ge0$ 的杆两端动生电动势大小。
+\workings 令直导线沿 $+\hat{\bm y}$，棒初始位于 $x=a,z=0$，随后移到 $z=vt$，棒上任一点到直导线的距离 $\rho=\sqrt{a^2+v^2t^2}$。毕奥--萨伐尔定律
+\[\bm B=\frac{\mu_0I}{2\pi(a^2+z^2)}
+\left(z\,\hat{\bm x}-a\,\hat{\bm z}\right).\]
+移动速度 $\bm v=v\hat{\bm z}$，其动生力 $\bm v\times\bm B$ 沿棒的 $y$ 方向，模为 $\mu_0 I v|z|/[2\pi(a^2+z^2)]$。沿长度 $b$ 积分，代入 $z=vt$：
+\[
+\boxed{|\mathcal E(t)|=
+\frac{\mu_0I b v^2t}{2\pi(a^2+v^2t^2)}}\qquad(t\ge0).
+\]
+\crosscheck $t=0$ 时棒的移动速度恰与该处磁场平行，所以电动势为零；随远离运动先增大后减小，在 $t=a/v$ 达到极大值。
+% === END guide-selftest08-solutions.tex ===

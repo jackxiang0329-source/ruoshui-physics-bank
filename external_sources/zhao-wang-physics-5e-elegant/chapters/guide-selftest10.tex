@@ -1,0 +1,446 @@
+% Consolidated guide-selftest10 from 283f4ad03ab2102bd6bfdf75a06052da75ec7dbf; source fragments preserved.
+
+% === BEGIN guide-selftest10-choices.tex blob ff1fa4508353b5e0238a6575ef1ad095c336dce8 ===
+% 学习指导第5版自测题10（光的衍射与偏振）10.1.1—10.1.10；
+% 原书印刷206—207，PDF物理214—215。每题按源选项和原图检查。
+\subsection{自测题10：单缝、光栅与偏振选择题}
+
+\sourcetest{10.1.1}{206}{214}
+\problemtext 单缝光垂直入射，某$\theta=30^\circ$方向
+按半波带法可以把波面分成3个半波带，
+求单缝宽度$a$。
+\workings
+单缝两边光程差$\delta=a\sin\theta$。
+每个半波带对应$\lambda/2$，故
+$a\sin30^\circ=3\lambda/2$，即
+\[
+\boxed{a=3\lambda}.
+\]
+选\textbf{D}。
+\crosscheck 3个半波带不是3个全波长，不能漏掉$1/2$。
+
+\sourcetest{10.1.2}{206}{214}
+\problemtext 夫琅禾费单缝衍射，狭缝宽增加为原来的$3/2$，
+光波波长减至原来的$3/4$，问中央明纹近轴宽度比例。
+\workings
+中央明纹角宽或固定焦距的焦面线宽均正比$\lambda/a$，
+\[
+\boxed{\frac{W'}W=
+\frac{(3/4)\lambda}{(3/2)a}\bigg/
+\frac{\lambda}{a}=\frac12}.
+\]
+选\textbf{D}。
+\crosscheck 中央明纹变窄，不是随缝宽增加而变宽。
+
+\sourcetest{10.1.3}{206}{214}
+\problemtext 原书图10.1.2：单缝宽$a$略增大，
+并将整个单缝沿$+y$方向微小平移；
+透镜和接收屏不动，问中央衍射纹宽度及位置变化。
+\workings
+单缝变宽使中央衍射明纹角宽
+$\Delta\theta\simeq2\lambda/a$减小。
+理想平面波与透镜后焦面构成傅里叶光学布置，
+平移孔径仅使衍射场的复振幅多一个线性相位因子，
+其强度模不变，中央亮纹不因单缝整体平移而移动。
+所以\textbf{变窄，不移动}，选\textbf{C}。
+\crosscheck 必须区分源题的“把缝宽稍微\emph{变宽}”
+与“缝沿$+y$小位移”；不能把两种变化混作宽度减小。
+
+\sourcetest{10.1.4}{206}{214}
+\problemtext 已有光栅在屏幕上只能显示零级和正负一级主极大，
+若想出现更高级主极大，应换大还是小的光栅常数？
+\workings
+光栅条件$d\sin\theta=m\lambda$，
+传播方向满足$|m|\le d/\lambda$。
+要增大允许最高级数$m_{\max}$，
+需要更大的光栅常量$d$，
+故选\textbf{B}。
+\crosscheck 更大的刻线密度意味着更小的$d$，
+反而减少可传播级次；“高分辨刻线多”与“高阶可见”是不同优化目标。
+
+\sourcetest{10.1.5}{206}{214}
+\problemtext 多缝光栅的所有偶数级主极大均遇单缝零点而缺失。
+透光缝宽$a$与相邻不透明缝间隔$b$有何关系？
+\workings
+主极大$d\sin\theta=m\lambda$，
+单缝暗纹$a\sin\theta=k\lambda$，
+缺级当$m=(d/a)k$。
+所有偶级缺失而奇级保留对应$d/a=2$，
+即$d=a+b=2a$，所以
+\[
+\boxed{a=b}.
+\]
+选\textbf{A}。
+\crosscheck “所有偶级”指非零偶数级；
+零级中心主极大不在单缝零点。
+
+\sourcetest{10.1.6}{207}{215}
+\problemtext 强度$I_0$自然光依次通过两片理想偏振片，
+透振轴夹角30°，求透射强度。
+\workings
+通过第一片：$I_1=I_0/2$。
+再按马吕斯定律：
+\[
+\boxed{I=I_1\cos^230^\circ
+=\frac{I_0}{2}\cdot\frac34=\frac{3I_0}{8}}.
+\]
+选\textbf{E}。
+\crosscheck 首片透射因子$1/2$必不可少。
+
+\sourcetest{10.1.7}{207}{215}
+\problemtext 三片偏振片$P_1,P_2,P_3$，$P_1$与$P_3$互相正交。
+自然光照射后出射光强为$I_0/8$。
+只转动中间片$P_2$使强度归零，问最小转角。
+\workings
+设中片轴与$P_1$轴夹角$\theta$，$P_3$轴与$P_1$夹90°，
+\[
+ I=\frac{I_0}{2}\cos^2\theta\sin^2\theta
+ =\frac{I_0}{8}\sin^22\theta.
+\]
+已知$I=I_0/8$，故$\sin^22\theta=1$，
+中片轴在45°模90°位置。
+要归零必须使其与某一片轴平行，最小转动
+\[
+\boxed{\Delta\theta_{\min}=45^\circ},
+\]
+选\textbf{B}。
+\crosscheck 纯自然光通过首片后才能应用第二、第三片的马吕斯定律。
+
+\sourcetest{10.1.8}{207}{215}
+\problemtext 入射束混合自然光$I_n$与线偏振光$I_p$，
+用理想旋转分析偏振片测得最大透射强度为最小的5倍。
+求$I_n/I_p$。
+\workings
+自然光无论分析器转角，总有$I_n/2$通过；
+线偏振分量平行分析器时全部通过、垂直时不通过。
+于是
+\[
+\frac{I_{\max}}{I_{\min}}
+=\frac{I_n/2+I_p}{I_n/2}=5
+\quad\Longrightarrow\quad I_p=2I_n.
+\]
+故
+\[
+\boxed{\frac{I_n}{I_p}=\frac12}.
+\]
+选\textbf{A}。
+\crosscheck 不应把自然光本身的半强度因子错施加到已完全线偏振的分量。
+
+\sourcetest{10.1.9}{207}{215}
+\problemtext 自然光以60°从空气入射透明介质，
+测得反射光完全线偏振，求折射角以及折射光偏振性质。
+\workings
+布儒斯特条件要求
+$i_B+r_B=90^\circ$，
+所以
+\[
+\boxed{r_B=90^\circ-60^\circ=30^\circ}.
+\]
+入射自然光中平行入射面的$p$分量此时不反射，
+但会折射入介质；$s$分量亦部分透射。
+因此折射光一般仍为\textbf{部分偏振光}。
+选\textbf{B}。
+\crosscheck 完全偏振的是\emph{反射}光，而非折射光。
+
+\sourcetest{10.1.10}{207}{215}
+\problemtext 自然光以布儒斯特角从空气入射玻璃，
+判断反射光电矢量的振动方向。
+\workings
+菲涅耳反射系数$p$分量在布儒斯特角为零，
+$s$分量保留，故反射光\textbf{完全线偏振，电场垂直入射面}。
+选\textbf{C}。
+\crosscheck 题目问“振动方向”是指光电场方向，
+不是光线传播方向；不能把两者混淆。
+% === END guide-selftest10-choices.tex ===
+
+% === BEGIN guide-selftest10-blanks.tex blob d6f12f380ab99d2d6aa59616383717c79b91d9c3 ===
+% 《大学物理学学习指导》自测题10填空10.2.1—10.2.8；
+% 原书印刷207—208，PDF物理215—216页。
+\subsection{自测题10：衍射与偏振填空}
+
+\sourcetest{10.2.1}{207}{215}
+\problemtext 惠更斯原理引入什么概念？
+菲涅耳用什么思想补充惠更斯原理？
+\workings
+惠更斯把波前上的每一点看作产生\textbf{子波}的源。
+菲涅耳再引入\textbf{子波相干叠加／干涉}的思想，
+使波前次级波的叠加能解释衍射明暗。
+\crosscheck 仅使用惠更斯几何包络而没有相干相位，
+不能定量计算干涉衍射暗纹。
+
+\sourcetest{10.2.2}{207}{215}
+\problemtext 夫琅禾费单缝衍射，屏上P为第二级暗纹。
+问对应波面可划成几个半波带；
+若单缝宽变成一半，P将成为哪一级明/暗纹？
+\workings
+原来第二级暗纹满足
+$a\sin\theta_P=2\lambda$，
+所以全缝光程差含4个半波带。
+缝宽改为$a/2$时同方向
+\[
+\frac a2\sin\theta_P=\lambda,
+\]
+对应第一级暗纹。故填：
+\[
+\boxed{N_{\frac12\lambda}=4},\qquad
+\boxed{m_{\rm dark}=1}.
+\]
+\crosscheck 源题固定屏幕P与透镜光学几何，
+半缝后相位差减半，并非把屏上坐标减半。
+
+\sourcetest{10.2.3}{208}{216}
+\problemtext 可见光400—760nm垂直入射光栅，
+哪一级可见光谱可以在不与紧邻高级光谱重叠的条件下
+保持完整？
+\workings
+第$m$级的红端对应$m(760)$；
+第$m+1$级紫端对应$(m+1)(400)$。
+若完整第$m$级无重叠，要求
+\[
+m(760)<(m+1)(400)
+\ \Longleftrightarrow\ 360m<400.
+\]
+正整数$m$仅有$m=1$满足，故
+因此填\textbf{第一级光谱}。
+\crosscheck 该判据针对相邻正级谱线在角位置的重叠，
+还要求器件有足够的传播角范围才能观察其完整谱段。
+
+\sourcetest{10.2.4}{208}{216}
+\problemtext 多缝光栅常量$d=3\,\mu$m，透光缝宽$a=1\,\mu$m；
+单缝衍射中央明纹内有多少条光栅主极大谱线？
+\workings
+光栅主极大$d\sin\theta=m\lambda$，
+中央单缝包络界限$|a\sin\theta|<\lambda$。
+故$|m|<d/a=3$，仅
+$m=-2,-1,0,1,2$。
+\[
+\boxed{N=5}.
+\]
+\crosscheck $m=\pm3$正落单缝第一暗纹，不计入亮纹。
+
+\sourcetest{10.2.5}{208}{216}
+\problemtext 利用理想偏振片把一束入射线偏振光的振动方向旋转90°，
+至少需要多少片偏振片？此时最大输出光强占输入的多少？
+\workings
+一片最终透振轴垂直入射振动方向的偏振片不能透光。
+至少需一个中间轴和一个最终轴，即\textbf{两片}。
+取中间角$\theta$，末片轴为90°，
+\[
+\frac{I_{\rm out}}{I_{\rm in}}=
+\cos^2\theta\sin^2\theta
+=\frac14\sin^22\theta\le\frac14.
+\]
+最大时$\theta=45^\circ$，
+\[
+\boxed{N_{\min}=2},\qquad\boxed{I_{\max}/I_{\rm in}=1/4}.
+\]
+\crosscheck 题目入射已经是线偏振光，
+首片不需要额外乘自然光的$1/2$。
+
+\sourcetest{10.2.6}{208}{216}
+\problemtext 太阳光从空气射到平静水面$n=1.33$，
+若反射光完全线偏振，求太阳光的仰角及反射光电矢量方向。
+\workings
+布儒斯特入射角对法线测量：
+$i_B=\arctan n$。
+太阳仰角是对水平水面测量，故
+\[
+\boxed{\alpha=90^\circ-\arctan(1.33)
+\simeq36.94^\circ}.
+\]
+反射光仅有$s$偏振，
+电场\textbf{垂直于入射面}。
+源图中的入射面位于纸面内，故E矢量
+\textbf{垂直纸面}。
+\crosscheck 入射角与太阳仰角互余，不可将53.06°直接填作仰角。
+
+\sourcetest{10.2.7}{208}{216}
+\problemtext 图10.2.2展示五种光入射不同折射率界面的情况，
+其中四幅为线偏振入射、一幅为自然光；
+需在原图补出反射光与折射光，标注电矢量方向。
+\workings
+设入射面为图示纸面，
+用$s$表示电场垂直入射面，
+$p$表示电场平行入射面。
+各向同性非磁界面的菲涅耳方程不会把两分量相互转换。
+\begin{center}
+\begin{tabular}{lll}
+\hline
+入射类型 & 反射光 & 透射光\\ \hline
+$s$线偏振 & $s$线偏振 & $s$线偏振\\
+$p$线偏振，$i\ne i_B$ & $p$线偏振 & $p$线偏振\\
+$p$线偏振，$i=i_B$ & 无反射光 & $p$线偏振\\
+自然光，$i\ne i_B$ & 部分偏振 & 部分偏振\\
+自然光，$i=i_B$ & $s$线偏振 & 部分偏振\\
+\hline
+\end{tabular}
+\end{center}
+其中
+$\boxed{i_B=\arctan(n_2/n_1)}$。
+\crosscheck \textbf{原图逐线矢量重绘待二校：}
+此处已给出决定源图A—E各图的物理分类准则，
+但未将五个原版权子图重新描绘成可编辑原创TikZ示意，
+因此本题的\emph{图形填绘部分未完成最终图解质检}。
+不能把“原则正确”伪称每条箭头都已逐图校验。
+
+\sourcetest{10.2.8}{208}{216}
+\problemtext 在光学各向异性晶体内，
+沿某特殊方向正常光与非常光有何相位传播特征？
+该方向叫什么？只存在一个这种方向的晶体叫什么？
+\workings
+沿\textbf{光轴}方向，常光与非常光
+的相位折射率相同、传播方向不再发生双折射分离。
+只有一个光轴方向的晶体称为
+因此填\textbf{单轴晶体}。
+\crosscheck 光轴是晶体内\emph{特殊传播方向}，
+不是指穿过晶体几何中心的一条固定直线；
+非晶各向同性介质没有相同的双折射结构。
+% === END guide-selftest10-blanks.tex ===
+
+% === BEGIN guide-selftest10-solutions.tex blob 3c2eeb8cc54160118855a2a07658e7961bcdc09e ===
+% 学习指导第5版自测题10计算10.3.1—10.3.4，
+% 原书印刷208—209／源PDF216—217页。
+\subsection{自测题10：衍射与偏振计算题}
+
+\sourcetest{10.3.1}{208}{216}
+\problemtext (1) 单缝宽$a=1.0\times10^{-2}$cm、
+透镜焦距$f=50$cm，波长400nm、760nm的垂直入射光
+所形成第一级\emph{侧明纹}中心的间距；
+(2) 换成光栅常量$d=1.0\times10^{-3}$cm的光栅，
+求两波长\emph{第一级主极大}中心间距。
+\workings
+首先$a=10^{-4}$m，$f=0.50$m。
+单缝衍射\emph{第一级侧亮纹}在常用半波带近似下满足
+$a\sin\theta\simeq(3/2)\lambda$，
+故两波长同侧第一级亮纹中心的间距
+\[
+\boxed{\Delta x_{\rm slit,approx}
+\simeq\frac{3f(\lambda_2-\lambda_1)}{2a}
+=\frac{3(0.50)(360\times10^{-9})}{2(10^{-4})}
+=2.70\,\mathrm{mm}}.
+\]
+若使用严格夫琅禾费第一侧极大根
+$\tan\beta_1=\beta_1$，
+$\beta_1\simeq4.493409$，
+其光程系数$\beta_1/\pi\simeq1.43030$，
+则
+\[
+\boxed{\Delta x_{\rm slit,exact}
+\simeq\frac{\beta_1}{\pi}
+\frac{f(\lambda_2-\lambda_1)}a
+\simeq2.57\,\mathrm{mm}}.
+\]
+(2) 光栅常量$d=10^{-5}$m，
+第一级主极大满足$d\sin\theta=\lambda$，故
+\[
+\boxed{\Delta x_{\rm grating}\simeq
+\frac{f(\lambda_2-\lambda_1)}d
+=\frac{0.50(360\times10^{-9})}{10^{-5}}
+=18.0\,\mathrm{mm}}.
+\]
+\crosscheck \textbf{不能把单缝第一级侧明纹误当作第一暗纹。}
+单缝侧亮纹的$3/2$是常用半波带近似，
+严格峰值需解超越方程；光栅主极大方程本身不需要这一近似。
+
+\sourcetest{10.3.2}{208}{216}
+\problemtext 波长600nm光垂直入射多缝光栅，
+第2级主极大位于衍射角30°，第3级缺级。
+求(1)光栅常量$d=a+b$；
+(2)可能的最小透光缝宽$a$；
+(3)取该最小$a$后，$-90^\circ<\varphi<90^\circ$
+内可见全部主极大的级次。
+\workings
+光栅方程$d\sin\varphi_m=m\lambda$，
+\[
+\boxed{d=\frac{2(600\,\mathrm{nm})}{\sin30^\circ}
+=2400\,\mathrm{nm}=2.40\,\mu\mathrm m}.
+\]
+第3级缺级需$3\lambda/d=k\lambda/a$，
+即$a=kd/3$。
+实际透光缝应$0<a<d$，整数$k=1,2$，
+故$a=0.80$或$1.60\,\mu$m，
+\[
+\boxed{a_{\min}=0.80\,\mu\mathrm m}.
+\]
+最小缝宽方案使$d/a=3$，所以非零3的倍数级缺失。
+又$d/\lambda=4$，
+严格角区间排除$|\varphi|=90^\circ$对应的$|m|=4$。
+候选$m=0,\pm1,\pm2,\pm3$；
+$\pm3$为缺级，最后
+\[
+\boxed{m=0,\pm1,\pm2}.
+\]
+合计\textbf{5条可见主亮纹}。
+\crosscheck 光栅常量$d$与透光缝宽$a$不可混用；
+若采用另一个允许缝宽$a=1.60\,\mu$m，
+缺级结构须另算，不应仍给5条。
+
+\sourcetest{10.3.3}{208--209}{216--217}
+\problemtext 两片理想偏振片$P_1,P_2$叠置；
+入射光由等强度自然光和线偏振光构成。
+两次测量中，线偏振入射分量与$P_1$的角度
+分别45°、30°；两片透振轴的夹角
+第一次30°、第二次未知$\theta$。
+第一次总透射强度为第二次的$3/4$。
+求$\theta$及每次经过各片后的光强占\emph{原总入射光强}的比例。
+\workings
+设两种入射成分强度各为$J$，
+故总入射强度$I_{\rm in}=2J$。
+第一次过$P_1$：
+\[
+ I_{1,1}=\frac J2+J\cos^245^\circ=J,
+ \qquad\boxed{I_{1,1}/I_{\rm in}=\frac12}.
+\]
+第一次再过$P_2$（夹角30°）：
+\[
+ I_{1,2}=J\cos^230^\circ=\frac34J,
+ \qquad\boxed{I_{1,2}/I_{\rm in}=\frac38}.
+\]
+第二次过$P_1$：
+\[
+ I_{2,1}=\frac J2+J\cos^230^\circ
+ =\frac54J,\qquad
+ \boxed{I_{2,1}/I_{\rm in}=\frac58}.
+\]
+题给$I_{1,2}=(3/4)I_{2,2}$，
+所以$I_{2,2}=J$。
+此时$(5J/4)\cos^2\theta=J$，
+\[
+\boxed{\cos^2\theta=\frac45},\quad
+\boxed{\theta=\arccos\sqrt{4/5}
+\simeq26.565^\circ},\qquad
+\boxed{I_{2,2}/I_{\rm in}=\frac12}.
+\]
+\crosscheck 线偏振与自然光各占一半，
+但首片对二者透过因子不同；
+第二次过首片的比例$5/8$不能漏掉自然光的$1/2$。
+
+\sourcetest{10.3.4}{209}{217}
+\problemtext 三层平行界面介质$I,II,III$，
+折射率$n_1=1.33,n_2=1.50,n_3=1.00$；
+自然光由介质I入射II。
+若在I/II界面观察到完全线偏振反射光，
+求入射角$i$；
+第二个II/III界面的反射光是否也完全线偏振？
+\workings
+I/II的完全线偏振反射由布儒斯特条件给出
+\[
+\boxed{i=\arctan\frac{n_2}{n_1}
+=\arctan\frac{1.50}{1.33}\simeq48.43^\circ}.
+\]
+此时在II中的折射角
+$r=90^\circ-i\simeq41.57^\circ$，
+由于两界面平行，这就是光在II/III界面的入射角。
+第二个界面若也达布儒斯特角，则应有
+\[
+ i_{B,23}=\arctan\frac{n_3}{n_2}
+ =\arctan(2/3)\simeq33.69^\circ.
+\]
+两角不等，故在II/III界面$p$反射系数一般不为零；
+第二束反射光\textbf{并非完全线偏振，通常是部分偏振光}。
+\crosscheck II到III的临界角
+$i_c=\arcsin(n_3/n_2)\simeq41.81^\circ$，
+源题传播方向$r\simeq41.57^\circ<i_c$，
+并未达到全反射。
+必须同时核对布儒斯特角和临界角，不能混淆。
+% === END guide-selftest10-solutions.tex ===
