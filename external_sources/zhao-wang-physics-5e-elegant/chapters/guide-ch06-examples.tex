@@ -1,0 +1,190 @@
+% 《大学物理学学习指导》（第5版）第6章机械波解题示例6.1--6.7。
+% 书内印刷第86--91页，用户扫描PDF物理页94--99。
+% 图示依据原书扫描核对，解法独立撰写，待人工二校。
+
+\sourceexample{6.1}{86}{94}
+\problemtext 一列平面简谐波沿$x$负方向以$u=80\,\mathrm{cm/s}$传播，
+已知$x_0=40$ cm处质点的位移--时间图为振幅5 cm、周期1 s的余弦振动，
+$t=0$时该点正好在正峰。求$t=0$空间波形、原点振动方程及完整波函数。
+\workings
+已知参考点的时间振动
+\[
+y(x_0,t)=0.05\cos(2\pi t)\,\mathrm m.
+\]
+频率$f=1$ Hz、角频率$\omega=2\pi\,\mathrm{rad/s}$，
+波长$\lambda=u/f=0.8$ m。
+相距$\lambda/2=0.4$ m的原点与$x_0$点在同一时刻反相，
+因此
+\[
+\boxed{y(0,t)=0.05\cos(2\pi t-\pi)\,\mathrm m}.
+\]
+左行波在原点随$x$增大相位\emph{超前}，所以
+\[
+\boxed{y(x,t)=0.05\cos\left[2\pi\left(t+\frac{x}{0.8}\right)-\pi\right]\,\mathrm m}.
+\]
+$t=0$时空间波形
+\[
+\boxed{y(x,0)=0.05\cos\left(\frac{2\pi x}{0.8}-\pi\right)\,\mathrm m}.
+\]
+\crosscheck 代入$x=0.4$ m，有$y=0.05\cos(2\pi t)$；
+固定相位$t+x/u=\mathrm{const}$给$dx/dt=-u$，与负$x$传播方向一致。
+
+\sourceexample{6.2}{86--88}{94--96}
+\problemtext 沿$x$正方向传播的简谐波振幅10 cm、角频率$7\pi$ rad/s。
+在$t=1$ s，$x_a=10$ cm处质点位于平衡点并沿负$y$运动，
+$x_b=20$ cm处质点位移为$+5$ cm且沿正$y$运动。
+已知波长大于10 cm，求波速、波长及波函数。
+\workings
+令
+\[
+y(x,t)=A\cos\left(\omega t-kx+\varphi_0\right),
+\quad A=0.10\,\mathrm m,\ \omega=7\pi.
+\]
+在$a$点，$y_a=0$且$\partial_ty_a<0$，取相位$\theta_a=\pi/2\pmod{2\pi}$。
+在$b$点，$y_b=A/2$且$\partial_ty_b>0$，取
+$\theta_b=-\pi/3\pmod{2\pi}$。
+两点间由正向波空间相位递减：
+\[
+\theta_a-\theta_b=\frac\pi2+\frac\pi3=\frac{5\pi}{6}
+=k(x_b-x_a)=k(0.10).
+\]
+若将相位差另加$2\pi n$会得到较短波长，与题设$\lambda>0.10$ m不符。
+故
+\[
+\boxed{k=\frac{25\pi}{3}\,\mathrm{rad/m}},\qquad
+\boxed{\lambda=\frac{2\pi}{k}=0.24\,\mathrm m},
+\]
+\[
+\boxed{u=\frac{\omega}{k}=0.84\,\mathrm{m/s}}.
+\]
+利用$a$点相位，$7\pi-(25\pi/3)(0.1)+\varphi_0\equiv\pi/2$，
+解得$\varphi_0\equiv\pi/3\pmod{2\pi}$。因此
+\[
+\boxed{y(x,t)=0.10\cos\left[7\pi
+\left(t-\frac{x}{0.84}\right)+\frac\pi3\right]\,\mathrm m}.
+\]
+\crosscheck $x=0.1,t=1$时余弦为0且速度负；
+$x=0.2,t=1$时余弦$1/2$且速度正；与原书图示两点的旋转矢量方位一致。
+
+\sourceexample{6.3}{88--89}{96--97}
+\problemtext 一列沿$x$轴正方向传播的简谐横波，
+$t_1=0$与$t_2=0.25$ s两条波形如原图6.3(a)，
+振幅$A=0.20$ m；图中四分之三波长为0.45 m，
+在这段时间内波形向右移动四分之一波长。
+求$P$点的振动方程、整条波的函数及原点振动方程。
+\workings
+从空间刻度
+$\frac34\lambda=0.45$ m得
+$\boxed{\lambda=0.60\,\mathrm m}$。
+在$\Delta t=0.25$ s内传播$\lambda/4=0.15$ m，故
+\[
+\boxed{u=\frac{0.15}{0.25}=0.60\,\mathrm{m/s}},
+\quad
+\boxed{T=\frac\lambda u=1.0\,\mathrm s},
+\quad\omega=2\pi\,\mathrm{rad/s}.
+\]
+$t=0$时$P$点穿过零位移且沿正$y$运动，其余弦初相为$-\pi/2$，
+\[
+\boxed{y_P(t)=0.20\cos(2\pi t-\pi/2)\,\mathrm m}.
+\]
+由原图可见原点相位比$P$超前$\pi$，故原点初相为$\pi/2$：
+\[
+\boxed{y(x,t)=0.20\cos\left[
+2\pi\left(t-\frac{x}{0.60}\right)+\frac\pi2\right]\,\mathrm m},
+\]
+\[
+\boxed{y(0,t)=-0.20\sin(2\pi t)\,\mathrm m}.
+\]
+\crosscheck 原点$t=0$速度为负，符合空间曲线从原点向右上升且波向右传播的关系
+$\partial_t y=-u\,\partial_x y$。
+
+\sourceexample{6.4}{89--90}{97--98}
+\problemtext 一平面横波在$t=T/4$时的波形如图6.4，
+振幅$A=5$ cm、频率$\nu=100$ Hz、波速$u=40$ m/s；
+图中$a$点的瞬时运动方向向下。
+(1) 求波函数；(2) 另有相同振幅且从相反方向传播的相干波，
+使$x_P=0.20$ m处成为永久静止点，求第二列波函数。
+\workings
+已知空间波形在$a$点斜率为负，而其瞬时速度也向下，
+由$\partial_t y=\mp u\partial_x y$判定波应沿\emph{负}$x$方向传播。
+$k=2\pi\nu/u=5\pi\,\mathrm{rad/m}$、
+$\omega=200\pi\,\mathrm{rad/s}$。
+从原图知$t=T/4$时原点位移0且速度向上，折算到$t=0$的原点初相可取$\pi$，因此
+\[
+\boxed{y_-(x,t)=0.05\cos\left[
+200\pi\left(t+\frac{x}{40}\right)+\pi\right]\,\mathrm m}.
+\]
+令第二列右行波为
+$y_+(x,t)=0.05\cos[200\pi(t-x/40)+\varphi]$。
+在$P$点两列波若永久相消，其相位差应为奇数倍$\pi$：
+\[
+200\pi\left(\frac{x_P}{40}+\frac{x_P}{40}\right)
++\pi-\varphi=(2n+1)\pi.
+\]
+$x_P=0.20$ m令前一项为$2\pi$，故可取$\varphi=0$，
+\[
+\boxed{y_+(x,t)=0.05\cos\left[
+200\pi\left(t-\frac{x}{40}\right)\right]\,\mathrm m}.
+\]
+\crosscheck 两式相加在$x_P=0.20$ m恒为零；波长$\lambda=u/\nu=0.40$ m，位置$P$在半波长处。
+
+\sourceexample{6.5}{90}{98}
+\problemtext 入射波$y_i=A\cos[2\pi(t/T-x/\lambda)]$
+沿$x$正方向传播，在$x=0$的固定端（反射点为波节）反射。
+写出反射波方程并判断原书对应选项。
+\workings
+反射波沿负$x$传播，必须将空间项改为$+x/\lambda$。
+固定端条件是$y_i(0,t)+y_r(0,t)=0$对所有$t$成立，故反射波相对入射波附加$\pi$的相位反转：
+\[
+\boxed{y_r(x,t)=A\cos\left[
+2\pi\left(\frac tT+\frac{x}{\lambda}\right)-\pi\right]}.
+\]
+原书选\textbf{D}。
+\crosscheck 把两波在$x=0$处相加得
+$A\cos(2\pi t/T)-A\cos(2\pi t/T)=0$；
+仅反向传播但不发生半波损失，会形成波腹而非波节。
+
+\sourceexample{6.6}{91}{99}
+\problemtext 原点$O$为振动方向垂直纸面的点波源，
+$O$正下方距离$h$处有水平反射平面$AB$；
+反射不发生半波损失。设直接沿$Ox$传到$x>0$处的波与经平面反射后再到达该点的波振幅相同、波长为$\lambda$。
+求$Ox$轴上的干涉加强位置（$x\ge0$）。
+\workings
+直接路径长$x$；反射路径可用镜像波源计算，
+等于$2\sqrt{h^2+(x/2)^2}$，故路程差
+\[
+\delta(x)=2\sqrt{h^2+(x/2)^2}-x.
+\]
+无半波损失且波源同相，加强条件为
+$\delta(x)=k\lambda$，$k=1,2,\ldots$。
+将根式移项、平方并解出$x$：
+\[
+4h^2+x^2=(x+k\lambda)^2
+\quad\Longrightarrow\quad
+\boxed{x_k=\frac{4h^2-k^2\lambda^2}{2k\lambda}}.
+\]
+为使$x_k\ge0$，需$k\lambda\le2h$；
+当$k\lambda=2h$时$x_k=0$，若限定$x>0$则严格小于。
+\crosscheck 路程差$\delta(0)=2h$，随着$x$增大连续递减至0，
+故只有满足$0<k\lambda\le2h$的有限个加强位置；
+$k=0$对应无限远极限，不能硬代入上式产生分母零。
+
+\sourceexample{6.7}{91}{99}
+\problemtext 一根长$L=3.0$ m、质量$m=60\times10^{-3}$ kg的弦线，
+在频率$\nu=60$ Hz的音叉激励下形成\emph{4个波腹}的驻波。
+求所需弦线张力。
+\workings
+四个波腹表示沿弦长恰有四个半波长：
+\[
+L=4\frac{\lambda}{2}
+\quad\Longrightarrow\quad
+\boxed{\lambda=\frac L2=1.5\,\mathrm m}.
+\]
+波速$u=\nu\lambda=60(1.5)=90\,\mathrm{m/s}$；
+线密度$\mu=m/L=0.060/3=0.020\,\mathrm{kg/m}$。
+由弦波速公式$u=\sqrt{F/\mu}$得
+\[
+\boxed{F=\mu u^2=0.020(90)^2=162\,\mathrm N}.
+\]
+\crosscheck 单位$\mathrm{kg/m}\cdot\mathrm{m^2/s^2}=\mathrm N$，
+并与原书解析的162 N一致；“4个波腹”不是4个完整波长。
