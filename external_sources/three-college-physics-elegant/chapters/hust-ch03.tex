@@ -1,0 +1,52 @@
+\section{第3组：刚体定轴转动}
+\sourceproblem{3-T1}{9}{13}
+\problemtext 轮从静止经6秒匀加速至200转每分钟，匀速一段时间后制动，5分钟后停止，总转数3100，求总时间。
+\workings 若制动为匀减速，则加速段 $N_1=100(6/60)=10$ 转，制动段 $N_3=100(5)=500$ 转，匀速段 $N_2=2590$ 转、耗时 $2590/200=12.95$ 分钟。总时间 $18.05$ 分钟，即1083秒。
+\crosscheck 原题只明确加速段均匀增加，未明确制动规律；若制动非匀减速，$N_3$ 无法由端点转速和历时唯一确定，总时间也不唯一。所给数值以补充匀减速条件为前提。
+\sourceproblem{3-T2}{9}{13}
+\problemtext 半径1.3米圆周运动，初始 $\theta=\omega=0$，角加速度 $\beta=120t^2-48t+16$（SI），求角速度、角位置及切法向加速度。
+\workings 积分得
+\[
+\omega=40t^3-24t^2+16t,\qquad \theta=10t^4-8t^3+8t^2.
+\]
+切向分量 $a_\tau=1.3(120t^2-48t+16)$，法向分量 $a_n=1.3(40t^3-24t^2+16t)^2$（SI）。
+\crosscheck 两次求导恢复角加速度与初值；法向分量非负，指向圆心。
+\sourceproblem{3-T3}{9}{13}
+\problemtext 重物 $m$ 由静止拉动惯量 $J=MR^2/2$ 的定滑轮，求下落速度随时间的关系。
+\workings $mg-T=ma,\ TR=J a/R$，故 $a=mg/(m+M/2)$，下落速率 $v(t)=mgt/(m+M/2)$。
+\crosscheck 能量式 $mgh=(m+M/2)v^2/2$ 与匀加速关系一致；无滑动且轴光滑。
+\sourceproblem{3-T4}{10}{14}
+\problemtext 飞轮轴半径2.00厘米，20.0克物体匀速下落；改挂5.00千克物体从静止10.0秒下落40.0厘米，取 $g=9.80$，求轴摩擦力矩、惯量及第二次张力。
+\workings 若摩擦力矩大小恒定，首次 $\tau_f=mg r=0.00392\,\mathrm{N\,m}$。第二次 $a=2h/t^2=0.00800\,\mathrm{m/s^2}$，$T=M(g-a)=48.96\,\mathrm N$，由 $Tr-\tau_f=J a/r$ 得
+\[
+J=(Tr-\tau_f)r/a=2.4382\,\mathrm{kg\,m^2}.
+\]
+按有效数字 $J\approx2.44\,\mathrm{kg\,m^2}$，$T\approx49.0\,\mathrm N$。
+\crosscheck 两次实验须具有相同的恒定轴摩擦力矩，且绳不打滑；若摩擦随载荷或转速变化，题设不足以确定惯量。
+\sourceproblem{3-T5}{10}{14}
+\problemtext 两等质量 $m$、等半径 $r$ 均质滑轮与两端重物 $m,2m$ 组成系统，求两轮间张力。
+\workings 取 $2m$ 端向下，整个系统等效惯性质量为 $m+2m+2(J/r^2)=4m$，故 $a=g/4$。轻端张力 $T_1=m(g+a)$，中间张力满足 $(T-T_1)r=J a/r$，得
+\[
+T=m(g+a)+ma/2=11mg/8.
+\]
+重端张力 $T_2=2m(g-a)=3mg/2$。
+\crosscheck 另一滑轮满足 $T_2-T=ma/2$，与左轮一致；三段张力不可视为相等。
+\sourceproblem{3-T6}{11}{15}
+\problemtext 转台初始每秒1转，总惯量6.0，收臂后2.0（$\mathrm{kg\,m^2}$），求末角速率及转动动能增量。
+\workings 初角速率 $\omega_i=2\pi\,\mathrm{rad/s}$。角动量守恒给出 $\omega_f=3\omega_i=6\pi\,\mathrm{rad/s}$（每秒3转）。动能差
+\[
+\Delta K=\tfrac12(2)(6\pi)^2-\tfrac12(6)(2\pi)^2=24\pi^2\,\mathrm J\approx237\,\mathrm J.
+\]
+\crosscheck $K=L_z^2/(2J)$，惯量减至三分之一使转动动能成为原来的三倍；增量来自人体做功。
+\sourceproblem{3-T7}{11}{15}
+\problemtext 均质细杆质量 $m$、长 $l$，端点惯量 $ml^2/3$，水平静止释放，求与向下竖直方向成30度时角速率。
+\workings 质心下降 $(l/2)\cos30^\circ$，故 $mg(l/2)\cos30^\circ=(ml^2/6)\omega^2$，得 $\omega=\sqrt{3\sqrt3g/(2l)}$。
+\crosscheck 初始水平时角速率零，最低点速率对应 $\omega=\sqrt{3g/l}$；本题答案介于两者之间。
+\sourceproblem{3-T8}{11}{15}
+\problemtext 自由旋转圆盘惯量 $J$、半径 $R$，边缘有质量 $m$ 的人，初角速率 $\omega$；人走到盘心，求角速度和动能变化。
+\workings 初末惯量为 $J+mR^2,J$，故 $\omega_f=(1+mR^2/J)\omega$，
+\[
+\Delta\omega=mR^2\omega/J,\qquad
+\Delta K=\frac{mR^2(J+mR^2)}{2J}\omega^2.
+\]
+\crosscheck 取人为质点，初末均相对盘静止；轴向角动量守恒，转动动能增加，不主张机械能守恒。
