@@ -1,4 +1,5 @@
 % Consolidated textbook-ch04 from a4681eacb57a1f9fed79c1da26e5c6d0418a7d1c; source fragments preserved.
+% 2026-11-24 八批严格复核第2批：本文件旧片段哈希对应历史版；当前内容含局部二校修订。
 
 % === BEGIN textbook-ch04-choices.tex blob d6381d0b3c4bd07ba577f142939827cce7c0ee35 ===
 % 《大学物理简明教程》（第5版）第4章选择题 4.1.1—4.1.12。
@@ -152,10 +153,9 @@ $y=A\cos(\omega t-kx)$为例，
 \mathcal E_k=\frac12\rho(\partial_t y)^2
 =\frac12\rho A^2\omega^2\sin^2(\omega t-kx),
 \]
-而对一维弦的弹性势能密度
-$\mathcal E_p=\frac12T(\partial_x y)^2
-=\frac12\rho A^2\omega^2\sin^2(\omega t-kx)$
-（用$T/\rho=u^2$适当单位化）。
+对一维弦，以上$\rho$须取线密度（单位$\mathrm{kg/m}$），$\mathcal E_k$为单位长度动能；张力记为$F_T$，单位长度弹性势能为
+$\mathcal E_p=\frac12F_T(\partial_x y)^2
+=\frac12\rho A^2\omega^2\sin^2(\omega t-kx)$，其中$F_T/\rho=u^2$。若采用三维介质的体积能量密度，则$\rho$为体密度，弹性系数须改为相应的弹性模量（单位Pa），不可直接代入弦张力。
 质元由平衡位移达到最大位移时，两个局部能量密度均由最大变为零，
 能量通过介质传给相邻部分。原题选D。
 \crosscheck 传播波的一小段介质并非孤立弹簧振子，局部总能量不必守恒；静止正弦驻波的能量分布则不同。
@@ -253,13 +253,13 @@ $\lambda=u/\nu=0.03\,\mathrm m$，同一时刻沿传播方向两点相位差的�
 \sourceproblem{4.2.8}{102}{102}
 \problemtext 平面简谐波频率$100\,\mathrm{Hz}$、传播速率$300\,\mathrm{m/s}$，两点同一时刻的相位差大小为$\pi/3$；问相距多少。
 \workings
-波长$\lambda=u/\nu=3\,\mathrm m$，取最近的两点解：
+波长$\lambda=u/\nu=3\,\mathrm m$；在沿传播方向且取最近的两点这一条件下：
 \[
 |\Delta x|_{\min}=\frac{\pi/3}{2\pi}\lambda
 =\boxed{0.50\,\mathrm m}.
 \]
 \crosscheck 若相位差理解为模$2\pi$，还存在
-$\Delta x=3n\pm0.5\,\mathrm m$的其他非负距离；若题面不强调“最近”，单一距离并非数学上唯一。本稿以最小正距离填写并保留此限定。
+$\Delta x=3n\pm0.5\,\mathrm m$的其他非负距离；若题面不强调“最近”，单一距离并非数学上唯一。在三维平面波中，相位差约束的是两点间距沿传播方向的投影，非任意两点的欧氏距离。本稿以最小正距离填写并保留此限定。
 
 \sourceproblem{4.2.9}{102--103}{102--103}
 \problemtext 一横波的波函数为
@@ -277,7 +277,7 @@ $y=0.02\sin[2\pi(100t-0.4x)]$（SI），求振幅、波长、频率和传播速�
 \sourceproblem{4.2.10}{103}{103}
 \problemtext 机械波产生的必要条件是什么？
 \workings
-需要能提供周期性扰动的\textbf{波源（振源）}，以及能够把振动通过相互作用逐点传递的\textbf{弹性介质}。
+需要能提供扰动的\textbf{波源（振源）}（单次扰动也能产生脉冲波，周期性仅是持续周期波的条件），以及能够把振动通过相互作用逐点传递的\textbf{弹性介质}。
 \[
 \boxed{\text{波源（振源）与传播介质}}
 \]
@@ -337,7 +337,7 @@ y(x,0)=0.04\sin(10\pi x).
 \[
 mR\ddot\theta=-mg\sin\theta.
 \]
-小角度$|\theta|\ll1$时$\sin\theta\simeq\theta$，
+此处小球视为质点滑动而非有限尺寸刚体纯滚动。小角度$|\theta|\ll1$时$\sin\theta\simeq\theta$，
 \[
 \ddot\theta+\frac gR\theta=0,\qquad
 \boxed{\omega_0=\sqrt{g/R}},\quad
@@ -368,7 +368,7 @@ $K=U$时$x=\pm A/\sqrt2=\pm0.1/\sqrt2\,\mathrm m$。
 \boxed{\Delta\varphi=\omega(t_2-t_1)=32\pi
 \equiv0\pmod{2\pi}}.
 \]
-\crosscheck 经过4秒恰好16个完整振动周期，初末状态相同；$\varphi$未约化时的“累计相位差”为$32\pi$。
+\crosscheck 平均能量取整周期或长时间平均，势能零点取平衡位置。经过4秒恰好16个完整振动周期，初末状态相同；$\varphi$未约化时的“累计相位差”为$32\pi$。
 
 \sourceproblem{4.3.3}{103}{103}
 \problemtext 沿$x$轴的简谐振动振幅$A$、周期$T$，采用余弦式$x=A\cos(\omega t+\varphi)$。分别求四种$t=0$条件的初相：(1) $x_0=-A$；(2)过平衡点向正向运动；(3)经过$x=A/2$向负向；(4)经过$x=-A/\sqrt2$向正向。
@@ -556,7 +556,7 @@ $10\pi t_0=9.2\pi+2n\pi$，故
 \[
 \boxed{t_0=0.92+0.2n\ \mathrm s,\quad n\in\mathbb Z}.
 \]
-追踪该同一相位的波峰/相位面到$t=1.25$，
+追踪该同一连续相位的相位面（这里的相位不是波峰）到$t=1.25$，
 \[
 \boxed{x=0.2+u(1.25-1)=0.825\,\mathrm m}.
 \]
@@ -602,7 +602,7 @@ $x=+0.5$ m点的振动方程
 \boxed{y(0.5,t)=0.1\sin(5\pi t-\pi/2)
 =-0.1\cos(5\pi t)\,\mathrm m}.
 \]
-\crosscheck 右行波在$t=0$空间原点的正斜率是负的，和原点随时间正速度相反：
+\crosscheck 右行波在$t=0$空间原点的斜率为负，和原点随时间正速度相反：
 $\partial_ty=-u\,\partial_xy$。
 
 \sourceproblem{4.3.15}{105}{105}
@@ -618,7 +618,7 @@ $t=0$曲线在$x=0$向上穿过零，故
 \[
 \boxed{y_P(t)=0.1\cos(\pi t)\,\mathrm m}.
 \]
-\crosscheck 源图只画有限波段，位移$1$ m取为向右的\emph{最小正}图示平移；相差整波长的平移给出等效波形，但由此产生的传播速度不唯一，须以题图暗示的相邻状态识别。
+\crosscheck 源图只画有限波段，位移$1$ m取为向右的\emph{最小正}图示平移；相差整波长的平移给出等效波形。严格地，若无额外条件，右移可为$(1+4n)\,\mathrm m$（$n=0,1,2,\ldots$），$u_n=(2+8n)\,\mathrm{m/s}$，$\omega_n=(1+4n)\pi\,\mathrm{rad/s}$，$y_n(x,t)=0.1\sin[\pi x/2-(1+4n)\pi t]$ m，$y_{P,n}=0.1\cos[(1+4n)\pi t]$ m。上面的单一答案是最小正平移分支；需核原图有无额外约束。
 
 \sourceproblem{4.3.16}{105}{105}
 \problemtext 波沿$x$正方向以$u=10\,\mathrm{m/s}$传播，$\lambda=4\,\mathrm m$，$t=0$波形如图4.3.16，振幅$A=0.1\,\mathrm m$，原点$y(0,0)=0.05$ m且曲线向上，$P$点处在负半振幅$y_P=-0.05$ m的\emph{上升空间分支}。求波函数、$P$点振动方程、其坐标及回到平衡位置的最短时间。
@@ -693,7 +693,7 @@ x_n(t)=n-2t,\quad n\in\mathbb Z.
 离原点最近的波峰为$n=8$对应$x=-0.4\,\mathrm m$，
 故$\boxed{|x|_{\min}=0.4\,\mathrm m}$。
 波峰经过原点需$4t=2n$，即$t=n/2$；
-$t>4.2$的最早值是$\boxed{t=4.5\,\mathrm s}$。
+$t>4.2$的最早值是$\boxed{t=4.5\,\mathrm s}$，即再过$0.3\,\mathrm s$；它对应$n=9$的波峰，并非已经位于原点左侧的$n=8$波峰。
 固定$t=4.2$，空间波形可写为
 \[
 \boxed{y(x,4.2)=A\cos(0.8\pi+2\pi x)}.
@@ -798,5 +798,5 @@ $y_C=2\times10^{-3}\cos(2\pi t+\pi)$（SI）。
 \boxed{\Delta\varphi=0\pmod{2\pi}},\qquad
 \boxed{A_P=2A=4\times10^{-3}\,\mathrm m}.
 \]
-\crosscheck 两源虽然反相，但较长传播路径产生额外$\pi$相移，使得$P$点两波恰好同相；只有求到达点相位才能判断加强/相消。
+\crosscheck 两源虽然反相，但较长传播路径产生额外$\pi$相移，使得$P$点两波恰好同相；只有求到达点相位才能判断加强/相消。$4\times10^{-3}$ m的合振幅还要求两列波到达$P$时各自振幅均为$2\times10^{-3}$ m；若存在几何衰减或吸收，则同相时合振幅为$A_B(P)+A_C(P)$。
 % === END textbook-ch04-solutions-018-023.tex ===
