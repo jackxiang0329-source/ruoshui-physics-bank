@@ -1,0 +1,199 @@
+% 第7批：《大学物理简明教程》第7章解答题7.3.1—7.3.8。
+% 原书/PDF第187页，用户扫描底本；独立理论推导、数值二校待继续。
+\subsection{解答题：库仑力与高斯定理}
+
+\sourceproblem{7.3.1}{187}{187}
+\problemtext 三个相同的非零点电荷$q$分别固定于边长$a$的等边三角形三个顶点。
+(1) 另在三角形中心放什么电荷可使各顶点电荷受到的合力为零？
+(2) 平衡条件是否依赖边长？
+\workings
+对任意顶点电荷，另外两个顶点电荷产生的斥力大小都为
+$F_0=k_eq^2/a^2$，夹角为$60^\circ$，
+合力沿从中心指向该顶点的径向，大小
+\[
+F_{\mathrm{vertex}}=2F_0\cos30^\circ
+=\sqrt3\,\frac{k_eq^2}{a^2}.
+\]
+三角形中心到任一顶点的距离为$r=a/\sqrt3$。
+为抵消向外合力，中心电荷$Q$必须与$q$异号，且
+\[
+\frac{k_e|qQ|}{(a/\sqrt3)^2}
+=\sqrt3\,\frac{k_eq^2}{a^2}.
+\]
+得到
+\[
+\boxed{Q=-\frac{q}{\sqrt3}}.
+\]
+式中边长$a$约去，因此平衡条件与$a$无关。
+\crosscheck 中心电荷本身受三个顶点电荷的合电场为零，
+也不受净力。这个平衡属于静力平衡，未断言动力学稳定性。
+
+\sourceproblem{7.3.2}{187}{187}
+\problemtext 真空中面积为$S$、相距$d$的两块大平行金属板分别带电$+q$与$-q$。
+有人用点电荷公式$F=k_eq^2/d^2$计算板间吸引力，
+另有人用$F=qE$和$E=q/(\varepsilon_0 S)$得到$F=q^2/(\varepsilon_0 S)$。
+两种说法是否正确？求正确板间力。
+\workings
+点电荷公式不适用于大面积均匀带电板。
+而$E=q/(\varepsilon_0 S)$是\emph{两块板共同作用}的板间总电场；
+计算某一板所受的外力时，应只取\emph{另一块板}在该处产生的电场。
+无限大均匀带电板单独在每侧产生
+$E_{\mathrm{other}}=\sigma/(2\varepsilon_0)$，
+$\sigma=q/S$，所以
+\[
+\boxed{F=qE_{\mathrm{other}}
+=\frac{q^2}{2\varepsilon_0 S}}.
+\]
+方向是两板互相吸引。
+\crosscheck 在忽略边缘效应且极板带电量固定的模型中，该力不依赖$d$；
+也可由平板电场能的虚功导出相同结果。
+
+\sourceproblem{7.3.3}{187}{187}
+\problemtext 两个相同小球质量均为$m$、带电量相同为$q$，
+由长度均为$l$的绝缘细线悬挂在同一点。
+静止时两线之间夹角$2\theta$（球半径可忽略），求电荷量大小。
+\workings
+两球之间的距离
+\[
+r=2l\sin\theta.
+\]
+对一个球受力平衡，设线张力为$T_s$，
+\[
+T_s\cos\theta=mg,\qquad
+T_s\sin\theta=\frac{k_eq^2}{r^2},
+\quad k_e=\frac1{4\pi\varepsilon_0}.
+\]
+两式相除：
+\[
+mg\tan\theta=\frac{k_eq^2}{4l^2\sin^2\theta},
+\]
+故
+\[
+\boxed{|q|=2l\sin\theta
+\sqrt{4\pi\varepsilon_0mg\tan\theta}}.
+\]
+\crosscheck 两球同号才互斥并分开；
+$q^2$的量纲应为$\mathrm{C^2}$，开平方得库仑。
+
+\sourceproblem{7.3.4}{187}{187}
+\problemtext 一根长$L=15.0\,\mathrm{cm}$的绝缘均匀带电细杆$AB$，
+线电荷密度$\lambda=5.0\times10^{-9}\,\mathrm{C/m}$。
+(1) 在杆轴线延长线上、距$B$端$d_1=5.0$ cm的$P$点求场强；
+(2) 在杆的垂直平分线上、距中点$d_2=5.0$ cm的$Q$点求场强。
+\workings
+记$k_e=1/(4\pi\varepsilon_0)$。
+(1) 沿杆从$B$向$A$量坐标$s\in[0,L]$，
+微元到$P$距离$d_1+s$，故
+\[
+\boxed{E_P=k_e\lambda\int_0^L\frac{ds}{(d_1+s)^2}
+=k_e\lambda\left(\frac1{d_1}-\frac1{d_1+L}\right)}.
+\]
+代入数值得
+$\boxed{E_P\approx6.74\times10^2\,\mathrm{N/C}}$，
+方向从杆端$B$沿外侧轴向远离正带电杆。
+(2) 取杆中点为$x=0$，垂线距离$d_2$，
+沿杆方向的场分量因奇偶对称相互抵消。
+垂线方向
+\[
+E_Q=k_e\lambda\int_{-L/2}^{L/2}
+\frac{d_2\,dx}{(x^2+d_2^2)^{3/2}}
+=\boxed{\frac{k_e\lambda L}{d_2\sqrt{(L/2)^2+d_2^2}}}.
+\]
+数值为
+$\boxed{E_Q\approx1.50\times10^3\,\mathrm{N/C}}$，
+沿垂直平分线背离正带电杆。
+\crosscheck 两处场强单位均为$\mathrm{N/C}$，
+远离杆时均应按总电荷近似为点电荷而衰减。
+
+\sourceproblem{7.3.5}{187}{187}
+\problemtext 点电荷$q$位于立方体中心，求穿过一个面的电通量；
+若把该点电荷移至立方体一个顶点，求其六个面的通量。
+\workings
+中心放置时，对称性和高斯定理给
+$\boxed{\Phi_{\mathrm{face}}=q/(6\varepsilon_0)}$。
+电荷移至某一顶点后，可将八个相同的立方体拼成大立方体，
+使电荷位于大立方体中心，故该小立方体向外的总通量为
+$\boxed{\Phi_{\mathrm{total}}=q/(8\varepsilon_0)}$
+（以顶点处对称极限解释）。
+紧贴该顶点的三张面上，库仑电场与其平面相切，
+各面的通量为零；
+与这三面相对的三张面因对称性等价，
+各有
+\[
+\boxed{\Phi_{\mathrm{opposite}}=\frac{q}{24\varepsilon_0}}.
+\]
+\crosscheck 三张远侧面合计$3q/(24\varepsilon_0)=q/(8\varepsilon_0)$；
+处理顶点处的奇异电荷须说明取对称极限，不能直接对含奇点的封闭面套用无歧义的表面高斯公式。
+
+\sourceproblem{7.3.6}{187}{187}
+\problemtext 均匀带电球壳的内、外半径分别为$a=6.0$ cm、
+$b=10.0$ cm，带电体密度
+$\rho=2.0\times10^{-5}\,\mathrm{C/m^3}$。
+求距球心$r=5.0$、$8.0$、$12.0$ cm处的电场强度大小及方向。
+\workings
+球对称性下
+\[
+Q_{\mathrm{enc}}(r)=
+\begin{cases}
+0,&r<a,\\
+\dfrac{4\pi\rho}{3}(r^3-a^3),&a\le r\le b,\\
+\dfrac{4\pi\rho}{3}(b^3-a^3),&r>b.
+\end{cases}
+\]
+由高斯定理
+\[
+E(r)=
+\begin{cases}
+0,&r<a,\\
+\dfrac{\rho(r^3-a^3)}{3\varepsilon_0r^2},&a\le r\le b,\\
+\dfrac{\rho(b^3-a^3)}{3\varepsilon_0r^2},&r>b.
+\end{cases}
+\]
+因此
+\[
+\boxed{E(0.050)=0},\quad
+\boxed{E(0.080)\approx3.48\times10^4\,\mathrm{N/C}},
+\quad
+\boxed{E(0.120)\approx4.10\times10^4\,\mathrm{N/C}}.
+\]
+$\rho>0$，非零电场均沿径向向外。
+\crosscheck $r=a$时场强连续为零，$r=b$时内外表达式相同，
+说明均匀\emph{体}电荷分布没有面电荷导致的跳变。
+
+\sourceproblem{7.3.7}{187}{187}
+\problemtext 两无限长同轴均匀带电圆柱面半径分别$R_1<R_2$，
+单位长度所带电荷分别为$+\lambda$、$-\lambda$。
+分别求$r<R_1$、$R_1<r<R_2$、$r>R_2$的场强。
+\workings
+选半径$r$、长$L$的同轴圆柱形高斯面，
+端面通量为零，侧面通量为$E(2\pi rL)$。
+按高斯面包围电荷不同，
+\[
+\boxed{\bm E(r)=
+\begin{cases}
+\bm0,&r<R_1,\\
+\dfrac{\lambda}{2\pi\varepsilon_0 r}\,\bm e_r,&R_1<r<R_2,\\
+\bm0,&r>R_2.
+\end{cases}}
+\]
+其中$\lambda>0$，在两圆柱之间沿径向由内柱指向外柱。
+\crosscheck 这不要求两圆柱一定为导体，只需无限长圆柱面上电荷轴对称均匀分布；
+两柱外的总单位长度电荷为零。
+
+\sourceproblem{7.3.8}{187}{187}
+\problemtext 两个无限大平行平面均匀带电，
+面电荷密度分别为$+\sigma$、$-\sigma$。
+求空间各处电场强度，说明板间和两侧区域的区别。
+\workings
+单独一张均匀无限带电平面在两侧形成大小
+$|\sigma|/(2\varepsilon_0)$、方向由正电荷面向外或向负电荷面内的电场。
+在两平面外侧两者反向抵消，
+\[
+\boxed{\bm E_{\mathrm{outside}}=\bm0}.
+\]
+在两平面之间，两者方向相同且从正平面指向负平面，
+\[
+\boxed{E_{\mathrm{between}}=\frac{\sigma}{\varepsilon_0}}.
+\]
+\crosscheck 此为理想无限平面模型，边缘效应忽略；
+若极板有限大小则外部电场并非严格为零。
