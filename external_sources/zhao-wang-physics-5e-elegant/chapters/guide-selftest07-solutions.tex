@@ -1,0 +1,77 @@
+% 第18批：学习指导自测题7计算题7.3.1--7.3.5；印刷169--170／PDF177--178。
+\subsection{自测题7：静电积分、磁场能量与法拉第感应计算}
+
+\sourcetest{7.3.1}{169}{177}
+\problemtext 带电实心球的体电荷密度为 $\rho(r)=Ar$（$0\le r\le R$），球外电荷密度为零。求球内外电场强度分布。
+\workings 球对称性使电场径向。对半径 $r\le R$ 的高斯球，
+\[Q(r)=\int_0^r 4\pi r'^2(Ar')\,dr'=\pi A r^4.\]
+由 $E4\pi r^2=Q/\varepsilon_0$，
+\[
+\boxed{\bm E(r)=
+\begin{cases}
+\dfrac{A r^2}{4\varepsilon_0}\,\hat{\bm r},&0\le r\le R,\\[4pt]
+\dfrac{A R^4}{4\varepsilon_0r^2}\,\hat{\bm r},&r\ge R.
+\end{cases}}
+\]
+球外总电荷 $Q_{\rm tot}=\pi AR^4$。
+\crosscheck $A$ 为带符号常数，$A<0$ 时电场径向向内；两段在 $r=R$ 连续，$r\to\infty$ 按 $r^{-2}$ 衰减。
+
+\sourcetest{7.3.2}{169}{177}
+\problemtext 均匀体电荷密度 $\rho$ 的球体中心为 $O$，挖去半径 $r$、中心为 $O'$ 的偏心小球形空腔，中心距 $OO'=d$。图中 $P,O,O'$ 共线且 $OP=d$，$P$ 在 $O'$ 的反侧；求空腔中心 $O'$ 与 $P$ 的电场。
+\workings 按叠加法：完整密度 $\rho$ 的球体减去中心为 $O'$、密度同为 $\rho$ 的小球。取 $\hat{\bm x}$ 自 $O$ 指向 $O'$；完整均匀球内 $\bm E_{\rm full}=\rho\bm r/(3\varepsilon_0)$。
+在空腔中心 $O'$，负小球的场为零，故
+\[\boxed{\bm E(O')=\frac{\rho d}{3\varepsilon_0}\hat{\bm x}}.\]
+在 $P=-d\,\hat{\bm x}$ 处，若 $P$ 在腔外（图示 $2d>r$），负小球的外场贡献为
+\[\bm E_{\rm cut}(P)=+\frac{\rho r^3}{3\varepsilon_0(2d)^2}\hat{\bm x}.\]
+因此
+\[\boxed{\bm E(P)=-\frac{\rho}{3\varepsilon_0}
+\left(d-\frac{r^3}{4d^2}\right)\hat{\bm x}}.\]
+\crosscheck 同样可用空腔内均匀场公式 $\bm E=\rho\overrightarrow{OO'}/(3\varepsilon_0)$ 复核第一问。第二问必须确定 $P$ 与腔的相对位置，不能把腔外贡献套腔内公式。
+
+\sourcetest{7.3.3}{170}{178}
+\problemtext 半径 $R=0.20$m 的四分之一圆弧与两条半径组成平面闭合载流线圈，电流 $I=2$A，置于 $B=0.50$T 的匀强磁场中。(1) 线圈平面垂直于 $\bm B$ 时，求圆弧部分所受磁力大小；(2) 线圈平面与磁场方向成 $60^\circ$ 时，求线圈受磁力矩大小。
+\workings (1) 匀强磁场中导线任意弯曲段的合安培力
+\[\bm F_{AB}=I(\bm r_B-\bm r_A)\times\bm B.\]
+圆弧两端所连弦长为 $\sqrt2R$，而弦在平面内、$\bm B$ 垂直平面，故
+\[\boxed{F_{\rm arc}=IB\sqrt2R=2(0.5)(0.2)\sqrt2\simeq0.283\,{\rm N}}.\]
+(2) 线圈所围扇形面积 $S=\pi R^2/4$，磁矩 $m=IS$。线圈\emph{平面}与 $\bm B$ 夹角 $60^\circ$，故法线与 $\bm B$ 夹角 $30^\circ$，
+\[\boxed{\tau=ISB\sin30^\circ=\frac{\pi IBR^2}{8}
+\simeq1.57\times10^{-2}\ {\rm N\,m}}.\]
+\crosscheck 不得将平面与 $\bm B$ 的夹角误当成磁矩与 $\bm B$ 的夹角；总线圈在均匀场中净受力为零，但圆弧段受力不为零。
+
+\sourcetest{7.3.4}{170}{178}
+\problemtext 无限长直导线电流向上，且以 $dI/dt=2$A/s 匀速增加；旁边同平面直角三角形线圈竖边高 $H=20$cm，与长导线最近距 $a=5$cm，底边宽 $b=10$cm。求线圈中的感应电动势大小和方向。
+\workings 取与直导线距离为 $x$ 的竖向切片。图中三角形厚度 $h(x)=H(a+b-x)/b$，$a\le x\le a+b$。直导线磁场在三角形区域内指向纸面内，大小
+\[B(x)=\frac{\mu_0I}{2\pi x}.\]
+因此磁通大小
+\[
+\Phi=\frac{\mu_0 I H}{2\pi b}
+\int_a^{a+b}\frac{a+b-x}{x}\,dx
+=\frac{\mu_0 I H}{2\pi b}
+\left[(a+b)\ln\frac{a+b}{a}-b\right].
+\]
+求导并代入 $H=0.20$, $a=0.05$, $b=0.10$m，
+\[
+\boxed{|\mathcal E|=\frac{\mu_0 H}{2\pi b}
+\left[(a+b)\ln\frac{a+b}{a}-b\right]\frac{dI}{dt}
+\simeq5.18\times10^{-8}\ {\rm V}}.
+\]
+由于原磁场向纸面内且增强，感应磁场向纸面外，故线圈电流为\textbf{逆时针}。
+\crosscheck 右边界处三角形高度为零，不能把三角形误作矩形面积代入；最终方向由楞次定律而非任意设定的通量符号决定。
+
+\sourcetest{7.3.5}{170}{178}
+\problemtext 长螺线管单位长度匝数为 $n$，电流随时间均匀变化 $I(t)=-kt$，$k>0$。求管内磁感应强度和管内外环向感应电场。
+\workings 取螺线管轴向为有向正方向，设半径为 $R$，理想长螺线管磁场在管内
+\[\boxed{\bm B(t)=-\mu_0nkt\,\hat{\bm z}},\]
+管外磁场近似零。对半径 $r$ 的同轴环路，法拉第定律
+\[\oint\bm E\cdot d\bm l=-\frac{d\Phi_B}{dt}.\]
+由于 $dB/dt=-\mu_0nk$，
+\[
+\boxed{E_\varphi(r)=
+\begin{cases}
+\dfrac{\mu_0nkr}{2},&r\le R,\\[4pt]
+\dfrac{\mu_0nkR^2}{2r},&r\ge R.
+\end{cases}}
+\]
+这里 $E_\varphi>0$ 以从 $+\hat{\bm z}$ 方向观察的逆时针为正。
+\crosscheck 螺线管外磁感应强度虽近似零，因穿过环路的磁通随时变化，外部仍可有非保守环向电场；若题只求管内，取第一段即可。
