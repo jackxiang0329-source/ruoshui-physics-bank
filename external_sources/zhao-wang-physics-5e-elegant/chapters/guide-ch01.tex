@@ -1,0 +1,125 @@
+% Consolidated guide-ch01 from 9a1384ddf1afcd855b09256c9c6f1c90b5023140; source fragments preserved.
+
+% === BEGIN guide-ch01-examples.tex blob ab87471bc89aa3db8ef41432cf72c464961ddf43 ===
+% 《大学物理学学习指导（第5版）》第1章：例1.1—1.5。
+% 源 PDF 页17—19；印刷页9—11。原书公式按物理条件独立复算。
+% 质量状态：待独立复核。
+
+\sourceexample{1.1}{9--10}{17--18}
+\problemtext 平面运动质点的位置为$x=3t\,\mathrm m,\ y=(1-t^2)\,\mathrm m$。
+求：(1)轨迹；(2)$t=3\,\mathrm s$的位置矢量；(3)第2秒内位移、平均速度；
+(4)$t=2\,\mathrm s$的速度和加速度；
+(5)$t$时切向、法向加速度大小；
+(6)$t=2\,\mathrm s$曲率半径。
+\workings
+由$t=x/3$消去$t$，轨迹为$y=1-x^2/9$（坐标数值按米取）。
+$t=3$时$\bm r=9\bm i-8\bm j$，$|\bm r|=\sqrt{145}\,\mathrm m$。
+第2秒为$1\le t\le2$，因此
+\[
+\Delta\bm r=\bm r(2)-\bm r(1)=3\bm i-3\bm j\ {\rm m},
+\qquad \bar{\bm v}=3\bm i-3\bm j\ {\rm m/s}.
+\]
+\[
+\bm v=3\bm i-2t\bm j,\qquad
+\bm a=-2\bm j,\qquad
+\bm v(2)=3\bm i-4\bm j\ \mathrm{m/s}.
+\]
+速率$v=\sqrt{9+4t^2}$，故切向加速度的有符号值为
+\[
+a_\tau=\frac{dv}{dt}=\frac{4t}{\sqrt{9+4t^2}}\ {\rm m/s^2}.
+\]
+法向加速度大小由$a_n=\sqrt{|\bm a|^2-a_\tau^2}$得
+\[
+a_n=\frac{6}{\sqrt{9+4t^2}}\ {\rm m/s^2}.
+\]
+$t=2$时$v^2=25$且$a_n=6/5$，曲率半径
+\[
+\boxed{\rho=\frac{v^2}{a_n}=\frac{125}{6}\ {\rm m}\approx20.83\ {\rm m}.}
+\]
+\crosscheck $a_\tau^2+a_n^2=4=|\bm a|^2$；$\rho$与学习指导原书的取整$20.8\,\mathrm m$一致。
+
+\sourceexample{1.2}{10}{18}
+\problemtext 质点沿$x$轴运动，$a(t)=6t$（SI），当$t=2\,\mathrm s$时，以$v=12\,\mathrm{m/s}$经过坐标原点。求$x(t)$。
+\workings
+\[
+v(t)=\int6t\,dt=3t^2+C_1.
+\]
+由$v(2)=12$得$C_1=0$，再积分
+$x(t)=t^3+C_2$。由$x(2)=0$得$C_2=-8$，于是
+\[
+\boxed{x(t)=(t^3-8)\,\mathrm m,}
+\]
+其中$t$以秒的数值代入。
+\crosscheck $x'(2)=12\,\mathrm{m/s},\ x(2)=0,\ x''(t)=6t$。
+
+\sourceexample{1.3}{10--11}{18--19}
+\problemtext 光滑水平面上，小球连接一端固定的轻弹簧。小球从平衡位置$x=0$以向右初速度$v_0$开始运动，回复加速度$a=-\beta x$，$\beta>0$。求小球速率与位移关系及运动方程。
+\workings
+令$t=0$时$x=0,\ v=v_0>0$。由链式法则
+$a=v\,dv/dx=-\beta x$，积分得
+\[
+\frac12v^2-\frac12v_0^2=-\frac12\beta x^2,
+\qquad
+v^2=v_0^2-\beta x^2.
+\]
+所以\emph{速率}满足$|v|=\sqrt{v_0^2-\beta x^2}$；在第一次向右运动时取正号。
+当$x$增至$v_0/\sqrt\beta$后，运动方向反转，不能永远取正支。
+由$\ddot x+\beta x=0$和初值，完整简谐运动方程为
+\[
+\boxed{x(t)=\frac{v_0}{\sqrt\beta}\sin(\sqrt\beta\,t),\qquad
+v(t)=v_0\cos(\sqrt\beta\,t).}
+\]
+\crosscheck 两式满足$x(0)=0,\ v(0)=v_0,\ \ddot x=-\beta x$，振幅$v_0/\sqrt\beta$；能量形式$v^2+\beta x^2=v_0^2$守恒。
+
+\sourceexample{1.4}{11}{19}
+\problemtext 质点沿半径$R$圆周运动，角位置$\theta(t)=7-bt^3$，$b>0$。
+求：(1)切向、法向加速度；(2)加速度大小；(3)加速度与半径所在直线成$45^\circ$时的$t$；
+(4)该时刻从$t=0$起\emph{实际转过的圈数}。
+\workings
+$\omega=\dot\theta=-3bt^2,\quad\alpha=\dot\omega=-6bt$，故
+\[
+a_\tau=R\alpha=-6Rbt,\qquad
+a_n=R\omega^2=9Rb^2t^4,
+\]
+\[
+|\bm a|=\sqrt{(6Rbt)^2+(9Rb^2t^4)^2}
+=3Rbt\sqrt{4+9b^2t^6}\quad(t\ge0).
+\]
+对$t>0$，与径向直线成$45^\circ$时$|a_\tau|=a_n$，即
+$6Rbt=9Rb^2t^4$，得到
+\[
+t_*=\left(\frac{2}{3b}\right)^{1/3},\qquad
+\theta(t_*)=7-\frac23=\frac{19}{3}\ {\rm rad}.
+\]
+但题目问的是\emph{从初始时刻转过}的圈数，必须用角位移而不是角位置：
+\[
+\Delta\theta=\theta(t_*)-\theta(0)=-\frac23\ {\rm rad},
+\qquad
+\boxed{N=\frac{|\Delta\theta|}{2\pi}=\frac{1}{3\pi}\approx0.1061\ \text{圈}.}
+\]
+\crosscheck 原《学习指导》在例1.4末行将$\theta(t_*)=19/3$除以$2\pi$得到$19/(6\pi)\approx1.008$圈，疑将绝对角位置误认为从$t=0$起转过的角位移。已单列勘误；若题目特意询问“角位置折合圈数”，该数值才有对应含义。
+
+\sourceexample{1.5}{11}{19}
+\problemtext 火车停止时雨滴在窗面轨迹相对竖直方向向前偏$\theta_0$；
+火车分别以速率$v_1,v_2$向前行驶时，雨滴在车窗上的相对轨迹向后偏$\theta_1,\theta_2$。
+求$v_1/v_2$，假设雨滴地面速度不变。
+\workings
+取竖直向下为$x$正向、火车前进为$y$正向。
+设雨滴相对地面的速度分量为$(u_x,u_y)$，有
+$u_y/u_x=\tan\theta_0$。
+对车速$v_i$，雨滴在车系中的水平分量为$u_y-v_i$，且雨滴向后偏，因此
+\[
+\tan\theta_i=\frac{v_i-u_y}{u_x},\qquad
+v_i=u_y+u_x\tan\theta_i
+=u_x(\tan\theta_0+\tan\theta_i).
+\]
+于是
+\[
+\boxed{\frac{v_1}{v_2}
+=\frac{\tan\theta_0+\tan\theta_1}{\tan\theta_0+\tan\theta_2}
+=\frac{1+\cot\theta_0\tan\theta_1}
+{1+\cot\theta_0\tan\theta_2}.}
+\]
+\crosscheck 当$\theta_1=\theta_2$时$v_1/v_2=1$；
+当$\theta_0\to0$时，取未约分形式可得$v_1/v_2=\tan\theta_1/\tan\theta_2$，避免$\cot0$未定义。
+% === END guide-ch01-examples.tex ===
