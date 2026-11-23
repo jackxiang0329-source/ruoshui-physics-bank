@@ -1,0 +1,211 @@
+% 《大学物理简明教程》第5版，第8章稳恒磁场填空题8.2.1—8.2.12
+% 原书印刷与扫描PDF第218—219页。逐题简述与独立计算；图形歧义标注二校。
+\subsection{填空题：磁场环流、安培力与螺旋运动}
+
+\sourceproblem{8.2.1}{218}{218}
+\problemtext 有限长载流直导线的磁场可依据哪一基本规律计算？
+不具有充分对称性的此类磁场能否仅凭安培环路定理直接计算？
+\workings
+微元电流产生的磁感应强度满足毕奥--萨伐尔定律，
+\[
+\boxed{d\bm B=\frac{\mu_0}{4\pi}
+\frac{I\,d\bm l\times\hat{\bm r}}{r^2}}.
+\]
+由于有限直线段没有圆柱平移对称性，
+无法简单提取$B$作为环路上的常量，
+故仅用安培定理通常\textbf{不能}直接求出局部场。
+\crosscheck 安培环路定理本身仍成立，
+问题在于缺乏从环流反推出各点场强的足够对称性。
+
+\sourceproblem{8.2.2}{218}{218}
+\problemtext 两个尺寸和绕法相同的螺线管分别有或无铁芯，
+若通以相等自由电流，比较内部$\bm H$与$\bm B$。
+\workings
+忽略退磁因子和漏磁，长螺线管
+\[
+\boxed{H=nI}\quad(n=N/\ell)
+\]
+仅由自由电流决定，所以两个螺线管内$H$分布\textbf{相同}。
+但$B=\mu_0\mu_rH$，
+有铁芯者$\mu_r$通常远大于1，所以$B$分布\textbf{不相同}。
+\crosscheck 上述近似要求长螺线管、磁芯尚未饱和；
+真实有限铁芯的边缘退磁场可使$H$分布有所变化。
+
+\sourceproblem{8.2.3}{218}{218}
+\problemtext 原书图8.2.3以三维闭合曲线$L$环绕
+多根导线，电流标记为$I_1,I_2$。
+写出沿指定取向的$\oint_L\bm B\cdot d\bm l$。
+\workings
+在真空中安培环路定理精确地给出
+\[
+\boxed{\oint_L\bm B\cdot d\bm l
+=\mu_0I_{\mathrm{link}}^{\mathrm{alg}}},\qquad
+I_{\mathrm{link}}^{\mathrm{alg}}=\sum_j\epsilon_j I_j.
+\]
+$\epsilon_j\in\{-1,0,1\}$为每根导线和定向曲面
+相交的带符号链接数，正向由右手法则确定。
+对于原图曲面须明确$I_1$的各次穿越是否相互抵消、
+$I_2$是否穿越，才能将此式化为具体$I_1,I_2$组合。
+\crosscheck \textbf{待高清空间图独立二校：}本稿不猜测三维示意图中的遮挡穿越方向，
+仅录入可严谨确证的安培定理与求值规则；
+因此本条为\emph{未完成数值化的条件性题解}，不得宣称通过完整人工质检。
+
+\sourceproblem{8.2.4}{218}{218}
+\problemtext 半径$R=0.2\,\mathrm m$的上半圆形闭合线圈，
+电流$I=5\,\mathrm A$，处于和线圈平面平行的匀强磁场$B=0.5\,\mathrm T$中。
+磁场沿直径由$a$指向$c$。
+求上半圆弧$abc$所受安培力大小，以及闭合线圈的最大磁力矩。
+\workings
+匀强场中任意电流导线段受合力
+$\bm F=I(\bm r_{\mathrm{end}}-\bm r_{\mathrm{start}})\times\bm B$。
+半圆两端间的位移为直径方向，正与$\bm B$平行，故
+\[
+\boxed{F_{abc}=0}.
+\]
+半圆面积$S=\pi R^2/2$，磁矩垂直纸面、与磁场夹角$90^\circ$，
+\[
+\boxed{M=ISB
+=5\cdot\frac{\pi(0.2)^2}{2}\cdot0.5
+\approx0.157\,\mathrm{N\,m}}.
+\]
+\crosscheck 虽然圆弧受\emph{合力}为零，但线圈可受
+\emph{非零力矩}而转动。力矩方向由$\bm\mu\times\bm B$给出。
+
+\sourceproblem{8.2.5}{218}{218}
+\problemtext 电荷$q=8.0\times10^{-9}\,\mathrm C$以
+$v=3.0\times10^{-5}\,\mathrm{m/s}$做半径
+$R=6.0\times10^{-8}\,\mathrm m$的匀速圆周运动。
+求轨道中心的磁感应强度及相应轨道磁矩大小。
+\workings
+等效电流为$I=q/T=qv/(2\pi R)$，圆心场
+\[
+\boxed{B=\frac{\mu_0I}{2R}
+=\frac{\mu_0qv}{4\pi R^2}
+\approx6.67\times10^{-6}\,\mathrm T}.
+\]
+轨道磁矩为
+\[
+\boxed{\mu=I\pi R^2=\frac12qvR
+=7.20\times10^{-21}\,\mathrm{A\,m^2}}.
+\]
+\crosscheck $B$随$R^{-2}$增大，$\mu$随$R$增大；
+这里$q$取正，若电荷为负磁矩方向与运动角动量相反。
+
+\sourceproblem{8.2.6}{218--219}{218--219}
+\problemtext 无限长载流直导线在点$P$处弯成半径$R$的整圆，
+圆心$O$距原直线为$R$，电流$I$不变。
+写出$O$点磁场（圆形回路与剩余长直导线叠加）。
+\workings
+圆形部分的中心磁场大小
+$B_{\mathrm{circle}}=\mu_0I/(2R)$，
+长直切线部分在距离$R$处贡献
+$B_{\mathrm{straight}}=\mu_0I/(2\pi R)$。
+二者都沿纸面法线，方向由图中的圆电流绕向和直线电流
+右手法则判定，故一般有
+\[
+\boxed{B_O=\frac{\mu_0I}{2R}
+\left|1\pm\frac1\pi\right|}.
+\]
+当两者同向取$+$，反向取$-$。
+\crosscheck \textbf{图示支路方向待二校：}
+圆环是完整一圈还是仅插入导线主干的旁路，必须明确分流与
+绕向；本条保留条件性符号，不能将其视为确定唯一数值答案。
+
+\sourceproblem{8.2.7}{219}{219}
+\problemtext 磁场中一圆形试验线圈面积增为两倍，
+通电电流也增为两倍，问在同一磁场中最大磁力矩增为原来的几倍。
+\workings
+固定匝数$N$的平面线圈磁矩$\mu=NIS$，
+最大磁力矩$M_{\max}=NISB$，所以
+\[
+\boxed{\frac{M'_{\max}}{M_{\max}}
+=\frac{(2I)(2S)}{IS}=4}.
+\]
+\crosscheck 若题面说的是\emph{面积}加倍，不是半径加倍，
+故面积比例恰为2；半径加倍才使面积加倍4倍。
+
+\sourceproblem{8.2.8}{219}{219}
+\problemtext 氢原子中电子沿半径$r$的圆周运动，
+外加匀强磁场$B$与轨道平面平行。
+写出等效环电流的最大磁力矩，以电子质量$m_e$、电荷绝对值$e$表示。
+\workings
+设轨道速率$v$，等效电流大小$I=ev/(2\pi r)$，
+轨道面积$\pi r^2$，所以
+\[
+\boxed{M=\mu B=I\pi r^2B
+=\frac{evr}{2}B
+=\frac{eL}{2m_e}B},
+\qquad L=m_evr.
+\]
+若另加\emph{玻尔最小角动量轨道}条件$L=\hbar$，
+才可简化为$\boxed{M=e\hbar B/(2m_e)}$。
+\crosscheck 原文未给电子速率和角动量量子数，
+因此仅由$m_e,e,r,B$并不能决定唯一数值；
+假定玻尔基态须明确为附加模型，不可从题面凭空推出。
+
+\sourceproblem{8.2.9}{219}{219}
+\problemtext 边长$a$、匝数$N$的正方形电流线圈可绕过
+相对两边中点的轴自由转动，通电$I$，
+与匀强磁场$B$的\emph{磁矩}夹角为$\theta$，
+转动惯量$J$，求所受磁转矩。
+\workings
+线圈磁矩大小$\mu=NIa^2$，电磁转矩
+\[
+\boxed{M=NIa^2B\sin\theta},\qquad
+\bm M=\bm\mu\times\bm B.
+\]
+动力学角加速度可再由$J\ddot\phi=M$求得，
+但题目只问\emph{转矩}，无需使用$J$。
+\crosscheck 如果所给$\theta$为\emph{线圈平面}与磁场夹角，
+应改写为$M=NIa^2B|\cos\theta|$；
+本稿依原文“磁矩与磁场夹角”使用正弦。
+
+\sourceproblem{8.2.10}{219}{219}
+\problemtext 长直螺线管单位长度$n$匝，每匝通电$I$，
+管内充满相对磁导率$\mu_r$的均匀介质。
+求靠近中部的$B,H$。
+\workings
+安培环路定理作用于磁场强度$\bm H$，
+$H\ell=nI\ell$，故
+\[
+\boxed{H=nI\quad(\mathrm{A/m})},\qquad
+\boxed{B=\mu_0\mu_r nI\quad(\mathrm T)}.
+\]
+\crosscheck 这里$n$的单位是匝数每米而非总匝数，
+故无需除以线圈长度第二次。
+
+\sourceproblem{8.2.11}{219}{219}
+\problemtext 质量$m$、电量$q$的粒子以速率$v$与匀强磁场
+$B$成夹角$\theta$进入，轨迹为螺旋线，求回旋半径、周期和螺距。
+\workings
+把速度分解为$v_\perp=v\sin\theta$与
+$v_\parallel=v\cos\theta$。
+洛伦兹力提供向心加速度：
+\[
+\boxed{r=\frac{mv|\sin\theta|}{|q|B}},\qquad
+\boxed{T=\frac{2\pi m}{|q|B}},
+\]
+\[
+\boxed{h=v_\parallel T=
+\frac{2\pi mv\cos\theta}{|q|B}}.
+\]
+\crosscheck 带电粒子运动方向与磁场平行时$r=0$，
+不发生回旋；周期表达式是其垂直扰动的特征回旋周期。
+
+\sourceproblem{8.2.12}{219}{219}
+\problemtext 原图8.2.12给三条材料的$B$--$H$曲线
+I（非线性、逐渐饱和）、II（比真空斜率大的线性直线）、
+III（比真空斜率小的线性直线），虚线为真空$B=\mu_0H$。
+判断三种材料类型。
+\workings
+线性材料的斜率为$\mu_0\mu_r$，
+大于真空$\mu_0$者为顺磁质，小于者为抗磁质。
+非线性、磁导率大并逐渐进入饱和的曲线是铁磁质。
+因此
+\[
+\boxed{\mathrm{II}:\text{顺磁质}},\qquad
+\boxed{\mathrm{III}:\text{抗磁质}},\qquad
+\boxed{\mathrm{I}:\text{铁磁质}}.
+\]
+\crosscheck 铁磁体$B$--$H$曲线的曲率不能用于估计单一常数$\mu_r$，
+磁滞回线需另给加载历史。
