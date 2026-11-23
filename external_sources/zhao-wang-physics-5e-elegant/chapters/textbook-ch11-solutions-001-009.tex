@@ -1,0 +1,173 @@
+% 《大学物理简明教程》第5版狭义相对论11.3.1—11.3.9
+% 扫描印刷/PDF第290—291页；原始参数逐页核对，独立推导与假设说明。
+\subsection{解答题：洛伦兹变换、时间延缓和速度合成}
+
+\sourceproblem{11.3.1}{290}{290}
+\problemtext 惯性系$S'$相对$S$沿$x$匀速运动、两系原点于$t=t'=0$重合。
+$S$中事件1为$(x_1,t_1)=(6.0\times10^4\rm\,m,2.0\times10^{-4}\rm\,s)$，
+事件2为$(x_2,t_2)=(12.0\times10^4\rm\,m,1.0\times10^{-4}\rm\,s)$。
+若$S'$中两事件同时，求$S'$相对$S$的有向速度和$S'$中事件空间间隔。
+\workings
+作差$\Delta x=x_2-x_1=6.0\times10^4\rm\,m$、
+$\Delta t=t_2-t_1=-1.0\times10^{-4}\rm\,s$。
+因为$\Delta t'=\gamma(\Delta t-v\Delta x/c^2)=0$，
+\[
+\boxed{v=\frac{c^2\Delta t}{\Delta x}=-1.50\times10^8\,\mathrm{m/s}=-0.50c}.
+\]
+由$\gamma=1/\sqrt{1-0.25}=2/\sqrt3$，
+\[
+\boxed{\Delta x'=\gamma(\Delta x-v\Delta t)
+=\frac{4.5\times10^4}{\sqrt{0.75}}
+\approx5.20\times10^4\,\mathrm m}.
+\]
+\crosscheck $S'$朝$x$的\emph{负向}运动。以时空不变量检验
+$(\Delta x')^2=(\Delta x)^2-c^2(\Delta t)^2
+=2.7\times10^9\,\mathrm{m^2}$。
+
+\sourceproblem{11.3.2}{290}{290}
+\problemtext 长度为400m的飞船相对地面以$0.99c$匀速飞行。
+地面测得飞船长度多大？测量船首和船尾必须同时进行的两地观测者
+在地面及飞船各测得多远距离？
+\workings
+飞船固有长度$L_0=400$ m，故
+\[
+\boxed{L=400\sqrt{1-0.99^2}\approx56.4\,\mathrm m}.
+\]
+地面上同时标记首尾位置的观测者相距$L=56.4$ m。
+由于这一对地面观测者作为地面\emph{静止的两点}，
+在飞船系的同一飞船时刻测量其距离，按长度收缩
+\[
+\boxed{L'_{\rm ground}=L/\gamma\approx7.96\,\mathrm m}.
+\]
+\crosscheck 原书第(3)问指\emph{地面上两位观测者之间的距离}在飞船系中的值，
+而不是飞船自身长度400m。若对比“地面系同时标记事件”
+在飞船系的坐标差（不要求船系同时），则数值不同，
+须保留测长同时性约定。
+
+\sourceproblem{11.3.3}{290}{290}
+\problemtext $S'$以$0.60c$沿$x$正向相对$S$运动，
+原点于零时重合。$S$中某事件发生于
+$t=2.0\times10^{-7}$ s、$x=50$ m，求$S'$坐标时间。
+\workings
+$\gamma=1/\sqrt{1-0.6^2}=1.25$，
+\[
+\boxed{t'=\gamma\left(t-\frac{vx}{c^2}\right)
+=1.25\left(2.0\times10^{-7}
+-\frac{(0.6)(50)}{3.0\times10^8}\right)
+=1.25\times10^{-7}\,\mathrm s}.
+\]
+\crosscheck 先检验光传播尺度$ct=60$m；
+事件处在原点未来光锥内，洛伦兹变换不改变其因果型。
+
+\sourceproblem{11.3.4}{290}{290}
+\problemtext 观察者B相对A以$0.8c$沿自身携带的1m细杆方向运动。
+两次闪光在杆\emph{同一端}相继发出，B用本地时钟测得
+时间间隔10秒，求A系观察到这两个发光事件的时间间隔。
+\workings
+两次事件发生在B系同一端点，间隔10秒为固有时，
+所以
+\[
+\boxed{\Delta t_A=\gamma\Delta\tau_B
+=\frac{10}{\sqrt{1-0.8^2}}\approx16.67\,\mathrm s}.
+\]
+\crosscheck 源题1m杆长对\emph{同一点先后两闪光}的时间延缓计算无影响。
+若闪光改为两端发生，还需考虑相对同时性的空间项，
+不能混作同一个题目。
+
+\sourceproblem{11.3.5}{290}{290}
+\problemtext A与B分别静止在惯性系$S,S'$中。
+A测得同地发生的两事件时间间隔为4秒，
+B测得间隔为5秒，求两系相对速率和B系中两事件的地点距离。
+\workings
+A系测得的4秒为固有时，
+$\gamma=5/4$，
+\[
+\boxed{v=c\sqrt{1-\gamma^{-2}}=0.60c}.
+\]
+取$S'$沿$+x$移动，$S$中$\Delta x=0$，
+$\Delta x'=\gamma(\Delta x-v\Delta t)$，
+\[
+\boxed{\Delta x'=-\frac54(0.6c)(4\,\mathrm s)
+=-9.0\times10^8\,\mathrm m},\quad
+\boxed{|\Delta x'|=9.0\times10^8\,\mathrm m}.
+\]
+\crosscheck 速率为大小$0.6c$；
+方向未由原题给定，所以有向$\Delta x'$可随坐标选择换号。
+
+\sourceproblem{11.3.6}{290}{290}
+\problemtext 高度6000m的大气层产生$\pi$介子，以$0.998c$向地球运动，
+其在自身静止系中的寿命约$2.0\times10^{-6}$s。
+判断地球观测者和介子静止系观测者是否预期它可在一个平均寿命内到达地面。
+\workings
+地球系的平均寿命被延长为
+\[
+\gamma=\frac1{\sqrt{1-0.998^2}}\approx15.82,
+\quad
+\boxed{\tau_{\rm Earth}=\gamma\tau_0\approx3.16\times10^{-5}\,\mathrm s}.
+\]
+在这一平均寿命内行程
+$v\tau_{\rm Earth}\approx9.47\times10^3$ m，
+大于6000m。
+介子系中大气层厚度收缩到
+\[
+\boxed{h'=6000/\gamma\approx379\,\mathrm m},
+\]
+而地面以$0.998c$迎面接近，
+所需时间$h'/(0.998c)\approx1.27\times10^{-6}$ s，
+小于$\tau_0=2.0\times10^{-6}$s。
+\crosscheck \textbf{寿命是指数分布的平均值，不是“必定存活”的硬上限}；
+到地面存活概率近似$\exp[-h/(v\gamma\tau_0)]\approx0.53$，
+本题“能否到达”应理解为相当比例可以存活到达。
+
+\sourceproblem{11.3.7}{290}{290}
+\problemtext 物体在$S'$中沿$x'$正方向以$0.8c$运动，
+$S'$相对$S$也沿$x$正方向以$0.8c$移动，求物体在$S$中的速率。
+\workings
+一维速度合成
+\[
+\boxed{u_x=\frac{u_x'+v}{1+u_x'v/c^2}
+=\frac{1.6}{1+0.64}c
+\approx0.97561c}.
+\]
+\crosscheck 即使两速度都为$0.8c$，合速度也小于$c$，
+不能作伽利略式$1.6c$。
+
+\sourceproblem{11.3.8}{290}{290}
+\problemtext 两艘飞船相对恒星系以$0.8c$沿相反方向飞行，
+求其中一艘测得另一艘的相对速率。
+\workings
+取两船恒星系速度分别$+0.8c$与$-0.8c$，
+后一艘在前一艘系中速度
+\[
+u'=\frac{-0.8c-0.8c}{1-(0.8)(-0.8)}
+=-\frac{1.6}{1.64}c.
+\]
+因此
+\[
+\boxed{|u'|\approx0.97561c}.
+\]
+\crosscheck 相对速率小于光速，方向相反对应代数负号。
+
+\sourceproblem{11.3.9}{290--291}{290--291}
+\problemtext 地球系中火箭A以$+0.8c$沿$x$方向、B以$-0.6c$
+沿$x$方向飞行。(1)求B相对A速率；
+(2)若A改为沿$+y$方向以$0.8c$运动而B不变，求A相对B速率。
+\workings
+(1) 以A系为参考，
+\[
+\boxed{u_{B|A}=\frac{-0.6-0.8}{1+0.48}c
+=-\frac{1.4}{1.48}c\approx-0.94595c}.
+\]
+(2) 以B为参考，其速度相对地球为$-0.6c\,\bm e_x$。
+把A在地球系的速度$(0,0.8c)$变换到B系：
+\[
+u'_x=\frac{0+0.6c}{1}=0.6c,\qquad
+u'_y=\frac{0.8c}{\gamma_B(1)}=0.8(0.8)c=0.64c.
+\]
+因此
+\[
+\boxed{|\bm u'|=c\sqrt{0.6^2+0.64^2}
+\approx0.87727c}.
+\]
+\crosscheck 垂直速度分量变换中需额外除以$\gamma_B=1.25$，
+不应直接对$0.8c$与$0.6c$求普通欧氏合成得到光速。
