@@ -1,0 +1,235 @@
+% Consolidated guide-ch13 from f8f4709b0ffac9da4c1fecbf2ce873002f6da6cc; source fragments preserved.
+
+% === BEGIN guide-ch13-examples.tex blob c35545168f16e651dbdb66c94d5d4d935900bae0 ===
+% 《大学物理学学习指导》第5版，第13章“光的衍射”，例13.1—13.8
+% 书内印刷190—195页，用户源PDF物理198—203页。
+% 解题原理、光栅缺级、角宽度等独立推演；次极大保留近似条件。
+
+\sourceexample{13.1}{190}{198}
+\problemtext 分析单缝衍射各级明条纹的角宽度，
+并讨论缩窄/加宽狭缝、入射平面波相对主轴倾斜、
+以及保持透镜不动仅上下移动狭缝时远场条纹的变化。
+\workings
+单缝宽$a$时暗纹满足$a\sin\theta_m=m\lambda$。
+中央亮纹由$\pm1$级暗纹夹住，
+\[
+\boxed{\Delta\theta_{\rm center}
+=2\arcsin(\lambda/a)\simeq2\lambda/a}.
+\]
+旁轴区相邻非中央亮纹宽度约为
+$\boxed{\Delta\theta_{\rm side}\simeq\lambda/a}$。
+$a$越小衍射条纹越宽、越明显；
+$a\gg\lambda$时图样集中在几何光学焦点附近。
+若准直入射方向相对主轴倾斜，中心亮纹随入射方向
+移至透镜后焦平面的另一位置，整组衍射图样一并平移。
+但在入射波面、焦面及薄透镜近似都不变的理想布置下，
+仅\emph{平移孔径}不改变强度傅里叶变换的模，
+所以不引起远场强度分布的平移。
+\crosscheck 中央亮纹角宽约为相邻侧纹的两倍，
+这一比值在小角近似下最清楚。
+若$\lambda/a>1$，一阶暗纹无传播方向，中央亮纹覆盖可见角域，
+上述普通“各级”划分不再适用。
+
+\sourceexample{13.2}{191}{199}
+\problemtext 单缝宽$a=0.60$ mm，透镜焦距$f=40$ cm，
+焦面距中央亮纹$y=1.4$ mm处观察到某条侧明纹；
+由可见波段$400$—$760$nm反推可能波长、
+侧明纹级次与半波带数。
+\workings
+旁轴角度$\theta\simeq y/f$，单缝程差
+\[
+\delta=a\sin\theta\simeq a\frac yf
+=\frac{(0.60\times10^{-3})(1.4\times10^{-3})}{0.40}
+=2.1\times10^{-6}\,\mathrm m.
+\]
+用\emph{教材半波带近似}描述第$k$侧明纹：
+$\delta\simeq(k+\tfrac12)\lambda$，有
+\[
+\lambda\simeq\frac{2100\,\mathrm{nm}}{k+1/2}.
+\]
+要求可见光，整数$k$只能为$k=3$或4；
+分别得到
+\[
+\boxed{k=3:\ \lambda\simeq600\,\mathrm{nm},\ N_{\rm half}=7},
+\]
+\[
+\boxed{k=4:\ \lambda\simeq466.7\,\mathrm{nm},\ N_{\rm half}=9}.
+\]
+\crosscheck \textbf{近似性质：}严格次极大位置需由
+$\tan\beta=\beta$求非零根。
+半波带奇数估算法给600nm、466.7nm，
+并非严格极值处的精确波长；此题按原书近似方法整理。
+
+\sourceexample{13.3}{191--192}{199--200}
+\problemtext 双缝中心距$d=0.10$ mm，每条缝宽$a=0.020$ mm，
+波长$\lambda=480$nm、透镜焦距$f=50$cm。
+求单缝衍射中央亮纹宽度，以及中央包络内有多少条双缝干涉亮纹。
+\workings
+单缝第一级暗纹满足$\sin\theta_1\simeq\lambda/a$，
+在焦面上半线宽$\ell=f\lambda/a$，
+中央全宽
+\[
+\boxed{W=2f\lambda/a
+=\frac{2(0.50)(480\times10^{-9})}{0.020\times10^{-3}}
+=24\,\mathrm{mm}}.
+\]
+双缝干涉亮纹满足$d\sin\theta=m\lambda$。
+在中央包络内部$|\sin\theta|<\lambda/a$，
+故$|m|<d/a=5$。
+$m=\pm5$处恰遇单缝第一暗纹，属于缺级，因此
+\[
+\boxed{m=0,\pm1,\pm2,\pm3,\pm4},\qquad
+\boxed{N_{\rm visible}=9}.
+\]
+\crosscheck 缺级导致中央包络内亮纹是9条，不是11条。
+
+\sourceexample{13.4}{192--193}{200--201}
+\problemtext 光栅垂直入射$\lambda=600$nm时，
+第2、3级亮纹分别位于$\sin\theta_2=0.20,\sin\theta_3=0.30$，
+第4级光栅主极大缺级。
+求光栅常量$d=a+b$、可能的狭缝宽度$a$、
+符合题意的最小$a$及最终全部可见主明纹级数。
+\workings
+光栅方程$d\sin\theta_k=k\lambda$，所以
+\[
+\boxed{d=\frac{2(600\,\mathrm{nm})}{0.20}
+=6.0\,\mu\mathrm m}.
+\]
+缺第4级意味着光栅主极大与单缝某阶零点重合：
+$d/a=4/m$，其中$m=1,2,3$且$a<d$。
+因此有
+\[
+\boxed{a=1.5,\ 3.0,\ 4.5\,\mu\mathrm m}.
+\]
+若按原题要求取最小值$a=1.5\,\mu$m，
+$d/a=4$，第4、8等4的倍数级缺失。
+又可见传播方向须满足$|k|<d/\lambda=10$，
+严格排除掠射$90^\circ$的第10级，
+\[
+\boxed{k=0,\pm1,\pm2,\pm3,\pm5,\pm6,\pm7,\pm9}
+\]
+共$\boxed{15}$条主亮纹。
+\crosscheck 对另外两种允许缝宽，缺级周期不同；
+“15条”特指采用源解所取\emph{最小}的狭缝宽度方案。
+
+\sourceexample{13.5}{193}{201}
+\problemtext 三块光栅的刻线密度分别为1400、600、100条/mm，
+拟测量可见光400—700nm范围，选择适合观察分立衍射光谱的光栅。
+\workings
+对应光栅常量约为
+\[
+d_1=0.714\,\mu\mathrm m,\qquad
+d_2=1.667\,\mu\mathrm m,\qquad
+d_3=10.0\,\mu\mathrm m.
+\]
+第一级光栅方程$\sin\theta=\lambda/d$。
+对于第1块在$\lambda=700$nm时，
+$\sin\theta\simeq0.98$，第一级极接近掠射，
+不便于实际布置与成像。
+对第3块，一级角度约$2.3^\circ$—$4.0^\circ$，
+谱线角分离较小。
+第2块使一级波段约在
+$\arcsin(0.24)$至$\arcsin(0.42)$，
+约$14^\circ$—$25^\circ$，适于观测。
+故按题设选\textbf{600条/mm的第二块光栅}。
+\crosscheck 刻线密度越高不保证量程越好；
+还应同时考虑有限传播角、光谱重叠与仪器几何范围。
+
+\sourceexample{13.6}{193--194}{201--202}
+\problemtext 一平面光栅每厘米刻590条，垂直入射波段为
+$0.4$—$0.7\,\mu$m的平行光。
+求第一级谱的角宽度；判断第3级紫光与第2级红光
+是否有重叠；若要求第二级全部落在单缝中央衍射包络内，
+估算狭缝宽度的最大允许值。
+\workings
+光栅常量
+\[
+d=\frac{1\,\mathrm{cm}}{590}
+\simeq1.695\times10^{-5}\,\mathrm m.
+\]
+第一级两端角
+$\theta_V=\arcsin(400\,\mathrm{nm}/d)\simeq1.35^\circ$，
+$\theta_R=\arcsin(700\,\mathrm{nm}/d)\simeq2.37^\circ$，
+因而
+\[
+\boxed{\Delta\theta_1\simeq1.02^\circ}.
+\]
+第3级400nm光的光程级数积为1200nm，
+第2级700nm光的级数积为1400nm，
+对应不同角度，但两级\emph{连续波段}在
+$3\lambda_V\le2\lambda_R$时有交叠，
+故\textbf{第3级与第2级光谱存在波段重叠}。
+要让第二级红端仍处于单缝中央包络内，
+第一暗纹界限$a\sin\theta=\lambda$应不小于
+二级红光衍射角，即
+\[
+a\lesssim\frac{\lambda_R}{\sin\theta_{2,R}}
+=\frac{\lambda_R}{2\lambda_R/d}
+=\frac d2
+\simeq8.47\times10^{-6}\,\mathrm m.
+\]
+故$\boxed{a_{\max}\simeq8.5\,\mu\mathrm m}$。
+\crosscheck \textbf{原书题面与印刷参考解存在单位矛盾：}
+题面确实印为\emph{每厘米590条}，即上述$d\simeq16.95\,\mu$m，
+角宽约$1.015^\circ$、$a_{\max}\simeq8.47\,\mu$m。
+然而原书参考解改用$d\simeq1.69\times10^{-4}$ cm
+（即$1.69\,\mu$m、对应\emph{每毫米590条}），
+并给出首级光谱角宽约$10^\circ48'$、
+$a_{\max}\simeq0.85\,\mu$m。
+两套数值不能同时满足题面刻痕密度；
+本稿尊重题面字面解，另外保留原书答案所采用的单位假设，
+此题\emph{原书单位勘误待二校}。
+
+
+\sourceexample{13.7}{194--195}{202--203}
+\problemtext 两波长$\lambda_1=440$nm、$\lambda_2=660$nm垂直入射同一光栅，
+两者非零主明纹的\emph{第二次重合}发生在衍射角$60^\circ$，
+求光栅常量。
+\workings
+两束光在同一衍射方向重合须满足
+$k_1\lambda_1=k_2\lambda_2$，
+故
+\[
+\frac{k_1}{k_2}=\frac{660}{440}=\frac32.
+\]
+最小正整数重合是$(k_1,k_2)=(3,2)$，
+第二次非零重合为$(6,4)$。
+于是光栅方程
+$d\sin60^\circ=6(440\,\mathrm{nm})$，
+\[
+\boxed{d=\frac{2640\,\mathrm{nm}}{\sin60^\circ}
+\simeq3048\,\mathrm{nm}\simeq3.05\,\mu\mathrm m}.
+\]
+\crosscheck 这里“第二次重合”不包括两色均重合的零级中央主明纹；
+若把中央零级也计入，则整数级次会不同。
+
+\sourceexample{13.8}{195}{203}
+\problemtext 晶体晶面距$d=0.275$nm，含有波长
+$0.095$—$0.130$nm的X射线束以$45^\circ$的晶面夹角入射，
+求哪些波长能产生强烈布拉格反射。
+\workings
+由布拉格定律
+$2d\sin\theta=k\lambda$，$\theta=45^\circ$，
+\[
+\lambda_k=\frac{2(0.275)\sin45^\circ}{k}\,\mathrm{nm}
+=\frac{0.38891}{k}\,\mathrm{nm}.
+\]
+逐个检查正整数$k$：
+\[
+\begin{aligned}
+k=1&:\ 0.389\,\mathrm{nm},\\
+k=2&:\ 0.194\,\mathrm{nm},\\
+k=3&:\ 0.1296\,\mathrm{nm},\\
+k=4&:\ 0.0972\,\mathrm{nm},\\
+k=5&:\ 0.0778\,\mathrm{nm}.
+\end{aligned}
+\]
+落在原题给定范围的只有
+\[
+\boxed{\lambda_3\simeq0.130\,\mathrm{nm}},\qquad
+\boxed{\lambda_4\simeq0.097\,\mathrm{nm}}.
+\]
+\crosscheck $45^\circ$是射线与晶面的夹角（布拉格掠射角），
+不是与晶面法线的夹角；在本题恰为45度所以两种角度数值相同，
+但一般题不能混用。
+% === END guide-ch13-examples.tex ===

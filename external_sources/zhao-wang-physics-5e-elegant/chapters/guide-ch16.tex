@@ -1,0 +1,221 @@
+% Consolidated guide-ch16 from f8f4709b0ffac9da4c1fecbf2ce873002f6da6cc; source fragments preserved.
+
+% === BEGIN guide-ch16-examples-001-004.tex blob c285dd47cb693986807336cca144b57e11e4fe48 ===
+% 《大学物理学学习指导》第5版，第16章
+% 例16.1—16.4；原书印刷227—228／PDF235—236页。
+\subsection{例题：核力、粒子作用及结合能}
+
+\sourceexample{16.1}{227}{235}
+\problemtext 填出核子之间核力的三个基本特征。
+\workings
+原书所给的三个特征依次为
+\textbf{短程性}、\textbf{饱和性}、
+\textbf{（近似）电荷无关性}。
+短程性指强核力主要作用于核子尺度；
+饱和性表明核子的强作用主要涉及附近有限核子。
+电荷无关近似对应强相互作用的同位旋对称性。
+\crosscheck 核力近似电荷无关，不意味着质子之间的
+电磁库仑斥力消失；真实核力仍有自旋及张量等依赖。
+
+\sourceexample{16.2}{227}{235}
+\problemtext 根据教材交换粒子的图像，填出参与电磁相互作用的
+粒子及其作用媒介。
+\workings
+本题所强调的是\textbf{带电粒子及具有磁矩的粒子}，
+电磁相互作用通过\textbf{光子}交换描述。
+\crosscheck “交换光子”在散射理论中可指虚光子，
+不要求过程中一定有可被单独探测的自由实光子。
+
+\sourceexample{16.3}{227}{235}
+\problemtext 写出本章讨论的三种基本粒子相互作用。
+\workings
+按原书三空依次为
+\textbf{强相互作用}、\textbf{电磁相互作用}、
+\textbf{弱相互作用}。
+\crosscheck 更广义的四种基本相互作用还包括引力，
+但本题要求的是原书核与粒子物理部分列出的三类，
+不能凭空把三空改为四空。
+
+\sourceexample{16.4}{227--228}{235--236}
+\problemtext 中性碳-12原子质量为$12.0000\,\mathrm u$，
+氢原子质量为$1.007825\,\mathrm u$，
+中子质量为$1.008665\,\mathrm u$。
+求碳-12原子核结合能与每核子的平均结合能。
+\workings
+利用中性氢原子质量计算，电子质量的贡献
+与中性碳原子中的电子数近似抵消。
+取质子数$Z=6$、质量数$A=12$，
+\[
+ \begin{aligned}
+ \Delta m&=Zm_{\mathrm H}+(A-Z)m_n-M_{\mathrm C}\\
+ &=6(1.007825)+6(1.008665)-12.0000\\
+ &=0.098940\,\mathrm u.
+ \end{aligned}
+\]
+使用$1\,\mathrm u\,c^2\simeq931.5\,\mathrm{MeV}$，
+\[
+ \boxed{E_b=\Delta mc^2\simeq92.163\,\mathrm{MeV}},
+ \qquad
+ \boxed{\overline E_b=\frac{E_b}{12}\simeq7.680\,\mathrm{MeV}}.
+\]
+\crosscheck 原书使用给定有效位数的原子质量，
+不是精密核质量表；若混用裸质子质量与中性碳质量，
+电子不能相消，结果将产生系统误差。
+% === END guide-ch16-examples-001-004.tex ===
+
+% === BEGIN guide-ch16-examples-005-007.tex blob 271a52117c15b9b88fd88a9c9d88212ea6a40469 ===
+% 《大学物理学学习指导》第5版，例16.5—16.7，
+% 原书印刷228—229／PDF236—237页；独立证明和边界条件。
+\subsection{例题：指数衰变、半衰期与碳-14测年}
+
+\sourceexample{16.5}{228}{236}
+\problemtext 设时刻$t=0$有$N_0$个不稳定原子核，
+各核种的衰变常数为$\lambda$。
+由单位时间内的衰变概率证明
+$N(t)=N_0e^{-\lambda t}$。
+\workings
+独立衰变模型中，短时间$dt$内的衰变概率
+为$\lambda dt+o(dt)$。
+剩余核数的期望变化满足
+\[
+ \frac{dN}{dt}=-\lambda N,\qquad
+ \frac{dN}{N}=-\lambda\,dt.
+\]
+积分并代入初始条件$N(0)=N_0$得
+\[
+ \boxed{N(t)=N_0e^{-\lambda t}}.
+\]
+令$N(T_{1/2})=N_0/2$，
+\[
+ \boxed{T_{1/2}=\frac{\ln2}{\lambda}}.
+\]
+\crosscheck 这里$N(t)$严格说是大量独立随机衰变的
+平均存留核数或其宏观近似；有限样本仍有统计起伏。
+原书以$\alpha$、$\beta$等衰变作统计示例，
+但衰变链补给及时间变化的环境作用会改变单指数模型。
+
+\sourceexample{16.6}{228}{236}
+\problemtext 放射性钍-234的半衰期为25天，
+求随后一天内核数减少的百分比。
+\workings
+以天为单位，
+$\lambda=(\ln2)/25$，
+一天后的比例$N/N_0=e^{-\lambda}=2^{-1/25}$，
+因此
+\[
+ \boxed{f=1-\frac{N}{N_0}
+ =1-2^{-1/25}\simeq0.02735=2.73\%}.
+\]
+\crosscheck 一天衰变率不是恒定的“每日$1/25$”，
+应对随时间变化的存留量作指数计算。
+原书保留约三位有效数字。
+
+\sourceexample{16.7}{228--229}{236--237}
+\problemtext 古生物残留样品的碳-14与碳-12比值
+记为$\rho$，空气中对应参考比值为$\rho_0$。
+若碳-14半衰期为$T$，证明年代公式。
+\workings
+设样品死亡后不再与环境交换碳，
+且碳-12数目保持不变，则
+\[
+ \frac{\rho}{\rho_0}=
+ \frac{N_{14}(t)}{N_{14}(0)}
+ =e^{-\lambda t}.
+\]
+由$\lambda=\ln2/T$，
+取对数得
+\[
+ \boxed{t=\frac{T}{\ln2}\ln\frac{\rho_0}{\rho}}.
+\]
+\crosscheck 需要$\rho\le\rho_0$且正值才能对应非负年代。
+实际考古测年还需大气碳-14浓度历时变化校准，
+以及污染与交换效应的单独检验；
+原书题只要求理想模型下的推导。
+% === END guide-ch16-examples-005-007.tex ===
+
+% === BEGIN guide-ch16-examples-008-010.tex blob 9ae26657c4bb0fbe9344cccd7b81d739f28f30a2 ===
+% 《大学物理学学习指导》第5版例16.8—16.10，
+% 原书印刷229／PDF物理237页；衰变与粒子反应近似均显式注明。
+\subsection{例题：镭活度、电子对产生与湮没}
+
+\sourceexample{16.8}{229}{237}
+\problemtext 测得$1$ g镭-226的活度为$1$居里，
+$1\,\mathrm{Ci}=3.7\times10^{10}\,\mathrm{s^{-1}}$。
+求其半衰期及平均寿命。
+\workings
+以摩尔质量近似为226g/mol，
+$N=N_A(1/226)$，
+其中$N_A=6.022\times10^{23}\,\mathrm{mol^{-1}}$。
+由$A=\lambda N$，
+\[
+ \lambda=\frac{A}{N}
+ =\frac{3.7\times10^{10}\cdot226}{6.022\times10^{23}}
+ \simeq1.39\times10^{-11}\,\mathrm{s^{-1}}.
+\]
+从而
+\[
+ \boxed{T_{1/2}=\frac{\ln2}{\lambda}
+ \simeq4.99\times10^{10}\,\mathrm s
+ \simeq1.58\times10^3\,\mathrm{yr}},
+\]
+\[
+ \boxed{\tau=\frac1\lambda
+ =\frac{T_{1/2}}{\ln2}
+ \simeq2.28\times10^3\,\mathrm{yr}}.
+\]
+\crosscheck 活度单位是每秒衰变数而非单核总数。
+计算使用原书给定居里换算值，结果与公认的
+镭-226约1600年半衰期量级相符。
+
+\sourceexample{16.9}{229}{237}
+\problemtext 高能光子与重原子核相互作用，
+生成一对电子和正电子。
+求能量阈值，并说明原书$1.022$ MeV近似的成立条件。
+\workings
+电子与正电子静能之和为$2m_ec^2$，
+因此在忽略重核反冲的近似下
+\[
+ \boxed{E_{\gamma,\min}\simeq2m_ec^2
+ =1.022\,\mathrm{MeV}}.
+\]
+若核在实验室原来静止，核质量有限为$M$，
+应使用入射的光子与原子核构成的总四动量不变量。
+入射不变量为
+$s=M^2c^4+2Mc^2E_\gamma$；
+阈值时最终质心系粒子静质量总和为$M+2m_e$，
+于是
+\[
+ M^2c^4+2Mc^2E_{\gamma,\min}
+ =(M+2m_e)^2c^4,
+\]
+即
+\[
+ \boxed{E_{\gamma,\min}
+ =2m_ec^2\left(1+\frac{m_e}{M}\right)}.
+\]
+\crosscheck 原书$1.022$MeV仅在$M\gg m_e$
+可忽略核的反冲能量时成立。
+一个光子在空旷真空中不能单独转化为正负电子对
+而同时满足能量与动量守恒，需要核等第三体。
+
+\sourceexample{16.10}{229}{237}
+\problemtext 电子与正电子相遇并湮没，
+说明通常产生的辐射及静止电子正电子对的
+两光子能量与方向。
+\workings
+低能、近静止的电子正电子对发生典型
+两光子湮没过程：
+$e^-+e^+\to\gamma+\gamma$。
+总三动量为零时，两光子的动量必须大小相等、
+方向相反，且能量守恒给
+\[
+ \boxed{\bm p_{\gamma1}=-\bm p_{\gamma2}},
+ \qquad
+ \boxed{E_{\gamma1}=E_{\gamma2}
+ =m_ec^2\simeq0.511\,\mathrm{MeV}}.
+\]
+\crosscheck 原书所说的“相反方向、两束511keV光子”
+需要初始正负电子对总动量为零且忽略初始动能。
+若初始总动量不为零，实验室系出射角和光子能量
+不必相等或严格背对背；不能将近静止情形无限推广。
+% === END guide-ch16-examples-008-010.tex ===
