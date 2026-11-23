@@ -1,4 +1,5 @@
 % Consolidated textbook-ch06 from a4681eacb57a1f9fed79c1da26e5c6d0418a7d1c; source fragments preserved.
+% 2026-11-24 八批严格复核第2批：本文件旧片段哈希对应历史版；当前内容含局部二校修订。
 
 % === BEGIN textbook-ch06-choices.tex blob 70e65c77e27b981734b9f625b09b0cf9eac8d79f ===
 % 《大学物理简明教程》（第五版）第6章“热力学基础”选择题6.1.1--6.1.13。
@@ -19,7 +20,7 @@
 \boxed{\Delta U=\nu C_{V,m}(T_f-T_i)}
 \]
 在任意连接两平衡态的过程中均成立，选\textbf{D}（准静态和非准静态均可）。
-\crosscheck 这里$\Delta U$为状态函数差而非“热量”；只有等容过程中才另有$Q_V=\Delta U$。
+\crosscheck 这里$\Delta U$为状态函数差而非“热量”；仅有体积功、且宏观动能势能变化可忽略时，等容过程有$Q_V=\Delta U$；其他非等容过程若净功为零也可满足$Q=\Delta U$。
 
 \sourceproblem{6.1.3}{154}{154}
 \problemtext 一定量理想气体经历某过程后温度升高，判断系统必定吸热、外界必定对其做正功、内能必定增加，以及“既吸热又对外做正功”是否必然。
@@ -117,7 +118,7 @@ W_{\rm net}=\nu RT\left[
 \eta_1=1-\frac{T_3}{T_1}>
 1-\frac{T_3}{T_2}=\eta_2.
 \]
-所以$Q_{h,1}=W_1/\eta_1<Q_{h,2}$；两台热机放热也不相等。
+所以$Q_{h,1}=W_1/\eta_1<Q_{h,2}$；且由$Q_{c,i}=Q_{h,i}-W_i$得$Q_{c,1}<Q_{c,2}$。
 唯有
 \[
 \boxed{Q_{h,1}-Q_{c,1}=Q_{h,2}-Q_{c,2}}
@@ -364,7 +365,7 @@ U_b-U_a=350-126=\boxed{224\,\mathrm J}.
 \sourceproblem{6.3.2}{156}{156}
 \problemtext 用桨叶搅拌密闭容器内的液体，桨叶向系统输入功率2.24 kW，同时容器以0.586 kW的速率向环境散热。求系统每秒内能改变多少。
 \workings
-液体与容器为系统；桨叶输入的机械功率为正$P_{\mathrm{on}}=2.24$ kW，
+液体与容器为系统，假设无质量交换、无其他功且宏观动能与势能的净变化可忽略；桨叶输入的机械功率为正$P_{\mathrm{on}}=2.24$ kW，
 系统放热$P_Q=-0.586$ kW。第一定律的功输入形式：
 \[
 \frac{dU}{dt}=\dot Q+\dot W_{\mathrm{on}}
@@ -438,10 +439,10 @@ $\boxed{W_{\mathrm{gas}}=-\Delta U\approx-7.49\times10^3\,\mathrm J}$。
 \approx1.96\times10^{26}\,\mathrm{m^{-3}}}.
 \]
 \crosscheck 原书明确是“刚性多原子分子气体”而不是刚性双原子；$i=6,\gamma=4/3$。
-若将多原子误读为双原子（$\gamma=7/5$），则末温度和内能结论会不同。
+若多原子分子实际为刚性线性分子（如理想刚性CO$_2$），其转动自由度为2，故$i=5$、$\gamma=7/5$；此时$T_2=T_1 16^{2/7}\approx662.8$ K，$\Delta U=(5/2)R(T_2-T_1)\approx7.54\times10^3$ J，$W_{\mathrm{gas}}=-\Delta U$，$n_2\approx1.77\times10^{26}\,\mathrm{m^{-3}}$。若原文未指定分子是否线性，须保留两种模型，不能把所有多原子分子一概取$i=6$。
 
 \sourceproblem{6.3.6}{157}{157}
-\problemtext 向标准状态下2 mol氢气（刚性双原子）传热500 J，
+\problemtext 向标准状态下2 mol氢气（刚性双原子）传热500 J，以下按仅有体积功的准静态过程计算，
 分别求等容、等温、等压过程中终态的温度、压强和体积相对初态的变化。
 \workings
 取初始$T_0=273.15$ K、$p_0=1$ atm、$\nu=2$ mol，
@@ -549,7 +550,7 @@ $L=80(4.184)\times10^3=3.3472\times10^5\,\mathrm{J/kg}$，
 \approx53.8\,\mathrm{kg}}.
 \]
 \crosscheck 只计算$0^\circ$C水凝固为$0^\circ$C冰的相变潜热，
-不附加水从室温冷却至零摄氏度的显热。理想实际效率取题设$\varepsilon=5$。
+不附加水从室温冷却至零摄氏度的显热。制冷系数取题设$\varepsilon=5$，它并非热机效率；未计其他热负荷。
 
 \sourceproblem{6.3.11}{157}{157}
 \problemtext 一假设的地下热源热机高温端为地下$300^\circ$C，
@@ -663,8 +664,8 @@ $T_C-T_D=(T_B-T_A)/r$，
 \problemtext 分别用热力学第一定律和第二定律证明：
 在理想气体的$p$--$V$图上，同一条可逆绝热线与同一条等温线不可能有两个不同交点。
 \workings
-\emph{第一种证明（状态方程与绝热关系）。}
-等温线满足$pV=C_1$，可逆绝热线满足$pV^\gamma=C_2$，
+\emph{第一种证明（第一定律与状态方程）。}
+对可逆绝热过程，$\delta Q=0$，由第一定律$\nu C_{V,m}\,dT=-p\,dV=-\nu RT\,dV/V$。正热容保证沿绝热线$T$随$V$严格下降，故同一温度只对应一个体积；定比热时积分给$TV^{\gamma-1}=\mathrm{const}$。亦可写为下述代数证明：等温线满足$pV=C_1$，可逆绝热线满足$pV^\gamma=C_2$，
 其中$\gamma>1$。若两曲线在不同点$A,B$相交，则
 \[
 p_AV_A=p_BV_B,\qquad
@@ -675,16 +676,14 @@ p_AV_A^\gamma=p_BV_B^\gamma.
 \emph{第二种证明（第二定律）。}
 若存在两交点，沿等温线从$A$至$B$并沿绝热线从$B$返回$A$，
 即可构成仅与\emph{一个热源}交换热量的封闭循环；
-若路径围成非零面积，则其净功
-$W=\oint p\,dV\ne0$。
+沿等温线选膨胀方向，$Q_{AB}=\nu RT\ln(V_B/V_A)>0$（$V_B>V_A$）；绝热返回段不交换热量。由循环第一定律，$W_{\mathrm{net}}=Q_{AB}>0$，不需要额外假定路径面积非零。
 取能产生正净功的循环方向，就会使从单一热源吸收的热量
 完全变为机械功，与热力学第二定律的开尔文表述矛盾。
 \[
 \boxed{A=B}
 \]
 即所谓的两个交点只能退化为同一状态点。
-\crosscheck 此结论关于\emph{同一种理想气体、固定$\gamma>1$、
-同一条可逆绝热线}成立；实际非平衡或不可逆绝热路径不能直接写$pV^\gamma=\mathrm{const}$。
+\crosscheck 此结论关于\emph{同一种固定量理想气体、正定容热容、同一条可逆绝热线}成立；固定$\gamma$只用于幂律形式，实际非平衡或不可逆绝热路径不能直接写$pV^\gamma=\mathrm{const}$。
 
 \sourceproblem{6.3.16}{158}{158}
 \problemtext 1 mol单原子理想气体在\emph{恒定压强}下准静态地由$0^\circ$C升至$100^\circ$C。求熵的变化。
@@ -733,7 +732,7 @@ $Q=mL=(0.5)(334000)=167000$ J。
 
 \sourceproblem{6.3.18}{158}{158}
 \problemtext 1 kg初温$20^\circ$C的水接触$100^\circ$C的大恒温热源，
-逐渐升至$100^\circ$C。水比热容
+逐渐升至$100^\circ$C（只计液态水升温，不计蒸发或沸腾潜热）。水比热容
 $c=4.18\times10^3\,\mathrm{J/(kg\,K)}$。
 求水、热源及其组成的孤立系统各自熵变。
 \workings
