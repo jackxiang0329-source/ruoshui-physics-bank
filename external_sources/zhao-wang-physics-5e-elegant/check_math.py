@@ -133,7 +133,7 @@ def second_round_regressions():
     near(10*10+10**2,200)
     near((math.sqrt(2)-1)*.01,.004142135623730951)
     near(5*(-1200+900*9.8*5),214_500)
-    near(.5*1.5*((.01*(500-30)/1.5)**2)/1.25+1.5*9.8,
+    near(1.5*((.01*(500-30)/1.5)**2)/1.25+1.5*9.8,
          1.5*9.8+1.5*(4.7/1.5)**2/1.25)  # same string-tension model
     near(4.7/1.5, 47/15)
     # Orbit angular momentum and Earth-Moon collinear balance.
