@@ -3,6 +3,10 @@
 底本：I. E. Irodov, *Problems in General Physics*，用户上传 Arihant 版 PDF（385 页）。
 译注、补全推导以及本版勘误均属于研究用初稿；原书著作权与翻译、公开发行权归原权利人。
 
+## 2026-11-24 全仓库精简（无损合并）
+
+原来164份分批次LaTeX片段按原书40个小节合成40份，净减124份；每个新文件保留原始内容和blob SHA注释。1,878道独立题号、题解、校核段均维持原顺序。原文件与新章节对应表：[COMPACTION-MAP.md](chapters/COMPACTION-MAP.md)。Git历史可恢复原文件。
+
 ## 真实进度（2026-11-22）
 
 - **跨版本物理严格复核第三轮：** 针对 II.162 肥皂泡$n/\eta$、V.139 光栅10.0mm/10.0m、V.140 波长670.8nm/mm、V.142 焦平面近轴/精确几何及 V.254 Wien频谱 $\omega^3/\omega^2$，重新核定有物理解的主分支并完整保留此前记录的扫描字面差异。更新5处题解，新增 `cross_edition_physics_regression.py` 独立的等温气体、瑞利分辨、谱密度雅可比/数值积分与峰位核验，正式接入 Actions。**不增加独立题目数；公开版本的原题转录不能代替对用户上传扫描页的重新逐图校核。** 具体见 `quality-check.md`、`errata.md`。
@@ -77,170 +81,46 @@
 | 内容 | 文件 |
 |---|---|
 | ElegantBook 中文主文件 | [main.tex](main.tex) |
-| 1—20题 | [01-mechanics-kinematics-001-020.tex](chapters/01-mechanics-kinematics-001-020.tex) |
-| 21—30题 | [01-mechanics-kinematics-021-030.tex](chapters/01-mechanics-kinematics-021-030.tex) |
-| 31—40题 | [01-mechanics-kinematics-031-040.tex](chapters/01-mechanics-kinematics-031-040.tex) |
-| 41—50题 | [01-mechanics-kinematics-041-050.tex](chapters/01-mechanics-kinematics-041-050.tex) |
-| 51—58题 | [01-mechanics-kinematics-051-058.tex](chapters/01-mechanics-kinematics-051-058.tex) |
-| 59—70题 | [02-mechanics-dynamics-059-070.tex](chapters/02-mechanics-dynamics-059-070.tex) |
-| 71—80题 | [02-mechanics-dynamics-071-080.tex](chapters/02-mechanics-dynamics-071-080.tex) |
-| 81—90题 | [02-mechanics-dynamics-081-090.tex](chapters/02-mechanics-dynamics-081-090.tex) |
-| 91—100题 | [02-mechanics-dynamics-091-100.tex](chapters/02-mechanics-dynamics-091-100.tex) |
-| 101—110题 | [02-mechanics-dynamics-101-110.tex](chapters/02-mechanics-dynamics-101-110.tex) |
-| 111—117题 | [02-mechanics-dynamics-111-117.tex](chapters/02-mechanics-dynamics-111-117.tex) |
-| 118—120题 | [03-mechanics-conservation-118-120.tex](chapters/03-mechanics-conservation-118-120.tex) |
-| 121—130题 | [03-mechanics-conservation-121-130.tex](chapters/03-mechanics-conservation-121-130.tex) |
-| 131—140题 | [03-mechanics-conservation-131-140.tex](chapters/03-mechanics-conservation-131-140.tex) |
-| 141—150题 | [03-mechanics-conservation-141-150.tex](chapters/03-mechanics-conservation-141-150.tex) |
-| 151—160题 | [03-mechanics-conservation-151-160.tex](chapters/03-mechanics-conservation-151-160.tex) |
-| 161—170题 | [03-mechanics-conservation-161-170.tex](chapters/03-mechanics-conservation-161-170.tex) |
-| 171—180题 | [03-mechanics-conservation-171-180.tex](chapters/03-mechanics-conservation-171-180.tex) |
-| 181—190题 | [03-mechanics-conservation-181-190.tex](chapters/03-mechanics-conservation-181-190.tex) |
-| 191—199题 | [03-mechanics-conservation-191-199.tex](chapters/03-mechanics-conservation-191-199.tex) |
-| 200—210题 | [04-gravitation-200-210.tex](chapters/04-gravitation-200-210.tex) |
-| 211—220题 | [04-gravitation-211-220.tex](chapters/04-gravitation-211-220.tex) |
-| 221—233题 | [04-gravitation-221-233.tex](chapters/04-gravitation-221-233.tex) |
-| 234—240题 | [05-rigid-body-234-240.tex](chapters/05-rigid-body-234-240.tex) |
-| 241—250题 | [05-rigid-body-241-250.tex](chapters/05-rigid-body-241-250.tex) |
-| 251—260题 | [05-rigid-body-251-260.tex](chapters/05-rigid-body-251-260.tex) |
-| 261—270题 | [05-rigid-body-261-270.tex](chapters/05-rigid-body-261-270.tex) |
-| 271—280题 | [05-rigid-body-271-280.tex](chapters/05-rigid-body-271-280.tex) |
-| 281—289题 | [05-rigid-body-281-289.tex](chapters/05-rigid-body-281-289.tex) |
-| 290题 | [06-elasticity-290-290.tex](chapters/06-elasticity-290-290.tex) |
-| 291—300题 | [06-elasticity-291-300.tex](chapters/06-elasticity-291-300.tex) |
-| 301—310题 | [06-elasticity-301-310.tex](chapters/06-elasticity-301-310.tex) |
-| 311—314题 | [06-elasticity-311-314.tex](chapters/06-elasticity-311-314.tex) |
-| 315—324题 | [07-hydrodynamics-315-324.tex](chapters/07-hydrodynamics-315-324.tex) |
-| 325—334题 | [07-hydrodynamics-325-334.tex](chapters/07-hydrodynamics-325-334.tex) |
-| 335—339题 | [07-hydrodynamics-335-339.tex](chapters/07-hydrodynamics-335-339.tex) |
-| 340—350题 | [08-relativity-340-350.tex](chapters/08-relativity-340-350.tex) |
-| 351—360题 | [08-relativity-351-360.tex](chapters/08-relativity-351-360.tex) |
-| 第一篇361—370题 | [08-relativity-361-370.tex](chapters/08-relativity-361-370.tex) |
-| 第一篇371—380题 | [08-relativity-371-380.tex](chapters/08-relativity-371-380.tex) |
-| 第一篇381—388题 | [08-relativity-381-388.tex](chapters/08-relativity-381-388.tex) |
-| 第二篇2.1节1—11题 | [09-thermo-state-001-011.tex](chapters/09-thermo-state-001-011.tex) |
-| 第二篇2.1节12—20题 | [09-thermo-state-012-020.tex](chapters/09-thermo-state-012-020.tex) |
-| 第二篇2.1节21—25题 | [09-thermo-state-021-025.tex](chapters/09-thermo-state-021-025.tex) |
-| 第二篇2.2节26—35题 | [10-thermo-first-law-026-035.tex](chapters/10-thermo-first-law-026-035.tex) |
-| 第二篇2.2节36—45题 | [10-thermo-first-law-036-045.tex](chapters/10-thermo-first-law-036-045.tex) |
-| 第二篇2.2节46—56题 | [10-thermo-first-law-046-056.tex](chapters/10-thermo-first-law-046-056.tex) |
-| 第二篇2.2节57—61题 | [10-thermo-first-law-057-061.tex](chapters/10-thermo-first-law-057-061.tex) |
-| 第二篇2.3节62—72题 | [11-kinetic-theory-062-072.tex](chapters/11-kinetic-theory-062-072.tex) |
-| 第二篇2.3节73—83题 | [11-kinetic-theory-073-083.tex](chapters/11-kinetic-theory-073-083.tex) |
-| 第二篇2.3节84—94题 | [11-kinetic-theory-084-094.tex](chapters/11-kinetic-theory-084-094.tex) |
-| 第二篇2.3节95—103题 | [11-kinetic-theory-095-103.tex](chapters/11-kinetic-theory-095-103.tex) |
-| 第二篇2.3节104—112题 | [11-kinetic-theory-104-112.tex](chapters/11-kinetic-theory-104-112.tex) |
-| 第二篇2.4节113—121题 | [12-entropy-cycles-113-121.tex](chapters/12-entropy-cycles-113-121.tex) |
-| 第二篇2.4节122—129题 | [12-entropy-cycles-122-129.tex](chapters/12-entropy-cycles-122-129.tex) |
-| 第二篇2.4节130—139题 | [12-entropy-cycles-130-139.tex](chapters/12-entropy-cycles-130-139.tex) |
-| 第二篇2.4节140—145题 | [12-entropy-cycles-140-145.tex](chapters/12-entropy-cycles-140-145.tex) |
-| 第二篇2.4节146—159题 | [12-entropy-cycles-146-159.tex](chapters/12-entropy-cycles-146-159.tex) |
-| 第二篇2.5节160—169题 | [13-capillarity-160-169.tex](chapters/13-capillarity-160-169.tex) |
-| 第二篇2.5节170—179题 | [13-capillarity-170-179.tex](chapters/13-capillarity-170-179.tex) |
-| 第二篇2.5节180—184题 | [13-capillarity-180-184.tex](chapters/13-capillarity-180-184.tex) |
-| 第二篇2.6节185—194题 | [14-phase-transformations-185-194.tex](chapters/14-phase-transformations-185-194.tex) |
-| 第二篇2.6节195—204题 | [14-phase-transformations-195-204.tex](chapters/14-phase-transformations-195-204.tex) |
-| 第二篇2.6节205—214题 | [14-phase-transformations-205-214.tex](chapters/14-phase-transformations-205-214.tex) |
-| 第二篇2.6节215—219题 | [14-phase-transformations-215-219.tex](chapters/14-phase-transformations-215-219.tex) |
-| 第二篇2.7节220—229题 | [15-transport-220-229.tex](chapters/15-transport-220-229.tex) |
-| 第二篇2.7节230—239题 | [15-transport-230-239.tex](chapters/15-transport-230-239.tex) |
-| 第二篇2.7节240—245题 | [15-transport-240-245.tex](chapters/15-transport-240-245.tex) |
-| 第二篇2.7节246—257题 | [15-transport-246-257.tex](chapters/15-transport-246-257.tex) |
-| 第三篇3.1节1—12题 | [16-electrostatics-vacuum-001-012.tex](chapters/16-electrostatics-vacuum-001-012.tex) |
-| 第三篇3.1节13—27题 | [16-electrostatics-vacuum-013-027.tex](chapters/16-electrostatics-vacuum-013-027.tex) |
-| 第三篇3.1节28—40题 | [16-electrostatics-vacuum-028-040.tex](chapters/16-electrostatics-vacuum-028-040.tex) |
-| 第三篇3.1节41—53题 | [16-electrostatics-vacuum-041-053.tex](chapters/16-electrostatics-vacuum-041-053.tex) |
-| 第三篇3.2节54—65题 | [17-electro-conductors-054-065.tex](chapters/17-electro-conductors-054-065.tex) |
-| 第三篇3.2节66—77题 | [17-electro-conductors-066-077.tex](chapters/17-electro-conductors-066-077.tex) |
-| 第三篇3.2节78—88题 | [17-electro-conductors-078-088.tex](chapters/17-electro-conductors-078-088.tex) |
-| 第三篇3.2节89—100题 | [17-electro-conductors-089-100.tex](chapters/17-electro-conductors-089-100.tex) |
-| 第三篇3.3节101—112题 | [18-capacitance-energy-101-112.tex](chapters/18-capacitance-energy-101-112.tex) |
-| 第三篇3.3节113—121题 | [18-capacitance-energy-113-121.tex](chapters/18-capacitance-energy-113-121.tex) |
-| 第三篇3.3节122—130题 | [18-capacitance-energy-122-130.tex](chapters/18-capacitance-energy-122-130.tex) |
-| 第三篇3.3节131—140题 | [18-capacitance-energy-131-140.tex](chapters/18-capacitance-energy-131-140.tex) |
-| 第三篇3.3节141—146题 | [18-capacitance-energy-141-146.tex](chapters/18-capacitance-energy-141-146.tex) |
-| 第三篇3.4节147—160题 | [19-electric-current-147-160.tex](chapters/19-electric-current-147-160.tex) |
-| 第三篇3.4节161—175题 | [19-electric-current-161-175.tex](chapters/19-electric-current-161-175.tex) |
-| 第三篇3.4节176—188题 | [19-electric-current-176-188.tex](chapters/19-electric-current-176-188.tex) |
-| 第三篇3.4节189—200题 | [19-electric-current-189-200.tex](chapters/19-electric-current-189-200.tex) |
-| 第三篇3.4节201—218题 | [19-electric-current-201-218.tex](chapters/19-electric-current-201-218.tex) |
-| 第三篇3.5节219—235题 | [20-magnetostatics-219-235.tex](chapters/20-magnetostatics-219-235.tex) |
-| 第三篇3.5节236—250题 | [20-magnetostatics-236-250.tex](chapters/20-magnetostatics-236-250.tex) |
-| 第三篇3.5节251—262题 | [20-magnetostatics-251-262.tex](chapters/20-magnetostatics-251-262.tex) |
-| 第三篇3.5节263—274题 | [20-magnetostatics-263-274.tex](chapters/20-magnetostatics-263-274.tex) |
-| 第三篇3.5节275—287题 | [20-magnetostatics-275-287.tex](chapters/20-magnetostatics-275-287.tex) |
-| 第三篇3.6节288题 | [21-induction-288-288.tex](chapters/21-induction-288-288.tex) |
-| 第三篇3.6节289—304题 | [21-induction-289-304.tex](chapters/21-induction-289-304.tex) |
-| 第三篇3.6节305—322题 | [21-induction-305-322.tex](chapters/21-induction-305-322.tex) |
-| 第三篇3.6节323—346题 | [21-induction-323-346.tex](chapters/21-induction-323-346.tex) |
-| 第三篇3.6节347—371题 | [21-induction-347-371.tex](chapters/21-induction-347-371.tex) |
-| 第三篇3.7节372—388题 | [22-charged-particles-372-388.tex](chapters/22-charged-particles-372-388.tex) |
-| 第三篇3.7节389—407题（本篇完结） | [22-charged-particles-389-407.tex](chapters/22-charged-particles-389-407.tex) |
-| 第四篇4.1节1—20题 | [23-mechanical-oscillations-001-020.tex](chapters/23-mechanical-oscillations-001-020.tex) |
-| 第四篇4.1节21—33题 | [23-mechanical-oscillations-021-033.tex](chapters/23-mechanical-oscillations-021-033.tex) |
-| 第四篇4.1节34—50题 | [23-mechanical-oscillations-034-050.tex](chapters/23-mechanical-oscillations-034-050.tex) |
-| 第四篇4.1节51—65题 | [23-mechanical-oscillations-051-065.tex](chapters/23-mechanical-oscillations-051-065.tex) |
-| 第四篇4.1节66—81题 | [23-mechanical-oscillations-066-081.tex](chapters/23-mechanical-oscillations-066-081.tex) |
-| 第四篇4.1节82—93题（机械振动完结） | [23-mechanical-oscillations-082-093.tex](chapters/23-mechanical-oscillations-082-093.tex) |
-| 第四篇4.2节94—109题 | [24-electric-oscillations-094-109.tex](chapters/24-electric-oscillations-094-109.tex) |
-| 第四篇4.2节110—125题 | [24-electric-oscillations-110-125.tex](chapters/24-electric-oscillations-110-125.tex) |
-| 第四篇4.2节126—137题 | [24-electric-oscillations-126-137.tex](chapters/24-electric-oscillations-126-137.tex) |
-| 第四篇4.2节138—149题（电振荡完结） | [24-electric-oscillations-138-149.tex](chapters/24-electric-oscillations-138-149.tex) |
-| 第四篇4.3节150—165题 | [25-elastic-waves-150-165.tex](chapters/25-elastic-waves-150-165.tex) |
-| 第四篇4.3节166—181题 | [25-elastic-waves-166-181.tex](chapters/25-elastic-waves-166-181.tex) |
-| 第四篇4.3节182—188题（声学完结） | [25-elastic-waves-182-188.tex](chapters/25-elastic-waves-182-188.tex) |
-| 第四篇4.4节189—200题 | [26-em-waves-189-200.tex](chapters/26-em-waves-189-200.tex) |
-| 第四篇4.4节201—212题 | [26-em-waves-201-212.tex](chapters/26-em-waves-201-212.tex) |
-| 第四篇4.4节213—224题（第四篇完结） | [26-em-waves-213-224.tex](chapters/26-em-waves-213-224.tex) |
-| 第五篇5.1节1—12题 | [27-optics-photometry-001-012.tex](chapters/27-optics-photometry-001-012.tex) |
-| 第五篇5.1节13—25题 | [27-optics-photometry-013-025.tex](chapters/27-optics-photometry-013-025.tex) |
-| 第五篇5.1节26—35题 | [27-optics-photometry-026-035.tex](chapters/27-optics-photometry-026-035.tex) |
-| 第五篇5.1节36—45题 | [27-optics-photometry-036-045.tex](chapters/27-optics-photometry-036-045.tex) |
-| 第五篇5.1节46—57题 | [27-optics-photometry-046-057.tex](chapters/27-optics-photometry-046-057.tex) |
-| 第五篇5.1节58—63题（几何光学完结） | [27-optics-photometry-058-063.tex](chapters/27-optics-photometry-058-063.tex) |
-| 第五篇5.2节64—75题 | [28-optics-interference-064-075.tex](chapters/28-optics-interference-064-075.tex) |
-| 第五篇5.2节76—86题 | [28-optics-interference-076-086.tex](chapters/28-optics-interference-076-086.tex) |
-| 第五篇5.2节87—96题（干涉完结） | [28-optics-interference-087-096.tex](chapters/28-optics-interference-087-096.tex) |
-| 第五篇5.3节97—108题 | [29-optics-diffraction-097-108.tex](chapters/29-optics-diffraction-097-108.tex) |
-| 第五篇5.3节109—118题 | [29-optics-diffraction-109-118.tex](chapters/29-optics-diffraction-109-118.tex) |
-| 第五篇5.3节119—130题 | [29-optics-diffraction-119-130.tex](chapters/29-optics-diffraction-119-130.tex) |
-| 第五篇5.3节131—142题 | [29-optics-diffraction-131-142.tex](chapters/29-optics-diffraction-131-142.tex) |
-| 第五篇5.3节143—150题 | [29-optics-diffraction-143-150.tex](chapters/29-optics-diffraction-143-150.tex) |
-| 第五篇5.3节151—156题（衍射完结） | [29-optics-diffraction-151-156.tex](chapters/29-optics-diffraction-151-156.tex) |
-| 第五篇5.4节157题（偏振开始） | [30-optics-polarization-157-157.tex](chapters/30-optics-polarization-157-157.tex) |
-| 第五篇5.4节158—175题 | [30-optics-polarization-158-175.tex](chapters/30-optics-polarization-158-175.tex) |
-| 第五篇5.4节176—199题（偏振完结） | [30-optics-polarization-176-199.tex](chapters/30-optics-polarization-176-199.tex) |
-| 第五篇5.5节200—215题 | [31-optics-dispersion-200-215.tex](chapters/31-optics-dispersion-200-215.tex) |
-| 第五篇5.5节216—223题（色散与吸收完结） | [31-optics-dispersion-216-223.tex](chapters/31-optics-dispersion-216-223.tex) |
-| 第五篇5.6节224—245题（运动光源光学完结） | [32-moving-optics-224-245.tex](chapters/32-moving-optics-224-245.tex) |
-| 第五篇5.7节246—257题 | [33-thermal-radiation-246-257.tex](chapters/33-thermal-radiation-246-257.tex) |
-| 第五篇5.7节258—268题 | [33-thermal-radiation-258-268.tex](chapters/33-thermal-radiation-258-268.tex) |
-| 第五篇5.7节269—280题 | [33-thermal-radiation-269-280.tex](chapters/33-thermal-radiation-269-280.tex) |
-| 第五篇5.7节281—292题（光学完结） | [33-thermal-radiation-281-292.tex](chapters/33-thermal-radiation-281-292.tex) |
-| 第六篇6.1节1—18题 | [34-atomic-scattering-001-018.tex](chapters/34-atomic-scattering-001-018.tex) |
-| 第六篇6.1节19—32题 | [34-atomic-scattering-019-032.tex](chapters/34-atomic-scattering-019-032.tex) |
-| 第六篇6.1节33—48题（6.1节完结） | [34-atomic-scattering-033-048.tex](chapters/34-atomic-scattering-033-048.tex) |
-| 第六篇6.2节49—65题 | [35-wave-properties-049-065.tex](chapters/35-wave-properties-049-065.tex) |
-| 第六篇6.2节66—80题 | [35-wave-properties-066-080.tex](chapters/35-wave-properties-066-080.tex) |
-| 第六篇6.2节81—96题（本节完成） | [35-wave-properties-081-096.tex](chapters/35-wave-properties-081-096.tex) |
-| 第六篇6.3节97—104题 | [36-atomic-spectra-097-104.tex](chapters/36-atomic-spectra-097-104.tex) |
-| 第六篇6.3节105—117题 | [36-atomic-spectra-105-117.tex](chapters/36-atomic-spectra-105-117.tex) |
-| 第六篇6.3节118—134题 | [36-atomic-spectra-118-134.tex](chapters/36-atomic-spectra-118-134.tex) |
-| 第六篇6.3节135—147题 | [36-atomic-spectra-135-147.tex](chapters/36-atomic-spectra-135-147.tex) |
-| 第六篇6.3节148—158题 | [36-atomic-spectra-148-158.tex](chapters/36-atomic-spectra-148-158.tex) |
-| 第六篇6.3节159—166题（本节完成） | [36-atomic-spectra-159-166.tex](chapters/36-atomic-spectra-159-166.tex) |
-| 第六篇6.4节167—180题 | [37-molecules-crystals-167-180.tex](chapters/37-molecules-crystals-167-180.tex) |
-| 第六篇6.4节181—196题 | [37-molecules-crystals-181-196.tex](chapters/37-molecules-crystals-181-196.tex) |
-| 第六篇6.4节197—213题（本节完成） | [37-molecules-crystals-197-213.tex](chapters/37-molecules-crystals-197-213.tex) |
-| 第六篇6.5节214—226题 | [38-radioactivity-214-226.tex](chapters/38-radioactivity-214-226.tex) |
-| 第六篇6.5节227—237题 | [38-radioactivity-227-237.tex](chapters/38-radioactivity-227-237.tex) |
-| 第六篇6.5节238—248题（本节完成） | [38-radioactivity-238-248.tex](chapters/38-radioactivity-238-248.tex) |
-| 第六篇6.6节249—258题 | [39-nuclear-reactions-249-258.tex](chapters/39-nuclear-reactions-249-258.tex) |
-| 第六篇6.6节259—266题 | [39-nuclear-reactions-259-266.tex](chapters/39-nuclear-reactions-259-266.tex) |
-| 第六篇6.6节267—280题 | [39-nuclear-reactions-267-280.tex](chapters/39-nuclear-reactions-267-280.tex) |
-| 第六篇6.6节281—290题（本节完成） | [39-nuclear-reactions-281-290.tex](chapters/39-nuclear-reactions-281-290.tex) |
-| 第六篇6.7节291—300题 | [40-elementary-particles-291-300.tex](chapters/40-elementary-particles-291-300.tex) |
-| 第六篇6.7节301—310题（原书终题） | [40-elementary-particles-301-310.tex](chapters/40-elementary-particles-301-310.tex) |
+| 小节 `01-mechanics-kinematics`（原 5 份片段） | [01-mechanics-kinematics.tex](chapters/01-mechanics-kinematics.tex) |
+| 小节 `02-mechanics-dynamics`（原 6 份片段） | [02-mechanics-dynamics.tex](chapters/02-mechanics-dynamics.tex) |
+| 小节 `03-mechanics-conservation`（原 9 份片段） | [03-mechanics-conservation.tex](chapters/03-mechanics-conservation.tex) |
+| 小节 `04-gravitation`（原 3 份片段） | [04-gravitation.tex](chapters/04-gravitation.tex) |
+| 小节 `05-rigid-body`（原 6 份片段） | [05-rigid-body.tex](chapters/05-rigid-body.tex) |
+| 小节 `06-elasticity`（原 4 份片段） | [06-elasticity.tex](chapters/06-elasticity.tex) |
+| 小节 `07-hydrodynamics`（原 3 份片段） | [07-hydrodynamics.tex](chapters/07-hydrodynamics.tex) |
+| 小节 `08-relativity`（原 5 份片段） | [08-relativity.tex](chapters/08-relativity.tex) |
+| 小节 `09-thermo-state`（原 3 份片段） | [09-thermo-state.tex](chapters/09-thermo-state.tex) |
+| 小节 `10-thermo-first-law`（原 4 份片段） | [10-thermo-first-law.tex](chapters/10-thermo-first-law.tex) |
+| 小节 `11-kinetic-theory`（原 5 份片段） | [11-kinetic-theory.tex](chapters/11-kinetic-theory.tex) |
+| 小节 `12-entropy-cycles`（原 5 份片段） | [12-entropy-cycles.tex](chapters/12-entropy-cycles.tex) |
+| 小节 `13-capillarity`（原 3 份片段） | [13-capillarity.tex](chapters/13-capillarity.tex) |
+| 小节 `14-phase-transformations`（原 4 份片段） | [14-phase-transformations.tex](chapters/14-phase-transformations.tex) |
+| 小节 `15-transport`（原 4 份片段） | [15-transport.tex](chapters/15-transport.tex) |
+| 小节 `16-electrostatics-vacuum`（原 4 份片段） | [16-electrostatics-vacuum.tex](chapters/16-electrostatics-vacuum.tex) |
+| 小节 `17-electro-conductors`（原 4 份片段） | [17-electro-conductors.tex](chapters/17-electro-conductors.tex) |
+| 小节 `18-capacitance-energy`（原 5 份片段） | [18-capacitance-energy.tex](chapters/18-capacitance-energy.tex) |
+| 小节 `19-electric-current`（原 5 份片段） | [19-electric-current.tex](chapters/19-electric-current.tex) |
+| 小节 `20-magnetostatics`（原 5 份片段） | [20-magnetostatics.tex](chapters/20-magnetostatics.tex) |
+| 小节 `21-induction`（原 5 份片段） | [21-induction.tex](chapters/21-induction.tex) |
+| 小节 `22-charged-particles`（原 2 份片段） | [22-charged-particles.tex](chapters/22-charged-particles.tex) |
+| 小节 `23-mechanical-oscillations`（原 6 份片段） | [23-mechanical-oscillations.tex](chapters/23-mechanical-oscillations.tex) |
+| 小节 `24-electric-oscillations`（原 4 份片段） | [24-electric-oscillations.tex](chapters/24-electric-oscillations.tex) |
+| 小节 `25-elastic-waves`（原 3 份片段） | [25-elastic-waves.tex](chapters/25-elastic-waves.tex) |
+| 小节 `26-em-waves`（原 3 份片段） | [26-em-waves.tex](chapters/26-em-waves.tex) |
+| 小节 `27-optics-photometry`（原 6 份片段） | [27-optics-photometry.tex](chapters/27-optics-photometry.tex) |
+| 小节 `28-optics-interference`（原 3 份片段） | [28-optics-interference.tex](chapters/28-optics-interference.tex) |
+| 小节 `29-optics-diffraction`（原 6 份片段） | [29-optics-diffraction.tex](chapters/29-optics-diffraction.tex) |
+| 小节 `30-optics-polarization`（原 3 份片段） | [30-optics-polarization.tex](chapters/30-optics-polarization.tex) |
+| 小节 `31-optics-dispersion`（原 2 份片段） | [31-optics-dispersion.tex](chapters/31-optics-dispersion.tex) |
+| 小节 `32-moving-optics`（原 1 份片段） | [32-moving-optics.tex](chapters/32-moving-optics.tex) |
+| 小节 `33-thermal-radiation`（原 4 份片段） | [33-thermal-radiation.tex](chapters/33-thermal-radiation.tex) |
+| 小节 `34-atomic-scattering`（原 3 份片段） | [34-atomic-scattering.tex](chapters/34-atomic-scattering.tex) |
+| 小节 `35-wave-properties`（原 3 份片段） | [35-wave-properties.tex](chapters/35-wave-properties.tex) |
+| 小节 `36-atomic-spectra`（原 6 份片段） | [36-atomic-spectra.tex](chapters/36-atomic-spectra.tex) |
+| 小节 `37-molecules-crystals`（原 3 份片段） | [37-molecules-crystals.tex](chapters/37-molecules-crystals.tex) |
+| 小节 `38-radioactivity`（原 3 份片段） | [38-radioactivity.tex](chapters/38-radioactivity.tex) |
+| 小节 `39-nuclear-reactions`（原 4 份片段） | [39-nuclear-reactions.tex](chapters/39-nuclear-reactions.tex) |
+| 小节 `40-elementary-particles`（原 2 份片段） | [40-elementary-particles.tex](chapters/40-elementary-particles.tex) |
 | 源书勘误 | [errata.md](errata.md) |
 | 技术与学术质检记录 | [quality-check.md](quality-check.md) |
 | 结构完整性检查 | [check_sources.py](check_sources.py) |

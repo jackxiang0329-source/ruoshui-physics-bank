@@ -120,8 +120,8 @@ def main() -> int:
                 fatal.append(f"{ref}: empty QA section")
         check_delimiters(text, filename)
 
-    if chapter_count != 164 or problem_count != 1878:
-        fatal.append(f"Expected 164 chapters and 1878 problems; got {chapter_count} and {problem_count}")
+    if chapter_count != 40 or problem_count != 1878:
+        fatal.append(f"Expected 40 consolidated chapters and 1878 problems; got {chapter_count} and {problem_count}")
 
     for warning in notices[:80]:
         print("MATH/ENV REVIEW:", warning)

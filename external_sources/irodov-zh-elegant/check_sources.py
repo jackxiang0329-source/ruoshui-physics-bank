@@ -8,6 +8,18 @@ import re
 import sys
 
 ROOT = Path(__file__).resolve().parent
+
+# Preserve 164 source-ID ranges while operating on 40 merged section files.
+def _compact_pairs(old_names, old_ranges):
+    grouped = {}
+    for name, expected in zip(old_names, old_ranges):
+        match = re.fullmatch(r"(\d{2}-[a-z0-9-]+)-\d{3}-\d{3}\.tex", name)
+        assert match is not None, name
+        new = match.group(1) + ".tex"
+        grouped.setdefault(new, []).extend(expected)
+    return list(grouped), list(grouped.values())
+
+
 CHAPTERS = [
     "01-mechanics-kinematics-001-020.tex",
     "01-mechanics-kinematics-021-030.tex",
@@ -140,7 +152,7 @@ errors = []
 main = (ROOT / "main.tex").read_text(encoding="utf-8")
 all_ids = []
 
-for name, expected in zip(CHAPTERS, EXPECTED_RANGES):
+for name, expected in zip(*_compact_pairs(CHAPTERS, EXPECTED_RANGES)):
     path = ROOT / "chapters" / name
     if not path.exists():
         errors.append(f"missing: {name}")
@@ -183,7 +195,7 @@ if main.count(r"\section{相对论力学") != 1:
 
 # Thermodynamics uses ORIGINAL numbering 1,2,... instead of fake 389+.
 thermo_ids = []
-for name, expected in zip(THERMO_CHAPTERS, THERMO_EXPECTED):
+for name, expected in zip(*_compact_pairs(THERMO_CHAPTERS, THERMO_EXPECTED)):
     path = ROOT / "chapters" / name
     if not path.exists():
         errors.append(f"missing: {name}")
@@ -210,7 +222,7 @@ if thermo_ids != list(range(1, 26)):
     errors.append("Part II section 2.1 original IDs are not exactly 1..25")
 
 energy_ids = []
-for name, expected in zip(THERMO_ENERGY_CHAPTERS, THERMO_ENERGY_EXPECTED):
+for name, expected in zip(*_compact_pairs(THERMO_ENERGY_CHAPTERS, THERMO_ENERGY_EXPECTED)):
     path = ROOT / "chapters" / name
     if not path.exists():
         errors.append(f"missing: {name}")
@@ -256,7 +268,7 @@ for label, chapters, ranges, macro, expected_ids in [
      "thermotransportproblem", list(range(220, 258))),
 ]:
     observed = []
-    for name, expected in zip(chapters, ranges):
+    for name, expected in zip(*_compact_pairs(chapters, ranges)):
         path = ROOT / "chapters" / name
         if not path.exists():
             errors.append(f"missing: {name}")
@@ -517,7 +529,7 @@ for macro, filenames, expected_ranges in [
 ]:
     if (r"\newcommand{" + chr(92) + macro + "}") not in main:
         errors.append(f"main.tex missing macro {macro}")
-    for name, expected in zip(filenames, expected_ranges):
+    for name, expected in zip(*_compact_pairs(filenames, expected_ranges)):
         path = ROOT / "chapters" / name
         if not path.exists():
             errors.append(f"missing: {name}")
@@ -566,7 +578,7 @@ for macro, filenames, ranges in [
 ]:
     if (r"\newcommand{" + chr(92) + macro + "}") not in main:
         errors.append(f"main.tex missing macro {macro}")
-    for name, expected in zip(filenames, ranges):
+    for name, expected in zip(*_compact_pairs(filenames, ranges)):
         path = ROOT / "chapters" / name
         if not path.exists():
             errors.append(f"missing: {name}")
@@ -611,7 +623,7 @@ for macro, filenames, ranges in [
 ]:
     if (r"\newcommand{" + chr(92) + macro + "}") not in main:
         errors.append(f"main.tex missing macro {macro}")
-    for name, expected in zip(filenames, ranges):
+    for name, expected in zip(*_compact_pairs(filenames, ranges)):
         path = ROOT / "chapters" / name
         if not path.exists():
             errors.append(f"missing: {name}")
@@ -653,7 +665,7 @@ for macro, filenames, ranges in [
 ]:
     if (r"\newcommand{" + chr(92) + macro + "}") not in main:
         errors.append(f"main.tex missing macro {macro}")
-    for name, expected in zip(filenames, ranges):
+    for name, expected in zip(*_compact_pairs(filenames, ranges)):
         path = ROOT / "chapters" / name
         if not path.exists():
             errors.append(f"missing: {name}")
@@ -684,4 +696,4 @@ if errors:
     for e in errors:
         print("FAIL:", e, file=sys.stderr)
     sys.exit(1)
-print("PASS: 388 Part-I + 257 Part-II + 407 Part-III + 224 Part-IV + 292 Part-V + 310 Part-VI = 1878 translated solved problems in 164 chapter files; all six independent numbering ranges verified")
+print("PASS: 388 Part-I + 257 Part-II + 407 Part-III + 224 Part-IV + 292 Part-V + 310 Part-VI = 1878 translated solved problems in 40 consolidated section files; all six independent numbering ranges verified")
