@@ -109,3 +109,112 @@
 \problemtext 杆长 $L$，下端以恒定速率 $v$ 水平远离墙，上端沿墙下滑，杆与竖直夹角 $\theta$，求中点速度。
 \workings $x^2+y^2=L^2$，$\dot x=v$，$\dot y=-xv/y=-v\tan\theta$。中点坐标 $(x/2,y/2)$，故 $\bm v_C=(v/2,-v\tan\theta/2)$，模 $v/(2\cos\theta)$，方向为水平向右下偏 $\theta$，选D。
 \crosscheck 杆趋于竖直时速率趋 $v/2$；趋于水平时模型给出发散，须在 $y>0$ 的区间使用。
+
+\sourceproblem{填空1}{10}{16}
+\problemtext $x=3t,y=2t^2$，求轨迹和第二秒位移。
+\workings $y=2x^2/9$（SI）；$\Delta\bm r=3\bm i+6\bm j$（m）。
+\crosscheck 第二秒为 $[1,2]$，不是从0到2秒；若 $t\ge0$ 则 $x\ge0$。
+\sourceproblem{填空2}{11}{17}
+\problemtext 速率3.14米每秒、半径5米的圆周运动，求5秒位移模和路程。
+\workings $s=vt=15.7\,\mathrm m$，转角 $s/R=3.14$；位移模 $2R\sin(3.14/2)\approx10.0\,\mathrm m$。
+\crosscheck 位移模不能超过直径；保留题给3.14而非擅自替换为精确 $\pi$。
+\sourceproblem{填空3}{11}{17}
+\problemtext $x=2t,y=19-2t^2$（SI），求第二秒位移及2秒末速率。
+\workings $\Delta\bm r=2\bm i-6\bm j$（m）；$\bm v=2\bm i-4t\bm j$，$v(2)=\sqrt{68}=2\sqrt{17}\,\mathrm{m/s}$。
+\crosscheck 直接积分速度在 $[1,2]$ 上得到相同位移。
+\sourceproblem{填空4}{11}{17}
+\problemtext 时间 $\Delta t$ 内走过路程 $s$ 回到初始点，初末速度为 $\bm v_0,-\bm v_0$，求平均速率、平均加速度。
+\workings $\bar v=s/\Delta t$，$\bar{\bm a}=-2\bm v_0/\Delta t$。
+\crosscheck 平均速度为零不代表平均速率或平均加速度为零。
+\sourceproblem{填空5}{11}{17}
+\problemtext $x=3t+5,\ y=t^2/2+2t-4$（SI），求速度、加速度。
+\workings $\bm v=3\bm i+(t+2)\bm j$（m/s），$\bm a=\bm j$（$\mathrm{m/s^2}$）。
+\crosscheck 二阶导数的水平分量为零。
+\sourceproblem{填空6}{11}{17}
+\problemtext $\bm r=(5+2t-t^2/2)\bm i+(4t+t^3/3)\bm j$（SI），求2秒时速度与加速度。
+\workings $\bm v=(2-t)\bm i+(4+t^2)\bm j$，$\bm a=-\bm i+2t\bm j$；故 $\bm v(2)=8\bm j$（m/s），$\bm a(2)=-\bm i+4\bm j$（$\mathrm{m/s^2}$）。
+\crosscheck 先求导再代入时间；水平瞬时速度零不意味水平加速度零。
+\sourceproblem{填空7}{11}{17}
+\problemtext $\bm r_0=-5\bm j$（m），$\bm v=3t^2\bm i+5\bm j$（SI），求到达横轴的时间、位置。
+\workings $\bm r=t^3\bm i+(5t-5)\bm j$（SI）；令 $y=0$ 得 $t=1\,\mathrm s$，$x=1\,\mathrm m$。
+\crosscheck 原点处的初始纵坐标为负，纵向速度为正，交点唯一。
+\sourceproblem{填空8}{11}{17}
+\problemtext $x=5+4t-t^2$（SI），求斜面上行至最高点时间。
+\workings $\dot x=4-2t=0$ 给出 $t=2\,\mathrm s$。
+\crosscheck $\ddot x=-2<0$，是最大坐标。
+\sourceproblem{填空9}{11}{17}
+\problemtext $x=3+5t+6t^2-t^3$（SI），求初速度、加速度为零时的速度。
+\workings $v=5+12t-3t^2$，$a=12-6t$；$v(0)=5\,\mathrm{m/s}$，$a=0$ 对应 $t=2\,\mathrm s$，$v=17\,\mathrm{m/s}$。
+\crosscheck 速度函数在 $t=2$ 取最大值。
+\sourceproblem{填空10}{11}{17}
+\problemtext $x=2+t+t^3$（SI），求1秒时速度与第一秒位移。
+\workings $v=1+3t^2$，$v(1)=4\,\mathrm{m/s}$；$x(1)-x(0)=2\,\mathrm m$。
+\crosscheck 第一秒平均速度为2米每秒，与末速度不同。
+\sourceproblem{填空11}{11}{17}
+\problemtext $x=10-9t+6t^2-t^3$（SI），求速度、加速度函数。
+\workings $v=-9+12t-3t^2$，$a=12-6t$（SI）。
+\crosscheck 逐项微分；常数位置项不影响速度。
+\sourceproblem{填空12}{11}{17}
+\problemtext $v=1+4t^3$（SI），初始位置在原点，求2秒时加速度和坐标。
+\workings $a=12t^2$，$x=t+t^4$，故 $a(2)=48\,\mathrm{m/s^2}$，$x(2)=18\,\mathrm m$。
+\crosscheck 积分常数由 $x(0)=0$ 确定。
+\sourceproblem{填空13}{11}{17}
+\problemtext 船在阻力下减速，减速度大小与速率成正比，系数 $k$，求降至初速一半的时间及路程。
+\workings $v=v_0e^{-kt}$，$t_{1/2}=\ln2/k$；$s=\int_0^{t_{1/2}}v_0e^{-kt}\,\mathrm dt=v_0/(2k)$。
+\crosscheck $k>0$ 且量纲为时间倒数；不把加速度比例系数与阻力系数混用。
+\sourceproblem{填空14}{11}{17}
+\problemtext 沿 $y$ 轴运动，初始 $y_0,v_0$，$a=12kt$，求速度和位置函数。
+\workings $v=v_0+6kt^2$，$y=y_0+v_0t+2kt^3$。
+\crosscheck 两次微分恢复题设。
+\sourceproblem{填空15}{11}{17}
+\problemtext $a=At^2+B$，初始 $x_0,v_0$，求运动方程。
+\workings $v=v_0+At^3/3+Bt$，$x=x_0+v_0t+At^4/12+Bt^2/2$。
+\crosscheck $A=0$ 退化为匀加速运动。
+\sourceproblem{填空16}{11}{17}
+\problemtext $a=2+6x^2$（SI），质点在原点静止，求其到达位置 $x$ 的速度。
+\workings $v\,\mathrm dv/\mathrm dx=2+6x^2$，积分 $v^2=4x+4x^3$。从静止起向正方向运动，故 $v=2\sqrt{x+x^3}$（SI），$x\ge0$。
+\crosscheck 加速度恒正，未来运动取正根；负根对应时间反演的入射分支，不属于从静止出发的未来解。
+\sourceproblem{填空17}{11}{17}
+\problemtext $\bm r=6\cos(\pi t/6)\bm i+6\sin(\pi t/6)\bm j$，求速度及轨迹。
+\workings $\bm v=-\pi\sin(\pi t/6)\bm i+\pi\cos(\pi t/6)\bm j$，轨迹 $x^2+y^2=36$（SI）。
+\crosscheck 速率恒为 $\pi\,\mathrm{m/s}$，与半径乘角速度一致。
+\sourceproblem{填空18}{11}{17}
+\problemtext 同一圆周位置函数，求速度及加速度（题目续于印刷12/PDF18）。
+\workings $\bm v=\pi[-\sin(\pi t/6)\bm i+\cos(\pi t/6)\bm j]$；$\bm a=-(\pi^2/6)[\cos(\pi t/6)\bm i+\sin(\pi t/6)\bm j]$（SI）。
+\crosscheck $\bm a=-(\pi/6)^2\bm r$，方向指向圆心；与填空17为不同原书题号，不删除。
+\sourceproblem{填空19}{12}{18}
+\problemtext 匀速率沿原书示意曲线经过A、B、C、D，比较加速度大小。
+\workings $a=v^2|\kappa|$，其中 $\kappa$ 为曲率。按原图定性判读，C处弯折最急，A处最接近直线，故C最大、A最小。
+\crosscheck 仅为示意图的定性判断，精确曲率值需有坐标函数或测量数据；图示结论待独立二校。
+\sourceproblem{填空20}{12}{18}
+\problemtext 匀速率圆周运动中切向及总加速度的关系。
+\workings $a_\tau=\dot v=0$，总加速度即法向加速度 $\bm a=(v^2/R)\bm e_n$。
+\crosscheck 速度方向变化仍使加速度非零。
+\sourceproblem{填空21}{12}{18}
+\problemtext $\theta=4t-3t^2+t^3$（SI），求2至4秒平均角速度及2秒末角加速度。
+\workings $\theta(2)=4,\theta(4)=32$（rad），$\bar\omega=14\,\mathrm{rad/s}$；$\alpha=-6+6t$，$\alpha(2)=6\,\mathrm{rad/s^2}$。
+\crosscheck $\omega=4-6t+3t^2$ 的区间平均同样为14。
+\sourceproblem{填空22}{12}{18}
+\problemtext 飞轮从静止以恒角加速度3弧度每平方秒运动，求2秒末角速率及半径0.5米点的线速率。
+\workings $\omega=3(2)=6\,\mathrm{rad/s}$，$v=R\omega=3\,\mathrm{m/s}$。
+\crosscheck 刚体各点角速度相同，线速度大小随半径而变。
+\sourceproblem{填空23}{12}{18}
+\problemtext 圆周半径0.10米，$\theta=5+2t^3$，求1秒时切、法向加速度。
+\workings $\omega=6t^2$，$\alpha=12t$；$a_\tau=R\alpha=1.2\,\mathrm{m/s^2}$，$a_n=R\omega^2=3.6\,\mathrm{m/s^2}$。
+\crosscheck 与天津理工运动学填空8同模型，但原书要求的是两个分量，独立编号。
+\sourceproblem{填空24}{12}{18}
+\problemtext 斜抛上升段P点速度大小 $v$，方向水平向上偏30度，求切向加速度和曲率半径。
+\workings 沿速度方向的有符号投影 $a_\tau=-g\sin30^\circ=-g/2$；法向加速度 $a_n=g\cos30^\circ=\sqrt3g/2$，故 $\rho=2v^2/(\sqrt3g)$。
+\crosscheck 若问切向分量大小则为 $g/2$；原图为上升段，切向分量应取负。
+\sourceproblem{填空25}{12}{18}
+\problemtext 点光源高 $h_1$，人高 $h_2<h_1$，以速率 $v$ 沿地面远离光源，求头顶影子端点的速率。
+\workings 设人与灯的水平距离为 $x$，灯至影端距离为 $X$；相似三角形 $X/h_1=(X-x)/h_2$，故 $X=h_1x/(h_1-h_2)$，$v_M=h_1v/(h_1-h_2)$。
+\crosscheck $h_2=0$ 时影端与人同速；$h_2\to h_1$ 时理想点光源模型发散。
+\sourceproblem{计算1}{12}{18}
+\problemtext 20秒东行40米，随后10秒南行30米，求合位移、各段平均速度、全程平均速度及平均速率。
+\workings 取东、北为正，$\Delta\bm r=40\bm i-30\bm j$（m），模50米，东偏南 $\arctan(3/4)\approx36.87^\circ$；两段平均速度分别 $2\bm i,-3\bm j$（m/s）。全程
+\[
+\bar{\bm v}=\tfrac43\bm i-\bm j\quad(\mathrm{m/s}),\qquad
+\bar v_{\rm speed}=70/30=7/3\,\mathrm{m/s}.
+\]
+\crosscheck 全程平均速度模为 $5/3\,\mathrm{m/s}$，小于平均速率；时间加权平均与总位移法相符。
