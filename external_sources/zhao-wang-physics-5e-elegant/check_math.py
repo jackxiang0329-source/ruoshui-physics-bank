@@ -32,12 +32,24 @@ CHAPTERS = (
      [f"3.3.{n}" for n in range(1, 9)]),
     ("chapters/textbook-ch03-solutions-009-015.tex", "sourceproblem",
      [f"3.3.{n}" for n in range(9, 16)]),
+    ("chapters/textbook-ch04-choices.tex", "sourceproblem",
+     [f"4.1.{n}" for n in range(1, 13)]),
+    ("chapters/textbook-ch04-blanks.tex", "sourceproblem",
+     [f"4.2.{n}" for n in range(1, 14)]),
+    ("chapters/textbook-ch04-solutions-001-010.tex", "sourceproblem",
+     [f"4.3.{n}" for n in range(1, 11)]),
+    ("chapters/textbook-ch04-solutions-011-017.tex", "sourceproblem",
+     [f"4.3.{n}" for n in range(11, 18)]),
+    ("chapters/textbook-ch04-solutions-018-023.tex", "sourceproblem",
+     [f"4.3.{n}" for n in range(18, 24)]),
     ("chapters/guide-ch01-examples.tex", "sourceexample",
      [f"1.{n}" for n in range(1, 6)]),
     ("chapters/guide-ch02-examples.tex", "sourceexample",
      [f"2.{n}" for n in range(1, 8)]),
     ("chapters/guide-ch03-examples.tex", "sourceexample",
      [f"3.{n}" for n in range(1, 6)]),
+    ("chapters/guide-ch04-examples.tex", "sourceexample",
+     [f"4.{n}" for n in range(1, 6)]),
 )
 
 
@@ -59,7 +71,7 @@ def structural_check():
             for label in (r"\problemtext", r"\workings", r"\crosscheck"):
                 assert label in block, (number, label)
         total += len(ids)
-    assert total == 129, total
+    assert total == 182, total
     return total
 
 
@@ -248,11 +260,63 @@ def third_round_regressions():
     near(w0*math.exp(-k*t_half/j),w0/2)
 
 
+def fourth_round_regressions():
+    """Independent checks for chapter 4 mechanical waves and relativity."""
+    pi, sqrt, cos, sin = math.pi, math.sqrt, math.cos, math.sin
+    # 4.1 basic oscillator phasor and wave propagation
+    phase=4*pi/3
+    near(cos(phase),-.5)
+    assert -sin(phase)>0
+    near((pi/3)/(2*pi)*2,1/3)
+    near((pi/3)/(2*pi/2),2/3)  # from A/2 to A, T=4 s
+    near(2*pi/(6*pi),1/3)
+    near((6*pi)/(.06*pi),100)
+    near((2*pi)/(.06*pi),100/3)
+    # 4.2 fill-ins
+    near((2*pi/3)/pi,2/3)
+    near(sqrt(.32/.02),4)
+    near(2*pi/sqrt(.32/.02),pi/2)
+    near((5e4)*.005/(1.5e3)*2*pi,pi/3)
+    near((300/100)/6,.5)
+    near((100/.4),250)
+    near(2.70e-2/(3.00e-2*10),.09)
+    # 4.3 mass-spring and combined motions
+    near(.3*.5,.15)
+    near(10e-3*(8*pi)**2*.1,.064*pi*pi)
+    near(.5*10e-3*(8*pi)**2*.1**2,.0032*pi*pi)
+    near(-.01*(pi/2)**2*(.24/sqrt(2)),-.004187318519783328)
+    near((2*pi/3)/(pi),2/3)
+    near(.001*9.8/.049,.2)
+    near(sqrt(.2/.008),5)
+    A=.20; A1=.173; delta=pi/6
+    A2=sqrt(A*A+A1*A1-2*A*A1*cos(delta))
+    near(A2,0.10000021029036311)
+    assert abs(math.atan2(A*sin(delta),A*cos(delta)-A1)-pi/2)<.003
+    # 4.3 wave-phase propagation and interference
+    near((10*pi)/(4*pi),2.5)
+    near(.2+(10*pi)/(4*pi)*(.25),.825)
+    near(.1*sin(5*pi*0-pi*.5),-.1)
+    near((2*pi/3)/(4*pi/3),.5)
+    near((100/.4),250)
+    near(2*(12-9),6)
+    near((30-2*9)/6,2)
+    near((2e-3)+(2e-3),4e-3)
+    # Guide: Lorentz factors and energy-momentum
+    beta=sqrt(2/3)
+    near(sqrt(1-beta*beta),1/sqrt(3))
+    near(sqrt(.5**2+.5**2),1/sqrt(2))
+    near((3/2)*sqrt(5)/3*2*3e8,sqrt(5)*3e8)
+    near((.5+.5)/(1+.5*.5),.8)
+    near(.8/sqrt(1-.8**2),4/3)
+    near(1/sqrt(1-.8**2),5/3)
+
+
 if __name__ == "__main__":
     n = structural_check()
     numerical_check()
     second_round_regressions()
     third_round_regressions()
+    fourth_round_regressions()
     print(f"Structure: {n} referenced worked items; all checked blocks present.")
     print("Selected numeric invariants: passed.")
     print("Not a replacement for full independent physics or copyright review.")
