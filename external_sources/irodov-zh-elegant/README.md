@@ -5,6 +5,9 @@
 
 ## 2026-11-24 全仓库精简（无损合并）
 
+**兼容旧质检**：仓库只跟踪40份合并后的TeX章节。历史专项回归程序仍引用拆分时期的文件名，GitHub Actions 会先运行 `python3 external_sources/irodov-zh-elegant/expand_legacy_fragments.py`，从章节中的 BEGIN/END 标记恢复164份**仅供本次工作区验证**的未跟踪片段，并逐一验证原 Git blob SHA；这些临时文件不会提交到GitHub。单独运行历史回归脚本前也可执行一次此命令。
+
+
 原来164份分批次LaTeX片段按原书40个小节合成40份，净减124份；每个新文件保留原始内容和blob SHA注释。1,878道独立题号、题解、校核段均维持原顺序。原文件与新章节对应表：[COMPACTION-MAP.md](chapters/COMPACTION-MAP.md)。Git历史可恢复原文件。
 
 ## 真实进度（2026-11-22）

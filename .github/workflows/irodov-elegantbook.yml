@@ -16,6 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Restore legacy split-fragment views for independent QA (not tracked)
+        run: python3 external_sources/irodov-zh-elegant/expand_legacy_fragments.py
       - name: Validate all translated problem blocks
         run: python3 external_sources/irodov-zh-elegant/check_sources.py
       - name: Audit 1878 individual statement/solution/check segments
