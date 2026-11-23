@@ -1,4 +1,5 @@
 % Consolidated textbook-ch12 from 1699b8435d575b3f9a89b4f32b3cd9072025e92c; source fragments preserved.
+% 2026-11-24 八批严格复核第4批：旧片段哈希对应历史版本，当前含二校修订。
 
 % === BEGIN textbook-ch12-choices.tex blob a6bd54e7f4dc7548980b3c2746fc64040272963c ===
 % 扫描《大学物理简明教程》第5版第12章量子物理基础
@@ -96,7 +97,7 @@ $eU_a=h(\nu-\nu_0)$，令$U_{a,2}=2U_{a,1}$，
 分两步$E_3\to E_2\to E_1$发出$\lambda_2,\lambda_1$；
 求波长关系。
 \workings
-能量守恒
+在忽略原子反冲、外场及精细结构并比较同一组三个能级时，由能级差相加
 $hc/\lambda_3=hc/\lambda_2+hc/\lambda_1$，
 所以
 \[
@@ -158,7 +159,7 @@ $|\psi(x)|^2=a^{-1}\cos^2(3\pi x/2a)$，
 \workings
 不确定性原理限制的是同一态中位置与动量分量的不确定度\emph{同时}减小，
 $\Delta x\,\Delta p_x\ge\hbar/2$；
-单独某一量可以明确制备或测量。
+单独某一量可以任意提高测量或制备精度；理想位置、动量本征态是广义本征态，不等同于可归一化且两者方差都有限的物理态。
 因此正确的是命题(c)、(d)，选\textbf{B}。
 \crosscheck 原题纸面把$\hbar$写成$h$样式；
 采用标准量子力学常量$\hbar=h/(2\pi)$阐释，不将不同常量混用。
@@ -244,15 +245,14 @@ $\boxed{n=4\to n=3}$。
 \problemtext 某电子在原子激发态中平均停留$10^{-8}$s；
 估算能级能量最小不确定度。
 \workings
-按标准能时估计$\Delta E\,\Delta t\gtrsim\hbar/2$，
+若采用教材的能时数量级估计$\Delta E\,\Delta t\gtrsim\hbar/2$并把寿命作为特征时间尺度，
 \[
 \boxed{\Delta E\gtrsim\frac{\hbar}{2(10^{-8})}
 =5.27\times10^{-27}\,\mathrm J
 \approx3.29\times10^{-8}\,\mathrm{eV}}.
 \]
 \crosscheck 能时不确定度不同于位置--动量算符的严格同类形式，
-自然线宽的定义也可能采用$\Gamma\simeq\hbar/\tau$
-而差一个约为2的系数；应说明采用的约定。
+自然寿命线宽（稳定末态、指数衰减、无其他展宽）的能量全高半宽为$\Gamma=\hbar/\tau\approx6.58\times10^{-8}$ eV。洛伦兹谱的方差并非有限，故不能把该全宽与严格标准差下界混同，也不能仅凭寿命宣称一个普适的最小能量标准差。
 
 \sourceproblem{12.2.7}{318}{318}
 \problemtext 用波长$\lambda$表达光子的能量、动量大小与相对论质量等效值。
@@ -286,7 +286,7 @@ $l=0,1,2$，最大$l=n-1=2$，
 \]
 \crosscheck \textbf{源式与标准严格界限不同：}标准海森堡不等式为
 $\Delta x\Delta p_x\ge\hbar/2=h/(4\pi)$。
-若按严格标准只得$1.06\times10^{-26}$ kg\,m/s，
+若$5$ nm明确为位置标准差，标准不等式给$\Delta p_x\ge1.06\times10^{-26}$ kg\,m/s；若仅表示支持区间全宽$L=5$ nm，则$\sigma_x\le L/2$，可推出至少$\sigma_p\ge\hbar/L=2.11\times10^{-26}$ kg\,m/s，不能将区间宽度自动当作标准差。
 本条为忠于\emph{原题指定公式}而计算，不能混称两式等价。
 
 \sourceproblem{12.2.10}{318}{318}
@@ -297,7 +297,7 @@ $\Delta x\Delta p_x\ge\hbar/2=h/(4\pi)$。
 \boxed{\rho(\bm r,t)=\Psi\Psi^*=|\Psi|^2},\qquad
 \boxed{\int_{\mathbb R^3}|\Psi(\bm r,t)|^2\,d^3r=1}.
 \]
-波函数需单值、有限、满足问题的连续/可微与边界条件。
+对于通常单粒子束缚态，波函数需平方可积、满足哈密顿量定义域及相应边界条件；常规有限势下常取连续可微代表，奇异势或无限势阱边界则按具体匹配条件处理。平面波等散射广义本征态采用不同的归一化约定。
 \crosscheck 若只描述一维粒子，则归一化体积分应改为$\int|\psi(x)|^2dx$。
 
 \sourceproblem{12.2.11}{318}{318}
@@ -334,7 +334,7 @@ $\Delta x\Delta p_x\ge\hbar/2=h/(4\pi)$。
 \problemtext 把三颗恒星当理想黑体，辐射谱的峰值波长分别为
 $0.55,0.35,0.29\,\mu$m，求对应表面温度。
 \workings
-维恩位移定律$\lambda_mT=b$，
+对按单位波长定义的黑体谱，维恩位移定律$\lambda_mT=b$，
 $b=2.89777\times10^{-3}\,\mathrm{m\,K}$，得
 \[
 \boxed{\begin{aligned}
@@ -416,7 +416,7 @@ $(9.6\times10^{14}\,\mathrm{Hz},2.13\,\mathrm V)$。
 \]
 \crosscheck 这些是\emph{图读估算值}，
 不能把由粗线和圆点读出的$h$当成精确定义的$6.62607015\times10^{-34}$；
-不同两点选取可能略有偏差。
+不同两点选取可能略有偏差。特别地，给出的两个近似点所确定直线的横轴截距为$4.339\times10^{14}$ Hz，不恰等于单独图读的$4.39\times10^{14}$ Hz。若严格使用两点直线，应统一采用其截距，得到$W\approx2.81\times10^{-19}$ J（约1.76 eV）；待核原图并统一拟合。
 
 \sourceproblem{12.3.6}{319}{319}
 \problemtext 人眼在理想暗适应条件下每秒吸收5个波长500nm的蓝绿色光子
@@ -428,13 +428,13 @@ $(9.6\times10^{14}\,\mathrm{Hz},2.13\,\mathrm V)$。
 \boxed{E_{\rm 1s}=5\frac{hc}{500\,\mathrm{nm}}
 \simeq1.99\times10^{-18}\,\mathrm J}.
 \]
-相应入眼光功率
+相应被吸收的光功率（入眼功率还取决于吸收效率）
 \[
 \boxed{P=E_{\rm 1s}/(1\,\mathrm s)
 \simeq1.99\times10^{-18}\,\mathrm W}.
 \]
 \crosscheck 辐射实际感知阈值依观察时间、视网膜吸收效率和刺激部位而变；
-本题只是在理想吸收的光子计数模型下换算能量。
+本题只是在理想吸收的光子计数模型下换算能量；若吸收效率为$\eta$，入射功率为上述吸收功率除以$\eta$。
 
 \sourceproblem{12.3.7}{319}{319}
 \problemtext 设一光子的能量等于电子静止能量，
@@ -521,12 +521,12 @@ $E_f=-13.6+12.75=-0.85$ eV，对应
 \[
 \boxed{\lambda_{3\to2}
 =\frac1{R_H(1/2^2-1/3^2)}
-\simeq656.3\,\mathrm{nm}},
+\simeq656.5\,\mathrm{nm}},
 \]
 \[
 \boxed{\lambda_{4\to2}
 =\frac1{R_H(1/2^2-1/4^2)}
-\simeq486.2\,\mathrm{nm}}.
+\simeq486.3\,\mathrm{nm}}.
 \]
 由$1\to4$的激发能$\Delta E=12.75$ eV，
 \[
@@ -534,7 +534,7 @@ $E_f=-13.6+12.75=-0.85$ eV，对应
 \simeq3.08\times10^{15}\,\mathrm{Hz}}.
 \]
 \crosscheck 两条谱线的数目依赖激发后的级联通道可能遍历；
-采用玻尔/黎德伯主能级理想模型，忽略细结构、选择定则和实际跃迁概率。
+采用玻尔/黎德伯主能级理想模型，忽略细结构、选择定则和实际跃迁概率；以上用氢原子黎德伯常量$R_H\approx1.09678\times10^7\,\mathrm{m^{-1}}$计算真空波长。常用空气谱线值约656.3和486.1 nm，不能混称为同一介质波长。若不假定所有主能级通道可见，仅凭观察到两条谱线不能严格唯一反推出最高激发能级。
 
 \sourceproblem{12.3.12}{319}{319}
 \problemtext 基态氢原子吸收$12.09$ eV光子后，
@@ -607,7 +607,7 @@ $\theta\sim\lambda/d\simeq0.087$ rad。
 =\frac{(3.00\times10^8)(10^{-14})}{(4.00\times10^{-7})^2}
 \simeq1.875\times10^7\,\mathrm{Hz}.
 \]
-若线宽指\emph{自然洛伦兹线型的频率全高半宽}，
+若线宽指\emph{自然洛伦兹线型的频率全高半宽}，且末态稳定、无多普勒展宽等额外展宽，
 量子态概率寿命$\tau$与线宽满足
 $\Delta\nu_{\rm FWHM}=1/(2\pi\tau)$，因此
 \[
@@ -627,7 +627,7 @@ $\Delta\nu_{\rm FWHM}=1/(2\pi\tau)$，因此
 波长误差
 $\Delta\lambda/\lambda=10^{-6}$，故
 $\Delta p\simeq(h/\lambda)(\Delta\lambda/\lambda)$。
-若用标准位置--动量不确定性下界作数量级估计，
+只有额外假定给出的相对精度表征波包本身的波长标准差而非仪器测量误差，才可将下式作为标准位置--动量不确定性下界的数量级估计，
 \[
 \Delta x\gtrsim\frac{\hbar}{2\Delta p}
 =\frac{\lambda}{4\pi(\Delta\lambda/\lambda)}
@@ -635,7 +635,7 @@ $\Delta p\simeq(h/\lambda)(\Delta\lambda/\lambda)$。
 \]
 \crosscheck \textbf{光子位置算符有理论细节}，
 本式是沿传播方向的单光子波包长度的启发性估计，
-不是任何光子位置测量的普适严格算符下界。
+不是任何光子位置测量的普适严格算符下界；单独的仪器测量精度不能决定光子波包的内禀位置分布。
 按其他教材宽度约定（如$\Delta x\sim\lambda/\delta$）
 结果可在数倍或$4\pi$因子上不同。
 
