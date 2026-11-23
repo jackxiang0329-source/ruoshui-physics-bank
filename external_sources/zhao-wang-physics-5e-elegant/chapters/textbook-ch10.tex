@@ -1,0 +1,915 @@
+% Consolidated textbook-ch10 from 1699b8435d575b3f9a89b4f32b3cd9072025e92c; source fragments preserved.
+
+% === BEGIN textbook-ch10-choices.tex blob 692c67ee2da6650393ad82174c10049fa0c14f10 ===
+% 第10批：《大学物理简明教程（第5版）》第10章“波动光学”
+% 原书及PDF第270—271页，选择题10.1.1—10.1.18。
+% 独立题意摘要、详细原理与核验；图形题保留判断边界，待独立二校。
+\subsection{选择题：干涉、衍射、光栅和偏振}
+
+\sourceproblem{10.1.1}{270}{270}
+\problemtext 同一单色光在空气和玻璃中传播相同时间，比较两条光路的几何长度与光程。
+\workings
+折射率为$n$时速度为$c/n$，相同时间$t$的几何长度
+$s=ct/n$，故空气中路程更长。其光程$ns=ct$，两介质中相等。
+\[
+\boxed{s_{\rm air}\ne s_{\rm glass},\quad
+n_{\rm air}s_{\rm air}=n_{\rm glass}s_{\rm glass}=ct}.
+\]
+原题选\textbf{C}。\crosscheck 不可把几何路程与光程当成同一概念；题目明确比较的是\emph{相同时间}。
+
+\sourceproblem{10.1.2}{270}{270}
+\problemtext 杨氏双缝实验中，希望使屏上干涉条纹间距增大，比较改变屏距、双缝间距、缝宽和波长的做法。
+\workings
+旁轴条件下条纹间隔
+$\Delta x=\lambda D/d$。保持光源和屏距，减小双缝间距$d$便使条纹变疏，
+故原题选\textbf{B}。
+\crosscheck 单独缩小每条缝的宽度主要改变衍射包络，不是双缝中心条纹间距。
+
+\sourceproblem{10.1.3}{270}{270}
+\problemtext 双缝间距$0.50\,\mathrm{mm}$、波长$600\,\mathrm{nm}$，屏距$1.20\,\mathrm m$；求相邻明条纹距离。
+\workings
+\[
+\boxed{\Delta x=\frac{\lambda D}{d}
+=\frac{600\times10^{-9}(1.20)}{0.50\times10^{-3}}
+=1.44\,\mathrm{mm}}.
+\]
+原题选\textbf{D}。\crosscheck 计算前须将mm与nm统一换为m；其结果不依赖第几级明纹。
+
+\sourceproblem{10.1.4}{270}{270}
+\problemtext 两块玻璃板构成左缘接触、向右增厚的空气劈尖，现上玻璃板绕左接触棱作微小顺时针转动，判断等厚条纹间距及平移方向。
+\workings
+劈尖斜率$\alpha$减小，反射等厚干涉相邻条纹间隔
+$\Delta x\simeq\lambda/(2\alpha)$变大。
+固定干涉级次的厚度$t_m$保持不变，
+$x_m=t_m/\alpha$增大，故条纹远离左端棱边。
+原题选\textbf{B}。
+\crosscheck 判断方向须固定题目指定的\emph{左缘为接触棱}；
+若转动方向相反，两个结论都可能反向。
+
+\sourceproblem{10.1.5}{270}{270}
+\problemtext 波长$\lambda$的单色光垂直入射夹在空气与高折射率衬底之间的透明薄膜，膜折射率为$n$且$1<n<n_{\rm sub}$。求使两束主要反射光相长干涉的最小非零膜厚。
+\workings
+空气到膜及膜到衬底均是\emph{疏到密}反射，两束反射都发生$\pi$相位突变，因而相互比较无附加半波差。
+相长条件$2nt=m\lambda$；取$m=1$得
+\[
+\boxed{t_{\min}=\frac{\lambda}{2n}}.
+\]
+原题选\textbf{D}。\crosscheck 若膜折射率大于衬底则仅有一次半波损失，结果将不同；须保留本题的折射率大小顺序。
+
+\sourceproblem{10.1.6}{270}{270}
+\problemtext 牛顿环实验用液体替代空气后，第10条亮环直径由$1.42$ cm变为$1.28$ cm。求液体折射率。
+\workings
+对于固定级次与曲率半径，环半径平方与介质折射率成反比，
+$n=(D_{\rm air}/D_{\rm liq})^2$，因此
+\[
+\boxed{n=(1.42/1.28)^2\approx1.231}.
+\]
+原题选\textbf{C}。\crosscheck 不可只取直径之比$1.109$；光程差由介质折射率进入，环半径为平方根关系。
+
+\sourceproblem{10.1.7}{270}{270}
+\problemtext 迈克耳孙干涉仪一臂放入长度$t=0.50$ cm的气体小室，波长$500$ nm；小室由真空缓慢充气后有60条干涉条纹移过视场，求气体折射率。
+\workings
+干涉仪光线往返气室，额外光程为$2(n-1)t$。移过$N=60$条纹意味着$2(n-1)t=N\lambda$，故
+\[
+\boxed{n=1+\frac{60(500\times10^{-9})}{2(0.005)}
+=1.003}.
+\]
+原题选\textbf{C}。\crosscheck 迈克耳孙一臂\emph{往返}，缺少因子2会误得1.006。
+
+\sourceproblem{10.1.8}{270--271}{270--271}
+\problemtext 迈克耳孙干涉仪的一条光路插入折射率$n$、厚度$d$的透明薄片，求插片后\emph{该光臂的光程}改变。
+\workings
+与同厚空气段相比，光线单程穿片增加光程
+$(n-1)d$，但迈克耳孙干涉仪的光束到镜面\emph{往返}该段两次，
+故测量中所称的这一光臂光程改变为
+\[
+\boxed{\Delta\mathcal L=2(n-1)d}.
+\]
+原书选\textbf{A}。
+\crosscheck 原题背景是迈克耳孙干涉仪的\emph{实际往返光路}，
+不能把单程增加$(n-1)d$误选为仪器这一光臂的总改变。
+
+\sourceproblem{10.1.9}{271}{271}
+\problemtext 迈克耳孙一臂加一透明膜，使两束光的光程差改变恰好一个真空波长$\lambda$，求膜厚。
+\workings
+往返穿过膜两次，干涉两束光程差改变量为$2(n-1)d$，
+故
+\[
+\boxed{d=\frac{\lambda}{2(n-1)}}.
+\]
+原题选\textbf{D}。\crosscheck 第10.1.8题的单程光程增加与本题\emph{往返干涉}要区分，不能直接把前题结果作为总光程差。
+
+\sourceproblem{10.1.10}{271}{271}
+\problemtext 单缝夫琅禾费衍射装置中，在中央明纹位置不变时缩小狭缝宽度$a$，判断衍射条纹的疏密。
+\workings
+单缝暗纹满足$a\sin\theta_m=m\lambda$。
+固定$m,\lambda$，缩小$a$使$|\theta_m|$增大，条纹向外展开，变\textbf{疏}。
+原题选\textbf{B}。\crosscheck 不能用双缝间距公式替代单缝衍射暗纹条件。
+
+\sourceproblem{10.1.11}{271}{271}
+\problemtext 波长$\lambda$垂直入射单缝，观察到$\theta=30^\circ$方向波面可分成3个半波带，求缝宽$a$。
+\workings
+半波带数量$N=2a\sin\theta/\lambda$，给$N=3$，故
+\[
+\boxed{a=\frac{3\lambda}{2\sin30^\circ}=3\lambda}.
+\]
+原题选\textbf{C}。\crosscheck 3个\emph{半波带}代表光程差$3\lambda/2$而非$3\lambda$。
+
+\sourceproblem{10.1.12}{271}{271}
+\problemtext 波长$500$ nm单色光经宽$a=0.25$ mm的单缝及凸透镜，在焦面观察衍射；两侧第3条暗纹间隔为12 mm，求透镜焦距。
+\workings
+第$m$级暗纹坐标近似$x_m=mf\lambda/a$，
+两侧$m=3$暗纹间隔$d=6f\lambda/a$。
+\[
+\boxed{f=\frac{da}{6\lambda}
+=\frac{0.012(0.25\times10^{-3})}{6(500\times10^{-9})}
+=1.00\,\mathrm m}.
+\]
+原题选\textbf{B}。\crosscheck 两侧第3级暗纹相距$6$个单位位移，非$3$个。
+
+\sourceproblem{10.1.13}{271}{271}
+\problemtext 由$N$条相同透光缝构成的理想光栅，比较其中央主极大的强度与单条缝的中央衍射强度。
+\workings
+中央方向相干叠加振幅为单缝的$N$倍，强度为其平方，
+\[
+\boxed{I_{\max,N}=N^2I_{\max,1}}.
+\]
+原题选\textbf{D}。\crosscheck 这里比较单色、等振幅、相干的\emph{峰强度}，而不是总透射能量。
+
+\sourceproblem{10.1.14}{271}{271}
+\problemtext 光栅常量为$d=a+b$，垂直入射波长$\lambda$光，求第$k$级主极大的衍射角$\varphi$满足的方程。
+\workings
+相邻缝程差为$d\sin\varphi$，主极大同相要求
+\[
+\boxed{d\sin\varphi=k\lambda},\qquad k\in\mathbb Z.
+\]
+原题选\textbf{D}。\crosscheck 狭缝宽度$a$还决定单缝衍射包络，不能把它代入主极大光栅常量$d$。
+
+\sourceproblem{10.1.15}{271}{271}
+\problemtext 光栅中所有偶数级主极大恰与单缝衍射暗纹重合而缺级，求透光缝宽$a$与不透明部分宽$b$的关系。
+\workings
+单缝零强度条件$a\sin\theta=m\lambda$，
+光栅主极大条件$(a+b)\sin\theta=k\lambda$。
+若每个偶数级$k=2m$消失，须
+$(a+b)/a=2$，即
+\[
+\boxed{a=b}.
+\]
+原题选\textbf{B}。\crosscheck 严格说偶数级消失的是由单缝包络造成的\emph{缺级}，而不是相干叠加的零级主极大。
+
+\sourceproblem{10.1.16}{271}{271}
+\problemtext 强度$I_0$的自然光顺序穿过两偏振片，透振方向夹角$45^\circ$，求出射强度。
+\workings
+自然光经过理想首偏振片强度减半，第二片按马吕斯定律，
+\[
+\boxed{I=\frac{I_0}{2}\cos^245^\circ=\frac{I_0}{4}}.
+\]
+原题选\textbf{B}。\crosscheck 不能从自然光直接写$I_0\cos^2\theta$，忽略第一片的$1/2$。
+
+\sourceproblem{10.1.17}{271}{271}
+\problemtext 自然光从空气按布儒斯特角入射玻璃面，判定反射光的偏振状态。
+\workings
+布儒斯特角满足$\tan i_B=n_2/n_1$，此时反射光的平行入射面$p$分量为零，只剩\emph{垂直于入射面}的$s$分量，
+故反射光是完全线偏振光。
+原题选\textbf{C}。\crosscheck 反射光的偏振方向不是\emph{平行}入射面；完全偏振的是反射光，不是所有折射光。
+
+\sourceproblem{10.1.18}{271}{271}
+\problemtext 自然光按布儒斯特角射向平板玻璃上表面，再按原图追踪内部反射后从玻璃板射出的标号2的反射相关光束，判断其偏振状态。
+\workings
+布儒斯特入射时首次反射的$p$分量消失；
+平行两表面满足折射角$r=90^\circ-i_B$，玻璃向空气反射也恰达到反向布儒斯特条件。
+因此原图标号2对应的二次\emph{反射}光只具有垂直入射面的$s$分量，是线偏振光，
+\[
+\boxed{E_{2,s}\ne0,\qquad E_{2,p}=0}.
+\]
+反射光电矢量\textbf{垂直于入射面}。
+原题选\textbf{C}。
+\crosscheck \textbf{图题待二校：}须把标号2识别为经内部表面布儒斯特反射的光线，而不是一次透射光；若图中光线路径有别，偏振结论也须相应调整。
+% === END textbook-ch10-choices.tex ===
+
+% === BEGIN textbook-ch10-blanks.tex blob 246fe6c02750f863da4a79c95a046908c37310f6 ===
+% 第10批：《大学物理简明教程（第5版）》第10章填空题10.2.1—10.2.20。
+% 源扫描印刷/PDF第271—273页；题意简述、推导与交叉检查。
+
+\subsection{填空题：光程、等厚干涉、夫琅禾费衍射和偏振}
+
+\sourceproblem{10.2.1}{271--272}{271--272}
+\problemtext 单色光从空气折射进入水中，频率、速度、波长各怎样改变？
+\workings
+介质界面处相位连续，光频率$f$保持不变。
+水中相速度$v=c/n_{\rm water}$小于空气中速度，介质内波长$\lambda=v/f$也变短。
+故填\textbf{不变、变小、变小}。
+\crosscheck 不要把折射率增大误认为频率增大；光源频率决定时间周期。
+
+\sourceproblem{10.2.2}{272}{272}
+\problemtext 杨氏双缝波长$\lambda=562.5$ nm、缝屏距$D=1.2$ m，
+相邻明纹间距$\Delta x=1.5$ mm，求缝间距。
+\workings
+由$\Delta x=\lambda D/d$，
+\[
+\boxed{d=\frac{562.5\times10^{-9}(1.2)}{1.5\times10^{-3}}
+=4.50\times10^{-4}\,\mathrm m=0.450\,\mathrm{mm}}.
+\]
+\crosscheck 双缝间距大于光波长很多，旁轴条纹公式的几何光学假设合理。
+
+\sourceproblem{10.2.3}{272}{272}
+\problemtext 双缝形成明暗相间条纹，屏上$P$点位于第1级暗纹，求到该点的两束光程差。
+\workings
+暗纹满足$\Delta=(m+\tfrac12)\lambda$，以中心附近首条暗纹取$m=0$，
+\[
+\boxed{|\Delta|=\frac{\lambda}{2}}.
+\]
+\crosscheck 屏的两侧暗纹的光程差代数符号相反，但绝对值相同。
+
+\sourceproblem{10.2.4}{272}{272}
+\problemtext 用波长$600$ nm的单色光观察牛顿环，
+求第2与第5条明环空气膜厚度之差。
+\workings
+反射明环两束光因一次半波损失，明纹所需膜厚呈公差$\lambda/2$的等差序列。
+第5与第2明环相差三级，故
+\[
+\boxed{\Delta t=(5-2)\frac{\lambda}{2}=900\,\mathrm{nm}}.
+\]
+\crosscheck 求\emph{膜厚差}而非环半径差；公式与透镜曲率半径无关。
+
+\sourceproblem{10.2.5}{272}{272}
+\problemtext 白光照射牛顿环装置，考虑同一级条纹，问最靠近中心的是何种颜色。
+\workings
+对固定级次，反射环半径平方$ r_m^2\propto\lambda$；
+短波长的环半径较小，所以最靠近中心的是\textbf{紫光}。
+\crosscheck 同一可见级次中红光波长最长、环半径更大。
+
+\sourceproblem{10.2.6}{272}{272}
+\problemtext 杨氏双缝装置保持缝距与屏距不变，把全部装置由空气浸入水中，条纹变疏还是变密？
+\workings
+水中波长$\lambda'=\lambda/n_{\rm water}$，
+$\Delta x'=\lambda'D/d=\Delta x/n_{\rm water}<\Delta x$，
+故条纹\textbf{变密}。
+\crosscheck 这里装置尺寸固定、光源频率固定；不能使用真空波长不变的错误假设。
+
+\sourceproblem{10.2.7}{272}{272}
+\problemtext 双缝干涉中只在下方狭缝覆盖一透明薄云母片，干涉条纹整体向哪里移动？
+\workings
+云母增加下方光路的光程$\delta=(n-1)t>0$。
+为恢复两束光程相等，屏上零级明纹应移动到距离下方狭缝更近的位置，补偿几何光程差，
+故条纹向\textbf{下方（被云母覆盖的狭缝方向）}移动。
+\crosscheck 同时覆盖两条缝相同厚度不会造成这种整体平移。
+
+\sourceproblem{10.2.8}{272}{272}
+\problemtext 两块玻璃板构成左边接触的空气劈尖，
+上玻璃板整体垂直于下玻璃板上移而不旋转，
+反射条纹向哪边移动、间距怎样变？
+\workings
+若原膜厚$t(x)=\alpha x$，上板整体升高$\delta$后
+$t'(x)=\alpha x+\delta$。
+固定干涉级次要求$x_m'=(t_m-\delta)/\alpha<x_m$，
+故纹向\textbf{棱边（较薄端）}平移。
+斜率$\alpha$没有改变，条纹间距$\lambda/(2\alpha)$\textbf{不变}。
+\crosscheck 若上板同时倾斜使$\alpha$改变则间距会变化，但不属于本题纯平移设定。
+
+\sourceproblem{10.2.9}{272}{272}
+\problemtext 单缝正入射，第一条暗纹的衍射角绝对值为$\varphi$，波长$\lambda$，求缝宽。
+\workings
+$a\sin\varphi=m\lambda$，首条暗纹$m=1$，故
+\[
+\boxed{a=\frac{\lambda}{\sin\varphi}}.
+\]
+\crosscheck 这是\emph{暗纹}的位置，不是一级明纹极大条件。
+
+\sourceproblem{10.2.10}{272}{272}
+\problemtext 单缝宽$a=4\lambda$，波长$\lambda$垂直入射，观察方向$\varphi=30^\circ$；波面分为几个半波带？
+\workings
+对应光程差$a\sin30^\circ=2\lambda$，
+每个半波带对应$\lambda/2$，故
+\[
+\boxed{N=\frac{2a\sin\varphi}{\lambda}=4}.
+\]
+\crosscheck $4$个半波带可成对抵消，此方向同时是单缝第二级暗纹。
+
+\sourceproblem{10.2.11}{272}{272}
+\problemtext 单缝夫琅禾费衍射中减小缝宽、或增大入射光波长，各使条纹变疏还是变密？
+\workings
+暗纹角间隔尺度$\Delta\theta\sim\lambda/a$。
+缝宽减小时增大，波长增大时也增大，
+因此两空均填\textbf{变疏}。
+\crosscheck 两项改变都增加中央明纹的角宽度。
+
+\sourceproblem{10.2.12}{272}{272}
+\problemtext 波长$600$ nm的单色光正入射空气中独立放置、
+折射率$n_f=1.33$的透明薄膜；求反射光尽量相长的最小正膜厚。
+若同样的膜改为\emph{镀在折射率$n_s=1.5$的玻璃透镜上}，
+再求最小正膜厚。
+\workings
+(1) 对\emph{空气--膜--空气}的独立薄膜，
+空气$\to$膜的第一反射发生一次$\pi$相变，
+膜$\to$空气的第二反射不发生相变，
+两束光之间有一次\emph{相对}半波损失。
+反射光相长需
+$2n_ft=(m+\tfrac12)\lambda$。
+取$m=0$得
+\[
+\boxed{t_{1,\min}=\frac{\lambda}{4n_f}
+=\frac{600}{4(1.33)}\,\mathrm{nm}\approx113\,\mathrm{nm}}.
+\]
+(2) 镀在玻璃透镜上时，
+空气$\to$膜与膜$\to$玻璃都由低折射率向高折射率反射，
+两束反射光均有$\pi$相变，\emph{相对}半波损失消失。
+相长需$2n_ft=m\lambda$，
+最小正$m=1$给
+\[
+\boxed{t_{2,\min}=\frac{\lambda}{2n_f}
+=\frac{600}{2(1.33)}\,\mathrm{nm}\approx226\,\mathrm{nm}}.
+\]
+\crosscheck 两种薄膜的\emph{上表面材料相同}，差异在于下表面
+是空气还是更高折射率的玻璃；正因这一区别，
+最小反射增强膜厚相差两倍。
+
+\sourceproblem{10.2.13}{272}{272}
+\problemtext 单缝夫琅禾费衍射中，将缝沿凸透镜光轴移动，或沿垂直光轴方向平移，
+焦平面上的衍射图样整体怎样移动？
+\workings
+在理想平面波入射、透镜焦面观察条件下，
+远场强度分布是狭缝孔径函数傅里叶变换的模平方。
+缝的平移引入复相位因子，但不改变其模平方。
+因此两种平移在理想模型中均\textbf{不改变焦平面强度图样的中心位置}。
+\crosscheck 若入射波不是准直平面波、或相对透镜改变有限距离使近轴成像条件失效，则需另行分析。
+
+\sourceproblem{10.2.14}{272}{272}
+\problemtext 单缝中央明纹用波长$589$ nm钠黄光时宽$4.0$ mm，
+换成$442$ nm蓝紫光而装置不变，求中央明纹宽度。
+\workings
+中央明纹宽度与波长成正比，故
+\[
+\boxed{w_2=w_1\frac{\lambda_2}{\lambda_1}
+=4.0\frac{442}{589}\approx3.00\,\mathrm{mm}}.
+\]
+\crosscheck 保持狭缝宽度与透镜焦距不变才能直接按波长比缩放。
+
+\sourceproblem{10.2.15}{272}{272}
+\problemtext 波长500 nm的平行光入射光栅，常量$d=2\times10^{-3}$ mm，
+透光缝宽$a=1\times10^{-3}$ mm。问屏上可观察到多少条光栅主明纹。
+\workings
+$d=2\,\mu$m，$a=1\,\mu$m，$d/a=2$，所有偶数级$k=\pm2,\pm4,\ldots$与单缝零点重合而缺级。
+由于$|k|\lambda/d<1$为可在有限焦面上观测的衍射角条件，
+$|k|<4$，因此保留$k=0,\pm1,\pm3$共
+\[
+\boxed{N_{\mathrm{bright}}=5}.
+\]
+即屏上可观察到\textbf{5条主明纹}。
+\crosscheck $k=\pm4$仅在极限$\sin\theta=\pm1$的掠射方向，通常不计入焦平面屏幕可见条纹；
+而且这里它们恰为缺级。
+
+\sourceproblem{10.2.16}{272}{272}
+\problemtext 马吕斯定律$I=I_0\cos^2\alpha$中，$I,I_0,\alpha$分别表示什么？
+\workings
+$I_0$为入射到检偏器的\emph{线偏振光强度}，
+$I$为通过检偏器后的强度，
+$\alpha$为入射线偏振光的振动方向与检偏器透振方向夹角。
+\[
+\boxed{I=I_0\cos^2\alpha}.
+\]
+\crosscheck 若$I_0$指自然光进入\emph{第一片}起偏器之前的强度，还需额外乘$1/2$。
+
+\sourceproblem{10.2.17}{272}{272}
+\problemtext 光强计中的检偏器旋转时，分别对自然光、线偏振光和部分偏振光判断光强变化的规律。
+\workings
+自然光经旋转检偏器的透射强度始终为入射的$1/2$，\textbf{不变}；
+线偏振光满足马吕斯定律，最大最小交替，某些角度有\textbf{完全消光}；
+部分偏振光既有自然光底噪又有线偏振成分，光强\textbf{周期变化但通常不完全消光}。
+\crosscheck 只有完全线偏振光才能用理想检偏器出现严格零强度。
+
+\sourceproblem{10.2.18}{272}{272}
+\problemtext 自然光按布儒斯特角入射两介质分界面，反射光处于何种偏振状态，其振动方向与入射面何种关系？
+\workings
+布儒斯特反射光\textbf{完全线偏振}，电矢量的振动方向\textbf{垂直于入射面}。
+\crosscheck 尽管折射光也发生部分偏振，但一般不是完全线偏振。
+
+\sourceproblem{10.2.19}{272}{272}
+\problemtext 自然光从空气入射平板玻璃，反射光完全偏振且\emph{折射角}$r=30^\circ$，空气折射率取1，求玻璃折射率。
+\workings
+布儒斯特条件$i_B+r=90^\circ$，故$i_B=60^\circ$，
+并有$n_2/n_1=\tan i_B$，所以
+\[
+\boxed{n_{\mathrm{glass}}=\tan60^\circ=\sqrt3\approx1.732}.
+\]
+\crosscheck 原题给的是\emph{折射角}30°而不是\emph{入射角}30°；
+互换会错误得出小于1的“玻璃折射率”。
+
+\sourceproblem{10.2.20}{273}{273}
+\problemtext 光的干涉和衍射说明光具有何种性质？偏振现象说明光属于哪种波？
+\workings
+干涉和衍射是\textbf{波动性}的证据；
+偏振表明电场振动方向与光传播方向垂直，因此光是\textbf{横波}。
+\crosscheck 波动性和横波属性是两项不同层次的结论，不能把两空都填“电磁波”而丢失题意。
+% === END textbook-ch10-blanks.tex ===
+
+% === BEGIN textbook-ch10-solutions-001-008.tex blob a827c74d97ac076c5c6dbe3ddc2021a42ec1668e ===
+% 《大学物理简明教程（第5版）》第10章计算题10.3.1—10.3.8；
+% 原书/PDF第273页。原题条件及单位来自上传扫描件，解析独立撰写。
+\subsection{解答题：双缝、薄膜、牛顿环和劈尖}
+
+\sourceproblem{10.3.1}{273}{273}
+\problemtext 杨氏双缝间距$d=0.20$ mm、缝屏距$D=1.0$ m，
+第2级明纹离中心$6.0$ mm。(1)求单色光波长；(2)求相邻两明纹间距。
+\workings
+明纹坐标$x_m=m\lambda D/d$，故
+\[
+\boxed{\lambda=\frac{x_2d}{2D}
+=\frac{0.006(0.20\times10^{-3})}{2(1.0)}
+=6.0\times10^{-7}\,\mathrm m=600\,\mathrm{nm}}.
+\]
+相邻明纹间距
+\[
+\boxed{\Delta x=\frac{\lambda D}{d}
+=\frac{600\times10^{-9}(1.0)}{0.20\times10^{-3}}
+=3.0\,\mathrm{mm}}.
+\]
+\crosscheck 第2级明纹的坐标是两个条纹间距，$2(3.0)=6.0$ mm，与已知条件回代一致。
+
+\sourceproblem{10.3.2}{273}{273}
+\problemtext 波长$550$ nm的双缝干涉实验中，在一条狭缝上覆盖薄云母片，
+折射率$n=1.58$，原第7级明纹恰移到屏中央原零级明纹位置。求云母片厚度。
+\workings
+插片相对空气增加光程$\delta=(n-1)t$。
+使第7级条纹移到零级位置，需光程变化绝对值等于$7\lambda$，
+\[
+\boxed{t=\frac{7\lambda}{n-1}
+=\frac{7(550\times10^{-9})}{1.58-1}
+\approx6.64\times10^{-6}\,\mathrm m=6.64\,\mu\mathrm m}.
+\]
+\crosscheck 单程穿过云母片，不能误乘迈克耳孙仪的往返因子2；
+云母片在两路中只加入一路。
+
+\sourceproblem{10.3.3}{273}{273}
+\problemtext 折射率$n_s=1.52$的透镜表面镀折射率$n_f=1.38$的MgF$_2$薄膜，
+使真空波长$550$ nm的垂直入射光反射尽可能弱。求可行最小正膜厚。
+\workings
+空气$\to$薄膜、薄膜$\to$透镜都由低折射率向高折射率反射，
+两束主要反射光都产生$\pi$相变，故无\emph{相对}半波损失。
+要相消，膜内双程光程差满足
+$2n_ft=\lambda/2$（取最小正值），所以
+\[
+\boxed{t_{\min}=\frac{\lambda}{4n_f}
+=\frac{550}{4(1.38)}\,\mathrm{nm}
+\approx99.6\,\mathrm{nm}}.
+\]
+\crosscheck 减反膜的\emph{相位条件}在这里给四分之一波厚；
+若要求两反射振幅严格相等还需$n_f\simeq\sqrt{n_{\rm air}n_s}$，
+而$1.38$不等于$\sqrt{1.52}$，所以实际仅能\emph{尽可能弱}而未必完全为零。
+
+\sourceproblem{10.3.4}{273}{273}
+\problemtext 两玻璃板构成空气劈尖，一端接触，
+另一端由直径$d=0.048$ mm的钢丝撑开，劈尖长$L=0.12$ m。
+以波长$680$ nm的平行光正入射观察反射干涉。
+求夹角、相邻暗纹厚度差、条纹间距以及全长大致可见的暗纹数。
+\workings
+小角度时
+\[
+\boxed{\theta\simeq\frac{d}{L}
+=\frac{0.048\times10^{-3}}{0.12}
+=4.00\times10^{-4}\,\mathrm{rad}}.
+\]
+空气劈尖反射两路有一次相对半波损失，
+暗纹条件$2t=m\lambda$，故相邻暗纹厚度差
+\[
+\boxed{\Delta t=\lambda/2=340\,\mathrm{nm}}.
+\]
+$t(x)\simeq x\theta$，所以
+\[
+\boxed{\Delta x=\frac{\lambda}{2\theta}
+=\frac{680\times10^{-9}}{8.0\times10^{-4}}
+=0.850\,\mathrm{mm}}.
+\]
+全长跨越约$L/\Delta x=141.2$个明暗周期，
+即大致可见$141$个完整间隔（暗纹条数按是否计两端为141或142）。
+\crosscheck 必须说明条数的端点计数约定；
+一端接触处本身是零级暗纹，非高亮纹。
+
+\sourceproblem{10.3.5}{273}{273}
+\problemtext 波长$500$ nm的光垂直照射折射率$n=1.5$的劈形薄膜，
+反射中劈尖棱边为暗纹，且劈尖上方材料折射率$n_1>n$。
+(1) 求膜下材料$n_2$与$n$关系；
+(2) 求从棱边起第10条暗纹处膜厚；
+(3) 下表面整体向下移$\Delta e=2.0\,\mu$m，对暗纹位置和同一点的级次有何影响？
+\workings
+要使$t=0$处反射相消，上下反射须相对有一次$\pi$反射相变。
+已知上界面从$n_1$进入较低$n$，反射无半波相变，
+故下界面须从膜$n$反射到更高$n_2$，
+\[
+\boxed{n_2>n=1.5}.
+\]
+此时暗纹满足$2nt=m\lambda$，且棱边本身对应$m=0$，
+从棱边起\emph{第1条}暗纹取$m=0$，
+第10条取$m=9$，于是
+\[
+\boxed{t_{10}=\frac{9\lambda}{2n}
+=\frac{9(500)}{3}\,\mathrm{nm}=1.50\,\mu\mathrm m}.
+\]
+下板向下移使膜在各位置增厚$\Delta e$，
+相同$m$的暗纹应向\emph{原薄端}移动。
+固定观察点相位级次增加
+\[
+\boxed{\Delta m=\frac{2n\Delta e}{\lambda}
+=\frac{2(1.5)(2000)}{500}=12}.
+\]
+故原第10条暗纹的\emph{原位置}对应第22条暗纹。
+\crosscheck 对“第10条”是否把接触暗纹算为第一条，
+有$m=9$与$m=10$两种教材级次约定，须将计数起点显式记录。
+
+\sourceproblem{10.3.6}{273}{273}
+\problemtext 空气中透明劈形膜楔角$\theta=1.0\times10^{-4}$ rad，
+用波长$700$ nm单色光正入射，邻暗纹间距$0.25$ cm，
+求膜折射率。
+\workings
+等厚干涉邻级膜厚差$\lambda/(2n)$，
+而$\Delta t=\theta\Delta x$，故
+\[
+\boxed{n=\frac{\lambda}{2\theta\Delta x}
+=\frac{700\times10^{-9}}{2(1.0\times10^{-4})(0.25\times10^{-2})}
+=1.40}.
+\]
+\crosscheck 条纹间距给的是$0.25$ cm不是mm；
+代回有$\lambda/(2n\theta)=2.5$ mm。
+
+\sourceproblem{10.3.7}{273}{273}
+\problemtext 牛顿环两道暗环重合：(1)用波长$\lambda_1=600$ nm的第$k$条暗环与波长$\lambda_2=450$ nm的第$k+1$条暗环重合，透镜曲率半径$R=190$ cm，求$k$及对应半径；
+(2)用500 nm光的第5条明环与另一波长光的第6条明环重合，求另一波长。
+\workings
+反射暗环半径平方满足$r_m^2=m\lambda R$，
+\[
+k\lambda_1=(k+1)\lambda_2
+\quad\Longrightarrow\quad
+\boxed{k=\frac{450}{600-450}=3}.
+\]
+半径
+\[
+\boxed{r=\sqrt{k\lambda_1R}
+=\sqrt{3(600\times10^{-9})(1.90)}
+\approx1.85\,\mathrm{mm}}.
+\]
+反射\emph{明}环按首条明环$m=1$，半径
+$r_m^2=(m-\tfrac12)\lambda R$。故
+\[
+\boxed{\lambda_3=\frac{5-\tfrac12}{6-\tfrac12}\,500\,\mathrm{nm}
+\approx409\,\mathrm{nm}}.
+\]
+\crosscheck 两问暗环和明环级次的半整数偏移不同；
+第2问不可直接套暗环的$m\lambda R$公式。
+
+\sourceproblem{10.3.8}{273}{273}
+\problemtext 牛顿环透镜与玻璃之间先为空气，第10条亮环直径
+$d_1=1.40\times10^{-2}$ m；充入液体后同一亮环直径
+$d_2=1.27\times10^{-2}$ m。求液体折射率。
+\workings
+同一环级数、同一真空波长与曲率半径下，
+$D_m^2\propto1/n$，因此
+\[
+\boxed{n=\left(\frac{d_1}{d_2}\right)^2
+=\left(\frac{1.40}{1.27}\right)^2\approx1.215}.
+\]
+\crosscheck 直径减小意味着液体$n>1$，
+符合增大介质光程的物理预期。
+% === END textbook-ch10-solutions-001-008.tex ===
+
+% === BEGIN textbook-ch10-solutions-009-016.tex blob 7ceaddc56a1712a425bf23c5e13a66856fa0217f ===
+% 《大学物理简明教程》第5版第10章解答题10.3.9—10.3.16
+% 原书及PDF第273—274页；独立计算、标明单缝次极大近似的有效性。
+\subsection{解答题：迈克耳孙干涉仪、单缝与光栅}
+
+\sourceproblem{10.3.9}{273}{273}
+\problemtext 迈克耳孙干涉仪一反射镜平移$\Delta d=0.322$ mm，
+共观测1024条纹移过视场。求单色光波长。
+\workings
+反射镜位移导致对应光臂往返光程改变$2\Delta d$。
+若移过$N$条纹，则$2\Delta d=N\lambda$，所以
+\[
+\boxed{\lambda=\frac{2(0.322\times10^{-3})}{1024}
+\approx6.29\times10^{-7}\,\mathrm m=629\,\mathrm{nm}}.
+\]
+\crosscheck 镜子位移和光程差之间有往返因子2；
+漏掉会算出约314 nm。
+
+\sourceproblem{10.3.10}{273}{273}
+\problemtext 在迈克耳孙干涉仪的一条光臂中插入折射率$n=1.632$的玻璃片，
+造成150条纹朝同一方向移过。入射光波长$500$ nm，求片厚。
+\workings
+插入片后单程光程多$(n-1)t$，
+仪器光线往返两次，总光程差改变
+$2(n-1)t$；故
+\[
+\boxed{t=\frac{N\lambda}{2(n-1)}
+=\frac{150(500\times10^{-9})}{2(1.632-1)}
+\approx5.93\times10^{-5}\,\mathrm m
+=59.3\,\mu\mathrm m}.
+\]
+\crosscheck 增厚、增大折射率或增加移动条数三者正相关，
+与公式一致。
+
+\sourceproblem{10.3.11}{273}{273}
+\problemtext 对垂直入射的多缝光栅，透光缝宽$a$，
+不透光区宽$b$，讨论三种光栅常量比例
+$(1)\ a+b=2a$、$(2)\ a+b=3a$、
+$(3)\ a+b=4a$时哪些主极大级数会因单缝包络而缺级。
+\workings
+光栅主极大$d\sin\theta=k\lambda$，其中$d=a+b$；
+单缝零点$a\sin\theta=m\lambda$。
+两式同时成立须
+\[
+k=\frac{d}{a}\,m,\quad m=1,2,\ldots.
+\]
+因此
+\[
+\boxed{\begin{aligned}
+d/a=2&:\ k=\pm2,\pm4,\pm6,\ldots,\\
+d/a=3&:\ k=\pm3,\pm6,\pm9,\ldots,\\
+d/a=4&:\ k=\pm4,\pm8,\pm12,\ldots.
+\end{aligned}}
+\]
+\crosscheck $k=0$中心主极大不会因为单缝零点而缺失；
+是否能观察高阶级数还须满足$|\sin\theta|<1$。
+
+\sourceproblem{10.3.12}{273}{273}
+\problemtext 用未知波长$\lambda$单缝衍射时第3级暗纹位置，
+与波长$600$ nm光的第2条次极大亮纹位置恰好重合，求未知波长。
+\workings
+第3级暗纹的光程差满足$a\sin\theta=3\lambda$。
+常用\emph{半波带近似}把单缝第2侧明纹放在
+$a\sin\theta\simeq(2+\tfrac12)\lambda_0$，
+$\lambda_0=600$ nm，因此
+\[
+\boxed{\lambda_{\rm approx}
+\simeq\frac{2.5(600)}{3}\,\mathrm{nm}=500\,\mathrm{nm}}.
+\]
+更精细的夫琅禾费次极大满足
+$\tan\beta=\beta$，
+第2个非中心正侧极大根为$\beta\simeq7.725$，
+对应$a\sin\theta\simeq2.459\lambda_0$，于是
+\[
+\lambda_{\rm exact}\simeq2.459(600)/3\approx492\,\mathrm{nm}.
+\]
+\crosscheck \textbf{模型精度必须注明}：
+标准教材以“奇数个半波带”近似求次明纹会给500nm，
+但该位置不是严格的$\tan\beta=\beta$极值。
+不能把500nm标成精确值；根的级次应以零点之间的
+\emph{第2条侧极大}为准。
+
+\sourceproblem{10.3.13}{273}{273}
+\problemtext 单缝宽$a=0.10$ mm，原装置凸透镜焦距$f=50$ cm，
+波长$500$ nm的绿光垂直入射。将整个装置浸入折射率$n=1.33$的水中，
+求中央衍射明纹的\emph{半角宽度}。
+\workings
+题问的是角度而不是焦平面的线宽。
+水中光波频率不变、波长
+$\lambda'=\lambda_0/n$，
+单缝第一暗纹角满足
+$a\sin\theta_1=\lambda'$。
+因此中央明纹从中心到第一暗纹的半角宽度为
+\[
+\boxed{\theta_{\frac12}
+=\arcsin\frac{\lambda_0}{na}
+=\arcsin\frac{500\times10^{-9}}{1.33(0.10\times10^{-3})}
+\approx3.76\times10^{-3}\,\mathrm{rad}}
+\]
+即约$\boxed{0.215^\circ}$。
+\crosscheck 焦距$f=50$ cm对\emph{角宽度}不起作用；
+若另外换算假定$f$固定时焦面线半宽才有
+$f\theta\simeq1.88$ mm。不能将mm作为原题半角宽度的单位。
+
+\sourceproblem{10.3.14}{273--274}{273--274}
+\problemtext 橙黄色平行光垂直入射宽$a=0.60$ mm的单缝，
+后方凸透镜焦距$f=40.0$ cm；
+屏上距中心$1.40$ mm处的$P$点为侧明纹。
+求大致波长、明纹级次及从$P$点观察的半波带数。
+\workings
+旁轴近似给该方向单缝光程差
+\[
+\delta=a\sin\theta\simeq a\frac yf
+=(0.60\times10^{-3})\frac{1.40\times10^{-3}}{0.40}
+=2.10\times10^{-6}\,\mathrm m.
+\]
+橙黄色波长通常约$600$ nm，
+故$\delta/\lambda\approx3.5$，
+按照半波带近似，$P$对应\emph{第3个侧次极大}，
+且光程差约$7\lambda/2$，由此
+\[
+\boxed{\lambda_{\rm approx}\simeq
+\frac{\delta}{7/2}\approx600\,\mathrm{nm}}.
+\]
+该方向对应\textbf{约第3级侧明纹}；
+从$P$点观察狭缝波面约可分为\textbf{7个半波带}。
+\emph{更精细地}，单缝第3侧极大的根
+$\beta\simeq10.904$，
+光程差系数$\beta/\pi\simeq3.4709$，
+由同一屏位置可反推$\lambda\approx605$ nm。
+\crosscheck 原文只称“橙黄色”，未独立给出精确波长；
+单靠“$P$点是一条明纹”会有多个可能级次。
+上述600nm的选择额外使用\emph{颜色范围及第3侧明纹}
+的近似判别；不应声称题目在数学上无歧义唯一确定波长。
+
+\sourceproblem{10.3.15}{274}{274}
+\problemtext 波长$590$ nm钠黄光垂直入射每毫米有500条刻线的光栅，
+求能观察到的最高主极大级数。
+\workings
+光栅常量
+$d=1/500\,\mathrm{mm}=2.00\,\mu\mathrm m$。
+主极大满足$d\sin\theta=k\lambda$，
+且可观测传播方向要求$|\sin\theta|\le1$。
+\[
+\frac d\lambda=\frac{2000}{590}\approx3.39,
+\qquad\boxed{k_{\max}=3}.
+\]
+\crosscheck 题未给单缝宽度，因此不额外假定第3级缺级。
+
+\sourceproblem{10.3.16}{274}{274}
+\problemtext 两波长$\lambda_1=600$ nm、$\lambda_2=400$ nm的平行单色光
+同时垂直入射光栅。屏上距零级明纹$y=5$ cm处，
+前者第$k$级极大与后者第$k+1$级重合，
+透镜焦距$f=50$ cm，求$k$和光栅常量$d$。
+\workings
+共同衍射角要求
+$k\lambda_1=(k+1)\lambda_2$，
+故
+\[
+\boxed{k=\frac{\lambda_2}{\lambda_1-\lambda_2}
+=\frac{400}{600-400}=2}.
+\]
+用焦平面几何$\tan\theta=y/f=0.10$，
+则$\sin\theta=y/\sqrt{f^2+y^2}\approx0.09950$。
+\[
+\boxed{d=\frac{k\lambda_1}{\sin\theta}
+=\frac{2(600\,\mathrm{nm})}{0.09950}
+\approx12.1\,\mu\mathrm m}.
+\]
+若采用小角近似$\sin\theta\simeq y/f$，得$d\simeq12.0\,\mu$m。
+\crosscheck 用的是光栅\emph{常量}而不是透光缝宽，
+且两束光的级数相差1而非相同。
+% === END textbook-ch10-solutions-009-016.tex ===
+
+% === BEGIN textbook-ch10-solutions-017-023.tex blob 948ae6fe4b8baf1d91331db709986acf272eb6d8 ===
+% 《大学物理简明教程》第5版第10章解答题10.3.17—10.3.23；
+% 原书与PDF第274页。光栅级数和缺级严格区分；图10.3.23按Fresnel规律提出核验基准。
+\subsection{解答题：光栅缺级、偏振与布儒斯特定律}
+
+\sourceproblem{10.3.17}{274}{274}
+\problemtext 波长$\lambda=600$ nm的单色光垂直入射光栅，
+第2、3级主明纹分别出现在
+$\sin\varphi_2=0.20$、$\sin\varphi_3=0.30$，
+且第4级主明纹缺级。求：(1)光栅常量；
+(2)透光缝宽；(3)在$0^\circ<\varphi<90^\circ$内能观察到哪些主明纹级数。
+\workings
+光栅主极大条件
+$d\sin\varphi_k=k\lambda$给
+\[
+\boxed{d=\frac{2(600\,\mathrm{nm})}{0.20}
+=\frac{3(600\,\mathrm{nm})}{0.30}=6.00\,\mu\mathrm m}.
+\]
+第4级恰与单缝第1个零点相重合，
+即$d/a=4$，因此
+\[
+\boxed{a=\frac d4=1.50\,\mu\mathrm m}.
+\]
+可传播的正级数满足$k<d/\lambda=10$
+（严格排除$90^\circ$掠射方向）。
+因此$k=1,\ldots,9$，又因$d/a=4$的倍数缺级，
+$k=4,8$消失。剩余
+\[
+\boxed{k=1,2,3,5,6,7,9}.
+\]
+\crosscheck 题设给的是第2、3级\emph{主明纹}，
+不能误按单缝第2、3级暗纹求$d$；
+第4级缺级是单缝包络零点与光栅主极大重合。
+
+\sourceproblem{10.3.18}{274}{274}
+\problemtext 双缝中心距$d=0.10$ mm、每缝宽$a=0.020$ mm，
+波长$\lambda=480$ nm光垂直照射，焦距$f=50$ cm的凸透镜
+将远场图样形成于焦面。求：(1)单缝衍射中央明纹宽度；
+(2)其包络内可以出现几条双缝干涉主亮纹。
+\workings
+单缝中央包络由两侧第一暗纹界定，
+\[
+\boxed{W=\frac{2f\lambda}{a}
+=\frac{2(0.50)(480\times10^{-9})}
+{0.020\times10^{-3}}
+=0.024\,\mathrm m=24\,\mathrm{mm}}.
+\]
+双缝干涉亮纹间隔
+$\Delta x=f\lambda/d=2.40$ mm。
+在中央包络内部，
+光栅亮纹级数满足
+$|m|\lambda/d<\lambda/a$，
+即$|m|<d/a=5$。
+故$m=-4,-3,\ldots,3,4$，
+\[
+\boxed{N_{\rm bright}=9}.
+\]
+即中央单缝包络内共有\textbf{9条双缝亮纹}。
+\crosscheck $m=\pm5$恰落在单缝第一暗纹位置，
+由于\emph{缺级}不计入亮纹，不能算作11条。
+
+\sourceproblem{10.3.19}{274}{274}
+\problemtext 光强$I_0$的自然光穿过两片理想偏振片，
+初始透振方向平行。保持第一片不动，
+将第二片的透振轴分别转过$30^\circ$、$45^\circ$、$60^\circ$，
+求每种情况下的最终光强与$I_0$之比。
+\workings
+第一片使自然光强度成为$I_0/2$。
+第二片依马吕斯定律
+$I(\theta)=\tfrac12I_0\cos^2\theta$，从而
+\[
+\boxed{\frac{I_{30}}{I_0}=\frac38},\qquad
+\boxed{\frac{I_{45}}{I_0}=\frac14},\qquad
+\boxed{\frac{I_{60}}{I_0}=\frac18}.
+\]
+\crosscheck 透过第一片时必先有$1/2$损耗；
+三个出射强度随两轴夹角增大而单调减小。
+
+\sourceproblem{10.3.20}{274}{274}
+\problemtext 自然光经过两片透振轴夹角$60^\circ$的偏振片，
+输出光强$I_1$；在两片之间插入第三片，其透振轴与前两片
+各成$30^\circ$，求新的输出强度$I$与$I_1$之比。
+\workings
+原两片给
+$I_1=(I_0/2)\cos^260^\circ=I_0/8$。
+插片后有两段各$30^\circ$的马吕斯衰减，
+\[
+I=\frac{I_0}{2}\cos^230^\circ\cos^230^\circ
+=\frac{I_0}{2}\left(\frac34\right)^2
+=\frac{9I_0}{32}.
+\]
+故
+\[
+\boxed{\frac I{I_1}=\frac{9/32}{1/8}=\frac94}.
+\]
+\crosscheck 插片会使出射光强\emph{提高}，
+这是逐步转动偏振方向的经典例子，
+不违反能量守恒，因为中间片仍在吸收其未透射的分量。
+
+\sourceproblem{10.3.21}{274}{274}
+\problemtext 自然光入射两片理想偏振片，求两透振方向夹角$\theta$，
+使得通过两片后的光强：
+(1)是该两片系统所能达到\emph{最大透射光强}的$1/3$；
+(2)是\emph{原入射自然光强度}的$1/3$。
+\workings
+总透射强度
+$I(\theta)=I_0\cos^2\theta/2$，
+该系统最大透射光强$I_{\max}=I_0/2$。
+(1) $I/I_{\max}=1/3$，
+$\cos^2\theta=1/3$，
+\[
+\boxed{\theta_1=\arccos(1/\sqrt3)\approx54.74^\circ}.
+\]
+(2) $I/I_0=1/3$，
+$\cos^2\theta=2/3$，
+\[
+\boxed{\theta_2=\arccos\sqrt{2/3}\approx35.26^\circ}.
+\]
+\crosscheck 题目的两个分母不同：一个是\emph{两片系统的最大透射强度}，
+另一个是\emph{自然光入射强度}，所以结果不相同。
+
+\sourceproblem{10.3.22}{274}{274}
+\problemtext 一束自然光由空气入射折射率$n=1.40$的液体表面，
+若反射光为完全线偏振光，求入射角及折射角。
+\workings
+反射光完全偏振的布儒斯特条件
+$\tan i_B=n_2/n_1=1.40$，故
+\[
+\boxed{i_B=\arctan1.40\approx54.46^\circ}.
+\]
+布儒斯特入射时反射线与折射线互相垂直，
+\[
+\boxed{r_B=90^\circ-i_B\approx35.54^\circ}.
+\]
+\crosscheck 折射光只是\emph{部分偏振}；
+题设“反射完全线偏振”不等于所有折射光也完全偏振。
+
+\sourceproblem{10.3.23}{274}{274}
+\problemtext 光从空气射向折射率$n$的玻璃，原书图10.3.23列出
+不同的入射光偏振标记与入射角$i$、$i_0=\arctan n$
+共五种情形；要求在原图补标反射与折射光的振动方向，
+并分别区分线偏振与部分偏振。
+\workings
+以入射面为参考，电场垂直入射面的分量称$s$偏振，
+平行入射面的分量称$p$偏振。
+非磁各向同性介质界面的菲涅耳反射/透射不将$s,p$互相转换。
+因此可按以下规则给每条射线添加标记：
+\begin{center}
+\begin{tabular}{lll}
+\hline
+入射类型 & 反射光 & 折射光\\
+\hline
+$s$线偏振 & $s$线偏振 & $s$线偏振\\
+$p$线偏振，$i\ne i_0$ & $p$线偏振 & $p$线偏振\\
+$p$线偏振，$i=i_0$ & 无反射光 & $p$线偏振\\
+自然光，$i\ne i_0$ & 部分偏振 & 部分偏振\\
+自然光，$i=i_0$ & $s$完全线偏振 & 部分偏振\\
+\hline
+\end{tabular}
+\end{center}
+布儒斯特角对应$p$分量的反射振幅系数$r_p=0$，
+而$s$反射一般不为零。图中“点”与“短划线”必须根据
+\emph{纸面是不是入射面}的标识与这些规则匹配。
+\crosscheck \textbf{保留原图校核标记}：
+源图五个子图的逐光线点线标注不能仅凭文字代替，
+此处给出不依赖绘图风格的物理分类表；
+后续须在LaTeX中重画并逐图对齐，才可认为原题图示部分完整录入。
+% === END textbook-ch10-solutions-017-023.tex ===

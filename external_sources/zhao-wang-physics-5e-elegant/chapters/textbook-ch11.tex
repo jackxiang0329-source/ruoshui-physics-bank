@@ -1,0 +1,609 @@
+% Consolidated textbook-ch11 from 1699b8435d575b3f9a89b4f32b3cd9072025e92c; source fragments preserved.
+
+% === BEGIN textbook-ch11-choices.tex blob ee645a394d159bb655620f9ad876ccdc258612c5 ===
+% 赵近芳、王登龙《大学物理简明教程》第5版，第11章“狭义相对论”
+% 原书/扫描PDF第288—289页；第11.1.1—11.1.11选择题，独立转述与推导。
+\subsection{选择题：时空变换、速度合成与相对论能量}
+
+\sourceproblem{11.1.1}{288}{288}
+\problemtext 某惯性系内两个事件同时发生于不同地点。
+换到另一个惯性系后，判断它们是否可能仍同时、
+是否可能变成同地事件。
+\workings
+对于三维位置差$\Delta\bm r\ne\bm0$及惯性系相对速度$\bm v$，
+洛伦兹时间差为
+\[
+\Delta t'=\gamma\left(\Delta t-\frac{\bm v\cdot\Delta\bm r}{c^2}\right).
+\]
+给定$\Delta t=0$，若相对速度垂直于事件空间差
+（$\bm v\cdot\Delta\bm r=0$），仍有$\Delta t'=0$；
+若速度在分离方向有非零分量，则$\Delta t'\ne0$。
+但不变量
+$c^2\Delta t'^2-|\Delta\bm r'|^2
+=-|\Delta\bm r|^2<0$，意味着这种类空间隔的两事件
+在任何惯性系都\emph{不能变成同地事件}。
+\[
+\boxed{\Delta t'=0},\qquad\boxed{\Delta\bm r'\ne\bm0}.
+\]
+因此原题四项中按未限定运动方向的\emph{严格三维解释}，
+应选\textbf{B：可能同时}。
+\crosscheck \textbf{原题隐含一维约定待核：}
+若教材默认另一个系\emph{一定沿事件连线方向}
+以非零速度运动，则时间差必非零，对应D；
+原题字面并未给这一额外条件，故不能无条件选D。
+
+\sourceproblem{11.1.2}{288}{288}
+\problemtext 某惯性系中两事件同地不同时，另一惯性系中可否同地或同时？
+\workings
+设$\Delta x=0$、$\Delta t\ne0$，
+则$\Delta t'=\gamma\Delta t\ne0$，
+而$\Delta x'=-\gamma v\Delta t$。
+非零相对速度沿$x$方向时两事件不同地，
+\textbf{可能同地只在两系相对速度零或有关投影零时}，
+故源书选择表达为\textbf{D}（非零运动系不同时且不同地）。
+\crosscheck 同地发生的时间间隔是固有时，
+另一运动系测到的时间间隔更长，绝不变成同时。
+
+\sourceproblem{11.1.3}{288}{288}
+\problemtext 飞船上由船首发向船尾的光脉冲，
+飞船静止系时钟测得传播所历时间为$\Delta t$；
+求飞船固有长度。
+\workings
+在飞船自身静止系中两端固定，光速为$c$，
+故
+\[
+\boxed{L_0=c\Delta t}.
+\]
+原题选\textbf{A}。
+\crosscheck $\Delta t$是飞船静止系测量的发射与接收坐标时间；
+因为两事件不在同一位置，严格术语上它不是两事件间的“固有时”。
+
+\sourceproblem{11.1.4}{289}{289}
+\problemtext 以约定恒定速度从地球飞往距地球5光年的星球，
+要求宇航员固有旅行时间为3年，求飞船相对地球的速度。
+\workings
+地球系的飞行时间$t=5c\,\mathrm{yr}/v$；
+飞船时钟$\tau=t\sqrt{1-\beta^2}$，
+要求$3=5\sqrt{1-\beta^2}/\beta$，
+故$9\beta^2=25(1-\beta^2)$，
+\[
+\boxed{\beta=\frac5{\sqrt{34}}\approx0.8575}.
+\]
+题中给出的离散选项为$0.5c,0.6c,0.8c,0.9c$；
+数值上\textbf{D：$0.9c$}距离精确解最近。
+\crosscheck \textbf{原选项精度疑点：}严格结果是$0.8575c$，
+与$0.9c$及$0.8c$均不严格相等。本题应先报告精确解，
+再明确把D理解为\emph{最近选项}，不得误称$0.9c$是准确速度。
+
+\sourceproblem{11.1.5}{289}{289}
+\problemtext 飞船相对地球以$0.8c$飞离，地球系记录其先后两次发出信号的事件时间间隔为10秒，问飞船本地时钟间隔。
+\workings
+两次发射都发生在飞船同一固定位置，
+故固有时间为
+\[
+\boxed{\Delta\tau=10\sqrt{1-0.8^2}=6.0\,\mathrm s}.
+\]
+原题选\textbf{A}。
+\crosscheck “地球测得信号间隔”须指地球坐标系对\emph{发射事件}的间隔；
+若是地球同一接收器收到的时差，还需考虑多普勒传播延迟，不能直接用本式。
+
+\sourceproblem{11.1.6}{289}{289}
+\problemtext 静止系中边长$a$的正方形薄板，两边沿$x,y$轴，
+另一个系沿$x$轴以$0.8c$相对运动，问测得面积。
+\workings
+仅沿运动方向的长度收缩：
+$a_x'=a\sqrt{1-\beta^2}=0.6a$，$a_y'=a$，
+因此
+\[
+\boxed{S'=0.60a^2}.
+\]
+原题选\textbf{A}。
+\crosscheck 面积只有平行运动方向一维收缩，不应平方收缩因子。
+
+\sourceproblem{11.1.7}{289}{289}
+\problemtext 判断狭义相对论中的四条陈述：物体不能超光速，
+质量长度时间等观测量依运动状态改变、同时性的绝对性、
+相对运动时钟的运动延缓效应。
+\workings
+有静质量的物体不能加速至光速，①为真。
+长度和时间随参考系变化，②真。
+分处不同地点事件的同时性通常不具有绝对性，③假。
+相对运动时钟的固有时与观察系坐标时满足时间延缓，④真。
+故选\textbf{B（命题1、2、4）}。
+\crosscheck 时间延缓需比较同一对钟事件间的固有时间与坐标时间，
+不能用单一钟在“自身看来也变慢”的说法描述。
+
+\sourceproblem{11.1.8}{289}{289}
+\problemtext 比邻星距地球约$4.3\times10^{16}$ m，
+飞船速度为$0.991c$，地球钟显示航程约4.59年，
+飞船钟显示约多少年？
+\workings
+$\gamma^{-1}=\sqrt{1-0.991^2}\approx0.13386$，
+故
+\[
+\boxed{\tau=4.59\sqrt{1-0.991^2}\approx0.614\,\mathrm{yr}}.
+\]
+对应原书选\textbf{D：0.61年}。
+\crosscheck 源书是地球钟约\emph{4.59年}，不是0.459年；
+这决定结果的十倍量级。
+
+\sourceproblem{11.1.9}{289}{289}
+\problemtext 某系$S'$中与$x'$轴成$45^\circ$的静止细杆，
+$S'$以非零速度沿$x$轴相对$S$运动，
+$S$系中所见夹角与$45^\circ$关系如何？
+\workings
+静止系杆坐标增量满足$\Delta y'=\Delta x'$。
+相对运动系中同步测长时沿$x$方向收缩：
+$\Delta x=\Delta x'/\gamma$、$\Delta y=\Delta y'$，
+所以
+\[
+\boxed{\tan\theta=\gamma\tan45^\circ=\gamma>1},\qquad
+\boxed{\theta>45^\circ}.
+\]
+原题选\textbf{A}。
+\crosscheck 与运动方向垂直的尺寸不收缩，杆看起来更接近竖直。
+
+\sourceproblem{11.1.10}{289}{289}
+\problemtext 两个静质量均为$m_0$的粒子在同一系中以相同速度$\bm v$
+同向运动并碰并后合为一个粒子，求合成粒子的静质量。
+\workings
+总初能量$E=2\gamma m_0c^2$、
+总动量$\bm p=2\gamma m_0\bm v$，
+不变量给
+\[
+M_0^2c^4=E^2-p^2c^2
+=4\gamma^2m_0^2c^4(1-\beta^2)
+=4m_0^2c^4.
+\]
+因此
+\[
+\boxed{M_0=2m_0}.
+\]
+原题选\textbf{A}。
+\crosscheck 两粒子\emph{同速同向}，整体质心静止系中没有相对动能，
+完全合并不会无故增加系统静质量。
+
+\sourceproblem{11.1.11}{289}{289}
+\problemtext 粒子总能量为静能的$K$倍（$K\ge1$），求速率。
+\workings
+$E=\gamma m_0c^2=Km_0c^2$，
+故$\gamma=K$，
+\[
+\boxed{v=c\sqrt{1-\frac1{K^2}}
+=\frac cK\sqrt{K^2-1}}.
+\]
+原题选\textbf{C}。
+\crosscheck $K=1$给$v=0$；$K\to\infty$时$v\to c$但不超过$c$。
+% === END textbook-ch11-choices.tex ===
+
+% === BEGIN textbook-ch11-blanks.tex blob 477fc3ec095a9c95164feba56d7aa15416a05ebe ===
+% 《大学物理简明教程》第5版，第11章狭义相对论，填空11.2.1—11.2.6。
+% 原书/扫描PDF第289—290页，原题短摘要及推导独立撰写。
+\subsection{填空题：基本原理、时空变换与动能}
+
+\sourceproblem{11.2.1}{289}{289}
+\problemtext 写出狭义相对论两条基本公设：物理规律的惯性系等价性以及真空光速。
+\workings
+第一空是\textbf{所有惯性系}；第二空是\textbf{等于}。
+相对性原理要求物理规律在所有惯性系具有相同形式；
+光速不变原理给所有惯性系中真空光速均为
+\[
+\boxed{c=299\,792\,458\,\mathrm{m/s}}.
+\]
+\crosscheck 光速不变不等于光速在任意物质介质中不变。
+
+\sourceproblem{11.2.2}{290}{290}
+\problemtext 飞船沿$x$正向匀速前进，船首和船尾各有发光装置。
+飞船尾部观察者测量由船首发出的光脉冲传播速度大小，
+船首观察者测量由船尾发出脉冲的传播速度大小，分别填空。
+\workings
+两个接收器都是惯性系中的局部观测者，
+真空光速均满足
+\[
+\boxed{u_{\mathrm{head\to tail}}=c},\qquad
+\boxed{u_{\mathrm{tail\to head}}=c}.
+\]
+\crosscheck 不能使用伽利略式$c\pm v$；只要是在真空中进行局域光速测定，结果与飞船速度无关。
+
+\sourceproblem{11.2.3}{290}{290}
+\problemtext $S'$以$0.8c$沿$S$的$x$正向运动，
+$S'$系中两事件相隔
+$\Delta t'=5\times10^{-7}$ s、$\Delta x'=-120$ m，
+求$S$系中空间与时间间隔。
+\workings
+逆洛伦兹变换
+\[
+\Delta x=\gamma(\Delta x'+v\Delta t'),
+\quad
+\Delta t=\gamma\left(\Delta t'+\frac{v\Delta x'}{c^2}\right),
+\quad\gamma=\frac53.
+\]
+取$c=3.0\times10^8$ m/s，
+$v\Delta t'=120$ m，$v\Delta x'/c^2=-3.2\times10^{-7}$ s，
+所以
+\[
+\boxed{\Delta x=0},\qquad
+\boxed{\Delta t=3.0\times10^{-7}\,\mathrm s}.
+\]
+\crosscheck 两事件在$S$中同地发生，所以$3.0\times10^{-7}$ s是本题事件对的固有时间；$S'$中间隔$5\times10^{-7}$ s较长。
+
+\sourceproblem{11.2.4}{290}{290}
+\problemtext $\mu$子在自身静止系寿命$\tau_0=2.0\times10^{-6}$ s；
+相对地球速率$0.988c$，求地球系测量的平均寿命。
+\workings
+由时间延缓
+\[
+\boxed{\tau=\gamma\tau_0
+=\frac{2.0\times10^{-6}}{\sqrt{1-0.988^2}}
+\approx1.295\times10^{-5}\,\mathrm s}.
+\]
+\crosscheck 运动粒子的地球系平均寿命应长于自身平均固有寿命。
+
+\sourceproblem{11.2.5}{290}{290}
+\problemtext 某不稳定粒子的固有平均寿命为实验室系测得寿命的$1/n$，
+静质量$m_0$，求其实验室系动能。
+\workings
+$\tau_{\rm lab}=\gamma\tau_0$，故$\gamma=n$。
+动能为
+\[
+\boxed{E_k=(\gamma-1)m_0c^2=(n-1)m_0c^2}.
+\]
+\crosscheck 当$n=1$对应粒子在该实验室系静止，动能为零。
+
+\sourceproblem{11.2.6}{290}{290}
+\problemtext 何种速度下粒子的相对论质量等于静质量的两倍？
+何种速度下其动能恰等于静止能量？
+\workings
+两条件分别是$\gamma=2$与
+$(\gamma-1)m_0c^2=m_0c^2$，
+都要求$\gamma=2$，
+\[
+\boxed{\frac vc=\sqrt{1-\frac14}=\frac{\sqrt3}{2}}.
+\]
+所以两空相同。
+\crosscheck 原题沿用教材的“运动质量”说法；现代惯用静质量$m_0$及相对论总能量$E=\gamma m_0c^2$，结论不变。
+% === END textbook-ch11-blanks.tex ===
+
+% === BEGIN textbook-ch11-solutions-001-009.tex blob b27cf818298112bf2b0a90e87840bf36431f4f92 ===
+% 《大学物理简明教程》第5版狭义相对论11.3.1—11.3.9
+% 扫描印刷/PDF第290—291页；原始参数逐页核对，独立推导与假设说明。
+\subsection{解答题：洛伦兹变换、时间延缓和速度合成}
+
+\sourceproblem{11.3.1}{290}{290}
+\problemtext 惯性系$S'$相对$S$沿$x$匀速运动、两系原点于$t=t'=0$重合。
+$S$中事件1为$(x_1,t_1)=(6.0\times10^4\rm\,m,2.0\times10^{-4}\rm\,s)$，
+事件2为$(x_2,t_2)=(12.0\times10^4\rm\,m,1.0\times10^{-4}\rm\,s)$。
+若$S'$中两事件同时，求$S'$相对$S$的有向速度和$S'$中事件空间间隔。
+\workings
+作差$\Delta x=x_2-x_1=6.0\times10^4\rm\,m$、
+$\Delta t=t_2-t_1=-1.0\times10^{-4}\rm\,s$。
+因为$\Delta t'=\gamma(\Delta t-v\Delta x/c^2)=0$，
+\[
+\boxed{v=\frac{c^2\Delta t}{\Delta x}=-1.50\times10^8\,\mathrm{m/s}=-0.50c}.
+\]
+由$\gamma=1/\sqrt{1-0.25}=2/\sqrt3$，
+\[
+\boxed{\Delta x'=\gamma(\Delta x-v\Delta t)
+=\frac{4.5\times10^4}{\sqrt{0.75}}
+\approx5.20\times10^4\,\mathrm m}.
+\]
+\crosscheck $S'$朝$x$的\emph{负向}运动。以时空不变量检验
+$(\Delta x')^2=(\Delta x)^2-c^2(\Delta t)^2
+=2.7\times10^9\,\mathrm{m^2}$。
+
+\sourceproblem{11.3.2}{290}{290}
+\problemtext 长度为400m的飞船相对地面以$0.99c$匀速飞行。
+地面测得飞船长度多大？测量船首和船尾必须同时进行的两地观测者
+在地面及飞船各测得多远距离？
+\workings
+飞船固有长度$L_0=400$ m，故
+\[
+\boxed{L=400\sqrt{1-0.99^2}\approx56.4\,\mathrm m}.
+\]
+地面上同时标记首尾位置的观测者相距$L=56.4$ m。
+由于这一对地面观测者作为地面\emph{静止的两点}，
+在飞船系的同一飞船时刻测量其距离，按长度收缩
+\[
+\boxed{L'_{\rm ground}=L/\gamma\approx7.96\,\mathrm m}.
+\]
+\crosscheck 原书第(3)问指\emph{地面上两位观测者之间的距离}在飞船系中的值，
+而不是飞船自身长度400m。若对比“地面系同时标记事件”
+在飞船系的坐标差（不要求船系同时），则数值不同，
+须保留测长同时性约定。
+
+\sourceproblem{11.3.3}{290}{290}
+\problemtext $S'$以$0.60c$沿$x$正向相对$S$运动，
+原点于零时重合。$S$中某事件发生于
+$t=2.0\times10^{-7}$ s、$x=50$ m，求$S'$坐标时间。
+\workings
+$\gamma=1/\sqrt{1-0.6^2}=1.25$，
+\[
+\boxed{t'=\gamma\left(t-\frac{vx}{c^2}\right)
+=1.25\left(2.0\times10^{-7}
+-\frac{(0.6)(50)}{3.0\times10^8}\right)
+=1.25\times10^{-7}\,\mathrm s}.
+\]
+\crosscheck 先检验光传播尺度$ct=60$m；
+事件处在原点未来光锥内，洛伦兹变换不改变其因果型。
+
+\sourceproblem{11.3.4}{290}{290}
+\problemtext 观察者B相对A以$0.8c$沿自身携带的1m细杆方向运动。
+两次闪光在杆\emph{同一端}相继发出，B用本地时钟测得
+时间间隔10秒，求A系观察到这两个发光事件的时间间隔。
+\workings
+两次事件发生在B系同一端点，间隔10秒为固有时，
+所以
+\[
+\boxed{\Delta t_A=\gamma\Delta\tau_B
+=\frac{10}{\sqrt{1-0.8^2}}\approx16.67\,\mathrm s}.
+\]
+\crosscheck 源题1m杆长对\emph{同一点先后两闪光}的时间延缓计算无影响。
+若闪光改为两端发生，还需考虑相对同时性的空间项，
+不能混作同一个题目。
+
+\sourceproblem{11.3.5}{290}{290}
+\problemtext A与B分别静止在惯性系$S,S'$中。
+A测得同地发生的两事件时间间隔为4秒，
+B测得间隔为5秒，求两系相对速率和B系中两事件的地点距离。
+\workings
+A系测得的4秒为固有时，
+$\gamma=5/4$，
+\[
+\boxed{v=c\sqrt{1-\gamma^{-2}}=0.60c}.
+\]
+取$S'$沿$+x$移动，$S$中$\Delta x=0$，
+$\Delta x'=\gamma(\Delta x-v\Delta t)$，
+\[
+\boxed{\Delta x'=-\frac54(0.6c)(4\,\mathrm s)
+=-9.0\times10^8\,\mathrm m},\quad
+\boxed{|\Delta x'|=9.0\times10^8\,\mathrm m}.
+\]
+\crosscheck 速率为大小$0.6c$；
+方向未由原题给定，所以有向$\Delta x'$可随坐标选择换号。
+
+\sourceproblem{11.3.6}{290}{290}
+\problemtext 高度6000m的大气层产生$\pi$介子，以$0.998c$向地球运动，
+其在自身静止系中的寿命约$2.0\times10^{-6}$s。
+判断地球观测者和介子静止系观测者是否预期它可在一个平均寿命内到达地面。
+\workings
+地球系的平均寿命被延长为
+\[
+\gamma=\frac1{\sqrt{1-0.998^2}}\approx15.82,
+\quad
+\boxed{\tau_{\rm Earth}=\gamma\tau_0\approx3.16\times10^{-5}\,\mathrm s}.
+\]
+在这一平均寿命内行程
+$v\tau_{\rm Earth}\approx9.47\times10^3$ m，
+大于6000m。
+介子系中大气层厚度收缩到
+\[
+\boxed{h'=6000/\gamma\approx379\,\mathrm m},
+\]
+而地面以$0.998c$迎面接近，
+所需时间$h'/(0.998c)\approx1.27\times10^{-6}$ s，
+小于$\tau_0=2.0\times10^{-6}$s。
+\crosscheck \textbf{寿命是指数分布的平均值，不是“必定存活”的硬上限}；
+到地面存活概率近似$\exp[-h/(v\gamma\tau_0)]\approx0.53$，
+本题“能否到达”应理解为相当比例可以存活到达。
+
+\sourceproblem{11.3.7}{290}{290}
+\problemtext 物体在$S'$中沿$x'$正方向以$0.8c$运动，
+$S'$相对$S$也沿$x$正方向以$0.8c$移动，求物体在$S$中的速率。
+\workings
+一维速度合成
+\[
+\boxed{u_x=\frac{u_x'+v}{1+u_x'v/c^2}
+=\frac{1.6}{1+0.64}c
+\approx0.97561c}.
+\]
+\crosscheck 即使两速度都为$0.8c$，合速度也小于$c$，
+不能作伽利略式$1.6c$。
+
+\sourceproblem{11.3.8}{290}{290}
+\problemtext 两艘飞船相对恒星系以$0.8c$沿相反方向飞行，
+求其中一艘测得另一艘的相对速率。
+\workings
+取两船恒星系速度分别$+0.8c$与$-0.8c$，
+后一艘在前一艘系中速度
+\[
+u'=\frac{-0.8c-0.8c}{1-(0.8)(-0.8)}
+=-\frac{1.6}{1.64}c.
+\]
+因此
+\[
+\boxed{|u'|\approx0.97561c}.
+\]
+\crosscheck 相对速率小于光速，方向相反对应代数负号。
+
+\sourceproblem{11.3.9}{290--291}{290--291}
+\problemtext 地球系中火箭A以$+0.8c$沿$x$方向、B以$-0.6c$
+沿$x$方向飞行。(1)求B相对A速率；
+(2)若A改为沿$+y$方向以$0.8c$运动而B不变，求A相对B速率。
+\workings
+(1) 以A系为参考，
+\[
+\boxed{u_{B|A}=\frac{-0.6-0.8}{1+0.48}c
+=-\frac{1.4}{1.48}c\approx-0.94595c}.
+\]
+(2) 以B为参考，其速度相对地球为$-0.6c\,\bm e_x$。
+把A在地球系的速度$(0,0.8c)$变换到B系：
+\[
+u'_x=\frac{0+0.6c}{1}=0.6c,\qquad
+u'_y=\frac{0.8c}{\gamma_B(1)}=0.8(0.8)c=0.64c.
+\]
+因此
+\[
+\boxed{|\bm u'|=c\sqrt{0.6^2+0.64^2}
+\approx0.87727c}.
+\]
+\crosscheck 垂直速度分量变换中需额外除以$\gamma_B=1.25$，
+不应直接对$0.8c$与$0.6c$求普通欧氏合成得到光速。
+% === END textbook-ch11-solutions-001-009.tex ===
+
+% === BEGIN textbook-ch11-solutions-010-018.tex blob 9701951ef8629c3ae671d30705b358cf69155e30 ===
+% 《大学物理简明教程》第5版第11章狭义相对论计算11.3.10—11.3.18
+% 印刷/PDF第291页。原题数值逐页核对，研究性独立推导。
+\subsection{解答题：相对论动能、质能关系与核反应}
+
+\sourceproblem{11.3.10}{291}{291}
+\problemtext 某粒子的动能是其静止能量的$n$倍，求运动速度。
+\workings
+$K=(\gamma-1)m_0c^2=nm_0c^2$，
+从而$\gamma=n+1$，
+\[
+\boxed{v=c\sqrt{1-\frac1{(n+1)^2}}}.
+\]
+\crosscheck $n=0$时$v=0$；$n\to\infty$时渐近$c$，始终不超光速。
+
+\sourceproblem{11.3.11}{291}{291}
+\problemtext 电子速率$v=0.99c$，其静止能量约$0.51$ MeV。
+求相对论动能。
+\workings
+$\gamma=(1-0.99^2)^{-1/2}\approx7.0888$，
+\[
+\boxed{K=(\gamma-1)m_ec^2
+=(7.0888-1)(0.51)
+\approx3.105\,\mathrm{MeV}}.
+\]
+\crosscheck 不可使用$\frac12m_ev^2$的非相对论公式，
+因为此处$v$已接近$c$。
+
+\sourceproblem{11.3.12}{291}{291}
+\problemtext 电子分别(1)从静止加速到$0.1c$，
+(2)从静止加速到$0.9c$，求相应做功。
+\workings
+由相对论功—能定理，
+\[
+W(v)=\Delta K=(\gamma(v)-1)m_ec^2,
+\quad m_ec^2\simeq0.51\,\mathrm{MeV}.
+\]
+在$\beta=0.1$时
+\[
+\boxed{W_{0.1c}=
+\left(\frac1{\sqrt{0.99}}-1\right)0.51
+\approx2.57\times10^{-3}\,\mathrm{MeV}
+=2.57\,\mathrm{keV}}.
+\]
+在$\beta=0.9$时
+\[
+\boxed{W_{0.9c}=
+\left(\frac1{\sqrt{0.19}}-1\right)0.51
+\approx0.660\,\mathrm{MeV}}.
+\]
+\crosscheck 两个结果都用\emph{静止到末速}的能量增量；
+第二问不能用$0.9c$的经典动能公式。
+
+\sourceproblem{11.3.13}{291}{291}
+\problemtext 物体的相对论质量相对静质量增大10\%，
+问沿运动方向的长度比静止长度缩短多少百分比？
+\workings
+按原书“运动质量”定义$\gamma m_0=1.10m_0$，
+即$\gamma=1.10$。长度收缩
+\[
+\frac{L}{L_0}=\frac1\gamma=\frac1{1.10}
+\approx0.90909,
+\]
+故
+\[
+\boxed{\frac{L_0-L}{L_0}=1-\frac1{1.1}
+\approx9.09\%}.
+\]
+\crosscheck 不是缩短10\%，因为长度缩短因子与质量增加因子互为倒数。
+
+\sourceproblem{11.3.14}{291}{291}
+\problemtext 电子速率由$1.2\times10^8\,\mathrm{m/s}$增至
+$2.4\times10^8\,\mathrm{m/s}$，求外力所做功。
+\workings
+以$c=3.0\times10^8$ m/s，速度分别为$0.4c,0.8c$，
+$\gamma_1=1/\sqrt{0.84}$、$\gamma_2=1/\sqrt{0.36}=5/3$。
+功等于动能改变量
+\[
+\boxed{W=(\gamma_2-\gamma_1)m_ec^2
+=\left(\frac53-\frac1{\sqrt{0.84}}\right)0.51\,\mathrm{MeV}
+\approx0.294\,\mathrm{MeV}}.
+\]
+换算SI单位约$4.72\times10^{-14}$ J。
+\crosscheck 应当相减两末态的总能量，不可把两动能直接用经典公式求差。
+
+\sourceproblem{11.3.15}{291}{291}
+\problemtext 粒子静止质量为$m_0$、动能恰等于自身静能。
+求其相对论总能量、相对论质量以及动量大小。
+\workings
+$K=(\gamma-1)m_0c^2=m_0c^2$，故$\gamma=2$，
+从而
+\[
+\boxed{E=2m_0c^2},\qquad
+\boxed{m_{\mathrm{rel}}=2m_0},\qquad
+\boxed{v=\frac{\sqrt3}{2}c}.
+\]
+动量$p=\gamma m_0v$，得
+\[
+\boxed{p=\sqrt3\,m_0c}.
+\]
+\crosscheck 不变量关系
+$E^2-(pc)^2=4m_0^2c^4-3m_0^2c^4=m_0^2c^4$正确。
+现代通常不用“运动质量”一词；此处为对原教材术语的明确定义。
+
+\sourceproblem{11.3.16}{291}{291}
+\problemtext 太阳每秒向外辐射能量约$5.0\times10^{26}$ J，
+估算每秒质量减少量，并以太阳当前质量$2\times10^{30}$ kg
+估算维持相同辐射功率可持续的理论时间。
+\workings
+由$E=\Delta mc^2$，
+\[
+\boxed{\dot m=\frac{P}{c^2}
+=\frac{5.0\times10^{26}}{(3.0\times10^8)^2}
+\approx5.56\times10^9\,\mathrm{kg/s}}.
+\]
+如果假设全部太阳现有质量均可转换为这种辐射且功率不变，
+\[
+\boxed{t_{\rm formal}=\frac{Mc^2}{P}
+=\frac{2\times10^{30}\cdot9\times10^{16}}{5\times10^{26}}
+=3.6\times10^{20}\,\mathrm s\approx1.14\times10^{13}\,\mathrm{yr}}.
+\]
+\crosscheck 这只是\emph{把全部静质量转成辐射}的数学上限估计，
+并不是实际恒星核燃料寿命；真实太阳仅部分质量可参与核燃烧且亮度随演化变化。
+
+\sourceproblem{11.3.17}{291}{291}
+\problemtext 某核电站年发电量约$10^{10}$ kWh，
+即$3.6\times10^{16}$ J。若电能全部由核材料静质量减少提供，
+所消耗的质量是多少？
+\workings
+按100\%质量—电能转换效率的理想极限，
+\[
+\boxed{\Delta m=\frac{E}{c^2}
+=\frac{3.6\times10^{16}}{9.0\times10^{16}}
+=0.40\,\mathrm{kg}}.
+\]
+\crosscheck 实际反应燃料质量远大于0.40kg，
+因为核反应只有微小质量亏损且热—电转换效率也小于100\%。
+
+\sourceproblem{11.3.18}{291}{291}
+\problemtext 热核反应$\,{}^{2}_{1}\mathrm H+{}^{3}_{1}\mathrm H
+\to{}^{4}_{2}\mathrm{He}+{}^{1}_{0}\mathrm n$。
+给出各粒子静质量：
+$m_D=3.3437\times10^{-27}$kg、
+$m_T=5.0049\times10^{-27}$kg、
+$m_{\mathrm{He}}=6.6425\times10^{-27}$kg、
+$m_n=1.6750\times10^{-27}$kg，
+求释放能量。
+\workings
+反应前后静质量差为
+\[
+\Delta m=m_D+m_T-m_{\mathrm{He}}-m_n
+=(3.3437+5.0049-6.6425-1.6750)\times10^{-27}
+=3.11\times10^{-29}\,\mathrm{kg}.
+\]
+释放能量
+\[
+\boxed{Q=\Delta mc^2
+=(3.11\times10^{-29})(3\times10^8)^2
+\approx2.80\times10^{-12}\,\mathrm J}.
+\]
+按$1\,\mathrm{MeV}=1.602176634\times10^{-13}$ J，
+\[
+\boxed{Q\approx17.5\,\mathrm{MeV}}.
+\]
+\crosscheck 两个质量和的差必须保留$10^{-27}$kg的共同数量级；
+最终正的质量亏损说明反应放能。
+% === END textbook-ch11-solutions-010-018.tex ===

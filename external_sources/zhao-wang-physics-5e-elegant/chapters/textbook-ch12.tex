@@ -1,0 +1,679 @@
+% Consolidated textbook-ch12 from 1699b8435d575b3f9a89b4f32b3cd9072025e92c; source fragments preserved.
+
+% === BEGIN textbook-ch12-choices.tex blob a6bd54e7f4dc7548980b3c2746fc64040272963c ===
+% 扫描《大学物理简明教程》第5版第12章量子物理基础
+% 选择12.1.1—12.1.14，原书/PDF316—317页。原创推导，原题题意简述。
+\subsection{选择题：量子辐射、光子、氢谱与量子态}
+
+\sourceproblem{12.1.1}{316}{316}
+\problemtext 绝对黑体应具备怎样的吸收/反射性质？
+\workings
+绝对黑体按定义吸收入射的\emph{全部波长}电磁辐射，
+无反射、无透射，故题中“不能反射任何光线”正确，选\textbf{D}。
+\crosscheck “黑体”不等于在任意温度下不辐射可见光；
+热黑体仍会按温度发射热辐射。
+
+\sourceproblem{12.1.2}{316}{316}
+\problemtext 钠的光电红限波长$540$ nm，某单色光使最大光电子动能为$1.2$ eV；
+求入射光的波长。
+\workings
+逸出功$W=hc/(540\,\mathrm{nm})$，
+爱因斯坦方程$hc/\lambda=W+1.2$ eV，
+采用$hc\simeq1240\,\mathrm{eV\,nm}$，
+\[
+\boxed{\lambda=\frac{1240}{1240/540+1.2}\,\mathrm{nm}
+\simeq354.6\,\mathrm{nm}}.
+\]
+选\textbf{D（355 nm）}。
+\crosscheck 入射光要比红限更短波，结果满足$\lambda<540$ nm。
+
+\sourceproblem{12.1.3}{316}{316}
+\problemtext 将地球与金星均视为理想黑体，温度分别$293$ K和$773$ K，
+且两者尺寸近似相同，比较单位表面面积的辐射出射度。
+\workings
+斯特藩--玻尔兹曼律$M=\sigma T^4$，故
+\[
+\boxed{\frac{M_{\rm Venus}}{M_{\rm Earth}}
+=\left(\frac{773}{293}\right)^4\simeq48.44}.
+\]
+选\textbf{D（48.4）}。
+\crosscheck 两者\emph{单位面积}比值与球体半径无关；对总辐射功率则还需面积。
+
+\sourceproblem{12.1.4}{316}{316}
+\problemtext 同种金属的红限频率$\nu_0$，以频率$\nu_1,\nu_2$照射，
+第二次遏止电压是第一次的两倍；求$\nu_2$与$\nu_1,\nu_0$的关系。
+\workings
+$eU_a=h(\nu-\nu_0)$，令$U_{a,2}=2U_{a,1}$，
+得$\nu_2-\nu_0=2(\nu_1-\nu_0)$，故
+\[
+\boxed{\nu_2=2\nu_1-\nu_0}.
+\]
+选\textbf{C}。
+\crosscheck 这不是频率直接加倍，因逸出功引入频率阈值。
+
+\sourceproblem{12.1.5}{316}{316}
+\problemtext 康普顿散射中散射后波长为入射波长的1.2倍；
+求散射光子能量与反冲电子动能之比。
+\workings
+光子能量反比波长，$E'_{\gamma}=E_\gamma/1.2=5E_\gamma/6$；
+电子原先静止时反冲动能$K=E_\gamma-E'_\gamma=E_\gamma/6$。
+\[
+\boxed{E'_\gamma/K=5}.
+\]
+选\textbf{D}。
+\crosscheck 忽略外界束缚能；能量守恒适用于自由电子的康普顿散射。
+
+\sourceproblem{12.1.6}{316}{316}
+\problemtext 氢原子巴耳末线系中波长最长与次长的谱线分别记$\lambda_1,\lambda_2$，
+求两者比值。
+\workings
+最长线$n=3\to2$，次长线$n=4\to2$，
+由$1/\lambda=R_H(1/2^2-1/n^2)$，
+\[
+\boxed{\frac{\lambda_1}{\lambda_2}
+=\frac{1/4-1/16}{1/4-1/9}=\frac{27}{20}}.
+\]
+选\textbf{C}。
+\crosscheck 最大波长应对应能级差最小的巴耳末跃迁。
+
+\sourceproblem{12.1.7}{317}{317}
+\problemtext 静止氢原子由$n=3$直接跃迁到$n=1$，
+原子质量$1.67\times10^{-27}$kg，估算反冲速度。
+\workings
+光子能量$\Delta E=13.6(1-1/9)=12.09$ eV，
+动量$p_\gamma\simeq\Delta E/c$；
+原子反冲动量大小相等，
+\[
+\boxed{v_r\simeq\frac{12.09(1.602\times10^{-19})}
+{(1.67\times10^{-27})(3.00\times10^8)}
+\simeq3.87\,\mathrm{m/s}}.
+\]
+选\textbf{A（4 m/s）}。
+\crosscheck 原子反冲能远小于跃迁光子能量，忽略它只产生极小修正。
+
+\sourceproblem{12.1.8}{317}{317}
+\problemtext 氢原子由能级$E_3$直接到$E_1$发出$\lambda_3$，
+分两步$E_3\to E_2\to E_1$发出$\lambda_2,\lambda_1$；
+求波长关系。
+\workings
+能量守恒
+$hc/\lambda_3=hc/\lambda_2+hc/\lambda_1$，
+所以
+\[
+\boxed{\lambda_3^{-1}=\lambda_1^{-1}+\lambda_2^{-1}}.
+\]
+选\textbf{C}。
+\crosscheck 光子\emph{频率/波数}可相加，波长不可直接相加。
+
+\sourceproblem{12.1.9}{317}{317}
+\problemtext 在德布罗意与戴维孙--革末实验相关的四个论断中，
+判断哪些真实反映微观粒子的波粒二象性。
+\workings
+光子具有波粒二象性，实物粒子也具有波粒二象性；
+戴维孙--革末电子衍射实验验证了德布罗意物质波。
+“电子只有粒子性”错误。故正确为命题1、2、3，选\textbf{B}。
+\crosscheck 不可用经典轨道的粒子图像排除电子的干涉与衍射。
+
+\sourceproblem{12.1.10}{317}{317}
+\problemtext 电子由静止通过电势差$U$加速后德布罗意波长为$0.04$ nm，
+求加速电压。
+\workings
+非相对论$p=\sqrt{2m_e eU}$，
+$\lambda=h/p$；用常数式
+$\lambda(\mathrm{nm})\simeq1.226/\sqrt{U(\mathrm V)}$，
+\[
+\boxed{U\simeq(1.226/0.04)^2\,\mathrm V
+\simeq940\,\mathrm V}.
+\]
+选\textbf{D}。
+\crosscheck 940 eV对511 keV的电子静能较小，非相对论近似合理。
+
+\sourceproblem{12.1.11}{317}{317}
+\problemtext 两种不同静质量的粒子具有相同德布罗意波长，
+比较它们的动量、速度、动能与动能比。
+\workings
+由$\lambda=h/p$，两种粒子的\emph{动量大小}严格相同：
+\[
+\boxed{p_1=p_2=h/\lambda}.
+\]
+选\textbf{A}。
+\crosscheck 同一动量下非相对论动能$p^2/(2m)$一般不同，
+速度也一般不同。
+
+\sourceproblem{12.1.12}{317}{317}
+\problemtext 势阱$-a\le x\le a$内给归一化波函数
+$\psi(x)=a^{-1/2}\cos(3\pi x/2a)$，求$x=5a/6$处概率密度。
+\workings
+$|\psi(x)|^2=a^{-1}\cos^2(3\pi x/2a)$，
+代入$x=5a/6$，角度为$5\pi/4$，故
+\[
+\boxed{\rho(5a/6)=\frac1a\cos^2\frac{5\pi}{4}=\frac1{2a}}.
+\]
+选\textbf{A}。
+\crosscheck 概率密度量纲是$\mathrm{length}^{-1}$，不是无量纲概率。
+
+\sourceproblem{12.1.13}{317}{317}
+\problemtext 判断不确定性原理是否禁止单独确定坐标、单独确定动量，
+以及它是否适用于所有微观粒子。
+\workings
+不确定性原理限制的是同一态中位置与动量分量的不确定度\emph{同时}减小，
+$\Delta x\,\Delta p_x\ge\hbar/2$；
+单独某一量可以明确制备或测量。
+因此正确的是命题(c)、(d)，选\textbf{B}。
+\crosscheck 原题纸面把$\hbar$写成$h$样式；
+采用标准量子力学常量$\hbar=h/(2\pi)$阐释，不将不同常量混用。
+
+\sourceproblem{12.1.14}{317}{317}
+\problemtext 电子处在原子K壳层（$n=1$），四种$(n,l,m_l,m_s)$组合中何者允许？
+\workings
+主量子数$n=1$时只能$l=0$，相应$m_l=0$，
+自旋投影$m_s=\pm1/2$；
+因此
+\[
+\boxed{(n,l,m_l,m_s)=(1,0,0,-1/2)}
+\]
+是选项\textbf{A}所列的允许态。
+\crosscheck 源题选项B写$l=0,m_l=-1$，不满足$|m_l|\le l$；
+C、D不属于$n=1$壳层。
+% === END textbook-ch12-choices.tex ===
+
+% === BEGIN textbook-ch12-blanks.tex blob 5a66b4775f00d2fd14f36fbf725985cf48c0b157 ===
+% 量子物理基础填空题12.2.1—12.2.13；用户原书/PDF第317—318页。
+\subsection{填空题：光电截止、氢谱与测不准关系}
+
+\sourceproblem{12.2.1}{317}{317}
+\problemtext 波长300 nm照射某金属，光电子动能由0到$4.0\times10^{-19}$ J，
+求遏止电压及红限频率。
+\workings
+由$eU_a=K_{\max}$，有
+\[
+\boxed{U_a=\frac{4.0\times10^{-19}}{1.602176634\times10^{-19}}
+\approx2.50\,\mathrm V}.
+\]
+光子能$hc/\lambda\approx6.62\times10^{-19}$ J，
+逸出功$W=hc/\lambda-K_{\max}$，
+\[
+\boxed{\nu_0=W/h
+=c/\lambda-K_{\max}/h\approx3.96\times10^{14}\,\mathrm{Hz}}.
+\]
+\crosscheck 红限频率必须为正且低于入射光频率$10^{15}$ Hz。
+
+\sourceproblem{12.2.2}{317}{317}
+\problemtext X射线分别在$45^\circ$及$60^\circ$发生康普顿散射，
+比较散射波长增量$\Delta\lambda_1:\Delta\lambda_2$。
+\workings
+由$\Delta\lambda=\lambda_C(1-\cos\theta)$，
+\[
+\boxed{\frac{\Delta\lambda_1}{\Delta\lambda_2}
+=\frac{1-\cos45^\circ}{1-\cos60^\circ}
+=2-\sqrt2\approx0.5858}.
+\]
+\crosscheck 60度散射增量更大，所得比值小于1。
+
+\sourceproblem{12.2.3}{317--318}{317--318}
+\problemtext 氢原子电子由能量$-0.85$ eV跃迁到$-3.4$ eV；
+求释放光子能量及两状态主量子数。
+\workings
+$E_n=-13.6/n^2$ eV，$-0.85$ eV对应$n=4$，
+$-3.4$ eV对应$n=2$，
+\[
+\boxed{E_\gamma=3.4-0.85=2.55\,\mathrm{eV}},
+\qquad \boxed{n=4\to2}.
+\]
+\crosscheck 波长约$1240/2.55=486$ nm，是巴耳末可见谱线。
+
+\sourceproblem{12.2.4}{318}{318}
+\problemtext 依据原图$n=1,2,3,4$的能级及箭头，
+选出所发光子波长最短、频率最低的跃迁。
+\workings
+波长最短对应能级差最大，故
+$\boxed{n=4\to n=1}$；
+频率最低对应所画向下跃迁中能级差最小，故
+$\boxed{n=4\to n=3}$。
+\crosscheck 这里比较的是图中\emph{发射箭头}，并非任意能级差或吸收跃迁。
+
+\sourceproblem{12.2.5}{318}{318}
+\problemtext 氢原子基态能量$E_1=-13.6$ eV，求$n=4$能量。
+\workings
+\[
+\boxed{E_4=-\frac{13.6}{4^2}=-0.85\,\mathrm{eV}}.
+\]
+\crosscheck 相对电离极限零能，束缚态能量均为负。
+
+\sourceproblem{12.2.6}{318}{318}
+\problemtext 某电子在原子激发态中平均停留$10^{-8}$s；
+估算能级能量最小不确定度。
+\workings
+按标准能时估计$\Delta E\,\Delta t\gtrsim\hbar/2$，
+\[
+\boxed{\Delta E\gtrsim\frac{\hbar}{2(10^{-8})}
+=5.27\times10^{-27}\,\mathrm J
+\approx3.29\times10^{-8}\,\mathrm{eV}}.
+\]
+\crosscheck 能时不确定度不同于位置--动量算符的严格同类形式，
+自然线宽的定义也可能采用$\Gamma\simeq\hbar/\tau$
+而差一个约为2的系数；应说明采用的约定。
+
+\sourceproblem{12.2.7}{318}{318}
+\problemtext 用波长$\lambda$表达光子的能量、动量大小与相对论质量等效值。
+\workings
+\[
+\boxed{\varepsilon=\frac{hc}{\lambda}},\qquad
+\boxed{p=\frac h\lambda},\qquad
+\boxed{m_{\rm eq}=\frac{\varepsilon}{c^2}=\frac h{\lambda c}}.
+\]
+\crosscheck 光子的\emph{静质量为零}；$m_{\rm eq}$仅为原书旧术语下的能量等效质量。
+
+\sourceproblem{12.2.8}{318}{318}
+\problemtext 氢原子电子主量子数$n=3$，求允许轨道角动量大小最大值。
+\workings
+$l=0,1,2$，最大$l=n-1=2$，
+\[
+\boxed{L_{\max}=\sqrt{l(l+1)}\hbar=\sqrt6\,\hbar}.
+\]
+\crosscheck 不用玻尔旧量子论的$L=n\hbar$取代现代量子角动量。
+
+\sourceproblem{12.2.9}{318}{318}
+\problemtext 电子限于宽度$\Delta x=5$ nm的区域，
+按\emph{原题指定的估算关系}$\Delta x\Delta p_x\ge h$，
+求动量分量的最小估计不确定度。
+\workings
+依题面特定估算式
+\[
+\boxed{\Delta p_x\gtrsim\frac h{\Delta x}
+=\frac{6.62607015\times10^{-34}}{5\times10^{-9}}
+\approx1.33\times10^{-25}\,\mathrm{kg\,m/s}}.
+\]
+\crosscheck \textbf{源式与标准严格界限不同：}标准海森堡不等式为
+$\Delta x\Delta p_x\ge\hbar/2=h/(4\pi)$。
+若按严格标准只得$1.06\times10^{-26}$ kg\,m/s，
+本条为忠于\emph{原题指定公式}而计算，不能混称两式等价。
+
+\sourceproblem{12.2.10}{318}{318}
+\problemtext 用波函数$\Psi(\bm r,t)$描述微观粒子，
+写出$\Psi\Psi^*$的概率解释、波函数要求及归一化条件。
+\workings
+\[
+\boxed{\rho(\bm r,t)=\Psi\Psi^*=|\Psi|^2},\qquad
+\boxed{\int_{\mathbb R^3}|\Psi(\bm r,t)|^2\,d^3r=1}.
+\]
+波函数需单值、有限、满足问题的连续/可微与边界条件。
+\crosscheck 若只描述一维粒子，则归一化体积分应改为$\int|\psi(x)|^2dx$。
+
+\sourceproblem{12.2.11}{318}{318}
+\problemtext 电子自旋磁量子数$m_s$可能的两个值。
+\workings
+\[
+\boxed{m_s=+\frac12}\qquad\boxed{m_s=-\frac12}.
+\]
+\crosscheck 电子自旋量子数为$s=1/2$，而$m_s$为其投影量子数。
+
+\sourceproblem{12.2.12}{318}{318}
+\problemtext 主量子数$n=2$的一个电子壳层最多有多少种单电子量子态？
+\workings
+计入自旋的态数为$2n^2$，
+\[
+\boxed{N=2(2)^2=8}.
+\]
+\crosscheck $n=2$由$2s$（2个态）和$2p$（6个态）组成。
+
+\sourceproblem{12.2.13}{318}{318}
+\problemtext 多电子原子中电子排布遵从哪两项基本原则？
+\workings
+依原书填\textbf{泡利不相容原理}与\textbf{能量最小原理}。
+\crosscheck 实际多电子组态还需结合洪特规则等判断简并亚层占据方式；
+本题只要求两项教材概括原则。
+% === END textbook-ch12-blanks.tex ===
+
+% === BEGIN textbook-ch12-solutions-001-009.tex blob 2862cda691cc616f72bc73ead5cd70b3ad8958ea ===
+% 《大学物理简明教程》第5版量子物理基础：解答12.3.1—12.3.9。
+% 原书/PDF第318—319页；题意独立摘要，带核验的定量推导。
+\subsection{解答题：黑体、光电效应与康普顿散射}
+
+\sourceproblem{12.3.1}{318}{318}
+\problemtext 把三颗恒星当理想黑体，辐射谱的峰值波长分别为
+$0.55,0.35,0.29\,\mu$m，求对应表面温度。
+\workings
+维恩位移定律$\lambda_mT=b$，
+$b=2.89777\times10^{-3}\,\mathrm{m\,K}$，得
+\[
+\boxed{\begin{aligned}
+T_1&=b/(0.55\,\mu\mathrm m)\simeq5.27\times10^3\,\mathrm K,\\
+T_2&=b/(0.35\,\mu\mathrm m)\simeq8.28\times10^3\,\mathrm K,\\
+T_3&=b/(0.29\,\mu\mathrm m)\simeq9.99\times10^3\,\mathrm K.
+\end{aligned}}
+\]
+\crosscheck 峰值波长越短，黑体温度越高；此处是黑体\emph{色温}近似而非真实恒星大气模型。
+
+\sourceproblem{12.3.2}{318}{318}
+\problemtext 炉壁小孔的总辐射出射度为$22.8\,\mathrm{W/cm^2}$，
+视作黑体辐射，求炉内温度。
+\workings
+$M=22.8\times10^4\,\mathrm{W/m^2}$。
+由$M=\sigma T^4$，
+$\sigma=5.670374419\times10^{-8}\,\mathrm{W/(m^2K^4)}$，
+\[
+\boxed{T=\left(\frac{22.8\times10^4}{\sigma}\right)^{1/4}
+\simeq1.416\times10^3\,\mathrm K}.
+\]
+\crosscheck 注意$1\,\mathrm{W/cm^2}=10^4\,\mathrm{W/m^2}$。
+
+\sourceproblem{12.3.3}{318}{318}
+\problemtext 铝金属逸出功$4.2$ eV，以波长$200$ nm光照射，
+求最大动能、遏止电压和红限波长。
+\workings
+光子能量$E=hc/\lambda\simeq1240/200=6.20$ eV，
+光电效应给
+\[
+\boxed{K_{\max}=E-W=2.00\,\mathrm{eV}},\qquad
+\boxed{U_a=K_{\max}/e=2.00\,\mathrm V}.
+\]
+红限
+\[
+\boxed{\lambda_0=hc/W\simeq(1240/4.2)\,\mathrm{nm}
+\simeq295\,\mathrm{nm}}.
+\]
+\crosscheck 入射光波长200nm小于红限295nm，能发生外光电效应。
+
+\sourceproblem{12.3.4}{318}{318}
+\problemtext 波长$300$ nm紫外光照射某金属，
+最大光电子速度$5.0\times10^5$ m/s，求金属红限波长。
+\workings
+非相对论电子动能
+$K_{\max}=\tfrac12m_ev^2\simeq1.14\times10^{-19}$ J
+$\simeq0.711$ eV。
+入射光子能量约$1240/300=4.133$ eV，
+则逸出功$W\simeq3.422$ eV，故
+\[
+\boxed{\lambda_0\simeq\frac{1240}{3.422}\,\mathrm{nm}
+\simeq362\,\mathrm{nm}}.
+\]
+\crosscheck $\lambda_0>300$ nm是光电逸出发生的必要条件。
+
+\sourceproblem{12.3.5}{318}{318}
+\problemtext 原图12.3.5给钠金属遏止电压随入射频率的拟合直线：
+$\nu_0\simeq4.39\times10^{14}$ Hz，且$(\nu,U_a)$约有
+$(5.5\times10^{14}\,\mathrm{Hz},0.47\,\mathrm V)$及
+$(9.6\times10^{14}\,\mathrm{Hz},2.13\,\mathrm V)$。
+由图估计截止频率、普朗克常量及逸出功。
+\workings
+截止频率是图的横轴截距，
+\[
+\boxed{\nu_0\simeq4.39\times10^{14}\,\mathrm{Hz}}.
+\]
+从光电方程$eU_a=h\nu-W$知斜率为$h/e$。
+按图上两个数值点估算
+\[
+\boxed{h_{\rm graph}
+=e\frac{2.13-0.47}{(9.6-5.5)\times10^{14}}
+\simeq6.49\times10^{-34}\,\mathrm{J\,s}}.
+\]
+逸出功约为
+\[
+\boxed{W\simeq h_{\rm graph}\nu_0
+\simeq2.85\times10^{-19}\,\mathrm J
+\simeq1.78\,\mathrm{eV}}.
+\]
+\crosscheck 这些是\emph{图读估算值}，
+不能把由粗线和圆点读出的$h$当成精确定义的$6.62607015\times10^{-34}$；
+不同两点选取可能略有偏差。
+
+\sourceproblem{12.3.6}{319}{319}
+\problemtext 人眼在理想暗适应条件下每秒吸收5个波长500nm的蓝绿色光子
+刚能形成可见刺激，求每秒光子携带的能量及对应入眼功率。
+\workings
+单光子能量$\varepsilon=hc/\lambda$，
+每秒5光子所携能量
+\[
+\boxed{E_{\rm 1s}=5\frac{hc}{500\,\mathrm{nm}}
+\simeq1.99\times10^{-18}\,\mathrm J}.
+\]
+相应入眼光功率
+\[
+\boxed{P=E_{\rm 1s}/(1\,\mathrm s)
+\simeq1.99\times10^{-18}\,\mathrm W}.
+\]
+\crosscheck 辐射实际感知阈值依观察时间、视网膜吸收效率和刺激部位而变；
+本题只是在理想吸收的光子计数模型下换算能量。
+
+\sourceproblem{12.3.7}{319}{319}
+\problemtext 设一光子的能量等于电子静止能量，
+求光子的频率、波长与动量。
+\workings
+由$\varepsilon=m_ec^2$，
+\[
+\boxed{\nu=\frac{m_ec^2}{h}
+\simeq1.236\times10^{20}\,\mathrm{Hz}},
+\]
+\[
+\boxed{\lambda=\frac{h}{m_ec}
+\simeq2.426\times10^{-12}\,\mathrm m},\qquad
+\boxed{p=\frac{\varepsilon}{c}=m_ec
+\simeq2.731\times10^{-22}\,\mathrm{kg\,m/s}}.
+\]
+\crosscheck 此波长等于\emph{电子康普顿波长}（非约化），不是电子本身的静止德布罗意波长。
+
+\sourceproblem{12.3.8}{319}{319}
+\problemtext 波长$0.0708$ nm的X射线在石蜡中发生康普顿散射，
+求散射角$90^\circ$和$180^\circ$时的散射波长。
+\workings
+$\lambda'=\lambda_0+\lambda_C(1-\cos\theta)$，
+电子康普顿波长$\lambda_C=h/(m_ec)=0.00242631$ nm。
+故
+\[
+\boxed{\lambda'_{90^\circ}\simeq0.073226\,\mathrm{nm}},
+\qquad
+\boxed{\lambda'_{180^\circ}\simeq0.075653\,\mathrm{nm}}.
+\]
+\crosscheck 后向散射产生最大波长增加$2\lambda_C$。
+
+\sourceproblem{12.3.9}{319}{319}
+\problemtext 康普顿实验中波长$0.015$ nm的光子被原先静止的自由电子散射，
+在$120^\circ$方向求散射波长相对增量。
+\workings
+\[
+\Delta\lambda=\lambda_C(1-\cos120^\circ)
+=\frac32\lambda_C\simeq0.0036395\,\mathrm{nm}.
+\]
+故
+\[
+\boxed{\frac{\Delta\lambda}{\lambda_0}
+=\frac{0.0036395}{0.015}\simeq0.2426},
+\qquad
+\boxed{\lambda'\simeq0.01864\,\mathrm{nm}}.
+\]
+\crosscheck 题问\emph{波长变化量与原波长之比}，
+不是$\lambda'/\lambda_0\simeq1.2426$，也不是光子能量比。
+% === END textbook-ch12-solutions-001-009.tex ===
+
+% === BEGIN textbook-ch12-solutions-010-018.tex blob df3e555b87ecf93d7f1342b1246a068fd15a0229 ===
+% 《大学物理简明教程》第5版量子物理基础计算12.3.10—12.3.18
+% 原书/PDF第319页，独立推导；自然线宽与光子位置问题说明模型定义。
+\subsection{解答题：氢谱、物质波、线宽和量子态计数}
+
+\sourceproblem{12.3.10}{319}{319}
+\problemtext 基态氢原子吸收能量为$12.75$ eV的光子。
+求激发后的能级及返回低能级过程中可能发出的谱线。
+\workings
+氢原子$E_n=-13.6/n^2$ eV，吸收后
+$E_f=-13.6+12.75=-0.85$ eV，对应
+\[
+\boxed{n=4}.
+\]
+不考虑额外选择定则限制、只按能级能差枚举的可能发射跃迁有
+\[
+\boxed{4\to3,\quad4\to2,\quad4\to1,\quad
+3\to2,\quad3\to1,\quad2\to1}.
+\]
+共有$4(4-1)/2=6$种不同能量差。
+\crosscheck \emph{严格原子跃迁}还要求电偶极选择定则（如$\Delta l=\pm1$），
+源题未提供初态亚能级，故上述是仅依据主量子数能级的\emph{可选谱线集合}，
+不是断言同一个原子一次退激发同时发出六个光子。
+
+\sourceproblem{12.3.11}{319}{319}
+\problemtext 基态氢原子受单色光激发后，
+其辐射谱中仅出现两条不同的巴耳末谱线。
+求这两条谱线波长及激发光频率。
+\workings
+巴耳末系终态为$n=2$。
+只有$n=3\to2$和$n=4\to2$两条，
+说明激发的最高主量子数按题目能级模型取$n_{\max}=4$。
+\[
+\boxed{\lambda_{3\to2}
+=\frac1{R_H(1/2^2-1/3^2)}
+\simeq656.3\,\mathrm{nm}},
+\]
+\[
+\boxed{\lambda_{4\to2}
+=\frac1{R_H(1/2^2-1/4^2)}
+\simeq486.2\,\mathrm{nm}}.
+\]
+由$1\to4$的激发能$\Delta E=12.75$ eV，
+\[
+\boxed{\nu_{\rm exc}=\frac{12.75\,e}{h}
+\simeq3.08\times10^{15}\,\mathrm{Hz}}.
+\]
+\crosscheck 两条谱线的数目依赖激发后的级联通道可能遍历；
+采用玻尔/黎德伯主能级理想模型，忽略细结构、选择定则和实际跃迁概率。
+
+\sourceproblem{12.3.12}{319}{319}
+\problemtext 基态氢原子吸收$12.09$ eV光子后，
+电子玻尔轨道半径增加了多少倍？
+\workings
+$13.6(1-1/n^2)\simeq12.09$ eV，解得$n=3$。
+玻尔半径$r_n=n^2a_0$，
+\[
+\boxed{r_{\rm after}=9r_{\rm before}}.
+\]
+若“增加多少倍”指增量与原值之比，
+\[
+\boxed{\frac{\Delta r}{r_1}=9-1=8}.
+\]
+\crosscheck 原半径变为\emph{9倍}、增加了原半径的\emph{8倍}，
+两种中文表述不能混用。
+
+\sourceproblem{12.3.13}{319}{319}
+\problemtext 一光子和一个电子的波长都为$0.20$ nm，
+求它们各自的动量大小与总能量。
+\workings
+两者按德布罗意关系动量大小相同：
+\[
+\boxed{p_\gamma=p_e=\frac{h}{\lambda}
+=\frac{6.62607015\times10^{-34}}{0.20\times10^{-9}}
+\simeq3.313\times10^{-24}\,\mathrm{kg\,m/s}}.
+\]
+光子的能量
+\[
+\boxed{E_\gamma=pc=\frac{hc}{\lambda}
+\simeq9.93\times10^{-16}\,\mathrm J
+\simeq6.20\,\mathrm{keV}}.
+\]
+电子\emph{总能量}必须包含静能：
+\[
+\boxed{E_{e,\rm total}=\sqrt{p^2c^2+m_e^2c^4}
+\simeq8.19\times10^{-14}\,\mathrm J
+\simeq511.0\,\mathrm{keV}}.
+\]
+\crosscheck 与电子总能量不同，其动能仅约
+$p^2/(2m_e)\simeq37.6$ eV。源题特别问\emph{总能量}，
+不能把37.6 eV误当总能量。
+
+\sourceproblem{12.3.14}{319}{319}
+\problemtext 自由电子动能$200$ eV，求德布罗意波长；
+再判断它与直径为1nm的孔或障碍物相遇时波性是否值得考虑。
+\workings
+因为$K\ll m_ec^2=511$ keV，
+\[
+\boxed{\lambda=\frac{h}{\sqrt{2m_eK}}
+\simeq0.0867\,\mathrm{nm}}.
+\]
+与尺寸$d=1.0$ nm的孔或障碍物相比，
+$\lambda/d\simeq0.087$，
+衍射的典型特征角数量级
+$\theta\sim\lambda/d\simeq0.087$ rad。
+所以该电子\textbf{既具有粒子性也具有波动性}，
+若观测角分辨足够精细，波动衍射效应不能先验忽略。
+\crosscheck 不能只因$\lambda<d$就断定“没有波动性”；
+实际可否测出衍射需考虑相干性、几何与探测分辨率。
+
+\sourceproblem{12.3.15}{319}{319}
+\problemtext 某激发态回到基态辐射谱线中心波长约400nm，
+观察到线宽$\Delta\lambda=10^{-5}$nm，
+估算原子激发态的平均寿命。
+\workings
+窄谱线近似下
+\[
+\Delta\nu\simeq\frac{c\,\Delta\lambda}{\lambda^2}
+=\frac{(3.00\times10^8)(10^{-14})}{(4.00\times10^{-7})^2}
+\simeq1.875\times10^7\,\mathrm{Hz}.
+\]
+若线宽指\emph{自然洛伦兹线型的频率全高半宽}，
+量子态概率寿命$\tau$与线宽满足
+$\Delta\nu_{\rm FWHM}=1/(2\pi\tau)$，因此
+\[
+\boxed{\tau\simeq\frac1{2\pi\Delta\nu}
+\simeq8.49\times10^{-9}\,\mathrm s}.
+\]
+\crosscheck \textbf{宽度定义影响常数系数}：
+若教材采用粗略能时估计$\Delta E\,\Delta t\sim h$
+则得到约$5.33\times10^{-8}$s；
+两者的差异来自$2\pi$以及谱宽/寿命的定义，
+不可称为同一个严格数值。
+
+\sourceproblem{12.3.16}{319}{319}
+\problemtext 一光子的波长为300nm，波长测量相对精度为百万分之一，
+估算其纵向位置的不确定尺度。
+\workings
+波长误差
+$\Delta\lambda/\lambda=10^{-6}$，故
+$\Delta p\simeq(h/\lambda)(\Delta\lambda/\lambda)$。
+若用标准位置--动量不确定性下界作数量级估计，
+\[
+\Delta x\gtrsim\frac{\hbar}{2\Delta p}
+=\frac{\lambda}{4\pi(\Delta\lambda/\lambda)}
+=\boxed{2.39\times10^{-2}\,\mathrm m}.
+\]
+\crosscheck \textbf{光子位置算符有理论细节}，
+本式是沿传播方向的单光子波包长度的启发性估计，
+不是任何光子位置测量的普适严格算符下界。
+按其他教材宽度约定（如$\Delta x\sim\lambda/\delta$）
+结果可在数倍或$4\pi$因子上不同。
+
+\sourceproblem{12.3.17}{319}{319}
+\problemtext 一维无限深势阱$0\le x\le a$内粒子波函数为
+$\psi(x)=\sqrt{2/a}\sin(3\pi x/a)$；
+求概率密度达到最大的位置。
+\workings
+\[
+\rho(x)=|\psi(x)|^2=\frac2a\sin^2\frac{3\pi x}{a}.
+\]
+最大值$2/a$要求
+$3\pi x/a=(k+\tfrac12)\pi$，
+即$x=(2k+1)a/6$。
+在$[0,a]$内取$k=0,1,2$，
+\[
+\boxed{x=a/6,\quad a/2,\quad 5a/6}.
+\]
+\crosscheck 端点$x=0,a$概率密度为零，正好满足无限深势阱边界条件。
+
+\sourceproblem{12.3.18}{319}{319}
+\problemtext 原子电子以$n,l,m_l,m_s$四量子数表征，
+分别在(1)固定$n,l,m_l$，
+(2)固定$n,l$，(3)仅固定$n$时，求可有的不同量子态数。
+\workings
+固定$n,l,m_l$时电子自旋投影$\pm1/2$，
+\[
+\boxed{N_1=2}.
+\]
+固定$n,l$时$m_l=-l,\ldots,l$共$2l+1$种，
+各有两种自旋，故
+\[
+\boxed{N_2=2(2l+1)}.
+\]
+固定$n$时对$l=0,\ldots,n-1$求和，
+\[
+\boxed{N_3=2\sum_{l=0}^{n-1}(2l+1)=2n^2}.
+\]
+\crosscheck 这些是\emph{不同单电子态}的最大计数；
+若是\emph{同一原子实际电子占据数}还须遵守泡利不相容原理。
+% === END textbook-ch12-solutions-010-018.tex ===
