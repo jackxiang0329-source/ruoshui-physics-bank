@@ -1,0 +1,955 @@
+% Consolidated 09-thermo-state from 7c59eacf2bbc4f2718617404cd46e24a47721d7d; original TeX fragments preserved.
+
+% === BEGIN 09-thermo-state-001-011.tex blob b386d7a3c183d36a9817245d10121c29422330a7 ===
+% Irodov, section 2.1 "Equation of the Gas State. Processes",
+% original numbered problems 1--11 (printed pp.62--63; PDF pp.71--72).
+% Section 2 uses separate ORIGINAL numbering; do not concatenate to 1..388.
+
+\thermoproblem{1}{62}
+一容器体积为 $V=30\,\mathrm L$，
+其中装有 $0^\circ\mathrm C$ 的理想气体。
+在温度保持不变的情况下放出一部分气体，
+容器压强降低
+$\Delta p=0.78\,\mathrm{atm}$。
+气体在标准状况下的密度为
+$\rho_0=1.3\,\mathrm{g/L}$。
+求放出的气体质量。
+\exsolution
+设标准状况压强
+$p_0=1.0\,\mathrm{atm}$、
+温度 $T_0=273.15\,\mathrm K$。
+题中容器温度同为标准温度，
+因此气体的密度与压强成正比，
+由理想气体状态方程，放出质量对应
+\[
+\Delta m=\frac{M}{RT_0}\Delta p\,V.
+\]
+利用标准状况
+$\rho_0=Mp_0/(RT_0)$，
+消去未知摩尔质量：
+\[
+\boxed{\Delta m=\rho_0 V\frac{\Delta p}{p_0}
+=(1.3\,\mathrm{g/L})(30\,\mathrm L)(0.78)
+\simeq30\,\mathrm g}.
+\]
+\excheck 质量与容器体积以及压强降幅成正比；
+不需要单独知道气体的摩尔质量。
+
+\thermoproblem{2}{62}
+两只体积相同的容器由单向阀相连；
+当两侧压强差达到或超过
+$\Delta p=1.10\,\mathrm{atm}$ 时，
+阀门允许气体从高压侧流向低压侧。
+最初一只容器为真空，
+另一只装有
+$t_1=27^\circ\mathrm C$、
+$p_1=1.00\,\mathrm{atm}$
+的理想气体。
+随后两只容器升温到
+$t_2=107^\circ\mathrm C$。
+求最初真空容器达到的压强。
+\exsolution
+两只容器总气体摩尔数不变且最终同温。
+设每只容积为 $V$，
+初始有气容器的气体满足
+$nR T_1=p_1V$。
+升温后若气体仍全部在原容器，其压强为
+$p_\Sigma=p_1 T_2/T_1$。
+阀门达到停止流动的临界状态时，
+两侧压强之差为 $\Delta p$。
+令最初真空侧压强为 $p$，
+原有气体一侧压强为 $p+\Delta p$。
+因为两容器体积相等、末温相同，
+\[
+(p+\Delta p)V+pV=nRT_2
+=p_1V\frac{T_2}{T_1}.
+\]
+解得
+\[
+\boxed{p=\frac12\left(
+p_1\frac{T_2}{T_1}-\Delta p\right)}.
+\]
+取 $T_1\simeq300\,\mathrm K$、
+$T_2\simeq380\,\mathrm K$，
+得到
+\[
+\boxed{p\simeq0.083\,\mathrm{atm}}.
+\]
+\excheck 原书简答记为约
+$0.10\,\mathrm{atm}$；严格代入本版
+$p_1=1.00\,\mathrm{atm}$、$\Delta p=1.10\,\mathrm{atm}$
+给出约 $0.083\,\mathrm{atm}$。
+这个差异可理解为答案过度粗略取整，
+已在勘误中说明。
+
+\thermoproblem{3}{62}
+体积为 $V=20\,\mathrm L$ 的容器内
+装有氢气与氦气的理想混合气，
+温度 $t=20^\circ\mathrm C$、
+压强 $p=2.0\,\mathrm{atm}$，
+总质量 $m=5.0\,\mathrm g$。
+求氢气质量与氦气质量之比。
+\exsolution
+令氢气、氦气质量分别为 $m_H,m_{\rm He}$，
+其摩尔质量近似为
+$M_H=2\,\mathrm{g/mol}$、
+$M_{\rm He}=4\,\mathrm{g/mol}$。
+由气体分压相加与理想气体状态方程：
+\[
+\frac{pV}{RT}=\frac{m_H}{M_H}
++\frac{m_{\rm He}}{M_{\rm He}},
+\qquad
+m_H+m_{\rm He}=m.
+\]
+令总摩尔数
+$n=pV/(RT)$，以克为单位，
+$n=m_H/2+(5-m_H)/4=(m_H+5)/4$，
+所以
+\[
+m_H=4n-5,\quad m_{\rm He}=10-4n.
+\]
+取
+$R=0.082057\,\mathrm{L\,atm/(mol\,K)}$、
+$T=293.15\,\mathrm K$，
+$n\simeq1.663\,\mathrm{mol}$，
+\[
+\boxed{\frac{m_H}{m_{\rm He}}
+=\frac{4n-5}{10-4n}\simeq0.50}.
+\]
+\excheck 两组分的\emph{摩尔数}并非质量比例；
+需用各自摩尔质量换算。
+
+\thermoproblem{4}{62}
+容器中混有
+$m_1=7.0\,\mathrm g$ 的氮气与
+$m_2=11\,\mathrm g$ 的二氧化碳，
+温度 $T=290\,\mathrm K$，
+总压强 $p_0=1.0\,\mathrm{atm}$。
+把两气体视为理想气体，
+求混合气体的质量密度 $\rho$。
+\exsolution
+混合气体总摩尔数等于各组分摩尔数之和：
+\[
+n=\frac{m_1}{M_1}+\frac{m_2}{M_2}.
+\]
+由理想气体方程
+$p_0V=nRT$，
+得到容积
+$V=(m_1/M_1+m_2/M_2)RT/p_0$。
+因此密度为
+\[
+\boxed{\rho=\frac{m_1+m_2}{V}
+=\frac{p_0(m_1+m_2)}
+{RT(m_1/M_1+m_2/M_2)}}.
+\]
+取 $M_1=28\,\mathrm{g/mol}$、
+$M_2=44\,\mathrm{g/mol}$，
+则两组分各为 $0.25$ mol，
+总质量 $18$ g，总摩尔数 $0.50$ mol，
+\[
+\boxed{\rho\simeq1.5\,\mathrm{g/L}}.
+\]
+\excheck 混合气平均摩尔质量为
+$M_{\rm av}=18/0.50=36\,\mathrm{g/mol}$，
+用 $\rho=p_0M_{\rm av}/(RT)$ 可复核。
+
+\thermoproblem{5}{63}
+容器体积 $V=7.5\,\mathrm L$，
+其中装有温度 $T=300\,\mathrm K$
+的理想气体混合物：
+氧气 $\nu_1=0.10$ mol、
+氮气 $\nu_2=0.20$ mol、
+二氧化碳 $\nu_3=0.30$ mol。
+求：(a) 混合气总压强；
+(b) 用于方程 $pV=(m/M)RT$
+的平均摩尔质量 $M$。
+\exsolution
+气体总摩尔数
+$\nu=\nu_1+\nu_2+\nu_3=0.60$ mol。
+道尔顿分压定律及理想气体方程给
+\[
+\boxed{p=\frac{\nu RT}{V}
+=\frac{0.60(0.082057)(300)}{7.5}
+\simeq1.97\,\mathrm{atm}\approx2.0\,\mathrm{atm}}.
+\]
+混合物总质量
+$m=\nu_1M_1+\nu_2M_2+\nu_3M_3$，
+平均摩尔质量
+\[
+\boxed{M=\frac{m}{\nu}
+=\frac{0.10(32)+0.20(28)+0.30(44)}
+{0.60}
+\simeq36.7\,\mathrm{g/mol}}.
+\]
+\excheck 质量加权与\emph{摩尔数加权}不同；
+用组分摩尔分数计算平均摩尔质量。
+
+\thermoproblem{6}{63}
+一竖直密闭圆筒由无摩擦轻活塞分成
+上下两腔，各装 1 mol 空气。
+在温度 $T_0=300\,\mathrm K$ 的平衡态，
+上腔体积是下腔体积的
+$\eta=4.0$ 倍。
+当两腔达到新的共同温度时，
+体积比变为 $\eta'=3.0$，
+求新的温度 $T$。
+\exsolution
+设圆筒总容积为 $V_\Sigma$、
+活塞横截面积为 $S$、
+活塞质量为 $m$。
+当上、下腔体积比为 $\eta$，
+\[
+V_u=\frac{\eta V_\Sigma}{1+\eta},
+\qquad V_d=\frac{V_\Sigma}{1+\eta}.
+\]
+轻活塞竖直力平衡
+$(p_d-p_u)S=mg$，
+理想气体状态方程
+$p_d=RT/V_d$、
+$p_u=RT/V_u$，
+因此
+\[
+\frac{mg}{S}
+=\frac{RT}{V_\Sigma}
+\frac{\eta^2-1}{\eta}.
+\]
+右侧的 $mg/S,V_\Sigma$ 不变，
+故
+\[
+\frac{T_0(\eta^2-1)}{\eta}
+=\frac{T(\eta'^2-1)}{\eta'}.
+\]
+解出
+\[
+\boxed{T=T_0
+\frac{\eta'(\eta^2-1)}
+{\eta(\eta'^2-1)}}
+=\boxed{300\cdot\frac{3\cdot15}{4\cdot8}
+\simeq422\,\mathrm K}.
+\]
+\excheck 温度升高后两侧压强差仍由活塞重量决定，
+体积比趋向更接近1；题目没有必要单独知道活塞质量。
+
+\thermoproblem{7}{63}
+体积为 $V$ 的密闭容器通过活塞式抽气泵抽气，
+每次活塞行程在吸气时形成有效体积 $\Delta V$。
+假设等温理想气体，
+求把容器压强降低 $\eta$ 倍
+所需抽气行程数 $n$。
+\exsolution
+一次抽气时，容器与泵室连通后
+气体等温占据体积 $V+\Delta V$，
+而总摩尔数暂时不变。
+根据玻意耳定律，
+若抽气前容器压强为 $p_j$，
+抽气后重新隔离容器时
+\[
+p_{j+1}=p_j\frac{V}{V+\Delta V}.
+\]
+重复 $n$ 次：
+\[
+p_n=p_0\left(\frac{V}{V+\Delta V}\right)^n.
+\]
+要求 $p_n=p_0/\eta$，
+取对数得到
+\[
+\boxed{n=\frac{\ln\eta}
+{\ln(1+\Delta V/V)}}.
+\]
+\excheck 实际抽气次数须向上取整；
+此式假定泵无死区容积、漏气、阀门回流或温度变化。
+
+\thermoproblem{8}{63}
+体积为 $V$ 的容器最初压强为 $p_0$，
+由抽速为常数 $C$ 的真空泵等温抽气。
+抽速定义为\emph{当前腔室压强下}
+单位时间抽走的气体体积。
+求容器压强与时间 $t$ 的关系。
+\exsolution
+以气体摩尔数 $n=pV/(RT)$ 描述容器状态。
+单位时间抽走的摩尔数为
+$\mathrm d n_{\rm out}/\mathrm dt=Cp/(RT)$。
+故
+\[
+\frac{\mathrm d}{\mathrm dt}\left(\frac{pV}{RT}\right)
+=-\frac{Cp}{RT}.
+\]
+因为 $T,V$ 不变，
+\[
+\frac{\mathrm dp}{\mathrm dt}
+=-\frac CV\,p.
+\]
+分离变量并用初态 $p(0)=p_0$，
+得
+\[
+\boxed{p(t)=p_0\exp(-Ct/V)}.
+\]
+\excheck 这里抽速 $C$ 并不是恒定\emph{抽出摩尔数}；
+随着压强降低，单位时间抽出的摩尔数减少，
+所以压强指数下降。
+
+\thermoproblem{9}{63}
+容积为 $V=87\,\mathrm L$ 的真空室，
+抽气泵在当前压强下的抽速恒为
+$C=10\,\mathrm{L/s}$。
+求真空室压强降低 $\eta=1000$ 倍
+所需时间。
+\exsolution
+根据上一题等温恒定抽速规律
+$p(t)=p_0e^{-Ct/V}$。
+令 $p(t)=p_0/\eta$，得
+\[
+e^{-Ct/V}=\eta^{-1}
+\quad\Longrightarrow\quad
+\boxed{t=\frac VC\ln\eta}.
+\]
+代入数值：
+\[
+\boxed{t=\frac{87\,\mathrm L}{10\,\mathrm{L/s}}
+\ln1000
+\simeq60\,\mathrm s\simeq1.0\,\mathrm{min}}.
+\]
+\excheck $V/C$ 具有时间单位；
+未计入泵的极限真空度、出气和漏气。
+
+\thermoproblem{10}{63}
+原书图2.1中，一根竖直光滑管上下段横截面积不同，
+上、下各有一只活塞，并用不可伸长细线相连。
+两活塞之间密封 1 mol 理想气体。
+上活塞面积比下活塞大
+$\Delta S=10\,\mathrm{cm^2}$，
+两活塞总质量 $m=5.0\,\mathrm{kg}$，
+外界大气压 $p_0=1.0\,\mathrm{atm}$。
+求要使两活塞整体向上平移
+$\ell=5.0\,\mathrm{cm}$，气体应升温多少。
+\exsolution
+对两个活塞作为整体列竖直静力平衡。
+活塞间气压 $p$ 对两活塞的净向上推力为
+$p(S_u-S_d)=p\Delta S$，
+外界大气压产生净向下力 $p_0\Delta S$，
+总重力为 $mg$，故
+\[
+(p-p_0)\Delta S=mg
+\quad\Longrightarrow\quad
+p=p_0+\frac{mg}{\Delta S}.
+\]
+在活塞随绳共同上移 $\ell$ 时，
+气体体积增加
+$\Delta V=(S_u-S_d)\ell=\Delta S\,\ell$。
+准静态过程中 $p$ 不变。
+由一摩尔理想气体状态方程，
+\[
+R\Delta T=p\Delta V
+=(p_0\Delta S+mg)\ell,
+\]
+因此
+\[
+\boxed{\Delta T=\frac{(p_0\Delta S+mg)\ell}{R}}.
+\]
+用 $\Delta S=10^{-3}\,\mathrm{m^2}$、
+$p_0\simeq1.013\times10^5\,\mathrm{Pa}$、
+$m=5.0\,\mathrm{kg}$、
+$\ell=0.050\,\mathrm m$：
+\[
+\boxed{\Delta T\simeq0.90\,\mathrm K}.
+\]
+\excheck \textbf{题面图像复核：}
+原书 PDF 纯文本抽取曾把
+$\ell=5.0\,\mathrm{cm}$ 错读为 $50\,\mathrm{cm}$。
+回看原版放大的题面图像，小数点清楚存在；
+按 $\ell=0.050\,\mathrm m$ 计算约为
+$0.90\,\mathrm K$，与本版书末简答一致。
+该例\emph{不是原书答案错误}。
+
+\thermoproblem{11}{63}
+一摩尔理想气体发生下列准静态过程，
+求沿该过程能够达到的最高温度，
+其中 $p_0,\alpha,\beta$ 是正常数：
+(a) $p=p_0-\alpha V^2$；
+(b) $p=p_0e^{-\beta V}$。
+\exsolution
+一摩尔理想气体满足
+$T=pV/R$。
+(a) 温度函数
+$T(V)=(p_0V-\alpha V^3)/R$，
+对 $V$ 求导：
+\[
+\frac{\mathrm dT}{\mathrm dV}
+=\frac{p_0-3\alpha V^2}{R}.
+\]
+内部极大值在
+$V_*=\sqrt{p_0/(3\alpha)}$，
+其处二阶导数
+$-6\alpha V_*/R<0$。
+用
+$\alpha V_*^2=p_0/3$：
+\[
+\boxed{T_{\max}^{(a)}
+=\frac{2p_0}{3R}
+\sqrt{\frac{p_0}{3\alpha}}}.
+\]
+(b) $T(V)=p_0Ve^{-\beta V}/R$，
+求导
+\[
+\frac{\mathrm dT}{\mathrm dV}
+=\frac{p_0}{R}e^{-\beta V}(1-\beta V).
+\]
+唯一极大值在 $V_*=1/\beta$，
+故
+\[
+\boxed{T_{\max}^{(b)}
+=\frac{p_0}{e\beta R}}.
+\]
+\excheck 极值必须位于物理允许的
+$p>0,V>0$ 区域：
+(a) 的 $V_*$ 满足 $p=2p_0/3>0$；
+(b) 所有 $V>0$ 时 $p>0$。
+% === END 09-thermo-state-001-011.tex ===
+
+% === BEGIN 09-thermo-state-012-020.tex blob a1fd6cc3a9cc6316ad8c11df7302b04049e61476 ===
+% Irodov, user-supplied book, section 2.1 original problems 12--20,
+% printed p.64 / PDF p.73.
+\thermoproblem{12}{64}
+一摩尔理想气体沿下列过程变化：
+$T=T_0+\alpha V^2$，
+其中 $T_0,\alpha$ 为正常数，
+$V$ 为该摩尔气体的体积。
+求过程中能够达到的最小压强，
+并定性画出 $p$ 随 $V$ 变化的图线。
+\exsolution
+一摩尔理想气体满足 $pV=RT$。
+代入过程方程：
+\[
+p(V)=\frac{R(T_0+\alpha V^2)}{V}
+=R\left(\frac{T_0}{V}+\alpha V\right),
+\quad V>0.
+\]
+对体积求导：
+\[
+\frac{\mathrm dp}{\mathrm dV}
+=R\left(-\frac{T_0}{V^2}+\alpha\right).
+\]
+极小值在
+$V_*=\sqrt{T_0/\alpha}$，
+此点二阶导数
+$2RT_0/V_*^3>0$。
+于是
+\[
+\boxed{p_{\min}=p(V_*)
+=2R\sqrt{\alpha T_0}}.
+\]
+图线在 $V\to0^+$ 时由 $RT_0/V$
+主导而趋无穷，在 $V\to\infty$ 时
+由 $R\alpha V$ 主导亦趋无穷，
+在 $V_*$ 处有唯一谷底。
+\excheck 过程曲线为 U 形，
+不是理想气体等温过程的双曲线；
+这里气体温度随体积而变化。
+
+\thermoproblem{13}{64}
+在均匀重力场中放置一个高圆柱形容器，
+内装氮气。
+自由落体加速度大小为 $g$，
+气体沿高度 $h$ 的温度分布使得
+其\emph{质量密度处处相同}。
+求温度梯度 $\mathrm dT/\mathrm dh$。
+\exsolution
+高度向上取正，
+静力学平衡给出
+$\mathrm dp/\mathrm dh=-\rho g$。
+由理想气体状态方程
+$p=\rho RT/M$，
+其中氮气摩尔质量 $M$、
+$\rho$ 为质量密度。
+题设 $\rho$ 在所有高度都相同，
+所以
+\[
+\frac{\mathrm dp}{\mathrm dh}
+=\frac{\rho R}{M}\frac{\mathrm dT}{\mathrm dh}.
+\]
+与静力方程联立：
+\[
+\boxed{\frac{\mathrm dT}{\mathrm dh}
+=-\frac{Mg}{R}}.
+\]
+以氮气 $M=0.0280\,\mathrm{kg/mol}$
+及 $g=9.81\,\mathrm{m/s^2}$，
+得
+$\boxed{\mathrm dT/\mathrm dh
+\simeq-0.033\,\mathrm{K/m}=-33\,\mathrm{mK/m}}$。
+\excheck 温度随高度线性下降，
+与常温气体密度不随高度变化这一特定假设相容；
+该梯度不是任意大气环境的实际气温直减率。
+
+\thermoproblem{14}{64}
+假设大气中的压强与质量密度满足
+$p/\rho^{\,n}=\text{常数}$，
+其中 $n$ 与高度无关。
+利用静力学平衡和理想气体状态方程，
+求相应温度梯度。
+\exsolution
+写多方关系为 $p=C\rho^n$，
+则气体温度满足
+\[
+T=\frac{Mp}{R\rho}
+=\frac{MC}{R}\rho^{n-1}.
+\]
+两边求导：
+\[
+\frac{\mathrm dT}{T}
+=(n-1)\frac{\mathrm d\rho}{\rho},
+\qquad
+\frac{\mathrm dp}{p}=n\frac{\mathrm d\rho}{\rho}.
+\]
+由静力方程
+$\mathrm dp/\mathrm dh=-\rho g$，
+以及 $p/\rho=RT/M$，
+得到
+\[
+\frac{\mathrm dT}{\mathrm dh}
+=(n-1)\frac{T}{n p}\frac{\mathrm dp}{\mathrm dh}
+=-(n-1)\frac{T\rho g}{np}.
+\]
+化简：
+\[
+\boxed{\frac{\mathrm dT}{\mathrm dh}
+=-\frac{Mg}{nR}(n-1)}.
+\]
+\excheck $n=1$ 时等温且温度梯度为零；
+如果 $n>1$，温度随高度升高而降低。
+
+\thermoproblem{15}{64}
+地表附近空气处于标准状况，
+假设温度和平均摩尔质量随高度不变。
+求地表上方 $5.0\,\mathrm{km}$ 处，
+以及地面下方深 $5.0\,\mathrm{km}$ 的矿井中的气压。
+\exsolution
+等温静力平衡的气压分布为
+\[
+p(h)=p_0\exp\left(-\frac{Mgh}{RT}\right),
+\]
+其中高度 $h$ 在地面以上取正、矿井中取负。
+取 $p_0=1.00\,\mathrm{atm}$、
+$T=273.15\,\mathrm K$、
+$M\simeq0.029\,\mathrm{kg/mol}$。
+定义
+$a=M g(5000\,\mathrm m)/(RT)\simeq0.63$。
+于是
+\[
+\boxed{p(+5.0\,\mathrm{km})
+=p_0e^{-a}\simeq0.53\,\mathrm{atm}\approx0.5\,\mathrm{atm}},
+\]
+\[
+\boxed{p(-5.0\,\mathrm{km})
+=p_0e^{a}\simeq1.9\,\mathrm{atm}\approx2\,\mathrm{atm}}.
+\]
+\excheck 结果来自温度在上下5 km范围内均恒定的
+理想化模型；现实矿井的地温梯度与空气流动会改变数值。
+
+\thermoproblem{16}{64}
+在均匀重力场中，
+假设空气温度为 $0^\circ\mathrm C$、
+平均摩尔质量 $M$ 与 $g$ 均不随高度改变。
+求两个高度之间的距离 $\Delta h$，
+使相应空气密度分别：
+(a) 相差 $e$ 倍；
+(b) 相差 $\eta=1.0\%$。
+\exsolution
+等温大气的密度与气压同指数衰减：
+\[
+\rho(h)=\rho(0)e^{-h/H},
+\qquad H=\frac{RT}{Mg}
+\]
+是密度标高。
+两点间距 $\Delta h>0$ 的密度比
+$\rho(h)/\rho(h+\Delta h)=e^{\Delta h/H}$。
+(a) 若密度相差 $e$ 倍，
+$\Delta h/H=\ln e=1$，所以
+\[
+\boxed{\Delta h_a=\frac{RT}{Mg}}.
+\]
+(b) 若相差 $1+\eta$ 倍，
+\[
+\boxed{\Delta h_b=\frac{RT}{Mg}\ln(1+\eta)
+\simeq\eta\frac{RT}{Mg}}.
+\]
+取 $T=273.15\,\mathrm K$、
+$M=0.029\,\mathrm{kg/mol}$，
+得到
+$\boxed{\Delta h_a\simeq8.0\,\mathrm{km}}$、
+$\boxed{\Delta h_b\simeq0.080\,\mathrm{km}=80\,\mathrm m}$。
+\excheck 当 $\eta\ll1$ 时
+$\ln(1+\eta)\simeq\eta$；
+不能把 $1.0\%$ 错当成倍率 $1.0$。
+
+\thermoproblem{17}{64}
+一个高为 $h$、底面积为 $S$ 的竖直圆柱容器中
+装有摩尔质量为 $M$ 的等温理想气体，
+温度为 $T$。
+容器底面压强为 $p_0$，
+重力加速度为常数 $g$。
+求容器内气体总质量 $m$。
+\exsolution
+底端 $z=0$ 向上取高度 $z$。
+等温静力平衡给出
+\[
+p(z)=p_0\exp(-Mg z/(RT)).
+\]
+理想气体质量密度为
+$\rho(z)=Mp(z)/(RT)$。
+因此总质量
+\[
+m=S\int_0^h\rho(z)\,\mathrm dz
+=\frac{MS p_0}{RT}
+\int_0^h\exp(-Mg z/(RT))\,\mathrm dz.
+\]
+积分得
+\[
+\boxed{m=\frac{S p_0}{g}
+\left(1-e^{-Mgh/(RT)}\right)}.
+\]
+\excheck 对薄层高度 $h\ll RT/(Mg)$，
+指数展开给
+$m\simeq S p_0 M h/(RT)$，
+恢复均匀近似密度 $\rho_0$ 乘体积 $Sh$。
+
+\thermoproblem{18}{64}
+把摩尔质量为 $M$ 的等温理想气体
+放在均匀重力场中一个\emph{非常高}的竖直容器里，
+温度为 $T$、重力加速度为 $g$。
+求气体质量分布的质心高度
+$h_C$（相对容器底面）。
+\exsolution
+等温大气密度分布为
+$\rho(h)=\rho_0e^{-h/H}$，
+其中 $H=RT/(Mg)$。
+容器足够高，可用上限无穷大。
+质心高度是质量加权平均：
+\[
+h_C=\frac{\int_0^\infty h\,\rho(h)S\,\mathrm dh}
+{\int_0^\infty\rho(h)S\,\mathrm dh}
+=\frac{\int_0^\infty h e^{-h/H}\,\mathrm dh}
+{\int_0^\infty e^{-h/H}\,\mathrm dh}.
+\]
+由
+$\int_0^\infty e^{-h/H}\mathrm dh=H$、
+$\int_0^\infty h e^{-h/H}\mathrm dh=H^2$，
+得到
+\[
+\boxed{h_C=H=\frac{RT}{Mg}}.
+\]
+\excheck 质心高度不受容器截面积与底部压强影响，
+是这一指数密度模型的标高。
+
+\thermoproblem{19}{64}
+在均匀重力场中，理想气体摩尔质量为 $M$、
+自由落体加速度为 $g$。
+已知 $h=0$ 时压强 $p=p_0$，
+若温度随高度分别满足
+(a) $T=T_0(1-ah)$；
+(b) $T=T_0(1+ah)$，
+其中 $a>0$，
+求相应压强分布 $p(h)$。
+\exsolution
+静力学平衡为
+$\mathrm dp/\mathrm dh=-\rho g$，
+用
+$\rho=Mp/(RT(h))$ 消去密度：
+\[
+\frac{\mathrm dp}{p}
+=-\frac{Mg}{RT(h)}\,\mathrm dh.
+\]
+记
+$\nu=Mg/(aRT_0)>0$。
+(a) 对 $T(h)=T_0(1-ah)$，
+\[
+\ln\frac p{p_0}
+=-\frac{Mg}{RT_0}\int_0^h\frac{\mathrm dz}{1-az}
+=\nu\ln(1-ah),
+\]
+所以
+\[
+\boxed{p_a(h)=p_0(1-ah)^\nu},
+\qquad h<1/a.
+\]
+(b) 对 $T(h)=T_0(1+ah)$，
+\[
+\ln\frac p{p_0}
+=-\frac{Mg}{RT_0}\int_0^h\frac{\mathrm dz}{1+az}
+=-\nu\ln(1+ah),
+\]
+所以
+\[
+\boxed{p_b(h)=p_0(1+ah)^{-\nu}}.
+\]
+\excheck 两式在 $h=0$ 均给 $p_0$；
+(a) 的物理定义域须保证温度 $T(h)>0$。
+
+\thermoproblem{20}{64}
+一根水平圆柱形管一端封闭、
+另一端在旋转轴上与外界大气连通。
+管绕穿过其开放端的竖直轴以角速度
+$\omega$ 匀速旋转。
+管内空气处于温度 $T$ 的等温平衡，
+摩尔质量为 $M$，开放端大气压为 $p_0$。
+求管内气压随距旋转轴距离 $r$ 的分布。
+\exsolution
+在随管转动的参考系中，
+空气相对管静止。
+气体在沿管轴径向满足离心静力平衡：
+\[
+\frac{\mathrm dp}{\mathrm dr}=\rho\omega^2r.
+\]
+用等温理想气体关系
+$\rho=Mp/(RT)$ 代入：
+\[
+\frac{\mathrm dp}{p}
+=\frac{M\omega^2}{RT}r\,\mathrm dr.
+\]
+由开放端边界 $p(0)=p_0$ 积分：
+\[
+\ln\frac{p(r)}{p_0}
+=\frac{M\omega^2r^2}{2RT},
+\]
+所以
+\[
+\boxed{p(r)=p_0
+\exp\left(\frac{M\omega^2r^2}{2RT}\right)}.
+\]
+\excheck 离心平衡使压强随半径\emph{增加}；
+本题不是地球大气沿竖直高度衰减的模型。
+% === END 09-thermo-state-012-020.tex ===
+
+% === BEGIN 09-thermo-state-021-025.tex blob bd2f28c5753836b073d3c8f088b6d878e418882d ===
+% Irodov section 2.1, original numbered problems 21--25,
+% printed p.65, PDF p.74. Van der Waals equation for one mole:
+% p=RT/(V-b)-a/V^2, V is molar volume (one mole).
+\thermoproblem{21}{65}
+在温度 $T=300\,\mathrm K$ 时，
+二氧化碳的质量密度达到
+$\rho=500\,\mathrm{g/L}$，
+需有多大压强？
+分别用理想气体方程和范德瓦耳斯方程计算。
+\exsolution
+设二氧化碳的摩尔质量
+$M=44.0\,\mathrm{g/mol}$，
+每摩尔的体积为
+\[
+V_m=\frac M\rho
+=\frac{44.0\,\mathrm{g/mol}}{500\,\mathrm{g/L}}
+=0.0880\,\mathrm{L/mol}.
+\]
+理想气体方程给
+\[
+p_{\rm id}=\frac{RT}{V_m},
+\]
+取 $R=0.082057\,\mathrm{L\,atm/(mol\,K)}$，
+\[
+\boxed{p_{\rm id}\simeq280\,\mathrm{atm}}.
+\]
+范德瓦耳斯方程为
+$(p+a/V_m^2)(V_m-b)=RT$，
+解得
+\[
+\boxed{p_{\rm vdW}=
+\frac{RT}{V_m-b}-\frac{a}{V_m^2}}.
+\]
+采用该气体常用近似参数
+$a\simeq3.59\,\mathrm{atm\,L^2/mol^2}$、
+$b\simeq0.0427\,\mathrm{L/mol}$，
+代入
+\[
+p_{\rm vdW}
+\simeq\frac{0.082057(300)}{0.0880-0.0427}
+-\frac{3.59}{(0.0880)^2}
+\simeq\boxed{80\,\mathrm{atm}}.
+\]
+\excheck 两结果差异很大，因为该密度下
+分子排除体积 $b$ 已与摩尔体积同量级，
+理想气体近似失效。
+
+\thermoproblem{22}{65}
+容器体积为 $V=1.00\,\mathrm L$，
+内装一摩尔氮气。
+求在多高的温度下，
+理想气体方程计算的压强与范德瓦耳斯方程
+计算值的相对误差为 $\eta=10\%$
+（相对范德瓦耳斯压强定义）；
+并求此时压强。
+\exsolution
+取这一摩尔气体的两种压强模型：
+\[
+p_{\rm id}=\frac{RT}{V},\qquad
+p_{\rm vdW}=\frac{RT}{V-b}-\frac a{V^2}.
+\]
+按本题考虑的分支，理想气体压强高于
+范德瓦耳斯值，故
+$(p_{\rm id}-p_{\rm vdW})/p_{\rm vdW}=\eta$，
+即
+$p_{\rm vdW}=p_{\rm id}/(1+\eta)$。
+代入并整理：
+\[
+\frac{RT}{V-b}-\frac a{V^2}
+=\frac{RT}{V(1+\eta)}.
+\]
+移项求温度：
+\[
+\frac a{V^2}
+=RT\frac{\eta V+b}{V(1+\eta)(V-b)},
+\]
+\[
+\boxed{
+T=\frac{a(1+\eta)(V-b)}
+{R V(\eta V+b)}}.
+\]
+此时压强
+\[
+\boxed{p_{\rm vdW}=\frac{RT}{V(1+\eta)}}.
+\]
+代入氮气的常用近似
+$a\simeq1.4\,\mathrm{atm\,L^2/mol^2}$、
+$b\simeq0.039\,\mathrm{L/mol}$，
+得 $T$ 为约 $1.3\times10^2\,\mathrm K$，
+$p_{\rm vdW}$ 为约 $10\,\mathrm{atm}$，
+与书末所取参数给出的
+$\sim133\,\mathrm K$、
+$\sim9.9\,\mathrm{atm}$ 为相同数量级。
+\excheck 题面没有提供 $a,b$ 的具体数值，
+因此精确数值依赖选用的氮气材料常数表；
+不可把简答中的数值视作不依赖 $a,b$ 的普适结果。
+
+\thermoproblem{23}{65}
+一摩尔某种气体装在
+$V=0.250\,\mathrm L$ 的容器里。
+在 $T_1=300\,\mathrm K$ 时
+$p_1=90\,\mathrm{atm}$，
+在 $T_2=350\,\mathrm K$ 时
+$p_2=110\,\mathrm{atm}$。
+求该气体的范德瓦耳斯参数 $a,b$。
+\exsolution
+对同一摩尔体积 $V$，
+两状态均满足
+\[
+p_i=\frac{RT_i}{V-b}-\frac a{V^2}.
+\]
+相减消去 $a$：
+\[
+p_2-p_1=\frac{R(T_2-T_1)}{V-b},
+\]
+所以
+\[
+\boxed{b=V-\frac{R(T_2-T_1)}{p_2-p_1}}.
+\]
+再代回任一状态：
+\[
+\boxed{a=V^2\left(\frac{RT_1}{V-b}-p_1\right)}.
+\]
+也可代入第一式消去 $b$ 得
+\[
+a=V^2
+\frac{p_1T_2-p_2T_1}{T_1-T_2}.
+\]
+取 $R=0.082057\,\mathrm{L\,atm/(mol\,K)}$，
+数值为
+\[
+\boxed{b\simeq0.0449\,\mathrm{L/mol}},\qquad
+\boxed{a\simeq1.88\,\mathrm{atm\,L^2/mol^2}}.
+\]
+\excheck 在本版原书简答中，
+$a$ 约写成 $1.85$、
+$b$ 约为 $0.042\,\mathrm{L/mol}$；
+按题面印刷的两组 $p,T$ 和通用 $R$
+精确代入得到上式数值。
+该差别主要由取整或原版数值表造成，
+公式可直接代入反查两个实验压强。
+
+\thermoproblem{24}{65}
+一摩尔范德瓦耳斯气体在温度 $T$ 下
+摩尔体积为 $V$，其状态方程为
+$(p+a/V^2)(V-b)=RT$。
+求等温压缩系数
+\[
+\chi_T=-\frac1V
+\left(\frac{\partial V}{\partial p}\right)_T
+\]
+随 $V$ 的函数。
+\exsolution
+首先把压强显式写为
+\[
+p(V,T)=\frac{RT}{V-b}-\frac a{V^2}.
+\]
+在温度固定时求导：
+\[
+\left(\frac{\partial p}{\partial V}\right)_T
+=-\frac{RT}{(V-b)^2}+\frac{2a}{V^3}.
+\]
+故
+\[
+\chi_T=-\frac1V
+\frac{1}{(\partial p/\partial V)_T}
+=\frac1V
+\frac{1}{RT/(V-b)^2-2a/V^3}.
+\]
+通分得到
+\[
+\boxed{\chi_T=
+\frac{V^2(V-b)^2}
+{RTV^3-2a(V-b)^2}}.
+\]
+\excheck 力学稳定的单相气体须满足
+$(\partial p/\partial V)_T<0$，
+即上式分母为正；
+临界自旋odal附近压缩系数可能显著增大乃至发散。
+
+\thermoproblem{25}{65}
+接着上一题，
+判断在什么温度条件下，
+范德瓦耳斯气体的等温压缩系数
+$\chi_{\rm vdW}$ 大于理想气体压缩系数
+$\chi_{\rm id}$。
+讨论摩尔体积 $V\gg b$ 时的简化结果。
+\exsolution
+先明确采用\emph{相同温度 $T$ 和相同摩尔体积 $V$}
+比较两种状态方程。
+理想气体在同一 $V,T$ 时
+$p_{\rm id}=RT/V$，
+等温压缩系数为
+$\chi_{\rm id}=1/p_{\rm id}=V/(RT)$。
+范德瓦耳斯气体在力学稳定分支的
+压缩系数为
+\[
+\chi_{\rm vdW}
+=\frac1{V[RT/(V-b)^2-2a/V^3]}.
+\]
+比较
+$\chi_{\rm vdW}>\chi_{\rm id}$
+且两个分母均为正，等价于
+\[
+RT>\frac{RTV^2}{(V-b)^2}-\frac{2a}{V}.
+\]
+移项并使用
+$V^2-(V-b)^2=b(2V-b)$，
+得到
+\[
+\frac{2a}{V}>
+RT\frac{b(2V-b)}{(V-b)^2},
+\]
+因此
+\[
+\boxed{T<
+\frac{2a(V-b)^2}{RbV(2V-b)}}.
+\]
+当 $V\gg b$ 时，
+右边趋于 $a/(Rb)$，
+从而
+\[
+\boxed{T<\frac{a}{Rb}\qquad(V\gg b)}.
+\]
+\excheck \textbf{与本版书末不一致：}
+书末只给 $T>a/(Rb)$，方向与按\emph{同 $V,T$}
+直接比较压缩系数所得的严格不等式相反。
+比较不同气体的“压缩系数”必须明确
+是在相同 $T,V$ 还是相同 $T,p$ 条件下；
+本稿固定了前者，并将书末差异列入勘误，
+不默默改写不等式方向。
+% === END 09-thermo-state-021-025.tex ===
