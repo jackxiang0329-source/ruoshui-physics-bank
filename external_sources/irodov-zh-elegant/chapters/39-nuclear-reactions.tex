@@ -1,0 +1,1272 @@
+% Consolidated 39-nuclear-reactions from ce5faa3e9e459c6fa8c4f0ed5dbc763b44d938dd; original TeX fragments preserved.
+
+% === BEGIN 39-nuclear-reactions-249-258.tex blob 1cffb11cd68d61e7c04a19d525ede731d3c3ea50 ===
+% 原书第六篇6.6节249--258，印刷260--261，原PDF269--270；
+% 书末答案349--350，PDF358--359。
+\nuclearreactionproblem{249}{260--261}
+动能 $T_\alpha=7.0\,\mathrm{MeV}$ 的
+$\alpha$ 粒子与起初静止的 $\mathrm{^{6}Li}$ 核
+弹性散射。原题称“两粒子出射方向夹角”
+$\theta=60^\circ$，求反冲锂核动能。
+\exsolution
+令入射粒子质量 $m=4u$、靶核质量 $M=6u$，
+散射后两个粒子动量模为 $p'_a,p_R$，
+它们之间的实际夹角为 $\gamma$。
+动量、能量守恒分别为
+\[
+ p_0^2=p_a'^2+p_R^2+2p_a'p_R\cos\gamma,
+ \qquad
+ \frac{p_0^2}{2m}=
+ \frac{p_a'^2}{2m}+\frac{p_R^2}{2M}.
+\]
+两式消去 $p_0^2$：
+\[
+ 2p_a'p_R\cos\gamma=
+ \left(\frac mM-1\right)p_R^2.
+\]
+因 $m<M$，实际 $\cos\gamma<0$，
+所以两出射动量夹角必须\emph{大于}$90^\circ$。
+若原题角度 $60^\circ$ 是实际出射夹角，
+则不存在物理解。
+原书答案 $T_R=6.0\,\mathrm{MeV}$ 可由补角
+$\gamma=120^\circ$ 求出：
+利用
+$p_a'^2=2m(T_\alpha-T_R)$、
+$p_R^2=2MT_R$，得
+\[
+ \boxed{T_R=
+ \frac{T_\alpha}{1+
+ \frac{(M-m)^2}{4mM\cos^2\gamma}}=
+ 6.0\,\mathrm{MeV}}.
+\]
+\excheck \emph{印刷60°与解6.0MeV不同时满足带符号动量守恒}，
+因为6MeV实际要求夹角120°。
+本稿同时列出条件及书末结果，不悄悄修改出射角。
+
+\nuclearreactionproblem{250}{261}
+中子与起初静止的氘核弹性碰撞。
+求中子损失动能占初始动能的比例：
+(a)正面碰撞；(b)中子偏转 $90^\circ$。
+\exsolution
+令中子质量 $m$、氘核质量 $M\simeq2m$。
+(a) 质量为$m$的粒子撞静止质量$M$物体，
+弹性正碰后动能比例
+$T'_n/T_n=[(m-M)/(m+M)]^2$，
+所以
+\[
+ \boxed{\eta_a=
+ 1-\left(\frac{m-M}{m+M}\right)^2
+ =\frac{4mM}{(m+M)^2}=\frac89}.
+\]
+(b) 末态中子与入射方向正交，
+矢量动量守恒给
+$p_R^2=p_0^2+p_n'^2$。
+代能量守恒
+$p_0^2/(2m)=p_n'^2/(2m)+p_R^2/(2M)$，
+得到
+$p_n'^2/p_0^2=(M-m)/(M+m)=1/3$，故
+\[
+ \boxed{\eta_b=1-\frac13=\frac23}.
+\]
+\excheck (b) $90^\circ$ 指中子偏转角，
+不是中子和氘核两个出射粒子的夹角。
+
+\nuclearreactionproblem{251}{261}
+氘核与起初静止的质子弹性碰撞，
+求氘核在实验室系中可能达到的最大散射角。
+\exsolution
+入射氘核质量$m_d\simeq2m_p$，
+靶质子质量$M=m_p$。
+质心系中入射氘核速度
+$u^*=Mv_0/(m_d+M)$，
+质心平移速度
+$V=m_dv_0/(m_d+M)$。
+实验室末态氘核速度矢量是
+以 $V$ 为圆心、半径 $u^*$ 的速度圆。
+从原点向该圆作切线时实验室偏转角最大：
+\[
+ \boxed{\sin\theta_{\max}=\frac{u^*}{V}
+ =\frac M{m_d}\simeq\frac12},
+ \quad
+ \boxed{\theta_{\max}=30^\circ}.
+\]
+\excheck 重入射粒子撞轻靶核时，
+其实验室偏角有限制，并非可取任意后散射角。
+
+\nuclearreactionproblem{252}{261}
+原书将核半径写为
+$R=0.13A^{1/3}\,\mathrm{pm}$，
+$A$ 为质量数。按此题面估算原子核质量密度
+和核子数密度，并核对书末量级。
+\exsolution
+若严格采用原印
+$r_0=0.13\,\mathrm{pm}=1.3\times10^{-13}\,\mathrm m$，
+半径为$r_0A^{1/3}$，则
+\[
+ \rho=\frac{Au}{(4\pi/3)r_0^3A}
+ =\frac{3u}{4\pi r_0^3},\quad
+ n=\frac{3}{4\pi r_0^3}.
+\]
+数值约为
+\[
+ \boxed{\rho_{\rm literal}\simeq
+ 1.8\times10^{5}\,\mathrm{kg/cm^3}},\qquad
+ \boxed{n_{\rm literal}\simeq
+ 1.1\times10^{32}\,\mathrm{nucleons/cm^3}}.
+\]
+这与书末给出的约
+$2\times10^{11}\,\mathrm{kg/cm^3}$、
+$10^{38}\,\mathrm{nucleons/cm^3}$
+相差$10^6$。
+若采用物理上公认的核尺度
+$r_0=1.3\,\mathrm{fm}=0.0013\,\mathrm{pm}$，
+则
+\[
+ \boxed{\rho_{\rm nuclear}\simeq
+ 2\times10^{11}\,\mathrm{kg/cm^3}},\quad
+ \boxed{n_{\rm nuclear}\simeq
+ 10^{38}\,\mathrm{nucleons/cm^3}},
+\]
+恢复原书答案量级。
+\excheck 原图确印$0.13A^{1/3}\,\mathrm{pm}$，
+而从书末密度可判断物理上需要
+$0.0013A^{1/3}\,\mathrm{pm}$；
+本译稿\emph{并列两种数据}并列入勘误。
+
+\nuclearreactionproblem{253}{261}
+利用质量数和电荷数守恒补全：
+(a) $\mathrm{^{10}B}(x,\alpha)\mathrm{^{8}Be}$；
+(b) $\mathrm{^{17}O}(d,n)x$；
+(c) $\mathrm{^{23}Na}(p,x)\mathrm{^{20}Ne}$；
+(d) $x(p,n)\mathrm{^{37}Ar}$。
+\exsolution
+核反应的核子总数$A$和电荷总数$Z$守恒。
+(a) 输入粒子应有$A=8+4-10=2$、
+$Z=4+2-5=1$，即
+$\boxed{x=d=\mathrm{^{2}H}}$。
+(b) 输出
+$A=17+2-1=18$、
+$Z=8+1-0=9$，即
+$\boxed{x=\mathrm{^{18}F}}$。
+(c) 输入后$A=24,Z=12$，
+$\mathrm{^{20}Ne}$有$A=20,Z=10$，
+剩余 $\boxed{x=\alpha=\mathrm{^{4}He}}$。
+(d) 输入靶核$A=37+1-1=37$、
+$Z=18-1=17$，
+故$\boxed{x=\mathrm{^{37}Cl}}$。
+\excheck 原书简答(b)纯文本出现
+$\mathrm{^{17}F}$，但题面明确是
+$\mathrm{^{17}O}(d,n)$，
+按质量数守恒产物必须是$\mathrm{^{18}F}$；
+已记录底本可能的上标排印或识别差异。
+
+\nuclearreactionproblem{254}{261}
+证明核的结合能可按质量超额计算：
+$E_b=[Z\Delta_H+(A-Z)\Delta_n-\Delta_{\rm at}]c^2$。
+\exsolution
+若用中性原子的实测质量$M_{\rm at}$，
+核结合能（忽略电子化学结合能）为
+\[
+ E_b=[Zm_H+(A-Z)m_n-M_{\rm at}]c^2.
+\]
+把原子质量与中子质量写成
+$m_H=u+\Delta_H$、
+$m_n=u+\Delta_n$、
+$M_{\rm at}=Au+\Delta_{\rm at}$。
+则
+\[
+ Zm_H+(A-Z)m_n-M_{\rm at}
+ =Z\Delta_H+(A-Z)\Delta_n-\Delta_{\rm at},
+\]
+其中$Zu+(A-Z)u-Au=0$，因此
+\[
+ \boxed{E_b=
+ [Z\Delta_H+(A-Z)\Delta_n-\Delta_{\rm at}]c^2}.
+\]
+\excheck 选用\emph{氢原子}质量而非裸质子质量，
+正是为了抵消相应的原子电子静质量。
+
+\nuclearreactionproblem{255}{261}
+某核的质子数与中子数相等，
+且半径比 $\mathrm{^{27}Al}$ 核小1.5倍。
+求核种与其结合能。
+\exsolution
+核半径比例$R\propto A^{1/3}$，
+所以
+\[
+ \frac{R_x}{R_{\mathrm{Al}}}=\frac1{1.5}
+ \Longrightarrow A_x=\frac{27}{1.5^3}=8.
+\]
+质子数等于中子数，故$Z=8/2=4$，
+该核为$\boxed{\mathrm{^{8}Be}}$。
+按原书附录质量超额
+$\Delta_H=0.00783u$、
+$\Delta_n=0.00867u$、
+$\Delta_{\mathrm{^{8}Be}}=0.00531u$，
+\[
+ \boxed{E_b=
+ [4(0.00783)+4(0.00867)-0.00531]
+ (931.5\,\mathrm{MeV})
+ \simeq56.5\,\mathrm{MeV}}.
+\]
+\excheck $\mathrm{^{8}Be}$ 对裂变为两$\alpha$
+粒子是不稳定的，但仍可计算它的核结合能。
+
+\nuclearreactionproblem{256}{261}
+用原子质量表求：
+(a) $\mathrm{^{16}O}$ 平均每核子结合能；
+(b) $\mathrm{^{11}B}$ 中单中子及 $\alpha$
+的分离能；(c) 把 $\mathrm{^{16}O}$ 分成四个
+相同粒子所需能量。
+\exsolution
+原书质量超额（单位$u$）：
+$\Delta_H=0.00783$、
+$\Delta_n=0.00867$、
+$\Delta_{\mathrm{^{16}O}}=-0.00509$、
+$\Delta_{\mathrm{^{11}B}}=0.00930$、
+$\Delta_{\mathrm{^{10}B}}=0.01294$、
+$\Delta_{\mathrm{^{7}Li}}=0.01601$、
+$\Delta_\alpha=0.00260$。
+(a)
+\[
+ \boxed{\frac{E_b(\mathrm{^{16}O})}{16}
+ =\frac{[8\Delta_H+8\Delta_n-\Delta_O]c^2}{16}
+ \simeq8.0\,\mathrm{MeV}}.
+\]
+(b) 分离中子反应
+$\mathrm{^{11}B}\to\mathrm{^{10}B}+n$，
+以及分离$\alpha$反应
+$\mathrm{^{11}B}\to\mathrm{^{7}Li}+\alpha$，故
+\[
+ \boxed{S_n=(\Delta_{\mathrm{^{10}B}}
+ +\Delta_n-\Delta_{\mathrm{^{11}B}})c^2
+ \simeq11.5\,\mathrm{MeV}},
+\]
+\[
+ \boxed{S_\alpha=(\Delta_{\mathrm{^{7}Li}}
+ +\Delta_\alpha-\Delta_{\mathrm{^{11}B}})c^2
+ \simeq8.7\,\mathrm{MeV}}.
+\]
+(c) 四个相同粒子应是$\alpha$，
+\[
+ \boxed{E= [4\Delta_\alpha-\Delta_O]c^2
+ \simeq14.4\,\mathrm{MeV}\approx14.5\,\mathrm{MeV}}.
+\]
+\excheck 分离能是末态总静能减母核静能；
+守恒的核子总数使整数原子质量数自动抵消。
+
+\nuclearreactionproblem{257}{261}
+求 $\mathrm{^{11}B}$ 核中中子与质子的
+分离能之差，并解释其原因。
+\exsolution
+中子分离能
+$S_n=[M(\mathrm{^{10}B})+m_n-M(\mathrm{^{11}B})]c^2$。
+质子分离能
+$S_p=[M(\mathrm{^{10}Be})+m_H-M(\mathrm{^{11}B})]c^2$
+（采用中性原子质量）。
+两式相减
+\[
+ S_n-S_p=
+ [M(\mathrm{^{10}B})+m_n
+ -M(\mathrm{^{10}Be})-m_H]c^2.
+\]
+代原书质量超额：
+$\Delta_{\mathrm{^{10}B}}=0.01294$、
+$\Delta_{\mathrm{^{10}Be}}=0.01354$、
+$\Delta_n=0.00867$、
+$\Delta_H=0.00783$，
+\[
+ \boxed{S_n-S_p=
+ (0.01294+0.00867-0.01354-0.00783)
+ (931.5\,\mathrm{MeV})
+ \simeq0.22\,\mathrm{MeV}}.
+\]
+\excheck 差异来自质子受库仑排斥的附加效应，
+同时受娘核结构差异影响，不能仅归因于核子静质量。
+
+\nuclearreactionproblem{258}{261}
+$\mathrm{^{20}Ne}$、
+$\alpha$ 与 $\mathrm{^{12}C}$
+平均每核子结合能分别为
+$8.03$、$7.07$、$7.68\,\mathrm{MeV}$。
+求将$\mathrm{^{20}Ne}$分为
+两个$\alpha$与一个$\mathrm{^{12}C}$所需能量。
+\exsolution
+初核的结合能
+$E_i=20(8.03)\,\mathrm{MeV}$。
+末态三个核的总结合能
+$E_f=2\cdot4(7.07)+12(7.68)$ MeV。
+分裂所需能量为失去的结合能差
+\[
+ \boxed{E_{\rm req}=E_i-E_f
+ =20(8.03)-8(7.07)-12(7.68)
+ \simeq11.9\,\mathrm{MeV}}.
+\]
+\excheck 结合能越大质量亏损越大；
+若初态结合能大于产物和，
+分裂必须吸收正能量。
+% === END 39-nuclear-reactions-249-258.tex ===
+
+% === BEGIN 39-nuclear-reactions-259-266.tex blob 8da592ec91c0e647bd45a8adc1f68e8b7b01e99c ===
+% 原书第六篇6.6节259--266；
+% 印刷261--262，PDF270--271，书末答案350（PDF359）。
+\nuclearreactionproblem{259}{261}
+用原子质量单位计算：
+(a) $\mathrm{^{8}Li}$ 原子质量，其核结合能
+$E_b=41.3\,\mathrm{MeV}$；
+(b) $\mathrm{^{10}C}$ 原子核质量，其平均每核子
+结合能为 $6.04\,\mathrm{MeV}$。
+\exsolution
+取 $1u\,c^2=931.5\,\mathrm{MeV}$，
+原书氢原子质量 $m_H=(1+0.00783)u$、
+中子质量 $m_n=(1+0.00867)u$。
+(a) Li 有 $Z=3,A=8$，
+\[
+ \boxed{M_{\mathrm{^{8}Li\,atom}}=
+ 3m_H+5m_n-\frac{41.3\,\mathrm{MeV}}{c^2}
+ \simeq8.0225u}.
+\]
+(b) C 有 $Z=6,A=10$，
+结合能 $E_b=10(6.04)=60.4\,\mathrm{MeV}$。
+求的是\emph{原子核}而不是原子，
+所以应使用裸质子质量
+$m_p=m_H-m_e$：
+\[
+ \boxed{M_{\mathrm{^{10}C\,nucleus}}=
+ 6(m_H-m_e)+4m_n-\frac{60.4\,\mathrm{MeV}}{c^2}
+ \simeq10.0135u}.
+\]
+\excheck (b) 若直接代氢\emph{原子}质量而不扣去6个电子，
+将错误地计算中性碳原子的质量。
+
+\nuclearreactionproblem{260}{261}
+某核反应
+$A_1+A_2\to A_3+A_4$，
+四核的结合能分别为 $E_1,E_2,E_3,E_4$。
+求反应能 $Q$。
+\exsolution
+核反应能量守恒
+$Q=(M_1+M_2-M_3-M_4)c^2$。
+各核质量由
+$M_ic^2=Z_im_pc^2+N_im_nc^2-E_i$。
+在电荷数与核子数守恒下，
+所有自由核子的总静能在反应前后抵消，
+因此
+\[
+ \boxed{Q=(E_3+E_4)-(E_1+E_2)}.
+\]
+\excheck 产物的总结合能大于反应物时，
+$Q>0$，说明放能；反之吸能。
+
+\nuclearreactionproblem{261}{261--262}
+假设每个 $\mathrm{^{235}U}$ 核裂变释放
+$200\,\mathrm{MeV}$。
+(a) 求1kg $\mathrm{^{235}U}$ 裂变释放的能量，
+以及等能量、热值$30\,\mathrm{kJ/g}$的煤质量；
+(b) 30千吨TNT当量的核爆炸对应多少裂变铀质量？
+TNT热值为$4.1\,\mathrm{kJ/g}$。
+\exsolution
+(a) 1kg铀的核数
+$N=(1000\,\mathrm g/235\,\mathrm{g/mol})N_A$，
+释放总能量
+\[
+ \boxed{E=N(200\,\mathrm{MeV})
+ \simeq8.21\times10^{13}\,\mathrm J
+ =8.21\times10^{10}\,\mathrm{kJ}}.
+\]
+煤热值
+$30\,\mathrm{kJ/g}=3.0\times10^7\,\mathrm{J/kg}$，
+故
+\[
+ \boxed{m_{\rm coal}=
+ \frac E{3.0\times10^7\,\mathrm{J/kg}}
+ \simeq2.74\times10^6\,\mathrm{kg}}.
+\]
+(b) 一千吨TNT当量等于 $10^6\,\mathrm{kg}$ TNT，
+30千吨即 $3.0\times10^7\,\mathrm{kg}$。
+其能量
+$E_{\rm TNT}=3.0\times10^7(4.1\times10^6)\,\mathrm J
+=1.23\times10^{14}\,\mathrm J$。
+因此等能铀质量
+\[
+ \boxed{m_U=\frac{E_{\rm TNT}}
+ {8.21\times10^{13}\,\mathrm{J/kg}}
+ \simeq1.50\,\mathrm{kg}}.
+\]
+\excheck 本版书末(a)煤质量写
+$2.7\times10^8\,\mathrm{kg}$，
+但依原题 $30\,\mathrm{kJ/g}$
+计算应为$2.7\times10^6\,\mathrm{kg}$，
+差100倍。两结果保留校勘记录。
+
+\nuclearreactionproblem{262}{262}
+由氘核聚变生成1.0g $\mathrm{^{4}He}$
+时释放多少热？该热量相当于热值
+$30\,\mathrm{kJ/g}$ 的多少煤？
+\exsolution
+反应
+$2\,\mathrm{^{2}H}\to\mathrm{^{4}He}+\gamma$
+（这里只比较核静质量）。
+原书原子质量超额
+$\Delta_D=0.01410u$、
+$\Delta_\alpha=0.00260u$，
+因此
+\[
+ Q=(2\Delta_D-\Delta_\alpha)c^2
+ =0.02560u\,c^2
+ \simeq23.85\,\mathrm{MeV}.
+\]
+1克氦核数
+$N=(1.0\,\mathrm g/4\,\mathrm{g/mol})N_A$，
+故
+\[
+ \boxed{E=NQ\simeq5.75\times10^{11}\,\mathrm J
+ =5.75\times10^8\,\mathrm{kJ}}.
+\]
+煤热值
+$30\,\mathrm{kJ/g}=3.0\times10^7\,\mathrm{J/kg}$，
+\[
+ \boxed{m_{\rm coal}\simeq1.92\times10^4\,\mathrm{kg}}.
+\]
+\excheck 原书书末写
+$5.74\times10^7\,\mathrm{kJ}$，
+但同一行给煤约$2\times10^4\,\mathrm{kg}$；
+根据质量亏损及原题热值，能量应为
+$5.74\times10^8\,\mathrm{kJ}$，书末相差10倍。
+
+\nuclearreactionproblem{263}{262}
+利用原子质量表，
+求反应
+$\mathrm{^{6}Li}+\mathrm{^{2}H}\to2\alpha$
+每个核子释放的能量，
+并与 $\mathrm{^{235}U}$ 每次裂变放200MeV时的
+每核子放能量比较。
+\exsolution
+原书质量超额（单位$u$）
+$\Delta_{\mathrm{^{6}Li}}=0.01513$、
+$\Delta_D=0.01410$、
+$\Delta_\alpha=0.00260$。
+故
+\[
+ Q=[0.01513+0.01410-2(0.00260)]
+ (931.5\,\mathrm{MeV})
+ \simeq22.38\,\mathrm{MeV}.
+\]
+反应参与核子总数8，
+所以每核子放能
+\[
+ \boxed{Q/8\simeq2.80\,\mathrm{MeV/nucleon}}.
+\]
+铀裂变每核子平均放能
+$\boxed{200/235\simeq0.851\,\mathrm{MeV/nucleon}}$，
+二者比约3.3。
+\excheck 这里按\emph{参与反应的全部8个核子}
+而不是按两个产物的\emph{个数}来归一化。
+
+\nuclearreactionproblem{264}{262}
+$\mathrm{^{7}Li}+p\to2\alpha$，
+已知 $\mathrm{^{7}Li}$、
+$\mathrm{^{4}He}$ 每核子结合能分别为
+$5.60$ 与 $7.06\,\mathrm{MeV}$。
+求核反应能。
+\exsolution
+反应初态总结合能
+$E_i=7(5.60)+0$，自由质子结合能为零。
+末态
+$E_f=2\cdot4(7.06)$。
+反应能是结合能差
+\[
+ \boxed{Q=E_f-E_i=
+ 8(7.06)-7(5.60)\simeq17.3\,\mathrm{MeV}}.
+\]
+\excheck 产物总结合能大于初态，
+故该反应放能。
+
+\nuclearreactionproblem{265}{262}
+反应
+$\mathrm{^{14}N}(\alpha,p)\mathrm{^{17}O}$
+中入射 $\alpha$ 动能
+$T_\alpha=4.0\,\mathrm{MeV}$，
+出射质子动能
+$T_p=2.09\,\mathrm{MeV}$，
+质子与入射方向夹角
+$\theta=60^\circ$。
+求反应能 $Q$。
+\exsolution
+以实验室系静靶核为参考，
+动量守恒
+$\boldsymbol p_\alpha=\boldsymbol p_p+\boldsymbol p_O$，
+所以
+$p_O^2=p_\alpha^2+p_p^2-2p_\alpha p_p\cos\theta$。
+非相对论动量
+$p^2=2mT$，故反冲氧核动能
+\[
+ T_O=\frac{m_\alpha T_\alpha+m_p T_p
+ -2\sqrt{m_\alpha m_pT_\alpha T_p}\cos\theta}{m_O}.
+\]
+近似质量数 $m_\alpha:m_p:m_O=4:1:17$，
+得
+$T_O\simeq0.724\,\mathrm{MeV}$。
+根据动能能量守恒
+$Q=T_p+T_O-T_\alpha$，
+\[
+ \boxed{Q\simeq2.09+0.724-4.00
+ \simeq-1.19\,\mathrm{MeV}\approx-1.2\,\mathrm{MeV}}.
+\]
+\excheck 质子出射角相对\emph{入射束}，
+故反冲项是
+$-2p_\alpha p_p\cos\theta$；
+该反应为吸能反应。
+
+\nuclearreactionproblem{266}{262}
+利用原子质量表计算：
+(a)$\mathrm{^{7}Li}(p,n)\mathrm{^{7}Be}$；
+(b)$\mathrm{^{9}Be}(n,\gamma)\mathrm{^{10}Be}$；
+(c)$\mathrm{^{7}Li}(\alpha,n)\mathrm{^{10}B}$；
+(d)$\mathrm{^{16}O}(d,\alpha)\mathrm{^{14}N}$
+四个核反应的反应能。
+\exsolution
+对守恒总核子数的反应，
+用\emph{中性原子质量超额}
+求静质量差
+$Q=(\sum\Delta_{\rm in}-\sum\Delta_{\rm out})c^2$，
+其中
+$1u\,c^2=931.5\,\mathrm{MeV}$。
+从原书表取
+$\Delta_H=0.00783$、
+$\Delta_n=0.00867$、
+$\Delta_{\mathrm{^{7}Li}}=0.01601$、
+$\Delta_{\mathrm{^{7}Be}}=0.01693$、
+$\Delta_{\mathrm{^{9}Be}}=0.01219$、
+$\Delta_{\mathrm{^{10}Be}}=0.01354$、
+$\Delta_{\mathrm{^{4}He}}=0.00260$、
+$\Delta_{\mathrm{^{10}B}}=0.01294$、
+$\Delta_{\mathrm{^{16}O}}=-0.00509$、
+$\Delta_D=0.01410$、
+$\Delta_{\mathrm{^{14}N}}=0.00307$，单位均为$u$。
+于是
+\[
+ \boxed{Q_a=(0.01601+0.00783-0.00867-0.01693)c^2
+ \simeq-1.64\,\mathrm{MeV}},
+\]
+\[
+ \boxed{Q_b=(0.01219+0.00867-0.01354)c^2
+ \simeq+6.82\,\mathrm{MeV}},
+\]
+\[
+ \boxed{Q_c=(0.01601+0.00260-0.00867-0.01294)c^2
+ \simeq-2.79\,\mathrm{MeV}},
+\]
+\[
+ \boxed{Q_d=(-0.00509+0.01410-0.00260-0.00307)c^2
+ \simeq+3.11\,\mathrm{MeV}}.
+\]
+\excheck $\gamma$ 静质量为零；
+全部反应电荷守恒，
+可以用同一中性原子质量超额记法互相抵消电子质量。
+% === END 39-nuclear-reactions-259-266.tex ===
+
+% === BEGIN 39-nuclear-reactions-267-280.tex blob cfb82c9d928e3765d6883547d1d1887d2c6369be ===
+% Irodov, Part VI §6.6, original questions 267--280 (printed pp.262--263).
+% Source: user-provided Arihant PDF pages 271--272; answers PDF page 359.
+% Use SI units except energies explicitly measured in MeV.
+\nuclearreactionproblem{267}{262}
+极慢中子照射静止的$^{10}\mathrm B$核，
+发生反应
+$^{10}\mathrm B(n,\alpha){}^{7}\mathrm{Li}$。
+利用原子质量表求两种产物分离时的速度。
+\exsolution
+用中性原子质量计算反应能，
+\[
+ Q=\bigl[M(^{10}\mathrm B)+m_n-
+ M(^{7}\mathrm{Li})-M(^{4}\mathrm{He})\bigr]c^2
+ \simeq2.79\,\mathrm{MeV}.
+\]
+入射中子初动量可忽略，末态两核动量等大反向。
+由$p_\alpha=p_{\rm Li}$及
+$Q=p^2(1/m_\alpha+1/m_{\rm Li})/2$，得
+\[
+ T_\alpha=Q\frac{m_{\rm Li}}{m_\alpha+m_{\rm Li}}
+ \simeq\frac7{11}Q=1.78\,\mathrm{MeV},\quad
+ T_{\rm Li}\simeq\frac4{11}Q=1.01\,\mathrm{MeV}.
+\]
+所以
+\[
+ \boxed{v_\alpha=\sqrt{2T_\alpha/m_\alpha}
+ \simeq9.2\times10^6\,\mathrm{m/s}},\qquad
+ \boxed{v_{\rm Li}\simeq5.3\times10^6\,\mathrm{m/s}}.
+\]
+\excheck 动量守恒要求$m_\alpha v_\alpha=m_{\rm Li}v_{\rm Li}$；
+原书答案约$0.92\times10^7$与$0.53\times10^7\,\mathrm{m/s}$。
+
+\nuclearreactionproblem{268}{262}
+质子轰击静止$^{7}\mathrm{Li}$靶，
+激发吸能反应$^{7}\mathrm{Li}(p,n){}^{7}\mathrm{Be}$。
+在何种入射质子动能下，产物中子可恰好静止？
+\exsolution
+用原子质量求得反应能$Q\simeq-1.65\,\mathrm{MeV}$。
+若末态中子静止，入射质子的全部动量
+$p_p$由$^{7}\mathrm{Be}$承担。
+初始动能$T=p_p^2/(2m_p)$，
+反冲铍核动能$T_{\rm Be}=p_p^2/(2M_{\rm Be})
+=(m_p/M_{\rm Be})T$。
+能量守恒
+$T+Q=T_{\rm Be}$，得
+\[
+ \boxed{T=\frac{-Q}{1-m_p/M_{\rm Be}}}
+ \simeq\frac{1.65}{1-1/7}\,\mathrm{MeV}
+ \simeq1.9\,\mathrm{MeV}.
+\]
+\excheck 此题条件是\emph{中子末态速度为零}，
+并非一般吸能反应的最小阈值条件；
+二者虽相近，物理含义不同。
+
+\nuclearreactionproblem{269}{262}
+动能$T_\alpha=5.3\,\mathrm{MeV}$的
+$\alpha$粒子打静止$^{9}\mathrm{Be}$靶，
+发生$^{9}\mathrm{Be}(\alpha,n){}^{12}\mathrm C$，
+放能$Q=+5.7\,\mathrm{MeV}$。
+求垂直入射束方向飞出的中子动能。
+\exsolution
+设末态中子动量垂直$\boldsymbol p_\alpha$，
+反冲碳核动量为$\boldsymbol p_C=\boldsymbol p_\alpha-\boldsymbol p_n$。
+故$p_C^2=p_\alpha^2+p_n^2$。
+由非相对论关系$p_i^2=2m_iT_i$，
+\[
+ T_C=\frac{m_\alpha}{m_C}T_\alpha+
+ \frac{m_n}{m_C}T_n.
+\]
+代入能量守恒$T_\alpha+Q=T_C+T_n$，
+\[
+ \boxed{T_n=
+ \frac{Q+(1-m_\alpha/m_C)T_\alpha}
+ {1+m_n/m_C}}
+ \simeq\frac{5.7+(1-4/12)5.3}{1+1/12}
+ =8.5\,\mathrm{MeV}.
+\]
+\excheck 碳核虽重仍有反冲动能，
+不得把$T_n$直接设为$T_\alpha+Q=11.0$MeV。
+
+\nuclearreactionproblem{270}{262}
+动能$T_p=1.0\,\mathrm{MeV}$的质子
+轰击静止$^{7}\mathrm{Li}$核，
+发生$p+{}^{7}\mathrm{Li}\to2\alpha$。
+如果两个$\alpha$粒子的运动方向
+相对于入射束方向对称，
+求各自动能及两速度夹角。
+\exsolution
+由质量亏损$Q\simeq17.3\,\mathrm{MeV}$。
+在对称条件下两$\alpha$动能相同，
+能量守恒给
+\[
+ \boxed{T_\alpha=(T_p+Q)/2\simeq9.1\,\mathrm{MeV}}.
+\]
+记两末态动量与入射方向的夹角均为$\phi$，
+垂直分量互消，平行分量满足
+$p_p=2p_\alpha\cos\phi$。
+用$p_p^2=2m_pT_p$、
+$p_\alpha^2=2m_\alpha T_\alpha$，
+\[
+ \cos\phi=
+ \sqrt{\frac{m_pT_p}{4m_\alpha T_\alpha}},
+ \qquad
+ \boxed{\theta=2\phi\simeq170.5^\circ}.
+\]
+\excheck 接近背向的两条末态轨迹仍略向前倾斜，
+合动量方向才能与入射质子一致。
+
+\nuclearreactionproblem{271}{263}
+质量$m$的非相对论入射粒子
+轰击质量$M$的静止核，触发
+反应能$Q<0$的吸能核反应。
+证明其最小入射动能满足
+$T_{\rm th}=(-Q)(1+m/M)$。
+\exsolution
+入射束实验室动能为$T$，初态相对运动的
+质心系动能为
+\[
+ T_{\rm CM}=\frac{\mu}{m}T
+ =\frac{M}{m+M}T,\qquad
+ \mu=\frac{mM}{m+M}.
+\]
+在阈值处，反应末态各粒子在质心系均无相对动能，
+故反应所需的最小质心动能恰为$-Q$。
+因此
+\[
+ \frac{M}{m+M}T_{\rm th}=-Q,\qquad
+ \boxed{T_{\rm th}=(-Q)\frac{m+M}{M}}.
+\]
+进一步令吸能量$\Delta=-Q>0$。
+末态阈值时全部产物在质心系相对静止，
+末态静质量总和是
+$m+M+\Delta/c^2$。
+若静止靶的静质量为$M$，
+初态和末态的四动量不变量分别为
+\[
+ \begin{aligned}
+ s_{\rm in}&=(m+M)^2c^4+2Mc^2T,\\
+ s_{\rm th}&=\left[(m+M)c^2+\Delta\right]^2.
+ \end{aligned}
+\]
+令$s_{\rm in}=s_{\rm th}$，得到
+\[
+ \boxed{T_{\rm th}^{\rm(rel)}
+ =\Delta\left(1+\frac mM\right)
+ +\frac{\Delta^2}{2Mc^2}}.
+\]
+所以经典结果是忽略
+$\Delta^2/(2Mc^2)$后的首项。
+\excheck 此为非相对论阈值公式，
+若反应能相对靶核静能不可忽略，
+应使用本题推导的四动量精确修正。
+若$\Delta$接近重核静能，经典阈值
+会系统性偏低；二体及多体末态都应把
+最终所有静止质量计入同一不变量。
+
+\nuclearreactionproblem{272}{263}
+质子轰击静止氘核，
+将其分裂为质子和中子。
+氘核结合能$E_b=2.2\,\mathrm{MeV}$，
+求入射质子的最小动能。
+\exsolution
+反应可写为$p+d\to p+p+n$，
+总反应能$Q=-E_b$。
+入射质子质量$m_p$、
+静止靶氘核质量$m_d\simeq2m_p$。
+由前题阈值公式
+\[
+ \boxed{T_{\rm th}\simeq
+ E_b\left(1+\frac{m_p}{m_d}\right)
+ \simeq2.2(1+\tfrac12)
+ =3.3\,\mathrm{MeV}}.
+\]
+\excheck 不能只给$E_b=2.2$MeV，
+因为实验室入射粒子需携带整个体系的质心平动能。
+
+\nuclearreactionproblem{273}{263}
+同一单能质子束分别轰击锂、铍靶。
+观测到$^{7}\mathrm{Li}(p,n){}^{7}\mathrm{Be}$
+（$Q=-1.65\,\mathrm{MeV}$）发生，
+而$^{9}\mathrm{Be}(p,n){}^{9}\mathrm B$
+（$Q=-1.85\,\mathrm{MeV}$）未发生。
+求质子动能可能的范围。
+\exsolution
+阈值公式$T_{\rm th}=(-Q)(1+m_p/M)$：
+\[
+ T_{{\rm th},\mathrm{Li}}
+ \simeq1.65\left(1+\frac17\right)
+ =1.886\,\mathrm{MeV},
+\]
+\[
+ T_{{\rm th},\mathrm{Be}}
+ \simeq1.85\left(1+\frac19\right)
+ =2.056\,\mathrm{MeV}.
+\]
+第一反应允许、第二反应不允许意味着
+\[
+ \boxed{1.89\,\mathrm{MeV}\lesssim T_p
+ <2.06\,\mathrm{MeV}}.
+\]
+\excheck 实验上反应阈值附近产额可能很低；
+这里“发生/不发生”按理想运动学允许性判断。
+
+\nuclearreactionproblem{274}{263}
+中子照射静止$^{11}\mathrm B$核，
+激发$(n,\alpha)$反应的入射阈值为
+$T_{\rm th}=4.0\,\mathrm{MeV}$。
+求反应能$Q$。
+\exsolution
+由$T_{\rm th}=(-Q)(1+m_n/M_B)$，
+$\;m_n\simeq u$、$M_B\simeq11u$，所以
+\[
+ \boxed{Q=-T_{\rm th}\frac{M_B}{M_B+m_n}
+ \simeq-4.0\frac{11}{12}
+ =-3.7\,\mathrm{MeV}}.
+\]
+\excheck 反应能为负，
+符合必须以非零阈值粒子激发的事实。
+
+\nuclearreactionproblem{275}{263}
+计算静止$^{7}\mathrm{Li}$靶在
+$(p,n)$、$(p,d)$两反应中所需的最小质子动能。
+\exsolution
+$(p,n)$通道为
+$^{7}\mathrm{Li}+p\to{}^{7}\mathrm{Be}+n$，
+质量亏损给$Q_n\simeq-1.65$MeV。
+$(p,d)$通道为
+$^{7}\mathrm{Li}+p\to{}^{6}\mathrm{Li}+d$，
+原子质量给
+$Q_d=[M(^{7}\mathrm{Li})+M(^1\mathrm H)
+ -M(^{6}\mathrm{Li})-M(^2\mathrm H)]c^2
+ \simeq-5.03$MeV。
+两者都以锂为静止靶，
+\[
+ \boxed{T_{\mathrm{th},(p,n)}
+ =-Q_n(1+1/7)\simeq1.88\,\mathrm{MeV}},
+\]
+\[
+ \boxed{T_{\mathrm{th},(p,d)}
+ =-Q_d(1+1/7)\simeq5.75\,\mathrm{MeV}}.
+\]
+\excheck 相同入射核与靶核使两个阈值具有相同的
+运动学修正因子$8/7$。
+
+\nuclearreactionproblem{276}{263}
+使用原子质量表，
+求引发$^{7}\mathrm{Li}(\alpha,n){}^{10}\mathrm B$
+所需的最小$\alpha$粒子动能，
+并求此时$^{10}\mathrm B$核的实验室速度。
+\exsolution
+质量亏损给反应能
+$Q=[M(^{7}\mathrm{Li})+M(^{4}\mathrm{He})
+-M(^{10}\mathrm B)-m_n]c^2\simeq-2.79$MeV。
+在静止锂核前，$m_\alpha\simeq4u$、
+$M_{\rm Li}\simeq7u$，因此
+\[
+ \boxed{T_{\rm th}=(-Q)(1+4/7)
+ \simeq4.4\,\mathrm{MeV}}.
+\]
+阈值处所有产物在质心系相对静止，
+因此$^{10}\mathrm B$的实验室速度
+等于初始质心速度：
+\[
+ v_B=V_{\rm CM}
+ =\frac{p_\alpha}{m_\alpha+M_{\rm Li}}
+ =\frac{\sqrt{2m_\alpha T_{\rm th}}}{m_\alpha+M_{\rm Li}}
+ \simeq\boxed{5.3\times10^6\,\mathrm{m/s}}.
+\]
+\excheck 书末印$5.3\times10^4$ m/s；
+按本题$4.4$MeV能量与动量守恒必约为
+$5.3\times10^6$ m/s，差100倍，须记入勘误。
+
+\nuclearreactionproblem{277}{263}
+动能$T_n=10\,\mathrm{MeV}$的中子
+引发$^{12}\mathrm C(n,\alpha){}^{9}\mathrm{Be}$。
+反应阈值$T_{\rm th}=6.17\,\mathrm{MeV}$，
+求以$90^\circ$离开入射中子方向的
+$\alpha$粒子动能。
+\exsolution
+由静止碳靶阈值
+\[
+ Q=-\frac{M_C}{m_n+M_C}T_{\rm th}
+ \simeq-\frac{12}{13}(6.17)
+ =-5.70\,\mathrm{MeV}.
+\]
+出射$\alpha$与入射中子动量垂直，
+故反冲Be核动量模平方
+$p_{\rm Be}^2=p_n^2+p_\alpha^2$。
+因此
+$T_{\rm Be}=(m_n/M_{\rm Be})T_n+
+(m_\alpha/M_{\rm Be})T_\alpha$。
+代入能量守恒$T_n+Q=T_\alpha+T_{\rm Be}$，
+\[
+ \boxed{T_\alpha=
+ \frac{(1-m_n/M_{\rm Be})T_n+Q}
+ {1+m_\alpha/M_{\rm Be}}
+ \simeq\frac{(1-1/9)10-5.70}{1+4/9}
+ \simeq2.2\,\mathrm{MeV}}.
+\]
+\excheck 若忘掉Be核反冲，
+会把入射动能减阈值的差误作$\alpha$的动能。
+
+\nuclearreactionproblem{278}{263}
+在光致氘核解离
+$\gamma+d\to n+p$中，
+氘结合能$E_b=2.2\,\mathrm{MeV}$。
+求光子反应阈值比结合能高百分之多少。
+\exsolution
+初态为静止氘核与入射光子，
+末态质心需守恒入射光子动量。
+严格不变量阈值关系
+\[
+ (M_dc^2+\varepsilon)^2-\varepsilon^2
+ =(m_p+m_n)^2c^4
+ \quad\Rightarrow\quad
+ \varepsilon_{\rm th}
+ =\frac{(m_p+m_n)^2-M_d^2}{2M_d}c^2.
+\]
+设$(m_p+m_n-M_d)c^2=E_b$，化简
+\[
+ \varepsilon_{\rm th}
+ =E_b+\frac{E_b^2}{2M_dc^2}.
+\]
+故相对超过值
+\[
+ \boxed{\frac{\varepsilon_{\rm th}-E_b}{E_b}\times100\%
+ =\frac{E_b}{2M_dc^2}\times100\%
+ \simeq0.059\%\approx0.06\%}.
+\]
+\excheck 高出的一小部分供末态质心反冲；
+光子动量不可忽略。
+
+\nuclearreactionproblem{279}{263}
+动能$T_p=1.5\,\mathrm{MeV}$的质子
+被静止氘核俘获，形成$^{3}\mathrm{He}$。
+求生成核的激发能。
+\exsolution
+氘核质量约为$2u$，
+初态质心相对动能
+$T_{\rm CM}=[m_d/(m_d+m_p)]T_p
+\simeq(2/3)T_p=1.0$MeV。
+质子俘获成$^{3}\mathrm{He}$的
+反应能由结合能差给
+$Q=B(^{3}\mathrm{He})-B(d)
+\simeq7.72-2.22=5.50$MeV。
+故复合核的激发能
+\[
+ \boxed{E^*=Q+T_{\rm CM}
+ \simeq5.50+\frac23(1.50)
+ =6.5\,\mathrm{MeV}}.
+\]
+\excheck 质心平动能不能转换为核内激发，
+所以不应直接把实验室全部1.5MeV加在$Q$上。
+更重要的是，该$^{3}$He复合核能量
+$E^*\simeq6.5$MeV已经\emph{高于}
+$p+d$分离阈值$Q\simeq5.5$MeV，
+因此属于可向$p+d$等通道解离的连续谱
+复合核状态，而不是一个稳定的束缚激发能级。
+若讨论实际探测到的$^{3}$He生成事件，
+还必须指定辐射俘获或其他退激产物以带走能量。
+
+\nuclearreactionproblem{280}{263}
+$^{13}\mathrm C(d,n){}^{14}\mathrm N$
+的核反应产额在氘核实验室动能
+$0.60,0.90,1.55,1.80\,\mathrm{MeV}$
+时出现极大。利用原子质量表，
+求中间复合核的四个激发能级。
+\exsolution
+该反应经复合$^{15}\mathrm N$核发生。
+以$^{13}\mathrm C+d$相对于
+$^{15}\mathrm N$基态的质量能差
+\[
+ S_d=[M(^{13}\mathrm C)+M(d)-M(^{15}\mathrm N)]c^2
+ \simeq16.16\,\mathrm{MeV}
+\]
+表示氘的结合阈值。每一个共振入射能
+在质心系贡献
+$T_{\rm CM}=[M_C/(M_C+m_d)]T_d
+\simeq13T_d/15$。
+所以
+\[
+ \boxed{E_i^*=S_d+\frac{13}{15}T_i}
+\]
+逐一得到
+\[
+ \boxed{E_i^*\simeq
+ 16.7,\quad16.9,\quad17.5,\quad17.7\ \mathrm{MeV}}.
+\]
+\excheck 峰值是激发的复合核$^{15}$N能级，
+不能把四个实验室入射动能直接当作核能级。
+% === END 39-nuclear-reactions-267-280.tex ===
+
+% === BEGIN 39-nuclear-reactions-281-290.tex blob edb1c07416c90baa00d07a6cbc9d5f7f124d4b1f ===
+% Irodov Part VI §6.6, original 281--290 (section complete).
+% Printed pp.263--265, supplied PDF pp.272--274; answers PDF pp.359--360.
+% In the scanned source, problem 286 is misprinted as 296: numbering restored.
+\nuclearreactionproblem{281}{263}
+窄束热中子通过厚$d=0.50\,\mathrm{mm}$的镉板后，
+强度衰减为原来的$1/\eta$，
+$\eta=360$。求中子与镉核相互作用的
+有效截面（用靶材料密度和原子量计算）。
+\exsolution
+对于被准直束移出的中子，
+$J(d)=J_0e^{-n\sigma d}$，
+其中$n=\rho N_A/M$。
+因此
+\[
+ \boxed{\sigma=\frac{\ln\eta}{nd}
+ =\frac{M\ln\eta}{\rho N_A d}}.
+\]
+取镉$\rho\simeq8.65\,\mathrm{g/cm^3}$、
+$M\simeq112.4\,\mathrm{g/mol}$、
+$d=0.050\,\mathrm{cm}$，
+\[
+ \boxed{\sigma\simeq2.54\times10^{-21}\,\mathrm{cm^2}
+ =2.54\times10^3\,\mathrm b\approx2.5\,\mathrm{kb}}.
+\]
+\excheck $1\,\mathrm b=10^{-24}\,\mathrm{cm^2}$；
+衰减率用自然对数，不能用常用对数。
+
+\nuclearreactionproblem{282}{263}
+窄束热中子经过厚$d=5.0\,\mathrm{cm}$的重水。
+中子与氘、氧核的有效作用截面分别为
+$\sigma_D=7.0\,\mathrm b$、
+$\sigma_O=4.2\,\mathrm b$。
+求透射束的衰减倍数。
+\exsolution
+每个$\mathrm D_2\mathrm O$分子含两个氘核、一个氧核。
+设重水分子数密度
+$n=\rho N_A/M_{\mathrm D_2O}$，
+总宏观截面
+$\Sigma=n(2\sigma_D+\sigma_O)$。
+由指数衰减
+\[
+ \boxed{\frac{J_0}{J}=
+ \exp[n(2\sigma_D+\sigma_O)d]}.
+\]
+取重水密度$\rho\simeq1.11\,\mathrm{g/cm^3}$、
+摩尔质量$M_{\mathrm D_2O}\simeq20.0\,\mathrm{g/mol}$，
+得到指数约$3.04$，
+\[
+ \boxed{J_0/J\simeq20.9\approx20}.
+\]
+\excheck 氘核有两个，故应使用$2\sigma_D$；
+指数项的物质数密度是\emph{分子}浓度。
+
+\nuclearreactionproblem{283}{264}
+窄束热中子穿过厚$d=0.50\,\mathrm{cm}$的铁板，
+吸收截面$\sigma_a=2.5\,\mathrm b$，
+散射截面$\sigma_s=11\,\mathrm b$。
+求因散射离开原准直束的中子份额。
+\exsolution
+设$\sigma_t=\sigma_a+\sigma_s$，
+铁核数密度$n=\rho N_A/M$。
+在深度$x$首次发生散射的概率密度为
+$n\sigma_se^{-n\sigma_tx}\,dx$，
+因此散射损失份额为
+\[
+ w_s=\int_0^d n\sigma_se^{-n\sigma_tx}dx
+ =\boxed{\frac{\sigma_s}{\sigma_t}
+ \left(1-e^{-n\sigma_t d}\right)}.
+\]
+取$\rho=7.87\,\mathrm{g/cm^3}$、
+$M=55.85\,\mathrm{g/mol}$，
+$n\sigma_td\simeq0.573$，
+所以
+$\boxed{w_s\simeq0.355\approx0.35}$。
+\excheck 总束流损失与散射损失不相同；
+首次相互作用可能是吸收而不是散射。
+
+\nuclearreactionproblem{284}{264}
+生产放射性核素的核反应产额可分别表述为
+$w=N_{\rm react}/N_{\rm beam}$，
+以及$k=A/N_{\rm beam}$，
+即生成核素活度与入射粒子数之比。
+(a) 由$w,k$求生成物半衰期；
+(b) 质子束电流$I=10\,\mu\mathrm A$
+照射锂靶$t=2.0\,\mathrm h$，
+产生$^{7}\mathrm{Li}(p,n){}^{7}\mathrm{Be}$，
+辐照完$^{7}\mathrm{Be}$活度
+$A=1.35\times10^8\,\mathrm{Bq}$，
+半衰期$T_{1/2}=53\,\mathrm d$，
+求反应产额$w$。
+\exsolution
+(a) 定义给$A=\lambda N_{\rm react}$
+（忽略辐照期间生成物的损失），
+所以$k=A/N_{\rm beam}=\lambda w$。
+故
+\[
+ \boxed{T_{1/2}=\frac{\ln2}{\lambda}
+ =\frac{w\ln2}{k}}.
+\]
+(b) 入射质子总数$N_{\rm beam}=It/e$。
+生成的放射性核数$N_{\rm react}=A/\lambda=AT_{1/2}/\ln2$，
+从而
+\[
+ \boxed{w=
+ \frac{AT_{1/2}e}{It\ln2}}.
+\]
+代入$T_{1/2}=53\times86400$秒、
+$t=7200$秒和基本电荷，
+得到
+$\boxed{w\simeq1.99\times10^{-3}\approx2.0\times10^{-3}}$。
+\excheck 对给定$53$天半衰期，
+两小时内生成物的衰变不足以显著影响此近似。
+
+\nuclearreactionproblem{285}{264}
+通量密度$J=1.0\times10^{10}\,
+\mathrm{cm^{-2}s^{-1}}$的热中子
+垂直照射质量$m=10\,\mathrm{mg}$的
+稳定$^{197}\mathrm{Au}$薄箔，
+中子俘获截面$\sigma=98\,\mathrm b$，
+生成半衰期$T_{1/2}=2.7\,\mathrm d$的
+$\beta$活性$^{198}\mathrm{Au}$。
+(a) 需要辐照多长时间，
+才能使$^{197}\mathrm{Au}$核数减少1.0\%？
+(b) 长时间辐照时$^{198}\mathrm{Au}$的极限核数？
+\exsolution
+令$\eta=0.010$。母核被中子俘获速率
+$R=J\sigma N_{197}$，故
+$N_{197}(t)=N_0e^{-J\sigma t}$。
+于是
+\[
+ \boxed{t=\frac{-\ln(1-\eta)}{J\sigma}}.
+\]
+代$J\sigma=1.0\times10^{10}\cdot
+98\times10^{-24}=9.8\times10^{-13}\,\mathrm{s^{-1}}$，
+得
+\[
+ \boxed{t\simeq1.03\times10^{10}\,\mathrm s
+ \simeq3.25\times10^{2}\,\mathrm{yr}}.
+\]
+(b) 在生成物建立接近放射性平衡的
+几天时间内，稳定金核耗尽极微弱，
+可令母核$N_{197}\simeq N_0=mN_A/M$。
+生成物动力学
+$dN_{198}/dt=J\sigma N_0-\lambda N_{198}$，
+$\lambda=\ln2/T_{1/2}$。
+平衡时
+\[
+ \boxed{N_{\max}\simeq\frac{J\sigma N_0}{\lambda}
+ =\frac{J\sigma mN_A T_{1/2}}{M\ln2}
+ \simeq1.01\times10^{13}}.
+\]
+为消除“饱和量”和严格最大值的差别，
+再考虑靶核耗尽，置$a=J\sigma$。
+严格的耦合微分方程是
+\[
+ \frac{dN_{197}}{dt}=-aN_{197},\qquad
+ \frac{dN_{198}}{dt}=aN_{197}-\lambda N_{198},
+\]
+所以
+\[
+ N_{198}(t)=\frac{aN_0}{\lambda-a}
+ \left(e^{-at}-e^{-\lambda t}\right).
+\]
+对时间求导并令其为零，得到
+\[
+ \boxed{t_*=\frac{\ln(\lambda/a)}{\lambda-a}
+ \simeq58.1\,\mathrm d},\qquad
+ \boxed{N_{198}(t_*)\simeq1.008\times10^{13}}.
+\]
+与上面忽略靶耗尽得到的饱和核数相比，
+严格最大值仅低约$5\times10^{-6}$，故近似可靠。
+\excheck 底本(a)书末印$3\times10^6$年；
+按题面$J,\sigma$及1\%的下降量，
+严格指数计算得约325年，
+书末相差约$10^4$倍。
+(b)的“最大数”是\emph{母核近似不耗尽时的
+饱和量}，并非无限时间后真实母核耗尽的极限：
+若任由母核完全转化，最终两种放射性核数均趋零。
+
+\nuclearreactionproblem{286}{264}
+薄箔初始每单位面积含$n$个稳定核，
+以热中子通量密度$J$垂直辐照。
+俘获截面$\sigma$，生成核素衰变常数$\lambda$。
+推导单位面积放射性核数$N(t)$的积累规律。
+\exsolution
+薄箔中稳定靶核数近似不变且产物初始为零，
+生成速率为$J\sigma n$，
+衰变损失率为$\lambda N$，故
+\[
+ \frac{dN}{dt}=J\sigma n-\lambda N,\quad N(0)=0.
+\]
+积分因子$e^{\lambda t}$，
+\[
+ \boxed{N(t)=\frac{J\sigma n}{\lambda}
+ (1-e^{-\lambda t})}.
+\]
+若不允许忽略靶核耗尽，
+令$n_s(t)=n e^{-J\sigma t}$，
+则更精细的表达式是
+\[
+ \boxed{N(t)=\frac{J\sigma n}{\lambda-J\sigma}
+ \left(e^{-J\sigma t}-e^{-\lambda t}\right)}.
+\]
+\excheck \emph{原书扫描把本题题号误印为296}，
+实际位于285与287之间，按连续编号应为286。
+两个公式分别对应恒定靶量与显式耗尽模型。
+
+\nuclearreactionproblem{287}{264}
+一片$m=0.20\,\mathrm g$的金箔
+受热中子照射$t=6.0\,\mathrm h$，
+在照射结束后又过$\tau=12\,\mathrm h$，
+测得金箔活度
+$A=1.9\times10^7\,\mathrm{Bq}$。
+生成放射性核的截面$\sigma=96\,\mathrm b$，
+半衰期$T_{1/2}=2.7\,\mathrm d$。
+求照射期间中子通量密度。
+\exsolution
+稳定$^{197}\mathrm{Au}$初始核数
+$N_0=mN_A/197$。
+辐照时产生的放射性核数
+$N_{\rm end}=(J\sigma N_0/\lambda)
+(1-e^{-\lambda t})$。
+等待$\tau$后
+$A=\lambda N_{\rm end}e^{-\lambda\tau}$。
+所以
+\[
+ \boxed{J=\frac{A e^{\lambda\tau}}
+ {\sigma N_0(1-e^{-\lambda t})}},\qquad
+ \lambda=\frac{\ln2}{T_{1/2}}.
+\]
+代入$T_{1/2}=2.7\times86400$秒，
+得到
+\[
+ \boxed{J\simeq5.9\times10^9\,
+ \mathrm{cm^{-2}s^{-1}}\approx6\times10^9}.
+\]
+\excheck 辐照后等待时间使活度进一步下降，
+求$J$时必须乘$e^{+\lambda\tau}$补偿此衰变。
+
+\nuclearreactionproblem{288}{264}
+初始有$N_0=1000$个中子，
+每一代中子倍增系数$k=1.05$。
+求第100代中子数。
+\exsolution
+将初始中子定义为第1代，
+递推式$N_{j+1}=kN_j$，
+故$N_j=N_0k^{j-1}$。
+因此
+\[
+ \boxed{N_{100}=1000(1.05)^{99}
+ \simeq1.25\times10^5\approx1.3\times10^5}.
+\]
+\excheck 指数是99而不是100，
+因为初始的1000个中子已是第1代。
+
+\nuclearreactionproblem{289}{264--265}
+一台铀反应堆热功率
+$P=100\,\mathrm{MW}$，
+每次裂变平均产生$\nu=2.5$个中子，
+释放能量$E=200\,\mathrm{MeV}$。
+求单位时间产生的中子数。
+\exsolution
+核裂变每秒次数
+$\dot N_{\rm fiss}=P/E$，
+其中$200\,\mathrm{MeV}
+=3.20435\times10^{-11}\,\mathrm J$。
+故中子产生率
+\[
+ \boxed{\dot N_n=\nu\frac{P}{E}
+ =2.5\frac{10^8\,\mathrm{J/s}}
+ {3.20435\times10^{-11}\,\mathrm{J}}
+ \simeq7.8\times10^{18}\,\mathrm{s^{-1}}}.
+\]
+\excheck 此数为所有裂变产生的中子总数，
+不等于逸出堆芯的中子数或热中子数。
+
+\nuclearreactionproblem{290}{265}
+热中子反应堆中一代中子的平均寿命
+原书印为$\tau=1.10\,\mathrm s$，
+倍增系数$k=1.010$。
+求(a)经过$t=1.0\,\mathrm{min}$时
+中子数与功率增大倍数；
+(b)使功率增加$e$倍的堆周期。
+\exsolution
+逐代倍增$N_j=N_0k^j$，
+若一代平均时间为$\tau$，
+则在近似连续化$j=t/\tau$时
+\[
+ \frac{N(t)}{N_0}=k^{t/\tau}
+ =\exp\!\left(\frac{t\ln k}{\tau}\right).
+\]
+直接按扫描题面$\tau=1.10$秒、
+$t=60$秒计算，
+\[
+ \boxed{\frac{N(60\,\mathrm s)}{N_0}
+ =1.010^{60/1.10}\simeq1.72}.
+\]
+堆周期由$N(T)=eN_0$得
+\[
+ \boxed{T_{\rm reactor}=\frac{\tau}{\ln k}
+ \simeq110.5\,\mathrm s}.
+\]
+若按书末近似写为$T\simeq\tau/(k-1)$，
+仍为$\simeq110$秒。
+\excheck 原书书末分别印增益约$2\times10^4$、
+周期$10$秒，两者与扫描题面
+$\tau=1.10$秒、$k=1.010$和$t=1.0$分钟
+均不相容；本稿保留题面数据的物理一致解，
+不私改任何单位或数字。
+% === END 39-nuclear-reactions-281-290.tex ===
