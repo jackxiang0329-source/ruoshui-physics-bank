@@ -1,0 +1,168 @@
+% 《大学物理简明教程》第5版第10章解答题10.3.9—10.3.16
+% 原书及PDF第273—274页；独立计算、标明单缝次极大近似的有效性。
+\subsection{解答题：迈克耳孙干涉仪、单缝与光栅}
+
+\sourceproblem{10.3.9}{273}{273}
+\problemtext 迈克耳孙干涉仪一反射镜平移$\Delta d=0.322$ mm，
+共观测1024条纹移过视场。求单色光波长。
+\workings
+反射镜位移导致对应光臂往返光程改变$2\Delta d$。
+若移过$N$条纹，则$2\Delta d=N\lambda$，所以
+\[
+\boxed{\lambda=\frac{2(0.322\times10^{-3})}{1024}
+\approx6.29\times10^{-7}\,\mathrm m=629\,\mathrm{nm}}.
+\]
+\crosscheck 镜子位移和光程差之间有往返因子2；
+漏掉会算出约314 nm。
+
+\sourceproblem{10.3.10}{273}{273}
+\problemtext 在迈克耳孙干涉仪的一条光臂中插入折射率$n=1.632$的玻璃片，
+造成150条纹朝同一方向移过。入射光波长$500$ nm，求片厚。
+\workings
+插入片后单程光程多$(n-1)t$，
+仪器光线往返两次，总光程差改变
+$2(n-1)t$；故
+\[
+\boxed{t=\frac{N\lambda}{2(n-1)}
+=\frac{150(500\times10^{-9})}{2(1.632-1)}
+\approx5.93\times10^{-5}\,\mathrm m
+=59.3\,\mu\mathrm m}.
+\]
+\crosscheck 增厚、增大折射率或增加移动条数三者正相关，
+与公式一致。
+
+\sourceproblem{10.3.11}{273}{273}
+\problemtext 对垂直入射的多缝光栅，透光缝宽$a$，
+不透光区宽$b$，讨论三种光栅常量比例
+$(1)\ a+b=2a$、$(2)\ a+b=3a$、
+$(3)\ a+b=4a$时哪些主极大级数会因单缝包络而缺级。
+\workings
+光栅主极大$d\sin\theta=k\lambda$，其中$d=a+b$；
+单缝零点$a\sin\theta=m\lambda$。
+两式同时成立须
+\[
+k=\frac{d}{a}\,m,\quad m=1,2,\ldots.
+\]
+因此
+\[
+\boxed{\begin{array}{c|c}
+d/a&\text{消失的非零主极大级数}\\ \hline
+2& k=\pm2,\pm4,\pm6,\ldots\\
+3& k=\pm3,\pm6,\pm9,\ldots\\
+4& k=\pm4,\pm8,\pm12,\ldots
+\end{array}}
+\]
+\crosscheck $k=0$中心主极大不会因为单缝零点而缺失；
+是否能观察高阶级数还须满足$|\sin\theta|<1$。
+
+\sourceproblem{10.3.12}{273}{273}
+\problemtext 用未知波长$\lambda$单缝衍射时第3级暗纹位置，
+与波长$600$ nm光的第2条次极大亮纹位置恰好重合，求未知波长。
+\workings
+第3级暗纹的光程差满足$a\sin\theta=3\lambda$。
+常用\emph{半波带近似}把单缝第2侧明纹放在
+$a\sin\theta\simeq(2+\tfrac12)\lambda_0$，
+$\lambda_0=600$ nm，因此
+\[
+\boxed{\lambda_{\rm approx}
+\simeq\frac{2.5(600)}{3}\,\mathrm{nm}=500\,\mathrm{nm}}.
+\]
+更精细的夫琅禾费次极大满足
+$\tan\beta=\beta$，
+第2个非中心正侧极大根为$\beta\simeq7.725$，
+对应$a\sin\theta\simeq2.459\lambda_0$，于是
+\[
+\lambda_{\rm exact}\simeq2.459(600)/3\approx492\,\mathrm{nm}.
+\]
+\crosscheck \textbf{模型精度必须注明}：
+标准教材以“奇数个半波带”近似求次明纹会给500nm，
+但该位置不是严格的$\tan\beta=\beta$极值。
+不能把500nm标成精确值；根的级次应以零点之间的
+\emph{第2条侧极大}为准。
+
+\sourceproblem{10.3.13}{273}{273}
+\problemtext 单缝宽$a=0.10$ mm、凸透镜焦距$f=50$ cm，
+光波真空波长$500$ nm。
+若整个夫琅禾费装置浸入折射率$n=1.33$的水中，
+求中央明纹半宽度（按题设焦距仍取$f$的理想近轴模型）。
+\workings
+水中波长$\lambda'=\lambda_0/n$。
+从中心到首条暗纹的线距离为
+\[
+\boxed{w_{\frac12}\simeq\frac{f\lambda'}{a}
+=\frac{(0.50)(500\times10^{-9})}
+{(1.33)(0.10\times10^{-3})}
+\approx1.88\,\mathrm{mm}}.
+\]
+\crosscheck 若真实玻璃透镜浸水其\emph{有效焦距}也会变化，
+则不能直接保持$f=50$ cm；
+本稿给固定焦距的标准教材近似并在此标明隐含条件。
+
+\sourceproblem{10.3.14}{273--274}{273--274}
+\problemtext 橙黄色平行光垂直入射宽$a=0.60$ mm的单缝，
+后方凸透镜焦距$f=40.0$ cm；
+屏上距中心$1.40$ mm处的$P$点为侧明纹。
+求大致波长、明纹级次及从$P$点观察的半波带数。
+\workings
+旁轴近似给该方向单缝光程差
+\[
+\delta=a\sin\theta\simeq a\frac yf
+=(0.60\times10^{-3})\frac{1.40\times10^{-3}}{0.40}
+=2.10\times10^{-6}\,\mathrm m.
+\]
+橙黄色波长通常约$600$ nm，
+故$\delta/\lambda\approx3.5$，
+按照半波带近似，$P$对应\emph{第3个侧次极大}，
+且光程差约$7\lambda/2$，由此
+\[
+\boxed{\lambda_{\rm approx}\simeq
+\frac{\delta}{7/2}\approx600\,\mathrm{nm}},\quad
+\boxed{\text{侧明纹级次约为第3级}},\quad
+\boxed{\text{约7个半波带}}.
+\]
+\emph{更精细地}，单缝第3侧极大的根
+$\beta\simeq10.904$，
+光程差系数$\beta/\pi\simeq3.4709$，
+由同一屏位置可反推$\lambda\approx605$ nm。
+\crosscheck 原文只称“橙黄色”，未独立给出精确波长；
+单靠“$P$点是一条明纹”会有多个可能级次。
+上述600nm的选择额外使用\emph{颜色范围及第3侧明纹}
+的近似判别；不应声称题目在数学上无歧义唯一确定波长。
+
+\sourceproblem{10.3.15}{274}{274}
+\problemtext 波长$590$ nm钠黄光垂直入射每毫米有500条刻线的光栅，
+求能观察到的最高主极大级数。
+\workings
+光栅常量
+$d=1/500\,\mathrm{mm}=2.00\,\mu\mathrm m$。
+主极大满足$d\sin\theta=k\lambda$，
+且可观测传播方向要求$|\sin\theta|\le1$。
+\[
+\frac d\lambda=\frac{2000}{590}\approx3.39,
+\qquad\boxed{k_{\max}=3}.
+\]
+\crosscheck 题未给单缝宽度，因此不额外假定第3级缺级。
+
+\sourceproblem{10.3.16}{274}{274}
+\problemtext 两波长$\lambda_1=600$ nm、$\lambda_2=400$ nm的平行单色光
+同时垂直入射光栅。屏上距零级明纹$y=5$ cm处，
+前者第$k$级极大与后者第$k+1$级重合，
+透镜焦距$f=50$ cm，求$k$和光栅常量$d$。
+\workings
+共同衍射角要求
+$k\lambda_1=(k+1)\lambda_2$，
+故
+\[
+\boxed{k=\frac{\lambda_2}{\lambda_1-\lambda_2}
+=\frac{400}{600-400}=2}.
+\]
+用焦平面几何$\tan\theta=y/f=0.10$，
+则$\sin\theta=y/\sqrt{f^2+y^2}\approx0.09950$。
+\[
+\boxed{d=\frac{k\lambda_1}{\sin\theta}
+=\frac{2(600\,\mathrm{nm})}{0.09950}
+\approx12.1\,\mu\mathrm m}.
+\]
+若采用小角近似$\sin\theta\simeq y/f$，得$d\simeq12.0\,\mu$m。
+\crosscheck 用的是光栅\emph{常量}而不是透光缝宽，
+且两束光的级数相差1而非相同。
