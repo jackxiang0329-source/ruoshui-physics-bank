@@ -1,0 +1,42 @@
+\section{第1章：质点运动学（1.5练习题）}
+\sourceproblem{选择1}{8}{14}
+\problemtext 以时针为参照，求分针相对转动一周的周期。
+\workings 相对角速度为 $2\pi(1/60-1/720)\,\mathrm{rad/min}$，故周期 $720/11=65\tfrac5{11}\,\mathrm{min}$，选 B。
+\crosscheck 相对周期应大于分针对表盘的 $60\,\mathrm{min}$ 周期。
+\sourceproblem{选择2}{8}{14}
+\problemtext 半径 $R$ 的圆周走完一周，求途中最大位移模及最大累计路程。
+\workings 最大弦长为直径 $2R$，累计路程最大为周长 $2\pi R$，选 C。
+\crosscheck 回到起点的最终位移为零，不是途中位移最大值。
+\sourceproblem{选择3}{8}{14}
+\problemtext $x=t^2-4t+5$（SI），求最初 $3\,\mathrm s$ 的位移及路程。
+\workings $v=2t-4$，在 $t=2\,\mathrm s$ 换向。$x(0)=5$，$x(2)=1$，$x(3)=2$，因此 $\Delta x=-3\,\mathrm m$，$s=|1-5|+|2-1|=5\,\mathrm m$，选 D。
+\crosscheck 路程大于位移的模；分段积分 $|v|$ 得相同数值。
+\sourceproblem{选择4}{8}{14}
+\problemtext 识别二维位矢所对应的速度大小。
+\workings $v=|\dot{\bm r}|=\sqrt{\dot x^2+\dot y^2}$，选 D。径向距离的变化率 $\mathrm d|\bm r|/\mathrm dt$ 通常不等于速率；$\dot{\bm r}$ 是矢量。
+\crosscheck 匀速圆周运动的径向距离不变，但速率非零；亦排除只用径向变化率的表达式。
+\sourceproblem{选择5}{8}{14}
+\problemtext 比较曲线运动的速度、速率及其时间平均。
+\workings 瞬时 $|\bm v|=v$；平均量满足
+\[
+|\bar{\bm v}|=\frac{|\int\bm v\,\mathrm dt|}{\Delta t}
+\le\frac{\int|\bm v|\,\mathrm dt}{\Delta t}=\bar v.
+\]
+若所考察区间确含速度方向改变，则严格小于，按通常曲线运动题意选 C。
+\crosscheck 原题的“必定”需限定区间：若只截取同向直线段，则可取等号。等号条件为非零速度几乎处处同向；不把一般不等式误写成无条件严格不等式。
+\sourceproblem{选择6}{8}{14}
+\problemtext $x=t^3+5t+6$（SI），判别直线运动。
+\workings $v=3t^2+5>0$，$a=6t$。按通常从 $t=0$ 起计、$t>0$ 的时间域，加速度正向且随时变化，选 C。
+\crosscheck 若允许负时间，加速度方向反转；$t=0$ 时加速度为零。应明确时间域。
+\sourceproblem{选择7}{8}{14}
+\problemtext $x=at,\ y=b+ct^2$，速度与 $x$ 轴成 $45^\circ$ 时求速率。
+\workings $\bm v=a\bm i+2ct\bm j$，此时 $|2ct|=|a|$，所以 $v=\sqrt2|a|$；原选项 B 对应通常 $a>0$ 的约定。
+\crosscheck $a$ 与 $c$ 均不得导致速度方向条件无解；常数符号未明示，严格结果应保留绝对值。
+\sourceproblem{选择8}{8}{14}
+\problemtext 岸高 $h$，绳经岸上定滑轮以恒定速率 $u>0$ 收取，判断船的运动。
+\workings 令船距岸脚的水平距离为 $x>0$，斜绳长 $\ell=\sqrt{x^2+h^2}$，$\dot\ell=-u$，故
+\[
+\dot x=-u\ell/x,\qquad \ddot x=-u^2h^2/x^3.
+\]
+在 $h>0$ 时速度及加速度同向，船加速靠岸，选 C（加速但非匀加速）。
+\crosscheck 以上为绳绷紧、忽略滑轮尺寸及船高的几何模型；$h=0$ 退化为匀速。$x\to0$ 的发散表明理想模型适用边界。
