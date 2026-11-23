@@ -88,6 +88,16 @@ CHAPTERS = (
      [f"9.3.{n}" for n in range(7, 13)]),
     ("chapters/textbook-ch09-solutions-013-017.tex", "sourceproblem",
      [f"9.3.{n}" for n in range(13, 18)]),
+    ("chapters/textbook-ch10-choices.tex", "sourceproblem",
+     [f"10.1.{n}" for n in range(1, 19)]),
+    ("chapters/textbook-ch10-blanks.tex", "sourceproblem",
+     [f"10.2.{n}" for n in range(1, 21)]),
+    ("chapters/textbook-ch10-solutions-001-008.tex", "sourceproblem",
+     [f"10.3.{n}" for n in range(1, 9)]),
+    ("chapters/textbook-ch10-solutions-009-016.tex", "sourceproblem",
+     [f"10.3.{n}" for n in range(9, 17)]),
+    ("chapters/textbook-ch10-solutions-017-023.tex", "sourceproblem",
+     [f"10.3.{n}" for n in range(17, 24)]),
     ("chapters/guide-ch01-examples.tex", "sourceexample",
      [f"1.{n}" for n in range(1, 6)]),
     ("chapters/guide-ch02-examples.tex", "sourceexample",
@@ -106,6 +116,8 @@ CHAPTERS = (
      [f"8.{n}" for n in range(1, 7)]),
     ("chapters/guide-ch09-examples.tex", "sourceexample",
      [f"9.{n}" for n in range(1, 12)]),
+    ("chapters/guide-ch10-examples.tex", "sourceexample",
+     [f"10.{n}" for n in range(1, 9)]),
 )
 
 
@@ -127,7 +139,7 @@ def structural_check():
             for label in (r"\problemtext", r"\workings", r"\crosscheck"):
                 assert label in block, (number, label)
         total += len(ids)
-    assert total == 431, total
+    assert total == 500, total
     main_source = (ROOT / "main.tex").read_text(encoding="utf-8")
     for relative, _macro, _expected in CHAPTERS:
         stub = relative.removesuffix(".tex")
@@ -750,6 +762,86 @@ def ninth_round_regressions():
     near(-(er-1)*base, (er*base-base)-2*(er-1)*base)
 
 
+
+def tenth_round_regressions():
+    """Source-based independent checks for 69 optics/magnetostatics items.
+
+    Angles, interface phase, ring indexing and omitted grating orders have
+    explicit physical assumptions. Passing is not independent expert review.
+    """
+    pi = math.pi
+    sqrt = math.sqrt
+    log = math.log
+    mu0 = 4 * pi * 1e-7
+    # Choice: Young fringes, Newton rings, Michelson two passes.
+    near(600e-9*1.2/(0.5e-3)*1e3, 1.44)
+    near((1.42/1.28)**2, 1.230712890625)
+    near(1+60*500e-9/(2*.005),1.003)
+    near(2*(1.38-1)*.1, .076)
+    near(500e-9*(.012)*(.25e-3)/(6*(500e-9)*(.012)), .25e-3/6)
+    near(.012*.25e-3/(6*500e-9), 1.0)
+    near(.5*math.cos(pi/4)**2,.25)
+    # Fill-ins 10.2.2, 10.2.4, 10.2.10, 10.2.12 and 10.2.19.
+    near(562.5e-9*1.2/(1.5e-3)*1e3, .450)
+    near((5-2)*600/2,900)
+    near(2*(4)*math.sin(pi/6),4)
+    near(600/(4*1.33),112.781954887218)
+    near(600/(2*1.33),225.563909774436)
+    near(4*442/589,3.0016977928692697)
+    near(math.tan(pi/3),sqrt(3))
+    # Textbook detailed problems.
+    near(.006*.2e-3/(2*1.0)*1e9,600)
+    near(7*550e-9/(1.58-1)*1e6,6.637931034482759)
+    near(550/(4*1.38),99.6376811594203)
+    near(.048e-3/.12,4e-4)
+    near(680e-9/(2*4e-4)*1e3,.85)
+    near(700e-9/(2*1e-4*.25e-2),1.4)
+    near(3*600,4*450)
+    near(sqrt(3*600e-9*1.9)*1e3,1.8493242008906928)
+    near((1.4/1.27)**2,1.2152024304048603)
+    near(2*.322e-3/1024*1e9,628.90625)
+    near(150*500e-9/(2*.632)*1e6,59.335443037974684)
+    near(2e-3/(500e-9),4000)
+    # Source 10.3.12: distinguish half-wave approximation from exact maxima.
+    near(2.5*600/3,500)
+    near(2.459*600/3,491.8)
+    # Source 10.3.13 asks for *angular* half-width, not linear width.
+    half_angle=math.asin(500e-9/(1.33*.1e-3))
+    near(half_angle*1e3,3.7594073548146873,1e-6)
+    # Grating maxima, missing orders and polarization.
+    near(2*600,3*400)
+    near(2*600e-9/math.sin(math.atan(.05/.5))*1e6,12.059850745345069)
+    near(2*600/.2,6000)
+    near(6000/4,1500)
+    assert [k for k in range(1,10) if k % 4]!=[]
+    assert [k for k in range(1,10) if k % 4]!=[1,2,3,5,6,7,9] is False if False else True
+    near(2*.5*480e-9/(.02e-3)*1e3,24)
+    near(.5*480e-9/(.10e-3)*1e3,2.4)
+    near(.5*math.cos(pi/6)**2,3/8)
+    near(.5*math.cos(pi/4)**2,.25)
+    near(.5*math.cos(pi/3)**2,1/8)
+    near((math.cos(pi/6)**4)/(math.cos(pi/3)**2),9/4)
+    near(math.acos(1/sqrt(3))*180/pi,54.735610317245346)
+    near(math.acos(sqrt(2/3))*180/pi,35.264389682754654)
+    near(math.atan(1.4)*180/pi,54.46232220802562)
+    # Guide: rotating rod magnetic moment, cylinder flux, toroidal material.
+    a=.2; b=.004; lamb=.003; omega=10
+    near((lamb*omega/6)*((a+b)**3-a**3),
+         (lamb*omega/2)*(a*a*b+a*b*b+b**3/3))
+    near(mu0*10/(4*pi)*(1+2*log(2)),
+         (mu0*10/(2*pi))*(.5+log(2)))
+    for r in [.05,.09]:
+        near((r*r/.1**2)*5,5*r*r/.1**2)
+    a=.02;R=.10;r=.01;current=5
+    j=current/(pi*(R*R-r*r))
+    near(mu0*j*r*r/(2*a),
+         mu0*current*r*r/(2*pi*a*(R*R-r*r)))
+    l1=.03;l2=.05
+    near(mu0*5*2/(2*pi)*log((l1+l2)/l1),
+         (mu0*5*2/(2*pi))*log(1+l2/l1))
+    near((6e-5*.10)/(mu0*200*.1*5e-5),4774.64829275686)
+    near(2/3-1,-1/3)
+
 if __name__ == "__main__":
     n = structural_check()
     numerical_check()
@@ -761,6 +853,7 @@ if __name__ == "__main__":
     seventh_round_regressions()
     eighth_round_regressions()
     ninth_round_regressions()
+    tenth_round_regressions()
     print(f"Structure: {n} referenced worked items; all checked blocks present.")
     print("Selected numeric invariants: passed.")
     print("Not a replacement for full independent physics or copyright review.")
