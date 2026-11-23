@@ -82,12 +82,12 @@ def audit_every_item():
         r"\sourcetest{8.1.5}", 1
     )[0]
     assert "平行错位" in block_814 and "不是共线" in block_814
-    page_72 = (ROOT / "chapters/guide-selftest0.tex").read_text(encoding="utf-8")
+    page_72 = (ROOT / "chapters/guide-selftest07.tex").read_text(encoding="utf-8")
     block_726 = page_72.split(r"\sourcetest{7.2.6}", 1)[1].split(
         r"\sourcetest{7.2.7}", 1
     )[0]
     assert r"V_a-V_b=\pi BnR^2" in block_726
-    page_82 = (ROOT / "chapters/guide-selftest0.tex").read_text(encoding="utf-8")
+    page_82 = (ROOT / "chapters/guide-selftest08.tex").read_text(encoding="utf-8")
     block_822 = page_82.split(r"\sourcetest{8.2.2}", 1)[1].split(
         r"\sourcetest{8.2.3}", 1
     )[0]
