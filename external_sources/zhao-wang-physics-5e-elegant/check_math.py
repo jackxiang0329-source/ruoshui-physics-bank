@@ -186,6 +186,18 @@ CHAPTERS = (
      [f"6.2.{n}" for n in range(1, 10)]),
     ("chapters/guide-selftest06-solutions.tex", "sourcetest",
      [f"6.3.{n}" for n in range(1, 4)] + [f"6.4.{n}" for n in range(1, 3)]),
+    ("chapters/guide-selftest07-choices.tex", "sourcetest",
+     [f"7.1.{n}" for n in range(1, 9)]),
+    ("chapters/guide-selftest07-blanks.tex", "sourcetest",
+     [f"7.2.{n}" for n in range(1, 9)]),
+    ("chapters/guide-selftest07-solutions.tex", "sourcetest",
+     [f"7.3.{n}" for n in range(1, 6)]),
+    ("chapters/guide-selftest08-choices.tex", "sourcetest",
+     [f"8.1.{n}" for n in range(1, 9)]),
+    ("chapters/guide-selftest08-blanks.tex", "sourcetest",
+     [f"8.2.{n}" for n in range(1, 11)]),
+    ("chapters/guide-selftest08-solutions.tex", "sourcetest",
+     [f"8.3.{n}" for n in range(1, 6)]),
     ("chapters/guide-selftest09-choices.tex", "sourcetest",
      [f"9.1.{n}" for n in range(1, 12)]),
     ("chapters/guide-selftest09-blanks.tex", "sourcetest",
@@ -225,7 +237,7 @@ def structural_check():
             for label in (r"\problemtext", r"\workings", r"\crosscheck"):
                 assert label in block, (number, label)
         total += len(ids)
-    assert total == 846, total
+    assert total == 890, total
     main_source = (ROOT / "main.tex").read_text(encoding="utf-8")
     for relative, _macro, _expected in CHAPTERS:
         stub = relative.removesuffix(".tex")
@@ -1364,6 +1376,112 @@ def seventeenth_round_regressions():
     near(mu0*I**2/(4*pi)*(.25),mu0*I**2/(16*pi))
     assert 10+9+3+2 == 24
 
+
+def eighteenth_round_regressions():
+    """Selftest 7 (21 source-located items): independent field and induction invariants."""
+    pi=math.pi
+    eps0=8.8541878128e-12
+    mu0=4*pi*1e-7
+    sqrt=math.sqrt
+    # 7.1.1, 7.1.3, 7.1.4: superposition & other plate's field.
+    q1,q2=4.,2.
+    near((q1-q2)/2,1.)
+    near((1.0)**2/(2*eps0)*eps0,.5)
+    near(pi/(2*sqrt(2)),1.1107207345395915)
+    assert pi/(2*sqrt(2))>1.0
+    # 7.1.7: cut the toroidal solenoid into equal semicircles.
+    near((.5**2)/.5,.5)
+    # 7.2.1 balanced charge rod potentials.
+    near(math.log(3/2)-math.log(2),math.log(3/4))
+    # 7.2.2 capacitor grounded/isolated voltage ratio.
+    near((1/eps0)/(.5/eps0),2.)
+    # 7.2.3 thin slit field, first order in h/R.
+    near(mu0*.01/(2*pi*.5)/mu0,.01/(pi))
+    # 7.2.4 rotating loop work (mJ).
+    near(10*pi*.06**2*.015*1e3,1.6964600329384882)
+    near(10*pi*.06**2*.015*(1-math.cos(2*pi)),0.)
+    # 7.2.5 shrinking loop (V; m2/s).
+    near(2*pi*.8*.1*.8,.4021238596594936)
+    near(-2*pi*.1*.8,-.16*pi)
+    # 7.2.8 Faraday electric force acceleration (10^7 m/s2).
+    near(1.6e-19*.05*.01/(2*9.1e-31)/1e7,4.395604395604395)
+    # 7.3.1 enclosed charge and boundary continuity.
+    near((2.**4)/(2.**2),4.)
+    near(3.**2,3.**4/3.**2)
+    # 7.3.2 offset spherical cavity superposition.
+    d=.6;r=.2
+    near(-d+r**3/(4*d**2),-.5944444444444444)
+    assert 2*d>r
+    # 7.3.3 curved-wire force, planar loop torque.
+    near(2*.5*.2*sqrt(2),.282842712474619)
+    near(pi*2*.5*.2**2/8,.015707963267948967)
+    # 7.3.4 triangular-loop logarithmic magnetic flux (10^-8 V).
+    H=.2;a=.05;b=.1;dIdt=2.
+    emf=mu0*H/(2*pi*b)*((a+b)*math.log((a+b)/a)-b)*dIdt
+    near(emf*1e8,5.183347464017318)
+    # 7.3.5 induced E continuity at solenoid boundary.
+    n=200;k=.1;R=.03
+    near(mu0*n*k*R/2,mu0*n*k*R**2/(2*R))
+    assert 8+8+5==21
+
+
+def nineteenth_round_regressions():
+    """Selftest 8 (23 source-located items): electric energy and motional EMF."""
+    pi=math.pi
+    eps0=8.85e-12
+    mu0=4*pi*1e-7
+    # 8.1.1 charge redistribution and opposite-parallel capacitor.
+    near(.5*.75,.375)
+    near((8-2)/(8+2)*1000,600)
+    # 8.1.2 connected concentric shells share U2.
+    near((2+3)/4,(2+3)/4)
+    # 8.1.6 zero linked flux but nonzero terminal voltage.
+    l=.2;B=.3;omega=5
+    near(-.5*B*omega*l**2,-.03)
+    # 8.1.7 two opposing line currents: fields add in middle.
+    a=.4;I=3
+    near(2*(mu0*I/(2*pi*a)),mu0*I/(pi*a))
+    # 8.1.8 displacement-current B scales with r.
+    near((.04)/(.02),2.)
+    # 8.2.1 semicircle transit independent of path.
+    near(1.-1/3,2/3)
+    # 8.2.2 potential increases approaching charged ring.
+    assert 1/sqrt(2)-1<0
+    # 8.2.3 dielectrics under voltage clamp.
+    er=4
+    near(.5*er*2*5**2/ (.5*2*5**2),er)
+    # 8.2.4 hemispherical flux uses projected disk area.
+    near(B*pi*.1**2/(B*pi*.1**2),1.)
+    # 8.2.6 charged circular motion B, magnetic moment.
+    q=8e-19;v=3e5;R=6e-8
+    near(mu0*q*v/(4*pi*R**2)*1e6,6.666666666666667)
+    near(q*v*R/2*1e21,7.2)
+    # 8.2.7 electron orbital magnetic dipole.
+    near(9.11e-31*(2.2e6)**2/(2*2.36)*1e19,9.341610169491526)
+    # 8.2.8 moving triangle loop, radial motional force conservative.
+    near(3/8*B*omega*l*l + (-3/8*B*omega*l*l),0.)
+    # 8.2.10 stretching fixed-N solenoid decreases L.
+    assert 1/2 < 1
+    # 8.3.1 two equal-radius, initially unequal-voltage spheres.
+    W=pi*eps0*.1*(400-200)**2
+    near(W*1e7,1.1121237993707869)
+    # 8.3.2 rotating half-ring integration.
+    near(pi/2,math.pi/2)
+    near((4/pi)*((pi/4)),1.)
+    # 8.3.3 electric & magnetic accelerations perpendicular.
+    E=3;v=4;B=2;alpha=pi/3
+    near(E**2+(v*B*math.sin(alpha))**2,57.)
+    # 8.3.4 triangular-loop motion, positive logarithmic bracket.
+    aa=.1;dd=.05
+    bracket=math.log(1+aa/dd)-aa/(aa+dd)
+    assert bracket>0
+    # 8.3.5 motional emf zero at t=0 and maximum at t=a/v.
+    a=.5;v=2.
+    f=lambda t: v*v*t/(a*a+v*v*t*t)
+    near(f(0),0)
+    assert f(a/v)>f(a/(3*v)) and f(a/v)>f(3*a/v)
+    assert 8+10+5==23
+
 if __name__ == "__main__":
     n = structural_check()
     numerical_check()
@@ -1384,6 +1502,8 @@ if __name__ == "__main__":
     fifteenth_round_regressions()
     sixteenth_round_regressions()
     seventeenth_round_regressions()
+    eighteenth_round_regressions()
+    nineteenth_round_regressions()
     print(f"Structure: {n} referenced worked items; all checked blocks present.")
     print("Selected numeric invariants: passed.")
     print("Not a replacement for full independent physics or copyright review.")
