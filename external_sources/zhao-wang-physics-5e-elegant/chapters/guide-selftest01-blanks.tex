@@ -1,0 +1,149 @@
+% 《大学物理学学习指导（第5版）》自测题1填空1.2.1—1.2.8
+% 原书印刷46—47／扫描PDF54—55页。
+\subsection{自测题1：相对运动、冲量及能量填空}
+
+\sourcetest{1.2.1}{46--47}{54--55}
+\problemtext 两辆车同时从原点出发，沿同一正方向运动，
+$ x_A=4t+t^2$，$x_B=2t^2+2t^3$（SI）。
+求刚出发时谁在前、离开后何时再次同地、何时两车瞬时速度相等。
+\workings
+$t\to0^+$时$x_A\sim4t>x_B\sim2t^2$，因此\textbf{A车在前}。
+再次同地$x_A=x_B$，
+$t(4-t-2t^2)=0$，正根为
+\[
+\boxed{t_{\rm meet}=\frac{\sqrt{33}-1}{4}\,\mathrm s
+\simeq1.186\,\mathrm s}.
+\]
+两车速度$v_A=4+2t$、$v_B=4t+6t^2$，令其相等：
+$3t^2+t-2=0$，正根
+\[
+\boxed{t_{v_A=v_B}=\frac23\,\mathrm s}.
+\]
+\crosscheck 两车位置相等和速度相等是两个不同事件，
+不能用同一个时间填这两空。
+
+\sourcetest{1.2.2}{47}{55}
+\problemtext 列车沿水平以10m/s行驶，地面看雨竖直下落，
+车窗雨迹偏离竖直方向30°，求雨相对地面和列车的速率。
+\workings
+设雨相对地面速率为$u$，相对车厢
+$\bm v_{\rm rel}=(-10,-u)$，
+按与竖直夹角
+$\tan30^\circ=10/u$，故
+\[
+\boxed{u=10\sqrt3\simeq17.32\,\mathrm{m/s}},
+\qquad
+\boxed{|\bm v_{\rm rel}|=\sqrt{10^2+u^2}
+=20.0\,\mathrm{m/s}}.
+\]
+\crosscheck 夹角是与\emph{竖直}而不是水平所成30°；
+雨迹的斜向由车速方向确定。
+
+\sourcetest{1.2.3}{47}{55}
+\problemtext 静止小球B质量$m$，被水平绳AB和与竖直夹角$\theta$的斜绳BC平衡悬挂。
+若瞬间剪断水平绳AB，求剪断瞬间斜绳BC的张力。
+\workings
+原来小球静止，剪断AB瞬间速度仍为零；
+斜绳长度约束下沿BC方向的向心加速度$v^2/L=0$。
+把重力投影到斜绳方向：
+\[
+\boxed{T=mg\cos\theta}.
+\]
+\crosscheck 剪断后有切向加速度$g\sin\theta$，
+不能因为初速为零就误判所有方向加速度均为零。
+
+\sourcetest{1.2.4}{47}{55}
+\problemtext 30kg物块向东10m/s，
+20kg物块向北20m/s，二者完全非弹性碰合，
+求共同速率与方位。
+\workings
+总动量分量为$(p_E,p_N)=(300,400)$kg\,m/s，
+总质量50kg，故
+\[
+\boxed{\bm v=(6\,\bm e_E+8\,\bm e_N)\,\mathrm{m/s}},
+\qquad \boxed{v=10.0\,\mathrm{m/s}}.
+\]
+方向$\tan\phi=8/6=4/3$，
+$\boxed{\phi\simeq53.13^\circ}$，即\textbf{东偏北53.13°}。
+\crosscheck 动量矢量守恒，机械动能在完全非弹性碰撞中不守恒。
+
+\sourcetest{1.2.5}{47}{55}
+\problemtext 圆锥摆小球在水平面匀速转动整一周，
+求动量增量、重力冲量与绳张力冲量大小。
+\workings
+小球回到同样速度方向，故
+\[
+\boxed{|\Delta\bm p|=0}.
+\]
+周期$T=2\pi/\omega$，
+重力冲量$\bm J_g=-mgT\bm e_z$。
+由总冲量为零，
+$\bm J_T=-\bm J_g=+mgT\bm e_z$；
+所以
+\[
+\boxed{|\bm J_g|=mgT},\qquad
+\boxed{|\bm J_T|=mgT}.
+\]
+\crosscheck 虽然瞬时绳张力有水平向心分量，
+整周的水平冲量积分为零，不可把张力大小直接乘周期。
+
+\sourcetest{1.2.6}{47}{55}
+\problemtext 光滑水平面上质量$m$物体在恒力$F$下从静止运动时间$t$，
+求$F$的功；另一惯性观察者沿与$F$相反方向以恒速$v_0$运动，
+问他测量的同一段时间内力做的功。
+\workings
+地面系位移$x=Ft^2/(2m)$，
+\[
+\boxed{W=\frac{F^2t^2}{2m}}.
+\]
+观察者的速度为$-v_0$，故物体相对该观察者
+$x'=x+v_0t$（沿$F$正方向）。
+于是
+\[
+\boxed{W'=\frac{F^2t^2}{2m}+Fv_0t}.
+\]
+\crosscheck 若把“观察者以$v_0$沿与$F$相反方向运动”改为
+“物体起初相对观察者朝相反方向运动”，符号会改变。
+功依参考系，不是伽利略不变量；此处严格采用原题观察者方向。
+
+\sourcetest{1.2.7}{47}{55}
+\problemtext 冰块从静止沿与水平成30°的无摩擦屋顶滑下10m后离开屋檐，
+屋檐离地10m，取$g=10$，求离檐到落地的水平飞行距离。
+\workings
+沿斜面重力做功，离檐速率
+$v=\sqrt{2g(10\sin30^\circ)}=10$ m/s。
+离檐水平、竖直初速度分别为
+$v_x=10\cos30^\circ=5\sqrt3$，
+$v_y=-10\sin30^\circ=-5$。
+从屋檐高度10m到地面的运动方程
+$0=10-5t-5t^2$给$t=1$ s。
+故
+\[
+\boxed{x=v_xt=5\sqrt3\simeq8.66\,\mathrm m}.
+\]
+\crosscheck 题目仅问\emph{脱离屋檐后}的水平位移，
+不包括沿屋顶滑行10m时的水平投影。
+
+\sourcetest{1.2.8}{47}{55}
+\problemtext 两质点系统只受质点间相互引力且外力矢量和为零。
+判断动量与机械能是否必然守恒。
+\workings
+内力按牛顿第三定律成对相消，
+外力合力为零，
+所以系统总动量满足
+\[
+\boxed{d\bm P/dt=0}.
+\]
+若系统只受互相引力这种保守内力，
+系统机械能亦守恒。
+但题面的“只有万有引力”严格假设确实确保保守，
+故
+\[
+\boxed{\bm P=\mathrm{const}},\qquad
+\boxed{E_{\rm mech}=\mathrm{const}}.
+\]
+应选原书\textbf{A（动量与机械能均守恒）}。
+\crosscheck 如果把题设放宽为\emph{任意内力}，
+即使外力合力为零，内摩擦仍会破坏机械能守恒。
+本题明确是\emph{只有万有引力}，因此不可用一般内非保守力
+错误地排除机械能守恒。
