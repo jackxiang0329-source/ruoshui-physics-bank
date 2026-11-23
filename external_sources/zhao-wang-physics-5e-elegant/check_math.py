@@ -813,8 +813,7 @@ def tenth_round_regressions():
     near(2*600e-9/math.sin(math.atan(.05/.5))*1e6,12.059850745345069)
     near(2*600/.2,6000)
     near(6000/4,1500)
-    assert [k for k in range(1,10) if k % 4]!=[]
-    assert [k for k in range(1,10) if k % 4]!=[1,2,3,5,6,7,9] is False if False else True
+    assert [k for k in range(1, 10) if k % 4 != 0] == [1,2,3,5,6,7,9]
     near(2*.5*480e-9/(.02e-3)*1e3,24)
     near(.5*480e-9/(.10e-3)*1e3,2.4)
     near(.5*math.cos(pi/6)**2,3/8)
