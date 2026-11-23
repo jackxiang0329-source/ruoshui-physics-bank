@@ -1,4 +1,5 @@
 % Consolidated textbook-ch03 from commit ace330777e37fc85a6170f63723b6255c77c8f30; original fragments preserved below.
+% 2026-11-24 八批严格复核第1批：以下历史片段已局部修订；旧SHA仍指精简前历史版本，不能当作当前片段校验值。
 
 % --- BEGIN textbook-ch03-choices.tex SHA 00c9e2dc13ea54fdd62fea9d9f86b25fa34b0666 ---
 % 第三批：《大学物理简明教程》第5版，第3章选择题3.1.1--3.1.8
@@ -9,7 +10,7 @@
 \sourceproblem{3.1.1}{68}{68}
 \problemtext 两个力同时作用于一个有固定转轴的刚体。分别判断：两力均平行转轴、均垂直转轴、两力合力为零、两力合力矩为零，能否推出合力矩或合力必然为零？
 \workings
-轴向力沿转轴的力矩分量均为零，故①正确；垂直轴的力所产生的轴向力矩可以大小相等方向相反，故②所称“可能为零”正确。合力为零的力偶仍可产生非零合力矩，故③错误。合力矩为零也允许非零合力（例如一个沿轴作用的力），故④错误。正确选项为\textbf{B}。
+轴向力沿转轴的力矩分量均为零，这里所称力矩是关于固定转轴的轴向力矩分量，而非关于任意点的完整力矩矢量，故①正确；垂直轴的力所产生的轴向力矩可以大小相等方向相反，故②所称“可能为零”正确。合力为零的力偶仍可产生非零合力矩，故③错误。合力矩为零也允许非零合力（例如一个沿轴作用的力），故④错误。正确选项为\textbf{B}。
 \crosscheck 力与力矩分别是$\sum\bm F$与$\sum\bm r_i\times\bm F_i$，不能互推零值。
 
 \sourceproblem{3.1.2}{68}{68}
@@ -95,7 +96,7 @@ a_n=r\omega^2,\qquad a_\tau=r\alpha=r\dot\omega.
 \frac12mgL(1-\cos\theta)=\frac16mL^2\omega_r^2
 \Longrightarrow \omega_r^2=\frac{3g(1-\cos\theta)}{L}.
 \]
-当$0<\theta\le\pi$且$\theta\ne0$时，$\omega_p<\omega_r$，选\textbf{C}。
+对通常的轻绳单摆静止释放，初始张力$T_0=mg\cos\theta$，故须$0<\theta\le\pi/2$才可直接采用绷紧的圆弧模型（$\theta=\pi/2$时初张力为零而随后为正）。此范围内$\omega_p<\omega_r$，选\textbf{C}。若$\theta>\pi/2$，轻绳初始松弛，须另建模；若改为刚性轻杆约束，则能量公式在$0<\theta<\pi$可用，精确倒立$\theta=\pi$静止释放为不稳定平衡，不能断言必经过最低点。
 \crosscheck 棒的质心在$L/2$，不能把细杆的质量当成位于末端的质点。
 % --- END textbook-ch03-choices.tex ---
 
@@ -148,7 +149,7 @@ $(4-36)/(-8)=4$。
 \boxed{L_0=mr_0v_0=70(5)(6.5)=2275\,\mathrm{kg\,m^2/s}}.
 \]
 忽略冰面摩擦，绳张力沿中心方向，不提供对中心的力矩。
-最终$r_1=2.5$ m，故
+最终$r_1=2.5$ m，且缩绳结束后径向速度为零，故
 \[
 \boxed{v_1=L_0/(mr_1)=13\,\mathrm{m/s}}.
 \]
@@ -412,7 +413,7 @@ m v_0\frac l4
 积分得
 $r(t)=l/4+\frac{g}{2\omega_*^2}\sin(\omega_*t)$。
 \crosscheck 在$0\le\theta\le\pi/2$时$\dot r\ge0$，可向$A$端爬行；
-越过$\pi/2$后要求$\dot r<0$，故不能无限时间保持“持续向外爬行”和“恒定角速度”两项条件同时成立。若题目另要求爬到端点，还需检验$r(t)\le l/2$和初速度对应的可达条件。
+越过$\pi/2$后要求$\dot r<0$，故不能无限时间保持“持续向外爬行”和“恒定角速度”两项条件同时成立。若要求持续向外爬至端点，在$0\le\theta\le\pi/2$内须$l/4+g/(2\omega_*^2)\ge l/2$，即$\omega_*^2\le2g/l$，等价于$v_0^2\le49gl/72$（$v_0>0$）。到达端点即停止采用该爬行模型。
 % --- END textbook-ch03-solutions-001-008.tex ---
 
 % --- BEGIN textbook-ch03-solutions-009-015.tex SHA f839ef02d5725b283017215e93642cc39b4432f5 ---
@@ -470,7 +471,7 @@ mg\frac l2\sin\theta=\frac12\frac{ml^2}{3}\omega^2.
 故
 \[
 \boxed{\omega(\theta)=\sqrt{\frac{3g\sin\theta}{l}}}
-\quad(0\le\theta\le\pi/2).
+\quad(0\le\theta\le\pi\text{，首次下摆到另一侧水平位置}).
 \]
 \crosscheck $\theta=0$时$\omega=0$；当$\theta=\pi/2$速率最大，且$\alpha$此时为零。
 
@@ -553,5 +554,5 @@ Mgh=\tfrac12Mv^2+\tfrac12J\frac{v^2}{R^2}+\tfrac12kh^2.
 =\sqrt{\frac{2(6)(9.8)(0.4)-2(0.4)^2}{6+0.5/(0.3)^2}}
 \approx2.011\,\mathrm{m/s}.
 \]
-\crosscheck $2Mgh-kh^2>0$使下落可达；转动惯量增大使速率降低，量纲为$\mathrm{m/s}$。
+\crosscheck 在理想模型中，$0<h<2Mg/k$时速率为正，$h=2Mg/k$为可达转折点；转动惯量增大使速率降低，量纲为$\mathrm{m/s}$。
 % --- END textbook-ch03-solutions-009-015.tex ---
