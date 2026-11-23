@@ -1,0 +1,1968 @@
+% Consolidated 05-rigid-body from 6915d31494b4647dd12b50a59cddbc000c3484fc; original TeX fragments preserved.
+
+% === BEGIN 05-rigid-body-234-240.tex blob 0d90c14765244a7eee61dc21dc67e9e6f244c4de ===
+% Irodov user PDF p.46--47, original printed pp.37--38.
+% Opening of section 1.5: rigid-body statics and inertia tensors.
+\exproblem{234}{37}
+一根质量为 $m=1.0\,\mathrm{kg}$ 的均匀细杆 $AB$
+在同一平面内受两个反平行力作用而只作平动，
+其加速度为 $a_C=2.0\,\mathrm{m/s^2}$（图1.52）。
+两个施力点沿杆方向相距
+$d=20\,\mathrm{cm}$，已知其中一个力
+$F_2=5.0\,\mathrm N$，求杆长 $\ell$。
+\exsolution
+按原图，上端 $A$ 的力 $F_1$ 向左，
+另一力 $F_2$ 向右且施力点比 $A$ 低 $d$。
+向右取正，纯平动要求
+$F_2-F_1=ma_C$，故
+\[
+F_1=5-1(2)=3.0\,\mathrm N.
+\]
+均匀细杆质心在杆中点。
+无角加速度意味着关于质心的合力矩为零：
+\[
+F_1\frac{\ell}{2}
+=F_2\left(\frac{\ell}{2}-d\right).
+\]
+移项得
+\[
+\boxed{\ell=\frac{2F_2d}{F_2-F_1}
+=\frac{2(5)(0.20)}{2.0}=1.00\,\mathrm m}.
+\]
+\excheck 当所有力都沿水平方向时，
+平动加速度由合力决定；无转动则必须另外满足
+关于质心合力矩为零。
+
+\exproblem{235}{37}
+在 $xy$ 平面中，力
+$\bm F=A\bm i+B\bm j$ 作用于位置
+$\bm r=a\bm i+b\bm j$。
+求该力关于坐标原点 $O$ 的力矩矢量及力臂长度。
+\exsolution
+力矩由叉积定义：
+\[
+\bm N_O=\bm r\times\bm F
+=(a\bm i+b\bm j)\times(A\bm i+B\bm j)
+=(aB-bA)\bm k.
+\]
+力臂是从原点到作用线的垂直距离，
+利用 $|\bm N|=|\bm F|\ell$：
+\[
+\boxed{\bm N_O=(aB-bA)\bm k},\qquad
+\boxed{\ell=\frac{|aB-bA|}{\sqrt{A^2+B^2}}}.
+\]
+\excheck 若 $aB=bA$，力作用线穿过原点，
+力矩和力臂均为零；若 $\bm F=\bm0$，
+则作用线未定义而力矩仍为零。
+
+\exproblem{236}{37}
+在平面内两个力分别为
+$\bm F_1=A\bm j$、$\bm F_2=B\bm i$，
+施力点的位置矢量分别为
+$\bm r_1=a\bm i$ 和 $\bm r_2=b\bm j$。
+求合力相对于原点的力臂。
+\exsolution
+合力矢量
+$\bm F=\bm F_1+\bm F_2=B\bm i+A\bm j$。
+两个力矩分别为
+$\bm N_1=aA\bm k$ 与
+$\bm N_2=-bB\bm k$，故总力矩
+\[
+\bm N=(aA-bB)\bm k.
+\]
+因此合力大小为 $\sqrt{A^2+B^2}$ 时，
+其等效作用线到原点的距离
+\[
+\boxed{\ell=\frac{|aA-bB|}{\sqrt{A^2+B^2}}}.
+\]
+\excheck 力臂必须由\emph{合力的总力矩}计算；
+不能把两力各自的力臂直接相加。
+
+\exproblem{237}{37}
+如图1.53，正方形薄板顶点依次为
+$A$（左）、$B$（上）、$C$（右）、$D$（下）。
+在 $A$ 点施竖直向上的力 $F$，
+在 $B$ 点施水平向右的力 $F$，
+在 $D$ 点沿右下方向施大小为 $F\sqrt2$ 的力。
+求合力的大小、方向；
+若作用点选择在边 $BC$ 上，求它的位置。
+\exsolution
+取正方形中心为原点，四顶点分别为
+$A=(-d,0),B=(0,d),C=(d,0),D=(0,-d)$。
+三个力的坐标分量分别为
+$(0,F),(F,0),(F,-F)$。故
+\[
+\bm F_{\rm res}=(2F,0),
+\quad\boxed{|\bm F_{\rm res}|=2F},
+\]
+方向水平向右，即平行于对角线 $AC$。
+总力矩（取垂直板面分量）为
+\[
+N_z=(-d)F-dF+dF=-dF.
+\]
+设等效合力作用点为 $(x,y)$，
+则 $N_z=xF_y-yF_x=-2Fy$，
+所以 $y=d/2$。
+边 $BC$ 上从 $(0,d)$ 到 $(d,0)$
+满足 $x+y=d$，于是 $x=d/2$。
+\[
+\boxed{\text{合力作用于边 }BC\text{ 的中点。}}
+\]
+\excheck 该解保留了总力和总力矩，因此与原三力体系
+对薄板的平动、转动作用等效。
+
+\exproblem{238}{37--38}
+求：（a）长为 $\ell$、质量 $m$ 的均匀细杆
+对过一端且垂直于杆的轴的转动惯量；
+（b）长宽为 $a,b$、质量为 $m$ 的均匀矩形薄板
+对过一个顶点且垂直于薄板的轴的转动惯量。
+\exsolution
+（a）细杆线密度为 $m/\ell$，
+从转轴端量距离 $x\in[0,\ell]$，
+\[
+I_a=\int_0^\ell x^2\frac m\ell\,\mathrm dx
+=\boxed{\frac13m\ell^2}.
+\]
+（b）选顶点为原点、两邻边沿坐标轴，
+薄板面密度为 $m/(ab)$，轴距平方为 $x^2+y^2$：
+\[
+I_b=\frac{m}{ab}\int_0^a\int_0^b
+(x^2+y^2)\,\mathrm dy\,\mathrm dx
+=\boxed{\frac m3(a^2+b^2)}.
+\]
+\excheck 也可由平行轴定理验证，矩形板的质心轴惯量
+$m(a^2+b^2)/12$，顶点距质心平方为 $(a^2+b^2)/4$，
+相加得到同一结果。
+
+\exproblem{239}{38}
+求：（a）均匀铜圆盘，厚度
+$b=2.0\,\mathrm{mm}$，半径
+$R=100\,\mathrm{mm}$，绕轴线的转动惯量；
+（b）质量 $m$、底面半径 $R$ 的均匀实心圆锥
+绕其轴线的转动惯量。
+\exsolution
+（a）铜密度记为 $\rho$，
+圆盘质量为 $M=\rho\pi R^2b$。
+由均匀实心圆盘绕轴惯量
+$I=\tfrac12MR^2$，得
+\[
+\boxed{I_a=\frac12\pi\rho bR^4}.
+\]
+取铜密度 $\rho\simeq8.9\times10^3\,\mathrm{kg/m^3}$，
+数值得
+$\boxed{I_a\simeq2.80\times10^{-3}\,\mathrm{kg\,m^2}}$。
+（b）设圆锥高为 $H$，从锥顶起截面半径
+$r(z)=Rz/H$。在高度 $z$ 处取厚度
+$\mathrm dz$ 的薄圆盘，
+$\mathrm dm=\rho\pi r(z)^2\,\mathrm dz$，
+微元绕轴惯量 $\mathrm dI=\tfrac12r(z)^2\,\mathrm dm$。
+积分：
+\[
+I=\frac12\rho\pi\frac{R^4}{H^4}
+\int_0^H z^4\,\mathrm dz
+=\frac{\rho\pi R^4H}{10}.
+\]
+又 $m=\rho\pi R^2H/3$，故
+\[
+\boxed{I_b=\frac{3}{10}mR^2}.
+\]
+\excheck $I_a$ 的原书单位写法 $2.8\,\mathrm{g\,m^2}$
+与 $2.8\times10^{-3}\,\mathrm{kg\,m^2}$ 相同；
+此处统一用 SI 单位。
+
+\exproblem{240}{38}
+证明：任意形状的薄板通过同一点的三条互相垂直轴中，
+若前两条轴在板面内、第三条轴垂直板面，
+则转动惯量满足 $I_1+I_2=I_3$。
+据此求半径 $R$、质量 $m$ 的均匀薄圆盘
+绕任一直径的转动惯量。
+\exsolution
+选薄板面为 $xy$ 平面，三条轴分别为 $x,y,z$，
+薄板任一质元到相应轴的距离平方分别为
+$y^2,x^2,x^2+y^2$。按转动惯量定义：
+\[
+I_x=\int y^2\,\mathrm dm,\quad
+I_y=\int x^2\,\mathrm dm,\quad
+I_z=\int(x^2+y^2)\,\mathrm dm.
+\]
+积分线性性直接给出
+\[
+\boxed{I_x+I_y=I_z}.
+\]
+均匀圆盘的对称性意味着过圆心的两条正交直径轴
+转动惯量相等：$I_x=I_y$。
+由于 $I_z=\tfrac12mR^2$，
+\[
+\boxed{I_{\rm diameter}=\frac12I_z=\frac14mR^2}.
+\]
+\excheck 垂直轴定理只适用于质量分布被认为在同一平面内的
+薄板；对厚度不能忽略的三维刚体不能直接套用。
+% === END 05-rigid-body-234-240.tex ===
+
+% === BEGIN 05-rigid-body-241-250.tex blob 560d2a036b0ac004307d023cc957bc4f9fa6045e ===
+% I. E. Irodov, Problems in General Physics, user-provided Arihant PDF.
+% Problems 241--250; original printed pages 38--39; PDF pages 47--48.
+% First draft of Chinese translation with independently worked equations.
+
+\exproblem{241}{38}
+一块原本均匀、半径为 $R=20\,\mathrm{cm}$ 的圆盘，
+按原书图1.54挖去一个直径为 $R$ 的圆孔：
+孔与原盘外缘内切，孔边缘经过原圆心 $O$。
+剩余阴影部分质量为 $m=7.3\,\mathrm{kg}$。
+求剩余部分对通过其\emph{质心且垂直盘面}的轴的转动惯量。
+\exsolution
+设原盘面密度为 $\sigma$，孔半径 $R/2$，
+孔心在 $x=-R/2$。原盘与被挖去圆片的面积比为 $4:1$，
+故其质量分别为 $M=4m/3$、$m_h=m/3$。
+取原圆心为 $x=0$，剩余部分质心位置满足
+\[
+mx_C=M(0)-m_h(-R/2)
+\quad\Longrightarrow\quad
+\boxed{x_C=R/6}.
+\]
+对原圆心 $O$ 的惯量可用“完整盘减去孔”计算。
+平行轴定理给出被挖圆片对 $O$ 的惯量为
+\[
+I_{h,O}=\tfrac12m_h(R/2)^2+m_h(R/2)^2
+=\tfrac38m_h R^2.
+\]
+因此
+\[
+I_O=\tfrac12MR^2-I_{h,O}
+=\left(\frac23-\frac18\right)mR^2
+=\frac{13}{24}mR^2.
+\]
+再向剩余部分的质心轴平移：
+\[
+\boxed{I_C=I_O-mx_C^2
+=\left(\frac{13}{24}-\frac1{36}\right)mR^2
+=\frac{37}{72}mR^2
+\simeq0.150\,\mathrm{kg\,m^2}.}
+\]
+\excheck 这里的 $m$ 是\emph{挖孔后}剩余部分质量，
+不是完整圆盘质量。所得数值与底本书末答案相符。
+
+\exproblem{242}{38}
+利用均匀实心球的转动惯量公式，
+求质量为 $m$、半径为 $R$ 的均匀薄球壳
+关于过球心直径轴的转动惯量。
+\exsolution
+均匀实心球的质量、转动惯量分别为
+$M(R)=\frac43\pi\rho R^3$、
+$I(R)=\frac25M(R)R^2=\frac8{15}\pi\rho R^5$。
+设把半径从 $R$ 增加到 $R+\mathrm dR$，
+新增薄层质量及转动惯量为
+\[
+\mathrm dm=\frac{\mathrm dM}{\mathrm dR}\mathrm dR
+=4\pi\rho R^2\,\mathrm dR,\qquad
+\mathrm dI=\frac{\mathrm dI}{\mathrm dR}\mathrm dR
+=\frac83\pi\rho R^4\,\mathrm dR.
+\]
+二者比值
+$\mathrm dI/\mathrm dm=\frac23R^2$，
+令薄层总质量为 $m$，得到
+\[
+\boxed{I_{\mathrm{shell}}=\frac23mR^2}.
+\]
+\excheck 球壳的 $2/3$ 不等于均匀实心球的 $2/5$；
+质量都集中于外半径附近时惯量更大。
+
+\exproblem{243}{38}
+质量为 $M$、半径为 $R$ 的均匀实心圆柱
+可绕固定水平轴无摩擦转动。
+圆柱上缠绕轻绳，绳自由端悬挂质量 $m$ 的重物（图1.55）。
+系统从静止释放，求：(a) 圆柱角速度 $\omega(t)$；
+(b) 包括重物在内的系统总动能 $K(t)$。
+\exsolution
+以重物向下为正，绳无滑动，故
+$a=R\beta$。记绳张力为 $T$，圆柱惯量
+$I=\frac12MR^2$。牛顿方程和转动方程为
+\[
+mg-T=ma,\qquad TR=I\beta=\frac12MRa.
+\]
+于是 $T=\frac12Ma$，消元得
+\[
+a=\frac{mg}{m+M/2}=\frac{g}{1+M/(2m)}.
+\]
+由初始静止和 $\beta=a/R$，
+\[
+\boxed{\omega(t)=\frac{gt}{R[1+M/(2m)]}}.
+\]
+重物速度 $v=at$，所以总动能
+\[
+K=\frac12mv^2+\frac12I(v/R)^2
+=\frac12(m+M/2)a^2t^2.
+\]
+化简后
+\[
+\boxed{K(t)=\frac{mg^2t^2}{2[1+M/(2m)]}}.
+\]
+\excheck 两式与原书简答相符；
+$m\to\infty$（相对圆柱）时 $a\to g$，
+$M\to\infty$ 时 $a\to0$。
+
+\exproblem{244}{38}
+麦克斯韦轮的轮轴半径为 $r$，
+轮和轮轴总质量为 $m$，绕对称轴转动惯量为 $I$。
+两根轻绳对称缠绕于轮轴，
+其上端固定在可竖直升降的横梁上。
+横梁以恰当的竖直加速度向上运动，使轮的质心高度不变，
+同时绳逐渐放开。求：(a) 每根绳的张力；
+(b) 横梁向上的加速度。
+\exsolution
+轮质心始终不作竖直加速，故竖直力平衡
+\[
+2T-mg=0,\qquad
+\boxed{T=\frac{mg}{2}}.
+\]
+两根绳对轮轴施加同向力矩
+$\tau=2Tr= mgr$。
+轮绕自身轴的角加速度
+$\beta=\tau/I=mgr/I$。
+绳与轮轴间不滑动，轮心静止时横梁向上的
+线加速度大小等于轮轴表面放绳切向加速度：
+\[
+\boxed{a_{\rm beam}=r\beta=\frac{mgr^2}{I}}.
+\]
+\excheck 横梁提供能量使轮加速自转，而轮心高度不变。
+该结论的 $I$ 必须包括整个轮与轮轴。
+
+\exproblem{245}{38}
+一根质量为 $m$、长度为 $\ell$ 的均匀水平细杆，
+可绕通过一端 $A$ 的固定竖轴无摩擦转动。
+原来静止，另一端 $B$ 从此时起受到水平恒力 $F$，
+力的方向\emph{始终垂直于杆的原始方向}，而非始终垂直于杆。
+求角速度随杆转过的角度 $\varphi$ 的关系。
+\exsolution
+杆关于端点轴的转动惯量
+$I_A=m\ell^2/3$。由于力矢量在实验室坐标中
+方向固定，杆端沿该方向的位移为
+$\Delta y_B=\ell\sin\varphi$，因此外力做功
+$W=F\ell\sin\varphi$。
+若杆从 $\varphi=0$ 静止开始且没有损耗，
+动能定理给出
+\[
+\tfrac12I_A\omega^2=F\ell\sin\varphi.
+\]
+故
+\[
+\boxed{\omega(\varphi)=
+\sqrt{\frac{6F\sin\varphi}{m\ell}}}
+\]
+在从原方向开始加速的 $0\le\varphi\le\pi$
+运动段取正向角速度。
+\excheck 若错误认为力始终垂直当前杆，
+会得到 $\omega^2\propto\varphi$，
+与题面“perpendicular to the original position”不符。
+底本 PDF 文本抽取可能漏识别答案中的平方根。
+
+\exproblem{246}{39}
+如原书图1.56，两个悬挂物体质量分别为
+$m_1,m_2$，连接轻绳跨过半径 $R$、
+质量 $m$ 的均匀实心圆柱滑轮。
+绳与滑轮间无相对滑动，轴无摩擦。
+求：(a) 滑轮角加速度；
+(b) 两侧绳张力比 $T_1/T_2$。
+\exsolution
+先取 $m_2>m_1$、物体2向下加速度为 $a$，
+绳长约束使物体1向上同加速度。
+记滑轮惯量 $I=\frac12mR^2$。列方程
+\[
+T_1-m_1g=m_1a,\qquad
+m_2g-T_2=m_2a,\qquad
+(T_2-T_1)R=I\frac aR.
+\]
+代入张力并化简：
+\[
+a=\frac{(m_2-m_1)g}{m_1+m_2+m/2},
+\quad
+\boxed{|\beta|=\frac{|m_2-m_1|g}
+{R(m_1+m_2+m/2)}}.
+\]
+此外
+\[
+T_1=m_1(g+a)
+=\frac{m_1(m+4m_2)g}{2(m_1+m_2+m/2)},
+\quad
+T_2=m_2(g-a)
+=\frac{m_2(m+4m_1)g}{2(m_1+m_2+m/2)}.
+\]
+故
+\[
+\boxed{\frac{T_1}{T_2}
+=\frac{m_1(m+4m_2)}{m_2(m+4m_1)}}.
+\]
+\excheck 当 $m_1=m_2$ 时 $\beta=0$ 且张力比为1；
+当滑轮质量趋零时亦恢复轻滑轮的相等张力。
+
+\exproblem{247}{39}
+质量为 $m_1$ 的物体在摩擦系数为 $k$ 的
+水平面上，轻绳跨过质量为 $m$、
+可视为均匀圆盘的有质量滑轮，另一端悬挂 $m_2$（图1.57）。
+系统从静止释放，且已知 $m_2$ 开始下降。
+忽略绳质量与轴摩擦，求最初 $t$ 秒摩擦力对 $m_1$ 做的功。
+\exsolution
+设 $m_2$ 向下、$m_1$ 向右的加速度均为 $a$，
+滑轮半径为 $R$，惯量 $I=\frac12mR^2$。
+将三部分的动力学方程相加，绳张力在整体中抵消：
+\[
+m_2g-km_1g=(m_1+m_2+I/R^2)a.
+\]
+故
+\[
+a=\frac{(m_2-km_1)g}{m_1+m_2+m/2}>0.
+\]
+前 $t$ 秒物体1位移 $s=\frac12at^2$，
+滑动摩擦力大小 $km_1g$ 且反向，
+\[
+W_f=-km_1gs
+=\boxed{-\frac{k m_1(m_2-km_1)g^2t^2}
+{m+2(m_1+m_2)}}.
+\]
+\excheck 题面声明 $m_2$ 开始下降，等价于
+$ m_2>km_1$ 的滑动模型阈值，故最终功为负。
+
+\exproblem{248}{39}
+半径 $R$ 的均匀实心圆柱绕自身轴以初角速度
+$\omega_0$ 旋转，随后放入两互相垂直的粗糙墙形成的角落，
+如原图1.58。
+两接触面摩擦系数同为 $k$，圆柱中心始终保持静止。
+求圆柱停止前转过多少圈 $n$。
+\exsolution
+取原图所示旋向，底部摩擦力水平向左，
+左壁摩擦力竖直向上。记底部支持力 $N_b$、
+左壁支持力 $N_w$。
+质心无平动，水平与竖直方向的力平衡给出
+\[
+N_w=kN_b,\qquad N_b+kN_w=mg.
+\]
+所以
+$N_b=mg/(1+k^2)$、
+$N_w=kmg/(1+k^2)$。
+两处滑动摩擦对中心产生同向阻转力矩：
+\[
+\tau_f=kR(N_b+N_w)
+=\frac{k(1+k)mgR}{1+k^2}.
+\]
+实心圆柱惯量 $I=\frac12mR^2$，
+角减速度大小为
+$\beta_f=\tau_f/I=
+2k(1+k)g/[(1+k^2)R]$。
+用 $\omega_0^2=2\beta_f\Delta\varphi$，
+并以 $n=\Delta\varphi/(2\pi)$ 换算圈数：
+\[
+\boxed{n=\frac{(1+k^2)\omega_0^2R}
+{8\pi k(1+k)g}}.
+\]
+\excheck 此结果依赖图示旋向；反向旋转时两面摩擦
+竖直、水平分量的组合改变，应重新列平衡方程，
+不能不检查受力方向就套用此式。
+
+\exproblem{249}{39}
+半径为 $R$ 的均匀圆盘绕竖直中心轴以角速度
+$\omega_0$ 旋转，然后轻放在水平粗糙面上。
+摩擦系数为 $k$，盘对地的压强近似均匀。
+求圆盘继续旋转多久才停止。
+\exsolution
+圆盘总支持力 $mg$，均匀压强
+$p=mg/(\pi R^2)$。半径为 $r$、
+宽度为 $\mathrm dr$ 的圆环与地面的接触面积为
+$2\pi r\,\mathrm dr$，其摩擦力为
+$k p\,2\pi r\,\mathrm dr$，对中心的阻转力矩微元
+\[
+\mathrm d\tau=r\cdot k p\,2\pi r\,\mathrm dr
+=2\pi kp r^2\,\mathrm dr.
+\]
+积分得 $\tau=\frac23kmgR$。
+圆盘惯量 $I=\frac12mR^2$，
+角减速度恒为
+$\beta=\tau/I=4kg/(3R)$。
+于是从角速度 $\omega_0$ 减到零所需时间
+\[
+\boxed{t_{\rm stop}=\frac{\omega_0}{\beta}
+=\frac{3\omega_0R}{4kg}}.
+\]
+\excheck 若误把所有接触摩擦集中作用在边缘 $r=R$，
+会把阻转力矩错误估成 $kmgR$，结果偏小。
+
+\exproblem{250}{39}
+一飞轮初始角速度为 $\omega_0$，
+受到大小与瞬时角速度平方根成正比的阻转力矩：
+$|\tau|=c\sqrt{\omega}$，其中 $c>0$。
+求整个减速停止阶段按时间平均的角速度。
+\exsolution
+设飞轮转动惯量为 $I$，
+转动方程
+$I\dot\omega=-c\sqrt{\omega}$。
+分离变量积分：
+\[
+2\sqrt{\omega(t)}=
+2\sqrt{\omega_0}-\frac cI t.
+\]
+停止时间为 $T=2I\sqrt{\omega_0}/c$，
+因此在 $0\le t\le T$，
+\[
+\omega(t)=\omega_0\left(1-\frac tT\right)^2.
+\]
+求时间平均：
+\[
+\boxed{\bar\omega=\frac1T\int_0^T
+\omega_0(1-t/T)^2\,\mathrm dt
+=\omega_0\int_0^1(1-u)^2\,\mathrm du
+=\frac{\omega_0}{3}}.
+\]
+\excheck 与角速度衰减成线性时的 $\omega_0/2$ 不同；
+阻转系数 $c$ 只决定停转时间，不影响上述无量纲平均值。
+% === END 05-rigid-body-241-250.tex ===
+
+% === BEGIN 05-rigid-body-251-260.tex blob 915c6ad2d7d1b4715e20a7daffd24b9a666ce101 ===
+% Irodov, user-provided PDF, printed pp. 39--41; PDF pp. 48--50.
+% Original diagrams 1.59--1.66 were inspected for pulley, spool and rolling constraints.
+
+\exproblem{251}{39}
+半径为 $R$、质量为 $M$ 的均匀实心圆柱可绕固定的水平轴
+$O$ 无摩擦转动。质量为 $m$、总长为 $\ell$ 的均匀轻柔细绳
+沿圆柱表面缠绕成一层（图1.59），自由下垂部分长为 $x$。
+题目规定缠绕部分的质心可视为在圆柱轴上。
+求圆柱的角加速度 $\beta(x)$。
+\exsolution
+记绳线密度为 $\lambda=m/\ell$，下垂部分质量为
+$m_h=mx/\ell$，它随圆柱放绳以速率 $v=R\omega$
+向下运动。缠绕部分虽质心位于轴上，其质量仍以角速度
+$\omega$ 随圆柱转动，因此旋转惯量约为
+$I_w=(m-m_h)R^2$；均匀圆柱惯量
+$I_c=\frac12MR^2$。
+将下垂绳的平动动能也用 $\omega$ 表示：
+\[
+K=\tfrac12 I_c\omega^2+
+\tfrac12(m-m_h)R^2\omega^2+
+\tfrac12m_hR^2\omega^2
+=\tfrac12(\tfrac12M+m)R^2\omega^2.
+\]
+下垂部分对轴的重力力矩为
+$\tau_g=m_hgR$；当绳从缠绕部分转换为下垂部分时，
+上述总等效惯量不变。由角动量平衡：
+\[
+(\tfrac12M+m)R^2\beta
+=\frac{mx}{\ell}gR.
+\]
+因此
+\[
+\boxed{\beta(x)=\frac{2mgx}{R\ell(M+2m)}}.
+\]
+\excheck 当 $x=0$ 时 $\beta=0$；若漏算绳的缠绕部分
+转动惯量或下垂部分平动动能，都不能得到原书的分母 $M+2m$。
+
+\exproblem{252}{39--40}
+质量 $m$、半径 $R$ 的均匀实心球沿倾角为
+$\alpha$ 的斜面无滑动滚下。求：
+(a) 保证不打滑的最小静摩擦系数；
+(b) 从静止起运动 $t$ 秒后的球的总动能。
+\exsolution
+令质心沿斜面向下加速度为 $a$，
+接触静摩擦力大小为 $f$，方向沿斜面向上。
+牛顿第二定律及绕球心的转动方程：
+\[
+mg\sin\alpha-f=ma,\quad
+fR=I_C\beta,\quad
+I_C=\tfrac25mR^2,\quad a=R\beta.
+\]
+由后两式 $f=\frac25ma$，
+代入第一式得
+$a=\frac57g\sin\alpha$，
+$f=\frac27mg\sin\alpha$。
+支持力 $N=mg\cos\alpha$，
+要求 $f\le kN$，故
+\[
+\boxed{k\ge\frac27\tan\alpha}.
+\]
+从静止开始 $v=at$，
+总动能为质心平动加自转：
+\[
+K=\frac12mv^2+\frac12I_C(v/R)^2
+=\frac7{10}mv^2
+=\boxed{\frac5{14}mg^2t^2\sin^2\alpha}.
+\]
+\excheck 静摩擦阻止滑动但接触点瞬时静止，
+在理想静止斜面上它不作机械功；
+总动能增加来自重力势能下降。
+
+\exproblem{253}{40}
+一根质量 $m=8.0\,\mathrm{kg}$、半径
+$R=1.3\,\mathrm{cm}$ 的均匀实心圆柱
+由两根对称细绳悬挂，绳端固定于天花板，
+圆柱从静止开始因重力向下放绳（图1.60）。
+求：(a) 每根绳的张力及圆柱角加速度；
+(b) 重力瞬时功率 $P(t)$。
+\exsolution
+设质心向下加速度为 $a$、
+每根绳张力为 $T$。两绳无滑动放开，
+角加速度 $\beta=a/R$。
+力平衡与转动方程为
+\[
+mg-2T=ma,\qquad
+2TR=I_C\beta=\tfrac12mR^2(a/R).
+\]
+第二式给出 $2T=\frac12ma$，
+代回得 $a=\frac23g$。
+所以
+\[
+\boxed{T=\frac16mg\simeq13.1\,\mathrm N},
+\qquad
+\boxed{\beta=\frac{2g}{3R}\simeq5.03\times10^2\,
+\mathrm{rad/s^2}}.
+\]
+从静止开始质心速度为 $v=at=(2g/3)t$，
+重力功率等于重力与速度点积：
+\[
+\boxed{P_g(t)=mgv=\frac23mg^2t}.
+\]
+\excheck 对两根绳应使用\emph{总张力 $2T$}列质心方程，
+不能误用单根张力。
+
+\exproblem{254}{40}
+一根均匀实心圆柱质量为 $m$，
+两端细绳对称缠绕于圆柱且自由端固定在电梯天花板。
+电梯从静止开始以恒定加速度 $a_0$ \emph{向上}运动。
+求：(a) 圆柱相对电梯的加速度；
+(b) 圆柱通过两绳对天花板的总作用力大小。
+\exsolution
+以电梯为参考系，并约定\emph{向下}为圆柱相对加速度
+$a'$ 的正方向。因电梯向上加速，
+电梯系的等效重力场为
+$g_{\mathrm{eff}}=g+a_0$，而不是 $g-a_0$。
+设每根绳张力为 $T$，圆柱实心惯量
+$I_C=\frac12mR^2$。方程为
+\[
+m(g+a_0)-2T=ma',\qquad
+2TR=I_C\frac{a'}R.
+\]
+于是 $2T=\frac12ma'$，
+从而 $m(g+a_0)=\frac32ma'$：
+\[
+\boxed{a'=\frac23(g+a_0)\quad\text{（相对电梯向下）}},
+\]
+\[
+\boxed{F_{\mathrm{ceiling}}=2T=\frac13m(g+a_0)
+\quad\text{（对天花板向下）}}.
+\]
+\excheck 本版书末答案将两式写为 $g-a_0$，
+与题面明确的“电梯向上加速”不相容；它对应
+\emph{电梯向下加速}的另一模型。
+本稿按原题方向列受力，并将差异列入勘误记录。
+
+\exproblem{255}{40}
+质量 $m=200\,\mathrm g$ 的线轴位于倾角
+$\alpha=30^\circ$ 的光滑斜面上，
+其细绳自由端固定于上方墙壁（原图1.61）。
+线轴对自转轴的转动惯量为
+$I=0.45\,\mathrm{g\,m^2}$，
+绕绳层半径 $r=3.0\,\mathrm{cm}$。
+绳无滑动地绕线轴放开，求线轴中心加速度。
+\exsolution
+沿斜面向下为正，设线轴中心加速度为 $a$，
+绳张力为 $T$，角加速度为 $\beta$。
+细绳与线轴接触处相对固定线端无滑动，
+因此 $a=r\beta$。
+沿斜面平动及绕质心转动方程分别为
+\[
+mg\sin\alpha-T=ma,\qquad
+Tr=I\beta=I\frac ar.
+\]
+从而 $T=Ia/r^2$，得到
+\[
+\boxed{a=\frac{g\sin\alpha}{1+I/(mr^2)}}.
+\]
+按题面\emph{明确印出的单位}
+$0.45\,\mathrm{g\,m^2}=4.5\times10^{-4}
+\,\mathrm{kg\,m^2}$，代入
+$I/(mr^2)=2.50$：
+\[
+\boxed{a\simeq\frac{9.81\cdot0.5}{3.50}
+\simeq1.40\,\mathrm{m/s^2}}.
+\]
+\excheck 底本书末给约 $1.6\,\mathrm{m/s^2}$，
+但题面数据和所印公式给出约 $1.4\,\mathrm{m/s^2}$。
+这属于源书数值冲突，不能通过擅改惯量单位来掩盖。
+
+\exproblem{256}{40}
+质量为 $m$ 的均匀实心圆柱放在两块平行、水平的
+粗糙窄支撑板上（图1.62）。
+细绳缠绕在圆柱表面，自由端受恒定竖直向下拉力 $F$。
+圆柱与支撑板之间的静摩擦系数为 $k$。
+求使圆柱仍能在板上无滑动滚动的最大拉力
+$F_{\max}$ 及此时圆柱轴线的最大平动加速度。
+\exsolution
+由图中的细绳下拉，圆柱作平面滚动；
+沿滚动方向只有支撑板施加的水平静摩擦合力 $f$，
+所以 $f=ma$。
+关于圆柱质心的转动方程（下拉力和摩擦力矩相反）：
+\[
+(F-f)R=I_C\beta,\qquad
+I_C=\tfrac12mR^2,\quad \beta=\frac aR.
+\]
+故 $F-f=\frac12ma$，
+结合 $f=ma$ 可得
+\[
+\boxed{a=\frac{2F}{3m}},\qquad
+f=\frac{2F}{3}.
+\]
+竖直方向支撑板共同支持
+$N=mg+F$；在无滑动极限有
+$f_{\max}=kN$。因此
+\[
+\frac{2F_{\max}}{3}=k(mg+F_{\max}),
+\qquad
+\boxed{F_{\max}=\frac{3kmg}{2-3k}},
+\]
+\[
+\boxed{a_{\max}=\frac{2kg}{2-3k}}.
+\]
+\excheck 这两个有限上界只适用于 $0\le k<2/3$。
+在理想库仑静摩擦模型且 $k\ge2/3$ 时，
+上述不滑动条件对任意有限 $F$ 均可满足，
+题目就没有有限的 $F_{\max}$。
+原书第256题末尾误出现“rolling down the inclined plane”
+字样，但图1.62明确是水平支撑板；
+本稿采用图示装置，指出文字拼接歧义。
+
+\exproblem{257}{40--41}
+线轴质量 $m$，外半径 $R$、绕线层半径 $r$，
+绕自转轴的转动惯量
+$I=\gamma mR^2$。
+线轴在粗糙\emph{水平}面上无滑动滚动。
+按原图1.63，轻绳沿内层的上侧切向受恒力
+$F$，拉力与水平正向 $x$ 夹角为 $\alpha$。
+求：(a) 轴心加速度的 $x$ 分量；
+(b) 从静止开始前 $t$ 秒拉力做功。
+\exsolution
+取轴心向右加速度为 $a$，
+绕轴角加速度取逆时针为正，接触点无滑动意味着
+$\beta=-a/R$。
+记地面水平摩擦力为 $f$（以右为正），
+平动方程为
+$m a=F\cos\alpha+f$。
+按原书图1.63的上侧出线方向，拉力
+对轴心产生正向力矩 $Fr$。
+转动方程和无滑动约束为
+\[
+I\beta=Fr+fR,\qquad \beta=-a/R.
+\]
+因此
+\[
+f=-Fr/R-Ia/R^2.
+\]
+与平动方程 $ma=F\cos\alpha+f$ 联立：
+\[
+(m+I/R^2)a=F(\cos\alpha-r/R).
+\]
+最终
+\[
+\boxed{a_x=\frac{F(\cos\alpha-r/R)}{m(1+\gamma)}}.
+\]
+由无滑动，地面静摩擦作用点相对地面瞬时静止，
+故它不作功；刚体从静止开始总动能
+\[
+K=\tfrac12mv_C^2+\tfrac12I(v_C/R)^2
+=\tfrac12m(1+\gamma)(a_xt)^2.
+\]
+因此拉力在前 $t$ 秒的功
+\[
+\boxed{W_F=\frac{F^2t^2(\cos\alpha-r/R)^2}
+{2m(1+\gamma)}}.
+\]
+\excheck 当 $\cos\alpha=r/R$ 时
+加速度和总功均为零（理想瞬态静止）。
+两个方向的受力取向须与图1.63的绕绳方向对应。
+
+\exproblem{258}{41}
+原图1.64中，两根相同的均匀实心圆柱
+每根质量为 $m$、半径为 $R$，
+以两根对称、轻而不可伸长的细绳构成上下联动放绳装置。
+上圆柱轴固定且无摩擦，下圆柱自由悬挂、下落时
+两根绳在上下圆柱处均无滑动。
+求运动时\emph{每根}细绳的张力 $T$。
+\exsolution
+上下两圆柱的自转惯量都为
+$I=\frac12mR^2$，两根绳各张力为 $T$。
+对上圆柱、下圆柱分别列转动方程：
+\[
+I\beta_1=2TR,\qquad I\beta_2=2TR,
+\quad\Longrightarrow\quad
+\beta_1=\beta_2=\frac{4T}{mR}.
+\]
+依图示放绳的两级滚动约束，
+下圆柱质心向下加速度
+$a=R(\beta_1+\beta_2)=8T/m$。
+对下圆柱的质心列竖直方程：
+\[
+mg-2T=ma=8T.
+\]
+因而
+\[
+\boxed{T=\frac{mg}{10}},
+\qquad
+\boxed{a=\frac45g}.
+\]
+\excheck $T$ 是每根绳的张力，不是两绳总张力；
+若误认为上圆柱固定不转，会改变放绳约束并得出错误结果。
+
+\exproblem{259}{41}
+原图1.65为复合卷筒装置：重物 $A$ 质量为 $m$，
+可升降并转动的滑轮 $B$ 质量为 $M$，
+关于其自转轴的惯量为 $I$。
+两层卷绳半径分别为 $R$ 和 $2R$，
+其中小半径绳一端固定于天花板，
+大半径绳连接重物 $A$。从静止释放，
+求重物 $A$ 向下的加速度。
+\exsolution
+设滑轮轴向下位移为 $y$，旋转角为 $\varphi$。
+小半径绳上端固定且无滑动，
+故 $\dot y=R\dot\varphi$。
+大半径的绳从同向另一层放开，使
+重物 $A$ 的下降速度满足
+$\dot z=\dot y+2R\dot\varphi=3\dot y$。
+因此 $\ddot z=3\ddot y$，
+两层无滑动约束已将系统约化为一个自由度。
+总动能为
+\[
+K=\tfrac12M\dot y^2+
+\tfrac12I(\dot y/R)^2+
+\tfrac12m(3\dot y)^2
+=\tfrac12(M+I/R^2+9m)\dot y^2.
+\]
+当滑轮轴下降 $\mathrm dy$ 时，
+重物下降 $3\mathrm dy$，重力作功
+$\mathrm dW_g=(M+3m)g\,\mathrm dy$。
+由拉格朗日方程
+\[
+(M+I/R^2+9m)\ddot y=(M+3m)g.
+\]
+故重物加速度
+\[
+\boxed{a_A=3\ddot y
+=\frac{3g(M+3m)}{M+9m+I/R^2}}
+\quad\text{（向下）}.
+\]
+\excheck 必须区分滑轮轴的加速度 $\ddot y$
+与重物的加速度 $3\ddot y$；
+此式与原书答案一致。
+
+\exproblem{260}{41}
+质量为 $m_1$ 的均匀实心圆柱 $A$
+可绕固定于底座 $B$ 的水平轴无摩擦转动，
+底座质量为 $m_2$ 且能在光滑水平面上平移（图1.66）。
+轻绳绕在圆柱表面，水平自由端 $K$ 受恒力 $F$ 向右拉。
+从静止开始，求：(a) $K$ 点加速度；
+(b) 系统在前 $t$ 秒获得的总动能。
+\exsolution
+整个底座和圆柱的唯一水平外力为 $F$，
+故底座和圆柱轴心共同的水平加速度为
+\[
+a_C=\frac{F}{m_1+m_2}.
+\]
+圆柱绕自身轴受恒定力矩 $FR$，
+角加速度大小
+$\beta=FR/I=2F/(m_1R)$，
+因为 $I=\frac12m_1R^2$。
+按图中放绳切向方向，
+端点 $K$ 的平动加速度为底座平动
+加圆柱边缘的切向相对加速度：
+\[
+a_K=a_C+R\beta
+=\frac F{m_1+m_2}+\frac{2F}{m_1}.
+\]
+因此
+\[
+\boxed{a_K=\frac{F(3m_1+2m_2)}{m_1(m_1+m_2)}}.
+\]
+由于从静止开始、$a_K$ 恒定，
+端点位移为 $s_K=\frac12a_Kt^2$。
+地面光滑、轴无耗散，外力做功全变成总动能：
+\[
+\boxed{K_{\rm system}(t)=Fs_K
+=\frac{F^2t^2(3m_1+2m_2)}
+{2m_1(m_1+m_2)}}.
+\]
+\excheck $K$ 的功应按\emph{绳端位移}计算，
+不能只用底座的位移，否则漏掉圆柱自转动能。
+% === END 05-rigid-body-251-260.tex ===
+
+% === BEGIN 05-rigid-body-261-270.tex blob 9c1af98e90d63839db97f5ba7de366e491c1d931 ===
+% Irodov, user-provided PDF, original pp.41--43, PDF pp.50--52.
+% Problem 264's incline slopes DOWN as drawn in Fig. 1.67, not uphill.
+
+\exproblem{261}{41}
+质量为 $m_1$ 的木板置于光滑水平面上，
+质量为 $m_2$ 的均匀实心球置于板上。
+对木板施加恒定水平力 $F$，
+假设球与板之间始终无相对滑动。
+求木板与球心的水平加速度 $a_1,a_2$。
+\exsolution
+设板向右加速，静摩擦力 $f$ 使球心向右加速并
+使球绕自身中心逆时针自转。对球有
+\[
+m_2a_2=f,\qquad I_C\beta=fR,\qquad
+I_C=\frac25m_2R^2.
+\]
+球与板接触处无相对切向加速度，
+因此
+$a_1=a_2+R\beta$。
+消去 $\beta,f$：
+\[
+a_1=a_2+\frac{fR^2}{I_C}
+=a_2+\frac52a_2=\frac72a_2.
+\]
+木板的水平运动方程
+$F-f=m_1a_1$，代入 $f=m_2a_2=(2/7)m_2a_1$：
+\[
+\boxed{a_1=\frac{F}{m_1+\frac27m_2}},\qquad
+\boxed{a_2=\frac27a_1}.
+\]
+\excheck 球心比木板加速得慢，
+但无滑动条件约束的是球体接触点的速度，
+不是两者质心速度相等。
+
+\exproblem{262}{41--42}
+均匀实心圆柱质量为 $m$、半径为 $R$，
+最初仅绕自身轴以角速度 $\omega_0$ 自转、质心静止，
+随后被放到水平粗糙面上释放。
+摩擦系数为 $k$。求：
+(a) 从释放到开始纯滚动的滑动持续时间；
+(b) 滑动摩擦对圆柱所做\emph{总功}。
+\exsolution
+滑动期间地面摩擦力大小恒为 $f=kmg$。
+其使圆柱获得质心速度，$a_C=kg$，
+同时施加阻转力矩，
+\[
+|\beta|=\frac{fR}{I_C}=\frac{2kg}{R},
+\qquad I_C=\frac12mR^2.
+\]
+以摩擦使质心前进的方向为正，
+\[
+v_C(t)=kgt,\qquad
+\omega(t)=\omega_0-\frac{2kg}{R}t.
+\]
+首次纯滚动条件为 $v_C=R\omega$：
+\[
+kgt=\omega_0R-2kgt
+\Longrightarrow
+\boxed{t_{\mathrm{slide}}=\frac{\omega_0R}{3kg}}.
+\]
+此时 $v_f=\omega_0R/3,\ \omega_f=\omega_0/3$。
+摩擦对整个圆柱的功等于总动能变化：
+\[
+W_f=\left[\frac12mv_f^2+\frac12I_C\omega_f^2\right]
+-\frac12I_C\omega_0^2
+=\left(\frac1{18}+\frac1{36}-\frac14\right)
+mR^2\omega_0^2.
+\]
+故
+\[
+\boxed{W_f=-\frac16mR^2\omega_0^2}.
+\]
+\excheck 在滑动阶段存在机械能耗散；
+接触点速率由不为零逐渐降至零，之后进入纯滚动。
+
+\exproblem{263}{42}
+一颗均匀实心小球半径为 $r$，
+在半径为 $R$ 的固定大球表面从顶端几乎静止开始
+无滑动滚下。
+求小球恰离开大球表面瞬间的自转角速度大小。
+\exsolution
+小球质心绕大球心移动的圆半径为 $L=R+r$。
+设质心的径矢与竖直向上方向夹角为 $\theta$，
+质心速率为 $v$，小球自转角速度
+$\omega=v/r$。
+由能量守恒：
+\[
+mgL(1-\cos\theta)
+=\frac12mv^2+\frac12\left(\frac25mr^2\right)\frac{v^2}{r^2}
+=\frac7{10}mv^2.
+\]
+故
+$v^2=\frac{10}{7}gL(1-\cos\theta)$。
+径向向心方向列牛顿第二定律：
+\[
+mg\cos\theta-N=\frac{mv^2}{L}.
+\]
+离面瞬间 $N=0$，联立得到
+$\cos\theta=10/17$，
+$v^2=(10/17)gL$。
+从而
+\[
+\boxed{\omega_{\mathrm{detach}}=
+\frac vr=\sqrt{\frac{10g(R+r)}{17r^2}}}.
+\]
+\excheck 半径为 $R+r$ 的圆是\emph{球心轨迹}，
+滚动约束的自转半径则为 $r$，不能把二者混用。
+
+\exproblem{264}{42}
+半径 $R=15\,\mathrm{cm}$ 的均匀实心圆柱
+原来以速率 $v_0$ 在水平面上向右纯滚动，
+其前方路面在拐角处\emph{向下}折成
+倾角 $\alpha=30^\circ$ 的斜面（原图1.67）。
+求使圆柱进入斜面段时\emph{不腾空跳离拐角}的
+最大 $v_0$，并假设运动中无滑动。
+\exsolution
+图1.67的斜面向右\emph{下倾}。
+圆柱过拐角的短阶段以拐角 $O$ 为瞬时接触点，
+圆心沿半径 $R$ 的圆弧从竖直上方转过
+$\theta\in[0,\alpha]$。
+圆柱绕接触点的转动惯量是
+$I_O=I_C+mR^2=\frac32mR^2$。
+由于纯滚动 $v=R\dot\theta$，
+其总动能 $K=\frac12I_O\dot\theta^2
+=\frac34mv^2$。
+圆心在下坡阶段降低
+$R(1-\cos\theta)$，能量守恒：
+\[
+\frac34mv^2
+=\frac34mv_0^2+mgR(1-\cos\theta),
+\quad
+v^2=v_0^2+\frac43gR(1-\cos\theta).
+\]
+沿指向拐角的径向列式：
+$mg\cos\theta-N=mv^2/R$，
+其中 $N$ 为拐角向外的支持力。
+要一直保持接触须 $N\ge0$，即
+\[
+\frac{N}{mg}=\frac73\cos\theta-\frac43
+-\frac{v_0^2}{gR}\ge0.
+\]
+由于 $\cos\theta$ 在区间中递减，
+最严条件发生在 $\theta=\alpha$，于是
+\[
+\boxed{v_{0,\max}=
+\sqrt{\frac{gR}{3}(7\cos\alpha-4)}
+\simeq1.00\,\mathrm{m/s}}.
+\]
+\excheck 根号内须为非负，即
+$\cos\alpha\ge4/7$；本题 $\alpha=30^\circ$ 满足。
+如果误把原图的向下斜坡当成向上斜坡，
+得到的离面条件将完全不同。
+
+\exproblem{265}{42}
+一根均匀薄刚性圆环质量为 $m$、半径为 $R$，
+其内缘固定着质量同样为 $m$ 的小物体 $A$。
+圆环在水平面上无滑动滚动。
+每当 $A$ 到达环内最低位置时，
+圆环中心速率为 $v_0$（图1.68）。
+求圆环始终不跳离地面的 $v_0$ 条件。
+\exsolution
+令 $\theta=0$ 表示小物体位于环心正下方，
+圆环滚动时其中心速率为 $v=R\dot\theta$。
+环本身的平动与转动动能之和为 $mv^2$；
+小物体绕地面接触点作摆线运动，其速率平方为
+$v_A^2=2v^2(1-\cos\theta)$，
+故全系统动能
+\[
+K=mv^2+\frac12m v_A^2
+=mv^2(2-\cos\theta).
+\]
+小物体重力势能相对最低点的增量为
+$mgR(1-\cos\theta)$。能量守恒：
+\[
+v^2(2-\cos\theta)+gR(1-\cos\theta)=v_0^2.
+\]
+环和小物体总质心高度为
+$y_C=R-\frac12R\cos\theta$，
+质量合计 $2m$。
+地面对系统的支持力
+$N=2mg+2m\,\ddot y_C$；
+代入上式与其关于时间的导数可确定
+$N(\theta)$。在足以完成整圈的运动中，
+地面支持力的最小值出现在
+$A$ 位于最高位置 $\theta=\pi$。
+此时 $\dot\theta^2=v^2/R^2$、
+$\ddot y_C=-R\dot\theta^2/2$，于是
+$N_{\mathrm{top}}=2mg-mv_{\mathrm{top}}^2/R$。
+能量式在 $\theta=\pi$ 给出
+$v_{\mathrm{top}}^2=(v_0^2-2gR)/3$。
+要求 $N_{\mathrm{top}}\ge0$，
+即
+\[
+\frac{v_0^2-2gR}{3}\le2gR
+\quad\Longrightarrow\quad
+\boxed{v_0\le\sqrt{8gR}}.
+\]
+\excheck 若 $v_0$ 太小，小物体不会到达圆环顶端，
+但系统仍可能往复滚动而不跳起；
+式中给的是无跳离地面的上限，原书亦如此给出。
+
+\exproblem{266}{42}
+一辆拖拉机以相对于地面恒速 $v$ 前进，
+整条履带总质量为 $m$，如图1.69。
+在无滑动滚动条件下，求整条履带相对地面的总动能。
+\exsolution
+在理想履带模型中，上方直线段沿前进方向
+相对地面速率为 $2v$；底部接触地面的直线段
+瞬时速率为零。忽略弯曲端部的质量，
+两段履带质量分别为 $m/2$。
+因此
+\[
+K=\frac12\left(\frac m2\right)(2v)^2
++\frac12\left(\frac m2\right)0^2
+=\boxed{mv^2}.
+\]
+\excheck 若端部弯曲段质量不可忽略，应将沿履带各质元
+的实际速度积分，此处采用原题图的理想化直线段近似。
+
+\exproblem{267}{42}
+质量为 $m$、半径为 $r$ 的均匀实心球
+绕水平杆 $OA$ 转动并在水平面上无滑动滚动
+（原图1.70）。球心沿距竖直旋转中心 $O$
+为 $R$ 的圆轨道以速率 $v$ 前进。
+求球的总动能。
+\exsolution
+球心平动动能为 $mv^2/2$。
+运动中球同时绕水平径向轴滚动，角速度大小
+$\omega_r=v/r$；球心的轨道绕竖直方向以
+$\Omega=v/R$ 转动。两转动角速度矢量互相垂直。
+实心球各直径轴惯量相同，均为
+$I_C=\frac25mr^2$，故球自转动能为
+\[
+K_{\rm rot}=\frac12I_C(\omega_r^2+\Omega^2)
+=\frac15m v^2\left(1+\frac{r^2}{R^2}\right).
+\]
+总动能
+\[
+\boxed{K=\frac7{10}mv^2\left(1+\frac27\frac{r^2}{R^2}\right)}.
+\]
+\excheck 若遗漏球心绕中心 $O$ 的方位转动角速度
+$\Omega$，将丢失与 $r^2/R^2$ 成比例的附加动能。
+
+\exproblem{268}{42--43}
+证明：一个质量为 $m$、质心相对于固定旋转轴
+的垂直位置矢量为 $\bm R_C$ 的刚体，
+在以恒角速度 $\bm\omega$ 旋转的参考系中，
+全部质元所受的离心惯性力合力和科里奥利惯性力合力分别为
+\[
+\bm F_{\rm cf}=m\omega^2\bm R_C,\qquad
+\bm F_{\rm Cor}=2m(\bm v_C'\times\bm\omega),
+\]
+其中 $\bm v_C'$ 为质心在旋转系中的速度。
+\exsolution
+把刚体分成质元 $\mathrm dm$。
+各质元离心惯性力
+$\mathrm d\bm F_{\rm cf}
+=-\bm\omega\times(\bm\omega\times\bm r_\perp)
+\,\mathrm dm$。
+由于 $\bm r_\perp$ 垂直于 $\bm\omega$，
+双叉乘恒等式给出
+$-\bm\omega\times(\bm\omega\times\bm r_\perp)
+=\omega^2\bm r_\perp$。
+对全体质量元积分：
+\[
+\bm F_{\rm cf}
+=\omega^2\int\bm r_\perp\,\mathrm dm
+=m\omega^2\bm R_C.
+\]
+各质元科里奥利惯性力为
+$\mathrm d\bm F_{\rm Cor}
+=-2\bm\omega\times\bm v_i'\,\mathrm dm$。
+利用积分与叉积的线性性及质心速度定义：
+\[
+\bm F_{\rm Cor}=-2\bm\omega\times
+\int\bm v_i'\,\mathrm dm
+=-2m\bm\omega\times\bm v_C'
+=\boxed{2m(\bm v_C'\times\bm\omega)}.
+\]
+\excheck 这些是\emph{合力}恒等式，不表示各质元受惯性力
+均相同；求惯性力矩仍需考虑物体内部质量分布。
+
+\exproblem{269}{43}
+长为 $\ell$、质量为 $m$ 的均匀细杆中点 $C$
+固定于旋转轴 $OO'$ 上，杆与轴夹角为 $\theta$
+（原图1.71）。轴以恒定角速度 $\omega$ 转动。
+求在随轴旋转的参考系中，全部离心惯性力
+对杆中点 $C$ 的\emph{合力矩大小}。
+\exsolution
+令杆上质元相对 $C$ 的位置为
+$\bm r=s\bm e$，其中
+$s\in[-\ell/2,\ell/2]$、$\bm e$ 是杆轴单位矢量，
+与竖直旋转轴夹角为 $\theta$。
+离心惯性力为
+$\mathrm d\bm F=\omega^2(s\sin\theta)
+\bm e_\perp\,\mathrm dm$，
+其中 $\bm e_\perp$ 是杆方向的水平投影的单位矢量。
+每个微元关于 $C$ 的力矩模为
+\[
+\mathrm dN
+=\omega^2s^2\sin\theta\cos\theta\,\mathrm dm,
+\]
+所有微元力矩同向。因均匀细杆
+$\int s^2\,\mathrm dm=m\ell^2/12$，
+积分得
+\[
+\boxed{N=\frac{m\omega^2\ell^2}{12}
+\sin\theta\cos\theta
+=\frac{m\omega^2\ell^2}{24}\sin2\theta}.
+\]
+\excheck 这也可由刚体惯量张量的陀螺力矩公式得到。
+本版书末第269题印作 $\frac12m\omega^2\ell^2\sin2\theta$，
+与上述积分及同一原书第282(c)题的
+$\frac1{24}m\omega^2\ell^2\sin2\theta$ 不一致；
+本稿保留可复核的连续体积分结论并标为勘误。
+
+\exproblem{270}{43}
+一圆锥摆由长为 $\ell$、质量为 $m$ 的均匀细杆构成，
+上端通过铰链与固定点连接。
+细杆绕竖直轴以恒角速度 $\omega$ 匀速旋转，
+求其与竖直方向的平衡夹角 $\theta$。
+\exsolution
+在随杆匀速旋转的参考系中，
+杆处于相对静止状态。
+选铰点为力矩中心，铰接反力无力矩。
+重力作用在杆中点，其使杆向竖直方向回落的力矩大小
+\[
+N_g=mg\frac{\ell}{2}\sin\theta.
+\]
+取距铰点沿杆距离为 $s$ 的质量微元，
+其到竖直轴距离为 $s\sin\theta$，
+离心力大小 $\omega^2s\sin\theta\,\mathrm dm$，
+对铰点的力矩大小是
+$\omega^2s^2\sin\theta\cos\theta\,\mathrm dm$。
+积分且 $\int s^2\,\mathrm dm=m\ell^2/3$：
+\[
+N_{\rm cf}=\frac13m\omega^2\ell^2
+\sin\theta\cos\theta.
+\]
+令力矩平衡 $N_g=N_{\rm cf}$，
+对非竖直解约去 $\sin\theta$：
+\[
+\boxed{\cos\theta=\frac{3g}{2\omega^2\ell}}.
+\]
+\excheck 要存在非竖直圆锥摆，
+必须 $\omega^2\ell\ge3g/2$；
+低于该阈值时仅有 $\theta=0$ 的竖直平衡。
+% === END 05-rigid-body-261-270.tex ===
+
+% === BEGIN 05-rigid-body-271-280.tex blob 5e23ba432786abce2d37b8cc47b3a2cfc377244e ===
+% Irodov, user-supplied PDF, problems 271--280, printed pp.43--45
+% (PDF pp.52--54). Source diagrams 1.71--1.72 and answer sheet checked.
+
+\exproblem{271}{43}
+边长为 $a$ 的均匀立方体放在摩擦系数为 $k$ 的
+水平面上，获得一初始水平速度后减速至停止。
+解释它在滑行减速时关于\emph{固定于水平地面且垂直于运动方向的轴}
+的角动量为何逐渐减少并消失，
+并求地面支持力合力作用线相对重力作用线的水平偏移
+$\Delta x$。
+\exsolution
+设立方体质量为 $m$，运动方向取为 $+x$，
+立方体质心离地高度为 $a/2$。
+滑动摩擦力大小为 $f=kmg$，指向 $-x$。
+摩擦作用于底面，关于\emph{经过质心}的横向水平轴产生大小
+\[
+N_f=f(a/2)=kmg(a/2)
+\]
+的倾覆力矩。若立方体只平动而不倾转，
+总转矩须为零。重力作用线穿过质心，
+而地面总支持力 $N=mg$ 可以在底面上偏离几何中心，
+对该轴产生反向力矩 $N\,\Delta x$。
+因此
+\[
+mg\,\Delta x=kmg\,\frac a2
+\quad\Longrightarrow\quad
+\boxed{\Delta x=\frac12ka}.
+\]
+由于地面摩擦使质心减速，立方体关于\emph{固定于地面}
+的横向水平轴所具有的平动轨道角动量逐渐减少至零。
+支持力作用线偏移只保证关于\emph{质心}的总力矩为零、
+不发生自转，并不能阻止平动角动量的变化。
+\excheck 压力中心的偏移源自底面压力分布的不对称；
+若 $\Delta x>a/2$，即 $k>1$，上述不倾转状态
+不再自洽，应考虑倾翻。
+
+\exproblem{272}{43}
+一根长为 $\ell$、质量为 $M$ 的均匀水平细杆 $AB$
+可绕通过端点 $A$ 的竖直固定轴无摩擦旋转，
+最初角速度为 $\omega_0$。
+质量为 $m$ 的小套环从轴心 $A$ 开始无摩擦地
+沿杆滑向另一端 $B$。
+求套环到达 $B$ 时相对杆的径向滑动速率 $v'$。
+\exsolution
+杆对端点的转动惯量为
+$I_0=M\ell^2/3$。
+套环离轴距离为 $r$ 时，总角动量
+$L_z=(I_0+mr^2)\omega$。
+外力对固定竖轴的力矩为零，故
+\[
+(I_0+mr^2)\omega=I_0\omega_0.
+\]
+套环在 $r=\ell$ 时
+$\omega_f=I_0\omega_0/(I_0+m\ell^2)$。
+无摩擦且轴不作功，机械能守恒：
+\[
+\tfrac12I_0\omega_0^2
+=\tfrac12(I_0+m\ell^2)\omega_f^2
++\tfrac12m{v'}^2.
+\]
+代入 $\omega_f$：
+\[
+m{v'}^2
+=I_0\omega_0^2
+\left[1-\frac{I_0}{I_0+m\ell^2}\right]
+=\frac{I_0m\ell^2\omega_0^2}{I_0+m\ell^2}.
+\]
+因此
+\[
+\boxed{v'=\frac{\omega_0\ell}{\sqrt{1+3m/M}}}.
+\]
+\excheck $v'$ 是套环沿杆的\emph{相对径向速率}，
+不是套环对地总速率，后者还含方位速度分量。
+
+\exproblem{273}{43}
+质量为 $m=5.0\,\mathrm{kg}$、
+长度为 $\ell=90\,\mathrm{cm}$ 的均匀细杆
+在光滑水平面上静止，一端突然受到
+大小为 $J=3.0\,\mathrm{N\,s}$、
+垂直于杆的水平冲量。
+求随后的运动中，杆一半对另一半的内力大小。
+\exsolution
+冲量使杆的质心获得平动速度
+$v_C=J/m$；关于质心的冲量矩为
+$J\ell/2$。
+均匀细杆对质心的转动惯量为
+$I_C=m\ell^2/12$，所以碰后角速度
+\[
+\omega=\frac{J\ell/2}{I_C}
+=\frac{6J}{m\ell}.
+\]
+冲量结束后外部水平合力为零，
+质心匀速运动、角速度恒定。
+每半杆的质心距整杆质心 $\ell/4$，
+做圆周运动所需向心加速度为
+$\omega^2\ell/4$。
+半杆质量 $m/2$，沿杆指向整体质心的
+内力大小因此为
+\[
+F_{\rm internal}=\frac m2\cdot\frac{\omega^2\ell}{4}
+=\frac{m\ell\omega^2}{8}.
+\]
+代入得
+\[
+\boxed{F=\frac{9J^2}{2m\ell}
+=\frac{9(3.0)^2}{2(5.0)(0.90)}
+=9.0\,\mathrm N}.
+\]
+\excheck 该内力是在\emph{碰撞结束后的转动阶段}
+维持两半杆的向心加速度，
+不是瞬时冲量 $J$ 除以未知碰撞时间得到的力。
+
+\exproblem{274}{43}
+质量为 $M$、边长为 $\ell$ 的均匀正方形薄板，
+绕其一条竖直侧边形成的固定轴无摩擦转动。
+质量为 $m$ 的小球以速度 $v$ 垂直薄板撞击其中心，
+发生完全弹性碰撞。
+求：(a) 小球碰后有符号速度 $v'$；
+(b) 碰后薄板轴承受到的水平合力大小。
+\exsolution
+薄板对过边的竖直轴惯量
+$I=\frac13M\ell^2$，
+撞击点距轴 $b=\ell/2$。
+设碰撞时小球对薄板冲量为 $J$，
+则小球碰后速度 $v'=v-J/m$，
+薄板角速度
+\[
+\omega=\frac{Jb}{I}.
+\]
+完全弹性的一维局部接触恢复条件为
+$b\omega-v'=v$，即
+$J(b^2/I+1/m)=2v$。
+因 $b^2/I=3/(4M)$，
+\[
+J=\frac{2v}{1/m+3/(4M)}
+=\frac{8mMv}{4M+3m}.
+\]
+于是
+\[
+\boxed{v'=v\frac{3m-4M}{3m+4M}}.
+\]
+碰后板质心距转轴 $\ell/2$，
+它以角速度 $\omega$ 作圆周运动，
+所需向心加速度为 $\omega^2\ell/2$，
+因此轴的水平合反力大小为
+\[
+F=M\omega^2\frac\ell2,\qquad
+\omega=\frac{J\ell/2}{M\ell^2/3}
+=\frac{12mv}{\ell(4M+3m)}.
+\]
+故
+\[
+\boxed{F=\frac{72Mm^2v^2}{\ell(4M+3m)^2}
+=\frac{8Mv^2}{\ell[1+4M/(3m)]^2}}.
+\]
+\excheck $v'$ 可为负，意味着小球反弹；
+碰撞时角动量关于轴守恒，但整体线动量会受轴冲量，
+不能直接令两物体的线动量守恒。
+
+\exproblem{275}{43--44}
+一根质量为 $M$、长度为 $\ell$ 的均匀细杆
+上端悬挂在固定水平铰点，初始竖直静止。
+质量为 $m$ 的子弹水平飞来击中杆下端并嵌入，
+随后杆摆过最大角度 $\alpha$。设 $m\ll M$。
+求：(a) 子弹飞来速率；
+(b) 碰撞过程中“子弹+杆”系统\emph{线动量增量}
+及其原因；(c) 为使碰撞过程中系统线动量不变，
+子弹应击中距上端多远的点 $x$？
+\exsolution
+碰撞很短，关于铰点的冲量矩为零，
+故子弹撞前角动量 $mv\ell$ 等于碰后杆子系统的
+角动量 $I\omega$，其中
+$I\simeq M\ell^2/3$，从而
+$\omega\simeq3mv/(M\ell)$。
+碰后摆起阶段机械能守恒。
+最大角处杆的质心升高
+$\frac\ell2(1-\cos\alpha)$，
+忽略 $m/M$ 高阶修正，
+\[
+\frac12I\omega^2
+=\frac12Mg\ell(1-\cos\alpha).
+\]
+联立求得
+\[
+\boxed{v\simeq\frac M m
+\sqrt{\frac{2g\ell}{3}}\sin\frac\alpha2}.
+\]
+碰后线动量主要来自杆的质心运动：
+$P_f\simeq M(\omega\ell/2)
+=\frac32mv$，碰前为 $P_i=mv$。
+故碰撞过程中的水平线动量增量
+\[
+\boxed{\Delta p\simeq\frac12mv
+=\frac M2\sqrt{\frac{2g\ell}{3}}\sin\frac\alpha2
+=M\sqrt{\frac{g\ell}{6}}\sin\frac\alpha2}.
+\]
+它由固定铰点施加的\emph{外部水平冲量}造成。
+若击中距上端为 $x$ 的位置，
+碰后 $\omega\simeq mvx/I$，
+线动量 $P_f\simeq M(\ell/2)\omega$。
+令 $P_f=mv$ 得
+\[
+\boxed{x=\frac{2I}{M\ell}\simeq\frac{2\ell}{3}}.
+\]
+\excheck 此处始终采用 $m\ll M$；
+撞击阶段不用机械能守恒，摆起阶段才使用。
+
+\exproblem{276}{44}
+一根质量为 $M$、半径为 $R$ 的均匀水平圆盘
+可绕过中心的固定竖轴自由旋转。
+盘上径向导槽中有质量为 $m$ 的小物体，
+以穿过轴心的轻绳相连。
+初始物体位于盘边缘，整体以角速度 $\omega_0$ 转动。
+随后缓慢拉绳使物体移到轴心。
+求：(a) 最后角速度；(b) 拉绳外力做功。
+\exsolution
+盘的转动惯量
+$I_d=\frac12MR^2$。
+拉绳通过竖轴，不提供关于轴的外力矩，
+故总角动量守恒：
+\[
+(I_d+mR^2)\omega_0=I_d\omega_f.
+\]
+由此
+\[
+\boxed{\omega_f=\left(1+\frac{2m}{M}\right)\omega_0}.
+\]
+缓慢操作使最终径向振动动能可忽略，
+拉绳的外力功等于系统转动动能增量：
+\[
+W=\frac12I_d\omega_f^2
+-\frac12(I_d+mR^2)\omega_0^2.
+\]
+将 $\omega_f$ 代入：
+\[
+\boxed{W=\frac12mR^2\omega_0^2
+\left(1+\frac{2m}{M}\right)}.
+\]
+\excheck 角动量守恒但动能\emph{增加}，
+多出的能量来自拉绳外力做功。
+
+\exproblem{277}{44}
+均匀水平圆盘质量为 $m_2$、半径为 $R$，
+能绕中心固定竖轴无摩擦转动。
+质量为 $m_1$ 的人站在盘边缘。
+原先整体静止，此后人沿盘边行走，
+相对于圆盘累计转过角度 $\varphi'$，
+相对于盘面的切向速率为 $v'(t)$，最后停下。
+忽略人的尺寸，求：
+(a) 圆盘相对地面转过角度 $\varphi$；
+(b) 人对圆盘施加的竖轴力矩 $N(t)$。
+\exsolution
+圆盘惯量
+$I_d=\frac12m_2R^2$。
+人在地面系中的角速度为
+$\dot\varphi+\dot\varphi'$。
+因整个系统关于竖轴无外力矩，初始角动量零：
+\[
+I_d\dot\varphi+
+m_1R^2(\dot\varphi+\dot\varphi')=0.
+\]
+所以
+$\dot\varphi=
+-\frac{m_1R^2}{I_d+m_1R^2}\dot\varphi'$。
+由零初角积分：
+\[
+\boxed{\varphi=-\frac{2m_1}{2m_1+m_2}\varphi'}.
+\]
+人对圆盘的力矩等于盘角动量变化率：
+\[
+N=I_d\ddot\varphi
+=-\frac{I_d m_1R^2}{I_d+m_1R^2}\ddot\varphi'.
+\]
+因 $v'=R\dot\varphi'$，
+\[
+\boxed{N(t)=-\frac{m_1m_2R}{2m_1+m_2}
+\frac{\mathrm dv'}{\mathrm dt}}.
+\]
+\excheck 人加速向前走时盘反向转动；
+当人减速并最终相对盘停住时两者地面系角速度
+也同时回到零，但盘可能已有非零角位移。
+
+\exproblem{278}{44}
+两个水平圆盘绕同一固定竖轴自由旋转，
+惯量分别为 $I_1,I_2$，初始角速度为
+$\omega_1,\omega_2$。
+上盘落到下盘，最终因摩擦一起以同一角速度旋转。
+求：(a) 最终角速度；(b) 此过程摩擦力做的总功。
+\exsolution
+轴无外力矩，故总角动量守恒：
+\[
+I_1\omega_1+I_2\omega_2=(I_1+I_2)\omega.
+\]
+因此
+\[
+\boxed{\omega=\frac{I_1\omega_1+I_2\omega_2}{I_1+I_2}}.
+\]
+两圆盘之间的滑动摩擦使动能损失，
+其对两盘的\emph{合计做功}等于末初动能差：
+\[
+W_f=\frac12(I_1+I_2)\omega^2
+-\frac12I_1\omega_1^2-\frac12I_2\omega_2^2.
+\]
+代入公共角速度并整理：
+\[
+\boxed{W_f=-\frac{I_1I_2}{2(I_1+I_2)}
+(\omega_1-\omega_2)^2}.
+\]
+\excheck $W_f\le0$，且仅当
+$\omega_1=\omega_2$ 时等于零；
+角动量守恒不表示转动动能守恒。
+
+\exproblem{279}{44}
+一小圆片质量为 $m$，在光滑水平面上以速度 $v$
+沿垂直于一根静止均匀细杆的方向运动，
+随后与该杆的一端发生完全弹性碰撞。
+细杆长为 $\ell$、质量为 $\eta m$，
+其中 $\eta>0$。求碰后圆片速度 $v'$、
+细杆角速度 $\omega$；
+并求圆片碰后停下或反弹的质量比条件。
+\exsolution
+设沿入射方向的碰撞冲量大小为 $J$。
+圆片碰后有符号速度
+$v'=v-J/m$。
+杆的质心平动速率
+$V=J/(\eta m)$。
+杆关于质心的惯量
+$I=\eta m\ell^2/12$，
+碰撞点距质心为 $\ell/2$，
+故其角速度大小
+\[
+\omega=\frac{J(\ell/2)}{I}
+=\frac{6J}{\eta m\ell}.
+\]
+杆端沿碰撞方向的速率为
+$V+\omega\ell/2=4J/(\eta m)$。
+弹性碰撞恢复系数为1，因而两接触点
+碰后的相对分离速率等于碰前接近速率：
+\[
+\frac{4J}{\eta m}-\left(v-\frac Jm\right)=v.
+\]
+所以 $J=\frac{2\eta m v}{4+\eta}$，
+\[
+\boxed{v'=v\frac{4-\eta}{4+\eta}},
+\qquad
+\boxed{\omega=\frac{12v}{\ell(4+\eta)}}.
+\]
+\excheck 当 $\eta=4$，$v'=0$；
+当 $\eta>4$，$v'<0$，圆片沿反方向弹回；
+$0<\eta<4$ 时圆片仍向前运动。
+
+\exproblem{280}{45}
+图1.72的水平平台 $P$ 可绕固定竖轴 $OO'$
+自由旋转；平台、电动机和配重关于此轴的惯量为 $I$。
+电动机装有轻框架，框架支承一颗可沿自身轴 $BB'$
+自由自转的均匀球 $A$；球关于任一直径的惯量为 $I_0$。
+初始 $BB'$ 与 $OO'$ 重合，
+球以自转角速度 $\omega_0$ 旋转，平台原先静止。
+电动机慢慢将自转轴 $BB'$ 从竖直方向转过
+$90^\circ$ 或 $180^\circ$，求：
+(a) 两种转角所需电动机功；
+(b) 轴转至 $90^\circ$ 后，为保持平台轴竖直
+所需外力矩的大小。
+\exsolution
+设球自转轴与竖直方向的瞬时夹角为 $\theta$，
+平台绕竖直轴的角速度为 $\Omega$。
+由于球绕自身轴\emph{自由}自转，
+平台自转对球附加的角速度
+仅为\emph{垂直于}球自转轴的分量，
+其大小为 $\Omega\sin\theta$。
+因此关于竖直轴的总角动量为
+\[
+L_z=[I+I_0\sin^2\theta]\Omega
++I_0\omega_0\cos\theta.
+\]
+系统竖直轴上无外力矩，初始
+$L_z=I_0\omega_0$，所以
+\[
+\Omega(\theta)=
+\frac{I_0\omega_0(1-\cos\theta)}
+{I+I_0\sin^2\theta}.
+\]
+转轴缓慢改变时忽略其瞬态动能，
+相对于初始纯自转的附加动能为
+\[
+\Delta K=\frac12[I+I_0\sin^2\theta]\Omega^2
+=\frac{I_0^2\omega_0^2(1-\cos\theta)^2}
+{2[I+I_0\sin^2\theta]}.
+\]
+无耗散时该增量等于电动机做功，故
+\[
+\boxed{W_{90^\circ}=
+\frac{I_0^2\omega_0^2}{2(I+I_0)}},\qquad
+\boxed{W_{180^\circ}=\frac{2I_0^2\omega_0^2}{I}}.
+\]
+在 $\theta=90^\circ$ 时平台角速度为
+$\Omega=I_0\omega_0/(I+I_0)$。
+此时球的主自转角动量
+$I_0\omega_0$ 位于水平面，
+该矢量随平台以 $\Omega$ 绕竖直轴转动，
+保持轴线方向所需外力矩大小等于其方向变化率：
+\[
+\boxed{N=I_0\omega_0\Omega
+=\frac{I_0^2\omega_0^2}{I+I_0}}.
+\]
+\excheck 若误认为球与平台绕竖直轴\emph{刚性锁定}，
+就会在 $\theta=180^\circ$ 得到错误的转动惯量；
+原题明确说球可绕 $BB'$ 自由转动，
+必须区分自转轴向和平面正交分量。
+% === END 05-rigid-body-271-280.tex ===
+
+% === BEGIN 05-rigid-body-281-289.tex blob 83c077ccaa5ad93c5408925a0f20c62a61fb6980 ===
+% Irodov, user-supplied PDF, original printed pp.45--46, PDF pp.54--55.
+% Rigid body: rotating bearings, gyroscopic precession, and rail loading.
+
+\exproblem{281}{45}
+一根质量 $m=1.40\,\mathrm{kg}$、长度
+$\ell_0=1.00\,\mathrm m$ 的均匀细杆水平放置，
+一端 $A$ 固定在竖直转轴 $OO'$ 的中点，
+可随竖轴以角速度 $\omega$ 匀速转动。
+轴上下两个轴承距离为
+$\ell=55\,\mathrm{cm}$。
+求当下轴承所受水平力为零时所需角速度，
+并求此时上轴承所受水平力大小。
+\exsolution
+杆的质心距轴 $\ell_0/2$，需要水平向心力
+$F_c=m\omega^2\ell_0/2$。
+杆重力关于轴中点产生大小
+$N_g=mg\ell_0/2$ 的倾覆力矩；
+上下轴承的水平反力形成力偶以平衡它。
+当下轴承的水平反力为零时，
+上轴承的水平力 $F_u$ 必须同时满足
+\[
+F_u=F_c=\frac12m\omega^2\ell_0,
+\qquad
+F_u\frac{\ell}{2}=mg\frac{\ell_0}{2}.
+\]
+联立得到
+\[
+\boxed{\omega=\sqrt{\frac{2g}{\ell}}
+\simeq5.97\,\mathrm{rad/s}\approx6.0\,\mathrm{rad/s}},
+\]
+\[
+\boxed{F_u=\frac{mg\ell_0}{\ell}
+\simeq25.0\,\mathrm N}.
+\]
+\excheck 杆固定在竖轴的\emph{中点}，
+上轴承到固定点的力臂是 $\ell/2$，
+不是全部轴承间距 $\ell$；
+采用正确力矩臂后得到 $25\,\mathrm N$，
+与底本书末答案一致。
+
+\exproblem{282}{45}
+长为 $\ell$、质量为 $m$ 的均匀细杆中点 $C$
+固定于竖直轴 $OO'$，
+杆与轴夹角为 $\theta$（原图1.71）。
+系统绕竖轴以恒角速度 $\omega$ 旋转。
+求：(a) 杆关于中点的角动量矢量大小、方向及其竖轴分量；
+(b) 半周内角动量矢量增量的模；
+(c) 轴承必须提供的外力矩大小。
+\exsolution
+杆对质心的转动惯量张量沿杆轴分量近似为零，
+垂直杆轴的分量
+$I_\perp=m\ell^2/12$。
+记杆方向单位矢量为 $\bm e$，
+竖直单位矢量为 $\bm k$，
+转动角速度矢量 $\bm\omega=\omega\bm k$。
+关于中点的角动量
+\[
+\bm L_C=I_\perp[
+\bm\omega-(\bm\omega\cdot\bm e)\bm e]
+=I_\perp\omega(\bm k-\cos\theta\,\bm e).
+\]
+其方向在杆与竖轴张成的平面内、垂直于杆，
+大小和竖轴投影为
+\[
+\boxed{|\bm L_C|=\frac{m\ell^2\omega}{12}\sin\theta},
+\qquad
+\boxed{L_z=\frac{m\ell^2\omega}{12}\sin^2\theta}.
+\]
+随系统转过半周，角动量的水平分量反向，
+竖直分量不变。水平分量大小为
+$I_\perp\omega\sin\theta\cos\theta$，
+故
+\[
+\boxed{|\Delta\bm L_C|
+=2I_\perp\omega|\sin\theta\cos\theta|
+=\frac{m\ell^2\omega}{12}|\sin2\theta|}.
+\]
+该水平分量以角速度 $\omega$ 旋转，
+所以轴承需要的力矩
+\[
+\boxed{N=\omega|L_{\perp,z}|
+=\frac{m\ell^2\omega^2}{24}|\sin2\theta|}.
+\]
+\excheck 这里 $L_{\perp,z}$ 表示角动量相对于
+\emph{竖轴}的水平分量。
+(c) 与本书第269题同一几何结构的连续积分应一致；
+本题书末给 $\frac1{24}$，而第269题简答给 $\frac12$，
+进一步表明后者存在系数印误。
+
+\exproblem{283}{45}
+一个陀螺质量为 $m=0.50\,\mathrm{kg}$，
+自转轴与竖直夹角 $\theta=30^\circ$，
+绕自转轴惯量 $I=2.0\,\mathrm{g\,m^2}$，
+自转角速度 $\omega=350\,\mathrm{rad/s}$。
+支点到质心的距离 $\ell=10\,\mathrm{cm}$。
+在慢进动近似下求：(a) 进动角速度；
+(b) 支点对陀螺的水平反力大小和方向。
+\exsolution
+自转主角动量模为 $L_s=I\omega$。
+重力关于支点的力矩大小为
+$N_g=mg\ell\sin\theta$。
+慢进动时 $\bm L_s$ 以角速度 $\Omega$
+绕竖直方向转动，
+其矢量变化率大小为 $\Omega L_s\sin\theta$。
+因此
+\[
+\Omega I\omega\sin\theta=mg\ell\sin\theta,
+\qquad
+\boxed{\Omega=\frac{mg\ell}{I\omega}
+\simeq0.701\,\mathrm{rad/s}}.
+\]
+质心绕竖轴以半径 $\ell\sin\theta$
+作匀速圆周运动，水平向心加速度为
+$\Omega^2\ell\sin\theta$。
+重力无水平分量，故支点水平反力为
+\[
+\boxed{F_h=m\Omega^2\ell\sin\theta
+\simeq1.23\times10^{-2}\,\mathrm N},
+\]
+方向\emph{水平指向进动圆的旋转轴}。
+\excheck 所求是慢进动模型下的支点反力，
+不等于陀螺所受重力大小；
+原书将其量级约记为 $10\,\mathrm{mN}$。
+
+\exproblem{284}{46}
+一陀螺由半径 $R=5.0\,\mathrm{cm}$ 的
+均匀圆盘及长 $\ell=10\,\mathrm{cm}$ 的轻杆组成，
+杆一端铰接在竖直向上以
+$a_0=2.0\,\mathrm{m/s^2}$ 加速的电梯地板上（图1.73）。
+圆盘以稳定角速度
+$n=0.5$ 转/秒进动。
+忽略摩擦及杆质量，求圆盘自身的角速度 $\omega$。
+\exsolution
+电梯参考系的等效重力加速度为
+$g_{\rm eff}=g+a_0$。
+均匀圆盘自转惯量
+$I=\frac12mR^2$，主角动量
+$L_s=I\omega$。
+以 $\ell$ 为力臂，重力与惯性力合力矩
+$mg_{\rm eff}\ell$ 引起慢进动，
+其角速度 $\Omega=2\pi n$，故
+\[
+\Omega I\omega=mg_{\rm eff}\ell.
+\]
+消去圆盘质量得
+\[
+\boxed{\omega=
+\frac{2(g+a_0)\ell}{R^2(2\pi n)}
+=\frac{(g+a_0)\ell}{\pi nR^2}
+\simeq3.01\times10^2\,\mathrm{rad/s}}.
+\]
+\excheck 电梯\emph{向上}加速使等效重力变大，
+因此公式必须含 $g+a_0$；原书简答与此一致。
+
+\exproblem{285}{46}
+陀螺质量 $m=1.0\,\mathrm{kg}$，
+自转轴转动惯量 $I=4.0\,\mathrm{g\,m^2}$、
+自转角速度 $\omega=310\,\mathrm{rad/s}$。
+支点固定在一水平加速的物块上，
+物块加速度大小为 $a_0=1.0\,\mathrm{m/s^2}$。
+支点到质心距离 $\ell=10\,\mathrm{cm}$。
+求陀螺稳定慢进动角速度的模及进动轴方向。
+\exsolution
+在随支点加速的非惯性系中，
+除重力 $m\bm g$ 外还有与支点水平加速方向相反的
+惯性力 $-m\bm a_0$。
+二者合成有效重力场
+$\bm g_{\rm eff}=\bm g-\bm a_0$，
+其大小
+$g_{\rm eff}=\sqrt{g^2+a_0^2}$。
+慢进动时
+$\Omega I\omega=m\ell g_{\rm eff}$，
+所以
+\[
+\boxed{\Omega=\frac{m\ell\sqrt{g^2+a_0^2}}{I\omega}
+\simeq0.796\,\mathrm{rad/s}}.
+\]
+进动轴与有效重力方向一致，
+其相对竖直的倾角为
+\[
+\boxed{\delta=\arctan(a_0/g)
+\simeq5.82^\circ\approx6^\circ},
+\]
+从竖直方向朝\emph{支点加速度的反方向}倾斜。
+\excheck 求进动速率应用有效重力场的\emph{模}，
+求进动轴方向则保留其矢量方向。
+
+\exproblem{286}{46}
+质量 $m=5.0\,\mathrm{kg}$、
+半径 $R=6.0\,\mathrm{cm}$ 的均匀实心球，
+绕穿过球心的水平轴以
+$\omega=1250\,\mathrm{rad/s}$ 自转。
+其水平轴由两个间距 $\ell=15\,\mathrm{cm}$
+的轴承支撑。整个支架绕竖直轴以
+$\Omega=5.0\,\mathrm{rad/s}$ 匀速转动。
+求轴承受到的陀螺力大小及方向关系。
+\exsolution
+均匀实心球自转惯量为
+$I=\frac25mR^2$，主自转角动量大小 $L=I\omega$。
+自转轴水平，其角动量方向随支架绕竖直轴以
+角速度 $\Omega$ 转动，
+因此角动量方向变化率与其垂直，大小
+\[
+N_{\rm gyro}=\Omega L=I\omega\Omega
+=\frac25mR^2\omega\Omega.
+\]
+轴承相距 $\ell$，
+需要一对大小相等、方向相反的横向支承力
+形成这一力偶；每端的陀螺力大小为
+\[
+\boxed{F=\frac{N_{\rm gyro}}{\ell}
+=\frac{2mR^2\omega\Omega}{5\ell}
+\simeq3.00\times10^2\,\mathrm N
+=0.30\,\mathrm{kN}}.
+\]
+\excheck 两端轴承反力方向相反，
+形成一个力偶，具体上、下方向取决于
+自转及支架转动的方向，可由
+$\bm N=\bm\Omega\times\bm L$ 判定。
+
+\exproblem{287}{46}
+陀螺圆盘质量为 $m=15\,\mathrm{kg}$、
+半径 $r=5.0\,\mathrm{cm}$，
+自转角速度为 $\omega=330\,\mathrm{rad/s}$。
+轴承间距为 $\ell=15\,\mathrm{cm}$。
+自转轴被迫绕一水平轴作小幅周期摆动，
+摆动周期 $T=1.0\,\mathrm s$、
+角振幅 $\varphi_m=20^\circ$。
+求轴承所受陀螺力的最大值。
+\exsolution
+圆盘轴向转动惯量
+$I=\frac12mr^2$，
+自转主角动量 $L=I\omega$。
+设自转轴的摆动角
+$\varphi(t)=\varphi_m\sin(2\pi t/T)$，
+那么轴线方向改变的瞬时角速度
+$|\dot\varphi|$ 最大值为 $2\pi\varphi_m/T$。
+维持这种方向变化的陀螺力矩最大值
+\[
+N_{\max}=L\frac{2\pi\varphi_m}{T}
+=\frac{\pi mr^2\omega\varphi_m}{T}.
+\]
+由轴承距 $\ell$，每端最大附加力
+\[
+\boxed{F_{\max}
+=\frac{\pi mr^2\omega\varphi_m}{\ell T}
+\simeq90\,\mathrm N=0.090\,\mathrm{kN}},
+\]
+其中 $\varphi_m=20^\circ$ 须换算为
+$0.349\,\mathrm{rad}$。
+\excheck 本题的最大陀螺力发生在角位移过零且
+角速度模最大的时刻，而不是角位移达到 $\pm\varphi_m$ 时。
+
+\exproblem{288}{46}
+轮船以 $v=36\,\mathrm{km/h}$ 沿水平圆弧航行，
+轨道半径为 $R=200\,\mathrm m$。
+船上沿船长方向布置的飞轮轴
+转动惯量为 $I=3.8\times10^3\,\mathrm{kg\,m^2}$，
+飞轮转速 $n=300$ 转/分。
+求飞轮轴承承受的陀螺力矩大小。
+\exsolution
+飞轮自转角速度为
+$\omega=2\pi n/60$（弧度每秒）。
+船体沿水平圆弧改变航向的角速度为
+$\Omega=v/R$，其中
+$v=36/3.6=10.0\,\mathrm{m/s}$。
+飞轮主自转角动量
+$L=I\omega$ 沿船长方向，
+与航向改变的竖直角速度 $\bm\Omega$ 垂直。
+轴承陀螺力矩大小
+\[
+\boxed{N=I\omega\Omega
+=\frac{2\pi nIv}{60R}
+=\frac{2\pi(300)(3.8\times10^3)(10)}{60(200)}
+\simeq5.97\times10^3\,\mathrm{N\,m}
+\approx6.0\,\mathrm{kN\,m}}.
+\]
+\excheck 力矩的方向取决于转弯方向和飞轮的自转方向，
+可用 $\bm N=\bm\Omega\times\bm L$ 确定。
+
+\exproblem{289}{46}
+一台机车沿半径 $R=250\,\mathrm m$ 的水平曲线
+以速率 $v=50\,\mathrm{km/h}$ 行驶。
+汽轮机转轴平行于车轮轴，其自转方向与车轮相同。
+汽轮机转子的轴向惯量
+$I=240\,\mathrm{kg\,m^2}$，
+转速 $n=1500$ 转/分。两轨轨距
+$\ell=1.5\,\mathrm m$。
+求陀螺效应使铁轨垂直载荷产生的附加变化量。
+\exsolution
+机车绕竖直方向转弯角速度
+$\Omega=v/R$；
+汽轮机转子角速度
+$\omega=2\pi n/60$。
+转轴水平且与航向改变的竖直轴垂直，
+故陀螺力矩大小
+$N=I\omega\Omega$。
+这一力矩由左右轨道上大小相等、方向相反
+的\emph{附加竖直反力}形成，
+以轨距 $\ell$ 为力偶臂：
+\[
+\boxed{\Delta F=\frac{N}{\ell}
+=\frac{2\pi nIv}{60R\ell}}.
+\]
+代入
+$v=50/3.6\simeq13.89\,\mathrm{m/s}$：
+\[
+\boxed{\Delta F\simeq1.40\times10^3\,\mathrm N
+=1.4\,\mathrm{kN}}.
+\]
+\excheck 由于汽轮机自转方向与车轮相同，
+按原书图示运动方向，\emph{外轨}载荷增加
+$\Delta F$、内轨载荷减少同量；
+不是两轨总载荷同时增加。
+% === END 05-rigid-body-281-289.tex ===
