@@ -168,6 +168,18 @@ CHAPTERS = (
      [f"3.2.{n}" for n in range(1, 9)]),
     ("chapters/guide-selftest03-solutions.tex", "sourcetest",
      [f"3.3.{n}" for n in range(1, 8)] + ["3.4.1"]),
+    ("chapters/guide-selftest04-choices.tex", "sourcetest",
+     [f"4.1.{n}" for n in range(1, 11)]),
+    ("chapters/guide-selftest04-blanks.tex", "sourcetest",
+     [f"4.2.{n}" for n in range(1, 11)]),
+    ("chapters/guide-selftest04-solutions.tex", "sourcetest",
+     [f"4.3.{n}" for n in range(1, 6)] + ["4.4.1"]),
+    ("chapters/guide-selftest05-choices.tex", "sourcetest",
+     [f"5.1.{n}" for n in range(1, 11)]),
+    ("chapters/guide-selftest05-blanks.tex", "sourcetest",
+     [f"5.2.{n}" for n in range(1, 10)]),
+    ("chapters/guide-selftest05-solutions.tex", "sourcetest",
+     [f"5.3.{n}" for n in range(1, 6)] + ["5.4.1"]),
     ("chapters/guide-selftest09-choices.tex", "sourcetest",
      [f"9.1.{n}" for n in range(1, 12)]),
     ("chapters/guide-selftest09-blanks.tex", "sourcetest",
@@ -207,7 +219,7 @@ def structural_check():
             for label in (r"\problemtext", r"\workings", r"\crosscheck"):
                 assert label in block, (number, label)
         total += len(ids)
-    assert total == 771, total
+    assert total == 822, total
     main_source = (ROOT / "main.tex").read_text(encoding="utf-8")
     for relative, _macro, _expected in CHAPTERS:
         stub = relative.removesuffix(".tex")
@@ -1263,6 +1275,37 @@ def fifteenth_round_regressions():
     near(8-1,7)
     near((gamma(.8)-gamma(.4))*(9.11e-31)*c*c*1e14,4.7191575897754955)
 
+
+def sixteenth_round_regressions():
+    """Self-tests 4 and 5: scan-backed 51 items; selected independent equation checks."""
+    pi=math.pi
+    near(-math.cos(3*pi/4),math.sqrt(2)/2)
+    near((4*pi/3-pi/3)/(2*pi),1/2)
+    near((4*pi/3-2*pi/3)/pi,2/3)
+    near(2*pi/(pi/2),4.0)
+    near(-15+5*math.sqrt(13),3.027756377319946)
+    near(330/4*2*pi,165*pi)
+    near(2*9.8-2*(4*pi)**2*.04,6.966906366605622)
+    near(2*9.8+2*(4*pi)**2*.04,32.23309363339438)
+    near(9.8/(4*pi)**2*100,6.206565826)
+    near((2*pi/3-pi/3)/(pi/2),2/3)
+    near(500*pi/500,pi)
+    near((330-20)/1000,.31)
+    near(3.0/5.0,0.6)
+    near(1-300/600,.5)
+    assert (1-math.pow(2,-.4))/.4 < math.log(2)
+    near(2**(1/7),math.sqrt(2**(2/7)))
+    near(1.0e23*2*3.3e-27*1e3/math.sqrt(2)/(2e-4),2333.4523779156064)
+    near(41.6/(2.5*8.31)*2,4.004813477737665)
+    near(1000*4.2*50-4.2e5,-2.1e5)
+    near(20.78+8.31,29.09)
+    near(3*8.31*500*math.log(2),8639.521688)
+    near(2.76e5/(5e25)*1.5,8.28e-21)
+    near(math.sqrt(6.7/13.2),.712482576)
+    near(6.7e-8*(293.15/288.15)*(.76/.15),3.4535711724217714e-7)
+    near(32**(2/7),2**(10/7))
+    assert 10+10+6+10+9+6 == 51
+
 if __name__ == "__main__":
     n = structural_check()
     numerical_check()
@@ -1281,6 +1324,7 @@ if __name__ == "__main__":
     thirteenth_batch_regressions()
     fourteenth_round_regressions()
     fifteenth_round_regressions()
+    sixteenth_round_regressions()
     print(f"Structure: {n} referenced worked items; all checked blocks present.")
     print("Selected numeric invariants: passed.")
     print("Not a replacement for full independent physics or copyright review.")
