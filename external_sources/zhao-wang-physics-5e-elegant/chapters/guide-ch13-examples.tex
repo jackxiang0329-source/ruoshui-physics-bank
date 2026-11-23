@@ -166,7 +166,66 @@ a\lesssim\frac{\lambda_R}{\sin\theta_{2,R}}
 \simeq8.47\times10^{-6}\,\mathrm m.
 \]
 故$\boxed{a_{\max}\simeq8.5\,\mu\mathrm m}$。
-\crosscheck \textbf{原书单位核对：}原题刻线单位是\emph{每厘米590条}，
-而不是每毫米590条。源书印刷解在第(1)问的谱角度计算使用了
-$d\simeq1.69\times10^{-4}$ cm，这与590条/cm一致；
-如误按590条/mm，角度和狭缝宽度会相差十倍。
+\crosscheck \textbf{原书题面与印刷参考解存在单位矛盾：}
+题面确实印为\emph{每厘米590条}，即上述$d\simeq16.95\,\mu$m，
+角宽约$1.015^\circ$、$a_{\max}\simeq8.47\,\mu$m。
+然而原书参考解改用$d\simeq1.69\times10^{-4}$ cm
+（即$1.69\,\mu$m、对应\emph{每毫米590条}），
+并给出首级光谱角宽约$10^\circ48'$、
+$a_{\max}\simeq0.85\,\mu$m。
+两套数值不能同时满足题面刻痕密度；
+本稿尊重题面字面解，另外保留原书答案所采用的单位假设，
+此题\emph{原书单位勘误待二校}。
+
+
+\sourceexample{13.7}{194--195}{202--203}
+\problemtext 两波长$\lambda_1=440$nm、$\lambda_2=660$nm垂直入射同一光栅，
+两者非零主明纹的\emph{第二次重合}发生在衍射角$60^\circ$，
+求光栅常量。
+\workings
+两束光在同一衍射方向重合须满足
+$k_1\lambda_1=k_2\lambda_2$，
+故
+\[
+\frac{k_1}{k_2}=\frac{660}{440}=\frac32.
+\]
+最小正整数重合是$(k_1,k_2)=(3,2)$，
+第二次非零重合为$(6,4)$。
+于是光栅方程
+$d\sin60^\circ=6(440\,\mathrm{nm})$，
+\[
+\boxed{d=\frac{2640\,\mathrm{nm}}{\sin60^\circ}
+\simeq3048\,\mathrm{nm}\simeq3.05\,\mu\mathrm m}.
+\]
+\crosscheck 这里“第二次重合”不包括两色均重合的零级中央主明纹；
+若把中央零级也计入，则整数级次会不同。
+
+\sourceexample{13.8}{195}{203}
+\problemtext 晶体晶面距$d=0.275$nm，含有波长
+$0.095$—$0.130$nm的X射线束以$45^\circ$的晶面夹角入射，
+求哪些波长能产生强烈布拉格反射。
+\workings
+由布拉格定律
+$2d\sin\theta=k\lambda$，$\theta=45^\circ$，
+\[
+\lambda_k=\frac{2(0.275)\sin45^\circ}{k}\,\mathrm{nm}
+=\frac{0.38891}{k}\,\mathrm{nm}.
+\]
+逐个检查正整数$k$：
+\[
+\begin{aligned}
+k=1&:\ 0.389\,\mathrm{nm},\\
+k=2&:\ 0.194\,\mathrm{nm},\\
+k=3&:\ 0.1296\,\mathrm{nm},\\
+k=4&:\ 0.0972\,\mathrm{nm},\\
+k=5&:\ 0.0778\,\mathrm{nm}.
+\end{aligned}
+\]
+落在原题给定范围的只有
+\[
+\boxed{\lambda_3\simeq0.130\,\mathrm{nm}},\qquad
+\boxed{\lambda_4\simeq0.097\,\mathrm{nm}}.
+\]
+\crosscheck $45^\circ$是射线与晶面的夹角（布拉格掠射角），
+不是与晶面法线的夹角；在本题恰为45度所以两种角度数值相同，
+但一般题不能混用。
