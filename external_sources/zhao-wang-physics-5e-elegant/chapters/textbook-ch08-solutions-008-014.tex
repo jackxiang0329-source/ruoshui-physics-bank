@@ -1,0 +1,191 @@
+% 《大学物理简明教程》第5版第8章，解答题8.3.8—8.3.14。
+% 源扫描及印刷第220—221页。三维图和电磁弹射模型注明条件，待独立二校。
+
+\subsection{解答题：环路定理、安培力和霍尔电压}
+
+\sourceproblem{8.3.8}{220}{220}
+\problemtext 原图8.3.8中两条穿出纸面的长直导线，
+左线电流$I_2$指向纸内，右线电流$I_1$指向纸外。
+考察分别围住左线、右线及两线的三条闭合曲线$a,b,c$：
+求各环路的$\oint\bm B\cdot d\bm l$，
+并判断各曲线上磁场是否处处相同或处处为零。
+\workings
+令逆时针为每条闭合曲线的正向（相应面法向向纸外）。
+安培环路定理给
+\[
+\boxed{\oint_a\bm B\cdot d\bm l=-\mu_0I_2},\qquad
+\boxed{\oint_b\bm B\cdot d\bm l=+\mu_0I_1},
+\]
+\[
+\boxed{\oint_c\bm B\cdot d\bm l=\mu_0(I_1-I_2)}.
+\]
+如果图题指定的环路正向与以上相反，相应积分整体变号。
+即使$|I_1|=|I_2|$使最外圈总环流为零，
+磁场一般仍由两导线叠加，\emph{不能}推出各点$B=0$；
+且非同轴环路上大小通常也不是常数。
+\crosscheck 三种闭合路径的源电流是\emph{代数和}，
+不可将它们全部取绝对值再相加。
+
+\sourceproblem{8.3.9}{220}{220}
+\problemtext 无限长、内半径$a$、外半径$b$的空心圆柱导体，
+电流$I$沿轴向且均匀分布于导体截面环形区域。
+证明在$a<r<b$处的磁感应强度公式。
+\workings
+体电流密度
+$J=I/[\pi(b^2-a^2)]$。
+取半径$r$的同轴圆形安培环路，
+包围自由电流为
+\[
+I_{\mathrm{enc}}=J\pi(r^2-a^2)
+=I\frac{r^2-a^2}{b^2-a^2}.
+\]
+由$B(r)(2\pi r)=\mu_0I_{\mathrm{enc}}$，
+\[
+\boxed{B(r)=\frac{\mu_0I}{2\pi(b^2-a^2)}
+\frac{r^2-a^2}{r}},\quad a<r<b.
+\]
+完整分段还有$B=0$（$r<a$）和
+$B=\mu_0I/(2\pi r)$（$r>b$）。
+\crosscheck 在$r=a$处场强为零，在$r=b$处连续接到无限长直导线外场公式。
+
+\sourceproblem{8.3.10}{220}{220}
+\problemtext 真空中一无限长实心圆柱导体半径$R$，
+电流$I$均匀分布于截面内。
+图8.3.10阴影为与圆柱轴平行、轴向长$L=1.0\,\mathrm m$、
+在径向从$r=0$延伸到$r=2R$的面。
+求穿过该阴影面的磁通量。
+\workings
+均匀体电流的磁场方位角方向，
+在阴影径向—轴向平面上恰垂直该面。
+由安培定理
+\[
+B(r)=
+\begin{cases}
+\mu_0Ir/(2\pi R^2),&r<R,\\
+\mu_0I/(2\pi r),&r\ge R.
+\end{cases}
+\]
+故取沿该方位磁场的有向面法线，
+\[
+\Phi=L\int_0^{2R}B(r)\,dr
+=\frac{\mu_0IL}{2\pi}
+\left[\int_0^R\frac r{R^2}\,dr+
+\int_R^{2R}\frac{dr}{r}\right].
+\]
+得到
+\[
+\boxed{\Phi=\frac{\mu_0IL}{2\pi}
+\left(\frac12+\ln2\right)}.
+\]
+\crosscheck 此处图示阴影从\emph{轴线}延至$2R$，
+故必须包括圆柱内部的$1/2$项；
+若仅取圆柱外部$R\to2R$则只有$\ln2$项。
+
+\sourceproblem{8.3.11}{220}{220}
+\problemtext 长同轴电缆由实心内导体半径$a$和空心外圆筒导体内、外半径$b,c$组成，
+电流$I$从内导体流出并由外筒以$-I$返回，两者各自均匀分布在横截面中。
+求各半径区域的磁场强度大小。
+\workings
+对半径$r$的同轴圆形安培环路，
+根据环路包围的代数电流不同逐段计算：
+\[
+I_{\mathrm{enc}}(r)=
+\begin{cases}
+I r^2/a^2,&0\le r<a,\\
+I,&a\le r<b,\\
+I\left[1-\frac{r^2-b^2}{c^2-b^2}\right],&b\le r<c,\\
+0,&r\ge c.
+\end{cases}
+\]
+故
+\[
+\boxed{B(r)=\frac{\mu_0}{2\pi r}
+\begin{cases}
+I r^2/a^2,&r<a,\\
+I,&a<r<b,\\
+I(c^2-r^2)/(c^2-b^2),&b<r<c,\\
+0,&r>c.
+\end{cases}}
+\]
+方位由内导体电流的右手法则确定。
+\crosscheck $r=a,b,c$的相邻表达式连续；
+$r>c$时包围$+I$和$-I$相消，外部场为零。
+
+\sourceproblem{8.3.12}{220--221}{220--221}
+\problemtext 图8.3.12以磁感应强度$B=0.05\,\mathrm T$的均匀横向场
+测量进入纸面的血液流速。
+血管直径$d=3\,\mathrm{mm}$，
+上下电极间霍尔电压绝对值$U_H=150\,\mu\mathrm V$；
+图示上极板为负、下极板为正。
+求血流速度，并判断净漂移载流子的电荷符号。
+\workings
+在稳定的横向电荷分离中，电力与磁力相互平衡：
+$|q|E=|q|vB$，$E=U_H/d$，因此
+\[
+\boxed{v=\frac{U_H}{Bd}
+=\frac{150\times10^{-6}}{(0.05)(3\times10^{-3})}
+=1.00\,\mathrm{m/s}}.
+\]
+图示磁场从$N$极指向$S$极，朝右；流速指向纸内。
+取$x$向右、$y$向上、$z$向纸外，
+$\bm v=-v\bm e_z,\bm B=B\bm e_x$，
+则$\bm v\times\bm B=-vB\bm e_y$，即对正电荷作用力朝下。
+下电极为正、上电极为负，故按图示的简单单载流子模型，
+迁移电荷为\textbf{正电荷}。
+\crosscheck 血液是多离子电解质，真实电极的电化学条件复杂；
+本题按均匀体电磁流量计的简化霍尔模型处理。
+
+\sourceproblem{8.3.13}{221}{221}
+\problemtext 图8.3.13两条平行金属导轨长$L$、间距$d$、
+每条导轨圆柱半径$R$，$L\gg d$。
+质量$m$的导电弹射体搭接两轨，以恒定电流$I$加速，
+从轨中点出发、再前进$L/2$离开。估算安培力及出轨速率。
+\workings
+电流经一根导轨、弹射体横杆再经另一导轨反向返回，
+在横杆处形成横向磁场。
+\emph{若将两导轨在弹射体附近近似为无限长直导线}，
+横杆上距第一轨轴线$y$的磁感应强度
+\[
+B(y)\approx\frac{\mu_0I}{2\pi}
+\left(\frac1y+\frac1{d-y}\right).
+\]
+用导轨半径作为积分截止尺度，从$y=R$至$d-R$积分，得
+\[
+\boxed{F_{\mathrm{long}}=
+I\int_R^{d-R}B(y)\,dy
+=\frac{\mu_0I^2}{\pi}
+\ln\frac{d-R}{R}}.
+\]
+假定此力沿出轨方向恒定、忽略摩擦与空气阻力，
+由功—能定理$F(L/2)=\tfrac12mv^2$，
+\[
+\boxed{v_{\mathrm{exit}}\approx
+\sqrt{\frac{F_{\mathrm{long}}L}{m}}}.
+\]
+\crosscheck \textbf{边界模型待二校}：若两导轨只向弹射体一侧延伸、
+各在横杆位置表现为\emph{半无限长}电流，则每轨的场需近似减半，
+$F$和$v$相应改变；由于题给$R$且无实际电源与端部回路详细几何，
+不得将此无限直线近似宣称成唯一精确结果。
+
+\sourceproblem{8.3.14}{221}{221}
+\problemtext 图8.3.14一根电流为$I$的弯曲导线位于均匀磁场中，
+曲线两端为$a,b$，磁场$B$垂直纸面向里。
+求整段导线所受安培合力，讨论导线形状是否影响结果。
+\workings
+安培力微元$d\bm F=I\,d\bm l\times\bm B$，
+均匀磁场可移出线积分，
+\[
+\bm F=I\int_a^b d\bm l\times\bm B
+=I\left(\int_a^b d\bm l\right)\times\bm B.
+\]
+位移积分$\int_a^b d\bm l=\bm r_b-\bm r_a$，
+故
+\[
+\boxed{\bm F=I(\bm r_b-\bm r_a)\times\bm B}.
+\]
+若端点连线在纸面内长为$\ell_{ab}$，
+由于$\bm B$垂直纸面，合力大小为
+$\boxed{F=IB\ell_{ab}}$，方向由右手法则判定。
+\crosscheck $\ell_{ab}$是两端点的\emph{直线距离}，
+不是弯曲导线的弧长；
+图中受力矢量方向取决于电流从$a$到$b$还是相反。
