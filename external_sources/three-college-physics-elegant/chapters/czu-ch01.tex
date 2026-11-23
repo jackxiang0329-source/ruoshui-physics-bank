@@ -218,3 +218,64 @@
 \bar v_{\rm speed}=70/30=7/3\,\mathrm{m/s}.
 \]
 \crosscheck 全程平均速度模为 $5/3\,\mathrm{m/s}$，小于平均速率；时间加权平均与总位移法相符。
+
+\sourceproblem{计算2}{13}{19}
+\problemtext $x=3t^2-4t,\ y=-t^3+3t$（SI），求初速度和1秒时加速度的大小、方向。
+\workings $\bm v=(6t-4)\bm i+(3-3t^2)\bm j$，初速度 $-4\bm i+3\bm j$，模 $5\,\mathrm{m/s}$，负 $x$ 轴向上偏 $\arctan(3/4)$。$\bm a=6\bm i-6t\bm j$，故 $\bm a(1)=6\bm i-6\bm j$，模 $6\sqrt2\,\mathrm{m/s^2}$，正 $x$ 轴向下偏45度。
+\crosscheck 方向分别位于第二、第四象限，不能只报反正切主值。
+\sourceproblem{计算3}{13}{19}
+\problemtext $x=3t+5,\ y=t^2/2+3t-4$（SI），求速度、加速度分量及4秒时数值。
+\workings $\bm v=3\bm i+(t+3)\bm j$，$\bm v(4)=3\bm i+7\bm j$（m/s），速率 $\sqrt{58}\,\mathrm{m/s}$。$\bm a=\bm j$（$\mathrm{m/s^2}$），4秒时仍为此矢量。
+\crosscheck 横向速度恒定、纵向速度线性变化；与华科1-T1相同位置模型，但本书问法不同。
+\sourceproblem{计算4}{13}{19}
+\problemtext $\bm a=6t\bm i+12t\bm j$（SI），初速零、初位矢 $16\bm i$，求速度、位置和轨迹。
+\workings 两次积分得 $\bm v=3t^2\bm i+6t^2\bm j$，$\bm r=(16+t^3)\bm i+2t^3\bm j$。消参得 $y=2(x-16)$（SI）；对 $t\ge0$ 有 $x\ge16$。
+\crosscheck 二次求导及初始条件全部还原；轨迹为直线的一部分。
+\sourceproblem{计算5}{13}{19}
+\problemtext $x=4t^2-2t^3$（SI），求返回原点时速度及加速度。
+\workings $x=2t^2(2-t)$，非零返回时刻 $t=2$；$v=8t-6t^2$，$a=8-12t$，得 $v=-8\,\mathrm{m/s}$，$a=-16\,\mathrm{m/s^2}$。
+\crosscheck 初始根0不计作返回；此时速度与加速度同向。
+\sourceproblem{计算6}{13}{19}
+\problemtext $a=2+6x^2$（SI），在 $x=0$ 处速率10米每秒，求速度与坐标关系。
+\workings $a=v\,\mathrm dv/\mathrm dx$，积分得
+\[
+v^2=100+4x+4x^3.
+\]
+因此 $v=\pm\sqrt{100+4x+4x^3}$（SI），只在根号非负的可达区间使用；正负由初始速度方向及是否越过转向点决定。
+\crosscheck 原书给的是速率，不是有向速度，不能擅自确定唯一正根。该位置函数单调递增，负向初速分支可在唯一零点处转向。
+\sourceproblem{计算7}{14}{20}
+\problemtext $a=-kv/m$，$k,m>0$，初始 $x=0,v=v_0>0$，求 $v(t),x(t),v(x)$ 及停止距离。
+\workings
+\[
+v=v_0e^{-kt/m},\quad x=\frac{mv_0}{k}(1-e^{-kt/m}),\quad v=v_0-\frac{k}{m}x.
+\]
+在有限时间内 $v>0$，只有 $t\to\infty$ 时速度趋零，极限距离 $mv_0/k$。
+\crosscheck 区分有限距离极限与有限时间停车；线性阻力模型没有有限停车时刻。
+\sourceproblem{计算8}{14}{20}
+\problemtext $\bm r=A_1\cos\omega t\,\bm i+A_2\sin\omega t\,\bm j$，$A_1>A_2>0$，证明椭圆轨迹且加速度指向中心。
+\workings 消参得 $x^2/A_1^2+y^2/A_2^2=1$。二次求导 $\bm a=-\omega^2\bm r$，故方向始终指向原点即椭圆中心。
+\crosscheck 椭圆中心不是一般情况下的曲率中心；加速度指向椭圆中心不表示纯法向加速度。
+\sourceproblem{计算9}{14}{20}
+\problemtext 半径 $R$ 的齿尖沿圆周运动，$s=v_0t+bt^2/2$，求速度和加速度大小。
+\workings 对 $t\ge0$ 且 $v_0,b>0$，$v=v_0+bt$，$a_\tau=b$，$a_n=(v_0+bt)^2/R$，所以 $a=\sqrt{b^2+(v_0+bt)^4/R^2}$。
+\crosscheck $b=0$ 的极限是匀速圆周运动。
+\sourceproblem{计算10}{14}{20}
+\problemtext 转子半径0.1米，角位置 $\theta=2+4t^3$，求2秒时切、法向加速度以及合加速度与径向夹45度时的角位置。
+\workings $\omega=12t^2,\alpha=24t$，$t=2$ 时 $a_\tau=4.8$，$a_n=230.4$（$\mathrm{m/s^2}$）。45度条件 $a_\tau=a_n$，非零时间满足 $24t=144t^4$，故 $t^3=1/6$，$\theta=8/3\,\mathrm{rad}$。
+\crosscheck 初始角位置为2弧度，因此相对初始位置实际转角为 $2/3$ 弧度。原书“角位移”与含常数项的角位置应区分；径向指内向半径方向。
+\sourceproblem{计算11}{15}{21}
+\problemtext 半径1米圆盘初角速度零，$\alpha=t/2$（SI），求非零时刻边缘点合加速度与径向成45度及所转弧长。
+\workings $\omega=t^2/4$，切、法向分量分别为 $t/2,t^4/16$。相等给出 $t^3=8$，故 $t=2\,\mathrm s$；转角 $\int_0^2 t^2/4\,\mathrm dt=2/3$，弧长 $2/3\,\mathrm m$。
+\crosscheck $t=0$ 时总加速度为零，方向无定义，已排除。
+\sourceproblem{计算12}{15}{21}
+\problemtext $\bm r=5\cos2t\,\bm i+5\sin2t\,\bm j$（SI），求切法向加速度。
+\workings 半径5米，角速率2弧度每秒，速率10米每秒恒定，故 $a_\tau=0$，$a_n=20\,\mathrm{m/s^2}$。
+\crosscheck 二次求导 $\bm a=-4\bm r$，大小20，指向圆心。
+\sourceproblem{计算13}{15}{21}
+\problemtext 固定圆环半径 $R$，直杆绕圆周上一固定点O匀角速转动，小环M为杆与圆环另一交点，求速度及加速度大小，分别用直角坐标和自然坐标。
+\workings 取O为原点、圆心 $(R,0)$，杆角 $\theta=\theta_0+\omega t$。非平凡交点满足 $OM=2R\cos\theta$，于是
+\[
+x=R(1+\cos2\theta),\qquad y=R\sin2\theta.
+\]
+求导得 $\bm v=2R\omega(-\sin2\theta,\cos2\theta)$，$\bm a=-4R\omega^2(\cos2\theta,\sin2\theta)$，故 $v=2R|\omega|$、$a=4R\omega^2$。自然坐标法：圆心角以角速率 $2|\omega|$ 改变，速率恒定，$a_\tau=0,a_n=v^2/R=4R\omega^2$。
+\crosscheck 两种方法一致；有限长度单向杆须满足交点位于杆上，经过切线退化位置时两交点重合，延拓需明确约束。
