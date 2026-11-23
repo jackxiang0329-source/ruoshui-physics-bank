@@ -1018,7 +1018,7 @@ def thirteenth_guide_regressions():
     near(d_cm/2*1e6,8.474576271186441)
     near(d_mm/2*1e6,.847457627118644)
     # 13.7 repeated order coincidence and 13.8 Bragg reflections.
-    near(6*440/(sin(pi/3)),3048.40972980808)
+    near(6*440/(sin(pi/3)),3048.4094213212243)
     near(2*.275*sin(pi/4)/3,.12963624321753373)
     near(2*.275*sin(pi/4)/4,.0972271824131503)
 
