@@ -98,6 +98,14 @@ CHAPTERS = (
      [f"10.3.{n}" for n in range(9, 17)]),
     ("chapters/textbook-ch10-solutions-017-023.tex", "sourceproblem",
      [f"10.3.{n}" for n in range(17, 24)]),
+    ("chapters/textbook-ch11-choices.tex", "sourceproblem",
+     [f"11.1.{n}" for n in range(1, 12)]),
+    ("chapters/textbook-ch11-blanks.tex", "sourceproblem",
+     [f"11.2.{n}" for n in range(1, 7)]),
+    ("chapters/textbook-ch11-solutions-001-009.tex", "sourceproblem",
+     [f"11.3.{n}" for n in range(1, 10)]),
+    ("chapters/textbook-ch11-solutions-010-018.tex", "sourceproblem",
+     [f"11.3.{n}" for n in range(10, 19)]),
     ("chapters/guide-ch01-examples.tex", "sourceexample",
      [f"1.{n}" for n in range(1, 6)]),
     ("chapters/guide-ch02-examples.tex", "sourceexample",
@@ -118,6 +126,8 @@ CHAPTERS = (
      [f"9.{n}" for n in range(1, 12)]),
     ("chapters/guide-ch10-examples.tex", "sourceexample",
      [f"10.{n}" for n in range(1, 9)]),
+    ("chapters/guide-ch11-examples.tex", "sourceexample",
+     [f"11.{n}" for n in range(1, 8)]),
 )
 
 
@@ -139,7 +149,7 @@ def structural_check():
             for label in (r"\problemtext", r"\workings", r"\crosscheck"):
                 assert label in block, (number, label)
         total += len(ids)
-    assert total == 500, total
+    assert total == 542, total
     main_source = (ROOT / "main.tex").read_text(encoding="utf-8")
     for relative, _macro, _expected in CHAPTERS:
         stub = relative.removesuffix(".tex")
@@ -841,6 +851,77 @@ def tenth_round_regressions():
     near((6e-5*.10)/(mu0*200*.1*5e-5),4774.64829275686)
     near(2/3-1,-1/3)
 
+
+def eleventh_round_regressions():
+    """Independent source-value checks for special relativity and induced fields."""
+    c=3e8
+    pi=math.pi
+    sqrt=math.sqrt
+    log=math.log
+    mu0=4*pi*1e-7
+    eps0=8.8541878128e-12
+    # Textbook 11.1: proper time, contraction, frame-invariant rest mass.
+    near(5/sqrt(34),.8574929257125442)
+    near(10*sqrt(1-.8**2),6)
+    near(4.59*sqrt(1-.991**2),.6144259791870786)
+    near(400*sqrt(1-.99**2),56.4241084389454)
+    near(2*1,2)
+    # Textbook 11.2: inverse Lorentz interval / lifetime / kinetic.
+    gam=1/sqrt(1-.8**2)
+    delta_x=gam*(-120+.8*c*5e-7)
+    delta_t=gam*(5e-7+.8*c*(-120)/c**2)
+    near(delta_x,0)
+    near(delta_t,3e-7)
+    near(2e-6/sqrt(1-.988**2),1.2948849481091769e-5)
+    near(sqrt(3)/2,.8660254037844386)
+    # Textbook 11.3: spacelike simultaneity, velocity addition.
+    dx=6e4;dt=-1e-4;v=c*c*dt/dx
+    near(v,-.5*c)
+    near((dx-v*dt)/sqrt(1-(v/c)**2),sqrt(dx*dx-c*c*dt*dt))
+    near(1.25*(2e-7-.6*50/c),1.25e-7)
+    near(10/sqrt(1-.8**2),50/3)
+    near(sqrt(1-(4/5)**2),.6)
+    near(4*.6*c*(5/4),3*c)
+    gamma_mu=1/sqrt(1-.998**2)
+    near(6000/gamma_mu,6000*sqrt(1-.998**2))
+    assert (.998*c*gamma_mu*2e-6)>6000
+    near(1.6/(1+.64),.975609756097561)
+    near(1.4/1.48,.9459459459459459)
+    near(sqrt(.6**2+.64**2),.8772684888436377)
+    # Textbook 11.3.10--18, energies and rest-mass balances.
+    near((1/sqrt(1-.99**2)-1)*.51,3.1052941455425107)
+    near((1/sqrt(1-.1**2)-1)*.51,.0025692857821981697)
+    near((1/sqrt(1-.9**2)-1)*.51,.6600202427398651)
+    near(1-1/1.1,.09090909090909091)
+    near((1/sqrt(1-.8**2)-1/sqrt(1-.4**2))*.51,.29354437989821963)
+    near((5e26)/(9e16),5.555555555555556e9)
+    near((2e30*9e16)/(5e26),3.6e20)
+    near(3.6e16/9e16,.4)
+    dm=(3.3437+5.0049-6.6425-1.6750)*1e-27
+    assert dm>0
+    near(dm*9e16/1.602176634e-13,17.469983899416246)
+    # Guide 11.1--7: induced emf, loop torque, displacement and Poynting flux.
+    near(mu0*5*.06*.04*.03/(2*pi*.05*(.05+.04)),1.6e-8)
+    near(sqrt(3)/4+pi/12,.694824829517211)
+    near(.5*(400e-4),.02)
+    near(.5*(400e-4)*10,.2)
+    near(.5**2*(400e-4)**2*10/2,.002)
+    near(2.0e-3*pi,.006283185307179586)
+    a=.02;b=.05;N=200;h=.03
+    L=mu0*N*N*h/(2*pi)*log(b/a)
+    near(L,mu0*N*N*h/(2*pi)*log(b/a))
+    near(.5*L*2**2,mu0*N*N*h*2**2/(4*pi)*log(b/a))
+    near(eps0*pi*.1**2*1e13,2.7816251465770537)
+    near(mu0*eps0*.1*1e13/2,5.563250293154107e-6)
+    # Guide 11.7, energy flux equals total Joule dissipation in sub-cylinder.
+    rho=.02; I0=5.; aa=.10;r=.04;length=2.
+    J=I0/(pi*aa**2)
+    E=rho*J
+    H=I0*r/(2*pi*aa**2)
+    near(E*H*2*pi*r*length,
+         (I0*r*r/aa**2)**2*(rho*length/(pi*r*r)))
+
+
 if __name__ == "__main__":
     n = structural_check()
     numerical_check()
@@ -853,6 +934,7 @@ if __name__ == "__main__":
     eighth_round_regressions()
     ninth_round_regressions()
     tenth_round_regressions()
-    print(f"Structure: {n} referenced worked items; all checked blocks present.")
+    eleventh_round_regressions()
+    printf"Structure: {n} referenced worked items; all checked blocks present.")
     print("Selected numeric invariants: passed.")
     print("Not a replacement for full independent physics or copyright review.")
