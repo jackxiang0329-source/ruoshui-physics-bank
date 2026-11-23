@@ -1,0 +1,1541 @@
+% Consolidated 21-induction from 98655b03c6d59adeb7b2c93d6e27b4e1cd8378ea; original TeX fragments preserved.
+
+% === BEGIN 21-induction-288-288.tex blob e901ba7c4048052c63ce668d1893e5dc1eff5938 ===
+% Irodov Part III §3.6 first original problem 288,
+% user PDF page 144 (printed 135), figure 3.78. 
+\electroinductionproblem{288}{135}
+图3.78：一根导线弯成抛物线
+$y=ax^2$，位于垂直图面的匀强磁场
+$\bm B$ 中。
+从 $t=0$ 开始，一根水平导电连杆
+从抛物线顶点沿 $+y$ 方向以恒定
+加速度 $w$ 平动，其两端始终接触抛物线，
+形成闭合回路。
+求感应电动势的模随连杆高度 $y$ 的关系。
+\exsolution
+由抛物线方程，
+高度为 $y$ 时两交点横坐标为
+$x_\pm=\pm\sqrt{y/a}$，
+所以连杆有效长度
+\[
+\ell(y)=x_+-x_-=2\sqrt{\frac ya}.
+\]
+连杆从静止开始以恒加速度 $w$ 运动，
+由运动学
+$v^2=2wy$，
+故
+\[
+v(y)=\sqrt{2wy}.
+\]
+因为磁场垂直回路平面，
+动生电动势的模为
+$|\mathcal E|=B\ell(y)v(y)$，
+代入可得
+\[
+|\mathcal E|=
+B\,2\sqrt{\frac ya}\sqrt{2wy}
+=2By\sqrt{\frac{2w}{a}}.
+\]
+因此
+\[
+\boxed{|\mathcal E(y)|=
+By\sqrt{\frac{8w}{a}}}.
+\]
+也可从回路面积推导：
+\[
+S(y)=\int_0^y
+2\sqrt{\frac{y'}a}\,\mathrm dy'
+=\frac4{3\sqrt a}y^{3/2},
+\quad
+|\mathcal E|=B\frac{\mathrm dS}{\mathrm dt}
+=B\frac{\mathrm dS}{\mathrm dy}v.
+\]
+两种方法完全一致。
+\excheck $a$ 在 $y=ax^2$ 中的单位为
+$\mathrm{m^{-1}}$，
+因此
+$By\sqrt{w/a}$ 的单位为伏特。
+符号由原图指定的回路正向及
+$\bm B$ 指向纸内或纸外决定；
+此处报告模。
+% === END 21-induction-288-288.tex ===
+
+% === BEGIN 21-induction-289-304.tex blob aae433ec5e7656f8bf2c05dfa9591295c796760e ===
+% Irodov Part III §3.6, original problems 289--304.
+% Source uploaded PDF printed pp.135--138 (PDF pp.144--147); answers pp.307--308.
+\electroinductionproblem{289}{135}
+图3.79中，均匀磁场 $\bm B$ 垂直矩形回路平面，长为 $\ell$ 的活动导体杆以速度 $v$ 平移，杆电阻为 $R$，左右两边导线 AB、CD 的电阻分别为 $R_1,R_2$。忽略自感，求活动杆中的电流。
+\exsolution
+运动杆上的动生电动势为 $\mathcal E=Bv\ell$。从活动杆的两端看，AB、CD 两条静止支路并联，其等效电阻为 $R_\parallel=R_1R_2/(R_1+R_2)$。因此杆的总电流
+\[
+\boxed{I_{\rm rod}=\frac{Bv\ell}{R+\dfrac{R_1R_2}{R_1+R_2}}}.
+\]
+两静止支路的分流遵守 $I_1/I_2=R_2/R_1$。
+\excheck $R_1,R_2\to\infty$ 时回路开路，电流趋零；$R=0$ 时电流由并联负载限制。方向由 $\bm v\times\bm B$ 在杆上的投影确定。
+
+\electroinductionproblem{290}{135}
+半径 $a=25\,\mathrm{cm}$ 的金属圆盘绕轴匀速转动，角速度 $\omega=130\,\mathrm{rad/s}$。求中心与边缘的电势差：(a) 无外加磁场；(b) 有垂直圆盘的均匀磁场 $B=5.0\,\mathrm{mT}$。
+\exsolution
+电子质量 $m_e$、电荷模 $e$。在无磁场时，稳态径向电场需平衡电子所需向心加速度，故电势差模
+\[
+\boxed{|\Delta\varphi_a|=\frac{m_e\omega^2a^2}{2e}
+\simeq3.0\,\mathrm{nV}}.
+\]
+(b) 磁场中圆盘半径 $r$ 处速度 $\omega r$，洛伦兹力的径向分量由静电场平衡，主要电场模 $E_r\simeq\omega rB$，从而
+\[
+\boxed{|\Delta\varphi_b|\simeq
+\int_0^a\omega rB\,\mathrm dr
+=\frac{\omega Ba^2}{2}\simeq20\,\mathrm{mV}}.
+\]
+\excheck (b) 中电子惯性对应的 nV 量级远小于磁动生电压的 mV 量级；电压符号需另按 $\bm\omega$ 与 $\bm B$ 的相对方向确定。
+
+\electroinductionproblem{291}{135}
+直径为 $d=20\,\mathrm{cm}$ 的半圆形细导线 AC 绕经过端点 A、且垂直直径 AC 的轴以 $\omega=100\,\mathrm{rad/s}$ 转动，均匀磁场 $B=5.0\,\mathrm{mT}$，$\bm\omega$ 与 $\bm B$ 同向。求沿导线 A 至 C 的 $\int_A^C\bm E_{\rm eff}\cdot\mathrm d\bm r$，并推广至其它形状的连接导线。
+\exsolution
+匀速转动导线上一点 $\bm r$ 的速度为 $\bm v=\bm\omega\times\bm r$；导体有效驱动力场为 $\bm v\times\bm B$。当 $\bm\omega\parallel\bm B$ 时，沿离转轴垂距 $r$ 的径向分量为 $\omega Br$。因此线积分只依赖两个端点到转轴的距离：
+\[
+\int_A^C(\bm v\times\bm B)\cdot\mathrm d\bm\ell
+=\frac{\omega B}{2}(r_C^2-r_A^2).
+\]
+按原图从 A 至 C 的正向与场方向相反，$r_A=0,\ r_C=d$，所以
+\[
+\boxed{\int_A^C\bm E_{\rm eff}\cdot\mathrm d\bm r
+=-\frac12\omega Bd^2=-10\,\mathrm{mV}}.
+\]
+\excheck 路径可以弯曲，结果只取决于端点到转轴的距离及积分方向；$\bm E_{\rm eff}$ 指运动电动势场，不能将其与单纯静电保守场混淆。
+
+\electroinductionproblem{292}{135--136}
+图3.80中半径 $a$ 的半圆形回路位于均匀磁场半空间的边界，磁场垂直图面。回路自 $t=0$ 起绕边界处的 O 轴以恒角加速度 $\beta$ 转动。求感应电动势 $\mathcal E(t)$ 并说明图形。
+\exsolution
+角位移为 $\theta(t)=\beta t^2/2$，角速度 $\dot\theta=\beta t$。每转过半周，半圆回路与有磁场的半空间重叠的面积随转角在 $0$ 和 $\pi a^2/2$ 之间线性变化，故除边界瞬间外
+$|\mathrm dS_{\rm overlap}/\mathrm d\theta|=a^2/2$。由法拉第定律
+\[
+|\mathcal E|=B\left|\frac{\mathrm dS_{\rm overlap}}{\mathrm dt}\right|
+=\boxed{\frac12Ba^2\beta t}.
+\]
+按图给定正向，令 $n=1,2,\ldots$ 表示当前第 $n$ 个半周，则
+\[
+\boxed{\mathcal E(t)=\frac12(-1)^n Ba^2\beta t}.
+\]
+符号切换时刻由 $\beta t_n^2/2=n\pi$ 给出：
+$\boxed{t_n=\sqrt{2\pi n/\beta}}$。
+\excheck 图线是模随时间线性增大、符号在每个半周转换处跳变的交替锯齿形；$Ba^2\beta t$ 的单位为 V。
+
+\electroinductionproblem{293}{136}
+图3.81的无限长直线电流 $I$ 与回字形导轨共面，导轨中长度 $\ell$、电阻 $R$ 的活动杆以速度 $v$ 远离直导线，杆距直导线 $r$。忽略导轨电阻和自感，求感应电流。
+\exsolution
+直导线在距轴 $r$ 的磁感应强度
+$B(r)=\mu_0I/(2\pi r)$，垂直回路平面。活动杆位于固定距离 $r$，整根杆运动电动势
+$\mathcal E=B(r)\ell v$，因此
+\[
+\boxed{I_{\rm ind}(r)=\frac{\mu_0I\ell v}{2\pi Rr}}.
+\]
+由楞次定律，随杆右移，原直导线贯穿回路的磁通量减少，感生电流必须产生同向磁场；方向由原图中直导线电流向上时的右手定则确定。
+\excheck $I_{\rm ind}\propto1/r$，不是 $1/r^2$，因为动生电动势取活动杆所在位置的局部磁场。
+
+\electroinductionproblem{294}{136}
+图3.82边长为 $a$ 的正方形线框与长直电流 $I$ 共面，线框以速度 $v$ 远离直导线，其靠近直导线的边与导线距离为 $x$。求线框感应电动势。
+\exsolution
+穿过线框的磁通量（以固定法向计）
+\[
+\Phi(x)=\int_x^{x+a}\frac{\mu_0I}{2\pi r}a\,\mathrm dr
+=\frac{\mu_0Ia}{2\pi}\ln\frac{x+a}{x}.
+\]
+因此
+\[
+\mathcal E=-\frac{\mathrm d\Phi}{\mathrm dt}
+=-\frac{\mu_0Iav}{2\pi}
+\left(\frac1{x+a}-\frac1x\right).
+\]
+模为
+\[
+\boxed{|\mathcal E|=\frac{\mu_0Ia^2v}{2\pi x(x+a)}}.
+\]
+\excheck 书末答案的 PDF 文本抽取在 $a^2$ 位置可能漏掉平方，依据磁通积分和单位 $[\mathcal E]=\mathrm V$ 必须为 $a^2$。
+
+\electroinductionproblem{295}{136}
+图3.83中质量为 $m$、长度为 $a$ 的金属杆可绕水平轴 O 在半径为 $a$ 的圆形导轨上滑动，垂直纸面的恒定磁场为 $B$，回路电阻 $R$。求为使杆以恒角速度 $\omega$ 转动，所需电源电动势随时间的变化；忽略摩擦、自感与轨道电阻。
+\exsolution
+转动杆的动生电动势为
+$\mathcal E_{\rm mot}=\int_0^aB\omega r\,\mathrm dr=B\omega a^2/2$。杆电流的磁力矩为
+$\tau_m=\int_0^aIBr\,\mathrm dr=IBa^2/2$。
+杆的重力矩按图示转角 $\omega t$ 为
+$\tau_g=(mga/2)\sin\omega t$。
+恒角速度意味着净力矩为零，故所需电流
+$I=mg\sin\omega t/(Ba)$。
+回路电源应补偿电阻电压降和动生电动势：
+\[
+\boxed{\mathcal E(t)=\frac{B\omega a^2}{2}
++\frac{mgR}{Ba}\sin\omega t
+=\frac{B^2\omega a^2+2mgR\sin\omega t}{2Ba}}.
+\]
+\excheck 与原书答案第295题一致；电动势可能在某些相位反号，表示电源需要反向吸收能量。
+
+\electroinductionproblem{296}{136--137}
+图3.84中质量为 $m$ 的铜质活动杆沿与水平夹角为 $\alpha$ 的两根光滑导轨下滑，导轨间距为 $\ell$，顶部用电阻 $R$ 连接，均匀磁场 $B$ 垂直导轨平面。忽略其它电阻及自感，求最终稳定速度。
+\exsolution
+沿导轨运动速度 $v$ 产生电动势
+$\mathcal E=B\ell v$，回路电流 $I=B\ell v/R$。磁阻力
+$F_m=BI\ell=B^2\ell^2v/R$，沿斜面向上。稳定时
+$mg\sin\alpha=F_m$，故
+\[
+\boxed{v_\infty=\frac{mgR\sin\alpha}{B^2\ell^2}}.
+\]
+\excheck 该结果与斜面加速度的终态 $0$ 相符；$R\to0$ 时强磁阻尼使终速趋零。
+
+\electroinductionproblem{297}{137}
+将第296题的顶部电阻 $R$ 换成电容 $C$，其余条件相同。求活动杆下滑的加速度。
+\exsolution
+活动杆的动生电动势为
+$V_C=B\ell v$。电容电荷
+$Q=CV_C=CB\ell v$，所以回路瞬时电流
+$I=\dot Q=CB\ell a$。该电流在活动杆上产生向上磁阻力
+$F_m=B\ell I=CB^2\ell^2a$。
+沿导轨方向应用牛顿第二定律：
+$ma=mg\sin\alpha-CB^2\ell^2a$。
+解得
+\[
+\boxed{a=\frac{g\sin\alpha}{1+CB^2\ell^2/m}}.
+\]
+\excheck 电容产生的力与加速度而不是速度成正比；由量纲 $CB^2\ell^2$ 是质量。
+
+\electroinductionproblem{298}{137}
+图3.85半径为 $a$ 的半圆形导线绕轴 OO' 以角速度 $\omega$ 在与转轴垂直的均匀磁场 $B$ 中旋转，整个闭合回路电阻为 $R$。忽略感应电流的磁场，求一周期内平均焦耳热功率。
+\exsolution
+半圆所围面积为 $S=\pi a^2/2$，绕直径轴旋转使磁通为
+$\Phi(t)=BS\cos\omega t$（取合适初相）。法拉第电动势
+$\mathcal E=BS\omega\sin\omega t$。
+于是
+\[
+\overline P=\frac{\overline{\mathcal E^2}}R
+=\frac{B^2S^2\omega^2}{2R}
+=\boxed{\frac{\pi^2a^4B^2\omega^2}{8R}}.
+\]
+\excheck $\overline{\sin^2\omega t}=1/2$；结果依赖半圆面积平方，而非整圆面积。
+
+\electroinductionproblem{299}{137}
+小线圈截面积 $S=3.0\,\mathrm{mm^2}$、匝数 $N=60$，初始轴线平行于磁极间均匀磁场，将线圈绕其直径翻转 $180^\circ$，与其相连的冲击电流计累计电荷为 $q=4.5\,\mathrm{\mu C}$。总回路电阻 $R=40\,\Omega$，求 $B$。
+\exsolution
+翻转前磁链为 $+NBS$，翻转后为 $-NBS$，磁链变化量大小 $2NBS$。对感应电路积分：
+$q=\int I\,\mathrm dt=R^{-1}\int\mathcal E\,\mathrm dt=2NBS/R$。
+因此
+\[
+\boxed{B=\frac{qR}{2NS}}
+=\frac{4.5\times10^{-6}\times40}
+{2\times60\times3.0\times10^{-6}}
+=\boxed{0.50\,\mathrm T}.
+\]
+\excheck 电流计只记录翻转全过程累计电荷，不要求已知翻转速度。
+
+\electroinductionproblem{300}{137}
+图3.86边长为 $a$ 的正方形线框与长直导线电流 $I$ 共面，线框绕距长导线为 $b$ 的 OO' 轴转动 $180^\circ$；线框电阻 $R$、自感 $L$。求全过程流过线框的电荷。
+\exsolution
+直导线在距它 $r$ 处的场为
+$B(r)=\mu_0I/(2\pi r)$。按图示轴线穿过正方形中心，前后有向通量分别为
+$\Phi_i=(\mu_0Ia/2\pi)\ln[(b+a)/(b-a)]/2$ 与
+$\Phi_f=-\Phi_i$（以图所用 $a$、$b$ 的长度约定），因而
+$|\Delta\Phi|=(\mu_0Ia/2\pi)\ln[(b+a)/(b-a)]$。
+回路满足
+$L\dot I+RI=-\dot\Phi_{\rm ext}$。
+初、末稳态回路电流均为零，积分得
+$Rq=-\Delta\Phi$，故
+\[
+\boxed{|q|=\frac{\mu_0Ia}{2\pi R}
+\ln\frac{b+a}{b-a}}.
+\]
+\excheck 本题全部过程累计电荷与自感 $L$ 无关；要求 $b>a$，否则线框会与直导线相交。
+
+\electroinductionproblem{301}{138}
+图3.87长直导线电流 $I_0$；位于其同一平面内的两平行导轨距直导线分别为 $a,b$，活动杆以恒速 $v$ 滑动，回路电阻 $R$。忽略其余电阻及自感，求 (a) 感应电流大小与方向；(b) 维持匀速所需外力。
+\exsolution
+磁场 $B(r)=\mu_0I_0/(2\pi r)$，活动杆从 $r=a$ 到 $r=b$，运动电动势
+\[
+|\mathcal E|=v\int_a^bB(r)\,\mathrm dr
+=\frac{\mu_0I_0v}{2\pi}\ln\frac ba.
+\]
+因此
+\[
+\boxed{I_{\rm ind}=\frac{\mu_0I_0v}{2\pi R}\ln\frac ba}.
+\]
+由楞次定律感应电流在活动杆上产生阻碍其平动的磁力：
+\[
+F=I_{\rm ind}\int_a^bB(r)\,\mathrm dr
+=\boxed{\frac vR\left(
+\frac{\mu_0I_0}{2\pi}\ln\frac ba
+\right)^2}.
+\]
+\excheck $Fv=I_{\rm ind}^2R$，严格满足机械功率转变为焦耳热。
+
+\electroinductionproblem{302}{138}
+图3.88一根质量 $m$、长 $\ell$ 的活动导体杆 AB 初速度为 $v_0$，在均匀磁场 $B$ 中沿无摩擦导轨滑动，导轨左端接电阻 $R$，忽略其他电阻及自感。求 (a) 直到停下的总位移；(b) 电阻产生的热量。
+\exsolution
+电流 $I=B\ell v/R$；安培阻力为
+$F=-B\ell I=-B^2\ell^2v/R$，故
+\[
+m\dot v=-\frac{B^2\ell^2}{R}v,\qquad
+v(t)=v_0e^{-t/\tau},\quad
+\tau=\frac{mR}{B^2\ell^2}.
+\]
+总位移
+\[
+\boxed{s=\int_0^\infty v(t)\,\mathrm dt
+=v_0\tau=\frac{mRv_0}{B^2\ell^2}}.
+\]
+动能最终全部变为焦耳热：
+\[
+\boxed{Q=\frac12mv_0^2}.
+\]
+\excheck 可直接验证
+$\int_0^\infty I(t)^2R\,\mathrm dt
+=\frac12mv_0^2$。
+
+\electroinductionproblem{303}{138}
+图3.89活动杆 AB 长 $\ell$、质量 $m$、电阻 $R$，在水平无摩擦导轨上受恒力 $F$ 向右运动，处于垂直导轨的均匀磁场 $B$ 中，初始静止。忽略自感和导轨电阻，求 $v(t)$。
+\exsolution
+运动中的磁感生电流为
+$I=B\ell v/R$，阻尼安培力
+$F_m=B^2\ell^2v/R$ 与运动反向。
+运动方程
+\[
+m\dot v=F-\frac{B^2\ell^2}{R}v.
+\]
+设 $\gamma=B^2\ell^2/(mR)$，初值 $v(0)=0$，解得
+\[
+\boxed{v(t)=\frac{F}{m\gamma}
+(1-e^{-\gamma t})
+=\frac{FR}{B^2\ell^2}
+\left(1-e^{-B^2\ell^2t/(mR)}\right)}.
+\]
+\excheck 初始加速度 $F/m$，终速 $FR/(B^2\ell^2)$。
+
+\electroinductionproblem{304}{138}
+图3.90(a)—(d)为位于纸面内的导线闭合结构，向纸内的均匀磁场开始减小。判断感生电流方向。
+\exsolution
+楞次定律：穿过任一有效闭合导电区域、方向\emph{指向纸内}的磁通正在减少，感生电流需产生\emph{同样指向纸内}的磁场，因此有效闭合环路电流沿顺时针。需进一步看连接结构：
+(a) 圆周沿顺时针，穿过中心的直连导线因上下对称与两半环电势差相同，没有电流。
+(b) 图3.90(b)的外闭合环顺时针。
+(c) 两个同心闭合环均顺时针，径向短接导线中无电流。
+(d) “8”字形两个环的有向边界相反，原图以左环顺时针为正，因此左环为顺时针，右环为逆时针。
+\excheck 判断每一独立回路的实际拓扑，而不能把每一段导线都无条件标为顺时针；(a)(c)中的桥接支路因对称不传输电荷。
+% === END 21-induction-289-304.tex ===
+
+% === BEGIN 21-induction-305-322.tex blob 7a15f9fc5fc109d0e3c0b4d6047202905a5071a5 ===
+% Irodov Part III §3.6 original problems 305--322, source printed pp.139--141,
+% PDF 148--150; corresponding source answers printed pp.308--309.
+\electroinductionproblem{305}{139}
+图3.91平面回路由边长 $a=20\,\mathrm{cm}$ 和 $b=10\,\mathrm{cm}$ 的两个方形回路组成，处于垂直纸面的变化磁场 $B=B_0\sin\omega t$，$B_0=10\,\mathrm{mT}$、$\omega=100\,\mathrm{s^{-1}}$。导线单位长度电阻为 $\rho=50\,\mathrm{m\Omega/m}$。忽略自感，求感生电流振幅。
+\exsolution
+按图3.91的绕线方向，两个方环的有向面积相减，有效磁通面积 $A_{\rm eff}=a^2-b^2$。两环总导线长为 $4(a+b)$，电阻 $R_{\rm loop}=4\rho(a+b)$。磁通量为 $\Phi=(a^2-b^2)B_0\sin\omega t$，故电动势振幅
+$\mathcal E_m=\omega B_0(a^2-b^2)$。电流振幅
+\[
+\boxed{I_m=\frac{\omega B_0(a^2-b^2)}{4\rho(a+b)}
+=\frac{\omega B_0(a-b)}{4\rho}
+=0.50\,\mathrm A}.
+\]
+\excheck 要按图判断两方环有向面积相减，否则错用 $a^2+b^2$；分母的导线长度也是两个方环周长之和。
+
+\electroinductionproblem{306}{139}
+紧密绕制、匝数很多的单层平面螺旋，外圈半径为 $a$，总匝数为 $N$。均匀磁场垂直螺旋平面且 $B(t)=B_0\sin\omega t$，求感应电动势振幅。
+\exsolution
+密绕螺旋的每匝半径近似从零至 $a$ 均匀分布，每匝所围面积为 $\pi r^2$。匝数密度为 $\mathrm dN=N\,\mathrm dr/a$，总磁链
+\[
+\Psi=B(t)\int_0^a\pi r^2\frac Na\,\mathrm dr
+=B(t)\frac{\pi Na^2}{3}.
+\]
+法拉第定律 $\mathcal E=-\dot\Psi$ 给
+\[
+\boxed{\mathcal E_m=\frac{\pi Na^2\omega B_0}{3}}.
+\]
+\excheck 不能直接用 $N\pi a^2$，因为内圈面积比外圈小；均方半径为 $a^2/3$。
+
+\electroinductionproblem{307}{139}
+U 形导轨位于磁场垂直纸面的区域，磁感应强度随时间以 $\dot B=0.10\,\mathrm{T/s}$ 均匀增加。长为 $\ell=20\,\mathrm{cm}$ 的活动杆从静止开始以 $w=10\,\mathrm{cm/s^2}$ 加速滑动，且 $t=0$ 时回路面积与磁场均为零。求 $t=2.0\,\mathrm s$ 时感应电动势。
+\exsolution
+活动杆位移 $x=wt^2/2$，回路面积 $S=\ell wt^2/2$。磁场 $B=\dot B\,t$，所以
+$\Phi=BS=\dot B\,\ell w t^3/2$。由法拉第定律
+\[
+\boxed{|\mathcal E(t)|=\left|\frac{\mathrm d\Phi}{\mathrm dt}\right|
+=\frac32\dot B\,\ell w t^2}.
+\]
+代入 $t=2$ s：
+$\boxed{|\mathcal E|=0.012\,\mathrm V=12\,\mathrm{mV}}$。
+\excheck 磁通量对时间的导数既包含 $\dot B S$，也包含 $B\dot S$；只计算其中一项会错系数。
+
+\electroinductionproblem{308}{139}
+无限长密绕螺线管半径为 $a$，单位长度匝数 $n$，其电流按恒定速率 $\dot I$ 变化。求涡旋感生电场大小随离轴距离 $r$ 的关系并画出定性变化。
+\exsolution
+理想螺线管内部 $B=\mu_0nI$，外部磁场近似为零。取半径 $r$ 的同轴圆周为法拉第环路。对 $r<a$：
+\[
+2\pi rE_\varphi=\left|\frac{\mathrm d}{\mathrm dt}(B\pi r^2)\right|
+=\pi r^2\mu_0n|\dot I|,
+\quad \boxed{E_\varphi=\frac12\mu_0n|\dot I|r}.
+\]
+对 $r>a$，磁通只通过管截面：
+\[
+2\pi rE_\varphi=\pi a^2\mu_0n|\dot I|,
+\quad\boxed{E_\varphi=\frac{\mu_0n|\dot I|a^2}{2r}}.
+\]
+\excheck $E_\varphi$ 在 $r=a$ 连续；内部按 $r$ 上升，外部按 $1/r$ 下降。此处电场非保守，环流非零。
+
+\electroinductionproblem{309}{139}
+很长螺线管直径 $d=5.0\,\mathrm{cm}$，单位长度匝数 $n=20/\mathrm{cm}$，线圈电流以 $\dot I=100\,\mathrm{A/s}$ 增加。在螺线管上紧套一圈铜线，其截面积 $S=1.0\,\mathrm{mm^2}$，忽略该圈自感，求感生电流。
+\exsolution
+线圈内部磁场变化率
+$\dot B=\mu_0n\dot I$。单匝围面积 $\pi d^2/4$，
+其感生电动势
+$\mathcal E=(\pi d^2/4)\mu_0n|\dot I|$。
+铜圈长度近似 $\pi d$，电阻
+$R=\rho_{\rm Cu}\pi d/S$，其中 $\rho_{\rm Cu}$ 为电阻率。于是
+\[
+\boxed{I_{\rm ind}=\frac{\mu_0ndS|\dot I|}{4\rho_{\rm Cu}}}.
+\]
+取铜电阻率 $1.7\times10^{-8}\,\Omega\cdot\mathrm m$，
+数值 $\boxed{I_{\rm ind}\simeq2.0\,\mathrm{mA}}$。
+\excheck 题目并未明给铜电阻率，数值需声明采用常温近似；导线截面积 $S$ 不等于螺线管横截面积。
+
+\electroinductionproblem{310}{139}
+长螺线管半径为 $a$，其外紧套一圈细绝缘导线闭环，两段半圆形导线中，一段电阻是另一段的 $\eta$ 倍。螺线管磁场按 $B(t)=bt$ 变化，求环中建立的静电场大小。
+\exsolution
+电磁感应产生的环向非保守电场
+$E_{\rm ind}=-ab/2$（选择有向环路）。
+一圈总电动势为 $|\mathcal E|=\pi a^2|b|$。
+两半环长度相同但电阻分别为 $R_0,\eta R_0$，
+因此各段\emph{总驱动力场}大小按其分担的电压成比例，
+分别为
+$E_{{\rm tot},1}=ab/(1+\eta)$、
+$E_{{\rm tot},2}=ab\eta/(1+\eta)$。
+总驱动力场是非保守感生电场与由面电荷建立的保守静电场之和；故静电场在两半环的大小相同、方向相反，
+\[
+\boxed{E_{\rm es}=\frac{|ab|}{2}
+\frac{|\eta-1|}{\eta+1}}.
+\]
+\excheck $\eta=1$ 时两段相同，无需额外静电场重新分配感生驱动力，故 $E_{\rm es}=0$；必须区分静电场与总驱动力场。
+
+\electroinductionproblem{311}{139}
+质量为 $m$、总电荷 $q$ 的薄绝缘圆环可绕自身轴自由转动。初始静止且无磁场，此后垂直环面的磁场从零按任意 $B(t)$ 增强。求角速度 $\omega(t)$。
+\exsolution
+设圆环半径为 $a$。法拉第定律给环周涡旋场
+$E_\varphi(a)=-a\dot B/2$。圆环受电力矩
+$\tau=qE_\varphi(a)a=-qa^2\dot B/2$。
+薄圆环转动惯量 $J=ma^2$，由
+$J\dot\omega=\tau$，
+\[
+\dot\omega=-\frac q{2m}\dot B.
+\]
+初始 $\omega(0)=B(0)=0$，积分得到
+\[
+\boxed{\omega(t)=-\frac q{2m}B(t)}.
+\]
+\excheck 半径消去；角速度符号依圆环电荷与磁场正方向而定。
+
+\electroinductionproblem{312}{140}
+长为 $\ell$、截面半径为 $b$ 的螺线管内部，同轴放一电阻为 $r$、半径为 $a$ 的细金属环。螺线管突然接电压 $V$ 的直流电源，电源及螺线管总电阻为 $R$。忽略小环自感，求小环每单位长度所受径向磁力的最大值。
+\exsolution
+设螺线管共有 $N$ 匝，自感
+$L_s=\mu_0N^2\pi b^2/\ell$。主电流
+$I_s(t)=(V/R)(1-e^{-tR/L_s})$，
+主磁场
+$B(t)=\mu_0NI_s(t)/\ell$。
+环内磁通 $\Phi=\pi a^2B$，
+感应电流
+$|I_r(t)|=(\pi a^2/r)\dot B
+=(a^2V/(rNb^2))e^{-tR/L_s}$。
+环的径向安培力单位长度模
+$f(t)=B(t)|I_r(t)|$，故
+\[
+f(t)=\frac{\mu_0a^2V^2}{rR\ell b^2}
+(1-e^{-u})e^{-u},\quad u=tR/L_s.
+\]
+$x(1-x)$ 于 $x=e^{-u}=1/2$ 最大值为 $1/4$，所以
+\[
+\boxed{f_{\max}=\frac{\mu_0a^2V^2}{4rR\ell b^2}}.
+\]
+\excheck 螺线管匝数 $N$ 最终消去；最大值在 $t=(L_s/R)\ln2$，而不是电流刚建立或最终稳定时。
+
+\electroinductionproblem{313}{140}
+固定闭合导线回路的电阻为 $R$。在 $0\le t\le\tau$ 内穿过回路的磁通量
+$\Phi(t)=at(\tau-t)$，忽略自感，求这段时间内的焦耳热。
+\exsolution
+由法拉第定律
+$\mathcal E=-\dot\Phi=-a(\tau-2t)$，
+$I=\mathcal E/R$。
+故
+\[
+Q=\int_0^\tau I^2R\,\mathrm dt
+=\frac{a^2}R\int_0^\tau(\tau-2t)^2\,\mathrm dt.
+\]
+积分
+$\int_0^\tau(\tau-2t)^2\,\mathrm dt=\tau^3/3$，因此
+\[
+\boxed{Q=\frac{a^2\tau^3}{3R}}.
+\]
+\excheck 虽然首末磁通均为零，过程中的感应电流正负变向，但焦耳热是正值。
+
+\electroinductionproblem{314}{140}
+长螺线管中央同轴放置一个矩形截面导体圆环，内外半径为 $a,b$，轴向厚度为 $h$，材料电阻率为 $\rho$。螺线管磁场按 $B(t)=\beta t$ 变化。忽略环自身电感，求总环向感应电流。
+\exsolution
+对半径为 $r$ 的圆周，非保守感生场
+$E_\varphi(r)=-r\beta/2$。
+材料的环向电流密度模为
+$j_\varphi(r)=|E_\varphi|/\rho=|\beta|r/(2\rho)$。
+各半径薄层并联通过径向截面面积
+$\mathrm dS=h\,\mathrm dr$，
+总电流
+\[
+I=\int_a^bj_\varphi(r)h\,\mathrm dr
+=\frac{|\beta|h}{2\rho}\frac{b^2-a^2}{2}.
+\]
+因此
+\[
+\boxed{|I|=\frac{|\beta|h(b^2-a^2)}{4\rho}}.
+\]
+\excheck 本题环是具有有限径向厚度的\emph{实体导电圆环}，不能当作单根半径平均值的细导线。
+
+\electroinductionproblem{315}{140}
+要制作长度为 $\ell_0=100\,\mathrm{cm}$、自感为 $L=1.0\,\mathrm{mH}$ 的长直细螺线管，直径远小于长度，问需用多长细导线？
+\exsolution
+令总匝数为 $N$、半径为 $R$，导线总长近似为 $s=2\pi RN$。长螺线管自感
+\[
+L=\frac{\mu_0N^2\pi R^2}{\ell_0}
+=\frac{\mu_0s^2}{4\pi\ell_0}.
+\]
+解得
+\[
+\boxed{s=\sqrt{\frac{4\pi\ell_0L}{\mu_0}}
+\simeq1.0\times10^2\,\mathrm m}.
+\]
+\excheck $4\pi/\mu_0=10^7\,\mathrm{H^{-1}m^{-1}}$，
+$\ell_0L=10^{-3}\,\mathrm{H\,m}$，故根号下为 $10^4\,\mathrm{m^2}$，得 $100$m；原书答案若印 $1.10\,\mathrm{km}$，需重新核对公式的符号与数值，不能在译稿中掩盖这一矛盾。
+
+\electroinductionproblem{316}{140}
+一个长直螺线管长度为 $\ell$，绕线全部由质量 $m$ 的铜丝制成，铜丝总电阻为 $R$，且螺线管直径远小于长度。求自感 $L$；铜电阻率为 $\rho$，材料密度为 $\rho_m$。
+\exsolution
+设铜丝长度为 $s$、截面积为 $A$，
+质量 $m=\rho_mAs$，
+电阻 $R=\rho s/A$。相乘：
+$mR=\rho_m\rho s^2$，所以
+$s^2=mR/(\rho_m\rho)$。
+长直单层密绕螺线管自感可写成
+$L=\mu_0s^2/(4\pi\ell)$，于是
+\[
+\boxed{L=\frac{\mu_0mR}{4\pi\ell\rho\rho_m}}.
+\]
+\excheck 电阻率 $\rho$ 与材料\emph{质量密度} $\rho_m$ 量纲不同，不可混用。
+
+\electroinductionproblem{317}{140}
+自感为 $L=300\,\mathrm{mH}$、电阻为 $R=140\,\mathrm{m\Omega}$ 的线圈接直流恒压源，求电流达到稳态值的 $\eta=50\%$ 所需时间。
+\exsolution
+串联 RL 回路方程
+$L\dot I+RI=\mathcal E$，
+初始电流零时
+$I(t)=I_\infty(1-e^{-Rt/L})$，
+其中 $I_\infty=\mathcal E/R$。
+令 $I/I_\infty=\eta$，
+\[
+\boxed{t=-\frac LR\ln(1-\eta)}.
+\]
+代入 $L=0.300$H、$R=0.140\,\Omega$、$\eta=0.50$，
+$\boxed{t\simeq1.5\,\mathrm s}$。
+\excheck 线圈电阻是 $140$mΩ 而非 $140$Ω，否则时间差千倍。
+
+\electroinductionproblem{318}{140}
+长 $\ell=1.0\,\mathrm m$ 的直螺线管由质量 $m=1.0\,\mathrm{kg}$ 的单层铜线绕成，直径远小于长度，求 RL 时间常数 $\tau=L/R$。
+\exsolution
+由第316题的结果
+$L=\mu_0mR/(4\pi\ell\rho\rho_m)$，
+故
+\[
+\boxed{\tau=\frac LR=\frac{\mu_0m}{4\pi\ell\rho\rho_m}}.
+\]
+取铜电阻率
+$\rho\simeq1.7\times10^{-8}\,\Omega\cdot\mathrm m$、
+密度 $\rho_m\simeq8.9\times10^3\,\mathrm{kg/m^3}$，得到
+\[
+\boxed{\tau\simeq6.6\times10^{-4}\,\mathrm s
+\approx0.7\,\mathrm{ms}}.
+\]
+\excheck 与线圈的绕线半径和匝数无关是长直、紧密单层绕线近似的结果。
+
+\electroinductionproblem{319}{140}
+同轴双导体电缆由两个无限长薄壁圆柱形金属筒构成，外筒半径是内筒的 $\eta=3.6$ 倍，筒间磁导率为 $\mu_0$。求每单位长度的电感。
+\exsolution
+内筒与外筒通等量反向电流 $I$，仅筒间存在磁场
+$B(r)=\mu_0I/(2\pi r)$。
+单位长度储磁能为
+\[
+w'_m=\int_a^b\frac{B(r)^2}{2\mu_0}2\pi r\,\mathrm dr
+=\frac{\mu_0I^2}{4\pi}\ln\frac ba.
+\]
+用 $w'_m=\tfrac12L'I^2$：
+\[
+\boxed{L'=\frac{\mu_0}{2\pi}\ln\eta}.
+\]
+$\eta=3.6$ 时
+$\boxed{L'\simeq2.6\times10^{-7}\,\mathrm{H/m}
+=0.26\,\mathrm{\mu H/m}}$。
+\excheck 薄壁导体内部磁场忽略，故没有内电感修正。
+
+\electroinductionproblem{320}{140}
+截面为边长 $a$ 的正方形、内半径为 $b$ 的环形螺线管共有 $N$ 匝，介质相对磁导率为 $\mu$，求自感。
+\exsolution
+环向磁场由安培定律给
+$B(r)=\mu\mu_0NI/(2\pi r)$，
+$r\in[b,b+a]$。
+每匝截面磁通
+\[
+\Phi=\int_b^{b+a}B(r)\,a\,\mathrm dr
+=\frac{\mu\mu_0NIa}{2\pi}\ln\frac{b+a}{b}.
+\]
+总磁链 $N\Phi=LI$，所以
+\[
+\boxed{L=\frac{\mu\mu_0N^2a}{2\pi}
+\ln\left(1+\frac ab\right)}.
+\]
+\excheck $a\ll b$ 时近似
+$L\simeq\mu\mu_0N^2a^2/(2\pi b)$，与均匀环形磁路近似一致。
+
+\electroinductionproblem{321}{141}
+图3.92两条宽 $b$、相距 $h$ 的平行宽薄金属带，$b/h=50$，两条导体中电流等量反向。求每单位长度电感。
+\exsolution
+忽略边缘效应，单位宽度表面电流为 $K=I/b$，
+两带之间磁场近似均匀
+$B=\mu_0K=\mu_0I/b$，外部磁场近似零。
+单位长度磁场储能
+$w'_m=(B^2/2\mu_0)(bh)
+=\mu_0I^2h/(2b)$。
+比较 $w'_m=L'I^2/2$：
+\[
+\boxed{L'=\frac{\mu_0h}{b}}.
+\]
+代 $b/h=50$：
+$\boxed{L'\simeq25\,\mathrm{nH/m}}$。
+\excheck 宽带近似要求 $h\ll b$；边缘漏磁只贡献较小修正。
+
+\electroinductionproblem{322}{141}
+两根无限长平行圆导线，轴间距离为每根线半径的 $\eta\gg1$ 倍，两线通等量反向电流。忽略导线内部磁场，求双线系统的单位长度电感。
+\exsolution
+对轴间距 $d$、半径 $a$ 的远离双线，
+外部磁通/能量计算可用两条无限线电流的叠加；每单位长度电感准确形式为
+$L'=(\mu_0/\pi)\operatorname{arcosh}(d/2a)$。
+在 $d/a=\eta\gg1$ 时
+$\operatorname{arcosh}(\eta/2)\simeq\ln\eta$，
+因而
+\[
+\boxed{L'\simeq\frac{\mu_0}{\pi}\ln\eta}.
+\]
+\excheck 本题排除导线内部场能，因此不加圆导线的内电感 $\mu_0/(8\pi)$ 一类修正。
+% === END 21-induction-305-322.tex ===
+
+% === BEGIN 21-induction-323-346.tex blob aa682df86be120dad9c3562cab1e29eaefd32605 ===
+% Irodov Part III §3.6 original 323--346, source PDF pp.150--153
+% (printed 141--144), answers PDF pp.317--318.
+\electroinductionproblem{323}{141}
+半径为 $a$、自感为 $L$ 的超导圆环，起初圆环平面平行于磁场 $\bm B$，环电流为零。将其翻转 $90^\circ$，使环面垂直磁场。求 (a) 最终电流；(b) 转动所做外功。
+\exsolution
+超导环的总磁链守恒，初始外磁通为零。最终外磁通 $\Phi_{\rm ext}=\pi a^2B$，故
+$LI+\Phi_{\rm ext}=0$，从而
+\[
+\boxed{|I|=\frac{\pi a^2B}{L}}.
+\]
+超导体无焦耳热，外界输入的能量在最终状态体现为环的磁场能，
+\[
+\boxed{A=\frac12LI^2=\frac{\pi^2a^4B^2}{2L}}.
+\]
+\excheck 方向由楞次定律确定，所激发环流反抗外磁通的增加。
+
+\electroinductionproblem{324}{141}
+一根很长的闭合超导螺线管初始电流 $I_0=1.9\,\mathrm A$。将螺线管长度增加 $\eta=5\%$，求最终电流。
+\exsolution
+紧密绕制螺线管总匝数和截面积不变时，
+$L=\mu_0N^2S/\ell$ 与长度 $\ell$ 成反比。
+超导回路磁链 $LI$ 保持不变，故
+$L_f=L_0/(1+\eta)$，
+$I_f=I_0L_0/L_f=I_0(1+\eta)$。因此
+\[
+\boxed{I_f=1.9(1.05)\,\mathrm A\simeq2.0\,\mathrm A}.
+\]
+\excheck 电流增加不是外电源加速，而是几何变化与磁链守恒共同作用。
+
+\electroinductionproblem{325}{141}
+半径为 $a=50\,\mathrm{mm}$ 的细导线圆环，线半径为 $b=1.0\,\mathrm{mm}$，初处于垂直圆环的均匀磁场 $B=0.50\,\mathrm{mT}$ 中。圆环冷却成为超导体后撤去磁场。已知
+$L=\mu_0a[\ln(8a/b)-2]$，求最终电流。
+\exsolution
+在超导后撤场过程中总磁链不变：
+$LI_f=BS$，$S=\pi a^2$。
+因此
+\[
+\boxed{I_f=
+\frac{\pi aB}{\mu_0[\ln(8a/b)-2]}}.
+\]
+数据 $8a/b=400$，得
+$\boxed{I_f\simeq49\,\mathrm A\approx50\,\mathrm A}$。
+\excheck 该电流保持原磁通方向，且即使无外加场仍由超导回路维持。
+
+\electroinductionproblem{326}{141}
+电动势为 $\mathcal E$ 的直流电源与阻抗为 $R$、初始自感 $L$ 的扼流圈串联并已达到稳态。在 $t=0$ 瞬间将电感降为原来的 $1/\eta$（$\eta>1$），求随后电流 $I(t)$。
+\exsolution
+突变前电流 $I_0=\mathcal E/R$。
+理想瞬间磁链连续：
+$LI_0=(L/\eta)I(0^+)$，
+因此 $I(0^+)=\eta\mathcal E/R$。
+新 RL 方程
+$(L/\eta)\dot I+RI=\mathcal E$，
+解为
+\[
+\boxed{I(t)=\frac{\mathcal E}{R}
+\left[1+(\eta-1)e^{-\eta Rt/L}\right]}.
+\]
+\excheck 不能在电感瞬变瞬间假定电流连续；
+题目明确给定磁链连续这一特殊理想过程。
+
+\electroinductionproblem{327}{141}
+图3.93直流电源电动势 $\mathcal E$、两个相等电阻 $R$ 和电感 $L$ 按图连接，初始开关断开，$t=0$ 将开关短接。求电感电流的时间变化。
+\exsolution
+闭合开关后从电感支路看外部其余电路，用戴维南化简。图中两个相等电阻支路给电感等效稳态电流
+$I_\infty=\mathcal E/R$，等效作用时间常数为 $\tau=2L/R$。自感电流由零开始，满足
+\[
+\dot I+\frac{R}{2L}I=\frac{\mathcal E}{2L}.
+\]
+故
+\[
+\boxed{I_L(t)=\frac{\mathcal E}{R}
+\left(1-e^{-Rt/(2L)}\right)}.
+\]
+\excheck 初始电感电流为0，末态为 $\mathcal E/R$，且初始斜率为 $\mathcal E/(2L)$，与原图电路等效一致。
+
+\electroinductionproblem{328}{142}
+图3.94理想电源电动势 $\mathcal E$、电阻 $R$，与两个无电阻电感 $L_1,L_2$ 组成网络。原先开关断开，达到稳定后闭合开关。求此后两个线圈的稳态电流。
+\exsolution
+断开前电路经电阻限流，总电流
+$I_{\rm tot}=\mathcal E/R$。
+闭合后两个理想电感分支电压相同：
+$L_1\dot I_1=L_2\dot I_2$，
+由初始条件积分，有
+$L_1I_1=L_2I_2$（在图示零初始相对磁链条件下）。
+同时节点电流守恒
+$I_1+I_2=\mathcal E/R$。解联立式：
+\[
+\boxed{I_{1,\infty}=
+\frac{\mathcal E L_2}{R(L_1+L_2)},\qquad
+I_{2,\infty}=
+\frac{\mathcal E L_1}{R(L_1+L_2)}}.
+\]
+\excheck 分流与电感倒数成正比，且两支流之和为 $\mathcal E/R$。
+
+\electroinductionproblem{329}{142}
+长直导线与矩形线框共面。线框边长为 $a,b$，其中长度为 $b$ 的一条边与长导线平行，最近距离为 $\ell$。求互感。
+\exsolution
+长直导线电流为 $I$，距导线 $r$ 处的磁感应强度
+$B(r)=\mu_0I/(2\pi r)$。
+线框沿导线方向宽为 $b$，径向范围从 $\ell$ 到 $\ell+a$，
+磁通为
+\[
+\Phi_{21}=\int_\ell^{\ell+a}
+\frac{\mu_0I}{2\pi r}b\,\mathrm dr
+=\frac{\mu_0Ib}{2\pi}
+\ln\left(1+\frac a\ell\right).
+\]
+故
+\[
+\boxed{M=\frac{\Phi_{21}}I
+=\frac{\mu_0b}{2\pi}\ln\left(1+\frac a\ell\right)}.
+\]
+\excheck 互感取绝对值；符号随两回路选定的法向而改变。
+
+\electroinductionproblem{330}{142}
+有矩形截面的环形线圈，内外半径为 $a,b$，截面在轴向的高度为 $h$，共 $N$ 匝，磁介质相对磁导率为 $\mu$。一根无限长直导线穿过环形线圈中心轴。求互感。
+\exsolution
+直导线电流 $I$ 产生环向场
+$B_\varphi(r)=\mu\mu_0I/(2\pi r)$。
+环形线圈每匝所穿的矩形截面磁通
+\[
+\Phi=\int_a^bB_\varphi(r)h\,\mathrm dr
+=\frac{\mu\mu_0Ih}{2\pi}\ln\frac ba.
+\]
+$N$ 匝总磁链为 $N\Phi$，故
+\[
+\boxed{M=\frac{\mu\mu_0Nh}{2\pi}\ln\frac ba}.
+\]
+\excheck 导线沿环芯对称轴通过而非与环形线圈绕线相切；安培环路是圆周。
+
+\electroinductionproblem{331}{142}
+两条同心细圆导线位于同一平面，半径分别 $a,b$，$a\ll b$。求 (a) 互感；(b) 内圈通电流 $I$ 时穿过外圈所围表面的磁通。
+\exsolution
+利用互感对易性，令外圈带电流 $I_b$，其中心附近磁场在小内圈上近似均匀：
+$B_0=\mu_0I_b/(2b)$。
+小圈磁通
+$\Phi_a\simeq B_0\pi a^2$，
+故
+\[
+\boxed{M\simeq\frac{\mu_0\pi a^2}{2b}}.
+\]
+互感对称性 $M_{ab}=M_{ba}$，所以内圈电流 $I$ 在外圈的有向磁通
+\[
+\boxed{\Phi_b=MI\simeq\frac{\mu_0\pi a^2I}{2b}}.
+\]
+\excheck 若直接在外圈面积内积分内圈磁场，会遇到磁场正负抵消；互感对易性是更简便而严格的主阶方法。
+
+\electroinductionproblem{332}{142}
+图3.95小圆柱永磁体处于半径为 $a$、共 $N$ 匝的细线圈中心；线圈连接总电阻 $R$ 的冲击电流计，移走磁体时通过电荷 $q$。求磁体磁矩 $p_m$。
+\exsolution
+利用互易性：若线圈通电流 $I$，它在中心产生
+$B=\mu_0NI/(2a)$。磁偶极子的能量 $-p_mB$ 意味着磁体对线圈的总磁链为
+$\Psi=\mu_0Np_m/(2a)$（共轴方向取正）。
+将磁体移至远处后磁链降为零，
+感生电流的时间积分满足
+$Rq=|\Delta\Psi|$。
+因此
+\[
+\boxed{p_m=\frac{2aRq}{\mu_0N}}.
+\]
+\excheck 不必已知移走速度，只要线圈初、末磁链确定即可；磁矩单位为 $\mathrm{A\,m^2}$。
+
+\electroinductionproblem{333}{142}
+两个同轴细圆环半径都为 $a$，两环中心轴向距离 $\ell\gg a$。求互感的主阶近似。
+\exsolution
+第一圆环通电流 $I$，在第二环中心的轴向磁场
+$B(\ell)=\mu_0Ia^2/[2(a^2+\ell^2)^{3/2}]$。
+因 $\ell\gg a$，该场在第二环面上近似均匀：
+$\Phi_2\simeq B(\ell)\pi a^2$。
+故
+\[
+\boxed{M=\frac{\Phi_2}I
+\simeq\frac{\mu_0\pi a^4}{2\ell^3}}.
+\]
+\excheck 互感随着两环距增大按 $\ell^{-3}$ 下降，符合磁偶极远场。
+
+\electroinductionproblem{334}{142}
+两个静止线圈互感为 $M$，第二线圈自感为 $L_2$、电阻为 $R$。第一线圈电流从 $t=0$ 开始按 $I_1=\alpha t$ 增大，求第二线圈感生电流 $I_2(t)$，初始为零。
+\exsolution
+第二回路电动势
+$\mathcal E_2=-M\dot I_1=-M\alpha$，满足
+$L_2\dot I_2+RI_2=-M\alpha$。
+解常系数微分方程：
+\[
+\boxed{I_2(t)=-\frac{M\alpha}{R}
+\left(1-e^{-Rt/L_2}\right)}.
+\]
+取电流模则为
+$|I_2|=(|M\alpha|/R)(1-e^{-Rt/L_2})$。
+\excheck 负号正是楞次定律，感生电流的磁通反抗第一线圈磁通上升。
+
+\electroinductionproblem{335}{142}
+图3.96电源 $\mathcal E=3.0\,\mathrm V$ 接电阻为 $R=1.0\,\Omega$、自感为 $L=2.0\,\mathrm{\mu H}$ 的线圈，同时有 $R_0=2.0\,\Omega$ 与之并联。电路稳定后断开开关，求其后在线圈\emph{自身电阻}中产生的热量。
+\exsolution
+初始稳定时线圈自感不影响直流，线圈电流
+$I_0=\mathcal E/R=3.0\,\mathrm A$。磁场能
+$U_m=\frac12LI_0^2$。
+断开电源后线圈经过 $R$ 与 $R_0$ 组成闭合放电回路，两电阻流同一个电流，其焦耳热占比为 $R/(R+R_0)$。因此线圈电阻发热
+\[
+Q_R=\frac12LI_0^2\frac{R}{R+R_0}
+=\frac{L\mathcal E^2}{2R(1+R_0/R)}.
+\]
+数值：
+$\boxed{Q_R=3.0\,\mathrm{\mu J}}$。
+\excheck 电路总发热为 $\frac12LI_0^2=9\,\mathrm{\mu J}$，但题目只问线圈自身电阻分得的1/3。
+
+\electroinductionproblem{336}{143}
+铁磁环形线圈共有 $N=500$ 匝，电流 $I=2.0\,\mathrm A$ 时每匝截面磁通为 $\Phi=1.0\,\mathrm{mWb}$。求磁场能。
+\exsolution
+若使用本题书末采用的等效线性磁化近似，磁链 $\Psi=N\Phi=LI$，
+磁能为 $U=\frac12 LI^2=\frac12\Psi I$，
+所以
+\[
+\boxed{U\simeq\frac12N\Phi I
+=\frac12(500)(10^{-3})(2)=0.50\,\mathrm J}.
+\]
+\excheck 铁磁体一般存在非线性与磁滞。若只给单个工况的 $I,\Phi$，而不指定磁化历史及完整 $\Phi(I)$ 曲线，严格磁场建立功应为 $\int_0^I I'\,\mathrm d\Psi(I')$，不能无条件等于 $\frac12I\Psi$。本题保留书末的线性近似及适用条件。
+
+\electroinductionproblem{337}{143}
+环形铁芯的圆截面半径 $a=3.0\,\mathrm{cm}$，平均环半径 $b=32\,\mathrm{cm}$，绕 $N=1000$ 匝，电流 $I=1.0\,\mathrm A$。利用原书图3.76的磁化曲线，估算铁芯磁场能；近似取整个截面的 $H$ 与中心处相同。
+\exsolution
+由安培环路
+$H=NI/(2\pi b)\simeq(1000)/(2\pi\cdot0.32)
+\simeq0.50\,\mathrm{kA/m}$。
+从原书图3.76此工作点读取磁感应强度约 $B\simeq1.4$T（仅图上读数）。
+圆截面环形芯体积
+$V=(\pi a^2)(2\pi b)=2\pi^2a^2b$。
+本版书末按 $w_m\simeq BH/2$ 估算，
+\[
+\boxed{W\simeq\frac12BH\,V
+=\pi^2a^2bBH\simeq2\,\mathrm J}.
+\]
+\excheck 对真正非线性铁磁体完整可逆储能需积分 $w=\int H\,\mathrm dB$；$BH/2$ 是本题采用的近似。图3.76读数并非高精度材料常数。
+
+\electroinductionproblem{338}{143}
+平均直径 $d=30\,\mathrm{cm}$ 的细环形磁芯，绕 $N=800$ 匝，截面积 $S=5.0\,\mathrm{cm^2}$，有宽 $b=2.0\,\mathrm{mm}$ 气隙，磁芯相对磁导率 $\mu=1400$。忽略漏磁，求 (a) 气隙和芯体储能之比；(b) 电感。
+\exsolution
+磁通密度 $B$ 在芯和气隙近似相同，
+各处能量密度分别为 $B^2/(2\mu\mu_0)$ 和 $B^2/(2\mu_0)$。体积约为 $S\pi d$ 与 $Sb$，故
+\[
+\boxed{\frac{W_{\rm gap}}{W_{\rm core}}
+\simeq\frac{\mu b}{\pi d}
+=\frac{1400(0.002)}{\pi(0.30)}\simeq3.0}.
+\]
+磁路磁阻
+$\mathcal R=(\pi d)/(\mu\mu_0S)+b/(\mu_0S)$，
+故
+\[
+\boxed{L=\frac{N^2}{\mathcal R}
+=\frac{\mu_0N^2S}{b+\pi d/\mu}
+\simeq0.15\,\mathrm H}.
+\]
+\excheck 用 $U=LI^2/2$ 与分区场能积分应得相同自感。
+
+\electroinductionproblem{339}{143}
+无限长半径为 $a$ 的绝缘圆柱，其表面均匀带电，总线电荷密度为 $\lambda$，绕轴以角速度 $\omega$ 旋转，真空磁导率。求单位长度磁场能。
+\exsolution
+圆柱表面面电荷密度
+$\sigma=\lambda/(2\pi a)$，
+转动产生环向表面电流密度
+$K=\sigma\omega a=\lambda\omega/(2\pi)$。
+理想无限长环向电流片内场
+$B=\mu_0K=\mu_0\lambda\omega/(2\pi)$，外场为零。
+单位长度场能
+\[
+W'=\frac{B^2}{2\mu_0}\pi a^2
+=\boxed{\frac{\mu_0\lambda^2\omega^2a^2}{8\pi}}.
+\]
+\excheck 此处单位长度能量量纲为 J/m，非总能量。
+
+\electroinductionproblem{340}{143}
+在真空中，何种电场强度 $E$ 的能量密度等于磁感应强度 $B=1.0\,\mathrm T$ 的磁场能量密度？
+\exsolution
+电场能量密度 $w_e=\varepsilon_0E^2/2$，
+磁场能量密度 $w_m=B^2/(2\mu_0)$。
+令两者相等：
+$\varepsilon_0E^2=B^2/\mu_0$。
+所以
+\[
+\boxed{E=\frac B{\sqrt{\varepsilon_0\mu_0}}=cB
+\simeq3.0\times10^8\,\mathrm{V/m}}.
+\]
+\excheck 在 SI 单位下 $c=1/\sqrt{\varepsilon_0\mu_0}$，且 $cB$ 的量纲为 V/m。
+
+\electroinductionproblem{341}{143}
+一只半径 $a=10\,\mathrm{cm}$ 的细均匀带电环以 $\omega=100\,\mathrm{rad/s}$ 绕轴旋转，在距环心 $\ell=a$ 的轴上点求磁场与电场能量密度之比。
+\exsolution
+环总电荷 $q$，等效电流
+$I=q\omega/(2\pi)$。轴上
+\[
+E=\frac{q\ell}{4\pi\varepsilon_0(a^2+\ell^2)^{3/2}},
+\quad
+B=\frac{\mu_0Ia^2}{2(a^2+\ell^2)^{3/2}}
+=\frac{\mu_0q\omega a^2}{4\pi(a^2+\ell^2)^{3/2}}.
+\]
+因此
+\[
+\frac{w_m}{w_e}
+=\frac{B^2/(2\mu_0)}{\varepsilon_0E^2/2}
+=\boxed{\mu_0\varepsilon_0\frac{\omega^2a^4}{\ell^2}}.
+\]
+在 $\ell=a$：
+$\boxed{w_m/w_e=(\omega a/c)^2\simeq1.1\times10^{-15}}$。
+\excheck 环总电荷 $q$ 在比值中相消，最后结果仅与旋转切向速度和光速之比有关。
+
+\electroinductionproblem{342}{143}
+依据磁场能量密度证明：将单位体积线性顺磁体或抗磁体置于均匀磁场 $\bm B$ 中，磁化过程所贡献的有效能量为
+$A=-\bm J\cdot\bm B/2$，其中 $\bm J$ 为磁化强度。
+\exsolution
+线性弱磁化条件下，磁化强度随外场建立而线性增加：
+$\bm J(\lambda)=\lambda\bm J$，
+$\bm B(\lambda)=\lambda\bm B$，
+$0\le\lambda\le1$。对固定外部电流源的磁偶极子而言，磁化产生的能量变化微元等于
+$\mathrm dA=-\bm B\cdot\mathrm d\bm J$，
+其中场强从0同步建立。代入
+$\mathrm d\bm J=\bm J\,\mathrm d\lambda$、
+$\bm B(\lambda)=\lambda\bm B$，可得
+\[
+A=-\int_0^1\lambda\,\bm B\cdot\bm J\,\mathrm d\lambda
+=\boxed{-\frac12\bm J\cdot\bm B}.
+\]
+\excheck 若物质磁化非线性或有磁滞，不能直接以终值的 $JB/2$ 代替磁化全过程积分。
+
+\electroinductionproblem{343}{143}
+两只相同线圈各自感为 $L$，忽略互感，分别 (a) 串联；(b) 并联，求等效电感。
+\exsolution
+(a) 串联总磁链等效为
+$(L+L)I$，故
+$\boxed{L_{\rm s}=2L}$。
+(b) 并联时两线圈电压相同，
+$\dot I_1=\dot I_2=V/L$，
+总电流导数 $\dot I=2V/L$，故
+$\boxed{L_{\rm p}=L/2}$。
+\excheck 如果互感不能忽略，串联还需加减 $2M$，本题已排除该情形。
+
+\electroinductionproblem{344}{143}
+两个长度相等、截面积几乎相同的长螺线管完全套在一起，自感分别为 $L_1,L_2$。求互感的模。
+\exsolution
+长螺线管
+$L_1=\mu_0N_1^2S_1/\ell$、
+$L_2=\mu_0N_2^2S_2/\ell$。
+若二者同轴、同长且截面几乎完全重合，磁耦合系数 $k\simeq1$，
+\[
+M=\frac{\mu_0N_1N_2S}{\ell},
+\]
+从而
+\[
+\boxed{|M|\simeq\sqrt{L_1L_2}}.
+\]
+\excheck 理想完全耦合时等号成立；实际线圈有漏磁，通常 $|M|\le\sqrt{L_1L_2}$。
+
+\electroinductionproblem{345}{143}
+证明真空中两只载流回路的磁相互作用能可写为
+$W_{12}=\mu_0^{-1}\int\bm B_1\cdot\bm B_2\,\mathrm dV$。
+\exsolution
+磁场满足叠加 $\bm B=\bm B_1+\bm B_2$。
+总磁场能
+\[
+W=\frac1{2\mu_0}\int|\bm B|^2\,\mathrm dV
+=\frac1{2\mu_0}\int(B_1^2+B_2^2+
+2\bm B_1\cdot\bm B_2)\,\mathrm dV.
+\]
+前两项是各自回路的自场能量，
+第三项为两回路之间的交互能：
+\[
+\boxed{W_{12}=\frac1{\mu_0}
+\int_{\mathbb R^3}\bm B_1\cdot\bm B_2\,\mathrm dV}.
+\]
+\excheck 交互项的2来自平方展开，并被总能量系数1/2抵消；不能再额外除以2。
+
+\electroinductionproblem{346}{144}
+两只电流圆环半径分别为 $a,b$，$a\ll b$，中心重合，平面间夹角 $\theta$，电流为 $I_1,I_2$。求相互作用能。
+\exsolution
+大圆环在中心产生
+$B_2\simeq\mu_0I_2/(2b)$，
+小圆环的磁矩
+$\bm p_1=I_1\pi a^2\bm n_1$。
+两个面法线夹角为 $\theta$。
+按磁场能\emph{交叉项}的互感约定
+$W_{12}=MI_1I_2$，
+其中
+$M\simeq\mu_0\pi a^2\cos\theta/(2b)$。
+因此
+\[
+\boxed{W_{12}=\frac{\mu_0\pi a^2}{2b}
+I_1I_2\cos\theta}.
+\]
+\excheck 对固定电流源的\emph{机械有效势}
+常采用 $-MI_1I_2$，与此处磁场交互能 $+MI_1I_2$ 定义不同，不能混淆。
+% === END 21-induction-323-346.tex ===
+
+% === BEGIN 21-induction-347-371.tex blob 0fa56710438c78b6f019c0dce14f572f25561e41 ===
+% Irodov Part III §3.6 original 347--371, source uploaded PDF pp.153--155
+% (printed 144--146); answers PDF pp.318--320.
+\electroinductionproblem{347}{144}
+同心金属球之间填有均匀弱导电介质，电阻率 $\rho$、相对介电常数 $\varepsilon$。在 $t=0$ 内球获得自由电荷。求：(a) 任一点位移电流密度与传导电流密度的关系；(b) 某时刻内球剩余电荷为 $q$ 时，包围内球且完全处于介质中的闭合曲面位移电流。
+\exsolution
+径向漏电电阻与电容满足
+$RC=\rho\varepsilon\varepsilon_0$。
+局部电场随自由电荷指数衰减，
+$\dot{\bm E}=-\bm E/(\rho\varepsilon\varepsilon_0)$。
+位移电流密度
+$\bm j_d=\partial\bm D/\partial t
+=\varepsilon\varepsilon_0\dot{\bm E}
+=-\bm E/\rho$，而传导电流密度
+$\bm j_c=\bm E/\rho$，故
+\[
+\boxed{\bm j_d=-\bm j_c}.
+\]
+(b) 任意所述闭合曲面的电位移通量等于内球自由电荷 $q$。其时间导数
+\[
+I_d=\frac{\mathrm d}{\mathrm dt}\oint\bm D\cdot\mathrm d\bm S
+=\dot q=-\frac q{\rho\varepsilon\varepsilon_0}.
+\]
+因此
+\[
+\boxed{I_d=-\frac q{\rho\varepsilon\varepsilon_0}},
+\quad |I_d|=\frac{|q|}{\rho\varepsilon\varepsilon_0}.
+\]
+\excheck 传导和位移电流矢量相反，整个介质内部不需要由它们的和产生额外的环向磁场。
+
+\electroinductionproblem{348}{144}
+平行圆盘板电容器充电后断开电源，极板之间填满均匀弱导电材料。忽略边缘效应，说明其极板之间为何没有磁场。
+\exsolution
+板间电场在放电时满足
+$\varepsilon\varepsilon_0\dot E+\sigma E=0$，
+其中 $\sigma=1/\rho$ 为电导率。
+故传导电流密度与位移电流密度分别为
+$\bm j_c=\sigma\bm E$、
+$\bm j_d=\varepsilon\varepsilon_0\dot{\bm E}
+=-\sigma\bm E$。
+麦克斯韦—安培定律
+$\nabla\times\bm H=\bm j_c+\bm j_d=0$。
+在无限宽平板对称条件下，周围无外加环向场且边缘效应忽略，
+\[
+\boxed{\bm B=0\quad\text{（板间）}}.
+\]
+\excheck 仅用传导电流的旧安培定律会错误预测有磁场；位移电流恰好抵消传导电流。
+
+\electroinductionproblem{349}{144}
+空气平板电容器每块板面积
+$S=100\,\mathrm{cm^2}$，与交变电路串联，导线电流振幅 $I_m=1.0\,\mathrm{mA}$、角频率 $\omega=1.6\times10^7\,\mathrm{s^{-1}}$。求板间电场振幅。
+\exsolution
+电容器板间位移电流
+$I_d=\varepsilon_0S\,\dot E$，
+与导线电流相等。设
+$E=E_m\cos(\omega t+\phi)$，
+则
+$I_m=\varepsilon_0S\omega E_m$，所以
+\[
+\boxed{E_m=\frac{I_m}{\varepsilon_0\omega S}}.
+\]
+代 $S=0.010\,\mathrm{m^2}$ 得
+$\boxed{E_m\simeq7.1\times10^2\,\mathrm{V/m}
+=7.1\,\mathrm{V/cm}}$。
+\excheck 电流给的是振幅而非有效值，不需再乘 $\sqrt2$。
+
+\electroinductionproblem{350}{144}
+两块圆盘极板间距为 $d$，板间为电导率 $\sigma$、相对介电常数 $\varepsilon$ 的均匀弱导电材料，外加
+$V(t)=V_m\cos\omega t$。忽略边缘效应，求距轴 $r$ 处的磁场强度 $H_\varphi(r,t)$。
+\exsolution
+板间电场
+$E_z=V_m\cos\omega t/d$。
+纵向传导电流密度
+$j_c=\sigma V_m\cos\omega t/d$，
+位移电流密度
+$j_d=\varepsilon_0\varepsilon\dot E_z
+=-\varepsilon_0\varepsilon\omega V_m\sin\omega t/d$。
+半径 $r$ 的圆形安培环路：
+$2\pi rH_\varphi=\pi r^2(j_c+j_d)$，
+故
+\[
+\boxed{H_\varphi(r,t)=\frac{rV_m}{2d}
+[\sigma\cos\omega t-
+\varepsilon_0\varepsilon\omega\sin\omega t]}.
+\]
+其振幅
+\[
+\boxed{H_m=\frac{rV_m}{2d}
+\sqrt{\sigma^2+(\varepsilon_0\varepsilon\omega)^2}}.
+\]
+\excheck $H$ 单位是 A/m；当 $\sigma\to0$ 时仍有位移电流所产生的磁场。
+
+\electroinductionproblem{351}{144}
+无限长螺线管半径为 $R$、单位长度匝数 $n$，交变电流
+$I(t)=I_m\sin\omega t$。求轴距为 $r$ 处位移电流密度随时间的变化。
+\exsolution
+理想螺线管内部
+$B_z(t)=\mu_0nI_m\sin\omega t$，
+外部磁场近似为零。法拉第定律给环向感生电场
+\[
+E_\varphi(r,t)=
+-\frac12\dot B_z
+\begin{cases}r,&r<R,\\R^2/r,&r>R.\end{cases}
+\]
+真空中的位移电流密度
+$\bm j_d=\varepsilon_0\partial\bm E/\partial t$，
+因
+$\ddot B_z=-\mu_0nI_m\omega^2\sin\omega t$，
+得到
+\[
+\boxed{j_{d,\varphi}(r,t)=
+\frac{\varepsilon_0\mu_0nI_m\omega^2}{2}
+\sin\omega t
+\begin{cases}r,&r<R,\\R^2/r,&r>R.\end{cases}}
+\]
+\excheck 位移电流密度的 SI 单位为 A/m²。原书书末提取的式子似省略 $\varepsilon_0$，但按定义 $\bm j_d=\partial\bm D/\partial t$ 必须含此系数，已区别写出。
+
+\electroinductionproblem{352}{144}
+点电荷 $q$ 以非相对论恒速 $\bm v$ 直线运动。求在离电荷距离为 $r$ 的点处的位移电流密度：(a) 观测点在运动直线上；(b) 在通过电荷且与运动方向垂直的线上。
+\exsolution
+电位移矢量
+$\bm D=q\bm r/(4\pi r^3)$，
+其中 $\bm r=\bm x-\bm vt$。
+固定观测点对时间求导：
+\[
+\bm j_d=\frac{\partial\bm D}{\partial t}
+=\frac q{4\pi r^3}
+\left[3(\bm v\cdot\hat{\bm r})\hat{\bm r}-\bm v\right].
+\]
+(a) 若 $\bm v\parallel\bm r$，
+前一项为 $3\bm v$，故
+\[
+\boxed{\bm j_{d,\parallel}=\frac{2q\bm v}{4\pi r^3}}.
+\]
+(b) 若 $\bm v\perp\bm r$，点积为零，故
+\[
+\boxed{\bm j_{d,\perp}=-\frac{q\bm v}{4\pi r^3}}.
+\]
+\excheck 两者方向一正一负，不能只给正的模；采用运动电荷非相对论库仑场的瞬时近似。
+
+\electroinductionproblem{353}{144}
+半径为 $a$ 的均匀带电细圆环总电荷 $q$，沿轴线以恒速 $v$ 朝固定观察点 P 运动，圆环面始终与运动方向垂直。问观察点处位移电流密度达到最大时圆环中心距离 $x_m$，以及最大值。
+\exsolution
+轴上电位移为
+$D_z(x)=qx/[4\pi(a^2+x^2)^{3/2}]$。
+由于圆环相对观察点以速率 $v$ 接近，
+$j_{d,z}=\partial_t D_z=-v\,\mathrm dD_z/\mathrm dx$，
+所以
+\[
+j_{d,z}(x)=
+-\frac{qv}{4\pi}\frac{a^2-2x^2}{(a^2+x^2)^{5/2}}.
+\]
+在 $x=0$，其模为 $|qv|/(4\pi a^3)$；
+对无量纲 $u=x/a$ 检查上述函数的极值，
+其余位置的绝对值均更小，
+因此
+\[
+\boxed{x_m=0,\qquad
+j_{d,\max}=\frac{|q|v}{4\pi a^3}}.
+\]
+\excheck 最大值发生在环心恰好经过观察点时；
+电位移本身此时为零，但其时间变化率可最大。
+
+\electroinductionproblem{354}{145}
+图3.97点电荷 $q$ 以非相对论匀速 $\bm v$ 运动。利用磁场强度 $\bm H$ 的环路定律，求相对电荷位置矢量为 $\bm r$ 的观察点 A 的 $\bm H$。
+\exsolution
+以粒子运动方向为轴，对通过观察点 A 的圆形安培环路取半径 $r_\perp=r\sin\theta$。传导电流与位移电流在对称性下的总环流给
+$H_\varphi=qv\sin\theta/(4\pi r^2)$。
+方向沿 $\bm v\times\bm r$，矢量形式
+\[
+\boxed{\bm H(\bm r)=\frac{q}{4\pi}
+\frac{\bm v\times\bm r}{r^3}}.
+\]
+\excheck 由 $\bm B=\mu_0\bm H$ 还原运动点电荷的非相对论磁场公式；$H$ 的单位是 A/m。
+
+\electroinductionproblem{355}{145}
+用麦克斯韦方程证明：(a) 随时间变化的磁场不可能没有电场；(b) 存在随时间变化的磁场时，空间完全均匀的电场不可能成立；(c) 真空空腔内均匀电场（或磁场）在特殊情况下可随时间变化。
+\exsolution
+(a) 法拉第方程
+$\nabla\times\bm E=-\partial_t\bm B$。
+若 $\partial_t\bm B\ne0$，则
+$\nabla\times\bm E\ne0$，故不可能 $\bm E=0$。
+(b) 空间常矢量场满足 $\nabla\times\bm E=0$，
+故只能有 $\partial_t\bm B=0$。
+(c) 设空腔内 $\bm E(t)=\bm a f(t)$，
+$\bm a$ 是空间常矢量。法拉第式要求
+$\partial_t\bm B=0$，
+但无自由电流的安培—麦克斯韦方程为
+$\nabla\times\bm B=\mu_0\varepsilon_0\bm a f'(t)$。
+左边若 $\bm B$ 固定不随时间变化，则 $f'(t)$ 必为常量，即
+\[
+\boxed{\bm E(t)=\bm E_0+\bm A t}
+\]
+是可兼容的一类均匀时间变化电场，同时需有空间非均匀而时间不变的 $\bm B$。磁场与电场对偶交换后同理可构造均匀线性时间变化的磁场。
+\excheck (c) 不表示任意函数 $f(t)$ 都允许；两个旋度方程同时成立对时间依赖施加严格限制。
+
+\electroinductionproblem{356}{145}
+证明电荷守恒连续性方程
+$\nabla\cdot\bm j=-\partial\rho_f/\partial t$
+可由麦克斯韦方程推出。
+\exsolution
+对安培—麦克斯韦方程
+$\nabla\times\bm H=\bm j+\partial_t\bm D$
+两边取散度。
+由于恒等式
+$\nabla\cdot(\nabla\times\bm H)=0$，
+得到
+\[
+0=\nabla\cdot\bm j+
+\frac{\partial}{\partial t}(\nabla\cdot\bm D).
+\]
+再用电位移高斯定律
+$\nabla\cdot\bm D=\rho_f$，
+即得
+\[
+\boxed{\frac{\partial\rho_f}{\partial t}
++\nabla\cdot\bm j=0}.
+\]
+\excheck 位移电流项不可省略，否则取散度会错误要求稳态 $\nabla\cdot\bm j=0$ 对所有时间成立。
+
+\electroinductionproblem{357}{145}
+证明麦克斯韦方程
+$\nabla\times\bm E=-\partial\bm B/\partial t$
+与 $\nabla\cdot\bm B=0$ 相容。
+\exsolution
+对法拉第方程取散度，
+\[
+0=\nabla\cdot(\nabla\times\bm E)
+=-\frac{\partial}{\partial t}(\nabla\cdot\bm B).
+\]
+因此
+$\nabla\cdot\bm B$ 在时间上为常量。若初始满足
+$\nabla\cdot\bm B=0$，
+则以后仍恒满足
+\[
+\boxed{\nabla\cdot\bm B=0}.
+\]
+\excheck 法拉第式不单独强制初值为零，而是保证初始无磁单极约束在时间演化下保持。
+
+\electroinductionproblem{358}{145}
+某区域磁场 $\bm B$ 以角速度矢量 $\bm\omega$ 转动，求 $\nabla\times\bm E$。
+\exsolution
+若磁场是大小不变、作为空间给定点处的旋转矢量，则时间导数满足
+$\partial_t\bm B=\bm\omega\times\bm B$。
+法拉第方程立即给出
+\[
+\boxed{\nabla\times\bm E
+=-\bm\omega\times\bm B}.
+\]
+\excheck 这里的 $\bm\omega$ 为磁场矢量转动角速度，不能与第3.6节中的交变电场角频率混同。
+
+\electroinductionproblem{359}{145}
+惯性系 K 中只有均匀磁场 $\bm B$，另一惯性系 K' 以非相对论速度 $\bm v\perp\bm B$ 相对 K 匀速运动。求 K' 系中的电场。
+\exsolution
+取一虚拟试探电荷，在 K' 系某瞬间速度为零。
+其在 K 系的速度为 $\bm v$。
+在 K 系受磁洛伦兹力
+$\bm F=q\bm v\times\bm B$。
+非相对论近似中两系的实际受力一致，K' 系该电荷静止，磁力为零，
+故 $q\bm E'=\bm F$，
+\[
+\boxed{\bm E'=\bm v\times\bm B}.
+\]
+\excheck 非相对论形式无需 $\gamma$ 因子；正方向随所定义的 K' 相对 K 速度而定。
+
+\electroinductionproblem{360}{145}
+图3.98一块非铁磁性大金属板以速度
+$v=90\,\mathrm{cm/s}$ 在均匀磁场
+$B=50\,\mathrm{mT}$ 中平移，方向如图。求运动引起的表面电荷密度模。
+\exsolution
+板内载流子达到静态分离平衡后
+$\bm E=-\bm v\times\bm B$，
+场强模 $E=vB$。
+若板厚方向垂直于 $\bm v,\bm B$，
+两大表面产生等量反号电荷，
+$|\sigma_s|=\varepsilon_0vB$。
+因此
+\[
+\boxed{|\sigma_s|=
+(8.854\times10^{-12})(0.90)(0.050)
+\simeq4.0\times10^{-13}\,\mathrm{C/m^2}
+=0.40\,\mathrm{pC/m^2}}.
+\]
+\excheck 两侧电荷符号相反，整体板净电荷仍为零。
+
+\electroinductionproblem{361}{145}
+半径 $a=5.0\,\mathrm{cm}$ 的实心铝圆柱绕轴以 $\omega=45\,\mathrm{rad/s}$ 旋转，沿轴磁场
+$B=10\,\mathrm{mT}$，$\bm\omega\parallel\bm B$。忽略自身产生磁场，求出现的体电荷密度与侧表面电荷密度。
+\exsolution
+位置 $r$ 处金属速度
+$\bm v=\bm\omega\times\bm r$，
+径向洛伦兹分量为
+$\bm v\times\bm B=\omega Br\,\bm e_r$。
+载流子平衡要求
+$\bm E=-\omega Br\,\bm e_r$。
+高斯微分式
+$\rho_f=\varepsilon_0\nabla\cdot\bm E$，
+柱坐标有
+$\nabla\cdot\bm E=(1/r)\partial_r(rE_r)
+=-2\omega B$，于是
+\[
+\boxed{\rho_f=-2\varepsilon_0\omega B
+\simeq-8.0\times10^{-12}\,\mathrm{C/m^3}
+=-0.0080\,\mathrm{nC/m^3}}.
+\]
+由于圆柱整体电中性，每单位长度体电荷
+$\rho_f\pi a^2$ 与侧面电荷
+$\sigma_s2\pi a$ 相消，
+\[
+\boxed{\sigma_s=\varepsilon_0a\omega B
+\simeq2.0\times10^{-13}\,\mathrm{C/m^2}
+=0.20\,\mathrm{pC/m^2}}.
+\]
+\excheck 原书书末给的 $-0.08\,\mathrm{nC/m^3}$ 与 $2\,\mathrm{pC/m^2}$ 分别比直接代入公式大10倍；本稿按题面 $B=10$mT 复算，记录为待核对底本数值问题。
+
+\electroinductionproblem{362}{145}
+非相对论点电荷 $q$ 以恒定速度 $\bm v$ 运动。利用场变换公式求其在相对位置矢量为 $\bm r$ 的观察点产生的磁场。
+\exsolution
+在电荷静止系中只有库仑电场
+$\bm E_0=q\bm r/(4\pi\varepsilon_0r^3)$、$\bm B_0=0$。
+将静止系向实验室逆变换，在 $v\ll c$ 的一阶下
+$\bm B\simeq\bm v\times\bm E_0/c^2$。
+由 $1/(\varepsilon_0c^2)=\mu_0$，得到
+\[
+\boxed{\bm B(\bm r)=
+\frac{\mu_0q}{4\pi}\frac{\bm v\times\bm r}{r^3}}.
+\]
+\excheck 与第354题的 $\bm B=\mu_0\bm H$ 一致，且沿运动方向的观察点磁场为零。
+
+\electroinductionproblem{363}{145--146}
+利用电磁场洛伦兹变换说明：若惯性系 K 中只有电场或只有磁场，则在任一与 K 作非平行匀速相对运动的惯性系 K' 中，通常同时出现相互垂直的电场和磁场。
+\exsolution
+先设 K 中只有电场 $\bm E$，$\bm B=0$。
+取相对速度 $\bm v$，平行电场分量不变，横向分量经因子 $\gamma$ 放大，另诱生
+$\bm B'=-\gamma\bm v\times\bm E/c^2$。
+因此 $\bm B'$ 同时垂直于 $\bm v$ 与 $\bm E$，且
+$\bm E'\cdot\bm B'=0$。
+若 K 中只有磁场 $\bm B$，
+则
+$\bm E'=\gamma\bm v\times\bm B$，
+$\bm B'_{\parallel}=\bm B_{\parallel}$、
+$\bm B'_\perp=\gamma\bm B_\perp$，
+同样有
+$\bm E'\cdot\bm B'=0$。
+\[
+\boxed{\bm E'\perp\bm B'\quad
+\text{（当两个场均非零时）}}.
+\]
+\excheck 若相对速度恰平行于原场，叉积为零，不出现新场；原题中“任一另一系”需理解为通常非平行的情形。
+
+\electroinductionproblem{364}{146}
+K 系中只有磁场
+$\bm B=b(y\bm i-x\bm j)/(x^2+y^2)$。
+K' 系以低速 $\bm v=v\bm k$ 沿 z 轴运动，两系 z 轴重合。求 K' 系电场及其场线形状。
+\exsolution
+令横向位置矢量
+$\bm r_\perp=x\bm i+y\bm j$，则
+$\bm B=-b\,\bm e_\varphi/r_\perp$。
+非相对论场变换
+$\bm E'=\bm v\times\bm B$ 给
+\[
+\bm E'=v\bm k\times
+\frac{b(y\bm i-x\bm j)}{x^2+y^2}
+=\boxed{\frac{vb(x\bm i+y\bm j)}{x^2+y^2}}.
+\]
+\excheck 场线在横截面内沿径向直线辐射或汇聚，模 $E'=|vb|/r_\perp$；原书答案的 PDF 抽取可能丢掉速度因子 $v$。
+
+\electroinductionproblem{365}{146}
+K 系中只有电场
+$\bm E=a(x\bm i+y\bm j)/(x^2+y^2)$，
+K' 系以非相对论速度 $\bm v=v\bm k$ 沿 z 轴运动。求 K' 系磁场及场线。
+\exsolution
+非相对论场变换
+$\bm B'=\bm B-\bm v\times\bm E/c^2$，
+且原系 $\bm B=0$，故
+\[
+\boxed{\bm B'=
+-\frac{av}{c^2}\frac{x\bm j-y\bm i}{x^2+y^2}
+=\frac{a}{c^2}\frac{\bm r_\perp\times\bm v}{r_\perp^2}}.
+\]
+\excheck 磁场线是围绕 z 轴的同心圆，模为 $|av|/(c^2r_\perp)$。
+
+\electroinductionproblem{366}{146}
+证明当两惯性系相对速度 $v\ll c$ 时，电磁场的精确洛伦兹变换简化为非相对论变换。
+\exsolution
+设 K' 相对 K 的速度为 $\bm v$，
+分解为平行/垂直 $\bm v$ 的分量。
+精确变换满足
+$\bm E'_{\parallel}=\bm E_\parallel$，
+$\bm E'_\perp=\gamma(\bm E_\perp+\bm v\times\bm B)$，
+$\bm B'_\parallel=\bm B_\parallel$，
+$\bm B'_\perp=\gamma(\bm B_\perp-\bm v\times\bm E/c^2)$。
+当 $v\ll c$，
+$\gamma=1+O(v^2/c^2)$，保留速度一阶项，
+\[
+\boxed{\bm E'\simeq\bm E+\bm v\times\bm B},
+\qquad
+\boxed{\bm B'\simeq\bm B-\frac{\bm v\times\bm E}{c^2}}.
+\]
+\excheck 这两个变换同时成立，且需统一规定 K' 相对 K 的速度方向；换成 K 相对 K' 时叉积项反号。
+
+\electroinductionproblem{367}{146}
+K 系只有强度 $E=8.0\,\mathrm{kV/m}$ 的均匀电场。K' 系以 $v=\beta c$、$\beta=0.60$ 相对运动，速度与 $\bm E$ 夹角 $\alpha=45^\circ$。求 (a) K' 电场强度及方向；(b) K' 磁感应强度。
+\exsolution
+$\gamma=(1-\beta^2)^{-1/2}=1.25$。
+$E'_\parallel=E\cos\alpha$，
+$E'_\perp=\gamma E\sin\alpha$，
+故
+\[
+\boxed{E'=E
+\sqrt{\frac{1-\beta^2\cos^2\alpha}{1-\beta^2}}
+\simeq9.1\,\mathrm{kV/m}}.
+\]
+相对速度方向为基准，其夹角
+\[
+\boxed{\tan\alpha'=\gamma\tan\alpha
+\quad\Rightarrow\quad
+\alpha'\simeq51^\circ}.
+\]
+原系没有磁场，K' 中
+$B'=\gamma vE\sin\alpha/c^2$，所以
+\[
+\boxed{B'=\frac{\beta E\sin\alpha}
+{c\sqrt{1-\beta^2}}
+\simeq1.4\times10^{-5}\,\mathrm T=14\,\mathrm{\mu T}}.
+\]
+\excheck 原系没有磁场不代表运动系也没有；电磁变换把横向电场与磁场联系起来。
+
+\electroinductionproblem{368}{146}
+将第367题的原系纯电场换成均匀磁场 $B=0.80\,\mathrm T$，其与相对速度夹角同为 $\alpha=45^\circ$，$\beta=0.60$。求 K' 的电场与磁场。
+\exsolution
+原系 $\bm E=0$。精确变换得
+$E'=\gamma vB\sin\alpha$：
+\[
+\boxed{E'=\frac{\beta c B\sin\alpha}
+{\sqrt{1-\beta^2}}
+\simeq1.27\times10^8\,\mathrm{V/m}}.
+\]
+磁场的平行分量不变，横向放大 $\gamma$，
+\[
+\boxed{B'=B
+\sqrt{\frac{1-\beta^2\cos^2\alpha}{1-\beta^2}}
+\simeq0.91\,\mathrm T}.
+\]
+$\tan\alpha'=\gamma\tan\alpha$，
+方向夹角约 $51^\circ$。
+\excheck 第368题书末对 $E'$ 的抽取有奇怪的“nV/m”字样，按 $\gamma vB$ 的量纲与数字，真实值必须为 $10^8$V/m 数量级，已列出明确推导。
+
+\electroinductionproblem{369}{146}
+利用电磁场洛伦兹变换证明两个不变量：
+(a) $\bm E\cdot\bm B$；
+(b) $E^2-c^2B^2$。
+\exsolution
+分解各场到平行相对速度方向与垂直方向。代入
+$\bm E'_\parallel=\bm E_\parallel$、
+$\bm B'_\parallel=\bm B_\parallel$、
+$\bm E'_\perp=\gamma(\bm E_\perp+\bm v\times\bm B)$、
+$\bm B'_\perp=\gamma(\bm B_\perp-\bm v\times\bm E/c^2)$。
+展开点积，运用
+$\bm a\cdot(\bm v\times\bm a)=0$
+及
+$(\bm v\times\bm B)\cdot(\bm v\times\bm E)
+=v^2\bm E_\perp\cdot\bm B_\perp$，
+各交叉项抵消，得到
+\[
+\boxed{\bm E'\cdot\bm B'=\bm E\cdot\bm B}.
+\]
+类似地展开两平方项，用
+$\gamma^2(1-v^2/c^2)=1$，
+得到
+\[
+\boxed{E'^2-c^2B'^2=E^2-c^2B^2}.
+\]
+\excheck 第二不变量的量纲是 $(\mathrm{V/m})^2$；必须给磁场项乘 $c^2$ 才能相减。
+
+\electroinductionproblem{370}{146}
+K 系中有互相垂直的均匀电场
+$E=40\,\mathrm{kV/m}$ 与磁场
+$B=0.20\,\mathrm{mT}$。
+求某惯性系 K' 中仅剩单一种场时的场强。
+\exsolution
+因 $\bm E\perp\bm B$，不变量
+$\bm E\cdot\bm B=0$。
+比较
+$E=4.0\times10^4\,\mathrm{V/m}$、
+$cB\simeq6.0\times10^4\,\mathrm{V/m}$，
+有 $c^2B^2>E^2$，
+故可选 K' 使 $\bm E'=0$，
+剩下纯磁场。
+由第二不变量
+$-c^2B'^2=E^2-c^2B^2$，
+得到
+\[
+\boxed{B'=\sqrt{B^2-(E/c)^2}
+=B\sqrt{1-(E/(cB))^2}
+\simeq0.15\,\mathrm{mT}}.
+\]
+\excheck 不是纯电场系，因为原系属于磁场占优场型。
+
+\electroinductionproblem{371}{146}
+点电荷 $q$ 以恒定相对论速度 $v=\beta c$ 沿直线运动。在某瞬间，观察点相对电荷的位置矢量 $\bm r$ 与速度夹角为 $\theta$。求该点电场矢量。
+\exsolution
+在电荷静止系只有径向库仑场
+$\bm E_0=q\bm r_0/(4\pi\varepsilon_0r_0^3)$。
+实验室系中沿速度方向的长度收缩，使同一瞬间
+$r_{0,\parallel}=\gamma r_\parallel$、
+$r_{0,\perp}=r_\perp$。
+电场分量满足
+$E_\parallel=E_{0,\parallel}$、
+$E_\perp=\gamma E_{0,\perp}$，
+最后合成仍沿实验室瞬间位置 $\hat{\bm r}$，模为
+\[
+\boxed{\bm E(\bm r)=
+\frac{q}{4\pi\varepsilon_0r^2}
+\frac{1-\beta^2}{(1-\beta^2\sin^2\theta)^{3/2}}
+\hat{\bm r}}.
+\]
+\excheck $\theta=0$ 时沿运动轴场比静止库仑场小 $1-\beta^2$；
+$\theta=\pi/2$ 时横向场增强 $\gamma$ 倍。
+% === END 21-induction-347-371.tex ===
