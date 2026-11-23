@@ -78,6 +78,16 @@ CHAPTERS = (
      [f"8.3.{n}" for n in range(8, 15)]),
     ("chapters/textbook-ch08-solutions-015-021.tex", "sourceproblem",
      [f"8.3.{n}" for n in range(15, 22)]),
+    ("chapters/textbook-ch09-choices.tex", "sourceproblem",
+     [f"9.1.{n}" for n in range(1, 14)]),
+    ("chapters/textbook-ch09-blanks.tex", "sourceproblem",
+     [f"9.2.{n}" for n in range(1, 15)]),
+    ("chapters/textbook-ch09-solutions-001-006.tex", "sourceproblem",
+     [f"9.3.{n}" for n in range(1, 7)]),
+    ("chapters/textbook-ch09-solutions-007-012.tex", "sourceproblem",
+     [f"9.3.{n}" for n in range(7, 13)]),
+    ("chapters/textbook-ch09-solutions-013-017.tex", "sourceproblem",
+     [f"9.3.{n}" for n in range(13, 18)]),
     ("chapters/guide-ch01-examples.tex", "sourceexample",
      [f"1.{n}" for n in range(1, 6)]),
     ("chapters/guide-ch02-examples.tex", "sourceexample",
@@ -94,6 +104,8 @@ CHAPTERS = (
      [f"7.{n}" for n in range(1, 7)]),
     ("chapters/guide-ch08-examples.tex", "sourceexample",
      [f"8.{n}" for n in range(1, 7)]),
+    ("chapters/guide-ch09-examples.tex", "sourceexample",
+     [f"9.{n}" for n in range(1, 12)]),
 )
 
 
@@ -115,7 +127,7 @@ def structural_check():
             for label in (r"\problemtext", r"\workings", r"\crosscheck"):
                 assert label in block, (number, label)
         total += len(ids)
-    assert total == 376, total
+    assert total == 431, total
     main_source = (ROOT / "main.tex").read_text(encoding="utf-8")
     for relative, _macro, _expected in CHAPTERS:
         stub = relative.removesuffix(".tex")
@@ -655,6 +667,90 @@ def eighth_round_regressions():
     dS=p/T*(V1*math.log((V1+V2)/V1)+V2*math.log((V1+V2)/V2))
     assert dS>0
 
+
+def ninth_round_regressions():
+    """Independent dimension/numeric checks; source figures still require second review."""
+    mu0=4*math.pi*1e-7
+    eps0=8.8541878128e-12
+    pi=math.pi
+    ln=math.log
+    sqrt=math.sqrt
+    # Textbook 9.1: reciprocal mutual, Faraday and energy-density limits.
+    near((2*.2*.4**2)/(.2*.4**2),2)
+    near(.5*3**2,.5*9)
+    near(mu0*10**2/(8*pi*pi*.1**2),
+         ((mu0*10/(2*pi*.1))**2)/(2*mu0))
+    # 9.2: flux-time derivative, shrinking circle and inductance.
+    near(12*2+9,33)
+    near(2*pi*1*.2*.5,.2*pi)
+    near(400*.2*1e-4/4,.002)
+    near(400/(2/.002),.4)
+    near(4*2*2,16)
+    # 9.3.1--9.3.6: swept-area / moving-wire consistency.
+    near(.4*10*2*1e-4,8e-4)
+    a=.04; b=.06; d=.05; v=.03; I=5
+    emf=(mu0/(2*pi))*I*b*v*(1/d-1/(d+a))
+    near(emf,1.6e-8)
+    near((1/2)*2,1)
+    near((3*1)-(1+2),0)
+    # 9.3.7--9.3.12: rotation, vortex field, signed flux.
+    ell=.8; B=.6; omega=5
+    near(.5*B*omega*((2*ell/3)**2-(ell/3)**2),
+         B*omega*ell**2/6)
+    near(4e-5*1*9.8*3*sqrt(3)/2,
+         4e-5*1*9.8*3*math.sin(pi/3))
+    inner=sqrt(3)/4
+    outer=pi/12
+    near(inner+outer,(3*sqrt(3)+pi)/12)
+    near(math.atan(sqrt(3))-math.atan(1/sqrt(3)),pi/6)
+    near(ln((.02+.04)/.02),ln(3))
+    near(ln((3*.1/4)/(.1/2)),ln(3/2))
+    wireL=mu0*3/pi*ln((.4-.01)/.01)
+    near(wireL,2*(mu0*3/(2*pi))*ln(.39/.01))
+    # 9.3.13--9.3.17: toroid self-energy, displacement continuity.
+    a=.04; b=.10; h=.025; N=200; current=2
+    L=mu0*N*N*h/(2*pi)*ln(b/a)
+    W=.5*L*current**2
+    Bflux=lambda r: mu0*N*current/(2*pi*r)
+    near(L, N*h*(mu0*N/(2*pi))*ln(b/a))
+    near(W,mu0*N*N*h*current**2/(4*pi)*ln(b/a))
+    near(mu0*current**2/(16*pi),
+         (mu0*current**2/(4*pi))*(1/4))
+    epsilon=4*eps0; k=20; R1=.02; R2=.1; length=.5
+    def Jd(radius):
+        return epsilon*k/(radius*ln(R2/R1))
+    near(Jd(.04)*(2*pi*.04*length),
+         Jd(.08)*(2*pi*.08*length))
+    near(eps0*pi*.1**2*1e13,eps0*1e13*pi*.01)
+    near(mu0*eps0*.1*1e13/2,
+         mu0*(eps0*pi*.1**2*1e13)/(2*pi*.1))
+    # Guide 9.1--9.11: electrostatic force, semiring, cavity and capacitance.
+    charge=5e-8; S=.01
+    near(charge*charge/(2*eps0*S),
+         (.5*eps0*(charge/(eps0*S))**2)*S)
+    near((1/(4*pi*eps0))*(pi/2),
+         1/(8*eps0))
+    lam=.001; ar=.02; r=.5
+    Er=lam*ar/(pi*eps0*r*r)
+    near(Er*r*r,lam*ar/(pi*eps0))
+    sigma=2e-6; holeR=.12; x=.05
+    holeU=sigma/(2*eps0)*(holeR-sqrt(holeR**2+x**2))
+    assert holeU<0, "source guide 9.5 printed sign contradiction"
+    capV=8; q=1e-8; dd=.01; area=.2
+    Uc=capV/2+q*dd/(4*eps0*area)
+    near(4*eps0*area*(Uc-capV/2)/dd,q)
+    R1=.1;R2=.3; q0=2e-7
+    q_prime=q0*R1/R2
+    near(q_prime/(4*pi*eps0*R1)-q0/(4*pi*eps0*R2),0)
+    C1=2e-11; C_as=4e-11; C_bs=5e-11
+    C_equiv=C1+C_as*C_bs/(C_as+C_bs)
+    assert C_equiv>C1
+    base=.5*eps0*.01/.002*400**2
+    er=5
+    near(base/er, base*(1/er))
+    near(-(er-1)*base, (er*base-base)-2*(er-1)*base)
+
+
 if __name__ == "__main__":
     n = structural_check()
     numerical_check()
@@ -665,6 +761,7 @@ if __name__ == "__main__":
     sixth_round_regressions()
     seventh_round_regressions()
     eighth_round_regressions()
+    ninth_round_regressions()
     print(f"Structure: {n} referenced worked items; all checked blocks present.")
     print("Selected numeric invariants: passed.")
     print("Not a replacement for full independent physics or copyright review.")
