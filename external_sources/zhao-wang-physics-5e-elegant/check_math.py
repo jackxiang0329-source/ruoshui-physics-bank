@@ -68,6 +68,16 @@ CHAPTERS = (
      [f"7.3.{n}" for n in range(9, 15)]),
     ("chapters/textbook-ch07-solutions-015-020.tex", "sourceproblem",
      [f"7.3.{n}" for n in range(15, 21)]),
+    ("chapters/textbook-ch08-choices.tex", "sourceproblem",
+     [f"8.1.{n}" for n in range(1, 14)]),
+    ("chapters/textbook-ch08-blanks.tex", "sourceproblem",
+     [f"8.2.{n}" for n in range(1, 13)]),
+    ("chapters/textbook-ch08-solutions-001-007.tex", "sourceproblem",
+     [f"8.3.{n}" for n in range(1, 8)]),
+    ("chapters/textbook-ch08-solutions-008-014.tex", "sourceproblem",
+     [f"8.3.{n}" for n in range(8, 15)]),
+    ("chapters/textbook-ch08-solutions-015-021.tex", "sourceproblem",
+     [f"8.3.{n}" for n in range(15, 22)]),
     ("chapters/guide-ch01-examples.tex", "sourceexample",
      [f"1.{n}" for n in range(1, 6)]),
     ("chapters/guide-ch02-examples.tex", "sourceexample",
@@ -82,6 +92,8 @@ CHAPTERS = (
      [f"6.{n}" for n in range(1, 8)]),
     ("chapters/guide-ch07-examples.tex", "sourceexample",
      [f"7.{n}" for n in range(1, 7)]),
+    ("chapters/guide-ch08-examples.tex", "sourceexample",
+     [f"8.{n}" for n in range(1, 7)]),
 )
 
 
@@ -103,7 +115,7 @@ def structural_check():
             for label in (r"\problemtext", r"\workings", r"\crosscheck"):
                 assert label in block, (number, label)
         total += len(ids)
-    assert total == 324, total
+    assert total == 376, total
     main_source = (ROOT / "main.tex").read_text(encoding="utf-8")
     for relative, _macro, _expected in CHAPTERS:
         stub = relative.removesuffix(".tex")
@@ -568,6 +580,81 @@ def seventh_round_regressions():
     near(scale,math.exp(-.0289*grav*y/(Rgas*300)))
 
 
+
+def eighth_round_regressions():
+    """Source-parameter spot checks, not an independent review of diagrams."""
+    mu0=4*math.pi*1e-7
+    e=1.602176634e-19
+    me=9.1093837e-31
+    R=8.314462618
+    kB=1.380649e-23
+    pi=math.pi
+    sqrt=math.sqrt
+    # 8.1: half-loop, magnetic moment vs potential work, helix pitch.
+    near(mu0/(4*.25), (mu0/(2*.25))/2)
+    near(2*(100*.1*pi*.05**2)*1.5,0.23561944901923454)
+    near((2*.5)* (2*.5),1)
+    near((3*.5),1.5)
+    assert (2*math.cos(pi/6))>math.cos(pi/6)
+    # 8.2: semicircular torque, orbit, fields.
+    near(5*(pi*.2**2/2)*.5,0.15707963267948968)
+    near(mu0*8e-9*3e-5/(4*pi*(6e-8)**2),6.666666666666667e-6)
+    near(.5*8e-9*3e-5*6e-8,7.2e-21)
+    near(2*(2),4)             # doubled area and doubled current
+    near(.1*.1, .01)
+    near(200*.1/.1,200)
+    near(mu0*4200*200,1.0555751316061706)
+    # 8.3.4: 30cm by 30cm flux; 8.3.5: quarter arc and half line.
+    near(2*.30*.30,.18)
+    near(mu0/(8*.2)+mu0/(4*pi*.2),mu0*(pi+2)/(8*pi*.2))
+    # 8.3.6: two antiparallel wires.
+    near(mu0/(2*pi)*(20/.05+10/.05),1.2e-4)
+    near(mu0/(2*pi)*(10/.05-20/.15),1.3333333333333333e-5)
+    near((10*.10)/(20-10),.10)
+    # 8.3.9--11: hollow cylindrical current, enclosed current profiles.
+    a=.06; b=.10; r=.08
+    I_enclosed=4*(r*r-a*a)/(b*b-a*a)
+    near(I_enclosed,4*(r*r-a*a)/(b*b-a*a))
+    near(.5+math.log(2), 1.1931471805599454)
+    c=.16; rout=.13; I=8
+    near(I*(c*c-rout*rout)/(c*c-b*b),
+         I*(1-(rout*rout-b*b)/(c*c-b*b)))
+    # 8.3.12 Hall flow speed, 8.3.16 copper Hall emf.
+    near(150e-6/(.05*.003),1)
+    near(1.5*200/(8.4e28*e*.001),2.2291103837359867e-5)
+    # 8.3.15 and 8.3.17: force cancellation and force/moment integral.
+    near(mu0/(2*pi)*20*10*.2/.01,8e-4)
+    near(mu0/(2*pi)*20*10*.2/.10,8e-5)
+    near(8e-4-8e-5,7.2e-4)
+    near(mu0/(2*pi)*20*10*math.log(.10/.01),
+         9.210340371976183e-5)
+    near(mu0/(2*pi)*20*10*(.10-.01),3.6e-6)
+    # 8.3.18--21 electron cyclotron and toroidal material.
+    v=e*.007*.03/me
+    near(v,36935220.23229738,1e-9)
+    near(.5*me*v*v,6.213558416922246e-16)
+    vperp=e*.002*.02/me
+    period=2*pi*me/(e*.002)
+    near(vperp,7035280.04424712,1e-9)
+    near(period,1.7861933761449807e-8)
+    near(sqrt(vperp*vperp+(.05/period)**2),
+         sqrt((e*.002*.02/me)**2+(.05*e*.002/(2*pi*me))**2))
+    near(1.2/(mu0*200),4774.6482927568595,1e-8)
+    # Guide 8.1--8.6: first law, Carnot and mixing entropy.
+    near(.5*R*273*math.log(2),786.6694728899045)
+    near(.5*3.5*R*136.5,1986.11725787475)
+    near(3/5, .6) # translation fraction of rigid-diatomic internal energy
+    near(300*16**.25,600)
+    near(3*R*300,900*R)
+    near(400*R*math.log(5),5352.083246300634,1e-5)
+    near(1-300/400,.25)
+    near((.25)*(400*R*math.log(5)),(400*R*math.log(5))/4)
+    near(2/29,.06896551724137931)
+    p=101325.; T=300.
+    V1=.004; V2=.006
+    dS=p/T*(V1*math.log((V1+V2)/V1)+V2*math.log((V1+V2)/V2))
+    assert dS>0
+
 if __name__ == "__main__":
     n = structural_check()
     numerical_check()
@@ -577,6 +664,7 @@ if __name__ == "__main__":
     fifth_round_regressions()
     sixth_round_regressions()
     seventh_round_regressions()
+    eighth_round_regressions()
     print(f"Structure: {n} referenced worked items; all checked blocks present.")
     print("Selected numeric invariants: passed.")
     print("Not a replacement for full independent physics or copyright review.")
