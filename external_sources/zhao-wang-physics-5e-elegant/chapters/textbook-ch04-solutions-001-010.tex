@@ -1,0 +1,186 @@
+% 《大学物理简明教程》第5版，第4章解答题4.3.1—4.3.10。
+% 原书印刷页与扫描PDF第103—104页；推导单独建立而非复制原书答案。
+\subsection{解答题：简谐运动与振动合成}
+
+\sourceproblem{4.3.1}{103}{103}
+\problemtext 小球位于竖直平面内的光滑圆弧形轨道最低点附近，轨道半径$R$；作小幅运动时证明它为简谐振动，并求周期。
+\workings
+令偏离竖直向下的圆心角为$\theta$。轨道切向重力分力为$-mg\sin\theta$，故
+\[
+mR\ddot\theta=-mg\sin\theta.
+\]
+小角度$|\theta|\ll1$时$\sin\theta\simeq\theta$，
+\[
+\ddot\theta+\frac gR\theta=0,\qquad
+\boxed{\omega_0=\sqrt{g/R}},\quad
+\boxed{T=2\pi\sqrt{R/g}}.
+\]
+\crosscheck 小球若沿轨道大幅运动，$\sin\theta$的非线性会使周期依赖振幅，以上只成立于小幅近似。
+
+\sourceproblem{4.3.2}{103}{103}
+\problemtext 一弹簧振子质量$m=10\times10^{-3}\,\mathrm{kg}$，位移方程
+$x=0.1\cos(8\pi t+2\pi/3)$（SI）。求周期、振幅、初相、速度及加速度最大值、最大回复力、总能量、时间平均动能与势能、动势能相等位置，以及$t_1=1\,\mathrm s$和$t_2=5\,\mathrm s$相位差。
+\workings
+$A=0.1\,\mathrm m,\ \omega=8\pi\,\mathrm{rad/s},\
+\varphi_0=2\pi/3$，故
+\[
+\boxed{T=\frac14\,\mathrm s},\quad
+\boxed{v_{\max}=A\omega=0.8\pi\,\mathrm{m/s}},\quad
+\boxed{a_{\max}=A\omega^2=6.4\pi^2\,\mathrm{m/s^2}}.
+\]
+$k=m\omega^2=0.64\pi^2\,\mathrm{N/m}$，
+\[
+\boxed{F_{\max}=kA=0.064\pi^2\,\mathrm N},\quad
+\boxed{E=\frac12kA^2=0.0032\pi^2\,\mathrm J}.
+\]
+时间平均满足$\langle K\rangle=\langle U\rangle=E/2=0.0016\pi^2\,\mathrm J$；
+$K=U$时$x=\pm A/\sqrt2=\pm0.1/\sqrt2\,\mathrm m$。
+两时刻的相位差
+\[
+\boxed{\Delta\varphi=\omega(t_2-t_1)=32\pi
+\equiv0\pmod{2\pi}}.
+\]
+\crosscheck 经过4秒恰好16个完整振动周期，初末状态相同；$\varphi$未约化时的“累计相位差”为$32\pi$。
+
+\sourceproblem{4.3.3}{103}{103}
+\problemtext 沿$x$轴的简谐振动振幅$A$、周期$T$，采用余弦式$x=A\cos(\omega t+\varphi)$。分别求四种$t=0$条件的初相：(1) $x_0=-A$；(2)过平衡点向正向运动；(3)经过$x=A/2$向负向；(4)经过$x=-A/\sqrt2$向正向。
+\workings
+$\omega=2\pi/T$，速度$v=-A\omega\sin(\omega t+\varphi)$，由位移确定余弦、由速度符号确定正弦。
+\[
+\begin{array}{c|c|l}
+\text{条件}&\varphi\pmod{2\pi}&x(t)\\ \hline
+(1)&\pi&A\cos(\omega t+\pi)\\
+(2)&-\pi/2&A\cos(\omega t-\pi/2)\\
+(3)&\pi/3&A\cos(\omega t+\pi/3)\\
+(4)&-3\pi/4&A\cos(\omega t-3\pi/4)
+\end{array}
+\]
+\crosscheck (3) $\sin(\pi/3)>0$，速度负；(4) $\cos(-3\pi/4)=-1/\sqrt2$，$\sin(-3\pi/4)<0$，速度正。初相可以加任意整数倍$2\pi$。
+
+\sourceproblem{4.3.4}{103}{103}
+\problemtext 一振子质量$0.01\,\mathrm{kg}$，振幅$A=24\,\mathrm{cm}$，周期$T=4.0\,\mathrm s$。$t=0$位于$x=+A$。
+(1) 求$t=0.5\,\mathrm s$的位置和受力；(2) 最短多久从初始位置到达$x=12\,\mathrm{cm}$；(3) 从$x=+12\,\mathrm{cm}$第一次到达$x=-12\,\mathrm{cm}$的最短时间。
+\workings
+$\omega=2\pi/T=\pi/2\,\mathrm{rad/s}$，
+$x(t)=0.24\cos(\pi t/2)\,\mathrm m$。
+(1) $t=0.5$：
+\[
+\boxed{x=0.24\cos(\pi/4)=0.12\sqrt2\,\mathrm m\approx0.1697\,\mathrm m},
+\]
+\[
+\boxed{F=-m\omega^2x
+=-0.01\left(\frac\pi2\right)^2(0.12\sqrt2)
+\approx-4.19\times10^{-3}\,\mathrm N}.
+\]
+(2) 初始在正极端，$\cos(\omega t)=1/2$，首次时间
+\[
+\boxed{t_{A\to A/2}=\frac{\pi/3}{\pi/2}=\frac23\,\mathrm s}.
+\]
+(3) 沿继续负向运动从$+A/2$到$-A/2$，相位由$\pi/3$到$2\pi/3$，
+\[
+\boxed{\Delta t=\frac{(\pi/3)}{\pi/2}=\frac23\,\mathrm s}.
+\]
+\crosscheck 两问时间相等是此特定相位几何的结果，不是任意振动区段的普遍性质。
+
+\sourceproblem{4.3.5}{103}{103}
+\problemtext 光滑水平桌面上，一质量$M$的木块连接劲度系数$k$的轻弹簧且初始静止、弹簧为自然长。质量$m$的子弹以水平速率$u_0$射入木块并滞留，求碰后的振动方程及在位移$x=A/2$处的动能、势能。
+\workings
+短时黏连碰撞中平动动量守恒，公共速率
+$V=mu_0/(M+m)$。随后无摩擦弹簧振动：
+\[
+\omega=\sqrt{\frac{k}{M+m}},\qquad
+A=\frac{V}{\omega}
+=\frac{mu_0}{\sqrt{k(M+m)}}.
+\]
+以碰撞瞬间为$t=0$、子弹入射方向为$x$正向，
+\[
+\boxed{x(t)=A\sin(\omega t)}.
+\]
+总机械能$E=\frac12kA^2$，当$x=A/2$，
+\[
+\boxed{U=\frac18kA^2},\qquad
+\boxed{K=E-U=\frac38kA^2}.
+\]
+\crosscheck \emph{不能}将子弹碰前动能直接等同于碰后振动总能量；完全非弹性碰撞已损失机械能。
+
+\sourceproblem{4.3.6}{104}{104}
+\problemtext 竖直轻弹簧挂质量$1.0\,\mathrm g$的小物体时伸长$4.9\,\mathrm{cm}$。改由弹簧与质量$8.0\,\mathrm g$的小球构成振子：从平衡位置向下拉$1.0\,\mathrm{cm}$，在$t=0$赋予向上的初速度$5.0\,\mathrm{cm/s}$。求周期和振动方程。
+\workings
+静伸长求弹簧劲度：
+\[
+k=\frac{(0.001)(9.8)}{0.049}=0.20\,\mathrm{N/m}.
+\]
+振子$m=0.008\,\mathrm{kg}$，角频率与周期
+\[
+\omega=\sqrt{k/m}=5\,\mathrm{rad/s},\quad
+\boxed{T=\frac{2\pi}{5}\,\mathrm s}.
+\]
+取向下为$x$正方向，则$x_0=+0.010\,\mathrm m,\ v_0=-0.050\,\mathrm{m/s}$。
+\[
+A=\sqrt{x_0^2+(v_0/\omega)^2}
+=0.010\sqrt2\,\mathrm m,\quad
+\cos\varphi=\frac1{\sqrt2},\ \sin\varphi=\frac1{\sqrt2}.
+\]
+所以
+\[
+\boxed{x(t)=0.010\sqrt2\cos(5t+\pi/4)\,\mathrm m}.
+\]
+\crosscheck $x(0)=+1$ cm、$\dot x(0)=-5$ cm/s；由另一物体的静伸长估算$k$时不能误把$1$ g当成本次运动质量。
+
+\sourceproblem{4.3.7}{104}{104}
+\problemtext 根据图4.3.7的两条$x$—$t$曲线，分别写出简谐运动方程。图(a)在$t=0$穿过$x=0$向上，$t=1\,\mathrm s$向下穿越零、$t=2\,\mathrm s$向上穿越零，振幅$10$ cm；图(b)在$t=0$位于$+5$ cm且向上，振幅$10$ cm，图示周期约为$2$ s。
+\workings
+(a) 正向过零到下一次同向过零为一个周期$2\,\mathrm s$，故
+\[
+\boxed{x_a(t)=10\sin(\pi t)\,\mathrm{cm}}.
+\]
+(b) 由$t=0$处$x/A=1/2$且曲线向上，余弦初相为$-\pi/3$；
+按图周期$T=2$ s，
+\[
+\boxed{x_b(t)=10\cos(\pi t-\pi/3)\,\mathrm{cm}}.
+\]
+\crosscheck $x_b(0)=5$ cm且$\dot x_b(0)=+5\sqrt3\pi$ cm/s；
+(b) 峰值发生于$t=1/3$ s。原图横轴刻度分辨率仍需单独图形二校。
+
+\sourceproblem{4.3.8}{104}{104}
+\problemtext 两个同方向、同频率简谐振动合振幅为$A=0.20\,\mathrm m$，合振动相位相对第一个振动\emph{超前}$\pi/6$，已知第一个振幅$A_1=0.173\,\mathrm m$。求第二个振幅以及两振动间的相位差。
+\workings
+以第一个振动的旋转矢量沿实轴，合矢量为$A e^{i\delta}$，$\delta=\pi/6$，
+第二振动矢量为$A_2e^{i\Delta}=Ae^{i\delta}-A_1$。分别比较实虚部，
+\[
+A_2^2=(A\cos\delta-A_1)^2+(A\sin\delta)^2
+=A^2+A_1^2-2AA_1\cos\delta,
+\]
+\[
+\boxed{A_2=\sqrt{A^2+A_1^2-2AA_1\cos(\pi/6)}
+\approx0.100\,\mathrm m}.
+\]
+从分量求相位差
+\[
+\boxed{\Delta=\operatorname{atan2}
+\left(A\sin\frac\pi6,\ A\cos\frac\pi6-A_1\right)
+\approx\frac{\pi}{2}}.
+\]
+\crosscheck $0.173\,\mathrm m$是约$\sqrt3(0.1)$ m，故若$A=0.2$ m且合矢量领先$\pi/6$，另一个振幅约0.1 m且与第一振动相差约$90^\circ$；按旋转矢量分解，而非误将给定的$\pi/6$当作两原振动相差。
+
+\sourceproblem{4.3.9}{104}{104}
+\problemtext 分别求两组同频同向振动合成后的振幅：
+(1) $x_1=5\cos(3t+\pi/3)$ cm，$x_2=5\cos(3t+7\pi/3)$ cm；
+(2) $x_1=5\cos(3t+\pi/3)$ cm，$x_2=5\cos(3t+4\pi/3)$ cm。
+\workings
+(1) 相位差为$2\pi$，完全同相，故$\boxed{A=10\,\mathrm{cm}}$。
+(2) 相位差为$\pi$，幅度相同而相反，故$\boxed{A=0}$。
+\crosscheck 两振动的角频率均为$3\,\mathrm{rad/s}$；只有同频情况下能用固定相量法。
+
+\sourceproblem{4.3.10}{104}{104}
+\problemtext 同一直线同频振动$x_1=0.4\cos(2t+\pi/6)$ m与
+$x_2=0.3\cos(2t-5\pi/6)$ m，求合振幅、合初相和合振动方程。
+\workings
+两初相之差为$-\pi$，故两个相量反向；
+振幅相减得$A=0.4-0.3=0.1$ m，合相位与第一个一致：
+\[
+\boxed{A=0.1\,\mathrm m},\qquad
+\boxed{\varphi=\pi/6\pmod{2\pi}},\qquad
+\boxed{x(t)=0.1\cos(2t+\pi/6)\,\mathrm m}.
+\]
+\crosscheck 在$t=0$时$x_1+x_2=(0.4-0.3)\cos(\pi/6)$，与合式完全一致。
