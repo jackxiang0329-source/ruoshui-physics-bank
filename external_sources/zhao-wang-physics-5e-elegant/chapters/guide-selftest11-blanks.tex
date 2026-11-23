@@ -1,0 +1,144 @@
+% 《大学物理学学习指导》第5版，自测题11填空11.2.1—11.2.9。
+% 源书印刷231—232页，PDF物理239—240页。
+\subsection{自测题11：光谱、粒子波长和量子态填空}
+
+\sourcetest{11.2.1}{231}{239}
+\problemtext X射线散射后存在两种波长分量，
+哪一种称为康普顿散射分量？
+\workings
+散射光包括与入射波长\textbf{相同}的弹性散射成分，
+也包括波长比入射光\textbf{更长}的非弹性散射成分。
+后者来自电子反冲的能量转移，称
+\[
+\boxed{\text{康普顿散射分量}}.
+\]
+\crosscheck 无自由电子反冲时的相干弹性散射不能
+因为同在散射光束中就一并称为“康普顿位移”。
+
+\sourcetest{11.2.2}{232}{240}
+\problemtext 氢原子巴耳末线系最长波长与最短波长的比值。
+\workings
+终态$n=2$。
+最长线为$3\to2$，
+最短波长为系列极限$\infty\to2$。
+用里德伯关系
+\[
+\boxed{\frac{\lambda_{\max}}{\lambda_{\min}}
+=\frac{1/4}{1/4-1/9}
+=\frac95=1.80}.
+\]
+\crosscheck 最短波长是\emph{巴耳末极限}，
+不是从有限$n=4$的次长线误推得到的27/20。
+
+\sourcetest{11.2.3}{232}{240}
+\problemtext 氢原子电子位于$n=3$时，
+完全电离到自由电子所需能量是多少eV？
+\workings
+玻尔氢原子能级$E_n=-13.6/n^2$eV，
+电离极限$E_\infty=0$，
+\[
+\boxed{E_{\rm ion}=0-E_3=\frac{13.6}{9}
+\simeq1.51\,\mathrm{eV}}.
+\]
+\crosscheck 不可按基态电离能13.6eV直接填写，
+因为原电子已经在$n=3$激发态。
+
+\sourcetest{11.2.4}{232}{240}
+\problemtext 中子德布罗意波长$0.2$nm，
+取$h=6.63\times10^{-34}$J\,s、
+$m=1.67\times10^{-27}$kg，
+求其非相对论动能。
+\workings
+$p=h/\lambda$，$K=p^2/(2m)$，故
+\[
+\boxed{K=\frac{h^2}{2m\lambda^2}
+=\frac{(6.63\times10^{-34})^2}
+{2(1.67\times10^{-27})(0.2\times10^{-9})^2}
+\simeq3.29\times10^{-21}\,\mathrm J}.
+\]
+折合约$0.0205$eV。
+\crosscheck 中子的静止能量约939MeV，
+本题动能极低，非相对论动能公式充分适用。
+
+\sourcetest{11.2.5}{232}{240}
+\problemtext 电子局域于长度$\Delta x=0.05$nm范围，
+按原书指定$\Delta x\Delta p_x\ge h$估算
+$x$方向动量不确定度。
+\workings
+原书此题明确采用$h$而非$\hbar/2$，
+\[
+\boxed{\Delta p_x\gtrsim
+\frac{6.63\times10^{-34}}
+{0.05\times10^{-9}}
+\simeq1.33\times10^{-23}\,\mathrm{kg\,m/s}}.
+\]
+\crosscheck 若用标准差形式
+$\Delta x\Delta p_x\ge\hbar/2$，
+下界应再除以$4\pi$；
+两种约定的结果不应混称为同一个精确界限。
+
+\sourcetest{11.2.6}{232}{240}
+\problemtext 补全三组$n=2$单电子四量子数中的合法缺项：
+(1) $m_l=-1,m_s=-1/2$；
+(2) $l=0,m_s=+1/2$；
+(3) $l=1,m_l=0$。
+\workings
+量子数允许范围
+$l=0,\ldots,n-1$，
+$m_l=-l,\ldots,l$，
+$m_s=\pm1/2$。
+因此
+\[
+\boxed{\text{(1)}\ l=1},\qquad
+\boxed{\text{(2)}\ m_l=0},\qquad
+\boxed{\text{(3)}\ m_s=\pm\frac12}.
+\]
+\crosscheck $m_l=-1$要求$l\ge1$，
+与$n=2$一起唯一确定$l=1$。
+原题(3)只给出一个没有其他限制的电子，
+允许两种自旋投影而非只能取某一符号。
+
+\sourcetest{11.2.7}{232}{240}
+\problemtext 主量子数$n=4$时角量子数$l$
+及磁量子数$m_l$可能取值。
+\workings
+$n=4$时$l=0,1,2,3$。
+对每个$l$都有$m_l=-l,\ldots,l$，
+综合所有允许$l$，
+\[
+\boxed{l=0,1,2,3},\qquad
+\boxed{m_l=-3,-2,-1,0,1,2,3}.
+\]
+\crosscheck 虽然总集合含7个$m_l$值，
+但并不是每个$l$均可同时取这7个值；
+必须满足$|m_l|\le l$。
+
+\sourcetest{11.2.8}{232}{240}
+\problemtext 基态氦原子的两名电子用四量子数
+$(n,l,m_l,m_s)$分别如何表示？
+\workings
+基态氦的两个电子占据$1s$轨道；
+泡利不相容原理要求自旋投影相反，
+所以两组为
+\[
+\boxed{(1,0,0,+1/2)},\qquad
+\boxed{(1,0,0,-1/2)}.
+\]
+\crosscheck 相同的前三量子数是允许的；
+不允许两个电子的\emph{四个}量子数同时完全相同。
+
+\sourcetest{11.2.9}{232}{240}
+\problemtext 原子序数$Z=6$的碳及$Z=14$的硅，
+基态电子组态分别是什么？
+\workings
+在原书采用的独立电子填充近似下，
+按照能量顺序和泡利不相容原理，
+\[
+\boxed{\mathrm C:\ 1s^2\,2s^2\,2p^2},
+\]
+\[
+\boxed{\mathrm{Si}:\ 1s^2\,2s^2\,2p^6\,3s^2\,3p^2}.
+\]
+\crosscheck 电子占据数分别为$2+2+2=6$，
+及$2+2+6+2+2=14$；
+开放$p$亚层的具体自旋排列还受洪特规则影响。
