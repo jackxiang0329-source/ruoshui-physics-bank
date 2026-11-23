@@ -1,0 +1,56 @@
+\section{第2组：质点动力学}
+\sourceproblem{2-T1}{3}{7}
+\problemtext 静止释放质量 $m$ 的物体，受线性阻力 $-kv$，求下落速度与终速。
+\workings 取向下为正，$m\dot v=mg-kv$，$v(0)=0$。积分得 $v=mg(1-e^{-kt/m})/k$，终速 $mg/k$。
+\crosscheck $k>0$；$t=0$ 时 $\dot v=g$，$k\to0$ 时 $v\to gt$。
+\sourceproblem{2-T2}{3}{7}
+\problemtext $m=2.00\,\mathrm{kg}$，$F=10+6x^2$（SI），从 $x=0$ 静止出发，求 $x=4.0\,\mathrm m$ 速率。
+\workings 牛顿定律 $mv\,\mathrm dv/\mathrm dx=10+6x^2$；积分 $mv^2/2=10x+2x^3$，故 $v=\sqrt{168}\,\mathrm{m/s}\approx12.96\,\mathrm{m/s}$。
+\crosscheck 功能关系独立核验：外力做功 $168\,\mathrm J$，等于动能增量；保留正根。
+\sourceproblem{2-T3}{3}{7}
+\problemtext 质量 $m$ 以 $v_0>0$ 竖直上抛，阻力与速度线性相关，求速度及最大上升高度。
+\workings 向上为正，$m\dot v=-mg-kv$，解得
+\[
+v=(v_0+mg/k)e^{-kt/m}-mg/k.
+\]
+令 $v=0$ 得 $t_*=(m/k)\ln(1+kv_0/(mg))$。积分至该时刻，
+\[
+H=\frac{mv_0}{k}-\frac{m^2g}{k^2}\ln(1+kv_0/(mg)).
+\]
+\crosscheck 用 $\ln(1+z)=z-z^2/2+O(z^3)$ 检验 $k\to0$ 时 $H\to v_0^2/(2g)$；高度为相对抛出点。
+\sourceproblem{2-T4}{4}{8}
+\problemtext 快艇关机时速度 $v_0$，阻力大小 $kv^2$，质量 $m$，求速度、路程随时间及速度随路程的规律。
+\workings 沿初速度取正，$m\dot v=-kv^2$，得
+\[
+v=\frac{v_0}{1+kv_0t/m},\quad
+s=\frac mk\ln(1+kv_0t/m),\quad v=v_0e^{-ks/m}.
+\]
+\crosscheck $s(0)=0$，$\dot s=v$；速度始终为正并趋零，纯平方阻力模型下无有限停车时间。
+\sourceproblem{2-T5}{4}{8}
+\problemtext 水平加速度为 $a$ 的车厢内，悬挂小球相对车厢静止，求绳偏离竖直的角。
+\workings 车厢系引入反向惯性力 $ma$，绳张力满足 $T\sin\theta=ma,T\cos\theta=mg$，故 $\theta=\arctan(a/g)$，绳向车加速度的反方向偏斜。
+\crosscheck 地面惯性系同样有水平合力 $ma$、竖直合力零；质量约去。
+\sourceproblem{2-T6}{4}{8}
+\problemtext 上升加速度 $a$ 的电梯内，理想滑轮两侧悬挂 $m_1>m_2$，求张力及 $m_1$ 相对电梯的加速度。
+\workings 在电梯系取有效重力 $g'=g+a$。令 $m_1$ 向下相对加速度 $b$，则 $m_1g'-T=m_1b$，$T-m_2g'=m_2b$，联立得
+\[
+b=\frac{m_1-m_2}{m_1+m_2}(g+a),\qquad
+T=\frac{2m_1m_2}{m_1+m_2}(g+a).
+\]
+\crosscheck $a=0$ 退化为标准 Atwood 机，$m_1=m_2$ 时相对加速度零；假定绳绷紧。
+\sourceproblem{2-T7}{5}{9}
+\problemtext 教材一维冲量例题：力随时间按 $F=600-2\times10^5t$（SI）线性减小，末态速度 $300\,\mathrm{m/s}$，末态力为零；求作用时长、冲量与质量。
+\workings $F(t_*)=0$ 得 $t_*=0.003\,\mathrm s$；冲量为三角形面积 $I=600t_*/2=0.9\,\mathrm{N\,s}$。在初速度为零的通常约定下，$m=I/300=0.003\,\mathrm{kg}$。
+\crosscheck 若初速度未约定为零，则只能得 $m(v_f-v_i)=I$；质量数值依赖该初始条件。
+\sourceproblem{2-T8}{5}{9}
+\problemtext 稳定水流经直角弯管，质量流率 $3\times10^3\,\mathrm{kg/s}$、速率 $10\,\mathrm{m/s}$，求水流改变方向产生的反作用力。
+\workings 入口、出口单位方向分别为 $\bm e_i,\bm e_o$，互相垂直。动量流变化率为 $\dot m v(\bm e_o-\bm e_i)$，其反向为 $\dot m v(\bm e_i-\bm e_o)$，模 $3\sqrt2\times10^4\,\mathrm N$，沿入口速度与反向出口速度的角平分线。
+\crosscheck 这是忽略端面压力和流体重量的动量流反作用结果；若求真实管壁总受力，需另给端面压力、截面积与重力等条件，不能仅凭流量确定。
+\sourceproblem{2-T9}{5}{9}
+\problemtext 煤粉从高 $h=0.5\,\mathrm m$ 自由落至向右速率 $u=2.0\,\mathrm{m/s}$ 的带面；质量流率 $q_m=40\,\mathrm{kg/s}$，忽略已随带运动的积煤重量，求煤对带作用力。
+\workings 取右和上为正，入口速度 $(0,-\sqrt{2gh})$，出口速度 $(u,0)$。忽略接触区滞留重量，带对煤的动量流作用为 $q_m(u,\sqrt{2gh})$，故煤对带力
+\[
+\bm F=-q_mu\,\bm i-q_m\sqrt{2gh}\,\bm j.
+\]
+取 $g=9.8$，得向左 $80\,\mathrm N$、向下约 $125.2\,\mathrm N$，模约 $148.6\,\mathrm N$，左下方与水平夹角 $\arctan(\sqrt{2gh}/u)\approx57.4^\circ$。
+\crosscheck 水平力阻碍带运动，竖直力向下；若计入积煤或滞留煤重量，竖直负载另加。
