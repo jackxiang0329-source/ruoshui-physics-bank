@@ -1,4 +1,5 @@
 % Consolidated textbook-ch05 from a4681eacb57a1f9fed79c1da26e5c6d0418a7d1c; source fragments preserved.
+% 2026-11-24 八批严格复核第2批：本文件旧片段哈希对应历史版；当前内容含局部二校修订。
 
 % === BEGIN textbook-ch05-choices.tex blob a60401a723eca9acb0cc92f9e2f480fb251fe92a ===
 % 《大学物理简明教程》(第5版)第5章“气体动理论”
@@ -94,7 +95,7 @@ $i=3+2=5$，有
 \problemtext 一定体积内的理想气体温度升为原来的2倍，
 比较分子平均平动动能与容器内压强。
 \workings
-温度以开尔文计，$\langle\varepsilon_{\mathrm{trans}}\rangle=\tfrac32 k_{\mathrm B}T$，
+假设容器封闭、分子数固定，温度以开尔文计，$\langle\varepsilon_{\mathrm{trans}}\rangle=\tfrac32 k_{\mathrm B}T$，
 而$n=N/V$不变，$p=nk_{\mathrm B}T$。
 故两者均变为原来的2倍，原题选\textbf{A}。
 \crosscheck 若改为摄氏温度数值“加倍”则不成立；
@@ -127,7 +128,7 @@ v_{\mathrm{rms}}=\sqrt{\frac{3RT}{M_{\mathrm{mol}}}},
 \boxed{\langle\varepsilon_{\mathrm{trans}}\rangle
 =\frac32k_{\mathrm B}T=\text{常量}}.
 \]
-但容器内分子数$N$减少，$p=Nk_{\mathrm B}T/V$减少，
+若容器刚性、气体成分及有效自由度不变，则容器内分子数$N$减少，$p=Nk_{\mathrm B}T/V$减少，
 剩余气体的总内能$U=(i/2)Nk_{\mathrm B}T$也减少。
 因此只有平均平动动能不变的描述正确，选\textbf{B}。
 \crosscheck 单分子的平均能量与整个容器的内能是不同物理量。
@@ -158,7 +159,7 @@ v_{\mathrm{rms}}=\sqrt{\frac{3k_{\mathrm B}T}{m}}.
 \boxed{v_0=v_p=\sqrt{\frac{2k_{\mathrm B}T}{m}}}
 \]
 （经典三维麦克斯韦速率分布）。
-\crosscheck 实际严格麦克斯韦速率密度通常并非以众数为中心左右面积相等；
+\crosscheck 严格三维麦克斯韦速率密度并非以众数为中心左右面积相等。由累积分布函数$F(v)=\operatorname{erf}(z)-2ze^{-z^2}/\sqrt\pi$（$z=v\sqrt{m/(2k_{\mathrm B}T)}$），峰点$z=1$处$F(v_p)\approx0.42759$，故左右面积约为42.76\%和57.24\%；
 图中“$A,B$面积相等”若为严格条件，与标准分布峰点有潜在不一致。
 因此保留图示\textbf{待二校}，不将众数误认为中位数。
 
@@ -166,10 +167,10 @@ v_{\mathrm{rms}}=\sqrt{\frac{3k_{\mathrm B}T}{m}}.
 \problemtext 速率概率密度$f(v)$的物理意义为何？
 \workings
 $f(v)\mathrm dv$表示分子速率处于$[v,v+\mathrm dv]$区间的概率或分子数比例，
-而$f(v)$本身是\emph{单位速率区间的概率密度}，故选\textbf{B}。
+而$f(v)$本身是\emph{概率密度}（有限区间概率须积分，并非单位宽度区间的精确概率），故选\textbf{B}。
 \[
 \boxed{\frac{\mathrm dP}{\mathrm dv}=f(v),\qquad
-P(v<v_i<v+\mathrm dv)=f(v)\mathrm dv}.
+\mathrm dP=f(v)\mathrm dv}.
 \]
 \crosscheck $[f(v)]=(\mathrm{m/s})^{-1}$，不是无量纲百分率，也不是分子数。
 
@@ -316,19 +317,19 @@ $n=N/V$。第一次体积不变，$\lambda$不变；
 \problemtext 容器中的氧气压强$p=0.1\,\mathrm{MPa}$、温度$27^\circ\mathrm C$。
 求分子数密度$n$、单个氧分子质量$m$和气体质量密度$\rho$。
 \workings
-采用$T=300.15$ K、$p=10^5$ Pa、$M_{\mathrm{O_2}}=0.028\,\mathrm{kg/mol}$：
+采用$T=300.15$ K、$p=10^5$ Pa、$M_{\mathrm{O_2}}=0.032\,\mathrm{kg/mol}$：
 \[
 \boxed{n=\frac{p}{k_{\mathrm B}T}\approx
 2.41\times10^{25}\,\mathrm{m^{-3}}},
 \quad
 \boxed{m=\frac{M_{\mathrm{O_2}}}{N_A}
-\approx4.65\times10^{-26}\,\mathrm{kg}},
+\approx5.31\times10^{-26}\,\mathrm{kg}},
 \]
 \[
 \boxed{\rho=nm=\frac{pM_{\mathrm{O_2}}}{RT}
-\approx1.12\,\mathrm{kg/m^3}}.
+\approx1.28\,\mathrm{kg/m^3}}.
 \]
-\crosscheck 将$n$乘单分子质量所得密度与理想气体状态方程求得的一致。
+\crosscheck 将$n$乘单分子质量所得密度与理想气体状态方程求得的一致。氧气摩尔质量为约32 g/mol（28 g/mol是氮气的常用近似值），据此纠正旧稿和回归脚本。
 
 \sourceproblem{5.3.2}{125}{125}
 \problemtext 一水银气压计原水银柱高$0.76\,\mathrm m$，玻璃管顶端至水银液面的空隙为$0.12\,\mathrm m$，
@@ -585,7 +586,7 @@ $27^\circ\mathrm C$的液体，观测到其方均根速率为$1.4\,\mathrm{cm/s}
 \approx6.16\times10^{23}\,\mathrm{mol^{-1}}}.
 \]
 \crosscheck 本实验估计值与标准$6.022\times10^{23}\,\mathrm{mol^{-1}}$同数量级；
-估算偏差来自给定实验数值舍入。原题需再核对其所称常量的中文用字。
+估算偏差可能来自给定实验数据的舍入及测量误差；能量均分还要求测到热平衡微粒的瞬时速度方均根，而非长时间位移除以时间得到的平均速率。原题需再核对其所称常量的中文用字。
 
 \sourceproblem{5.3.15}{126}{126}
 \problemtext 两瓶氧气、氢气处于相同压强与绝对温度，
