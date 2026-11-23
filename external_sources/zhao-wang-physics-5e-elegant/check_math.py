@@ -106,6 +106,14 @@ CHAPTERS = (
      [f"11.3.{n}" for n in range(1, 10)]),
     ("chapters/textbook-ch11-solutions-010-018.tex", "sourceproblem",
      [f"11.3.{n}" for n in range(10, 19)]),
+    ("chapters/textbook-ch12-choices.tex", "sourceproblem",
+     [f"12.1.{n}" for n in range(1, 15)]),
+    ("chapters/textbook-ch12-blanks.tex", "sourceproblem",
+     [f"12.2.{n}" for n in range(1, 14)]),
+    ("chapters/textbook-ch12-solutions-001-009.tex", "sourceproblem",
+     [f"12.3.{n}" for n in range(1, 10)]),
+    ("chapters/textbook-ch12-solutions-010-018.tex", "sourceproblem",
+     [f"12.3.{n}" for n in range(10, 19)]),
     ("chapters/guide-ch01-examples.tex", "sourceexample",
      [f"1.{n}" for n in range(1, 6)]),
     ("chapters/guide-ch02-examples.tex", "sourceexample",
@@ -128,6 +136,8 @@ CHAPTERS = (
      [f"10.{n}" for n in range(1, 9)]),
     ("chapters/guide-ch11-examples.tex", "sourceexample",
      [f"11.{n}" for n in range(1, 8)]),
+    ("chapters/guide-ch12-examples.tex", "sourceexample",
+     [f"12.{n}" for n in range(1, 9)]),
 )
 
 
@@ -149,7 +159,7 @@ def structural_check():
             for label in (r"\problemtext", r"\workings", r"\crosscheck"):
                 assert label in block, (number, label)
         total += len(ids)
-    assert total == 542, total
+    assert total == 595, total
     main_source = (ROOT / "main.tex").read_text(encoding="utf-8")
     for relative, _macro, _expected in CHAPTERS:
         stub = relative.removesuffix(".tex")
@@ -922,6 +932,62 @@ def eleventh_round_regressions():
          (I0*r*r/aa**2)**2*(rho*length/(pi*r*r)))
 
 
+
+def twelfth_round_regressions():
+    """Quantum and interference spot checks. No automatic claim of academic peer review."""
+    pi=math.pi
+    sqrt=math.sqrt
+    h=6.62607015e-34
+    c=299792458.
+    e=1.602176634e-19
+    me=9.1093837139e-31
+    sig=5.670374419e-8
+    hc_eVnm=h*c/e*1e9
+    # Textbook 12.1 choice items
+    near((773/293)**4,48.444836471487434)
+    near(hc_eVnm/(hc_eVnm/540+1.2),354.64550375289156)
+    near(27/20,1.35)
+    near((1/4-1/16)/(1/4-1/9),27/20)
+    near(12.09*e/(1.67e-27*c),3.8690070449988467)
+    near((1.226/.04)**2,939.4225)
+    near(math.cos(5*pi/4)**2,.5)
+    # Textbook 12.2 fill-ins: energy intervals, source-specific h bound.
+    near(c/(300e-9)-4e-19/h,3.956321214764726e14)
+    near(2-sqrt(2),.5857864376269049)
+    near(3.4-.85,2.55)
+    near(-13.6/16,-.85)
+    near((h/(2*pi))/(2*1e-8)/e,3.291059784754533e-8)
+    near(h/(5e-9)*1e25,1.32521403)
+    assert 2*(2**2)==8
+    # Textbook 12.3 thermodynamic light and photoelectric energy.
+    near(2.897771955e-3/(.55e-6),5268.676281818181)
+    near((22.8e4/sig)**.25,1416.0571382459025)
+    near(hc_eVnm/4.2,295.2004724600006)
+    near(hc_eVnm/(hc_eVnm/300-.5*me*5e5**2/e),362.3041265814437)
+    near(e*(2.13-.47)/((9.6-5.5)*1e14)*1e34,6.486861493756098)
+    near(5*h*c/(500e-9)*1e18,1.9864458571489288)
+    near(h/(me*c)*1e12,2.426310238916983)
+    near((.0708+h/(me*c)*1e9),.07322631023891698)
+    near(1.5*h/(me*c)/(.015e-9),.2426310235380317)
+    near(13.6*(1-1/4**2),12.75)
+    near(12.75*e/h,3.0829362836582705e15)
+    near(9-1,8)
+    near(h/(.2e-9)*1e24,3.313035075)
+    near(math.hypot(h/(.2e-9)*c,me*c*c)/e,511036.5523245139)
+    near(h/math.sqrt(2*me*200*e)*1e9,.08672141167034501)
+    near(1/(2*pi*c*(1e-14)/(400e-9)**2)*1e9,8.494139934201832)
+    near(300e-9/(4*pi*1e-6),.023873241463784303)
+    assert [k/6 for k in [1,3,5]]==[1/6,.5,5/6]
+    assert sum(2*(2*l+1) for l in range(3))==2*3**2
+    # Guide 12.1--12.8: reference-dimension and phase sign checks.
+    near(550/(4*1.38),99.6376811594203)
+    near(2*pi*(.4e-3*.1e-3/.5)/(6.4e-7),pi/4)
+    near(3.5*500/(2*1.3),673.0769230769231)
+    near((1.9)*(600e-9)*3,3.42e-6)
+    near((5-.5)/(6-.5)*500,409.09090909090907)
+    near(2*1.4*1e-4*.25e-2*1e9,700)
+    assert .035/.0025==14
+
 if __name__ == "__main__":
     n = structural_check()
     numerical_check()
@@ -935,6 +1001,7 @@ if __name__ == "__main__":
     ninth_round_regressions()
     tenth_round_regressions()
     eleventh_round_regressions()
+    twelfth_round_regressions()
     print(f"Structure: {n} referenced worked items; all checked blocks present.")
     print("Selected numeric invariants: passed.")
     print("Not a replacement for full independent physics or copyright review.")
