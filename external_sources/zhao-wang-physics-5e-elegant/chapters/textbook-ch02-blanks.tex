@@ -1,0 +1,120 @@
+% 《大学物理简明教程》第5版，第2章填空题 2.2.1--2.2.9。
+% 书内/PDF第51--52页。原书扫描逐题核对；待独立二校。
+
+\subsection{填空题：2.2.1--2.2.9}
+\sourceproblem{2.2.1}{51}{51}
+\problemtext 质量$m$的小球由水平绳$AB$和与竖直方向成$\theta$角的斜绳$BC$悬挂，静止时求斜绳张力$T$与水平绳张力$T'$之比。
+\workings
+按图，斜绳的竖直分量平衡重力$T\cos\theta=mg$，
+水平分量与水平绳平衡$T'=T\sin\theta$。因此
+\[
+\boxed{\frac{T}{T'}=\frac1{\sin\theta}}.
+\]
+\crosscheck 当$\theta\to0^+$时水平绳张力趋零，故比值发散；若$\theta=0$，$T'=0$，比值无定义。
+
+\sourceproblem{2.2.2}{51}{51}
+\problemtext 质量$10\,\mathrm{kg}$物体受方向固定的力$F(t)=30+40t$（N）作用，初速度大小$10\,\mathrm{m/s}$且与力同向。求前$2$秒冲量与末速率。
+\workings
+\[
+J=\int_0^2(30+40t)\,dt=[30t+20t^2]_0^2
+=\boxed{140\,\mathrm{N\,s}}.
+\]
+由$J=m(v_2-v_0)$可得
+\[
+\boxed{v_2=10+\frac{140}{10}=24\,\mathrm{m/s}}.
+\]
+\crosscheck 冲量与动量改变量均为$140\,\mathrm{kg\,m/s}$。
+
+\sourceproblem{2.2.3}{51}{51}
+\problemtext 沿$x$正向运动的质点受力$\bm F=(4+5x)\bm i$（SI），从$x=0$移至$x=10\,\mathrm m$，求该力做功。
+\workings
+\[
+W=\int_0^{10}\bm F\cdot d\bm r
+=\int_0^{10}(4+5x)\,dx
+=\left[4x+\frac52x^2\right]_0^{10}
+=\boxed{290\,\mathrm J}.
+\]
+\crosscheck 位移沿力的方向，功应为正。
+
+\sourceproblem{2.2.4}{51}{51}
+\problemtext 质量$m$物体沿水平面以初速率$v$滑动，仅在滑动摩擦作用下经距离$s$停止。求加速度大小和动摩擦系数。
+\workings
+匀减速满足$0=v^2-2as$，故
+\[
+\boxed{|a|=\frac{v^2}{2s}},\qquad
+\mu=\frac{|a|}{g}=\boxed{\frac{v^2}{2gs}}.
+\]
+\crosscheck $s>0$，且速度减小；动摩擦力$-\mu mg$的功$-\mu mgs=-mv^2/2$。
+
+\sourceproblem{2.2.5}{51}{51}
+\problemtext 光滑水平面上$m_A=2m_B$，物体$A$带初始动能$E_k$撞击静止的$B$，分别发生完全弹性碰撞与完全非弹性（黏连）碰撞，求碰后两者总动能。
+\workings
+完全弹性：系统动量、动能均守恒，所以
+$\boxed{E_{k,\rm 弹}=E_k}$。
+完全非弹性：设碰前$A$速率$u$，由动量守恒
+$V=\frac{2m_B}{3m_B}u=\frac23u$，故
+\[
+E_{k,\rm 黏}=\frac12(3m_B)\left(\frac23u\right)^2
+=\frac23\left(\frac12 2m_Bu^2\right)
+=\boxed{\frac23E_k}.
+\]
+\crosscheck 非弹性损失$E_k/3>0$，其余转化为热、形变等内能。
+
+\sourceproblem{2.2.6}{52}{52}
+\problemtext 人造地球卫星椭圆运动，近地点$A$、远地点$B$距地心$r_1,r_2$，地球质量$M$，卫星质量$m$。求从$A$到$B$的引力势能改变量及动能改变量。
+\workings
+以无穷远引力势能为零，有$U(r)=-GMm/r$。故
+\[
+\boxed{U_B-U_A=GMm\left(\frac1{r_1}-\frac1{r_2}\right)}.
+\]
+机械能守恒，$\Delta K=-\Delta U$，
+\[
+\boxed{K_B-K_A=GMm\left(\frac1{r_2}-\frac1{r_1}\right)}.
+\]
+\crosscheck $r_2>r_1$，势能增大、动能减小；两式之和为零。
+
+\sourceproblem{2.2.7}{52}{52}
+\problemtext 质量$m=0.1\,\mathrm{kg}$的物块在水平面上压缩弹簧$k=100\,\mathrm{N/m}$至距自然长$x_1=0.02\,\mathrm m$的位置，释放后运动，原书表述物块移动$x_2=0.1\,\mathrm m$后停止。求滑动摩擦系数。
+\workings
+\textbf{原书数值与“由静止释放、无外界再输入功”的模型不相容，暂不提供伪精确正摩擦系数。}
+如按图取初始压缩量$x_1=0.02$，若“移动距离$x_2=0.1$”指从压缩位置向右移动，
+则终态相对原长伸长$x_2-x_1=0.08$。
+初始弹性势能
+\[
+U_i=\frac12kx_1^2=\frac12(100)(0.02)^2=0.02\,\mathrm J,
+\]
+终态弹性势能
+$U_f=\frac12k(x_2-x_1)^2=0.32\,\mathrm J$，
+即使$\mu=0$亦不能抵达终态。若把$x_2$直接解释为最终伸长量，能量差更大。
+\[
+\boxed{\text{按当前扫描数字与无额外供能条件，物理解不存在。}}
+\]
+\crosscheck 由能量不增原理，物块从$x_1$出发在任何正摩擦下的最远到达位置须满足$|x_f|\le x_1$；疑原书数字或位移定义有误，已列入待核实勘误。
+
+\sourceproblem{2.2.8}{52}{52}
+\problemtext 地下室水平底面积$A=50\,\mathrm{m^2}$，积水深$h=1.5\,\mathrm m$，将水全部抽升至高于原水面的街面$H=5.0\,\mathrm m$，求最低抽水功（忽略泵损耗）。
+\workings
+取原水面向下深度$y\in[0,h]$。深度$dy$的薄水层重力
+$dF=\rho gA\,dy$，提升高度$H+y$，所以
+\[
+W_{\min}=\rho gA\int_0^h(H+y)\,dy
+=\rho gA\left(Hh+\frac{h^2}{2}\right).
+\]
+以$\rho=1000\,\mathrm{kg/m^3},g=9.8\,\mathrm{m/s^2}$，
+\[
+\boxed{W_{\min}
+=1000\cdot9.8\cdot50\left(5\cdot1.5+\frac{1.5^2}{2}\right)
+=4.22625\times10^6\,\mathrm J}.
+\]
+\crosscheck 积水总体积$75\,\mathrm{m^3}$，平均提升高度$5.75\,\mathrm m$，相乘同值。
+
+\sourceproblem{2.2.9}{52}{52}
+\problemtext 不可压缩流体在管中稳定流动，管径从$0.2\,\mathrm m$缩小到$0.1\,\mathrm m$，若粗管处流速为$1\,\mathrm{m/s}$，求细管流速。
+\workings
+连续性方程$A_1v_1=A_2v_2$，
+\[
+\boxed{v_2=v_1\left(\frac{d_1}{d_2}\right)^2
+=1\left(\frac{0.2}{0.1}\right)^2
+=4\,\mathrm{m/s}}.
+\]
+\crosscheck 管径减半、面积减为四分之一、流速增为四倍，体积流率守恒。
