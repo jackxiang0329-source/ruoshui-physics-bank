@@ -1,0 +1,199 @@
+% 《大学物理简明教程》（第5版）2.3.1--2.3.12
+% 原书/PDF第52--53页，部分图题条件转述。待独立二校。
+
+\subsection{解答题：2.3.1--2.3.12}
+
+\sourceproblem{2.3.1}{52}{52}
+\problemtext 质量$m$的子弹以$v_0$水平进入沙土，阻力大小正比速率$kv$，方向相反，忽略重力。求子弹进入后$v(t)$及最大深入距离。
+\workings
+沿射入方向：$m\,dv/dt=-kv$，
+\[
+\boxed{v(t)=v_0e^{-kt/m}}.
+\]
+对无限长的减速过程积分，
+\[
+\boxed{x_{\max}=\int_0^\infty v(t)\,dt=\frac{mv_0}{k}}.
+\]
+\crosscheck $t\to\infty$时$v\to0$；严格指数阻力模型在有限时间速度不恰好为零，最大深入距离是极限。
+
+\sourceproblem{2.3.2}{52}{52}
+\problemtext 质点在无摩擦固定斜面上以沿斜面底边$AB$方向的初速度$v_0$运动；斜面与水平夹角$\alpha$，求质点在斜面内的轨迹。
+\workings
+取斜面内$x$轴沿底边$AB$，$y$轴沿最大下降坡度方向，初始坐标取原点。
+沿$x$无加速度，沿$y$有$g\sin\alpha$，故
+\[
+x=v_0t,\qquad y=\tfrac12g\sin\alpha\,t^2.
+\]
+消去$t$得
+\[
+\boxed{y=\frac{g\sin\alpha}{2v_0^2}\,x^2}.
+\]
+\crosscheck $\alpha=0$时成为直线$y=0$；轨迹为斜面坐标中的抛物线。
+
+\sourceproblem{2.3.3}{52}{52}
+\problemtext 质量$16\,\mathrm{kg}$质点在$Oxy$面内受恒力$\bm F=6\bm i-7\bm j$（N），初位置为原点，初速度$v_x=-2\,\mathrm{m/s},v_y=0$。求$t=2\,\mathrm s$的速度和位矢。
+\workings
+牛顿第二定律：
+$\bm a=(3/8)\bm i-(7/16)\bm j\ \mathrm{m/s^2}$，
+\[
+\bm v(t)=\left(-2+\frac38t\right)\bm i-\frac7{16}t\bm j,
+\quad
+\bm r(t)=\left(-2t+\frac3{16}t^2\right)\bm i-\frac7{32}t^2\bm j.
+\]
+$t=2$时
+\[
+\boxed{\bm v(2)=-\tfrac54\bm i-\tfrac78\bm j\ \mathrm{m/s}},
+\quad
+\boxed{\bm r(2)=-\tfrac{13}{4}\bm i-\tfrac78\bm j\ \mathrm m}.
+\]
+\crosscheck $\bm r'(t)=\bm v(t)$、$m\bm v'(t)=\bm F$，初值满足。
+
+\sourceproblem{2.3.4}{52}{52}
+\problemtext 原图为一根轻绳绕定滑轮，一侧悬挂质量$m_1$，另一侧穿过质量$m_2$的可沿绳滑动的圆筒。观察到圆筒沿绳向下相对加速度为$a'$。求两物体对地加速度、绳张力及圆筒摩擦力。
+\workings
+\textbf{按图下端为自由绳端、下端张力忽略的模型推导，需图形二校。}
+令$m_1$向下、另一侧绳向上共同加速度为$a$；圆筒相对该侧绳\emph{向下}加速度$a'$，
+故圆筒\emph{对地向下}的加速度为$a_2=a'-a$。
+设筒与绳间作用力大小$f=T$，由牛顿第二定律
+\[
+m_1g-T=m_1a,\qquad m_2g-f=m_2(a'-a).
+\]
+解得
+\[
+\boxed{a=\frac{(m_1-m_2)g+m_2a'}{m_1+m_2}},\quad
+\boxed{a_2=\frac{m_1a'-(m_1-m_2)g}{m_1+m_2}},
+\]
+\[
+\boxed{T=f=\frac{m_1m_2(2g-a')}{m_1+m_2}}.
+\]
+\crosscheck $a+a_2=a'$；式量纲正确。若原图的绳端有非零下端张力、圆筒摩擦方向不同或$a'$是相对有向量，则该模型须重新列方程，\textbf{目前标记“条件依赖，待图形独立复核”}。
+
+\sourceproblem{2.3.5}{52}{52}
+\problemtext 质量$m$的质点从水平地面以仰角$30^\circ$、速率$v_0$抛出，忽略阻力，求落回发射高度时动量改变量。
+\workings
+始末水平速度相同，竖直速度由$v_0\sin30^\circ$变为$-v_0\sin30^\circ$，
+\[
+\Delta\bm p=m(\bm v_f-\bm v_i)
+=-2mv_0\sin30^\circ\,\bm j
+=\boxed{-mv_0\,\bm j}.
+\]
+故大小为$mv_0$，方向竖直向下。
+\crosscheck 总外力冲量$\bm J_g=-mgT\,\bm j$，飞行时间$T=2v_0\sin30^\circ/g$，代入一致。
+
+\sourceproblem{2.3.6}{52--53}{52--53}
+\problemtext 质量$10\,\mathrm{kg}$物体受时变水平力$\bm F=(10+2t)\bm i$（N，$t$单位s），求前$4$秒动量、速度变化及冲量，并求累计冲量大小为$200\,\mathrm{N\,s}$时所需时间。
+\workings
+\[
+\bm J(t)=\int_0^t(10+2u)\,du\,\bm i
+=(10t+t^2)\bm i\ \mathrm{N\,s}.
+\]
+$t=4$时
+\[
+\boxed{\Delta\bm p=\bm J=56\bm i\ \mathrm{N\,s}},
+\qquad
+\boxed{\Delta\bm v=5.6\bm i\ \mathrm{m/s}}.
+\]
+令$10t+t^2=200$，有$t^2+10t-200=0$，取正根
+\[
+\boxed{t=10\,\mathrm s}.
+\]
+\crosscheck $10(10)+10^2=200$，负时间根$-20\,\mathrm s$不在题设时间域。
+
+\sourceproblem{2.3.7}{53}{53}
+\problemtext 质量$m$的圆锥摆以速率$v$沿水平半径$R$圆周运动，$A,B$是圆周直径的端点；求从$A$到$B$期间的动量增量、重力冲量和绳张力总冲量。
+\workings
+匀速圆周运动半圈时间$\Delta t=\pi R/v$。两端切向速度相反，
+\[
+\Delta\bm p=m(\bm v_B-\bm v_A)=-2m\bm v_A,
+\quad |\Delta\bm p|=2mv.
+\]
+重力冲量竖直向下，
+$\boxed{\bm J_g=-mg(\pi R/v)\bm j}$，这里$\bm j$取竖直向上。
+绳张力总冲量由冲量定理
+\[
+\bm J_T=\Delta\bm p-\bm J_g.
+\]
+由于$\Delta\bm p$水平而$\bm J_g$竖直，
+\[
+\boxed{|\bm J_T|
+=m\sqrt{4v^2+\left(\frac{\pi gR}{v}\right)^2}}.
+\]
+\crosscheck 竖直总动量改变量为零，故张力冲量的竖直分量必抵消重力冲量；水平方向由向心分量提供。
+
+\sourceproblem{2.3.8}{53}{53}
+\problemtext 平面运动位矢$\bm r=a\cos\omega t\,\bm i+b\sin\omega t\,\bm j$（SI），求$t=0$至$t=\pi/(2\omega)$合力对质点的总冲量。
+\workings
+速度
+$\bm v(t)=-a\omega\sin\omega t\,\bm i+
+b\omega\cos\omega t\,\bm j$。
+于是$\bm v(0)=b\omega\bm j$，$\bm v(\pi/2\omega)=-a\omega\bm i$。
+\[
+\boxed{\bm J=m\Delta\bm v=-m\omega(a\bm i+b\bm j)},
+\qquad
+\boxed{|\bm J|=m\omega\sqrt{a^2+b^2}}.
+\]
+\crosscheck $m\ddot{\bm r}=-m\omega^2\bm r$积分同样得到该结果。
+
+\sourceproblem{2.3.9}{53}{53}
+\problemtext 子弹出枪口速率$v_0$，在枪筒内的合力$F(t)=a-bt$（N，$a,b>0$），刚到枪口时合力变为零；设在枪筒初始时速率为零，求在枪筒内的时间、合力冲量及子弹质量。
+\workings
+出口条件$F(t_*)=0$给
+$\boxed{t_*=a/b}$。冲量为
+\[
+J=\int_0^{a/b}(a-bt)\,dt
+=\boxed{\frac{a^2}{2b}}.
+\]
+由$mv_0-0=J$，可得
+\[
+\boxed{m=\frac{a^2}{2bv_0}}.
+\]
+\crosscheck $[a^2/b]=\mathrm{N\,s}$，除以速度得质量；若入膛初速并非零，第三式应改为$m=J/(v_0-v_{\rm 入})$。
+
+\sourceproblem{2.3.10}{53}{53}
+\problemtext 质量$M=1.5\,\mathrm{kg}$的物块由长$l=1.25\,\mathrm m$细绳悬挂；质量$m=0.01\,\mathrm{kg}$子弹水平穿过物块，入射速率$500\,\mathrm{m/s}$、出射速率$30\,\mathrm{m/s}$，穿透时间可忽略。求子弹刚射出时绳张力及子弹穿透过程中所受冲量。
+\workings
+短时水平冲量近似守恒，物块刚射出后速率
+\[
+V=\frac{m(v_0-v)}{M}
+=\frac{0.01(500-30)}{1.5}=\frac{47}{15}\,\mathrm{m/s}.
+\]
+在最低点径向牛顿方程$T-Mg=MV^2/l$，因此
+\[
+\boxed{T=Mg+\frac{MV^2}{l}\approx26.48\,\mathrm N}
+\]
+（取$g=9.8\,\mathrm{m/s^2}$）。
+子弹的动量改变量（即子弹所受冲量）为
+\[
+\boxed{\bm J_{\rm 子弹}=m(v-v_0)\bm i=-4.7\bm i\ \mathrm{N\,s}}.
+\]
+\crosscheck 物块受到的水平冲量为$+4.7\,\mathrm{N\,s}$，与子弹相反；张力应大于静态$Mg=14.7\,\mathrm N$。
+
+\sourceproblem{2.3.11}{53}{53}
+\problemtext 质量$m$的狗站在一艘质量$M$、静置于无水平方向外力作用的船上，最初狗离岸距离$s_0$。狗沿船向岸方向相对船行走距离$l$后停下，求狗此时离岸距离。
+\workings
+设狗相对地面向岸位移为$d$，船背岸位移为$D$。水平质心不变：
+$md-MD=0$；相对位移$l=d+D$。
+联立得
+\[
+d=\frac{M}{M+m}l,\qquad D=\frac{m}{M+m}l.
+\]
+故
+\[
+\boxed{s=s_0-\frac{M}{M+m}l}.
+\]
+\crosscheck $M\to\infty$时船不动，$s\to s_0-l$；$M\to0$时狗难以相对岸显著位移。
+
+\sourceproblem{2.3.12}{53}{53}
+\problemtext 水面质量为$M$的静止木船，岸上将质量$m$的沙袋以水平速度$v_0$投入船上，短暂碰撞后共同运动。运动中水的阻力大小与共同速度成正比$kv$，求碰后初速和至停止所行路程。
+\workings
+碰撞极短，水平动量守恒，
+\[
+\boxed{V=\frac{mv_0}{M+m}}.
+\]
+碰后总质量$M+m$受阻力$-(kv)$，$\dot v=-\frac{k}{M+m}v$，
+$v(t)=Ve^{-kt/(M+m)}$，因此
+\[
+\boxed{s_\infty=\int_0^\infty v(t)\,dt
+=\frac{(M+m)V}{k}=\frac{mv_0}{k}}.
+\]
+\crosscheck 质量$M$在第二式中消去；指数阻力模型是渐近停止，在严格有限时间没有$v=0$。
