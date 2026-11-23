@@ -1,0 +1,235 @@
+% 《大学物理简明教程》（第五版）第6章综合题6.3.10--6.3.18。
+% 用户提供扫描印刷/PDF第157--158页，保留原题约束与数值，独立分析、待二校。
+\subsection{解答题：热机、布雷顿循环和熵增}
+
+\sourceproblem{6.3.10}{157}{157}
+\problemtext 制冷系数$\varepsilon=5$的冰箱，外界向其输入3.6 MJ机械功（即1 kW$\cdot$h），能把多少千克$0^\circ$C的水冻成同温冰？
+水的熔化热为$80\,\mathrm{cal/g}$。
+\workings
+制冷系数定义为从低温侧抽走的热量与输入功之比：
+\[
+\varepsilon=\frac{Q_c}{W_{\mathrm{in}}}=5
+\quad\Longrightarrow\quad
+Q_c=5(3.6\times10^6)=1.8\times10^7\,\mathrm J.
+\]
+用$1\,\mathrm{cal}=4.184\,\mathrm J$，水的凝固潜热
+$L=80(4.184)\times10^3=3.3472\times10^5\,\mathrm{J/kg}$，
+故
+\[
+\boxed{m=\frac{Q_c}{L}
+=\frac{1.8\times10^7}{3.3472\times10^5}
+\approx53.8\,\mathrm{kg}}.
+\]
+\crosscheck 只计算$0^\circ$C水凝固为$0^\circ$C冰的相变潜热，
+不附加水从室温冷却至零摄氏度的显热。理想实际效率取题设$\varepsilon=5$。
+
+\sourceproblem{6.3.11}{157}{157}
+\problemtext 一假设的地下热源热机高温端为地下$300^\circ$C，
+冷端为地表$25^\circ$C。若每小时从地下取得
+$Q_h=2.0\times10^{11}$ J热量，求相应可逆卡诺循环效率和每小时最多产生的对外机械功。
+\workings
+换成开尔文：
+$T_h=573.15$ K、$T_c=298.15$ K。
+\[
+\boxed{\eta_C=1-\frac{T_c}{T_h}
+=1-\frac{298.15}{573.15}
+\approx0.4798}.
+\]
+理论每小时最大对外功
+\[
+\boxed{W_{\max}=\eta_CQ_h
+\approx9.60\times10^{10}\,\mathrm J}.
+\]
+若换算平均输出功率则
+$\overline P=W_{\max}/3600\approx2.67\times10^7\,\mathrm W$。
+\crosscheck 上述仅为第二定律给出的热机效率上限，
+未计入实际换热温差、泵机及发电机损失；不保证工程装置能够达到。
+
+\sourceproblem{6.3.12}{157}{157}
+\problemtext 某燃气涡轮过程可用布雷顿循环近似：
+$1\to2$可逆绝热压缩，$2\to3$等压吸热，
+$3\to4$可逆绝热膨胀，$4\to1$等压放热。
+证明以四点温度$T_1,T_2,T_3,T_4$表示的循环效率
+$\eta=1-(T_4-T_1)/(T_3-T_2)$。
+\workings
+循环工作物质为定比热理想气体，等压段的吸热与放热为
+\[
+Q_h=\nu C_{P,m}(T_3-T_2),\qquad
+Q_c=\nu C_{P,m}(T_4-T_1),
+\]
+其中$Q_c$指放热量的正大小。
+每循环净功$W=Q_h-Q_c$，所以
+\[
+\boxed{\eta=\frac{W}{Q_h}
+=1-\frac{Q_c}{Q_h}
+=1-\frac{T_4-T_1}{T_3-T_2}}.
+\]
+两绝热段还满足
+\[
+\frac{T_2}{T_1}=
+\frac{T_3}{T_4}=
+\left(\frac{p_{\mathrm{high}}}{p_{\mathrm{low}}}
+\right)^{(\gamma-1)/\gamma},
+\]
+因而$\eta=1-T_1/T_2$，与给定表达式等价。
+\crosscheck 推导依赖$C_{P,m}$在温度范围内近似常量、
+压缩/膨胀过程准静态可逆。真实燃气轮机可能有压损与不可逆熵产生。
+
+\sourceproblem{6.3.13}{158}{158}
+\problemtext 图6.3.13示意理想气体热机循环$A\to B\to C\to D\to A$；
+$AB$、$CD$为等压过程，$BC$、$DA$为可逆绝热过程。
+$B,C$点温度依次为$T_2,T_3$。求循环效率，判断是否为卡诺循环。
+\workings
+上等压段$AB$吸热，
+$Q_h=\nu C_{P,m}(T_B-T_A)$；
+下等压段$CD$放热，$Q_c=\nu C_{P,m}(T_C-T_D)$。
+绝热段跨越相同的两等压线，满足
+\[
+\frac{T_B}{T_C}=\frac{T_A}{T_D}=r,
+\qquad r=
+\left(\frac{p_{\mathrm{high}}}{p_{\mathrm{low}}}
+\right)^{(\gamma-1)/\gamma}>1.
+\]
+故
+$T_C-T_D=(T_B-T_A)/r$，
+从而
+\[
+\boxed{\eta=1-\frac{Q_c}{Q_h}
+=1-\frac1r=1-\frac{T_3}{T_2}}.
+\]
+\emph{这不是卡诺循环：}卡诺循环要求两等温、两绝热，
+而本循环有两\emph{等压}过程。
+\crosscheck 虽有$\eta=1-T_3/T_2$的外观，
+这里$T_3$不是整个循环的最低温度（最低温点为$D$），
+不能把它误认成在最高和最低温度间工作的卡诺效率。
+
+\sourceproblem{6.3.14}{158}{158}
+\problemtext 一理想可逆卡诺制冷机从$7^\circ$C低温热源抽取1000 J热量，
+排向$27^\circ$C环境。求需做功多少；若低温热源改成$-173^\circ$C，
+仍排向$27^\circ$C且每次抽走1000 J，所需功多少。
+说明热源温差增大对制冷的影响。
+\workings
+可逆制冷机的制冷系数
+\[
+\varepsilon_C=\frac{Q_c}{W}
+=\frac{T_c}{T_h-T_c},
+\quad
+\boxed{W=Q_c\frac{T_h-T_c}{T_c}}.
+\]
+第一种温度为$T_c=280.15$ K、$T_h=300.15$ K，
+\[
+\boxed{W_1=1000\frac{20}{280.15}\approx71.4\,\mathrm J}.
+\]
+第二种$T_c=100.15$ K、$T_h=300.15$ K，
+\[
+\boxed{W_2=1000\frac{200}{100.15}
+\approx2.00\times10^3\,\mathrm J}.
+\]
+若$T_h$保持不变，低温热源温度降低、温差增大，
+则$\varepsilon_C=T_c/(T_h-T_c)$减小；
+抽走相同的热量需要更多的输入功，制冷\emph{更困难}。
+\crosscheck 制冷机的最佳性能对应较小温差；
+不能照搬热机效率随温差增加而增加的结论。
+
+\sourceproblem{6.3.15}{158}{158}
+\problemtext 分别用热力学第一定律和第二定律证明：
+在理想气体的$p$--$V$图上，同一条可逆绝热线与同一条等温线不可能有两个不同交点。
+\workings
+\emph{第一种证明（状态方程与绝热关系）。}
+等温线满足$pV=C_1$，可逆绝热线满足$pV^\gamma=C_2$，
+其中$\gamma>1$。若两曲线在不同点$A,B$相交，则
+\[
+p_AV_A=p_BV_B,\qquad
+p_AV_A^\gamma=p_BV_B^\gamma.
+\]
+两式相除得$V_A^{\gamma-1}=V_B^{\gamma-1}$，
+从而$V_A=V_B$及$p_A=p_B$，与两点不同矛盾。
+\emph{第二种证明（第二定律）。}
+若存在两交点，沿等温线从$A$至$B$并沿绝热线从$B$返回$A$，
+即可构成仅与\emph{一个热源}交换热量的封闭循环；
+若路径围成非零面积，则其净功
+$W=\oint p\,dV\ne0$。
+取能产生正净功的循环方向，就会使从单一热源吸收的热量
+完全变为机械功，与热力学第二定律的开尔文表述矛盾。
+\[
+\boxed{\text{非同一点的第二次交叉不可能出现。}}
+\]
+\crosscheck 此结论关于\emph{同一种理想气体、固定$\gamma>1$、
+同一条可逆绝热线}成立；实际非平衡或不可逆绝热路径不能直接写$pV^\gamma=\mathrm{const}$。
+
+\sourceproblem{6.3.16}{158}{158}
+\problemtext 1 mol单原子理想气体在\emph{恒定压强}下准静态地由$0^\circ$C升至$100^\circ$C。求熵的变化。
+\workings
+定压过程的熵变
+\[
+\Delta S=\int_{T_1}^{T_2}\frac{\nu C_{P,m}}T\,dT
+=\nu C_{P,m}\ln\frac{T_2}{T_1}.
+\]
+对1 mol单原子气体，
+$C_{P,m}=5R/2$，$T_1=273.15$ K、$T_2=373.15$ K，
+因此
+\[
+\boxed{\Delta S=\frac52R\ln\frac{373.15}{273.15}
+\approx6.48\,\mathrm{J/K}}.
+\]
+\crosscheck 气体升温故熵增；若误用定容热容$3R/2$，将低估该定压过程的熵变。
+
+\sourceproblem{6.3.17}{158}{158}
+\problemtext 将$0^\circ$C的$0.5$ kg冰完全融化为同温水，
+熔化潜热$L=334\,\mathrm{J/g}$。
+求冰/水系统熵变；若由温度$20^\circ$C的巨大恒温热源供热，
+求热源熵变及二者构成的孤立系统总熵变。
+\workings
+相变热量为
+$Q=mL=(0.5)(334000)=167000$ J。
+相变在平衡融点$T_m=273.15$ K下进行，故
+\[
+\boxed{\Delta S_{\mathrm{ice/water}}
+=\frac{Q}{T_m}=\frac{167000}{273.15}
+\approx611.4\,\mathrm{J/K}}.
+\]
+大热源温度$T_h=293.15$ K，放出热量$Q$，故
+\[
+\boxed{\Delta S_{\mathrm{source}}=-\frac{Q}{T_h}
+\approx-569.7\,\mathrm{J/K}}.
+\]
+合计
+\[
+\boxed{\Delta S_{\mathrm{total}}
+=Q\left(\frac1{T_m}-\frac1{T_h}\right)
+\approx41.7\,\mathrm{J/K}>0}.
+\]
+\crosscheck 热从20°C物体传至0°C冰，过程不可逆，
+总熵必须增加；热源放热的熵变为负，冰水吸热的熵变为正。
+
+\sourceproblem{6.3.18}{158}{158}
+\problemtext 1 kg初温$20^\circ$C的水接触$100^\circ$C的大恒温热源，
+逐渐升至$100^\circ$C。水比热容
+$c=4.18\times10^3\,\mathrm{J/(kg\,K)}$。
+求水、热源及其组成的孤立系统各自熵变。
+\workings
+水升温过程的熵变与实际加热是否可逆无关，可沿假想可逆路径积分：
+\[
+\Delta S_w=\int_{T_i}^{T_f}\frac{mc\,dT}{T}
+=mc\ln\frac{T_f}{T_i}.
+\]
+取$T_i=293.15$ K、$T_f=T_h=373.15$ K，
+\[
+\boxed{\Delta S_w
+=4180\ln\frac{373.15}{293.15}
+\approx1008.6\,\mathrm{J/K}}.
+\]
+大热源损失热量为
+$Q=mc(T_f-T_i)=4180(80)=334400$ J，故
+\[
+\boxed{\Delta S_h=-\frac{334400}{373.15}
+\approx-896.2\,\mathrm{J/K}}.
+\]
+二者总熵变
+\[
+\boxed{\Delta S_{\mathrm{total}}
+=\Delta S_w+\Delta S_h
+\approx112.5\,\mathrm{J/K}>0}.
+\]
+\crosscheck 以有限温差直接接触传热是不可逆的，总熵应增加；
+熵变积分中的温度必须换为绝对开尔文温度。
