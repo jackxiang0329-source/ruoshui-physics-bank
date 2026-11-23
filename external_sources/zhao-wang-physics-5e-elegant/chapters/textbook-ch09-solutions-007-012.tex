@@ -1,0 +1,196 @@
+% 《大学物理简明教程》第5版第9章解答题9.3.7—9.3.12
+% 源书印刷/PDF第239—240页；核查杆运动几何和电流方向后独立推导。
+% 9.3.9对源图几何给出计算值并保留电位正向的约定。
+
+\subsection{解答题：转动导线、涡旋电场与互感}
+
+\sourceproblem{9.3.7}{239--240}{239--240}
+\problemtext 长$\ell$的直金属杆$ab$绕过$O$点的垂直轴匀速旋转，
+角速度$\omega$；$aO=\ell/3$，$Ob=2\ell/3$，
+匀强磁场$\bm B$与旋转轴同向。
+求杆两端感应电势差的大小，比较哪端电势高。
+\workings
+取从$O$向$b$为正的杆坐标$x$，
+$x_a=-\ell/3$、$x_b=2\ell/3$。
+假设$\bm\omega$与$\bm B$同向，
+各点局部动生电动势元为
+$d\mathcal E=B\omega x\,dx$。
+从$a$到$b$积分：
+\[
+\mathcal E_{a\to b}
+=B\omega\int_{-\ell/3}^{2\ell/3}x\,dx
+=\frac{B\omega}{2}
+\left[\frac{4\ell^2}{9}-\frac{\ell^2}{9}\right]
+=\boxed{\frac{B\omega\ell^2}{6}}.
+\]
+故
+\[
+\boxed{U_b-U_a=\frac{B\omega\ell^2}{6}}>0
+\]
+在该同向轴与电势约定下，\textbf{$b$端电势高}。
+\crosscheck 若从图上观察角速度反转或把$\bm B$反向，
+电势差有向符号必须反号；
+大小为$B|\omega|\ell^2/6$，与杆所处的角位置无关。
+
+\sourceproblem{9.3.8}{240}{240}
+\problemtext 地球磁感应强度$B=4.0\times10^{-5}$ T，
+地磁场与东西向水平线夹角为$60^\circ$。
+一根长$1.0$ m、沿东西方向水平放置的金属杆自由下落，
+求下落$t=3$ s时两端动生电动势的大小，忽略阻力。
+\workings
+杆保持沿东西向，竖直下落速率$v=gt$，
+且$\bm v\times\bm B$沿杆方向的分量
+等于$vB$乘以磁场水平、垂直杆的有效投影。
+当题设夹角$60^\circ$表示磁场对杆方向的倾角，
+仅\emph{水平且垂直杆}的分量产生杆上电动势。
+如果磁场的剩余方向具有合适的垂直于杆的水平分量，
+该分量为$B\sin60^\circ$，则
+\[
+\boxed{|\mathcal E|
+=B\ell (gt)\sin60^\circ
+=4.0\times10^{-5}(1)(9.8)(3)\frac{\sqrt3}{2}
+\approx1.02\times10^{-3}\,\mathrm V}.
+\]
+\crosscheck \textbf{源条件二校：}只说磁场“与东西方向成$60^\circ$”
+并不足以确定其水平北南分量；
+若磁场的倾斜分量指向竖直，垂直杆的磁场分量
+未必全部对动生电动势有贡献。
+此结果依赖题目采用的二维场示意假设，
+不应在没有地磁场方位图的情况下无条件断言唯一数值。
+
+\sourceproblem{9.3.9}{240}{240}
+\problemtext 半径$R$的圆柱形区域内部有均匀、指向纸内的磁场，
+$B(t)$随时间增大，圆外磁场为零。
+一根长$2R$的水平金属杆$ac$横穿区域下部，
+其前半段$ab$（长$R$）在圆内，
+后半段$bc$（长$R$）在圆外；
+原图半径$Ob$相对竖直方向倾斜$30^\circ$。
+求两端感生电动势的大小和沿杆方向。
+\workings
+令圆心在$(0,0)$，磁场指向纸内，
+取杆从$a$到$c$的水平方向为$x$正向。
+源图中$Ob$与竖直方向夹角$30^\circ$，
+所以水平弦与圆心的距离
+$h=\sqrt3R/2$，并取
+\[
+a=(-R/2,-h),\qquad b=(R/2,-h),\qquad c=(3R/2,-h).
+\]
+记$\dot B=dB/dt>0$为\emph{纸内场强大小}增长率。
+由轴对称法拉第环流，圆内的感生电场
+$\bm E_{\mathrm{in}}=(\dot B/2)(-y\,\bm e_x+x\,\bm e_y)$，
+在$y=-h$处$x$分量恒为$\dot Bh/2$，
+故
+\[
+\mathcal E_{a\to b}
+=\frac{\dot Bh}{2}R
+=\frac{\sqrt3}{4}\dot BR^2.
+\]
+圆外的感生电场切向分量
+$E_\theta=\dot BR^2/(2r)$（沿逆时针），
+沿水平线$x$方向的分量为
+$E_x=\dot BR^2h/[2(x^2+h^2)]$。
+因此
+\[
+\mathcal E_{b\to c}
+=\frac{\dot BR^2}{2}
+\left[
+\arctan\frac{x}{h}
+\right]_{R/2}^{3R/2}
+=\frac{\pi}{12}\dot BR^2.
+\]
+合计
+\[
+\boxed{\mathcal E_{a\to c}
+=\left(\frac{\sqrt3}{4}+\frac{\pi}{12}\right)R^2\dot B}.
+\]
+感生电场沿杆从\textbf{$a$指向$c$}；
+以静电势差记忆时，要说明涡旋电场本身不可写成全局静电势梯度。
+\crosscheck 本题必须分段计算\emph{圆内}与\emph{圆外}；
+圆外尽管$B=0$，仍有非零涡旋电场。
+数值系数基于图中$30^\circ$角确实相对\emph{竖直半径}的解释，
+源图方位应二校。
+
+\sourceproblem{9.3.10}{240}{240}
+\problemtext 一根无限长直导线载交变电流
+$I(t)=I_0\sin\omega t$。
+在其右侧共面放一矩形线圈，线圈高$a$（与直导线平行）、
+宽$b$，近边与直导线的距离为$d$。
+求线圈中的感应电动势。
+\workings
+距直导线$x$处
+$B(x,t)=\mu_0I(t)/(2\pi x)$，
+以纸面向里为正磁通方向，有
+\[
+\Phi_B(t)=a\int_d^{d+b}B(x,t)\,dx
+=\frac{\mu_0aI_0}{2\pi}
+\ln\frac{d+b}{d}\sin\omega t.
+\]
+因此
+\[
+\boxed{\mathcal E(t)=
+-\frac{\mu_0aI_0\omega}{2\pi}
+\ln\frac{d+b}{d}\cos\omega t}.
+\]
+大小峰值
+$\boxed{\mathcal E_{\max}
+=\mu_0aI_0\omega\ln[(d+b)/d]/(2\pi)}$。
+\crosscheck 频率升高会线性提高同一$I_0$条件下的电动势峰值；
+固定导线的磁场具有$1/x$的径向分布，不能取为均匀场。
+
+\sourceproblem{9.3.11}{240}{240}
+\problemtext 图9.3.11中无限长导线穿过一矩形线圈所在的平面，
+长导线电流$I(t)=I_0\sin\omega t$；
+矩形高度$a$，位于长导线左侧的宽度$a/2$、
+右侧宽度$3a/4$。求互感系数及互感电动势。
+\workings
+长导线两侧磁场指向纸面的方向相反。
+用线圈法向统一定向，两个区域磁通量的有向贡献相减。
+在导线离线圈高度方向上取单位长，
+可把两侧径向积分的公共小半径截止量$\epsilon$
+逐项消去：
+\[
+\Phi_B=\frac{\mu_0Ia}{2\pi}
+\left[
+\ln\frac{3a/4}{\epsilon}
+-\ln\frac{a/2}{\epsilon}
+\right]
+=\frac{\mu_0Ia}{2\pi}\ln\frac32\,I.
+\]
+故互感系数大小
+\[
+\boxed{M=\frac{\mu_0a}{2\pi}\ln\frac32},
+\]
+互感电动势为
+\[
+\boxed{\mathcal E(t)=-M\frac{dI}{dt}
+=-\frac{\mu_0aI_0\omega}{2\pi}
+\ln\frac32\cos\omega t}.
+\]
+\crosscheck 当左右宽度相等时两侧磁通完全抵消，互感为零；
+此处正是两侧宽度不同才出现非零净磁链。
+实际长导线有有限半径，以上推导中两边同一截止尺度相消。
+
+\sourceproblem{9.3.12}{240}{240}
+\problemtext 一对相互平行的长直导线，其横截面圆半径同为$a$，
+两导线中心相距$d$，组成一往返电路。
+忽略导线\emph{内部}磁通量，证明每段长度$\ell$的自感为
+$L=(\mu_0\ell/\pi)\ln[(d-a)/a]$。
+\workings
+两导线载电流大小$I$、方向相反，
+对两导线间跨径向的狭长曲面，
+两导线磁场沿法向\emph{同向}。
+从靠近第一根导线表面$r=a$积分到
+靠近第二根表面$r=d-a$：
+\[
+\Phi_B=\frac{\mu_0 I\ell}{2\pi}
+\int_a^{d-a}\left(\frac1r+\frac1{d-r}\right)dr
+=\frac{\mu_0I\ell}{\pi}\ln\frac{d-a}{a}.
+\]
+因此
+\[
+\boxed{L=\frac{\Phi_B}{I}
+=\frac{\mu_0\ell}{\pi}\ln\frac{d-a}{a}}.
+\]
+\crosscheck 需要$d>2a$使两圆柱互不相交；
+该式是外部磁链的几何近似，
+不包含两导线内部的电流分布所带来的内部自感。
