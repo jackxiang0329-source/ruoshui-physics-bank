@@ -1,0 +1,201 @@
+% 《大学物理简明教程》第5版，第8章稳恒磁场；选择题8.1.1—8.1.13。
+% 用户扫描PDF/印刷216—218页，高分辨率逐题核验；题意研究性改述，答案独立推导。
+\subsection{选择题：毕奥--萨伐尔定律、安培环路定理与磁介质}
+
+\sourceproblem{8.1.1}{216}{216}
+\problemtext 真空中半径$R$的半圆形细导线流有稳恒电流$I$，求圆心$O$的磁感应强度大小。
+\workings
+圆弧张角$\alpha=\pi$，由毕奥--萨伐尔定律积分
+\[
+ B_O=\frac{\mu_0 I}{4\pi R}\int_0^\pi d\varphi
+ =\boxed{\frac{\mu_0 I}{4R}}.
+\]
+原书选\textbf{D}。方向由右手法则判定，题只问大小。
+\crosscheck 整圆的中心磁场为$\mu_0I/(2R)$，半圆恰为其一半。
+
+\sourceproblem{8.1.2}{216}{216}
+\problemtext 关于安培环路定理：若环流$\oint_L\bm H\cdot d\bm l=0$，
+是否意味着曲线上每点$\bm H=0$、一定无电流穿过、或所围穿导电流的代数和为零？
+\workings
+稳恒电流下
+\[
+\oint_L\bm H\cdot d\bm l=I_{\mathrm f,\mathrm{enc}}^{\rm alg}.
+\]
+环流为零只表示按曲线定向计算的\emph{自由传导电流代数和}为零，
+不排除大小相等、方向相反的穿越电流，也不排除外部电流在曲线上产生非零磁场。
+故原书选\textbf{C}。
+\crosscheck 在真空中$\bm B=\mu_0\bm H$，
+环流积分为零不意味着被积向量逐点为零。
+
+\sourceproblem{8.1.3}{216}{216}
+\problemtext 半径$R$的无限长实心圆柱体内均匀分布轴向稳恒电流。
+判断磁感应强度$B(r)$随距轴线$r$的变化曲线（原书图8.1.3）。
+\workings
+横截面均匀电流密度$J=I/(\pi R^2)$。
+安培定理给
+\[
+\boxed{B(r)=
+\begin{cases}
+\mu_0Ir/(2\pi R^2),&0\le r<R,\\
+\mu_0I/(2\pi r),&r\ge R.
+\end{cases}}
+\]
+所以中心$B(0)=0$，内部随$r$线性增长，表面达到峰值，
+外部按$1/r$递减且在$r=R$处连续。按原图选\textbf{A}。
+\crosscheck 这是\emph{均匀体电流}，不是所有电流集中在薄圆筒表面的模型。
+
+\sourceproblem{8.1.4}{217}{217}
+\problemtext 无限长半径$R$的实心圆柱导体均匀载流，
+在圆柱内与圆柱外，$B$分别如何依赖轴距$r$？
+\workings
+由横截面电流比例$I_{\mathrm{enc}}=I r^2/R^2$，
+内区$B(2\pi r)=\mu_0I_{\mathrm{enc}}$，得$B\propto r$。
+外区$I_{\mathrm{enc}}=I$，得$B\propto1/r$。
+\[
+\boxed{B_{\mathrm{inside}}\propto r,\quad B_{\mathrm{outside}}\propto1/r}.
+\]
+原书选\textbf{B}。
+\crosscheck 不能把导体内场强误写为$1/r$，否则在$r=0$发散。
+
+\sourceproblem{8.1.5}{217}{217}
+\problemtext 一根电阻均匀、半径$R$的圆环，在同一直径的$a,c$两点与两根相切的长直导线连接，
+两长直导线均向下通电，电流经圆环分流。判断环心$O$的合磁场是否为零。
+\workings
+两个长直线在圆心两侧到$O$距离相同、方向相反，故
+$\bm B_1+\bm B_2=0$。
+圆环中从$a$到$c$两段半圆电阻相等、分流各$I/2$；
+它们绕$O$方向相反，圆心磁场亦相消，$\bm B_3=0$。
+因此
+\[
+\boxed{\bm B_O=\bm0}.
+\]
+原书选\textbf{B}。
+\crosscheck 两直线对$O$的磁场分别不为零，
+而是矢量叠加相消；不能说“直导线不产生磁场”。
+
+\sourceproblem{8.1.6}{217}{217}
+\problemtext 一圆形载流导线的平面内，选一个位于其内侧的同心闭合圆周$L$，
+应用安培环路定理可推出什么结论？
+\workings
+$L$围成的平面区域没有被导线穿越，所以
+\[
+\boxed{\oint_L\bm B\cdot d\bm l=0}
+\]
+（真空）。
+但通电圆环在圆内各点仍可产生非零且一般不沿$L$切向的磁场，
+所以不能推出$B=0$。原书选\textbf{B}。
+\crosscheck $L$位于载流圆环所在的平面，圆环的磁场常沿平面法向，
+与平面内的线元正交，环流自然为零。
+
+\sourceproblem{8.1.7}{217}{217}
+\problemtext 通电直线框一段长度$\ell$进入均匀水平磁场，安培力使天平失衡，
+须在左盘加质量$m$才能补偿。若磁场增强至三倍、电流减半，
+其他条件与方向不变，需要增加多少质量？
+\workings
+安培力幅值$F=I\ell B$（电流线段与磁场垂直），
+故由$mg=I\ell B$得到新需加质量
+\[
+m'=\frac{(I/2)\ell(3B)}{g}=\boxed{\frac32m}.
+\]
+原书选\textbf{B}。
+\crosscheck 尽管磁场增强，电流同时减少，净比例为$3/2$，
+不能只按磁场的三倍判断。
+
+\sourceproblem{8.1.8}{217}{217}
+\problemtext 均匀磁场在纸面内向左，矩形电流线圈所在平面与磁场平行；
+图中上边电流$d\to a$向左、右边$c\to d$向上，
+判定受力后初始转动时的边界运动方向。
+\workings
+用右手坐标系$x$向右、$y$向上、$z$由纸面向外。
+设$\bm B=-B\bm e_x$。
+左边$a\to b$电流向下，受力方向
+$(-\bm e_y)\times(-\bm e_x)=-\bm e_z$，
+即\emph{转入纸内}；右边$c\to d$电流向上，
+$(+\bm e_y)\times(-\bm e_x)=+\bm e_z$，即\emph{转出纸面}。
+\[
+\boxed{ab:\text{进入纸面},\qquad cd:\text{离开纸面}}.
+\]
+原书选\textbf{A}。
+\crosscheck 线圈总平移磁力可为零，但左右两边受到等大反向力，
+形成非零力偶而使其转动。
+
+\sourceproblem{8.1.9}{217--218}{217--218}
+\problemtext 同一均匀磁场中两个平面通电线圈面积满足$S_1=2S_2$，
+电流满足$I_1=2I_2$。求最大磁力矩比$M_1/M_2$。
+\workings
+线圈转矩大小$M=ISB\sin\theta$（题设单匝或同匝数），
+最大值$M_{\max}=ISB$。因此
+\[
+\boxed{\frac{M_1}{M_2}=\frac{I_1S_1}{I_2S_2}=2\cdot2=4}.
+\]
+原书选\textbf{C}。
+\crosscheck 若两线圈的匝数不同，还需乘$N_1/N_2$；
+题面默认两者对应的匝数条件相同。
+
+\sourceproblem{8.1.10}{218}{218}
+\problemtext 100匝圆形线圈，半径$5\,\mathrm{cm}$，
+电流$0.1\,\mathrm A$，均匀磁场$1.5\,\mathrm T$。
+线圈磁矩与磁场方向夹角从$0^\circ$变为$180^\circ$，
+求磁场力对线圈所做的功，讨论原书选项给出的正数。
+\workings
+磁矩大小$\mu=NIS=100(0.1)\pi(0.05)^2$。
+磁偶极子势能$U=-\mu B\cos\theta$，
+所以\emph{磁场力做功}等于势能的负改变量：
+\[
+\boxed{W_{\mathrm B}
+=-\Delta U=\mu B(\cos180^\circ-\cos0^\circ)
+=-2NISB\approx-0.236\,\mathrm J}.
+\]
+外力若缓慢地将线圈从平衡取向翻转，则需做正功
+$\boxed{W_{\mathrm{ext}}=+0.236\,\mathrm J}$。
+原书给出的选项均为正数，其中\textbf{A：0.24 J}对应\emph{功的绝对值或外力做功}，而不对应题目逐字所称“磁场力做功”的有符号数值。
+\crosscheck \textbf{原题措辞/答案符号待独立二校}。
+从稳定平衡到反平衡，磁场做功应为负，不能为了匹配正选项隐去负号。
+
+\sourceproblem{8.1.11}{218}{218}
+\problemtext 带电粒子以速率$v$、与磁场夹角$\theta$射入均匀磁场，轨迹为螺旋线。
+分别考察改变$B,\theta,v$，哪种变化能增大螺距？
+\workings
+垂直分速度$v_\perp=v\sin\theta$给圆周运动，
+平行分速度$v_\parallel=v\cos\theta$保持恒定。
+回旋周期$T=2\pi m/(|q|B)$，
+因此
+\[
+\boxed{h=v_\parallel T
+=\frac{2\pi mv\cos\theta}{|q|B}}.
+\]
+保持其他量不变，减小$B$使螺距增大，原题选\textbf{B}。
+\crosscheck 在$0<\theta<90^\circ$中增大$\theta$会减小$\cos\theta$；
+增大$B$或减小$v$也会减小螺距。
+
+\sourceproblem{8.1.12}{218}{218}
+\problemtext 长直螺线管紧密绕线，长$\ell\gg a$，总匝数$N$，
+通电$I$，内填满相对磁导率$\mu_r$的均匀线性磁介质。
+问管内磁场强度$H$与磁感应强度$B$。
+\workings
+取长螺线管内部与外部的矩形安培环路，
+$\oint\bm H\cdot d\bm l=N_{\mathrm{enc}}I$，忽略管外场，
+\[
+\boxed{H=\frac{NI}{\ell}},\qquad
+\boxed{B=\mu_0\mu_r\frac{NI}{\ell}}.
+\]
+在四个原书选项中只有\textbf{D}（$H=NI/\ell$）正确。
+\crosscheck $H$主要由自由通电匝数决定；
+$\mu_r$应进入$B=\mu H$而不应凭空进入安培环路定理右端。
+
+\sourceproblem{8.1.13}{218}{218}
+\problemtext 按相对磁导率$\mu_r$区分顺磁、抗磁、铁磁物质，判断其大小关系。
+\workings
+通常弱磁场下各向同性材料，
+顺磁质$\mu_r$略大于1，
+抗磁质$\mu_r$略小于1，
+铁磁质通常$\mu_r\gg1$且随磁化状态和外场改变。
+故对应
+\[
+\boxed{\mu_{r,\mathrm{para}}>1,\quad
+\mu_{r,\mathrm{dia}}<1,\quad
+\mu_{r,\mathrm{ferro}}\gg1}.
+\]
+原书选\textbf{C}。
+\crosscheck 不应把铁磁体的$\mu_r$当作任意条件下不变的常数；
+强磁场饱和及磁滞时线性模型不成立。
