@@ -864,7 +864,7 @@ def eleventh_round_regressions():
     near(5/sqrt(34),.8574929257125442)
     near(10*sqrt(1-.8**2),6)
     near(4.59*sqrt(1-.991**2),.6144259791870786)
-    near(400*sqrt(1-.99**2),56.4241084389454)
+    near(400*sqrt(1-.99**2),56.426943918663575)
     near(2*1,2)
     # Textbook 11.2: inverse Lorentz interval / lifetime / kinetic.
     gam=1/sqrt(1-.8**2)
@@ -887,7 +887,7 @@ def eleventh_round_regressions():
     assert (.998*c*gamma_mu*2e-6)>6000
     near(1.6/(1+.64),.975609756097561)
     near(1.4/1.48,.9459459459459459)
-    near(sqrt(.6**2+.64**2),.8772684888436377)
+    near(sqrt(.6**2+.64**2),.8772684879784524)
     # Textbook 11.3.10--18, energies and rest-mass balances.
     near((1/sqrt(1-.99**2)-1)*.51,3.1052941455425107)
     near((1/sqrt(1-.1**2)-1)*.51,.0025692857821981697)
@@ -902,7 +902,7 @@ def eleventh_round_regressions():
     near(dm*9e16/1.602176634e-13,17.469983899416246)
     # Guide 11.1--7: induced emf, loop torque, displacement and Poynting flux.
     near(mu0*5*.06*.04*.03/(2*pi*.05*(.05+.04)),1.6e-8)
-    near(sqrt(3)/4+pi/12,.694824829517211)
+    near(sqrt(3)/4+pi/12,.6948120896913688)
     near(.5*(400e-4),.02)
     near(.5*(400e-4)*10,.2)
     near(.5**2*(400e-4)**2*10/2,.002)
@@ -911,8 +911,8 @@ def eleventh_round_regressions():
     L=mu0*N*N*h/(2*pi)*log(b/a)
     near(L,mu0*N*N*h/(2*pi)*log(b/a))
     near(.5*L*2**2,mu0*N*N*h*2**2/(4*pi)*log(b/a))
-    near(eps0*pi*.1**2*1e13,2.7816251465770537)
-    near(mu0*eps0*.1*1e13/2,5.563250293154107e-6)
+    near(eps0*pi*.1**2*1e13,2.7816251386196766)
+    near(mu0*eps0*.1*1e13/2,5.5632502772393526e-6)
     # Guide 11.7, energy flux equals total Joule dissipation in sub-cylinder.
     rho=.02; I0=5.; aa=.10;r=.04;length=2.
     J=I0/(pi*aa**2)
@@ -935,6 +935,6 @@ if __name__ == "__main__":
     ninth_round_regressions()
     tenth_round_regressions()
     eleventh_round_regressions()
-    printf"Structure: {n} referenced worked items; all checked blocks present.")
+    print(f"Structure: {n} referenced worked items; all checked blocks present.")
     print("Selected numeric invariants: passed.")
     print("Not a replacement for full independent physics or copyright review.")
