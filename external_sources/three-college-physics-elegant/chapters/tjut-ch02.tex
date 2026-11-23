@@ -1,0 +1,33 @@
+\section{质点动力学}
+\sourceproblem{选择1}{5}{11}
+\problemtext 判断保守力负功、闭路功及作用反作用力的总功三项命题。
+\workings 保守力功 $W_c=-\Delta U$，故负功使势能增加；闭路积分 $\oint\bm F_c\cdot\mathrm d\bm r=0$；作用反作用力作用于不同物体，其总功为 $\int\bm F_{12}\cdot(\mathrm d\bm r_1-\mathrm d\bm r_2)$，一般非零。仅第二项成立，选C。
+\crosscheck 例如滑动摩擦力对两个接触物体的总功为负，不能由力的矢量和为零推出总功为零。
+\sourceproblem{选择2}{5}{11}
+\problemtext 判断系统机械能守恒的充分条件。
+\workings 对固定组成系统，$\Delta(K+U)=W_{\rm ext}+W_{\rm nc,int}$，其中 $U$ 只包含内保守力势能；外力及非保守内力均不做功时机械能守恒，选C。
+\crosscheck 合外力为零不能保证各外力总功为零；内摩擦也能改变机械能。更一般的充分条件是两类功的总和为零。
+\sourceproblem{填空1}{5}{11}
+\problemtext 从10米深井匀速提升1千克的桶，初装水10千克，每升高1米漏水0.2千克，求人做功。
+\workings 令提升高度 $z$，桶及剩余水质量 $M(z)=11-0.2z$（SI）。忽略漏水相对桶的竖向动量通量反作用，
+\[
+W=\int_0^{10}(11-0.2z)g\,\mathrm dz=100g\,\mathrm J.
+\]
+取 $g=9.8\,\mathrm{m/s^2}$ 得 $980\,\mathrm J$。
+\crosscheck 平均质量为10千克；若漏出水流具有不可忽略的相对竖向速度，需另给流动模型才能计算拉力。
+\sourceproblem{填空2}{5}{11}
+\problemtext $x=t^2$（SI），阻力大小为 $kv^2$，$k=0.5$，求 $x=0$ 至 $3\,\mathrm m$ 的阻力功。
+\workings 正时间域 $v=2t$，$v^2=4x$（SI），故 $W=-\int_0^3 2x\,\mathrm dx=-9\,\mathrm J$。
+\crosscheck 阻力与运动方向相反，功为负；$k$ 的量纲为质量除以长度。
+\sourceproblem{计算1}{6}{12}
+\problemtext 质量3千克质点从静止沿正 $x$ 轴运动，$F=6t$（N），$v=t^2$（SI），求前2秒力的功。
+\workings $W=\int_0^2Fv\,\mathrm dt=\int_0^2 6t^3\,\mathrm dt=24\,\mathrm J$。
+\crosscheck 牛顿定律 $3\dot v=6t$ 与题设相符；动能增量 $3(4^2)/2=24\,\mathrm J$。
+\sourceproblem{计算2}{6}{12}
+\problemtext 非胡克弹簧准静态拉伸所需外力 $F=50x+30x^2$（SI），由1米拉到2米求外力功。
+\workings
+\[
+W=\int_1^2(50x+30x^2)\,\mathrm dx
+=[25x^2+10x^3]_1^2=145\,\mathrm J.
+\]
+\crosscheck 正向外力和位移同向，功为正；不使用恒定弹性系数的胡克定律公式。
