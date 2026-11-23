@@ -1,0 +1,154 @@
+% 《大学物理简明教程》第5版，第4章填空题4.2.1—4.2.13
+% 书内/PDF第102—103页；源题图以扫描原书为准。
+\subsection{填空题：简谐振动与波}
+
+\sourceproblem{4.2.1}{102}{102}
+\problemtext 振幅$A=4\,\mathrm{cm}$、周期$T=2\,\mathrm s$，在$t=0$第一次经过$x=-2\,\mathrm{cm}$且沿负方向运动。求此后第二次经过该位置的时刻。
+\workings
+令$x=A\cos(\omega t+\varphi)$，$\omega=2\pi/T=\pi\,\mathrm{rad/s}$。
+初相位满足$\cos\varphi=-1/2$且$\sin\varphi>0$，取$\varphi=2\pi/3$。
+下次经过$x=-A/2$时$\omega t+\varphi=4\pi/3$，故
+\[
+\boxed{t=\frac{(4\pi/3)-(2\pi/3)}{\pi}=\frac23\,\mathrm s}.
+\]
+\crosscheck 该次速度沿正方向；同方向再次经过则需一个完整周期$2\,\mathrm s$。
+
+\sourceproblem{4.2.2}{102}{102}
+\problemtext 原题4.2.2的简谐振动$x$—$t$图标有$a,b,c,d,e,f$各点。判别位移零、速度$+\omega A$、加速度零、弹力零的点，以及速度零、加速度$-\omega^2A$、弹力$-kA$的点。
+\workings
+由
+$v=\dot x,\ a=-\omega^2x,\ F=-kx$，
+在$x=0$且曲线向上穿过横轴的点$d$，有$v=+\omega A,a=F=0$。
+在$x=+A$的正峰点$a$和$e$，有$v=0,a=-\omega^2A,F=-kA$。
+\[
+\boxed{\text{第一组：}d;\qquad\text{第二组：}a\text{或}e}.
+\]
+\crosscheck 正峰出现于每周期一次，若题面空格只接受一个字母，可填$a$（或下一周期的$e$）；峰值状态不是唯一时刻。
+
+\sourceproblem{4.2.3}{102}{102}
+\problemtext 质点周期$T$、振幅$A$沿$x$轴简谐运动。(a) $t=0$位于原点且沿正方向；(b) $t=0$位于$x=A/2$且沿负方向。分别求振动方程。
+\workings
+记$\omega=2\pi/T$。
+(a) $x(0)=0,\ v(0)>0$，可写为
+\[
+\boxed{x_a=A\sin(2\pi t/T)}.
+\]
+(b) $\cos\varphi=1/2,\ v(0)=-A\omega\sin\varphi<0$，故$\varphi=\pi/3$，
+\[
+\boxed{x_b=A\cos(2\pi t/T+\pi/3)}.
+\]
+\crosscheck 两式的初始速度符号分别为$+A\omega$与$-\sqrt3 A\omega/2$。
+
+\sourceproblem{4.2.4}{102}{102}
+\problemtext 弹簧劲度系数$k=0.32\,\mathrm{N/m}$，重物质量$m=0.02\,\mathrm{kg}$。求固有频率与周期。
+\workings
+\[
+\omega_0=\sqrt{k/m}=\sqrt{16}=4\,\mathrm{rad/s},
+\qquad
+\boxed{\nu_0=\frac{\omega_0}{2\pi}=\frac2\pi\,\mathrm{Hz}},
+\quad
+\boxed{T=\frac{2\pi}{\omega_0}=\frac\pi2\,\mathrm s}.
+\]
+\crosscheck 周期约$1.571\,\mathrm s$，频率约$0.637\,\mathrm{Hz}$，二者互为倒数。
+
+\sourceproblem{4.2.5}{102}{102}
+\problemtext 原图4.2.5中，两个简谐振动$x_1,x_2$的初始位移均为零且向正方向运动；比较频率$\nu_1:\nu_2$、最大加速度$a_1:a_2$以及初始速率$v_{10}:v_{20}$。
+\workings
+按图中较密集的$x_1$曲线与较疏的$x_2$曲线，前者周期约为后者的一半，振幅绘制为相同大小。若将该图按$T_1=T_2/2$、$A_1=A_2$解读，则
+\[
+\boxed{\nu_1:\nu_2=2:1},\quad
+a_{\max,1}:a_{\max,2}
+=A_1\omega_1^2:A_2\omega_2^2=\boxed{4:1},
+\]
+\[
+\boxed{v_{10}:v_{20}=A_1\omega_1:A_2\omega_2=2:1}.
+\]
+\crosscheck \textbf{图像比例仍待高分辨率二校。}本结果依赖振幅相同、两者初速度取正且图示周期比恰为$1:2$；若原图仅为示意并未给出严格尺度，不能把上述比值当作独立测量结果。
+
+\sourceproblem{4.2.6}{102}{102}
+\problemtext 原图4.2.6的位移曲线单位为cm与s；振幅为$2$ cm，初始位移为$-1$ cm且向负方向，$t=1\,\mathrm s$为正极值，$t=0.25\,\mathrm s$为负极值。求振动方程。
+\workings
+相邻正负极值间隔$0.75\,\mathrm s=T/2$，所以
+$T=1.5\,\mathrm s$、$\omega=4\pi/3\,\mathrm{rad/s}$。
+$\cos\varphi=-1/2$且初速为负，$\varphi=2\pi/3$，得
+\[
+\boxed{x(t)=2\cos\left(\frac{4\pi}{3}t+\frac{2\pi}{3}\right)\,\mathrm{cm}}.
+\]
+\crosscheck 代入$t=0.25\,\mathrm s$得$x=-2$ cm，$t=1\,\mathrm s$得$x=+2$ cm，符合图示极值。
+
+\sourceproblem{4.2.7}{102}{102}
+\problemtext 简谐波频率$\nu=5\times10^4\,\mathrm{Hz}$、波速$u=1.5\times10^3\,\mathrm{m/s}$，沿传播路径相距$5\times10^{-3}\,\mathrm m$两点的相位差。
+\workings
+$\lambda=u/\nu=0.03\,\mathrm m$，同一时刻沿传播方向两点相位差的大小
+\[
+\boxed{|\Delta\varphi|=\frac{2\pi\Delta x}{\lambda}
+=\frac{2\pi(0.005)}{0.03}=\frac\pi3}.
+\]
+\crosscheck 指明相位有向差时需区分两点先后位置，题只问相位差大小。
+
+\sourceproblem{4.2.8}{102}{102}
+\problemtext 平面简谐波频率$100\,\mathrm{Hz}$、传播速率$300\,\mathrm{m/s}$，两点同一时刻的相位差大小为$\pi/3$；问相距多少。
+\workings
+波长$\lambda=u/\nu=3\,\mathrm m$，取最近的两点解：
+\[
+|\Delta x|_{\min}=\frac{\pi/3}{2\pi}\lambda
+=\boxed{0.50\,\mathrm m}.
+\]
+\crosscheck 若相位差理解为模$2\pi$，还存在
+$\Delta x=3n\pm0.5\,\mathrm m$的其他非负距离；若题面不强调“最近”，单一距离并非数学上唯一。本稿以最小正距离填写并保留此限定。
+
+\sourceproblem{4.2.9}{102--103}{102--103}
+\problemtext 一横波的波函数为
+$y=0.02\sin[2\pi(100t-0.4x)]$（SI），求振幅、波长、频率和传播速度。
+\workings
+对照$y=A\sin[2\pi(\nu t-x/\lambda)]$，
+\[
+\boxed{A=0.02\,\mathrm m},\quad
+\boxed{\lambda=1/0.4=2.5\,\mathrm m},\quad
+\boxed{\nu=100\,\mathrm{Hz}},\quad
+\boxed{u=\lambda\nu=250\,\mathrm{m/s}}.
+\]
+\crosscheck 相位$\nu t-x/\lambda$为常数时$x$随$t$增大，表明沿正$x$传播。
+
+\sourceproblem{4.2.10}{103}{103}
+\problemtext 机械波产生的必要条件是什么？
+\workings
+需要能提供周期性扰动的\textbf{波源（振源）}，以及能够把振动通过相互作用逐点传递的\textbf{弹性介质}。
+\[
+\boxed{\text{波源（振源）与传播介质}}
+\]
+\crosscheck 声波在真空中不能传播；“有振源”而没有能相互耦合的介质，不会形成经典机械波。
+
+\sourceproblem{4.2.11}{103}{103}
+\problemtext 两列机械波叠加产生稳定干涉现象的基本条件。
+\workings
+稳定干涉要求
+\[
+\boxed{\text{频率相同（或固定频差为零）、相位差恒定、振动方向相同或有公共分量}}.
+\]
+\crosscheck 对纯横向正交偏振且无公共振动分量的两波，在单一方向的能量观测中无常规明暗干涉项；相位随机游走时干涉条纹不稳定。
+
+\sourceproblem{4.2.12}{103}{103}
+\problemtext 波沿$x$轴正向传播，$u=0.08\,\mathrm{m/s}$，$\lambda=0.20\,\mathrm m$。$t=0$的波形如图4.2.12：原点位移为零且沿$x$增大时位移先为正，振幅为$0.04\,\mathrm m$。求波函数。
+\workings
+$k=2\pi/\lambda=10\pi\,\mathrm{rad/m}$，
+$\omega=uk=0.8\pi\,\mathrm{rad/s}$。
+初始空间图满足$y(x,0)=0.04\sin(10\pi x)$；
+沿正$x$传播必须以$x-ut$代替$x$：
+\[
+\boxed{y(x,t)=0.04\sin(10\pi x-0.8\pi t)\ \mathrm m}.
+\]
+\crosscheck $y(0,0)=0$且$\partial_x y(0,0)>0$；
+固定波峰位置满足$x-ut=\mathrm{const}$，故其速度为$+0.08\,\mathrm{m/s}$。
+
+\sourceproblem{4.2.13}{103}{103}
+\problemtext 平面简谐波经截面积$S=3.00\times10^{-2}\,\mathrm{m^2}$的空气管传播，$10$ s通过该截面的波能为$2.70\times10^{-2}$ J。求平均能流密度。
+\workings
+平均功率$\bar P=E/\Delta t=2.7\times10^{-3}\,\mathrm W$，
+除以面积得
+\[
+\boxed{\bar I=\frac{E}{S\Delta t}
+=\frac{2.70\times10^{-2}}{(3.00\times10^{-2})(10)}
+=0.090\,\mathrm{W/m^2}}.
+\]
+\crosscheck 单位$\mathrm J/(\mathrm{m^2\,s})=\mathrm{W/m^2}$。
