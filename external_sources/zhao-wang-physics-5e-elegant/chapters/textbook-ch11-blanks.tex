@@ -1,0 +1,85 @@
+% 《大学物理简明教程》第5版，第11章狭义相对论，填空11.2.1—11.2.6。
+% 原书/扫描PDF第289—290页，原题短摘要及推导独立撰写。
+\subsection{填空题：基本原理、时空变换与动能}
+
+\sourceproblem{11.2.1}{289}{289}
+\problemtext 写出狭义相对论两条基本公设：物理规律的惯性系等价性以及真空光速。
+\workings
+第一空是\textbf{所有惯性系}；第二空是\textbf{等于}。
+相对性原理要求物理规律在所有惯性系具有相同形式；
+光速不变原理给所有惯性系中真空光速均为
+\[
+\boxed{c=299\,792\,458\,\mathrm{m/s}}.
+\]
+\crosscheck 光速不变不等于光速在任意物质介质中不变。
+
+\sourceproblem{11.2.2}{290}{290}
+\problemtext 飞船沿$x$正向匀速前进，船首和船尾各有发光装置。
+飞船尾部观察者测量由船首发出的光脉冲传播速度大小，
+船首观察者测量由船尾发出脉冲的传播速度大小，分别填空。
+\workings
+两个接收器都是惯性系中的局部观测者，
+真空光速均满足
+\[
+\boxed{u_{\mathrm{head\to tail}}=c},\qquad
+\boxed{u_{\mathrm{tail\to head}}=c}.
+\]
+\crosscheck 不能使用伽利略式$c\pm v$；只要是在真空中进行局域光速测定，结果与飞船速度无关。
+
+\sourceproblem{11.2.3}{290}{290}
+\problemtext $S'$以$0.8c$沿$S$的$x$正向运动，
+$S'$系中两事件相隔
+$\Delta t'=5\times10^{-7}$ s、$\Delta x'=-120$ m，
+求$S$系中空间与时间间隔。
+\workings
+逆洛伦兹变换
+\[
+\Delta x=\gamma(\Delta x'+v\Delta t'),
+\quad
+\Delta t=\gamma\left(\Delta t'+\frac{v\Delta x'}{c^2}\right),
+\quad\gamma=\frac53.
+\]
+取$c=3.0\times10^8$ m/s，
+$v\Delta t'=120$ m，$v\Delta x'/c^2=-3.2\times10^{-7}$ s，
+所以
+\[
+\boxed{\Delta x=0},\qquad
+\boxed{\Delta t=3.0\times10^{-7}\,\mathrm s}.
+\]
+\crosscheck 两事件在$S$中同地发生，所以$3.0\times10^{-7}$ s是本题事件对的固有时间；$S'$中间隔$5\times10^{-7}$ s较长。
+
+\sourceproblem{11.2.4}{290}{290}
+\problemtext $\mu$子在自身静止系寿命$\tau_0=2.0\times10^{-6}$ s；
+相对地球速率$0.988c$，求地球系测量的平均寿命。
+\workings
+由时间延缓
+\[
+\boxed{\tau=\gamma\tau_0
+=\frac{2.0\times10^{-6}}{\sqrt{1-0.988^2}}
+\approx1.295\times10^{-5}\,\mathrm s}.
+\]
+\crosscheck 运动粒子的地球系平均寿命应长于自身平均固有寿命。
+
+\sourceproblem{11.2.5}{290}{290}
+\problemtext 某不稳定粒子的固有平均寿命为实验室系测得寿命的$1/n$，
+静质量$m_0$，求其实验室系动能。
+\workings
+$\tau_{\rm lab}=\gamma\tau_0$，故$\gamma=n$。
+动能为
+\[
+\boxed{E_k=(\gamma-1)m_0c^2=(n-1)m_0c^2}.
+\]
+\crosscheck 当$n=1$对应粒子在该实验室系静止，动能为零。
+
+\sourceproblem{11.2.6}{290}{290}
+\problemtext 何种速度下粒子的相对论质量等于静质量的两倍？
+何种速度下其动能恰等于静止能量？
+\workings
+两条件分别是$\gamma=2$与
+$(\gamma-1)m_0c^2=m_0c^2$，
+都要求$\gamma=2$，
+\[
+\boxed{\frac vc=\sqrt{1-\frac14}=\frac{\sqrt3}{2}}.
+\]
+所以两空相同。
+\crosscheck 原题沿用教材的“运动质量”说法；现代惯用静质量$m_0$及相对论总能量$E=\gamma m_0c^2$，结论不变。
