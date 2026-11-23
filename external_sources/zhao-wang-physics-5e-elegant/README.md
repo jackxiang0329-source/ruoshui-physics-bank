@@ -1,35 +1,32 @@
-# 赵近芳、王登龙第五版大学物理教材与学习指导 · ElegantBook 题解
+# 赵近芳 / 王登龙 · 第五版大学物理教材与学习指导 ElegantBook
 
-**逐题 LaTeX 研究与校勘，用户上传两份扫描教材为底本。**
+以用户提供的两份扫描PDF为基础的研究性逐题整理，采用**本仓库原有ElegantBook / XeLaTeX模板**，不改动原`bank/`正式题库。
 
-- 《大学物理简明教程（第5版）》第1章 **31** 题：原题号 `1.1.1—1.1.7`、`1.2.1—1.2.7`、`1.3.1—1.3.17`。
-- 《大学物理简明教程（第5版）》第2章 **46** 题：原题号 `2.1.1—2.1.12`、`2.2.1—2.2.9`、`2.3.1—2.3.25`。
-- 《大学物理学学习指导（第5版）》第1章例1.1—1.5、第2章例2.1—2.7，**12** 题。
-- **总计 89 题号，本轮新增 69**。少数题号存在题面歧义或疑似错误，已保留原题并在 `quality-check.md` 逐条登记，不能将其误标为“无争议完全质检”。
-- 复用 `../irodov-zh-elegant/elegantbook.cls`；`main.tex` 为 XeLaTeX 入口，`cover.tex` 是本仓库原创装饰封面。
-- `check_math.py` 提供题号连续性、题块完整性与抽样数值验算；`.github/workflows/zhao-wang-physics-elegantbook.yml` 自动构建及发布PDF。
-- **技术通过 ≠ 物理学术二审通过 ≠ 公开传播权限已获批。**
+截至2026-11-23第3批，**累计129道题解，本轮新增40**：
 
-## 源码及管理
+| 原书 | 章节 | 已录入数量 |
+|---|---|---:|
+| 《大学物理简明教程》（第5版） | 第1章（31）、第2章（46）、第3章（35） | 112 |
+| 《大学物理学学习指导》（第5版） | 第1章例题（5）、第2章（7）、第3章（5） | 17 |
 
-```text
-main.tex
-cover.tex
-build.sh
-check_math.py
-chapters/
-  textbook-ch01-foundations-001-003.tex
-  textbook-ch01-exercises.tex
-  textbook-ch02-choices.tex
-  textbook-ch02-blanks.tex
-  textbook-ch02-solutions-001-012.tex
-  textbook-ch02-solutions-013-025.tex
-  guide-ch01-examples.tex
-  guide-ch02-examples.tex
-progress.md
-quality-check.md
-```
+本轮第3章题号：
+- 《简明教程》：3.1.1—3.1.8、3.2.1—3.2.12、3.3.1—3.3.15（35道）。
+- 《学习指导》：例3.1—例3.5（5道）。
+- 来源页码：《简明教程》第68—73页；《学习指导》印刷第31—35页 / PDF第39—43页。
 
-运行 `bash build.sh` 将复用ElegantBook类；如果只在GitHub Actions下编译，则工作流从原目录复制编译用类文件。所有教材内容独立于仓库正式 `bank/` 的452道高难综合题，不改动正式题库索引和文件。
+## 查看源码及PDF
 
-本资料使用用户提供的两本书扫描页；原书版权归权利人。研究整理稿并不代表可以未经授权公开复制、汇编或二次发行，正式传播前须核验版权许可。
+- `main.tex`：ElegantBook合订主文件；依次载入`chapters/`的原书题解。
+- `cover.tex`：原创装饰封面。
+- `main.pdf`：仅当CI成功编译后由GitHub Actions回写，勿将旧PDF误认为最新源码。
+- `check_math.py`：条目编号及独立抽样计算校验，GitHub Actions提交后自动触发。
+- `quality-check.md`：勘误和不能省略的物理模型限制。
+- `progress.md`：按书、章节、原题号精确登记。
+
+新增第3章细分：`textbook-ch03-choices.tex`、`textbook-ch03-blanks.tex`、
+`textbook-ch03-solutions-001-008.tex`、`textbook-ch03-solutions-009-015.tex`、
+`guide-ch03-examples.tex`。
+
+## 重要说明
+
+这是一套**待独立复核的教材习题研究稿**，不是已通过六轮人工质检的正式题库；数学回归和LaTeX编译通过不代表逐题学术专家审定。原书扫描内容版权归原权利人，未经许可不得将本资料作为授权译印本或原版替代品商业发行。对外传播及仓库可见性必须遵循相应授权条件。
