@@ -37,7 +37,7 @@ assert math.isclose(0.5*600*(600/200000),0.9)
 assert math.isclose((math.cos(math.pi/3)/math.cos(math.pi/4))**2,0.5)
 assert 25*(4-1)+10*(8-1)==145
 assert 3*4**2/2==24
-assert math.isclose(8.10*6817/8762,6.301035,rel_tol=1e-5)
+assert math.isclose(8.10*6817/8762,6.301951609221638,rel_tol=1e-10)
 assert 4*8+3*6==50
 assert math.isclose((4*4-3*4**2+4**3-(4*2-3*2**2+2**3))/2,14)
 assert math.hypot(40,30)==50
