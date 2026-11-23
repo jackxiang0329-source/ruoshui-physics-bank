@@ -1,0 +1,96 @@
+% 第三批：《大学物理简明教程》第5版，第3章选择题3.1.1--3.1.8
+% 直接依据用户扫描PDF的印刷页68--69（PDF物理页同号）。
+% 题面采用保留模型条件的研究性转述；质量状态：待独立复核。
+\subsection{选择题：刚体转动基础}
+
+\sourceproblem{3.1.1}{68}{68}
+\problemtext 两个力同时作用于一个有固定转轴的刚体。分别判断：两力均平行转轴、均垂直转轴、两力合力为零、两力合力矩为零，能否推出合力矩或合力必然为零？
+\workings
+轴向力沿转轴的力矩分量均为零，故①正确；垂直轴的力所产生的轴向力矩可以大小相等方向相反，故②所称“可能为零”正确。合力为零的力偶仍可产生非零合力矩，故③错误。合力矩为零也允许非零合力（例如一个沿轴作用的力），故④错误。正确选项为\textbf{B}。
+\crosscheck 力与力矩分别是$\sum\bm F$与$\sum\bm r_i\times\bm F_i$，不能互推零值。
+
+\sourceproblem{3.1.2}{68}{68}
+\problemtext 转动惯量为$J$、有效半径$R$的定滑轮绕轻绳旋转。原先绳下端悬挂重力为$P$的物体；若取下物体改为用大小同为$P$的恒力竖直下拉轻绳，比较滑轮角加速度。
+\workings
+原悬重物质量$P/g$，绳张力$T<P$，联立
+$P-T=(P/g)a$、$TR=J\alpha$、$a=R\alpha$得
+\[
+\alpha_{\mathrm{hang}}=\frac{PR}{J+(P/g)R^2}.
+\]
+改为外力直接拉绳时$T=P$，故
+\[
+\alpha_{\mathrm{pull}}=\frac{PR}{J}>\alpha_{\mathrm{hang}}.
+\]
+原题问“物体去掉而以同等力直接下拉”时角加速度如何变化，答案为\textbf{变大（C）}。
+\crosscheck 仅当$J>0$及绳不滑动时上述比较成立；不能误把重力$P$当成原先绳张力。
+
+\sourceproblem{3.1.3}{68}{68}
+\problemtext 对刚体的转动惯量$J$，判断它与质量、质量的空间分布、转轴的位置之间的依赖关系。
+\workings
+固定轴转动惯量定义
+\[
+J=\int r_\perp^2\,dm.
+\]
+其数值同时依赖刚体质量、各质量元距轴的垂直距离及转轴选取；只有三种因素都考虑才正确。原题选\textbf{C}。
+\crosscheck 同质量的细环与圆盘绕对称轴分别有$MR^2$与$\frac12MR^2$，说明分布重要。
+
+\sourceproblem{3.1.4}{68--69}{68--69}
+\problemtext 初始绕光滑固定轴转动的圆盘，被两颗质量相同、速率相同、方向相反、且沿\emph{同一条偏离圆心的直线}射来的子弹射入并留在盘内。比较射入后的盘角速度。
+\workings
+取盘心为角动量参考点。两颗子弹的入射动量沿同一直线而方向相反，因而其入射角动量代数和为零。极短碰撞中轴的冲量矩为零，
+\[
+J_0\omega_0=J_f\omega_f,\qquad J_f>J_0,
+\]
+故在$\omega_0\ne0$时有
+\[
+\boxed{|\omega_f|=\frac{J_0}{J_f}|\omega_0|<|\omega_0|}.
+\]
+应选\textbf{C（减小）}。
+\crosscheck 若两颗弹丸不是同时按同一直线反向进入，或者圆盘起初静止，应重新核对几何与入射角动量；这里严格使用原题配图的对向共线条件。
+
+\sourceproblem{3.1.5}{69}{69}
+\problemtext 转动惯量为$J$的圆盘由$\omega_0$减速到$\omega_0/2$，问全过程阻力矩所做的功。
+\workings
+转动动能定理：
+\[
+W=\frac12J\left(\frac{\omega_0}{2}\right)^2-\frac12J\omega_0^2
+=\boxed{-\frac38J\omega_0^2}.
+\]
+原题选\textbf{D}。
+\crosscheck 阻力矩作负功，数值单位为焦耳；不应误写为角动量变化。
+
+\sourceproblem{3.1.6}{69}{69}
+\problemtext 刚体绕定轴\emph{变速}转动，距轴$r$的质元的法向加速度$a_n$与切向加速度$a_\tau$可能怎样随时间变化？
+\workings
+\[
+a_n=r\omega^2,\qquad a_\tau=r\alpha=r\dot\omega.
+\]
+因角速率随时变化，$a_n$通常变化；但若角加速度$\alpha$恒定，$a_\tau$可以不变。因此只有“$a_n$变化，$a_\tau$可以不变”的判断成立，选\textbf{C}。
+\crosscheck 此题取$r>0$且“变速”指角速率大小变化；距轴为零的特殊质元两项均零。
+
+\sourceproblem{3.1.7}{69}{69}
+\problemtext 均匀砂轮（质量$M$、半径$R$）绕中心轴以$\omega$转动，其动能等于质量为$M$的物体从高度$h$自由落地获得的动能。求$h$。
+\workings
+均匀圆盘转动惯量$J=\frac12MR^2$，故
+\[
+\frac12J\omega^2=Mgh
+\Longrightarrow \boxed{h=\frac{R^2\omega^2}{4g}}.
+\]
+原题选\textbf{D}。
+\crosscheck 半径的平方与角速度平方之积除以$g$，量纲为长度。
+
+\sourceproblem{3.1.8}{69}{69}
+\problemtext 长度同为$L$、质量同为$m$的细线单摆和均匀细杆物理摆均由与竖直线成$\theta$的位置静止释放，比较通过最低位置时的角速率。
+\workings
+单摆：$mgL(1-\cos\theta)=\frac12mL^2\omega_p^2$，即
+\[
+\omega_p^2=\frac{2g(1-\cos\theta)}{L}.
+\]
+细杆关于上端的转动惯量$J=\frac13mL^2$，
+质心下降$\frac12L(1-\cos\theta)$，故
+\[
+\frac12mgL(1-\cos\theta)=\frac16mL^2\omega_r^2
+\Longrightarrow \omega_r^2=\frac{3g(1-\cos\theta)}{L}.
+\]
+当$0<\theta\le\pi$且$\theta\ne0$时，$\omega_p<\omega_r$，选\textbf{C}。
+\crosscheck 棒的质心在$L/2$，不能把细杆的质量当成位于末端的质点。
