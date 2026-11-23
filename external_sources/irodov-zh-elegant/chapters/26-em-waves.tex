@@ -1,0 +1,870 @@
+% Consolidated 26-em-waves from ff5921b6fbf473f9d16e47ad4b028ac5cf985609; original TeX fragments preserved.
+
+% === BEGIN 26-em-waves-189-200.tex blob 756e171f34dee916946d8ae8c0d79e75a354284e ===
+% Irodov Part IV §4.4 189--200. Source PDF 190--191, printed 181--182,
+% answers PDF 332--333. Source figure 4.37/4.38.
+\emwaveproblem{189}{181}
+频率 $\nu=3.0\,\mathrm{MHz}$ 的电磁波从真空垂直进入非磁性介质，介电常数 $\varepsilon_r=4.0$。求波长增量。
+\exsolution
+真空中 $\lambda_0=c/\nu$，非磁介质相速度 $v=c/\sqrt{\varepsilon_r}$，
+介质中波长 $\lambda=v/\nu$，故
+\[
+\boxed{\Delta\lambda=\lambda-\lambda_0
+=\frac c\nu\left(\frac1{\sqrt{\varepsilon_r}}-1\right)}.
+\]
+代 $c=3.0\times10^8$m/s，
+$\lambda_0=100$m、$\lambda=50$m，
+\[
+\boxed{\Delta\lambda=-50\,\mathrm m}.
+\]
+\excheck 频率越过静止界面时不变；变化的是相速度和波长。
+
+\emwaveproblem{190}{181}
+平面波垂直入射厚度为 $\ell$ 的平行板非磁介质，其相对介电常数从前表面 $\varepsilon_1$ 到后表面 $\varepsilon_2$ 按位置指数衰减。求某一固定波面穿越该板所需时间。
+\exsolution
+取 $x=0$ 为前表面，则
+$\varepsilon(x)=\varepsilon_1
+\exp[(x/\ell)\ln(\varepsilon_2/\varepsilon_1)]$。
+局部相速度 $v(x)=c/\sqrt{\varepsilon(x)}$。
+因此
+\[
+t=\frac1c\int_0^\ell\sqrt{\varepsilon(x)}\,\mathrm dx
+=\frac{\ell\sqrt{\varepsilon_1}}c
+\int_0^1 e^{(u/2)\ln(\varepsilon_2/\varepsilon_1)}\,\mathrm du.
+\]
+积分得到
+\[
+\boxed{t=
+\frac{2\ell(\sqrt{\varepsilon_1}-\sqrt{\varepsilon_2})}
+{c\ln(\varepsilon_1/\varepsilon_2)}}.
+\]
+\excheck $\varepsilon_2\to\varepsilon_1=\varepsilon$ 时取极限
+$t=\ell\sqrt\varepsilon/c$，与均匀介质传播时间一致。
+
+\emwaveproblem{191}{181}
+频率 $\nu=10\,\mathrm{MHz}$ 的平面电磁波穿过弱导电介质，
+电导率 $\sigma=10\,\mathrm{mS/m}$、相对介电常数 $\varepsilon_r=9$。求传导与位移电流密度振幅之比。
+\exsolution
+线性介质中传导电流
+$\bm j_c=\sigma\bm E$，
+位移电流
+$\bm j_d=\partial_t\bm D
+=\varepsilon_0\varepsilon_r\partial_t\bm E$。
+若 $\bm E=\bm E_m\cos\omega t$，
+振幅
+$j_{c,m}=\sigma E_m$、
+$j_{d,m}=\varepsilon_0\varepsilon_r\omega E_m$，
+故
+\[
+\boxed{\frac{j_{c,m}}{j_{d,m}}
+=\frac{\sigma}{2\pi\nu\varepsilon_0\varepsilon_r}
+\simeq2.0}.
+\]
+\excheck 此比与电场幅度无关；两个电流分量相位相差 $\pi/2$，不能将它们的瞬时模直接相加。
+
+\emwaveproblem{192}{181}
+已知真空中平面电磁波的电场
+$\bm E(\bm r,t)=\bm E_m\cos(\omega t-\bm k\cdot\bm r)$。
+求 $\bm r=0$ 处的磁场强度矢量 $\bm H(t)$，
+假设 $\bm E_m,\bm k$ 已知。
+\exsolution
+以法拉第方程
+$\nabla\times\bm E=-\partial_t\bm B$：
+$\nabla\times\bm E=
+\bm k\times\bm E_m\sin(\omega t-\bm k\cdot\bm r)$，
+故可取
+$\bm B_m=(\bm k\times\bm E_m)/\omega$。
+真空中 $\bm H=\bm B/\mu_0$，
+$\omega=c|\bm k|$，于是
+\[
+\boxed{\bm H(0,t)=
+\frac{\bm k\times\bm E_m}
+{\mu_0c|\bm k|}\cos(\omega t)
+=\sqrt{\frac{\varepsilon_0}{\mu_0}}
+(\hat{\bm k}\times\bm E_m)\cos(\omega t)}.
+\]
+\excheck $\bm E$、$\bm H$、$\bm k$ 两两正交，
+$\bm E\times\bm H$ 指向能量传播方向。
+
+\emwaveproblem{193}{181}
+真空平面电磁波电场
+$\bm E=E_m\bm e_y\cos(\omega t-kx)$，
+沿 $+x$ 传播。求位于
+$\bm r=x\bm e_x$ 的磁场强度在
+(a) $t=0$；(b) $t=t_0$。
+取 $E_m=160\,\mathrm{V/m}$、
+$k=0.51\,\mathrm{m^{-1}}$、
+$x=7.7$m、$t_0=33$ns。
+\exsolution
+由第192题
+\[
+\boxed{\bm H(x,t)=\bm e_z E_m
+\sqrt{\frac{\varepsilon_0}{\mu_0}}
+\cos(ckt-kx)}.
+\]
+真空波阻抗
+$Z_0=\sqrt{\mu_0/\varepsilon_0}\simeq377\,\Omega$，
+故磁场强度幅度 $H_m=160/377\simeq0.424$A/m。
+(a) 相位 $-kx=-3.927$：
+$\boxed{\bm H(x,0)\simeq-0.30\bm e_z\,\mathrm{A/m}}$。
+(b) $ckt_0-kx=(3.0\times10^8)(0.51)(33\times10^{-9})-3.927\simeq1.12$：
+$\boxed{\bm H(x,t_0)\simeq+0.18\bm e_z\,\mathrm{A/m}}$。
+\excheck 真空中给的是磁场强度 $\bm H$（A/m），若要磁感应强度须再乘 $\mu_0$。
+
+\emwaveproblem{194}{181}
+真空平面电磁波沿 $+x$ 传播，其电场
+$\bm E=E_m\bm e_y\cos(\omega t-kx)$。
+图4.37中边长 $\ell$ 的正方形导线框置于 $xy$ 平面，磁场沿 $z$。
+求感应电动势的峰值；取
+$E_m=0.50\,\mathrm{mV/m}$、
+$\nu=5.0\,\mathrm{MHz}$、
+$\ell=0.50$m。
+\exsolution
+磁感应强度
+$B_z=(E_m/c)\cos(\omega t-kx)$，
+$\omega=2\pi\nu$、$k=\omega/c$。
+磁通
+$\Phi(t)=\ell(E_m/c)\int_0^\ell\cos(\omega t-kx)\,\mathrm dx$，
+因此
+\[
+\mathcal E=-\dot\Phi
+=-\frac{\omega\ell E_m}{ck}
+\left[\cos\omega t-\cos(\omega t-k\ell)\right].
+\]
+峰值的精确式是
+\[
+\boxed{\mathcal E_m=
+2E_m\ell\left|\sin\frac{k\ell}{2}\right|}.
+\]
+由于 $k\ell\ll1$，近似为
+\[
+\boxed{\mathcal E_m\simeq\frac{\omega E_m\ell^2}{c}
+=\frac{2\pi\nu E_m\ell^2}{c}
+\simeq1.3\times10^{-5}\,\mathrm V=13\,\mathrm{\mu V}}.
+\]
+\excheck 源题明确写 $E_m=0.50\,\mathrm{mV/m}$，按 SI 单位计算应为 $13\,\mathrm{\mu V}$；书末印 $13\,\mathrm{mV}$，相差1000倍，需列为原书数值疑点。
+
+\emwaveproblem{195}{182}
+根据麦克斯韦方程证明图4.38所示真空平面波
+$\bm E=E_y(x,t)\bm e_y$、
+$\bm B=B_z(x,t)\bm e_z$
+满足
+$\partial_tE_y=-c^2\partial_xB_z$ 以及
+$\partial_tB_z=-\partial_xE_y$。
+\exsolution
+法拉第方程
+$\nabla\times\bm E=-\partial_t\bm B$。
+在给定几何中旋度仅有 $z$ 分量
+$(\nabla\times\bm E)_z=\partial_xE_y$，
+所以
+\[
+\boxed{\partial_tB_z=-\partial_xE_y}.
+\]
+真空安培—麦克斯韦方程
+$\nabla\times\bm B=\mu_0\varepsilon_0\partial_t\bm E$。
+磁场只有 $B_z$ 分量，
+其旋度 $y$ 分量为
+$(\nabla\times\bm B)_y=-\partial_xB_z$，
+故
+$\partial_tE_y=-(\mu_0\varepsilon_0)^{-1}\partial_xB_z$，即
+\[
+\boxed{\partial_tE_y=-c^2\partial_xB_z}.
+\]
+\excheck 两式互相求导可分别得到
+$\partial_t^2E=c^2\partial_x^2E$ 与
+$\partial_t^2B=c^2\partial_x^2B$。
+
+\emwaveproblem{196}{182}
+真空平面电磁波
+$\bm E=\bm E_m\cos(\omega t-\bm k\cdot\bm r)$。
+求一周期平均坡印廷矢量。
+\exsolution
+根据平面波关系
+$\bm H=(1/Z_0)\hat{\bm k}\times\bm E$，
+能流密度
+$\bm S=\bm E\times\bm H
+=(E^2/Z_0)\hat{\bm k}$。
+对周期取平均
+$\langle\cos^2\rangle=1/2$：
+\[
+\boxed{\overline{\bm S}=
+\frac12\varepsilon_0cE_m^2\hat{\bm k}
+=\frac{\varepsilon_0c^2E_m^2}{2\omega}\bm k}.
+\]
+\excheck 单位为 W/m²，方向沿波矢；$E_m$ 是峰值不是有效值。
+
+\emwaveproblem{197}{182}
+真空中频率 $\nu=100\,\mathrm{MHz}$ 的线偏振平面电磁波，其电场振幅 $E_m=50\,\mathrm{mV/m}$。求：(a) 位移电流密度有效值；(b) 周期平均能流密度。
+\exsolution
+位移电流
+$\bm j_d=\varepsilon_0\partial_t\bm E$，
+幅度
+$j_m=\varepsilon_0\omega E_m$。
+正弦有效值为幅度除 $\sqrt2$，故
+\[
+\boxed{j_{d,\mathrm{rms}}=
+\frac{\varepsilon_0(2\pi\nu)E_m}{\sqrt2}
+\simeq0.20\,\mathrm{mA/m^2}}.
+\]
+平面波平均坡印廷通量
+\[
+\boxed{\overline S=
+\frac12\varepsilon_0cE_m^2
+\simeq3.3\,\mathrm{\mu W/m^2}}.
+\]
+\excheck $\varepsilon_0(2\pi10^8)(0.050)\simeq0.278$mA/m² 是\emph{振幅}，有效值再乘 $1/\sqrt2$。
+
+\emwaveproblem{198}{182}
+相对介电常数 $\varepsilon_r=4.0$ 的非磁介质中，振幅 $E_m=200$V/m 的平面电磁波掠过半径 $R=50$cm 的球，求 $t=1.0$min 内入射到球的总电磁能。
+\exsolution
+介质相速度 $v=c/\sqrt{\varepsilon_r}$，
+波阻抗 $Z=Z_0/\sqrt{\varepsilon_r}$，
+平均能流强度
+$\overline S=E_m^2/(2Z)
+=\tfrac12\varepsilon_0c\sqrt{\varepsilon_r}E_m^2$。
+球在行波中的有效迎波面积为 $\pi R^2$，
+故
+\[
+\boxed{W=\tfrac12\varepsilon_0c\sqrt{\varepsilon_r}\,
+E_m^2\,\pi R^2t}.
+\]
+取 $t=60$s、$R=0.50$m，
+$\boxed{W\simeq5.0\times10^3\,\mathrm J=5\,\mathrm{kJ}}$。
+\excheck 不能以整个球表面积 $4\pi R^2$ 乘平面波能流强度；需使用迎波投影面积 $\pi R^2$。
+
+\emwaveproblem{199}{182}
+真空中沿 $x$ 建立电场驻波
+$\bm E(x,t)=\bm e_yE_m\cos kx\cos\omega t$，
+求磁感应强度的时空表达式，并描述
+$t=0$、$t=T/4$ 时电磁场分布。
+\exsolution
+法拉第方程
+$\partial_tB_z=-\partial_xE_y
+=kE_m\sin kx\cos\omega t$。
+积分得到振荡磁场
+\[
+\boxed{\bm B(x,t)=\bm e_z\frac{E_m}{c}
+\sin kx\sin\omega t},
+\quad \omega=ck.
+\]
+这选择无额外静磁场的纯驻波。
+$t=0$ 时
+$\bm E=\bm e_yE_m\cos kx$、$\bm B=0$；
+$t=T/4$ 时 $\bm E=0$、
+$\bm B=\bm e_z(E_m/c)\sin kx$。
+\excheck 电、磁驻波的时间相位差四分之一周期，空间结点相互错开四分之一波长。
+
+\emwaveproblem{200}{182}
+真空电场驻波
+$\bm E=E_m\bm e_y\cos kx\cos\omega t$。
+求坡印廷矢量沿 x 的分量 $S_x(x,t)$，以及一周期的时间平均。
+\exsolution
+由第199题
+$\bm H=\bm e_z(E_m/(\mu_0c))\sin kx\sin\omega t$。
+坡印廷矢量
+$\bm S=\bm E\times\bm H$，
+因此
+\[
+S_x=
+\frac{E_m^2}{\mu_0c}
+\cos kx\sin kx\cos\omega t\sin\omega t.
+\]
+由积化和差并用 $(\mu_0c)^{-1}=\varepsilon_0c$：
+\[
+\boxed{S_x(x,t)=
+\frac14\varepsilon_0cE_m^2\sin(2kx)\sin(2\omega t)}.
+\]
+对一完整周期平均
+\[
+\boxed{\overline{S_x}=0}.
+\]
+\excheck 驻波电磁能在空间往复交换，没有净单向远距离能流，但瞬时坡印廷矢量可不为零。
+% === END 26-em-waves-189-200.tex ===
+
+% === BEGIN 26-em-waves-201-212.tex blob 7dfe28fe172b33d3cce59c5a6522b8369d3dc529 ===
+% Irodov Part IV §4.4 original 201--212.
+% Source PDF pp.191--192 printed pp.182--183; original answer PDF 333--334.
+\emwaveproblem{201}{182}
+空气平行板电容器两极板为半径 $R=6.0$cm 的圆盘，接频率 $\omega=1000\,\mathrm{s^{-1}}$ 的交变电压。求电容器内部磁场能峰值与电场能峰值之比。
+\exsolution
+忽略边缘场，极板间均匀电场
+$E(t)=E_m\cos\omega t$。
+半径 $r\le R$ 的环路上，由安培—麦克斯韦式
+$2\pi rB_\varphi/\mu_0=
+\varepsilon_0\pi r^2\dot E$，
+所以磁场振幅
+$B_{\varphi,m}=\mu_0\varepsilon_0\omega rE_m/2$。
+若板距为 $d$，
+\[
+W_{B,m}=\int_0^R\frac{B_{\varphi,m}^2}{2\mu_0}
+(2\pi rd)\,\mathrm dr
+=\frac{\pi d\mu_0\varepsilon_0^2\omega^2E_m^2R^4}{16}.
+\]
+电场能峰值
+$W_{E,m}=\frac12\varepsilon_0E_m^2\pi R^2d$。
+故
+\[
+\boxed{\frac{W_{B,m}}{W_{E,m}}
+=\frac{\varepsilon_0\mu_0\omega^2R^2}{8}
+=\frac{\omega^2R^2}{8c^2}
+\simeq5.0\times10^{-15}}.
+\]
+\excheck 两种峰值不同时刻出现，但可分别取各自时间最大值；比例与场振幅和板距无关。
+
+\emwaveproblem{202}{182--183}
+无限长螺线管圆形截面半径
+$R=6.0$cm，绕组通角频率
+$\omega=1000\,\mathrm{s^{-1}}$ 的正弦交流电。
+求管内感应电场能峰值与磁场能峰值之比。
+\exsolution
+理想长螺线管内部均匀
+$B_z(t)=B_m\cos\omega t$。
+由法拉第定律对半径 $r<R$ 的圆环积分，
+$2\pi rE_\varphi=-\pi r^2\dot B_z$，
+故
+$E_{\varphi,m}=\omega rB_m/2$。
+单位长度的感应电场能峰值
+\[
+W'_{E,m}=\int_0^R\frac12\varepsilon_0E_{\varphi,m}^2(2\pi r)\,\mathrm dr
+=\frac{\pi\varepsilon_0\omega^2B_m^2R^4}{16}.
+\]
+磁场能峰值（单位长度）
+$W'_{B,m}=\pi R^2B_m^2/(2\mu_0)$。
+因而
+\[
+\boxed{\frac{W'_{E,m}}{W'_{B,m}}
+=\frac{\varepsilon_0\mu_0\omega^2R^2}{8}
+\simeq5.0\times10^{-15}}.
+\]
+\excheck 与第201题呈电磁对偶：电容器电场为主、螺线管磁场为主，微弱的伴随场能比相同。
+
+\emwaveproblem{203}{183}
+空气平板圆盘电容器电极缓慢充电，忽略边缘场。证明：穿过电容器侧表面的坡印廷能流等于电容器电场储能的增长率。
+\exsolution
+板间电场 $E(t)$ 沿轴向 $z$，极板圆半径为 $R$、板距为 $d$。
+由位移电流导致的环向磁场
+$H_\varphi(r)=\varepsilon_0r\dot E/2$。
+侧面 $r=R$ 处
+$\bm S=\bm E\times\bm H$，
+$\bm e_z\times\bm e_\varphi=-\bm e_r$，
+即能流朝内，大小
+$S_{\rm in}=EH_\varphi(R)=\varepsilon_0R E\dot E/2$。
+穿过侧面的向内功率
+\[
+P_{\rm in}=2\pi Rd\,S_{\rm in}
+=\varepsilon_0E\dot E\,\pi R^2d.
+\]
+电场储能
+$W_E=\frac12\varepsilon_0E^2(\pi R^2d)$，
+故
+\[
+\boxed{P_{\rm in}=\frac{\mathrm dW_E}{\mathrm dt}}.
+\]
+\excheck 充电时坡印廷矢量从空间侧面向内流入电容器，而不是沿导线穿越极板；严格瞬时场分布仍取准静态近似。
+
+\emwaveproblem{204}{183}
+一根圆截面直导体通直流 $I$。取一段导体，其电阻为 $R$，求穿过该段导体侧面的坡印廷能流。
+\exsolution
+设导体半径为 $a$、长度为 $\ell$，
+轴向电场
+$E_z=IR/\ell$。
+在侧面磁场强度
+$H_\varphi=I/(2\pi a)$。
+坡印廷矢量
+$\bm S=\bm E\times\bm H
+=-E_zH_\varphi\bm e_r$，
+朝向导体内部。
+由侧面积 $2\pi a\ell$，
+\[
+\boxed{P_{\rm in}=2\pi a\ell E_zH_\varphi
+=2\pi a\ell\frac{IR}{\ell}\frac{I}{2\pi a}
+=I^2R}.
+\]
+\excheck 侧向流入导体的电磁能正好转化为焦耳热；结果与所选导体半径、长度的单独数值无关。
+
+\emwaveproblem{205}{183}
+非相对论质子经加速电压 $U$ 后形成圆柱形均匀离子束，其电流为 $I$。求束流外部距轴线 $r$ 处的坡印廷矢量模与方向。
+\exsolution
+质子束速度由动能给定
+$v=\sqrt{2eU/m_p}$。
+线电荷密度
+$\lambda=I/v$。
+束外径向电场
+$E_r=\lambda/(2\pi\varepsilon_0r)
+=I/(2\pi\varepsilon_0vr)$；
+磁场强度
+$H_\varphi=I/(2\pi r)$。
+对沿 $+z$ 运动的正质子束，
+$\bm E=E_r\bm e_r$、
+$\bm H=H_\varphi\bm e_\varphi$，
+所以
+$\bm S=E_rH_\varphi\bm e_z$。
+因此
+\[
+\boxed{\bm S=
+\frac{I^2}{4\pi^2\varepsilon_0r^2}
+\sqrt{\frac{m_p}{2eU}}\;\bm e_z}.
+\]
+\excheck $\bm e_r\times\bm e_\varphi=\bm e_z$；
+坡印廷矢量沿束流前进方向，且束外按 $r^{-2}$ 衰减。
+
+\emwaveproblem{206}{183}
+长直螺线管的绕组电流以缓慢速率增大。证明：螺线管内部磁能的增长率等于从侧面流入的坡印廷能流。
+\exsolution
+设螺线管半径 $R$、长度 $\ell$，
+内部近似均匀磁场 $B_z(t)$。
+法拉第定律给侧面环向电场
+$E_\varphi(R)=-R\dot B_z/2$，
+磁场强度
+$H_z=B_z/\mu_0$。
+坡印廷矢量
+$\bm S=\bm E\times\bm H
+=E_\varphi H_z\bm e_r$，
+当 $\dot B_z>0$ 时其径向分量为负，指向管内。
+侧面流入功率
+\[
+P_{\rm in}
+=2\pi R\ell\left(\frac{R\dot B_z}{2}\frac{B_z}{\mu_0}\right)
+=\frac{\pi R^2\ell}{\mu_0}B_z\dot B_z.
+\]
+内部磁能
+$W_B=B_z^2(\pi R^2\ell)/(2\mu_0)$，故
+\[
+\boxed{P_{\rm in}=\dot W_B}.
+\]
+\excheck 与第203题类似，能量从导体周围的空间流入充能区域；螺线管足够长且缓慢变化保证边缘及辐射修正小。
+
+\emwaveproblem{207}{183}
+图4.39表示双导线直流回路的一段，箭头给出两根导线内的电流方向，下导线电势高于上导线（$\varphi_2>\varphi_1$）。依据坡印廷能流判断电源在图的哪侧。
+\exsolution
+两导线之间的静电场从高电势导线2指向低电势导线1。
+按图4.39，利用右手定则判断两导线电流合成的磁场在两线之间的方向。
+取 $\bm E\times\bm H$，该能流沿两导线之间的空隙\emph{从左向右}输送能量。
+因此提供电磁能的一端在上游：
+\[
+\boxed{\text{电源位于图4.39的左侧}}.
+\]
+\excheck 判断的是\emph{能流方向}而非沿单根导线的电子漂移方向；本题依赖原图给定的两个电流箭头与电势高低。
+
+\emwaveproblem{208}{183}
+理想长直同轴电缆以忽略的有功电阻向负载传输电压 $V$、电流 $I$。外同轴导电薄壳为回流导体。求穿过电缆任一横截面的电磁能流。
+\exsolution
+内芯与外壳间径向电场
+$E_r=V/[r\ln(b/a)]$，
+其中 $a,b$ 为内外电极半径。
+环向磁场强度
+$H_\varphi=I/(2\pi r)$。
+坡印廷矢量沿电缆轴向，
+\[
+S_z=E_rH_\varphi
+=\frac{VI}{2\pi r^2\ln(b/a)}.
+\]
+对环状电磁场截面积积分：
+\[
+\Phi=\int_a^bS_z\,2\pi r\,\mathrm dr
+=\frac{VI}{\ln(b/a)}\int_a^b\frac{\mathrm dr}{r}.
+\]
+因此
+\[
+\boxed{\Phi=VI}.
+\]
+\excheck 电磁能主要经内芯与外导体之间的介质空间向负载传播，而非简单地“在铜导线内部流动”。
+
+\emwaveproblem{209}{183}
+理想长直同轴电缆向交流负载供能，
+端口电压
+$V(t)=V_0\cos\omega t$，
+电流
+$I(t)=I_0\cos(\omega t-\varphi)$。
+求横截面平均坡印廷能流。
+\exsolution
+在准 TEM 传播模型中，
+每一横截面的瞬时能流与端口电功率相等：
+$\Phi(t)=V(t)I(t)$。
+用恒等式
+$\cos A\cos B=\tfrac12[\cos(A-B)+\cos(A+B)]$，
+得到
+\[
+\Phi(t)=\tfrac12V_0I_0
+[\cos\varphi+\cos(2\omega t-\varphi)].
+\]
+一完整周期平均，双频项为零：
+\[
+\boxed{\overline\Phi=
+\frac12V_0I_0\cos\varphi
+=V_{\rm rms}I_{\rm rms}\cos\varphi}.
+\]
+\excheck 无功电流分量导致场能往返交换，但平均功率只由功率因数 $\cos\varphi$ 决定。
+
+\emwaveproblem{210}{183}
+证明在两个介质的分界面上，坡印廷矢量法向分量在适当边界条件下连续。
+\exsolution
+坡印廷矢量 $\bm S=\bm E\times\bm H$。
+在\emph{无自由面电流且边界不存在面层吸收或释放功率}的通常介质界面，
+由法拉第定律与安培定律的边界条件，
+切向分量满足
+$\bm E_{1t}=\bm E_{2t}$、
+$\bm H_{1t}=\bm H_{2t}$。
+坡印廷矢量法向分量只由切向场交叉积决定：
+\[
+S_{1n}=\bm n\cdot(\bm E_{1t}\times\bm H_{1t}),
+\quad
+S_{2n}=\bm n\cdot(\bm E_{2t}\times\bm H_{2t}),
+\]
+所以
+\[
+\boxed{S_{1n}=S_{2n}}.
+\]
+\excheck 若界面承载自由面电流或具有表面耗散，切向 $\bm H$ 可跳变，界面能量平衡出现面功率项，题述连续性\emph{不再无条件成立}；本稿明确了原书省略的物理假设。
+
+\emwaveproblem{211}{183}
+证明在质心不受外力的非相对论封闭带电粒子系统中，若所有粒子具有相同比荷 $q_i/m_i=\kappa$，则没有电\emph{偶极}辐射。
+\exsolution
+系统电偶极矩
+$\bm p=\sum_iq_i\bm r_i
+=\kappa\sum_im_i\bm r_i
+=\kappa M\bm R_{\rm cm}$，
+其中 $M=\sum_i m_i$ 为总质量。
+封闭系统质心匀速运动，因此
+$\ddot{\bm R}_{\rm cm}=0$。
+由经典非相对论电偶极辐射公式
+\[
+P_{\rm dip}=
+\frac{|\ddot{\bm p}|^2}{6\pi\varepsilon_0c^3},
+\]
+得到
+\[
+\boxed{\ddot{\bm p}=\kappa M\ddot{\bm R}_{\rm cm}=0,
+\qquad P_{\rm dip}=0}.
+\]
+\excheck 结论只是\emph{无电偶极辐射}；
+并不排除更高多极矩辐射，不能误写成所有形式的电磁辐射都为零。
+
+\emwaveproblem{212}{183}
+电子沿一直线作谐振动，
+振幅 $a=0.10\,\mathrm{nm}$，
+角频率 $\omega=6.5\times10^{14}\,\mathrm{s^{-1}}$。
+求一周期平均电磁辐射功率。
+\exsolution
+坐标 $x=a\cos\omega t$，
+加速度
+$\ddot x=-a\omega^2\cos\omega t$。
+非相对论拉莫尔辐射瞬时功率
+$P(t)=e^2\ddot x^2/(6\pi\varepsilon_0c^3)$，
+周期平均平方加速度
+$\langle\ddot x^2\rangle=\tfrac12a^2\omega^4$。
+所以
+\[
+\boxed{\overline P=
+\frac{e^2a^2\omega^4}{12\pi\varepsilon_0c^3}
+\simeq5\times10^{-15}\,\mathrm W}.
+\]
+\excheck 振动加速度的\emph{均方值}而非峰值代入平均功率；使用 $a=10^{-10}$m。
+% === END 26-em-waves-201-212.tex ===
+
+% === BEGIN 26-em-waves-213-224.tex blob b82c66d8b1220ccda123c3e1acb918c70f090304 ===
+% Irodov Part IV §4.4 original 213--224; closes Part IV at 224.
+% User source PDF 192--194, printed 183--185; answers PDF 334.
+\emwaveproblem{213}{183}
+带电量为 $e$、质量为 $m$ 的非相对论粒子，在静止点电荷 $q$ 的库仑场中沿半径 $R$ 的圆形轨道运动，求平均辐射功率。
+\exsolution
+库仑力大小
+$F=|eq|/(4\pi\varepsilon_0R^2)$，
+加速度大小
+$a=|eq|/(4\pi\varepsilon_0mR^2)$。
+非相对论拉莫尔公式
+$P=e^2a^2/(6\pi\varepsilon_0c^3)$。
+因圆周运动向心加速度模恒定，
+辐射功率不随时间变化：
+\[
+\boxed{P=\frac{e^2}{6\pi\varepsilon_0c^3}
+\left(\frac{eq}{4\pi\varepsilon_0mR^2}\right)^2
+=\frac{e^4q^2}{96\pi^3\varepsilon_0^3m^2c^3R^4}}.
+\]
+\excheck $q$ 的符号仅决定静电吸引还是排斥；若要靠静电形成圆轨道，两个电荷须相反号，功率取平方后不依赖电荷符号。
+
+\emwaveproblem{214}{184}
+带电量为 $e$、质量为 $m$ 的非相对论粒子，以初速度 $v$ 与固定点电荷 $q$ 发生远距离掠过，最接近距离为 $b$。忽略轨道偏折，求整个飞行过程中因辐射损失的能量。
+\exsolution
+在直线近似下取
+$\bm r(t)=(vt,b)$，
+$r(t)^2=b^2+v^2t^2$。
+库仑加速度大小
+$a(t)=|eq|/[4\pi\varepsilon_0m(b^2+v^2t^2)]$。
+拉莫尔功率
+\[
+P(t)=\frac{e^2}{6\pi\varepsilon_0c^3}
+\frac{e^2q^2}
+{(4\pi\varepsilon_0)^2m^2(b^2+v^2t^2)^2}.
+\]
+能量损失
+$\Delta W=\int_{-\infty}^{\infty}P(t)\,\mathrm dt$。
+设 $u=vt/b$，
+$\int_{-\infty}^{\infty}\mathrm du/(1+u^2)^2=\pi/2$，
+故
+\[
+\boxed{\Delta W=
+\frac{e^4q^2}{192\pi^2\varepsilon_0^3m^2c^3vb^3}}.
+\]
+\excheck 随碰撞参数 $b$ 增大，损耗按 $b^{-3}$ 快速减少；需满足散射偏折角及辐射反作用均足够小。
+
+\emwaveproblem{215}{184}
+非相对论质子沿法向进入磁感应强度
+$B=1.0$T 的横向均匀磁场半空间，
+在磁场内沿半圆轨迹离开。
+求半圈运动中因辐射损失能量与初始动能之比。
+\exsolution
+回旋半径 $r=m_pv/(eB)$，
+向心加速度
+$a=evB/m_p$。
+拉莫尔功率
+$P=e^2a^2/(6\pi\varepsilon_0c^3)
+=e^4v^2B^2/(6\pi\varepsilon_0c^3m_p^2)$。
+半圈时间
+$\Delta t=\pi m_p/(eB)$，
+初动能 $T=\tfrac12m_pv^2$。
+忽略微小辐射引起的速率变化，
+\[
+\frac{\Delta W}{T}
+=\frac{P\Delta t}{m_pv^2/2}
+=\boxed{\frac{e^3B}{3\varepsilon_0c^3m_p^2}
+\simeq2\times10^{-18}}.
+\]
+\excheck 初始速度 $v$ 消去；这个极小比值支持一阶近似中轨迹半径不变的处理。
+
+\emwaveproblem{216}{184}
+非相对论带电粒子（电荷模 $e$，质量 $m$）在垂直于均匀磁场 $\bm B$ 的平面内做回旋运动，
+因电磁辐射逐渐失能。求动能 $T(t)$ 的时间规律、减少到初值 $1/e$ 的时间；分别讨论电子和质子在 $B=1.0$T 时的结果。
+\exsolution
+回旋加速度模 $a=e vB/m$。
+拉莫尔辐射功率
+$P=e^4B^2v^2/(6\pi\varepsilon_0c^3m^2)$。
+非相对论动能 $T=mv^2/2$，
+所以
+\[
+-\frac{\mathrm dT}{\mathrm dt}
+=\frac{e^4B^2}{3\pi\varepsilon_0c^3m^3}T
+=\alpha T.
+\]
+解一阶方程：
+\[
+\boxed{T(t)=T_0e^{-\alpha t}},\qquad
+\boxed{\alpha=\frac{e^4B^2}{3\pi\varepsilon_0c^3m^3}},
+\qquad
+\boxed{t_{1/e}=\frac1\alpha}.
+\]
+在 $B=1.0$T 时，
+$\boxed{t_e\simeq2.5\,\mathrm s}$，
+$\boxed{t_p\simeq1.6\times10^{10}\,\mathrm s
+\simeq5\times10^2\,\text{年}}$。
+\excheck 动能衰减率随质量的\emph{三次方倒数}变化，故电子与质子的能量损失时间尺度相差极大。
+
+\emwaveproblem{217}{184}
+带电粒子沿 $y$ 轴做非相对论简谐运动 $y=a\cos\omega t$，
+远处观测点 P 在 x 轴距离 $\ell\gg a$ 处。
+求粒子在\emph{当前位置}分别为
+$y_1=0$ 与 $y_2=a$ 时观测点接收的辐射能流密度之比
+$S_1/S_2$，并取
+$\omega=3.3\times10^6\,\mathrm{s^{-1}}$、$\ell=190$m 计算。
+\exsolution
+远场观测依赖\emph{迟延时刻}
+$t_r\simeq t-\ell/c$ 的加速度，
+而非当前粒子加速度。
+沿 x 轴观测时辐射强度与
+$a_y(t_r)^2\propto\cos^2[\omega(t-\ell/c)]$ 成正比。
+取当前 $y(t_1)=0$，
+可令 $\omega t_1=\pi/2$；
+取 $y(t_2)=a$，可令
+$\omega t_2=0$。于是
+\[
+\frac{S_1}{S_2}
+=\frac{\cos^2(\pi/2-\omega\ell/c)}
+{\cos^2(-\omega\ell/c)}
+=\boxed{\tan^2\left(\frac{\omega\ell}{c}\right)}.
+\]
+代 $\omega\ell/c\simeq2.09$rad，
+\[
+\boxed{S_1/S_2\simeq3}.
+\]
+\excheck 若错误地采用粒子\emph{当前}加速度，会认为 $y=0$ 时辐射为零，遗漏光传播迟延。本题远场使用 $\ell\gg a$。
+
+\emwaveproblem{218}{184}
+图4.40：带电粒子沿半径 $R$ 的圆在 $xy$ 平面匀速运动，
+观察者 P 位于正 $x$ 轴极远处。
+求：(a) P 观察到的粒子 $y$ 坐标的表观二阶时间导数与该坐标的关系；
+(b) 粒子从观察者看来分别朝向和背离 P 运动时，辐射能流密度之比。
+\exsolution
+参数化
+$x=R\sin\omega t$、
+$y=R\cos\omega t$，
+$v=\omega R$。
+观测时刻
+$t'=t+(\ell-x(t))/c$，
+所以
+\[
+\frac{\mathrm dt'}{\mathrm dt}
+=1-\frac{\dot x}{c}
+=1-\beta\frac yR,\qquad
+\beta=\frac vc.
+\]
+观测坐标 $y'(t')=y(t)$，
+第一次求导：
+$\mathrm dy'/\mathrm dt'
+=\dot y/(1-\dot x/c)$。
+再次求导，并代
+$\ddot x=-\omega^2x$、
+$\ddot y=-\omega^2y$，
+整理得到
+\[
+\boxed{\frac{\mathrm d^2y'}{\mathrm dt'^2}
+=\frac{v^2}{R}
+\frac{\beta-y/R}{(1-\beta y/R)^3}}.
+\]
+粒子朝向 P 运动时 $y=+R$、
+$\dot x=v$，
+表观加速度模
+$v^2/[R(1-\beta)^2]$；
+背离时 $y=-R$、
+$\dot x=-v$，
+模为 $v^2/[R(1+\beta)^2]$。
+远区辐射能流与该表观横向加速度平方成正比，
+故
+\[
+\boxed{\frac{S_{\rm toward}}{S_{\rm away}}
+=\left(\frac{1+\beta}{1-\beta}\right)^4}.
+\]
+\excheck 此式强调光行时间与朝向运动所产生的辐射前向增强；在 $\beta\ll1$ 时趋近1。
+
+\emwaveproblem{219}{184}
+电偶极子辐射电磁波，在远场某点 P 距偶极中心 $r$，
+且 P 位于垂直于偶极轴的方向。
+该点周期平均能流密度为 $S_0$。
+求偶极子的总平均辐射功率。
+\exsolution
+远场偶极辐射角分布
+$\overline S(r,\theta)=S_0\sin^2\theta$，
+其中 $\theta$ 为观察方向与偶极轴夹角。
+总功率为包围偶极子的球面积分
+\[
+P=\int\overline S\,r^2\mathrm d\Omega
+=S_0r^2\,2\pi\int_0^\pi\sin^3\theta\,\mathrm d\theta.
+\]
+因为
+$\int_0^\pi\sin^3\theta\,\mathrm d\theta=4/3$，
+所以
+\[
+\boxed{P=\frac{8\pi}{3}r^2S_0}.
+\]
+\excheck 不能直接取 $4\pi r^2S_0$，
+因为电偶极辐射沿轴为零、赤道方向最大。
+
+\emwaveproblem{220}{184}
+电偶极子总平均辐射功率为 $P_0$。
+求在远区、距离 $r$ 且位于偶极轴垂直方向的电磁场平均能量密度。
+\exsolution
+由第219题
+$P_0=(8\pi/3)r^2S_\perp$，
+故赤道方向平均能流密度
+$S_\perp=3P_0/(8\pi r^2)$。
+远场真空电磁波的平均能流与平均能量密度满足
+$\overline S=c\overline w$，
+因此
+\[
+\boxed{\overline w_\perp
+=\frac{S_\perp}{c}
+=\frac{3P_0}{8\pi r^2c}}.
+\]
+\excheck $\overline w$ 为能量/体积（J/m³），
+而 $P_0/(r^2c)$ 正好具有该量纲。
+
+\emwaveproblem{221}{184}
+电偶极矩的模 $p$ 恒定，偶极子绕通过中点、垂直于自身轴的固定轴以恒角速度 $\omega$ 旋转。求平均电磁辐射功率。
+\exsolution
+在旋转平面中取
+$\bm p(t)=p[\cos\omega t\,\bm e_x+
+\sin\omega t\,\bm e_y]$，
+则
+$\ddot{\bm p}=-\omega^2\bm p$，
+其模恒为 $p\omega^2$。
+电偶极辐射功率
+$P=|\ddot{\bm p}|^2/(6\pi\varepsilon_0c^3)$，
+所以
+\[
+\boxed{\overline P=P=
+\frac{p^2\omega^4}{6\pi\varepsilon_0c^3}}.
+\]
+\excheck 旋转偶极子的加速度模恒定，而直线谐振偶极子的加速度模随时间变化，因此前者平均功率是后者相同峰值条件下的2倍。
+
+\emwaveproblem{222}{185}
+自由电子处于平面电磁波电场中，忽略波磁场对电子运动的影响。
+求电子单位时间平均辐射功率与入射电磁波平均能流密度之比。
+\exsolution
+入射电场
+$\bm E=E_m\cos\omega t\,\bm e$，
+电子的加速度
+$\bm a(t)=-(eE_m/m_e)\cos\omega t\,\bm e$。
+拉莫尔平均辐射功率
+\[
+\overline P=
+\frac{e^2}{6\pi\varepsilon_0c^3}
+\frac{e^2E_m^2}{2m_e^2}.
+\]
+入射平均能流
+$\overline S=\varepsilon_0cE_m^2/2$。
+二者之比
+\[
+\boxed{\frac{\overline P}{\overline S}
+=\frac{e^4}{6\pi\varepsilon_0^2m_e^2c^4}
+=\frac{\mu_0^2e^4}{6\pi m_e^2}}.
+\]
+\excheck 这一比值有面积量纲，是经典汤姆孙散射截面；入射振幅和频率均从结果中消去。
+
+\emwaveproblem{223}{185}
+频率为 $\omega$ 的平面电磁波入射到一只被弹性束缚的电子上，该电子固有角频率为 $\omega_0$。忽略阻尼和磁力，求电子平均辐射功率与入射平均能流密度之比。
+\exsolution
+令束缚电子位移
+$x=A\cos\omega t$。
+受迫振子方程
+$\ddot x+\omega_0^2x=-(eE_m/m_e)\cos\omega t$，
+非共振时
+$A=eE_m/[m_e|\omega_0^2-\omega^2|]$。
+加速度幅度
+$\omega^2A$，拉莫尔平均功率
+$\overline P=e^2\omega^4A^2/(12\pi\varepsilon_0c^3)$；
+入射平均流密度
+$\overline S=\varepsilon_0cE_m^2/2$。
+故
+\[
+\boxed{\frac{\overline P}{\overline S}
+=\frac{e^4\omega^4}
+{6\pi\varepsilon_0^2m_e^2c^4(\omega_0^2-\omega^2)^2}}.
+\]
+\excheck 该无阻尼公式在 $\omega=\omega_0$ 形式上发散，物理上辐射阻尼等不可再忽略；只能用于离共振足够远的情况。
+
+\emwaveproblem{224}{185}
+把微小颗粒视为密度 $\rho=1.0\,\mathrm{g/cm^3}$ 的完全吸收黑球，太阳总辐射功率
+$P_\odot=4\times10^{26}$W。
+求颗粒半径 $a$，使太阳引力与太阳光辐射压力平衡。
+\exsolution
+取颗粒至太阳距离 $r$、太阳质量 $M_\odot$。
+太阳能流强度
+$S=P_\odot/(4\pi r^2)$。
+完全吸收球的迎光截面积为 $\pi a^2$，
+辐射压力作用力
+\[
+F_{\rm rad}=\frac Sc\pi a^2
+=\frac{P_\odot a^2}{4cr^2}.
+\]
+球质量
+$m=(4\pi/3)\rho a^3$，
+太阳引力
+$F_g=GM_\odot m/r^2
+=4\pi GM_\odot\rho a^3/(3r^2)$。
+令二者相等，消去日距 $r$：
+\[
+\boxed{a=\frac{3P_\odot}
+{16\pi cG M_\odot\rho}
+\simeq0.6\,\mathrm{\mu m}}.
+\]
+\excheck 结果与日距无关，因为引力和光强都按 $1/r^2$ 衰减；若颗粒有反射或波长依赖吸收效率，平衡半径需修改。
+% === END 26-em-waves-213-224.tex ===

@@ -1,0 +1,795 @@
+% Consolidated 28-optics-interference from ff5921b6fbf473f9d16e47ad4b028ac5cf985609; original TeX fragments preserved.
+
+% === BEGIN 28-optics-interference-064-075.tex blob aab8b6624d5a53c4758d6dfc2abbda11cde638ab ===
+% Irodov Part V §5.2 Interference of Light, originals 64--75.
+% Source uploaded book PDF pp.206--208; original answers around PDF pp.336--338.
+\interferenceproblem{64}{197}
+证明两列简谐光学振动的合场在下列情形下，时间平均能量等于各自能量之和：(a) 两振动沿同一方向但互不相干，相位差在 $[0,2\pi)$ 内均匀随机；(b) 两列光振动相互垂直、频率相同但相位差任意。
+\exsolution
+取
+$\bm E=\bm e_1a_1\cos\omega t+\bm e_2a_2\cos(\omega t+\delta)$，
+能量流密度与 $\langle|\bm E|^2\rangle_t$ 成正比。
+展开：
+\[
+\langle|\bm E|^2\rangle_t
+=\frac{a_1^2+a_2^2}{2}
++a_1a_2(\bm e_1\cdot\bm e_2)\cos\delta .
+\]
+(a) 同向时 $\bm e_1\cdot\bm e_2=1$，
+但不相干使 $\langle\cos\delta\rangle_\delta=0$，
+故合强度为 $I_1+I_2$。
+(b) 正交偏振使 $\bm e_1\cdot\bm e_2=0$，
+因此对任意固定相位差也有
+\[
+\boxed{I_{\rm sum}=I_1+I_2}.
+\]
+\excheck 必须说明平均是时间平均还是随机相位的统计平均；仅“同频同向”而相位固定时会出现干涉交叉项。
+
+\interferenceproblem{65}{197}
+利用相量作图，求沿同一直线方向的三种同频振动的合振幅：
+$\xi_1=a\cos\omega t$、
+$\xi_2=2a\sin\omega t$、
+$\xi_3=1.5a\cos(\omega t+\pi/3)$。
+\exsolution
+用 $\Re(\widetilde A e^{i\omega t})$ 表示，
+三个复振幅依次是
+$a$、$-2ia$、$1.5a e^{i\pi/3}$，故
+\[
+\frac{\widetilde A}{a}
+=1-2i+\frac32\left(\frac12+i\frac{\sqrt3}{2}\right)
+=\frac74+i\left(\frac{3\sqrt3}4-2\right).
+\]
+因此
+\[
+\boxed{A=\frac a4\sqrt{49+(3\sqrt3-8)^2}
+\simeq1.9a}.
+\]
+\excheck 将 $\sin\omega t$ 化成余弦相量时相位为 $-\pi/2$ 而非 $+\pi/2$。
+
+\interferenceproblem{66}{197}
+沿同一方向的 $N$ 个相干等幅振动为
+$\xi_k=a\cos[\omega t+(k-1)\varphi]$，
+$k=1,\ldots,N$。
+求合振幅。
+\exsolution
+合复振幅为等比级数
+\[
+\widetilde A=a\sum_{k=0}^{N-1}e^{ik\varphi}
+=a\,\frac{1-e^{iN\varphi}}{1-e^{i\varphi}}
+=ae^{i(N-1)\varphi/2}
+\frac{\sin(N\varphi/2)}{\sin(\varphi/2)}.
+\]
+所以
+\[
+\boxed{A=a\left|
+\frac{\sin(N\varphi/2)}{\sin(\varphi/2)}
+\right|}.
+\]
+\excheck 当 $\varphi\to 2m\pi$ 时应用连续极限
+$A\to Na$，避免误把 $0/0$ 当零振幅。
+
+\interferenceproblem{67}{198}
+原图5.12：两相干点电偶极辐射源相距 $d$，偶极矩都垂直于它们所在的纸面，源2的相位比源1落后 $\varphi<\pi$。观察方向与两源连线的夹角为 $\theta$，波长为 $\lambda$。
+求：(a) 辐射强度最大的方向；(b) $\theta=\pi$ 强度最大而反向 $\theta=0$ 强度最小的条件。
+\exsolution
+令源1的初相为零、源2为 $-\varphi$；
+沿夹角 $\theta$ 方向从两源到远场的路程差给相位差
+$\Delta=(2\pi d/\lambda)\cos\theta+\varphi$
+（相位正向可取反，但极值方向的整数编号须相应调整）。
+主极大须 $\Delta=2\pi k$，故
+\[
+\boxed{\cos\theta=
+\left(k-\frac{\varphi}{2\pi}\right)\frac{\lambda}{d}},
+\quad k\in\mathbb Z,\quad|\cos\theta|\le1.
+\]
+(b) 使 $\theta=\pi$ 相长而 $\theta=0$ 相消，
+分别有
+$-kd_{\rm wave}+\varphi=2\pi m$、
+$kd_{\rm wave}+\varphi=(2n+1)\pi$，
+其中 $k_{\rm wave}=2\pi/\lambda$。
+相减可取
+\[
+\boxed{\varphi=\frac\pi2,\qquad
+\frac d\lambda=j+\frac14},\quad j=0,1,2,\ldots.
+\]
+\excheck 第(b)问相位的取正约定与原书图5.12观察方向相配；换源的标签会使该式中的 $\pm$ 或整数移位，但相长/相消的物理条件不变。
+
+\interferenceproblem{68}{198}
+一排固定的平行相干辐射振子沿直线以相同间距 $d$ 排列，邻近振子之间的激励相位差可随时间控制。要使主辐射峰以恒定角速度 $\Omega$ 扫描，求所需相位差 $\Delta\varphi(t)$。
+\exsolution
+取阵列法线为角度零方向，入射远场方向为 $\theta$。
+两邻振子远场路径相差 $d\sin\theta$，
+总相位差为
+$\Delta\varphi+(2\pi d/\lambda)\sin\theta$。
+主极大要求它为 $2\pi j$，
+若希望峰值角
+$\theta(t)=\Omega t+\alpha$，则
+\[
+\boxed{\Delta\varphi(t)=2\pi
+\left[j-\frac d\lambda\sin(\Omega t+\alpha)\right]},
+\quad j\in\mathbb Z.
+\]
+\excheck 主峰只在对应方向满足可见角范围时可扫描；相位差仅以模 $2\pi$ 有物理意义。
+
+\interferenceproblem{69}{198}
+劳埃德镜实验（图5.13）：狭缝源距镜面高度为 $h$，到屏距离
+$\ell=100$cm。
+某位置条纹间隔 $\Delta x=0.25$mm；
+源再远离镜面 $\Delta h=0.60$mm 后条纹间隔缩小为原来的 $1/\eta$，$\eta=1.5$。
+求光波长。
+\exsolution
+镜面虚像与真实狭缝的间隔为 $2h$，
+所以条纹宽
+$\Delta x=\lambda\ell/(2h)$。
+抬高源后
+$\Delta x'=\lambda\ell/[2(h+\Delta h)]
+=\Delta x/\eta$，
+得
+$\eta=(h+\Delta h)/h$，
+$h=\Delta h/(\eta-1)$。
+代入波长：
+\[
+\boxed{\lambda=
+\frac{2\Delta x\Delta h}{\ell(\eta-1)}
+=\frac{2(0.25\times10^{-3})(0.60\times10^{-3})}
+{1.00(0.5)}
+=0.60\,\mathrm{\mu m}}.
+\]
+\excheck 镜面反射附加 $\pi$ 相位会使明暗条纹互换，但不改变条纹\emph{间隔}。
+
+\interferenceproblem{70}{198}
+两束振幅相等、夹角为 $\psi\ll1$ 的相干平面光波几乎垂直落在屏面，证明相邻亮条纹间距 $\Delta x=\lambda/\psi$。
+\exsolution
+设两光波的波矢横向分量分别为
+$k_{1x},k_{2x}$，屏上横坐标为 $x$。
+两波干涉交叉项为
+$I_{\rm int}\propto\cos[(k_{1x}-k_{2x})x+\delta_0]$，
+故周期
+$\Delta x=2\pi/|k_{1x}-k_{2x}|$。
+小角时
+$|k_{1x}-k_{2x}|\simeq k\psi=(2\pi/\lambda)\psi$，所以
+\[
+\boxed{\Delta x\simeq\frac{\lambda}{\psi}}.
+\]
+\excheck 两束波振幅只影响条纹对比度，不影响条纹间距。
+
+\interferenceproblem{71}{198--199}
+菲涅耳双镜（图5.14）的夹角 $\alpha=12'$；
+狭缝 S、屏到双镜交线 O 的距离分别为 $r=10.0$cm、
+$b=130$cm，波长 $\lambda=0.55\,\mathrm{\mu m}$。
+求：(a) 条纹宽度与可见亮纹数；
+(b) 狭缝沿以 O 为心的圆弧移动 $\delta\ell=1.0$mm 时图样平移；
+(c) 保持足够清晰的狭缝最大宽度。
+\exsolution
+两镜产生的两个虚源分离约为
+$d=2\alpha r$（$\alpha$ 用弧度），
+到屏的距离约 $L=r+b$，
+因此
+\[
+\boxed{\Delta x=\frac{\lambda(r+b)}{2\alpha r}
+\simeq1.1\,\mathrm{mm}}.
+\]
+双镜反射波在屏上的重叠有效宽度由楔形几何约为
+$2\alpha b$，故可见条纹数
+$N\simeq 2\alpha b/\Delta x\simeq9$。
+将源沿半径 $r$ 的弧移动 $\delta\ell$，
+干涉图样等效平移
+\[
+\boxed{\delta x=\frac br\delta\ell
+=13\,\mathrm{mm}}.
+\]
+狭缝不同点产生图样的相对平移不能大于半条纹，
+$(b/r)\delta_{\max}\lesssim\Delta x/2$，故
+\[
+\boxed{\delta_{\max}\simeq
+\frac{\lambda(r+b)}{4\alpha b}
+=(1+r/b)\frac{\lambda}{4\alpha}
+\simeq43\,\mathrm{\mu m}}.
+\]
+\excheck $\alpha=12'=12(\pi/10800)\,\mathrm{rad}$；
+不可直接用“12”参与小角乘积。
+
+\interferenceproblem{72}{199}
+一束平面光波入射到夹角 $\alpha=2.0'$ 的菲涅耳双镜上，屏上干涉条纹宽度为
+$\Delta x=0.55$mm。求波长。
+\exsolution
+反射后的两平面波夹角为
+$\psi\simeq2\alpha$。
+由第70题
+$\Delta x=\lambda/(2\alpha)$，所以
+\[
+\boxed{\lambda=2\alpha\Delta x
+=2\frac{2\pi}{10800}(0.55\times10^{-3})
+\simeq0.64\,\mathrm{\mu m}}.
+\]
+\excheck 角分转弧度：$1'=\pi/10800$rad。
+
+\interferenceproblem{73}{199}
+直径5.0cm、焦距
+$f=25.0$cm 的会聚透镜沿直径切成两半，
+切割中损失厚 $a=1.00$mm 的材料；
+两半并接成复合透镜，焦平面放波长
+$\lambda=0.60\,\mathrm{\mu m}$ 的单色狭缝，
+距复合透镜 $b=50$cm 处置屏。
+求：(a) 条纹间隔与可见极大数；
+(b) 使条纹尚清晰的狭缝最大宽度。
+\exsolution
+两半透镜的光轴有效横向错开 $a$，焦点虚源分离
+$d\simeq ab/f$ 的等效角偏差为 $a/f$，
+在屏上两出射波夹角约 $\psi=a/f$。
+因此
+\[
+\boxed{\Delta x=\frac{\lambda f}{a}
+=\frac{(0.60\times10^{-6})(0.25)}{0.001}
+=0.15\,\mathrm{mm}}.
+\]
+复合口径两束重叠宽度由图示透镜直径及几何截光确定，
+对应可见最大约
+$\boxed{13\text{个亮纹}}$。
+狭缝宽度 $\delta$ 引起相干图样横移
+$\Delta x_{\rm src}\simeq(b/f)\delta$，
+要求其不超过半个条纹间隔，故
+\[
+\boxed{\delta_{\max}=\frac{\lambda f^2}{2ab}
+\simeq37\,\mathrm{\mu m}}.
+\]
+\excheck $a$ 是切割损失的厚度，不是单缝开孔宽度；条纹数还依赖两半透镜口径所限定的重叠区。
+
+\interferenceproblem{74}{199}
+菲涅耳双棱镜狭缝距棱镜 $a=25$cm，
+棱镜到屏 $b=100$cm，
+玻璃棱角 $\theta=20'$，测得条纹间距
+$\Delta x=0.55$mm。
+取玻璃折射率 $n\simeq1.50$，求波长。
+\exsolution
+每半棱镜小角偏转为
+$\delta\simeq(n-1)\theta$，
+两虚像源相距
+$d\simeq2a(n-1)\theta$。
+到屏距离 $L\simeq a+b$，
+所以
+\[
+\Delta x=\frac{\lambda(a+b)}{2a(n-1)\theta},
+\qquad
+\boxed{\lambda=
+\frac{2a(n-1)\theta\,\Delta x}{a+b}
+\simeq0.60\,\mathrm{\mu m}}.
+\]
+\excheck 源书未在此题单独写出玻璃折射率；数值采用普通玻璃 $n\simeq1.50$ 的约定。
+
+\interferenceproblem{75}{199}
+波长 $\lambda=0.70\,\mathrm{\mu m}$ 的平面光波从双棱镜底面正入射，棱镜玻璃折射率
+$n=1.520$、顶角 $\theta=5.0^\circ$，
+棱镜与后方平板之间充满苯
+$n'=1.500$（图5.15）。求屏上条纹间隔。
+\exsolution
+由于玻璃与苯折射率非常接近，
+单边偏转小角为
+$\delta\simeq(n-n')\theta$，
+两束波的相对夹角
+$\psi\simeq2(n-n')\theta$，
+其中 $\theta$ 用弧度。
+由两平面波叠加：
+\[
+\boxed{\Delta x\simeq
+\frac{\lambda}{2(n-n')\theta}
+=\frac{0.70\times10^{-6}}
+{2(0.020)(5\pi/180)}
+\simeq0.20\,\mathrm{mm}}.
+\]
+\excheck 题设有两种接近的折射率，不能直接使用空气中的棱镜偏转 $(n-1)\theta$。
+% === END 28-optics-interference-064-075.tex ===
+
+% === BEGIN 28-optics-interference-076-086.tex blob 9b689c5f89f097dcc12a57c2caee2b435941784c ===
+% Irodov Part V §5.2 originals 76--86. Source PDF pp.208--210, printed 199--201.
+\interferenceproblem{76}{199}
+单色平面波垂直照射双缝，缝间距 $d=2.5$mm，屏距 $L=100$cm。若在一缝前插入厚 $h=10\,\mathrm{\mu m}$ 的平行玻璃片，干涉条纹偏移多少，向哪个方向？
+\exsolution
+玻璃片使该光路额外光程增加
+$\Delta=(n-1)h$。
+双缝的几何光程差为 $dx/L$，
+中心亮纹移至满足
+$dx/L=\Delta$ 的位置，
+因此
+\[
+\boxed{|\delta x|=\frac{(n-1)hL}{d}}.
+\]
+取普通玻璃 $n\simeq1.50$：
+\[
+\boxed{|\delta x|=\frac{0.50(10^{-5})(1.0)}
+{2.5\times10^{-3}}=2.0\,\mathrm{mm}}.
+\]
+图样\emph{向放玻璃片的狭缝一侧}偏移。
+\excheck 单色光波长在平移量表达式中消掉，因为插片使所有条纹阶数共同平移；原题没有单独给玻璃折射率，数值按普通玻璃约定。
+
+\interferenceproblem{77}{199--200}
+图5.16双臂气体干涉仪中，两根相同玻璃管充空气、长度均
+$\ell=10.0$cm，入射波长 $\lambda=589$nm。
+把上管空气换成氨气后，条纹向上移动 $N=17$ 个间距。
+已知空气折射率 $n=1.000277$，求氨气折射率。
+\exsolution
+一臂由 $n$ 变为 $n'$，额外光程差为
+$\Delta=(n'-n)\ell$。
+每经过 $\lambda$ 对应一个完整干涉条纹移位，
+故
+$N=(n'-n)\ell/\lambda$，
+即
+\[
+\boxed{n'=n+\frac{N\lambda}{\ell}}
+=1.000277+\frac{17(589\times10^{-9})}{0.10}
+\simeq\boxed{1.000377}.
+\]
+\excheck 此为单程双臂干涉装置，若是米歇尔逊回程双程管才需额外因子2；原图5.16的气体管仅穿行一次。
+
+\interferenceproblem{78}{200}
+电磁波垂直入射到折射率分别为 $n_1,n_2$ 的两个各向同性非磁介质分界面。利用切向电、磁场连续条件证明：(a) 透射电场不发生相位跳变；(b) 从疏到密介质反射的电场相位跳变 $\pi$。
+\exsolution
+设入射、反射、透射电场有向复振幅为
+$E_i,E_r,E_t$，
+垂直入射时电场边界连续：
+$E_i+E_r=E_t$。
+磁场反射方向相反，而非磁介质中
+$H=nE/Z_0$，故
+$n_1(E_i-E_r)=n_2E_t$。
+消去 $E_t$ 得菲涅耳振幅系数
+\[
+\boxed{\frac{E_r}{E_i}=\frac{n_1-n_2}{n_1+n_2}},
+\qquad
+\boxed{\frac{E_t}{E_i}=\frac{2n_1}{n_1+n_2}}.
+\]
+透射系数恒正，故透射电场与入射电场同相；
+若 $n_2>n_1$，反射系数为负，反射电场相位增加 $\pi$。
+\excheck 此结论针对电场的相位，反射磁场还须考虑传播方向反转造成的取向符号。
+
+\interferenceproblem{79}{200}
+白光平行光束以入射角 $\theta_1=52^\circ$ 照射
+$n=1.33$ 的薄膜。要使反射光中波长 $\lambda=0.60\,\mathrm{\mu m}$ 的黄色最强，薄膜厚度应取何值？
+\exsolution
+假设膜的两侧为空气，只有一侧反射发生 $\pi$ 相位跳变。
+在膜内折射角 $r$ 满足
+$\sin r=\sin\theta_1/n$。
+两反射光相长条件为
+$2nd\cos r=(k+1/2)\lambda$，
+所以
+\[
+\boxed{d=\frac{(2k+1)\lambda}
+{4\sqrt{n^2-\sin^2\theta_1}}},\quad k=0,1,2,\ldots
+\]
+代 $n=1.33,\theta_1=52^\circ$，
+$\boxed{d\simeq0.14(2k+1)\,\mathrm{\mu m}}$。
+\excheck 若膜下方是比膜折射率更高的基底，两个反射相位翻转关系会改变；本题采用原书薄自由膜的通常边界条件。
+
+\interferenceproblem{80}{200}
+折射率为 $n=1.33$ 的薄膜，在入射角
+$\theta=30^\circ$ 下，要求
+$\lambda_1=0.64\,\mathrm{\mu m}$ 的光反射最强、
+而 $\lambda_2=0.40\,\mathrm{\mu m}$ 的光反射恰极小。
+求满足条件的最小膜厚。
+\exsolution
+记
+$D=2d\sqrt{n^2-\sin^2\theta}$。
+由一侧反射相位反转，
+$\lambda_1$ 最大要求
+$D=(m+1/2)\lambda_1$，
+$\lambda_2$ 最小要求
+$D=p\lambda_2$，
+其中 $m\ge0,p\ge1$ 均为整数。
+比较
+$(m+1/2)(0.64)=0.40p$，
+即 $8m+4=5p$，
+最小非负整数解为
+$m=2,p=4$。
+故
+\[
+\boxed{d_{\min}=
+\frac{(2+1/2)\lambda_1}
+{2\sqrt{n^2-\sin^2\theta}}
+=\frac{1.6\,\mathrm{\mu m}}
+{2\sqrt{1.33^2-\sin^230^\circ}}
+\simeq0.65\,\mathrm{\mu m}}.
+\]
+\excheck 本题是两个波长的\emph{同时}约束，不能分别对两个波长取各自的四分之一波厚度。
+
+\interferenceproblem{81}{200}
+为减小玻璃表面反射损耗，表面镀一层透明增透膜，
+膜折射率取 $n'=\sqrt n$，其中 $n$ 为玻璃折射率。
+垂直入射波长 $\lambda$ 的光时，两次反射振幅恰相等。
+求使合反射强度为零的膜厚。
+\exsolution
+空气到膜、膜到玻璃的两次反射均发生 $\pi$ 相位翻转，
+二者的\emph{相对反射附加相位}为零。
+膜内往返光程差为 $2n'd$；
+要让两反射波完全抵消，传播相位差须为奇数个 $\pi$：
+\[
+\frac{2\pi}{\lambda}2n'd=(2k+1)\pi.
+\]
+因此
+\[
+\boxed{d=\frac{(2k+1)\lambda}{4n'}
+=\frac{(2k+1)\lambda}{4\sqrt n}},\quad k=0,1,\ldots
+\]
+\excheck 等反射幅度所需 $n'=\sqrt n$，不是一般写作 $n'=n$；源PDF数学抽取可能漏根号。
+
+\interferenceproblem{82}{200}
+波长 $\lambda=0.60\,\mathrm{\mu m}$ 的漫射单色光照在
+$n=1.5$ 的薄膜上，反射光中入射角附近
+$\theta=45^\circ$ 的相邻两个角度极大间隔为
+$\Delta\theta=3.0^\circ$。
+求膜厚。
+\exsolution
+等倾角反射条纹的光程差
+$D(\theta)=2d\sqrt{n^2-\sin^2\theta}$。
+相邻极大的阶数差一，故
+$|\mathrm dD/\mathrm d\theta|\Delta\theta\simeq\lambda$。
+求导：
+$\mathrm dD/\mathrm d\theta
+=-d\sin2\theta/\sqrt{n^2-\sin^2\theta}$，
+因此
+\[
+\boxed{d\simeq
+\frac{\lambda\sqrt{n^2-\sin^2\theta}}
+{\sin2\theta\,\Delta\theta}
+\simeq15\,\mathrm{\mu m}}.
+\]
+\excheck 角间隔必须先换成弧度：
+$3^\circ=0.05236$rad；源书答复中根号可能因PDF文本抽取漏失。
+
+\interferenceproblem{83}{200}
+图5.17：单色光穿过屏孔后在距屏
+$\ell$ 处的平行薄板反射，形成等倾角同心圆干涉环。
+薄板厚度 $d$、折射率 $n$，
+第 $i$ 与 $k$ 个暗环半径分别为
+$r_i,r_k\ll\ell$。
+求波长 $\lambda$。
+\exsolution
+若屏位于板前距离 $\ell$，反射光倾角 $\theta$ 的环落于屏上径向距离
+$r\simeq2\ell\theta$（往返反射几何）。
+膜内两束反射光的光程差为
+$D(\theta)=2d\sqrt{n^2-\sin^2\theta}
+\simeq2nd-(d/n)\theta^2$。
+相隔 $|i-k|$ 个暗条纹阶数的光程差变化满足
+$|D(\theta_i)-D(\theta_k)|=|i-k|\lambda$。
+于是
+\[
+|i-k|\lambda\simeq\frac d n
+\frac{|r_i^2-r_k^2|}{4\ell^2},
+\quad
+\boxed{\lambda\simeq
+\frac{d\,|r_i^2-r_k^2|}
+{4n\ell^2|i-k|}}.
+\]
+\excheck 这里的径向关系 $r\simeq2\ell\theta$ 来自反射光往返走过屏—板距离；若误写为 $\ell\theta$，结果会差四倍。
+
+\interferenceproblem{84}{200}
+波长 $\lambda$ 的平面光入射到两面夹角 $\alpha\ll1$ 的玻璃楔，入射面垂直楔棱，入射角为 $\theta_1$。求在垂直于\emph{反射光}的观察屏上相邻等厚明条纹间隔。
+\exsolution
+设楔膜厚沿表面坐标 $x$ 变化
+$d(x)\simeq\alpha x$。
+介质折射率为 $n$，
+内部折射角满足
+$n\sin r=\sin\theta_1$。
+反射的光程差
+$D(x)=2nd(x)\cos r
+=2\alpha x\sqrt{n^2-\sin^2\theta_1}$，
+相邻亮纹相差 $\lambda$，故楔面上的间隔
+$\Delta x_s=\lambda/
+[2\alpha\sqrt{n^2-\sin^2\theta_1}]$。
+若屏面垂直于反射方向，沿屏面的图样距离多一个几何投影因子
+$\cos\theta_1$：
+\[
+\boxed{\Delta x=
+\frac{\lambda\cos\theta_1}
+{2\alpha\sqrt{n^2-\sin^2\theta_1}}}.
+\]
+\excheck 区分楔面本身的条纹间隔与倾斜观察屏上的投影间隔。
+
+\interferenceproblem{85}{201}
+来自远处点源的波长
+$\lambda=0.55\,\mathrm{\mu m}$ 的光垂直照射玻璃楔。
+反射明条纹在楔面上间隔为
+$\Delta x=0.21$mm；在离楔棱约
+$\ell=1.5$cm 处条纹消失。
+求：(a) 楔角；(b) 相对谱宽 $\Delta\lambda/\lambda$。
+\exsolution
+垂直入射时
+$2nd(x)=2n\alpha x$。
+相邻极大光程差变化 $\lambda$，
+故 $\Delta x=\lambda/(2n\alpha)$；
+取普通玻璃 $n\simeq1.50$：
+\[
+\boxed{\alpha=\frac{\lambda}{2n\Delta x}
+\simeq8.7\times10^{-4}\,\mathrm{rad}
+\simeq3'}.
+\]
+距楔棱 $\ell$ 处条纹秩序约
+$m\simeq\ell/\Delta x$；
+不同波长造成的阶数不确定性
+$m\Delta\lambda/\lambda\sim1$，
+故
+\[
+\boxed{\frac{\Delta\lambda}{\lambda}
+\sim\frac{\Delta x}{\ell}
+=\frac{0.21\,\mathrm{mm}}{15\,\mathrm{mm}}
+\simeq0.014}.
+\]
+\excheck 相对谱宽是“条纹开始洗掉”的数量级估计，不是一个精确的线宽定义。
+
+\interferenceproblem{86}{201}
+平凸玻璃透镜的凸面与平玻璃板相接触，
+凸面曲率半径 $R$、照明波长 $\lambda$，
+求牛顿环在 $\Delta r\ll r$ 的远离中心区域，环宽
+$\Delta r$ 随环半径 $r$ 的关系。
+\exsolution
+空气膜厚度在离中心 $r$ 处为
+$h(r)\simeq r^2/(2R)$。
+相邻\emph{明暗边界}对应膜往返光程差变化 $\lambda/2$，
+故
+$2[h(r+\Delta r)-h(r)]\simeq\lambda/2$。
+近似
+$h(r+\Delta r)-h(r)\simeq(r/R)\Delta r$，因此
+\[
+\boxed{\Delta r\simeq\frac{\lambda R}{4r}}
+\quad\text{（相邻一明一暗条纹的间隔）}.
+\]
+若“相邻同类极大”定义为完整条纹周期，则距离为
+$\boxed{\Delta r_{\rm bright\to bright}\simeq\lambda R/(2r)}$。
+\excheck 原书书末采用前一种“环宽”定义，故为 $1/4$ 系数；两种计数方式不能混淆。
+% === END 28-optics-interference-076-086.tex ===
+
+% === BEGIN 28-optics-interference-087-096.tex blob 01a16bbed87a53eaee11a5651427769ef8286130 ===
+% Irodov Part V §5.2 87--96, concludes Light Interference.
+% Source PDF ~210--211, printed pp.201--202; source answer pp.328--329.
+\interferenceproblem{87}{201}
+平凸透镜球面半径 $R=40$cm 与玻璃板接触。反射牛顿环中某一条环的初始半径
+$r=2.5$mm；缓慢将透镜整体上提
+$\Delta h=5.0\,\mathrm{\mu m}$，观察\emph{原来同一阶}环的新半径。
+\exsolution
+初始膜厚
+$h(r)=r^2/(2R)$。
+透镜抬高后
+$h'(r')=\Delta h+r'^2/(2R)$。
+同一干涉阶要求同一膜厚，
+$\Delta h+r'^2/(2R)=r^2/(2R)$，
+于是
+\[
+\boxed{r'=\sqrt{r^2-2R\Delta h}}
+=\sqrt{(2.5\,\mathrm{mm})^2-
+2(0.40\,\mathrm m)(5.0\,\mathrm{\mu m})}
+=\boxed{1.5\,\mathrm{mm}}.
+\]
+\excheck 必须确认根号内非负；再提升到 $2R\Delta h>r^2$ 后原阶环将消失。
+
+\interferenceproblem{88}{201}
+一块平凸透镜球面顶部被磨成半径
+$r_0=3.0$mm 的平坦区，该平面与下方玻璃板接触。
+原球面曲率半径
+$R=150$cm。
+用波长 $\lambda=655$nm 的光观察反射牛顿环，
+求第六个亮环半径。
+\exsolution
+磨去顶部后，从接触圆边缘 $r_0$ 开始，
+膜厚
+$h(r)\simeq(r^2-r_0^2)/(2R)$。
+反射时只有一个界面产生 $\pi$ 相位反转，
+第 $k$ 个亮环满足
+$2h=(k-\tfrac12)\lambda$。
+因此
+\[
+\boxed{r_k=\sqrt{r_0^2+(k-\tfrac12)\lambda R}}.
+\]
+第六亮环
+\[
+\boxed{r_6=
+\sqrt{(3.0\,\mathrm{mm})^2+
+5.5(655\,\mathrm{nm})(1.50\,\mathrm m)}
+\simeq3.8\,\mathrm{mm}}.
+\]
+\excheck 不能将平坦接触斑的半径 $r_0$ 当作新的曲率半径；它的平方作为几何偏移进入环半径。
+
+\interferenceproblem{89}{201}
+平凸玻璃透镜球面曲率半径
+$R=12.5$cm，压在玻璃板上。
+反射光第十、第十五暗牛顿环直径分别为
+$d_{10}=1.00$mm、
+$d_{15}=1.50$mm。
+求波长。
+\exsolution
+如存在未知微小中心膜厚 $h_0$，
+同类暗环满足
+$2h_0+r_k^2/R=k\lambda$。
+两阶相减消去 $h_0$：
+$(r_{15}^2-r_{10}^2)/R=5\lambda$。
+因 $r_k=d_k/2$，
+\[
+\boxed{\lambda=
+\frac{d_{15}^2-d_{10}^2}
+{4R(15-10)}}
+=\frac{(1.50^2-1.00^2)\times10^{-6}}
+{4(0.125)(5)}
+=\boxed{0.50\,\mathrm{\mu m}}.
+\]
+\excheck 单独用 $r_{10}^2=10\lambda R$ 与 $r_{15}^2=15\lambda R$ 会得到互相不一致的波长，说明应使用\emph{两环半径平方差}消去接触偏置。
+
+\interferenceproblem{90}{201}
+两片平凸薄玻璃透镜的球面相互接触，在反射光
+$\lambda=0.60\,\mathrm{\mu m}$ 下，第五个亮牛顿环的直径为
+$d=1.50$mm。
+求两片薄透镜组成的光学系统的光焦度。
+\exsolution
+两个凸球面之间的空气隙近轴厚度
+$h(r)=r^2(1/R_1+1/R_2)/2$，
+令
+$R_{\rm eff}^{-1}=R_1^{-1}+R_2^{-1}$，
+第 $k$ 个亮环
+$r_k^2=(k-\tfrac12)\lambda R_{\rm eff}$。
+所以
+\[
+\frac1{R_{\rm eff}}
+=\frac{(k-\tfrac12)\lambda}{r_k^2}
+=\frac{4(k-\tfrac12)\lambda}{d^2}.
+\]
+每片平凸透镜的光焦度为
+$(n-1)/R_i$，
+接触总光焦度
+$\Phi=(n-1)/R_{\rm eff}$，得
+\[
+\boxed{\Phi=
+\frac{2(n-1)(2k-1)\lambda}{d^2}
+\simeq2.4\,\mathrm D}
+\]
+（取玻璃 $n\simeq1.50$，$k=5$）。
+\excheck 每片透镜一面为\emph{平面}，因此不能在透镜光焦度公式中凭空多乘球面系数2。
+
+\interferenceproblem{91}{201}
+两只对称薄玻璃透镜（一双凸、一双凹）贴合成光焦度
+$\Phi=0.50$D 的系统，在空气隙中用
+$\lambda=0.61\,\mathrm{\mu m}$ 的反射光观察牛顿环。
+求：(a) 第十暗环的半径；
+(b) 在空隙填水后该环半径如何变化。
+\exsolution
+两透镜曲面对应空气隙的等效曲率差
+$1/R_{\rm gap}$；
+因两透镜各有两面且对称，
+其合光焦度满足
+$\Phi=2(n_g-1)/R_{\rm gap}$。
+因此
+$R_{\rm gap}=2(n_g-1)/\Phi$。
+暗环条件
+$r_k^2=k\lambda R_{\rm gap}$，故
+\[
+\boxed{r_{10}=
+\sqrt{\frac{2k\lambda(n_g-1)}{\Phi}}
+\simeq3.5\,\mathrm{mm}}
+\]
+（$n_g\simeq1.50$）。
+在水中膜光程差是原来的 $n_w$ 倍，
+同一暗环
+\[
+\boxed{r'=\frac r{\sqrt{n_w}}
+\simeq3.0\,\mathrm{mm}},\qquad n_w\simeq1.33.
+\]
+\excheck 两镜的净光焦度已知，避免单独求各面未知曲率；充水使相同阶次条纹的环半径变小。
+
+\interferenceproblem{92}{201}
+平凸透镜球面贴玻璃板，其空气隙换成二氧化碳介质（原书给
+$n_1=1.50$ 为透镜、
+$n_2=1.63$ 为填隙物、
+$n_3=1.70$ 为玻璃板）。
+球面半径 $R=100$cm，
+反射光波长 $\lambda=0.50\,\mathrm{\mu m}$。
+求第五暗环半径。
+\exsolution
+因 $n_1<n_2<n_3$，
+在透镜—填隙物与填隙物—玻璃两界面反射均有 $\pi$ 相位反转，
+相互反射波之间无额外 $\pi$ 相对翻转。
+暗环条件为
+$2n_2h=(k+\tfrac12)\lambda$，
+$h=r^2/(2R)$，所以
+\[
+\boxed{r_k=
+\sqrt{\frac{(2k+1)\lambda R}{2n_2}}}.
+\]
+对 $k=5$：
+\[
+\boxed{r_5\simeq
+\sqrt{\frac{11(0.50\times10^{-6})(1)}
+{2(1.63)}}
+\simeq1.3\,\mathrm{mm}}.
+\]
+\excheck 本题与通常空气隙牛顿环的中心明暗相反，
+必须用三个折射率确定两个反射相位。
+
+\interferenceproblem{93}{202}
+两光束干涉仪使用汞的橙色双线
+$\lambda_1=576.97$nm、
+$\lambda_2=579.03$nm。
+求最早使两套干涉条纹彼此可见度最低的干涉级次。
+\exsolution
+两条谱线对应不同波数
+$k_i=2\pi/\lambda_i$。
+两套条纹的相位差相差 $\pi$ 时互相抵消，
+因此
+$2\pi\Delta(1/\lambda_1-1/\lambda_2)=\pi$。
+以平均波长 $\bar\lambda$ 对应级次
+$m=\Delta/\bar\lambda$，
+有
+\[
+\boxed{m_{\min}\simeq
+\frac{\bar\lambda}{2|\lambda_2-\lambda_1|}
+=\frac{578\,\mathrm{nm}}{2(2.06\,\mathrm{nm})}
+\simeq140}.
+\]
+\excheck 这里对应可见度包络的\emph{首次最小值}，不是一个单一波长的干涉强度零点。
+
+\interferenceproblem{94}{202}
+米歇尔逊干涉仪使用钠黄双线
+$\lambda_1=589.0$nm、
+$\lambda_2=589.6$nm。
+解释为什么移动一镜时条纹会周期性消失，并求相邻两次最清晰干涉图样之间的镜面位移。
+\exsolution
+两波长的相对干涉相位
+$\Delta\phi=2\pi\Delta(1/\lambda_1-1/\lambda_2)$。
+因为各自干涉强度的周期稍不同，
+当相对相位约为 $\pi$ 时相互抵消使条纹可见度最小；
+相对相位增加 $2\pi$ 后两套条纹再度同相清晰。
+相邻最清晰状态的光程差改变
+$\delta\Delta=\lambda_1\lambda_2/|\lambda_2-\lambda_1|$。
+镜移动 $\delta h$ 使往返光程差改变
+$2\delta h$，所以
+\[
+\boxed{\delta h=
+\frac{\lambda_1\lambda_2}{2|\lambda_2-\lambda_1|}
+\simeq0.29\,\mathrm{mm}\approx0.30\,\mathrm{mm}}.
+\]
+\excheck 米歇尔逊反射为往返\emph{双程}，故镜面位移等于光程差增量的一半。
+
+\interferenceproblem{95}{202}
+厚度为 $d$ 的法布里—珀罗标准具受到单色光照射，在透镜焦平面出现同心干涉环（图5.18）。
+求：(a) 各环位置随干涉级次的变化；
+(b) 相邻极大角间距与干涉级次的关系。
+\exsolution
+标准具内光线与法线夹角为 $\theta$，
+两次透射光相长的条件
+\[
+\boxed{2d\cos\theta=m\lambda},\qquad m\in\mathbb Z.
+\]
+令近轴透镜焦距为 $f$，
+环半径 $r\simeq f\tan\theta\simeq f\theta$。
+因 $\cos\theta$ 随 $\theta$ 增大而减小，
+越向外的环对应\emph{更低}的 $m$。
+相邻阶次差1，对上述式微分：
+$2d|\sin\theta|\,\delta\theta\simeq\lambda$，
+\[
+\boxed{\delta\theta\simeq\frac{\lambda}{2d\sin\theta}}.
+\]
+\excheck 对较外侧较大 $\theta$，
+同阶间隔在角度上\emph{减小}；在 $\theta=0$ 需用小角的平方关系不能直接除以 $\sin0$。
+
+\interferenceproblem{96}{202}
+法布里—珀罗标准具厚度 $d=2.5$cm，
+观察 $\lambda=0.50\,\mathrm{\mu m}$ 的单色光。
+求：(a) 最高干涉级次；
+(b) 近此波长互不与相邻干涉级重叠的自由光谱范围 $\Delta\lambda$。
+\exsolution
+最大级次对应正入射，
+$2d=m_{\max}\lambda$，
+所以
+\[
+\boxed{m_{\max}=\frac{2d}{\lambda}
+=\frac{0.050}{0.50\times10^{-6}}
+=1.0\times10^5}.
+\]
+相邻谱线在不同干涉级次重叠时
+$m\lambda=(m+1)(\lambda-\Delta\lambda)$，
+对高阶 $m$，
+$\Delta\lambda\simeq\lambda/m\simeq\lambda^2/(2d)$。
+因此
+\[
+\boxed{\Delta\lambda\simeq
+\frac{\lambda^2}{2d}
+=\frac{(0.50\times10^{-6})^2}{0.050}
+=5.0\,\mathrm{pm}}.
+\]
+\excheck 自由光谱范围与分辨本领的\emph{仪器精细度}不同；
+前者由相邻级次重叠决定。
+% === END 28-optics-interference-087-096.tex ===
