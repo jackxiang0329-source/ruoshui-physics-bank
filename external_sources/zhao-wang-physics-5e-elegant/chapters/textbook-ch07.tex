@@ -1,4 +1,5 @@
 % Consolidated textbook-ch07 from f43cd09215a13d29f88baa670fa48441ec2a44e8; source fragments preserved.
+% 2026-11-24 八批严格复核第3批：旧片段哈希对应历史版，当前文件含二校修订。
 
 % === BEGIN textbook-ch07-choices.tex blob 99db547f05249c3cea4f9aafd15f1b1dd0d32e20 ===
 % 第7批：《大学物理简明教程》第5版，第7章静电场选择题7.1.1—7.1.11。
@@ -17,7 +18,7 @@
 \[
 \oint_S\bm E\cdot d\bm S=\frac{Q_{\mathrm{enc}}}{\varepsilon_0}.
 \]
-即使面上每点$\bm E=0$也只能推出$Q_{\mathrm{enc}}=0$，并不排除内部存在等量异号电荷；
+在高斯面不穿过奇异点电荷的条件下，即使面上每点$\bm E=0$也只能推出$Q_{\mathrm{enc}}=0$，并不排除内部存在等量异号电荷；
 即使面内无电荷仍可有外部电荷产生电场；
 高斯面上场强非零也可全部源于外部电荷。
 只有面内净电荷非零必然意味着电通量非零，原题选\textbf{D}。
@@ -48,7 +49,7 @@ $\bm E=\bm E_Q+\bm E_q$，通常随$q$位置而变化，
 \boxed{\bm E_{\mathrm{inside}}=\bm0,\qquad
 \varphi_{\mathrm{inside}}=\varphi_{\mathrm{surface}}}.
 \]
-内部电势常数，但一般不为零，原题选\textbf{C}。
+这里“内部”指连通的导体材料，而非含电荷的空腔。内部电势常数，但一般不为零，原题选\textbf{C}。
 \crosscheck 电势零点可任意设定；“内部场强零”不能推出“内部电势零”。
 
 \sourceproblem{7.1.4}{185}{185}
@@ -69,8 +70,7 @@ R_a<r<R_b.
 \problemtext 导电材料或静电场所在区域的体电荷密度增加至原来的2倍，
 在相应电场也按比例增加且介电常数不变时，判断静电能量如何变化。
 \workings
-由静电学的线性性，在几何、边界和介电性质不变时，
-$\rho\mapsto2\rho$导致$\bm E\mapsto2\bm E$。
+由静电学的线性性，在线性介质、几何固定且所有电场源同比例缩放（或齐次电势边界）时，$\rho\mapsto2\rho$导致$\bm E\mapsto2\bm E$。若固定非零外加电势或存在未同比缩放的其他场源，不能从局部电荷密度加倍直接推出总场加倍。
 局部能量密度
 \[
 w_e=\frac12\varepsilon E^2
@@ -89,7 +89,7 @@ w_e=\frac12\varepsilon E^2
 (\bm E_{\mathrm{out}}-\bm E_{\mathrm{in}})\cdot\bm n
 =\frac{\sigma}{\varepsilon_0}.
 \]
-静电平衡时导体内$\bm E_{\mathrm{in}}=0$，因此
+在真空侧、静电平衡时导体内$\bm E_{\mathrm{in}}=0$，因此
 \[
 \boxed{E(R^+)=\frac{|\sigma|}{\varepsilon_0}}
 \]
@@ -112,8 +112,7 @@ $F_{Qq}=\sqrt2\,k_e|Qq|/a^2$。
 \boxed{Q=-2\sqrt2\,q}.
 \]
 原题选\textbf{A}。
-\crosscheck 对于$Q\ne0$可约去$|Q|$；当所有电荷为零是平凡解，
-题意默认非零。关系与正方形边长无关。
+\crosscheck 对于$Q\ne0$可约去$|Q|$；$Q=0$时无论$q$为何均有该顶点所受电力为零；题意默认$Q\ne0$。关系与正方形边长无关。
 
 \sourceproblem{7.1.8}{186}{186}
 \problemtext 半径$R$、总电荷均匀分布在球体内部的实心绝缘球，
@@ -165,7 +164,7 @@ E(r)=
 \]
 原题选\textbf{D}。
 \crosscheck 地线撤去后导体的已感应电荷保持不变，
-外部不再引入净自由电荷时，球壳仍取零电势；
+外部电荷分布和边界条件均保持不变、腔内电荷也不改变时，球壳仍取零电势；上式要求$0<d<R$，$d=0$时点电荷处电势奇异。
 镜像电荷位于腔外，不是真实的自由电荷。
 
 \sourceproblem{7.1.11}{186}{186}
@@ -182,7 +181,7 @@ W=q_{\mathrm{particle}}(\varphi_i-\varphi_f)
 动能定理给$\boxed{\Delta K=qU}$，
 原题选\textbf{B}。
 \crosscheck 电荷量为负、电势升高，所以电势能减小，
-$\Delta U=(-q)U=-qU$，动能增量相反为正。
+$\Delta U=(-q)U=-qU$，若其余力总功为零，动能增量相反为正。
 % === END textbook-ch07-choices.tex ===
 
 % === BEGIN textbook-ch07-blanks.tex blob 1a2e2b3b0cccf772fbf7f205f2e6f31149886625 ===
@@ -198,7 +197,7 @@ $\Delta U=(-q)U=-qU$，动能增量相反为正。
 \[
 \boxed{\bm E=\lim_{q_0\to0}\frac{\bm F}{q_0}}.
 \]
-以无穷远处电势为零的静电场中，
+当到无穷远的积分收敛且该处可选为零电势时，
 \[
 \boxed{\varphi(P)=\frac{W_{P\to\infty}}{q_0}
 =-\int_\infty^P\bm E\cdot d\bm l}.
@@ -245,7 +244,7 @@ E_{\mathrm{before}}=\frac{|q|}{4\pi\varepsilon_0r^2}.
 球壳半径变得大于$r$后，该点处于均匀带电球壳内部，
 由球对称性与高斯定理
 $\boxed{E_{\mathrm{after}}=0}$。
-故场强由$\boxed{|q|/(4\pi\varepsilon_0r^2)}$变为$\boxed{0}$。
+故场强由$\boxed{|q|/(4\pi\varepsilon_0r^2)}$变为$\boxed{0}$。理想零厚度带电面恰越过观察点时，法向场存在跃变，只能分别给内外侧极限。
 \crosscheck 观察点与球心距离$r$不变；
 电荷只随球面均匀稀释，不能误把球面电荷密度降低直接代入外部点场强公式。
 
@@ -291,7 +290,7 @@ $q+Q_{\mathrm{outer,in}}=0$，于是
 在任意静电平衡状态，导体内总电场$\bm E_{\mathrm{in}}=0$，
 所以场强\textbf{不变}，仍为零。
 但外部负电荷使导体表面自由电荷重新分布，
-\emph{整块导体的电势}通常相对无穷远零点降低。
+\emph{整块导体的电势}在孤立中性有限导体、仅有外部负点电荷且无其他场源的条件下，相对无穷远零点严格降低。由静电互易定理，取辅助问题为同一导体置于单位电势、无外部电荷，辅助导体电荷为$C>0$、辅助外部电势为$u(\bm r)>0$。实际导体净电荷为零，互易给$CU=q_{\rm ext}u(\bm r_q)<0$，故$U<0$。
 因此
 \[
 \boxed{\bm E_{\mathrm{in}}=\bm0}.
@@ -705,7 +704,7 @@ $Q=7.08\times10^{-7}$ C，忽略边缘效应，取地电势为零。求$A$板电
 平行板电容
 \[
 C=\frac{\varepsilon_0 S}{d}
-=\varepsilon_0
+=\varepsilon_0(1.00\,\mathrm m)
 =8.85\times10^{-12}\,\mathrm F
 \]
 （采用题设真空介电常数的三位有效数字）。
@@ -808,8 +807,7 @@ $B$带净正电，其电势相对于边界$A$为正；
 带正电的$B$在腔内产生电场。
 处于相同腔内的中性浮置导体$C$会极化，
 其电势在静电平衡时处处为常数，取值由零净电荷条件决定。
-可把$C$的电势看成周围固定电势边界的正权平均；
-因此在典型的连通、无其他带电体的构型中
+严格地，在以$A$为零电势的连通腔域中，令$u_B=U_B-U_A$、$u_C=U_C-U_A$。静电电容系数可写为$Q_B=c_{BA}u_B+c_{BC}(u_B-u_C)$、$Q_C=c_{CA}u_C+c_{BC}(u_C-u_B)$，其中各$c_{ij}>0$（三个边界均与同一连通介质相邻，由调和函数最大值原理及边界法向导数符号得到）。$Q_C=0$给$u_C=c_{BC}u_B/(c_{CA}+c_{BC})$；再代入$Q_B>0$得$u_B>0$且$0<u_C<u_B$。因此在上述条件下
 \[
 \boxed{U_B>U_C>U_A}.
 \]
@@ -860,7 +858,7 @@ $S=20.0\,\mathrm{cm^2}$，板间距$d=2.00\,\mathrm{mm}$，
 $d=2.00\times10^{-3}$ m，
 \[
 C=\frac{\varepsilon_0S}{d}
-=\varepsilon_0\approx8.85\times10^{-12}\,\mathrm F.
+=\varepsilon_0(1.00\,\mathrm m)\approx8.85\times10^{-12}\,\mathrm F.
 \]
 因此
 \[
