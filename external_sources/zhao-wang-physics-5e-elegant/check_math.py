@@ -444,7 +444,7 @@ def sixth_round_regressions():
     near(500/(5*R),12.027235504494271)
     near(math.exp(500/(2*R*273.15)),1.1163663004171762)
     # 6.3.10--18: refrigerator, thermal machine, entropies.
-    near(18e6/(80*4.184*1000),53.76386233269598,1e-8)
+    near(18e6/(80*4.184*1000),53.77629063097514,1e-8)
     near(1-298.15/573.15,.4798045886766117)
     near(2e11*(1-298.15/573.15),9.596091773532234e10)
     near(1000*20/280.15,71.39032661074425)
@@ -454,7 +454,6 @@ def sixth_round_regressions():
     near(4180*(log(373.15/293.15)-80/373.15),112.46316998196394)
     # Guide examples 6.1--6.7: wave speed, phase branch, nodes.
     near(.80/1, .80)                  # 6.1 wavelength
-    near(.10/(5*pi/6/(2*pi/.24)), .024) if False else None
     near((.1)/(5/12), .24)            # guide 6.2 lambda
     near(7*pi/(2*pi/.24), .84)       # guide 6.2 propagation speed
     near(.45/(3/4), .6)
