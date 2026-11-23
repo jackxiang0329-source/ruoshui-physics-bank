@@ -1,0 +1,82 @@
+% 第18批：学习指导自测题7填空题7.2.1--7.2.8；印刷168--169／PDF176--177。
+\subsection{自测题7：电势、感应电流与法拉第定律填空}
+
+\sourcetest{7.2.1}{168}{176}
+\problemtext 长 $2\ell$ 的带电直棒左右两半分别带线电荷密度 $-\lambda,+\lambda$；$O$ 位于左端外距 $\ell$，$P$ 位于棒中点法线距 $\ell$。取中点 $B$ 为零势点，求 $V_O,V_P$。
+\workings 令棒中点 $B$ 在 $x=0$，带电段为 $[-\ell,0]$ 和 $[0,\ell]$，$O=(-2\ell,0)$。线电荷在 $B$ 的两半势贡献互相抵消。于是
+\[
+V_O=\frac{\lambda}{4\pi\varepsilon_0}\left(
+\int_0^\ell\frac{dx}{x+2\ell}-
+\int_{-\ell}^0\frac{dx}{x+2\ell}\right)
+=\boxed{\frac{\lambda}{4\pi\varepsilon_0}\ln\frac34}.
+\]
+在 $P=(0,\ell)$，每对对称线元距离相同、符号相反，
+\[\boxed{V_P=0}.\]
+\crosscheck 零电势点设在 $B$，两段在 $B$ 的形式奇异项相消；用先对称截断再取极限的方式理解。
+
+\sourcetest{7.2.2}{168}{176}
+\problemtext 两块大面积 $S$、间距 $d$ 的金属板平行放置，$A$ 原带正电 $Q$、$B$ 起初中性；求 $B$ 绝缘与 $B$ 接地两种情况下 $U_{AB}$。
+\workings 忽略边缘效应。$B$ 不接地时，极板上感应电荷与剩余外表面电荷的分布使间隙场为 $E=Q/(2\varepsilon_0S)$；接地后，近似无限大极板的远侧外场消失，间隙为 $E'=Q/(\varepsilon_0S)$。所以
+\[
+\boxed{U_{AB}=\frac{Qd}{2\varepsilon_0S}},\qquad
+\boxed{U'_{AB}=\frac{Qd}{\varepsilon_0S}}.
+\]
+\crosscheck 接地允许 $B$ 与大地交换电荷；若将“$B$ 接地”误当成“$B$ 依旧保持总电量零”，会少一个因子2。
+
+\sourcetest{7.2.3}{168}{176}
+\problemtext 无限长薄圆柱面半径 $R$，表面电流密度为 $i$、沿轴线方向；割去一条宽 $h\ll R$ 的纵向狭缝，求轴线处磁场大小。
+\workings 完整圆柱电流面在轴线上磁场为零。割去的窄带相当于从完整电流面减去电流 $I_{\rm slit}\simeq ih$、与轴线相距 $R$ 的长直细导线。因此
+\[\boxed{B_{\rm axis}\simeq \frac{\mu_0 i h}{2\pi R}}.\]
+\crosscheck 该表达式保留 $h/R$ 的最低阶，狭缝宽度不再可忽略时必须对圆弧电流分布积分。
+
+\sourcetest{7.2.4}{168}{176}
+\problemtext 直径12cm的圆形单匝线圈载电流10A，在磁感应强度 $B=0.015$T 的匀强磁场中从稳定平衡位置绕直径旋转角 $\alpha=\pi/2$ 或 $2\pi$，求外力的准静态功。
+\workings 磁矩 $m=I\pi(d/2)^2$，平衡位置 $\bm m\parallel\bm B$。磁势能 $U=-mB\cos\alpha$，故
+\[W_{\rm ext}=mB(1-\cos\alpha).\]
+代入 $I=10$A、$d=0.12$m、$B=0.015$T，得
+\[
+\boxed{W_{\pi/2}=10\pi(0.06)^2(0.015)\simeq1.70\times10^{-3}\ {\rm J}},
+\qquad\boxed{W_{2\pi}=0}.
+\]
+\crosscheck 绕完整一圈后回到原稳定方向，保守磁势能的净变化为零；这里功为对抗磁力矩的\emph{可逆外力功}。
+
+\sourcetest{7.2.5}{169}{177}
+\problemtext 圆环半径初始 $r_0=0.10$m，匀强磁场 $B=0.80$T 垂直环面，初始半径收缩速率 $dr/dt=-0.80$ m/s。求初始感应电动势及保持该大小时所需面积变化率。
+\workings 磁通量 $\Phi=B\pi r^2$，感应电动势大小
+\[|\mathcal E|=2\pi Br\left|\frac{dr}{dt}\right|.\]
+$t=0$ 时
+\[\boxed{|\mathcal E_0|=2\pi(0.8)(0.1)(0.8)\simeq0.402\ {\rm V}}.\]
+若维持该电动势，面积 $S=\pi r^2$ 必须以常量
+\[\boxed{\frac{dS}{dt}=-\frac{|\mathcal E_0|}{B}=-0.16\pi\ {\rm m^2/s}}\]
+收缩。
+\crosscheck 恒定 $dr/dt$ 不会产生恒定电动势；保持恒电动势应使 $dS/dt$ 恒定，且只到面积缩减为零之前有效。
+
+\sourcetest{7.2.6}{169}{177}
+\problemtext 四根导电辐条构成半径 $R$ 的旋转轮，在垂直轮面的均匀磁场 $B$ 中以转频 $n$ 旋转，求轴心 $a$ 到轮缘 $b$ 的动生电动势及高电势端。
+\workings $\omega=2\pi n$，每条辐条有
+\[\mathcal E_{a\to b}=\int_0^R(\bm v\times\bm B)\cdot d\bm l
+=\frac12(\bm\omega\cdot\hat{\bm B})\,BR^2.\]
+因此
+\[\boxed{|\mathcal E_{ab}|=\tfrac12 B\omega R^2=\pi BnR^2}.\]
+若 $\bm\omega$ 与 $\bm B$ 同向，正电荷受力径向向外，\textbf{$b$ 高于 $a$}；若两者反向则 \textbf{$a$ 高于 $b$}。
+\crosscheck 源图标注 $B$ 入纸面（叉号），高势点必须先按箭头识别轮的顺逆时针方向；四条并联辐条不把端电压放大为4倍。
+
+\sourcetest{7.2.7}{169}{177}
+\problemtext 面积 $S$ 的平面线圈绕面内轴以角速度 $\omega$ 在匀强磁场 $B$ 中转动，$t=0$ 线圈平面垂直于 $\bm B$。求任意时刻磁通量、感应电动势；若 $B=kI$ 由另一线圈电流产生，求最大互感系数。
+\workings 取初始磁通为正，
+\[\boxed{\Phi(t)=BS\cos\omega t},\qquad
+\boxed{\mathcal E(t)=-\frac{d\Phi}{dt}=BS\omega\sin\omega t}.\]
+若原磁场由 $I$ 产生且 $B=kI$，在两线圈法线平行的最大耦合位置
+\[\boxed{M_{\max}=\frac{\Phi_{\max}}I=kS}.\]
+\crosscheck 按单匝求解；若旋转线圈有 $N$ 匝，应将磁链和互感各乘 $N$。感应电动势正负取决于选取线圈正向。
+
+\sourcetest{7.2.8}{169}{177}
+\problemtext 圆柱形区域内匀强磁场垂直纸面向里、并以 $|dB/dt|=1.0\times10^{-2}$T/s 减弱；$P$ 在轴外 $r=5.0\times10^{-2}$m（仍在磁场区域内）。求 $P$ 点电子的感应电场加速度及方向。
+\workings 圆形对称性与法拉第定律给出 $E_\varphi(2\pi r)=\pi r^2|dB/dt|$，故 $E_\varphi=r|dB/dt|/2$。电子受力大小 $eE_\varphi$，所以
+\[
+\boxed{a=\frac{er}{2m_e}\left|\frac{dB}{dt}\right|
+=\frac{(1.6\times10^{-19})(0.05)(0.01)}{2(9.1\times10^{-31})}
+\simeq4.40\times10^7\,{\rm m/s^2}}.
+\]
+磁场向里且减弱，感应电场环向\emph{顺时针}以阻止磁通减小；电子加速度方向与电场相反，为\textbf{逆时针切向}。
+\crosscheck 只计算旋涡电场造成的瞬时电力加速度，题目未给电子初速度，不可额外计入 $-e\bm v\times\bm B$ 磁力项。
