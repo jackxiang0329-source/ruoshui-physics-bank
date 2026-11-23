@@ -535,7 +535,9 @@ def fifth_round_regressions():
     # Textbook detailed 5.3.1--5.3.18
     near(1e5*.032/(R*T),1.2822639884851466)
     # O2: molar mass 32 g/mol, not nitrogen's 28 g/mol.
-    near(.032/6.02214076e23,5.313725014956309e-26)
+    assert math.isclose(.032/NA,5.313725014956309e-26,rel_tol=1e-8,abs_tol=0.0)
+    near(math.erf(1)-2*math.exp(-1)/sqrt(pi),.4275932955291202)
+    assert abs(math.erf(1)-2*math.exp(-1)/sqrt(pi)-.5)>.07
     near(1e5/(kB*T)*(.032/6.02214076e23),1.2822639884851466)
     p_he=1.36e4*g*(.76-.60)
     V_he=(.12+.76-.60)*2e-4
