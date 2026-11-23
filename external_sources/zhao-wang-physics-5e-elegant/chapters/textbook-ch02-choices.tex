@@ -1,0 +1,126 @@
+% 《大学物理简明教程》（第5版），第2章选择题2.1.1--2.1.12
+% 来源：书内及扫描PDF第49--51页。研究性题意改述，独立推导，待二校。
+
+\subsection{选择题：2.1.1--2.1.12}
+\sourceproblem{2.1.1}{49}{49}
+\problemtext 质点做匀速圆周运动，其动量矢量及相对于圆心的角动量矢量如何变化？
+\workings 线动量$\bm p=m\bm v$的大小固定，方向持续转动；
+相对圆心的角动量$\bm L=\bm r\times m\bm v$，其大小$mRv$、方向按右手规则固定。
+所以动量变化而角动量不变，原题选\textbf{C}。
+\crosscheck 选圆心为参考点时向心力矩为零，故$d\bm L/dt=0$；参考点换到别处则不一定。
+
+\sourceproblem{2.1.2}{50}{50}
+\problemtext 质点系的内力在系统内能够改变总质量、总动量、总动能或总角动量中的哪一项？
+\workings
+牛顿第三定律保证成对内力在总动量方程中相互抵消；满足中心力条件时内力对整体的总力矩也抵消。
+但内力能做功，物体间弹簧势能可转化成动能或非弹性损失，所以\textbf{总动能可变}，原题选\textbf{C}。
+\crosscheck 两球从压缩弹簧释放时，即使无外力，系统总动量为零但总动能增大。
+
+\sourceproblem{2.1.3}{50}{50}
+\problemtext 判断“保守力做正功使势能增加”“闭合回路保守力净功为零”“作用力和反作用力做功代数和必为零”三种说法。
+\workings
+保守力做功$W_c=-\Delta U$，故正功使势能\emph{减少}，①错误；
+闭合路径$\Delta U=0$，故保守力总功为零，②正确。
+一对相互作用力在不同物体上的位移不相同，
+$dW_{12}+dW_{21}=\bm F_{12}\cdot(d\bm r_1-d\bm r_2)$，
+一般不为零，③错误。原题选\textbf{C}。
+\crosscheck 内力总冲量抵消不代表内力总做功抵消。
+
+\sourceproblem{2.1.4}{50}{50}
+\problemtext 斜面体$M$最初静置于光滑水平面，上有木块$m$从斜面高处释放，若木块此后不再能静止在斜面上，斜面向哪边运动？
+\workings
+以原图斜面向\emph{右上方}升高为准，木块下滑相对斜面向左运动。
+系统水平方向无外力，初始总水平动量为零，
+\[
+M v_M+m v_{m,x}=0.
+\]
+木块向左的运动导致斜面整体向右；起始阶段斜面向右加速，故原题选\textbf{B}。
+\crosscheck 若把斜面镜像翻转，方向也随之反转；答案依原图朝向而定。
+
+\sourceproblem{2.1.5}{50}{50}
+\problemtext 光滑块$A,B$以弹簧连接，置于粗糙水平面，施加水平拉力$F$使两者匀速向右运动，忽然撤去$F$。比较撤力瞬间两块的加速度方向。
+\workings
+撤力前，$B$受向右弹簧拉力抵消摩擦；$A$则靠$F$平衡摩擦和向左的弹簧拉力。
+撤去$F$的\emph{瞬间}弹簧形变量不突变，$A$受力由零变为$-F$，故$a_A<0$；
+$B$受力在这一瞬间仍为零，即$a_B=0$。
+因此按书面所写\emph{撤去拉力后的一瞬间}应取\textbf{D}：$a_A<0,\ a_B=0$。
+\crosscheck 不能把弹簧拉力的后续变化提前到撤力瞬间；在$t>0$的稍后时刻，$B$才可能出现非零加速度。
+
+\sourceproblem{2.1.6}{50}{50}
+\problemtext 质量$m$的炮弹以速度$v_0$水平飞行，动能为$E_k$，突然分裂为两个等质量碎块。一块向后飞，其动能为$E_k/2$；求另一块动能。
+\workings
+后向碎块质量$m/2$，其动能$\frac12(m/2)u_1^2=\frac12 E_k=\frac14 m v_0^2$，
+故$u_1=-v_0$。
+动量守恒
+\[
+m v_0=\frac m2(-v_0)+\frac m2u_2
+\Longrightarrow u_2=3v_0.
+\]
+另一块的动能$\frac12(m/2)(3v_0)^2=\frac92E_k$，选\textbf{B}。
+\crosscheck 爆炸使总动能从$E_k$增至$5E_k$，多出的能量由内能提供。
+
+\sourceproblem{2.1.7}{50}{50}
+\problemtext 质量$20\,\mathrm g$的子弹以$400\,\mathrm{m/s}$、与摆线成$30^\circ$的方向射入质量$980\,\mathrm g$的静止摆球，子弹留在球内。求刚击中后摆球与子弹整体的速率。
+\workings
+碰撞极短，沿\emph{水平方向}的摆线张力冲量可忽略，
+\[
+(m+M)V=m v\sin30^\circ
+\Longrightarrow
+\boxed{V=\frac{0.020\times400\times0.5}{1.000}
+=4\,\mathrm{m/s}}.
+\]
+原题选\textbf{B}。
+\crosscheck 竖直方向受摆线外部冲量，故不能在竖直方向直接使用两物体动量守恒。
+
+\sourceproblem{2.1.8}{50}{50}
+\problemtext 判断质点系的动量守恒及机械能守恒所需条件，特别考察系统不受外力、内部作用均为保守力的情形。
+\workings
+若合外力为零则$\dot{\bm P}=0$，总动量守恒；
+若无外力做功而内力均为保守力，则$\Delta(E_k+U)=0$，机械能也守恒。
+两者同时成立的是原题选\textbf{C}。
+\crosscheck “外力总功为零”不保证外部合冲量为零，反之“合外力为零”不保证系统中存在摩擦耗散时机械能守恒。
+
+\sourceproblem{2.1.9}{50--51}{50--51}
+\problemtext 半径$R$的竖直圆筒以角速度$\omega$绕竖直轴转，物块贴在内壁静止不下滑，静摩擦系数为$\mu$，求$\omega_{\min}$。
+\workings
+圆筒壁法向支持力提供向心力$N=m\omega^2R$；
+竖直平衡要求静摩擦$f=mg\le\mu N$。因此
+\[
+mg\le\mu m\omega^2R
+\Longrightarrow
+\boxed{\omega_{\min}=\sqrt{\frac{g}{\mu R}}}.
+\]
+原题选\textbf{C}。
+\crosscheck 量纲$\sqrt{g/R}=\mathrm{s^{-1}}$，且增大$\mu$允许减小转速。
+
+\sourceproblem{2.1.10}{51}{51}
+\problemtext 地球质量$m$，太阳质量$M$，近圆轨道半径$R$，引力常量$G$。求地球对日心的轨道角动量大小。
+\workings
+万有引力提供向心力：$GMm/R^2=mv^2/R$，
+故$v=\sqrt{GM/R}$，角动量
+\[
+\boxed{L=mRv=m\sqrt{GMR}}.
+\]
+选原题\textbf{A}。
+\crosscheck $GMR$的量纲为$\mathrm{m^4/s^2}$，开方乘$m$后为$\mathrm{kg\,m^2/s}$。
+
+\sourceproblem{2.1.11}{51}{51}
+\problemtext 卫星沿椭圆轨道运动，距地心最远点$A$半径$R_A$，最近点$B$半径$R_B$。比较对地心的角动量大小和两点动能大小。
+\workings
+引力为中心力，故$L_A=L_B$；拱点处速度与半径垂直，
+\[
+mR_Av_A=mR_Bv_B,\quad R_A>R_B
+\Longrightarrow v_A<v_B.
+\]
+所以$E_{kA}<E_{kB}$，原题选\textbf{E}。
+\crosscheck 近地点速度较大，符合开普勒面积定律。
+
+\sourceproblem{2.1.12}{51}{51}
+\problemtext 光滑水平面上小球由绳维持半径$R_0$、角速度$\omega_0$的圆周运动；经绳孔缓慢拉绳使半径变成$R_0/2$。求新角速度及动能比值。
+\workings
+以孔为轴的力矩为零，
+$mR_0^2\omega_0=m(R_0/2)^2\omega_1$，
+故$\boxed{\omega_1=4\omega_0}$。
+初末速率$v_0=R_0\omega_0,\ v_1=(R_0/2)(4\omega_0)=2v_0$，
+所以$E_{k1}/E_{k0}=4$。原题选\textbf{A}。
+\crosscheck 拉绳者对小球做正功，动能不守恒；守恒量是相对于绳孔的角动量。
