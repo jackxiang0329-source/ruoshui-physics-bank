@@ -24,10 +24,20 @@ CHAPTERS = (
      [f"2.3.{n}" for n in range(1, 13)]),
     ("chapters/textbook-ch02-solutions-013-025.tex", "sourceproblem",
      [f"2.3.{n}" for n in range(13, 26)]),
+    ("chapters/textbook-ch03-choices.tex", "sourceproblem",
+     [f"3.1.{n}" for n in range(1, 9)]),
+    ("chapters/textbook-ch03-blanks.tex", "sourceproblem",
+     [f"3.2.{n}" for n in range(1, 13)]),
+    ("chapters/textbook-ch03-solutions-001-008.tex", "sourceproblem",
+     [f"3.3.{n}" for n in range(1, 9)]),
+    ("chapters/textbook-ch03-solutions-009-015.tex", "sourceproblem",
+     [f"3.3.{n}" for n in range(9, 16)]),
     ("chapters/guide-ch01-examples.tex", "sourceexample",
      [f"1.{n}" for n in range(1, 6)]),
     ("chapters/guide-ch02-examples.tex", "sourceexample",
      [f"2.{n}" for n in range(1, 8)]),
+    ("chapters/guide-ch03-examples.tex", "sourceexample",
+     [f"3.{n}" for n in range(1, 6)]),
 )
 
 
@@ -49,7 +59,7 @@ def structural_check():
             for label in (r"\problemtext", r"\workings", r"\crosscheck"):
                 assert label in block, (number, label)
         total += len(ids)
-    assert total == 89, total
+    assert total == 129, total
     return total
 
 
@@ -152,10 +162,97 @@ def second_round_regressions():
     near(H,183.17520262909238)
     assert H > 183 and H < 183.2
 
+
+def third_round_regressions():
+    """Independent invariants for 40 source-numbered rigid-body items."""
+    from math import pi, sqrt, log, sin, cos
+
+    # Textbook 3.1: energy change from omega to omega/2.
+    J, w = 3.0, 8.0
+    near(.5*J*(w/2)**2-.5*J*w**2, -3*J*w*w/8)
+    # Textbook 3.2: 3-body triangle moments, braking, skating, angular momentum.
+    ma = 2.0
+    near(3*ma*(.8/sqrt(3))**2, ma*.8**2)
+    near((2**2-6**2)/(2*(-12/3)),4.0)
+    near(70*5*6.5,2275)
+    near(2275/(70*2.5),13)
+    near(300/60,5)
+    near(5*(5/2),12.5)
+    near(.5*6*(2*pi)**2,3*(2*pi)**2)  # correct K0, nonzero
+    near((2/6)*(3*2*pi)**2/(2*pi)**2,3)
+
+    # Textbook 3.3.1--3.3.7: kinematics, rotating bowl and coupled pulleys.
+    near(.3*.5,.15)
+    near(.3*(4*pi/3),.4*pi)
+    R,h,g=.1,.04,9.8
+    rr=sqrt(2*R*h-h*h)
+    ww=sqrt(g/(R-h))
+    near(ww**2*rr,g*rr/(R-h))
+    near(.6*(1+1.1/2)/g, .09489795918367346)
+    j=.5*60*.25**2
+    omega0=900*2*pi/60
+    tau=.4*(2.5*100)*.25
+    near(j*omega0/tau,7.0685834705770345)
+    near(j*omega0**2/(4*pi*tau),53.01437602932775)
+    f2=j*omega0/(4*(.4*2.5*.25))
+    near(f2,176.71458676442586)
+    j_cyl=.5*10*.2**2+.5*4*.1**2
+    a_rot=(2*g*.2-2*g*.1)/(j_cyl+2*.2**2+2*.1**2)
+    near(a_rot,6.125)
+    T1,T2=2*(g-.2*a_rot),2*(g+.1*a_rot)
+    near(T1*.2-T2*.1,j_cyl*a_rot)
+    near(11/8, 5/4+1/8)
+    # Textbook 3.3.8: initial insect-stick angular momentum and constant-omega crawl.
+    L=1.2; v0=2.4
+    initial_j=L*L*(1/12+1/16)  # common mass m=1
+    insect_omega=(v0*L/4)/initial_j
+    near(insect_omega,12*v0/(7*L))
+    t=.12
+    rad=L/4+g/(2*insect_omega**2)*sin(insect_omega*t)
+    rad_dot=g/(2*insect_omega)*cos(insect_omega*t)
+    near(2*rad*rad_dot*insect_omega,g*rad*cos(insect_omega*t))
+
+    # Textbook 3.3.9--15
+    m1,m2,l=3.,2.,1.5; d=3*l/4
+    ang=m2*5*d/(m1*l*l/3+m2*d*d)
+    near(ang,36*m2*5/(l*(16*m1+27*m2)))
+    near(20*g/(5+20+.75),7.611650485436893)
+    near(3*g/(2*1.5),9.8)
+    # Conical pendulum: omega^2 h=g
+    h=1.5; radius=.5
+    near((g/h)*h,g)
+    # Inelastic rim hit: rotational energy ratio in [0, 1]
+    mw, mb, angle = 4.,.3,pi/5
+    fraction=mb/(mw+mb)*sin(angle)**2
+    assert 0 < fraction < 1
+    velocity=sqrt((2*6*g*.4-2*.4*.4)/(6+.5/.3**2))
+    near(velocity,2.0107403917654123)
+
+    # Study guide 3.1: zero torque when r2=r1*sin(theta).
+    r1,theta=.2,pi/6
+    r2=r1*sin(theta)
+    near(r2-r1*sin(theta),0)
+    # Study guide 3.2: rod after bouncing ball.
+    m,l,v0=3.,2.,12.
+    m0=m/3; r=3*l/4
+    near(m0*r*(v0+v0/3)/(m*l*l/3),v0/l)
+    # Guide 3.3: final drop after an initially slack string.
+    l=.8; v0sq=2*g*l
+    near(v0sq/(5*g),2*l/5)
+    # Guide 3.4: ball rebound angular impulse.
+    f=2*.1*sqrt(2*g*.2)/(.01*sin(pi/6))
+    near(f,79.19595949289332,1e-8)
+    # Guide 3.5: exponential angular deceleration.
+    j,k,w0=3.,.4,6.
+    t_half=j/k*log(2)
+    near(w0*math.exp(-k*t_half/j),w0/2)
+
+
 if __name__ == "__main__":
     n = structural_check()
     numerical_check()
     second_round_regressions()
+    third_round_regressions()
     print(f"Structure: {n} referenced worked items; all checked blocks present.")
     print("Selected numeric invariants: passed.")
     print("Not a replacement for full independent physics or copyright review.")
