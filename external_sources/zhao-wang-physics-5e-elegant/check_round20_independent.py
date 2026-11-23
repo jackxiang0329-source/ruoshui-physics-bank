@@ -61,30 +61,33 @@ def audit_every_item():
         (7, (8, 8, 5), 167, 170),
         (8, (8, 10, 5), 171, 174),
     ):
-        names = ("choices", "blanks", "solutions")
-        for name, expected_n in zip(names, groups):
-            path = ROOT / f"chapters/guide-selftest{test:02d}-{name}.tex"
-            data = path.read_text(encoding="utf-8")
-            metadata = re.findall(
-                r"\\sourcetest\{([^}]*)\}\{([^}]*)\}\{([^}]*)\}", data
-            )
-            assert len(metadata) == expected_n, path
-            for num, printed, physical in metadata:
+        path = ROOT / f"chapters/guide-selftest{test:02d}.tex"
+        data = path.read_text(encoding="utf-8")
+        metadata = re.findall(
+            r"\\sourcetest\{([^}]*)\}\{([^}]*)\}\{([^}]*)\}", data
+        )
+        assert len(metadata) == sum(groups), (path, len(metadata))
+        for subsection, expected_n in enumerate(groups, start=1):
+            subset = [
+                entry for entry in metadata
+                if entry[0].startswith(f"{test}.{subsection}.")
+            ]
+            assert len(subset) == expected_n, (path, subsection, len(subset))
+            for num, printed, physical in subset:
                 assert int(printed) in range(page_min, page_max + 1), num
                 assert int(physical) == int(printed) + 8, num
-                assert num.startswith(f"{test}."), num
 
-    page_81 = (ROOT / "chapters/guide-selftest08-choices.tex").read_text(encoding="utf-8")
+    page_81 = (ROOT / "chapters/guide-selftest08.tex").read_text(encoding="utf-8")
     block_814 = page_81.split(r"\sourcetest{8.1.4}", 1)[1].split(
         r"\sourcetest{8.1.5}", 1
     )[0]
     assert "平行错位" in block_814 and "不是共线" in block_814
-    page_72 = (ROOT / "chapters/guide-selftest07-blanks.tex").read_text(encoding="utf-8")
+    page_72 = (ROOT / "chapters/guide-selftest0.tex").read_text(encoding="utf-8")
     block_726 = page_72.split(r"\sourcetest{7.2.6}", 1)[1].split(
         r"\sourcetest{7.2.7}", 1
     )[0]
     assert r"V_a-V_b=\pi BnR^2" in block_726
-    page_82 = (ROOT / "chapters/guide-selftest08-blanks.tex").read_text(encoding="utf-8")
+    page_82 = (ROOT / "chapters/guide-selftest0.tex").read_text(encoding="utf-8")
     block_822 = page_82.split(r"\sourcetest{8.2.2}", 1)[1].split(
         r"\sourcetest{8.2.3}", 1
     )[0]

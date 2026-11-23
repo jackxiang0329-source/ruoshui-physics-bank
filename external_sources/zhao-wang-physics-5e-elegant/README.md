@@ -19,6 +19,12 @@
 | 同书自测题9—11（第14批） | 自测题9共24、自测题10共22、自测题11共27 | **73** |
 | **合计** | 按 \`sourceproblem\`、\`sourceexample\`、\`sourcetest\` 三种来源类型维护 | **890** |
 
+## 全仓库精简：教材按章合并（2026-11-24）
+
+原先102份小批次LaTeX片段合并为39份完整章节文件（教材习题12章、指导例题16章、自测题11套），净减少**63份**源文件。每份新文件按原顺序保留旧片段全文和blob哈希，旧路径从Git历史无损找回。主文件、两套源编号与物理质量检查脚本均同步适配；890个题号不变。
+
+查阅 [原片段与新章节对应表](chapters/COMPACTION-MAP.md)。按章编辑 `chapters/textbook-chXX.tex`、`guide-chXX.tex`、`guide-selftestXX.tex`，不再继续增加 `-choices/-blanks/-solutions` 等批次碎片。
+
 ## 第20批：来源复对与独立物理质检（题号仍为890）
 
 已复对《学习指导》自测题6—8来源扫描页（印刷163—174／PDF171—182）；直接修订 **8.1.4、7.2.6、8.2.2** 三处原稿，并新增 `check_round20_independent.py` 独立物理回归检查。GitHub Actions 工作流已增加独立质量门禁。见 [第20批来源与质检报告](review-round20.md)。**本轮属于原题二校，新增题目数为0，不重复计数。**
@@ -45,9 +51,9 @@
 
 ## 第15批9份 TeX（沿用）
 
-- \`chapters/guide-selftest01-choices.tex\`、\`guide-selftest01-blanks.tex\`、\`guide-selftest01-solutions.tex\`：10+8+6=24；
-- \`chapters/guide-selftest02-choices.tex\`、\`guide-selftest02-blanks.tex\`、\`guide-selftest02-solutions.tex\`：9+8+6=23；
-- \`chapters/guide-selftest03-choices.tex\`、\`guide-selftest03-blanks.tex\`、\`guide-selftest03-solutions.tex\`：10+8+8=26。
+- \`chapters/guide-selftest01.tex\`、\`guide-selftest01-blanks.tex\`、\`guide-selftest01-solutions.tex\`：10+8+6=24；
+- \`chapters/guide-selftest02.tex\`、\`guide-selftest02-blanks.tex\`、\`guide-selftest02-solutions.tex\`：9+8+6=23；
+- \`chapters/guide-selftest03.tex\`、\`guide-selftest03-blanks.tex\`、\`guide-selftest03-solutions.tex\`：10+8+8=26。
 
 真实来源页：自测1**印刷45—48/PDF物理53—56**；自测2**印刷49—53/PDF57—61**；自测3**印刷54—57/PDF62—65**。保留原题编号与双页码；题号属于不同来源类别时不混号。
 

@@ -219,6 +219,37 @@ CHAPTERS = (
 )
 
 
+# 102个历史原片段保留为来源编号清单，实际教材TeX已合并至39个章节文件。
+# 对原区间按顺序合并预期编号，不降低任何结构或数值质检要求。
+_LEGACY_SOURCE_BLOCKS = CHAPTERS
+
+
+def _compact_path(old_relative):
+    found = re.match(
+        r"chapters/(textbook-ch\d{2}|guide-selftest\d{2}|guide-ch\d{2})",
+        old_relative,
+    )
+    assert found is not None, old_relative
+    return "chapters/" + found.group(1) + ".tex"
+
+
+def _compact_chapters():
+    from collections import OrderedDict
+    groups = OrderedDict()
+    for old_path, macro, expected in _LEGACY_SOURCE_BLOCKS:
+        name = _compact_path(old_path)
+        if name not in groups:
+            groups[name] = [macro, []]
+        assert groups[name][0] == macro, (name, macro)
+        groups[name][1].extend(expected)
+    assert len(groups) == 39, len(groups)
+    return tuple((name, macro, expected)
+                 for name, (macro, expected) in groups.items())
+
+
+CHAPTERS = _compact_chapters()
+
+
 def near(actual, expected, tol=1e-8):
     assert math.isclose(actual, expected, rel_tol=tol, abs_tol=tol), (
         f"expected {expected}, got {actual}"
