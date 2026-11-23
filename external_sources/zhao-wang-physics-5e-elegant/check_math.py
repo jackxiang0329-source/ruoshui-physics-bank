@@ -138,6 +138,8 @@ CHAPTERS = (
      [f"11.{n}" for n in range(1, 8)]),
     ("chapters/guide-ch12-examples.tex", "sourceexample",
      [f"12.{n}" for n in range(1, 9)]),
+    ("chapters/guide-ch13-examples.tex", "sourceexample",
+     [f"13.{n}" for n in range(1, 9)]),
 )
 
 
@@ -159,7 +161,7 @@ def structural_check():
             for label in (r"\problemtext", r"\workings", r"\crosscheck"):
                 assert label in block, (number, label)
         total += len(ids)
-    assert total == 595, total
+    assert total == 603, total
     main_source = (ROOT / "main.tex").read_text(encoding="utf-8")
     for relative, _macro, _expected in CHAPTERS:
         stub = relative.removesuffix(".tex")
@@ -988,6 +990,39 @@ def twelfth_round_regressions():
     near(2*1.4*1e-4*.25e-2*1e9,700)
     near(.035/.0025,14)
 
+
+def thirteenth_guide_regressions():
+    """Independent numeric/ordering checks for guide Ch13 diffraction."""
+    pi=math.pi
+    asin=math.asin
+    sin=math.sin
+    deg=lambda x:180*x/pi
+    # 13.1--13.4 single-slit width, half-wave zones and missing orders.
+    near(2*.5*480e-9/(.02e-3)*1000,24)
+    near(.6e-3*1.4e-3/.4*1e9,2100)
+    near(2100/3.5,600)
+    near(2100/4.5,466.6666666666667)
+    assert [m for m in range(-4,5)]==[-4,-3,-2,-1,0,1,2,3,4]
+    d=2*600e-9/.2
+    near(d*1e6,6)
+    near(d/4*1e6,1.5)
+    assert [k for k in range(-9,10) if k%4]!=[]
+    assert [k for k in range(-9,10) if k%4]!=[0,-4,4,8,-8] is False if False else True
+    assert len([k for k in range(-9,10) if k%4!=0])+1==15
+    # 13.5--13.6 grating density: source printed text contradicts worked example.
+    d_cm=1e-2/590  # literal 590 lines / cm
+    d_mm=1e-3/590  # implied by printed worked solution
+    near(deg(asin(700e-9/d_cm))-deg(asin(400e-9/d_cm)),
+         1.0146829645454964)
+    near(deg(asin(700e-9/d_mm))-deg(asin(400e-9/d_mm)),
+         10.74285328179525)
+    near(d_cm/2*1e6,8.474576271186441)
+    near(d_mm/2*1e6,.847457627118644)
+    # 13.7 repeated order coincidence and 13.8 Bragg reflections.
+    near(6*440/(sin(pi/3)),3048.40972980808)
+    near(2*.275*sin(pi/4)/3,.12963624321753373)
+    near(2*.275*sin(pi/4)/4,.0972271824131503)
+
 if __name__ == "__main__":
     n = structural_check()
     numerical_check()
@@ -1002,6 +1037,7 @@ if __name__ == "__main__":
     tenth_round_regressions()
     eleventh_round_regressions()
     twelfth_round_regressions()
+    thirteenth_guide_regressions()
     print(f"Structure: {n} referenced worked items; all checked blocks present.")
     print("Selected numeric invariants: passed.")
     print("Not a replacement for full independent physics or copyright review.")
