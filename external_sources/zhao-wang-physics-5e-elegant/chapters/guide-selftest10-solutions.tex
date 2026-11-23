@@ -1,0 +1,144 @@
+% 学习指导第5版自测题10计算10.3.1—10.3.4，
+% 原书印刷208—209／源PDF216—217页。
+\subsection{自测题10：衍射与偏振计算题}
+
+\sourcetest{10.3.1}{208}{216}
+\problemtext (1) 单缝宽$a=1.0\times10^{-2}$cm、
+透镜焦距$f=50$cm，波长400nm、760nm的垂直入射光
+所形成第一级\emph{侧明纹}中心的间距；
+(2) 换成光栅常量$d=1.0\times10^{-3}$cm的光栅，
+求两波长\emph{第一级主极大}中心间距。
+\workings
+首先$a=10^{-4}$m，$f=0.50$m。
+单缝衍射\emph{第一级侧亮纹}在常用半波带近似下满足
+$a\sin\theta\simeq(3/2)\lambda$，
+故两波长同侧第一级亮纹中心的间距
+\[
+\boxed{\Delta x_{\rm slit,approx}
+\simeq\frac{3f(\lambda_2-\lambda_1)}{2a}
+=\frac{3(0.50)(360\times10^{-9})}{2(10^{-4})}
+=2.70\,\mathrm{mm}}.
+\]
+若使用严格夫琅禾费第一侧极大根
+$\tan\beta_1=\beta_1$，
+$\beta_1\simeq4.493409$，
+其光程系数$\beta_1/\pi\simeq1.43030$，
+则
+\[
+\boxed{\Delta x_{\rm slit,exact}
+\simeq\frac{\beta_1}{\pi}
+\frac{f(\lambda_2-\lambda_1)}a
+\simeq2.57\,\mathrm{mm}}.
+\]
+(2) 光栅常量$d=10^{-5}$m，
+第一级主极大满足$d\sin\theta=\lambda$，故
+\[
+\boxed{\Delta x_{\rm grating}\simeq
+\frac{f(\lambda_2-\lambda_1)}d
+=\frac{0.50(360\times10^{-9})}{10^{-5}}
+=18.0\,\mathrm{mm}}.
+\]
+\crosscheck \textbf{不能把单缝第一级侧明纹误当作第一暗纹。}
+单缝侧亮纹的$3/2$是常用半波带近似，
+严格峰值需解超越方程；光栅主极大方程本身不需要这一近似。
+
+\sourcetest{10.3.2}{208}{216}
+\problemtext 波长600nm光垂直入射多缝光栅，
+第2级主极大位于衍射角30°，第3级缺级。
+求(1)光栅常量$d=a+b$；
+(2)可能的最小透光缝宽$a$；
+(3)取该最小$a$后，$-90^\circ<\varphi<90^\circ$
+内可见全部主极大的级次。
+\workings
+光栅方程$d\sin\varphi_m=m\lambda$，
+\[
+\boxed{d=\frac{2(600\,\mathrm{nm})}{\sin30^\circ}
+=2400\,\mathrm{nm}=2.40\,\mu\mathrm m}.
+\]
+第3级缺级需$3\lambda/d=k\lambda/a$，
+即$a=kd/3$。
+实际透光缝应$0<a<d$，整数$k=1,2$，
+故$a=0.80$或$1.60\,\mu$m，
+\[
+\boxed{a_{\min}=0.80\,\mu\mathrm m}.
+\]
+最小缝宽方案使$d/a=3$，所以非零3的倍数级缺失。
+又$d/\lambda=4$，
+严格角区间排除$|\varphi|=90^\circ$对应的$|m|=4$。
+候选$m=0,\pm1,\pm2,\pm3$；
+$\pm3$为缺级，最后
+\[
+\boxed{m=0,\pm1,\pm2\quad(\text{共5条主亮纹})}.
+\]
+\crosscheck 光栅常量$d$与透光缝宽$a$不可混用；
+若采用另一个允许缝宽$a=1.60\,\mu$m，
+缺级结构须另算，不应仍给5条。
+
+\sourcetest{10.3.3}{208--209}{216--217}
+\problemtext 两片理想偏振片$P_1,P_2$叠置；
+入射光由等强度自然光和线偏振光构成。
+两次测量中，线偏振入射分量与$P_1$的角度
+分别45°、30°；两片透振轴的夹角
+第一次30°、第二次未知$\theta$。
+第一次总透射强度为第二次的$3/4$。
+求$\theta$及每次经过各片后的光强占\emph{原总入射光强}的比例。
+\workings
+设两种入射成分强度各为$J$，
+故总入射强度$I_{\rm in}=2J$。
+第一次过$P_1$：
+\[
+ I_{1,1}=\frac J2+J\cos^245^\circ=J,
+ \qquad\boxed{I_{1,1}/I_{\rm in}=\frac12}.
+\]
+第一次再过$P_2$（夹角30°）：
+\[
+ I_{1,2}=J\cos^230^\circ=\frac34J,
+ \qquad\boxed{I_{1,2}/I_{\rm in}=\frac38}.
+\]
+第二次过$P_1$：
+\[
+ I_{2,1}=\frac J2+J\cos^230^\circ
+ =\frac54J,\qquad
+ \boxed{I_{2,1}/I_{\rm in}=\frac58}.
+\]
+题给$I_{1,2}=(3/4)I_{2,2}$，
+所以$I_{2,2}=J$。
+此时$(5J/4)\cos^2\theta=J$，
+\[
+\boxed{\cos^2\theta=\frac45},\quad
+\boxed{\theta=\arccos\sqrt{4/5}
+\simeq26.565^\circ},\qquad
+\boxed{I_{2,2}/I_{\rm in}=\frac12}.
+\]
+\crosscheck 线偏振与自然光各占一半，
+但首片对二者透过因子不同；
+第二次过首片的比例$5/8$不能漏掉自然光的$1/2$。
+
+\sourcetest{10.3.4}{209}{217}
+\problemtext 三层平行界面介质$I,II,III$，
+折射率$n_1=1.33,n_2=1.50,n_3=1.00$；
+自然光由介质I入射II。
+若在I/II界面观察到完全线偏振反射光，
+求入射角$i$；
+第二个II/III界面的反射光是否也完全线偏振？
+\workings
+I/II的完全线偏振反射由布儒斯特条件给出
+\[
+\boxed{i=\arctan\frac{n_2}{n_1}
+=\arctan\frac{1.50}{1.33}\simeq48.43^\circ}.
+\]
+此时在II中的折射角
+$r=90^\circ-i\simeq41.57^\circ$，
+由于两界面平行，这就是光在II/III界面的入射角。
+第二个界面若也达布儒斯特角，则应有
+\[
+ i_{B,23}=\arctan\frac{n_3}{n_2}
+ =\arctan(2/3)\simeq33.69^\circ.
+\]
+两角不等，故在II/III界面$p$反射系数一般不为零；
+第二束反射光\textbf{并非完全线偏振，通常是部分偏振光}。
+\crosscheck II到III的临界角
+$i_c=\arcsin(n_3/n_2)\simeq41.81^\circ$，
+源题传播方向$r\simeq41.57^\circ<i_c$，
+并未达到全反射。
+必须同时核对布儒斯特角和临界角，不能混淆。
