@@ -1,0 +1,125 @@
+% 第三批：《大学物理学学习指导》第5版，第3章解题示例3.1--3.5。
+% 用户扫描PDF物理页39--43，书内印刷页31--35。
+% 与《简明教程》第3章题号分开独立记录；待独立学术二校。
+
+\sourceexample{3.1}{31--32}{39--40}
+\problemtext 质量相同为$m$的物体$A,B$，其中$A$在倾角$\theta$的光滑斜面上，
+$B$竖直悬挂。两物体分别由绕组合滑轮小半径$r_1$与大半径$r_2$的轻绳连接，二绳不滑动。滑轮由同轴均匀圆盘组成，其转动惯量
+$J=\frac12m_1r_1^2+\frac12m_2r_2^2$。
+从静止释放，求滑轮角加速度、两绳张力和物体加速度。
+\workings
+取使$B$向下运动的角加速度$\alpha$为正。
+由无滑动约束$a_A=r_1\alpha$（沿斜面向上）、
+$a_B=r_2\alpha$（向下）。
+牛顿第二定律与滑轮转动方程：
+\[
+T_1-mg\sin\theta=mr_1\alpha,\quad
+mg-T_2=mr_2\alpha,\quad
+T_2r_2-T_1r_1=J\alpha.
+\]
+消去$T_1,T_2$得到
+\[
+\boxed{\alpha=\frac{mg(r_2-r_1\sin\theta)}
+{J+m(r_1^2+r_2^2)}}.
+\]
+于是
+\[
+\boxed{a_A=r_1\alpha,\qquad a_B=r_2\alpha},\qquad
+\boxed{T_1=m(g\sin\theta+r_1\alpha),\quad
+T_2=m(g-r_2\alpha)}.
+\]
+\crosscheck 若$r_2=r_1\sin\theta$则合驱动力矩为零、$\alpha=0$，此时$T_1=mg\sin\theta$、$T_2=mg$，两侧重力矩相互抵消。公式符号只定义为$B$向下对应正向，若计算$\alpha<0$则实际反向。
+
+\sourceexample{3.2}{32--33}{40--41}
+\problemtext 长$L$、质量$m$的均匀细杆平放于水平粗糙桌面，可绕左端竖直光滑轴$O$转动。质量$m_0=m/3$的小球以速度$v_0$垂直撞击杆上$OP=3L/4$的位置，碰后以大小$v_0/3$的速度反弹。杆与桌面的摩擦系数为$\mu$。求碰后杆角速度、摩擦阻力矩、杆停转时转角及所经时间。
+\workings
+碰撞极短，轴的冲量力矩为零，杆与桌面的摩擦冲量可忽略。关于$O$的角动量守恒：
+\[
+\frac34Lm_0v_0=-\frac34Lm_0\frac{v_0}{3}+J\omega_0,
+\qquad J=\frac13mL^2.
+\]
+代入$m_0=m/3$，整理
+\[
+\boxed{\omega_0=\frac{v_0}{L}}.
+\]
+杆上距轴$x$的长度$dx$承受垂直压力$g(m/L)dx$，
+摩擦阻力矩大小
+\[
+\boxed{M_f=\int_0^L x\,\mu g\frac mL\,dx
+=\frac12\mu mgL}.
+\]
+阻力矩恒定，$\dot\omega=-M_f/J=-3\mu g/(2L)$。
+由$\omega^2=\omega_0^2-2(M_f/J)\varphi$，求停转角
+\[
+\boxed{\varphi=\frac{\omega_0^2}{2(M_f/J)}
+=\frac{v_0^2}{3\mu gL}}.
+\]
+停转时间
+\[
+\boxed{t_{\rm stop}=\frac{\omega_0}{M_f/J}
+=\frac{2v_0}{3\mu g}}.
+\]
+\crosscheck 以转动动能定理核算，
+$M_f\varphi=\tfrac12J\omega_0^2$；摩擦力矩方向始终与转动反向。
+
+\sourceexample{3.3}{33--34}{41--42}
+\problemtext 桌面上质量$m_A$的物块通过不可伸长绳和半径$R$的均匀盘状定滑轮连接质量$m_B$的悬物。滑轮质量$m_C=2m_B$，且$m_A=3m_B$，物块与桌面动摩擦系数$\mu=0.5$。初始$A$静止、绳松弛，$B$先自由下落$l$后把绳拉紧。求绳拉紧瞬间滑轮角速度和此后$B$继续下降的最大距离$h$。
+\workings
+第一阶段自由落体，绳绷紧前$B$的速率
+$v_0=\sqrt{2gl}$。极短绷紧碰撞阶段，对绳与滑轮轴角动量守恒：
+\[
+m_Bv_0R=(m_AR^2+m_BR^2+J_C)\omega,\quad
+J_C=\tfrac12m_CR^2=m_BR^2.
+\]
+总有效质量为$3m_B+m_B+m_B=5m_B$，因此
+\[
+\boxed{\omega=\frac{v_0}{5R}},
+\qquad
+v_A=v_B=R\omega=\frac{v_0}{5}.
+\]
+第二阶段绳紧而未再次松弛时，系统初动能
+$K_0=\frac12(5m_B)(v_0/5)^2=\frac1{10}m_Bv_0^2$。
+$B$再下落$h$时重力做功$m_Bgh$，摩擦做功
+$-\mu m_Agh=-\frac32m_Bgh$。
+在最低点速度为零，
+\[
+\frac1{10}m_Bv_0^2+m_Bgh-\frac32m_Bgh=0
+\Longrightarrow
+\boxed{h=\frac{v_0^2}{5g}=\frac25l}.
+\]
+\crosscheck 由于$\mu m_A=1.5m_B>m_B$，绷紧后系统确实减速停下；“自由落体、冲击、减速”三阶段不能套用一次机械能守恒贯穿。
+
+\sourceexample{3.4}{34}{42}
+\problemtext 质量$m=0.10\,\mathrm{kg}$的小球固定在长$l=0.20\,\mathrm m$、质量可忽略的刚性轻杆一端，另一端绕$O$轴无摩擦转动。小球从与支点同高度位置静止释放，下摆至最低点与倾角$\alpha=30^\circ$的光滑固定斜面做完全弹性短时碰撞，碰撞历时$\Delta t=0.01\,\mathrm s$。求斜面对球的平均冲力大小。
+\workings
+球下降高度$l$，碰前由机械能守恒得
+$v_0=\sqrt{2gl}$。
+设碰后由于轻杆不可伸长、小球转向逆向，沿原切向速率大小仍为$v_0$；则对$O$的角动量改变量大小
+$\Delta L=2mlv_0$。
+斜面法向平均冲力$f$对$O$的力矩大小为$fl\sin\alpha$，短时可忽略重力矩冲量，故
+\[
+fl\sin\alpha\,\Delta t=2mlv_0.
+\]
+解得
+\[
+\boxed{f=\frac{2m\sqrt{2gl}}{\Delta t\sin\alpha}
+=\frac{2(0.1)\sqrt{2(9.8)(0.2)}}{0.01\sin30^\circ}
+\approx79.2\,\mathrm N}.
+\]
+\crosscheck 与书中数值$79.2$ N一致；角动量跃迁和机械能守恒分别适用于碰撞、碰前自由下摆两个阶段，不能混为一谈。
+
+\sourceexample{3.5}{35}{43}
+\problemtext 转动惯量为$J$的圆盘绕定轴以$\omega_0$旋转，受到与角速度大小成正比且反向的阻力矩$M=-k\omega$，$k>0$。求角速度减半所需时间。
+\workings
+定轴转动定律
+\[
+J\frac{d\omega}{dt}=-k\omega
+\Longrightarrow
+\frac{d\omega}{\omega}=-\frac{k}{J}\,dt.
+\]
+积分并施加初始条件，$\omega(t)=\omega_0e^{-kt/J}$。
+令$\omega(t_{1/2})=\omega_0/2$，有
+\[
+\boxed{t_{1/2}=\frac{J}{k}\ln2}.
+\]
+\crosscheck $[k]=\mathrm{N\,m\,s}$，故$J/k$的量纲为时间；指数阻尼不在有限时间使$\omega$严格为零。
