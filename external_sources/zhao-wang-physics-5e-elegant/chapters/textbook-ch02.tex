@@ -1,4 +1,5 @@
 % Consolidated textbook-ch02 from commit ace330777e37fc85a6170f63723b6255c77c8f30; original fragments preserved below.
+% 2026-11-24 八批严格复核第1批：以下历史片段已局部修订；旧SHA仍指精简前历史版本，不能当作当前片段校验值。
 
 % --- BEGIN textbook-ch02-choices.tex SHA a37e842a30f1a40fbdcc8a2b4fe624427c973457 ---
 % 《大学物理简明教程》（第5版），第2章选择题2.1.1--2.1.12
@@ -127,7 +128,7 @@ mR_0^2\omega_0=m\left(\frac{R_0}{2}\right)^2\omega_1,
 \qquad
 \boxed{\omega_1=4\omega_0}.
 \]
-初末速率满足
+在缓慢调节、初末径向速度均为零的条件下，初末速率满足
 \[
 v_0=R_0\omega_0,\qquad
 v_1=\frac{R_0}{2}(4\omega_0)=2v_0.
@@ -215,7 +216,7 @@ E_{k,\mathrm{stick}}=\frac12(3m_B)\left(\frac23u\right)^2
 \sourceproblem{2.2.7}{52}{52}
 \problemtext 质量$m=0.1\,\mathrm{kg}$的物块在水平面上压缩弹簧$k=100\,\mathrm{N/m}$至距自然长$x_1=0.02\,\mathrm m$的位置，释放后运动，原书表述物块移动$x_2=0.1\,\mathrm m$后停止。求滑动摩擦系数。
 \workings
-\textbf{原书数值与“由静止释放、无外界再输入功”的模型不相容，暂不提供伪精确正摩擦系数。}
+\textbf{须区分物块与弹簧始终连接和仅接触两种模型，不能仅由数字断言原题无解。}
 如按图取初始压缩量$x_1=0.02$，若“移动距离$x_2=0.1$”指从压缩位置向右移动，
 则终态相对原长伸长$x_2-x_1=0.08$。
 初始弹性势能
@@ -226,8 +227,9 @@ U_i=\frac12kx_1^2=\frac12(100)(0.02)^2=0.02\,\mathrm J,
 $U_f=\frac12k(x_2-x_1)^2=0.32\,\mathrm J$，
 即使$\mu=0$亦不能抵达终态。若把$x_2$直接解释为最终伸长量，能量差更大。
 \[
-\boxed{\text{按当前扫描数字与无额外供能条件，物理解不存在。}}
+\boxed{\text{若物块与弹簧始终连接，则上述终点不可达。}}
 \]
+若原图实际为物块仅与弹簧接触（不连接），且$x_2=0.1\,\mathrm m$为从释放点起的总路程，则离开自然长后无弹簧势能，$\frac12kx_1^2=\mu mgx_2$，故$\boxed{\mu\approx0.2041}$（$g=9.8$）。此时到自然长时动能为$0.016\,\mathrm J>0$，可自洽地脱离。若$0.1\,\mathrm m$从自然长处量起，总路程为$0.12\,\mathrm m$，则$\mu\approx0.1701$。必须核对连接方式、距离起点和静摩擦释放条件，不可把连接模型的矛盾误作原题无解。
 \crosscheck 由能量不增原理，物块从$x_1$出发在任何正摩擦下的最远到达位置须满足$|x_f|\le x_1$；疑原书数字或位移定义有误，已列入待核实勘误。
 
 \sourceproblem{2.2.8}{52}{52}
@@ -488,7 +490,7 @@ $v(t)=Ve^{-kt/(M+m)}$，因此
 \]
 因$\bm F=-\nabla U$，其中
 $U=\frac12m\omega^2(x^2+y^2)$，
-故是\textbf{保守力}。
+若上述力律适用于整个位置域，则为\textbf{保守力}。若只给单条轨迹上的合力，不能唯一确定轨迹外的力场及其保守性；本题按自然的中心力延拓作答。
 \crosscheck 力的旋度为零；对$A,B$直接计算$U_A-U_B$与$W$一致。
 
 \sourceproblem{2.3.14}{53}{53}
@@ -499,7 +501,7 @@ W=\bm F\cdot\Delta\bm r=7(-3)+(-6)4+0(16)
 =\boxed{-45\,\mathrm J}.
 \]
 平均功率$\boxed{\bar P=W/\Delta t=-75\,\mathrm W}$，
-动能定理给$\boxed{\Delta K=-45\,\mathrm J}$。
+若所给恒力为合力（或其余力净功为零），动能定理给$\boxed{\Delta K=-45\,\mathrm J}$；否则仅能确定该力的功。
 \crosscheck 动能变化可以为负，但需要初动能至少$45\,\mathrm J$才能到达题设终点；力在$z$方向不做功。
 
 \sourceproblem{2.3.15}{53}{53}
@@ -529,14 +531,11 @@ x=x_1+x_2=Mg\left(\frac1{k_1}+\frac1{k_2}\right).
 \]
 弹性势能
 $U=\frac12 k_1x_1^2+\frac12k_2x_2^2
-=\frac12(Mg)^2(1/k_1+1/k_2)$，故
-\[
-\boxed{\frac{x}{U}=\frac{2}{Mg}}.
-\]
+=\frac12(Mg)^2(1/k_1+1/k_2)$，故若题意确为总伸长与总势能的商，$\boxed{x/U=2/(Mg)}$（单位$\mathrm{N^{-1}}$）。若原题问总伸长及两弹簧弹性势能之比，则分别为$x=Mg(1/k_1+1/k_2)$与$\boxed{U_A/U_B=k_2/k_1}$。待核原文句法。
 \crosscheck $x/U$量纲为$\mathrm{m/J=1/N}$，与$2/(Mg)$一致。
 
 \sourceproblem{2.3.17}{54}{54}
-\problemtext 太阳系以外的月地引力模型：地球质量$M_E=5.98\times10^{24}\,\mathrm{kg}$，月球质量$M_M=7.35\times10^{22}\,\mathrm{kg}$，地月中心距$D=3.84\times10^8\,\mathrm m$，月半径$R_M=1.74\times10^6\,\mathrm m$。
+\problemtext 忽略其他天体引力的地月模型：地球质量$M_E=5.98\times10^{24}\,\mathrm{kg}$，月球质量$M_M=7.35\times10^{22}\,\mathrm{kg}$，地月中心距$D=3.84\times10^8\,\mathrm m$，月半径$R_M=1.74\times10^6\,\mathrm m$。
 求地月连线上引力相互抵消点$P$到月球表面的距离，并以无穷远为势能零点求该处$1\,\mathrm{kg}$质点势能。
 \workings
 设$P$到\emph{月心}距离为$d$，则到地心距离为$D-d$。
