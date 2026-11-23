@@ -1,0 +1,41 @@
+% !TeX program = xelatex
+% 教材习题研究整理稿。原书及图示版权归相应权利人。
+% 复用同仓库 Irodov 专区 ElegantBook 类（bash build.sh）。
+\documentclass[lang=cn,color=blue,11pt]{elegantbook}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc}
+\newcommand{\sourceproblem}[3]{\par\medskip\noindent\textbf{\large 教材习题 #1}\hfill{\small 书内第 #2 页，PDF第 #3 页}\par\nobreak\smallskip}
+\newcommand{\sourceexample}[3]{\par\medskip\noindent\textbf{\large 学习指导例 #1}\hfill{\small 书内第 #2 页，PDF第 #3 页}\par\nobreak\smallskip}
+\newcommand{\problemtext}{\par\noindent\textbf{【题意整理】}\quad}
+\newcommand{\workings}{\par\smallskip\noindent\textbf{【推导与解析】}\quad}
+\newcommand{\crosscheck}{\par\smallskip\noindent\textbf{【核验】}\quad}
+\title{大学物理第五版教材习题与学习指导详解}
+\subtitle{《大学物理简明教程》与《大学物理学学习指导》\quad 非官方逐题研究稿}
+\author{底本：赵近芳、王登龙主编相关第五版教材\\题解整理与 LaTeX 排版：三千弱水}
+\date{2026年11月23日 · 首批 20 题}
+\version{0.1}
+\begin{document}
+\maketitle
+\frontmatter
+\chapter*{编辑说明}
+本稿依据用户提供的两份扫描 PDF 整理，仅录入已逐页辨识的部分题目与独立详解。
+原书印刷页与 PDF 物理页可能不同，均按每题标题核对。
+本稿的《大学物理简明教程》第1章选录14题；《大学物理学学习指导》第1章例题5题、第2章例题1题。
+\textbf{这是首批录入，不表示两书已全部录入。}
+自动数学核对不等于独立学术审稿，当前质量状态为\textbf{待独立复核}。
+本项目不上传原书扫描 PDF；原书版权归相应权利人，公开复制或再版前仍需核验授权。
+\tableofcontents
+\mainmatter
+\chapter{《大学物理简明教程》（第5版）}
+\section{第1章\quad 质点运动学}
+\input{chapters/textbook-ch01-exercises}
+\chapter{《大学物理学学习指导》（第5版）}
+\section{第1章\quad 质点运动学：解题示例}
+\input{chapters/guide-ch01-examples}
+\section{第2章\quad 质点动力学：解题示例}
+\input{chapters/guide-ch02-examples}
+\backmatter
+\chapter*{版本与勘误}
+版本：v0.1。原书与本稿数学结果不一致之处、公式有效域和边界条件详见随源文档 \texttt{quality-check.md}。
+\end{document}
