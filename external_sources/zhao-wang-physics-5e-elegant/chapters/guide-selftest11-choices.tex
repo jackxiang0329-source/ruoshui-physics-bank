@@ -1,0 +1,188 @@
+% 《大学物理学学习指导》第5版，自测题11“量子物理”
+% 选择11.1.1—11.1.12，印刷230—231，PDF物理238—239页。
+\subsection{自测题11：光电、康普顿、物质波与量子态选择题}
+
+\sourcetest{11.1.1}{230}{238}
+\problemtext 金属光电逸出需要能量$eU_0$，
+单色入射光真空波长$\lambda$必须满足何种阈值条件？
+\workings
+发生外光电效应的条件是
+$hc/\lambda\ge eU_0$，于是
+\[
+\boxed{\lambda\le\frac{hc}{eU_0}}.
+\]
+选\textbf{A}。
+\crosscheck 波长越短光子能量越大；
+不应把阈值不等式方向反写。
+
+\sourcetest{11.1.2}{230}{238}
+\problemtext 同一金属、同一实验中，
+照射波长由400nm减至300nm，
+问遏止电压如何变化。
+\workings
+爱因斯坦光电方程$eU_a=hc/\lambda-W$，
+同种金属作差消去逸出功，
+\[
+\Delta U_a=\frac{hc}{e}
+\left(\frac1{300\,\mathrm{nm}}-\frac1{400\,\mathrm{nm}}\right)
+\simeq\boxed{+1.033\,\mathrm V}.
+\]
+故遏止电压\textbf{增大约1.035V}，选\textbf{D}。
+\crosscheck 题给选项按约两位小数近似；
+不是随波长缩短而降低电压。
+
+\sourcetest{11.1.3}{230}{238}
+\problemtext 保持真空光电管阳极—阴极电势差不变，
+仅增大照射同一阴极的同频单色光强，
+判断逸出电子的最大初动能及到阳极时最大动能变化。
+\workings
+光强增大增加单位时间入射光子数与可能光电子数，
+但每个光子能量$h\nu$保持不变，
+$\boxed{K_{0,\max}=h\nu-W}$不变。
+静电势差不变，电势做功$e|\Delta V|$也不变，
+到阳极的最大动能同样不变。
+选\textbf{D（均不变）}。
+\crosscheck 电流大小可能增大，
+不能将光电子数增加误当作单个光电子能量增加。
+
+\sourcetest{11.1.4}{230}{238}
+\problemtext X射线散射实验中的散射光可能包含哪些波长成分，
+康普顿波长改变是否依赖材料？
+\workings
+可出现与入射波长相同的弹性（相干）散射分量，
+以及波长增长的非弹性康普顿散射分量。
+理想自由电子的康普顿位移
+\[
+\boxed{\Delta\lambda=\frac{h}{m_ec}(1-\cos\theta)}
+\]
+只依散射角$\theta$和电子静质量，
+不因材料的化学名称而改变该基本位移关系。
+选\textbf{B}。
+\crosscheck 各散射分量的\emph{强度}会明显依赖材料、
+束缚结构和入射能量；
+不能把“波长位移的理想公式与材料无关”
+误写成全部散射现象与材料无关。
+
+\sourcetest{11.1.5}{230}{238}
+\problemtext 康普顿散射中散射后光子波长是原来的1.2倍，
+求散射后光子能量与反冲电子动能之比。
+\workings
+光子能量反比波长：
+$E'_\gamma=E_\gamma/1.2=5E_\gamma/6$，
+自由静止电子反冲动能
+$K=E_\gamma-E'_\gamma=E_\gamma/6$，故
+\[
+\boxed{E'_\gamma/K=5}.
+\]
+选\textbf{D}。
+\crosscheck 题问的是\emph{散射后}光子能量，
+不是初始能量与反冲动能之比6。
+
+\sourcetest{11.1.6}{230--231}{238--239}
+\problemtext 康普顿散射中原先静止电子被反冲到$0.6c$，
+求其动能是静止能量的几倍。
+\workings
+$\gamma=(1-0.6^2)^{-1/2}=1.25$，
+\[
+\boxed{\frac{K}{m_ec^2}=\gamma-1=0.25}.
+\]
+选\textbf{D}。
+\crosscheck $0.5m_ev^2=0.18m_ec^2$是经典动能，
+在本题速度下误差不可忽略。
+
+\sourcetest{11.1.7}{231}{239}
+\problemtext 玻尔氢原子模型中，电子第一与第三轨道速度比$v_1/v_3$。
+\workings
+玻尔氢原子第$n$轨道角动量量子化
+$m_ev_nr_n=n\hbar$，向心库仑力与轨道关系联立
+得到$v_n\propto1/n$，故
+\[
+\boxed{v_1/v_3=3}.
+\]
+选\textbf{C}。
+\crosscheck 此为玻尔圆轨道模型，不能作为现代量子力学
+电子真实经典圆轨迹的陈述。
+
+\sourcetest{11.1.8}{231}{239}
+\problemtext 氢原子从基态激发到某态需10.19eV；
+若又从能量$-0.85$eV的状态跃迁到该激发态，
+发射光子能量是多少？
+\workings
+基态$E_1=-13.6$eV，
+加10.19eV得到目标态$E_f=-3.41$eV
+（按13.6eV标准近似为$n=2$，$E_2=-3.4$eV）。
+从$-0.85$eV（$n=4$）到$n=2$，
+发射能量
+\[
+\boxed{E_\gamma=(-0.85)-(-3.40)=2.55\,\mathrm{eV}
+\simeq2.56\,\mathrm{eV}}.
+\]
+选\textbf{A}。
+\crosscheck 原题10.19eV只保留四位数字，
+若始终使用它得到2.56eV；
+采用精确玻尔13.6eV能级表则是2.55eV，
+必须注明数据精度来源。
+
+\sourcetest{11.1.9}{231}{239}
+\problemtext 两种不同质量的粒子德布罗意波长相等，
+哪一项物理量必然相等？
+\workings
+德布罗意关系
+$\lambda=h/p$给
+\[
+\boxed{p_1=p_2=h/\lambda},
+\]
+故是\textbf{动量大小相同}，选\textbf{A}。
+\crosscheck 速度、动能和总能量不必相同；
+这里无须假定二者具有相同静质量。
+
+\sourcetest{11.1.10}{231}{239}
+\problemtext 原图11.1.1显示四幅沿$x$方向的粒子波包(A)—(D)，
+问哪种波包有最精确的动量。
+\workings
+位置分布空间越宽，波数分布越窄，
+则$\Delta p_x=\hbar\,\Delta k$越小。
+在原图四种相似的局域波包中，
+(A)具有最长、最多周期的波列，
+波数相对散布最窄，故选\textbf{A}。
+\crosscheck \textbf{图形比较为定性：}
+原图并未给各波包归一化强度或定量谱宽；
+“周期数最多”只是判断较长相干波列动量分布
+可能较窄的启发性证据。若需严密排序，
+应对四幅波形给出明确解析表达并计算傅里叶谱标准差。
+
+\sourcetest{11.1.11}{231}{239}
+\problemtext 波长500nm光子的波长不确定度为$10^{-4}$nm；
+按\emph{原题指定的不确定关系}
+$\Delta p_x\,\Delta x\ge h$求$x$位置至少多不确定。
+\workings
+$p=h/\lambda$，小不确定度下
+$\Delta p\simeq h\Delta\lambda/\lambda^2$。
+于是按原题给定的$h$形式，
+\[
+\boxed{\Delta x\gtrsim\frac h{\Delta p}
+=\frac{\lambda^2}{\Delta\lambda}
+=\frac{(500\,\mathrm{nm})^2}{10^{-4}\,\mathrm{nm}}
+=2.5\,\mathrm m=250\,\mathrm{cm}}.
+\]
+选\textbf{C}。
+\crosscheck \textbf{不等式常数约定：}
+规范位置—动量标准差下界为$\hbar/2=h/(4\pi)$。
+同时光子的严格位置算符有理论细节；
+本条只是在\emph{题目所给波包近似关系}下计算，
+不将其当作普适的光子严格定位定理。
+
+\sourcetest{11.1.12}{231}{239}
+\problemtext 氢原子L壳层（$n=2$）电子的四量子数
+$(n,l,m_l,m_s)$，哪组满足允许值？
+\workings
+当$n=2$时$l=0,1$；
+$l=1$时$m_l=-1,0,1$；
+电子$m_s=\pm1/2$。
+原选项中满足以上规则的是
+\[
+\boxed{(n,l,m_l,m_s)=(2,1,-1,1/2)},
+\]
+选\textbf{B}。
+\crosscheck 不能把$n=1$的K壳层或$n=3$的M壳层组合
+计入L壳层；$l=0$时$m_l$只能为0。
