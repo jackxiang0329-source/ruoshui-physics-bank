@@ -1,0 +1,142 @@
+% 《大学物理简明教程》第6章填空题6.2.1--6.2.9；
+% 印刷/PDF第156页，来源用户上传扫描页。待独立二校。
+\subsection{填空题：热容、状态变化与循环功}
+
+\sourceproblem{6.2.1}{156}{156}
+\problemtext 理想气体先等温压缩到某体积，外界对它做功$|W_1|$；
+随后绝热膨胀回原体积，气体对外做功$|W_2|$。
+求全过程从外界吸收的净热量$Q$与内能改变$\Delta U$。
+\workings
+以气体对外做功为正，等温压缩有$\Delta U_1=0$，
+$W_1=-|W_1|$，故$Q_1=W_1=-|W_1|$。
+随后绝热膨胀$Q_2=0$、$W_2=+|W_2|$，
+$\Delta U_2=-W_2=-|W_2|$。
+因此
+\[
+\boxed{Q=-|W_1|},\qquad
+\boxed{\Delta U=-|W_2|}.
+\]
+\crosscheck 两段合成$W=-|W_1|+|W_2|$，由$Q-W$仍得$-|W_2|$。净热量负号表示气体向外界放热。
+
+\sourceproblem{6.2.2}{156}{156}
+\problemtext 一定量理想气体由图6.2.2的$A(2p_1,V_1)$沿$p$--$V$直线变化到$B(p_1,2V_1)$。求气体对外做功$W$及内能变化$\Delta U$。
+\workings
+直线段压力平均值为$(2p_1+p_1)/2=\tfrac32p_1$，
+体积增量为$V_1$，故
+\[
+\boxed{W=\int_{V_1}^{2V_1}p\,dV=\frac32p_1V_1}.
+\]
+理想气体$U=U(T)$，且
+$p_AV_A=2p_1V_1=p_BV_B$，故$T_A=T_B$，
+\[
+\boxed{\Delta U=0}.
+\]
+\crosscheck 路径不是等温线，尽管两端温度相同，中间温度可以不同；$Q=W$仅对整个过程成立。
+
+\sourceproblem{6.2.3}{156}{156}
+\problemtext 10 mol单原子理想气体压缩时，外界对气体做功209 J，气体温度升高1 K。求内能增加量与外界向气体传递的净热量。
+\workings
+\[
+\boxed{\Delta U=\nu C_{V,m}\Delta T
+=10\cdot\frac32R\cdot1\approx124.7\,\mathrm J}.
+\]
+外界对气体功$W_{\mathrm{on}}=+209$ J，
+以热入系统为正，$\Delta U=Q+W_{\mathrm{on}}$，所以
+\[
+\boxed{Q\approx124.7-209=-84.3\,\mathrm J}.
+\]
+\crosscheck 压缩期间虽升温，但由于机械压缩能输入209 J超过内能增量，剩余能量必须以热的形式放出。
+
+\sourceproblem{6.2.4}{156}{156}
+\problemtext 一定量理想气体在等压膨胀过程中对外做功200 J，分别求单原子分子气体和刚性双原子分子气体从外界吸收的热量。
+\workings
+等压功$W=\nu R\Delta T=200$ J。
+按气体分子自由度$i$，$\Delta U=(i/2)\nu R\Delta T$，
+故$Q=\Delta U+W=(i/2+1)W$。于是
+\[
+\boxed{Q_{\mathrm{mono}}=\frac52(200)=500\,\mathrm J},
+\qquad
+\boxed{Q_{\mathrm{diatom}}=\frac72(200)=700\,\mathrm J}.
+\]
+\crosscheck 等压膨胀温度上升，内能增量应为正；
+若误把$Q$等同于做功则会遗漏气体内能改变。
+
+\sourceproblem{6.2.5}{156}{156}
+\problemtext 摩尔热容比为$\gamma$的理想气体自标准状态$(p_0,V_0,T_0)$绝热膨胀至$3V_0$，求终态温度和压强。
+\workings
+准静态可逆绝热过程满足
+$TV^{\gamma-1}=\mathrm{const}$及$pV^\gamma=\mathrm{const}$，
+因此
+\[
+\boxed{T_f=T_0\,3^{1-\gamma}},\qquad
+\boxed{p_f=p_0\,3^{-\gamma}}.
+\]
+\crosscheck 当$\gamma>1$时膨胀降温且压强下降；如果绝热过程不可逆，以上泊松绝热关系未必成立。
+
+\sourceproblem{6.2.6}{156}{156}
+\problemtext 一卡诺热机以质量290 g的空气为工作物质，工作于$27^\circ\mathrm C$热源和$-73^\circ\mathrm C$冷源之间。高温等温膨胀体积放大约$e=2.718$倍，求循环效率及每循环净功。空气摩尔质量$29\times10^{-3}\,\mathrm{kg/mol}$。
+\workings
+工作物质摩尔数$\nu=0.290/0.029=10$ mol，
+$T_h=300.15$ K、$T_c=200.15$ K。
+卡诺效率
+\[
+\boxed{\eta=1-\frac{T_c}{T_h}
+\approx0.3332}.
+\]
+高温等温膨胀吸热
+$Q_h=\nu RT_h\ln(V_f/V_i)\approx10RT_h\ln e=10RT_h$。
+每循环净功
+\[
+\boxed{W=\eta Q_h=\nu R(T_h-T_c)\ln e
+\approx8.314\times10^3\,\mathrm J}.
+\]
+\crosscheck 使用绝对温度（K），而不是摄氏数值直接计算效率；
+若教材按300 K和200 K处理，则$\eta=1/3$。
+
+\sourceproblem{6.2.7}{156}{156}
+\problemtext 一定量理想气体的定容摩尔热容$C_{V,m}=2.5R$。
+在等压膨胀时，气体对外做功$W$与从外界吸收热量$Q$的比为多少？
+\workings
+等压过程中
+$W=\nu R\Delta T$，
+$Q=\nu C_{P,m}\Delta T=\nu(C_{V,m}+R)\Delta T
+=3.5\nu R\Delta T$，故
+\[
+\boxed{\frac WQ=\frac{R}{3.5R}=\frac27}.
+\]
+\crosscheck 这类理想气体的$\gamma=C_P/C_V=3.5/2.5=7/5$，等压功比例也等于$(\gamma-1)/\gamma=2/7$。
+
+\sourceproblem{6.2.8}{156}{156}
+\problemtext 1 mol理想气体沿图6.2.8中$A\to B\to C\to D\to A$顺时针循环：
+$V_A=V_B=22.4$ L，$V_C=V_D=33.6$ L，
+$p_A=p_D=1$ atm、$p_B=p_C=2$ atm。求每循环的净对外功。
+\workings
+$\Delta V=(33.6-22.4)\,\mathrm L=0.0112\,\mathrm{m^3}$，
+$\Delta p=(2-1)\,\mathrm{atm}=101325\,\mathrm{Pa}$。
+顺时针闭合曲线的净功等于矩形面积，
+\[
+\boxed{W_{\mathrm{net}}
+=\Delta p\,\Delta V
+=101325(0.0112)\approx1.135\times10^3\,\mathrm J}.
+\]
+\crosscheck 等容两段功为零，等压上边对外功$2p_0\Delta V$，
+等压下边压缩功$-p_0\Delta V$，相加为$p_0\Delta V$。
+
+\sourceproblem{6.2.9}{156}{156}
+\problemtext 热机每秒从$T_h=600$ K热源吸收$Q_h=3.34\times10^4$ J，
+向$T_c=300$ K冷源排出$Q_c=2.09\times10^4$ J。
+求实际效率、是否可逆、以及固定每秒吸热量时理论最大功率。
+\workings
+实际净功率$W=Q_h-Q_c=1.25\times10^4\,\mathrm{W}$，
+\[
+\boxed{\eta=\frac{1.25\times10^4}{3.34\times10^4}
+\approx0.3743}.
+\]
+卡诺效率$\eta_C=1-T_c/T_h=0.5$。
+因为$\eta<\eta_C$，这台热机\textbf{不是可逆卡诺热机}。
+保持$Q_h$不变时最大可能净功率
+\[
+\boxed{W_{\max}=\eta_C Q_h
+=1.67\times10^4\,\mathrm W}.
+\]
+\crosscheck 不能将实际输出功率$1.25\times10^4$ W误认为卡诺上限；热机循环每秒运行时功率数值等于每秒功的焦耳数。
