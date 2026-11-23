@@ -1,0 +1,1309 @@
+% Consolidated 34-atomic-scattering from 620defd2149c8dcfd52d29c147aa4708c27ab8f3; original TeX fragments preserved.
+
+% === BEGIN 34-atomic-scattering-001-018.tex blob a5f8ec83315e1bc30fcc6b25bfb8ff674f6c1cee ===
+% Irodov Part VI §6.1 problems 1--18.
+% Source: user-provided Arihant PDF pp.241--243 (printed pp.232--234),
+% Answers pp.348--349, numerical input verified against page scans.
+% Equations here use SI; C=Z1 Z2 e^2/(4 pi eps0) converts Gaussian e^2.
+\atomicproblem{1}{232}
+用汤姆孙的原子模型估算氢原子半径 $R$，
+以及电子振动发出的光波长。已知电离能
+$E_{\mathrm{ion}}=13.6\,\mathrm{eV}$。
+\exsolution
+汤姆孙模型将 $+e$ 均匀分布在半径 $R$ 的球内，
+电子在球心稳定。电子由球心移至无穷远的
+势能增加为
+$E_{\mathrm{ion}}=3e^2/(8\pi\varepsilon_0R)$，
+故
+\[
+ \boxed{R=\frac{3e^2}{8\pi\varepsilon_0E_{\mathrm{ion}}}
+ \simeq0.159\,\mathrm{nm}}.
+\]
+在均匀正电球内电场 $E(r)=er/(4\pi\varepsilon_0R^3)$，
+电子受到的回复力 $F=-e^2r/(4\pi\varepsilon_0R^3)$，
+所以
+\[
+ \omega=\sqrt{\frac{e^2}{4\pi\varepsilon_0m_eR^3}},
+ \quad\boxed{\lambda=\frac{2\pi c}{\omega}
+ \simeq0.24\,\mu\mathrm m}.
+\]
+\excheck 本题严格依\emph{经典汤姆孙模型}计算，
+不应拿现代量子氢原子的 Bohr 半径替代 $R$。
+
+\atomicproblem{2}{232}
+动能 $T=0.27\,\mathrm{MeV}$ 的 $\alpha$ 粒子
+在金箔中被偏转 $\theta=60^\circ$。
+求对应的碰撞瞄准参数 $b$。
+\exsolution
+对固定重核的库仑散射采用卢瑟福关系
+\[
+ \tan\frac\theta2=
+ \frac{C}{2bT},\qquad
+ C=\frac{(2e)(79e)}{4\pi\varepsilon_0}.
+\]
+故
+\[
+ \boxed{b=\frac C{2T}\cot\frac\theta2}.
+\]
+取 $e^2/(4\pi\varepsilon_0)
+=1.440\,\mathrm{MeV\,fm}$ 得
+\[
+ \boxed{b\simeq7.30\times10^2\,\mathrm{fm}
+ =0.730\,\mathrm{pm}}.
+\]
+\excheck 底本第六篇采用高斯单位制；
+本译稿用 SI，故 $C$ 中明确包含 $1/(4\pi\varepsilon_0)$。
+
+\atomicproblem{3}{232--233}
+动能 $T=0.40\,\mathrm{MeV}$ 的 $\alpha$ 粒子
+正面撞向 (a) 固定铅核；(b) 起初静止的\emph{自由}
+$^{7}\mathrm{Li}$ 核。分别求最近距离。
+\exsolution
+设库仑能常数
+$C=(2Z)e^2/(4\pi\varepsilon_0)$。
+(a) 固定核没有反冲，初始动能在最近点全转为静电势能，
+$T=C/r_{\min}$，其中 $Z_{\mathrm{Pb}}=82$。
+因此
+\[
+ \boxed{r_{\min,\mathrm{Pb}}=\frac{2Z_{\mathrm{Pb}}k_e e^2}{T}
+ \simeq0.590\,\mathrm{pm}}.
+\]
+(b) 自由锂核也会反冲，质心系相对动能为
+$T_{\rm rel}=T\,M_{\rm Li}/(M_{\rm Li}+m_\alpha)$。
+因此
+\[
+ \boxed{r_{\min,\mathrm{Li}}=
+ \frac{2Z_{\mathrm{Li}}k_e e^2}{T}
+ \left(1+\frac{m_\alpha}{M_{\mathrm{Li}}}\right)
+ \simeq0.034\,\mathrm{pm}},
+ \quad Z_{\mathrm{Li}}=3.
+\]
+\excheck $k_e=1/(4\pi\varepsilon_0)$；
+自由靶核的修正因子大于1，不能直接用静止不动核的公式。
+
+\atomicproblem{4}{233}
+动能 $T=0.50\,\mathrm{MeV}$ 的 $\alpha$ 粒子
+在固定汞核（$Z=80$）的库仑场中偏转
+$\theta=90^\circ$。求轨道最小曲率半径和最近距离。
+\exsolution
+仍记 $C=2Zk_e e^2$。由库仑双曲线轨道几何
+及卢瑟福散射公式可得
+\[
+ \boxed{\mathcal R_{\min}=
+ \frac C{2T}\cot^2\frac\theta2},\qquad
+ \boxed{r_{\min}=
+ \frac C{2T}\left(1+\csc\frac\theta2\right)}.
+\]
+这里 $C=230.4\,\mathrm{MeV\,fm}$，
+$\cot45^\circ=1$，
+\[
+ \boxed{\mathcal R_{\min}\simeq0.230\,\mathrm{pm}},
+ \qquad\boxed{r_{\min}\simeq0.556\,\mathrm{pm}}.
+\]
+\excheck 两种长度不相同；
+最近曲率半径属于轨迹局部几何，最近距离是到核的径向距离。
+
+\atomicproblem{5}{233}
+动能为 $T$、瞄准参数为 $b$ 的质子
+被起初静止的金核散射，求传给金核的动量大小。
+采用重核近似。
+\exsolution
+入射质子动量为 $p=\sqrt{2m_pT}$，
+散射前后速率在固定靶近似下不变，
+动量变化量为
+$|\Delta\boldsymbol p|=2p\sin(\theta/2)$。
+由
+$\tan(\theta/2)=C/(2bT)$、
+$C=79k_e e^2$ 得
+\[
+ \sin\frac\theta2=
+ \frac1{\sqrt{1+(2bT/C)^2}}.
+\]
+根据动量守恒，金核所获动量大小为
+\[
+ \boxed{P_{\rm Au}=
+ \frac{2\sqrt{2m_pT}}{\sqrt{1+(2bT/C)^2}}},
+ \qquad C=79k_e e^2.
+\]
+\excheck 核的反冲动量方向与质子动量变化反向；
+若求精细反冲能量，需要采用两体约化质量修正。
+
+\atomicproblem{6}{233}
+动能 $T=10\,\mathrm{MeV}$ 的质子以直线轨迹
+掠过静止自由电子，最近距离 $b=10\,\mathrm{pm}$。
+假定质子路径不偏折、电子在通过过程中几乎不动。
+求电子得到的能量。
+\exsolution
+令质子速度
+$v=\sqrt{2T/m_p}$。
+电子的横向力为
+$F_\perp(t)=k_ee^2 b/(b^2+v^2t^2)^{3/2}$。
+沿完整经过时间积分，
+\[
+ \Delta p_\perp=\int_{-\infty}^{+\infty}F_\perp(t)\,dt
+ =\frac{2k_ee^2}{bv}.
+\]
+电子获得的动能
+\[
+ T_e=\frac{(\Delta p_\perp)^2}{2m_e}
+ =\boxed{\frac{m_p(k_ee^2)^2}{m_eb^2T}
+ \simeq4.0\,\mathrm{eV}}.
+\]
+\excheck 纵向冲量为奇函数积分，等于0；
+此题是小反冲、直线冲量近似而非完整双体散射。
+
+\atomicproblem{7}{233}
+粒子动能为 $T$、瞄准参数为 $b$，
+穿过半径 $R$、深度 $U_0$ 的球形方势阱：
+$U=0$（$r>R$）、$U=-U_0$（$r<R$）。
+求偏转角 $\theta$ 与 $b$ 的关系。
+\exsolution
+粒子在阱内的速度比阱外大，
+利用轨道的切向动量（角动量）守恒，
+等效折射率
+$n=v_{\rm in}/v_{\rm out}
+=\sqrt{1+U_0/T}>1$。
+令入射线与界面法线的夹角为 $i$，
+内部为 $r$，有
+$\sin i=b/R$、$\sin r=b/(nR)$。
+两次穿越界面使轨迹总偏折
+\[
+ \boxed{\theta=
+ 2\left[\arcsin\frac bR-
+ \arcsin\frac b{nR}\right]},
+ \qquad 0\le b\le R.
+\]
+反解
+\[
+ \boxed{b=\frac{nR\sin(\theta/2)}
+ {\sqrt{1+n^2-2n\cos(\theta/2)}}}.
+\]
+若 $b>R$ 则不进入阱，偏转角为0。
+\excheck $U_0\to0$ 时 $n\to1$，
+$\theta\to0$，符合无势阱极限。
+
+\atomicproblem{8}{233}
+半径 $R$ 的固定硬球受到半径为 $r$ 的
+均匀平行粒子流照射，粒子与球作理想弹性碰撞。
+求：(a) 偏角 $\theta$ 与瞄准参数 $b$；
+(b) 碰后粒子落在 $(\theta,\theta+d\theta)$ 的条件概率；
+(c) 偏角小于 $\pi/2$ 的概率。
+\exsolution
+把有限尺寸的入射粒子与球等效为
+有效半径 $a=R+r$ 的点粒子镜面碰撞。
+几何法线使碰前碰后速度对称，故
+\[
+ \boxed{\cos\frac\theta2=\frac ba},\quad 0\le b\le a.
+\]
+对于均匀入射、已发生碰撞的粒子，
+撞击参数分布是
+$dP=2b\,db/a^2$。
+由 $b=a\cos(\theta/2)$ 微分并取绝对值，
+\[
+ \boxed{dP=\frac12\sin\theta\,d\theta}.
+\]
+积分 $0\le\theta<\pi/2$，
+\[
+ \boxed{P(\theta<\pi/2)=
+ \int_0^{\pi/2}\tfrac12\sin\theta\,d\theta=\frac12}.
+\]
+\excheck (b)(c) 的概率以\emph{发生碰撞}为条件，
+不涉及整个无限截面入射束中未碰撞的粒子。
+
+\atomicproblem{9}{233}
+动能 $T=1.0\,\mathrm{MeV}$ 的窄 $\alpha$ 束
+正入射厚 $d=1.0\,\mu\mathrm m$ 的铂箔。
+一个探测计数器位于偏转角 $60^\circ$、距靶
+$\ell=10\,\mathrm{cm}$ 处，入口面积
+$S=1.0\,\mathrm{cm^2}$。
+求总入射粒子中进入计数器的比例。
+\exsolution
+铂的原子序数 $Z=78$、
+密度 $\rho=21.5\,\mathrm{g/cm^3}$、
+摩尔质量 $M\simeq195\,\mathrm{g/mol}$。
+单位面积靶核数
+$n_A=\rho dN_A/M$。
+在单次散射、薄靶和小探测立体角近似下
+\[
+ \frac{\Delta N}{N}=
+ n_A\left(\frac C{4T}\right)^2
+ \csc^4\frac\theta2\,\Delta\Omega,\qquad
+ C=2Zk_ee^2,\quad \Delta\Omega\simeq\frac S{\ell^2}.
+\]
+代 $\Delta\Omega=0.010\,\mathrm{sr}$ 得
+\[
+ \boxed{\frac{\Delta N}{N}\simeq3.3\times10^{-5}}.
+\]
+\excheck 必须将面积、长度和靶材面核密度统一单位；
+此为\emph{探测几何}内的概率而不是总散射概率。
+
+\atomicproblem{10}{233--234}
+动能 $T=0.50\,\mathrm{MeV}$、通量
+$\dot N_0=5.0\times10^3\,\mathrm{s^{-1}}$
+的窄 $\alpha$ 束正入射金箔。
+在 $\theta=60^\circ$、距靶 $\ell=15\,\mathrm{cm}$
+处，测得粒子流密度
+$J=40\,\mathrm{cm^{-2}s^{-1}}$。
+求金箔厚度 $d$。
+\exsolution
+靶核体积数密度
+$n_V=\rho_{\rm Au}N_A/M_{\rm Au}$，
+单次卢瑟福散射预测的计数器位置通量为
+\[
+ J=\frac{\dot N_0}{\ell^2}
+ n_Vd\left(\frac C{4T}\right)^2
+ \csc^4\frac\theta2,\quad C=2(79)k_ee^2.
+\]
+故
+\[
+ \boxed{d=\frac{J\ell^2}{\dot N_0n_V}
+ \left(\frac{4T}{C}\right)^2
+ \sin^4\frac\theta2}.
+\]
+直接代入\emph{本版印刷题面}
+$\rho_{\rm Au}\simeq19.3\,\mathrm{g/cm^3}$ 得
+\[
+ \boxed{d\simeq1.47\times10^{-4}\,\mathrm m
+ =147\,\mu\mathrm m}.
+\]
+\excheck 本版书末印\emph{约 $1.5\,\mu\mathrm m$}，
+与题面按上述薄靶公式计算相差\emph{约100倍}；
+题面 $\dot N_0$ 与 $J$ 已按扫描页复查，暂保留该差异。
+由此反推的厚箔已可能违反“单次散射薄靶”前提，
+因此该数值不得标记为完全物理自洽。
+
+\atomicproblem{11}{234}
+一束 $\alpha$ 粒子依次照射质量面密度相同的
+银箔和铂箔，后者相同角区计数率为前者的
+$\eta=1.52$ 倍。
+求铂原子序数（已知银原子序数与两材料原子量）。
+\exsolution
+相同质量面密度时核的面数密度与摩尔质量
+$M$ 成反比；同样束流、能量与角度下
+卢瑟福散射微分截面与 $Z^2$ 成正比。
+因而
+\[
+ \eta=\frac{Z_{\rm Pt}^2/M_{\rm Pt}}
+ {Z_{\rm Ag}^2/M_{\rm Ag}},\quad
+ \boxed{Z_{\rm Pt}=Z_{\rm Ag}
+ \sqrt{\eta\,\frac{M_{\rm Pt}}{M_{\rm Ag}}}}.
+\]
+以 $Z_{\rm Ag}=47$、
+$M_{\rm Pt}\simeq195$、
+$M_{\rm Ag}\simeq108$ 代入，
+\[
+ \boxed{Z_{\rm Pt}\simeq78}.
+\]
+\excheck 本版原题为 $\eta=1.52$，
+不是 PDF 文本层中容易误读的“152”。
+
+\atomicproblem{12}{234}
+$\alpha$ 粒子束动能
+$T=0.50\,\mathrm{MeV}$、
+入射率 $I_0=5.0\times10^6\,\mathrm{s^{-1}}$，
+正入射质量面密度
+$\rho d=1.5\,\mathrm{mg/cm^2}$ 的金箔，
+持续 $\tau=30\,\mathrm{min}$。
+求散射角落在(a) $59^\circ$--$61^\circ$；
+(b) 大于 $60^\circ$ 的粒子数。
+\exsolution
+靶核面数密度为
+$n_A=\rho dN_A/M_{\rm Au}$，
+总入射数 $N_0=I_0\tau$。
+卢瑟福微分截面
+$d\sigma/d\Omega=(C/(4T))^2\csc^4(\theta/2)$，
+$C=2(79)k_ee^2$。
+在极角区间 $\theta_a\le\theta\le\theta_b$
+对全方位积分，得
+\[
+ \sigma_{ab}=\pi\left(\frac C{2T}\right)^2
+ \left[\cot^2\frac{\theta_a}{2}
+ -\cot^2\frac{\theta_b}{2}\right].
+\]
+因此
+\[
+ \boxed{N_{ab}=I_0\tau n_A\sigma_{ab}}.
+\]
+按\emph{扫描原题数值}代入，
+\[
+ \boxed{N_{59^\circ\text{--}61^\circ}
+ \simeq1.62\times10^7},\qquad
+ \boxed{N_{\theta>60^\circ}\simeq2.01\times10^8}.
+\]
+\excheck 本版书末分别列约 $1.6\times10^6$、
+$2.0\times10^7$，低于照印刷题面算出的结果10倍。
+原书扫描已确认质量面密度为 $1.5\,\mathrm{mg/cm^2}$，
+故暂按原题算式并登记书末冲突，不自行把参数改小10倍。
+
+\atomicproblem{13}{234}
+速度 $v=6\times10^6\,\mathrm{m/s}$ 的窄质子束，
+正入射厚 $d=1.0\,\mu\mathrm m$ 的银箔。
+求后向半球（散射角 $\theta>90^\circ$）
+的散射概率。
+\exsolution
+质子动能
+$T=\tfrac12m_pv^2\simeq0.188\,\mathrm{MeV}$。
+取银 $Z=47$，
+$C=Zk_ee^2$，
+靶核面数密度
+$n_A=\rho_{\rm Ag}dN_A/M_{\rm Ag}$。
+对 $\theta>90^\circ$ 积分卢瑟福截面：
+\[
+ \sigma_{\mathrm{back}}=
+ \pi\left(\frac C{2T}\right)^2\cot^2(45^\circ)
+ =\pi\left(\frac C{2T}\right)^2.
+\]
+故
+\[
+ \boxed{P=n_A\sigma_{\mathrm{back}}
+ \simeq6.0\times10^{-3}}.
+\]
+\excheck 概率小于1，单次散射近似在此角区合理。
+
+\atomicproblem{14}{234}
+动能 $T=600\,\mathrm{keV}$ 的 $\alpha$ 束
+正入射金箔，面核密度为
+$n_A=1.1\times10^{19}\,\mathrm{cm^{-2}}$。
+求偏转角小于 $\theta_0=20^\circ$
+的束流份额（包括几乎不被散射的直行粒子）。
+\exsolution
+超过阈角的单次散射截面为
+\[
+ \sigma_{>\theta_0}=
+ \pi\left(\frac C{2T}\right)^2
+ \cot^2\frac{\theta_0}{2},\quad C=2(79)k_ee^2.
+\]
+薄靶近似下偏角超过阈值的粒子份额
+$P_>=n_A\sigma_{>\theta_0}$。
+因此偏角\emph{小于}阈值的份额为
+\[
+ \boxed{P_<\simeq1-n_A\pi\left(\frac C{2T}\right)^2
+ \cot^2\frac{\theta_0}{2}\simeq0.60}.
+\]
+\excheck 单纯从$\theta=0$积分卢瑟福公式会发散，
+应统计“没有发生大角散射”的补事件。
+\emph{本题的一阶薄靶近似尤其需要误差警示：}
+按照本题参数，大角单次散射的光学厚度
+$\tau_{>20^\circ}=n_A\sigma_{>20^\circ}\simeq0.40$，
+并非远小于1。
+所以$1-\tau\simeq0.60$只能看作
+\emph{一阶近似}。若仅考虑多次独立
+“超过20°的事件”并做泊松重求和，
+零此类事件的概率是$e^{-\tau}\simeq0.67$，
+两种计算已有约7个百分点差距；
+真实多重小角散射还可能合成超过20°的总偏角。
+因此\emph{不能}把0.60或0.67
+都误称为无需考虑多重散射的严格束流概率。
+准确角分布必须给定更完整的多重散射模型。
+
+\atomicproblem{15}{234}
+动能 $T=1.4\,\mathrm{MeV}$ 的质子束照射黄铜箔，
+质量面密度 $\rho d=1.5\,\mathrm{mg/cm^2}$，
+铜与锌质量比为 $7:3$。
+求偏角超过 $\theta_0=30^\circ$ 的粒子份额。
+\exsolution
+对元素 $j=\mathrm{Cu},\mathrm{Zn}$，阈角以上截面
+\[
+ \sigma_j(>\theta_0)=
+ \pi\left(\frac{Z_jk_ee^2}{2T}\right)^2
+ \cot^2\frac{\theta_0}{2}.
+\]
+两成分单位面积核数
+$n_{A,j}=w_j(\rho d)N_A/M_j$，
+$w_{\rm Cu}=0.7,w_{\rm Zn}=0.3$，所以
+\[
+ \boxed{P_>=(\rho d)N_A
+ \frac{\pi(k_ee^2)^2}{4T^2}\cot^2\frac{\theta_0}{2}
+ \left(\frac{0.7Z_{\rm Cu}^2}{M_{\rm Cu}}+
+ \frac{0.3Z_{\rm Zn}^2}{M_{\rm Zn}}\right)}.
+\]
+用 $Z_{\rm Cu}=29,Z_{\rm Zn}=30$、
+$M_{\rm Cu}\simeq63.55\,\mathrm{g/mol}$、
+$M_{\rm Zn}\simeq65.38\,\mathrm{g/mol}$，
+\[
+ \boxed{P_>\simeq1.4\times10^{-3}}.
+\]
+\excheck 黄铜两种元素应按\emph{质量份额/摩尔质量}
+分别计算面核密度，不能直接按0.7、0.3平均原子序数。
+
+\atomicproblem{16}{234}
+求 $\alpha$ 粒子动能 $T=1.5\,\mathrm{MeV}$
+在铀核（$Z=92$）库仑场散射偏角超过
+$\theta_0=60^\circ$ 的有效截面。
+\exsolution
+积分卢瑟福微分截面，
+\[
+ \boxed{\sigma_{>\theta_0}=
+ \pi\left(\frac{2Zk_ee^2}{2T}\right)^2
+ \cot^2\frac{\theta_0}{2}}.
+\]
+由于 $k_ee^2=1.440\,\mathrm{MeV\,fm}$，
+代入 $Z=92$、$\theta_0=60^\circ$，
+得到
+\[
+ \boxed{\sigma_{>60^\circ}\simeq
+ 7.35\times10^{-26}\,\mathrm{m^2}
+ =0.735\,\mathrm{kb}}.
+\]
+\excheck $1\,\mathrm{kb}=10^{-25}\,\mathrm{m^2}$；
+本题需作角积分而非只报某个散射角的微分截面。
+
+\atomicproblem{17}{234}
+实验测得单个金核将单色 $\alpha$ 粒子散射在
+$90^\circ$--$180^\circ$ 间的有效截面为
+$\sigma=0.50\,\mathrm{kb}$。
+求：(a) $\alpha$ 的动能；
+(b) $\theta=60^\circ$ 时微分截面
+$d\sigma/d\Omega$（$\mathrm{kb/sr}$）。
+\exsolution
+记 $C=2(79)k_ee^2$，
+在后向半球
+\[
+ \sigma_{>90^\circ}=
+ \pi\left(\frac C{2T}\right)^2.
+\]
+由此
+\[
+ \boxed{T=\frac C2\sqrt{\frac{\pi}{\sigma}}
+ \simeq0.90\,\mathrm{MeV}}.
+\]
+而在 $\theta=60^\circ$，
+\[
+ \frac{d\sigma}{d\Omega}
+ =\left(\frac C{4T}\right)^2
+ \csc^4(30^\circ)
+ =\frac{4\sigma_{>90^\circ}}{\pi}.
+\]
+所以
+\[
+ \boxed{\left.\frac{d\sigma}{d\Omega}\right|_{60^\circ}
+ \simeq0.637\,\mathrm{kb/sr}}.
+\]
+\excheck 角积分量 $\sigma$ 与微分量
+$d\sigma/d\Omega$ 的物理单位不同，不能混用。
+
+\atomicproblem{18}{234}
+由经典辐射功率公式估计：振动角频率
+$\omega=5.0\times10^{15}\,\mathrm{s^{-1}}$
+的电子近似简谐振动，其机械能减少为初值的
+$1/\eta$（$\eta=10$）需多久？
+\exsolution
+电子加速度为
+$a(t)=-\omega^2x_0\cos\omega t$。
+SI 制拉莫尔辐射功率
+$P(t)=e^2a^2/(6\pi\varepsilon_0c^3)$。
+对一个振动周期取平均，
+$\langle a^2\rangle=\omega^4x_0^2/2$；
+振动机械能 $E=\tfrac12m_e\omega^2x_0^2$。
+所以
+\[
+ \frac{dE}{dt}=-\frac{e^2\omega^2}
+ {6\pi\varepsilon_0m_ec^3}E
+ =-\Gamma E,\qquad
+ E(t)=E(0)e^{-\Gamma t}.
+\]
+于是
+\[
+ \boxed{t=\frac{6\pi\varepsilon_0m_ec^3}
+ {e^2\omega^2}\ln\eta
+ \simeq1.5\times10^{-8}\,\mathrm s=15\,\mathrm{ns}}.
+\]
+\excheck 这是小损耗、准简谐振动的周期平均模型，
+并已将原书高斯单位的辐射公式转换为 SI。
+% === END 34-atomic-scattering-001-018.tex ===
+
+% === BEGIN 34-atomic-scattering-019-032.tex blob 09661bcff99c46aebacb17ead9e95b132b4a5fd0 ===
+% Irodov Part VI §6.1 problems 19--32.
+% Original source printed pp.235--236, PDF pp.244--245.
+% Distinguish principal quantum number n from ordinal line number:
+% Balmer line k corresponds to upper n=k+2. This matters for #29.
+\atomicproblem{19}{235}
+用前题的经典辐射公式估计：一个电子沿半径
+$r_0=50\,\mathrm{pm}$ 的氢原子圆轨道运动，
+因连续辐射损失能量而落到核上需多久？
+假定加速度始终指向核中心。
+\exsolution
+记库仑常数 $k_e=1/(4\pi\varepsilon_0)$。
+电子圆轨道有
+\[
+ m_ev^2/r=k_ee^2/r^2,\qquad
+ E(r)=\tfrac12m_ev^2-k_ee^2/r
+ =-\frac{k_ee^2}{2r},
+\]
+并有 $a=k_ee^2/(m_er^2)$。
+SI 制拉莫尔辐射功率
+$P=e^2a^2/(6\pi\varepsilon_0c^3)
+=2k_e^3e^6/(3m_e^2c^3r^4)$。
+能量损失
+$(dE/dr)(dr/dt)=-P$，
+得到
+\[
+ \frac{dr}{dt}=-\frac{4k_e^2e^4}{3m_e^2c^3r^2}.
+\]
+从 $r_0$ 积分到0：
+\[
+ \boxed{t=\frac{m_e^2c^3r_0^3}{4k_e^2e^4}
+ \simeq1.3\times10^{-11}\,\mathrm s=13\,\mathrm{ps}}.
+\]
+\excheck 这是古典模型的原子坍缩时间，
+正是其无法描述真实稳定原子的经典矛盾。
+
+\atomicproblem{20}{235}
+证明：类氢离子电子从第 $n+1$ 轨道跃迁到第
+$n$ 轨道时，辐射角频率 $\omega$
+满足 $\Omega_n>\omega>\Omega_{n+1}$，
+其中 $\Omega_j$ 是轨道上的电子公转角频率。
+并证明大 $n$ 时 $\omega/\Omega_n\to1$。
+\exsolution
+玻尔能级写作 $E_n=-A/n^2$，$A>0$；
+其第 $n$ 轨道公转角频率为
+$\Omega_n=2A/(\hbar n^3)$。
+相邻跃迁的光子角频率为
+\[
+ \omega=\frac{A}{\hbar}
+ \left(\frac1{n^2}-\frac1{(n+1)^2}\right).
+\]
+对函数 $f(x)=-A/x^2$ 使用中值定理，
+存在 $\xi\in(n,n+1)$ 使
+$E_{n+1}-E_n=f'(\xi)=2A/\xi^3$，
+因而
+\[
+ \boxed{\Omega_n>\omega>\Omega_{n+1}}.
+\]
+又 $\xi/n\to1$，得到
+\[
+ \boxed{\lim_{n\to\infty}
+ \frac\omega{\Omega_n}=1}.
+\]
+\excheck 结论体现玻尔对应原理；
+当 $n$ 大时相邻能级跃迁频率趋近经典公转频率。
+
+\atomicproblem{21}{235}
+质量为 $m$ 的粒子在中心势
+$U(r)=kr^2/2$（$k>0$）中作圆周运动，
+应用玻尔角动量量子化求允许的半径和能量。
+\exsolution
+圆周向心力条件
+$mv^2/r=kr$，故公转角频率
+$\Omega=v/r=\sqrt{k/m}$。
+玻尔量子化
+$L=mvr=mr^2\Omega=n\hbar$，
+$n=1,2,\dots$，所以
+\[
+ \boxed{r_n=\sqrt{\frac{n\hbar}{m\Omega}}
+ =\sqrt{\frac{n\hbar}{\sqrt{mk}}}}.
+\]
+机械能
+$E_n=\tfrac12mv^2+\tfrac12kr_n^2
+=kr_n^2$，于是
+\[
+ \boxed{E_n=n\hbar\Omega=
+ n\hbar\sqrt{\frac km}}.
+\]
+\excheck 这是\emph{玻尔圆轨道}的模型，
+不是一维量子谐振子精确本征值
+$(n+\tfrac12)\hbar\Omega$。
+
+\atomicproblem{22}{235}
+对氢原子 H 和单电离氦离子 He$^+$，
+求：(a) 第一玻尔轨道半径及电子速度；
+(b) 基态动能与结合能；
+(c) 电离电势、第一次激发电势、
+共振谱线 $2\to1$ 波长。
+\exsolution
+固定核近似、核电荷数 $Z=1$ 或2，
+\[
+ r_{1,Z}=\frac{a_0}{Z},\quad
+ v_{1,Z}=Z\alpha_{\rm fs}c,\quad
+ K_{1,Z}=E_{b,Z}=13.606Z^2\,\mathrm{eV}.
+\]
+电离电势的数值（V）等于结合能的数值（eV）；
+第一次激发所需能量为
+$(1-1/4)E_b=3E_b/4$，
+跃迁光子波长为 $\lambda_{21}=hc/(3E_b/4)$。
+结果为
+\[
+\begin{array}{c|cc}
+ &\mathrm H&\mathrm{He}^{+}\\\hline
+ r_1\,(\mathrm{pm})&52.9&26.5\\
+ v_1\,(10^6\mathrm{m/s})&2.18&4.36\\
+ K_1=E_b\,(\mathrm{eV})&13.6&54.4\\
+ U_{\mathrm{ion}}\,(\mathrm V)&13.6&54.4\\
+ U_{\mathrm{exc},1}\,(\mathrm V)&10.2&40.8\\
+ \lambda_{21}\,(\mathrm{nm})&121.6&30.4
+\end{array}
+\]
+\excheck 原子 H 与类氢离子 He$^+$ 都只有一个电子，
+同 $n$ 时 $r\propto Z^{-1}$、
+$E\propto Z^2$、$\lambda\propto Z^{-2}$。
+
+\atomicproblem{23}{235}
+求单电离氦 He$^+$ 中电子沿第二玻尔轨道
+运动的公转角频率。
+\exsolution
+类氢玻尔轨道半径
+$r_n=a_0n^2/Z$，速度
+$v_n=Z\alpha_{\rm fs}c/n$，
+因此
+\[
+ \Omega_n=\frac{v_n}{r_n}
+ =\frac{Z^2\alpha_{\rm fs}c}{a_0n^3}.
+\]
+对 He$^+$ 取 $Z=2,n=2$，
+\[
+ \boxed{\Omega_2\simeq2.07\times10^{16}\,\mathrm{s^{-1}}}.
+\]
+\excheck 求的是\emph{角频率}，
+不是公转每秒圈数 $\Omega/(2\pi)$。
+
+\atomicproblem{24}{235}
+对类氢离子电子沿第 $n$ 个玻尔圆轨道运动，
+求其轨道磁矩 $\boldsymbol\mu_n$、
+轨道磁矩与轨道角动量之比；
+给出第一轨道磁矩的模。
+\exsolution
+电子电荷为 $-e$，轨道等效电流
+$I=-ev/(2\pi r)$，环路面积 $\pi r^2$，
+故
+\[
+ \boldsymbol\mu=-\frac{evr}{2}\,\hat{\boldsymbol L}
+ =-\frac e{2m_e}\boldsymbol L.
+\]
+按玻尔量子化 $|\boldsymbol L|=n\hbar$，
+\[
+ \boxed{\boldsymbol\mu_n=
+ -n\frac{e\hbar}{2m_e}\,\hat{\boldsymbol L}},
+ \qquad
+ \boxed{\frac{|\boldsymbol\mu_n|}{|\boldsymbol L|}
+ =\frac e{2m_e}},
+\]
+\[
+ \boxed{|\boldsymbol\mu_1|=\mu_B=
+ \frac{e\hbar}{2m_e}
+ \simeq9.274\times10^{-24}\,\mathrm{J/T}}.
+\]
+\excheck 电子带负电，轨道磁矩矢量与
+角动量反向；磁矩模是正值。
+
+\atomicproblem{25}{235}
+在玻尔模型中估算氢原子基态电子运动在
+轨道中心产生的磁感应强度。
+\exsolution
+将电子轨道视为半径
+$a_0=5.29\times10^{-11}\,\mathrm m$ 的圆电流环，
+电流模为 $I=ev/(2\pi a_0)$，
+环中心磁场为
+\[
+ B=\frac{\mu_0 I}{2a_0}
+ =\frac{\mu_0 ev}{4\pi a_0^2}.
+\]
+用 $v=\alpha_{\rm fs}c\simeq2.19\times10^6\,\mathrm{m/s}$，
+\[
+ \boxed{B\simeq12.5\,\mathrm T
+ =1.25\times10^5\,\mathrm G}.
+\]
+\excheck 这里估算的是经典玻尔\emph{轨道电流}磁场，
+真实基态电子没有经典意义上的绕核轨道；
+不应把该数值说成精确量子自旋/轨道局域磁场。
+
+\atomicproblem{26}{235}
+计算氢原子莱曼系、巴耳末系、帕邢系
+在波长轴上覆盖的区间，并标出可见光区域。
+\exsolution
+里德伯公式
+\[
+ \frac1\lambda=R_H\left(\frac1{n_1^2}-\frac1{n_2^2}\right),
+ \qquad n_2>n_1.
+\]
+对同一系，最长波长来自 $n_2=n_1+1$，
+最短波长（系限）来自 $n_2\to\infty$，
+故
+\[
+ \lambda_{\max}=
+ \frac1{R_H[n_1^{-2}-(n_1+1)^{-2}]},
+ \quad
+ \lambda_{\min}=\frac{n_1^2}{R_H}.
+\]
+取近似 $R_H=1.097\times10^7\,\mathrm{m^{-1}}$：
+\[
+ \boxed{\begin{array}{c|cc}
+ &\lambda_{\min}&\lambda_{\max}\\\hline
+ \text{莱曼 }(n_1=1)&91.2\,\mathrm{nm}&121.6\,\mathrm{nm}\\
+ \text{巴耳末 }(n_1=2)&364.6\,\mathrm{nm}&656.3\,\mathrm{nm}\\
+ \text{帕邢 }(n_1=3)&820.4\,\mathrm{nm}&1875\,\mathrm{nm}
+ \end{array}}
+\]
+\excheck 可见区约为 $380$--$760\,\mathrm{nm}$，
+其中的氢谱线主要属于巴耳末系；
+该表可直接据端点在波长轴绘制三个连续区间。
+
+\atomicproblem{27}{235}
+氢原子某条谱线的波数，
+等于巴耳末系波长
+$486.1\,\mathrm{nm}$ 与 $410.2\,\mathrm{nm}$
+两条谱线波数之差。
+求该未知谱线属于哪一系及其波长。
+\exsolution
+巴耳末 $486.1\,\mathrm{nm}$ 为 $4\to2$，
+$410.2\,\mathrm{nm}$ 为 $6\to2$。
+其波数之\emph{差}为
+\[
+ \left[\frac1{410.2\,\mathrm{nm}}-
+ \frac1{486.1\,\mathrm{nm}}\right]
+ =R_H\left(\frac1{4^2}-\frac1{6^2}\right).
+\]
+它对应从上能级6跃迁到下能级4，
+即\emph{布拉开特系（Brackett）}的 $6\to4$ 谱线。
+于是
+\[
+ \boxed{\lambda=\frac1{R_H(1/16-1/36)}
+ \simeq2.63\,\mu\mathrm m}.
+\]
+\excheck 必须取两谱线\emph{波数}之差，
+而不是直接拿两个波长相减。
+
+\atomicproblem{28}{235}
+对氢原子求：(a) 巴耳末系前三条谱线波长；
+(b) 能分辨该系列前20条谱线的光谱仪，
+至少应有多大的分辨本领 $\lambda/\delta\lambda$？
+\exsolution
+巴耳末系下能级为 $n_1=2$，
+第 $k$ 条线对应上能级 $n_2=k+2$。
+由里德伯公式，
+\[
+ \boxed{\lambda_1\simeq656\,\mathrm{nm},\quad
+ \lambda_2\simeq486\,\mathrm{nm},\quad
+ \lambda_3\simeq434\,\mathrm{nm}}.
+\]
+高序线间距不断缩小，最严格条件是区分
+第20条（$22\to2$）与第21条（$23\to2$）。
+故要求
+\[
+ \mathcal R\ge
+ \frac{\lambda_{22}}{\lambda_{22}-\lambda_{23}},
+ \quad
+ \lambda_n=\frac1{R_H(1/4-1/n^2)}.
+\]
+直接计算
+\[
+ \boxed{\mathcal R_{\min}\simeq1.41\times10^3
+ \approx1.5\times10^3}.
+\]
+\excheck 应比较最密集的一端；
+不能只用第一条和第二条的大间隔估计。
+
+\atomicproblem{29}{235}
+宽度 $\ell=6.6\,\mathrm{mm}$ 的光栅
+受到正入射的氢原子辐射。
+巴耳末系的\emph{第50条谱线}在衍射角 $\theta$
+附近恰达到瑞利分辨判据。
+求 $\theta$，并对“第50条”序号作严格辨析。
+\exsolution
+令光栅实际参与干涉的缝数为 $N$，
+衍射级次为 $m$。
+光栅的瑞利分辨本领为
+$\mathcal R=mN$，而正入射光栅
+$m\lambda=d\sin\theta$、$N\simeq\ell/d$，
+所以
+\[
+ \boxed{\sin\theta=
+ \frac{\lambda^2}{\ell\,\delta\lambda}}.
+\]
+上式中的分子分母约去后实质为
+$\sin\theta=\lambda^2/(\ell\delta\lambda)$。
+严格按\emph{第50条}定义，
+上能级 $n=52$，邻线是 $n=53$。
+用里德伯公式
+$\lambda_{52}\simeq365.047\,\mathrm{nm}$、
+$\delta\lambda\simeq0.02021\,\mathrm{nm}$，
+则
+\[
+ \boxed{\sin\theta\simeq0.999,\quad
+ \theta\simeq87^\circ}.
+\]
+\textbf{原书答案约 $60^\circ$ 的来源：}
+若把“第50条”\emph{直接当作上能级 $n=50$}，
+则相邻谱线 $50\to2$、$51\to2$
+给 $\sin\theta\simeq0.889$、$\theta\simeq63^\circ$，
+即书末近似 $60^\circ$。
+\excheck 第50条谱线与 $n=50$ 上能级
+原则上差2；本题的原书题号解释需由独立学术复核决定，
+不能悄然抹去两种编号造成的差异。
+
+\atomicproblem{30}{236}
+哪种元素的类氢谱线波长等于氢原子对应谱线的四分之一？
+\exsolution
+类氢离子（忽略约化质量细修正）的能级
+$E_n\propto-Z^2/n^2$，
+对应两能级间辐射的光子能量
+$\Delta E\propto Z^2$。
+因此对应波长
+$\lambda_Z=\lambda_H/Z^2$。
+由 $\lambda_Z=\lambda_H/4$ 得 $Z=2$，
+所以
+\[
+ \boxed{\mathrm{He}^{+}\ \text{（单电离氦离子）}}.
+\]
+\excheck 普通氦原子有两个电子，
+不是类氢单电子体系；题中对应的是 He$^+$。
+
+\atomicproblem{31}{236}
+氢原子被激发至主量子数 $n$ 的能级。
+假定允许其在各个更低能级间辐射跃迁，
+最多有多少条不同频率的谱线？
+\exsolution
+可参与级联跃迁的能级集合为
+$1,2,\dots,n$。
+每一对不同能级 $(i,j)$，$1\le i<j\le n$，
+对应一次可能的向下跃迁，
+故谱线种数为二元组合数
+\[
+ \boxed{N=\binom n2=\frac{n(n-1)}{2}}.
+\]
+\excheck 本题数的是\emph{整组被激发原子}
+可能发出的谱线，不是单个原子一次级联必然发出的线数。
+
+\atomicproblem{32}{236}
+求氢原子\emph{吸收}谱在
+$94.5$--$130.0\,\mathrm{nm}$ 区间内有哪些线。
+初始原子均在基态。
+\exsolution
+基态吸收只能有 $1\to n$，$n\ge2$，
+属于莱曼系，满足
+\[
+ \lambda_{1n}=
+ \frac1{R_H(1-1/n^2)}.
+\]
+依次为
+\[
+ \boxed{\lambda_{12}\simeq121.6\,\mathrm{nm}},\quad
+ \boxed{\lambda_{13}\simeq102.6\,\mathrm{nm}},\quad
+ \boxed{\lambda_{14}\simeq97.3\,\mathrm{nm}},\quad
+ \boxed{\lambda_{15}\simeq95.0\,\mathrm{nm}}.
+\]
+下一条 $1\to6$ 的波长约 $93.8\,\mathrm{nm}$，
+已小于题给下界 $94.5\,\mathrm{nm}$。
+\excheck 按底本题面区间应有\emph{四条}，
+而底本书末只列前三条
+$97.3,102.6,121.6\,\mathrm{nm}$，
+漏掉仍在区间内的 $95.0\,\mathrm{nm}$；
+已明确列为需校勘的答案缺项。
+% === END 34-atomic-scattering-019-032.tex ===
+
+% === BEGIN 34-atomic-scattering-033-048.tex blob 26103729fd44a2e0cd4bcce44248fe70e51a9801 ===
+% Irodov Part VI §6.1 problems 33--48 (end of §6.1).
+% Source: Arihant PDF pp.245--246 (printed pp.236--237),
+% Answers pp.349 (printed pp.340). Source scans establish
+% #36=5.18e15 s^-1, #39=18.0 nm, #44=0.20 nm.
+\atomicproblem{33}{236}
+He$^+$ 离子从某一激发态连续发射两光子，
+其波长分别为 $108.5$ 与 $30.4\,\mathrm{nm}$，
+最终达到基态。求初始主量子数 $n$。
+\exsolution
+He$^+$ 基态结合能约 $E_b=54.4\,\mathrm{eV}$。
+由跃迁能量
+\[
+ \Delta E=E_b\left(\frac1{n_f^2}-\frac1{n_i^2}\right)
+ =\frac{hc}{\lambda}
+\]
+知 $30.4\,\mathrm{nm}$ 对应约
+$40.8\,\mathrm{eV}$，
+即 $2\to1$ 跃迁。
+$108.5\,\mathrm{nm}$ 对应约
+$11.43\,\mathrm{eV}$，因此前一跃迁满足
+\[
+ 11.43=54.4\left(\frac14-\frac1{n^2}\right).
+\]
+解得 $1/n^2\simeq0.040$，
+\[
+ \boxed{n=5},\quad
+ \text{跃迁顺序 }5\to2\to1.
+\]
+\excheck 两光子能量之和
+$11.43+40.8\simeq52.2\,\mathrm{eV}$，
+等于 $54.4(1-1/25)\,\mathrm{eV}$。
+
+\atomicproblem{34}{236}
+已知 He$^+$ 的巴耳末系和莱曼系第一条
+（各自最长波长）谱线波长之差为
+$\Delta\lambda=133.7\,\mathrm{nm}$，
+求以\emph{角频率}记号定义的里德伯常数
+$\mathcal R$。
+\exsolution
+类氢离子跃迁角频率写作
+$\omega=\mathcal R Z^2(n_1^{-2}-n_2^{-2})$，
+对 He$^+$ 取 $Z=2$。
+第一条巴耳末为 $3\to2$，
+第一条莱曼为 $2\to1$，因此
+\[
+ \lambda_B=\frac{2\pi c}{\mathcal RZ^2(1/4-1/9)}
+ =\frac{72\pi c}{5\mathcal RZ^2},
+\quad
+ \lambda_L=\frac{2\pi c}{\mathcal RZ^2(1-1/4)}
+ =\frac{8\pi c}{3\mathcal RZ^2}.
+\]
+相减得
+\[
+ \Delta\lambda=\frac{176\pi c}{15\mathcal RZ^2},
+ \qquad
+ \boxed{\mathcal R=
+ \frac{176\pi c}{15Z^2\Delta\lambda}
+ \simeq2.07\times10^{16}\,\mathrm{s^{-1}}}.
+\]
+\excheck 这里 $\mathcal R$ 是\emph{角频率常数}，
+与常用波数里德伯常数
+$R_\infty\simeq1.097\times10^7\,\mathrm{m^{-1}}$
+相差因子 $2\pi c$。
+
+\atomicproblem{35}{236}
+某单电子类氢离子巴耳末系与莱曼系
+第一谱线的波长差为 $59.3\,\mathrm{nm}$。
+确定该离子。
+\exsolution
+由上一题可知，对于给定跃迁组合，
+波长差按核电荷 $Z$ 缩放为
+$\Delta\lambda_Z\propto1/Z^2$。
+He$^+$（$Z=2$）时差为 $133.7\,\mathrm{nm}$，
+于是
+\[
+ \left(\frac Z2\right)^2=
+ \frac{133.7}{59.3},\quad
+ Z\simeq3.00.
+\]
+因此为
+\[
+ \boxed{\mathrm{Li}^{2+}
+ \quad\text{（双电离锂，核电荷数3）}}.
+\]
+\excheck 中性锂原子含3电子，不属于类氢单电子体系。
+
+\atomicproblem{36}{236}
+He$^+$ 的某一谱系，其最大与最小
+跃迁角频率之差为
+$\Delta\omega=5.18\times10^{15}\,\mathrm{s^{-1}}$。
+求这个谱系的第一条（最长波长）谱线波长。
+\exsolution
+设谱系下能级为 $n$。
+系限角频率为
+$\omega_\infty=\mathcal R Z^2/n^2$，
+第一线来自 $n+1\to n$，
+$\omega_1=\mathcal RZ^2[n^{-2}-(n+1)^{-2}]$。
+故间隔
+\[
+ \Delta\omega=\omega_\infty-\omega_1
+ =\frac{\mathcal R Z^2}{(n+1)^2}.
+\]
+对 $Z=2$、$\mathcal R=2.07\times10^{16}\,\mathrm{s^{-1}}$，
+得到 $(n+1)^2\simeq16$，所以 $n=3$。
+第一线为 $4\to3$，
+\[
+ \boxed{\lambda_{43}=
+ \frac{2\pi c}{\mathcal R\,4(1/9-1/16)}
+ \simeq0.47\,\mu\mathrm m}.
+\]
+\excheck 题中是两端\emph{角频率}之差，
+不可用普通频率常数遗漏 $2\pi$。
+
+\atomicproblem{37}{236}
+某类氢离子巴耳末系第三条谱线波长
+为 $108.5\,\mathrm{nm}$。
+求该离子基态电子结合能。
+\exsolution
+巴耳末第三线为 $5\to2$，
+对应光子能量
+\[
+ \frac{hc}{\lambda}
+ =E_b\left(\frac14-\frac1{25}\right)
+ =\frac{21}{100}E_b.
+\]
+所以
+\[
+ \boxed{E_b=\frac{100}{21}
+ \frac{hc}{108.5\,\mathrm{nm}}
+ \simeq54.4\,\mathrm{eV}}.
+\]
+该值对应 He$^+$。
+\excheck 不同谱线序数须区别于主量子数；
+第三条巴耳末线的上能级为5。
+
+\atomicproblem{38}{236}
+中性氦原子基态第一个电子的结合能
+（第一电离能）为
+$E_0=24.6\,\mathrm{eV}$。
+求移去氦原子全部两个电子所需总能量。
+\exsolution
+先移去第一个电子，消耗
+$24.6\,\mathrm{eV}$；
+剩余 He$^+$ 是核电荷为2的类氢离子，
+其基态第二电离能为
+$4\times13.6=54.4\,\mathrm{eV}$。
+所以
+\[
+ \boxed{E_{\rm total}=24.6+54.4
+ =79.0\,\mathrm{eV}}.
+\]
+\excheck 不能把第一电离能简单乘2，
+因为第一次电离前后电子间排斥的影响不同。
+
+\atomicproblem{39}{236}
+波长 $\lambda=18.0\,\mathrm{nm}$ 的辐射
+使起初静止的 He$^+$ 离子基态发生光电离。
+求光电子最大速度。
+\exsolution
+单个入射光子能量
+$hc/\lambda\simeq68.88\,\mathrm{eV}$，
+He$^+$ 的结合能 $E_b=54.4\,\mathrm{eV}$。
+忽略重核反冲，
+电子动能
+$K=hc/\lambda-E_b\simeq14.48\,\mathrm{eV}$。
+故
+\[
+ \boxed{v_{\max}=
+ \sqrt{\frac{2(hc/\lambda-E_b)}{m_e}}
+ \simeq2.26\times10^6\,\mathrm{m/s}}.
+\]
+\excheck 原扫描题面为 \textbf{$18.0\,\mathrm{nm}$}，
+不是 PDF 抽取文本易误识别的 $180\,\mathrm{nm}$；
+后者光子能量不足以电离基态 He$^+$。
+
+\atomicproblem{40}{236}
+基态氢原子 A 以初始动能 $T$ 正面撞击
+另一个起初静止的基态氢原子 B。
+求使其中一个原子至少激发到
+$n=2$、进而能辐射光子的最小 $T$。
+\exsolution
+使一个氢原子从基态激发到 $n=2$，
+需要内部激发能
+$\Delta=13.6(1-1/4)=10.2\,\mathrm{eV}$。
+两个原子质量相等 $M$，
+实验室系中可转化为内部激发的质心相对运动能量
+为
+\[
+ T_{\rm cm}=\frac12\mu v^2
+ =\frac12\frac M2\,v^2
+ =\frac12T,\qquad T=\frac12Mv^2.
+\]
+所以临界条件 $T/2=\Delta$，
+\[
+ \boxed{T_{\min}=2\Delta\simeq20.4\,\mathrm{eV}}.
+\]
+\excheck 不能仅取 $10.2\,\mathrm{eV}$，
+因为碰后质心必须继续运动，
+入射动能不可能全部转为内部激发。
+
+\atomicproblem{41}{236}
+起初静止的氢原子放出第一条莱曼线光子。
+求氢原子获得的反冲速度。
+\exsolution
+第一莱曼线来自 $2\to1$，
+光子能量
+$\varepsilon\simeq10.2\,\mathrm{eV}$，
+动量 $p_\gamma=\varepsilon/c$。
+若原子起初静止，由总动量守恒，
+原子获得等大反向动量，故
+\[
+ \boxed{v_{\mathrm H}=
+ \frac{\varepsilon}{M_{\mathrm H}c}
+ \simeq3.25\,\mathrm{m/s}}.
+\]
+\excheck 原子质量使用氢\emph{原子}质量；
+光子的质量不是 $E/c^2$ 再去用非相对论动量公式求速度。
+
+\atomicproblem{42}{236}
+承上题，求实际发出光子的能量
+与不计反冲时的 $2\to1$ 内能差之间的相对差，
+以百分数表示。
+\exsolution
+跃迁内能差记为 $\Delta E$。
+发射后原子后退动能
+$K_{\rm recoil}=p_\gamma^2/(2M)
+=E_\gamma^2/(2Mc^2)$。
+能量守恒
+$\Delta E=E_\gamma+E_\gamma^2/(2Mc^2)$；
+因 $\Delta E\ll Mc^2$，
+一阶近似
+\[
+ \frac{\Delta E-E_\gamma}{\Delta E}
+ \simeq\frac{\Delta E}{2Mc^2}.
+\]
+以 $\Delta E=10.2\,\mathrm{eV}$、
+$Mc^2\simeq938.8\,\mathrm{MeV}$，
+\[
+ \boxed{\text{相对差}\simeq
+ 5.43\times10^{-9}
+ =5.43\times10^{-7}\%\approx0.55\times10^{-6}\%}.
+\]
+\excheck 这是一个极小的\emph{红移}校正；
+将比值改写百分数时必须乘100。
+
+\atomicproblem{43}{236}
+起初静止的 He$^+$ 发出第一莱曼线光子，
+该光子随后电离起初静止的基态氢原子。
+求被释放光电子的速度，忽略重核反冲。
+\exsolution
+He$^+$ 的 $2\to1$ 光子能量为
+$4(10.2)=40.8\,\mathrm{eV}$。
+氢基态电离能为
+$13.6\,\mathrm{eV}$。
+由能量守恒，
+光电子获得动能
+$T_e=40.8-13.6=27.2\,\mathrm{eV}$，
+因而
+\[
+ \boxed{v_e=\sqrt{\frac{2T_e}{m_e}}
+ \simeq3.09\times10^6\,\mathrm{m/s}}.
+\]
+\excheck 光子具有离散跃迁能，
+不能将 He$^+$ 的 $40.8\,\mathrm{eV}$ 误作光电子动能；
+必须扣除氢的电离能。
+
+\atomicproblem{44}{236}
+沿与原子速度成 $\theta=45^\circ$
+的方向观察激发氢原子的第一莱曼线，
+发现波长位移 $\Delta\lambda=0.20\,\mathrm{nm}$。
+估算氢原子速率。
+\exsolution
+在 $v\ll c$ 时，相对论多普勒公式的一阶形式为
+\[
+ \frac{|\Delta\lambda|}{\lambda_0}
+ \simeq\frac{v|\cos\theta|}{c}.
+\]
+第一莱曼线
+$\lambda_0\simeq121.6\,\mathrm{nm}$，
+因此
+\[
+ \boxed{v\simeq
+ \frac{c\,|\Delta\lambda|}
+ {\lambda_0|\cos45^\circ|}
+ \simeq6.98\times10^5\,\mathrm{m/s}}.
+\]
+\excheck 位移的符号由接近或远离决定；
+题给只问速度大小，故取绝对值。
+
+\atomicproblem{45}{236--237}
+应用玻尔--索末菲作用量量子化
+$\oint p\,dq=2\pi n\hbar$，
+求粒子在：(a) 长度 $\ell$ 的无限深一维方阱；
+(b) 半径 $r$ 的圆周；
+(c) $U(x)=\alpha x^2/2$ 的一维谐振势；
+(d) $U(r)=-\alpha/r$ 的中心引力型势作圆周运动时，
+允许的能量。
+\exsolution
+(a) 粒子在方阱两侧来回反射，一个周期走过 $2\ell$，
+故 $2p\ell=2\pi n\hbar$，
+\[
+ \boxed{E_n=\frac{n^2\pi^2\hbar^2}{2m\ell^2}}.
+\]
+(b) 沿圆周 $\oint p\,dq=2\pi rp=2\pi L$，
+所以 $L=n\hbar$，有
+\[
+ \boxed{E_n=\frac{n^2\hbar^2}{2mr^2}}.
+\]
+(c) 振子频率 $\Omega=\sqrt{\alpha/m}$，
+经典一周作用量
+$\oint p\,dx=2\pi E/\Omega$，于是
+\[
+ \boxed{E_n=n\hbar\Omega=n\hbar\sqrt{\alpha/m}}.
+\]
+(d) 圆周条件 $mv^2/r=\alpha/r^2$，
+加上 $L=mvr=n\hbar$，
+解出
+$r=n^2\hbar^2/(m\alpha)$，
+能量为
+\[
+ \boxed{E_n=-\frac{m\alpha^2}{2n^2\hbar^2}}.
+\]
+\excheck 这是\emph{早期作用量量子化}推导；
+(c) 缺少精确量子谐振子的零点能
+$\hbar\Omega/2$，不应把这两种理论混为一谈。
+
+\atomicproblem{46}{237}
+考虑氢原子质子的运动，
+求基态电子结合能及里德伯常数的
+约化质量修正，并估计忽略核运动的相对误差。
+\exsolution
+电子与质子的相对运动等价于约化质量
+\[
+ \mu=\frac{m_em_p}{m_e+m_p}
+\]
+的单粒子库仑问题。
+因玻尔结合能与里德伯常数都正比于质量，
+\[
+ \boxed{E_b=\frac{\mu(k_ee^2)^2}{2\hbar^2}},\qquad
+ \boxed{\mathcal R=
+ \frac{\mu(k_ee^2)^2}{2\hbar^3}},
+\]
+其中 $\mathcal R$ 是角频率形式，
+若使用波数里德伯常数需除以 $2\pi c$。
+忽略质子运动等于用 $m_e$ 代替 $\mu$，
+相对高估量为
+\[
+ \frac{m_e-\mu}{\mu}=\frac{m_e}{m_p}
+ \simeq5.45\times10^{-4}.
+\]
+故
+\[
+ \boxed{\text{相对误差}\simeq0.0545\%}.
+\]
+\excheck 对真实氢原子这一修正很小，
+但分析同位素光谱线位移时不可遗漏。
+
+\atomicproblem{47}{237}
+对普通氢 H 和重氢 D，
+计算：(a) 基态电子结合能之差；
+(b) 第一莱曼线波长之差。
+\exsolution
+两体系电子质量相同，核质量分别为
+$m_p$、$m_d$，约化质量
+$\mu_A=m_em_A/(m_e+m_A)$。
+结合能及跃迁频率都与 $\mu$ 成正比，
+故
+\[
+ \boxed{E_{b,D}-E_{b,H}
+ =13.6057\,\mathrm{eV}\,
+ \frac{\mu_D-\mu_H}{m_e}
+ \simeq3.7\,\mathrm{meV}}.
+\]
+第一莱曼线波长
+$\lambda_{21,A}\propto1/\mu_A$，
+因此
+\[
+ \boxed{\lambda_{21,H}-\lambda_{21,D}
+ \simeq33\,\mathrm{pm}}.
+\]
+\excheck 重氢核较重，约化质量更接近 $m_e$，
+因此 D 的结合能稍大、莱曼波长稍短。
+
+\atomicproblem{48}{237}
+估计以下两个类氢系统基态时
+两粒子间距、结合能和第一莱曼线波长：
+(a) 质子与带电量 $-e$、质量 $207m_e$ 的负介子
+组成的介子氢；
+(b) 电子与正电子组成的正电子素。
+\exsolution
+对电荷模为 $e$ 的两粒子库仑体系，
+只需把电子质量换成约化质量
+$\mu=m_1m_2/(m_1+m_2)$。
+基态类玻尔半径、结合能、第一莱曼线依次为
+\[
+ a=\frac{4\pi\varepsilon_0\hbar^2}{\mu e^2},
+ \quad E_b=\frac{\mu(k_ee^2)^2}{2\hbar^2},
+ \quad\lambda_{21}=\frac{hc}{3E_b/4}.
+\]
+(a) 对 $\mu_{\mu p}=
+(207m_e)m_p/(207m_e+m_p)\simeq186m_e$，
+\[
+ \boxed{a\simeq0.285\,\mathrm{pm},\quad
+ E_b\simeq2.53\,\mathrm{keV},\quad
+ \lambda_{21}\simeq0.65\,\mathrm{nm}}.
+\]
+(b) 正电子素约化质量恰为 $\mu=m_e/2$，
+所以
+\[
+ \boxed{a\simeq106\,\mathrm{pm},\quad
+ E_b\simeq6.80\,\mathrm{eV},\quad
+ \lambda_{21}\simeq243\,\mathrm{nm}}.
+\]
+\excheck 第(a)问不能直接用介子质量 $207m_e$
+代替约化质量，质子质量有限会产生明显修正。
+% === END 34-atomic-scattering-033-048.tex ===
