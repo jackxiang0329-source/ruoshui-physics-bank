@@ -40,3 +40,47 @@ u_y=\frac{u'_y\sqrt{1-0.6^2}}{1+0.6u'_x/c}=\frac{4\sqrt3c}{23}.
 \]
 车内系中B处事件早于A处事件10纳秒。
 \crosscheck $c\Delta t=3.75\,\mathrm m<\Delta x$，两事件为空间样间隔，先后可随参考系改变；不能把事件先后等同于因果关系。
+
+\sourceproblem{5-T7}{20}{24}
+\problemtext 实验室中两个电子沿相反方向以相同速率 $0.67c$ 运动，求相对速率。
+\workings 共线速度变换给出 $u_{\rm rel}=2(0.67)c/(1+0.67^2)\approx0.925c$。
+\crosscheck 结果小于光速；不能用经典速度相加得到 $1.34c$。
+\sourceproblem{5-T8}{20}{24}
+\problemtext 原子核以 $0.5c$ 远离观察者，沿运动方向发射相对核速率 $0.8c$ 的电子，又向观察者方向发射光子，求观察者测得两者速率。
+\workings 远离方向为正，$u_e=(0.8+0.5)c/(1+0.8\cdot0.5)=13c/14$。光子在核系速度为 $-c$，变换后 $u_\gamma=(-1+0.5)c/(1-0.5)=-c$，速率为 $c$。
+\crosscheck 电子速率小于光速，光子速率在惯性系间不变。
+\sourceproblem{5-T9}{21}{25}
+\problemtext S系光子沿与正 $x$ 轴成60度方向传播，S'沿正 $x$ 以 $0.6c$ 运动，求S'中的方向及速率。
+\workings
+\[
+u'_x=\frac{c/2-0.6c}{1-0.6/2}=-c/7,\quad
+u'_y=\frac{(\sqrt3c/2)\sqrt{1-0.6^2}}{1-0.6/2}=4\sqrt3c/7.
+\]
+所以 $\theta'=\arccos(-1/7)\approx98.21^\circ$，速率为 $c$。
+\crosscheck 两分量平方和为 $c^2$；方向在第二象限，不能直接取反正切主值。
+\sourceproblem{5-T10}{21}{25}
+\problemtext 质量 $m_0$ 的粒子分别从静止加速至 $0.100c$、从 $0.900c$ 加速至 $0.980c$，求外力净功。
+\workings 相对论动能 $K=(\gamma-1)m_0c^2$，故
+\[
+W_1=(1/\sqrt{0.99}-1)m_0c^2\approx0.005038m_0c^2,
+\quad W_2=(1/\sqrt{1-0.98^2}-1/\sqrt{1-0.90^2})m_0c^2
+\approx2.7307m_0c^2.
+\]
+\crosscheck 两功均为正；高速区不能使用经典动能差。题面未给静质量数值，因此以 $m_0c^2$ 表示。
+\sourceproblem{5-T11}{22}{26}
+\problemtext 电子动能1 MeV、静能0.511 MeV，求动量大小。
+\workings $E=K+m_0c^2=1.511\,\mathrm{MeV}$，由 $E^2=p^2c^2+m_0^2c^4$ 得
+\[
+p=\sqrt{1.511^2-0.511^2}\,\mathrm{MeV}/c
+=\sqrt{2.022}\,\mathrm{MeV}/c\approx1.422\,\mathrm{MeV}/c.
+\]
+换算约 $7.60\times10^{-22}\,\mathrm{kg\,m/s}$。
+\crosscheck $pc=\sqrt{K(K+2m_0c^2)}$，不能把动能误当总能量。
+\sourceproblem{5-T12}{22}{26}
+\problemtext 静止质量42u的粒子衰变为两碎片，其中一片静质量20u、速率 $3c/5$，求另一片动量、总能量和静质量。
+\workings 第一片 $\gamma=5/4$，$E_1=25\,\mathrm u c^2$、$p_1=15\,\mathrm u c$。由四动量守恒，第二片 $\bm p_2=-\bm p_1$，$E_2=(42-25)\,\mathrm u c^2=17\,\mathrm u c^2$，
+\[
+m_2=\sqrt{17^2-15^2}\,\mathrm u=8\,\mathrm u .
+\]
+按题给 $1\,\mathrm u=1.66\times10^{-27}\,\mathrm{kg}$、$c=3\times10^8\,\mathrm{m/s}$，$p_2=7.47\times10^{-18}\,\mathrm{kg\,m/s}$，$E_2\approx2.54\times10^{-9}\,\mathrm J$，$m_2=1.328\times10^{-26}\,\mathrm{kg}$。
+\crosscheck 第二片速率 $p_2c^2/E_2=15c/17<c$，两片动量相反，总能量等于母粒子静能。
