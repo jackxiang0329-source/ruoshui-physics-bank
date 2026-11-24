@@ -136,3 +136,66 @@ E_L=(\sigma_1-\sigma_2-\sigma_3)/(2\varepsilon_0)=-10^{-5}/(2\varepsilon_0),
 \]
 数值为 $(6.50,-4.875,4.875,8.125,-8.125,6.50)\times10^{-6}\,\mathrm{C/m^2}$。
 \crosscheck 外两板总电荷为零，中板两面和为 $\sigma$；上、下间隙电势差相等。已放大PDF34确认总间距8厘米、上间隙5厘米；忽略边缘且无外加均匀场。
+
+\sourceproblem{6-T17}{30}{34}
+\problemtext 半径 $R_1$ 的导体球带电 $q$，外套内外半径 $R_2,R_3$ 的同心导体壳，壳带净电荷 $Q$；讨论电势、电势差、导线连接及接地情形。
+\workings 令 $k_e=1/(4\pi\varepsilon_0)$，$A=1/R_1-1/R_2>0$，无穷远为零势。孤立时壳内外面为 $-q,Q+q$，
+\[
+V_2=k_e(Q+q)/R_3,\quad V_1=V_2+k_eqA,\quad \Delta V=k_eqA.
+\]
+两导体相连且不接地时电荷全部到外表面，$V_1=V_2=k_e(Q+q)/R_3$，$\Delta V=0$。
+壳接地而内球保持电荷 $q$ 时，外表面净电荷为零，$V_2=0,V_1=k_eqA$。
+若仅内球接地而壳孤立且仍带净电荷 $Q$，内球新电荷 $q'=-Q/(1+R_3A)$，$V_1=0,V_2=k_e(Q+q')/R_3$，$\Delta V=-V_2$。
+若两者均接地且无外场，所有电势及电荷均为零。
+\crosscheck 接地约束为电势零而非净电荷固定；相连约束为等势。原页最后两问的接地次序需结合上述各情形对应，保留条件标记。
+\sourceproblem{6-T18}{31}{35}
+\problemtext 中性球形导体A含两个球形空腔，中心各有点电荷 $q_1,q_2$；球外远处有点电荷 $q_3$，讨论三电荷的受力及近似程度。
+\workings 每个空腔内壁感应总电荷分别为 $-q_1,-q_2$。各点电荷恰位于对应球形空腔中心，腔壁等势，由唯一性定理腔内场为中心点电荷径向场；去除自场后两中心电荷所受静电力均为零。外表面总电荷为 $q_1+q_2$。若外部点电荷距球心 $r$ 远大于球半径，主导单极力为
+\[
+\bm F_3\simeq k_e(q_1+q_2)q_3\,\bm e_r/r^2.
+\]
+\crosscheck 外部点电荷还使外表面极化，外力单极式不是一般精确解；若 $q_1+q_2=0$，应保留诱导多极项。两腔中心电荷零力在理想静电导体模型下为精确结论。
+\sourceproblem{6-T19}{31}{35}
+\problemtext 球形导体壳净电荷 $Q$，内外半径 $a,b$，腔内距球心 $r$ 处有点电荷 $q$，求球心电势。
+\workings 无外场、无穷远零势时壳外表面总电荷 $Q+q$ 且均匀，内壁总电荷 $-q$。球心至内外球面每一电荷元距离分别恒为 $a,b$，故
+\[
+V_O=k_e\left(q/r-q/a+(Q+q)/b\right).
+\]
+\crosscheck 内壁电荷虽不均匀，但其球心电势只依赖总量；$0<r<a$，$r=0$ 时点电荷自身势发散。
+\sourceproblem{6-T20}{32}{36}
+\problemtext 半径 $R$ 的导体球带电 $Q$，外有同心均匀介质层 $a<r<b$（$R<a$），相对介电常数 $\varepsilon_r$，求电位移、场强、电势及极化电荷。
+\workings 球对称下 $r>R$ 有 $\bm D=Q\bm e_r/(4\pi r^2)$，导体内为零。记 $\kappa(r)=\varepsilon_r$ 于介质层、其他外区为1，则 $\bm E=\bm D/(\varepsilon_0\kappa)$。无穷远零势时
+\[
+V(r)=k_eQ\begin{cases}
+1/r,&r\ge b,\\
+1/b+(1/r-1/b)/\varepsilon_r,&a\le r\le b,\\
+1/b+(1/a-1/b)/\varepsilon_r+1/r-1/a,&R\le r<a,\\
+1/b+(1/a-1/b)/\varepsilon_r+1/R-1/a,&r<R.
+\end{cases}
+\]
+介质内 $\bm P=(1-1/\varepsilon_r)\bm D$，极化体密度 $-\nabla\cdot\bm P=0$。内外表面极化面密度分别为
+\[
+\sigma'_a=-\frac{Q(1-1/\varepsilon_r)}{4\pi a^2},\quad
+\sigma'_b=\frac{Q(1-1/\varepsilon_r)}{4\pi b^2}.
+\]
+\crosscheck 电势在两介质界面连续，法向D无自由面电荷时连续；极化面总电荷相互抵消。
+\sourceproblem{6-T21}{32}{36}
+\problemtext 两同轴导体圆筒内外半径 $R_1,R_2$，介质分界半径 $r_0$，内外两层介电常数满足 $\varepsilon_2=2\varepsilon_1$，耐受场强均为 $E_m$，求先击穿区域及最大电压。
+\workings 长圆筒忽略端部，$D_r=\lambda/(2\pi r)$，$E_i=\lambda/(2\pi\varepsilon_i r)$。两层场强最大值分别位于 $R_1,r_0$，因 $\varepsilon_2r_0>\varepsilon_1R_1$，内层先达到 $E_m$，故 $\lambda_{\max}=2\pi\varepsilon_1R_1E_m$。积分得
+\[
+U_{\max}=E_mR_1\left(\ln\frac{r_0}{R_1}+\frac12\ln\frac{R_2}{r_0}\right)
+=\frac{E_mR_1}{2}\ln\frac{r_0R_2}{R_1^2}.
+\]
+\crosscheck 若原题分界半径为变量，上式给出对应结果；原图末行对数细小，保留原书符号对应的复核标记。两层电势差相加而非直接平均场强。
+\sourceproblem{6-T22}{33}{37}
+\problemtext 空气击穿场强3 kV/mm，求半径分别为1.0 cm、1.0 mm、0.1 mm的孤立长直导体单位长度最大带电量。
+\workings 表面场强 $E=|\lambda|/(2\pi\varepsilon_0R)$，因此 $|\lambda_{\max}|=2\pi\varepsilon_0RE_m$。以 $E_m=3.0\times10^6\,\mathrm{V/m}$ 代入，分别约为 $1.67\times10^{-6},1.67\times10^{-7},1.67\times10^{-8}\,\mathrm{C/m}$。
+\crosscheck 单位半径越大，容许线电荷越大；实际电晕及击穿阈值还依赖环境和表面状态。
+\sourceproblem{6-T23}{33}{37}
+\problemtext 平行板面积 $S$、间距 $d$、带电 $\pm Q$，其中一半面积插入厚度 $t$、相对介电常数 $\varepsilon_r$ 的介质片，求电压及电容。
+\workings 忽略边缘，未插入区电容 $C_0=\varepsilon_0S/(2d)$，插入区沿厚度由空气及介质串联，$C_1=\varepsilon_0S/[2(d-t+t/\varepsilon_r)]$。两区域并联，
+\[
+C=\frac{\varepsilon_0 S}{2}\left(\frac1d+\frac1{d-t+t/\varepsilon_r}\right),\qquad
+\Delta V=Q/C.
+\]
+\crosscheck $t=0$ 或 $\varepsilon_r=1$ 恢复真空电容；$t=d$ 得 $\varepsilon_0S(1+\varepsilon_r)/(2d)$。要求 $0\le t\le d$。
