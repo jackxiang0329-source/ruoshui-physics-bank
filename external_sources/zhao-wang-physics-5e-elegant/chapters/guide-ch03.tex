@@ -1,4 +1,5 @@
 % Consolidated guide-ch03 from 9a1384ddf1afcd855b09256c9c6f1c90b5023140; source fragments preserved.
+% 2026-11-24 八批严格二校第5批：历史片段哈希对应修改前版本。
 
 % === BEGIN guide-ch03-examples.tex blob 03ce9d096dedf6274ec073406f520181ea0f0217 ===
 % 第三批：《大学物理学学习指导》第5版，第3章解题示例3.1--3.5。
@@ -45,7 +46,7 @@ T_2=m(g-r_2\alpha)}.
 \[
 \boxed{\omega_0=\frac{v_0}{L}}.
 \]
-杆上距轴$x$的长度$dx$承受垂直压力$g(m/L)dx$，
+假设桌面对杆的法向压力均匀分布、转轴不承担竖直载荷，杆上距轴$x$的长度$dx$承受垂直压力$g(m/L)dx$，
 摩擦阻力矩大小
 \[
 \boxed{M_f=\int_0^L x\,\mu g\frac mL\,dx
@@ -69,7 +70,7 @@ $M_f\varphi=\tfrac12J\omega_0^2$；摩擦力矩方向始终与转动反向。
 \problemtext 桌面上质量$m_A$的物块通过不可伸长绳和半径$R$的均匀盘状定滑轮连接质量$m_B$的悬物。滑轮质量$m_C=2m_B$，且$m_A=3m_B$，物块与桌面动摩擦系数$\mu=0.5$。初始$A$静止、绳松弛，$B$先自由下落$l$后把绳拉紧。求绳拉紧瞬间滑轮角速度和此后$B$继续下降的最大距离$h$。
 \workings
 第一阶段自由落体，绳绷紧前$B$的速率
-$v_0=\sqrt{2gl}$。极短绷紧碰撞阶段，对绳与滑轮轴角动量守恒：
+$v_0=\sqrt{2gl}$。极短绷紧碰撞阶段，将两物块及滑轮分别写切向冲量方程，消去两侧绳的冲量（并假定外界摩擦、重力冲量可忽略），得广义动量关系：
 \[
 m_Bv_0R=(m_AR^2+m_BR^2+J_C)\omega,\quad
 J_C=\tfrac12m_CR^2=m_BR^2.
@@ -90,7 +91,7 @@ $-\mu m_Agh=-\frac32m_Bgh$。
 \Longrightarrow
 \boxed{h=\frac{v_0^2}{5g}=\frac25l}.
 \]
-\crosscheck 由于$\mu m_A=1.5m_B>m_B$，绷紧后系统确实减速停下；“自由落体、冲击、减速”三阶段不能套用一次机械能守恒贯穿。
+\crosscheck 由于$\mu m_A=1.5m_B>m_B$，绷紧后系统确实减速停下；“自由落体、冲击、减速”三阶段不能套用一次机械能守恒贯穿。停下后是否保持静止还要检查静摩擦上限。
 
 \sourceexample{3.4}{34}{42}
 \problemtext 质量$m=0.10\,\mathrm{kg}$的小球固定在长$l=0.20\,\mathrm m$、质量可忽略的刚性轻杆一端，另一端绕$O$轴无摩擦转动。小球从与支点同高度位置静止释放，下摆至最低点与倾角$\alpha=30^\circ$的光滑固定斜面做完全弹性短时碰撞，碰撞历时$\Delta t=0.01\,\mathrm s$。求斜面对球的平均冲力大小。
