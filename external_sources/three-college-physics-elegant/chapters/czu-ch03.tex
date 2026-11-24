@@ -26,7 +26,7 @@
 \sourceproblem{选择7}{40}{46}
 \problemtext 静止船上两不同质量的人相向行走，判断船运动方向。
 \workings 以地面系动量为准，$\bm p_{\rm boat}=-(\bm p_1+\bm p_2)$。若两人地面系动量反向且大小不等，船沿较小动量者的运动方向，选B。
-\crosscheck 两人若仅给相对船的速度，需先转换参考系；若动量大小相等则船瞬时静止。
+\crosscheck 若两人给定相对船的有向速度 $u_1,u_2$，船质量 $M$，则水平动量守恒给船对地速度 $V=-(m_1u_1+m_2u_2)/(M+m_1+m_2)$；相向运动时由相对船的质量加权速度之和决定方向。若两人对地动量相抵，船瞬时静止。
 \sourceproblem{选择8}{40}{46}
 \problemtext 圆锥摆在水平面内匀速率转动，判断重力和张力做功。
 \workings 重力竖直，张力位于竖直径向平面，均与瞬时切向位移垂直，因此各自功为零，选A。
@@ -42,7 +42,7 @@
 \sourceproblem{选择11}{41}{47}
 \problemtext 摆长 $l$、质量 $m$，水平外力将小球缓慢从最低点移至摆角 $\theta$ 处，求功。
 \workings 准静态动能不变，绳张力不做功，故外力功等于重力势能增量 $mgl(1-\cos\theta)$，选C。
-\crosscheck 水平拉力通常随摆角变化，不能直接用恒力公式 $Fs$。
+\crosscheck 水平拉力通常随摆角变化，不能直接用恒力公式 $Fs$。若仅有水平拉力、重力和绳张力且准静态，需 $0\le\theta<\pi/2$；此时 $F=mg\tan\theta$，由 $\mathrm dx=l\cos\theta\,\mathrm d\theta$ 积分同得 $W=mgl(1-\cos\theta)$。
 \sourceproblem{选择12}{41}{47}
 \problemtext 比较一对作用与反作用力的冲量和功。
 \workings 同一时段内 $\bm I_1=-\bm I_2$，非零时矢量不同；两力作用点位移可不同，功不必相等，选D。
@@ -50,7 +50,7 @@
 \sourceproblem{选择13}{41}{47}
 \problemtext 弹簧原长 $l_0$，从长度 $l_1$ 伸至 $l_2$，求弹性力功。
 \workings 伸长量 $x=l-l_0$，故 $W=-\int_{l_1-l_0}^{l_2-l_0}kx\,\mathrm dx=-k[(l_2-l_0)^2-(l_1-l_0)^2]/2$，选C。
-\crosscheck 力与继续伸长方向相反，功为负。
+\crosscheck 当 $l_2>l_1\ge l_0$ 时功为负；若初态受压且过程中接近自然长，弹力可做正功，须按弹性势能的实际差值判定。
 \sourceproblem{选择14}{41}{47}
 \problemtext 质量10千克、速度 $8\bm i+3\bm j$（m/s），求动能。
 \workings $K=10(8^2+3^2)/2=365\,\mathrm J$，选C。
@@ -82,7 +82,7 @@
 \sourceproblem{选择21}{42}{48}
 \problemtext 两物体从等高水平桌面经压缩弹簧弹出，水平射程 $s_1=s_2/2$，求质量关系。
 \workings 下落时间相同，所以 $v_1=v_2/2$。弹出过程中水平动量守恒，$m_1v_1=m_2v_2$，因此 $m_1=2m_2$，选A。
-\crosscheck 射程正比于初水平速率；不是正比于动能。
+\crosscheck 射程正比于初水平速率；不是正比于动能。质量比还要求两物体由同一个内部相互作用弹簧向相反方向弹出、初始总水平动量为零；若为两个独立弹簧装置，则不能直接套用这条动量关系。
 \sourceproblem{选择22}{42}{48}
 \problemtext 竖直弹簧挂球静态伸长 $d$，由弹簧原长处静止释放，求最大伸长。
 \workings $mg=kd$，最大伸长 $x$ 处速率为零，$mgx=kx^2/2$，非零根为 $x=2d$，选C。
