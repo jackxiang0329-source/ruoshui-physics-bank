@@ -26,7 +26,7 @@
 \sourceproblem{选择7}{24}{30}
 \problemtext 两同质量者从同高度静止沿理想轻绳两端攀爬，相对绳速率不同，比较到达顶点的情况。
 \workings 轻绳和无摩擦轻滑轮使两侧张力相同；两人各有 $m\ddot y=T-mg$，因此相同初始条件下地面系高度和速度始终相同，到同一顶点同时，选C。
-\crosscheck 相对绳速度不同可以由绳本身运动补偿；结论要求持续满足相同张力与相等质量。
+\crosscheck PDF257参考答案C。相对绳速度不同可以由绳本身运动补偿；结论要求持续满足相同张力与相等质量。
 \sourceproblem{选择8}{24}{30}
 \problemtext 水平运动货车在恒牵引力 $F$ 下持续接收竖直落煤，判断速度与加速度趋势。
 \workings 设车及已装煤质量 $M(t)$，落煤入射水平速度零，则 $F=\mathrm d(Mv)/\mathrm dt$，故
@@ -34,7 +34,7 @@
 a=\frac{F-\dot Mv}{M}.
 \]
 即使假设恒质量流率 $q>0$，$v=(M_0v_0+Ft)/(M_0+qt)$，$a=M_0(F-qv_0)/(M_0+qt)^2$。若 $F>qv_0$，速度增大、正加速度减小（A）；若 $F<qv_0$，速度减小、负加速度趋零（若指大小则减小）。相等时匀速。
-\crosscheck 原题未给质量流率和初始速度关系，不能无条件唯一选择；且加速度有向值与大小应区分。
+\crosscheck PDF257参考答案为A，仅在恒质量流率且 $F>qv_0$ 等条件下成立。若 $F=qv_0$ 则匀速；若 $F<qv_0$，正向速度下降、负加速度的绝对值减小而有向加速度增大趋零。一般 $q=q(t)$ 时，$a=(F-qv)/M$，且 $\dot a=-(\dot qv+2qa)/M$，趋势还依赖流率变化。原题未给这些条件，不能无条件唯一选择。
 \sourceproblem{选择9}{24}{30}
 \problemtext 某星球质量为地球的0.1倍、半径0.5倍，求表面重力加速度。
 \workings 忽略自转，$g'=GM'/R'^2=(0.1/0.5^2)g=0.4g$，选A。
@@ -62,7 +62,7 @@ a=\frac{F-\dot Mv}{M}.
 \sourceproblem{选择15}{25}{31}
 \problemtext 水平面上滑动摩擦系数 $\mu$，固定大小的拉力 $F$ 斜向上，求使水平加速度最大的角度。
 \workings 保持接触且向右滑动时 $N=mg-F\sin\theta$，$ma=F(\cos\theta+\mu\sin\theta)-\mu mg$。无约束最大值在 $\tan\theta=\mu$，选B。
-\crosscheck 该角须满足 $F\sin\theta\le mg$；若不满足，则须在可接触角度域上求边界最优，不能让支持力为负。静止起动还需静摩擦条件。
+\crosscheck 该角须满足 $F\sin\theta\le mg$；在 $0\le\theta\le\pi/2$ 的接触域，若 $F>mg$ 且 $\arctan\mu>\arcsin(mg/F)$，则接触域最优为边界 $\theta=\arcsin(mg/F)$（若要求严格正支持力，则为趋近该边界的上确界）。不能让支持力为负。PDF257答案B采用内部最优条件。静止起动还需静摩擦条件。
 \sourceproblem{选择16}{25}{31}
 \problemtext 水平弯道半径 $R$，轮胎与地面静摩擦系数 $\mu$，求不侧滑的速率条件。
 \workings $mv^2/R\le\mu mg$，故 $v\le\sqrt{\mu gR}$，选B。
@@ -81,7 +81,7 @@ a=\frac{F-\dot Mv}{M}.
 \crosscheck 两次微分给定加速度，初始条件均成立。
 \sourceproblem{选择20}{25}{31}
 \problemtext 质量 $m$ 物体下落，阻力大小 $kv^2$，求终端速率。
-\workings 取向下为正，$m\dot v=mg-kv^2$，稳态 $\dot v=0$，得 $v_\infty=\sqrt{mg/k}$，选A。
+\workings 取向下为正，$m\dot v=mg-kv^2$，下落分支 $v\ge0$ 上，稳态 $\dot v=0$，得 $v_\infty=\sqrt{mg/k}$，选A。
 \crosscheck $k>0$，单位为质量除以长度；正根对应下落速度大小。
 
 \sourceproblem{填空1}{25}{31}
