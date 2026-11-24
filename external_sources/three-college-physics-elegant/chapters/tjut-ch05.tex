@@ -14,15 +14,15 @@
 \sourceproblem{选择4}{17}{23}
 \problemtext 正向行波周期0.5秒、振幅1米、波长2米，原点初始处于负最大位移。
 \workings $\omega=4\pi,k=\pi,\varphi_0=\pi$，故 $y=\cos(4\pi t-\pi x+\pi)$（SI）。
-\crosscheck 原点初位移为负1米，速度为零；固定相位随时间向右移动。
+\crosscheck 原点初位移为负1米，速度为零；固定相位随时间向右移动。原选项C的 $-\pi$ 与 $+\pi$ 模 $2\pi$ 等价，选C。
 \sourceproblem{选择5}{17}{23}
 \problemtext 图2为沿负轴传播的波在 $t=T/4$ 时的波形，求原点振动初相。
 \workings 图中原点位移为零、空间斜率为正。左行波满足 $\partial_t y=u\partial_x y>0$，故该时刻余弦相位为 $3\pi/2$，减去 $\omega T/4=\pi/2$ 得初相 $\pi$，选C。
 \crosscheck 采用余弦初相约定；原点在初始时处于负最大位移。
 \sourceproblem{选择6}{17}{23}
-\problemtext 图3给定 $t=T/4$ 时的波形，求P点的振动方程。
-\workings 图中振幅2厘米，右行波速20米每秒，波长按图刻度读为4米，则 $\omega=10\pi$。P处为正斜率过零点，质点向下运动；此刻余弦相位 $\pi/2$，减去 $\pi/2$ 得初相零。因此 $y_P=2\cos(10\pi t)$（cm）。
-\crosscheck 若读图的P点或刻度与选项不符，应按 $y_P(t)=A\cos[\omega(t-T/4)+\phi_P]$ 重新辨识，$\cos\phi_P=y_P(T/4)/A$ 且速度符号由右行波斜率确定。本题保留读图待核标记，不强配选项。
+\problemtext 图3为 $t=T/4$ 时向右传播的波形，求P点振动方程。
+\workings 高清原图确认P点位于波谷（其标记在x轴上，竖虚线投影至波谷），振幅2 cm，波长4 m，波速20 m/s，故 $\omega=2\pi u/\lambda=10\pi$ rad/s。P在 $T/4$ 的余弦相位为 $\pi$，初相 $\pi-\pi/2=\pi/2$，所以 $y_P=2\cos(10\pi t+\pi/2)$（cm），选A。
+\crosscheck 代入 $t=T/4=0.05$ s 得 $-2$ cm，瞬时速度为零、加速度向上。原版将P误读为过零点，现已修正。
 \sourceproblem{选择7}{17}{23}
 \problemtext 正向行波波长4米，图4中A至B相距5米，A的振动为 $5\cos(2\pi t+\pi)$（SI）；求B的振动。
 \workings 相位滞后 $2\pi(5/4)=5\pi/2$，故 $y_B=5\cos(2\pi t+\pi/2)$（SI），选A。
@@ -36,15 +36,15 @@
 \workings 在无耗散线性一维行波模型，$w_K=\rho(\partial_t y)^2/2$，$w_U=\rho u^2(\partial_x y)^2/2$。因 $\partial_t y=\pm u\partial_x y$，二者始终相等，选D。
 \crosscheck 质元在位移极值处两种能量密度同时为零，在过平衡位置时同时最大；不同于孤立弹簧振子。
 \sourceproblem{选择10}{18}{24}
-\problemtext 两同相相干波源相距 $\lambda/2$，图5直线外侧已知相消，判断连线上干涉。
-\workings 两源外侧任一点的路程差恒为 $\lambda/2$，相位差为奇数倍 $\pi$，为相消条件；两源之间路程差连续从 $-\lambda/2$ 变到 $\lambda/2$，中点相长，不能说内部各点均相消或均相长。
-\crosscheck 完全抵消还需两波在该点振幅相等；只根据相位判断增强或减弱。
+\problemtext 相干波源相距 $\lambda/2$，图5中S1外侧各点相消，判断S2外侧及两源之间的干涉。
+\workings 两源外侧的有向路程差分别为 $\pm\lambda/2$，对应传播相位差互差 $2\pi$。既知左侧相消，右侧也满足相消相位条件，选A；由此还可反推源相位差为 $0$（模 $2\pi$）。两源之间的路程差连续变化，中点相长。
+\crosscheck 完全抵消还需要到达振幅相等；原题给的是左侧相消条件，并非直接给同相波源。
 \sourceproblem{选择11}{18}{24}
 \problemtext 判断驻波的能量和相位命题。
 \workings 理想驻波可写成 $y=2A\sin kx\cos\omega t$，相邻两波节之间 $\sin kx$ 同号，故非节点质元同相；跨过波节相位反转。选C。
 \crosscheck 波节位移恒零，但介质形变能不必为零；波腹位移最大也不代表任意时刻总能量密度最大。
 \sourceproblem{填空1}{18}{24}
-\problemtext 行波 $y=5\cos(\pi t+4\pi x-\pi/2)$（SI），求传播方向、振幅、周期、波长和波速。
+\problemtext 行波 $y=5\cos(\pi t+4\pi x+\pi/2)$（SI），求传播方向、振幅、周期、波长和波速。
 \workings 负 $x$ 方向，$A=5\,\mathrm m$，$T=2\,\mathrm s$，$\lambda=1/2\,\mathrm m$，$u=1/4\,\mathrm{m/s}$。
 \crosscheck 固定相位满足 $\pi+4\pi\,\mathrm dx/\mathrm dt=0$。
 \sourceproblem{填空2}{18}{24}
@@ -52,20 +52,20 @@
 \workings 静止界面两侧频率相同，$u_B=f(2\lambda_A)=2v$。
 \crosscheck 波速改变由介质决定；频率由波源决定。
 \sourceproblem{填空3}{18}{24}
-\problemtext 图6瞬时波形给出A点向上运动，判断传播方向以及B、C、D点振动方向。
-\workings A处空间斜率为负，由 $\partial_t y=-u\partial_x y$ 得波沿正 $x$ 传播。B处为正斜率，向下；C为负斜率，向上；D在波峰，瞬时速度为零，随后向下。
-\crosscheck 原图D的精确位置待独立读图复核；若实际标在下降段而非峰顶，则D瞬时速度向上。严格判据为局部空间斜率而非位移正负。
+\problemtext 图6中A点向上运动，判断波传播方向及B、C、D三点瞬时运动方向。
+\workings 高清图示A、B、D均在下降段（空间斜率负），C在上升段（斜率正）。由右行波关系 $\partial_t y=-u\partial_x y$ 和A点已知向上运动，得波沿正x传播。故B向上、C向下、D向上。
+\crosscheck D不是波峰，B也不是上升段；原版B、C、D方向均已更正。
 \sourceproblem{填空4}{18}{24}
 \problemtext $y=7\cos(3t-5x)$（SI），求 $x=-3$ 处振动式及与 $x=4$ 处的相位差。
 \workings $y_{-3}=7\cos(3t+15)$，$y_4=7\cos(3t-20)$，所以 $\phi_{-3}-\phi_4=35\,\mathrm{rad}$。
 \crosscheck 若要求主值，可对35弧度取模 $2\pi$；相位差符号须声明顺序。
 \sourceproblem{填空5}{18}{24}
-\problemtext 图7两波源初相差 $\pi$，到P距离分别为 $a,b$（$b>a$），P处相长干涉，求可取波长。
-\workings 到P相位差为 $\pi\pm 2\pi(b-a)/\lambda$，相长要求为 $2n\pi$，故
+\problemtext 图7两相干波源初相差 $\pi$，至P距离a、b（$b>a$），P发生相消干涉，求波长。
+\workings 到达相位差 $\pi\pm2\pi(b-a)/\lambda$ 为奇数倍 $\pi$ 时相消，故 $(b-a)/\lambda=j$，其中 $j=1,2,\ldots$。因此
 \[
-\lambda=\frac{2(b-a)}{2j+1},\qquad j=0,1,2,\ldots .
+\lambda=\frac{b-a}{j},\qquad j=1,2,\ldots .
 \]
-\crosscheck 初相反相时奇数个半波长的路程差使到达相位一致；若问最长波长则取 $j=0$。
+\crosscheck 原页明确为相消而非相长；两波完全抵消还需到达振幅相等。因 $b>a$ 且波长有限，排除 $j=0$。
 \sourceproblem{填空6}{18}{24}
 \problemtext 同频平面简谐波强度之比为 $a$，求振幅之比。
 \workings 在同一线性介质、同波型下 $\bar I=\rho u\omega^2A^2/2$，故 $A_1/A_2=\sqrt a$。
