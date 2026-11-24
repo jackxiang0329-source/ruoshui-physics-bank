@@ -43,3 +43,61 @@ Q_p=\frac72\nu R\Delta T\approx128.1\,\mathrm J,\quad W_p=\nu R\Delta T\approx36
 \problemtext 理想气体循环a--b等温、b--c绝热、c--d等压、d--a等容；表中给 $W_{ab}=50$ J、$\Delta U_{bc}=-50$ J、$W_{cd}=-50$ J、$Q_{cd}=-150$ J，填表求热效率。
 \workings 由 $Q=\Delta U+W$：ab为 $(\Delta U,W,Q)=(0,50,50)$ J；bc为 $(-50,50,0)$ J；cd为 $(-100,-50,-150)$ J；da因循环内能变化和为零且等容，得 $(150,0,150)$ J。净功50 J、吸收热量200 J，故 $\eta=50/200=25\%$。
 \crosscheck 各段热量代数和50 J等于净功；热效率分母为所有正吸热之和而非净吸热。
+
+\sourceproblem{10-T7}{63}{67}
+\problemtext 理想气体作两等压、两绝热组成的顺时针循环，B、C温度400和300 K，求热效率。
+\workings 采用准静态可逆绝热和恒定热容模型，$p_A=p_B=p_H,\ p_C=p_D=p_L$，且 $T_C/T_B=T_D/T_A=(p_L/p_H)^{(\gamma-1)/\gamma}=3/4$。吸热 $Q_H=\nu C_p(T_B-T_A)$，放热量 $Q_L=\nu C_p(T_C-T_D)$，故
+\[
+\eta=1-\frac{T_C-T_D}{T_B-T_A}=1-\frac34=25\%.
+\]
+\crosscheck 不应把B、C直接视为两个恒温热源；相同温度比来自可逆绝热关系。仅给一般不可逆绝热过程或任意变热容气体时，数据不足以保证此值。
+\sourceproblem{10-T8}{63}{67}
+\problemtext 热机在1000 K与300 K热源间工作，分别将高温源升至1100 K或将低温源降至200 K，求理论效率增量。
+\workings 卡诺上限 $\eta=1-T_L/T_H$。原效率70\%；第一种为 $1-300/1100=72.727\%$，提高2.727个百分点；第二种为80\%，提高10个百分点。
+\crosscheck 两种调整分别与原状态比较，不连续实施；若问相对增长率，则分别为3.90\%和14.29\%。
+\sourceproblem{10-T9}{64}{68}
+\problemtext 理想制冷机电动机输出200 W，冷室270 K、外界300 K，求10 min内从冷室取热量。
+\workings 可逆制冷系数 $\epsilon=T_L/(T_H-T_L)=9$。输入功 $W=200\times600=1.20\times10^5$ J，故 $Q_L=\epsilon W=1.08\times10^6$ J。
+\crosscheck 向热源放热 $Q_H=Q_L+W=1.20\times10^6$ J；制冷系数可大于1，不是热机效率。
+\sourceproblem{10-T10}{64}{68}
+\problemtext 2 mol理想气体300 K可逆等温膨胀，体积由0.02增至0.04立方米，求熵变。
+\workings $\Delta S=\int\delta Q_{\rm rev}/T=\nu R\ln(V_2/V_1)=2R\ln2\approx11.52\,\mathrm{J/K}$。
+\crosscheck 膨胀熵增为正；系统内能不变不代表熵不变。
+\sourceproblem{10-T11}{64}{68}
+\problemtext 4.00 mol理想气体体积加倍，分别求400 K等温膨胀功、该等温过程熵变，以及可逆绝热膨胀熵变。
+\workings 若等温过程准静态可逆，$W=\nu RT\ln2\approx9.22\times10^3$ J。两等温平衡态间的熵变 $\Delta S=\nu R\ln2\approx23.04\,\mathrm{J/K}$。可逆绝热过程 $\delta Q_{\rm rev}=0$，故 $\Delta S=0$。
+\crosscheck 原题第一问仅明确等温，功依实际路径及外压而定；给出的功是教材可逆模型值，不能用于自由膨胀。第二问熵为状态函数，第三问末温通常低于初温。
+\sourceproblem{10-T12}{65}{69}
+\problemtext 卡诺热机在300 K与100 K间正循环，每循环净功6000 J，画T--S图并求吸热、放热及效率。
+\workings $\eta=1-100/300=2/3$，$Q_H=6000/\eta=9000$ J，$Q_L=Q_H-6000=3000$ J。可逆等温吸热熵增 $\Delta S=9000/300=30\,\mathrm{J/K}$；两绝热段等熵。
+\begin{center}
+\begin{tikzpicture}[>=Stealth,scale=0.85]
+\draw[->] (0,0)--(6,0) node[right] {$S$};
+\draw[->] (0,0)--(0,4.4) node[above] {$T$};
+\draw[->,thick] (1,3.5)--(4.5,3.5);
+\draw[->,thick] (4.5,3.5)--(4.5,1);
+\draw[->,thick] (4.5,1)--(1,1);
+\draw[->,thick] (1,1)--(1,3.5);
+\node[left] at (0,3.5) {$300\,\mathrm K$};
+\node[left] at (0,1) {$100\,\mathrm K$};
+\node[below] at (1,0) {$S_1$};
+\node[below] at (4.5,0) {$S_1+30\,\mathrm{J/K}$};
+\end{tikzpicture}
+\end{center}
+\crosscheck T--S矩形面积 $(300-100)\times30=6000$ J；每循环工作物质熵变为零。
+\sourceproblem{10-T13}{65}{69}
+\problemtext 0.5 kg、0摄氏度冰置于恒温20摄氏度的大热源，最终变为20摄氏度水；求刚融完和随后升温阶段的熵变。熔化热335 kJ/kg，水比热4180 J/(kg K)。
+\workings 取 $T_m=273.15$ K、$T_H=293.15$ K。用可逆参考路径，
+\[
+\Delta S_1=\frac{m\lambda}{T_m}\approx613.22\,\mathrm{J/K},\quad
+\Delta S_2=mc\ln\frac{T_H}{T_m}\approx147.69\,\mathrm{J/K}.
+\]
+总物质熵增约760.90 J/K。
+\crosscheck 真实过程存在有限温差而不可逆；计算熵差仍可用同端点可逆路径。第二阶段不应简单用热量除以20摄氏度。
+\sourceproblem{10-T14}{65}{69}
+\problemtext 接上题，求热源熵变及冰水与热源整体的总熵变。
+\workings 恒温热源放热 $Q=m\lambda+mc(20)=209300$ J，故 $\Delta S_H=-209300/293.15\approx-713.97$ J/K。整体熵变
+\[
+\Delta S_{\rm tot}=\frac{m\lambda}{T_m}+mc\ln\frac{T_H}{T_m}-\frac Q{T_H}\approx46.93\,\mathrm{J/K}.
+\]
+\crosscheck 总熵增为正，符合不可逆传热；热源温度保持恒定是大热源近似。
