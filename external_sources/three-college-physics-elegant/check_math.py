@@ -189,8 +189,8 @@ assert math.isclose(2*1.96e24,3.92e24)
 assert math.isclose(5/3*2/3,10/9)
 assert math.isclose(0.1*32/2,1.6)
 T=6e-21/(1.5*1.38e-23)
-m=(4.9e6-2/.028*2.5*8.31*T)/(1.5*8.31*T)*.04
-assert math.isclose(m,49.48598934158501)
+m=(4.9e6-2/.028*2.5*8.31*T)/(1.5*8.31*T)*.004
+assert math.isclose(m,4.948598934158501)
 assert math.isclose(2.76e5*.75/(5e25*1.38e-23),300)
 assert math.isclose(1-300/400,0.25)
 assert 200*600*9==1080000
