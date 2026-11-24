@@ -116,7 +116,7 @@ assert math.isclose(2e-7*5000/25,4e-5)
 assert (1/2)*4*2==4
 assert math.isclose(2*0.4*0.3,0.24)
 assert math.isclose(120*0.0079*735/60,11.613)
-assert math.isclose(0.5*(1-0.25)/(3/(16*math.pi)*2*math.pi)*2,1)
+assert math.isclose(0.5*(1-0.25),3/(16*math.pi)*2*math.pi)
 assert math.isclose(1/(2*(3/(16*math.pi))*2*math.pi),4/3)
 assert math.isclose((0.5-0.25)/(0.5+0.25),1/3)
 assert math.isclose((3/5)*8.9875517923e9*(1.602176634e-19)**2/1.0e-15,1.3842465e-13,rel_tol=1e-3)
