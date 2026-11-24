@@ -5,11 +5,11 @@
 \[
 t=\frac{(1.30\times10^7-1.0\times10^6)0.032}{1.01\times10^5(0.40)}\approx9.50\ \text{天}.
 \]
-\crosscheck 不可将瓶内剩余气体全部计为可用；高压氧气的非理想性按教材理想模型忽略。
+\crosscheck PDF59确认补气阈值及每日耗气量。若按整日计量可供9个完整日，9.50天是连续平均消耗模型的时间。不可将瓶内剩余气体全部计为可用；高压氧气的非理想性按教材理想模型忽略。
 \sourceproblem{9-T2}{55}{59}
 \problemtext 真空压强 $1.01325\times10^{-10}$ Pa、温度25摄氏度，求数密度，并与标准状况比较。
 \workings $n=p/(k_BT)$，取 $k_B=1.380649\times10^{-23}$ J/K，$T=298.15$ K，得 $n\approx2.46\times10^{10}\,\mathrm{m^{-3}}$。标准状况取101325 Pa和273.15 K，$n_0\approx2.69\times10^{25}\,\mathrm{m^{-3}}$，约为前者的 $1.09\times10^{15}$ 倍。
-\crosscheck 已放大原页确认真空压强指数负10；真空并非完全没有分子。
+\crosscheck 已放大原页确认真空压强指数负10；标准状态采用273.15 K、101325 Pa；与25摄氏度真空比较时须分别采用对应温度。真空并非完全没有分子。
 \sourceproblem{9-T3}{56}{60}
 \problemtext 解释原题八个关于速率分布函数的式子。
 \workings 设总分子数 $N$、速率分布密度 $f(v)$、区间 $A=[v_1,v_2]$，单分子质量 $m$。依原书顺序：(1) $f(v)=\mathrm dN/(N\mathrm dv)$ 为速率概率密度；(2) $f(v)\mathrm dv$ 为微小速率区间的分子比例；(3) $Nf(v)\mathrm dv$ 为该区间分子数；(4) $\int_A f(v)\mathrm dv$ 为有限区间比例；(5) $N\int_A f(v)\mathrm dv$ 为该区间分子数；(6) $\int_A vf(v)\mathrm dv/\int_A f(v)\mathrm dv$ 为区间条件平均速率；(7) $N\int_A mv^2f(v)\mathrm dv/2$ 为区间分子平动动能总和；(8) $\int_A mv^2f(v)\mathrm dv/[2\int_A f(v)\mathrm dv]$ 为该区间每分子平均平动动能。
@@ -17,7 +17,7 @@ t=\frac{(1.30\times10^7-1.0\times10^6)0.032}{1.01\times10^5(0.40)}\approx9.50\ \
 \sourceproblem{9-T4}{56}{60}
 \problemtext 同温氢气和氧气的麦克斯韦速率分布，右峰最概然速率2000 m/s，求两气体最概然速率及温度。
 \workings $v_p=\sqrt{2RT/M}$，较轻的氢气对应右峰II，氧气对应I。摩尔质量比16，故 $v_{p,\mathrm O_2}=500$ m/s。取氢气摩尔质量 $0.002$ kg/mol，$T=Mv_p^2/(2R)\approx481$ K。
-\crosscheck 图中横坐标2000已核实；不由示意图左峰位置直接估读，使用质量平方根关系。
+\crosscheck 第四十九批PDF60原图再次核实II峰横坐标2000 m/s、I峰在其左侧；不由示意图左峰位置直接估读，使用质量平方根关系。
 \sourceproblem{9-T5}{57}{61}
 \problemtext 气体方均根速率450 m/s、压强 $7\times10^4$ Pa，求质量密度。
 \workings 气体动理论 $p=\rho\overline{v^2}/3$，故 $\rho=3p/(450)^2\approx1.037\,\mathrm{kg/m^3}$。
@@ -29,7 +29,7 @@ t=\frac{(1.30\times10^7-1.0\times10^6)0.032}{1.01\times10^5(0.40)}\approx9.50\ \
 \sourceproblem{9-T7}{57}{61}
 \problemtext 容积 $1.0\times10^{-3}$ 立方米内有 $1.01\times10^{23}$ 个氢气分子，压强 $1.01\times10^5$ Pa，求温度和方均根速率。
 \workings $T=pV/(Nk_B)\approx72.43$ K，$v_{\rm rms}=\sqrt{3RT/M}\approx950$ m/s（$M=0.002$ kg/mol）。
-\crosscheck 原页三个指数已高清核实；可直接由 $v_{\rm rms}^2=3pV/(Nm)$ 独立验证。
+\crosscheck 第四十九批高清PDF61再次核实为氢气、体积指数负3、粒子数指数23、压强指数5；可直接由 $v_{\rm rms}^2=3pV/(Nm)$ 独立验证。
 \sourceproblem{9-T8}{58}{62}
 \problemtext 刚性双原子理想气体体积 $2.0\times10^{-3}$ 立方米、内能675 J，分子数 $5.4\times10^{22}$，求压强、平均平动动能和温度。
 \workings 刚性双原子 $U=5Nk_BT/2=5pV/2$，故 $p=1.35\times10^5$ Pa；每分子平均平动能 $3U/(5N)=7.50\times10^{-21}$ J，$T=2U/(5Nk_B)\approx362$ K。
