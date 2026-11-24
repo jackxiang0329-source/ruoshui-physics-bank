@@ -203,3 +203,75 @@ W_{\rm ext}=km_1m_2\left(1/x_1-1/(x_1+d)\right).
 \problemtext 长 $L$、质量 $m$ 的均匀链条在光滑桌面，五分之一悬垂，将悬垂部分准静态拉回，求外力功及重力势能增加。
 \workings 悬垂质量 $m/5$，质心在桌面下 $L/10$，故 $\Delta U=mgL/50$；始末静止时拉力功同为 $mgL/50$。
 \crosscheck 若末态仍有速度，外力功还需增加末动能；桌面无摩擦。
+
+\sourceproblem{计算1}{44}{50}
+\problemtext 质量2千克物体以长0.5米绳静止悬挂，20克入射物体以200米每秒穿过后速率50米每秒，求刚穿出时张力及入射物体冲量（续PDF51）。
+\workings 短时水平动量守恒，悬物速度 $V=0.020(200-50)/2=1.5\,\mathrm{m/s}$。在最低点 $T-Mg=MV^2/l$，取 $g=9.8$ 得 $T=28.6\,\mathrm N$。入射物体冲量为 $0.020(50-200)=-3\,\mathrm{N\,s}$。
+\crosscheck 碰撞后径向加速度向上；冲量符号相对入射方向为负；不能对穿透过程使用机械能守恒。
+\sourceproblem{计算2}{45}{51}
+\problemtext 两球质量均为1千克，A初速2.5米每秒，B静止；题面称弹性碰撞，B末速1.5米每秒且与原入射方向夹60度，求A末速度。
+\workings 取原入射方向为 $x$ 轴，B偏向正 $y$ 侧。由二维动量守恒，
+\[
+\bm v_A=(2.5-1.5\cos60^\circ)\bm i-1.5\sin60^\circ\bm j
+=\frac74\bm i-\frac{3\sqrt3}{4}\bm j,
+\]
+其速率 $\sqrt{19}/2\approx2.179\,\mathrm{m/s}$，向负 $y$ 偏 $\arctan(3\sqrt3/7)\approx36.59^\circ$。
+但初动能3.125焦耳，按此末速度计算总末动能3.5焦耳，不满足弹性碰撞。若坚持等质量弹性碰撞和60度，则B速率必须为 $2.5\cos60^\circ=1.25\,\mathrm{m/s}$。
+\crosscheck 原题给定条件互相矛盾，无同时满足所有条件的解；上述动量解是放弃弹性条件后的结果，不能标为原题唯一正确答案。
+\sourceproblem{计算3}{45}{51}
+\problemtext 水平轻弹簧劲度 $k$，A、B两木块质量均为 $m$，A与弹簧相连、B仅接触A，从压缩 $d$ 静止释放，求B分离时速率及弹簧最大伸长。
+\workings 至自然长前两块同速，由 $kd^2/2=2mv^2/2$ 得 $v=d\sqrt{k/(2m)}$。自然长处接触力归零，B脱离后A的动能全部转为弹性势能，$kx_{\max}^2/2=mv^2/2$，故 $x_{\max}=d/\sqrt2$。
+\crosscheck 分离时弹簧不能通过接触拉B；B此后匀速，能量需分阶段计算。
+\sourceproblem{计算4}{45}{51}
+\problemtext 质量 $m$ 的球以速率 $v$ 进入质量 $m'$ 的静止可滑动靶并压缩内部劲度 $k$ 的弹簧，求最大压缩量。
+\workings 最大压缩时两者相对速度为零，共同速度 $V=mv/(m+m')$。无摩擦、无其他能量损失，
+\[
+\frac12kx_{\max}^2=\frac12mv^2-\frac12(m+m')V^2
+=\frac12\frac{mm'}{m+m'}v^2,
+\quad x_{\max}=v\sqrt{\frac{mm'}{k(m+m')}}.
+\]
+\crosscheck 采用约化质量亦得同式；$m'\to\infty$ 恢复固定靶。
+\sourceproblem{计算5}{45}{51}
+\problemtext 30吨车厢以2米每秒追上同向1米每秒的50吨机车并挂接，求共同速度及机车冲量。
+\workings $V=(30000\times2+50000\times1)/80000=1.375\,\mathrm{m/s}$，机车冲量 $I=50000(1.375-1)=18750\,\mathrm{N\,s}$，沿前进方向。
+\crosscheck 车厢动量变化为负18750牛秒；忽略挂接期间外力冲量。
+\sourceproblem{计算6}{46}{52}
+\problemtext 物体由原点静止开始在光滑面受力 $F_x=2.5-x^2$（SI），求 $x=2$ 米时动能及区间内最大动能。
+\workings $K(x)=\int_0^x(2.5-s^2)\mathrm ds=2.5x-x^3/3$，故 $K(2)=7/3\,\mathrm J$。区间内 $K'=2.5-x^2$ 由正变负，最大值在 $x_*=\sqrt{2.5}$ 米，$K_{\max}=(5/3)\sqrt{2.5}\,\mathrm J\approx2.635\,\mathrm J$。
+\crosscheck 端点与驻点比较；全过程动能非负，所考察位置可达。质量不影响给定力位移关系所做功。
+\sourceproblem{计算7}{46}{52}
+\problemtext 竖直弹簧劲度 $k$，挂质量 $m$，比较从自然长缓慢下降至平衡与突然释放的伸长和速度。
+\workings 缓慢下降的平衡伸长为 $mg/k$。突然释放时 $mgx=kx^2/2+mv^2/2$，最大伸长 $2mg/k$；过平衡点速率 $g\sqrt{m/k}$。
+\crosscheck 简谐运动振幅等于平衡伸长，角频率为 $\sqrt{k/m}$，最大速率一致。
+\sourceproblem{计算8}{46}{52}
+\problemtext 井深10米，桶与水初总质量10千克，每提升1米漏水0.2千克，匀速提到井口，求人做功。
+\workings 在忽略漏水相对桶的竖向动量通量模型下，拉力等于剩余总重，$M(z)=10-0.2z$，故
+\[
+W=g\int_0^{10}(10-0.2z)\mathrm dz=90g\,\mathrm J=882\,\mathrm J
+\]
+（取 $g=9.8$）。
+\crosscheck 与天津理工对应题的初总质量不同；这里为10千克而非11千克。平均质量9千克；实际喷流反作用需另给流动条件。
+\sourceproblem{计算9}{46}{52}
+\problemtext 力场 $\bm F=2x\bm i+3\bm j$（SI），从 $(2,3)$ 至 $(-4,-3)$，求功。
+\workings $W=\int(2x\,\mathrm dx+3\,\mathrm dy)=[x^2+3y]_{\rm i}^{\rm f}=(16-9)-(4+9)=-6\,\mathrm J$。
+\crosscheck 该微分为全微分，故路径无关；直接分段积分也得 $12-18=-6$ 焦耳。
+\sourceproblem{计算10}{46}{52}
+\problemtext 质量3千克，位置 $x=3t-4t^2+t^3$（SI），求0至4秒净力功及1秒瞬时功率。
+\workings $v=3-8t+3t^2,\ a=-8+6t$。$v(0)=3,v(4)=19$，$W=\frac32(19^2-3^2)=528\,\mathrm J$；$v(1)=-2,a(1)=-2$，故 $P= mav=12\,\mathrm W$。
+\crosscheck 1秒处力与速度均为负向，功率为正；积分 $mav$ 与动能差一致。
+\sourceproblem{计算11}{47}{53}
+\problemtext 质量4千克，从原点静止出发受 $F=4+9x^2$（SI），求到 $x=2$ 米的速率。
+\workings $W=[4x+3x^3]_0^2=32\,\mathrm J$，$\frac12mv^2=W$，故 $v=4\,\mathrm{m/s}$。
+\crosscheck 力恒正，运动向正轴；不用恒加速度运动学公式。
+\sourceproblem{计算12}{47}{53}
+\problemtext 质量2千克由静止受力 $\bm F=8t\bm i$（SI），求前2秒功和末速度。
+\workings $a=4t$，$v=2t^2$，末速8米每秒。$W=\Delta K=64\,\mathrm J$。
+\crosscheck 功率积分 $\int_0^2 16t^3\,\mathrm dt=64\,\mathrm J$。
+\sourceproblem{计算13}{47}{53}
+\problemtext 两粒子间排斥力大小 $k/r^3$，以无穷远为零势，求间距 $2a$ 的势能。
+\workings $F_r=-\mathrm dU/\mathrm dr=k/r^3$，故 $U(r)=\int_r^\infty k/s^3\,\mathrm ds=k/(2r^2)$，$U(2a)=k/(8a^2)$。
+\crosscheck 势能为正，随距离增大而减小；力趋于零的位置为无穷远。
+\sourceproblem{计算14}{47}{53}
+\problemtext 图示质点沿圆弧从原点到 $(R,R)$，受力 $\bm F=F_0(x\bm i+y\bm j)$，求该力做功。
+\workings $\bm F\cdot\mathrm d\bm r=F_0(x\,\mathrm dx+y\,\mathrm dy)=\mathrm d[F_0(x^2+y^2)/2]$，故 $W=F_0R^2$。
+\crosscheck 力为保守场，沿圆弧或任意同端点路径积分一致；$F_0$ 量纲为力/长度。
