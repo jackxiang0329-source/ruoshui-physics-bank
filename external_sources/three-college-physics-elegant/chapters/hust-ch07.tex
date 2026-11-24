@@ -99,3 +99,37 @@ F=2\pi RIB\cos60^\circ\approx0.199\,\mathrm N.
 \]
 按原图右侧电流出纸面、左侧入纸面，径向场向外，轴向合力向上。
 \crosscheck 若电流反向则合力反向；均匀纯轴向场的闭合环合力为零。
+
+\sourceproblem{7-T13}{42}{46}
+\problemtext 半径 $R$ 的均匀带电薄圆盘面电荷密度 $\sigma$，绕中心轴以角速度 $\omega$ 转动，均匀磁场垂直轴，证明磁力矩大小。
+\workings 半径 $r$ 环带电荷 $\mathrm dq=2\pi\sigma r\,\mathrm dr$，等效电流 $\mathrm dI=\omega\sigma r\,\mathrm dr$，磁矩 $\mathrm dp_m=\pi r^2\mathrm dI$。积分得 $p_m=\pi\sigma\omega R^4/4$，故
+\[
+|\bm\tau|=\frac{\pi|\sigma\omega|BR^4}{4}.
+\]
+\crosscheck 磁矩矢量与 $\sigma\bm\omega$ 同向；与均匀磁场正交时力矩大小为 $p_mB$，符合原书待证式。
+\sourceproblem{7-T14}{42}{46}
+\problemtext 宽 $b$ 的无限长薄载流导体片与长直线共面，电流分别为 $I_1,I_2$，近边距离 $a$，求直线单位长度磁力。
+\workings 假定片电流沿宽度均匀，取距近边 $x$ 的条带 $\mathrm dI=I_1\mathrm dx/b$，则
+\[
+F/l=\frac{\mu_0 I_1 I_2}{2\pi b}\int_0^b\frac{\mathrm dx}{a+x}
+=\frac{\mu_0 I_1 I_2}{2\pi b}\ln\frac{a+b}{a}.
+\]
+图示电流同向，力指向导体片。
+\crosscheck $b\to0$ 恢复两无限长平行线电流单位长度作用力；若片电流不均匀，须用实际分布积分。
+\sourceproblem{7-T15}{43}{47}
+\problemtext 螺绕环中心周长10厘米、200匝、电流100毫安，求真空及填入相对磁导率4200磁介质时的磁场，并区分自由电流和磁化贡献。
+\workings 环中心近似 $H=NI/l=200\,\mathrm{A/m}$。真空 $B_0=\mu_0H=2.513\times10^{-4}\,\mathrm T$；线性介质 $H$ 不变，$B=\mu_0\mu_rH\approx1.056\,\mathrm T$。分解 $B=B_0+\mu_0M$，磁化贡献 $B'= (\mu_r-1)B_0\approx1.055\,\mathrm T$。
+\crosscheck 磁场强度由自由电流安培定理确定；结果采用题给恒定磁导率，不涉及材料饱和。
+\sourceproblem{7-T16}{43}{47}
+\problemtext 无限长直圆柱导体半径 $R_1$，外包相对磁导率 $\mu_r$ 的圆筒介质至半径 $R_2$，均匀自由电流 $I$，求径向场分布及曲线。
+\workings 取正电流方向的右手环向为正，
+\[
+H_\phi(r)=\frac I{2\pi}\begin{cases}r/R_1^2,&r<R_1,\\1/r,&r\ge R_1,\end{cases}
+\quad B_\phi(r)=\begin{cases}
+\mu_0 H_\phi(r),&r<R_1,\\
+\mu_0\mu_r H_\phi(r),&R_1<r<R_2,\\
+\mu_0H_\phi(r),&r>R_2.
+\end{cases}
+\]
+因此 $H$ 从原点线性增至 $R_1$ 后按 $1/r$ 下降且连续；$B$ 在介质界面按磁导率比跳变，其余分段同形。
+\crosscheck 假定导体及外区磁导率为 $\mu_0$、界面无自由面电流；切向H连续而切向B可不连续。
