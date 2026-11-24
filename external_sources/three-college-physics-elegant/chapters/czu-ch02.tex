@@ -183,3 +183,69 @@ l=l_0+\frac{mg}{k\cos\theta},\quad
 \omega=\sqrt{\frac{g}{l\cos\theta}}.
 \]
 \crosscheck $0<\theta<\pi/2$；对锥外表面，一般 $N=mg\sin\theta-m\omega^2l\sin\theta\cos\theta$ 需结合弹簧方程求解，临界处以 $N=0$ 为准；角速度与半径的关系需使用临界伸长。
+
+\sourceproblem{计算3}{29}{35}
+\problemtext 图示内外两球 $m_1,m_2$ 以弹簧连接，内球距轴 $L_1$、球间距 $L_2$，共同以角速度 $\omega$ 匀速转动；烧断内侧系线，求瞬时加速度。
+\workings 断线前外球的向心力仅由弹簧提供，张力 $S=m_2\omega^2(L_1+L_2)$。断线瞬间形变不变，内球受弹簧向外拉、外球受向内拉，故
+\[
+a_1=\frac{m_2}{m_1}\omega^2(L_1+L_2)\ (\text{向外}),\qquad
+a_2=\omega^2(L_1+L_2)\ (\text{向内}).
+\]
+\crosscheck 断线后两球水平合外力为零，$m_1\bm a_1+m_2\bm a_2=0$，质心加速度为零。
+\sourceproblem{计算4}{29}{35}
+\problemtext 质量2千克，合力 $(3+2t)\bm i$（SI），原点静止出发，求1秒时速度和位置。
+\workings $a=(3+2t)/2$，$v=(3t+t^2)/2$，$x=3t^2/4+t^3/6$，故 $v(1)=2\,\mathrm{m/s}$，$x(1)=11/12\,\mathrm m$。
+\crosscheck 冲量为4牛秒；微分位置两次恢复加速度。
+\sourceproblem{计算5}{29}{35}
+\problemtext 质量10千克，$F=120t+40$（SI），初始 $x=5.0\,\mathrm m,v=6.0\,\mathrm{m/s}$，求运动方程。
+\workings $a=12t+4$，积分得 $v=6+6t^2+4t$，$x=5+6t+2t^3+2t^2$（SI）。
+\crosscheck 初始位置与前面选择题不同，独立保留原题数据。
+\sourceproblem{计算6}{29}{35}
+\problemtext 质量 $m$ 的车辆初速 $v_0$，关机后阻力大小 $cv$（$c>0$），求速度和路程。
+\workings $m\dot v=-cv$，所以 $v=v_0e^{-ct/m}$，$s=mv_0(1-e^{-ct/m})/c$。
+\crosscheck $s'(t)=v(t)$，有限时间不会严格停住；$c\to0$ 恢复匀速。
+\sourceproblem{计算7}{30}{36}
+\problemtext 车辆质量 $m$，恒牵引力 $F$、平方阻力 $kv^2$，终速 $v_M$；求从静止达到半终速的时间与路程。
+\workings $F=kv_M^2$，$m\dot v=k(v_M^2-v^2)$。令 $z=v/v_M$，积分得 $v=v_M\tanh(kv_Mt/m)$，故
+\[
+t_{1/2}=\frac{m}{2kv_M}\ln3,\qquad
+s_{1/2}=\int_0^{v_M/2}\frac{mv\,\mathrm dv}{k(v_M^2-v^2)}
+=\frac{m}{2k}\ln\frac43.
+\]
+\crosscheck 由 $s=(m/k)\ln\cosh(kv_Mt/m)$ 代回得同一结果；时间与路程单位正确。
+\sourceproblem{计算8}{30}{36}
+\problemtext 质量 $m$ 质点从原点静止出发，力从 $F_0$ 随位置线性降至 $x=L$ 处零，求该处速率。
+\workings $F(x)=F_0(1-x/L)$，功 $W=F_0L/2$，故 $v=\sqrt{F_0L/m}$。
+\crosscheck 力位移图的三角形面积与积分一致；假设 $F_0,L>0$。
+\sourceproblem{计算9}{30}{36}
+\problemtext 均匀密度地球直径隧道模型，$R=6.4\times10^6\,\mathrm m,\rho=5.5\times10^3\,\mathrm{kg/m^3}$，求物体过地心速率。
+\workings 球壳定理给出 $a_r=-4\pi G\rho r/3$。若从地表静止释放，简谐运动角频率 $\Omega=\sqrt{4\pi G\rho/3}$，中心最大速率
+\[
+v_c=R\sqrt{4\pi G\rho/3}\approx7.94\times10^3\,\mathrm{m/s}
+\]
+（取 $G=6.67\times10^{-11}$）。
+\crosscheck 原书未明确初态；若从地表具有初速 $v_i$，则 $v_c^2=v_i^2+4\pi G\rho R^2/3$。均匀球、无阻力、忽略自转是假设，不能当作真实地球精确值。
+\sourceproblem{计算10}{30}{36}
+\problemtext 均匀细棒长 $l$、密度 $\rho_2$，液体密度 $\rho_1>\rho_2$，下端初始恰接触液面，剪断后求最大下沉速率。
+\workings 设截面 $S$、向下浸入长度 $x$，在部分浸没且忽略阻力、附加质量时 $m=\rho_2Sl$，$F=mg-\rho_1gSx$。速度达到最大时 $x_*=\rho_2l/\rho_1<l$。由动能定理
+\[
+\tfrac12 mv_{\max}^2=mgx_*-\tfrac12\rho_1gSx_*^2,\qquad
+v_{\max}=\sqrt{g l\rho_2/\rho_1}.
+\]
+\crosscheck 此点为合力由正变负的平衡位置；若计流体惯性及阻力，结果不再精确。
+\sourceproblem{计算11}{31}{37}
+\problemtext 质点自光滑半球外表面顶端静止开始下滑，求脱离时与竖直方向夹角。
+\workings 能量守恒 $v^2=2gR(1-\cos\theta)$；径向方程 $mg\cos\theta-N=mv^2/R$。令 $N=0$ 得 $\cos\theta=2/3$，$\theta\approx48.19^\circ$。
+\crosscheck 精确位于最高点且严格静止是一个不稳定平衡解；教材下滑解理解为微小扰动后的极限。
+\sourceproblem{计算12}{31}{37}
+\problemtext 水平光滑桌面固定圆环，半径 $R$，物体贴内壁以初速 $v_0$ 运动，壁面动摩擦系数 $\mu$，求速度、路程随时间关系。
+\workings 法向力 $N=mv^2/R$，切向 $m\dot v=-\mu mv^2/R$，积分
+\[
+v=\frac{v_0}{1+\mu v_0t/R},\qquad
+s=\frac R\mu\ln(1+\mu v_0t/R).
+\]
+\crosscheck $\mu\to0$ 时 $v\to v_0,s\to v_0t$；只考虑壁面摩擦，桌面不提供切向摩擦。
+\sourceproblem{计算13}{31}{37}
+\problemtext 图示水平光滑台上固定板壁，由两段直壁和半径 $R$ 的半圆壁连接，物体沿壁以 $v_0$ 进入，壁面动摩擦系数 $\mu$，求D点速率。
+\workings 直壁上理想相切运动不需法向力，故无壁面摩擦；半圆段 $N=mv^2/R$，$m v\,\mathrm dv/\mathrm ds=-\mu mv^2/R$。积分跨越弧长 $\pi R$ 得 $v_D=v_0e^{-\mu\pi}$。
+\crosscheck 默认连接处相切、无碰撞损失且物体沿半圆内侧保持接触；$\mu=0$ 时恢复初速。
