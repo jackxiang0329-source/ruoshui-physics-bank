@@ -62,7 +62,7 @@
 \[
 x=10\cos(5\pi t/12+2\pi/3)\quad(\mathrm{cm}).
 \]
-\crosscheck 初速度为负，2秒时为正；图示刻度及单位保留独立二校标记。
+\crosscheck 初速度为负，2秒时为正；PDF20高清确认振幅10 cm、初位移负5 cm及2 s正向过零；本次读图疑点解除。
 \sourceproblem{填空5}{13}{19}
 \problemtext 图6两等质量 $m$ 物块相接但不粘合，压缩劲度 $k$ 的弹簧 $x_0$ 后释放，求A首次正最大位移时刻及此时B速率（续PDF20）。
 \workings 两块共同运动至弹簧自然长时，耗时 $t_1=(\pi/2)\sqrt{2m/k}$，共同速率 $u=x_0\sqrt{k/(2m)}$。此后分离，B匀速，A从平衡点以正速度振动至最大位移另需 $t_2=(\pi/2)\sqrt{m/k}$。故 $t=t_1+t_2$，$v_B=u$。
@@ -76,20 +76,23 @@ x=10\cos(5\pi t/12+2\pi/3)\quad(\mathrm{cm}).
 \workings $K=E-U=kA^2/2-k(A/2)^2/2=3kA^2/8$。
 \crosscheck 在两个半振幅位置动能相等；不依赖运动方向。
 \sourceproblem{填空8}{14}{20}
-\problemtext 图7两个同频同向振动，$A_1>A_2$，大振幅曲线初位移为 $-A_1$，小振幅曲线初位移为0且向正向运动，求合振动初相。
-\workings 按图读得 $x=-A_1\cos\omega t+A_2\sin\omega t$。令 $x=A\cos(\omega t+\varphi)$，则 $A=\sqrt{A_1^2+A_2^2}$，$\cos\varphi=-A_1/A,\sin\varphi=-A_2/A$，故主值 $\varphi=-\pi+\arctan(A_2/A_1)$。
-\crosscheck 合振动初位移为负且初速度为正；图7曲线身份及斜率待独立二校。
+\problemtext 图7两个同向同频振动，$A_1>A_2$，高清图示大振幅初位移为 $-A_1$、小振幅初位移为 $+A_2$，均在极值处，求合振动初相。
+\workings 两分振动反相，$x_1=-A_1\cos\omega t,\ x_2=A_2\cos\omega t$，故 $x=-(A_1-A_2)\cos\omega t=(A_1-A_2)\cos(\omega t+\pi)$。初相为 $\pi$（模 $2\pi$）。
+\crosscheck PDF20高清复核两曲线在四分之一周期同时过零，初速度均为零；更正既有误读的小振幅初位移。
 \sourceproblem{计算1}{15}{21}
 \problemtext 竖直轻弹簧劲度 $k$，挂质量 $m$ 滑块，弹簧起初为原长并静止释放，以平衡位置为原点、向下为正，求运动方程。
 \workings 平衡伸长 $mg/k$，初位移 $x(0)=-mg/k$、初速度零；$m\ddot x=-kx$，因此
 \[
 x=-\frac{mg}{k}\cos(\sqrt{k/m}\,t).
 \]
-\crosscheck 释放瞬间加速度 $g$ 向下；最大伸长为 $2mg/k$，不是平衡伸长。
+\crosscheck 释放瞬间加速度 $g$ 向下；最大伸长为 $2mg/k$，不是平衡伸长。原题未明说初速度，采用静止释放的常规条件；若初速度为 $v_0$，应在解中另加 $v_0\sin(\omega t)/\omega$。
 \sourceproblem{计算2}{15}{21}
-\problemtext 由图9读取正向过零的简谐振动曲线，振幅8厘米、周期4秒，求方程。
-\workings $x(0)=0,\dot x(0)>0$，$\omega=2\pi/T=\pi/2$，故 $x=8\sin(\pi t/2)$（cm）。
-\crosscheck 1秒达正峰值、3秒达负峰值、5秒再达正峰值；图示时间刻度待独立二校。
+\problemtext 图9给出质点简谐振动曲线，求运动方程。
+\workings 高清原图确认纵轴为厘米，振幅8 cm，初时正向过零，$t=2$ s到正峰，$t=6$ s到负峰，$t=8$ s再次正向过零。故 $T=8$ s，$\omega=\pi/4$ rad/s，
+\[
+x=8\sin(\pi t/4)\quad(\mathrm{cm}).
+\]
+\crosscheck $t=4$ s负向过零；更正旧版误读周期4 s的问题。
 \sourceproblem{计算3}{16}{22}
 \problemtext 振幅 $A$、$\omega=\pi/4$，初位于 $A/2$ 且正向运动，求一周期内首次到达 $-A/\sqrt2$ 且速度为正的时间，并用旋转矢量说明。
 \workings 初相 $\varphi_i=-\pi/3$；目标相位 $\varphi_f=-3\pi/4$（两者均满足速度为正）。旋转矢量逆时针转动，最小正转角为 $2\pi-5\pi/12=19\pi/12$，故 $\Delta t=19/3\,\mathrm s$。
