@@ -23,7 +23,7 @@ for ref in refs:
         for macro in ('problemtext','workings','crosscheck'):
             assert body.count('\\'+macro)==1,(key,macro)
         counts[book]=counts.get(book,0)+1
-assert counts=={'tjut':247,'hust':136,'czu':338},counts
+assert counts=={'tjut':257,'hust':144,'czu':359},counts
 assert math.isclose((0.5*2**2+3*2-4)-(0.5+3-4),4.5)
 assert math.isclose(5*2**4/12,5*(1.5*2**2)**2/27)
 assert math.isclose(math.hypot(8,2),2*math.sqrt(17))
@@ -185,4 +185,20 @@ assert sum(u for u,w,q in cycle)==0
 assert sum(w for u,w,q in cycle)==sum(q for u,w,q in cycle)==50
 assert math.isclose(sum(w for u,w,q in cycle)/sum(max(q,0) for u,w,q in cycle),0.25)
 assert math.isclose(2e-8/5e-9,4)
+assert math.isclose(2*1.96e24,3.92e24)
+assert math.isclose(5/3*2/3,10/9)
+assert math.isclose(0.1*32/2,1.6)
+T=6e-21/(1.5*1.38e-23)
+m=(4.9e6-2/.028*2.5*8.31*T)/(1.5*8.31*T)*.04
+assert math.isclose(m,49.48598934158501)
+assert math.isclose(2.76e5*.75/(5e25*1.38e-23),300)
+assert math.isclose(1-300/400,0.25)
+assert 200*600*9==1080000
+assert (300-100)*30==6000
+S1=.5*335e3/273.15
+S2=.5*4180*math.log(293.15/273.15)
+SH=-(.5*335e3+.5*4180*20)/293.15
+assert math.isclose(S1+S2+SH,46.93358042197235)
+assert (12*2*3-6,6*2**2+14*3)==(66,66)
+assert math.isclose(9e9*(1.6e-19)**2/(5.29e-11)**2,8.233246736539676e-8)
 print('Structural and selected numerical checks passed:',counts)
