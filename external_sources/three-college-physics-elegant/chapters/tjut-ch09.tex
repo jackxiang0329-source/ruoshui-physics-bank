@@ -50,15 +50,16 @@ L_s\dot i_s+R_s i_s+M\dot i_p+Q_C/C=0,\quad \dot Q_C=i_s .
 \workings 理想长管内部 $B=\mu_0ni$，外部场忽略。取法向与正电流产生的磁场同向，$\Phi=\mu_0n\pi r^2 I_m\cos\omega t$，故 $\mathcal E=\mu_0n\pi r^2 I_m\omega\sin\omega t$。
 \crosscheck 有效磁通面积是管截面而非外环面积。
 \sourceproblem{填空2}{37}{43}
-\problemtext 图9半圆弧导线abc及直径方向导线绕O在垂直匀强磁场的平面内逆时针转动，求感应电动势和高电势端（续PDF44）。
-\workings 取纸外为正，$\bm B=-B\bm k,\bm\omega=\omega\bm k$。刚体各点 $\bm v\times\bm B=-\omega B\bm r$，从任意端点P到Q的动生电动势为
+\problemtext 图9半圆弧acb半径R，径向直段Oa长R，整根导线绕O在垂直纸面向内的匀强磁场中逆时针匀速转动，求动生电动势及最高电势点（续PDF44）。
+\workings 取纸外为正，$\bm B=-B\bm k,\bm\omega=\omega\bm k$，则 $\bm v\times\bm B=-\omega B\bm r$。高清图确认O、a、b共线，$Oa=R,Ob=3R$。故从O至b的有向动生电动势为
 \[
-\mathcal E_{PQ}=-\omega B(r_Q^2-r_P^2)/2.
+\mathcal E_{Ob}=\int_O^b-\omega B\bm r\cdot\mathrm d\bm l
+=-\frac{\omega B}{2}[(3R)^2-0^2]=-\frac92B\omega R^2 .
 \]
-开路稳态中心O比距O为 $R$ 的端点高 $B\omega R^2/2$；同半径两端等势。
-\crosscheck 图9细小端点标注待复核；上式不依赖导线弯曲形状，不能将半圆弧长直接代入 $Blv$。
+电动势大小为 $9B\omega R^2/2$，方向由b经弧、a至O；O点电势最高。
+\crosscheck Oa贡献大小 $B\omega R^2/2$，ab弧贡献 $4B\omega R^2$，相加为 $9B\omega R^2/2$。沿圆弧积分可用端点平方半径差，不可将弧长套入 $Blv$。第四十一批高清原页确认半圆半径、端点标记及转向，解除历史待核。
 \sourceproblem{填空3}{38}{44}
-\problemtext 两相距不远的平面线圈，调整一个线圈的轴线使其与另一线圈轴线垂直，讨论互感。
+\problemtext 两相距不远的平面线圈，其中一条轴线恰过另一线圈圆心且两轴垂直，讨论互感。
 \workings 若按题设中心连线与另一线圈轴线的对称配置，垂直线圈穿过的净磁通为零，故互感为零。
 \crosscheck 单有轴线垂直而无位置对称条件并不足以保证互感为零；本结论依赖题示几何。
 \sourceproblem{填空4}{38}{44}
@@ -67,7 +68,7 @@ L_s\dot i_s+R_s i_s+M\dot i_p+Q_C/C=0,\quad \dot Q_C=i_s .
 \crosscheck 反转磁场或转向则极性反转；任一从中心到同半径边缘的路径积分相同。
 \sourceproblem{填空5}{38}{44}
 \problemtext 图11给出分段线性电流随时间的变化，画自感电动势曲线。
-\workings $\mathcal E_L=-L\,\mathrm di/\mathrm dt$。图中电流依次下降、上升、下降、上升，因此相应电动势为正、负、正、负的分段常量；每段高度为该段斜率大小乘 $L$。折点处理想导数不定义。
+\workings $\mathcal E_L=-L\,\mathrm di/\mathrm dt$。图中电流依次下降、上升、下降、上升，因此相应电动势为正、负、正、负的分段常量；原图转折点在第1、3、5格，末点第6格，各段斜率绝对值相同，电动势平台等高而符号交替。折点处理想导数不定义。
 \crosscheck 原图无数值纵轴，不能臆造幅值；电流过零并不意味着自感电动势过零。
 \sourceproblem{填空6}{38}{44}
 \problemtext 自感0.4 H的线圈通10 A电流，求储存的磁场能量。
@@ -76,7 +77,7 @@ L_s\dot i_s+R_s i_s+M\dot i_p+Q_C/C=0,\quad \dot Q_C=i_s .
 \sourceproblem{填空7}{38}{44}
 \problemtext 两长螺线管长度及匝数相同，半径比 $r_1:r_2=1:2$，相对磁导率比 $\mu_{r1}:\mu_{r2}=2:1$，通相同电流，求自感及磁能比。
 \workings $L_i=\mu_0\mu_{ri}N^2\pi r_i^2/l$，故 $L_1:L_2=1:2$；由 $W_i=L_i I^2/2$，磁能比也为 $1:2$。
-\crosscheck 自感随截面积而非半径一次方变化。
+\crosscheck 自感随截面积而非半径一次方变化；磁能比按各线圈自身磁场能计，若存在显著互感，整体能量还含互感交叉项。
 \sourceproblem{填空8}{38}{44}
 \problemtext 电容 $10.0\,\mu\mathrm F$，板间电压变化率 $2.0\times10^5\,\mathrm{V/s}$，求位移电流。
 \workings 理想电容 $I_d=\mathrm dQ/\mathrm dt=C\,\mathrm dU/\mathrm dt$，代入为 $2.0\,\mathrm A$。
