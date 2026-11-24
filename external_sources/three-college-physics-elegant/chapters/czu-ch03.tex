@@ -275,3 +275,63 @@ W=g\int_0^{10}(10-0.2z)\mathrm dz=90g\,\mathrm J=882\,\mathrm J
 \problemtext 图示质点沿圆弧从原点到 $(R,R)$，受力 $\bm F=F_0(x\bm i+y\bm j)$，求该力做功。
 \workings $\bm F\cdot\mathrm d\bm r=F_0(x\,\mathrm dx+y\,\mathrm dy)=\mathrm d[F_0(x^2+y^2)/2]$，故 $W=F_0R^2$。
 \crosscheck 力为保守场，沿圆弧或任意同端点路径积分一致；$F_0$ 量纲为力/长度。
+
+\sourceproblem{计算15}{48}{54}
+\problemtext 质量 $m$ 质点沿 $\bm r=a\cos\omega t\,\bm i+b\sin\omega t\,\bm j$ 运动，求两轴端点动能及从A到B合外力与两分力做功。
+\workings $\bm v=\omega(-a\sin\omega t\,\bm i+b\cos\omega t\,\bm j)$，故 $K_A=mb^2\omega^2/2$，$K_B=ma^2\omega^2/2$。合力 $\bm F=-m\omega^2\bm r$，分力功
+\[
+W_x=-m\omega^2\int_a^0 x\,\mathrm dx=\frac12m\omega^2a^2,\quad
+W_y=-m\omega^2\int_0^b y\,\mathrm dy=-\frac12m\omega^2b^2.
+\]
+总功为 $m\omega^2(a^2-b^2)/2$。
+\crosscheck 与动能差一致；同华科2-T14模型，但保留本书独立题号。
+\sourceproblem{应用1}{48}{54}
+\problemtext 原题给出连续发射过程的质量流率和离开速率，求平均反冲压力。
+\workings 在忽略其他动量通量、起止装置宏观动量变化的理想模型中，设单位时间离开的质量为 $\dot m$、离开速度为 $\bm v$，则平均反作用力 $\overline{\bm F}=-\dot m\bm v$，压力的大小为 $\dot m|\bm v|$。
+\crosscheck 此为动量流率的教材抽象模型；实际受力还取决于其他动量通量及装置支承条件。原书数据和题号对应PDF54。
+\sourceproblem{应用2}{48}{54}
+\problemtext 水平直角弯管面积0.2平方米、流速3.0米每秒，求水对弯管的作用力。
+\workings 取右、上为正，图示入流向下、出流向右。质量流率 $\dot m=\rho Sv=600\,\mathrm{kg/s}$。若忽略压力边界与重力在所求平面内的贡献，水对管的动量反作用为
+\[
+\bm F=-\dot m v(\bm i+\bm j)=-1800(\bm i+\bm j)\,\mathrm N.
+\]
+大小 $1800\sqrt2\,\mathrm N$，方向左下45度。
+\crosscheck 真实弯管总受力尚需入口、出口静压等资料；本式是理想动量流模型。
+\sourceproblem{应用3}{48}{54}
+\problemtext 两相同质量 $M$ 物块由劲度 $k$ 的轻弹簧相连，初态静止；质量 $m$ 的入射物以速率 $v_0$ 嵌入一端，求后续最大压缩量。
+\workings 瞬时嵌入后该端速率 $u=mv_0/(M+m)$，另一端尚静止。随后的相对运动约化质量 $\mu=M(M+m)/(2M+m)$，故
+\[
+\frac12kx_{\max}^2=\frac12\mu u^2,\quad
+x_{\max}=\frac{mv_0}{M+m}\sqrt{\frac{M(M+m)}{k(2M+m)}}.
+\]
+\crosscheck 碰撞阶段不守恒机械能，弹簧压缩阶段才守恒；共同质心平移动能不能转入弹簧势能。
+\sourceproblem{应用4}{49}{55}
+\problemtext 两等质量 $M=10^{30}\,\mathrm{kg}$、半径 $R=2.0\times10^3\,\mathrm m$ 的天体从中心距 $d_0=10^{10}\,\mathrm m$ 静止接近，求中心距减半及表面接触前各自速率。
+\workings 经典球对称引力模型中质心静止，两者速率相同。$Mv^2-GM^2/d=-GM^2/d_0$，故
+\[
+v(d)=\sqrt{GM(1/d-1/d_0)}.
+\]
+取 $G=6.67\times10^{-11}$，在 $d=d_0/2$ 时 $v\approx8.17\times10^4\,\mathrm{m/s}$；接触前 $d=2R$ 时 $v\approx1.29\times10^8\,\mathrm{m/s}$。
+\crosscheck 第二个速度已达约0.43倍光速，且天体极紧致，牛顿引力结果仅是教材模型计算，实际相对论双体过程不能据此精确预测。
+\sourceproblem{应用5}{49}{55}
+\problemtext 滑块沿固定半圆形滑槽内侧运动，入槽速率 $v_0$、壁面动摩擦系数 $\mu$，证明出槽时摩擦功。
+\workings 光滑底面且只计侧壁摩擦时 $N=mv^2/R$，沿弧长 $s$ 有 $mv\,\mathrm dv/\mathrm ds=-\mu mv^2/R$，故 $v(s)=v_0e^{-\mu s/R}$。取 $s=\pi R$，
+\[
+W_f=\frac12mv_0^2(e^{-2\pi\mu}-1).
+\]
+\crosscheck 与原书待证式一致；若底面另有摩擦，需修改受力方程。
+\sourceproblem{应用6}{49}{55}
+\problemtext 质点在粗糙水平面被水平细绳约束作半径 $r$ 的圆周运动，一周后速率为 $v_0/2$，求摩擦功、动摩擦系数和停止前转数。
+\workings 一周动能变化为 $W_f=-3mv_0^2/8$。水平支持力 $mg$，滑动摩擦大小 $\mu mg$，一周弧长 $2\pi r$，故 $\mu=3v_0^2/(16\pi rg)$。完全停止前总路程 $s_*=v_0^2/(2\mu g)$，总转数 $s_*/(2\pi r)=4/3$。
+\crosscheck 与竖直侧壁摩擦模型不同，水平底面摩擦大小恒定；细绳须保持绷紧直至停止。
+\sourceproblem{应用7}{49}{55}
+\problemtext 木板阻力与钉入总深度成正比，第一次进入 $d=1.00\times10^{-2}\,\mathrm m$，第二次敲击保持相同入射速度，求新增深度。
+\workings 若每次传给钉子的初始动能相同，第一次 $K=kd^2/2$，第二次 $K=k(D^2-d^2)/2$，故 $D=\sqrt2d$。第二次新增深度 $(\sqrt2-1)d\approx4.14\times10^{-3}\,\mathrm m$。
+\crosscheck 区分最终总深度与第二次新增深度；相同速度还须对应相同有效运动质量及能量传递模型。
+\sourceproblem{应用8}{50}{56}
+\problemtext 满载矿车沿30度斜面从静止下滑并压缩缓冲弹簧，最大压缩时卸货，空车依靠弹簧返回原点；阻力为车重的0.25倍，求空满质量比。
+\workings 设总下滑距离 $s=l+x$，满载质量 $M$、空载质量 $m$。下滑至静止，弹簧储能 $E_s=Mg(\sin30^\circ-0.25)s$。卸货瞬间无速度且假设弹簧储能不变；返回原点恰好静止要求 $E_s=mg(\sin30^\circ+0.25)s$。故
+\[
+m/M=\frac{0.5-0.25}{0.5+0.25}=\frac13.
+\]
+\crosscheck 压缩距离、劲度及首次接触前距离均约去；若要求返回时有剩余动能或卸货带走弹簧能量，质量比条件需调整。
