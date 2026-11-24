@@ -71,15 +71,17 @@
 \workings 在同一线性介质、同波型下 $\bar I=\rho u\omega^2A^2/2$，故 $A_1/A_2=\sqrt a$。
 \crosscheck 若两介质波阻抗不同，需另乘波阻抗比的平方根，不能仅由同频推出该结果。
 \sourceproblem{计算1}{19}{25}
-\problemtext 左行简谐波波长6米，图8给出 $x=3\,\mathrm m$ 处振动曲线，求该点、行波及原点振动式。
-\workings 由图读振幅10厘米、相邻峰值时间差约12秒，$t=0$ 处为正位移且下降；设从图确认的初相为 $\phi_3$。则
+\problemtext 左行简谐波波长6 m，图8为 $x=3$ m处质点振动曲线，求该点、行波及原点的振动式。
+\workings 高清图8明确振幅10 cm，初位移5 cm且向下运动，故余弦初相为 $\pi/3$。标注 $t=10$ s处为初时刻后的第一个正峰，满足 $\omega(10)+\pi/3=2\pi$，所以 $\omega=\pi/6$ rad/s，$T=12$ s，$k=2\pi/6=\pi/3$ rad/m，$u=\lambda/T=0.5$ m/s。依次得到
 \[
-y_3=10\cos(\omega t+\phi_3),\quad
-y(x,t)=10\cos[\omega t+\tfrac{\pi}{3}(x-3)+\phi_3],\quad
-y_0=10\cos(\omega t+\phi_3-\pi)
+y_3=0.10\cos(\pi t/6+\pi/3),\qquad
+y(x,t)=0.10\cos[\pi t/6+\pi(x-3)/3+\pi/3],
 \]
-（cm）。若峰值在 $t=10\,\mathrm s$ 且周期12秒，则 $\omega=\pi/6,\phi_3=\pi/3$（模 $2\pi$）。
-\crosscheck 原图时间刻度较细，周期及初相保留条件式待复核；波长6米决定空间相位系数 $\pi/3$，不受读图时间误差影响。
+\[
+y_0=0.10\cos(\pi t/6-2\pi/3).
+\]
+上述均为SI单位。
+\crosscheck 初位移为0.05 m、初速度为负，10 s达到正峰；固定相位沿负x方向以0.5 m/s移动，$x=3$ 代回恢复原振动式。原读图条件式已解除。
 \sourceproblem{计算2}{19}{25}
 \problemtext 正向行波波速 $u$，图9中A位于 $x=a$、B位于 $x=3a$，A处振动 $y_A=A_0\cos\omega t$。求O、B处振动及与B同状态点。
 \workings $k=\omega/u$，
