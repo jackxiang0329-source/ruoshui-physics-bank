@@ -1358,6 +1358,22 @@ def fifteenth_round_regressions():
     near(.55*10/11,.5)
     near(.55/11,.05)
     near(1.1/.55,2)
+    # QA 6/8: distinguish initial and post-release distance and clock origin.
+    omega=math.sqrt(110/(10/11))
+    near(omega,11)
+    near((1.1-.05)/.55,1.909090909090909)
+    near(pi/(2*omega)+(1.1-.05)/.55,2.051890575163172)
+    near(pi/(2*omega)+1.1/.55,2.142799666072263)
+    # Contact-boundary constrained optimum of pull angle.
+    mu=.5; weight=10.; force=30.
+    th0=math.atan(mu); thb=math.asin(weight/force)
+    assert thb<th0
+    net=lambda th:force*math.cos(th)-mu*max(0.,weight-force*math.sin(th))
+    assert net(thb)>net(th0) and net(thb)>net(0)
+    # Zero net external force need not imply zero total external work.
+    f1,f2,v1,v2=2.,-2.,3.,1.
+    near(f1+f2,0)
+    near(f1*v1+f2*v2,4)
     near(((.5)**2),1/4)
     # Test 3 Lorentz simultaneity, proper time and total energy.
     gamma=lambda beta:1/sqrt(1-beta*beta)
@@ -1386,6 +1402,12 @@ def sixteenth_round_regressions():
     near((4*pi/3-pi/3)/(2*pi),1/2)
     near((4*pi/3-2*pi/3)/pi,2/3)
     near(2*pi/(pi/2),4.0)
+    # Selftest 4.2.3: endpoint states alone admit whole-cycle aliases.
+    for n in range(4):
+        w=(7+12*n)*pi/12
+        near(math.cos(-2*pi/3+2*w),0)
+        assert -w*math.sin(-2*pi/3+2*w)<0
+        near(2*pi/w,24/(7+12*n))
     near(-15+5*math.sqrt(13),3.027756377319946)
     near(330/4*2*pi,165*pi)
     near(2*9.8-2*(4*pi)**2*.04,6.966906366605622)
