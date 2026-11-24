@@ -88,3 +88,51 @@ A_2=\sqrt{(10\sqrt3-17.3)^2+100}\approx10.00002\ \mathrm{cm},\quad
 \end{tikzpicture}
 \end{center}
 \crosscheck $x\dot y-y\dot x=0.06(0.03)(\pi/3)\sin(2\pi/3)>0$；明确观察方向以避免左旋右旋约定歧义。
+
+\sourceproblem{11-T13}{72}{76}
+\problemtext 正x向波速2 m/s，原点振动 $y=0.6\cos\pi t$，求波长、波函数和时间及空间相位差。
+\workings $\omega=\pi,T=2$ s，$\lambda=uT=4$ m，$y=0.6\cos(\pi t-\pi x/2)$。同点2 s相对1 s相位超前 $\pi$；同一时刻 $x_B=1.5$ m相对 $x_A=1$ m相位滞后 $\pi/4$。
+\crosscheck 相位差明确作后者减前者；固定相位点以2 m/s向右移动。
+\sourceproblem{11-T14}{72}{76}
+\problemtext 位于 $x=-1$ m波源振动 $5\times10^{-4}\cos(6000t-1.2)$ m，波速300 m/s，无吸收，求两方向行波。
+\workings 按一维无衰减模型 $k=6000/300=20$ rad/m。正向 $y_+=5\times10^{-4}\cos[6000t-1.2-20(x+1)]$（$x\ge-1$）；负向 $y_-=5\times10^{-4}\cos[6000t-1.2+20(x+1)]$（$x\le-1$）。
+\crosscheck 两式在源位置恢复给定振动，传播延迟均非负。
+\sourceproblem{11-T15}{73}{77}
+\problemtext 初始波形在O处向上过零，振幅0.04 m，半波长0.20 m，向右波速0.08 m/s，求O、P振动及波函数，判断a、b振动方向。
+\workings $\lambda=0.40$ m，$k=5\pi$，$\omega=0.4\pi$ rad/s。由图 $y(x,0)=0.04\sin(5\pi x)$，故 $y=0.04\sin(5\pi x-0.4\pi t)$ m。O及P（$x=0.40$ m）同相，均为 $-0.04\sin(0.4\pi t)$。由 $\partial_ty=-u\partial_xy$，a向下、b向上。
+\begin{center}
+\begin{tikzpicture}[xscale=10,yscale=28]
+\draw[->] (-.02,0)--(.47,0) node[right] {$x$};
+\draw[->] (0,-.055)--(0,.055) node[above] {$y$};
+\draw[blue,thick,domain=0:.44,samples=80] plot (\x,{.04*sin(900*\x)});
+\draw[->,thick] (.03,.018)--(.03,-.007) node[below] {$a$};
+\draw[->,thick] (.17,.018)--(.17,.043) node[above] {$b$};
+\node[below] at (.4,0) {$P$};
+\end{tikzpicture}
+\end{center}
+\crosscheck 原图0.20标注为相邻过零点间距；示意箭头按斜率符号，不把波传播方向当作质点振动方向。
+\sourceproblem{11-T16}{73}{77}
+\problemtext 右行余弦波在 $t=3T/4$ 的波形：O为波峰，P在0.1 m下降过零，振幅0.2 m、波长0.4 m，波速36 m/s，求初相及波函数。
+\workings $k=5\pi,\omega=180\pi$。取 $y=A\cos(\omega t-kx+\phi)$，O在 $3T/4$ 为峰故 $\phi=\pi/2$（模 $2\pi$），P的初相 $\pi/2-5\pi(0.1)=0$。因此 $y(x,t)=0.2\cos(180\pi t-5\pi x+\pi/2)$，初始波形 $y(x,0)=0.2\sin(5\pi x)$。
+\crosscheck 在指定时刻波形化为 $0.2\cos(5\pi x)$，与原图相符。
+\sourceproblem{11-T17}{74}{78}
+\problemtext 弦上简谐行波 $y=A\cos(kx-\omega t)$，求能量密度、能流密度及其平均。
+\workings 设弦线密度 $\mu$、张力 $F=\mu u^2$。每单位长度能量
+\[
+w_l=\tfrac12\mu y_t^2+\tfrac12 F y_x^2=\mu A^2\omega^2\sin^2(kx-\omega t),
+\quad P=-Fy_xy_t=uw_l.
+\]
+故 $\overline w_l=\mu A^2\omega^2/2,\ \overline P=u\overline w_l$。若按截面积S定义体能量密度及能流密度，则分别将上述量除以S，或用体密度 $\rho=\mu/S$ 替代 $\mu$。
+\crosscheck 弦的一维功率单位W，体能流密度单位W每平方米；瞬时动能和弹性势能密度相等。
+\sourceproblem{11-T18}{74}{78}
+\problemtext 直径0.14 m圆管内平面波强 $9.00\times10^{-3}$ W每平方米，波速300 m/s、频率300 Hz，求平均与最大能量密度及相邻同相波阵面之间能量。
+\workings $\overline w=I/u=3.00\times10^{-5}$ J每立方米，$w_{\max}=2\overline w=6.00\times10^{-5}$ J每立方米。$\lambda=1$ m，截面 $S=\pi(0.07)^2$，一整波长内能量 $E=\overline w S\lambda\approx4.62\times10^{-7}$ J。
+\crosscheck 整波长空间积分等于平均密度乘体积，不取最大密度。
+\sourceproblem{11-T19}{75}{79}
+\problemtext 各向同性无吸收球面波源功率 $1.00\times10^4$ W，波速 $3.00\times10^8$ m/s，求400 km处波强和平均能量密度。
+\workings $r=4.00\times10^5$ m，$I=P/(4\pi r^2)\approx4.97\times10^{-9}$ W每平方米。辐射远场 $\overline w=I/u\approx1.66\times10^{-17}$ J每立方米。
+\crosscheck 球面总功率为常数，波强按平方反比下降。
+\sourceproblem{11-T20}{75}{79}
+\problemtext 两同相波源振幅均 $10^{-4}$ m、角频率 $10\pi$，P距两源4及10 cm；分别取波长4及0.6 cm，求合振幅与初相。
+\workings 按教材无衰减等振幅模型，合相量 $z=A(e^{-2\pi i r_1/\lambda}+e^{-2\pi i r_2/\lambda})$。波长4 cm时两相量反相，$z=0$，合振幅0，初相无定义。波长0.6 cm时路程差10个波长，两相量同相，合振幅 $2\times10^{-4}$ m，初相 $-2\pi(4/0.6)\equiv2\pi/3$。
+\crosscheck 若源至P的振幅存在几何衰减，两到达振幅未必相同，完全相消不必成立；原题未给衰减模型。
