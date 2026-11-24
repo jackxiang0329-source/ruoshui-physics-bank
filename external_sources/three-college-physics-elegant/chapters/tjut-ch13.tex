@@ -39,3 +39,51 @@
 \problemtext 定容固定量理想气体温度变为4倍，比较平均速率、平均碰撞频率和平均自由程。
 \workings 硬球稀薄气体模型中 $\overline v\propto\sqrt T$，$\ell=1/(\sqrt2 n\pi d^2)$，$Z=\overline v/\ell$。数密度和碰撞直径不变，故速率、频率均为2倍，自由程不变，选B。
 \crosscheck 若有效碰撞截面随温度变化，则自由程未必恒定；题目采用硬球模型。
+
+\sourceproblem{填空1}{55}{61}
+\problemtext 固定质量理想气体等温压缩，初始数密度 $1.96\times10^{24}\,\mathrm{m^{-3}}$，压强增至两倍，求新数密度。
+\workings $p=nk_BT$，温度固定，故 $n_2=2n_1=3.92\times10^{24}\,\mathrm{m^{-3}}$。
+\crosscheck 同时体积减半，总分子数不变；高清PDF61确认指数24。
+\sourceproblem{填空2}{55}{61}
+\problemtext 标准状态下刚性氧气和氩气体积比为2:3，求热运动内能比。
+\workings 同温同压时物质的量比等于体积比。氧气自由度5，氩气自由度3，故 $U_1/U_2=(5/3)(2/3)=10/9$。
+\crosscheck 内能比不是单纯体积比；忽略氧分子振动。
+\sourceproblem{填空3}{55}{61}
+\problemtext 光滑活塞把均匀封闭圆筒分成等体积两部分，一侧有0.1 kg氢气，另一侧装同温氧气，求平衡所需质量。
+\workings 在无轴向重力分量及其他载荷的模型下，两侧压强相等，故物质的量相同。氧气质量 $m_{\rm O_2}=0.1(32/2)=1.6\,\mathrm{kg}$。
+\crosscheck 活塞光滑不等于其轴向重力必为零；通常题意采用水平圆筒或忽略活塞轴向载荷。
+\sourceproblem{填空4}{55}{61}
+\problemtext 1 mol刚性双原子氮气处于温度 $T$，求分子平均平动动能、平均总动能及气体内能。
+\workings 由能量均分，三项分别为 $3k_BT/2,\ 5k_BT/2,\ 5RT/2$。
+\crosscheck 后一项为整摩尔气体能量，前两项为单分子平均值。
+\sourceproblem{填空5}{55}{61}
+\problemtext 房间温度由15摄氏度升至27摄氏度，室内压强不变，求分子数减少百分比（续PDF62）。
+\workings 房间体积固定，$N=pV/(k_BT)$，故减少比例
+\[
+1-\frac{288.15}{300.15}=\frac{12}{300.15}\approx4.00\%.
+\]
+\crosscheck 必须使用绝对温度；恒压意味着房间可与外界交换气体。
+\sourceproblem{填空6}{56}{62}
+\problemtext 封闭定容理想气体平均速率增为两倍，求压强倍数。
+\workings 平衡麦克斯韦分布有 $\overline v\propto\sqrt T$，所以温度增为四倍；数密度固定，$p_2/p_1=4$。
+\crosscheck 不能直接把压强与平均速率一次方相联系；需要平衡态条件。
+\sourceproblem{填空7}{56}{62}
+\problemtext 固定容器内理想气体温度由 $T$ 变为 $2T$，求分子平均碰撞频率与原值之比。
+\workings 稀薄硬球模型下 $\ell=1/(\sqrt2 n\pi d^2)$ 不变，而 $\overline v\propto\sqrt T$，故 $\overline Z_2=\sqrt2\,\overline Z_1$。
+\crosscheck 若有效碰撞截面随温度变化，比例须修正；这里沿用教材硬球模型。
+\sourceproblem{填空8}{56}{62}
+\problemtext 总质量 $m$、体积 $V$、压强 $p$ 的平衡理想气体，求单位速率区间内分子数最多处的速率。
+\workings 麦克斯韦最概然速率 $v_p=\sqrt{2RT/M}$，由 $pV=(m/M)RT$ 消去摩尔质量，得 $v_p=\sqrt{2pV/m}$。
+\crosscheck $pV/m$ 的量纲为速度平方；最概然速率不同于平均速率和方均根速率。
+\sourceproblem{计算1}{56}{62}
+\problemtext 2 kg氮气与未知质量氩气达到热平衡，热运动总内能 $4.90\times10^6$ J，氩分子平均动能 $6\times10^{-21}$ J，求氩气质量。
+\workings 氩为单原子气体，$3k_BT/2=6\times10^{-21}$ J，取题给 $k_B=1.38\times10^{-23}$ J/K，得 $T\approx289.86$ K。氮气按刚性双原子、氩气按单原子理想模型，取摩尔质量 $0.028,0.040$ kg/mol，$R=8.31$ J/(mol K)，
+\[
+4.90\times10^6=\frac{2}{0.028}\frac52RT+\frac{m}{0.040}\frac32RT .
+\]
+解得 $m\approx49.49\,\mathrm{kg}$。
+\crosscheck 氮气热内能约 $4.30\times10^5$ J，其余为氩气热内能；回代总能量。此模型不含化学结合能及振动能。
+\sourceproblem{计算2}{57}{63}
+\problemtext 容积0.75立方米的容器含 $1.0\times10^{25}$ 个氧分子和 $4.0\times10^{25}$ 个氮分子，混合气体压强 $2.76\times10^5$ Pa，求平均平动动能和温度。
+\workings $N=5.0\times10^{25}$，理想混合气体 $pV=Nk_BT$，得 $T=300$ K（题给 $k_B=1.38\times10^{-23}$ J/K）。两组分平衡同温，因此每分子平均平动动能为 $3k_BT/2=6.21\times10^{-21}$ J。
+\crosscheck 亦可由 $pV=2N\overline K_{\rm tr}/3$ 直接算得；高清PDF63核对分子数指数25。
