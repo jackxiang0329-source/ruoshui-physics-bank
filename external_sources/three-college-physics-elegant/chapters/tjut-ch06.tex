@@ -44,3 +44,76 @@ E=\frac{|Q_a+Q_b|}{4\pi\varepsilon_0r^2}.
 \problemtext 图4实线为电场线，虚线为等势面，判断A、B、C处场强和电势次序。
 \workings 图示电场线箭头指向左侧，沿电场方向电势降低，故 $V_A<V_B<V_C$。按教材电场线密度约定，左侧较密，$E_A>E_B>E_C$，选D。
 \crosscheck 场强排序为示意图的定性读图结论；定量值需电势间隔、空间尺度或实际场分布数据。
+
+\sourceproblem{填空1}{23}{29}
+\problemtext 根据定义填写静电场强与电场力的关系。
+\workings $\bm E=\bm F/q_0$，即单位正试验电荷所受的电场力。
+\crosscheck 试验电荷须足够小而不改变原场；负电荷受力方向与场强相反。
+\sourceproblem{填空2}{23}{29}
+\problemtext 正试验电荷 $4\times10^{-9}\,\mathrm C$ 受到向下 $8\times10^{-9}\,\mathrm N$ 的力，求场强。
+\workings $E=F/q_0=2\,\mathrm{N/C}$，方向竖直向下。
+\crosscheck 已放大PDF29核实两个指数均为负9；正电荷受力与场同向。
+\sourceproblem{填空3}{23}{29}
+\problemtext 两平行无限带电面A、B之间场强为 $E_0$ 向左，两外侧场强为 $E_0/3$ 向外，求两面电荷密度。
+\workings 取右向为正，三区场强依次为 $-E_0/3,-E_0,+E_0/3$。由法向场跳跃条件，
+\[
+\sigma_A=-2\varepsilon_0E_0/3,\qquad
+\sigma_B=4\varepsilon_0E_0/3.
+\]
+\crosscheck 两面场叠加：中间为 $(\sigma_A-\sigma_B)/(2\varepsilon_0)=-E_0$，右侧为 $(\sigma_A+\sigma_B)/(2\varepsilon_0)=E_0/3$，与图5一致。
+\sourceproblem{填空4}{23}{29}
+\problemtext 点电荷 $q$ 的场中，以距电荷 $R$ 的P点为零势点，求距电荷 $r$ 的P'点电势。
+\workings $V(r)=q(1/r-1/R)/(4\pi\varepsilon_0)$。
+\crosscheck $r=R$ 时为零，$r\to\infty$ 时不一定为零；电势零点由题设指定。
+\sourceproblem{填空5}{23}{29}
+\problemtext 闭合面内有 $2q$ 与 $-q$，求外向电通量。
+\workings 净包围电荷为 $q$，故 $\Phi=q/\varepsilon_0$。
+\crosscheck 与两电荷在面内的位置无关；通量可有符号。
+\sourceproblem{填空6}{23}{29}
+\problemtext 试验电荷 $q$ 在点电荷 $Q$ 的场中沿半径 $R$ 的四分之三圆弧运动，再至无穷远，求电场力功。
+\workings 圆弧上电势相同，圆弧段功为零；全程 $W=q[V(R)-V(\infty)]=qQ/(4\pi\varepsilon_0R)$。
+\crosscheck 静电场保守，功只依赖两端电势，不依赖圆弧长度。
+\sourceproblem{填空7}{23}{29}
+\problemtext 正电荷 $1.6\times10^{-19}\,\mathrm C$ 从A至B电场力做功 $3.2\times10^{-15}\,\mathrm J$，求沿其余圆弧返回的功及以B为零势时A的电势。
+\workings $W_{BA}=-W_{AB}=-3.2\times10^{-15}\,\mathrm J$；$V_A-V_B=W_{AB}/q=2.0\times10^4\,\mathrm V$。
+\crosscheck 闭合路径总功为零，已放大确认两个指数；与往返路径长度无关。
+\sourceproblem{填空8}{23}{29}
+\problemtext 匀强场 $\bm E=50\bm i+20\bm j$（V/m），A坐标 $(4,2)$、B坐标 $(2,0)$（m），求 $U_{AB}$。
+\workings $V_A-V_B=-\bm E\cdot(\bm r_A-\bm r_B)=-50(2)-20(2)=-140\,\mathrm V$。
+\crosscheck A在沿电场方向投影较大的一侧，电势更低；反向电势差为正140伏。
+\sourceproblem{填空9}{23}{29}
+\problemtext 点电荷 $q$ 场中，试验电荷 $q_0$ 从距源 $r_a$ 的a点至距源 $r_b$ 的b点，求外力克服电场力所做功。
+\workings 准静态外力功等于势能增加，$W_{\rm ext}=qq_0(1/r_b-1/r_a)/(4\pi\varepsilon_0)$。
+\crosscheck 若外力还改变动能，则外力总功须另加 $\Delta K$；这里只求克服电场力的功。
+\sourceproblem{计算1}{24}{30}
+\problemtext 半径 $R$、总正电荷 $Q$ 的均匀细半圆环位于左半平面，求环心场强。
+\workings $\lambda=Q/(\pi R)$。令极角 $\theta\in[\pi/2,3\pi/2]$，$\mathrm d\bm E=-\lambda(\cos\theta\bm i+\sin\theta\bm j)\mathrm d\theta/(4\pi\varepsilon_0R)$。积分得
+\[
+\bm E=\frac{Q}{2\pi^2\varepsilon_0R^2}\bm i.
+\]
+\crosscheck 纵向分量对称抵消，水平分量均朝右；量纲为场强。
+\sourceproblem{计算2}{24}{30}
+\problemtext 半径 $R$、均匀体电荷密度 $\rho$ 的实心球，求内外场强大小。
+\workings 由球对称，高斯面包围电荷为 $4\pi\rho\min(r^3,R^3)/3$，故
+\[
+E(r)=\begin{cases}|\rho|r/(3\varepsilon_0),&0\le r\le R,\\
+|\rho|R^3/(3\varepsilon_0r^2),&r>R.\end{cases}
+\]
+方向由 $\rho$ 符号决定。
+\crosscheck 表面连续，中心为零，外场相当于总电荷集中在球心。
+\sourceproblem{计算3}{25}{31}
+\problemtext 总电荷 $q$ 均匀分布在长 $2l$ 的细杆上，P在延长线上距近端 $a>0$，求电势。
+\workings 以杆左端为原点，$x_P=2l+a$，取无穷远零势，
+\[
+V(P)=\frac{q}{8\pi\varepsilon_0l}\int_0^{2l}\frac{\mathrm dx}{2l+a-x}
+=\frac{q}{8\pi\varepsilon_0l}\ln\frac{a+2l}{a}.
+\]
+\crosscheck 远场 $a\gg l$ 时主项为 $q/(4\pi\varepsilon_0a)$；对数自变量无量纲。
+\sourceproblem{计算4}{25}{31}
+\problemtext 两同心均匀带电球面半径0.03、0.10米，带等量异号电荷，电势差大小450伏，求内球电荷量。
+\workings 内球电荷记 $Q$，外球为 $-Q$，则
+\[
+V_1-V_2=\frac{Q}{4\pi\varepsilon_0}(1/R_1-1/R_2).
+\]
+所以 $|Q|=4\pi\varepsilon_0(450)/(1/0.03-1/0.10)\approx2.15\times10^{-9}\,\mathrm C$。
+\crosscheck 若明确内球电势更高，则 $Q>0$；只给电势差大小时不能确定符号。外场为零。
