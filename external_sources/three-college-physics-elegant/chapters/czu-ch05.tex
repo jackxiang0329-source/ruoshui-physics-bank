@@ -275,3 +275,104 @@ F_C=\frac{k_ee^2}{r^2}\approx8.23\times10^{-8}\,\mathrm N,\qquad
 \]
 库仑力指向质子。在固定核近似下 $mv^2/r=F_C$，故 $v=\sqrt{k_ee^2/(mr)}\approx2.19\times10^6$ m/s。
 \crosscheck 引力比库仑力小约39个数量级；若计质子运动，应使用约化质量求相对速度，再换算电子质心系速度。此为教材经典模型，不代表真实量子轨道。
+
+\sourceproblem{计算2}{89}{95}
+\problemtext 半径 $a$、圆心角 $\theta_0$ 的均匀正带电细圆弧总电荷 $q$，图示关于正x轴对称，求圆心场强。
+\workings 线密度 $q/(a\theta_0)$。以极角 $\phi$ 积分，$dq=q\,d\phi/\theta_0$，场的y分量抵消，
+\[
+\bm E=-\frac{2k_eq}{a^2\theta_0}\sin(\theta_0/2)\bm i.
+\]
+\crosscheck 角度用弧度；$\theta_0\to0$ 恢复点电荷，$\theta_0=2\pi$ 恢复零场。
+\sourceproblem{计算3}{89}{95}
+\problemtext 半径 $R$ 的均匀带电半圆细环总电荷 $Q$，求环心场。
+\workings 取从圆心指向带电半环中点的单位矢量为 $\bm n$，令 $\phi\in[-\pi/2,\pi/2]$。横向分量抵消，$\bm E=-k_e Q(\int\cos\phi\,d\phi)/(\pi R^2)\bm n=-2k_eQ\bm n/(\pi R^2)$。
+\crosscheck 正电时方向背离半环，负电时相反；代入上题 $\theta_0=\pi$ 一致。
+\sourceproblem{计算4}{89}{95}
+\problemtext 两平行无限长线电荷密度分别 $+\lambda,-\lambda$，间距 $r_0$，求所在平面上任意点场及单位长度相互作用力。
+\workings 令横坐标 $x$ 从正线指向负线，正线在0、负线在 $r_0$。对 $x\ne0,r_0$，
+\[
+\bm E=\frac{\lambda}{2\pi\varepsilon_0}\left(\frac1x-\frac1{x-r_0}\right)\bm i.
+\]
+两线单位长度受力大小为 $\lambda^2/(2\pi\varepsilon_0r_0)$，方向相互吸引。
+\crosscheck 中间场向右、两外侧场向左（$\lambda>0$）；远处按 $1/x^2$ 衰减；计算受力不包含自身场。
+\sourceproblem{计算5}{89}{95}
+\problemtext 长 $L$ 的均匀带电棒总电荷 $Q$，正试验电荷 $q$ 在棒延长线上距中心 $a>L/2$，求力。
+\workings 取棒沿x轴、中心为0，P在正向。$\lambda=Q/L$，故
+\[
+F_x=k_eq\lambda\int_{-L/2}^{L/2}\frac{dx}{(a-x)^2}
+=\frac{k_eqQ}{a^2-L^2/4}.
+\]
+\crosscheck 正电排斥；远处趋于 $k_eqQ/a^2$，近棒端理想线模型发散。
+\sourceproblem{计算6}{90}{96}
+\problemtext 无限均匀带电薄板面密度 $\sigma$，中心有半径 $r$ 的圆孔，求轴线上距板 $x$ 处电场。
+\workings 取板法线为正x轴。完整面场 $E_x=\sigma\operatorname{sgn}(x)/(2\varepsilon_0)$；减去同密度圆盘的场 $E_{x,\rm disk}=\sigma[\operatorname{sgn}(x)-x/\sqrt{x^2+r^2}]/(2\varepsilon_0)$，得
+\[
+\bm E=\frac{\sigma x}{2\varepsilon_0\sqrt{x^2+r^2}}\bm i.
+\]
+\crosscheck 孔中心场为零且连续；远离孔趋于完整平面场；亦可直接积分半径从 $r$ 至无穷远的环元。
+\sourceproblem{计算7}{90}{96}
+\problemtext 边长 $b$ 的立方盒一角在原点、面平行坐标面，均匀电场 $\bm E=200\bm i+300\bm j$，求六面外向通量。
+\workings 若盒在第一卦限，$x=0,b$ 两面分别为 $-200b^2,+200b^2$；$y=0,b$ 两面为 $-300b^2,+300b^2$；$z=0,b$ 两面为0，单位 $\mathrm{N\,m^2/C}$。
+\crosscheck 净通量为零；即使盒位于别的卦限，按面外法向分类的结果仍相同。
+\sourceproblem{计算8}{90}{96}
+\problemtext 半径 $R$、总电荷 $Q$ 的均匀带电球壳，求空间场强和电势。
+\workings 取无穷远零势，球内 $E=0,V=k_eQ/R$，球外 $\bm E=k_eQ\bm e_r/r^2,\ V=k_eQ/r$。
+\crosscheck 电势在球面连续，法向场跳跃 $Q/(4\pi R^2\varepsilon_0)$。若不假设球对称或导体静电平衡，仅总电荷不足以确定场。
+\sourceproblem{计算9}{90}{96}
+\problemtext 半径 $R$ 的球内体密度 $\rho=kr$，球外无电荷，求场随半径变化。
+\workings $Q_{\rm enc}(r)=4\pi k\int_0^r s^3ds=\pi kr^4$（内区）。故
+\[
+E_r=\begin{cases}kr^2/(4\varepsilon_0),&r\le R,\\ kR^4/(4\varepsilon_0r^2),&r>R.\end{cases}
+\]
+大小取绝对值。
+\crosscheck 中心场为零，界面无面电荷故场连续，外区总电荷为 $\pi kR^4$。
+\sourceproblem{计算10}{90}{96}
+\problemtext 同轴长圆柱面半径0.030 m与0.10 m，带等量异号电荷，势差大小450 V，求单位长度电荷及间隙场。
+\workings 令内柱线电荷密度为 $\lambda$，$E_r=\lambda/(2\pi\varepsilon_0r)$，$V_1-V_2=\lambda\ln(R_2/R_1)/(2\pi\varepsilon_0)$。因此
+\[
+|\lambda|=\frac{2\pi\varepsilon_0(450)}{\ln(0.10/0.030)}
+\approx2.08\times10^{-8}\,\mathrm{C/m},\quad
+|E_r|=\frac{450}{r\ln(10/3)}\approx\frac{373.76}{r}\,\mathrm{V/m}.
+\]
+\crosscheck 未给哪柱高势，场方向随内柱电荷符号；径向积分恢复450 V。
+\sourceproblem{计算11}{91}{97}
+\problemtext 半径 $R$、长 $L$ 的均匀带电圆柱侧面总电荷 $Q$，求端面轴心P处场。
+\workings 取P在 $z=0$、柱体沿正z至 $L$，每薄环电荷 $dQ=Q\,dz/L$，则
+\[
+E_z=-\frac{k_e Q}{L}\int_0^L\frac{z\,dz}{(R^2+z^2)^{3/2}}
+=-\frac{k_eQ}{L}\left(\frac1R-\frac1{\sqrt{R^2+L^2}}\right).
+\]
+\crosscheck 正电时场指向柱外；只计侧面电荷；$L\to0$ 时趋零，符合圆环中心场。
+\sourceproblem{计算12}{91}{97}
+\problemtext 两点电荷 $+q,-3q$ 相距 $d$，求连线上零场点距正电荷的距离及两电荷之间零势点距离。
+\workings 设正电荷位于0、负电荷在 $d$，$q>0$。零场只能在较小电荷外侧 $x<0$，令 $a=-x$，则 $1/a^2=3/(d+a)^2$，故 $a=d/(\sqrt3-1)$。中间零势满足 $1/x=3/(d-x)$，故 $x=d/4$。
+\crosscheck 两电荷之间场方向相同，不能为零；另有外侧零势点 $x=-d/2$，但原题第二问限定在两电荷之间。
+\sourceproblem{计算13}{91}{97}
+\problemtext x轴上从 $a$ 到 $a+l$ 的细棒线密度 $\lambda=k_0(x-a)$，图示 $a>0$，求原点电势。
+\workings 取无穷远零势，
+\[
+V_O=k_e k_0\int_a^{a+l}\frac{x-a}{x}dx
+=k_e k_0\left[l-a\ln\frac{a+l}{a}\right].
+\]
+\crosscheck 总电荷 $k_0l^2/2$；$a\gg l$ 时电势趋于 $k_ek_0l^2/(2a)$，符合远场。
+\sourceproblem{计算14}{91}{97}
+\problemtext 无限长半径 $R$ 的圆柱体内体密度 $\rho=Ar$，求内外场及以轴距 $l>R$ 为零势的电势。
+\workings 单位长度包围电荷为 $2\pi Ar^3/3$（内区），故
+\[
+E_r=\begin{cases}Ar^2/(3\varepsilon_0),&r\le R,\\ AR^3/(3\varepsilon_0r),&r>R.\end{cases}
+\]
+取 $V(l)=0$，积分 $V(r)=\int_r^l E_sds$，得
+\[
+V(r)=\begin{cases}
+\dfrac{AR^3}{3\varepsilon_0}\ln(l/R)+\dfrac{A(R^3-r^3)}{9\varepsilon_0},&r\le R,\\
+\dfrac{AR^3}{3\varepsilon_0}\ln(l/r),&r\ge R.
+\end{cases}
+\]
+\crosscheck 内外势与场在 $R$ 连续，负梯度恢复场；无限长带电体通常不可取无穷远零势。
+\sourceproblem{计算15}{91}{97}
+\problemtext 半径0.10、0.20 m的同心球面初始面密度相同，中心电势300 V，求面密度及令中心电势为零须从外面移走的电荷。
+\workings 初态 $V_O=\sigma(r_1+r_2)/\varepsilon_0$，故 $\sigma=300\varepsilon_0/0.30\approx8.85\times10^{-9}\,\mathrm{C/m^2}$。移走正电荷 $\Delta Q$ 后，中心电势减少 $k_e\Delta Q/r_2$，故
+\[
+\Delta Q=4\pi\varepsilon_0r_2(300)\approx6.68\times10^{-9}\,\mathrm C.
+\]
+\crosscheck 该移除量超过外球原有正电荷，最终外球带负电；只允许将原有正电荷降至零时无法达到中心零势，需允许继续改变净电荷。
