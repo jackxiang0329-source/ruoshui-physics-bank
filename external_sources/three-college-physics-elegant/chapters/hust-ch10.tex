@@ -1,0 +1,45 @@
+\section{第10组：热力学第一定律}
+\sourceproblem{10-T1}{60}{64}
+\problemtext 从a经b至c吸热200 J且对外做功80 J；从a经d至c吸热144 J；从c回a外界对系统做功52 J，分别求内能差、第二路径功及返回热量。
+\workings 取吸热 $Q$ 和系统对外做功 $W$ 为正，$\Delta U=Q-W$。$U_c-U_a=120$ J，故c内能较大；第二路径 $W=144-120=24$ J；返回时 $\Delta U=-120$ J、$W=-52$ J，故 $Q=-172$ J，即放热172 J。
+\crosscheck 内能为状态函数，功和热量依赖路径；回路净热等于净功。
+\sourceproblem{10-T2}{60}{64}
+\problemtext 初压 $1.0\times10^5$ Pa、初体积 $1.0\times10^{-3}$ 立方米的氧气，从0摄氏度升至100摄氏度，分别求等压与等容热量、做功。
+\workings $\nu R=p_0V_0/T_0=100/273.15$ J/K，$\Delta T=100$ K。刚性双原子理想模型中
+\[
+Q_V=\frac52\nu R\Delta T\approx91.5\,\mathrm J,\quad W_V=0,\quad
+Q_p=\frac72\nu R\Delta T\approx128.1\,\mathrm J,\quad W_p=\nu R\Delta T\approx36.6\,\mathrm J.
+\]
+\crosscheck 两过程内能增量相同；$Q_p-Q_V=W_p$，采用理想气体、定热容近似。
+\sourceproblem{10-T3}{61}{65}
+\problemtext A经ABC至C吸热326 J、对外做功126 J；从C沿CA返回，外界做功52 J，求返回过程热量。
+\workings $U_C-U_A=326-126=200$ J。返回时 $\Delta U=-200$ J，系统对外功为 $-52$ J，故 $Q=-252$ J，即放热252 J。
+\crosscheck 完整循环净热 $326-252=74$ J，与净功 $126-52=74$ J相同。
+\sourceproblem{10-T4}{61}{65}
+\problemtext 1 mol氢气初态 $p_0=10^5$ Pa、$T_0=293.15$ K、$V_0$，末态 $T_1=353.15$ K、$2V_0$。比较先等容升温后等温膨胀与先等温膨胀后等容升温的功、热量和内能变化，并给出p--V图。
+\workings 刚性双原子模型 $\Delta U=(5/2)R(60)\approx1247$ J，两路径相同。高温等温膨胀 $W_1=RT_1\ln2\approx2035$ J，$Q_1\approx3282$ J；低温等温膨胀 $W_2=RT_0\ln2\approx1689$ J，$Q_2\approx2936$ J。图可按无量纲坐标 $x=V/V_0,y=p/p_0$ 作出：两路径分别为 $(1,1)\to(1,T_1/T_0)$ 后沿 $y=(T_1/T_0)/x$ 至 $x=2$；以及沿 $y=1/x$ 至 $(2,1/2)$ 后竖直至 $(2,T_1/(2T_0))$。
+\begin{center}
+\setlength{\unitlength}{0.8mm}
+\begin{picture}(92,67)
+\put(8,8){\vector(1,0){78}}\put(8,8){\vector(0,1){55}}
+\put(84,2){$V$}\put(1,61){$p$}
+\put(29,40){\circle*{2}}\put(18,40){$A$}
+\put(29,50){\circle*{2}}\put(18,51){$B$}
+\put(69,24){\circle*{2}}\put(72,23){$D$}
+\put(69,29){\circle*{2}}\put(72,30){$C$}
+\put(29,40){\vector(0,1){10}}\put(69,24){\vector(0,1){5}}
+\qbezier(29,50)(45,34)(69,29)
+\qbezier(29,40)(45,28)(69,24)
+\put(36,54){$T_1$}\put(47,21){$T_0$}
+\put(25,2){$V_0$}\put(64,2){$2V_0$}
+\end{picture}
+\end{center}
+\crosscheck 示意图不按精确比例绘制，曲线解析式给出准确图形；高温膨胀功较大，热量差等于功差。
+\sourceproblem{10-T5}{62}{66}
+\problemtext 图1的bca为绝热压缩，b1a与b2a为图示任意压缩路径，判断功与吸热符号；图2同压两平衡态A、B且 $V_B>V_A$，判断任何连接过程必然满足的性质。
+\workings 图1三路径均压缩，$W_1,W_2<0$；上方b2a压缩功绝对值较大，下方b1a较小。绝热路径 $Q_c=0$ 给 $\Delta U=-W_c$，故 $Q_1=W_1-W_c>0$、$Q_2=W_2-W_c<0$，选B。图2由 $T=pV/(\nu R)$ 得 $T_B>T_A$，固定组成理想气体内能增加，选B。
+\crosscheck 第二问只约束端点等压，并非过程恒压，不能保证功或热量符号。
+\sourceproblem{10-T6}{62}{66}
+\problemtext 理想气体循环a--b等温、b--c绝热、c--d等压、d--a等容；表中给 $W_{ab}=50$ J、$\Delta U_{bc}=-50$ J、$W_{cd}=-50$ J、$Q_{cd}=-150$ J，填表求热效率。
+\workings 由 $Q=\Delta U+W$：ab为 $(\Delta U,W,Q)=(0,50,50)$ J；bc为 $(-50,50,0)$ J；cd为 $(-100,-50,-150)$ J；da因循环内能变化和为零且等容，得 $(150,0,150)$ J。净功50 J、吸收热量200 J，故 $\eta=50/200=25\%$。
+\crosscheck 各段热量代数和50 J等于净功；热效率分母为所有正吸热之和而非净吸热。
