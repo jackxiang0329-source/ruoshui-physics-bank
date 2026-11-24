@@ -70,3 +70,36 @@ B=\frac{\mu_0 I}{2\pi a}\left(1+\frac1{\sqrt2}\right).
 \problemtext 两长螺线管半径 $R=2r$，单位长度匝数及电流相同，求内部磁场大小之比。
 \workings 理想长螺线管内部 $B=\mu_0 nI$，与半径无关，因此 $B_R/B_r=1$。
 \crosscheck 有限长度管端部有漏磁，结论采用足够长且取远离端部的位置。
+
+\sourceproblem{计算1}{34}{40}
+\problemtext 边长 $a$ 的正方形与无限长直导线共面，近边距导线 $d$，电流 $I$，求磁通量。
+\workings 取导线电流向上，纸面向外为正，则右侧磁场入纸面，$B(r)=\mu_0 I/(2\pi r)$。积分得
+\[
+\Phi=-\frac{\mu_0 Ia}{2\pi}\ln\frac{d+a}{d}.
+\]
+所求通量大小为上式绝对值。
+\crosscheck $d\gg a$ 时趋于 $Ba^2$；对数自变量无量纲。
+\sourceproblem{计算2}{34}{40}
+\problemtext 图11由同心半圆弧及相接的直导线组成，求共同圆心O处磁场。
+\workings 两半圆弧的场大小各为 $\mu_0 I/(4R_j)$，径向连接段贡献为零；每条与圆弧端点相切、从垂足延伸的半无限直段贡献大小为 $\mu_0 I/(4\pi R_j)$。按各段电流方向用右手定则作有向叠加。记弧段、直段的方向符号为 $s_j,t_j\in\{-1,1\}$，则
+\[
+ B_z=\frac{\mu_0 I}{4}\sum_{j=1}^2\frac{s_j+t_j/\pi}{R_j}.
+\]
+\crosscheck 该式以图中两直段分别为切向半无限线为前提；原扫描图的细小箭头和连接关系尚未完全辨明，保留待核标记，不指定未经确认的符号。
+\sourceproblem{计算3}{35}{41}
+\problemtext 图12中无限长导线向上通电 $I_1$，右侧直角三角线框通电 $I_2$，近顶点距导线 $d$，水平底边长 $l$，斜边倾角 $\theta$，求各边安培力与合力。
+\workings 取右、上、纸外为 $x,y,z$ 正向，按图框电流沿斜边向右上、右边向下、底边向左。令 $K=\mu_0 I_1I_2/(2\pi)$、$h=l\tan\theta$。右侧磁场 $\bm B=-\mu_0 I_1\bm k/(2\pi x)$，故 $\mathrm d\bm F=K(-\mathrm dy\,\bm i+\mathrm dx\,\bm j)/x$。记 $L=\ln[(d+l)/d]$，
+\[
+\bm F_{\rm slope}=KL(-\tan\theta\,\bm i+\bm j),\quad
+\bm F_{\rm vertical}=\frac{Kh}{d+l}\bm i,\quad
+\bm F_{\rm base}=-KL\bm j.
+\]
+合力 $K\tan\theta[l/(d+l)-L]\bm i$，向左（趋近长直导线）。
+\crosscheck 对 $u>0$ 有 $\ln(1+u)>u/(1+u)$；竖直分量严格抵消。若框电流反向，所有力反向。
+\sourceproblem{计算4}{35}{41}
+\problemtext 半径 $R$ 的四分之一圆扇形线框绕直边OC匀角速 $\omega$ 转动，初始框面平行匀强磁场 $B$，电流 $I$，求磁矩、任意时刻磁力矩大小与弧AC最大安培力。
+\workings 面积 $S=\pi R^2/4$，磁矩大小 $p_m=IS$。转轴与磁场垂直，磁矩与磁场夹角初始为90度，故 $\tau(t)=ISB|\cos\omega t|$。弧段在匀强场的合力只由两端位移决定；弦AC长 $\sqrt2R$，旋转中其与磁场的点积可为零，故
+\[
+F_{\max}=\sqrt2IBR .
+\]
+\crosscheck 最大力矩为 $IB\pi R^2/4$；弧段力不能直接以弧长乘 $IB$。假设维持题给电流且转轴按题意匀速。
