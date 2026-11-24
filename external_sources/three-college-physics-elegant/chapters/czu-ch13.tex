@@ -251,3 +251,92 @@
 \problemtext 图示直线a(3 atm,1 L)经b(2 atm,2 L)至c(1 atm,3 L)，求功、内能增量、吸热。
 \workings $W=(3+1)(3-1)/2=4$ atm L，即 $405.2$ J。初末pV均3 atm L，故 $\Delta U=0$，$Q=405.2$ J。
 \crosscheck 1 atm L等于101.3 J；中途b的pV为4 atm L，整个过程并非等温。
+
+\sourceproblem{计算4}{243}{249}
+\problemtext 单原子理想气体由A等压膨胀至B，再绝热膨胀至C。原图A、B压强40万Pa，C压强10万Pa，体积分别2、3.49、8立方厘米，求总功和内能变化。
+\workings 图示 $p_A=p_B=4\times10^5$ Pa，$p_C=10^5$ Pa。$W_{AB}=p_A(V_B-V_A)=0.596$ J。$W_{BC}=-\Delta U_{BC}=\frac32(p_BV_B-p_CV_C)=0.894$ J。故 $W=1.490$ J，$\Delta U=\frac32(p_CV_C-p_AV_A)=0$。
+\crosscheck 体积轴为cm³。B点体积3.49为舍入值，可逆绝热关系给约3.482 cm³；总功按题图读数。
+\sourceproblem{计算5}{243}{249}
+\problemtext 刚性绝热容器分两室，各有1 mol氦和氧气，由无摩擦导热活塞隔开，初温400、600 K且初压相同为p0，求平衡温压。
+\workings 整体无外界功热交换，$\frac32R(400)+\frac52R(600)=4RT$，故 $T=525$ K。总容积 $V=R(400+600)/p_0$ 不变；末态共同压强 $p=2RT/V=1.05p_0=1.06365\times10^5$ Pa。
+\crosscheck 氧气按刚性双原子模型，活塞热容量及最终宏观动能忽略；两室内部功、热在整体能量账中相消。
+\sourceproblem{计算6}{243}{249}
+\problemtext 单原子理想气体三角循环，A、B、C的(V,p)按图为(1,1)、(2,3)、(2,1)，单位分别为10的负3次方立方米、10的5次方Pa，求各段及循环能量。
+\workings 采用 $W=\int p\,dV,\ \Delta U=3\Delta(pV)/2,\ Q=\Delta U+W$。AB直线段 $W=200$ J、$\Delta U=750$ J、$Q=950$ J；BC等容 $W=0$、$\Delta U=-600$ J、$Q=-600$ J；CA等压 $W=-100$ J、$\Delta U=-150$ J、$Q=-250$ J。循环总功及净吸热均100 J。
+\crosscheck 三段内能变化和为零，三角形面积为100 J；净吸热不等同于正吸热总量950 J。
+\sourceproblem{计算7}{244}{250}
+\problemtext 1 mol单原子气体矩形循环，a,b,c,d的(V,p)按图为(2,1)、(2,2)、(3,2)、(3,1)，单位分别为10的负3次方立方米、10的5次方Pa，求吸热总量、净功及效率。
+\workings ab等容吸热 $Q_{ab}=3(400-200)/2=300$ J；bc等压吸热 $Q_{bc}=5(600-400)/2=500$ J。cd、da均放热，分别为-450及-250 J。因此 $Q_{\rm in}=800$ J，$W_{\rm net}=100$ J，$\eta=100/800=12.5\%$。
+\crosscheck 矩形面积100 J，放热总量700 J，第一定律闭合。
+\sourceproblem{计算8}{244}{250}
+\problemtext 单原子气体初态1 atm、1 L，先等压体积加倍，再等容压强加倍，最后绝热膨胀至初温，求路径、内能变化、吸热、功。
+\workings 记初态 $(V_0,p_0)$。B为 $(2V_0,p_0)$，C为 $(2V_0,2p_0)$，温度依次为 $T_0,2T_0,4T_0$。可逆绝热 $TV^{2/3}$ 恒定，D为 $(16V_0,p_0/16)$；p-V图依次画水平线、竖直线、下降绝热线。$\Delta U_{AD}=0$，$Q_{AB}=5p_0V_0/2$，$Q_{BC}=3p_0V_0$，$Q_{CD}=0$。总 $Q=W=(11/2)p_0V_0=557.15$ J。
+\crosscheck 末态温度相同而体积不同，并非循环；即使绝热不可逆，末态内能及总功热仍由题给温度和前两段准静态过程确定，末体积则不唯一。
+\sourceproblem{计算9}{244}{250}
+\problemtext 0.02 kg氦由17摄氏度升至27摄氏度，分别定容、定压、绝热，求内能变化、吸热、外界对气体做功。
+\workings $\nu=5$ mol，$\Delta U=3\nu R(10)/2=623.25$ J。定容：$Q=623.25$ J，$W_{\rm on}=0$；定压：$Q=5\nu R(10)/2=1038.75$ J，$W_{\rm on}=-415.50$ J；绝热：$Q=0$，$W_{\rm on}=623.25$ J。
+\crosscheck 外界做功与气体对外功符号相反；三种过程内能增量相同。
+\sourceproblem{计算10}{244}{250}
+\problemtext 1 mol理想气体在400、300 K热源间可逆卡诺循环，高温等温膨胀体积0.001至0.005立方米，求高温吸热、低温放热及净功。
+\workings $Q_h=400R\ln5\simeq5349.77$ J；由可逆卡诺关系 $Q_c/Q_h=300/400$，得放热量大小 $Q_c=300R\ln5\simeq4012.33$ J，$W=100R\ln5\simeq1337.44$ J。
+\crosscheck 效率25%；低温放热量取正大小，工质有向吸热为负。
+\sourceproblem{计算11}{245}{251}
+\problemtext 三角循环图中A、B、C的(V,p)分别(1,300)、(3,100)、(1,100)，体积为立方厘米、压强Pa，A温度300 K，求B、C温度及循环净功净热。
+\workings $T\propto pV$，故 $T_B=300$ K，$T_C=100$ K。顺时针三角面积 $W=\frac12(300-100)(3-1)10^{-6}=2.0\times10^{-4}$ J，$Q_{\rm net}=W$。
+\crosscheck 图示单位是Pa与cm³，没有隐含10的5次方压强因子。
+\sourceproblem{计算12}{245}{251}
+\problemtext 热容比1.40，A温度300 K，图中A、B、C的(V,p)分别(2,400)、(6,100)、(2,100)，单位cm³、Pa，求B、C温度及各段吸热。
+\workings $T_B=225$ K，$T_C=75$ K。定热容下 $\Delta U=\Delta(pV)/(\gamma-1)$。AB直线 $W=1.0\times10^{-3}$ J，$\Delta U=-5.0\times10^{-4}$ J，$Q=5.0\times10^{-4}$ J；BC等压 $W=-4.0\times10^{-4}$ J，$\Delta U=-1.0\times10^{-3}$ J，$Q=-1.4\times10^{-3}$ J；CA等容 $W=0$，$\Delta U=Q=1.5\times10^{-3}$ J。
+\crosscheck 净热6.0乘10的负4次方J，等于三角形面积；原题所问各段净热取有向值。
+\sourceproblem{计算13}{245}{251}
+\problemtext 卡诺机高温源400 K，每循环吸热100 J、放热80 J，求低温源温度和效率。
+\workings $T_c=T_hQ_c/Q_h=320$ K，$\eta=1-Q_c/Q_h=20\%$。
+\crosscheck 净功20 J。
+\sourceproblem{计算14}{245}{251}
+\problemtext 热机效率25%，输出功率5 kW，每循环放热8000 J，求吸热及周期。
+\workings $Q_h=Q_c/(1-\eta)=10666.67$ J，$W=\eta Q_h=2666.67$ J，$\tau=W/P=0.5333$ s。
+\crosscheck 功率是单位时间净功，不是吸热率。
+\sourceproblem{计算15}{246}{252}
+\problemtext 卡诺机效率40%，500 K热源每循环供热800 J，求放热及低温源温度。
+\workings $Q_c=(1-\eta)Q_h=480$ J，$T_c=(1-\eta)T_h=300$ K。
+\crosscheck 净功320 J。
+\sourceproblem{计算16}{246}{252}
+\problemtext 逆斯特林循环，AB、CD分别为高温T1等温压缩、低温T2等温膨胀，BC、DA等容，求制冷系数。
+\workings 取 $r=V_2/V_1>1$，低温等温吸热 $Q_c=\nu RT_2\ln r$；净输入功 $W_{\rm in}=\nu R(T_1-T_2)\ln r$。若采用理想完全回热，或题目仅计CD从制冷对象吸收的热量，则 $e=Q_c/W_{\rm in}=T_2/(T_1-T_2)$。
+\crosscheck 等容段热量为正负相等的内能变化；实际无回热装置需明确这些热量与哪个热源交换，不能无条件将系统实际制冷系数等同于卡诺值。
+\sourceproblem{计算17}{246}{252}
+\problemtext 1 mol单原子气体T-V循环，A、B在过原点直线上，V_A=2V_B，BC等容、CA等温，T_C=600 K，求各段热量、净功、效率。
+\workings $T_A=600,T_B=300$ K；AB等压压缩，$Q_{AB}=\frac52R(-300)=-6232.5$ J。BC等容升温，$Q_{BC}=\frac32R(300)=3739.5$ J。CA等温膨胀，$Q_{CA}=600R\ln2\simeq3455.30$ J（用题给0.693）。$W_{\rm net}=962.30$ J，$\eta=W_{\rm net}/(Q_{BC}+Q_{CA})\simeq13.38\%$。
+\crosscheck 图为T-V而非p-V，不能直接用图形面积表示功；净热与净功相等。
+\sourceproblem{计算18}{246}{252}
+\problemtext 证明可逆卡诺逆循环制冷系数。
+\workings 低温源取热 $Q_c>0$，高温源放热 $Q_h>0$。可逆循环满足 $Q_h/T_1=Q_c/T_2$，能量守恒给 $W_{\rm in}=Q_h-Q_c$。故 $e=Q_c/W_{\rm in}=T_2/(T_1-T_2)$。
+\crosscheck 温度采用K，T1大于T2；制冷系数与热泵供热系数相差1。
+\sourceproblem{应用1}{247}{253}
+\problemtext 瀑布落差979 m，重力功50%转化为水内能，水比热4180 J每千克每K，求温升。
+\workings $mc\Delta T=0.5mgh$，故 $\Delta T=0.5(9.8)(979)/4180\simeq1.148$ K。
+\crosscheck 质量抵消；题给能量转化比例已包含其他能量去向。
+\sourceproblem{应用2}{247}{253}
+\problemtext 烟气由900摄氏度降至200摄氏度，给密度1.29 kg每立方米、摩尔质量0.0289 kg/mol及定压摩尔热容7R/2，求单位体积放热。
+\workings 按所给密度对应的体积计量，1立方米含 $\nu=1.29/0.0289$ mol，定压放热大小 $\nu(7R/2)(700)\simeq9.09\times10^5$ J。
+\crosscheck 密度与体积必须对应同一参考状态；若问实际900摄氏度入口立方米或200摄氏度出口立方米，而1.29为标准态空气密度，则需按状态方程重算。
+\sourceproblem{应用3}{247}{253}
+\problemtext 2 mol氦气初温300 K、20 L，等压膨胀体积加倍，再绝热膨胀至初温，求路径、内能、吸热、功。
+\workings 初态 $p_A=2R(300)/0.020=249300$ Pa，B体积0.040立方米、温度600 K、压强同A。若可逆绝热，C体积 $0.040(600/300)^{3/2}\simeq0.1131$ 立方米，压强 $2R(300)/V_C\simeq4.407\times10^4$ Pa。画水平AB及下降绝热线BC。$\Delta U=0$，$Q=2(5R/2)(300)=12465$ J，$W=12465$ J。
+\crosscheck 等压功4986 J，绝热功7479 J；不可逆绝热时总功热仍相同，但C体积不能按绝热状态关系确定。
+\sourceproblem{应用4}{247}{253}
+\problemtext 1 mol刚性氧气初温300 K、1 atm，分别等温或绝热膨胀到三倍体积，求对外功。
+\workings 准静态等温 $W_T=RT\ln3\simeq2738.81$ J。可逆绝热 $\gamma=7/5$，$T_f=T_i3^{-2/5}$，$W_S=\frac52RT_i(1-3^{-2/5})\simeq2216.31$ J。
+\crosscheck 两者并非同末态；仅指定不可逆绝热的末体积不能唯一确定功，主解按教材可逆路径。
+\sourceproblem{应用5}{248}{254}
+\problemtext 原书以高压气体推动物体作绝热膨胀为背景，要求分析气体功及物体动能变化。
+\workings 一般准静态绝热过程满足 $pV^\gamma=C$。对非武器化的封闭活塞热力学模型，气体功为 $W=\int_{V_i}^{V_f}p\,dV=(p_iV_i-p_fV_f)/(\gamma-1)$；若仅存在理想能量转移，则活塞动能变化由净外力功确定。
+\crosscheck 本题保留原书编号与通用热力学推导，不给出针对原武器装置的性能数值；原题数值部分列为未完成，不计入完整数值解析。
+\sourceproblem{应用6}{248}{254}
+\problemtext 地热热机高、低温源227及27摄氏度，每小时吸热1.8乘10的11次方J，求最大功率。
+\workings $\eta_{\max}=1-300/500=0.4$，吸热率 $1.8\times10^{11}/3600=5.0\times10^7$ W，故最大输出功率 $2.0\times10^7$ W，即20 MW。
+\crosscheck 卡诺上限，实际发电还受转换及辅机损耗限制。
+\sourceproblem{应用7}{248}{254}
+\problemtext 室外37摄氏度、室内17摄氏度，每日漏入热量2.51乘10的8次方J，实际制冷系数为卡诺值60%，求每日耗电。
+\workings $e_C=290/(310-290)=14.5$，$e=0.6e_C=8.7$。$W=2.51\times10^8/8.7\simeq2.885\times10^7$ J，换算约8.014 kWh。
+\crosscheck 按题设恒温及仅补偿给定热负荷，不含其他设备耗能。
