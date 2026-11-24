@@ -1,4 +1,5 @@
 % Consolidated guide-ch11 from 9a1384ddf1afcd855b09256c9c6f1c90b5023140; source fragments preserved.
+% 2026-11-24 八批严格二校第5批：历史片段哈希对应修改前版本。
 
 % === BEGIN guide-ch11-examples.tex blob 542be6dd696e71e5a88e2d88be9ac4bb4962a66e ===
 % 《大学物理学学习指导》第5版第11章“变化的电磁场”，例11.1—11.7。
@@ -7,7 +8,7 @@
 \section*{变化电磁场例题：感应电动势、磁能和坡印廷矢量}
 
 \sourceexample{11.1}{155--156}{163--164}
-\problemtext 无限长竖直导线载电流$I=5$A，右侧共面的矩形线圈
+\problemtext 无限长竖直导线向上载电流$I=5$A（方向依原图待核），右侧共面的矩形线圈
 高度$\ell=0.06$m、径向宽度$a=0.04$m，以$v=0.03$m/s向右匀速远离。
 当近边距导线$d=0.05$m时，求感应电动势的大小和方向。
 \workings
@@ -65,7 +66,7 @@ $E_x=kR^2h/[2(x^2+h^2)]$。
 \boxed{\mathcal E_{AB}
 =\left(\frac{\sqrt3}{4}+\frac{\pi}{12}\right)R^2\frac{dB}{dt}},
 \]
-感生电动势从\textbf{A指向B}，B端电势较高。
+沿杆的感生电场线积分从\textbf{A指向B}。涡旋场不能用全局单值静电势差描述；若开路导体内准静态电荷重新分布至切向总电场为零，才可说电荷产生的静电势$U_B-U_A$等于上述线积分。实际电压表读数还依赖引线路径。
 \crosscheck 圆外局部虽$B=0$，仍有非零涡旋电场，
 不可将$CB$段当成零贡献。
 几何角$60^\circ$在原图以半径/弦关系给出，须保留图示方向的核验依据。
@@ -89,7 +90,7 @@ $\mathcal E=BS\omega\sin\theta$，其峰值
 \[
 \boxed{\mathcal E_{\max}=BS\omega=0.20\,\mathrm V}.
 \]
-线圈电流大小$|I|=|\mathcal E|/R_{\mathrm e}$，
+忽略线圈自感及辐射、采用纯电阻近似，线圈电流大小$|I|=|\mathcal E|/R_{\mathrm e}$，
 磁阻力矩的幅值为
 $M=(B^2S^2\omega/R_{\mathrm e})\sin^2\theta$，
 所以
