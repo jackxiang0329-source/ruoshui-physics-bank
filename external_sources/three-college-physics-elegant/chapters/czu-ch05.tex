@@ -376,3 +376,75 @@ V(r)=\begin{cases}
 \Delta Q=4\pi\varepsilon_0r_2(300)\approx6.68\times10^{-9}\,\mathrm C.
 \]
 \crosscheck 该移除量超过外球原有正电荷，最终外球带负电；只允许将原有正电荷降至零时无法达到中心零势，需允许继续改变净电荷。
+
+\sourceproblem{计算16}{92}{98}
+\problemtext 均匀带电球层内外半径 $R_1,R_2$、体密度 $\rho$，求空腔电势。
+\workings 以无穷远零势，每薄球壳在内区贡献 $k_e\,dQ/r$，$dQ=4\pi\rho r^2dr$，故 $V=\rho(R_2^2-R_1^2)/(2\varepsilon_0)$。
+\crosscheck 空腔内场为零、电势为常量；薄层极限恢复球壳结果。
+\sourceproblem{计算17}{92}{98}
+\problemtext 总电荷q均匀分布于长 $2l$ 的细杆，求杆延长线上距近端a处电势。
+\workings 取沿杆从近端向远端坐标s，$V=k_eq/(2l)\int_0^{2l}ds/(a+s)=k_eq\ln[(a+2l)/a]/(2l)$，其中 $a>0$。
+\crosscheck $a\gg l$ 时趋于点电荷电势，且对数无量纲。
+\sourceproblem{计算18}{92}{98}
+\problemtext 两共轴同半径R圆环相距l，图中右环线密度 $+\lambda$，左环 $-\lambda$，求中点为原点的x轴上电势。
+\workings 轴上各电荷元至观察点距离相等，故
+\[
+V(x)=2\pi k_eR\lambda\left[\frac1{\sqrt{R^2+(x-l/2)^2}}-\frac1{\sqrt{R^2+(x+l/2)^2}}\right].
+\]
+\crosscheck $V(0)=0$，函数为奇函数，远场偶极项按 $1/x^2$ 衰减。
+\sourceproblem{计算19}{92}{98}
+\problemtext 27个等半径、等电荷球形水滴合成大水滴，电荷守恒，比较表面电势。
+\workings 若体积守恒，大滴半径 $R=3r$，电荷 $Q=27q$，故 $V_{\rm big}=9V_{\rm small}$（以无穷远零势）。
+\crosscheck 水滴为球形且表面均匀带电；非零电荷时电势比为9。合并前其他水滴对单滴电势的贡献忽略。
+\sourceproblem{计算20}{93}{99}
+\problemtext 无限均匀线电荷场 $E_r=\lambda/(2\pi\varepsilon_0r)$，求两轴距处势差，并讨论无穷远零势。
+\workings
+\[
+V(r_1)-V(r_2)=\int_{r_1}^{r_2}\frac{\lambda}{2\pi\varepsilon_0r}dr
+=\frac{\lambda}{2\pi\varepsilon_0}\ln(r_2/r_1).
+\]
+非零线密度时对数在无穷远发散，因此不能取无穷远为有限零势；可选有限参考轴距。
+\crosscheck 若真实导线有限长，远场转为点电荷行为，无穷远零势可用；无限长近似不可延伸到任意远处。
+\sourceproblem{计算21}{93}{99}
+\problemtext 两同心球面半径 $R_1<R_2$，均匀电荷 $Q_1,Q_2$，求电势分布、曲线及两球面势差。
+\workings 取无穷远零势，
+\[
+V(r)=k_e\begin{cases}
+Q_1/R_1+Q_2/R_2,&r\le R_1,\\
+Q_1/r+Q_2/R_2,&R_1<r<R_2,\\
+(Q_1+Q_2)/r,&r\ge R_2.
+\end{cases}
+\]
+$V(R_1)-V(R_2)=k_eQ_1(1/R_1-1/R_2)$。下图示意 $R_2=2R_1,Q_2=Q_1>0$ 的特例，横纵坐标分别为 $r/R_1,V/(k_eQ_1/R_1)$。
+\begin{center}
+\begin{tikzpicture}[xscale=1.3,yscale=1.5]
+\draw[->] (0,0)--(4.5,0) node[right] {$r/R_1$};
+\draw[->] (0,0)--(0,1.8) node[above] {$V/(k_eQ_1/R_1)$};
+\draw[thick] (0,1.5)--(1,1.5);
+\draw[thick,domain=1:2,samples=40] plot (\x,{1/\x+.5});
+\draw[thick,domain=2:4.2,samples=50] plot (\x,{2/\x});
+\draw[dashed] (1,0)--(1,1.5) (2,0)--(2,1);
+\node[below] at (1,0) {1};\node[below] at (2,0) {2};
+\end{tikzpicture}
+\end{center}
+\crosscheck 两界面电势连续；电荷符号任意时曲线单调性取决于 $Q_1$ 与 $Q_1+Q_2$，不能将上述特例当作通用图形。
+\sourceproblem{计算22}{93}{99}
+\problemtext 三共线等间距d点电荷均受零合力，两端 $Q_1=Q_3=Q$，求固定两端时将中间电荷移至无穷远的外力功。
+\workings 对端电荷平衡，$k_eQQ_2/d^2+k_eQ^2/(2d)^2=0$（按外向为正），得 $Q_2=-Q/4$（非零Q）。中间初始外场电势 $2k_eQ/d$，势能 $-k_eQ^2/(2d)$。准静态移动外力功 $W_{\rm ext}=k_eQ^2/(2d)$。
+\crosscheck 中间电荷因对称自动平衡；若末态动能不同，外力功另加 $\Delta K$。
+\sourceproblem{计算23}{93}{99}
+\problemtext 正电荷 $3\times10^{-9}$ C向右移动5 cm，图示电场向左，外力功 $6\times10^{-5}$ J、动能增量 $4.5\times10^{-5}$ J，求电力功及场强。
+\workings 由动能定理 $W_e=\Delta K-W_{\rm ext}=-1.5\times10^{-5}$ J。故 $E=|W_e|/(q\Delta x)=10^5$ V/m，方向向左。
+\crosscheck 电力与位移反向，功为负；厘米换算成0.05 m。
+\sourceproblem{计算24}{94}{100}
+\problemtext 半径R的均匀正带电环线密度 $\lambda$，轴上A、B距中心分别为 $\sqrt3R,\sqrt8R$（按原图根号），电荷q从A至B，求电场力功。
+\workings $V(z)=k_e2\pi R\lambda/\sqrt{R^2+z^2}$，故 $V_A=k_e\pi\lambda,\ V_B=2k_e\pi\lambda/3$，所以 $W=q(V_A-V_B)=q\lambda/(12\varepsilon_0)$。
+\crosscheck 原图两距离有根号，至环上任一点距离分别为2R、3R；功与粒子质量无关。
+\sourceproblem{计算25}{94}{100}
+\problemtext 电势函数 $U=-\sqrt{x^2+y^2}+\ln x$（SI），求 $(4,3,0)$ 处电场各分量。
+\workings 定义域 $x>0$，$\bm E=-\nabla U$，故 $E_x=x/\sqrt{x^2+y^2}-1/x,\ E_y=y/\sqrt{x^2+y^2}, E_z=0$。代入得 $(0.55,0.60,0)$ V/m。
+\crosscheck 原PDF100图像核实平方根及对数符号；由混合偏导相等也可核验该场为保守场。
+\sourceproblem{应用1}{94}{100}
+\problemtext 电子以水平初速 $v_0$ 进入垂直匀强电场的示波管偏转区，讨论轨迹。
+\workings 取入射方向为正x，电场沿正y，入射点为原点。忽略重力及相对论效应，$x=v_0t,\ y=-eEt^2/(2m)$，故 $y=-eEx^2/(2mv_0^2)$，为朝电场反向弯曲的抛物线。若极板长L且未撞板，离开板区后沿出口切线直线运动，$v_y=-eEL/(mv_0)$。
+\crosscheck 轨迹模型只在板间匀强场区有效，出口后忽略边缘场；若速度接近光速需使用相对论动量方程。
