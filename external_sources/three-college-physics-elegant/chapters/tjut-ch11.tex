@@ -30,7 +30,7 @@
 \sourceproblem{选择8}{46}{52}
 \problemtext 选择适于测量单色可见光波长的光栅常数（选项续PDF53）。
 \workings 0.01 mm即10微米，比可见光波长大约一个数量级，能产生易测的非零级偏角且保留多个级次，选C。
-\crosscheck 0.5及1 mm偏角太小；1.0×10的负5次方 mm小于可见波长，无非零级主极大。
+\crosscheck 0.5及1 mm偏角太小；高清PDF53确认D为 $1.0\times10^{-3}$ mm，即1微米，实际上也可产生可见光一级衍射，但可见级数少且角度较大。选择C依据常规教学测量折中，并非唯一可用栅距。
 \sourceproblem{选择9}{47}{53}
 \problemtext 光栅常数 $d$、缝宽 $b$、总缝数 $N$，判断主极大条件。
 \workings 相邻缝相位差为 $2\pi d\sin\theta/\lambda$，同相叠加要求 $d\sin\theta=k\lambda$，选C。
@@ -44,21 +44,20 @@
 \workings 近轴 $a=3\lambda f/x=6.0\times10^{-4}$ m，同角度满足 $3(400)=2\lambda_0$，故 $\lambda_0=600$ nm。
 \crosscheck 使用精确角度 $\sin\theta=x/\sqrt{x^2+f^2}$ 时缝宽仅有约百万分之二的相对改动。
 \sourceproblem{填空2}{47}{53}
-\problemtext 单缝第二级暗纹对应的缝面半波带数；缝宽缩为一半后该方向成为何级条纹。
-\workings 原 $a\sin\theta=2\lambda$，即4个半波带；新宽度 $a/2$ 时光程差为 $\lambda$，为第一级暗纹。
-\crosscheck 比较同一方向而非原级次的新位置。
+\problemtext 单缝第五级暗纹方向对应多少半波带？缝宽减半后原方向为明纹还是暗纹？
+\workings 高清PDF53确认原题为第五级暗纹。$b\sin\theta=5\lambda$，对应10个半波带。缝宽减半后光程差为 $5\lambda/2$，即5个半波带，按教材半波带近似为明纹。
+\crosscheck 精确夫琅禾费强度在此处非零，归一化强度为 $4/(25\pi^2)$；次极大真正位置满足 $\tan\beta=\beta$，故此方向并非严格极大点。修正第十八批误读为第二级的问题。
 \sourceproblem{填空3}{47}{53}
 \problemtext 632.8 nm的氦氖激光单缝衍射，屏距4 m，两侧第二级暗纹间距10 cm，求缝宽。
 \workings 每侧距离5 cm，近轴 $a=2\lambda D/0.05=1.01248\times10^{-4}$ m，约0.101 mm。
 \crosscheck 无透镜时采用远场近似；以所求缝宽估计菲涅耳数约0.004，近似适用。
 \sourceproblem{填空4}{47}{53}
-\problemtext 600 nm光垂直入射单缝，已知缝宽 $a$ 与中央明纹全宽 $w$，求会聚透镜焦距。
-\workings 第一暗纹满足 $\sin\theta_1=\lambda/a$，且 $w=2f\tan\theta_1$，故
+\problemtext 600 nm光正入射宽 $3.0\times10^{-4}$ m 的单缝，中央明纹全宽 $2.0\times10^{-3}$ m，求透镜焦距。
+\workings $b\sin\theta_1=\lambda$，$w=2f\tan\theta_1$，故
 \[
-f=\frac{w}{2}\sqrt{(a/\lambda)^2-1}\simeq\frac{aw}{2\lambda}.
+f=\frac w2\sqrt{(b/\lambda)^2-1}\approx0.500\,\mathrm m.
 \]
-原扫描缝宽及明纹宽度的指数细小，暂保留通式和待高清确认标记。
-\crosscheck 全宽与半宽不可混用；只有 $a>\lambda$ 时存在有限角度第一暗纹。
+\crosscheck 高清PDF53确认缝宽指数负4、明纹全宽指数负3；近轴结果为0.5 m，关闭扫描疑点。
 \sourceproblem{填空5}{47}{53}
 \problemtext 光栅透光宽度与遮光宽度相等，判断可见主极大的可能级次。
 \workings $d=2b$，偶数非零级与单缝暗纹重合而缺级，故可能级次为0及正负奇数级，并满足 $|k|\lambda\le d$。
