@@ -43,3 +43,48 @@ x=0.0565\,\mathrm m,\quad v=-0.0565\pi/4\approx-0.0444\,\mathrm{m/s},\quad
 a=-0.0565(\pi/4)^2\approx-0.0349\,\mathrm{m/s^2}.
 \]
 \crosscheck 图示初速度为正；10 s等价于2 s，位移正、速度和加速度负。
+
+\sourceproblem{11-T7}{69}{73}
+\problemtext 初位移为负半振幅、速度 $2\sqrt3$ m/s指向平衡位置、加速度大小20米每平方秒，求振动式及每隔5 s的相位差。
+\workings $x_0=-A/2,\ v_0=\sqrt3 A\omega/2,\ a_0=A\omega^2/2$。所以 $A\omega=4,\ A\omega^2=40$，得 $\omega=10$ rad/s、$A=0.4$ m。取初相 $-2\pi/3$，
+\[
+x=0.4\cos(10t-2\pi/3)\ \mathrm m,\quad \Delta\phi=50\ \mathrm{rad}.
+\]
+\crosscheck 初速正、初加速度正20；相位差若取模 $2\pi$，为 $50-14\pi$ rad。
+\sourceproblem{11-T8}{69}{73}
+\problemtext 10 g振子振幅0.24 m、频率0.25 Hz，初位移0.12 m向平衡点运动，求0.5 s位置及力、首次到达负0.12 m时间、该处速度加速度和4 s能量。
+\workings $\omega=\pi/2,\ x=0.24\cos(\pi t/2+\pi/3)$。0.5 s时 $x=0.24\cos(7\pi/12)\approx-0.06212$ m，$F=-0.01\omega^2x\approx1.53\times10^{-3}$ N，向正x。首次到达负0.12 m相位为 $2\pi/3$，时间 $2/3$ s，此刻 $v=-0.06\sqrt3\pi\approx-0.3265$ m/s，$a=0.03\pi^2\approx0.2961$ 米每平方秒。之后另一次到达同位置时速度反号，加速度相同。4 s为一周期，回到初态；以平衡点为零势能，
+\[
+E=\tfrac12m\omega^2A^2\approx7.106\times10^{-4}\,\mathrm J,\quad
+E_p=E/4,\quad E_k=3E/4.
+\]
+\crosscheck 速度符号取决于经过位置的方向；能量和恒定，且首次到达时间小于半周期。
+\sourceproblem{11-T9}{70}{74}
+\problemtext 同向振动 $x_1=0.05\cos(10t+3\pi/4)$、$x_2=0.06\sin(10t+\varphi)$，求合振幅极值对应相位。
+\workings 第二式化为余弦，相位差 $\delta=\varphi-5\pi/4$。$A^2=0.05^2+0.06^2+2(0.05)(0.06)\cos\delta$。最大振幅0.11 m对应 $\varphi=5\pi/4+2n\pi$，最小0.01 m对应 $\varphi=\pi/4+2n\pi$。
+\crosscheck 正弦换余弦必须减 $\pi/2$；两振幅不等，反相也不完全抵消。
+\sourceproblem{11-T10}{70}{74}
+\problemtext 同向振动 $x_1=0.04\cos(2t+\pi/6)$、$x_2=0.03\cos(2t-5\pi/6)$，求合振动。
+\workings 二者相差 $\pi$，所以 $x=0.01\cos(2t+\pi/6)$ m。振幅0.01 m，初相 $\pi/6$（模 $2\pi$）。
+\crosscheck 合振动与较大振幅分量同相。
+\sourceproblem{11-T11}{71}{75}
+\problemtext 合振幅20 cm，合振动与第一振动相位差30度，第一振幅17.3 cm，求第二振幅及两分振动相位差。
+\workings 设第一相位为0、合相位为正30度，则第二相量（cm）为 $20e^{i\pi/6}-17.3=(10\sqrt3-17.3)+10i$。故
+\[
+A_2=\sqrt{(10\sqrt3-17.3)^2+100}\approx10.00002\ \mathrm{cm},\quad
+\delta=\operatorname{atan2}(10,10\sqrt3-17.3)\approx89.88^\circ.
+\]
+若给出的30度为无向夹角，负30度对应共轭解，$\delta\approx-89.88^\circ$。
+\crosscheck 教材把17.3 cm近似为 $10\sqrt3$ cm时答案为10 cm及90度；严格数值与近似答案区分。
+\sourceproblem{11-T12}{71}{75}
+\problemtext 垂直振动 $x=0.06\cos(\pi t/3+\pi/3)$、$y=0.03\cos(\pi t/3-\pi/3)$，求轨迹并判断旋向。
+\workings 令 $X=x/0.06,Y=y/0.03$，消去相位得到 $X^2+XY+Y^2=3/4$，为椭圆。初始 $(x,y)=(0.03,0.015)$，$\dot x<0,\dot y>0$，从正z侧观察为逆时针。以下图以厘米为单位，参数曲线直接来自两振动：
+\begin{center}
+\begin{tikzpicture}[scale=.38]
+\draw[->] (-7,0)--(7,0) node[right] {$x$};
+\draw[->] (0,-4)--(0,4) node[above] {$y$};
+\draw[thick,blue,domain=0:360,samples=100,variable=\t] plot ({6*cos(\t+60)},{3*cos(\t-60)});
+\draw[->,thick,blue] (3,1.5)--(1.9,2.05);
+\end{tikzpicture}
+\end{center}
+\crosscheck $x\dot y-y\dot x=0.06(0.03)(\pi/3)\sin(2\pi/3)>0$；明确观察方向以避免左旋右旋约定歧义。
