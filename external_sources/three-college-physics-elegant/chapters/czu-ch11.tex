@@ -260,3 +260,107 @@
 \simeq6.328\times10^{-7}\ \mathrm m=632.8\ \mathrm{nm}.
 \]
 \crosscheck 高清原页数字为22.78 mm，非22.87 mm；近轴半角约0.00949 rad，近似合理。
+
+\sourceproblem{计算5}{206}{212}
+\problemtext 双缝距d时固定屏点P是第10级明纹，减小缝距后变为第5级；另给d=0.1 mm、屏距1 m、OP=5 cm，求波长。
+\workings 近轴条件下 $m\lambda=dx/D$。固定P及波长，$d'/d=5/10=1/2$；第二问 $\lambda=10^{-4}\cdot0.05/(10\cdot1)=500$ nm。
+\crosscheck 精确远场角关系给 $\lambda=d\sin(\arctan0.05)/10\simeq499.38$ nm；教材数值采用近轴近似。
+\sourceproblem{计算6}{206}{212}
+\problemtext 光源至两缝的路程差 $l_1-l_2=3\lambda$，缝距d、屏距D，求零级明纹偏移与明纹间距。
+\workings 取朝S1为屏坐标正向，则总光程差近似 $\Delta=l_1-l_2-dx/D$。零级满足 $\Delta=0$，故 $x_0=3\lambda D/d$，朝S1。相邻明纹间距为 $\lambda D/d$。
+\crosscheck 原屏中心为三级明纹；偏移方向由抵消照明光程差决定，非仅凭初相符号判断。
+\sourceproblem{计算7}{206}{212}
+\problemtext 500 nm牛顿环，第k及第k+10暗环半径分别4、6 mm，求曲率半径。
+\workings 接触式空气膜反射暗环近似 $r_m^2=m\lambda R$，相减得 $R=(0.006^2-0.004^2)/(10\cdot500\times10^{-9})=4.0$ m。
+\crosscheck 级次k消去，代回得k=8；空气折射率取1，薄膜近似成立。
+\sourceproblem{计算8}{206}{212}
+\problemtext 接触式牛顿环曲率半径400 cm，第五明环半径0.30 cm，求波长及半径1.00 cm内明环数。
+\workings 反射明环 $r_m^2=(m-1/2)\lambda R$，从中心外第一明环取m=1。故 $\lambda=0.003^2/(4.5\cdot4)=500$ nm。条件 $(m-1/2)\lambda R\le0.01^2$ 给 $m\le50.5$，故50个明环。
+\crosscheck 中央暗斑不计；第51明环半径大于1 cm。
+\sourceproblem{计算9}{207}{213}
+\problemtext 长10 cm玻璃片形成空气劈尖，末端间隔0.004 mm，500 nm正入射，求全长内反射明纹条数。
+\workings 膜厚从0至4微米，反射极大 $2e=(m-1/2)\lambda$，故 $m-1/2\le16$，正整数m为1至16，共16条。
+\crosscheck 两端均为暗纹；第16明纹厚度3.875微米，第17超出范围。
+\sourceproblem{计算10}{207}{213}
+\problemtext 单缝宽0.15 mm、焦距400 mm，两侧第三暗纹相距8.0 mm，求波长。
+\workings $\tan\theta=0.004/0.4=0.01$，$b\sin\theta=3\lambda$，故 $\lambda=0.00015\sin(\arctan0.01)/3\simeq499.975$ nm，近轴结果500 nm。
+\crosscheck 使用半间距而非全间距；三阶暗纹条件为整数波长光程差。
+\sourceproblem{计算11}{207}{213}
+\problemtext 缝宽0.40 mm、波长589 nm、焦距1.0 m，求第一暗纹及第二侧明纹距中心距离。
+\workings 第一暗纹 $x_1=f\tan[\arcsin(\lambda/b)]\simeq1.4725$ mm。教材半波带近似第二侧明纹 $b\sin\theta\simeq5\lambda/2$，得约3.6813 mm。严格均匀单缝第二侧极大满足 $\tan\beta=\beta$，根 $\beta_2\simeq7.725252$，故 $x_2=f\tan[\arcsin(\beta_2\lambda/(\pi b))]\simeq3.621$ mm。
+\crosscheck 第二侧明纹位于第二、第三暗纹之间；近似半波带结果并非严格极值。
+\sourceproblem{计算12}{207}{213}
+\problemtext 600及500 nm光正入射每毫米200线光栅，焦距50 cm，求同侧一级谱线间距。
+\workings $d=5\times10^{-6}$ m，$\sin\theta_{600}=0.12,\ \sin\theta_{500}=0.10$。采用理想平面焦屏几何，
+\[
+\Delta x=0.5\left(\frac{0.12}{\sqrt{1-0.12^2}}-\frac{0.10}{\sqrt{1-0.10^2}}\right)\simeq10.18\ \mathrm{mm}.
+\]
+近轴结果10.0 mm。
+\crosscheck 两谱线在同侧且红光偏离中心更远；非近轴焦面映射依赖透镜设计。
+\sourceproblem{计算13}{207}{213}
+\problemtext 440与660 nm光的谱线除中央外第二次在60度重合，求光栅常数。
+\workings 重合条件 $440m_1=660m_2$，故 $m_1=3j,m_2=2j$。若无缺级，第二次非零重合为j=2，$d\sin60^\circ=2640$ nm，得 $d=3.0484$ 微米。
+\crosscheck 原题未给缝宽，若第一组重合因缺级而不可见，观测序号与数学重合序号未必一致；教材答案假定相关级次可见。
+\sourceproblem{计算14}{208}{214}
+\problemtext 450至650 nm光正入射每厘米5000线光栅，二级谱带焦屏宽35.1 cm，求焦距。
+\workings $d=2.0$ 微米，二级两端 $\sin\theta_v=0.45,\sin\theta_r=0.65$，均非小角。以平面焦屏 $x=f\tan\theta$ 模型，
+\[
+f=\frac{0.351}{0.65/\sqrt{1-0.65^2}-0.45/\sqrt{1-0.45^2}}\simeq1.00\ \mathrm m.
+\]
+\crosscheck 两端角度约26.7及40.5度，不能直接套用小角线性式；实际大视场透镜焦面投影须另给光学模型。
+\sourceproblem{计算15}{208}{214}
+\problemtext 400至760 nm白光的第二、三级光栅谱重叠，求二级被重叠的波长范围。
+\workings 同一衍射方向满足 $2\lambda_2=3\lambda_3$，故由三级波段得 $\lambda_2\in[600,1140]$ nm，与二级原波段交集为600至760 nm。
+\crosscheck 若光栅常数限制传播级次，还须 $\lambda_2\le d/2$；若有缺级，则相应谱线不存在。原题已称发生重叠，教材默认相关谱段均可见。
+\sourceproblem{计算16}{208}{214}
+\problemtext 每厘米6500线光栅，400至760 nm白光正入射，求三级光谱张角。
+\workings $d=10^{-2}/6500$ m，三级传播需 $\lambda\le d/3=512.82$ nm。短波端 $\sin\theta=3(400\,\mathrm{nm})/d=0.78$，长波可见极限为90度，故角域张角 $90^\circ-\arcsin0.78\simeq38.74^\circ$。
+\crosscheck 760 nm三级不存在；90度为掠射极限，有限焦屏只能接收小于90度的部分，实际可见张角还依装置。
+\sourceproblem{计算17}{208}{214}
+\problemtext 光栅常数 $6.0\times10^{-4}$ cm，三级 $\sin\theta_3=0.30$，四级缺级，求波长、透光缝宽与可见谱线数。
+\workings $\lambda=d(0.30)/3=600$ nm。四级缺级要求 $b(4\lambda/d)=p\lambda$，即 $b=pd/4$。非零透光与不透光区域要求 $0<b<d$，故 $p=1,2,3$，对应 $b=1.5,3.0,4.5$ 微米。若四级是首次缺级，则排除p=2，余两种。题给可见三级与p=1,2,3均相容。形式传播级次 $|m|\le10$；p为奇数时缺非零4的倍数，含零级共有17条（若排除掠射的$\pm10$，15条）；p=2时缺非零偶数，含零级11条。
+\crosscheck 教材常取最低单缝暗纹p=1，得到1.5微米与17条（含掠射）；原题没有指定首次单缝零点，因此缝宽不唯一。所有计数注明是否包含90度边界。
+\sourceproblem{计算18}{208}{214}
+\problemtext 三理想偏振片轴相对第一片为0、45、90度，自然光强 $I_0$ 入射，求各片后光强和偏振态；再移去中片。
+\workings 第一片后 $I_1=I_0/2$ 且为沿第一轴的线偏振光；第二片后 $I_2=I_0/4$ 沿45度轴；第三片后 $I_3=I_0/8$ 沿90度轴。移去中片后第一片仍为 $I_0/2$，末片输出零。
+\crosscheck 零光强没有可定义的偏振方向；理想模型不计材料吸收。
+\sourceproblem{计算19}{209}{215}
+\problemtext 两次自然入射分别使用30度和45度轴夹角，透射强度相同，求入射强度比。
+\workings $I_{01}\cos^230^\circ/2=I_{02}\cos^245^\circ/2$，故 $I_{01}:I_{02}=2:3$。
+\crosscheck 30度透射比例较大，达到相同输出所需入射强度较小。
+\sourceproblem{计算20}{209}{215}
+\problemtext 首末偏振轴正交，三片后自然光透射强度 $I_0/16$，求中片与首片夹角。
+\workings $I_3=I_0\sin^2(2\alpha)/8$，故 $\sin^22\alpha=1/2$。取无向轴夹角 $0\le\alpha\le90^\circ$，得 $\alpha=22.5^\circ$ 或 $67.5^\circ$。
+\crosscheck 两解互余，均给相同的两次投影乘积；不可仅保留较小角。
+\sourceproblem{计算21}{209}{215}
+\problemtext 自然光通过两理想偏振片，分别在透射为最大透射的1/3及入射强度的1/3时求轴夹角。
+\workings 最大透射强度为 $I_0/2$，故第一问 $\cos^2\theta=1/3$，$\theta=\arccos(1/\sqrt3)\simeq54.74^\circ$；第二问 $\cos^2\theta=2/3$，$\theta\simeq35.26^\circ$。
+\crosscheck 取偏振轴无向锐角，两条件分母不同。
+\sourceproblem{计算22}{209}{215}
+\problemtext 自然光通过轴夹60度的两片时透射强度I，插入与两片均夹30度的偏振片后求强度。
+\workings 原 $I=(I_0/2)\cos^260^\circ=I_0/8$。新 $I'=(I_0/2)\cos^430^\circ=9I_0/32=9I/4$。
+\crosscheck 新透射仍小于首片后的 $I_0/2$，未违反能量守恒。
+\sourceproblem{计算23}{209}{215}
+\problemtext 自然光与线偏振光的非相干混合通过旋转分析器，最大透射为最小的5倍，求线偏振成分占总强度比例。
+\workings 设自然光强N、线偏振强P，$(N/2+P)/(N/2)=5$，故P=2N，所求 $P/(P+N)=2/3$。
+\crosscheck 这是混合光模型的线偏振度；一般椭圆偏振态不能仅由旋转分析器鉴别全部偏振性质。
+\sourceproblem{计算24}{210}{216}
+\problemtext 两偏振片A、B轴夹45度，线偏振入射与A轴同向，分别按AB和BA顺序求末强度。
+\workings AB顺序：$I_{AB}=I\cos^20^\circ\cos^245^\circ=I/2$。BA顺序：$I_{BA}=I\cos^245^\circ\cos^245^\circ=I/4$。
+\crosscheck 第二种顺序的末偏振方向为A轴，第一种为B轴；投影次序不能互换。
+\sourceproblem{计算25}{210}{216}
+\problemtext 自然光以布儒斯特角48.09度由液体进入折射率1.56玻璃，求液体折射率及折射角。
+\workings $n_g/n_l=\tan48.09^\circ$，故 $n_l=1.56/\tan48.09^\circ\simeq1.40$；折射角 $r=90^\circ-48.09^\circ=41.91^\circ$。
+\crosscheck 普通透明各向同性非磁介质；可代回斯涅尔定律。
+\sourceproblem{应用1}{210}{216}
+\problemtext 湖面上方0.5 m的探测器接收波长20.0 cm的射电星直达与反射波，求星升起后首个干涉极大仰角。
+\workings 远方平面波近似下，几何程差 $2h\sin\alpha$。若取教材理想反射相位反转π，则首个极大满足 $2h\sin\alpha=\lambda/2$，故 $\alpha=\arcsin0.1\simeq5.74^\circ$。若反射无相变，则地平线本身为极大，首个正仰角极大为 $\arcsin0.2\simeq11.54^\circ$。
+\crosscheck 实际水面反射系数依偏振、频率、介电性质和入射角，且两束振幅可随角度变化；题目未给这些数据，5.74度为理想反相模型下的干涉相位极大。
+\sourceproblem{应用2}{210}{216}
+\problemtext 空气侧玻璃折射率1.50，镀折射率1.65介质膜以增强632.8 nm激光反射，求厚度条件及最小厚度。
+\workings 正入射、无吸收，空气到膜反射反相，膜到玻璃反射不反相。反射增强需往返传播相位补偿π，故 $2ne=(m+1/2)\lambda$，$m=0,1,\ldots$，最小 $e=\lambda/(4n)=95.88$ nm。
+\crosscheck 单层有限折射率膜只能增强反射，不能保证100%反射；实际高反镜通常采用多层膜。斜入射需引入膜内角余弦。
+\sourceproblem{应用3}{210}{216}
+\problemtext 海水折射率1.30，表面油膜1.20、厚460 nm，太阳正上方，比较反射及水下透射颜色。
+\workings 正入射两反射均低到高反相，故相对反射附加相位为零；往返光程 $2ne=1104$ nm。反射增强波长 $\lambda=1104/m$ nm，通常可见范围内m=2给552 nm（绿色）。透射增强对应反射极小，$\lambda=1104/(m+1/2)$ nm，可见范围内m=1给736 nm（深红边缘）、m=2给441.6 nm（蓝紫）。m=3给315.4 nm不在可见范围。
+\crosscheck 白光中颜色并非仅由极值波长确定，水下透射光仍为宽带，绿色相对削弱，可能偏互补的红紫色；具体色感取决于入射光谱、反射对比度、水吸收及视觉响应，不能断言纯蓝紫或纯红。
