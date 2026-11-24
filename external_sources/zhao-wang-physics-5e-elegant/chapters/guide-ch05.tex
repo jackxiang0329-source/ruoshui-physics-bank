@@ -1,4 +1,5 @@
 % Consolidated guide-ch05 from 9a1384ddf1afcd855b09256c9c6f1c90b5023140; source fragments preserved.
+% 2026-11-24 八批严格二校第5批：历史片段哈希对应修改前版本。
 
 % === BEGIN guide-ch05-examples.tex blob 227e4ecee922ef1f3baa388ed1d40a7173e1830f ===
 % 《大学物理学学习指导》（第5版）第5章 机械振动，例5.1—5.6。
@@ -6,7 +7,7 @@
 
 \sourceexample{5.1}{66}{74}
 \problemtext 竖直弹簧劲度系数$k$，原来托住质量$m$的物块$C$；
-另一块质量同为$m$的物块$B$从其上方$h$处自由落下，与$C$完全非弹性碰撞。
+另一块质量同为$m$的物块$B$从其上方$h$处自由落下，与$C$完全非弹性碰撞（碰后瞬时共速，但无永久黏结，接触力只可为压力）。
 求两块不分离时的振动表达式及允许的最大落差$h$。
 \workings
 碰前$B$速度$v_B=\sqrt{2gh}$；碰撞冲量过程两块合速度
@@ -65,7 +66,7 @@ $t=5\,\mathrm s$时向正方向经过$x=0$。
 采用$x=A\cos(\omega t+\varphi)$。
 $x(0)=-A/2$且$v(0)<0$意味着$\cos\varphi=-1/2,\sin\varphi>0$，
 故$\varphi=2\pi/3$。
-$t=5$时向正方向过零，对应第一个与图示连续的相位$3\pi/2$。
+$t=5$时向正方向过零，对应第一个与图示连续的相位$3\pi/2$。若仅知两个时刻的状态而不知中间波形，还允许相位$3\pi/2+2n\pi$，从而$T=60/(5+12n)$ s（$n=0,1,\ldots$），原图需确认无额外周期。
 \[
 5\omega+\frac{2\pi}{3}=\frac{3\pi}{2}
 \quad\Longrightarrow\quad
@@ -88,7 +89,7 @@ $t=5$时向正方向过零，对应第一个与图示连续的相位$3\pi/2$。
 \omega=\sqrt{\frac{k}{m}}=\sqrt{10}\,\mathrm{rad/s},\quad
 \boxed{v_{\max}=A\omega=0.10\sqrt{10}\approx0.316\,\mathrm{m/s}}.
 \]
-\crosscheck 通过平衡位置时弹簧振动势能为零，振动动能最大；
+\crosscheck 通过平衡位置时以平衡位置为零点的重力与弹性合成振动势能为零（弹簧自身弹性势能并不为零），振动动能最大；
 也可由$kA^2/2=mv_{\max}^2/2$复算。
 
 \sourceexample{5.5}{68--70}{76--78}
@@ -102,7 +103,7 @@ $v=-\omega A\sin(\omega t+\varphi)$。
 $\sin\varphi=1/2$。又因$v$初始变负，$a(0)<0$，故$x(0)>0$，
 即$\cos\varphi>0$，从而$\varphi=\pi/6$。
 $t=1$时速度为正且正在增大，意味着相位取$7\pi/6$，所以
-$\omega+\pi/6=7\pi/6$，得$\omega=\pi\,\mathrm{rad/s}$。
+若图中无额外完整周期，$\omega+\pi/6=7\pi/6$，得$\omega=\pi\,\mathrm{rad/s}$。只凭两端速度和斜率还允许$\omega=(2n+1)\pi$、$A=31.4/[(2n+1)\pi]$ cm，须核中间图形。
 振幅$A=31.4/\pi\,\mathrm{cm}\approx10.0\,\mathrm{cm}$，因此
 \[
 \boxed{x(t)\approx10\cos\left(\pi t+\frac{\pi}{6}\right)\ \mathrm{cm}}.
