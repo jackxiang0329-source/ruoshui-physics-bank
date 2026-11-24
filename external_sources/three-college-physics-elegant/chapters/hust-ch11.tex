@@ -30,7 +30,7 @@ A=\sqrt{0.02^2+0.04^2}=0.04472\,\mathrm m.
 E=\tfrac12(m+J/R^2)\dot x^2+\tfrac12kx^2.
 \]
 由运动方程 $(m+J/R^2)\ddot x+kx=0$ 得 $\omega=\sqrt{k/(m+J/R^2)}$。
-\crosscheck 绳须始终绷紧；$J\to0$ 恢复普通弹簧振子频率。
+\crosscheck 绳须始终绷紧且与滑轮无相对滑动；$J\to0$ 恢复普通弹簧振子频率。若平衡时两侧绳张力均为 $mg$、振幅为 $A$，悬物侧张力 $T_m=mg+m\omega^2x$，弹簧侧张力 $T_k=mg+kx$；充分条件为 $kA<mg$，使两侧张力在全周期内为正。
 \sourceproblem{11-T5}{68}{72}
 \problemtext 竖直弹簧振子振幅0.24 m、周期4 s，初始在平衡位置下0.12 m向上运动，质量1 kg；求振动式、首次到达上方0.12 m的时间、该处合力。
 \workings 取向上正，$\omega=\pi/2$，初相位取 $-2\pi/3$，故 $x=0.24\cos(\pi t/2-2\pi/3)$ m。首次达到 $+0.12$ m 时相位为 $-\pi/3$，故 $t=2/3$ s。合力 $F=-m\omega^2x=-0.03\pi^2$ N，约0.296 N向下。
@@ -96,7 +96,7 @@ A_2=\sqrt{(10\sqrt3-17.3)^2+100}\approx10.00002\ \mathrm{cm},\quad
 \sourceproblem{11-T14}{72}{76}
 \problemtext 位于 $x=-1$ m波源振动 $5\times10^{-4}\cos(6000t-1.2)$ m，波速300 m/s，无吸收，求两方向行波。
 \workings 按一维无衰减模型 $k=6000/300=20$ rad/m。正向 $y_+=5\times10^{-4}\cos[6000t-1.2-20(x+1)]$（$x\ge-1$）；负向 $y_-=5\times10^{-4}\cos[6000t-1.2+20(x+1)]$（$x\le-1$）。
-\crosscheck 两式在源位置恢复给定振动，传播延迟均非负。
+\crosscheck 两式在源位置恢复给定振动，传播延迟均非负。若波源从某有限时刻 $t_s$ 才开始振动，则仅在 $t-|x+1|/u\ge t_s$ 的已到达区域使用上述行波；其余区域由初始场决定。
 \sourceproblem{11-T15}{73}{77}
 \problemtext 初始波形在O处向上过零，振幅0.04 m，半波长0.20 m，向右波速0.08 m/s，求O、P振动及波函数，判断a、b振动方向。
 \workings $\lambda=0.40$ m，$k=5\pi$，$\omega=0.4\pi$ rad/s。由图 $y(x,0)=0.04\sin(5\pi x)$，故 $y=0.04\sin(5\pi x-0.4\pi t)$ m。O及P（$x=0.40$ m）同相，均为 $-0.04\sin(0.4\pi t)$。由 $\partial_ty=-u\partial_xy$，a向下、b向上。
