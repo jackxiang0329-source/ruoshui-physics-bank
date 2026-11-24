@@ -24,7 +24,7 @@ y=\frac{(x-5)^2}{18}+x-9,\quad
 \sourceproblem{1-T3}{1}{5}
 \problemtext 一维运动满足 $a=-kv^2$（$k>0$），初始 $x=0,v=v_0$，求速率关于坐标的关系。
 \workings 在 $v\ne0$ 的分支上，$v\,\mathrm dv/\mathrm dx=-kv^2$，所以 $\mathrm dv/v=-k\,\mathrm dx$，得 $v=v_0e^{-kx}$，速率 $|v_0|e^{-kx}$。$v_0=0$ 时为静止解。
-\crosscheck $k$ 的量纲为长度的倒数；代回得到 $v\,\mathrm dv/\mathrm dx=-kv^2$。此处是题给有向加速度，不擅自改成双向阻力模型；负初速度分支仅在解存在的时间域内成立。
+\crosscheck $k$ 的量纲为长度的倒数；代回得到 $v\,\mathrm dv/\mathrm dx=-kv^2$。此处是题给有向加速度，不擅自改成双向阻力模型；进一步积分得 $v(t)=v_0/(1+kv_0t)$，$x(t)=k^{-1}\ln(1+kv_0t)$，在包含初时刻的最大实解区间 $1+kv_0t>0$ 成立。对 $v_0<0$ 的正时间分支存在有限时间发散，因此不是物理上的双向阻力模型。
 \sourceproblem{1-T4}{2}{6}
 \problemtext 半径 $R=2\,\mathrm m$，速率 $v=KRt^2$；$v(2\,\mathrm s)=32\,\mathrm{m/s}$。求 $t=0.5\,\mathrm s$ 时速度大小和加速度大小。
 \workings $K=4\,\mathrm{s^{-3}}$，故 $v=2\,\mathrm{m/s}$。
