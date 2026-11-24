@@ -1,0 +1,70 @@
+\section{静电场中的导体和电介质}
+\sourceproblem{选择1}{26}{32}
+\problemtext 内半径 $R$ 的原不带电导体球壳，腔内距球心 $a<R$ 处有正点电荷 $q$。球壳接地，求球心电势。
+\workings 接地使球壳电势为零。球腔内用镜像电荷 $q'=-qR/a$、距中心 $R^2/a$（同方向）构造零边界势，故
+\[
+V_O=\frac{q}{4\pi\varepsilon_0}\left(\frac1a-\frac1R\right).
+\]
+选D。
+\crosscheck 亦可用调和函数的球心平均值性质：感应电荷贡献在球心为 $-q/(4\pi\varepsilon_0R)$。要求 $0<a<R$；$a=0$ 时球心为点电荷奇点。
+\sourceproblem{选择2}{26}{32}
+\problemtext 总电荷 $Q$ 的均匀带电球外套同心金属球壳，壳内外半径 $r_1,r_2$，求金属内部P点场强及电势。
+\workings 静电平衡金属内部 $\bm E=0$。若壳原来不带电且孤立，内、外表面分别带 $-Q,+Q$，以无穷远为零势，壳电势 $V=Q/(4\pi\varepsilon_0r_2)$。
+\crosscheck 若金属壳另带净电荷 $Q_s$，势应为 $(Q+Q_s)/(4\pi\varepsilon_0r_2)$；原题未单独给壳电荷，按中性壳约定。不能使用P点自身半径代替外半径。
+\sourceproblem{选择3}{26}{32}
+\problemtext 判断静电平衡导体的场强、电势及表面电荷密度命题。
+\workings 连通导体内部场强为零，因而任意两点电势差为零，选D。导体整体电势不一定是零；表面曲率与局部电荷密度没有不依赖整体边界条件的简单普适关系。
+\crosscheck 带电孤立球的电势非零，是错误命题的直接反例。
+\sourceproblem{选择4}{26}{32}
+\problemtext 平行板电容器充电后断开电源，再完全填入均匀介质，判断电荷、电势差和场强变化。
+\workings 自由电荷 $Q$ 不变；$C'=\varepsilon_r C$，$U'=U/\varepsilon_r$，$E'=E/\varepsilon_r$。通常 $\varepsilon_r>1$，场强变小，选C。
+\crosscheck 固定板距下 $U=Ed$；与接电源恒压的情况不同。
+\sourceproblem{选择5}{26}{32}
+\problemtext 平行板间左半面积填均匀介质、右半为空气，板上总自由电荷等量异号，比较两区域场强及板面自由电荷密度（选项续PDF33）。
+\workings 两区域并联、共享同一电势差，忽略边缘场时 $E_L=E_R=U/d$。介质区域 $\sigma_L=\varepsilon_0\varepsilon_r E_L$，空气区域 $\sigma_R=\varepsilon_0 E_R$，所以 $|\sigma_L|>|\sigma_R|$（$\varepsilon_r>1$）。
+\crosscheck 介质沿面积方向分区而非沿厚度串联；正负极板对应的电荷符号相反，比较密度大小。
+\sourceproblem{选择6}{27}{33}
+\problemtext 电容器充电后断开电源，使板距减小，判断电势差、场强、储能变化。
+\workings $Q$ 固定，$C=\varepsilon A/d$ 增大；$U=Q/C$ 减小，$E=Q/(\varepsilon A)$ 不变，$W=Q^2/(2C)$ 减小，选D。
+\crosscheck 采用理想平行板、介质不变的条件；电场吸引力做功与储能减少相符。
+\sourceproblem{选择7}{27}{33}
+\problemtext 两电容串联充电后断开电源，向 $C_1$ 插入介质，判断两电容所带自由电荷量。
+\workings 断开后外端导体电荷分别固定，中间节点总电荷亦固定；因此两电容的电荷量均不变，选D。
+\crosscheck 插入后 $C_1$ 电压降低，$C_2$ 电压不变；不能误用恒定总电压条件。
+\sourceproblem{选择8}{27}{33}
+\problemtext 两电容并联且始终连接理想电源，向 $C_1$ 插入介质，判断两电容电荷量。
+\workings 两端电压恒定，$Q_i=C_iU$。$C_1$ 增大，故其电荷量增加；$C_2$ 不变，故其电荷量不变，选C。
+\crosscheck 增加的自由电荷由电源供给；与断开电源的并联情形不同。
+\sourceproblem{填空1}{27}{33}
+\problemtext 将负电荷从远处移近原不带电导体，判断导体内部静电场变化。
+\workings 导体每次达到静电平衡时内部总场均为零，因此不变。
+\crosscheck 外电荷场本身改变，但自由电荷重新分布产生的场抵消它；不描述移动瞬间的暂态。
+\sourceproblem{填空2}{27}{33}
+\problemtext 金属球壳内外半径 $R_1,R_2$，净电荷 $Q$，腔中心有点电荷 $q$，求外表面电荷密度。
+\workings 金属内部高斯面通量为零，故内表面总电荷为 $-q$，外表面为 $Q+q$。在无外场且球对称时 $\sigma=(Q+q)/(4\pi R_2^2)$。
+\crosscheck 两表面电荷相加为壳自身净电荷 $Q$。
+\sourceproblem{填空3}{27}{33}
+\problemtext 地球视为半径 $6.4\times10^6\,\mathrm m$ 的导体球，近地面场强大小200 N/C，求电荷量。
+\workings $|Q|=ER^2/k_e$，取题给 $k_e=9\times10^9$，得到 $|Q|\approx9.10\times10^5\,\mathrm C$。
+\crosscheck 若地表场方向向下（通常晴天地面附近模型），$Q<0$；单给大小不能确定符号。
+\sourceproblem{填空4}{27}{33}
+\problemtext 静电场中边长 $a$ 的均匀导体立方体，其中心O电势为 $V_0$，求顶点A电势（续PDF34）。
+\workings 静电平衡的连通导体为等势体，故 $V_A=V_0$。
+\crosscheck 即使表面边角附近场强不均匀，导体表面电势仍恒定。
+\sourceproblem{填空5}{28}{34}
+\problemtext 平行板间完全填充各向同性均匀介质，相对介电常数 $\varepsilon_r$，极板自由电荷面密度大小 $\sigma$，求电位移和场强大小。
+\workings $\bm D=\varepsilon_0\varepsilon_r\bm E$；由自由电荷高斯定理，理想板间 $D=|\sigma|$，$E=|\sigma|/(\varepsilon_0\varepsilon_r)$。
+\crosscheck $\bm D$ 的源为自由电荷；场方向由正极板指向负极板。
+\sourceproblem{填空6}{28}{34}
+\problemtext 电容器保持连接电源，板距增大，判断电势差、电容、场强、储能。
+\workings $U$ 不变，$C=\varepsilon A/d$ 减小，$E=U/d$ 减小，$W=CU^2/2$ 减小。
+\crosscheck 电荷 $Q=CU$ 也减小，电荷回流至电源；不应用孤立电容器的恒电荷公式。
+\sourceproblem{计算1}{28}{34}
+\problemtext 半径 $a$ 的导体球带电 $Q$，同心导体壳内外半径 $b,c$，壳净电荷 $q$，求球与壳电势。
+\workings 设 $a<b<c$，无穷远为零势。壳内面电荷 $-Q$、外面 $q+Q$，故
+\[
+V_{\rm shell}=k_e(Q+q)/c,\qquad
+V_{\rm ball}=k_e\left[Q(1/a-1/b)+(Q+q)/c\right],
+\quad k_e=(4\pi\varepsilon_0)^{-1}.
+\]
+\crosscheck 球壳金属内场为零；间隙积分 $\int_a^b k_eQ/r^2\,\mathrm dr$ 等于两导体电势差。
