@@ -1,0 +1,37 @@
+\section{第14组：量子物理}
+\sourceproblem{14-T1}{93}{97}
+\problemtext 概述普朗克解释黑体辐射的假设及其与经典物理的差异。
+\workings 振子能量取离散值 $E_n=nh\nu$（经典普朗克表述），能量交换以 $h\nu$ 的整数倍进行；经典理论允许能量连续改变，并以均分得到紫外发散。量子假设导出平均热能 $h\nu/[\exp(h\nu/k_BT)-1]$，抑制高频辐射。
+\crosscheck 现代量子谐振子含零点能；该常数不改变这里的平均热激发能。
+\sourceproblem{14-T2}{93}{97}
+\problemtext 用能量和动量守恒证明孤立自由电子不能完全吸收单个非零能量光子。
+\workings 在初电子静止系，光子能量 $\epsilon>0$，动量 $\epsilon/c$。若仅剩电子，$E_f=m_ec^2+\epsilon,\ p_f=\epsilon/c$。质量壳条件要求 $E_f^2-p_f^2c^2=m_e^2c^4$，展开却为 $m_e^2c^4+2m_ec^2\epsilon$，矛盾。
+\crosscheck 结论由洛伦兹不变量保证任意惯性系均成立；束缚电子可由原子或其他物体承担反冲。
+\sourceproblem{14-T3}{93}{97}
+\problemtext 波长700 nm、25 pm、1.24 pm的三种光子，求能量、动量及教材质量记号。
+\workings $E=hc/\lambda,\ p=h/\lambda,\ m_{\rm eq}=E/c^2$。取 $h=6.62607015\times10^{-34}$ J s、$c=2.99792458\times10^8$ m/s，三组按 $(E,p,m_{\rm eq})$ 顺序约为
+\[
+\begin{array}{ccc}
+2.84\times10^{-19}&9.47\times10^{-28}&3.16\times10^{-36}\\
+7.95\times10^{-15}&2.65\times10^{-23}&8.84\times10^{-32}\\
+1.60\times10^{-13}&5.34\times10^{-22}&1.78\times10^{-30}
+\end{array}
+\]
+单位依次为J、kg m/s、kg。
+\crosscheck 三种光子不变质量均为零；最后一列仅为教材相对论质量或能量等效质量，不是静质量。原页指数已放大确认。
+\sourceproblem{14-T4}{94}{98}
+\problemtext 能量0.60 MeV的X光康普顿散射后波长增大20\%，求电子增加能量。
+\workings $E'=E/1.2=0.50$ MeV，能量守恒给反冲动能增加 $0.10$ MeV。
+\crosscheck 能量与波长反比，不能直接以20\%乘初能量。
+\sourceproblem{14-T5}{94}{98}
+\problemtext 入射光子波长3.0 pm，反冲电子速率0.6c，求散射光子波长和散射角。
+\workings 电子初静止，$\gamma=1.25$，$K=(\gamma-1)m_ec^2\approx127.75$ keV。$E_0=hc/\lambda\approx413.28$ keV，$E'=E_0-K\approx285.53$ keV，$\lambda'=hc/E'\approx4.342$ pm。由康普顿公式 $\cos\phi=1-(\lambda'-\lambda)/(h/m_ec)$，得 $\phi\approx63.5^\circ$。
+\crosscheck 波长增量约1.342 pm小于两倍康普顿波长4.852 pm；使用相对论动能而非经典公式。
+\sourceproblem{14-T6}{95}{99}
+\problemtext 氢原子由第n轨道跃迁至第二轨道，光波长487 nm，求第n轨道半径。
+\workings 里德伯公式 $1/\lambda=R_H(1/4-1/n^2)$，代入得到 $n\approx4$（波长为近似值）。玻尔半径关系 $r_n=n^2a_0$，故 $r_4\approx8.47\times10^{-10}$ m。
+\crosscheck 精确整数能级对应约486 nm；按题目数据精度识别n，而不把非整数反解当作轨道量子数。
+\sourceproblem{14-T7}{95}{99}
+\problemtext 远处速率 $1.875\times10^6$ m/s的电子被质子俘获形成基态氢，求释放光子频率。
+\workings 在固定质子、忽略反冲的教材模型，$h\nu=\tfrac12m_ev^2+13.6\,\mathrm{eV}$，电子初动能约10.0 eV，故 $\nu\approx5.71\times10^{15}$ Hz。
+\crosscheck 原页速度指数为6；实际有限质子质量使部分能量进入氢原子反冲，精确频率应结合总动量守恒与初始质子速度。
