@@ -83,3 +83,103 @@ a=\frac{F-\dot Mv}{M}.
 \problemtext 质量 $m$ 物体下落，阻力大小 $kv^2$，求终端速率。
 \workings 取向下为正，$m\dot v=mg-kv^2$，稳态 $\dot v=0$，得 $v_\infty=\sqrt{mg/k}$，选A。
 \crosscheck $k>0$，单位为质量除以长度；正根对应下落速度大小。
+
+\sourceproblem{填空1}{25}{31}
+\problemtext 两等质量小球A、B依次竖直悬挂，B通过轻弹簧连接A，烧断上方细线，求瞬间加速度（图在PDF32）。
+\workings 原弹簧张力 $mg$。断线瞬间形变未变，A受重力和向下弹力各 $mg$，B受向上弹力平衡重力，故 $a_A=2g$ 向下、$a_B=0$。
+\crosscheck 与压缩弹簧抽板问题受力方向不同。
+\sourceproblem{填空2}{26}{32}
+\problemtext 质量 $m$ 的猴子抓住质量 $M$ 的竖杆，悬线断开后猴子沿杆爬升以保持地面高度不变，求杆加速度。
+\workings 猴子加速度零，杆对猴子的向上力为 $mg$；猴对杆向下力为 $mg$。杆受总向下力 $(M+m)g$，故 $a=(1+m/M)g$ 向下。
+\crosscheck 以整体质心核验，加速度为 $g$ 向下；假定猴能提供所需抓持力。
+\sourceproblem{填空3}{26}{32}
+\problemtext 等质量木块A、B相接，水平无摩擦，A受向右 $F_1$，B受向左 $F_2$，求A对B的力。
+\workings 每块质量 $m$，共同加速度 $(F_1-F_2)/(2m)$；对B列式 $N-F_2=ma$，得 $N=(F_1+F_2)/2$，方向向右。
+\crosscheck $F_1=F_2$ 时系统静止但接触力非零。
+\sourceproblem{填空4}{26}{32}
+\problemtext 上块4千克、下块6千克，地面光滑，最大静摩擦系数0.2，水平力作用于下块；求不相对滑动的最大力及加速度。
+\workings 上块仅由静摩擦加速，$m_1a\le\mu m_1g$，故 $a_{\max}=0.2g$，$F_{\max}=(m_1+m_2)0.2g=2g\,\mathrm N$（SI数值式），取 $g=9.8$ 得19.6牛、1.96米每平方秒。
+\crosscheck 静摩擦达到上限时才取等号；下块受力与整体方程一致。
+\sourceproblem{填空5}{26}{32}
+\problemtext A、B分别质量 $m_A,m_B$，用轻弹簧竖直相连静置于板上，抽板瞬间求加速度大小。
+\workings 压缩弹簧对A向上作用 $m_Ag$，抽板瞬间不变，故 $a_A=0$；B受向下的 $m_Bg+m_Ag$，故 $a_B=(1+m_A/m_B)g$ 向下。
+\crosscheck 等质量时恢复 $0,2g$。
+\sourceproblem{填空6}{26}{32}
+\problemtext 圆锥摆长 $l$、质量 $m$、摆角 $\theta$，求张力、合力及速率。
+\workings $T=mg/\cos\theta$，合力为水平向心的 $mg\tan\theta$；由 $mv^2/(l\sin\theta)=mg\tan\theta$，得 $v=\sin\theta\sqrt{gl/\cos\theta}$。
+\crosscheck 非退化圆锥摆要求 $0<\theta<\pi/2$。
+\sourceproblem{填空7}{26}{32}
+\problemtext 升降机中质量 $m$ 的人秤读数为 $3mg$，求加速度（续PDF33）。
+\workings 向上取正，$N-mg=ma$，故 $a=2g$ 向上。
+\crosscheck 不能由加速度方向推断速度方向。
+\sourceproblem{填空8}{27}{33}
+\problemtext 上行电梯悬挂1千克物体，弹簧秤分别读12、8、9.8牛，判定运动性质。
+\workings 取 $g=9.8$，三种加速度分别为 $+2.2,-1.8,0\,\mathrm{m/s^2}$。因题设速度向上，依次为向上加速、向上减速、向上匀速（若读数保持不变）。
+\crosscheck 若读数只是某瞬时，则只能判定该时刻加速度及速度变化趋势，不能推出整个过程匀变速。
+\sourceproblem{填空9}{27}{33}
+\problemtext 单摆长 $l$、质量 $m$、最大偏角 $\alpha$，求最大偏角处切向加速度和最低点绳张力。
+\workings 最大偏角处切向加速度大小 $g\sin\alpha$、方向趋向最低点。由 $v^2=2gl(1-\cos\alpha)$，最低点 $T=mg+mv^2/l=mg(3-2\cos\alpha)$。
+\crosscheck 绳须保持绷紧；$\alpha=0$ 退化为静止，张力 $mg$。
+\sourceproblem{填空10}{27}{33}
+\problemtext 水平面上斜向上拉物体，摩擦系数 $\mu$，求最省力的拉力角度。
+\workings 对匀速滑动或达到静摩擦临界的相应系数，$F\cos\theta=\mu(mg-F\sin\theta)$，故 $F=\mu mg/(\cos\theta+\mu\sin\theta)$，分母在 $\theta=\arctan\mu$ 最大。
+\crosscheck $\mu$ 应对应所讨论的滑动或静摩擦模型；最优处支持力为 $mg/(1+\mu^2)>0$。
+\sourceproblem{填空11}{27}{33}
+\problemtext 理想滑轮两侧质量 $m_1>m_2$，将重端改为恒向下力 $m_1g$，比较轻端加速度。
+\workings 原 $a=(m_1-m_2)g/(m_1+m_2)$；新 $a'=(m_1-m_2)g/m_2$，故 $a'>a$。
+\crosscheck 原悬重本身具有惯性，新给定力无该惯性项。
+\sourceproblem{填空12}{27}{33}
+\problemtext 地球半径缩小0.2\%，质量不变，求表面重力加速度增长百分比。
+\workings $g'/g=(1-0.002)^{-2}$，故增长 $(0.998^{-2}-1)\times100\%\approx0.4012\%$。
+\crosscheck 一阶近似为0.4\%；忽略自转及质量分布变化。
+\sourceproblem{填空13}{27}{33}
+\problemtext 质量10千克，合力 $F=3+2t$（SI），从静止开始，求3秒末加速度和速度。
+\workings $a=(3+2t)/10$，$v=(3t+t^2)/10$，故 $a(3)=0.9\,\mathrm{m/s^2}$，$v(3)=1.8\,\mathrm{m/s}$。
+\crosscheck 冲量18牛秒除质量为1.8米每秒。
+\sourceproblem{填空14}{27}{33}
+\problemtext 质量2千克，$x=5t,y=\cos5t$（SI），求 $t=2\pi$ 时速度和合力。
+\workings $\bm v=5\bm i-5\sin5t\,\bm j$，$\bm F=-50\cos5t\,\bm j$，代入 $t=2\pi$ 得 $\bm v=5\bm i\,\mathrm{m/s}$，$\bm F=-50\bm j\,\mathrm N$。
+\crosscheck 该时刻纵向速度零但纵向加速度非零。
+\sourceproblem{填空15}{27}{33}
+\problemtext 质量5千克，$\bm r=6\bm i-5t^2\bm j$（SI），求合力大小和方向。
+\workings $\bm a=-10\bm j$（SI），$\bm F=-50\bm j\,\mathrm N$，大小50牛、负 $y$ 方向。
+\crosscheck 常量水平位置不贡献加速度。
+\sourceproblem{填空16}{27}{33}
+\problemtext 质量0.25千克，$\bm F=t\bm i$（N），初位置原点、初速度 $2\bm j$，求位矢。
+\workings $\bm a=4t\bm i$，$\bm v=2t^2\bm i+2\bm j$，故 $\bm r=(2t^3/3)\bm i+2t\bm j$（SI）。
+\crosscheck 二次微分及初始条件全部一致。
+\sourceproblem{填空17}{27}{33}
+\problemtext 质量 $m$，沿 $x$ 轴受 $F=F_0(1-kt)$，初位置0、初速度 $v_0$，求速度及运动方程。
+\workings
+\[
+v=v_0+\frac{F_0}{m}(t-kt^2/2),\quad
+x=v_0t+\frac{F_0}{m}(t^2/2-kt^3/6).
+\]
+\crosscheck $k=0$ 恢复恒力运动；$k$ 量纲为时间倒数。
+\sourceproblem{填空18}{27}{33}
+\problemtext 质量6千克，从原点静止出发受 $F=3+4x$（SI），移动3米时求速度、加速度。
+\workings $mv^2/2=\int_0^3(3+4x)\,\mathrm dx=27\,\mathrm J$，故 $v=3\,\mathrm{m/s}$（正向）；$a=(3+12)/6=2.5\,\mathrm{m/s^2}$。
+\crosscheck 力始终为正，取速度正根；不能用末加速度作为全程恒加速度。
+\sourceproblem{填空19}{28}{34}
+\problemtext 质量 $m$ 的质点在正半轴受 $f=-k/x^2$，由 $x=a>0$ 静止释放，求 $x=a/2$ 处速率。
+\workings 功能关系 $mv^2/2=\int_a^{a/2}(-k/x^2)\,\mathrm dx=k/a$，故 $|v|=\sqrt{2k/(ma)}$，有向速度为负。
+\crosscheck 力指向原点，向原点运动时做正功；计算区间不穿过奇点 $x=0$。
+\sourceproblem{填空20}{28}{34}
+\problemtext 质量 $m$ 的船初速 $v_0$，线性阻力大小 $kv$，求减速至一半的时间及路程。
+\workings $m\dot v=-kv$，$v=v_0e^{-kt/m}$，故 $t_{1/2}=m\ln2/k$，$s_{1/2}=mv_0/(2k)$。
+\crosscheck 这里 $k$ 是力与速度的比例系数，量纲为质量/时间，不同于第1章直接给加速度比例系数的模型。
+\sourceproblem{计算1}{28}{34}
+\problemtext 轻绳过光滑竖直细管，质量 $m$ 小球以绳长 $l$、摆角 $\theta$ 匀速水平转动，另一端悬质量 $M$ 静止；证明角度关系并求速率、向心力、周期。
+\workings $T=Mg$，竖直平衡 $T\cos\theta=mg$，故 $\cos\theta=m/M$。水平半径 $r=l\sin\theta$，
+\[
+F_c=Mg\sin\theta,\quad v=\sin\theta\sqrt{Mgl/m},\quad T_{\rm orb}=2\pi\sqrt{ml/(Mg)}.
+\]
+\crosscheck 非退化圆周要求 $M>m$，且悬物静止；区分绳张力与轨道周期符号。
+\sourceproblem{计算2}{28}{34}
+\problemtext 光滑圆锥半顶角 $\theta$，顶点轻弹簧原长 $l_0$、劲度 $k$，质量 $m$ 物体在锥面外绕轴转动，求刚离开锥面时角速度和弹簧长度。
+\workings 临界支持力 $N=0$，弹簧张力 $S=k(l-l_0)$ 沿母线向顶点。竖直平衡 $S\cos\theta=mg$，水平向心 $S\sin\theta=m\omega^2l\sin\theta$，故
+\[
+l=l_0+\frac{mg}{k\cos\theta},\quad
+\omega=\sqrt{\frac{g}{l\cos\theta}}.
+\]
+\crosscheck $0<\theta<\pi/2$；对锥外表面，一般 $N=(mg-m\omega^2l\cos\theta)/\sin\theta$ 需结合弹簧方程求解，临界处以 $N=0$ 为准；角速度与半径的关系需使用临界伸长。
