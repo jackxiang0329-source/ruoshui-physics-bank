@@ -131,3 +131,144 @@ W'_{\rm in}=\int_0^b\frac{B^2}{2\mu_0}2\pi r\,dr=\frac{\mu_0 I^2}{16\pi},
 \problemtext N匝矩形振动线圈高b，部分位于左侧入纸面匀强磁场，位移 $x=A\cos\omega t$，求电动势。
 \workings 取出纸面为正法向，磁链 $\Psi=-NBb(\ell_0-x)$，$\mathcal E=-NBb\dot x=NBbA\omega\sin\omega t$，正向为逆时针。
 \crosscheck 假定振幅足够小以保持同一有效边切割磁场；反取法向电动势变号。
+
+\sourceproblem{填空8}{148}{154}
+\problemtext 长直电流向上，右侧矩形环ABCD共面，AB平行直线；向右平移或绕AD旋转使BC离开纸面向外，求电动势方向（第二问续PDF155）。
+\workings 原场入纸面。平移远离时磁通绝对值减小，感应场入纸面，环流顺时针，即ADCB。绕水平AD转动，取初始入纸面为正法向，转角 $\theta$ 从0增至 $\pi/2$，磁通被投影因子 $\cos\theta$ 及离开纸面后的场减弱共同降低，因此仍沿ADCB。
+\crosscheck 第二问为初始向外转动阶段；若继续转过其他角度须重新判断有向磁通变化。
+\sourceproblem{填空9}{149}{155}
+\problemtext 电阻2欧的静止闭合回路，磁通 $\Phi=(5t^2+8t-2)10^{-3}$ Wb，求2至3秒的感应电荷。
+\workings 忽略自感，$q=-[\Phi(3)-\Phi(2)]/R=-(67-34)10^{-3}/2=-0.0165$ C。电荷量大小为16.5 mC。
+\crosscheck 正方向按磁通法向右手规则；负号是电荷净流方向。
+\sourceproblem{填空10}{149}{155}
+\problemtext 磁铁插入闭合线圈，始末位置相同，比较快速与缓慢插入的感应电荷与外力功。
+\workings 固定电阻并忽略自感，净感应电荷 $q=-\Delta\Phi/R$ 相同。若同一路径只改变时间尺度且始末机械状态相同，电磁阻力对应外功为 $W_J=\int \dot\Phi^2dt/R$，快速插入的焦耳热更大，手的相应功更大。
+\crosscheck 若计入自感，积分还含 $-L\Delta I/R$，须比较相同初末电流；任意不同运动规律不保证仅凭总时间即可严格排序外力功。
+\sourceproblem{填空11}{149}{155}
+\problemtext 长直单层螺线管由直径0.2 mm的漆包线紧密绕制，通0.5 A，求内部磁场。
+\workings 匝密度 $n\simeq1/d=5000$ 每米，空气芯长管近似 $B=\mu_0nI\approx3.142\times10^{-3}$ T。
+\crosscheck 假定给定直径为含绝缘层的有效匝距，无铁芯。
+\sourceproblem{填空12}{149}{155}
+\problemtext 无导体但磁场变化的区域，是否有电流及感应电动势。
+\workings 真空无传导电流，但法拉第定律仍给非保守感生电场与闭合路径感应电动势。若电场时变，还可存在麦克斯韦位移电流。
+\crosscheck 教材所称电流指传导电流；并非任意闭合路径都必有非零电动势。
+\sourceproblem{填空13}{149}{155}
+\problemtext B=0.1 T、棒长0.20 m，与磁场夹30度，要求开路电势差1秒内均匀增加1 V，求一种运动方案。
+\workings 令棒方向固定、速度沿使 $\bm v\times\bm B$ 在棒上正向投影最大的方向，则 $U=BLv\sin30^\circ=0.01v$。从静止匀加速，取 $v=100t$ m/s，$a=100$ m/s平方，即可使U每秒增加1 V。
+\crosscheck 原题不指定初速度和移动方向，方案不唯一；均匀平移速率不变时电势差不会持续增长。
+\sourceproblem{填空14}{149}{155}
+\problemtext 矩形框1000匝，径向宽0.02 m、平行长0.04 m、距长直线0.05 m，先以0.03 m/s沿5 A电流线平移，再静止而源电流 $10\sin100\pi t$ A，求电动势。
+\workings 沿线平移磁链不变，第一问为0。取入纸面正法向，$M=N\mu_0b\ln[(d+a)/d]/(2\pi)$，$\mathcal E=-M1000\pi\cos100\pi t\approx-8.456\times10^{-3}\cos100\pi t$ V。
+\crosscheck 互感中匝数1000只计一次；对源电流求导而非对常数5 A求导。
+\sourceproblem{填空15}{149}{155}
+\problemtext 十匝边长0.12 m正方形线圈在0.025 T场中绕直径轴转动，电动势峰值20 mV，求角速度和平均电动势。
+\workings $\mathcal E_m=NBa^2\omega$，故 $\omega=0.020/(10\cdot0.025\cdot0.12^2)=5.556$ rad/s。完整周期的有向平均为0，半周期同号平均（亦为全周整流平均）为 $2\mathcal E_m/\pi=12.73$ mV。
+\crosscheck 原题未指定平均区间，保留两种常用约定；有效值另为14.14 mV，不能当作算术平均。
+\sourceproblem{填空16}{149}{155}
+\problemtext 空芯长螺线管总匝数和半径固定，拉长后自感变化。
+\workings 长管近似 $L=\mu_0N^2S/l$，长度增加则L减小。
+\crosscheck 端部漏磁与绕组间距效应未计入。
+\sourceproblem{填空17}{149}{155}
+\problemtext 自感0.05 mH、电流0.8 A，断开后原书给100 s降至近零，求平均自感电动势。
+\workings $\overline{\mathcal E}_L=-L\Delta I/\Delta t=(5\times10^{-5})(0.8)/100=4.0\times10^{-7}$ V，方向维持初始电流。
+\crosscheck 高清原页为100 s而非100微秒；若断开时出现弧光或寄生电容，瞬时电动势不必等于平均值。
+\sourceproblem{填空18}{149}{155}
+\problemtext 自感0.3 H的螺线管通8 A电流，求磁能（答案空格续PDF156）。
+\workings 线性磁路 $W=LI^2/2=9.6$ J。
+\crosscheck 能量正定；电流方向反转不改变能量。
+\sourceproblem{填空19}{150}{156}
+\problemtext 电流0.002 s内由10 A均匀增至12 A，自感电动势大小400 V，求L。
+\workings $L=|\mathcal E|\Delta t/|\Delta I|=0.4$ H。
+\crosscheck 电动势方向与电流增长相反。
+\sourceproblem{填空20}{150}{156}
+\problemtext 长0.10 m、半径0.02 m的1000匝螺线管中部绕50匝次级线圈，求互感。
+\workings 空芯长管近似 $M=\mu_0N_1N_2\pi r^2/l\approx7.896\times10^{-4}$ H。若次级足够短且截面场近似取有限长管中心轴场，修正因子 $l/\sqrt{l^2+4r^2}\approx0.9285$。
+\crosscheck 原题未给次级精确绕制宽度；长管结果为教材近似，有限长度及径向非均匀场影响精确互感。
+\sourceproblem{填空21}{150}{156}
+\problemtext 两共轴单匝圆线圈半径R和r、相距l，小环处大环场近似均匀，求互感。
+\workings $B=\mu_0IR^2/[2(R^2+l^2)^{3/2}]$，故 $|M|=\mu_0\pi r^2R^2/[2(R^2+l^2)^{3/2}]$。
+\crosscheck 若为多匝应乘相应匝数；符号由绕向定义。
+\sourceproblem{填空22}{150}{156}
+\problemtext 铜线直径2.54 mm、单位长度电阻 $3.28\times10^{-3}$ 欧每米，通10 A，求表面磁能密度及电能密度。
+\workings 半径 $r=1.27\times10^{-3}$ m，$B=\mu_0I/(2\pi r)$，故 $w_B=B^2/(2\mu_0)\approx0.987$ J每立方米。稳恒轴向场 $E=IR'=0.0328$ V/m，$w_E=\varepsilon_0 E^2/2\approx4.76\times10^{-15}$ J每立方米（真空侧仅计轴向分量）。
+\crosscheck 同章例8-8将直径当半径并在电场计算中重复除截面，不能沿用；真实导线外部总电场还可能有由表面电荷引起的法向分量，题给数据不足以确定完整电场能密度。
+\sourceproblem{填空23}{150}{156}
+\problemtext 2 H、20欧线圈接100 V理想电源，求稳态磁能。
+\workings $I_\infty=100/20=5$ A，$W_\infty=LI_\infty^2/2=25$ J。
+\crosscheck RL理想模型中最大电流为渐近极限；初始电流若为零则单调趋近。
+\sourceproblem{填空24}{150}{156}
+\problemtext 无限长细直线通电I，距线a处真空磁能密度。
+\workings $B=\mu_0I/(2\pi a)$，$w_B=\mu_0 I^2/(8\pi^2a^2)$。
+\crosscheck 为局部能量密度而非全空间总磁能；$a>0$。
+\sourceproblem{计算1}{150}{156}
+\problemtext 长0.5 m铜棒绕距A端为L/5的竖轴每秒转一周，向上匀强磁场 $10^{-4}$ T，求两端势差及高势端。
+\workings 图示角速度与B同向，径向 $\bm v\times\bm B=B\omega r\bm e_r$，开路稳态 $V(r)-V_O=B\omega r^2/2$。因此
+\[
+V_B-V_A=\frac{B\omega}{2}[(4L/5)^2-(L/5)^2]=3B\omega L^2/10
+\approx4.712\times10^{-5}\ \mathrm V .
+\]
+B端电势高。
+\crosscheck 以 $\omega=2\pi$ rad/s代回；两端积分应相减，且同章例8-3数值指数与其列式不符，本题独立复算为上述结果。
+\sourceproblem{计算2}{150}{156}
+\problemtext 长直电流I向上，斜棒AB长L、A距线 $x_A$，棒与线夹角 $\theta$，向右匀速v，求电动势和高势端。
+\workings 右侧磁场入纸面，$\bm v\times\bm B$ 向上。沿A到B的线元竖直分量为 $-ds\cos\theta$，距线 $x_A+s\sin\theta$，故
+\[
+\mathcal E_{A\to B}=-\frac{\mu_0Iv}{2\pi}\cot\theta\ln\frac{x_A+L\sin\theta}{x_A}.
+\]
+在图示锐角下A端势高。
+\crosscheck $\theta\to0$ 时极限为 $-\mu_0IvL/(2\pi x_A)$；$\theta\to\pi/2$ 时为0。
+\sourceproblem{计算3}{151}{157}
+\problemtext 长直电流I向上，右侧半圆形导体MeN半径b、圆心距线a，整体向上匀速v，求电动势及 $V_M-V_N$。
+\workings 设 $a>b>0$，沿M至N的水平坐标x从a-b增至a+b。$\bm v\times\bm B=-\mu_0Iv\bm e_x/(2\pi x)$，故
+\[
+\mathcal E_{M\to N}=-\frac{\mu_0Iv}{2\pi}\ln\frac{a+b}{a-b},\qquad
+V_M-V_N=\frac{\mu_0Iv}{2\pi}\ln\frac{a+b}{a-b}.
+\]
+动生电动势方向由N经e至M。
+\crosscheck 开路稳态电势差等于相应有向动生积分；积分只依端点x，弧长不是有效直线长度。
+\sourceproblem{计算4}{151}{157}
+\problemtext 长L金属杆一端在轴上，杆与平行于B的转轴夹角 $\theta$，角速度 $\omega$，求动生电动势。
+\workings 距轴 $\rho=s\sin\theta$，速度 $\omega\rho$，$\bm v\times\bm B$ 沿径向。沿杆积分
+\[
+|\mathcal E|=\int_0^L B\omega s\sin^2\theta\,ds=\tfrac12B\omega L^2\sin^2\theta .
+\]
+按图角速度与B同向，外端电势较高。
+\crosscheck 等效径向长度 $L\sin\theta$，不能只乘一个正弦；平行轴时为零。
+\sourceproblem{计算5}{151}{157}
+\problemtext 长直电流向上且增长率2 A/s，右侧三角环近边距5 cm、高20 cm、底宽10 cm，求感应电动势。
+\workings 距线x的竖向截长 $h(x)=0.20(0.15-x)/0.10$。取入纸面正法向，
+\[
+|\mathcal E|=\frac{\mu_0\dot I}{2\pi}\int_{0.05}^{0.15}\frac{h(x)}x\,dx
+=\frac{\mu_0\dot I}{\pi}(0.15\ln3-0.10)
+\approx5.183\times10^{-8}\ \mathrm V.
+\]
+入纸面磁通增大，电流逆时针。
+\crosscheck 以实际三角截长积分而非取固定20 cm；积分结果为正，量纲为V。
+\sourceproblem{计算6}{152}{158}
+\problemtext 磁场 $B=kt$ 与回路法向夹60度，长L滑杆向右匀速v，初始面积为零，求电动势。
+\workings 面积 $S=Lvt$，磁通 $\Phi=ktLvt\cos60^\circ=kLvt^2/2$，故 $\mathcal E=-kLvt$（按n右手正向），大小 $kLvt$。
+\crosscheck 磁场和面积均改变，各自贡献一半；方向反抗沿n增加的磁通。
+\sourceproblem{计算7}{152}{158}
+\problemtext 入纸面磁通 $\Phi=3t^2+2t+1$ mWb，求2 s电动势及电流方向。
+\workings $|\mathcal E|=(6t+2)10^{-3}$ V，代入t=2得0.014 V。入纸面磁通增大，感应电流逆时针。
+\crosscheck 毫韦伯每秒为毫伏；方向假定忽略自感或初始无反向电流。
+\sourceproblem{计算8}{152}{158}
+\problemtext 两同轴圆环，大环半径R通恒流I，小环半径r、轴距x且 $x\gg R$，以 $v=dx/dt$ 移动，求 $x=NR$ 时电动势及方向。
+\workings 小环处近似均匀轴场 $B=\mu_0IR^2/[2(R^2+x^2)^{3/2}]$，取向上正法向，
+\[
+\mathcal E=-\pi r^2 v\,dB/dx
+=\frac{3\mu_0I\pi r^2Nv}{2R^2(1+N^2)^{5/2}}
+\simeq\frac{3\mu_0I\pi r^2v}{2R^2N^4}.
+\]
+远离时 $v>0$，从上方看为逆时针；靠近反向。
+\crosscheck 精确轴场仍采用小环截面均匀近似；远场磁通按 $x^{-3}$ 衰减，电动势按 $x^{-4}$ 衰减。
+\sourceproblem{计算9}{152}{158}
+\problemtext 矩形线圈径向宽a、平行长b，右移速度v，近边距长直线x，源电流 $I_0\cos\omega t$，求总电动势。
+\workings 取入纸面正法向，磁通 $\Phi=\mu_0b I_0\cos\omega t\ln[(x+a)/x]/(2\pi)$，且 $\dot x=v$。全导数给
+\[
+\mathcal E=\frac{\mu_0 b I_0}{2\pi}
+\left[\omega\sin\omega t\ln\frac{x+a}{x}
++v\cos\omega t\left(\frac1x-\frac1{x+a}\right)\right].
+\]
+正值对应图中ABCD顺时针方向。
+\crosscheck 第一项来自时变场，第二项来自运动；$v=0$ 或 $\omega=0$ 分别恢复单独机制。两贡献可能同向也可能相消。
