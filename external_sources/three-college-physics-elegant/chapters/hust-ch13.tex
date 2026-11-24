@@ -11,3 +11,56 @@
 \problemtext 双缝间距0.30 mm、屏距1.20 m，第五暗纹距中央11.39 mm，求波长。
 \workings 第五暗纹对应 $(5-1/2)\lambda$。近轴 $\lambda=dx/(4.5D)\approx6.328\times10^{-7}$ m，即约633 nm。用远场角度修正 $\lambda=d x/[4.5\sqrt{D^2+x^2}]$，结果约632.75 nm。
 \crosscheck 第一暗纹对应半波长而非一波长；近轴角约0.00949 rad。
+
+\sourceproblem{13-T4}{80}{84}
+\problemtext 水中双缝间距1.00 mm，屏距10.00 m，条纹间距4.73 mm，水折射率1.333，求频率。
+\workings 近轴 $\Delta x=D\lambda_0/(nd)$，故 $\nu=cD/(nd\Delta x)\approx4.76\times10^{14}$ Hz。
+\crosscheck 介质中波长为473 nm，真空波长约630.5 nm；频率在界面不变。
+\sourceproblem{13-T5}{80}{84}
+\problemtext 一路插入长2.50 cm的气体池，由空气换成待测气体，观察21条亮纹移动，波长656.2816 nm，空气折射率1.000276，求气体折射率。
+\workings 若21为始末净条纹移动量，则 $|n_g-n_a|=21\lambda/L\approx0.000551277$。取通常气体折射率不小于1的透明介质模型，得到 $n_g\approx1.0008273$；另一代数解为0.9997247。
+\crosscheck 若21为先抽空再充气全过程累计的无向条纹移动量而非净移动量，则在两种折射率均大于1时 $L[(n_a-1)+(n_g-1)]/\lambda=21$，得到 $n_g\approx1.0002753$。原文未明确计数约定，保留区别；容器玻璃壁的固定光程抵消。
+\sourceproblem{13-T6}{81}{85}
+\problemtext 洛埃镜等效双缝间距2.00 mm，屏距5.00 m，光频率 $6.522\times10^{14}$ Hz，求第一级极大位置。
+\workings 反射束多出半波相变，几何光程差满足 $d\sin\theta=(j+1/2)\lambda$。以最靠近几何中央的亮纹作为第一条，$x\simeq D\lambda/(2d)=0.575$ mm，$\lambda=c/\nu$。
+\crosscheck 几何中央为暗纹；若采用从零级亮纹开始的编号，所谓一级亮纹对应 $3\lambda/2$，位置1.725 mm。明确级次定义，不直接套普通杨氏亮纹公式。
+\sourceproblem{13-T7}{81}{85}
+\problemtext 500.0 nm光正入射空气中厚 $1.608\times10^{-6}$ m、折射率1.555的膜，求反射相位差；改用折射率1.455的膜，求无反射的最小非零厚度。
+\workings 两界面反射相位差为 $\pi$，传播相位差 $4\pi nt/\lambda$，总差可取 $4\pi nt/\lambda+\pi=21.00352\pi$（模 $2\pi$ 为 $1.00352\pi$）。空气--膜--空气对称无损系统在 $2nt=j\lambda$ 时反射消失，最小非零厚度 $t=\lambda/(2n)\approx171.8$ nm。
+\crosscheck 相位差正负随比较次序改变；半波膜的零反射可由多束干涉精确得到，并非任意基底上的四分之一波增透条件。
+\sourceproblem{13-T8}{82}{86}
+\problemtext 折射率1.25油膜覆盖折射率1.57玻璃，正入射时500和700 nm反射均消光，求膜厚。
+\workings 两反射同有半波相变，反射极小条件 $4nt=(2j+1)\lambda$。故 $500(2j+1)=700(2k+1)$（nm），最小正公倍值3500 nm，得到 $t_{\min}=700$ nm；一般 $t=700(2s+1)$ nm，$s=0,1,\ldots$。
+\crosscheck 原题未说两波长对应相邻极小，不能唯一指定厚度。若为相邻极小则最小解符合；严格完全消光还需两界面反射振幅匹配，即 $n^2=n_{\rm air}n_{\rm glass}$，给定1.25的平方1.5625不等于1.57，因此实际为近零反射极小。
+\sourceproblem{13-T9}{82}{86}
+\problemtext 空气中以距法线30度方向观察折射率1.33油膜，反射增强波长500 nm；求最薄膜厚及法向观察的增强颜色。
+\workings 假设油膜两侧为空气或下方折射率低于膜，只有一次半波相变。令 $\sin r=\sin30^\circ/n$，最薄条件 $2nt\cos r=\lambda/2$，故 $t=500/[4\sqrt{1.33^2-0.25}]\approx101.4$ nm。法向同阶增强波长 $\lambda'=4nt=\lambda/\cos r\approx539.6$ nm，仍为绿光，向长波移动。
+\crosscheck 若基底折射率更高，两反射相变相同，增强条件不同；原题未说明基底，以上为自由油膜模型。
+\sourceproblem{13-T10}{83}{87}
+\problemtext 680 nm光照长度0.12 m的空气劈尖，40个条纹宽34 mm，求隔开两板的钢丝直径。
+\workings 取40个条纹周期，间距 $\Delta x=0.034/40$ m。小倾角 $t(x)=dx/L$，相邻条纹厚差 $\lambda/2$，故 $d=L\lambda/(2\Delta x)=4.80\times10^{-5}$ m。
+\crosscheck 若34 mm指第一至第四十条同类纹中心距离，则39个周期，得46.8微米；题意通常为40个周期。
+\sourceproblem{13-T11}{83}{87}
+\problemtext 牛顿环曲率半径2.00 m，波长589.29 nm，填入折射率1.461液体，求填充前后第10暗环半径比和填充后半径。
+\workings 在接触且两反射相变相差 $\pi$ 的模型中 $r_j^2=jR\lambda/n$。故 $r_{\rm before}/r_{\rm after}=\sqrt{1.461}\approx1.209$，$r_{10,\rm after}=\sqrt{10(2)(589.29\times10^{-9})/1.461}\approx2.84$ mm。
+\crosscheck 中央零级不计入第10暗环，液体折射率须低于相邻玻璃以保持相位条件。
+\sourceproblem{13-T12}{84}{88}
+\problemtext 迈克耳孙干涉仪镜面移动0.233 mm，792条条纹通过参考点，求波长。
+\workings 双程光程变化 $2\Delta d=N\lambda$，故 $\lambda=2(0.233\times10^{-3})/792\approx588.4$ nm。
+\crosscheck 镜面位移乘2；按条纹周期计数。
+\sourceproblem{13-T13}{84}{88}
+\problemtext 迈克耳孙一臂插入厚L、折射率n的片，取走后求恢复光程所需镜移；当 $n=1.434,\lambda=589.1$ nm且移动35条纹时求厚度。
+\workings 插片双程增光程 $2(n-1)L$，移去后将该臂镜远移 $(n-1)L$（或另一臂镜近移同距）恢复。$L=N\lambda/[2(n-1)]\approx23.75$ 微米。
+\crosscheck 只要求单色相位图样相同可允许整波长光程差；恢复绝对光程及原级次采用上述补偿。
+\sourceproblem{13-T14}{84}{88}
+\problemtext 迈克耳孙3 cm见方视区，600 nm光形成24条平行纹，求两镜偏离正交的角；另一光源镜移 $3.142\times10^{-4}$ m时850条圆纹收缩，求波长。
+\workings 若条纹法向跨越视区3 cm且计24周期，等效劈尖 $\alpha\simeq N\lambda/(2L)=2.40\times10^{-4}$ rad。第二问 $\lambda'=2\Delta d/\Delta N\approx739.3$ nm。
+\crosscheck 第一问若计首末纹中心则23周期；若条纹斜穿方形还需实际法向宽度。给出教材标准测量约定，非无条件唯一角值。
+\sourceproblem{13-T15}{85}{89}
+\problemtext 两波长通过同一单缝，第一种一级暗纹与第二种二级暗纹重合，求波长关系与其他重合暗纹。
+\workings $a\sin\theta=m\lambda$，故 $\lambda_1=2\lambda_2$。所有第一种第 $m$ 级与第二种第 $2m$ 级暗纹重合，$m$ 为非零整数并满足 $|m|\lambda_1\le a$。
+\crosscheck 不将中央极大算为零级暗纹；边界角90度不对应有限焦面位置。
+\sourceproblem{13-T16}{85}{89}
+\problemtext 单缝宽0.10 mm、焦距50.0 cm、波长546 nm。分别浸入水（n=1.33）、改700 nm光、缝宽减半、缝横移或轴向移动2 cm，讨论中央明纹。
+\workings 原全宽 $w=2f\tan[\arcsin(\lambda/a)]\approx5.46$ mm。保持对应其他条件（特别是有效焦距）不变时，浸水宽度约4.11 mm，换红光约7.00 mm，缝宽减半约10.92 mm；理想平行照明和后焦面观察下，横移或轴移不改变衍射角强度分布及中央位置。
+\crosscheck 实际透镜浸水会改变焦距，若不另给透镜折射率不能算真实新宽度；有限孔径和非平行照明也可能改变平移结果。
