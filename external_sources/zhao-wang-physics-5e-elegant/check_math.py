@@ -1510,6 +1510,16 @@ def eighteenth_round_regressions():
     # 7.2.5 shrinking loop (V; m2/s).
     near(2*pi*.8*.1*.8,.4021238596594936)
     near(-2*pi*.1*.8,-.16*pi)
+    # QA 7/8: constant area loss stops after 0.0625 seconds.
+    near(pi*.1**2/(.16*pi),.0625)
+    # Winding split on an unchanged closed core, not a cut open core.
+    near((.5)**2,.25)
+    # Cavity field matches both branches on its surface.
+    d=.4; r=2*d
+    near(-d+r**3/(4*d**2),d)
+    # Linear primary circuit under ramp EMF: asymptotic secondary voltage.
+    a=2.; Bl=.3; Rp=4.; M=.2
+    near(M*Bl*a/Rp,.03)
     # 7.2.8 Faraday electric force acceleration (10^7 m/s2).
     near(1.6e-19*.05*.01/(2*9.1e-31)/1e7,4.395604395604395)
     # 7.3.1 enclosed charge and boundary continuity.
@@ -1567,6 +1577,24 @@ def nineteenth_round_regressions():
     near(9.11e-31*(2.2e6)**2/(2*2.36)*1e19,9.341610169491526)
     # 8.2.8 moving triangle loop, radial motional force conservative.
     near(3/8*B*omega*l*l + (-3/8*B*omega*l*l),0.)
+    # QA 7/8: exact threshold for repelled particle to pass ring center.
+    sq=math.sqrt
+    F=lambda x:sq(2)*sq(1+x*x)*(sq(2)+sq(1+x*x))/(1+x)
+    derivnum=lambda x:sq(2)*(x-1)+sq(1+x*x)*(x*x+2*x-1)
+    lo,hi=0.,1.
+    for _ in range(70):
+        mid=(lo+hi)/2
+        if derivnum(mid)<0:
+            lo=mid
+        else:
+            hi=mid
+    x=(lo+hi)/2
+    near(x,.58377632)
+    near(F(x),2.659481645252532)
+    assert F(x)<2.8<1/(1-1/sq(2))
+    eta=2.8
+    assert .58+eta/sq(1+.58**2)>1+eta/sq(2)
+    assert 1+eta/sq(2)>eta
     # 8.2.10 stretching fixed-N solenoid decreases L.
     assert 1/2 < 1
     # 8.3.1 two equal-radius, initially unequal-voltage spheres.
