@@ -1,0 +1,37 @@
+\section{第15组：物质波与量子力学基础}
+\sourceproblem{15-T1}{96}{100}
+\problemtext 静质量 $6.68\times10^{-27}$ kg、速率5000 km/s的alpha粒子，求德布罗意波长。
+\workings $\lambda=h/p$，非相对论近似 $p=mv$，$v=5.00\times10^6$ m/s，故 $\lambda\approx1.984\times10^{-14}$ m；精确式为 $h/(\gamma mv)$，$\gamma=(1-v^2/c^2)^{-1/2}$。
+\crosscheck 相对论修正约0.014\%，不影响题给有效数字。
+\sourceproblem{15-T2}{96}{100}
+\problemtext 中子质量 $1.67\times10^{-27}$ kg，分别取3 K与300 K的典型热运动动能 $3k_BT/2$，求物质波长。
+\workings $p=\sqrt{3mk_BT}$，$\lambda=h/\sqrt{3mk_BT}$。两温度下分别约 $1.45\times10^{-9}$ m与 $1.45\times10^{-10}$ m。
+\crosscheck 室温中子实际具有速率分布，第二问取同一平均动能标度，不是所有中子的波长相同。
+\sourceproblem{15-T3}{97}{101}
+\problemtext 电子和光子波长均0.20 nm，分别求动量及动能。
+\workings 共同动量 $p=h/\lambda\approx3.313\times10^{-24}$ kg m/s。光子能量 $pc\approx9.93\times10^{-16}$ J，即6.20 keV；电子动能 $K=\sqrt{p^2c^2+m_e^2c^4}-m_ec^2\approx6.02\times10^{-18}$ J，即37.6 eV，可近似为 $p^2/(2m_e)$。
+\crosscheck 波长相同只保证动量相同；两者色散关系不同。
+\sourceproblem{15-T4}{97}{101}
+\problemtext 铀核尺度 $L=7.2\times10^{-15}$ m，估算核中alpha粒子动量、动能和电子最低动能尺度。
+\workings 取教材数量级估计 $\Delta x\sim L,\ p\sim\hbar/L=1.46\times10^{-20}$ kg m/s。alpha粒子（质量 $6.7\times10^{-27}$ kg）非相对论动能约 $1.60\times10^{-14}$ J，即0.100 MeV。电子必须使用相对论公式，$pc\approx27.4$ MeV，$K=\sqrt{(pc)^2+(m_ec^2)^2}-m_ec^2\approx26.9$ MeV。若以标准差不等式 $\Delta x\Delta p\ge\hbar/2$ 并取 $\Delta x=L$，对应动量下界尺度减半，alpha动能尺度约0.0250 MeV，电子约13.2 MeV。
+\crosscheck 不确定关系约束标准差，不确定核尺度定义及量子态时无法由此给出严格最低本征能；上述为局域化动量和能量的估算，不能将电子用经典动能公式计算。
+\sourceproblem{15-T5}{98}{102}
+\problemtext 氦氖激光波长632.8 nm，谱宽 $10^{-9}$ nm，估算纵向位置不确定度或波列长度。
+\workings $p=h/\lambda$，窄谱下 $\Delta p\simeq h\Delta\lambda/\lambda^2$。若以谱宽的倒数定义相干长度标度，$L_c\simeq\lambda^2/\Delta\lambda=400.44$ m。若两宽度均按标准差定义，$\sigma_x\sigma_p\ge\hbar/2$ 给 $\sigma_x\ge\lambda^2/(4\pi\sigma_\lambda)\approx31.9$ m（将题给谱宽视为标准差）。
+\crosscheck 谱线宽度的定义与波列形状决定数值因子，原题不能给出唯一精确长度；原页指数为负9，单位为nm。
+\sourceproblem{15-T6}{98}{102}
+\problemtext 以不确定关系估计氢原子基态结合能和第一玻尔半径。
+\workings 采用三维尺度估算 $p\sim\hbar/r$，令 $C=k_ee^2$，则 $E(r)\sim\hbar^2/(2m_er^2)-C/r$。求极小值 $E'(r)=0$ 得 $r=\hbar^2/(m_e C)=a_0\approx5.29\times10^{-11}$ m，$E_{\min}\sim-m_e C^2/(2\hbar^2)\approx-13.6$ eV，结合能约13.6 eV。若按严格一维标准差下界直接以 $\hbar/2$ 替代尺度动量中的 $\hbar$，会得半径四分之一及结合能四倍，说明该替代不是严格求氢原子基态的方法。
+\crosscheck 该尺度法恰给玻尔模型数值并非由一维不确定不等式严格推出；固定核、库仑势及非相对论模型下的精确本征值应由薛定谔方程求解。
+\sourceproblem{15-T7}{99}{103}
+\problemtext 无限深势阱 $0\le x\le a$ 内波函数 $\psi=A\sin(3\pi x/a)$，求归一化、概率密度及最大概率密度的位置。
+\workings $1=|A|^2\int_0^a\sin^2(3\pi x/a)dx=|A|^2a/2$，可取 $A=\sqrt{2/a}$（整体相位任意）。$\rho(x)=2\sin^2(3\pi x/a)/a$，阱外为零。峰值 $2/a$ 出现在 $a/6,a/2,5a/6$。
+\crosscheck 阱壁满足零边界条件；连续分布中单点概率为零，所求实际是概率密度的峰。
+\sourceproblem{15-T8}{99}{103}
+\problemtext 无限深势阱定态 $\psi=\sqrt{2/a}\sin(n\pi x/a)$，求在0至 $a/3$ 区间发现粒子的概率。
+\workings 对 $n=1,2,\ldots$，
+\[
+P=\frac2a\int_0^{a/3}\sin^2(n\pi x/a)dx
+=\frac13-\frac{\sin(2n\pi/3)}{2n\pi}.
+\]
+\crosscheck $n=3j$ 时恰为1/3，大n极限也为1/3；原题未给具体n，保留通式。
