@@ -147,7 +147,7 @@ V_2=k_e(Q+q)/R_3,\quad V_1=V_2+k_eqA,\quad \Delta V=k_eqA.
 壳接地而内球保持电荷 $q$ 时，外表面净电荷为零，$V_2=0,V_1=k_eqA$。
 若仅内球接地而壳孤立且仍带净电荷 $Q$，内球新电荷 $q'=-Q/(1+R_3A)$，$V_1=0,V_2=k_e(Q+q')/R_3$，$\Delta V=-V_2$。
 若两者均接地且无外场，所有电势及电荷均为零。
-\crosscheck 接地约束为电势零而非净电荷固定；相连约束为等势。原页最后两问的接地次序需结合上述各情形对应，保留条件标记。
+\crosscheck 接地约束为电势零而非净电荷固定；相连约束为等势。已放大PDF34确认第(4)问为孤立两球情形下外球接地，第(5)问为外球离地很远、仅内球接地；分别对应上述第三和第四种情形。
 \sourceproblem{6-T18}{31}{35}
 \problemtext 中性球形导体A含两个球形空腔，中心各有点电荷 $q_1,q_2$；球外远处有点电荷 $q_3$，讨论三电荷的受力及近似程度。
 \workings 每个空腔内壁感应总电荷分别为 $-q_1,-q_2$。各点电荷恰位于对应球形空腔中心，腔壁等势，由唯一性定理腔内场为中心点电荷径向场；去除自场后两中心电荷所受静电力均为零。外表面总电荷为 $q_1+q_2$。若外部点电荷距球心 $r$ 远大于球半径，主导单极力为
@@ -180,13 +180,14 @@ V(r)=k_eQ\begin{cases}
 \]
 \crosscheck 电势在两介质界面连续，法向D无自由面电荷时连续；极化面总电荷相互抵消。
 \sourceproblem{6-T21}{32}{36}
-\problemtext 两同轴导体圆筒内外半径 $R_1,R_2$，介质分界半径 $r_0$，内外两层介电常数满足 $\varepsilon_2=2\varepsilon_1$，耐受场强均为 $E_m$，求先击穿区域及最大电压。
-\workings 长圆筒忽略端部，$D_r=\lambda/(2\pi r)$，$E_i=\lambda/(2\pi\varepsilon_i r)$。两层场强最大值分别位于 $R_1,r_0$，因 $\varepsilon_2r_0>\varepsilon_1R_1$，内层先达到 $E_m$，故 $\lambda_{\max}=2\pi\varepsilon_1R_1E_m$。积分得
+\problemtext 同轴圆筒半径 $R_1<R_2<2R_1$，介质界面半径 $r$ 满足 $R_1<r<R_2$；内外介电常数 $\varepsilon_1=2\varepsilon_2$，击穿场强均为 $E_m$，求先击穿的介质与最大电势差。
+\workings 忽略端部效应，设内筒自由线电荷密度大小为 $\lambda$。高斯定理给出 $D=\lambda/(2\pi s)$，各层 $E_i=\lambda/(2\pi\varepsilon_i s)$。内外层场强最大值分别为 $\lambda/(2\pi\varepsilon_1 R_1)$、$\lambda/(2\pi\varepsilon_2 r)$。因 $r<R_2<2R_1$，后者严格较大，外层先击穿。临界 $\lambda=2\pi\varepsilon_2r E_m$，因此
 \[
-U_{\max}=E_mR_1\left(\ln\frac{r_0}{R_1}+\frac12\ln\frac{R_2}{r_0}\right)
-=\frac{E_mR_1}{2}\ln\frac{r_0R_2}{R_1^2}.
+V_m=\int_{R_1}^r \frac{\lambda\,\mathrm ds}{2\pi\varepsilon_1s}
++\int_r^{R_2}\frac{\lambda\,\mathrm ds}{2\pi\varepsilon_2s}
+=\frac12 E_mr\ln\frac{R_2^2}{rR_1}.
 \]
-\crosscheck 若原题分界半径为变量，上式给出对应结果；原图末行对数细小，保留原书符号对应的复核标记。两层电势差相加而非直接平均场强。
+\crosscheck 已放大原始PDF36确认介电常数关系、半径不等式和目标公式。临界内层最大场为 $E_mr/(2R_1)<E_m$，验证外层先击穿；电势差量纲正确。
 \sourceproblem{6-T22}{33}{37}
 \problemtext 空气击穿场强3 kV/mm，求半径分别为1.0 cm、1.0 mm、0.1 mm的孤立长直导体单位长度最大带电量。
 \workings 表面场强 $E=|\lambda|/(2\pi\varepsilon_0R)$，因此 $|\lambda_{\max}|=2\pi\varepsilon_0RE_m$。以 $E_m=3.0\times10^6\,\mathrm{V/m}$ 代入，分别约为 $1.67\times10^{-6},1.67\times10^{-7},1.67\times10^{-8}\,\mathrm{C/m}$。
