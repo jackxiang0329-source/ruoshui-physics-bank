@@ -52,3 +52,50 @@ B''(0)=\frac{3\mu_0IR^2(a^2-R^2)}{(R^2+a^2/4)^{7/2}}.
 \problemtext 图示三棱柱处于沿正 $x$ 轴的2.0特斯拉匀强场中，求三个矩形侧面 $abcd,befc,aefd$ 的磁通量。
 \workings 采用闭合棱柱外法向，面 $abcd$ 位于 $yz$ 平面，面积 $0.40\times0.30$ 平方米，外法向负 $x$，故 $\Phi_{abcd}=-0.24\,\mathrm{Wb}$。面 $befc$ 位于 $xy$ 平面，磁场平行于面，故 $\Phi_{befc}=0$。上下三角面也与磁场平行；由闭合磁通为零，$\Phi_{aefd}=+0.24\,\mathrm{Wb}$。
 \crosscheck 斜面沿 $yz$ 平面的正投影面积同为0.12平方米，可独立核验；若题目只要求大小，分别为0.24、0、0.24韦伯。
+\sourceproblem{7-T7}{39}{43}
+\problemtext 无限长圆截面铜导线通10安培稳恒电流，求图示导线内部轴向径向半平面上一米长度的磁通量。
+\workings 设半径 $R$、长度 $l=1\,\mathrm m$，均匀电流密度时 $B(r)=\mu_0 Ir/(2\pi R^2)$，沿图中从轴至表面的径向面积分，
+\[
+|\Phi|=l\int_0^R B(r)\mathrm dr=\mu_0 Il/(4\pi)=1.0\times10^{-6}\,\mathrm{Wb}.
+\]
+\crosscheck 结果与半径无关；若积分面跨整个直径，左右有向通量相消，不能混同图示半平面。
+\sourceproblem{7-T8}{39}{43}
+\problemtext 同轴电缆中心实心导体半径 $a$，外导体内外半径 $b,c$，两者均匀分布等大反向电流 $I$，求各区磁场。
+\workings 取内导体电流为正轴向，安培环路得
+\[
+B_\phi(r)=\frac{\mu_0 I}{2\pi}\begin{cases}
+r/a^2,&0\le r<a,\\
+1/r,&a\le r<b,\\
+(c^2-r^2)/[r(c^2-b^2)],&b\le r<c,\\
+0,&r\ge c .
+\end{cases}
+\]
+\crosscheck 三个界面均连续；外部包围净电流为零。导体介质磁导率按题设通常取 $\mu_0$。
+\sourceproblem{7-T9}{40}{44}
+\problemtext 长圆柱导体外半径 $R_1$、偏心圆孔半径 $R_2$、两轴距 $a>R_2$，剩余截面均匀通过电流 $I$，求两轴处磁场大小。
+\workings 令 $\bm a$ 从主轴指向孔轴，$\bm J=I\bm e_z/[\pi(R_1^2-R_2^2)]$。将孔视作在完整圆柱内叠加反向电流密度的圆柱。主轴位于虚拟孔外，故
+\[
+\bm B_O=\frac{\mu_0 R_2^2}{2a^2}\bm J\times\bm a,\qquad
+\bm B_{O'}=\frac{\mu_0}{2}\bm J\times\bm a .
+\]
+\crosscheck 在孔内任一点，两个实心柱内部线性场相减，合场恰为 $\mu_0\bm J\times\bm a/2$；两轴处场同向。
+\sourceproblem{7-T10}{40}{44}
+\problemtext 两无限平行面分别有面电流密度大小 $j_1,j_2$，比较电流同向、反向、正交时板间和外侧磁场大小。
+\workings 取共同单位法向 $\bm n$ 从板1指向板2，单面两侧场为 $\pm\mu_0\bm K\times\bm n/2$。故板间大小为 $\mu_0|\bm K_1-\bm K_2|/2$，外侧大小为 $\mu_0|\bm K_1+\bm K_2|/2$。同向时分别为 $\mu_0|j_1-j_2|/2,\mu_0(j_1+j_2)/2$；反向时交换；正交时两者均为 $\mu_0\sqrt{j_1^2+j_2^2}/2$。
+\crosscheck 单一电流面两侧等大反向；相等反向电流面外部场抵消。
+\sourceproblem{7-T11}{41}{45}
+\problemtext 磁场大小0.4 T，位于 $xy$ 平面并从正 $y$ 轴逆时针转 $\pi/3$；正电荷10 pC以速度 $v\bm e_z$ 运动，求磁力。
+\workings $\bm B=0.4(-\sqrt3\bm i/2+\bm j/2)$，故
+\[
+\bm F=qv\bm k\times\bm B=-0.2qv(\bm i+\sqrt3\bm j).
+\]
+大小 $4.0\times10^{-12}v$ N（$v$ 以米每秒计）。速度的科学计数法指数尚待高清确认，保留通式。
+\crosscheck 速度与磁场正交，故 $F=qvB$；点积 $\bm F\cdot\bm B=\bm F\cdot\bm v=0$。
+\sourceproblem{7-T12}{41}{45}
+\problemtext 半径4.0厘米圆环处在轴对称发散磁场中，环处场强0.10 T，与环面成60度，电流15.8 A，求合安培力。
+\workings 环处径向分量 $B_r=B\cos60^\circ$，轴向分量产生的径向安培力沿环抵消；径向磁场产生的轴向力同向。大小
+\[
+F=2\pi RIB\cos60^\circ\approx0.199\,\mathrm N.
+\]
+按原图右侧电流出纸面、左侧入纸面，径向场向外，轴向合力向上。
+\crosscheck 若电流反向则合力反向；均匀纯轴向场的闭合环合力为零。
