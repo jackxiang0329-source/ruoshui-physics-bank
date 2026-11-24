@@ -401,3 +401,69 @@ v=\frac{3m-M}{3m+M}v_0,\qquad
 \omega=\frac{6m}{3m+M}\frac{v_0}{l}.
 \]
 \crosscheck 回代动能守恒；只有 $M>3m$ 时球真正反弹，等号时静止，$M<3m$ 时仍向前。若中心不固定而可平动，需另建模型。
+
+\sourceproblem{计算26}{70}{76}
+\problemtext 均匀杆质量 $M$、长 $l$，竖直悬挂静止，以垂直杆的恒力 $F$ 打击下端，历时 $\Delta t$，求角动量变化及最大偏角。
+\workings 在短时冲击近似下忽略重力矩冲量，$\Delta L=Fl\Delta t$，$J=Ml^2/3$，$\omega=3F\Delta t/(Ml)$。随后机械能守恒，
+\[
+\cos\theta_{\max}=1-\frac{3F^2\Delta t^2}{M^2gl}.
+\]
+右端大于等于负1才有回摆或临界解；等于负1为渐近倒立，小于负1则越过顶点。
+\crosscheck 若打击时间不可忽略，重力矩及打击过程中角位移也须计入；上述公式明确采用短冲量模型。
+\sourceproblem{计算27}{70}{76}
+\problemtext 光滑桌面上质量 $m_0$ 的木块接原长 $l_0$、劲度 $k$ 的弹簧，质量 $m$ 的入射物以垂直弹簧的速度 $v_0$ 嵌入木块；求弹簧长为 $l$ 时的速率。
+\workings 短时碰撞后的速率 $u=mv_0/(m+m_0)$。随后机械能守恒，
+\[
+v=\sqrt{\frac{m^2v_0^2}{(m+m_0)^2}-\frac{k(l-l_0)^2}{m+m_0}}.
+\]
+\crosscheck 弹簧力为中心力，另有 $L=mv_0l_0$ 守恒，故还须满足 $v^2\ge [mv_0l_0/((m+m_0)l)]^2$ 才能到达指定长度；不只要求根号非负。
+\sourceproblem{应用1}{70}{76}
+\problemtext 汽轮机恒力矩 $2.8\times10^3$ N m，惯量32.0 kg m平方，转速由1500增至12600 r/min，求历时。
+\workings 忽略额外阻力，$\alpha=2800/32=87.5$ rad/s平方；$\Delta\omega=2\pi(12600-1500)/60=370\pi$ rad/s，故 $t=370\pi/87.5\approx13.28$ s。
+\crosscheck 转速由每分钟转数转换为每秒弧度，不能直接代入角加速度公式。
+\sourceproblem{应用2}{70}{76}
+\problemtext 风扇惯量 $J$，启动 $t_1$ 达额定角速度 $\omega_0$，断电 $t_2$ 停止，摩擦阻力矩与电机力矩均恒定，求电机力矩。
+\workings 停机时 $M_f=J\omega_0/t_2$；启动时 $M_e-M_f=J\omega_0/t_1$，故 $M_e=J\omega_0(1/t_1+1/t_2)$。
+\crosscheck 电机力矩大于阻力矩；假定启动从静止且摩擦大小两个阶段相同。
+\sourceproblem{应用3}{70}{76}
+\problemtext 两名质量均50 kg的滑冰者沿相距3 m平行路径以10 m/s等速反向运动，抓住长3 m轻杆后旋转；再将间距缩为1 m，求两阶段运动（第二问续PDF77）。
+\workings 质心静止，初始相对位形与速度垂直。轴向角动量大小 $L=2(50)(1.5)(10)=1500$ kg m平方/s，$J_i=225$ kg m平方，故围绕中点以半径1.5 m、角速率 $20/3$ rad/s转动。缩为1 m后 $J_f=25$ kg m平方，$\omega_f=60$ rad/s，各人速率30 m/s（停止径向拉动后）。
+\crosscheck 总角动量守恒，动能由5000增至45000 J，差额来自内部做功；人体能否实现属另一个现实问题。
+\sourceproblem{应用4}{71}{77}
+\problemtext 地球卫星近、远地点高度分别 $4.39\times10^5$ m、$2.38\times10^6$ m，地球半径 $6.38\times10^6$ m，求两处速率。
+\workings $r_p=6.819\times10^6$ m、$r_a=8.76\times10^6$ m，半长轴 $a=(r_p+r_a)/2$。由角动量与机械能守恒（或活力公式）
+\[
+v_p=\sqrt{\frac{2GM r_a}{r_p(r_p+r_a)}},\quad
+v_a=\sqrt{\frac{2GM r_p}{r_a(r_p+r_a)}}.
+\]
+取 $GM=3.986\times10^{14}$ m立方/s平方，约为8.11和6.31 km/s。
+\crosscheck 两处速度与径向垂直，$r_pv_p=r_av_a$；题给数值是离地高度，不能直接当作地心距离。
+\sourceproblem{应用5}{71}{77}
+\problemtext 风机转动惯量 $J$，初角速度 $\omega_0$，空气阻力矩大小 $c\omega$，求减半时间及转数。
+\workings $J\dot\omega=-c\omega$，$\omega=\omega_0e^{-ct/J}$，$t_{1/2}=J\ln2/c$。角位移为 $\int_0^{t_{1/2}}\omega\,\mathrm dt=J\omega_0/(2c)$，故圈数 $N=J\omega_0/(4\pi c)$。
+\crosscheck 角速度指数衰减，不能用初末角速度算术平均替代积分。
+\sourceproblem{应用6}{71}{77}
+\problemtext 皮带无滑动，发电机轮半径30 cm、蒸汽机轮75 cm，后者角加速度 $0.8\pi$ rad/s平方；求发电机达600 r/min的时间，及随后一分钟降到300 r/min的角加速度。
+\workings $\alpha_A=(75/30)(0.8\pi)=2\pi$ rad/s平方。由静止达 $20\pi$ rad/s需10 s。减速阶段平均角加速度 $(10\pi-20\pi)/60=-\pi/6$ rad/s平方；若匀减速即为恒角加速度。
+\crosscheck 半径小的轮角加速度大；第二问未明确减速度恒定，严格可确定平均值。
+\sourceproblem{应用7}{71}{77}
+\problemtext 砂轮直径0.4 m、质量20 kg，初转速900 r/min，工件法向压力100 N，11.3 s停止，求动摩擦系数。
+\workings 将砂轮视为均匀圆盘，$J=MR^2/2=0.4$ kg m平方，$\omega_0=30\pi$ rad/s。由 $\mu NR=J\omega_0/t$ 得 $\mu=0.4(30\pi)/(11.3\times100\times0.2)\approx0.167$。
+\crosscheck 砂轮质量分布未明确，若非均匀圆盘应使用实测惯量；忽略轴摩擦。
+\sourceproblem{应用8}{72}{78}
+\problemtext 均匀矩形门质量 $m$、高 $a$、宽 $b$，绕高边转轴，质量 $m_0$ 小球垂直撞击自由边并弹性碰撞，求惯量、碰后速度和方向。
+\workings $J=mb^2/3$。取入射方向为正，轴向角动量守恒及弹性恢复条件为 $m_0v_0b=m_0vb+J\omega$ 与 $b\omega-v=v_0$。解得
+\[
+v=\frac{3m_0-m}{3m_0+m}v_0,\qquad
+\omega=\frac{6m_0v_0}{(3m_0+m)b}.
+\]
+$m>3m_0$ 时反弹，等号时停止，小于时仍向原方向。
+\crosscheck 代回总动能守恒；固定门轴可提供线冲量，但不提供绕该轴的冲量矩。
+\sourceproblem{应用9}{72}{78}
+\problemtext 制动飞轮质量600 kg、半径0.25 m、初转速900 r/min，闸杆支点至闸瓦0.50 m、至施力点1.25 m，竖直施力100 N，摩擦系数0.40，求停止时间及转数。
+\workings 按图示理想杠杆、忽略杆重和摩擦力对支点的额外力矩，法向力 $N=100(1.25/0.50)=250$ N，制动力矩 $\mu NR=25$ N m。$J=600(0.25)^2/2=18.75$ kg m平方，$\omega_0=30\pi$ rad/s，故
+\[
+t=J\omega_0/25=22.5\pi\,\mathrm s\approx70.69\,\mathrm s,\quad
+N_{\rm rev}=\omega_0t/(4\pi)=168.75\pi\approx530.14.
+\]
+\crosscheck 假定制动过程法向力恒定、闸瓦摩擦力水平且其作用线通过支点所在高度；若实际装置存在额外摩擦力矩臂需重新列杠杆平衡式。
