@@ -249,3 +249,47 @@ s=\frac R\mu\ln(1+\mu v_0t/R).
 \problemtext 图示水平光滑台上固定板壁，由两段直壁和半径 $R$ 的半圆壁连接，物体沿壁以 $v_0$ 进入，壁面动摩擦系数 $\mu$，求D点速率。
 \workings 直壁上理想相切运动不需法向力，故无壁面摩擦；半圆段 $N=mv^2/R$，$m v\,\mathrm dv/\mathrm ds=-\mu mv^2/R$。积分跨越弧长 $\pi R$ 得 $v_D=v_0e^{-\mu\pi}$。
 \crosscheck 默认连接处相切、无碰撞损失且物体沿半圆内侧保持接触；$\mu=0$ 时恢复初速。
+
+\sourceproblem{应用1}{31}{37}
+\problemtext 两混凝土板质量 $m_1=200\,\mathrm{kg}$、$m_2=100\,\mathrm{kg}$，框架与绳质量忽略，求共同向上加速度分别为10.0及1.0米每平方秒时的钢丝绳张力和乙对甲作用力。
+\workings 整体竖直动力学 $T=(m_1+m_2)(g+a)$。若甲在乙上方且仅由乙支承，则 $N_{2\to1}=m_1(g+a)$ 向上。取 $g=9.8\,\mathrm{m/s^2}$，分别得 $(T,N)=(5940,3960)\,\mathrm N$ 及 $(3240,2160)\,\mathrm N$。
+\crosscheck 原题页未画出两板支承图，因此接触力数值以甲由乙直接支承为条件；若乙在上，作用于甲的接触力方向和大小须按乙的受力另算。整体张力在单根竖直承重绳模型下不依赖堆放顺序。
+\sourceproblem{应用2}{32}{38}
+\problemtext 外轨超高使轨道横向倾角为 $\theta$，质量 $m$ 的火车沿水平半径 $R$ 的圆弧行驶，求无侧压力的速率及任意速率的侧压力。
+\workings 将加速度沿倾斜轨面横向（向内下坡为正）投影。设轨道侧向作用力 $F_s$ 沿轨面，则
+\[
+F_s+mg\sin\theta=\frac{mv^2}{R}\cos\theta.
+\]
+故 $v_0=\sqrt{gR\tan\theta}$；$F_s=m(v^2\cos\theta/R-g\sin\theta)$。$v>v_0$ 时轨对车向内，车压外轨；$v<v_0$ 时反向，车压内轨。侧压力大小取绝对值。
+\crosscheck 侧向力定义为沿横向倾斜轨面分量；若采用完全水平的轮缘侧力模型，则应重新投影，得到不同的表达式，不能混用。$\theta=0$ 时恢复 $mv^2/R$。
+\sourceproblem{应用3}{32}{38}
+\problemtext 质量50千克的跳水者从10米高台静止下落，入水后重力与浮力近似抵消，平方阻力系数20千克每米，求降至2米每秒前下沉距离。
+\workings 忽略空中阻力，$v_0=\sqrt{2gh}$。在水中向下取正，$mv\,\mathrm dv/\mathrm dy=-kv^2$，积分 $v=v_0e^{-ky/m}$。因此
+\[
+y=\frac{m}{k}\ln\frac{v_0}{2}
+=2.5\ln7\,\mathrm m\approx4.86\,\mathrm m
+\]
+（$g=9.8$）。
+\crosscheck 入水速率为14米每秒；距离随目标速率降低而增大，且 $k$ 的单位为千克每米。忽略入水瞬间的附加冲击损失。
+\sourceproblem{应用4}{32}{38}
+\problemtext 跳水者质量 $m$，入水速度 $v_0$，重力与浮力近似抵消，阻力大小 $bv^2$，向下为正，求速度关于时间与深度的函数。
+\workings $m\dot v=-bv^2$，积分得
+\[
+v(t)=\frac{v_0}{1+bv_0t/m},\quad
+y(t)=\frac mb\ln(1+bv_0t/m),\quad
+v(y)=v_0e^{-by/m}.
+\]
+\crosscheck $\dot y=v$，且 $b\to0$ 时恢复匀速；模型不描述主动蹬水后的运动。
+\sourceproblem{应用5}{32}{38}
+\problemtext 质量45.0千克的物体从地面竖直上抛，初速60.0米每秒，线性空气阻力系数 $k=0.03\,\mathrm{kg/s}$，求到达最高点时间及高度。
+\workings 上行为正，$m\dot v=-mg-kv$，
+\[
+v(t)=(v_0+mg/k)e^{-kt/m}-mg/k,\quad
+t_*=\frac mk\ln\left(1+\frac{kv_0}{mg}\right).
+\]
+积分速度至 $t_*$ 得
+\[
+H=\frac{mv_0}{k}-\frac{m^2g}{k^2}\ln\left(1+\frac{kv_0}{mg}\right).
+\]
+代入 $g=9.8\,\mathrm{m/s^2}$ 得 $t_*\approx6.110\,\mathrm s$，$H\approx183.18\,\mathrm m$。
+\crosscheck 两结果均略小于无阻力时的 $6.122\,\mathrm s$ 和 $183.67\,\mathrm m$；计算高度时宜使用稳定的对数函数，避免两大数相减导致精度损失。
