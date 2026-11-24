@@ -39,3 +39,71 @@
 \problemtext 两真空长螺线管长度与单位长度匝数相同，直径比 $d_1/d_2=1/4$，电流相同，求储能比。
 \workings $L=\mu_0n^2Sl$，$W=LI^2/2$，故 $W_1/W_2=(d_1/d_2)^2=1/16$，选B。
 \crosscheck 同电流下内部场强相同，储能与场区体积成正比。
+
+\sourceproblem{填空1}{37}{43}
+\problemtext 无限长密绕螺线管半径 $r$、单位长度匝数 $n$，电流 $i=I_m\cos\omega t$，外部有同轴单匝圆环半径 $R>r$，求感应电动势。
+\workings 理想长管内部 $B=\mu_0ni$，外部场忽略。取法向与正电流产生的磁场同向，$\Phi=\mu_0n\pi r^2 I_m\cos\omega t$，故 $\mathcal E=\mu_0n\pi r^2 I_m\omega\sin\omega t$。
+\crosscheck 有效磁通面积是管截面而非外环面积。
+\sourceproblem{填空2}{37}{43}
+\problemtext 图9半圆弧导线abc及直径方向导线绕O在垂直匀强磁场的平面内逆时针转动，求感应电动势和高电势端（续PDF44）。
+\workings 取纸外为正，$\bm B=-B\bm k,\bm\omega=\omega\bm k$。刚体各点 $\bm v\times\bm B=-\omega B\bm r$，从任意端点P到Q的动生电动势为
+\[
+\mathcal E_{PQ}=-\omega B(r_Q^2-r_P^2)/2.
+\]
+开路稳态中心O比距O为 $R$ 的端点高 $B\omega R^2/2$；同半径两端等势。
+\crosscheck 图9细小端点标注待复核；上式不依赖导线弯曲形状，不能将半圆弧长直接代入 $Blv$。
+\sourceproblem{填空3}{38}{44}
+\problemtext 两相距不远的平面线圈，调整一个线圈的轴线使其与另一线圈轴线垂直，讨论互感。
+\workings 若按题设中心连线与另一线圈轴线的对称配置，垂直线圈穿过的净磁通为零，故互感为零。
+\crosscheck 单有轴线垂直而无位置对称条件并不足以保证互感为零；本结论依赖题示几何。
+\sourceproblem{填空4}{38}{44}
+\problemtext 金属圆盘在沿轴向的均匀磁场中以角速度 $\omega$ 旋转，求盘心与半径 $R$ 的边缘间动生电动势。
+\workings 当 $\bm\omega$ 与 $\bm B$ 同向时，$\bm v\times\bm B=\omega Br\bm e_r$，故 $V_{\rm edge}-V_O=\int_0^R B\omega r\,\mathrm dr=B\omega R^2/2$，边缘电势较高。
+\crosscheck 反转磁场或转向则极性反转；任一从中心到同半径边缘的路径积分相同。
+\sourceproblem{填空5}{38}{44}
+\problemtext 图11给出分段线性电流随时间的变化，画自感电动势曲线。
+\workings $\mathcal E_L=-L\,\mathrm di/\mathrm dt$。图中电流依次下降、上升、下降、上升，因此相应电动势为正、负、正、负的分段常量；每段高度为该段斜率大小乘 $L$。折点处理想导数不定义。
+\crosscheck 原图无数值纵轴，不能臆造幅值；电流过零并不意味着自感电动势过零。
+\sourceproblem{填空6}{38}{44}
+\problemtext 自感0.4 H的线圈通10 A电流，求储存的磁场能量。
+\workings $W=LI^2/2=20\,\mathrm J$。
+\crosscheck 采用线性自感模型。
+\sourceproblem{填空7}{38}{44}
+\problemtext 两长螺线管长度及匝数相同，半径比 $r_1:r_2=1:2$，相对磁导率比 $\mu_{r1}:\mu_{r2}=2:1$，通相同电流，求自感及磁能比。
+\workings $L_i=\mu_0\mu_{ri}N^2\pi r_i^2/l$，故 $L_1:L_2=1:2$；由 $W_i=L_i I^2/2$，磁能比也为 $1:2$。
+\crosscheck 自感随截面积而非半径一次方变化。
+\sourceproblem{填空8}{38}{44}
+\problemtext 电容 $10.0\,\mu\mathrm F$，板间电压变化率读作 $2.0\times10^6\,\mathrm{V/s}$，求位移电流。
+\workings 理想电容 $I_d=\mathrm dQ/\mathrm dt=C\,\mathrm dU/\mathrm dt$，按该指数代入为 $20\,\mathrm A$。
+\crosscheck 公式适用于电容不变；扫描电压变化率指数保留高清复核标记。
+\sourceproblem{填空9}{38}{44}
+\problemtext 根据感生电场的环流定律判断能否像静电场一样引入单值电势概念。
+\workings $\oint\bm E_{\rm ind}\cdot\mathrm d\bm l=-\mathrm d\Phi_B/\mathrm dt$ 一般不为零，故一般不能用单值标量电势的负梯度表示整个感生电场。
+\crosscheck 特定无旋区域可以局部引入势；结论不否定电磁势中的标量势与矢量势联合表示。
+\sourceproblem{计算1}{39}{45}
+\problemtext 长直导线与矩形框共面，近边距离 $d$，平行边长 $a$、垂直宽 $b$，电流 $I=I_m\sin\omega t$，求感应电动势。
+\workings 取法向与正电流的磁场同向，
+\[
+\Phi=\frac{\mu_0aI}{2\pi}\ln\frac{d+b}{d},\qquad
+|\mathcal E|=\frac{\mu_0a I_m\omega}{2\pi}\ln\frac{d+b}{d}|\cos\omega t|.
+\]
+\crosscheck 矩形跨越非均匀场，必须积分；固定框不存在额外动生项。
+\sourceproblem{计算2}{39}{45}
+\problemtext 半径 $r$ 的半圆形导线绕直径在匀强磁场 $B$ 中以角速度 $\omega$ 转动，回路总电阻 $R$，求感应电流。
+\workings 若初态半圆平面与磁场垂直且选初始法向同场，活动半圆的磁通为 $B\pi r^2\cos\omega t/2$，固定部分磁通不随时间变，故
+\[
+i(t)=\frac{B\pi r^2\omega}{2R}\sin\omega t .
+\]
+\crosscheck 忽略自感，回路定向反转则电流符号反转；若初始转角不同，应增加初相。
+\sourceproblem{计算3}{40}{46}
+\problemtext 长直导线电流 $I$ 向下，右侧垂直金属杆CD长 $b$，近端距导线 $a$，杆平行导线向上以速率 $v$ 运动，求电动势及高势端。
+\workings 取右、上、纸外为正，右侧 $\bm B=\mu_0 I\bm k/(2\pi x)$，故 $\bm v\times\bm B$ 向右。积分得 $V_D-V_C=\mu_0 Iv\ln[(a+b)/a]/(2\pi)$，D端高势。
+\crosscheck 若导线电流或运动方向反转，极性反转；对数来自磁场随距离变化。
+\sourceproblem{计算4}{40}{46}
+\problemtext 折线OEF绕O在垂直匀强磁场平面内逆时针转动，$OE=EF=a,\angle OEF=120^\circ$，求 $U_{OE},U_{OF}$ 并比较三点电势。
+\workings 图示磁场入纸面，角速度出纸面。由余弦定理 $OF^2=3a^2$。开路稳态 $V(r)-V_O=-B\omega r^2/2$，故按 $U_{PQ}=V_P-V_Q$ 定义，
+\[
+U_{OE}=B\omega a^2/2,\qquad U_{OF}=3B\omega a^2/2.
+\]
+O电势最高，F最低。
+\crosscheck 动生场为径向线性场，折线积分只取始末半径；原图箭头方向与有向电势差须一致。
