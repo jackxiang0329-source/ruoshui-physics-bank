@@ -43,3 +43,68 @@
 \problemtext 同频同向振动初相分别为 $\pi/3,-\pi/6$，振幅 $A_1,A_2$，求合振幅。
 \workings 相差 $\pi/2$，矢量合成得 $A=\sqrt{A_1^2+A_2^2+2A_1A_2\cos(\pi/2)}=\sqrt{A_1^2+A_2^2}$，选C。
 \crosscheck 任一分振幅为零时恢复另一分振幅。
+
+\sourceproblem{填空1}{13}{19}
+\problemtext 原振动 $x=A\cos(\omega t+\varphi_0)$ 的周期为 $T$；求 $x'=B\cos(n\omega t+\varphi_0+\pi)$ 的周期。
+\workings 新角频率为 $|n|\omega$，故 $T'=T/|n|$，通常 $n>0$ 时为 $T/n$。
+\crosscheck 相位平移不改变周期；$n=0$ 退化为常量，不存在最小正周期。
+\sourceproblem{填空2}{13}{19}
+\problemtext 振幅 $A$、周期 $T$ 的简谐运动，在正半振幅处求速率。
+\workings $v^2=\omega^2(A^2-x^2)$，代入 $x=A/2,\omega=2\pi/T$ 得 $|v|=\sqrt3\pi A/T$。
+\crosscheck 正半振幅处有两种运动方向，速率唯一而速度符号不唯一。
+\sourceproblem{填空3}{13}{19}
+\problemtext 水平弹簧振子 $m=3\,\mathrm{kg},k=12\,\mathrm{N/m},A=2\,\mathrm m$，从正最大位移计时，求圆频率、初相、运动方程及 $t=\pi/8$ 时作用力。
+\workings $\omega=\sqrt{k/m}=2\,\mathrm{rad/s}$，$\varphi_0=0$，$x=2\cos2t$（SI）。该时刻 $x=\sqrt2\,\mathrm m$，$F=-kx=-12\sqrt2\,\mathrm N$，方向沿负轴。
+\crosscheck $ma=-12\sqrt2\,\mathrm N$，与胡克定律一致。
+\sourceproblem{填空4}{14}{20}
+\problemtext 根据图5读振幅、初相、周期及运动方程。
+\workings 图中纵轴以厘米计，振幅10厘米，初位移负5厘米且初速度为负；取余弦初相 $2\pi/3$。图示 $t=2\,\mathrm s$ 正向过零，故 $2\omega=3\pi/2-2\pi/3=5\pi/6$，$T=24/5\,\mathrm s$。
+\[
+x=10\cos(5\pi t/12+2\pi/3)\quad(\mathrm{cm}).
+\]
+\crosscheck 初速度为负，2秒时为正；图示刻度及单位保留独立二校标记。
+\sourceproblem{填空5}{13}{19}
+\problemtext 图6两等质量 $m$ 物块相接但不粘合，压缩劲度 $k$ 的弹簧 $x_0$ 后释放，求A首次正最大位移时刻及此时B速率（续PDF20）。
+\workings 两块共同运动至弹簧自然长时，耗时 $t_1=(\pi/2)\sqrt{2m/k}$，共同速率 $u=x_0\sqrt{k/(2m)}$。此后分离，B匀速，A从平衡点以正速度振动至最大位移另需 $t_2=(\pi/2)\sqrt{m/k}$。故 $t=t_1+t_2$，$v_B=u$。
+\crosscheck 弹簧开始拉A时，A不能通过接触面向左拉B；分离点的接触力为零。
+\sourceproblem{填空6}{14}{20}
+\problemtext 质量 $m$、劲度 $k$ 的弹簧振子，求其动能变化频率和势能变化频率。
+\workings $\omega=\sqrt{k/m}$，$K=\frac14kA^2[1-\cos(2\omega t+2\varphi)]$，$U=\frac14kA^2[1+\cos(2\omega t+2\varphi)]$；两者频率均为 $2f=\sqrt{k/m}/\pi$。
+\crosscheck 两能量之和恒为 $kA^2/2$；能量周期为位移周期的一半。
+\sourceproblem{填空7}{14}{20}
+\problemtext 弹簧振子劲度 $k$、振幅 $A$，求到达正半振幅处动能。
+\workings $K=E-U=kA^2/2-k(A/2)^2/2=3kA^2/8$。
+\crosscheck 在两个半振幅位置动能相等；不依赖运动方向。
+\sourceproblem{填空8}{14}{20}
+\problemtext 图7两个同频同向振动，$A_1>A_2$，大振幅曲线初位移为 $-A_1$，小振幅曲线初位移为0且向正向运动，求合振动初相。
+\workings 按图读得 $x=-A_1\cos\omega t+A_2\sin\omega t$。令 $x=A\cos(\omega t+\varphi)$，则 $A=\sqrt{A_1^2+A_2^2}$，$\cos\varphi=-A_1/A,\sin\varphi=-A_2/A$，故主值 $\varphi=-\pi+\arctan(A_2/A_1)$。
+\crosscheck 合振动初位移为负且初速度为正；图7曲线身份及斜率待独立二校。
+\sourceproblem{计算1}{15}{21}
+\problemtext 竖直轻弹簧劲度 $k$，挂质量 $m$ 滑块，弹簧起初为原长并静止释放，以平衡位置为原点、向下为正，求运动方程。
+\workings 平衡伸长 $mg/k$，初位移 $x(0)=-mg/k$、初速度零；$m\ddot x=-kx$，因此
+\[
+x=-\frac{mg}{k}\cos(\sqrt{k/m}\,t).
+\]
+\crosscheck 释放瞬间加速度 $g$ 向下；最大伸长为 $2mg/k$，不是平衡伸长。
+\sourceproblem{计算2}{15}{21}
+\problemtext 由图9读取正向过零的简谐振动曲线，振幅8厘米、周期4秒，求方程。
+\workings $x(0)=0,\dot x(0)>0$，$\omega=2\pi/T=\pi/2$，故 $x=8\sin(\pi t/2)$（cm）。
+\crosscheck 1秒达正峰值、3秒达负峰值、5秒再达正峰值；图示时间刻度待独立二校。
+\sourceproblem{计算3}{16}{22}
+\problemtext 振幅 $A$、$\omega=\pi/4$，初位于 $A/2$ 且正向运动，求一周期内首次到达 $-A/\sqrt2$ 且速度为正的时间，并用旋转矢量说明。
+\workings 初相 $\varphi_i=-\pi/3$；目标相位 $\varphi_f=-3\pi/4$（两者均满足速度为正）。旋转矢量逆时针转动，最小正转角为 $2\pi-5\pi/12=19\pi/12$，故 $\Delta t=19/3\,\mathrm s$。
+\begin{center}
+\begin{tikzpicture}[scale=1.25,>=stealth]
+\draw[->] (-1.5,0)--(1.5,0) node[right]{$x$};
+\draw[->] (0,-1.4)--(0,1.4);
+\draw[gray] (0,0) circle(1);
+\draw[thick,blue,->] (0,0)--(-60:1) node[below right]{$i$};
+\draw[thick,red,->] (0,0)--(-135:1) node[below left]{$f$};
+\draw[->] (-60:0.6) arc(-60:225:0.6);
+\end{tikzpicture}
+\end{center}
+\crosscheck 周期8秒，答案在一个周期内；更早到达相同位置时速度为负，不满足题设。
+\sourceproblem{计算4}{16}{22}
+\problemtext 同向同频三振动 $6\cos(\pi t+\pi/2)$、$3\sin(\pi t+\pi/2)$、$2\cos(\pi t-\pi/2)$（SI），求合振动。
+\workings 相加得到 $x=3\cos\pi t-4\sin\pi t$，故 $x=5\cos(\pi t+\arctan(4/3))$（SI）。
+\crosscheck 初位移3米、初速度 $-4\pi\,\mathrm{m/s}$，与直接相加相同。
