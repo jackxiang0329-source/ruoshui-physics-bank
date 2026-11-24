@@ -320,3 +320,84 @@ a=\frac{180-30-3\sqrt3}{18+6+1}=\frac{150-3\sqrt3}{25}\approx5.792\,\mathrm{m/s^
 \problemtext 匀质水平杆质量 $m$、长 $l$，两端竖直细线悬挂，烧断一根，求另一根瞬时张力。
 \workings 设保留端为A。初速度为零且细线不可伸长，A瞬时竖直加速度为零；杆此刻角加速度可按绕A求出，$mg(l/2)=(ml^2/3)\alpha$，故 $\alpha=3g/(2l)$。质心向下加速度 $\alpha l/2=3g/4$，因此 $mg-T=3mg/4$，$T=mg/4$。
 \crosscheck 也可用质心转动方程 $Tl/2=(ml^2/12)\alpha$ 联立；A并非全过程固定铰点，此处仅用瞬时约束。
+
+\sourceproblem{计算14}{67}{73}
+\problemtext 无滑动皮带连接A、B，B半径为A三倍，分别求等动能、等角动量大小时惯量比。
+\workings $\omega_A=3\omega_B$（大小）。等动能得 $J_A/J_B=1/9$；等角动量得 $J_A/J_B=1/3$。
+\crosscheck 动能正比于角速度平方，角动量大小正比于角速度一次方。
+\sourceproblem{计算15}{67}{73}
+\problemtext 均匀圆板A质量 $m$、半径 $r$，以 $\omega_0$ 转动；同轴B质量 $M$、半径 $R$ 初静止，接触后结合，求共同角速度及动能损失。
+\workings 设 $J_A=mr^2/2,J_B=MR^2/2$。轴向外力矩忽略，
+\[
+\omega=\frac{J_A}{J_A+J_B}\omega_0,\quad
+\Delta K_{\rm loss}=\frac{J_AJ_B}{2(J_A+J_B)}\omega_0^2
+=\frac{mr^2MR^2}{4(mr^2+MR^2)}\omega_0^2.
+\]
+\crosscheck 损失非负；B惯量趋零时共同角速度趋初值、损失趋零。
+\sourceproblem{计算16}{67}{73}
+\problemtext 粗糙水平面上的均匀圆盘质量 $M$、半径 $R$，边缘嵌入切向入射质量 $m$ 的小物体，入射速率 $v_0$，求碰后角速度及停止时间。
+\workings 短时碰撞忽略桌面外冲量矩，$J=(M/2+m)R^2$，故 $\omega=mv_0/[(M/2+m)R]$。若盘底法向压力均匀并承受合重 $(M+m)g$，摩擦力矩大小为 $2\mu(M+m)gR/3$，因此
+\[
+t_{\rm stop}=\frac{J\omega}{2\mu(M+m)gR/3}
+=\frac{3mv_0}{2\mu(M+m)g}.
+\]
+\crosscheck 原题未规定嵌入后压力分布；若采用忽略入射物重量对盘底压力影响的教材近似，分母中 $M+m$ 改为 $M$。一般须用 $M_f=\mu\int r p\,\mathrm dS$；不声称停止时间在无压力模型时唯一。
+\sourceproblem{计算17}{67}{73}
+\problemtext A轮初角速度800 rad/min，B轮静止；离合器结合后共同角速度250 rad/min，放热2500 J，求两轮惯量。
+\workings $\omega_i=800/60,\omega_f=250/60$（rad/s）。由 $J_A\omega_i=(J_A+J_B)\omega_f$ 得 $J_B=2.2J_A$；热量
+\[
+Q=\tfrac12 J_A\omega_i(\omega_i-\omega_f),\quad
+J_A=\frac{2Q}{\omega_i(\omega_i-\omega_f)}\approx40.91\,\mathrm{kg\,m^2},
+\quad J_B=90.0\,\mathrm{kg\,m^2}.
+\]
+\crosscheck 原书单位是 rad/min 而非 r/min，不乘 $2\pi$；回代初末转动能差为2500 J。
+\sourceproblem{计算18}{68}{74}
+\problemtext 均匀圆盘质量 $m$、半径 $R$，初角速度 $\omega_0$，边缘松绳连接地面上质量 $m/2$ 的物体。求绳拉紧瞬间角速度与上升最大高度。
+\workings 拉紧瞬间忽略重力冲量矩，若初转向使绳上提物体，$J_0=mR^2/2$，拉紧后共同等效惯量 $mR^2$，故 $\omega_1=\omega_0/2$。随后机械能守恒，
+\[
+\tfrac12mR^2\omega_1^2=(m/2)gh,\qquad h=R^2\omega_0^2/(4g).
+\]
+\crosscheck 拉紧过程为非弹性约束建立，不守恒机械能；须有足够可卷绳长并始终不打滑。
+\sourceproblem{计算19}{68}{74}
+\problemtext 匀质杆长 $L$、质量 $M$，水平静止释放，竖直时与静止质量 $m$ 的物体完全非弹性碰撞，求碰前角速度与碰后物体速率。
+\workings $J=ML^2/3$，$MgL/2=J\omega_i^2/2$，得 $\omega_i=\sqrt{3g/L}$。假设物体粘于杆端，短时轴向角动量守恒，
+\[
+v_m=L\frac{J\omega_i}{J+mL^2}=\frac{M\sqrt{3gL}}{M+3m}.
+\]
+\crosscheck 与本章填空30相同模型但原书独立编号；地面水平冲量须可忽略。
+\sourceproblem{计算20}{68}{74}
+\problemtext 竖直下垂匀质杆质量 $M$、长 $l$，质量 $m$ 的入射质点以水平速率 $v_0$ 嵌入距轴 $a=2l/3$ 的位置，求碰后角速度及最大摆角。
+\workings $J=Ml^2/3+ma^2$，$\omega_1=mav_0/J$。令 $C=g(Ml/2+ma)$，后续机械能守恒给
+\[
+\cos\theta_{\max}=1-\frac{m^2a^2v_0^2}{2JC}.
+\]
+若右边在 $(-1,1]$，取 $\theta_{\max}=\arccos$ 上式；等于 $-1$ 时渐近至倒立点，若小于 $-1$ 则能量足够越过顶点，不存在首次回摆最大角。
+\crosscheck 碰撞与摆动分开计算；不得对超阈值情形给无实数意义的反余弦。
+\sourceproblem{计算21}{69}{75}
+\problemtext 轻绳跨半径 $R$、惯量 $J$ 的滑轮，一端接劲度 $k$ 的弹簧，另一端挂质量 $m$；弹簧原长时静止释放，求下落 $h$ 时速度。
+\workings 绳不滑且不可伸长，弹簧伸长 $h$，滑轮角速度 $v/R$。能量守恒，
+\[
+mgh=\tfrac12kh^2+\tfrac12mv^2+\tfrac12Jv^2/R^2,\quad
+v=\sqrt{\frac{2mgh-kh^2}{m+J/R^2}}.
+\]
+\crosscheck 首次下降可达域 $0\le h\le2mg/k$（$k>0$）；端点速率为零。
+\sourceproblem{计算22}{69}{75}
+\problemtext 质量0.50 kg、长0.40 m匀质杆由水平静止释放，求下摆30度时角速度与角加速度、竖直时角速度。
+\workings 下摆角 $\phi$ 时 $\omega^2=3g\sin\phi/l$，$\alpha=3g\cos\phi/(2l)$。取 $g=9.8$，30度时 $\omega\approx6.06$ rad/s、$\alpha\approx31.83$ rad/s$^2$；竖直时 $\omega\approx8.57$ rad/s。
+\crosscheck 最低点角加速度为零；质量约去。
+\sourceproblem{计算23}{69}{75}
+\problemtext 匀质杆长 $L$ 初竖直下垂，端点获得切向初速 $v_0$，求完成整周转动的速度阈值。
+\workings $\omega_0=v_0/L$，初转动动能 $Mv_0^2/6$；至倒立点质心升高 $L$，阈值为 $v_c=\sqrt{6gL}$。严格有限时间完成一周需 $v_0>v_c$。
+\crosscheck 等号时到达顶点所需时间发散；阈值是可行速度的下确界而非实际可取最小值。
+\sourceproblem{计算24}{69}{75}
+\problemtext 质量 $M$、长 $3L$ 的匀质细杆端轴固定，三个质量 $m$ 的质点距轴依次为 $L,2L,3L$，求总惯量和转动动能。
+\workings $J=M(3L)^2/3+m(L^2+4L^2+9L^2)=(3M+14m)L^2$，$K=J\omega^2/2$。
+\crosscheck 采用图示三个质点位置，不把质点质量并入均匀杆分布。
+\sourceproblem{计算25}{69}{75}
+\problemtext 光滑水平面上长 $2l$、质量 $M$ 的杆绕固定中心转动，质量 $m$ 小球垂直撞击杆端发生弹性碰撞，求球末速度和杆角速度。
+\workings 取入射方向为正，$J=Ml^2/3$。角动量守恒 $mv_0l=mvl+J\omega$，弹性恢复关系 $l\omega-v=v_0$，联立得
+\[
+v=\frac{3m-M}{3m+M}v_0,\qquad
+\omega=\frac{6m}{3m+M}\frac{v_0}{l}.
+\]
+\crosscheck 回代动能守恒；只有 $M>3m$ 时球真正反弹，等号时静止，$M<3m$ 时仍向前。若中心不固定而可平动，需另建模型。
