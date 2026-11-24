@@ -1270,6 +1270,17 @@ def fourteenth_round_regressions():
     assert [4000/m for m in range(6,11)]==[
         4000/6,4000/7,500,4000/9,400]
     assert all(400<=4000/m<=760 for m in range(6,11))
+    # QA 8/8: exact two-point-source geometry changes the lower spectral endpoint.
+    d,x,D=.0002,.02,1.
+    delta=2*d*x/(math.hypot(D,x+d/2)+math.hypot(D,x-d/2))*1e9
+    near(delta,3999.200219940014)
+    assert [m for m in range(1,12) if 400<=delta/m<=760]==[6,7,8,9]
+    assert delta/10<400
+    # Quarter-wave reflectance is generally nonzero.
+    n1,n2,n3=1.,1.38,1.60
+    refl=lambda n:((n1*n3-n*n)/(n1*n3+n*n))**2
+    assert refl(n2)>0
+    near(refl(math.sqrt(n1*n3)),0)
     near(546.1e-9*2/(12e-3/10)*1e3,.9101666666666669)
     near(20*(12/10),24)
     near(2100/(2*1.35),777.7777777777777)
@@ -1288,7 +1299,19 @@ def fourteenth_round_regressions():
          2.574533975623565)
     near(.5*360*nm/1e-5*1e3,18.)
     near(2*600/(math.sin(pi/6)),2400)
-    assert [k for k in range(-3,4) if k==0 or k%3!=0]==[-2,-1,0,1,2]
+    # Both slit-width candidates (a/d=1/3 and 2/3) have the same missing orders.
+    for j in (1,2):
+        assert [k for k in range(-3,4) if k==0 or (k*j)%3]!=[]
+        assert [k for k in range(-3,4) if k==0 or (k*j)%3]==[-2,-1,0,1,2]
+    # 10.2.4: propagation and envelope restrictions must both hold.
+    assert [k for k in range(-2,3) if abs(k)*2<3]==[-1,0,1]
+    # N equally spaced polarizer axes: two plates give 1/4, more improve throughput.
+    near(math.cos(pi/4)**4,.25)
+    assert math.cos(pi/6)**6>.25
+    # 10.3.1: planar screen mapping, distinct from paraxial f*sin(theta).
+    spread=lambda a:500*(math.tan(math.asin(a*760e-9))-math.tan(math.asin(a*400e-9)))
+    near(spread(1/1e-5),18.09420248530933)
+    near(spread(4.493409457909064/pi/1e-4),2.574808300535389,1e-6)
     near(deg(math.acos(math.sqrt(4/5))),26.565051177077994)
     near(deg(math.atan(1.5/1.33)),48.43766499236521)
     assert deg(pi/2-math.atan(1.5/1.33))<deg(math.asin(1/1.5))
@@ -1302,6 +1325,13 @@ def fourteenth_round_regressions():
     near((6.63e-34)**2/(2*1.67e-27*(.2e-9)**2),
          3.2901871257485018e-21)
     near(6.63e-34/(.05e-9),1.326e-23)
+    # QA 8/8: use relative tolerances for microscopic momentum and mass.
+    assert math.isclose(h/(4*pi*.05e-9),1.0545718176461565e-24,rel_tol=1e-8,abs_tol=0)
+    assert math.isclose(h/(2*pi*.05e-9),2.109143635292313e-24,rel_tol=1e-8,abs_tol=0)
+    near(2.5/(4*pi),.1989436788648692)
+    # Electron electric work changes sign with the applied potential difference.
+    for dv in (-.5,.5):
+        near((-e)*(-dv)/e,dv)
     assert 2+2+2==6
     assert 2+2+6+2+2==14
     near(hc_nm/(hc_nm/410-1),612.5686855736943)
