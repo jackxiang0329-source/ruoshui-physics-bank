@@ -1,4 +1,5 @@
 % Consolidated guide-selftest06 from 97b62cc61307eba158a4498b55de3a5fdef3ff43; source fragments preserved.
+% 2026-11-24 八批严格二校第7批：历史片段哈希对应修订前版本。
 
 % === BEGIN guide-selftest06-choices.tex blob 8057eb62f9cfe48180174d764fbe96e6cfbbf5c0 ===
 % 第17批（自测题6）：选择6.1.1—6.1.10；原书印刷163—164/PDF171—172。
@@ -36,7 +37,7 @@
 \problemtext 质子在匀强磁场 $B=0.3$T 中垂直于磁场作半径 $R=10$cm 的圆周运动，估计动能数量级（质量 $1.67\times10^{-27}$kg，电荷 $1.6\times10^{-19}$C）。
 \workings 洛伦兹力充当向心力：$qvB=mv^2/R$，故 $p=mv=qBR$、$K=q^2B^2R^2/(2m)$。代入
 \[\boxed{K\approx6.90\times10^{-15}\ {\rm J}\approx0.0431\ {\rm MeV}}.\]
-在题给 $0.01$、$0.1$、$1$、$10$、$100$MeV 中数量级最接近 \textbf{B}（$0.1$MeV）。
+按十进数量级（对数距离最小，$0.0431>\sqrt{0.01\times0.1}$ MeV）选\textbf{B}（$0.1$ MeV）；若题意为线性绝对误差最小，则$0.01$ MeV更近，原选项措辞须核。
 \crosscheck 题问的是数量级，而不是精确数值；$v=qBR/m\simeq2.87\times10^6$ m/s，使用非相对论动能成立。
 
 \sourcetest{6.1.6}{164}{172}
@@ -44,11 +45,11 @@
 \workings 任意平面线圈磁矩 $\bm m=NI S\,\hat{\bm n}$，其中 $S=\sqrt3 a^2/4$。磁力矩 $\bm\tau=\bm m\times\bm B$，因 $\hat{\bm n}\parallel\bm B$，
 \[\boxed{|\bm\tau|=NISB\sin0=0}.\]
 选 \textbf{D}。
-\crosscheck 有磁通和磁矩不代表有磁力矩；只有磁矩与磁场夹角非零才有转矩。
+\crosscheck 有磁通和磁矩不代表有磁力矩；仅当磁矩与磁场既不平行也不反平行时才有非零转矩。
 
 \sourcetest{6.1.7}{164}{172}
 \problemtext 无限长薄平电流带宽度 $a$，总电流 $I$ 沿带长方向均匀分布，带外离近边缘 $b$ 的点 $P$ 磁场多大？
-\workings 把电流带分解成宽 $dx$ 的无限长线电流 $dI=(I/a)\,dx$。同侧场方向一致，取从近边界量起的坐标 $x\in[0,a]$：
+\workings 设$P$与薄带共面且在宽度方向的外侧，$b>0$。把电流带分解成宽 $dx$ 的无限长线电流 $dI=(I/a)\,dx$。同侧场方向一致，取从近边界量起的坐标 $x\in[0,a]$：
 \[B(P)=\frac{\mu_0 I}{2\pi a}\int_0^a\frac{dx}{b+x}
 =\boxed{\frac{\mu_0 I}{2\pi a}\ln\frac{a+b}{b}}.\]
 选 \textbf{B}。
@@ -56,7 +57,7 @@
 
 \sourcetest{6.1.8}{164}{172}
 \problemtext 原一匝圆线圈半径 $R$、电流 $I$，将原导线在总长度不变下绕成两匝同向圆线圈，并通以同样的 $I$；求中心磁场与磁矩变化倍数。
-\workings 原长 $2\pi R$，新两匝各半径 $R'=R/2$。中心磁场 $B'=\mu_0NI/(2R')=\mu_0(2I)/R=4B$；磁矩大小 $m'=NI\pi R'^2=2I\pi R^2/4=m/2$。故
+\workings 忽略引线长度、匝间距及线径，新两匝同心且近似共面。原长 $2\pi R$，新两匝各半径 $R'=R/2$。中心磁场 $B'=\mu_0NI/(2R')=\mu_0(2I)/R=4B$；磁矩大小 $m'=NI\pi R'^2=2I\pi R^2/4=m/2$。故
 \[\boxed{\frac{B'}B=4,\qquad \frac{m'}m=\frac12}.\]
 选 \textbf{B}。
 \crosscheck 中心磁场对匝数和半径均敏感；磁矩与匝数乘面积成正比。
@@ -70,8 +71,8 @@
 
 \sourcetest{6.1.10}{164}{172}
 \problemtext 导体杆在垂直纸面向里的匀强磁场中沿轨道向右匀加速运动，外接铁芯绕组和电容器；判断达到稳定运动阶段后电容器 $M$ 极板的电荷符号和随时间变化。
-\workings 磁通增加时感应电流方向由楞次定律确定：回路倾向产生纸面向外的磁场。若电容器经铁芯耦合，其极板电势要继续使用绕组的实际接线次序和感应电动势的符号判定。只根据杆运动方向可确认其来源电动势 $|\mathcal E|=B\ell v$ 随 $v$ 增大，却\emph{不能}不看绕组极性而确定 $M$ 正负。这里保留 \textbf{源图接线二校}，不擅定 A/B/C/D。
-\crosscheck 必须逐匝确认绕组绕向；电容器是否持续充电还取决于铁芯磁导率及电路稳态近似，不能把理想磁耦合直接等同导线相接。
+\workings 磁通增加时感应电流方向由楞次定律确定：回路倾向产生纸面向外的磁场。若电容器经铁芯耦合，其极板电势要继续使用绕组的实际接线次序和感应电动势的符号判定。只根据杆运动方向可确认其来源电动势 $|\mathcal E|=B\ell v$ 随 $v$ 增大，却\emph{不能}不看绕组极性而确定 $M$ 正负。若原边是线性$R_p$、$L_p$回路、杆匀加速$a$，则$L_p\dot I_p+R_p I_p=B\ell(v_0+at)$（选一致正向），暂态消失后$\dot I_p\to B\ell a/R_p$（$R_p>0$）。次边开路感应电压$-M_{sp}\dot I_p$趋常量，而非随原边电动势持续线性增大。若次边电容经有限电阻连接且暂态衰减，则其最终电荷趋$C$乘该有向电压；若存在理想无耗振荡或铁芯饱和，则另行建模。这里保留 \textbf{源图接线二校}，不擅定 A/B/C/D。
+\crosscheck 必须逐匝确认绕组绕向；电容器的极性和是否趋恒定取决于绕向、实际电路拓扑、阻抗和磁芯线性条件，不能把理想磁耦合直接等同导线相接。
 % === END guide-selftest06-choices.tex ===
 
 % === BEGIN guide-selftest06-blanks.tex blob 49ddb4f9583035f7d75a085616e6579ff7ad8cfd ===
@@ -97,7 +98,7 @@
 
 \sourcetest{6.2.3}{165}{173}
 \problemtext 负电荷由无穷远靠近一块不带净电荷、与地绝缘的导体，问导体内部电场以及导体电势怎样变化。
-\workings 静电平衡时导体内部 $\boxed{\bm E=0}$，故场强保持零。外部负电荷的靠近，使原本零参考电势的孤立中性导体整体感应到较低电势，故 \textbf{电势减小}。
+\workings 在没有其他外部源、孤立有限导体、以无穷远为零的条件下，静电平衡时导体材料内部 $\boxed{\bm E=0}$，故场强保持零。外部负电荷的靠近，使孤立中性导体整体感应到较低电势（由静电互易定理$CU=q_{\rm ext}u(\bm r)$，其中$u$为同一导体置于单位电势时的无源外部调和电势，$C>0$、$u>0$，故$U<0$；沿任意复杂路径未必单调，只有相对于远处初态必降低），故 \textbf{电势减小}。
 \crosscheck 导体即使净电荷保持零，也会发生表面电荷重新分布；“孤立”与“接地”边界条件不同。
 
 \sourcetest{6.2.4}{165}{173}
@@ -117,9 +118,9 @@
 
 \sourcetest{6.2.6}{165}{173}
 \problemtext 条形磁铁插入与冲击电流计串联的金属环，经过仪器的总感应电荷量 $q=2.0\times10^{-5}$C，回路总电阻25Ω，求磁通变化量。
-\workings 法拉第定律 $\mathcal E=-d\Phi/dt$，$I=\mathcal E/R$。积分得 $q=\int I\,dt=-\Delta\Phi/R$，所以
+\workings 对单匝恒定电阻回路，若自感不可忽略，写$RI+L\dot I=-\dot\Phi_{\rm ext}$。在初末电流均为零（或相等）的完整暂态测量中，自感项积分为零；忽略自感时直接有$I=-\dot\Phi_{\rm ext}/R$。积分得 $q=\int I\,dt=-\Delta\Phi/R$，所以
 \[\boxed{|\Delta\Phi|=Rq=25(2.0\times10^{-5})=5.0\times10^{-4}\ {\rm Wb}}.\]
-\crosscheck 电荷量通常给的是累计流过电量的正值，因此结果报告磁通变化量的\emph{大小}；有向符号由线圈取向定义。
+\crosscheck 这里$q$须为带符号积分的绝对值，若电流中途反向，不等于无符号累计电量，因此结果报告磁通变化量的\emph{大小}；有向符号由线圈取向定义。
 
 \sourcetest{6.2.7}{165}{173}
 \problemtext 一根向上通电的无限长直导线右侧，水平金属棒 $AB$ 与导线共面，且沿导线方向向上以速度 $v$ 移动。比较两端感应电势，并讨论电流反向或棒改为平行导线的情况。
@@ -134,9 +135,9 @@
 
 \sourcetest{6.2.9}{165}{173}
 \problemtext 给定麦克斯韦积分式①电场高斯定律、②法拉第定律、③磁场高斯定律、④安培—麦克斯韦定律；判断“变化的磁场伴随电场”“磁感线没有起止”“电荷伴随电场”各对应哪式。
-\workings 由 $\oint\bm E\cdot d\bm l=-d\Phi_B/dt$ 得变化磁场伴随涡旋电场，选 \textbf{②}；$\oint\bm B\cdot d\bm S=0$ 表明磁感线无始无终，选 \textbf{③}；$\oint\bm D\cdot d\bm S=Q_{\rm enclosed}$ 表明电荷是电场散度源，选 \textbf{①}。
+\workings 由 $\oint\bm E\cdot d\bm l=-d\Phi_B/dt$ 得变化磁场伴随涡旋电场，选 \textbf{②}；$\oint\bm B\cdot d\bm S=0$ 表明磁感线无始无终，选 \textbf{③}；$\oint\bm D\cdot d\bm S=Q_{\rm free,enclosed}$ 表明自由电荷是电位移散度源；真空中等价于电场高斯定律，选 \textbf{①}。
 \[\boxed{(1)\ \text{②};\quad(2)\ \text{③};\quad(3)\ \text{①}}\]
-\crosscheck 方程①表示有电荷必有电场结构，并不意味电荷附近\emph{每一点}的电场都非零；安培—麦克斯韦定律④反映电流和变化电场产生磁场。
+\crosscheck 方程①中的$\bm D$版本仅计自由电荷，$\bm E$版本计总电荷；有电荷必有电场结构，并不意味电荷附近\emph{每一点}的电场都非零；安培—麦克斯韦定律④反映电流和变化电场产生磁场。
 % === END guide-selftest06-blanks.tex ===
 
 % === BEGIN guide-selftest06-solutions.tex blob dff66fb86cacaa730db47471f3d97ee7103ef012 ===
@@ -166,7 +167,7 @@ U_O=\frac{1}{4\pi\varepsilon_0}
 代入数据
 \[\boxed{\sigma=\frac{\varepsilon_0(300)}{0.30}
 =8.85\times10^{-9}\ {\rm C/m^2}}.\]
-外球面若改变 $\Delta Q_2$，球心电势变 $\Delta U=\Delta Q_2/(4\pi\varepsilon_0r_2)$。要求 $\Delta U=-300$V，所以需去掉\emph{有符号的正电荷量}
+若内球面电量固定、外球面电荷变化仍保持球对称（或用球心处距所有外球面电荷相同的性质），外球面改变 $\Delta Q_2$，球心电势变 $\Delta U=\Delta Q_2/(4\pi\varepsilon_0r_2)$。要求 $\Delta U=-300$V，所以需去掉\emph{有符号的正电荷量}
 \[
 \boxed{Q_{\rm removed}=4\pi\varepsilon_0r_2(300)
 \simeq6.67\times10^{-9}\ {\rm C}}.
