@@ -279,3 +279,55 @@ x=R(1+\cos2\theta),\qquad y=R\sin2\theta.
 \]
 求导得 $\bm v=2R\omega(-\sin2\theta,\cos2\theta)$，$\bm a=-4R\omega^2(\cos2\theta,\sin2\theta)$，故 $v=2R|\omega|$、$a=4R\omega^2$。自然坐标法：圆心角以角速率 $2|\omega|$ 改变，速率恒定，$a_\tau=0,a_n=v^2/R=4R\omega^2$。
 \crosscheck 两种方法一致；有限长度单向杆须满足交点位于杆上，经过切线退化位置时两交点重合，延拓需明确约束。
+
+\sourceproblem{应用1}{15}{21}
+\problemtext 理想抛体从斜面底端以速率 $v_0$、相对坡面夹角 $\beta$ 抛出，坡角 $\alpha$。求沿坡射程及速度垂直坡面落下的角度条件。
+\workings 取沿上坡和坡外法向为坐标，$x=v_0\cos\beta\,t-gt^2\sin\alpha/2$，$y=v_0\sin\beta\,t-gt^2\cos\alpha/2$。非零落坡时刻 $t_*=2v_0\sin\beta/(g\cos\alpha)$，代入得
+\[
+x_*=\frac{2v_0^2\sin\beta\cos(\alpha+\beta)}{g\cos^2\alpha}.
+\]
+垂直坡面要求 $\dot x(t_*)=0$，故 $\cos\beta-2\sin\beta\tan\alpha=0$，即 $\tan\beta=1/(2\tan\alpha)$。
+\crosscheck 采用 $0<\alpha<\pi/2$、初速指向坡外、落点在坡面上且忽略空气阻力；条件与初速大小无关。
+\sourceproblem{应用2}{16}{22}
+\problemtext 高180米处水平速度60米每秒，物体自由释放，取 $g=10$，求落地前水平距离、视线倾角、落地时间及3秒时切法向加速度。
+\workings $t_f=\sqrt{2h/g}=6\,\mathrm s$，水平位移360米，视线向下倾角 $\arctan(180/360)\approx26.57^\circ$。3秒时速度为 $(60,-30)$（m/s），重力向下，所以 $a_\tau=10/\sqrt5$，$a_n=20/\sqrt5$（$\mathrm{m/s^2}$）。
+\crosscheck 两加速度分量平方和为100；假设物体释放瞬间与载体同速且无空气阻力。
+\sourceproblem{应用3}{16}{22}
+\problemtext 河宽 $d$，从岸边到中线水流速率与岸距成正比，中心速率 $v_0$；船相对水以恒定横向速度 $u$ 行驶，求前半程轨迹。
+\workings 取 $y$ 为离岸距离，$x$ 为下游位移；$\dot y=u,\dot x=2v_0y/d$，从原点出发得 $y=ut,x=v_0ut^2/d$。消参：
+\[
+x=\frac{v_0}{ud}y^2,\quad 0\le y\le d/2.
+\]
+\crosscheck 中线处下游位移 $v_0d/(4u)$，等于平均流速 $v_0/2$ 乘横渡半程时间。
+\sourceproblem{应用4}{16}{22}
+\problemtext 气球竖直上升速率按常量 $v_0$ 理解，水平分速度 $v_x=by$，求位置函数、漂移与高度关系及距起点距离。
+\workings $y=v_0t$，$\dot x=bv_0t$，故 $x=bv_0t^2/2$，$x=by^2/(2v_0)$；距起点 $D=v_0t\sqrt{1+b^2t^2/4}$（$t\ge0$）。
+\crosscheck 此解明确采用恒定竖直速度；若原题的“速率”指合速度恒为 $v_0$，须改用 $\dot y=\sqrt{v_0^2-b^2y^2}$，其上升分支为 $y=(v_0/b)\sin bt,\ x=(v_0/b)(1-\cos bt)$，$0\le bt\le\pi/2$，$D=2(v_0/b)\sin(bt/2)$。不能混用两种模型。
+\sourceproblem{应用5}{16}{22}
+\problemtext 升降机向上加速度1.22米每平方秒，松脱时速度2.44米每秒，顶底间距2.74米，求落至底面的时间及相对地面的下降距离。
+\workings 车厢系相对向下加速度 $g+1.22$，初相对速度为零，$t=\sqrt{2(2.74)/(g+1.22)}\approx0.705\,\mathrm s$。地面系竖直位移 $2.44t-gt^2/2\approx-0.715\,\mathrm m$（$g=9.8$），故末位置较松脱处低约0.715米。
+\crosscheck 若“下降距离”指从最高点开始的实际下落段路程，则应另算 $g(t-2.44/g)^2/2\approx1.02\,\mathrm m$；题目相对固定柱子的位移与总路程须区分。
+\sourceproblem{应用6}{17}{23}
+\problemtext 竖直伞柄以角速率 $\omega$ 转动，边缘半径 $R$、离地高 $h$；证明水滴落点圆半径，并说明旋转洒水原理。
+\workings 水滴脱离瞬间切向速率 $R\omega$，下落时间 $\sqrt{2h/g}$。水平初位矢与水平位移垂直，故
+\[
+r=\sqrt{R^2+(R\omega)^2(2h/g)}=R\sqrt{1+2h\omega^2/g}.
+\]
+旋转喷水装置可利用切向速度和旋转方位实现环状覆盖；改变角速率可改变覆盖半径。
+\crosscheck $\omega=0$ 时落点半径为 $R$；未计水滴径向初速度、风阻与喷射高度变化。
+\sourceproblem{应用7}{17}{23}
+\problemtext 无风时列车速率20.0米每秒，车内观察雨滴方向与竖直夹75度，求雨滴真实下落速率。
+\workings 地面系雨滴竖直向下，列车系相对速度水平分量大小20，竖直分量为 $v_2$。$\tan75^\circ=20/v_2$，所以 $v_2=20(2-\sqrt3)\approx5.36\,\mathrm{m/s}$。
+\crosscheck 相对雨滴方向向列车后方倾斜；列车匀速不改变雨滴竖直分量。
+\sourceproblem{应用8}{17}{23}
+\problemtext 原图车辆右行，雨滴方向向左下偏离竖直 $\theta'$，后方遮蔽物水平伸出长度 $l$、待保护高度 $h$；求临界车速。
+\workings 以车行方向为正，雨相对车的水平向后速率 $v_1+v_2\sin\theta'$，竖直向下速率 $v_2\cos\theta'$。按图示临界遮挡线斜率，落下高度 $h$ 时向后移动 $l$，故
+\[
+\frac{v_1+v_2\sin\theta'}{v_2\cos\theta'}=\frac lh,\qquad
+v_{1,\rm crit}=v_2\left(\frac lh\cos\theta'-\sin\theta'\right).
+\]
+\crosscheck 结果采用原图雨滴水平向后、车尾遮挡线的定向解释；若图中雨滴水平分量反向，应改变相应符号。若临界式为负，非负车速域需另按实际遮挡几何判定；图示待独立二校。
+\sourceproblem{应用9}{17}{23}
+\problemtext 船相对水速率1.10米每秒，河宽1000米，流速0.55米每秒；求直达正对岸和最短时间渡河两种方案。
+\workings 直达正对岸需船头向上游偏离垂岸方向 $\arcsin(0.55/1.10)=30^\circ$，横向速度 $\sqrt{1.10^2-0.55^2}=0.55\sqrt3$，时间 $1000/(0.55\sqrt3)\approx1050\,\mathrm s$。最短时间需船头垂直河岸，时间 $1000/1.10\approx909\,\mathrm s$，到达对岸时下游偏移500米。
+\crosscheck 前者合速度沿垂岸方向，后者最大化横向分速度；两种目标不同。
