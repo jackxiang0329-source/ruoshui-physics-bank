@@ -1,4 +1,5 @@
 % Consolidated guide-ch02 from 9a1384ddf1afcd855b09256c9c6f1c90b5023140; source fragments preserved.
+% 2026-11-24 八批严格二校第5批：历史片段哈希对应修改前版本。
 
 % === BEGIN guide-ch02-examples.tex blob 2973980ccbaae781c216e89fca79710e190045d5 ===
 % 《大学物理学学习指导（第5版）》第2章：例2.1。
@@ -10,7 +11,7 @@
 忽略绳与滑轮质量和摩擦，绳不可伸长，求三物块加速度大小。
 \workings
 设动滑轮（及$C$）向下加速度$a$；$A,B$沿桌面向滑轮的加速度大小分别为$a_A,a_B$。
-绳长约束使
+在原图绳段方向及动滑轮与$C$同速约束成立时，绳长约束使
 \[
 a_A+a_B=2a.
 \]
@@ -118,7 +119,7 @@ $\bm v_2=(v_1+v'\cos\alpha)\bm i+v'\sin\alpha\,\bm j$。
 \qquad
 v_1=v_0-\frac{m}{M+m}v'\cos\alpha.
 \]
-火药对炮车和炮弹整体做的净功等于总动能增加，
+忽略发射期间重力势能变化、轨道摩擦和其他外力功，并将火药气体对炮车及弹丸的净功作为所求功，才有净功等于总动能增加，
 \[
 W=\frac12Mv_1^2+\frac12m\left[
  (v_1+v'\cos\alpha)^2+v'^2\sin^2\alpha\right]
@@ -136,7 +137,7 @@ W=\frac12Mv_1^2+\frac12m\left[
 \workings
 设桌面上链长为$x$，从$x_0=L/5$逐步拉至$x=L$。
 链的线密度$\lambda=m/L$，桌面摩擦大小$\mu\lambda gx$；下垂链总重$\lambda g(L-x)$。
-准静态下所需外力
+假定桌缘光滑、链始终绷紧且以极小正速度滑动，忽略启停静摩擦及转弯处额外损耗，准静态下所需外力
 \[
 F(x)=\lambda g[(L-x)+\mu x].
 \]
@@ -168,5 +169,5 @@ E=\frac12mu^2+\frac12M\left(\frac{mu}{M}\right)^2
 \frac12mu^2=\frac{M}{M+m}E.
 \]
 \crosscheck 随$M$增大，人的速度和获得的动能占比均增大，故从大船上跳更易到岸；
-在$M\to\infty$极限，人获得全部$E$。此结论依赖两次\emph{实际注入总动能相同}的题设。
+在$M\to\infty$极限，人获得全部$E$。此结论依赖两次\emph{实际注入水平总动能相同}、跳跃落差与距离等其余条件相同的题设。仅给总能量而垂直分量不同，不能直接断言更易上岸。
 % === END guide-ch02-examples.tex ===
