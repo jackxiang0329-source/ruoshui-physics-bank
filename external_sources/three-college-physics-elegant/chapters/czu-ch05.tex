@@ -164,3 +164,114 @@ E=\frac{2k_e\lambda\sin\theta}{R}=\frac{k_eq\sin\theta}{R^2(\pi-\theta)}
 \problemtext 半径 $R$、面电荷密度 $\sigma$ 的无限长圆柱面，求内外场矢量（$\bm r$ 为横截面径向矢量）。
 \workings 柱对称高斯定理给 $\bm E=0$（$r<R$），$\bm E=\sigma R\bm r/(\varepsilon_0r^2)$（$r>R$）。
 \crosscheck 线密度 $2\pi R\sigma$，外区场强按 $1/r$ 衰减，界面场跳跃正确。
+
+\sourceproblem{填空11}{86}{92}
+\problemtext 两无限平行带电面左为 $\sigma>0$、右为 $-2\sigma$，求左侧I及中间II区域场强大小。
+\workings 取向右为正，单面两侧场强大小 $|\sigma_i|/(2\varepsilon_0)$。叠加得 $E_{\rm I}=\sigma/(2\varepsilon_0)$ 向右；$E_{\rm II}=3\sigma/(2\varepsilon_0)$ 向右。补充右侧III的场为 $\sigma/(2\varepsilon_0)$ 向左。
+\crosscheck 两界面的有向场跳跃依次为 $\sigma/\varepsilon_0,-2\sigma/\varepsilon_0$。
+\sourceproblem{填空12}{87}{93}
+\problemtext 均匀带总电荷 $q$ 的球形膜膨胀，球面扫过距中心 $r$ 的固定点，比较扫过前后场强。
+\workings 点在球外时 $E=|q|/(4\pi\varepsilon_0r^2)$，进入球内后 $E=0$。
+\crosscheck 理想球面电荷处有场跃变；取缓慢膨胀及静电近似，不讨论动态辐射。
+\sourceproblem{填空13}{87}{93}
+\problemtext 同一半径 $R$ 圆周上左、上、右分别置电荷 $q_1,q_2,q_3$，求下端b点电势，取无穷远零势。
+\workings b至左右两电荷距离均 $\sqrt2R$，至上方电荷距离 $2R$，故
+\[
+V_b=k_e\left(\frac{q_1+q_3}{\sqrt2R}+\frac{q_2}{2R}\right),\qquad k_e=\frac1{4\pi\varepsilon_0}.
+\]
+\crosscheck 电势是代数和，电荷可带任意符号；原图四点位于互相垂直的两直径端。
+\sourceproblem{填空14}{87}{93}
+\problemtext 半径 $R$ 的均匀带电半球面总电荷 $q$，求球心电势。
+\workings 每一面元距球心恒为 $R$，$V_O=\int k_e\,\mathrm dq/R=k_eq/R$。
+\crosscheck 半球面积不另乘二分之一，因为已知的是半球本身总电荷。
+\sourceproblem{填空15}{87}{93}
+\problemtext 半径 $R$ 的均匀带电半圆环总电荷 $Q$，求圆心电势。
+\workings 由等距积分 $V=k_eQ/R$（无穷远零势）。
+\crosscheck 半圆环中心电场一般不为零，不能由电势积分推出零场。
+\sourceproblem{填空16}{87}{93}
+\problemtext 均匀带电细圆环线密度 $\lambda$，求圆心电场与电势。
+\workings 对径电荷元场强抵消，$\bm E_O=0$。若半径为 $R$，总电荷 $2\pi R\lambda$，故 $V_O=k_e2\pi\lambda=\lambda/(2\varepsilon_0)$。
+\crosscheck 固定线密度时中心电势与半径无关；若固定总电荷则随半径改变。
+\sourceproblem{填空17}{87}{93}
+\problemtext 将电子电荷 $-e$ 均匀分布于半径 $1.4\times10^{-15}$ m 的球面，求表面电势。
+\workings 按原题 $k_e=9\times10^9,\ e=1.6\times10^{-19}$ C，$V=-k_ee/r_e\approx-1.03\times10^6$ V。
+\crosscheck 按原题数值计算；该半径并非通常定义的经典电子半径约 $2.82\times10^{-15}$ m，也不是电子实际尺寸。
+\sourceproblem{填空18}{87}{93}
+\problemtext 半径 $R$、总电荷 $Q$ 的均匀球面内距中心 $r<R$ 的点，求场强与电势。
+\workings 球对称高斯定理得 $\bm E=0$；电势与球面连续且内部常量，$V=k_eQ/R$。
+\crosscheck 无穷远为零势，不得将内部电势误设为零。
+\sourceproblem{填空19}{87}{93}
+\problemtext 半径 $R$、面密度 $\sigma$ 的球面挖去微小面积 $\mathrm dS$，求球心场强及电势。
+\workings 设缺口方向单位矢量为 $\bm n$。由完整球面减去缺口电荷贡献，
+\[
+\bm E_O\simeq k_e\frac{\sigma\,\mathrm dS}{R^2}\bm n,\quad
+V_O=\frac{k_e\sigma}{R}(4\pi R^2-\mathrm dS).
+\]
+\crosscheck 电势式对任意缺口面积均精确（剩余密度固定）；场矢量式是小面积近似，精确式为 $k_e\sigma\int_{\rm hole}\bm n\,\mathrm dS/R^2$。
+\sourceproblem{填空20}{87}{93}
+\problemtext 说明静电力做功的路径性质及力的类别。
+\workings 固定静电场内 $W_{A\to B}=q(V_A-V_B)$，由电荷及始末位置决定，与路径无关，所以静电力为保守力。
+\crosscheck 时变感生电场一般不满足该结论；闭合静电路径功为零。
+\sourceproblem{填空21}{87}{93}
+\problemtext 质子沿四分之一圆弧A到B，静电力做功 $8.0\times10^{-15}$ J，求沿另一圆弧返回时的功与B电势（A为零势）。
+\workings 返回功为 $-8.0\times10^{-15}$ J。由 $W_{AB}=e(V_A-V_B)$ 得 $V_B=-8.0\times10^{-15}/(1.6\times10^{-19})=-5.0\times10^4$ V。
+\crosscheck 圆弧长度不同不影响保守力功；正电荷获得动能时势能减少。
+\sourceproblem{填空22}{87}{93}
+\problemtext 中心点电荷 $+Q$ 的场内，试验电荷 $q$ 沿半径 $R$ 圆弧从a到d，再到无穷远，分别求电场力功（续PDF94）。
+\workings 第一段两点等势，$W_{ad}=0$；第二段 $W_{d\infty}=q(k_eQ/R-0)=k_eqQ/R$。
+\crosscheck 第二式为有向功，$q<0$ 时为负；无穷远电势取零。
+\sourceproblem{填空23}{88}{94}
+\problemtext 根据同心圆等势线（由内到外为负30、负25、负20、负15 V）画电场线。
+\workings 电场线正交等势线并指向电势下降方向，故为径向向内的箭头。下图为独立示意。
+\begin{center}
+\begin{tikzpicture}[>=Stealth,scale=.8]
+\foreach \r in {0.6,1.15,1.7,2.25}{\draw[gray] (0,0) circle (\r);}
+\foreach \a in {0,45,...,315}{\draw[->,thick,blue] (\a:2.65)--(\a:.28);}
+\node at (3.4,2) {$-15\,\mathrm V$};
+\node at (3.4,1.4) {$-20\,\mathrm V$};
+\node at (3.4,.8) {$-25\,\mathrm V$};
+\node at (3.4,.2) {$-30\,\mathrm V$};
+\draw[gray] (45:2.25)--(2.7,2);
+\draw[gray] (35:1.7)--(2.7,1.4);
+\draw[gray] (25:1.15)--(2.7,.8);
+\draw[gray] (10:.6)--(2.7,.2);
+\end{tikzpicture}
+\end{center}
+\crosscheck 图仅表达方向与正交性，有限条等势线不足以唯一确定各处场强数值。
+\sourceproblem{填空24}{88}{94}
+\problemtext 质量 $m$、电荷 $q$ 的小球仅受静电力，从电势 $U$ 的a到零势b，b处速率 $v_b$，求初速率。
+\workings $\tfrac12m(v_b^2-v_a^2)=qU$，故 $v_a=\sqrt{v_b^2-2qU/m}$。
+\crosscheck 根号内须非负；有其他力做功时须加入其功。
+\sourceproblem{填空25}{88}{94}
+\problemtext 单位正电荷从等量异号点电荷连线中点移至无穷远，求静电力功。
+\workings 中点到两源等距，$V_O=0$，无穷远亦零势，故 $W=0$。
+\crosscheck 中点场强通常非零；任意路径的净功仍为零。
+\sourceproblem{填空26}{88}{94}
+\problemtext 质子与阿尔法粒子在相同电场中的加速度大小比。
+\workings $a_p=eE/m_p,\ a_\alpha=2eE/m_\alpha$，故 $a_p:a_\alpha=m_\alpha:(2m_p)\simeq2:1$。
+\crosscheck 使用 $m_\alpha\simeq4m_p$ 是教材近似；实际核质量略有差异。
+\sourceproblem{填空27}{88}{94}
+\problemtext 质量 $m$、电荷 $q$ 的粒子仅受电场力由电势 $U_A$ 的A到 $U_B$ 的B，末速率 $v_B$，求初速率。
+\workings 动能定理给 $v_A=\sqrt{v_B^2-2q(U_A-U_B)/m}$。
+\crosscheck 根号内非负为必要条件；轨道是否可达还需具体场分布及初速度方向。
+\sourceproblem{填空28}{88}{94}
+\problemtext 质量 $m$、带 $-Ne$ 电荷的油滴在均匀电场区域匀速下落，求所需电场方向和大小。
+\workings 忽略空气阻力与浮力时，电力必须竖直向上平衡重力，故电场竖直向下，$E=mg/(Ne)$。
+\crosscheck 若计空气阻力及浮力，则平衡式应改为 $NeE=mg-F_{\rm drag}-F_{\rm buoy}$，方向也取决于右端符号；原题未给这些量。
+\sourceproblem{填空29}{88}{94}
+\problemtext 电势 $U=6x-6x^2y-7y^2$（SI），求 $(2,3,0)$ 处场强。
+\workings $\bm E=-\nabla U=(12xy-6)\bm i+(6x^2+14y)\bm j$，故 $\bm E=66\bm i+66\bm j$（V/m）。
+\crosscheck $E_z=0$，两个非零分量均为66；若问大小则为 $66\sqrt2$ V/m。
+\sourceproblem{填空30}{88}{94}
+\problemtext 一维电势 $U=A/(a+x)$，求 $x=b$ 的场强。
+\workings $\bm E=-\partial_xU\,\bm i=A/(a+b)^2\,\bm i$，要求 $a+b\ne0$。
+\crosscheck 负梯度符号已计入；若 $A<0$ 场指向负x。
+\sourceproblem{计算1}{88}{94}
+\problemtext 按经典氢原子圆轨道模型，半径 $5.29\times10^{-11}$ m、质子质量 $1.67\times10^{-27}$ kg、电子质量 $9.11\times10^{-31}$ kg，求电子库仑力、与引力之比及速度。
+\workings 取 $e=1.6\times10^{-19}$ C，$k_e=9\times10^9$，$G=6.67\times10^{-11}$，得到
+\[
+F_C=\frac{k_ee^2}{r^2}\approx8.23\times10^{-8}\,\mathrm N,\qquad
+\frac{F_C}{F_g}=\frac{k_ee^2}{GMm}\approx2.27\times10^{39}.
+\]
+库仑力指向质子。在固定核近似下 $mv^2/r=F_C$，故 $v=\sqrt{k_ee^2/(mr)}\approx2.19\times10^6$ m/s。
+\crosscheck 引力比库仑力小约39个数量级；若计质子运动，应使用约化质量求相对速度，再换算电子质心系速度。此为教材经典模型，不代表真实量子轨道。
