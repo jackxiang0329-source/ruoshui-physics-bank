@@ -240,3 +240,132 @@ u RDelta T/2$。
 \problemtext 先定容升温倍增，再等压体积倍增，求自由程倍数。
 \workings 末态体积为初态2倍，故 $\ell/\ell_0=2$。
 \crosscheck 末态温度为初态4倍，但固定碰撞截面的自由程仅由数密度决定。
+
+\sourceproblem{计算1}{225}{231}
+\problemtext 5 L容器内含 $10^{15}$ 个氧分子、$4\times10^{15}$ 个氮分子及 $3.3\times10^{-7}$ g氩，333 K，求混合压强。
+\workings 取 $M_{\rm Ar}=40$ g/mol、$N_A=6.02\times10^{23}$ 每摩尔，氩原子数 $N_{\rm Ar}=3.3\times10^{-7}N_A/40=4.9665\times10^{15}$。由各组分分压之和，
+\[
+p=\frac{(N_{\rm O_2}+N_{\rm N_2}+N_{\rm Ar})kT}{V}
+\simeq9.16\times10^{-3}\ \mathrm{Pa}.
+\]
+\crosscheck 体积为 $5\times10^{-3}$ 立方米；氩为单原子气体，压强与内自由度无关。
+\sourceproblem{计算2}{225}{231}
+\problemtext 氧气压强 $1.01\times10^5$ Pa、温度27摄氏度，求数密度、质量密度、平均平动动能和平均能量。
+\workings 取T=300 K、氧气摩尔质量0.032 kg/mol，有
+\[
+n=\frac p{kT}\simeq2.44\times10^{25}\ \mathrm{m}^{-3},\quad
+\rho=\frac{pM}{RT}\simeq1.296\ \mathrm{kg/m^3}.
+\]
+$\overline E_{\rm tr}=3kT/2=6.21\times10^{-21}$ J；按常温刚性双原子模型，$\overline E=5kT/2=1.035\times10^{-20}$ J。
+\crosscheck 平均总热运动能含转动项；原题未指定振动自由度，采用本章常温刚性模型并取热运动能零点。
+\sourceproblem{计算3}{225}{231}
+\problemtext 2.56 kg氧气的总平动动能为 $4\times10^5$ J，求分子平均平动动能及温度。
+\workings 物质的量为80 mol，$N=80(6.02\times10^{23})$。于是
+\[
+\overline E_{\rm tr}=\frac{4\times10^5}{N}\simeq8.31\times10^{-21}\ \mathrm J,\qquad
+T=\frac{2\overline E_{\rm tr}}{3k}\simeq401\ \mathrm K.
+\]
+\crosscheck 亦可用 $E_{\rm tr}=3\nu RT/2$；不能以双原子总内能的5个自由度替换题给平动能。
+\sourceproblem{计算4}{225}{231}
+\problemtext 2立方米容器内有 $10^{25}$ 个氢分子和 $4\times10^{25}$ 个氧分子，400 K，求分子总动能及压强。
+\workings 两气体按刚性双原子模型，$N=5\times10^{25}$，总热运动动能 $E=5NkT/2=6.90\times10^5$ J，压强 $p=NkT/V=1.38\times10^5$ Pa。若仅指质心平动动能，则为 $3NkT/2=4.14\times10^5$ J。
+\crosscheck 原题使用动能总和而非平动动能，主解计转动；压强由平动动能决定，$pV=2E_{\rm tr}/3$。
+\sourceproblem{计算5}{226}{232}
+\problemtext 0.1 kg氧气在10 atm、47摄氏度的刚性容器内，漏气后压强为原来的5/8，温度27摄氏度，求容积和漏出质量。
+\workings 取 $p_1=1.013\times10^6$ Pa，$T_1=320$ K、$T_2=300$ K。初态
+\[
+V=\frac{m_1 RT_1}{Mp_1}\simeq8.20\times10^{-3}\ \mathrm{m^3}.
+\]
+定容但物质的量变化，$m_2/m_1=(p_2/p_1)(T_1/T_2)=2/3$，故漏出质量 $m_1-m_2=0.03333$ kg。
+\crosscheck 压强比不能直接当作剩余质量比，需计降温；无需假设漏气过程可逆。
+\sourceproblem{计算6}{226}{232}
+\problemtext 刚性双原子气体体积 $2\times10^{-3}$ 立方米、内能675 J、分子数 $5.4\times10^{22}$，求压强、温度及平均平动动能。
+\workings $U=5NkT/2=5pV/2$，故 $p=2U/(5V)=1.35\times10^5$ Pa。$T=2U/(5Nk)\simeq362.3$ K；$\overline E_{\rm tr}=3U/(5N)=7.50\times10^{-21}$ J。
+\crosscheck 平动能总和为405 J，占刚性模型内能的3/5。
+\sourceproblem{计算7}{226}{232}
+\problemtext 氢、氧同温，氢分子平均平动动能 $6.21\times10^{-21}$ J，求氧气温度、平均平动动能和方均根速率。
+\workings 由 $T=2\overline E_{\rm tr}/(3k)=300$ K，氧分子平均平动动能相同。取 $m_{\rm O_2}=0.032/N_A$ kg，
+\[
+v_{\rm rms}=\sqrt{2\overline E_{\rm tr}/m_{\rm O_2}}\simeq483.5\ \mathrm{m/s}.
+\]
+\crosscheck 同温同平均平动能不意味着同速率。
+\sourceproblem{计算8}{226}{232}
+\problemtext 1 mol氧气装于1立方米容器，以10 m/s整体运动，突然停止后定向动能的80%转为热运动动能，求升温、增压。
+\workings 假定氧气重新达到平衡、体积固定，按刚性双原子模型，热运动内能增加 $\Delta U=0.8Mv^2/2=1.28$ J。于是 $\Delta T=\Delta U/(5R/2)\simeq0.0616$ K，$\Delta p=R\Delta T/V=0.512$ Pa。
+\crosscheck 这里的热运动动能按平动和转动之和理解；若仅问未发生转动均分的瞬时平动态，则用3个自由度会给不同值，不能当作最终平衡温度。
+\sourceproblem{计算9}{226}{232}
+\problemtext 氦原子方均根速率550 m/s时求温度；另求5800 K时的方均根速率。
+\workings 取氦摩尔质量0.004 kg/mol，$T=Mv_{\rm rms}^2/(3R)\simeq48.54$ K；$v_{\rm rms}'=\sqrt{3R(5800)/M}\simeq6.01\times10^3$ m/s。
+\crosscheck 后者按经典理想氦原子模型；实际太阳气体可部分电离，不能据此断言全部为中性氦。
+\sourceproblem{计算10}{227}{233}
+\problemtext 373 K、压强 $1.01\times10^3$ Pa、密度 $1.24\times10^{-5}$ 克每立方厘米，求方均根速率、摩尔质量及可能气体。
+\workings 密度换为0.0124 kg每立方米，故
+\[
+v_{\rm rms}=\sqrt{3p/\rho}\simeq494.3\ \mathrm{m/s},\quad
+M=\rho RT/p\simeq0.0381\ \mathrm{kg/mol}.
+\]
+与常见氩气摩尔质量约0.040 kg/mol较接近，教材常见气体候选中可推测为氩。
+\crosscheck 题给数据对应约38.1 g/mol，与40 g/mol存在约5\%差异；不将该推测写作唯一鉴定，混合气体或其他组成也可能有同一平均摩尔质量。
+\sourceproblem{计算11}{227}{233}
+\problemtext 平衡混合物中两种单原子气体质量分别 $m_1,m_2$，各自内能均为E，求平均速率比和整体平均速率。
+\workings 同温且 $E=3N_i kT/2$，所以两组分粒子数相同。对每组分 $\bar v_i=\sqrt{8kT/(\pi m_i/N_i)}=\sqrt{16E/(3\pi m_i)}$。于是
+\[
+\frac{\bar v_1}{\bar v_2}=\sqrt{\frac{m_2}{m_1}},\qquad
+\bar v=\frac{\bar v_1+\bar v_2}{2}
+=\sqrt{\frac{4E}{3\pi}}\left(\frac1{\sqrt{m_1}}+\frac1{\sqrt{m_2}}\right).
+\]
+\crosscheck 混合物的平均速率按粒子数加权而非质量加权；不能用整体均方根替代平均速率。
+\sourceproblem{计算12}{227}{233}
+\problemtext 固定气体从300 K升至450 K、体积减半，求压强、平均平动动能及方均根速率的变化。
+\workings $p_2/p_1=(450/300)/(1/2)=3$；$\overline E_{{\rm tr},2}/\overline E_{{\rm tr},1}=3/2$，增量 $3k(150)/2=3.105\times10^{-21}$ J；$v_{{\rm rms},2}/v_{{\rm rms},1}=\sqrt{3/2}\simeq1.2247$。
+\crosscheck 压强增加200\%、平均平动能增加50\%、方均根速率增加约22.47\%；未给分子质量及初压，不能给后二者中速率及压强的绝对增量。
+\sourceproblem{计算13}{227}{233}
+\problemtext 五组粒子数2、4、6、8、2，速率分别10、20、30、40、50 m/s，求平均及方均根速率。
+\workings 总数22，$\sum N_iv_i=700$ m/s，$\sum N_iv_i^2=25000$ 平方米每平方秒，故
+\[
+\bar v=700/22\simeq31.82\ \mathrm{m/s},\qquad
+v_{\rm rms}=\sqrt{25000/22}\simeq33.71\ \mathrm{m/s}.
+\]
+\crosscheck 采用粒子数权重；方均根不小于平均值。
+\sourceproblem{计算14}{227}{233}
+\problemtext 速率分布 $f(v)=Av$ 于 $0\le v\le v_c=100$ m/s，其他速率处为零，求A和方均根速率。
+\workings 归一化给 $\int_0^{v_c}Av\,dv=Av_c^2/2=1$，故 $A=2/v_c^2=2\times10^{-4}$ 平方秒每平方米。于是
+\[
+\overline{v^2}=\int_0^{v_c}Av^3dv=v_c^2/2,\qquad v_{\rm rms}=100/\sqrt2\simeq70.71\ \mathrm{m/s}.
+\]
+\crosscheck 速率定义域非负；N不进入归一化分布的均方根，亦不要求该分布是麦克斯韦分布。
+\sourceproblem{计算15}{228}{234}
+\problemtext 氢分子有效直径 $2\times10^{-10}$ m，标准状况下求单分子一秒内平均碰撞次数。
+\workings 取 $T=273$ K、$p=1.013\times10^5$ Pa，$n=p/(kT)$，$\ell=1/(\sqrt2\pi d^2n)\simeq2.09\times10^{-7}$ m。$\bar v=\sqrt{8RT/(\pi M)}\simeq1.70\times10^3$ m/s，故 $Z=\bar v/\ell\simeq8.12\times10^9$ 每秒，一秒平均碰撞约 $8.1\times10^9$ 次。
+\crosscheck 使用平均速率而非方均根速率；硬球碰撞截面为 $\pi d^2$，相对运动带来 $\sqrt2$ 因子。
+\sourceproblem{应用1}{228}{234}
+\problemtext 将温度 $10^8$ K星球中的质子视为理想气体，求方均根速率和平均平动动能（eV）。
+\workings 取质子摩尔质量约 $10^{-3}$ kg/mol，$v_{\rm rms}=\sqrt{3RT/M}\simeq1.58\times10^6$ m/s；$\overline E_{\rm tr}=3kT/2=2.07\times10^{-15}$ J，约 $1.29\times10^4$ eV。
+\crosscheck 质子速率约为光速的0.0053，非相对论近似合理；实际等离子体含电子及相互作用，题设只求质子热运动统计量。
+\sourceproblem{应用2}{228}{234}
+\problemtext 20立方厘米电子管，300 K，压强 $5\times10^{-6}$ mmHg，空气按刚性双原子模型，求分子数及平动、转动、总动能。
+\workings $p=5\times10^{-6}(1.013\times10^5/760)\simeq6.6645\times10^{-4}$ Pa，$V=2.0\times10^{-5}$ 立方米，$N=pV/(kT)\simeq3.22\times10^{12}$。
+\[
+E_{\rm tr}=\tfrac32pV\simeq2.00\times10^{-8}\ \mathrm J,\quad
+E_{\rm rot}=pV\simeq1.33\times10^{-8}\ \mathrm J,\quad
+E_{\rm tot}=\tfrac52pV\simeq3.33\times10^{-8}\ \mathrm J.
+\]
+\crosscheck 三者是全体分子的平均能量之和，非单分子能量；稀薄气体按题设温度及平衡分布计算。
+\sourceproblem{应用3}{228}{234}
+\problemtext 定容自行车内胎7摄氏度时压强 $4.0\times10^5$ Pa，升至37摄氏度，求末压。
+\workings 若给定为绝对压强，$p_2=p_1T_2/T_1=4.0\times10^5(310/280)\simeq4.43\times10^5$ Pa。若给定为表压且环境压强 $p_a$ 恒定，则 $p_{g,2}=(p_{g,1}+p_a)310/280-p_a$；例如 $p_a=1.013\times10^5$ Pa时约 $4.54\times10^5$ Pa。
+\crosscheck 状态方程必须用绝对压强；题干称空气压强，主解按绝对值，另注明实际胎压表约定。
+\sourceproblem{应用4}{229}{235}
+\problemtext 装刚性氧气的钢瓶随车以40 m/s运动，突然停止，气体原定向动能的80%转为热运动动能，求升温。
+\workings 对质量m气体，$\Delta U=0.8mv^2/2=5mR\Delta T/(2M)$。消去质量，
+\[
+\Delta T=\frac{0.8Mv^2}{5R}\simeq0.986\ \mathrm K .
+\]
+\crosscheck 与计算8同一最终平衡模型；此处钢瓶自身的机械动能不计入气体获得的能量。
+\sourceproblem{应用5}{229}{235}
+\problemtext 50 m深湖水中4摄氏度、体积 $10^{-5}$ 立方米空气泡升至17摄氏度湖面，求体积，给大气压 $1.013\times10^5$ Pa。
+\workings 取水密度 $10^3$ kg每立方米、$g=9.8$ m/s平方，忽略表面张力和气体交换。初压 $p_1=p_0+\rho gh=5.913\times10^5$ Pa，末压 $p_2=p_0$。由固定物质的量状态方程，
+\[
+V_2=V_1\frac{p_1}{p_0}\frac{290}{277}\simeq6.11\times10^{-5}\ \mathrm{m^3}.
+\]
+\crosscheck 温度须用K；若计曲率压差、气体溶解及水密度变化则需另给参数。
