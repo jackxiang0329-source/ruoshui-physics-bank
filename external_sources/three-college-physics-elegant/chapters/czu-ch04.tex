@@ -248,3 +248,75 @@ v_m=\frac{M\sqrt{3gL}}{M+3m},\quad
 |L_m|=mLv_m.
 \]
 \crosscheck 假设地面水平冲量可忽略、碰撞点在杆端；若物体未粘合或有其他外冲量矩，需重新建模。
+
+\sourceproblem{计算1}{63}{69}
+\problemtext 飞轮从静止6.0秒内匀加速至36 rad/s，求角加速度和转过圈数。
+\workings $\alpha=36/6=6\,\mathrm{rad/s^2}$，$\theta=36(6)/2=108$ rad，$N=54/\pi\approx17.19$ 圈。
+\crosscheck 角速度时间图面积为108 rad，不能将弧度直接当圈数。
+\sourceproblem{计算2}{63}{69}
+\problemtext 定轴运动 $\theta=at+bt^2-ct^4$，求角加速度及轴距 $r$ 点的切、法向加速度。
+\workings $\omega=a+2bt-4ct^3,\alpha=2b-12ct^2$，$a_\tau=r(2b-12ct^2)$ 为沿正转向有向分量，$a_n=r(a+2bt-4ct^3)^2$。
+\crosscheck 法向分量非负且指向轴；切向大小取绝对值。
+\sourceproblem{计算3}{64}{70}
+\problemtext 齿轮角加速度 $\alpha=4at^3-3bt^2$，初角速度 $\omega_0$，求角速度及转角。
+\workings 积分得 $\omega=\omega_0+at^4-bt^3$，$\Delta\theta=\omega_0t+at^5/5-bt^4/4$。
+\crosscheck 两次微分恢复给定角加速度；若发生反转，实际转过的总角路程须积分 $|\omega|$。
+\sourceproblem{计算4}{64}{70}
+\problemtext 均匀圆板半径 $R$、质量 $m$，在水平粗糙桌面绕中心轴转动，动摩擦系数 $\mu$，接触压力均匀，求摩擦力矩。
+\workings 面压力 $p=mg/(\pi R^2)$，半径 $r$ 的环带摩擦力大小 $\mathrm dF=\mu p\,2\pi r\,\mathrm dr$，故
+\[
+|M_f|=\int_0^R r\,\mathrm dF=\frac23\mu mgR.
+\]
+方向与角速度相反。
+\crosscheck 有效摩擦力臂为 $2R/3$，不是圆板质心的轴距零，也不是边缘半径。
+\sourceproblem{计算5}{64}{70}
+\problemtext 长 $l$、质量 $M$ 的均匀细杆绕端轴，另一端固定质量 $m$、半径 $r$ 的均匀实心小球，求系统惯量。
+\workings 若杆端连接球面且球心在杆延长线上，轴到球心距 $l+r$，由平行轴定理
+\[
+J=Ml^2/3+2mr^2/5+m(l+r)^2.
+\]
+若 $l$ 指轴到球心的距离，则最后一项改为 $ml^2$，杆自身长度按实际取值。
+\crosscheck 原图连接点与球心距离须区分；球质量分布若非均匀实心球，应另给质心惯量。
+\sourceproblem{计算6}{64}{70}
+\problemtext 圆柱半径 $R$，有四个贯通圆孔，孔半径 $R/3$，孔心距主轴 $R/2$，求中心轴惯量。
+\workings 设未挖孔圆柱质量 $M_0$，每孔等效质量 $M_0/9$。若四孔互不重叠，则减去各孔惯量
+\[
+J=\frac12 M_0R^2-4\frac{M_0}{9}\left(\frac{R^2}{18}+\frac{R^2}{4}\right)=\frac{59}{162}M_0R^2.
+\]
+若题给 $m$ 是挖孔后质量，$m=5M_0/9$，则 $J=59mR^2/90$；若指完整圆柱质量，则取 $M_0=m$。
+\crosscheck 相邻孔心距离 $R/\sqrt2>2R/3$，各孔不交叠；最外缘 $5R/6<R$，减法成立。原题质量含义需明示。
+\sourceproblem{计算7}{65}{71}
+\problemtext 实心圆柱质量16 kg、半径15 cm，轻绳悬8 kg物体，取 $g=10$，求张力及静止释放1秒下落距离。
+\workings $J=Mr^2/2$，$mg-T=ma,\ T=Ja/r^2$，得 $a=mg/(m+M/2)=5\,\mathrm{m/s^2}$，$T=40$ N，$s=at^2/2=2.5$ m。
+\crosscheck 张力小于悬物重力；半径在无滑动实心柱模型中约去。
+\sourceproblem{计算8}{65}{71}
+\problemtext 两质量 $m_1,m_2$ 分别悬在半径 $r,R$ 的同轴无质量鼓轮上，绳绕向相反，求角加速度。
+\workings 取 $m_2$ 下降方向为正，$a_2=R\alpha,a_1=r\alpha$ 向上。消去两绳张力得
+\[
+\alpha=\frac{(m_2R-m_1r)g}{m_1r^2+m_2R^2}.
+\]
+\crosscheck 驱动力矩差为零时角加速度为零；若分子为负实际方向反转。
+\sourceproblem{计算9}{65}{71}
+\problemtext 光滑斜面倾角 $\theta$，物体质量 $m$ 经轻绳带动质量 $M$、半径 $R$ 的固定轴滑轮转动，求下滑加速度。
+\workings $mg\sin\theta-T=ma,\ TR=Ja/R$，故 $a=mg\sin\theta/(m+J/R^2)$。若滑轮为均匀实心圆盘，$J=MR^2/2$，得 $a=mg\sin\theta/(m+M/2)$。
+\crosscheck 题面仅给质量和半径，不足以唯一确定转动惯量；圆盘假设须明确。
+\sourceproblem{计算10}{66}{72}
+\problemtext 斜面30度、物体6 kg、悬物18 kg，均匀圆盘滑轮2 kg，斜面摩擦系数0.1，取 $g=10$，求加速度与两侧张力。
+\workings 设悬物下降、斜面物体上行，$f=0.1(6)(10)\cos30^\circ=3\sqrt3$ N。
+\[
+a=\frac{180-30-3\sqrt3}{18+6+1}=\frac{150-3\sqrt3}{25}\approx5.792\,\mathrm{m/s^2}.
+\]
+斜面侧 $T_1=6a+30+3\sqrt3\approx69.95$ N；悬物侧 $T_2=180-18a\approx75.74$ N。
+\crosscheck $T_2-T_1=a$（SI数值式），符合滑轮转动方程；取题给摩擦系数为滑动摩擦系数，启动需克服静摩擦。
+\sourceproblem{计算11}{66}{72}
+\problemtext 均匀圆盘原质量 $M$、半径 $R$，绕水平中心轴以角速度 $\omega$ 转动，边缘质量 $m$ 的碎块脱离并竖直上抛，求上升高度及余盘角动量。
+\workings 若脱离无额外冲量，碎块初速 $R\omega$，相对脱离点最高上升 $h=R^2\omega^2/(2g)$。原盘角动量 $MR^2\omega/2$，碎块脱离瞬间角动量 $mR^2\omega$，故余盘 $L=(M/2-m)R^2\omega$。
+\crosscheck 假设碎块尺寸可忽略且轴向外冲量矩为零；最高点绝对高度还需脱离点高度。
+\sourceproblem{计算12}{66}{72}
+\problemtext 匀质杆长 $l$，从水平上方60度静止释放，绕端轴下摆，$g=10$，求初角加速度与过水平时角速率。
+\workings 下摆为正，初力矩 $mg(l/2)\cos60^\circ$，故 $\alpha_0=3g/(4l)=7.5/l$。质心到水平下降 $(l/2)\sin60^\circ$，能量守恒得 $\omega=\sqrt{3g\sin60^\circ/l}=\sqrt{15\sqrt3/l}$。
+\crosscheck 初角加速度并非水平位置的 $3g/(2l)$；角速度由势能差求得。
+\sourceproblem{计算13}{66}{72}
+\problemtext 匀质水平杆质量 $m$、长 $l$，两端竖直细线悬挂，烧断一根，求另一根瞬时张力。
+\workings 设保留端为A。初速度为零且细线不可伸长，A瞬时竖直加速度为零；杆此刻角加速度可按绕A求出，$mg(l/2)=(ml^2/3)\alpha$，故 $\alpha=3g/(2l)$。质心向下加速度 $\alpha l/2=3g/4$，因此 $mg-T=3mg/4$，$T=mg/4$。
+\crosscheck 也可用质心转动方程 $Tl/2=(ml^2/12)\alpha$ 联立；A并非全过程固定铰点，此处仅用瞬时约束。
