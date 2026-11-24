@@ -1,0 +1,54 @@
+\section{第7组：恒定磁场}
+\sourceproblem{7-T1}{36}{40}
+\problemtext 原点处电流元 $I\mathrm dl$ 沿正 $y$，求六个指定坐标点的磁场贡献。
+\workings 设 $a>0$、$K=\mu_0 I\mathrm dl/(4\pi a^2)$。毕奥--萨伐尔定律给出
+\[
+\mathrm d\bm B=\frac{\mu_0 I\mathrm dl}{4\pi}\frac{z\bm i-x\bm k}{(x^2+y^2+z^2)^{3/2}}.
+\]
+对原书依次给出的 $(a,0,0),(0,a,0),(0,0,a),(a,a,0),(0,-a,a),(a,a,a)$，结果依次为
+\[
+-K\bm k,\quad 0,\quad K\bm i,\quad
+-\frac{K}{2\sqrt2}\bm k,\quad
+\frac{K}{2\sqrt2}\bm i,\quad
+\frac{K}{3\sqrt3}(\bm i-\bm k).
+\]
+\crosscheck 所求仅为原点电流元的贡献，不能将其误作整根长直导线的场；与电流元共线的点叉积为零。
+\sourceproblem{7-T2}{36}{40}
+\problemtext 两同心圆弧半径 $a>b$、张角 $\theta$，两端以径向直线连接成载流闭路，求圆心P的磁场。
+\workings 径向段贡献为零；图示外弧顺时针、内弧逆时针，故取纸面向外为正，
+\[
+\bm B_P=\frac{\mu_0I\theta}{4\pi}(1/b-1/a)\bm e_z.
+\]
+\crosscheck $\theta$ 必须采用弧度；两弧场相减，内弧因半径较小而占优。
+\sourceproblem{7-T3}{37}{41}
+\problemtext 无限长导线中央一段弯为半径 $a$、圆心角120度的上方圆弧，两侧水平半无限直段相连，电流向右，求圆心P场强。
+\workings 弧段 $B_{\rm arc}=\mu_0 I(2\pi/3)/(4\pi a)=\mu_0 I/(6a)$。直段与P垂距为 $a/2$，各段近端沿水平的距离为 $\sqrt3a/2$，故各段场为 $\mu_0 I(1-\sqrt3/2)/(2\pi a)$。三段方向均入纸面，因此
+\[
+B=\frac{\mu_0 I}{a}\left[\frac16+\frac{1-\sqrt3/2}{\pi}\right].
+\]
+\crosscheck 直段积分范围不包含垂足；圆弧及直段用右手定则所得方向一致。
+\sourceproblem{7-T4}{37}{41}
+\problemtext 半径 $R$ 的绝缘圆盘均匀带电 $q$，以角速度 $\omega$ 绕中心法线旋转，证明盘心磁场与磁偶极矩。
+\workings 面密度 $q/(\pi R^2)$，半径 $r$、宽 $\mathrm dr$ 的环带电荷 $\mathrm dq=2qr\,\mathrm dr/R^2$，电流 $\mathrm dI=\omega\,\mathrm dq/(2\pi)$。故
+\[
+B=\int_0^R \frac{\mu_0\mathrm dI}{2r}=\frac{\mu_0\omega q}{2\pi R},\qquad
+p_m=\int_0^R\pi r^2\mathrm dI=\frac{\omega qR^2}{4}.
+\]
+这里按正电荷和角速率记大小；矢量方向沿 $q\bm\omega$。
+\crosscheck 两式均与原书目标一致；积分在 $r=0$ 处有限，不需要额外内孔。
+\sourceproblem{7-T5}{38}{42}
+\problemtext 两半径 $R$ 的同向载流圆环共轴，圆心距 $a$，求轴线任意点磁场并证明 $a=R$ 时中点附近最均匀。
+\workings 取中点为原点，令 $f(s)=(R^2+s^2)^{-3/2}$，则轴向磁场大小
+\[
+B(x)=\frac{\mu_0IR^2}{2}[f(x-a/2)+f(x+a/2)].
+\]
+偶对称使 $B'(0)=0$。而 $f''(s)=3(4s^2-R^2)/(R^2+s^2)^{7/2}$，故
+\[
+B''(0)=\frac{3\mu_0IR^2(a^2-R^2)}{(R^2+a^2/4)^{7/2}}.
+\]
+唯一正间距 $a=R$ 消去二阶项；奇阶项亦因对称性消失，中点附近首个变化为四阶量。此时 $B(0)=(4/5)^{3/2}\mu_0I/R$。
+\crosscheck “最均匀”指中点附近的局部轴向泰勒展开，并非整个空间磁场恒定。
+\sourceproblem{7-T6}{38}{42}
+\problemtext 图示三棱柱处于沿正 $x$ 轴的2.0特斯拉匀强场中，求三个矩形侧面 $abcd,befc,aefd$ 的磁通量。
+\workings 采用闭合棱柱外法向，面 $abcd$ 位于 $yz$ 平面，面积 $0.40\times0.30$ 平方米，外法向负 $x$，故 $\Phi_{abcd}=-0.24\,\mathrm{Wb}$。面 $befc$ 位于 $xy$ 平面，磁场平行于面，故 $\Phi_{befc}=0$。上下三角面也与磁场平行；由闭合磁通为零，$\Phi_{aefd}=+0.24\,\mathrm{Wb}$。
+\crosscheck 斜面沿 $yz$ 平面的正投影面积同为0.12平方米，可独立核验；若题目只要求大小，分别为0.24、0、0.24韦伯。
