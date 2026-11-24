@@ -297,3 +297,93 @@ B=\frac{\mu_0IN}{2(R_2-R_1)}\ln\frac{R_2}{R_1}.
 =\frac{\mu_0IL}{2\pi}(1/2+\ln2).
 \]
 \crosscheck 图示面从轴起而非横跨两侧直径；两积分区在表面场连续。反选法向磁通变号。
+
+\sourceproblem{计算10}{131}{137}
+\problemtext 两等流100 A的长直导线同向，矩形线圈在二者之间，高10 m、宽0.10 m，两边到邻线距离均0.10 m，求磁通。
+\workings 取左线位置0，右线位置 $D=a+b+c$，出纸面为正，两线间 $B_z=\mu_0I[1/(D-x)-1/x]/(2\pi)$。故
+\[
+\Phi=\frac{\mu_0Il}{2\pi}\left[\ln\frac{b+c}{c}-\ln\frac{a+b}{a}\right]=0.
+\]
+\crosscheck 镜像位置场反号，回路关于中线对称；零净磁通不意味着每点场为零。
+\sourceproblem{计算11}{131}{137}
+\problemtext 半径R的无限长带电薄圆筒面密度 $\sigma$，以角速度 $\bm\omega$ 绕轴转动，求内部磁场。
+\workings 面电流大小 $K=\sigma R\omega$（带符号），等效无限长螺线管。由安培环路和对称性，$\bm B_{\rm in}=\mu_0\sigma R\bm\omega$，外部场为零。
+\crosscheck 正电时内部B沿角速度方向，负电反向；无限长稳恒面电流近似。
+\sourceproblem{计算12}{131}{137}
+\problemtext 共面同心带电环片半径范围分别 $R_1,R_2$ 及 $R_3,R_4$，面密度相同，内外反向以转频 $n_1,n_2$ 转动，求中心零磁场条件。
+\workings 半径r薄环电荷 $dQ=2\pi\sigma r\,dr$，电流 $dI=n\,dQ$，中心场 $dB=\mu_0dI/(2r)=\mu_0\pi\sigma n\,dr$。内外贡献相反，故 $n_1/n_2=(R_4-R_3)/(R_2-R_1)$。
+\crosscheck 取非零面密度及转频，宽度而非面积决定该比。
+\sourceproblem{计算13}{131}{137}
+\problemtext 半径R均匀带总电荷Q的介质圆盘以角速度 $\bm\omega$ 转动，求中心场。
+\workings $\sigma=Q/(\pi R^2)$，薄环 $dI=\sigma\omega r\,dr$，$dB=\mu_0dI/(2r)$。积分得到 $\bm B=\mu_0Q\bm\omega/(2\pi R)$。
+\crosscheck 轴心积分无发散；场方向随电荷符号及旋向决定。
+\sourceproblem{计算14}{132}{138}
+\problemtext 质子垂直匀强磁场运动，轨迹曲率半径R，求动量及动能。
+\workings 由磁力改变动量方向，$p=eBR$；相对论动能 $K=\sqrt{(eBRc)^2+m_p^2c^4}-m_pc^2$。低速时近似 $K=e^2B^2R^2/(2m_p)$。
+\crosscheck 气泡室介质会使粒子损失能量；用局部曲率半径确定局部动量。
+\sourceproblem{计算15}{132}{138}
+\problemtext 正电粒子以速度v平行于带线电荷密度 $\lambda$、载流I的无限直导线运动，求维持平行直线的速度。
+\workings 取I向上、v同向、粒子位于右侧，$E_r=\lambda/(2\pi\varepsilon_0r)$，$B=\mu_0I/(2\pi r)$。正 $\lambda$ 时电力向外，磁力向内，平衡给 $v=\lambda/(\varepsilon_0\mu_0 I)=c^2\lambda/I$。
+\crosscheck 必须满足 $|v|<c$；有向解反号代表反向运动，若参数不满足亚光速条件则不存在物理解。真空模型中距离与试验电荷量约去。
+\sourceproblem{计算16}{132}{138}
+\problemtext 长直导线电流 $I_1$ 向上，右侧矩形线圈电流 $I_2$，近边距d、远边距d+b，竖边长l，近边电流同向，求净力。
+\workings 近边吸引、远边排斥，上下横边受力相消。净力大小
+\[
+F=\frac{\mu_0I_1I_2l}{2\pi}\left(\frac1d-\frac1{d+b}\right),
+\]
+方向指向长直导线。
+\crosscheck 远边场较弱，近边吸引占优；反转任一电流净力反向。
+\sourceproblem{计算17}{132}{138}
+\problemtext 无限长直线沿圆形线圈直径投影，两电流按图方向，求线圈净磁力。
+\workings 取直线沿y轴向上，圆环电流顺时针，半径R，先令两者平面相隔 $s>0$。参数 $x=R\cos\theta,y=-R\sin\theta$，$B_z=-\mu_0I_1x/[2\pi(x^2+s^2)]$。由 $dF_x=I_2B_zdy$ 得
+\[
+F_x=\frac{\mu_0I_1I_2}{2\pi}\int_0^{2\pi}
+\frac{R^2\cos^2\theta}{R^2\cos^2\theta+s^2}d\theta
+=\mu_0I_1I_2(1-s/\sqrt{R^2+s^2}).
+\]
+其他分量按对称性抵消。理想共面极限 $s\to0^+$ 给 $F_x=\mu_0I_1I_2$，向右。
+\crosscheck 零线径共面交点场奇异，须取极限或指定有限绝缘间隔；有限s时结果不同。
+\sourceproblem{计算18}{133}{139}
+\problemtext 图示闭合回路由等长竖直弦和半径R的上下圆弧组成，弦端半径在O成直角，电流逆时针；求O场及小正方形试验线圈最大力矩。
+\workings 两弧合圆心角 $\pi$，场为 $\mu_0I/(4R)$；各弦垂距 $R/\sqrt2$、端角45度，场为 $\mu_0I/(2\pi R)$。四段方向均出纸面，故 $B=\mu_0I(1/4+1/\pi)/R$。试验线圈磁矩 $m=I'a^2$，在其平面包含B方向时力矩最大，$\tau_{\max}=I'a^2B$。
+\crosscheck 最大力矩公式采用足够小试验线圈的局部匀场近似；图中两弧并非整圆。
+\sourceproblem{计算19}{133}{139}
+\problemtext 圆盘面密度 $\sigma=kr$，半径R，逆时针角速度 $\omega$，盘面平行均匀磁场B，求磁力矩。
+\workings 薄环 $dI=k\omega r^2dr$，磁矩 $dm=\pi r^2dI$，积分 $m=\pi k\omega R^5/5$。因此 $\bm\tau=(\pi kR^5/5)\bm\omega\times\bm B$，大小 $\pi k\omega BR^5/5$。按图B向右、正电逆时针，力矩向上。
+\crosscheck 磁矩的单位为A m平方；不是将所有电荷视为在边缘运动。
+\sourceproblem{计算20}{133}{139}
+\problemtext 均匀面密度 $\sigma$ 的薄带电圆盘，半径R，绕法线以角速度 $\omega$ 旋转，证明平行盘面的磁场所施力矩公式。
+\workings $dI=\sigma\omega r\,dr$，$dm=\pi\sigma\omega r^3dr$，故 $m=\pi\sigma\omega R^4/4$。由于法向与B垂直，力矩大小 $|\tau|=\pi|\sigma|\omega BR^4/4$，有向量 $\bm\tau=(\pi\sigma R^4/4)\bm\omega\times\bm B$。
+\crosscheck 对均匀B，整个圆盘净平移磁力为零；需外力矩维持指定旋转轴。
+\sourceproblem{计算21}{133}{139}
+\problemtext 铁环平均周长0.30 m、截面1.0平方厘米、300匝、电流32 mA、磁通 $2.0\times10^{-6}$ Wb，求B、H和相对磁导率。
+\workings $B=\Phi/S=0.020$ T，$H=NI/l=32$ A/m，$\mu_r=B/(\mu_0H)\approx497$。
+\crosscheck 细环平均场近似；所得为给定工作点的割线相对磁导率。
+\sourceproblem{计算22}{134}{140}
+\problemtext 钢环平均半径0.1 m、截面 $6.0\times10^{-4}$ 平方米、200匝，电流0.63与4.7 A时磁通分别 $3.24\times10^{-4},6.18\times10^{-4}$ Wb，求磁导率。
+\workings $B_1=0.540$ T，$B_2=1.030$ T；$H_i=NI_i/(2\pi r)$，分别约200.5和1496 A/m。$\mu_1=B_1/H_1\approx2.69\times10^{-3}$ H/m，$\mu_2\approx6.88\times10^{-4}$ H/m。
+\crosscheck 原书截面积单位误印为平方米的倒数，按面积语义取平方米；两值为割线磁导率，不是微分磁导率。
+\sourceproblem{计算23}{134}{140}
+\problemtext 矩形截面环形螺线管内外半径 $R_1,R_2$、截面高b、N匝、电流I、芯子磁导率 $\mu$，求磁场和芯子磁通。
+\workings 理想连续密绕下 $H_\phi=NI/(2\pi r)$（芯子内），$B_\phi=\mu NI/(2\pi r)$，$\Phi=b\int_{R_1}^{R_2}B_\phi dr=\mu NIb\ln(R_2/R_1)/(2\pi)$。环孔及外部理想场为零。
+\crosscheck 有限匝数和引线可能有漏磁；磁通积分不能简单用内缘场乘截面。
+\sourceproblem{应用1}{134}{140}
+\problemtext 霍尔元件厚0.15 mm、载流子数密度 $10^{24}$ 每立方米、电流10 mA、原书霍尔电压42 V，求B。
+\workings 单载流子、均匀横向场模型 $|U_H|=IB/(ne d)$，故 $B=ne d|U_H|/I\approx1.008\times10^5$ T。
+\crosscheck 高清原页明确为42 V而非42微伏；该形式结果远超普通霍尔测量范围。若原意为42微伏才得到0.1008 T，但不擅改原题单位。
+\sourceproblem{应用2}{134}{140}
+\problemtext 周长240 m储存环电子流8 mA，电子速率近c，求环中电子总数。
+\workings 每个电子每秒绕行 $v/L$ 周，电流大小 $I=Ne v/L$，故 $N=IL/(ev)\approx4.00\times10^{10}$（$v\approx c$）。
+\crosscheck 电流为环流平均值；若电子成束，瞬时局部电流可不同。
+\sourceproblem{应用3}{135}{141}
+\problemtext 动能12 keV的电子由南向北运动，地磁垂直向下 $5.5\times10^{-5}$ T，距起点20 cm的屏上偏转。
+\workings 取东、北、上为正轴，$\bm v\times\bm B$ 向西，电子负电故偏东。相对论动量 $pc=\sqrt{K(K+2m_ec^2)}$，半径 $R=p/(eB)\approx6.76$ m。若屏在北向距离 $L=0.20$ m，偏转 $y=R-\sqrt{R^2-L^2}\simeq L^2/(2R)\approx2.96$ mm。
+\crosscheck 非相对论近似给约2.98 mm；若20 cm为弧长则用 $R[1-\cos(L/R)]$，小角结果近同。
+\sourceproblem{应用4}{135}{141}
+\problemtext 理想霍尔式血流计，血管直径2.0 mm、横向磁场0.080 T、霍尔电压0.10 mV，求流速。
+\workings 横向平衡 $E=vB$，$U=Ed$，故 $v=U/(Bd)=0.625$ m/s。
+\crosscheck 假设均匀有效流速、正交磁场和电极；实际仪器需标定，不是直接临床诊断。
+\sourceproblem{应用5}{135}{141}
+\problemtext 导电液体管道长l的区段中电流密度J、磁感强度B及管轴两两垂直，求磁力造成的压差，并计算 $l=2.00$ cm、$B=1.50$ T、压差1 atm所需J。
+\workings 体力密度 $\bm f=\bm J\times\bm B$。均匀截面S、忽略其他压力损失，$F=JBlS$，平衡压差 $p=F/S=JBl$。故 $J=101325/(1.50\times0.0200)=3.3775\times10^6$ A每平方米。
+\crosscheck 方向由叉积确定；真实流动还受黏滞、流体惯性和电流分布影响。
