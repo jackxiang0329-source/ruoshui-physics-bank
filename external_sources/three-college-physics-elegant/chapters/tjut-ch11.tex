@@ -71,3 +71,20 @@ f=\frac{w}{2}\sqrt{(a/\lambda)^2-1}\simeq\frac{aw}{2\lambda}.
 \problemtext 白光入射光栅，400 nm的第三级与另一波长的第二级重合，求后者。
 \workings 同方向 $3(400)=2\lambda_2$，故 $\lambda_2=600$ nm。
 \crosscheck 两级必须均未缺级，且栅距允许该角度。
+
+\sourceproblem{计算1}{48}{54}
+\problemtext 600 nm光正入射宽0.20 mm单缝，焦距1.0 m，求中央明纹宽度和第二暗纹距焦点距离。
+\workings 暗纹满足 $b\sin\theta_j=j\lambda$，焦面坐标 $x_j=f\tan\theta_j$。因此 $\Delta x_0=2f\tan(\arcsin(\lambda/b))\approx6.00\,\mathrm{mm}$，$x_2=f\tan(\arcsin(2\lambda/b))\approx6.00\,\mathrm{mm}$。
+\crosscheck 前者是全宽，后者是单侧距离；二者只在小角近似下相等。
+\sourceproblem{计算2}{48}{54}
+\problemtext 光栅每厘米200缝、缝宽 $2\times10^{-3}$ cm，焦距1 m，入射波长600 nm，求单缝中央包络宽度和其中光栅主明纹数。
+\workings $d=5\times10^{-5}$ m，$b=2\times10^{-5}$ m。包络全宽 $2f\tan(\arcsin(\lambda/b))\approx0.0600$ m。主极大位于中央包络内要求 $|k|\lambda/d<\lambda/b$，即 $|k|<2.5$，故 $k=0,\pm1,\pm2$，共5条。
+\crosscheck 缝宽指数经高清PDF54确认；第5级等为缺级，但不在中央包络内。
+\sourceproblem{计算3}{49}{55}
+\problemtext 氦氖激光波长632.8 nm，单缝第一暗纹角5度，求缝宽。
+\workings $b=\lambda/\sin5^\circ\approx7.26\times10^{-6}\,\mathrm m$。
+\crosscheck 角度较小时用弧度近似，精确结果使用正弦。
+\sourceproblem{计算4}{49}{55}
+\problemtext 两波长正入射光栅，第一种的三级和第二种的四级主极大均在30度，已知 $\lambda_1=560$ nm，求栅距和第二波长。
+\workings $d\sin30^\circ=3\lambda_1=4\lambda_2$，故 $d=3360$ nm，$\lambda_2=420$ nm。
+\crosscheck 两级均满足几何允许条件；题设已观察到主极大，故不缺级。
