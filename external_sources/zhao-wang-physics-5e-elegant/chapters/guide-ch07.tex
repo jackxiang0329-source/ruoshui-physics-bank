@@ -1,4 +1,5 @@
 % Consolidated guide-ch07 from 9a1384ddf1afcd855b09256c9c6f1c90b5023140; source fragments preserved.
+% 2026-11-24 八批严格二校第5批：历史片段哈希对应修改前版本。
 
 % === BEGIN guide-ch07-examples.tex blob 92930d3a3364a541dedf16cf24515bde68f6476c ===
 % 第7批：《大学物理学学习指导》第5版，第7章“气体动理论基础”，例7.1—7.6。
@@ -48,7 +49,7 @@ pV=1.5\times10^5(2\times10^{-3})=300\,\mathrm J.
 \boxed{U=750\,\mathrm J}.
 \]
 \crosscheck 这个模型不计分子相互作用势能与振动自由度；
-平均总动能与整体内能相等。
+全体分子的热运动总动能与所选能量零点下的气体内能相等；不是单分子的平均动能。
 
 \sourceexample{7.3}{104}{112}
 \problemtext 平衡态气体的麦克斯韦速率分布为$f(v)$，分子总数为$N$、最概然速率为$v_p$。
@@ -61,7 +62,7 @@ $\int_0^\infty\tfrac12mv^2f(v)\,dv$各自含义。
 \[
 \boxed{dP=f(v)\,dv}.
 \]
-速率不小于最概然速率$v_p$的\textbf{分子数}为
+速率不小于最概然速率$v_p$的\textbf{期望分子数（宏观近似）}为
 \[
 \boxed{N_{v\ge v_p}=\int_{v_p}^\infty Nf(v)\,dv}.
 \]
@@ -77,7 +78,7 @@ $\int_0^\infty\tfrac12mv^2f(v)\,dv$各自含义。
 \]
 \crosscheck $f(v)$的单位为$(\mathrm{m/s})^{-1}$，
 因此$f(v)dv$无量纲；第四个积分的单位为焦耳。
-注意最概然速率不必平分分布曲线下的面积。
+三维麦克斯韦分布中$P(v\ge v_p)=1-\operatorname{erf}(1)+2e^{-1}/\sqrt\pi\approx0.57241$，最概然速率并不平分面积。
 
 \sourceexample{7.4}{104--105}{112--113}
 \problemtext 氦气分子的麦克斯韦速率分布曲线峰位为$1000\,\mathrm{m/s}$。
