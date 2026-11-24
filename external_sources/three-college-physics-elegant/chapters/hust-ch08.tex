@@ -144,7 +144,7 @@ i=\frac{M_0 I'\omega}{R}\sin\omega t,\quad
 \[
 L'=\frac{\mu_0}{\pi}\ln\frac{d-a}{a}\simeq\frac{\mu_0}{\pi}\ln\frac da.
 \]
-初始近似 $L'=1.20\times10^{-6}$ H/m（保留积分端点为19时约1.18微亨每米）。每米排斥力 $\mu_0 I^2/(2\pi d)$，故磁力功 $W'=\mu_0 I^2\ln2/(2\pi)\approx5.55\times10^{-5}$ J/m。用一致细线近似，$\Delta W_B'=\tfrac12 I^2\Delta L'=W'>0$，电源供能 $I^2\Delta L'=2W'$。
+初始近似 $L'=1.1983\times10^{-6}$ H/m（保留积分端点比值19时约1.1778微亨每米）。每米排斥力 $\mu_0 I^2/(2\pi d)$，故磁力功 $W'=\mu_0 I^2\ln2/(2\pi)\approx5.55\times10^{-5}$ J/m。用一致细线近似，$\Delta W_B'=\tfrac12 I^2\Delta L'=W'>0$，电源供能 $I^2\Delta L'=2W'$。
 \crosscheck 恒流时磁力做正功且磁能增加，两者能量来自维持电流的电源；端点修正式与细线力公式不可当作同一精确模型。
 \sourceproblem{8-T19}{52}{56}
 \problemtext 同轴电缆内外半径1.0与7.0 mm，100 A由内筒流出外筒流回，薄筒间介质 $\mu_r=1$，求磁能密度与每米储能。
@@ -162,7 +162,7 @@ W'=\int_a^b w\,2\pi r\,\mathrm dr
 \left|\oint\bm H\cdot\mathrm d\bm l\right|
 =I(0.61/1.22)^2=0.460\,\mathrm A.
 \]
-\crosscheck 面积比为1/4而非1/2；有向符号依回路法向。
+\crosscheck 面积比为1/4而非1/2；有向符号依回路法向。方形对称性不足以推出沿该方形回路H处处等大，本题只求环量。
 \sourceproblem{8-T21}{53}{57}
 \problemtext 平行板电容器充电后断开或保持电源连接，分别拉开两板，判断板间位移电流。
 \workings 理想板间 $D=Q/S$。断电时自由电荷固定，板间固定空间点的D不随时间变，故板间主体无位移电流；恒压时 $D=\varepsilon U/d(t)$，随距离增大而减小，$j_d=-\varepsilon U\dot d/d^2$（正向取原D方向），存在位移电流。
@@ -174,7 +174,7 @@ W'=\int_a^b w\,2\pi r\,\mathrm dr
 H_\phi(r,t)=\begin{cases}I_d r/(2\pi R^2),&r\le R,\\I_d/(2\pi r),&r>R.\end{cases}
 \]
 第二式用于忽略边缘和回流路径的理想延拓。
-\crosscheck 轴上H为零；板缘两表达式连续；电压最大处位移电流瞬时为零。
+\crosscheck 轴上H为零；板缘两表达式连续；电压最大处位移电流瞬时为零。采用准静态均匀板间场近似，且所给C为常量；高频传播及边缘回流效应不由此模型描述。
 \sourceproblem{8-T23}{54}{58}
 \problemtext 判断位移电流产生原因及其磁效应、热效应的四个命题。
 \workings 位移电流密度为 $\partial\bm D/\partial t$，由变化电场（一般还包括介质极化变化）产生，选A。其磁效应服从安培--麦克斯韦定律，不是电荷定向迁移，不能普遍套用导电电流焦耳热公式。
