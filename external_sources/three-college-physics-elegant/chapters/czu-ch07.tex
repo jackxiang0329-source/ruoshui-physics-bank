@@ -1,0 +1,101 @@
+\section{第7章：恒定磁场（7.5练习题）}
+\sourceproblem{选择1}{119}{125}
+\problemtext 边长l的正方形电流环，求图示顶点A磁感强度。
+\workings 忽略顶点相接两段理想直线自身奇点并取其共线贡献零，另外两边各给 $\mu_0I/(4\pi l\sqrt2)$，方向相同，故 $B=\sqrt2\mu_0I/(4\pi l)$，选A。
+\crosscheck 严格在理想线电流所在点场不定义；该结果是其余两段贡献，实际须给导线截面和拐角几何。
+\sourceproblem{选择2}{119}{125}
+\problemtext 电流由径向线进入对称圆环分流，再由对侧径向线汇出，求环心磁场。
+\workings 对称两支路各流 $I/2$，半圆环心磁场等大反向；径向线电流元与位矢共线，贡献零，故选E。
+\crosscheck 对称电阻及相同半径是等分电流的依据。
+\sourceproblem{选择3}{119}{125}
+\problemtext 均匀载流无限实心圆柱内外磁场随轴距r的关系（选项跨PDF126）。
+\workings $B_i=\mu_0Ir/(2\pi R^2)$，$B_e=\mu_0I/(2\pi r)$，内正比r、外反比r，选D。
+\crosscheck 在r=R处连续，中心为零。
+\sourceproblem{选择4}{120}{126}
+\problemtext 半径R的长载流圆柱挖半径r的偏心圆孔，轴距a，剩余截面均匀通总电流I，求孔轴磁场。
+\workings 叠加电流密度 $\bm J$ 的完整柱与 $-\bm J$ 的虚拟小柱，孔内 $\bm B=\mu_0\bm J\times\bm a/2$，其中 $\bm a$ 由大轴指向孔轴，$J=I/[\pi(R^2-r^2)]$。故大小 $\mu_0Ia/[2\pi(R^2-r^2)]$，选C。
+\crosscheck 孔内场处处相同；同轴极限为零。
+\sourceproblem{选择5}{120}{126}
+\problemtext 半径R的薄壁长圆筒均匀轴向载流，选磁场大小曲线。
+\workings 内部无包围电流，$B=0$；外部 $B=\mu_0I/(2\pi x)$（$x>R$），表面跃变，选B。
+\crosscheck 对负x用轴距绝对值表示大小；有向分量需另计符号。
+\sourceproblem{选择6}{120}{126}
+\problemtext 宽a的无限长薄铜片均匀载流I，共面外点距边b，求磁场。
+\workings 宽度微元 $ds$ 载流 $I ds/a$，同向磁场叠加，
+\[
+B=\frac{\mu_0I}{2\pi a}\int_0^a\frac{ds}{b+s}=\frac{\mu_0I}{2\pi a}\ln\frac{a+b}{b},
+\]
+选B。
+\crosscheck $b\gg a$ 恢复长直线近似，$b>0$。
+\sourceproblem{选择7}{120}{126}
+\problemtext 铜线半径4 mm，表面磁场 $7.0\times10^{-5}$ T，求电流。
+\workings $I=2\pi RB/\mu_0=1.4$ A，选B。
+\crosscheck 使用半径而非直径。
+\sourceproblem{选择8}{120}{126}
+\problemtext 图示等电流垂直绝缘交叉导线，竖线向下、横线向右，判断可能零场象限（选项续PDF127）。
+\workings 在第二、四象限两导线的磁场反向，距两线相等时抵消；第一、三象限同向，选E。
+\crosscheck 取无限长导线模型，零场轨迹为对应的角平分线，交点奇异。
+\sourceproblem{选择9}{121}{127}
+\problemtext 匀强磁场中半球曲面半径r，图中底面外法向与B夹角a，求外向通量。
+\workings 补底面构成闭面，净磁通零，曲面通量 $-\pi r^2B\cos a$，选D。
+\crosscheck 使用底面投影，不直接用半球面积；符号由图示底面向外法向定义。
+\sourceproblem{选择10}{121}{127}
+\problemtext 图中三竖线电流向上、三横线向左，四个等方格中比较入纸面净磁通。
+\workings 取入纸面为正。对左右两列格子，紧邻的两竖线通量在等截断模型中抵消，第三竖线使右列净入、左列净出；同理三横线使上行格净入、下行净出。两贡献在右上II同为正，故选B。
+\crosscheck 理想无限细电流在格边上使各单边通量积分发散；采用相同有限线径或对称截断才有上述比较，不能将任意不对称正则化视为同一结果。
+\sourceproblem{选择11}{121}{127}
+\problemtext 均匀载流实心圆柱半径R，图示轴向长L、从轴至外缘的矩形面磁通。
+\workings 按面法向沿磁场方向，$\Phi=L\int_0^R\mu_0Ir/(2\pi R^2)dr=\mu_0IL/(4\pi)$，选C。
+\crosscheck 若反取法向则变号；场在轴至外缘线性变化。
+\sourceproblem{选择12}{121}{127}
+\problemtext 电子垂直匀强磁场入射，求圆轨道面积磁通与B及v的关系。
+\workings 非相对论 $r=m_ev/(eB)$，$|\Phi|=B\pi r^2=\pi m_e^2v^2/(e^2B)$，与B反比、与速率平方正比，选B。
+\crosscheck 相对论情况下应以动量p替换 $mv$。
+\sourceproblem{选择13}{121}{127}
+\problemtext 两无限长直电流合场无简单对称性，判断能否用安培环路定理求场。
+\workings 分别利用单线柱对称性求 $\bm B_1,\bm B_2$，再矢量叠加即可，选D。
+\crosscheck 安培环路定理仍适用于总场，不能仅凭总环流直接得到逐点场。
+\sourceproblem{选择14}{121}{127}
+\problemtext 圆电流所在平面内取图示同心圆环路L，判断环流及环路各点场。
+\workings L在电流环内部且不相交，磁场垂直于环平面，切向积分为零；内部每一点电流元的法向贡献同号，场非零，选B。
+\crosscheck 零环流不等于零磁场；若环路与导线重合则出现奇点。
+\sourceproblem{选择15}{122}{128}
+\problemtext 两同形安培回路包围相同电流，第二回路外另有电流，比较环流和对应点磁场。
+\workings 外电流不改变包围电流代数和，环流相等；其在对应点的非零磁场使矢量场不同，选C。
+\crosscheck 若B仅表示大小，特殊矢量叠加仍可大小相等；本题图示场矢量有差别。
+\sourceproblem{选择16}{122}{128}
+\problemtext 图示同一匀强磁场中的两圆轨迹半径不同，未标运动方向，判断电荷、动量、周期关系。
+\workings 圆周半径 $r=p/(|q|B)$，旋向由电荷符号及运动方向确定。无方向及电荷大小信息，电荷可同号或异号，选B。
+\crosscheck 不同半径不必意味着动量不同；非相对论周期 $2\pi m/(|q|B)$。
+\sourceproblem{选择17}{122}{128}
+\problemtext 长直电流向上，圆环与其直径重合且绝缘，图示环电流顺时针，判断环的受力方向。
+\workings 环左半边电流的竖直分量向上，与直线同向，受吸引向右；右半边向下，受排斥向右。上下对应点的竖直力分量抵消，故环合力向右，选C。
+\crosscheck 理想零线径交叉点处场奇异；实际绝缘导线须有有限间隔，以上为对称正则化后的定性平面模型。
+\sourceproblem{选择18}{122}{128}
+\problemtext 匀强水平磁场中的圆导线，图示顶部a、右下b、左下c三个等长电流元，比较安培力大小。
+\workings $dF=IB\,dl|\sin\alpha|$，a处切线近水平，b处切线最接近垂直，c介于两者之间，故 $F_b>F_c>F_a$，选C。
+\crosscheck 只比较图示短电流元，不能使用其径向方向代替切向。
+\sourceproblem{选择19}{123}{129}
+\problemtext 玻尔圆轨道电子按图顺时针运动，外磁场入纸面，假定半径不变，判断角速率。
+\workings 图中右端电子向下，$-e\bm v\times\bm B$ 向外。径向方程 $mr\omega^2=k_ee^2/r^2-eBr\omega$，即 $\omega^2+(eB/m)\omega-\omega_0^2=0$，正根小于 $\omega_0$，选B。
+\crosscheck 为指定半径的经典力学模型，不代表真实原子轨道量子响应。
+\sourceproblem{选择20}{123}{129}
+\problemtext 铜板电子漂移向上，磁场入纸面，a在左、b在右，比较霍尔电势。
+\workings $\bm v\times\bm B$ 向左，电子磁力向右，右侧积累负电荷，故 $V_a>V_b$，选A。
+\crosscheck 平衡横向电场向右，与负电子电力向左相符。
+\sourceproblem{选择21}{123}{129}
+\problemtext 两电子垂直同一匀强磁场入射，A速率为B两倍，比较半径与周期。
+\workings 非相对论 $r=mv/(eB)$、$T=2\pi m/(eB)$，故半径比2:1、周期比1:1，选D。
+\crosscheck 若为相对论速率，半径按动量而非速率，周期亦含洛伦兹因子。
+\sourceproblem{选择22}{123}{129}
+\problemtext 四等质量、等电荷量绝对值粒子从右侧O向左射入出纸面磁场，判断动能最大负粒子轨迹。
+\workings 向左速度与出纸面磁场叉积向上，负电荷向下弯曲，候选Oc、Od。Oc曲率半径较大，动量较大、动能较大，选C。
+\crosscheck 即使相对论动能仍随动量严格增大；不能仅按轨迹长度判断。
+\sourceproblem{选择23}{123}{129}
+\problemtext 图示速度选择器电场向右、磁场出纸面、粒子向下入射，求无偏转条件。
+\workings $\bm F=q(\bm E+\bm v\times\bm B)$，两项反向；$v=E/B$ 时合力为零，沿中心线过两狭缝，选B。
+\crosscheck 条件不依质量或电荷符号；偏转方向则与电荷符号有关。
+\sourceproblem{选择24}{123}{129}
+\problemtext 电荷垂直匀强磁场入射，比较动能和动量。
+\workings 磁力恒与速度垂直，功率为零，动能不变；非零电荷和速度下动量方向持续变化，选C。
+\crosscheck 动量大小不变但矢量改变，不能混淆二者。
