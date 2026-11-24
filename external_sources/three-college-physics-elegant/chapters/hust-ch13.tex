@@ -64,3 +64,63 @@
 \problemtext 单缝宽0.10 mm、焦距50.0 cm、波长546 nm。分别浸入水（n=1.33）、改700 nm光、缝宽减半、缝横移或轴向移动2 cm，讨论中央明纹。
 \workings 原全宽 $w=2f\tan[\arcsin(\lambda/a)]\approx5.46$ mm。保持对应其他条件（特别是有效焦距）不变时，浸水宽度约4.11 mm，换红光约7.00 mm，缝宽减半约10.92 mm；理想平行照明和后焦面观察下，横移或轴移不改变衍射角强度分布及中央位置。
 \crosscheck 实际透镜浸水会改变焦距，若不另给透镜折射率不能算真实新宽度；有限孔径和非平行照明也可能改变平移结果。
+
+\sourceproblem{13-T17}{86}{90}
+\problemtext 单缝衍射的P点为第二暗纹，求图中边缘光程差BC、半波带数及缝宽减半后的级次。
+\workings $BC=a\sin\theta=2\lambda$，故分成4个半波带；缝宽减半时同方向光程差为 $\lambda$，成为第一暗纹。
+\crosscheck 观察方向不变，不能把原级次直接保留。
+\sourceproblem{13-T18}{86}{90}
+\problemtext 缝宽0.5 mm、焦距50 cm、波长650 nm，求第一暗纹和第一旁极大距中央位置。
+\workings 令 $\beta=\pi a\sin\theta/\lambda$，归一化强度为 $(\sin\beta/\beta)^2$。第一暗纹 $\beta=\pi$，$x=f\tan\theta\approx0.650$ mm。旁极大满足 $\beta\cos\beta-\sin\beta=0$，第一正非零极大根 $\beta_1=4.493409$，得 $x_1\approx0.930$ mm。半波带近似取 $3\pi/2$，则为0.975 mm。
+\crosscheck 两侧位置对称，半波带近似并非精确极大；焦面角度很小。
+\sourceproblem{13-T19}{86}{90}
+\problemtext 缝宽0.600 mm、屏距40.0 cm，距中央1.40 mm处为明纹，求波长、级次、半波带数。
+\workings 按远场模型，边缘光程差 $\delta=ay/\sqrt{D^2+y^2}\approx2100$ nm。设第 $k$ 个旁极大对应 $\tan\beta_k=\beta_k$、$k\pi<\beta_k<(k+1/2)\pi$，则 $\lambda_k=\pi\delta/\beta_k$；例如 $k=3$ 得约605 nm，$k=4$ 得约469 nm。教材半波带近似给 $\lambda_k\simeq2\delta/(2k+1)$，对应两例600、466.7 nm及7、9个半波带。
+\crosscheck 原页未给波长范围或额外级次条件，即使限制可见光也不唯一；精确极大对应的半波长数 $2\beta_k/\pi$ 并非整数。自由传播的夫琅禾费近似还需足够小菲涅耳数；给定几何和可见波长时该数并不很小，以上为教材远场假设下的条件解。
+\sourceproblem{13-T20}{87}{91}
+\problemtext 保持双缝中心距不变，略增每缝宽，判断中央衍射包络宽度和其中干涉纹数。
+\workings 包络边界 $|\sin\theta|=\lambda/a$，增大a使中央包络变窄；主干涉级满足 $|m|<d/a$，因此可容纳的级数不增加，跨过整数阈值才减少。
+\crosscheck 教材通常答变窄、减少；任意微小增宽并不保证离散条数立即改变。
+\sourceproblem{13-T21}{87}{91}
+\problemtext 双缝波长550 nm、缝距0.15 mm、缝宽0.030 mm，求中央包络内完整纹数及一侧第三亮纹与中央强度比。
+\workings $d/a=5$，干涉亮纹中心 $m=0,\pm1,\ldots,\pm4$ 共9条完整亮纹，第5级缺级。教材在第3级干涉中心取 $\beta=3\pi a/d=3\pi/5$，得
+\[
+I_3/I_0=[\sin(3\pi/5)/(3\pi/5)]^2\approx0.2546.
+\]
+\crosscheck 若求乘积强度真正局部极大，须令 $d[(\sin\beta/\beta)^2\cos^2(5\beta)]/d\beta=0$，峰位较理想干涉中心略移；上式是中心位置强度而非严格峰值。
+\sourceproblem{13-T22}{87}{91}
+\problemtext 双缝中心距0.10 mm、缝宽0.02 mm，求中央包络内主极大数；两缝中间再开相同缝后比较。
+\workings 双缝 $d/a=5$，允许 $|m|<5$，共9个主干涉中心。加中缝后等间隔三缝的相邻距为0.05 mm，$|m|<2.5$，故 $m=0,\pm1,\pm2$ 共5个主极大中心。
+\crosscheck 三缝的次极大不计入主极大；包络边界缺级不算亮纹。
+\sourceproblem{13-T23}{88}{92}
+\problemtext 600 nm光正入射每毫米500刻线光栅，求第二级衍射角。
+\workings $d=2.00$ 微米，$\sin\theta_2=2\lambda/d=0.6$，故 $\theta_2=\pm36.87^\circ$。
+\crosscheck 若第二级恰缺级则不可观察；题意默认可见。
+\sourceproblem{13-T24}{88}{92}
+\problemtext 450与750 nm谱线在光栅谱中重叠，求750 nm谱线的级次。
+\workings $450m_1=750m_2$，即 $3m_1=5m_2$，所以 $m_1=5j,m_2=3j$，最低正重叠级次为3。
+\crosscheck 还须满足栅距的角度限制及无缺级；零级两波长也重叠。
+\sourceproblem{13-T25}{88}{92}
+\problemtext 656.3及410.2 nm两谱线在41度重合，求栅距。
+\workings $d\sin41^\circ=m_1\lambda_1=m_2\lambda_2$。波长比近似8:5，最低小整数匹配为 $m_1=5,m_2=8$，故 $d\simeq5(656.3)/\sin41^\circ\approx5.002$ 微米。共同级次乘整数也给相应栅距。
+\crosscheck 原波长按给定精度舍入，$5(656.3)=3281.5$ nm 与 $8(410.2)=3281.6$ nm 略异；不能称严格相等。未规定最低级次，栅距不唯一；若将小数视为精确数，则须用既约整数比4102:6563，不能取5:8作为精确级次。
+\sourceproblem{13-T26}{88}{92}
+\problemtext 600 nm光栅第二、三级主极大在 $\sin\theta=0.20,0.30$，第四级缺级，求栅距、缝宽、全部可见级次。
+\workings $d=2\lambda/0.20=6$ 微米。第四级缺级给 $4a/d=j$；在 $0<a<d$ 内，$j=1,2,3$，第二级已出现排除 $j=2$。故 $a=1.5$ 或4.5微米，最小缝宽为1.5微米。两者缺级均为非零4的倍数。几何允许 $|m|\le10$，排除 $\pm4,\pm8$，其余为0及 $\pm1,\pm2,\pm3,\pm5,\pm6,\pm7,\pm9,\pm10$。
+\crosscheck 十级为90度掠射，普通有限屏不接收，实际有限角谱线止于九级。原题不能唯一决定缝宽；两种缝宽的包络强度不同。
+\sourceproblem{13-T27}{89}{93}
+\problemtext 方解石晶面间距取 $3.029\times10^{-10}$ m，掠射角43度20分及40度42分处各一主极大，求两X射线波长。
+\workings 布拉格条件 $2d\sin\theta=m\lambda$，故 $\lambda_1=2d\sin(43^\circ+20'/60)/m_1$、$\lambda_2=2d\sin(40^\circ+42'/60)/m_2$，角度中的分数以度计。若均为一级，则分别约0.416 nm、0.395 nm。
+\crosscheck 原题未指定衍射级次；若晶格常数并非所用晶面间距，还需晶面指数。一级数值只是教材常用假设。
+\sourceproblem{13-T28}{89}{93}
+\problemtext 单色X射线一级布拉格角3.4度，求二级反射角。
+\workings 同一晶面 $2d\sin\theta_m=m\lambda$，故 $\theta_2=\arcsin(2\sin3.4^\circ)\approx6.812^\circ$。
+\crosscheck 角度为对晶面的掠射角；若测散射夹角则为其两倍。
+\sourceproblem{13-T29}{90}{94}
+\problemtext 卫星距地160 km、焦距2.4 m、地面分辨间距0.36 m，波长550 nm，仅计衍射求有效孔径。
+\workings 圆孔瑞利判据 $\theta_{\min}=1.22\lambda/D_a$，近天底观察 $\theta\simeq0.36/(160000)$，得 $D_a=1.22(550\times10^{-9})(160000)/0.36\approx0.298$ m。
+\crosscheck 焦距在物方角分辨公式中约去；不考虑像元、像差、大气及运动模糊。
+\sourceproblem{13-T30}{90}{94}
+\problemtext 人眼最小分辨角 $2.20\times10^{-4}$ rad，纱窗两丝相距2.00 mm，求最远分辨距离。
+\workings 小角近似 $L_{\max}=s/\theta_R\approx9.09$ m。
+\crosscheck 若两丝连线不垂直视线，用其横向投影间距；题意取正视。
