@@ -1,4 +1,5 @@
 % Consolidated guide-ch01 from 9a1384ddf1afcd855b09256c9c6f1c90b5023140; source fragments preserved.
+% 2026-11-24 八批严格二校第5批：历史片段哈希对应修改前版本。
 
 % === BEGIN guide-ch01-examples.tex blob ab87471bc89aa3db8ef41432cf72c464961ddf43 ===
 % 《大学物理学学习指导（第5版）》第1章：例1.1—1.5。
@@ -7,9 +8,9 @@
 
 \sourceexample{1.1}{9--10}{17--18}
 \problemtext 平面运动质点的位置为$x=3t\,\mathrm m,\ y=(1-t^2)\,\mathrm m$。
-求：(1)轨迹；(2)$t=3\,\mathrm s$的位置矢量；(3)第2秒内位移、平均速度；
+取物理时间$t\ge0$时，轨迹仅含$x\ge0$的分支。求：(1)轨迹；(2)$t=3\,\mathrm s$的位置矢量；(3)第2秒内位移、平均速度；
 (4)$t=2\,\mathrm s$的速度和加速度；
-(5)$t$时切向、法向加速度大小；
+(5)$t$时切向加速度（沿速度方向为正）与法向加速度大小；
 (6)$t=2\,\mathrm s$曲率半径。
 \workings
 由$t=x/3$消去$t$，轨迹为$y=1-x^2/9$（坐标数值按米取）。
@@ -78,14 +79,14 @@ v(t)=v_0\cos(\sqrt\beta\,t).}
 \workings
 $\omega=\dot\theta=-3bt^2,\quad\alpha=\dot\omega=-6bt$，故
 \[
-a_\tau=R\alpha=-6Rbt,\qquad
+a_\theta=R\alpha=-6Rbt,\qquad
 a_n=R\omega^2=9Rb^2t^4,
 \]
 \[
 |\bm a|=\sqrt{(6Rbt)^2+(9Rb^2t^4)^2}
 =3Rbt\sqrt{4+9b^2t^6}\quad(t\ge0).
 \]
-对$t>0$，与径向直线成$45^\circ$时$|a_\tau|=a_n$，即
+对$t>0$，与径向直线成$45^\circ$时$|a_\theta|=a_n$（沿速度的切向分量为$6Rbt$），即
 $6Rbt=9Rb^2t^4$，得到
 \[
 t_*=\left(\frac{2}{3b}\right)^{1/3},\qquad
