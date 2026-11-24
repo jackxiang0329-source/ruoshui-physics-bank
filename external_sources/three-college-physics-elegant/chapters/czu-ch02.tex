@@ -221,7 +221,7 @@ s_{1/2}=\int_0^{v_M/2}\frac{mv\,\mathrm dv}{k(v_M^2-v^2)}
 \problemtext 均匀密度地球直径隧道模型，$R=6.4\times10^6\,\mathrm m,\rho=5.5\times10^3\,\mathrm{kg/m^3}$，求物体过地心速率。
 \workings 球壳定理给出 $a_r=-4\pi G\rho r/3$。若从地表静止释放，简谐运动角频率 $\Omega=\sqrt{4\pi G\rho/3}$，中心最大速率
 \[
-v_c=R\sqrt{4\pi G\rho/3}\approx7.94\times10^3\,\mathrm{m/s}
+v_c=R\sqrt{4\pi G\rho/3}\approx7.93\times10^3\,\mathrm{m/s}
 \]
 （取 $G=6.67\times10^{-11}$）。
 \crosscheck 原书未明确初态；若从地表具有初速 $v_i$，则 $v_c^2=v_i^2+4\pi G\rho R^2/3$。均匀球、无阻力、忽略自转是假设，不能当作真实地球精确值。
@@ -253,7 +253,7 @@ s=\frac R\mu\ln(1+\mu v_0t/R).
 \sourceproblem{应用1}{31}{37}
 \problemtext 两混凝土板质量 $m_1=200\,\mathrm{kg}$、$m_2=100\,\mathrm{kg}$，框架与绳质量忽略，求共同向上加速度分别为10.0及1.0米每平方秒时的钢丝绳张力和乙对甲作用力。
 \workings 整体竖直动力学 $T=(m_1+m_2)(g+a)$。若甲在乙上方且仅由乙支承，则 $N_{2\to1}=m_1(g+a)$ 向上。取 $g=9.8\,\mathrm{m/s^2}$，分别得 $(T,N)=(5940,3960)\,\mathrm N$ 及 $(3240,2160)\,\mathrm N$。
-\crosscheck 原题页未画出两板支承图，因此接触力数值以甲由乙直接支承为条件；若乙在上，作用于甲的接触力方向和大小须按乙的受力另算。整体张力在单根竖直承重绳模型下不依赖堆放顺序。
+\crosscheck 原题页未画出两板支承图，因此接触力数值以甲由乙直接支承为条件；若乙在上且甲直接支承乙，则乙对甲作用力向下，大小为 $m_2(g+a)$，分别为 $1980\,\mathrm N$ 和 $1080\,\mathrm N$；若另有框架直接支承，则须按具体接触关系列式。整体张力在单根竖直承重绳模型下不依赖堆放顺序。
 \sourceproblem{应用2}{32}{38}
 \problemtext 外轨超高使轨道横向倾角为 $\theta$，质量 $m$ 的火车沿水平半径 $R$ 的圆弧行驶，求无侧压力的速率及任意速率的侧压力。
 \workings 将加速度沿倾斜轨面横向（向内下坡为正）投影。设轨道侧向作用力 $F_s$ 沿轨面，则
@@ -261,7 +261,7 @@ s=\frac R\mu\ln(1+\mu v_0t/R).
 F_s+mg\sin\theta=\frac{mv^2}{R}\cos\theta.
 \]
 故 $v_0=\sqrt{gR\tan\theta}$；$F_s=m(v^2\cos\theta/R-g\sin\theta)$。$v>v_0$ 时轨对车向内，车压外轨；$v<v_0$ 时反向，车压内轨。侧压力大小取绝对值。
-\crosscheck 侧向力定义为沿横向倾斜轨面分量；若采用完全水平的轮缘侧力模型，则应重新投影，得到不同的表达式，不能混用。$\theta=0$ 时恢复 $mv^2/R$。
+\crosscheck 侧向力定义为沿横向倾斜轨面分量；若采用完全水平的轮缘侧力模型，且另一支持力垂直轨面，则竖直平衡给 $N\cos\theta=mg$，水平方向给 $F_{s,h}=m(v^2/R-g\tan\theta)$（向内为正）；两种侧力定义不能混用。$\theta=0$ 时恢复 $mv^2/R$。
 \sourceproblem{应用3}{32}{38}
 \problemtext 质量50千克的跳水者从10米高台静止下落，入水后重力与浮力近似抵消，平方阻力系数20千克每米，求降至2米每秒前下沉距离。
 \workings 忽略空中阻力，$v_0=\sqrt{2gh}$。在水中向下取正，$mv\,\mathrm dv/\mathrm dy=-kv^2$，积分 $v=v_0e^{-ky/m}$。因此
