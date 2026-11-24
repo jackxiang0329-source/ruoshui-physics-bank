@@ -1148,9 +1148,27 @@ def thirteenth_guide_regressions():
     assert [m for m in range(-4,5)]==[-4,-3,-2,-1,0,1,2,3,4]
     d=2*600e-9/.2
     near(d*1e6,6)
-    near(d/4*1e6,1.5)
-    assert [k for k in range(-9,10) if k%4==0]==[-8,-4,0,4,8]
-    assert len([k for k in range(-9,10) if k==0 or k%4!=0])==15
+    # QA 5/8 guide 13.4: visible orders 2 and 3 eliminate m=2.
+    candidates=[m for m in (1,2,3) if (2*m)%4 and (3*m)%4]
+    assert candidates==[1,3]
+    for m in candidates:
+        near(d*m/4*1e6,1.5*m)
+        assert [k for k in range(-9,10) if k!=0 and (k*m)%4==0]==[-8,-4,4,8]
+        assert len([k for k in range(-9,10) if k==0 or (k*m)%4])==15
+    # Guide 9.10: grounded shield is a three-terminal network.
+    c1,ca,cb=1.,2.,3.
+    ua,ub=1.,0.
+    qa=c1*(ua-ub)+ca*ua
+    qb=c1*(ub-ua)+cb*ub
+    near(qa,c1+ca)
+    near(-qb,c1)
+    ua,ub=cb/(ca+cb),-ca/(ca+cb)
+    qa=c1*(ua-ub)+ca*ua
+    qb=c1*(ub-ua)+cb*ub
+    near(qa+qb,0)
+    near(qa,c1+ca*cb/(ca+cb))
+    # Guide 10.8: integral sin^3(theta) dtheta = 4/3.
+    near((-math.cos(pi)+math.cos(pi)**3/3)-(-1+1/3),4/3)
     # 13.5--13.6 grating density: source printed text contradicts worked example.
     d_cm=1e-2/590  # literal 590 lines / cm
     d_mm=1e-3/590  # implied by printed worked solution
