@@ -1,4 +1,5 @@
 % Consolidated guide-selftest04 from 97b62cc61307eba158a4498b55de3a5fdef3ff43; source fragments preserved.
+% 2026-11-24 八批严格二校第6批：旧片段哈希对应历史版本。
 
 % === BEGIN guide-selftest04-choices.tex blob 64b98f7ff8ad88542a616b5ccf2b4f4e5dd8f0bf ===
 % 第16批：扫描原书自测题4选择，共10题；题意独立转述。
@@ -24,7 +25,7 @@
 \workings 目标相位需满足 $\cos\theta=-1/2$、$\sin\theta<0$，故 $\theta=4\pi/3$；从 $\pi/3$ 走过 $\pi$，$\Delta t=\pi/(2\pi)=\boxed{1/2\ {\rm s}}$，选 \textbf{C}。
 \crosscheck 必须同时利用位移和运动方向，另一个根 $2\pi/3$ 对应反向。
 
-\sourcetest{4.1.5}{93--94}{NaN}
+\sourcetest{4.1.5}{93--94}{101--102}
 \problemtext 振幅 $4$ cm、周期 $2$ s；$t=0$ 第一次经过 $x=-2$ cm 时沿负向，求第二次经过该位置的时刻。
 \workings 首经过可取相位 $2\pi/3$（$\sin\varphi>0$），第二次对应 $4\pi/3$，故 $\Delta t=(2\pi/3)/\omega=(2\pi/3)/\pi=\boxed{2/3\ {\rm s}}$，选 \textbf{B}。
 \crosscheck “第二次”指下一次经过同一位置，方向变为正向，不是一整个周期。
@@ -41,13 +42,13 @@
 
 \sourcetest{4.1.8}{94}{102}
 \problemtext 行进的简谐弹性波中某质点恰处于平衡位置，比较该处动能和势能。
-\workings 行波位移 $y=A\cos(\omega t-kx)$；质点速度 $y_t=-A\omega\sin\theta$，局部应变 $y_x=Ak\sin\theta$。两种能量密度均与 $\sin^2\theta$ 成正比；$y=0$ 时二者同时最大，选 \textbf{C}。
+\workings 行波位移 $y=A\cos(\omega t-kx)$；质点速度 $y_t=-A\omega\sin\theta$，局部应变 $y_x=Ak\sin\theta$。对无耗散线性一维行波，弦的单位长度动能与弹性势能分别为$\mu y_t^2/2$、$F_T y_x^2/2$，由$F_T/\mu=u^2$及$\omega=uk$知两者相等，均与 $\sin^2\theta$ 成正比；$y=0$ 时二者同时最大，选 \textbf{C}。
 \crosscheck 不能机械套用单个弹簧振子的“平衡点势能零”，行波弹性势能由空间梯度决定。
 
 \sourcetest{4.1.9}{94}{102}
 \problemtext 两相干源到点 $P$ 的距离分别为 $r_1,r_2$，初相 $\varphi_1,\varphi_2$；求 $P$ 的干涉极大相位条件。
 \workings 到达 $P$ 的两相位为 $\varphi_j-2\pi r_j/\lambda$，所以 $\boxed{\varphi_2-\varphi_1+2\pi(r_1-r_2)/\lambda=2k\pi}$；选 \textbf{D}。
-\crosscheck 此式允许两源初相不相等；单靠路程差为整数波长并不足够。
+\crosscheck 此式假设两波同频、相干、在该点存在共同振动分量；此式允许两源初相不相等；单靠路程差为整数波长并不足够。
 
 \sourcetest{4.1.10}{94}{102}
 \problemtext 等振幅、同频率的两列反向传播简谐波 $y_{1,2}=A\cos[2\pi(\nu t\mp x/\lambda)]$ 叠加，求驻波的波节。
@@ -71,7 +72,7 @@
 
 \sourcetest{4.2.3}{95}{103}
 \problemtext 题4.2.1图示振幅为4个纵轴单位，$t=0$ 时 $x=-2$ 且正在向正向运动，$t=2$s 下降经过平衡点；写出周期和余弦式初相。
-\workings 下降过平衡点时的相位为 $\pi/2$（模 $2\pi$）；$t=0$ 为 $\cos\varphi=-1/2$ 且 $v>0$，可取 $\varphi=-2\pi/3$。从 $-2\pi/3$ 到 $\pi/2$ 的相位跨度为 $7\pi/6$，据此 $\omega=7\pi/12$rad/s、$\boxed{T=24/7\ {\rm s}}$。
+\workings 下降过平衡点时的相位为 $\pi/2$（模 $2\pi$）；$t=0$ 为 $\cos\varphi=-1/2$ 且 $v>0$，可取 $\varphi=-2\pi/3$。从 $-2\pi/3$ 到 $\pi/2$ 的相位跨度为 $7\pi/6$，若图中两时刻之间没有额外整周期，据此 $\omega=7\pi/12$rad/s、$\boxed{T=24/7\ {\rm s}}$。仅凭两端状态还允许$\omega=(7+12n)\pi/12$ rad/s、$T=24/(7+12n)$ s，$n=0,1,\ldots$。
 \crosscheck 图中零点的时间标注需要独立对照：若印刷图仅为示意而非精确刻度，周期不应由图形长度估读；本条保留待复核。
 
 \sourcetest{4.2.4}{95}{103}
@@ -81,8 +82,8 @@
 
 \sourcetest{4.2.5}{95}{103}
 \problemtext 相干波源 $S_1,S_2$ 相距 $3\lambda/4$，两源等振幅；在 $S_1$ 左侧各点合波强度为单源4倍，求两源初相差。
-\workings 该侧任意点的传播路程差为 $r_2-r_1=3\lambda/4$；强度达到4倍表明同相抵达：$\varphi_2-\varphi_1-2\pi(3/4)=2k\pi$，故 $\boxed{\varphi_2-\varphi_1=3\pi/2\equiv-\pi/2\pmod{2\pi}}$。
-\crosscheck “某侧各点”成立的原因是两源在同一直线上，路程差恒定。
+\workings 该侧任意点的传播路程差为 $r_2-r_1=3\lambda/4$；假设两波在观察点的单独强度相等、振动方向相同且“各点”限于两源连线的左侧射线，强度达到4倍表明同相抵达：$\varphi_2-\varphi_1-2\pi(3/4)=2k\pi$，故 $\boxed{\varphi_2-\varphi_1=3\pi/2\equiv-\pi/2\pmod{2\pi}}$。
+\crosscheck 恒定路程差只在两源连线外侧射线上成立，不能推广到整个左半平面；若有几何衰减，源等幅也不保证到达点等幅。
 
 \sourcetest{4.2.6}{95}{103}
 \problemtext 题4.2.3图给出同一右行波在 $t=0$ 与 $T/4$ 的波形；画出标记点 $P$ 的振动图线。
@@ -121,13 +122,13 @@
 
 \sourcetest{4.3.2}{96}{104}
 \problemtext 质量2kg的物块放于竖直振动平板上，板周期0.5s、振幅4cm；板初始在上方最大位移处，求物块对板压力与开始离板的临界振幅。
-\workings 取竖直向上为正、$z=A\cos\omega t$，$\omega=2\pi/T=4\pi$rad/s。接触时 $N-mg=m\ddot z=-m\omega^2 z$，即 $N=m(g-\omega^2 z)$。若板在最高点，$N_{\min}=m(g-\omega^2A)\simeq2(9.8-16\pi^2\cdot0.04)=\boxed{6.97\ {\rm N}}$；最低点 $N_{\max}=m(g+\omega^2A)\simeq\boxed{32.23\ {\rm N}}$。临界最高点 $N_{\min}=0$，$A_c=g/\omega^2\simeq\boxed{6.21\ {\rm cm}}$。
+\workings 取竖直向上为正、$z=A\cos\omega t$，$\omega=2\pi/T=4\pi$rad/s。接触时 $N-mg=m\ddot z=-m\omega^2 z$，即 $N=m(g-\omega^2 z)$。若板在最高点，$N_{\min}=m(g-\omega^2A)\simeq2(9.8-16\pi^2\cdot0.04)=\boxed{6.97\ {\rm N}}$；最低点 $N_{\max}=m(g+\omega^2A)\simeq\boxed{32.23\ {\rm N}}$。临界最高点 $N_{\min}=0$（恰临界时接触力仅瞬时为零，真正离板要求振幅超过临界值），$A_c=g/\omega^2\simeq\boxed{6.21\ {\rm cm}}$。
 \crosscheck 原题表述“物体对平板的压力”数值等于平板支持力；从最高点出发处压力为最小值，尚未离板。
 
 \sourcetest{4.3.3}{96}{104}
 \problemtext 题4.3.1图给出向左传播的同一简谐波在 $t=0$ 和 $t=2$s 的波形，两图向左平移20m；已知原点处 $t=0$ 过零且初速度为正，$t=2$s 位移为 $A/\sqrt2$，求原点振动式和波动式。
 \workings 左行波写为 $y=A\sin(\omega t+kx)$。在原点两时刻相位由0增加 $\pi/4$，故取图示最小相移 $\omega(2\,{\rm s})=\pi/4$，$\omega=\pi/8$rad/s。两图相移20m对应 $k\,20=\pi/4$，$k=\pi/80$rad/m，从而 $u=\omega/k=10$m/s。故 $\boxed{y(0,t)=A\sin(\pi t/8)}$，$\boxed{y(x,t)=A\sin(\pi t/8+\pi x/80)}$。
-\crosscheck 波形在2s内向左移20m；若不排除整周期别名 $\omega 2=\pi/4+2n\pi$，单凭两幅快照不能唯一决定频率；本解采用原图绘示的最短相移分支，需保留图示条件标记。
+\crosscheck 波形在2s内向左移20m；若不排除整周期别名且原图未提供独立空间波长，两时刻相位还可为$\pi/4+2n\pi$或$3\pi/4+2n\pi$（第二时刻速度符号未给）。若已知实际左移20 m，则$u=10$ m/s，$\omega=\theta_2/2$、$k=\theta_2/20$；若20 m仅是两周期波形的最小平移，还存在额外整波长的位移分支。本解采用原图绘示的最短相移分支，需保留图示条件标记。
 
 \sourcetest{4.3.4}{96}{104}
 \problemtext 一右行波速500m/s，点 $P$ 位于 $x=1$m，$y_P=0.03\cos(500\pi t-\pi/2)$（SI）；求全波波动式及 $t=0$ 波形。
@@ -136,7 +137,7 @@
 
 \sourcetest{4.3.5}{96}{104}
 \problemtext 右行声波频率 $f_n$、波长 $\lambda_n$，遇到向左匀速移动的刚性平面（速率 $v_0<c$）后反射；求 $\Delta t$ 内入射波峰数、反射波最前端距离以及反射波长。
-\workings 入射波与反向运动平面的相遇速率为 $c+v_0$，碰到平面的波峰数 $\boxed{N=f_n(1+v_0/c)\Delta t}$。最初反射波峰左行速率 $c$，平面左移 $v_0\Delta t$，故两者末距 $\boxed{d=(c-v_0)\Delta t}$。反射波峰间距 $\lambda_r=(c-v_0)/(f_n(1+v_0/c))=\boxed{\lambda_n(c-v_0)/(c+v_0)}$。
+\workings 入射波与反向运动平面的相遇速率为 $c+v_0$，平均相遇频率为$f_n(1+v_0/c)$，故连续计数估计 $\boxed{N=f_n(1+v_0/c)\Delta t}$；实际有限时间内的整数波峰数还取决于起止相位及端点计数。最初反射波峰左行速率 $c$，平面左移 $v_0\Delta t$，故两者末距 $\boxed{d=(c-v_0)\Delta t}$。反射波峰间距 $\lambda_r=(c-v_0)/(f_n(1+v_0/c))=\boxed{\lambda_n(c-v_0)/(c+v_0)}$。
 \crosscheck 此题壁面靠近声源，反射波波长缩短；当 $v_0\to0$ 恢复 $\lambda_r=\lambda_n$。
 
 \sourcetest{4.4.1}{96}{104}
