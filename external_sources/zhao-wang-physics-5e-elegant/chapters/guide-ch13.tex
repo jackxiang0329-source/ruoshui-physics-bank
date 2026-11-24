@@ -1,4 +1,5 @@
 % Consolidated guide-ch13 from f8f4709b0ffac9da4c1fecbf2ce873002f6da6cc; source fragments preserved.
+% 2026-11-24 八批严格二校第5批：历史片段哈希对应修改前版本。
 
 % === BEGIN guide-ch13-examples.tex blob c35545168f16e651dbdb66c94d5d4d935900bae0 ===
 % 《大学物理学学习指导》第5版，第13章“光的衍射”，例13.1—13.8
@@ -97,9 +98,9 @@ $m=\pm5$处恰遇单缝第一暗纹，属于缺级，因此
 \]
 缺第4级意味着光栅主极大与单缝某阶零点重合：
 $d/a=4/m$，其中$m=1,2,3$且$a<d$。
-因此有
+候选$a=1.5,3.0,4.5\,\mu\mathrm m$中，$a=3.0\,\mu\mathrm m$会使$2a/d=1$，即第2级也缺级，违背题设第2级亮纹存在。因此合法宽度为
 \[
-\boxed{a=1.5,\ 3.0,\ 4.5\,\mu\mathrm m}.
+\boxed{a=1.5\ \text{或}\ 4.5\,\mu\mathrm m}.
 \]
 若按原题要求取最小值$a=1.5\,\mu$m，
 $d/a=4$，第4、8等4的倍数级缺失。
@@ -109,8 +110,7 @@ $d/a=4$，第4、8等4的倍数级缺失。
 \boxed{k=0,\pm1,\pm2,\pm3,\pm5,\pm6,\pm7,\pm9}
 \]
 共$\boxed{15}$条主亮纹。
-\crosscheck 对另外两种允许缝宽，缺级周期不同；
-“15条”特指采用源解所取\emph{最小}的狭缝宽度方案。
+\crosscheck 另一合法宽度$a=4.5\,\mu$m对应$a/d=3/4$，因3与4互素，仍只缺非零4的倍数级，也有15条主亮纹。
 
 \sourceexample{13.5}{193}{201}
 \problemtext 三块光栅的刻线密度分别为1400、600、100条/mm，
@@ -131,7 +131,7 @@ $\sin\theta\simeq0.98$，第一级极接近掠射，
 第2块使一级波段约在
 $\arcsin(0.24)$至$\arcsin(0.42)$，
 约$14^\circ$—$25^\circ$，适于观测。
-故按题设选\textbf{600条/mm的第二块光栅}。
+若以一级光谱角度适中、易于成像为目标，可选\textbf{600条/mm的第二块光栅}；若只要求传播允许且角分散最大，1400条/mm也有完整一级光谱，不能无额外仪器约束断言唯一最优。
 \crosscheck 刻线密度越高不保证量程越好；
 还应同时考虑有限传播角、光谱重叠与仪器几何范围。
 
@@ -163,12 +163,12 @@ $3\lambda_V\le2\lambda_R$时有交叠，
 第一暗纹界限$a\sin\theta=\lambda$应不小于
 二级红光衍射角，即
 \[
-a\lesssim\frac{\lambda_R}{\sin\theta_{2,R}}
+a<\frac{\lambda_R}{\sin\theta_{2,R}}
 =\frac{\lambda_R}{2\lambda_R/d}
 =\frac d2
 \simeq8.47\times10^{-6}\,\mathrm m.
 \]
-故$\boxed{a_{\max}\simeq8.5\,\mu\mathrm m}$。
+故严格落在中央包络内部时$a<d/2\simeq8.47\,\mu$m；$d/2$是上确界，等号时整个第二级恰为缺级。
 \crosscheck \textbf{原书题面与印刷参考解存在单位矛盾：}
 题面确实印为\emph{每厘米590条}，即上述$d\simeq16.95\,\mu$m，
 角宽约$1.015^\circ$、$a_{\max}\simeq8.47\,\mu$m。
