@@ -136,3 +136,44 @@ w_l=\tfrac12\mu y_t^2+\tfrac12 F y_x^2=\mu A^2\omega^2\sin^2(kx-\omega t),
 \problemtext 两同相波源振幅均 $10^{-4}$ m、角频率 $10\pi$，P距两源4及10 cm；分别取波长4及0.6 cm，求合振幅与初相。
 \workings 按教材无衰减等振幅模型，合相量 $z=A(e^{-2\pi i r_1/\lambda}+e^{-2\pi i r_2/\lambda})$。波长4 cm时两相量反相，$z=0$，合振幅0，初相无定义。波长0.6 cm时路程差10个波长，两相量同相，合振幅 $2\times10^{-4}$ m，初相 $-2\pi(4/0.6)\equiv2\pi/3$。
 \crosscheck 若源至P的振幅存在几何衰减，两到达振幅未必相同，完全相消不必成立；原题未给衰减模型。
+
+\sourceproblem{11-T21}{76}{80}
+\problemtext 两列等振幅A、同频同波长的相干平面波相向传播。左行波在Q处为 $A\cos\omega t$，右行波在O处相对该振动超前 $\pi$；$OQ=l=1$ m，求合振动及频率400 Hz、波速400 m/s时的节点。
+\workings 令O为原点、Q在 $x=l$，$k=2\pi/\lambda$。两波分别为 $A\cos[\omega t+k(x-l)]$ 与 $A\cos(\omega t-kx+\pi)$。叠加得
+\[
+y=2A\cos[\omega t+(\pi-kl)/2]\cos[kx-(kl+\pi)/2].
+\]
+指定参数给 $\lambda=1$ m，节点满足 $kx-(kl+\pi)/2=(j+1/2)\pi$，在闭区间 $[0,1]$ 内为 $x=0,0.5,1$ m。
+\crosscheck 直接代入三点，两波均反相；相位差是不同参考点的已知量，不可直接当作任意P点的相位差。
+\sourceproblem{11-T22}{76}{80}
+\problemtext 原点波源向两侧发出 $A\cos\omega t$ 的行波，负轴 $x=-3\lambda/4$ 有波密介质反射面，求入射、反射及两个区域叠加。
+\workings 取理想全反射、位移反相模型，$d=3\lambda/4$。左行入射 $y_i=A\cos(\omega t+kx)$，右行直达 $y_+=A\cos(\omega t-kx)$；反射波 $y_r=A\cos(\omega t-kx-2kd+\pi)=A\cos(\omega t-kx)$。在 $-d\le x<0$，$y=2A\cos\omega t\cos kx$，是驻波，节点 $x=-3\lambda/4,-\lambda/4$，波腹 $x=-\lambda/2,0$（O取左极限）。在 $x>0$，$y=2A\cos(\omega t-kx)$，为同向相长行波。
+\crosscheck 反射面位移为零；反射波到O的附加相位为整周。采用给定波源的线性叠加模型，忽略反射对源振幅的反馈。
+\sourceproblem{11-T23}{77}{81}
+\problemtext 正向行波在P全反射且反相，$OP=3\lambda/4,DP=\lambda/6$。初时O合振动过平衡点向负轴运动，入反射振幅A，求源初相与D合振动。
+\workings 设入射 $A\cos(\omega t-kx+\phi)$，反射 $A\cos(\omega t+kx-2kOP+\pi+\phi)$，因 $2kOP=3\pi$，合波 $2A\cos(\omega t+\phi)\cos kx$。O初位移零、速度负，故 $\phi=\pi/2$（模 $2\pi$）。$x_D=7\lambda/12$，$\cos kx_D=-\sqrt3/2$，所以
+\[
+y_D=-\sqrt3A\cos(\omega t+\pi/2)=\sqrt3A\sin(2\pi\nu t).
+\]
+\crosscheck P为节点；O与D的空间振幅符号相反，故振动反相。
+\sourceproblem{11-T24}{77}{81}
+\problemtext 汽笛发射400 Hz，岸上静止观察者测395 Hz，声速340 m/s，求源速度及远近方向。
+\workings 频率降低表明径向远离。沿视线运动且空气静止时 $\nu'=\nu u/(u+v_s)$，故 $v_s=340(400/395-1)\approx4.304$ m/s。
+\crosscheck 若航向与视线不平行，仅确定远离方向的径向速度分量，而非船速大小；忽略风速。
+\sourceproblem{11-T25}{78}{82}
+\problemtext 判断平面电磁波的电场、磁场与传播速度的方向关系。
+\workings 真空或均匀各向同性无损介质的平面行波中，$\bm E,\bm H,\bm u$ 两两垂直且 $\bm E\times\bm H$ 指向传播方向，构成右手系，选B。
+\crosscheck 无损行波电磁场同相，不差 $\pi/2$；驻波、近场与有损介质须另行讨论。
+\sourceproblem{11-T26}{78}{82}
+\problemtext 真空正x向平面波 $E_z=E_0\cos[2\pi(\nu t-x/\lambda)]$，求磁场强度分量。
+\workings $\bm H=\sqrt{\varepsilon_0/\mu_0}\bm e_x\times\bm E$，因 $\bm e_x\times\bm e_z=-\bm e_y$，得 $H_y=-\sqrt{\varepsilon_0/\mu_0}E_0\cos[2\pi(\nu t-x/\lambda)]$，选C。
+\crosscheck $\bm e_z\times(-\bm e_y)=\bm e_x$；磁场与电场传播相位一致。
+\sourceproblem{11-T27}{78}{82}
+\problemtext 自由空间平面波沿正x传播，电场沿y、振幅300 V/m、波长3 m，求频率、角频率、波数、磁感应强度及能流密度。
+\workings 取 $c=3\times10^8$ m/s，$\nu=10^8$ Hz，$\omega=2\pi\times10^8$ rad/s，$k=2\pi/3$ rad/m。磁场沿z，$B_m=E_m/c=10^{-6}$ T，与E同相。令 $\theta=\omega t-kx+\phi$，则
+\[
+\bm S=\frac{\bm E\times\bm B}{\mu_0}
+=\frac{300(10^{-6})}{\mu_0}\cos^2\theta\,\bm e_x,\qquad
+\overline{\bm S}=\frac{300^2}{2\mu_0c}\bm e_x\approx119.4\,\mathrm{W/m^2}\bm e_x .
+\]
+\crosscheck 峰值约238.7 W每平方米；时间平均因子为1/2。
