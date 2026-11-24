@@ -90,3 +90,20 @@ y_B=A_0\cos(\omega t-2ka).
 \]
 与B同相且振幅相同的位置为 $x=3a+n(2\pi u/\omega)$，$n\in\mathbb Z$。
 \crosscheck 同状态包括位移和速度，要求相位差为整周；若波尚未传播到某点，该点不能计入已振动区域。
+
+\sourceproblem{计算3}{20}{26}
+\problemtext 图10给定正向简谐行波初始波形，波速10米每秒，求原点振动及波动方程。
+\workings 放大图10可见振幅10厘米，原点与 $x=10\,\mathrm m$ 处为同向空间过零点，故 $\lambda=10\,\mathrm m$，$k=\pi/5\,\mathrm{rad/m}$，$\omega=ku=2\pi\,\mathrm{rad/s}$。初始波形为 $y(x,0)=0.10\sin(\pi x/5)$，沿正向平移得
+\[
+y(x,t)=0.10\sin(\pi x/5-2\pi t),\qquad
+y(0,t)=-0.10\sin(2\pi t)
+\]
+（SI）。
+\crosscheck 原点初始空间斜率为正，故初速度为负；$y(x,t)=y(x-ut,0)$ 与传播方向一致。
+\sourceproblem{计算4}{20}{26}
+\problemtext 正向行波波速2米每秒、周期0.2秒、振幅3厘米，初始 $x=1\,\mathrm m$ 处位移为负最大值，求波动方程。
+\workings $\lambda=uT=0.4\,\mathrm m$，$\omega=10\pi$，$k=5\pi$。令 $y=0.03\cos(10\pi t-5\pi x+\varphi)$，由 $-5\pi+\varphi\equiv\pi\pmod{2\pi}$ 得 $\varphi\equiv0$，所以
+\[
+y(x,t)=0.03\cos(10\pi t-5\pi x)\quad(\mathrm{SI}).
+\]
+\crosscheck 代入 $x=1,t=0$ 得 $-0.03\,\mathrm m$，此时质点速度为零；相位传播速率为2米每秒。
