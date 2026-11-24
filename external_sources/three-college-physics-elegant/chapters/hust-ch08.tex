@@ -74,3 +74,53 @@ v=v_0e^{-t/\tau},\quad x=v_0\tau(1-e^{-t/\tau}).
 \oint_c\bm E\cdot\mathrm d\bm l=k\pi(R_2^2-R_1^2)\approx1.59\,\mathrm{mV}.
 \]
 \crosscheck c回路对左右区使用同一纸外法向，而b回路使用纸内法向，故不能直接将a、b的环流相加；初始场强不进入磁通变化率。
+
+\sourceproblem{8-T10}{48}{52}
+\problemtext 半径 $R$ 的圆区内入纸面均匀磁场大小以速率 $k=\mathrm dB/\mathrm dt>0$ 增大，水平杆abc满足 $ab=bc=R$，a、b位于圆周。求三点感生场、电动势及端点电势。
+\workings 取O为原点，杆在 $y=-\sqrt3R/2$，a、b、c的横坐标为 $-R/2,R/2,3R/2$。感生场逆时针，大小在圆内为 $kr/2$、圆外为 $kR^2/(2r)$。故 $E_a=E_b=kR/2,E_c=kR/(2\sqrt3)$，方向沿各自逆时针切线。沿杆向右积分，ab段为 $\sqrt3 kR^2/4$，bc段为
+\[
+\frac{kR^2}{2}\left[\arctan\frac{x}{\sqrt3R/2}\right]_{R/2}^{3R/2}
+=\frac{\pi kR^2}{12}.
+\]
+总 $\mathcal E_{abc}=kR^2(\sqrt3/4+\pi/12)$。开路准静态时电荷重排使杆内总切向场为零，因此静电势 $V_c>V_a$，差为上述电动势。
+\crosscheck 圆边界内外感生场连续，c点距O为 $\sqrt3R$；感生场本身不可全局定义单值静电势。
+\sourceproblem{8-T11}{48}{52}
+\problemtext 边长20 cm正方形在入纸面且以0.1 T/s减小的均匀场中；左边ac中点b为圆心，求c,d,e,f感生场、三段及回路电动势和电势差（总电阻2欧）。
+\workings 取b为原点、右上为正，$k=0.1$，感生场 $\bm E=(k/2)(y\bm i-x\bm j)$。c,d,e,f坐标分别为 $(0,0.1),(0.1,0.1),(0.2,0.1),(0.2,0)$（m），代入得场矢量分别为 $0.005\bm i,0.005(\bm i-\bm j),0.005\bm i-0.010\bm j,-0.010\bm j$（V/m）。沿a-c-e-g顺时针，$\mathcal E_{ac}=0,\mathcal E_{ce}=1$ mV，$\mathcal E_{eg}=2$ mV，第四边1 mV，总4 mV。
+均匀导线每边0.5欧，电流2 mA顺时针。由 $V_P-V_Q=IR_{PQ}-\mathcal E_{PQ}$，得 $V_a-V_c=1$ mV（a高），$V_c-V_e=0$。
+\crosscheck 感生电动势不等同于静电势差；若导线电阻沿边分布不均匀，第四、五问须用实际分段电阻。
+\sourceproblem{8-T12}{49}{53}
+\problemtext 半径 $R$、高 $h$、电阻率 $\rho$ 的金属圆柱与均匀轴向磁场同轴，场以恒定速率 $k>0$ 变化，求涡流热功率。
+\workings 半径 $r$ 处感生场大小 $kr/2$，欧姆定律给体功率密度 $E^2/\rho$。积分
+\[
+P=\int_0^R\frac{k^2r^2}{4\rho}2\pi rh\,\mathrm dr
+=\frac{\pi hk^2R^4}{8\rho}.
+\]
+\crosscheck 假设外加场变化不被涡流显著改变，忽略趋肤及边缘效应；功率非负且与变化率平方成正比。
+\sourceproblem{8-T13}{49}{53}
+\problemtext 长螺线管芯由两个同轴磁介质区域组成，截面积 $S_1,S_2$、磁导率 $\mu_1,\mu_2$，长度 $l$、匝数 $N$，求自感。
+\workings 长管近似 $H=NI/l$，两个区域的磁通相加，$\Phi=NI(\mu_1S_1+\mu_2S_2)/l$，故
+\[
+L=\frac{N^2}{l}(\mu_1S_1+\mu_2S_2).
+\]
+\crosscheck 两区域为截面并列，不是沿轴串联；相同磁导率恢复总截面积公式。
+\sourceproblem{8-T14}{50}{54}
+\problemtext 电感器内阻 $R$、自感 $L$，与无感电阻 $R_0$ 串联接直流 $U_0$；开关S1接通后求电感器端电压，稳态后闭合旁路S2，求 $L/R$ 秒时S2电流。
+\workings 设电源正端经 $R_0$ 流向电感器。第一阶段 $\tau=L/(R+R_0)$，$i=U_0(1-e^{-t/\tau})/(R+R_0)$，电感器端电压
+\[
+U_L=Ri+L\dot i=\frac{U_0}{R+R_0}(R+R_0e^{-t/\tau}).
+\]
+S2闭合后短接电感器，原电感支路电流按 $i_L=U_0 e^{-Rt/L}/(R+R_0)$ 衰减，电源经 $R_0$ 的电流为 $U_0/R_0$，故在 $t=L/R$ 时
+\[
+i_{S2}=U_0/R_0-U_0/[e(R+R_0)].
+\]
+按图由左向右流过S2。
+\crosscheck 电感电流连续，端电压可突变；$R,R_0>0$，旁路电流为节点电流差而非两支路同向相加。
+\sourceproblem{8-T15}{50}{54}
+\problemtext 矩形截面螺绕环高 $h$、内外半径 $R_1,R_2$、总匝数 $N$，求自感及与轴线上直导线的互感。
+\workings 理想环内 $B=\mu_0NI/(2\pi r)$，截面磁通 $\Phi=\mu_0NIh\ln(R_2/R_1)/(2\pi)$，故
+\[
+L=\frac{\mu_0N^2h}{2\pi}\ln\frac{R_2}{R_1}.
+\]
+轴线电流 $i$ 产生的场为 $\mu_0i/(2\pi r)$，互感大小 $|M_{12}|=\mu_0Nh\ln(R_2/R_1)/(2\pi)$。对线性互易介质和与环交链一次的完整直线回路，$M_{21}=M_{12}$（按相容定向）。
+\crosscheck 单根无限直线不是闭路；互感严格定义须指定远处回流路径，采用题示理想回路且回流不再交链环芯。自感与匝数平方、互感与匝数一次成正比。
