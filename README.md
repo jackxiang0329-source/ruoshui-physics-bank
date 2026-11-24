@@ -30,7 +30,7 @@
 | **《普通物理学习题》中文整理** | [Irodov ElegantBook 专区](external_sources/irodov-zh-elegant/) | **原书 1,878 题**，分篇章节、中文推导、勘误与独立回归 |
 | 《普通物理学习题》合订 PDF | [直接查看 `main.pdf`](external_sources/irodov-zh-elegant/main.pdf) | 已编译的仓库内成品 |
 | **张三慧《大学物理学（第4版）》三书** | [进行中的 Draft PR #45](https://github.com/jackxiang0329-source/ruoshui-physics-bank/pull/45) | 分支持续录入与质检；未合并前不计入正式主库 |
-| **三校大学物理习题详解** | [ElegantBook 教材专区](external_sources/three-college-physics-elegant/) | 累计190道，天津理工、华中科技、常州工学院三书同步；未完成全书，待独立二校 |
+| **三校大学物理习题详解** | [ElegantBook 教材专区](external_sources/three-college-physics-elegant/) | 累计230个题号（2题扫描指数待核），天津理工、华中科技、常州工学院三书同步；未完成全书，待独立二校 |
 | **未审外部候选资源** | [分类导航](external_sources/catalog/中文分类导航.md) / [无损压缩归档](external_sources/_bundles/) | 19,837 份大型候选、318 份 UBC/IntroPhysics 及 80 份 WeBWorK PG 源程序无损打包；不进入正式题库 |
 | 技术质检与历史批次 | [QA 协议](docs/policies/qa_protocol.md) / [高难准入标准](docs/policies/high_difficulty_policy.md) / [历史记录](docs/history/project_history_2026.md) | 技术检查不等于第三方学术审定 |
 
