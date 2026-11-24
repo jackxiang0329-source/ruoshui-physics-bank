@@ -1,0 +1,45 @@
+\section{第11组：机械振动}
+\sourceproblem{11-T1}{66}{70}
+\problemtext 总电荷 $Q>0$、半径 $R$ 的均匀带电球沿直径有细隧道，质量 $m$、电荷 $-q$ 的质点沿隧道运动，证明简谐振动并求周期。
+\workings 忽略极细隧道去掉的电荷，均匀实心球内 $E_x=Qx/(4\pi\varepsilon_0R^3)$。质点满足 $m\ddot x=-qQx/(4\pi\varepsilon_0R^3)$，因此
+\[
+\omega=\sqrt{\frac{qQ}{4\pi\varepsilon_0mR^3}},\qquad
+T=2\pi\sqrt{\frac{4\pi\varepsilon_0mR^3}{qQ}}.
+\]
+\crosscheck 要求振幅不超过球内有效区间且隧道足够细；有限宽孔破坏球对称，不能无条件使用完整球场。
+\sourceproblem{11-T2}{66}{70}
+\problemtext 竖直弹簧劲度 $k$ 支撑质量 $M$ 的光滑平板，板上质量 $m$ 的物块被水平入射质点击中并离板，求板之后的振动。
+\workings 采用题意的瞬时卸载且无竖向冲量模型。以卸载后的平衡位置为原点、向上为正，初位移 $x_0=-mg/k$，初竖向速度0。卸载后 $M\ddot x=-kx$，所以
+\[
+x(t)=-\frac{mg}{k}\cos\left(\sqrt{k/M}\,t\right).
+\]
+\crosscheck 若物块离板需要有限时间，碰后附加质量也可能暂时加载，初始条件须由离板时刻确定；题目未给板宽及停留时间，上式为瞬时卸载的标准解。
+\sourceproblem{11-T3}{67}{71}
+\problemtext 竖直弹簧 $k=500$ N/m，原悬物 $M=4$ kg；质量 $m=1$ kg 的黏性物自下方0.6 m以4 m/s上抛，击中后粘合，取 $g=10$，求振动方程及最大拉力。
+\workings 碰前速度 $u=\sqrt{4^2-2(10)(0.6)}=2$ m/s向上。短时碰撞后共同速度 $v_0=mu/(M+m)=0.4$ m/s。新平衡位置在自然端点下0.10 m，原平衡位置在其下0.08 m，故以新平衡为原点、向上为正，$x_0=0.02$ m，$\omega=\sqrt{500/5}=10$ rad/s。
+\[
+x(t)=0.02\cos10t+0.04\sin10t,\quad
+A=\sqrt{0.02^2+0.04^2}=0.04472\,\mathrm m.
+\]
+最大拉力 $F_{\max}=500(0.10+A)\approx72.36$ N。
+\crosscheck 碰撞阶段用动量而非机械能守恒；若用自然长端点为坐标原点，位移为 $x(t)-0.10$ m；初始速度和加速度回代一致。
+\sourceproblem{11-T4}{67}{71}
+\problemtext 质量 $m$ 的物体经无滑动轻绳绕半径 $R$、惯量 $J$ 的定滑轮接劲度 $k$ 的弹簧，从平衡点下拉小距离释放，证明简谐振动并求角频率。
+\workings 取平衡位置向下位移为 $x$，绳长约束使弹簧伸长增量等于 $x$，滑轮角速度为 $\dot x/R$。平衡后的重力与预拉伸线性势能项抵消，机械能
+\[
+E=\tfrac12(m+J/R^2)\dot x^2+\tfrac12kx^2.
+\]
+由运动方程 $(m+J/R^2)\ddot x+kx=0$ 得 $\omega=\sqrt{k/(m+J/R^2)}$。
+\crosscheck 绳须始终绷紧；$J\to0$ 恢复普通弹簧振子频率。
+\sourceproblem{11-T5}{68}{72}
+\problemtext 竖直弹簧振子振幅0.24 m、周期4 s，初始在平衡位置下0.12 m向上运动，质量1 kg；求振动式、首次到达上方0.12 m的时间、该处合力。
+\workings 取向上正，$\omega=\pi/2$，初相位取 $-2\pi/3$，故 $x=0.24\cos(\pi t/2-2\pi/3)$ m。首次达到 $+0.12$ m 时相位为 $-\pi/3$，故 $t=2/3$ s。合力 $F=-m\omega^2x=-0.03\pi^2$ N，约0.296 N向下。
+\crosscheck 初速为正，且该相位为初相位之后最早满足目标位移的解。
+\sourceproblem{11-T6}{68}{72}
+\problemtext 图示简谐振动初位移 $5.65\times10^{-2}$ m，首次正最大位移在1 s，负最大在5 s，求振动式及10 s时位移、速度、加速度。
+\workings 由半周期4 s得 $T=8$ s、$\omega=\pi/4$。取 $x=A\cos[\pi(t-1)/4]$，$A=0.0565/\cos(\pi/4)=0.0565\sqrt2$ m，约0.0799 m。10 s时相位 $9\pi/4$，故
+\[
+x=0.0565\,\mathrm m,\quad v=-0.0565\pi/4\approx-0.0444\,\mathrm{m/s},\quad
+a=-0.0565(\pi/4)^2\approx-0.0349\,\mathrm{m/s^2}.
+\]
+\crosscheck 图示初速度为正；10 s等价于2 s，位移正、速度和加速度负。
