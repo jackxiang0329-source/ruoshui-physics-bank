@@ -23,7 +23,7 @@ for ref in refs:
         for macro in ('problemtext','workings','crosscheck'):
             assert body.count('\\'+macro)==1,(key,macro)
         counts[book]=counts.get(book,0)+1
-assert all(counts.get(k,0)>=v for k,v in {'tjut':115,'hust':67,'czu':155}.items())
+assert all(counts.get(k,0)>=v for k,v in {'tjut':130,'hust':74,'czu':180}.items())
 assert math.isclose((0.5*2**2+3*2-4)-(0.5+3-4),4.5)
 assert math.isclose(5*2**4/12,5*(1.5*2**2)**2/27)
 assert math.isclose(math.hypot(8,2),2*math.sqrt(17))
@@ -92,4 +92,14 @@ assert math.isclose((0.05*(-1e-5)+0.07*3e-5)/2,8e-7)
 assert math.isclose(5*3/8,3*5/8)
 assert math.isclose(0.020*(500-50),9)
 assert 5*((16**2+16**2)-(4**2+16**2))==1200
+assert math.isclose(200*(6.4e6)**2/9e9,9.102222222222222e5)
+assert math.isclose(2*math.pi*8.854e-12*0.01*3e6,1.6689396813775216e-6,rel_tol=1e-4)
+R1, r, R2 = 1.0, 1.5, 1.8
+assert r/(2*R1)<1
+assert math.isclose(r*(math.log(r/R1)/2+math.log(R2/r)),r/2*math.log(R2**2/(r*R1)))
+assert math.isclose(0.020*500/50-0.020,0.18)
+assert 6*3**2==54
+assert 150000*180/(0.5*(20**2-10**2))==180000
+assert 3*3+3**2==18
+assert math.isclose(math.sqrt(3/4)**2/2,3/8)
 print('Structural and selected numerical checks passed:',counts)
