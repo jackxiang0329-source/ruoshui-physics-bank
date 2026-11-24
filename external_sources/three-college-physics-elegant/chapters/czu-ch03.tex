@@ -158,7 +158,7 @@
 \crosscheck 功依赖参考系；水流匀速时流水系可视为惯性系。若拉力包含横向分量，做功仍由逆流分量确定。
 \sourceproblem{填空15}{44}{50}
 \problemtext 弹簧自然长0.5米，空篮质量0.5千克时长度0.6米，放重物后长度0.8米，求弹力功。
-\workings $k=0.5g/0.1=5g\,\mathrm{N/m}$（SI数值式）；$W=-k(0.3^2-0.1^2)/2=-0.2g\,\mathrm J$，取 $g=9.8$ 为 $-1.96\,\mathrm J$。
+\workings $k=(0.5\,\mathrm{kg})g/(0.10\,\mathrm m)=49\,\mathrm{N/m}$（取 $g=9.8\,\mathrm{m/s^2}$）；$W=-\tfrac12 k[(0.30\,\mathrm m)^2-(0.10\,\mathrm m)^2]=-1.96\,\mathrm J$。
 \crosscheck 伸长须相对自然长计算；弹力阻碍伸长，功为负。
 \sourceproblem{填空16}{44}{50}
 \problemtext 竖直弹簧劲度 $k$，挂质量 $m$ 的物体，从自然长静止释放，求最大伸长及经过平衡位置的速率。
@@ -216,7 +216,7 @@ W_{\rm ext}=km_1m_2\left(1/x_1-1/(x_1+d)\right).
 =\frac74\bm i-\frac{3\sqrt3}{4}\bm j,
 \]
 其速率 $\sqrt{19}/2\approx2.179\,\mathrm{m/s}$，向负 $y$ 偏 $\arctan(3\sqrt3/7)\approx36.59^\circ$。
-但初动能3.125焦耳，按此末速度计算总末动能3.5焦耳，不满足弹性碰撞。若坚持等质量弹性碰撞和60度，则B速率必须为 $2.5\cos60^\circ=1.25\,\mathrm{m/s}$。
+但初动能3.125焦耳，按此末速度计算总末动能3.5焦耳，不满足弹性碰撞。若坚持等质量弹性碰撞和60度，则B速率必须为 $2.5\cos60^\circ=1.25\,\mathrm{m/s}$；相应 $\bm v_A=(15/8)\bm i-(5\sqrt3/8)\bm j$（SI），速率 $5\sqrt3/4\,\mathrm{m/s}$，偏转角为 $-30^\circ$，与B末速度垂直。
 \crosscheck 原题给定条件互相矛盾，无同时满足所有条件的解；上述动量解是放弃弹性条件后的结果，不能标为原题唯一正确答案。
 \sourceproblem{计算3}{45}{51}
 \problemtext 水平轻弹簧劲度 $k$，A、B两木块质量均为 $m$，A与弹簧相连、B仅接触A，从压缩 $d$ 静止释放，求B分离时速率及弹簧最大伸长。
@@ -247,7 +247,7 @@ W_{\rm ext}=km_1m_2\left(1/x_1-1/(x_1+d)\right).
 \problemtext 井深10米，桶与水初总质量10千克，每提升1米漏水0.2千克，匀速提到井口，求人做功。
 \workings 在忽略漏水相对桶的竖向动量通量模型下，拉力等于剩余总重，$M(z)=10-0.2z$，故
 \[
-W=g\int_0^{10}(10-0.2z)\mathrm dz=90g\,\mathrm J=882\,\mathrm J
+W=g\int_0^{10}(10-0.2z)\mathrm dz=(90\,\mathrm{kg\,m})g=882\,\mathrm J
 \]
 （取 $g=9.8$）。
 \crosscheck 与天津理工对应题的初总质量不同；这里为10千克而非11千克。平均质量9千克；实际喷流反作用需另给流动条件。
@@ -316,7 +316,7 @@ x_{\max}=\frac{mv_0}{M+m}\sqrt{\frac{M(M+m)}{k(2M+m)}}.
 v(d)=\sqrt{GM(1/d-1/d_0)}.
 \]
 取 $G=6.67\times10^{-11}$，在 $d=d_0/2$ 时 $v\approx8.17\times10^4\,\mathrm{m/s}$；接触前 $d=2R$ 时 $v\approx1.29\times10^8\,\mathrm{m/s}$。
-\crosscheck 第二个速度已达约0.43倍光速，且天体极紧致，牛顿引力结果仅是教材模型计算，实际相对论双体过程不能据此精确预测。
+\crosscheck 第二个速度已达约0.43倍光速；单体的紧致度 $2GM/(Rc^2)\approx0.74$，远不满足弱场近似，牛顿引力结果仅是教材模型计算，实际相对论双体过程不能据此精确预测。
 \sourceproblem{应用5}{49}{55}
 \problemtext 滑块沿固定半圆形滑槽内侧运动，入槽速率 $v_0$、壁面动摩擦系数 $\mu$，证明出槽时摩擦功。
 \workings 光滑底面且只计侧壁摩擦时 $N=mv^2/R$，沿弧长 $s$ 有 $mv\,\mathrm dv/\mathrm ds=-\mu mv^2/R$，故 $v(s)=v_0e^{-\mu s/R}$。取 $s=\pi R$，
