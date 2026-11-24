@@ -1,0 +1,46 @@
+\section{真空中的静电场}
+\sourceproblem{选择1}{21}{27}
+\problemtext 两无限均匀带电平面A、B平行，面密度分别为 $\sigma,2\sigma$，B在右，求两面间及B右侧的有向场强。
+\workings 取向右为正，单无限平面两侧场强的法向分量分别为 $\pm\sigma/(2\varepsilon_0)$。叠加得 $E_{\rm between}=-\sigma/(2\varepsilon_0)$，$E_{\rm right}=3\sigma/(2\varepsilon_0)$，选C。
+\crosscheck 跨过B时有向场强跳变 $2\sigma/\varepsilon_0$，符合面电荷边界条件。
+\sourceproblem{选择2}{21}{27}
+\problemtext 边长 $b$ 的正方形中心放置点电荷 $Q$，求顶点场强大小。
+\workings 中心至顶点距离 $r=b/\sqrt2$，库仑场强大小为 $|Q|/(4\pi\varepsilon_0r^2)=|Q|/(2\pi\varepsilon_0b^2)$；原选项B采用 $Q>0$ 约定。
+\crosscheck 若 $Q<0$，场指向中心，大小仍非负。
+\sourceproblem{选择3}{21}{27}
+\problemtext 辨别点电荷、无限直线、无限平面及球面外的场强表达式。
+\workings 点电荷场 $\bm E=q\bm e_r/(4\pi\varepsilon_0r^2)$，故A正确。无限线电荷场 $\bm E=\lambda\bm r_\perp/(2\pi\varepsilon_0r_\perp^2)$，原B的分母指数不符；单无限带电平面场强大小 $|\sigma|/(2\varepsilon_0)$，原C差一倍；均匀球面外 $\bm E=\sigma R^2\bm e_r/(\varepsilon_0r^2)$，原D对单位矢量的系数误写为 $r^{-3}$。选A。
+\crosscheck 区分位矢和径向单位矢量；高斯面分别取柱面、平面薄盒和球面可独立推出各式。
+\sourceproblem{选择4}{21}{27}
+\problemtext 图2给出内区场强为零、表面外场强随距离平方反比衰减的曲线，辨别电荷分布。
+\workings 均匀带电球面内 $Q_{\rm enc}=0$，外部 $E=|Q|/(4\pi\varepsilon_0r^2)$，符合图示，选C。
+\crosscheck 无限长圆柱外场衰减为 $1/r$；均匀带电实心球内部场强正比于 $r$。
+\sourceproblem{选择5}{22}{28}
+\problemtext 图3半径 $R$ 半球曲面处于沿 $x$ 轴的均匀电场，场方向平行于半球底面，求曲面外向通量。
+\workings 加上圆形底面构成闭合面，内部无电荷，总通量为零。底面法向垂直于 $\bm E$，其通量为零，故曲面通量亦为零，选A。
+\crosscheck 若电场改为垂直底面，曲面通量才为 $\pm E\pi R^2$；不能仅凭曲面积 $2\pi R^2$ 直接乘场强。
+\sourceproblem{选择6}{22}{28}
+\problemtext 高斯面内净电荷 $8.850\times10^{-12}\,\mathrm C$，判断闭合面电通量。
+\workings $\Phi_E=Q_{\rm enc}/\varepsilon_0$，按教材近似 $\varepsilon_0=8.85\times10^{-12}\,\mathrm{F/m}$，得 $\Phi_E\approx1\,\mathrm{N\,m^2/C}$，选C。
+\crosscheck 仅总通量确定，不代表各面元通量相同；使用更精确常数时数值约0.9995。
+\sourceproblem{选择7}{22}{28}
+\problemtext 两同心均匀带电球面半径 $R_a<R_b$，电荷 $Q_a,Q_b$，求 $r>R_b$ 处场强大小。
+\workings 由球对称及高斯定理，
+\[
+\bm E=\frac{Q_a+Q_b}{4\pi\varepsilon_0r^2}\bm e_r,\qquad
+E=\frac{|Q_a+Q_b|}{4\pi\varepsilon_0r^2}.
+\]
+原选项B为净电荷非负时的表达式，或理解为有向径向分量。
+\crosscheck 若两球面净电荷抵消，则外场为零；场强大小不可为负。
+\sourceproblem{选择8}{22}{28}
+\problemtext 根据高斯定理判断闭合面内净电荷与面上各点场强的关系。
+\workings $\oint_S\bm E\cdot\mathrm d\bm S=Q_{\rm enc}/\varepsilon_0$。净电荷为零只意味着总通量为零，面上仍可能有非零场强，因此选A。
+\crosscheck 外电荷能产生非零场但对闭合面净通量为零；即使面上场处处为零，也只能推知净内电荷为零，不能断言内部处处无电荷。
+\sourceproblem{选择9}{22}{28}
+\problemtext 根据电势定义辨别电势和试验电荷电势能的关系。
+\workings 在选定同一电势零点后，$U=q_0V$，$V=U/q_0$，所以电势等于单位正试验电荷的电势能数值，选D。
+\crosscheck 将单位正电荷从该点准静态移至零势点，电场力做功为 $V$ 对应的能量，外力做功为其相反数；区分两类力。
+\sourceproblem{选择10}{22}{28}
+\problemtext 图4实线为电场线，虚线为等势面，判断A、B、C处场强和电势次序。
+\workings 图示电场线箭头指向左侧，沿电场方向电势降低，故 $V_A<V_B<V_C$。按教材电场线密度约定，左侧较密，$E_A>E_B>E_C$，选D。
+\crosscheck 场强排序为示意图的定性读图结论；定量值需电势间隔、空间尺度或实际场分布数据。
