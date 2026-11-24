@@ -96,14 +96,14 @@ v=v_0e^{-t/\tau},\quad x=v_0\tau(1-e^{-t/\tau}).
 P=\int_0^R\frac{k^2r^2}{4\rho}2\pi rh\,\mathrm dr
 =\frac{\pi hk^2R^4}{8\rho}.
 \]
-\crosscheck 假设外加场变化不被涡流显著改变，忽略趋肤及边缘效应；功率非负且与变化率平方成正比。
+\crosscheck 这里将题给变化率视为圆柱内实际均匀磁场的变化率，采用局域欧姆定律并忽略电荷弛豫、趋肤及边缘效应；若只给外加磁场而涡流反作用不可忽略，须自洽求解磁扩散。功率非负且与变化率平方成正比。
 \sourceproblem{8-T13}{49}{53}
 \problemtext 长螺线管芯由两个同轴磁介质区域组成，截面积 $S_1,S_2$、磁导率 $\mu_1,\mu_2$，长度 $l$、匝数 $N$，求自感。
 \workings 长管近似 $H=NI/l$，两个区域的磁通相加，$\Phi=NI(\mu_1S_1+\mu_2S_2)/l$，故
 \[
 L=\frac{N^2}{l}(\mu_1S_1+\mu_2S_2).
 \]
-\crosscheck 两区域为截面并列，不是沿轴串联；相同磁导率恢复总截面积公式。
+\crosscheck PDF53原图确认两个同轴芯区沿轴并列贯穿管长；在理想长管、线性各向同性磁介质近似下，其轴向H相同。S1、S2指各自实际材料截面积，不重复计入内芯面积；相同磁导率恢复总截面积公式。
 \sourceproblem{8-T14}{50}{54}
 \problemtext 电感器内阻 $R$、自感 $L$，与无感电阻 $R_0$ 串联接直流 $U_0$；开关S1接通后求电感器端电压，稳态后闭合旁路S2，求 $L/R$ 秒时S2电流。
 \workings 设电源正端经 $R_0$ 流向电感器。第一阶段 $\tau=L/(R+R_0)$，$i=U_0(1-e^{-t/\tau})/(R+R_0)$，电感器端电压
@@ -133,7 +133,7 @@ i=\frac{M_0 I'\omega}{R}\sin\omega t,\quad
 \tau_{\rm ext}=\frac{M_0^2I'^2\omega}{R}\sin^2\omega t .
 \]
 大环的感应电动势为 $-\mathrm d(Mi)/\mathrm dt=-M_0^2I'\omega^2\cos(2\omega t)/R$。
-\crosscheck 外力矩抵消小环磁阻力矩，机械功率 $R i^2$；大环恒流由外电源维持。若小环自感不可忽略，则需解 $L\dot i+Ri=-I'\dot M$。
+\crosscheck 所列力矩为绕指定转轴的有向外力矩（正角速度约定），由 $\tau_{\rm mag}=I'i\,\partial M/\partial\theta$ 得出，外力矩抵消磁阻力矩；忽略小环自感时机械功率 $R i^2$。大环恒流由外电源维持，所列大环感应电动势仅指小环变化磁通的贡献。若小环自感不可忽略，则需解 $L\dot i+Ri=-I'\dot M$。
 \sourceproblem{8-T17}{51}{55}
 \problemtext 螺绕环每厘米40匝，铁芯截面积3.0平方厘米，磁导率 $200\mu_0$，二匝次级线圈；求互感及初级电流在0.10秒内由5.0 A降到零时的平均互感电动势。
 \workings $n=4000\,\mathrm{m^{-1}}$，$\Phi_2/N_2=\mu nI S$，故 $M=N_2\mu nS=2(200\mu_0)(4000)(3.0\times10^{-4})\approx6.03\times10^{-4}$ H。平均电动势大小 $M(5.0/0.10)\approx0.0302$ V。
