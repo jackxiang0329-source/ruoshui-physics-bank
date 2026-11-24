@@ -1,4 +1,5 @@
 % Consolidated guide-ch06 from 9a1384ddf1afcd855b09256c9c6f1c90b5023140; source fragments preserved.
+% 2026-11-24 八批严格二校第5批：历史片段哈希对应修改前版本。
 
 % === BEGIN guide-ch06-examples.tex blob 2bf52faf63f64e35a7fdbb2464fb1fd2d3cebe72 ===
 % 《大学物理学学习指导》（第5版）第6章机械波解题示例6.1--6.7。
@@ -79,7 +80,7 @@ $t_1=0$与$t_2=0.25$ s两条波形如原图6.3(a)，
 从空间刻度
 $\frac34\lambda=0.45$ m得
 $\boxed{\lambda=0.60\,\mathrm m}$。
-在$\Delta t=0.25$ s内传播$\lambda/4=0.15$ m，故
+若图或题面明确实际移动四分之一波长，则在$\Delta t=0.25$ s内传播$\lambda/4=0.15$ m，故
 \[
 \boxed{u=\frac{0.15}{0.25}=0.60\,\mathrm{m/s}},
 \quad
@@ -98,7 +99,7 @@ $t=0$时$P$点穿过零位移且沿正$y$运动，其余弦初相为$-\pi/2$，
 \[
 \boxed{y(0,t)=-0.20\sin(2\pi t)\,\mathrm m}.
 \]
-\crosscheck 原点$t=0$速度为负，符合空间曲线从原点向右上升且波向右传播的关系
+\crosscheck 若仅由两条瞬时周期波形推断位移，则还允许$\Delta x=(n+1/4)\lambda$，$u=0.60+2.40n$ m/s，$\omega=2\pi(1+4n)$ rad/s（$n\ge0$），波数及初相不变。原点$t=0$速度为负，符合空间曲线从原点向右上升且波向右传播的关系
 $\partial_t y=-u\,\partial_x y$。
 
 \sourceexample{6.4}{89--90}{97--98}
@@ -177,7 +178,7 @@ $k=0$对应无限远极限，不能硬代入上式产生分母零。
 在频率$\nu=60$ Hz的音叉激励下形成\emph{4个波腹}的驻波。
 求所需弦线张力。
 \workings
-四个波腹表示沿弦长恰有四个半波长：
+四个波腹表示在两端均为波节的理想弦模型中，沿弦长恰有四个半波长：
 \[
 L=4\frac{\lambda}{2}
 \quad\Longrightarrow\quad
