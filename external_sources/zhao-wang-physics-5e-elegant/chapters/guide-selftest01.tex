@@ -1,4 +1,5 @@
 % Consolidated guide-selftest01 from f8f4709b0ffac9da4c1fecbf2ce873002f6da6cc; source fragments preserved.
+% 2026-11-24 八批严格二校第6批：旧片段哈希对应历史版本。
 
 % === BEGIN guide-selftest01-choices.tex blob 394051b8be498b943b41a287443388314c6ba5b2 ===
 % 自测题1：基础力学选择1.1.1—1.1.10
@@ -12,7 +13,7 @@
 \[
 \boxed{a_x=-30t}.
 \]
-对$t>0$它指向$x$负方向且大小随时间增大，并非匀加速，故选\textbf{D}。
+对$t>0$它指向$x$负方向且大小随时间增大，并非恒加速度运动；速率在$v_x=0$前减小、之后增大，故选\textbf{D}。
 \crosscheck $t=0$瞬间$a_x=0$；说“向负方向”指题意通常考察的$t>0$区间。
 
 \sourcetest{1.1.2}{45}{53}
@@ -22,12 +23,12 @@
 $ds/dt=|\bm v|=v$；加速度向量$d\bm v/dt=\bm a$，
 但其模通常并非切向加速度大小：
 \[
-|\bm a|=\sqrt{a_\tau^2+a_n^2}\ne a_\tau.
+|\bm a|=\sqrt{a_\tau^2+a_n^2}\ge a_\tau.
 \]
 因此只把$ds/dt=v$视为题面无歧义的标量恒等式，
 对应\textbf{D（仅第3项）}。
 \crosscheck 原书其余选项将速度矢量、速度标量与曲线运动的切向量混用。
-若将第2式明确定义为\emph{矢量}等式$d\bm r/dt=\bm v$，它当然成立；
+若$a_n=0$则两者大小可以相等，不能写成对所有时刻均不等；切向加速度大小应为$|dv/dt|$，有向分量为$dv/dt$。若将第2式明确定义为\emph{矢量}等式$d\bm r/dt=\bm v$，它当然成立；
 但此与原题印刷未加粗的$v$记号不同，属于须保留的记号歧义。
 
 \sourcetest{1.1.3}{45}{53}
@@ -47,7 +48,7 @@ $dv/v^2=-kt\,dt$，
 \sourcetest{1.1.4}{45}{53}
 \problemtext 水平粗糙面上的物块受固定大小$F$、向右上方夹角$\theta$的拉力，摩擦系数$\mu$，求最大水平加速度时的$\theta$。
 \workings
-在物块始终与地面接触的范围内
+假定物块已向右滑动，$\mu$为动摩擦系数，$0\le\theta\le\pi/2$。在物块始终与地面接触的范围内
 $N=mg-F\sin\theta\ge0$，
 \[
 ma_x=F\cos\theta-\mu(mg-F\sin\theta).
@@ -59,15 +60,14 @@ $-F\sin\theta+\mu F\cos\theta=0$，
 \boxed{\tan\theta=\mu}.
 \]
 按题面答案选\textbf{C}。
-\crosscheck 必须另检验所求角对应$N\ge0$；
-若$F$很大使物体离地，摩擦模型不再适用。
+\crosscheck 严格地，令$\theta_*=\arctan\mu$。若$F\sin\theta_*\le mg$，最优角为$\theta_*$；否则接触范围的上端为$\theta_b=\arcsin(mg/F)<\theta_*$，在该范围内最大值取$\theta_b$（若要求严格$N>0$，仅有上确界）。若允许离地，$\theta>\theta_b$时水平加速度为$F\cos\theta/m$，递减，故全局最优仍为$\theta_b$。静止起动还需独立检验静摩擦上限；若不能起动，不可直接套用滑动摩擦公式。
 
 \sourcetest{1.1.5}{45}{53}
 \problemtext 光滑半球形碗内半径$R=0.10$m，
 小球相对碗静止于离碗底$h=0.04$m处，
 碗绕竖直轴匀速旋转，求角速度（取$g=9.8\,\mathrm{m/s^2}$）。
 \workings
-球心比小球高$R-h=0.06$m，
+把小球视为质点且$0<h<R$，碗的球面几何中心比小球高$R-h=0.06$m，
 转动半径为$\rho=\sqrt{2Rh-h^2}$。
 法向支持力沿球面法线，其竖直平衡与水平向心分量给
 \[
@@ -291,10 +291,7 @@ $0=10-5t-5t^2$给$t=1$ s。
 \[
 \boxed{d\bm P/dt=0}.
 \]
-若系统只受互相引力这种保守内力，
-系统机械能亦守恒。
-但题面的“只有万有引力”严格假设确实确保保守，
-故
+机械能的变化满足$dE_{\rm mech}/dt=\sum_i\bm F_{\rm ext,i}\cdot\bm v_i$。若题意确为没有任何外力，仅受相互万有引力，则机械能也守恒，故
 \[
 \boxed{\bm P=\mathrm{const}},\qquad
 \boxed{E_{\rm mech}=\mathrm{const}}.
@@ -302,8 +299,7 @@ $0=10-5t-5t^2$给$t=1$ s。
 应选原书\textbf{A（动量与机械能均守恒）}。
 \crosscheck 如果把题设放宽为\emph{任意内力}，
 即使外力合力为零，内摩擦仍会破坏机械能守恒。
-本题明确是\emph{只有万有引力}，因此不可用一般内非保守力
-错误地排除机械能守恒。
+但若只限定内力为万有引力且外力矢量和为零，并未排除外力对系统做功，则机械能未必守恒。例如两个外力等大反向作用于不同质点，若两点速度不同，总功率可非零。须核原题是否确实排除全部外力；选择A仅适用于无外力（或外力总功为零）的解释。
 % === END guide-selftest01-blanks.tex ===
 
 % === BEGIN guide-selftest01-solutions.tex blob 193663218320ba2c5b148274855ada0cfdb1dfe0 ===
@@ -408,7 +404,7 @@ $\tfrac12\dot m v^2=22.5$W；
 内部水平弹簧劲度系数$k$连接内壁，
 质量$m$的物体B紧靠弹簧但未固定。
 初始弹簧压缩$\Delta x$，全系统由静止释放。
-当B与弹簧分开后，求A的反冲速度大小。
+当B与弹簧分开后、尚未与A另一内壁碰撞时，求A的反冲速度大小。
 \workings
 两物体沿水平方向无外力，
 分离后动量大小相等而方向相反，
