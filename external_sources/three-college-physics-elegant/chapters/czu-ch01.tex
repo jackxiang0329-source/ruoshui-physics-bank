@@ -250,11 +250,11 @@ v^2=100+4x+4x^3.
 v=v_0e^{-kt/m},\quad x=\frac{mv_0}{k}(1-e^{-kt/m}),\quad v=v_0-\frac{k}{m}x.
 \]
 在有限时间内 $v>0$，只有 $t\to\infty$ 时速度趋零，极限距离 $mv_0/k$。
-\crosscheck 区分有限距离极限与有限时间停车；线性阻力模型没有有限停车时刻。
+\crosscheck 区分有限距离极限与有限时间停车；线性阻力模型没有有限停车时刻。PDF255参考答案的停止距离为该极限。
 \sourceproblem{计算8}{14}{20}
 \problemtext $\bm r=A_1\cos\omega t\,\bm i+A_2\sin\omega t\,\bm j$，$A_1>A_2>0$，证明椭圆轨迹且加速度指向中心。
 \workings 消参得 $x^2/A_1^2+y^2/A_2^2=1$。二次求导 $\bm a=-\omega^2\bm r$，故方向始终指向原点即椭圆中心。
-\crosscheck 椭圆中心不是一般情况下的曲率中心；加速度指向椭圆中心不表示纯法向加速度。
+\crosscheck PDF20原图确认椭圆及中心O。椭圆中心不是一般情况下的曲率中心；加速度指向椭圆中心不表示纯法向加速度。
 \sourceproblem{计算9}{14}{20}
 \problemtext 半径 $R$ 的齿尖沿圆周运动，$s=v_0t+bt^2/2$，求速度和加速度大小。
 \workings 对 $t\ge0$ 且 $v_0,b>0$，$v=v_0+bt$，$a_\tau=b$，$a_n=(v_0+bt)^2/R$，所以 $a=\sqrt{b^2+(v_0+bt)^4/R^2}$。
@@ -262,7 +262,7 @@ v=v_0e^{-kt/m},\quad x=\frac{mv_0}{k}(1-e^{-kt/m}),\quad v=v_0-\frac{k}{m}x.
 \sourceproblem{计算10}{14}{20}
 \problemtext 转子半径0.1米，角位置 $\theta=2+4t^3$，求2秒时切、法向加速度以及合加速度与径向夹45度时的角位置。
 \workings $\omega=12t^2,\alpha=24t$，$t=2$ 时 $a_\tau=4.8$，$a_n=230.4$（$\mathrm{m/s^2}$）。45度条件 $a_\tau=a_n$，非零时间满足 $24t=144t^4$，故 $t^3=1/6$，$\theta=8/3\,\mathrm{rad}$。
-\crosscheck 初始角位置为2弧度，因此相对初始位置实际转角为 $2/3$ 弧度。原书“角位移”与含常数项的角位置应区分；径向指内向半径方向。
+\crosscheck 初始角位置为2弧度，因此相对初始位置实际转角为 $2/3$ 弧度。PDF256参考答案2.67 rad对应角位置8/3 rad；原书“角位移”与含常数项的角位置应区分；径向指内向半径方向。
 \sourceproblem{计算11}{15}{21}
 \problemtext 半径1米圆盘初角速度零，$\alpha=t/2$（SI），求非零时刻边缘点合加速度与径向成45度及所转弧长。
 \workings $\omega=t^2/4$，切、法向分量分别为 $t/2,t^4/16$。相等给出 $t^3=8$，故 $t=2\,\mathrm s$；转角 $\int_0^2 t^2/4\,\mathrm dt=2/3$，弧长 $2/3\,\mathrm m$。
@@ -278,7 +278,7 @@ v=v_0e^{-kt/m},\quad x=\frac{mv_0}{k}(1-e^{-kt/m}),\quad v=v_0-\frac{k}{m}x.
 x=R(1+\cos2\theta),\qquad y=R\sin2\theta.
 \]
 求导得 $\bm v=2R\omega(-\sin2\theta,\cos2\theta)$，$\bm a=-4R\omega^2(\cos2\theta,\sin2\theta)$，故 $v=2R|\omega|$、$a=4R\omega^2$。自然坐标法：圆心角以角速率 $2|\omega|$ 改变，速率恒定，$a_\tau=0,a_n=v^2/R=4R\omega^2$。
-\crosscheck 两种方法一致；有限长度单向杆须满足交点位于杆上，经过切线退化位置时两交点重合，延拓需明确约束。
+\crosscheck PDF21原图及PDF256参考答案均支持两倍圆心角模型。两种方法一致；有限长度单向杆须满足交点位于杆上，经过切线退化位置时两交点重合，延拓需明确约束。
 
 \sourceproblem{应用1}{15}{21}
 \problemtext 理想抛体从斜面底端以速率 $v_0$、相对坡面夹角 $\beta$ 抛出，坡角 $\alpha$。求沿坡射程及速度垂直坡面落下的角度条件。
@@ -302,7 +302,7 @@ x=\frac{v_0}{ud}y^2,\quad 0\le y\le d/2.
 \sourceproblem{应用4}{16}{22}
 \problemtext 气球竖直上升速率按常量 $v_0$ 理解，水平分速度 $v_x=by$，求位置函数、漂移与高度关系及距起点距离。
 \workings $y=v_0t$，$\dot x=bv_0t$，故 $x=bv_0t^2/2$，$x=by^2/(2v_0)$；距起点 $D=v_0t\sqrt{1+b^2t^2/4}$（$t\ge0$）。
-\crosscheck 此解明确采用恒定竖直速度；若原题的“速率”指合速度恒为 $v_0$，须改用 $\dot y=\sqrt{v_0^2-b^2y^2}$，其上升分支为 $y=(v_0/b)\sin bt,\ x=(v_0/b)(1-\cos bt)$，$0\le bt\le\pi/2$，$D=2(v_0/b)\sin(bt/2)$。不能混用两种模型。
+\crosscheck 此解明确采用恒定竖直速度；若原题的“速率”指合速度恒为 $v_0$，须改用 $\dot y=\sqrt{v_0^2-b^2y^2}$，其上升分支为 $y=(v_0/b)\sin bt,\ x=(v_0/b)(1-\cos bt)$，$0\le bt\le\pi/2$，$D=2(v_0/b)\sin(bt/2)$。恒合速率模型消参得 $(x-v_0/b)^2+y^2=(v_0/b)^2$。PDF256参考答案采用恒定竖直分速度模型；不能混用两种模型。
 \sourceproblem{应用5}{16}{22}
 \problemtext 升降机向上加速度1.22米每平方秒，松脱时速度2.44米每秒，顶底间距2.74米，求落至底面的时间及相对地面的下降距离。
 \workings 车厢系相对向下加速度 $g+1.22$，初相对速度为零，$t=\sqrt{2(2.74)/(g+1.22)}\approx0.705\,\mathrm s$。地面系竖直位移 $2.44t-gt^2/2\approx-0.715\,\mathrm m$（$g=9.8$），故末位置较松脱处低约0.715米。
@@ -320,13 +320,13 @@ r=\sqrt{R^2+(R\omega)^2(2h/g)}=R\sqrt{1+2h\omega^2/g}.
 \workings 地面系雨滴竖直向下，列车系相对速度水平分量大小20，竖直分量为 $v_2$。$\tan75^\circ=20/v_2$，所以 $v_2=20(2-\sqrt3)\approx5.36\,\mathrm{m/s}$。
 \crosscheck 相对雨滴方向向列车后方倾斜；列车匀速不改变雨滴竖直分量。
 \sourceproblem{应用8}{17}{23}
-\problemtext 原图车辆右行，雨滴方向向左下偏离竖直 $\theta'$，后方遮蔽物水平伸出长度 $l$、待保护高度 $h$；求临界车速。
-\workings 以车行方向为正，雨相对车的水平向后速率 $v_1+v_2\sin\theta'$，竖直向下速率 $v_2\cos\theta'$。按图示临界遮挡线斜率，落下高度 $h$ 时向后移动 $l$，故
+\problemtext 车辆向前行驶，雨滴方向按文字偏在竖直方向之前 $\theta'$，雨滴速率 $v_2$；车尾待保护物水平长度 $l$、相对遮挡边缘高度 $h$ 见图。求保持干燥的车速条件。
+\workings 取车行方向为正。按题干及PDF256参考答案，雨滴地面系速度为 $(v_2\sin\theta',-v_2\cos\theta')$。相对车的向后速度为 $v_1-v_2\sin\theta'$，向下速度为 $v_2\cos\theta'$。在理想直线雨滴、车体不透雨的二维模型中，临界遮挡线要求下落h时向后移动至少l，故
 \[
-\frac{v_1+v_2\sin\theta'}{v_2\cos\theta'}=\frac lh,\qquad
-v_{1,\rm crit}=v_2\left(\frac lh\cos\theta'-\sin\theta'\right).
+v_1\ge v_2\left(\frac{l}{h}\cos\theta'+\sin\theta'\right).
 \]
-\crosscheck 结果采用原图雨滴水平向后、车尾遮挡线的定向解释；若图中雨滴水平分量反向，应改变相应符号。若临界式为负，非负车速域需另按实际遮挡几何判定；图示待独立二校。
+若按原图斜线从右上向左下的落雨方向（地面系雨滴向车后），则相对向后速率为 $v_1+v_2\sin\theta'$，条件改为 $v_1\ge v_2[(l/h)\cos\theta'-\sin\theta']$，并同时要求 $v_1\ge0$。
+\crosscheck 第四十八批重新渲染PDF23并核对PDF256，参考答案明确为加号；原图雨线与文字中的“之前”存在方向歧义，旧版仅列减号不充分。主解依题干和参考答案，保留图示解释的条件解。忽略车体扰流、溅水及三维侧向入雨。
 \sourceproblem{应用9}{17}{23}
 \problemtext 船相对水速率1.10米每秒，河宽1000米，流速0.55米每秒；求直达正对岸和最短时间渡河两种方案。
 \workings 直达正对岸需船头向上游偏离垂岸方向 $\arcsin(0.55/1.10)=30^\circ$，横向速度 $\sqrt{1.10^2-0.55^2}=0.55\sqrt3$，时间 $1000/(0.55\sqrt3)\approx1050\,\mathrm s$。最短时间需船头垂直河岸，时间 $1000/1.10\approx909\,\mathrm s$，到达对岸时下游偏移500米。
