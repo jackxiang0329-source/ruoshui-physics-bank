@@ -210,3 +210,106 @@ E_r=\begin{cases}0,&r<R_1,\\k_eQ_1/r^2,&R_1<r<R_2,\\0,&R_2<r<R_3,\\k_e(Q_1+Q_2)/
 V(r)=\begin{cases}0,&r\le a,\\k_eQ_1(1/r-1/a),&a<r<b,\\k_eQ_1(1-b/a)/r,&r\ge b.\end{cases}
 \]
 \crosscheck 在 $r=a,b$ 两侧连续，外部净电荷为 $Q_1(1-b/a)$，不必为零。
+
+\sourceproblem{计算5}{105}{111}
+\problemtext 内球半径 $R_1$ 带正电q，同心厚壳内外半径 $R_2,R_3$、原带正电Q，将壳内表面接地，求平衡电荷和内球电势。
+\workings 整个连通壳均接地，内球q保持不变。壳内高斯面给内表面 $-q$；外部无独立电荷，零势边界唯一解为零，外表面电荷0。$V_1=k_eq(1/R_1-1/R_2)>0$。
+\crosscheck 接地后外壳总电荷为 $-q$，初始Q不守恒，差额经地线交换。
+\sourceproblem{计算6}{105}{111}
+\problemtext 半径R接地球外距心r有点电荷q，求总感应电荷。
+\workings 像电荷 $q'=-qR/r$ 位于源电荷方向距心 $R^2/r$ 处。球面任一点至像电荷距离为至真实电荷距离的 $R/r$ 倍，两势抵消。唯一性给外部解；包围球而不包围真实点电荷的高斯面给 $Q_{\rm ind}=q'$。
+\crosscheck 接地球不等同于孤立中性球；$r\to\infty$ 时感应净电荷趋零。
+\sourceproblem{计算7}{105}{111}
+\problemtext 半径 $R_1<R_2$ 的同心薄金属球壳分别带 $Q_1,Q_2$，求场和球心势。
+\workings 由球对称性，三个区域径向场分别为0、$k_eQ_1/r^2$、$k_e(Q_1+Q_2)/r^2$；球心势 $V(0)=k_e(Q_1/R_1+Q_2/R_2)$。
+\crosscheck 壳面取场的两侧极限；电势连续且取无穷远零势。
+\sourceproblem{计算8}{105}{111}
+\problemtext 两绝缘同心薄球壳半径 $r_1<r_2$，起初中性，内壳加q；随后外壳接地再断开，最后内壳接地，求各阶段电荷与势。
+\workings 第一阶段外壳净电荷0，内外表面为 $-q,+q$，$V_2=k_eq/r_2$。第二阶段外壳接地，外表面0，净电荷 $-q$，$V_2=0$。断开后外壳净电荷固定 $-q$。第三阶段内壳接地，设其电荷为q'，$0=k_e(q'/r_1-q/r_2)$，故 $q'=qr_1/r_2$；外壳电势变为 $k_eq(r_1/r_2-1)/r_2<0$，即相对第二阶段的变化。
+\crosscheck 第三阶段外壳已绝缘，不可继续施加零势；内壳电荷减少 $q(1-r_1/r_2)$。
+\sourceproblem{计算9}{106}{112}
+\problemtext 半径0.5及1.0 m的两球相连，各自有内半径1.2 m接地同心壳；空气击穿场 $3\times10^6$ V/m，求首先击穿处和总电荷。
+\workings 共同电势V，各球电容 $C_i=4\pi\varepsilon_0R_iR/(R-R_i)$。球表面场 $E_i=VR/[R_i(R-R_i)]$，两系数分别为 $24/7,6$（每米），故B球表面先达到阈值，$V=5.0\times10^5$ V。
+\[
+Q=(C_1+C_2)V=4\pi\varepsilon_0(6/7+6)(5\times10^5)\approx3.81\times10^{-4}\,\mathrm C.
+\]
+\crosscheck 各间隙场按 $1/r^2$ 减小，壳内表面场不超过内球表面；导线影响按原题忽略。
+\sourceproblem{计算10}{106}{112}
+\problemtext 均匀正带电环形薄片内外半径 $R_1,R_2$、面密度 $\sigma$，求轴上势及质子从无穷远穿越所需初速。
+\workings 薄环积分
+\[
+V(x)=\frac{\sigma}{2\varepsilon_0}(\sqrt{x^2+R_2^2}-\sqrt{x^2+R_1^2}).
+\]
+势在中心最大 $V(0)=\sigma(R_2-R_1)/(2\varepsilon_0)$。能量守恒给临界速率 $v_c=\sqrt{e\sigma(R_2-R_1)/(m_p\varepsilon_0)}$。
+\crosscheck 严格有限时穿过中心须 $v_0>v_c$，等号为渐近临界轨道。金属环均匀面密度按题设固定模型，实际孤立导体边缘电荷一般不均匀；非相对论速率式要求动能远小于静能。
+\sourceproblem{计算11}{106}{112}
+\problemtext 两接地无限板位于 $x=\pm d$，之间均匀正离子体密度 $\rho=nq$，求场势。
+\workings 平面对称给 $E_x(0)=0$，$\partial_xE_x=\rho/\varepsilon_0$，故 $E_x=\rho x/\varepsilon_0$。积分并用 $V(\pm d)=0$，得 $V(x)=\rho(d^2-x^2)/(2\varepsilon_0)$。
+\crosscheck 电势最大在中面；两板内侧自由面密度均为 $-\rho d$，单位面积总电荷守恒。
+\sourceproblem{计算12}{107}{113}
+\problemtext 孤立导体球半径R，逐步从无穷远搬运电荷，求已带q时增加dq的外力功及充至Q总功。
+\workings 准静态 $dW=V(q)dq=k_eq\,dq/R$；积分 $W=k_eQ^2/(2R)=Q^2/(8\pi\varepsilon_0R)$。
+\crosscheck 不可用最终电势乘全部电荷，否则多一倍；与场能积分一致。
+\sourceproblem{计算13}{107}{113}
+\problemtext 相距很远的半径1.0、2.0 cm球各带 $10^{-8}$ C，连接后求电荷及电势。
+\workings 等势及总电荷守恒给 $Q_1=2\times10^{-8}/3$ C、$Q_2=4\times10^{-8}/3$ C。$V=k_e(2\times10^{-8})/(0.01+0.02)=6000$ V。
+\crosscheck 忽略相互影响与导线电容；大球分得两倍电荷。
+\sourceproblem{计算14}{107}{113}
+\problemtext 带净电荷Q的厚球壳内外半径a,b，空腔中距心r有点电荷q，求壳面电荷、内表面在球心的势及球心总势。
+\workings 内表面总电荷 $-q$，外表面 $Q+q$。内表面各元距心均为a，故 $V_{\rm in}(O)=-k_eq/a$。无外场时外球面均匀，$V_{\rm out}(O)=k_e(Q+q)/b$。对 $0<r<a$，
+\[
+V(O)=k_e[q/r-q/a+(Q+q)/b].
+\]
+\crosscheck 内表面虽一般不均匀，球心等距积分仍成立；若q位于中心，该点自身势奇异。
+\sourceproblem{计算15}{107}{113}
+\problemtext 同轴圆柱电容器半径 $R_1,R_2$，介质 $\varepsilon=\varepsilon_0\varepsilon_r$，自由线密度 $\pm\lambda$，求E、D、P、极化面密度与电容。
+\workings $D_r=\lambda/(2\pi r)$，$E_r=D_r/\varepsilon$，$P_r=(1-1/\varepsilon_r)D_r$。介质内外边界外法向分别为负、正径向，故 $\sigma_{b,1}=-(1-1/\varepsilon_r)\lambda/(2\pi R_1)$，$\sigma_{b,2}=(1-1/\varepsilon_r)\lambda/(2\pi R_2)$。每单位长度电容 $C'=2\pi\varepsilon/\ln(R_2/R_1)$，长度L时 $C=LC'$（忽略端部）。
+\crosscheck 介质内 $\nabla\cdot\bm P=0$，两束缚面电荷每米代数和为零。
+\sourceproblem{计算16}{108}{114}
+\problemtext 同轴电缆半径 $R_1,R_2$，介质分界半径R，内外两层相对介电常量分别 $\varepsilon_{r1},\varepsilon_{r2}$，求单位长度电容。
+\workings 法向D在无自由面电荷的分界处连续，$D_r=\lambda/(2\pi r)$。两层径向势差相加，故
+\[
+C'=\frac{2\pi\varepsilon_0}{\ln(R/R_1)/\varepsilon_{r1}+\ln(R_2/R)/\varepsilon_{r2}}.
+\]
+\crosscheck 相同介质恢复均匀同轴公式；两层为串联关系而非并联。
+\sourceproblem{计算17}{108}{114}
+\problemtext 无限均匀介质介电常数 $\varepsilon$ 中半径R的孤立球充至Q，证明静电能公式。
+\workings $V(q)=q/(4\pi\varepsilon R)$，准静态外功 $\int_0^Q V(q)dq=Q^2/(8\pi\varepsilon R)$。另由 $\int_R^\infty\varepsilon E^2(4\pi r^2)dr/2$ 得同值。
+\crosscheck 线性无损介质、固定几何且可逆充电；$\varepsilon$ 为绝对介电常数。
+\sourceproblem{应用1}{108}{114}
+\problemtext 同轴真空二极管阴阳极半径0.50、4.50 mm，长度25 mm，阳极高300 V，求电子由静止到达阳极的动能、速率及阴极处电力。
+\workings $K=eU=300$ eV，约 $4.81\times10^{-17}$ J；非相对论 $v=\sqrt{2eU/m_e}\approx1.03\times10^7$ m/s。长筒无空间电荷近似 $V(r)=V_1+U\ln(r/R_1)/\ln(R_2/R_1)$，$E_r=-U/[r\ln(R_2/R_1)]$，阴极电子所受力向外，$F=eU/[R_1\ln9]\approx4.37\times10^{-14}$ N。
+\crosscheck 能量结果不依赖场分布；力的计算忽略端部效应和电子空间电荷。
+\sourceproblem{应用2}{108}{114}
+\problemtext 同轴电容器内外半径2、5 cm，均匀介质、恒压32 V，求轴距3.5 cm处场强及与外筒势差。
+\workings 若内筒电势较高，$E_r=32/[0.035\ln(5/2)]\approx998$ V/m，$V_A-V_2=32\ln(5/3.5)/\ln(5/2)\approx12.46$ V。极性反转两有向量变号。
+\crosscheck 恒压且均匀介质时场与相对介电常量无关；势差积分范围为A至外筒。
+\sourceproblem{应用3}{109}{115}
+\problemtext 二氧化钛晶片面积1.0平方厘米、厚0.10 mm，两侧紧贴极板，加12 V，求电容、自由和极化电荷、场强。
+\workings 原题未给晶片介电常量，设沿法线有效相对介电常量 $\varepsilon_r$（线性模型）。$S/d=1$ m，$C=8.854\times10^{-12}\varepsilon_r$ F，$Q=1.0625\times10^{-10}\varepsilon_r$ C，$E=1.2\times10^5$ V/m，$|\sigma_f|=\varepsilon_0\varepsilon_r E\approx1.0625\times10^{-6}\varepsilon_r$ C每平方米，$|\sigma_b|=\varepsilon_0(\varepsilon_r-1)E$。
+\crosscheck 二氧化钛的晶型和晶向等会影响介电响应，不擅自指定常数；束缚电荷在邻正自由电荷一侧为负。
+\sourceproblem{应用4}{109}{115}
+\problemtext 8、8、4微法电容器串联接12 V，求4微法上的电荷；断开电源后拆下再同极性并联，求电压。
+\workings $C_s=(1/8+1/8+1/4)^{-1}=2$ 微法，故各电荷量24微库。并联前各正极电荷合计72微库，$C_p=20$ 微法，故 $U_f=3.6$ V。
+\crosscheck 再连接时必须与电源隔离；能量初为144微焦、末为129.6微焦，差额耗散或辐射。
+\sourceproblem{应用5}{109}{115}
+\problemtext 板距 $d_0$、面积S的电容式测厚传感器，材料厚d、相对介电常量 $\varepsilon_r$，求C与d关系及金属情况。
+\workings 忽略边缘且试样覆盖有效面积，空气与介质串联，
+\[
+C=\frac{\varepsilon_0S}{d_0-d+d/\varepsilon_r},\qquad
+d=\frac{d_0-\varepsilon_0S/C}{1-1/\varepsilon_r}.
+\]
+绝缘于极板的金属试样内部场零，故 $C=\varepsilon_0S/(d_0-d)$。
+\crosscheck $0\le d<d_0$，$\varepsilon_r=1$ 时无厚度灵敏度；试样须不短接两极，介电常量需标定。
+\sourceproblem{应用6}{110}{116}
+\problemtext 空气平板电容器正方形边长l、板距1 mm、100 V时电荷量 $10^{-4}$ C，求边长。
+\workings $Q=\varepsilon_0 l^2 U/d$，故 $l=\sqrt{Qd/(\varepsilon_0U)}\approx10.63$ m。
+\crosscheck 所需面积约113平方米，板距远小于边长，平板近似合理；实际大面积器件另有绝缘及结构限制。
+\sourceproblem{应用7}{110}{116}
+\problemtext 空气板距1.5 cm、电压40 kV、空气击穿场3 MV/m；插入厚0.30 cm、相对介电常量7.0、击穿场10 MV/m的玻璃，判断击穿。
+\workings 原场 $40\,000/0.015=2.667$ MV/m，小于阈值。若维持40 kV，法向D连续，$E_a=U/(0.012+0.003/7)\approx3.218$ MV/m，$E_g=E_a/7\approx0.460$ MV/m，故空气先击穿而玻璃未达到其自身阈值。
+\crosscheck 若插片前断电，固定自由电荷使空气场保持2.667 MV/m，玻璃场约0.381 MV/m，均不击穿；原题未明说是否保持电压，分别注明。
+\sourceproblem{应用8}{110}{116}
+\problemtext 电容键盘金属片面积50.0平方毫米，初距0.600 mm，检测电容增量0.250 pF，求按下距离。
+\workings $C_0=\varepsilon_0S/d_0\approx0.73785$ pF，$C_f=C_0+0.250$ pF，$d_f=\varepsilon_0S/C_f$，故 $\Delta d=d_0-d_f\approx0.152$ mm。
+\crosscheck 电容与间距成反比而非线性；求得位移小于初间距，忽略杂散电容变化与边缘效应。
