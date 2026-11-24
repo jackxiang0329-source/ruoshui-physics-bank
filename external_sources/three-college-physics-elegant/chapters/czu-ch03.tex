@@ -99,3 +99,107 @@
 \problemtext 孤立的质子与另一带电粒子发生库仑散射，判断系统守恒量。
 \workings 教材采用静电保守相互作用、忽略辐射的两体模型，系统无外力，动量与机械能均守恒，选D。
 \crosscheck 更完整的电动力学中若计辐射，须把电磁场及辐射的能量和动量纳入封闭系统；不能仅用粒子机械量声称精确守恒。
+
+\sourceproblem{填空1}{42}{48}
+\problemtext 质量 $m$ 小球自高度 $y_0$ 水平抛出，初速 $v_0$；反弹高度 $y_0/2$，水平速率降为 $v_0/2$，求地面冲量两分量大小。
+\workings 碰前后竖直速度分别为 $-\sqrt{2gy_0},+\sqrt{gy_0}$，故短时碰撞近似 $I_y=m(\sqrt2+1)\sqrt{gy_0}$，水平冲量大小 $mv_0/2$，反向于水平运动。
+\crosscheck 若接触时间不可忽略，地面竖直冲量还需加 $mg\Delta t$；题面未给时长，采用瞬时碰撞约定。
+\sourceproblem{填空2}{43}{49}
+\problemtext 图示质量 $m$ 的水在 $t$ 内经过弯管，入口与出口速率均为 $v$，两速度与水平分别成向下、向上30度，求水对管的平均冲力。
+\workings 取右、上为正，$\bm v_1=v(\cos30^\circ,-\sin30^\circ)$，$\bm v_2=v(\cos30^\circ,\sin30^\circ)$。水的动量变化向上且大小 $mv$，故忽略重力及额外端面压力时，水对管平均力 $mv/t$，竖直向下。
+\crosscheck 水平分量不变；真实管道总受力若计压力边界，须增加相应压力项。
+\sourceproblem{填空3}{43}{49}
+\problemtext 20克入射物体速率500米每秒，嵌入静止木块后共同速率50米每秒，求入射物体冲量及木块质量。
+\workings $I=0.020(50-500)=-9\,\mathrm{N\,s}$。水平动量守恒 $0.020(500)=(M+0.020)50$，得 $M=0.18\,\mathrm{kg}$。
+\crosscheck 木块动量增量为9牛秒，与相互作用冲量反向。
+\sourceproblem{填空4}{43}{49}
+\problemtext 质量 $m$ 物体从向北速率 $v$ 变为向西同速率，求冲量大小和方向。
+\workings 东、北为正，$\Delta\bm p=-mv\bm i-mv\bm j$，大小 $\sqrt2mv$，方向西南（西偏南45度）。
+\crosscheck 动能不变不表示动量不变。
+\sourceproblem{填空5}{43}{49}
+\problemtext 合力 $F(t)=600-2\times10^5t$（SI），作用结束时力为零，求历时与冲量。
+\workings $\Delta t=600/(2\times10^5)=0.003\,\mathrm s$；$I=\int_0^{\Delta t}F\,\mathrm dt=600\Delta t/2=0.9\,\mathrm{N\,s}$。
+\crosscheck 力时图为三角形；末速信息不影响给定力时函数的冲量积分。
+\sourceproblem{填空6}{43}{49}
+\problemtext 质量2千克的质点从静止出发，合力 $\bm F=12t\bm i$（SI），求前三秒冲量和末速度。
+\workings $\bm I=6(3)^2\bm i=54\bm i\,\mathrm{N\,s}$，$\bm v=\bm I/2=27\bm i\,\mathrm{m/s}$。
+\crosscheck 积分加速度 $6t$ 得 $v=3t^2$，一致。
+\sourceproblem{填空7}{43}{49}
+\problemtext 质量 $M$ 的平板车以速率 $v$ 滑行，质量 $m$ 物体竖直落入车中并共同运动，求末速。
+\workings 光滑水平面上水平动量守恒，$Mv=(M+m)u$，故 $u=Mv/(M+m)$。
+\crosscheck 竖直动量不守恒，因为有地面支持冲量；落下高度不进入水平动量方程。
+\sourceproblem{填空8}{43}{49}
+\problemtext 功率 $1.5\times10^5\,\mathrm W$ 的机车在3分钟内使列车从10加速至20米每秒，忽略摩擦，求功和质量。
+\workings $W=Pt=2.7\times10^7\,\mathrm J$；由 $W=M(20^2-10^2)/2$ 得 $M=1.8\times10^5\,\mathrm{kg}$。
+\crosscheck 3分钟为180秒；恒功率不代表恒牵引力。
+\sourceproblem{填空9}{43}{49}
+\problemtext 质量1千克物体从原点静止出发，合力 $F=3+2x$（SI），求前3米功和末速。
+\workings $W=\int_0^3(3+2x)\mathrm dx=18\,\mathrm J$，故 $v=\sqrt{2W/m}=6\,\mathrm{m/s}$。
+\crosscheck 力始终正向，末速度取正根。
+\sourceproblem{填空10}{43}{49}
+\problemtext 橡皮筋伸长 $x$ 时恢复力大小 $ax+bx^2$，求伸长由 $l_1$ 至 $l_2$ 时的准静态外力功。
+\workings $W=\int_{l_1}^{l_2}(ax+bx^2)\mathrm dx=a(l_2^2-l_1^2)/2+b(l_2^3-l_1^3)/3$。
+\crosscheck 若 $l_1,l_2$ 表示总长度而非伸长，须减去自然长后再积分；题设以 $x$ 为伸长坐标。
+\sourceproblem{填空11}{43}{49}
+\problemtext 一维力 $F=4+6x$（SI），求从0到4米的功。
+\workings $W=[4x+3x^2]_0^4=64\,\mathrm J$。
+\crosscheck 平均力16牛乘位移4米，结果一致。
+\sourceproblem{填空12}{43}{49}
+\problemtext 恒力 $\bm F$ 与A到B的位移夹角 $\alpha$，位移模 $L$，初速为零，求功及末速。
+\workings $W=FL\cos\alpha$；若该力是合力或其他力总功为零，则 $v_B=\sqrt{2FL\cos\alpha/m}$。
+\crosscheck 从静止出发的该模型要求 $FL\cos\alpha\ge0$；恒力功与曲线路径长度无关。
+\sourceproblem{填空13}{43}{49}
+\problemtext 小球由轨道A点静止滑下，到B点速率又为零，A、B高度分别 $H_1,H_2$（续PDF50），求合力与摩擦力功。
+\workings $W_{\rm net}=\Delta K=0$。固定轨道支持力不做功，重力功 $mg(H_1-H_2)$，故 $W_f=-mg(H_1-H_2)$。
+\crosscheck 若摩擦耗散且没有其他驱动力，必须 $H_1\ge H_2$。
+\sourceproblem{填空14}{44}{50}
+\problemtext 人拉住河中船，使船相对岸静止，比较地面系和匀速流水系中人对船做功的符号。
+\workings 地面系船位移为零，人做功为零。若拉力逆水流方向，流水系船速度也逆水流方向，故人对船做正功。
+\crosscheck 功依赖参考系；水流匀速时流水系可视为惯性系。若拉力包含横向分量，做功仍由逆流分量确定。
+\sourceproblem{填空15}{44}{50}
+\problemtext 弹簧自然长0.5米，空篮质量0.5千克时长度0.6米，放重物后长度0.8米，求弹力功。
+\workings $k=0.5g/0.1=5g\,\mathrm{N/m}$（SI数值式）；$W=-k(0.3^2-0.1^2)/2=-0.2g\,\mathrm J$，取 $g=9.8$ 为 $-1.96\,\mathrm J$。
+\crosscheck 伸长须相对自然长计算；弹力阻碍伸长，功为负。
+\sourceproblem{填空16}{44}{50}
+\problemtext 竖直弹簧劲度 $k$，挂质量 $m$ 的物体，从自然长静止释放，求最大伸长及经过平衡位置的速率。
+\workings 能量式 $mgx=kx^2/2+mv^2/2$。最大伸长 $2mg/k$；平衡位置 $x=mg/k$，速率 $g\sqrt{m/k}$。
+\crosscheck 简谐运动振幅 $mg/k$、角频率 $\sqrt{k/m}$，最大速率同为 $g\sqrt{m/k}$。
+\sourceproblem{填空17}{44}{50}
+\problemtext 车以速率 $v$ 前进，人在车内向前掷质量 $m$ 的球，球相对车速率 $u$，求两个参考系的动能。
+\workings 车系 $K'=mu^2/2$；地面系 $K=m(u+v)^2/2$。
+\crosscheck 经典伽利略变换适用，动能不是惯性系间不变量。
+\sourceproblem{填空18}{44}{50}
+\problemtext 长 $l$ 的均匀链条半长悬于光滑桌边，由静止释放，求刚完全离桌时速率。
+\workings 以桌面为势能零点，初势能 $-mgl/8$，末势能 $-mgl/2$。机械能守恒 $mv^2/2=3mgl/8$，故 $v=\sqrt{3gl/4}$。
+\crosscheck 假设链条不可伸长、无摩擦且桌边平滑，整个链条具有共同速率。
+\sourceproblem{填空19}{44}{50}
+\problemtext 质量2千克物体从离地10米处以10米每秒抛出，落地速率15米每秒，取 $g=10$，求人做功及飞行中克服阻力功。
+\workings 若抛出前静止且抛掷位移的重力功忽略，人做功 $mv_0^2/2=100\,\mathrm J$。飞行段克服阻力功 $mgh+mv_0^2/2-mv_f^2/2=200+100-225=75\,\mathrm J$。
+\crosscheck 人做功依赖抛掷阶段假设；飞行段能量损失为正。
+\sourceproblem{填空20}{44}{50}
+\problemtext 质量 $m$ 物体以 $v_0$ 与静止质量 $2m$ 物体完全非弹性碰撞；桌面动摩擦系数 $\mu$，求碰撞损失及之后滑行距离。
+\workings 碰撞极短忽略摩擦冲量，末速 $v_0/3$。机械能损失 $mv_0^2/2-3m(v_0/3)^2/2=mv_0^2/3$；之后减速度 $\mu g$，滑距 $v_0^2/(18\mu g)$。
+\crosscheck 损失指碰撞阶段，不含随后滑行；$\mu>0$。
+\sourceproblem{填空21}{44}{50}
+\problemtext 卫星质量 $m$，圆轨道高度 $2R$，地球质量 $M$ 半径 $R$，求动能、引力势能。
+\workings 轨道半径 $3R$，$K=GMm/(6R)$，以无穷远为零势能时 $U=-GMm/(3R)$。
+\crosscheck 圆轨道满足 $U=-2K$；不能把高度当作地心距离。
+\sourceproblem{填空22}{44}{50}
+\problemtext 质量 $m$ 的物体由地面升至高度 $2R$，求地球引力做功。
+\workings $W_g=GMm(1/(3R)-1/R)=-2GMm/(3R)$。
+\crosscheck 引力方向与向外位移相反；与具体路径无关。
+\sourceproblem{填空23}{44}{50}
+\problemtext 一维势能 $U=ax^2-bx+c$，$a,b,c>0$，求保守力及平衡位置。
+\workings $F=-U'=b-2ax=-2a(x-b/(2a))$，故稳定平衡位置 $x_*=b/(2a)$。
+\crosscheck $U''=2a>0$，小振动角频率为 $\sqrt{2a/m}$。
+\sourceproblem{填空24}{44}{50}
+\problemtext 两质点相互作用势能 $U=-km_1m_2/x$（$x>0$ 为间距），求力及使间距从 $x_1$ 增至 $x_1+d$ 的外力准静态功。
+\workings 径向有向力 $F_x=-km_1m_2/x^2$，为吸引力。外力功
+\[
+W_{\rm ext}=km_1m_2\left(1/x_1-1/(x_1+d)\right).
+\]
+\crosscheck $d>0$ 时功为正；若有动能改变须另加 $\Delta K$。
+\sourceproblem{填空25}{44}{50}
+\problemtext 长 $L$、质量 $m$ 的均匀链条在光滑桌面，五分之一悬垂，将悬垂部分准静态拉回，求外力功及重力势能增加。
+\workings 悬垂质量 $m/5$，质心在桌面下 $L/10$，故 $\Delta U=mgL/50$；始末静止时拉力功同为 $mgL/50$。
+\crosscheck 若末态仍有速度，外力功还需增加末动能；桌面无摩擦。
