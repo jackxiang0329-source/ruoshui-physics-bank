@@ -272,3 +272,72 @@ V_M-V_N=\frac{\mu_0Iv}{2\pi}\ln\frac{a+b}{a-b}.
 \]
 正值对应图中ABCD顺时针方向。
 \crosscheck 第一项来自时变场，第二项来自运动；$v=0$ 或 $\omega=0$ 分别恢复单独机制。两贡献可能同向也可能相消。
+
+\sourceproblem{计算10}{153}{159}
+\problemtext 质量m、自感L、电阻忽略的矩形线框，横向边a、沿运动方向边b足够长，以初速 $v_0$ 从磁场外进入垂直纸面的匀强场 $B_0$，求进入过程位置和速度。
+\workings 设前边入场深度x，初始电流为零，取入纸面为正法向。在 $0\le x\le b$ 时磁链守恒 $Li+B_0ax=0$。磁力的x分量为 $F_x=i B_0a=-B_0^2a^2x/L$，故 $\ddot x+\Omega^2x=0$，$\Omega=B_0a/\sqrt{mL}$。由 $x(0)=0,\dot x(0)=v_0$ 得
+\[
+x(t)=\frac{v_0}{\Omega}\sin\Omega t,\qquad v(t)=v_0\cos\Omega t.
+\]
+若 $b>v_0/\Omega$，线框到最大入场深度后反向，在 $t=\pi/\Omega$ 离开场区，此后以 $-v_0$ 匀速运动。若 $b<v_0/\Omega$，则在达到b时完全入场，之后理想均匀场中的净力为零，电流恒定，速度保持当时值；临界等号时在全入场边界速度为零。
+\crosscheck $mv^2/2+Li^2/2=mv_0^2/2$；简谐公式仅适用于部分入场阶段，不能在 $x<0$ 或 $x>b$ 时继续使用。若初始有电流，初始条件及解均改变。
+\sourceproblem{计算11}{153}{159}
+\problemtext 矩形单匝线圈径向宽a、平行边b，距共面长直导线c，线圈电流 $I=I_0\sin\omega t$，求长直导线感应电动势。
+\workings 以直导线和无限远回流构成参考回路，取参考电流方向使其穿过矩形线圈的磁通为正，互感大小 $M=\mu_0b\ln[(c+a)/c]/(2\pi)$。由互感互易性，
+\[
+\mathcal E=-M I_0\omega\cos\omega t
+=-\frac{\mu_0bI_0\omega}{2\pi}\ln\frac{c+a}{c}\cos\omega t.
+\]
+\crosscheck 单独开路直导线并不构成闭合磁通回路；上述为教材准静态、远处回流模型的有向电动势。实际测得电压依回流或测量路径；反向参考电流使符号反转。
+\sourceproblem{计算12}{153}{159}
+\problemtext 圆截面长直螺线管匝密度n，电流i随时间增加，求管内距轴r处的感生电场。
+\workings 空芯长管内 $B=\mu_0ni$。取以轴为中心的圆路径，正向与B满足右手规则，法拉第定律给 $2\pi rE_\phi=-\pi r^2\mu_0n\dot i$，所以 $E_\phi=-\mu_0nr\dot i/2$。
+\crosscheck 轴处场为零，环向方向反抗磁通增加；忽略端部并采用磁准静态模型。
+\sourceproblem{计算13}{153}{159}
+\problemtext 小圆环半径r、电阻R，起初与通恒流I的半径a大环共面同心，$a\gg r$，小环绕直径以角速度 $\omega$ 转动，求磁通及感应电流。
+\workings 小环范围内大环场近似均匀，$B=\mu_0I/(2a)$。取初始法向与B同向，$\Phi(t)=\mu_0I\pi r^2\cos\omega t/(2a)$，故 $\mathcal E=\mu_0I\pi r^2\omega\sin\omega t/(2a)$。忽略小环自感时 $i_s=\mathcal E/R$。
+\crosscheck 若小环自感为 $L_s$，则应解 $L_s\dot i_s+Ri_s=\mathcal E$ 并给初值；仅知R不足以求精确暂态。转至垂直初始面时磁通为零但电动势达峰值。
+\sourceproblem{计算14}{154}{160}
+\problemtext 两共轴长螺线管长度L、半径 $R_1>R_2$，匝数分别 $N_1,N_2$，求互感。
+\workings 假设两管轴向完全重合、空芯且忽略端部效应，公共有效截面积为 $\pi R_2^2$。外管电流I使内管磁链 $\Psi_2=\mu_0(N_1/L)I N_2\pi R_2^2$，故 $|M|=\mu_0N_1N_2\pi R_2^2/L$。
+\crosscheck 由内管激励时外管所包磁通仍限于小截面，互感互易；有限长管及轴向错位须另积分。
+\sourceproblem{计算15}{154}{160}
+\problemtext 无限长圆截面导线均匀通电I，磁导率 $\mu_0$，证明单位长度导线内部磁能。
+\workings 设半径R，内部 $B(r)=\mu_0Ir/(2\pi R^2)$，故
+\[
+W'_{\rm in}=\int_0^R\frac{B^2}{2\mu_0}2\pi r\,dr
+=\frac{\mu_0I^2}{4\pi R^4}\int_0^R r^3dr
+=\frac{\mu_0I^2}{16\pi}.
+\]
+\crosscheck 与半径无关但仅限内部；外场能量依回流路径，不能并入此有限值。若非圆截面，不能直接套用该径向场。
+\sourceproblem{应用1}{154}{160}
+\problemtext 圆柱螺线管半径R，内部均匀轴向磁场以恒定速率变化，长l的金属棒沿圆截面一条弦放置，证明沿棒感生电动势公式。
+\workings 取棒为 $y=-d$，$d=\sqrt{R^2-l^2/4}$，棒端点为 $x=\pm l/2$。由轴对称的感生场 $\bm E_{\rm ind}=-(\dot B/2)(-y\bm i+x\bm j)$（B沿正z），沿棒积分得 $\mathcal E_{\rm left\to right}=-\dot Bdl/2$，大小
+\[
+|\mathcal E|=\frac{|\dot B|l}{2}\sqrt{R^2-l^2/4}.
+\]
+\crosscheck 等效为由弦及两半径围成三角形磁通的变化率；两径向段感生积分为零。该式为感生场沿棒的线积分，非保守电场中完整测量回路的电动势还依路径。
+\sourceproblem{应用2}{154}{160}
+\problemtext 同一纸筒上同向密绕两个线圈，自感各0.01 H，按图比较a接a'和b接a'的两种串联电感。
+\workings 以a至b及a'至b'为同名参考方向，互感取 $M\ge0$。第一种串联电流反向通过两绕组，$L_-=0.020-2M$ H（M以H计）；第二种同向，$L_+=0.020+2M$ H。若理想完全耦合 $M=\sqrt{L_1L_2}=0.010$ H，则分别为0和0.040 H。
+\crosscheck 电感矩阵半正定给 $0\le M\le0.010$ H；实际有漏磁时第一值大于0、第二值小于0.040 H。原题未直接给耦合系数，理想值不是任意绕组的精确结果。
+\sourceproblem{应用3}{155}{161}
+\problemtext 半径 $r_1<r_2$ 的同轴薄导体圆筒中电流等量反向，求长度l一段电缆的自感。
+\workings 两筒间 $B=\mu_0I/(2\pi r)$，内外理想区域场为零。穿过径向矩形面的磁通 $\Phi=l\int_{r_1}^{r_2}B\,dr$，故
+\[
+L=\frac{\mu_0l}{2\pi}\ln\frac{r_2}{r_1}.
+\]
+\crosscheck 亦可由间隙磁能 $LI^2/2$ 得同式；忽略端部、有限厚导体内磁能及非真空磁介质。
+\sourceproblem{应用4}{155}{161}
+\problemtext 50匝小圆线圈面积2平方厘米，置于100匝、半径0.20 m大圆线圈中心且共轴，大环电流以50 A/s减少，求互感及感应电动势。
+\workings 小线圈区域近似均匀场，$|M|=N_1N_2\mu_0 S/(2R)$，代入 $S=2\times10^{-4}$ 平方米，得到 $M\simeq3.142\times10^{-6}$ H，$|\mathcal E|=50M\simeq1.571\times10^{-4}$ V。感应场维持原大环磁场方向。
+\crosscheck 小环等效半径约8 mm，远小于0.20 m；两线圈匝数均已计入，电流减小时感应电流与原大环环流同向（若闭合且初态无电流）。
+\sourceproblem{应用5}{155}{161}
+\problemtext 环形螺线管中心周长0.50 m、正方形截面边长0.015 m、2500匝、相对磁导率1000、电流2.0 A，求中心磁能密度和总磁能。
+\workings 假设线性磁芯，令中心半径 $r_0=L/(2\pi)$、内外半径 $r_\pm=r_0\pm b/2$，$\mu=\mu_0\mu_r$。中心 $H_0=NI/L=10^4$ A/m，$w_0=\mu H_0^2/2\simeq6.2832\times10^4$ J每立方米。按径向场积分，
+\[
+W=\int_{r_-}^{r_+}\frac{\mu}{2}\left(\frac{NI}{2\pi r}\right)^2 2\pi rb\,dr
+=\frac{\mu N^2I^2b}{4\pi}\ln\frac{r_+}{r_-}\simeq7.09\ \mathrm J.
+\]
+细环近似 $W\simeq w_0Lb^2\simeq7.07$ J。
+\crosscheck 给定 $\mu_r$ 导致中心B约12.57 T，普通铁芯实际会饱和；数值是原题固定线性磁导率模型的形式结果，非实际可实现磁场保证。
