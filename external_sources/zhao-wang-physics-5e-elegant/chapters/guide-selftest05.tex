@@ -1,4 +1,5 @@
 % Consolidated guide-selftest05 from 97b62cc61307eba158a4498b55de3a5fdef3ff43; source fragments preserved.
+% 2026-11-24 八批严格二校第7批：历史片段哈希对应修订前版本。
 
 % === BEGIN guide-selftest05-choices.tex blob a206fa1e6cad4bdad3af5daa0b6047849e50cb77 ===
 % 第16批：扫描原书自测题5选择，共10题；题意独立转述。
@@ -16,7 +17,7 @@
 
 \sourcetest{5.1.3}{115}{123}
 \problemtext 相同容积容器中的氧气与氦气初温初压相同；给氧气5J使其升高某温差，氦气升高同温差需多少热量？
-\workings 同温同压同体积意味着粒子数相同。常温氧气刚性双原子，$C_V=5R/2$；氦气单原子，$C_V=3R/2$。等容下 $\boxed{Q_{\rm He}/Q_{\rm O_2}=3/5}$，故 $Q_{\rm He}=3$J，选 \textbf{C}。
+\workings 同温同压同体积意味着粒子数相同。常温氧气刚性双原子，$C_V=5R/2$；氦气单原子，$C_V=3R/2$。等容且无其他功时 $\boxed{Q_{\rm He}/Q_{\rm O_2}=3/5}$，故 $Q_{\rm He}=3$J，选 \textbf{C}。
 \crosscheck 按理想气体、忽略振动态激发的常温近似；容器均刚性。
 
 \sourcetest{5.1.4}{115}{123}
@@ -29,10 +30,10 @@
 \workings $T_h=600.15$K、$T_c=300.15$K，$\eta_{\max}=1-T_c/T_h\approx\boxed{50\%}$，选 \textbf{B}。
 \crosscheck 应换算成开尔文后才取比；按通常近似273K换算也得到50%。
 
-\sourcetest{5.1.6}{115--116}{NaN}
+\sourcetest{5.1.6}{115--116}{123--124}
 \problemtext 理想气体从 $(V_0,T_0)$ 先绝热膨胀到 $2V_0$，等容升温回 $T_0$，再等温压缩回初态；判断循环净功。
-\workings 令 $\gamma>1$。绝热末温 $T_a=T_0\,2^{1-\gamma}$，绝热功 $W_a=nRT_0[1-2^{1-\gamma}]/(\gamma-1)$；等容功0，等温压缩功 $W_c=-nRT_0\ln2$。因 $1-e^{-z}<z$（$z=(\gamma-1)\ln2$），$W_a+W_c<0$，选 \textbf{B}。
-\crosscheck 一循环 $\Delta U=0$，净功为负意味着需净输入功。
+\workings 若绝热段为可逆绝热且比热为常数，令 $\gamma>1$。绝热末温 $T_a=T_0\,2^{1-\gamma}$，绝热功 $W_a=nRT_0[1-2^{1-\gamma}]/(\gamma-1)$；等容功0，等温压缩功 $W_c=-nRT_0\ln2$。因 $1-e^{-z}<z$（$z=(\gamma-1)\ln2$），$W_a+W_c<0$，选 \textbf{B}。
+\crosscheck 若绝热段不可逆但初末均为平衡态，仍可用第二定律判定：$\Delta S_a\ge0$给$T_a\ge T_0 2^{1-\gamma}$；由$W_a=nC_V(T_0-T_a)$，其功不超过可逆绝热值。等温压缩若非准静态，在单一$T_0$热源下由熵不等式亦有$W_c\le-nRT_0\ln2$。因此净功仍严格为负（仅体积功、无其他能量交换）。
 
 \sourcetest{5.1.7}{116}{124}
 \problemtext 一定量理想气体在真空中绝热自由膨胀，体积增大；问内能、熵变化。
@@ -77,7 +78,7 @@
 \sourcetest{5.2.4}{117}{125}
 \problemtext 定量理想气体先等容加热至原来绝对温度4倍，后等温膨胀至原来体积2倍；求分子平均撞击器壁频率倍率。
 \workings 撞壁频率尺度 $z\propto n\bar v\propto (N/V)\sqrt T$，终态体积加倍、温度变4倍，故 $z_2/z_1=(1/2)\cdot2=\boxed{1}$。
-\crosscheck 在固定截面积或单位面积的撞壁频率意义下成立；并非单个分子对随动器壁的碰撞计数。
+\crosscheck 严格说平衡各向同性气体的单位面积撞壁通量为$n\bar v/4$；总撞壁率还须乘器壁面积，若容器各向同比放大，总率倍率为$2^{2/3}$。在单位面积的撞壁频率意义下成立；并非单个分子对随动器壁的碰撞计数。
 
 \sourcetest{5.2.5}{117}{125}
 \problemtext 在 $p$--$V$ 图中，分别用何种几何对象表征平衡态、准静态过程和循环过程？
@@ -91,7 +92,7 @@
 
 \sourcetest{5.2.7}{117}{125}
 \problemtext 1kg水由30°C升至80°C，定压比热约4.2J/(g K)，同期电流做功 $4.2\times10^5$J；求水从外界通过热传递获得的热量（正负号）。
-\workings 水内能增加近似 $\Delta U=1000\cdot4.2\cdot50=2.1\times10^5$J；电功输入 $W_e=4.2\times10^5$J，故传热 $Q=\Delta U-W_e=\boxed{-2.1\times10^5\ {\rm J}}$。
+\workings 若过程定压且仅有体积功及电功，则应使用焓变化$\Delta H=mc_p\Delta T=1000\cdot4.2\cdot50=2.1\times10^5$ J，第一定律给$Q=\Delta H-W_e$；若忽略水的体积功，也可近似以$\Delta U$替代$\Delta H$。电功输入 $W_e=4.2\times10^5$J，故传热 $Q=\Delta H-W_e=\boxed{-2.1\times10^5\ {\rm J}}$。
 \crosscheck 负号表示水向环境净散热；要区分传热与电能输入。
 
 \sourcetest{5.2.8}{117}{125}
@@ -101,8 +102,8 @@
 
 \sourcetest{5.2.9}{117}{125}
 \problemtext 3mol单原子理想气体，初态 $p_1=6$atm、$T=500$K，等温膨胀至 $p_2=3$atm；求吸热。
-\workings 等温理想气体 $\Delta U=0$、$V_2/V_1=p_1/p_2=2$，故 $\boxed{Q=W=nRT\ln2=3(8.31)(500)\ln2\simeq8.64\times10^3\ {\rm J}}$。
-\crosscheck 结果与单原子自由度无关，因理想气体等温内能不变。
+\workings 等温理想气体 $\Delta U=0$、$V_2/V_1=p_1/p_2=2$；若为可逆准静态膨胀且仅有体积功，故 $\boxed{Q=W=nRT\ln2=3(8.31)(500)\ln2\simeq8.64\times10^3\ {\rm J}}$。
+\crosscheck 结果与单原子自由度无关，因理想气体等温内能不变。若只指定等温初末态，热量和功不唯一；例如绝热向真空自由膨胀可有$Q=W=0$且同样达到这些初末温压。
 % === END guide-selftest05-blanks.tex ===
 
 % === BEGIN guide-selftest05-solutions.tex blob bffecbe79d42dab7ad71ce90fa24e3df8efaa5a5 ===
@@ -124,8 +125,8 @@
 \workings 硬球气体 $\lambda=k_BT/(\sqrt2\pi d^2p)$，同态下 $\boxed{d_{\rm Ne}/d_{\rm Ar}=\sqrt{\lambda_{\rm Ar}/\lambda_{\rm Ne}}=\sqrt{6.7/13.2}\simeq0.712}$。同种氩气改变状态时 $\lambda'_{{\rm Ar}}=\lambda_{\rm Ar}(T_2/T_1)(p_1/p_2)$；$T_1=288.15$K，$T_2=293.15$K，故 $\boxed{\lambda'_{{\rm Ar}}\simeq6.7\times10^{-8}(293.15/288.15)(0.76/0.15)\simeq3.45\times10^{-7}\ {\rm m}}$。
 \crosscheck 两压强单位均为米汞柱，可直接取比；有效直径是简化硬球碰撞参数。
 
-\sourcetest{5.3.4}{117--118}{NaN}
-\problemtext 2mol氢气初态温度27°C、体积20L，先等压膨胀使体积加倍，再可逆绝热膨胀至温度回到初温；求 $pV$ 过程、吸热、内能变化与总功。
+\sourcetest{5.3.4}{117--118}{125--126}
+\problemtext 2mol氢气初态温度27°C、体积20L，先准静态等压膨胀使体积加倍，再可逆绝热膨胀至温度回到初温；求 $pV$ 过程、吸热、内能变化与总功。
 \workings 以刚性双原子 $\gamma=7/5$ 计算。$T_1\simeq300$K、$V_1=20$L；等压末态 $V_2=40$L、$T_2=600$K；随后绝热末体积 $V_3=V_2(T_2/T_3)^{1/(\gamma-1)}=40\cdot2^{5/2}\simeq226.3$L。等压吸热 $Q_{12}=n(7R/2)(T_2-T_1)=2(7R/2)(300)\simeq\boxed{1.75\times10^4\ {\rm J}}$，绝热段 $Q_{23}=0$，总 $\Delta U=nC_V(T_3-T_1)=\boxed{0}$；故全过程 $W=Q-\Delta U=\boxed{1.75\times10^4\ {\rm J}}$。
 \crosscheck 这是开放路径而非热机循环，$T_3=T_1$ 不代表 $V_3=V_1$。
 
@@ -137,5 +138,5 @@
 \sourcetest{5.4.1}{118}{126}
 \problemtext 证明两恒温热源间可逆卡诺热机效率 $\eta=1-T_c/T_h$。
 \workings 卡诺循环由温度 $T_h,T_c$ 的两段可逆等温与两段可逆绝热组成。可逆绝热段 $\Delta S=0$，故两等温段气体熵变大小相等：$Q_h/T_h=-Q_c/T_c$，其中 $Q_h>0$、$Q_c<0$。整循环 $\Delta U=0$，输出功 $W=Q_h+Q_c$，所以 $\boxed{\eta=W/Q_h=1+Q_c/Q_h=1-T_c/T_h}$。
-\crosscheck 只对两个恒温热源间可逆卡诺机成立；不可逆实际热机效率通常更低。
+\crosscheck 只对两个恒温热源间可逆卡诺机成立；对仅与这两个恒温热源交换热量的循环热机，第二定律严格给$\eta\le1-T_c/T_h$；存在正熵产生时严格小于。
 % === END guide-selftest05-solutions.tex ===
