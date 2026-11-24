@@ -268,3 +268,113 @@ v(100,t)=-500\pi A\sin(500\pi t+5\pi/4).
 \]
 在 $t=T/4=0.001$ s，波形 $y=A\cos(\pi x/100+3\pi/4)$，相对原图左移50 m。绘图关键点：x=-75、-25、25、75、125 m处位移依次为A、0、-A、0、A。
 \crosscheck 原题未给A数值，保留参数；原点初位移为正且空间斜率负。波速是按原图标尺和给定频率所得形式值，未假设具体介质。
+
+\sourceproblem{计算10}{188}{194}
+\problemtext 图示右行波初始振幅0.02 m，原点上升过零，x=2 m下降过零，波速10 m/s，求原点、全波和x=3 m处振动式。
+\workings 图示波长4 m，$k=\pi/2$ rad/m，$\omega=uk=5\pi$ rad/s。原点初速度为负，故
+\[
+y_O=-0.02\sin5\pi t,\quad
+y(x,t)=0.02\sin(\pi x/2-5\pi t),\quad
+y_P=-0.02\cos5\pi t
+\]
+（SI）。
+\crosscheck 初始波形在x=1 m为正峰、x=3 m为负峰；$\partial_t y=-u\partial_x y$，传播方向正确。
+\sourceproblem{计算11}{188}{194}
+\problemtext 已知右行波 $y=A\cos[2\pi(\nu t-x/\lambda)+\phi]$，图示P在原点左方L，求其振动、速度和加速度。
+\workings 记 $\Theta=2\pi(\nu t+L/\lambda)+\phi$，则
+\[
+y_P=A\cos\Theta,\quad v_P=-2\pi\nu A\sin\Theta,\quad
+a_P=-(2\pi\nu)^2A\cos\Theta.
+\]
+\crosscheck P坐标为负L，不能以正距离直接代入x；加速度始终满足简谐运动关系。
+\sourceproblem{计算12}{188}{194}
+\problemtext 波源周期0.01 s，初时正向过零，波速400 m/s，求距源8 m处振动和初相，以及9、10 m处相差。
+\workings 设振幅为题中未给的A，$\omega=200\pi$ rad/s，$\lambda=4$ m。沿传播方向取正坐标，$y=A\sin(200\pi t-\pi x/2)$。故 $y_8=A\sin200\pi t$，余弦式初相 $-\pi/2$（模 $2\pi$）。后一点相对前一点未折返相差为 $-\pi/2$。
+\crosscheck 8 m为两个波长；若波源在零时刻才启动，稳态式仅在波到达后有效。原题未给振幅，不指定数值。
+\sourceproblem{计算13}{188}{194}
+\problemtext 右行横波波速100 m/s，每米含54个波长，振幅0.03 m，原点初时正向过零，求波函数。
+\workings $\lambda=1/54$ m，$\nu=5400$ Hz，$k=108\pi$ rad/m，$\omega=10800\pi$ rad/s。故
+\[
+y=0.03\sin(10800\pi t-108\pi x)\quad(\mathrm m).
+\]
+\crosscheck 原点初速度为正；$\omega/k=100$ m/s。54是空间周期数每米，并非波长54 m。
+\sourceproblem{计算14}{189}{195}
+\problemtext 300 Hz平面声波在截面积0.0300平方米的空气管中以340 m/s传播，10 s通过能量0.0270 J，求平均能流、能流密度和平均能量密度。
+\workings $\overline P=\Delta E/\Delta t=2.70\times10^{-3}$ W；$\overline I=\overline P/S=0.0900$ W每平方米；对无耗散单向平面行波 $\overline w=\overline I/u=2.65\times10^{-4}$ J每立方米。
+\crosscheck 三者分别为功率、面积功率密度、体积能量密度；频率不参与本题能量换算。假定截面强度均匀，否则为截面平均值。
+\sourceproblem{计算15}{189}{195}
+\problemtext 反相点波源A、B相距30 cm，PB为40 cm且垂直AB；求P处干涉最大限度削弱时最长波长。
+\workings $AP=\sqrt{30^2+40^2}=50$ cm，路程差10 cm。源相差π，到达反相条件为 $2\pi(10\,\mathrm{cm})/\lambda=2n\pi$，其中正整数n。因此 $\lambda=10/n$ cm，最长10 cm。
+\crosscheck 最大限度削弱指相位相反，未必完全抵消；点源传播振幅若不相等，残余幅值为两到达幅值差的绝对值。
+\sourceproblem{计算16}{189}{195}
+\problemtext 图示同相波源P、Q相隔 $3\lambda/2$，R在Q外侧，两源同时发出等幅A的相干波，求R处相差与合幅。
+\workings 按图 $PR-QR=3\lambda/2$，故P波相对Q波的未折返相差为 $-3\pi$，等价于π。若两分波到R的幅值均为A，则 $A_R=0$。
+\crosscheck 原图R位于两源连线延长线上；若R在两源之间，路程差随位置改变。若源幅相等但传播幅值不同，合幅应为 $|a_P-a_Q|$，不一定为零。
+\sourceproblem{计算17}{189}{195}
+\problemtext 第二平面波源超前第一 $\pi/4$，波长8 m，至P路程12、14 m，到达幅值0.30、0.20 m，求合幅。
+\workings 到达相差 $\Delta\phi=\pi/4-(2\pi/8)(14-12)=-\pi/4$。故
+\[
+A_P=\sqrt{0.30^2+0.20^2+2(0.30)(0.20)\cos(\pi/4)}
+=\sqrt{0.13+0.06\sqrt2}\ \mathrm m
+\approx0.4635\ \mathrm m .
+\]
+\crosscheck 合幅在0.10至0.50 m之间；题给的是到达幅值，无需另作距离衰减修正。
+\sourceproblem{计算18}{190}{196}
+\problemtext 两反相波源间距30 cm，频率10 Hz，PB垂直AB且长40 cm，求P处干涉极大对应的波长。
+\workings 路程差 $AP-BP=50-40=10$ cm。到达同相要求 $\pi-2\pi(10\,\mathrm{cm})/\lambda=2j\pi$，等价于
+\[
+\lambda=\frac{20}{2n+1}\ \mathrm{cm},\qquad n=0,1,2,\ldots .
+\]
+最大允许波长20 cm；相应波速为 $u=2/(2n+1)$ m/s。
+\crosscheck 频率已知但波速未给，不能从题设选定唯一阶次；若振幅随传播距离变化，同相仍给固定到达幅值下的最大合幅。
+\sourceproblem{计算19}{190}{196}
+\problemtext 两相干反相源相距30 m，频率100 Hz、波速400 m/s，连线方向两波等幅不衰减，求两源之间静止点。
+\workings $\lambda=4$ m，以S1为x=0、S2为x=30 m，$r_1=x,r_2=30-x$。反相抵消条件为 $r_2-r_1=4n$ m（整数n），故 $x=15-2n$ m。限制 $0<x<30$ 得 $n=-7,\ldots,7$，即 $x=1,3,5,\ldots,29$ m，共15点。
+\crosscheck 中点15 m等程且源反相，必为节点；节点间距2 m，端点不计入。
+\sourceproblem{计算20}{190}{196}
+\problemtext 同绳两波 $0.06\cos[\pi(x-4t)]$、$0.06\cos[\pi(x+4t)]$（SI），求分波参数、驻波节点波腹及指定位置振幅。
+\workings $k=\pi$ rad/m、$\omega=4\pi$ rad/s，故 $\lambda=2$ m、$\nu=2$ Hz、$u=4$ m/s，第一波右行、第二波左行。叠加得
+\[
+y=0.12\cos\pi x\cos4\pi t .
+\]
+节点 $x=n+1/2$ m，波腹 $x=n$ m（整数n）。腹点幅0.12 m，x=1.2 m处幅 $0.12|\cos1.2\pi|\approx0.09708$ m。
+\crosscheck 驻波空间因子为负时相位反转而非负振幅；相邻节点距1 m。
+\sourceproblem{计算21}{190}{196}
+\problemtext 给定右行波 $0.05\cos[2\pi(t/0.05-x/4)]$，等幅反向波在原点同相，求反向波、合驻波及四个最近节点。
+\workings 反向波 $y_2=0.05\cos(40\pi t+\pi x/2)$，合成 $y=0.10\cos(\pi x/2)\cos40\pi t$（SI）。节点满足 $x=1+2n$ m，最近四点为 $-3,-1,1,3$ m。
+\crosscheck 若绳实际仅定义于正半轴，则最近四个可取1、3、5、7 m；题图未给有限绳边界，以全轴模型为主。
+\sourceproblem{计算22}{191}{197}
+\problemtext O点波源向两侧发出等幅A、频率 $\nu$ 的波，左侧波密界面距O为 $5\lambda/4$，全反射，求O两侧合成波函数。
+\workings 取O为原点、向右为正，界面 $x=-d$，令 $\Theta=\omega t+\phi$、$k=2\pi/\lambda$。源左行波 $A\cos(\Theta+kx)$，右行波 $A\cos(\Theta-kx)$。按教材波密界面理想位移反相全反射模型，反射波为 $-A\cos(\Theta-kx-2kd)$。因 $2kd=5\pi$，反射波化为 $A\cos(\Theta-kx)$。于是
+\[
+y(x,t)=
+\begin{cases}
+2A\cos kx\cos\Theta,&-d\le x\le0,\\
+2A\cos(\Theta-kx),&x\ge0 .
+\end{cases}
+\]
+\crosscheck 界面处 $\cos kd=\cos(5\pi/2)=0$，总位移为零，原点两侧连续；假定反射波透过理想源位置且源发射幅相固定。若实际界面反射系数并非-1或波源散射反射波，则需重新指定边界条件。
+\sourceproblem{计算23}{191}{197}
+\problemtext 右行波在固定点B反射，A坐标 $\lambda/2$，AB长 $\lambda/2$，A处入射振动为 $A\cos\omega t$，求入射、反射及驻波。
+\workings 记 $k=2\pi/\lambda$，B坐标为 $\lambda$，用幅值A表示原题振幅。入射波 $y_i=A\cos(\omega t-kx+\pi)$。固定端要求总位移为零，故反射波 $y_r=A\cos(\omega t+kx)$。合成
+\[
+y=-2A\sin\omega t\sin kx .
+\]
+\crosscheck A处入射相位为 $\omega t$；B处两分波相反且总位移恒零，反射波向负x传播。
+\sourceproblem{计算24}{191}{197}
+\problemtext 1 kHz声源以34 m/s向右，右方反射面以68 m/s向左，声速340 m/s，求前方入射波长、每秒到达反射面波数和反射波长。
+\workings 静止空气中入射波长 $\lambda_i=(340-34)/1000=0.306$ m；反射面与入射波峰相向，接收频率 $f_m=(340+68)/0.306=1333.33$ Hz。反射面作为向左运动的相干次级波源，左行反射波长
+\[
+\lambda_r=(340-68)/f_m=0.204\ \mathrm m .
+\]
+相应空气中反射波频率为 $340/0.204\approx1666.67$ Hz。
+\crosscheck 反射面参考系中的入射与反射频率相同；不能把其接收频率直接当作空气系反射频率。仅适用于声源与反射面尚未相遇、均匀静止空气和理想镜面反射模型。
+\sourceproblem{应用1}{191}{197}
+\problemtext 固定超声源频率100 kHz，迎面驶来汽车反射回波110 kHz，声速330 m/s，求车速。
+\workings 车作为移动接收者，接收频率 $f_1=f_0(u+v)/u$；作为向源运动的反射次级波源，回波频率 $f_r=f_1u/(u-v)=f_0(u+v)/(u-v)$。解得
+\[
+v=u\frac{f_r-f_0}{f_r+f_0}
+=330\frac{10}{210}=15.7143\ \mathrm{m/s}
+\]
+约56.57 km/h。
+\crosscheck 代回频率比为1.10；拍频为10 kHz而不是回波频率110 kHz。假设径向运动、静止空气及相干反射。
