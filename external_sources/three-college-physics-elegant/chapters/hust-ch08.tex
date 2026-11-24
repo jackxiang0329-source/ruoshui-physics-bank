@@ -1,0 +1,74 @@
+\section{第8组：电磁感应}
+\sourceproblem{8-T1}{44}{48}
+\problemtext 长直导线与矩形框共面，框平行边长 $l$、宽 $b$，初始近边距 $a$。分别讨论恒电流时框远离、交变电流时框静止、交变电流时框远离的电动势。
+\workings 取正法向为直线正电流在框处的磁场方向，近边距 $s=a+vt$ 时
+\[
+\Phi=\frac{\mu_0 l I(t)}{2\pi}\ln\frac{s+b}{s},\qquad
+\mathcal E=\frac{\mu_0 l}{2\pi}\left[\frac{I(t)vb}{s(s+b)}-\dot I(t)\ln\frac{s+b}{s}\right].
+\]
+第一问 $\dot I=0$；第二问 $v=0,s=a,I=I_m\sin\omega t$；第三问两项同时保留，$\dot I=I_m\omega\cos\omega t$。
+\crosscheck 总磁通导数同时包括运动与磁场变化，不能只保留其中一项；正负由选定回路方向决定。
+\sourceproblem{8-T2}{44}{48}
+\problemtext 矩形框在 $Oxz$ 平面中以速率 $v$ 沿正 $z$ 方向移动，磁场沿 $y$ 方向，按原页读作 $B=B_0\cos[\omega(t-z/c)]$；框横向边长 $l_1$、沿运动方向边长 $l_2$，初始后边在 $z=0$。
+\workings 取正 $y$ 为法向，令 $k=\omega/c,\Omega=\omega-kv$，则
+\[
+\Phi=B_0l_1\int_{vt}^{vt+l_2}\cos(\omega t-kz)\,\mathrm dz
+=\frac{2B_0l_1}{k}\sin(kl_2/2)\cos(\Omega t-kl_2/2).
+\]
+故 $\mathcal E=2B_0l_1(\Omega/k)\sin(kl_2/2)\sin(\Omega t-kl_2/2)$。
+\crosscheck $v=c$ 时磁通不变；扫描相位坐标及原图边名保留高清复核标记。通式由实际运动方向上的场分布决定。
+\sourceproblem{8-T3}{45}{49}
+\problemtext 5厘米乘10厘米矩形框以2厘米每秒进入宽20厘米的垂直均匀磁场区域，$B=0.1$ T，求磁通和电动势随时间变化。
+\workings 按图运动方向边长 $a=0.10$ m，垂直边长 $h=0.05$ m，场区宽 $D=0.20$ m；首次接触时 $t=0$。取磁场方向为正，
+\[
+\Phi(t)=Bh\begin{cases}vt,&0\le t<5,\\a,&5\le t<10,\\D+a-vt,&10\le t<15,\\0,&t\ge15.\end{cases}
+\]
+相应电动势为 $-10^{-4}$ V、0、$+10^{-4}$ V、0；进入和离开方向相反，磁通平台为 $5\times10^{-4}$ Wb。
+\crosscheck 原图长边平行运动方向；若取顺时针正向且场入纸面，则上述符号一致。理想尖锐边界的折点导数不定义。
+\sourceproblem{8-T4}{45}{49}
+\problemtext 夹角 $\theta$ 的金属架与竖直滑杆MN组成三角回路，杆自顶点以恒速 $v$ 向右，磁场垂直纸面向外。求均匀恒定场及 $B=Kx\cos\omega t$ 时电动势。
+\workings 取逆时针为正，$X=vt$，截面高度 $x\tan\theta$。恒场时 $\Phi=B X^2\tan\theta/2$，$\mathcal E=-Bv^2t\tan\theta$。非均匀场时
+\[
+\Phi=\frac{KX^3}{3}\tan\theta\cos\omega t,\quad
+\mathcal E=-Kv^3\tan\theta[t^2\cos\omega t-\omega t^3\sin\omega t/3].
+\]
+\crosscheck 第二问包含移动边界与显式时间变化两项；负值对应顺时针方向。
+\sourceproblem{8-T5}{46}{50}
+\problemtext 水平金属圆环半径10厘米、电阻1欧，地磁场竖直分量读作 $5\times10^{-5}$ T，翻转一次，求通过截面的电荷量。
+\workings 忽略初末自感电流，积分电路方程得 $|q|=|\Delta\Phi|/R=2B_z\pi r^2/R$，按上述读数为 $3.14\times10^{-6}$ C。
+\crosscheck 180度翻转磁通变号，与翻转快慢无关；地磁场指数保留高清复核标记。
+\sourceproblem{8-T6}{46}{50}
+\problemtext 平均半径12厘米的多匝线圈在0.5 G地磁场中每秒转30圈，求最大感应电动势及取得条件。
+\workings $B=5\times10^{-5}$ T，$\omega=60\pi$ rad/s，若转轴垂直于磁场，则
+\[
+\mathcal E_m=NB\pi(0.12)^2(60\pi)\approx4.264\times10^{-4}N\,\mathrm V .
+\]
+框面与磁场平行时取最大绝对值；若轴与场夹角为 $\beta$，有效场为 $B|\sin\beta|$。
+\crosscheck 原扫描匝数指数尚待高清确认，保留每匝数值及总匝数符号，不填写猜测的总电压。
+\sourceproblem{8-T7}{46}{50}
+\problemtext 两水平平行导轨间距 $l$，一端接电阻 $R$，质量 $m$ 的金属棒以初速度 $v_0$ 向右，垂直均匀磁场 $B$ 中无摩擦滑动，求速度、位移及能量关系。
+\workings 忽略自感及其他电阻，$i=Blv/R$，磁力反向且大小 $B^2l^2v/R$。令 $\tau=mR/(B^2l^2)$，
+\[
+v=v_0e^{-t/\tau},\quad x=v_0\tau(1-e^{-t/\tau}).
+\]
+电阻热 $Q=\int_0^t i^2R\,\mathrm dt=mv_0^2(1-e^{-2t/\tau})/2$，恰等于动能减少。
+\crosscheck 有限时刻速度仍为正；极限位移为 $v_0\tau$。机械能转化为焦耳热，含热的总能量守恒。
+\sourceproblem{8-T8}{47}{51}
+\problemtext 长 $L$ 的导线绕固定端O在长直载流导线所在平面内旋转，O距直线 $a>L$，求杆与向右水平成 $\theta$ 时的动生电动势。
+\workings 取直线电流向上、逆时针角速度 $\omega$ 为正，杆上距O为 $s$ 的点距直线 $a+s\cos\theta$，磁场入纸面。故从O至杆端
+\[
+\mathcal E=-\frac{\mu_0 I\omega}{2\pi}\int_0^L\frac{s\,\mathrm ds}{a+s\cos\theta}
+=-\frac{\mu_0 I\omega}{2\pi\cos^2\theta}
+\left[L\cos\theta-a\ln(1+L\cos\theta/a)\right].
+\]
+当 $\cos\theta=0$ 时取极限 $-\mu_0 I\omega L^2/(4\pi a)$。若按图实际顺时针旋转，则有向 $\omega<0$。
+\crosscheck $a>L$ 保证杆不穿过直线奇点；远场恢复均匀场旋转杆公式。
+\sourceproblem{8-T9}{47}{51}
+\problemtext 两圆形磁场区域半径21.2、32.3厘米，磁感应强度大小以 $8.5\,\mathrm{mT/s}$ 的速率减小，求图中三个回路的感生电场环流。
+\workings 取纸外为正，设两区域的磁场方向符号为 $s_1,s_2=\pm1$，各回路按逆时针定向，则单独包围一整区的环流为
+\[
+C_1=s_1(0.0085)\pi(0.212)^2\approx s_1\,1.20\times10^{-3}\,\mathrm V,\quad
+C_2=s_2(0.0085)\pi(0.323)^2\approx s_2\,2.79\times10^{-3}\,\mathrm V.
+\]
+同时包围两区的回路为 $C_1+C_2$；若原图回路顺时针则相应变号。
+\crosscheck 原图点叉和回路细箭头待高清复核；保留全部方向约定，不能仅凭场强初值判断环流。
