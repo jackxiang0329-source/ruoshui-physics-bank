@@ -1,0 +1,133 @@
+\section{第8章：电磁感应与电磁场（8.5练习题）}
+\sourceproblem{选择1}{143}{149}
+\problemtext 半圆闭合线圈绕位于匀强磁场边界的圆心匀速旋转，从完全在场外开始，判断电动势图像。
+\workings 若磁场覆盖半圆扫过的全部半平面，重叠面积在前半周按 $R^2\omega t/2$ 线性增加，后半周线性减少。由 $\mathcal E=-d\Phi/dt$ 得交替的恒幅方波，大小 $B R^2\omega/2$，选A。
+\crosscheck 采用图示磁区足够大且边界突变的模型；有边缘场时切换不再突变。
+\sourceproblem{选择2}{144}{150}
+\problemtext 圆线圈在均匀磁场中以不同方式转动或平移，判断产生感应电流的情形。
+\workings 绕自身直径且转轴垂直B时，法向与B夹角随时间变化，磁通变化，选B。绕平行B的轴转动或固定取向平移均不改变磁通。
+\crosscheck 回路闭合且具有有限电阻；局部动生电动势不等于闭合回路净电动势。
+\sourceproblem{选择3}{144}{150}
+\problemtext 长直载流线附近共面矩形线圈按图以同一速率作沿线、垂直线及出纸面三种平移，比较初始感应电流。
+\workings 设近边到线距离d、径向宽b、平行边长l，共面磁通大小 $\Phi=\mu_0Il\ln[(d+b)/d]/(2\pi)$。情况I沿线平移不变；II垂直线平移使d改变，$|\dot\Phi|=\mu_0Ilv[1/d-1/(d+b)]/(2\pi)$；III初始出纸面位移对磁通为偶函数，一阶变化为零，故初始II最大，选B。
+\crosscheck 比较相同初态和同一电阻；出纸面运动后不再共面，不能断言全过程电动势为零。
+\sourceproblem{选择4}{144}{150}
+\problemtext 圆线圈一半在入纸面匀强磁场中，磁区在左，如何产生逆时针感应电流。
+\workings 逆时针电流产生出纸面磁场，须使原入纸面磁通增加。向左移使重叠面积增大，选C。
+\crosscheck 磁场减弱或向右移反而产生顺时针电流；图示竖向小平移不改变重叠面积。
+\sourceproblem{选择5}{144}{150}
+\problemtext 导体棒AB绕C点转动，BC为全长三分之一，角速度与B同向，比较两端电势。
+\workings 对距轴r处，$\bm v\times\bm B$ 沿径向外，$V(r)-V_C=B\omega r^2/2$。因 $AC=2BC$，故 $V_A>V_B$，选A。
+\crosscheck 开路稳态电荷分离建立电势差，不存在持续的沿棒电流。
+\sourceproblem{选择6}{144}{150}
+\problemtext 直棒ab、速度v及B均在图示同一平面，求棒中动生电动势。
+\workings $\bm v\times\bm B$ 垂直三者所在平面，与棒的线元垂直，积分为零，选D。
+\crosscheck 即使v与B不平行，也不能直接套用 $Blv\sin\alpha$；还须投影到棒方向。
+\sourceproblem{选择7}{144}{150}
+\problemtext 矩形线圈面积ab绕纸面内竖轴转动，B在纸面内水平，初始线圈平面在纸面内，求电动势大小。
+\workings 初始磁通为零，可取 $\Phi=Bab\sin\omega t$，故 $|\mathcal E|=\omega Bab|\cos\omega t|$，选D。
+\crosscheck 初始磁通零而变化率最大；使用整框面积，不需额外乘2。
+\sourceproblem{选择8}{144}{150}
+\problemtext 两根可滑动金属棒跨接平行导轨，竖直向上磁场中将右棒ab向右拉，判断左棒cd运动趋势（图续PDF151）。
+\workings 回路面积增大，楞次定律给产生反向磁通的电流。磁力阻碍面积增加，右棒受向左力，左棒受向右力，选D。
+\crosscheck 假定导轨与棒电接触良好、回路可导电且左棒可自由滑动；无外力并不意味着其无磁力。
+\sourceproblem{选择9}{145}{151}
+\problemtext 长L的铜棒绕端点在垂直匀强磁场的平面中以恒角速度转动，求任意时刻两端电动势。
+\workings 局部速率 $\omega r$，沿棒积分 $|\mathcal E|=\int_0^L B\omega r\,dr=B\omega L^2/2$，选E。
+\crosscheck 结果与初始角、时刻无关；按图B入纸面、转动逆时针时，轴端电势较高。
+\sourceproblem{选择10}{145}{151}
+\problemtext 按图绕向，载流螺线管旁的同轴环需产生指定方向电流，判断如何改变磁通。
+\workings 按教材图示绕线与电流方向，目标感应磁场与原管在环处的轴向场同向，须使该原磁通减小；移远螺线管可实现，选B。
+\crosscheck 靠近、增大电流、在线性磁芯近似下插入铁芯通常增加磁通，所致感应电流反向；方向判断依图示绕向。
+\sourceproblem{选择11}{145}{151}
+\problemtext 两投影垂直载流直线，ab固定向上，cd向右且可转动、改变距离，判断其趋势。
+\workings 取ab沿y、cd沿x且位于其上方z=l，$B_z=-\mu_0I x/[2\pi(x^2+l^2)]$。cd的 $dF_y=-I B_zdx$ 与x同号，力矩为正z，初始逆时针转动。初始法向净力为零，微小正转角使cd具有同向于ab的电流分量，随后趋于靠近，教材选D。
+\crosscheck 严格区别初始力矩与旋转后的吸引趋势；有限长度、对称布局且忽略回线。
+\sourceproblem{选择12}{145}{151}
+\problemtext 上下平行长直导线电流分别向右、向左且等量增加，矩形环位于两线下方，判断电流方向（选项续PDF152）。
+\workings 近线向左，在下方产生出纸面场；远线向右产生入纸面场但较弱，净磁通出纸面且增加。感应场入纸面，电流顺时针，选B。
+\crosscheck 不能仅因两电流相等反向就认为外部磁场抵消；各点到两线距离不同。
+\sourceproblem{选择13}{146}{152}
+\problemtext 导体棒沿导轨向右匀加速，磁场入纸面，原边绕铁芯，副边接电容器，问稳定后M极板电荷。
+\workings 棒的a端电势较高，原边激励 $\mathcal E=Bla_t t+\mathrm{const}$。在忽略原边电阻、固定自感L的近似下，$L\dot I=\mathcal E$，原边电流变化率随时间增大，副边感应电压幅值随时间增大，而不是恒定。设从a端流入原边为正电流，定义 $V_M-V_N=M_s\dot I$，则 $Q_M=C M_s\dot I$（开路副边近似）。$M_s$ 的符号由图示绕组端点同名关系确定；正号对应C，负号对应D。
+\crosscheck 原题仅说导轨电阻可忽略，未指定线圈电阻及副边暂态阻尼；若原边有非零电阻且达到渐近斜坡稳态，$\dot I\to Bla_t/R$，则电容电荷趋于常量（A或B）。因此不能不加电路假设给出唯一选项；理想无损副边还可能持续振荡。保留绕组极性与电路模型待核标记。
+\sourceproblem{选择14}{146}{152}
+\problemtext 矩形环在水平向右电流的长直导线下方向下移动，判断感应电动势方向。
+\workings 导线下方场入纸面，远离时入纸面磁通减小；感应场入纸面，电动势顺时针，选A。
+\crosscheck 速度方向与磁场方向不是感应环流方向，须看磁通变化。
+\sourceproblem{选择15}{146}{152}
+\problemtext 矩形框穿过有限宽的入纸面均匀磁场，判断电流随时间图像。
+\workings 若按教材匀速、忽略自感且磁区宽于框宽的模型，入场磁通线性增大，完全入场时恒定，出场线性减小。电流依次为常量、零、反号常量，对应B。
+\crosscheck 图示未给速度函数，严格波形依速度；若有明显自感，电流在切换时连续并出现暂态。
+\sourceproblem{选择16}{146}{152}
+\problemtext 静止无限长导体板宽l，磁场沿z，跨板两侧的滑动电压计沿y正向运动，求示数。
+\workings 移动测量支路中 $\bm v\times\bm B$ 沿板宽方向，积分大小 $vBl$，选C。静止板段没有动生电动势。
+\crosscheck 测量的是移动支路的电动势效应，非静止板两端本来存在的静电势差；假定高内阻及理想滑动接触。
+\sourceproblem{选择17}{146}{152}
+\problemtext 条形磁铁从静止沿很长竖直铜管下落，忽略空气阻力，判断速度趋势（选项续PDF153）。
+\workings 涡电流磁力反抗运动，低速常可写 $F_d=-kv$，于是 $v=mg(1-e^{-kt/m})/k$，逐渐趋于终速，教材选D。
+\crosscheck 终速通常为渐近极限，不是在某个有限时刻突然严格恒定；实际端部和高速响应可偏离线性模型。
+\sourceproblem{选择18}{147}{153}
+\problemtext 同形铜环和木环静止，穿过两环磁通变化率相同，忽略自感，比较感应电动势。
+\workings 法拉第定律 $\oint\bm E\cdot d\bm l=-d\Phi/dt$ 不要求积分路径导电，故两环电动势相同，选D。
+\crosscheck 木环不能像铜环一样产生显著传导电流；电动势和电流是不同物理量。
+\sourceproblem{选择19}{147}{153}
+\problemtext 将自感L的均匀螺绕环分成两个半环螺线管，比较各自电感与L/2。
+\workings 对称两半电感均为 $L_h$，原串联同向绕组满足 $L=2L_h+2M$。教材紧密正向耦合且分割不改变各半自身磁环境的模型中 $M>0$，故 $L_h<L/2$，选D。若切断铁芯，新增气隙也通常降低电感。
+\crosscheck 单凭原电感不能定量给出切割后电感；绕组连接、磁芯及漏磁条件均影响结果。
+\sourceproblem{选择20}{147}{153}
+\problemtext 几何和线性磁介质不变的单匝回路，电流减小时自感如何改变。
+\workings 磁链与I成正比，$L=\Psi/I$ 为固定比例系数，故不变，选C。
+\crosscheck I为零时由线性关系斜率定义；铁磁非线性及几何运动须另论。
+\sourceproblem{选择21}{147}{153}
+\problemtext 边长a的正方形线圈中心距共面长直导线 $3a/2$，求互感大小。
+\workings 近远边距离为a和2a，$\Phi=\int_a^{2a}[\mu_0I/(2\pi r)]a\,dr$，故 $|M|=\mu_0a\ln2/(2\pi)$，选B。
+\crosscheck 互感量纲为H；正负由回路法向和电流参考方向定义。
+\sourceproblem{选择22}{147}{153}
+\problemtext 0.25 H线圈电流在1/16 s内由2 A均匀减到零，求自感电动势大小。
+\workings $|\mathcal E|=L|\Delta I|/\Delta t=8.0$ V，选C。
+\crosscheck 电动势方向维持原电流方向。
+\sourceproblem{选择23}{147}{153}
+\problemtext 0.25 H线圈电流从2 A均匀减到零，自感电动势8 V，求时间。
+\workings $\Delta t=L|\Delta I|/|\mathcal E|=1/16$ s，选D。
+\crosscheck 回代变化率为32 A/s。
+\sourceproblem{选择24}{147}{153}
+\problemtext 两个自感均为L的绝缘线圈并联，求总电感。
+\workings 若忽略互感，$L_{\rm eq}^{-1}=2/L$，得 $L/2$，教材选D。若两支路对称且有带符号互感M，$V=L\dot I_1+M\dot I_2=M\dot I_1+L\dot I_2$，故 $L_{\rm eq}=(L+M)/2$（非奇异情形）。
+\crosscheck 电绝缘不等于磁隔离；原题未给互感，$L/2$ 是附加无耦合假设下的答案。
+\sourceproblem{选择25}{147}{153}
+\problemtext 半径b的均匀载流长直导线，问单位长度所储总磁能是否依赖b。
+\workings 若指导线内部，$B=\mu_0Ir/(2\pi b^2)$，故
+\[
+W'_{\rm in}=\int_0^b\frac{B^2}{2\mu_0}2\pi r\,dr=\frac{\mu_0 I^2}{16\pi},
+\]
+与b无关，选B。若包含外部直到固定半径D，另有 $W'_{\rm out}=\mu_0 I^2\ln(D/b)/(4\pi)$。
+\crosscheck 无限孤立直线的全空间每单位长度磁能对数发散；必须指定回流几何或外部积分边界，不能将内部结果称为全空间有限总能量。
+\sourceproblem{填空1}{148}{154}
+\problemtext 真空长螺线管半径R、匝密度n，电流增长率 $\dot I>0$，求管内外感应电场大小。
+\workings $\oint\bm E\cdot d\bm l=-\dot\Phi$，管内 $\Phi=\pi r^2\mu_0nI$，管外 $\Phi=\pi R^2\mu_0nI$。故 $E_{\rm in}=\mu_0nr\dot I/2$，$E_{\rm out}=\mu_0nR^2\dot I/(2r)$。
+\crosscheck 理想长管近似，界面处连续；方向绕轴且反抗磁通增长。
+\sourceproblem{填空2}{148}{154}
+\problemtext 长L金属棒以速率v垂直切割匀强磁场B，求动生电动势及非静电力性质。
+\workings 若棒沿 $\bm v\times\bm B$ 方向，则 $|\mathcal E|=vBL$；产生电荷分离的非静电力为磁洛伦兹力。
+\crosscheck 一般式为 $\int(\bm v\times\bm B)\cdot d\bm l$；若棒方向未指定，须再乘相应方向余弦。
+\sourceproblem{填空3}{148}{154}
+\problemtext 面积S的静止闭合环内有垂直平面的均匀时变磁场 $B(t)$，求电动势。
+\workings 取与B正向一致的固定法向，$\mathcal E=-S\,dB/dt$。
+\crosscheck 反选法向及积分方向使有向电动势反号；大小取绝对值。
+\sourceproblem{填空4}{148}{154}
+\problemtext 金属棒AB垂直于长直40 A电流线并以2 m/s沿电流方向平移，A距线1 m、B距线2 m，求电动势和高电势端。
+\workings 从A到B，$\bm v\times\bm B$ 向左，故 $\mathcal E_{A\to B}=-\mu_0Iv\ln2/(2\pi)$，大小约 $1.109\times10^{-5}$ V，A端电势较高。
+\crosscheck 场随距离反比，不能把某一端磁场乘棒长当作精确值。
+\sourceproblem{填空5}{148}{154}
+\problemtext 共面同心圆环半径r和R且 $r\ll R$，大环电流 $I_0\sin\omega t$，求小环电动势大小。
+\workings 小环内近似均匀场 $B=\mu_0I/(2R)$，故 $|\mathcal E|=\mu_0\pi r^2 I_0\omega|\cos\omega t|/(2R)$。
+\crosscheck 忽略小环反作用及大环场的空间非均匀性；不是任意半径比的精确公式。
+\sourceproblem{填空6}{148}{154}
+\problemtext 半径a的无限长螺线管匝密度n，电流 $I_m\sin\omega t$，求外部同轴半径r回路感生电动势。
+\workings 取法向与管内正电流场一致，磁通 $\Phi=\mu_0n\pi a^2I_m\sin\omega t$，故 $\mathcal E=-\mu_0n\pi a^2I_m\omega\cos\omega t$。
+\crosscheck $r>a$ 时电动势与r无关，但环向电场为电动势除以 $2\pi r$，随r衰减。
+\sourceproblem{填空7}{148}{154}
+\problemtext N匝矩形振动线圈高b，部分位于左侧入纸面匀强磁场，位移 $x=A\cos\omega t$，求电动势。
+\workings 取出纸面为正法向，磁链 $\Psi=-NBb(\ell_0-x)$，$\mathcal E=-NBb\dot x=NBbA\omega\sin\omega t$，正向为逆时针。
+\crosscheck 假定振幅足够小以保持同一有效边切割磁场；反取法向电动势变号。
