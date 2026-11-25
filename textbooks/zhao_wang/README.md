@@ -23,18 +23,18 @@
 
 原先102份小批次LaTeX片段合并为39份完整章节文件（教材习题12章、指导例题16章、自测题11套），净减少**63份**源文件。每份新文件按原顺序保留旧片段全文和blob哈希，旧路径从Git历史无损找回。主文件、两套源编号与物理质量检查脚本均同步适配；890个题号不变。
 
-查阅 [原片段与新章节对应表](chapters/COMPACTION-MAP.md)。按章编辑 `chapters/textbook-chXX.tex`、`guide-chXX.tex`、`guide-selftestXX.tex`，不再继续增加 `-choices/-blanks/-solutions` 等批次碎片。
+查阅 [原片段与新章节对应表](chapters/compaction_map.md)。按章编辑 `chapters/textbook-chXX.tex`、`guide-chXX.tex`、`guide-selftestXX.tex`，不再继续增加 `-choices/-blanks/-solutions` 等批次碎片。
 
 ## 第20批：来源复对与独立物理质检（题号仍为890）
 
-已复对《学习指导》自测题6—8来源扫描页（印刷163—174／PDF171—182）；直接修订 **8.1.4、7.2.6、8.2.2** 三处原稿，并新增 `check_round20_independent.py` 独立物理回归检查。GitHub Actions 工作流已增加独立质量门禁。见 [第20批来源与质检报告](review-round20.md)。**本轮属于原题二校，新增题目数为0，不重复计数。**
+已复对《学习指导》自测题6—8来源扫描页（印刷163—174／PDF171—182）；直接修订 **8.1.4、7.2.6、8.2.2** 三处原稿，并新增 `check_round20_independent.py` 独立物理回归检查。GitHub Actions 工作流已增加独立质量门禁。见 [第20批来源与质检报告](review_round20.md)。**本轮属于原题二校，新增题目数为0，不重复计数。**
 
 ## 第18—19批6份新 TeX
 
 - `chapters/guide-selftest07-{choices,blanks,solutions}.tex`：8+8+5=21，印刷167—170页／PDF175—178页；
 - `chapters/guide-selftest08-{choices,blanks,solutions}.tex`：8+10+5=23，印刷171—174页／PDF179—182页。
 
-图形依赖项、磁场极性定义与近似条件见 `quality-check.md`。**7.1.6** 的顺/逆时针选择项尚待源图独立二校；已给出磁力矩原则，不伪造答案。
+图形依赖项、磁场极性定义与近似条件见 `quality_check.md`。**7.1.6** 的顺/逆时针选择项尚待源图独立二校；已给出磁力矩原则，不伪造答案。
 
 ## 第17批3份 TeX
 
@@ -60,7 +60,7 @@
 \`main.tex\` 为 ElegantBook XeLaTeX 合订入口；
 \`check_math.py\` 检查890个题块的准确连续编号、所需宏与合订引用，并运行多批数值回归；
 \`progress.md\` 登记下一批断点；
-\`quality-check.md\` 登记源图、物理定义与原书近似条件。
+\`quality_check.md\` 登记源图、物理定义与原书近似条件。
 GitHub Actions \`.github/workflows/zhao-wang-physics-elegantbook.yml\` 负责自动编译并回写 \`main.pdf\`、\`cover.pdf\`。
 
 ## 本轮需保留的严格条件

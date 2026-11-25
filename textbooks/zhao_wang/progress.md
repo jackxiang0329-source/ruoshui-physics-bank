@@ -1,6 +1,6 @@
 # 全仓库精简阶段：教材章节合并（2026-11-24）
 
-**当前890道教材编号不变，102份LaTeX源片段合成39份，净减63份文件。** 结构检查与二次独立数理校验已按新章节路径同步调整，旧原始片段由Git历史和 [章节合并对照表](chapters/COMPACTION-MAP.md)追溯。保持正式高难题库每题三文件接口不变，避免破坏现有组卷和校验流程。
+**当前890道教材编号不变，102份LaTeX源片段合成39份，净减63份文件。** 结构检查与二次独立数理校验已按新章节路径同步调整，旧原始片段由Git历史和 [章节合并对照表](chapters/compaction_map.md)追溯。保持正式高难题库每题三文件接口不变，避免破坏现有组卷和校验流程。
 
 ---
 
@@ -8,7 +8,7 @@
 
 **已覆盖原书题号仍为890道，本轮新增0道、实质修订3处、增加独立核验脚本与GitHub Actions门禁。** 依据原书扫描页复对《学习指导》自测6—8，完成印刷163—174／PDF171—182页的图页核对。自测题1—11在当前扫描本内已建立来源编号，不得重复新增或虚构自测题12。
 
-本轮核查与数学反例见 [review-round20.md](review-round20.md)，独立脚本见 [check_round20_independent.py](check_round20_independent.py)。GitHub Actions 构建 #45208974668 已通过；后续变更仍须以最新运行记录为准。
+本轮核查与数学反例见 [review_round20.md](review_round20.md)，独立脚本见 [check_round20_independent.py](check_round20_independent.py)。GitHub Actions 构建 #45208974668 已通过；后续变更仍须以最新运行记录为准。
 
 **下一批优先顺序：** 对自测7.1.6、6.1.10透视与接线作独立图形审阅；再复核4.2.3与4.3.3波形题的相位和整周期；若可取得《简明教程》完整扫描原图，再分章核对514条既有习题与题意。当前不能仅依据已录入TeX声称原书习题已经全部学术审核。
 
@@ -34,7 +34,7 @@
 - `chapters/guide-selftest08-choices.tex`、`guide-selftest08-blanks.tex`、`guide-selftest08-solutions.tex`。
 - `main.tex`：ElegantBook v1.9，加入自测题7—8（含原书印刷页与PDF物理页）。
 - `check_math.py`：对全部890个编号的连续性、题块`problemtext/workings/crosscheck`结构、合订引用与精选物理公式数值不变量做自动检查。
-- `quality-check.md`：记录源图与理想化条件，保留未独立复核事项。
+- `quality_check.md`：记录源图与理想化条件，保留未独立复核事项。
 
 ## 必须留存的二校事项
 

@@ -2,7 +2,7 @@
 set -euo pipefail
 here="$(cd "$(dirname "$0")" && pwd)"
 # 与本仓库已有 Irodov ElegantBook 排版共享类文件。
-export TEXINPUTS="$here/../irodov-zh-elegant//:"
+export TEXINPUTS="$here/../irodov//:"
 cd "$here"
 if [ -f ../../data/archives/library.zip ] || [ -f ../../data/archives/zhao_wang_chapters.zip ]; then
   python3 ../../scripts/compact_auxiliary.py --restore --group zhao_wang_chapters
