@@ -80,7 +80,15 @@ def main() -> None:
 
     # This is intentionally an audit of names, not a quota or evidence of academic approval.
     b = {}
-    for p in tracked:
+    bank_paths = [p for p in tracked if p.startswith("bank/")]
+    packed = [f"bank/{prefix}.json" for prefix in "METWOQ"]
+    if any(p in bank_paths for p in packed):
+        from compact_bank import read_archives
+        if set(bank_paths) != set(packed):
+            errors.append("bank must track exactly six archives; restored files must remain untracked")
+        records = read_archives(ROOT)
+        bank_paths = [f"bank/{uid}/{name}" for uid, files in records.items() for name in files]
+    for p in bank_paths:
         if p.startswith("bank/"):
             pieces = p.split("/")
             if len(pieces) < 3 or not BANK_ID.fullmatch(pieces[1]):

@@ -1,0 +1,1247 @@
+{
+  "items": {
+    "T007": {
+      "meta.json": {
+        "bytes": 614,
+        "git_blob": "d68368002e9e9d71bb5343b1ef8f69adc78afe6a",
+        "text": "{\n  \"id\": \"T007\",\n  \"topic\": \"热学\",\n  \"title\": \"导热可动活塞的不可逆终态与熵产生\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 50,\n  \"tags\": [\n    \"热力学第一定律\",\n    \"力学平衡\",\n    \"热平衡\",\n    \"理想气体熵\",\n    \"约束最优化\"\n  ],\n  \"answer\": \"T_f=\\\\frac{n_1T_1+n_2T_2}{n_1+n_2},\\\\quad V_{jf}=\\\\frac{n_jV}{n_1+n_2},\\\\quad\\\\Delta S=\\\\sum_jn_j\\\\!\\\\left(C_V\\\\ln\\\\frac{T_f}{T_j}+R\\\\ln\\\\frac{V_{jf}}{V_j}\\\\right)\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"high-only-v2\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 645,
+        "git_blob": "734d8c97fff2d58a4e2abc043cffa29070064674",
+        "text": "一个刚性绝热容器总容积为 $V$，由可移动、导热、不透气的无热容活塞分隔为两室。室 $j$ 中有 $n_j$ mol 同种理想气体，初态温度 $T_j>0$、体积 $V_j>0$，其中 $V_1+V_2=V$。两室气体的摩尔定容热容为相同常数 $C_V$。活塞可由微弱耗散机制最终静止，容器及活塞不向外界传热或做功；初始和最终活塞均静止。\n(1) 求最终共同温度和两室体积；(2) 求系统熵变 $\\Delta S$ 并给出终态压力；(3) 从总熵极大原理独立推出热、力平衡条件；(4) 说明为何不能仅凭等温或等压过程公式描述整个不可逆演化。\n"
+      },
+      "solution.tex": {
+        "bytes": 998,
+        "git_blob": "8223089a575b76c6c93dda7ce3619d5b61b64aa6",
+        "text": "系统边界刚性且绝热，初末活塞动能为零，故总气体内能守恒：$C_V(n_1T_1+n_2T_2)=C_V(n_1+n_2)T_f$，从而\n\\[T_f=\\frac{n_1T_1+n_2T_2}{n_1+n_2}.\\]\n终态导热平衡要求 $T_{1f}=T_{2f}=T_f$，力学平衡要求 $p_{1f}=p_{2f}$。由 $pV=nRT$ 且总容积固定，\n\\[V_{1f}=\\frac{n_1}{n_1+n_2}V,\\quad V_{2f}=\\frac{n_2}{n_1+n_2}V,\\quad p_f=\\frac{(n_1+n_2)RT_f}{V}.\\]\n单室理想气体的状态函数熵差 $n_jC_V\\ln(T_f/T_j)+n_jR\\ln(V_{jf}/V_j)$，故\n\\[\\Delta S=\\sum_{j=1}^{2}n_j\\left[C_V\\ln\\frac{T_f}{T_j}+R\\ln\\frac{V_{jf}}{V_j}\\right]\\ge0.\\]\n非负性来自孤立系统的熵最大化，而不是假设中间过程可逆。独立验证：令两室内能变量为 $U_j=n_jC_VT_j$，在 $U_1+U_2$、$V_1+V_2$ 固定下，$dS=(1/T_1-1/T_2)dU_1+(p_1/T_1-p_2/T_2)dV_1$；驻值条件先给 $T_1=T_2$，再给 $p_1=p_2$。$S(U,V)$ 的严格凹性保证该驻值为最大值。由于过程存在有限温差与耗散，不可把真实演化当成准静态等温/等压过程。\n"
+      }
+    },
+    "T008": {
+      "meta.json": {
+        "bytes": 521,
+        "git_blob": "2fb7b00a2cc940eab919f226fc2c29b3bbffcebf",
+        "text": "{\n  \"id\": \"T008\",\n  \"topic\": \"热学\",\n  \"title\": \"有限热容热源驱动的最大可用功\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 45,\n  \"tags\": [\n    \"熵平衡\",\n    \"可逆热机\",\n    \"变温热源\",\n    \"可用功上界\",\n    \"不可逆熵产生\"\n  ],\n  \"answer\": \"T_*=(T_h^{C_h}T_c^{C_c})^{1/(C_h+C_c)},\\\\quad W_{\\\\max}=C_hT_h+C_cT_c-(C_h+C_c)T_*\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"high-only-v2\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 540,
+        "git_blob": "4415641215940a49b6d1f565afcfbd00627546e4",
+        "text": "两个互不接触的有限热库，热容均与温度无关，分别为 $C_h>0,C_c>0$，初温 $T_h>T_c>0$。它们与外界绝热，允许通过一台理想可逆热机交换热量并输出功，直至两热库温度相同。\n(1) 求共同终温 $T_*$ 和可输出的最大总功 $W_{\\max}$；(2) 比较移去热机、直接使热库不可逆接触时的终温 $T_{\\rm mix}$ 与熵产生；(3) 证明 $W_{\\max}\\ge0$ 且 $T_*\\le T_{\\rm mix}$，等号条件是什么？(4) 在 $C_h=C_c=C$ 情况下简化答案并作 $T_h\\to T_c$ 极限。\n"
+      },
+      "solution.tex": {
+        "bytes": 957,
+        "git_blob": "4f7312c524771c22d67c1b19a7c6956e5232539a",
+        "text": "可逆热机循环熵变为零，整个绝热系统的总熵不变，因此\n\\[C_h\\ln\\frac{T_*}{T_h}+C_c\\ln\\frac{T_*}{T_c}=0,\\qquad\nT_*=\\left(T_h^{C_h}T_c^{C_c}\\right)^{1/(C_h+C_c)}.\\]\n能量守恒：热库减少的总内能等于输出功，故\n\\[W_{\\max}=C_hT_h+C_cT_c-(C_h+C_c)T_*.\\]\n若直接热接触、没有机械做功，则 $T_{\\rm mix}=(C_hT_h+C_cT_c)/(C_h+C_c)$，总熵产生\n\\[\\Delta S_{\\rm direct}=C_h\\ln\\frac{T_{\\rm mix}}{T_h}+C_c\\ln\\frac{T_{\\rm mix}}{T_c}>0\\quad(T_h\\ne T_c).\\]\n加权算术平均大于等于加权几何平均，所以 $T_*\\le T_{\\rm mix}$，从而 $W_{\\max}=(C_h+C_c)(T_{\\rm mix}-T_*)\\ge0$；若 $C_h,C_c$ 均正，等号当且仅当 $T_h=T_c$。\n当两个热容相同时 $T_*=\\sqrt{T_hT_c}$、$W_{\\max}=C(\\sqrt{T_h}-\\sqrt{T_c})^2$；随着两初温趋于一致，最大功连续趋于零。这里不可错误地使用某个固定温度比所定义的单一卡诺效率，因为热库温度在整个过程中持续变化。\n"
+      }
+    },
+    "T009": {
+      "meta.json": {
+        "bytes": 553,
+        "git_blob": "d5d404c1785837e9c3252d1d032ad703bdac770e",
+        "text": "{\n  \"id\": \"T009\",\n  \"topic\": \"热学\",\n  \"title\": \"弹簧活塞的不可逆绝热平衡与熵极大\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 60,\n  \"tags\": [\n    \"开放压强做功\",\n    \"气体状态方程\",\n    \"不可逆绝热过程\",\n    \"机械平衡\",\n    \"熵极大与唯一性\"\n  ],\n  \"answer\": \"V_f=V_0-\\\\frac{2a_0}{a_1+\\\\sqrt{a_1^2-4a_2a_0}},\\\\quad T_f=\\\\frac{(P_0+sx)V_f}{nR}\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v1.1\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 869,
+        "git_blob": "4d9cfd8cbf431accacb84f4f06a00492937777b0",
+        "text": "一隔热圆柱含 $n>0$ mol 理想气体，摩尔定容热容 $C_V>0$ 恒定，活塞面积 $A>0$，外界恒压为 $P_0>0$。无热容弹簧与活塞连接，劲度系数 $K>0$，在初始体积 $V_0$ 时自然长。气体初温 $T_i>P_0V_0/(nR)$，活塞起初被锁住，随后释放。系统存在弱耗散，最终静止，**耗散产生的热全部返回气体**；气体、弹簧和外压源之外无能量交换。忽略活塞初末动能与重力。设 $s=K/A^2$，研究最终体积 $V_f$。\n(1) 写出能量守恒和终态力平衡，并解释不能沿真实过程直接用 $PV^\\gamma=\\mathrm{const}$；(2) 令 $x=V_f-V_0$，构造求 $x$ 的二次方程并证明存在唯一正根；(3) 求气体熵变，沿能量约束证明终态满足熵极大条件且熵增为正；(4) 求 $K\\to0^+$ 的简化终体积与终温，验证单位及初压临界情形。\n"
+      },
+      "solution.tex": {
+        "bytes": 1581,
+        "git_blob": "c4f2b24bdbd69eb860fb1a9b6a3efd3cdf17dd68",
+        "text": "(1) 活塞移动 $x/A$，弹簧能为 $K(x/A)^2/2=sx^2/2$，对外界压强做功为 $P_0x$。最终静止且阻尼耗热全返回气体，故\n\\[\nnC_VT_i=nC_VT_f+P_0x+\\tfrac12sx^2,\\qquad\np_f=P_0+sx,\\quad p_f(V_0+x)=nRT_f.\n\\]\n真实释放伴随耗散，气体熵增加，不能把过程误当可逆绝热而使用泊松关系。\n\n(2) 记 $c=C_V/R>0$，消去 $T_f$ 得\n\\[\na_2x^2+a_1x+a_0=0,\\quad\na_2=s(c+\\tfrac12),\\quad a_1=P_0(c+1)+csV_0,\\quad a_0=cP_0V_0-nC_VT_i<0.\n\\]\n由于 $a_2,a_1>0>a_0$，二次函数在 $x\\ge0$ 上严格递增，从负值趋于正无穷，故恰有一个正根\n\\[\nx=\\frac{-2a_0}{a_1+\\sqrt{a_1^2-4a_2a_0}},\\qquad V_f=V_0+x,\\quad T_f=\\frac{(P_0+sx)(V_0+x)}{nR}.\n\\]\n这里将求根公式有理化以避免数值上的相消。\n\n(3) 理想气体的状态函数熵变为\n\\[\n\\Delta S=nC_V\\ln(T_f/T_i)+nR\\ln(V_f/V_0).\n\\]\n沿固定总能量约束的一族状态 $T(V)=[nC_VT_i-P_0(V-V_0)-s(V-V_0)^2/2]/(nC_V)$，有\n\\[\n\\frac{dS}{dV}=\\frac{p_g(V)-[P_0+s(V-V_0)]}{T(V)},\\quad p_g(V)=\\frac{nRT(V)}{V}.\n\\]\n在初态，此导数因 $nRT_i/V_0>P_0$ 为正；对 $V\\ge V_0$ 的允许范围，$T(V)$、$p_g(V)$ 严格下降，外压加弹簧反力严格上升，因此导数仅在上述正根处从正变负，终态为唯一熵最大位置，$\\Delta S>0$。特别注意这论证只针对允许的终态族，并未假设真实历程平衡。\n\n(4) 当 $s\\to0^+$，由一次方程得\n\\[\nV_f\\to\\frac{P_0V_0+nC_VT_i}{P_0(1+C_V/R)},\\qquad T_f\\to\\frac{P_0V_f}{nR}.\n\\]\n$[s]=\\mathrm{Pa/m^3}$、$[sx^2]=\\mathrm J$；若初压趋于 $P_0$，则 $a_0\\to0^-$、$x\\to0^+$，自洽。\n"
+      }
+    },
+    "T010": {
+      "meta.json": {
+        "bytes": 609,
+        "git_blob": "6f8fc7810b3b7c0ab0e08b314cee622944b8bc6f",
+        "text": "{\n  \"id\": \"T010\",\n  \"topic\": \"热学\",\n  \"title\": \"任意多方指数理想气体的热量符号与可逆绝热边界\",\n  \"kind\": \"综合推导题\",\n  \"level\": 4,\n  \"estimated_minutes\": 45,\n  \"tags\": [\n    \"理想气体多方过程\",\n    \"能量守恒\",\n    \"可逆热量积分\",\n    \"熵变\",\n    \"特殊参数极限\"\n  ],\n  \"answer\": \"T_2=T_1\\\\lambda^{1-\\\\beta},\\\\quad W=\\\\frac{NR(T_2-T_1)}{1-\\\\beta},\\\\quad \\\\Delta S=N[C_V(1-\\\\beta)+R]\\\\ln\\\\lambda\\\\quad(\\\\beta\\\\ne1)\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v1.2\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 714,
+        "git_blob": "727ce8f7a07cceb5e6a02ea3f60c07b603d61f85",
+        "text": "有 $N>0$ mol 理想气体，其摩尔定容热容 $C_V>0$ 恒定，且 $P V^{\\beta}=\\mathrm{const}$（$\\beta$ 为固定实数）描述某一可逆准静态过程。气体初态为 $(T_1,V_1)$，末态 $V_2=\\lambda V_1$，其中 $\\lambda>1$。只有体积功，取气体对外做功 $W>0$、吸热 $Q>0$。\n(1) 求末态温度及压力比；(2) 对 $\\beta\\ne1$ 求 $W,\\Delta U,Q$，推导熵变 $\\Delta S$；(3) 引入 $\\gamma=1+R/C_V$，判断膨胀过程在 $\\beta<\\gamma$、$\\beta=\\gamma$、$\\beta>\\gamma$ 时的吸放热方向，并解释热容“沿路径”可为负的含义；(4) 单独处理 $\\beta=1$，并从一般表达式的极限恢复可逆等温过程，再验证 $\\beta=\\gamma$ 的泊松关系。\n"
+      },
+      "solution.tex": {
+        "bytes": 1501,
+        "git_blob": "e4bb96ea785325776d3b89d76a32b02a33dcc11e",
+        "text": "(1) 理想气体状态方程给 $PV=NRT$。由于 $P_2/P_1=\\lambda^{-\\beta}$，直接有\n\\[\nT_2=T_1\\lambda^{1-\\beta},\\qquad P_2=P_1\\lambda^{-\\beta}.\n\\]\n\n(2) 对 $\\beta\\ne1$，$P(V)=P_1(V_1/V)^\\beta$，积分\n\\[\nW=\\int_{V_1}^{V_2}P\\,dV\n=\\frac{P_2V_2-P_1V_1}{1-\\beta}\n=\\frac{NR(T_2-T_1)}{1-\\beta}.\n\\]\n内能只依赖温度，$\\Delta U=NC_V(T_2-T_1)$；第一定律 $\\Delta U=Q-W$ 给\n\\[\nQ=N\\left(C_V+\\frac R{1-\\beta}\\right)(T_2-T_1).\n\\]\n熵为状态函数，因该理想气体 $dS=NC_V\\,dT/T+NR\\,dV/V$，所以\n\\[\n\\Delta S=N[C_V(1-\\beta)+R]\\ln\\lambda.\n\\]\n尽管过程可逆，若与不同温度热源逐渐交换热量，气体的 $\\Delta S$ 不必为零；只有整个可逆系统的总熵产为零。\n\n(3) 令 $s=1-\\beta$。函数 $(\\lambda^s-1)/s$ 对任意 $s\\ne0$ 为正，故 $Q=NT_1[C_V(1-\\beta)+R](\\lambda^{1-\\beta}-1)/(1-\\beta)$ 的符号只取决于 $C_V(\\gamma-\\beta)$：$\\beta<\\gamma$ 时吸热，$\\beta=\\gamma$ 时绝热，$\\beta>\\gamma$ 时放热。定义路径热容 $C_{\\rm path}=Q/[N(T_2-T_1)]=C_V+R/(1-\\beta)$，它可为负：沿所选路径吸热与温度变化符号相反，并非违反 $C_V>0$ 的热力学稳定性。\n\n(4) 当 $\\beta=1$，温度恒定为 $T_1$，内能变化零，\n\\[\nW=Q=NRT_1\\ln\\lambda,\\qquad \\Delta S=NR\\ln\\lambda.\n\\]\n利用 $\\lim_{s\\to0}(\\lambda^s-1)/s=\\ln\\lambda$ 可从一般式连续得到上述结果。$\\beta=\\gamma$ 时 $Q=0$、$\\Delta S=0$，对应可逆绝热关系 $PV^\\gamma=\\mathrm{const}$；其他多方路径不能简单地套用这一关系。\n"
+      }
+    },
+    "T011": {
+      "meta.json": {
+        "bytes": 596,
+        "git_blob": "795afc536814745357c24dd2105bec56fc8d3c9b",
+        "text": "{\n  \"id\": \"T011\",\n  \"topic\": \"热学\",\n  \"title\": \"范德瓦耳斯流体的临界点、旋节线与临界奇性\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 55,\n  \"tags\": [\n    \"非理想流体状态方程\",\n    \"高阶求导\",\n    \"临界点\",\n    \"等温机械稳定性\",\n    \"相变与临界展开\"\n  ],\n  \"answer\": \"v_c=3b,\\\\quad T_c=\\\\frac{8a}{27Rb},\\\\quad P_c=\\\\frac{a}{27b^2},\\\\quad p_r(t_r=1)=1-\\\\frac32(v_r-1)^3+O((v_r-1)^4)\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v1.2\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 638,
+        "git_blob": "69231715585dcbad4d18b2d8ce1029142bf8eee0",
+        "text": "一摩尔范德瓦耳斯流体满足 $P=RT/(v-b)-a/v^2$，其中 $a,b,R>0$、摩尔体积 $v>b$。只研究均匀平衡分支及其局域机械稳定性，暂不进行相共存的 Maxwell 等面积构造。\n(1) 从临界等温线一、二阶导数同时为零求 $v_c,T_c,P_c$；(2) 引入约化量 $p_r=P/P_c,\\ t_r=T/T_c,\\ v_r=v/v_c$，导出约化状态方程并验证临界点位置；(3) 推导等温压缩率 $\\kappa_T=-(1/v)(\\partial v/\\partial P)_T$ 的符号判据，解释旋节线与共存曲线的区别；(4) 固定 $T=T_c$，令 $\\delta=v_r-1$，求 $p_r-1$ 的首个非零幂次和系数，说明临界压缩率的发散。\n"
+      },
+      "solution.tex": {
+        "bytes": 1546,
+        "git_blob": "b9ffd2d21789535d6d2aaa0fdbb447db2873d016",
+        "text": "(1) 对摩尔体积求导：\n\\[\n\\frac{\\partial P}{\\partial v}=-\\frac{RT}{(v-b)^2}+\\frac{2a}{v^3},\\qquad\n\\frac{\\partial^2P}{\\partial v^2}=\\frac{2RT}{(v-b)^3}-\\frac{6a}{v^4}.\n\\]\n临界点满足两者均为零。联立消去 $T$ 得 $v_c=3b$，再代入得\n\\[\nT_c=\\frac{8a}{27Rb},\\qquad P_c=\\frac{a}{27b^2}.\n\\]\n均满足 $v_c>b$ 且所有物理参数为正。\n\n(2) 代入上述临界标度，约化方程是\n\\[\np_r=\\frac{8t_r}{3v_r-1}-\\frac{3}{v_r^2},\n\\]\n或 $(p_r+3/v_r^2)(3v_r-1)=8t_r$。在 $(t_r,v_r)=(1,1)$ 时 $p_r=1$，一、二阶导数归零。\n\n(3) 等温压缩率为\n\\[\n\\kappa_T=-\\frac{1}{v(\\partial P/\\partial v)_T}.\n\\]\n在单相均匀流体的局域稳定分支，必须有 $(\\partial P/\\partial v)_T<0$，对应 $\\kappa_T>0$。当 $\\partial P/\\partial v=0$，均匀分支到达局域稳定极限（旋节线）；正斜率分支为局域不稳定。低于临界温度时真实的气液共存由化学势相等和 Maxwell 等面积规则决定，**不能**把两个旋节端点当作真正的气液共存体积。\n\n(4) 固定 $t_r=1$，按 $\\delta=v_r-1$ 展开，\n\\[\np_r=\\frac8{2+3\\delta}-\\frac3{(1+\\delta)^2}\n=1-\\frac32\\delta^3+O(\\delta^4).\n\\]\n零次以外的一、二次项完全抵消，首个非零项为三次，这给出经典平均场临界等温指数 $\\delta_{\\rm crit}=3$（此处下标用于区别体积偏差 $\\delta$）。由于 $dp_r/dv_r\\sim-9\\delta^2/2$，沿临界等温线接近临界点时 $\\kappa_T$ 的大小发散，但有限大小样品、涨落及真实物质的适用限制不由这条平均场方程控制。\n"
+      }
+    },
+    "T012": {
+      "meta.json": {
+        "bytes": 625,
+        "git_blob": "be9ffe7a112f24131b83fe2b32a1de28aaee703f",
+        "text": "{\n  \"id\": \"T012\",\n  \"topic\": \"热学\",\n  \"title\": \"变热容有限热库驱动的可逆热机与最大功\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 70,\n  \"tags\": [\n    \"温度依赖热容\",\n    \"可逆熵平衡\",\n    \"变温热源\",\n    \"最大可用功\",\n    \"平均值不等式\"\n  ],\n  \"answer\": \"T_*=\\\\frac{a_hT_h+a_cT_c}{a_h+a_c},\\\\quad W_{\\\\max}=\\\\frac{a_ha_c}{2(a_h+a_c)}(T_h-T_c)^2\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v1.3\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-A\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 687,
+        "git_blob": "b59dc587500410a29143a807a52a2585f5a95497",
+        "text": "两个绝热于外界的有限热库只通过理想可逆热机交换热量并输出功。高温库与低温库初温分别为 $T_h>T_c>0$，热容分别满足 $C_h(T)=a_hT$ 与 $C_c(T)=a_cT$，其中 $a_h,a_c>0$，单位为 $\\mathrm{J\\,K^{-2}}$。不计热机储能，最终两库温度趋于共同值 $T_* >0$。\n(1) 从熵守恒精确求 $T_*$；(2) 求最大可输出机械功 $W_{\\max}$ 与最终各库能量；(3) 若移去热机使两库直接不可逆接触，求平衡温度 $T_{\\rm mix}$ 和熵产生，证明 $W_{\\max}\\ge0$；(4) 在 $a_h=a_c$ 情形求简化表达式并对 $T_h-T_c$ 很小时作二阶近似，指出为何不能直接使用恒热容的几何平均温度。\n"
+      },
+      "solution.tex": {
+        "bytes": 1357,
+        "git_blob": "7c130b94d25d296c2e42eb2e22afc612b90f19f9",
+        "text": "(1) 每库热容 $C=aT$，故状态函数熵差 $dS=C(T)dT/T=a\\,dT$。两库与外界绝热且热机理想可逆，整体熵变零：\n\\[\na_h(T_*-T_h)+a_c(T_*-T_c)=0,\\quad\nT_*=\\frac{a_hT_h+a_cT_c}{a_h+a_c}.\n\\]\n这是带权算术平均而不是恒热容库的加权几何平均，因为两种热容的温度依赖关系不同。\n\n(2) 单库内能差满足 $dU=C(T)dT=aT\\,dT$，故 $U(T)-U(0)=aT^2/2$。输出最大功等于两库初末总内能差：\n\\[\nW_{\\max}=\\frac12\\big[a_hT_h^2+a_cT_c^2-(a_h+a_c)T_*^2\\big]\n=\\frac{a_ha_c}{2(a_h+a_c)}(T_h-T_c)^2.\n\\]\n等式右边表明 $W_{\\max}>0$ 当且仅当初温不同。\n\n(3) 若直接接触，则无外部做功，能量守恒给\n\\[\nT_{\\rm mix}=\\sqrt{\\frac{a_hT_h^2+a_cT_c^2}{a_h+a_c}}.\n\\]\n两库总熵产生\n\\[\n\\Delta S_{\\rm irr}=a_h(T_{\\rm mix}-T_h)+a_c(T_{\\rm mix}-T_c)\n=(a_h+a_c)(T_{\\rm mix}-T_*)\\ge0.\n\\]\n均方根不小于算术均值，故熵产生非负，$T_{\\rm mix}\\ge T_*$，与抽取机械功使最终总内能下降的方向一致。\n\n(4) 当 $a_h=a_c=a$，$T_*=(T_h+T_c)/2$，\n\\[\nW_{\\max}=\\frac a4(T_h-T_c)^2,\\quad\nT_{\\rm mix}=\\sqrt{(T_h^2+T_c^2)/2}.\n\\]\n令 $T_h=T_0+\\Delta/2,\\ T_c=T_0-\\Delta/2$，则 $T_*=T_0$，$W_{\\max}=a\\Delta^2/4$ 精确成立，$T_{\\rm mix}=T_0+\\Delta^2/(8T_0)+O(\\Delta^4)$；因热容随温度增长，高温库的能量贡献更大，不能套用热容恒定时的公式。\n"
+      }
+    },
+    "T013": {
+      "meta.json": {
+        "bytes": 636,
+        "git_blob": "d0b905f47d7441ccf29b7af26a6f9e6068b210b7",
+        "text": "{\n  \"id\": \"T013\",\n  \"topic\": \"热学\",\n  \"title\": \"热容随温度线性增长的可逆绝热过程与熵函数\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 60,\n  \"tags\": [\n    \"变热容理想气体\",\n    \"可逆绝热积分\",\n    \"超越方程\",\n    \"朗伯W函数\",\n    \"恒热容极限\"\n  ],\n  \"answer\": \"T_2=(a/b)W_0[(bT_1/a)e^{bT_1/a}\\\\lambda^{-R/a}],\\\\quad W=n[a(T_1-T_2)+\\\\frac b2(T_1^2-T_2^2)]\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v1.3\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 655,
+        "git_blob": "9bc4b495a6602549a81ccf23b8f048499c141cf5",
+        "text": "有 $n>0$ mol 理想气体，摩尔定容热容为 $C_V(T)=a+bT$，其中 $a,b>0$、温度 $T>0$，气体常数为 $R>0$。气体从初态 $(T_1,V_1)$ 经可逆绝热过程膨胀到 $V_2=\\lambda V_1$，$\\lambda>1$，只有体积功。\n(1) 推导该气体的熵差状态函数和可逆绝热隐式温度方程；(2) 证明终温 $T_2$ 存在唯一且满足 $0<T_2<T_1$，并用 Lambert $W$ 函数写出显式解；(3) 由第一定律求对外做功与温度依赖的有效绝热指数，解释为何不能直接套用 $TV^{\\gamma-1}=\\mathrm{const}$；(4) 检验 $b\\to0^+$ 的恒定热容极限，并给出 $\\lambda\\to1^+$ 时的初始微分温度斜率。\n"
+      },
+      "solution.tex": {
+        "bytes": 1224,
+        "git_blob": "8190c913549db8fb066c1dbefef6a009dee30b07",
+        "text": "(1) 理想气体熵微分满足\n\\[\ndS=n\\frac{a+bT}{T}\\,dT+nR\\,\\frac{dV}{V}.\n\\]\n积分得 $\\Delta S=n[a\\ln(T_2/T_1)+b(T_2-T_1)+R\\ln\\lambda]$。可逆绝热条件为 $\\Delta S=0$，即\n\\[\na\\ln(T_2/T_1)+b(T_2-T_1)=-R\\ln\\lambda<0.\n\\]\n\n(2) 定义 $F(T)=a\\ln(T/T_1)+b(T-T_1)+R\\ln\\lambda$。$F'(T)=a/T+b>0$，且 $F(0^+)=-\\infty$、$F(T_1)=R\\ln\\lambda>0$，故唯一根 $T_2\\in(0,T_1)$。移项并指数化得到\n\\[\nT_2e^{(b/a)T_2}=T_1e^{(b/a)T_1}\\lambda^{-R/a}.\n\\]\n于是取 Lambert 函数实主支 $W_0$：\n\\[\nT_2=\\frac ab\\,W_0\\!\\left(\\frac{bT_1}{a}e^{bT_1/a}\\lambda^{-R/a}\\right).\n\\]\n括号内为正，故唯一正实分支给出物理解。\n\n(3) 由于过程绝热，$Q=0$；第一定律 $\\Delta U=-W$，且 $dU=n(a+bT)dT$，故\n\\[\nW=n\\left[a(T_1-T_2)+\\frac b2(T_1^2-T_2^2)\\right]>0.\n\\]\n由 $dS=0$ 得 $d\\ln T/d\\ln V=-R/[a+bT]$。定义局域 $\\gamma(T)=1+R/(a+bT)$，它随温度变化，故标准的固定指数泊松关系不适用。\n\n(4) 当 $b\\to0^+$，隐式方程退化为 $a\\ln(T_2/T_1)=-R\\ln\\lambda$，从而 $T_2\\to T_1\\lambda^{-R/a}$；$W\\to na(T_1-T_2)$。在 $\\lambda\\to1^+$ 处，由微分关系得到 $dT/d\\ln\\lambda|_{\\lambda=1}=-RT_1/(a+bT_1)$。所有式子的 $bT$ 项具有与 $a$ 相同的热容量纲。\n"
+      }
+    },
+    "T014": {
+      "meta.json": {
+        "bytes": 646,
+        "git_blob": "d6cbbd84c0c2acc75bf5316ecb3150eb59808fe0",
+        "text": "{\n  \"id\": \"T014\",\n  \"topic\": \"热学\",\n  \"title\": \"理想蒸汽近似下的克劳修斯—克拉佩龙曲线和熵跃变\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 65,\n  \"tags\": [\n    \"相平衡\",\n    \"化学势\",\n    \"Clapeyron方程\",\n    \"理想蒸汽近似\",\n    \"潜热与熵跃变\"\n  ],\n  \"answer\": \"P_{\\\\rm sat}=P_0\\\\exp[(L_v/R)(1/T_0-1/T)],\\\\quad\\\\Delta s_{\\\\rm vap}=L_v/T,\\\\quad\\\\Delta u\\\\simeq L_v-RT\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v1.4\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-A\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 688,
+        "git_blob": "44c0171c7e26ae633677b320ef3c8dea6134e3c5",
+        "text": "一种纯物质的液—汽两相平衡曲线满足摩尔潜热 $L_v>0$ 近似恒定。研究温度 $T>0$ 的区间，在此区间内蒸汽可近似为理想气体、液体摩尔体积相对蒸汽可忽略。气体常数为 $R>0$，已知参考温度 $T_0$ 的饱和蒸汽压为 $P_0>0$。\n(1) 从两相化学势相等推导 Clapeyron 微分方程并写出上述近似；(2) 求饱和压力 $P_{\\rm sat}(T)$ 与 $\\ln P$ 对 $1/T$ 的斜率；(3) 求相变摩尔熵跃变，讨论在固定压力下升温越过相界时的熵变化；(4) 将蒸汽视为理想气体计算汽化的摩尔体积功，给出摩尔内能跃变，并说明恒定潜热与无限温区的推断为何不合理。\n"
+      },
+      "solution.tex": {
+        "bytes": 1272,
+        "git_blob": "139a49753e77afe34b76ddc05848a7283f89245d",
+        "text": "(1) 两相共存要求 $\\mu_g(T,P)=\\mu_l(T,P)$。沿共存曲线微分，由 $d\\mu=-s\\,dT+v\\,dP$ 得\n\\[\n(v_g-v_l)\\,dP=(s_g-s_l)\\,dT.\n\\]\n定义摩尔汽化潜热 $L_v=T(s_g-s_l)$，所以\n\\[\n\\frac{dP_{\\rm sat}}{dT}=\\frac{L_v}{T(v_g-v_l)}.\n\\]\n理想蒸汽 $v_g=RT/P$，液体体积可忽略，故 $dP/dT\\simeq L_vP/(RT^2)$。\n\n(2) 分离变量积分 $\\int_{P_0}^{P}dP/P=(L_v/R)\\int_{T_0}^{T}dT/T^2$：\n\\[\nP_{\\rm sat}(T)=P_0\\exp\\left[\\frac{L_v}{R}\\left(\\frac1{T_0}-\\frac1T\\right)\\right].\n\\]\n因此 $\\ln P=\\ln P_0+(L_v/R)(1/T_0-1/T)$；以 $1/T$ 为横轴的斜率为 $-L_v/R$，可从实验数据估计汽化潜热。\n\n(3) 两相摩尔熵跃变为 $\\Delta s_{\\rm vap}=L_v/T>0$，表示吸热汽化时体系熵增加。沿可逆平衡汽化过程需热源供给潜热；若实际存在有限温差导致不可逆过程，总熵产生不能由物质的 $\\Delta s_{\\rm vap}$ 单独判定。\n\n(4) 相变压强为 $P_{\\rm sat}$，汽化的摩尔体积功近似 $w=P_{\\rm sat}(v_g-v_l)\\simeq RT$。由焓跃变 $L_v=\\Delta h=\\Delta u+P\\Delta v$，\n\\[\n\\Delta u_{\\rm vap}\\simeq L_v-RT.\n\\]\n若将恒定 $L_v$ 和理想蒸汽条件无限延伸至任意高温，会错误预测液—汽临界点以后的相分离；上述关系只在给定温区、远离临界点的近似下成立。\n"
+      }
+    },
+    "T015": {
+      "meta.json": {
+        "bytes": 619,
+        "git_blob": "7a3b954a8f5a2451c1a040bbc8f793f3f07ab8bd",
+        "text": "{\n  \"id\": \"T015\",\n  \"topic\": \"热学\",\n  \"title\": \"范德瓦耳斯气体的低压焦耳—汤姆孙系数与反转温度\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 65,\n  \"tags\": [\n    \"非理想气体\",\n    \"等焓过程\",\n    \"Joule–Thomson效应\",\n    \"低密度渐近\",\n    \"反转温度\"\n  ],\n  \"answer\": \"\\\\mu_{JT}=\\\\frac{2a/(RT)-b}{C_P}+O(P),\\\\quad T_{\\\\rm inv}^{(0)}=2a/(Rb)\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v1.4\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-A\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 642,
+        "git_blob": "05d2f16ef98ff7aeb5d97cc0f9b6d5a9e443bce8",
+        "text": "一摩尔范德瓦耳斯气体满足 $P=RT/(v-b)-a/v^2$，其中 $a,b,R>0$。只研究 $P\\to0^+$ 的稀薄气体极限，且摩尔定压热容 $C_P$ 在研究的小范围内可近似为固定正值。等焓节流过程中定义焦耳—汤姆孙系数 $\\mu_{JT}=(\\partial T/\\partial P)_H$。\n(1) 从基本热力学关系推导 $\\mu_{JT}=[T(\\partial v/\\partial T)_P-v]/C_P$；(2) 求 $v(P,T)$ 的低压零阶和一阶修正并从中导出 $\\mu_{JT}$ 的低压极限；(3) 求低压近似下的反转温度并判断高低温对应的制冷或加热趋势；(4) 讨论 $a\\to0$、$b\\to0$ 两种极限及为何该近似不能直接用于高压。\n"
+      },
+      "solution.tex": {
+        "bytes": 1240,
+        "git_blob": "f6145cccbdb25ba20dc5a7f41b61eeba99838ca1",
+        "text": "(1) 由摩尔焓微分 $dH=T\\,dS+v\\,dP$，Maxwell 关系 $(\\partial S/\\partial P)_T=-(\\partial v/\\partial T)_P$ 及 $dS=C_P\\,dT/T-(\\partial v/\\partial T)_P\\,dP$，可得\n\\[\ndH=C_P\\,dT+[v-T(\\partial v/\\partial T)_P]\\,dP.\n\\]\n等焓 $dH=0$，所以\n\\[\n\\mu_{JT}=\\left(\\frac{\\partial T}{\\partial P}\\right)_H\n=\\frac{T(\\partial v/\\partial T)_P-v}{C_P}.\n\\]\n\n(2) 在低压 $v\\gg b$，将状态方程展开为 $P=RT/v+(RTb-a)/v^2+O(v^{-3})$。设 $v=RT/P+\\eta+O(P)$，代入得 $\\eta=b-a/(RT)$，因此\n\\[\nv=\\frac{RT}{P}+b-\\frac{a}{RT}+O(P).\n\\]\n固定 $P$ 求导 $T(\\partial v/\\partial T)_P=RT/P+a/(RT)+O(P)$，故\n\\[\n\\mu_{JT}=\\frac{1}{C_P}\\left(\\frac{2a}{RT}-b\\right)+O(P).\n\\]\n\n(3) 令主导系数零得低压反转温度\n\\[\nT_{\\rm inv}^{(0)}=\\frac{2a}{Rb}.\n\\]\n当 $T<T_{\\rm inv}^{(0)}$ 时 $\\mu_{JT}>0$，因节流降压 $dP<0$，所以 $dT=\\mu_{JT}dP<0$（冷却）；高于反转温度则 $\\mu_{JT}<0$，节流可能升温。此结论限于足够稀薄气体和给定温区。\n\n(4) 若 $a\\to0$（仅排除体积效应），$\\mu_{JT}\\to-b/C_P<0$，低压节流升温；若 $b\\to0$ 且 $a>0$，$\\mu_{JT}\\to2a/(RTC_P)>0$，低压节流冷却。任意极限都不应与高压状态方程展开混淆，因为 $O(P)$ 项及相变可能改变趋势。\n"
+      }
+    },
+    "T016": {
+      "meta.json": {
+        "bytes": 618,
+        "git_blob": "99ead85306ea542f890aae2b8554cfdc8fafd4bf",
+        "text": "{\n  \"id\": \"T016\",\n  \"topic\": \"热学\",\n  \"title\": \"自旋二能级顺磁体的配分函数、热容峰与绝热去磁\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 70,\n  \"tags\": [\n    \"正则配分函数\",\n    \"量子顺磁体\",\n    \"肖特基热容\",\n    \"磁化率\",\n    \"绝热去磁\"\n  ],\n  \"answer\": \"Z=(2\\\\cosh x)^N,\\\\quad C_B=Nk_Bx^2\\\\operatorname{sech}^2x,\\\\quad T_f=T_iB_f/B_i\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v1.5\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 728,
+        "git_blob": "42b8cd394d09847f285f3e52dd9c61da6b8f80e8",
+        "text": "由 $N$ 个互不相互作用的可区分自旋 $1/2$ 磁矩组成理想顺磁体，每个自旋在恒定均匀正磁场 $B>0$ 中只有两个能级 $\\varepsilon_\\pm=\\mp\\mu B$，其中 $\\mu>0$。系统在热平衡温度 $T>0$ 下服从正则分布，取玻尔兹曼常数 $k_B$，不考虑晶格热容、交换作用与量子简并。\n(1) 求正则配分函数、平均内能与磁化强度；(2) 求定磁场热容与熵，分析高温和低温极限及热容为什么在两端均趋于零；(3) 求弱磁场磁化率并得到 Curie 定律；(4) 若通过理想可逆绝热过程将磁场从 $B_i$ 缓慢降至 $B_f$（$0<B_f<B_i$），求温度变化关系，说明无法由该模型在有限正磁场下到达绝对零度。\n"
+      },
+      "solution.tex": {
+        "bytes": 1511,
+        "git_blob": "3ee966c1e712412bee1f3b6cadc9e7cab7601e65",
+        "text": "(1) 令 $x=\\mu B/(k_BT)>0$。单个磁矩的配分函数 $z=e^x+e^{-x}=2\\cosh x$，故 $Z=z^N$。标准热力学公式 $U=-\\partial_\\beta\\ln Z$（$B$ 固定，$\\beta=1/(k_BT)$）给\n\\[\nU=-N\\mu B\\tanh x.\n\\]\n热平均沿磁场的磁矩为 $\\mu\\tanh x$，总磁化强度（以总磁矩计）为 $M=N\\mu\\tanh x$，且 $U=-MB$。\n\n(2) 固定 $B$ 下热容\n\\[\nC_B=\\left(\\frac{\\partial U}{\\partial T}\\right)_B\n=Nk_Bx^2\\operatorname{sech}^2x.\n\\]\n熵 $S=k_B(\\ln Z+\\beta U)=Nk_B[\\ln(2\\cosh x)-x\\tanh x]$。高温 $x\\to0$ 时 $S\\to Nk_B\\ln2$、$C_B\\sim Nk_Bx^2\\to0$；低温 $x\\to\\infty$ 时所有自旋趋向单一基态，$S\\to0$、$C_B\\sim4Nk_Bx^2e^{-2x}\\to0$。两端均零保证 $C_B$ 在中间存在一个肖特基峰，不可误以为热容随温度单调变化。\n\n(3) 当 $\\mu B\\ll k_BT$，$\\tanh x=x+O(x^3)$，故\n\\[\nM=\\frac{N\\mu^2B}{k_BT}+O(B^3),\\qquad\n\\chi_T=\\left(\\frac{\\partial M}{\\partial B}\\right)_{T,B\\to0}\n=\\frac{N\\mu^2}{k_BT}.\n\\]\n这是无相互作用理想顺磁体的 Curie 定律；若换用每单位体积的磁化率，还须除以体积，并可能包含电磁单位制系数。\n\n(4) 熵仅通过 $x=B\\mu/(k_BT)$ 变化。固定 $B>0$ 下\n\\[\n\\frac{dS}{dx}=-Nk_Bx\\,\\operatorname{sech}^2x<0,\n\\]\n故等熵必然保持 $x$ 不变，给\n\\[\n\\frac{B_i}{T_i}=\\frac{B_f}{T_f},\\qquad T_f=T_i\\frac{B_f}{B_i}.\n\\]\n只要 $T_i>0$ 且 $B_f>0$，就有 $T_f>0$。若形式上令 $B_f\\to0$，模型预测 $T_f\\to0$，但现实中晶格热容、磁相互作用和不可逆过程会限制这种理想绝热去磁。\n"
+      }
+    },
+    "T017": {
+      "meta.json": {
+        "bytes": 614,
+        "git_blob": "cc94b082efc01f7606382275beb4c4577c02cb58",
+        "text": "{\n  \"id\": \"T017\",\n  \"topic\": \"热学\",\n  \"title\": \"黑体光子气体的辐射压力、绝热膨胀与熵约束\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 60,\n  \"tags\": [\n    \"黑体辐射热力学\",\n    \"辐射压力\",\n    \"光子熵\",\n    \"绝热指数\",\n    \"能量守恒\"\n  ],\n  \"answer\": \"S=\\\\tfrac43aVT^3,\\\\quad T_f=T_i(V_i/V_f)^{1/3},\\\\quad W=aV_iT_i^4[1-(V_i/V_f)^{1/3}]\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v1.5\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-A\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 687,
+        "git_blob": "1657580bbc790e00641139704c2fac2681775289",
+        "text": "一理想反射腔体内的平衡黑体辐射可视为光子气体，在温度 $T>0$、体积 $V>0$ 时具有内能 $U=aVT^4$、辐射压力 $p=aT^4/3$，其中辐射常数 $a>0$。忽略腔壁热容，腔内光子数不固定。现在让腔壁准静态移动，始末均为辐射热平衡态。\n(1) 利用热力学第一定律及适当的积分常数求光子气体熵 $S(T,V)$；(2) 对可逆绝热膨胀 $V_i\\to V_f>V_i$ 求温度、压力与体积的幂律关系；(3) 求膨胀对外做功，并从 $W=-\\Delta U$ 与 $\\int p\\,dV$ 两种方式独立核对；(4) 若改为恒温可逆膨胀，求所需吸热量与做功，解释为什么光子气体的恒温内能一般不恒定。\n"
+      },
+      "solution.tex": {
+        "bytes": 1255,
+        "git_blob": "dddf6555789c1db7b5a3e2f3b2a6881790728d6f",
+        "text": "(1) 由第一定律 $dU=T\\,dS-p\\,dV$，结合 $U=aVT^4$ 与 $p=aT^4/3$，\n\\[\nT\\,dS=dU+p\\,dV=4aVT^3\\,dT+\\frac43aT^4\\,dV.\n\\]\n因此 $dS=4aVT^2\\,dT+(4/3)aT^3\\,dV$，两项是全微分，积分得\n\\[\nS(T,V)=\\frac43aVT^3+S_0.\n\\]\n按无光子、$T\\to0^+$ 时熵趋于零的参考选择 $S_0=0$。\n\n(2) 可逆绝热条件 $dS=0$ 等价于 $T^3V=\\mathrm{const}$，于是\n\\[\nT_f=T_i(V_i/V_f)^{1/3},\\quad TV^{1/3}=\\mathrm{const}.\n\\]\n因为 $p\\propto T^4$，沿该路径也满足 $pV^{4/3}=\\mathrm{const}$，光子辐射的等熵有效指数为 $4/3$。\n\n(3) 绝热且只有边界功，$W=U_i-U_f$，即\n\\[\nW=aV_iT_i^4\\left[1-(V_i/V_f)^{1/3}\\right]>0.\n\\]\n另一方面 $p(V)=aT_i^4(V_i/V)^{4/3}/3$，故\n\\[\n\\int_{V_i}^{V_f}p\\,dV=\n\\frac{aT_i^4V_i^{4/3}}3\n\\left[-3V^{-1/3}\\right]_{V_i}^{V_f}\n=aV_iT_i^4[1-(V_i/V_f)^{1/3}],\n\\]\n与第一定律完全一致。\n\n(4) 若温度恒为 $T$，则 $\\Delta U=aT^4(V_f-V_i)$，辐射压强固定，做功\n\\[\nW_{\\rm iso}=\\frac{aT^4}{3}(V_f-V_i).\n\\]\n因此需要吸热\n\\[\nQ_{\\rm iso}=\\Delta U+W_{\\rm iso}\n=\\frac43aT^4(V_f-V_i).\n\\]\n理想分子气体恒温内能不变，是因为粒子数固定且单粒子内能只依赖温度；光子气体可随体积变化创建或消灭光子，所以恒温内能 $aVT^4$ 与体积成正比。\n"
+      }
+    },
+    "T018": {
+      "meta.json": {
+        "bytes": 636,
+        "git_blob": "94f2c0e58155a47e4001201fc7952203faa89fe5",
+        "text": "{\n  \"id\": \"T018\",\n  \"topic\": \"热学\",\n  \"title\": \"两种理想气体的可逆分离功、混合熵与 Gibbs 佯谬\",\n  \"kind\": \"综合推导题\",\n  \"level\": 4,\n  \"estimated_minutes\": 55,\n  \"tags\": [\n    \"理想气体混合\",\n    \"化学势\",\n    \"熵变与自由能\",\n    \"半透膜可逆过程\",\n    \"Gibbs佯谬\"\n  ],\n  \"answer\": \"\\\\Delta S_{\\\\rm mix}=-R\\\\sum_i n_i\\\\ln x_i,\\\\quad W_{\\\\rm sep,min}=RT\\\\sum_i n_i\\\\ln(1/x_i)\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v1.6\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L4-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 800,
+        "git_blob": "7f4f00d129bc35550bc1773e4fe1d48184081c9a",
+        "text": "两个绝热刚性分室分别装有 $n_1,n_2>0$ mol 的不同种类、互不反应的理想气体。二者初始温度都为 $T>0$、压强都为 $p>0$，初始体积分别为 $V_i=n_iRT/p$。去掉隔板后两种气体自由混合，整个容器体积为 $V=V_1+V_2$，不对外做功也不与外界传热。令 $x_i=n_i/(n_1+n_2)$。\n(1) 求混合后平衡温度、总压强和各气体分压，解释为何无机械能交换；(2) 从每种理想气体的状态函数熵计算总混合熵并证明严格为正；(3) 使用理想气体化学势求混合的 Gibbs 自由能变化，并给出理想等温等压可逆分离所需最小功；(4) 对等摩尔情形化简结果，比较把两种气体改成完全相同气体后的熵变，解释 Gibbs 佯谬为何不能靠简单积分公式解决。\n"
+      },
+      "solution.tex": {
+        "bytes": 1618,
+        "git_blob": "3378b4f38b4c37dcda3f2a324fea83a16850381e",
+        "text": "(1) 整个系统刚性且隔热，去掉隔板不做边界功；两室气体初温相同，理想气体内能只依赖温度，因此总内能守恒给终温仍为 $T$。总摩尔数为 $n=n_1+n_2$、总容积 $V=nRT/p$，所以终压强仍为 $p$。按照 Dalton 分压定律，组分 $i$ 的分压为 $p_i=n_iRT/V=x_i p$。\n\n(2) 对任一理想气体组分，以其可用体积从 $V_i$ 扩至 $V$ 的等温可逆参考过程计算熵变：\n\\[\n\\Delta S_i=n_iR\\ln\\frac V{V_i}=-n_iR\\ln x_i.\n\\]\n故总混合熵\n\\[\n\\Delta S_{\\rm mix}=-R(n_1\\ln x_1+n_2\\ln x_2)>0,\n\\]\n因为 $0<x_i<1$。真实移除隔板过程不可逆，但熵是状态函数，允许用虚拟可逆路径求初末差，不能反过来断言真实过程可逆。\n\n(3) 理想混合物组分化学势满足\n\\[\n\\mu_i(T,p_i)=\\mu_i^\\circ(T)+RT\\ln(p_i/p^\\circ).\n\\]\n因各组分压力由初始 $p$ 变为 $p_i=x_ip$，\n\\[\n\\Delta G_{\\rm mix}=RT\\sum_i n_i\\ln x_i=-T\\Delta S_{\\rm mix}<0.\n\\]\n理想地使用各组分专用半透膜进行反向可逆等温等压分离时，最小外界功为 $W_{\\rm sep,min}=-\\Delta G_{\\rm mix}=T\\Delta S_{\\rm mix}$；真实设备需要更多功。\n\n(4) 若 $n_1=n_2=n_0$，则 $x_1=x_2=1/2$，所以 $\\Delta S_{\\rm mix}=2n_0R\\ln2$，$W_{\\rm sep,min}=2n_0RT\\ln2$。但若隔板两侧装的是同一种、同温同压的理想气体，去除隔板前后是不可区分的宏观平衡态，真正的混合熵为零。错误的 $2n_0R\\ln2$ 来自将两批本来不可区分的同种分子人为标记为两种可用半透膜区分的组分，属于微观态重复计数；不能仅靠对每半区套“自由膨胀”公式消除。\n"
+      }
+    },
+    "T019": {
+      "meta.json": {
+        "bytes": 636,
+        "git_blob": "e2b58e82ea0dfa7d1cf0f205c6a25155033a0a8a",
+        "text": "{\n  \"id\": \"T019\",\n  \"topic\": \"热学\",\n  \"title\": \"三维零温费米气体的简并压、体积模量与声速\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 75,\n  \"tags\": [\n    \"费米统计\",\n    \"Pauli占据\",\n    \"态密度积分\",\n    \"简并压\",\n    \"压缩模量与声速\"\n  ],\n  \"answer\": \"E_F=\\\\frac{\\\\hbar^2(3\\\\pi^2n)^{2/3}}{2m},\\\\quad P=\\\\frac25nE_F,\\\\quad B=\\\\frac53P,\\\\quad c_s=v_F/\\\\sqrt3\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v1.6\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 763,
+        "git_blob": "3d7af19799e5c0dda0d575a74d30d4f6eb21954d",
+        "text": "体积为 $V>0$ 的三维立方盒中，装有 $N\\gg1$ 个不相互作用的质量为 $m>0$、自旋为 $1/2$ 的非相对论费米粒子。零温基态下每个动量态最多容纳两种自旋，所有 $|\\boldsymbol k|\\le k_F$ 的自旋态均被填满。忽略边界效应及相互作用，取 $\\varepsilon(k)=\\hbar^2k^2/(2m)$，粒子数密度 $n=N/V$。\n(1) 从 $k$ 空间相空间计数求 $k_F$、费米能 $E_F$ 和费米速度 $v_F$；(2) 将动能在费米球内积分求总内能 $U$；(3) 由 $P=-(\\partial U/\\partial V)_N$ 推出零温简并压力和体积模量 $B=-V(\\partial P/\\partial V)_N$；(4) 由声速的绝热压缩关系 $c_s^2=(\\partial P/\\partial\\rho)_S$ 求声速并与 $v_F$ 比较，说明何时非相对论理想模型可能失效。\n"
+      },
+      "solution.tex": {
+        "bytes": 1495,
+        "git_blob": "cb7ff992e44409081f722538433d65a60492d568",
+        "text": "(1) 对周期性盒子的密集动量态，$k$ 空间单位体积可容纳 $V/(2\\pi)^3$ 个轨道态，自旋简并为2。因此\n\\[\nN=2\\frac{V}{(2\\pi)^3}\\frac{4\\pi k_F^3}{3}\n=\\frac{Vk_F^3}{3\\pi^2},\n\\quad k_F=(3\\pi^2n)^{1/3}.\n\\]\n故\n\\[\nE_F=\\frac{\\hbar^2}{2m}(3\\pi^2n)^{2/3},\n\\qquad v_F=\\frac{\\hbar k_F}{m}.\n\\]\n\n(2) 零温每个费米球内状态均被占据：\n\\[\nU=2\\frac V{(2\\pi)^3}\\int_{|\\boldsymbol k|<k_F}\n\\frac{\\hbar^2k^2}{2m}\\,d^3k\n=\\frac{V\\hbar^2k_F^5}{10\\pi^2m}.\n\\]\n用 $N=Vk_F^3/(3\\pi^2)$ 消去 $V,k_F$ 组合，\n\\[\nU=\\frac35NE_F.\n\\]\n此内能纯粹来自 Pauli 排斥导致的动能占据，不需要粒子之间存在排斥势。\n\n(3) 固定 $N$ 时 $n=N/V$、$E_F\\propto V^{-2/3}$，因此 $U\\propto V^{-2/3}$，其压力\n\\[\nP=-\\left(\\frac{\\partial U}{\\partial V}\\right)_N\n=\\frac23\\frac UV=\\frac25nE_F.\n\\]\n压力与密度满足 $P\\propto n^{5/3}$，故\n\\[\nB=-V\\left(\\frac{\\partial P}{\\partial V}\\right)_N\n=n\\left(\\frac{\\partial P}{\\partial n}\\right)_{S}\n=\\frac53P=\\frac23nE_F>0.\n\\]\n这说明压缩体系需要做正功，即使温度为零。\n\n(4) 零温流体的质量密度为 $\\rho=mn$；压缩过程中绝热与零温基态一致，故\n\\[\nc_s^2=\\left(\\frac{\\partial P}{\\partial\\rho}\\right)_S\n=\\frac1m\\frac{dP}{dn}\n=\\frac{2E_F}{3m}=\\frac{v_F^2}{3},\n\\qquad c_s=\\frac{v_F}{\\sqrt3}.\n\\]\n当 $E_F$ 不再远小于 $mc^2$、$v_F$ 接近光速，或相互作用/晶格能不可忽略时，这个非相对论自由费米气体模型会失效；不能将公式扩展到任意高密度。\n"
+      }
+    },
+    "T020": {
+      "meta.json": {
+        "bytes": 617,
+        "git_blob": "344e5b338a9459062b1f8393bfc407a5ddd97cc3",
+        "text": "{\n  \"id\": \"T020\",\n  \"topic\": \"热学\",\n  \"title\": \"三维理想玻色气体的凝聚临界温度、热容和基态占据\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 75,\n  \"tags\": [\n    \"玻色分布\",\n    \"临界密度\",\n    \"零动量凝聚\",\n    \"热能积分\",\n    \"等容热容\"\n  ],\n  \"answer\": \"T_c=\\\\frac{2\\\\pi\\\\hbar^2}{mk_B}(n/\\\\zeta(3/2))^{2/3},\\\\quad N_0/N=1-(T/T_c)^{3/2}\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v1.7\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 814,
+        "git_blob": "515e32b5850cd4e6bf23caebe76b565cd109762e",
+        "text": "体积为 $V$ 的三维周期性盒中有 $N\\gg1$ 个质量为 $m>0$ 的无自旋、无相互作用的非相对论玻色粒子，粒子数密度 $n=N/V$ 固定。单粒子能量为 $\\varepsilon_{\\boldsymbol k}=\\hbar^2k^2/(2m)$，令 $\\lambda_T=\\sqrt{2\\pi\\hbar^2/(mk_BT)}$ 为热德布罗意波长。研究热力学极限且温度 $T>0$，只考虑理想气体与均匀平衡态。\n(1) 从 Bose 分布计算激发态最大容纳数 $N_{\\rm ex}^{\\max}(T)$，推导临界温度 $T_c$；(2) 对 $0<T<T_c$ 求零动量凝聚分数和化学势，解释为何凝聚不是粒子间存在吸引力的结果；(3) 求凝聚相的内能、压强和定容热容，明确其温度依赖；(4) 计算 $T\\to0^+$ 和 $T\\uparrow T_c$ 的各量极限，并说明有限体积或存在相互作用时哪些结论不再严格适用。\n"
+      },
+      "solution.tex": {
+        "bytes": 1860,
+        "git_blob": "f83df4ceaf4ee60ed6c7a02ecdca92520970ab8e",
+        "text": "(1) Bose 分布为 $f(\\varepsilon)=[e^{(\\varepsilon-\\mu)/(k_BT)}-1]^{-1}$，基态能量取零，因此平衡化学势 $\\mu\\le0$。三维动量态密度积分给激发态数\n\\[\nN_{\\rm ex}(T,z)=\\frac{V}{\\lambda_T^3}g_{3/2}(z),\\quad\ng_s(z)=\\sum_{\\ell=1}^\\infty\\frac{z^\\ell}{\\ell^s},\\quad z=e^{\\mu/(k_BT)}\\le1.\n\\]\n当 $\\mu\\to0^-$，$g_{3/2}(z)\\to\\zeta(3/2)$，故激发态饱和数\n\\[\nN_{\\rm ex}^{\\max}=\\frac V{\\lambda_T^3}\\zeta(3/2).\n\\]\n临界点 $N=N_{\\rm ex}^{\\max}(T_c)$，解得\n\\[\nT_c=\\frac{2\\pi\\hbar^2}{mk_B}\n\\left(\\frac{n}{\\zeta(3/2)}\\right)^{2/3}.\n\\]\n\n(2) 在 $T<T_c$ 的热力学极限，化学势趋于 $\\mu=0$，超出激发态容量的粒子占据 $\\boldsymbol k=0$ 基态，因此\n\\[\n\\frac{N_0}{N}=1-\\frac{V\\zeta(3/2)}{N\\lambda_T^3}\n=1-\\left(\\frac{T}{T_c}\\right)^{3/2}.\n\\]\n该宏观占据由 Bose 对称化与三维态密度共同产生；本模型中粒子无相互作用，故不能解释成分子间吸引造成的凝聚。\n\n(3) 激发态内能是\n\\[\nU=\\frac32\\frac{Vk_BT}{\\lambda_T^3}\\zeta(5/2)\n=\\frac32Nk_BT\\frac{\\zeta(5/2)}{\\zeta(3/2)}\n\\left(\\frac{T}{T_c}\\right)^{3/2}.\n\\]\n基态能量为零，压力由自由气体动量流或热力学关系给出\n\\[\nP=\\frac{2U}{3V}=\\frac{k_BT}{\\lambda_T^3}\\zeta(5/2).\n\\]\n固定 $N,V$ 下 $T_c$ 是常数，故\n\\[\nC_V=\\left(\\frac{\\partial U}{\\partial T}\\right)_{N,V}\n=\\frac{15}{4}Nk_B\\frac{\\zeta(5/2)}{\\zeta(3/2)}\n\\left(\\frac{T}{T_c}\\right)^{3/2}.\n\\]\n不能给凝聚粒子额外附加经典 $3k_BT/2$ 动能，否则将重复计数。\n\n(4) $T\\to0^+$ 时 $N_0/N\\to1$、$U,P,C_V\\to0$；当 $T\\uparrow T_c$，$N_0/N\\to0$，\n\\[\nC_V(T_c^-)=\\frac{15}{4}Nk_B\\frac{\\zeta(5/2)}{\\zeta(3/2)}.\n\\]\n热力学极限中的零化学势与尖锐相变，在有限体积中被平滑；粒子相互作用会改变激发谱、化学势和临界温度，因此这些理想公式只适用于明确给定的无相互作用模型。\n"
+      }
+    },
+    "T021": {
+      "meta.json": {
+        "bytes": 672,
+        "git_blob": "b1587f95afc5454813d2f6aba34dae84a19b4ce7",
+        "text": "{\n  \"id\": \"T021\",\n  \"topic\": \"热学\",\n  \"title\": \"Knudsen 小孔逸出导致的理想气体自冷却、速率方程与压力衰减\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 75,\n  \"tags\": [\n    \"Maxwell气体速度分布\",\n    \"逸出速度权重\",\n    \"非平衡能量平衡\",\n    \"冷却律\",\n    \"非线性速率方程\"\n  ],\n  \"answer\": \"N=N_0(1+t/(6\\\\tau_0))^{-6},\\\\quad T=T_0(1+t/(6\\\\tau_0))^{-2},\\\\quad p=p_0(1+t/(6\\\\tau_0))^{-8}\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v1.7\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 898,
+        "git_blob": "af768b836d5705ca3a72550638dae13d0a434145",
+        "text": "体积固定为 $V>0$ 的绝热容器中有 $N(t)\\gg1$ 个质量 $m>0$ 的同种单原子理想气体粒子。气体内部碰撞非常频繁，足以在逸出时间尺度上始终保持均匀 Maxwell 平衡，温度为 $T(t)>0$。容器壁上开一个面积 $A$ 极小的孔，外部为真空；小孔尺度小于气体分子平均自由程，孔道无能量选择作用，逸出的粒子不返回，容器和气体无其他热功交换。初态为 $(N_0,T_0)$。\n(1) 从 Maxwell 速度分布计算单位时间穿过小孔的粒子数通量，以及单个逸出粒子的平均动能；(2) 联立容器气体的物质守恒和内能守恒，求 $T$ 与 $N$ 的严格关系；(3) 求完整的 $N(t)$、$T(t)$ 和容器压强 $p(t)$，并给出自然衰减时间尺度；(4) 讨论为何逸出分子的平均动能大于容器内平均动能，以及当 $N$ 很小时所得渐近式的失效原因。\n"
+      },
+      "solution.tex": {
+        "bytes": 1859,
+        "git_blob": "a7d35c614bd7643ba910225b2d4c51af67747f5b",
+        "text": "(1) 对容器内 Maxwell 分布，法向正速度分量 $v_z>0$ 的粒子穿过面积 $A$ 的通量为\n\\[\n-\\dot N=A\\frac NV\\int_{v_z>0}v_z f(\\boldsymbol v)\\,d^3v\n=A\\frac NV\\sqrt{\\frac{k_BT}{2\\pi m}}.\n\\]\n由于穿孔权重多乘一个 $v_z$，逸出者比均匀抽取的一颗气体分子更可能具有较大法向速率。对通量加权后的动能积分：\n\\[\n\\langle\\varepsilon\\rangle_{\\rm out}\n=\\frac{\\int_{v_z>0}\\frac12mv^2\\,v_z f\\,d^3v}\n{\\int_{v_z>0}v_z f\\,d^3v}\n=2k_BT,\n\\]\n而容器内一颗粒子的平均动能是 $3k_BT/2$。\n\n(2) 容器内总内能 $U=3Nk_BT/2$。每减少 $-dN$ 颗粒子（$dN<0$），离开容器的能量为 $(-dN)\\,2k_BT$，因此\n\\[\ndU=2k_BT\\,dN.\n\\]\n将 $U$ 微分得\n\\[\n\\frac32k_B(N\\,dT+T\\,dN)=2k_BT\\,dN\n\\quad\\Longrightarrow\\quad \\frac{dT}{T}=\\frac13\\frac{dN}{N}.\n\\]\n积分得到\n\\[\nT=T_0(N/N_0)^{1/3}.\n\\]\n气体逸出时 $N$ 下降、$T$ 也下降，这种冷却不需要对外做机械活塞功。\n\n(3) 定义初始逸出时间尺度\n\\[\n\\tau_0=\\frac{V}{A}\\sqrt{\\frac{2\\pi m}{k_BT_0}}.\n\\]\n将 $T(N)$ 代回逸出率方程，令 $x=N/N_0$，则\n\\[\n\\dot x=-\\frac1{\\tau_0}x^{7/6}.\n\\]\n求解给 $x^{-1/6}=1+t/(6\\tau_0)$，于是\n\\[\nN(t)=N_0\\left(1+\\frac{t}{6\\tau_0}\\right)^{-6},\\qquad\nT(t)=T_0\\left(1+\\frac{t}{6\\tau_0}\\right)^{-2}.\n\\]\n因 $p=Nk_BT/V$，\n\\[\np(t)=p_0\\left(1+\\frac{t}{6\\tau_0}\\right)^{-8}.\n\\]\n代入 $t=0$ 和原速率方程，可独立核查初值及幂指数。\n\n(4) 容器内随机粒子平均动能为 $3k_BT/2$，但开孔造成速度选择：穿孔概率正比正法向速率，从而每个逸出粒子携带 $2k_BT$，比容器平均更高的能量，因此余气冷却。上述代数长尾只在 $N\\gg1$、孔面积远小于壁面、流动足够缓慢使容器内部持续热平衡时成立；当粒子太稀少导致内部碰撞不足时，Maxwell 假设失效，不能将结果延伸到任意晚时。\n"
+      }
+    },
+    "T022": {
+      "meta.json": {
+        "bytes": 589,
+        "git_blob": "3a62afd35dd693a42c7aa6f5d3884a99b5aba270",
+        "text": "{\n  \"id\": \"T022\",\n  \"topic\": \"热学\",\n  \"title\": \"三维 Debye 声子态密度、零点能及热容立方律\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 70,\n  \"tags\": [\n    \"Debye模型\",\n    \"声子统计\",\n    \"Bose积分\",\n    \"低温热容\",\n    \"高温极限\"\n  ],\n  \"answer\": \"U_0=9N\\\\hbar\\\\omega_D/8,\\\\quad C_V\\\\sim(12\\\\pi^4/5)Nk_B(T/\\\\Theta_D)^3\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v1.8\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 571,
+        "git_blob": "add0a7b814bbf20eb2a5bdff2495e03e4b1e5b95",
+        "text": "三维绝缘晶体有 $N\\gg1$ 个原子，在 Debye 声学模型中其 $3N$ 个谐振模具有态密度 $g(\\omega)=9N\\omega^2/\\omega_D^3$，其中 $0\\le\\omega\\le\\omega_D$。每个模式能量为零点能 $\\hbar\\omega/2$ 加上 Bose 热激发能 $\\hbar\\omega/[e^{\\hbar\\omega/(k_BT)}-1]$。设 $\\Theta_D=\\hbar\\omega_D/k_B$。\n(1) 核验模态总数和全部零点能；(2) 计算内能的无量纲 Bose 积分表示；(3) 严格推导低温 $T\\ll\\Theta_D$ 下热容的 $T^3$ 首项及系数；(4) 证明高温热容趋于 $3Nk_B$ 并说明该声学模型的物理局限。\n"
+      },
+      "solution.tex": {
+        "bytes": 1460,
+        "git_blob": "07976066cb064ce358043d8e0f9462ebb3f2293f",
+        "text": "(1) 声子态密度按三维谐振自由度归一：\n\\[\n\\int_0^{\\omega_D}g(\\omega)d\\omega\n=\\frac{9N}{\\omega_D^3}\\frac{\\omega_D^3}{3}=3N.\n\\]\n零点能即\n\\[\nU_0=\\int_0^{\\omega_D}\\frac{\\hbar\\omega}{2}\\,g(\\omega)d\\omega\n=\\frac{9N\\hbar}{2\\omega_D^3}\\frac{\\omega_D^4}{4}\n=\\frac98N\\hbar\\omega_D.\n\\]\n这部分与温度无关，对热容没有直接贡献。\n\n(2) 全部内能精确写成\n\\[\nU(T)=U_0+\\frac{9N\\hbar}{\\omega_D^3}\n\\int_0^{\\omega_D}\\frac{\\omega^3}{e^{\\hbar\\omega/(k_BT)}-1}\\,d\\omega.\n\\]\n用 $x=\\hbar\\omega/(k_BT)$ 换元得\n\\[\nU(T)-U_0=9Nk_BT\\left(\\frac{T}{\\Theta_D}\\right)^3\n\\int_0^{\\Theta_D/T}\\frac{x^3}{e^x-1}\\,dx.\n\\]\n零点部分不得重复加入热激发积分中。\n\n(3) 当 $T/\\Theta_D\\to0^+$，积分上限趋于无穷，而 $x^3/(e^x-1)$ 可积。利用\n\\[\n\\int_0^\\infty\\frac{x^3}{e^x-1}dx=\\Gamma(4)\\zeta(4)=\\frac{\\pi^4}{15}\n\\]\n得\n\\[\nU(T)-U_0\\sim\\frac{3\\pi^4}{5}Nk_B\\frac{T^4}{\\Theta_D^3},\n\\quad\nC_V=\\left(\\frac{\\partial U}{\\partial T}\\right)_V\n\\sim\\frac{12\\pi^4}{5}Nk_B\\left(\\frac{T}{\\Theta_D}\\right)^3.\n\\]\n低温声学模态的连续三维密度导致热容立方律，而非经验上的任意幂次。\n\n(4) 当 $T\\gg\\Theta_D$，对所有模式有 $\\hbar\\omega\\ll k_BT$，单模总能量的热依赖首项为 $k_BT$，所以 $\\partial U/\\partial T\\to3Nk_B$，即 Dulong–Petit 定律。该 Debye 截断模型并不覆盖复杂晶格中的全部光学声子，亦不能解释金属的电子低温热容；温区与模型假设必须明确。\n"
+      }
+    },
+    "T023": {
+      "meta.json": {
+        "bytes": 652,
+        "git_blob": "e5c3b0e2f5911cb2ab8e0b1523bfe2c8ce1a1d32",
+        "text": "{\n  \"id\": \"T023\",\n  \"topic\": \"热学\",\n  \"title\": \"范德瓦耳斯气体自由膨胀中的温降、熵增加及压强稳定性\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 70,\n  \"tags\": [\n    \"范德瓦耳斯内能\",\n    \"热力学熵函数\",\n    \"绝热自由膨胀\",\n    \"稳定性约束\",\n    \"理想极限\"\n  ],\n  \"answer\": \"T_f=T_i+(an/C_V)(1/V_f-1/V_i),\\\\quad\\\\Delta S=nC_V\\\\ln(T_f/T_i)+nR\\\\ln[(V_f-nb)/(V_i-nb)]\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v1.8\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 759,
+        "git_blob": "e8aeed694535121f5eeaba9de70ef99d3ba5a86b",
+        "text": "有 $n>0$ mol 稳定单相范德瓦耳斯气体，其压强与内能在所考察温区内由\n\\[\nP=\\frac{nRT}{V-nb}-\\frac{an^2}{V^2},\\qquad\nU=nC_VT-\\frac{an^2}{V},\n\\]\n表示，其中 $a,b,R,C_V>0$、$V>nb$，摩尔定容热容 $C_V$ 为常数。气体从初态 $(T_i,V_i)$ 向隔热真空室自由膨胀到 $V_f>V_i$，无外界边界功；初末及连接两态的等内能平衡态族均假设 $T>0$、$P>0$，并维持单相。\n(1) 从第一定律求 $T_f$，判断是否冷却；(2) 用基本热力学关系推导熵状态函数差并给出 $\\Delta S$；(3) 沿等内能平衡态路径证明 $dS/dV=P/T>0$，从而解释不可逆自由膨胀的严格熵增加；(4) 求 $V_f\\downarrow V_i$ 时的冷却斜率以及 $a\\to0,b\\to0$ 时的理想气体极限。\n"
+      },
+      "solution.tex": {
+        "bytes": 1774,
+        "git_blob": "038696afeb8c7c72c6deb0322f1ee77d957c7889",
+        "text": "(1) 整个系统隔热，气体自由膨胀到真空室时没有推动外界活塞的边界功，因此 $Q=W=0$，$\\Delta U=0$。代入所给内能函数得\n\\[\nnC_VT_f-\\frac{an^2}{V_f}\n=nC_VT_i-\\frac{an^2}{V_i}.\n\\]\n于是\n\\[\nT_f=T_i+\\frac{an}{C_V}\\left(\\frac1{V_f}-\\frac1{V_i}\\right)<T_i.\n\\]\n随体积增大，吸引势能 $-an^2/V$ 上升，部分热运动内能转化为分子间势能，故温度下降。\n\n(2) 对内能微分，\n\\[\ndU=nC_VdT+\\frac{an^2}{V^2}dV.\n\\]\n对虚拟可逆状态变更使用 $T\\,dS=dU+P\\,dV$，并代入状态方程：\n\\[\ndS=\\frac{nC_V}{T}dT+\n\\left[\\frac{an^2}{TV^2}\n+\\frac{nR}{V-nb}-\\frac{an^2}{TV^2}\\right]dV\n=\\frac{nC_V}{T}dT+\\frac{nR}{V-nb}dV.\n\\]\n故熵是状态函数且\n\\[\n\\Delta S=nC_V\\ln\\frac{T_f}{T_i}\n+nR\\ln\\frac{V_f-nb}{V_i-nb}.\n\\]\n此计算没有假定真实自由膨胀是可逆过程。\n\n(3) 沿给定等内能的平衡状态族，$dU=0$，因此由基本关系直接得 $(\\partial S/\\partial V)_U=P/T$。也可由 $dT/dV|_U=-an/(C_VV^2)$ 代入上式独立验证：\n\\[\n\\frac{dS}{dV}\\bigg|_U=\n-\\frac{an^2}{TV^2}+\\frac{nR}{V-nb}\n=\\frac PT.\n\\]\n题目明确规定在所走状态区间 $T>0,P>0$，故 $dS/dV|_U>0$，对 $V_i<V_f$ 积分即得 $\\Delta S>0$，与第二定律一致。这一论证只通过虚拟平衡态连接两端点，并不宣称真实膨胀过程保持空间均匀。\n\n(4) 当 $V_f\\downarrow V_i$，温度对最终体积的一阶斜率为\n\\[\n\\left.\\frac{\\partial T_f}{\\partial V_f}\\right|_{U,V_f=V_i}\n=-\\frac{an}{C_VV_i^2}<0.\n\\]\n若先令 $a\\to0$，体积相关吸引能消失，$T_f\\to T_i$；进一步令 $b\\to0$，熵变恢复 $\\Delta S=nR\\ln(V_f/V_i)$，正是理想气体向真空自由膨胀的结果。非理想气体内能含体积项，故不能不作检验地套用“绝热自由膨胀温度不变”。\n"
+      }
+    },
+    "T024": {
+      "meta.json": {
+        "bytes": 622,
+        "git_blob": "34a96f7e632ceca24f8e3242d93ce7629cfb154d",
+        "text": "{\n  \"id\": \"T024\",\n  \"topic\": \"热学\",\n  \"title\": \"范德瓦耳斯临界点的三重条件、压缩因子与等温稳定性\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 70,\n  \"tags\": [\n    \"临界点\",\n    \"状态方程求导\",\n    \"等温压缩系数\",\n    \"临界指数\"\n  ],\n  \"answer\": \"\\nP_v=-\\\\frac{RT}{(v-b)^2}+\\\\frac{2a}{v^3},\\\\quad\\nP_{vv}=\\\\frac{2RT}{(v-b)^3}-\\\\frac{6a}{v^4}.\\n\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.0\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 507,
+        "git_blob": "7daed3342d09f79f757ab33e84dabd47bbc4031a",
+        "text": "一摩尔流体满足范德瓦耳斯方程 P=RT/(v−b)−a/v²，a,b,R>0，v>b。假设临界点是同一等温曲线上同时满足 ∂P/∂v=0、∂²P/∂v²=0 的点。\n(1) 联立临界条件求临界摩尔体积、温度和压强；(2) 求临界压缩因子 Zc=Pcvc/(RTc)，与理想气体比较；(3) 从等温压缩系数 κT=−(1/v)(∂v/∂P)T 讨论机械稳定区间；(4) 沿 Tc 等温线作 v−vc 小偏差展开至首次非零阶，说明临界处为何压力变化是三次而非一次。\n"
+      },
+      "solution.tex": {
+        "bytes": 1398,
+        "git_blob": "0a32a052da98c9bff0468e6d4b367e6ad326c72f",
+        "text": "(1) 对状态方程在固定 T 下求导：\n\\[\nP_v=-\\frac{RT}{(v-b)^2}+\\frac{2a}{v^3},\\quad\nP_{vv}=\\frac{2RT}{(v-b)^3}-\\frac{6a}{v^4}.\n\\]\n在临界点，第一式给 \\(RT_c=2a(v_c-b)^2/v_c^3\\)，第二式给 \\(RT_c=3a(v_c-b)^3/v_c^4\\)。相除得 \\(2v_c=3(v_c-b)\\)，故 \\(v_c=3b\\)。回代得\n\\[\nT_c=\\frac{8a}{27Rb},\\qquad P_c=\\frac{a}{27b^2}.\n\\]\n\n(2) 临界压缩因子\n\\[\nZ_c=\\frac{P_cv_c}{RT_c}\n=\\frac{(a/(27b^2))3b}{8a/(27b)}=\\frac38.\n\\]\n理想气体总满足 Z=1，说明排除体积与吸引共同使实际临界压缩系数偏离理想值。此数值是模型预测，不是任意实际流体的严格普适常数。\n\n(3) 在单相稳定等温平衡区必须有 \\((\\partial P/\\partial v)_T<0\\)，等价于 \\(\\kappa_T=-1/(vP_v)>0\\)。当 \\(P_v>0\\) 时形式上的 \\(\\kappa_T<0\\) 表示均匀状态受机械扰动不稳定；当 \\(P_v=0\\) 压缩系数发散，需要考虑亚稳态、相分离与非线性效应，不能将整个 S 形等温线都当作稳定平衡。\n\n(4) 在 T=Tc 且 v=3b+δv 附近，常数项为 Pc，线性及二次项因临界条件为零。三阶导数\n\\[\nP_{vvv}=-\\frac{6RT}{(v-b)^4}+\\frac{24a}{v^5},\n\\quad\nP_{vvv}(T_c,3b)=-\\frac{a}{81b^5}.\n\\]\n故\n\\[\nP(T_c,v)=P_c-\\frac{a}{486b^5}(\\delta v)^3+O((\\delta v)^4).\n\\]\n这意味着临界等温线上 \\(P-P_c\\propto-(v-v_c)^3\\)，体现此平均场模型的临界幂指数 δ=3，并与体积扰动的三次响应一致。\n"
+      }
+    },
+    "T025": {
+      "meta.json": {
+        "bytes": 588,
+        "git_blob": "06da229d404b2b889d5dcc3203c76d74db76425f",
+        "text": "{\n  \"id\": \"T025\",\n  \"topic\": \"热学\",\n  \"title\": \"二能级体系的布居反转、负绝对温度与熵最大点\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 70,\n  \"tags\": [\n    \"微正则统计\",\n    \"布居反转\",\n    \"负温度\",\n    \"组合熵\"\n  ],\n  \"answer\": \"\\n\\\\Omega(N,n)=\\\\frac{N!}{n!(N-n)!},\\\\quad\\nS\\\\simeq-Nk_B[x\\\\ln x+(1-x)\\\\ln(1-x)].\\n\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.0\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 537,
+        "git_blob": "c8dd02597617e7239ce872ad3157571410c815c5",
+        "text": "N≫1 个彼此无相互作用、可区分的二能级单位，单粒子能级分别为 0 与 ε>0。固定激发粒子数 n、总内能 U=nε。考虑宏观热力学极限并用 Boltzmann 组合熵 S=kB ln[binom(N,n)]。\n(1) 用 Stirling 近似求激发比例 x=n/N 下的熵；(2) 由 1/T=(∂S/∂U)N 得到温度与 x 的关系，识别负温度区域；(3) 求正则体系的激发概率和热容，验证正、负温度延拓的一致性；(4) 说明 x→1/2、x→1⁻ 极限及为什么这种负温度不是“比零更冷”。\n"
+      },
+      "solution.tex": {
+        "bytes": 1405,
+        "git_blob": "4643acdf767bee4cd5d386146e8b0e257bb5e763",
+        "text": "(1) 在 N≫1 且 x=n/N 远离精确端点时，\n\\[\n\\Omega(N,n)=\\frac{N!}{n!(N-n)!},\\quad\nS\\simeq-Nk_B[x\\ln x+(1-x)\\ln(1-x)].\n\\]\n熵对 x 关于 1/2 对称，并在 x=1/2 取最大值 \\(S_{\\max}\\simeq Nk_B\\ln2\\)。\n\n(2) 由 U=Nεx，\n\\[\n\\frac1T=\\left(\\frac{\\partial S}{\\partial U}\\right)_N\n=\\frac{k_B}{\\epsilon}\\ln\\frac{1-x}{x}.\n\\]\n因此 \\(x=1/[1+\\exp(\\epsilon/(k_BT))]\\)。当 0<x<1/2，温度为正；当 1/2<x<1，熵随内能增加而减少，故 T<0。这只有能谱上界有限、能实现布居反转且各内部自由度近似热平衡时才可能存在。\n\n(3) 单粒子正则配分函数为 \\(z=1+e^{-\\beta\\epsilon}\\)，平均激发比例 \\(x=1/(1+e^{\\beta\\epsilon})\\)，与微正则关系一致，包括 β<0 的形式延拓。平均内能 \\(U=N\\epsilon x\\)，故\n\\[\nC=\\left(\\frac{\\partial U}{\\partial T}\\right)_N\n=Nk_B\\left(\\frac{\\epsilon}{k_BT}\\right)^2\n\\frac{e^{\\epsilon/(k_BT)}}{[1+e^{\\epsilon/(k_BT)}]^2}>0.\n\\]\n无论 T 正负，热容非负，因为 \\(\\mathrm{Var}(U)=k_BT^2C\\ge0\\)。\n\n(4) 在 x→1/2± 时，\\(\\ln[(1-x)/x]\\to0^\\pm\\)，故温度分别趋 +∞ 与 −∞；负温度从“负无穷大”随布居反转增强趋近于 \\(0^-\\)（x→1⁻）。逆温 β 为热接触时能量流方向的根本变量，所有 β<0 的状态在热接触下可向任何 β>0 的体系放热，因此负绝对温度热力学上比任何正温度更“热”，并不是绝对零度以下。\n"
+      }
+    },
+    "T026": {
+      "meta.json": {
+        "bytes": 548,
+        "git_blob": "d5280b9ede7f3e49ddac4b2de95db613f655f7a9",
+        "text": "{\n  \"id\": \"T026\",\n  \"topic\": \"热学\",\n  \"title\": \"干绝热大气直减率、位温与 Brunt–Väisälä 稳定频率\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 75,\n  \"tags\": [\n    \"静力大气\",\n    \"绝热直减率\",\n    \"熵守恒\",\n    \"浮力振荡\"\n  ],\n  \"answer\": \"\\n\\\\frac{dp}{dz}=-\\\\frac{Mgp}{RT}.\\n\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.0\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 660,
+        "git_blob": "452f6a69b593ab8ac5ca32c1cc78a0036d002496",
+        "text": "理想干空气具有恒定摩尔气体常数 R、定压摩尔热容 Cp>R、摩尔质量 M>0，处于恒定重力 g>0 下的静力平衡大气，压强 p(z)、温度 T(z)>0；忽略水汽、混合、阻力。取小空气团在周围环境中缓慢作绝热垂直位移，其压强瞬时与环境压强平衡。\n(1) 从静力平衡和理想气体方程求 dp/dz；(2) 用摩尔熵不变推导干绝热直减率 Γd=−dT/dz，并定义以 p₀ 为参考的位温；(3) 若背景实际直减率 \\(\\Gamma=-dT_{\\rm env}/dz\\)，推导小气团垂直位移方程和浮力频率 N²；(4) 区分 Γ<Γd、Γ>Γd 与相等情形，并解释何时线性位移稳定。\n"
+      },
+      "solution.tex": {
+        "bytes": 1459,
+        "git_blob": "ec59627da4ae2d7b736d2ad4da301fcb90ec8e35",
+        "text": "(1) 理想气体质量密度为 \\(\\rho=Mp/(RT)\\)，静力平衡是 \\(dp/dz=-\\rho g\\)，因此\n\\[\n\\frac{dp}{dz}=-\\frac{Mgp}{RT}.\n\\]\n该式对局部温度随高度变化完全一般，不要求大气等温或绝热。\n\n(2) 理想气体每摩尔熵微分为 \\(ds=C_p\\,dT/T-R\\,dp/p\\)。随小气团可逆绝热升降令 ds=0，于是\n\\[\n\\frac{dT}{dz}=\\frac{R}{C_p}\\frac Tp\\frac{dp}{dz}\n=-\\frac{Mg}{C_p},\n\\quad \\Gamma_d=\\frac{Mg}{C_p}.\n\\]\n定义位温 \\(\\vartheta=T(p_0/p)^{R/C_p}\\)，同一空气团绝热位移时 \\(\\vartheta\\) 保持不变；位温升高意味着在同一参考压强下的温度升高，也对应熵升高。\n\n(3) 令背景温度直减率为 Γ，空气团相对初始平衡位置向上位移 ξ>0。空气团绝热冷却 \\(\\delta T_{\\rm parcel}=-\\Gamma_d\\xi\\)，同一高度环境变化 \\(\\delta T_{\\rm env}=-\\Gamma\\xi\\)。两者压强相同，因此密度差在一阶近似下\n\\(\\delta\\rho/\\rho\\simeq-(T_{\\rm parcel}-T_{\\rm env})/T\n=(\\Gamma_d-\\Gamma)\\xi/T\\)。\n向上浮力加速度为 \\(-g\\delta\\rho/\\rho\\)，故\n\\[\n\\ddot\\xi+N^2\\xi=0,\\qquad N^2=\\frac gT(\\Gamma_d-\\Gamma).\n\\]\n\n(4) 若 Γ<Γd，N²>0，小气团在原位附近作 Brunt–Väisälä 稳定浮力振荡，周期为 \\(2\\pi/N\\)。若 Γ>Γd，N²<0，扰动出现指数增长，对流不稳定；Γ=Γd 时线性回复力为零，处于中性绝热层结。以上结果依赖于压强快速平衡、干绝热和局部小位移的假设，水汽凝结会改变有效直减率。\n"
+      }
+    },
+    "T027": {
+      "meta.json": {
+        "bytes": 607,
+        "git_blob": "2df87894d39ddca1d7abc1b4c4d766961dc35f9e",
+        "text": "{\n  \"id\": \"T027\",\n  \"topic\": \"热学\",\n  \"title\": \"有限热库可逆热机的最大输出功、熵守恒与混合损失\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 75,\n  \"tags\": [\n    \"熵守恒\",\n    \"有限热库\",\n    \"热机最大功\",\n    \"可用能\"\n  ],\n  \"answer\": \"\\n\\\\ln\\\\frac{T_f}{T_h}+\\\\ln\\\\frac{T_f}{T_c}=0\\n\\\\quad\\\\Longrightarrow\\\\quad T_f=\\\\sqrt{T_hT_c}.\\n\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.0\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 582,
+        "git_blob": "970a90228b2d80e276a26ecd7e8c134dc3409b1a",
+        "text": "两个绝热隔离的有限热库初温分别 Th>Tc>0，每个物体具有温度无关的总热容 C>0。两者之间可安装完全可逆的微型热机，热机不储存能量、可以将全部产生的机械功输出到外界。初态两个物体互不接触，终态要求它们达到相同温度。\n(1) 从总熵守恒确定可逆热机过程的共同终温；(2) 求最大可输出功及其非负性；(3) 若改为直接导热接触，求终温、总熵产生及损失的可用功；(4) 当两个初温很接近时作温差展开，给出最大功首次非零项的阶数。\n"
+      },
+      "solution.tex": {
+        "bytes": 1372,
+        "git_blob": "7cd0b75c9d96dfb463b48ee69ac6e468f2d7137a",
+        "text": "(1) 完全可逆的热机没有熵产生，两有限热库内的熵差为 \\(C\\ln(T_f/T_h)\\)、\\(C\\ln(T_f/T_c)\\)。总熵守恒要求\n\\[\n\\ln\\frac{T_f}{T_h}+\\ln\\frac{T_f}{T_c}=0\n\\quad\\Longrightarrow\\quad T_f=\\sqrt{T_hT_c}.\n\\]\n此几何平均终温严格低于直接导热的算术平均。\n\n(2) 热机本身循环工作，内部能变化为零，故输出功等于两物体总内能减少：\n\\[\nW_{\\max}=C(T_h+T_c-2T_f)\n=C(\\sqrt{T_h}-\\sqrt{T_c})^2\\ge0.\n\\]\n正性直接由平方保证。若熵产生不为零，终态温度会更高，因此可逆过程对应最大可用功。\n\n(3) 若直接导热，完全没有对外功，能量守恒给 \\(T_{\\rm dir}=(T_h+T_c)/2\\)。两热库总熵变化\n\\[\n\\Delta S_{\\rm dir}=C\\ln\\frac{T_{\\rm dir}}{T_h}\n+C\\ln\\frac{T_{\\rm dir}}{T_c}\n=C\\ln\\frac{(T_h+T_c)^2}{4T_hT_c}>0.\n\\]\n与可逆路径相比，直接接触牺牲的全部可提取机械功正是 \\(W_{\\max}\\)，这是有限热库可用能与不可逆性的具体体现。\n\n(4) 令 \\(T_h=T_0+\\delta,T_c=T_0-\\delta\\) 且 \\(0<\\delta\\ll T_0\\)。由二项式展开 \\(\\sqrt{T_0^2-\\delta^2}=T_0-\\delta^2/(2T_0)+O(\\delta^4/T_0^3)\\)，得\n\\[\nW_{\\max}=2C[T_0-\\sqrt{T_0^2-\\delta^2}]\n=\\frac{C\\delta^2}{T_0}+O(\\delta^4/T_0^3).\n\\]\n对总温差 \\(\\Delta T=2\\delta\\)，首阶为 \\(C(\\Delta T)^2/(4T_0)\\)。平衡附近可用功对温差的一次项消失，反映自由能在平衡态附近驻值。\n"
+      }
+    },
+    "T028": {
+      "meta.json": {
+        "bytes": 612,
+        "git_blob": "d590db3fa02df89839356521a09c67bb54cd5f23",
+        "text": "{\n  \"id\": \"T028\",\n  \"topic\": \"热学\",\n  \"title\": \"Einstein 量子固体的配分函数、热容和 Debye 模型差异\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 75,\n  \"tags\": [\n    \"量子配分函数\",\n    \"Einstein固体\",\n    \"热容渐近\",\n    \"晶格振动\"\n  ],\n  \"answer\": \"\\nz=\\\\sum_{j=0}^\\\\infty e^{-x(j+1/2)}\\n=\\\\frac{e^{-x/2}}{1-e^{-x}}\\n=\\\\frac1{2\\\\sinh(x/2)}.\\n\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.0\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 538,
+        "git_blob": "3ebc98ad28e8d2611a4620ac6711c273a6a75909",
+        "text": "晶体包含 N 个原子，Einstein 模型把全部 3N 个声学和晶格振动自由度近似为频率相同的独立量子谐振子，每模能级为 εj=ℏωE(j+1/2)，j=0,1,2,…，且 ωE>0。系统处于正则热平衡温度 T>0，定义 ΘE=ℏωE/kB。\n(1) 由几何级数求单模和全体模式的配分函数；(2) 计算晶体内能与零点振动能；(3) 对内能求导计算定容热容的精确表达式；(4) 分析高低温渐近并解释为什么这一模型不能正确预测三维晶体的低温 Debye 立方律。\n"
+      },
+      "solution.tex": {
+        "bytes": 1175,
+        "git_blob": "4d0440ab8d119350582d69afb708a6162655ba58",
+        "text": "(1) 令 \\(x=\\hbar\\omega_E/(k_BT)\\)。单个量子谐振子配分函数是\n\\[\nz=\\sum_{j=0}^\\infty e^{-x(j+1/2)}\n=\\frac{e^{-x/2}}{1-e^{-x}}\n=\\frac1{2\\sinh(x/2)}.\n\\]\n因为 3N 个模式彼此独立，总配分函数 \\(Z=z^{3N}\\)，不是将各模的配分函数直接相加。\n\n(2) 从 \\(U=-\\partial_\\beta\\ln Z\\) 得到\n\\[\nU=3N\\hbar\\omega_E\\left(\\frac12+\\frac1{e^x-1}\\right).\n\\]\n第一项 \\(U_0=3N\\hbar\\omega_E/2\\) 是零点振动能，与温度无关；第二项是 Bose 热激发能。\n\n(3) 因 \\(x=\\Theta_E/T\\)、\\(dx/dT=-x/T\\)，所以\n\\[\nC_V=\\left(\\frac{\\partial U}{\\partial T}\\right)_V\n=3Nk_Bx^2\\frac{e^x}{(e^x-1)^2}>0.\n\\]\n此式没有假定经典能量均分，且自动包含量子激发的冻结效应。\n\n(4) 在低温 \\(x\\gg1\\) 下，\\(\\exp(x)/[\\exp(x)-1]^2\\sim e^{-x}\\)，故\n\\[\nC_V\\sim3Nk_B(\\Theta_E/T)^2e^{-\\Theta_E/T}\\to0.\n\\]\n高温 \\(x\\ll1\\) 时该因子近似 \\(1/x^2\\)，得到 \\(C_V\\to3Nk_B\\)，即 Dulong–Petit 规律。Einstein 模型的全部模式有相同非零振动频率；Debye 声子模式从零频连续展开且三维低频态密度正比频率平方，因此 Debye 低温比热是 \\(T^3\\) 而非指数型，两个模型在低温预测不同。\n"
+      }
+    },
+    "T029": {
+      "meta.json": {
+        "bytes": 565,
+        "git_blob": "8d0e7edf2a47c43bac4ca0b74a46875febcd486a",
+        "text": "{\n  \"id\": \"T029\",\n  \"topic\": \"热学\",\n  \"title\": \"两灰度黑体薄球壳的辐射平衡、热驰豫与熵产生\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 75,\n  \"tags\": [\n    \"辐射传热\",\n    \"Stefan–Boltzmann定律\",\n    \"非线性热平衡\",\n    \"线性驰豫\"\n  ],\n  \"answer\": \"\\nQ_{1\\\\to2}=\\\\sigma A_1(T_1^4-T_2^4).\\n\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.0\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 605,
+        "git_blob": "0ceff394700def1262d6c459819c3ae9816c2dae",
+        "text": "两个独立、完全黑的同心薄球壳之间为真空，内球半径 r、外球内半径 R>r，内球保持均匀温度 T₁(t)>0、外球内壁保持 T₂(t)>0。内外球吸收率与发射率都为一，热容量分别为 C₁,C₂>0，外壁完美绝热，忽略球壳热传导延迟。Stefan–Boltzmann 常数为 σ>0。\n(1) 由黑体辐射与几何视角因子写出内球向外球的净传热功率；(2) 建立两球温度耦合微分方程及能量守恒；(3) 写出两球总熵随时间的变化率，证明非负；(4) 在共同温度 T₀ 附近线性化，求温差指数驰豫时间。\n"
+      },
+      "solution.tex": {
+        "bytes": 1377,
+        "git_blob": "784efd03b16fafafc760b24891a529dc44aaa11d",
+        "text": "(1) 内球全部向外发射的光最终被外球内壁吸收，因为外球包围内球；内球面积为 \\(A_1=4\\pi r^2\\)。黑体间的净辐射传热功率由两方向的辐射平衡得到\n\\[\nQ_{1\\to2}=\\sigma A_1(T_1^4-T_2^4).\n\\]\n这里外球表面积更大，但内球只截获相应几何份额的外球内壁辐射，因此净交换面积仍为内球面积。\n\n(2) 两球除辐射外无外界热量或功交换，故\n\\[\nC_1\\dot T_1=-Q_{1\\to2},\\qquad\nC_2\\dot T_2=Q_{1\\to2}.\n\\]\n直接相加得 \\(d(C_1T_1+C_2T_2)/dt=0\\)。若 C₁,C₂ 温度无关，最终共同温度由能量守恒决定为 \\(T_f=(C_1T_{1i}+C_2T_{2i})/(C_1+C_2)\\)。\n\n(3) 热容恒定时各球熵微分为 \\(dS_i=C_i\\,dT_i/T_i\\)，故\n\\[\n\\dot S_{\\rm total}=-\\frac Q{T_1}+\\frac Q{T_2}\n=\\sigma A_1(T_1^4-T_2^4)\\left(\\frac1{T_2}-\\frac1{T_1}\\right)\\ge0.\n\\]\n因 \\(T_1^4-T_2^4\\) 与 \\(T_1-T_2\\) 同号，而 \\(1/T_2-1/T_1=(T_1-T_2)/(T_1T_2)\\) 亦同号，所以总熵非负，等温时恰为零。\n\n(4) 令 \\(T_1=T_0+\\delta T_1,T_2=T_0+\\delta T_2\\)，一阶近似 \\(T_1^4-T_2^4\\simeq4T_0^3(\\delta T_1-\\delta T_2)\\)。定义温差 \\(\\Delta=T_1-T_2\\)，联立得到\n\\[\n\\dot\\Delta=-4\\sigma A_1T_0^3\\left(\\frac1{C_1}+\\frac1{C_2}\\right)\\Delta.\n\\]\n故 \\(\\Delta(t)=\\Delta(0)e^{-t/\\tau}\\)，时间尺度 \\(\\tau=[4\\sigma A_1T_0^3(C_1^{-1}+C_2^{-1})]^{-1}\\)，热容越大或辐射换热越弱，温差消失越慢。\n"
+      }
+    },
+    "T030": {
+      "meta.json": {
+        "bytes": 563,
+        "git_blob": "d25d763131611232a5f83c7d3487266c89c736fb",
+        "text": "{\n  \"id\": \"T030\",\n  \"topic\": \"热学\",\n  \"title\": \"内可逆有限传热热机的最大功率与 Curzon–Ahlborn 效率\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 75,\n  \"tags\": [\n    \"有限时间热力学\",\n    \"稳态热机\",\n    \"传热温差\",\n    \"功率最优化\"\n  ],\n  \"answer\": \"\\n\\\\frac{T_h-X}{X}=\\\\frac{Y-T_c}{Y}.\\n\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.0\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 521,
+        "git_blob": "cadd6f78f3ed4aaf87a3d5df6d10947fa1824d60",
+        "text": "一稳态内可逆热机运行于高温热源 Th 和低温热源 Tc 之间，Th>Tc>0。热机自身接触热源的工作温度为 X，向冷源放热的工作温度为 Y，Tc<Y<X<Th。两侧以相等的线性传热导纳 K>0 传热，吸热率 Qh=K(Th−X)、放热率 Qc=K(Y−Tc)。内部可逆要求 Qh/X=Qc/Y。\n(1) 消去一个工作温度，求净功率 P；(2) 优化功率并求 X、Y 的最优值；(3) 求最大功率及最大功率效率；(4) 与 Carnot 效率比较，并研究高低温差趋零的极限。\n"
+      },
+      "solution.tex": {
+        "bytes": 1025,
+        "git_blob": "b69667c90c66d6cfde76f706c7134095290c391c",
+        "text": "(1) 内部熵流相等意味着\n\\[\n\\frac{T_h-X}{X}=\\frac{Y-T_c}{Y}.\n\\]\n由此 \\(2XY=T_hY+XT_c\\)，故 \\(Y=XT_c/(2X-T_h)\\)，并且 2X>Th。净功率\n\\[\nP=Q_h-Q_c=K(T_h+T_c-X-Y).\n\\]\n\n(2) 对 X 微分有 \\(dY/dX=-T_hT_c/(2X-T_h)^2\\)，因此\n\\[\n\\frac{dP}{dX}=-K\\left[1-\\frac{T_hT_c}{(2X-T_h)^2}\\right].\n\\]\n解可行域的驻值条件得\n\\[\nX_*=\\frac{T_h+\\sqrt{T_hT_c}}{2},\\qquad\nY_*=\\frac{T_c+\\sqrt{T_hT_c}}{2}.\n\\]\n二阶微分在该点为负，所以是最大功率点。\n\n(3) 把最优温度代回，\n\\[\nP_{\\max}=\\frac K2(\\sqrt{T_h}-\\sqrt{T_c})^2,\\quad\n\\eta_{\\max P}=1-\\frac{Y_*}{X_*}=1-\\sqrt{\\frac{T_c}{T_h}}.\n\\]\n温度比 \\(Y_*/X_*=\\sqrt{T_c/T_h}\\) 是最优条件的结果，不是附加假设。\n\n(4) Carnot 效率 \\(\\eta_C=1-T_c/T_h\\)，在 0<Tc/Th<1 时 \\(\\sqrt{T_c/T_h}>T_c/T_h\\)，故最大功率效率严格低于 Carnot 效率。Th→Tc 时最大功率趋零，效率也趋零。平方根规律限于两侧相等导纳及内部可逆、线性传热的模型，不能断言对任意真实热机均为精确最优。\n"
+      }
+    },
+    "T031": {
+      "meta.json": {
+        "bytes": 561,
+        "git_blob": "e54969605925c960fb9b5dfaea89530b59f6fcc1",
+        "text": "{\n  \"id\": \"T031\",\n  \"topic\": \"热学\",\n  \"title\": \"维里平衡自引力气体的负热容与 Kelvin–Helmholtz 收缩\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 75,\n  \"tags\": [\n    \"引力维里定理\",\n    \"负热容\",\n    \"辐射冷却\",\n    \"引力收缩\"\n  ],\n  \"answer\": \"\\nE=K+W=-K=-\\\\frac32Nk_BT,\\\\qquad W=-3Nk_BT.\\n\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.0\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 592,
+        "git_blob": "9655bbb8f72bb131f5362ec2e601fd92581df276",
+        "text": "由 N 个经典单原子粒子构成的自引力系统在无外部表面压力、自转和磁场的准静态维里平衡序列上运动，粒子总热运动动能 K=3NkBT/2，负引力势能 W<0，并满足 2K+W=0。总能 E=K+W。系统可向外以功率 L>0 辐射；若讨论半径 R，还可将重力势能近似为 W=−αGM²/R，结构系数 α>0 在缓慢同源收缩中不变。\n(1) 求 E、W 与 T 的关系；(2) 计算此平衡序列有效热容并判断符号；(3) 系统缓慢辐射时求温度变化方向；(4) 求同源收缩过程的温度与半径标度及辐射能量。\n"
+      },
+      "solution.tex": {
+        "bytes": 1066,
+        "git_blob": "5fabd87d547c1dcda4acde851453fa7e56063c55",
+        "text": "(1) 标量维里定理 \\(2K+W=0\\) 给 \\(W=-2K\\)。因此系统总能\n\\[\nE=K+W=-K=-\\frac32Nk_BT,\\qquad W=-3Nk_BT.\n\\]\n总能量为负，并随 T 上升而进一步降低。\n\n(2) 沿 N 固定且持续维里平衡的状态序列定义有效热容\n\\[\nC_{\\rm eff}=\\frac{dE}{dT}=-\\frac32Nk_B<0.\n\\]\n注意单粒子动能的正定热容仍是 \\(3Nk_B/2\\)，负号来自同时变化的引力势能。\n\n(3) 当辐射带走能量，\\(\\dot E=-L\\)，代入 \\(E=-3Nk_BT/2\\) 得\n\\[\n\\dot T=\\frac{2L}{3Nk_B}>0.\n\\]\n系统向外散热却升温，并不违反能量守恒：引力收缩释放的势能超过辐射损失，其中一部分转为粒子的随机热运动动能。\n\n(4) 若 \\(W=-\\alpha GM^2/R\\)，由维里定理\n\\[\nK=\\frac{\\alpha GM^2}{2R},\\quad\nT=\\frac{\\alpha GM^2}{3Nk_BR},\\quad\nE=-\\frac{\\alpha GM^2}{2R}.\n\\]\n半径减小时温度按 R 的倒数增长。由 Ri 收缩到 Rf<Ri 时，\n\\[\nE_{\\rm rad}=E_i-E_f=\n\\frac{\\alpha GM^2}{2}\\left(\\frac1{R_f}-\\frac1{R_i}\\right)>0.\n\\]\n这些结论依赖于近似维里平衡、可忽略外表面压力和结构系数恒定的前提。\n"
+      }
+    },
+    "T032": {
+      "meta.json": {
+        "bytes": 568,
+        "git_blob": "d212d79456fb074017a61c736c93c4277778d4f1",
+        "text": "{\n  \"id\": \"T032\",\n  \"topic\": \"热学\",\n  \"title\": \"范德瓦耳斯气体低压 Joule–Thomson 系数及反转温度\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 70,\n  \"tags\": [\n    \"焦耳汤姆孙\",\n    \"焓微分\",\n    \"状态方程\",\n    \"反转温度\"\n  ],\n  \"answer\": \"\\\\mu_{JT}\\\\simeq[2a/(RT)-b]/C_p,\\\\quad T_{\\\\rm inv}=2a/(Rb)\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.1\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 458,
+        "git_blob": "dd8023976390c31b029db7204ce9effc568d1bab",
+        "text": "一摩尔范德瓦耳斯气体满足 \\(P=RT/(v-b)-a/v^2\\)，其中 \\(a,b>0\\)，在低压稀薄区做恒焓节流，假设定压热容 \\(C_p>0\\) 近似为常数且 \\(v\\gg b\\)。\n(1) 从热力学基本关系推导 \\(\\mu_{JT}=(\\partial T/\\partial P)_H\\) 的一般公式；(2) 将状态方程按低压展开得到 \\(v(P,T)\\) 的首阶修正；(3) 求 \\(\\mu_{JT}\\) 的低压首项与反转温度；(4) 讨论理想气体极限及降压后是降温还是升温。\n"
+      },
+      "solution.tex": {
+        "bytes": 1018,
+        "git_blob": "7db457ccb6df7cf09e861fc3b31ae0026f424d6f",
+        "text": "(1) 焓 \\(H=U+Pv\\) 满足 \\(dH=T\\,dS+v\\,dP\\)。由 Maxwell 关系 \\((\\partial S/\\partial P)_T=-(\\partial v/\\partial T)_P\\)，有\n\\[\ndH=C_p\\,dT+[v-T(\\partial v/\\partial T)_P]\\,dP.\n\\]\n恒焓条件下\n\\[\n\\mu_{JT}=\\left(\\frac{\\partial T}{\\partial P}\\right)_H\n=\\frac{T(\\partial v/\\partial T)_P-v}{C_p}.\n\\]\n\n(2) 在稀薄近似中反解范德瓦耳斯方程，先写 \\(P\\simeq RT/v+(RTb-a)/v^2\\)。令 \\(v=RT/P+\\delta\\)，代入保留常数阶得 \\(\\delta=b-a/(RT)\\)。因此\n\\[\nv\\simeq\\frac{RT}{P}+b-\\frac{a}{RT},\n\\quad\n(\\partial v/\\partial T)_P\\simeq R/P+a/(RT^2).\n\\]\n\n(3) 代回得\n\\[\nT(\\partial v/\\partial T)_P-v\\simeq\n\\frac{2a}{RT}-b,\n\\quad\n\\mu_{JT}\\simeq \\frac{2a/(RT)-b}{C_p}.\n\\]\n令其为零，得到低压反转温度 \\(T_{\\rm inv}\\simeq2a/(Rb)\\)。此结果只在气体足够稀薄、无相变时成立。\n\n(4) 当 \\(a,b\\to0\\) 时 \\(\\mu_{JT}\\to0\\)，恢复理想气体恒焓节流不变温。若 \\(T<T_{\\rm inv}\\)，则 \\(\\mu_{JT}>0\\)，降压 \\(dP<0\\) 导致 \\(dT<0\\)；若 \\(T>T_{\\rm inv}\\)，节流时升温。\n"
+      }
+    },
+    "T033": {
+      "meta.json": {
+        "bytes": 560,
+        "git_blob": "9a4d395da1fe540f23996ba1d29f66e9dd053b01",
+        "text": "{\n  \"id\": \"T033\",\n  \"topic\": \"热学\",\n  \"title\": \"理想气体多方过程的热功熵及绝热指数界限\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 70,\n  \"tags\": [\n    \"多方过程\",\n    \"熵变\",\n    \"热容\",\n    \"机械功\"\n  ],\n  \"answer\": \"Q=n[C_V+R/(1-\\\\nu)](T_f-T_i),\\\\quad\\\\Delta S=n[C_V(1-\\\\nu)+R]\\\\ln(V_f/V_i)\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.1\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 348,
+        "git_blob": "f0254cff8ba5f5aa77417571474d77b439034253",
+        "text": "有 \\(n\\) mol 理想气体、恒定摩尔热容 \\(C_V>0\\)，满足 \\(PV^\\nu=K\\)，其中 \\(\\nu\\ne1\\)，准静态由 \\((P_i,V_i,T_i)\\) 到 \\((P_f,V_f,T_f)\\)。记 \\(C_P=C_V+R\\)。\n(1) 求过程温度—体积关系；(2) 求气体做功与内能变化；(3) 求吸收热量和熵变；(4) 讨论 \\(\\nu=\\gamma=C_P/C_V\\) 与 \\(\\nu=0\\) 两种极限。\n"
+      },
+      "solution.tex": {
+        "bytes": 857,
+        "git_blob": "a3f5bed52af6a6a62f3377b150caa0ac92b1280b",
+        "text": "(1) 理想气体状态方程 \\(PV=nRT\\)，联立多方关系得\n\\[\nTV^{\\nu-1}=\\frac K{nR}=\\mathrm{const},\\quad\n\\frac{T_f}{T_i}=(V_i/V_f)^{\\nu-1}.\n\\]\n对给定端点不可以独立指定所有 \\(P,V,T\\)。\n\n(2) 对外做功 \\(W=\\int_{V_i}^{V_f}P\\,dV=K(V_f^{1-\\nu}-V_i^{1-\\nu})/(1-\\nu)\\)。利用 \\(PV=nRT\\) 可写\n\\[\nW=\\frac{nR(T_f-T_i)}{1-\\nu},\\qquad\n\\Delta U=nC_V(T_f-T_i).\n\\]\n\n(3) 第一定律 \\(Q=\\Delta U+W\\) 得\n\\[\nQ=n\\left(C_V+\\frac R{1-\\nu}\\right)(T_f-T_i).\n\\]\n熵是状态函数，\n\\[\n\\Delta S=nC_V\\ln(T_f/T_i)+nR\\ln(V_f/V_i)\n=n[C_V(1-\\nu)+R]\\ln(V_f/V_i).\n\\]\n不同 \\(\\nu\\) 可使热量的符号不同，不能只看 \\(\\Delta T\\)。\n\n(4) 若 \\(\\nu=\\gamma=1+R/C_V\\)，有 \\(C_V(1-\\nu)+R=0\\)，故 \\(\\Delta S=0,Q=0\\)，为可逆绝热。若 \\(\\nu=0\\)，过程等压 \\(P=K\\)，因此 \\(W=P(V_f-V_i)\\) 与 \\(Q=nC_P(T_f-T_i)\\)，由公式完全恢复。\n"
+      }
+    },
+    "T034": {
+      "meta.json": {
+        "bytes": 571,
+        "git_blob": "0708ef082c343d43c1333db243ddfd689f14dae5",
+        "text": "{\n  \"id\": \"T034\",\n  \"topic\": \"热学\",\n  \"title\": \"孤立辐射球在零背景温度下的非线性冷却律与熵产生\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 70,\n  \"tags\": [\n    \"辐射热传递\",\n    \"Stefan–Boltzmann\",\n    \"非线性微分方程\",\n    \"熵\"\n  ],\n  \"answer\": \"T(t)=T_0[1+3\\\\varepsilon\\\\sigma AT_0^3t/C]^{-1/3}\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.1\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 458,
+        "git_blob": "19d641781034390f8103205aab64e470fafc3b91",
+        "text": "热容为常量 \\(C>0\\)、表面积为 \\(A>0\\)、表面发射率 \\(\\varepsilon\\in(0,1]\\) 的均温球体初温 \\(T_0>0\\)，置于可视为绝对零温、仅通过热辐射交换能量的巨大真空背景中。Stefan–Boltzmann 常数为 \\(\\sigma\\)，忽略温度变化引起的几何和热容改变。\n(1) 建立温度方程；(2) 求完整冷却曲线；(3) 求降到 \\(T_0/2\\) 所需时间；(4) 计算物体本身的熵变化并讨论长时间极限。\n"
+      },
+      "solution.tex": {
+        "bytes": 945,
+        "git_blob": "e9275c19364f9731ccf560d3a05e5dd7c79712f2",
+        "text": "(1) 球的辐射功率 \\(P_{\\rm rad}=\\varepsilon\\sigma A T^4\\)，没有吸收的背景辐射，所以由第一定律 \\(C\\,dT/dt=-\\varepsilon\\sigma A T^4\\)。设 \\(\\kappa=\\varepsilon\\sigma A/C>0\\)，得 \\(\\dot T=-\\kappa T^4\\)。\n\n(2) 分离变量 \\(T^{-4}dT=-\\kappa dt\\)，从初态积分：\n\\[\n-\\frac1{3T(t)^3}+\\frac1{3T_0^3}=-\\kappa t,\n\\quad\nT(t)=T_0[1+3\\kappa T_0^3t]^{-1/3}.\n\\]\n只要 t 有限、T0>0，温度仍严格为正。\n\n(3) 令 \\(T(t_{1/2})=T_0/2\\)，得到 \\([1+3\\kappa T_0^3t_{1/2}]^{1/3}=2\\)，因此\n\\[\nt_{1/2}=\\frac7{3\\kappa T_0^3}\n=\\frac{7C}{3\\varepsilon\\sigma A T_0^3}.\n\\]\n温度下降导致功率迅速减小，不能假定恒定冷却速率。\n\n(4) 球的状态函数满足 \\(dS=C\\,dT/T\\)，故\n\\[\n\\Delta S_{\\rm ball}(t)=C\\ln[T(t)/T_0]\n=-\\frac C3\\ln[1+3\\kappa T_0^3t]<0.\n\\]\n物体熵降低不违背第二定律，因为它向外输出高熵的辐射；长时间 \\(T\\sim t^{-1/3}\\) 趋近零但不在有限时间达到零。\n"
+      }
+    },
+    "T035": {
+      "meta.json": {
+        "bytes": 562,
+        "git_blob": "7f71210e0ed6230294b081e92b82afaaaeb5ec83",
+        "text": "{\n  \"id\": \"T035\",\n  \"topic\": \"热学\",\n  \"title\": \"二维理想玻色气体的粒子数积分与无有限温度凝聚\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 70,\n  \"tags\": [\n    \"二维Bose统计\",\n    \"态密度\",\n    \"巨正则系综\",\n    \"红外发散\"\n  ],\n  \"answer\": \"\\\\mu=k_BT\\\\ln(1-e^{-n\\\\lambda_T^2}),\\\\quad T_c=0\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.1\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 576,
+        "git_blob": "15bc057c56cf7ae4f72ded00d45cb02cb18d865c",
+        "text": "二维面积 \\(A\\) 上有 \\(N\\gg1\\) 个无自旋、无相互作用、质量 \\(m\\) 的自由玻色粒子，单粒子能量 \\(\\epsilon_{\\boldsymbol k}=\\hbar^2k^2/(2m)\\)。温度 \\(T>0\\)，化学势 \\(\\mu<0\\)，热德布罗意波长 \\(\\lambda_T=\\sqrt{2\\pi\\hbar^2/(mk_BT)}\\)，粒子面密度 \\(n=N/A\\) 固定。\n(1) 计算二维单位面积的单粒子能量态密度；(2) 求激发态数密度与逸度 \\(z=e^{\\mu/(k_BT)}\\) 的关系；(3) 证明在任意有限温度下无三维那样的热力学 Bose 凝聚临界点；(4) 求固定 n 下的化学势函数与低温渐近。\n"
+      },
+      "solution.tex": {
+        "bytes": 940,
+        "git_blob": "18331dff8fe7ad0b26c38682266a661a6e17d3c7",
+        "text": "(1) 二维 k 空间单位面积每个态占据 \\((2\\pi)^2/A\\)，累计态数 \\(N_1(E)=A(2\\pi)^{-2}\\pi k^2=AmE/(2\\pi\\hbar^2)\\)。故单位面积能量态密度是常数\n\\[\nD(E)=\\frac m{2\\pi\\hbar^2},\\qquad E>0.\n\\]\n\n(2) Bose 粒子数密度为\n\\[\nn=\\int_0^\\infty\\frac{D(E)}{z^{-1}e^{E/(k_BT)}-1}\\,dE\n=-\\frac1{\\lambda_T^2}\\ln(1-z).\n\\]\n该积分可用展开 \\(\\sum_{\\ell\\ge1}z^\\ell e^{-\\ell\\beta E}\\) 后逐项积分得到，要求 0<z<1。\n\n(3) 固定 T>0，当 z→1⁻，\\(-\\ln(1-z)\\to\\infty\\)，激发态面密度没有有限上界。因此任何有限 n 都可选某个 z<1 使激发态容纳全部粒子，不出现三维理想气体那样因激发态饱和而产生的有限 Tc 凝聚。\n\n(4) 反解上式得 \\(z=1-e^{-n\\lambda_T^2}\\)，故\n\\[\n\\mu(T)=k_BT\\ln[1-e^{-n\\lambda_T^2}]<0.\n\\]\n当 T→0⁺，\\(n\\lambda_T^2\\propto1/T\\to\\infty\\)，所以 \\(\\mu\\sim-k_BT e^{-n\\lambda_T^2}\\to0^-\\)，但任何正温度的 \\(\\mu\\) 仍严格为负。\n"
+      }
+    },
+    "T036": {
+      "meta.json": {
+        "bytes": 539,
+        "git_blob": "79155a56c2b5641e30b6559bbd9f82654d8cf480",
+        "text": "{\n  \"id\": \"T036\",\n  \"topic\": \"热学\",\n  \"title\": \"理想热机 Carnot 循环四段能量与熵的逐段核算\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 70,\n  \"tags\": [\n    \"Carnot循环\",\n    \"理想气体\",\n    \"热效率\",\n    \"熵守恒\"\n  ],\n  \"answer\": \"\\\\eta=1-T_c/T_h,\\\\quad W=nR(T_h-T_c)\\\\ln r\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.1\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 448,
+        "git_blob": "44fb84cedf46310044636b3458632820192a58f3",
+        "text": "一台准静态可逆 Carnot 热机使用 \\(n\\) mol、摩尔定容热容 \\(C_V\\) 常量的理想气体，热源温度 \\(T_h>T_c>0\\)。高温等温膨胀体积比为 \\(r=V_2/V_1>1\\)，随后绝热到 Tc，低温等温压缩，再绝热回 Th。设 \\(\\gamma=1+R/C_V\\)。\n(1) 计算高温等温段的热量与功；(2) 求两绝热段的体积比关系；(3) 求低温等温放热及总循环功；(4) 证明效率与工作物质、体积比无关。\n"
+      },
+      "solution.tex": {
+        "bytes": 893,
+        "git_blob": "5c628251f72b181c20aaf35f07aed78f5fdc06d2",
+        "text": "(1) 高温等温理想气体 \\(\\Delta U=0\\)，对外功\n\\[\nW_{12}=\\int_{V_1}^{V_2}\\frac{nRT_h}{V}\\,dV=nRT_h\\ln r.\n\\]\n因此吸热 \\(Q_h=W_{12}=nRT_h\\ln r>0\\)。\n\n(2) 可逆绝热满足 \\(TV^{\\gamma-1}=\\mathrm{const}\\)，所以 \\(V_3/V_2=(T_h/T_c)^{1/(\\gamma-1)}\\)；回程 \\(V_4/V_1=(T_h/T_c)^{1/(\\gamma-1)}\\)。相除可见低温等温压缩的体积比 \\(V_3/V_4=V_2/V_1=r\\)。\n\n(3) 低温等温段对外功 \\(W_{34}=nRT_c\\ln(V_4/V_3)=-nRT_c\\ln r\\)，故排向冷源的热量大小 \\(Q_c=nRT_c\\ln r\\)。两绝热段 Q=0、但其功与内能变化互相抵消；完整周期 \\(\\Delta U_{\\rm cycle}=0\\)，所以\n\\[\nW_{\\rm net}=Q_h-Q_c=nR(T_h-T_c)\\ln r.\n\\]\n\n(4) 热机效率\n\\[\n\\eta=\\frac{W_{\\rm net}}{Q_h}=1-\\frac{T_c}{T_h}.\n\\]\n由于可逆循环的熵收支 \\(Q_h/T_h-Q_c/T_c=0\\)，效率与 n、\\(C_V\\) 和 r 无关；若任一段不可逆，则熵产生正，实际效率低于该上限。\n"
+      }
+    },
+    "T037": {
+      "meta.json": {
+        "bytes": 566,
+        "git_blob": "4b49ab1f0fbe0579d34d3858a17576055822f618",
+        "text": "{\n  \"id\": \"T037\",\n  \"topic\": \"热学\",\n  \"title\": \"气相二聚分子的解离平衡、压强依赖与平衡常数\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 70,\n  \"tags\": [\n    \"化学平衡\",\n    \"质量作用定律\",\n    \"理想混合物\",\n    \"勒夏特列原理\"\n  ],\n  \"answer\": \"\\\\alpha=\\\\sqrt{K_pp^\\\\circ/(K_pp^\\\\circ+4P)}\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.1\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 491,
+        "git_blob": "f541c8123b0b0967ca09ec928b370106d84d4c36",
+        "text": "理想气体反应 \\(\\mathrm{A}_2\\rightleftharpoons2\\mathrm A\\) 在定温 T、总压强 P 下达到平衡，初始有 \\(n_0\\) mol 的 A₂，无 A。设解离度为 \\(\\alpha\\in(0,1)\\)，标准压强 \\(p^\\circ>0\\)，无量纲平衡常数定义为 \\(K_p=(p_A/p^\\circ)^2/(p_{A_2}/p^\\circ)\\)。\n(1) 求平衡时各组分物质的量和总物质的量；(2) 求各分压与解离度的关系；(3) 解出 \\(\\alpha(P,K_p)\\)；(4) 求低压和高压极限并解释压强对反应方向的影响。\n"
+      },
+      "solution.tex": {
+        "bytes": 958,
+        "git_blob": "8368ef0f89fb4b45d42b04297fa53e450363e0ea",
+        "text": "(1) 初始 \\(n_0\\) mol 的 A₂ 中有比例 α 解离，每解离一摩尔 A₂ 产生2摩尔 A。因此平衡时 \\(n_{A_2}=n_0(1-\\alpha)\\)、\\(n_A=2n_0\\alpha\\)、总摩尔数 \\(n_{\\rm tot}=n_0(1+\\alpha)\\)。\n\n(2) Dalton 定律给摩尔分数 \\(y_A=2\\alpha/(1+\\alpha)\\)、\\(y_{A_2}=(1-\\alpha)/(1+\\alpha)\\)，所以 \\(p_A=2\\alpha P/(1+\\alpha)\\)、\\(p_{A_2}=(1-\\alpha)P/(1+\\alpha)\\)。\n\n(3) 代入平衡常数定义：\n\\[\nK_p=\\frac{p_A^2}{p_{A_2}p^\\circ}\n=\\frac{4\\alpha^2P}{(1-\\alpha^2)p^\\circ}.\n\\]\n整理 \\(K_pp^\\circ(1-\\alpha^2)=4P\\alpha^2\\)，得\n\\[\n\\alpha^2=\\frac{K_pp^\\circ}{K_pp^\\circ+4P},\\qquad\n\\alpha=\\sqrt{\\frac{K_pp^\\circ}{K_pp^\\circ+4P}}.\n\\]\n因 Kp,P 正，自动满足 0<α<1。\n\n(4) 固定 T 下 Kp 不变。若 \\(P\\to0^+\\)，α→1，低压有利于粒子数更多的解离方向；若 \\(P\\to\\infty\\)，\\(\\alpha\\sim\\sqrt{K_pp^\\circ/(4P)}\\to0\\)，高压有利于 A₂。此结论假定仍是理想气相，不考虑凝结或其他化学途径。\n"
+      }
+    },
+    "T038": {
+      "meta.json": {
+        "bytes": 558,
+        "git_blob": "280bd0a22e441e99cbaf01ea415fee6a782b4311",
+        "text": "{\n  \"id\": \"T038\",\n  \"topic\": \"热学\",\n  \"title\": \"正则系综能量涨落、热容与大系统相对涨落缩放\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 70,\n  \"tags\": [\n    \"配分函数\",\n    \"热容\",\n    \"热涨落\",\n    \"热力学极限\"\n  ],\n  \"answer\": \"\\\\mathrm{Var}(E)=k_BT^2C_V,\\\\quad \\\\Delta E/U=O(N^{-1/2})\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.1\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 467,
+        "git_blob": "830075637681b31b9be7659b8a85dd335d59da33",
+        "text": "一个温度 \\(T>0\\) 的大系统与理想热浴弱耦合，正则配分函数为 \\(Z(\\beta)=\\sum_j e^{-\\beta E_j}\\)，\\(\\beta=1/(k_BT)\\)。能级不显含温度，系统总热容 \\(C_V=(\\partial U/\\partial T)_V\\) 有限。\n(1) 求平均能量与 \\(\\ln Z\\) 的关系；(2) 推导能量方差与热容的精确关系；(3) 若系统由 N 个近独立单元构成且 U、Cv 均正比 N，求相对标准差的标度；(4) 讨论 T→0 时方差消失与热容正性。\n"
+      },
+      "solution.tex": {
+        "bytes": 1110,
+        "git_blob": "50addaa84e4dcb9393382b9c61254a2d41c91e20",
+        "text": "(1) 正则概率 \\(p_j=e^{-\\beta E_j}/Z\\)，而 \\(\\partial_\\beta Z=-\\sum_j E_je^{-\\beta E_j}\\)，故平均能量\n\\[\nU=\\langle E\\rangle=-\\partial_\\beta\\ln Z.\n\\]\n这一恒等式仅需能级与 β 无显式依赖，且配分函数收敛。\n\n(2) 再对 β 求导，\n\\[\n\\partial_\\beta^2\\ln Z\n=\\langle E^2\\rangle-\\langle E\\rangle^2\n=\\mathrm{Var}(E).\n\\]\n由于 \\(\\partial_\\beta=-k_BT^2\\partial_T\\)，有\n\\[\n\\mathrm{Var}(E)=k_BT^2\\left(\\frac{\\partial U}{\\partial T}\\right)_V\n=k_BT^2C_V\\ge0.\n\\]\n若假定正则平衡且能级独立于 T，则热容不能为负。\n\n(3) 对 N 个弱相关单元，\\(U=O(N)\\)、\\(C_V=O(N)\\)，所以标准差 \\(\\Delta E=\\sqrt{k_BT^2C_V}=O(\\sqrt N)\\)，相对涨落 \\(\\Delta E/U=O(N^{-1/2})\\)。这解释宏观体系虽然能量在正则系综中不严格固定，实际相对变化却极小。\n\n(4) 当 T→0 并具有非简并基态且有限激发能隙时，能量分布集中在基态，方差趋零；公式中的 \\(T^2C_V\\to0\\)。对于相变或长程相互作用等不满足普通热力学极限的体系，\\(C_V\\) 可能超线性增长，必须重新检查相对涨落的标度。\n"
+      }
+    },
+    "T039": {
+      "meta.json": {
+        "bytes": 591,
+        "git_blob": "26f4816eb1b63855985f7efc239402161b661ac6",
+        "text": "{\n  \"id\": \"T039\",\n  \"topic\": \"热学\",\n  \"title\": \"Planck 黑体光谱的频率峰值、总辐射能及波长峰位置\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 70,\n  \"tags\": [\n    \"Planck分布\",\n    \"Wien位移\",\n    \"Stefan积分\",\n    \"变量变换\"\n  ],\n  \"answer\": \"\\\\omega_{\\\\rm peak}=2.821439\\\\,k_BT/\\\\hbar,\\\\quad u=\\\\pi^2k_B^4T^4/(15c^3\\\\hbar^3)\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.1\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 506,
+        "git_blob": "c672154c2625caf7e783b8d75dbeb750151379da",
+        "text": "理想黑体在温度 T>0 下的单位体积、单位角频率能量谱为 \\(u_\\omega=\\hbar\\omega^3/[\\pi^2c^3(e^{\\hbar\\omega/(k_BT)}-1)]\\)。忽略材料边界和频率色散。\n(1) 引入无量纲 \\(x=\\hbar\\omega/(k_BT)\\)，求频率谱最大值对应的隐式方程；(2) 给出正的非零峰值根的近似值并求 \\(\\omega_{\\rm peak}\\) 的温度标度；(3) 对全频积分求黑体能量密度；(4) 解释按波长绘制的谱峰为什么不等于将 \\(\\omega_{\\rm peak}\\) 直接换算成波长。\n"
+      },
+      "solution.tex": {
+        "bytes": 1077,
+        "git_blob": "7ca58a67347e8fc63982fbfc43de4094de242255",
+        "text": "(1) 在固定 T 下最大化 \\(f(x)=x^3/(e^x-1)\\)。求导并整理得\n\\[\nf'(x)=\\frac{x^2[3(e^x-1)-xe^x]}{(e^x-1)^2}.\n\\]\n非零驻值满足 \\(3(1-e^{-x})=x\\)。x=0 只是形式上该方程的端点，谱在 x=0 为零，不是峰值。\n\n(2) 此方程在正实轴有唯一非零解 \\(x_*\\simeq2.821439\\)，可用单调性或数值迭代确定。因此\n\\[\n\\omega_{\\rm peak}=x_*k_BT/\\hbar,\n\\]\n频率峰线性随 T 增加，是 Wien 位移定律的角频率形式。\n\n(3) 对全部角频率积分：\n\\[\nu(T)=\\int_0^\\infty u_\\omega\\,d\\omega\n=\\frac{(k_BT)^4}{\\pi^2c^3\\hbar^3}\n\\int_0^\\infty\\frac{x^3}{e^x-1}\\,dx.\n\\]\n利用积分 \\(=\\Gamma(4)\\zeta(4)=\\pi^4/15\\)，得\n\\[\nu(T)=\\frac{\\pi^2k_B^4}{15c^3\\hbar^3}T^4.\n\\]\n总能量密度依赖温度四次方。\n\n(4) 将角频率改变量为真空波长 \\(\\lambda=2\\pi c/\\omega\\)，谱满足 \\(u_\\lambda=u_\\omega|d\\omega/d\\lambda|\\)。Jacobian \\(2\\pi c/\\lambda^2\\) 会改变极大点，故波长谱峰满足 \\(5(1-e^{-y})=y\\)，其正根 \\(y\\simeq4.965114\\)。因此频率峰的直接换算波长与波长谱峰不同，并无物理矛盾。\n"
+      }
+    },
+    "T040": {
+      "meta.json": {
+        "bytes": 602,
+        "git_blob": "f43d3fdb335ee808981dde484a124e22abeeb477",
+        "text": "{\n  \"id\": \"T040\",\n  \"topic\": \"热学\",\n  \"title\": \"非等距三能级体系的配分函数、Schottky 热容与高温涨落\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 80,\n  \"tags\": [\n    \"正则系综\",\n    \"非等间距能级\",\n    \"能量涨落\",\n    \"熵与极限\"\n  ],\n  \"answer\": \"C_V=Nk_Bx^2\\\\left[\\\\frac{2q+9q^3}{z}-\\\\left(\\\\frac{2q+3q^3}{z}\\\\right)^2\\\\right]\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.2\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 521,
+        "git_blob": "d971424cae69ca112cf7d873d3e9b414d965b88a",
+        "text": "有 \\(N\\) 个互不作用的可区分局域单元，每个单元能级为 \\(0,\\Delta,3\\Delta\\)，对应简并度分别为 \\(1,2,1\\)，其中 \\(\\Delta>0\\)。与温度 \\(T>0\\) 的热库正则平衡，忽略不同单元之间的交换能。记 \\(x=\\Delta/(k_BT)\\)、\\(q=e^{-x}\\)。\n(1) 由单单元配分函数求全系统配分函数与平均内能。\n(2) 求热容的精确解析式，并证明热容为非负。\n(3) 给出低温和高温主导渐近项。\n(4) 求熵及高温极限，解释简并度如何进入结果。\n"
+      },
+      "solution.tex": {
+        "bytes": 1438,
+        "git_blob": "1770950bdc0ae411ba06d263082f8377aa1881d8",
+        "text": "(1) 单单元配分函数 \\(z=1+2e^{-\\beta\\Delta}+e^{-3\\beta\\Delta}=1+2q+q^3\\)，因各单元独立，总配分函数 \\(Z=z^N\\)。单单元平均能量为 \\(u=-\\partial_\\beta\\ln z=\\Delta(2q+3q^3)/z\\)，故 \\(U=Nu\\)。两倍简并态的统计权重必须记为 \\(2q\\)，而非把三个不同能级一律赋相同权重。\n\n(2) 利用正则系综涨落恒等式 \\(C_V=N(\\langle\\epsilon^2\\rangle-\\langle\\epsilon\\rangle^2)/(k_BT^2)\\)，得到 \\(C_V=Nk_Bx^2\\{(2q+9q^3)/z-[(2q+3q^3)/z]^2\\}\\)。方括号是能量以 \\(\\Delta\\) 为单位的方差，因而 \\(C_V\\ge0\\)，在 \\(T>0\\) 且能级不简并为同一能量时严格正。这样也避免直接对分式求温度导数可能产生的符号错误。\n\n(3) 低温 \\(x\\gg1\\) 时 \\(z=1+2q+O(q^3)\\)，\\(u=2\\Delta e^{-x}+O(e^{-2x})\\)，所以 \\(C_V=2Nk_Bx^2e^{-x}[1+o(1)]\\)。高温 \\(x\\ll1\\) 时四个微观态等概率，对 \\(\\epsilon/\\Delta\\) 的分布为 \\((0,1,1,3)\\)，平均 \\(5/4\\)，均方 \\(11/4\\)，方差 \\(11/4-25/16=19/16\\)，故 \\(C_V\\sim(19/16)Nk_Bx^2\\)。高低温两端皆趋零，有限温度必出现热容峰。\n\n(4) 熵由 \\(S=k_B(\\ln Z+\\beta U)\\) 给出，即 \\(S=Nk_B[\\ln z+x(2q+3q^3)/z]\\)。低温 \\(T\\to0^+\\) 时 \\(S\\to0\\)，因为基态非简并；高温 \\(q\\to1\\)、\\(z\\to4\\)，每个局域单元有四个等概率微观态，故 \\(S\\to Nk_B\\ln4\\)。二重简并激发态是多出的一个微观态而不是新能级数目；不可把该极限写成 \\(Nk_B\\ln3\\)。\n"
+      }
+    },
+    "T041": {
+      "meta.json": {
+        "bytes": 517,
+        "git_blob": "cb554a16d0696c4d73e0ed661d57180be4df30d9",
+        "text": "{\n  \"id\": \"T041\",\n  \"topic\": \"热学\",\n  \"title\": \"理想 Otto 热机四段状态、压缩比效率与熵账本\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 80,\n  \"tags\": [\n    \"Otto循环\",\n    \"可逆绝热\",\n    \"热效率\",\n    \"熵平衡\"\n  ],\n  \"answer\": \"\\\\eta=1-r^{1-\\\\gamma}\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.2\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 612,
+        "git_blob": "0d0cf9fa9e844dfb1396d03766c955bf1f71ed84",
+        "text": "固定 \\(n\\) 摩尔定热容理想气体作可逆 Otto 循环，\\(C_V\\) 表示每摩尔定容热容，\\(\\gamma=C_P/C_V>1\\)。从状态 1 的 \\((T_1,V_1)\\) 经可逆绝热压缩至 \\(V_2=V_1/r\\)（\\(r>1\\)），接着定容吸热使温度变成 \\(T_3=\\Theta T_2\\)（\\(\\Theta>1\\)）；随后绝热膨胀回 \\(V_1\\)，最后定容放热回状态 1。忽略机械损失。\n(1) 求四个状态的温度及两段绝热功。\n(2) 求循环外部吸热、放热与净输出功。\n(3) 推导热效率仅由压缩比决定，并说明为何小于 Carnot 效率。\n(4) 逐段计算工质熵变及两个热库的总熵变。\n"
+      },
+      "solution.tex": {
+        "bytes": 1533,
+        "git_blob": "bbbde319679b5d97ace13157aced734354d3dfdf",
+        "text": "(1) 可逆绝热理想气体满足 \\(TV^{\\gamma-1}=\\mathrm{const}\\)，于是 \\(T_2=T_1r^{\\gamma-1}\\)，\\(T_3=\\Theta T_1r^{\\gamma-1}\\)，\\(T_4=T_3/r^{\\gamma-1}=\\Theta T_1\\)。在两段绝热过程，按气体对外做正功的符号，\\(W_{12}=nC_V(T_1-T_2)<0\\)、\\(W_{34}=nC_V(T_3-T_4)>0\\)。压缩过程需外界输入功，膨胀过程输出功。\n\n(2) 定容段不做体积功，外界提供热 \\(Q_{\\rm in}=nC_V(T_3-T_2)=nC_V T_1r^{\\gamma-1}(\\Theta-1)\\)。最后排热量的正数大小 \\(Q_{\\rm out}=nC_V(T_4-T_1)=nC_VT_1(\\Theta-1)\\)。全循环第一定律给 \\(W_{\\rm net}=Q_{\\rm in}-Q_{\\rm out}=nC_VT_1(\\Theta-1)(r^{\\gamma-1}-1)>0\\)。这些表达式与两绝热段代数和完全一致。\n\n(3) 热效率 \\(\\eta=W_{\\rm net}/Q_{\\rm in}=1-r^{1-\\gamma}\\)，不依赖本理想模型中的 \\(\\Theta\\)。由于循环在定容吸、放热过程中气体温度连续变化，若仅使用固定高、低温热库接触，将不可逆并产生额外熵；即使定容过程设计为与连续多个热库可逆接触，也不能把其最高、最低温度代进单对热库 Carnot 循环公式来替代本 Otto 效率。\n\n(4) 工质在绝热两段 \\(\\Delta S_{12}=\\Delta S_{34}=0\\)，定容吸热段 \\(\\Delta S_{23}=nC_V\\ln(T_3/T_2)=nC_V\\ln\\Theta\\)，排热段 \\(\\Delta S_{41}=-nC_V\\ln\\Theta\\)，工质一周回到原态，\\(\\oint dS=0\\)。若外部热库在每一瞬间与工质同温，则热库吸收的熵逐段相反，总熵产生可为零；实际仅两个恒温热库换热时应另按相应热库温度计入正的熵产生。\n"
+      }
+    },
+    "T042": {
+      "meta.json": {
+        "bytes": 575,
+        "git_blob": "1c790903018d58b4a032eb48b4907ea6c87adf87",
+        "text": "{\n  \"id\": \"T042\",\n  \"topic\": \"热学\",\n  \"title\": \"晶格气吸附位的巨正则配分函数、覆盖率涨落与等温响应\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 80,\n  \"tags\": [\n    \"巨正则配分函数\",\n    \"吸附统计\",\n    \"涨落响应\",\n    \"配置熵\"\n  ],\n  \"answer\": \"\\\\vartheta=[1+e^{(\\\\varepsilon-\\\\mu)/(k_BT)}]^{-1}\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.2\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 608,
+        "git_blob": "0bd18e04480440ddeef110779715fe14a0f0b4c2",
+        "text": "有 \\(N_s\\) 个独立、彼此不作用的表面吸附位，每位至多容纳一粒子。空位能量与粒子数均为零；占据位的能量为 \\(\\varepsilon\\)（允许负值）、粒子数为1。与温度 \\(T>0\\)、化学势 \\(\\mu\\) 的粒子热库达到巨正则平衡。忽略吸附粒子间相互作用及位点内部简并度。\n(1) 写出单吸附位和全部位点的巨正则配分函数。\n(2) 求平均覆盖率、平均吸附粒子数和粒子数涨落。\n(3) 证明覆盖率对化学势的响应等于涨落系数。\n(4) 求吸附位配置熵、半覆盖条件及 \\(T\\to0^+\\) 阶跃极限。\n"
+      },
+      "solution.tex": {
+        "bytes": 1574,
+        "git_blob": "cf8f468d77eae2bc62d7b4149d071aadadc6c71f",
+        "text": "(1) 单吸附位权重为空位的1及占据的 \\(e^{-\\beta(\\varepsilon-\\mu)}\\)，故 \\(\\Xi_1=1+e^{\\beta(\\mu-\\varepsilon)}\\)，独立位点总巨配分函数 \\(\\Xi=\\Xi_1^{N_s}\\)。巨势 \\(\\Omega=-k_BT\\ln\\Xi\\)，且 \\(-\\partial_\\mu\\Omega=\\langle N\\rangle\\)。这里能级 \\(\\varepsilon\\) 是单粒子吸附能，不应将 \\(\\mu\\) 当作每个位都额外产生的系统内能。\n\n(2) 占据概率 \\(\\vartheta=e^{\\beta(\\mu-\\varepsilon)}/[1+e^{\\beta(\\mu-\\varepsilon)}]=[1+e^{\\beta(\\varepsilon-\\mu)}]^{-1}\\)。因此 \\(\\langle N\\rangle=N_s\\vartheta\\)，由于每位是参数为 \\(\\vartheta\\) 的 Bernoulli 变量，\\({\\rm Var}(N)=N_s\\vartheta(1-\\vartheta)\\)。其最大值在 \\(\\vartheta=1/2\\) 时为 \\(N_s/4\\)，而相对涨落随系统大小按 \\(N_s^{-1/2}\\) 缩小。\n\n(3) 对化学势求导，\\(\\partial\\vartheta/\\partial\\mu=\\beta e^{\\beta(\\varepsilon-\\mu)}/[1+e^{\\beta(\\varepsilon-\\mu)}]^2=\\beta\\vartheta(1-\\vartheta)\\)。所以 \\(\\partial\\langle N\\rangle/\\partial\\mu=\\beta\\,{\\rm Var}(N)\\)，是该巨正则系综的静态涨落--响应关系。曲线最陡处为 \\(\\mu=\\varepsilon\\)，其斜率 \\(N_s/(4k_BT)\\)，低温变陡。\n\n(4) 独立二态的配置熵 \\(S=-N_sk_B[\\vartheta\\ln\\vartheta+(1-\\vartheta)\\ln(1-\\vartheta)]\\)，约定 \\(0\\ln0=0\\)。当 \\(\\mu=\\varepsilon\\)，对所有 \\(T>0\\) 均有半覆盖 \\(\\vartheta=1/2\\) 与最大熵 \\(N_sk_B\\ln2\\)。固定 \\(\\mu\\ne\\varepsilon\\) 且 \\(T\\to0^+\\) 时，\\(\\vartheta\\to1\\) 若 \\(\\mu>\\varepsilon\\)，否则趋零。严格在 \\(\\mu=\\varepsilon\\) 的零温极限仍为半覆盖，这反映极限次序与基态简并。\n"
+      }
+    },
+    "T043": {
+      "meta.json": {
+        "bytes": 593,
+        "git_blob": "345c58a1a447b5aa906b09ff7abc7adc9c76662c",
+        "text": "{\n  \"id\": \"T043\",\n  \"topic\": \"热学\",\n  \"title\": \"温度依赖热导率杆的非线性稳态温度剖面与熵产生\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 75,\n  \"tags\": [\n    \"非线性Fourier定律\",\n    \"非平衡稳态\",\n    \"温度场积分\",\n    \"熵产生\"\n  ],\n  \"answer\": \"P=\\\\frac{Ak_0}{L}(T_h-T_c)\\\\left[1+\\\\frac{\\\\alpha}{2}(T_h+T_c)\\\\right]\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.2\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 531,
+        "git_blob": "a5731039f57e507dacf0c30cd22c404c6a1de534",
+        "text": "长度 \\(L\\)、截面积 \\(A\\) 的均匀杆只沿轴向导热，端点被保持在 \\(T_h>T_c>0\\)。热导率为 \\(k(T)=k_0(1+\\alpha T)\\)，其中 \\(k_0>0\\)，且 \\(\\alpha\\ge0\\)。无内热源、无侧面散热、无对流、稳态，边界 \\(T(0)=T_h,\\ T(L)=T_c\\)。局域热力学平衡成立。\n(1) 利用 Fourier 定律和能量守恒求总稳态热流。\n(2) 求完整的温度剖面并证明单调性。\n(3) 计算稳态总熵产生率并说明其非负。\n(4) 求弱温度依赖 \\(\\alpha\\to0\\) 的极限与等效热导率。\n"
+      },
+      "solution.tex": {
+        "bytes": 1390,
+        "git_blob": "efed2a0807614f3decec66322630c7408e6916e6",
+        "text": "(1) 定向从热端向冷端的总热功率 \\(P=-Ak(T)\\,dT/dx\\) 沿轴恒定。积分 \\(\\int_0^L(P/A)dx=\\int_{T_c}^{T_h}k(T)dT\\)，得 \\(P=(Ak_0/L)[(T_h-T_c)+\\alpha(T_h^2-T_c^2)/2]\\)。利用 \\(T_h^2-T_c^2=(T_h-T_c)(T_h+T_c)\\)，亦可写 \\(P=A k_{\\rm eff}(T_h-T_c)/L\\)，\\(k_{\\rm eff}=k_0[1+\\alpha(T_h+T_c)/2]\\)。\n\n(2) 定义严格递增函数 \\(F(T)=T+\\alpha T^2/2\\)（因 \\(F'(T)=1+\\alpha T>0\\)）。在任意位置积分 Fourier 方程，得到 \\(F(T(x))=F(T_h)-[F(T_h)-F(T_c)]x/L\\)。故 \\(T(x)=F^{-1}[F(T_h)-(F(T_h)-F(T_c))x/L]\\)，并且 \\(dT/dx=-P/[A k(T)]<0\\)。当 \\(\\alpha>0\\)，可解显式根 \\(T(x)=[-1+\\sqrt{1+2\\alpha\\,F(T(x))}]/\\alpha\\)，选非负物理支。\n\n(3) 局域熵产生密度 \\(\\sigma_s=k(T)(T_x)^2/T^2\\ge0\\)，因为热流从高温流向低温。积分 \\(\\dot S_{\\rm gen}=\\int_0^L A k(T)(T_x)^2/T^2dx=P\\int_{T_c}^{T_h}dT/T^2=P(1/T_c-1/T_h)>0\\)。也可从系统稳态熵账本得到：冷端每秒接受熵 \\(P/T_c\\)，热端每秒流出 \\(P/T_h\\)，其差即导热内部不可逆熵产生。\n\n(4) 令 \\(\\alpha\\to0\\)，函数 \\(F(T)\\to T\\)，故剖面恢复线性 \\(T(x)=T_h-(T_h-T_c)x/L\\)，热流 \\(P\\to A k_0(T_h-T_c)/L\\)。弱非线性修正相对于常数热导率的比值精确为 \\(1+\\alpha(T_h+T_c)/2\\)，而非仅使用杆平均温度处的热导率作为不经证明的普适公式；本模型中线性 \\(k(T)\\) 恰好使该平均表达式精确。\n"
+      }
+    },
+    "T044": {
+      "meta.json": {
+        "bytes": 579,
+        "git_blob": "d7241f96022bcb76e604eb0ef4c9da3fc7694b54",
+        "text": "{\n  \"id\": \"T044\",\n  \"topic\": \"热学\",\n  \"title\": \"不完全回热的 Stirling 热机效率、损失热量与熵产生\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 85,\n  \"tags\": [\n    \"Stirling循环\",\n    \"热回热器\",\n    \"热机性能\",\n    \"熵产生\"\n  ],\n  \"answer\": \"\\\\eta=\\\\frac{nR(T_h-T_c)\\\\ln r}{nRT_h\\\\ln r+(1-\\\\eta_r)nC_V(T_h-T_c)}\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.2\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 692,
+        "git_blob": "306561d6973da2d915f7b393ea1bcea5707af218",
+        "text": "\\(n\\) 摩尔定热容理想气体在热端 \\(T_h\\)、冷端 \\(T_c\\)（\\(T_h>T_c>0\\)）作准静态 Stirling 循环：热端等温膨胀 \\(V_{\\min}\\to V_{\\max}\\)，定容冷却，冷端等温压缩 \\(V_{\\max}\\to V_{\\min}\\)，再定容加热。定义 \\(r=V_{\\max}/V_{\\min}>1\\)，热回热器以相同回热有效率 \\(0\\le\\eta_r\\le1\\) 处理两段定容过程，未回收热量由相应外部热端或冷端承担。\n(1) 计算两等温段的功与定容段所需热。\n(2) 写出外热源总吸热、外冷源总排热及净功。\n(3) 计算实际循环热效率并检验 \\(\\eta_r=1\\) 极限。\n(4) 证明热源与冷源总熵变化为非负，并指出低回热效率造成的不可逆性。\n"
+      },
+      "solution.tex": {
+        "bytes": 1468,
+        "git_blob": "859ce377e7d2b2a850f572eeb04f6d62b3d76480",
+        "text": "(1) 理想气体等温过程的做功 \\(W_{h}=nRT_h\\ln r\\)、\\(W_c=-nRT_c\\ln r\\)。两定容段 \\(W=0\\)，储热或放热量大小均是 \\(Q_{\\rm isoV}=nC_V(T_h-T_c)\\)。若回热器有效率为 \\(\\eta_r\\)，它在定容冷却时储存 \\(\\eta_r Q_{\\rm isoV}\\)，在加热时释放同样多的热量；其余 \\((1-\\eta_r)Q_{\\rm isoV}\\) 由外部热源与冷源承担。\n\n(2) 对外部热端，除等温膨胀吸热 \\(nRT_h\\ln r\\) 外，还要补足不完全回热的定容升温需求，所以 \\(Q_h=nRT_h\\ln r+(1-\\eta_r)nC_V(T_h-T_c)\\)。冷端排热 \\(Q_c=nRT_c\\ln r+(1-\\eta_r)nC_V(T_h-T_c)\\)。两式相减给净功 \\(W=nR(T_h-T_c)\\ln r\\)，它不依赖理想化回热有效率，因为两定容段的内能变化互相抵消。\n\n(3) 热效率 \\(\\eta=W/Q_h=\\frac{nR(T_h-T_c)\\ln r}{nRT_h\\ln r+(1-\\eta_r)nC_V(T_h-T_c)}\\)。当 \\(\\eta_r=1\\) 且热交换可逆时，效率退化为 \\(1-T_c/T_h\\)，即 Carnot 上界。回热不完全令分母增大而循环净功不变，效率严格降低。极限 \\(r\\to1^+\\) 时净功趋零，不宜把形式上较差的效率混同于有用功率。\n\n(4) 工质循环熵变严格为零，若外界只有 \\(T_h,T_c\\) 两热库，热库净熵增为 \\(\\Delta S_{\\rm env}=-Q_h/T_h+Q_c/T_c=(1-\\eta_r)nC_V(T_h-T_c)(1/T_c-1/T_h)\\ge0\\)。等温过程贡献互相抵消，回热损失造成正熵产生。式中假设热源冷源只接纳未回收的定容热；若另设有限温差传热过程，还会有其他额外不可逆熵产生。\n"
+      }
+    },
+    "T045": {
+      "meta.json": {
+        "bytes": 558,
+        "git_blob": "b4f9cf3bbf7d28950489e997fb34a097e756b40e",
+        "text": "{\n  \"id\": \"T045\",\n  \"topic\": \"热学\",\n  \"title\": \"一维自旋二重简并费米气体的简并压力与第一声速度\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 90,\n  \"tags\": [\n    \"一维费米统计\",\n    \"态密度计数\",\n    \"简并压\",\n    \"长波传播\"\n  ],\n  \"answer\": \"P_1=\\\\frac23n\\\\epsilon_F,\\\\quad c_s=v_F\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.2\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 579,
+        "git_blob": "3feae60c99c847b6dbaa28c3256e55e507664cc2",
+        "text": "长度 \\(L\\) 的一维无相互作用费米气体由质量 \\(m\\) 的非相对论粒子组成，粒子数 \\(N\\gg1\\)，每个动量态有自旋简并度 \\(g_s=2\\)。采用周期边界，取零温 \\(T=0\\) 和热力学极限，线密度 \\(n=N/L\\)。单粒子能量 \\(\\epsilon(k)=\\hbar^2k^2/(2m)\\)，费米海关于零对称。\n(1) 由态密度计数求 \\(k_F\\)、费米能和费米速率。\n(2) 积分求总基态能量与单位长度的压力。\n(3) 计算一维等熵体积模量的对应线压缩刚度。\n(4) 用流体力学得到小振幅长波声速并与费米速度比较。\n"
+      },
+      "solution.tex": {
+        "bytes": 1536,
+        "git_blob": "2fbbb49cc3daba266a0dfd22ca52650dc49f2c62",
+        "text": "(1) 周期边界下每单位长度、每单位 \\(k\\) 区间的态数为 \\(g_s/(2\\pi)\\)，从 \\(-k_F\\) 到 \\(k_F\\) 共 \\(N=g_s Lk_F/\\pi\\)。故 \\(k_F=\\pi n/2\\)，\\(\\epsilon_F=\\hbar^2k_F^2/(2m)=\\pi^2\\hbar^2 n^2/(8m)\\)，\\(v_F=\\hbar k_F/m\\)。计数必须包括正负波矢与两种自旋，漏掉任何一项都会产生因子2错误。\n\n(2) 总基态能量 \\(U=g_sL/(2\\pi)\\int_{-k_F}^{k_F}(\\hbar^2k^2/(2m))dk=g_sL\\hbar^2k_F^3/(6\\pi m)=N\\epsilon_F/3\\)。定义一维机械压力 \\(P_1=-(\\partial U/\\partial L)_N\\)，它的量纲是力而不是三维的力除面积。由于 \\(U\\propto N^3/L^2\\)，得到 \\(P_1=2U/L=(2/3)n\\epsilon_F\\)。这是 Pauli 统计产生的零温压强，即使粒子间无相互作用也不为零。\n\n(3) 在零温无热激发情形压缩是等熵的，令线压缩刚度 \\(K_1=n(\\partial P_1/\\partial n)\\)。由 \\(\\epsilon_F\\propto n^2\\) 可知 \\(P_1\\propto n^3\\)，于是 \\(K_1=3P_1=2n\\epsilon_F\\)。与三维费米气体的 \\(P=2U/(3V)\\) 不同，一维的尺度变换给 \\(P_1=2U/L\\)；不可照搬三维压力系数。\n\n(4) 线性连续方程 \\(\\partial_t\\delta n+n\\partial_xu=0\\)，Euler 方程 \\(mn\\partial_tu=-\\partial_x\\delta P_1\\)，其中 \\(\\delta P_1=(\\partial P_1/\\partial n)\\delta n\\)。合并可得波动方程 \\(\\partial_t^2\\delta n=c_s^2\\partial_x^2\\delta n\\)，\\(c_s^2=K_1/(mn)=2\\epsilon_F/m\\)，所以 \\(c_s=v_F\\)。在无碰撞的一维理想费米系统中，该形式也对应集体密度扰动的特征传播速度，不能直接宣称存在具有通常粘滞平衡假设的碰撞声学。\n"
+      }
+    },
+    "T046": {
+      "meta.json": {
+        "bytes": 613,
+        "git_blob": "eff8628cda6ff2e6413e75d9759f5707ac2d64ca",
+        "text": "{\n  \"id\": \"T046\",\n  \"topic\": \"热学\",\n  \"title\": \"二维无质量玻色模的能量积分、辐射压与绝热面积律\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 85,\n  \"tags\": [\n    \"二维玻色统计\",\n    \"态密度积分\",\n    \"无质量压强\",\n    \"绝热缩放\"\n  ],\n  \"answer\": \"u=\\\\frac{g\\\\zeta(3)}{\\\\pi}\\\\frac{(k_BT)^3}{\\\\hbar^2c^2},\\\\quad T\\\\sqrt A=\\\\mathrm{const}\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.2\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 605,
+        "git_blob": "4506bbc90882aaba954e20059aa29276260db364",
+        "text": "面积 \\(A\\) 的二维理想均匀周期系统具有 \\(g\\ge1\\) 个简并的无质量玻色激发分支，能量 \\(\\epsilon(\\boldsymbol k)=\\hbar c|\\boldsymbol k|\\)，化学势固定为零，温度 \\(T>0\\)。考虑热力学极限，排除零点真空能，忽略边缘、相互作用和色散修正。这里是二维模型而非三维电磁黑体。\n(1) 从二维态密度推导单位面积的热激发内能。\n(2) 由无质量色散的尺度律求二维压力与焓。\n(3) 求熵与定面积热容。\n(4) 求准静态绝热改变面积时的温度缩放关系，并检查与三维光子气体的区别。\n"
+      },
+      "solution.tex": {
+        "bytes": 1432,
+        "git_blob": "b670d8e585bd9035f23840d9cd22120bcc505854",
+        "text": "(1) 二维波矢态数每单位面积为 \\(g\\,d^2k/(2\\pi)^2\\)。热激发单位面积能量 \\(u=g/(2\\pi)\\int_0^\\infty k\\,dk\\,\\hbar ck/(e^{\\beta\\hbar ck}-1)\\)。令 \\(x=\\beta\\hbar ck\\)，并用 \\(\\int_0^\\infty x^2/(e^x-1)dx=2\\zeta(3)\\)，得 \\(u=g\\zeta(3)(k_BT)^3/[\\pi\\hbar^2c^2]\\)。紫外端由 Bose 因子指数收敛；零温真空能已按题设扣除。\n\n(2) 线性色散在二维使无质量各向同性激发的应力迹满足 \\(2P=u\\)，因此 \\(P=u/2=g\\zeta(3)(k_BT)^3/(2\\pi\\hbar^2c^2)\\)。也可用巨势按空间尺寸的齐次缩放验证。此处 \\(P\\) 是二维力每长度，其乘以面积具有能量量纲；相应焓 \\(H=U+PA=3U/2\\)。不要把三维辐射压 \\(P=u/3\\) 直接用于二维系统。\n\n(3) 在化学势零且无其他守恒粒子数时，热力学关系 \\(U=TS-PA\\) 给 \\(S=(U+PA)/T=3U/(2T)=3g\\zeta(3)Ak_B^3T^2/(2\\pi\\hbar^2c^2)\\)。在固定面积下 \\(C_A=(\\partial U/\\partial T)_A=3U/T\\)，热容随 \\(AT^2\\) 缩放，与二维线性色散的态密度成正比。熵表达式具有单位 J/K，符合广延性。\n\n(4) 准静态绝热演化保持 \\(S\\propto AT^2\\) 不变，故 \\(T\\sqrt A=\\mathrm{const}\\)。等价地，\\(P\\propto T^3\\)，结合绝热线得到 \\(PA^{3/2}=\\mathrm{const}\\)。三维光子气体则满足 \\(S\\propto VT^3\\)、\\(TV^{1/3}=\\mathrm{const}\\)；维数不同导致指数不同。若存在质量间隙、固定粒子数或非线性色散，以上二维幂律将不再普适。\n"
+      }
+    },
+    "T047": {
+      "meta.json": {
+        "bytes": 620,
+        "git_blob": "c3a8264971b75568b4111b877e225042f005fa00",
+        "text": "{\n  \"id\": \"T047\",\n  \"topic\": \"热学\",\n  \"title\": \"平移谐势中的过阻尼布朗粒子、随机功与 Jarzynski 恒等式\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 100,\n  \"tags\": [\n    \"Langevin方程\",\n    \"Ornstein-Uhlenbeck过程\",\n    \"功涨落\",\n    \"非平衡热力学\"\n  ],\n  \"answer\": \"\\\\operatorname{Var} W=2k_BT\\\\langle W\\\\rangle,\\\\quad\\\\langle e^{-\\\\beta W}\\\\rangle=1\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.2\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 664,
+        "git_blob": "f779be13a8e87f39f2081c0d3b84b9f387439b61",
+        "text": "一维过阻尼布朗粒子处于与温度 \\(T>0\\) 热库接触的谐势 \\(U(x,t)=k[x-vt]^2/2\\) 中，\\(k>0,\\ v>0\\) 为常数。随机动力学满足 \\(\\gamma\\dot x=-k(x-vt)+\\xi(t)\\)，\\(\\langle\\xi(t)\\xi(t')\\rangle=2\\gamma k_BT\\delta(t-t')\\)，初始 \\(x(0)\\) 取以0为均值、方差 \\(k_BT/k\\) 的平衡分布。定义 \\(\\tau=\\gamma/k\\)，外控势中心从 \\(0\\) 等速平移。\n(1) 求粒子平均位置与平均滞后位移随时间的变化。\n(2) 用随机功定义 \\(W=-kv\\int_0^t[x(s)-vs]\\,ds\\) 求平均功。\n(3) 求功的方差，证明其与平均耗散功满足关系式。\n(4) 计算 \\(\\langle e^{-W/(k_BT)}\\rangle\\) 并与自由能变化比较。\n"
+      },
+      "solution.tex": {
+        "bytes": 1574,
+        "git_blob": "784dffa2b8db54dbe95417f0fc8767837dbdb4ce",
+        "text": "(1) 对 Langevin 方程取平均，\\(\\dot m=-(m-vt)/\\tau\\)，其中 \\(m(t)=\\langle x(t)\\rangle,\\ m(0)=0\\)。一阶线性方程解为 \\(m(t)=v[t-\\tau(1-e^{-t/\\tau})]\\)，因此平均滞后量 \\(m(t)-vt=-v\\tau(1-e^{-t/\\tau})\\)。短时间 \\(m(t)\\sim vt^2/(2\\tau)\\)，长时间滞后趋 \\(-v\\tau\\)。这说明势阱移动时系统一般不处于瞬时平衡。\n\n(2) 外控参数是 \\(\\lambda(t)=vt\\)，其做功定义为 \\(W=\\int_0^t\\partial_\\lambda U\\,\\dot\\lambda\\,ds=-kv\\int_0^t[x(s)-vs]ds\\)。取平均得到 \\(\\langle W\\rangle=kv^2\\tau\\int_0^t(1-e^{-s/\\tau})ds=\\gamma v^2[t-\\tau(1-e^{-t/\\tau})]\\ge0\\)。由于仅是谐势中心平移，配分函数不变，真实平衡自由能变化 \\(\\Delta F=0\\)，平均功全部属于非平衡耗散。\n\n(3) 令涨落 \\(\\delta x=x-m(t)\\)，它满足定常 OU 过程 \\(\\gamma\\,d(\\delta x)/dt=-k\\delta x+\\xi\\)，初态已平衡，故 \\(C(s,s')=\\langle\\delta x(s)\\delta x(s')\\rangle=(k_BT/k)e^{-|s-s'|/\\tau}\\)。随机功是高斯过程线性泛函，因此服从正态分布，其方差 \\({\\rm Var}(W)=k^2v^2\\int_0^t\\int_0^t C(s,s')dsds'=2k_BT\\gamma v^2[t-\\tau(1-e^{-t/\\tau})]=2k_BT\\langle W\\rangle\\)。\n\n(4) 正态变量的指数矩为 \\(\\langle e^{-\\beta W}\\rangle=\\exp[-\\beta\\langle W\\rangle+\\beta^2{\\rm Var}(W)/2]\\)。代入 \\({\\rm Var}(W)=2\\langle W\\rangle/\\beta\\) 得 \\(\\langle e^{-\\beta W}\\rangle=1=e^{-\\beta\\Delta F}\\)，严格符合 Jarzynski 恒等式。个别轨道允许负功，尽管平均功非负；若初始不是平衡分布，或热噪声幅度违反涨落耗散关系，上述指数等式通常不能直接照用。\n"
+      }
+    },
+    "T048": {
+      "meta.json": {
+        "bytes": 566,
+        "git_blob": "cb27859cac580fda052c4e32435b4f2d77086fc1",
+        "text": "{\n  \"id\": \"T048\",\n  \"topic\": \"热学\",\n  \"title\": \"范德瓦耳斯流体临界点、约化方程与旋节分解边界\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 90,\n  \"tags\": [\n    \"非理想气体\",\n    \"临界点\",\n    \"约化态\",\n    \"机械稳定性\"\n  ],\n  \"answer\": \"v_c=3b,\\\\quad T_c=8a/(27Rb),\\\\quad p_c=a/(27b^2)\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.3-round11\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 674,
+        "git_blob": "e39da13094801b928c0bcce601fe1c5ae28a104f",
+        "text": "一摩尔经典范德瓦耳斯流体在单相均匀近似下满足 \\(p=RT/(v-b)-a/v^2\\)，其中 \\(a,b>0\\)，摩尔体积 \\(v>b\\)，\\(R\\) 为气体常数。以 \\(T_c,p_c,v_c\\) 表示临界点；讨论等温曲线及临界点附近局部展开，不采用未经定义的等面积液气共存近似。\n(1) 由拐点条件推导 \\(T_c,p_c,v_c\\)，并检查三个量量纲。\n(2) 推导约化方程 \\(p_r(T_r,v_r)\\)，检验临界点对应约化坐标 \\((1,1,1)\\)。\n(3) 对 \\(T_r=1+t,v_r=1+w\\) 在小 \\(t,w\\) 下展开，给出最低非平凡临界非线性项。\n(4) 建立机械稳定性条件与旋节分解线方程，解释稳定条件与真实液气共存线的差异。\n"
+      },
+      "solution.tex": {
+        "bytes": 1659,
+        "git_blob": "7b4901ce83492520511d8edd2389987f028b043f",
+        "text": "(1) 临界等温线上一阶、二阶体积导数同时为零。由 \\(\\partial p/\\partial v=-RT/(v-b)^2+2a/v^3=0\\)，\\(\\partial^2p/\\partial v^2=2RT/(v-b)^3-6a/v^4=0\\)，两式相除得到 \\(v_c=3b\\)。回代第一式得 \\(RT_c=8a/(27b)\\)，再代入状态方程得 \\(p_c=a/(27b^2)\\)。\\(a\\) 的量纲为压强乘摩尔体积平方，\\(b\\) 是摩尔体积，因此温度、压强与体积的量纲均正确。\n\n(2) 令 \\(p_r=p/p_c,T_r=T/T_c,v_r=v/v_c\\)。将 \\(v_c=3b,\\ RT_c=8a/(27b)\\) 代入状态方程，并用 \\(p_c=a/(27b^2)\\) 归一化，整理得 \\(p_r=8T_r/(3v_r-1)-3/v_r^2\\)。取 \\(T_r=v_r=1\\)，立即得到 \\(p_r=8/2-3=1\\)，因此三者临界值全部归一到一。这里的约化方程消除了具体物质参数，只是在原始范德瓦耳斯模型的适用范围内满足对应态。\n\n(3) 在 \\(T_r=1+t,v_r=1+w\\) 且 \\(|t|,|w|\\ll1\\) 下，使用 \\(1/(1+3w/2)=1-3w/2+9w^2/4-27w^3/8+\\cdots\\) 与 \\(1/(1+w)^2=1-2w+3w^2-4w^3+\\cdots\\)，得到 \\(p_r=1+4t-6tw+9tw^2-\\frac32w^3+O(tw^3,w^4)\\)。一阶 \\(w\\) 与二阶 \\(w\\) 在 \\(t=0\\) 时恰好相消，因此临界等温线的主导非线性是 \\(-3w^3/2\\)，而不是线性回复斜率。\n\n(4) 对有正的等温压缩率的均匀单相态，机械稳定要求 \\((\\partial p/\\partial v)_T<0\\)。旋节分解边界由导数等于零决定，故 \\(RT/(v-b)^2=2a/v^3\\)，即 \\(T_{\\rm sp}(v)=2a(v-b)^2/(Rv^3)\\)。在 \\(v=3b\\) 此线达到临界温度。若局部斜率为正，则均匀状态对密度微扰机械不稳定；在它与真实共存线之间仍可能有亚稳态。旋节分解线不等于由两相化学势相等或 Maxwell 等面积规则决定的共存线，不能将两者混同。\n"
+      }
+    },
+    "T049": {
+      "meta.json": {
+        "bytes": 613,
+        "git_blob": "08dda186a31e946495f0ea4e91b165630d780841",
+        "text": "{\n  \"id\": \"T049\",\n  \"topic\": \"热学\",\n  \"title\": \"有限热容双热源之间可逆发动机的最大可提取功与火用\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 90,\n  \"tags\": [\n    \"熵守恒\",\n    \"有限热源\",\n    \"最大功原理\",\n    \"不可逆损失\"\n  ],\n  \"answer\": \"T_f=T_h^{C_h/(C_h+C_c)}T_c^{C_c/(C_h+C_c)},\\\\quad W_{\\\\max}=C_hT_h+C_cT_c-(C_h+C_c)T_f\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.3-round11\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 680,
+        "git_blob": "19ac09005b0f47cd89b5e3233982427443fb0255",
+        "text": "两个各自内部始终热平衡的有限热库初温为 \\(T_h>T_c>0\\)，具有温度无关的正定热容 \\(C_h,C_c\\)。允许通过可逆微型热机缓慢交换能量并向外输出机械功，热库与外界绝热、热机循环工作且工作物质无净能量储存。最终两热库达到共同温度 \\(T_f\\)。\n(1) 用总熵不变推导可逆终温的加权几何平均公式。\n(2) 求外部最大可提取总功，并论证其确实是给定初态下的最大值。\n(3) 针对 \\(C_h=C_c=C\\) 的特例简化公式，比较直接热接触后的平衡温度。\n(4) 求直接接触造成的总熵增与未能提取的机械功，讨论 \\(T_h\\to T_c\\) 的小温差展开。\n"
+      },
+      "solution.tex": {
+        "bytes": 1842,
+        "git_blob": "6c6cce80dacb5a730eb90619fd0c0befbb7cc932",
+        "text": "(1) 一个热容常数为 \\(C\\) 的热库从 \\(T_i\\) 变为 \\(T_f\\) 时熵变为 \\(\\Delta S=C\\int_{T_i}^{T_f}dT/T=C\\ln(T_f/T_i)\\)。全部过程可逆且系统绝热，两个热库的总熵不变：\\(C_h\\ln(T_f/T_h)+C_c\\ln(T_f/T_c)=0\\)。因此 \\((C_h+C_c)\\ln T_f=C_h\\ln T_h+C_c\\ln T_c\\)，得到 \\(T_f=T_h^{C_h/(C_h+C_c)}T_c^{C_c/(C_h+C_c)}\\)。加权几何平均保证 \\(T_c<T_f<T_h\\)，避免了把有限热库错误视作恒温热源。\n\n(2) 总能量守恒给外部输出功 \\(W=C_h(T_h-T_f)+C_c(T_c-T_f)=C_hT_h+C_cT_c-(C_h+C_c)T_f\\)。对于任何不可逆过程，孤立复合系统熵增 \\(\\Delta S_{\\rm tot}\\ge0\\)，在给定总能量情况下，熵约束使可实现的最终等温温度不低于等熵的几何平均 \\(T_f\\)。最终热库能量随共同温度单调上升，因此等熵可逆路径使剩余能量最小、提取功最大；这比直接引用一台固定效率的卡诺热机更一般。\n\n(3) 若两个热容相同，\\(T_f=\\sqrt{T_hT_c}\\)，最大功 \\(W_{\\max}=C(T_h+T_c-2\\sqrt{T_hT_c})=C(\\sqrt{T_h}-\\sqrt{T_c})^2\\ge0\\)。如果直接让两个热库接触而不输出功，能量守恒得共同终温 \\(T_{\\rm mix}=(T_h+T_c)/2\\)。由算术几何平均不等式 \\(T_{\\rm mix}\\ge T_f\\)，可见直接接触留在热库中的能量更多，而其差额 \\(2C(T_{\\rm mix}-T_f)\\) 正是本可提取的机械功。\n\n(4) 直接接触的总熵增 \\(\\Delta S_{\\rm mix}=C\\ln(T_{\\rm mix}/T_h)+C\\ln(T_{\\rm mix}/T_c)=C\\ln[T_{\\rm mix}^2/(T_hT_c)]\\ge0\\)，严格大于零当 \\(T_h\\ne T_c\\)。其未提取功即 \\(W_{\\max}=2C(T_{\\rm mix}-T_f)\\)。设 \\(T_h=T+\\Delta/2,\\ T_c=T-\\Delta/2\\) 且 \\(|\\Delta|\\ll T\\)，则 \\(\\sqrt{T_hT_c}=T-\\Delta^2/(8T)+O(\\Delta^4)\\)，所以 \\(W_{\\max}=C\\Delta^2/(4T)+O(\\Delta^4)\\)，而熵增 \\(\\Delta S_{\\rm mix}=C\\Delta^2/(4T^2)+O(\\Delta^4)\\)，主阶满足 \\(W_{\\max}\\sim T\\Delta S_{\\rm mix}\\)。\n"
+      }
+    },
+    "T050": {
+      "meta.json": {
+        "bytes": 630,
+        "git_blob": "70706e45462808b9fe34f55b74939c7925a5634f",
+        "text": "{\n  \"id\": \"T050\",\n  \"topic\": \"热学\",\n  \"title\": \"理想原子气体二聚反应的配分函数、解离平衡及压强\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 90,\n  \"tags\": [\n    \"理想混合气体\",\n    \"化学势平衡\",\n    \"热德布罗意波长\",\n    \"结合能\"\n  ],\n  \"answer\": \"K_c=(g_2/g_1^2)2^{3/2}\\\\lambda_1^3 e^{\\\\varepsilon/(k_BT)},\\\\quad n_1=2N/(1+\\\\sqrt{1+8K_cN/V})\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.3-round11\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 849,
+        "git_blob": "2aea8a1e02cc20308971f4582cf06252b1897faa",
+        "text": "质量 \\(m\\)、内部简并度 \\(g_1\\) 的单原子理想气体可发生可逆反应 \\(2A\\rightleftharpoons A_2\\)；二聚体质量 \\(2m\\)，内部简并度 \\(g_2\\)，相对于两自由原子的结合能 \\(\\varepsilon>0\\)。温度 \\(T\\)、容积 \\(V\\) 恒定，所有种类满足非简并 Maxwell--Boltzmann 极限，忽略二聚体转动振动激发、体积排斥和其他反应；核总数 \\(N=n_1+2n_2\\) 固定。令原子热波长 \\(\\lambda_1=h/\\sqrt{2\\pi mk_BT}\\)。\n(1) 分别列出两物种单粒子平动配分函数，说明二聚体结合能因子的符号。\n(2) 从化学势等式推导浓度形式的平衡常数 \\(K_c(T)\\)，给出其物理量纲。\n(3) 消去反应粒子数求单体数 \\(n_1\\) 的精确正根，并给出高温与低温极限。\n(4) 求总压强及平均内能，解释结合能如何影响热响应与粒子数。\n"
+      },
+      "solution.tex": {
+        "bytes": 1873,
+        "git_blob": "f95f85a27eadec81fa00cd35b6605522f9176827",
+        "text": "(1) 单体热波长 \\(\\lambda_1=h/\\sqrt{2\\pi mk_BT}\\)；二聚体质量加倍，\\(\\lambda_2=\\lambda_1/\\sqrt2\\)。取分离原子能量为零基准，二聚体能量为 \\(-\\varepsilon\\)，所以单粒子配分函数 \\(z_1=g_1V/\\lambda_1^3\\)，\\(z_2=(g_2V/\\lambda_2^3)e^{\\varepsilon/(k_BT)}\\)。结合越牢固越偏向形成二聚体，故其 Boltzmann 权重应为正指数，不能把 \\(-\\varepsilon\\) 错写成额外的正内能。\n\n(2) 经典理想混合物各自化学势为 \\(\\mu_j=k_BT\\ln(n_j/z_j)\\)。反应平衡要求 \\(\\mu_2=2\\mu_1\\)，于是 \\(n_2/z_2=(n_1/z_1)^2\\)，即 \\(n_2/V=K_c(T)(n_1/V)^2\\)。平衡常数 \\(K_c=(g_2/g_1^2)(\\lambda_1^6/\\lambda_2^3)e^{\\varepsilon/(k_BT)}=(g_2/g_1^2)2^{3/2}\\lambda_1^3e^{\\varepsilon/(k_BT)}\\)。它的量纲是体积，因右边浓度平方乘 \\(K_c\\) 必须仍为浓度；混用无量纲标准态平衡常数会导致量纲错误。\n\n(3) 令 \\(n_2=K_cn_1^2/V\\)，核数守恒变为 \\(2(K_c/V)n_1^2+n_1-N=0\\)。唯一非负根是 \\(n_1=[V/(4K_c)](\\sqrt{1+8K_cN/V}-1)\\)，适宜数值计算时也可有理化成 \\(n_1=2N/[1+\\sqrt{1+8K_cN/V}]\\)。再得 \\(n_2=(N-n_1)/2\\)。由于 \\(K_c\\propto T^{-3/2}\\exp(\\varepsilon/k_BT)\\)，高温或低密度时 \\(K_cN/V\\ll1\\) 导致 \\(n_1\\to N\\)，低温且模型仍满足经典假设时 \\(K_cN/V\\gg1\\) 导致 \\(n_1\\ll N\\)、几乎全为二聚体。\n\n(4) 两种独立理想平动组分贡献总压强 \\(P=(n_1+n_2)k_BT/V=[(N+n_1)/2]k_BT/V\\)，完全二聚时压强约为未反应原子气体的一半，体现的是粒子数变化。忽略内部激发后平均能量为 \\(U=\\frac32(n_1+n_2)k_BT-\\varepsilon n_2\\)；第二项是负结合能，随 \\(T\\) 改变的化学组成会向热容加入反应热效应。求实际 \\(C_V=dU/dT\\) 时必须包含 \\(dn_j/dT\\)，而不能把 \\(n_1,n_2\\) 当成彼此独立的常数；模型在低温进入简并或冻结反应动力学时会失效。\n"
+      }
+    },
+    "T051": {
+      "meta.json": {
+        "bytes": 643,
+        "git_blob": "022b016d6711b12b5f49c9199c9329131b7ada25",
+        "text": "{\n  \"id\": \"T051\",\n  \"topic\": \"热学\",\n  \"title\": \"温度依赖导热率的圆筒径向稳态传热与熵产生\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 90,\n  \"tags\": [\n    \"非线性傅里叶定律\",\n    \"圆柱几何\",\n    \"温度剖面\",\n    \"熵产生率\"\n  ],\n  \"answer\": \"\\\\dot Q=\\\\frac{2\\\\pi\\\\ell k_0(T_h^{n+1}-T_c^{n+1})}{(n+1)T_0^n\\\\ln(b/a)},\\\\qquad\\\\dot S_{\\\\rm gen}=\\\\dot Q(1/T_c-1/T_h)\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.3-round11\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 694,
+        "git_blob": "3193e5bf6419dde812a41f60da39ccbf21c6255b",
+        "text": "空心圆筒内、外半径为 \\(a,b\\)，长度 \\(\\ell\\gg b\\)；仅考虑径向一维稳态导热，内外壁分别保持 \\(T_h>T_c>0\\)。材料热导率随温度变化 \\(k(T)=k_0(T/T_0)^n\\)，其中 \\(k_0,T_0>0\\)、\\(n\\in\\mathbb R\\)，忽略内部热源、接触热阻及端面效应，取向外的总热流率为 \\(\\dot Q>0\\)。\n(1) 从圆柱守恒与傅里叶定律建立可积的稳态径向方程。\n(2) 对 \\(n\\ne-1\\) 求总热流率及完整温度剖面，解释非线性导热的温度平均方式。\n(3) 单独处理 \\(n=-1\\) 的对数极限，并验证 \\(n=0\\) 回到常热导率结果。\n(4) 计算导热过程的总熵产生率，证明结果非负并与边界热库熵流平衡。\n"
+      },
+      "solution.tex": {
+        "bytes": 1650,
+        "git_blob": "a3e163dfc22f9a2469b5d536d153da72563267e5",
+        "text": "(1) 对半径 \\(r\\) 的圆柱侧面，面积为 \\(2\\pi r\\ell\\)，稳态能量守恒要求同一 \\(\\dot Q=-2\\pi r\\ell\\,k(T)dT/dr\\) 对所有 \\(r\\) 恒定。因内热外冷，\\(dT/dr<0\\)，故 \\(\\dot Q>0\\) 与正向约定一致。分离变量得到 \\(k(T)dT=-(\\dot Q/2\\pi\\ell)\\,dr/r\\)。这里的几何因子 \\(r\\) 会产生 \\(\\ln(b/a)\\)，不能照搬平板公式中的厚度 \\(b-a\\)。\n\n(2) 对 \\(n\\ne-1\\)，积分 \\(a\\to r\\) 有 \\(k_0[T(r)^{n+1}-T_h^{n+1}]/[(n+1)T_0^n]=-\\dot Q\\ln(r/a)/(2\\pi\\ell)\\)。在 \\(r=b\\) 使用 \\(T_c\\) 得 \\(\\dot Q=\\{2\\pi\\ell k_0/[(n+1)T_0^n\\ln(b/a)]\\}(T_h^{n+1}-T_c^{n+1})\\)。消去热流率后 \\(T(r)^{n+1}=T_h^{n+1}-(T_h^{n+1}-T_c^{n+1})\\ln(r/a)/\\ln(b/a)\\)。即使 \\(n<-1\\)，积分结果符号仍使热流为正，须整体保留分子与 \\(n+1\\) 的配对。\n\n(3) 当 \\(n=-1\\)，导热率 \\(k=k_0T_0/T\\)，温度积分变为对数，结果 \\(\\dot Q=2\\pi\\ell k_0T_0\\ln(T_h/T_c)/\\ln(b/a)\\)，且 \\(\\ln[T(r)/T_h]=-\\ln(T_h/T_c)\\ln(r/a)/\\ln(b/a)\\)。将一般公式的 \\(T_h^{n+1}-T_c^{n+1}\\) 除以 \\(n+1\\) 并令 \\(n+1\\to0\\) 也得同一极限。对 \\(n=0\\) 得 \\(\\dot Q=2\\pi\\ell k_0(T_h-T_c)/\\ln(b/a)\\)，恰是常导热率同轴圆筒的热阻公式。\n\n(4) 局域熵产生密度 \\(\\sigma=\\mathbf j_q\\cdot\\nabla(1/T)=k(T)|\\nabla T|^2/T^2\\ge0\\)，其中热流密度 \\(\\mathbf j_q=-k\\nabla T\\)。积分整个圆筒体积，用 \\(\\dot Q\\) 与 \\(dT/dr\\) 消去温度梯度，得到 \\(\\dot S_{\\rm gen}=\\dot Q\\int_a^b[-(1/T^2)dT/dr]dr=\\dot Q(1/T_c-1/T_h)>0\\)。边界热库熵率相加恰为该数：内热库流出热量给 \\(-\\dot Q/T_h\\)，外冷库收到热量给 \\(+\\dot Q/T_c\\)，与局域第二定律完全一致。\n"
+      }
+    },
+    "T052": {
+      "meta.json": {
+        "bytes": 595,
+        "git_blob": "c1787791d75316bdb7104af2b2161936d37e4c90",
+        "text": "{\n  \"id\": \"T052\",\n  \"topic\": \"热学\",\n  \"title\": \"可逆绝热喷管的马赫数、面积变化和喉部壅塞\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 90,\n  \"tags\": [\n    \"可压缩流动\",\n    \"焓守恒\",\n    \"音速壅塞\",\n    \"质量流率\"\n  ],\n  \"answer\": \"(\\\\dot m/A)_*=p_0\\\\sqrt{\\\\gamma/(RT_0)}[2/(\\\\gamma+1)]^{(\\\\gamma+1)/(2(\\\\gamma-1))}\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.3-round11\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 606,
+        "git_blob": "57d5bf4ace444282c1696f71d119283af06bd37b",
+        "text": "稳态理想气体通过无粘绝热一维喷管，定比热比 \\(\\gamma>1\\)，气体常数 \\(R\\)，入口总温 \\(T_0\\)、总压 \\(p_0\\)，局部面积 \\(A\\)、流速 \\(u\\)，局部音速 \\(c^2=\\gamma RT\\)，马赫数 \\(M=u/c\\)。过程可逆，不含激波。\n(1) 由连续方程、动量方程及等熵状态式导出面积—速度微分关系。\n(2) 由能量方程求静温及静压相对总温、总压与马赫数的关系。\n(3) 求壅塞质量流率及其喉部临界条件，证明是质量通量最大值。\n(4) 解释收缩及扩张段的不同加速模式和非等熵激波带来的限制。\n"
+      },
+      "solution.tex": {
+        "bytes": 1251,
+        "git_blob": "e7f5242f6fd2f0890cf1a16bec92ffccecb73d9c",
+        "text": "(1) 连续性 \\(d\\rho/\\rho+du/u+dA/A=0\\)；定常 Euler 方程 \\(u\\,du+dp/\\rho=0\\)，等熵声速关系 \\(dp=c^2d\\rho\\)，于是 \\(d\\rho/\\rho=-M^2du/u\\)。消去密度变化得到 \\(dA/A=(M^2-1)du/u\\)。它显示亚声速加速需收缩，超声速加速需扩张，并要求喉部过音速时 \\(dA=0\\)。\n\n(2) 绝热焓守恒 \\(c_pT+u^2/2=c_pT_0\\)，其中 \\(c_p=\\gamma R/(\\gamma-1)\\)，从而 \\(T/T_0=[1+(\\gamma-1)M^2/2]^{-1}\\)。等熵 \\(p/\\rho^\\gamma=\\mathrm{const}\\) 联合理想气体式得到 \\(p/p_0=[1+(\\gamma-1)M^2/2]^{-\\gamma/(\\gamma-1)}\\)。静温静压与总状态不可混淆。\n\n(3) 用 \\(\\rho u=pM\\sqrt{\\gamma/(RT)}\\) 消去静态变量，得到 \\(\\dot m/A=p_0\\sqrt{\\gamma/(RT_0)}M[1+(\\gamma-1)M^2/2]^{-(\\gamma+1)/(2(\\gamma-1))}\\)。对 \\(M\\) 求导为零的唯一正根是 \\(M=1\\)，二阶变化为负。最大质量通量即 \\(p_0\\sqrt{\\gamma/(RT_0)}[2/(\\gamma+1)]^{(\\gamma+1)/(2(\\gamma-1))}\\)。\n\n(4) 在壅塞态喉部声速，收缩区使亚声速气流加速，扩张区才能使已超声速气流继续加速。降低背压并不无限增加固定喉面积的通量。若喷管内有激波，静态压强和温度会突跃、熵增加、总压下降；这违反题设全程可逆等熵，必须另解激波前后边界匹配。\n"
+      }
+    },
+    "T053": {
+      "meta.json": {
+        "bytes": 582,
+        "git_blob": "8a7436d0e598438a7cf3568eaa672e8308d37da8",
+        "text": "{\n  \"id\": \"T053\",\n  \"topic\": \"热学\",\n  \"title\": \"稀薄范德瓦耳斯气体节流的焦耳—汤姆孙反转温度\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 90,\n  \"tags\": [\n    \"维里展开\",\n    \"焓微分\",\n    \"非理想气体\",\n    \"节流冷却\"\n  ],\n  \"answer\": \"\\\\mu_{\\\\rm JT}\\\\simeq[2a/(RT)-b]/C_p,\\\\quad T_{\\\\rm inv}=2a/(Rb)\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.3-round11\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 522,
+        "git_blob": "b32fc1eb1c7e0f7b3440f79ebd1cf4de68e5ff71",
+        "text": "一摩尔范德瓦耳斯气体 \\(p=RT/(v-b)-a/v^2\\)，其中 \\(a,b>0\\)。在高温低压的稀薄区，取定压热容 \\(C_p>0\\) 为常数。气体通过无轴功、进出口宏观动能变化可忽略的节流器，摩尔焓守恒；只求首个非理想修正。\n(1) 推导摩尔体积的首阶低压维里展开。\n(2) 用热力学 Maxwell 关系推导焦耳—汤姆孙系数通式。\n(3) 求稀薄气体的节流冷却和加热温度分界。\n(4) 分析理想极限、物理量纲及有限压强下的近似误差。\n"
+      },
+      "solution.tex": {
+        "bytes": 1174,
+        "git_blob": "cb28c6a6a0119551c29fcd61633bedbfe4bce8fb",
+        "text": "(1) 对 \\(b/v\\ll1\\) 展开 \\(1/(v-b)=v^{-1}+bv^{-2}+\\cdots\\)，得到 \\(p=RT/v+(RTb-a)/v^2+\\cdots\\)。迭代反演为 \\(v=RT/p+b-a/(RT)+O(p)\\)。括号内第二维里系数 \\(B_2(T)=b-a/(RT)\\)，分别对应短程排斥体积及平均吸引能。\n\n(2) 焓的 Maxwell 微分恒等式为 \\(dH=C_p\\,dT+[v-T(\\partial v/\\partial T)_p]dp\\)。对节流流体 \\(dH=0\\)，因而 \\(\\mu_{\\rm JT}=(\\partial T/\\partial p)_H=[T(\\partial v/\\partial T)_p-v]/C_p\\)。节流不是等熵可逆过程，求系数仅用入口出口焓相等，而不可另加错误的恒熵条件。\n\n(3) 首阶近似的导数是 \\((\\partial v/\\partial T)_p=R/p+a/(RT^2)+O(p)\\)，代回得 \\(\\mu_{\\rm JT}\\simeq[2a/(RT)-b]/C_p\\)。反转温度 \\(T_{\\rm inv}\\simeq2a/(Rb)\\)。低于此温度 \\(\\mu_{\\rm JT}>0\\)，节流时 \\(dp<0\\) 所以 \\(dT<0\\) 冷却；高于此温度则节流升温。\n\n(4) 在理想极限 \\(a=b=0\\)，有 \\(v=RT/p\\)，恒焓过程保持温度、\\(\\mu_{\\rm JT}=0\\)。分子 \\(a/(RT)\\) 与 \\(b\\) 都有摩尔体积量纲，除以 \\(C_p\\) 得温度每压强，符合定义。反转温度只是低压极限值；接近凝聚、临界或 \\(p\\) 不足够小的区域应回到完整状态方程。\n"
+      }
+    },
+    "T054": {
+      "meta.json": {
+        "bytes": 608,
+        "git_blob": "cc75ba606e748d7c1381709a26f2d6632081185b",
+        "text": "{\n  \"id\": \"T054\",\n  \"topic\": \"热学\",\n  \"title\": \"可区分双组分理想气体混合熵、最小分离功与 Gibbs 悖论\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 90,\n  \"tags\": [\n    \"理想混合熵\",\n    \"化学势\",\n    \"可逆分离\",\n    \"Gibbs自由能\"\n  ],\n  \"answer\": \"\\\\Delta S_{\\\\rm mix}=-R\\\\sum_i n_i\\\\ln x_i,\\\\quad W_{\\\\min}=T\\\\Delta S_{\\\\rm mix}\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.3-round11\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 575,
+        "git_blob": "e37d6604537ceaca59223f07e7e026eb0878b6a1",
+        "text": "在温度 \\(T>0\\)、压强 \\(p>0\\) 下，两种可区分理想气体 A、B，摩尔数 \\(n_A,n_B>0\\)，初始分别占据纯气体容器，移除隔板后恒温恒压混合；令 \\(n=n_A+n_B\\)、\\(x_i=n_i/n\\)。假设理想半透膜可选择性透过组分，无混合热。\n(1) 通过混合前后的分压及化学势求 Gibbs 自由能变化。\n(2) 求总混合熵并证明其非负性和混合焓为零。\n(3) 求理想可逆分离需要的最小外功并说明不可逆性如何增加耗功。\n(4) 讨论极稀组分、等量组分及同一种不可区分气体混合。\n"
+      },
+      "solution.tex": {
+        "bytes": 1350,
+        "git_blob": "3b497f67e4ab654fb1706f35a6fdf5489c051f95",
+        "text": "(1) 纯气体初始化学势为 \\(\\mu_i^\\circ(T,p)\\)，混合后组分分压 \\(p_i=x_ip\\)，因此 \\(\\mu_i=\\mu_i^\\circ+RT\\ln x_i\\)。两态 Gibbs 自由能差为 \\(\\Delta G_{\\rm mix}=n_ART\\ln x_A+n_BRT\\ln x_B\\)。每个 \\(x_i<1\\)，故自由能严格下降，符合等温恒压下混合的自发趋势。\n\n(2) 理想混合物分子能量无额外相互作用项，所以 \\(\\Delta H_{\\rm mix}=0\\)。由 \\(\\Delta G=\\Delta H-T\\Delta S\\) 得 \\(\\Delta S_{\\rm mix}=-R(n_A\\ln x_A+n_B\\ln x_B)>0\\)。把 \\(x_i\\ln x_i\\) 用 Gibbs 不等式或 \\(0<x_i<1\\) 的对数符号估计，亦能直接验证混合熵正定。\n\n(3) 理想半透膜使两组分在各自化学势差下可逆分离，最低外部功等于逆向 Gibbs 自由能差，即 \\(W_{\\min}=-\\Delta G_{\\rm mix}=T\\Delta S_{\\rm mix}\\)。可逆路径可逼近此下界，任何具有扩散、摩擦或不可逆混合的分离装置都需要不少于该值的实际外功。热力学势的使用依赖固定温度和压强，不可替换为随意的内能差。\n\n(4) 若 \\(n_B\\to0\\)，\\(n_B\\ln x_B\\to0\\)，并且 A 的摩尔分数趋一，混合熵趋零。若 \\(n_A=n_B=n/2\\)，有 \\(\\Delta S_{\\rm mix}=nR\\ln2\\)。当 A、B 实际不可区分，是相同理想气体时移走隔板不产生新的可观测组分，正确熵变为零；将人为贴标签后使用双组分公式会造成 Gibbs 悖论。\n"
+      }
+    },
+    "T055": {
+      "meta.json": {
+        "bytes": 610,
+        "git_blob": "4e97d43c098739427f78cd1c58327dfa364a7cbc",
+        "text": "{\n  \"id\": \"T055\",\n  \"topic\": \"热学\",\n  \"title\": \"有限热流卡诺式内可逆热机的最大功率效率\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 90,\n  \"tags\": [\n    \"有限时间热力学\",\n    \"Newton冷却\",\n    \"Curzon-Ahlborn效率\",\n    \"最佳工作条件\"\n  ],\n  \"answer\": \"\\\\eta_*=1-\\\\sqrt{T_c/T_h},\\\\quad\\\\dot W_{\\\\max}=K(\\\\sqrt{T_h}-\\\\sqrt{T_c})^2/2\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.3-round11\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 555,
+        "git_blob": "a3c50665256e75760ae1b14b4b38afc8921cc9d0",
+        "text": "热源和冷源恒温 \\(T_h>T_c>0\\)，工作流体热接触内部温度分别为 \\(X,Y\\)，有 \\(T_h>X>Y>T_c\\)。热端和冷端传热导系数相同为 \\(K>0\\)，热流率 \\(\\dot Q_h=K(T_h-X)\\)、\\(\\dot Q_c=K(Y-T_c)\\)。热机内部可逆，故 \\(\\dot Q_h/X=\\dot Q_c/Y\\)。\n(1) 用内可逆熵平衡推导接触温度的代数关系。\n(2) 以比值 \\(r=Y/X\\) 消去内温度，写出功率与效率。\n(3) 最大化功率，求效率和输出功率的闭式公式。\n(4) 检验小温差极限与无限换热导的形式极限，讨论模型适用性。\n"
+      },
+      "solution.tex": {
+        "bytes": 1176,
+        "git_blob": "c6ec326f25296ed525ed0dac204d403500e55456",
+        "text": "(1) 由于内部工质经过一循环不积累熵，吸收热量与放出热量的熵量相同，即 \\(K(T_h-X)/X=K(Y-T_c)/Y\\)。整理为 \\(T_h/X+T_c/Y=2\\)。输出功率为 \\(\\dot W=\\dot Q_h-\\dot Q_c=K(T_h+T_c-X-Y)\\)，必须同时满足 \\(T_h>X>Y>T_c\\) 才是热机。\n\n(2) 令 \\(r=Y/X\\)，则由约束 \\(X=(T_h+T_c/r)/2\\)、\\(Y=(rT_h+T_c)/2\\)。输出功率为 \\(\\dot W(r)=K[T_h(1-r)+T_c(1-1/r)]/2\\)，效率为 \\(\\eta=1-Y/X=1-r\\)。可行的热机工作区间为 \\(T_c/T_h<r<1\\)，其中两端功率为零。\n\n(3) 求导 \\(d\\dot W/dr=K[-T_h+T_c/r^2]/2\\)，二阶导数为 \\(-KT_c/r^3<0\\)，唯一极大点 \\(r_*=\\sqrt{T_c/T_h}\\)。故 \\(\\eta_*=1-\\sqrt{T_c/T_h}\\)，\\(\\dot W_{\\max}=K(\\sqrt{T_h}-\\sqrt{T_c})^2/2\\)。因为平方根大于原始 \\(T_c/T_h\\)，最大功率效率低于可逆两热库卡诺效率。\n\n(4) 设 \\(T_h=T+\\Delta/2\\)、\\(T_c=T-\\Delta/2\\)，\\(|\\Delta|\\ll T\\) 时 \\(\\sqrt{T_h}-\\sqrt{T_c}\\simeq\\Delta/(2\\sqrt T)\\)，所以 \\(\\dot W_{\\max}\\simeq K\\Delta^2/(8T)\\)。形式上 \\(K\\to\\infty\\) 使最大功率发散，只是无限换热能力、忽略有限面积和材料限制的理想化表现；真实内外热阻及动力学耗散使功率有上限。\n"
+      }
+    },
+    "T056": {
+      "meta.json": {
+        "bytes": 663,
+        "git_blob": "7b6c80920bd230228f2da536e3d556f5a89cf3d5",
+        "text": "{\n  \"id\": \"T056\",\n  \"topic\": \"热学\",\n  \"title\": \"全连接伊辛平均场的自洽磁化、临界指数与热容跃变\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 95,\n  \"tags\": [\n    \"平均场统计力学\",\n    \"组合熵\",\n    \"自发对称性破缺\",\n    \"Curie-Weiss磁化率\",\n    \"Landau自由能\"\n  ],\n  \"answer\": \"T_c=J/k_B,\\\\quad\\\\chi_B=\\\\frac{N\\\\mu^2}{k_B(T-T_c)}\\\\ (T>T_c),\\\\quad\\\\Delta C=\\\\frac32Nk_B\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.4-round12-draft\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 897,
+        "git_blob": "724274026a464d2f8b91cca9aef6a4d151cc2e39",
+        "text": "考虑 \\(N\\gg1\\) 个自旋 \\(s_i=\\pm1\\)，磁矩大小为 \\(\\mu>0\\)，置于均匀外场 \\(B\\)。全连接铁磁模型哈密顿量为 \\(\\mathcal H_N=-\\frac{J}{2N}(\\sum_i s_i)^2-\\mu B\\sum_i s_i\\)，其中 \\(J>0\\)，温度 \\(T>0\\)，取热力学极限。定义无量纲平均磁化 \\(m=N^{-1}\\sum_i s_i\\)，总磁矩 \\(M=N\\mu m\\)，采用 Stirling 近似并忽略亚广延修正。\n(1) 由固定磁化的微观态数推导每自旋自由能 \\(f(m;T,B)\\)，并从驻值条件导出磁化自洽方程。\n(2) 在 \\(B=0\\) 研究无磁态的局域稳定性，求临界温度并解释临界点上下平衡解的性质。\n(3) 推导顺磁侧的零场等温响应 \\(\\chi_B=(\\partial M/\\partial B)_T\\)，并求临界温度下方自发磁化的主导幂律。\n(4) 在临界等温线上求弱场磁化幂律，利用四阶 Landau 展开求零场热容在 \\(T_c\\) 处的跃变，指出有限 \\(N\\) 的限制。\n"
+      },
+      "solution.tex": {
+        "bytes": 2248,
+        "git_blob": "fa7026ff60a2fdef153c5bd67406a0caafc067ab",
+        "text": "(1) 固定 \\(m\\) 时上自旋数为 \\(N_+=N(1+m)/2\\)，微观态数 \\(\\Omega=N!/(N_+!N_-!)\\)。Stirling 公式给每自旋熵 \\(s(m)=-k_B[p\\ln p+(1-p)\\ln(1-p)]\\)，其中 \\(p=(1+m)/2\\)，端点采用 \\(0\\ln0=0\\)。能量每自旋为 \\(e(m)=-Jm^2/2-\\mu Bm\\)，所以 \\(f=e-Ts=-Jm^2/2-\\mu Bm+k_BT[p\\ln p+(1-p)\\ln(1-p)]\\)。对 \\(|m|<1\\) 求导得到 \\(f'(m)=-Jm-\\mu B+k_BT\\operatorname{artanh}m\\)。平衡要求 \\(f'=0\\) 且选全局最小自由能，故 \\(m=\\tanh[(Jm+\\mu B)/(k_BT)]\\)，不是把外场直接代入无相互作用的 Brillouin 函数。\n\n(2) 零场下 \\(m=0\\) 总是自洽解，但其稳定性由自由能二阶导数而非仅由方程存在性决定。计算 \\(f''(m)=-J+k_BT/(1-m^2)\\)，因此 \\(f''(0)=k_BT-J\\)，临界温度为 \\(T_c=J/k_B\\)。若 \\(T>T_c\\)，零磁化是唯一稳定的全局极小；若 \\(T<T_c\\)，零磁化成为局域极大，两侧出现一对由 \\(m_0=\\tanh[(T_c/T)m_0]\\) 确定的稳定解 \\(\\pm m_0\\)。在 \\(T=T_c\\) 二次曲率消失，必须保留四次项判断稳定性，不能据此宣称自由能完全平坦。\n\n(3) 在 \\(T>T_c\\) 且 \\(B\\to0\\) 时，利用 \\(\\tanh z=z+O(z^3)\\) 得 \\(m=(Jm+\\mu B)/(k_BT)+O(B^3)\\)，于是 \\(m=\\mu B/(k_BT-J)+O(B^3)\\)，\\(\\chi_B=N\\mu^2/[k_B(T-T_c)]\\)。这是对磁场 \\(B\\) 的导数而非无量纲 SI 磁化率，量纲须保留。对 \\(B=0\\)、\\(T\\lesssim T_c\\)，把自洽式展开为 \\(m=(T_c/T)m-\\tfrac13(T_c/T)^3m^3+O(m^5)\\)，除去非零 \\(m\\) 后得到 \\(m_0^2=3[(T_c/T)-1]/(T_c/T)^3+O((T_c-T)^2)\\simeq3(T_c-T)/T_c\\)，故自发磁化的临界指数为 \\(1/2\\)。\n\n(4) 对小 \\(m\\) 展开熵项得到 \\(f=-k_BT\\ln2+\\tfrac12(k_BT-J)m^2+\\tfrac1{12}k_BT m^4-\\mu Bm+O(m^6)\\)。在 \\(T=T_c\\) 时驻值方程的首项是 \\(Jm^3/3=\\mu B\\)，所以 \\(m\\sim\\operatorname{sgn}(B)[3\\mu|B|/J]^{1/3}\\)，临界等温指数为 \\(3\\)。在零场、\\(T<T_c\\) 邻近临界点，极小化四阶多项式得 \\(m^2\\simeq3(J-k_BT)/(k_BT)\\)，代回得到有序相相对于顺磁解析延拓的自由能差 \\(\\Delta f=-3(J-k_BT)^2/(4k_BT)\\simeq-3k_B(T_c-T)^2/(4T_c)\\)。因此 \\(C=-NT\\partial_T^2 f_{\\rm eq}\\) 的临界下侧比上侧多 \\(3Nk_B/2\\)。这是一种平均场热力学极限的非解析跃变；有限 \\(N\\) 的配分函数解析，不存在真正的奇点。\n"
+      }
+    },
+    "T057": {
+      "meta.json": {
+        "bytes": 828,
+        "git_blob": "9a5b06b61c4c844b17617b06be5d759b385e9b30",
+        "text": "{\n  \"id\": \"T057\",\n  \"topic\": \"热学\",\n  \"title\": \"理想气体平面法向激波的Hugoniot关系、熵增三次律与强激波极限\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 110,\n  \"tags\": [\n    \"可压缩流体Rankine–Hugoniot守恒\",\n    \"理想气体热力学熵\",\n    \"激波超声速至亚声速跃迁\",\n    \"弱激波三次熵产生\",\n    \"强激波渐近与量纲核验\"\n  ],\n  \"answer\": \"r=\\\\frac{(\\\\gamma+1)M_1^2}{(\\\\gamma-1)M_1^2+2},\\\\quad P=\\\\frac{2\\\\gamma M_1^2-(\\\\gamma-1)}{\\\\gamma+1},\\\\quad\\\\frac{\\\\Delta s}{R}\\\\sim\\\\frac{2\\\\gamma(M_1^2-1)^3}{3(\\\\gamma+1)^2}\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.4-round12-draft\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 1367,
+        "git_blob": "79a9fb9fa7cf7ff9ec5508b9d27f3f7d7a1e655e",
+        "text": "考虑一维定常、平面、绝热的理想气体法向激波。所有速度均相对于静止激波面测量；远离薄激波层的两侧均为均匀平衡态，忽略黏性应力与热流在两侧控制面的通量，但允许激波内部不可逆耗散。上游量为 \\(p_1>0,\\rho_1>0,u_1>0\\)，绝热指数 \\(\\gamma>1\\) 为常数，比气体常数 \\(R>0\\)，定压比热 \\(c_p=\\gamma R/(\\gamma-1)\\)。上游声速 \\(c_1=\\sqrt{\\gamma p_1/\\rho_1}\\)，马赫数 \\(M_1=u_1/c_1>1\\)。下游用下标 \\(2\\) 表示，定义 \\(x=M_1^2\\)、密度比 \\(r=\\rho_2/\\rho_1\\)、压强比 \\(P=p_2/p_1\\)。\n(1) 从控制体的质量、动量和总焓通量守恒出发，推导质量通量 \\(j\\)、Rayleigh 动量关系和 Hugoniot 能量关系，并说明为何不能额外强加等熵条件。\n(2) 独立消元求 \\(r,P,T_2/T_1\\) 和下游马赫数 \\(M_2\\) 的闭式表达式；验证 \\(M_1>1\\) 的压缩激波必有 \\(r>1,P>1,0<M_2<1\\)。\n(3) 从理想气体熵函数计算每单位质量的熵增 \\(\\Delta s\\)，严格证明其为正；在弱激波极限 \\(x=1+\\varepsilon\\)、\\(0<\\varepsilon\\ll1\\) 下，求 \\(\\Delta s/R\\) 的首个非零项及其阶数。\n(4) 求 \\(M_1\\to\\infty\\) 时的最大压缩比、压强和温度的主导渐近、下游马赫数极限；分别用守恒方程和量纲分析核对结果，并解释强激波中动能转为内能的物理机制。\n"
+      },
+      "solution.tex": {
+        "bytes": 3513,
+        "git_blob": "e7523b982630e7452619a3bb8752bcb0146646c0",
+        "text": "(1) 取单位面积控制体，稳态连续方程给出质量通量 \\(j=\\rho_1u_1=\\rho_2u_2>0\\)，量纲为 \\(\\mathrm{kg\\,m^{-2}\\,s^{-1}}\\)。令比容 \\(v_i=1/\\rho_i\\)，则 \\(u_i=jv_i\\)。动量通量连续意味着\n\\[\n p_1+\\rho_1u_1^2=p_2+\\rho_2u_2^2,\\qquad\n p_2-p_1=j^2(v_1-v_2).\n\\]\n两侧无热、无轴功，总焓通量守恒；对热完全理想气体 \\(h=c_pT=\\gamma pv/(\\gamma-1)\\)，所以\n\\[\n h_2+\\frac{u_2^2}{2}=h_1+\\frac{u_1^2}{2},\\qquad\n h_2-h_1=\\frac{j^2}{2}(v_1^2-v_2^2)\n =\\frac{p_2-p_1}{2}(v_1+v_2).\n\\]\n最后一个式子是 Hugoniot 关系，上一式为 Rayleigh 关系。这里的“绝热”指控制体没有净热输入，不意味着激波内可逆；真实压缩激波内部的黏性和导热使熵增加，因此不能把 \\(pv^\\gamma=\\mathrm{const}\\) 当作跨激波守恒律。\n\n(2) 用 \\(u_1^2=\\gamma(p_1/\\rho_1)x\\) 及 \\(u_2=u_1/r\\) 化为无量纲方程\n\\[\n P-1=\\gamma x(1-r^{-1}),\\qquad\n \\frac{\\gamma}{\\gamma-1}\\left(\\frac{P}{r}-1\\right)\n =\\frac{\\gamma x}{2}(1-r^{-2}).\n\\]\n消去 \\(P\\)，除去无激波的平凡根 \\(r=1\\)，得压缩激波支\n\\[\n \\boxed{r=\\frac{(\\gamma+1)x}{(\\gamma-1)x+2}},\\qquad\n \\boxed{P=\\frac{2\\gamma x-(\\gamma-1)}{\\gamma+1}}.\n\\]\n由 \\(p=\\rho RT\\) 得\n\\[\n \\boxed{\\frac{T_2}{T_1}=\\frac{P}{r}\n =\\frac{[2\\gamma x-(\\gamma-1)][(\\gamma-1)x+2]}{(\\gamma+1)^2x}}.\n\\]\n声速平方为 \\(c_2^2=\\gamma p_2/\\rho_2=c_1^2P/r\\)，所以\n\\[\n \\boxed{M_2^2=\\frac{u_2^2}{c_2^2}=\\frac{x}{Pr}\n =\\frac{(\\gamma-1)x+2}{2\\gamma x-(\\gamma-1)}}.\n\\]\n对 \\(x>1\\)，有 \\(r-1=2(x-1)/[(\\gamma-1)x+2]>0\\)，\\(P-1=2\\gamma(x-1)/(\\gamma+1)>0\\)。同时 \\(M_2^2\\) 分母减分子为 \\((\\gamma+1)(x-1)>0\\)，故 \\(0<M_2<1\\)。上游超声速流经压缩激波后成为亚声速流。\n\n(3) 每单位质量的理想气体熵满足 \\(ds=c_v\\,d\\ln T+R\\,d\\ln v\\)，其中 \\(c_v=R/(\\gamma-1)\\)。故\n\\[\n \\boxed{\\frac{\\Delta s}{R}=\\frac{\\ln P-\\gamma\\ln r}{\\gamma-1}}.\n\\]\n记 \\(F(x)=\\ln P-\\gamma\\ln r\\)。直接代入上式求导并因式分解，\n\\[\n F'(x)=\\frac{2\\gamma(\\gamma-1)(x-1)^2}\n {x[(\\gamma-1)x+2][2\\gamma x-(\\gamma-1)]}>0\\quad(x>1).\n\\]\n因 \\(F(1)=0\\)，所以任意非零压缩激波均有 \\(\\Delta s>0\\)，严格符合热力学第二定律。令 \\(x=1+\\varepsilon\\)，在 \\(x=1\\) 处展开，前两阶系数均消失，得到\n\\[\n F(1+\\varepsilon)=\\frac{2\\gamma(\\gamma-1)}{3(\\gamma+1)^2}\\varepsilon^3+O(\\varepsilon^4),\\qquad\n \\boxed{\\frac{\\Delta s}{R}=\\frac{2\\gamma}{3(\\gamma+1)^2}\\varepsilon^3+O(\\varepsilon^4)}.\n\\]\n因此弱激波的熵产生为激波强度的三次量，而非一次或二次量。\n\n(4) 令 \\(x=M_1^2\\to\\infty\\)，可逐项取极限：\n\\[\n \\boxed{r\\to\\frac{\\gamma+1}{\\gamma-1}},\\qquad\n \\boxed{\\frac{P}{M_1^2}\\to\\frac{2\\gamma}{\\gamma+1}},\\qquad\n \\boxed{\\frac{T_2/T_1}{M_1^2}\\to\\frac{2\\gamma(\\gamma-1)}{(\\gamma+1)^2}},\\qquad\n \\boxed{M_2^2\\to\\frac{\\gamma-1}{2\\gamma}}.\n\\]\n这说明理想气体强激波的密度压缩比有上界，而压力与温度仍按 \\(M_1^2\\) 增长。以 \\(\\gamma=7/5\\)、\\(M_1=2\\) 检查，得 \\(r=8/3\\)、\\(P=9/2\\)、\\(T_2/T_1=27/16\\)、\\(M_2^2=1/3\\)；代入 (2) 两条无量纲守恒方程，左右严格相等。质量通量、压强和比焓的量纲分别为 \\(\\mathrm{kg\\,m^{-2}\\,s^{-1}}\\)、\\(\\mathrm{Pa}\\)、\\(\\mathrm{m^2\\,s^{-2}}\\)；上述比值与马赫数均无量纲。由于 \\(u_2=u_1/r<u_1\\)，跨激波比动能降低；无外部热功输入时，总焓守恒迫使比焓升高，内部不可逆耗散同时使熵增加。极限 \\(M_1\\downarrow1\\) 时 \\(r,P,T_2/T_1,M_2\\to1\\)，熵增趋零，与激波消失的物理边界一致。\n"
+      }
+    },
+    "T058": {
+      "meta.json": {
+        "bytes": 857,
+        "git_blob": "8eaaf6a7001979ac22451cf1485cd21bd02124df",
+        "text": "{\n  \"id\": \"T058\",\n  \"topic\": \"热学\",\n  \"title\": \"三态环形随机过程的非平衡稳态、涨落对称性与热力学不确定性\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 115,\n  \"tags\": [\n    \"非平衡马尔可夫链与有向生成树稳态\",\n    \"局域详细平衡与环路亲和势\",\n    \"随机热力学熵产生与线性响应\",\n    \"倾斜生成元和Gallavotti–Cohen涨落对称性\",\n    \"Skellam分布、大偏差与热力学不确定性\"\n  ],\n  \"answer\": \"J=\\\\frac{a_0a_1a_2-b_0b_1b_2}{Z},\\\\quad\\\\dot S_{\\\\rm tot}=k_{\\\\rm B}J\\\\mathcal A,\\\\quad\\\\lambda(\\\\chi)=a(e^\\\\chi-1)+b(e^{-\\\\chi}-1)\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.6-round12-draft\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 1718,
+        "git_blob": "e4709f7ac6d26c4d098330424340069d0022223c",
+        "text": "在温度 \\(T>0\\) 的等温环境中，一个粒子只占据三个状态 \\(0,1,2\\)，并以连续时间马尔可夫跃迁绕环运动。对每条有向边 \\(i\\to i+1\\pmod3\\)，顺时针速率为 \\(a_i>0\\)，逆时针 \\(i+1\\to i\\) 的速率为 \\(b_i>0\\)。各速率恒定，满足局域详细平衡；外部非保守驱动可维持非零环流。记 \\(p_i(t)\\) 为状态概率、\\(J_i=a_ip_i-b_ip_{i+1}\\) 为边净概率流，\\(k_{\\rm B}\\) 为玻尔兹曼常数。\n(1) 写出完整主方程，利用三态有向生成树或直接消元求唯一稳态 \\(p_i^*\\)。证明三条边稳态净流相等，并给出流量 \\(J\\) 的精确有理式及详细平衡判据。\n(2) 设环路亲和势 \\(\\mathcal A=\\ln(a_0a_1a_2/b_0b_1b_2)\\)。由稳态熵产生的逐边表达式推导 \\(\\dot S_{\\rm tot}=k_{\\rm B}J\\mathcal A\\ge0\\)，严格说明等号条件。再令 \\(a_i=r_i e^{\\varepsilon_i/2}\\)、\\(b_i=r_i e^{-\\varepsilon_i/2}\\)，\\(r_i>0\\)、\\(|\\varepsilon_i|\\ll1\\)，求一阶线性响应流和熵产生的最低非零阶。\n(3) 特化为均匀速率 \\(a_i=a,\\ b_i=b\\)。令 \\(X(t)\\) 为时间 \\(t\\) 内顺时针跳数减逆时针跳数，求其指数矩母函数的长时间增长率 \\(\\lambda(\\chi)=\\lim_{t\\to\\infty}t^{-1}\\ln\\langle e^{\\chi X(t)}\\rangle\\)。从倾斜生成元谱证明 Gallavotti--Cohen 对称性，并求平均净跳率及方差增长率。\n(4) 独立利用两个泊松过程推导任意整数 \\(n\\) 的 \\(P[X(t)=n]\\)，验证有限时间涨落关系。求净跳速率 \\(v=X/t\\) 的大偏差率函数 \\(I(v)\\)，并证明非平衡热力学不确定性关系 \\(\\operatorname{Var}X/\\langle X\\rangle^2\\ge2k_{\\rm B}/\\langle\\Delta S_{\\rm tot}\\rangle\\)（\\(a\\ne b\\)），讨论近平衡极限与各式量纲。\n"
+      },
+      "solution.tex": {
+        "bytes": 4464,
+        "git_blob": "871d556139d15d604f8fbf0cd851d9760159efe7",
+        "text": "(1) 按指标模 \\(3\\) 运算，主方程为\n\\[\n \\dot p_i=a_{i-1}p_{i-1}+b_i p_{i+1}-(a_i+b_{i-1})p_i\n =J_{i-1}-J_i,\\qquad \\sum_i p_i=1.\n\\]\n记三棵以各状态为根的入向生成树权重\n\\[\n \\tau_0=b_0b_1+b_0a_2+a_1a_2,\\quad\n \\tau_1=a_0b_1+a_0a_2+b_1b_2,\\quad\n \\tau_2=a_0a_1+a_1b_2+b_0b_2,\\quad Z=\\tau_0+\\tau_1+\\tau_2>0.\n\\]\n由树定理（亦可将 \\(\\dot p_0=\\dot p_1=0\\) 联立归一化直接解出），\n\\(\\boxed{p_i^*=\\tau_i/Z}\\)。代入边流，逐项约去交叉项：\n\\[\n a_0\\tau_0-b_0\\tau_1\n =a_1\\tau_1-b_1\\tau_2\n =a_2\\tau_2-b_2\\tau_0=a_0a_1a_2-b_0b_1b_2.\n\\]\n故\n\\[\n \\boxed{J=\\frac{a_0a_1a_2-b_0b_1b_2}{Z}}.\n\\]\n因各速率正且有限，链不可约，稳态唯一。全部边流为零当且仅当\n\\(a_0a_1a_2=b_0b_1b_2\\)，即 Kolmogorov 环路详细平衡条件。\n\n(2) 稳态的系统 Shannon 熵导数为零，介质和系统合计的熵产生率写为\n\\[\n \\dot S_{\\rm tot}\n =k_{\\rm B}\\sum_{i=0}^2 J_i\n \\ln\\frac{a_i p_i^*}{b_i p_{i+1}^*}\n =k_{\\rm B}J\\left[\\sum_i\\ln\\frac{a_i}{b_i}\n       +\\sum_i\\ln\\frac{p_i^*}{p_{i+1}^*}\\right]\n =\\boxed{k_{\\rm B}J\\mathcal A}.\n\\]\n第二个和为零，因为三个概率因子沿闭环望远镜相消。设\n\\(u=\\prod_i a_i>0,\\ w=\\prod_i b_i>0\\)，则\n\\[\n \\frac{\\dot S_{\\rm tot}}{k_{\\rm B}}\n =\\frac{(u-w)\\ln(u/w)}Z\\ge0\n\\]\n由对数严格递增性成立；等号仅当 \\(u=w\\)，即详细平衡。一个完整顺时针循环向环境耗散的净热可记为 \\(k_{\\rm B}T\\mathcal A\\)，这里把驱动功按局域详细平衡计入热账本。\n近线性响应区令 \\(\\mathcal A=\\varepsilon_0+\\varepsilon_1+\\varepsilon_2\\)；\n分子\n\\[\n \\prod a_i-\\prod b_i\n =2r_0r_1r_2\\sinh(\\mathcal A/2)\n =r_0r_1r_2\\mathcal A+O(\\varepsilon^3),\n\\]\n分母在平衡点为 \\(Z_0=3(r_0r_1+r_1r_2+r_2r_0)\\)。\n因此\n\\[\n \\boxed{J=\\frac{\\mathcal A}{3\\sum_i r_i^{-1}}+O(\\varepsilon^2)},\\qquad\n \\boxed{\\dot S_{\\rm tot}\n =\\frac{k_{\\rm B}\\mathcal A^2}{3\\sum_i r_i^{-1}}+O(\\varepsilon^3)}.\n\\]\n此处 \\(O(\\varepsilon^m)\\) 表示所有 \\(\\varepsilon_i\\) 同阶趋零。\n\n(3) 以列向量概率为约定，计数场 \\(\\chi\\) 的倾斜生成元是\n\\[\n L_\\chi=\\begin{pmatrix}\n -(a+b)&b e^{-\\chi}&a e^\\chi\\\\\n a e^\\chi&-(a+b)&b e^{-\\chi}\\\\\n b e^{-\\chi}&a e^\\chi&-(a+b)\n \\end{pmatrix}.\n\\]\n令 \\(\\zeta=e^{2\\pi i/3}\\)，三支本征值构成集合\n\\[\n \\lambda_m(\\chi)=-(a+b)+a e^\\chi\\zeta^m+b e^{-\\chi}\\zeta^{-m},\n \\quad m=0,1,2.\n\\]\n对实数 \\(\\chi\\)，正的倾斜非对角元保证最大实部本征值为 \\(m=0\\)，故\n\\[\n \\boxed{\\lambda(\\chi)=a(e^\\chi-1)+b(e^{-\\chi}-1)}.\n\\]\n取单跳熵亲和势 \\(A_1=\\ln(a/b)=\\mathcal A/3\\)，直接代入得到\n\\(\\boxed{\\lambda(\\chi)=\\lambda(-A_1-\\chi)}\\)，即涨落对称性。\n对 \\(\\chi=0\\) 求导给\n\\[\n \\boxed{\\lim_{t\\to\\infty}\\langle X\\rangle/t=a-b},\\qquad\n \\boxed{\\lim_{t\\to\\infty}\\operatorname{Var}(X)/t=a+b}.\n\\]\n稳态单边流 \\(J=(a-b)/3\\)，因每次完整循环贡献三个净跳数，故与(1)一致。\n\n(4) 由于从任意状态出发顺、逆跳的危险率始终分别为 \\(a,b\\)，可把两类跳数独立表示为\n\\(N_+\\sim{\\rm Poisson}(at)\\)、\\(N_-\\sim{\\rm Poisson}(bt)\\)，且 \\(X=N_+-N_-\\)。对两个泊松分布卷积，得 Skellam 分布\n\\[\n \\boxed{\\Pr[X=n]=e^{-(a+b)t}\n \\left(\\frac ab\\right)^{n/2}\n I_{|n|}(2t\\sqrt{ab})},\\quad n\\in\\mathbb Z,\n\\]\n其中 \\(I_m\\) 为第一类修正贝塞尔函数。由 \\(I_{-n}=I_n\\) 立即得到有限时间关系\n\\[\n \\boxed{\\frac{\\Pr[X=n]}{\\Pr[X=-n]}=\\left(\\frac ab\\right)^n=e^{nA_1}},\n\\]\n并且熵产生随机变量 \\(\\Delta S_{\\rm tot}=k_{\\rm B}A_1X\\)（稳态均匀分布使端点系统熵变化为零）。\n对 \\(\\lambda\\) 作 Legendre--Fenchel 变换：驻点方程\n\\(v=a e^{\\chi_*}-b e^{-\\chi_*}\\)，令\n\\(D_v=\\sqrt{v^2+4ab}\\)，则\n\\(e^{\\chi_*}=(v+D_v)/(2a)\\)，所以\n\\[\n \\boxed{I(v)=a+b-D_v+v\\ln\\frac{v+D_v}{2a}},\n \\qquad \\Pr(X/t\\simeq v)\\asymp e^{-tI(v)}.\n\\]\n因 \\((D_v-v)(D_v+v)=4ab\\)，可核对\n\\(I(v)-I(-v)=-v\\ln(a/b)\\)，与涨落关系一致。\n精确地，\\(\\langle X\\rangle=(a-b)t\\)、\\(\\operatorname{Var}X=(a+b)t\\)、\n\\(\\langle\\Delta S_{\\rm tot}\\rangle=k_{\\rm B}(a-b)t\\ln(a/b)\\)。\n因此不确定性关系等价于\n\\[\n \\frac{a+b}{a-b}\\ln\\frac ab\\ge2.\n\\]\n置 \\(z=(a-b)/(a+b)\\in(-1,1)\\)，左边为\n\\(z^{-1}\\ln[(1+z)/(1-z)]=2(1+z^2/3+\\cdots)\\ge2\\)，严格不等式在 \\(a\\ne b\\) 成立，\\(a\\to b\\) 时趋于 \\(2\\)。\n\\([a_i]=[b_i]=[J]=[\\lambda]=[I]=\\mathrm{s}^{-1}\\)，\\(X,\\mathcal A\\) 无量纲，\\([\\dot S_{\\rm tot}]=k_{\\rm B}/\\mathrm{s}\\)；近平衡时平均流与熵产生都趋零，须以极限理解不确定性关系。\n"
+      }
+    },
+    "T059": {
+      "meta.json": {
+        "bytes": 874,
+        "git_blob": "56444f09f91deee8e2caa94704d35d035a9bb817",
+        "text": "{\n  \"id\": \"T059\",\n  \"topic\": \"热学\",\n  \"title\": \"线性响应热电发电机的Onsager耦合、效率界、功率匹配与热漏\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 120,\n  \"tags\": [\n    \"Onsager互易性与熵产生二次型\",\n    \"热电耦合紧耦合极限与不可逆热漏\",\n    \"功率最大化和效率最大化的不同负载\",\n    \"热电优值ZT及Seebeck-Peltier-Kelvin关系\",\n    \"电阻匹配、卡诺界与量纲守恒\"\n  ],\n  \"answer\": \"\\\\frac{\\\\eta_{\\\\max}}{\\\\eta_{\\\\mathrm C}^{(1)}}=\\\\frac{\\\\sqrt{1+ZT}-1}{\\\\sqrt{1+ZT}+1},\\\\quad P_{\\\\max}=\\\\frac{TL_{12}^2X_2^2}{4L_{11}},\\\\quad ZT=\\\\frac{GS^2T}{K}\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v3.2-round12-draft\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 2108,
+        "git_blob": "75661eee18da805cca7098be84fe1cc56c6af21f",
+        "text": "考虑一台无磁场、满足微观时间反演对称性的两端热电发电机。两热库温度为 \\(T_h=T+\\Delta T/2\\)、\\(T_c=T-\\Delta T/2\\)，其中 \\(T>0\\)、\\(0<\\Delta T\\ll T\\)。热流 \\(J_q>0\\) 从热端流向冷端；负载电压 \\(V>0\\) 和电流 \\(I>0\\) 对应向负载输出功率 \\(P=IV\\)。仅保留电流对热力学力的一阶响应、熵产生的二阶项。定义\n\\[\nX_1=-\\frac{V}{T},\\qquad X_2=\\frac{\\Delta T}{T^2}>0,\\qquad\n\\binom{I}{J_q}=\n\\begin{pmatrix}L_{11}&L_{12}\\\\L_{12}&L_{22}\\end{pmatrix}\n\\binom{X_1}{X_2}.\n\\]\n假定 \\(L_{11},L_{22},L_{12}>0\\) 且 \\(\\det L>0\\)；以 \\(\\eta_{\\mathrm C}^{(1)}=\\Delta T/T=T X_2\\) 表示线性响应阶的卡诺效率。这里 \\(J_q\\) 是按参考温度 \\(T\\) 定义的热流，因而输出效率 \\(P/J_q\\) 只要求在线性响应首个非零阶精确。\n(1) 从热库熵变及电功推出熵产生率 \\(\\dot S_{\\rm i}=I X_1+J_q X_2\\)，严格给出二次型非负条件。引入耦合强度 \\(q=L_{12}/\\sqrt{L_{11}L_{22}}\\)，证明 \\(0<q<1\\)，并完成平方以说明不可逆热漏与电流松弛两种耗散来源。\n(2) 将负载参数化为 \\(X_1=-x(L_{12}/L_{11})X_2\\)，其中 \\(0\\le x\\le1\\)。求 \\(I,J_q,P,\\dot S_{\\rm i}\\) 和归一化效率 \\(\\eta/\\eta_{\\mathrm C}^{(1)}\\)，确定短路、开路边界，证明发电区热流为正且输出功不超过线性响应可用热功。\n(3) 分别在 \\(0\\le x\\le1\\) 上求最大输出功率及对应效率、最大效率及其唯一最优负载。引入 \\(ZT=q^2/(1-q^2)\\) 化简最大效率；讨论 \\(q\\to0\\) 与 \\(q\\to1^-\\) 时的功率、效率和可逆性，不能将零功率极限误写成有限功率卡诺机。\n(4) 对一根等温参数 \\(G>0\\)（电导）、\\(S>0\\)（Seebeck系数）、\\(K>0\\)（零电流热导）的均匀热电腿，给定本构关系\n\\[\nI=G(S\\Delta T-V),\\qquad J_q=STI+K\\Delta T .\n\\]\n从该关系独立重建 \\(L_{ij}\\)，证明 \\(ZT=GS^2T/K\\) 及 Kelvin 关系 \\(\\Pi=ST\\) 的作用。求负载电阻 \\(R_L=V/I\\) 的最大功率匹配与最大效率匹配；直接从物理本构关系验证熵产生、开路热漏及 \\(K\\to0^+\\) 极限，并核对量纲。"
+      },
+      "solution.tex": {
+        "bytes": 4269,
+        "git_blob": "554cd4c8f0b3869cc7a7d0bf007dbadb3b3c35f6",
+        "text": "(1) 以热端放出的热率 \\(J_q\\)、冷端得到的热率 \\(J_q-P\\) 计算热库熵变化，\n\\[\n\\dot S_{\\rm i}=\\frac{J_q-P}{T_c}-\\frac{J_q}{T_h}\n=\\frac{J_q\\Delta T}{T^2}-\\frac{P}{T}+O((\\Delta T/T)^3)\n=I X_1+J_qX_2\n\\]\n（这里电压、电流、热流均为小温差的一阶量；余项只表示超出二阶熵产生精度的修正）。Onsager 对称性使\n\\[\n\\dot S_{\\rm i}=L_{11}X_1^2+2L_{12}X_1X_2+L_{22}X_2^2\n=L_{11}\\left(X_1+\\frac{L_{12}}{L_{11}}X_2\\right)^2+\n\\frac{\\det L}{L_{11}}X_2^2 .\n\\]\n对任意力非负的充要条件是 \\(L_{11}\\ge0,L_{22}\\ge0,\\det L\\ge0\\)；本题严格正定的假设使两项系数均正。由于 \\(L_{12}>0\\)，\n\\[\n\\boxed{0<q=\\frac{L_{12}}{\\sqrt{L_{11}L_{22}}}<1},\\qquad\n\\frac{\\det L}{L_{11}}=L_{22}(1-q^2)>0.\n\\]\n第一平方项是电力偏离开路补偿值所引起的耗散，第二项是无法由电负载消除的漏热耗散。它们分别在 \\(X_1=-L_{12}X_2/L_{11}\\) 和 \\(\\det L\\to0^+\\) 时趋于零；不能只检验对角元正就忽略交叉耦合的正定约束。\n\n(2) 代入负载参数 \\(x\\)，直接得到\n\\[\n\\boxed{I=L_{12}X_2(1-x)},\\qquad\n\\boxed{J_q=L_{22}X_2(1-q^2x)},\\qquad\n\\boxed{P=T\\frac{L_{12}^2}{L_{11}}X_2^2x(1-x)} .\n\\]\n由(1)的完成平方式，\n\\[\n\\boxed{\\dot S_{\\rm i}=L_{22}X_2^2\\left[(1-q^2)+q^2(1-x)^2\\right]\n=L_{22}X_2^2[1-q^2(2x-x^2)]>0}.\n\\]\n在 \\(x=0\\) 时 \\(V=0\\) 为短路，\\(I=L_{12}X_2\\) 而 \\(P=0\\)；在 \\(x=1\\) 时 \\(I=0\\) 为开路，\\(J_q=L_{22}X_2(1-q^2)>0\\) 而 \\(P=0\\)。对 \\(0<x<1\\)，\\(P>0\\) 且 \\(J_q\\ge L_{22}X_2(1-q^2)>0\\)。所以\n\\[\n\\boxed{\\frac{\\eta}{\\eta_{\\mathrm C}^{(1)}}\n=\\frac{P/J_q}{TX_2}=\\frac{q^2x(1-x)}{1-q^2x}}.\n\\]\n由能量与熵账本恒等式\n\\[\n\\eta_{\\mathrm C}^{(1)}J_q-P=T\\dot S_{\\rm i}\\ge0\n\\]\n可知输出功率不超过该精度下的卡诺可用热功。注意 \\(J_q\\) 与 \\(P\\) 的阶数分别为 \\(\\Delta T\\) 与 \\((\\Delta T)^2\\)，故上述效率只保留首个非零阶。\n\n(3) \\(P\\) 的负载因子 \\(x(1-x)=\\tfrac14-(x-\\tfrac12)^2\\)，故\n\\[\n\\boxed{x_P=\\frac12},\\qquad\n\\boxed{P_{\\max}=\\frac{TL_{12}^2X_2^2}{4L_{11}}},\\qquad\n\\boxed{\\frac{\\eta(P_{\\max})}{\\eta_{\\mathrm C}^{(1)}}=\n\\frac{q^2}{2(2-q^2)}\\le\\frac12}.\n\\]\n设 \\(z=q^2\\in(0,1)\\)。对 \\(f(x)=zx(1-x)/(1-zx)\\) 求导，\n\\[\nf'(x)=\\frac{z(1-2x+zx^2)}{(1-zx)^2}.\n\\]\n分子在区间 \\([0,1]\\) 内只有一个零点\n\\[\n\\boxed{x_\\eta=\\frac{1-\\sqrt{1-z}}{z}\n=\\frac1{1+\\sqrt{1-q^2}}},\n\\]\n且导数从正变负，故它是唯一全局效率极大点。令 \\(s=\\sqrt{1-q^2}\\)，代入得\n\\[\n\\boxed{\\frac{\\eta_{\\max}}{\\eta_{\\mathrm C}^{(1)}}=\n\\frac{1-s}{1+s}\n=\\frac{\\sqrt{1+ZT}-1}{\\sqrt{1+ZT}+1}},\\qquad\nZT=\\frac{q^2}{1-q^2}.\n\\]\n弱耦合 \\(q\\to0\\) 时最大效率趋零，且 \\(P_{\\max}\\propto L_{12}^2\\)；严格说若同时变化其他 \\(L_{ij}\\)，绝对功率极限还取决于其尺度。紧耦合 \\(q\\to1^-\\) 时效率上界趋向 \\(\\eta_{\\mathrm C}^{(1)}\\)，但 \\(x_\\eta\\to1\\)、\\(I\\to0\\)，在固定 \\(L_{11},L_{22},X_2\\) 下最优效率点的 \\(P\\to0\\)。相反最大功率点仍有不可逆熵产生，其效率最多为线性响应卡诺效率的一半。\n\n(4) 用 \\(V=-TX_1,\\ \\Delta T=T^2X_2\\) 逐项代回给定本构关系，\n\\[\nI=GTX_1+GST^2X_2,\\qquad\nJ_q=GST^2X_1+(GS^2T^3+KT^2)X_2.\n\\]\n因此\n\\[\n\\boxed{L_{11}=GT,\\quad L_{12}=GST^2,\\quad\nL_{22}=GS^2T^3+KT^2},\\qquad\n\\boxed{\\det L=GKT^3>0}.\n\\]\n两交叉系数相等正是无磁场的 Onsager 互易性；Peltier 热系数 \\(\\Pi=ST\\) 保证这一相等性。于是\n\\[\nq^2=\\frac{GS^2T}{GS^2T+K},\\qquad\n\\boxed{ZT=\\frac{q^2}{1-q^2}=\\frac{GS^2T}{K}}.\n\\]\n负载电压 \\(V=xS\\Delta T\\)、电流 \\(I=GS\\Delta T(1-x)\\)，故\n\\[\n\\frac{R_L}{1/G}=\\frac{x}{1-x},\\qquad\n\\boxed{R_{L,P}=\\frac1G},\\qquad\n\\boxed{R_{L,\\eta}=\\frac{\\sqrt{1+ZT}}G}.\n\\]\n直接代入物理流可得\n\\[\n\\boxed{\\dot S_{\\rm i}=-\\frac{IV}{T}+\\frac{J_q\\Delta T}{T^2}\n=\\frac{G(S\\Delta T-V)^2}{T}+\\frac{K(\\Delta T)^2}{T^2}\\ge0}.\n\\]\n开路 \\(V=S\\Delta T\\) 时 \\(I=0\\)、\\(J_q=K\\Delta T\\)，证明 \\(K\\) 是无法以电负载消除的漏热系数。\\(K\\to0^+\\) 时 \\(ZT\\to\\infty\\) 且 \\(R_{L,\\eta}\\to\\infty\\)；效率逼近线性响应卡诺值的同时最优效率负载电流与输出功率趋零。量纲检查：\\(G\\) 为 \\(\\mathrm{A/V}\\)、\\(S\\) 为 \\(\\mathrm{V/K}\\)、\\(K\\) 为 \\(\\mathrm{W/K}\\)，因此 \\(GS^2T/K\\) 无量纲，\\(\\dot S_{\\rm i}\\) 两项均为 \\(\\mathrm{W/K}\\)。"
+      }
+    },
+    "T060": {
+      "meta.json": {
+        "bytes": 933,
+        "git_blob": "413ca7be875734fdf2d5b17bb582e1f43d207818",
+        "text": "{\n  \"id\": \"T060\",\n  \"topic\": \"热学\",\n  \"title\": \"过饱和蒸气液滴均匀成核的Kelvin曲率、势垒与Tolman一阶修正\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 115,\n  \"tags\": [\n    \"过饱和理想蒸气的化学势驱动力\",\n    \"Laplace压差和Kelvin曲率平衡\",\n    \"经典成核自由能非凸临界核\",\n    \"成核势垒与Boltzmann速率指数\",\n    \"Tolman曲率表面张力的一阶尺度修正\"\n  ],\n  \"answer\": \"r_*=\\\\frac{2\\\\gamma v_\\\\ell}{k_BT\\\\ln S},\\\\quad \\\\Delta G_*=\\\\frac{16\\\\pi\\\\gamma^3v_\\\\ell^2}{3(k_BT\\\\ln S)^2},\\\\quad r_*^{\\\\mathrm T}=r_*-\\\\delta+O(\\\\delta^2/r_*),\\\\quad \\\\Delta G_*^{\\\\mathrm T}=\\\\Delta G_*-8\\\\pi\\\\gamma r_*\\\\delta+O(\\\\delta^2)\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v3.5-round12-draft\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 1518,
+        "git_blob": "7194f80094fef8f15fe422765664444e76ac1ee1",
+        "text": "温度 \\(T>0\\) 恒定的理想蒸气处于过饱和状态，实际分压为 \\(p=Sp_{\\rm sat}(T)\\)，饱和比 \\(S>1\\)。液态分子体积 \\(v_\\ell>0\\) 近似常数，平面液汽界面张力 \\(\\gamma>0\\)，分子热能用 \\(k_BT\\) 表示。假定液滴为半径 \\(r>0\\) 的球体、蒸气是大热库，忽略液态压缩和液滴平移/混合熵的次级修正；表面能在经典成核近似下取 \\(4\\pi r^2\\gamma\\)。\n(1) 从两相化学势平衡、理想蒸气化学势与 Laplace 压差出发，推导半径 \\(r\\) 的 Kelvin 饱和蒸气压关系；解释平面极限及为什么半径越小越难以稳定。\n(2) 在恒温、恒外部过饱和度下，以 \\(n=4\\pi r^3/(3v_\\ell)\\) 为液滴分子数，构造成核的可逆自由能 \\(\\Delta G(r)\\)。求临界半径、临界分子数、势垒高度，证明临界核是自由能的极大值而非稳定液滴。\n(3) 证明临界核满足的 Kelvin 半径条件恰好与第 (2) 问一致。讨论 \\(S\\downarrow1\\) 及强过饱和两极限、成核率 \\(J\\propto e^{-\\Delta G_*/(k_BT)}\\) 的敏感性，并推导势垒与临界分子数的精确比值关系。\n(4) 为检验平面表面张力假设的首阶误差，改用 \\(\\gamma(r)=\\gamma[1-2\\delta/r]\\)，其中 Tolman 长度 \\(\\delta\\) 为有符号常数且 \\(|\\delta|\\ll r_*\\)。仍按给定模型把界面项定义为 \\(4\\pi r^2\\gamma(r)\\)，不另行改变体积项。推导临界半径与势垒到 \\(\\delta\\) 一阶的修正，并判断 \\(\\delta>0\\) 对成核指数的影响和近似的有效范围。"
+      },
+      "solution.tex": {
+        "bytes": 3913,
+        "git_blob": "e840ad33b195924af4e8b4e78abd5536e8b6d175",
+        "text": "(1) 以平面饱和状态 \\(p_{\\rm sat}\\) 为化学势基准，理想蒸气的摩尔每粒子化学势差为\n\\[\n\\mu_v(T,p)-\\mu_v(T,p_{\\rm sat})=k_BT\\ln(p/p_{\\rm sat}).\n\\]\n曲率使液内 Laplace 压强高于气相压强 \\(2\\gamma/r\\)。因液态近似不可压，\n\\(d\\mu_\\ell=v_\\ell\\,dp_\\ell\\)，所以小液滴相对平面共存液体的化学势增量（本模型忽略 \\(v_\\ell(p-p_{\\rm sat})\\) 的次级项）为 \\(2\\gamma v_\\ell/r\\)。平衡要求两者相等，故\n\\[\n\\boxed{p_{\\rm eq}(r)=p_{\\rm sat}\\exp\\!\\left(\\frac{2\\gamma v_\\ell}{r k_BT}\\right)}.\n\\]\n当 \\(r\\to\\infty\\) 恢复平面蒸气压；小半径要求更高蒸气分压才能平衡。因此在固定 \\(S>1\\) 下，太小的液滴会蒸发而非自发长大。这里的近似条件也要求蒸气压力对液体化学势的直接修正远小于 Laplace 主项。\n\n(2) 每个由蒸气转入液态的分子使化学势降低\n\\(\\Delta\\mu=k_BT\\ln S>0\\)，体积驱动力 \\(A=\\Delta\\mu/v_\\ell\\)。半径 \\(r\\) 的界面形成能为 \\(4\\pi\\gamma r^2\\)，体积收益为 \\(n\\Delta\\mu=4\\pi Ar^3/3\\)。所以\n\\[\n\\boxed{\\Delta G(r)=4\\pi\\gamma r^2-\\frac{4\\pi}{3}Ar^3},\n\\qquad A=\\frac{k_BT\\ln S}{v_\\ell}.\n\\]\n其一阶导数为 \\(4\\pi r(2\\gamma-Ar)\\)，非零驻点\n\\[\n\\boxed{r_*=\\frac{2\\gamma}{A}\n=\\frac{2\\gamma v_\\ell}{k_BT\\ln S}},\\quad\n\\boxed{n_*=\\frac{4\\pi r_*^3}{3v_\\ell}}.\n\\]\n二阶导数 \\(8\\pi\\gamma-8\\pi Ar\\)，在临界点为 \\(-8\\pi\\gamma<0\\)。因此临界核是自由能势垒的极大值而非热力学稳定局部极小值。代回求得\n\\[\n\\boxed{\\Delta G_*=\\frac{4\\pi}{3}\\gamma r_*^2\n=\\frac{16\\pi\\gamma^3v_\\ell^2}{3(k_BT\\ln S)^2}}.\n\\]\n对 \\(0<r<r_*\\) 的核，微小生长增加 \\(\\Delta G\\)，易回缩；对 \\(r>r_*\\)，增长降低自由能，宏观液滴得以形成。\n\n(3) Kelvin 平衡要求 \\(\\ln S=2\\gamma v_\\ell/(rk_BT)\\)，所以其平衡半径正是 \\(r_*\\)；它是动力学意义的临界平衡，不代表稳定自由能谷。当 \\(S\\downarrow1\\)，\\(\\ln S\\to0^+\\)，从而 \\(r_*\\sim(\\ln S)^{-1}\\)、\\(n_*\\sim(\\ln S)^{-3}\\)、\\(\\Delta G_*\\sim(\\ln S)^{-2}\\to\\infty\\)。因此固定温度下成核率指数被强烈抑制。增大过饱和度使势垒快速下降，但当 \\(r_*\\) 接近分子尺度时连续表面张力、不可压液体与球形界面模型不再可靠，不能将 \\(S\\to\\infty\\) 的形式极限解释成精确微观结果。利用临界条件 \\(n_*\\Delta\\mu=4\\pi r_*^3A/3=(8\\pi/3)\\gamma r_*^2\\)，得到\n\\[\n\\boxed{\\Delta G_*=\\frac12 n_*\\Delta\\mu}.\n\\]\n进一步 \\(\\ln J=C-\\Delta G_*/(k_BT)\\)，若暂视前因子 \\(C\\) 不随 \\(S\\) 变化，则\n\\[\n\\frac{\\partial\\ln J}{\\partial\\ln S}\n=\\frac{2\\Delta G_*}{k_BT\\ln S}>0,\n\\]\n展示弱过饱和区的指数级灵敏度。该表达式仅描述指数主项，不宣称真实动力学前因子保持常数。\n\n(4) 将题给 Tolman 形式仅用于定义的界面自由能，得到\n\\[\n\\Delta G_{\\mathrm T}(r)=4\\pi\\gamma(r^2-2\\delta r)-\\frac{4\\pi}{3}Ar^3,\\quad\n\\Delta G'_{\\mathrm T}(r)=4\\pi[2\\gamma(r-\\delta)-Ar^2].\n\\]\n令 \\(r_0=2\\gamma/A\\)，临界方程可写为\n\\(r^2-r_0r+r_0\\delta=0\\)。选择在 \\(\\delta\\to0\\) 时连续趋向 \\(r_0\\) 的大根，得\n\\[\nr_{*,\\mathrm T}=\\frac{r_0}{2}\\left(1+\\sqrt{1-\\frac{4\\delta}{r_0}}\\right)\n=\\boxed{r_0-\\delta+O(\\delta^2/r_0)}.\n\\]\n对于 \\(\\delta>0\\) 可能出现的另一根接近 \\(\\delta\\)，不在 \\(r\\gg|\\delta|\\) 的模型自洽域，不能误认成可靠新物理稳定核。利用无修正势垒在 \\(r_0\\) 的一阶导数为零，代入临界半径的改变量在一阶不影响势垒，故\n\\[\n\\boxed{\\Delta G_{*,\\mathrm T}\n=\\Delta G_*-8\\pi\\gamma r_0\\delta+O(\\gamma\\delta^2)}\n\\]\n或 \\(\\Delta G_{*,\\mathrm T}/\\Delta G_*=1-6\\delta/r_0+O((\\delta/r_0)^2)\\)。正 \\(\\delta\\) 在本指定模型中降低临界半径及成核势垒，指数上提高成核倾向；但需要 \\(|\\delta|/r_0\\ll1\\)，更需液滴尺度远大于分子相关长度。切勿把线性近似外推到 \\(r\\sim\\delta\\) 或强过饱和的分子簇尺度。"
+      }
+    },
+    "T061": {
+      "meta.json": {
+        "bytes": 670,
+        "git_blob": "87acb2d73b4a37357309bb92f481023fae1cdbac",
+        "text": "{\n  \"id\": \"T061\",\n  \"topic\": \"热学\",\n  \"title\": \"一维伊辛环的转移矩阵严格解、关联长度与零场比热\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 110,\n  \"tags\": [\n    \"一维短程Ising转移矩阵\",\n    \"正则配分函数谱分解\",\n    \"自发磁化与关联衰减\",\n    \"热容与能量涨落\"\n  ],\n  \"answer\": \"\\\\lambda_\\\\pm=e^K(\\\\cosh h\\\\pm\\\\sqrt{\\\\sinh^2h+e^{-4K}}),\\\\quad\\\\xi^{-1}=-\\\\ln\\\\tanh K\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v3.7-round12-draft\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 637,
+        "git_blob": "2a149d0fc1903986329d7e9ff8f1fdb334b26ca8",
+        "text": "考虑 \\(N\\) 个周期边界 \\(s_i=\\pm1\\) 的最近邻Ising自旋：\\(H=-J\\sum_i s_is_{i+1}-\\mu B\\sum_i s_i\\)，其中 \\(J,\\mu,T>0\\)。记 \\(K=J/(k_BT)\\)、\\(h=\\mu B/(k_BT)\\)。\n(1) 构建转移矩阵、求两个本征值与有限 \\(N\\) 的精确配分函数，并推出热力学极限自由能。\n(2) 由最大本征值求磁化、零场磁化率，严格判定任意正温度是否有自发磁化。\n(3) 以转移矩阵本征通道计算零场两点关联及关联长度，并给出低温和高温极限。\n(4) 从同一配分函数求零场每格点能量和热容，用独立的涨落恒等式核对正定性并讨论极限顺序。\n"
+      },
+      "solution.tex": {
+        "bytes": 1868,
+        "git_blob": "94d75b21e89d083a00705bc0db902381010cecf5",
+        "text": "(1) 将磁场能在相邻两键间各分一半，令\n\\[\n\\mathsf T_{ss'}=\\exp[Kss'+h(s+s')/2],\\quad\n\\mathsf T=\\begin{pmatrix}e^{K+h}&e^{-K}\\\\e^{-K}&e^{K-h}\\end{pmatrix}.\n\\]\n矩阵迹是 \\(2e^K\\cosh h\\)，行列式是 \\(e^{2K}-e^{-2K}\\)，所以\n\\(\\lambda_\\pm=e^K[\\cosh h\\pm\\sqrt{\\sinh^2h+e^{-4K}}]\\)；\n\\(Z_N=\\lambda_+^N+\\lambda_-^N\\)，\\(f=-k_BT\\ln\\lambda_+\\) 为无限链自由能每格点。对任意正温，\\(\\lambda_+>\\lambda_-\\) 且解析，排除了隐藏的有限温度特征值交叉。\n\n(2) 对 \\(h\\) 微分得无量纲磁化\n\\[\nm=\\partial_h\\ln\\lambda_+\n=\\frac{\\sinh h}{\\sqrt{\\sinh^2h+e^{-4K}}},\n\\quad \\chi_B=\\left.\\partial_B(\\mu m)\\right|_{B=0}\n=\\frac{\\mu^2e^{2K}}{k_BT}.\n\\]\n任意有限 \\(T>0\\) 下 \\(h\\to0\\) 给出 \\(m\\to0\\)，因此没有正温自发磁化，虽有低温急剧增大的磁化率。它与具有真实临界温度的高维模型或平均场理论不同，不能把 \\(\\chi_B\\) 的低温增长误称为有限温度奇点。\n\n(3) 在零场时两个本征值为 \\(2\\cosh K\\)、\\(2\\sinh K\\)。自旋插入算符把最大本征态映到奇本征态，故热力学极限 \\(\\langle s_0s_r\\rangle_c=(\\lambda_-/\\lambda_+)^r=(\\tanh K)^r\\)。因此\n\\[\n\\boxed{\\xi=-1/\\ln(\\tanh K)}.\n\\]\n低温 \\(K\\gg1\\) 有 \\(\\tanh K=1-2e^{-2K}+\\cdots\\)，所以 \\(\\xi\\simeq e^{2K}/2\\)；高温 \\(K\\to0\\) 时 \\(\\xi\\simeq1/|\\ln K|\\to0\\)。正温时关联严格指数衰减，不存在有限正温长程序。\n\n(4) 零场 \\(\\ln\\lambda_+=\\ln(2\\cosh K)\\)，所以内能与热容分别是\n\\[\nu=-J\\tanh K,\\qquad c=k_BK^2\\operatorname{sech}^2K>0.\n\\]\n独立的正则涨落关系 \\(C_N=k_B\\beta^2(\\langle H^2\\rangle-\\langle H\\rangle^2)\\ge0\\) 给出相同符号。高温 \\(c/k_B=K^2+O(K^4)\\)，低温 \\(c/k_B\\sim4K^2e^{-2K}\\)。有限链零场严格零温有两重有序基态，先取 \\(B\\to0\\) 与先取 \\(T\\to0\\) 的选态可能不同，但不产生任何 \\(T>0\\) 的相变。\n"
+      }
+    },
+    "T062": {
+      "meta.json": {
+        "bytes": 736,
+        "git_blob": "3b807e2d708729c1d01066338c495540ca0bb751",
+        "text": "{\n  \"id\": \"T062\",\n  \"topic\": \"热学\",\n  \"title\": \"一相Stefan移动凝固界面的相似解、潜热平衡与凝固尺度\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 110,\n  \"tags\": [\n    \"非稳态热扩散相似律\",\n    \"相变Stefan移动边界\",\n    \"误差函数温度剖面\",\n    \"潜热与显热能量守恒\"\n  ],\n  \"answer\": \"s(t)=2\\\\lambda\\\\sqrt{\\\\alpha t},\\\\quad\\\\lambda e^{\\\\lambda^2}\\\\operatorname{erf}\\\\lambda=\\\\mathrm{Ste}/\\\\sqrt{\\\\pi},\\\\quad \\\\mathrm{Ste}=c_p(T_m-T_0)/L\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v3.7-round12-draft\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 869,
+        "git_blob": "08c2e18a1f6d2a84685ef7fba53f41557b49b4c0",
+        "text": "半无限一维液体起初均处在熔点 \\(T_m\\)，在 \\(t=0\\) 后令 \\(x=0\\) 壁面保持 \\(T_0<T_m\\)，形成 \\(0<x<s(t)\\) 的固相。固相密度 \\(\\rho\\)、比热 \\(c_p\\)、导热率 \\(k\\) 和潜热 \\(L\\) 常数，固相扩散系数 \\(\\alpha=k/(\\rho c_p)\\)，液相始终保持 \\(T_m\\)，忽略界面动力学过冷。\n(1) 从局部热扩散方程和界面潜热守恒推导相似变量形式与精确误差函数温度场。\n(2) 求凝固前沿 \\(s(t)\\) 的系数满足的超越方程，严格证明唯一正根，解释Stefan数与 \\(\\sqrt t\\) 标度。\n(3) 在任意时刻验证壁面释放的热量恰等于凝固潜热与固层降温显热之和，避免把全部壁面热流直接当潜热。\n(4) 求 \\(\\mathrm{Ste}\\ll1\\) 的前沿渐近公式与 \\(\\mathrm{Ste}\\gg1\\) 的主导对数标度；讨论初始瞬间热流发散及模型的物理适用范围。\n"
+      },
+      "solution.tex": {
+        "bytes": 2310,
+        "git_blob": "37732055340d214b2b4ba89e7ca89fd453afbfa2",
+        "text": "(1) 固层满足 \\(T_t=\\alpha T_{xx}\\)、\\(T(0,t)=T_0\\)、\\(T(s(t),t)=T_m\\)。令 \\(\\eta=x/(2\\sqrt{\\alpha t})\\)、\\(s=2\\lambda\\sqrt{\\alpha t}\\)，自相似常微分方程是 \\(f''+2\\eta f'=0\\)。两次积分并施加边界值得\n\\[\n\\boxed{T(x,t)=T_0+(T_m-T_0)\\frac{\\operatorname{erf}(\\eta)}{\\operatorname{erf}(\\lambda)}}.\n\\]\n对每一固定 \\(t>0\\)，此场严格满足导热微分方程；\\(\\lambda\\) 必须由相界能量条件决定，不能随意作为额外自由参数。\n\n(2) Stefan条件是 \\(\\rho L\\dot s=kT_x(s^-,t)\\)。使用 \\(\\dot s=\\lambda\\sqrt{\\alpha/t}\\) 和\n\\(T_x(s^-)=\\Delta T\\,e^{-\\lambda^2}/(\\sqrt{\\pi\\alpha t}\\operatorname{erf}\\lambda)\\)，得到\n\\[\n\\boxed{\\lambda e^{\\lambda^2}\\operatorname{erf}\\lambda=\\frac{c_p\\Delta T}{L\\sqrt\\pi}=\\frac{\\mathrm{Ste}}{\\sqrt\\pi}}.\n\\]\n函数 \\(F(\\lambda)=\\lambda e^{\\lambda^2}\\operatorname{erf}\\lambda\\) 在 \\(\\lambda>0\\) 上导数严格正，且由0增长至无穷，所以每个正Stefan数有且仅有一个正根。故 \\(s\\propto\\sqrt t\\)，而不是界面匀速前进。\n\n(3) 壁面向外热流大小为 \\(q_0(t)=kT_x(0,t)=k\\Delta T/(\\sqrt{\\pi\\alpha t}\\operatorname{erf}\\lambda)\\)，累计移热\n\\(Q_0(t)=2k\\Delta T\\sqrt t/(\\sqrt{\\pi\\alpha}\\operatorname{erf}\\lambda)\\)（按单位面积）。固层相对于原来 \\(T_m\\) 液体的能量亏损是\n\\[\nQ_{\\rm stored}=\\rho Ls+\\rho c_p\\int_0^s(T_m-T)\\,dx.\n\\]\n误差函数积分 \\(\\int_0^\\lambda\\operatorname{erf}\\eta\\,d\\eta=\\lambda\\operatorname{erf}\\lambda+(e^{-\\lambda^2}-1)/\\sqrt\\pi\\)，故显热项为\n\\(2\\rho c_p\\Delta T\\sqrt{\\alpha t}(1-e^{-\\lambda^2})/(\\sqrt\\pi\\operatorname{erf}\\lambda)\\)。再用上问Stefan条件可逐项化简至 \\(Q_{\\rm stored}=Q_0\\)，这同时检查了壁面热流和界面潜热的正号。\n\n(4) 小 \\(\\lambda\\) 时 \\(\\operatorname{erf}\\lambda=(2/\\sqrt\\pi)(\\lambda-\\lambda^3/3+\\cdots)\\)，所以 \\(2\\lambda^2+O(\\lambda^4)=\\mathrm{Ste}\\)，得到 \\(\\lambda\\sim\\sqrt{\\mathrm{Ste}/2}\\) 与 \\(s\\sim\\sqrt{2\\alpha\\mathrm{Ste}\\,t}\\)。大Stefan数 \\(\\lambda\\gg1\\)，\\(\\operatorname{erf}\\lambda\\to1\\)，故 \\(\\lambda^2+\\log\\lambda\\sim\\log(\\mathrm{Ste}/\\sqrt\\pi)\\)，首阶 \\(\\lambda\\sim\\sqrt{\\log\\mathrm{Ste}}\\)。\\(q_0\\sim t^{-1/2}\\) 虽在初瞬发散，但其时间积分有限；恒定温度边界、无液侧显热和忽略成核等理想化不能外推到微观 \\(t=0\\)。\n"
+      }
+    },
+    "T063": {
+      "meta.json": {
+        "bytes": 709,
+        "git_blob": "b560d6ac2d53d5266179cf75c927d94186debfc7",
+        "text": "{\n  \"id\": \"T063\",\n  \"topic\": \"热学\",\n  \"title\": \"布朗谐阱温度骤变的Ornstein–Uhlenbeck弛豫、热量与熵产生\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 120,\n  \"tags\": [\n    \"OU协方差精确演化\",\n    \"温度淬火\",\n    \"随机热力学熵产生\",\n    \"相对熵与自由能\"\n  ],\n  \"answer\": \"\\\\sigma_t^2=\\\\frac{k_BT_f}{k}+\\\\frac{k_B(T_i-T_f)}{k}e^{-2kt/\\\\zeta},\\\\quad\\\\Delta S_{\\\\rm tot}(\\\\infty)=\\\\frac{k_B}{2}(T_i/T_f-1-\\\\ln(T_i/T_f))\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v3.7-round12-draft\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 611,
+        "git_blob": "3558aa3c949f9ccb01af9b48b7c34aa2f744fba3",
+        "text": "过阻尼粒子在固定谐阱 \\(V(x)=kx^2/2\\) 内运动，\\(k,\\zeta>0\\)。初态与温度 \\(T_i>0\\) 热浴平衡，\\(t=0\\) 时浴温骤变为 \\(T_f>0\\)，此后满足 \\(dx=-(k/\\zeta)x\\,dt+\\sqrt{2k_BT_f/\\zeta}\\,dW_t\\)。温度骤变不改变势能参数。\n(1) 用Itô公式求位置均值、方差及任意时刻的高斯分布。\n(2) 求平均能量、进入系统的热量与外功，检查第一定律。\n(3) 求系统Shannon熵、浴熵和总熵产生，严格证明瞬时熵产生率非负。\n(4) 以相对于最终平衡态的KL散度独立推导自由能耗散，讨论无淬火与严格零温极限。\n"
+      },
+      "solution.tex": {
+        "bytes": 1802,
+        "git_blob": "ec9708b7f45f82083aeb87b0e8c8c95b69b7aaf1",
+        "text": "(1) Itô公式 \\(d(x^2)=2x\\,dx+(dx)^2\\) 给出\n\\[\n\\dot{\\langle x\\rangle}=-(k/\\zeta)\\langle x\\rangle,\\quad\n\\dot{\\langle x^2\\rangle}=-(2k/\\zeta)\\langle x^2\\rangle+2k_BT_f/\\zeta.\n\\]\n初态均值0、方差 \\(\\sigma_i^2=k_BT_i/k\\)。过程线性且保持高斯性，故\n\\[\np(x,t)=\\frac{e^{-x^2/(2\\sigma_t^2)}}{\\sqrt{2\\pi\\sigma_t^2}},\\quad\n\\boxed{\\sigma_t^2=\\sigma_f^2+(\\sigma_i^2-\\sigma_f^2)e^{-2kt/\\zeta}},\n\\quad\\sigma_f^2=k_BT_f/k.\n\\]\n方差弛豫时间 \\(\\zeta/(2k)\\)，不是均值弛豫时间 \\(\\zeta/k\\)。\n\n(2) 平均能量 \\(U=k\\langle x^2\\rangle/2\\)，故\n\\(U(t)=k_B[T_f+(T_i-T_f)e^{-2kt/\\zeta}]/2\\)。\n谐阱参数不随时间改变，外功 \\(W=0\\)；第一定律给进入系统的热量\n\\[\n\\boxed{Q(t)=\\Delta U=\\tfrac12k_B(T_f-T_i)(1-e^{-2kt/\\zeta})}.\n\\]\n当冷却 \\(T_f<T_i\\) 时 \\(Q<0\\) 表示系统放热，最终 \\(U=k_BT_f/2\\)，满足单个位置自由度的能量均分。\n\n(3) 系统熵 \\(S_{\\rm sys}(t)=\\tfrac{k_B}{2}\\ln(2\\pi e\\sigma_t^2)\\)，热浴熵 \\(\\Delta S_{\\rm bath}=-Q/T_f\\)。令 \\(r_i=T_i/T_f\\)，\\(r_t=\\sigma_t^2/\\sigma_f^2=1+(r_i-1)e^{-2kt/\\zeta}\\)，则\n\\[\n\\boxed{\\Delta S_{\\rm tot}(t)=\\frac{k_B}{2}[\\ln(r_t/r_i)+r_i-r_t]}.\n\\]\n求导得 \\(\\dot S_{\\rm tot}=(k_Bk/\\zeta)(r_t-1)^2/r_t\\ge0\\)。由于初始为0，总熵产生任意时刻非负；终态为 \\(\\tfrac{k_B}{2}(r_i-1-\\ln r_i)\\ge0\\)，后式不可误当任意时刻公式。\n\n(4) 相对最终平衡高斯态的KL散度\n\\(D(p_t\\Vert p_f)=\\tfrac12(r_t-1-\\ln r_t)\\)，其导数\n\\[\n\\dot D=-\\frac{k}{\\zeta}\\frac{(r_t-1)^2}{r_t}\\le0.\n\\]\n非平衡自由能差 \\(F[p_t]-F[p_f]=k_BT_fD\\) 单调下降，且 \\(-\\dot F=T_f\\dot S_{\\rm tot}\\)，独立核对了熵产生率。若 \\(T_i=T_f\\) 所有变化均为零；严格 \\(T_f=0\\) 时浴熵公式含 \\(1/T_f\\) 且高斯平衡分布退化，必须先在正温范围内推导。\n"
+      }
+    },
+    "T064": {
+      "meta.json": {
+        "bytes": 726,
+        "git_blob": "94f09962335fe7cc3f9c3544b1bbaa1ea6863ad1",
+        "text": "{\n  \"id\": \"T064\",\n  \"topic\": \"热学\",\n  \"title\": \"Cattaneo有限速热输运的双分支色散、局部熵产生与波动极限\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 115,\n  \"tags\": [\n    \"Maxwell-Cattaneo热流迟滞\",\n    \"双曲型热传导和热波\",\n    \"色散根与有限传播速度\",\n    \"热扰动能量泛函耗散\"\n  ],\n  \"answer\": \"\\\\tau T_{tt}+T_t=D T_{xx},\\\\quad \\\\omega_\\\\pm=\\\\frac{-i\\\\pm\\\\sqrt{4\\\\tau Dk^2-1}}{2\\\\tau},\\\\quad v_{\\\\rm heat}=\\\\sqrt{D/\\\\tau}\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v3.9-round13-draft\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 900,
+        "git_blob": "a723cb1fed19d5d9d201c140aaf35ab4cd0e4629",
+        "text": "一维均匀介质体积热容 \\(c_v>0\\)、导热系数 \\(\\kappa>0\\)、热流弛豫时间 \\(\\tau>0\\)，温度是平衡态附近的小偏差 \\(T(x,t)\\)。采用能量连续性 \\(c_vT_t+q_x=0\\) 与Maxwell–Cattaneo关系 \\(\\tau q_t+q=-\\kappa T_x\\)。取周期边界或无限域中快速衰减的扰动，令 \\(D=\\kappa/c_v\\)。\n(1) 消去热流导出双曲型热传导方程，解释与瞬时Fourier扩散的差异和引入的初始数据。\n(2) 令 \\(T\\propto e^{i(kx-\\omega t)}\\)，求两个复频分支和长波、短波极限，并计算热波传播速度和衰减率。\n(3) 构造温度—热流联合正定二次泛函，证明精确局部能流恒等式与总量单调耗散；指出它不是原始热力学内能本身。\n(4) 在固定 \\(D\\) 下取 \\(\\tau\\to0^+\\)，分别得到扩散慢模、快速弛豫模，解释为何短波 \\(k\\to\\infty\\) 与 \\(\\tau\\to0\\) 的极限顺序不可交换。\n"
+      },
+      "solution.tex": {
+        "bytes": 1808,
+        "git_blob": "fed5303ef2114fe37c71b440406e184696b51c63",
+        "text": "(1) 对连续性求时间导数得 \\(c_vT_{tt}+q_{xt}=0\\)，并由Cattaneo式 \\(q_t=(-q-\\kappa T_x)/\\tau\\) 消去 \\(q_{xt}\\)。利用 \\(q_x=-c_vT_t\\)，得到\n\\[\n\\boxed{\\tau T_{tt}+T_t=D T_{xx}},\\quad D=\\kappa/c_v.\n\\]\n此为telegraph双曲方程，必须指定 \\(T(x,0)\\) 与 \\(T_t(x,0)\\)（等价于相容初始热流散度），而Fourier热扩散只需初温；热波速度有限依赖模型尺度，非任意频段的真实晶格声子速度。\n\n(2) 代入 \\(e^{i(kx-\\omega t)}\\) 得 \\(-\\tau\\omega^2-i\\omega+Dk^2=0\\)，故\n\\[\n\\omega_\\pm=\\frac{-i\\pm\\sqrt{4\\tau Dk^2-1}}{2\\tau}.\n\\]\n当 \\(4\\tau Dk^2>1\\) 时两个模式传播的实部为 \\(\\pm\\sqrt{4\\tau Dk^2-1}/(2\\tau)\\)，高波数相速度渐近 \\(\\pm\\sqrt{D/\\tau}\\)，衰减率 \\(1/(2\\tau)\\)。长波展开则为扩散慢模 \\(-iDk^2+O(k^4)\\) 与迅速弛豫模 \\(-i/\\tau+iDk^2+O(k^4)\\)，不能把两个分支都当作无损热声波。\n\n(3) 将 \\(c_vT_t+q_x=0\\) 乘以 \\(T\\)，将 \\(\\tau q_t+q=-\\kappa T_x\\) 乘以 \\(q/\\kappa\\)，相加并整理：\n\\[\n\\boxed{\\partial_t\\left(\\frac{c_vT^2}{2}+\\frac{\\tau q^2}{2\\kappa}\\right)\n+\\partial_x(Tq)=-\\frac{q^2}{\\kappa}\\le0}.\n\\]\n周期边界或空间无穷远快速衰减时，总积分单调下降。该二次量是线性化温度扰动的Lyapunov泛函而非温度正负任意时均为物理内能 \\(c_vT\\)；将二者混同会导致维度和符号误判。\n\n(4) 固定 \\(D,k\\) 令 \\(\\tau\\downarrow0\\)，慢根保持 \\(\\omega_{\\rm slow}\\to-iDk^2\\)，快根虚部 \\(-1/\\tau\\) 趋负无穷，热流迅速逼近 \\(q=-\\kappa T_x\\)，恢复Fourier扩散。但若先取 \\(k\\to\\infty\\) 则获得具有 \\(v=\\sqrt{D/\\tau}\\) 的传播分支，接着令 \\(\\tau\\to0\\) 会使模型传播速度发散。故该极限非一致，不能在所有短波范围上把无穷速Fourier方程当成有限速热波的精确极限。\n"
+      }
+    },
+    "T065": {
+      "meta.json": {
+        "bytes": 680,
+        "git_blob": "b2edc5ff1f9f9fc53ee8ae82d90ce4b0775d2689",
+        "text": "{\n  \"id\": \"T065\",\n  \"topic\": \"热学\",\n  \"title\": \"一维弹道声子热导量子、Landauer积分与双热库熵产生\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 115,\n  \"tags\": [\n    \"无反射一维声子弹道输运\",\n    \"Bose积分与热导量子\",\n    \"有限频宽的多对数修正\",\n    \"热库熵增及能量平衡\"\n  ],\n  \"answer\": \"J_Q=\\\\frac{\\\\pi k_B^2}{12\\\\hbar}(T_L^2-T_R^2),\\\\quad G_Q=\\\\frac{\\\\pi k_B^2 T}{6\\\\hbar}\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v3.9-round13-draft\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 896,
+        "git_blob": "94ef070cdef6072a96cac8801cb612c0b11df000",
+        "text": "两大热库温度为 \\(T_L,T_R>0\\)，由一条单声学支、无反射、线性色散 \\(\\omega=v|k|\\) 的一维理想弹道通道连接，声子化学势为0，忽略接触热阻与非弹性散射。每一传播方向的模态通量为 \\(d\\omega/(2\\pi)\\)，Bose布居 \\(n_B(\\omega,T)=1/(e^{\\hbar\\omega/(k_BT)}-1)\\)。\n(1) 从左右行波的模态流积分求净能流 \\(J_Q\\)，明确为什么零点能不产生温差净热流。\n(2) 令 \\(T_L=T+\\Delta T/2,T_R=T-\\Delta T/2\\)，求线性响应热导量子，与声速无关的物理原因及 \\(N\\) 条独立声学通道的推广。\n(3) 假定频率只在 \\(0<\\omega<\\Omega_c\\) 无反射，写出带截止的精确积分或多对数表达式，求高温与无穷大截止的极限。\n(4) 热库维持恒温时计算两端熵流和总熵产生，证明从热到冷的自发流动满足第二定律，并讨论传输率小于1时的适用条件。\n"
+      },
+      "solution.tex": {
+        "bytes": 1925,
+        "git_blob": "7fe659ac90c1d83b5124eb4c00bd74fcca195370",
+        "text": "(1) 一个方向能量流为 \\(J_+(T)=\\int_0^\\infty \\hbar\\omega n_B(\\omega,T)\\,d\\omega/(2\\pi)\\)。换元 \\(x=\\hbar\\omega/(k_BT)\\)，利用\n\\(\\int_0^\\infty x/(e^x-1)\\,dx=\\pi^2/6\\)，得到 \\(J_+(T)=\\pi k_B^2T^2/(12\\hbar)\\)。左右相减，\n\\[\n\\boxed{J_Q=\\frac{\\pi k_B^2}{12\\hbar}(T_L^2-T_R^2)} .\n\\]\n模态的 \\(\\hbar\\omega/2\\) 真空零点项对两个传播方向相同，且与热库温度无关，净输运中严格抵消，不能当作连续输出的热能。\n\n(2) 对小温差展开 \\(T_L^2-T_R^2=2T\\Delta T+O(\\Delta T^3)\\)，所以\n\\[\n\\boxed{G_Q=\\left.\\frac{J_Q}{\\Delta T}\\right|_{\\Delta T\\to0}\n=\\frac{\\pi k_B^2T}{6\\hbar}=\\frac{\\pi^2k_B^2T}{3h}}.\n\\]\n在色散严格线性且一维单分支无散射时，群速 \\(v\\) 与每单位长度的态密度 \\(1/v\\) 抵消，故结果不含声速。\\(N\\) 条无耦合完全透射分支给 \\(NG_Q\\)；它不是任何有限温度下三维扩散材料的普遍导热系数。\n\n(3) 记 \\(X_c=\\hbar\\Omega_c/(k_BT)\\)，单向有限带宽流为\n\\[\nJ_+^{(c)}(T)=\\frac{k_B^2T^2}{2\\pi\\hbar}\n\\int_0^{X_c}\\frac{x\\,dx}{e^x-1}.\n\\]\n反导函数可取 \\(x\\ln(1-e^{-x})-\\operatorname{Li}_2(e^{-x})\\)；其在0的极限为 \\(-\\pi^2/6\\)，所以积分\n\\(\\pi^2/6+X_c\\ln(1-e^{-X_c})-\\operatorname{Li}_2(e^{-X_c})\\)。\n令 \\(\\Omega_c\\to\\infty\\) 还原第一问。若 \\(k_BT\\gg\\hbar\\Omega_c\\)，则 \\(x/(e^x-1)=1-x/2+O(x^2)\\)，积分给 \\(J_+^{(c)}\\simeq k_BT\\Omega_c/(2\\pi)\\)，净流线性于 \\(T_L-T_R\\)。\n\n(4) 若 \\(T_L>T_R\\)，定常无耗散通道中从热库L取热 \\(J_Q\\)，向R放热 \\(J_Q\\)。两个维持恒温的热库熵变化率和为\n\\[\n\\boxed{\\dot S_{\\rm tot}=J_Q\\left(\\frac1{T_R}-\\frac1{T_L}\\right)\n=\\frac{\\pi k_B^2}{12\\hbar}\\frac{(T_L-T_R)^2(T_L+T_R)}{T_LT_R}\\ge0}.\n\\]\n式子在等温时为零，温差交换满足第二定律。有限传输概率 \\(\\mathcal T(\\omega)\\) 应放入积分核且 \\(0\\le\\mathcal T\\le1\\)，此时不再自动具有独立于频谱的普适热导量子。\n"
+      }
+    },
+    "T066": {
+      "meta.json": {
+        "bytes": 693,
+        "git_blob": "7d44d62819be9ffee8f33268ebd40bd0170ef574",
+        "text": "{\n  \"id\": \"T066\",\n  \"topic\": \"热学\",\n  \"title\": \"双层温变热导介质的非线性热整流、界温与熵生产\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 115,\n  \"tags\": [\n    \"复合导热非线性温度剖面\",\n    \"热流连续与界面温度\",\n    \"方向交换的热整流比\",\n    \"热库熵产生及单调性\"\n  ],\n  \"answer\": \"J_{\\\\rightarrow}=\\\\sqrt7-2,\\\\quad J_{\\\\leftarrow}=3-\\\\sqrt6,\\\\quad {\\\\cal R}=(\\\\sqrt7-2)/(3-\\\\sqrt6)>1\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v3.9-round13-draft\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 802,
+        "git_blob": "ce2ac6e3c7b9b196bab7d455069beb897ecdd79f",
+        "text": "两层无界横截面平板A和B各厚 \\(L\\)，互相完美热接触。一维定常导热，A层热导率 \\(\\kappa_A(T)=aT\\)，B层 \\(\\kappa_B(T)=b\\)，其中 \\(a,b>0\\)，无内热源，忽略界面接触热阻。两端热库分别为 \\(T_h>T_c>0\\)，固定两层的先后次序A在左B在右。\n(1) 将Fourier定律分段积分，写出左热右冷时的界面温度方程与热流。\n(2) 当右热左冷时重新求界温及热流，证明一般两个方向热流大小不相等，并明确必须保持同一材料排列。\n(3) 以无量纲 \\(L=a=b=1,T_h=2,T_c=1\\) 为实例求两个方向精确界温、热流与整流比，核对其大小关系。\n(4) 由各层局部熵产生 \\(\\kappa(T)(T_x)^2/T^2\\) 积分得到总熵生产，验证热库的总熵账本并讨论 \\(a\\to0\\) 和零温差极限。\n"
+      },
+      "solution.tex": {
+        "bytes": 1813,
+        "git_blob": "957516ff5029b015eb6ebc3bec80fe4b51267feb",
+        "text": "(1) 沿左向右定义正热流 \\(J=-\\kappa(T)T_x\\)。左热右冷时左A层、右B层满足\n\\[\nJL=\\int_{T_i}^{T_h}aT\\,dT=\\tfrac a2(T_h^2-T_i^2),\n\\quad JL=\\int_{T_c}^{T_i}b\\,dT=b(T_i-T_c).\n\\]\n两式相等构成严格单调界温方程：前者随 \\(T_i\\) 增大而减少，后者随 \\(T_i\\) 增大而增加，所以 \\(T_c<T_i<T_h\\) 内唯一交点，不可用平均温度替代整个变导热积分。\n\n(2) 右热左冷时热从右往左，穿过B层先由 \\(T_h\\) 降至新界温 \\(T_i'\\)，再穿过A降至 \\(T_c\\)，故热流大小满足\n\\[\n|J'|L=b(T_h-T_i')=\\tfrac a2(T_i'^2-T_c^2).\n\\]\n与第一问界面温度方程不同，这是非线性材料在不同温区的组合所致。若把两个材料连同热源也同时交换，仅仅重新标记坐标则当然不会产生整流；本题比较的是同一器件交换冷热端。\n\n(3) 令单位 \\(a=b=L=1\\)，正向方程 \\((4-T_i^2)/2=T_i-1\\)，得 \\(T_i=-1+\\sqrt7\\)，正向热流 \\(\\boxed{J_{\\rightarrow}=\\sqrt7-2}\\)。\n反向 \\(2-T_i'=(T_i'^2-1)/2\\)，得 \\(T_i'=-1+\\sqrt6\\)，反向热流 \\(\\boxed{J_{\\leftarrow}=3-\\sqrt6}\\)。数值分别约为 \\(0.64575\\) 与 \\(0.55051\\)，整流比约 \\(1.173>1\\)。两界温都位于1与2之间，确保两层热流符号一致而没有违反Fourier定律。\n\n(4) 每一层的熵产生率密度为 \\(\\sigma=\\kappa(T)(T_x)^2/T^2=J^2/(\\kappa T^2)\\ge0\\)，积分并用 \\(dx=-\\kappa dT/J\\) 得单层 \\(\\Sigma_{\\rm layer}=|J|(1/T_{\\rm cold,layer}-1/T_{\\rm hot,layer})\\)。两层界温项严格抵消，总熵生产\n\\[\n\\boxed{\\Sigma=|J|\\left(\\frac1{T_c}-\\frac1{T_h}\\right)\\ge0}\n\\]\n与冷热热库总熵变相等。若 \\(a\\to0\\)，A近绝热，两方向热流都趋零而非产生无限整流；\\(T_h-T_c\\to0\\) 时在同一个平均温度线性化，两个方向的首阶导热相同，整流从较高阶温差才显现。\n"
+      }
+    },
+    "T067": {
+      "meta.json": {
+        "bytes": 744,
+        "git_blob": "8f1232228d9e9267a65ef6a4994986674afdcca2",
+        "text": "{\n  \"id\": \"T067\",\n  \"topic\": \"热学\",\n  \"title\": \"理想气体恒温离心平衡的指数密度、总角动量与旋转自由能\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 115,\n  \"tags\": [\n    \"旋转坐标下离心平衡\",\n    \"理想气体Boltzmann径向分布\",\n    \"圆筒内角动量与壁面压力\",\n    \"共转自由能Legendre关系\"\n  ],\n  \"answer\": \"n(r)=n_0e^{\\\\alpha r^2},\\\\quad\\\\alpha=m\\\\Omega^2/(2k_BT),\\\\quad \\\\langle r^2\\\\rangle=R^2e^{\\\\alpha R^2}/(e^{\\\\alpha R^2}-1)-1/\\\\alpha\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v3.9-round13-draft\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 848,
+        "git_blob": "17e7752e567bfc2c7e9094e7f2d6c217228bd2b8",
+        "text": "一半径 \\(R\\)、高度 \\(H\\) 的圆柱密闭容器内有 \\(N\\) 个经典理想气体分子，单粒质量 \\(m\\)，温度 \\(T>0\\) 恒定，容器绕轴匀速转动 \\(\\Omega\\)。设气体已经达到随容器刚体共转的等温平衡，无外部重力，忽略相互作用且有效平衡局限于非相对论区域。令 \\(\\alpha=m\\Omega^2/(2k_BT)\\)。\n(1) 从旋转框架中的离心势与径向Euler平衡，导出粒子数密度的精确半径分布。\n(2) 使用总粒子数约束求中心密度与壁面压强，讨论 \\(\\Omega\\to0\\) 的均匀密度极限。\n(3) 求平均 \\(r^2\\) 和气体总角动量，验证小转速时经典均匀圆柱的转动惯量并求大转速壳层极限。\n(4) 从共转正则配分函数和Legendre关系证明 \\(-\\partial F_{\\rm rot}/\\partial\\Omega=L_z\\)，解释共转势与实验室实际动能的不同。\n"
+      },
+      "solution.tex": {
+        "bytes": 1828,
+        "git_blob": "5f6a939c6b643d50e5e0727de2983175e860d812",
+        "text": "(1) 在共转系下单分子有效离心势 \\(\\Phi_{\\rm eff}=-m\\Omega^2r^2/2\\)。等温理想气体满足 \\(dp/dr=mn(r)\\Omega^2r\\)，而 \\(p=nk_BT\\)，故 \\(d\\ln n/dr=m\\Omega^2r/(k_BT)=2\\alpha r\\)。积分得到\n\\[\n\\boxed{n(r)=n_0e^{\\alpha r^2}},\n\\]\n密度向外增加，是离心稳定平衡，而非把离心力错写向内得到指数衰减。必须有有限半径壁面，否则指数分布在无限平面不可归一。\n\n(2) 总粒子数\n\\(N=2\\pi Hn_0\\int_0^R re^{\\alpha r^2}dr=\\pi Hn_0(e^{\\alpha R^2}-1)/\\alpha\\)，所以\n\\[\nn_0=\\frac{N\\alpha}{\\pi H(e^{\\alpha R^2}-1)},\\quad\np(R)=k_BTn_0e^{\\alpha R^2}.\n\\]\n当 \\(\\alpha\\to0\\) 时利用 \\(e^{\\alpha R^2}-1\\simeq\\alpha R^2\\) 恢复 \\(n_0=N/(\\pi R^2H)\\)，壁压为 \\(Nk_BT/(\\pi R^2H)\\)；不可将 \\(\\alpha=0\\) 直接代入未化简的零比零式。\n\n(3) 用截面积权重 \\(2\\pi r\\,dr\\) 计算\n\\[\n\\langle r^2\\rangle\n=\\frac{\\int_0^Rr^3e^{\\alpha r^2}dr}{\\int_0^Rr e^{\\alpha r^2}dr}\n=\\boxed{\\frac{R^2e^{\\alpha R^2}}{e^{\\alpha R^2}-1}-\\frac1\\alpha}.\n\\]\n气体平均绕轴角动量 \\(L_z=m\\Omega N\\langle r^2\\rangle\\)。小 \\(\\Omega\\) 时 \\(\\langle r^2\\rangle\\to R^2/2\\)，故 \\(L_z\\simeq\\frac12NmR^2\\Omega\\)；强旋转 \\(\\alpha R^2\\gg1\\) 时 \\(\\langle r^2\\rangle\\simeq R^2-1/\\alpha\\)，气体集中在近壁薄壳而不是中心。\n\n(4) 在旋转热浴的平衡配分函数中，单粒子Boltzmann权为 \\(\\exp[-\\beta(H_{\\rm lab}-\\Omega L_z)]\\)。对动量完成平方，积分因子给 \\(\\exp[\\beta m\\Omega^2r^2/2]=e^{\\alpha r^2}\\)，正好再现第一问。在固定 \\(T,N,R,H\\) 下 \\(F_{\\rm rot}=-k_BT\\ln Z_{\\rm rot}\\) 且\n\\(-\\partial_\\Omega F_{\\rm rot}=k_BT\\partial_\\Omega\\ln Z_{\\rm rot}=\\langle L_z\\rangle\\)。\n因此共转势是一种Legendre势而非实验室的额外真实能量来源；容器施加约束并维持转速时机械功应在实验室账本中另算。\n"
+      }
+    },
+    "T068": {
+      "meta.json": {
+        "bytes": 668,
+        "git_blob": "474350649d7ca9f1eb040f135be933a54faf324f",
+        "text": "{\n  \"id\": \"T068\",\n  \"topic\": \"热学\",\n  \"title\": \"对称Flory–Huggins聚合物混合物的旋节线、共存曲线与临界标度\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 115,\n  \"tags\": [\n    \"高分子混合自由能和熵\",\n    \"不稳定区旋节判据\",\n    \"二元混合物Binodal共存\",\n    \"平均场临界浓度与指数\"\n  ],\n  \"answer\": \"\\\\chi_c=2/N,\\\\quad\\\\phi_c=1/2,\\\\quad m^2\\\\simeq(3N/8)(\\\\chi-2/N)\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v3.9-round13-draft\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 818,
+        "git_blob": "ae6ff34beb7c055d6e8633f8b4797d8e611f2abc",
+        "text": "两个聚合度相等 \\(N\\ge1\\) 的聚合物A、B在不可压格点模型中混合，A的体积分数 \\(0<\\phi<1\\)。无量纲每格点Flory–Huggins混合自由能为\n\\[\ng(\\phi)=\\frac{\\phi}{N}\\ln\\phi+\\frac{1-\\phi}{N}\\ln(1-\\phi)+\\chi\\phi(1-\\phi),\n\\]\n其中相互作用参数 \\(\\chi\\) 可随温度改变，忽略梯度能和动力学。\n(1) 求混合自由能的二阶导数与局部稳定性，得到旋节线 \\(\\chi_s(\\phi)\\)。\n(2) 用临界点二阶、三阶导数同时为零求临界浓度与临界 \\(\\chi_c\\)，检验四阶导数的稳定号。\n(3) 利用对称性给出两相共存的binodal隐式方程，并在临界附近推导组分差随 \\(\\chi-\\chi_c\\) 的平方根标度。\n(4) 比较binodal与spinodal的含义，讨论 \\(\\chi\\to0\\)、\\(N\\to\\infty\\) 和有限尺寸时相分离判据的适用范围。\n"
+      },
+      "solution.tex": {
+        "bytes": 1770,
+        "git_blob": "5326e4f6cec11898fa62d878c058d4f555a6c1c1",
+        "text": "(1) 对混合自由能两次微分有\n\\[\ng'=\\frac1N\\ln\\frac{\\phi}{1-\\phi}+\\chi(1-2\\phi),\\qquad\ng''=\\frac1{N\\phi}+\\frac1{N(1-\\phi)}-2\\chi.\n\\]\n在固定平均成分下小的局部涨落要求 \\(g''>0\\) 方有局部稳定性，旋节为 \\(g''=0\\)，故\n\\[\n\\boxed{\\chi_s(\\phi)=\\frac1{2N\\phi(1-\\phi)}}.\n\\]\n进入 \\(g''<0\\) 区域的均匀混合态对微小浓度波动线性不稳定，而旋节外部仍可能是亚稳而非全球稳定。\n\n(2) 临界点同时要求 \\(g''=g'''=0\\)。由于\n\\(g'''=-1/(N\\phi^2)+1/[N(1-\\phi)^2]\\)，在 \\(0<\\phi<1\\) 只有 \\(\\phi_c=1/2\\)，代回得 \\(\\boxed{\\chi_c=2/N}\\)。再求 \\(g''''=2/(N\\phi^3)+2/[N(1-\\phi)^3]\\)，在临界点为 \\(32/N>0\\)，因此四阶项正使临界自由能局部有界；与二阶曲率变号组成平均场二阶分相临界结构。\n\n(3) 对称体系 \\(g(\\phi)=g(1-\\phi)\\)，若两相共存的A体积分数为 \\(\\phi_-\\) 和 \\(\\phi_+=1-\\phi_-\\)，共切线的斜率为零，所以有\n\\[\n\\boxed{\\frac1N\\ln\\frac{\\phi_-}{1-\\phi_-}+\\chi(1-2\\phi_-)=0}.\n\\]\n令 \\(\\phi_\\pm=1/2\\pm m\\)，对 \\(|m|\\ll1\\) 展开\n\\(\\ln[(1+2m)/(1-2m)]=4m+16m^3/3+O(m^5)\\)，于是\n\\((4/N-2\\chi)m+(16/(3N))m^3+O(m^5)=0\\)。非零分支给\n\\[\n\\boxed{m^2\\simeq\\frac{3N}{8}(\\chi-2/N)}.\n\\]\n该平方根是对称平均场binodal临界标度，并非旋节方程本身。\n\n(4) 共存线binodal由两相全局自由能共切线决定；旋节线spinodal由单相局部曲率为零决定，两者之间是可能成核的亚稳区。 \\(\\chi\\to0\\) 时所有 \\(0<\\phi<1\\) 的混合熵使 \\(g''>0\\)；对很大 \\(N\\)，\\(\\chi_c=2/N\\to0\\)，长链混合熵变小而更易分相。但无限聚合度、有限链尺度、界面能和非均匀涨落将改变精确转变性质，不能把无梯度均匀自由能曲线冒充真实动力学成核速率。\n"
+      }
+    },
+    "T069": {
+      "meta.json": {
+        "bytes": 733,
+        "git_blob": "03677d2880da09f6b9aa82d85710cd28606c8b11",
+        "text": "{\n  \"id\": \"T069\",\n  \"topic\": \"热学\",\n  \"title\": \"双态详细平衡Markov热动力学的精确驰豫、相对熵与涨落关联\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 115,\n  \"tags\": [\n    \"双态主方程\",\n    \"局部详细平衡\",\n    \"相对熵与总熵产生\",\n    \"平衡能量自关联\"\n  ],\n  \"answer\": \"p(t)=p_*+(p_0-p_*)e^{-(a+b)t},\\\\quad p_*=(1+e^{\\\\beta\\\\Delta})^{-1},\\\\quad \\\\dot\\\\Sigma=k_B(ap_0(t)-bp_1(t))\\\\ln\\\\frac{ap_0(t)}{bp_1(t)}\\\\ge0\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v4.3-round13-core-replacement\",\n  \"challenge_profile\": \"high-multistage-original-core\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 852,
+        "git_blob": "551c570c6c6ff5c6b1c0c9cdbfe4fc0c3d6827b9",
+        "text": "(1) 单个系统具有能级 \\(E_0=0,E_1=\\Delta>0\\)，与恒温热浴 \\(T>0\\) 接触。设跃迁率 \\(0\\to1\\) 为 \\(a=\\gamma e^{-\\beta\\Delta/2}\\)，\\(1\\to0\\) 为 \\(b=\\gamma e^{\\beta\\Delta/2}\\)，\\(\\beta=(k_BT)^{-1}\\)。由主方程求任意初始激发态概率 \\(p(0)=p_{\\rm in}\\) 的精确时间演化及平衡态。\n(2) 在能级固定且不做功的过程中求系统平均内能变化、吸收热量及Shannon熵变化，证明系统与热浴的总熵变化等于相对熵 \\(D(p_{\\rm in}\\Vert p_*)-D(p(t)\\Vert p_*)\\) 乘 \\(k_B\\)。\n(3) 推导瞬时总熵产生率，利用正数对数单调性证明它始终非负；求其长时指数衰减标度，说明零初始偏离时为何恒为零。\n(4) 从平衡态双态转移概率独立推导能量自协方差 \\(C_E(t)\\)，并求平衡热容，核验高温和低温极限以及关联衰减时间。\n"
+      },
+      "solution.tex": {
+        "bytes": 1680,
+        "git_blob": "57e31e0694fe0ccdf3855e2a332528b03abfebca",
+        "text": "(1) 设激发态概率 \\(p(t)\\)，主方程 \\(\\dot p=a(1-p)-bp=a-(a+b)p\\)。令 \\(k=a+b=2\\gamma\\cosh(\\beta\\Delta/2)\\)，其唯一归一化解为\n\\[\np(t)=p_*+(p_{\\rm in}-p_*)e^{-kt},\\qquad\np_*=\\frac a{a+b}=\\frac1{1+e^{\\beta\\Delta}}.\n\\]\n故 \\(p_*/(1-p_*)=a/b=e^{-\\beta\\Delta}\\)，与Boltzmann详细平衡一致。\n(2) 内能 \\(U(t)=\\Delta p(t)\\)，能级不变所以外功 \\(W=0\\)，吸收热 \\(Q(t)=\\Delta[p(t)-p_{\\rm in}]\\)。系统熵为 \\(S(t)=-k_B[p\\ln p+(1-p)\\ln(1-p)]\\)，热浴熵变 \\(\\Delta S_b=-Q/T\\)。以 \\(D(p\\Vert p_*)=p\\ln(p/p_*)+(1-p)\\ln[(1-p)/(1-p_*)]\\) 展开，并利用 \\(\\ln[p_*/(1-p_*)]=-\\beta\\Delta\\)，恰得\n\\[\n\\Delta S_{\\rm tot}=S(t)-S(0)-Q/T\n=k_B[D(p_{\\rm in}\\Vert p_*)-D(p(t)\\Vert p_*)].\n\\]\n因此总熵是相对熵随动力学衰减所释放的非平衡自由能。\n(3) 直接求导得到\n\\[\n\\dot\\Sigma=k_B[a(1-p)-bp]\\ln\\frac{a(1-p)}{bp}.\n\\]\n令 \\(x=a(1-p),y=bp>0\\)，则 \\((x-y)\\ln(x/y)\\ge0\\)，端点概率用连续极限处理。靠近平衡令 \\(p=p_*+\\epsilon\\)，有 \\(x-y=-k\\epsilon\\) 且 \\(\\ln(x/y)=-k\\epsilon/(ab/k)+O(\\epsilon^2)\\)，故 \\(\\dot\\Sigma=k_Bk^3\\epsilon^2/(ab)+O(\\epsilon^3)\\propto e^{-2kt}\\)。若 \\(p_{\\rm in}=p_*\\)，则 \\(\\epsilon\\equiv0\\)，始终无净流与熵产生。\n(4) 平衡态条件转移概率 \\(P(1,t\\mid1,0)=p_*+(1-p_*)e^{-k|t|}\\)，故 \\(\\langle E(t)E(0)\\rangle=\\Delta^2p_*[p_*+(1-p_*)e^{-k|t|}]\\)，扣除 \\(\\langle E\\rangle^2\\) 得\n\\[\nC_E(t)=\\Delta^2p_*(1-p_*)e^{-k|t|}.\n\\]\n对 \\(U_*=\\Delta p_*\\) 求 \\(C_V=\\partial_TU_*=\nk_B(\\beta\\Delta)^2p_*(1-p_*)\\ge0\\)。当 \\(T\\to0\\) 热容指数趋零；\\(T\\to\\infty\\) 时 \\(C_V\\sim\\Delta^2/(4k_BT^2)\\)，关联时间为 \\(k^{-1}\\)，与主方程本征驰豫率吻合。\n"
+      }
+    },
+    "T070": {
+      "meta.json": {
+        "bytes": 684,
+        "git_blob": "e882943481b1fadbb23359e8073d823ff6192630",
+        "text": "{\n  \"id\": \"T070\",\n  \"topic\": \"热学\",\n  \"title\": \"灰色平行大气Eddington温度律、光学深度与辐射对流稳定判据\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 115,\n  \"tags\": [\n    \"灰大气辐射转移矩方程\",\n    \"Eddington闭合和边界条件\",\n    \"光学深度与光球压强\",\n    \"辐射温度梯度和对流稳定\"\n  ],\n  \"answer\": \"T^4(\\\\tau)=\\\\frac34T_{\\\\rm eff}^4(\\\\tau+2/3),\\\\quad P(\\\\tau)=g\\\\tau/\\\\kappa\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v4.1-round13-draft\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 926,
+        "git_blob": "722da24bfbde20525832658969f477c91f7fa377",
+        "text": "(1) 静态、平行平板、灰色局域热平衡大气，光学深度 \\(\\tau\\) 从顶部向下增加。净向上辐射通量 \\(F=\\sigma_{\\rm SB}T_{\\rm eff}^4\\) 不随深度变化，辐射场角矩满足 \\(H=F/(4\\pi)\\)、\\(dK/d\\tau=H\\)、Eddington闭合 \\(K=J/3\\)，顶部边界 \\(J(0)=2H\\)。求平均强度 \\(J(\\tau)\\)。\n(2) 在局域热平衡 \\(J=B=\\sigma_{\\rm SB}T^4/\\pi\\) 下推导灰大气温度律，求 \\(\\tau=0\\) 与光球 \\(\\tau=2/3\\) 的温度。\n(3) 若重力加速度 \\(g\\) 和质量吸收系数 \\(\\kappa\\) 均常数，气体静力学满足 \\(dP/d\\tau=g/\\kappa\\) 且顶部 \\(P(0)=0\\)。求 \\(P(\\tau)\\) 与辐射温度梯度 \\(\\nabla_{\\rm rad}=d\\ln T/d\\ln P\\)，同单原子理想气体绝热梯度 \\(2/5\\) 比较。\n(4) 独立从辐射扩散式 \\(F=(4\\sigma_{\\rm SB}/3)dT^4/d\\tau\\) 验证通量恒定，讨论深光学厚度 \\(\\tau\\gg1\\) 与 \\(\\tau\\lesssim1\\) 近似的适用性及边界常数的物理意义。\n"
+      },
+      "solution.tex": {
+        "bytes": 1699,
+        "git_blob": "5ccecd0068b4562c6d47df5da6dc04f6e5c44e95",
+        "text": "(1) 由 \\(K=J/3\\) 和 \\(dK/d\\tau=H\\) 得 \\(dJ/d\\tau=3H\\)。由于稳态净通量 \\(F\\) 常数，\\(H=F/(4\\pi)\\) 不变。积分得 \\(J(\\tau)=3H\\tau+C\\)，顶部Eddington边界 \\(J(0)=2H\\) 给 \\(C=2H\\)，故 \\(\\boxed{J=3H(\\tau+2/3)=3F(\\tau+2/3)/(4\\pi)}\\)。这个 \\(2/3\\) 由指定的表面角分布闭合给出，并非所有真实大气都精确相同。\n\n(2) 局域热平衡中积分Planck源函数为 \\(B=\\sigma_{\\rm SB}T^4/\\pi\\)，令 \\(J=B\\) 并代入上式，得到 \\(\\boxed{T^4(\\tau)=\\frac34T_{\\rm eff}^4(\\tau+2/3)}\\)。表面 \\(\\tau=0\\) 给 \\(T(0)=2^{-1/4}T_{\\rm eff}\\)，而 \\(\\tau=2/3\\) 时 \\(T=T_{\\rm eff}\\)。光球常取该光学深度，是灰色近似下的有效辐射层；不能把真实谱线形成深度一概固定为 \\(2/3\\)。\n\n(3) 静力平衡和光学深度关系给 \\(dP/d\\tau=g/\\kappa\\)，按题设顶部零压积分为 \\(\\boxed{P=g\\tau/\\kappa}\\)。由 \\(T^4\\propto\\tau+2/3\\) 得 \\(d\\ln T/d\\tau=1/[4(\\tau+2/3)]\\)，而 \\(d\\ln P/d\\tau=1/\\tau\\)，所以 \\(\\boxed{\\nabla_{\\rm rad}=\\tau/[4(\\tau+2/3)]<1/4}\\)。单原子理想气体 \\(\\nabla_{\\rm ad}=2/5\\)，因 \\(\\nabla_{\\rm rad}<\\nabla_{\\rm ad}\\)，在这些常数不透明度、无其他能量源假设下满足Schwarzschild局部对流稳定判据。\n\n(4) 直接微分温度律有 \\(dT^4/d\\tau=(3/4)T_{\\rm eff}^4\\)，代入扩散通量 \\(F=(4\\sigma_{\\rm SB}/3)dT^4/d\\tau\\) 恰得 \\(F=\\sigma_{\\rm SB}T_{\\rm eff}^4\\)，与最初给定通量一致。深层 \\(\\tau\\gg1\\) 时 \\(T\\propto\\tau^{1/4}\\)，扩散近似较好；近表面 \\(\\tau\\lesssim1\\) 辐射场明显各向异性，Eddington闭合仅是矩方法近似。若 \\(\\kappa\\) 随温度变化、存在散射非LTE或外来照射，温度律和对流结论都需重算。\n"
+      }
+    },
+    "T071": {
+      "meta.json": {
+        "bytes": 745,
+        "git_blob": "52850a08587ac3e24fd1ae5d9ba88d5be4043805",
+        "text": "{\n  \"id\": \"T071\",\n  \"topic\": \"热学\",\n  \"title\": \"守恒序参量Cahn–Hilliard相分离的最快增长模、界面孤子与耗散律\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 115,\n  \"tags\": [\n    \"Cahn–Hilliard守恒动力学\",\n    \"旋节增长谱\",\n    \"双阱界面tanh解\",\n    \"自由能Lyapunov耗散\"\n  ],\n  \"answer\": \"k_*=\\\\sqrt{-A/(2\\\\kappa)},\\\\quad\\\\lambda_{\\\\max}=MA^2/(4\\\\kappa),\\\\quad\\\\phi(x)=\\\\sqrt{-a/b}\\\\tanh\\\\!\\\\left(x\\\\sqrt{-a/(2\\\\kappa)}\\\\right)\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v4.3-round13-core-replacement\",\n  \"challenge_profile\": \"high-multistage-original-core\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 886,
+        "git_blob": "1563eac371ffd647cf6f9ffa6912a789f37db08f",
+        "text": "(1) 对守恒标量序参量 \\(\\phi(\\boldsymbol r,t)\\)，给定自由能 \\(F=\\int_\\Omega[a\\phi^2/2+b\\phi^4/4+\\kappa|\\nabla\\phi|^2/2]dV\\)，其中 \\(a<0,b,\\kappa>0\\)，边界周期或无通量。动力学为 \\(\\partial_t\\phi=M\\nabla^2\\mu\\)，迁移率 \\(M>0\\)。求化学势 \\(\\mu=\\delta F/\\delta\\phi\\)，证明总序参量守恒。\n(2) 围绕任意均匀态 \\(\\phi_0\\) 线性化，求平面扰动的完整增长率 \\(\\lambda(k)\\)；在不稳定区求临界波数、最快增长波数及最大增长率。\n(3) 对无限直线、无外场、共存的两相 \\(\\phi(\\pm\\infty)=\\pm\\sqrt{-a/b}\\)，求静态平面界面的精确剖面与界面厚度，利用一阶积分验证它满足Euler–Lagrange方程。\n(4) 计算界面相对体相的单位面积自由能（表面张力），再从动力学独立证明 \\(dF/dt\\le0\\)，说明均匀态线性增长与总自由能下降并不矛盾。\n"
+      },
+      "solution.tex": {
+        "bytes": 1697,
+        "git_blob": "97c3276de52447ce83b1d913dceebe662f9aa6a5",
+        "text": "(1) 对 \\(F\\) 变分并将梯度项分部积分，周期或自然边界消去表面项，得到\n\\[\n\\mu=a\\phi+b\\phi^3-\\kappa\\nabla^2\\phi.\n\\]\n因此 \\(\\partial_t\\phi=M\\nabla^2\\mu=-\\nabla\\cdot\\boldsymbol J\\)，其中 \\(\\boldsymbol J=-M\\nabla\\mu\\)。在周期边界或 \\(\\boldsymbol n\\cdot\\nabla\\mu=0\\) 下，\\(\\frac d{dt}\\int_\\Omega\\phi\\,dV=M\\int_{\\partial\\Omega}\\boldsymbol n\\cdot\\nabla\\mu\\,dS=0\\)；非守恒Allen–Cahn动力学不能代替此式。\n(2) 置 \\(\\phi=\\phi_0+\\eta e^{\\lambda t+i\\boldsymbol k\\cdot\\boldsymbol r}\\)，记 \\(A=a+3b\\phi_0^2\\)。一阶化学势为 \\((A+\\kappa k^2)\\eta\\)，故\n\\[\n\\lambda(k)=-Mk^2(A+\\kappa k^2).\n\\]\n仅当 \\(A<0\\) 时 \\(0<k<k_c=\\sqrt{-A/\\kappa}\\) 的模增长。对 \\(k^2\\) 求导得 \\(k_*=\\sqrt{-A/(2\\kappa)}\\)，代回 \\(\\lambda_{\\max}=MA^2/(4\\kappa)\\)；\\(k=0\\) 严格中性正是总序参量守恒。\n(3) 静态共存两相令 \\(\\mu=0\\)，满足 \\(\\kappa\\phi''=a\\phi+b\\phi^3\\)。乘 \\(\\phi'\\) 积分并利用远场 \\(\\phi_b=\\sqrt{-a/b}\\)、\\(\\phi'(\\infty)=0\\)，得\n\\[\n\\frac{\\kappa}{2}(\\phi')^2=\\frac b4(\\phi^2-\\phi_b^2)^2.\n\\]\n分离变量可得 \\(\\phi(x)=\\phi_b\\tanh(x/\\ell)\\)，\\(\\ell=\\sqrt{2\\kappa/(-a)}\\)。直接求导可见 \\(\\kappa\\phi''=a\\phi+b\\phi^3\\)，且两端达到稳定极小。\n(4) 利用一阶积分，界面过剩自由能密度为 \\(\\kappa(\\phi')^2\\)。因此\n\\[\n\\sigma=\\kappa\\frac{\\phi_b^2}{\\ell^2}\\int_{-\\infty}^{\\infty}{\\rm sech}^4(x/\\ell)\\,dx\n=\\frac{4\\kappa\\phi_b^2}{3\\ell}\n=\\frac{2\\sqrt2}{3}\\frac{\\sqrt\\kappa(-a)^{3/2}}b.\n\\]\n另一方面 \\(\\dot F=\\int\\mu\\dot\\phi\\,dV=M\\int\\mu\\nabla^2\\mu\\,dV=-M\\int|\\nabla\\mu|^2dV\\le0\\)。不稳定均匀态的扰动增长正是朝更低自由能的两相态演化，并不违反Lyapunov耗散。\n"
+      }
+    },
+    "T072": {
+      "meta.json": {
+        "bytes": 671,
+        "git_blob": "00ff03be0c873d38871bc67388def36919f19b00",
+        "text": "{\n  \"id\": \"T072\",\n  \"topic\": \"热学\",\n  \"title\": \"有限区间布朗首达时间的后向方程、全分布谱与二阶矩\",\n  \"tags\": [\n    \"Einstein扩散关系\",\n    \"首达时间后向Kolmogorov方程\",\n    \"吸收边界谱展开\",\n    \"Laplace变换与时间涨落\"\n  ],\n  \"answer\": \"\\\\mathbb E_x\\\\tau=x(L-x)/(2D),\\\\quad \\\\mathrm{Var}_{L/2}\\\\tau=L^4/(96D^2)\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 115,\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v5-round14-draft\",\n  \"challenge_profile\": \"high-multistage-original-core\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 711,
+        "git_blob": "fb60ded5e2edbe62bcb028940df5a7d320a23c5e",
+        "text": "(1) 过阻尼布朗粒子满足 \\(dX_t=\\sqrt{2D}\\,dW_t\\)，在区间 \\((0,L)\\) 两端首次到达即吸收，初始 \\(X_0=x\\)。由后向方程推导平均首达时间 \\(m_1(x)=\\mathbb E_x\\tau\\)，并求其最大值。\n(2) 定义 \\(F_s(x)=\\mathbb E_x e^{-s\\tau}\\)（\\(s>0\\)）。写出边值问题并解出双曲函数闭式；由 \\(s\\to0\\) 展开独立复核第一问。\n(3) 由扩散核的正弦本征展开求生存概率 \\(S(t|x)=P_x(\\tau>t)\\)；证明 \\(m_1(x)=\\int_0^\\infty S(t|x)\\,dt\\)，解释长时间指数尾的特征时间。\n(4) 利用后向矩递推求 \\(m_2(x)=\\mathbb E_x\\tau^2\\) 及中点方差。引入阻力 \\(\\zeta\\) 和温度 \\(T\\) 时，以 \\(D=k_BT/\\zeta\\) 检验温度依赖与量纲。\n"
+      },
+      "solution.tex": {
+        "bytes": 1338,
+        "git_blob": "5126f698aa89ee14c50618719ff74cfd831bbfa6",
+        "text": "(1) 生成元 \\(\\mathcal L=D\\partial_x^2\\)。首达时间Dynkin公式给 \\(Dm_1''=-1\\)，吸收边界 \\(m_1(0)=m_1(L)=0\\)。积分得\n\\[\nm_1(x)=\\frac{x(L-x)}{2D},\\qquad \\max m_1=\\frac{L^2}{8D}\\quad(x=L/2).\n\\]\n(2) Feynman--Kac后向边值问题为 \\(DF_s''=sF_s,\\ F_s(0)=F_s(L)=1\\)。以中心对称性去掉奇双曲项：\n\\[\nF_s(x)=\\frac{\\cosh(\\sqrt{s/D}(x-L/2))}{\\cosh(\\sqrt{s/D}L/2)}.\n\\]\n展开 \\(\\cosh z=1+z^2/2+O(z^4)\\)，得 \\(F_s=1-sx(L-x)/(2D)+O(s^2)\\)，因此 \\(-F_s'(0)=m_1\\) 与第一问一致。\n(3) Dirichlet热核\n\\[\np(y,t|x)=\\frac2L\\sum_{n\\ge1}\\sin\\frac{n\\pi x}{L}\\sin\\frac{n\\pi y}{L}e^{-Dn^2\\pi^2t/L^2}.\n\\]\n对 \\(y\\) 积分，仅奇数 \\(n\\) 留下：\n\\[\nS(t|x)=\\frac4\\pi\\sum_{\\substack{n\\ge1\\\\n\\ {\\rm odd}}}\\frac{\\sin(n\\pi x/L)}n e^{-Dn^2\\pi^2t/L^2}.\n\\]\n非负随机变量尾积分恒等式给 \\(E\\tau=\\int_0^\\infty P(\\tau>t)dt\\)，与后向方程唯一解一致。长时尺度为 \\(L^2/(\\pi^2D)\\)。\n(4) Dynkin递推 \\(Dm_2''=-2m_1= -x(L-x)/D\\)，边界仍为零。两次积分：\n\\[\nm_2(x)=\\frac{x^4-2Lx^3+L^3x}{12D^2}.\n\\]\n中点 \\(m_2=5L^4/(192D^2)\\)，而 \\(m_1^2=L^4/(64D^2)\\)，故 \\(\\operatorname{Var}\\tau=L^4/(96D^2)>0\\)。\\(D=k_BT/\\zeta\\) 的量纲为 \\(L^2/t\\)，平均首达时间随 \\(T^{-1}\\)、方差随 \\(T^{-2}\\) 缩放；要求摩擦为常数、温度均匀且惯性弛豫时间远短于首达时间。\n"
+      }
+    },
+    "T073": {
+      "meta.json": {
+        "bytes": 672,
+        "git_blob": "a0a84c7a5155d5bd12fc964bd09484d0c7a64fb3",
+        "text": "{\n  \"id\": \"T073\",\n  \"topic\": \"热学\",\n  \"title\": \"稀薄理想量子气体的第二维里系数、量子统计压强与熵修正\",\n  \"tags\": [\n    \"巨正则量子统计\",\n    \"玻色费米符号反转\",\n    \"低逸度级数反演\",\n    \"第二维里系数与熵修正\"\n  ],\n  \"answer\": \"\\\\frac{P}{nk_BT}=1-\\\\eta\\\\frac{n\\\\lambda_T^3}{2^{5/2}}+O((n\\\\lambda_T^3)^2)\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 115,\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v5-round14-draft\",\n  \"challenge_profile\": \"high-multistage-original-core\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 788,
+        "git_blob": "ed789547680b2d8ec2fdd28df34f65cae82cfad5",
+        "text": "(1) 三维均匀非相对论无相互作用单组分量子气体，粒子质量 \\(m\\)，自旋简并取1，热波长 \\(\\lambda_T=h/\\sqrt{2\\pi mk_BT}\\)。令 \\(\\eta=+1\\) 表示玻色、\\(\\eta=-1\\) 表示费米，逸度 \\(z=e^{\\beta\\mu}\\ll1\\)。从占据数的几何级数推导 \\(P\\lambda_T^3/(k_BT)\\) 与 \\(n\\lambda_T^3\\) 的前两阶展开。\n(2) 消去逸度求第二维里系数 \\(B_2(T)\\)，解释玻色与费米气体对经典压强的相反偏离，并给出有效稀薄判据。\n(3) 由巨正则结果求到一阶 \\(x=n\\lambda_T^3\\) 的化学势和每粒子Helmholtz自由能，独立验证 \\(P=n^2\\partial(F/N)/\\partial n|_T\\)。\n(4) 求内能密度与每粒子熵的首个量子修正，检验 \\(T\\to\\infty\\) 的经典极限及温度依赖，说明何时低逸度展开失效。\n"
+      },
+      "solution.tex": {
+        "bytes": 1362,
+        "git_blob": "e56bda7e7df1a9b617b8063ef3c66669a72fd1a9",
+        "text": "(1) 占据数 \\(f(\\epsilon)=1/(z^{-1}e^{\\beta\\epsilon}-\\eta)=\\sum_{\\ell\\ge1}\\eta^{\\ell-1}z^\\ell e^{-\\ell\\beta\\epsilon}\\)。对三维动量高斯积分，得到\n\\[\nn\\lambda_T^3=z+\\eta z^2/2^{3/2}+O(z^3),\\quad\nP\\lambda_T^3/(k_BT)=z+\\eta z^2/2^{5/2}+O(z^3).\n\\]\n压力公式也可由 \\(\\ln\\Xi=(V/\\lambda_T^3)\\sum_{\\ell\\ge1}\\eta^{\\ell-1}z^\\ell/\\ell^{5/2}\\) 求得。\n(2) 设 \\(x=n\\lambda_T^3\\)，反演 \\(z=x-\\eta x^2/2^{3/2}+O(x^3)\\)。代回压力得\n\\[\nP=nk_BT[1-\\eta x/2^{5/2}+O(x^2)],\\quad B_2=-\\eta\\lambda_T^3/2^{5/2}.\n\\]\n玻色交换降低压强，费米排斥提高压强；这里无真实粒子间相互作用。要求 \\(x\\ll1\\)，不仅仅是宏观密度小。\n(3) \\(\\mu=k_BT\\ln z=k_BT[\\ln x-\\eta x/2^{3/2}+O(x^2)]\\)。用 \\(F=\\mu N-PV\\) 得\n\\[\n\\frac F{Nk_BT}=\\ln x-1-\\eta\\frac{x}{2^{5/2}}+O(x^2).\n\\]\n在固定 \\(T\\) 下 \\(x\\propto n\\)，所以 \\(n^2\\partial(F/N)/\\partial n=nk_BT[1-\\eta x/2^{5/2}]\\)，与第二问独立吻合。\n(4) 自由粒子动能满足 \\(U=3PV/2\\)，因此 \\(U/N=\\frac32k_BT[1-\\eta x/2^{5/2}]+O(x^2)\\)。熵由 \\(S=(U+PV-\\mu N)/T\\) 得\n\\[\n\\frac S{Nk_B}=\\frac52-\\ln x-\\eta\\frac{x}{2^{7/2}}+O(x^2).\n\\]\n固定 \\(n\\) 时 \\(x\\propto T^{-3/2}\\)，故高温量子修正消失，恢复Sackur--Tetrode形式（无内部简并）。低温或高密使 \\(x\\gtrsim1\\)，玻色凝聚或费米简并须用完整分布，截断维里级数无效。\n"
+      }
+    },
+    "T074": {
+      "meta.json": {
+        "bytes": 709,
+        "git_blob": "e805a3cefe9ff924f9e770d79e69f321b78d4dab",
+        "text": "{\n  \"id\": \"T074\",\n  \"topic\": \"热学\",\n  \"title\": \"Schwarzschild黑洞的负热容、Stefan近似蒸发与三次寿命标度\",\n  \"tags\": [\n    \"Hawking温度与黑洞熵\",\n    \"引力系统负热容\",\n    \"辐射能量守恒\",\n    \"黑洞蒸发时间与量子引力边界\"\n  ],\n  \"answer\": \"C=-\\\\frac{8\\\\pi k_BG M^2}{\\\\hbar c},\\\\qquad t_{\\\\rm evap}\\\\simeq\\\\frac{5120\\\\pi G^2M_0^3}{\\\\epsilon\\\\hbar c^4}\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 115,\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v5-round14-draft\",\n  \"challenge_profile\": \"high-multistage-original-core\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 834,
+        "git_blob": "4b3783b3a7a0956f39ec1fc4e0124b44be915384",
+        "text": "(1) 非旋转无电荷黑洞的Hawking温度 \\(T_H=\\hbar c^3/(8\\pi GMk_B)\\)。用热力学第一定律 \\(d(Mc^2)=T_HdS\\) 推导熵 \\(S(M)\\)，选择 \\(S(0)=0\\)，并与视界面积 \\(A_H=16\\pi G^2M^2/c^4\\) 联系。\n(2) 求定体参数热容 \\(C=d(Mc^2)/dT_H\\) 的符号与质量标度，解释黑洞向冷环境辐射时温度为何反而上升，以及不能直接套用普通正热容物体稳定性的原因。\n(3) 将黑洞近似为灰度因子常数 \\(\\epsilon>0\\) 的Stefan辐射体 \\(P=\\epsilon\\sigma A_HT_H^4\\)，其中 \\(\\sigma=\\pi^2k_B^4/(60\\hbar^3c^2)\\)。推导 \\(P(M)\\) 与质量损失方程，严格求从 \\(M_0\\) 到 \\(M\\) 的时间。\n(4) 在此近似下求蒸发总时间及 \\(T_H(t)\\) 的临终标度，检验量纲，并说明灰体谱、物种阈值与Planck尺度为何使末期公式不能视作精确预测。\n"
+      },
+      "solution.tex": {
+        "bytes": 1221,
+        "git_blob": "5966c71f6d8a3150918106ce4489840c7608c8ab",
+        "text": "(1) \\(dS=d(Mc^2)/T_H=(8\\pi Gk_B/(\\hbar c))M\\,dM\\)，积分得\n\\[\nS(M)=\\frac{4\\pi k_BG M^2}{\\hbar c}\n=\\frac{k_Bc^3A_H}{4G\\hbar}.\n\\]\n熵与视界面积成正比而非体积；积分常数由给定参考条件固定。\n(2) \\(dT_H/dM=-\\hbar c^3/(8\\pi Gk_BM^2)\\)，因此\n\\[\nC=\\frac{d(Mc^2)}{dT_H}=-\\frac{8\\pi Gk_BM^2}{\\hbar c}<0.\n\\]\n黑洞失去质量时 \\(T_H\\propto M^{-1}\\) 上升。孤立自引力体系的能量与熵约束不同于普通短程相互作用正则热浴；负热容说明与无限恒温浴接触不稳定，不等于违反第一定律。\n(3) 代入面积、温度和给定Stefan常数：\n\\[\nP=\\epsilon\\frac{\\hbar c^6}{15360\\pi G^2M^2},\\qquad\n\\frac{dM}{dt}=-\\frac{P}{c^2}=-\\frac{\\epsilon\\hbar c^4}{15360\\pi G^2M^2}=-\\frac{D}{M^2}.\n\\]\n积分 \\(M(t)^3=M_0^3-3Dt\\)，故 \\(t(M)=\\frac{M_0^3-M^3}{3D}\\)。\n(4) 形式蒸发寿命\n\\[\nt_{\\rm evap}=\\frac{M_0^3}{3D}=\\frac{5120\\pi G^2M_0^3}{\\epsilon\\hbar c^4},\n\\quad T_H(t)=\\frac{\\hbar c^3}{8\\pi Gk_B(M_0^3-3Dt)^{1/3}}.\n\\]\n临近形式终点 \\(T_H\\propto(t_{\\rm evap}-t)^{-1/3}\\)，\\([G^2M^3/(\\hbar c^4)]=t\\)。实际辐射存在频率依赖灰体因子与粒子物种变化，且 \\(M\\) 逼近Planck质量时半经典近似失效，不能断言温度真实发散。\n"
+      }
+    },
+    "T075": {
+      "meta.json": {
+        "bytes": 729,
+        "git_blob": "00f7b539d79c6eb1b49f46aeee0f15610a411561",
+        "text": "{\n  \"id\": \"T075\",\n  \"topic\": \"热学\",\n  \"title\": \"一维Tonks硬杆气体的严格配分函数、可压缩性与绝热声速\",\n  \"tags\": [\n    \"不可穿越硬杆构型积分\",\n    \"精确状态方程与维里系数\",\n    \"大正则粒子数涨落\",\n    \"绝热导数与声速\"\n  ],\n  \"answer\": \"P=\\\\frac{Nk_BT}{L-Na},\\\\quad \\\\frac{\\\\operatorname{Var}N}{\\\\langle N\\\\rangle}=(1-na)^2,\\\\quad c_s^2=\\\\frac{3k_BT}{m(1-na)^2}\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 115,\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v5-round14-draft\",\n  \"challenge_profile\": \"high-multistage-original-core\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 931,
+        "git_blob": "572801401b38a8e84d1caac571a60f3e6215e363",
+        "text": "(1) \\(N\\) 个质量 \\(m\\) 的不可穿透硬杆，每杆长度 \\(a>0\\)，置于长度 \\(L>Na\\) 的一维盒内，作经典正则系综，不计端点势能。热德布罗意波长为 \\(\\lambda_T=h/\\sqrt{2\\pi mk_BT}\\)。通过排序杆左端位置并引入空隙坐标，严格求正则配分函数 \\(Z_N(L,T)\\)，说明 Gibbs 因子为何不再额外重复。\n(2) 取热力学极限 \\(n=N/L,\\ 0<na<1\\)，求压力、Helmholtz自由能、化学势及第二至第三维里系数；检验 \\(a\\to0\\) 的理想气体极限。\n(3) 求 \\(S,U,C_V\\)，推导等温压缩率 \\(\\kappa_T\\) 及与大正则粒子数相对涨落之间的精确关系，讨论拥挤极限 \\(na\\to1^-\\)。\n(4) 对局部可逆绝热一维流体，保持每粒子的熵不变；推导 \\(T\\) 与每粒子可用长度的绝热关系，并由 \\(c_s^2=(\\partial P/\\partial\\rho_m)_s\\)、\\(\\rho_m=mn\\) 求声速。检查其稀薄极限和近密堆积的物理适用性。\n"
+      },
+      "solution.tex": {
+        "bytes": 1859,
+        "git_blob": "b8ed61765c085e6c9ce38f2ce1025aa6093d1daa",
+        "text": "(1) 排序粒子左端 \\(0\\le x_1,\\ x_{j+1}\\ge x_j+a,\\ x_N\\le L-a\\)。定义 \\(y_j=x_j-(j-1)a\\)，则 \\(0\\le y_1\\le\\cdots\\le y_N\\le L-Na\\)，有序单纯形体积 \\((L-Na)^N/N!\\)。对于不可分辨粒子，只在一个排序区积分已包含 Gibbs 因子；动量积分给 \\(\\lambda_T^{-N}\\)，于是\n\\[\nZ_N=\\frac{(L-Na)^N}{N!\\lambda_T^N}.\n\\]\n(2) 由 \\(P=k_BT\\,\\partial_L\\ln Z_N=Nk_BT/(L-Na)\\)，即\n\\[\n\\frac{P}{nk_BT}=\\frac1{1-na}=1+na+(na)^2+\\cdots,\\quad B_2=a,\\ B_3=a^2.\n\\]\nStirling近似给\n\\[\nF=Nk_BT\\!\\left[\\ln\\frac{n\\lambda_T}{1-na}-1\\right]+o(N).\n\\]\n在固定 \\(L,T\\) 下微分 \\(N\\)，\n\\[\n\\mu=k_BT\\!\\left[\\ln\\frac{n\\lambda_T}{1-na}+\n\\frac{na}{1-na}\\right].\n\\]\n\\(a\\to0\\) 时恢复一维理想气体表达式。\n(3) 因相互作用仅是零或无限的硬核约束，\\(U=-\\partial_\\beta\\ln Z_N=Nk_BT/2\\)，\\(C_V=Nk_B/2\\)，\n\\[\nS=Nk_B\\left[\\ln\\frac{1-na}{n\\lambda_T}+\\frac32\\right]+o(N).\n\\]\n\\((\\partial P/\\partial n)_T=k_BT/(1-na)^2\\)，故\n\\[\n\\kappa_T=\\frac{1}{n(\\partial P/\\partial n)_T}\n=\\frac{(1-na)^2}{nk_BT}.\n\\]\n涨落响应关系 \\(\\mathrm{Var}N=k_BT(\\partial\\langle N\\rangle/\\partial\\mu)_{T,L}\\) 结合 Gibbs--Duhem \\(dP=n\\,d\\mu\\) 得\n\\(\\mathrm{Var}N/\\langle N\\rangle=nk_BT\\kappa_T=(1-na)^2\\)。近密堆积时压强发散而涨落受硬核抑制。\n(4) 每粒子熵 \\(s/k_B=\\ln[(1/n-a)/\\lambda_T]+3/2\\)，因 \\(\\lambda_T\\propto T^{-1/2}\\)，绝热有\n\\[\nT(1/n-a)^2=\\mathrm{const}.\n\\]\n沿绝热线 \\(P=k_BT/(1/n-a)\\propto(1/n-a)^{-3}\\)，所以\n\\[\n\\left(\\frac{\\partial P}{\\partial n}\\right)_s=\\frac{3k_BT}{(1-na)^2},\n\\qquad c_s^2=\\frac{3k_BT}{m(1-na)^2}.\n\\]\n稀薄极限得到一维单自由度气体 \\(\\gamma=C_P/C_V=3\\) 的 \\(c_s^2=3k_BT/m\\)。该结果是局部热平衡下的热力学声速；孤立严格一维可积硬杆体系未必能以通常流体方式局部弛豫，靠近密堆积还会触及微观碰撞和连续介质限制。\n"
+      }
+    },
+    "T076": {
+      "meta.json": {
+        "bytes": 709,
+        "git_blob": "68a49757750346e5f5737ff3828c6895f393d095",
+        "text": "{\n  \"id\": \"T076\",\n  \"topic\": \"热学\",\n  \"title\": \"均温灰体辐射板的角向输运、指数积分通量与体积能量封闭\",\n  \"tags\": [\n    \"无散射辐射输运方程\",\n    \"光学厚度和指数积分\",\n    \"薄厚极限与灰体出射率\",\n    \"局部辐射冷却积分恒等式\"\n  ],\n  \"answer\": \"F_{\\\\rm face}=\\\\pi B[1-2E_3(\\\\tau_0)],\\\\quad \\\\int_0^L4\\\\pi\\\\kappa(B-J)\\\\,dz=2F_{\\\\rm face}\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 115,\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v5-round14-draft\",\n  \"challenge_profile\": \"high-multistage-original-core\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 1151,
+        "git_blob": "db2067117710d07ca4da84ef7165cb015801e681",
+        "text": "(1) 温度均匀为 \\(T\\) 的无限大平板，厚度 \\(L\\)，灰体吸收系数 \\(\\kappa>0\\) 为常数且无散射。其频率积分后的局域热平衡源函数（每立体角辐亮度）为 \\(B=\\sigma_{\\rm SB}T^4/\\pi\\)。两侧均为真空且无入射辐射，令 \\(\\mu=\\cos\\vartheta\\)、\\(z\\in[0,L]\\)。从 \\(\\mu\\,dI/dz=\\kappa(B-I)\\) 推导向上与向下的定常辐亮度随位置的精确表达式。\n(2) 令总光学厚度 \\(\\tau_0=\\kappa L\\)，定义 \\(E_n(x)=\\int_1^\\infty e^{-xt}t^{-n}\\,dt\\)。从半球角积分求每个表面的向外辐射通量 \\(F_{\\rm face}\\)，给出 \\(\\tau_0\\ll1\\) 与 \\(\\tau_0\\gg1\\) 的渐近，并解释薄板在无散射时为何不立即呈完全黑体。\n(3) 定义角平均 \\(J(z)=(4\\pi)^{-1}\\int I(z,\\Omega)\\,d\\Omega\\)。求 \\(J(z)\\)，从输运方程导出局部辐射净冷却率 \\(q(z)=4\\pi\\kappa[B-J(z)]\\)，证明其为非负并关于板中面对称。\n(4) 不用逐角穿透率而直接积分上一问的体冷却率，证明其等于两表面的总能量出流率 \\(2F_{\\rm face}\\)。核验 \\(\\tau_0\\to0\\) 的体功率标度、无限光学深度极限及灰体局域热平衡模型的适用条件。\n"
+      },
+      "solution.tex": {
+        "bytes": 1765,
+        "git_blob": "c5f1f3dde73e2f3b40531199db0357ca84a087ce",
+        "text": "(1) 对 \\(\\mu>0\\) 光线从 \\(z=0\\) 进入板内，边界 \\(I(0,\\mu)=0\\)，输运方程积分给\n\\[\nI(z,\\mu)=B(1-e^{-\\kappa z/\\mu}),\\qquad\\mu>0.\n\\]\n对 \\(\\mu<0\\)，令 \\(u=-\\mu>0\\) 并以 \\(z=L\\) 为真空入射边界，有\n\\[\nI(z,-u)=B(1-e^{-\\kappa(L-z)/u}),\\quad u>0.\n\\]\n它们满足两边真空无入射条件；不能将外侧的出射场误设为零。\n(2) 上表面半球出射辐射通量\n\\[\nF_{\\rm face}=2\\pi\\int_0^1\\mu I(L,\\mu)\\,d\\mu\n=2\\pi B\\!\\left[\\frac12-\\int_0^1\\mu e^{-\\tau_0/\\mu}\\,d\\mu\\right].\n\\]\n代换 \\(t=1/\\mu\\)，第二积分正是 \\(E_3(\\tau_0)\\)，故\n\\[\nF_{\\rm face}=\\pi B[1-2E_3(\\tau_0)].\n\\]\n\\(E_3(0)=1/2,\\ E_3'(0)=-E_2(0)=-1\\)，所以薄板 \\(F_{\\rm face}=2\\pi B\\tau_0+o(\\tau_0)\\)；厚板 \\(E_3(\\tau_0)\\to0\\)，故 \\(F_{\\rm face}\\to\\pi B=\\sigma_{\\rm SB}T^4\\)。小光学厚度对应低吸收率与低发射率。\n(3) 角平均为\n\\[\nJ(z)=\\frac B2\\int_0^1\\left[2-e^{-\\kappa z/u}-e^{-\\kappa(L-z)/u}\\right]du\n=B\\left[1-\\frac{E_2(\\kappa z)+E_2(\\kappa(L-z))}{2}\\right].\n\\]\n角积分输运方程给 \\(\\partial_zF=4\\pi\\kappa(B-J)\\)，因此\n\\[\nq(z)=2\\pi\\kappa B[E_2(\\kappa z)+E_2(\\kappa(L-z))]\\ge0.\n\\]\n由于 \\(E_2(x)\\ge0\\) 且两项互换，冷却率关于 \\(L/2\\) 对称；靠近表面逃逸概率较高，净冷却较强。\n(4) 由于 \\(dE_3(x)/dx=-E_2(x)\\)，\n\\[\n\\int_0^Lq(z)\\,dz\n=4\\pi B\\int_0^{\\tau_0}E_2(u)\\,du\n=4\\pi B[E_3(0)-E_3(\\tau_0)]\n=2\\pi B[1-2E_3(\\tau_0)]=2F_{\\rm face}.\n\\]\n薄板体散热 \\(\\sim4\\pi B\\kappa L\\)，厚板总散热趋 \\(2\\pi B\\)（单位面积）；大多数深层体辐射相互抵消，最终由表面逃逸层贡献通量。灰色、无散射、均温LTE及稳态均为前提；真实不透明材料有频率依赖吸收，温度随深度改变时须联立能量方程，不能把本式当成普遍热平衡解。\n"
+      }
+    },
+    "T077": {
+      "meta.json": {
+        "bytes": 729,
+        "git_blob": "3f0898f44298283000643ab874bc57d35c265a43",
+        "text": "{\n  \"id\": \"T077\",\n  \"topic\": \"热学\",\n  \"title\": \"二维电中性Dirac费米气的热激发、量子电容与共形状态方程\",\n  \"tags\": [\n    \"线性色散二维费米态密度\",\n    \"Fermi积分和Riemann zeta函数\",\n    \"电中性载流子量子电容\",\n    \"缩放压强与熵热容\"\n  ],\n  \"answer\": \"u=\\\\frac{3g\\\\zeta(3)}{2\\\\pi(\\\\hbar v)^2}(k_BT)^3,\\\\quad P=u/2,\\\\quad\\\\chi=\\\\frac{g\\\\ln2}{\\\\pi(\\\\hbar v)^2}k_BT\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 115,\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v5-round14-draft\",\n  \"challenge_profile\": \"high-multistage-original-core\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 1168,
+        "git_blob": "162aa567d6cad7ebe2172a1658cd749f5334639b",
+        "text": "(1) 非相互作用二维Dirac粒子具有对称的导带和价带 \\(E_\\pm(\\boldsymbol k)=\\pm\\hbar v|\\boldsymbol k|\\)，速度常数 \\(v>0\\)、内部简并度 \\(g\\)。以中性化满价带为能量零参考，温度 \\(T>0\\)、化学势 \\(\\mu_{\\rm ch}=0\\) 时，电子与空穴热激发彼此对称。求每单位面积正能量态密度 \\(D(E)\\)、热电子数密度 \\(n_e\\)、热空穴 \\(n_h\\)。\n(2) 通过显式积分 \\( \\int_0^\\infty x^2/(e^x+1)\\,dx=3\\zeta(3)/2\\)，求相对于填满价带的总内能密度 \\(u(T)\\) 和定面积热容 \\(c_A=(\\partial u/\\partial T)_A\\)，核对低温标度与量纲。\n(3) 由线性色散的尺度变换或巨配分函数，证明热激发压力 \\(P=u/2\\)，求熵面密度 \\(s\\)。解释这不是三维理想气体 \\(P=2u/3\\)，并检验 \\(T\\to0\\) 的电中性基态极限。\n(4) 允许化学势施加小偏移 \\(\\mu_{\\rm ch}\\)，写净电荷相关粒子数 \\(n_{\\rm net}=n_e-n_h\\) 的积分表达式。求零化学势的静态压缩响应 \\(\\chi=\\partial n_{\\rm net}/\\partial\\mu_{\\rm ch}|_0\\) 和量子电容面密度 \\(C_Q=e^2\\chi\\)，说明该非零热量子电容与零温中性点的区别及忽略相互作用的边界。\n"
+      },
+      "solution.tex": {
+        "bytes": 1725,
+        "git_blob": "1f6f2ce17de5dcba82e60dddcf10c01f00126df4",
+        "text": "(1) 二维每单位面积动量态数为 \\(g\\,d^2k/(2\\pi)^2\\)。色散 \\(E=\\hbar v k\\) 给\n\\[\nD(E)=\\frac{gE}{2\\pi(\\hbar v)^2},\\qquad E>0.\n\\]\n化学势零点的占据 \\(f(E)=[e^{E/k_BT}+1]^{-1}\\)，价带空穴的占据同为 \\(f(E)\\)，故\n\\[\nn_e=n_h=\\int_0^\\infty D(E)f(E)\\,dE\n=\\frac{g(k_BT)^2}{2\\pi(\\hbar v)^2}\\frac{\\pi^2}{12}\n=\\frac{g\\pi(k_BT)^2}{24(\\hbar v)^2}.\n\\]\n(2) 导带电子与价带空穴的正激发能量相同，两者合计\n\\[\nu=2\\int_0^\\infty ED(E)f(E)\\,dE\n=\\frac{g(k_BT)^3}{\\pi(\\hbar v)^2}\\int_0^\\infty\\frac{x^2}{e^x+1}\\,dx.\n\\]\n用展开 \\((e^x+1)^{-1}=\\sum_{n\\ge1}(-1)^{n-1}e^{-nx}\\)，积分每项 \\(2/n^3\\)，得到 \\(2(1-2^{-2})\\zeta(3)=3\\zeta(3)/2\\)。因此\n\\[\nu=\\frac{3g\\zeta(3)}{2\\pi(\\hbar v)^2}(k_BT)^3,\\qquad c_A=\\frac{3u}{T}.\n\\]\n\\([u]=\\mathrm{J/m^2}\\)，低温 \\(c_A\\propto T^2\\)。\n(3) 对任一占据模，线性色散产生的微观压力张量迹等于 \\(u\\)；二维旋转对称使 \\(P_x=P_y=P\\)，故 \\(2P=u\\)。也可由 \\(F=-k_BT\\ln\\mathcal Z\\) 对面积作尺度微分得到\n\\[\nP=u/2,\\qquad s=(u+P-\\mu_{\\rm ch} n_{\\rm net})/T\\big|_{\\mu_{\\rm ch}=0}\n=\\frac{3u}{2T}.\n\\]\n二维一次齐次色散与三维二次色散的维里恒等式不同。\\(T\\to0\\) 时相对于填满价带的 \\(n_e,n_h,u,P,s\\to0\\)。\n(4) 一般\n\\[\nn_{\\rm net}=\\int_0^\\infty D(E)\\bigl[f(E-\\mu_{\\rm ch})-f(E+\\mu_{\\rm ch})\\bigr]\\,dE.\n\\]\n在 \\(\\mu_{\\rm ch}=0\\) 微分并分部，\n\\[\n\\chi=2\\int_0^\\infty D(E)[-f'(E)]\\,dE\n=\\frac{g}{\\pi(\\hbar v)^2}\\int_0^\\infty f(E)\\,dE\n=\\frac{g k_BT\\ln2}{\\pi(\\hbar v)^2}.\n\\]\n于是 \\(C_Q=e^2\\chi\\)（单位 \\(\\mathrm{F/m^2}\\)）。有限温度热激发填充中性Dirac点附近的态；零温极限 \\(\\chi\\to0\\)，但真实材料的无序、库仑交换、速度重整化会改变响应。\n"
+      }
+    },
+    "T078": {
+      "meta.json": {
+        "bytes": 737,
+        "git_blob": "3b7c815123f287a05bb55f10709395c6960c1307",
+        "text": "{\n  \"id\": \"T078\",\n  \"topic\": \"热学\",\n  \"title\": \"有限错误率二态存储器的可逆Landauer擦除、热交换与自由能界\",\n  \"tags\": [\n    \"二态配分函数与相对自由能\",\n    \"准静态偏置操纵\",\n    \"有限错误率擦除功\",\n    \"Shannon熵和热力学第一定律\"\n  ],\n  \"answer\": \"W_{\\\\rm rev}(\\\\Delta)=k_BT\\\\ln\\\\frac{2}{1+e^{-\\\\Delta/(k_BT)}}=k_BT\\\\ln[2(1-p_{\\\\rm err})],\\\\quad W_{\\\\infty}=k_BT\\\\ln2\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 115,\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v5-round14-draft\",\n  \"challenge_profile\": \"high-multistage-original-core\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 1103,
+        "git_blob": "20a414798cdd7b8c1b4aeb8082c912aa8daa84fc",
+        "text": "(1) 一个与温度 \\(T>0\\) 大热库接触的经典二态存储器处于热平衡，状态 \\(0,1\\) 能量分别为 \\(0,\\Delta\\ge0\\)，初始 \\(\\Delta=0\\)。求配分函数 \\(Z(\\Delta)\\)、平衡出错态概率 \\(p_1\\)、Helmholtz自由能 \\(F(\\Delta)\\)、平均内能 \\(U(\\Delta)\\)。\n(2) 外部极缓慢升高 \\(\\Delta\\) 到指定正值，对此可逆等温过程积分实际广义功 \\(\\delta W=p_1\\,d\\Delta\\)，导出有限终态错误率 \\(p_{\\rm err}=p_1(\\Delta)\\) 的最小可逆功。求 \\(\\Delta\\to\\infty\\) 的Landauer界，注意若不闭合协议，终态有不同能级。\n(3) 求初态和有限终态Shannon熵，使用 \\(Q=T\\Delta S\\) 核算环境吸收的热量及 \\(\\Delta U=W+Q\\) 第一律。证明 \\(\\Delta\\to\\infty\\) 时 \\(Q=-k_BT\\ln2\\)、\\(U\\to0\\)，解释可逆极限与现实有限时间不可逆耗散的区别。\n(4) 讨论当允许错误率 \\(0<p_{\\rm err}<1/2\\) 时，为保证错误率至少小于阈值 \\(\\epsilon\\) 应取的最小能级差 \\(\\Delta_{\\min}\\)。推导其随 \\(\\epsilon\\to0\\) 的对数增长，并区分可逆外源功与最大瞬时储存能量 \\(\\Delta\\)。\n"
+      },
+      "solution.tex": {
+        "bytes": 1693,
+        "git_blob": "58f42dfdf22fe6c82ed63b314679106d07330077",
+        "text": "(1) 令 \\(\\beta=(k_BT)^{-1}\\)，则\n\\[\nZ=1+e^{-\\beta\\Delta},\\quad\np_1=\\frac{e^{-\\beta\\Delta}}{1+e^{-\\beta\\Delta}}\n=\\frac1{1+e^{\\beta\\Delta}},\\quad p_0=1-p_1,\n\\]\n\\[\nF=-k_BT\\ln(1+e^{-\\beta\\Delta}),\\qquad U=\\Delta p_1.\n\\]\n初态 \\(p_0=p_1=1/2,\\ F_i=-k_BT\\ln2,\\ U_i=0\\)。\n(2) 在平衡准静态变化过程中，功对偏置的共轭变量是 \\(\\partial_\\Delta F=p_1\\)，所以\n\\[\nW_{\\rm rev}=\\int_0^\\Delta p_1(\\Delta')d\\Delta'\n=F(\\Delta)-F(0)\n=k_BT\\ln\\frac{2}{1+e^{-\\beta\\Delta}}.\n\\]\n因 \\(1-p_{\\rm err}=(1+e^{-\\beta\\Delta})^{-1}\\)，也有\n\\[\nW_{\\rm rev}=k_BT\\ln[2(1-p_{\\rm err})].\n\\]\n当 \\(\\Delta\\to\\infty\\)，\\(p_{\\rm err}\\to0\\)，最小功趋 \\(k_BT\\ln2\\)。有限错误率允许低于这个理想擦除功的可逆偏置操作；状态仍非严格确定。\n(3) Shannon物理熵\n\\[\nS=-k_B[p_0\\ln p_0+p_1\\ln p_1]\n=k_B[\\ln Z+\\beta U].\n\\]\n初态 \\(S_i=k_B\\ln2\\)，终态 \\(S_f=-k_B[(1-p_{\\rm err})\\ln(1-p_{\\rm err})+p_{\\rm err}\\ln p_{\\rm err}]\\)。可逆热量按系统吸收为正，\\(Q_{\\rm rev}=T(S_f-S_i)\\le0\\)。利用 \\(F=U-TS\\) 得\n\\[\nW_{\\rm rev}+Q_{\\rm rev}=(F_f-F_i)+T(S_f-S_i)=U_f-U_i=\\Delta p_{\\rm err}.\n\\]\n完美擦除极限 \\(\\Delta p_{\\rm err}\\to0\\)，\\(Q\\to-k_BT\\ln2\\)；热库至少接收 \\(k_BT\\ln2\\)。实际有限速操纵通常多耗散，使所需输入功更大。\n(4) \\(p_{\\rm err}\\le\\epsilon<1/2\\) 当且仅当\n\\[\n\\Delta\\ge\\Delta_{\\min}=k_BT\\ln\\frac{1-\\epsilon}{\\epsilon}.\n\\]\n当 \\(\\epsilon\\to0^+\\)，\\(\\Delta_{\\min}\\sim k_BT\\ln(1/\\epsilon)\\to\\infty\\)，然而 \\(W_{\\rm rev}\\to k_BT\\ln2\\) 有界。能级间隔是操控参数而非所有概率态都同时储存的能量；终态平均内能 \\(\\Delta p_{\\rm err}\\to0\\)，故不可用 \\(\\Delta\\) 直接替代可逆功。\n"
+      }
+    },
+    "T079": {
+      "meta.json": {
+        "bytes": 713,
+        "git_blob": "90376e5d84501cf4760ba2033c5d6d283a9d7ca9",
+        "text": "{\n  \"id\": \"T079\",\n  \"topic\": \"热学\",\n  \"title\": \"二维各向异性谐阱理想玻色凝聚的多对数饱和、热容连续性与熵账本\",\n  \"tags\": [\n    \"二维谐阱态密度\",\n    \"玻色多对数积分与凝聚温度\",\n    \"定粒子数热容的临界非解析\",\n    \"熵与高温经典极限\"\n  ],\n  \"answer\": \"k_BT_c=\\\\hbar\\\\sqrt{\\\\omega_x\\\\omega_y}\\\\sqrt{N/\\\\zeta(2)},\\\\quad N_0/N=1-(T/T_c)^2\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 115,\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v5-round14-draft\",\n  \"challenge_profile\": \"high-multistage-original-core\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 899,
+        "git_blob": "4319aa90a552731d86790d1f7160414ea01316af",
+        "text": "(1) \\(N\\gg1\\) 个互不作用的玻色原子禁于二维各向异性谐阱 \\(\\omega_x,\\omega_y\\)，单粒子激发能 \\(\\varepsilon_{n_xn_y}=\\hbar\\omega_x n_x+\\hbar\\omega_y n_y\\) 且基态置零。取 \\(k_BT\\gg\\hbar\\omega_{x,y}\\) 的半经典热力学陷阱极限，求激发态态密度 \\(g(\\varepsilon)\\) 与激发态总数 \\(N_{\\rm ex}(T,z)\\)。\n(2) 求饱和凝聚温度 \\(T_c\\)、低温凝聚分数、总热能 \\(U\\)；明确实际有限粒子数与无限均匀二维系统有什么差别。\n(3) 在固定总粒子数下求 \\(T<T_c\\) 的热容 \\(C_N\\)；对 \\(T>T_c\\) 从隐函数 \\(N(T,z)\\) 求 \\(dz/dT\\) 及 \\(C_N\\)。检验 \\(T_c\\) 两侧热容连续性与 \\(T\\gg T_c\\) 的经典极限。\n(4) 由巨热力学势求熵 \\(S(T,z)\\)，验证 \\(T\\to T_c^\\pm\\) 的熵连续，并说明为什么基态凝聚粒子不贡献此近似下的热熵；列出温度、粒子数和理想性适用条件。\n"
+      },
+      "solution.tex": {
+        "bytes": 2205,
+        "git_blob": "82c7e10c9aedb3169d820ef7166d274d659e75c1",
+        "text": "(1) 在 \\(n_x,n_y\\ge0\\) 平面数能量小于 \\(\\varepsilon\\) 的格点面积，\\(\\mathcal N(\\varepsilon)\\simeq\\varepsilon^2/(2\\hbar^2\\omega_x\\omega_y)\\)，故\n\\[\ng(\\varepsilon)=A\\varepsilon,\\quad A=(\\hbar^2\\omega_x\\omega_y)^{-1}.\n\\]\n令 \\(z=e^{\\mu/(k_BT)}\\le1\\)，用 \\(\\int_0^\\infty t^{s-1}/(z^{-1}e^t-1)\\,dt=\\Gamma(s)\\operatorname{Li}_s(z)\\)，得到\n\\[\nN_{\\rm ex}=A(k_BT)^2\\operatorname{Li}_2(z).\n\\]\n这个DOS对应谐阱，不是均匀二维自由气的常数态密度。\n(2) 激发云在 \\(z\\to1\\) 饱和，\\(N=A(k_BT_c)^2\\zeta(2)\\)，因此\n\\[\n\\boxed{k_BT_c=\\hbar\\sqrt{\\omega_x\\omega_y}\\sqrt{\\frac N{\\zeta(2)}}},\\qquad\n\\frac{N_0}{N}=1-\\left(\\frac{T}{T_c}\\right)^2\\quad(T<T_c).\n\\]\n基态能选零，热能全来自激发态：\n\\[\nU=A\\int_0^\\infty\\frac{\\varepsilon^2\\,d\\varepsilon}{z^{-1}e^{\\varepsilon/(k_BT)}-1}\n=2A(k_BT)^3\\operatorname{Li}_3(z).\n\\]\n凝聚区取 \\(z=1\\)。有限 \\(N\\) 时是平滑交叉，精确二次凝聚律只在所述大粒子数陷阱极限；均匀二维理想气体无此有限温度凝聚。\n(3) 凝聚区 \\(C_N=6Ak_B(k_BT)^2\\zeta(3)\\)。非凝聚区固定 \\(N\\) 微分得\n\\[\n\\frac1z\\frac{dz}{dT}=-\\frac{2\\operatorname{Li}_2(z)}{T\\operatorname{Li}_1(z)},\\qquad\n\\boxed{\\frac{C_N}{Nk_B}=6\\frac{\\operatorname{Li}_3(z)}{\\operatorname{Li}_2(z)}\n-4\\frac{\\operatorname{Li}_2(z)}{\\operatorname{Li}_1(z)}}.\n\\]\n因 \\(\\operatorname{Li}_1(z)=-\\ln(1-z)\\to\\infty\\)，在 \\(T_c^+\\) 的极限为 \\(6\\zeta(3)/\\zeta(2)\\)，恰与 \\(T_c^-\\) 一致；热容连续，但靠近临界点有非解析温度依赖。高温 \\(z\\ll1\\)，所有 \\(\\operatorname{Li}_s(z)\\simeq z\\)，恢复 \\(C_N\\to2Nk_B\\)，即二维谐势系统的经典四个二次自由度。\n(4) 激发态巨势\n\\[\n\\Omega_G=k_BT\\int_0^\\infty g(\\varepsilon)\\ln(1-ze^{-\\varepsilon/k_BT})d\\varepsilon\n=-Ak_BT(k_BT)^2\\operatorname{Li}_3(z).\n\\]\n由 \\(\\Omega_G=U-TS-\\mu N\\) 得\n\\[\nS=k_BA(k_BT)^2[3\\operatorname{Li}_3(z)-(\\ln z)\\operatorname{Li}_2(z)].\n\\]\n在 \\(z\\to1\\) 时 \\(\\ln z\\to0\\)，两侧均趋 \\(3k_BA(k_BT_c)^2\\zeta(3)\\)；宏观占据的单一非简并基态不增加宏观微观态计数。需 \\(N\\gg1\\)、\\(k_BT_c\\gg\\hbar\\omega_{x,y}\\)、弱相互作用可忽略，有限阱基态取零与真实有限尺寸修正分开。\n"
+      }
+    }
+  },
+  "prefix": "T",
+  "schema": 1
+}

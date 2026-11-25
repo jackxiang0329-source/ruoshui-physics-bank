@@ -1,6 +1,6 @@
 # 大学物理题库 · 文档导航
 
-此处只存规范、操作说明、审核报告、历史记录和参考资料，不复制 `bank/` 内题目或 LaTeX 解析。正式题目只在 `bank/<ID>/` 维护。
+此处只存规范、操作说明、审核报告、历史记录和参考资料，不复制 `bank/` 内题目或 LaTeX 解析。正式题目先从六学科归档恢复至 `bank/<ID>/` 后维护、质检，再打包提交。
 
 | 文档类型 | 目录 | 常用入口 |
 |---|---|---|
@@ -13,7 +13,7 @@
 
 ## 如何继续录入
 
-1. 正式高难综合题：在 `bank/<ID>/{meta.json,question.tex,solution.tex}` 中维护，运行 `python3 scripts/build.py --check`。
+1. 正式高难综合题：先运行 `python3 scripts/compact_bank.py --restore`，维护原题号文件并同步派生数据，通过原检查后运行 `python3 scripts/compact_bank.py --pack`。
 2. 教材译解：维持独立教材工程，未审的张三慧草稿仅在其 Draft PR 分支，不自动合并。
 3. 待审外部原文：由 `external_sources/<source_id>/index.json` 管理元数据，逐题原始字节按需从 `external_sources/_bundles/` 恢复；正式题库不自动吸收。
 4. 所有文件命名按 [仓库命名约定](policies/repository_naming.md)，由 CI 阻止格式回退。

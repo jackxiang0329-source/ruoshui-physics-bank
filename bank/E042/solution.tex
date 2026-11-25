@@ -1,7 +1,0 @@
-(1) 牛顿方程 \(m\dot v=mg+kI\)，与电路方程 \(L\dot I+RI=-kv\) 构成闭合线性系统。乘第一式以 \(v\)、第二式以 \(I\) 并相加得 \(d(mv^2/2+LI^2/2)/dt=mgv-RI^2\)：机械功转入磁能，再经电阻变热。交叉功 \(kvI\) 精确抵消，因而力的符号与感应电流方向彼此一致而不是任意指定。
-
-(2) 终端状态要求 \(\dot v=\dot I=0\)，所以 \(I_\infty=-mg/k\)、\(v_\infty=mgR/k^2>0\)。磁力 \(kI_\infty=-mg\) 正好平衡重力，欧姆损耗 \(RI_\infty^2=mgv_\infty\)。这只在磁通梯度 \(k\) 的近似有效区间足够大时代表长时间极限；真实有限磁区离开后不能继续维持该终端状态。
-
-(3) 消去电流并对 \(m\dot v=mg+kI\) 求导，得 \(mL\ddot v+mR\dot v+k^2v=mgR\)。因此扰动特征率 \(\lambda_\pm=[-R\pm\sqrt{R^2-4Lk^2/m}]/(2L)\)。\(R^2>4Lk^2/m\) 为过阻尼，等号临界阻尼，更小时出现衰减振荡；所有情形实部都为负。这是机电耦合的阻尼，不可仅按电路的 \(R/L\) 判断。
-
-(4) 若根互异，令 \(v(t)=v_\infty+A e^{\lambda_+ t}+B e^{\lambda_- t}\)。初态要求 \(A+B=-v_\infty\)，而 \(\dot v(0)=g\) 给 \(\lambda_+A+\lambda_-B=g\)，故 \(A=(g+\lambda_-v_\infty)/(\lambda_+-\lambda_-)\)，\(B=(-g-\lambda_+v_\infty)/(\lambda_+-\lambda_-)\)。临界阻尼取连续极限；位移是 \(x(t)-x(0)=v_\infty t+A(e^{\lambda_+t}-1)/\lambda_++B(e^{\lambda_-t}-1)/\lambda_-\)。令 \(L\to0^+\)，直接由 \(I=-kv/R\) 得 \(v(t)=v_\infty(1-e^{-k^2t/(mR)})\)。

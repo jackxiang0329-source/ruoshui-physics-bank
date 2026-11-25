@@ -1,7 +1,0 @@
-(1) 光在首镜透射后每增加一圈都会额外乘上两镜的振幅反射乘积及往返相位；取无损同镜强度反射率 \(R\)，振幅几何级数可写 \(E_t/E_i=(1-R)e^{i\delta/2}\sum_{j\ge0}(Re^{i\delta})^j=(1-R)e^{i\delta/2}/(1-Re^{i\delta})\)。于是 \(T(\delta)=|E_t/E_i|^2=(1-R)^2/[(1-R)^2+4R\sin^2(\delta/2)]\)，即 \(T=1/[1+F\sin^2(\delta/2)]\)，其中 \(F=4R/(1-R)^2\)。必须求场幅的相干和再平方，而不能直接将各次透射强度相加。
-
-(2) 当 \(\delta=2\pi q\)（\(q\) 为整数）时多束相位一致，透射达峰值一。因 \(\delta=2\omega nL/c\)，相邻角频率间隔为 \(\Delta\omega_{\rm FSR}=\pi c/(nL)\)，以赫兹表示 \(\Delta\nu_{\rm FSR}=c/(2nL)\)。这等价于腔内往返光程 \(2nL\) 必须容纳整数个真空波长。若 \(n\) 随频率明显色散，自由光谱区将由群折射率而非简单常数 \(n\) 决定。
-
-(3) 共振附近设 \(\delta=2\pi q+\epsilon\)，高反射率时 \(\sin^2(\epsilon/2)\simeq\epsilon^2/4\)。半高条件 \(T=1/2\) 给 \(|\epsilon|_{\rm HWHM}\simeq2/\sqrt F\)，故往返相位的全半高宽 \(\Delta\delta_{\rm FWHM}\simeq4/\sqrt F=2(1-R)/\sqrt R\)。精细度是自由谱区与半高全宽之比 \(\mathcal F\simeq2\pi/\Delta\delta_{\rm FWHM}=\pi\sqrt R/(1-R)\)。精确半高条件可写 \(\sin^2(\epsilon/2)=1/F\)，仅当 \(F\ge1\) 才有孤立意义的局部半高宽；上述高精细度结果不能用于 \(R\) 很小的宽峰。
-
-(4) 在共振处 \(\sin^2(\delta/2)=0\) 所以 \(T_{\max}=1\)，反共振 \(\delta=(2q+1)\pi\) 处 \(T_{\min}=(1-R)^2/(1+R)^2\)。令 \(R\to0\)，\(F\to0\)，透射恒近于一，谐振选择性消失；令 \(R\to1\)，峰宽趋于零而峰值保持一，理想无吸收腔表现高频率选择性。从 \(\omega_q=q\pi c/(nL)\) 微分，若 \(n\) 不随 \(L\) 变化，则 \(\delta\omega_q/\omega_q=-\delta L/L\)，显示高精细度测量必须控制镜间距漂移。
