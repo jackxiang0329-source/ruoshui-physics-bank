@@ -3,6 +3,8 @@
 import argparse
 import hashlib
 import json
+import os
+from urllib.parse import unquote, urlparse
 import re
 import subprocess
 import zipfile
@@ -14,6 +16,13 @@ GROUPS = {
     "round_qa": (r"scripts/check_(?:round(?:0[5-8]|10|11|12|13)[a-z0-9_]*|batch_04_physics|bulk_composite|composite_expansion)\.py",
                  r"data/round1[23]_[a-z0-9_]+\.json"),
     "irodov_regressions": (r"external_sources/irodov-zh-elegant/(?:[a-z0-9_]+_regression|[a-z0-9_]+_qa_common)\.py",),
+    "irodov_chapters": (r"external_sources/irodov-zh-elegant/chapters/\d{2}-[a-z-]+\.tex",),
+    "zhao_wang_chapters": (r"external_sources/zhao-wang-physics-5e-elegant/chapters/(?:guide-(?:ch|selftest)|textbook-ch)\d{2}\.tex",),
+    "three_college_chapters": (r"external_sources/three-college-physics-elegant/chapters/(?:czu|hust|tjut)-ch\d{2}\.tex",),
+    "test_suite": (r"tests/test_[a-z0-9_]+\.py",),
+    "large_indexes": (r"external_sources/(?:hf_physics_dpo|college_physics|physics_refresher)/index\.json",
+                      r"external_sources/catalog/college_corpus_audit\.csv",
+                      r"external_sources/curation_queue\.csv"),
 }
 MANIFEST = "_manifest.json"
 
@@ -99,8 +108,52 @@ def pack(root, group):
     assert load(root, group) == data
     print(group, len(data), "files", sum(map(len,data.values())), "->", target.stat().st_size, "bytes")
 
+
+def rewrite_links(root, groups):
+    """Keep direct GitHub navigation usable when an old path becomes archived."""
+    destinations = {}
+    for group in groups:
+        for name in load(root, group):
+            destinations[name] = archive(root, group)
+    # Also route links to directories that no longer have any tracked files.
+    remaining = set(tracked(root))
+    for name, target in list(destinations.items()):
+        for parent in PurePosixPath(name).parents:
+            p = parent.as_posix()
+            if p != "." and not any(x.startswith(p + "/") for x in remaining):
+                destinations.setdefault(p, target)
+    pattern = re.compile(r"(?<!!)\[([^\]\n]+)\]\(([^)\n]+)\)")
+    changed = []
+    for rel in sorted(remaining):
+        if not rel.endswith(".md"):
+            continue
+        path = root / rel
+        raw = path.read_bytes()
+        text = raw.decode("utf-8")
+        def repl(m):
+            link = m.group(2)
+            target = unquote(link.split("#",1)[0].split("?",1)[0].strip("<>"))
+            if not target or urlparse(target).scheme or target.startswith("//"):
+                return m.group(0)
+            resolved = (path.parent / target).resolve()
+            if not resolved.is_relative_to(root.resolve()):
+                return m.group(0)
+            key = resolved.relative_to(root).as_posix()
+            if key not in destinations:
+                return m.group(0)
+            archive_rel = os.path.relpath(destinations[key], path.parent).replace(os.sep,"/")
+            return "[" + m.group(1) + "（归档）](" + archive_rel + ")"
+        new = pattern.sub(repl, text)
+        if new != text:
+            path.write_bytes(new.encode("utf-8"))
+            changed.append(rel)
+    if changed:
+        subprocess.run(["git","add","--",*changed],cwd=root,check=True)
+    print("updated archive navigation:", changed)
+
+
 def migrate(root):
-    expected = {"catalog_views":44,"round_qa":43,"irodov_regressions":48}
+    expected = {"irodov_chapters":40,"zhao_wang_chapters":39,"three_college_chapters":45,"test_suite":20,"large_indexes":5}
     original = {}
     for record in subprocess.check_output(["git","ls-tree","-r","-z","HEAD"],cwd=root).split(b"\0"):
         if record:
@@ -115,11 +168,12 @@ def migrate(root):
         assert len(data) == count
         assert all(original[p] == hashes(b)["git_blob"] for p,b in data.items())
         removed.extend(data)
-    assert len(set(removed)) == 135
+    assert len(set(removed)) == sum(expected.values()) == 149
     subprocess.run(["git","rm","--",*sorted(removed)],cwd=root,check=True,stdout=subprocess.DEVNULL)
     subprocess.run(["git","add","--","data/archives"],cwd=root,check=True)
     restore(root,list(GROUPS))
-    print("migration: all 135 original Git blobs match; all original paths restored")
+    rewrite_links(root, expected)
+    print("migration: all 149 original Git blobs match; all original paths restored")
 
 def main():
     p=argparse.ArgumentParser()

@@ -58,6 +58,14 @@ git add data/archives/catalog_views.zip
 
 其他组可按需指定 `round_qa` 或 `irodov_regressions`；恢复目录不直接提交。归档不改变审核等级、原始题号及原始资料。
 
+## 教材章节、测试及大索引进一步无损精简
+
+- [Irodov 40章](data/archives/irodov_chapters.zip)、[赵王两书39章](data/archives/zhao_wang_chapters.zip)、[三校45章](data/archives/three_college_chapters.zip)：全部原始 TeX 章节保留原路径和 SHA-256。
+- [自动测试20份](data/archives/test_suite.zip)：原有测试用例完整归档。
+- [大型索引5份](data/archives/large_indexes.zip)：保留源索引、待审队列和审计表的原始字节。全量分类总索引 CSV、教材主 TeX、PDF、封面、勘误和各教材导航仍可直接阅读。
+
+从仓库根目录运行 `python3 scripts/compact_auxiliary.py --verify` 或 `--restore`；也可用 `--restore --group irodov_chapters` 等按需恢复。修改已恢复文件后 `--pack --group GROUP` 并提交对应 ZIP，不重新跟踪旧成员。新增章节或测试文件先用 `git add -f 原文件路径` 暂存，再打包，然后用 `git rm --cached 原文件路径` 取消成员跟踪。CI 与各教材 build.sh 自动恢复其必要章节，完整保留原有编译入口。
+
 ## 快速入口
 
 | 我要查看 | GitHub 路径 | 内容与状态 |

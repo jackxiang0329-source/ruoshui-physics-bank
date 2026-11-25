@@ -1,0 +1,45 @@
+name: Compact textbook and large index migration
+on:
+  push:
+    branches: [compact-textbooks-and-indexes]
+    paths:
+      - scripts/compact_auxiliary.py
+      - .github/workflows/compact-textbooks-migration.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  migrate:
+    if: github.ref == 'refs/heads/compact-textbooks-and-indexes'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Pack and compare 149 source Git blobs
+        run: |
+          python3 scripts/compact_auxiliary.py --migrate
+          python3 scripts/compact_auxiliary.py --verify
+      - name: Restore and check original project structure
+        run: |
+          python3 scripts/compact_bank.py --restore
+          python3 scripts/check_repository_layout.py
+          python3 scripts/build.py --check
+          python3 scripts/compact_external_candidates.py --verify
+          python3 scripts/compact_small_external_sources.py --verify
+          python3 scripts/compact_webwork_sources.py --verify
+          python3 -m compileall -q scripts tests external_sources
+          python3 external_sources/irodov-zh-elegant/expand_legacy_fragments.py
+          python3 external_sources/irodov-zh-elegant/check_sources.py
+          python3 external_sources/irodov-zh-elegant/lint_problems.py
+          python3 external_sources/zhao-wang-physics-5e-elegant/check_math.py
+          python3 external_sources/zhao-wang-physics-5e-elegant/check_round20_independent.py
+          python3 external_sources/three-college-physics-elegant/check_math.py
+      - name: Commit only after verification
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'refactor: pack textbook chapters, tests and large indexes losslessly'
+          git push origin HEAD:compact-textbooks-and-indexes

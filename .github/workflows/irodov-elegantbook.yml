@@ -8,6 +8,8 @@ on:
     paths:
       - 'external_sources/irodov-zh-elegant/**'
       - '.github/workflows/irodov-elegantbook.yml'
+      - 'data/archives/irodov_chapters.zip'
+      - 'scripts/compact_auxiliary.py'
       - 'data/archives/irodov_regressions.zip'
       - 'scripts/compact_auxiliary.py'
   workflow_dispatch:
@@ -164,7 +166,7 @@ jobs:
             git fetch origin main
             # An older compilation must never replace a newer translated book.
             if ! git diff --quiet "$GITHUB_SHA" FETCH_HEAD -- \
-              "$root/main.tex" "$root/cover.tex" "$root/chapters"; then
+              "$root/main.tex" "$root/cover.tex" "$root/chapters" "data/archives/irodov_chapters.zip"; then
               echo "Newer TeX sources exist: skipping stale PDF publication; queued build will publish."
               exit 0
             fi
