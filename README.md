@@ -40,6 +40,24 @@ git add bank/*.json data/ tex/
 
 恢复程序拒绝覆盖未归档的修改；重新打包前须保留全部原题号。GitHub CI 自动恢复原路径后再运行现有检查和编译。以下旧历史统计仅作历史参考。
 
+## 2026-11-25 辅助资源集中归档
+
+- [外部分类视图](data/archives/catalog_views.zip)：44份按学科/知识点生成的CSV，完整索引继续直接访问。
+- [历史批次质检](data/archives/round_qa.zip)：43份历史脚本及报告（第12—13轮报告与第13轮以前相关检查）。
+- [Irodov专项回归](data/archives/irodov_regressions.zip)：48份专项回归脚本及共享模块。现有章节TeX、PDF和检查入口仍保留。
+
+归档成员保留原路径、字节数、SHA-256、Git blob SHA。CI自动验证并恢复；手动执行原有脚本之前运行：
+
+```bash
+python3 scripts/compact_auxiliary.py --verify
+python3 scripts/compact_auxiliary.py --restore
+# 编辑已恢复的历史脚本或重新生成分类视图后：
+python3 scripts/compact_auxiliary.py --pack --group catalog_views
+git add data/archives/catalog_views.zip
+```
+
+其他组可按需指定 `round_qa` 或 `irodov_regressions`；恢复目录不直接提交。归档不改变审核等级、原始题号及原始资料。
+
 ## 快速入口
 
 | 我要查看 | GitHub 路径 | 内容与状态 |

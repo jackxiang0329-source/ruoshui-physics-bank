@@ -222,3 +222,7 @@ GitHub Actions 工作流 .github/workflows/irodov-elegantbook.yml
 本目录放在 external_sources/，不得将翻译题目混入
 大学物理原创高难度题库 bank/ 的题数和质量门禁，也不修改它们的权威源文件。
 原书六篇及各小节全部按原书题号译注录入，后续应进行独立物理二校、版式检查、插图补绘和勘误整理，而不是重复向原书编号后续造题。各篇独立编号保留，不覆盖历史章节及题解。
+
+## 专项回归归档
+
+历史48份专项回归及共享模块保存在 [irodov_regressions.zip](../../data/archives/irodov_regressions.zip)。从仓库根目录运行 `python3 scripts/compact_auxiliary.py --restore --group irodov_regressions` 后，再按原路径执行回归。章节TeX及PDF仍可直接读取；CI自动恢复。

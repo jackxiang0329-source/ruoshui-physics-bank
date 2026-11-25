@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Create stable Chinese catalogue views; never move original source files."""
-import csv, json
+import csv, json, re
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -139,7 +139,12 @@ def generate(root=ROOT):
                          "/补充题源.csv)")
     lines+=["","[全量题目索引](题目总索引.csv) · [翻译与目录规范](../../docs/policies/translation_catalog_policy.md) · [中英术语表](../../data/localization/zh_CN/术语表.md)",
             "","注：知识点来源于固定章节才细分；其他候选只沿用现有学科、细分类保留待核验。译稿不代表答案已验证。",""]
-    (out/"中文分类导航.md").write_text("\n".join(lines),encoding="utf-8")
+    navigation = "\n".join(lines)
+    if (root/"data/archives/catalog_views.zip").is_file():
+        navigation = re.sub(r"\[(?:CSV|题目索引|补充题源索引)\]\((按(?:学科|知识点)/[^)]+)\)", lambda m: chr(96)+m.group(1)+chr(96), navigation)
+        navigation = navigation.replace("**所有外部候选题仍不得正式组卷。**",
+            "分类 CSV 已无损集中至 [分类视图 ZIP](../../data/archives/catalog_views.zip)。下载解压或在仓库根目录运行 `python3 scripts/compact_auxiliary.py --restore --group catalog_views` 后按下列原路径使用；全量索引仍可直接访问。\n\n**所有外部候选题仍不得正式组卷。**")
+    (out/"中文分类导航.md").write_text(navigation,encoding="utf-8")
     print(json.dumps(report,ensure_ascii=False))
     return report
 if __name__=="__main__":

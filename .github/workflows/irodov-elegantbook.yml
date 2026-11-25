@@ -8,6 +8,8 @@ on:
     paths:
       - 'external_sources/irodov-zh-elegant/**'
       - '.github/workflows/irodov-elegantbook.yml'
+      - 'data/archives/irodov_regressions.zip'
+      - 'scripts/compact_auxiliary.py'
   workflow_dispatch:
 permissions:
   contents: write
@@ -16,6 +18,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Verify and restore archived auxiliary files
+        run: |
+          if [ -f data/archives/round_qa.zip ]; then
+            python3 scripts/compact_auxiliary.py --verify
+            python3 scripts/compact_auxiliary.py --restore
+          fi
       - name: Restore legacy split-fragment views for independent QA (not tracked)
         run: python3 external_sources/irodov-zh-elegant/expand_legacy_fragments.py
       - name: Validate all translated problem blocks
