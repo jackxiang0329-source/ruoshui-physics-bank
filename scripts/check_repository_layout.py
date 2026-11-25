@@ -46,6 +46,24 @@ def main() -> None:
             if len(parts) != 3 or (parts[2] not in EXCEPTIONS and not ARCHIVE.fullmatch(parts[2])):
                 errors.append("bundle naming: " + path)
 
+    # Textbook engineering and candidate sources are distinct roles.
+    book_dirs = {"irodov", "three_college", "zhao_wang"}
+    visible_books = {p.split("/")[1] for p in tracked if p.startswith("textbooks/") and p.count("/") >= 2}
+    if visible_books != book_dirs:
+        errors.append("unexpected textbook projects: " + str(sorted(visible_books ^ book_dirs)))
+    book_name = re.compile(r"^[a-z0-9]+(?:_[a-z0-9]+)*\.(?:md|tex|pdf|py|sh|cls)$")
+    for p in tracked:
+        if p.startswith("textbooks/"):
+            name = p.rsplit("/", 1)[-1]
+            if name not in ("README.md", ".gitignore") and not book_name.fullmatch(name):
+                errors.append("textbook filename must be snake_case: " + p)
+        if p.startswith(("external_sources/irodov-zh-elegant/", "external_sources/three-college-physics-elegant/", "external_sources/zhao-wang-physics-5e-elegant/")):
+            errors.append("textbook project in candidate source directory: " + p)
+    for book in book_dirs:
+        for name in ("README.md", "main.tex", "main.pdf", "build.sh", "quality_check.md"):
+            if "textbooks/" + book + "/" + name not in tracked:
+                errors.append("missing textbook role: " + book + "/" + name)
+
     # Keep the repository homepage focused on eight stable functional folders.
     allowed_top_folders = {".github", "bank", "data", "docs", "external_sources",
                            "scripts", "tests", "tex", "textbooks"}
