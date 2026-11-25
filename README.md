@@ -66,6 +66,22 @@ git add data/archives/catalog_views.zip
 
 从仓库根目录运行 `python3 scripts/compact_auxiliary.py --verify` 或 `--restore`；也可用 `--restore --group irodov_chapters` 等按需恢复。修改已恢复文件后 `--pack --group GROUP` 并提交对应 ZIP，不重新跟踪旧成员。新增章节或测试文件先用 `git add -f 原文件路径` 暂存，再打包，然后用 `git rm --cached 原文件路径` 取消成员跟踪。CI 与各教材 build.sh 自动恢复其必要章节，完整保留原有编译入口。
 
+## 维护资料与历史资源集中管理
+
+本轮对97份辅助文件进行无损归档，保留核心正式题库、教材主TeX/PDF、当前质量政策和组卷入口。
+
+| 归档 | 作用 |
+|---|---|
+| [reference_docs.zip](data/archives/reference_docs.zip) | 21份原操作说明、历史记录、审校报告及书目 |
+| [source_tools.zip](data/archives/source_tools.zip) | 20份外部采集、分类、翻译及审计工具 |
+| [round14_qa.zip](data/archives/round14_qa.zip) | 17份第14轮专项脚本和原报告 |
+| [source_metadata.zip](data/archives/source_metadata.zip) | 15份小型来源元数据、说明及原文 |
+| [catalog_working.zip](data/archives/catalog_working.zip) | 14份待审中间目录、审计及组卷预览 |
+| [retired_migrations.zip](data/archives/retired_migrations.zip) | 3份已完成的一次性迁移工作流定义，仅供追溯 |
+| [source_logs.zip](data/archives/source_logs.zip) | 7份历史及分来源采集日志 |
+
+维护前从仓库根目录执行 `python3 scripts/compact_auxiliary.py --restore`，然后 `python3 scripts/compact_bank.py --restore`；也可按组恢复。归档后编辑原路径必须按组重新打包并提交 ZIP。当前分类总索引、最新总日志及质量政策仍可直接查看。已完成的一次性工作流不再作为主分支的活跃工作流，历史运行和原定义仍可追溯。
+
 ## 快速入口
 
 | 我要查看 | GitHub 路径 | 内容与状态 |
