@@ -17,9 +17,9 @@
 | HF Physics DPO（生成文本，未核实） | 16,611 | [无损归档](./_bundles/hf_physics_dpo-raw.tar.gz) | [index.json（归档）](../data/archives/large_indexes.zip) |
 | OpenStax College Physics | 2,526 | [无损归档](./_bundles/college_physics-raw.tar.gz) | [index.json（归档）](../data/archives/large_indexes.zip) |
 | Physics Refresher | 700 | [无损归档](./_bundles/physics_refresher-raw.tar.gz) | [index.json（归档）](../data/archives/large_indexes.zip) |
-| UBC OPBP（原题可依赖图片、许可注意 NC/SA） | 265 | [无损归档](./_bundles/ubc_opbp-raw.tar.gz) | [index.json](./ubc_opbp/index.json) |
-| IntroPhysics（提取题干，学术/许可待审） | 53 | [无损归档](./_bundles/intro_physics-raw.tar.gz) | [index.json](./intro_physics/index.json) |
-| WeBWorK OPL / Thermal | 59 + 21 | [OPL 无损 PG](./_bundles/webwork_opl-raw.tar.gz) / [热学无损 PG](./_bundles/webwork_thermal-raw.tar.gz) | [OPL 索引](./webwork_opl/index.json) / [热学索引](./webwork_thermal/index.json) |
+| UBC OPBP（原题可依赖图片、许可注意 NC/SA） | 265 | [无损归档](./_bundles/ubc_opbp-raw.tar.gz) | [index.json（归档）](../data/archives/source_metadata.zip) |
+| IntroPhysics（提取题干，学术/许可待审） | 53 | [无损归档](./_bundles/intro_physics-raw.tar.gz) | [index.json（归档）](../data/archives/source_metadata.zip) |
+| WeBWorK OPL / Thermal | 59 + 21 | [OPL 无损 PG](./_bundles/webwork_opl-raw.tar.gz) / [热学无损 PG](./_bundles/webwork_thermal-raw.tar.gz) | [OPL 索引（归档）](../data/archives/source_metadata.zip) / [热学索引（归档）](../data/archives/source_metadata.zip) |
 | 赵近芳、王登龙第五版两书题解 | 累计771题（第15批新增73） | [独立 ElegantBook 项目](./zhao-wang-physics-5e-elegant/) | [勘误与复核](./zhao-wang-physics-5e-elegant/quality-check.md) |
 | 《普通物理学习题》中文 ElegantBook | 原书 1,878 题 | [独立正式教材整理工程](./irodov-zh-elegant/) | [质检与勘误](./irodov-zh-elegant/errata.md) |
 

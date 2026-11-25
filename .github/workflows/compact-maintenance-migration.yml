@@ -1,16 +1,16 @@
-name: Compact textbook and large index migration
+name: Compact maintenance and source migration
 on:
   push:
-    branches: [compact-textbooks-and-indexes]
+    branches: [compact-maintenance-and-sources]
     paths:
       - scripts/compact_auxiliary.py
-      - .github/workflows/compact-textbooks-migration.yml
+      - .github/workflows/compact-maintenance-migration.yml
   workflow_dispatch:
 permissions:
   contents: write
 jobs:
   migrate:
-    if: github.ref == 'refs/heads/compact-textbooks-and-indexes'
+    if: github.ref == 'refs/heads/compact-maintenance-and-sources'
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
@@ -18,11 +18,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Pack and compare 149 source Git blobs
+      - name: Archive and compare all 97 original Git blobs
         run: |
           python3 scripts/compact_auxiliary.py --migrate
           python3 scripts/compact_auxiliary.py --verify
-      - name: Restore and check original project structure
+      - name: Restore project and validate repository compatibility
         run: |
           python3 scripts/compact_bank.py --restore
           python3 scripts/check_repository_layout.py
@@ -37,9 +37,9 @@ jobs:
           python3 external_sources/zhao-wang-physics-5e-elegant/check_math.py
           python3 external_sources/zhao-wang-physics-5e-elegant/check_round20_independent.py
           python3 external_sources/three-college-physics-elegant/check_math.py
-      - name: Commit only after verification
+      - name: Commit verified ordinary file migration
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m 'refactor: pack textbook chapters, tests and large indexes losslessly'
-          git push origin HEAD:compact-textbooks-and-indexes
+          git commit -m 'refactor: consolidate 97 maintenance and source files into seven verified archives'
+          git push origin HEAD:compact-maintenance-and-sources

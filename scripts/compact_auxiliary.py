@@ -23,6 +23,13 @@ GROUPS = {
     "large_indexes": (r"external_sources/(?:hf_physics_dpo|college_physics|physics_refresher)/index\.json",
                       r"external_sources/catalog/college_corpus_audit\.csv",
                       r"external_sources/curation_queue\.csv"),
+    "reference_docs": (r"docs/guides/auto_import_oer\.md|docs/guides/bulk_200_workflow\.md|docs/guides/college_physics_import\.md|docs/guides/college_tex_draft\.md|docs/guides/curation_triage\.md|docs/guides/exam_assembly\.md|docs/guides/huggingface_import\.md|docs/guides/oer_discovery\.md|docs/guides/project_plan\.md|docs/guides/review_preflight\.md|docs/guides/tex_architecture\.md|docs/history/batch_04_complex_models\.md|docs/history/bulk_advanced_12\.md|docs/history/composite_batch_02\.md|docs/history/round_12_worklog\.md|docs/references/textbook_references\.md|docs/reports/college_corpus_audit\.md|docs/reports/coverage_report\.md|docs/reports/legacy_filter_report\.json|docs/reviews/round_01_independent_derivations\.md|docs/reviews/round_01_triage\.md",),
+    "source_tools": (r"scripts/audit_college_corpus\.py|scripts/auto_import_oer\.py|scripts/college_tex_draft\.py|scripts/curation_triage\.py|scripts/discover_hf_physics\.py|scripts/discover_oer_sources\.py|scripts/export_zh_review\.py|scripts/external_inventory\.py|scripts/import_college_physics\.py|scripts/import_hf_physics\.py|scripts/import_intro_physics\.py|scripts/import_refresher_physics\.py|scripts/import_seephys\.py|scripts/materialize_zh_drafts\.py|scripts/organize_physics_catalog\.py|scripts/rebuild_external_queue\.py|scripts/reclassify_external_topics\.py|scripts/report_external_coverage\.py|scripts/review_preflight\.py|scripts/sync_external_physics\.py",),
+    "round14_qa": (r"data/round14_402_content_similarity_screen\.json|data/round14_core_model_draft_audit\.json|data/round14_draft_validation_report\.json|data/round14_extra6_validation_report\.json|data/round14_final8_validation_report\.json|data/round14_group3_validation_report\.json|data/round14_group4_validation_report\.json|data/round14_group5_validation_report\.json|data/round14_next6_validation_report\.json|data/round14_validation_report\.json|scripts/check_round14_draft\.py|scripts/check_round14_extra6\.py|scripts/check_round14_final8\.py|scripts/check_round14_group3\.py|scripts/check_round14_group4\.py|scripts/check_round14_group5\.py|scripts/check_round14_next6\.py",),
+    "source_metadata": (r"external_sources/college_physics/source_manifest\.json|external_sources/hf_physics_dpo/manifest\.json|external_sources/hf_seephys/index\.json|external_sources/hf_seephys/manifest\.json|external_sources/hf_seephys/raw/SEEP-00001\.md|external_sources/intro_physics/README\.md|external_sources/intro_physics/index\.json|external_sources/intro_physics/source_manifest\.json|external_sources/physics_refresher/README\.md|external_sources/physics_refresher/source_manifest\.json|external_sources/ubc_opbp/index\.json|external_sources/webwork_opl/README\.md|external_sources/webwork_opl/index\.json|external_sources/webwork_thermal/README\.md|external_sources/webwork_thermal/index\.json",),
+    "catalog_working": (r"external_sources/catalog/auto_import_decisions\.json|external_sources/catalog/college_corpus_audit_report\.json|external_sources/catalog/college_next_review\.csv|external_sources/catalog/college_review_preview\.tex|external_sources/catalog/college_review_tex_draft\.tex|external_sources/catalog/college_review_tex_report\.json|external_sources/catalog/coverage_report\.json|external_sources/catalog/discovered_repositories\.json|external_sources/catalog/huggingface_datasets\.json|external_sources/catalog/review_preflight\.csv|external_sources/catalog/review_preflight_report\.json|external_sources/catalog/review_priority\.csv|external_sources/catalog/review_triage_report\.json|external_sources/catalog/upstream_manifest\.json",),
+    "retired_migrations": (r"\.github/workflows/compact-auxiliary-migration\.yml|\.github/workflows/compact-bank-migration\.yml|\.github/workflows/compact-textbooks-migration\.yml",),
+    "source_logs": (r"external_sources/logs/college_physics_latest\.json|external_sources/logs/history_2026_10\.json|external_sources/logs/huggingface_import_latest\.json|external_sources/logs/intro_physics_latest\.json|external_sources/logs/refresher_physics_latest\.json|external_sources/logs/seephys_import_latest\.json|external_sources/logs/topic_backfill_latest\.json",),
 }
 MANIFEST = "_manifest.json"
 
@@ -153,7 +160,7 @@ def rewrite_links(root, groups):
 
 
 def migrate(root):
-    expected = {"irodov_chapters":40,"zhao_wang_chapters":39,"three_college_chapters":45,"test_suite":20,"large_indexes":5}
+    expected = {"reference_docs":21,"source_tools":20,"round14_qa":17,"source_metadata":15,"catalog_working":14,"retired_migrations":3,"source_logs":7}
     original = {}
     for record in subprocess.check_output(["git","ls-tree","-r","-z","HEAD"],cwd=root).split(b"\0"):
         if record:
@@ -168,12 +175,15 @@ def migrate(root):
         assert len(data) == count
         assert all(original[p] == hashes(b)["git_blob"] for p,b in data.items())
         removed.extend(data)
-    assert len(set(removed)) == sum(expected.values()) == 149
+    assert len(set(removed)) == sum(expected.values()) == 97
+    # Workflow changes are finalized by the repository owner after the archive is verified.
+    # The Actions token may lack permission to delete workflow definitions.
+    removed = [p for p in removed if not match('retired_migrations', p)]
     subprocess.run(["git","rm","--",*sorted(removed)],cwd=root,check=True,stdout=subprocess.DEVNULL)
     subprocess.run(["git","add","--","data/archives"],cwd=root,check=True)
     restore(root,list(GROUPS))
     rewrite_links(root, expected)
-    print("migration: all 149 original Git blobs match; all original paths restored")
+    print("migration: all 97 original Git blobs match; 94 ordinary members untracked; three archived workflow definitions await owner removal")
 
 def main():
     p=argparse.ArgumentParser()
