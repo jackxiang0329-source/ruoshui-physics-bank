@@ -38,7 +38,7 @@ for rel in tracked():
     if not rel.endswith(".md") or rel in ("README.md","textbooks/README.md","scripts/README.md","docs/policies/repository_naming.md"):
         continue
     path=ROOT/rel
-    oldrel=reverse.get(rel,rel)
+    oldrel='README.md' if rel=='docs/history/compaction_history.md' else reverse.get(rel,rel)
     original_parent=ROOT/Path(oldrel).parent
     text=path.read_text(encoding="utf-8")
     def repl(m):
