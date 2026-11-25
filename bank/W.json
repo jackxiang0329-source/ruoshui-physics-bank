@@ -1,0 +1,1247 @@
+{
+  "items": {
+    "W007": {
+      "meta.json": {
+        "bytes": 554,
+        "git_blob": "718542ffd2c5c659e553ad8448f201a2ced210b3",
+        "text": "{\n  \"id\": \"W007\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"双弦接点附加质量的波散射\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 50,\n  \"tags\": [\n    \"波阻抗\",\n    \"边界条件\",\n    \"振幅复数\",\n    \"动量/能流\",\n    \"极限频率\"\n  ],\n  \"answer\": \"t=\\\\frac{2Z_1}{Z_1+Z_2-iM\\\\omega},\\\\quad r=\\\\frac{Z_1-Z_2+iM\\\\omega}{Z_1+Z_2-iM\\\\omega},\\\\quad \\\\mathcal R+\\\\mathcal T=1\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"high-only-v2\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 684,
+        "git_blob": "b1f4a5e068c532fa562290f8424d67516e5a42f0",
+        "text": "两根半无限长弦在 $x=0$ 连接，张力均为 $F>0$，但线密度分别为 $\\mu_1,\\mu_2$，连接点上有可在横向运动的点质量 $M\\ge0$。从左侧入射频率 $\\omega>0$、复振幅 $A$ 的横波，波函数使用 $e^{-i\\omega t}$ 时间约定。假定横向位移小、没有耗散，定义波速 $c_j=\\sqrt{F/\\mu_j}$、机械波阻抗 $Z_j=F/c_j=\\sqrt{F\\mu_j}$。\n(1) 由位移连续和接点受力列式，求反射、透射的位移振幅比 $r,t$；(2) 求反射和透射的平均能流比例并证明守恒；(3) 讨论 $M=0$、$Z_1=Z_2$ 以及高频极限，说明为什么振幅透射比并非直接等于功率透射比；(4) 求无反射所需的条件。\n"
+      },
+      "solution.tex": {
+        "bytes": 1016,
+        "git_blob": "59b803f12576d89842d344230eeba9b40cae238f",
+        "text": "设左侧 $y_1=A[e^{ik_1x}+r e^{-ik_1x}]e^{-i\\omega t}$，右侧 $y_2=At e^{ik_2x-i\\omega t}$。位移连续给 $1+r=t$。接点所受竖向合力为 $F[y_x(0^+)-y_x(0^-)]$，用牛顿第二定律得\n\\[i\\omega F\\left(\\frac{t}{c_2}-\\frac{1-r}{c_1}\\right)=-M\\omega^2t.\\]\n写成阻抗形式 $Z_2t-Z_1(1-r)=iM\\omega t$，与 $1+r=t$ 联立：\n\\[t=\\frac{2Z_1}{Z_1+Z_2-iM\\omega},\\qquad r=\\frac{Z_1-Z_2+iM\\omega}{Z_1+Z_2-iM\\omega}.\\]\n平均能流与 $Z\\omega^2|A|^2/2$ 成正比，因此\n\\[\\mathcal R=|r|^2=\\frac{(Z_1-Z_2)^2+(M\\omega)^2}{(Z_1+Z_2)^2+(M\\omega)^2},\\]\n\\[\\mathcal T=\\frac{Z_2}{Z_1}|t|^2=\\frac{4Z_1Z_2}{(Z_1+Z_2)^2+(M\\omega)^2};\\quad \\mathcal R+\\mathcal T=1.\\]\n当 $M=0$ 恢复普通接合弦；若 $Z_1=Z_2$ 且 $M=0$ 则 $r=0,t=1$；固定 $M>0$、$\\omega\\to\\infty$ 时 $r\\to-1$、$t\\to0$。能流还依赖介质阻抗，因此一般 $\\mathcal T\\ne|t|^2$。若要求 $r=0$，其分子实部与虚部均为零，必须同时满足 $Z_1=Z_2$ 和 $M\\omega=0$；在 $\\omega>0$ 时等价于 $Z_1=Z_2$ 且 $M=0$。\n"
+      }
+    },
+    "W008": {
+      "meta.json": {
+        "bytes": 573,
+        "git_blob": "18c1a0839615260ed719e6a2480fcaaa91baef0b",
+        "text": "{\n  \"id\": \"W008\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"耦合双振子的本征模与能量拍动\",\n  \"kind\": \"综合推导题\",\n  \"level\": 4,\n  \"estimated_minutes\": 40,\n  \"tags\": [\n    \"耦合微分方程\",\n    \"本征模分解\",\n    \"初值问题\",\n    \"拍频\",\n    \"近似适用范围\"\n  ],\n  \"answer\": \"\\\\omega_+=\\\\sqrt{k/m},\\\\quad \\\\omega_-=\\\\sqrt{(k+2\\\\kappa)/m},\\\\quad x_{1,2}=\\\\frac A2(\\\\cos\\\\omega_+t\\\\pm\\\\cos\\\\omega_-t)\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"high-only-v2\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 557,
+        "git_blob": "180be0f861ea68ba54f2890b52e4c7a9fea736f9",
+        "text": "两相同质点质量为 $m$，各由一根刚度为 $k>0$ 的弹簧连接到固定墙；两个质点之间另以刚度为 $\\kappa>0$ 的弹簧相连。设平衡位置两点位移为 $x_1,x_2$，所有运动均在同一水平方向且无摩擦。初态 $x_1(0)=A$、$x_2(0)=0$、$\\dot x_1(0)=\\dot x_2(0)=0$。\n(1) 写出运动方程与两个正则频率；(2) 求两点位移全时解；(3) 在弱耦合 $\\kappa\\ll k$ 时给出拍动的慢时间尺度，区分慢包络峰值与精确能量全转移；(4) 用总能量守恒和 $\\kappa\\to0$ 检验答案。\n"
+      },
+      "solution.tex": {
+        "bytes": 1131,
+        "git_blob": "5fd1e8657b1f65ca1ebe6149423682b5bcc492b9",
+        "text": "动力学方程：\n\\[m\\ddot x_1+(k+\\kappa)x_1-\\kappa x_2=0,\\qquad m\\ddot x_2+(k+\\kappa)x_2-\\kappa x_1=0.\\]\n令 $q_+=x_1+x_2$，$q_-=x_1-x_2$，方程解耦为 $\\ddot q_++(k/m)q_+=0$、$\\ddot q_-+((k+2\\kappa)/m)q_-=0$。因此 $\\omega_+=\\sqrt{k/m}$、$\\omega_-=\\sqrt{(k+2\\kappa)/m}$；初始 $q_+(0)=q_-(0)=A$，故\n\\[x_1(t)=\\tfrac A2(\\cos\\omega_+t+\\cos\\omega_-t),\\qquad x_2(t)=\\tfrac A2(\\cos\\omega_+t-\\cos\\omega_-t).\\]\n令 $\\bar\\omega=(\\omega_++\\omega_-)/2$、$\\Delta\\omega=\\omega_--\\omega_+>0$，可重写为\n\\[x_1=A\\cos(\\bar\\omega t)\\cos(\\Delta\\omega t/2),\\qquad x_2=A\\sin(\\bar\\omega t)\\sin(\\Delta\\omega t/2).\\]\n当 $\\kappa\\ll k$，$\\Delta\\omega\\simeq\\kappa/\\sqrt{km}$，慢包络的第一次交换峰位于 $t\\simeq\\pi/\\Delta\\omega$；但它只是包络最大，载波相位一般不在同一时刻达到极大，不能无条件称为某个精确时刻能量完全转移。\n总机械能 $E=\\tfrac12m(\\dot x_1^2+\\dot x_2^2)+\\tfrac12k(x_1^2+x_2^2)+\\tfrac12\\kappa(x_1-x_2)^2$，初始 $E=(k+\\kappa)A^2/2$，对运动方程求导得 $\\dot E=0$。令 $\\kappa\\to0$ 有 $\\omega_-\\to\\omega_+$，$x_1\\to A\\cos\\sqrt{k/m}t$、$x_2\\to0$。\n"
+      }
+    },
+    "W009": {
+      "meta.json": {
+        "bytes": 639,
+        "git_blob": "b91a746327ca750e29efbd153c353db77632404e",
+        "text": "{\n  \"id\": \"W009\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"三振子耦合本征模、能量分配与弱耦合拍动\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 50,\n  \"tags\": [\n    \"对称矩阵本征值\",\n    \"耦合振子\",\n    \"初值模态展开\",\n    \"模态能量守恒\",\n    \"弱耦合近似\"\n  ],\n  \"answer\": \"\\\\omega_j^2=\\\\frac1m\\\\{k,k+\\\\kappa,k+3\\\\kappa\\\\},\\\\quad x_3=A\\\\left(\\\\frac{\\\\cos\\\\omega_0t}{3}-\\\\frac{\\\\cos\\\\omega_1t}{2}+\\\\frac{\\\\cos\\\\omega_2t}{6}\\\\right)\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v1.1\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 723,
+        "git_blob": "aed941f7c63983fe7b239a354056cbbd300d8171",
+        "text": "三个相同质点（质量均 $m>0$）沿一条水平无摩擦直线作小振动。每个质点各自用一根劲度系数为 $k>0$ 的弹簧固定到平衡位置，两相邻质点间另以劲度系数为 $\\kappa>0$ 的轻弹簧耦合。令三个位移为 $x_1,x_2,x_3$，所有弹簧在平衡态均无伸长。初态为 $\\boldsymbol x(0)=(A,0,0)^T$，$\\dot{\\boldsymbol x}(0)=0$，$A\\ne0$。\n(1) 写出运动方程并求三个归一化本征向量及对应本征频率；(2) 给出完整运动解，特别求 $x_3(t)$；(3) 求初始激发在三个正规模上的机械能，直接验证总能量守恒；(4) 在 $\\kappa\\ll k$ 的极限求三个频率的一阶近似和相邻频率差，并检验 $t=0$ 的所有初值。\n"
+      },
+      "solution.tex": {
+        "bytes": 1594,
+        "git_blob": "ea88d397bafce147262e29cb2e30bfe36e10a2f9",
+        "text": "(1) 位移列向量满足 $m\\ddot{\\boldsymbol x}+\\mathsf K\\boldsymbol x=0$，其中\n\\[\n\\mathsf K=\\begin{pmatrix}k+\\kappa&-\\kappa&0\\\\-\\kappa&k+2\\kappa&-\\kappa\\\\0&-\\kappa&k+\\kappa\\end{pmatrix}.\n\\]\n按对称、反对称分解得到正交归一模\n\\[\n\\boldsymbol e_0=(1,1,1)^T/\\sqrt3,\\quad\n\\boldsymbol e_1=(1,0,-1)^T/\\sqrt2,\\quad\n\\boldsymbol e_2=(1,-2,1)^T/\\sqrt6.\n\\]\n相应 $\\omega_0^2=k/m,\\ \\omega_1^2=(k+\\kappa)/m,\\ \\omega_2^2=(k+3\\kappa)/m$，均为正，故三模稳定。\n\n(2) 因所有初速度为零，模态振幅为 $A(\\boldsymbol e_j)_1$，所以\n\\[\n\\boldsymbol x(t)=A\\left[\\tfrac13(1,1,1)^T\\cos\\omega_0t+\n\\tfrac12(1,0,-1)^T\\cos\\omega_1t+\n\\tfrac16(1,-2,1)^T\\cos\\omega_2t\\right].\n\\]\n特别地\n\\[\nx_3(t)=A\\left(\\tfrac13\\cos\\omega_0t-\\tfrac12\\cos\\omega_1t+\\tfrac16\\cos\\omega_2t\\right).\n\\]\n尽管最右质点初始静止，后续可从耦合获得能量。\n\n(3) 模态坐标初值分别为 $Q_0=A/\\sqrt3,\\ Q_1=A/\\sqrt2,\\ Q_2=A/\\sqrt6$，故\n\\[\nE_0=\\frac{kA^2}{6},\\qquad E_1=\\frac{(k+\\kappa)A^2}{4},\\qquad E_2=\\frac{(k+3\\kappa)A^2}{12}.\n\\]\n相加恰好为 $(k+\\kappa)A^2/2$，与初始储能 $kA^2/2+\\kappa A^2/2$ 相同；各正交正规模能量分别守恒。\n\n(4) 令 $\\omega_b=\\sqrt{k/m}$，当 $\\epsilon=\\kappa/k\\ll1$，\n\\[\n\\omega_0=\\omega_b,\\quad\\omega_1=\\omega_b(1+\\epsilon/2)+O(\\epsilon^2),\\quad\n\\omega_2=\\omega_b(1+3\\epsilon/2)+O(\\epsilon^2).\n\\]\n故 $\\omega_1-\\omega_0\\simeq\\epsilon\\omega_b/2$，$\\omega_2-\\omega_1\\simeq\\epsilon\\omega_b$，出现缓慢能量交换的包络。将 $t=0$ 代入解，三个分量依次为 $A,0,0$；求导含正弦项，故三个初速度均为零。\n"
+      }
+    },
+    "W010": {
+      "meta.json": {
+        "bytes": 596,
+        "git_blob": "736177014c90ef1b2b4ee4b17cdf7e51ec920307",
+        "text": "{\n  \"id\": \"W010\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"受迫阻尼振子的幅值共振、功率共振与精确带宽\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 50,\n  \"tags\": [\n    \"受迫振动复振幅\",\n    \"阻尼耗散\",\n    \"双重共振频率\",\n    \"半功率带宽\",\n    \"渐近极限\"\n  ],\n  \"answer\": \"\\\\omega_X=\\\\sqrt{k/m-b^2/(2m^2)},\\\\quad \\\\omega_{\\\\pm}=\\\\frac{\\\\sqrt{b^2+4km}\\\\pm b}{2m},\\\\quad\\\\Delta\\\\omega=b/m\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v1.2\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 682,
+        "git_blob": "1a8987a02f5e839b8befffd7b93d1d2ed06e3238",
+        "text": "质量 $m>0$、弹簧劲度系数 $k>0$、线性黏滞阻力系数 $b>0$ 的一维振子受谐波力 $F_0\\cos\\omega t$ 驱动，$F_0>0,\\omega>0$。经过足够长时间后，瞬态衰减，只研究稳定周期响应。\n(1) 由 $m\\ddot x+b\\dot x+kx=F_0\\cos\\omega t$ 求振幅 $X(\\omega)$ 和相位滞后 $\\delta(\\omega)$；(2) 求平均输入功率并证明其最大值对应的驱动频率为无阻尼固有频率 $\\omega_0=\\sqrt{k/m}$，给出峰值功率；(3) 在 $b^2<2km$ 下求位移振幅共振的频率，解释其为何不同于功率峰频率，并讨论 $b^2\\ge2km$ 的情况；(4) 严格求功率共振峰的两个半高频率与精确全宽，给出小阻尼极限。\n"
+      },
+      "solution.tex": {
+        "bytes": 1661,
+        "git_blob": "8be35ac7b3bb0cb3df7e43ff505ff728d4399fa8",
+        "text": "(1) 令稳态解 $x(t)=\\Re[\\tilde X e^{i\\omega t}]$。代入方程得到复振幅\n\\[\n\\tilde X=\\frac{F_0}{k-m\\omega^2+i b\\omega}.\n\\]\n写成 $x=X\\cos(\\omega t-\\delta)$，则\n\\[\nX=\\frac{F_0}{\\sqrt{(k-m\\omega^2)^2+b^2\\omega^2}},\\qquad\n\\delta=\\operatorname{atan2}(b\\omega,k-m\\omega^2)\\in(0,\\pi).\n\\]\n这种相位取值能正确描述穿过共振时相位由零趋向 $\\pi$。\n\n(2) 平均输入功率由 $\\overline P=\\langle F_0\\cos\\omega t\\,\\dot x\\rangle$ 得\n\\[\n\\overline P(\\omega)=\\frac{F_0^2 b\\omega^2}{2[(k-m\\omega^2)^2+b^2\\omega^2]}.\n\\]\n也可用耗散功率 $b\\langle\\dot x^2\\rangle=b\\omega^2X^2/2$ 独立计算。由于分母不小于 $b^2\\omega^2$，$\\overline P\\le F_0^2/(2b)$；等号恰在 $k-m\\omega^2=0$，即 $\\omega=\\omega_0$ 取得。\n\n(3) 对振幅分母的平方 $D(\\omega)=(k-m\\omega^2)^2+b^2\\omega^2$ 求导，\n\\[\nD'(\\omega)=2\\omega[2m(m\\omega^2-k)+b^2].\n\\]\n当 $b^2<2km$，非零的振幅峰频率\n\\[\n\\omega_X=\\sqrt{\\frac{k}{m}-\\frac{b^2}{2m^2}}<\\omega_0.\n\\]\n若 $b^2\\ge2km$，$D$ 对 $\\omega>0$ 单调非降，振幅随频率下降（最大静态极限在 $\\omega\\to0^+$），但功率峰仍位于 $\\omega_0$。两者物理机制不同：一个比较位移，一个比较能量输运。\n\n(4) 半功率方程 $\\overline P(\\omega)=F_0^2/(4b)$ 等价于\n\\[\n(k-m\\omega^2)^2=b^2\\omega^2 .\n\\]\n两条正频率解恰为\n\\[\n\\omega_-=\\frac{\\sqrt{b^2+4km}-b}{2m},\\qquad\n\\omega_+=\\frac{\\sqrt{b^2+4km}+b}{2m}.\n\\]\n故精确半高全宽 $\\Delta\\omega=\\omega_+-\\omega_-=b/m$，而不是仅在弱阻尼时才成立。弱阻尼 $b\\ll2\\sqrt{km}$ 时 $\\omega_\\pm\\simeq\\omega_0\\pm b/(2m)$；对应品质因子 $Q_{\\mathrm{osc}}=\\omega_0/\\Delta\\omega=\\sqrt{km}/b$。\n"
+      }
+    },
+    "W011": {
+      "meta.json": {
+        "bytes": 566,
+        "git_blob": "082448b7b08a3f5ec576a8bf53925ff0d047d868",
+        "text": "{\n  \"id\": \"W011\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"双原子弹簧链的色散关系、声学支和带隙\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 60,\n  \"tags\": [\n    \"离散动力学\",\n    \"Bloch 定理\",\n    \"二阶本征值\",\n    \"声学与光学支\",\n    \"长波极限\"\n  ],\n  \"answer\": \"\\\\omega_\\\\pm^2=\\\\frac{k}{m_1m_2}\\\\left[m_1+m_2\\\\pm\\\\sqrt{(m_1+m_2)^2-4m_1m_2\\\\sin^2(qa/2)}\\\\right]\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v1.2\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 721,
+        "git_blob": "6ad8d645d5c77d000487fa5e42bbcdc9705f90dd",
+        "text": "无限长一维链每个原胞含质量分别为 $m_1,m_2>0$ 的两粒子，相邻粒子均由劲度系数 $k>0$ 的相同线性弹簧连接。设原胞周期为 $a>0$，令 $u_n,v_n$ 分别为第 $n$ 个原胞两粒子的纵向小位移，忽略一切外力、阻尼和非线性。Bloch 波数取第一布里渊区 $-\\pi/a\\le q\\le\\pi/a$。\n(1) 建立离散运动方程并用 Bloch 形式推导两支 $\\omega_\\pm(q)$ 的色散关系；(2) 求区中心 $q=0$ 与区边缘 $q=\\pi/a$ 的本征频率，辨认声学支和光学支；(3) 在 $m_1\\ne m_2$ 时证明存在有限频率禁带，并说明何种参数下禁带闭合；(4) 求声学支长波相速度极限，检验 $m_1=m_2=m$ 时声速与单原子链的关系。\n"
+      },
+      "solution.tex": {
+        "bytes": 1540,
+        "git_blob": "9ccbbc093ef2432475a867a8748e2ad140646c58",
+        "text": "(1) 作用在 $u_n$ 的两根弹簧分别连向 $v_n,v_{n-1}$，而 $v_n$ 连向 $u_n,u_{n+1}$，故\n\\[\nm_1\\ddot u_n=k(v_n+v_{n-1}-2u_n),\\qquad\nm_2\\ddot v_n=k(u_n+u_{n+1}-2v_n).\n\\]\n代入 $u_n=Ue^{i(nqa-\\omega t)}$、$v_n=Ve^{i(nqa-\\omega t)}$，得到系数矩阵\n\\[\n\\begin{pmatrix}2k-m_1\\omega^2&-k(1+e^{-iqa})\\\\-k(1+e^{iqa})&2k-m_2\\omega^2\\end{pmatrix}\\binom UV=0.\n\\]\n行列式为零，即\n\\[\nm_1m_2\\omega^4-2k(m_1+m_2)\\omega^2+4k^2\\sin^2(qa/2)=0.\n\\]\n两根正平方频率为\n\\[\n\\omega_\\pm^2(q)=\\frac{k}{m_1m_2}\\left[m_1+m_2\\pm\\sqrt{(m_1+m_2)^2-4m_1m_2\\sin^2(qa/2)}\\right].\n\\]\n\n(2) $q=0$ 时 $\\omega_-(0)=0$，是同相平移极限的声学支；$\\omega_+^2(0)=2k(m_1+m_2)/(m_1m_2)$，为光学支。区边界 $\\sin^2(qa/2)=1$，故\n\\[\n\\omega_-^2(\\pi/a)=\\frac{2k}{\\max(m_1,m_2)},\\qquad\n\\omega_+^2(\\pi/a)=\\frac{2k}{\\min(m_1,m_2)}.\n\\]\n\n(3) 因两支均随 $\\sin^2(qa/2)$ 单调变化，声学支上界是 $\\sqrt{2k/\\max(m_1,m_2)}$，光学支下界是 $\\sqrt{2k/\\min(m_1,m_2)}$。若质量不同，两端严格分离，中间无传播本征频率，即出现禁带。$m_1=m_2$ 时两频率在折叠的区边界相遇，禁带闭合；这不是“无波动”，而是原胞可进一步缩小的结果。\n\n(4) 在 $q\\to0$ 时 $\\sin(qa/2)\\sim qa/2$。将二次根式对 $q$ 展开可得\n\\[\n\\omega_-^2(q)=\\frac{k a^2}{2(m_1+m_2)}q^2+O(q^4),\\qquad\nc_s=\\lim_{q\\to0^+}\\omega_-(q)/q=a\\sqrt{\\frac{k}{2(m_1+m_2)}}.\n\\]\n若两质量相等为 $m$，则 $c_s=(a/2)\\sqrt{k/m}$，与粒子间实际间隔 $a/2$ 的单原子弹簧链声速完全一致。\n"
+      }
+    },
+    "W012": {
+      "meta.json": {
+        "bytes": 636,
+        "git_blob": "069d57df120a53b4304f0baa5e805ef014261dd1",
+        "text": "{\n  \"id\": \"W012\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"带质量与弹簧耦合的弦端复反射系数\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 70,\n  \"tags\": [\n    \"波动边界条件\",\n    \"动态阻抗\",\n    \"散射矩阵\",\n    \"相位响应\",\n    \"共振与能流\"\n  ],\n  \"answer\": \"r_b=\\\\frac{D+i\\\\omega(Z-b)}{i\\\\omega(Z+b)-D},\\\\quad \\\\mathcal A=\\\\frac{4bZ\\\\omega^2}{D^2+\\\\omega^2(Z+b)^2}\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v1.3\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 815,
+        "git_blob": "2056ddab02f594883cf73d463e90e3d03e386158",
+        "text": "半无限理想均匀弦占据 $x<0$，张力 $T>0$、线密度 $\\mu>0$、波速 $c=\\sqrt{T/\\mu}$。其端点 $x=0$ 连接一质量 $M>0$ 的小块，小块还通过劲度系数 $K>0$ 的无质量弹簧连接固定墙；块只能横向振动，弹簧平衡长度已校正。频率为 $\\omega>0$ 的横波从左侧射向端点，采用时间因子 $e^{-i\\omega t}$，弦上位移 $y=A_i(e^{ikx}+r e^{-ikx})e^{-i\\omega t}$，$k=\\omega/c$。\n(1) 用弦端位移连续与小块牛顿第二定律求复反射系数 $r(\\omega)$；(2) 证明无阻尼时 $|r|=1$，解释反射能流与相位响应；(3) 求 $K-M\\omega^2=0$ 时与 $\\omega\\to0^+$ 时的反射极限，并给出对应物理边界类型；(4) 引入微小黏滞阻尼力 $-b\\dot y(0,t)$，$b>0$，修改反射系数并求能流吸收率，证明其非负。\n"
+      },
+      "solution.tex": {
+        "bytes": 1383,
+        "git_blob": "cf5c311e8d101d57f9fa385e49109b5d665532d5",
+        "text": "(1) 在 $x=0$ 处振幅 $Y=A_i(1+r)$；入射弦横向牵引小块的力是 $-T\\partial_x y(0^-)$，取定 $+y$ 的方向可从弦受边界牵引的反作用确定。为使被动端的阻尼吸收率非负，采用小块方程\n\\[\nM\\ddot Y+KY=-T\\,y_x(0^-,t)\n\\]\n时，以 $e^{-i\\omega t}$ 表示，$ (K-M\\omega^2)(1+r)=-iT k(1-r)$。记 $Z=Tk/\\omega=\\sqrt{T\\mu}$、$D=K-M\\omega^2$，联立\n\\[\nr=\\frac{i\\omega Z+D}{i\\omega Z-D}.\n\\]\n由于分子和分母模相等，故 $|r|=1$。注意不同的应力正方向会将反射相位做等价的符号换元，但反射功率必须保持不变。\n\n(2) 无耗散时，入射、反射波平均能流的比值是 $|r|^2=1$。反射相位随 $D/(\\omega Z)$ 连续变化，代表端点的弹性储能与惯性储能交替占优。\n\n(3) 当 $D=0$，即 $\\omega=\\sqrt{K/M}$，$r=1$，端点位移为反节点（近似自由端相位）；当 $\\omega\\to0^+$ 且 $K>0$ 固定，$r\\to-1$，端点近似固定。质量、刚度极限须与频率极限区分。\n\n(4) 若加入 $-b\\dot Y$，小块方程改为 $M\\ddot Y+b\\dot Y+KY=-T y_x$，于是 $D$ 被替换为 $D-i b\\omega$，\n\\[\nr_b=\\frac{D+i\\omega(Z-b)}{i\\omega(Z+b)-D}.\n\\]\n因此\n\\[\n\\mathcal A=1-|r_b|^2=\\frac{4bZ\\omega^2}{D^2+\\omega^2(Z+b)^2}\\ge0.\n\\]\n当 $b\\to0^+$ 时 $\\mathcal A\\to0$；当 $D=0$ 且 $b=Z$ 时阻抗匹配、无反射。阻尼项消耗的平均功率与散射能流差吻合。\n"
+      }
+    },
+    "W013": {
+      "meta.json": {
+        "bytes": 663,
+        "git_blob": "63f46112562543a9faeb79e50042d941f814253b",
+        "text": "{\n  \"id\": \"W013\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"端点有弹簧约束的弦本征频率与渐近边界条件\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 65,\n  \"tags\": [\n    \"Sturm–Liouville谱\",\n    \"Robin边界\",\n    \"超越本征方程\",\n    \"稳定性\",\n    \"特征根渐近\"\n  ],\n  \"answer\": \"\\\\xi\\\\cos\\\\xi+\\\\beta\\\\sin\\\\xi=0,\\\\quad \\\\omega_n=c\\\\xi_n/L,\\\\quad \\\\xi_n=(n+1/2)\\\\pi+\\\\beta/[(n+1/2)\\\\pi]+O(\\\\beta^2)\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v1.3\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 732,
+        "git_blob": "3710685a0ac970f53878b485ef87218d1d0736f7",
+        "text": "一根均匀理想细弦长 $L>0$、张力 $T>0$、线密度 $\\mu>0$；左端 $x=0$ 固定，右端 $x=L$ 连一无质量线性弹簧到固定支架，弹簧劲度系数 $K>0$，只允许垂直弦轴的小位移。弦满足 $y_{tt}=c^2y_{xx}$，$c=\\sqrt{T/\\mu}$，且右端受力平衡给 $T y_x(L,t)+K y(L,t)=0$。\n(1) 通过变量分离求波形和非零本征波数满足的超越方程；(2) 用能量法证明所有非平凡本征频率均为实数且严格正，并证明不同模在 $L^2(0,L)$ 正交；(3) 求 $K\\to0^+$ 与 $K\\to\\infty$ 的端点边界及波数极限，说明它们对应的物理端点；(4) 设 $\\beta=KL/T\\ll1$，求第 $n$ 个波数的一阶修正（$n=0,1,2,\\ldots$），并给出各模的角频率。\n"
+      },
+      "solution.tex": {
+        "bytes": 1406,
+        "git_blob": "585bcb530b9b695f02f8b79703b7d8d645403f32",
+        "text": "(1) 令 $y(x,t)=X(x)\\cos(\\omega t+\\phi)$。空间方程 $X''+k^2X=0$、$k=\\omega/c$。左端固定使 $X=A\\sin(kx)$，右端 Robin 条件得\n\\[\nTk\\cos(kL)+K\\sin(kL)=0.\n\\]\n设 $\\xi=kL,\\ \\beta=KL/T$，则正根满足 $\\xi\\cos\\xi+\\beta\\sin\\xi=0$，在 $\\sin\\xi\\ne0$ 的根上等价于 $\\tan\\xi=-\\xi/\\beta$。\n\n(2) 乘空间方程 $-TX''=\\mu\\omega^2X$ 以 $X$ 并在 $0$ 到 $L$ 积分，分部积分且 $X(0)=0,\\ TX'(L)=-KX(L)$，得\n\\[\n\\mu\\omega^2\\int_0^L X^2dx=T\\int_0^L(X')^2dx+KX(L)^2>0\n\\]\n对任意非零 $X$ 成立，故 $\\omega^2>0$。对两个不同本征值的方程交叉相乘并相减，边界项在 Robin 条件下抵消，于是 $(\\omega_j^2-\\omega_i^2)\\int_0^L X_iX_j\\,dx=0$，证明不同频率模正交。\n\n(3) $K\\to0$ 时右端自由，$X'(L)=0$，故 $k_nL\\to(n+\\tfrac12)\\pi$。$K\\to\\infty$ 时有限能量要求 $X(L)=0$，右端固定，故 $k_nL\\to(n+1)\\pi$。两者不能简单按同一式直接令 $\\beta=0$ 后忽略孤立零根；原始边界和正频率必须一起检查。\n\n(4) 在 $\\beta=0$ 正根附近设 $\\xi=\\xi_n^{(0)}+\\delta$，$\\xi_n^{(0)}=(n+\\tfrac12)\\pi$。线性化 $\\xi\\cos\\xi+\\beta\\sin\\xi=0$，利用 $\\sin\\xi_n^{(0)}=(-1)^n$ 得 $\\delta=\\beta/\\xi_n^{(0)}+O(\\beta^2)$，因此\n\\[\nk_n=\\frac1L\\left[(n+\\tfrac12)\\pi+\\frac{\\beta}{(n+\\tfrac12)\\pi}+O(\\beta^2)\\right],\\quad \\omega_n=ck_n.\n\\]\n弹簧增强约束使所有频率较自由端情形上移，与能量法一致。\n"
+      }
+    },
+    "W014": {
+      "meta.json": {
+        "bytes": 616,
+        "git_blob": "d66fd79429b2523ae3877abc0edfcc671b0453f3",
+        "text": "{\n  \"id\": \"W014\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"单原子弹簧链轻质量缺陷诱导的局域振动模\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 70,\n  \"tags\": [\n    \"离散色散关系\",\n    \"点缺陷\",\n    \"局域态\",\n    \"频带外本征值\",\n    \"指数衰减\"\n  ],\n  \"answer\": \"\\\\lambda=\\\\ln[(2m-M)/M],\\\\quad\\\\omega^2=4km/[M(2m-M)],\\\\quad\\\\omega>2\\\\sqrt{k/m}\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v1.4\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 730,
+        "git_blob": "f0b2e6e543499601c46b1e859938ed8703c4d724",
+        "text": "无限长单原子链中除 $n=0$ 处的质量为 $M$ 外，所有格点质量均为 $m>0$；每对相邻粒子由劲度系数为 $k>0$ 的相同轻弹簧连接，平衡间距为 $a>0$，忽略耗散。取缺陷比主体质量轻，即 $0<M<m$。\n(1) 求无缺陷时的行波色散关系和声学频带上边缘；(2) 设缺陷诱导的局域振动形式为 $u_n(t)=A(-1)^n e^{-\\lambda|n|}e^{-i\\omega t}$，其中 $\\lambda>0$，由非缺陷格点方程求 $\\omega(\\lambda)$；(3) 使用缺陷点方程解出 $\\lambda$ 和 $\\omega$ 的精确表达式，证明频率位于正常频带之外；(4) 研究 $M\\to m^-$ 和 $M\\to0^+$ 的局域长度与频率极限，解释重质量缺陷是否能以同样形式产生高频局域模。\n"
+      },
+      "solution.tex": {
+        "bytes": 1309,
+        "git_blob": "bb8c656def733fb51372ee42bbfb3433d11361a7",
+        "text": "(1) 普通格点满足 $m\\ddot u_n=k(u_{n+1}-2u_n+u_{n-1})$。代入 $e^{i(qna-\\omega t)}$ 得\n\\[\n\\omega^2(q)=\\frac{4k}{m}\\sin^2(qa/2),\\qquad 0\\le\\omega\\le 2\\sqrt{k/m}.\n\\]\n区边界振动呈相邻格点反相。\n\n(2) 令 $u_n=A(-1)^n e^{-\\lambda|n|}e^{-i\\omega t}$。对 $|n|\\ge1$，有 $u_{n+1}+u_{n-1}=-2\\cosh\\lambda\\,u_n$，故\n\\[\nm\\omega^2=2k(1+\\cosh\\lambda)=4k\\cosh^2(\\lambda/2).\n\\]\n因 $\\lambda>0$，该频率严格高于主体最高传播频率，这正是无辐射束缚模得以指数衰减的条件。\n\n(3) 在 $n=0$ 处，左右两邻点均为 $-Ae^{-\\lambda}$，所以\n\\[\nM\\omega^2=2k(1+e^{-\\lambda}).\n\\]\n两式联立并令 $t=e^{-\\lambda}$，得到 $M/m=2t/(1+t)$，从而\n\\[\ne^{-\\lambda}=\\frac M{2m-M}\\in(0,1),\\quad\n\\lambda=\\ln\\frac{2m-M}{M},\\quad\n\\omega^2=\\frac{4km}{M(2m-M)}.\n\\]\n由于 $M(2m-M)<m^2$ 对 $0<M<m$ 严格成立，$\\omega>2\\sqrt{k/m}$，证实这是频带外的局域模。\n\n(4) $M\\to m^-$ 时 $\\lambda\\to0^+$，局域长度 $\\ell_{\\rm loc}\\sim a/\\lambda\\to\\infty$，频率趋于带边 $2\\sqrt{k/m}$；$M\\to0^+$ 时 $\\lambda\\to\\infty$，振动集中在缺陷点，$\\omega^2\\sim2k/M$。若 $M\\ge m$，同一公式不再给出 $0<t<1$，故这种交替符号、高于频带的局域解不存在；这并不排除其他复杂缺陷在不同结构中产生不同类型的局域态。\n"
+      }
+    },
+    "W015": {
+      "meta.json": {
+        "bytes": 635,
+        "git_blob": "41f5bc64744758e3fdb5de44e0a5950f32fa411e",
+        "text": "{\n  \"id\": \"W015\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"张力随位置平方增长的非均匀弦精确本征谱\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 75,\n  \"tags\": [\n    \"变系数波动方程\",\n    \"Euler–Cauchy方程\",\n    \"边界本征值\",\n    \"正交性\",\n    \"均匀极限\"\n  ],\n  \"answer\": \"\\\\omega_n=\\\\alpha\\\\sqrt{T_0/\\\\mu}\\\\sqrt{\\\\frac14+\\\\frac{n^2\\\\pi^2}{\\\\ln^2(1+\\\\alpha L)}}\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v1.4\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 608,
+        "git_blob": "18680388b85ed667b7ca93d32df6b86683b19d70",
+        "text": "一根长度 $L>0$ 的细弦两端固定，横向微振动满足 $\\mu y_{tt}=\\partial_x[T(x)y_x]$，其中线密度 $\\mu>0$ 常数、张力随位置为 $T(x)=T_0(1+\\alpha x)^2$，$T_0>0,\\alpha>0$。忽略耗散，固定端位于 $x=0,L$。\n(1) 使用变量分离推导空间模态满足的变系数常微分方程；(2) 令 $z=1+\\alpha x$，求全部非零本征角频率和对应未归一化波形；(3) 从积分能量恒等式证明频率严格为实数且平方正，并说明不同频率模的正交性；(4) 在 $\\alpha L\\to0^+$ 的极限展开最低阶频率，验证均匀弦的正弦驻波结果。\n"
+      },
+      "solution.tex": {
+        "bytes": 1406,
+        "git_blob": "7d6a56bddc927d19b86212edaf44f840d716d85d",
+        "text": "(1) 取 $y(x,t)=X(x)e^{-i\\omega t}$，则\n\\[\n-\\mu\\omega^2X=\\frac d{dx}\\left[T_0(1+\\alpha x)^2X'\\right],\\qquad X(0)=X(L)=0.\n\\]\n因为张力位置依赖，不能直接把波速当常数而写 $X''+k^2X=0$。\n\n(2) 用 $z=1+\\alpha x$，空间方程变为\n\\[\nz^2X_{zz}+2zX_z+\\frac{\\mu\\omega^2}{T_0\\alpha^2}X=0.\n\\]\n这是 Euler–Cauchy 方程；试 $X=z^\\nu$ 得 $\\nu(\\nu+1)+\\mu\\omega^2/(T_0\\alpha^2)=0$。对可满足两个固定端的振动模，写 $\\nu=-1/2\\pm iq$，因此\n\\[\nX(z)=z^{-1/2}[A\\cos(q\\ln z)+B\\sin(q\\ln z)].\n\\]\n左端 $z=1$ 使 $A=0$，右端 $z_L=1+\\alpha L$ 使 $q\\ln z_L=n\\pi,\\ n=1,2,\\ldots$。于是\n\\[\n\\omega_n=\\alpha\\sqrt{\\frac{T_0}{\\mu}}\n\\sqrt{\\frac14+\\left(\\frac{n\\pi}{\\ln(1+\\alpha L)}\\right)^2},\n\\quad X_n(x)\\propto(1+\\alpha x)^{-1/2}\n\\sin\\frac{n\\pi\\ln(1+\\alpha x)}{\\ln(1+\\alpha L)}.\n\\]\n\n(3) 用 $X$ 乘本征方程，分部积分并使用 $X(0)=X(L)=0$，得\n\\[\n\\mu\\omega^2\\int_0^L|X|^2dx=\\int_0^L T(x)|X'|^2dx>0.\n\\]\n因此无非零零频或虚频本征模；对两个不同本征值的解交叉相乘并相减，边界项为零，得到 $\\int_0^L\\mu X_mX_n\\,dx=0$，即质量加权正交，本题 $\\mu$ 为常量。\n\n(4) 当 $\\alpha L\\ll1$，$\\ln(1+\\alpha L)=\\alpha L+O(\\alpha^2L^2)$，故\n\\[\n\\omega_n=\\frac{n\\pi}{L}\\sqrt{T_0/\\mu}[1+O(\\alpha L)]\n\\]\n并且 $X_n(x)\\to\\sin(n\\pi x/L)$。由于变张力在 $\\alpha\\to0$ 时逐点趋向 $T_0$，此极限验证了所得谱的正常化。\n"
+      }
+    },
+    "W016": {
+      "meta.json": {
+        "bytes": 648,
+        "git_blob": "1f754463edbb1bcc96b1a5ac96cbe63b94b34396",
+        "text": "{\n  \"id\": \"W016\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"有限异质弦段的双界面散射、透射共振与能流守恒\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 70,\n  \"tags\": [\n    \"多界面散射\",\n    \"特征机械阻抗\",\n    \"复反射幅度\",\n    \"Fabry–Pérot共振\",\n    \"能流守恒\"\n  ],\n  \"answer\": \"\\\\mathcal T=[1+4\\\\rho^2\\\\sin^2(k_2d)/(1-\\\\rho^2)^2]^{-1},\\\\quad \\\\rho=(Z_1-Z_2)/(Z_1+Z_2)\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v1.5\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 713,
+        "git_blob": "9c327751060ffe2fca2c08eebc94e14616b23d7d",
+        "text": "一根无限长、始终保持相同静张力 $T>0$ 的无损细弦，其线密度在 $x<0$ 与 $x>d$ 两个半无限区段均为 $\\mu_1>0$，而在 $0<x<d$ 为 $\\mu_2>0$，$d>0$。角频率 $\\omega>0$ 的单色横波从 $x=-\\infty$ 以时间因子 $e^{-i\\omega t}$ 入射，假定界面位移和由弦张力产生的横向力连续。\n(1) 写出三段的波数、特征机械阻抗和单一界面的反射透射振幅；(2) 对有限中间区段的所有多次内反射求总反射幅度 $r$ 与总透射幅度 $t$；(3) 证明无损结构的 $|r|^2+|t|^2=1$，求透射率与中间层相位的关系；(4) 找出完全透射的厚度/频率条件和最小透射率，并讨论 $d\\to0$、$\\mu_1=\\mu_2$ 极限。\n"
+      },
+      "solution.tex": {
+        "bytes": 1794,
+        "git_blob": "25276dab9100f1da0de841c81fb19be46b5de99e",
+        "text": "(1) 三段波速 $c_j=\\sqrt{T/\\mu_j}$、波数 $k_j=\\omega/c_j$，横向行波的特征机械阻抗为 $Z_j=Tk_j/\\omega=\\sqrt{T\\mu_j}>0$。对从介质1向介质2的单一界面，写位移振幅 $1+r_{12}$ 与 $t_{12}$ 连续，且 $Tk_1(1-r_{12})=Tk_2t_{12}$，故\n\\[\nr_{12}=\\frac{Z_1-Z_2}{Z_1+Z_2}=:\\rho,\\qquad\nt_{12}=\\frac{2Z_1}{Z_1+Z_2}.\n\\]\n从2到1的界面有 $r_{21}=-\\rho,\\ t_{21}=2Z_2/(Z_1+Z_2)$。\n\n(2) 令中层单程相位 $\\varphi=k_2d$。每次在中层完整往返获得因子 $\\rho^2e^{2i\\varphi}$，几何级数绝对收敛，因为 $|\\rho|<1$。总透射幅度为\n\\[\nt=\\frac{t_{12}t_{21}e^{i\\varphi}}{1-\\rho^2e^{2i\\varphi}}\n=\\frac{(1-\\rho^2)e^{i\\varphi}}{1-\\rho^2e^{2i\\varphi}}.\n\\]\n反射由前界面反射加上中层往返项累加，得到\n\\[\nr=\\frac{\\rho(1-e^{2i\\varphi})}{1-\\rho^2e^{2i\\varphi}}.\n\\]\n这里透射幅度定义在右界面 $x=d$，相位中的 $e^{i\\varphi}$ 是从左界面到右界面的传播相位；若用右侧统一全局坐标，其相位还会乘一个模为1的参考因子，不影响物理透射率。\n\n(3) 左右外部弦材料相同，入射与透射能流比例即为 $|t|^2$，反射能流比是 $|r|^2$。利用\n\\[\n|1-\\rho^2e^{2i\\varphi}|^2=(1-\\rho^2)^2+4\\rho^2\\sin^2\\varphi\n\\]\n可得\n\\[\n\\mathcal T=|t|^2=\\frac1{1+F\\sin^2\\varphi},\\qquad\nF=\\frac{4\\rho^2}{(1-\\rho^2)^2}\n=\\frac{(Z_1^2-Z_2^2)^2}{4Z_1^2Z_2^2},\n\\]\n并由反射幅度的模平方直接算得 $|r|^2=1-\\mathcal T$，所以总能流守恒。\n\n(4) 当 $\\varphi=n\\pi$，$n$ 为整数时 $r=0,\\mathcal T=1$，有限异质区段在这些共振条件下完全透射。当 $\\varphi=(n+1/2)\\pi$ 时\n\\[\n\\mathcal T_{\\min}=\\frac1{1+F}=\\frac{4Z_1^2Z_2^2}{(Z_1^2+Z_2^2)^2}.\n\\]\n当 $d\\to0$，$\\varphi\\to0$，故 $\\mathcal T\\to1$。当 $\\mu_1=\\mu_2$ 时 $\\rho=0$，所有频率均完全透射。\n"
+      }
+    },
+    "W017": {
+      "meta.json": {
+        "bytes": 632,
+        "git_blob": "9da5ea34a719f957dd2156fc9fc485a094b950bb",
+        "text": "{\n  \"id\": \"W017\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"固定边缘圆形膜的贝塞尔本征模、简并与能量正性\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 75,\n  \"tags\": [\n    \"二维波动方程\",\n    \"极坐标分离变量\",\n    \"贝塞尔函数\",\n    \"频率简并\",\n    \"正交归一\"\n  ],\n  \"answer\": \"\\\\omega_{m,n}=cj_{m,n}/a,\\\\quad\\\\omega_{\\\\rm fund}\\\\simeq2.4048255577\\\\,c/a\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v1.5\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 728,
+        "git_blob": "ea2af56dfb50ceb389687dcd7a268a9592e44df2",
+        "text": "一张均匀各向同性圆形薄膜半径为 $a>0$，面张力为 $T>0$（单位为力每长度）、面密度为 $\\rho>0$，边缘固定在 $r=a$，只研究小振幅横向位移 $u(r,\\phi,t)$。薄膜满足 $u_{tt}=c^2\\nabla^2u$，其中 $c=\\sqrt{T/\\rho}$，在中心位移必须有限。\n(1) 用极坐标变量分离求一般角向模与径向本征方程，说明为何应排除第二类贝塞尔函数；(2) 给出所有正本征频率 $\\omega_{m,n}$ 及模态波形，解释角向简并；(3) 推导能量积分中的频率正性和不同模态的正交条件，并给出同一角量子数下径向模的归一化积分；(4) 求基本模频率的数值系数，讨论将半径扩大为 $\\eta a$ 时频谱如何变化。\n"
+      },
+      "solution.tex": {
+        "bytes": 1727,
+        "git_blob": "d69078e6282e901b9aee1c1cf7bf318630fff04a",
+        "text": "(1) 极坐标 Laplace 算符为\n\\[\n\\nabla^2=\\partial_r^2+\\frac1r\\partial_r+\\frac1{r^2}\\partial_\\phi^2.\n\\]\n设 $u=R(r)\\Phi(\\phi)e^{-i\\omega t}$，角向单值性 $\\Phi(\\phi+2\\pi)=\\Phi(\\phi)$ 使角向方程 $\\Phi''+m^2\\Phi=0$ 的指标 $m=0,1,2,\\ldots$。径向方程为\n\\[\nr^2R''+rR'+(k^2r^2-m^2)R=0,\\quad k=\\omega/c.\n\\]\n两个基本解为 $J_m(kr)$ 与 $Y_m(kr)$，后者在 $r\\to0$ 时发散或对 $m=0$ 为对数发散，不满足中心有限条件，必须舍去。\n\n(2) 边缘固定 $R(a)=0$，故 $J_m(ka)=0$。令 $j_{m,n}$ 为 $J_m$ 的第 $n=1,2,\\ldots$ 个严格正零点，则\n\\[\n\\omega_{m,n}=\\frac ca j_{m,n},\\quad\nu_{m,n}\\propto J_m(j_{m,n}r/a)\n\\begin{cases}\n\\cos(m\\phi)\\\\ \\sin(m\\phi)\n\\end{cases}e^{-i\\omega_{m,n}t}.\n\\]\n$m=0$ 时只有常数角模，不发生角简并；$m\\ge1$ 时 $\\cos m\\phi,\\sin m\\phi$ 给出两个线性独立但同频的实角模。\n\n(3) 将 $-\\rho\\omega^2U=T\\nabla^2U$ 乘以 $U^*$ 后在圆盘 $\\mathcal D$ 积分，边界 $U=0$ 使分部积分边界项消失，得到\n\\[\n\\rho\\omega^2\\int_{\\mathcal D}|U|^2\\,dA\n=T\\int_{\\mathcal D}|\\nabla U|^2\\,dA>0\n\\]\n（非零模态），故 $\\omega^2>0$。对不同特征值做同样的交叉积分，推得 $\\int_{\\mathcal D}U_i^*U_j\\,dA=0$。同一 $m$ 的径向正交归一积分为\n\\[\n\\int_0^a rJ_m(j_{m,n}r/a)J_m(j_{m,p}r/a)\\,dr\n=\\frac{a^2}{2}J_{m+1}(j_{m,n})^2\\delta_{np}.\n\\]\n角向正交另由正弦、余弦积分给出。\n\n(4) 最低正频模为 $m=0,n=1$，首个零点 $j_{0,1}\\simeq2.4048255577$，故\n\\[\n\\omega_{\\mathrm{fund}}\\simeq2.4048255577\\,c/a.\n\\]\n若 $T,\\rho$ 不变而半径变为 $\\eta a$，所有波数按 $1/\\eta$ 缩放，故各频率 $\\omega_{m,n}\\mapsto\\omega_{m,n}/\\eta$。这由波动方程的尺度对称性独立验证。\n"
+      }
+    },
+    "W018": {
+      "meta.json": {
+        "bytes": 645,
+        "git_blob": "d652cd45db71e1d9df833f882ad2b5c5c0772866",
+        "text": "{\n  \"id\": \"W018\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"有限水深自由表面重力波的色散关系、相速度和群速度\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 75,\n  \"tags\": [\n    \"无旋不可压流体\",\n    \"自由表面边界条件\",\n    \"色散关系\",\n    \"相速度与群速度\",\n    \"深浅水渐近\"\n  ],\n  \"answer\": \"\\\\omega^2=gk\\\\tanh(kh),\\\\quad c_g=\\\\frac{c_p}{2}[1+2kh/\\\\sinh(2kh)]\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v1.6\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 785,
+        "git_blob": "82a7da4825ae5d6aa789b0fbc28969ee5089d605",
+        "text": "一层密度为 $\\rho>0$ 的不可压缩、无黏、无旋理想流体占据 $-h<z<\\eta(x,t)$，底部为水平不可渗透固壁 $z=-h$，$h>0$。重力为 $g>0$ 向 $-z$。只研究小幅度自由表面扰动 $\\eta(x,t)$，忽略表面张力和流动非线性。速度场可写成 $\\boldsymbol v=\\nabla\\Phi$，取沿 $x$ 传播的单色波因子 $e^{i(kx-\\omega t)}$，$k>0$。\n(1) 由不可压与底部不透流得到速度势满足的空间方程与底部边界条件；(2) 从线性化的自由表面运动学和动力学条件推导精确色散关系 $\\omega(k)$；(3) 求相速度 $c_p$ 与群速度 $c_g$，证明二者比值的解析式；(4) 给出 $kh\\ll1$、$kh\\gg1$ 两个极限的色散关系、速度和传播含义，说明在浅水极限为何波包近似无频散。\n"
+      },
+      "solution.tex": {
+        "bytes": 1676,
+        "git_blob": "f157d82dbf7dcd2e6e5d2f024237e8fa866d75cb",
+        "text": "(1) 体内不可压 $\\nabla\\cdot\\boldsymbol v=0$ 且 $\\boldsymbol v=\\nabla\\Phi$，故 $\\nabla^2\\Phi=0$。固底没有垂直速度，$\\partial_z\\Phi(x,-h,t)=0$。设 $\\Phi(x,z,t)=F(z)e^{i(kx-\\omega t)}$，空间方程 $F''-k^2F=0$。由底部条件可取\n\\[\nF(z)=A\\frac{\\cosh[k(z+h)]}{\\cosh(kh)}.\n\\]\n在自由表面 $z=0$，$F(0)=A,\\ F'(0)=Ak\\tanh(kh)$。\n\n(2) 小扰动自由表面的运动学条件是\n\\[\n\\partial_t\\eta=\\partial_z\\Phi|_{z=0},\n\\]\n动力学条件来自线性化 Bernoulli 方程并取表面压强恒定：\n\\[\n\\partial_t\\Phi|_{z=0}+g\\eta=0.\n\\]\n取 $\\eta=\\eta_0 e^{i(kx-\\omega t)}$，动力学条件给 $\\eta_0=i\\omega A/g$。代回运动学条件，\n\\[\n-i\\omega(i\\omega A/g)=Ak\\tanh(kh),\n\\]\n即\n\\[\n\\boxed{\\omega^2=gk\\tanh(kh)}.\n\\]\n只有实正根对应向右传播的正频波，流体密度因无表面张力且重力为唯一回复机制而不出现在色散式中。\n\n(3) 相速度 $c_p=\\omega/k=\\sqrt{(g/k)\\tanh(kh)}$。对 $\\omega^2$ 求 $k$ 导数，\n\\[\n2\\omega\\,\\frac{d\\omega}{dk}\n=g[\\tanh(kh)+kh\\,\\operatorname{sech}^2(kh)].\n\\]\n因此群速度\n\\[\nc_g=\\frac{d\\omega}{dk}\n=\\frac{c_p}{2}\\left[1+\\frac{2kh}{\\sinh(2kh)}\\right].\n\\]\n对 $kh>0$，有 $0<2kh/\\sinh(2kh)<1$，故 $c_p/2<c_g<c_p$，反映自由表面重力波的正常频散。\n\n(4) 浅水 $kh\\ll1$ 时 $\\tanh(kh)\\sim kh$，故 $\\omega\\simeq k\\sqrt{gh}$、$c_p\\simeq c_g\\simeq\\sqrt{gh}$，波速几乎与波数无关，波包近似无频散。深水 $kh\\gg1$ 时 $\\tanh(kh)\\to1$，故 $\\omega\\simeq\\sqrt{gk}$、$c_p\\simeq\\sqrt{g/k}$、$c_g\\simeq c_p/2$，波包移动速度是相位速度的一半。若加入表面张力，短波色散将改变，不能继续把高频结果当作普适定律。\n"
+      }
+    },
+    "W019": {
+      "meta.json": {
+        "bytes": 676,
+        "git_blob": "a55aaea0cab39d01ad8d95368ea45516a2b086b9",
+        "text": "{\n  \"id\": \"W019\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"中心附加点质量的固定弦本征谱、模态奇偶性与软模\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 75,\n  \"tags\": [\n    \"非均匀振动系统\",\n    \"点质量界面条件\",\n    \"Sturm–Liouville\",\n    \"奇偶模态\",\n    \"大质量软模\"\n  ],\n  \"answer\": \"\\\\cot(kL/2)=Mk/(2\\\\mu),\\\\quad \\\\omega_{\\\\rm odd,n}=2n\\\\pi c/L,\\\\quad \\\\omega_{\\\\rm soft}\\\\sim2\\\\sqrt{T/(ML)}\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v1.6\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 779,
+        "git_blob": "19856bfd6bbdad64fec25e7fa012275a97f1f670",
+        "text": "长度为 $L>0$、线密度为 $\\mu>0$、张力为 $T>0$ 的理想细弦两端固定。弦在正中心 $x=L/2$ 与质量 $M>0$ 的微小质点固定连接，质点只作横向振动。弦的两侧仍满足 $y_{tt}=c^2 y_{xx}$，其中 $c=\\sqrt{T/\\mu}$，质点处位移连续但斜率可有跳跃。忽略阻尼。\n(1) 由质点牛顿第二定律导出中心的斜率跳跃边界条件；(2) 利用中心反射对称，将本征模分为中心位移为零的反对称模和中心位移不为零的对称模，分别推导特征频率方程；(3) 证明反对称模频率不受 $M$ 影响，并用动能与势能表达式说明所有非零本征频率都为正；(4) 求 $M\\to0^+$ 和 $M\\to\\infty$ 时最低对称模的频率极限，解释大质量极限出现的低频软模。\n"
+      },
+      "solution.tex": {
+        "bytes": 1914,
+        "git_blob": "c321fb2d9d58f97fd4ec3e97fa7a40389be4f8ad",
+        "text": "(1) 取时间因子 $e^{-i\\omega t}$。质点处弦左右两段的横向张力合力为 $T[y_x(L/2^+,t)-y_x(L/2^-,t)]$，因此\n\\[\nT[y_x(L/2^+,t)-y_x(L/2^-,t)]\n=M\\,y_{tt}(L/2,t),\n\\]\n另有 $y(L/2^-,t)=y(L/2^+,t)$。该条件对横向力取实际代数方向，不能误把导数强行设为连续。\n\n(2) 令 $\\ell=L/2$、$k=\\omega/c$。反对称模在中心有节点 $Y(\\ell)=0$，左半区 $Y=A\\sin(kx)$，故 $\\sin(k\\ell)=0$，即\n\\[\nk_{\\rm odd,n}=\\frac{n\\pi}{\\ell}=\\frac{2n\\pi}{L},\\quad n=1,2,\\ldots.\n\\]\n对称模左半区 $Y=A\\sin(kx)$，右半区为 $Y=A\\sin[k(L-x)]$。中心左右导数分别为 $Ak\\cos(k\\ell)$ 和 $-Ak\\cos(k\\ell)$，代入跳跃条件：\n\\[\n-2TkA\\cos(k\\ell)=-M\\omega^2A\\sin(k\\ell).\n\\]\n故对称模的非零频率满足\n\\[\n2Tk\\cos(k\\ell)=M\\omega^2\\sin(k\\ell),\\quad\n\\cot(k\\ell)=\\frac{Mk}{2\\mu}.\n\\]\n\n(3) 反对称模质点恰不动，所受合力也因左右斜率相等而为零，因此频率与没有中心质点的相应节点模式相同。对一般模态，质点附加动能为 $M|\\dot y(\\ell)|^2/2$，故能量中的有效质量范数为\n\\[\n\\mathscr N=\\mu\\int_0^L|Y(x)|^2dx+M|Y(\\ell)|^2>0.\n\\]\n将波动方程乘以 $Y^*$ 并在中心两侧分部积分，利用端点固定和质点跳跃条件，得到\n\\[\n\\omega^2\\mathscr N=T\\int_0^L|Y'(x)|^2dx>0.\n\\]\n所有非零模均严格稳定。\n\n(4) 当 $M\\to0^+$，对称模的条件右端趋零，故最低对称根 $k\\ell\\to\\pi/2$，频率 $\\omega_{\\rm even,0}\\to\\pi c/L$，恢复无点质量弦的最低模。当 $M\\to\\infty$ 时最低根趋近零，利用 $\\cot\\xi\\sim1/\\xi$：\n\\[\n\\frac1{k\\ell}\\simeq\\frac{Mk}{2\\mu}\n\\quad\\Longrightarrow\\quad k^2\\simeq\\frac{2\\mu}{M\\ell}=\\frac{4\\mu}{ML}.\n\\]\n故\n\\[\n\\omega_{\\rm even,0}\\sim 2\\sqrt{\\frac{T}{ML}}\\to0.\n\\]\n这是重质点缓慢移动、两半弦提供近似线性回复力的软模；若误以为 $M\\to\\infty$ 时所有对称模都简单变成固定中点节点，会漏掉此低频分支。\n"
+      }
+    },
+    "W020": {
+      "meta.json": {
+        "bytes": 668,
+        "git_blob": "cee3d4cc941e4a7cd93c1affae5c28c629702d9c",
+        "text": "{\n  \"id\": \"W020\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"黏滞阻尼弦中的复波数、空间衰减与边界能流\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 70,\n  \"tags\": [\n    \"阻尼波动方程\",\n    \"复波数分支\",\n    \"能流守恒\",\n    \"焦耳类耗散\",\n    \"高低频渐近\"\n  ],\n  \"answer\": \"k=\\\\sqrt{(\\\\mu\\\\omega^2+i\\\\beta\\\\omega)/T},\\\\quad \\\\overline{\\\\mathcal S}(0)=T\\\\omega k_rA^2/2=\\\\beta\\\\omega^2A^2/(4k_i)\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v1.7\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 862,
+        "git_blob": "19688dcf4b8950e338f942c339e4914930bf813c",
+        "text": "一根半无限长的均匀理想细弦占据 $x\\ge0$，张力为 $T>0$，线密度为 $\\mu>0$，每单位长度受到与横向速度成正比的外界黏滞阻力 $-\\beta y_t$，其中 $\\beta>0$。横向位移满足\n\\[\n\\mu y_{tt}+\\beta y_t=T y_{xx}.\n\\]\n驱动端在 $x=0$ 处被强迫执行 $y(0,t)=A\\cos\\omega t$，$A,\\omega>0$；只研究已经形成的远离驱动端向右传播、向无限远衰减的稳定周期解。\n(1) 使用 $y=\\Re[Ae^{i(kx-\\omega t)}]$ 建立复波数的代数方程并选择物理分支；(2) 显式求空间相位波数 $k_r$ 与空间衰减率 $k_i$，讨论振幅和波长；(3) 从波动方程推出机械能密度与能流的局部守恒—耗散方程，并计算输入端平均功率与全弦耗散功率；(4) 求 $\\beta\\ll\\mu\\omega$ 的弱阻尼近似和 $\\omega\\ll\\beta/\\mu$ 的低频渐近，解释两种频率极限。\n"
+      },
+      "solution.tex": {
+        "bytes": 1994,
+        "git_blob": "4c19d29786aef499b7c60f04518cc6291e53e454",
+        "text": "(1) 设复波数 $k=k_r+ik_i$，取相位约定 $e^{i(kx-\\omega t)}$。代回波动方程得到\n\\[\n-Tk^2=-\\mu\\omega^2-i\\beta\\omega,\\quad\nk^2=\\frac{\\mu\\omega^2+i\\beta\\omega}{T}.\n\\]\n实际弦位移由实部构成，因此 $e^{ikx}=e^{ik_rx-k_ix}$。满足向右传播而不在 $x\\to+\\infty$ 发散的物理根必须有 $k_r>0,k_i>0$；另一平方根会产生空间增长而不满足半无限弦的辐射条件。\n\n(2) 令 $A_0=\\mu\\omega^2/T>0,\\ B_0=\\beta\\omega/T>0$，联立 $k_r^2-k_i^2=A_0$、$2k_rk_i=B_0$ 得\n\\[\nk_r=\\sqrt{\\frac{\\sqrt{A_0^2+B_0^2}+A_0}{2}},\\qquad\nk_i=\\sqrt{\\frac{\\sqrt{A_0^2+B_0^2}-A_0}{2}}.\n\\]\n故稳定波形为\n\\[\ny(x,t)=A e^{-k_ix}\\cos(k_rx-\\omega t).\n\\]\n$1/k_i$ 是振幅衰减的 $1/e$ 长度，空间相位波长为 $2\\pi/k_r$；两者都随 $\\omega,\\beta$ 改变。\n\n(3) 将 PDE 乘以 $y_t$ 并按乘积法则整理：\n\\[\n\\partial_t\\left[\\frac{\\mu y_t^2}{2}+\\frac{T y_x^2}{2}\\right]\n+\\partial_x(-T y_ty_x)=-\\beta y_t^2.\n\\]\n因此机械能密度 $u=\\mu y_t^2/2+Ty_x^2/2$、能流 $\\mathcal S=-Ty_ty_x$。按周期平均，利用复振幅公式\n\\[\n\\overline{\\mathcal S}(x)=\\frac{T\\omega k_r A^2}{2}e^{-2k_ix}>0,\n\\quad\n\\overline{\\mathcal P}_{\\rm diss}/dx\n=\\frac{\\beta\\omega^2A^2}{2}e^{-2k_ix}.\n\\]\n对 $x\\in[0,\\infty)$ 积分，$\\overline P_{\\rm diss}=\\beta\\omega^2A^2/(4k_i)$。由 $2k_rk_i=\\beta\\omega/T$ 得\n\\[\n\\overline{\\mathcal S}(0)=\\frac{T\\omega k_rA^2}{2}\n=\\frac{\\beta\\omega^2A^2}{4k_i}\n=\\overline P_{\\rm diss},\n\\]\n输入功率完全转成黏滞耗散功率，没有假设波的平均能量流恒定。\n\n(4) 若 $\\beta/(\\mu\\omega)\\ll1$，展开复平方根得\n\\[\nk_r\\simeq\\omega\\sqrt{\\mu/T},\\qquad\nk_i\\simeq\\frac{\\beta}{2\\sqrt{\\mu T}}.\n\\]\n弱阻尼下相速约为 $\\sqrt{T/\\mu}$，而衰减长度对频率在首阶近似中不敏感。相反当 $\\omega\\ll\\beta/\\mu$ 时 $k^2\\simeq i\\beta\\omega/T$，所以\n\\[\nk_r\\simeq k_i\\simeq\\sqrt{\\frac{\\beta\\omega}{2T}}.\n\\]\n这表现为低频黏滞扩散型响应，振幅穿透长度与相位尺度具有相同数量级。\n"
+      }
+    },
+    "W021": {
+      "meta.json": {
+        "bytes": 659,
+        "git_blob": "a2544e9b8c40f05f2a622ba749ca52d988378021",
+        "text": "{\n  \"id\": \"W021\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"受压 Euler–Bernoulli 梁的动态屈曲阈值、特征谱与软化\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 75,\n  \"tags\": [\n    \"Euler–Bernoulli梁\",\n    \"轴向压力与屈曲\",\n    \"偏微分本征值\",\n    \"振动能量泛函\",\n    \"临界软模\"\n  ],\n  \"answer\": \"\\\\omega_n^2=\\\\frac{EI(n\\\\pi/L)^4-P(n\\\\pi/L)^2}{\\\\rho A},\\\\quad P_{\\\\rm cr}=\\\\pi^2EI/L^2\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v1.7\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 829,
+        "git_blob": "06eda1e1b524517737ae65f6a9c55bce1111d1c3",
+        "text": "一根均匀细直梁长度为 $L>0$、抗弯刚度为 $EI>0$、单位长度质量为 $\\rho A>0$，两端均为简支（铰支且无端弯矩）。梁受到大小为 $P\\ge0$ 的恒定轴向压力并保持直梁基态；忽略材料阻尼、非线性挠度及剪切变形。其小横向位移 $y(x,t)$ 满足\n\\[\n\\rho A\\,y_{tt}+EI\\,y_{xxxx}+P\\,y_{xx}=0,\n\\quad y(0,t)=y(L,t)=0,\\quad y_{xx}(0,t)=y_{xx}(L,t)=0.\n\\]\n(1) 用变量分离推导全部正交弯曲模态及相应 $\\omega_n^2(P)$；(2) 推出稳定直梁的严格负载区间与第一 Euler 临界压力；(3) 写出线性振动能量泛函并证明该临界条件与势能二次型失去正定性一致；(4) 对 $P\\uparrow P_{\\rm cr}$ 求最低模频率软化的标度，讨论 $P>P_{\\rm cr}$ 时线性解的增长和为何不能由线性模型预测最终屈曲形状。\n"
+      },
+      "solution.tex": {
+        "bytes": 1803,
+        "git_blob": "3e39f9f6de01962cc7e67f58232ff6792f0c8884",
+        "text": "(1) 简支两端的空间正弦模满足位移及弯矩为零的边界：\n\\[\nX_n(x)=\\sin(n\\pi x/L),\\quad k_n=n\\pi/L,\\quad n=1,2,\\dots.\n\\]\n因为 $X_n''=-k_n^2X_n$、$X_n''''=k_n^4X_n$，令 $y=X_n e^{i\\omega_nt}$ 代入得\n\\[\n\\omega_n^2(P)=\\frac{EI\\,k_n^4-Pk_n^2}{\\rho A}\n=\\frac{k_n^2(EI\\,k_n^2-P)}{\\rho A}.\n\\]\n在质量权重 $\\rho A$ 下，不同 $n$ 的正弦函数彼此正交。\n\n(2) 第 $n$ 模稳定需要 $\\omega_n^2>0$，即 $P<EI k_n^2$。全部模均稳定的最严格条件来自最低频的 $n=1$：\n\\[\n0\\le P<P_{\\rm cr},\\qquad P_{\\rm cr}=\\frac{\\pi^2EI}{L^2}.\n\\]\n在 $P=P_{\\rm cr}$ 时第一模 $\\omega_1=0$，为中性静态弯曲；当压力超过该值，第一模的 $\\omega_1^2<0$，出现指数增长，直梁小扰动在此线性化模型中不稳定。\n\n(3) 对 PDE 乘以 $y_t$ 并沿全梁积分，分部积分，简支边界使边界项消失，得到\n\\[\n\\frac{d}{dt}\\mathcal E=0,\\qquad\n\\mathcal E=\\frac12\\int_0^L\\left[\\rho A y_t^2+EI y_{xx}^2-P y_x^2\\right]dx.\n\\]\n弹性弯曲能提供 $+EI y_{xx}^2/2$，外部压缩死载荷使位移的二阶有效势能包含负的 $-P y_x^2/2$。代入正弦级数，每个系数对应势能因子 $EI k_n^4-Pk_n^2$；恰在 $P_{\\rm cr}$ 时最低模势能曲率为零。负势能二次型并不违反能量守恒，但可导致动态失稳。\n\n(4) 对最低模\n\\[\n\\omega_1=\\frac{\\pi}{L\\sqrt{\\rho A}}\\sqrt{P_{\\rm cr}-P}\n\\quad (0\\le P<P_{\\rm cr}),\n\\]\n所以临界附近 $\\omega_1\\propto(P_{\\rm cr}-P)^{1/2}$，振动周期发散。若 $P>P_{\\rm cr}$，令 $\\sigma=\\pi\\sqrt{P-P_{\\rm cr}}/(L\\sqrt{\\rho A})$，第一模时间因子为 $e^{\\pm\\sigma t}$，其中增长分支揭示直梁失稳。但随着挠度增大，几何非线性、边界大转角和材料效应必须纳入；仅靠线性 PDE 不能计算有限幅值的后屈曲平衡。\n"
+      }
+    },
+    "W022": {
+      "meta.json": {
+        "bytes": 677,
+        "git_blob": "d134f074ff933e6eccc6f14d25cd25aecc23c08f",
+        "text": "{\n  \"id\": \"W022\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"平行金属板波导的 TE 模截止、相群速度和功率流\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 75,\n  \"tags\": [\n    \"麦克斯韦波导\",\n    \"截止频率\",\n    \"TE阻抗\",\n    \"相速度群速度\",\n    \"坡印廷能流\"\n  ],\n  \"answer\": \"\\\\omega_c=\\\\pi/(a\\\\sqrt{\\\\mu\\\\epsilon}),\\\\quad v_{\\\\rm ph}v_g=1/(\\\\mu\\\\epsilon),\\\\quad\\\\overline P/a_y=ak_z|E_0|^2/(4\\\\omega\\\\mu)\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v1.8\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 859,
+        "git_blob": "afc39e720b6fcd6ac988e3374fe4d88ef04a48eb",
+        "text": "两片无限理想导体平板位于 $x=0$ 与 $x=a$，$a>0$，板间填充介电常数 $\\epsilon>0$、磁导率 $\\mu>0$ 的无损均匀介质。波导沿 $+z$ 无限延伸，研究 $y$ 偏振的最低阶 TE 型模式，其电场按复表示为\n\\[\nE_y(x,z,t)=E_0\\sin(\\pi x/a)e^{i(k_z z-\\omega t)}\n\\]\n且其他电场分量为零，$\\omega>0$。取 $e^{-i\\omega t}$ 时间相位约定。\n(1) 从介质中的 Helmholtz 方程和理想导体切向电场边界条件推导 $k_z(\\omega)$ 及截止频率；(2) 求高于截止时的相速度、群速度与 TE 波阻抗，解释相速度大于介质光速为何不违反因果律；(3) 从 Maxwell–Faraday 公式求磁场的 $H_x,H_z$ 分量，并计算横截面平均坡印廷功率流；(4) 对低于截止的频率求沿波导方向的倏逝长度，讨论此时为何没有向无限远输运的平均功率。\n"
+      },
+      "solution.tex": {
+        "bytes": 2236,
+        "git_blob": "bc0cb82ba65a40ecb74052c194f4446c22e100bf",
+        "text": "(1) 无源均匀介质中的电场满足 $\\nabla^2\\boldsymbol E+\\omega^2\\mu\\epsilon\\boldsymbol E=0$。理想金属壁上切向电场必须为零，故 $\\sin(\\pi x/a)$ 在两壁满足条件。将给定模态代入电场 Helmholtz 方程：\n\\[\n-\\left[(\\pi/a)^2+k_z^2\\right]E_y+\\omega^2\\mu\\epsilon E_y=0,\n\\]\n因此\n\\[\nk_z^2=\\mu\\epsilon\\omega^2-(\\pi/a)^2\n=\\mu\\epsilon(\\omega^2-\\omega_c^2),\\quad\n\\omega_c=\\frac{\\pi}{a\\sqrt{\\mu\\epsilon}}.\n\\]\n$\\omega>\\omega_c$ 时选择 $k_z>0$ 描述向右传播模式，$\\omega<\\omega_c$ 时 $k_z$ 为纯虚数而非传播波数。\n\n(2) 记介质均匀波速 $c_m=1/\\sqrt{\\mu\\epsilon}$，高于截止时有\n\\[\nk_z=\\frac1{c_m}\\sqrt{\\omega^2-\\omega_c^2},\n\\quad\nv_{\\rm ph}=\\frac{\\omega}{k_z}\n=\\frac{c_m}{\\sqrt{1-\\omega_c^2/\\omega^2}},\n\\]\n\\[\nv_g=\\frac{d\\omega}{dk_z}\n=c_m\\sqrt{1-\\omega_c^2/\\omega^2},\\qquad\nv_{\\rm ph}v_g=c_m^2.\n\\]\n从磁场横向分量可定义 TE 波阻抗 $Z_{\\rm TE}=|E_y/H_x|=\\omega\\mu/k_z$。靠近截止时 $v_{\\rm ph}\\to\\infty$，但能量与窄带波包传播速度 $v_g\\to0$，所以相速度超过 $c_m$ 并不表示信息超光速。\n\n(3) 在给定时间约定下，Faraday 定律为 $\\nabla\\times\\boldsymbol E=i\\omega\\mu\\boldsymbol H$。由于 $\\boldsymbol E=E_y\\hat y$，有 $(\\nabla\\times\\boldsymbol E)_x=-\\partial_zE_y$、$(\\nabla\\times\\boldsymbol E)_z=\\partial_xE_y$，因此\n\\[\nH_x=-\\frac{k_z}{\\omega\\mu}E_y,\\qquad\nH_z=-i\\frac{\\pi}{\\omega\\mu a}E_0\\cos(\\pi x/a)e^{i(k_z z-\\omega t)}.\n\\]\n平均坡印廷流的纵向分量是 $\\overline S_z=-\\frac12\\Re(E_yH_x^*)$，故在 $k_z>0$ 的传播模式中\n\\[\n\\overline S_z(x)=\\frac{k_z|E_0|^2}{2\\omega\\mu}\\sin^2(\\pi x/a).\n\\]\n对每单位 $y$ 向宽度积分得到\n\\[\n\\overline P_{\\rm per\\,width}\n=\\int_0^a\\overline S_z\\,dx\n=\\frac{ak_z|E_0|^2}{4\\omega\\mu}>0.\n\\]\n\n(4) 当 $0<\\omega<\\omega_c$，定义 $\\kappa=\\sqrt{(\\pi/a)^2-\\mu\\epsilon\\omega^2}>0$，选择沿 $+z$ 不发散的支为 $k_z=i\\kappa$，电场幅值 $\\propto e^{-\\kappa z}$，所以 $1/e$ 振幅衰减长度为 $\\ell_{\\rm ev}=1/\\kappa$。此时 $H_x=-i\\kappa E_y/(\\omega\\mu)$，它相对于 $E_y$ 相差 $\\pi/2$，因而 $\\Re(E_yH_x^*)=0$，沿波导的周期平均功率流为零。这表示纯倏逝模式不向无限远传输功率，而非局部电磁场严格为零。\n"
+      }
+    },
+    "W023": {
+      "meta.json": {
+        "bytes": 625,
+        "git_blob": "979083e555d855a9fdf32d4d4fba288ead4ad877",
+        "text": "{\n  \"id\": \"W023\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"刚性球形声腔的径向驻波、Bessel 边界零点与能量正交\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 75,\n  \"tags\": [\n    \"球坐标声波方程\",\n    \"球贝塞尔函数\",\n    \"Neumann本征值\",\n    \"正交性\",\n    \"声能守恒\"\n  ],\n  \"answer\": \"\\\\tan(ka)=ka,\\\\quad\\\\omega_{1,\\\\rm radial}\\\\simeq4.493409458\\\\,c/a\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v1.8\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 791,
+        "git_blob": "f947580c0760cd83b30a5bb905b483f493a9e886",
+        "text": "半径为 $a>0$ 的刚性球形密闭空腔中，均匀理想流体静止，平衡质量密度为 $\\rho_0>0$、绝热声速为 $c>0$。在小振幅线性声学近似下，压强扰动 $p'(r,t)$ 满足 $\\partial_t^2 p'=c^2\\nabla^2p'$，只考虑对所有方向相同的球对称径向声振动。腔壁无法向速度穿透，且球心场有限。\n(1) 从球坐标 Laplace 算符与谐波变量分离导出径向波函数及中心正则性条件；(2) 用刚性壁法向速度为零的条件推导正频本征值方程，求首个非零球对称本征频率的数值系数；(3) 证明不同径向模在合适的体积权重下正交，写出声压和质点速度的能量积分守恒；(4) 讨论 $k=0$ 模与真正声振动的区别，以及腔半径扩大时本征频率的缩放规律。\n"
+      },
+      "solution.tex": {
+        "bytes": 1950,
+        "git_blob": "ea5492a4478b6ac7b02bf2827f7f9a2d9d6f31db",
+        "text": "(1) 对球对称压强 $p'(r,t)=P(r)e^{-i\\omega t}$，球坐标 Laplace 算符为 $\\nabla^2P=r^{-2}(r^2P')'$，故\n\\[\n\\frac1{r^2}(r^2P')'+k^2P=0,\\qquad k=\\omega/c.\n\\]\n通解为球贝塞尔函数的组合\n\\[\nP(r)=A j_0(kr)+B y_0(kr)\n=A\\frac{\\sin kr}{kr}-B\\frac{\\cos kr}{kr}.\n\\]\n由于 $y_0(kr)\\propto1/r$ 在球心发散，必须取 $B=0$；而 $j_0(0)=1$ 有限且导数在原点为零。\n\n(2) 流体线性动量方程 $\\rho_0\\partial_t v_r=-\\partial_r p'$。对 $\\omega>0$ 的谐波振动，刚性壁 $v_r(a,t)=0$ 等价于 $P'(a)=0$，即\n\\[\nj_0'(ka)=0\\quad\\Longleftrightarrow\\quad\nka\\cos(ka)-\\sin(ka)=0.\n\\]\n对正根令 $z=ka$，则满足 $\\tan z=z$，不包括 $z=0$ 的静态零模。第一个非零正根为 $z_1\\simeq4.493409458$，所以最低球对称声学振荡频率\n\\[\n\\omega_{1,\\rm radial}=\\frac{c z_1}{a}\\simeq4.493409458\\,\\frac ca.\n\\]\n这仅是球对称径向支的最低正频，不代表所有非球对称角模的最低正频。\n\n(3) 两个不同特征值 $k_m^2\\ne k_n^2$ 对应的径向方程交叉相乘相减并在 $r\\in(0,a)$ 积分，利用正则球心条件和 Neumann 壁条件，得到\n\\[\n(k_m^2-k_n^2)\\int_0^a r^2P_m(r)P_n(r)\\,dr=0,\n\\]\n故径向模在 $r^2dr$ 权重下正交。声压与速度的线性能量密度为\n\\[\nu=\\frac{p'^2}{2\\rho_0c^2}+\\frac{\\rho_0|\\boldsymbol v|^2}{2}.\n\\]\n结合连续方程 $\\partial_tp'=-\\rho_0c^2\\nabla\\cdot\\boldsymbol v$ 和动量方程，可得局部能量平衡\n\\[\n\\partial_tu+\\nabla\\cdot(p'\\boldsymbol v)=0.\n\\]\n刚性壁 $\\boldsymbol v\\cdot\\hat n=0$，故对空腔积分的总声能随时间守恒。\n\n(4) $k=0$ 时径向正则解为常数 $P(r)=P_0$，对应 $\\omega=0$ 的空间均匀静压微扰，而非周期性传播声波；因此频率谱中的零模不能算作第一声学振动。当半径 $a\\mapsto\\eta a$ 且介质声速不变时，本征无量纲根 $z_n$ 不变，全部球对称非零频率 $\\omega_n=c z_n/a$ 按 $1/\\eta$ 缩放，符合波动方程的尺度规律。\n"
+      }
+    },
+    "W024": {
+      "meta.json": {
+        "bytes": 609,
+        "git_blob": "7de840a3e56a44c704b2ba0189673e52de2403df",
+        "text": "{\n  \"id\": \"W024\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"含黏滞阻尼的双振子非厄米模态与临界衰减\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 70,\n  \"tags\": [\n    \"非厄米矩阵\",\n    \"阻尼耦合\",\n    \"复本征值\",\n    \"能量耗散\"\n  ],\n  \"answer\": \"\\nm\\\\ddot x_1+kx_1+b(\\\\dot x_1-\\\\dot x_2)=0,\\\\quad\\nm\\\\ddot x_2+kx_2+b(\\\\dot x_2-\\\\dot x_1)=0.\\n\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.0\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 568,
+        "git_blob": "a48cd8de5f8953bfae4ad3ad1280e2803a937aaf",
+        "text": "质量相同为 m 的两个质点沿水平线运动，各通过劲度 k>0 的弹簧与固定壁连接，两质点之间有一轻黏滞阻尼器，作用力与相对速度差成正比，系数 b>0。位移分别为 x₁,x₂，不存在其他阻尼。\n(1) 推导二自由度方程与机械能耗散律；(2) 使用和差坐标求两个解耦模态及其时间演化；(3) 给出差模欠阻尼、临界阻尼、过阻尼参数条件；(4) 对任意初值讨论长时间共同平移振动与能量损失，解释为什么系统虽然有阻尼仍可存在不衰减模。\n"
+      },
+      "solution.tex": {
+        "bytes": 1626,
+        "git_blob": "e2425062fc35715e6e98b7496675407886661585",
+        "text": "(1) 根据弹簧力及速度差，\n\\[\nm\\ddot x_1+kx_1+b(\\dot x_1-\\dot x_2)=0,\\quad\nm\\ddot x_2+kx_2+b(\\dot x_2-\\dot x_1)=0.\n\\]\n乘以相应速度相加得\n\\[\n\\frac{d}{dt}\\left[\\frac m2(\\dot x_1^2+\\dot x_2^2)+\\frac k2(x_1^2+x_2^2)\\right]\n=-b(\\dot x_1-\\dot x_2)^2\\le0.\n\\]\n阻尼仅耗散相对运动，不能简单地把每个模态都认为必然衰减。\n\n(2) 定义和模 \\(u=(x_1+x_2)/2\\)、差模 \\(v=(x_1-x_2)/2\\)。相加和相减得到\n\\[\n\\ddot u+\\omega_0^2u=0,\\quad\n\\ddot v+\\frac{2b}{m}\\dot v+\\omega_0^2v=0,\\quad\n\\omega_0=\\sqrt{k/m}.\n\\]\n所以 \\(u(t)=u_0\\cos\\omega_0t+\\dot u_0\\sin\\omega_0t/\\omega_0\\)。对差模令 \\(\\gamma=b/m\\)，欠阻尼解为\n\\[\nv(t)=e^{-\\gamma t}\\left[v_0\\cos(\\omega_dt)+\\frac{\\dot v_0+\\gamma v_0}{\\omega_d}\\sin(\\omega_dt)\\right],\n\\quad\\omega_d=\\sqrt{\\omega_0^2-\\gamma^2}.\n\\]\n最后 \\(x_1=u+v,x_2=u-v\\)。\n\n(3) 当 \\(b<\\sqrt{mk}\\) 时差模特征根为 \\(-\\gamma\\pm i\\omega_d\\)，振荡衰减；当 \\(b=\\sqrt{mk}\\)，重根 \\(-\\omega_0\\) 导致\n\\(v=e^{-\\omega_0t}[v_0+(\\dot v_0+\\omega_0v_0)t]\\)；当 \\(b>\\sqrt{mk}\\)，两根 \\(-\\gamma\\pm\\sqrt{\\gamma^2-\\omega_0^2}\\) 均负而不振荡，故为过阻尼。临界参数来自差模中的 2b，不能套单个阻尼器的 b/(2m) 公式。\n\n(4) 差模中的速度差 \\(2\\dot v\\) 逐渐为零，而 u 不衰减，故长时间 \\(x_1(t)-x_2(t)\\to0\\)，两质点共同作同相简谐振动。能量损失仅是初始差模能量\n\\[\nE_{v,0}=m\\dot v_0^2+kv_0^2\n\\]\n（由两质点质量和弹簧能相加得到）；其余同相能量 \\(E_u=m\\dot u_0^2+ku_0^2\\) 保持不变。这是非厄米阻尼耦合系统仍存在无阻尼暗模态的严格例子。\n"
+      }
+    },
+    "W025": {
+      "meta.json": {
+        "bytes": 605,
+        "git_blob": "5f05ea3edcc6b7ee058b3c4c50b4c36d8e708bd6",
+        "text": "{\n  \"id\": \"W025\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"均匀运动介质中的对流波方程、双向多普勒色散与负频分支\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 65,\n  \"tags\": [\n    \"对流导数\",\n    \"伽利略变换\",\n    \"色散关系\",\n    \"波前速度\"\n  ],\n  \"answer\": \"\\n\\\\partial_t^2y+2U\\\\partial_t\\\\partial_xy+(U^2-c^2)\\\\partial_x^2y=0.\\n\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.0\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 532,
+        "git_blob": "536d3db9c8505f578ee6210719bbfbd323e354e2",
+        "text": "一无损一维连续介质以恒定速度 U 沿 +x 流动，波相对于介质的本征速度为 c>0。小扰动标量 y 满足 (∂t+U∂x)²y=c²∂x²y，定义实验室波数 k∈R 和有符号角频率 ω∈R。\n(1) 展开波动方程并给出单色波色散关系；(2) 求两支相速度和群速度；(3) 若实验室观测某固定正频率 ω，求两支对应的波数，分析 |U|<c 与 U>c 的方向性质；(4) 给出在随流介质系中的变换，并解释超声速流中上游信息不能逆流传播的原因。\n"
+      },
+      "solution.tex": {
+        "bytes": 1449,
+        "git_blob": "7839f99ee8f6245f3e4b85cc3e0909e02a3877dc",
+        "text": "(1) 展开对流算符得\n\\[\n\\partial_t^2y+2U\\partial_t\\partial_xy+(U^2-c^2)\\partial_x^2y=0.\n\\]\n设 \\(y\\propto e^{i(kx-\\omega t)}\\)，代入得到\n\\[\n(\\omega-Uk)^2=c^2k^2.\n\\]\n所以两条有符号频率分支为 \\(\\omega_\\pm(k)=(U\\pm c)k\\)，在固定 k 的情况下可为负，不影响实场解通过正负共轭成分组成。\n\n(2) 相速度 \\(\\omega_\\pm/k=U\\pm c\\)，群速度 \\(\\partial\\omega_\\pm/\\partial k=U\\pm c\\)，两者各自相等，表示此线性色散模型的两个波包在实验室中沿固定特征速度传播。没有其他分散尺度，所以同一分支内部不同 k 不展宽。\n\n(3) 固定实验室正频率 ω>0，可写\n\\[\nk_+=\\frac{\\omega}{U+c},\\qquad k_-=\\frac{\\omega}{U-c}\n\\]\n（分母不为零时）。若 |U|<c，两个群速度 \\(U+c>0,U-c<0\\)，右行与左行特征分别向下游和上游传播；在 U=c 时向上游分支实验室群速度为零，不能用非零有限 k 承载给定正 ω。若 U>c，则两支群速度都为正，即使第二支在流体静止系相对介质逆向传播，实验室仍向下游移动。\n\n(4) 引入随流坐标 \\(x'=x-Ut,t'=t\\)，链式法则给 \\((\\partial_t+U\\partial_x)=\\partial_{t'}\\)，方程化为\n\\[\n\\partial_{t'}^2y=c^2\\partial_{x'}^2y.\n\\]\n相位变换 \\(\\omega'=\\omega-Uk\\)，在介质系为 \\(\\omega'^2=c^2k^2\\)，恢复通常双向波。U>c 时实验室的最慢传播特征速度仍为 U−c>0，因此上游无法收到有限传播速度的线性小信号。\n"
+      }
+    },
+    "W026": {
+      "meta.json": {
+        "bytes": 577,
+        "git_blob": "f60ec2423e67401475d44632bb8e8ee9f58eb719",
+        "text": "{\n  \"id\": \"W026\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"无限长均匀弦中心点质量的频率散射、反射相位与透射能流\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 70,\n  \"tags\": [\n    \"点质量界面\",\n    \"波散射\",\n    \"复反射系数\",\n    \"能流守恒\"\n  ],\n  \"answer\": \"\\nM y_{tt}(0,t)=T[y_x(0^+,t)-y_x(0^-,t)],\\n\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.0\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 577,
+        "git_blob": "c78d87d6c00f9ddc41348f8c2525f1b277cbcaf6",
+        "text": "一无限长均匀细弦张力 T>0、线密度 μ>0，在 x=0 处安装质量为 M>0 的零尺寸点珠，点珠随弦横向运动。角频率 ω>0 的单色横波从左侧向右传播，忽略阻尼；两侧弦的波速 c=sqrt(T/μ)、波数 k=ω/c 相同。\n(1) 由点珠的牛顿方程建立 x=0 的位移连续与斜率跃变关系；(2) 设左侧入射幅为1、反射幅为r、右侧透射幅为t，求精确 r,t；(3) 求反射、透射能流比并证明和为1；(4) 讨论 M→0、M→∞、ω→0 极限，解释点质量如何成为频率选择性的散射缺陷。\n"
+      },
+      "solution.tex": {
+        "bytes": 1424,
+        "git_blob": "cf8db2d3699c8d7b5a5350774db0101b8d4a7aa9",
+        "text": "(1) 弦点珠两侧的横向张力合力为 \\(T[y_x(0^+,t)-y_x(0^-,t)]\\)。点珠满足\n\\[\nM y_{tt}(0,t)=T[y_x(0^+,t)-y_x(0^-,t)],\n\\]\n同时位移连续 \\(y(0^-,t)=y(0^+,t)\\)。此跃变条件必须保留点质量，否则误以为斜率也连续会错误预测没有散射。\n\n(2) 采用 \\(e^{-i\\omega t}\\) 时间惯例，\n\\[\ny_L=e^{ikx}+re^{-ikx},\\qquad y_R=te^{ikx}\n\\]\n表示各侧复振幅。位移连续得 \\(t=1+r\\)。导数跃变为 \\(ik t-ik(1-r)=2ikr\\)，代入点珠方程\n\\[\n-M\\omega^2t=2iTk r.\n\\]\n令 \\(Z=Tk/\\omega=\\sqrt{T\\mu}\\)，解得\n\\[\nr=-\\frac{M\\omega}{M\\omega+2iZ},\\qquad\nt=\\frac{2iZ}{M\\omega+2iZ}.\n\\]\n它们还满足 \\(t=1+r\\)，可作代数核验。\n\n(3) 两侧弦张力与波速相同，所以单色行波能流与振幅模平方成正比。故\n\\[\n\\mathcal R=|r|^2=\\frac{M^2\\omega^2}{M^2\\omega^2+4Z^2},\\quad\n\\mathcal T=|t|^2=\\frac{4Z^2}{M^2\\omega^2+4Z^2}.\n\\]\n相加严格等于1，证明点珠无耗散，只将入射能量重新分成左行与右行波。虽然点珠暂时储存机械动能，周期平均后的能量通量仍平衡。\n\n(4) 当 M→0，反射 \\(\\mathcal R\\to0\\)，恢复均匀弦；M→∞ 或固定 M 而 ω→∞，\\(\\mathcal R\\to1\\)，点珠几乎成为固定端。若 ω→0 且 M 有限，\\(\\mathcal T\\to1\\)，足够慢的波能让点珠跟随而少有散射。关键无量纲参数为 \\(M\\omega/(2Z)\\)，因此这不是通过更换粒子质量数字产生的简单重复题。\n"
+      }
+    },
+    "W027": {
+      "meta.json": {
+        "bytes": 577,
+        "git_blob": "ae6dd5f9ff576b4d5c52a9c39f9c4f1452037acb",
+        "text": "{\n  \"id\": \"W027\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"具有基底弹簧的离散晶格频隙、倏逝模及连续极限\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 75,\n  \"tags\": [\n    \"离散周期结构\",\n    \"Bloch色散\",\n    \"带隙与倏逝波\",\n    \"连续近似\"\n  ],\n  \"answer\": \"\\nm\\\\ddot u_n=K(u_{n+1}-2u_n+u_{n-1})-k_0u_n.\\n\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.0\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 591,
+        "git_blob": "9f2b86f980a13c2ca219cae8551beab16558dab5",
+        "text": "一条无限长周期质量弹簧链，粒子间距 a，每个粒子质量 m>0，相邻粒子用劲度 K>0 的弹簧连接，每个粒子另有劲度 k₀>0 的弹簧将其固定到静止基底。仅研究沿链的一维小振动，忽略阻尼与非线性。\n(1) 建立离散位移方程并求 Bloch 色散关系；(2) 求最低及最高本征角频率和一般波数处的群速度；(3) 对低于最低传播频率的简谐驱动求复波数及空间指数衰减长度；(4) 用长波泰勒展开推导连续 Klein–Gordon 型波方程，并检查基底劲度趋零时的无隙极限。\n"
+      },
+      "solution.tex": {
+        "bytes": 1355,
+        "git_blob": "bea35865463bf4936f051132504fe53fd6bc7795",
+        "text": "(1) 每个质点的净回复力为两侧弹簧及基底弹簧合力，因此\n\\[\nm\\ddot u_n=K(u_{n+1}-2u_n+u_{n-1})-k_0u_n.\n\\]\n代入 Bloch 波 \\(u_n=Ae^{i(qna-\\omega t)}\\)，得\n\\[\nm\\omega^2=k_0+2K(1-\\cos qa)\n=k_0+4K\\sin^2(qa/2).\n\\]\n第一 Brillouin 区间可取 \\(-\\pi/a\\le q\\le\\pi/a\\)。\n\n(2) 在 q=0 时带底频率 \\(\\omega_{\\min}=\\sqrt{k_0/m}\\)，在 \\(|q|=\\pi/a\\) 时带顶频率 \\(\\omega_{\\max}=\\sqrt{(k_0+4K)/m}\\)。色散求导给\n\\[\nv_g=\\frac{d\\omega}{dq}=\\frac{Ka\\sin qa}{m\\omega}.\n\\]\n带底和带顶均有 \\(v_g=0\\)，说明这两个极值附近波包传播缓慢。\n\n(3) 对 \\(0<\\omega<\\omega_{\\min}\\)，实数波数不可能满足色散。令复波数 \\(q=i\\lambda/a\\)，\\(\\lambda>0\\)，则 \\(\\sin^2(i\\lambda/2)=-\\sinh^2(\\lambda/2)\\)，故\n\\[\nk_0-m\\omega^2=4K\\sinh^2(\\lambda/2),\\quad\n\\lambda=2\\operatorname{arsinh}\\sqrt{\\frac{k_0-m\\omega^2}{4K}}.\n\\]\n半无限链选择随 n 增加的衰减态 \\(u_n\\propto e^{-\\lambda n}\\)，其振幅 1/e 衰减长度为 \\(a/\\lambda\\)。\n\n(4) 长波令 \\(x=na\\)，有 \\(u_{n+1}-2u_n+u_{n-1}=a^2u_{xx}+O(a^4)\\)，于是\n\\[\nu_{tt}=c_{\\rm eff}^2u_{xx}-\\omega_g^2u,\n\\quad c_{\\rm eff}=a\\sqrt{K/m},\\quad\\omega_g^2=k_0/m.\n\\]\n这是有频隙的 Klein–Gordon 型方程。若 k₀→0，频隙 \\(\\omega_g\\to0\\)，小 q 下 \\(\\omega\\simeq c_{\\rm eff}|q|\\)，恢复长波声学支；基底使低频传播被禁止。\n"
+      }
+    },
+    "W028": {
+      "meta.json": {
+        "bytes": 659,
+        "git_blob": "bcc5de198e195d7ffe4f187f4f303b969dc0b205",
+        "text": "{\n  \"id\": \"W028\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"大振幅单摆的椭圆积分周期与临界分离轨道\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 75,\n  \"tags\": [\n    \"非线性振动\",\n    \"椭圆积分\",\n    \"有限振幅效应\",\n    \"分离轨道\"\n  ],\n  \"answer\": \"\\n\\\\dot\\\\theta^2=\\\\frac{2g}{\\\\ell}(\\\\cos\\\\theta-\\\\cos\\\\theta_0)\\n=\\\\frac{4g}{\\\\ell}\\\\left[\\\\sin^2(\\\\theta_0/2)-\\\\sin^2(\\\\theta/2)\\\\right].\\n\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.0\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 565,
+        "git_blob": "f75d4866b066668f2b9357208d91313eea1ad9c5",
+        "text": "长度为 ℓ、摆球质量 m 的平面理想单摆处于均匀重力 g 下，无摩擦、无空气阻力。初态在偏离竖直向下角 θ₀ 的位置静止释放，其中 0<θ₀<π，允许振幅很大。摆杆不可伸长且质量可忽略。\n(1) 直接由总机械能守恒得到角速度与角度的关系；(2) 作半角代换，利用第一类完全椭圆积分 K 得到周期；(3) 对小振幅求周期的第一个非线性修正；(4) 对初始角趋近竖直向上位置，推导周期的对数发散主项并从不稳定平衡解释这一结果。\n"
+      },
+      "solution.tex": {
+        "bytes": 1378,
+        "git_blob": "971ef08da3957e69ebe809a0aa81b952f81520d6",
+        "text": "(1) 机械能是 \\(E=m\\ell^2\\dot\\theta^2/2+mg\\ell(1-\\cos\\theta)\\)。初始静止于 θ₀，故\n\\[\n\\dot\\theta^2=\\frac{2g}{\\ell}(\\cos\\theta-\\cos\\theta_0)\n=\\frac{4g}{\\ell}\\left[\\sin^2(\\theta_0/2)-\\sin^2(\\theta/2)\\right].\n\\]\n令 \\(k=\\sin(\\theta_0/2)\\in(0,1)\\)。\n\n(2) 一个周期中有四段关于平衡点对称的相同时间。对一个四分之一周期积分并作 \\(\\sin(\\theta/2)=k\\sin\\varphi\\) 的代换，则角度微分与角速度中的 \\(k\\cos\\varphi\\) 因子相消，得到\n\\[\nT=4\\sqrt{\\frac\\ell g}K(k),\\qquad\nK(k)=\\int_0^{\\pi/2}\\frac{d\\varphi}{\\sqrt{1-k^2\\sin^2\\varphi}}.\n\\]\n它是第一类完全椭圆积分，不应与普通椭圆周长混淆。\n\n(3) 小 k 时积分核展开为 \\(1+\\frac12k^2\\sin^2\\varphi+O(k^4)\\)。积分 \\(\\int_0^{\\pi/2}\\sin^2\\varphi\\,d\\varphi=\\pi/4\\)，故 \\(K(k)=\\frac\\pi2(1+k^2/4+O(k^4))\\)。因为 \\(k^2=\\theta_0^2/4+O(\\theta_0^4)\\)，\n\\[\nT=2\\pi\\sqrt{\\ell/g}\\left[1+\\frac{\\theta_0^2}{16}+O(\\theta_0^4)\\right].\n\\]\n实际有限幅度周期较小角周期长，修正项正值。\n\n(4) 当 θ₀→π⁻ 时 \\(k\\to1^-\\)，完全椭圆积分满足 \\(K(k)\\sim\\ln[4/\\sqrt{1-k^2}]\\)。又 \\(\\sqrt{1-k^2}=\\cos(\\theta_0/2)\\sim(\\pi-\\theta_0)/2\\)，所以\n\\[\nT\\sim4\\sqrt{\\ell/g}\\ln\\frac8{\\pi-\\theta_0}\\to\\infty.\n\\]\n靠近倒立不稳定平衡时，重力力矩几乎为零，质点需要极长时间离开其邻域，导致分离轨道周期发散。\n"
+      }
+    },
+    "W029": {
+      "meta.json": {
+        "bytes": 614,
+        "git_blob": "684a77f1a576d4d2a357bcc6e70bca618d9101e5",
+        "text": "{\n  \"id\": \"W029\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"非线性对流波的特征线交叉、首个冲击时间和守恒律\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 75,\n  \"tags\": [\n    \"非线性双曲方程\",\n    \"特征线\",\n    \"梯度灾变\",\n    \"守恒通量\"\n  ],\n  \"answer\": \"\\nx(\\\\xi,t)=\\\\xi+[c_0+\\\\alpha A\\\\sin(k\\\\xi)]t,\\\\qquad\\nu(x(\\\\xi,t),t)=A\\\\sin(k\\\\xi).\\n\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.0\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 630,
+        "git_blob": "60efcca6b703f5e1ba9ba89938298a3eb99026df",
+        "text": "一维无耗散非线性弱扰动满足 \\(u_t+(c_0+\\alpha u)u_x=0\\)，其中 c₀>0、α>0。初始在无限域上给定光滑周期扰动 u(x,0)=A sin(kx)，A,k>0。只讨论首次特征线交叉之前的经典光滑解，交叉后不额外规定冲击波耗散模型。\n(1) 求通用初始标签 ξ 的特征线解与隐式场表达式；(2) 求映射 x(ξ,t) 的 Jacobian 并由此找到首次梯度发散的时间和位置；(3) 写出非线性守恒通量形式并求周期区域内平方能量的守恒律；(4) 解释 α→0 和 A→0 时无冲击的极限，以及首次交叉后为何不能继续使用单值光滑解。\n"
+      },
+      "solution.tex": {
+        "bytes": 1495,
+        "git_blob": "844bdbdf65fc965c019e1add781bc4ec704c16e0",
+        "text": "(1) 特征线方法把 PDE 写成沿轨道的常微分方程 \\(du/dt=u_t+\\dot x u_x=0\\)，选 \\(\\dot x=c_0+\\alpha u\\)。因此 u 沿每条特征线保持初值 \\(A\\sin(k\\xi)\\)，且\n\\[\nx(\\xi,t)=\\xi+[c_0+\\alpha A\\sin(k\\xi)]t,\\qquad\nu(x(\\xi,t),t)=A\\sin(k\\xi).\n\\]\n这是隐式解，只有映射 ξ→x 单调时才定义唯一单值的光滑场。\n\n(2) 特征映射 Jacobian\n\\[\n\\frac{\\partial x}{\\partial\\xi}=1+\\alpha Ak t\\cos(k\\xi).\n\\]\n首次 Jacobian 为零的时间是\n\\[\nt_s=\\frac1{\\alpha Ak},\n\\]\n对应 \\(\\cos(k\\xi)=-1\\)，可取 \\(\\xi_s=\\pi/k\\)。该处 \\(\\sin(k\\xi_s)=0\\)，所以首次交叉位置为 \\(x_s=\\pi/k+c_0t_s\\)，再加任意整周期平移。隐函数求导 \\(u_x=Ak\\cos(k\\xi)/[1+\\alpha Akt\\cos(k\\xi)]\\) 在该点趋于负无穷，叫梯度灾变。\n\n(3) 方程也可写成守恒形式\n\\[\nu_t+\\partial_x\\left(c_0u+\\frac{\\alpha}{2}u^2\\right)=0.\n\\]\n对光滑解乘以 u，得到\n\\[\n\\partial_t\\frac{u^2}{2}+\n\\partial_x\\left(\\frac{c_0u^2}{2}+\\frac{\\alpha u^3}{3}\\right)=0.\n\\]\n在长度为整周期的周期边界区域积分，通量两端抵消，因此首次冲击前 \\(\\int u^2/2\\,dx\\) 不变；这与无黏性、无耗散的假设一致。\n\n(4) 当 α→0 或 A→0，非线性速度分裂消失，\\(t_s\\to\\infty\\)，波形只以速度 c₀ 平移。若 t>ts，标签映射会折叠，多条特征线到达同一 x，原有光滑解不再单值；必须引入弱解、Rankine–Hugoniot 条件及熵选择规则确定实际冲击波，不可继续套用交叉前的正则解。\n"
+      }
+    },
+    "W030": {
+      "meta.json": {
+        "bytes": 596,
+        "git_blob": "939ea3598ef364f8f7b1e047baf8a78f032a7b39",
+        "text": "{\n  \"id\": \"W030\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"Helmholtz 腔颈共振器的有效弹簧、共振频率及品质阻尼\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 75,\n  \"tags\": [\n    \"Helmholtz共振\",\n    \"绝热压缩\",\n    \"线性阻尼\",\n    \"振子能量\"\n  ],\n  \"answer\": \"\\nF=-\\\\frac{\\\\rho c^2A^2}{V}x=-kx,\\\\qquad k=\\\\frac{\\\\rho c^2A^2}{V}.\\n\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.0\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 567,
+        "git_blob": "bf6d1f8bb3c15e588ea2b5d7d7076697567e06ce",
+        "text": "一理想大空腔体积为 V，通过截面积 A、有效颈长度 Le 的小孔与外界连通；空气密度 ρ>0，绝热声速 c>0。颈部空气作为整体以位移 x(t) 向外运动，腔内声压近似均匀，小扰动且无外界热交换，Le 已包括几何端部修正。\n(1) 用绝热压缩性求腔体声压与体积位移的关系以及颈部回复力；(2) 求颈部空气质量与固有共振频率；(3) 加入线性阻力 −b xdot，求欠阻尼频率和临界阻尼条件；(4) 外声压作谐波驱动时求位移复幅与平均阻尼功率。\n"
+      },
+      "solution.tex": {
+        "bytes": 1259,
+        "git_blob": "5db2224ab6628b022a82262fb4d0cbd9e175de47",
+        "text": "(1) 颈部空气向外移动 x，空腔体积增加 \\(Ax\\)，绝热微扰给 \\(\\delta p=-\\rho c^2Ax/V\\)。作用在截面积 A 上的净回复力\n\\[\nF=-\\frac{\\rho c^2A^2}{V}x=-kx,\\qquad k=\\frac{\\rho c^2A^2}{V}.\n\\]\n腔体气体的可压缩性充当弹簧。\n\n(2) 颈部有效质量 \\(m_{\\rm eff}=\\rho A L_e\\)，故\n\\[\n\\omega_H=\\sqrt{\\frac{k}{m_{\\rm eff}}}\n=c\\sqrt{\\frac{A}{VL_e}},\\qquad f_H=\\frac{\\omega_H}{2\\pi}.\n\\]\n这个频率来自颈部气柱惯性与空腔声压回复力，量纲为逆时间。\n\n(3) 加线性黏滞阻力后，动力学方程\n\\(m_{\\rm eff}\\ddot x+b\\dot x+kx=0\\)。\n记 \\(\\gamma=b/(2m_{\\rm eff})\\)，当 \\(\\gamma<\\omega_H\\) 时，欠阻尼角频率\n\\[\n\\omega_d=\\sqrt{\\omega_H^2-\\gamma^2}.\n\\]\n临界阻尼系数 \\(b_c=2\\sqrt{km_{\\rm eff}}\\)。机械能 \\(E=m_{\\rm eff}\\dot x^2/2+kx^2/2\\) 满足 \\(\\dot E=-b\\dot x^2\\le0\\)。\n\n(4) 外界声压谐波幅值 pext 对颈部产生的驱动力幅值 \\(F_0=A p_{\\rm ext}\\)。采用 \\(e^{-i\\omega t}\\) 约定，稳态位移复幅\n\\[\nX=\\frac{A p_{\\rm ext}}{k-m_{\\rm eff}\\omega^2-i b\\omega}.\n\\]\n平均阻尼耗散功率 \\(\\overline P=\\frac12b\\omega^2|X|^2\\ge0\\)。频率接近 \\(\\omega_H\\) 且阻尼较小时响应显著增强；假设只在波长远大于腔体尺度的集总声学范围成立。\n"
+      }
+    },
+    "W031": {
+      "meta.json": {
+        "bytes": 610,
+        "git_blob": "c09d3eab90dec7b53aa14054c1abb120d81755e3",
+        "text": "{\n  \"id\": \"W031\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"矩形固定薄膜的二维本征谱、模态正交与简并\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 75,\n  \"tags\": [\n    \"二维波动方程\",\n    \"空间本征值\",\n    \"正交模态\",\n    \"能量守恒\"\n  ],\n  \"answer\": \"\\nU_{mn}(x,y)=\\\\sin\\\\frac{m\\\\pi x}{a}\\\\sin\\\\frac{n\\\\pi y}{b},\\n\\\\quad m,n=1,2,\\\\ldots.\\n\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.0\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 515,
+        "git_blob": "41d8274b64933a2b67d32ea7fce79bb97f67ba7a",
+        "text": "矩形薄膜长 a、宽 b，膜面张力 T>0、面质量密度 ρ>0，四条边完全固定，面外小位移 u(x,y,t) 满足 \\(u_{tt}=c^2(u_{xx}+u_{yy}),\\ c^2=T/\\rho\\)。忽略阻尼、剪切和材料非线性。\n(1) 用二维分离变量求全部固定边本征函数与角频率；(2) 求各模的质量加权正交归一化系数；(3) 当 a=b 时解释交换两个模态指标的频率简并并举例；(4) 给出单个实驻波模的机械总能，说明频率正性和各边长等比例放大时的变化。\n"
+      },
+      "solution.tex": {
+        "bytes": 1147,
+        "git_blob": "ac1562d5368aa86de378a4fa9d947c9521ec3adf",
+        "text": "(1) 取 \\(u=X(x)Y(y)e^{-i\\omega t}\\)，四边 Dirichlet 条件要求\n\\[\nU_{mn}(x,y)=\\sin\\frac{m\\pi x}{a}\\sin\\frac{n\\pi y}{b},\n\\quad m,n=1,2,\\ldots.\n\\]\n由空间 Laplace 本征值相加得到\n\\[\n\\omega_{mn}=\\pi c\\sqrt{\\frac{m^2}{a^2}+\\frac{n^2}{b^2}}.\n\\]\n零指标不能代表真实非零模，因为对应的正弦函数恒为零。\n\n(2) 分别使用一维正弦正交积分，得到\n\\[\n\\int_0^a\\!\\int_0^b \\rho U_{mn}U_{pq}\\,dy\\,dx\n=\\frac{\\rho ab}{4}\\delta_{mp}\\delta_{nq}.\n\\]\n故质量归一化本征函数为 \\(\\Phi_{mn}=2U_{mn}/\\sqrt{\\rho ab}\\)。\n\n(3) 对正方形 a=b，频率只依赖 \\(m^2+n^2\\)。当 m≠n 时模态 (m,n) 与 (n,m) 同频、空间形状不同。例如 (1,2) 与 (2,1) 均有 \\(\\omega=\\pi c\\sqrt5/a\\)，这是正方形对称性带来的二重简并。\n\n(4) 对实驻波 \\(u=A_0U_{mn}\\cos(\\omega_{mn}t+\\phi)\\)，机械能\n\\[\nE=\\frac12\\int_{\\cal D}\\big[\\rho u_t^2+T|\\nabla u|^2\\big]dA.\n\\]\n用分部积分和固定边界得到 \\(\\int T|\\nabla U|^2=\\rho\\omega_{mn}^2\\int U^2\\)，于是\n\\[\nE=\\frac{\\rho ab}{8}A_0^2\\omega_{mn}^2>0\n\\]\n且不随时间改变。a、b 同时乘以系数 s 后，全部角频率按 \\(1/s\\) 缩放。\n"
+      }
+    },
+    "W032": {
+      "meta.json": {
+        "bytes": 547,
+        "git_blob": "980bde8a291cdbdb3814e261c0181e793d325ca3",
+        "text": "{\n  \"id\": \"W032\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"有限阻尼端点的半无限弦反射系数与吸收功率\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 70,\n  \"tags\": [\n    \"阻抗匹配\",\n    \"波边界\",\n    \"能流\",\n    \"最优吸收\"\n  ],\n  \"answer\": \"r=(Z-b)/(Z+b),\\\\quad\\\\mathcal A=4Zb/(Z+b)^2\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.1\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 471,
+        "git_blob": "f3c99d8433cbbe2d528f23c1ce8c20d98e42858d",
+        "text": "张力 T、线密度 \\(\\mu\\) 的无损均匀弦占据 x<0，波速 \\(c=\\sqrt{T/\\mu}\\)，右端 x=0 连接只对横向速度施加阻尼力的黏滞减振器，阻尼系数 b>0，另一端固定于地面。单色波角频率 ω 从 x=−∞ 向右入射，时间因子 \\(e^{-i\\omega t}\\)。\n(1) 从端点力平衡求反射复幅度 r；(2) 求反射能流比与阻尼吸收率；(3) 求完全匹配吸收的 b 值；(4) 检查自由端、固定端及能量守恒极限。\n"
+      },
+      "solution.tex": {
+        "bytes": 983,
+        "git_blob": "7803524df1887c03ff1481c55de6d5ba54f1bc82",
+        "text": "(1) 弦的正向入射与反射位移分别 \\(y=e^{i(kx-\\omega t)}+re^{i(-kx-\\omega t)}\\)，其中 \\(k=\\omega/c\\)。右端弦对端点的张力沿 x 方向的横向合力是 \\(-T y_x(0,t)\\)，减振器力为 \\(-b y_t(0,t)\\)。端点无质量，故 \\(Ty_x+b y_t=0\\)。以复幅值代入得到 \\(iTk(1-r)-i b\\omega(1+r)=0\\)。\n\n(2) 令 \\(Z=Tk/\\omega=\\sqrt{T\\mu}\\)，解得\n\\[\nr=\\frac{Z-b}{Z+b}.\n\\]\n反射率 \\(\\mathcal R=|r|^2=(Z-b)^2/(Z+b)^2\\)，吸收率为\n\\[\n\\mathcal A=1-\\mathcal R=\\frac{4Zb}{(Z+b)^2}.\n\\]\n以波的入射平均功率与端点 \\(b\\overline{y_t^2}\\) 比较，也可直接得到同一吸收率。\n\n(3) 当 b=Z，边界与行波特征机械阻抗完全匹配，r=0、\\(\\mathcal A=1\\)，无反射。对 b>0，恒有 \\((Z-b)^2\\ge0\\)，所以 \\(\\mathcal A\\le1\\) 且 b=Z 时取等号。\n\n(4) b→0 为自由端 r→+1，位移无相位反转；b→∞ 为固定端 r→−1，位移反相。两极限均 \\(\\mathcal A\\to0\\)，与端点无法消耗平均机械功一致。\n"
+      }
+    },
+    "W033": {
+      "meta.json": {
+        "bytes": 582,
+        "git_blob": "06127ea068b39e734aba0a8cbd5985179605bfc1",
+        "text": "{\n  \"id\": \"W033\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"弱耦合相同单摆的正规模与能量拍动周期\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 70,\n  \"tags\": [\n    \"耦合小振动\",\n    \"弹簧\",\n    \"正常模\",\n    \"拍动\"\n  ],\n  \"answer\": \"\\\\omega_\\\\pm^2=g/\\\\ell,\\\\ g/\\\\ell+2k/m,\\\\quad T_{\\\\rm beat}=2\\\\pi/(\\\\omega_--\\\\omega_+)\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.1\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 689,
+        "git_blob": "f69f5e77132e4bbd7c500ec870f93798186538a1",
+        "text": "两相同简单单摆质量 m、长度 ℓ，悬点水平间距等于摆球平衡间距；两个摆球之间连接一劲度 k>0 的轻弹簧，弹簧沿水平小形变，初始无拉伸。小角摆动 \\(\\theta_1,\\theta_2\\) 发生于同一竖直平面，重力 g。\n(1) 写出小振动拉格朗日函数；(2) 求同相、反相两个正规模频率；(3) 初态仅第一摆角度为 θ0、两速度为零，求两摆角度演化；(4) 在弱耦合下求拍动周期并讨论 k→0。\n补充要求：要求先建立两摆的耦合刚度矩阵，再明确区分同相、反相正规模；在弱耦合近似中分别讨论单摆角振幅包络与完整能量转移周期，并检查初值。\n"
+      },
+      "solution.tex": {
+        "bytes": 1234,
+        "git_blob": "69d55c0cd80803e6b04aaeb23404550657349b4e",
+        "text": "(1) 两摆球小角水平位移分别为 \\(\\ell\\theta_1,\\ell\\theta_2\\)。动能 \\(K=m\\ell^2(\\dot\\theta_1^2+\\dot\\theta_2^2)/2\\)，重力势能 \\(U_g=mg\\ell(\\theta_1^2+\\theta_2^2)/2\\)，弹簧势能 \\(U_k=k\\ell^2(\\theta_1-\\theta_2)^2/2\\)。Euler–Lagrange 方程为\n\\[\nm\\ell^2\\ddot\\theta_1+mg\\ell\\theta_1+k\\ell^2(\\theta_1-\\theta_2)=0\n\\]\n及交换下标的第二式。\n\n(2) 令 \\(\\theta_\\pm=(\\theta_1\\pm\\theta_2)/2\\)，相加得 \\(\\ddot\\theta_++(g/\\ell)\\theta_+=0\\)，相减得 \\(\\ddot\\theta_-+[g/\\ell+2k/m]\\theta_-=0\\)。所以\n\\[\n\\omega_+=\\sqrt{g/\\ell},\\qquad\\omega_-=\\sqrt{g/\\ell+2k/m}.\n\\]\n\n(3) 初态 \\(\\theta_1(0)=\\theta_0,\\theta_2(0)=0\\) 给 \\(\\theta_\\pm(0)=\\theta_0/2\\)，初速度都零，因此\n\\[\n\\theta_1(t)=\\frac{\\theta_0}2[\\cos(\\omega_+t)+\\cos(\\omega_-t)],\n\\quad\n\\theta_2(t)=\\frac{\\theta_0}2[\\cos(\\omega_+t)-\\cos(\\omega_-t)].\n\\]\n由三角恒等式可看出快振荡乘慢变包络。\n\n(4) 弱耦合 \\(k\\ell/(mg)\\ll1\\) 时 \\(\\omega_--\\omega_+\\simeq k/(m\\omega_+)\\)。能量从第一摆转移到第二摆、再回归第一摆的周期为 \\(T_{\\rm beat}=2\\pi/(\\omega_--\\omega_+)\\)，由初始条件中两个模态相位差每增长 \\(2\\pi\\) 重复。k→0 时两个频率重合，不发生能量交换，拍动周期发散。\n"
+      }
+    },
+    "W034": {
+      "meta.json": {
+        "bytes": 580,
+        "git_blob": "b6d1c758dce7a87871f9659b93524775af98c7b7",
+        "text": "{\n  \"id\": \"W034\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"缓变张力弦的 WKB 行波、振幅输运与能流不变量\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 70,\n  \"tags\": [\n    \"WKB渐近\",\n    \"变系数波动\",\n    \"机械能流\",\n    \"绝热近似\"\n  ],\n  \"answer\": \"Y(x)\\\\propto T(x)^{-1/4}e^{i\\\\int^x\\\\omega\\\\sqrt{\\\\mu/T(s)}\\\\,ds}\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.1\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 414,
+        "git_blob": "452825dee8b940f55f132f06c7c18795cd7448dc",
+        "text": "一根半无限长无耗散弦，线密度 \\(\\mu>0\\) 恒定，张力 \\(T(x)>0\\) 随 x 缓慢变化，小横向波满足 \\(\\mu y_{tt}=\\partial_x[T(x)y_x]\\)。给定角频率 ω>0。\n(1) 写出时间谐波振幅方程；(2) 用局域波数 \\(k(x)=\\omega\\sqrt{\\mu/T(x)}\\) 推导领先 WKB 波形；(3) 由周期平均功率守恒确定振幅随 T 的幂律；(4) 给出 WKB 有效条件并检验恒定张力极限。\n"
+      },
+      "solution.tex": {
+        "bytes": 913,
+        "git_blob": "d3ff49750021f8a293fb3ded45cd203485c13bd4",
+        "text": "(1) 设 \\(y=\\Re[Y(x)e^{-i\\omega t}]\\)，代入得 Sturm–Liouville 形式\n\\[\n[T(x)Y'(x)]'+\\mu\\omega^2Y(x)=0.\n\\]\n若 T 常量，则 \\(Y''+k^2Y=0,k=\\omega\\sqrt{\\mu/T}\\)。\n\n(2) WKB 假设张力相对变化缓慢，取 \\(Y=A(x)e^{i\\int^x k(s)ds}\\)。忽略 \\(A''\\) 及张力的二阶慢变量，领先阶给 \\(k^2=\\mu\\omega^2/T\\)，下一阶由通量条件确定 A。\n\n(3) 行波平均机械能流 \\(P=-T\\overline{y_t y_x}\\simeq T\\omega k|A|^2/2\\)，无阻尼且没有反射时 P 常数。因为 \\(Tk=\\omega\\sqrt{\\mu T}\\)，故\n\\[\n|A(x)|^2\\sqrt{T(x)}=\\mathrm{const},\\qquad\nA(x)\\propto T(x)^{-1/4}.\n\\]\n因此前进波可近似写为\n\\[\nY(x)\\simeq C T(x)^{-1/4}\\exp\\!\\left(i\\int^x\\omega\\sqrt{\\mu/T(s)}\\,ds\\right).\n\\]\n\n(4) 局域波长 \\(2\\pi/k\\)，要求 \\(|k'|\\ll k^2\\) 及 \\(|T'/T|\\ll k\\) 等，使每波长材料变化很小。若 T 恒定，则 \\(A\\) 恒定、相位线性 \\(kx\\)，恢复普通无损弦行波。\n"
+      }
+    },
+    "W035": {
+      "meta.json": {
+        "bytes": 572,
+        "git_blob": "2d87c5dd608e1f83cccb45cc9ee5d12d89f7a396",
+        "text": "{\n  \"id\": \"W035\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"两半无限声学介质界面反射率、透射率和能流守恒\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 70,\n  \"tags\": [\n    \"平面声波\",\n    \"机械阻抗\",\n    \"边界匹配\",\n    \"能流\"\n  ],\n  \"answer\": \"r=(Z_2-Z_1)/(Z_1+Z_2),\\\\quad\\\\mathcal T=4Z_1Z_2/(Z_1+Z_2)^2\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.1\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 685,
+        "git_blob": "201a667a40fa95e829155a831534a88e40ab6870",
+        "text": "两种无损均匀流体以平面 x=0 接触，左侧密度、声速为 \\(\\rho_1,c_1\\)，右侧为 \\(\\rho_2,c_2\\)，静态平衡压强相同。频率 ω 的一维小振幅声压波从左向右正入射，约定压力振幅为1。\n(1) 写出两侧入射、反射、透射声压与质点速度；(2) 用界面压强与法向速度连续求声压反射幅 r、透射幅 t；(3) 求功率反射率和透射率并证明和为1；(4) 讨论声阻抗匹配与刚性壁极限。\n补充要求：给出的反射、透射系数均按声压复振幅定义，而非粒子位移或能流；在计算透射功率时必须保留左右声阻抗的比例因子，并检验所有阻抗的正值边界。\n"
+      },
+      "solution.tex": {
+        "bytes": 986,
+        "git_blob": "15878604b612f577451709a478148ca0e22165e9",
+        "text": "(1) 对平面行波，压力与同方向的体速度满足 \\(p=Zv\\)，其中特征声阻抗 \\(Z_j=\\rho_jc_j\\)。左侧入射压力振幅 1、反射压力 r；对应速度分别为 \\(1/Z_1\\) 和 \\(-r/Z_1\\)，右侧透射压力 t 对应速度 \\(t/Z_2\\)。\n\n(2) 界面压强连续 \\(1+r=t\\)，体速度连续 \\((1-r)/Z_1=t/Z_2\\)。解得\n\\[\nr=\\frac{Z_2-Z_1}{Z_2+Z_1},\\qquad\nt=\\frac{2Z_2}{Z_1+Z_2}.\n\\]\n注意这些是声压幅度系数，不是能流比；当 Z2>Z1 时压力反射同相。\n\n(3) 一维声波平均能流为 \\(\\overline P=|p_0|^2/(2Z)\\)，所以\n\\[\n\\mathcal R=|r|^2=\\frac{(Z_2-Z_1)^2}{(Z_1+Z_2)^2},\n\\quad\n\\mathcal T=\\frac{Z_1}{Z_2}|t|^2=\\frac{4Z_1Z_2}{(Z_1+Z_2)^2}.\n\\]\n相加得到 \\(\\mathcal R+\\mathcal T=1\\)，无损界面只重新分配方向能流。\n\n(4) 当 Z1=Z2，r=0、\\(\\mathcal T=1\\)，界面在正入射时完全无反射。当 \\(Z_2\\to\\infty\\)，r→+1、t→2，但实际穿透功率 \\(\\mathcal T\\to0\\)，即刚性高阻端压力加倍、法向速度趋零。\n"
+      }
+    },
+    "W036": {
+      "meta.json": {
+        "bytes": 511,
+        "git_blob": "565539b08161b442e5fc7b62bec76727d458c529",
+        "text": "{\n  \"id\": \"W036\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"一端封闭一端开放声管的奇次谐波与驻波能量\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 70,\n  \"tags\": [\n    \"声管边界\",\n    \"驻波\",\n    \"谐波\",\n    \"共振\"\n  ],\n  \"answer\": \"f_n=(2n+1)c/(4L)\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.1\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 653,
+        "git_blob": "e629924f5477b2965c1fb03ee784c6866c1d7554",
+        "text": "一根截面积 S、长度 L 的理想均匀细声管内声速 c、密度 \\(\\rho\\)，管的 x=0 端刚性封闭、x=L 端与巨大外部空气库相通，近似将开端声压扰动取零并忽略端修正。\n(1) 写出声压谐波满足的方程及两端边界；(2) 求全部正本征频率和声压空间模；(3) 求质点速度模形并核对开闭端节点关系；(4) 讨论长度加倍的频谱变化以及为何只出现奇次谐波。\n补充要求：使用理想开口的零声压近似，不得混入真实声管的端修正；必须同时给出声压驻波和流体质点速度驻波的相位及节点，并阐明两种边界物理意义。\n"
+      },
+      "solution.tex": {
+        "bytes": 998,
+        "git_blob": "817b42c413fd374fa6f5e4eb1473fca7395b043a",
+        "text": "(1) 小扰动声压满足 \\(p_{tt}=c^2p_{xx}\\)。设 \\(p(x,t)=P(x)e^{-i\\omega t}\\)，有 \\(P''+k^2P=0\\)，其中 \\(k=\\omega/c\\)。封闭端法向速度为零，线性动量方程 \\(\\rho v_t=-p_x\\) 给 \\(P'(0)=0\\)；开端在本近似下声压固定，\\(P(L)=0\\)。\n\n(2) 由 \\(P'(0)=0\\)，一般空间解取 \\(P=A\\cos(kx)\\)。开端条件 \\(\\cos(kL)=0\\)，所以\n\\[\nk_nL=(n+\\tfrac12)\\pi,\\qquad\nf_n=\\frac{\\omega_n}{2\\pi}=\\frac{(2n+1)c}{4L},\\quad n=0,1,2,\\ldots\n\\]\n所有频率是基频 c/(4L) 的奇整数倍。\n\n(3) 谐波动量方程 \\(-i\\omega\\rho V=-P'\\)，故速度复幅度 \\(V=P'/(i\\omega\\rho)=ikA\\sin(kx)/(\\omega\\rho)\\)（整体相位随时间惯例而定）。因此封闭端 x=0 是速度节点、压力腹点，开放端 x=L 是压力节点、速度腹点。\n\n(4) 当管长 \\(L\\mapsto2L\\)，所有频率减半，不改变奇次谱结构。由于混合 Neumann–Dirichlet 边界只能容纳 \\(1/4,3/4,\\ldots\\) 波长对应的空间驻波，不出现两端同类边界下的偶次谐波。\n"
+      }
+    },
+    "W037": {
+      "meta.json": {
+        "bytes": 595,
+        "git_blob": "88132eff908ecc8b21ac282d05aeb681e44500f2",
+        "text": "{\n  \"id\": \"W037\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"双原子一维链的声学支、光学支和禁带宽度\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 70,\n  \"tags\": [\n    \"双原子晶格\",\n    \"正常模式\",\n    \"色散关系\",\n    \"声子禁带\"\n  ],\n  \"answer\": \"\\\\omega_\\\\pm^2=K(1/m_1+1/m_2)\\\\pm K\\\\sqrt{(1/m_1+1/m_2)^2-4\\\\sin^2(qa/2)/(m_1m_2)}\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.1\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 447,
+        "git_blob": "52abdb571ee7193322db1720e78199a42a7f1510",
+        "text": "无限长一维链由质量交替为 \\(m_1,m_2>0\\) 的质点组成，最近邻之间相同劲度为 \\(K>0\\) 的轻弹簧连接。每个原胞长度为 a，含两颗不同质量质点，平衡位置交替且间隔为 a/2。\n(1) 写出两子晶格位移的耦合运动方程；(2) 用 Bloch ansatz 推导两个色散分支；(3) 求 q=0 与 Brillouin 区边界处的频率；(4) 说明声学与光学支的区别和质量相同的折叠谱极限。\n"
+      },
+      "solution.tex": {
+        "bytes": 1100,
+        "git_blob": "9362dd27c56d92e33457afaf12325d2c81563185",
+        "text": "(1) 设第 n 原胞内两个质点位移为 \\(u_n,v_n\\)，方程为\n\\[\nm_1\\ddot u_n=K(v_n+v_{n-1}-2u_n),\\quad\nm_2\\ddot v_n=K(u_n+u_{n+1}-2v_n).\n\\]\n弹簧回复力只依赖相邻质点的相对位移。\n\n(2) 取 \\(u_n=Ue^{i(nqa-\\omega t)},v_n=Ve^{i(nqa-\\omega t)}\\)，构成\n\\[\n(2K-m_1\\omega^2)U-K(1+e^{-iqa})V=0,\\quad\n-K(1+e^{iqa})U+(2K-m_2\\omega^2)V=0.\n\\]\n行列式条件为 \\(m_1m_2\\omega^4-2K(m_1+m_2)\\omega^2+4K^2\\sin^2(qa/2)=0\\)。解得\n\\[\n\\omega_\\pm^2=K\\left(\\frac1{m_1}+\\frac1{m_2}\\right)\n\\pm K\\sqrt{\\left(\\frac1{m_1}+\\frac1{m_2}\\right)^2-\\frac{4\\sin^2(qa/2)}{m_1m_2}}.\n\\]\n\n(3) q=0 时 \\(\\omega_-(0)=0,\\ \\omega_+^2(0)=2K(1/m_1+1/m_2)\\)。区边 \\(|q|=\\pi/a\\) 时根退化为 \\(\\omega^2=2K/m_1\\) 和 \\(2K/m_2\\)，若两质量不等，区边两个分支之间存在频率间隔。\n\n(4) 负号支在 q→0 时 \\(\\omega_-\\propto|q|\\)，两质点主要同相，称声学支；正号支在 q=0 仍有非零频率，原胞内部相对振动，称光学支。当 \\(m_1=m_2=m\\)，区边分支相接于 \\(\\omega^2=2K/m\\)，频隙关闭，两个分支是单原子链在双倍原胞下的能带折叠。\n"
+      }
+    },
+    "W038": {
+      "meta.json": {
+        "bytes": 588,
+        "git_blob": "1b815c07379d39699f14e23231b0feac12dd8d70",
+        "text": "{\n  \"id\": \"W038\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"阻尼受迫谐振子的振幅共振和功率共振分离\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 70,\n  \"tags\": [\n    \"受迫谐振\",\n    \"阻尼\",\n    \"共振峰\",\n    \"平均功率\"\n  ],\n  \"answer\": \"\\\\omega_{\\\\rm amp}=\\\\sqrt{\\\\omega_0^2-2\\\\gamma^2},\\\\quad \\\\omega_{\\\\rm power}=\\\\omega_0\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.1\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 414,
+        "git_blob": "19e6b8dda077bf92aa8d73001d7d3fd395584c57",
+        "text": "质量 m 的一维振子满足 \\(\\ddot x+2\\gamma\\dot x+\\omega_0^2x=(F_0/m)\\cos\\omega t\\)，其中 \\(\\gamma,\\omega_0,F_0,m>0\\) 且 \\(\\gamma<\\omega_0/\\sqrt2\\)，取稳定长时间周期响应。\n(1) 求位移复振幅与稳态振幅；(2) 求位移振幅最大时的频率；(3) 求平均吸收功率的函数及功率峰频率；(4) 讨论 \\(\\gamma\\to0^+\\) 与有限阻尼时峰值位移和平均功率的区别。\n"
+      },
+      "solution.tex": {
+        "bytes": 1141,
+        "git_blob": "75f359d8b5d86e9115ff3e78c8a144c0b1a70773",
+        "text": "(1) 令 \\(x(t)=\\Re[Xe^{-i\\omega t}]\\)，代入有 \\((\\omega_0^2-\\omega^2-2i\\gamma\\omega)X=F_0/m\\)，所以\n\\[\n|X|=\\frac{F_0/m}{\\sqrt{(\\omega_0^2-\\omega^2)^2+4\\gamma^2\\omega^2}}.\n\\]\n\n(2) 要最大化位移幅度，即最小化分母平方 \\(D=(\\omega_0^2-\\omega^2)^2+4\\gamma^2\\omega^2\\)。求导 \\(D'=4\\omega(\\omega^2-\\omega_0^2+2\\gamma^2)\\)，因此在 \\(\\gamma<\\omega_0/\\sqrt2\\) 下正峰位于\n\\[\n\\omega_{\\rm amp}=\\sqrt{\\omega_0^2-2\\gamma^2}<\\omega_0.\n\\]\n阻尼越大，位移峰向低频移动。\n\n(3) 稳态能量由外力输入并全部由阻尼耗散，平均功率\n\\[\n\\overline P=2m\\gamma\\overline{\\dot x^2}\n=m\\gamma\\omega^2|X|^2\n=\\frac{\\gamma F_0^2\\omega^2/m}{D}.\n\\]\n对 \\(\\omega^2/D\\) 求导，极大值在 \\(\\omega=\\omega_0\\)。所以功率共振峰位于固有无阻尼频率，而位移共振峰低于它。\n\n(4) 当 \\(\\gamma\\to0^+\\)，两共振频率均趋 \\(\\omega_0\\)，峰值位移 \\(|X|_{\\rm peak}\\propto1/\\gamma\\) 发散，平均峰值功率 \\(\\overline P_{\\max}=F_0^2/(4m\\gamma)\\) 也发散。严格 \\(\\gamma=0\\) 时共振响应非稳态周期函数，不能把公式的无限值解释为有限时间内的实际振幅。\n"
+      }
+    },
+    "W039": {
+      "meta.json": {
+        "bytes": 607,
+        "git_blob": "35517f5f7704f68807f0b6f84fa46f5bbf1f63ca",
+        "text": "{\n  \"id\": \"W039\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"参数激励谐振子的平均法阈值与 Floquet 增长率\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 70,\n  \"tags\": [\n    \"Mathieu方程\",\n    \"参数共振\",\n    \"多尺度法\",\n    \"阻尼阈值\"\n  ],\n  \"answer\": \"\\\\lambda_\\\\pm\\\\simeq-\\\\gamma\\\\pm|h|\\\\omega_0/4,\\\\quad |h|_{\\\\rm threshold}=4\\\\gamma/\\\\omega_0\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.1\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 465,
+        "git_blob": "80f55ea3eab7c171e9ec616523234db55c1396dd",
+        "text": "弱受阻尼参数振子满足\n\\[\n\\ddot x+2\\gamma\\dot x+\\omega_0^2[1+h\\cos(2\\omega_0t)]x=0,\n\\]\n其中 \\(\\omega_0>0\\)、\\(0<\\gamma\\ll\\omega_0\\)、\\(|h|\\ll1\\)。只考察主参数共振的领先一阶平均近似。\n(1) 写出慢变振幅 ansatz 并分离快速与慢速时间；(2) 推出慢幅度的线性耦合方程；(3) 求 Floquet 近似指数和不稳定阈值；(4) 讨论 \\(\\gamma=0\\) 与 h=0 的极限，并解释不稳定时线性模型的适用范围。\n"
+      },
+      "solution.tex": {
+        "bytes": 1161,
+        "git_blob": "0d33aa8f3fabdf7d6f74d8a0c904479c23f020ca",
+        "text": "(1) 设 \\(x(t)=A(t)e^{i\\omega_0t}+A^*(t)e^{-i\\omega_0t}\\)，慢幅度满足 \\(|\\dot A|\\ll\\omega_0|A|\\)，忽略 \\(\\ddot A\\) 等二阶小量。参数调制中的 \\(\\cos(2\\omega_0t)\\) 与共轭快因子相乘会产生共振的 \\(e^{i\\omega_0t}\\) 分量。\n\n(2) 只保留与 \\(e^{i\\omega_0t}\\) 共振的项，得到\n\\[\n2i\\omega_0\\dot A+2i\\gamma\\omega_0A+\\frac{h\\omega_0^2}{2}A^*=0,\n\\quad\n\\dot A=-\\gamma A+i\\frac{h\\omega_0}{4}A^*.\n\\]\n复共轭式为 \\(\\dot A^*=-\\gamma A^*-i(h\\omega_0/4)A\\)，是二维实线性慢变量系统。\n\n(3) 该矩阵的两个本征增长率为\n\\[\n\\lambda_\\pm=-\\gamma\\pm\\frac{|h|\\omega_0}{4}.\n\\]\n于是当 \\(|h|>4\\gamma/\\omega_0\\) 时 \\(\\lambda_+>0\\)，主参数不稳定；反之两个慢模都衰减。恰在阈值时领先一阶近似给零增长率，细致判断需更高阶项。\n\n(4) 若 \\(\\gamma=0\\) 而 h 非零，任意足够小的精确共振调制均在领先阶有指数增长；若 h=0，则自由阻尼振子按 \\(e^{-\\gamma t}\\) 衰减。指数增长最终使 x 不再“小”，实际装置中的几何非线性、阻尼变化或外部能量饱和会终止该近似，不能从线性方程断言物理振幅无限大。\n"
+      }
+    },
+    "W040": {
+      "meta.json": {
+        "bytes": 580,
+        "git_blob": "5aaffba81730e1563d811dd60f8afff67e0bf42e",
+        "text": "{\n  \"id\": \"W040\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"交替弹簧常数单质量链的双支色散和布里渊带隙\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 90,\n  \"tags\": [\n    \"Bloch定理\",\n    \"双支色散\",\n    \"布里渊边界\",\n    \"声速渐近\"\n  ],\n  \"answer\": \"m\\\\omega_\\\\pm^2=K_1+K_2\\\\pm\\\\sqrt{K_1^2+K_2^2+2K_1K_2\\\\cos ka}\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.2\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 573,
+        "git_blob": "a5fc5590a48d114bacccdc3fbdbea01fb91a15a3",
+        "text": "无限一维周期链每原胞含两个等质量 \\(m>0\\) 的粒子 \\(A_n,B_n\\)，原胞周期为 \\(a\\)。胞内 \\(A_n,B_n\\) 由弹簧 \\(K_1>0\\) 连接，胞间 \\(B_n,A_{n+1}\\) 由弹簧 \\(K_2>0\\) 连接；只计纵向小振动，平衡时无预应力引起的线性修正。设位移 \\(u_n,v_n\\propto e^{i(nka-\\omega t)}\\)，波矢在第一布里渊区内。\n(1) 写出实空间运动方程与 Bloch 动力矩阵。\n(2) 求两支完整色散关系。\n(3) 求区中心、区边界频率及禁带存在条件。\n(4) 推导长波声速，讨论 \\(K_1=K_2\\) 时能带折叠。\n"
+      },
+      "solution.tex": {
+        "bytes": 1294,
+        "git_blob": "151d2e83d699b56744a93db21b8dab7e882e1727",
+        "text": "(1) 牛顿方程 \\(m\\ddot u_n=K_1(v_n-u_n)+K_2(v_{n-1}-u_n)\\)，\\(m\\ddot v_n=K_1(u_n-v_n)+K_2(u_{n+1}-v_n)\\)。代入 Bloch 波得矩阵 \\(\\begin{pmatrix}K_1+K_2-m\\omega^2&-(K_1+K_2e^{-ika})\\\\-(K_1+K_2e^{ika})&K_1+K_2-m\\omega^2\\end{pmatrix}\\binom UV=0\\)。非零振幅需行列式为零，复相位来自胞间弹簧且保持 Hermitian。\n\n(2) 行列式方程 \\((K_1+K_2-m\\omega^2)^2=|K_1+K_2e^{ika}|^2=K_1^2+K_2^2+2K_1K_2\\cos ka\\)。故 \\(m\\omega_\\pm^2=K_1+K_2\\pm\\sqrt{K_1^2+K_2^2+2K_1K_2\\cos ka}\\)，减号为声学支，加号为光学支。两支均非负，这还可由弹簧势能平方和直接验证。\n\n(3) 当 \\(k=0\\)，根号为 \\(K_1+K_2\\)，得到 \\(\\omega_-(0)=0,\\omega_+^2(0)=2(K_1+K_2)/m\\)。在 \\(k=\\pi/a\\)，根号为 \\(|K_1-K_2|\\)，故 \\(\\omega_-^2=2\\min(K_1,K_2)/m,\\omega_+^2=2\\max(K_1,K_2)/m\\)。若 \\(K_1\\ne K_2\\)，两个频段中间存在无传播 Bloch 正则模的频隙；两弹簧相同时禁带闭合。\n\n(4) 令 \\(ka\\ll1\\)，\\(\\cos ka=1-(ka)^2/2+O(k^4)\\)，根号展开为 \\((K_1+K_2)-K_1K_2(ka)^2/[2(K_1+K_2)]+\\cdots\\)，于是 \\(\\omega_-(k)\\simeq a\\sqrt{K_1K_2/[2m(K_1+K_2)]}|k|\\)，声速 \\(c=a\\sqrt{K_1K_2/[2m(K_1+K_2)]}\\)。当 \\(K_1=K_2=K\\)，实际平移周期缩为 \\(a/2\\)，双支表示只是同一单原子链色散在较小布里渊区折叠而成。\n"
+      }
+    },
+    "W041": {
+      "meta.json": {
+        "bytes": 590,
+        "git_blob": "e3d4b469243ff73c90cc479b99a5e2904fc61b78",
+        "text": "{\n  \"id\": \"W041\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"分布粘滞阻尼固定弦的模态驱动与平均功率共振\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 85,\n  \"tags\": [\n    \"连续弦模态\",\n    \"受迫振动\",\n    \"模态正交\",\n    \"功率共振\"\n  ],\n  \"answer\": \"A=\\\\frac{F/\\\\rho}{\\\\sqrt{(\\\\omega_1^2-\\\\omega^2)^2+4\\\\beta^2\\\\omega^2}}\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.2\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 563,
+        "git_blob": "fe73c08a9f2e816f9ef39c7ac921ffe60a446b5f",
+        "text": "长 \\(L\\) 的固定端均匀张紧弦，线密度 \\(\\rho>0\\)、张力 \\(T>0\\)，弦的横向位移 \\(y(x,t)\\) 满足 \\(\\rho y_{tt}+2\\rho\\beta y_t-Ty_{xx}=F\\sin(\\pi x/L)\\cos(\\omega t)\\)，其中 \\(\\beta>0,F>0\\) 为每单位长度力幅度，\\(\\omega>0\\)。考察瞬态衰减后的周期稳态，端点 \\(y(0,t)=y(L,t)=0\\)。\n(1) 给出正交本征函数，说明为何只有基模被直接驱动。\n(2) 求基模稳态振幅与相位。\n(3) 求全弦平均耗散功率与输入功率，并检验相等。\n(4) 对比位移振幅峰值与吸收功率峰值频率。\n"
+      },
+      "solution.tex": {
+        "bytes": 1578,
+        "git_blob": "ccb2e8493ef85394f9969fa9e1c86f38248575a4",
+        "text": "(1) 无阻尼空间本征问题 \\(X''+k_n^2X=0\\) 配固定端条件给 \\(X_n=\\sin(n\\pi x/L)\\)、\\(\\omega_n=(n\\pi/L)\\sqrt{T/\\rho}\\)。驱动力的空间形状正比 \\(X_1\\)，正交性 \\(\\int_0^L X_1X_n dx=(L/2)\\delta_{1n}\\) 保证其他模态稳态驱动系数为零。可写 \\(y(x,t)=q(t)\\sin(\\pi x/L)\\)，无需额外混入其余模态。\n\n(2) 代入偏微分方程，基模广义坐标满足 \\(\\ddot q+2\\beta\\dot q+\\omega_1^2q=(F/\\rho)\\cos\\omega t\\)。取 \\(q(t)=A\\cos(\\omega t-\\delta)\\)，则 \\(A=(F/\\rho)/\\sqrt{(\\omega_1^2-\\omega^2)^2+4\\beta^2\\omega^2}\\)，\\(\\delta=\\operatorname{atan2}(2\\beta\\omega,\\omega_1^2-\\omega^2)\\)。相位必须用双参数反正切确定象限，不能仅用简单 \\(\\arctan\\) 丢失过共振后相位翻转。\n\n(3) 单位长度阻尼力为 \\(-2\\rho\\beta y_t\\)，其平均耗散功率 \\(\\bar P_{\\rm loss}=\\int_0^L2\\rho\\beta\\langle y_t^2\\rangle dx=\\rho\\beta L\\omega^2A^2/2\\)。外力瞬时输入功率 \\(P_{\\rm in}=\\int_0^L F\\sin(\\pi x/L)\\cos\\omega t\\,y_t\\,dx\\)，时间平均得 \\(\\bar P_{\\rm in}=FL\\omega A\\sin\\delta/4\\)。由于 \\(\\sin\\delta=2\\beta\\omega/\\sqrt{(\\omega_1^2-\\omega^2)^2+4\\beta^2\\omega^2}\\)，两者严格相等。\n\n(4) 位移幅值平方分母 \\(D=(\\omega_1^2-\\omega^2)^2+4\\beta^2\\omega^2\\) 对 \\(\\omega\\) 极小时，可得峰频 \\(\\omega_{\\rm disp}=\\sqrt{\\omega_1^2-2\\beta^2}\\)，仅在 \\(\\beta<\\omega_1/\\sqrt2\\) 才有非零频率峰。平均吸收功率正比 \\(\\omega^2/D\\)，其导数在 \\(\\omega=\\omega_1\\) 为零并且为正频率全局最大。因此位移峰与功率峰不完全一致，弱阻尼时才近似合并。\n"
+      }
+    },
+    "W042": {
+      "meta.json": {
+        "bytes": 557,
+        "git_blob": "62619df3e1bfed28eb6c34fdba61cb1d54e94d17",
+        "text": "{\n  \"id\": \"W042\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"悬臂 Euler–Bernoulli 梁的双曲三角特征式与能量正交\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 90,\n  \"tags\": [\n    \"梁弯曲波\",\n    \"四阶边界值问题\",\n    \"超越本征谱\",\n    \"正交与能量\"\n  ],\n  \"answer\": \"\\\\cosh(kL)\\\\cos(kL)=-1\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.2\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 579,
+        "git_blob": "f99e65d692fecdd63615585c0c8e3c03bc098986",
+        "text": "均匀细梁长 \\(L\\)、弯曲刚度 \\(EI>0\\)、线密度 \\(\\mu>0\\)，满足无外力 Euler--Bernoulli 方程 \\(\\mu w_{tt}+EI w_{xxxx}=0\\)。梁在 \\(x=0\\) 固支 \\(w=w_x=0\\)，在 \\(x=L\\) 自由且无外端力矩和剪力，即 \\(w_{xx}=w_{xxx}=0\\)。忽略轴向张力、剪切形变和转动惯量修正。\n(1) 分离变量得到空间四阶本征方程和一般解。\n(2) 施加固支与自由条件，导出无量纲频率超越方程。\n(3) 推导本征频率及首模尺度关系。\n(4) 证明不同频率的弯曲模在质量内积下正交，并给出正能量函数。\n"
+      },
+      "solution.tex": {
+        "bytes": 1433,
+        "git_blob": "516a093bc6facb25a9df3c6da23ed8db11ffb58d",
+        "text": "(1) 设 \\(w(x,t)=X(x)e^{i\\omega t}\\)，得 \\(EI X''''=\\mu\\omega^2 X\\)。定义 \\(k^4=\\mu\\omega^2/(EI)\\)，通解为 \\(X=A\\cosh kx+B\\sinh kx+C\\cos kx+D\\sin kx\\)。固支要求 \\(A+C=0,\\ B+D=0\\)，故可写 \\(X=A(\\cosh kx-\\cos kx)+B(\\sinh kx-\\sin kx)\\)。直接从二阶弦方程套用正弦本征模会漏掉梁的弯曲边界条件。\n\n(2) 自由端弯矩 \\(EI X''(L)=0\\)、剪力 \\(EI X'''(L)=0\\)。将固支后的通解代入，得到两行齐次系统：\\(A(\\cosh z+\\cos z)+B(\\sinh z+\\sin z)=0\\) 与 \\(A(\\sinh z-\\sin z)+B(\\cosh z+\\cos z)=0\\)，其中 \\(z=kL\\)。行列式化简为 \\(2[1+\\cosh z\\cos z]\\)，非零模要求 \\(\\cosh z\\cos z=-1\\)。该式为悬臂梁的精确频率条件。\n\n(3) 记正根为 \\(z_n\\)，则 \\(k_n=z_n/L\\)、\\(\\omega_n=k_n^2\\sqrt{EI/\\mu}=z_n^2\\sqrt{EI/\\mu}/L^2\\)。最小正根约 \\(z_1=1.875104\\)，所以首频 \\(f_1=(z_1^2/2\\pi)\\sqrt{EI/\\mu}/L^2\\)。该 \\(L^{-2}\\) 缩放和张紧弦的 \\(L^{-1}\\) 完全不同；改变长度时梁厚度、材料和线密度按模型保持不变。\n\n(4) 对两个本征函数 \\(X_m,X_n\\) 分别满足 \\(EI X_j''''=\\mu\\omega_j^2 X_j\\)，将 \\(X_m\\) 乘 \\(n\\) 方程、\\(X_n\\) 乘 \\(m\\) 方程相减并积分；分部积分两次后的边界项在固端及自由端均消失，得 \\((\\omega_n^2-\\omega_m^2)\\int_0^L\\mu X_mX_n dx=0\\)。不同本征值故质量正交。运动能量 \\(E=\\int_0^L[\\mu w_t^2/2+EI w_{xx}^2/2]dx\\ge0\\)，其时间导数为边界功率零。\n"
+      }
+    },
+    "W043": {
+      "meta.json": {
+        "bytes": 554,
+        "git_blob": "db863fb887b3874583727148f59721cdf2c3928c",
+        "text": "{\n  \"id\": \"W043\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"背景流速中的浅水重力波、多普勒色散与逆流阻塞\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 80,\n  \"tags\": [\n    \"浅水方程\",\n    \"对流多普勒\",\n    \"波能量通量\",\n    \"波阻塞条件\"\n  ],\n  \"answer\": \"\\\\omega=(U\\\\pm\\\\sqrt{gh})k\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.2\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 634,
+        "git_blob": "4c6c61e493721a964d91e3d927a35fe68eb42c3c",
+        "text": "一维不可压无粘流体浅水层厚度 \\(h>0\\)，重力加速度 \\(g>0\\)，背景均匀水流速度 \\(U\\) 沿 \\(+x\\)。自由表面微小位移 \\(\\eta(x,t)\\)，水平扰动速度 \\(u(x,t)\\) 满足线性浅水方程 \\((\\partial_t+U\\partial_x)\\eta+h\\partial_xu=0\\)、\\((\\partial_t+U\\partial_x)u+g\\partial_x\\eta=0\\)。水底水平，忽略表面张力与粘性。\n(1) 用平面波求色散关系及两支相速度、群速度。\n(2) 求波高与速度扰动的复振幅比例。\n(3) 给出相对背景流动的平均机械波能及其能流。\n(4) 判断逆流中的上行波何时被阻塞，并讨论临界流速的模型限制。\n"
+      },
+      "solution.tex": {
+        "bytes": 1631,
+        "git_blob": "81258c3321ac191f1605d1704ea9fcec98642b3d",
+        "text": "(1) 对 \\(\\eta,u\\propto e^{i(kx-\\omega t)}\\)，线性方程化为 \\((\\omega-Uk)\\eta_0=kh\\,u_0\\)、\\((\\omega-Uk)u_0=kg\\,\\eta_0\\)。消元得 \\((\\omega-Uk)^2=ghk^2\\)。记 \\(c=\\sqrt{gh}\\)，对于正波数有 \\(\\omega_\\pm=(U\\pm c)k\\)。无色散浅水近似下相速度和群速度都为 \\(v_{\\rm ph,\\pm}=v_{\\rm g,\\pm}=U\\pm c\\)，但必须区别实验室坐标与相对于水流的传播方向。\n\n(2) 对两支模态，\\(u_0=(\\omega-Uk)\\eta_0/(kh)=\\pm(c/h)\\eta_0\\)。所以顺流传播的波面升高时流体水平速度扰动同号，逆流传播时反号。与表面位移 \\(a\\cos(kx-\\omega t)\\) 对应的速度扰动振幅为 \\(c a/h\\)。这些关系要求 \\(|\\eta|\\ll h,\\ |u|\\ll c\\)，否则非线性浅水效应会使波速依赖波幅。\n\n(3) 相对于均匀背景流，单位水平面积的二阶平均波能量为 \\(\\mathcal E=\\langle\\rho g\\eta^2/2+\\rho h u^2/2\\rangle\\)。令位移振幅为 \\(a\\)，势能平均 \\(\\rho ga^2/4\\)，动能平均 \\(\\rho h(ca/h)^2/4=\\rho ga^2/4\\)，故 \\(\\mathcal E=\\rho ga^2/2\\)。若背景流速与水深处处常量，实验室系波能沿各分支的通量（相对于此背景参考能定义）为 \\((U\\pm c)\\mathcal E\\)。\n\n(4) 逆流若 \\(U<0\\)，试图向 \\(+x\\) 传播的分支群速度为 \\(U+c\\)。临界 \\(U=-c\\) 时其实验室群速度为零；当 \\(U<-c\\) 时扰动被整体向负向输送。浅水模型在临界附近无色散，不能自行决定细尺度的反射和蓝移；真实有限深度色散、流速空间变化、粘性或波幅非线性可改变阻塞细节。只需判定传播方向而不能从该常系数方程宣称发生有限空间位置的自动堆积。\n"
+      }
+    },
+    "W044": {
+      "meta.json": {
+        "bytes": 600,
+        "git_blob": "8436432fc457410864622e4a10b88745f2c20a6c",
+        "text": "{\n  \"id\": \"W044\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"周期弹簧质点环的离散傅里叶模态、简并与局域冲量\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 85,\n  \"tags\": [\n    \"离散Fourier变换\",\n    \"周期环拓扑\",\n    \"频率简并\",\n    \"局域冲量传播\"\n  ],\n  \"answer\": \"\\\\omega_\\\\ell=2\\\\sqrt{K/m}\\\\,\\\\left|\\\\sin(\\\\pi\\\\ell/N)\\\\right|\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.2\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 636,
+        "git_blob": "d6cd25fc47695fc7ad33fb37c4b65583e487eece",
+        "text": "\\(N\\ge5\\) 个质量相同为 \\(m>0\\) 的质点按周期边界排列成闭合环，邻近质点以线性弹簧 \\(K>0\\) 耦合，每个质点的切向小位移为 \\(q_j\\)（指标取模 \\(N\\)）。无外部固定位置的回复弹簧，质点可整体平移角坐标。初态所有 \\(q_j(0)=0\\)，仅 \\(j=0\\) 质点获得切向冲量 \\(J\\)，即 \\(\\dot q_0(0)=J/m\\)，其他初速为零。\n(1) 写出周期离散波动方程并用离散 Fourier 变换求谱。\n(2) 确定零频刚体模与有限环上频率简并。\n(3) 求任意时刻位移的有限模态求和形式。\n(4) 用模态正交性核验初始总能量及长波群速度。\n"
+      },
+      "solution.tex": {
+        "bytes": 1610,
+        "git_blob": "8ac5159030fb6b13412c4b78e6314e6d162c901b",
+        "text": "(1) 动力方程为 \\(m\\ddot q_j=K(q_{j+1}-2q_j+q_{j-1})\\)，边界 \\(q_{j+N}=q_j\\)。取 Fourier 模态 \\(q_j\\propto e^{i(2\\pi \\ell j/N-\\omega_\\ell t)}\\)，\\(\\ell=0,\\dots,N-1\\)，得 \\(\\omega_\\ell^2=(2K/m)[1-\\cos(2\\pi\\ell/N)]=(4K/m)\\sin^2(\\pi\\ell/N)\\)。这是离散 Laplacian 的实非负谱，而非连续弦的无界二次谱。\n\n(2) 当 \\(\\ell=0\\)，频率为零，模态全体同位移，表示整体刚体平移且不储存弹簧势能。对任意非零 \\(\\ell\\)，\\(\\omega_{N-\\ell}=\\omega_\\ell\\)，对应复共轭行波可组为实余弦、正弦驻波，因此通常二重简并；若 \\(N\\) 为偶数的 \\(\\ell=N/2\\) 模态自共轭，则不发生此二重简并。忽略零模会违背外部总冲量引起的质心漂移。\n\n(3) 离散 Fourier 展开用 \\(q_j(t)=N^{-1}\\sum_{\\ell=0}^{N-1}Q_\\ell(t)e^{2\\pi i\\ell j/N}\\)，初始 \\(Q_\\ell(0)=0\\)，且 \\(\\dot Q_\\ell(0)=J/m\\) 对所有 \\(\\ell\\) 相同。于是 \\(Q_\\ell(t)=\\frac{J}{m\\omega_\\ell}\\sin(\\omega_\\ell t)\\) 对非零模成立，零模取连续极限 \\(Q_0(t)=Jt/m\\)。因此 \\(q_j(t)=J/(mN)[t+\\sum_{\\ell=1}^{N-1}\\sin(\\omega_\\ell t)e^{2\\pi i\\ell j/N}/\\omega_\\ell]\\)，共轭项确保结果为实数。\n\n(4) 初始动能只有一个质点贡献 \\(E_0=J^2/(2m)\\)。用离散 Parseval 恒等式 \\(\\sum_j|\\dot q_j|^2=N^{-1}\\sum_\\ell|\\dot Q_\\ell|^2\\) 在 \\(t=0\\) 得同一能量。各正常模独立守恒 \\(E_\\ell=m|\\dot Q_\\ell|^2/(2N)+K\\sum_j|q_{j+1}-q_j|^2/(2N)\\)，全环总能量不随时间变化。把节点间距记为 \\(a\\)，无限环长波极限 \\(\\omega\\simeq a\\sqrt{K/m}|k|\\)，群速 \\(c=a\\sqrt{K/m}\\)，而有限环的谱仍离散。\n"
+      }
+    },
+    "W045": {
+      "meta.json": {
+        "bytes": 609,
+        "git_blob": "03f32b2f19554c4cb68c128e5b87eb1d6907fc88",
+        "text": "{\n  \"id\": \"W045\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"硬化 Duffing 受迫振子的谐波平衡、折叠阈值与能量输入\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 95,\n  \"tags\": [\n    \"非线性振动\",\n    \"谐波平衡\",\n    \"折叠分岔\",\n    \"平均功率\"\n  ],\n  \"answer\": \"F^2=A^2\\\\left[(\\\\omega_0^2-\\\\omega^2+3\\\\alpha A^2/4)^2+4\\\\beta^2\\\\omega^2\\\\right]\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.2\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 586,
+        "git_blob": "b473b3ada0d8f31076be7193ff85896bbca0b4f3",
+        "text": "非线性受迫振子满足 \\(\\ddot x+2\\beta\\dot x+\\omega_0^2x+\\alpha x^3=F\\cos(\\omega t)\\)，其中 \\(\\beta>0,\\omega_0>0,\\alpha>0,F>0\\)。考虑弱非线性、近共振、稳定周期响应的基频谐波近似 \\(x(t)\\approx A\\cos(\\omega t-\\delta)\\)，只保留基频，忽略三次谐波及更高阶修正。\n(1) 推导主谐波幅频关系及相位关系。\n(2) 求硬化骨架曲线的最低阶频率偏移。\n(3) 推导幅频曲线出现折叠点的判别条件与幅值。\n(4) 用周期平均功率说明驱动与阻尼能量如何平衡，并列出谐波近似的失效情形。\n"
+      },
+      "solution.tex": {
+        "bytes": 1587,
+        "git_blob": "c4c3a3ecad2d85367b4cbc99d363292cc60e034d",
+        "text": "(1) 利用 \\(\\cos^3u=(3\\cos u+\\cos3u)/4\\)，在基频近似中将 \\(\\alpha x^3\\) 替换为 \\(3\\alpha A^3\\cos(\\omega t-\\delta)/4\\)。比较与驱动力同相和正交的系数，得 \\(F\\cos\\delta=A[\\omega_0^2-\\omega^2+3\\alpha A^2/4]\\)，\\(F\\sin\\delta=2\\beta\\omega A\\)。平方相加消去相位，得到 \\(F^2=A^2[(\\omega_0^2-\\omega^2+3\\alpha A^2/4)^2+4\\beta^2\\omega^2]\\)。\n\n(2) 在忽略阻尼的自由振动中，幅频骨架近似满足 \\(\\omega^2=\\omega_0^2+3\\alpha A^2/4\\)。若 \\(\\alpha A^2\\ll\\omega_0^2\\)，开平方得 \\(\\omega\\simeq\\omega_0+3\\alpha A^2/(8\\omega_0)\\)。因为 \\(\\alpha>0\\)，振幅越大频率越高，为硬化非线性；软化弹簧对应 \\(\\alpha<0\\)，但本题限定正系数。\n\n(3) 令 \\(y=A^2>0,\\ d=\\omega_0^2-\\omega^2,\\ a=3\\alpha/4,\\ b=2\\beta\\omega\\)，幅频方程是 \\(F^2=y[(d+ay)^2+b^2]\\)。折叠要求固定 \\(\\omega\\) 时导数 \\(dF^2/dy=d^2+b^2+4day+3a^2y^2=0\\)。解得 \\(y_\\pm=[-2d\\pm\\sqrt{d^2-3b^2}]/(3a)\\)。存在两个正折叠根必须 \\(d<-\\sqrt3 b\\)，即频率位于足够高的一侧且阻尼足够弱。这是谐波平衡多值解出现的必要条件，不能由此判定每支都动力学稳定。\n\n(4) 阻尼每单位质量耗功平均 \\(2\\beta\\langle\\dot x^2\\rangle=\\beta\\omega^2A^2\\)。驱动平均功率 \\(F\\langle\\cos\\omega t\\,\\dot x\\rangle=F\\omega A\\sin\\delta/2\\)，代入 \\(F\\sin\\delta=2\\beta\\omega A\\) 得两者相等。若高次谐波不小、存在跳跃瞬态、混沌或倍周期运动，仅用单一基频幅值预测响应便不充分；上述曲线是受控近似而不是完整非线性方程的精确闭式解。\n"
+      }
+    },
+    "W046": {
+      "meta.json": {
+        "bytes": 623,
+        "git_blob": "44ba3f0d3be6df63c17013610357f9297f666809",
+        "text": "{\n  \"id\": \"W046\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"两根弹性耦合弦的声学与光学混合支及反交叉谱\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 85,\n  \"tags\": [\n    \"耦合连续介质\",\n    \"反交叉能谱\",\n    \"本征模式\",\n    \"正定能量\"\n  ],\n  \"answer\": \"\\\\rho\\\\omega_\\\\pm^2=\\\\kappa+\\\\frac{(T_1+T_2)k^2}{2}\\\\pm\\\\sqrt{\\\\kappa^2+\\\\frac{(T_1-T_2)^2k^4}{4}}\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.2\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 560,
+        "git_blob": "8668690086bed9dea6051b4606d279a5c20e870e",
+        "text": "两条平行无限张紧弦具有相同线密度 \\(\\rho>0\\)，张力分别 \\(T_1>0,T_2>0\\)。两弦之间由连续均匀弹性连接提供每长度回复力 \\(-\\kappa(y_1-y_2)\\) 与 \\(-\\kappa(y_2-y_1)\\)，其中 \\(\\kappa>0\\) 单位为力除以长度平方。无阻尼，位移满足 \\(\\rho y_{j,tt}=T_j y_{j,xx}-\\kappa(y_j-y_{3-j})\\)。\n(1) 代入平面波写出耦合本征矩阵。\n(2) 求两支色散关系及 \\(k=0\\) 的模态。\n(3) 讨论 \\(T_1=T_2\\) 时的同相、反相本征矢。\n(4) 写出总正定能量并解释 \\(T_1\\ne T_2\\) 的模态混合。\n"
+      },
+      "solution.tex": {
+        "bytes": 1575,
+        "git_blob": "f8efbe8f69b213b519cd3bee0d12b7d7e189abd2",
+        "text": "(1) 设 \\(y_j=A_j e^{i(kx-\\omega t)}\\)，得 \\(\\begin{pmatrix}T_1k^2+\\kappa-\\rho\\omega^2&-\\kappa\\\\-\\kappa&T_2k^2+\\kappa-\\rho\\omega^2\\end{pmatrix}(A_1,A_2)^T=0\\)。非零振幅要求行列式为零。对任意实波数 \\(k\\)，该矩阵实对称，因而正交的本征模和实频率平方可由能量正定进一步保证。\n\n(2) 解二阶本征值问题得 \\(\\rho\\omega_\\pm^2=[(T_1+T_2)k^2/2+\\kappa]\\pm\\sqrt{[(T_1-T_2)k^2/2]^2+\\kappa^2}\\)。在 \\(k=0\\)，低支 \\(\\omega_-(0)=0\\) 是两弦同步整体平移，高支 \\(\\omega_+(0)=\\sqrt{2\\kappa/\\rho}\\) 是相对位移的有隙振动。非零耦合 \\(\\kappa\\) 使两支不相交，即使两独立弦在某一波数本可发生频率交叉。\n\n(3) 若 \\(T_1=T_2=T\\)，本征向量为 \\((1,1)\\)、\\((1,-1)\\)，前者连接弹簧始终不形变，对应 \\(\\omega_-^2=Tk^2/\\rho\\)，后者把连接弹簧拉伸两倍，对应 \\(\\omega_+^2=(Tk^2+2\\kappa)/\\rho\\)。当 \\(T_1\\ne T_2\\)，混合角可由 \\(\\tan2\\theta=2\\kappa/[(T_1-T_2)k^2]\\)（视向量排序可带符号）求得，说明近 \\(k=0\\) 主要由连接弹簧确定正反相，而大波数主要由各弦张力确定模态归属。\n\n(4) 能量密度 \\(\\mathcal E=\\rho(\\dot y_1^2+\\dot y_2^2)/2+T_1(y_{1,x})^2/2+T_2(y_{2,x})^2/2+\\kappa(y_1-y_2)^2/2\\ge0\\)。对时间求导并代入动力方程，得到 \\(\\partial_t\\mathcal E+\\partial_x\\mathcal S=0\\)，其中 \\(\\mathcal S=-T_1\\dot y_1y_{1,x}-T_2\\dot y_2y_{2,x}\\)。无限长或无能流边界下总能量守恒。本征频率的非负性和混合模态的物理一致性因此不依赖对行列式的纯代数判断。\n"
+      }
+    },
+    "W047": {
+      "meta.json": {
+        "bytes": 607,
+        "git_blob": "318d2ea3bcdd901f133634da8dbad62cc85606db",
+        "text": "{\n  \"id\": \"W047\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"双流体界面重力—毛细波色散与 Rayleigh–Taylor 最快增长\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 95,\n  \"tags\": [\n    \"界面势流\",\n    \"重力毛细色散\",\n    \"群速度\",\n    \"Rayleigh-Taylor不稳定\"\n  ],\n  \"answer\": \"\\\\omega^2=\\\\frac{(\\\\rho_b-\\\\rho_t)gk+\\\\sigma k^3}{\\\\rho_b+\\\\rho_t}\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.2\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 675,
+        "git_blob": "2437e0c0b3c15b2e58e9be89d31f0e09bc20a0ad",
+        "text": "两种不可压、无粘、不可混溶的理想流体分别占据无限深水平界面 \\(z=0\\) 的上下半空间，上方密度 \\(\\rho_t>0\\)，下方密度 \\(\\rho_b>0\\)。重力 \\(g>0\\) 向下，界面张力 \\(\\sigma>0\\)，忽略平均背景流。设微小界面扰动 \\(\\eta(x,t)=\\eta_0e^{i(kx-\\omega t)}\\)，\\(k>0\\)；线性势流速度势各自满足 Laplace 方程。\n(1) 给出上、下流体的衰减势解并应用运动学边界条件。\n(2) 由线性 Bernoulli 压力跃变导出重力毛细色散。\n(3) 对稳定密度层结求相速度、群速度与两类主导极限。\n(4) 对上重下轻的不稳定层结求不稳定波数区间及最大指数增长率。\n"
+      },
+      "solution.tex": {
+        "bytes": 1778,
+        "git_blob": "fc2fae44f4aa704f1cdb9ab4563ddcfc297fcfd5",
+        "text": "(1) 因势流不可压，\\(\\nabla^2\\phi_{t,b}=0\\)。为了远离界面速度扰动衰减，取 \\(\\phi_t=A_t e^{-kz}e^{i(kx-\\omega t)}\\)（\\(z>0\\)）、\\(\\phi_b=A_b e^{kz}e^{i(kx-\\omega t)}\\)（\\(z<0\\)）。运动学边界 \\(\\partial_t\\eta=\\partial_z\\phi_j|_0\\) 给 \\(-i\\omega\\eta_0=-kA_t=kA_b\\)，故 \\(A_t=i\\omega\\eta_0/k\\)、\\(A_b=-i\\omega\\eta_0/k\\)。\n\n(2) 线性 Bernoulli 得 \\(p_j'=-\\rho_j(\\partial_t\\phi_j+g\\eta)\\)。界面小曲率 Laplace 压力跃变对所选向上法向可写 \\(p_b'-p_t'=-\\sigma\\eta_{xx}\\)。代入两边速度势，得 \\(\\omega^2[(\\rho_t+\\rho_b)/k]=(\\rho_b-\\rho_t)g+\\sigma k^2\\)，即 \\(\\omega^2=[(\\rho_b-\\rho_t)gk+\\sigma k^3]/(\\rho_b+\\rho_t)\\)。密度差和表面张力的维度在分子中分别为 \\({\\rm kg\\,m^{-3}\\,m\\,s^{-2}}\\) 经乘 \\(k\\) 与 \\({\\rm N\\,m^{-1}}k^3\\) 形成同一量纲。\n\n(3) 对稳定层结 \\(\\Delta\\rho=\\rho_b-\\rho_t>0\\)，\\(\\omega=\\sqrt{(\\Delta\\rho gk+\\sigma k^3)/(\\rho_b+\\rho_t)}\\)。相速度 \\(c_p=\\omega/k\\)，群速度 \\(c_g=d\\omega/dk=(\\Delta\\rho g+3\\sigma k^2)/[2(\\rho_b+\\rho_t)\\omega]\\)。长波重力主导时 \\(\\omega\\propto k^{1/2}\\)，故 \\(c_g=c_p/2\\)；短波毛细主导时 \\(\\omega\\propto k^{3/2}\\)，故 \\(c_g=3c_p/2\\)。无限深假设需 \\(kh_j\\gg1\\)，若有限深度必须使用双曲正切修正。\n\n(4) 当 \\(\\rho_t>\\rho_b\\)，记 \\(\\Delta=\\rho_t-\\rho_b>0\\)，有 \\(\\omega^2=[-\\Delta g k+\\sigma k^3]/(\\rho_t+\\rho_b)\\)。对 \\(0<k<k_c=\\sqrt{\\Delta g/\\sigma}\\) 得 \\(\\omega=i\\Gamma\\)，\\(\\Gamma^2=(\\Delta gk-\\sigma k^3)/(\\rho_t+\\rho_b)\\)。求导令 \\(d\\Gamma^2/dk=0\\) 得 \\(k_*=\\sqrt{\\Delta g/(3\\sigma)}=k_c/\\sqrt3\\)，且 \\(\\Gamma_{\\max}^2=2\\Delta gk_*/[3(\\rho_t+\\rho_b)]\\)。因此表面张力稳定足够短波，却无法在无限大系统中完全抑制长波 Rayleigh--Taylor 不稳定性。\n"
+      }
+    },
+    "W048": {
+      "meta.json": {
+        "bytes": 605,
+        "git_blob": "be9920cd1f066959831b0108e7d7f5736048df5f",
+        "text": "{\n  \"id\": \"W048\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"有限水深下重力—毛细表面波的相速极小与波包输运\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 90,\n  \"tags\": [\n    \"流体色散\",\n    \"毛细效应\",\n    \"群速度\",\n    \"浅水渐近\"\n  ],\n  \"answer\": \"\\\\omega^2=(gk+\\\\sigma k^3/\\\\rho)\\\\tanh(kh),\\\\qquad k_*=\\\\sqrt{\\\\rho g/\\\\sigma}\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.3-round11\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 737,
+        "git_blob": "1bb719263d3455701500c3cc493a49faf6bfa0e6",
+        "text": "密度为 \\(\\rho\\) 的不可压无粘流体表面张力为 \\(\\sigma>0\\)，均匀静水深度 \\(h>0\\)，重力加速度 \\(g>0\\)；水平尺度无限，底面 \\(z=-h\\) 刚性不渗透，自由表面 \\(z=0\\)。在无旋、小振幅线性近似下考虑平面波 \\(e^{i(kx-\\omega t)}\\)，其中 \\(k>0\\)，忽略空气密度。\n(1) 从 Laplace 方程、底边界及线性自由表面条件推导完整色散关系。\n(2) 求任意水深的相速度及群速度，说明在深水极限下两者的一般差异。\n(3) 求深水相速达到极小值的波数与最小相速，并解释表面张力为何使短波相速回升。\n(4) 对 \\(kh\\ll1\\) 展开到 \\(k^4\\) 阶的 \\(\\omega^2\\)，给出表面张力和有限水深色散的竞争条件。\n"
+      },
+      "solution.tex": {
+        "bytes": 1806,
+        "git_blob": "f462ba08d332a212da242ac57930c15fed669cbf",
+        "text": "(1) 无旋不可压流速度势 \\(\\phi\\) 满足 \\(\\phi_{xx}+\\phi_{zz}=0\\)，底面无穿透要求 \\(\\phi_z(-h)=0\\)。取 \\(\\phi=A\\cosh[k(z+h)]e^{i(kx-\\omega t)}\\)，自由表面位移 \\(\\eta=\\eta_0e^{i(kx-\\omega t)}\\)。运动学边界是 \\(\\eta_t=\\phi_z(0)\\)，动力学边界是 \\(\\phi_t+g\\eta-(\\sigma/\\rho)\\eta_{xx}=0\\)。消去 \\(A,\\eta_0\\)，得 \\(\\omega^2=(gk+\\sigma k^3/\\rho)\\tanh(kh)\\)。若忘记底面条件，会将有限深度结果误当为深水 \\(\\tanh(kh)=1\\)。\n\n(2) 相速度 \\(c_p=\\omega/k=\\sqrt{(g/k+\\sigma k/\\rho)\\tanh(kh)}\\)，群速度 \\(c_g=d\\omega/dk\\)。对色散关系微分得到 \\(c_g=\\{[g+3\\sigma k^2/\\rho]\\tanh(kh)+h[gk+\\sigma k^3/\\rho]\\operatorname{sech}^2(kh)\\}/(2\\omega)\\)。波峰的相位传播速率与窄带波包的能量/包络输运速率一般不同。深水时若纯重力支配则 \\(\\omega\\propto k^{1/2}\\)，有 \\(c_g=c_p/2\\)；若纯毛细支配则 \\(\\omega\\propto k^{3/2}\\)，有 \\(c_g=3c_p/2\\)。\n\n(3) 在 \\(kh\\gg1\\) 下 \\(\\tanh(kh)\\to1\\)，所以 \\(c_p^2=g/k+\\sigma k/\\rho\\)。对 \\(k\\) 微分，极值条件 \\(-g/k^2+\\sigma/\\rho=0\\)，给 \\(k_*=\\sqrt{\\rho g/\\sigma}\\)，该点是全局极小，因为 \\(k\\to0,\\infty\\) 时 \\(c_p^2\\to\\infty\\)。代回得 \\(c_{p,\\min}=(4g\\sigma/\\rho)^{1/4}\\)。长波相速由重力项控制并随波数增大下降，短波表面张力项使相速随波数上升，二者共同形成相速极小值。\n\n(4) 令 \\(s=\\sigma/\\rho\\)，在 \\(kh\\ll1\\) 使用 \\(\\tanh(kh)=kh-(kh)^3/3+O(k^5h^5)\\)，则 \\(\\omega^2=gh\\,k^2+[sh-gh^3/3]k^4+O(k^6)\\)。其中 \\(sh\\,k^4\\) 是毛细色散，\\(-gh^3k^4/3\\) 是有限水深重力色散，二者在 \\(\\sigma/(\\rho g)=h^2/3\\) 时最低阶抵消。该展开还要求短波毛细及截断误差可控；若系数恰抵消，需要保留 \\(k^6\\) 项才能判断色散曲线的下一阶形状。\n"
+      }
+    },
+    "W049": {
+      "meta.json": {
+        "bytes": 602,
+        "git_blob": "9a874e588bc8c9f8a55c3deea1cdc5c5a737563f",
+        "text": "{\n  \"id\": \"W049\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"质量交替一维原子链的声学、光学色散分支与禁带\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 90,\n  \"tags\": [\n    \"双原子晶格\",\n    \"Bloch定理\",\n    \"声学光学支\",\n    \"长波群速\"\n  ],\n  \"answer\": \"\\\\omega_\\\\pm^2=K(1/M+1/m)\\\\pm K\\\\sqrt{(1/M+1/m)^2-4\\\\sin^2(ka/2)/(Mm)}\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.3-round11\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 693,
+        "git_blob": "2841d0c9fcfa477d58777eb27d39d72ded80ad43",
+        "text": "一维无限晶格每个原胞有两个原子，质量分别为 \\(M>m>0\\)，均以劲度 \\(K>0\\) 的同种最近邻弹簧耦合；原胞长度为 \\(a>0\\)。设第 \\(n\\) 个原胞位移为 \\(u_n,v_n\\)，平衡位置均匀，不考虑外场、非线性和次近邻相互作用。采用 Bloch 因子 \\(e^{i(nka-\\omega t)}\\) 且第一布里渊区 \\(k\\in[-\\pi/a,\\pi/a]\\)。\n(1) 列出两组耦合运动方程及 Bloch 动力学矩阵。\n(2) 求完整声学和光学色散关系，说明 \\(k=0\\) 的两支物理意义。\n(3) 求布里渊区边界的两支频率与禁带区间，说明 \\(M=m\\) 时为何闭合。\n(4) 求声学支长波群速，检查其与平均质量的连续介质极限相容。\n"
+      },
+      "solution.tex": {
+        "bytes": 1689,
+        "git_blob": "ad36c83512bf28f1b08ba46e9f669c3e7581e990",
+        "text": "(1) 以第 \\(n\\) 个重原子 \\(u_n\\) 与轻原子 \\(v_n\\) 为一组，连接方式取重原子同时接 \\(v_n\\)、\\(v_{n-1}\\)，轻原子接 \\(u_n,u_{n+1}\\)。牛顿方程 \\(M\\ddot u_n=K(v_n+v_{n-1}-2u_n)\\)，\\(m\\ddot v_n=K(u_n+u_{n+1}-2v_n)\\)。代入 Bloch 形式得 \\(\\begin{pmatrix}2K-M\\omega^2&-K(1+e^{-ika})\\\\-K(1+e^{ika})&2K-m\\omega^2\\end{pmatrix}(U,V)^T=0\\)。非零振型要求行列式为零，矩阵中的相位来自相邻原胞。\n\n(2) 色散行列式化简为 \\((2K-M\\omega^2)(2K-m\\omega^2)-4K^2\\cos^2(ka/2)=0\\)，亦即 \\(Mm\\omega^4-2K(M+m)\\omega^2+4K^2\\sin^2(ka/2)=0\\)。解二次方程得 \\(\\omega_\\pm^2=K(1/M+1/m)\\pm K\\sqrt{(1/M+1/m)^2-4\\sin^2(ka/2)/(Mm)}\\)。在 \\(k=0\\)，负支 \\(\\omega_-(0)=0\\)，对应两个原子同相整体平移；正支 \\(\\omega_+^2(0)=2K(1/M+1/m)\\)，对应胞内相对运动，称为光学支。\n\n(3) 在区边界 \\(ka=\\pi\\)，相邻原胞耦合相位使 \\(\\cos(ka/2)=0\\)，动力矩阵的非对角元素在适当相位约定下消失，两个频率恰为 \\(\\omega_-^2=2K/M\\) 与 \\(\\omega_+^2=2K/m\\)。由于 \\(M>m\\)，声学支最高频与光学支最低频间存在 \\((\\sqrt{2K/M},\\sqrt{2K/m})\\) 的无本征模式区间。若 \\(M=m\\)，两端重合，原胞的人为加倍造成的能带折叠没有真实质量对比造成的频隙。\n\n(4) 在 \\(ka\\ll1\\) 下令 \\(S=1/M+1/m\\)，将根式展开为 \\(S-2\\sin^2(ka/2)/(MmS)+\\cdots\\)，故 \\(\\omega_-^2\\simeq[2K/(M+m)]\\sin^2(ka/2)\\simeq Ka^2k^2/[2(M+m)]\\)。声学长波群速为 \\(v_g=d\\omega_-/dk\\to a\\sqrt{K/[2(M+m)]}\\)。它随一个原胞的总惯性质量 \\(M+m\\) 增大而降低，且正比于弹簧刚度平方根；这是离散原子链连续弹性极限的合理量纲与趋势。\n"
+      }
+    },
+    "W050": {
+      "meta.json": {
+        "bytes": 574,
+        "git_blob": "e0a6e7b7b3f5bb0a66450a8bf1a02632e5cdb979",
+        "text": "{\n  \"id\": \"W050\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"三段变阻抗弦的反射系数与四分之一波长抗反射匹配层\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 90,\n  \"tags\": [\n    \"波阻抗\",\n    \"边界反射\",\n    \"能量流\",\n    \"阻抗变换\"\n  ],\n  \"answer\": \"r=(Z_1-Z_2)/(Z_1+Z_2),\\\\quad Z_m=\\\\sqrt{Z_1Z_2}\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.3-round11\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 789,
+        "git_blob": "df5e0e65c36db94eccc41491178ee047ddde2fb9",
+        "text": "无限长细弦横波以角频率 \\(\\omega>0\\) 从左侧线密度 \\(\\mu_1\\) 的区域入射到右侧线密度 \\(\\mu_2\\) 区域，所有区域的拉力均为常数 \\(T>0\\)，横向位移及横向力在界面连续。先分析单一界面 \\(x=0\\)，再在两介质间加入厚度 \\(d\\)、线密度 \\(\\mu_m\\) 的均匀匹配层。无损、线性、小振幅，并假设横波纵向延展效应可忽略。\n(1) 从波动方程求相速度 \\(c_j\\)、波数 \\(k_j\\) 及行波特性阻抗 \\(Z_j\\)。\n(2) 利用界面条件求位移反射与透射振幅系数，并证明反射率加透射率为一。\n(3) 推导匹配层输入阻抗的四分之一波长变换公式，给出零反射条件。\n(4) 说明匹配层的频率选择性及 \\(\\mu_1=\\mu_2\\) 时的退化情况，并检查所得量纲。\n"
+      },
+      "solution.tex": {
+        "bytes": 1960,
+        "git_blob": "1390f4c4ead3237c7846133ee4aebdf2502d6f2c",
+        "text": "(1) 每段弦的小振幅方程 \\(\\mu_j y_{tt}=Ty_{xx}\\)，故 \\(c_j=\\sqrt{T/\\mu_j}\\)，\\(k_j=\\omega/c_j\\)。沿正向的机械功率与速度幅值满足 \\(\\overline P_j=\\frac12Z_j|v_y|^2\\)，其中 \\(v_y=y_t\\)、特性机械阻抗 \\(Z_j=T/c_j=\\sqrt{T\\mu_j}\\)。同一频率下位移幅度 \\(A\\) 的时间平均功率为 \\(\\overline P_j=\\frac12 Z_j\\omega^2|A|^2\\)，这为界面能量检验提供了正确权重，不可直接用位移幅度平方比较不同密度的功率。\n\n(2) 写左侧 \\(y_1=A_ie^{i(k_1x-\\omega t)}+A_re^{i(-k_1x-\\omega t)}\\)，右侧 \\(y_2=A_te^{i(k_2x-\\omega t)}\\)。界面位移连续给 \\(A_i+A_r=A_t\\)，横向张力 \\(T y_x\\) 连续给 \\(k_1(A_i-A_r)=k_2A_t\\)。故反射系数 \\(r=(k_1-k_2)/(k_1+k_2)=(Z_1-Z_2)/(Z_1+Z_2)\\)，透射振幅 \\(t=2Z_1/(Z_1+Z_2)\\)。反射率 \\(R=|r|^2\\)，透射率 \\(\\mathcal T=(Z_2/Z_1)|t|^2=4Z_1Z_2/(Z_1+Z_2)^2\\)，两者相加正好一。\n\n(3) 对于匹配层，在其左端将向右与向左行波叠加，利用左右两端的位移和横向力连续，得到入射端等效阻抗 \\(Z_{\\rm in}=Z_m[Z_2+iZ_m\\tan(k_md)]/[Z_m+iZ_2\\tan(k_md)]\\)（取时间相位 \\(e^{-i\\omega t}\\) 时可整体改变虚部符号，不改变四分之一波长结果）。当 \\(k_md=\\pi/2\\) 模 \\(\\pi\\) 时，极限 \\(Z_{\\rm in}=Z_m^2/Z_2\\)。令此值等于 \\(Z_1\\) 消除首端反射，得到 \\(Z_m=\\sqrt{Z_1Z_2}\\)，对应统一拉力下 \\(\\mu_m=\\sqrt{\\mu_1\\mu_2}\\)。厚度 \\(d=(2n+1)\\lambda_m/4\\) 给出匹配频率。\n\n(4) 匹配层通过相位相消而非消除所有界面的单独反射，所以当频率改变，\\(k_md\\ne\\pi/2\\) 时 \\(Z_{\\rm in}\\ne Z_1\\)，反射一般恢复。若左右阻抗本来相同，即 \\(\\mu_1=\\mu_2\\)，单界面已全透射，不需要额外层；取 \\(\\mu_m=\\mu_1\\) 时任意厚度均不会引入反射。阻抗 \\(Z_j=\\sqrt{T\\mu_j}\\) 的量纲为千克每秒；几何平均的阻抗仍有相同量纲，四分之一波长厚度由 \\(d=c_m\\pi/(2\\omega)\\) 给出长度量纲。\n"
+      }
+    },
+    "W051": {
+      "meta.json": {
+        "bytes": 654,
+        "git_blob": "d35319a30437cc72f36b05ae49ad953050b3b315",
+        "text": "{\n  \"id\": \"W051\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"固定圆膜轴对称 Bessel 本征模与局域周期载荷响应\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 90,\n  \"tags\": [\n    \"Bessel本征值\",\n    \"圆膜边值问题\",\n    \"模态投影\",\n    \"受迫振动\"\n  ],\n  \"answer\": \"\\\\omega_n=\\\\frac{j_{0,n}}{a}\\\\sqrt{T/\\\\rho_s},\\\\qquad \\\\tilde q_n=\\\\frac{F_n}{\\\\omega_n^2-\\\\Omega^2+2i\\\\gamma_n\\\\Omega}\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.3-round11\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 750,
+        "git_blob": "a91a8eaaaa1fff6a1bba52e3f2891048e4e3c80c",
+        "text": "一张半径 \\(a\\)、均匀面密度 \\(\\rho_s>0\\)、各向同性面张力 \\(T>0\\) 的薄圆膜四周固定，位移轴对称 \\(u(r,t)\\)，满足 \\(0\\le r\\le a\\)。忽略弯曲刚度与自重，考虑小振幅线性振动；可加入单位面积的轴对称正弦载荷 \\(f(r)\\cos\\Omega t\\) 及各模态小阻尼 \\(2\\gamma_n\\)。\n(1) 写出圆膜振动偏微分方程，求满足圆心正则与边缘固定的轴对称本征频率。\n(2) 给出不同径向本征函数的正交关系与归一积分，确定第一零点控制的最低频率。\n(3) 推导一般外载 \\(f(r)\\cos\\Omega t\\) 的第 \\(n\\) 个模态振幅方程与复响应。\n(4) 验证模态总能量及平均耗散功率表达，并讨论点状激励和低阻尼共振的适用限制。\n"
+      },
+      "solution.tex": {
+        "bytes": 1934,
+        "git_blob": "c9a6199344c51b57fa565b4276022c7cd9beb81e",
+        "text": "(1) 轴对称小振幅膜方程为 \\(\\rho_su_{tt}=T[r^{-1}(ru_r)_r]+f(r,t)\\)。令 \\(c=\\sqrt{T/\\rho_s}\\)，自由模态 \\(u=R(r)e^{-i\\omega t}\\)，得到 \\(R''+R'/r+k^2R=0\\)，其中 \\(k=\\omega/c\\)。圆心正则性排除发散的 \\(Y_0(kr)\\)，故 \\(R=J_0(kr)\\)；边缘固定 \\(J_0(ka)=0\\)，第 \\(n\\) 个正根记 \\(j_{0,n}\\)，因此 \\(\\omega_n=c\\,j_{0,n}/a\\)。此频率为轴对称模态序列，完整膜还存在角向非零阶模式。\n\n(2) Sturm--Liouville 径向算子以权函数 \\(r\\) 自伴，故 \\(\\int_0^arJ_0(j_{0,n}r/a)J_0(j_{0,m}r/a)dr=0\\) 当 \\(n\\ne m\\)。归一积分为 \\(N_n=\\int_0^arJ_0^2(j_{0,n}r/a)dr=a^2J_1^2(j_{0,n})/2\\)。第一轴对称根 \\(j_{0,1}\\approx2.4048256\\)，对应最低轴对称模态频率 \\(\\omega_1\\approx2.4048256\\sqrt{T/\\rho_s}/a\\)。在做模态投影时必须保留面积权重 \\(2\\pi r\\)，否则激励幅值和质量均错误。\n\n(3) 以 \\(u(r,t)=\\sum_nq_n(t)J_0(j_{0,n}r/a)\\) 展开，将动力学方程乘相应本征函数再以 \\(2\\pi r\\,dr\\) 积分，利用正交性，得 \\(\\ddot q_n+2\\gamma_n\\dot q_n+\\omega_n^2q_n=F_n\\cos\\Omega t\\)，其中 \\(F_n=\\int_0^a r f(r)J_0(j_{0,n}r/a)dr/(\\rho_sN_n)\\)。稳态复振幅 \\(\\tilde q_n=F_n/(\\omega_n^2-\\Omega^2+2i\\gamma_n\\Omega)\\)。载荷分布在根节点附近时相应 \\(F_n\\) 可能趋近于零，即使频率共振也无法高效激发该模态。\n\n(4) 无阻尼自由振动的每模态能量为 \\(E_n=\\pi\\rho_sN_n[\\dot q_n^2+\\omega_n^2q_n^2]\\)；其时间导数在加入模态阻尼及载荷后给 \\(\\dot E_n=2\\pi N_nq_n'\\int_0^ar f(r)J_0 dr/N_n-4\\pi\\rho_sN_n\\gamma_n\\dot q_n^2\\)，其中第一项可简化为 \\(2\\pi\\dot q_n\\int_0^ar fJ_0dr\\)。稳态平均耗散率 \\(\\overline P_n=2\\pi\\rho_sN_n\\gamma_n\\Omega^2|\\tilde q_n|^2\\ge0\\)。数学上的点载荷应作为径向 delta 分布或有限小圆斑极限处理，不能把 \\(f(r)=\\delta(r)\\) 直接当作平面面积密度；低阻尼共振时还应检验小振幅条件。\n"
+      }
+    },
+    "W052": {
+      "meta.json": {
+        "bytes": 582,
+        "git_blob": "fd1e4987139d18bc3e2808b91c3300121b1d3393",
+        "text": "{\n  \"id\": \"W052\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"匀速运动介质中一维声波的多普勒色散及双向群速\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 90,\n  \"tags\": [\n    \"对流波动方程\",\n    \"多普勒移动\",\n    \"能量传播\",\n    \"特征线\"\n  ],\n  \"answer\": \"\\\\omega_\\\\pm=(U\\\\pm c)k,\\\\quad v_{g,\\\\pm}=U\\\\pm c\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.3-round11\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 569,
+        "git_blob": "a65361edcf9ecbdf76bc48a0709f26390d07a13e",
+        "text": "密度、声速均恒定的理想流体沿水平 \\(+x\\) 方向匀速流动，背景速度 \\(U\\)，声速 \\(c>0\\)，且 \\(|U|<c\\)。小振幅声学速度势 \\(\\phi(x,t)\\) 满足对流波动方程 \\((\\partial_t+U\\partial_x)^2\\phi=c^2\\partial_x^2\\phi\\)，忽略粘性与外源。\n(1) 用平面波求两支色散关系及流体相对频率。\n(2) 计算两支实验室相速度与群速度并解释上游传播条件。\n(3) 对流体相对声波的特征线求解一般初值解。\n(4) 在固定实验室声源频率下推导上下游波数，讨论 \\(U\\to c^-\\) 极限。\n"
+      },
+      "solution.tex": {
+        "bytes": 1397,
+        "git_blob": "6014fbd70e5b6a76292a32f54c9af5d626c55e0f",
+        "text": "(1) 代入 \\(\\phi=Ae^{i(kx-\\omega t)}\\)，对流时间微分给 \\(-i(\\omega-Uk)\\)，空间微分给 \\(ik\\)，于是 \\((\\omega-Uk)^2=c^2k^2\\)。有两支 \\(\\omega_\\pm=(U\\pm c)k\\)，流体共动参考系中频率为 \\(\\omega'=\\omega-Uk=\\pm ck\\)。频率平移是 Galilean 对流效应，而不是声速本身被改变。\n\n(2) 取各支符号与 \\(k\\) 约定一致，实验室相速度 \\(v_{p,\\pm}=\\omega_\\pm/k=U\\pm c\\)，因其色散线性，群速度 \\(v_{g,\\pm}=d\\omega_\\pm/dk=U\\pm c\\)。亚声速 \\(|U|<c\\) 下有一支朝下游，一支朝上游传播；若顺流 \\(U>c\\)，上游支的实验室速度也朝下游，说明上游声信号不能穿过超声速对流区域。\n\n(3) 方程可因式分解为 \\([\\partial_t+(U+c)\\partial_x][\\partial_t+(U-c)\\partial_x]\\phi=0\\)，由于两个算子系数常数且可交换，一般解为 \\(\\phi=f(x-(U+c)t)+g(x-(U-c)t)\\)。若给定初始位移及其时间导数，分别对 \\(f,g\\) 施加和差约束即可确定传播分量；两条特征线斜率分别为 \\(U+c,U-c\\)。\n\n(4) 若实验室声源固定角频率 \\(\\omega_s>0\\)，下游波数 \\(k_+=\\omega_s/(U+c)\\)，上游取实验室传播速度 \\(U-c<0\\)，其正向坐标波数 \\(k_-=\\omega_s/(U-c)<0\\)。当 \\(U\\to c^-\\)，上游波长 \\(2\\pi/|k_-|\\to0\\)，表明在理想无色散线性模型中逆流传播越来越难；实际短波近似、粘性与流动非均匀性终将限制该极限。\n"
+      }
+    },
+    "W053": {
+      "meta.json": {
+        "bytes": 581,
+        "git_blob": "e2ba7aad6e4e029f7d6305e055271cfd4546626a",
+        "text": "{\n  \"id\": \"W053\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"圆形刚壁声波导的径向本征值与高通截止频率\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 90,\n  \"tags\": [\n    \"柱坐标声学\",\n    \"Bessel方程\",\n    \"波导截止\",\n    \"边界本征值\"\n  ],\n  \"answer\": \"\\\\omega_n^2=c^2(k^2+\\\\xi_n^2/a^2),\\\\quad J_1(\\\\xi_n)=0\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.3-round11\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 555,
+        "git_blob": "0e34ff80877ca482a67b42dde547e303d519f33e",
+        "text": "半径 \\(a>0\\) 的无限长刚壁圆柱形直管充满均匀理想气体，小信号声速 \\(c>0\\)，管壁不透流。考虑轴对称压力扰动 \\(p(r,z,t)\\propto e^{i(kz-\\omega t)}\\)，径向流速与压强径向梯度成正比。忽略吸收及平均流。\n(1) 建立 Helmholtz 径向方程并选择圆心正则解。\n(2) 用刚壁边界写出允许径向特征根及轴向色散关系。\n(3) 给出最低非均匀模的截止角频率，并解释平面波基模无截止。\n(4) 求传播模的相速度与群速度，证明二者乘积为 \\(c^2\\)。\n"
+      },
+      "solution.tex": {
+        "bytes": 1431,
+        "git_blob": "1e5931c671958da26ecb54a41479a1f028ad1c4b",
+        "text": "(1) 压力满足 \\(\\partial_t^2p=c^2\\nabla^2p\\)。代入轴对称谐波得 \\(P''+r^{-1}P'+\\kappa^2P=0\\)，其中 \\(\\kappa^2=\\omega^2/c^2-k^2\\)。圆心正则解为 \\(P=A J_0(\\kappa r)\\)，舍去在 \\(r=0\\) 对数发散的 \\(Y_0\\)。径向特征量代表横截面驻波结构，不能直接当作轴向传播波数。\n\n(2) 线性声学动量方程 \\(\\rho_0\\partial_t v_r=-\\partial_rp\\)，刚壁不透流 \\(v_r(a)=0\\) 等价于 \\(\\partial_rP(a)=0\\)。因此 \\(J_1(\\kappa a)=0\\)，取非负根 \\(\\xi_n\\)（含 \\(\\xi_0=0\\)），有 \\(\\kappa_n=\\xi_n/a\\)，轴向色散关系 \\(\\omega^2=c^2[k^2+\\xi_n^2/a^2]\\)。若采用固定压强的软壁则边界改为 \\(J_0(\\kappa a)=0\\)，两者不可混淆。\n\n(3) 基模 \\(\\xi_0=0\\) 没有横向梯度，频率 \\(\\omega=c|k|\\)，代表管内平面声波，无正截止频率。第一个非零 \\(J_1\\) 根为 \\(\\xi_1\\approx3.83170597\\)，对应第一轴对称横向激发的截止角频率 \\(\\omega_{\\rm cut}=c\\xi_1/a\\)。若 \\(\\omega<\\omega_{\\rm cut}\\)，该模的 \\(k\\) 变成纯虚数，沿管道指数衰减而非携能传播。\n\n(4) 对高于截止的模 \\(k>0\\)，色散给 \\(v_p=\\omega/k=c\\sqrt{1+\\xi_n^2/(a^2k^2)}>c\\)，群速度 \\(v_g=d\\omega/dk=c^2k/\\omega<c\\)，故严格乘积 \\(v_pv_g=c^2\\)。相速度超声速并不表示信号传递超过声速，波包能量速度由群速度控制。临近截止 \\(k\\to0\\) 时相速度发散而群速度趋零，体现波导模式的截止。\n"
+      }
+    },
+    "W054": {
+      "meta.json": {
+        "bytes": 586,
+        "git_blob": "fed94447ac52717e4ab15562e7364cb88be60fa8",
+        "text": "{\n  \"id\": \"W054\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"两种浅水深度界面的长波反射、透射与能流守恒\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 90,\n  \"tags\": [\n    \"浅水重力波\",\n    \"阻抗匹配\",\n    \"海底阶跃\",\n    \"能量通量\"\n  ],\n  \"answer\": \"r=(c_1-c_2)/(c_1+c_2),\\\\quad\\\\mathcal T=4c_1c_2/(c_1+c_2)^2\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.3-round11\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 630,
+        "git_blob": "4ab191593b074f023750fa5fc2966e72282d1969",
+        "text": "两段无限宽水槽在 \\(x=0\\) 相接，静水深 \\(h_1,h_2>0\\)，密度相同，均无平均流速。取波长远大于水深的线性浅水波，重力 \\(g\\)，两侧相速 \\(c_j=\\sqrt{gh_j}\\)。令自由水面高程扰动 \\(\\eta_j\\) 及水深平均速度 \\(u_j\\)，界面处水位与体积通量连续。\n(1) 写出浅水波的线性连续、动量方程及各侧行波关系。\n(2) 求从左入射的水位振幅反射系数和透射系数。\n(3) 求以水位振幅表示的能流反射率和透射率并验证和为一。\n(4) 讨论深到浅及浅到深传播的极限，解释海啸靠近浅水处波高增大的机制。\n"
+      },
+      "solution.tex": {
+        "bytes": 1432,
+        "git_blob": "713a756ebe995127849f1530c0d4b0ed0259fb66",
+        "text": "(1) 线性连续方程为 \\(\\eta_t+h u_x=0\\)，动量方程 \\(u_t+g\\eta_x=0\\)，合并给 \\(\\eta_{tt}=gh\\,\\eta_{xx}\\)，故相速 \\(c=\\sqrt{gh}\\)。对于向右行水波，速度与高程满足 \\(u=(c/h)\\eta=\\sqrt{g/h}\\eta\\)；向左行波则 \\(u=-(c/h)\\eta\\)。这种符号区别是反射界面质量通量条件的关键。\n\n(2) 写入射、反射、透射水位振幅分别为 \\(A_i,A_r,A_t\\)。界面水位连续 \\(A_i+A_r=A_t\\)，体积通量连续 \\(h_1u_1=h_2u_2\\)，给 \\(c_1(A_i-A_r)=c_2A_t\\)。求得水位振幅反射系数 \\(r=(c_1-c_2)/(c_1+c_2)\\)，透射系数 \\(t=2c_1/(c_1+c_2)\\)。若 \\(c_1=c_2\\)，反射消失；注意不同水深的水位振幅不同于速度振幅。\n\n(3) 单位宽水波平均能量密度为 \\(\\rho g|A|^2/2\\)，能流大小为此密度乘相速 \\(c\\)，所以反射率 \\(R=|r|^2\\)，透射率 \\(\\mathcal T=(c_2/c_1)|t|^2=4c_1c_2/(c_1+c_2)^2\\)。直接相加得 \\((c_1-c_2)^2/(c_1+c_2)^2+4c_1c_2/(c_1+c_2)^2=1\\)。若错误地用 \\(t^2\\) 作透射率，将违反能量守恒。\n\n(4) 当从深水到浅水 \\(h_2<h_1\\) 时 \\(c_2<c_1\\)，水位透射振幅 \\(t>1\\)，意味着浅水一侧波峰可高于入射波峰，但能量透射率仍不超过一。反过来浅到深时 \\(r<0\\) 表示反射水位反相。在极端浅水区域线性浅水假设最终会因振幅相对水深过大而失效，实际海啸会涉及非线性、底部摩擦和碎波，而不能将振幅增长无界外推。\n"
+      }
+    },
+    "W055": {
+      "meta.json": {
+        "bytes": 632,
+        "git_blob": "b8d90af17af62138806961793f12482cfd1191f1",
+        "text": "{\n  \"id\": \"W055\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"无限长张紧弦的点质量散射、相位延迟与高频反射\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 90,\n  \"tags\": [\n    \"点缺陷波动\",\n    \"动量跳跃\",\n    \"散射矩阵\",\n    \"功率守恒\"\n  ],\n  \"answer\": \"r=\\\\frac{i\\\\zeta}{1-i\\\\zeta},\\\\quad t=\\\\frac1{1-i\\\\zeta},\\\\quad\\\\zeta=\\\\frac{M\\\\omega}{2\\\\sqrt{T\\\\mu}}\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.3-round11\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-B\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 634,
+        "git_blob": "669de81777d6f4ba9a2fc4b0187112e092c3379f",
+        "text": "无限长同质细弦的拉力为 \\(T>0\\)、线密度 \\(\\mu>0\\)，传播速率 \\(c=\\sqrt{T/\\mu}\\)、波数 \\(k=\\omega/c\\)。弦在 \\(x=0\\) 固接一可横向自由移动、质量为 \\(M>0\\) 的小珠，忽略其横向弹性回复及摩擦。左侧入射单位振幅的正向谐波，取时间因子 \\(e^{-i\\omega t}\\)。\n(1) 写出点质量处位移连续与横向动力学的力跳跃条件。\n(2) 推导振幅反射与透射系数 \\(r,t\\)，引入无量纲质量参数。\n(3) 验证任意频率下功率守恒并讨论低频及高频极限。\n(4) 分析质量增大时散射相位与位移响应，解释无质量缺陷的退化。\n"
+      },
+      "solution.tex": {
+        "bytes": 1710,
+        "git_blob": "b989b6fff79cc6cd957c08407b21e0a3a0385a82",
+        "text": "(1) 左侧波形 \\(y_L=e^{ikx-i\\omega t}+re^{-ikx-i\\omega t}\\)，右侧为 \\(y_R=te^{ikx-i\\omega t}\\)。弦在质量处不断裂，故位移连续给 \\(1+r=t\\)。小珠受左右张力的净横向力为 \\(T[y_x(0^+)-y_x(0^-)]\\)，其牛顿方程是 \\(T[y_x(0^+)-y_x(0^-)]=-M\\omega^2y(0)\\)。跳跃方向由两端拉力指向反向决定，不应把点质量当成固定端。\n\n(2) 导数跳跃为 \\(ikT[t-(1-r)]=2ikTr\\)，所以 \\(2ikTr=-M\\omega^2t=-M\\omega^2(1+r)\\)。令 \\(\\zeta=M\\omega/(2T k/\\omega)=M\\omega/(2\\sqrt{T\\mu})\\)；更直接由 \\(2Tk=M\\omega^2/\\zeta\\)，故 \\(r=-i\\zeta/(1+i\\zeta)\\)，\\(t=1/(1+i\\zeta)\\) 在选取 \\(e^{-i\\omega t}\\) 时可通过原式代入核验：\\(2i r=-2\\zeta t\\) 推出 \\(r=i\\zeta/(1-i\\zeta)\\)，\\(t=1/(1-i\\zeta)\\)。后者是与所给跳跃符号严格一致的表达，取定上述跳跃符号后，不能再随意改变散射相位的正负号。\n\n(3) 采用由跳跃方程确定的 \\(r=i\\zeta/(1-i\\zeta)\\)、\\(t=1/(1-i\\zeta)\\)，有 \\(|r|^2=\\zeta^2/(1+\\zeta^2)\\)、\\(|t|^2=1/(1+\\zeta^2)\\)，二者和为一。因左右弦张力及线密度相同，能流权重相同，这就是整个无耗散点质量散射的功率守恒。若 \\(\\omega\\to0\\)，\\(\\zeta\\to0\\) 则反射趋零；\\(\\omega\\to\\infty\\) 时 \\(|r|\\to1\\) 且透射趋零。\n\n(4) 由于 \\(\\zeta=M\\omega/(2\\sqrt{T\\mu})\\)，质量越大或频率越高，对弦的惯性障碍越强，点处透射振幅大小 \\(1/\\sqrt{1+\\zeta^2}\\) 越低，反射相位也由复杂阻抗决定。若 \\(M\\to0\\)，\\(r\\to0,t\\to1\\)，弦退化为完全均匀无缺陷传播。该点质量模型没有自身弹簧，因此不具有限频孤立局部共振；若观察到窄线共振必须增加局部回复力或其他物理结构。\n"
+      }
+    },
+    "W056": {
+      "meta.json": {
+        "bytes": 739,
+        "git_blob": "10575f5c69270db7c9c422a298377020422fc76b",
+        "text": "{\n  \"id\": \"W056\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"端部转动惯量与扭转弹簧耦合杆的非标准本征谱和广义正交\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 105,\n  \"tags\": [\n    \"扭转波方程\",\n    \"动力学边界条件\",\n    \"含端点质量的Sturm-Liouville问题\",\n    \"广义模态正交\",\n    \"Rayleigh商与奇异极限\"\n  ],\n  \"answer\": \"z\\\\cos z+(p-qz^2)\\\\sin z=0,\\\\quad \\\\omega=\\\\frac{\\\\sqrt{C/\\\\mu}}{L}z,\\\\quad p=\\\\frac{KL}{C},\\\\ q=\\\\frac{I}{\\\\mu L}\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.4-round12-draft\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 1046,
+        "git_blob": "a993b8b5ada7d9daf94104951a07c74ee31b49a5",
+        "text": "一根长度为 \\(L>0\\) 的均匀细杆沿轴线发生小幅扭转，扭转刚度 \\(C=GJ_p>0\\)，单位长度转动惯量 \\(\\mu=\\rho J_p>0\\)。\\(x=0\\) 端固支，\\(x=L\\) 端刚接转动惯量 \\(I\\geq0\\) 的转子，并通过刚度 \\(K\\geq0\\) 的扭转弹簧接地。忽略耗散、剪切变形及轴向运动，令扭角为 \\(\\theta(x,t)\\)，且至少 \\(I,K\\) 之一可非零。\n(1) 从杆的角动量平衡和端部转子的力矩平衡推导波动方程及两端边界条件，写出严格的总能量守恒式。\n(2) 用 \\(u(x)e^{-i\\omega t}\\) 分离变量，推导非标准超越本征方程，定义 \\(z=kL\\)、\\(p=KL/C\\)、\\(q=I/(\\mu L)\\)，并讨论正本征频率的离散性。\n(3) 证明不同本征频率的模态在含端点转动惯量的加权内积下正交；推导含弹簧边界能的 Rayleigh 商，说明忽略端点惯量会造成什么错误。\n(4) 求 \\(I=K=0\\) 时的全部本征频率；再令 \\(I/(\\mu L)\\to\\infty\\) 而 \\(K,C,L,\\mu\\) 固定，求最低频率的首项及其等效弹簧物理解释，并检验量纲。\n"
+      },
+      "solution.tex": {
+        "bytes": 2468,
+        "git_blob": "870dd935df8b16204c5d4a91d645d8226decb67f",
+        "text": "(1) 对杆内小段作轴向角动量平衡，截面扭矩 \\(M=C\\theta_x\\)，故\n\\[\n \\mu\\theta_{tt}=C\\theta_{xx},\\qquad \\theta(0,t)=0.\n\\]\n杆对端部转子的回复力矩为 \\(-C\\theta_x(L,t)\\)，外接弹簧给出 \\(-K\\theta(L,t)\\)，于是\n\\[\n I\\theta_{tt}(L,t)+C\\theta_x(L,t)+K\\theta(L,t)=0.\n\\]\n把偏微分方程乘以 \\(\\theta_t\\) 积分，并用 \\(\\theta_t(0,t)=0\\) 与上述端点条件，得到\n\\[\n \\frac{d}{dt}\\left\\{\\frac12\\int_0^L[\\mu\\theta_t^2+C\\theta_x^2]\\,dx\n +\\frac I2\\theta_t(L,t)^2+\\frac K2\\theta(L,t)^2\\right\\}=0.\n\\]\n两个端点能量项不可随意丢弃，否则能流在边界处不能闭合。\n\n(2) 设 \\(c=\\sqrt{C/\\mu}\\)、\\(k=\\omega/c\\)。空间函数满足 \\(u''+k^2u=0\\) 与 \\(u(0)=0\\)，因此 \\(u(x)=A\\sin(kx)\\)。端部条件变为\n\\[\n Ck\\cos(kL)+(K-I\\omega^2)\\sin(kL)=0.\n\\]\n代入 \\(z=kL\\)、\\(p=KL/C\\)、\\(q=I/(\\mu L)\\)，得到\n\\[\n F(z)=z\\cos z+(p-qz^2)\\sin z=0,\\qquad\n \\omega=\\frac{c}{L}z.\n\\]\n本征算子与端点质量共同组成正定能量问题；由第(3)问的 Rayleigh 商，\\(\\omega^2>0\\)，故 \\(z=0\\) 的形式根对应零空间函数而非固支杆的真实零模。有限 \\(I,K\\geq0\\) 时正根离散且可趋于无穷大。\n\n(3) 对不同本征模态 \\(u_n,u_m\\) 分别写 \\(Cu_n''=-\\mu\\omega_n^2u_n\\) 与 \\(Cu_m''=-\\mu\\omega_m^2u_m\\)。交叉相乘、相减并积分分部，利用 \\(u(0)=0\\) 和\n\\(Cu_n'(L)=(I\\omega_n^2-K)u_n(L)\\)，可得\n\\[\n (\\omega_n^2-\\omega_m^2)\n \\left[\\int_0^L\\mu u_nu_m\\,dx+Iu_n(L)u_m(L)\\right]=0.\n\\]\n因此 \\(n\\ne m\\) 时括号为零。另以 \\(u_n\\) 乘方程积分分部，得\n\\[\n \\omega_n^2=\n \\frac{C\\int_0^L(u_n')^2\\,dx+K u_n(L)^2}\n {\\mu\\int_0^L u_n^2\\,dx+Iu_n(L)^2}.\n\\]\n分母是杆及转子的广义惯量，分子是杆及边界弹簧的刚度。若仅使用普通 \\(L^2\\) 内积或省略 \\(Iu_n(L)^2\\)，一般既不正交也不满足正确的频率变分关系。\n\n(4) 当 \\(I=K=0\\)，自由端 \\(u'(L)=0\\)，所以\n\\[\n z_n=(n+\\tfrac12)\\pi,\\qquad\n \\omega_n=\\frac{(n+1/2)\\pi}{L}\\sqrt{\\frac C\\mu},\\quad n=0,1,\\ldots.\n\\]\n当 \\(q\\gg1\\)，最低正根 \\(z\\ll1\\)。展开 \\(F(z)/z=(1+p)-(q+\\tfrac12+\\tfrac p6)z^2+O(qz^4+z^4)\\)，因而\n\\[\n z_0^2=\\frac{1+p}{q}[1+O(q^{-1})],\\qquad\n \\omega_0^2=\\frac{K+C/L}{I}[1+O(\\mu L/I)].\n\\]\n此时重转子主导惯量，杆近似静态线性扭转，等效扭转刚度 \\(C/L\\) 与外弹簧 \\(K\\) 并联。\\(C/L\\) 与 \\(K\\) 均为力矩/弧度，除以 \\(I\\) 后量纲为时间的负二次方；若取 \\(I=0\\) 直接套用重转子近似则不合法。\n"
+      }
+    },
+    "W057": {
+      "meta.json": {
+        "bytes": 782,
+        "git_blob": "07e576d4f6eefb49f21a6f1a30d29b0724d53f8c",
+        "text": "{\n  \"id\": \"W057\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"KdV孤立波的精确sech平方解、三个守恒积分与线性色散\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 105,\n  \"tags\": [\n    \"非线性Korteweg–de Vries方程\",\n    \"孤立波与行波常微分方程\",\n    \"质量动量哈密顿量守恒\",\n    \"Galilei变换与尺度对称\",\n    \"反向线性色散与群速度\"\n  ],\n  \"answer\": \"u(x,t)=\\\\frac v2\\\\operatorname{sech}^2\\\\!\\\\left[\\\\frac{\\\\sqrt v}{2}(x-vt-x_0)\\\\right],\\\\quad M=2\\\\sqrt v,\\\\quad H=\\\\frac15v^{5/2}\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.4-round12-draft\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 956,
+        "git_blob": "116458ead2015f4d4a28a12cbfe0b2db31d454a0",
+        "text": "考虑实值、足够光滑且在空间无穷远迅速衰减的无量纲 Korteweg–de Vries 方程\n\\[\nu_t+6uu_x+u_{xxx}=0,\\qquad x\\in\\mathbb R.\n\\]\n所有积分都在整条实线上进行，假定边界项消失。\n(1) 令 \\(u(x,t)=U(\\xi)\\)，\\(\\xi=x-vt-x_0\\)，并要求 \\(U,U',U''\\to0\\) 于 \\(|\\xi|\\to\\infty\\)。从行波常微分方程及第一积分出发，严格求出正幅值局域孤立波、波速和波峰振幅的关系。\n(2) 从偏微分方程证明质量 \\(M=\\int u\\,dx\\) 与二次积分 \\(I=\\int u^2\\,dx\\) 守恒；对 (1) 的孤立波精确求这两个积分，并分析其对波速的依赖。\n(3) 验证哈密顿泛函 \\(H=\\int[u^3-\\tfrac12(u_x)^2]dx\\) 守恒，并计算孤立波的 \\(H\\)。解释其中梯度能项的作用，核验各积分的尺度指数。\n(4) 证明常数背景的 Galilei 变换及 KdV 尺度变换；线性化求色散关系与群速度，说明为何正向孤立波可以与线性波具有相反传播方向。\n"
+      },
+      "solution.tex": {
+        "bytes": 2719,
+        "git_blob": "276f755d55cf8bb1b72f4e536968349b97ce0204",
+        "text": "(1) 代入 \\(\\xi=x-vt-x_0\\) 后得到 \\(-vU'+6UU'+U'''=0\\)。第一次积分并使用衰减边界条件，得\n\\[\nU''-vU+3U^2=0.\n\\]\n乘以 \\(U'\\) 再积分，得到 \\((U')^2=vU^2-2U^3=U^2(v-2U)\\)。正的非平凡局域波要求 \\(v>0\\)，在波峰 \\(U'=0\\) 时 \\(U_{\\max}=v/2\\)。直接代入或分离变量积分可得唯一的平移族\n\\[\n\\boxed{U(\\xi)=\\frac v2\\operatorname{sech}^2\\!\\left(\\frac{\\sqrt v}{2}\\xi\\right)}.\n\\]\n令 \\(k=\\sqrt v/2\\)，则宽度量级 \\(1/k=2/\\sqrt v\\)：振幅越高，传播越快而宽度越窄。将该表达式代回 \\(U''-vU+3U^2=0\\) 可逐项核验，且两端确实指数衰减。\n\n(2) 方程写成守恒形式 \\(u_t+\\partial_x(3u^2+u_{xx})=0\\)，故 \\(\\dot M=0\\)。乘以 \\(2u\\) 后有\n\\[\n\\partial_t(u^2)+\\partial_x(4u^3+2uu_{xx}-u_x^2)=0,\n\\]\n因而 \\(\\dot I=0\\)。使用 \\(\\int_{-\\infty}^{\\infty}\\operatorname{sech}^2(k\\xi)d\\xi=2/k\\) 与 \\(\\int\\operatorname{sech}^4(k\\xi)d\\xi=4/(3k)\\)，得到\n\\[\n\\boxed{M=\\frac v2\\frac2k=2\\sqrt v},\\qquad\n\\boxed{I=\\frac{v^2}{4}\\frac4{3k}=\\frac23v^{3/2}}.\n\\]\n二者均正且随波速单调增大；若 \\(v\\to0^+\\)，孤立波振幅、质量和二次积分均趋零，而宽度趋于无穷大。\n\n(3) 变分给出 \\(\\delta H/\\delta u=3u^2+u_{xx}\\)，因此 \\(u_t=-\\partial_x(\\delta H/\\delta u)\\)。于是\n\\[\n\\frac{dH}{dt}=\\int\\frac{\\delta H}{\\delta u}\\,u_t\\,dx\n=-\\frac12\\int\\partial_x\\!\\left(\\frac{\\delta H}{\\delta u}\\right)^2dx=0.\n\\]\n对孤立波使用 \\(\\int\\operatorname{sech}^6(k\\xi)d\\xi=16/(15k)\\)，并由 (1) 的第一积分得到\n\\[\n\\int U^3dx=\\frac4{15}v^{5/2},\\qquad\n\\int(U')^2dx=vI-2\\int U^3dx=\\frac2{15}v^{5/2}.\n\\]\n故\n\\[\n\\boxed{H=\\frac4{15}v^{5/2}-\\frac12\\frac2{15}v^{5/2}=\\frac15v^{5/2}}.\n\\]\n梯度项虽为负号，却是保证变分动力学正确色散项 \\(u_{xxx}\\) 的必要部分；不能把 \\(H\\) 简单解释为处处非负的机械能密度。\n\n(4) 若 \\(u(x,t)\\) 是解，则 \\(u_{u_0}(x,t)=u(x-6u_0t,t)+u_0\\) 仍是解：时间导数额外产生 \\(-6u_0u_x\\)，恰好抵消非线性项新增的 \\(6u_0u_x\\)。因而背景 \\(u_0\\) 上的孤立波相对背景振幅仍为 \\(v/2\\)，实验室传播速度变为 \\(v+6u_0\\)。另一个对称是\n\\[\nu_\\lambda(x,t)=\\lambda^2u(\\lambda x,\\lambda^3t),\\qquad\\lambda>0.\n\\]\n各项均乘 \\(\\lambda^5\\)，因此变换保持方程；\\(M,I,H\\) 分别按 \\(\\lambda,\\lambda^3,\\lambda^5\\) 缩放，与 (2)(3) 的 \\(v\\mapsto\\lambda^2v\\) 一致。在线性小振幅极限，取 \\(u\\propto e^{i(kx-\\omega t)}\\)，得\n\\[\n-i\\omega+(ik)^3=0,\\quad \\boxed{\\omega=-k^3},\\quad\n\\boxed{v_g=\\frac{d\\omega}{dk}=-3k^2\\le0}.\n\\]\n所以在零背景上小振幅线性波向负方向输运，而非线性孤立波 \\(v>0\\) 向正方向传播；非线性与色散的平衡使这种传播方向差异成为可能。\n"
+      }
+    },
+    "W058": {
+      "meta.json": {
+        "bytes": 846,
+        "git_blob": "1d86bec23a49a1aa326a4bdaf0acf1a48f876f79",
+        "text": "{\n  \"id\": \"W058\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"旋转浅水系统的惯性重力波、沿岸Kelvin波与位涡守恒\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 110,\n  \"tags\": [\n    \"旋转浅水方程与科里奥利力\",\n    \"Poincare惯性重力波及地转零频模\",\n    \"沿岸Kelvin波的边界局域化与手性\",\n    \"线性位涡守恒与波动能量定理\",\n    \"色散群速度和沿岸能量输运\"\n  ],\n  \"answer\": \"\\\\omega_\\\\pm=\\\\pm\\\\sqrt{f^2+gHk^2},\\\\quad L_R=\\\\frac{\\\\sqrt{gH}}{f},\\\\quad \\\\omega_K=\\\\sqrt{gH}\\\\,k,\\\\quad \\\\overline{\\\\mathscr E}=\\\\frac{g\\\\eta_0^2L_R}{4}\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v2.7-round12-draft\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 1661,
+        "git_blob": "b92c0af1c68bbce01150334baa75433046e6e803",
+        "text": "在北半球局部 \\(f\\)-平面上，考虑均匀静水深 \\(H>0\\) 的不可压、无粘、自由表面浅水系统。重力加速度为 \\(g>0\\)，科里奥利参数 \\(f>0\\) 为常数；记东西、南北向深度平均速度为 \\(u,v\\)，自由面微小扰动为 \\(\\eta\\)。线性化方程为\n\\[\nu_t-fv=-g\\eta_x,\\qquad v_t+fu=-g\\eta_y,\\qquad\n\\eta_t+H(u_x+v_y)=0,\\qquad c=\\sqrt{gH}.\n\\]\n忽略底摩擦和表面张力，能量密度均按单位水平面积、单位水密度计算。\n(1) 在无限平面取沿 \\(x\\) 方向的傅里叶扰动 \\(e^{i(kx-\\omega t)}\\)，其中 \\(k\\ne0\\)。从完整的三变量线性系统求全部三个频率分支；写出两支非零频率惯性重力波的速度极化关系，并解释零频率地转平衡模。\n(2) 现在令海洋占据半平面 \\(y\\ge0\\)，海岸 \\(y=0\\) 为不透水刚性边界，要求 \\(v(x,0,t)=0\\)，且扰动随 \\(y\\to+\\infty\\) 衰减。寻找 \\(v\\equiv0\\) 的非平凡沿岸行波，严格推导其频散关系、横向衰减长度和唯一允许的传播方向；说明改变 \\(f\\) 的符号会怎样改变方向。\n(3) 定义相对涡度 \\(\\zeta=v_x-u_y\\)。从原方程证明线性位涡扰动 \\(q'=\\zeta-f\\eta/H\\) 在每个固定位置守恒；再推导局域波动能量守恒律，证明科里奥利力不作功，并检查第 (2) 问的 Kelvin 波满足 \\(q'=0\\)。\n(4) 求惯性重力波正频支的群速度，分析长波、短波及 \\(f\\to0^+\\) 极限。对第 (2) 问取实波面\n\\(\\eta=\\eta_0e^{-y/L_R}\\cos(kx-ckt)\\)，计算单位海岸长度的时间平均总能量及沿岸平均能流，验证能量输运速度，并说明海岸波在 \\(f\\to0^+\\) 时为何不再横向局域化。\n"
+      },
+      "solution.tex": {
+        "bytes": 3841,
+        "git_blob": "7894650b0b6c4793fd5200f65bbf1b13e64ded23",
+        "text": "(1) 令扰动幅值为 \\((U,V,N)\\)。在波矢 \\((k,0)\\) 下，线性系统的系数矩阵为\n\\[\n\\mathsf A=\\begin{pmatrix}\n-i\\omega&-f&igk\\\\ f&-i\\omega&0\\\\ ikH&0&-i\\omega\n\\end{pmatrix},\\qquad\n\\det\\mathsf A=i\\omega(\\omega^2-f^2-c^2k^2).\n\\]\n因此三支频率为\n\\[\n\\boxed{\\omega_0=0,\\qquad \\omega_\\pm=\\pm\\sqrt{f^2+c^2k^2}}.\n\\]\n对 \\(\\omega\\ne0\\)，连续性方程给 \\(U=\\omega N/(Hk)\\)，南北动量方程给\n\\(V=-ifU/\\omega=-ifN/(Hk)\\)。非零频率支的横向速度相位相对纵向速度差 \\(\\pi/2\\)，即受科里奥利力影响的椭圆极化。对 \\(\\omega=0\\)，第三式给 \\(U=0\\)，第一式给 \\(V=igkN/f\\)；它是静态地转平衡 \\(-fv=-g\\eta_x\\)，而非传播波。直接代回三式可验证其零频率本征矢。惯性重力波在 \\(k\\to0\\) 时仍有非零惯性频率 \\(|f|\\)。\n\n(2) 设 \\(\\eta=N(y)e^{i(kx-\\omega t)}\\)、\\(u=U(y)e^{i(kx-\\omega t)}\\)、\\(v=0\\)。由沿岸动量及连续性方程，\n\\[\n-i\\omega U=-igkN,\\qquad -i\\omega N+ikHU=0,\n\\]\n从而 \\(\\omega^2=c^2k^2\\)，且 \\(U=\\omega N/(Hk)\\)。横岸动量方程则要求\n\\[\nfU=-gN'(y),\\qquad\nN(y)=N(0)\\exp\\!\\left[-\\frac{f\\omega}{c^2k}y\\right].\n\\]\n在 \\(f>0\\)、\\(y\\ge0\\) 的海洋中，衰减条件要求 \\(\\omega/k>0\\)，故只能取\n\\[\n\\boxed{\\omega_K=ck,\\quad u=\\frac cH\\eta,\\quad v=0,\\quad\n\\eta\\propto e^{-y/L_R},\\quad L_R=\\frac cf}.\n\\]\n另一个代数根 \\(\\omega=-ck\\) 会产生 \\(e^{+fy/c}\\)，不是有限能量的沿岸束缚模。海岸无穿透条件由 \\(v=0\\) 自动满足；若 \\(f<0\\) 且海洋仍位于 \\(y\\ge0\\)，允许传播方向反转为 \\(\\omega=-ck\\)，衰减长度为 \\(c/|f|\\)。该方向选择依赖海岸所在侧，不能仅由无界域的体波频散判断。\n\n(3) 对第二条动量方程取 \\(x\\) 导数、第一条取 \\(y\\) 导数并相减，得到\n\\[\n\\zeta_t+f(u_x+v_y)=0.\n\\]\n又由连续性方程 \\(\\eta_t=-H(u_x+v_y)\\)，于是\n\\[\n\\boxed{\\partial_t\\left(\\zeta-\\frac fH\\eta\\right)=0}.\n\\]\n这是完整位涡 \\((f+\\zeta)/(H+\\eta)\\) 在静止背景附近的一阶线性扰动（乘以常数 \\(H\\) 后）的守恒形式。将两条动量方程分别乘 \\(Hu,Hv\\)，连续性方程乘 \\(g\\eta\\) 并相加，科里奥利交叉项 \\(Hfuv-Hfvu\\) 恰好抵消，得到\n\\[\n\\boxed{\\partial_t\\mathcal E+\\partial_xF_x+\\partial_yF_y=0},\\qquad\n\\mathcal E=\\frac H2(u^2+v^2)+\\frac g2\\eta^2,\\quad\n(F_x,F_y)=gH\\eta(u,v).\n\\]\n因此旋转只改变传播与极化，不直接注入机械能；刚性海岸上 \\(F_y=0\\)。对 Kelvin 波，\\(v=0\\)，\\(\\zeta=-u_y=(f/c)u=(f/H)\\eta\\)，所以 \\(\\boxed{q'=0}\\)，与其无位涡异常的边界束缚波性质一致。\n\n(4) 正频体波满足 \\(\\omega_+(k)=\\sqrt{f^2+c^2k^2}\\)，故\n\\[\n\\boxed{v_g=\\frac{d\\omega_+}{dk}=\\frac{c^2k}{\\sqrt{f^2+c^2k^2}}}.\n\\]\n当 \\(k>0\\) 时 \\(0<v_g<c\\)，而相速 \\(\\omega_+/k>c\\)。长波 \\(ck\\ll f\\) 下\n\\(\\omega_+=f+c^2k^2/(2f)+O(k^4)\\)、\\(v_g\\sim c^2k/f\\to0\\)；\n短波 \\(ck\\gg f\\) 下 \\(\\omega_+=ck+f^2/(2ck)+O(k^{-3})\\)、\\(v_g\\to c\\)。\n在固定 \\(k>0\\) 下 \\(f\\to0^+\\)，体波趋于非旋转浅水重力波 \\(\\omega=ck\\)。\n对实 Kelvin 波，由 \\(u=(c/H)\\eta\\) 及 \\(c^2=gH\\)，逐点有\n\\[\n\\mathcal E=g\\eta^2,\\qquad F_x=gH\\eta u=cg\\eta^2=c\\mathcal E.\n\\]\n记 \\(L_R=c/f\\)，时间平均 \\(\\langle\\cos^2\\rangle=1/2\\)，于是\n\\[\n\\boxed{\\overline{\\mathscr E}=\\int_0^\\infty\\langle\\mathcal E\\rangle\\,dy\n=\\frac{g\\eta_0^2}{2}\\int_0^\\infty e^{-2y/L_R}dy\n=\\frac{g\\eta_0^2L_R}{4}},\\qquad\n\\boxed{\\overline{\\mathscr F}_x=c\\,\\overline{\\mathscr E}}.\n\\]\n两者比值为 \\(c\\)，等于 Kelvin 波群速度与相速。对固定岸边振幅 \\(\\eta_0\\)，\\(f\\to0^+\\) 时 \\(L_R\\to\\infty\\)，积分能量发散，表明横向束缚态不再可归一化；不能把这一极限解释成有限宽度的沿岸波。单位密度下 \\([\\overline{\\mathscr E}]=\\mathrm{m}^4\\mathrm{s}^{-2}\\)、\\([\\overline{\\mathscr F}_x]=\\mathrm{m}^5\\mathrm{s}^{-3}\\)，二者之比确为速度。\n"
+      }
+    },
+    "W059": {
+      "meta.json": {
+        "bytes": 806,
+        "git_blob": "a7c4d0c09406f7f1d7a8793f91e8bfed789139dd",
+        "text": "{\n  \"id\": \"W059\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"弹性半空间Rayleigh表面波的唯一物理根、椭圆极化与能量输运\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 115,\n  \"tags\": [\n    \"弹性纵横波势及自由面牵引条件\",\n    \"Rayleigh方程物理根唯一性\",\n    \"表面波椭圆极化与指数穿透\",\n    \"弹性能量守恒及自伴谱群速度\",\n    \"不可压材料渐近与体波分支\"\n  ],\n  \"answer\": \"c_R=c_s\\\\sqrt{\\\\zeta_R},\\\\quad C_\\\\gamma(\\\\zeta_R)=0,\\\\quad \\\\overline{\\\\mathscr S}_x/\\\\overline{\\\\mathscr E}=c_R\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v3.3-round12-draft\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 1453,
+        "git_blob": "976ba8abb28e26a817979c14fc82a9207fc2e43b",
+        "text": "在均匀各向同性线弹性半空间 \\(z\\ge0\\)，自由表面 \\(z=0\\) 无切向、法向牵引。密度 \\(\\rho>0\\)、Lamé 常数 \\(\\mu>0,\\lambda\\ge0\\)。平面应变小位移 \\(\\boldsymbol u=(u_x,u_z)\\) 满足\n\\[\n\\rho\\boldsymbol u_{tt}=(\\lambda+\\mu)\\nabla(\\nabla\\cdot\\boldsymbol u)+\\mu\\nabla^2\\boldsymbol u.\n\\]\n设纵横波速分别为 \\(c_p=\\sqrt{(\\lambda+2\\mu)/\\rho}\\)、\\(c_s=\\sqrt{\\mu/\\rho}\\)。研究沿 \\(x\\) 传播、波数 \\(k>0\\)、角频率 \\(\\omega>0\\)、相速 \\(v=\\omega/k<c_s\\) 且随 \\(z\\to\\infty\\) 衰减的 Rayleigh 表面波。\n(1) 用 \\(\\boldsymbol u=(\\phi_x-\\psi_z,\\phi_z+\\psi_x)\\) 和势函数 \\(\\phi=Ae^{-pkz}e^{i(kx-\\omega t)}\\)、\\(\\psi=Be^{-qkz}e^{i(kx-\\omega t)}\\)，推导正衰减常数 \\(p,q\\) 及应力自由面关于 \\(A,B\\) 的完整齐次方程。\n(2) 设 \\(\\zeta=v^2/c_s^2\\)、\\(\\gamma=c_s^2/c_p^2\\)。导出 Rayleigh 方程与消根号后的三次式；严格证明 \\(0<\\gamma\\le1/2\\) 时恰有一个 \\(0<\\zeta<1\\) 的传播物理根，并排除平方产生的静态零根。\n(3) 求归一化幅度未固定的纵横位移复振型，证明表面轨迹两分量相差四分之一周期；用弹性应力功推导局部能量守恒，并由自伴模态变分关系求深度积分的时间平均能流速度。\n(4) 对 \\(\\lambda=0\\) 与 \\(\\lambda\\to\\infty\\) 分别计算 \\(v/c_s\\) 至至少六位有效数字，求两种势的穿透长度；解释无截止色散以及 \\(v<c_s<c_p\\) 与体波辐射条件的关系。"
+      },
+      "solution.tex": {
+        "bytes": 3776,
+        "git_blob": "338b7641f57e1be416007dc3a4599f6853b0d4f2",
+        "text": "(1) 两个势分别满足 \\(\\phi_{tt}=c_p^2\\nabla^2\\phi\\)、\\(\\psi_{tt}=c_s^2\\nabla^2\\psi\\)，所以选取衰减分支\n\\[\np=\\sqrt{1-v^2/c_p^2},\\qquad q=\\sqrt{1-v^2/c_s^2},\\qquad 0<q<p.\n\\]\n去除公共 \\(e^{i(kx-\\omega t)}\\)，有 \\(u_x=ikAe^{-pkz}+qkBe^{-qkz}\\)、\\(u_z=-pkAe^{-pkz}+ikBe^{-qkz}\\)。由 \\(\\sigma_{ij}=\\lambda(\\nabla\\cdot\\boldsymbol u)\\delta_{ij}+2\\mu\\varepsilon_{ij}\\) 得\n\\[\n\\sigma_{xz}(0)=-\\mu k^2[2ipA+(2-\\zeta)B],\\quad\n\\sigma_{zz}(0)=\\mu k^2[(2-\\zeta)A-2iqB],\n\\]\n其中使用 \\(\\lambda(p^2-1)+2\\mu p^2=\\mu(2-\\zeta)\\)。故非平凡模态须满足\n\\[\n\\begin{pmatrix}2ip&2-\\zeta\\\\2-\\zeta&-2iq\\end{pmatrix}\\binom AB=0.\n\\]\n这也说明单独纵波势或横波势无法满足两个零牵引条件，边界局域态必须是二者的混合。\n\n(2) 取矩阵行列式为零，得到严格的 Rayleigh 关系\n\\[\n\\boxed{(2-\\zeta)^2=4\\sqrt{1-\\gamma\\zeta}\\sqrt{1-\\zeta}},\n\\qquad \\gamma=\\frac{\\mu}{\\lambda+2\\mu}\\in(0,\\tfrac12].\n\\]\n平方并提取公因子后为 \\(\\zeta C_\\gamma(\\zeta)=0\\)，其中\n\\[\nC_\\gamma(\\zeta)=\\zeta^3-8\\zeta^2+8(3-2\\gamma)\\zeta-16(1-\\gamma).\n\\]\n因为 \\(C_\\gamma(0)=-16(1-\\gamma)<0\\)、\\(C_\\gamma(1)=1>0\\)，且\n\\[\nC_\\gamma'(\\zeta)=3\\zeta^2-16\\zeta+24-16\\gamma\n\\ge C_\\gamma'(1)=11-16\\gamma\\ge3>0\\quad(0\\le\\zeta\\le1),\n\\]\n故存在唯一内部根。该区间原方程两边正数，平方不再引入伪解。端点 \\(\\zeta=0\\) 对应 \\(p=q=1\\)、\\(B=-iA\\)，代入位移表达式得到 \\(\\boldsymbol u\\equiv0\\)：只是非传播势的规范退化，不能算一支非零表面波。\n\n(3) 令 \\(A\\) 为实数，边界方程给 \\(B=-2ipA/(2-\\zeta_R)\\)，因此\n\\[\nU_x(z)=ikA\\left[e^{-pkz}-\\frac{2pq}{2-\\zeta_R}e^{-qkz}\\right],\\quad\nU_z(z)=pkA\\left[-e^{-pkz}+\\frac{2}{2-\\zeta_R}e^{-qkz}\\right].\n\\]\n显然 \\(U_x\\) 纯虚而 \\(U_z\\) 纯实。表面 \\(U_z(0)=pkA\\zeta_R/(2-\\zeta_R)\\ne0\\)，故实际轨迹为椭圆偏振而不是单一纵横振动。以 \\(\\rho\\ddot u_i=\\partial_j\\sigma_{ij}\\) 乘 \\(\\dot u_i\\)，由应力对称性得到\n\\[\n\\partial_t e+\\partial_jS_j=0,\\quad\ne=\\frac{\\rho}{2}|\\dot{\\boldsymbol u}|^2+\\frac{\\lambda}{2}(\\nabla\\cdot\\boldsymbol u)^2+\\mu\\varepsilon_{ij}\\varepsilon_{ij},\\quad\nS_j=-\\sigma_{ij}\\dot u_i.\n\\]\n自由面 \\(S_z=0\\)，无穷深处两种势均指数衰减。对振幅 \\(\\boldsymbol U(z)\\)，令自伴模态弱形式的质量二次型 \\(\\mathcal M=\\int_0^\\infty\\rho|\\boldsymbol U|^2dz\\)，弹性二次型 \\(\\mathcal K_k=\\int_0^\\infty(\\lambda|\\nabla_k\\cdot\\boldsymbol U|^2+2\\mu\\varepsilon_k^*:\\varepsilon_k)dz\\)。利用自然自由面边界条件，\\(\\mathcal K_k=\\omega^2\\mathcal M\\)，对 \\(k\\) 作驻值求导得\n\\[\n\\partial_k\\mathcal K_k=2\\omega\\mathcal M\\,d\\omega/dk,\\quad\n\\overline{\\mathscr E}=\\omega^2\\mathcal M/2,\\quad\n\\overline{\\mathscr S}_x=\\omega\\,\\partial_k\\mathcal K_k/4.\n\\]\n所以 \\(\\overline{\\mathscr S}_x/\\overline{\\mathscr E}=d\\omega/dk\\)。本问题没有内禀波数尺度，\\(\\omega=kc_s\\sqrt{\\zeta_R}\\)，故积分平均能量输运速度、群速度与相速都等于 \\(c_R\\)。这一结论只针对深度积分量，并非任意深度的局域能量密度比。\n\n(4) \\(\\lambda=0\\) 时 \\(\\gamma=1/2\\)，唯一物理根为 \\(\\zeta_R=0.763932022500210\\ldots\\)，因此 \\(c_R/c_s=0.874032048897642\\ldots\\)。不可压极限 \\(\\lambda\\to+\\infty\\) 给 \\(\\gamma\\to0\\)，\\(\\zeta_R=0.912621974615847\\ldots\\)，\\(c_R/c_s=0.955312501025632\\ldots\\)。两种指数穿透长度为\n\\[\n\\ell_p=(k\\sqrt{1-\\gamma\\zeta_R})^{-1},\\qquad\n\\ell_s=(k\\sqrt{1-\\zeta_R})^{-1},\\qquad \\ell_s>\\ell_p.\n\\]\n均匀无限半空间没有有限厚度的本征长度，故在连续 \\(k>0\\) 上有线性色散而无几何截止。因 \\(c_R<c_s<c_p\\)，两种体波势都为倏逝场，不存在向深处传播的体波能流；若误把 \\(v\\) 取到剪切波速之上，横波势不再指数局域，便失去此束缚波的假设。"
+      }
+    },
+    "W060": {
+      "meta.json": {
+        "bytes": 794,
+        "git_blob": "3fc678fd3b5ae2c225f0bc7aede14160ac97a461",
+        "text": "{\n  \"id\": \"W060\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"球形呼吸声源的辐射阻抗、近场无功和出射能流\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 110,\n  \"tags\": [\n    \"三维球对称声学Helmholtz方程\",\n    \"呼吸球边界与出射球面波\",\n    \"复杂声辐射阻抗及高低频渐近\",\n    \"声功率球面通量与近场无功\",\n    \"体积速度固定的点单极外场极限\"\n  ],\n  \"answer\": \"Z_{\\\\rm rad}=\\\\rho c\\\\frac{(ka)^2-i ka}{1+(ka)^2},\\\\quad \\\\overline P=2\\\\pi\\\\rho c a^2|V_0|^2\\\\frac{(ka)^2}{1+(ka)^2}\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v3.6-round12-draft\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 1190,
+        "git_blob": "4267c2187c13ee30a0e7bbc71f6096424b2fead5",
+        "text": "均匀无粘可压缩流体的密度为 \\(\\rho>0\\)，声速 \\(c>0\\)。半径 \\(a>0\\) 的球形声源作均匀小幅径向呼吸运动，边界法向速度是 \\(u_r(a,t)=\\operatorname{Re}(V_0e^{-i\\omega t})\\)，\\(\\omega>0\\)。流场在 \\(r\\ge a\\) 无其他声源，只有出射而无入射球面波；速度势满足 \\(u_r=\\partial_r\\phi\\)、\\(p=-\\rho\\phi_t\\)，且 \\(k=\\omega/c\\)。\n(1) 从连续性、线性Euler和声学状态方程建立速度势波动方程，解球对称Helmholtz问题并严格用球面速度边界确定复振幅，求任意 \\(r\\ge a\\) 的声压与速度。\n(2) 计算球面比声辐射阻抗 \\(Z_{\\rm rad}=\\widehat p(a)/V_0\\)，证明辐射阻抗实部非负，推导其 \\(ka\\ll1\\) 与 \\(ka\\gg1\\) 极限并解释无功项。\n(3) 从声强的复幅值表达式计算任意观测球面的总平均辐射功率，核对源面输入功率，推导低频固定体积速度 \\(Q_0=4\\pi a^2V_0\\) 时的辐射幂律。\n(4) 比较近场 \\(kr\\ll1\\) 和远场 \\(kr\\gg1\\) 的压强、速度相位及距离标度；计算复声强的虚部、解释其不贡献远场声功，并讨论固定 \\(Q_0\\) 的 \\(a\\to0\\) 点源极限为什么不能无限保持线性边界速度假设。"
+      },
+      "solution.tex": {
+        "bytes": 3074,
+        "git_blob": "2d9758fc33a7623dec544094b776015ea6a2e442",
+        "text": "(1) 线性化连续性与动量方程分别为 \\(\\rho'_t+\\rho\\nabla\\cdot\\boldsymbol u=0\\)、\\(\\rho\\boldsymbol u_t=-\\nabla p'\\)，状态关系 \\(p'=c^2\\rho'\\)。设 \\(\\boldsymbol u=\\nabla\\phi\\)、\\(p'=-\\rho\\phi_t\\)，消元得波动方程 \\(\\phi_{tt}=c^2\\nabla^2\\phi\\)。取 \\(e^{-i\\omega t}\\) 时间因子后，\n\\[\n\\widehat\\phi''+\\frac2r\\widehat\\phi'+k^2\\widehat\\phi=0.\n\\]\n一般解为 \\((Ae^{ikr}+Be^{-ikr})/r\\)，无入射条件要求 \\(B=0\\)。因此\n\\[\n\\widehat u_r(r)=A\\frac{(ikr-1)e^{ikr}}{r^2},\\qquad\n\\widehat p(r)=i\\rho\\omega A\\frac{e^{ikr}}r.\n\\]\n在源面强制 \\(\\widehat u_r(a)=V_0\\)，得到\n\\[\n\\boxed{A=\\frac{V_0a^2e^{-ika}}{ika-1}}.\n\\]\n代回即为任意半径的唯一出射解。必须保留 \\(ika-1\\) 这一近场导数因子，直接用远场 \\(u=p/(\\rho c)\\) 代替源面边界会丢失球面储能及声阻抗的虚部。\n\n(2) 令 \\(x=ka\\)，球面单位速度的复声压比为\n\\[\n\\boxed{Z_{\\rm rad}=\\frac{i\\rho\\omega a}{ix-1}\n=\\rho c\\frac{x^2-ix}{1+x^2}}.\n\\]\n因此 \\(\\operatorname{Re}Z=\\rho c x^2/(1+x^2)\\ge0\\)，\\(\\operatorname{Im}Z=-\\rho cx/(1+x^2)\\)。前者描述每周期净输出的声能，后者代表近场中储能返回源的反应分量而非负耗散。低频\n\\(Z=\\rho c[-ix+x^2+O(x^3)]\\)，其中净辐射实部比反应性虚部小一个 \\(x\\) 阶；高频 \\(Z\\to\\rho c\\)，趋于远离源的平面波声阻抗。虚部符号依赖所指定的 \\(e^{-i\\omega t}\\) 约定，不能把符号变化误当作吸收或增益。\n\n(3) 复声强定义 \\(\\mathscr I_c=\\widehat p\\widehat u_r^*/2\\)，由第 (1) 问逐项计算\n\\[\n\\mathscr I_c(r)=\\frac{\\rho\\omega|A|^2}{2r^3}(kr-i).\n\\]\n故时间平均真实辐射强度为\n\\(\\overline I_r=\\operatorname{Re}\\mathscr I_c=\\rho\\omega k|A|^2/(2r^2)\\)，总功率是\n\\[\n\\boxed{\\overline P=4\\pi r^2\\overline I_r\n=2\\pi\\rho c a^2|V_0|^2\\frac{(ka)^2}{1+(ka)^2}},\n\\]\n与观测半径无关。声源表面所做功率 \\(4\\pi a^2 \\operatorname{Re}Z_{\\rm rad}|V_0|^2/2\\) 与此完全相等，直接验证出射能量守恒。在 \\(ka\\ll1\\)、\\(Q_0=4\\pi a^2V_0\\) 固定时，\n\\[\n\\boxed{\\overline P\\simeq\\frac{\\rho\\omega^2|Q_0|^2}{8\\pi c}}.\n\\]\n而如果固定的是 \\(V_0\\)，同一式写作 \\(\\overline P\\propto\\omega^2a^4|V_0|^2\\)，必须区分固定边界速度和固定体积速度的不同极限。\n\n(4) 当 \\(kr\\gg1\\)，有 \\(\\widehat u_r\\sim ikA e^{ikr}/r\\) 与 \\(\\widehat p\\sim i\\rho\\omega A e^{ikr}/r=\\rho c\\,\\widehat u_r\\)，两者同相且按 \\(r^{-1}\\) 衰减；当 \\(kr\\ll1\\)，速度主项为 \\(-A/r^2\\)，声压仍为 \\(i\\rho\\omega A/r\\)，两者近乎正交。复声强虚部为\n\\[\n\\boxed{\\operatorname{Im}\\mathscr I_c=-\\frac{\\rho\\omega|A|^2}{2r^3}},\n\\]\n比真实声强更快衰减，不构成一个与观测半径独立的净传播功率。固定 \\(Q_0\\)，使 \\(a\\to0\\) 时 \\(A\\to-Q_0/(4\\pi)\\)；于是外场势收敛到 \\(\\widehat\\phi=-Q_0e^{ikr}/(4\\pi r)\\)，得到点单极子辐射解。但呼吸球表面速度此时 \\(V_0=Q_0/(4\\pi a^2)\\to\\infty\\)，最终破坏低马赫数、小变形的线性声学假设，故点单极是外场数学极限而非真实无限小球的物理操作说明。"
+      }
+    },
+    "W061": {
+      "meta.json": {
+        "bytes": 694,
+        "git_blob": "dfcdade4c4eb4bcbff467a25e73c384c100a13a2",
+        "text": "{\n  \"id\": \"W061\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"正弦Gordon拓扑孤子、能动量与无反射涨落谱\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 110,\n  \"tags\": [\n    \"正弦Gordon非线性波方程\",\n    \"Bogomolny下界和拓扑荷\",\n    \"Lorentz孤子能动量\",\n    \"反射零谱的超对称因子分解\"\n  ],\n  \"answer\": \"u_K=4\\\\arctan e^{\\\\gamma(x-vt-X)},\\\\quad E=8\\\\gamma,\\\\quad H=-\\\\partial_x^2+1-2\\\\operatorname{sech}^2x\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v3.7-round12-draft\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 592,
+        "git_blob": "aa9fe78a9e4472a3a354dc09fa74fe2a38c504cb",
+        "text": "无量纲场满足 \\(u_{tt}-u_{xx}+\\sin u=0\\)，能量为 \\(E=\\int[(u_t^2+u_x^2)/2+1-\\cos u]dx\\)。考察 \\(u(-\\infty)=0,\\ u(+\\infty)=2\\pi\\) 的有限能量扇区。\n(1) 用静态能量配方法求拓扑kink最低能量、精确场形与拓扑荷。\n(2) Lorentz变换得到速度 \\(|v|<1\\) 的kink，计算能量、动量并核查相对论质量壳。\n(3) 做线性扰动并推导Pöschl-Teller涨落算符、正规化零模和连续谱阈值，证明无负模。\n(4) 通过算符因子分解构造连续谱透射波，给出反射率与透射相位，解释零频平移模的物理意义。\n"
+      },
+      "solution.tex": {
+        "bytes": 1677,
+        "git_blob": "902810a14282bd17e00288a65cc2e295fec37e69",
+        "text": "(1) \\(1-\\cos u=2\\sin^2(u/2)\\) 使静态能量成为\n\\[\nE=\\frac12\\int[u_x-2\\sin(u/2)]^2dx+2\\int u_x\\sin(u/2)dx\\ge8.\n\\]\n第二项仅由边界的拓扑数决定，等号满足 \\(u_x=2\\sin(u/2)\\)。积分得 \\(\\boxed{u_K=4\\arctan e^{x-X}}\\)，导数 \\(2\\operatorname{sech}(x-X)\\)，直接代回 \\(u_{xx}=\\sin u\\) 成立。拓扑荷 \\((u(+\\infty)-u(-\\infty))/(2\\pi)=1\\)，静能恰为8。\n\n(2) 由Lorentz不变性，\\(u=4\\arctan\\exp[\\gamma(x-vt-X)]\\)、\\(\\gamma=(1-v^2)^{-1/2}\\) 是精确移动孤子。此时 \\(u_t=-vu_x\\)，且 \\(u_x=2\\gamma\\operatorname{sech}[\\gamma(x-vt-X)]\\)。代入能量和动量定义，令 \\(s=\\gamma(x-vt-X)\\) 后积分 \\(\\operatorname{sech}^2s\\)，得\n\\[\nE=8\\gamma,\\qquad P=-\\int u_tu_x\\,dx=8\\gamma v,\\qquad E^2-P^2=64.\n\\]\n因此孤子静质量8而不是随速度变化的数值；动量密度的负号与传播方向一致。\n\n(3) 设 \\(u=u_K+\\epsilon\\eta(x)e^{i\\omega t}\\)，保留一阶量，得 \\([-\\partial_x^2+\\cos u_K]\\eta=\\omega^2\\eta\\)，其中 \\(\\cos u_K=1-2\\operatorname{sech}^2(x-X)\\)。令 \\(A=\\partial_x+\\tanh(x-X)\\)，有 \\(A^\\dagger A=-\\partial_x^2+1-2\\operatorname{sech}^2(x-X)\\ge0\\)。零模 \\(\\eta_0=\\operatorname{sech}(x-X)/\\sqrt2\\) 归一化为1，伙伴算符 \\(AA^\\dagger=-\\partial_x^2+1\\)，故连续谱从 \\(\\omega^2=1\\) 起，负特征值不可能出现。\n\n(4) 将自由波 \\(e^{ik(x-X)}\\) 施以 \\(A^\\dagger\\)，得到 \\(\\eta_k=[\\tanh(x-X)-ik]e^{ik(x-X)}\\)，且 \\(\\omega^2=k^2+1\\)。两端只含正向行波，故反射振幅恒为0；透射幅 \\(t(k)=(1-ik)/(-1-ik)\\)，模为1，物理含义是无反射而有相移。零模与 \\(\\partial_Xu_K=-u_{K,x}\\) 成比例，它表示平移对称性，不是虚频不稳定性。\n"
+      }
+    },
+    "W062": {
+      "meta.json": {
+        "bytes": 732,
+        "git_blob": "de61115ffa6395a7a79d266274b102536d204ffa",
+        "text": "{\n  \"id\": \"W062\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"聚焦非线性Schrödinger方程的亮孤子与调制不稳定阈值\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 110,\n  \"tags\": [\n    \"色散非线性包络方程\",\n    \"Zakharov-Shabat亮孤子\",\n    \"质量动量Hamilton守恒\",\n    \"平面波Benjamin-Feir调制不稳定\"\n  ],\n  \"answer\": \"\\\\psi_\\\\eta=\\\\eta\\\\operatorname{sech}(\\\\eta x)e^{i\\\\eta^2t/2},\\\\quad N=2\\\\eta,\\\\quad H=-\\\\eta^3/3,\\\\quad \\\\omega^2=k^2(k^2/4-A^2)\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v3.7-round12-draft\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 850,
+        "git_blob": "0a78b629f2866050375f0966b16fab610190b05d",
+        "text": "无量纲聚焦立方非线性Schrödinger方程\n\\(i\\psi_t+\\frac12\\psi_{xx}+|\\psi|^2\\psi=0\\) 定义在全实轴，孤子解在无穷远消失。定义粒子数 \\(N=\\int|\\psi|^2dx\\)、动量 \\(P=\\int\\operatorname{Im}(\\psi^*\\psi_x)dx\\) 和Hamilton量 \\(H=\\int(\\frac12|\\psi_x|^2-\\frac12|\\psi|^4)dx\\)。\n(1) 使用驻波假设求精确亮孤子场，校验边界条件及一个积分形式的一阶运动方程。\n(2) 独立计算孤子的 \\(N,P,H\\) 和能量标度；施以Galilean变换并核对移动孤子中附加动能。\n(3) 对匀幅背景 \\(\\psi=Ae^{iA^2t}\\) 做复扰动线性化，推导色散关系及模不稳定的临界波数和最快增长率。\n(4) 对比孤子局域解和不稳定均匀波背景的守恒条件，讨论一维中的尺度平衡、\\(\\eta\\to0\\) 极限及为何不能把模不稳定阈值理解成孤子的自身失稳。\n"
+      },
+      "solution.tex": {
+        "bytes": 1862,
+        "git_blob": "f3e4543fcc1d422a561ff05c0ae6958a25720f89",
+        "text": "(1) 取 \\(\\psi(x,t)=f(x)e^{i\\omega t}\\)，正实 \\(f\\) 满足 \\(\\frac12f''-\\omega f+f^3=0\\)。将方程乘 \\(f'\\) 积分，并使用 \\(f,f'\\to0\\) 的边界条件，得\n\\((f')^2=2\\omega f^2-f^4\\)。设峰值 \\(f(0)=\\eta>0\\)，有 \\(2\\omega=\\eta^2\\)，于是\n\\[\n\\boxed{\\psi_\\eta(x,t)=\\eta\\operatorname{sech}(\\eta x)e^{i\\eta^2t/2}}.\n\\]\n直接微分 \\(\\operatorname{sech}\\) 可验其满足原方程；背景严格为零，不是平面波解的小振幅极限。\n\n(2) 利用 \\(\\int_{-\\infty}^\\infty\\operatorname{sech}^2u\\,du=2\\)、\\(\\int\\operatorname{sech}^4u\\,du=4/3\\) 和 \\(\\int\\operatorname{sech}^2u\\tanh^2u\\,du=2/3\\)，得到\n\\[\n\\boxed{N=2\\eta,\\quad P=0,\\quad H=\\tfrac12(2\\eta^3/3)-\\tfrac12(4\\eta^3/3)=-\\eta^3/3}.\n\\]\n若采用Galilean变换 \\(\\psi_v(x,t)=e^{i(vx-v^2t/2)}\\psi_\\eta(x-vt,t)\\)，则 \\(N\\) 不变、\\(P_v=vN=2\\eta v\\)、\\(H_v=H+v^2N/2=-\\eta^3/3+\\eta v^2\\)，从而精确核对运动能量预算。\n\n(3) 对 \\(\\psi=e^{iA^2t}[A+u(x,t)+iw(x,t)]\\)，在实扰动 \\(u,w\\) 的一次阶得到\n\\(u_t=-w_{xx}/2\\)、\\(w_t=u_{xx}/2+2A^2u\\)。代入 \\(u,w\\propto e^{i(kx-\\Omega t)}\\)，消元：\n\\[\n\\boxed{\\Omega^2=\\frac{k^4}{4}-A^2k^2}.\n\\]\n当 \\(0<|k|<2A\\) 时 \\(\\Omega\\) 纯虚而产生指数增长；增长率 \\(\\sigma(k)=|k|\\sqrt{A^2-k^2/4}\\)，其最大值 \\(A^2\\) 在 \\(|k|=\\sqrt2A\\) 处取得。边界 \\(k=0\\) 是相位相关的零模，而非一个新的不稳定波段。\n\n(4) 对衰减到零的孤子，\\(N,H,P\\) 由边界无通量条件守恒，色散项 \\(|\\psi_x|^2\\) 与非线性吸引项 \\(-|\\psi|^4\\) 在尺度 \\(1/\\eta\\) 上彼此平衡。令 \\(\\eta\\to0\\) 时 \\(N\\to0\\)、\\(H\\to0\\)，孤子振幅及非线性同时消失。匀幅背景则有无限的全空间 \\(N\\)，应在周期盒或每单位长度中研究其傅里叶扰动；背景的Benjamin--Feir不稳定不等同于局域孤子的线性谱不稳定，不能混用两种边界条件。\n"
+      }
+    },
+    "W063": {
+      "meta.json": {
+        "bytes": 690,
+        "git_blob": "a87c55750892e6b87baeb477132d4778f89092e9",
+        "text": "{\n  \"id\": \"W063\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"弹性覆层Love波的SH导波色散、截止频率与能量局域化\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 120,\n  \"tags\": [\n    \"分层弹性介质Love波\",\n    \"SH剪切波界面匹配\",\n    \"导波截止频率\",\n    \"基底倏逝能量\"\n  ],\n  \"answer\": \"\\\\tan(qh)=\\\\frac{\\\\mu_2\\\\alpha}{\\\\mu_1q},\\\\quad q^2=\\\\omega^2/c_1^2-\\\\beta^2,\\\\quad\\\\alpha^2=\\\\beta^2-\\\\omega^2/c_2^2\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v3.7-round12-draft\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 681,
+        "git_blob": "5ef3fd9216870cbf7355007821e121617be6f531",
+        "text": "各向同性弹性覆层 \\(0<z<h\\) 的剪切模量、密度为 \\(\\mu_1,\\rho_1\\)，基底 \\(z>h\\) 为半无限介质 \\(\\mu_2,\\rho_2\\)，剪切波速 \\(c_j=\\sqrt{\\mu_j/\\rho_j}\\)，且 \\(c_1<c_2\\)。自由表面 \\(z=0\\) 剪应力为零，界面 \\(z=h\\) 位移及剪应力连续。考虑SH位移 \\(u_y(z)e^{i(\\beta x-\\omega t)}\\)。\n(1) 推导两层垂向波数及束缚导波的速度窗口与空间模态。\n(2) 由界面条件求Love波色散方程，核对剪切模量比及量纲。\n(3) 求高阶模截止频率、基模截止性质及低频、高频基模相速度极限。\n(4) 写出周期平均模态能量积分与基底衰减长度，讨论截止及 \\(c_1\\to c_2\\) 极限。\n"
+      },
+      "solution.tex": {
+        "bytes": 1574,
+        "git_blob": "9085a59c18eb9b1db1acd2433d5bbcb6cebe18c8",
+        "text": "(1) SH位移满足 \\(\\rho_j u_{tt}=\\mu_j(u_{xx}+u_{zz})\\)，代入行波形式得\n\\(U_j''+(\\omega^2/c_j^2-\\beta^2)U_j=0\\)。\n要在覆层振荡、在基底衰减，须\n\\[\nq^2=\\omega^2/c_1^2-\\beta^2>0,\\quad\n\\alpha^2=\\beta^2-\\omega^2/c_2^2>0,\\quad\nc_1<\\omega/\\beta<c_2.\n\\]\n自由表面 \\(U_1'(0)=0\\) 选 \\(U_1=A\\cos(qz)\\)，基底束缚解 \\(U_2=D e^{-\\alpha(z-h)}\\)，舍弃无穷远增长分支。\n\n(2) \\(z=h\\) 位移连续给 \\(D=A\\cos(qh)\\)，剪应力连续给\n\\(-\\mu_1Aq\\sin(qh)=-\\mu_2\\alpha D\\)，因此\n\\[\n\\boxed{\\tan(qh)=\\frac{\\mu_2\\alpha}{\\mu_1q}}.\n\\]\n两边无量纲，模态同时依赖剪切波速与剪切模量比。若错误地用纵波法向应力替代SH剪应力，所得色散式将失去正确的横向极化边界条件。\n\n(3) 第 \\(n\\ge1\\) 阶模截止时 \\(\\alpha\\to0^+\\)，相速度趋 \\(c_2\\)，此时 \\(\\tan(qh)\\to0\\)、\\(qh=n\\pi\\)。故\n\\[\n\\boxed{\\omega_{n,\\rm cut}=\\frac{n\\pi}{h\\sqrt{c_1^{-2}-c_2^{-2}}}},\\quad n\\ge1.\n\\]\n基模 \\(n=0\\) 无非零截止频率。低频时 \\(q h\\to0\\)、\\(\\alpha\\to0\\)，相速度趋 \\(c_2^-\\)；高频基模 \\(q h\\to\\pi/2^-\\)，\\(\\beta\\simeq\\omega/c_1\\)，相速度趋 \\(c_1^+\\)。\n\n(4) 单位水平面积的周期平均能量可写\n\\[\n\\mathcal E=\\frac14\\int_0^\\infty[\\rho(z)\\omega^2|U|^2+\n\\mu(z)(\\beta^2|U|^2+|U'|^2)]\\,dz.\n\\]\n基底位移平方积分为 \\(|D|^2/(2\\alpha)\\)，故衰减长度 \\(1/\\alpha\\)。截止附近 \\(\\alpha\\to0\\) 时基底能量延伸至远处，局域性减弱；\\(c_1\\to c_2\\) 使允许的相速度窗口闭合且高模截止频率发散，均匀半空间不能支持同类Love束缚波。\n"
+      }
+    },
+    "W064": {
+      "meta.json": {
+        "bytes": 706,
+        "git_blob": "54434fa104a51aa412721e28106f44e41493dfbc",
+        "text": "{\n  \"id\": \"W064\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"β平面Rossby波的位涡谱、群速反向与拟地转能量守恒\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 115,\n  \"tags\": [\n    \"准地转位涡守恒\",\n    \"β平面Rossby波色散\",\n    \"东西向色散和群速度\",\n    \"有限形变半径与拟能量守恒\"\n  ],\n  \"answer\": \"\\\\omega=-\\\\frac{\\\\beta k_x}{k_x^2+k_y^2+L_d^{-2}},\\\\quad E=\\\\frac12\\\\int(|\\\\nabla\\\\psi|^2+L_d^{-2}\\\\psi^2)\\\\,dA\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v3.9-round13-draft\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 875,
+        "git_blob": "34f007efae906b3852073a88b72d5370d3c7e086",
+        "text": "在周期二维区域考虑线性准地转 \\(\\beta\\)-平面方程\n\\[\n\\partial_t(\\nabla^2\\psi-L_d^{-2}\\psi)+\\beta\\,\\partial_x\\psi=0,\n\\]\n其中 \\(\\beta>0\\)、变形半径 \\(L_d>0\\)，\\(\\psi\\) 为流函数，速度 \\((u,v)=(-\\psi_y,\\psi_x)\\)，忽略背景流与非线性位涡平流。波动取 \\(\\psi=\\operatorname{Re}[A e^{i(k_xx+k_yy-\\omega t)}]\\)。\n(1) 从给定的准地转位涡方程导出Rossby色散，讨论西向相速度和有限变形半径的物理作用。\n(2) 求二维群速度、特别是 \\(k_y=0\\) 情形的东西向群速反号条件；说明群速度与相速度不必同向。\n(3) 用周期边界严格证明正定扰动能量泛函守恒，并另求二维Fourier模的平均能量密度。\n(4) 求 \\(L_d\\to\\infty\\)、\\(\\beta\\to0\\) 和长波 \\(kL_d\\ll1\\) 极限，阐明本模型与常数Coriolis参数下的惯性重力波不是同一动力学分支。\n"
+      },
+      "solution.tex": {
+        "bytes": 1671,
+        "git_blob": "2a8ee228eb7e82f24bfd1b26321ce866256f8d8f",
+        "text": "(1) 代入平面波，位涡因子 \\((\\nabla^2-L_d^{-2})\\psi=-(k_x^2+k_y^2+L_d^{-2})\\psi\\)。于是\n\\[\n\\boxed{\\omega=-\\frac{\\beta k_x}{K^2}},\\quad K^2=k_x^2+k_y^2+L_d^{-2}.\n\\]\n对 \\(k_x>0\\)，东西向相速度 \\(\\omega/k_x=-\\beta/K^2<0\\)，即相位整体西传。有限形变半径把波数平方中的零点抬高，防止极长波的奇异传播速度；这一低频Rossby恢复力来自 \\(\\beta\\)，而非均匀 \\(f\\) 下的快惯性重力波。\n\n(2) 直接对色散微分得\n\\[\nc_{gx}=-\\beta\\frac{K^2-2k_x^2}{K^4},\\qquad\nc_{gy}=2\\beta\\frac{k_xk_y}{K^4}.\n\\]\n对于 \\(k_y=0\\)，\\(c_{gx}=\\beta(k_x^2-L_d^{-2})/(k_x^2+L_d^{-2})^2\\)。因此当 \\(k_xL_d>1\\) 能量包络可东传，而相速度始终西向；\\(k_xL_d<1\\) 则两者都西传。能量传输、位涡波的相位面移动与实际物质平流不可混为一个速度。\n\n(3) 令 \\(Q=\\nabla^2\\psi-L_d^{-2}\\psi\\)，方程为 \\(Q_t=-\\beta\\psi_x\\)。定义\n\\[\n\\mathcal E=\\frac12\\int\\bigl(|\\nabla\\psi|^2+L_d^{-2}\\psi^2\\bigr)\\,dA=-\\frac12\\int\\psi Q\\,dA .\n\\]\n周期积分分部并利用自伴的 \\(Q\\) 算符可得\n\\(\\dot{\\mathcal E}=-\\int\\psi Q_t\\,dA=\\beta\\int\\psi\\psi_x\\,dA=0\\)。单一非零Fourier实模平均 \\(\\langle\\mathcal E\\rangle/A_{\\rm box}=|A|^2K^2/4>0\\)，这是对色散和正定性相互独立的核验。\n\n(4) \\(L_d\\to\\infty\\) 时 \\(\\omega=-\\beta k_x/(k_x^2+k_y^2)\\)（非零波数）；\\(\\beta\\to0\\) 时 \\(\\omega\\to0\\)，说明该恢复力随纬度梯度消失。长波 \\(kL_d\\ll1\\) 有 \\(\\omega=-\\beta L_d^2k_x[1+O(k^2L_d^2)]\\)，表现近无色散的西向传播。常数 \\(f\\) 的惯性重力波满足不同的 \\(\\omega^2=f^2+c^2k^2\\)，故不能从其平方色散套用本题的群速度。\n"
+      }
+    },
+    "W065": {
+      "meta.json": {
+        "bytes": 734,
+        "git_blob": "eec11f01688960a0a20dacc5cf604f8b8966d66e",
+        "text": "{\n  \"id\": \"W065\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"Boussinesq内部重力波的各向异性色散、垂直群速与扰动能守恒\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 115,\n  \"tags\": [\n    \"稳定分层Boussinesq浮力波\",\n    \"不可压条件与压力约束消去\",\n    \"相速与群速的几何正交\",\n    \"动能浮力势能和局部守恒律\"\n  ],\n  \"answer\": \"\\\\omega^2=N^2k_x^2/(k_x^2+k_z^2),\\\\quad \\\\boldsymbol c_g=\\\\frac{N}{(k_x^2+k_z^2)^{3/2}}(k_z^2,-k_xk_z)\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v3.9-round13-draft\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 866,
+        "git_blob": "b6cc829cf36cac1ea86b4a825b86053d96095bf3",
+        "text": "二维稳定分层、非旋转Boussinesq流体背景浮力频率 \\(N>0\\) 为常数，流体无耗散且无基本流。速度扰动 \\((u,w)\\)、约化压力 \\(p\\) 和浮力 \\(b\\) 满足\n\\[\nu_t=-p_x,\\quad w_t=-p_z+b,\\quad b_t=-N^2w,\\quad u_x+w_z=0.\n\\]\n研究 \\(k_x>0\\)、\\(k_z\\in\\mathbb R\\) 的小振幅平面波，并对周期域积分。\n(1) 消去压力和浮力，推导内部重力波频率与水平、垂直波数的关系，验证 \\(0<\\omega\\le N\\)。\n(2) 计算水平及垂直群速度，证明群速与总波矢正交，说明为何相速度和能量传输方向不同。\n(3) 由四个一阶方程推出局部正定动能加浮力势能守恒律，给出单一平面波两种能量的时间平均等分关系。\n(4) 分析 \\(k_z\\to0\\)、\\(|k_z|\\gg k_x\\) 及 \\(N\\to0\\) 的边界，讨论为什么非旋转内部重力波与普通声波不是同一个模态。\n"
+      },
+      "solution.tex": {
+        "bytes": 1910,
+        "git_blob": "b9c2308a85ac5337493d52e8752470cd683b69d3",
+        "text": "(1) 取 \\(\\exp[i(k_xx+k_zz-\\omega t)]\\)。不可压强制 \\(k_xu+k_zw=0\\)，横向方程给 \\(p=\\omega u/k_x\\)，浮力方程给 \\(b=-iN^2w/\\omega\\)（根据所选相位约定可改变中间符号）。将它们代入竖直动量方程，消去共同振幅得\n\\[\n\\boxed{\\omega^2=N^2\\frac{k_x^2}{k_x^2+k_z^2}}.\n\\]\n正频 \\(\\omega=N k_x/\\sqrt{k_x^2+k_z^2}\\le N\\)。它在平面波的方向上依赖角度而不依赖 \\(|\\boldsymbol k|\\) 大小，故不是 \\(\\omega=c|\\boldsymbol k|\\) 的普通声学分支。\n\n(2) 对 \\(k_x>0\\) 的正频根微分，记 \\(K=(k_x^2+k_z^2)^{1/2}\\)，得到\n\\[\n\\boxed{c_{gx}=N k_z^2/K^3,\\qquad c_{gz}=-N k_xk_z/K^3}.\n\\]\n点积 \\(\\boldsymbol k\\cdot\\boldsymbol c_g=N(k_xk_z^2-k_xk_z^2)/K^3=0\\)。而相速矢量为 \\(\\omega\\boldsymbol k/K^2\\)，沿波矢方向；因此内部波的相位面移动与波包能量传播互相垂直。\\(k_z>0\\) 时垂直群速向下，反映内波特殊的几何方向性。\n\n(3) 分别将水平、垂直动量方程乘以 \\(u,w\\)，将浮力演化方程乘 \\(b/N^2\\)，相加有\n\\[\n\\boxed{\\partial_t\\left[\\frac{u^2+w^2}{2}+\\frac{b^2}{2N^2}\\right]\n+\\partial_x(pu)+\\partial_z(pw)=0}.\n\\]\n其中 \\(uw\\) 等混合项由不可压条件抵消。在周期域上，边界通量积分为零，故总能量守恒。单频波由 \\(b=-iN^2w/\\omega\\)，又由不可压 \\(u=-k_zw/k_x\\)；于是瞬时幅度的运动能平均\n\\(\\langle K_e\\rangle=|w_0|^2K^2/(4k_x^2)\\)，浮力势能平均 \\(\\langle P_e\\rangle=N^2|w_0|^2/(4\\omega^2)\\)，借色散关系严格相等。\n\n(4) \\(k_z\\to0\\) 时 \\(\\omega\\to N\\) 且群速趋零，单纯水平方向波成为有界浮力频率极限；\\(|k_z|\\gg k_x\\) 时 \\(\\omega\\sim Nk_x/|k_z|\\to0\\)，波包传播缓慢。\\(N\\to0\\) 时浮力恢复力消失，此不可压模型的内波支频率趋零，但不可由此推出有限声速声波；普通声波要求保留可压缩性，而本题施加了 \\(\\nabla\\cdot\\boldsymbol u=0\\)。\n"
+      }
+    },
+    "W066": {
+      "meta.json": {
+        "bytes": 735,
+        "git_blob": "45118b038d81b44a0efd3b322cea15815007dd9f",
+        "text": "{\n  \"id\": \"W066\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"二维刚性声散射圆柱的Bessel相移、低频截面与幺正通量\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 115,\n  \"tags\": [\n    \"Neumann圆柱散射边界\",\n    \"Hankel外向圆波和部分波\",\n    \"低频Rayleigh散射幂律\",\n    \"散射S矩阵幺正与能流守恒\"\n  ],\n  \"answer\": \"b_m=-J_m'(ka)/H_m^{(1)\\\\prime}(ka),\\\\quad \\\\sigma_{\\\\rm sc}=\\\\frac4k\\\\sum_m|b_m|^2,\\\\quad \\\\sigma_{\\\\rm sc}\\\\sim3\\\\pi^2 k^3a^4/4\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v3.9-round13-draft\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 818,
+        "git_blob": "ed78ea6753b6dc33e06c9c57285e15f4cac65585",
+        "text": "二维均匀无耗散流体中的时间谐波声压满足 \\((\\nabla^2+k^2)p=0\\)，波数 \\(k>0\\)。半径 \\(a>0\\) 的无限长刚性圆柱置于原点，边界法向流速为零即 \\(\\partial_rp|_a=0\\)。平面入射波 \\(p_{\\rm in}=e^{ikx}\\)，约定外向柱面波为 \\(H_m^{(1)}(kr)e^{im\\varphi}\\)。\n(1) 用平面波Bessel展开求每个角向模态的散射系数和严格边界条件。\n(2) 从Hankel远场渐近导出单位轴长散射截面的部分波求和公式，说明角向整数模态正负的简并。\n(3) 用 \\(ka\\ll1\\) 的低频展开计算 \\(m=0,\\pm1\\) 的主导散射幅和总散射截面主阶，说明为何不能只保留单一各向同性模态。\n(4) 从实数 \\(J_m,Y_m\\) 的关系推导每部分波散射矩阵 \\(S_m=1+2b_m\\) 的模为1，并解释其与无吸收声能守恒的等价性。\n"
+      },
+      "solution.tex": {
+        "bytes": 1753,
+        "git_blob": "e9ec582d43f9d366bbc371e29107196d6d3047b2",
+        "text": "(1) Jacobi–Anger公式 \\(e^{ikr\\cos\\varphi}=\\sum_{m\\in\\mathbb Z}i^mJ_m(kr)e^{im\\varphi}\\)。取\n\\(p=p_{\\rm in}+\\sum_m i^mb_mH_m^{(1)}(kr)e^{im\\varphi}\\)，在圆柱 \\(r=a\\) 处对 \\(r\\) 微分，每个角向系数独立为零，故\n\\[\n\\boxed{b_m=-\\frac{J_m'(ka)}{H_m^{(1)\\prime}(ka)}}.\n\\]\n这里撇号对无量纲变量求导，额外的 \\(k\\) 因子在分子分母抵消；刚壁采用Neumann而非软壁Dirichlet条件。\n\n(2) 当 \\(kr\\gg1\\)，有 \\(H_m^{(1)}(kr)\\sim\\sqrt{2/(\\pi kr)}\\,e^{i(kr-m\\pi/2-\\pi/4)}\\)。故远场各模散射角振幅的角傅里叶系数是 \\(b_m\\)，角积分的正交性给每单位轴长总散射截面\n\\[\n\\boxed{\\sigma_{\\rm sc}=\\frac4k\\sum_{m=-\\infty}^{\\infty}|b_m|^2}.\n\\]\n由于圆柱中心对称且 \\(J_{-m}=(-1)^mJ_m,\\ H_{-m}=(-1)^mH_m\\)，有 \\(b_{-m}=b_m\\)，于是 \\(m>0\\) 每项出现两次，不可误除简并系数。\n\n(3) 写 \\(z=ka\\ll1\\)。\\(J_0'\\sim-z/2\\)、\\(H_0^{(1)\\prime}\\sim2i/(\\pi z)\\)，所以 \\(b_0\\sim-i\\pi z^2/4\\)。又 \\(J_1'\\sim1/2\\)、\\(H_1^{(1)\\prime}\\sim2i/(\\pi z^2)\\)，故 \\(b_{\\pm1}\\sim i\\pi z^2/4\\)。更高 \\(m\\) 从更高幂 \\(z^{2|m|}\\) 起。因此三个低阶模都以 \\(z^4\\) 贡献强度，\n\\[\n\\boxed{\\sigma_{\\rm sc}\\sim \\frac4k\\frac{3\\pi^2z^4}{16}\n=\\frac{3\\pi^2}{4}k^3a^4}.\n\\]\n单取 \\(m=0\\) 会漏掉 \\(2/3\\) 的主导总量，这与压缩性不同的软声学圆柱低频散射不应混同。\n\n(4) 因 \\(J_m,Y_m\\) 在实 \\(z>0\\) 为实函数，\\(H_m^{(1)\\prime}=J_m'+iY_m'\\)，由第一问 \\(S_m=1+2b_m=(H_m'-2J_m')/H_m'=(-J_m'+iY_m')/(J_m'+iY_m')=-H_m^{(2)\\prime}/H_m^{(1)\\prime}\\)。二者互为复共轭，所以 \\(\\boxed{|S_m|^2=1}\\)。这表示每一个部分波的入射径向能流被完全弹性散射到出射通道，而无能量吸收；位相可变但模不变。\n"
+      }
+    },
+    "W067": {
+      "meta.json": {
+        "bytes": 703,
+        "git_blob": "5a374173d5f17ab5a6a45cdb9497788c8a4e7fb4",
+        "text": "{\n  \"id\": \"W067\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"自由液滴Rayleigh形变振荡的球谐模态、表面张力与零频平移模\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 115,\n  \"tags\": [\n    \"球谐速度势与自由液面\",\n    \"Laplace压差曲率变分\",\n    \"Rayleigh液滴毛细振动频率\",\n    \"形变表面能和体积守恒\"\n  ],\n  \"answer\": \"\\\\omega_\\\\ell^2=\\\\frac{\\\\sigma\\\\,\\\\ell(\\\\ell-1)(\\\\ell+2)}{\\\\rho R^3}\\\\quad(\\\\ell\\\\ge2)\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v3.9-round13-draft\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 837,
+        "git_blob": "9d72dcb0578f5fd33e12f4fb89dec998056706ac",
+        "text": "半径 \\(R\\) 的自由不可压、无黏、无旋液滴，密度 \\(\\rho\\)、表面张力 \\(\\sigma>0\\)，位于真空，忽略引力与耗散。小振幅表面形变为 \\(r_s=R+\\eta_{\\ell m}(t)Y_{\\ell m}(\\theta,\\varphi)\\)，其中 \\(\\ell\\ge2\\) 且球谐归一为 \\(\\int|Y_{\\ell m}|^2d\\Omega=1\\)。\n(1) 用内部速度势满足Laplace方程、自由面的运动学边界求对应 \\(\\ell,m\\) 的径向速度势。\n(2) 将表面曲率一阶变化与线性Bernoulli压力条件联立，推导Rayleigh毛细模态频率，检查同一 \\(\\ell\\) 的角向简并。\n(3) 独立通过液体动能和二阶表面张力势能构造模态简谐振子的广义质量及刚度，核对与动态边界法相同的频率。\n(4) 讨论 \\(\\ell=1\\) 纯平移、\\(\\ell=0\\) 体积约束，以及 \\(R\\) 缩小和表面张力趋零时频率与模型有效性。\n"
+      },
+      "solution.tex": {
+        "bytes": 1976,
+        "git_blob": "88d8b956325e1967aaff2c613bc084ed5a833887",
+        "text": "(1) 内部无旋且不可压，\\(\\nabla^2\\phi=0\\)。正则 \\(\\ell\\) 阶球谐解只能选 \\(r^\\ell Y_{\\ell m}\\)，中心奇异的 \\(r^{-\\ell-1}\\) 项被排除。线性运动学边界 \\(v_r(R)=\\dot\\eta Y_{\\ell m}\\)，故\n\\[\n\\boxed{\\phi(r,\\theta,\\varphi,t)=\\frac{\\dot\\eta(t)}{\\ell R^{\\ell-1}}r^\\ell Y_{\\ell m}}.\n\\]\n球内速度为 \\(\\nabla\\phi\\)，表面满足 \\(v_r=\\dot\\eta Y\\)。该模型以真空为外界，未计任何外流体的附加惯量。\n\n(2) 球面平均曲率的一阶扰动为 \\(\\delta(2H)=(\\ell-1)(\\ell+2)\\eta Y/R^2\\)，由Laplace压差得 \\(\\delta p=\\sigma(\\ell-1)(\\ell+2)\\eta Y/R^2\\)。线性非定常Bernoulli在表面给 \\(\\delta p=-\\rho\\,\\partial_t\\phi|_R=-\\rho R\\ddot\\eta Y/\\ell\\)。两式相等得到\n\\[\n\\boxed{\\ddot\\eta+\\omega_\\ell^2\\eta=0,\\quad\n\\omega_\\ell^2=\\frac{\\sigma\\ell(\\ell-1)(\\ell+2)}{\\rho R^3}}.\n\\]\n频率仅依赖 \\(\\ell\\) 不依赖 \\(m\\)，故在球对称自由液滴中每个 \\(\\ell\\) 有 \\(2\\ell+1\\) 重简并；外部约束会打破此简并。\n\n(3) 体动能可由Green恒等式求：\n\\(T=\\frac\\rho2\\int_{r<R}|\\nabla\\phi|^2dV=\\frac\\rho2\\oint_R\\phi\\partial_r\\phi\\,dS\n=\\frac{\\rho R^3}{2\\ell}|\\dot\\eta|^2\\)，使用了单位归一球谐。表面张力在固定总体积条件下的二阶面积变化\n\\(\\Delta A=\\frac12(\\ell-1)(\\ell+2)|\\eta|^2\\)，故\n\\[\nV_\\sigma=\\frac{\\sigma}{2}(\\ell-1)(\\ell+2)|\\eta|^2.\n\\]\n广义质量 \\(M_\\ell=\\rho R^3/\\ell\\)、刚度 \\(K_\\ell=\\sigma(\\ell-1)(\\ell+2)\\)，比值 \\(K_\\ell/M_\\ell\\) 正是上问 \\(\\omega_\\ell^2\\)，构成独立的能量法核验。\n\n(4) \\(\\ell=1\\) 对应将球整体平移而不改变形状，频率为零；\\(\\ell=0\\) 对应总体积变化，若液体严格不可压且总质量固定，它不属于可自由振荡的形变自由度。固定 \\(\\ell,\\sigma,\\rho\\) 时 \\(\\omega_\\ell\\propto R^{-3/2}\\)，微小液滴频率增大；但当 \\(R\\) 接近分子尺度时连续介质与恒定表面张力近似失效。令 \\(\\sigma\\to0\\) 时无形变恢复力，所有该类毛细模趋于零。\n"
+      }
+    },
+    "W068": {
+      "meta.json": {
+        "bytes": 672,
+        "git_blob": "a08d58a33bf4d65a3e275fe25e5115ec50553820",
+        "text": "{\n  \"id\": \"W068\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"线性声速梯度中的声线圆弧、水平慢度守恒与转向点行时\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 115,\n  \"tags\": [\n    \"声学几何光学射线\",\n    \"梯度声速Snell水平慢度\",\n    \"精确圆弧传播路径\",\n    \"转向点和波包传播时间\"\n  ],\n  \"answer\": \"p=\\\\cos\\\\theta/c(z),\\\\quad [\\\\gamma p(x-x_c)]^2+[p(c_0+\\\\gamma z)]^2=1\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v3.9-round13-draft\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 780,
+        "git_blob": "6d20ba8fba3c89617761cc66d4c292196fc23e8e",
+        "text": "二维分层无耗散静止介质，局地声速 \\(c(z)=c_0+\\gamma z>0\\)，\\(c_0>0,\\gamma>0\\)。考虑频率固定、波长远小于声速变化尺度的几何声学射线，角度 \\(\\theta\\) 从水平向上测量，水平坐标 \\(x\\)，竖直坐标 \\(z\\)。从初点向上发出的射线满足 \\(0<\\theta_0<\\pi/2\\)。\n(1) 从局地色散 \\(\\omega=c(z)|\\boldsymbol k|\\) 与水平方向平移不变性推导水平慢度不变量，给出转向高度。\n(2) 对上行支积分射线斜率求精确路径，证明在 \\((x,z)\\) 平面上是某圆弧而非抛物线。\n(3) 用 \\(dt=ds/c(z)\\) 求从任意初高度到转向点的有限行时积分或闭式对数表达。\n(4) 检查 \\(\\gamma\\to0\\) 的局地直线极限、转向点群速度垂直分量及几何声学的失效尺度。\n"
+      },
+      "solution.tex": {
+        "bytes": 1860,
+        "git_blob": "9e1ec7ce1410df382e570241642bf64c43bdb28b",
+        "text": "(1) 局地Hamilton色散 \\(\\omega=c(z)\\sqrt{k_x^2+k_z^2}\\) 不显含水平 \\(x\\)，所以 \\(k_x\\) 沿射线守恒，\\(\\omega\\) 在静止介质中也守恒。故水平慢度\n\\[\n\\boxed{p=k_x/\\omega=\\cos\\theta/c(z)}\n\\]\n不变。上行时 \\(c(z)\\) 随高度增大，\\(\\cos\\theta=pc(z)\\) 增大，\\(\\theta\\) 减小，直到 \\(\\theta=0\\) 在 \\(c(z_t)=1/p\\) 处转向；若该高度超出物理介质范围则没有实际转向。\n\n(2) 对上行支有 \\(\\tan\\theta=dz/dx=\\sqrt{1-p^2c^2}/(pc)\\)，故\n\\(dx/dz=pc(z)/\\sqrt{1-p^2c(z)^2}\\)。利用 \\(dc/dz=\\gamma\\) 积分：\n\\[\nx-x_0=\\frac1{\\gamma p}\\left[\\sqrt{1-p^2c(z_0)^2}-\\sqrt{1-p^2c(z)^2}\\right].\n\\]\n取圆心横坐标 \\(x_c=x_0+\\sqrt{1-p^2c(z_0)^2}/(\\gamma p)\\)，整理得\n\\[\n\\boxed{\\bigl[\\gamma p(x-x_c)\\bigr]^2+[p(c_0+\\gamma z)]^2=1}.\n\\]\n因为 \\(z\\) 仅作线性平移与尺度变换，真实 \\(x,z\\) 轨迹也是圆弧，半径 \\(1/(\\gamma p)\\)，不是简单二次曲线。\n\n(3) 由传播速度沿光线大小为 \\(c(z)\\)，有 \\(dt=dz/[c(z)\\sin\\theta]=dz/[c(z)\\sqrt{1-p^2c(z)^2}]\\)。令 \\(u=pc(z)\\)，得到\n\\[\nt(z)-t(z_0)=\\frac1\\gamma\\int_{u_0}^{u}\\frac{du'}{u'\\sqrt{1-u'^2}}\n=\\frac1\\gamma\\ln\\frac{u/(1+\\sqrt{1-u^2})}{u_0/(1+\\sqrt{1-u_0^2})}.\n\\]\n上行至转向点 \\(u=1\\) 时，\n\\(\\boxed{t_t-t_0=\\gamma^{-1}\\ln[(1+\\sqrt{1-u_0^2})/u_0]}\\)，有限且为正。若错误把速度水平分量当成总声速，就得不到该正确积分。\n\n(4) 当 \\(\\gamma\\to0\\) 并保持起点局地发射角时，曲率半径 \\(1/(\\gamma p)\\to\\infty\\)，有限路径段趋近直线，转向点可能远离区域。转向点有 \\(\\theta\\to0\\)，垂直群速 \\(c\\sin\\theta\\to0\\) 且上行/下行支连续连接；这不意味着声能在该点永久停止。几何声学要求 \\(\\lambda\\ll c/|\\gamma|\\) 并在转向点附近采用更精确的Airy型波动匹配，避免直接使用奇异的 \\(dx/dz\\) 或光线密度。\n"
+      }
+    },
+    "W069": {
+      "meta.json": {
+        "bytes": 731,
+        "git_blob": "cf96e7beed071bdf698ab005cc27aa30501eaf1d",
+        "text": "{\n  \"id\": \"W069\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"双流体切向剪切Kelvin–Helmholtz不稳定的毛细阈值与增长谱\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 115,\n  \"tags\": [\n    \"Kelvin–Helmholtz剪切界面\",\n    \"速度势边界条件\",\n    \"重力毛细稳定阈值\",\n    \"短波正则化与能量\"\n  ],\n  \"answer\": \"(\\\\omega-k\\\\bar U)^2=\\\\frac{(\\\\rho_2-\\\\rho_1)gk+\\\\sigma k^3}{\\\\rho_1+\\\\rho_2}-\\\\frac{\\\\rho_1\\\\rho_2}{(\\\\rho_1+\\\\rho_2)^2}(\\\\Delta U)^2k^2\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v4.0-round13-draft\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 834,
+        "git_blob": "3e6d3a978b878d9b31148a3bd041c4b004450a13",
+        "text": "(1) 上下两个无界、不可压、无黏、无旋流体由水平界面 \\(y=0\\) 分开：上层密度 \\(\\rho_1\\)，速度 \\(U_1\\hat x\\)，下层密度 \\(\\rho_2>\\rho_1\\)，速度 \\(U_2\\hat x\\)。重力 \\(g\\) 向下，界面张力 \\(\\sigma>0\\)。考虑 \\(k>0\\) 的小幅扰动 \\(\\eta=\\eta_0e^{i(kx-\\omega t)}\\)。写出满足远场衰减的两侧速度势，并由运动学边界条件确定系数。\n(2) 使用线性Bernoulli压强和Laplace压差推导完整复频率色散式，写出密度加权平均流速 \\(\\bar U\\)。\n(3) 求对给定 \\(k\\) 的稳定性判据，以及允许任意波数时首次失稳的临界速度差 \\(|U_1-U_2|_{\\rm cr}\\) 和对应 \\(k_*\\)。\n(4) 分别检验无剪切、零表面张力与 \\(g=\\sigma=0\\) 三种极限，求最后一种情况下的增长率并解释为何理想模型在极短波失效。\n"
+      },
+      "solution.tex": {
+        "bytes": 1895,
+        "git_blob": "b901c9f7a076e0afd6d42c2bf9723e039082aabc",
+        "text": "(1) 令上层 \\(\\phi_1=A_1e^{-ky}e^{i(kx-\\omega t)}\\)，下层 \\(\\phi_2=A_2e^{ky}e^{i(kx-\\omega t)}\\)，均满足Laplace方程并在远离界面处衰减。线性运动学条件 \\((\\partial_t+U_j\\partial_x)\\eta=\\partial_y\\phi_j|_0\\) 给 \\(-i(\\omega-kU_1)\\eta_0=-kA_1\\) 与 \\(-i(\\omega-kU_2)\\eta_0=kA_2\\)，因此 \\(A_1=i(\\omega-kU_1)\\eta_0/k\\)、\\(A_2=-i(\\omega-kU_2)\\eta_0/k\\)。正负指数不能颠倒，否则波在无穷远发散。\n\n(2) 线性Bernoulli给界面两侧 \\(p_j'=-\\rho_j[(\\partial_t+U_j\\partial_x)\\phi_j+g\\eta]\\)。按曲率取压差 \\(p_2'-p_1'=\\sigma k^2\\eta\\)，代入第一问系数并整理得 \\(\\rho_1(\\omega-kU_1)^2+\\rho_2(\\omega-kU_2)^2=(\\rho_2-\\rho_1)gk+\\sigma k^3\\)。定义 \\(\\bar U=(\\rho_1U_1+\\rho_2U_2)/(\\rho_1+\\rho_2)\\)，完成平方得题示色散式。虚部来自根号内负值而非对流项，故仅靠多普勒平移不会产生不稳定。\n\n(3) 根号内非负时两个实频率稳定，失稳条件为 \\(\\frac{\\rho_1\\rho_2}{\\rho_1+\\rho_2}(\\Delta U)^2>(\\rho_2-\\rho_1)g/k+\\sigma k\\)。对正 \\(k\\) 最小化右侧：\\(k_*=\\sqrt{(\\rho_2-\\rho_1)g/\\sigma}\\)，最小值 \\(2\\sqrt{(\\rho_2-\\rho_1)g\\sigma}\\)。所以 \\(\\boxed{(\\Delta U_{\\rm cr})^2=\\frac{2(\\rho_1+\\rho_2)}{\\rho_1\\rho_2}\\sqrt{(\\rho_2-\\rho_1)g\\sigma}}\\)。该阈值依赖稳定密度分层与非零表面张力，不能把Rayleigh–Taylor无剪切条件直接替换为此结果。\n\n(4) 若 \\(\\Delta U=0\\)，根号内为正，得到正常重力—毛细波 \\(\\omega=kU\\pm\\sqrt{[(\\rho_2-\\rho_1)gk+\\sigma k^3]/(\\rho_1+\\rho_2)}\\)。若 \\(\\sigma=0\\)，任意非零剪切总有足够大的 \\(k\\) 使 \\(k^2\\) 负项占优。若 \\(g=\\sigma=0\\)，增长率为 \\(\\gamma=k|\\Delta U|\\sqrt{\\rho_1\\rho_2}/(\\rho_1+\\rho_2)\\)，随 \\(k\\) 无界增长。现实中有限剪切层厚度、黏性、可压缩性与表面张力等微观机制使极短波理想化失效；该发散不代表可实现无限增长率。\n"
+      }
+    },
+    "W070": {
+      "meta.json": {
+        "bytes": 664,
+        "git_blob": "479ae4ca38fa76801abe58040b248f86d6282ed8",
+        "text": "{\n  \"id\": \"W070\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"正交各向异性薄板弯曲波的方向色散、群速偏折与双指标本征谱\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 115,\n  \"tags\": [\n    \"Kirchhoff–Love正交薄板\",\n    \"四阶弯曲波色散\",\n    \"各向异性群速度偏折\",\n    \"简支板模态能量正交\"\n  ],\n  \"answer\": \"\\\\omega^2=(D_xk_x^4+2D_{xy}k_x^2k_y^2+D_yk_y^4)/(\\\\rho h)\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v4.1-round13-draft\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 881,
+        "git_blob": "b0db83b02c06ee29ab2b54d3c3cc952b40c723c9",
+        "text": "(1) 一张无限大正交各向异性薄弹性板的面质量密度为 \\(\\rho h>0\\)，小挠度 \\(w(x,y,t)\\)，弯曲能量密度为 \\([D_xw_{xx}^2+2D_{xy}w_{xx}w_{yy}+D_yw_{yy}^2]/2\\)，其中 \\(D_x,D_y>0,\\ |D_{xy}|<\\sqrt{D_xD_y}\\)。忽略扭转耦合、横向剪切、阻尼和预张力。由Hamilton原理求线性板方程。\n(2) 求任意平面波 \\(w\\propto e^{i(k_xx+k_yy-\\omega t)}\\) 的色散和群速度矢量，说明在 \\(D_x\\ne D_y\\) 时群速一般不平行于波矢。\n(3) 将板限制在 \\(0<x<a,0<y<b\\)，四边简支，取 \\(w_{mn}=A\\sin(m\\pi x/a)\\sin(n\\pi y/b)\\cos(\\omega_{mn}t)\\)。求双指标频谱及该模态的精确总能量。\n(4) 检验正定弯曲能量条件、形式各向同性色散极限 \\(D_x=D_y=D_{xy}=D\\)（它处于所给严格正定条件的边界）以及长波 \\(k\\to0\\) 的相速、群速标度，并说明薄板模型的高频失效。\n"
+      },
+      "solution.tex": {
+        "bytes": 1913,
+        "git_blob": "600f2d1dbd02d255373a0c714912d463aa60efbe",
+        "text": "(1) 作用量为 \\(\\int dt\\,dA\\{\\rho h\\,w_t^2/2-[D_xw_{xx}^2+2D_{xy}w_{xx}w_{yy}+D_yw_{yy}^2]/2\\}\\)。对 \\(w\\) 变分并两次分部积分，在无限板无边界项条件下得 \\(\\boxed{\\rho h\\,w_{tt}+D_xw_{xxxx}+2D_{xy}w_{xxyy}+D_yw_{yyyy}=0}\\)。交叉项两次变分贡献系数2，不能错写成 \\(D_{xy}\\)；方程描述弯曲主导的四阶空间波，不是张紧膜的二阶波动方程。\n\n(2) 代入平面波得到 \\(\\boxed{\\omega^2=[D_xk_x^4+2D_{xy}k_x^2k_y^2+D_yk_y^4]/(\\rho h)}\\)。令 \\(S=D_xk_x^4+2D_{xy}k_x^2k_y^2+D_yk_y^4\\)，则 \\(v_{gx}=\\partial_{k_x}\\omega=2(D_xk_x^3+D_{xy}k_xk_y^2)/(\\rho h\\,\\omega)\\)，\\(v_{gy}=2(D_yk_y^3+D_{xy}k_x^2k_y)/(\\rho h\\,\\omega)\\)。例如 \\(k_x=k_y>0\\) 且 \\(D_x\\ne D_y\\) 时两分量不相等，故群速度不沿 \\(45^\\circ\\) 波矢方向；各向异性会导致能量射线偏折。\n\n(3) 简支边界允许 \\(w=0\\) 且相应弯矩为零，正弦双指标函数满足这些条件。取 \\(k_x=m\\pi/a,k_y=n\\pi/b\\) 得 \\(\\boxed{\\omega_{mn}^2=[D_x(m\\pi/a)^4+2D_{xy}(m\\pi/a)^2(n\\pi/b)^2+D_y(n\\pi/b)^4]/(\\rho h)}\\)。利用 \\(\\int_0^a\\sin^2(m\\pi x/a)dx=a/2\\) 及 \\(y\\) 方向同式，峰值势能为 \\(E_{mn}=abA^2S_{mn}/8=\\rho habA^2\\omega_{mn}^2/8\\)。峰值动能相等，周期中二者互换，因无耗散总能量不变。\n\n(4) 二次型 \\(D_xX^2+2D_{xy}XY+D_yY^2\\) 在题设 \\(|D_{xy}|<\\sqrt{D_xD_y}\\) 下严格正定，保证所有非零波矢频率实。在形式各向同性色散极限 \\(D_x=D_y=D_{xy}=D\\) 时 \\(S=D(k_x^2+k_y^2)^2\\)；该极限处于 \\(|D_{xy}|<\\sqrt{D_xD_y}\\) 的边界，若要描述完整各向同性板的所有曲率，还须保留本题忽略的扭转曲率能项，故 \\(\\omega=\\sqrt{D/(\\rho h)}\\,k^2\\)，\\(v_g=2\\sqrt{D/(\\rho h)}\\,k\\hat k\\)，相速为其一半。固定传播方向令 \\(k\\to0\\)，二者都正比 \\(k\\) 而趋零；当波长与板厚同阶，Kirchhoff–Love忽略的横向剪切与转动惯量不可忽略。\n"
+      }
+    },
+    "W071": {
+      "meta.json": {
+        "bytes": 716,
+        "git_blob": "d39235f51cdfd831b42284c88bc194da7647ffaa",
+        "text": "{\n  \"id\": \"W071\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"黏性Burgers冲击波的精确双曲正切结构、熵产生与无黏Lax极限\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 115,\n  \"tags\": [\n    \"Burgers非线性耗散波\",\n    \"Rankine–Hugoniot冲击速度\",\n    \"黏性激波精确tanh轮廓\",\n    \"熵不等式和耗散积分\"\n  ],\n  \"answer\": \"u(\\\\xi)=s-\\\\frac{\\\\Delta}{2}\\\\tanh(\\\\Delta\\\\xi/(4\\\\nu)),\\\\quad s=(u_-+u_+)/2,\\\\quad\\\\mathcal D=\\\\Delta^3/12\",\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v4.2-round13-draft\",\n  \"challenge_profile\": \"high-multistage\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 692,
+        "git_blob": "b20fa5ac21f20866496f593de3bb72e13b766bf1",
+        "text": "(1) 一维黏性Burgers方程 \\(u_t+uu_x=\\nu u_{xx}\\)，黏性系数 \\(\\nu>0\\)，远场两恒定态满足 \\(u_->u_+\\)。求以 \\(\\xi=x-st\\) 传播的单调行波速度 \\(s\\)，并写出积分后的常微分方程。\n(2) 求满足 \\(u(-\\infty)=u_-,u(+\\infty)=u_+\\) 的精确平移不变冲击轮廓，给出由速度跳跃 \\(\\Delta=u_--u_+\\) 决定的特征厚度。\n(3) 以二次熵 \\(\\eta(u)=u^2/2\\) 建立局部熵平衡式，独立积分整个冲击层的不可逆耗散 \\(\\int_{-\\infty}^\\infty\\nu u_\\xi^2d\\xi\\)，给出闭式并验证其为正。\n(4) 讨论 \\(\\nu\\to0^+\\) 的弱解极限、Lax压缩性条件与 \\(u_-<u_+\\) 时为何不能用同一方向的黏性冲击代替稀疏波。\n"
+      },
+      "solution.tex": {
+        "bytes": 1791,
+        "git_blob": "85375be3d9fae08394d343ef31f29e36478404f5",
+        "text": "(1) 将方程写成守恒形式 \\(u_t+(u^2/2)_x=\\nu u_{xx}\\)。设 \\(u=U(\\xi),\\xi=x-st\\)，则 \\(-sU'+UU'=\\nu U''\\)，一次积分为 \\(-sU+U^2/2=\\nu U'+C\\)。在两端 \\(U'\\to0\\)，消去积分常数得到 \\(-su_-+u_-^2/2=-su_++u_+^2/2\\)，故 \\(\\boxed{s=(u_-+u_+)/2}\\)。代回可化为 \\(\\nu U'=(U-u_-)(U-u_+)/2\\)，当 \\(u_->u_+\\) 时中间区右端为负，允许单调下降的行波。\n\n(2) 令 \\(\\Delta=u_--u_+>0\\)，写 \\(U=s+v\\)，则 \\(\\nu v'=(v^2-\\Delta^2/4)/2\\)。分离变量并选择中心 \\(\\xi=0\\) 处 \\(v=0\\)，得到 \\(\\boxed{U(\\xi)=s-\\frac{\\Delta}{2}\\tanh[\\Delta\\xi/(4\\nu)]}\\)。直接求导 \\(U'=-\\Delta^2\\operatorname{sech}^2(\\Delta\\xi/(4\\nu))/(8\\nu)\\)，代回首次积分两边一致。特征宽度 \\(\\ell=4\\nu/\\Delta\\)，故强跳跃冲击更薄、黏性更大冲击更宽；绝对中心位置由平移不变性任意选取。\n\n(3) 方程乘 \\(u\\) 后得到 \\(\\partial_t(u^2/2)+\\partial_x(u^3/3)=\\nu\\partial_x(uu_x)-\\nu u_x^2\\)。因此二次熵的不可逆耗散密度为 \\(\\nu u_x^2\\ge0\\)。将上一问 \\(U'\\) 代入，\\(\\mathcal D=\\nu\\Delta^4/(64\\nu^2)\\int_{-\\infty}^\\infty\\operatorname{sech}^4(\\Delta\\xi/(4\\nu))d\\xi\\)。用 \\(\\int_{-\\infty}^\\infty\\operatorname{sech}^4y\\,dy=4/3\\)，得 \\(\\boxed{\\mathcal D=\\Delta^3/12>0}\\)。该结果与 \\(\\nu\\) 无关，因为层宽随 \\(\\nu\\) 缩小同时梯度增大。\n\n(4) 在 \\(\\nu\\to0^+\\) 时 \\(U(\\xi)\\) 收敛为以速度 \\(s\\) 传播的跃变 \\(u_-\\mathbf1_{\\xi<0}+u_+\\mathbf1_{\\xi>0}\\)，满足Rankine–Hugoniot守恒条件。因 \\(u_->s>u_+\\)，两侧特征线向冲击汇聚，满足Lax压缩性与熵不等式。若反过来 \\(u_-<u_+\\)，同一连接的 \\(U'\\) 符号与所需远场方向冲突，不存在该稳定下降黏性行波；无黏熵解为展开的稀疏扇，而不是允许熵减的膨胀冲击。\n"
+      }
+    },
+    "W072": {
+      "meta.json": {
+        "bytes": 654,
+        "git_blob": "5ad55bebb5d9b1e35009b47ec3c94ee3355f2aa5",
+        "text": "{\n  \"id\": \"W072\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"内禀谐振质量链的频率依赖有效惯量、局域共振禁带与能量正性\",\n  \"tags\": [\n    \"局域谐振声学超材料\",\n    \"有效动态质量\",\n    \"Bloch色散禁带\",\n    \"声学极限与正定机械能\"\n  ],\n  \"answer\": \"4K\\\\sin^2(qa/2)=\\\\omega^2[M+mk/(k-m\\\\omega^2)]\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 115,\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v5-round14-draft\",\n  \"challenge_profile\": \"high-multistage-original-core\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 808,
+        "git_blob": "a0538b1fa795ccc3573b39f9b6f3e70c5dce2c12",
+        "text": "(1) 无限一维晶格主质量 \\(M\\) 以弹簧 \\(K\\) 与相邻主质量耦合；每个主质量另由内部弹簧 \\(k\\) 连着一颗内部质量 \\(m\\)，晶格距 \\(a\\)。写出两自由度运动方程，以 \\(e^{i(qna-\\omega t)}\\) 消去内部位移并求动态有效质量。\n(2) 证明在内部共振 \\(\\omega_0=\\sqrt{k/m}\\) 与 \\(\\omega_+=\\sqrt{k(M+m)/(Mm)}\\) 之间，任意实Bloch波数都不能传播；解释该局域共振禁带与Bragg禁带的机制差别。\n(3) 求 \\(q\\to0\\) 的声学支相速度及光学支起点；推导内部/主质量振幅比，并讨论 \\(\\omega\\to\\omega_0\\) 时的奇异性。\n(4) 写出每胞机械能的严格正定表达式，证明负有效质量不等于负真实动能；求无耗时 \\(q=0\\) 的平移零模，并说明阻尼与有限振幅对禁带的影响。\n"
+      },
+      "solution.tex": {
+        "bytes": 1323,
+        "git_blob": "44813aa59b09ec12f15439ee35de5ac0fefdcce2",
+        "text": "(1) 记主质量位移 \\(u_n\\)，内部位移 \\(v_n\\)。方程\n\\[\nM\\ddot u_n=K(u_{n+1}+u_{n-1}-2u_n)+k(v_n-u_n),\\quad m\\ddot v_n=k(u_n-v_n).\n\\]\nBloch代入给 \\(V/U=k/(k-m\\omega^2)\\)，主方程化为\n\\[\n4K\\sin^2(qa/2)=\\omega^2 M_{\\rm eff}(\\omega),\\quad M_{\\rm eff}=M+\\frac{mk}{k-m\\omega^2}.\n\\]\n(2) 在 \\(\\omega_0<\\omega<\\omega_+\\) 时，分母为负且 \\(M_{\\rm eff}<0\\)（其零点在 \\(\\omega_+\\)）。左边对实 \\(q\\) 非负，右边严格负，故无传播Bloch模。此禁带由胞内共振惯量变号产生，不依赖晶格半波长Bragg反射。\n(3) 低频 \\(M_{\\rm eff}\\to M+m\\)，\\(\\sin(qa/2)\\sim qa/2\\)，故 \\(\\omega\\simeq a\\sqrt{K/(M+m)}|q|\\)。在 \\(q=0\\)，色散行列式的两根为 \\(\\omega=0\\) 和 \\(\\omega_+\\)。\\(V/U=k/(k-m\\omega^2)\\) 在 \\(\\omega\\to\\omega_0\\) 形式发散；对非零驱动该点内部共振强烈，必须考虑阻尼或非线性，而非把无穷大位移视作物理结果。\n(4) 每胞瞬时能量\n\\[\nE_n=\\frac M2\\dot u_n^2+\\frac m2\\dot v_n^2+\\frac K2(u_{n+1}-u_n)^2+\\frac k2(v_n-u_n)^2\\ge0.\n\\]\n仅整体平移的零频模能使所有弹簧不变形。动态消元的 \\(M_{\\rm eff}<0\\) 是频域响应符号，不是任何单颗粒惯性质量或真实动能为负。加入小阻尼使有效质量复数化，禁带变成强衰减带；大振幅使线性弹簧近似失效。\n"
+      }
+    },
+    "W073": {
+      "meta.json": {
+        "bytes": 722,
+        "git_blob": "17ca44a2ab87bf9882991fdb086e505d104127e6",
+        "text": "{\n  \"id\": \"W073\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"非互易一阶谐振链的非厄米趋肤模、边界谱与稳定阈值分裂\",\n  \"tags\": [\n    \"非互易耦合阵列\",\n    \"周期谱复椭圆\",\n    \"开放边界相似变换\",\n    \"非厄米趋肤局域与稳定性\"\n  ],\n  \"answer\": \"\\\\lambda_j=-\\\\gamma+2\\\\sqrt{J_RJ_L}\\\\cos\\\\frac{j\\\\pi}{N+1},\\\\quad a_n\\\\propto(J_R/J_L)^{n/2}\\\\sin\\\\frac{jn\\\\pi}{N+1}\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 115,\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v5-round14-draft\",\n  \"challenge_profile\": \"high-multistage-original-core\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 773,
+        "git_blob": "6363eb9356492fc39c68af32041e0c3abe30c0bd",
+        "text": "(1) 主动耦合的 \\(N\\) 个谐振包络满足 \\(\\dot a_n=-\\gamma a_n+J_Ra_{n-1}+J_La_{n+1}\\)，其中 \\(J_R,J_L>0\\) 且 \\(J_R\\ne J_L\\)，\\(\\gamma>0\\)。先对周期边界 \\(a_n=e^{ikn+\\lambda t}\\) 求复色散 \\(\\lambda(k)\\)，给出其在复平面中的轨迹与谱稳定条件。\n(2) 改为开放边界 \\(a_0=a_{N+1}=0\\)。构造对角相似变换使非对称耦合矩阵变为对称三对角矩阵，求全部 \\(N\\) 个本征值。\n(3) 求开放边界右本征矢，推导趋肤局域长度并说明其方向如何随 \\(J_R/J_L\\) 反转；比较周期和开放边界的谱极限为何不同。\n(4) 给出有限 \\(N\\) 开放链的严格线性稳定阈值，与周期链比较；说明这种非互易主动模型为何不能套用无源弹簧链的能量守恒结论。\n"
+      },
+      "solution.tex": {
+        "bytes": 1300,
+        "git_blob": "930222d849f0f3bfde1bb609b2656483b670dfa9",
+        "text": "(1) 周期Bloch代入得\n\\[\n\\lambda(k)=-\\gamma+J_Re^{-ik}+J_Le^{ik}=-\\gamma+(J_R+J_L)\\cos k+i(J_L-J_R)\\sin k.\n\\]\n复谱为中心 \\(-\\gamma\\)、实半轴 \\(J_R+J_L\\)、虚半轴 \\(|J_L-J_R|\\) 的椭圆。最大实部为 \\(-\\gamma+J_R+J_L\\)，周期系统严格渐近稳定当且仅当 \\(\\gamma>J_R+J_L\\)。\n(2) 令 \\(r=\\sqrt{J_R/J_L}\\)，取 \\(a_n=r^n b_n\\)，则\n\\[\n\\dot b_n=-\\gamma b_n+\\sqrt{J_RJ_L}(b_{n-1}+b_{n+1}).\n\\]\n开放链的正弦本征函数 \\(b_n^{(j)}=\\sin(jn\\pi/(N+1))\\) 给\n\\[\n\\lambda_j=-\\gamma+2\\sqrt{J_RJ_L}\\cos\\frac{j\\pi}{N+1},\\quad j=1,\\ldots,N.\n\\]\n(3) 右本征矢 \\(a_n^{(j)}=r^n\\sin(jn\\pi/(N+1))\\)，其包络 \\(r^n=e^{n\\ln r}\\)。以格点为单位的局域长度 \\(\\ell_{\\rm skin}=1/|\\ln r|=2/|\\ln(J_R/J_L)|\\)；\\(J_R>J_L\\) 向右端聚集，反之向左。相似变换的条件数随 \\(N\\) 指数增大，故热力学极限中周期谱椭圆与开放谱实线段可以不同。\n(4) 开放链最大本征值为 \\(-\\gamma+2\\sqrt{J_RJ_L}\\cos[\\pi/(N+1)]\\)，严格稳定阈值为 \\(\\gamma>2\\sqrt{J_RJ_L}\\cos[\\pi/(N+1)]\\)。AM--GM不等式使其小于周期阈值 \\(J_R+J_L\\)（非互易时严格）。本模型描述有增益与损耗的主动一阶包络动力学，不是互易保守弹簧链；非厄米演化不守恒通常机械能，不能用能流守恒证明谱性质。\n"
+      }
+    },
+    "W074": {
+      "meta.json": {
+        "bytes": 684,
+        "git_blob": "ccc524773765e37defd93100e15f2735a6690748",
+        "text": "{\n  \"id\": \"W074\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"Rayleigh旋转惯性梁的双尺度弯曲色散、群速度与正定能量\",\n  \"tags\": [\n    \"Rayleigh梁转动惯量\",\n    \"弯曲波色散\",\n    \"高频传播速度饱和\",\n    \"自伴本征谱与机械能正定\"\n  ],\n  \"answer\": \"\\\\omega^2=\\\\frac{EI k^4}{\\\\rho A+\\\\rho I k^2},\\\\qquad c_{g,\\\\infty}=\\\\sqrt{E/\\\\rho}\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 115,\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v5-round14-draft\",\n  \"challenge_profile\": \"high-multistage-original-core\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 845,
+        "git_blob": "bb1bb81f9bdf938431b2ab1255466b41b4399107",
+        "text": "(1) 均匀细梁长度 \\(L\\)、截面积 \\(A\\)、截面二次矩 \\(I\\)、密度 \\(\\rho\\)、杨氏模量 \\(E\\)。Rayleigh梁保留截面转动惯量但忽略剪切变形。由动能 \\(T=\\frac12\\int_0^L(\\rho A u_t^2+\\rho I u_{xt}^2)dx\\) 与弯曲势能 \\(V=\\frac12\\int_0^LEIu_{xx}^2dx\\) 推导横向位移 \\(u(x,t)\\) 的场方程。\n(2) 在无限梁上代入 \\(u\\propto e^{i(kx-\\omega t)}\\) 求色散 \\(\\omega(k)\\)，分别给出长波弯曲波和短波的相、群速度渐近。\n(3) 对简支端条件 \\(u=u_{xx}=0\\) 于 \\(x=0,L\\)，求全部本征频率并比较忽略转动惯量的Euler–Bernoulli预测，证明Rayleigh频率逐模不高于后者。\n(4) 推导无外力无阻尼时机械能守恒的边界通量表达式，说明为什么所有非平移本征模的 \\(\\omega_n^2>0\\)，并指出极短波时剪切变形忽略不再可靠。\n"
+      },
+      "solution.tex": {
+        "bytes": 1324,
+        "git_blob": "875f62376e370c22ff2c1d10ae1cff132b71fd9e",
+        "text": "(1) 作用量 \\(\\int(T-V)dt\\) 的变分中，\\(u_t\\) 项给 \\(-\\rho A u_{tt}\\)，\\(u_{xt}\\) 项分部积分给 \\(+\\rho I u_{xxtt}\\)，弯曲项给 \\(-EIu_{xxxx}\\)。Euler–Lagrange方程为\n\\[\n\\rho A u_{tt}-\\rho I u_{xxtt}+EIu_{xxxx}=0.\n\\]\n转动惯量项的负号保证其在频域增加有效惯性。\n(2) 平面波代入得\n\\[\n\\omega(k)=\\sqrt{\\frac{EI}{\\rho A}}\\frac{k^2}{\\sqrt{1+(I/A)k^2}},\\quad\nc_p=\\omega/k,\\quad\nc_g=\\sqrt{\\frac{EI}{\\rho A}}\\frac{k[2+(I/A)k^2]}{[1+(I/A)k^2]^{3/2}}.\n\\]\n\\(k\\sqrt{I/A}\\ll1\\) 时 \\(\\omega\\sim\\sqrt{EI/(\\rho A)}k^2\\)、\\(c_g\\sim2c_p\\)；\\(k\\sqrt{I/A}\\gg1\\) 时 \\(c_p,c_g\\to\\sqrt{E/\\rho}\\)。\n(3) 简支模态 \\(u_n=\\sin(k_nx)e^{-i\\omega_nt}\\)，\\(k_n=n\\pi/L\\)，满足 \\(u=u_{xx}=0\\)。故\n\\[\n\\omega_n^2=\\frac{EI k_n^4}{\\rho A+\\rho I k_n^2}\n=\\frac{\\omega_{n,\\rm EB}^2}{1+(I/A)k_n^2}<\\omega_{n,\\rm EB}^2,\\quad n\\ge1.\n\\]\n旋转惯性降低每个有限波数模态的频率。\n(4) 乘场方程以 \\(u_t\\) 并积分，分部积分得\n\\[\n\\frac{d}{dt}\\frac12\\int_0^L[\\rho A u_t^2+\\rho Iu_{xt}^2+EIu_{xx}^2]dx\n=-[EIu_{xxx}u_t-EIu_{xx}u_{xt}-\\rho Iu_{xtt}u_t]_{0}^{L}.\n\\]\n简支边界 \\(u_t=u_{xx}=0\\) 使右端为零，能量正定。对 \\(n\\ge1\\)，\\(EI k_n^4>0\\) 且分母正，故频率实正。极短波下截面剪切变形显著，应改用Timoshenko梁而非无限外推Rayleigh模型。\n"
+      }
+    },
+    "W075": {
+      "meta.json": {
+        "bytes": 738,
+        "git_blob": "01218480e17ee0c9443edf06f9acb796e07aeee6",
+        "text": "{\n  \"id\": \"W075\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"缓变移动端点弦的绝热模态不变量、边界功率与多普勒交叉核验\",\n  \"tags\": [\n    \"移动边界波动能量通量\",\n    \"单模绝热作用量\",\n    \"边界夹持力与平均做功\",\n    \"反射多普勒和频率漂移\"\n  ],\n  \"answer\": \"J_n=\\\\frac{E_n}{\\\\omega_n}=\\\\mathrm{const},\\\\quad E_n\\\\propto L^{-1},\\\\quad \\\\langle F_{\\\\rm end}\\\\rangle=E_n/L\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 115,\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v5-round14-draft\",\n  \"challenge_profile\": \"high-multistage-original-core\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 1307,
+        "git_blob": "cba50784aeb89184c0cfc5094219658192171ec4",
+        "text": "(1) 质量线密度 \\(\\mu>0\\)、恒张力 \\(T>0\\) 的柔弦，左端固定在 \\(x=0\\)，右端夹持于一个光滑移动的刚性边界 \\(x=L(t)\\)。小横位移 \\(u(x,t)\\) 满足波动方程 \\(\\mu u_{tt}=Tu_{xx}\\) 及 \\(u(0,t)=u(L(t),t)=0\\)。不预设慢变，严格求时变区间的弦能量\n\\(E(t)=\\frac12\\int_0^{L(t)}[\\mu u_t^2+Tu_x^2]\\,dx\\) 的时间导数，化成移动端点局部斜率与 \\(\\dot L\\) 的表达式。\n(2) 现令 \\(|\\dot L|/c\\ll1\\)，其中 \\(c=\\sqrt{T/\\mu}\\)，并且模态变化率小于相邻频率差，忽略模间跃迁。求第 \\(n\\) 瞬时驻波频率，证明单模绝热作用量 \\(J_n=E_n/\\omega_n\\) 不变，推导单模能量随 \\(L\\) 的标度及腹部横向位移振幅的标度。\n(3) 对弦位移近似 \\(u=A\\sin(n\\pi x/L)\\cos\\omega_nt\\)，独立用第一问的能量边界式求慢变平均夹持广义力 \\(\\langle F_{\\rm end}\\rangle\\) 与 \\(\\dot E\\)。与第二问预测 \\(-dE/dL\\) 比较，解释正向伸长为何使单模能量下降。\n(4) 换一种独立机制：考虑速度 \\(v_w=\\dot L\\) 缓慢远离入射波的反射端点，推导实验室中单次一维波反射的频率比 \\(\\omega_r/\\omega_i=(c-v_w)/(c+v_w)\\)。结合两端往返撞击率 \\(c/(2L)\\) 恢复 \\(\\dot E/E\\simeq-\\dot L/L\\)，说明非绝热快速移动时此估计为什么失效。\n"
+      },
+      "solution.tex": {
+        "bytes": 2271,
+        "git_blob": "0e5bd805abc2bd869142fa2b3d34f7f8d77b038b",
+        "text": "(1) 在瞬时区间有\n\\[\n\\partial_t\\!\\left(\\frac{\\mu u_t^2+Tu_x^2}{2}\\right)\n=T\\partial_x(u_tu_x)\n\\]\n（利用 \\(\\mu u_{tt}=Tu_{xx}\\)）。对变化上限用Leibniz公式：\n\\[\n\\dot E=[Tu_tu_x]_0^{L}+\n\\dot L\\left[\\frac{\\mu u_t^2+Tu_x^2}{2}\\right]_{x=L}.\n\\]\n左端 \\(u_t(0,t)=0\\)；运动边界总导数 \\(\\frac d{dt}u(L(t),t)=0\\) 给 \\(u_t(L,t)=-\\dot L\\,u_x(L,t)\\)。故\n\\[\n\\boxed{\\dot E=-\\frac T2\\left(1-\\frac{\\dot L^2}{c^2}\\right)\\dot L\\,u_x(L,t)^2}.\n\\]\n其成立不要求慢变，只需小横位移近似及边界运动亚声速以正常解释能流方向。\n(2) 瞬时Dirichlet模态为 \\(\\sin(n\\pi x/L)\\)，频率\n\\[\n\\omega_n(t)=\\frac{n\\pi c}{L(t)}.\n\\]\n在 \\(|\\dot\\omega_n|/\\omega_n^2\\ll1\\) 以及模态耦合可忽略时，单模动作量 \\(J_n=E_n/\\omega_n\\) 为绝热不变量。因此\n\\[\n\\frac{E_n(t)}{E_n(0)}=\\frac{L(0)}{L(t)}.\n\\]\n在转折时刻 \\(E_n=\\frac T2\\int_0^L u_x^2 dx=Tn^2\\pi^2A^2/(4L)\\)，上式表明腹部物理位移振幅 \\(A\\) 在领先绝热阶保持常数；归一化正弦模态的广义坐标振幅则随 \\(\\sqrt L\\) 变化，两者不能混淆。\n(3) 将驻波斜率 \\(u_x(L,t)=(-1)^n(n\\pi/L)A\\cos\\omega_nt\\) 代入 (1)，以 \\(\\langle\\cos^2\\rangle=1/2\\)、舍弃 \\(O((\\dot L/c)^2)\\)，有\n\\[\n\\langle \\dot E\\rangle=-\\frac{Tn^2\\pi^2A^2}{4L^2}\\dot L\n=-\\frac{E_n}{L}\\dot L.\n\\]\n移动夹持点所承受的附加有效横向波动广义力大小为\n\\[\n\\langle F_{\\rm end}\\rangle\n=\\frac{Tn^2\\pi^2A^2}{4L^2}=\\frac{E_n}{L}\n=-\\left(\\frac{\\partial E_n}{\\partial L}\\right)_{J_n}.\n\\]\n伸长时边界从横向振动汲取能量；压缩时外界做正功，量纲 \\(E/L\\) 是力。\n(4) 在移动壁参考系（低速近似的Galilei波动运动学）入射频率为 \\(\\omega_i-k_i v_w=\\omega_i(1-v_w/c)\\)；反射回实验室时再乘 \\(c/(c+v_w)\\) 得\n\\[\n\\omega_r=\\omega_i\\frac{c-v_w}{c+v_w},\n\\quad\\frac{\\omega_r-\\omega_i}{\\omega_i}\n=-\\frac{2v_w}{c}+O(v_w^2/c^2).\n\\]\n一束波在固定左端与移动右端之间约每 \\(2L/c\\) 遇到一次右端，故\n\\[\n\\frac{\\dot\\omega}{\\omega}\\simeq\n\\frac{c}{2L}\\left(-\\frac{2\\dot L}{c}\\right)\n=-\\frac{\\dot L}{L},\n\\]\n与 \\(\\omega_n\\propto L^{-1}\\)、\\(E_n/\\omega_n\\) 不变一致。快速运动引起模态混合、边界相位非绝热变化，不能把瞬时频率或单模绝热不变量当作精确守恒。\n"
+      }
+    },
+    "W076": {
+      "meta.json": {
+        "bytes": 770,
+        "git_blob": "5105e4e07c947980d86ed53aebc7ac8b823d0a66",
+        "text": "{\n  \"id\": \"W076\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"Kelvin–Voigt应变率耗散弦的复色散、过阻尼分支与严格耗散泛函\",\n  \"tags\": [\n    \"应变率型粘弹波动方程\",\n    \"复频率两分支\",\n    \"波数阈值和扩散极限\",\n    \"正定能量耗散恒等式\"\n  ],\n  \"answer\": \"\\\\omega_\\\\pm=-i\\\\frac{\\\\eta k^2}{2\\\\mu}\\\\pm\\\\sqrt{\\\\frac{T}{\\\\mu}k^2-\\\\left(\\\\frac{\\\\eta k^2}{2\\\\mu}\\\\right)^2},\\\\quad k_c=\\\\frac{2\\\\sqrt{\\\\mu T}}{\\\\eta}\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 115,\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v5-round14-draft\",\n  \"challenge_profile\": \"high-multistage-original-core\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 1027,
+        "git_blob": "c8421f92221dd71172e50ddc492b3157f50b26aa",
+        "text": "(1) 无限长均匀细弦质量线密度 \\(\\mu>0\\)、弹性张力参数 \\(T>0\\)，具有Kelvin–Voigt应变率阻力系数 \\(\\eta>0\\)（与 \\(T\\) 同类乘以时间量纲）。小横位移满足横向单位长度内力 \\(T u_x+\\eta u_{xt}\\) 的空间梯度。推导波动方程及复色散关系，采用 \\(e^{i(kx-\\omega t)}\\) 的频率符号约定。\n(2) 求两支复频率并分类波数 \\(0<|k|<k_c\\)、\\(|k|=k_c\\) 与 \\(|k|>k_c\\) 的欠阻尼、临界、过阻尼情况。求长波相速度与幅度衰减率的首项，说明为何不能把实群速度推广为高 \\(k\\) 的传播速度。\n(3) 对周期边界或空间无穷远衰减的任意实位移场，从波动方程严格推出机械能\n\\(E=\\frac12\\int[\\mu u_t^2+Tu_x^2]\\,dx\\) 的耗散恒等式，辨别耗散机制是 \\(u_{xt}\\) 而非 \\(u_t\\)。\n(4) 对固定 \\(\\eta,T,\\mu\\) 的短波极限推导两支纯衰减时间尺度的标度，并核对 \\(\\eta\\to0^+\\) 极限、特征波数的量纲以及在微观长度尺度为何应放弃局域连续介质近似。\n"
+      },
+      "solution.tex": {
+        "bytes": 1697,
+        "git_blob": "88afe090799dd01014929528429f33ebdec127d2",
+        "text": "(1) 动量方程\n\\[\n\\mu u_{tt}=\\partial_x(Tu_x+\\eta u_{xt})=Tu_{xx}+\\eta u_{xxt}.\n\\]\n代入 \\(u=e^{i(kx-\\omega t)}\\)，得\n\\(-\\mu\\omega^2=-Tk^2+i\\eta\\omega k^2\\)，即\n\\[\n\\mu\\omega^2+i\\eta k^2\\omega-Tk^2=0.\n\\]\n(2) 二次方程解\n\\[\n\\omega_\\pm=-i\\frac{\\eta k^2}{2\\mu}\n\\pm\\sqrt{\\frac{T}{\\mu}k^2-\\left(\\frac{\\eta k^2}{2\\mu}\\right)^2}.\n\\]\n定义 \\(c=\\sqrt{T/\\mu}\\) 与 \\(k_c=2\\mu c/\\eta=2\\sqrt{\\mu T}/\\eta\\)。\\(|k|<k_c\\) 时有振荡实部，两个共轭意义下的行波均以 \\(\\eta k^2/(2\\mu)\\) 衰减；等号处两根合并；\\(|k|>k_c\\) 时根号纯虚，两个模态都只发生指数衰减。长波\n\\[\n\\omega_\\pm=\\pm c|k|\\left[1-\\frac{\\eta^2 k^2}{8\\mu T}+O(k^4)\\right]\n-i\\frac{\\eta k^2}{2\\mu}.\n\\]\n对于无实传播频率的高 \\(k\\) 弛豫分支，不能把 \\(d\\,\\mathrm{Re}\\omega/dk\\) 当作有意义的能量传播速度。\n(3) 两侧积分并分部：\n\\[\n\\dot E=\\int(\\mu u_tu_{tt}+Tu_xu_{xt})\\,dx\n=\\int[u_t(Tu_{xx}+\\eta u_{xxt})+Tu_xu_{xt}]\\,dx\n=-\\eta\\int u_{xt}^2\\,dx\\le0,\n\\]\n边界通量 \\([Tu_tu_x+\\eta u_tu_{xt}]_{\\rm ends}=0\\)。只有空间速度梯度产生粘弹耗散；均匀平移 \\(u_x=0\\) 不会被这种内摩擦阻尼。\n(4) 当 \\(|k|\\gg k_c\\)，写 \\(a=\\eta k^2/(2\\mu)\\)，\\(\\sqrt{a^2-c^2k^2}=a-c^2k^2/(2a)+o(1)\\)，从而\n\\[\n\\omega_{\\rm slow}\\sim-i\\frac{T}{\\eta},\\qquad\n\\omega_{\\rm fast}\\sim-i\\frac{\\eta k^2}{\\mu}\n+i\\frac T\\eta.\n\\]\n两支时间尺度分别约为 \\(\\eta/T\\)、\\(\\mu/(\\eta k^2)\\)。\\(\\eta\\to0^+\\) 时 \\(k_c\\to\\infty\\)，固定 \\(k\\) 恢复 \\(\\omega=\\pm c|k|\\) 和守恒弦能。\\([\\eta]=[T]\\times{\\rm time}\\) 保证 \\(k_c\\) 为逆长度。极短波接近纤维微结构、弯曲刚度或非局域响应尺度时，简单应变率型本构不再可靠。\n"
+      }
+    },
+    "W077": {
+      "meta.json": {
+        "bytes": 760,
+        "git_blob": "de5007a4ecacfa86744a4fc498f60b0f7dded81f",
+        "text": "{\n  \"id\": \"W077\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"Kirchhoff–Love矩形薄板的双指标模态、频率简并与弯曲能量守恒\",\n  \"tags\": [\n    \"二维薄板双拉普拉斯动力学\",\n    \"简支矩形谱和模态正交\",\n    \"色散群速及平方简并\",\n    \"Poisson比弯曲能正定与边界力矩\"\n  ],\n  \"answer\": \"\\\\omega_{mn}=\\\\sqrt{\\\\frac{D}{\\\\rho h}}\\\\left[(m\\\\pi/a)^2+(n\\\\pi/b)^2\\\\right],\\\\quad D=\\\\frac{Eh^3}{12(1-\\\\nu^2)}\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 115,\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v5-round14-draft\",\n  \"challenge_profile\": \"high-multistage-original-core\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 1035,
+        "git_blob": "2a12f51fcf8eb5c5656cd504ab1cb509189b3796",
+        "text": "(1) 均匀各向同性薄弹性板厚 \\(h\\)，面质量密度 \\(\\rho h\\)，杨氏模量 \\(E>0\\)，Poisson比 \\(-1<\\nu<1/2\\)。四边分别 \\(x=0,a\\) 与 \\(y=0,b\\) 均简支。采用Kirchhoff–Love小挠度理论，给定弯曲势能\n\\[\nV=\\frac D2\\int_\\Omega[w_{xx}^2+w_{yy}^2+2\\nu w_{xx}w_{yy}+2(1-\\nu)w_{xy}^2]\\,dA,\\quad D=\\frac{Eh^3}{12(1-\\nu^2)}.\n\\]\n由变分得到内域场方程及简支边界条件。\n(2) 求正交正弦本征模态与完整频率 \\(\\omega_{mn}\\)，说明无转动和平移零频的理由。对方形板 \\(a=b\\) 讨论 \\((m,n)\\leftrightarrow(n,m)\\) 的简并，并解释连续旋转对称为何并不存在。\n(3) 在无限大同类薄板上求平面弯曲波色散 \\(\\omega(k)\\)、相速度与群速度；核查长波群速，以及短波下忽略横向剪切和旋转惯量的适用界限。\n(4) 由内域场方程与弯曲势能独立证明闭合简支板的总能量守恒；说明 \\(-1<\\nu<1/2\\) 下势能正定的矩阵判据，并写出单一模态在任意时刻的动能与弯曲势能互换关系。\n"
+      },
+      "solution.tex": {
+        "bytes": 2083,
+        "git_blob": "1280ff45f1ff180a44199a3d4ac3584214e23ce2",
+        "text": "(1) 动能 \\(T_{\\rm kin}=\\frac{\\rho h}{2}\\int_\\Omega w_t^2\\,dA\\)。对 \\(V\\) 作两次分部，并在内域取任意 \\(\\delta w\\)，得到\n\\[\n\\rho h\\,w_{tt}+D\\nabla^4w=0,\\qquad\n\\nabla^4=(\\partial_{xx}+\\partial_{yy})^2.\n\\]\n直线简支边 \\(x=\\mathrm{const}\\) 的条件 \\(w=0,\\ M_{xx}=-D(w_{xx}+\\nu w_{yy})=0\\)，边 \\(y=\\mathrm{const}\\) 为 \\(w=0,\\ M_{yy}=-D(w_{yy}+\\nu w_{xx})=0\\)。切向导数项在直边角端按弱形式处理。\n(2) 令\n\\[\nw_{mn}(x,y,t)=q_{mn}(t)\\sin\\frac{m\\pi x}a\\sin\\frac{n\\pi y}b,\\qquad m,n\\ge1.\n\\]\n各边 \\(w=0\\)，且 \\(w_{xx},w_{yy}\\propto w\\) 在边界消失，故弯矩边界满足；正交性使各模态解耦：\n\\[\n\\ddot q_{mn}+\\omega_{mn}^2q_{mn}=0,\\quad\n\\omega_{mn}=\\sqrt{\\frac D{\\rho h}}\\left[\\left(\\frac{m\\pi}a\\right)^2+\\left(\\frac{n\\pi}b\\right)^2\\right]>0.\n\\]\n四边固定挠度使均匀位移和刚体转角不能满足边界。方板有 \\(m\\ne n\\) 时 \\(\\omega_{mn}=\\omega_{nm}\\)，这种简并来自交换对称，而不是连续平面旋转群。\n(3) 无限平板 \\(w\\propto e^{i(\\boldsymbol k\\cdot\\boldsymbol r-\\omega t)}\\) 产生\n\\[\n\\omega=\\sqrt{\\frac D{\\rho h}}|\\boldsymbol k|^2,\\quad\nv_p=\\sqrt{\\frac D{\\rho h}}|\\boldsymbol k|,\\quad\n\\boldsymbol v_g=2\\sqrt{\\frac D{\\rho h}}\\boldsymbol k.\n\\]\n长波 \\(k\\to0\\) 两速度都趋零而 \\(v_g=2v_p\\)。短波满足 \\(kh\\ll1\\) 才可忽略厚度方向剪切和截面转动惯量；不能外推无限群速。\n(4) 对场方程乘 \\(w_t\\) 积分，两次分部，用简支边的零位移/零弯矩条件消去边功，得到\n\\[\n\\frac d{dt}\\left[\n\\frac{\\rho h}2\\int_\\Omega w_t^2\\,dA+V\n\\right]=0.\n\\]\n弯曲能密度可写成 \\(D[(w_{xx}+w_{yy})^2-2(1-\\nu)(w_{xx}w_{yy}-w_{xy}^2)]/2\\)。对 \\((w_{xx},w_{yy})\\)，二次型矩阵 \\(\\begin{pmatrix}1&\\nu\\\\\\nu&1\\end{pmatrix}\\) 的特征值 \\(1\\pm\\nu>0\\)，同时 \\(2(1-\\nu)>0\\)，故正定。若 \\(q=A\\cos(\\omega t+\\phi)\\)，归一化弦模面积积分为 \\(ab/4\\)，\n\\[\nT_{\\rm kin}=\\frac{\\rho h\\,ab}{8}A^2\\omega^2\\sin^2(\\omega t+\\phi),\\quad\nV=\\frac{\\rho h\\,ab}{8}A^2\\omega^2\\cos^2(\\omega t+\\phi).\n\\]\n其和为定值，与独立模式频率解一致。\n"
+      }
+    },
+    "W078": {
+      "meta.json": {
+        "bytes": 819,
+        "git_blob": "97b0b494fa3e6e21b34d8d23f28c447e461a2817",
+        "text": "{\n  \"id\": \"W078\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"Abraham–Lorentz自辐射振子的跑逸根、降阶阻尼与Schott能量守恒\",\n  \"tags\": [\n    \"带三阶辐射反作用的谐振子\",\n    \"非物理跑逸解与降阶近似\",\n    \"辐射功率和Schott近场能\",\n    \"弱辐射阻尼与因果边界\"\n  ],\n  \"answer\": \"\\\\lambda_{\\\\rm runaway}\\\\sim\\\\tau^{-1},\\\\quad \\\\gamma_{\\\\rm eff}=\\\\tfrac12\\\\tau\\\\omega_0^2,\\\\quad \\\\frac d{dt}\\\\left(E_{\\\\rm mech}-m\\\\tau\\\\dot x\\\\ddot x\\\\right)=-m\\\\tau\\\\ddot x^2\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 115,\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v5-round14-draft\",\n  \"challenge_profile\": \"high-multistage-original-core\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 1059,
+        "git_blob": "264c5ab81a3f23ff27a13b4de8740d52d7a9a5ee",
+        "text": "(1) 一个电荷振子质量 \\(m>0\\)、固有角频率 \\(\\omega_0>0\\)，在非相对论经典Abraham–Lorentz近似下满足\n\\[\nm\\ddot x+m\\omega_0^2x=m\\tau\\dddot x,\\qquad \\tau>0,\\quad \\tau\\omega_0\\ll1.\n\\]\n建立指数解 \\(x=e^{\\lambda t}\\) 的特征三次方程，证明存在一个正实根（跑逸根），求其 \\(\\tau\\to0\\) 的主导标度，说明其不应作为物理可接受的自由初值响应。\n(2) 通过对小 \\(\\tau\\) 的降阶，把 \\(\\dddot x\\) 在力项中用零阶振子方程代替，写出稳定二阶有效方程及复频率的首阶修正，求振幅与机械能的长期衰减率。\n(3) 不采用有效黏性阻尼猜测，直接以原三阶方程乘 \\(\\dot x\\)，推导机械能与可交换的近场Schott项、向外辐射的Larmor功率之间的严格能量恒等式，说明Schott项符号与辐射功率始终非负。\n(4) 用降阶近似的自由谐振运动求周期平均辐射功率，独立检验机械能衰减率；讨论 \\(\\tau\\to0\\) 极限、经典点电荷近似、预加速与外驱动因果处理的适用边界。\n"
+      },
+      "solution.tex": {
+        "bytes": 1977,
+        "git_blob": "0f43c42b28d3dfc17d2e5a1d63ccb880ec65f6b2",
+        "text": "(1) 令 \\(x(t)\\propto e^{\\lambda t}\\)，得到\n\\[\n\\tau\\lambda^3-\\lambda^2-\\omega_0^2=0.\n\\]\n在 \\(\\lambda=0\\) 左端为 \\(-\\omega_0^2<0\\)，\\(\\lambda\\to+\\infty\\) 时趋正，因此至少一个正实根。对该多项式，正实区间的符号变化恰一次，由Descartes符号法则只有一个正实根；设 \\(\\lambda=\\tau^{-1}+\\delta\\)，首阶求 \\(\\delta\\sim\\omega_0^2\\tau\\)，故 \\(\\lambda_{\\rm runaway}\\sim1/\\tau\\)。它在小 \\(\\tau\\) 时极快指数增长，违反微扰反作用近似的自洽性，物理边界须剔除这一初值方向。\n(2) 零阶有 \\(\\ddot x\\simeq-\\omega_0^2x\\)，故 \\(\\dddot x\\simeq-\\omega_0^2\\dot x\\)。于是稳定降阶方程\n\\[\n\\ddot x+\\tau\\omega_0^2\\dot x+\\omega_0^2x=0.\n\\]\n两根\n\\[\n\\lambda_\\pm=-\\frac{\\tau\\omega_0^2}{2}\\pm i\\omega_0+O(\\tau^2\\omega_0^3).\n\\]\n故振幅按 \\(e^{-\\gamma_{\\rm eff}t}\\) 衰减，\\(\\gamma_{\\rm eff}=\\tau\\omega_0^2/2\\)；平均机械能按 \\(e^{-\\tau\\omega_0^2t}\\) 衰减。\n(3) 原方程乘 \\(\\dot x\\)：\n\\[\n\\frac d{dt}\\left[\\frac m2(\\dot x^2+\\omega_0^2x^2)\\right]\n=m\\tau\\dot x\\,\\dddot x\n=m\\tau\\frac d{dt}(\\dot x\\ddot x)-m\\tau\\ddot x^2.\n\\]\n定义机械能 \\(E_{\\rm mech}=\\frac m2(\\dot x^2+\\omega_0^2x^2)\\)，则\n\\[\n\\boxed{\\frac d{dt}[E_{\\rm mech}-m\\tau\\dot x\\ddot x]\n=-m\\tau\\ddot x^2\\le0}.\n\\]\n右侧 \\(P_{\\rm rad}=m\\tau\\ddot x^2\\) 为非相对论Larmor辐射功率，近场Schott能形式上取 \\(-m\\tau\\dot x\\ddot x\\)。它可正可负，故不能简单把机械能导数逐时等同负辐射功率。\n(4) 在一周期内取 \\(x=A\\cos\\omega_0t\\)，有 \\(\\langle\\ddot x^2\\rangle=A^2\\omega_0^4/2\\)，因此\n\\[\n\\langle P_{\\rm rad}\\rangle=\\frac{m\\tau A^2\\omega_0^4}{2}\n=\\tau\\omega_0^2\\left(\\frac{m\\omega_0^2A^2}{2}\\right)\n=\\tau\\omega_0^2E_{\\rm mech},\n\\]\n与降阶能量衰减率吻合。辐射反作用时间 \\(\\tau\\) 必比振荡尺度短，外驱动力不能在远短于 \\(\\tau\\) 的时间尺度激变；原点电荷三阶模型还涉及跑逸与预加速病态，降阶模型是弱反作用有效近似。\n"
+      }
+    },
+    "W079": {
+      "meta.json": {
+        "bytes": 696,
+        "git_blob": "011c8354c78f000ecc01fc3c382858aabbb3d4eb",
+        "text": "{\n  \"id\": \"W079\",\n  \"topic\": \"振动与波动\",\n  \"title\": \"FPUT–β非线性晶格的谐波平衡硬化色散、群速与严格能量守恒\",\n  \"tags\": [\n    \"四次键势非线性离散波\",\n    \"小振幅声学色散\",\n    \"三次力基波谐波平衡\",\n    \"正定Hamilton与群速度\"\n  ],\n  \"answer\": \"\\\\omega^2\\\\simeq\\\\frac{4K}{m}\\\\sin^2(ka/2)+\\\\frac{12\\\\beta A^2}{m}\\\\sin^4(ka/2)\",\n  \"kind\": \"综合推导题\",\n  \"level\": 5,\n  \"estimated_minutes\": 115,\n  \"quality_status\": \"待独立复核\",\n  \"tier\": \"advanced_composite\",\n  \"format\": \"latex-fragment-v1\",\n  \"revision\": \"composite-v5-round14-draft\",\n  \"challenge_profile\": \"high-multistage-original-core\",\n  \"complexity_tier\": \"L5-C\"\n}\n"
+      },
+      "question.tex": {
+        "bytes": 835,
+        "git_blob": "d3c4ce7b74bc9729d5a7b2d24b71211edba7c3e9",
+        "text": "(1) 周期一维链有 \\(N\\) 个等质量 \\(m>0\\) 质点、格距 \\(a\\)，位移 \\(u_j\\) 与相邻键伸长 \\(d_j=u_{j+1}-u_j\\)。键势 \\(W(d)=Kd^2/2+\\beta d^4/4\\)，\\(K,\\beta>0\\)。从离散Hamilton函数推导精确动力学方程、总动量守恒与每个键的力。\n(2) 对小振幅 Bloch 模 \\(u_j=A\\cos(kja-\\omega t)\\) 求线性色散、\\(0<k<\\pi/a\\) 的群速度、长波声速与布里渊区边缘速度。\n(3) 保留三次非线性键力的基频分量，利用谐波平衡求到 \\(A^2\\) 阶的幅度依赖 \\(\\omega^2(k,A)\\)，解释正 \\(\\beta\\) 的硬化性质及该近似为什么不构成精确有限振幅单色行波。\n(4) 对任意有限初态求能量与动量守恒恒等式，验证声学平移零模；说明谐波平衡的误差阶与第三谐波来源，并用链的周期边界检验散度项完全抵消。\n"
+      },
+      "solution.tex": {
+        "bytes": 1763,
+        "git_blob": "6439419aed14970f393d40d6394540dc379b1706",
+        "text": "(1) 取周期 \\(u_{j+N}=u_j\\)，Hamilton函数为\n\\[\nH=\\sum_{j=1}^N\\left[\\frac{p_j^2}{2m}+\\frac K2d_j^2+\\frac\\beta4d_j^4\\right],\\quad p_j=m\\dot u_j.\n\\]\n由 \\(\\dot p_j=-\\partial H/\\partial u_j\\) 得\n\\[\nm\\ddot u_j=K(d_j-d_{j-1})+\\beta(d_j^3-d_{j-1}^3).\n\\]\n每条键对相邻质点作用大小相等、方向相反，故 \\(\\sum_j p_j\\) 恒定。\n(2) 线性化并代入 \\(e^{i(kja-\\omega t)}\\) 得\n\\[\n\\omega_0^2=\\frac{4K}{m}\\sin^2\\frac{ka}{2},\\quad\nc_g=\\frac{d\\omega_0}{dk}=a\\sqrt{\\frac Km}\\cos\\frac{ka}{2}\n\\quad(0<k<\\pi/a).\n\\]\n长波 \\(\\omega_0\\simeq a\\sqrt{K/m}|k|\\)，群速趋 \\(a\\sqrt{K/m}\\)；区边 \\(ka=\\pi\\) 群速度为零。\n(3) 令 \\(\\theta=kja-\\omega t\\)、\\(s=\\sin(ka/2)\\)。键伸长\n\\[\nd_j=-2A s\\sin(\\theta+ka/2).\n\\]\n用 \\(\\sin^3\\varphi=(3\\sin\\varphi-\\sin3\\varphi)/4\\)，在基频上 \\(d_j^3\\simeq(3/4)(2As)^2d_j\\)，于是键等效劲度 \\(K_{\\rm eff}=K+3\\beta A^2s^2\\)，再用线性差分的本征值 \\(4s^2\\)，得\n\\[\n\\boxed{\\omega^2\\simeq\\frac{4K}{m}s^2+\\frac{12\\beta A^2}{m}s^4}.\n\\]\n\\(\\beta>0\\) 使频率随振幅增大，\\(k=0\\) 则频率仍为零。遗漏三次力的 \\(3k,3\\omega\\) 成分，故泛泛的单色波不是精确非线性解；非共振弱非线性时它对基频进一步影响起始于 \\(A^4\\) 阶。\n(4) 对全链求导，\n\\[\n\\dot H=\\sum_j\\dot u_j\\left[m\\ddot u_j-K(d_j-d_{j-1})-\\beta(d_j^3-d_{j-1}^3)\\right]=0.\n\\]\n更独立地，将各键的功率写为 \\(W'(d_j)(\\dot u_{j+1}-\\dot u_j)\\)，逐项与两个邻居的内力功相消，因此机械能对任意初态严格守恒且 \\(\\beta>0\\) 确保势能非负。全链刚性平移 \\(u_j\\mapsto u_j+C\\) 不改变任何 \\(d_j\\)，给 \\(k=0\\) 零模及动量守恒。有限幅度若使被忽略的高谐波显著，需数值积分完整离散方程，不能外推单色近似。\n"
+      }
+    }
+  },
+  "prefix": "W",
+  "schema": 1
+}

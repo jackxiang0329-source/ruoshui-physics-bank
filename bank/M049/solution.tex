@@ -1,7 +1,0 @@
-(1) 以支点为原点，摆球位置 \(x=\ell\sin\theta,\ y=y_p+\ell\cos\theta\)。动能展开为 \(m[\ell^2\dot\theta^2-2\ell\dot y_p\dot\theta\sin\theta+\dot y_p^2]/2\)，势能为 \(mg(y_p+\ell\cos\theta)\)。Euler--Lagrange 方程化简得 \(\ddot\theta-(g+\ddot y_p)\sin\theta/\ell=0\)，即 \(\ddot\theta-g\sin\theta/\ell+(a\omega^2/\ell)\cos(\omega t)\sin\theta=0\)。倒立点为零角，所以重力对应负刚度。
-
-(2) 设慢角为 \(\Theta\)，快速微振 \(\xi=O(a/\ell)\)，\(\theta=\Theta+\xi\)。在快速时间尺度解 \(\ddot\xi\simeq-(a\omega^2/\ell)\cos(\omega t)\sin\Theta\)，得 \(\xi\simeq(a/\ell)\cos(\omega t)\sin\Theta\)。将它乘回驱动项并按一个周期平均，利用 \(\langle\cos^2\rangle=1/2\) 得慢方程 \(\ddot\Theta=\{g/\ell-[a^2\omega^2/(2\ell^2)]\cos\Theta\}\sin\Theta\)。
-
-(3) 令平均运动的势能为 \(U_{\rm eff}=mg\ell\cos\Theta+ma^2\omega^2\sin^2\Theta/4\)，则 \(m\ell^2\ddot\Theta=-\partial U_{\rm eff}/\partial\Theta\)。在倒立点 \(\Theta=0\)，二阶展开为 \(U_{\rm eff}=\mathrm{const}+[ma^2\omega^2/4-mg\ell/2]\Theta^2+\cdots\)。严格线性稳定要求 \(a^2\omega^2>2g\ell\)，小振动角频率 \(\omega_{\rm inv}=\sqrt{a^2\omega^2/(2\ell^2)-g/\ell}\)。
-
-(4) 在下垂平衡 \(\Theta=\pi+\delta\)，势能二阶项为 \(mg\ell\,\delta^2/2+ma^2\omega^2\,\delta^2/4\)，故 \(\omega_{\rm down}=\sqrt{g/\ell+a^2\omega^2/(2\ell^2)}\)。稳定化并非摆球重力消失，而是快驱动产生有效正曲率；使用上述结果还需 \(a/\ell\ll1\) 以及 \(\omega_{\rm inv}/\omega\ll1\)，否则快慢尺度分离失效，不能把平均势误当成任意频率下的精确势。

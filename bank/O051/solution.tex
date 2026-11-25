@@ -1,7 +1,0 @@
-(1) 定义二维旋转矩阵 \(R(\theta)=\begin{pmatrix}\cos\theta&-\sin\theta\\\sin\theta&\cos\theta\end{pmatrix}\)，在本征轴坐标中延迟算符为 \(D=\operatorname{diag}(1,e^{i\delta})\)。实验室坐标的 Jones 矩阵 \(J=R(\theta)D R(-\theta)\)，因 \(R\) 为正交矩阵而 \(D^\dagger D=I\)，可得 \(J^\dagger J=I\)，故任意输入 Jones 规范的平方总和保持不变。旋转符号若采用反向角定义会改变交叉分量的整体符号，但不改变圆偏振度绝对值。
-
-(2) 令 \(\theta=\pi/4\)，直接矩阵相乘得 \(E_x=(1+e^{i\delta})/2=e^{i\delta/2}\cos(\delta/2)\)，\(E_y=(1-e^{i\delta})/2=-ie^{i\delta/2}\sin(\delta/2)\)。去掉共同相位后的矢量为 \((\cos(\delta/2),-i\sin(\delta/2))\)。取 \(S_0=|E_x|^2+|E_y|^2\)、\(S_1=|E_x|^2-|E_y|^2\)、\(S_2=2\Re(E_x^*E_y)\)、\(S_3=2\Im(E_x^*E_y)\)，得到 \(S_0=1,\ S_1=\cos\delta,\ S_2=0,\ S_3=-\sin\delta\)。右旋/左旋术语随观测方向与时间约定而变，但 \(S_3\) 的代数符号已明确。
-
-(3) 若 \(\delta=\pi/2\) 模 \(\pi\)，两个正交分量幅值相等且相差 \(\pm\pi/2\)，于是 \(|S_3|=1\)、\(S_1=S_2=0\)，产生纯圆偏振。若 \(\delta=\pi\)，Jones 矢量在 \(\theta=\pi/4\) 时成为 \((0,-i)\)，即线偏振方向旋转九十度，这是半波片的结果。总强度 \(S_0=\cos^2(\delta/2)+\sin^2(\delta/2)=1\)，体现理想延迟片只改变偏振态、不产生净功率衰减。
-
-(4) 令 \(\delta=\pi/2+\varepsilon\)。利用 \(S_1=\cos\delta=-\sin\varepsilon=-\varepsilon+O(\varepsilon^3)\)，\(S_3=-\sin\delta=-\cos\varepsilon=-1+\varepsilon^2/2+O(\varepsilon^4)\)，得到圆偏振度的绝对值 \(|S_3|=1-\varepsilon^2/2+O(\varepsilon^4)\)，线偏振残余分量 \(S_1\) 在一阶出现。因规范化 Stokes 长度 \(S_1^2+S_2^2+S_3^2=1\)，这种残余表示纯椭圆偏振而非混合态或吸收；延迟片的相位误差不能靠简单调整输出强度补偿。

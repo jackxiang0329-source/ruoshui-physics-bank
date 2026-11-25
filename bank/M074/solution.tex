@@ -1,7 +1,0 @@
-(1) 纯方位速度场 \(\boldsymbol v=v_\theta(r)\hat{\boldsymbol\theta}\) 自动满足不可压连续性。方位动量方程的黏性项给 \(v_\theta''+v_\theta'/r-v_\theta/r^2=0\)，通解 \(v_\theta=Ar+B/r\)。用 \(v_\theta(a)=a\Omega_a,\ v_\theta(b)=b\Omega_b\) 解线性方程，得到 \(\boxed{A=(b^2\Omega_b-a^2\Omega_a)/(b^2-a^2),\ B=a^2b^2(\Omega_a-\Omega_b)/(b^2-a^2)}\)。这里 \(Ar\) 是刚体旋转分量，\(B/r\) 是承载剪切应力的部分，二者不能混为涡量均匀性。
-
-(2) Newton流体圆柱剪应力为 \(\tau_{r\theta}=\mu(v_\theta'-v_\theta/r)=-2\mu B/r^2\)。作用在任意同心圆柱面上的转矩大小每单位长度为 \(2\pi r^2|\tau_{r\theta}|=4\pi\mu|B|\)，与 \(r\) 无关。若 \(\Omega_a>\Omega_b\)，\(B>0\)，流体对内壁施加阻转矩 \(-4\pi\mu B\)（每单位长度），对外壁施加驱转矩 \(+4\pi\mu B\)；外驱动器需提供相反转矩。两壁相同角速度时 \(B=0\)，剪应力与黏性转矩均消失。
-
-(3) 径向稳态Euler部分为 \(-\rho v_\theta^2/r=-dp/dr\)，故 \(p'=\rho v_\theta^2/r\)。代入 \(v_\theta=Ar+B/r\) 后积分得到 \(\boxed{p(r)-p(a)=\rho[\frac{A^2}{2}(r^2-a^2)+2AB\ln(r/a)-\frac{B^2}{2}(r^{-2}-a^{-2})]}\)。若 \(\Omega_a=\Omega_b=\Omega\)，则 \(A=\Omega,B=0\)，化为 \(p(r)-p(a)=\rho\Omega^2(r^2-a^2)/2\)，正是刚体旋转所需的离心压力梯度。
-
-(4) 唯一非零的应变率张量独立分量为 \(e_{r\theta}=(v_\theta'-v_\theta/r)/2=-B/r^2\)。局部黏性耗散密度 \(2\mu e:e=4\mu B^2/r^4\)，每单位长度积分得 \(\mathcal D/L=4\pi\mu B^2(a^{-2}-b^{-2})\)。由 \(B(a^{-2}-b^{-2})=\Omega_a-\Omega_b\)，即 \(\boxed{\mathcal D/L=4\pi\mu B(\Omega_a-\Omega_b)}\)，恰等于外驱动净功率。若间隙 \(h=b-a\ll a\)，则 \(B\simeq a^3(\Omega_a-\Omega_b)/(2h)\)，内壁转矩大小约 \(2\pi\mu a^3|\Delta\Omega|/h\)。高速旋转可能触发Taylor涡，以上仅适用于假设的稳定层流分支。

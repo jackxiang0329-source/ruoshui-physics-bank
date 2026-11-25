@@ -1,7 +1,0 @@
-(1) 无旋不可压流速度势 \(\phi\) 满足 \(\phi_{xx}+\phi_{zz}=0\)，底面无穿透要求 \(\phi_z(-h)=0\)。取 \(\phi=A\cosh[k(z+h)]e^{i(kx-\omega t)}\)，自由表面位移 \(\eta=\eta_0e^{i(kx-\omega t)}\)。运动学边界是 \(\eta_t=\phi_z(0)\)，动力学边界是 \(\phi_t+g\eta-(\sigma/\rho)\eta_{xx}=0\)。消去 \(A,\eta_0\)，得 \(\omega^2=(gk+\sigma k^3/\rho)\tanh(kh)\)。若忘记底面条件，会将有限深度结果误当为深水 \(\tanh(kh)=1\)。
-
-(2) 相速度 \(c_p=\omega/k=\sqrt{(g/k+\sigma k/\rho)\tanh(kh)}\)，群速度 \(c_g=d\omega/dk\)。对色散关系微分得到 \(c_g=\{[g+3\sigma k^2/\rho]\tanh(kh)+h[gk+\sigma k^3/\rho]\operatorname{sech}^2(kh)\}/(2\omega)\)。波峰的相位传播速率与窄带波包的能量/包络输运速率一般不同。深水时若纯重力支配则 \(\omega\propto k^{1/2}\)，有 \(c_g=c_p/2\)；若纯毛细支配则 \(\omega\propto k^{3/2}\)，有 \(c_g=3c_p/2\)。
-
-(3) 在 \(kh\gg1\) 下 \(\tanh(kh)\to1\)，所以 \(c_p^2=g/k+\sigma k/\rho\)。对 \(k\) 微分，极值条件 \(-g/k^2+\sigma/\rho=0\)，给 \(k_*=\sqrt{\rho g/\sigma}\)，该点是全局极小，因为 \(k\to0,\infty\) 时 \(c_p^2\to\infty\)。代回得 \(c_{p,\min}=(4g\sigma/\rho)^{1/4}\)。长波相速由重力项控制并随波数增大下降，短波表面张力项使相速随波数上升，二者共同形成相速极小值。
-
-(4) 令 \(s=\sigma/\rho\)，在 \(kh\ll1\) 使用 \(\tanh(kh)=kh-(kh)^3/3+O(k^5h^5)\)，则 \(\omega^2=gh\,k^2+[sh-gh^3/3]k^4+O(k^6)\)。其中 \(sh\,k^4\) 是毛细色散，\(-gh^3k^4/3\) 是有限水深重力色散，二者在 \(\sigma/(\rho g)=h^2/3\) 时最低阶抵消。该展开还要求短波毛细及截断误差可控；若系数恰抵消，需要保留 \(k^6\) 项才能判断色散曲线的下一阶形状。

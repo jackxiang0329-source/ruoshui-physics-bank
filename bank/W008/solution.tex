@@ -1,8 +1,0 @@
-动力学方程：
-\[m\ddot x_1+(k+\kappa)x_1-\kappa x_2=0,\qquad m\ddot x_2+(k+\kappa)x_2-\kappa x_1=0.\]
-令 $q_+=x_1+x_2$，$q_-=x_1-x_2$，方程解耦为 $\ddot q_++(k/m)q_+=0$、$\ddot q_-+((k+2\kappa)/m)q_-=0$。因此 $\omega_+=\sqrt{k/m}$、$\omega_-=\sqrt{(k+2\kappa)/m}$；初始 $q_+(0)=q_-(0)=A$，故
-\[x_1(t)=\tfrac A2(\cos\omega_+t+\cos\omega_-t),\qquad x_2(t)=\tfrac A2(\cos\omega_+t-\cos\omega_-t).\]
-令 $\bar\omega=(\omega_++\omega_-)/2$、$\Delta\omega=\omega_--\omega_+>0$，可重写为
-\[x_1=A\cos(\bar\omega t)\cos(\Delta\omega t/2),\qquad x_2=A\sin(\bar\omega t)\sin(\Delta\omega t/2).\]
-当 $\kappa\ll k$，$\Delta\omega\simeq\kappa/\sqrt{km}$，慢包络的第一次交换峰位于 $t\simeq\pi/\Delta\omega$；但它只是包络最大，载波相位一般不在同一时刻达到极大，不能无条件称为某个精确时刻能量完全转移。
-总机械能 $E=\tfrac12m(\dot x_1^2+\dot x_2^2)+\tfrac12k(x_1^2+x_2^2)+\tfrac12\kappa(x_1-x_2)^2$，初始 $E=(k+\kappa)A^2/2$，对运动方程求导得 $\dot E=0$。令 $\kappa\to0$ 有 $\omega_-\to\omega_+$，$x_1\to A\cos\sqrt{k/m}t$、$x_2\to0$。

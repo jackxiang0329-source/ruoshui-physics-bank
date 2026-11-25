@@ -1,7 +1,0 @@
-(1) 先减去不干涉的背景 \(S(k)\)，再把余弦分解为 \((e^{i(2kz_0+\phi_0)}+e^{-i(2kz_0+\phi_0)})/2\)。对一个正深度解析分量，令 \(\Delta z=z-z_0\)，傅里叶核选 \(e^{2ikz}\) 时相应指数符号随变换约定改变，但包络相同。利用高斯特征函数 \(\int S(k)e^{2ik\Delta z}dk=S_0e^{2ik_0\Delta z}e^{-2\sigma_k^2\Delta z^2}\)。实际实谱同时有共轭镜像 \(\pm z_0\)，不能将两者误认为两个真实反射面。
-
-(2) 复振幅包络满足 \(|A|/|A(0)|=\exp(-2\sigma_k^2\Delta z^2)\)。设其降至 \(1/2\)，得到 \(|\Delta z|=\sqrt{\ln2/(2\sigma_k^2)}\)，故全宽 \(\mathrm{FWHM}_{|A|}=\sqrt{2\ln2}/\sigma_k\)。强度为 \(|A|^2\propto\exp(-4\sigma_k^2\Delta z^2)\)，故 \(\mathrm{FWHM}_{|A|^2}=\sqrt{\ln2}/\sigma_k\)。这里光学深度 \(z\) 已按相位 \(2kz\) 定义；若使用物理长度还须乘介质群折射率校正。
-
-(3) 设 \(q=k-k_0\)，带色散的高斯积分为 \(\int\exp[-q^2/(2\sigma_k^2)+i\phi_2q^2/2+i2q\Delta z]dq\)。配方积分得 \(A_{\phi_2}(\Delta z)/A_0(0)=(1-i\phi_2\sigma_k^2)^{-1/2}\exp[-2\sigma_k^2\Delta z^2/(1-i\phi_2\sigma_k^2)]e^{2ik_0\Delta z}\)。令 \(D=\phi_2\sigma_k^2\)，模长包络宽度比为 \(\sqrt{1+D^2}\)，峰值模长比为 \((1+D^2)^{-1/4}\)。在谱域乘以 \(\exp[-i\phi_2(k-k_0)^2/2]\) 可消去已知二阶相位；这不等于凭空恢复丢失的信噪比。
-
-(4) 采样 \(k_j=k_{\min}+j\Delta k\) 时相位因子 \(e^{2ik_jz}\) 对 \(z\mapsto z+\pi/\Delta k\) 只多一个与 \(j\) 无关的常数，故深度混叠周期为 \(\pi/\Delta k\)。有符号Nyquist区间可选 \(-\pi/(2\Delta k)<z<\pi/(2\Delta k)\)，实谱的共轭镜像还使正负深度难以区分。若 \(V\to0\)，干涉项消失，无法定位镜面；若 \(\sigma_k\to0\)，包络宽度趋无穷，单色光不提供轴向分辨能力。
