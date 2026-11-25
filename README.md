@@ -19,6 +19,12 @@
 
 已通过 [两书校验及XeLaTeX构建](https://github.com/jackxiang0329-source/ruoshui-physics-bank/actions/runs/45214069462) 与 [Irodov完整专项质检及PDF构建](https://github.com/jackxiang0329-source/ruoshui-physics-bank/actions/runs/45216150513)。技术检查成功不代表逐题独立学术终审。
 
+## 2026-11-25 继续精简
+
+- [赵王两书八批逐题质检合订](external_sources/zhao-wang-physics-5e-elegant/qa-eight-rounds-summary.md)：八份账本原文集中在既有汇总页，保留批次锚点与 Git 原件链接。
+- [历史导入日志归档](external_sources/logs/history_2026_10.json)：五份 10 月 26—28 日的 JSONL 原文完整收入一份 JSON，附原路径、Git blob SHA、字节数和提交号；现行 latest 报告和按日写入接口保留。
+- 正式题号、题面、解析、教材 TeX、PDF、索引、脚本和 CI 不因本次历史文档整理而改变。技术执行结果以 Actions 为准。
+
 ## 快速入口
 
 | 我要查看 | GitHub 路径 | 内容与状态 |
