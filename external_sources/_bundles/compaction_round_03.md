@@ -4,8 +4,8 @@
 
 | 来源 | 原 PG 文件数 | 无损归档 | 来源索引 |
 |---|---:|---|---|
-| WeBWorK OPL / BrockPhysics | 59 | [webwork_opl-raw.tar.gz](webwork_opl-raw.tar.gz) | [index.json](../webwork_opl/index.json) |
-| WeBWorK / BrockPhysics 热学 | 21 | [webwork_thermal-raw.tar.gz](webwork_thermal-raw.tar.gz) | [index.json](../webwork_thermal/index.json) |
+| WeBWorK OPL / BrockPhysics | 59 | [webwork_opl-raw.tar.gz](webwork_opl-raw.tar.gz) | [index.json（归档）](../../data/archives/source_metadata.zip) |
+| WeBWorK / BrockPhysics 热学 | 21 | [webwork_thermal-raw.tar.gz](webwork_thermal-raw.tar.gz) | [index.json（归档）](../../data/archives/source_metadata.zip) |
 | **合计** | **80** | 两个归档 + [SHA-256 清单](webwork_sources_manifest.json) | 只作候选，不准直接组卷 |
 
 先前的 19,837 + 318 = 20,155 份原文无损归档保持不变；三轮合计 20,235 份。此操作仅减少 Git 当前工作树的单题文件数，**不重写历史 Git 对象**。

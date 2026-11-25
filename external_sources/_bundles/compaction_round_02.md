@@ -4,8 +4,8 @@
 
 | 来源 | 原逐题文件 | 归档 | 来源索引 |
 |---|---:|---|---|
-| UBC Open Physics Bank | 265 | [ubc_opbp-raw.tar.gz](ubc_opbp-raw.tar.gz) | [index.json](../ubc_opbp/index.json) |
-| IntroPhysics | 53 | [intro_physics-raw.tar.gz](intro_physics-raw.tar.gz) | [index.json](../intro_physics/index.json) |
+| UBC Open Physics Bank | 265 | [ubc_opbp-raw.tar.gz](ubc_opbp-raw.tar.gz) | [index.json（归档）](../../data/archives/source_metadata.zip) |
+| IntroPhysics | 53 | [intro_physics-raw.tar.gz](intro_physics-raw.tar.gz) | [index.json（归档）](../../data/archives/source_metadata.zip) |
 | **合计** | **318** | 2 个归档 + [SHA-256 完整性清单](small_sources_manifest.json) | 原有索引不改 |
 
 已存 19,837 份大型语料的三份归档和 [原完整性清单](manifest.json) **保持原样**；本轮归档额外减少活动文件树 **318 - 3 = 315 个文件**，两轮累计归档 20,155 份原始候选。正式题库的 452 道题、题目与解析 TeX、Irodov ElegantBook、张三慧教材 Draft PR 和 WeBWorK PG 源代码均不受影响。
