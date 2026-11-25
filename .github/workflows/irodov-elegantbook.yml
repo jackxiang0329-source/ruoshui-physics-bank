@@ -6,6 +6,7 @@ on:
   push:
     branches: [main]
     paths:
+      - 'data/archives/library.zip'
       - 'external_sources/irodov-zh-elegant/**'
       - '.github/workflows/irodov-elegantbook.yml'
       - 'data/archives/irodov_chapters.zip'
@@ -22,7 +23,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Verify and restore archived auxiliary files
         run: |
-          if [ -f data/archives/round_qa.zip ]; then
+          if [ -f data/archives/library.zip ] || [ -f data/archives/round_qa.zip ]; then
             python3 scripts/compact_auxiliary.py --verify
             python3 scripts/compact_auxiliary.py --restore
           fi
@@ -166,7 +167,7 @@ jobs:
             git fetch origin main
             # An older compilation must never replace a newer translated book.
             if ! git diff --quiet "$GITHUB_SHA" FETCH_HEAD -- \
-              "$root/main.tex" "$root/cover.tex" "$root/chapters" "data/archives/irodov_chapters.zip"; then
+              "$root/main.tex" "$root/cover.tex" "$root/chapters" "data/archives/irodov_chapters.zip" "data/archives/library.zip"; then
               echo "Newer TeX sources exist: skipping stale PDF publication; queued build will publish."
               exit 0
             fi

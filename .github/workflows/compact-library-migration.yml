@@ -1,0 +1,62 @@
+name: Compact unified archive library
+on:
+  push:
+    branches: [compact-unified-library]
+    paths:
+      - scripts/compact_auxiliary.py
+      - .github/workflows/compact-library-migration.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  migrate:
+    if: github.ref == 'refs/heads/compact-unified-library'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Migrate and verify 49 original blobs
+        run: |
+          python3 scripts/compact_auxiliary.py --migrate
+          python3 scripts/compact_auxiliary.py --verify
+      - name: Verify complete restored structure and source checks
+        run: |
+          python3 scripts/compact_bank.py --restore
+          python3 scripts/check_repository_layout.py
+          python3 scripts/build.py --check
+          python3 scripts/compact_external_candidates.py --verify
+          python3 scripts/compact_small_external_sources.py --verify
+          python3 scripts/compact_webwork_sources.py --verify
+          python3 -m compileall -q scripts tests external_sources
+          python3 external_sources/irodov-zh-elegant/expand_legacy_fragments.py
+          python3 external_sources/irodov-zh-elegant/check_sources.py
+          python3 external_sources/irodov-zh-elegant/lint_problems.py
+          python3 external_sources/zhao-wang-physics-5e-elegant/check_math.py
+          python3 external_sources/zhao-wang-physics-5e-elegant/check_round20_independent.py
+          python3 external_sources/three-college-physics-elegant/check_math.py
+      - name: Commit exact migration
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'refactor: consolidate 19 logical groups into one verified archive library'
+      - name: Correct independently diagnosed missing math delimiter
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('external_sources/three-college-physics-elegant/chapters/hust-ch06.tex')
+          s=p.read_bytes()
+          old='故保留r_B参数'.encode()
+          new='故保留$r_B$参数'.encode()
+          assert s.count(old)==1
+          p.write_bytes(s.replace(old,new))
+          PY
+          python3 scripts/compact_auxiliary.py --pack --group three_college_chapters
+          python3 scripts/compact_auxiliary.py --verify
+          python3 external_sources/three-college-physics-elegant/check_math.py
+          git add data/archives/library.zip
+          git commit -m 'fix: put r_B in math mode in HUST chapter 6'
+      - name: Push verified commits
+        run: git push origin HEAD:compact-unified-library

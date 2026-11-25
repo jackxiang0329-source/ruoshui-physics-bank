@@ -8,7 +8,7 @@
 
 **主要入口** · [题目源文件](../../bank/) · [题目索引](../../data/index.csv) · [题目合订 TeX](../../tex/questions.tex) · [解答合订 TeX](../../tex/solutions.tex)
 
-主库收录高难度综合压轴题。当前题目索引与第 14 批记录均为 **452 道**。第 14 批新增 50 道，技术校验和两册 XeLaTeX 构建通过，仍待独立专家复核。详见 [第 14 批记录](../../data/rounds/2026-10-29-14.json)。
+主库收录高难度综合压轴题。当前题目索引与第 14 批记录均为 **452 道**。第 14 批新增 50 道，技术校验和两册 XeLaTeX 构建通过，仍待独立专家复核。详见 [第 14 批记录（归档）](../../data/archives/library.zip)。
 
 ## 当前唯一正式题库
 - `bank/ID/meta.json`、`question.tex`、`solution.tex` 为权威源；`data/problems.json` 是可读镜像。

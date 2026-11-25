@@ -2,6 +2,7 @@
 """Reversible, byte-checked ZIP storage for derived catalog views and historical QA."""
 import argparse
 import hashlib
+import io
 import json
 import os
 from urllib.parse import unquote, urlparse
@@ -30,6 +31,10 @@ GROUPS = {
     "catalog_working": (r"external_sources/catalog/auto_import_decisions\.json|external_sources/catalog/college_corpus_audit_report\.json|external_sources/catalog/college_next_review\.csv|external_sources/catalog/college_review_preview\.tex|external_sources/catalog/college_review_tex_draft\.tex|external_sources/catalog/college_review_tex_report\.json|external_sources/catalog/coverage_report\.json|external_sources/catalog/discovered_repositories\.json|external_sources/catalog/huggingface_datasets\.json|external_sources/catalog/review_preflight\.csv|external_sources/catalog/review_preflight_report\.json|external_sources/catalog/review_priority\.csv|external_sources/catalog/review_triage_report\.json|external_sources/catalog/upstream_manifest\.json",),
     "retired_migrations": (r"\.github/workflows/compact-auxiliary-migration\.yml|\.github/workflows/compact-bank-migration\.yml|\.github/workflows/compact-textbooks-migration\.yml",),
     "source_logs": (r"external_sources/logs/college_physics_latest\.json|external_sources/logs/history_2026_10\.json|external_sources/logs/huggingface_import_latest\.json|external_sources/logs/intro_physics_latest\.json|external_sources/logs/refresher_physics_latest\.json|external_sources/logs/seephys_import_latest\.json|external_sources/logs/topic_backfill_latest\.json",),
+    "batch_data": (r"data/rounds/2026-10-28-05\.json|data/rounds/2026-10-28-06\.json|data/rounds/2026-10-28-07\.json|data/rounds/2026-10-28-08\.json|data/rounds/2026-10-28-09\.json|data/rounds/2026-10-28-10\.json|data/rounds/2026-10-28-11\.json|data/rounds/2026-10-28-12\.json|data/rounds/2026-10-28-advanced\.json|data/rounds/2026-10-29-13\.json|data/rounds/2026-10-29-14\.json|data/rounds/round14-inprogress\.json",),
+    "bilingual_views": (r"data/localized/zh_CN/中文译稿报告\.json|data/localized/zh_CN/合订/electromagnetism\.md|data/localized/zh_CN/合订/fundamentals\.md|data/localized/zh_CN/合订/mechanics\.md|data/localized/zh_CN/合订/modern\.md|data/localized/zh_CN/合订/optics\.md|data/localized/zh_CN/合订/thermodynamics\.md|data/localized/zh_CN/合订/waves\.md",),
+    "raw_corpora": (r"external_sources/_bundles/college_physics-raw\.tar\.gz|external_sources/_bundles/compaction_round_02\.md|external_sources/_bundles/compaction_round_03\.md|external_sources/_bundles/hf_physics_dpo-raw\.tar\.gz|external_sources/_bundles/intro_physics-raw\.tar\.gz|external_sources/_bundles/manifest\.json|external_sources/_bundles/physics_refresher-raw\.tar\.gz|external_sources/_bundles/small_sources_manifest\.json|external_sources/_bundles/ubc_opbp-raw\.tar\.gz|external_sources/_bundles/webwork_opl-raw\.tar\.gz|external_sources/_bundles/webwork_sources_manifest\.json|external_sources/_bundles/webwork_thermal-raw\.tar\.gz",),
+    "derived_indexes": (r"data/problems\.json|external_sources/catalog/题目总索引\.csv",),
 }
 MANIFEST = "_manifest.json"
 
@@ -45,8 +50,55 @@ def hashes(raw):
     return {"bytes": len(raw), "sha256": hashlib.sha256(raw).hexdigest(),
             "git_blob": hashlib.sha1(b"blob " + str(len(raw)).encode() + b"\0" + raw).hexdigest()}
 
+
+def library_path(root):
+    return root / "data" / "archives" / "library.zip"
+
+def read_library(root):
+    """Verify the outer index and each original inner ZIP byte-for-byte."""
+    with zipfile.ZipFile(library_path(root)) as z:
+        names = z.namelist()
+        expected = {g + ".zip" for g in GROUPS}
+        if len(names) != len(set(names)) or set(names) != expected | {MANIFEST}:
+            raise ValueError("library member set mismatch")
+        manifest = json.loads(z.read(MANIFEST))
+        if manifest["schema"] != 1 or manifest["group"] != "library" or set(manifest["files"]) != expected:
+            raise ValueError("library manifest mismatch")
+        result = {name: z.read(name) for name in sorted(expected)}
+        for name, raw in result.items():
+            if hashes(raw) != manifest["files"][name]:
+                raise ValueError("library inner ZIP checksum mismatch: " + name)
+        return result
+
+def write_library(root, members):
+    target = library_path(root)
+    if set(members) != {g + ".zip" for g in GROUPS}:
+        raise ValueError("library requires all groups")
+    manifest = {"schema":1, "group":"library", "files":{p:hashes(b) for p,b in members.items()}}
+    temp = target.with_suffix(".tmp")
+    with zipfile.ZipFile(temp, "w", compression=zipfile.ZIP_STORED) as z:
+        for name, raw in [(MANIFEST,(json.dumps(manifest,ensure_ascii=False,sort_keys=True,indent=2)+"\n").encode()), *sorted(members.items())]:
+            info = zipfile.ZipInfo(name,(1980,1,1,0,0,0))
+            info.external_attr=0o100644 << 16
+            z.writestr(info, raw)
+    temp.replace(target)
+    assert read_library(root) == members
+
+def bootstrap(root):
+    """Materialize historical ZIP names in the ignored worktree, never overwrite edits."""
+    if not library_path(root).is_file():
+        return
+    for name, raw in read_library(root).items():
+        path = checked_path(root, "data/archives/" + name)
+        if path.exists() and (not path.is_file() or path.read_bytes() != raw):
+            raise ValueError("local inner ZIP differs from library: " + name)
+        if not path.exists():
+            path.write_bytes(raw)
+
+
 def load(root, group):
-    with zipfile.ZipFile(archive(root, group)) as z:
+    source = io.BytesIO(read_library(root)[group + ".zip"]) if library_path(root).is_file() else archive(root, group)
+    with zipfile.ZipFile(source) as z:
         names = z.namelist()
         if len(names) != len(set(names)) or z.testzip() is not None:
             raise ValueError("ZIP duplicate member or CRC mismatch")
@@ -74,6 +126,7 @@ def checked_path(root, name):
     return path
 
 def restore(root, groups):
+    bootstrap(root)
     data = {}
     for group in groups:
         data.update(load(root, group))
@@ -94,7 +147,10 @@ def tracked(root):
 
 def pack(root, group):
     target = archive(root, group)
-    old = set(load(root, group)) if target.exists() else set()
+    combined = library_path(root).is_file()
+    if combined:
+        bootstrap(root)
+    old = set(load(root, group)) if target.exists() or combined else set()
     names = sorted(old | {p for p in tracked(root) if match(group, p)})
     if not names:
         raise ValueError("no source files in " + group)
@@ -112,6 +168,10 @@ def pack(root, group):
         for name, raw in data.items():
             put(z, name, raw)
     temp.replace(target)
+    if combined:
+        members = read_library(root)
+        members[group + ".zip"] = target.read_bytes()
+        write_library(root, members)
     assert load(root, group) == data
     print(group, len(data), "files", sum(map(len,data.values())), "->", target.stat().st_size, "bytes")
 
@@ -120,8 +180,11 @@ def rewrite_links(root, groups):
     """Keep direct GitHub navigation usable when an old path becomes archived."""
     destinations = {}
     for group in groups:
+        dest = library_path(root) if library_path(root).is_file() else archive(root, group)
         for name in load(root, group):
-            destinations[name] = archive(root, group)
+            destinations[name] = dest
+        if library_path(root).is_file():
+            destinations[archive(root,group).relative_to(root).as_posix()] = dest
     # Also route links to directories that no longer have any tracked files.
     remaining = set(tracked(root))
     for name, target in list(destinations.items()):
@@ -160,30 +223,37 @@ def rewrite_links(root, groups):
 
 
 def migrate(root):
-    expected = {"reference_docs":21,"source_tools":20,"round14_qa":17,"source_metadata":15,"catalog_working":14,"retired_migrations":3,"source_logs":7}
+    expected = {"batch_data":12,"bilingual_views":8,"raw_corpora":12,"derived_indexes":2}
     original = {}
     for record in subprocess.check_output(["git","ls-tree","-r","-z","HEAD"],cwd=root).split(b"\0"):
         if record:
             meta, name = record.split(b"\t",1)
             original[name.decode("utf-8")] = meta.split()[2].decode()
+    if library_path(root).exists():
+        raise ValueError("library already exists")
     removed = []
     for group, count in expected.items():
         if archive(root,group).exists():
-            raise ValueError("migration only accepts unpacked initial state")
+            raise ValueError("migration requires original unpacked inputs")
         pack(root,group)
         data = load(root,group)
         assert len(data) == count
         assert all(original[p] == hashes(b)["git_blob"] for p,b in data.items())
         removed.extend(data)
-    assert len(set(removed)) == sum(expected.values()) == 97
-    # Workflow changes are finalized by the repository owner after the archive is verified.
-    # The Actions token may lack permission to delete workflow definitions.
-    removed = [p for p in removed if not match('retired_migrations', p)]
-    subprocess.run(["git","rm","--",*sorted(removed)],cwd=root,check=True,stdout=subprocess.DEVNULL)
-    subprocess.run(["git","add","--","data/archives"],cwd=root,check=True)
+    assert len(set(removed)) == 34
+    members = {g+".zip": archive(root,g).read_bytes() for g in GROUPS}
+    old_zips = [f"data/archives/{g}.zip" for g in GROUPS if g not in expected]
+    assert len(old_zips) == 15
+    assert all(original[p] == hashes((root/p).read_bytes())["git_blob"] for p in old_zips)
+    write_library(root,members)
+    subprocess.run(["git","rm","--",*sorted(removed+old_zips)],cwd=root,check=True,stdout=subprocess.DEVNULL)
+    subprocess.run(["git","add","--","data/archives/library.zip"],cwd=root,check=True)
     restore(root,list(GROUPS))
-    rewrite_links(root, expected)
-    print("migration: all 97 original Git blobs match; 94 ordinary members untracked; three archived workflow definitions await owner removal")
+    assert all(hashes((root/p).read_bytes())["git_blob"] == original[p] for p in removed+old_zips)
+    assert not set(removed+old_zips).intersection(tracked(root))
+    rewrite_links(root,list(GROUPS))
+    print("migration: 34 original files and 15 existing archive blobs exactly preserved")
+
 
 def main():
     p=argparse.ArgumentParser()

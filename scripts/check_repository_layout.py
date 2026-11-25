@@ -67,8 +67,12 @@ def main() -> None:
         "data/taxonomy/physics_taxonomy.json",
         "data/qa/README.md",
     )
+    archived_views = set()
+    if (ROOT / 'data/archives/library.zip').is_file():
+        from compact_auxiliary import load
+        archived_views = set(load(ROOT, 'bilingual_views'))
     for path in moved_required:
-        if path not in tracked or not (ROOT / path).is_file():
+        if (path not in tracked and path not in archived_views) or not (ROOT / path).is_file():
             errors.append("missing consolidated data file: " + path)
     report_path = ROOT / "data/localized/zh_CN/中文译稿报告.json"
     if report_path.is_file():

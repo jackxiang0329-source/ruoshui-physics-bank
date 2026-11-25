@@ -3,6 +3,7 @@ on:
   push:
     branches: [main]
     paths:
+      - 'data/archives/library.zip'
       - 'external_sources/three-college-physics-elegant/**'
       - '.github/workflows/three-college-physics-elegantbook.yml'
       - 'data/archives/three_college_chapters.zip'
@@ -21,7 +22,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Restore archived textbook chapters
         run: |
-          if [ -f data/archives/three_college_chapters.zip ]; then
+          if [ -f data/archives/library.zip ] || [ -f data/archives/three_college_chapters.zip ]; then
             python3 scripts/compact_auxiliary.py --restore --group three_college_chapters
           fi
       - run: python3 external_sources/three-college-physics-elegant/check_math.py
@@ -47,7 +48,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           for attempt in 1 2 3; do
             git fetch origin main
-            if ! git diff --quiet "$GITHUB_SHA" FETCH_HEAD -- "$root/main.tex" "$root/chapters" "data/archives/three_college_chapters.zip"; then
+            if ! git diff --quiet "$GITHUB_SHA" FETCH_HEAD -- "$root/main.tex" "$root/chapters" "data/archives/three_college_chapters.zip" "data/archives/library.zip"; then
               echo "Newer source exists; not publishing stale PDF."
               exit 0
             fi

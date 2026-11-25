@@ -84,46 +84,46 @@
 | 内容 | 文件 |
 |---|---|
 | ElegantBook 中文主文件 | [main.tex](main.tex) |
-| 小节 `01-mechanics-kinematics`（原 5 份片段） | [01-mechanics-kinematics.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `02-mechanics-dynamics`（原 6 份片段） | [02-mechanics-dynamics.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `03-mechanics-conservation`（原 9 份片段） | [03-mechanics-conservation.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `04-gravitation`（原 3 份片段） | [04-gravitation.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `05-rigid-body`（原 6 份片段） | [05-rigid-body.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `06-elasticity`（原 4 份片段） | [06-elasticity.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `07-hydrodynamics`（原 3 份片段） | [07-hydrodynamics.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `08-relativity`（原 5 份片段） | [08-relativity.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `09-thermo-state`（原 3 份片段） | [09-thermo-state.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `10-thermo-first-law`（原 4 份片段） | [10-thermo-first-law.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `11-kinetic-theory`（原 5 份片段） | [11-kinetic-theory.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `12-entropy-cycles`（原 5 份片段） | [12-entropy-cycles.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `13-capillarity`（原 3 份片段） | [13-capillarity.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `14-phase-transformations`（原 4 份片段） | [14-phase-transformations.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `15-transport`（原 4 份片段） | [15-transport.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `16-electrostatics-vacuum`（原 4 份片段） | [16-electrostatics-vacuum.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `17-electro-conductors`（原 4 份片段） | [17-electro-conductors.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `18-capacitance-energy`（原 5 份片段） | [18-capacitance-energy.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `19-electric-current`（原 5 份片段） | [19-electric-current.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `20-magnetostatics`（原 5 份片段） | [20-magnetostatics.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `21-induction`（原 5 份片段） | [21-induction.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `22-charged-particles`（原 2 份片段） | [22-charged-particles.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `23-mechanical-oscillations`（原 6 份片段） | [23-mechanical-oscillations.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `24-electric-oscillations`（原 4 份片段） | [24-electric-oscillations.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `25-elastic-waves`（原 3 份片段） | [25-elastic-waves.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `26-em-waves`（原 3 份片段） | [26-em-waves.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `27-optics-photometry`（原 6 份片段） | [27-optics-photometry.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `28-optics-interference`（原 3 份片段） | [28-optics-interference.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `29-optics-diffraction`（原 6 份片段） | [29-optics-diffraction.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `30-optics-polarization`（原 3 份片段） | [30-optics-polarization.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `31-optics-dispersion`（原 2 份片段） | [31-optics-dispersion.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `32-moving-optics`（原 1 份片段） | [32-moving-optics.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `33-thermal-radiation`（原 4 份片段） | [33-thermal-radiation.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `34-atomic-scattering`（原 3 份片段） | [34-atomic-scattering.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `35-wave-properties`（原 3 份片段） | [35-wave-properties.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `36-atomic-spectra`（原 6 份片段） | [36-atomic-spectra.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `37-molecules-crystals`（原 3 份片段） | [37-molecules-crystals.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `38-radioactivity`（原 3 份片段） | [38-radioactivity.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `39-nuclear-reactions`（原 4 份片段） | [39-nuclear-reactions.tex（归档）](../../data/archives/irodov_chapters.zip) |
-| 小节 `40-elementary-particles`（原 2 份片段） | [40-elementary-particles.tex（归档）](../../data/archives/irodov_chapters.zip) |
+| 小节 `01-mechanics-kinematics`（原 5 份片段） | [01-mechanics-kinematics.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `02-mechanics-dynamics`（原 6 份片段） | [02-mechanics-dynamics.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `03-mechanics-conservation`（原 9 份片段） | [03-mechanics-conservation.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `04-gravitation`（原 3 份片段） | [04-gravitation.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `05-rigid-body`（原 6 份片段） | [05-rigid-body.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `06-elasticity`（原 4 份片段） | [06-elasticity.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `07-hydrodynamics`（原 3 份片段） | [07-hydrodynamics.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `08-relativity`（原 5 份片段） | [08-relativity.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `09-thermo-state`（原 3 份片段） | [09-thermo-state.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `10-thermo-first-law`（原 4 份片段） | [10-thermo-first-law.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `11-kinetic-theory`（原 5 份片段） | [11-kinetic-theory.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `12-entropy-cycles`（原 5 份片段） | [12-entropy-cycles.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `13-capillarity`（原 3 份片段） | [13-capillarity.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `14-phase-transformations`（原 4 份片段） | [14-phase-transformations.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `15-transport`（原 4 份片段） | [15-transport.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `16-electrostatics-vacuum`（原 4 份片段） | [16-electrostatics-vacuum.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `17-electro-conductors`（原 4 份片段） | [17-electro-conductors.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `18-capacitance-energy`（原 5 份片段） | [18-capacitance-energy.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `19-electric-current`（原 5 份片段） | [19-electric-current.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `20-magnetostatics`（原 5 份片段） | [20-magnetostatics.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `21-induction`（原 5 份片段） | [21-induction.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `22-charged-particles`（原 2 份片段） | [22-charged-particles.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `23-mechanical-oscillations`（原 6 份片段） | [23-mechanical-oscillations.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `24-electric-oscillations`（原 4 份片段） | [24-electric-oscillations.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `25-elastic-waves`（原 3 份片段） | [25-elastic-waves.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `26-em-waves`（原 3 份片段） | [26-em-waves.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `27-optics-photometry`（原 6 份片段） | [27-optics-photometry.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `28-optics-interference`（原 3 份片段） | [28-optics-interference.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `29-optics-diffraction`（原 6 份片段） | [29-optics-diffraction.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `30-optics-polarization`（原 3 份片段） | [30-optics-polarization.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `31-optics-dispersion`（原 2 份片段） | [31-optics-dispersion.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `32-moving-optics`（原 1 份片段） | [32-moving-optics.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `33-thermal-radiation`（原 4 份片段） | [33-thermal-radiation.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `34-atomic-scattering`（原 3 份片段） | [34-atomic-scattering.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `35-wave-properties`（原 3 份片段） | [35-wave-properties.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `36-atomic-spectra`（原 6 份片段） | [36-atomic-spectra.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `37-molecules-crystals`（原 3 份片段） | [37-molecules-crystals.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `38-radioactivity`（原 3 份片段） | [38-radioactivity.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `39-nuclear-reactions`（原 4 份片段） | [39-nuclear-reactions.tex（归档）（归档）](../../data/archives/library.zip) |
+| 小节 `40-elementary-particles`（原 2 份片段） | [40-elementary-particles.tex（归档）（归档）](../../data/archives/library.zip) |
 | 源书勘误 | [errata.md](errata.md) |
 | 技术与学术质检记录 | [quality-check.md](quality-check.md) |
 | 结构完整性检查 | [check_sources.py](check_sources.py) |
@@ -225,4 +225,4 @@ GitHub Actions 工作流 .github/workflows/irodov-elegantbook.yml
 
 ## 专项回归归档
 
-历史48份专项回归及共享模块保存在 [irodov_regressions.zip](../../data/archives/irodov_regressions.zip)。从仓库根目录运行 `python3 scripts/compact_auxiliary.py --restore --group irodov_regressions` 后，再按原路径执行回归。章节TeX及PDF仍可直接读取；CI自动恢复。
+历史48份专项回归及共享模块保存在 [irodov_regressions.zip（归档）](../../data/archives/library.zip)。从仓库根目录运行 `python3 scripts/compact_auxiliary.py --restore --group irodov_regressions` 后，再按原路径执行回归。章节TeX及PDF仍可直接读取；CI自动恢复。

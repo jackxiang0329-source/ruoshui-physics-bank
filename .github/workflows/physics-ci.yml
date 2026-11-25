@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Verify and restore archived auxiliary files
         run: |
-          if [ -f data/archives/round_qa.zip ]; then
+          if [ -f data/archives/library.zip ] || [ -f data/archives/round_qa.zip ]; then
             python3 scripts/compact_auxiliary.py --verify
             python3 scripts/compact_auxiliary.py --restore
           fi
@@ -39,7 +39,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Verify and restore archived auxiliary files
         run: |
-          if [ -f data/archives/round_qa.zip ]; then
+          if [ -f data/archives/library.zip ] || [ -f data/archives/round_qa.zip ]; then
             python3 scripts/compact_auxiliary.py --verify
             python3 scripts/compact_auxiliary.py --restore
           fi
