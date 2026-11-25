@@ -94,10 +94,10 @@ v=\sqrt{E/\rho}\simeq3.52\,\mathrm{km/s}.
 
 本轮脚本入口（在仓库根目录运行）：
 ```sh
-python3 external_sources/irodov-zh-elegant/oscillations_mechanical_051_093_regression.py
-python3 external_sources/irodov-zh-elegant/oscillations_electric_094_149_regression.py
-python3 external_sources/irodov-zh-elegant/waves_elastic_150_188_regression.py
-python3 external_sources/irodov-zh-elegant/waves_electromagnetic_189_224_regression.py
+python3 textbooks/irodov/oscillations_mechanical_051_093_regression.py
+python3 textbooks/irodov/oscillations_electric_094_149_regression.py
+python3 textbooks/irodov/waves_elastic_150_188_regression.py
+python3 textbooks/irodov/waves_electromagnetic_189_224_regression.py
 ```
 
 ---

@@ -169,4 +169,4 @@
 | `40-elementary-particles-291-300.tex` | `5470cc8f6890122e14e3739e4dab80f698d7a61c` | [`40-elementary-particles.tex`（归档）（归档）](../../../data/archives/library.zip) |
 | `40-elementary-particles-301-310.tex` | `f798033b9ee66095206e8fab9af0dbe184d5c3bc` | [`40-elementary-particles.tex`（归档）（归档）](../../../data/archives/library.zip) |
 
-恢复：`git show <合并前提交SHA>:external_sources/irodov-zh-elegant/chapters/旧文件名.tex`。
+恢复：`git show <合并前提交SHA>:textbooks/irodov/chapters/旧文件名.tex`。

@@ -9,12 +9,17 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 PREFIXES = "METWOQ"
 NAMES = ("meta.json", "question.tex", "solution.tex")
+SUBJECT_FILES = {"M":"mechanics","E":"electromagnetism","T":"thermodynamics","W":"waves","O":"optics","Q":"modern_physics"}
 ID = re.compile(r"[METWOQ]\d{3,5}")
 def digest(data):
     return hashlib.sha1(b"blob " + str(len(data)).encode() + b"\0" + data).hexdigest()
 
 def archive_path(root, prefix):
-    return root / "bank" / (prefix + ".json")
+    legacy = root / "bank" / (prefix + ".json")
+    modern = root / "bank" / (SUBJECT_FILES[prefix] + ".json")
+    if legacy.exists() and modern.exists():
+        raise ValueError("duplicate old and new subject archives: " + prefix)
+    return legacy if legacy.exists() else modern
 
 def read_archives(root):
     records = {}

@@ -118,8 +118,25 @@ def load(root, group):
             result[name] = raw
         return result
 
+BOOK_PATHS = {"external_sources/irodov-zh-elegant":"textbooks/irodov","external_sources/three-college-physics-elegant":"textbooks/three_college","external_sources/zhao-wang-physics-5e-elegant":"textbooks/zhao_wang"}
+
+def workspace_name(root, name):
+    # Keep original archive member names and their checksums; map only the worktree.
+    if (root / "textbooks").is_dir():
+        for old, new in BOOK_PATHS.items():
+            if name == old or name.startswith(old + "/"):
+                return new + name[len(old):]
+    return name
+
+def archive_name(root, name):
+    if (root / "textbooks").is_dir():
+        for old, new in BOOK_PATHS.items():
+            if name == new or name.startswith(new + "/"):
+                return old + name[len(new):]
+    return name
+
 def checked_path(root, name):
-    path = root / name
+    path = root / workspace_name(root, name)
     if not path.resolve().is_relative_to(root.resolve()) or any(
             p.is_symlink() for p in [path, *path.parents] if p != root.parent):
         raise ValueError("unsafe path: " + name)
@@ -139,7 +156,7 @@ def restore(root, groups):
         if not path.exists():
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_bytes(raw)
-    assert all((root / p).read_bytes() == raw for p, raw in data.items())
+    assert all(checked_path(root, p).read_bytes() == raw for p, raw in data.items())
     print("restored", len(data), "byte-identical files")
 
 def tracked(root):
@@ -151,7 +168,7 @@ def pack(root, group):
     if combined:
         bootstrap(root)
     old = set(load(root, group)) if target.exists() or combined else set()
-    names = sorted(old | {p for p in tracked(root) if match(group, p)})
+    names = sorted(old | {archive_name(root, p) for p in tracked(root) if match(group, archive_name(root, p))})
     if not names:
         raise ValueError("no source files in " + group)
     data = {p: checked_path(root, p).read_bytes() for p in names}

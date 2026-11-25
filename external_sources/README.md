@@ -2,8 +2,8 @@
 
 ## 教材解析专区合并入口（2026-11-24）
 
-- [赵近芳、王登龙第五版两书：890题，39份合并LaTeX章节](./zhao-wang-physics-5e-elegant/README.md)；[原文件映射](./zhao-wang-physics-5e-elegant/chapters/COMPACTION-MAP.md)。
-- [Irodov《普通物理学习题》：1,878题，40份合并章节](./irodov-zh-elegant/README.md)；[原文件映射](./irodov-zh-elegant/chapters/COMPACTION-MAP.md)。
+- [赵近芳、王登龙第五版两书：890题，39份合并LaTeX章节](../textbooks/zhao_wang/README.md)；[原文件映射](../textbooks/zhao_wang/chapters/compaction_map.md)。
+- [Irodov《普通物理学习题》：1,878题，40份合并章节](../textbooks/irodov/README.md)；[原文件映射](../textbooks/irodov/chapters/compaction_map.md)。
 - 两套教材仍是研究性解题稿，不计入452道正式高难综合题库；旧片段可由Git历史无损恢复。历史回归工作流只在临时工作区恢复旧文件名，不会新增仓库跟踪文件。
 
 
@@ -20,8 +20,8 @@
 | UBC OPBP（原题可依赖图片、许可注意 NC/SA） | 265 | [无损归档（归档）](../data/archives/library.zip) | [index.json（归档）（归档）](../data/archives/library.zip) |
 | IntroPhysics（提取题干，学术/许可待审） | 53 | [无损归档（归档）](../data/archives/library.zip) | [index.json（归档）（归档）](../data/archives/library.zip) |
 | WeBWorK OPL / Thermal | 59 + 21 | [OPL 无损 PG（归档）](../data/archives/library.zip) / [热学无损 PG（归档）](../data/archives/library.zip) | [OPL 索引（归档）（归档）](../data/archives/library.zip) / [热学索引（归档）（归档）](../data/archives/library.zip) |
-| 赵近芳、王登龙第五版两书题解 | 累计771题（第15批新增73） | [独立 ElegantBook 项目](./zhao-wang-physics-5e-elegant/) | [勘误与复核](./zhao-wang-physics-5e-elegant/quality-check.md) |
-| 《普通物理学习题》中文 ElegantBook | 原书 1,878 题 | [独立正式教材整理工程](./irodov-zh-elegant/) | [质检与勘误](./irodov-zh-elegant/errata.md) |
+| 赵近芳、王登龙第五版两书题解 | 累计771题（第15批新增73） | [独立 ElegantBook 项目](../textbooks/zhao_wang) | [勘误与复核](../textbooks/zhao_wang/quality_check.md) |
+| 《普通物理学习题》中文 ElegantBook | 原书 1,878 题 | [独立正式教材整理工程](../textbooks/irodov) | [质检与勘误](../textbooks/irodov/errata.md) |
 
 **三轮合计无损归档 20,235 份待审原文（19,837 + 318 + 80）。** 压缩包内保留每个 `ID.md` 或 `ID.pg` 文件的原文字节、来源说明与许可提示；校验清单分为 [第一轮（归档）](../data/archives/library.zip)、[第二轮（归档）](../data/archives/library.zip)、[第三轮（归档）](../data/archives/library.zip)。所有候选仅作为待审资源，不计入主库的正式题数。
 

@@ -47,7 +47,7 @@
 
 <a id="round-1"></a>
 
-原始文件：`qa-eight-rounds-01.md` · Git blob `917e7a4f76dd64fe2d01930a30fd3eb0a4055a20` · [历史原件](https://github.com/jackxiang0329-source/ruoshui-physics-bank/blob/2bfb742ed46f1a1337b46292251e05f6dd2500a5/external_sources/zhao-wang-physics-5e-elegant/qa-eight-rounds-01.md)
+原始文件：`qa-eight-rounds-01.md` · Git blob `917e7a4f76dd64fe2d01930a30fd3eb0a4055a20` · [历史原件](https://github.com/jackxiang0329-source/ruoshui-physics-bank/blob/2bfb742ed46f1a1337b46292251e05f6dd2500a5/textbooks/zhao_wang/qa-eight-rounds-01.md)
 
 # 两书890题严格二校：八批计划与第1批逐题审核（2026-11-24）
 
@@ -197,7 +197,7 @@
 
 <a id="round-2"></a>
 
-原始文件：`qa-eight-rounds-02.md` · Git blob `4dc692d94e9fdc595bf15780d37c04036cd6a2b1` · [历史原件](https://github.com/jackxiang0329-source/ruoshui-physics-bank/blob/2bfb742ed46f1a1337b46292251e05f6dd2500a5/external_sources/zhao-wang-physics-5e-elegant/qa-eight-rounds-02.md)
+原始文件：`qa-eight-rounds-02.md` · Git blob `4dc692d94e9fdc595bf15780d37c04036cd6a2b1` · [历史原件](https://github.com/jackxiang0329-source/ruoshui-physics-bank/blob/2bfb742ed46f1a1337b46292251e05f6dd2500a5/textbooks/zhao_wang/qa-eight-rounds-02.md)
 
 # 八批严格二校：第2批（2026-11-24）
 
@@ -358,7 +358,7 @@
 
 <a id="round-3"></a>
 
-原始文件：`qa-eight-rounds-03.md` · Git blob `836ebdde098bad912639e038e9938beabcaeef0a` · [历史原件](https://github.com/jackxiang0329-source/ruoshui-physics-bank/blob/2bfb742ed46f1a1337b46292251e05f6dd2500a5/external_sources/zhao-wang-physics-5e-elegant/qa-eight-rounds-03.md)
+原始文件：`qa-eight-rounds-03.md` · Git blob `836ebdde098bad912639e038e9938beabcaeef0a` · [历史原件](https://github.com/jackxiang0329-source/ruoshui-physics-bank/blob/2bfb742ed46f1a1337b46292251e05f6dd2500a5/textbooks/zhao_wang/qa-eight-rounds-03.md)
 
 # 八批严格二校：第3批（2026-11-24）
 
@@ -524,7 +524,7 @@
 
 <a id="round-4"></a>
 
-原始文件：`qa-eight-rounds-04.md` · Git blob `9928388d152b7bf1ae3ad24ca1f2d94e97710d44` · [历史原件](https://github.com/jackxiang0329-source/ruoshui-physics-bank/blob/2bfb742ed46f1a1337b46292251e05f6dd2500a5/external_sources/zhao-wang-physics-5e-elegant/qa-eight-rounds-04.md)
+原始文件：`qa-eight-rounds-04.md` · Git blob `9928388d152b7bf1ae3ad24ca1f2d94e97710d44` · [历史原件](https://github.com/jackxiang0329-source/ruoshui-physics-bank/blob/2bfb742ed46f1a1337b46292251e05f6dd2500a5/textbooks/zhao_wang/qa-eight-rounds-04.md)
 
 # 八批严格二校：第4批（2026-11-24）
 
@@ -699,7 +699,7 @@
 
 <a id="round-5"></a>
 
-原始文件：`qa-eight-rounds-05.md` · Git blob `c1962d0bb9cb9a064d9f051cf719de9f2ed44f94` · [历史原件](https://github.com/jackxiang0329-source/ruoshui-physics-bank/blob/2bfb742ed46f1a1337b46292251e05f6dd2500a5/external_sources/zhao-wang-physics-5e-elegant/qa-eight-rounds-05.md)
+原始文件：`qa-eight-rounds-05.md` · Git blob `c1962d0bb9cb9a064d9f051cf719de9f2ed44f94` · [历史原件](https://github.com/jackxiang0329-source/ruoshui-physics-bank/blob/2bfb742ed46f1a1337b46292251e05f6dd2500a5/textbooks/zhao_wang/qa-eight-rounds-05.md)
 
 # 八批严格二校：第5批（2026-11-24）
 
@@ -839,7 +839,7 @@
 
 <a id="round-6"></a>
 
-原始文件：`qa-eight-rounds-06.md` · Git blob `061207b08e7a8ddad90669649c0fdac95cce631a` · [历史原件](https://github.com/jackxiang0329-source/ruoshui-physics-bank/blob/2bfb742ed46f1a1337b46292251e05f6dd2500a5/external_sources/zhao-wang-physics-5e-elegant/qa-eight-rounds-06.md)
+原始文件：`qa-eight-rounds-06.md` · Git blob `061207b08e7a8ddad90669649c0fdac95cce631a` · [历史原件](https://github.com/jackxiang0329-source/ruoshui-physics-bank/blob/2bfb742ed46f1a1337b46292251e05f6dd2500a5/textbooks/zhao_wang/qa-eight-rounds-06.md)
 
 # 八批严格二校：第6批（2026-11-24）
 
@@ -973,7 +973,7 @@
 
 <a id="round-7"></a>
 
-原始文件：`qa-eight-rounds-07.md` · Git blob `f190e91fb26321ff82fef161fc11ddc4a4704695` · [历史原件](https://github.com/jackxiang0329-source/ruoshui-physics-bank/blob/2bfb742ed46f1a1337b46292251e05f6dd2500a5/external_sources/zhao-wang-physics-5e-elegant/qa-eight-rounds-07.md)
+原始文件：`qa-eight-rounds-07.md` · Git blob `f190e91fb26321ff82fef161fc11ddc4a4704695` · [历史原件](https://github.com/jackxiang0329-source/ruoshui-physics-bank/blob/2bfb742ed46f1a1337b46292251e05f6dd2500a5/textbooks/zhao_wang/qa-eight-rounds-07.md)
 
 # 八批严格二校：第7批（2026-11-24）
 
@@ -1100,7 +1100,7 @@
 
 <a id="round-8"></a>
 
-原始文件：`qa-eight-rounds-08.md` · Git blob `38afa032f290eb4844b0f3aa349575b8c5b6880b` · [历史原件](https://github.com/jackxiang0329-source/ruoshui-physics-bank/blob/2bfb742ed46f1a1337b46292251e05f6dd2500a5/external_sources/zhao-wang-physics-5e-elegant/qa-eight-rounds-08.md)
+原始文件：`qa-eight-rounds-08.md` · Git blob `38afa032f290eb4844b0f3aa349575b8c5b6880b` · [历史原件](https://github.com/jackxiang0329-source/ruoshui-physics-bank/blob/2bfb742ed46f1a1337b46292251e05f6dd2500a5/textbooks/zhao_wang/qa-eight-rounds-08.md)
 
 # 八批严格二校：第8批（2026-11-24）
 

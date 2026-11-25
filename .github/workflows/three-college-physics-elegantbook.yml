@@ -4,7 +4,7 @@ on:
     branches: [main]
     paths:
       - 'data/archives/library.zip'
-      - 'external_sources/three-college-physics-elegant/**'
+      - 'textbooks/three_college/**'
       - '.github/workflows/three-college-physics-elegantbook.yml'
       - 'data/archives/three_college_chapters.zip'
       - 'scripts/compact_auxiliary.py'
@@ -25,24 +25,24 @@ jobs:
           if [ -f data/archives/library.zip ] || [ -f data/archives/three_college_chapters.zip ]; then
             python3 scripts/compact_auxiliary.py --restore --group three_college_chapters
           fi
-      - run: python3 external_sources/three-college-physics-elegant/check_math.py
-      - run: cp external_sources/irodov-zh-elegant/elegantbook.cls external_sources/three-college-physics-elegant/elegantbook.cls
+      - run: python3 textbooks/three_college/check_math.py
+      - run: cp textbooks/irodov/elegantbook.cls textbooks/three_college/elegantbook.cls
       - uses: xu-cheng/latex-action@v4
         with:
-          working_directory: external_sources/three-college-physics-elegant
+          working_directory: textbooks/three_college
           root_file: main.tex
           texlive_version: '2026'
           args: -xelatex -file-line-error -halt-on-error -interaction=nonstopmode
       - uses: actions/upload-artifact@v4
         with:
           name: three-college-physics-elegantbook
-          path: external_sources/three-college-physics-elegant/main.pdf
+          path: textbooks/three_college/main.pdf
           if-no-files-found: error
       - name: Publish PDF if source unchanged
         if: github.ref == 'refs/heads/main'
         run: |
           set -euo pipefail
-          root=external_sources/three-college-physics-elegant
+          root=textbooks/three_college
           cp "$root/main.pdf" "$RUNNER_TEMP/three-college-physics.pdf"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

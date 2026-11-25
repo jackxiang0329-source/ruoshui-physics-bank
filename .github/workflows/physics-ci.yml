@@ -21,7 +21,7 @@ jobs:
           fi
       - name: Verify and materialize compact canonical bank
         run: |
-          if [ -f bank/M.json ]; then
+          if [ -f bank/mechanics.json ]; then
             python3 scripts/compact_bank.py --verify
             python3 scripts/compact_bank.py --restore
           fi
@@ -45,7 +45,7 @@ jobs:
           fi
       - name: Verify and materialize compact canonical bank
         run: |
-          if [ -f bank/M.json ]; then
+          if [ -f bank/mechanics.json ]; then
             python3 scripts/compact_bank.py --verify
             python3 scripts/compact_bank.py --restore
           fi

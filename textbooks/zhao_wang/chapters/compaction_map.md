@@ -107,4 +107,4 @@
 | `guide-selftest11-blanks.tex` | `73e0d2756638e1dcd468a2ac7dc1908c696ad01c` | [`guide-selftest11.tex`（归档）（归档）](../../../data/archives/library.zip) |
 | `guide-selftest11-solutions.tex` | `111621b735b97c8ebd2e2e9faf8e26aef5b80260` | [`guide-selftest11.tex`（归档）（归档）](../../../data/archives/library.zip) |
 
-恢复示例：`git show <合并前的提交SHA>:external_sources/zhao-wang-physics-5e-elegant/chapters/旧文件名.tex`。原片段正文在新章节以 BEGIN/END 标记完整保留。
+恢复示例：`git show <合并前的提交SHA>:textbooks/zhao_wang/chapters/旧文件名.tex`。原片段正文在新章节以 BEGIN/END 标记完整保留。
