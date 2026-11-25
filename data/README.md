@@ -4,12 +4,12 @@
 
 | 类型 | 位置 | 作用 |
 |---|---|---|
-| 正式题库索引 | [`index.csv`](index.csv) / [`problems.json`](problems.json) | `bank/` 派生的索引，不另作权威题目源 |
+| 正式题库索引 | [`index.csv`](index.csv) / [`problems.json`（归档）](archives/library.zip) | `bank/` 派生的索引，不另作权威题目源 |
 | 批次与报告 | [`rounds/`](rounds/) 与 `*.json` | 自动回归记录、统计、质检过程数据 |
 | 中文译文主档 | [`localization/zh_CN/translations.json`](localization/zh_CN/translations.json) | 唯一可编辑的中文初译注册表 |
 | 术语表 | [`localization/zh_CN/术语表.md`](localization/zh_CN/术语表.md) | 翻译用术语规范 |
 | 中文合订初译稿 | [`localized/zh_CN/合订/`](localized/zh_CN/合订/) | 七大学科已生成的初译审阅版 |
-| 中文稿统计与题号索引 | [`localized/zh_CN/中文译稿报告.json`](localized/zh_CN/中文译稿报告.json) | 合订文件与题号的可回溯映射 |
+| 中文稿统计与题号索引 | [`localized/zh_CN/中文译稿报告.json`（归档）](archives/library.zip) | 合订文件与题号的可回溯映射 |
 | 分类规则 | [`taxonomy/physics_taxonomy.json`](taxonomy/physics_taxonomy.json) | 章节与知识点匹配、类别修正 |
 | 六轮人工质检凭证 | [`qa/README.md`](qa/README.md) | 正式审核证据规则，缺少证据不得宣称通过 |
 
