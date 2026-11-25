@@ -39,3 +39,7 @@
 ## 六学科归档例外
 
 正式题库仅跟踪 `bank/M.json`、`E.json`、`T.json`、`W.json`、`O.json`、`Q.json`；原题号文件由 `scripts/compact_bank.py --restore` 无损生成，不提交。修改后使用 `--pack`，保留题号及原有质量门禁。
+
+## 辅助资源归档
+
+历史批次校验、Irodov专项回归和分类CSV集中存储在 `data/archives/*.zip`。先用 `scripts/compact_auxiliary.py --restore` 恢复原路径；维护后按组 `--pack --group GROUP`，只提交对应ZIP。历史草稿分支保留原有接口，新分支如使用集中存储应先恢复题库及辅助归档，提交前重新打包。现有测试、教材章节与活跃录入工具保留独立文件。
