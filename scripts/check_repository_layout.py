@@ -50,6 +50,12 @@ def main() -> None:
     allowed_top_folders = {".github", "bank", "data", "docs", "external_sources",
                            "scripts", "tests", "tex"}
     actual_top_folders = {p.split("/", 1)[0] for p in tracked if "/" in p}
+    if (ROOT / "data/archives/test_suite.zip").is_file():
+        from compact_auxiliary import load
+        tests = load(ROOT, "test_suite")
+        if not tests or any(not p.startswith("tests/test_") for p in tests):
+            errors.append("test suite archive invalid")
+        allowed_top_folders.discard("tests")
     if actual_top_folders != allowed_top_folders:
         errors.append(f"unexpected repository root folders: {sorted(actual_top_folders ^ allowed_top_folders)}")
 

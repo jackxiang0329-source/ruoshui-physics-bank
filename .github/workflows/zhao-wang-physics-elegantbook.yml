@@ -5,6 +5,8 @@ on:
     paths:
       - 'external_sources/zhao-wang-physics-5e-elegant/**'
       - '.github/workflows/zhao-wang-physics-elegantbook.yml'
+      - 'data/archives/zhao_wang_chapters.zip'
+      - 'scripts/compact_auxiliary.py'
   workflow_dispatch:
 
 concurrency:
@@ -20,6 +22,11 @@ jobs:
     timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
+      - name: Restore archived textbook chapters
+        run: |
+          if [ -f data/archives/zhao_wang_chapters.zip ]; then
+            python3 scripts/compact_auxiliary.py --restore --group zhao_wang_chapters
+          fi
       - name: Check referenced item count, block structure and numeric invariants
         run: python3 external_sources/zhao-wang-physics-5e-elegant/check_math.py
       - name: Independent scan-to-source and physics regression (round 20)
@@ -59,7 +66,7 @@ jobs:
           cp "$root/cover.pdf" "$RUNNER_TEMP/zhao-wang-cover.pdf"
           for attempt in 1 2 3; do
             git fetch origin main
-            if ! git diff --quiet "$GITHUB_SHA" FETCH_HEAD -- "$root/main.tex" "$root/chapters"; then
+            if ! git diff --quiet "$GITHUB_SHA" FETCH_HEAD -- "$root/main.tex" "$root/chapters" "data/archives/zhao_wang_chapters.zip"; then
               echo "Newer LaTeX exists; do not overwrite a newer PDF."
               exit 0
             fi

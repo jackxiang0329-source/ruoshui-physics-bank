@@ -20,7 +20,7 @@
 - 正式高难综合题：[`../bank/`](../bank/) 内的 452 道唯一权威 TeX/元数据。
 - Irodov《普通物理学习题》中文教材整理：[`irodov-zh-elegant/`](irodov-zh-elegant/) 独立的 1,878 道原书题号及编译工程。
 - 张三慧三册习题：仍在 [Draft PR #45](https://github.com/jackxiang0329-source/ruoshui-physics-bank/pull/45)，不可当作正式主库。
-- 外部候选完整分类：[中文分类导航](catalog/中文分类导航.md)、[待审清单](curation_queue.csv)。
+- 外部候选完整分类：[中文分类导航](catalog/中文分类导航.md)、[待审清单（归档）](../data/archives/large_indexes.zip)。
 - 文件/文件夹命名与技术文档：[仓库规范](../docs/policies/repository_naming.md)。
 
 各来源数量是当前索引条目数；上游文件量、授权和审核状态可能变化。没有人工逐题确认前，不能自动改变 `exam_ready`。
