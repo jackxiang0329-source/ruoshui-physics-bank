@@ -14,9 +14,9 @@
 
 | 来源 | 数量 | 正文位置 | 索引 |
 |---|---:|---|---|
-| HF Physics DPO（生成文本，未核实） | 16,611 | [无损归档](./_bundles/hf_physics_dpo-raw.tar.gz) | [index.json](./hf_physics_dpo/index.json) |
-| OpenStax College Physics | 2,526 | [无损归档](./_bundles/college_physics-raw.tar.gz) | [index.json](./college_physics/index.json) |
-| Physics Refresher | 700 | [无损归档](./_bundles/physics_refresher-raw.tar.gz) | [index.json](./physics_refresher/index.json) |
+| HF Physics DPO（生成文本，未核实） | 16,611 | [无损归档](./_bundles/hf_physics_dpo-raw.tar.gz) | [index.json（归档）](../data/archives/large_indexes.zip) |
+| OpenStax College Physics | 2,526 | [无损归档](./_bundles/college_physics-raw.tar.gz) | [index.json（归档）](../data/archives/large_indexes.zip) |
+| Physics Refresher | 700 | [无损归档](./_bundles/physics_refresher-raw.tar.gz) | [index.json（归档）](../data/archives/large_indexes.zip) |
 | UBC OPBP（原题可依赖图片、许可注意 NC/SA） | 265 | [无损归档](./_bundles/ubc_opbp-raw.tar.gz) | [index.json](./ubc_opbp/index.json) |
 | IntroPhysics（提取题干，学术/许可待审） | 53 | [无损归档](./_bundles/intro_physics-raw.tar.gz) | [index.json](./intro_physics/index.json) |
 | WeBWorK OPL / Thermal | 59 + 21 | [OPL 无损 PG](./_bundles/webwork_opl-raw.tar.gz) / [热学无损 PG](./_bundles/webwork_thermal-raw.tar.gz) | [OPL 索引](./webwork_opl/index.json) / [热学索引](./webwork_thermal/index.json) |
@@ -38,4 +38,4 @@ python3 scripts/compact_small_external_sources.py --restore intro_physics
 
 UBC、IntroPhysics 和 WeBWorK 若需继续导入，先按需恢复相应原文，完成新增后重新打包并复验；不可把未归档的新原文静默追加到索引。恢复操作只在本地工作区按需展开，原目录下的来源索引和审核清单不会丢失。需要重新汇总审计或继续导入时，应先恢复对应原文；改变任何来源索引或原文后，须按 [归档说明](./_bundles/README.md) 重新打包并复验，避免产生索引/档案不一致。
 
-其他导航：[总目录](./catalog_index.md) · [中文分类](./catalog/中文分类导航.md) · [待审队列](./curation_queue.csv)。**版权和学术校核状态不因归档而改变**，尤其要注意 NC/SA 对商业用途及改编再分发的限制。
+其他导航：[总目录](./catalog_index.md) · [中文分类](./catalog/中文分类导航.md) · [待审队列（归档）](../data/archives/large_indexes.zip)。**版权和学术校核状态不因归档而改变**，尤其要注意 NC/SA 对商业用途及改编再分发的限制。
