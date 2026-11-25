@@ -1,0 +1,53 @@
+name: Normalize repository classification
+on:
+  push:
+    branches: [normalize-repository-layout]
+    paths:
+      - scripts/normalize_layout.py
+      - .github/workflows/normalize-layout.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  normalize:
+    if: github.ref == 'refs/heads/normalize-repository-layout'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Rename tracked files and update navigation
+        run: python3 scripts/normalize_layout.py
+      - name: Verify archive and all original source interfaces
+        run: |
+          python3 scripts/compact_auxiliary.py --verify
+          python3 scripts/compact_auxiliary.py --restore
+          python3 scripts/compact_bank.py --restore
+          python3 scripts/check_repository_layout.py
+          python3 scripts/build.py --check
+          python3 scripts/compact_external_candidates.py --verify
+          python3 scripts/compact_small_external_sources.py --verify
+          python3 scripts/compact_webwork_sources.py --verify
+          python3 -m compileall -q scripts tests textbooks external_sources
+          python3 textbooks/irodov/expand_legacy_fragments.py
+          python3 textbooks/irodov/check_sources.py
+          python3 textbooks/irodov/lint_problems.py
+          python3 textbooks/zhao_wang/check_math.py
+          python3 textbooks/zhao_wang/check_round20_independent.py
+          python3 textbooks/three_college/check_math.py
+          python3 - <<'PY'
+          from pathlib import Path
+          from scripts.compact_auxiliary import load, checked_path
+          for g in ('irodov_chapters','irodov_regressions','zhao_wang_chapters','three_college_chapters'):
+              for p,b in load(Path('.'),g).items():
+                  assert checked_path(Path('.').resolve(),p).read_bytes()==b
+          print('book archives restored with original byte identity')
+          PY
+      - name: Commit only after verification
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'refactor: normalize textbook directories, subject filenames and navigation'
+          git push origin HEAD:normalize-repository-layout

@@ -7,7 +7,7 @@ on:
     branches: [main]
     paths:
       - 'data/archives/library.zip'
-      - 'external_sources/irodov-zh-elegant/**'
+      - 'textbooks/irodov/**'
       - '.github/workflows/irodov-elegantbook.yml'
       - 'data/archives/irodov_chapters.zip'
       - 'scripts/compact_auxiliary.py'
@@ -28,118 +28,118 @@ jobs:
             python3 scripts/compact_auxiliary.py --restore
           fi
       - name: Restore legacy split-fragment views for independent QA (not tracked)
-        run: python3 external_sources/irodov-zh-elegant/expand_legacy_fragments.py
+        run: python3 textbooks/irodov/expand_legacy_fragments.py
       - name: Validate all translated problem blocks
-        run: python3 external_sources/irodov-zh-elegant/check_sources.py
+        run: python3 textbooks/irodov/check_sources.py
       - name: Audit 1878 individual statement/solution/check segments
-        run: python3 external_sources/irodov-zh-elegant/lint_problems.py
+        run: python3 textbooks/irodov/lint_problems.py
       - name: Recompute selected numerical physics answers
-        run: python3 external_sources/irodov-zh-elegant/numeric_regression.py
+        run: python3 textbooks/irodov/numeric_regression.py
       - name: Independently audit atomic spectra and molecular physics
-        run: python3 external_sources/irodov-zh-elegant/spectra_molecules_regression.py
+        run: python3 textbooks/irodov/spectra_molecules_regression.py
       - name: Independently audit Rutherford scattering and atomic spectra
-        run: python3 external_sources/irodov-zh-elegant/atomic_scattering_regression.py
+        run: python3 textbooks/irodov/atomic_scattering_regression.py
       - name: Independently audit de Broglie waves and quantum wells
-        run: python3 external_sources/irodov-zh-elegant/wave_quantum_regression.py
+        run: python3 textbooks/irodov/wave_quantum_regression.py
       - name: Deep-check original radioactive decay and Bateman chains
-        run: python3 external_sources/irodov-zh-elegant/radioactivity_deep_regression.py
+        run: python3 textbooks/irodov/radioactivity_deep_regression.py
       - name: Deep-check original nuclear energy/momentum and reactor physics
-        run: python3 external_sources/irodov-zh-elegant/nuclear_reactions_deep_regression.py
+        run: python3 textbooks/irodov/nuclear_reactions_deep_regression.py
       - name: Deep-check relativistic particles and independent conservation laws
-        run: python3 external_sources/irodov-zh-elegant/particles_conservation_regression.py
+        run: python3 textbooks/irodov/particles_conservation_regression.py
       - name: Independently recheck Part I kinematics and rigid-body motion
-        run: python3 external_sources/irodov-zh-elegant/mechanics_kinematics_regression.py
+        run: python3 textbooks/irodov/mechanics_kinematics_regression.py
       - name: Independently recheck Part I Newtonian dynamics and constraints
-        run: python3 external_sources/irodov-zh-elegant/mechanics_dynamics_regression.py
+        run: python3 textbooks/irodov/mechanics_dynamics_regression.py
       - name: Independently recheck Part I work, collisions and angular momentum
-        run: python3 external_sources/irodov-zh-elegant/mechanics_conservation_regression.py
+        run: python3 textbooks/irodov/mechanics_conservation_regression.py
       - name: Independently recheck Part I gravity and satellite orbits
-        run: python3 external_sources/irodov-zh-elegant/mechanics_gravitation_regression.py
+        run: python3 textbooks/irodov/mechanics_gravitation_regression.py
       - name: Independently recheck Part I rigid-body dynamics and gyroscopes
-        run: python3 external_sources/irodov-zh-elegant/mechanics_rigidbody_regression.py
+        run: python3 textbooks/irodov/mechanics_rigidbody_regression.py
       - name: Independently recheck Part I elastic deformation and strength
-        run: python3 external_sources/irodov-zh-elegant/mechanics_elasticity_regression.py
+        run: python3 textbooks/irodov/mechanics_elasticity_regression.py
       - name: Independently recheck Part I hydrodynamics and viscosity
-        run: python3 external_sources/irodov-zh-elegant/mechanics_fluids_regression.py
+        run: python3 textbooks/irodov/mechanics_fluids_regression.py
       - name: Independently recheck Part I special relativity and four-momentum
-        run: python3 external_sources/irodov-zh-elegant/mechanics_relativity_regression.py
+        run: python3 textbooks/irodov/mechanics_relativity_regression.py
       - name: Independently recheck Part II ideal and nonideal gas states
-        run: python3 external_sources/irodov-zh-elegant/thermo_state_regression.py
+        run: python3 textbooks/irodov/thermo_state_regression.py
       - name: Independently recheck Part II first law and thermodynamic paths
-        run: python3 external_sources/irodov-zh-elegant/thermo_firstlaw_regression.py
+        run: python3 textbooks/irodov/thermo_firstlaw_regression.py
       - name: Independently recheck Part II molecular kinetic theory and Maxwell distribution
-        run: python3 external_sources/irodov-zh-elegant/thermo_kinetic_regression.py
+        run: python3 textbooks/irodov/thermo_kinetic_regression.py
       - name: Independently recheck Part II Carnot cycles and entropy statistics
-        run: python3 external_sources/irodov-zh-elegant/thermo_entropy_regression.py
+        run: python3 textbooks/irodov/thermo_entropy_regression.py
       - name: Independently recheck Part II capillarity and interface thermodynamics
-        run: python3 external_sources/irodov-zh-elegant/thermo_capillarity_regression.py
+        run: python3 textbooks/irodov/thermo_capillarity_regression.py
       - name: Independently recheck Part II phase equilibria and latent heats
-        run: python3 external_sources/irodov-zh-elegant/thermo_phase_regression.py
+        run: python3 textbooks/irodov/thermo_phase_regression.py
       - name: Independently recheck Part II molecular transport and heat conduction
-        run: python3 external_sources/irodov-zh-elegant/thermo_transport_regression.py
+        run: python3 textbooks/irodov/thermo_transport_regression.py
       - name: Independently recheck Part III electrostatics and Gauss-Poisson laws
-        run: python3 external_sources/irodov-zh-elegant/electrostatics_vacuum_regression.py
+        run: python3 textbooks/irodov/electrostatics_vacuum_regression.py
       - name: Independently recheck Part III conductors and dielectric polarization
-        run: python3 external_sources/irodov-zh-elegant/electro_conductors_regression.py
+        run: python3 textbooks/irodov/electro_conductors_regression.py
       - name: Independently recheck Part III capacitor networks and electrostatic work
-        run: python3 external_sources/irodov-zh-elegant/electro_capacitance_regression.py
+        run: python3 textbooks/irodov/electro_capacitance_regression.py
       - name: Independently recheck Part III resistor circuits and electric transport
-        run: python3 external_sources/irodov-zh-elegant/electro_current_regression.py
+        run: python3 textbooks/irodov/electro_current_regression.py
       - name: Independently recheck Part III magnetostatics and magnetic media
-        run: python3 external_sources/irodov-zh-elegant/electro_magnetostatics_regression.py
+        run: python3 textbooks/irodov/electro_magnetostatics_regression.py
       - name: Independently recheck Part III Faraday induction and Maxwell equations
-        run: python3 external_sources/irodov-zh-elegant/electro_induction_regression.py
+        run: python3 textbooks/irodov/electro_induction_regression.py
       - name: Independently recheck Part III charged-particle cyclotron and betatron
-        run: python3 external_sources/irodov-zh-elegant/electro_charged_regression.py
+        run: python3 textbooks/irodov/electro_charged_regression.py
       - name: Independently recheck Part IV initial mechanical oscillations
-        run: python3 external_sources/irodov-zh-elegant/oscillations_mechanical_regression.py
+        run: python3 textbooks/irodov/oscillations_mechanical_regression.py
       - name: Independently audit Irodov Part IV.51-93 mechanical oscillations and damped resonance
-        run: python3 external_sources/irodov-zh-elegant/oscillations_mechanical_051_093_regression.py
+        run: python3 textbooks/irodov/oscillations_mechanical_051_093_regression.py
       - name: Independently audit Irodov Part IV.94-149 electrical oscillations and RLC circuits
-        run: python3 external_sources/irodov-zh-elegant/oscillations_electric_094_149_regression.py
+        run: python3 textbooks/irodov/oscillations_electric_094_149_regression.py
       - name: Independently audit Irodov Part IV.150-188 acoustic wave and Doppler regressions
-        run: python3 external_sources/irodov-zh-elegant/waves_elastic_150_188_regression.py
+        run: python3 textbooks/irodov/waves_elastic_150_188_regression.py
       - name: Independently audit Irodov Part IV.189-224 Maxwell waves and radiation regressions
-        run: python3 external_sources/irodov-zh-elegant/waves_electromagnetic_189_224_regression.py
+        run: python3 textbooks/irodov/waves_electromagnetic_189_224_regression.py
       - name: Independently audit Part V.1-63 photometric and paraxial geometrical optics
         if: ${{ success() || failure() }}
-        run: python3 external_sources/irodov-zh-elegant/optics_geometrical_001_063_regression.py
+        run: python3 textbooks/irodov/optics_geometrical_001_063_regression.py
       - name: Independently audit Part V.64-96 wave interference and thin films
         if: ${{ success() || failure() }}
-        run: python3 external_sources/irodov-zh-elegant/optics_interference_064_096_regression.py
+        run: python3 textbooks/irodov/optics_interference_064_096_regression.py
       - name: Independently audit Part V.97-156 Fresnel diffraction and spectrometers
         if: ${{ success() || failure() }}
-        run: python3 external_sources/irodov-zh-elegant/optics_diffraction_097_156_regression.py
+        run: python3 textbooks/irodov/optics_diffraction_097_156_regression.py
       - name: Independently audit Part V.157-199 polarization and optical activity
         if: ${{ success() || failure() }}
-        run: python3 external_sources/irodov-zh-elegant/optics_polarization_157_199_regression.py
+        run: python3 textbooks/irodov/optics_polarization_157_199_regression.py
       - name: Independently audit Part V.200-245 optical dispersion and relativistic Doppler
         if: ${{ success() || failure() }}
-        run: python3 external_sources/irodov-zh-elegant/optics_dispersion_moving_200_245_regression.py
+        run: python3 textbooks/irodov/optics_dispersion_moving_200_245_regression.py
       - name: Independently audit Part V.246-292 thermal radiation and photon scattering
         if: ${{ success() || failure() }}
-        run: python3 external_sources/irodov-zh-elegant/optics_thermal_quantum_246_292_regression.py
+        run: python3 textbooks/irodov/optics_thermal_quantum_246_292_regression.py
       - name: Deep-audit original VI.1-48 Coulomb scattering and Bohr spectroscopy
         if: ${{ success() || failure() }}
-        run: python3 external_sources/irodov-zh-elegant/atomic_scattering_source_001_048_regression.py
+        run: python3 textbooks/irodov/atomic_scattering_source_001_048_regression.py
       - name: Deep-audit original VI.49-96 quantum wavefunctions and WKB
         if: ${{ success() || failure() }}
-        run: python3 external_sources/irodov-zh-elegant/atomic_wave_quantum_source_049_096_regression.py
+        run: python3 textbooks/irodov/atomic_wave_quantum_source_049_096_regression.py
       - name: Deep-audit original VI.97-166 angular momenta and atomic multiplets
         if: ${{ success() || failure() }}
-        run: python3 external_sources/irodov-zh-elegant/atomic_spectra_source_097_166_regression.py
+        run: python3 textbooks/irodov/atomic_spectra_source_097_166_regression.py
       - name: Deep-audit original VI.167-213 molecular and crystal statistics
         if: ${{ success() || failure() }}
-        run: python3 external_sources/irodov-zh-elegant/atomic_molecules_source_167_213_regression.py
+        run: python3 textbooks/irodov/atomic_molecules_source_167_213_regression.py
       - name: Deep-audit original VI.214-310 nuclear and particle conservation
         if: ${{ success() || failure() }}
-        run: python3 external_sources/irodov-zh-elegant/atomic_nuclear_source_214_310_regression.py
+        run: python3 textbooks/irodov/atomic_nuclear_source_214_310_regression.py
       - name: Cross-edition audit physical positivity, grating units and Wien Jacobians
         if: ${{ success() || failure() }}
-        run: python3 external_sources/irodov-zh-elegant/cross_edition_physics_regression.py
+        run: python3 textbooks/irodov/cross_edition_physics_regression.py
       - uses: xu-cheng/latex-action@v4
         with:
-          working_directory: external_sources/irodov-zh-elegant
+          working_directory: textbooks/irodov
           root_file: |
             cover.tex
             main.tex
@@ -149,8 +149,8 @@ jobs:
         with:
           name: irodov-zh-elegantbook-pdf
           path: |
-            external_sources/irodov-zh-elegant/main.pdf
-            external_sources/irodov-zh-elegant/cover.pdf
+            textbooks/irodov/main.pdf
+            textbooks/irodov/cover.pdf
           if-no-files-found: error
           retention-days: 30
       - name: Commit successfully compiled PDFs to the repository
@@ -160,7 +160,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          root=external_sources/irodov-zh-elegant
+          root=textbooks/irodov
           cp "$root/main.pdf" "$RUNNER_TEMP/irodov-main-compiled.pdf"
           cp "$root/cover.pdf" "$RUNNER_TEMP/irodov-cover-compiled.pdf"
           for attempt in 1 2 3 4 5; do

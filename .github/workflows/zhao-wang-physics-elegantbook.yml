@@ -4,7 +4,7 @@ on:
     branches: [main]
     paths:
       - 'data/archives/library.zip'
-      - 'external_sources/zhao-wang-physics-5e-elegant/**'
+      - 'textbooks/zhao_wang/**'
       - '.github/workflows/zhao-wang-physics-elegantbook.yml'
       - 'data/archives/zhao_wang_chapters.zip'
       - 'scripts/compact_auxiliary.py'
@@ -29,18 +29,18 @@ jobs:
             python3 scripts/compact_auxiliary.py --restore --group zhao_wang_chapters
           fi
       - name: Check referenced item count, block structure and numeric invariants
-        run: python3 external_sources/zhao-wang-physics-5e-elegant/check_math.py
+        run: python3 textbooks/zhao_wang/check_math.py
       - name: Independent scan-to-source and physics regression (round 20)
-        run: python3 external_sources/zhao-wang-physics-5e-elegant/check_round20_independent.py
+        run: python3 textbooks/zhao_wang/check_round20_independent.py
       - name: Reuse the existing Irodov ElegantBook class
         shell: bash
         run: |
-          cp external_sources/irodov-zh-elegant/elegantbook.cls \
-             external_sources/zhao-wang-physics-5e-elegant/elegantbook.cls
+          cp textbooks/irodov/elegantbook.cls \
+             textbooks/zhao_wang/elegantbook.cls
       - name: Compile Zhao Wang physics study edition (XeLaTeX)
         uses: xu-cheng/latex-action@v4
         with:
-          working_directory: external_sources/zhao-wang-physics-5e-elegant
+          working_directory: textbooks/zhao_wang
           root_file: |
             cover.tex
             main.tex
@@ -51,8 +51,8 @@ jobs:
         with:
           name: zhao-wang-physics-5e-elegantbook
           path: |
-            external_sources/zhao-wang-physics-5e-elegant/main.pdf
-            external_sources/zhao-wang-physics-5e-elegant/cover.pdf
+            textbooks/zhao_wang/main.pdf
+            textbooks/zhao_wang/cover.pdf
           if-no-files-found: error
           retention-days: 30
       - name: Publish successfully compiled PDF back to repository
@@ -62,7 +62,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          root=external_sources/zhao-wang-physics-5e-elegant
+          root=textbooks/zhao_wang
           cp "$root/main.pdf" "$RUNNER_TEMP/zhao-wang-main.pdf"
           cp "$root/cover.pdf" "$RUNNER_TEMP/zhao-wang-cover.pdf"
           for attempt in 1 2 3; do

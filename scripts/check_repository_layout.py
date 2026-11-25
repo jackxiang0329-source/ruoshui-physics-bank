@@ -35,7 +35,7 @@ def main() -> None:
                 continue
             if len(parts) != 3 or parts[1] not in DOC_CATEGORIES or not NAME.fullmatch(parts[2]):
                 errors.append("docs naming/category: " + path)
-        elif category == "scripts" and (len(parts) != 2 or not SCRIPT.fullmatch(parts[1])):
+        elif category == "scripts" and path != "scripts/README.md" and (len(parts) != 2 or not SCRIPT.fullmatch(parts[1])):
             errors.append("scripts require snake_case.py: " + path)
         elif category == "tests" and (len(parts) != 2 or not re.fullmatch(r"test_[a-z0-9_]+\.py", parts[1])):
             errors.append("test script naming: " + path)
@@ -48,7 +48,7 @@ def main() -> None:
 
     # Keep the repository homepage focused on eight stable functional folders.
     allowed_top_folders = {".github", "bank", "data", "docs", "external_sources",
-                           "scripts", "tests", "tex"}
+                           "scripts", "tests", "tex", "textbooks"}
     actual_top_folders = {p.split("/", 1)[0] for p in tracked if "/" in p}
     if (ROOT / "data/archives/test_suite.zip").is_file():
         from compact_auxiliary import load
@@ -91,7 +91,11 @@ def main() -> None:
     # This is intentionally an audit of names, not a quota or evidence of academic approval.
     b = {}
     bank_paths = [p for p in tracked if p.startswith("bank/")]
-    packed = [f"bank/{prefix}.json" for prefix in "METWOQ"]
+    from compact_bank import SUBJECT_FILES
+    packed = [f"bank/{name}.json" for name in SUBJECT_FILES.values()]
+    legacy_packed = [f"bank/{prefix}.json" for prefix in "METWOQ"]
+    if set(bank_paths) == set(legacy_packed):
+        packed = legacy_packed
     if any(p in bank_paths for p in packed):
         from compact_bank import read_archives
         if set(bank_paths) != set(packed):
@@ -128,7 +132,8 @@ def main() -> None:
                 or p == "external_sources/catalog_index.md"
                 or p in ("data/README.md", "data/qa/README.md", "data/localized/zh_CN/合订/README.md")
                 or p.startswith("docs/") and p.endswith(".md")
-                or p.startswith("external_sources/_bundles/") and p.endswith(".md")):
+                or p.startswith("external_sources/_bundles/") and p.endswith(".md")
+                or p in ("scripts/README.md", "textbooks/README.md")):
             continue
         source = ROOT / p
         for raw in LINK.findall(source.read_text(encoding="utf-8")):
