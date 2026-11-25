@@ -51,3 +51,7 @@
 ## 维护与历史资料归档
 
 现行政策、总历史及直接导航保留；其余参考文档与外部维护工具按组归档。一次性迁移工作流的原始定义存入 `retired_migrations.zip`，不再作为主分支活跃定义。需要维护时先恢复对应 ZIP，修改后重新打包；历史质量证据、来源许可和题号不变。
+
+## 统一归档库
+
+`data/archives/library.zip` 为唯一跟踪的辅助ZIP集合，内部逻辑分组及成员原路径保留。`compact_auxiliary.py --verify` 可不解压验证，`--restore` 按需恢复。编辑后 `--pack --group GROUP` 更新统一归档，只提交 library.zip；历史批次政策和正式题库源仍单独维护。

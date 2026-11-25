@@ -82,6 +82,21 @@ git add data/archives/catalog_views.zip
 
 维护前从仓库根目录执行 `python3 scripts/compact_auxiliary.py --restore`，然后 `python3 scripts/compact_bank.py --restore`；也可按组恢复。归档后编辑原路径必须按组重新打包并提交 ZIP。当前分类总索引、最新总日志及质量政策仍可直接查看。已完成的一次性工作流不再作为主分支的活跃工作流，历史运行和原定义仍可追溯。
 
+## 统一归档库（第六轮）
+
+[下载统一归档库 library.zip](data/archives/library.zip)。原15份辅助ZIP及新增的批次数据、中文合订视图、七份候选原文压缩包与清单、派生索引统一收录为19个逻辑分组；原ZIP和源文件字节校验均保留。直接保留六学科权威题库、正式CSV索引、中文翻译主档、现行质量政策、教材PDF及主TeX。
+
+```bash
+python3 scripts/compact_auxiliary.py --verify
+python3 scripts/compact_auxiliary.py --restore
+python3 scripts/compact_bank.py --restore
+# 编辑恢复后的某个逻辑分组后：
+python3 scripts/compact_auxiliary.py --pack --group GROUP
+git add data/archives/library.zip
+```
+
+新分组名称：`batch_data`（历史批次）、`bilingual_views`（中文合订视图与索引）、`raw_corpora`（候选原文包及清单）、`derived_indexes`（正式JSON镜像及候选全量CSV）。原有逻辑分组名保持兼容。恢复只生成忽略的工作区文件，不提交嵌套ZIP或成员；归档入口统一为 library.zip，旧文档中各组名仍可用于按组恢复。所有候选仍为未审材料，原质量门禁不改变。
+
 ## 快速入口
 
 | 我要查看 | GitHub 路径 | 内容与状态 |
