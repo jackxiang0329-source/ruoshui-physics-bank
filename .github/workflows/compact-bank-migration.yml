@@ -1,0 +1,52 @@
+name: Compact formal bank migration
+on:
+  push:
+    branches: [compact-bank-six-topics]
+    paths:
+      - scripts/compact_bank.py
+      - .github/workflows/compact-bank-migration.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  migrate:
+    if: github.ref == 'refs/heads/compact-bank-six-topics'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Pack every canonical file and compare original bytes
+        run: |
+          set -euo pipefail
+          python3 scripts/compact_bank.py --pack
+          python3 scripts/compact_bank.py --verify
+          python3 - <<'PY'
+          import json, subprocess
+          from pathlib import Path
+          from scripts.compact_bank import read_archives
+          files = read_archives(Path('.'))
+          old = {}
+          for line in subprocess.check_output(['git','ls-tree','-r','HEAD','bank'], text=True).splitlines():
+              meta, path = line.split('\t',1)
+              old[path] = meta.split()[2]
+          packed = {f'bank/{uid}/{name}': entry['git_blob'] for uid, group in files.items() for name, entry in group.items()}
+          assert len(files) == 452 and len(packed) == 1356
+          assert packed == old, 'original Git blobs not exactly preserved'
+          print('452 IDs and 1356 original blob SHAs match exactly')
+          PY
+      - name: Remove tracked legacy paths and restore ignored compatibility view
+        run: |
+          git rm -r bank
+          git add bank/*.json
+          python3 scripts/compact_bank.py --restore
+          python3 scripts/check_repository_layout.py
+          python3 scripts/build.py --check
+      - name: Commit only after migration checks pass
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'refactor: compact 452 formal problems into six verified archives'
+          git push origin HEAD:compact-bank-six-topics

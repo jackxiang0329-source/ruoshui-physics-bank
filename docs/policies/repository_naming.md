@@ -35,3 +35,7 @@
 - 报告属于派生或历史证据，不当作第二份题目正文；需要时由脚本重建。
 - 文件名检查以 `scripts/check_repository_layout.py` 为准；主分支 CI 同时验证归档、题库同步与 LaTeX 构建。
 - 本规范仅约束仓库中的**新内容和可安全迁移的辅助内容**，不重写历史提交。
+
+## 六学科归档例外
+
+正式题库仅跟踪 `bank/M.json`、`E.json`、`T.json`、`W.json`、`O.json`、`Q.json`；原题号文件由 `scripts/compact_bank.py --restore` 无损生成，不提交。修改后使用 `--pack`，保留题号及原有质量门禁。

@@ -25,11 +25,26 @@
 - [历史导入日志归档](external_sources/logs/history_2026_10.json)：五份 10 月 26—28 日的 JSONL 原文完整收入一份 JSON，附原路径、Git blob SHA、字节数和提交号；现行 latest 报告和按日写入接口保留。
 - 正式题号、题面、解析、教材 TeX、PDF、索引、脚本和 CI 不因本次历史文档整理而改变。技术执行结果以 Actions 为准。
 
+## 正式题库六学科集中存储（迁移版）
+
+`bank/M.json`、`E.json`、`T.json`、`W.json`、`O.json`、`Q.json` 分别保存力学、电磁学、热学、振动与波动、光学、近代物理的权威源码。每个原始文件保留 UTF-8 原文、字节数、Git blob SHA；题号和质检状态不变。历史独立题号路径按需恢复，不再提交数百个目录。
+
+```bash
+python3 scripts/compact_bank.py --verify
+python3 scripts/compact_bank.py --restore
+python3 scripts/build.py --check
+# 编辑或新增已恢复的题号文件并完成原有质检、索引及合订同步后：
+python3 scripts/compact_bank.py --pack
+git add bank/*.json data/ tex/
+```
+
+恢复程序拒绝覆盖未归档的修改；重新打包前须保留全部原题号。GitHub CI 自动恢复原路径后再运行现有检查和编译。以下旧历史统计仅作历史参考。
+
 ## 快速入口
 
 | 我要查看 | GitHub 路径 | 内容与状态 |
 |---|---|---|
-| **正式高难综合题** | [`bank/`](bank/) | **452 道**，每道含 `meta.json`、`question.tex`、`solution.tex` 三份权威源 |
+| **正式高难综合题** | [`bank/`](bank/) | **452 道**，六学科归档中保留每题三份原始源码 |
 | 题目与解析的合订 LaTeX | [题目](tex/questions.tex) / [解答](tex/solutions.tex) | 从 `bank/` 构建；数学公式统一按 LaTeX 排版 |
 | 查询题号、模块、质量信息 | [CSV 题目索引](data/index.csv) / [JSON 目录](data/problems.json) | 自动派生数据，不是新的独立题源 |
 | **赵近芳、王登龙第五版两书习题** | [ElegantBook 教材专区](external_sources/zhao-wang-physics-5e-elegant/) | **累计890题（第18—19批新增44）**，覆盖《简明教程》第1—12章、《学习指导》第1—16章解题示例及自测题1—11；保留疑点标记，不计入正式高难题库 |
@@ -50,7 +65,7 @@
 
 ```text
 ruoshui-physics-bank/
-├── bank/                 452 道正式高难综合题；每题 3 份源文件
+├── bank/                 452 道正式高难综合题；6 份可逆学科归档
 ├── tex/                  正式题目与解答的合订 LaTeX
 ├── data/                 正式索引、翻译稿、分类规则、质检凭证与批次报告
 ├── external_sources/
@@ -66,7 +81,7 @@ ruoshui-physics-bank/
 
 ## 维护原则
 
-**唯一权威源：** 正式高难综合题只修改 `bank/题号/{meta.json,question.tex,solution.tex}`；`data/problems.json`、`data/index.csv`、`tex/*.tex` 属于派生合订或索引，不应另行复制成第二套题库。《普通物理学习题》保留独立的 ElegantBook 章节和回归系统；未通过版权、答案和物理审核的外部候选不直接进入正式题库。
+**唯一权威源：** 正式高难综合题以六个 `bank/*.json` 归档为提交源；恢复后编辑 `bank/题号/{meta.json,question.tex,solution.tex}` 并重新打包；`data/problems.json`、`data/index.csv`、`tex/*.tex` 属于派生合订或索引，不应另行复制成第二套题库。《普通物理学习题》保留独立的 ElegantBook 章节和回归系统；未通过版权、答案和物理审核的外部候选不直接进入正式题库。
 
 **真正减少文件数：** 2026-11-22 将 16,611 + 2,526 + 700 = **19,837** 份零散未审 Markdown 原文精确字节归档为三个 `tar.gz`，保留索引和双层 SHA-256 校验清单；文件总数由 **22,088** 降为 **2,258**（整理提交后的实际仓库树；后续新增文档会使该数字略增）。原文可恢复，**没有删题、删解析或修改正式题解**。见 [归档说明](external_sources/_bundles/README.md)。
 
