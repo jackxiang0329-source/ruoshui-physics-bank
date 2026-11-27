@@ -11,3 +11,5 @@
 | 目录规范 | [check_repository_layout.py](check_repository_layout.py) |
 
 历史批次脚本、测试、外部采集与分类工具在 [统一归档库](../data/archives/library.zip) 中，先执行 `python3 scripts/compact_auxiliary.py --restore`。保留旧工具内部接口，避免维护时出现多个权威源。
+
+根目录仅保留必要入口与依赖清单。原初始化发布脚本指向其他仓库，已退出主分支；现有 PDF 发布以 GitHub Actions 为准。

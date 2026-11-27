@@ -65,6 +65,10 @@ def main() -> None:
                 errors.append("missing textbook role: " + book + "/" + name)
 
     # Keep the repository homepage focused on eight stable functional folders.
+    allowed_top_files = {"README.md", ".gitignore", "requirements.txt"}
+    actual_top_files = {p for p in tracked if "/" not in p}
+    if actual_top_files != allowed_top_files:
+        errors.append(f"unexpected repository root files: {sorted(actual_top_files ^ allowed_top_files)}")
     allowed_top_folders = {".github", "bank", "data", "docs", "external_sources",
                            "scripts", "tests", "tex", "textbooks"}
     actual_top_folders = {p.split("/", 1)[0] for p in tracked if "/" in p}
